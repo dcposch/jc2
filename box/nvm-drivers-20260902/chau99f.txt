@@ -1,0 +1,1140 @@
+                                       ANNALES
+POLONICI MATHEMATICI
+                                   LXXI . 3 ( 1 9 99 )
+       Non - zero constant Jacobian polynomial maps of                           C2
+                           by Nguyen Van Chau ( Hanoi )
+     Abstract . We study the behavior at infinity of non - zero constant Jacobian polyno -
+mial maps f = (P, Q) in C2 by analyzing the influence of the Jacobian condition on the
+structure of Newton – Puiseux expansions of branches at infinity of level sets of the com -
+ponents .     One of the results obtained states that the Jacobian conj ecture in C2 is true
+if the Jacobian condition ensures that the restriction of Q to the curve P = 0 has only one
+pole .
+     1 . Introduction .       Let f = (P, Q) b e a polynomial mapping of C2 into it self
+, P, Q ∈ C[x, y], and denote by J(P, Q) := Px Qy − Py Qx the Jacobian
+of f.          The Jacobian conjecture in C2 (JC2 ), first posed by Keller [ K ] in 1 939
+and still open , asserts that a polynomial map f = (P, Q) is an automorphism
+of C2 if J(P, Q) ≡ const 6= 0. We refer the readers to [ BCW ] and [ D 2 ] for the
+history of the conj ecture and related t opics , and t o [ Ka ] , [ H ] , [ LW ] , [ O 1 – O
+3],
+[ P ] and [ St ] for some recent partial results on (JC2 ).
+                In this paper we study the b ehavior at infinity of polynomial maps f =
+(P, Q) of C2 satisfying the Jacobian condition J(P, Q) ≡ const 6= 0. First we try t o
+analyse the influence of the Jacobian condition on the structure
+of Newton – Puiseux expansions of branches at infinity of level set s of P and
+Q. Then , by applying standard results on the t opology of plane curves we give some
+estimates on the geometric degree and branched value set of f
+and the t opology of the generic fibers of the components P and Q.
+                 Denote by deggeo f := max {#f −1 (a) : a ∈ C2 } the geometric degree of
+f, and by χP and χQ the Euler – Poincar é characteristics of the generic fibers
+o f − lineP and Q, respectively .
+                        Our main results can be stated as follows .
+             1 99 1 Mathematics Subject Classification : 14 H 9 , 1 4 E 40 .
+   Key words and phrases :     Jacobian conj ecture , polynomial automorphism , Newton –
+Puiseux expansion .
+   Research supported in part by the National Basic Program on Natural Science , Viet -
+nam , CNRS , ICTP , IMPA and TWAS .
+
+                                           [287]
+288   Nguyen V an Ch au
+         Theorem A . The Jacobian conjecture in C2 is equivalent to the following
+
+
+                                     statement :
+
+(∗) If J(P, Q) ≡ const 6= 0, then the restriction of Q to the curve P = 0 has
+only    one pole , that is , there       is   only    one     irreducible   branch
+at infinity of the curve P = 0 such that Q tends to infinity along this branch .
+         Theorem B . Let f = (P, Q) be a non - zero constant Jacobian polynomial
+map of C2 with deg P = kd ≥ deg Q = ke, gcd (d, e) = 1.          Then either e = 1
+or
+
+
+                           deggeo f = rd + se ≥ min{2e, d},
+                            wherer ≥ 0, s ≥ 0andr + s ≥ 1.
+
+         Theorem C . For every non - zero constant Jacobian polynomial map f =
+
+
+                                                              of C2 ,           (P, Q)
+                    deg P (χQ − deggeo f ) = deg Q(χP − deggeo f ).
+
+In particular , if deg P 6= deg Q then f is an automorphism if χP = χQ .
+           In order t o prove Theorem A we show that the statement (∗) i s equivalent
+to the implication
+J(P, Q) ≡ const 6= 0 ⇒ deg P | deg Q or deg Q | deg P. So , Theorems A and B each
+enable us t o recover Jung ’ s theorem [ J ] on the
+tameness of automorphisms of C2 ( see also [ CK ] and [ Kul ] ) . In view of
+Theorem C the conj ecture (JC2 ) i s equivalent t o the implication
+
+                          J(P, Q) ≡ const 6= 0 ⇒ χP = χQ .
+Indeed , under the Jacobian condition the generic fibers of the non - constant polyno-
+mials aP + bQ with deg (aP + bQ) = max ( deg P, deg Q) have the same topological typ
+e (g, n) with n 6= 2, 3, 4, 5 ( Theorem 4 . 8 ) .             Moveover , the number
+of punctures of the generic fiber of aP + bQ with deg (aP + bQ) < max ( deg P, deg
+Q) must b e different from 2 and 3 ( Theorem 4 . 6 ) .        The last statement is an
+improvement of earlier results due t o Abhyankar [ A ] and Dru ż kowski [ D 1 ] .
+In particular , we show that if f i s not an automorphism , then the branched value set
+of f must b e composed of the images of some polynomial maps (pi(ξ), qi(ξ)) with deg
+pi/ deg qi = deg P/ deg Q( Theorem 4 . 4 ) .       These results and Theorem B could
+be useful t o check (JC2 ) in sp ecial
+cases .
+    The proofs of these results , presented in Sections 3 and 4 , are based on
+Main Lemma ( Lemma 3 . 3 ) and its corollary ( Theorem 3 . 6 ) .           In these we
+describe the influence of the Jacobian condition on the structure of Newton –
+Puiseux typ es of the polynomials P and Q. At this stage the polynomials P and Q
+are only considered as polynomials in y with coefficients meromorphic
+                                                                                   C2 289
+                                                                         Polynomial maps of
+in x, but not really as polynomials in x and y. The notion of Newton – Puiseux type
+of a polynomial t ogether with it s properties are introduced in Section 2 . The first
+version [ C 2 ] of this paper was presented t o the Topology and Geometry Seminar
+of Hanoi Institute of Mathematics , 1 998 .
+    2 .       Preliminaries .        We work with the complex plane C2 endowed with
+affine coordinates (x, y). A polynomial g(x, y) i s monic               in y if g(x, y) =
+y deg g + lower order t erms in y.
+    2 . 1 . Newton – Puiseux expansion at infinity . Let g(x, y) b e a non - constant
+polynomial in C2 , monic in y.          Let Bg (c)        denote the collection of all irre -
+ducible branches at infinity of the curve g = c.          Let γ ∈ Bg (c).        Since g i s
+monic in y, γ intersects the line at infinity z = 0 of the compactification
+CP2 of C2 at a point (1 : a : 0). Newton ’ s algorithm allows us t o find
+a Newton – Puiseux expansion of γ, a fractional power series
+
+
+                                                                                        ∞
+                       X
+                                  k/m
+              y(z) =       ak z         ,   gcd({k : ak 6= 0} ∪ {m}) = 1,           a0 = a,         (2.1)
+                                                                                     k=0
+
+for which the map τ 7→ (1 : y(τ m ) : τ m ) gives a holomorphic parametrization of γ                  for
+τ small enough ( see [ BK ] ) . Translating the series y(z) into                                     the
+standard coordinates (x, y) of C2 , we obtain a fractional power series
+
+
+                                                                                               ∞
+                                             X
+      (2.2)   u(x) = xy(x−1/m ) = x              ak x−k/m ,        gcd({k : ak 6= 0} ∪ {m}) = 1,
+                                                                                              k=0
+
+for which g(x, u(x))    ≡     c and the map t 7→     (tm , u(tm )) is a meromorphic
+parametrization of γ       for t large enough .        Such a series u(x) is
+called a Newton – Puiseux expansion at infinity      of γ. We call the natural num-
+ber mult (u) := m the multiplicity of the series u(x). The equivalence c lass of u,
+denoted by [u] or [γ], consists of m distinct Newton – Puiseux expansions at infinity
+uν (x) of the branch γ,
+
+
+                                                          uν (x) := xy(εν x1/m )                    (2.3)
+                                                                              ∞
+                              X
+                                            νk −k/m
+                        =x          ak ε x            ,     ν = 0, 1, ..., m − 1,
+                                                                          k=0
+
+where ε i s a primitive m th root of 1, ε = exp (2πi/m).             The branch γ then
+                                                     Qm−1
+becomes the zero - set of the meromorphic function ν=0 (y − uν (x))                and
+mult (u) i s the intersection number of γ and the line at infinity .
+   The most important facts on Newton – Puiseux expansions at infinity of a plane
+curve are the following :
+       1 ) ( Newton ’ s Theorem , see [ A ] ) Every reduced polynomial
+g(x, y) ∈
+C[x, y]           monic in y can b e factorized with resp ect t o Newton – Puiseux ex -
+290    Nguyen V an Ch au
+pansions at infinity of the curve g = 0, i . e .
+
+                                            Y       Y
+                             g(x, y) =               (y − u(x)).                    (2.4)
+                                               γ ∈ Bg (0)u ∈ [γ]
+
+    2 ) The Euler – Poincar é characteristic of a smooth reduced plane curve ( and
+hence , the t opological typ e of a smooth irreducible plane curve ) can be completely
+determined by the data of it s Newton – Puiseux expansions at infinity ( see [ BK ] ) .
+    2. 2.        Newton – Puiseux types of a polynomial .      By a π− series we mean
+a finite fractional power series of the form
+
+
+                                                                   nφ − 1
+                                     X
+                                                   1−k/mφ      1−nφ /mφ
+                       φ(x, ξ) =            ak x            + ξx          ,         (2.5)
+                                     k=0
+                                   gcd({nφ , mφ } ∪ {k : ak 6= 0}) = 1,
+
+where ξ is a complex parameter . For such a π− series φ we put mult (φ) := mφ and
+ind (φ) := iφ := mφ / mult (φ(x, 0)). Note that by definition
+( 2 . 6 ) mult (φ(x, 0)) = mφ i−1
+                                φ     and gcd (nφ , iφ ) = 1.
+Two π− series φ(x, ξ) and ψ(x, ξ) are equivalent if mφ = mψ , nφ = nψ and ψ(x, 0) ∈
+[φ(x, 0)]. We denote by [φ] the equivalence class of a π− series φ. It consists of mφ i−1
+                                                                                       φ
+distinct π− series ,
+
+                                    X
+                    φν(x, ξ) =             ak ενiφ k x1−k/mφ + ξx1−nφ /mφ ,         (2.7)
+                                                                     k < nφ
+                                           ν = 0, 1, ..., mult(φ(x, 0)) − 1,
+
+where ε i s a primitive mφ th root of 1, ε = exp (2πi/mφ ).
+                           For each π− series φ we can write
+(2.8) g(x, φ(x, ξ)) = gφ (ξ)xaφ /mφ + lower order t erms in x1/mφ ,
+where 0 6= gφ ∈ C[ξ].            The number aφ i s an integer and depends only on the
+equivalence class of φ.      The polynomial gφ depends on φ.        But , for φν ∈ [φ]
+in ( 2 . 7 ) ,
+
+
+                                 gφν (ξ) = gφ (ενiφ ξ)ενiφ aφ .                     (2.9)
+
+    Notation .         For each c ∈ C and a π− series φ we denote by Bg ([φ], c) the
+collection of all γ ∈ Bg (c) such that γ has a Newton – Puiseux expansion of the form
+φ(x, a)+ lower order t erms in x for some a ∈ C. The collection Bg ([φ], c) depends
+only on the equivalence class [φ].
+          From now on , sometimes we will use the lower index “ [φ] ” instead of “ φ ”
+to indicate characteristics of an equivalence class [φ].
+                                                               Polynomial maps of C2 291
+     Proposition 2 . 1 . Let g ∈ C[x, y]          be monic in y.     For a given π− s eries
+φ:
+            (i) A        value c is a zero            of gφ if and only if there exists     an
+irreducible
+branch γ ∈ Bg (0) having a Newton – Puiseux expansion at infinity of the
+form φ(x, c)+ lower order terms in x.                 Such a branch γ is unique if c is a
+simple(ii) 0gφ (ξof ) = gφ ξ.kg ∗(ξ iφ ) for some k ≥ 0 and a polynomial g ∗ with g ∗ (0) 6= 0.
+                                          P r o o f . Write
+g(t−m φ, φ(t−m φ, ξ)) = t−a φ(gφ (ξ)+ higher order t erms in t) =: t−a φh(t, ξ).
+Obviously , h(t, ξ) i s a non - zero polynomial in (t, ξ). The conclusions ( i ) and ( ii
+) result from the following simple observations :
+    1 ) The curve h = 0 has an irreducible branch β at a point (0, c) if and only if c is a
+zero of gφ . Such a branch β i s unique if c i s a simple zero of gφ .
+    2 ) For each Newton – Puiseux expansion β(t) of such a branch β, the
+branch γ determined by the series
+
+                                u(x) := φ(x, c + β(x−1/mφ ))
+is a branch at infinity of the curve g = 0.
+             3 ) By using the representation of g in ( 2 . 4 ) , we can see that each such
+branch γ contributes t o gφ (ξ) a factor (ξ iφ − ciφ )r for c 6= 0 and ξ r for c = 0,
+where r := mult (u) mult (φ(x, c))−1 .
+    Definition 2 . 2 .        A π− series φ i s a Newton – Puiseux type of g if aφ = 0
+and deg gφ > 0. Denote by Πg the collection of all equivalence classes of Newton –
+Puiseux types of g.
+    Remark 2 . 3 .        ( i ) Let φ be a Newton – Puiseux typ e of g and φν ∈ [φ] b e
+as in ( 2 . 7 ) . By Lemma 2 . 1 ( ii ) , ( 2 . 8 ) and ( 2 . 9 ) ,
+
+
+                        gφ (ξ) ∈ C[ξ iφ ]   and gφν (ξ) = gφ (ενiφ ξ).                  (2.10)
+
+   ( ii ) For each given Newton – Puiseux expansion at infinity u(x) of γ ∈ Bg (0)
+we can construct a unique Newton – Puiseux type φ so that u(x) = φ(x, c)+ lower
+order
+P∞ terms       in x, c ∈ C. Indeed , assume that u(x) =
+             1−k/m
+  k=0  a k x       . By using the representation of g in ( 2 . 4 ) we can see that
+                                   Pi
+the greatest power of x in g(x, k=1 ak x1−k/m ), viewed as a function of i ∈ N
+with values in Q ∪ {−∞}, i s decreasing and tends to −∞ as i
+tends t o ∞. This ensures that there exists a unique rational number α
+and an index n such that 1 − (n − 1)/m < α ≤ 1 − n/m and the π− series
+            Pn−1
+φ(x, ξ) = k=0 ak x1−k/m + ξxα i s a Newton – Puiseux typ e of g. In certain cases
+the series u(x) and the Newton – Puiseux typ e φ(x, ξ) have the same
+Puiseux pairs .
+   ( iii ) There i s a natural one - t o - one corresp ondence φ : [φ] 7→ l b etween Πg
+and the collection of all dicritical ( horizontal ) components l of the divisor
+292    Nguyen V an Ch au
+curve D in a regular extension g ∗ of g, g ∗ : M = C2 t D → CP, which can be obtained
+by resolution of singularities ( cf . [ LW ] and [ O 1 ] ) . The meaning of the corresp
+ondence φ i s the following : If an analytic irreducible branch at
+infinity γ ⊂ C2 is a branch at a point of a dicritical component l = φ([φ]), then
+γ has       a Newton – Puiseux expansion        at infinity    of the form φ(x, c)+ lower
+order terms in x .     This observation i s not used in this paper . However , it should
+b e useful to view Main Lemma and Theorem 3 . 6 , presented in Section 3 , from
+the viewpoint of regular extensions .
+            It i s well known from [ Ve ] that for every non - constant polynomial g on
+C2 there is a finite set E such that the map g : C2 − g −1 (E) → C − E
+determines a locally trivial fibration . The fiber of this fibration i s called the generic
+fiber of g. The smallest Eg among such sets E i s said t o b e the
+exceptional value s et of g.
+             Denote by χg the Euler – Poincar é characteristic of the generic fiber of g,
+by Cg the critical value set of g and by Cg∞ the union of all critical value
+
+
+                                   setsofgφ (ξ), [φ] ∈ Πg .
+
+    Theorem       2. 4.     Let g(x, y)         be       a primitive polynomial and monic   in
+y. Then
+                                            G
+                            Bg (c) =                 Bg ([φ], c) f orallc ∈ C,
+                                                                     [φ] ∈ Πg
+                                 X
+                    #Bg (c) =             degi[φ] g[φ]    f orallc ∈ C − Cg∞ ,
+                                φ[ ]∈Πg
+
+                                                             Eg = Cg ∪ Cg∞ .
+            P r o o f . The first formula can b e obtained from the definition and Re -
+mark 2 . 3 ( ii ) . Then the second results from Lemma 2 . 1 ( ii ) ( and ( 2 . 1 0 ) )
+. We prove the last conclusion . Recall from [ HL ] that for a primitive polynomial
+g we have c ∈ Eg if and only if the Euler – Poincar é characteristic
+                                                           S          of the curve
+g = c i s greater than χg . We can consider {Bg (c) = [φ] Bg ([φ], c) : c ∈ C} as a
+family of analytic curve germs . Let φ be a Newton – Puiseux typ e of g. For regular
+values c of gφ the curve germs Bg ([φ], c) have the same Puiseux data : the number of
+branches ; Puiseux pairs ; the intersection number of each of these branches and other
+branches in Bg (c). As in the proof of Lemma 2 . 1 , we can see that such Puiseux
+data must change when c i s a critical value of gφ . Therefore , by the standard results
+on the t opology of plane curves
+( see , for example , [ BK ] and [ HL ] ) the Euler – Poincar é characteristic of the
+curves g = c must change at each of the critical values of g and the values in Cg∞ .
+    In view of Theorem 2 . 4 , the t opology of the generic fiber as well as the “ critical
+values at infinity ” of a primitive polynomial g(x, y), monic in y,
+                                                                                  C2 293
+                                                                    Polynomial maps of
+can be completely determined by the Newton – Puiseux typ es φ of g and the corresp
+onding polynomials gφ .
+     3.      The       Jacobian      condition       and      structure    of Newton –
+Puiseux
+types of P and Q.              From now on our obj ect of study i s a given polynomial
+map f of C2 , f = (P, Q),         satisfying the Jacobian condition ,     i . e . Px Qy −
+Py Qx ≡ C 6= 0. To avoid trivial cases , we also assume that max ( deg P, deg Q) > 1.
+Under the Jacobian condition P and Q are primitive polynomials . By
+choosing suitable affine coordinates (x, y) in C2 , we can assume that P and Q are monic
+in y. Then we can work with the collections ΠP and ΠQ of equivalence classes of
+Newton – Puiseux typ es of P and Q.
+              In this section we describe the structure of ΠP ∪ ΠQ and give a proof of
+Theorem A .
+                3 . 1 . Jacobian condition .         For any π− series φ,
+
+
+                                                                     nφ − 1
+                                     X
+                                                   1−k/mφ          1−nφ /mφ
+                        φ(x, ξ) =           ak x            + ξx              ,                (3.1)
+                                                                      k=0
+
+we write
+              P (x, φ(x, ξ)) = Pφ (ξ)xaφ /mφ + lower order t erms in x1/mφ ,
+Q(x, φ(x, ξ)) = Qφ (ξ)xbφ /mφ + lower order t erms in x1/mφ , where Pφ , Qφ ∈ C[ξ] − {0},
+and define
+
+
+                              Jφ := aφ Pφ dd ξ Qφ − bφ Qφ dd ξ Pφ ,                            (3.2)
+                                            a             n
+                                     ∆φ := mφφ + bφm φ + mφφ .                                 (3.3)
+
+                     Our starting point i s the following .
+Lemma 3 . 1 . Let φ be a π− series and assume that ( 3 . 4 )                      max { deg Pφ , deg
+Qφ } > 0, aφ ≥ 0, bφ ≥ 0, aφ + bφ > 0.
+Then
+
+
+                                            ∆φ ≥ 2                                             (3.5)
+
+and
+
+                                    (
+                                        mφ J(P, Q) if ∆φ = 2,
+                             Jφ ≡                                                              (3.6)
+                                        0   if ∆φ > 2.
+
+           Proof.        Defining the holomorphic maps Φ and Fφ from C \ {0} × C into
+
+
+      C2 byΦ(t, ξ)     := (t−m φ, φ(t−m φ, ξ))andFφ (t, ξ) := (P (Φ(t, ξ)), Q(Φ(t, ξ)))
+
+and writing
+                     P (Φ(t, ξ)) = Pφ (ξ)t−a φ+ higher order t erms in t,
+294    Nguyen V an Ch au
+           Q(Φ(t, ξ)) = Qφ (ξ)t−bφ + h − line igher order t er line − m s in t,
+by ( 3 . 4 ) we can differentiate Φ and Fφ to obtain
+
+            det DFφ (t, ξ) = J(P, Q) det DΦ(t, ξ) = −mφ J(P, Q)tnφ −2mφ −1
+and
+
+              det DFφ (t, ξ) =   − [aφ Pφ dd ξQφ − bφ Qφ dd ξPφ ]t−aφ −bφ −1
+                                + higher order t erms in t.
+It follows that
+            −mφ J(P, Q)tnφ −2mφ −1 = −Jφ t−aφ −bφ −1 + higher order terms in t.
+Since J(P, Q) ≡ const 6= 0, by comparing the first terms of the two sides in
+this equality we get the conclusion .
+                 Considering the equation Jφ ≡ 0 and Jφ ≡ mφ J(P, Q) in detail , we can
+easily obtain the following .
+    Lemma 3 . 2 . Let φ be a π− s eries and assume that the condition ( 3 . 4 )
+of Lemma 3 . 3 holds .         Then
+          ( a ) If      Jφ ≡ mφ J(P, Q), then            the polynomials Pφ and Qφ
+have      only
+simple zeros and they have no common zero .
+                                        b      a
+               ( b ) If Jφ ≡ 0, then Pφφ = cQφφ for some number c 6= 0.
+           ( c ) If Pφ ≡ const 6= 0, then Jφ ≡ mφ J(P, Q) and deg Qφ = 1, Qφ (0) 6=
+0 in the case aφ > 0 and bφ > 0.
+      ( d ) If aφ = 0 then Jφ ≡ mφ J(P, Q), deg Pφ = 1 and Qφ ≡ const 6= 0.
+       Remark . Lemma 3 . 1 is still true if condition ( 3 . 4 ) i s replaced by
+(3.4)0 max { deg Pφ , deg Qφ } > 0, aφ ≤ 0, bφ ≤ 0, aφ + bφ < 0.
+        3 . 2 . Main Lemma and the structure of ΠP ∪ ΠQ . To analyze the struc -
+ture and relationship of Newton – Puiseux types of P and Q we will use the following
+object , which i s constructed for each Newton – Puiseux typ e φ of
+
+
+                                           P andQ.
+
+        Associate s equence .        Given a Newton – Puiseux type φ of P, we can write
+
+
+                                                                  K −1
+                                 X
+                     φ(x, ξ) =         ck xαk + ξx1−nφ /mφ ,     ck ∈ C,          (3.7)
+                                                                   k=0
+
+where ck may be zero , so that the sequence {φi}K
+                                                i=0 of π− series defined by
+
+                                                                      i−1
+                                 X
+                   φi(x, ξ) :=       ck xαk + ξxαi ,   i = 0, 1, ..., K − 1,
+                                                                     k=0
+φK := φ and αK := 1 − nφ /mφ , has the following properties :
+                                                                     Polynomial maps of    C2 295
+         ( S 1 ) For every i < K either Pφi or Qφi                    has a zero different from the
+origin .
+    ( S 2 ) For every ψ(x, ξ) = φi(x, ci ) + ξxα , αi > α > αi+1 , each of Pψ and Qψ i s
+either a constant or a monomial in ξ.
+    The representation ( 3 . 7 ) and the sequence {φi}K    i=0 are unique .     This se -
+quence is called the associate s equence of φ. For simplicity of notation , we
+put
+
+                        Pk := Pφk ,    Qk := Qφk ,       ak := aφk ,         bk := bφk ,
+              mk := mult(φk),       nk := nφk ,     ik := ind(φk),        Jk := Jφk .
+                One can easily verify the following properties of the associate sequence
+
+
+                                             {φi}K
+                                                 i=0.
+
+       ( S 3)a0 /m0 > a1 /m1 > ... > aK /mK and Pi (ci ) = 0 for all 0 ≤ i < K.
+                         ( S 4 ) If Qk(ck ) 6= 0 for some k, then
+                 bi /mi = bk /mk , Qi ≡ const 6= 0 for all k < i ≤ K.
+          Note that φ0(x, ξ) = ξx. As in our first assumption , max ( deg P, deg Q)
+> 1, by the Jacobian condition we can verify that (3.8) J0 ≡ 0, m0 = 1, a0 = deg
+P0 = deg P, b0 = deg Q0 = deg Q. Therefore , we can determine the greatest index
+S such that
+
+              Ji ≡ 0,   ai ≥ 0,    bi ≥ 0,     ai + bi > 0      forall0 ≤ i ≤ S − 1.
+The marked series φS plays a special role in the associate sequence {φi}K
+                                                                        i=0
+of φ.
+    Now , we can state our main lemma on the influence of the Jacobian condition
+on associate sequences of Newton – Puiseux typ es of P and Q. The proof of this
+lemma will b e given in Section 3 . 4 .
+    Lemma      3 . 3 ( Main Lemma ) . Let              φ be    a    Newton – Puiseux
+type     of   P,
+{φi}Ki=0        be the associate s equence of φ and φS be the corresponding marked
+series .    Then :
+                          ( i ) For all indices 0 ≤ i ≤ S − 1,
+
+
+       abii   = degdeg Pi Qi      = degdeg P Q     and    Pideg Q = Ci Qdeg
+                                                                        i P,           Ci 6= 0.
+                                                                        (ii) CaseS = K :
+                                                               deg
+                               aK = bK = 0 and           deg         PK QK      = degdeg P Q.
+                                                                        (iii) CaseS < K :
+                    JS ≡ mS J(P, Q) and           abSS = degdeg PS QS           = degdeg P Q
+296    Nguyen V an Ch au
+and for all S < i ≤ K,
+
+        Ji ≡ mi J(P, Q),    bim i   = bSm S   > 0,   deg Pi = 1,   Qi ≡ const 6= 0.
+             This lemma contains more information than what we will use t o describ e
+the structure of ΠP ∪ ΠQ below .
+    Definition 3 . 4 .      A π− series φ is a dicritical s eries of f if either [φ] ∈ ΠP
+and bφ ≤ 0 or [φ] ∈ ΠQ and aφ ≤ 0. A π− series φ is a s eparative series of the
+pair (P, Q) if aφ > 0, bφ > 0, Jφ 6= 0 and min ( deg Pφ , deg Qφ ) > 0.            Denote
+by Πf and S(P,Q) the collection of all equivalence classes of dicritical series
+of f and the collection of all equivalence classes of separative series of (P, Q), resp
+ectively .
+    Remark 3 . 5 . By definitions , Main Lemma and Proposition 2 . 1 we can see
+the following .
+    ( i ) [φ] ∈ Πf ∪ S(P,Q) if and only if φ i s a marked series in the as
+-
+sociate sequence of a Newton – Puiseux type of P or Q. Corresponding t o each
+Newton – Puiseux type φ there i s at most one separative series .         Some Newton –
+Puiseux types of P and of Q may have the same separative series .
+
+
+                             Furthermore, Πf ∩ S(P,Q) = ∅.
+
+    ( ii ) For c ∈ C and every Newton – Puiseux typ e φ of P such that [φ] ∈
+ΠP − Πf , the map f t ends t o infinity along each branch in BP ([φ], c).
+              ( iii )Πf i s a subset of ΠP ∪ ΠQ , but it i s independent of the coordinate
+presentation (P, Q) of f. In other words , Πf = ΠA.f for all A ∈ Aut (C2 ).
+    ( iv ) The collection Πf i s empty if and only if f is a proper map , and then f
+i s an automorphism .
+    Convention         and      notation .        We call a π− series φ such that
+[φ] ∈ (ΠP ∪ ΠQ ) − Πf a polar s eries of (P, Q) and define
+
+                    Pol(f, P ) := ΠP − Πf ,    Pol(f, Q) := ΠQ − Πf .
+For each class [φ] we put
+
+                       N (P, [φ]) := {[ψ] ∈ ΠP : ∃φ0 ∈ [φ]suchthat
+                      ψ(x, ξ) = φ0 (x, c)+ lower order t erms in x},
+
+                       N (Q, [φ]) := {[ψ] ∈ ΠQ : ∃φ0 ∈ [φ]suchthat
+                   ψ(x, ξ) = φ0 (x, c)+ lower order t erms in x}.
+                   Now , we can give a description of ΠP ∪ ΠQ .
+     Theorem 3 . 6 . Suppose f = (P, Q) is a non - zero constant Jacobian poly -
+nomial map of C2 , where P, Q ∈ C[x, y] are monic in y. Then
+
+               ΠP ∪ ΠQ = Pol(f, P ) t Pol(f, Q) t Πf ,     ΠP ∩ ΠQ = Πf ,
+                                                                   Polynomial maps of       C2      297
+
+                  G
+Pol(f, P ) =           N (P, [φ]),   Pol(f − line, Q) =       unionsqdisplay − line        N − line(Q, [φ]).
+                                                                                 [φ] ∈ S(P,Q)       [φ] ∈ S(P,Q)
+
+and the following properties hold :
+                     ( i ) For a s eparative s eries φ of (P, Q),
+
+               Jφ ≡ nφ J(P, Q) and       aφ bφ     = degdeg Pφ Qφ        = degdeg P Q.
+                             ( ii ) For a dicritical s eries φ of f,
+
+                      aφ = 0,     bφ = 0,    degdeg Pφ Qφ      = degdeg P Q.
+                                  ( iii ) For a polar series φ,
+                  (
+                         deg Pφ = 1,    Qφ ≡ const 6= 0 if [φ] ∈ Pol(f, P ),
+                        Pφ ≡ const 6= 0,     deg Qφ = 1 if [φ] ∈ Pol(f, Q).
+       P r o o f . This results immediately from Main Lemma and definitions .
+       3 . 3 . Proof of Theorem A . First , as an immediate consequence of Theorem
+3 . 6 ( iii ) and Theorem 2 . 4 , we have
+    Corollary 3 . 7 . For all c ∈ C the number of poles of Q on the curve
+P = c is equal to # Pol (f, P ).
+                  We need t o know more about separative series of (P, Q).
+                   Lemma 3 . 8 . Let φ be a separative series of (P, Q).
+      ( i ) Case iφ = 1 : #N (P, [φ]) = deg Pφ and #N (Q, [φ]) = deg Qφ .
+          ( ii ) Case iφ > 1 : then either ( a ) or ( b ) below holds :
+                ( a )Pφ (ξ) = ξp∗φ (ξ iφ ) and Qφ (ξ) = qφ∗ (ξ iφ ), where p∗φ (0)qφ∗ (0) 6= 0,
+                                              and
+
+                  #N (P, [φ]) = deg Piφφ − 1 + 1,      #N (Q, [φ]) = degiφ Qφ .
+
+    ( b )Pφ (ξ)   = p∗φ (ξ iφ )   and Q−lineφ (ξ)      = ξqφ∗ (ξ iφ ),   where p∗φ (0)qφvline (0)     6=
+0, and
+
+                  #N (P, [φ]) = degiφ Pφ ,       #N (Q, [φ]) = deg Qφiφ − 1 + 1.
+    P r o o f . Since φ is a separative series of (P, Q), Pφ and Qφ have only simple
+zeros .    Let d ∈ C b e a zero of Pφ . Then , by Main Lemma ( iii ) there exists a
+unique Newton – Puiseux type ψ of P such that ψd(x, ξ) = φ(x, d)+ lower order t erms
+in x. This series is a polar series and [ψd] ∈ N (P, [φ]).
+If iφ = 1 or if d = 0, then there is no other zero d∗ 6= d of Pφ such that ψd∗ ∈
+[ψd]. In case iφ > 1 and d 6= 0, by Remark 2 . 3 ( i ), dν = εν d, ν =
+298    Nguyen V an Ch au
+0, 1, ..., iφ − 1, are also zeros of Pφ and ψdν ∈ [ψd], where ε := exp (2πi/iφ ).
+By these observations we can easily verify the conclusions of the lemma .
+                 The following i s a variation of the Lemma on Automorphisms , a crucial
+st ep in some proofs of Jung ’ s theorem on automorphisms of C2 ([ J ] , see also
+[ Kul ] and [ MK ] ) .
+                           Lemma 3 . 9 ( Lemma on Divisibility ) .
+             # Pol (f, P ) = # Pol (f, Q) = 1 ⇒ deg P | deg Q or deg Q | deg P.
+         P r o o f . If # Pol (f, P ) = # Pol (f, Q) = 1, then Theorem 3 . 6 shows that
+S(P,Q) = {[φ]} and #N (P, [φ]) = N (Q, [φ]) = 1. Then , by Lemma 3 . 8 ,
+                   
+                    deg Pφ = deg Qφ = 1 foriφ = 1,
+                   
+                         deg Pφ = 1, deg Qφ = iφ foriφ > 1andPφ (0) = 0,
+                   
+                         deg Pφ = iφ , deg Qφ = 1 foriφ > 1andQφ (0) = 0.
+                   
+
+This t ogether with the equality deg Pφ / deg Qφ = deg P/ deg Q of Theorem
+3 . 6 ( i ) concludes the proof .
+             Proof of Theorem A . Consider the following three statements :
+(J1 ) (JC2 ) i s true ; (J2 ) J(P, Q) ≡ const 6= 0 ⇒ # Pol (f, P ) = # Pol (f, Q) = 1;
+(J3 ) J(P, Q) ≡ const 6= 0 ⇒ deg P | deg Q or deg Q | deg P.
+In view of Corollary 3 . 7 ,      Theorem A can b e restated as       (J1 ) ⇔ (J2 ).   The
+equivalence (J1 ) ⇔ (J3 ) i s well known ( see , e . g . , [ A ] , [ AM ] and [ BCW ] ) .
+The
+implication (J1 ) ⇒ (J2 ) i s obvious , and (J2 ) ⇒ (J3 ) by Lemma 3 . 9 .      So , we get
+
+
+                                           (J1 ) ⇔ (J2 ).
+
+      3 . 4 . Proof of Main Lemma . Let φ b e a given Newton – Puiseux type of P,
+{φi}Ki=0 be the associate sequence of φ and φS b e the corresp onding marked
+series .
+    First , consider the subsequence {φi}Si=0. From the definition and prop - erty ( S
+1 ) , we have max ( deg P, deg Q) > 0, Ji ≡ 0, ai > 0 and bi > 0 for all 0 ≤ i < S.
+Therefore , by Lemma 3 . 1 ( and Lemma 3 . 2 ( b ) )
+
+
+                            Pibi = Ci Qaline−i
+                                          i
+                                               ,     C − linei 6= 0,                   (3.9)
+
+and hence
+
+
+                                    abii     = degdeg Pi Qi                           (3.10)
+                                           forall0 ≤ i < S.
+
+                     Assertion         1.        For every π− s eries
+
+          ψ(x, ξ) = φk(x, ck ) + ξxα ,      α ∈ Q,     αk > α > αk+1 ,   0 ≤ k < S,
+the polynomials Pψ      and Qψ       are monomials in ξ and Jψ ≡ 0.
+                                                    Poly − line nomial maps of C2 299
+       P r o o f . Use the expansions P (x, ψ(x, ξ)) = P (x, φk(x, ck ) + ξxα ) and
+Q(x, ψ(x, ξ)) = Q(x, φk(x, ck ) + ξxα ), property ( S 2 ) and Lemma 3 . 2 ( b ) .
+                                    Assertion 2 .
+
+                  degdeg Pk Qk    = degdeg Pk+ Q1k+1      f ork = 0, ..., S − 1.
+   P r o o f . Let 0 ≤ k ≤ S − 1.         By ( S 3 ) and ( 3 . 9 ) the value ck i s a common
+zero of Pk and Qk. Write
+
+                                                                                       M
+                                                          X
+                            (3.11)    P (x, φk(x, ξ)) =        (ξ − ck )ui pi(ξ)xaki /mk ,
+                                                                                    i=0
+                                                                                        N
+                                                              X
+                                 (3.12) Q(x, φk(x, ξ)) =          (ξ − ck )vj qj xbkj /mk ,
+                                                                                    j=0
+          wherepi(0) 6= 0, qj (0) 6= 0, ak0 > ak1 > ... > akM andbk0 > bk1 > ... >
+bkN . Note that
+
+
+                                     ak0 = ak ,   bk0 = bk                                    (3.13)
+
+and ui , vj are non - negative integers .     The na line − t ural numbers u0 and v0
+are just the multiplicity of the zero ck of Pk and Qk, resp ectively . Therefore , by (
+3 . 9 ) and ( 3 . 10 ) we have
+
+
+                                   u00v     = degdeg Pk Qk .                                  (3.14)
+
+    Let us construct a kind of Newton polygon relative to the representations ( 3 . 1 1
+) and ( 3 . 1 2 ) as follows :
+
+              V := Conv({(0, 0)} ∪ {(aki , ui ) : i = 0, 1, ..., M } + R− × R+ ),
+             W := Conv({(0, 0)} ∪ {(bkj , vj ) : j = 0, 1, ..., N } + R− × R+ ).
+Here , the notation Conv (·) indicates the convex hull .
+    Let SV and SW denote the st eep est slop e segments of V and W. Observe that
+(ak0 , u0 )( resp . (bk0 , v0 )) i s the highest vertex of the polygon V and of the segment
+SV ( resp . of the polygon W and of the segment SW ). The line containing SV ( resp
+. SW ) intersects the first axis at the point (δP , 0)( resp . (δQ , 0)). Since the point (
+0 , 0 ) li es in each of these polygons , we have δP ≥ 0 and δQ ≥ 0.
+    Now , rewriting φk + 1(x, ξ) = φk(x, ck + ξxαk+1 −αk ) and substituting it into ( 3
+. 1 1 ) and ( 3 . 1 2 ) , by the construction of φk and the properties ( S 1 – S 2 ) we
+can verify the following :
+                 1 ) Case where Pk+1 has a zero different from the origin :
+                                       X
+                       Pk+1 (ξ) =            ξ ui pki(ck ), deg Pk+1 = u0 ,
+                                                             (aki , ui ) ∈ SV
+300 line − Nguyen V − linean Ch au
+                                           a
+                                           k+1
+                                         mk+1        = makk + (αk − αk+1 )u0 ,
+                      Qk + 1(ξ) = ξ v0 qk0(ck ) + ...,       deg Qk + 1 = v0 ,
+                                        bk+1
+                                         m k+1       = bkm k + (αk − αk+1 )v0 .
+            2 ) Case where Qk + 1 has a zero different from the origin :
+                               X
+                 Qk + 1(ξ) =        ξ vj qkj (ck ), deg Qk + 1 = v0 ,
+                                                              (bkj ,line−v
+                                                                    j      ) ∈ SW
+                                         bk+1
+                                          m k+1        = bkm k + (αk − αk+1 )v0 ,
+                            Pk+1 (ξ) = ξ u0 pk0(ck ) + ...,  deg Pk+1 = u0 ,
+                                            ak+1         ak
+                                           mk+1       = mk + (αk − αk+1 )u0 .
+In both cases we ha v − line e deg Pk+1 = u − line0,                    deg Qk + 1         = v0 . This t
+ogether with
+( 3 . 14 ) concludes the proof .
+                                   Assertion 3 .
+
+                                    degdeg Pk Qk     = degdeg P Q     f ork = 0, ..., S,
+                              deg
+             abkk     = deg         P line − Q     f orline − k = 0, ..., S − line − 1.
+                         Proof.           By ( 3 . 9 ) and ( 3 . 1 0 ) ,
+
+
+      degdeg P0 Q0      = ab00      = degdeg P Q,      degdeg Pi Qi    = abii     for0 ≤ i < S.
+
+The conclusion , then , is clear by Assertion 2 .
+        Proof of Main Lemma .        ( i ) Combine Assertion 3 and ( 3 . 1 0 ) .
+    ( ii ) By definition aK = 0 and bK ≤ 0. By Assertion 3 we need only
+show that bK = 0.              Otherwise , assuming bK < 0, we can determine a unique
+π− series ψ(x, ξ) of the form
+
+                                       ψ(x, ξ) = φk − 1(x, ξ)
+or
+
+                     ψ(x, ξ) = φk − 1(x, ck−1 ) + ξxα ,        αk−1 > α > αk ,
+such that bψ = 0.      It i s obvious that
+
+                                       aψ /mψ > aK /mK = 0.
+Then , applying Lemma 3 . 2 ( c ) t o ψ we obtain Jψ 6= 0 and Pψ ≡ const 6= 0, which
+is impossible by Assertion 1 . This proves bK = 0.
+                                                                             C2 301
+                                                                   Polynomial maps of
+    ( iii ) Suppose S < K. By Property ( S 3), aS /mS > aS+1 /mS+1 ≥
+0. Analogously t o the proof of ( ii ) we can show that bS ≥ 0. Therefore , JS 6= 0 by
+the definition of φS. Hence , JS ≡ mS J(P, Q) by Lemma 3 . 1 .
+    Put PK (ξ) := AK pK(ξ) and QK(ξ) := BK qK(ξ), where pK, qK ∈ C[ξ] with
+leading coefficient 1 . Then
+
+                              aK pK q̇K − bK ṗKqK ≡ const 6= 0,
+since JS ≡ mS J(P, Q). Comparing the two sides of this equality , we get
+
+                                               aS   deg PS
+                                          bS    = deg QS.
+Hence , by Assertion 3 ,
+
+                                          aS    deg PS    deg P
+                                     bS    = deg QS = deg Q.
+    4 .     Geometric degree and branched value set of f and t opology of
+generic fibers of P and Q. In this section , by applying Theorem 3 . 6 and the
+Riemann – Hurwitz relation we will get information on the geometry
+of (P, Q) from the data of ΠP ∪ ΠQ and give the proofs of Theorems B and
+C . We will consider the level sets of P and Q as punctured Riemann surfaces and view
+each of their branches β at infinity as a small enough punctured disk Dβ centered at
+the corresponding puncture . By the degree degβ f of f
+on β we mean the t opological degree of the restriction f : Dβ → f (Dβ ).
+    From now on , for simplicity , we set deg P := kd and deg Q := ke, where k := gcd
+( deg P, deg Q). Sometimes we use the lower index [φ] instead of “ φ ”
+to indicate characteristics of an equivalence class [φ].
+    4. 1.        Geometric        degree    of f and proof of Theorem                B.       Recall
+that the geometricf=afor degreegeneric deggeo  values  f a of ∈
+                                                                f
+                                                                C 2.
+                                                                     i sThis the number isatopological
+of solutionsinvariant of theof equationfunder
+the action of homeomorphisms of C2 .
+             P            Theorem 4 . 1 . ( i ) For [φ] ∈ S(P,Q) ,
+                B∈ P ([φ] , 0) degβ f = gcd (aφ , bφ ) gcd ( deg Pφ , deg Qφ )deiφ .
+                   β
+Furthermore , gcd (aφ , bφ , iφ ) = 1,  gcd ( deg Pφ , deg Qφ , iφ ) = 1         and either iφ
+divides d or iφ divides e.
+                ( ii ) The geometric degree deggeo f is equal to
+                P
+             [φ] ∈S(P, Q) gcd (a[φ] , b[φ] ) gcd ( deg P[φ] , deg Q[φ] )dei[φ] .
+302    Nguyen V an Ch au
+        P r o o f . ( i ) Given a separative series φ, [φ] ∈ S(P,Q) , let β ∈ BP ([φ], 0)
+be given by a Newton – Puiseux expansion at infinity β(x) = φ(x, d)+ lower order t
+erms in x. Then degβ f can b e determined from the expansion
+
+
+                            Q(x, β(x)) = Qφ (d)xdegβ f /mult(β)                         (4.1)
+
++ lower order t erms in x,     Qφ (d) 6= 0, and hence ,
+                                        (
+                                             bφ ford 6= 0,
+                              degβ f =
+                                             bφ /iφ ford = 0.
+This t ogether with Lemma 3 . 8 implies that
+
+                                   X
+                             β∈             , 0) degβ f = bφ degiφ Pφ .                 (4.2)
+                                  BP ([φ]
+
+
+             On the other hand , according t o Theorem 3 . 6 ( i ) ,
+         bφ = gcd (aφ , bφ )e and deg Pφ = gcd ( deg Pφ , deg Qφ )d.
+Then by ( 4 . 2 ) we get the desired formula for the t otal degree of f on
+
+
+                                              BP ([φ], 0).
+
+   To prove the rest , we need only consider the case of iφ > 1. The conclu - sion
+gcd (Pφ , Qφ , iφ ) = 1 and either iφ | d or iφ | e follows from Lemma 3 . 8 . Since
+Jφ ≡ mφ J(P, Q) by Lemma 3 . 1 , we have
+
+                                     aφ + bφ + nφ = 2mφ .
+So , if gcd (aφ , bφ , iφ ) > 1, then gcd (nφ , iφ ) > 1. This i s impossible by defini - tion
+of mφ and nφ . Thus , we get gcd (aφ , bφ , iφ ) = 1.
+                          ( ii ) It is a well known elementary fact that
+                                                   X
+                                      deggeo f =         degβ f.
+β ∈ BP (0) a pole of Q on P = 0 Then , in view of Theorem 3 . 6 ,
+                             X X                    X X
+                 deggeo f =              degβ f =               degβ f.
+                [ψ] ∈ Pol(f, P )β ∈ BP ([ψ], 0)        [φ] ∈ S(P,Q) β ∈ BP ([φ], 0)
+Therefore , we get the desired formula by ( i ) .
+             Proof of Theorem B . We need only consider the situation d > e > 1 and
+show that
+
+                     deggeo f = rd + se,         r ≥ 0,      s ≥ 0,   r+s≥1
+and
+
+                                    deggeo f ≥ min(2e, d).
+                                                                   Polynomial maps of  C2 303
+The first conclusion i s immediate from Theorem 4 . 1 .                   For the second , it i s
+sufficient t o prove that for φ ∈ S(P,Q) ,
+gcd (aφ , bφ ) gcd ( deg Pφ , deg Qφ )deiφ ≥ min (2e, d). Following Lemma 3 . 8 , we
+consider three cases .
+             P         1 ) Case iφ = 1 : By Theorem 4 . 1 ( i ) ,
+                  degβ f = gcd (aφ , bφ ) gcd ( deg Pφ , deg Qφ )de ≥ de − line.
+
+                                         β ∈ BP ([φ], 0)
+             2 ) Case iφ > 1 and Pφ (0) = 0 : By Lemma 3.8, iφ divides deg Qφ , and
+hence , by P
+           Theorem 4 . 1 ( i ), iφ divides e. It follows that
+                                                                           e
+            B∈ P ([φ] , 0) degβ f = gcd (aφ , bφ ) gcd ( deg Pφ , deg Qφ )iφ d ≥ d.
+               β
+            3 ) Case iφ > 1 and Qφ (0) = 0 : By Lemma 3.8, iφ divides deg Pφ and iφ
+divides deg Qφ − 1, and hence , by Theorem 4 . 1 ( i ), iφ divides d. In particular ,
+either iφ < dPor gcd (Pφ , deg Qφ ) > 1, since d > e > 1. Hence ,
+         β ∈ BP ([φ] , 0) degβ f = gcd (aφ , bφ ) gcd ( deg Pφ , deg Qφ )diφ e ≥ 2e.
+    4 . 2 . Dicritical series and branched value set of f. Here , we are concerned with
+the situation Πf 6= ∅. As in Remark 3 . 5 ( iv ) , in this situation the
+branched value set Ef of f, Ef := {a ∈ C2 : #f −1 (a) < deggeo f }, is not
+empty . As in the proof of Proposition 2 . 1 , we can verify that
+                                              [
+                                    Ef =            C[φ] ,
+                                                   [φ] ∈ Πf
+where C[φ] = {(Pφ (ξ), Qφ (ξ)) : ξ ∈ C}. The curve C[φ] depends only on the class
+[φ] ∈ Πf by ( 2 . 1 0 ) . For each class [φ] ∈ Πf we introduce the map
+
+                   Fφ (t, ξ) := (P (t−mφ , φ(t−mφ , ξ)), Q(t−mφ , φ(t−mφ , ξ))).
+This i s a polynomial in (t, ξ) and
+
+                           det DFφ (t, ξ) = −mφ J(P, Q)tn φ−2m φ−1
+                                                                .
+
+The singular set of Fφ is either empty or the line t = 0.           This allows us to determine
+deg(0,d) Fφ by the formula
+
+                                                   X
+                                   deg(0,d) Fφ =       degβ Fφ ,                           (4.3)
+                                                              β
+
+where the summation i s taken over all irreducible branches β at (0, d) of the
+
+
+                             curveP (t−m φ, φ(t−m φ, ξ)) = Pφ (d).
+
+                     Using ( 4 . 3 ) it i s easy t o verify the following .
+304     Nguyen V an Ch au
+      Lemma 4 . 2 . Let [φ] ∈ Πf , c ∈ C and d ∈ C so that Pφ (d) = c.      Then
+                 X                  deg       F
+                     degγ f = {deg(0,0)(0,d) Fφ φ i−1
+                                                   φ  f orf or dd 6== 00,
+                                                                       ,
+                    γ
+
+where the summation is taken over all branches γ ∈ BP (c) having a Newton – Puiseux
+expansion at infinity of the form φ(x, d)+ lower order terms in x.
+        It is well known ( see for example Lemma 3 . 1 of [ O 1 ] ) that deg(0,d) Fφ i s
+                                                                                                         deg
+                                                                                                           (0
+the same natural number µφ for almost d ∈ C, except at most a finite number ofvaluesdependsdforonlywhichonthecla
+µφ . Moreover , the natural number µφ Denote by Eφ the singular set of the map
+(Pφ , Qφ )(ξ). By Remark 2 . 3 ( i ) ,
+Eφ i s a finite set depending only on the class [φ].
+                        Lemma 4 . 3 . Let [φ] ∈ Πf . Then
+
+                                       (
+                                              ≡ µφ      f ord ∈ C − Eφ ,
+                         deg(0,d) Fφ                                               (4.4)
+                                              > µφ      f ord ∈ Eφ .
+
+    P r o o f .    Let d ∈ C. Consider the map Fφ (t, ξ) in a small enough ball B
+around (0, d). Put D := B ∩ ({0} × C) and V := Fφ (D), which can be viewed as an
+irreducible curve germ at Fφ (0, d). If d ∈ Eφ , then V is smooth . In this case we know
+from Lemma 3 . 1 of [ O 1 ] that deg(0,ξ) Fφ ≡ µφ for all ξ ∈ D. If
+d ∈ Eφ , then the germ V is singular and the germ Fφ−1 V at (0, d) contains
+D and at least one other branch .                Then for every point a ∈ V close enough
+to Fφ (0, d) we have
+                                           X
+                         deg(0,d) Fφ =            degu Fφ > kµφ ,
+                                                      u ∈ B, Fφ (u) = a
+where k i s the degree of the restriction Fφ : D → V.
+φi Remarkφµ .(byLemma Inthe 43. case). iφ > 1 we always have 0 ∈ Eφ and deg(0,0) Fφ >
+Theorem 4 . 4 . Let f = (P, Q) be a non - zero constant Jacobian polyno -
+mial map of C2 , monic in y. Then
+
+                                                            [
+                                                 Ef =             C[φ] ,
+                                                              [φ] ∈ Πf
+                                                               where :
+                                        deg
+                          (E1)    deg         Pφ Qφ     = degdeg P Q.
+
+   ( E 2 ) If iφ > 1, then 0 ∈ Eφ and (Pφ , Qφ )(0) is always a singular point
+of (Pφ , Qφ )(D) for every neighborhood D of zero .
+                   ( E 3 ) Every curve C[φ] has a singularity .
+                                                                                C2 305
+                                                               Polynomial maps of
+    P r o o f .     The representation of Ef i s obtained by definition of Πf       and
+Proposition 2 . 1 .   Properties ( E 1 ) and ( E 2 ) are stated in Theorem 3 . 6 ( ii )
+and the remark after Lemma 4 . 3 .      To see ( E 3 ) , if Ef 6= ∅, in view of Jung ’ s
+theo -
+rem on automorphisms of C2 , in suitable coordinates f can be represented
+as f = (p, q) with deg p = kd, deg q = ke, d > e > 1 and gcd (d, e) = 1.
+
+                   [φ]                                                                    qφ ) is
+IfacurvebeddingCofC intoissmooth ,C2 .             thecorresp onding
+                                         Therefore ,
+                                                                                    ,
+                                                              bythe map(pφ Abhyankar−−Moh −− Suzuki
+                                                                                                    aregular
+                                                                                                             em−theorem
+( [ AM ] , [ Su ] ) either deg pφ divides deg qφ or vice versa . This contradicts ( E 1 ) ,
+
+
+                                         sinced > e > 1.
+    4 . 3 .        Generic fibers    of components       of f. Remember that the
+generic fiber of P and of Q i s a connected Riemann surface with a finite number of
+punctures , since P and Q are primitive . Denote by gP and nP the genus and
+the number of punctures of FP . We will determine the Euler – Poincar é characteristic
+χP and topological type (gP, nP ) of the generic fiber of P by calculating those numbers
+for a generic level P = c.
+                            Consider the curve P = c. Set
+
+                    b∞
+                     P (c) := {γ ∈ BP (c) : γ 3 ( lim ∞f (x, y) = ∞},
+                                                   x,y)→
+
+               bP (c) := {γ ∈ BP (c) : γ 3 (limx,y)→ ∞f (x, y) i s finite } .
+The number of punctures of the curve P = c i s equal t o b∞          P (c) + bP (c). Let V b
+e the normalization of P = c, which i s a smooth compact Riemann surface , and let
+q : V → CP1 be the regular extension of the restriction of Q t o the curve P = c over V.
+Remember that the curve P = c is embedded into V so that V − {P = c} consists
+of #BP (c) distinct points and each branch γ ∈ BP (c) can b e viewed as a punctured
+disk centered at a point zγ
+of V − {P = c}.             The branched set of q i s contained in V − {P = c} and the
+
+localdeggeo degreeqis= degzγto qis = deggeo f to. degγThen , fby . Furthermore,theRiemann the
+                                                                                          −− Hurwitz topologicalrelation deg
+
+
+                                                                                                                  X
+                                                                                           χ(V ) = 2 deggeo q −    (degz
+
+                                                                                     X                         X
+                                                                   = 2 deggeo f −           (degγ f − 1) −           (degγ
+                                                                                                           γ ∈ b∞
+                                                                                                                P (c)   γ∈
+                                                                                                                    X
+                                                                            = deggeo f + #b∞
+                                                                                           P (c) + #bP (c) −               d
+                                                                                                                        γ∈
+where χ(·) indicates the Euler – Poincar é characteristic .            Thus , we obtain the
+formula
+
+                                                       X
+                         χ({P = c}) = deggeo f −              degγ f.                     (4.4)
+                                                           γ ∈ bP (c)
+306    Nguyen V an Ch au
+For the number #b∞                                                 ∞
+                    P (c), by Corollary 3 . 7 we have (4.5) #bP (c) ≡ # Pol (f, P )
+for all c ∈ C.
+           Now , we assume that {P = c} i s a generic level , i . e . c 6∈ EP . For the
+number bP (c), by Theorems 3 . 4 ( ii ) and 2 . 4 we have
+                   P                    [φ]
+(4.6) #bP (c) = d φ[ ]∈Πf gcd ( deg Pi [φ] , deg Q[φ] ) for c 6∈ EP . Furthermore , by
+definition , Theorem 2 . 4 and Lemma 4 . 2 we can verify that
+
+          X                     X              X                           X
+                    degγ f =             γ∈         , c)line − degγ f =             degi[φ] P[φ] µ[φ] .
+        ∈γ bP (c)              φ[ ]∈Πf        BP ([φ]                     φ[ ]∈Πf
+
+                          P                      P                       [φ]
+Therefore , we get (4.7)    ∈γ bP (c) degγ f = d   φ[ ]∈Πf gcd ( deg Pi [φ] , deg Q[φ] )µ[φ]
+for c 6∈ EP
+since deg Pφ = d gcd ( deg Pφ , deg Qφ ) by Theorem 3.6line − parenlef t ii ) .
+                      Thus , from ( 4 . 4 ) – ( 4 . 7 ) we obtain
+                                   Theorem     4. 5.
+                                                              [φ]
+            nP = # Pol (f, P ) + d φ[ ]∈Πf gcline−d ( deg Pi [φ] , deg Q[φ] ),
+                                    P
+
+                                                  [φ]
+                                   X
+             χP = deggeo f − d          gcd(deg Pi [φ] , line − deg Q[φ] )µ[φ] ,
+                                          φ[ ]∈Πf
+                                      P                   [φ]
+2 − 2gP = deggeo f + # Pol (f, P ) − d φ[ ]∈Πf gcd ( deg Pi [φ] , deg Q[φ] )(µ[φ] − 1).
+Proof of Theorem C . By applying Theorem 4 . 5 to P and Q we get the
+desired formula
+
+                        deg P (deggeo f − χQ ) = deg Q(deggeo f − χP ).
+If χP = χQ          but deg P 6= deg Q,         by the above formula we get deggeo f =
+χP ≤ 1. Therefore , since χP = 2 − 2gP − nP ≤ 1, we conclude that χP =
+deggeo f = 1 and f i s an automorphism .
+    Abhyankar [ A ] proved that a non - zero constant Jacobian polynomial
+map f = (P, Q) i s an automorphism if some level set of P has only one
+irreducible branch at infinity . Later , Dru ż kowski [ D 1 ] proved that f = (P, Q) is an
+automorphism if nP ≤ 2. In view of Theorem 4 . 5 either nP = 1 or nP ≥ 1 + d.
+In fact , we have
+                                                                      C2 307
+                                                              Polynomial maps of
+     Theorem 4 . 6 . A non - zero constant Jacobian polynomial map f = (P, Q)
+of C2 is an automorphism if one of the following holds :
+               ( i ) The curve Q = 0 has at most two punctures .
+          ( ii ) The generic fiber of Q has at most three punctures .
+    P r o o f . Let c ∈ C. By the above - mentioned results in [ A ] and
+[D1],
+
+                                        that           (c)
+                                                      ≥ 1 it is                                                consider
+Theoremfollowing4.5   andthe
+                 situations : (fact1)# bQ (c)b= ∞Q1 ; (2 ) # bQ (c ) sufficient=2andc toelement − negationslashE        Q
+
+
+by Theorems 4 . 4 and 4 . 5 , we can verify that Πf = {[φ]} and Qφ has only
+one critical point .     It follows that Q has only one exceptional value .      Such a
+situation i s impossible by the following .
+     Proposition 4 . 7 . Let f = (P, Q) be a non - zero constant Jacobian poly -
+nomial map of C2 . Then the number of exceptional values of Q must be different
+from one .
+          P r o o f . It i s well known from [ Su ] that for every primitive polynomial
+
+
+                                                   ginC2 ,
+                              X
+                               (χ{g = c} − χg ) = 1 − χg .                             (4.8)
+                                                        c ∈ Eg
+
+If EQ = {c}, then f is not bij ective and χ{Q = c} = 1. Since {Q = c} i s smooth ,
+it has a unique component diffeomorphic to C. Then , by applying the Abhyankar –
+Moh – Suzuki Theorem ( [ AM ] , [ Su ] ) on embeddings of C into
+C2 one can verify that the curve {P = c} i s isomorphic to C and f i s an automor-
+phism ( see , for example , Theorem 5 . 6 of [ Ca ] or Lemma 2 . 2 of [ C 1 ] ) . Hence
+, we get a contradiction .
+               Concerning the t opological typ e of the generic fiber of the polynomials
+
+
+                                      aP + bQwehave
+
+          Theorem 4 . 8 . For a non - zero constant Jacobian polynomial map f =
+(P, Q) of C2 the generic fibers of the polynomials aP + bQ with deg (aP + bQ) =
+max { deg P, deg Q} have the same topological type (g, n) with n 6= 2, 3, 4, 5.
+    P r o o f . First , we prove that the generic fibers of the polynomials aP + bQ with
+deg (aP + bQ) = max { deg P, deg Q} have the same t opological type . To do it
+we need only prove that the generic fibers of P and Q have the same t opological type
+if deg P = deg Q. Assume that deg P = deg Q. From Lemma 3 . 8 ( ii ) and
+Theorem 3 . 6 ( i ) we have iφ = 1 and deg Pφ = deg Qφ for
+all [φ] ∈ S(P,Q) . Then byPTheorem 3 . 4 and P    Lemma 3 . 8 ( i ) we get
+         # Pol (f, P ) =         # deg P[φ] =          # deg Q[φ] = # Pol (f, Q).
+
+                                [φ] ∈ S(P,Q)   [φ] ∈ S(P,Q)
+This    together with the formulas       of Theorem 4 . 5        proves that   (gP, nP )   =
+
+
+                                         (gQ , nQ ).
+308     Nguyen V an Ch au
+            Now , assume that deg P > deg Q and (gP, nP ) is the t opological typ e
+of the generic fiber of P. Assuming n − lineP 6= 1, we want to show that nP > 5.
+From Theorem 4 . 5 we know that
+
+                   nP = #Pol(f, P ) + dD,         nQ = #Pol(f, Q) + eD,
+where                         P                   [φ]
+                        D := φ[ ]∈Πf gcd ( deg Pi [φ] , deg Q[φ] ).
+As in the proof of Proposition 4.7, dD > 2 and eD > 2. Therefore , we get dD > 3
+and nP > 4, since d > e. If nP = 5, we have to consider only the case dD = 4. In
+this case # Pol (f, P ) = 1, d = 4, D = 1 and e = 3, since
+eD > 2. Lemma 3 . 8 shows that # Pol (f, Q) = 1. Then by Lemma 3 . 9 we get
+the contradiction that e = 1. Thus , we proved nP > 5.
+        Let us conclude the paper with a remark on the geometric degree of f.
+         Remark 4 . 9 . In [ O 1 ] Orevkov constructed a a reduction f ∗ of a regular
+extension of f, f ∗ : (C2 t D t {∞}, D, ∞) → (C2 t {∞}, Ef , ∞),               where
+D i s the union of a finite number of curves homeomorphic t o C. From this Orevkov
+obtained a nice formula for the geometric degree of f :
+
+                                        X           X
+                       deggeo f − 1 =       [µl +       (degu f ∗ − µl)]               (4.9)
+                                                          l⊂D       u∈l
+
+( Lemma 4 . 2 of [ O 1 ] ) , where µl i s the degree degu f ∗ for generic u ∈ l. Using this
+formula , he checked (JC2 ) for the cases deggeo f ≤ 5([ O 1 , O 2 ] ) . It i s
+possible t o rewrite Orevkov ’ s formula in terms of the data of Πf and t o obtain the
+following formula :
+
+                                                          (4.10)     deggeo f − 1
+                    X                               X
+               =          i−1
+                           [φ] [deg(0,0) F[φ] +           (deg(0,d) F[φ] − µ[φ] )],
+                                                    [φ] ∈ Πf       d ∈ E[φ] , d 6= 0
+where in the summation F[φ] := Fφ for a series φ ∈ [φ].                  This formula can
+also be obtained in the way used for Theorem 4 . 5 and the equalities ( 4 . 4 ) and ( 4
+. 8 ) on Euler – Poincar é characteristics . By using ( 4 . 10 ) and Theorem
+4 . 4 we can claim that the branched value set Ef              can never be the image of
+an imbedding of C into C2 .                It i s worth noting here that the curve Ef can
+never b e the image of a polynomial inj ection from C into C2 ([ C 1 ] )              and
+that there exists the so - called Vitushkin covering , a branched finite covering between
+two complex manifolds homeomorphic t o R4 with branched value set diffeomorphic t
+o R2 ([ Vi ] and [ O 3 ] ) . As part of (JC2 ), it i s conj ectured
+that the exceptional value s et Ef of a non - zero constant Jacobian polynomial
+map f in C2 can never be an irreducible curve .
+                                                                                   C2 309
+                                                                  Polynomial maps of
+    Acknowledgments .           Parts of this study were carried out during the au - thor
+’ s visit t o Laboratory Paul Sabatier of University of Toulouse and Math -
+ematical Laboratory of University of Limoge , France , with support of CNRS , in the
+International Centre for Theoretical Physics , Trieste , Italy , 1 996 , and in IMPA under
+the support of IMPA and TWAS , 1 997 – 1998 . The author
+is grateful t o these institutions for their hospitality .   The author wishes t o thank
+very much Profs . A . V . Essen , L . Fourrier , C . Gutierrez , V . H . Ha ,
+C . Olech , Yu . Orevkov , J . Palis , F . Pham and M . Voileau for their help .
+                                            References
+    [A]       S . S . A b h y a n k a r , Expansion          Techniques in A lgebraic Geometry ,
+Tata Inst . Fund . Research , 1 977 .
+    [ AM ]      S . S . A b h y an k a r and T . T . Moh , Embeddings of the line in the plane
+, J . Reine Angew . Math . 2 76 ( 1 975 ) , 148 – 1 66 . [ BCW ]                H.Bass,E.Co
+n n e l l and D . Wr i g h t ,       The Jacobian conjecture : reduction of degree and formal
+expansion of the inverse , Bull . Amer . Math . Soc .           ( N . S . ) 7 ( 1 982 ) , 287 – 330 .
+    [ BK ]     E . B r i e s k o r n und H . K n ö r r e r , Ebene algebraische Kurven , Birkh
+ä user , Basel , 1 981 .
+    [ Ca ]     L . A . C ampbe l l , Pa r − t ial properness and the Jacobian conjecture ,
+Appl . Math . Lett . 9 ( 1 996 ) , no . 2 , 5 – 1 0 .
+    [C1]        N g u y e n V a n C h a u , Remark on the Vitushkin covering , Acta Math .
+Vietnam . 24 ( 1 999 ) , 1 9 – 1 1 5 .
+    [ C 2] − − − ,           Newton – Puiseux expansion approach to the Jacobian conjecture ,
+preprint 14 / 98 , Math . Inst . Hanoi , 1 998 .
+    [ CK ]     J . C h a − cedilla d z y ń s k i and T . K r a s i ń s k i , On a formula for the
+geometric degree and Jung ’ theorem , Univ . Iagell . Acta Math . 28 ( 1 99 1 ) , 81 – 84 .
+    [D1]        L . M . D r u ż k ow s k i , A geometric approach to the Jacobian Conjecture
+in C2 , Ann . Polon . Math . 55 ( 1 99 1 ) , 95 – 1 1 .
+    [ D 2] − − − , The Jacobian Conjecture , preprint 492 , Inst . Math . , Polish Acad .
+Sci . , War - szawa , 1 99 1 .
+    [H]       R . C . H e i t mann , On the Jacobian conjecture , J . Pure Appl . Algebra 64 (
+1 990 ) , 35 – 72 .
+    [ HL ]     H . V . H a et D . T . L e , Sur la topologie des polyn ô mes complexes , Acta
+Math . Vietnam . 9 ( 1 984 ) , 2 1 – 32 ( 1 985 ) .
+    [J]      H . W . E . J u n g , Ü ber ganze birationale Transformationen der Ebene , J .
+Reine Angew . Math . 1 84 ( 1 942 ) , 1 61 – 1 74 .
+    [ Ka ]     S . K a l i m an , On the Jacobian conjecture , Proc . Amer . Math . Soc . 1 1
+7 ( 1 993 ) , 45 – 5 1 .
+    [K]       O . K e l l e r , Ganze Cremona - Transformationen , Monatsh . Mat . Phys . 47
+( 1 939 ) , 299 – 306 .
+      [ Kul ]     W.van          der      K u l k , On polynomial rings in two variables , Nieuw
+Arch . Wisk .
+                                    ( 3 ) 1 ( 1 953 ) , 33 – 41 .
+    [ LW ]     D . T . L e et C . Weber , Polyn ô mes à fibr é s rationnelles et conjecture
+jacobienne
+    à2 variables , C . R . Acad . Sci . Paris S é r . I Math . 320 ( 1 995 ) , 581 – 584 .
+31 0     Nguyen V an Ch au
+    [ MK ]     J . H . McK a y and S . S . - S . Wang , An elementary proof of the automorphism
+the - orem for the polynomial ring in two variables , J . Pure Appl . Algebra 52 ( 1 988 ) ,
+                                             91–12.
+    [O1]        S . Yu . O r e v k o v , On three - sheeted polynomial mappings of C2 , Izv .
+Akad . Nauk SSSR 50 ( 1 986 ) , 1 23 1 – 1 240 ( in Russian ) .
+    [ O 2] − − − , Mappings of Eisenbud – Neumann splice diagrams , lecture given at
+Interna - tional Workshop on Affine Algebraic Geometry ( Haifa , 1 993 ) .
+    [ O 3] − − − , Rudolph diagram and analytical realization of Vitushkin ’ s covering ,
+Mat . Za - metki 60 ( 1 996 ) , 206 – 224 , 31 9 ( in Russian ) .
+    [P]      S . P i n c h u k , A counterexample to the strong real Jacobian Conjecture , Math
+. Z . 2 1 7 ( 1 994 ) , 1 – 4 .
+    [ St ]    Y . S t e i n , The Jacobian problem as a system of ordinary differential equations
+, Israel J . Math . 89 ( 1 995 ) , 301 – 31 9 .
+      [ Su ] Met .automorphismes S u z u k i , P ropriétésalg ébriques topologiquesdel0 espace
+des polynôC2 , mesJ.M dedeux variables
+                          ath . Soc     .Japan complexes26(1974),
+                                            241 – 2 57 .
+    [ Ve ]    J . L . Ve r d i e r , Stratifications de Whitney et th é or è me de Be r − t
+ini – Sard , Invent . Math . 36 ( 1 976 ) , 29 5 – 31 2 .
+    [ Vi ]    A . G . V i t u s h k i n , On polynomial transformations of C n , in : Manifolds
+( Tokyo , 1 973 ) , Tokyo Univ . Press , 1 975 , 41 5 – 417 .
+Hanoi Institute of Mathematics
+P . O . Box 631
+Boho 1 0 , Hanoi , Vietnam
+E - mail : nvchau @ ioit . ntsc . ac . vn
+                   Re c − cedilla u par la R é daction le 3 . 1 1 . 1 998
+                                   R é vis é le 22 . 3 . 1 999
+

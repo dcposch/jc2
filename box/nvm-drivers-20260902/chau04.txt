@@ -1,0 +1,176 @@
+arXiv:math/0305088v1 [math.AG] 6 May 2003
+                                                     Non-proper value set and the Jacobian
+                                                                   condition
+                                                                           Nguyen Van Chau ∗
+
+
+                                                                                   Abstract
+                                                      The non-proper value set of a nonsingular polynomial map from
+                                                      2
+                                                    C into itself, if non-empty, must be a curve with one point at infinity.
+                                                      2000 Mathematical Subject Classification: 14 H07, 14R15.
+                                                      Key words and phrases: non-proper value set, Jacobian condition.
+
+                                            1. Let f = (P, Q) : C2(x,y) −→ C2(u,v) be a dominant polynomial map,
+                                            P, Q ∈ C[x, y] and denote J(P, Q) := Px Qy − Py Qx . Recall that the so-called
+                                            non-proper value set Af of f is the set consists of all point a ∈ C2 such that
+                                            the inverse f −1 (K) is not compact for compact neighbourhoods K ⊂ C2
+                                            of a. This set Af , if non-empty, must be a plane curve that each of it’s
+                                            irreducible components can be parameterized by a non-constant polynomial
+                                            map from C into C2 ( See [J]). The mysterious Jacobian conjecture (See
+                                            [BMW] and [E]), posed first by Keller in 1939 and still open, asserts that
+                                            a polynomial map f = (P, Q) of C2 with J(P, Q) ≡ const. 6= 0 must have
+                                            a polynomial inverse. This conjecture can be reduced to prove that the
+                                            non-proper value set Af is empty. In any way one may think that in a
+                                            counterexample to the Jacobian conjecture, if exists, the non-proper value set
+                                            must has a very special configure. Such knowledges may be useful in pursuit
+                                            of this conjecture. In [C] it was observed that the irreducible components
+                                            of Af in such a counterexample can be parameterized by polynomial maps
+                                            ξ 7→ (p(ξ), q(ξ)) with deg p/ deg q = deg P/ deg Q. In this paper we would
+                                            like to notice that the non-proper value set of a nonsingular polynomial map
+                                            from C2 into itself, if non-empty, must be a curve with one point at infinity.
+                                              ∗
+                                                  Supported in part by the National Basic Program on Natural Science, Vietnam.
+
+
+
+                                                                                       1
+Theorem 1. Suppose f = (P, Q) is a polynomial map of C2 with J(P, Q) ≡
+const. 6= 0, deg P = Kd and deg Q = Ke, gcd(d, e) = 1, P and Q are monic
+in y,
+                P (x, y) = Ay Kd + . . . + a1 (x)y + a0 (x), A 6= 0
+                                                                     (1)
+                Q(x, y) = By Ke + . . . + b1 (x)y + b0 (x), B 6= 0.
+If the non-proper value set Af is not empty, then every irreducible component
+of Af can be parameterized by polynomial maps of the form
+
+   ξ 7→ (Aξ md + lower terms in ξ, Bξ me + lower terms in ξ), m ∈ N.           (2)
+
+
+    By definition Af is the set of all value a ∈ C2 such that the number of
+solutions counted with multiplicities of the equation f (x, y) = a is differ-
+ent from those for generic values in C2 . Then, considering the components
+P (x, y) and Q(x, y) as elements of C[x][y] we can define the resultant
+
+             Resy (P − u, Q − v) = R0 (u, v)xN + . . . + RN (u, v),            (3)
+
+where Ri ∈ C[u, v], R0 6= 0. From the basic properties of the resultant
+function we know that N is the geometric degree of f and Af = {(u, v) ∈
+C2 : R0 (u, v) = 0}. Note that a curve given by a polynomial parameter of
+the form (1) can be defined by a polynomial of the form (Ae ue − B d v d )m +
+                   i j
+  0≤id+je<mde cij u v and its branch at infinity has a Newton- Puiseux series
+P
+                     d
+of the form u = cv e + lower terms in v, where c is a d− radicals of B d /Ae .
+Thus, Theorem 1 leads to
+Corollary 1. Let f be as in Theorem 1. Then
+
+              R0 (u, v) = C(Ae ue − B d v d )M +                  cij ui v j
+                                                       X
+                                                                               (4)
+                                                   0≤id+je<M de
+
+with 0 6= C ∈ C and M ≥ 0.
+
+Corollary 2. Let f be as in Theorem 1. If Af 6= ∅, then Af is a curve
+with one point at infinity and the irreducible branches at infinity of Af have
+Newton-Puiseux series of the form
+                                 d
+                          u = cv e + lower terms in v
+
+with coefficients c to be d− radicals of B d /Ae .
+
+                                        2
+     As seen later, the monic representation in (1) of P and Q is only used
+to visualize the coefficient B d /Ae . In fact, when Af 6= ∅ the numbers d, e,
+B d /Ae and the polynomial R0 (u, v) are invariant of f under right actions of
+automorphisms of C2 , since the set Af does not depend on the coordinate
+(x, y). Furthermore, the coefficient B d /Ae is uniquely determined in the
+relation
+                          P+e (x, y) = (B d /Ae )Qd+ (x, y),
+which is dominated by the Jacobian condition when deg P > 1 and deg Q > 1.
+Here, P+ and Q+ are leading homogenous components of P and Q, respec-
+tively.
+   Theorem 1 will be proved in sections 2 - 5 by an elementary way using
+Newton- Puiseux expansions and the Newton Theorem. It is worth to de-
+termine the form of R0 (u, v) by examining directly the resultant function
+Resy (P − u, Q − v).
+2. Dicritical series of f . In order to prove Theorem 1, we need to setup our
+hypothesis. From now on, f = (P, Q) : C2(x,y) −→ C2(u,v) is a given polynomial
+map with J(P, Q) ≡ const. 6= 0, deg P = Kd > 0 and deg Q = Ke > 0,
+gcd(d, e) = 1. The Jacobian condition will be used really in Lemma 3 and
+the proof of Theorem 1. Since Af does not depend on the coordinate (x, y),
+to examine it we can assume that P and Q are monic in y,
+               P (x, y) = Ay Kd + . . . + a1 (x)y + a0 (x), A 6= 0
+                                                                                 (5)
+               Q(x, y) = By Ke + . . . + b1 (x)y + b0 (x), B 6= 0.
+With this representation the Newton-Puiseux roots at infinity y(x) of each
+equations P (x, y) = 0 and Q(x, y) = 0 are fractional power series of the form
+                       ∞
+                                   k
+                             ck x1− m , m ∈ N, gcd{k : ck 6= 0} = 1,
+                       X
+              y(x) =
+                       k=0
+
+for which the map τ 7→ (τ m , y(τ m )) is meromorphic and injective for τ larger
+enough . In view of the Newton theorem we can represent
+                         deg
+                          YP                               deg
+                                                            YQ
+          P (x, y) = A         (y − ui (x)), Q(x, y) = B         (y − vi (x)),   (6)
+                         i=1                               j=1
+
+where ui (x) and vj (x) are the Newton-Puiseux roots at infinity of the equa-
+tions P = 0 and Q = 0, respectively. We refer the readers to [A] and [BK]
+for the Newton theorem and the Newton-Puiseux roots.
+
+                                          3
+   We begin with the description of the non-proper value set Af of f via
+Newton-Puiseux expansion. We will work with finite fractional power series
+ϕ(x, ξ) of the form
+                    K−1
+                                k            K
+                          ak x1− m + ξx1− m , m ∈ N, gcd{k : ak 6= 0} = 1,
+                    X
+        ϕ(x, ξ) =                                                                (7)
+                    k=1
+
+where ξ is a parameter. For convenience, we denote mult(ϕ) := m. A such
+series ϕ is called dicritical series of f if
+
+            f (x, ϕ(x, ξ)) = fϕ (ξ) + lower terms in x, deg fϕ > 0.
+
+The following description of Af was presented in [C].
+Lemma 1. ( Lemma 4, [C])
+                                             [
+                      Af =                                         fϕ (C).
+                               ϕ is a dicritical series of f
+
+
+    To see it, note that by definitions the non-proper value set Af consists
+of all values a ∈ C2 such that there exists a sequence C2 ∋ pi → ∞
+with f (pi ) → a. If ϕ is a dicritical series of f of the form (7), we can
+define the map Φ(t, ξ) := (t−m , ϕ(t−m , ξ)). Then, Φ sends C∗ × C to C2
+and the line {0} × C to the line at infinity of C lP2 . The polynomial map
+Fϕ (t, ξ) := f ◦ Φ(t, ξ) sends the line {0} × C into Af ⊂ C2 . Therefore, fϕ (C)
+is an irreducible component of Af , since deg fϕ > 0. Conversely, if ℓ is an
+irreducible component of Af , one can choose a smooth point (u0 , v0 ) of Af ,
+(u0 , v0 ) ∈ ℓ, and an irreducible branch at infinity γ of the curve P = u0 (or
+the curve Q = v0 ) such that the image f (γ) is a branch curve intersecting
+transversally ℓ at (u0 , v0 ). Let u(x) be a Newton-Puiseux expansion at in-
+finity of γ. Then, we can construct an unique dicritical series ϕ(x, ξ) such
+that u(x) = ϕ(x, ξ0 + lower term in x). For this dicritical series ϕ we have
+fϕ (C) = ℓ.
+4. Associated sequence of dicritical series. Let ϕ be a given dicritical series
+of f . Let us to represent
+                                      K−1           n                n
+                                      X          1− mk         1− mK
+                          ϕ(x, ξ) =         ck x        k   + ξx         K   ,   (8)
+                                      k=0
+
+
+
+                                              4
+
