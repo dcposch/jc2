@@ -18821,3 +18821,31 @@ now running with 24 threads under the 4h Q-timeout. Loss: one modular
 EVIDENCE screen on a window already demoted to finite-box evidence.
 Lesson (memory updated): match the runner's actual python pid, not the
 wrapper's; never sweep by command-line substring on a shared box.
+
+EVENT (observed ~08:52Z per lane print) — **CUSP-A-VOID paired review
+COMPLETE: both arms pass.** `cusp-a-void-countermodel-grok46-20260902.md`
+(c50ecca9, body 7e8ccabe, BODY_SEALED): NO-CUSP-PREIMAGE SURVIVES
+(hidden-assumption list P1-P11 audited; every model that breaks one
+fact breaks a stated hypothesis); CUSP-A-VOID SURVIVES at every N>=2,
+H2-free, scope = C, algebraic, A_F homeomorphic to C and singular, F
+Keller N>=2 (not claimed for annuli, positive genus, or (B3));
+Lin–Zaidenberg confirmed over C with a CITATION CORRECTION (Soviet
+Math. Dokl. 28 (1983) 200-204, not Invent. Math. 68 (1982));
+"A^1 through the cusp" impossible; Prop 6.1 supports Reading A
+(a_p = 1, a point of E over c) and instantiating it with
+NO-CUSP-PREIMAGE gives 0 = -1 in (M') and (L)+(K) — an empty case, not
+a rescue; CUSP-KILL's y_0 is not independent. SCOPE NARROWING adopted:
+PERIPHERAL-RANK holds WITH the cage constraint F1 (2 <= j <= a <= N-2)
+and is REFUTED as a bare group-theoretic claim (explicit violators at
+N=4 (3,4), N=8 (2,7), N=9 (3,4), all outside the window; 0 violators
+inside at N<=9; 32/32 N=8 cage pass). MERIDIAN-SPAN survives with F1;
+all 26 survivors violate it; CUSP-A-VOID-II survives (0 reps pass both
+gates). OPENS LEFT: SUCC-1 off a cone; (B3).
+**INTEGRATION #9 is now bindable** (different-model gate PASSED +
+countermodel arm PASSED). Binding scope: THEOREM CUSP-A-VOID (all N,
+H2-free, scope as stated); NO-CUSP-PREIMAGE / local-transitivity
+lemma; LOCAL-ISO TRANSPORT rule; PERIPHERAL-RANK (under F1);
+MERIDIAN-SPAN; kappa|a; CUSP-A-KAPPA; chi(E) = nu - Sigma* (puncture
+split); the SMOOTH-KILL composition; CLAIM [D] at coordinate degrees
+(9,6); the PHI-IMMERSION re-filing of the A2 residual; (1,5)
+promotion-grade EMPTY; the LZ citation correction.
