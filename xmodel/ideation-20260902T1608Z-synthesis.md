@@ -119,3 +119,15 @@ function of the boundary skeleton, N = Σ_B eV₂(B)·d(1−δ₁(B))/(d+e).
 The record's one-directionality was a property of the contact
 functional on a FREE joint tree, and the Jacobian condition does not
 allow the joint tree to be free. Pending review.
+
+## Addendum 17:05Z (coordinator) — after D1-SUBTREE landed
+
+The D1-SUBTREE lane (Opus, 26479b06) independently proved the same
+exact formula with controls on genuine Keller pairs and added THEOREM
+PIN-NOT-CEILING: the pinned value is O(1) at every degree (min V₂q =
+3/112 at D ≤ 200), so the ceiling does NOT follow; the new filter is
+integrality, which kills 60% of skeleton groups under branch uniformity
+and 25% by exact knapsack, empties no degree, and is passed by Moh's
+own survivors. §2.3's proxy sentence ("empties every degree ≤ 400") is
+RETRACTED: it used only the top-of-window V per group. The direct
+answer in §5 stands with the split: floor = ceiling, and it is O(1).

@@ -20388,3 +20388,52 @@ emptied, 59 → 21). Lanes: exact-n-rigidity (hostile, Opus) and
 d1-subtree (independent check) running; next: the packet knapsack over
 the census, the no-log residue gate, and realisation of surviving
 D = 105 packets under N ≥ 6. Next full round floor: 04:55Z 09-03.
+
+## EVENT 17:05Z — D1-SUBTREE LANDED (26479b06, 46KB, Opus, PROVED-HERE/UNREVIEWED): THE BOTTOM IS AN EQUALITY, N IS PINNED, AND THE CEILING STILL DOES NOT FOLLOW; COORDINATOR PROXIES RETRACTED
+
+Independent fourth derivation of the round's headline, with controls
+(9 genuine Keller pairs to D = 8 exact, 24 non-Keller negative rows,
+232,384 skeleton rows, 0 failures; `box/d1sub-drivers-20260902/`):
+- THEOREM JAC-FIBRE: ord_t f(τ) + ord_t g_y(τ) = −1 on every branch of
+  every generic fibre (general law: −1 + ord_t J). FRONTIER-EXACT:
+  N = Σ_ρ (1 − δ⁰_ρ)⁺; δ⁰ ≥ 1 iff non-proper.
+- THEOREM D1-PIN: floor(r) − ceiling(r) = (1−δ_r)(−M_r − m)/(n − M_r),
+  zero iff r = 1: floor = ceiling AT THE BOTTOM AND NOWHERE ELSE;
+  N = Σ_B V₂(B)·q(B), q = (1−δ₁)de/(d+e) = deK ∏_{j≥2} P_j/Q_j.
+- THEOREM D1-STAR: below δ₁ the slope of λ_g is exactly 1, λ_f constant;
+  a₁ simple roots; Moh's recursion stops because there is NOTHING below.
+- RADIUS-ORDER is Moh's own Lemma 5.2 (NOTT's novelty claim corrected).
+- **THEOREM PIN-NOT-CEILING (measured):** the pinned value is O(1):
+  min over branch data of V₂q = 3/64 at D ≤ 120, 3/112 at D ≤ 200, no
+  growth in D. NO D ≤ C(N) follows. The missing ingredient is a lower
+  bound on the V_j or on the number of bottom discs at large D
+  (OPEN[V-FLOOR]); nothing in Moh (1)–(13) or GGV supplies it.
+- THE FILTER IS INTEGRALITY, not size: N = Σ_B V₂(B)q(B) ∈ Z.
+  Under (UNI) (all bottom discs share the lower-V datum; true within a
+  Galois orbit, a HYPOTHESIS across orbits) at D ≤ 120: 98.98% of
+  V-assignments and 60.0% of groups die (H2), 55% unconditionally;
+  admissible degrees 105: 264/209 killed, 108: 824/419, 112: 1163/795,
+  117: 60/47, 120: 4104/2390. Without (UNI), exact knapsack D ≤ 79:
+  24.7% of groups killed (capped groups counted surviving). NO degree
+  emptied; NO (B2)/(B3) cell dies. Moh's six survivor rows all admit an
+  integer N (e.g. (64,48) → N ∈ {3,6,9}; the (84,56) M₂ = 64 row is
+  pinned to N ∈ {4,6} under H2) — as they must, having been killed only
+  by Moh's Appendix II. New Moh search condition (15): Σ_B V₂(B)q(B)
+  integral ≥ 2 with Σ V₂(B) ≤ u. PLACE LAW: m_γ = ν_γ(1−δ₁)d/(d+e) at
+  every proper place (supersedes RAMIFICATION-FLOOR by an equality).
+- Successors: OPEN[BRANCH-ORBITS] (bounded: the number of Galois orbits
+  of bottom discs), OPEN[V-FLOOR], OPEN[STAR-REALISABILITY].
+**COORDINATOR CORRECTION.** My integrality proxies (uint.py, uint2.py)
+used only the top-of-window V-vector per group; the correct per-branch
+q(B) knapsack (this lane §5, Sol's prototype) empties NO degree. The
+synthesis §2.3 sentence "single-branch integrality empties every degree
+≤ 400" is RETRACTED as a measurement of anything but the proxy; the
+lane's tables replace it. Reading now: UPPER-TO-FLOOR is ANSWERED-SPLIT
+— a floor exists, equals the ceiling, and is O(1). The boundary computes
+N exactly and that exact value never grows with D. The ceiling program
+on the boundary is closed by a theorem, and the all-degree question is
+OPEN[V-FLOOR] / Moh's Appendix-II endgame in exact-arithmetic form.
+Reviews: `d1-subtree-review-grok46` launched (different model);
+`exact-n-rigidity-opus5` (hostile check of the squeeze) still running;
+`exact-packet-filter-gpt55` (conditional knapsack) running — partly
+superseded by §5 here, kept for the D ≥ 80 general knapsack.
