@@ -15282,3 +15282,24 @@ search condition (15); corrected survivor N-sets {9},{4},{5,10},{9},
 OPEN[UPPER-TO-FLOOR] ANSWERED-SPLIT (floor = ceiling = O(1)); the
 all-degree program is realisability (OPEN[STAR-REALISABILITY],
 OPEN[BRANCH-ORBITS], OPEN[V-FLOOR]).
+
+## INTEGRATION #17 DELTA (a) (2026-09-02 ~19:40Z, REVIEWED): ORTHO-DEFECT PROMOTED; NO-CEILING RETYPED [SINGLE-CLASS]
+
+`ideation-20260902T1608Z-opus5.md` §1–4 (+ coordinator LATTICE) with
+GPT-5.5 review `ortho-defect-review-gpt55-20260902.md` (c077bebe).
+PROMOTED: ORTHO-DEFECT, Σ_ν (e m_ν − d m'_ν)² = (ep − dq)² + 2deN
+(common-resolution typing: m_ν = multiplicity of the strict transform
+of a generic member at the ordered blow-up centre ν, 0 if it misses);
+ORTHO-FLOOR N ≥ (Σ_S Δ_ν² − (ep − dq)²)/(2de), equal to Σ_S Δ_ν²/(2de)
+under ep = dq; ORTHO-DIV #{ν : Δ_ν ≠ 0} ≤ 2deN under gcd(d,e) = 1 and
+ep = dq; ORTHO-SPLIT; DESCENT-DEGREE N(P, β^d P^e − α^e Q^d) = d·N
+(αβ ≠ 0, both dominant). NO-CEILING (n-vs-mapdeg §3.7) RETYPED to
+NO-CEILING[SINGLE-CLASS]: its one-class proof stands; the pair
+negativity Δ² = −2deN is the A² = B² = 0, A·B = N identity, not new
+information; no numerical bound in #14 or #16 changes. GAP: "NOETHER-K
+is the p = q specialisation" (promote only NOETHER-K[QUADRATIC] as the
+one-class diagonal analogue). Consistency with D1-PIN confirmed on Moh
+(64,48): 2deN = 216 = Σ_B 24·(3/4)V₂(B). The round's (64,48) N = 4
+arithmetic witness is Enriques-consistent as a multiset and EXCLUDED
+by D1-PIN (N = 9 there). Five controls pass, including non-Keller
+(x², y³) with d ≠ e, N = 6, and (x, y + x²).
