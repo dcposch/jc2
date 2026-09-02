@@ -18113,3 +18113,12 @@ oracle window running (status file still empty), 964 queued
 behind 869 in both queues (harmless; oracle-control value only).
 Remaining: 964-kill review (gpt55), 869, oracle, then
 integration #8.
+
+EVENT (observed ~2026-09-02T02:35Z): corrected_869 M2 mirror
+rc=124 (4h timeout, no verdict). The (8,6,9) curve decision
+rests on the running msolve 0.6.5 job (12h cap) and the 0.10.1
+oracle window; M2 queue proceeds to 964 (oracle-control only).
+Watcher re-armed (b4o7mn88l). If both msolve runs also time out,
+the 869 system likely needs char-p prefilter + elimination-order
+splitting — queue as a box01 job with the new stack rather than
+extending timeouts blindly.
