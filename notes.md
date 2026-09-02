@@ -19863,3 +19863,24 @@ AUDIT pointer, basis 99f512be): the genus/polar-tree set with the
 conditional N = 2W kill; binding reading of #12–#13 in its §B. Runners:
 minimal-keller-shape (opus), polar-chain-n4 (grok), sing-witness
 (gpt55), keller-cluster-census-codegen (sol).
+
+EVENT (~13:10Z per lane print) — **SING-WITNESS landed**
+(`sing-witness-gpt55-20260902.md`, 34f9b423, BODY_SEALED; GPT-5.5 desk,
+CAS record): OPEN[SING-WITNESS] read literally has a witness at N = 6 —
+F_k = (x + z^e, z^2) with z = x y^3 − y, e = 2k + 1: A_F is the
+quasi-homogeneous cusp U^2 = V^e (one place, n = e, delta_aff = k),
+generic meridian cycle type 1^4·2 (N = 6, a = 4, W = 2, S = 1, mu = 2,
+K_cusp = 3 = a − 1), and g_L = 2k + 1 (or 2k when 3 | k) → ∞. Non-Keller
+and NOT étale (Jac = 2z(3xy^2 − 1) vanishes on z = 0), so consistent
+with CUSP-A-VOID (its A_F is a case-(A) cone). Source-only (x, g) forms
+cannot work (its §2); lower-N attempts failed (§6). The lane's residual
+OPEN[SING-WITNESS-BOUNDED] (g_L → ∞ with (n, delta_aff) bounded) is
+answered NO trivially by MF-EXACT — at fixed (W, S), n(W − S) = N − 2 +
+2 g_L + theta_inf makes bounded n ⇔ bounded g_L (coordinator note; the
+lane's own §4 computes g from n). NET READING: even a singular A_F does
+not bound n unless its singularity TYPE is bounded — the witness's cusp
+(2, 2k+1) runs away. The only remaining sources of a bound on the cusp
+type are the representation cage (the local-monodromy congruences on
+(p, q), e.g. Prop 3.2's at N = 4) and étaleness — i.e. exactly the
+polar-tree/fork-mass question owned by `minimal-keller-shape` and
+`polar-chain-n4`. Recorded MEASURED (no review spent).
