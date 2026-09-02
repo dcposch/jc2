@@ -1,0 +1,19 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report at `xmodel/meridian-floor-sharpen-opus5-20260902.md`, sealed (body 36 604 B, sha256 `f31f9b7a…57b92`), basis `f42806e0`. All six input hashes matched before reading. No canonical ledger edited; `jc2-lean` not inspected; no `charge_basis` line (no exit price asserted).
+
+**Part (1).** MERIDIAN-FLOOR reproved twice. The second proof is new and turns it into an identity — it is Riemann–Hurwitz for the degree-`N` cover `C_L = F^{-1}(generic line) → L`:
+
+`n(W−S) = N − 2 + 2 g_L + theta_inf`, with `theta_L = nS + theta_inf`, `chi(C_L) = N − nW`.
+
+The quantity the meridian argument bounds is the **meridional rank** of `pi_1(C^2\A_F)`, not the degree; `n` enters only through Zariski's `mrk(G) ≤ n`, which is why no upper bound on `n` can issue from this apparatus.
+
+**The charged expectation comes back negative.** CENTRAL-RANK (globally refuted in (B3)), CUSP-PARITY/B3-DEGREE, ORBIFOLD-CAGE/B3-CAGE, PERIPHERAL-RANK and MERIDIAN-SPAN raise neither numerator nor denominator, with a reason each. 7.B' *caps* the route: `S ≤ W/2`, and at `W = 2`, `S = 1` is forced, so `n_min ≥ N−1` was already optimal in `S`. What does sharpen is the point-stabiliser datum run backwards — **THEOREM LOC-MULT**, `mult_P ≥ r_P + ⌈K_P/(W−S)⌉`, fed through Bezout and DEG-DELTA(a). It returns `n ≥ 4` at `N = 4`, reproducing CD's independent (B3) value that the banked floor misses.
+
+**Part (2).** All 81 counting-admissible cells priced, `N = 4..20`. `Phi` beats the banked floor at 39 of them, always by exactly +1, concentrated at large `W`; at `W = 2` only at `N = 4` (and at every `N` when `beta = 1`, where `Phi = N`). The enumerator independently reproduces MI's first `(B1)` tuple `(11,6,5,2)` at `N = 17` and Gate TG at `N = 5`. **No cell is EMPTY outright** — the ceiling never bites, because `delta_aff` is unbounded above in every cell, and DG §5.1's `k → ∞` assignment survives LOC-MULT (nodes carry `K_P = 0`).
+
+**Part (3).** Forced `delta_aff ≥ 6..39` in `(B2)` at every cell, against death thresholds 3 and 1. No cell becomes inconsistent, and I say so plainly: the charge's reading is directionally wrong — a *lower* bound on `delta_aff` points the same way as the death condition's own consequence and cannot kill. The deliverable is the price: the beta-route needs an upper bound a factor 2 (at `(8,3)`) to 39 (at `(16,2)`) below what the profile itself forces.
+
+**Part (4).** Reviewer CONFIRMED. The `W = 2` column dies at all `N` only under `n_min ≤ C(N)` with `C(N) ≤ N−2` — linear, slope exactly 1, constant ≤ −2 — and no reviewed statement has that shape for any profile; §5.2 gives the structural reason. En route: `nS + theta_inf ≤ D_F`, so Chau's cap is never sharp.
+
+Two caveats worth flagging: the body runs ~7 KB over the 20–30 KB band (noted in DEVIATIONS — I kept the instrument audit and the LOC-MULT proof intact rather than compress them), and I corrected an arithmetic slip of my own mid-draft: `theta_L = nW − N + 2 − 2g_L`, so `D_F ≥ nW − N + 2` does **not** follow; the report states only `D_F ≥ nS + 1`.
+DIVERT path=xmodel/meridian-floor-sharpen-opus5-20260902.md status=CLEAN_SEALED body_bytes=36604 body_sha256=f31f9b7a3a35cbe7c73ae6b198df1920d0a95ab8a500cf8ebabc2cf1c0157b92

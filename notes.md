@@ -19372,3 +19372,60 @@ they are degree-free; report either the first EMPTY window in N for
 (B3) with the lemma that fires, or the exact surviving rows and the
 boundary datum they still lack. Seats: Opus 2/5 (n-vs-mapdeg,
 meridian-floor-sharpen); Sol 1; Grok 0; GPT-5.5 0.
+
+## LIVE STATE (observed ~10:55Z per lane print) — MERIDIAN-FLOOR IS AN IDENTITY; THE GROUP DOES NOT SHARPEN IT; THE POINT STABILISER DOES; NO CELL EMPTY
+
+**MERIDIAN-FLOOR-SHARPEN landed** (`meridian-floor-sharpen-opus5-20260902.md`,
+4fa4b5f6, BODY_SEALED, 37KB; all PROVED-HERE/UNREVIEWED; hostile review
+launched `meridian-floor-sharpen-review-gpt55-20260902`; drivers
+preserved in `box/mfs-drivers-20260902/`):
+- **MF-EXACT:** the floor is Riemann–Hurwitz for the degree-N cover
+  C_L = F^{-1}(L) → L over a GENERIC LINE L (the generic member of the
+  affine pencil alpha P + beta Q = gamma, a smooth curve since u∘F is a
+  submersion): n(W − S) = N − 2 + 2 g_L + theta_inf, with theta_L =
+  nS + theta_inf places at infinity and chi(C_L) = N − nW; the banked
+  floor is g_L = 0, theta_inf = 1. MRK-READING: what the meridian
+  argument bounds is the MERIDIONAL RANK of pi_1(C^2 \ A_F); the only
+  bridge mrk(G) <= n points the wrong way, so no upper bound on n can
+  ever issue from that apparatus.
+- INSTRUMENT AUDIT (negative, as found): CENTRAL-RANK, CUSP-PARITY /
+  B3-DEGREE, ORBIFOLD-CAGE / B3-CAGE raise neither numerator nor
+  denominator; PERIPHERAL-RANK and MERIDIAN-SPAN are case-(A) statements
+  (EMPTY) and cannot be fed in; 7.B' caps the S-route at
+  ceil(2(N−1)/W) and forces S = 1 at W = 2, so n_min >= N − 1 is optimal
+  in S.
+- **THEOREM LOC-MULT** (the point stabiliser run the other way):
+  mult_P >= r_P + ceil(K_P/(W − S)) at every singular point of A_F, fed
+  through Bezout and DEG-DELTA(a); MF-SHARP: Phi = max(meridian floor,
+  two-point Bezout, delta); at W = 2, n_min >= N if beta = 1, >= N − 1
+  always. Control: reproduces the Chau lane's (B3) n >= 4 at N = 4 (now
+  with a group proof).
+- PRICE TABLE (81 admissible cells, N = 4..20, (B1)/(B2)/(B3)): Phi
+  beats the banked floor at 39 cells, always by exactly +1; at W = 2
+  only at N = 4 (and at every N when beta = 1). NO CELL IS EMPTY
+  OUTRIGHT — the ceiling never bites because no profile bounds
+  delta_aff above.
+- (B2) at 5 <= N <= 16: the floors FORCE delta_aff >= 6..39 against the
+  death thresholds 3 and 1 — no inconsistency (a lower bound cannot make
+  a cell inconsistent; the charge's item was directionally wrong,
+  corrected); the beta-route is priced at a factor 2 to 39.
+- Item (4) CONFIRMED: the W = 2 column dies at all N only under
+  n_min <= C(N) with C(N) <= N − 2 (<= N − 1 when beta = 1), and no
+  reviewed statement has that shape for any profile. SHARP-CHAU (new):
+  nS + theta_inf <= D_F, n <= (D_F − 1)/S, D_F >= nS + 1 >= n + 1.
+- OPENS: OPEN[MF-DEFECT] — is 2 g_L + theta_inf >= 2 for every
+  noninvertible Keller F and generic L (bounded: g_L <= p_a(D_F),
+  1 <= theta_inf <= N); YES adds +1 at every cell; PROVED at W = 2 with
+  beta = 1; the cheapest +1 in the record (a classical statement about
+  generic fibres of polynomial submersions C^2 → C). OPEN[MULT-VS-BETA]
+  — is beta = 1 forced in (B3) at W = 2 for N >= 5 (bounded: beta in
+  {1..N−3}); YES lifts the W = 2 column to n_min >= N.
+Coordinator reading: the gate is unchanged and now fully priced —
+OPEN[DELTA-AFF-VS-N] / OPEN[N-VS-MAPDEG] upper half; MF-EXACT converts
+it into a statement about the GENERIC FIBRE OF THE PENCIL <P, Q> (its
+genus and its target-escaping places), which is a new, classical-shaped
+handle: an upper bound on n is an upper bound on 2 g_L + theta_inf, i.e.
+on the topology of a smooth affine curve cut by a Keller pencil. The
+running `n-vs-mapdeg` flagship is told this at harvest; OPEN[MF-DEFECT]
+gets a desk lane after the review. Seats: Opus 1/5 (n-vs-mapdeg); Sol 1
+(b3-census); GPT-5.5 1 (mfs review); Grok 0.
