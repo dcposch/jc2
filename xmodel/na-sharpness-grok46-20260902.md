@@ -48,11 +48,9 @@ Campaign documents cited by file and section: the three charged inputs;
 §§5–6; `b0-pi1-acquisition-grok46-20260831.md` §§1.3, 2–3. No other
 `20260902` lane report was opened.
 
-Firewall: flag ≠ place ≠ cover series; `REPRESENTATIVE` is not
-`FULL_ACTUAL_EXIT`; no gap filled by cap or analogy; bitangent-conic
-countermodels consumed only as the promoted `T_x` sharpness datum
-(`T_x ≠ 0`, two components); the residual `(6,4)` family is not used as a
-π₁-countermodel.
+Firewall: flag ≠ place ≠ cover series; no gap by cap or analogy;
+bitangent conics only as the promoted `T_x ≠ 0` datum; the residual
+`(6,4)` family is not a π₁-countermodel.
 
 ## 1. The question, exactly
 
@@ -268,8 +266,12 @@ Their Figure 3 (degree 6, splice `• —2/3— k/2 —>`): `p_1=2`, `q_1=3`,
 `p_2=k`, `q_2=2`. Recursion `d_1 = p_1+q_1 = 5`,
 `Δ_2 = p_2 - p_1 q_1 q_2 = k-12`, `d_2 = q_2 d_1 + Δ_2 = k-2`. For
 `k = 3`, `d_2 = 1`. They state explicitly: “when the degree is 6 only
-`k = 3` is not covered” by Theorem 2. That is the `(6,4)` equality type,
-excluded from the Nori application by the same missing hypothesis.
+`k = 3` is not covered” by Theorem 2. Leading weights `(p_1,q_1)=(2,3)`
+are the cone of a degree-`(6,4)` parametrisation (`y ~ x^{2/3}`);
+`d_NN = 1` is the same numerical point as `C̃^2 = 2 r_1`. This is the
+Orevkov §6 / campaign `(6,4)` equality class, excluded from the Nori
+application by the same missing hypothesis. Degree 9 is not among the
+figures of their §6 census.
 
 They then write that MAPLE showed, for those degree `< 12` types not
 covered by Theorem 2, that each moduli space is connected and the Orevkov
@@ -328,49 +330,33 @@ replaces this hypothesis on the vertex class “irreducible, nodal,
 - Oka 2.2 and Zariski–Oka flex are different vertex classes (§6).
 
 Until this hypothesis is supplied by a new theorem, or a nonabelian
-witness in class is exhibited, `OPEN[NA-R1-SHARPNESS-IRREDUCIBLE]` stays
-OPEN and the three equality rows live. Do not relax N-A.
+witness in class is exhibited, the OPEN stays OPEN and the three equality
+rows live. Do not relax N-A. Secondary, not the stop: Orevkov’s missing
+hypothesis is NC, which is false here rather than untyped.
 
-Secondary, not the stop: the missing hypothesis for the Orevkov route is
-**NC at infinity**, which is false here rather than untyped. Naming it
-does not create a YES.
+Not claimed: a kill of the three rows; nonabelian `π₁` on them; a
+nonabelian kernel at equality; promotion of Orevkov’s conjecture, the §6
+computation, or NN MAPLE; anything about `(9,6,2)` or
+`OPEN[NA-AGGREGATE-REDUCIBLE]`. No new exit price.
 
-## 8. What this lane does not claim
+## 8. FALLACY-v2 audit
 
-- It does not kill `(9,6,4)`, `(6,4)`, or `(8,4)`.
-- It does not assert that `π₁(C^2-D)` is nonabelian on those rows
-  (failure of a strict inequality is a floor, not attainment).
-- It does not assert that equality ever produces a nonabelian kernel.
-- It does not promote Orevkov’s conjecture, the §6 computation, or NN’s
-  MAPLE sentence.
-- It does not touch `(9,6,2)` (deficit 2) or `OPEN[NA-AGGREGATE-REDUCIBLE]`.
-- No new exit price. No `charge_basis` line.
-
-## 9. FALLACY-v2 audit
-
-- **Flag/place/series.** Four objects at `P_∞` kept apart: contact
-  `(D̄ · L_∞) = d`, multiplicity `a = d-n`, characteristic numerator
-  `β_1`, and `k_* = 2d-a-β_1`. `d_NN` is a canonical-class number on the
-  resolved surface, not a cv-flag and not a cover series. The infinite
-  place is not identified with a dicritical.
+- **Flag/place/series.** Contact `d`, multiplicity `a`, `β_1`, and
+  `k_* = 2d-a-β_1` at `P_∞` are distinct; `d_NN` is a canonical-class
+  number on the resolved surface, not a cover series.
 - **Floor/attainment.** `C̃^2 = 2 r_1` is an identity. Failure of
-  `C̃^2 > 2 r_1` is not `π₁ ≠ Z`. Orevkov’s abelian computation and NN
-  MAPLE are not promoted to attainment of abelianness.
+  `C̃^2 > 2 r_1` is not `π₁ ≠ Z`. Orevkov §6 and NN MAPLE are not
+  attainment of abelianness.
 - **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`.
-  No homomorphism `π₁ ↠ S_4` is produced or denied.
-- **Pole/interior.** Characteristic pairs are used only after the vertex
-  class (one place, one pair, polynomial curve) is named. No pole identity
-  is applied off that class.
-- **Per-ray/exit-set.** No exit-price assertion; no `charge_basis`.
-- **`sat()` / remainder degree / variable-ring map.** Not in play.
-- **Prime label/derivative.** `C̃` is the proper transform; `q'` in
-  fold-reduction is a derivative and is not used here.
+- **Pole/interior.** Characteristic pairs used only after the vertex
+  class is named.
+- **Per-ray/exit-set.** No exit price; no `charge_basis`.
+- **`sat()` / remainder degree / ring map.** Not in play.
 - **Not filled by cap or analogy.** `≥` is not substituted for `>`.
-  Bitangent conics stay at `T_x ≠ 0`. Oka’s `r = 0` equality is not
-  transported. Orevkov’s no-NC conjecture is not consumed. NN MAPLE is
-  not consumed. Family-3 / Shirane / INF-TRIVIAL are not imported.
+  Bitangent conics stay at `T_x ≠ 0`. Oka’s `r=0` equality, Orevkov’s
+  no-NC conjecture, and NN MAPLE are not consumed.
 
-## 10. Sources
+## 9. Sources
 
 Charged inputs: hashes in §0, all matching. Banked N-A packet (Nori 3.27
 via `nori-bc-extension` §1, Theorem N-A §3.3, N-A-RES §3.5, bitangent
@@ -384,3 +370,12 @@ Nori re-checked on the banked Numdam PDF (WLT, 3.26, 3.27, 1.4 B, 5.1,
 No `charge_basis` line: this report asserts no new exit price.
 
 <!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `18284`.
+- Body SHA-256:
+  `8016a869fa55941bfefeeb42f78677b8e4d3160a31526ee22120c1b0ccd6eabd`.
+- Frozen basis: `4cd85aa7ab79e86a104152668ca1a3b79571ad96`.

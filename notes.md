@@ -17812,3 +17812,39 @@ improvements PAST 16 (except its (4,12) branch, which uses
 Prop 5.11 + Thm 5.13 and refuses 4.10). Card-C-step0's GGV
 firewall may consume gcd >= 16 (sound, Heitmann/GGV-elementary)
 but NOT != 2p and NOT any bound beyond 16.
+
+## LIVE STATE (observed 2026-09-02T01:15Z) — (9,6,4) REALIZED-CONFIRMED; PATH-1 REVIEW ALL-CONFIRMED; NA-SHARPNESS OPEN
+
+**964-NODALITY-REVIEW** (`964-nodality-review-grok46-20260902.md`,
+402ec9e1, BODY_SEALED): four-for-four CONFIRMED — **(9,6,4) is
+REALIZED six-nodal.** Second realized substrate on the board.
+`bmfact-964-codegen-grok46-20260902` LAUNCHED (clone of the
+proven 962 pipeline; census ledger 20; three CABLE-3 classes as
+control only; full-native decision, no manual strand map). The
+queued Box03 corrected_964 locus job is retyped: OUTCOME MOOT
+for realization (decided positive by desk+review); retained as
+an ORACLE POSITIVE CONTROL (expected NONEMPTY on the corrected
+encoding).
+
+**MPRIME-ALLN-REVIEW** (`mprime-alln-review-gpt55-20260902.md`,
+prefix from shell log, BODY_SEALED_AFTER_DIVERT): LEMMA A (with
+dependency note), SMOOTH-KILL, PROP 6.1, NODAL-ALL-N ("necessary
+numerical gate; no realization claim"), THEOREM PROFILE (B3 kept
+open), CUSP-KILL (conditional on cited classical theorems),
+COR 7.2, N4-PIN, and all three controls: **CONFIRMED.** One
+discipline line: any paraphrase of "H2 complete at every degree"
+is REFUTED/overpromoted — the promotable statement is exactly
+the PROFILE classification with (A)/(B2-residual)/(B3) open.
+Path-1's theorem set is PROMOTION-READY at integration #7.
+
+**NA-SHARPNESS** (`na-sharpness-grok46-20260902.md`, prefix from
+shell log, BODY_SEALED): typed **OPEN** — no sourced YES, no
+strictness-essential witness; one named missing hypothesis (a
+vertex class at the resolved infinity place not covered by Nori
+3.27's printed scope). (9,6,4)/(6,4)/(8,4) NOT killed this way;
+bmfact_964 is now the decisive instrument for (9,6,4).
+
+Running: source-gate-962, card-c-step0 (opus); homcover-
+discriminator, companion-alln-review, bmfact-964-codegen (grok);
+SAGE-NATIVE 6^9, Box03 msolve 869 + M2 queue, oracle window,
+box01 provisioning.

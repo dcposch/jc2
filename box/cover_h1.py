@@ -20,6 +20,18 @@ so one Smith normal form of d_2 gives both torsion and rank.
 
 Words are lists of signed 1-based generator indices.  Permutations are
 tuples of length k giving images of 0..k-1.
+
+CONVENTION (load-bearing; added by SOURCE-GATE-962 after a fail-open was found).
+`rho` is the MONODROMY / RIGHT-ACTION datum: the lift-walk applies rho[g] on the
+LEFT as it reads the relator from the LEFT, so the transport of w = g_1..g_m is
+rho(g_m) o ... o rho(g_1).  A caller holding a LEFT-ACTION homomorphism L (the
+usual `rho(uv) = rho(u) o rho(v)`) must pass `to_transport_convention(L)`, i.e.
+the elementwise inverse.  The two conventions give DIFFERENT covers in general,
+so the choice is not cosmetic.  `cover_h1` now refuses any input whose relators
+do not lift closed (`d_1 o d_2 = 0`), instead of returning a plausible number.
+Witness that this mattered:  k=5, w = x y x y^-1 x^-1 y^-2,
+rho(x)=(0,2,1,4,3), rho(y)=(3,0,1,2,4) is a genuine left-action homomorphism,
+its lift does NOT close, and the unrepaired code returned `Z^1`.
 """
 from __future__ import annotations
 
@@ -153,9 +165,41 @@ def smith_invariants(mat: List[List[int]]) -> List[int]:
     return divisors
 
 
+def to_transport_convention(rho: Sequence[Perm]) -> List[Perm]:
+    """Convert a left-action homomorphism to the transport convention above."""
+    return [perm_inv(p) for p in rho]
+
+
+def lift_closes(n_gens: int, relators: Sequence[Sequence[int]],
+                rho: Sequence[Perm], k: int) -> bool:
+    """True iff every relator lifts to a closed loop on every sheet.
+
+    Equivalent to d_1 o d_2 = 0, i.e. to d_2 being the boundary map of an actual
+    chain complex.  Without this the Smith normal form is meaningless.
+    """
+    inv = [perm_inv(p) for p in rho]
+    for rel in relators:
+        for s in range(k):
+            c = s
+            for letter in rel:
+                g = abs(letter) - 1
+                c = rho[g][c] if letter > 0 else inv[g][c]
+            if c != s:
+                return False
+    return True
+
+
 def cover_h1(n_gens: int, relators: Sequence[Sequence[int]],
              rho: Sequence[Perm], k: int) -> Dict[str, object]:
     assert is_transitive(rho, k), "rho must be transitive (connected cover)"
+    if not lift_closes(n_gens, relators, rho, k):
+        hint = ("" if not lift_closes(n_gens, relators,
+                                      to_transport_convention(rho), k)
+                else "  The elementwise inverse DOES close: you are holding a "
+                     "left-action homomorphism; pass to_transport_convention(rho).")
+        raise ValueError(
+            "FAIL-CLOSED: some relator does not lift to a closed loop, so d_2 is "
+            "not a boundary map and H_1 is undefined for this input." + hint)
     mat = d2_matrix(n_gens, relators, rho, k)
     divs = smith_invariants(mat)
     rank_d2 = len(divs)
@@ -193,6 +237,19 @@ def _controls() -> None:
           " expected Z (+) Z/3   [Delta_trefoil(-1) = 3]")
     r = cover_h1(2, trefoil, [(1, 0, 2), (0, 2, 1)], 3)
     print("   irregular 3-fold H_1 =", fmt(r))
+
+    print("== CONTROL 4  convention discrimination (the four controls above are "
+          "reversal-symmetric and cannot see it)")
+    w = [1, 2, 1, -2, -1, -2, -2]
+    L = [(0, 2, 1, 4, 3), (3, 0, 1, 2, 4)]      # a genuine left-action hom for w
+    try:
+        cover_h1(2, [w], L, 5)
+        print("   left-action input accepted        FAIL (fail-open)")
+    except ValueError as exc:
+        print("   left-action input REFUSED         PASS")
+        print("     ", str(exc)[:72] + "...")
+    r = cover_h1(2, [w], to_transport_convention(L), 5)
+    print("   after to_transport_convention: H_1 =", fmt(r), " PASS")
 
 
 if __name__ == "__main__":
