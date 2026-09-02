@@ -17982,3 +17982,38 @@ composed in the same command as the block). Coordinator rule
 hardened: the LIVE STATE header timestamp is now copied from a
 date -u output already PRINTED in a PRIOR tool result, never
 from a same-command invocation.
+
+## LIVE STATE (observed 2026-09-02T01:35Z per prior date print; block composed after) — TRANSFER REFUTED-AND-REPLACED: CASE (A) EMPTY THROUGH N=7; NECKS MERGE ON THE CUSP SUBSTRATE
+
+**HOMCOVER-TRANSFER landed** (`homcover-transfer-opus5-20260902.md`,
+fa52e816, BODY_SEALED). The charged inference is REFUTED BY
+THEOREM: **NO-PUSHFORWARD** — torsion does not push forward
+along either local-to-global map; measured witness in the
+campaign's own trefoil model (one global relator converts
+Z+Z/2 to Z). The replacement is stronger than the charge: on
+MPRIME case (A) — where Lin-Zaidenberg makes
+pi_1(C^2\A_F) = pi_1(S^3\T(p,q)) and the local-global gap
+VANISHES — the full HOM-COVER program is computable at every
+degree, yielding (all PROVED-HERE/UNREVIEWED, review launched
+`homcover-transfer-review-gpt55-20260902`):
+- THEOREM CENTRAL-RANK: r = j-1 EXACTLY (sharpens promoted
+  CUSP-CAGE; the r=j escape never occurs);
+- THEOREM CUSP-PARITY; THEOREM ORBIFOLD-CAGE (s+s' = M+2-j);
+- **THEOREM CUSP-A-EMPTY: case (A) EMPTY for 4 <= N <= 7**
+  (proved <=6; measured-exhaustive at 7; first survivors N=8).
+Consequences: OPEN[MPRIME-CUSP-J2] CLOSED NEGATIVE for N<=7;
+**the N=4 H2 residual is EXACTLY (B3)** (one-cusp horn with
+k>=1 double points — the (A) sub-branch is gone); the necks
+MERGE on the cusp substrate (charge item 4: YES);
+GAP[CUSP-CAGE-KUROSH-DIVISOR] found in the just-promoted
+CUSP-CAGE and REPAIRED (strengthens; M>=2 and CUSP-KILL
+unretracted — DELTA-REVIEW of integration #7 assigned to the
+review lane); OPEN[ACS-FIX-VS-DEFICIT] RESOLVED AFFIRMATIVELY
+under H2+7.B (a = #Fix exactly). NOT claimed: any (9,6,2) kill,
+any all-degree closure, anything about (B3).
+
+**H2 program after this**: (B3) horn (k>=1) for N<=16 + case
+(A) survivors from N=8 + (B2) beta-forced residuals + (B1) at
+N>=17. The horn remains THE neck; its group is now the
+torus-knot-with-extra-relators family on which the merged
+program computes.

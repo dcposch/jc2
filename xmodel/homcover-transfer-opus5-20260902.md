@@ -1,0 +1,794 @@
+# HOMCOVER-TRANSFER — the all-degree torsion obstruction, typed
+
+Lane: `HOMCOVER-TRANSFER`. Date: 2026-09-02. Agent: Opus 5.
+Desk derivation + exact integer homology. No Groebner, no CAS decision
+procedure, no AWS. Instrument: `box/cover_h1.py` (hash below), consumed
+unmodified; one driver in `/tmp`, not installed in `box/`.
+
+## 0. Custody, hashes, method
+
+The four charged frozen copies were hashed with `shasum -a 256` **before
+any was read**; all four match the charge exactly:
+
+```text
+b462b26147ef6c74389a40eaa5d2c0cfd7f3771a9b15d8948e231d73ac594e77  homcover-discriminator-grok46-20260902.md
+dcd40a425b2a2782deebec3f01c3b6859a8aa8d46b3e60639f9865a807d5ddba  ideation-20260902T0022Z-opus5.md
+722d413717fb998fb76783b311807522878cc138025b47c5f1e2214cb8685c80  mprime-alln-h2-opus5-20260902.md
+46e08515b12d21780b727c9035872fdb3a9bfb01c4c8ebc74d0efc950b6258fc  block-descent-a1-rowkill-coordinator-integration-fable5-20260901.md
+```
+
+Below: **DISC** = the discriminator, **ID** = the ideation (Card B),
+**MPRIME** = MPRIME-ALLN-H2, **ROWKILL** = the coordinator integration.
+
+Instrument, as run (identical to the file DISC hashed):
+
+```text
+dfb90ce32f589aae00ce7f2d3188114bbf27396120a8da3d8e67c0145b5177b2  box/cover_h1.py
+```
+
+`python3 box/cover_h1.py` — 4/4 built-in controls PASS on this host,
+including the sharp `Z (+) Z/3` trefoil control and the fail-closed
+convention discriminator. Every number labelled MEASURED came out of
+runs against that file in this session. No charged file was edited; no
+repository file was modified. `bmfact_962.json` is still absent on this
+host, so the `(9,6,2)` global ZvK was not attempted (§4).
+
+No `charge_basis` line: this report asserts no new exit price.
+
+## 1. Verdict, up front
+
+```text
+OPEN[HOM-COVER-TRANSFER]  as charged  ->  REFUTED (direction), not merely open.
+```
+
+The charged target — *local torsion at a cabled place forces torsion in
+`H^ab` of the global covering* — is **not provable as stated, for a
+structural reason that is a theorem, not a difficulty**: torsion does
+not push forward. Whichever of the two possible local-to-global maps is
+meant, the inference fails (§2.2, THEOREM NO-PUSHFORWARD), and I exhibit
+an explicit witness in the campaign's own trefoil local model where a
+single added global relator converts `Z (+) Z/2` into `Z` (MEASURED).
+
+What replaces it is better than a filter. The one place where the
+local-to-global gap **does not exist** is the profile where the global
+group *is* a cabled-place knot group: MPRIME's case **(A)**, where
+Lin–Zaidenberg gives `A_F ≅_{Aut} {x^p=y^q}` and hence
+`pi_1(C^2 \ A_F) ≅ pi_1(S^3 \ T(p,q))`. There the charge's item (4)
+question — *do the two necks merge?* — is answered **yes**, and on that
+substrate the whole HOM-COVER program is exactly computable at every
+degree. Running it gives:
+
+```text
+THEOREM CENTRAL-RANK   r = j - 1 exactly   (CUSP-CAGE's "r in {j-1,j}" sharpened;
+                       the r = j case never occurs).            PROVED HERE.
+THEOREM CUSP-PARITY    sgn rho(alpha) = eps^q,  sgn rho(beta) = eps^p,
+                       eps = sgn rho(meridian) = (-1)^{W - sum_l s_l}. PROVED HERE.
+THEOREM ORBIFOLD-CAGE  s + s' = M + 2 - j, with s = #cycles rho(alpha),
+                       s' = #cycles rho(beta).                   PROVED HERE.
+THEOREM CUSP-A-EMPTY   MPRIME case (A) is EMPTY for  4 <= N <= 7 ;
+                       first survivors at N = 8.   PROVED for N <= 6,
+                       MEASURED-exhaustive for N = 7.
+```
+
+Consequences bound:
+
+* `OPEN[MPRIME-CUSP-J2]` is **CLOSED NEGATIVE at every `N <= 7`**. In
+  particular case (A) at `N = 4` — which MPRIME §7 left open with a
+  worked "not closed here" instance — is empty, by two independent
+  arguments (§5.6).
+* The `N = 4` `H2` residual is therefore **exactly case (B3)**, the
+  one-cusp horn with `k >= 1` double points. The `(A)` sub-branch that
+  N4-PIN carried alongside it is gone.
+* MPRIME's CUSP-CAGE carries a **typed gap** (`GAP[CUSP-CAGE-KUROSH-DIVISOR]`,
+  §5.2): its Kurosh factors are asserted to be full `Z/p`, `Z/q`, and its
+  worked `N=4` escape uses `r = j`. Both are repaired here; the repair
+  *strengthens* the cage and does not retract `M >= 2` or CUSP-KILL.
+* `OPEN[ACS-FIX-VS-DEFICIT]` (ID §4) is **resolved affirmatively under
+  `H2` + THEOREM 7.B**: `a = #Fix(rho(m))` exactly, not merely `<=` (§3.1).
+
+Not claimed: any kill of `(9,6,2)`; any all-degree closure; existence of
+`F`; that the charged transfer is *false as mathematics at a fixed
+place* (it is the *inference* that is invalid); anything about case (B3).
+
+## 2. Foundations, custody-first
+
+### 2.1 (F1) Gysin freeness — proved, not cited
+
+> **LEMMA F1.** Let `E ⊂ C^2` be a curve with `r` irreducible components.
+> Then `H_1(C^2 \ E; Z) ≅ Z^r`, free, with the meridians as a basis.
+>
+> *Proof.* Let `f_1,...,f_r` be reduced defining polynomials of the
+> components. `H_1(C^2\E;Z)` is generated by meridians `mu_1,...,mu_r`
+> (Zariski–van Kampen: the group is generated by meridians of the
+> components, and conjugate meridians agree in `H_1`). The winding-number
+> homomorphism `w = (deg f_1,...,deg f_r) : H_1(C^2\E) -> Z^r`, induced
+> by `(f_1,...,f_r) : C^2\E -> (C^*)^r`, sends `mu_i` to the `i`-th basis
+> vector. A generating set mapping to a basis under a homomorphism to a
+> free module is itself a basis. ∎
+
+This is the exact statement ID §3.2 uses and the exact statement MPRIME
+§7 consumes inside CUSP-CAGE (`H^ab = Z^j` torsion-free). It needs no
+Libgober, no characteristic variety, and no `P^2` bookkeeping. Recorded
+here as proved so that neither lane rides an uncited step.
+
+### 2.2 (F2) THEOREM NO-PUSHFORWARD — the charged direction is wrong
+
+Two candidate local-to-global maps appear in the charge and in DISC.
+Call them:
+
+* `(M-surj)` the **link-at-infinity** map `Gamma_infty := pi_1(S^3_R \ K_infty) -> G := pi_1(C^2 \ A)`;
+* `(M-loc)`  the **local germ** map `Loc_P := pi_1(B_P \ (Dbar ∪ L_infty)) -> G`, `P ∈ Dbar ∩ L_infty`.
+
+> **THEOREM NO-PUSHFORWARD.** Let `phi : Gamma -> G` be a homomorphism,
+> `rho : G -> S_N` transitive, `H := rho^{-1}(Stab_1)`,
+> `Lambda := (rho ∘ phi)^{-1}(Stab_1)`.
+>
+> (i) If `phi` is **surjective**, then `phi(Lambda) = H` and
+> `Lambda^{ab} ↠ H^{ab}`. Torsion in `Lambda^{ab}` therefore *constrains*
+> `H^{ab}` only by being killable: a quotient of a group with torsion
+> need have none.
+>
+> (ii) If `phi` is **not surjective**, `phi(Lambda) <= H` and there is a
+> map `Lambda^{ab} -> H^{ab}` with no injectivity in sight; torsion in
+> the source is invisible in the target.
+>
+> In neither case does "torsion locally" imply "torsion globally". ∎
+
+This is not a technicality to be routed around. The global group is
+obtained from the local one by *imposing more relations*, and imposing
+relations can only shrink `H^{ab}`; torsion is exactly what shrinking
+destroys.
+
+**Witness, MEASURED, inside the campaign's own local model.** Take
+`Gamma = B_3` — the trefoil group, i.e. the `(2,3)` cabled place, the
+model whose cable DISC identifies as the torsion source. Take the
+transitive `rho : B_3 -> S_4`, `sigma_1 |-> (1234)`, `sigma_2 |-> (1243)`
+(0-based `(1,2,3,0)`, `(1,3,0,2)`), for which `H_1(cover) = Z (+) Z/2`.
+Adjoin the single relator `w = (sigma_1 sigma_2^{-1})^3`, which `rho`
+already kills. Then
+
+```text
+H_1 of the cover of  B_3                            =  Z (+) Z/2
+H_1 of the cover of  B_3 / <<(s1 s2^-1)^3>>         =  Z          MEASURED
+```
+
+Four length-6 relators do this (the shortest; the other three are its
+inverse and cyclic variants). One global relation, and the `Z/2` is
+gone. Any all-degree theorem of the charged shape would have to exclude
+this behaviour, and nothing in the campaign's constraint list does.
+
+**Corollary (what *would* transfer, and at what price).** Under `(M-surj)`
+one gets a genuine, usable consequence in the *opposite* direction:
+`H^ab = Z^{r(E)}` is a **quotient** of `Lambda^{ab}`, so
+
+```text
+(Q1)  r(E)  <=  rank Lambda^{ab} ,   and
+(Q2)  the global relators must kill the whole torsion of Lambda^{ab}.
+```
+
+At DISC's `(9,6,2)` cabled place, `Lambda^{ab} = Z^3 (+) Z/2` on all 144
+tuples, so `(Q1)` reads `r(E) <= 3` and `(Q2)` says the affine tangency
+and node relators must annihilate the measured `Z/2`. Both are typed
+**conditional on `(M-surj)`**, which is *not* banked:
+
+```text
+OPEN[HOMCOVER-LINK-INFTY-SURJ]   Is  pi_1(S^3_R \ K_infty) -> pi_1(C^2 \ A)
+                                 surjective for R >> 0 ?
+```
+
+Status of that OPEN, honestly. The Morse/handle argument ("build
+`B_R \ A` from the collar with handles of index `>= 2`") does not run as
+written: `|z|^2` is not proper on the Stein surface `C^2 \ A`, and the
+statement is false for general properly embedded surfaces in `B^4`, so
+complex-analyticity must be used and I found no clean primary source for
+the affine-curve case. Hamm-type Lefschetz theory at infinity gives
+`pi_1(∂W) ↠ pi_1(W)` for the **full** boundary of a compact model, which
+includes the tube around `A` and is weaker (it amounts to "generated by
+meridians"). Checked by hand on the cuspidal cubic, `{xy=1}` and
+`{y=x^2}`: iso, `Z^2 ↠ Z`, iso. Not promoted; not used below.
+
+### 2.3 (F3) Characteristic-variety custody — and why it does not apply
+
+The charge's item (1)(a) asks whether Libgober-type theory is available
+for **affine** complements. Custody answer, by name:
+
+* **Arapura**, *Geometry of cohomology support loci for local systems I*,
+  J. Algebraic Geom. 6 (1997) 563–597 — structure of `V_1(X)` for `X`
+  smooth **quasi-projective**; `C^2 \ A` is quasi-projective, so this is
+  the correct primary source, and it is stronger than the projective-only
+  reading. Positive-dimensional components are pullbacks along maps to
+  curves; translation by torsion characters (Simpson; Budur–Wang).
+* **Libgober**, *Alexander polynomial of plane algebraic curves and
+  cyclic multiple planes*, Duke Math. J. 49 (1982) 833–851, and
+  *Characteristic varieties of algebraic curves* (2001) — divisibility of
+  the Alexander polynomial by local polynomials and by the polynomial at
+  infinity. This is the only genuine **local-to-global** theorem in the
+  area.
+
+Both are characteristic-**zero** statements about **abelian** covers.
+That is fatal here, and the campaign's own ledger says why:
+
+> **COR 7.2 (MPRIME §7, PROVED-HERE, consumed).** For a noninvertible
+> plane Keller map, `rho` is transitive but **not regular**.
+
+A transitive **abelian** subgroup of `S_N` is regular. Hence
+`rho(G)` is nonabelian at every degree, `rho` never factors through
+`H_1(C^2\A)`, and the ACS-1 covering is **never** an abelian cover.
+Libgober's divisibility and Arapura's structure theorem compute the
+homology of abelian covers; they do not compute `H_1` of an irregular
+cover. Using them here would be a place/series identification.
+
+The correct reformulation, which *is* the right object, is modular:
+
+> **LEMMA MOD-P.** With `Gamma := rho(G)`, `Gamma_1` the point stabiliser,
+> and `t_p` the number of cyclic `p`-power summands of `H^ab`,
+> ```text
+> t_p  =  dim_{F_p} H_1(X ; F_p[Gamma/Gamma_1])  -  dim_Q H_1(X ; Q[Gamma/Gamma_1]).
+> ```
+> *Proof.* Shapiro plus universal coefficients (`H_0(X~;Z) = Z` is
+> torsion-free, so the `H_0` correction term vanishes). ∎
+
+So "`H^ab` has torsion" is exactly "the induced permutation local system
+**jumps in characteristic `p`**". At `p = 2`, `N = 4`, the permutation
+module `F_2[S_4/S_3]` is non-semisimple with composition factors
+`triv, 2-dim, triv` — two trivial factors instead of one — which is the
+structural reason `Z/2` is the torsion DISC keeps measuring. The
+literature for such jumps is **Papadima–Suciu** modular resonance
+(e.g. Proc. LMS 114 (2017) 961–1004) and **Cohen–Denham–Suciu** torsion
+in Milnor fibres. To my knowledge there is **no** local-to-global
+divisibility theorem for mod-`p` Betti numbers of irregular covers of
+curve complements. Typed:
+
+```text
+OPEN[HOMCOVER-MODP-DIVISIBILITY]  a Libgober-type local-to-global bound for
+                                  dim H^1(X; F_p[Gamma/Gamma_1]).  Not in the
+                                  literature I can name; not derived here.
+```
+
+That OPEN, not the discriminator's measurement, is the real obstacle to
+the charged theorem — and THEOREM NO-PUSHFORWARD says even a positive
+answer would not by itself deliver it.
+
+## 3. The constraint interface at general `N`
+
+### 3.1 The meridian cycle type, and `a = #Fix` exactly
+
+MPRIME Lemma 4.1 / `[P3]` give `N = a + sum_l s_l mu_l` and the generic
+meridian cycle type `1^a · prod_l mu_l^{s_l}`; THEOREM 7.B' gives
+`mu_l >= 2` for every dicritical under `H2`. Hence every nontrivial cycle
+of `rho(m)` has length `>= 2` and
+
+```text
+(3.1)   #Fix(rho(m_i))  =  a^{(i)}  =  N - W_i      exactly.
+```
+
+This closes `OPEN[ACS-FIX-VS-DEFICIT]` (ID §4) in the affirmative **at
+the scope `H2` + 7.B**: the inequality ID insisted on is an equality
+there, because the only way to lose the equality is a `mu_l = 1`
+dicritical and 7.B forbids one. ID's caution was correct and its
+counterexample (`W_2 = 1`, `a^{(2)} = 3`, no element of `S_4` with three
+fixed points) lives in the **reducible** profile, where `H2` fails and
+`D_2` is a second component — outside this scope. Both statements stand;
+they are about different profiles. I use only (3.1), and only under `H2`.
+
+### 3.2 Non-regularity
+
+COR 7.2, quoted verbatim above, is profile-free and I use it twice: to
+kill abelian theory (§2.3) and as a discard rule in the `N = 8` census
+(§5.5). It is MPRIME's, PROVED-HERE/UNREVIEWED there; I consume it at
+that typing and do not upgrade it.
+
+### 3.3 "Cabled place" at general `N` — `OPEN[CABLE-UNIVERSALITY]`
+
+The charge asks for the exact banked form of "a counterexample's `A`
+components are never transverse to `L_infty`", citing ROWKILL. **It is
+not there.** ROWKILL is the `S_4` row-kill integration; it contains no
+transversality-at-infinity statement, and a full-tree search finds the
+phrase only in ID §5 itself, where it is asserted without citation. The
+nearest banked all-`N` statement is MPRIME:
+
+> **LEMMA A** (MPRIME §2): under `H2` the normalization of `A_F` is `A^1`.
+> Hence `A_F` is rational with **exactly one place at infinity**
+> (`theta = 1`, MPRIME §1.2 and §9).
+
+One place at infinity on a curve whose projective closure has degree
+`n >= 3` (SMOOTH-KILL forces `A_F` singular, and a singular irreducible
+plane curve has degree `>= 3`) means the single place has contact `n` with
+`L_infty` — certainly not `n` transverse points. So the *transversality*
+half of ID's assertion is banked under `H2`. What is **not** banked is
+that the place is *cabled* in the sense that matters (nontrivial Puiseux
+characteristic, i.e. `K_infty` not the unknot): a smooth branch with
+contact `n` gives an unknotted link at infinity, as `{y = x^n}` shows.
+Typed:
+
+```text
+OPEN[CABLE-UNIVERSALITY]  Under H2, is the unique place of A_F at infinity
+                          always of nontrivial Puiseux type?  Banked: one
+                          place, non-transverse.  Not banked: nontrivial cable.
+```
+
+For the substrate this lane actually uses this OPEN is **discharged**, and
+that is one reason to use it: in case (A), `A_F ≅_{Aut} {x^p=y^q}` with
+`p,q >= 2`, and the complement is `S^3 \ T(p,q)` with `T(p,q)` a genuine
+nontrivial torus knot (Lin–Zaidenberg + the cone structure). Cabled, at
+every degree, with proof.
+
+### 3.4 `TB-GERM` / `CABLE-3` at general `N`
+
+DISC's finding is confirmed and extended: `TB-GERM` (`beta_1 = 8 + 3kappa`)
+is a family-3 `(8,6)` statement, arithmetically inapplicable at `(9,6,2)`
+(`(25-8)/3 ∉ Z`) and structurally inapplicable in case (A), whose chart
+orders are `(p,q)` rather than `(g,4g)`. `CABLE-3` is a `(9,6)` inner-braid
+rigidity statement. Neither is generalized here, neither is transported by
+analogy, and neither is used below. The general-`N` constraint list I
+actually consume is exactly: transitivity; COR 7.2; (3.1); `mu_l >= 2`;
+`1 <= a <= N-2`; Lin–Zaidenberg; CUSP-KILL's `j >= 2`, `j <= a`, `M >= 2`.
+
+## 4. Substrate selection — which object carries the argument
+
+The charge (item 3) asks for a **global** `N = 4` transfer and names
+`(9,6,2)` with `(9,6,4)` as fallback. Both are declined, with reasons:
+
+* **`(9,6,2)`.** `bmfact_962.json` is absent on this host (DISC hunted
+  and typed `OPEN[HOMCOVER-GLOBAL-ZVK-JSON]`; the hunt reproduces here).
+  Cycle types plus the BLOCK reading do not determine the eight tangency
+  conjugators, so the nine-factor ZvK presentation is not derivable and
+  the global group is not available. Worse for the charge: even *with*
+  the JSON, §2.2 says the computation would produce a constraint, not a
+  transfer.
+* **`(9,6,4)`.** Same blocker one level up (no factorisation output on
+  this host), and the same structural objection.
+
+* **MPRIME case (A) — the substrate used.** Here
+  `G = pi_1(C^2 \ A_F) ≅ pi_1(C^2 \ {x^p=y^q}) ≅ pi_1(S^3 \ T(p,q)) = G_{p,q}`
+  because `{x^p=y^q}` is a cone and the complement retracts radially onto
+  the sphere. The "local group at the cabled place" and the global group
+  are **the same group**. There is no map to cross, no relator to add,
+  and THEOREM NO-PUSHFORWARD has nothing to obstruct. This is the
+  **merge** the charge's item (4) asks about: the cabled-place neck and
+  the cusp neck are, on profile (A), literally one object.
+
+The price of the merge is scope: it covers profile (A) only. Case (B3)
+— the one-cusp horn, cusp *and* multibranch point — has a cusp but its
+global group is not a torus knot group, and nothing here touches it.
+That is stated as a scope limit, not hidden.
+
+## 5. The theorems on the merged substrate
+
+Fix case (A): `A_F ≅_{Aut(C^2)} {x^p=y^q}`, `p,q >= 2`, `gcd(p,q)=1`
+(MPRIME Prop. 7.1). Write `G = G_{p,q} = <alpha,beta | alpha^p = beta^q>`,
+`Z = Z(G) = <z>`, `z = alpha^p`; `H = rho^{-1}(Stab_1)` of index `N`;
+`E = F^{-1}(A_F)` with `j` components, `H^{ab} = Z^j` (Lemma F1);
+`Z_H = H ∩ Z`, `kappa = [Z:Z_H]`, `Delta = H/Z_H ≅ HZ/Z <= G/Z ≅ Z/p * Z/q`
+of index `M`, `N = M kappa`. The meridian is `m = alpha^e beta^f` with
+`eq + fp = 1` (so `m` generates `G^{ab} = Z`, where `alpha |-> q`,
+`beta |-> p`).
+
+### 5.1 THEOREM CENTRAL-RANK (`r = j - 1`)
+
+> **THEOREM CENTRAL-RANK.** Write `Delta ≅ F_r * C_1 * ... * C_k` (Kurosh;
+> `C_i` finite cyclic). Then `rank H^{ab} = r + 1`. Equivalently, for the
+> Keller reading, `r = j - 1`.
+>
+> *Proof.* `1 -> Z_H -> H -> Delta -> 1` is central (`Z_H <= Z(G)`), and
+> `Z_H ≅ Z` since `[Z : Z ∩ H] <= N`. `H_2(Delta) = 0`, because homology of
+> a free product is the direct sum of the homologies of the factors and
+> `H_2(F_r) = H_2(Z/n) = 0`. The five-term exact sequence
+> `H_2(Delta) -> Z_H -> H^{ab} -> Delta^{ab} -> 0` then makes
+> `Z_H ↪ H^{ab}` an infinite-order injection, so `rank H^{ab} =
+> rank Delta^{ab} + 1 = r + 1`. ∎
+
+MPRIME CUSP-CAGE states `r ∈ {j-1, j}`. The `r = j` alternative would
+require the image of `Z_H` in `H^{ab}` to be finite, which the five-term
+sequence forbids. **MEASURED cross-check:** `r = j - 1` on every one of
+the `1968` transitive `rho : G_{p,q} -> S_N` with `(p,q)` in
+`{(2,3),(2,5),(3,4),(3,5)}` and `N <= 5`; zero violations.
+
+### 5.2 `GAP[CUSP-CAGE-KUROSH-DIVISOR]`
+
+CUSP-CAGE writes `Delta ≅ F_r * (Z/p)^{*u} * (Z/q)^{*v}` with `u,v <= 1`.
+Two things are asserted there that Kurosh does not give.
+
+1. **The factors need not be full.** A Kurosh factor is a conjugate
+   intersection `Delta ∩ gZ/pg^{-1}`, hence `Z/d` for any `d | p`. In the
+   orbifold picture (`Z/p * Z/q = pi_1^{orb}` of a disc with cone points
+   `p, q`) a cone point of order `p` lifts to cone points of order `p/m_i`
+   with `sum m_i = M`; proper divisors genuinely occur.
+2. **`u <= 1` is not the right cyclicity condition.** What torsion-freeness
+   of `H^{ab}` forces (via CENTRAL-RANK: `Z^j / <zeta> ≅ Z^{j-1} (+) Z/n`)
+   is that the finite factors have **pairwise coprime** orders. Two
+   factors both dividing `p` are allowed when they are coprime — e.g.
+   `p = 6` with factors `Z/2` and `Z/3`.
+
+Consequence: CUSP-CAGE's congruences (`pq | M-1` in the `(u,v)=(1,1)`
+case, and the derived `N >= pq+1`) are stated at a scope narrower than
+their hypotheses support and must not be quoted at general `(p,q)`.
+What is **not** affected: `M >= 2` (if `M = 1` then `Delta ≅ Z/p * Z/q`
+has `r = 0`, so `j = 1` by CENTRAL-RANK, contradicting `j >= 2`), and
+CUSP-KILL itself, whose `M = 1` step uses rational Euler characteristic
+multiplicativity on `Delta ≅ Z/p * Z/q` directly. The corrected cage is
+§5.3–§5.4.
+
+### 5.3 THEOREM ORBIFOLD-CAGE
+
+Let `s` (resp. `s'`) be the number of preimages of the `p`- (resp. `q`-)
+cone point in the degree-`M` orbifold cover `Delta <= Z/p * Z/q`, with
+local degrees `m_1..m_s` (`m_i | p`, `sum m_i = M`) and `l_1..l_{s'}`
+(`l_j | q`, `sum l_j = M`).
+
+> **THEOREM ORBIFOLD-CAGE.** Assume `H^{ab}` torsion-free (Lemma F1).
+> Then
+> ```text
+> (C-1)  s + s' = M + 2 - j ;
+> (C-2)  the orders  {p/m_i > 1} ∪ {q/l_j > 1}  are pairwise coprime ;
+> (C-3)  gcd(p/m_i, kappa) = gcd(q/l_j, kappa) = 1  for all i, j ;
+> (C-4)  s = #cycles of rho(alpha) on N points,  s' = #cycles of rho(beta).
+> ```
+>
+> *Proof.* The cover orbifold has underlying compact surface of genus `g`
+> with `c >= 1` boundary circles, so `Delta ≅ F_{2g+c-1} * (finite cyclics)`
+> and `r = 2g+c-1`; CENTRAL-RANK gives `2g + c = j`. Multiplicativity of
+> `chi^{orb}`,
+> `(2-2g-c) - sum_i(1 - m_i/p) - sum_j(1 - l_j/q) = M(1/p + 1/q - 1)`,
+> reduces to `(C-1)` after substituting `sum_i m_i = sum_j l_j = M`.
+> `(C-2)`: `Delta^{ab}`'s torsion is `Z^j/<zeta> `'s torsion, hence cyclic.
+> For `(C-3)`–`(C-4)`: `rho(z)` is central in a transitive group, hence
+> semiregular of order `kappa` with `M` orbits (= blocks). On a block-orbit
+> of size `m_i`, `rho(alpha)^{m_i}` restricts to `rho(z)^{k_i}`, and
+> `rho(alpha)^p = rho(z)` forces `k_i (p/m_i) ≡ 1 (mod kappa)`; hence
+> `gcd(k_i,kappa) = 1`, which is `(C-3)`, and the block-orbit splits into
+> `gcd(k_i,kappa) = 1` point-orbits, which is `(C-4)`. ∎
+
+**MEASURED cross-check:** `(C-1)` holds on all `1968` reps of §5.1, and
+`(C-4)` on all `3321` reps over `(p,q) ∈ {(2,3),(2,5),(3,4),(3,5),(4,5)}`,
+`N <= 5` (zero violations, both).
+
+### 5.4 THEOREM CUSP-PARITY
+
+> **THEOREM CUSP-PARITY.** Let `eps := sgn rho(m)`. Then
+> ```text
+> eps = (-1)^{W - sum_l s_l} = (-1)^{sum_l s_l (mu_l - 1)} ,
+> sgn rho(alpha) = eps^q ,   sgn rho(beta) = eps^p ,
+> ```
+> equivalently `(-1)^{N-s} = eps^q` and `(-1)^{N-s'} = eps^p`.
+>
+> *Proof.* `sgn ∘ rho : G -> {±1}` factors through `G^{ab} = Z<m>`, and
+> `alpha |-> q m`, `beta |-> p m`. The first equality is the cycle type
+> `1^a prod_l mu_l^{s_l}` of (3.1). The reformulation uses
+> `sgn(sigma) = (-1)^{N - #cycles}` with `(C-4)`. ∎
+
+**MEASURED cross-check:** zero violations on `4947` reps across
+`(p,q) ∈ {(2,3),(2,5),(3,4),(3,5),(4,5),(3,7),(5,6)}`, `N <= 5`.
+
+This gate is cheap, all-degree, and it is what does most of the killing.
+
+### 5.5 THEOREM CUSP-A-EMPTY
+
+> **THEOREM CUSP-A-EMPTY.** Under `H2`, MPRIME case (A) is **empty** for
+> every `4 <= N <= 7`. At `N = 8` it is nonempty, with an explicit
+> survivor list.
+
+*Proof for `N = 4`.* N4-PIN gives `a = 2`, `W = 2`, one dicritical
+`(s_1,mu_1) = (1,2)`, so `rho(m)` has cycle type `(2,1,1)`, `eps = -1`.
+CUSP-KILL gives `j >= 2`, and `j <= a = 2`, so `j = 2`; CENTRAL-RANK gives
+`r = 1`; `M >= 2` and `M kappa = 4` give `M ∈ {2,4}`. `(C-1)`: `s + s' = M`.
+CUSP-PARITY with `N = 4` even: `s ≡ q` and `s' ≡ p (mod 2)`, so
+`M = s+s' ≡ p+q (mod 2)`; `M` is even, so **`p` and `q` are both odd**.
+Now the partitions:
+
+* `M = 2`: `s + s' = 2` forces `s = s' = 1`, i.e. `m_1 = 2 | p` — `p` even.
+  Contradiction.
+* `M = 4`: `s + s' = 4`. `(s,s') = (1,3)` needs `m_1 = 4 | p` — `p` even.
+  `(3,1)` needs `4 | q`. `(2,2)`: partitions of `4` into two parts are
+  `{2,2}` (needs `2|p`, even) and `{1,3}` (needs `3|p`, and cone orders
+  `p` and `p/3` are coprime only if `p = 3`); pairing `{1,3}` on the `p`
+  side with `{1,3}` on the `q` side needs `3 | gcd(p,q)`, and with `{2,2}`
+  on the `q` side needs `q` even. Every branch contradicts.
+
+Hence no admissible cell, and case (A) at `N = 4` is empty. ∎
+
+*Second, independent proof at `N = 4`.* Without the parity gate, the same
+partition analysis alone leaves exactly `(p,q) = (2,3)` (up to swap), with
+`M = 4`, `kappa = 1`, cone data `{2,2} | {1,3}`. But `G_{2,3}` is the
+trefoil group `B_3`, with `alpha = sigma_1 sigma_2 sigma_1`,
+`beta = sigma_1 sigma_2`, and `m = alpha beta^{-1} = sigma_2`
+(MEASURED identity on all `206` reps checked, together with
+`alpha^2 = beta^3` and `sigma_1 = alpha sigma_2 alpha^{-1}`). So `B_3` is
+generated by **two conjugates of the meridian**, and `rho(m)` is a
+transposition; two transpositions generate a group with orbits of size
+`<= 3`, never transitive on `4` letters (MEASURED for `N = 4,5,6`;
+elementary in general). Empty. ∎
+
+*Proof for `N = 5`.* `M | 5` and `M >= 2` give `M = 5`, `kappa = 1`;
+`a <= 3`, `j ∈ {2,3}`.
+`j = 2, a = 2`: `W = 3`, one dicritical `(1,3)`, `eps = +1`, so `s` and
+`s'` are both odd by CUSP-PARITY, while `(C-1)` gives `s + s' = 5`, odd —
+impossible.
+`j = 2, a = 3` (`W = 2`, `eps = -1`): `s+s' = 5`; the partitions of `5`
+into `(1,4),(2,3),(3,2),(4,1)` parts all fail `(C-2)` or coprimality
+(`(1,4)`: three equal cone orders `q`; `(2,3)` with `{1,4}`: forces
+`p = 4` and then the `q` side needs `2|q` or a repeated order; `{2,3}`:
+forces `p = 6` and the `q` side needs `2|q` or `3|q`).
+`j = 3, a = 3` (`W = 2`, `eps = -1`): `s+s' = 4` and parity forces `p+q`
+even, i.e. `p,q` both odd. `(1,3)`: the three-part side is `{1,1,3}`
+(two equal cone orders `q`, not coprime) or `{1,2,2}` (needs `2|q`);
+`(3,1)` is the mirror; `(2,2)`: the two-part sides are `{1,4}` and
+`{2,3}`, each with an even part, so `2|p` or `2|q`. Empty. ∎
+
+*`N = 6, 7`, and the `N = 8` frontier — MEASURED.* The cage of §5.3–§5.4
+was enumerated exactly (driver in `/tmp`, structure of the enumeration in
+§7.3), then every surviving cell was decided by direct enumeration of
+`rho`:
+
+```text
+N     numerical cage cells        representation gate            verdict
+4     0                            (n/a)                          EMPTY  [proved]
+5     0                            (n/a)                          EMPTY  [proved]
+6     4  ((p,q) = (2,3),(2,5),(3,2),(5,2))
+                                   1673 reps filtered, 0 survive   EMPTY  [proved*]
+7     36 cells (22 with p,q<=130)  all 22 cells: 0 survive         EMPTY  [measured]
+8     40 cells (p,q<=200)          192 survivors                   NONEMPTY
+```
+
+`*` at `N = 6` the cage is complete: the cell list is stable under
+raising the `(p,q)` bound from `2M^2+120` to `1200`, and all four cells
+have `p,q <= 5`, inside the tested range. At `N = 7` the cage contains
+unbounded families (`s = 1` forces `p = M·D` with `D` free); §7.3 records
+why those families collapse to a single representation-theoretic test,
+but the collapse is an observation, not a proof, so `N = 7` is typed
+MEASURED.
+
+Of the `192` survivors at `N = 8`, most are repeats along the unbounded
+families; the four base cells, after additionally discarding regular
+`rho` (COR 7.2), are MEASURED:
+
+```text
+(p,q) = (2,3): meridian type (3,3,1,1), a = 2, j = 2, M = 4, |rho(G)| = 24
+               rho(alpha) type (4,4), rho(beta) type (6,2)      16 reps
+(p,q) = (3,2): mirror                                            6 reps
+(p,q) = (3,4): meridian type (4,1,1,1,1), a = 4, j = 3, M = 4,
+               |rho(G)| = 192, rho(alpha) (6,2), rho(beta) (8)   6 reps
+(p,q) = (4,3): mirror                                            4 reps
+```
+
+together with the unbounded families `q ≡ 4 (mod 8)`, `gcd(q,3)=1` above
+`(3,4)` — verified constant along `q = 4,20,28,...,196`, which is the
+collapse phenomenon in action.
+
+### 5.6 What this closes
+
+`OPEN[MPRIME-CUSP-J2]` is **CLOSED NEGATIVE for `N <= 7`** and **re-opened
+with an explicit finite survivor list at `N = 8`**. The `N = 4` instance
+MPRIME §7 records as "not closed here" — `(p,q) = (3,4)`, `M = 4`,
+`(u,v) = (1,0)`, `r = j = 2` — is refuted twice: `r = j` is impossible
+(CENTRAL-RANK), and independently the direct census finds all `432`
+meridian-type-`(2,1,1)` transitive reps of `G_{p,q} -> S_4`
+(`2 <= p,q <= 16`) have `rank H^{ab} = 3 > a = 2` (MEASURED; `18` of the
+`(p,q)` pairs contribute, `24` reps each).
+
+Hence, composing with THEOREM PROFILE: **at `N = 4` under `H2` the entire
+residual is case (B3)** — one cusp plus at least one double point of two
+smooth branches — with N4-PIN's local data. Case (A) no longer shadows it.
+
+## 6. The general-`N` statement, and the residual
+
+The all-degree theorem the charge targets does **not** exist in the
+charged form (§2.2). What this lane can state at every degree is:
+
+> **THEOREM (case-(A) cage, all `N`).** Under `H2`, in case (A), with
+> `A_F ≅_{Aut} {x^p=y^q}` and the ACS-1 monodromy `rho : G_{p,q} -> S_N`:
+> `2 <= j <= a <= N-2`, `W = N-a >= 2`, `N = M kappa`, `M >= 2`,
+> `r = j-1`, and `(C-1)`–`(C-4)` together with CUSP-PARITY hold. Every
+> hypothesis is named: Lemma F1 (Gysin), Lin–Zaidenberg (via MPRIME
+> Prop. 7.1), CUSP-KILL (`j >= 2`, `M >= 2`), MPRIME `[P3]` + 7.B
+> (meridian cycle type), COR 7.2 (discard regular `rho`).
+
+The residual is exactly `N >= 8` with the cells of §5.5; the first is
+`N = 8`, `A_F ≅ {x^2=y^3}` (cuspidal cubic up to `Aut(C^2)`), `a = 2`,
+`W = 6` carried by two dicriticals `(1,3)` or one `(2,3)`, `j = 2`,
+`M = 4`, `kappa = 2`, `|rho(G)| = 24`.
+
+**Does the hypothesis cover the horn's cusp profiles (charge item 4)?**
+Partly, and the boundary is sharp. THEOREM PROFILE's horn is `(A)` and
+`(B3)`. This lane covers `(A)` completely — that is the merge — and
+covers `(B3)` **not at all**: with a multibranch point present `A_F` is
+not homeomorphic to `C`, Lin–Zaidenberg does not apply, `G` is not
+`G_{p,q}`, and the local/global identification that makes the computation
+exact is gone. The necks merge on `(A)` and stay disjoint on `(B3)`;
+running the `(A)` machinery on `(B3)` would be exactly the flag/place
+identification FALLACY-v2 forbids, and is not attempted.
+
+## 7. Controls
+
+### 7.1 Positive control — replication of the charged census
+
+```text
+                                      this lane (MEASURED)      DISC / ID
+B_3 -> S_3 transitive                 8, 2 with torsion          8, 2
+   H_1 = Z^2 x6 ; Z (+) Z/2 (+) Z/2 x2                           identical
+B_3 -> S_4 transitive                 54, 30 with torsion        54, 30
+   H_1 = Z^2 x24 ; Z (+) Z/2 x24 ; Z (+) Z/3 x6                  identical
+```
+
+Both were recomputed from **two different presentations** of the same
+group — the braid presentation `<s1,s2 | s1s2s1 = s2s1s2>` used by ID and
+DISC, and the torus-knot presentation `<a,b | a^2 = b^3>` used here — with
+identical multiset output. That is a presentation-independence control the
+charged reports did not have, and it is what licenses moving between the
+two pictures in §5.
+
+### 7.2 Negative control — an uncabled configuration where torsion fails
+
+Two, one proved and one measured.
+
+*Proved.* If `A` is nodal and transverse to `L_infty`, then
+`pi_1(P^2\A)` is abelian (Deligne–Fulton), so `pi_1(C^2\A) ≅ Z^{r}`;
+every finite-index subgroup of `Z^r` is `Z^r`. **No cover of such a
+complement ever has torsion, at any degree.** This is the exact
+theorem-level form of ID §5 step 1's "nodes contribute no torsion".
+
+*Measured, and nonabelian.* `d` concurrent lines in `C^2`: all `d` places
+at infinity are transverse (uncabled), and
+`pi_1(C^2\A) ≅ F_{d-1} × Z` is nonabelian.
+
+```text
+d = 3 :  k=2   7 transitive covers   Z^3 x4, Z^4 x3            no torsion
+         k=3  44                     Z^3 x18, Z^5 x26          no torsion
+         k=4 666                     Z^3 x96, Z^4 x144, Z^6 x426  no torsion
+d = 4 :  k=2  15 / k=3 248 / k=4 14586                          no torsion
+```
+
+`15,566` transitive covers of uncabled complements, zero torsion —
+against `30/54` with torsion on the cabled trefoil complement at `k = 4`.
+The contrast is real; the inference from it is not (§2.2).
+
+### 7.3 Enumeration soundness
+
+The cage enumerator is exhaustive in `(p,q)` for a reason, not a bound:
+`D_i := p/m_i`. If two `D_i > 1` they are coprime and both divide `p`, so
+`D_i D_{i'} | p` and each `D | m ≤ M`, giving `p ≤ M^2`. If exactly one
+`D_{i_0} > 1` and `s >= 2`, every other `m_i = p`, so `p ≤ M`. If all
+`D_i = 1`, `p = M/s`. Only `s = 1` is unbounded, and then `p = M·D` with
+`D` free, entering the rest of the cage only through `gcd(MD,q) = 1`,
+`gcd(D,kappa) = 1` and the parity of `p`. In that family the meridian
+exponent `f` is constant modulo the order of `rho(beta)` (e.g. at `N = 7`,
+`p = 2`, `q = 7D`: `2f ≡ 1 (mod 7)` gives `f ≡ 4` for every `D`), so the
+whole family collapses to one test. That collapse is *observed* to hold —
+the `N = 8` family `q = 4,20,...,196` gives identical survivor data at
+every member — but it is not proved, which is why `N >= 7` is typed
+MEASURED and `N <= 6` PROVED.
+
+### 7.4 Instrument controls
+
+`box/cover_h1.py`: 4/4 built-in controls PASS on this host, including
+`Z (+) Z/3` for the trefoil cyclic double cover (a known nonzero answer)
+and the fail-closed refusal of a left-action homomorphism. All covers in
+this report were computed by converting a left-action homomorphism with
+`to_transport_convention` and were accepted by the lift-closure gate; no
+`ValueError` was suppressed anywhere.
+
+### 7.5 One charged-input detail, checked and harmless
+
+DISC §3 (L3) writes the meridian of `T(3,25)` as `x^{-8}y`; the convention
+consistent with `x^p = y^q` and with CUSP-CAGE is `x^e y^f`, `eq+fp = 1`,
+i.e. `x y^{-8}` (calibrated on the trefoil, where `alpha beta^{-1}` is
+exactly `sigma_2`, MEASURED §5.5). Both readings send the meridian of all
+`6` transitive `T(3,25) -> S_4` homomorphisms to a `4`-cycle, so DISC's
+conclusion is unchanged. A label point, not a correction to a result.
+
+## 8. FALLACY-v2 audit
+
+* **Flag/place/series.** Four groups kept apart: `Gamma_infty` (link at
+  infinity), `Loc_P` (germ), `G = pi_1(C^2\A_F)`, `G_{p,q}`. The one
+  identification I make — `G ≅ G_{p,q}` in case (A) — is proved from
+  Lin–Zaidenberg plus the cone retraction, not asserted. DISC's `G_infty`
+  is **not** identified with `G`; that is precisely the gap §2.2 makes
+  into a theorem. `TB-GERM`/`CABLE-3` are not transported.
+* **Carrier/attainment.** HOM-COVER is a necessary condition throughout.
+  Nothing here asserts that any surviving cell is realized by a Keller
+  map; the `N = 8` survivors are `REPRESENTATIVE` group-theoretic data,
+  not `FULL_ACTUAL_EXIT`, and are reported as a residual, not a find.
+* **Floor/attainment.** `r = j-1` is an exact equality with a proof, not a
+  bound. `r(E) <= 3` in §2.2 is explicitly conditional on an OPEN and is
+  not used downstream.
+* **Per-ray / exit-set.** No exit price asserted; no `charge_basis` line.
+* **Pole/interior.** No pole identities in play.
+* **Variable/ring map.** No ideal; the one convention that matters is
+  `cover_h1`'s transport convention, declared in §7.4 and applied through
+  `to_transport_convention` every time.
+* **`sat()` / raw remainder.** Not in play (no Groebner computation).
+* **Prime label/derivative.** `s'` and `l_j` are labels for the `q`-side
+  orbifold data, never derivatives; `s_l` (dicritical degree) is a
+  different symbol from `s` (number of `p`-cone preimages) and the two are
+  never mixed — `s_l` carries its dicritical index throughout.
+* **Not filled by cap or analogy.** Where the charged transfer fails I say
+  refuted and give the witness; where custody is missing
+  (`(M-surj)`, mod-`p` divisibility, cable universality) I type OPEN
+  rather than assume; where MPRIME's cage over-asserts I type `GAP` and
+  repair rather than quote.
+
+## 9. Typed verdict block
+
+```text
+LANE              HOMCOVER-TRANSFER
+CHARGE TARGET     all-degree torsion in H^ab from cabled places at infinity.
+VERDICT           REFUTED IN THE CHARGED DIRECTION.  THEOREM NO-PUSHFORWARD:
+                  local torsion cannot force global torsion (surjections kill
+                  torsion; non-surjections do not see it).  Explicit witness:
+                  one added relator turns Z (+) Z/2 into Z on the trefoil model.
+
+SUBSTRATE USED    MPRIME case (A):  G = pi_1(C^2\A_F) ≅ pi_1(S^3 \ T(p,q)).
+                  Local = global; the cabled-place neck and the cusp neck MERGE.
+                  (9,6,2) declined (no JSON, and the transfer would not follow);
+                  (9,6,4) declined (same).
+
+PROVED HERE       LEMMA F1        H_1(C^2\E) = Z^{r(E)}, elementary proof.
+                  NO-PUSHFORWARD  the direction theorem + measured witness.
+                  CENTRAL-RANK    r = j - 1 exactly.
+                  ORBIFOLD-CAGE   s+s' = M+2-j ; (C-2)-(C-4).
+                  CUSP-PARITY     sgn rho(alpha) = eps^q, sgn rho(beta) = eps^p.
+                  CUSP-A-EMPTY    case (A) EMPTY for N = 4,5,6 (proved),
+                                  N = 7 (measured); NONEMPTY at N = 8.
+
+CLOSES            OPEN[MPRIME-CUSP-J2] negative for N <= 7 (re-typed at N >= 8).
+                  OPEN[ACS-FIX-VS-DEFICIT] affirmative under H2 + 7.B: a = #Fix.
+                  N=4 H2 residual is now exactly case (B3).
+
+CORRECTS          MPRIME CUSP-CAGE: "r in {j-1,j}" -> r = j-1 ; its worked N=4
+                  escape ((3,4), M=4, r=j=2) is refuted.
+                  GAP[CUSP-CAGE-KUROSH-DIVISOR]: Kurosh factors may be Z/d,
+                  d | p, and "u,v <= 1" should be "pairwise coprime orders".
+                  M >= 2 and CUSP-KILL are UNAFFECTED.
+
+OPENS RAISED      OPEN[HOMCOVER-LINK-INFTY-SURJ]     is Gamma_infty ->> G ?
+                  OPEN[HOMCOVER-MODP-DIVISIBILITY]   local-to-global for
+                                                     dim H^1(X;F_p[Gamma/Gamma_1])
+                  OPEN[CABLE-UNIVERSALITY]           banked: one place, non-
+                                                     transverse.  NOT banked:
+                                                     nontrivial cable at all N.
+                                                     (Discharged in case (A).)
+                  OPEN[HOMCOVER-CUSP-A-N8]           the N >= 8 case-(A) residual,
+                                                     explicit cells listed in 5.5.
+
+CONSUMED          MPRIME: Prop 7.1 (Lin-Zaidenberg), CUSP-KILL, COR 7.2,
+                  N4-PIN, THEOREM PROFILE, [P3], 7.B'  -- all at their banked
+                  typing (PROVED-HERE, UNREVIEWED).  ID: sec.3 razor, sec.4
+                  fixed-point inequality.  DISC: census + ALL-TORSION, used as
+                  the motivating measurement, not as a premise of any theorem.
+                  Campbell (Math. Ann. 205 (1973) 243-248) via CUSP-KILL.
+                  Arapura (J. Alg. Geom. 6 (1997)) and Libgober (Duke 49 (1982))
+                  named for custody and then shown INAPPLICABLE (COR 7.2).
+
+MEASURED          census replication 8/2 and 54/30, two presentations, identical.
+                  r = j-1 : 0 violations / 1968 reps.
+                  s+s' = M+2-j : 0 / 1968.   c_alpha = s : 0 / 3321.
+                  parity law : 0 / 4947.
+                  N=4 direct gate: 432 candidates, 0 survivors.
+                  N=5 gate (p,q<=12): 180 candidates, 0 survivors.
+                  N=6 gate (p,q<=14): 1673 candidates, 0 survivors.
+                  N=7 gate, all 22 cage cells with p,q<=130: 0 survivors.
+                  N=8: 192 survivors over 40 cells; on the four base cells
+                  (2,3)/(3,2)/(3,4)/(4,3): 16/6/6/4 after COR 7.2.
+                  negative control: 15566 uncabled covers, 0 torsion.
+
+NOT CLAIMED       any kill of (9,6,2) or (9,6,4); JC2 at any degree; existence
+                  of F; anything about case (B3); that Gamma_infty ->> G;
+                  that the N=8 survivors are geometrically realizable.
+
+DEVIATIONS        (1) Substrate switched from (9,6,2)/(9,6,4) to case (A), with
+                      reasons in sec.4.  This is a deliberate departure from the
+                      charge's item (3) and is the main judgement call here.
+                  (2) Driver left in /tmp, not installed in box/, following DISC.
+                  (3) Body paced to the 30-40KB target.
+```
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `40459`.
+- Body SHA-256:
+  `bcb99e94a9063c8635f6bf9504e5244e8ca9a7279732d7c4bb9a2f34fe4d0149`.
+- Frozen basis: `ecbcec7a26a4d8afd2d10f82a32e341aaccb4949`.

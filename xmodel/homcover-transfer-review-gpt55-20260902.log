@@ -1,0 +1,117 @@
+cli=codex-cli 0.152.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.152.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a05fd9-ba8c-70f2-9b00-6b4b9d3f2582
+--------
+user
+# Review lane: HOMCOVER-TRANSFER-REVIEW — gate the four cusp theorems and the refutation
+
+The charged report REFUTED its own charged target (THEOREM
+NO-PUSHFORWARD: torsion does not push forward along either
+local-to-global map; explicit measured witness where one added
+global relator converts Z+Z/2 to Z) and then proved, on the
+case-(A) substrate where pi_1(C^2\A_F) IS the torus-knot group
+pi_1(S^3\T(p,q)): THEOREM CENTRAL-RANK (r = j-1 exactly),
+THEOREM CUSP-PARITY, THEOREM ORBIFOLD-CAGE (s+s' = M+2-j), and
+THEOREM CUSP-A-EMPTY (case (A) EMPTY for 4<=N<=7, proved <=6,
+measured-exhaustive at 7, first survivors at N=8). It also
+claims GAP[CUSP-CAGE-KUROSH-DIVISOR] in the just-promoted
+CUSP-CAGE (Kurosh factors asserted full Z/p, Z/q; the worked
+N=4 escape uses r=j) with a repair that strengthens the cage;
+and resolves OPEN[ACS-FIX-VS-DEFICIT] affirmatively under
+H2+7.B (a = #Fix exactly).
+Hostile review, all sympy/python tools available:
+(1) THEOREM NO-PUSHFORWARD + the witness: replay the witness
+    computation; check both directions of the local-to-global
+    map are really covered.
+(2) THEOREM CENTRAL-RANK: replay. This SHARPENS promoted
+    CUSP-CAGE — verify the r=j case truly never occurs (the
+    promoted cage allowed it; a wrong sharpening poisons the
+    horn program).
+(3) THEOREM CUSP-A-EMPTY: replay the N<=6 proof; RERUN the N=7
+    exhaustive computation independently (state your count);
+    verify the N=8 survivor is genuine (exhibit it).
+(4) The GAP claim against CUSP-CAGE: is the gap real in the
+    charged MPRIME report (cite its lines)? Does the repair
+    preserve M>=2 and CUSP-KILL as claimed? This is a
+    DELTA-REVIEW of integration #7's promotion — report its
+    exact impact on the promoted text.
+(5) ACS-FIX-VS-DEFICIT resolution: replay §3.1 (a = #Fix under
+    H2+7.B); check the hypotheses are exactly H2+7.B and the
+    companion identity-meridian case is consistent.
+(6) CUSP-PARITY + ORBIFOLD-CAGE: replay both; spot-check on an
+    explicit (p,q,N) instance of your choosing.
+Verdict per claim: CONFIRMED / REFUTED / GAP.
+Report: xmodel/homcover-transfer-review-gpt55-20260902.md
+Seal-at-completion; target 18-28KB.
+charged_input=xmodel/homcover-transfer-opus5-20260902.md
+charged_input=xmodel/mprime-alln-h2-opus5-20260902.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.kE2tEf/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+fa52e816869fc689db23d5dfb6354be0cf88cb361f365dd9ff16f51c01d97883  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.kE2tEf/inputs/homcover-transfer-opus5-20260902.md
+722d413717fb998fb76783b311807522878cc138025b47c5f1e2214cb8685c80  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.kE2tEf/inputs/mprime-alln-h2-opus5-20260902.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll start by validating the frozen inputs exactly as requested, then read the charged reports from the immutable input directory rather than any working-copy versions.
+exec
+/bin/zsh -lc 'shasum -a 256 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.kE2tEf/inputs/homcover-transfer-opus5-20260902.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.kE2tEf/inputs/mprime-alln-h2-opus5-20260902.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+fa52e816869fc689db23d5dfb6354be0cf88cb361f365dd9ff16f51c01d97883  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.kE2tEf/inputs/homcover-transfer-opus5-20260902.md
+722d413717fb998fb76783b311807522878cc138025b47c5f1e2214cb8685c80  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.kE2tEf/inputs/mprime-alln-h2-opus5-20260902.md
+
