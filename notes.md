@@ -19319,3 +19319,19 @@ corrected_964.msolve.out} into `box/box03-logs_corrected-20260902/`.
 SIROCCO pipeline; its IP changes on restart — resolve via describe-
 instances). box01 (64 vCPU / 1 TiB, 0.2 stack, idle except the protected
 checkpoint builder) remains the compute box for the next census.
+
+EVENT (observed ~10:40Z per lane print) — **A2 REISSUE GATED**
+(`a2-reissue-review-gpt55-20260902.md`, e3ed10de, BODY_SEALED): all six
+items CONFIRMED — the seven source rows and the EQ2_even correction
+(independent re-extraction; the charged generator's `check` PASSES with
+the stale-source canary reproducing exactly −2qE1); the corrected T2
+G' sign; T1, O1s, DET-EO; the e = 1, 2, 3 capped branch-(A) unit ideals
+(CONFIRMED, SCOPED: they certify emptiness of the declared capped
+necessary subsystem, not a chamber, not c = −2e, not Chamber I, not
+e >= 4); the T4 restoration; the typed OPENs and the retracted-item
+audit (nothing retracted is consumed). PROMOTE SOL with its typed scope.
+AUDIT delta 9c appended: the corrected canonical A2 system replaces the
+SPEC's §1; T2 REISSUED; T4 RESTORED; the e <= 3 capped decisions
+recorded at scope. The A2 object remains PROFILE-UNTYPED (integration
+#9 §C); no frontier seat returns to it — its remaining OPENs
+(c = −2e, Chamber I, A2-K2E, e >= 4) are queued at the lowest tier.

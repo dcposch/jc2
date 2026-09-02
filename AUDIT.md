@@ -14974,3 +14974,22 @@ affine representatives; producer opus d7cff053, reviewer gpt55
 boundary instrument (review pending, binds at #11), the systems
 deliverables, and the standing fronts. See the artifact for exact
 statements — this entry is a pointer.
+
+## INTEGRATION #9 DELTA (c) (2026-09-02, GATED): CORRECTED A2 CANONICAL SYSTEM; T2 REISSUED; T4 RESTORED
+
+`a2-dev-projection-sol56-20260902.md` (8fb07079; generator
+`xmodel/a2-dev-projection-sol56-20260902.py`), gated by
+`a2-reissue-review-gpt55-20260902.md` (e3ed10de, all CONFIRMED at scope):
+the seven residual rows re-extracted from the SPEC's own Even/Odd
+definitions are the CANONICAL A2/CELL-32 system from now on (EQ2_even
+carries −2qE1; E2 always denotes the coefficient polynomial b Z eta^2);
+C32 T1 re-derived wall-free; C32 T2 REISSUED with the corrected bracket
+(final G' sign negative); O1s and DET-EO derived; C32 T4 (deg eta = 0
+impossible on the live section) RESTORED by a corrected proof on the
+corrected e = 0 section; the declared capped branch-(A) simultaneous-top
+subsystem (deviation cap deg X, deg Y <= 4e − 1, wall NOT imposed) is
+EMPTY for e = 1, 2, 3 (unit coefficient ideals, planted-point controls;
+c = 0 two-engine) — recorded at exactly that scope: not a chamber, not
+c = −2e, not Chamber I, not e >= 4. Delta (b)'s retractions stand; T5's
+condition on T4 is discharged. The object remains PROFILE-UNTYPED and
+N-UNTYPED per integration #9 §C.
