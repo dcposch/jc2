@@ -15140,5 +15140,12 @@ gauge with both degrees preserved (the subrectangularising source
 automorphism of van den Essen Cor. 10.2.21 is forced affine linear by
 degree-minimality), so nu(F_min) = 2 and integration #14's E_0-free
 conclusion and the vacuity of CH2 hold unconditionally at every N in
-degree-minimal scope. Binding after the different-model check
-`subrect-orbit-bridge-check-grok46-20260902`.
+degree-minimal scope. CHECK PASSED (`subrect-orbit-bridge-check-grok46-20260902.md`, 791f6fc8):
+BINDING. Exact scope sentence (reviewer): OPEN[SUBRECT-ORBIT-BRIDGE]
+CLOSED YES: every Aut(C^2)×Aut(C^2) D-degree-minimal Jacobian
+counterexample admits a degree-preserving affine source change to GGV's
+standard subrectangular (m,n)-pair (van den Essen Cor. 10.2.21 as GGV
+(4.6), affinity by orbit D-minimality in place of global B), hence
+nu(F_min) = 2, E_0 is a free vertex of T_+, and CH2 is vacuous at every N
+in this scope; "linear change + (LF)" does not monomialize three or more
+roots. Global B stays the hypothesis of GGV Cor 5.21 and of B >= 16.

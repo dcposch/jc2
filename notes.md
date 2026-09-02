@@ -20073,3 +20073,18 @@ needs the subrectangularisation theorem. Different-model check
 launched (`subrect-orbit-bridge-check-grok46-20260902`, Grok) before
 promotion: the exact statement of van den Essen Cor. 10.2.21 / GGV
 Prop 4.7's input, and the affine-linearity argument.
+
+EVENT (~14:05Z per lane print) — **SUBRECT-ORBIT-BRIDGE CHECK: CONFIRMED
+YES** (`subrect-orbit-bridge-check-grok46-20260902.md`, 791f6fc8, body
+85f74332, BODY_SEALED; Grok, primary sources): every Aut(C^2) × Aut(C^2)
+D-degree-minimal Jacobian counterexample admits a degree-preserving
+AFFINE source change to GGV's standard subrectangular (m,n)-pair (van
+den Essen Cor. 10.2.21 as GGV (4.6); affinity by orbit D-minimality in
+place of global B), hence nu(F_min) = 2, E_0 is a free vertex of T_+,
+and CH2 is vacuous at every N in this scope. Wording repair: the
+subrectangulariser phi LOWERS D if nonlinear (its inverse raises D on
+the rectangle); nu = 2 uses the rectangle with a, b >= 1, not
+Definition 4.3's m, n > 1 and not B. Global B remains the hypothesis of
+GGV Cor 5.21 and of B >= 16 as printed. DO NOT PROMOTE "linear change +
+(LF) monomialises any H with >= 2 roots". PROMOTED (AUDIT delta 14(a)
+now binding with the reviewer's exact scope sentence). No new OPEN.
