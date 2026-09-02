@@ -19630,3 +19630,47 @@ forced only at N = 4. New OPEN[MF-RATIONAL] (can g_L = 0 at all; bounded
 by p_a(D_F); if so theta_inf >= 2) — the remaining +1 on the identity;
 classical, not counting. Gate unchanged. (The lane watcher's "402"
 flag was a false match on the log text; no HTTP 402 in the log.)
+
+## LIVE STATE (observed ~12:10Z per lane print) — (B3) CENSUS AT N = 5, 6: EXACT, NO LEGAL PRUNING BEFORE A GENERAL-N ASSEMBLY THEOREM; ROUTE DEMOTED BEHIND THE CEILING
+
+**B3-CENSUS-DEG5-DEG6 landed** (`b3-census-deg5-deg6-sol56-20260902.md`,
+4ad3e221, BODY_SEALED, 35KB; MEASURED + typed OPENs; UNREVIEWED):
+Rows(2..7) = 3, 6, 23, 51, 192, 430; Census(4..7) = 35, 86, 287, 717
+(the (4,1) sub-count 23) — matching the reviewed closed form; (B3)
+profiles N = 5 / 6 = 3 / 9 (the missed cell C1+C1+M21 confirmed; the
+one-U2 cap on 2p_a = 3 respected); at N = 7 the stipulated 33 does not
+reproduce (32 found — OPEN[PROFILE-N7-33], a typing reconciliation);
+profile-row incidences N5 = 67, N6 = 181 (W = 3) / 238 (W = 2).
+CONTROL: N = 4 raw 35 → six global graphs → EMPTY for (mu, corr) =
+(2,1) through the same pipeline (L10 kills 24/25, L11 22/23, L12–15
+20/21; (H-∞) not used; all replay repairs binding). RESULT: **no EMPTY
+N = 5 or N = 6 window is certified** — no Lemma 10–15 analogue legally
+fires before a general-N ASSEMBLY step, which DO did by hand at N = 4
+and which needs data the record does not license: OPEN[DO-GSIDE-R]
+(one binary direction identification), OPEN[DO-GLOBAL-FORK-
+CARDINALITY] (three integer bounds), OPEN[DO-ENDPOINT-N5/N6] (state
+theorems over 86/287 rows and 549/2,127 ports), OPEN[DO-DET-CANONICAL-
+N5-N6], OPEN[DO-MU3-CANONICAL-BLOCK], OPEN[BI-TAIL-AT-INFINITY]. Growth:
+N = 7 has 717 raw rows and ~23k profile-row incidences. Γ retained as
+REPRESENTATIVE; no non-Keller step kills it.
+COORDINATOR DECISION: the (B3) boundary census is DEMOTED to a
+secondary route — the ceiling (ANTICANON-DEFECT + SAT-MASS against Moh,
+integration #12) would close every (B3) cell at 4 <= N <= 33 at once,
+while the census needs seven typed inputs and grows like plane trees.
+No review lane is spent on it now (MEASURED record); it is re-opened
+only if the ceiling flagships return a named obstruction that the
+boundary assembly could circumvent.
+**Idle seats put to work:** `mf-rational-grok46-20260902` (Grok, desk:
+OPEN[MF-RATIONAL] — can the generic pencil member be rational at all
+for a noninvertible Keller map; classical, the last +1 on MF-EXACT) and
+`keller-cluster-census-codegen-sol56-20260902` (Sol, instrument: a
+fail-closed enumerator of numerical base clusters at infinity
+satisfying the FULL Keller ledger — NOETHER-K both equations,
+proximity inequalities, DEG-SPLIT/dicritical structure, Hodge — at
+fixed N = 2..8 up to a declared D bound, with controls (N = 1
+automorphism clusters must appear; NEG-GEN families must FAIL the
+Keller form), plus a box01 job spec; the ceiling lane's forest model
+found NO solution at small size at N = 8 — this decides whether the
+Keller ledger's numerical solutions exist at all below Moh's 101, i.e.
+where a counterexample could numerically live). Seats: Opus 2/5;
+Sol 1; Grok 1; GPT-5.5 0.
