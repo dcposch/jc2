@@ -299,16 +299,64 @@ Shared wording was not counted as support; the two case-(A) derivations
 share a mechanism but were produced by different lanes with different
 inputs and different proofs, and are counted as two.
 
-## 9. sol56 — MISSED THE CLOSE; round marked DEGRADED
+## 9. sol56 — MISSED THE CLOSE (round DEGRADED); LATE ARRIVAL FOLDED IN AT 09:20Z
 
 At 08:56:40Z the Sol lane was still running with a 6-byte skeleton on
-disk (its log shows a long body being composed in place: "exact finite
-windows cannot resolve JC2 … expose a cofinal invariant or advance a
-survivor through a declared state arrow"). Per COORDINATION.md the round
-closes now with three of four blind submissions plus the coordinator's,
-and is marked DEGRADED. Sol's submission is charged to the next
-micro-round on its seal as a late arrival with full standing; nothing in
-§§1–8 waits on it.
+disk; the round closed DEGRADED (3/4 + coordinator). The submission
+sealed at ~09:18Z (`ideation-20260902T0741Z-sol56.md`, 717134c7, 24KB).
+Custody note: Sol read the two post-freeze lane landings ([AU] the
+U-bound lane with its P0, [CG] the case-(A) gate) as repository reports —
+permitted by the contract — and no sibling submission; it is blind on the
+round but not on the P0. Content, deduplicated against §§1–8:
+
+- **Independent adoption of the E2 P0** ("harvest P0, review, then retire
+  all old wall verdicts") and a NAMING FIX the ledger adopts now: the
+  residual EQUATION is `EQ2_even`; `E2` is the coefficient polynomial
+  b Z eta^2. Every A2 document must use the two names.
+- **DEV-PROJECTION / WALL-PIN (Card 1, NEW, corrected-system):** in the
+  s-free deviation system of [AU] (X = 4b eta^2 r − s^2,
+  Y = 4b^2 eta q − 3a s^2, deg ≤ 4e − 1 on branch (A)), eliminate
+  everything but the wall parameter c: J_e = I_e ∩ Q[c]. Unit ideal ⇒
+  branch empty; nonconstant J_e ⇒ finitely many c ⇒ (with [AU]'s finite-U
+  dichotomy) a finite box per e; J_e = 0 ⇒ the s-free subsystem does not
+  pin c. Plus the exact identity DET-EO from E0/O0/O1 alone (three affine
+  rows in (r', p') must be compatible) as a checksum, and the observation
+  that E0 makes [[q, p'],[s, r']] an element of SL_2(C[Z]) up to scaling
+  (a Euclidean/continued-fraction word; E0 alone bounds nothing). This is
+  the natural successor for the A2 seat after the P0 gate: it composes
+  with Opus's PARAM-U and [AU]'s DEVBOX rather than duplicating them.
+- **CORRECTED-DEVBOX-SHOOTER (§6/§7):** the same computation read
+  positively, with a mandatory state ladder (SUBSYSTEM_POINT →
+  FULL_EO_POINT → ADMISSIBLE_PULLBACK → POLYNOMIAL_KELLER_PAIR →
+  COUNTEREXAMPLE) and the explicit chart sending a full quotient solution
+  to a polynomial pair of geometric degree 8 under the rank hypothesis.
+  Consistent with the re-filing (§2): a survivor there is an untyped
+  degree-8 object, never a (B3) point.
+- **GAMMA-B3-REGRESSION (Card 2, NEW):** the banked curve
+  y^2 = x^3 (x − 1)^2 (parametrised (t^2, t^3(t^2 − 1))) has exactly a
+  (2,3) cusp and one transverse node — an exact curve-level (B3) k = 1
+  control. Any proposed (B3) invariant must reproduce y_0, chi_c(E) =
+  1 − 4k and the predicted genus/ends on it before being trusted at
+  N = 6. Feeds the (B3) successor after the `b3-e-geometry` review.
+- **CUSP-A-VOID audit checklist (§5):** the same three hypotheses the
+  reviews checked, plus the negative cross-connection that the proof
+  cannot transfer to (B3) (forced cusp preimage y_0; chi_c(E) = 1 − 4k).
+  Already covered by §1's two arms; recorded as a third concurring read.
+- **PRIME-7 scout (Card 3):** as Grok's Card III, demoted by Sol itself
+  to a scout "never an N = 6 substitute". Deferred with §5.
+- **Systems:** promote PREFLIGHT from queued hygiene to a HARD launch
+  gate for every N ≥ 6 realisation job, with the two-field
+  artifact/attainment typing and a source-fidelity canary
+  (old `EQ2_even` missing −2qE1). Evidence is strong (six earlier nodal
+  ideals were unfaithful). Disposition: PREFLIGHT remains the standing
+  tracked upgrade from the prior round and Sol's hard-gate form is
+  adopted as its specification; the collision check (§6) stays this
+  round's one new upgrade. Both to a Sol systems lane next window.
+- Disposition vector: raises rows 2, 7, 25, 27, 39; retypes 5, 6, 26,
+  28–31, 36; gaps (c) lower, (i) lower, (l) lower, (a),(b),(d)–(h),(k)
+  retype — consistent with §7 except that Sol keeps (b) as "find a
+  uniform invariant via the N = 4 regression", which is exactly what the
+  Γ card operationalises.
 
 ## 10. Round close and clocks
 

@@ -18995,3 +18995,25 @@ named missing datum (splice), and one identifies the single gate
 (deg A_F vs N). The campaign's degree-monotone question is now
 concentrated in ONE OPEN. A flagship on it launches now (below).
 Opus seats after the landing: 0/5 → 1/5.
+
+EVENT (observed ~09:20Z per lane print) — **SOL'S LATE IDEATION SEALED**
+(`ideation-20260902T0741Z-sol56.md`, 717134c7, 24KB) and folded into
+the synthesis §9. Custody: read the two post-freeze landings ([AU], [CG])
+as repo reports, no sibling submission. Contributions adopted:
+(1) NAMING FIX for the A2 record — the residual EQUATION is `EQ2_even`,
+the coefficient polynomial is `E2 = b Z eta^2`; all A2 documents use
+both names from now; (2) DEV-PROJECTION / WALL-PIN: eliminate the
+s-free deviation system of [AU] down to J_e = I_e ∩ Q[c] (unit ⇒ branch
+empty; nonconstant ⇒ finitely many c ⇒ finite box per e with [AU]'s
+dichotomy; zero ⇒ c unpinned) + the DET-EO checksum from E0/O0/O1 —
+QUEUED as the A2 seat's successor charge once the P0 gate lands
+(composes with PARAM-U and DEVBOX); (3) GAMMA-B3-REGRESSION: the banked
+curve y^2 = x^3(x−1)^2, exactly one (2,3) cusp + one node, as the exact
+curve-level (B3) k=1 control any proposed invariant must pass (feeds the
+(B3) successor after the b3-e-geometry review); (4) PREFLIGHT promoted
+to a HARD launch gate for every N>=6 realisation job (two-field
+artifact/attainment typing; source-fidelity canary = the missing −2qE1)
+— adopted as the standing upgrade's specification, alongside this
+round's collision check; both to a Sol systems lane next window.
+Round quality stays DEGRADED on timing; content-wise five submissions
+with high novelty and near-zero duplication.
