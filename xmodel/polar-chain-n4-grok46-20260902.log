@@ -1,0 +1,22 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll verify the frozen input hashes first, then read the charged reports and compute the N = 4 polar trees.Hashes match. Next I’ll read the charged reports, report conventions, and the polar-tree statements.Hashes match. I’ll extract FORK-GENUS, CH1/CH2, B3-N4 data, and the boundary-instrument graphs from the charged files.The review typing is in. Next I’ll pull B3-N4, BI-1/BI-8, the DO graphs, and the SAT-MASS tree definition.I’ll read FORK-GENUS, the DO graphs, B3-N4, and the SAT-MASS tree definition in full.I’ll pull the six DO graphs, the SAT-MASS review typing, and how T_+ sits on the boundary.I’ll extract the six DO graphs from the charged instrument and the Domrina–Orevkov paper.I’ll pull the six graphs from the Domrina–Orevkov paper and the replay’s local figure codes.I’ll render the English Fig. 7 graphs and read the local (m, n) labels off them.I have the identities and the six graphs. Next I’ll run the exact enumerator and pin down chain vs leaf vs determinant.The identities and the six graphs are in hand: T_+ is never a chain, CH2 cannot fire, and DO’s kill is a determinant identity. I’ll write the sealed report.The report is 24KB against a 12–20KB target. I’ll cut prose and keep the identities, the join, the six-graph cross-check, and the verdict.`OPEN[POLAR-CHAIN]` at `N = 4` (B3) is **NO**: the polar tree `T_+` forks (`Psi > 0`). `E_0` is not forced to be a leaf, **CH2 cannot fire**, and the cell is **not** emptied. Report: `xmodel/polar-chain-n4-grok46-20260902.md` (sealed).
+
+**Why `T_+` is not a chain.** Remaining Deg over `v_0` equals `a = 2` (BI-1 + BI-5-Deg; no `(H-∞)`). That packet lives in `T_+` with the dicritical Deg-2 block. `T_+` is connected (FORK-GENUS (iii)), and a valency-2 vertex cannot merge two maximal blocks (DF-3). The join is a fork.
+
+**Why CH2 does not empty the cell.** CH2 needs both `Psi = 0` and `E_0` a leaf. With `Lambda - Psi = 8 - n` and `D >= n + kappa`, those two hypotheses give `7 >= 2n + kappa >= 9`, which is impossible for every `n >= 4`. A false conjunction does not constrain the surviving (forked) trees. CH1 also does not apply.
+
+**Admissible shapes at the primary row** `(n, kappa, g_L) = (4, 2, 0)`, `Lambda - Psi = 4`:
+
+| shape | spine forks | first-fork Deg | `E_0` a leaf |
+|---|---:|---|---|
+| chain | 0 | — | impossible |
+| English 7(a–b) = Ru 20–21 | 1 | 4 | not forced |
+| English 7(c–d) = Ru 22–23 | 2 | 3 then 4 | not forced |
+| English 7(e–f) = Ru 24–25 | 2 | 3 then 3 | not forced |
+
+**DO cross-check.** The polar tree of `(mu, corr) = (2,1)` is **one of those six**; the affine ledger does not pick among them. DO kills all six by transfer-determinant identities `(7.3)`, `(7.6)`, `(7.10)`, not by `Psi > 0`. That is the existing SET §§2–7 (`N=4-CHECKED-CLOSED`), not reopened, and not a CH2 empty window.
+
+**`N = 5, 6`.** The same join gives `Psi > 0`. Exact graphs remain `OPEN[BI-CENSUS-DEG5-DEG6]` (86 and 287 raw rows). No empty window.
+
+The ceiling now sits on `OPEN[FORK-MASS]` (a bound on `Psi`), not on a chain theorem.
+DIVERT path=xmodel/polar-chain-n4-grok46-20260902.md status=CLEAN_SEALED body_bytes=19464 body_sha256=514149c5a7cacf30a390b19865593437cc9ef936a7ed8e992a05ec0e3ce5c71c

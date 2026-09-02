@@ -19956,3 +19956,26 @@ recursion restated on the satellite chain — bound it or exhibit the
 free datum), and the 20:57Z round with this reading as its headline.
 Seats: Opus 1/5; Grok 1 (polar-chain-n4, now partly moot); Sol 1
 (cluster census); GPT-5.5 1 (review).
+
+EVENT (~13:40Z per lane print) — **POLAR-CHAIN at N = 4 landed**
+(`polar-chain-n4-grok46-20260902.md`, 64a4ebd6, BODY_SEALED; Grok desk):
+OPEN[POLAR-CHAIN] at N = 4 (B3): **NO** — T_+ is not a chain, Psi > 0
+(exactly 1 or 2 spine-forks on Domrina–Orevkov's six graphs; BI-8 cap
+2); E_0 is in T_+, contracted, not forced to be a leaf; CH2 cannot fire
+(Psi = 0 and E_0 a leaf are jointly impossible: 7 >= 2n + kappa >= 9);
+CH1 does not apply; the cell is NOT EMPTY by this route. Chain of
+consumed statements: BI-1, BI-5 (Deg), DR Lemma 6 / Prop 1 (dicritical
+block Deg = s mu = 2), FORK-GENUS (iii), DF-3 / Prop 4 — no (H-∞), no
+Cor 4, no Z(G) = 1. Fork witness at the identity level
+(n, kappa, g, Lambda, Psi) = (4, 2, 0, 8, 4) with an explicit vertex
+table; the six DO graphs are exactly those passing the coarse
+determinant. DO CROSS-CHECK: the polar tree of (mu, corr) = (2,1) is
+one of the six; the affine ledger does not select among them; DO kills
+all six by TRANSFER-DETERMINANT identities ((7.3)/(7.6)/(7.10)), not by
+Psi > 0 — N=4-CHECKED-CLOSED untouched, and this is not a CH2 EMPTY.
+N = 5, 6 by the same join: Psi > 0, CH1/CH2 do not apply; the exact
+graphs are OPEN[BI-CENSUS-DEG5-DEG6]. Fully consistent with
+MINIMAL-KELLER-SHAPE's independent refutation of CH1/CH2 (two
+different models, two different routes: the affine/boundary join here,
+the Newton-polygon gauge there). Recorded MEASURED; the two reviews in
+flight (shape) cover the load-bearing content.
