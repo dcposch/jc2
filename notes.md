@@ -19857,3 +19857,9 @@ input". Successor (reviewer): run OPEN[POLAR-CHAIN] at N = 4 and
 OPEN[SING-WITNESS] in parallel — launched now as `polar-chain-n4-grok46-
 20260902` (Grok) and `sing-witness-gpt55-20260902` (GPT-5.5).
 INTEGRATION #13 binds both halves now.
+
+EVENT (~13:00Z) — **INTEGRATION #13 BOUND AND VERIFIED** (body per the
+AUDIT pointer, basis 99f512be): the genus/polar-tree set with the
+conditional N = 2W kill; binding reading of #12–#13 in its §B. Runners:
+minimal-keller-shape (opus), polar-chain-n4 (grok), sing-witness
+(gpt55), keller-cluster-census-codegen (sol).

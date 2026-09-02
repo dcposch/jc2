@@ -15048,3 +15048,24 @@ SAT-CROSS: T_ext <= tau on a degree-minimal representative gives
 D_min <= 2(tau + N) in W <= 3 H2 cells, so tau <= 50 − N contradicts
 Moh. NOT promoted: any source-boundary cluster translation of degree
 minimality; any bound on nu_C or T.
+
+## INTEGRATION #13 (2026-09-02, FABLE 5.1 COORDINATOR, VERIFIED)
+
+Binding artifact: `xmodel/integration13-coordinator-fable51-20260902.md`
+(body 7f6a1917, basis 99f512be, VERIFIED via artifact_finalize, staged-verify
+VERIFIED at commit). Promotes, at the scopes and with the binding
+repairs stated therein, the genus/polar-tree set (producer opus
+5d2723e3, reviewer grok d57d17f8): UNIT-SPEED (sum e_P = N; converse not
+promoted), GENUS-DEFECT (Z·K_X = 2 g_L − 2 − N), FORK-GENUS
+(2 g_L − 2 = N − kappa − Lambda + Psi; Z·K_X = Psi − Lambda − kappa),
+ESCAPE-KAPPA (theta_inf = kappa, base-point proof), SHARP-CHAU
+D >= nS + kappa, POLAR-DEGREE, the conditional ceiling CH1/CH2 (as
+conditionals; CH2 kills the nine N = 2W cells incl. the live N = 4 (B3)
+cell IF E_0 is a leaf of the polar tree), ATYPICAL-LEDGER, NEG-GENUS,
+PROFILE-WITNESS with the smooth-A_F gap, and the correction that
+NOETHER-K alone cannot bound the fork mass. Records OPEN[FORK-MASS] (⇔
+ANTICANON-DEFECT), OPEN[POLAR-CHAIN], OPEN[SING-WITNESS], and the
+binding reading of #12–#13: the H2 ceiling below N = 17 is a statement
+about the shape (fork mass; satellite mass) of the base cluster at
+infinity of a degree-minimal Keller pair. See the artifact for exact
+statements — this entry is a pointer.
