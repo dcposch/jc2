@@ -7180,3 +7180,13 @@ fleet spun up.
   Lagrange interpolant of ∫dx/g_y at D = 105), star-realisability (Sol),
   branch-orbits (Grok; is (UNI) a theorem), ortho-defect-review (GPT-5.5),
   exact-n-rigidity (Opus). Census 593/975. Next round floor 04:55Z 09-03.
+- **Late evening correction (calibration lane, delta 17(d)):** the
+  campaign's skeleton census omits Moh's search conditions (8)–(11);
+  with the proved Galois congruence (10)₁ at the bottom star plus a
+  reconstruction of (10) at higher levels, D ≤ 120 drops from 10,637
+  groups to 287 (233 knapsack-alive), D = 105 from 264 to 3, and
+  D = 48, 66, 78 empty (consistent with Moh). Every "no degree emptied"
+  reading of #17 was about the superset. The time-function leading
+  order is a Belyi condition that never kills (TF-DESSIN); the killing
+  filter at the same order is Galois. CENSUS-REBASE lane out to recover
+  (8)–(13) verbatim and rerun the whole programme on Moh's true space.
