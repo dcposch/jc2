@@ -19112,3 +19112,13 @@ window per COORDINATION §8 "do not retrofit the transaction into a live
 lane"). Both round-adopted upgrades are now implemented and tested.
 Today's finished lane artifacts (reports, logs, run records) are
 committed with this event per the tracking convention.
+
+EVENT (observed ~10:00Z) — collision-tool smoke run on the A2-U-BOUND
+report FAILED CLOSED by contract ("OPEN[A2-WALL-REDERIVE] lacks an
+explicit bounded-quantity description"): the tool requires each raised
+OPEN to name its bounded quantity, which legacy reports do not. Adopted
+as an AUTHORING RULE (COORDINATION.md, dated subsection) rather than
+loosened; legacy reports are exempt, new reports comply. The first
+commit of today's finished lane artifacts silently missed most files
+(zsh non-splitting of a shell list — same class of bug as this
+morning's watchers); re-added by a python loop in this commit.

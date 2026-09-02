@@ -1,0 +1,26 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/a2-ubound-opus5-20260902.md`.
+
+## What happened
+
+I ran one control before consuming the charged theorems: rebuilding all seven residual equations from the spec's own `Even`/`Odd` displays. It failed.
+
+**P0 — `cell-32-spec-sol56-20260901.md:100-104`'s equation `E2` is not `[A^2]Even`. It omits `−2 q E1`.** Four confirmations: six of the seven equations reproduce exactly and only `E2` is off; the review-corrected `[A^4]Even` display reproduces exactly and its `−2D2E1 − 4D1E2` comes from the *same block* whose `[A^2]` half was dropped; the spec's own positive control (`f=Z`, `g=U·ΣL_nA^n`) reproduces at J=1..4; and C32 §6 transcribed the spec faithfully, so it inherited the error.
+
+Blast radius, measured: HORN-A2's Chamber II determinant `36n(c+2e)(c+2e+1)` becomes **identically zero** in all three chambers, so the E1-wall is not derived — the kernel ray `(n/4,3/4,1)` is the same for every `c` and annihilates all five equation tops. `N2` loses its `epshat` column, so **RAY-2 is refuted** and the residual is 3- not 2-dimensional. RAY-DEP, RAY-EDGE(e≥2) and C32 T1–T5 are untouched.
+
+## On the actual task
+
+`OPEN[A2-O0-O1]` is resolved: `O0` was never missing (`O0 ⟺ EQ4` mod `E0`); only `O1` was, and it turns out to be leading-order inert.
+
+What breaks the ladder is not more equations but a change of variables. With `X := 4bη²r − s²`, `Y := 4b²ηq − 3as²`, the equations `EQ1`, `EQ2`, `EQ3` become **exactly s-free**, and
+
+- RAY-1's whole residual is precisely `deg X, deg Y ≤ 2σ−2`;
+- `EQ1` against `EQ3` descends with determinant `−6a(k−2e)²(c+2e)`, giving **`deg X, deg Y ≤ 4e−1` uniformly in U** — the first U-free finiteness statement in the lane;
+- `EQ4`'s row is homogeneous at every level, forcing one relation `R(e,c,σ,k)=0`, which bounds `U` to at most `4e` values for each fixed `c`.
+
+So `U` *is* bounded once `c` is pinned. The exact structural reason no unconditional bound follows is the P0 itself: HORN-A2 pinned `c`, and the corrected system does not. `OPEN[A2-U-BOUND]` reduces to `OPEN[A2-WALL-REDERIVE]` plus one named degenerate branch.
+
+Two things I want to flag rather than bury: `(1,3)` is re-decided EMPTY only **with the wall imposed** — the wall-free variant that made RAY's `(1,3)` independent of HORN-A2 did not terminate in 1500 s, so it is not re-established. And one of my own intermediate transcriptions of `Ψ₃` dropped a factor of `η`; it was caught by the `P(c)` control and redone. The report is 42 KB, above the 25–40 KB target; the overage is the P0 evidence and verification records.
+DIVERT path=xmodel/a2-ubound-opus5-20260902.md status=DIVERTED body_bytes=43176 body_sha256=e8eb9d77d82b89405b052b703fab2f74de57b9775d3a8376be96a35c95a48345 overflow=xmodel/a2-ubound-opus5-20260902.overflow overflow_bytes=503 raw=xmodel/a2-ubound-opus5-20260902.raw.md raw_sha256=51aca6cb2773593172209397fb88ddefdce3d913500da98a2203b1be1ec117b6 overflow_sha256=e4c4764980ddcc4d6702e20eb6c2f0dfa6eaaec5002d1f72d392ab8448a349d5
+post-BODY-END overflow diverted; charged body preserved

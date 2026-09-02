@@ -1,0 +1,12 @@
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `43176`.
+- Body SHA-256:
+  `e8eb9d77d82b89405b052b703fab2f74de57b9775d3a8376be96a35c95a48345`.
+- Frozen basis: `655feb2f5ff5609f953d722a692f4aa08941d171`.
+- Size note: 42.2 KB, above the charged 25-40 KB target. The overage is the
+  P0 evidence of Sec 2 and the verification records of Secs 6-8; I chose not
+  to cut either.

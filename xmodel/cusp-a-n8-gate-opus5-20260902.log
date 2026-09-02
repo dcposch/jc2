@@ -1,0 +1,23 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/cusp-a-n8-gate-opus5-20260902.md` (body 39,583 B, sha256 `36629822…`, basis `fb747b0b`).
+
+## Outcome
+
+`OPEN[HOMCOVER-CUSP-A-N8]` closes **negative** — and not just at N = 8. Case (A) is empty at **every** degree, by two independent proofs.
+
+**The datum the charge had wrong.** The charge states "E has exactly `a` singular points, each analytically a (p,q) cusp." It has none. `a = #Fix(ρ(m))` is the *generic*-fibre count; at the cusp point `c` the local group is the *whole* π₁ (because `{x^p=y^q}` is a cone, so `π₁(B_c∖A_F) ≅ π₁(C²∖A_F)`), so a preimage of `c` would be a section of a connected degree-N covering. Hence `F⁻¹(c) = ∅` and **E is smooth**. That single correction is what makes the Euler gate lethal — on the charge's premise it would have been free.
+
+**Chain I (Euler, H2-free).** χ(E) = χ(C²) − N·χ(C²∖A_F) = 1; E smooth ⟹ components disjoint ⟹ some `E_i` has χ = 1, i.e. `E_i ≅ A¹`; but `E_i → A_F∖{c} ≅ C*` is non-constant, and there is no non-constant unit in `C[t]`.
+
+**Chain II (representation-level, machine-checkable).** Two new gates: **PERIPHERAL-RANK** (`#orbits⟨ρ(m),ρ(z)⟩ = j`, i.e. the Seifert base orbifold has genus 0 — sharpens ORBIFOLD-CAGE, which pins only 2g+c = j) gives `a ≤ κj`; **MERIDIAN-SPAN** (meridian lifts over one ⟨ρ(z)⟩-block are conjugate in H, so ≤ a/κ distinct classes, while Lemma F1 needs j) gives `a ≥ κj`. Equality forces ρ(m) = 1, against W ≥ 2.
+
+Measured: all 32 records (the charged 26 plus mirror-normalised duplicates) pass κ|a, PERIPHERAL-RANK, a ≤ κj; **0/32 pass MERIDIAN-SPAN**, with the predicted distinct-class count `a/κ` hit exactly in 32/32. The N = 9 spot cell and the (3,4D) family at D = 1,5,7,11,13 behave identically. SW's CUSP-A-KAPPA conjecture is **proved**, from PERIPHERAL-RANK alone.
+
+The charge's own levers: (G-A) Libgober is *undecidable on the record* (local factor empty once E is smooth, Δ_∞ unpinned) and (G-B) is Arapura-consistent — neither kills; I report both as negative. The missing geometric datum, named: rank H^ab is not component count unless the rank is carried by meridians, and HOM-COVER only ever tested the rank.
+
+## Three things to note
+
+- **Scope exceeded deliberately.** Neither proof is degree-sensitive, so the result is stated at all N rather than trimmed to N = 8. Flagged as a deviation in §12.
+- **Flag, not a claim.** MPRIME Prop. 6.1 as quoted by the sweep ("unique unibranch cusp, `K_p = a−1`") needs re-reading *if* its ledger is about E. MPRIME wasn't charged to me; I couldn't check it.
+- **Drivers are in `/tmp/cuspa`**, following HT/SW convention — ephemeral. MERIDIAN-SPAN is proposed as a standing HOM-COVER instrument (SUCC-3); say the word and I'll install it in `box/` alongside `cover_h1.py` (which was consumed by byte-identical copy, unmodified).
+DIVERT path=xmodel/cusp-a-n8-gate-opus5-20260902.md status=CLEAN_SEALED body_bytes=39583 body_sha256=36629822a85006b5d05b7002ec86880b6ec3edfa99250f8210ee71871bb18ab5

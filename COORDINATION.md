@@ -710,3 +710,14 @@ content. Coordinator-side: a `BODY_SEALED` receipt no longer implies
 substance; harvest still requires reading the report. Queued ops debt
 (nonblocking): a divert heuristic flagging sealed reports whose
 sections are empty.
+
+## Authoring rule for raised OPENs (2026-09-02, coordinator, after the collision-check upgrade)
+
+Every report that raises an `OPEN[...]` states, on the same line or the
+next, the QUANTITY it asks to bound or decide (e.g. "bound U in terms of
+e", "decide whether F^{-1}(c) is empty"). `ops/open_collision.py` (the
+round-20260902T0741Z systems upgrade) fails closed on an OPEN without
+such a description; run it on a report before sealing and keep its
+COLLISIONS block. Collision hits are review candidates, never closures.
+Realization jobs at N >= 6 launch only after `box/preflight.py` returns
+exit 0 on their manifest (the encoding-faithfulness hard gate).
