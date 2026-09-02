@@ -44,6 +44,7 @@ that use the shared wrapper.
   Job dir: ~/stuck7 (out/ + lanes.log).
   Current 2026-08-25 boot IP: `98.80.65.144` (the older IP in the preceding
   historical sentence is stale).
+  **STATUS 2026-09-02 ~10:30Z: STOPPED by the coordinator (idle after the corrected_869 timeout; 964 control done). Restart only for a declared braid/SIROCCO or realization job; IP will change.**
 - **r6a** (AWS r6i.4xlarge, 16 vCPU / 128 GiB): instance
   `i-02cb2b4a379ffcc64`, current IP `34.229.212.201`.
 - **r6b** (AWS r6i.4xlarge, 16 vCPU / 128 GiB): instance

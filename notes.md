@@ -19305,3 +19305,17 @@ geometric attainment. Gate launched (`a2-reissue-review-gpt55-20260902`)
 for the ledger-correctness items (canonical system, T2 repair, T4
 restoration, the unit-ideal decisions with their controls) — off the
 critical path; the object stays PROFILE-UNTYPED.
+
+EVENT (observed ~10:30Z per watcher print) — **Box03 corrected_869 msolve
+TIMED OUT at the 12h cap** (msolve_rc=124, empty .out; the M2 mirror
+had timed out at 4h): a NON-ANSWER on a purely confirmatory job under
+N=4-CHECKED-CLOSED. Per the round decision (synthesis §7, Sol's lane
+call): NO fallback compute, no relaunch. corrected_964 msolve completed
+rc=0 (oracle control, consistent with the banked three-engine NONEMPTY).
+Pulled logs_corrected/{status, status.attempt1, corrected_863.msolve.out,
+corrected_964.msolve.out} into `box/box03-logs_corrected-20260902/`.
+**Box03 (i-0ece0b9a3b4a7512f, r6i.16xlarge, ~$4/h) STOPPED at ~10:30Z**
+(FLEET rule: stop idle paid capacity; disk preserved incl. the Sage/
+SIROCCO pipeline; its IP changes on restart — resolve via describe-
+instances). box01 (64 vCPU / 1 TiB, 0.2 stack, idle except the protected
+checkpoint builder) remains the compute box for the next census.
