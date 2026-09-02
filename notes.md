@@ -20195,3 +20195,11 @@ OPEN[DELTA75-BRACKET], one rational entry); "attained" outside skeleton
 wording; the displayed s <= 5 explanation. INTEGRATION #15 binds the
 depth set now; the running `n-on-the-tree` flagship consumes
 CONTACT-DEFICIENCY at its reviewed (monic GEN) typing.
+
+EVENT (~15:00Z) — **INTEGRATION #15 BOUND AND VERIFIED** (body per the
+AUDIT pointer, basis 213914de): the orbit bridge and the depth set;
+binding reading in its §D (the ceiling below N = 17 is a finite, named
+computation — N on the Moh skeleton; the N <= 16 filter). Runners:
+n-on-the-tree (opus); the box01 cluster census. Seats: Opus 1/5; Sol,
+Grok, GPT-5.5 idle. Next full-round floor 20:57Z; the round's headline
+is the #15 §D reading and the two censuses' first results.

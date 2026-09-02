@@ -15186,3 +15186,20 @@ promoted: exact delta-column reproduction (OPEN[DELTA75-BRACKET]);
 "attained" beyond skeleton evidence. Binding successor:
 OPEN[N-ON-THE-TREE] (the integer N in [1, mn] from the complete
 major/minor root-pair distribution; lane running).
+
+## INTEGRATION #15 (2026-09-02, FABLE 5.1 COORDINATOR, VERIFIED)
+
+Binding artifact: `xmodel/integration15-coordinator-fable51-20260902.md`
+(body 22d59557, basis 213914de, VERIFIED via artifact_finalize, staged-verify
+VERIFIED at commit). Promotes, at the scopes and with the binding
+repairs stated therein: the orbit bridge (OPEN[SUBRECT-ORBIT-BRIDGE]
+CLOSED YES; nu(F_min) = 2; producer gpt55 75ee84f8, checker grok
+791f6fc8); the depth set in repaired form (DEPTH-LOG, NU-TWO,
+PLACE-LEDGER, CONTACT-DEFICIENCY under the monic GEN hypothesis,
+MOH-SHARP-2 D_min >= 105, the Moh survivor correction, Definition
+5.1(3) and the 25-value calibration; producer opus 863b05db, reviewer
+gpt55 4a171d91). Binding successor: OPEN[N-ON-THE-TREE] — the geometric
+degree as the contact-deficiency pairing over the two root towers of a
+Moh skeleton; the N <= 16 filter over the skeleton census is the first
+instrument whose outcome can prove a window. See the artifact for exact
+statements — this entry is a pointer.
