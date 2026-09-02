@@ -8,24 +8,17 @@ The binding statement is the following precisely typed one.  Let
 D = image(t |-> (t^9 + 12 t^5 + 24 t, t^6 + 8 t^2)) in C^2.
 ```
 
-There is no homomorphism
-
-```text
-phi : pi_1(C^2 \ D) -> S_4
-```
-
-which sends every fibre meridian to a transposition and has image `S_4`.
+There is no homomorphism `phi : pi_1(C^2 \ D) -> S_4` which sends every fibre
+meridian to a transposition and has image `S_4`.
 Equivalently in this transposition-meridian universe, there is no transitive
 degree-four representation of the kind required by REP-96.  This kills **this
 explicit realized curve** at that representation gate.  It does not kill all
 curves with numerical label `(9,6,2)`, the `(9,6)` row, arbitrary homomorphisms
 whose meridians are not transpositions, or a numerical type in another degree.
 
-The full native result, not either BLOCK calculation, is load-bearing.  The
-missing inverse-full run is covered by a proof: each braid and its group inverse
-have exactly the same fixed set.  The missing Sage base point affects physical
-strand names and the `tau`/tube interpretation, but not existence or
-nonexistence in the complete native universe.
+The full native result, not either BLOCK calculation, is load-bearing.  Each
+braid and its inverse have the same fixed set, and the absent Sage base point
+affects physical names, not the complete native existence decision.
 
 ## 0. Custody and decision ledger
 
@@ -41,16 +34,12 @@ auditing them.  All six digests match the charge exactly.
 | `box/bmfact_962.sage` | `2d18c1183d8ba5d7db8db767b38929064303422deadab41857e4c1a49d82d916` | MATCH |
 | `box/bmfact_enum.py` | `b51813adcf7a407f97c486995f7f99ba73f616d0f04594506a069757bdbf832b` | MATCH |
 
-The banked JSON identifies the parametrization and implicit polynomial, records
-degrees `(deg_x,deg_y,total_degree)=(6,9,9)`, irreducibility, discriminant
-support degree `9`, and discriminant valuation `8` at zero (frozen JSON
-lines 2–17).  It records nine `B_9` factors, the absent fifth/base-point return
-slot (lines 26–31), eight exact `tangency` labels and one exact `node_fibre`
-label with exponent ledger `16` (lines 3966–3981), and a product whose strand
-permutation is a 9-cycle (lines 3707–3721).  The two Sage entry points returned
-identical braid strings (`curve_method_matches_module_function=true`, line
-3983).  These facts tie the words consumed by the enumerator to the named
-realized curve.
+The JSON ties the words to the curve: it records the parametrization, implicit
+polynomial, degrees `(6,9,9)`, irreducibility, discriminant support degree `9`
+and zero valuation `8` (lines 2–17); nine `B_9` factors and the absent base-point
+slot (26–31); eight exact `tangency` labels plus one exact `node_fibre` with
+ledger `16` (3966–3981); and a 9-cycle product (3707–3721).  The duplicate Sage
+entry point returned identical braid strings (line 3983).
 
 The frozen enumeration log records the decisive numbers twice: the run summary
 has native full generating count zero and product-only generating count `144`
@@ -62,38 +51,28 @@ has native full generating count zero and product-only generating count `144`
 
 ### 1.1 Curve, ring map, and projection
 
-The variable/ring map is explicit and sound.  The coefficient field is `QQ`,
-the ordered generators are `(coord_x,coord_y)`, and `param_t` is introduced in
-the univariate extension of that ring (`box/bmfact_962.sage:233-251`).  The
-script forms `p(t)-coord_x` and `q(t)-coord_y`, takes their resultant, coerces it
-back to the declared ring, rejects zero, and removes only rational content
-(`:252-261`).  It then requires equality up to sign with the independently
-written closed form and chooses the sign with positive `coord_x^6`
-(`:263-286`).  Thus matching variable names are not being used as a substitute
-for a declared map or image check.
+The coefficient field `QQ`, ordered generators `(coord_x,coord_y)`, and
+extension variable `param_t` are explicit (`box/bmfact_962.sage:233-251`).  The
+resultant of `p(t)-coord_x` and `q(t)-coord_y` is coerced to that ring, checked
+nonzero, made primitive, and required to equal the independent closed form up
+to sign (`:252-286`).  The ring map is checked, not inferred from names.
 
-The projection is the first ring generator.  Total degree and `coord_y`-degree
-are both asserted to be `9`, `coord_x`-degree is asserted to be `6`, and the
-leading `coord_y` coefficient is the nonzero constant `-1`
-(`:289-307`).  Hence Sage's no-vertical-asymptote branch really does use the
-`coord_x` projection.  The raw downstream payload is obtained directly from
-each returned braid's `Tietze()` word (`:414-416`, `:632-667`); neither the
-discriminant helper nor the diagnostic free automorphisms manufactures those
-words.
+Total and `coord_y` degrees are `9`, `coord_x`-degree is `6`, and the leading
+`coord_y` coefficient is `-1` (`:289-307`), so Sage uses the declared
+`coord_x` projection without a coordinate change.  Downstream words come
+directly from each braid's `Tietze()` method (`:414-416`, `:632-667`).
 
-The singular-scheme assertions at `:328-345` prove dimension zero and quotient
-length four.  Those two assertions alone do not prove the accompanying prose
-“four reduced affine nodes, all on `x=0`.”  For this exact polynomial the prose
-is nevertheless true: independent elimination gives
+The assertions at `:328-345` prove singular-scheme dimension zero and length
+four, not by themselves reduced nodality.  Here independent elimination closes
+the wording gap:
 
 ```text
 (F,F_x,F_y) = (coord_x, coord_y^4 + 96 coord_y^2 + 1536).
 ```
 
-The quartic is squarefree.  The Hessian determinant modulo it is
-`-1610612736*coord_y*(coord_y^2+72)`, coprime to the quartic, so all four points
-are ordinary nodes.  This is a wording/validation repair for future jobs, not a
-defect in this charged curve.
+The quartic is squarefree, and the Hessian determinant modulo it,
+`-1610612736*coord_y*(coord_y^2+72)`, is coprime to it.  Thus all four points are
+ordinary nodes; future jobs should assert this rather than infer it from length.
 
 ### 1.2 The line-366 `radical()` patch is correct and isolated
 
@@ -136,21 +115,18 @@ typing or dataflow.
 
 ### 1.3 Charged census passes; generic census validation is not fail-closed
 
-The charged output is genuinely the expected census.  Its eight tangency
-records have transposition strand permutations and CPF alpha exponent `1`; the
-node factor has exponent `8` and identity strand permutation (frozen JSON lines
-1517–1539).  Its four CPF alpha words are actual squares `[6,6]`, `[4,4]`,
-`[6,6]`, `[6,6]` (lines 1825–1929).  Transporting their supports by the recorded
-conjugators gives the four disjoint pairs
+The eight tangencies have transposition strand permutations and CPF exponent
+`1`; the node factor has exponent `8`, identity permutation (JSON 1517–1539),
+and actual square alpha words `[6,6]`, `[4,4]`, `[6,6]`, `[6,6]`
+(1825–1929).  Their transported supports are the disjoint pairs
 
 ```text
 {6,7}, {2,8}, {1,9}, {3,5},
 ```
 
-leaving internal strand `4`.  Sage's CPF contract says these conjugates commute
-and multiply to the input factor.  The actual factorization is therefore eight
-half-twists plus one fibre containing four commuting squares, with total
-exponent `8*1+4*2=16`.
+leaving internal strand `4`.  The CPF contract makes them commuting factors of
+the node braid, so the actual census is eight half-twists plus four commuting
+squares, of total exponent `16`.
 
 There is a latent fail-open in the reusable checker.  `classify_factor()` can
 return suffix states such as `tangency_cpf_missing`,
@@ -190,8 +166,8 @@ x2 |-> x1 x3 x1^-1,
 x3 |-> x1.
 ```
 
-All nine charged factor fields and the product `free_auto_F9` field have this
-reversed composition.  They must not be cited as the Sage free automorphisms.
+All nine factor fields and the product field have this reversed composition and
+must not be cited as Sage free automorphisms.
 
 This does **not** reach the kill.  `bmfact_enum.py` consumes only each raw
 `tietze` list (`box/bmfact_enum.py:807-868`); `free_auto_F9` is never read.  More
@@ -246,14 +222,11 @@ and the word `[1,2]`.  Direct evaluation of the three free words displayed in
   = ((1 4),(1 2),(2 3)).
 ```
 
-The enumerator first applies `H_2` and then `H_1` and gives the same result.  Its
-inverse move restores the original tuple.  I also checked all `216`
-transposition triples: positive/inverse recovery and the braid relation
-`H_1 H_2 H_1 = H_2 H_1 H_2` had no failure.  An independent free-word evaluator
-using Sage's left-to-right right action agreed with `hurwitz_tietze()` on 1,800
-deterministic samples across all nine charged words; mismatches were zero.  By
-contrast, the banked `free_auto_F9` diagnostics disagreed on 1,740 of those
-samples, as expected from their composition defect.
+The enumerator applies `H_2` then `H_1` and agrees.  Exhausting all `216`
+transposition triples verified inverse recovery and the braid relation.  An
+independent correct free-word evaluator also matched the enumerator on 1,800
+samples over all charged words (zero mismatches); the faulty diagnostic
+disagreed on 1,740.
 
 ZvK imposes `x_j = x_j*b` for every fibre generator and each returned local
 braid.  Evaluating these relations in `S_4` is exactly `H_b(T)=T`.  Thus the
@@ -287,12 +260,10 @@ filter, BLOCK/tube identification, product filter, conjugacy quotient, or
 generation filter before the local equations.  Generation is tested only after
 a tuple has passed every word (`:881-885`).
 
-The only “pruning” is a `break` after an exact failed fixedness predicate.  Every
-predicate is evaluated on the original immutable `nine`; no partial tuple is
-completed heuristically.  A survivor, by definition, cannot fail any predicate,
-so this short-circuit cannot drop one.  Reordering the predicates changes only
-runtime, and the intersection is independent of that order.  All nine charged
-Tietze lists are nonempty, with lengths
+The only pruning is a `break` after an exact failed predicate, evaluated on the
+original immutable tuple.  A survivor cannot fail one, so none can be dropped.
+Predicate order affects only runtime.  All nine charged words are nonempty,
+with lengths
 
 ```text
 25, 75, 91, 136, 43, 109, 93, 39, 17.
@@ -322,12 +293,12 @@ full replay above independently printed exactly these six.
 
 | Fixed tuple `T` | Exact image | Orbits on `{1,2,3,4}` | Result |
 |---|---|---|---|
-| `((1 2),...,(1 2))` (9 entries) | `{e,(1 2)} ~= C_2` | `{1,2} | {3} | {4}` | not transitive; not `S_4` |
-| `((1 3),...,(1 3))` | `{e,(1 3)} ~= C_2` | `{1,3} | {2} | {4}` | not transitive; not `S_4` |
-| `((1 4),...,(1 4))` | `{e,(1 4)} ~= C_2` | `{1,4} | {2} | {3}` | not transitive; not `S_4` |
-| `((2 3),...,(2 3))` | `{e,(2 3)} ~= C_2` | `{1} | {2,3} | {4}` | not transitive; not `S_4` |
-| `((2 4),...,(2 4))` | `{e,(2 4)} ~= C_2` | `{1} | {2,4} | {3}` | not transitive; not `S_4` |
-| `((3 4),...,(3 4))` | `{e,(3 4)} ~= C_2` | `{1} | {2} | {3,4}` | not transitive; not `S_4` |
+| `((1 2),...,(1 2))` (9 entries) | `{e,(1 2)} ~= C_2` | `{1,2}; {3}; {4}` | not transitive; not `S_4` |
+| `((1 3),...,(1 3))` | `{e,(1 3)} ~= C_2` | `{1,3}; {2}; {4}` | not transitive; not `S_4` |
+| `((1 4),...,(1 4))` | `{e,(1 4)} ~= C_2` | `{1,4}; {2}; {3}` | not transitive; not `S_4` |
+| `((2 3),...,(2 3))` | `{e,(2 3)} ~= C_2` | `{1}; {2,3}; {4}` | not transitive; not `S_4` |
+| `((2 4),...,(2 4))` | `{e,(2 4)} ~= C_2` | `{1}; {2,4}; {3}` | not transitive; not `S_4` |
+| `((3 4),...,(3 4))` | `{e,(3 4)} ~= C_2` | `{1}; {2}; {3,4}` | not transitive; not `S_4` |
 
 Thus the curve does carry these six non-surjective `C_2`-valued homomorphisms.
 The verdict is not “no representations”; it is “no REP-96-admissible full-image
@@ -354,17 +325,11 @@ its scope block repeats that product-fixedness alone is insufficient (lines
 2. `H_beta(T)=T` for every one of the nine returned factors;
 3. the entries generate `S_4` (equivalently here, act transitively).
 
-The native run searches a superset of the six product-level classes and then
-intersects all local fixed sets.  Its conclusion therefore does not depend on
-REP-96's adjacent-block embedding, a split of `iota`, identification of a
-leftover `tau`, or a tube-to-strand map.  Those OPENs matter to BLOCK diagnostics,
-not to the native zero.
-
-The unqualified phrase “no transitive `S_4` representation” must retain this
-REP-96 transposition-meridian scope.  The computation does not exclude a
-surjection whose generic meridian has another cycle type.  Within REP-96, the
-scope is exact: surjectivity onto `S_4` already implies transitivity, and for
-transposition generators transitivity conversely forces the full `S_4` image.
+Because native searches all transposition tuples, it does not depend on the
+adjacent-block embedding, `iota` split, `tau`, or tube map.  The phrase “no
+transitive `S_4` representation” retains REP-96's meridian condition: other
+cycle types were not searched.  Within that condition, transitivity and full
+`S_4` image are equivalent.
 
 ## 5. Independent derivation of the product-only count `144`
 
@@ -425,15 +390,9 @@ give the required invariance, not just a numerical coincidence.
 
 ### 6.1 Target conjugacy and strand relabeling
 
-For `g in S_4`, simultaneous target relabeling
-
-```text
-C_g(T)_i = g T_i g^-1
-```
-
-commutes with every Hurwitz word.  It bijects `R(B)` with itself and conjugates,
-hence preserves, the image subgroup.  Zero/nonzero and full-image status are
-independent of target letter names.
+Simultaneous target relabeling `C_g(T)_i=g T_i g^-1` commutes with every
+Hurwitz word and conjugates the image subgroup.  Thus target names preserve
+zero/nonzero and full-image status.
 
 A change of the fibre's geometric basis or strand numbering is represented by
 an Artin braid `a` (a braid lift exists for every strand permutation).  The
@@ -447,12 +406,10 @@ The map `H_a` is a bijection of `Omega` and preserves the generated subgroup,
 so it bijects the full intersections and their generating parts.  This covers
 strand relabeling as well as transport between fibre base points.
 
-A change of the geometric basis of loops in the discriminant complement can
-also perform Hurwitz moves on the ordered list of local factors.  Such a move
-replaces two generators by conjugate/product combinations but leaves the
-subgroup they generate unchanged.  A point is fixed by a generating set iff it
-is fixed by the subgroup it generates.  Consequently the common fixed set is
-unchanged; the order in which local factors are listed is immaterial.
+A Hurwitz change of the discriminant-loop basis replaces local generators by
+conjugate/product combinations but preserves their generated subgroup.  A
+point is fixed by its generators iff fixed by that subgroup, so the common
+fixed set and its zero/nonzero status are unchanged.
 
 ### 6.2 Inversion — proof covering the absent inverse-full run
 
@@ -489,9 +446,9 @@ names; the raw braid words were already computed in one coherent internal
 `B_9` basis.  `bmfact_enum.py:1041-1050` merely copies this metadata, while the
 native decision consumes the words and all labelled tuples.
 
-Moving or revealing the base point transports the fibre basis by a braid and
-is covered by §6.1.  Because the universe contains every labelled assignment,
-an unknown permutation or Artin transport cannot create a survivor.  Therefore
+Moving the base point transports the fibre basis by a braid and is covered by
+§6.1.  Since every labelled assignment is searched, this cannot create a
+survivor.  Therefore
 
 ```text
 OPEN[BMFACT-BASEPOINT] is CLOSED for the zero/nonzero decision.
@@ -535,12 +492,10 @@ the very OPENs that the complete native universe avoids.
 
 ## 8. Final gate and FALLACY-v2 audit
 
-The full native intersection is exhaustive at the exact REP-96 type, its action
-matches Sage's Fox/Artin convention, its short-circuit cannot discard a
-survivor, and its six fixed points all have image `C_2`.  The independent class
-orbit calculation recovers the product-only `144`.  Conjugacy, source-basis
-transport, target relabeling, factor-basis Hurwitz moves, and group inversion
-all preserve the decision.  The base-point absence is labeling-only.
+The native intersection is exhaustive at the REP-96 type, uses the correct
+Fox/Artin action, and has only six `C_2` fixed points.  The independent class
+calculation gives `144`, and the proved basis/inversion invariances close the
+convention and base-point decision issues.
 
 Accordingly:
 
@@ -572,3 +527,12 @@ consumed.  No `sat()` or raw-remainder argument occurs.  No new exit-price
 assertion is made, so no `charge_basis` declaration is present.
 
 <!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `24095`.
+- Body SHA-256:
+  `8fc9d1bef6d0c88fdc63e856ecbba0013fa609cb0579481bbb11348f383e2645`.
+- Frozen basis: `feadf551180b2fae1c531defc782df39e10c9704`.

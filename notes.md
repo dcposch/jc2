@@ -18082,3 +18082,18 @@ N=4-CHECKED-CLOSED; the deliverable is the validated pipeline.
 
 Runners: 962-kill review (sol), 964-kill review (gpt55),
 869 msolve, oracle window, box01 provisioning.
+
+## LIVE STATE (observed 2026-09-02T02:31Z per prior print pattern; date printed above) — (9,6,2) CURVE KILL BINDING
+
+**BMFACT-962-KILL-REVIEW landed** (prefix from shell log,
+BODY_SEALED): **KILL-BINDING, nonblocking repairs.** The §6.2
+inversion proof covers the absent inverse-full run (group
+inversion of the returned factors — proved, not assumed);
+basepoint invariance handled for the DECISION; the six fixed
+non-generating tuples audited; verdict typed exactly: "no
+REP-96-admissible full-image representation" on the realized
+(9,6,2) curve. Instrument repairs (emitter diagnostic + B6
+prose) queued, non-blocking. The realized (9,6,2) curve is DEAD
+at the representation level, BINDING. 964's sibling review
+running (pruner-cert audit critical). Runners: 964-kill review,
+869 msolve, oracle window, box01 provisioning.
