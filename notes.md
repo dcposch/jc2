@@ -19474,3 +19474,9 @@ for every noninvertible Keller F and generic line; classical
 generic-fibre theory of polynomial submersions C^2 → C, Suzuki /
 Hà–Lê / Zaidenberg–Lin) and OPEN[MULT-VS-BETA] (is beta = 1 forced in
 (B3) at W = 2 for N >= 5; finite question on (C3) + Lemma 4.3).
+
+EVENT (observed ~11:15Z) — **INTEGRATION #11 BOUND AND VERIFIED** (body
+per the AUDIT pointer, basis 15f87192): the (B3) boundary instrument
+and the exact meridian floor, both reviewed, at their scopes. Runners:
+n-vs-mapdeg (opus), b3-census-deg5-deg6 (sol), mf-defect-mult-vs-beta
+(grok). Next full-round floor 20:57Z; web-sweep deadline 09-03 ~08:00Z.

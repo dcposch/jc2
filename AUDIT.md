@@ -14993,3 +14993,21 @@ c = 0 two-engine) — recorded at exactly that scope: not a chamber, not
 c = −2e, not Chamber I, not e >= 4. Delta (b)'s retractions stand; T5's
 condition on T4 is discharged. The object remains PROFILE-UNTYPED and
 N-UNTYPED per integration #9 §C.
+
+## INTEGRATION #11 (2026-09-02, FABLE 5.1 COORDINATOR, VERIFIED)
+
+Binding artifact: `xmodel/integration11-coordinator-fable51-20260902.md`
+(body 96a4c0b1, basis 15f87192, VERIFIED via artifact_finalize, staged-verify
+VERIFIED at commit). Promotes, at the scopes and with the binding
+repairs stated therein: the (B3) boundary instrument (EXTRACTION-1,
+BI-1..BI-8 with their (H-∞) scopes, BI-MERIDIAN, the CENSUS closed form;
+GAP-CANDIDATE[BI-ATTACH] REPAIRED — N=4-CHECKED-CLOSED not reopened;
+producer opus e9f26dde, reviewer grok 04866779) and the exact meridian
+floor (MF-EXACT with the S-known/W-only repair, MRK-READING as a scope
+theorem, LOC-MULT with the orbit hypothesis, MF-SHARP and the 81-cell
+price table, the (B2) forced delta_aff, the W = 2 threshold as a route
+statement, SHARP-CHAU; producer opus 4fa4b5f6, reviewer gpt55 32c04332).
+Records OPEN[BI-CENSUS-DEG5-DEG6], OPEN[BI-TAIL-AT-INFINITY],
+OPEN[BI-H-INFTY-N4], OPEN[MF-DEFECT], OPEN[MULT-VS-BETA], the A2
+reissue delta 9c, and the standing fronts. See the artifact for exact
+statements — this entry is a pointer.
