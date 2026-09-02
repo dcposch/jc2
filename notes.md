@@ -20497,3 +20497,30 @@ the mixed-branch packet (105, 42, (−14,103), 5), N = 10. Remaining
 lanes: exact-n-rigidity, time-function-endgame, time-function-
 calibration (D = 48), branch-orbits. Seats: Opus 3/5, Grok 1, Sol idle,
 GPT-5.5 idle (both reserved for reviews of the Opus landings).
+
+## EVENT 20:20Z — EXACT-N-RIGIDITY (Opus hostile check) LANDED: SQUEEZE CONFIRMED; Φ-LEMMA; FLOOR L; COROLLARY NO-RESIDUE (a g-only necessary condition)
+
+`exact-n-rigidity-opus5-20260902.md` (48KB; sealed WITHOUT the
+BODY-END marker — NO_MARKER divert; content complete with typed block;
+drivers `box/exactn-drivers-20260902/`). Consistent with integration
+#17 throughout; additions: (i) Φ(δ) := δ − λ_f(δ) − λ_g(δ) along a root
+of g is NON-INCREASING (slope 1 − a − b ≤ 0); LEMMA DICT: Φ(δ⁰) ≥ 1 at
+every frontier; RADIUS-ORDER at r = 1 gives Φ(δ₁) = 1 exactly; hence
+Φ ≡ 1 on [δ₁, δ⁰] and a + b ≡ 1: the star, in one sandwich. (ii) The
+r = 1 identity is NOT an artefact of Def 5.1(3): Moh defines δ_{r−1}
+geometrically (Prop 5.3) and proves the formula; verified on four
+explicit Keller pairs from the joint tree. (iii) A_bot is not a
+skeleton function — witness (x + y⁵, y + (x + y⁵)³) with five conjugate
+bottom discs (ν = 1, outside NU-TWO) — so EXACT-N is the two-sided
+window L = eV₂d(1−δ₁)/(d+e) ≤ N ≤ U = ude(1−δ₁)/(d+e), L/U = V₂/u, plus
+integrality; the FLOOR never fires (max L = 63/19 ≈ 3.3 to D ≤ 190).
+(iv) MEASURED D ≤ 140 (18,064 groups): U < 6 kills 3.9%; EXACT-N MIXED
+(unconditional) 29.2% (D = 105 has zero cap hits: 159 of 264 killed,
+EXACT); SINGLE (needs conjugacy) 66.4%; D ≤ 190 SINGLE 65.0%; NO degree
+emptied. (v) **COROLLARY NO-RESIDUE:** the x⁻¹ coefficient of
+d/dx f(x, τ) vanishes for ANY Puiseux series, so on a Keller pair the
+x⁻¹ coefficient of 1/g_y(x, τ) vanishes on every branch of every fibre
+— a necessary condition on g ALONE (negative control: g = y² − x² − x
+has [x⁻¹] = ±1/2). This is the residue gate the time-function lanes
+impose at all orders. Sent with STAR-REALISABILITY to a GPT-5.5 batch
+review (`rigidity-star-review-gpt55`).
