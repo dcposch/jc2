@@ -20305,3 +20305,20 @@ full 6b8a7123, basis 709ccb5b). New concrete counterexample-side
 target from the CAN list: 418 skeletons at D in [101,200] pinned to
 N = 4 — the first finite realisation list the disproof side has had.
 Round on OPEN[UPPER-TO-FLOOR] freezes on the commit after this entry.
+
+## EVENT ~16:40Z — N_min = 6 CORRECTION (#16 delta (a)); ROUND 1608Z IN PROGRESS
+
+Coordinator catch: N-ON-THE-TREE + review used N_min = 4; the frontier
+is N >= 6 (01:10Z). Recount with U >= 6 at D <= 400: 4,700 groups
+killed, no degree emptied; the 418 "pinned to N = 4" are dead; survivor
+windows [6, min(floor U,16)]; admissible-degree survivors
+234/759/1163/50/4085 at D = 105/108/112/117/120. Banked as AUDIT delta
+16(a). Round 20260902T1608Z: GPT-5.5 (25KB) and Grok (39KB) sealed;
+Opus and Sol running; coordinator's own blind submission written and
+committed BEFORE reading any (647046d4): (LATTICE) 2deN =
+Σ(e·e_i − d·e'_i)² as the identity behind one-directionality;
+THEOREM UPPER-ONLY predicted for the boundary; the Jacobian condition
+as the period condition [dx∧dy] = 0 in the Brieskorn module H''_f
+(JC2 ⟺ a Keller f with vanishing volume class has rank H''_f = 0);
+CARD 1 residue-at-the-bottom; CARD 3 char-p; the ceiling is not the
+right target.

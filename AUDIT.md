@@ -15239,3 +15239,23 @@ error (OCR restoration); "n = 75 illegible" (OPEN[DELTA75-BRACKET]
 stays open). READING: the boundary route is one-directional as built;
 OPEN[UPPER-TO-FLOOR] is the campaign question; OPEN[D1-SUBTREE] is the
 one untried boundary datum.
+
+## INTEGRATION #16 DELTA (a) (2026-09-02 ~16:40Z, coordinator, MEASURED): THE OPERATIVE FRONTIER IS N_min = 6, NOT 4
+
+The N-ON-THE-TREE lane and its review took N_min = 4 from the H2 window
+of integration #14. The record's counterexample frontier has been
+N >= 6 since the 01:10Z LIVE STATE ("N=5 SOUNDLY CLOSED BY DEPENDENCY
+AUDIT; CE FRONTIER MOVES TO N>=6"; unconditional). The operative test
+is U >= 6. Recount (box/coordinator-recounts-20260902/nmin6.{py,log},
+the lane's own fast_filter with nmin_geom = (6,6), one core, 161 s):
+D <= 400: 3,874,261 groups, killed(U < 6) = 4,700 (vs 1,147 at U < 4),
+surviving 3,869,561; degrees emptied: NONE. Admissible degrees
+(groups / killed / surviving): 105: 264/30/234; 108: 824/65/759;
+112: 1163/0/1163; 117: 60/10/50; 120: 4104/19/4085. Consequences: the
+418 groups "pinned to N = 4" at D in [101,200] are DEAD (U = 4 < 6),
+not realisation targets — #16 §C last paragraph and §D.3 are
+corrected accordingly; survivor windows read [6, min(floor U, 16)].
+FILTER-INVERSION, the CANNOT list and the reading are unchanged.
+Process: OPEN[NMIN-CONSUMPTION] raised in the coordinator's round
+submission (lanes must take N_min from the frontier line, not
+re-derive it).
