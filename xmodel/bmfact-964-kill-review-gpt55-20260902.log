@@ -1,0 +1,123 @@
+cli=codex-cli 0.152.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.152.0
+--------
+workdir: /Users/dc/code/math/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a05ff1-00ff-7b51-86d7-a1e0cd847abd
+--------
+user
+# Review lane: BMFACT-964-KILL-REVIEW — gate the (9,6,4) representation kill
+
+Result to gate: the (9,6,4) braid decision returned
+**NATIVE_ZERO_CURVE_ONLY** — native full ZvK generating count 0
+in BOTH orientations; product-only control matches the expected
+72 expansion; census_ok (11 braids: 8 tangencies + one
+four-node fibre + two one-node fibres, ledger 20, matching the
+desk prediction confirmed by 964-nodality-review); api_ok.
+Claim: the realized six-nodal (9,6,4) curve admits no
+transitive S_4 representation compatible with its braid
+factorisation — curve-level kill, explicitly NOT a row kill.
+
+Charged artifacts: box/bmfact964_result.json (01bac03c),
+box/bmfact964_enum_run.log (709c08c8), the codegen report
+(9266de15) whose derivation section and self-controls
+(72/0/pruner-cert) you must audit, plus REP-96 (the three
+CABLE-3 classes / 72 tuples used as control).
+
+Tasks:
+(1) SCRIPT AUDIT on box/bmfact_964.sage + box/bmfact964_enum.py
+    (read in place; hashes in the codegen report): the ZvK
+    action convention, the generating test (im=S_4 AND
+    transitive), and CRITICALLY the pruning path — the decision
+    ran with per-relation pruning + subsample certification;
+    verify the certification actually bounds the pruner (a
+    pruner bug is the one way a survivor gets dropped silently).
+(2) Verify the 72-control derivation independently from
+    REP-96's three classes (24-orbit expansion each).
+(3) Confirm BOTH orientations genuinely ran on the FULL variant
+    (unlike the 962 first pass) — cite the log lines.
+(4) Basepoint: does the absent Sage base point affect the
+    zero/nonzero decision for THIS run?
+(5) Verdict: KILL-BINDING (scope: this realized curve) /
+    KILL-BLOCKED / REPAIRS. Also state the composed consequence
+    precisely: with both realized substrates rep-dead at curve
+    level, what remains of the (9,6) row at N=4 (numerical-type
+    orbit coverage — cite REP-96's REPRESENTATIVE discipline)
+    and what transfers to N>=6 (pipeline validation only).
+Report: xmodel/bmfact-964-kill-review-gpt55-20260902.md
+Seal-at-completion; target 12-20KB.
+charged_input=box/bmfact964_result.json
+charged_input=box/bmfact964_enum_run.log
+charged_input=xmodel/bmfact-964-codegen-grok46-20260902.md
+charged_input=xmodel/rep-96-inner-opus5-20260901.md
+
+Your inputs are frozen read-only copies in `/private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs`;
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+01bac03c71000b9bc3557e1d4387864d9d5d23842434920bf70a2c6eb24949cc  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/bmfact964_result.json
+709c08c83f99b444a89e2a4b38959a014a0d19ec990f7f2e1f8351aeaf6a755c  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/bmfact964_enum_run.log
+9266de1542e68b64a346103eace77afd91f24b8d5195379c2f68abd19a469b79  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/bmfact-964-codegen-grok46-20260902.md
+a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/rep-96-inner-opus5-20260901.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll start by verifying the frozen artifact hashes exactly. If any digest differs, I’ll stop before reading or promoting the result.
+exec
+/bin/zsh -lc 'shasum -a 256 /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/bmfact964_result.json /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/bmfact964_enum_run.log /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/bmfact-964-codegen-grok46-20260902.md /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/rep-96-inner-opus5-20260901.md' in /Users/dc/code/math/jc2
+ succeeded in 0ms:
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+01bac03c71000b9bc3557e1d4387864d9d5d23842434920bf70a2c6eb24949cc  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/bmfact964_result.json
+709c08c83f99b444a89e2a4b38959a014a0d19ec990f7f2e1f8351aeaf6a755c  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/bmfact964_enum_run.log
+9266de1542e68b64a346103eace77afd91f24b8d5195379c2f68abd19a469b79  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/bmfact-964-codegen-grok46-20260902.md
+a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401  /private/var/folders/80/jm5p82hn56g0crpvv9xjzrc00000gn/T/jc2-lane.t97zEH/inputs/rep-96-inner-opus5-20260901.md
+

@@ -18059,3 +18059,26 @@ Pending integration #8 accumulator: transfer set, SG-lane items
 COLLAPSE-N/COMPANION-EXISTS (reviewed, in #7 scope note — wait,
 these WERE promoted in #7 §D). Remaining runners: 964 enum,
 962-kill review, 869 msolve, oracle, box01 provisioning.
+
+## LIVE STATE (observed 2026-09-02T02:27Z) — 964 DECISION: NATIVE ZERO. BOTH REALIZED SUBSTRATES REP-DEAD AT CURVE LEVEL
+
+**964 enumeration completed** (enum964_rc=0; artifacts banked:
+box/bmfact964_result.json 01bac03c, box/bmfact964_enum_run.log
+709c08c8): **NATIVE_ZERO_CURVE_ONLY** — full ZvK generating
+count 0 in BOTH orientations, product-only control = 72 exact,
+census_ok, api_ok. Pending review
+(`bmfact-964-kill-review-gpt55-20260902`, launched 02:27Z —
+pruner-certification audit is the critical item), the realized
+six-nodal (9,6,4) curve admits no transitive S_4 representation.
+
+**BOARD (N=4, after tonight)**: every explicit object is dead —
+(8,6,11)/(8,6,7) rep-dead twice-derived; (8,6,3) curve-dead
+binding; realized (9,6,2) rep-dead (native zero, review
+running); realized (9,6,4) rep-dead (native zero both
+orientations, review running). Open numerics: (8,6,9) curve job
+869 (running) + its c_2(T); row-level orbit coverage for the
+(9,6) types (REPRESENTATIVE discipline). All confirmatory under
+N=4-CHECKED-CLOSED; the deliverable is the validated pipeline.
+
+Runners: 962-kill review (sol), 964-kill review (gpt55),
+869 msolve, oracle window, box01 provisioning.

@@ -1,0 +1,641 @@
+=== hard-coded class list (CONTROL ONLY) ===
+{
+  "passed": true,
+  "kstar": -8,
+  "reps": [
+    {
+      "name": "noncst-T-a",
+      "gate3_at_kstar_-8": true,
+      "T1_product_equals_X": true,
+      "X": "(3 4)",
+      "Y": "(2 3)",
+      "Pi": "(2 4)",
+      "T1": "((1 3), (1 4), (1 3))"
+    },
+    {
+      "name": "noncst-T-b",
+      "gate3_at_kstar_-8": true,
+      "T1_product_equals_X": true,
+      "X": "(3 4)",
+      "Y": "(2 3)",
+      "Pi": "(2 4)",
+      "T1": "((1 4), (1 3), (1 4))"
+    },
+    {
+      "name": "const-4c",
+      "gate3_at_kstar_-8": true,
+      "T1_product_equals_X": true,
+      "X": "(1 2 3 4)",
+      "Y": "(1 2 3 4)",
+      "Pi": "(1 4 3 2)",
+      "T1": "((3 4), (1 4), (1 2))"
+    }
+  ]
+}
+expanded conjugacy orbits: 72 (expect 72)
+Pi-type assertion passed=True (NOT used as a filter); n_transposition=48 n_fourcycle=24
+POSITIVE CONTROL generating=72 expected=72 passed=True
+NEGATIVE CONTROL projective-product=1 count=0 expected=0 passed=True
+=== synthetic pruner (subsample cert) ===
+PRUNE word 0 len=1 n_in=9871 n_out=1646
+PRUNE word 1 len=2 n_in=1646 n_out=550
+SYNTHETIC_PRUNER passed=True pruned=550 unpruned=550
+DIAGNOSTIC BLOCK (not decision) total_survivors=0
+SAGE-NATIVE product-only (as-written) ...
+CERTIFY prune vs unpruned on subsample mod=1021 (as-written) ...
+PRUNE word 0 len=554 n_in=9871 n_out=1
+CERTIFY passed=True pruned=1 unpruned=1
+PRUNE full 6^9 (as-written, product-only) ...
+PRUNE word 0 len=554 n_in=10077696 n_out=174
+SAGE-NATIVE product-only (inverse) ...
+CERTIFY prune vs unpruned on subsample mod=1021 (inverse) ...
+PRUNE word 0 len=554 n_in=9871 n_out=1
+CERTIFY passed=True pruned=1 unpruned=1
+PRUNE full 6^9 (inverse, product-only) ...
+PRUNE word 0 len=554 n_in=10077696 n_out=174
+SAGE-NATIVE full ZvK (as-written) ...
+CERTIFY prune vs unpruned on subsample mod=1021 (as-written) ...
+PRUNE word 0 len=25 n_in=9871 n_out=1655
+PRUNE word 1 len=67 n_in=1655 n_out=280
+PRUNE word 2 len=59 n_in=280 n_out=57
+PRUNE word 3 len=53 n_in=57 n_out=6
+PRUNE word 4 len=67 n_in=6 n_out=2
+PRUNE word 5 len=58 n_in=2 n_out=2
+PRUNE word 6 len=56 n_in=2 n_out=1
+PRUNE word 7 len=67 n_in=1 n_out=1
+PRUNE word 8 len=50 n_in=1 n_out=1
+PRUNE word 9 len=35 n_in=1 n_out=1
+PRUNE word 10 len=17 n_in=1 n_out=1
+CERTIFY passed=True pruned=1 unpruned=1
+PRUNE full 6^9 (as-written, full-ZvK) ...
+PRUNE word 0 len=25 n_in=10077696 n_out=1679616
+PRUNE word 1 len=67 n_in=1679616 n_out=279936
+PRUNE word 2 len=59 n_in=279936 n_out=46656
+PRUNE word 3 len=53 n_in=46656 n_out=7776
+PRUNE word 4 len=67 n_in=7776 n_out=1296
+PRUNE word 5 len=58 n_in=1296 n_out=432
+PRUNE word 6 len=56 n_in=432 n_out=48
+PRUNE word 7 len=67 n_in=48 n_out=24
+PRUNE word 8 len=50 n_in=24 n_out=24
+PRUNE word 9 len=35 n_in=24 n_out=12
+PRUNE word 10 len=17 n_in=12 n_out=6
+SAGE-NATIVE full ZvK (inverse) ...
+CERTIFY prune vs unpruned on subsample mod=1021 (inverse) ...
+PRUNE word 0 len=25 n_in=9871 n_out=1655
+PRUNE word 1 len=67 n_in=1655 n_out=280
+PRUNE word 2 len=59 n_in=280 n_out=57
+PRUNE word 3 len=53 n_in=57 n_out=6
+PRUNE word 4 len=67 n_in=6 n_out=2
+PRUNE word 5 len=58 n_in=2 n_out=2
+PRUNE word 6 len=56 n_in=2 n_out=1
+PRUNE word 7 len=67 n_in=1 n_out=1
+PRUNE word 8 len=50 n_in=1 n_out=1
+PRUNE word 9 len=35 n_in=1 n_out=1
+PRUNE word 10 len=17 n_in=1 n_out=1
+CERTIFY passed=True pruned=1 unpruned=1
+PRUNE full 6^9 (inverse, full-ZvK) ...
+PRUNE word 0 len=25 n_in=10077696 n_out=1679616
+PRUNE word 1 len=67 n_in=1679616 n_out=279936
+PRUNE word 2 len=59 n_in=279936 n_out=46656
+PRUNE word 3 len=53 n_in=46656 n_out=7776
+PRUNE word 4 len=67 n_in=7776 n_out=1296
+PRUNE word 5 len=58 n_in=1296 n_out=432
+PRUNE word 6 len=56 n_in=432 n_out=48
+PRUNE word 7 len=67 n_in=48 n_out=24
+PRUNE word 8 len=50 n_in=24 n_out=24
+PRUNE word 9 len=35 n_in=24 n_out=12
+PRUNE word 10 len=17 n_in=12 n_out=6
+SAGE-NATIVE product-only generating as-written=72 inverse=72
+SAGE-NATIVE full generating as-written=0 inverse=0
+DECISION NATIVE_ZERO_CURVE_ONLY
+native full ZvK generating count is 0 in both orientations, with product-only generating count matching 72 on at least one orientation. This decides the realized (9,6,4) curve only. It is not a row-level kill.
+{
+  "script": "bmfact964_enum.py",
+  "kstar": -8,
+  "n_classes_hardcoded": 3,
+  "charged_class_list_sha256": "a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401",
+  "charged_class_list_citation": "REP-96-INNER \u00a75, frozen copy hashed before reading; three classes / 72 tuples including const-4c with Pi a 4-cycle. CONTROL ONLY; the decision is the native 6^9 universe.",
+  "iota_split": "(delta_3^{k_*}, 1, 1)",
+  "tube_embedding_control_only": "adjacent blocks (1,2,3), (4,5,6), (7,8,9)",
+  "decision_path": "native_transposition_universe_no_strand_map",
+  "OPEN": [
+    "OPEN[BMFACT-ORIENTATION]: Sage product vs inverse (both run)",
+    "OPEN[BMFACT-BASEPOINT]: Sage 4-tuple omits the geometric-basis base point"
+  ],
+  "gate3_on_reps": {
+    "passed": true,
+    "kstar": -8,
+    "reps": [
+      {
+        "name": "noncst-T-a",
+        "gate3_at_kstar_-8": true,
+        "T1_product_equals_X": true,
+        "X": "(3 4)",
+        "Y": "(2 3)",
+        "Pi": "(2 4)",
+        "T1": "((1 3), (1 4), (1 3))"
+      },
+      {
+        "name": "noncst-T-b",
+        "gate3_at_kstar_-8": true,
+        "T1_product_equals_X": true,
+        "X": "(3 4)",
+        "Y": "(2 3)",
+        "Pi": "(2 4)",
+        "T1": "((1 4), (1 3), (1 4))"
+      },
+      {
+        "name": "const-4c",
+        "gate3_at_kstar_-8": true,
+        "T1_product_equals_X": true,
+        "X": "(1 2 3 4)",
+        "Y": "(1 2 3 4)",
+        "Pi": "(1 4 3 2)",
+        "T1": "((3 4), (1 4), (1 2))"
+      }
+    ]
+  },
+  "n_expanded": 72,
+  "pi_type_assertion": {
+    "passed": true,
+    "n_checked": 72,
+    "n_pi_transposition": 48,
+    "n_pi_fourcycle": 24,
+    "failures": [],
+    "note": "ASSERTION, not a filter. On (9,6,4) Pi is a transposition on the two noncst-T classes and a 4-cycle on const-4c; never in V_4. The (9,6,2) Pi-tau pin (two of six transpositions) is NOT applied to const-4c and is not a decision filter."
+  },
+  "n_reconstructed_nines": 72,
+  "positive_control": {
+    "name": "POSITIVE_CONTROL_PRODUCT_ONLY",
+    "description": "Drop all local ZvK relations except rho_inf-fixedness, with rho_inf = C_3(delta_3^2) \u00b7 (delta_3^{k_*}, 1, 1), k_* = -8, adjacent-block identification (CONTROL ONLY, not the decision). Count generating 9-tuples.",
+    "n_input": 72,
+    "n_product_fixed": 72,
+    "n_generating": 72,
+    "expected_generating": 72,
+    "passed": true,
+    "citation": "REP-96-INNER \u00a75: 3 classes, each a 24-element conjugacy orbit; 72 tuples in all. Frozen SHA-256 a47945ab0fdb8e8245f2ec03558eaafc0cab9b64bd4bbcd2c859afb370db2401"
+  },
+  "negative_control": {
+    "name": "NEGATIVE_CONTROL_PROJECTIVE",
+    "description": "Fake extra relation: the product of the nine meridians is 1 (the relation that presents pi_1(P^2 - Dbar), not pi_1(C^2 - D)). On every charged (9,6,4) class Pi is odd (a transposition or a 4-cycle), so the extra relation empties the set.",
+    "n_generating_product_fixed_and_total_product_one": 0,
+    "expected": 0,
+    "passed": true
+  },
+  "synthetic_pruner": {
+    "name": "SYNTHETIC_PRUNER",
+    "passed": true,
+    "subsample_mod": 1021,
+    "n_subsample_seen": 9871,
+    "n_pruned_survivors": 550,
+    "n_unpruned_survivors": 550,
+    "n_symmetric_difference": 0,
+    "prune_counts": [
+      {
+        "word_index": 0,
+        "word_len": 1,
+        "n_in": 9871,
+        "n_out": 1646
+      },
+      {
+        "word_index": 1,
+        "word_len": 2,
+        "n_in": 1646,
+        "n_out": 550
+      }
+    ]
+  },
+  "controls_passed": true,
+  "mode": "with-json",
+  "json_path": "bmfact-964-out/bmfact_964.json",
+  "sage_nstrands": 9,
+  "sage_n_factors": 11,
+  "sage_census": {
+    "ok": true,
+    "classes": [
+      "tangency",
+      "tangency",
+      "tangency",
+      "tangency",
+      "tangency",
+      "one_node_fibre",
+      "four_node_fibre",
+      "tangency",
+      "one_node_fibre",
+      "tangency",
+      "tangency"
+    ],
+    "n_tangency": 8,
+    "n_four_node_fibre": 1,
+    "n_one_node_fibre": 2,
+    "exponent_ledger": 20,
+    "formula": "8 + 2(4+1+1) = 20"
+  },
+  "sage_unpack_shape": "4-tuple (Sage 10.8 docs: braids, strand_dict, vertical_dict, nstrands); base_point ABSENT",
+  "sage_base_point": null,
+  "sage_strand_order_FLAG": "FLAG: braid_monodromy did not return a base point (Sage 10.8 4-tuple). Ordered y-roots below are NOT claimed to be Sage's strand order. OPEN[BMFACT-BASEPOINT] in the report.",
+  "diagnostic_BLOCK_not_decision": {
+    "per_class": {
+      "noncst-T-a": 0,
+      "noncst-T-b": 0,
+      "const-4c": 0
+    },
+    "total_survivors": 0,
+    "note": "Adjacent-block identification is CONTROL / diagnostic. It is not the decision path and must not be read as a row-level kill."
+  },
+  "diagnostic_BLOCK_inverse_not_decision": {
+    "per_class": {
+      "noncst-T-a": 0,
+      "noncst-T-b": 0,
+      "const-4c": 0
+    },
+    "total_survivors": 0
+  },
+  "variant_SAGE_NATIVE_product_only": {
+    "variant": "SAGE-NATIVE-PRODUCT-ONLY",
+    "n_fixed": 174,
+    "n_generating": 72,
+    "n_generating_with_total_product_one": 0,
+    "n_words": 1,
+    "prune_counts": [
+      {
+        "word_index": 0,
+        "word_len": 554,
+        "n_in": 10077696,
+        "n_out": 174
+      }
+    ],
+    "decision_path": "native_transposition_universe_prune_after_each_relation",
+    "strand_map": null,
+    "expected_generating": 72,
+    "passed_positive_control": true,
+    "passed_negative_control": true,
+    "subsample_certification": {
+      "passed": true,
+      "subsample_mod": 1021,
+      "n_subsample_seen": 9871,
+      "n_pruned_survivors": 1,
+      "n_unpruned_survivors": 1,
+      "n_symmetric_difference": 0,
+      "prune_counts": [
+        {
+          "word_index": 0,
+          "word_len": 554,
+          "n_in": 9871,
+          "n_out": 1
+        }
+      ]
+    }
+  },
+  "variant_SAGE_NATIVE_product_only_inverse": {
+    "variant": "SAGE-NATIVE-inverse-PRODUCT-ONLY",
+    "n_fixed": 174,
+    "n_generating": 72,
+    "n_generating_with_total_product_one": 0,
+    "n_words": 1,
+    "prune_counts": [
+      {
+        "word_index": 0,
+        "word_len": 554,
+        "n_in": 10077696,
+        "n_out": 174
+      }
+    ],
+    "decision_path": "native_transposition_universe_prune_after_each_relation",
+    "strand_map": null,
+    "expected_generating": 72,
+    "passed_positive_control": true,
+    "passed_negative_control": true,
+    "subsample_certification": {
+      "passed": true,
+      "subsample_mod": 1021,
+      "n_subsample_seen": 9871,
+      "n_pruned_survivors": 1,
+      "n_unpruned_survivors": 1,
+      "n_symmetric_difference": 0,
+      "prune_counts": [
+        {
+          "word_index": 0,
+          "word_len": 554,
+          "n_in": 9871,
+          "n_out": 1
+        }
+      ]
+    }
+  },
+  "variant_SAGE_NATIVE_full": {
+    "variant": "SAGE-NATIVE-FULL-ZVK",
+    "n_fixed": 6,
+    "n_generating": 0,
+    "n_generating_with_total_product_one": 0,
+    "n_words": 11,
+    "prune_counts": [
+      {
+        "word_index": 0,
+        "word_len": 25,
+        "n_in": 10077696,
+        "n_out": 1679616
+      },
+      {
+        "word_index": 1,
+        "word_len": 67,
+        "n_in": 1679616,
+        "n_out": 279936
+      },
+      {
+        "word_index": 2,
+        "word_len": 59,
+        "n_in": 279936,
+        "n_out": 46656
+      },
+      {
+        "word_index": 3,
+        "word_len": 53,
+        "n_in": 46656,
+        "n_out": 7776
+      },
+      {
+        "word_index": 4,
+        "word_len": 67,
+        "n_in": 7776,
+        "n_out": 1296
+      },
+      {
+        "word_index": 5,
+        "word_len": 58,
+        "n_in": 1296,
+        "n_out": 432
+      },
+      {
+        "word_index": 6,
+        "word_len": 56,
+        "n_in": 432,
+        "n_out": 48
+      },
+      {
+        "word_index": 7,
+        "word_len": 67,
+        "n_in": 48,
+        "n_out": 24
+      },
+      {
+        "word_index": 8,
+        "word_len": 50,
+        "n_in": 24,
+        "n_out": 24
+      },
+      {
+        "word_index": 9,
+        "word_len": 35,
+        "n_in": 24,
+        "n_out": 12
+      },
+      {
+        "word_index": 10,
+        "word_len": 17,
+        "n_in": 12,
+        "n_out": 6
+      }
+    ],
+    "decision_path": "native_transposition_universe_prune_after_each_relation",
+    "strand_map": null,
+    "survivors_verbatim": [],
+    "total_survivors": 0,
+    "subsample_certification": {
+      "passed": true,
+      "subsample_mod": 1021,
+      "n_subsample_seen": 9871,
+      "n_pruned_survivors": 1,
+      "n_unpruned_survivors": 1,
+      "n_symmetric_difference": 0,
+      "prune_counts": [
+        {
+          "word_index": 0,
+          "word_len": 25,
+          "n_in": 9871,
+          "n_out": 1655
+        },
+        {
+          "word_index": 1,
+          "word_len": 67,
+          "n_in": 1655,
+          "n_out": 280
+        },
+        {
+          "word_index": 2,
+          "word_len": 59,
+          "n_in": 280,
+          "n_out": 57
+        },
+        {
+          "word_index": 3,
+          "word_len": 53,
+          "n_in": 57,
+          "n_out": 6
+        },
+        {
+          "word_index": 4,
+          "word_len": 67,
+          "n_in": 6,
+          "n_out": 2
+        },
+        {
+          "word_index": 5,
+          "word_len": 58,
+          "n_in": 2,
+          "n_out": 2
+        },
+        {
+          "word_index": 6,
+          "word_len": 56,
+          "n_in": 2,
+          "n_out": 1
+        },
+        {
+          "word_index": 7,
+          "word_len": 67,
+          "n_in": 1,
+          "n_out": 1
+        },
+        {
+          "word_index": 8,
+          "word_len": 50,
+          "n_in": 1,
+          "n_out": 1
+        },
+        {
+          "word_index": 9,
+          "word_len": 35,
+          "n_in": 1,
+          "n_out": 1
+        },
+        {
+          "word_index": 10,
+          "word_len": 17,
+          "n_in": 1,
+          "n_out": 1
+        }
+      ]
+    }
+  },
+  "variant_SAGE_NATIVE_full_inverse": {
+    "variant": "SAGE-NATIVE-inverse-FULL-ZVK",
+    "n_fixed": 6,
+    "n_generating": 0,
+    "n_generating_with_total_product_one": 0,
+    "n_words": 11,
+    "prune_counts": [
+      {
+        "word_index": 0,
+        "word_len": 25,
+        "n_in": 10077696,
+        "n_out": 1679616
+      },
+      {
+        "word_index": 1,
+        "word_len": 67,
+        "n_in": 1679616,
+        "n_out": 279936
+      },
+      {
+        "word_index": 2,
+        "word_len": 59,
+        "n_in": 279936,
+        "n_out": 46656
+      },
+      {
+        "word_index": 3,
+        "word_len": 53,
+        "n_in": 46656,
+        "n_out": 7776
+      },
+      {
+        "word_index": 4,
+        "word_len": 67,
+        "n_in": 7776,
+        "n_out": 1296
+      },
+      {
+        "word_index": 5,
+        "word_len": 58,
+        "n_in": 1296,
+        "n_out": 432
+      },
+      {
+        "word_index": 6,
+        "word_len": 56,
+        "n_in": 432,
+        "n_out": 48
+      },
+      {
+        "word_index": 7,
+        "word_len": 67,
+        "n_in": 48,
+        "n_out": 24
+      },
+      {
+        "word_index": 8,
+        "word_len": 50,
+        "n_in": 24,
+        "n_out": 24
+      },
+      {
+        "word_index": 9,
+        "word_len": 35,
+        "n_in": 24,
+        "n_out": 12
+      },
+      {
+        "word_index": 10,
+        "word_len": 17,
+        "n_in": 12,
+        "n_out": 6
+      }
+    ],
+    "decision_path": "native_transposition_universe_prune_after_each_relation",
+    "strand_map": null,
+    "survivors_verbatim": [],
+    "total_survivors": 0,
+    "subsample_certification": {
+      "passed": true,
+      "subsample_mod": 1021,
+      "n_subsample_seen": 9871,
+      "n_pruned_survivors": 1,
+      "n_unpruned_survivors": 1,
+      "n_symmetric_difference": 0,
+      "prune_counts": [
+        {
+          "word_index": 0,
+          "word_len": 25,
+          "n_in": 9871,
+          "n_out": 1655
+        },
+        {
+          "word_index": 1,
+          "word_len": 67,
+          "n_in": 1655,
+          "n_out": 280
+        },
+        {
+          "word_index": 2,
+          "word_len": 59,
+          "n_in": 280,
+          "n_out": 57
+        },
+        {
+          "word_index": 3,
+          "word_len": 53,
+          "n_in": 57,
+          "n_out": 6
+        },
+        {
+          "word_index": 4,
+          "word_len": 67,
+          "n_in": 6,
+          "n_out": 2
+        },
+        {
+          "word_index": 5,
+          "word_len": 58,
+          "n_in": 2,
+          "n_out": 2
+        },
+        {
+          "word_index": 6,
+          "word_len": 56,
+          "n_in": 2,
+          "n_out": 1
+        },
+        {
+          "word_index": 7,
+          "word_len": 67,
+          "n_in": 1,
+          "n_out": 1
+        },
+        {
+          "word_index": 8,
+          "word_len": 50,
+          "n_in": 1,
+          "n_out": 1
+        },
+        {
+          "word_index": 9,
+          "word_len": 35,
+          "n_in": 1,
+          "n_out": 1
+        },
+        {
+          "word_index": 10,
+          "word_len": 17,
+          "n_in": 1,
+          "n_out": 1
+        }
+      ]
+    }
+  },
+  "decision": "NATIVE_ZERO_CURVE_ONLY",
+  "decision_reason": "native full ZvK generating count is 0 in both orientations, with product-only generating count matching 72 on at least one orientation. This decides the realized (9,6,4) curve only. It is not a row-level kill.",
+  "api_ok": true,
+  "api_reasons": [],
+  "census_ok": true
+}
