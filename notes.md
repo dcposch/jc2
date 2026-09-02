@@ -19178,3 +19178,66 @@ the lane's successors are (1) exactly that (staffed now as an Opus
 flagship, `n-vs-mapdeg-opus5-20260902`) and (2) sharpening
 MERIDIAN-FLOOR with the CUSP-CAGE relations (after review). Opus seats
 2/5 (b3-boundary-instrument, n-vs-mapdeg).
+
+## LIVE STATE (observed ~10:10Z per lane print) — (B3) BOUNDARY INSTRUMENT BUILT: NINE BRIDGES, TWO CONTROLS PASS, NO KILL; THE CENSUS IS THE OBSTRUCTION; ONE GAP-CANDIDATE ON THE DICRITICAL BLOCK
+
+**B3-BOUNDARY-INSTRUMENT landed** (`b3-boundary-instrument-opus5-20260902.md`,
+e9f26dde, BODY_SEALED, 45KB; all PROVED-HERE/UNREVIEWED; hostile review
+launched `b3-boundary-instrument-review-grok46-20260902`; drivers
+preserved in `box/b3bi-drivers-20260902/`):
+- EXTRACTION: the whole DO determinant/transfer apparatus (Lemmas 1–5,
+  Prop 3, edge formula, Prop 4, Lemma 7) is degree-free and its one
+  profile hypothesis (A_F-bar meets L_infty in a single point) holds at
+  every N under H2 by MI Lemma A. sum Deg v~ = N stays an equality at
+  every N and, applied to the target curve, IS the campaign's [P3]
+  (BI-1: W + a = N, dicriticals = the n >= 2 part, Ē_X = the n = 1
+  part) — first contact between the two ledgers.
+- SUBSTITUTION: BI-2 (the transverse degree of the carrying vertex at a
+  mark over p is the ramification index e_y of that place of E over
+  infinity), BI-3 (fibre-at-p local-degree ledger (s_l mu_l) ∪ (e_y)
+  summing to N, under (H-∞) verified at N = 4), BI-4 (E-CHARGE
+  transported: affine excess r_p[(r_p−1)W + K_p] at the branches over p,
+  at most K_p charged to the k_t), BI-5 (mark saturation at v_0: the
+  ramification profile of E~-bar → P^1 over ∞ is {n(v~)^{m(v~)}}), BI-6
+  (unit lifts of E transport target determinants unchanged; DO's
+  coprimality kills are kills of the multiplicity of E's sheets), BI-7
+  (the disconnected reading of B3-E-GENUS can never contradict j <= a —
+  route CLOSED NEGATIVE), BI-8 (spine-depth cap #forks <= N − s_l mu_l =
+  a for one dicritical; tight at N = 4), BI-MERIDIAN (generic meridian
+  cycle type 1^a · prod (mu_l)^{s_l}; reproduces N4-PIN).
+- CONTROL 1 (N = 4) PASS: reproduces (mu, corr) = (2,1), identifies DO's
+  "the other two sheets" as the two places of E at infinity over
+  ∞_{A_F}; the census is NOT shortened (35 rows, six graphs, the kill
+  is still the SET §§2–7) because the census is indexed by target
+  vertices and the affine ledger by A_F-bar and Sing A_F, sharing only
+  v_0. CONTROL 2 (Sol's Γ) PASS on every item, importing neither
+  smoothness of E nor chi(E) = 1.
+- N = 5, 6: all (B3) profiles run (3 / 8 profiles; 33 at N = 7). NO
+  EMPTY WINDOW. Sole non-generic cell (N = 6, a = 4, three cusps + node)
+  forced to p_a <= −1, hence j >= 2 — a constraint.
+- UNIFORMITY OBSTRUCTION, closed form: Census(N) = sum_m floor(N/m)
+  Rows(m), Rows(m) = [z^{m+2}] f_m(z)^3 — 35, 86, 287, 717, …, 405434 at
+  N = 14. The affine data do NOT bound it; they DO bound the assembly
+  depth (#forks <= a). K_p and the fibre partitions bound neither.
+- **GAP-CANDIDATE[BI-ATTACH]:** the (m,n) split of the dicritical-
+  incident block B_l (Deg = s_l mu_l is safe) is NOT fixed by the frozen
+  replay; a local computation gives (m,n) = (mu_l, s_l) — the TRANSPOSE
+  of what DR's §6 assembly presupposes — and in an explicit resolved
+  model the component l meets at p~ is CONTRACTED, so "B_l = the
+  L~_∞-component l meets" is unlicensed. None of BI-1..8 uses the split;
+  any general-N analogue of DO's Corollary 4 ("no degree-two fork") must
+  settle it first. Assigned to the review as MANDATORY: does the checked
+  N = 4 chain (N=4-CHECKED-CLOSED) consume the transpose anywhere
+  load-bearing? (The lane says DO's kill is the set §§2–7 and does not
+  rest on the one-line Cor-4 reading; the reviewer decides.)
+- OPENS: OPEN[BI-CENSUS-DEG5-DEG6] (run the census at Deg <= 5 with
+  BI-1/5/8 substituted — the successor, after BI-ATTACH), OPEN[BI-TAIL-
+  AT-INFINITY], GAP-CANDIDATE[BI-ATTACH]. Re-ranked: OPEN[DEG-AF-VS-N]
+  (now DELTA-AFF-VS-N) gates the boundary side too; OPEN[E-INFINITY-
+  SPLICE-DEGREE] not needed here.
+Coordinator reading: the (B3) horn now has a boundary instrument that
+reproduces the literature kill at N = 4 and runs at N = 5, 6, 7 — and it
+says plainly what an all-N (B3) kill costs: the census grows like the
+number of plane trees, and only a NEW degree-monotone datum (the
+delta_aff / N-VS-MAPDEG gate, flagship running) can prune it. Opus
+seats 1/5 (n-vs-mapdeg).
