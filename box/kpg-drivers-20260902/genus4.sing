@@ -1,0 +1,11 @@
+LIB "normal.lib";
+ring R = 0,(x,y),dp;
+"=== family (A): F=(x, x^c y^N).  predicted 2g-2 = N-1-gcd(c,N)-gcd(c-1,N) ===";
+int c; int n; int pred;
+for (n=2; n<=8; n++)
+{ for (c=1; c<=4; c++)
+  { pred = (n-1-gcd(c,n)-gcd(c-1,n)+2) div 2;
+    "  N="+string(n)+" c="+string(c)+"  g(Singular)="+string(genus(3*x+5*x^c*y^n-7))+"   g(pred)="+string(pred);
+  }
+}
+quit;

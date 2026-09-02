@@ -1,0 +1,24 @@
+LIB "normal.lib";
+ring R = 0,(x,y),dp;
+proc gfib(poly P, poly Q, int al, int be, int tt)
+{
+  poly u = al*P + be*Q - tt;
+  // irreducibility + genus of the generic pencil member
+  int g = genus(u);
+  return(g);
+}
+// (P,Q, label) list, alpha/beta/t chosen off the finite bad set
+poly P; poly Q;
+int g;
+"=== map : g(generic fibre of alpha*P+beta*Q) ===";
+P=x;        Q=x*y;      g=gfib(P,Q,3,5,7);  "  (x,xy)        g="+string(g);
+P=x;        Q=y^2;      g=gfib(P,Q,3,5,7);  "  (x,y2)        g="+string(g);
+P=x;        Q=x*y^2;    g=gfib(P,Q,3,5,7);  "  (x,xy2)       g="+string(g);
+P=x;        Q=y+x^2;    g=gfib(P,Q,3,5,7);  "  (x,y+x2)      g="+string(g);
+P=x;        Q=y+x^5;    g=gfib(P,Q,3,5,7);  "  (x,y+x5)      g="+string(g);
+P=x+y^3;    Q=y;        g=gfib(P,Q,3,5,7);  "  (x+y3,y)      g="+string(g);
+P=x;        Q=x^2*y;    g=gfib(P,Q,3,5,7);  "  (x,x2y)       g="+string(g);
+P=x;        Q=x^2*y^2;  g=gfib(P,Q,3,5,7);  "  (x,x2y2)      g="+string(g);
+P=x^2*y;    Q=y;        g=gfib(P,Q,3,5,7);  "  (x2y,y)       g="+string(g);
+P=x^5;      Q=y^10;     g=gfib(P,Q,3,5,7);  "  (x5,y10)      g="+string(g);
+quit;

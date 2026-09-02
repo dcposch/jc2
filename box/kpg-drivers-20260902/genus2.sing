@@ -1,0 +1,13 @@
+LIB "normal.lib";
+ring R = 0,(x,y),dp;
+proc gfib(poly P, poly Q, int al, int be, int tt)
+{ poly u = al*P + be*Q - tt; return(genus(u)); }
+poly P; poly Q; int k; int m;
+"=== psi_k o (x, x*y^m):  P = x + (x y^m)^k , Q = x y^m ===";
+for (m=1; m<=3; m++)
+{ for (k=2; k<=6; k++)
+  { Q = x*y^m; P = x + Q^k;
+    "  m="+string(m)+" k="+string(k)+"  D="+string((m+1)*k)+"  g="+string(gfib(P,Q,3,5,7));
+  }
+}
+quit;

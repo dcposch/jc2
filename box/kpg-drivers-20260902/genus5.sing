@@ -1,0 +1,15 @@
+LIB "normal.lib";
+ring R = 0,(x,y),dp;
+poly G = x*y^2 - y;              // (x, G): N=2, a=1 over A_F={u=0}  (some sheets stay finite)
+int k; poly P; poly Q; poly u;
+"=== psi_k o (x, x y^2 - y):  N=2, a=1  (profile a>0) ===";
+for (k=1; k<=6; k++)
+{ Q = G; P = x + G^k; u = 3*P + 5*Q - 7;
+  "  k="+string(k)+"  deg="+string(deg(u))+"  g="+string(genus(u));
+}
+"=== control: psi_k o (x, x y^2)  (a=0) ===";
+for (k=1; k<=6; k++)
+{ Q = x*y^2; P = x + Q^k; u = 3*P + 5*Q - 7;
+  "  k="+string(k)+"  g="+string(genus(u));
+}
+quit;

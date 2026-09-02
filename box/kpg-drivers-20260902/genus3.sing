@@ -1,0 +1,17 @@
+LIB "normal.lib";
+ring R = 0,(x,y),dp;
+int b; poly f;
+"=== SUBMERSION family f_b = x + x^2 y^b : genus of generic fibre ===";
+for (b=2; b<=9; b++)
+{ f = x + x^2*y^b - 7;
+  "  b="+string(b)+"  g="+string(genus(f));
+}
+"=== critical locus of f_b (should be EMPTY: 1 = unit ideal) ===";
+for (b=2; b<=9; b++)
+{ ideal J = diff(x+x^2*y^b,x), diff(x+x^2*y^b,y);
+  "  b="+string(b)+"  std(J) = "+string(std(J));
+  kill J;
+}
+"=== cubic pencil control (x^2 y, x y^2) ===";
+"  g="+string(genus(3*x^2*y+5*x*y^2-7));
+quit;

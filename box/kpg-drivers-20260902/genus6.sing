@@ -1,0 +1,12 @@
+LIB "normal.lib";
+ring R = 0,(x,y),dp;
+// F_0 = (x, x y^4 - y^2):  N=4, a=2, W=2, S=1, mu=2  -> matches the H2 profile incl (C1) and 7.B'
+// A_F = {u=0} irreducible, rational, one place at infinity.   Jac = 4xy^3-2y NOT constant.
+poly Q = x*y^4 - y^2;
+int k; poly u;
+"=== psi_k o (x, x y^4 - y^2):  N=4, a=2, W=2, S=1, mu=2 ===";
+for (k=1; k<=3; k++)
+{ u = 3*(x + Q^k) + 5*Q - 7;
+  "  k="+string(k)+"  deg="+string(deg(u))+"  g="+string(genus(u));
+}
+quit;
