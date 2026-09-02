@@ -14952,3 +14952,25 @@ rho = −b^2 eta_e^4/(2 s_sigma^2); the ray as the universal corrected top
 kernel; THEOREM DEV-FREE; the finite-U dichotomy per fixed (e,c) on
 branch (A). Under integration #9 §C the whole object remains
 PROFILE-UNTYPED; nothing here touches the (B3) horn or case (A).
+
+## INTEGRATION #10 (2026-09-02, FABLE 5.1 COORDINATOR, VERIFIED)
+
+Binding artifact: `xmodel/integration10-coordinator-fable51-20260902.md`
+(body 20cb472d, basis 5964c9cd, VERIFIED via artifact_finalize, staged-verify
+VERIFIED at commit). Promotes, at the scopes and with the binding
+repairs stated therein: the (B3) source-curve theorem set (E-ETALE,
+E-BMY-VACUITY with the log-smooth repair, PROP 3.1/LOC-1 and COR 3.2
+with the p_a reading, E-CHARGE with the contracted-model repair,
+B3-E-GENUS, B3-E-NOCROSS at G-ANTI scope, the witness quintic E_0 as a
+REPRESENTATIVE numerical-type witness, the Domrina–Orevkov
+identification and its non-uniformity; producer opus 87fa5cb2, reviewer
+grok 12dea79f); the degree gate in invariant form (SG-INV with repairs,
+BUDGET=IDENT, DEG-DELTA(a)/(b) with the b_1 | b_0 escape, (R1)–(R4),
+MERIDIAN-FLOOR, the lower half of N-VS-MAPDEG, the (B2) death condition
+beta <= floor(delta_aff/2), the (B3) k <= delta_aff − delta_c, the
+n = 4/(2,3)/k = 1 EMPTY row, fixed-N non-derivability, the cusp+k-nodes
+affine representatives; producer opus d7cff053, reviewer gpt55
+50f62fae). Retypes OPEN[DEG-AF-VS-N] -> OPEN[DELTA-AFF-VS-N]. Records the
+boundary instrument (review pending, binds at #11), the systems
+deliverables, and the standing fronts. See the artifact for exact
+statements — this entry is a pointer.
