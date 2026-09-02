@@ -19780,3 +19780,17 @@ equations — exactly the door NOETHER-K cannot open. The successor
 flagship (after both reviews): MINIMAL-KELLER-SHAPE. Integration #13
 accumulates both sets. Seats: Opus 0/5; Sol 1 (cluster census);
 Grok 1 + GPT-5.5 1 (reviews).
+
+EVENT (~12:25Z) — `minimal-keller-shape-opus5-20260902` LAUNCHED (Opus,
+flagship): the successor of both halves, charged on the REVIEWED polar
+ledger plus the classical Newton-polygon theory of Jacobian pairs
+(Abhyankar, Nagata 1988/89, Appelgate–Onishi, Abhyankar–Moh approximate
+roots, Heitmann, Moh, Nowicki–Nakai, Cassou-Noguès), with FORK-GENUS
+and SAT-WEIGHT/HALF-CAP as PROPOSALS: translate the Newton-polygon /
+characteristic-pair data of a DEGREE-MINIMAL Keller pair into the
+polar tree's fork mass Psi and satellite mass T; decide Psi = 0, "E_0
+a leaf", and T <= 50 − N, or price them exactly; controls: JvdK
+automorphisms, the non-Keller PROFILE-WITNESS family, HALF-CAP's
+two-dicritical witnesses, the N = 4 (B3) data. Seats: Opus 1/5; Sol 1;
+Grok 1 + GPT-5.5 1 (reviews). Lane watcher v2 (b2m0wnajc) replaces v1
+(a zsh list-splitting bug misreported the last two exits).
