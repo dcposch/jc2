@@ -1,0 +1,45 @@
+a_1=3 b_1=2  lam_g=-3/20 lam_f=-1/10  mu = -lam_g/a_1 = -lam_f/b_1 = 1/20
+
+== grid of (deg Phi_k, deg Gamma_k) at GENERIC eps ==
+   degPhi degGam unknowns  conditions rank   ker    coker 
+   0      0      2         3          2      0      1     
+   0      1      3         3          3      0      0     
+   0      2      4         4          4      0      0     
+   0      3      5         5          5      0      0     
+   0      4      6         6          6      0      0     
+   0      5      7         7          7      0      0     
+   1      0      3         4          3      0      1     
+   1      1      4         4          4      0      0     
+   1      2      5         4          4      1      0     
+   1      3      6         5          5      1      0     
+   1      4      7         6          6      1      0     
+   1      5      8         7          7      1      0     
+   2      0      4         5          4      0      1     
+   2      1      5         5          5      0      0     
+   2      2      6         5          5      1      0     
+   2      3      7         5          5      2      0     
+   2      4      8         6          6      2      0     
+   2      5      9         7          7      2      0     
+   3      0      5         6          5      0      1     
+   3      1      6         6          6      0      0     
+   3      2      7         6          6      1      0     
+   3      3      8         6          6      2      0     
+   3      4      9         6          6      3      0     
+   3      5      10        7          7      3      0     
+   4      0      6         7          6      0      1     
+   4      1      7         7          7      0      0     
+   4      2      8         7          7      1      0     
+   4      3      9         7          7      2      0     
+   4      4      10        7          7      3      0     
+   4      5      11        7          7      4      0     
+
+== resonances: eps at which the rank of L_eps drops (degPhi=b_1, degGam=a_1) ==
+   gcd of maximal minors = epsilon*(10*epsilon - 1)*(20*epsilon - 3)*(20*epsilon - 1)/4000
+   roots  = [0, 1/20, 1/10, 3/20]    mu*Z = [0, 1/20, 1/10, 3/20]
+
+== rank/kernel/coker AT each resonance ==
+   eps = 0      (= 0 mu) unknowns 7 conditions 5 rank 4 ker 3 coker 1
+   eps = 1/20   (= 1 mu) unknowns 7 conditions 5 rank 4 ker 3 coker 1
+   eps = 1/10   (= 2 mu) unknowns 7 conditions 5 rank 4 ker 3 coker 1
+   eps = 3/20   (= 3 mu) unknowns 7 conditions 5 rank 4 ker 3 coker 1
+   eps = 1/5    (= 4 mu) unknowns 7 conditions 5 rank 5 ker 2 coker 0

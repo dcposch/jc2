@@ -1,0 +1,15 @@
+== CONTROL 2: the charged pair (y + x^2, x + (y + x^2)^2), in Moh's gauge ==
+   f = x**2 + 2*x*y + y**2 + y
+   g = x**4 + 4*x**3*y + 6*x**2*y**2 + 2*x**2*y + 4*x*y**3 + 4*x*y**2 + x + y**4 + 2*y**3 + y**2 + y
+   m = deg_y f = 2 = deg f = 2 ; n = deg_y g = 4 = deg g = 4 ; J = [f,g] = -1
+   fibre {g=5/3} parametrised by u = f:  x = X(u) = u**4 - 13*u**2/3 - u + 40/9
+                                        y = Y(u) = -u**4 + 10*u**2/3 + u - 25/9
+   g_y|fibre = -4*u**3 + 26*u/3 + 1 = J X'(u)   ==>   int J dx/g_y = int du = u = f exactly (a_i = 0, no log)
+   u_0(z) = 1 + .../z
+   residues on the 4 branches: [0, 0, 0, 0]
+   discriminant_y(g - c_2) = -(6912*x**3 - 27264*x**2 - 31776*x + 64901)/27 != 0, so the n = 4 nodes tau_i are distinct;
+   the time function gives F_i = f(x,tau_i) on every branch (checked above), and the
+   Lagrange interpolant of degree <= n-1 through those n values is UNIQUE, hence
+   L(y) = f(x,y): y-degree exactly m = 2 < n = 4, coefficients POLYNOMIAL in x.
+
+21 checks, 0 failures

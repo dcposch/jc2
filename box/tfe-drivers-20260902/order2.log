@@ -1,0 +1,41 @@
+selected skeleton: lam_g=-3/20 lam_f=-1/10 mu=1/20  p_g=pi**3 - pi  p_f=pi**2 - 2/3
+
+-- ORDER 1 at generic eps_1 = 1/7 :  kernel dim 2 (unknowns 7, conditions 5, rank 5)
+   Phi_1 = 2*pi**2*s1/3 + 2*pi*s0/3 + 7*s1/18
+   Gamma_1 = pi**3*s1 + pi**2*s0 + pi*s1/4 - s0/3
+     order 2, generic eps_2 = 2/7     unknowns  7  conditions  5  rank  5  kernel  2  coker  0  CONSISTENT
+     order 2, resonant eps_2 = mu     unknowns  7  conditions  5  rank  4  kernel  3  coker  1  INCONSISTENT
+      -> obstruction present; the single condition on (s_i) is:
+         cokernel functional vanishes iff [{s0: 0}, {s1: 0}]
+     order 2, resonant eps_2 = 2mu    unknowns  7  conditions  5  rank  4  kernel  3  coker  1  INCONSISTENT
+      -> obstruction present; the single condition on (s_i) is:
+         cokernel functional vanishes iff [{s0: -sqrt(10)*I*s1/2}, {s0: sqrt(10)*I*s1/2}]
+     order 2, resonant eps_2 = 3mu    unknowns  7  conditions  5  rank  4  kernel  3  coker  1  INCONSISTENT
+      -> obstruction present; the single condition on (s_i) is:
+         cokernel functional vanishes iff [{s0: 0}, {s1: 0}]
+
+-- ORDER 1 at resonant eps_1 = mu = 1/20 :  kernel dim 3 (unknowns 7, conditions 5, rank 4)
+   Phi_1 = 2*pi**2*s2/3 + pi*(2*s0 + 4*s1/3) + 4*s2/27
+   Gamma_1 = pi**3*s2 + pi**2*s1 - pi*s2/9 + s0
+     order 2, generic eps_2 = 2/7     unknowns  7  conditions  5  rank  5  kernel  2  coker  0  CONSISTENT
+     order 2, resonant eps_2 = mu     unknowns  7  conditions  5  rank  4  kernel  3  coker  1  INCONSISTENT
+      -> obstruction present; the single condition on (s_i) is:
+         cokernel functional vanishes iff [{s0: 0}, {s2: 0}]
+     order 2, resonant eps_2 = 2mu    unknowns  7  conditions  5  rank  4  kernel  3  coker  1  CONSISTENT
+     order 2, resonant eps_2 = 3mu    unknowns  7  conditions  5  rank  4  kernel  3  coker  1  INCONSISTENT
+      -> obstruction present; the single condition on (s_i) is:
+         cokernel functional vanishes iff [{s0: 2*s1/5}, {s2: 0}]
+
+-- ORDER 1 at actual first step eps_1 = delta_1 - delta_2 = 1/380 :  kernel dim 2 (unknowns 7, conditions 5, rank 5)
+   Phi_1 = 2*pi**2*s1/3 + 2*pi*s0/3 + 76*s1/675
+   Gamma_1 = pi**3*s1 + pi**2*s0 - 37*pi*s1/225 - s0/3
+     order 2, generic eps_2 = 2/7     unknowns  7  conditions  5  rank  5  kernel  2  coker  0  CONSISTENT
+     order 2, resonant eps_2 = mu     unknowns  7  conditions  5  rank  4  kernel  3  coker  1  INCONSISTENT
+      -> obstruction present; the single condition on (s_i) is:
+         cokernel functional vanishes iff [{s0: 0}, {s1: 0}]
+     order 2, resonant eps_2 = 2mu    unknowns  7  conditions  5  rank  4  kernel  3  coker  1  INCONSISTENT
+      -> obstruction present; the single condition on (s_i) is:
+         cokernel functional vanishes iff [{s0: -2*sqrt(94)*I*s1/15}, {s0: 2*sqrt(94)*I*s1/15}]
+     order 2, resonant eps_2 = 3mu    unknowns  7  conditions  5  rank  4  kernel  3  coker  1  INCONSISTENT
+      -> obstruction present; the single condition on (s_i) is:
+         cokernel functional vanishes iff [{s0: 0}, {s1: 0}]
