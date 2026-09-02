@@ -1,0 +1,11 @@
+LIB "hnoether.lib";
+ring R = 0,(a,b),ds;
+poly f = -3*a^2 + 5*a*b - 3*b + 7*b^2;
+list L = hnexpansion(f);
+"typeof L[1]:"; typeof(L[1]);
+"size:"; size(L);
+list PR = param(L[1],1);
+ideal I = PR[1];
+"I:"; I;
+"ord I[2]:"; ord(I[2]);
+quit;

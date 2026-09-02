@@ -1,0 +1,12 @@
+LIB "hnoether.lib";
+ring R = 0,(a,b),ds;
+poly f = b2 + a3;
+list L = hnexpansion(f);
+"nbranches:"; size(L);
+list PR = param(L[1],1);
+ideal I = PR[1];
+"I:"; I;
+"ord I[1]:"; ord(I[1]);
+"ord I[2]:"; ord(I[2]);
+"varstr:"; varstr(basering);
+quit;

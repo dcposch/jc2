@@ -1,0 +1,10 @@
+LIB "hnoether.lib";
+ring R = 0,(a,b),ds;
+poly f = b2 + a3;
+list L = hnexpansion(f);
+"nbranches:"; size(L);
+matrix M = param(L[1],1);
+M;
+"ord b(t):"; ord(M[1,2]);
+"ord a(t):"; ord(M[1,1]);
+quit;

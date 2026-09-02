@@ -1,0 +1,15 @@
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `49740`.
+- Body SHA-256:
+  `863b05dbbd425035a09265cacdf6c418a2a3a1a7fadbeb303571bb5ccba618d6`.
+- Charged inputs (verified before reading): as listed in sec.0.
+- Literature read this session (VERIFIED in `refs/`): Moh 1983
+  `6c8847a8...`, GGV 2017 `8b426751...`; page images of Moh pp.179-180 rendered from
+  the same PDF.
+- Drivers (in `/tmp/dc/depth`, not installed):
+  `census2.py 008e46fa...`, `mohrec.py 2b8e80e1...`, `places.py 8f02f149...`,
+  `dmin.py beb705eb...`, `res.py b372c33c...`.

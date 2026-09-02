@@ -1,0 +1,24 @@
+cli=2.1.258 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Sealed. `xmodel/depth-ceiling-opus5-20260902.md`, body 49 740 bytes, SHA-256 `863b05db…`.
+
+## What the lane found
+
+**The charge's premise is half wrong, and the half that's wrong is decidable.** "The depth is free" is false for the depth *as a count* and true for it *as a size*.
+
+- **THEOREM DEPTH-LOG.** For a degree-minimal Jacobian pair, `3 ≤ s ≤ log₂K` characteristic pairs (Moh's `d`-chain: `d₂ = gcd(m,n) = K` because `M₁ = −m`, strict divisor descent, `d_s ≥ 4`), and `k+1 ≤ log₂K` GGV regular corners (Thm 7.6(7) `Ω(d_j) ≥ j−1` plus `d_k | gcd(a,b)`, `a+b = K`). Two independent refs/-verified routes, same bound. **This identifies Moh's unexplained "a simple computation shows s ≤ 5": it is `n ≥ 4·2^{s−2}` at `n ≤ 100`** — a cutoff artefact, not a theorem. Census: `max s` observed `= max ⌊log₂K⌋` at every `n` tested.
+
+- **`T` is not a depth.** `r_∞(C_gen) = D − T = κ + Sn`, with `D = Σν_γ`, `N = Σm_γ`, `T = Σ(ν_γ−1)` over the places at infinity of a generic net member; in gauge `deg = deg_y`, `T` is the total ramification of `x` over `x = ∞`. Measured on 16 maps by Hamburger–Noether (no blow-ups), 0 failures; reproduces SM's `κ`, `Λ`, `T` and `ν_max` columns.
+
+- **Where `N` is.** `N = deg_x Res_y = −Σ_{i,j} ord_t(τ_i − φ_j) = 2deuv − Σ_{same-slope} ord_t`. So `N` is a *quadratic functional of Moh's own tree* — but no Moh or GGV constraint ever forms the pairing sum. The recursion isn't blind to `N` in principle, only in practice, and the missing piece (`OPEN[N-ON-THE-TREE]`) is finite and desk-scale.
+
+- **Unconditional: `D_min ≥ 105`** (was 102), admissible `D ∈ [101,120] = {105,108,112,117,120}`. SAT-CROSS is now three units below its own floor.
+
+- **`OPEN[NU2-RIGIDITY]` (MKS) closed positive, gauge-free** by Moh Prop 4.5 + Lem 5.3 + Prop 5.4.
+
+- **Correction to MKS:** Moh's fourth survivor is `(64,48) = 16·(4,3)`, not `(64,68)`; all four have `K ≥ 16` and none is killed by GGV — Heitmann's bound is *attained* by Moh's hardest case.
+
+Positive controls: 6/6 of Moh's legible published `δ` values reproduced exactly from Definition 5.1(3) (recovered from page images — the OCR drops every display), and his stated "25 possible values for `M₂`" at (75,50) reproduced to the unit.
+
+Two notes. The report is 50 KB against the 25–40 KB target; I trimmed hard but stopped where further cuts would have removed the recovered recursion displays or the measured tables. And the drivers are in `/tmp/dc/depth` (hashes in the seal), not installed — following the MKS precedent; say the word if you want them preserved under `box/`.
+DIVERT path=xmodel/depth-ceiling-opus5-20260902.md status=DIVERTED body_bytes=49740 body_sha256=863b05dbbd425035a09265cacdf6c418a2a3a1a7fadbeb303571bb5ccba618d6 overflow=xmodel/depth-ceiling-opus5-20260902.overflow overflow_bytes=673 raw=xmodel/depth-ceiling-opus5-20260902.raw.md raw_sha256=b665aab01e8be5cdc252a1ce4bef8a9d88111c4ded2c71de0de288f5569fb09a overflow_sha256=0d21b688757e7830d44bd600f52505f71be90c9d46bfb66306fabb7de4748acf
+post-BODY-END overflow diverted; charged body preserved
