@@ -18759,3 +18759,53 @@ prefilter on census types at Chau's hypotheses; (5) (B3) needs n >= 4
 (GPT-5.5) check of an Opus ideation claim — CLAIM [D] is
 promotion-grade at its scope; items (1),(5) are reproductions with
 repairs. Feeds INTEGRATION #9 and the B3-PARAM-SEARCH design.
+
+## LIVE STATE (observed: see the ~08:45Z lane print) — THE A2 RESIDUAL IS RE-FILED: NOT THE (B3) HORN; A2-U-BOUND DEMOTED; BOX01 WINDOW DEMOTED TO EVIDENCE
+
+**PHI-IMMERSION-ADJUDICATION landed** (`phi-immersion-adjudication-sol56-20260902.md`,
+4820a2cf, BODY_SEALED; Sol, producer model of the block-descent
+structure report, adjudicating the Fable-lane ideation's THEOREM
+PHI-IMMERSION): steps (1)-(4) CONFIRMED — the retained chart
+A = x^2, U = x + x^3 y, Z = 2y + x^2 y^2 is étale and surjective with
+Jelonek set exactly Phi = V(A,U) (every escape is the deleted-twin
+family); C_0 = pi(Phi) ⊂ A_F with the STRONGER equality
+A_F = A_pi ∪ C_0; E0 = 2(q r' − p' s) = kappa (f_0 = p, f_1 = q,
+g_0 = r, g_1 = s) forces the residue parametrisation to be
+unramified; under H2 A_F = C_0 has a smooth branch through every
+point (after a small all-branches repair). One assertion REFUTED: the
+r2/CELL-32 lane never assumed H2. GAP[EXACT-MODEL-ID]: the structure
+report's identification of this block surface/chart with the charged
+horn was PROVISIONAL, and it is the package
+"A2 exact-model identification + H2 + affine (B3) cusp" that is
+INCONSISTENT (a point of Phi would have to be the étale companion of
+the cusp, but its branch is smooth; the alternative gives a_c >= 3
+against N4-PIN's a_c = 1). Which cusp: MPRIME's (B3) cusp is the
+affine target unibranch singularity; the A2 model's Phi and {T=0} are
+an interior multiple-fibre line and a pole divisor — no cusp at all is
+encoded by the bare equations.
+
+**RE-FILING (adopted):** bare A2/CELL-32 = PROFILE-UNTYPED, N-UNTYPED
+(legitimate constant-bracket algebra on S; finite boxes prove box-local
+emptiness only); with H2 + the charged residue collision = (B1) at
+even N >= 18 only (floor, not witness); any actual N <= 16 survivor =
+REDUCIBLE-A_F (belongs to the companion front); N=4 + H2 + (B3) + this
+bridge = EMPTY/INCONSISTENT. **OPEN[A2-U-BOUND] is DEMOTED** from "the
+horn's missing theorem" to an untyped algebra question; the 07:22Z /
+07:41Z framing that called the campaign "one theorem away" on the H2
+side is WITHDRAWN by the coordinator. The (B3) horn currently has NO
+analytic model; the live (B3) instruments are the representation cage
+and the source curve E (`b3-e-geometry` flagship, running).
+
+**ALLOCATION:** box01's single-thread A2 run KILLED (redundant with the
+24-thread run); the 24-thread run continues at zero priority through
+RUN_CELLS as finite-box evidence only (the box is otherwise idle; no
+cells beyond the list; no promotion from MODULAR). `a2-ubound` runs to
+its seal; its successor charge is the BRIDGE, not a U-bound:
+m = [K(S) : C(f,g)] (parity N = 2m), A_pi and the components of
+A_F = A_pi ∪ C_0, whether the residue-collision/normalisation
+hypotheses hold, then either the even-N >= 18 (B1) branch or an
+explicitly reducible companion target; O0/O1 recovery and Opus's
+DEPTH-PROFILE/PARAM-U stay as algebra tools for whichever branch is
+selected. Heavy A2 computation reopens only for a proved
+even-N >= 18 (B1) target or a declared reducible companion target.
+box01 goes to a genuine (B3) instrument as soon as one is specified.
