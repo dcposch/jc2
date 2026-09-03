@@ -20939,3 +20939,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T18:13Z EVENT — `moh9966-B-lift-sol56` sealed (28KB): branch B banded lift consistent through band 5 (dim 59), δ = 5/2 face dim 2, Moh's (16,12) control dies under the same lift — (99,66) needs the JOINT two-point-at-infinity system. → AUDIT delta 17(ggg). Opus is back (probe OK). Launching `g9966-global-design-sol56` and `g9966-source-review-opus5`. Lanes live: 7.
 
 ## 2026-09-03T18:24Z EVENT — `strata-rerun-corrected-gpt55` sealed (9KB): (132,88), (180,120), (84,56) CONFIRMED under the corrected generator; (75,50; V₂ = 2) [1,1,1] closed by the superset argument (old chart ⊇ new, old exact [1]). → AUDIT delta 17(hhh) PROMOTED. Two-point stratum: 8 groups dead. Lanes live: 6.
+
+## 2026-09-03T18:26Z EVENT — Grok and Opus seats are back (probes OK). Launched `k16-t5t6-grok46-20260903` ((T) at t = 5, 6 by the promoted normalisation; canonical-order terminal systems as induction data) and, earlier, `k16-middle-spine-opus5-20260903` (independent route). Lanes live: 8.
