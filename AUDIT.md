@@ -15512,3 +15512,39 @@ Prop 5.6 at least). ERRATUM p.202 (PROVED-HERE): the n = 75 bracketed
 2/3 is right — OPEN[DELTA75-BRACKET] CLOSED as an erratum. MEASURED
 variant (not used): NOT-ALL-(11) cuts 19%/11% more and empties
 nothing.
+
+## INTEGRATION #17 DELTA (i) (2026-09-03T10:33Z, REVIEWED): REDUCIBLE-BRANCH REPRICE PROMOTED WITH REPAIRS; THE OPERATIVE (1)–(13) NUMBERS
+
+Different-model review `reducible-branch-review-grok46-20260903.md`
+(cea8677d) of `reducible-branch-reprice-opus5-20260902.md` (fd1f383a; delta
+(g)). PROMOTED: the SCOPE AUDIT (JAC-FIBRE, FRONTIER-EXACT, DETECTOR-NULL,
+D1-PIN, D1-STAR, PIN-NOT-CEILING, the integrality filter, condition (15),
+HARMONIC-BOUND, N-CEILING are H2-free in their proofs; H2 enters only as the
+[4,16] clip); M_s = n − 2 LOAD-BEARING for the D1-PIN coincidence, with the
+r = 1 gap formula floor − ceiling = (1 − δ₁)(1 − (n − M_s − 1)) (the printed
+five-line perturbation table is a GAP: replace by the live row
+(48, 32, M = (−8,46), V = {2:1, 3:5})); N_min = 6 on the reducible branch as
+LITERATURE-typed (Orevkov / N = 4 ledger / Żołądek 6.12 as printed; carry
+OPEN[ZOLADEK-6.12-ARITHMETIC]; no campaign-internal N_min = 6 promoted);
+the PARTITION proper = roots of bottom-major discs / non-proper = roots of
+minor discs, a bijection of blocks under Keller + GEN + Def 5.1 tower with
+M_s = n − 2 + NU-TWO + Prop 6.1(1) + D1-STAR (a non-proper Keller branch
+cannot sit in a bottom-major disc: δ⁰ = (n + mδ₁)/(n + m) < 1 there);
+NONPROPER-COUNT R = D − eΣ_B V₂(B) = e(K − ΣV₂) (the N-form
+R = D − N(d+e)/((1−δ₁)d) is (UNI)-only); NONPROPER-RATE
+ord_t(f(τ) − a₀) = δ⁰ − 1 + ord_t J (113/0 rerun); STRICT-FRONTIER (Keller ⇒
+δ⁰ ≠ 1; proper ⇔ δ⁰ < 1, non-proper ⇔ δ⁰ > 1); NONPROPER-CAP as the
+inequality n_A^Y ≤ R (n_A^Y is NOT the branch count; does not consume
+irreducibility of A_F; the Chau form stays GAP[HORIZONTAL-DEGREE]);
+VERDICT (c) partially subsumed. DO NOT PROMOTE: the (1)–(7) percentages
+(98.94% / 59.79% / 99.6% recovery / "no degree emptied") as statements on
+Moh's space; the calibration-gate percentages (63.40% / 9.41% / "the
+unconditional filter kills nothing" — wrong space, and FALSE on (1)–(13):
+N ≥ 2 kills 38.44% of groups). OPERATIVE H2-FREE NUMBERS ON THE TRUE (1)–(13)
+SPACE, D ≤ 120, (UNI), rerun to the unit against census-rebase §6: 1,189
+groups; N ≥ 6 kills 519 (43.65%), 670 alive; [4,16] kills 559; recovery of
+the H2 group-kill by the frontier alone is 519/559 = 92.8%; D = 48 EMPTIES at
+N ≥ 6 (a frontier effect: its two groups admit only N ∈ {2,4} or none);
+no D > 100 empties; FREE/CHAU reducible tests kill 0/670; min R = 2e = 6
+now at (84, 56, M = (−14,82), V₂ = 1, k = 26, N = 26); 31 distinct achievable
+N ≥ 6 values, max 36.

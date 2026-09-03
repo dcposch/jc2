@@ -1,0 +1,36 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes, then read the report, theorems, and measurement scripts before running the hostile review.Hashes match. Next I’ll read the charged reports, review contract, and the measurement scripts.Hashes check out. I’ll pull the review-format contract and start reading the charged reports in parallel.I’ll keep reading the charged report and the theorem statements, then inspect the measurement scripts.I have the theorem statements. Next I’ll pull Def 5.1, the census-rebase numbers, and HARMONIC-BOUND, then write the skeleton and run the scripts.Writing the report skeleton, then launching the charged scripts and the (1)–(13) remeasurement together.N=5 typing may be inverted. I’ll read the soundness report’s residual claim before locking the verdict.Measurements match. I’ll write the full review now, then seal it.The draft is ~34KB, over the 20–30KB target. I’ll cut repeated quotes and keep the mandated proofs and numbers.Hostile review is in `xmodel/reducible-branch-review-grok46-20260903.md` (sealed; body SHA-256 `23797572…`). All eleven charged hashes matched. No ledger edits, no `jc2-lean`, no `ideation-20260903T*` files.
+
+## Verdicts
+
+| Item | Result |
+|---|---|
+| **(1) Scope audit** | **CONFIRMED.** The ten named theorems do not use H2 in the proof. H2 is only the `[4,16]` clip of the integrality filter. |
+| **(2) `N_min = 6`** | **CONFIRMED** as literature-typed (Orevkov / N=4 ledger / Żołądek 6.12 as printed). Carry `OPEN[ZOLADEK-6.12-ARITHMETIC]`. Do not promote a campaign-internal `N_min = 6`. |
+| **(3) Partition** | **CONFIRMED** under Keller + GEN + Def 5.1 with `M_s = n−2` + NU-TWO + DETECTOR-NULL + D1-STAR. A non-proper Keller branch **cannot** sit in a bottom-major disc (`δ^0 = (n + m δ_1)/(n+m) < 1`). |
+| **(4) New theorems** | COUNT **CONFIRMED** for `R = e(K − Σ V_2)` (the `N`-form is (UNI) only). RATE **CONFIRMED** (113/0 rerun). STRICT-FRONTIER **CONFIRMED** (`δ^0 = 1` impossible for Keller). CAP **CONFIRMED** as `n_A^Y ≤ R`; that is **not** the branch count and does **not** use irreducibility of `A_F`. |
+| **(5) Measurements** | (1)–(7) numbers **CONFIRMED** by rerun. On the **true (1)–(13) space they do not survive as operative numbers.** |
+| **(6) Typing** | **(c) partially subsumed** is right. Neither fully subsumed nor not subsumed is forced. |
+
+## True (1)–(13) space (the charge’s main correction)
+
+`box/moh_skeleton_full.py`, (UNI), `D ≤ 120`, unit match to census-rebase §6:
+
+- **1 189 groups, 1 692 assignments**
+- **`N ≥ 6`:** 519 killed (43.65%), **670 alive**
+- **`[4,16]`:** 559 killed (47.01%)
+- H2-kill recovery **519/559 = 92.8%**, not 99.6%
+- **`D = 48` emptied** at `N ≥ 6` (two groups: one with no integer `N`, one with `{2,4}` only)
+- Unconditional `N ≥ 2` still kills **38.44%** of groups — the calibration slogan “unconditional kills nothing” is about the **wrong** space (no branch (11))
+- FREE/CHAU reducible tests still **zero kills** (670/670)
+
+What is **unchanged** on the true space: the scope audit, the NONPROPER theorems, literature `N_min = 6`, verdict (c), and the zero reducible-test kill.
+
+What **must be re-measured** (and was): every percentage, “no degree emptied”, 99.6% recovery, the calibration 63.40%/9.41% gates, and the `min R = 2e` witness (moves from dead `D = 48` to `D = 84`).
+
+## Other repairs
+
+- **`M_s = n−2` gap formula CONFIRMED:** at `r = 1`, `floor − ceiling = (1−δ_1)(1 − (n − M_s − 1))`. Live row `(48,32,M=(−8,46),V={2:1,3:5})` pins at `c=1` and brackets off it.
+- **Printed 5-line perturbation table GAP:** `(64,48,M=(16,62))` is not a census skeleton; the `(48,32)` numbers are not a single-skeleton perturbation.
+- **`n_A^Y` is the horizontal degree (point count), not `#` non-proper branches.**
+DIVERT path=xmodel/reducible-branch-review-grok46-20260903.md status=CLEAN_SEALED body_bytes=31581 body_sha256=23797572cc23112eddb7f5beefb5e20f41df024032c1089f84a3d0271fb6676b

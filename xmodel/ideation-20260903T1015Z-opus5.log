@@ -1,0 +1,31 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Sealed: `xmodel/ideation-20260903T1015Z-opus5.md` (49 KB, one `<!-- BODY-END -->`).
+
+## What I found
+
+Running the banked census tool with three one-line predicates produced a candidate for `OPEN[MOH-PROGRAM]` that **meets the packet's own named discriminator**:
+
+```
+MOH-INCREMENT   A_j >= 2 for every j            (Moh's "increment" of (8) must increment)
+NOT-ALL-(11)    some j satisfies (10)           (Prop 5.6 numerical shadow, already an OPEN)
+MAJOR-MULT      V_j >= 2                        (the clause I cannot derive — flagged)
+```
+
+- **Fail-closed control passes**: all six p.202 rows survive.
+- **(75,50)**: 9 rows → exactly Moh's two, `M=(55,73)`, `V_2∈{2,3}`. `M_2 ∈ {5,10,40,60}` all die.
+- `n ≤ 100`: 658 rows/63 classes → 86/15 (or 51/13 with the stronger clause), containing all four of Moh's classes.
+- `48 ≤ D ≤ 200`: 14,016 groups → 2,652 → 1,908. **D = 105 empties** — all three trio groups have `V_2 = 1`.
+
+`A_1 ≥ 2` is PROVED-HERE from the transcription: Moh's p.188 derivation is an *exclusive* disjunction, which the implemented conjunctions (12)/(13) satisfy vacuously when `A_1 = 1`. The `j ≥ 2` extension and `V_j ≥ 2` are typed CONJECTURE / SOURCE-UNVERIFIED — the Moh PDF is not on this machine, and I said so.
+
+## Two direct answers to the framing
+
+1. Recovering the sieve **will not prove JC2** — measured: survivors grow with the divisor structure of `D` through 200, no tail empties. So Q3(f) is answered *yes*, and a uniform theorem must use a datum outside the skeleton.
+2. That datum: `d/dx Σ_i f(x,τ_i)^k = J·k·[y^{n-1}](f^{k-1} mod (g−c_2))`, whose left side is `O(k·N) = O(k)` because the boundary pinned `N` to O(1), while the right side is generically `Θ(k·m)`. Verified exactly on 3 Keller pairs, 10 instances, 0 failures. That is the cofinal invariant Q3(a) asks for, and PIN-NOT-CEILING does not forbid it.
+
+## Consequences for the queue
+
+The D = 105 trio is **not worth a flagship seat** — it's hostage to one page lookup, and `V_2 = 1` makes its bottom star rigid (worst place to look for a realisation). My first lane is CARD 3: test whether `k < n − m` for every `V_2 = 1` group, which could *prove* MAJOR-MULT without the page images.
+
+Caveat I flagged in §15: I did not compose the sieve with the pinned-N knapsack, so the emptied-degree list is a floor. D = 105 empties before integrality is applied. No ledger was edited; drivers are in `/tmp/id-opus5/` only.
+DIVERT path=xmodel/ideation-20260903T1015Z-opus5.md status=CLEAN body_bytes=49482 body_sha256=b13149ecac656f7f3548e6cd388b1699c514ff49a53882f7239039a2c0022562
