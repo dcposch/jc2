@@ -1,0 +1,81 @@
+// Independent FALLACY-v2 sat-wrapper extraction/type/ring controls.
+// These are deliberately tiny and separate from the Rabinowitsch main runs.
+LIB "elim.lib";
+
+ring R32003=32003,(x,c),dp;
+ideal J32003=c;
+ideal IE32003=c;
+ideal IN32003=c-1;
+list LE32003=sat_with_exp(IE32003,J32003);
+list LN32003=sat_with_exp(IN32003,J32003);
+ideal SE32003=LE32003[1];
+ideal SN32003=LN32003[1];
+if (typeof(LE32003)=="list" && typeof(SE32003)=="ideal" &&
+    typeof(LN32003)=="list" && typeof(SN32003)=="ideal")
+{ print("GF32003_SAT_COMPONENT_EXTRACTION_TYPE_PASS"); }
+else { print("GF32003_SAT_COMPONENT_EXTRACTION_TYPE_FAIL"); }
+if (nameof(basering)=="R32003") { print("GF32003_RING_NAME_PASS"); }
+else { print("GF32003_RING_NAME_FAIL"); }
+if (reduce(1,SE32003)==0) { print("GF32003_EMPTY_PASS"); }
+else { print("GF32003_EMPTY_FAIL"); }
+if (reduce(1,SN32003)!=0) { print("GF32003_NONEMPTY_PASS"); }
+else { print("GF32003_NONEMPTY_FAIL"); }
+
+ring R65521=65521,(x,c),dp;
+ideal J65521=c;
+ideal IE65521=c;
+ideal IN65521=c-1;
+list LE65521=sat_with_exp(IE65521,J65521);
+list LN65521=sat_with_exp(IN65521,J65521);
+ideal SE65521=LE65521[1];
+ideal SN65521=LN65521[1];
+if (typeof(LE65521)=="list" && typeof(SE65521)=="ideal" &&
+    typeof(LN65521)=="list" && typeof(SN65521)=="ideal")
+{ print("GF65521_SAT_COMPONENT_EXTRACTION_TYPE_PASS"); }
+else { print("GF65521_SAT_COMPONENT_EXTRACTION_TYPE_FAIL"); }
+if (nameof(basering)=="R65521") { print("GF65521_RING_NAME_PASS"); }
+else { print("GF65521_RING_NAME_FAIL"); }
+if (reduce(1,SE65521)==0) { print("GF65521_EMPTY_PASS"); }
+else { print("GF65521_EMPTY_FAIL"); }
+if (reduce(1,SN65521)!=0) { print("GF65521_NONEMPTY_PASS"); }
+else { print("GF65521_NONEMPTY_FAIL"); }
+
+ring R1000003=1000003,(x,c),dp;
+ideal J1000003=c;
+ideal IE1000003=c;
+ideal IN1000003=c-1;
+list LE1000003=sat_with_exp(IE1000003,J1000003);
+list LN1000003=sat_with_exp(IN1000003,J1000003);
+ideal SE1000003=LE1000003[1];
+ideal SN1000003=LN1000003[1];
+if (typeof(LE1000003)=="list" && typeof(SE1000003)=="ideal" &&
+    typeof(LN1000003)=="list" && typeof(SN1000003)=="ideal")
+{ print("GF1000003_SAT_COMPONENT_EXTRACTION_TYPE_PASS"); }
+else { print("GF1000003_SAT_COMPONENT_EXTRACTION_TYPE_FAIL"); }
+if (nameof(basering)=="R1000003") { print("GF1000003_RING_NAME_PASS"); }
+else { print("GF1000003_RING_NAME_FAIL"); }
+if (reduce(1,SE1000003)==0) { print("GF1000003_EMPTY_PASS"); }
+else { print("GF1000003_EMPTY_FAIL"); }
+if (reduce(1,SN1000003)!=0) { print("GF1000003_NONEMPTY_PASS"); }
+else { print("GF1000003_NONEMPTY_FAIL"); }
+
+ring RQ=0,(x,c),dp;
+ideal JQ=c;
+ideal IEQ=c;
+ideal INQ=c-1;
+list LEQ=sat_with_exp(IEQ,JQ);
+list LNQ=sat_with_exp(INQ,JQ);
+ideal SEQ=LEQ[1];
+ideal SNQ=LNQ[1];
+if (typeof(LEQ)=="list" && typeof(SEQ)=="ideal" &&
+    typeof(LNQ)=="list" && typeof(SNQ)=="ideal")
+{ print("Q_SAT_COMPONENT_EXTRACTION_TYPE_PASS"); }
+else { print("Q_SAT_COMPONENT_EXTRACTION_TYPE_FAIL"); }
+if (nameof(basering)=="RQ") { print("Q_RING_NAME_PASS"); }
+else { print("Q_RING_NAME_FAIL"); }
+if (reduce(1,SEQ)==0) { print("Q_EMPTY_PASS"); }
+else { print("Q_EMPTY_FAIL"); }
+if (reduce(1,SNQ)!=0) { print("Q_NONEMPTY_PASS"); }
+else { print("Q_NONEMPTY_FAIL"); }
+
+quit;

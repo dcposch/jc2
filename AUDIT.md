@@ -16816,3 +16816,31 @@ licensed faces — (64,48), (112,80) [K16 t = 2], (147,98), (168,112), (189,126)
 (180,120)* [* PROVISIONAL]; dead as slices pending strata — (75,50; V₂ = 2), (84,56);
 (75,50; V₂ = 3) dead with Moh's licensed 2,2,6; open — (125,75), (160,112) [K16 t = 3,
 lane running], (175,100), (175,125), (180,144), (192,128) [partial], (196,56), (200,120).
+
+## INTEGRATION #17 DELTA (ss) (2026-09-03T15:33Z, PROVED-HERE/UNREVIEWED at t = 3; MEASURED-MODULAR at t = 4; uniform-in-t PARTIAL; producer Sol): THEOREM (T) AT t = 3 ON THE K = 16 RAY — (40,28; 37; 3; J = cγ) SATURATED-EMPTY (36 gauged unknowns, 51 generators; modular [1] over three primes at ≈ 62 s each; exact [1] after a triangular preprocessing / "normalized quadratic-field" slice in 0.04 s, independent slimgb 0.57 s); t = 4 (52,36; 49; 3) modular [1] over GF(32003), GF(65521), GF(1000003) (45 unknowns, 65 generators, 134–242 s) — exact not finished; the generic-t structure: constant-pivot recurrence proved uniformly through bands h^{4t+1} … h^{2t}, but every fixed collection of low or extreme-high bands is CONSISTENT for large t — the kill lives in the t-dependent middle bands; OPEN[T-UNIFORM-COEFFICIENT] stays open
+
+`k16-t3-uniform-sol56-20260903.md` (Sol, 23KB; box/k16t3-20260903/ with t3/, t4/,
+preprocessed/; 10/10 hashes). t = 3: (e, q) = (10, 7), radii (−1, 3/10) verified; three
+gauges 39 → 36 unknowns incl. c; 51 coefficient generators at levels 0..13 (degree
+histogram 1/6/23/21; 11,590 bytes); the chart reconstructs the uncollected h-adic Jacobian
+identically; GF(32003)/GF(32009)/GF(32027): [1] (13,465-byte programs, ≈ 62 s, 62 MB);
+EXACT: ordinary std over Q did not finish in the bounded window; a triangular
+preprocessing (preprocessed/triangular_preprocess.py, t3_normalized_slice.py) yields a
+normalised system over a quadratic field whose exact reduced basis is [1] (std 0.04 s;
+slimgb 0.57 s) — the gate must audit that the preprocessing is a COVERING reduction (every
+point of the original locus maps to the normalised system), not a slice. t = 4: 45 chart
+unknowns, 65 generators; std did not finish in 1,200 s; modular [1] over three primes
+(19,986-byte programs; 134–242 s; up to 1.2 GB) — MEASURED-MODULAR, not a proof.
+GENERIC t (§4–5): the family of gauged systems is written with explicit t-dependence; a
+uniform constant-pivot spine (§4.3) is proved for bands h^{4t+1} down to h^{2t}; an exact
+symbolic witness (§5.1) shows every fixed collection of low bands, and of extreme-high
+bands, is consistent for large t — so no bounded band subsystem is inconsistent uniformly;
+the first t-dependent bands (§5.2) are where the t = 2 and t = 3 certificates differ; the
+π^{-1} tail (§5.3) is not the bridge. VERDICT: t = 3 PROVED-HERE (pending gate); t = 4
+OPEN in characteristic zero; uniform PARTIAL. STATUS of the ray: dead at t = 1 (Moh),
+t = 2 (PROMOTED), t = 3 (PROVISIONAL), t = 4 (modular). Reading for the programme: a
+uniform proof of (T) on the ray cannot come from a fixed-size band subsystem; it needs
+either (i) a structural lemma about the middle bands (the "middle" scales with t — a
+recurrence/induction in t on the normalised triangular form), or (ii) a different
+invariant of the descended pair (the common-jet / Laurent bridge p₁₇ that all charts
+omit). Gate launched: k16-t3-gate-gpt55.

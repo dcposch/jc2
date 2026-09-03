@@ -1,0 +1,357 @@
+{
+  "dedicated_t4_driver": {
+    "path": "box/k16t3-20260903/t4/t4_order_system.py",
+    "sha256": "db5e54450444f27c56f00bbec287aea284c8dc190e0e549c2fea51e0dbdd6cee"
+  },
+  "frozen_t2_driver": {
+    "path": "/tmp/jc2-lane.NKyBDU/inputs/t2_order_system.py",
+    "sha256": "55067a8c74d6c360c72aaa40243dde7e8e1a804158b3c78abf523d77a25cb5e2"
+  },
+  "generic_driver": {
+    "path": "box/k16t3-20260903/t3/t_order_system.py",
+    "sha256": "e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28"
+  },
+  "method": "successive affine elimination with a nonzero Q-constant pivot",
+  "reductions": {
+    "2": {
+      "all_pivots_are_nonzero_Q_constants": true,
+      "bad_characteristics_for_precomputed_map": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "c_fixed_by_ring_map": true,
+      "emitted_primitive_integer_equation_vector_sha256": "93df9d15eb5e7dc7501ddd1f18d3083ed6590606e82c81abe65c37918fde3e64",
+      "every_emitted_integer_row_verified_as_Qstar_multiple": true,
+      "gauges": [
+        "alpha_t=0",
+        "const(beta_(2t+1))=0",
+        "const(alpha_(3t+1))=0"
+      ],
+      "highest_pivot_band": 9,
+      "lowest_pivot_band": 4,
+      "original_chart_unknowns_including_c": 27,
+      "original_equation_vector_sha256": "b260a69d40c772f198c618c758d57d38ccb8a3b2c11eba11b94066edd39a5803",
+      "original_equations": 37,
+      "pivot_band_histogram": {
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 1,
+        "9": 1
+      },
+      "pivot_coefficients": [
+        "5",
+        "5",
+        "10",
+        "5",
+        "10",
+        "5",
+        "10",
+        "5",
+        "-20",
+        "-15/4"
+      ],
+      "pivot_count": 10,
+      "pivot_variables": [
+        "a3_1",
+        "a4_1",
+        "a5_2",
+        "a5_1",
+        "a6_2",
+        "a6_1",
+        "a7_2",
+        "a7_1",
+        "a7_0",
+        "a7_3"
+      ],
+      "preprocess_elapsed_seconds": 4.223473,
+      "remaining_variables": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "a1_0",
+        "a3_0",
+        "a4_0",
+        "a5_0",
+        "a6_0",
+        "q2_0",
+        "q3_0",
+        "q3_1",
+        "q4_0",
+        "q4_1",
+        "q5_0",
+        "q5_1",
+        "c"
+      ],
+      "residual_chart_unknowns_including_c": 17,
+      "residual_equation_text_bytes": 15544,
+      "residual_equation_vector_sha256": "6be6e1aaa8f9e0f4b31f9e5672a7028b6fe831f14cde85eb73f2e8b94764dedf",
+      "residual_equations": 26,
+      "ring_map_verified_on_every_original_generator": true,
+      "t": 2,
+      "tuple": [
+        28,
+        20,
+        25,
+        3
+      ],
+      "zero_image_rows_including_pivot_rows": 11
+    },
+    "3": {
+      "all_pivots_are_nonzero_Q_constants": true,
+      "bad_characteristics_for_precomputed_map": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "c_fixed_by_ring_map": true,
+      "emitted_primitive_integer_equation_vector_sha256": "8bcf2583e89637a46f7549cdf2debadb609b150c545343832f08a05c954ed537",
+      "every_emitted_integer_row_verified_as_Qstar_multiple": true,
+      "gauges": [
+        "alpha_t=0",
+        "const(beta_(2t+1))=0",
+        "const(alpha_(3t+1))=0"
+      ],
+      "highest_pivot_band": 13,
+      "lowest_pivot_band": 6,
+      "original_chart_unknowns_including_c": 36,
+      "original_equation_vector_sha256": "c608dac91d9a595b9d1818e9d0a6e55ab5772012db8dedb1d739c2d0edf10cf5",
+      "original_equations": 51,
+      "pivot_band_histogram": {
+        "10": 2,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "pivot_coefficients": [
+        "7",
+        "7",
+        "7",
+        "14",
+        "7",
+        "14",
+        "7",
+        "14",
+        "7",
+        "14",
+        "7",
+        "-28",
+        "-21/4"
+      ],
+      "pivot_count": 13,
+      "pivot_variables": [
+        "a4_1",
+        "a5_1",
+        "a6_1",
+        "a7_2",
+        "a7_1",
+        "a8_2",
+        "a8_1",
+        "a9_2",
+        "a9_1",
+        "a10_2",
+        "a10_1",
+        "a10_0",
+        "a10_3"
+      ],
+      "preprocess_elapsed_seconds": 15.266681,
+      "remaining_variables": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "a1_0",
+        "a2_0",
+        "a4_0",
+        "a5_0",
+        "a6_0",
+        "a7_0",
+        "a8_0",
+        "a9_0",
+        "q2_0",
+        "q3_0",
+        "q4_0",
+        "q4_1",
+        "q5_0",
+        "q5_1",
+        "q6_0",
+        "q6_1",
+        "q7_0",
+        "q7_1",
+        "c"
+      ],
+      "residual_chart_unknowns_including_c": 23,
+      "residual_equation_text_bytes": 60475,
+      "residual_equation_vector_sha256": "829cefd85ea9554bcd3f0c7255b6160395467921d6b0cafa48502d31ed7f5c12",
+      "residual_equations": 37,
+      "ring_map_verified_on_every_original_generator": true,
+      "t": 3,
+      "tuple": [
+        40,
+        28,
+        37,
+        3
+      ],
+      "zero_image_rows_including_pivot_rows": 14
+    },
+    "4": {
+      "all_pivots_are_nonzero_Q_constants": true,
+      "bad_characteristics_for_precomputed_map": [
+        2,
+        3,
+        13
+      ],
+      "c_fixed_by_ring_map": true,
+      "emitted_primitive_integer_equation_vector_sha256": "7f3ce96a93473da09ed8b482fb2c29f7dc53971d59729544a95a276d2752e53b",
+      "every_emitted_integer_row_verified_as_Qstar_multiple": true,
+      "gauges": [
+        "alpha_t=0",
+        "const(beta_(2t+1))=0",
+        "const(alpha_(3t+1))=0"
+      ],
+      "highest_pivot_band": 17,
+      "lowest_pivot_band": 8,
+      "original_chart_unknowns_including_c": 45,
+      "original_equation_vector_sha256": "0e672bb86c0115883a02932ce5c1894fd0e24940dd3d5034073e840062d3c3a2",
+      "original_equations": 65,
+      "pivot_band_histogram": {
+        "10": 2,
+        "11": 2,
+        "12": 2,
+        "13": 2,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "8": 2,
+        "9": 2
+      },
+      "pivot_coefficients": [
+        "9",
+        "9",
+        "9",
+        "9",
+        "18",
+        "9",
+        "18",
+        "9",
+        "18",
+        "9",
+        "18",
+        "9",
+        "18",
+        "9",
+        "-36",
+        "-27/4"
+      ],
+      "pivot_count": 16,
+      "pivot_variables": [
+        "a5_1",
+        "a6_1",
+        "a7_1",
+        "a8_1",
+        "a9_2",
+        "a9_1",
+        "a10_2",
+        "a10_1",
+        "a11_2",
+        "a11_1",
+        "a12_2",
+        "a12_1",
+        "a13_2",
+        "a13_1",
+        "a13_0",
+        "a13_3"
+      ],
+      "preprocess_elapsed_seconds": 49.671734,
+      "remaining_variables": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "a1_0",
+        "a2_0",
+        "a3_0",
+        "a5_0",
+        "a6_0",
+        "a7_0",
+        "a8_0",
+        "a9_0",
+        "a10_0",
+        "a11_0",
+        "a12_0",
+        "q2_0",
+        "q3_0",
+        "q4_0",
+        "q5_0",
+        "q5_1",
+        "q6_0",
+        "q6_1",
+        "q7_0",
+        "q7_1",
+        "q8_0",
+        "q8_1",
+        "q9_0",
+        "q9_1",
+        "c"
+      ],
+      "residual_chart_unknowns_including_c": 29,
+      "residual_equation_text_bytes": 190587,
+      "residual_equation_vector_sha256": "41789168b025f8cb4623652850cc70e8b1f3e6ce0da56e02ccda55655b7d5a5a",
+      "residual_equations": 48,
+      "ring_map_verified_on_every_original_generator": true,
+      "t": 4,
+      "tuple": [
+        52,
+        36,
+        49,
+        3
+      ],
+      "zero_image_rows_including_pivot_rows": 17
+    }
+  },
+  "row_order": "descending h_power, ascending (gamma_power,pi_power), original row",
+  "singular_launched_by_this_driver": false,
+  "validations": {
+    "frozen_t2_certificate": {
+      "certificate_sha256": "8543fd41c391c10d5d5cbc9f3d36aac794a9a294bcb88aff993230f600fa1b2b",
+      "markers_checked": [
+        "exact coefficient field Q",
+        "37 Jacobian coefficient generators plus T*c-1",
+        "MAIN_DONE basis_size=",
+        "MAIN_SATURATED_EMPTY",
+        "G[1]=1"
+      ],
+      "reported_reduced_basis": [
+        "1"
+      ],
+      "reported_result": "SATURATED-EMPTY"
+    },
+    "generic_t2_vs_frozen_t2": {
+      "equation_count": 37,
+      "equation_vector_sha256": "b260a69d40c772f198c618c758d57d38ccb8a3b2c11eba11b94066edd39a5803",
+      "h_A_B_z_P_Q_equal": true,
+      "label": "generic t=2 vs frozen t=2",
+      "ordered_tagged_equations_equal": true,
+      "parameter_order_equal": true
+    },
+    "generic_t4_vs_dedicated_t4": {
+      "equation_count": 65,
+      "equation_vector_sha256": "0e672bb86c0115883a02932ce5c1894fd0e24940dd3d5034073e840062d3c3a2",
+      "h_A_B_z_P_Q_equal": true,
+      "label": "generic t=4 vs dedicated t=4",
+      "ordered_tagged_equations_equal": true,
+      "parameter_order_equal": true
+    }
+  },
+  "variable_tiebreak": "original gauged chart parameter order"
+}

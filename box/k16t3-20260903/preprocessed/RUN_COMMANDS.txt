@@ -1,0 +1,11 @@
+# Prepared only. Run one command only when the coordinator confirms a Singular slot.
+# Exact t=2 validates the transformed certificate computationally.
+/usr/bin/time -v Singular -q box/k16t3-20260903/preprocessed/t2_triangular_Q.sing > box/k16t3-20260903/preprocessed/t2_triangular_Q.out 2> box/k16t3-20260903/preprocessed/t2_triangular_Q.err
+/usr/bin/time -v Singular -q box/k16t3-20260903/preprocessed/t3_triangular_Q.sing > box/k16t3-20260903/preprocessed/t3_triangular_Q.out 2> box/k16t3-20260903/preprocessed/t3_triangular_Q.err
+/usr/bin/time -v Singular -q box/k16t3-20260903/preprocessed/t3_triangular_p32003.sing > box/k16t3-20260903/preprocessed/t3_triangular_p32003.out 2> box/k16t3-20260903/preprocessed/t3_triangular_p32003.err
+/usr/bin/time -v Singular -q box/k16t3-20260903/preprocessed/t3_triangular_p32009.sing > box/k16t3-20260903/preprocessed/t3_triangular_p32009.out 2> box/k16t3-20260903/preprocessed/t3_triangular_p32009.err
+/usr/bin/time -v Singular -q box/k16t3-20260903/preprocessed/t3_triangular_p32027.sing > box/k16t3-20260903/preprocessed/t3_triangular_p32027.out 2> box/k16t3-20260903/preprocessed/t3_triangular_p32027.err
+/usr/bin/time -v Singular -q box/k16t3-20260903/preprocessed/t4_triangular_Q.sing > box/k16t3-20260903/preprocessed/t4_triangular_Q.out 2> box/k16t3-20260903/preprocessed/t4_triangular_Q.err
+/usr/bin/time -v Singular -q box/k16t3-20260903/preprocessed/t4_triangular_p32003.sing > box/k16t3-20260903/preprocessed/t4_triangular_p32003.out 2> box/k16t3-20260903/preprocessed/t4_triangular_p32003.err
+/usr/bin/time -v Singular -q box/k16t3-20260903/preprocessed/t4_triangular_p65521.sing > box/k16t3-20260903/preprocessed/t4_triangular_p65521.out 2> box/k16t3-20260903/preprocessed/t4_triangular_p65521.err
+/usr/bin/time -v Singular -q box/k16t3-20260903/preprocessed/t4_triangular_p1000003.sing > box/k16t3-20260903/preprocessed/t4_triangular_p1000003.out 2> box/k16t3-20260903/preprocessed/t4_triangular_p1000003.err

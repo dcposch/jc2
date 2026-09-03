@@ -1,0 +1,50 @@
+Working directory: /home/ubuntu/jc2
+
+# Audits
+python3 box/k16t3-20260903/t3/t_order_system.py --t 3 --gauged > box/k16t3-20260903/t3/t3_gauged_audit.txt
+python3 box/k16t3-20260903/t3/t_order_system.py --t 3 > box/k16t3-20260903/t3/t3_ungauged_audit.txt
+
+# Singular input generation (the loop is run for each displayed prime)
+python3 box/k16t3-20260903/t3/t_order_system.py --t 3 --gauged --emit-singular --characteristic 32003 > box/k16t3-20260903/t3/t3_gauged_p32003.sing
+python3 box/k16t3-20260903/t3/t_order_system.py --t 3 --gauged --emit-singular --characteristic 32009 > box/k16t3-20260903/t3/t3_gauged_p32009.sing
+python3 box/k16t3-20260903/t3/t_order_system.py --t 3 --gauged --emit-singular --characteristic 32027 > box/k16t3-20260903/t3/t3_gauged_p32027.sing
+python3 box/k16t3-20260903/t3/t_order_system.py --t 3 --gauged --emit-singular --characteristic 0 > box/k16t3-20260903/t3/t3_gauged_Q.sing
+
+# The three modular runs were launched concurrently (three Singular cores total)
+for p in 32003 32009 32027; do
+  ( /usr/bin/time -f 'TIME_SEC=%e MAX_RSS_KB=%M EXIT=%x' -o box/k16t3-20260903/t3/t3_gauged_p${p}.resource timeout --signal=TERM --kill-after=10s 900s Singular -q box/k16t3-20260903/t3/t3_gauged_p${p}.sing > box/k16t3-20260903/t3/t3_gauged_p${p}.out 2> box/k16t3-20260903/t3/t3_gauged_p${p}.err ) &
+done
+wait
+
+# Exact-Q run, hard 30-minute ceiling
+/usr/bin/time -f 'TIME_SEC=%e MAX_RSS_KB=%M EXIT=%x' -o box/k16t3-20260903/t3/t3_gauged_Q.resource timeout --signal=TERM --kill-after=10s 1800s Singular -q box/k16t3-20260903/t3/t3_gauged_Q.sing > box/k16t3-20260903/t3/t3_gauged_Q.out 2> box/k16t3-20260903/t3/t3_gauged_Q.err
+
+# Bounded exact full-system fallbacks (both non-results; see resource files)
+python3 box/k16t3-20260903/t3/emit_t3_rabinowitsch.py --slimgb > box/k16t3-20260903/t3/t3_gauged_Q_slimgb.sing
+/usr/bin/time -f 'TIME_SEC=%e MAX_RSS_KB=%M EXIT=%x' -o box/k16t3-20260903/t3/t3_gauged_Q_slimgb.resource timeout --signal=TERM --kill-after=10s 1800s Singular -q box/k16t3-20260903/t3/t3_gauged_Q_slimgb.sing > box/k16t3-20260903/t3/t3_gauged_Q_slimgb.out 2> box/k16t3-20260903/t3/t3_gauged_Q_slimgb.err
+python3 box/k16t3-20260903/t3/emit_t3_rabinowitsch.py --modstd > box/k16t3-20260903/t3/t3_gauged_Q_modstd.sing
+/usr/bin/time -f 'TIME_SEC=%e MAX_RSS_KB=%M EXIT=%x' -o box/k16t3-20260903/t3/t3_gauged_Q_modstd.resource timeout --signal=TERM --kill-after=10s 1800s Singular -q box/k16t3-20260903/t3/t3_gauged_Q_modstd.sing > box/k16t3-20260903/t3/t3_gauged_Q_modstd.out 2> box/k16t3-20260903/t3/t3_gauged_Q_modstd.err
+
+# Superseded exact localized diagnostics
+python3 box/k16t3-20260903/t3/emit_t3_localized.py > box/k16t3-20260903/t3/t3_localized_Q.sing
+/usr/bin/time -f 'TIME_SEC=%e MAX_RSS_KB=%M EXIT=%x' -o box/k16t3-20260903/t3/t3_localized_Q.resource timeout --signal=TERM --kill-after=10s 1800s Singular -q box/k16t3-20260903/t3/t3_localized_Q.sing > box/k16t3-20260903/t3/t3_localized_Q.out 2> box/k16t3-20260903/t3/t3_localized_Q.err
+python3 box/k16t3-20260903/t3/emit_t3_normalized_qfield.py > box/k16t3-20260903/t3/t3_normalized_qfield_Q.sing
+/usr/bin/time -f 'TIME_SEC=%e MAX_RSS_KB=%M EXIT=%x' -o box/k16t3-20260903/t3/t3_normalized_qfield_Q.resource timeout --signal=TERM --kill-after=10s 1800s Singular -q box/k16t3-20260903/t3/t3_normalized_qfield_Q.sing > box/k16t3-20260903/t3/t3_normalized_qfield_Q.out 2> box/k16t3-20260903/t3/t3_normalized_qfield_Q.err
+
+# Decisive exact certificate (commands executed from the preprocessed directory)
+cd box/k16t3-20260903/preprocessed
+/usr/bin/time -v -o t3_normalized_K_std.resource timeout --signal=TERM --kill-after=10s 1800s Singular -q t3_normalized_K_std.sing > t3_normalized_K_std.out 2> t3_normalized_K_std.err
+/usr/bin/time -v -o t3_normalized_K_slimgb.resource timeout --signal=TERM --kill-after=10s 1800s Singular -q t3_normalized_K_slimgb.sing > t3_normalized_K_slimgb.out 2> t3_normalized_K_slimgb.err
+sha256sum -c SHA256SUMS.t3-normalized
+cd /home/ubuntu/jc2
+
+# Independent replay of both decisive inputs
+Singular -q box/k16t3-20260903/preprocessed/t3_normalized_K_std.sing
+Singular -q box/k16t3-20260903/preprocessed/t3_normalized_K_slimgb.sing
+
+# Independent driver/radius/specialization checks
+python3 box/k16t3-20260903/t3/validate_t3.py > box/k16t3-20260903/t3/t3_validation.txt
+
+# Final error gate and hashes
+rg -n '^   \?|error|FAIL' box/k16t3-20260903/t3/*.out box/k16t3-20260903/t3/*.err
+sha256sum box/k16t3-20260903/t3/t_order_system.py box/k16t3-20260903/t3/validate_t3.py box/k16t3-20260903/t3/*.sing box/k16t3-20260903/t3/*.out box/k16t3-20260903/t3/*.err box/k16t3-20260903/t3/*.resource box/k16t3-20260903/t3/*audit.txt box/k16t3-20260903/t3/t3_validation.txt
