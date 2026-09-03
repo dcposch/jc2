@@ -1,0 +1,180 @@
+screened-census -- C_FULL_TREE_ODE x nested-pack
+frozen /tmp/jc2-lane.LGjDKK/inputs
+==============================================================================
+
+-- HASH GATE (frozen inputs) --
+  [ok]   sha256 moh-program-review-sol56-20260903.md
+  [ok]   sha256 whole-tree-review-grok46-20260903.md
+  [ok]   sha256 full_tree_partition.py
+  [ok]   sha256 candidate_eval.py
+  [ok]   sha256 tree-independent.py
+  [ok]   sha256 nested_pack.py
+  [ok]   sha256 nested-pack-dp-grok46-20260903.md
+  [ok]   sha256 n6-family-review-grok46-20260903.md
+  [ok]   sha256 moh_skeleton_full.py
+  [ok]   workspace full_tree_partition.py
+  [ok]   workspace nested_pack.py
+  [ok]   workspace moh_skeleton_full.py
+
+-- CONTROL V-TUPLE: tree DP cache carries higher V --
+  [ok]   s=4 windows+full
+  [ok]   s=4 ODE embeds
+  [ok]   some cache key stores a V-tuple of length>=1
+  [ok]   a key stores length>=2 (V_{s-1}, V_s) at s=4
+
+-- CONTROL M: Moh six survive every screen --
+  [ok]   windows+full (64,48)
+  [ok]   TREE (64,48)
+  [ok]   ODE (64,48)
+  [ok]   PASSPORT (64,48)
+  [ok]   POLY (64,48)
+  [ok]   POLY+ODE (64,48)
+  [ok]   TI-zero TREE (64,48)
+  [ok]   nested[6,16] (64,48)
+  [ok]   windows+full (84,56) M2=64,V2=2
+  [ok]   TREE (84,56) M2=64,V2=2
+  [ok]   ODE (84,56) M2=64,V2=2
+  [ok]   PASSPORT (84,56) M2=64,V2=2
+  [ok]   POLY (84,56) M2=64,V2=2
+  [ok]   POLY+ODE (84,56) M2=64,V2=2
+  [ok]   TI-zero TREE (84,56) M2=64,V2=2
+  [ok]   nested[6,16] (84,56) M2=64,V2=2
+  [ok]   windows+full (84,56) M2=72,V2=5
+  [ok]   TREE (84,56) M2=72,V2=5
+  [ok]   ODE (84,56) M2=72,V2=5
+  [ok]   PASSPORT (84,56) M2=72,V2=5
+  [ok]   POLY (84,56) M2=72,V2=5
+  [ok]   POLY+ODE (84,56) M2=72,V2=5
+  [ok]   TI-zero TREE (84,56) M2=72,V2=5
+  [ok]   nested[6,16] (84,56) M2=72,V2=5
+  [ok]   windows+full (75,50) V2=3
+  [ok]   TREE (75,50) V2=3
+  [ok]   ODE (75,50) V2=3
+  [ok]   PASSPORT (75,50) V2=3
+  [ok]   POLY (75,50) V2=3
+  [ok]   POLY+ODE (75,50) V2=3
+  [ok]   TI-zero TREE (75,50) V2=3
+  [ok]   nested[6,16] (75,50) V2=3
+  [ok]   windows+full (75,50) V2=2
+  [ok]   TREE (75,50) V2=2
+  [ok]   ODE (75,50) V2=2
+  [ok]   PASSPORT (75,50) V2=2
+  [ok]   POLY (75,50) V2=2
+  [ok]   POLY+ODE (75,50) V2=2
+  [ok]   TI-zero TREE (75,50) V2=2
+  [ok]   nested[6,16] (75,50) V2=2
+  [ok]   windows+full (99,66)
+  [ok]   TREE (99,66)
+  [ok]   ODE (99,66)
+  [ok]   PASSPORT (99,66)
+  [ok]   POLY (99,66)
+  [ok]   POLY+ODE (99,66)
+  [ok]   TI-zero TREE (99,66)
+  [ok]   nested[6,16] (99,66)
+
+-- CONTROL n<=100: 658 -> 60/58/55/23/20, TI row-for-row --
+  [ok]   n<=100 Kmin=2 rows = 658
+  [ok]   n<=100 (n,m) classes = 63
+  [ok]   printed keys subset of census
+  [ok]   C_FULL_TREE rows = 60
+  [ok]   C_FULL_TREE_ODE rows = 58
+  [ok]   C_FULL_TREE_PASSPORT rows = 55
+  [ok]   C_FULL_TREE_POLY rows = 23
+  [ok]   C_FULL_TREE_POLY+ODE rows = 20
+  [ok]   Moh six in TREE
+  [ok]   Moh six in ODE
+  [ok]   Moh six in PASSPORT
+  [ok]   Moh six in POLY
+  [ok]   Moh six in POLY+ODE
+  [ok]   FT TREE == TI --zero-only row-for-row
+  [ok]   FT PASSPORT == TI --zero-only --passport
+  [ok]   FT POLY == TI default recenter
+  [ok]   no FT/TI disagreements
+  [ok]   (75,50) ODE residue {(55,2),(55,3)}
+   n<=100 wall 2.23s
+  [ok]   ODE excess rows = 52
+   of the 52, u_s=1 (Prop 6.3/6.4 automatic): 52
+
+== SCREENED CENSUS 48 <= D <= 400 (budget 1138s) ==
+       D   grp     V  treeG   odeG    tN6    oN6   oN16  passG   unN6  unN16 empty?  wall
+      48     2     2      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+      54     2     2      0      0      0      0      0      0      2      2      Y  0.0s EMPTY-ODE-N6
+      60    15    18      0      0      0      0      0      0     12     12      Y  0.0s EMPTY-ODE-N6
+      63     2     2      0      0      0      0      0      0      1      1      Y  0.0s EMPTY-ODE-N6
+      64     9    10      1      1      1      1      1      1      5      5         0.0s
+      72    46    55      2      2      0      0      0      2     19     19      Y  0.1s EMPTY-ODE-N6
+      75     5     9      1      1      1      1      1      1      3      3         0.0s
+      80    40    45      1      1      0      0      0      1     14     14      Y  0.1s EMPTY-ODE-N6
+      81     2     2      0      0      0      0      0      0      1      1      Y  0.0s EMPTY-ODE-N6
+      84    38    51      5      4      3      2      2      4     20     20         0.1s
+      88     1     1      0      0      0      0      0      0      1      0      Y  0.0s EMPTY-ODE-N6
+      90    62    91      6      6      2      2      2      6     31     30         0.2s
+      96   157   229     21     20     10     10     10     20     72     61         0.5s
+      99     7     8      1      1      1      1      1      1      6      4         0.0s
+     100    57    67      2      2      1      1      1      1     29     28         0.1s
+     102     3     3      0      0      0      0      0      0      3      3      Y  0.0s EMPTY-ODE-N6
+     104     3     4      0      0      0      0      0      0      3      3      Y  0.0s EMPTY-ODE-N6
+     105    14    15      0      0      0      0      0      0      7      3      Y  0.0s EMPTY-ODE-N6
+     108   125   206     13     12      8      8      5     11     81     61         0.4s
+     110     3     3      0      0      0      0      0      0      1      1      Y  0.0s EMPTY-ODE-N6
+     112    71    76      7      7      2      2      2      7     28     19         0.2s
+     114     3     4      0      0      0      0      0      0      3      3      Y  0.0s EMPTY-ODE-N6
+     117     7     7      0      0      0      0      0      0      3      3      Y  0.0s EMPTY-ODE-N6
+     120   515   782     53     46     28     23     18     41    242    174         1.8s
+  [ok]   D<=120 unscreened groups = 1189
+  [ok]   D<=120 unscreened nested N>=6 = 587
+  [ok]   D<=120 unscreened nested [6,16] = 470
+  [ok]   D<=120 TREE V = 183
+  [ok]   D<=120 TREE groups = 113
+  [ok]   D<=120 ODE V = 168
+  [ok]   D<=120 ODE groups = 103
+     125     4     4      1      1      1      1      1      1      0      0         0.0s
+     126   106   150     10      9      5      3      2      8      0      0         0.3s
+     128   129   170     17     15      8      7      6     14      0      0         0.6s
+     130     6     6      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     132    70    98      4      3      3      3      2      3      0      0         0.1s
+     135    58    94      5      4      4      3      2      4      0      0         0.1s
+     140   190   221     14     12      5      3      3      9      0      0         0.4s
+     144  1216  2287    144    137     90     84     63    127      0      0         6.5s
+     147    21    23      3      3      3      3      2      3      0      0         0.0s
+     150   337   445     28     26     12     10      9     21      0      0         0.4s
+     152     5     6      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     153     7     8      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     154     3     3      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     156    77   117      7      3      5      3      1      2      0      0         0.1s
+     160   882  1255    115    105     46     40     25     97      0      0         1.9s
+     162   216   359     16     12     12      9      6     10      0      0         0.3s
+     165    36    46      2      2      2      2      1      2      0      0         0.0s
+     168  1001  1470     92     75     44     31     25     68      0      0         1.5s
+     170     3     3      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     171    10    10      1      1      1      1      1      1      0      0         0.0s
+     174     6     7      1      0      1      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     175    30    35      3      3      3      3      2      3      0      0         0.0s
+     176   135   160      8      8      1      1      1      8      0      0         0.2s
+     180  2559  4687    251    232    163    150    106    203      0      0         8.9s
+     182     6     6      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     184     4     4      1      0      1      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     186     5     6      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     189   113   202      7      7      5      4      4      6      0      0         0.2s
+     190    10    10      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     192  3589  7276    466    438    267    246    175    424      0      0        74.9s
+     195    32    35      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     196   166   190     11     10      3      3      3      7      0      0         0.2s
+     198   204   350     16     12     11      8      6     12      0      0         0.4s
+     200  1591  2285    180    163     67     58     34    132      0      0         3.1s
+  [ok]   D<=200 unscreened groups = 14016
+     204    97   160      9      4      8      3      2      0      0      0         0.1s
+     207    10    10      1      1      1      1      1      0      0      0         0.0s
+     208   261   295     14     12      7      6      5      0      0      0         0.3s
+     210  1249  1786    100     86     52     40     24      0      0      0         1.3s
+     216  3959  9007    478    447    324    304    230      0      0      0        17.0s
+     220   448   525     25     20      4      2      1      0      0      0         0.5s
+     222     1     1      1      0      1      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     224  2029  2876    257    236    104     87     53      0      0      0         3.5s
+     225   559   907     48     48     32     32     19      0      0      0         0.6s
+     228   138   221     11      5      9      5      1      0      0      0         0.1s
+     230     4     4      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     231    53    62      3      3      3      3      3      0      0      0         0.1s
+     232     7     9      1      0      1      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6
+     234   250   425     22     16     18     14     10      0      0      0         0.3s
+     238     6     8      0      0      0      0      0      0      0      0      Y  0.0s EMPTY-ODE-N6

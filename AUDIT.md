@@ -16139,3 +16139,45 @@ K ≥ 16; D = 192's s = 6 skeleton exceeded the desk budget): baseline
 re-based: 324 excess rows / 48 excess classes gap-free (198 / 17 gated).
 OPEN[SIBLING-COEFFICIENT-COMPATIBILITY] is the ranked residual (per-node
 screens never force the p_j, q_j at different nodes to come from one pair).
+
+## INTEGRATION #17 DELTA (v) (2026-09-03T12:20Z, MEASURED + PROVED-HERE/UNREVIEWED): THE SCREENED CENSUS IS COFINALLY NONEMPTY — THE K = 16 RAY THROUGH MOH'S (64,48); THE OPERATIVE NUMBERS; THE FIRST D = 108 TARGET
+
+`screened-census-grok46-20260903.md` (Grok; box/screened-census/; the frozen
+tree DP composed with the frozen nested-pack DP, higher V-tuple in the state;
+unscreened columns reproduce 1,189 / 587 / 470 and 14,016; Moh's six survive
+every screen; note: its TREE column is the gapped C_FULL_TREE of delta 17(u) —
+the family below does not depend on the gap). OPERATIVE (C_FULL_TREE_ODE +
+exact nested N ≥ 6): 48 ≤ D ≤ 120: 103 ODE groups, 51 alive at N ≥ 6, 43 in
+[6,16]; 48 ≤ D ≤ 200: 1,384 ODE groups, 727 / 523; 48 ≤ D ≤ 238: 2,262 ODE
+groups, 1,224 alive (D = 240's nested DP exceeded the desk budget); degrees
+emptied at D ≤ 200 = the TREE-empty list of 17(r) plus ODE-kills {174, 184}
+and nested-kills {72, 80}; D = 105 and D = 117 TREE-empty (0/0/0). FIRST
+REALISATION TARGET above 100: D = 108 (5 groups in [6,16], all s = 4,
+u_s = 1); lexicographic first: n = 108, m = 72, M = (12, 102, 106), V_s = 5,
+K = 36, (d,e) = (2,3), d = (108, 36, 12, 6, 2), u = 30; V = (1, 8, 5), q = 5/7,
+|O| = 21, one NZ packet w = 21 ≤ 30 → N = {15}; descends by Prop 6.3/6.4 to
+π-degrees (18, 12), J ∼ γ³. THE K = 16 FAMILY (PROVED-HERE, all t ≥ 1;
+census-emitted at t = 1, 2, 3, 8, 20, 50; n up to 2,416): e = 3t + 1,
+d = 2t + 1 (coprime), n = 16e = 48t + 16, m = 16d = 32t + 16,
+M = (−m, n − 12, n − 2), V₂ = V₃ = 3; d = (n, 16, 4, 2); windows 2 < 3 ≤ 4
+and 4/3 < 3 ≤ 12; δ₃ = −1, δ₂ = 1/4 (w = n − M₂ = 12 constant), A₂ = 4,
+P = 12 ≡ 0 (mod 4) — NO forced zero (the congruence A₂ | P₂ of Opus's H4),
+Q = 9, (10)-only, |O| = 4, u = 12; δ₁ = (7t+2)/(4(3t+1)), A₁ = 3t + 1 = e;
+(12) holds identically; q = (2t+1)/4; N = 6t + 3 (t = 1: Moh's (64,48), N = 9;
+t = 2: the D = 112 s = 3 survivor, N = 15); TREE: the selected V₂ = 3 is a
+major nonzero orbit, danger clears on the nonzero label, no Prop 5.6 step is
+involved — the family survives the GAP-FREE screens of 17(u) as well; ODE:
+12 − 27 ≠ 0; nested: one NZ packet w = 12 = u. Members with n ≤ 400: 64, 112,
+160, 208, 256, 304, 352, 400. Cofinal at N ≥ 6 (N grows: not a fixed-N
+family; inside [6,16] only t = 1, 2). u_s = 1 for every t: Prop 6.3/6.4
+descends the WHOLE RAY to monomial-Jacobian pairs of degrees (12t + 4, 8t + 4),
+J ∼ γ (k = 1) — an unbounded-degree, s' = 2 client family for theorem (T)
+(t = 1 is Moh's (16,12; X) row). Descent does not kill the family; it
+converts it. CONSEQUENCE (binding for allocation): Q3(f) after the screen is
+NO — emptiness of the screened census cannot prove JC2; both dead rays died
+to A₂ ∤ P₂ with constant nonzero residue, and a ray with A₂ | P₂ exists; the
+uniform theorem must use a datum outside PATH-ARITH + TREE + ODE + nested:
+sibling coefficients / the descended monomial-Jacobian analysis along u_s = 1
+(theorem (T)), for which the K = 16 ray is now the canonical unbounded test
+family. Residue at n ≤ 100: 58 − 6 = 52 excess ODE rows, ALL with u_s = 1.
+Different-model gate on the family: GPT-5.5 lane launched.

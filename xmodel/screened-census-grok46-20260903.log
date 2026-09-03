@@ -1,0 +1,30 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll verify the frozen input hashes first, then read the charged sources and compose the screened census from the tree screen and nested-pack knapsack.Hashes match. Next I’ll read the charged sources and the existing census/nested-pack machinery so the composition stays fail-closed.The tree and nested-pack drivers are in. I’ll pull the charged reviews and the enumerator next so the composition matches the frozen counts.I’ll inspect the enumerator, knapsack helpers, Prop 6.3, and AUDIT delta 17 so the census can carry the higher V-tuple and stay fail-closed.Workspace hashes match the frozen copies. I’ll probe census and tree cost at high D, then write the composition driver.Tree cost at high composite degrees is large but in budget. I’ll write the composition driver next: TREE/ODE first, nested pack on survivors, side columns kept separate.I’ll drop the expensive constructive scan and cluster the measured s=3 survivors instead, and keep passport/recenter as side columns only through D=200.n≤100 checks passed (658→60/58/55/23/20; all 52 excess rows have `u_s=1`). Launching the full census to D≤400.D≤120 checkpoints matched 1189/587/470. I’ll extract the D=108/112/120 survivor lists in parallel while the census continues.I have the D≤200 checkpoints and the 108/112/120 lists. Drafting the report structure next, then I’ll fill D≤400 totals when the census finishes.A possible s=3 family just showed up: `K=16`, `M_2=n-12`, `V_3=3`, `P\equiv 0 mod A_2`. I’ll test it while the census runs.The K=16 family is closed-form and cofinal. I’ll write the report from the verified numbers and fill D≤400 totals when the census process finishes.I have the family algebra and the D≤200 counts. Writing the sealed report next; D≤400 totals will be filled from the census log when that run finishes.Writing the report from verified controls, D≤200 checkpoints, survivor lists, and the closed-form family.The report is a bit over the 25KB cap. I’ll tighten the residue table and a few prose sections.D=240’s nested pack has been running ~12 minutes and is about to blow the desk budget. I’ll stop the loop at D=238 and record that bound.The screened census is composed and fail-closed. Report: `xmodel/screened-census-grok46-20260903.md`.
+
+**Operative numbers** (`C_FULL_TREE_ODE` + nested-pack; passport and recenter kept as side columns):
+
+| slice | PATH-ARITH groups | ODE groups | nested N≥6 | nested [6,16] |
+|---|---:|---:|---:|---:|
+| n≤100 | 658 rows → 60 TREE → **58 ODE** | — | — | — |
+| D≤120 | **1,189** (unscreened nested **587 / 470**) | 103 | **51** | **43** |
+| D≤200 | **14,016** | 1,384 | **727** | **523** |
+| D≤238 | 23,087 | 2,262 | **1,224** | 872 |
+
+Moh’s six survive every screen. Frozen TREE/ODE/PASSPORT group counts at D≤200 match 1,516 / 1,384 / 1,261. D=105 and D=117 are empty under TREE.
+
+**First realisation target above 100:** D=108, `m=72`, `M=(12,102,106)`, `V_s=5`, `s=4`, nested `N={15}`, `u_s=1` (Prop 6.3 automatic). Five `[6,16]` groups at D=108, all `s=4`. First `s=3` campaign-window survivor is D=112 and is a member of the family below.
+
+**Cofinality (Q3(f) after the screen): no proof program by emptiness.** Closed form, all `t≥1`:
+
+```text
+n=48t+16, m=32t+16, M₂=n−12, V₂=V₃=3, K=16, A₂=4, P=12≡0 (mod A₂)
+u_s=1, q=(2t+1)/4, N=6t+3 ≥ 9
+```
+
+`t=1` is Moh (64,48). Sol’s `L=8a+5` ray and the `A₂=6` ray stay TREE-dead (`b_min>h` identically).
+
+**Residue:** 58−6=**52** excess ODE rows at n≤100; **52/52 have `u_s=1`**. All are `s≥4`.
+
+The D≤400 loop stopped at **D=238**: D=240 nested mix-DP blew the remaining desk budget (TREE+ODE there is 26 s). Cofinality does not depend on that loop. Driver: `box/screened-census/screened_census.py`.
+DIVERT path=xmodel/screened-census-grok46-20260903.md status=DIVERTED body_bytes=25572 body_sha256=29a6f54dff3dbe2e2ad4cbb07dfdb7b18168e86848d5abb4644f2024f766b82d overflow=xmodel/screened-census-grok46-20260903.overflow overflow_bytes=396 raw=xmodel/screened-census-grok46-20260903.raw.md raw_sha256=a68da119bdebd598f1d4b0fe195b3bcd2bcc8671ff9bb1f389cf8e45604a1eaf overflow_sha256=0deeda3dffa63a3f550a52367c7b3c54777e205d47f707b590b4cb57329ccc7c
+post-BODY-END overflow diverted; charged body preserved
