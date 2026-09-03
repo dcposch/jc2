@@ -16720,3 +16720,31 @@ uniform-in-t, arbitrary support. Process note from the gate: a grep for the seal
 convention touched an ideation prompt filename (not used as input). STATUS: on the only
 known cofinal screened family, theorem (T) now holds at t = 1 (Moh, Appendix II; four
 mechanical replays today) and t = 2 (Sol + GPT-5.5, PROMOTED).
+
+## INTEGRATION #17 DELTA (pp) (2026-09-03T14:33Z, MEASURED + PROVED-HERE/UNREVIEWED kills, producer GPT-5.5): THE TWO-POINT TARGET LIST AT D ≤ 200 — 8 of 18 rows SATURATED-EMPTY (the four Moh/compiler controls, the promoted (28,20), and THREE NEW KILLS: (147,98) → (21,14; 15; 6; k = 4), (168,112) → (24,16; 18; 7; k = 4), (189,126) → (27,18; 21; 8; k = 4)); 10 rows COUNTING-BOUND (u' ≥ 3 top face not licensed; K = 16 t = 3 and (132,88) modular timeouts); NO SURVIVES; R = k + 1 (not R = 1) is the two-point condition
+
+`twopoint-batch-gpt55-20260903.md` (GPT-5.5; 11/11 hashes; box/twopoint-batch-20260903/
+twopoint_order_batch.py, results.json, summary.tsv; Singular 4.3.2; wall 3:49, 537 MB;
+sequential). Generator: descended datum → d₂' = K, d₃', e', d', u' = d₂' − V₂', R; closed-form
+radii (17(ff)); CORRECTION to the coordinator's prompt: the two-point condition is R = k + 1
+(δ₂' = −(k+1)/R = −1), which every one of the 18 rows satisfies; Theorem 1.2 coefficient
+bound B = V₂'δ₁' + u'δ₂'; h-adic Jacobian identity J(ah^r, bh^s) = h^{r+s}J(a,b) +
+h^{r+s−1}(s·b·J(a,h) + r·a·J(h,b)) with monic Euclidean division; h⁰ remainder = c·x^k;
+Rabinowitsch; wrapper controls in every ring; modular (32003/32009/32027) before Q. Top-face
+policy: u' = 1 fixed y^{V₂'}(y − x); u' = 2 fixed y^{V₂'}(y² − x²); u' ≥ 3 NOT licensed (D1-only
+count, monic y^K). Invariant audit table records δ₁' = 0 on the three k = 4 rows (finite,
+licensed A/B chart; recorded, not hidden) and A₁, endpoint (12)/(13) per row. CONTROLS: the
+four requested rows all [1] over three primes and Q; actual pair (π, π − γ²/2) passes shapes,
+fails the tuple. RESULTS (exact Q [1]): (16,12;13;3;1) 18 unk/23 eq 0.015 s; (15,10;11;2;2)
+16/42; (15,10;11;3;2) 13/22; (21,14;18;5;1) 16/31; (28,20;25;3;1) 27/37 32.4 s; NEW:
+(21,14;15;6;4) 12/23 0.008 s; (24,16;18;7;4) 13/26; (27,18;21;8;4) 14/29 — all with u' = 1
+fixed top face. COUNTING-BOUND: (25,15;21;2;2) 148 unk D1-only; (33,22;30;8;1) 31/62 modular
+TIMEOUT 180 s; (40,28;37;3;1) [K16 t = 3] 36/51 modular TIMEOUT 180 s (exact not launched;
+Sol's k16-t3 lane is on it with 4 cores); (35,20;31;2;2) 207; (35,25;31;3;2) 149;
+(45,30;42;11;1) 48; (30,24;25;4;3) 143; (24,16;17;2;5) 41; (49,14;46;4;1) 197; (50,30;47;7;1)
+230. READING: no SURVIVES → no counterexample candidate; the all-17 theorem is NOT proved;
+the blockers are (i) LICENSING the top face for u' ≥ 3 (the inverse-Prop-6.3 minor-disc
+split that Moh derives by hand on p.210 for (15,10)) — 7 of the 10 open rows; (ii) compute
+for 31–36-unknown charts. Typing: the three new kills are PROVED-HERE/UNREVIEWED (gate
+launched); the rest MEASURED. Under the operative screen, the two-point s_eff = 2 u_s = 1
+stratum at D ≤ 200 now stands at 8 dead / 10 open / 0 alive.

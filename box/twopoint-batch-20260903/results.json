@@ -1,0 +1,1891 @@
+{
+  "actual_pair_control": {
+    "J": "gamma",
+    "lemma_shape_pass": true,
+    "monic_in_pi": true,
+    "pair": "(pi, pi-gamma^2/2)",
+    "reason": "degree/support is not any charged D<=200 descended tuple",
+    "reciprocal_anchor_degrees": [
+      2,
+      2
+    ],
+    "tuple_classifier": "FAIL"
+  },
+  "manifest": {
+    "ok": true,
+    "receipt": "/home/ubuntu/jc2/xmodel/twopoint-batch-gpt55-20260903.run.v2",
+    "results": [
+      {
+        "basename": "k16-t2-gate-gpt55-20260903.md",
+        "expected": "692fd869d8a11b3a984d1fe8c4ccb4b42de7326567c130b8babae1571ca6e863",
+        "got": "692fd869d8a11b3a984d1fe8c4ccb4b42de7326567c130b8babae1571ca6e863",
+        "ok": true
+      },
+      {
+        "basename": "t2_independent_order_system.py",
+        "expected": "7ee7e29eca86dadecf4cffdc996539fc875851ce5803ad7ddaf68b888624f823",
+        "got": "7ee7e29eca86dadecf4cffdc996539fc875851ce5803ad7ddaf68b888624f823",
+        "ok": true
+      },
+      {
+        "basename": "t2_independent_order_system.sing",
+        "expected": "4396e98078c5bb4ed5e30c850ec02e87abcfb0fb8d480521728b3b5a1c1f4158",
+        "got": "4396e98078c5bb4ed5e30c850ec02e87abcfb0fb8d480521728b3b5a1c1f4158",
+        "ok": true
+      },
+      {
+        "basename": "k16-ray-T-newton-sol56-v3-20260903.md",
+        "expected": "27f395615d37906a379f6c727c6499be6d78c711e7d7ca728ac44050f1be23e0",
+        "got": "27f395615d37906a379f6c727c6499be6d78c711e7d7ca728ac44050f1be23e0",
+        "ok": true
+      },
+      {
+        "basename": "t2_order_system.py",
+        "expected": "55067a8c74d6c360c72aaa40243dde7e8e1a804158b3c78abf523d77a25cb5e2",
+        "got": "55067a8c74d6c360c72aaa40243dde7e8e1a804158b3c78abf523d77a25cb5e2",
+        "ok": true
+      },
+      {
+        "basename": "post-poly-census-grok46-20260903.md",
+        "expected": "fcddd0b0a8164f84c8aeb2ebad326fd49687094db7baca7a29f19924dfd2689b",
+        "got": "fcddd0b0a8164f84c8aeb2ebad326fd49687094db7baca7a29f19924dfd2689b",
+        "ok": true
+      },
+      {
+        "basename": "prop55k-opus5-20260903.md",
+        "expected": "cb8244260483c3722569966053e11e7e13e8bd396d3e5a2ea0b800c17a4c3c3b",
+        "got": "cb8244260483c3722569966053e11e7e13e8bd396d3e5a2ea0b800c17a4c3c3b",
+        "ok": true
+      },
+      {
+        "basename": "appendix2-compiler-grok46-20260903.md",
+        "expected": "dea9f5be619b9507b5ca30db51ddd88401b293e7ab7a0e75c8ae8083a5c79c27",
+        "got": "dea9f5be619b9507b5ca30db51ddd88401b293e7ab7a0e75c8ae8083a5c79c27",
+        "ok": true
+      },
+      {
+        "basename": "shape.py",
+        "expected": "d8750d4e512645366e9e0c53153484eb5daa9c785434c1cc59658986d0ab138c",
+        "got": "d8750d4e512645366e9e0c53153484eb5daa9c785434c1cc59658986d0ab138c",
+        "ok": true
+      },
+      {
+        "basename": "moh1983_jram340_configurations_of_roots.pdf",
+        "expected": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "got": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "ok": true
+      },
+      {
+        "basename": "FALLACY-v2.md",
+        "expected": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "got": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "ok": true
+      }
+    ]
+  },
+  "primes": [
+    32003,
+    32009,
+    32027
+  ],
+  "rows": [
+    {
+      "exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.015,
+        "rc": 0,
+        "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/64_48_16_12_13_3_k1_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=23 unknowns=18 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "invariants": {
+        "A1": 4,
+        "K": 4,
+        "M2": 13,
+        "R": 2,
+        "R_equals_k_plus_1": true,
+        "V2": 3,
+        "b12": true,
+        "b13": false,
+        "d2prime": 4,
+        "d3prime": 1,
+        "delta1": "1/4",
+        "delta2": "-1",
+        "dprime": 3,
+        "eprime": 4,
+        "ident188": true,
+        "k": 1,
+        "m": 12,
+        "n": 16,
+        "n_ab_shape": 9,
+        "n_beta_D1": 7,
+        "n_h_fixed": 4,
+        "n_ord_shape": 12,
+        "src": "(64,48)",
+        "tag": "MOH-K16-t1",
+        "uprime": 1,
+        "vprime": 3
+      },
+      "meta": {
+        "alpha_dims": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "basis_weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "A",
+            "-1/2"
+          ],
+          [
+            "B",
+            "-3/4"
+          ],
+          [
+            "z",
+            "-1"
+          ],
+          [
+            "x",
+            "-1"
+          ]
+        ],
+        "beta_dims": [
+          2,
+          2
+        ],
+        "bound_unit": "-1/4",
+        "build": "system",
+        "build_elapsed": 0.572,
+        "chart": "k16_hadic_order",
+        "dprime": 3,
+        "eprime": 4,
+        "equations": 23,
+        "gauges": [
+          "P -> P - alpha_1 Q",
+          "Q -> Q - const(beta_3)",
+          "P -> P - const(alpha_4)"
+        ],
+        "h_free_count": 4,
+        "levels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "ring": "Q[17 params,c,T]",
+        "shear_checked": true,
+        "top_policy": "fixed",
+        "unknowns": 18
+      },
+      "modular": [
+        {
+          "basis_size": "1",
+          "char": 32003,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.015,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/64_48_16_12_13_3_k1_mod_32003.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=23 unknowns=18 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32009,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.015,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/64_48_16_12_13_3_k1_mod_32009.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=23 unknowns=18 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32027,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.015,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/64_48_16_12_13_3_k1_mod_32027.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=23 unknowns=18 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "row": {
+        "M2": 13,
+        "V2": 3,
+        "k": 1,
+        "m": 12,
+        "n": 16,
+        "src": "(64,48)",
+        "tag": "MOH-K16-t1"
+      }
+    },
+    {
+      "exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.007,
+        "rc": 0,
+        "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/75_50_V2_2_15_10_11_2_k2_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=42 unknowns=16 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "invariants": {
+        "A1": 3,
+        "K": 5,
+        "M2": 11,
+        "R": 3,
+        "R_equals_k_plus_1": true,
+        "V2": 2,
+        "b12": true,
+        "b13": false,
+        "d2prime": 5,
+        "d3prime": 1,
+        "delta1": "4/3",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 3,
+        "ident188": true,
+        "k": 2,
+        "m": 10,
+        "n": 15,
+        "n_ab_shape": 16,
+        "n_beta_D1": 28,
+        "n_h_fixed": 11,
+        "n_ord_shape": 40,
+        "src": "(75,50) V2=2",
+        "tag": "MOH-COMPILER",
+        "uprime": 3,
+        "vprime": 2
+      },
+      "meta": {
+        "ab_forced": true,
+        "build": "system",
+        "build_elapsed": 2.057,
+        "chart": "d2e3_ab",
+        "dprime": 2,
+        "eprime": 3,
+        "equations": 42,
+        "h_free_count": 11,
+        "levels": [
+          0,
+          1
+        ],
+        "ring": "Q[h(11),bp,bq,br,bs,c,T]",
+        "top_note": "fixed split top face",
+        "top_policy": "fixed",
+        "unknowns": 16
+      },
+      "modular": [
+        {
+          "basis_size": "1",
+          "char": 32003,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.007,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/75_50_V2_2_15_10_11_2_k2_mod_32003.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=42 unknowns=16 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32009,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.007,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/75_50_V2_2_15_10_11_2_k2_mod_32009.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=42 unknowns=16 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32027,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.007,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/75_50_V2_2_15_10_11_2_k2_mod_32027.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=42 unknowns=16 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "row": {
+        "M2": 11,
+        "V2": 2,
+        "k": 2,
+        "m": 10,
+        "n": 15,
+        "src": "(75,50) V2=2",
+        "tag": "MOH-COMPILER"
+      }
+    },
+    {
+      "exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.006,
+        "rc": 0,
+        "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/75_50_V2_3_15_10_11_3_k2_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=22 unknowns=13 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "invariants": {
+        "A1": 2,
+        "K": 5,
+        "M2": 11,
+        "R": 3,
+        "R_equals_k_plus_1": true,
+        "V2": 3,
+        "b12": false,
+        "b13": true,
+        "d2prime": 5,
+        "d3prime": 1,
+        "delta1": "1/2",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 3,
+        "ident188": true,
+        "k": 2,
+        "m": 10,
+        "n": 15,
+        "n_ab_shape": 13,
+        "n_beta_D1": 14,
+        "n_h_fixed": 8,
+        "n_ord_shape": 23,
+        "src": "(75,50) V2=3",
+        "tag": "MOH-CONTROL2",
+        "uprime": 2,
+        "vprime": 3
+      },
+      "meta": {
+        "ab_forced": true,
+        "build": "system",
+        "build_elapsed": 0.592,
+        "chart": "d2e3_ab",
+        "dprime": 2,
+        "eprime": 3,
+        "equations": 22,
+        "h_free_count": 8,
+        "levels": [
+          0,
+          1
+        ],
+        "ring": "Q[h(8),bp,bq,br,bs,c,T]",
+        "top_note": "fixed split top face",
+        "top_policy": "fixed",
+        "unknowns": 13
+      },
+      "modular": [
+        {
+          "basis_size": "1",
+          "char": 32003,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.009,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/75_50_V2_3_15_10_11_3_k2_mod_32003.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=22 unknowns=13 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32009,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.007,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/75_50_V2_3_15_10_11_3_k2_mod_32009.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=22 unknowns=13 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32027,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.007,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/75_50_V2_3_15_10_11_3_k2_mod_32027.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=22 unknowns=13 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "row": {
+        "M2": 11,
+        "V2": 3,
+        "k": 2,
+        "m": 10,
+        "n": 15,
+        "src": "(75,50) V2=3",
+        "tag": "MOH-CONTROL2"
+      }
+    },
+    {
+      "exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.006,
+        "rc": 0,
+        "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/84_56_21_14_18_5_k1_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=31 unknowns=16 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "invariants": {
+        "A1": 3,
+        "K": 7,
+        "M2": 18,
+        "R": 2,
+        "R_equals_k_plus_1": true,
+        "V2": 5,
+        "b12": true,
+        "b13": false,
+        "d2prime": 7,
+        "d3prime": 1,
+        "delta1": "1/3",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 3,
+        "ident188": true,
+        "k": 1,
+        "m": 14,
+        "n": 21,
+        "n_ab_shape": 16,
+        "n_beta_D1": 16,
+        "n_h_fixed": 11,
+        "n_ord_shape": 28,
+        "src": "(84,56)",
+        "tag": "MOH-COMPILER",
+        "uprime": 2,
+        "vprime": 5
+      },
+      "meta": {
+        "ab_forced": true,
+        "build": "system",
+        "build_elapsed": 1.063,
+        "chart": "d2e3_ab",
+        "dprime": 2,
+        "eprime": 3,
+        "equations": 31,
+        "h_free_count": 11,
+        "levels": [
+          0,
+          1
+        ],
+        "ring": "Q[h(11),bp,bq,br,bs,c,T]",
+        "top_note": "fixed split top face",
+        "top_policy": "fixed",
+        "unknowns": 16
+      },
+      "modular": [
+        {
+          "basis_size": "1",
+          "char": 32003,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.006,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/84_56_21_14_18_5_k1_mod_32003.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=31 unknowns=16 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32009,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.006,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/84_56_21_14_18_5_k1_mod_32009.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=31 unknowns=16 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32027,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.006,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/84_56_21_14_18_5_k1_mod_32027.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=31 unknowns=16 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "row": {
+        "M2": 18,
+        "V2": 5,
+        "k": 1,
+        "m": 14,
+        "n": 21,
+        "src": "(84,56)",
+        "tag": "MOH-COMPILER"
+      }
+    },
+    {
+      "exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 32.44,
+        "rc": 0,
+        "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/112_80_28_20_25_3_k1_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=37 unknowns=27 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "invariants": {
+        "A1": 7,
+        "K": 4,
+        "M2": 25,
+        "R": 2,
+        "R_equals_k_plus_1": true,
+        "V2": 3,
+        "b12": true,
+        "b13": false,
+        "d2prime": 4,
+        "d3prime": 1,
+        "delta1": "2/7",
+        "delta2": "-1",
+        "dprime": 5,
+        "eprime": 7,
+        "ident188": true,
+        "k": 1,
+        "m": 20,
+        "n": 28,
+        "n_ab_shape": 9,
+        "n_beta_D1": 10,
+        "n_h_fixed": 4,
+        "n_ord_shape": 15,
+        "src": "(112,80)",
+        "tag": "K16-t2-PROMOTED-REPLAY",
+        "uprime": 1,
+        "vprime": 3
+      },
+      "meta": {
+        "alpha_dims": [
+          1,
+          0,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "basis_weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "A",
+            "-3/7"
+          ],
+          [
+            "B",
+            "-5/7"
+          ],
+          [
+            "z",
+            "-1"
+          ],
+          [
+            "x",
+            "-1"
+          ]
+        ],
+        "beta_dims": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "bound_unit": "-1/7",
+        "build": "system",
+        "build_elapsed": 1.356,
+        "chart": "k16_hadic_order",
+        "dprime": 5,
+        "eprime": 7,
+        "equations": 37,
+        "gauges": [
+          "P -> P - alpha_2 Q",
+          "Q -> Q - const(beta_5)",
+          "P -> P - const(alpha_7)"
+        ],
+        "h_free_count": 4,
+        "levels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "ring": "Q[26 params,c,T]",
+        "shear_checked": true,
+        "top_policy": "fixed",
+        "unknowns": 27
+      },
+      "modular": [
+        {
+          "basis_size": "1",
+          "char": 32003,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 1.137,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/112_80_28_20_25_3_k1_mod_32003.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=37 unknowns=27 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32009,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 1.138,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/112_80_28_20_25_3_k1_mod_32009.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=37 unknowns=27 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32027,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 1.134,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/112_80_28_20_25_3_k1_mod_32027.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=37 unknowns=27 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "row": {
+        "M2": 25,
+        "V2": 3,
+        "k": 1,
+        "m": 20,
+        "n": 28,
+        "src": "(112,80)",
+        "tag": "K16-t2-PROMOTED-REPLAY"
+      }
+    },
+    {
+      "exact": {
+        "reason": "count-only row",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 5,
+        "K": 5,
+        "M2": 21,
+        "R": 3,
+        "R_equals_k_plus_1": true,
+        "V2": 2,
+        "b12": true,
+        "b13": false,
+        "d2prime": 5,
+        "d3prime": 1,
+        "delta1": "7/5",
+        "delta2": "-1",
+        "dprime": 3,
+        "eprime": 5,
+        "ident188": true,
+        "k": 2,
+        "m": 15,
+        "n": 25,
+        "n_ab_shape": 16,
+        "n_beta_D1": 38,
+        "n_h_fixed": 11,
+        "n_ord_shape": 50,
+        "src": "(125,75)",
+        "tag": "",
+        "uprime": 3,
+        "vprime": 2
+      },
+      "meta": {
+        "alpha_dims": [
+          12,
+          19,
+          20,
+          21,
+          22
+        ],
+        "beta_dims": [
+          19,
+          20
+        ],
+        "bound_unit": "-1/5",
+        "build": "count-only",
+        "build_elapsed": 0.0,
+        "chart": "generic_D1_monomial_count",
+        "coeff_count": 133,
+        "h_free_count": 14,
+        "note": "conservative count; not used as a kill without a completed standard basis",
+        "reason": "count-only row",
+        "top_policy": "D1-only",
+        "unknowns": 148,
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "reason": "counting-bound before standard-basis emission",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "row": {
+        "M2": 21,
+        "V2": 2,
+        "k": 2,
+        "m": 15,
+        "n": 25,
+        "src": "(125,75)",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "reason": "first modular standard basis timed out",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 3,
+        "K": 11,
+        "M2": 30,
+        "R": 2,
+        "R_equals_k_plus_1": true,
+        "V2": 8,
+        "b12": true,
+        "b13": false,
+        "d2prime": 11,
+        "d3prime": 1,
+        "delta1": "1/3",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 3,
+        "ident188": true,
+        "k": 1,
+        "m": 22,
+        "n": 33,
+        "n_ab_shape": 28,
+        "n_beta_D1": 33,
+        "n_h_fixed": 23,
+        "n_ord_shape": 57,
+        "src": "(132,88)",
+        "tag": "",
+        "uprime": 3,
+        "vprime": 8
+      },
+      "meta": {
+        "build": "count-only",
+        "build_elapsed": 9.854,
+        "chart": "d2e3_ab",
+        "equations": 62,
+        "h_free_count": 26,
+        "levels": [
+          0,
+          1
+        ],
+        "reason": "D1-only u>=3 top face over pre-build expansion limit",
+        "top_policy": "D1-only",
+        "unknowns": 31,
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "char": 32003,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 180.11,
+          "script": "box/twopoint-batch-20260903/systems/132_88_33_22_30_8_k1_mod_32003.sing",
+          "timeout": 180,
+          "verdict": "TIMEOUT"
+        },
+        {
+          "char": 32009,
+          "reason": "previous modular prime timed out",
+          "verdict": "SKIPPED"
+        },
+        {
+          "char": 32027,
+          "reason": "previous modular prime timed out",
+          "verdict": "SKIPPED"
+        }
+      ],
+      "row": {
+        "M2": 30,
+        "V2": 8,
+        "k": 1,
+        "m": 22,
+        "n": 33,
+        "src": "(132,88)",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.008,
+        "rc": 0,
+        "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/147_98_21_14_15_6_k4_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=23 unknowns=12 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "invariants": {
+        "A1": 1,
+        "K": 7,
+        "M2": 15,
+        "R": 5,
+        "R_equals_k_plus_1": true,
+        "V2": 6,
+        "b12": true,
+        "b13": true,
+        "d2prime": 7,
+        "d3prime": 1,
+        "delta1": "0",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 3,
+        "ident188": true,
+        "k": 4,
+        "m": 14,
+        "n": 21,
+        "n_ab_shape": 12,
+        "n_beta_D1": 7,
+        "n_h_fixed": 7,
+        "n_ord_shape": 15,
+        "src": "(147,98)",
+        "tag": "",
+        "uprime": 1,
+        "vprime": 6
+      },
+      "meta": {
+        "ab_forced": true,
+        "build": "system",
+        "build_elapsed": 0.273,
+        "chart": "d2e3_ab",
+        "dprime": 2,
+        "eprime": 3,
+        "equations": 23,
+        "h_free_count": 7,
+        "levels": [
+          0,
+          1
+        ],
+        "ring": "Q[h(7),bp,bq,br,bs,c,T]",
+        "top_note": "fixed split top face",
+        "top_policy": "fixed",
+        "unknowns": 12
+      },
+      "modular": [
+        {
+          "basis_size": "1",
+          "char": 32003,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.008,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/147_98_21_14_15_6_k4_mod_32003.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=23 unknowns=12 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32009,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.008,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/147_98_21_14_15_6_k4_mod_32009.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=23 unknowns=12 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32027,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.008,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/147_98_21_14_15_6_k4_mod_32027.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=23 unknowns=12 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "row": {
+        "M2": 15,
+        "V2": 6,
+        "k": 4,
+        "m": 14,
+        "n": 21,
+        "src": "(147,98)",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "reason": "first modular standard basis timed out",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 10,
+        "K": 4,
+        "M2": 37,
+        "R": 2,
+        "R_equals_k_plus_1": true,
+        "V2": 3,
+        "b12": true,
+        "b13": false,
+        "d2prime": 4,
+        "d3prime": 1,
+        "delta1": "3/10",
+        "delta2": "-1",
+        "dprime": 7,
+        "eprime": 10,
+        "ident188": true,
+        "k": 1,
+        "m": 28,
+        "n": 40,
+        "n_ab_shape": 9,
+        "n_beta_D1": 13,
+        "n_h_fixed": 4,
+        "n_ord_shape": 18,
+        "src": "(160,112)",
+        "tag": "K16-t3",
+        "uprime": 1,
+        "vprime": 3
+      },
+      "meta": {
+        "alpha_dims": [
+          1,
+          1,
+          0,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          4
+        ],
+        "basis_weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "A",
+            "-2/5"
+          ],
+          [
+            "B",
+            "-7/10"
+          ],
+          [
+            "z",
+            "-1"
+          ],
+          [
+            "x",
+            "-1"
+          ]
+        ],
+        "beta_dims": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ],
+        "bound_unit": "-1/10",
+        "build": "system",
+        "build_elapsed": 2.53,
+        "chart": "k16_hadic_order",
+        "dprime": 7,
+        "eprime": 10,
+        "equations": 51,
+        "gauges": [
+          "P -> P - alpha_3 Q",
+          "Q -> Q - const(beta_7)",
+          "P -> P - const(alpha_10)"
+        ],
+        "h_free_count": 4,
+        "levels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "ring": "Q[35 params,c,T]",
+        "shear_checked": true,
+        "top_policy": "fixed",
+        "unknowns": 36
+      },
+      "modular": [
+        {
+          "char": 32003,
+          "elapsed": 180.139,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/160_112_40_28_37_3_k1_mod_32003.sing",
+          "stderr_tail": "",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=51 unknowns=36 char=32003\n",
+          "timeout": 180,
+          "verdict": "TIMEOUT"
+        },
+        {
+          "char": 32009,
+          "reason": "previous modular prime timed out",
+          "verdict": "SKIPPED"
+        },
+        {
+          "char": 32027,
+          "reason": "previous modular prime timed out",
+          "verdict": "SKIPPED"
+        }
+      ],
+      "row": {
+        "M2": 37,
+        "V2": 3,
+        "k": 1,
+        "m": 28,
+        "n": 40,
+        "src": "(160,112)",
+        "tag": "K16-t3"
+      }
+    },
+    {
+      "exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.006,
+        "rc": 0,
+        "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/168_112_drop1_24_16_18_7_k4_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=26 unknowns=13 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "invariants": {
+        "A1": 1,
+        "K": 8,
+        "M2": 18,
+        "R": 5,
+        "R_equals_k_plus_1": true,
+        "V2": 7,
+        "b12": true,
+        "b13": true,
+        "d2prime": 8,
+        "d3prime": 2,
+        "delta1": "0",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 3,
+        "ident188": true,
+        "k": 4,
+        "m": 16,
+        "n": 24,
+        "n_ab_shape": 13,
+        "n_beta_D1": 8,
+        "n_h_fixed": 8,
+        "n_ord_shape": 17,
+        "src": "(168,112) drop1",
+        "tag": "",
+        "uprime": 1,
+        "vprime": 7
+      },
+      "meta": {
+        "ab_forced": true,
+        "build": "system",
+        "build_elapsed": 0.318,
+        "chart": "d2e3_ab",
+        "dprime": 2,
+        "eprime": 3,
+        "equations": 26,
+        "h_free_count": 8,
+        "levels": [
+          0,
+          1
+        ],
+        "ring": "Q[h(8),bp,bq,br,bs,c,T]",
+        "top_note": "fixed split top face",
+        "top_policy": "fixed",
+        "unknowns": 13
+      },
+      "modular": [
+        {
+          "basis_size": "1",
+          "char": 32003,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.006,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/168_112_drop1_24_16_18_7_k4_mod_32003.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=26 unknowns=13 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32009,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.006,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/168_112_drop1_24_16_18_7_k4_mod_32009.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=26 unknowns=13 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32027,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.006,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/168_112_drop1_24_16_18_7_k4_mod_32027.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=26 unknowns=13 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "row": {
+        "M2": 18,
+        "V2": 7,
+        "k": 4,
+        "m": 16,
+        "n": 24,
+        "src": "(168,112) drop1",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "reason": "count-only row",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 7,
+        "K": 5,
+        "M2": 31,
+        "R": 3,
+        "R_equals_k_plus_1": true,
+        "V2": 2,
+        "b12": true,
+        "b13": false,
+        "d2prime": 5,
+        "d3prime": 1,
+        "delta1": "10/7",
+        "delta2": "-1",
+        "dprime": 4,
+        "eprime": 7,
+        "ident188": true,
+        "k": 2,
+        "m": 20,
+        "n": 35,
+        "n_ab_shape": 16,
+        "n_beta_D1": 46,
+        "n_h_fixed": 11,
+        "n_ord_shape": 58,
+        "src": "(175,100)",
+        "tag": "",
+        "uprime": 3,
+        "vprime": 2
+      },
+      "meta": {
+        "alpha_dims": [
+          12,
+          19,
+          19,
+          20,
+          21,
+          21,
+          22
+        ],
+        "beta_dims": [
+          19,
+          19,
+          20
+        ],
+        "bound_unit": "-1/7",
+        "build": "count-only",
+        "build_elapsed": 0.001,
+        "chart": "generic_D1_monomial_count",
+        "coeff_count": 192,
+        "h_free_count": 14,
+        "note": "conservative count; not used as a kill without a completed standard basis",
+        "reason": "count-only row",
+        "top_policy": "D1-only",
+        "unknowns": 207,
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "reason": "counting-bound before standard-basis emission",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "row": {
+        "M2": 31,
+        "V2": 2,
+        "k": 2,
+        "m": 20,
+        "n": 35,
+        "src": "(175,100)",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "reason": "count-only row",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 5,
+        "K": 5,
+        "M2": 31,
+        "R": 3,
+        "R_equals_k_plus_1": true,
+        "V2": 3,
+        "b12": false,
+        "b13": true,
+        "d2prime": 5,
+        "d3prime": 1,
+        "delta1": "3/5",
+        "delta2": "-1",
+        "dprime": 5,
+        "eprime": 7,
+        "ident188": true,
+        "k": 2,
+        "m": 25,
+        "n": 35,
+        "n_ab_shape": 13,
+        "n_beta_D1": 24,
+        "n_h_fixed": 8,
+        "n_ord_shape": 33,
+        "src": "(175,125)",
+        "tag": "",
+        "uprime": 2,
+        "vprime": 3
+      },
+      "meta": {
+        "alpha_dims": [
+          9,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "beta_dims": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "bound_unit": "-1/5",
+        "build": "count-only",
+        "build_elapsed": 0.0,
+        "chart": "generic_D1_monomial_count",
+        "coeff_count": 140,
+        "h_free_count": 8,
+        "note": "conservative count; not used as a kill without a completed standard basis",
+        "reason": "count-only row",
+        "top_policy": "fixed-if-licensed",
+        "unknowns": 149,
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "reason": "counting-bound before standard-basis emission",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "row": {
+        "M2": 31,
+        "V2": 3,
+        "k": 2,
+        "m": 25,
+        "n": 35,
+        "src": "(175,125)",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "reason": "D1-only u>=3 top face over pre-build expansion limit",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 3,
+        "K": 15,
+        "M2": 42,
+        "R": 2,
+        "R_equals_k_plus_1": true,
+        "V2": 11,
+        "b12": true,
+        "b13": false,
+        "d2prime": 15,
+        "d3prime": 3,
+        "delta1": "1/3",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 3,
+        "ident188": true,
+        "k": 1,
+        "m": 30,
+        "n": 45,
+        "n_ab_shape": 44,
+        "n_beta_D1": 55,
+        "n_h_fixed": 39,
+        "n_ord_shape": 95,
+        "src": "(180,120) drop1",
+        "tag": "",
+        "uprime": 4,
+        "vprime": 11
+      },
+      "meta": {
+        "build": "count-only",
+        "build_elapsed": 0.0,
+        "chart": "d2e3_ab",
+        "equations": null,
+        "h_free_count": 43,
+        "reason": "D1-only u>=3 top face over pre-build expansion limit",
+        "top_policy": "D1-only",
+        "unknowns": 48,
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "reason": "counting-bound before standard-basis emission",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "row": {
+        "M2": 42,
+        "V2": 11,
+        "k": 1,
+        "m": 30,
+        "n": 45,
+        "src": "(180,120) drop1",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "reason": "count-only row",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 5,
+        "K": 6,
+        "M2": 25,
+        "R": 4,
+        "R_equals_k_plus_1": true,
+        "V2": 4,
+        "b12": true,
+        "b13": false,
+        "d2prime": 6,
+        "d3prime": 1,
+        "delta1": "2/5",
+        "delta2": "-1",
+        "dprime": 4,
+        "eprime": 5,
+        "ident188": true,
+        "k": 3,
+        "m": 24,
+        "n": 30,
+        "n_ab_shape": 14,
+        "n_beta_D1": 19,
+        "n_h_fixed": 9,
+        "n_ord_shape": 29,
+        "src": "(180,144)",
+        "tag": "",
+        "uprime": 2,
+        "vprime": 4
+      },
+      "meta": {
+        "alpha_dims": [
+          11,
+          14,
+          17,
+          19,
+          22
+        ],
+        "beta_dims": [
+          14,
+          17,
+          19
+        ],
+        "bound_unit": "-2/5",
+        "build": "count-only",
+        "build_elapsed": 0.0,
+        "chart": "generic_D1_monomial_count",
+        "coeff_count": 133,
+        "h_free_count": 9,
+        "note": "conservative count; not used as a kill without a completed standard basis",
+        "reason": "count-only row",
+        "top_policy": "fixed-if-licensed",
+        "unknowns": 143,
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "reason": "counting-bound before standard-basis emission",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "row": {
+        "M2": 25,
+        "V2": 4,
+        "k": 3,
+        "m": 24,
+        "n": 30,
+        "src": "(180,144)",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.006,
+        "rc": 0,
+        "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/189_126_drop1_27_18_21_8_k4_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=29 unknowns=14 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "invariants": {
+        "A1": 1,
+        "K": 9,
+        "M2": 21,
+        "R": 5,
+        "R_equals_k_plus_1": true,
+        "V2": 8,
+        "b12": true,
+        "b13": true,
+        "d2prime": 9,
+        "d3prime": 3,
+        "delta1": "0",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 3,
+        "ident188": true,
+        "k": 4,
+        "m": 18,
+        "n": 27,
+        "n_ab_shape": 14,
+        "n_beta_D1": 9,
+        "n_h_fixed": 9,
+        "n_ord_shape": 19,
+        "src": "(189,126) drop1",
+        "tag": "",
+        "uprime": 1,
+        "vprime": 8
+      },
+      "meta": {
+        "ab_forced": true,
+        "build": "system",
+        "build_elapsed": 0.404,
+        "chart": "d2e3_ab",
+        "dprime": 2,
+        "eprime": 3,
+        "equations": 29,
+        "h_free_count": 9,
+        "levels": [
+          0,
+          1
+        ],
+        "ring": "Q[h(9),bp,bq,br,bs,c,T]",
+        "top_note": "fixed split top face",
+        "top_policy": "fixed",
+        "unknowns": 14
+      },
+      "modular": [
+        {
+          "basis_size": "1",
+          "char": 32003,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.006,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/189_126_drop1_27_18_21_8_k4_mod_32003.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=29 unknowns=14 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32009,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.006,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/189_126_drop1_27_18_21_8_k4_mod_32009.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=29 unknowns=14 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32027,
+          "control_empty_pass": true,
+          "control_nonempty_pass": true,
+          "elapsed": 0.006,
+          "rc": 0,
+          "script": "/home/ubuntu/jc2/box/twopoint-batch-20260903/systems/189_126_drop1_27_18_21_8_k4_mod_32027.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=29 unknowns=14 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "unsat_empty": null,
+          "unsat_nontrivial": null,
+          "unsat_size": null,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "row": {
+        "M2": 21,
+        "V2": 8,
+        "k": 4,
+        "m": 18,
+        "n": 27,
+        "src": "(189,126) drop1",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "reason": "D1-only u>=3 top face over pre-build expansion limit",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 3,
+        "K": 8,
+        "M2": 17,
+        "R": 6,
+        "R_equals_k_plus_1": true,
+        "V2": 2,
+        "b12": true,
+        "b13": false,
+        "d2prime": 8,
+        "d3prime": 1,
+        "delta1": "8/3",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 3,
+        "ident188": true,
+        "k": 5,
+        "m": 16,
+        "n": 24,
+        "n_ab_shape": 35,
+        "n_beta_D1": 85,
+        "n_h_fixed": 30,
+        "n_ord_shape": 116,
+        "src": "(192,128)",
+        "tag": "",
+        "uprime": 6,
+        "vprime": 2
+      },
+      "meta": {
+        "build": "count-only",
+        "build_elapsed": 0.001,
+        "chart": "d2e3_ab",
+        "equations": null,
+        "h_free_count": 36,
+        "reason": "D1-only u>=3 top face over pre-build expansion limit",
+        "top_policy": "D1-only",
+        "unknowns": 41,
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "reason": "counting-bound before standard-basis emission",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "row": {
+        "M2": 17,
+        "V2": 2,
+        "k": 5,
+        "m": 16,
+        "n": 24,
+        "src": "(192,128)",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "reason": "count-only row",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 7,
+        "K": 7,
+        "M2": 46,
+        "R": 2,
+        "R_equals_k_plus_1": true,
+        "V2": 4,
+        "b12": true,
+        "b13": false,
+        "d2prime": 7,
+        "d3prime": 1,
+        "delta1": "5/7",
+        "delta2": "-1",
+        "dprime": 2,
+        "eprime": 7,
+        "ident188": true,
+        "k": 1,
+        "m": 14,
+        "n": 49,
+        "n_ab_shape": 20,
+        "n_beta_D1": 29,
+        "n_h_fixed": 15,
+        "n_ord_shape": 45,
+        "src": "(196,56)",
+        "tag": "",
+        "uprime": 3,
+        "vprime": 4
+      },
+      "meta": {
+        "alpha_dims": [
+          16,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "beta_dims": [
+          21
+        ],
+        "bound_unit": "-1/7",
+        "build": "count-only",
+        "build_elapsed": 0.001,
+        "chart": "generic_D1_monomial_count",
+        "coeff_count": 178,
+        "h_free_count": 18,
+        "note": "conservative count; not used as a kill without a completed standard basis",
+        "reason": "count-only row",
+        "top_policy": "D1-only",
+        "unknowns": 197,
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "reason": "counting-bound before standard-basis emission",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "row": {
+        "M2": 46,
+        "V2": 4,
+        "k": 1,
+        "m": 14,
+        "n": 49,
+        "src": "(196,56)",
+        "tag": ""
+      }
+    },
+    {
+      "exact": {
+        "reason": "count-only row",
+        "verdict": "COUNTING-BOUND"
+      },
+      "invariants": {
+        "A1": 5,
+        "K": 10,
+        "M2": 47,
+        "R": 2,
+        "R_equals_k_plus_1": true,
+        "V2": 7,
+        "b12": true,
+        "b13": false,
+        "d2prime": 10,
+        "d3prime": 1,
+        "delta1": "2/5",
+        "delta2": "-1",
+        "dprime": 3,
+        "eprime": 5,
+        "ident188": true,
+        "k": 1,
+        "m": 30,
+        "n": 50,
+        "n_ab_shape": 26,
+        "n_beta_D1": 36,
+        "n_h_fixed": 21,
+        "n_ord_shape": 58,
+        "src": "(200,120)",
+        "tag": "",
+        "uprime": 3,
+        "vprime": 7
+      },
+      "meta": {
+        "alpha_dims": [
+          23,
+          28,
+          30,
+          32,
+          34
+        ],
+        "beta_dims": [
+          28,
+          30
+        ],
+        "bound_unit": "-1/5",
+        "build": "count-only",
+        "build_elapsed": 0.001,
+        "chart": "generic_D1_monomial_count",
+        "coeff_count": 205,
+        "h_free_count": 24,
+        "note": "conservative count; not used as a kill without a completed standard basis",
+        "reason": "count-only row",
+        "top_policy": "D1-only",
+        "unknowns": 230,
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "reason": "counting-bound before standard-basis emission",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "row": {
+        "M2": 47,
+        "V2": 7,
+        "k": 1,
+        "m": 30,
+        "n": 50,
+        "src": "(200,120)",
+        "tag": ""
+      }
+    }
+  ]
+}
