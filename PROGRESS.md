@@ -7190,3 +7190,26 @@ fleet spun up.
   order is a Belyi condition that never kills (TF-DESSIN); the killing
   filter at the same order is Galois. CENSUS-REBASE lane out to recover
   (8)–(13) verbatim and rerun the whole programme on Moh's true space.
+
+### 2026-09-03, morning (coordinator Fable 5.1) — census rebased on Moh's (1)–(13); handoff
+
+- **CENSUS-REBASE** (Opus): Moh's (8)–(13) recovered verbatim; the
+  calibration lane's (10) is exactly Moh's and its (10)₁ is equivalent
+  to (12)/(13); the omitted branch (11) costs 4×: the true (1)–(13)
+  space at D ≤ 120 is 1,189 groups (670 alive at N ≥ 6); D = 48 emptied,
+  66/78 carry no skeleton, no D > 100 empties; D = 105 → 3 groups,
+  D = 117 → 4; D ≤ 200: 14,016 groups. (1)–(13) as printed leaves 658
+  rows at n ≤ 100 vs Moh's 6: the printed list is NOT his whole program
+  (OPEN[MOH-PROGRAM]). p.202 n = 75 bracket is an erratum.
+- **Endgame review** (Sol): BOTTOM-ODE / STAR-SIMPLE / STAR-SUM /
+  STAR-ABC promoted (bottom star = dessin); the flagship's global
+  framing, resonance set and order-2 recurrence refuted; DISC-COUPLING
+  stopped, to be relaunched on a rebased survivor with the global-
+  interpolation framework (Sol lane running at handoff).
+- **Reducible branch** (Opus, unreviewed): exact machinery is H2-free;
+  N_min = 6 on both branches; reducibility lives in the non-proper
+  block; one program for both branches.
+- **Other closures:** STAR-REALISABILITY zero kills; DELTA-DENOM raw
+  test refuted (signal = Moh's (10)–(13)); ORTHO-DEFECT promoted;
+  rigidity/star batch promoted with NO-RESIDUE.
+- Handoff to a cloud-machine coordinator: see notes.md HANDOFF block.

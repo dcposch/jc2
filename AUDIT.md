@@ -15469,3 +15469,46 @@ partially subsumed: the census + pinned-N filter is ONE program for
 both branches; the reducible residual OPEN[COMPANION-R0-REALISATION]
 (notes 18413–18416) concerns the non-proper block. Review: queued for
 the next free non-Opus seat.
+
+## INTEGRATION #17 DELTA (h) (2026-09-03 2026-09-03T08:32Z, REVIEWED where stated): CENSUS-REBASE — MOH'S (8)–(13) RECOVERED VERBATIM; THE TRUE SPACE; (1)–(13) IS NOT MOH'S WHOLE PROGRAM
+
+`census-rebase-opus5-20260902.md` (fb137b92; box/moh_skeleton_full.py
+d20bf084; drivers box/censusrebase-drivers-20260902/) with the
+different-model review of the calibration lane
+`tf-calibration-review-gpt55-20260902.md` (5f56d980). PROMOTED
+(rebase + review agree): the census omission (moh_skeleton_N.py and
+descendants implement (1)–(7) + windows only); Moh's (8)–(13)
+transcribed from p.201 (A_{r−1} = reduced denominator of L·δ_{r−1},
+L = lcm of the reduced denominators of δ_s..δ_r; division (9)
+V_r d_{r−1}/d_r = △A + □; (10) V_{r−1} ≤ △ for a factor π − a, a ≠ 0;
+(11) V_{r−1} = jA + □ for the factor π; (12)/(13) the A₁ divisibility
+alternatives); the calibration lane's reconstructed (10) at j ≥ 2 is
+EXACTLY Moh's printed (10) (521,190 level-pairs, 0 exceptions) and its
+proved (10)₁ is EQUIVALENT to (12)/(13) (Moh's p.188 identity
+A₁ | (n* + m*)V₂ − 1 holds on the census, 242,099/0); TF-0 (both
+families squarefree) and the TF-DESSIN passport promoted; TF-DESSIN
+existence for every (d,e,V) is a GAP (the cubic-map construction is
+(2,3) only); TF-NOTAME/TF-EXH promoted only in their tested scope.
+CORRECTION: the calibration lane omitted branch (11) — 94,645 of
+521,190 level-pairs at D ≤ 100 are admitted only by (11) — a 4.1×
+undercount of groups: the TRUE (1)–(13) space at 48 ≤ D ≤ 120 is 1,692
+V-assignments / 1,189 groups (not 329/287). REBASED #17 PROGRAMME
+(pinned N = Σ_B V₂(B)q(B), N ∈ Z): 670 groups alive at N ≥ 6; 589 (UNI)
+/ 648 mixed in [6,16]; D = 48 EMPTIED (integrality); D = 66, 78 carry no
+(1)–(13) skeleton; NO D > 100 empties; D = 105 → 3 groups (m = 70,
+K = 35, (d,e) = (2,3): M = [28,103] V_s = 5, q = 1/2, N ∈ 6..12;
+M = [28,103] V_s = 6, q = 9/13, N = 9; M = [40,103] V_s = 4, q = 9/17,
+N = 9); D = 117 → 4 groups; D ≤ 200: 14,016 groups, nothing empties;
+s ≤ 5 fails at D ≤ 200 (first s = 6 at n = 192). Moh's six rows pass
+(1)–(13) (fail-closed control); under N ≥ 6 the (84,56) M₂ = 64 row
+dies. **DECISIVE NEGATIVE (OPEN[MOH-PROGRAM], bounded 652 excess
+rows):** (1)–(13) as printed leaves 658 rows in 63 (n,m) classes at
+n ≤ 100 where Moh's p.202 table (claimed complete) has 6 rows in 4
+classes; every stricter reading tried kills printed rows; the
+campaign may not call "(1)–(13)" Moh's admissible space — his program
+contains eliminations not in the printed list (Appendix II and
+Prop 5.6 at least). ERRATUM p.202 (PROVED-HERE): the n = 75 bracketed
+δ₁ = 1/3 is attained by no (1)–(7)-admissible skeleton; Def 5.1(3)'s
+2/3 is right — OPEN[DELTA75-BRACKET] CLOSED as an erratum. MEASURED
+variant (not used): NOT-ALL-(11) cuts 19%/11% more and empties
+nothing.
