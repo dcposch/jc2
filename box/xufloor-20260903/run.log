@@ -1,0 +1,45 @@
+== Xu IM>=Im fail-closed skeleton screen ==
+Frozen imports: /tmp/jc2-lane.EOjB13/inputs
+
+-- Controls --
+  [ok]   Moh (64,48) POLY_ODE operative survivor
+  [ok]   Moh (84,56) M2=64,V2=2 POLY_ODE operative survivor
+  [ok]   Moh (84,56) M2=72,V2=5 POLY_ODE operative survivor
+  [ok]   Moh (75,50) V2=3 POLY_ODE operative survivor
+  [ok]   Moh (75,50) V2=2 POLY_ODE operative survivor
+  [ok]   Moh (99,66) POLY_ODE operative survivor
+  [ok]   Xu (75,50) split ii Im=6 IM=4 excluded
+  [ok]   Xu (84,56) M2=64 Im=5 IM=4 excluded
+  [ok]   Xu (84,56) M2=72 Im=4 IM=10 not excluded
+
+-- Operative census, u_s>1 first --
+  [ok]   operative rows D<=200 = 1420
+  [ok]   operative groups D<=200 = 686
+  phase us_gt_1: 310 rows
+    us_gt_1 100/310 processed; candidate-killed rows total 8
+    us_gt_1 200/310 processed; candidate-killed rows total 11
+    us_gt_1 300/310 processed; candidate-killed rows total 14
+    us_gt_1 310/310 processed; candidate-killed rows total 14
+  phase us_eq_1: 1110 rows
+    us_eq_1 100/1110 processed; candidate-killed rows total 23
+    us_eq_1 200/1110 processed; candidate-killed rows total 25
+    us_eq_1 300/1110 processed; candidate-killed rows total 27
+    us_eq_1 400/1110 processed; candidate-killed rows total 29
+    us_eq_1 500/1110 processed; candidate-killed rows total 30
+    us_eq_1 600/1110 processed; candidate-killed rows total 33
+    us_eq_1 700/1110 processed; candidate-killed rows total 35
+    us_eq_1 800/1110 processed; candidate-killed rows total 43
+    us_eq_1 900/1110 processed; candidate-killed rows total 43
+    us_eq_1 1000/1110 processed; candidate-killed rows total 47
+    us_eq_1 1100/1110 processed; candidate-killed rows total 48
+    us_eq_1 1110/1110 processed; candidate-killed rows total 48
+
+-- Totals --
+  promoted killed rows: 43 / 1420
+  promoted killed groups: 29 / 686
+  candidate killed rows: 48 / 1420
+  candidate killed groups: 33 / 686
+  candidate newly killed rows/groups: 5 / 4
+  candidate touched groups: 42 / 686
+  killed groups D<=120: 4
+Wrote /home/ubuntu/jc2/box/xufloor-20260903/results.json

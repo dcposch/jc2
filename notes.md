@@ -20933,3 +20933,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - K = 16 ray: (T) PROMOTED t = 1..4; normalizer lemma PROMOTED; middle spine = last blocker (lane running).
 - (99,66): OPEN in the literature (Xu); branch B lift + δ = 5/2 both survive locally; global Keller lift is the decider (B-lift lane running).
 - Providers: Opus and Grok down since ~13:40Z; Sol/GPT-5.5/Fable carrying.
+
+## 2026-09-03T18:10Z EVENT — `xu-principal-floor-sol56` sealed (18KB): sharpened principal floor V_s/u_s − 1 PROVED (typed lemma; Fable + Sol = two-model) — +4 groups killed (all u_s > 1); (99,66) and (108,72) survive. → AUDIT delta 17(fff) PROMOTED. Operative screen now: 653 groups at D ≤ 200, u_s > 1 = 166. Lanes live: 5.

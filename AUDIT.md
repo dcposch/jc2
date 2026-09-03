@@ -17159,3 +17159,25 @@ driver floors the principal u_s > 1 contribution at 0; the gate's §2 distance a
 gives V_s/u_s − 1, expected +5 rows / +4 groups at D ≤ 200 — needs its own gate before use
 (lane launched). OPEN[minor-disc-exact-Im], OPEN[attainment-correlation] stand; the
 same-tree optimisation of IM − Im is the cheapest strengthening.
+
+## INTEGRATION #17 DELTA (fff) (2026-09-03T18:10Z, PROMOTED — two-model: derived by Fable (17(eee) gate §2), proved and typed by Sol): THE XU SCREEN'S PRINCIPAL-MINOR FLOOR IS SHARPENED FROM 0 TO V_s/u_s − 1 FOR ALL u_s ≥ 1 — the principal contribution to Im, C_pr^Im := Σ_{σ ∈ P_m principal} (δ_σ − 1) ≥ V_s/u_s − 1 for every actual principal split tree under Xu's hypotheses (typed lemma PFR-DIST with proof, termwise from the distance argument; type correction: the task's weighted expression with the factor (|D_σ| − 1) is Theorem 4.7(i)'s correction term, not Im — for it V_s/u_s − 1 is valid but not best); sharpened census at 48 ≤ D ≤ 200: 48 rows / 33 groups killed (+5 rows / +4 groups over 17(eee)); u_s > 1: 14 rows / 11 groups killed; (99,66) and (108,72; V = (7,7)) SURVIVE; the two-point list and the K = 16 entries unchanged
+
+`xu-principal-floor-sol56-20260903.md` (Sol, 18KB; box/xufloor-20260903/; 10/10 hashes; Xu
+pp.4–6, 10–11 and Moh pp.190–199 as images — pagination corrected: Prop 6.1 starts p.190,
+6.2 p.195, 6.3 p.197, 6.4 pp.198–199). Source status: Moh Prop 6.3 ASSUMES δ* ≥ v_s/u_s; Prop
+6.4 proves it only for u_s = 1; Moh's δ* is the minimum contact in a cluster, and §7.3 /
+Prop 7.3 (non-splitting at order 1) are consistent with but not the step that upgrades 1
+to V_s/u_s — the upgrade is the distance argument (Lemma 4.1: S(α) = −ord f_y(α); for a
+final minor root δ_σ = S(α); applied to the N_p = u_s·m/d_s principal roots with outside
+sum V_s·m/d_s at distance −1: δ_final ≥ V_s/u_s termwise). Driver: principal_minor_floor =
+max(V_s/u_s − 1, 0) for every u_s > 0 (promoted column kept; same IM_max; a row dies only
+if it dies under the candidate); calibration reproduced. CENSUS: killed 48/1420 rows, 33/686
+groups (promoted policy 43/29); u_s = 1 rows identical; u_s > 1: 14 rows / 11 groups fully
+killed (of 310/177); newly killed groups listed in §5. OPERATIVE NUMBERS NOW (C_FULL_TREE_
+POLYNOMIAL_ODE ∧ XU with the sharpened floor): 48 ≤ D ≤ 200: 1,372 rows / 653 groups; u_s > 1:
+296 rows / 166 groups. (99,66) survives (its new floor is small relative to IM = 16); the
+D = 108 u_s = 2 row survives. PROMOTION: the lemma has two independent derivations (Fable,
+Sol) and exact replay; scope = the operative full-tree model ∧ Xu Cor. 5.3; kills are
+necessary contradictions, survival is not attainment. Remaining opens (§6): exact Im needs
+the actual split tree (the same-tree optimisation of IM − Im is the cheapest strengthening);
+the principal roots' FINAL count is not bounded from the skeleton beyond the termwise floor.
