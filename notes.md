@@ -20891,3 +20891,13 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T16:12Z EVENT — `strata-gate-gpt55` sealed (12KB): (132,88) and (180,120) descendants CONFIRMED over all strata; (75,50; V₂ = 2) and (84,56) RESTORED as licensed kills (full strata, incl. a subset certificate for [1,1,1]); support-rule criterion checked: none of the four is a slice; β-cap re-verification pending in chart-fix. → AUDIT delta 17(vv) PROMOTED-QUALIFIED. Two-point tally at D ≤ 200: 7 groups dead, 10 open. Lanes live: 4.
 
 ## 2026-09-03T16:18Z EVENT — `k16-t3-gate-gpt55` sealed (13KB): CONFIRMED — (T) at t = 3 promoted; the weighted-scaling / quadratic-field preprocessing is a covering reduction (torus action is an automorphism of the locus; both conjugates covered; unit pivots). → AUDIT delta 17(ww). Ray status: t = 1, 2, 3 dead; t = 4 modular; uniform open. Lanes live: 3.
+
+## 2026-09-03T16:19Z EVENT — launched `bigrows-preprocess-gpt55-20260903` (reusable triangular/weighted-torus/field-normalisation preprocessing; the six large open two-point rows + the unfinished (24,16) strata; corrected support rule + deg_x J sanity gate). Lanes live: 4.
+
+## LIVE STATE (2026-09-03T16:19Z)
+- Operative screen C_FULL_TREE_POLYNOMIAL_ODE (17(hh)): D ≤ 200 residue 1,420/686; u_s = 1 two-point s_eff = 2 stratum = 17 groups: DEAD 7 ((64,48), (75,50)×2, (84,56), (112,80) = K16 t = 2, (132,88), (180,120)); OPEN 10 (3 δ₁' = 0 rows [chart-fix]; K16 t = 3 → now DEAD (17(ww)) → OPEN 9: 3 δ₁' = 0 + 6 large [bigrows]).
+- K = 16 ray (only known cofinal family): (T) dead at t = 1, 2, 3 (PROMOTED); t = 4 modular; uniform-in-t: k16-uniform-structure-sol56 running (fixed-size residual over Q(t) attempt).
+- u_s > 1 stratum (177 groups): MINOR-DICHOTOMY open (17(qq)); Moh's (99,66) branch A dead (17(tt)), B/C being derived (moh9966-branchB-sol56).
+- Instrument: shape.py support-rule bug (17(uu)) — fix + re-verification in chart-fix-d1zero-gpt55.
+- Provider health: Opus (529) and Grok (capacity) unavailable since ~13:40Z; Sol and GPT-5.5 carry all lanes.
+- Next full round: 20260904T0000Z or critical trigger (uniform-in-t (T) on the ray; a SURVIVES anywhere; a refutation of a promoted delta).
