@@ -15820,3 +15820,73 @@ n − m − 1 trace identities become resultant coefficients over Q and the
 global-interpolation engine re-bases onto exact polynomial algebra (lane
 launched). Do NOT charge any lane with RESIDUE-FLOOR in the form
 deg_x R_k ≥ φ(k, m, n).
+
+## INTEGRATION #17 DELTA (p) (2026-09-03T11:15Z, PROVED-IN-SOURCE (local) / PROVISIONAL, HIGH EXPOSURE — two hostile reviews launched): WHOLE-MAJOR-TREE NECESSITY — MOH'S CONSTRUCTION FORCES EVERY ABOVE-THRESHOLD FACTOR TO EXTEND; D = 105 AND D = 117 EMPTY UNDER IT
+
+`moh-program-review-sol56-20260903.md` (Sol second reader; pp.140–212 as
+images; drivers box/mohprog-drivers-20260903/, two independent tree
+implementations agreeing row-for-row; charged census-rebase rerun 328 s
+ALL CONTROLS PASSED; an independent enumerator reproduces 658/63 without
+importing moh_skeleton_full.py). REVIEW OF CENSUS-REBASE: claims (1)–(6)
+CONFIRMED with repairs (p(π) is node-local, not one global "bottom
+polynomial"; M₄ = n − 1 is a displayed successor, not searched data; the
+erratum's intermediate value is V₂ = 13/2, not −1/2; "(1)–(13) space" must be
+typed PATH-ARITH(1–13) — conditions (3)/(4) are semantic, not integer
+predicates; the six-row mismatch proves the path-only arithmetic is not the
+program, NOT that one hidden scalar predicate exists → OPEN[MOH-PROGRAM-
+ARTIFACT]; NOT-ALL-(11) is not exact — (11) is a necessary congruence for a
+TYPED zero factor, so the source-safe projection is a recursive forced-zero
+test). THE FINDING (PROVED-IN-SOURCE as a local obligation; assembled from
+Prop 4.6(1)–(5) pp.170–171, Prop 5.3 pp.180–183, Def 5.1 p.179, the p.201
+orbit action, the p.200 Theorem (4)–(7); Prop 5.6 pp.188–189): at a major
+disc D_j with common leading polynomial p_j of degree P_j = V_{j+1}d_j/d_{j+1}
+and q_j squarefree of degree Q_j = V_{j+1}(n − M_j)/d_{j+1} containing every
+root of p_j, EVERY factor of p_j of multiplicity u > d_j/(n − M_j) defines
+another major disc whose data must satisfy the same construction at the next
+level — the recorded (V_s, …, V₂) is ONE path of a tree in which every major
+sibling must also extend; the p.201 conjugation makes this finite: an actual
+factorisation is P_j = b + A_j Σ_ℓ u_ℓ (b = multiplicity at the fixed root 0,
+u_ℓ per-root multiplicities of nonzero A_j-orbits; b ≡ P_j mod A_j) within
+the q-root capacity A_j | Q_j − 1 (Lemma 5.2; automatic); minor factors stop
+(p.200(5)); at j = 2 every major child must satisfy (12)/(13); at the bottom
+Prop 5.6 forbids the TYPED all-zero continuation. WHOLE-MAJOR-TREE
+(C_FULL_TREE) is the finite arithmetic consequence: uniform in D. MEASURED
+(fail-closed, 6/6 kept; two independent recursions agree): n ≤ 100: 658 → 60
+rows / 40 groups / 12 classes, with EXACTLY Moh's (75,50) residue
+{M₂ = 55, V₂ ∈ {2,3}}; + the Appendix I Prop A.3 local ODE consequence
+P − Qu ≠ 0 at every p-root (3.7; exact, kills a minor sibling of multiplicity
+exactly P/Q) → 58; + a cyclic-quotient Davenport–Zannier passport inequality
+(3.8; derived from Moh's equations, NOT stated by Moh — typed external) → 55
+rows / 11 classes = six printed + 49 excess (OPEN[MOH-PROGRAM-ARTIFACT]:
+49 rows / 32 groups; classes (72,48), (80,32), (84,56), (90,60), (96,64),
+(96,72), (96,80), (100,80)); an exploratory edgewise recentring rule
+(Prop 5.4's polynomial translation applied to every integral nonpositive-
+radius sibling — Moh proves it only at the globally selected disc:
+OPEN[FULL-TREE-RECENTER], NOT PROVED-IN-SOURCE) → 20 rows / 7 classes.
+CAMPAIGN SPACE (K ≥ 16), the source-derived C_FULL_TREE_PASSPORT screen:
+48 ≤ D ≤ 120: 1,692/1,189/670 → 152 rows / 96 groups / 45 UNI-alive at N ≥ 6;
+48 ≤ D ≤ 200: 23,720/14,016/8,831 → 2,581 / 1,261 / 803; NO RAW SURVIVOR at
+D ∈ {48, 54, 60, 63, 81, 88, 102, 104, 105, 110, 114, 117, 130, 152, 153, 154,
+170, 174, 182, 184, 186, 190, 195} (D = 105 and 117 are 0/0/0 already under
+bare C_FULL_TREE); pinned N additionally empties 72 and 80; D = 108: 18/11/8,
+D = 112: 8/7/2, D = 120: 71/41/17. CONSEQUENCES IF PROMOTED: the D = 105 trio
+is DEAD by a sourced uniform condition (D_min ≥ 108 on the frontier); every
+count in deltas (h), (j), (n) and the A₂ = 6 / L = 8a + 5 rays must be
+re-based on the tree screen (D = 54 and 117 — the ray's first members —
+are in the emptied list: the rays' cofinality is now in question); the
+NEGATIVE result on scalar gates (delta 17(m)) stands — the missing datum was
+the universal quantifier over siblings, not a scalar. STILL OPEN: the exact
+652-row discriminator (no source-proved predicate has survivor set = the
+p.202 table; 49 rows remain; the historical program may have used the
+unproved recentring rule, an implementation shortcut, or be incomplete —
+OPEN[MOH-PROGRAM-ARTIFACT]); Prop 3.1's correctly indexed bounded-digit
+semigroup representation (3.10) is PROVED-IN-SOURCE and AUTOMATIC on all
+23,720 rows (item (vi) excluded); Prop 5.5 gives no second r = 2 clause;
+§6 gives only automatic scalars (d_s > V_s > d_s/2; δ_{s−1} ≥ 0); Appendix II
+is post-table case work. Process GAP disclosed by the lane (an overbroad rg
+exposed snippets of a same-round file; no claim derived from them).
+LIFECYCLE: PROVISIONAL pending the two hostile reviews (Opus: the universal
+quantifier over siblings, the orbit partition (3.3)/(3.4), the recursion's
+soundness, the ODE step (3.7); Grok: source images, independent
+reimplementation, the D-slice counts, both rays, combination with the
+nested-pack orbit knapsack).
