@@ -1,0 +1,15 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes from the lane receipt, then copy the frozen drivers and run the POLY census measurements.I'll generate the hash manifest from the receipt and check it with `sha256sum -c`, then read the frozen drivers.The lane inputs directory is read-only, so I'll write the manifest elsewhere and re-run the hash check.Hashes match. Next I’ll read the charged reports, the POLY screen, and prior census format so the measurements stay on the frozen drivers.Hashes match. Next I’ll copy the frozen drivers and run a fail-closed POLY+ODE measurement script.Copies match the charged hashes. Next I’ll add the measurement driver and run the POLY census.The census finished in 40s with all fail-closed checks passing. I’ll pull the residue tables and target list from the results next.I have the full measured tables. Next I’ll write the sealed report with the new two-point target list.The body is 303 bytes over the 16KB cap, so I’ll trim it and restamp.The operative screen is now `C_FULL_TREE_POLYNOMIAL_ODE`. All six tasks were **MEASURED** on frozen copies in `box/postpoly-20260903/` (39.77 s, one core). Sealed report: `xmodel/post-poly-census-grok46-20260903.md` (15.5 KB body). Screen survival is not existence.
+
+**Rays.** The K=16 family (`t=1..8`) survives every column; all eight are two-point `s_eff=2`, `δ₂'=−1`. The `(d,e)`-fixed AP `t=6+9k` (`k=0..5`) dies at POLY node `j=3` (`δ₃=0`, `A=1`); the D=108 seed `t=0` still lives.
+
+**Rigid 19.** **0/19** under POLY. The three previous TREE/ODE leftovers die at POLY `j=3`.
+
+**D=108.** 20 ODE rows → **9 POLY** (6 groups, 5 UNI). Seed `(84,104,106; V=(8,8,3))` lives; the rigid `(90,99,106)` dies.
+
+**`48≤D≤200`.** 1,420 rows / 686 groups / 459 UNI. Newly empty vs ODE: `{72, 80, 100, 176}`. `u_s>1` is unchanged at 310/177 (POLY did not cut it).
+
+**New compiler target list:** **17** two-point `s_eff=2` `u_s=1` groups (18 rows, all UNI), including Moh `(64,48)`, `(75,50)`, `(84,56) V₂=5`, and K=16 at `t=1,2,3`.
+
+**`n≤100` excess.** 14 rows, all `u_s=1`, `s≥4`; `s_eff∈{3,4}`; none is two-point `s_eff=2`. Moh’s six survive every column.
+DIVERT path=xmodel/post-poly-census-grok46-20260903.md status=CLEAN_SEALED body_bytes=15913 body_sha256=e68e2b4c06a2ed4f1c43c947c4415b1fc80218688238ce27a07ebbc04601971f

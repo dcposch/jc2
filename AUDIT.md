@@ -16619,3 +16619,26 @@ vars); typed as METHOD (D = 105 is TREE-empty; not a frontier theorem). VERDICT:
 [APPII-UNIFORM] stays CONJ; what generalises (§6): (a)+(b)+tail as a fail-closed routine,
 with (c) replaced by the licensed inverse-Prop-6.3 split ONLY when δ₂' = −1 (two-point class)
 — which is exactly the K = 16 ray's class (δ₂' = −1, u' = 1, split y^{V₂}(y − x)).
+
+## INTEGRATION #17 DELTA (ll) (2026-09-03T13:20Z, MEASURED, producer Grok): EVERY LIVE TARGET RE-BASED ON THE OPERATIVE SCREEN C_FULL_TREE_POLYNOMIAL_ODE — the K = 16 ray survives POLY (t = 1..8); the (d,e)-fixed AP of delta 17(aa) DIES under POLY at j = 3 (only its D = 108 seed survives); the rigid stratum is 0/19; D = 108 has 9 survivors (6 groups; one u_s = 2); the D ≤ 200 residue is 1,420 / 686 / 459 with u_s > 1 = 310 rows / 177 groups; the Appendix II two-point target list is 17 groups / 18 rows
+
+`post-poly-census-grok46-20260903.md` (Grok; 11/11 hashes; box/postpoly-20260903/
+measure_postpoly.py; Moh's six pass every column). (1) K = 16 ray t = 1..8: TREE, ODE, POLY,
+POLY+ODE all pass; no POLY site (no integral δ ≤ 0 on the selected path); all u_s = 1,
+s_eff = 2, two-point δ₂' = −1, (12t+4, 8t+4; 12t+1; 3; 1), N = 6t+3 — the ONLY known
+cofinal family under the operative screen. (2) The (d,e)-fixed AP (t = 6 + 9k, n = 252 …
+1332): TREE and ODE hold but POLY kills every member at node j = 3 (δ₃ = 0 integral, A = 1,
+P = 9, Q = 3, selected V₃ = 8: "selected V path not embeddable; zero-major child
+infeasible"); the seed (108,72; M = (84,104,106); V = (8,8,3)) survives POLY+ODE at the same
+δ₃ = 0 site — delta 17(aa)'s second ray is retired as a POLY-screened cofinal family.
+(3) Rigid stratum: 0/19 under POLY (16 die at ungated TREE j = 2 (5) or j = 3 (11); the 3
+gapped survivors die at POLY j = 3, δ₃ = 0, A = 1) — no rigid compiler client. (4) D = 108:
+20 ODE → 9 POLY (6 groups, 5 UNI); eight u_s = 1, one u_s = 2; the (84,104,106; 8,8,3) seed
+lives; the rigid (90,99,106; 17,16,8) dies. (5) 48 ≤ D ≤ 200 POLY+ODE: 1,420 rows / 686
+groups / 459 UNI (17(hh) reproduced); 27 baseline-active degrees empty; newly empty vs ODE
+{72, 80, 100, 176}; u_s > 1 = 310 rows / 177 groups — identical to the ODE residue (POLY
+never cuts the minor branch). (6) NEW APPENDIX II TARGET LIST: 17 two-point s_eff = 2
+u_s = 1 groups (18 rows, all UNI) at D ≤ 200 — includes Moh's (64,48), (75,50) both V₂,
+(84,56) V₂ = 5, and K = 16 at t = 1, 2, 3; the 14-row n ≤ 100 excess is all u_s = 1, s ≥ 4,
+none two-point s_eff = 2 (needs the s' = 3 mode). Allocation: run the compiler on the 17
+after appendix2-run-k16 reports the budget at t = 2, 3.
