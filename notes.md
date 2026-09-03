@@ -20871,3 +20871,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T14:43Z EVENT — `twopoint-kills-gate-grok46` FAILED (xAI 500 "model at capacity"); relaunched as v2; fall back to Fable if it recurs (Opus also overloaded).
 
 ## 2026-09-03T14:43Z EVENT — `minor-dichotomy-grok46` stopped after 60 min with no activity (xAI capacity; 73-byte log, no drivers); handed to Sol: `minor-dichotomy-sol56-20260903`.
+
+## 2026-09-03T15:01Z EVENT — `twopoint-kills-gate-grok46-v2` FAILED again (xAI capacity). Handed to Fable: `twopoint-kills-gate-fable5-20260903` (scarce seat, short gate). Grok seat: avoid until capacity returns.
