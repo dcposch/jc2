@@ -20711,3 +20711,5 @@ claims fail closed; stamp notes with `date -u`; under zsh never
 launch lanes through a split loop; kill lanes only by their unique tag.
 **Seats at handoff:** Opus 0/5, Sol 1 (global-interpolation), Grok 0,
 GPT-5.5 0. AWS quotas 1920/548 vCPU; standing approvals unchanged.
+
+## HANDOFF ADDENDUM 08:33Z — box01 ssh timed out from the laptop (FLEET.md standing instruction on ssh timeouts applies: likely local-IP drift vs the security group; the cloud coordinator's IP will need the SG rule). The census end state was not re-read; last monitor tick 639/975 done, 0 failed. Harvest per box/run-keller-census.sh / keller_cluster_census.py merge → validate once reachable. Grok branch-orbits exit confirmed (NO-REPORT, killed by coordinator).
