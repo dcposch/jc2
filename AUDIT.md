@@ -15548,3 +15548,46 @@ N ≥ 6 (a frontier effect: its two groups admit only N ∈ {2,4} or none);
 no D > 100 empties; FREE/CHAU reducible tests kill 0/670; min R = 2e = 6
 now at (84, 56, M = (−14,82), V₂ = 1, k = 26, N = 26); 31 distinct achievable
 N ≥ 6 values, max 36.
+
+## INTEGRATION #17 DELTA (j) (2026-09-03T10:50Z, REVIEWED): BRANCH-ORBITS — (UNI) IS NOT A THEOREM; THE ORBIT-SIZE LAW; EXACT s = 3 PACKING; ORBIT-ADMISSIBLE N-SETS REPLACE THE UNI SETS
+
+`branch-orbits-v2-grok46-20260903.md` (519550c4; driver
+box/branch-orbits-v2-20260903/knapsack.py) with the different-model review
+`branch-orbits-v2-review-gpt55-20260903.md` (Moh pp.150, 168–171, 173,
+179–180, 188, 194, 200–202 read as images; rerun 336/0). PROMOTED (with the
+review's repairs): the u normalised top-major slots of H = L₁^u L₂^v lie
+under ONE major disc D_{s−1} (p.194 two-factor top form with unequal
+multiplicities + the p.200 Theorem's bound (n − M_s)V_{s+1}/d_{s+1} = 2 at
+r = s; Lemma 6.1 supplies only δ_{s−1} ≥ 0 and the normalisation) — they are
+not u conjugate discs; ORBIT-SIZE: for one bottom-major disc of one tower,
+|O|(D₁) = ∏_{j=2}^{s−1} ω_j with ω_j = A_j on a nonzero (10)-factor (the
+action π ↦ ω^B π with (A,B) = 1 is free of order exactly A_j; a root-of-unity
+centre or shared earlier ramification does not shrink it) and ω_j = 1 on the
+zero (11)-factor; a (10)-level may carry several nonzero orbits of the same
+multiplicity (more packets, same |O|); (12)/(13) is the INTERNAL Galois
+condition on g_σ(π) inside D₁ (p.188), not a disc-orbit multiplier; (8)–(13)
+hold per tower / per orbit type; at s = 3 the packing Σ_k |O_k| V₂^{(k)} ≤ u
+is EXACT (Q = V₃d₂/d₃ = V_sK/d_s = u algebraically; the zero factor is 0–1 at
+the unique parent D₂); MEASURED on (1)–(13), D ≤ 120: all-s UNB orbit
+knapsack 681 alive at N ≥ 6 / 575 in [6,16] (a RELAXATION at s > 3: kills
+valid, survivors an upper bound — OPEN[NESTED-PACK]); s = 3 exact Z01: 173 /
+138 of 274 groups; D = 88 EMPTIED in [6,16] (exact; its only orbit-admissible
+N is 18, alive at N ≥ 6); D = 48 emptied; no D > 100 empties (exact s = 3
+survivors in [6,16]: 105: 3, 108: 10, 112: 9, 117: 3, 120: 31); the D = 105
+trio survives as exactly three single nonzero-orbit packets, |O| = 18, 13, 17,
+ALL N = 9; D = 117 Z01 drops 4 → 3 (the (11)-only row has value 9/7).
+REFUTED: (UNI) as a theorem across orbits; "the u copies of L₁ are conjugate
+discs"; A₁ as part of |O|(D₁); the D = 105 UNI interval {6..12} on
+M = [28,103], V_s = 5; the (84,56) M₂ = 72 UNI value 5. RETYPED: every UNI
+N-set in integrations #16–#17 is HYP/RELAXED; the promoted replacement is the
+ORBIT-ADMISSIBLE N-set (exact at s = 3, relaxed at s > 3): Moh's six rows in
+[6,16] → {9}, {}, {10}, {9}, {8}, {16}. What survives of (UNI): uniformity
+inside one Galois orbit (unconditional); a one-orbit geometry has k ∈ A₂·Z in
+the s = 3 (10)-only case, and if A₂V₂ = u the N-set collapses to {uq}.
+REPAIRS (binding): cite p.194 + p.200 for the unique D_{s−1}; remove the stale
+/tmp import path from knapsack.py; the script's "STRICT s=3" total is the
+global Z01 total (611/493) — the 274-group subtotal is 173/138. GAP:
+geometric realisability of any packet (OPEN[BRANCH-ORBITS] geometric,
+OPEN[STAR-REALISABILITY], OPEN[MOH-PROGRAM]). OPEN[NESTED-PACK] (s > 3):
+bounded by a tuple of length s − 2 ≤ 3 with parts ≤ Q_j; cheapest test: a
+parent-indexed DP (one zero child per parent, free nonzero packets), desk.
