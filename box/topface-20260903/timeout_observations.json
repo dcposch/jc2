@@ -1,0 +1,46 @@
+{
+  "status": "post-run observation record; not a parsed Singular result",
+  "date_utc": "2026-09-03",
+  "runner_note": "These three Python processes loaded the pre-fix runner. Singular timed out at the first prime, then TimeoutExpired.stdout remained bytes and JSON serialization failed. The generated .sing files persist; stdout controls and exact build_elapsed do not.",
+  "observations": [
+    {
+      "partition": [4, 1, 1],
+      "system": "systems/192_128_part_4_1_1_mod_32003.sing",
+      "equations": 162,
+      "unknowns_excluding_T": 37,
+      "build_elapsed_seconds_inferred": 223.5,
+      "char": 32003,
+      "timeout_seconds": 600,
+      "verdict": "COUNTING-BOUND",
+      "controls": "UNRECORDED"
+    },
+    {
+      "partition": [3, 2, 1],
+      "system": "systems/192_128_part_3_2_1_mod_32003.sing",
+      "equations": 162,
+      "unknowns_excluding_T": 37,
+      "build_elapsed_seconds_inferred": 247,
+      "char": 32003,
+      "timeout_seconds": 600,
+      "verdict": "COUNTING-BOUND",
+      "controls": "UNRECORDED"
+    },
+    {
+      "partition": [2, 2, 1, 1],
+      "system": "systems/192_128_part_2_2_1_1_mod_32003.sing",
+      "equations": 162,
+      "unknowns_excluding_T": 38,
+      "build_elapsed_seconds_inferred": 547,
+      "char": 32003,
+      "timeout_seconds": 600,
+      "verdict": "COUNTING-BOUND",
+      "controls": "UNRECORDED"
+    }
+  ],
+  "not_launched": [
+    [3, 1, 1, 1],
+    [2, 2, 2],
+    [2, 1, 1, 1, 1],
+    [1, 1, 1, 1, 1, 1]
+  ]
+}

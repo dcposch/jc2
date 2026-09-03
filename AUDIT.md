@@ -16782,3 +16782,37 @@ u_s > 1 rows: (99,66), (108,72), (120,80; s = 5; V = (1,1,6,3)), (120,100; V = (
 NON-skeleton datum (the actual minor general point) or Moh's per-row branch computation;
 it is the largest untouched block of the residue and the place where Moh's own proof is
 thinnest.
+
+## INTEGRATION #17 DELTA (rr) (2026-09-03T15:31Z, SOURCE-READ + DERIVED + MEASURED, producer Sol; two kills PROVED-HERE/UNREVIEWED): THE DESCENDED TOP FACE IS NOT LICENSED BY A THEOREM — it is a finite PARAMETRIC PARTITION STRATIFICATION H = y^{V₂'}·Π(y − a_i x)^{e_i}, Σe_i = u', with symbolic slopes; 30 source-safe strata over the nine open two-point rows; (132,88) → (33,22; 30; 8; 1) and (180,120) → (45,30; 42; 11; 1) SATURATED-EMPTY over ALL their strata; (24,16; 17; 2; 5) partial; OPEN[PRIOR-SLICE]: the earlier fixed-face kills of (15,10; 11; 2; u' = 3) and (21,14; 18; 5; u' = 2) are re-typed as SLICES pending the full stratification
+
+`topface-license-sol56-20260903.md` (Sol, 20KB; box/topface-20260903/; pages 196–199,
+207–211). SOURCE-READ: Moh states no general inverse-Prop-6.3 top-face theorem; Props
+6.2–6.4 give polynomiality, transformed degrees, a monomial Jacobian and a radius lower
+bound — not the descended root partition or residues; the "2,2,6" sentence belongs to the
+(75,50) → (15,10; 11; 3; k = 2) calculation alone (§4.1: it means y³(y² − x²) there).
+DERIVED general rule: with the actual boundary factor data, f_top = H^{d'}, g_top = H^{e'},
+H = y^{V₂'}Π(y − a_i x)^{e_i}, Σe_i = u' = d₂' − V₂', d' = m'/d₂', e' = n'/d₂'; the skeleton
+fixes u' and (via Prop 4.6's cap on distinct roots, deg q) bounds the factor count but
+determines neither (e_i) nor the distinct nonzero slopes a_i — a numeric slope choice is a
+SLICE. MEASURED: 30 source-safe partition strata across the nine rows (per row 3,2,3,3,11,
+2,2,2,2; a conditional inverse-minor inequality would cut to 21 but is not licensed;
+≤ 5 slope parameters per stratum; case_counts.json holds every face polynomial).
+COMPUTATIONS (symbolic slopes kept, Ω saturation, wrapper controls, 3 primes + Q):
+(33,22; 30; 8; 1): [3] 28 unk/62 eq [1]; [2,1] 29/62 [1] — both strata, covering the source
+constraints → (132,88) SATURATED-EMPTY in the A/B chart. (45,30; 42; 11; 1): [4] 44/100,
+[3,1] 45/100, [2,2] 45/100 — all [1] → (180,120) SATURATED-EMPTY. (24,16; 17; 2; 5): 162
+equations; [6], [5,1], [4,2], [3,3] all [1]; [4,1,1], [3,2,1], [2,2,1,1] modular TIMEOUT
+600 s (37–38 unknowns; controls unrecorded); [3,1,1,1], [2,2,2], [2,1,1,1,1], [1⁶] not run
+→ COUNTING-BOUND. The generic rows (143–228 unknowns) untouched. OPEN[PRIOR-SLICE]
+(audit): the compiler kill of (15,10; 11; 2) (delta 17(bb), u' = 3, fixed face) and of
+(21,14; 18; 5) (u' = 2, fixed y⁵(y² − x²)) — both reused as controls in delta 17(pp) — used
+faces not source-licensed: RE-TYPED as SLICE kills until their full strata are run
+(Moh's own bracketed "15 or 13" for (15,10; V₂ = 2) is his case split). The t = 2 K = 16
+kill (17(oo)) and the three k = 4 kills (17(pp)) have u' = 1 (single face y^{V}(y − x), no
+choice) and are unaffected; Moh's (16,12) likewise. OPENs: INVERSE-MINOR (derive the
+descended boundary p, q factor created by inverse Prop 6.3), TOP-RESIDUES, PARTITION-CHART,
+PRIOR-SLICE. TALLY of the 17-group two-point list under the operative screen: dead with
+licensed faces — (64,48), (112,80) [K16 t = 2], (147,98), (168,112), (189,126), (132,88)*,
+(180,120)* [* PROVISIONAL]; dead as slices pending strata — (75,50; V₂ = 2), (84,56);
+(75,50; V₂ = 3) dead with Moh's licensed 2,2,6; open — (125,75), (160,112) [K16 t = 3,
+lane running], (175,100), (175,125), (180,144), (192,128) [partial], (196,56), (200,120).
