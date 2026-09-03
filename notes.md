@@ -20913,3 +20913,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - Two-point stratum at D ≤ 200: 7/17 dead; chart-fix (3 rows) and bigrows (6 rows) running.
 
 ## 2026-09-03T16:48Z EVENT — `xu9966-read-gpt55` sealed (18KB): Xu §8 enumerated — (99,66)'s open set is exactly {δ = 5/2 split (p = π(π² − c), q₁ = −2∫p³, explicit), branch-B δ = 2 full lift, A's bridge}; Xu's final-root inequalities IM ≥ Im are a new skeleton-level tool (kills (84,56; 64; 2) and a (75,50) split). → AUDIT delta 17(zz). QUEUED: δ = 5/2 lift; IM ≥ Im census screen. Lanes live: 5.
+
+## 2026-09-03T16:49Z EVENT — launched `xu-delta52-lift-gpt55-20260903` (the δ = 5/2 split of (99,66) — Xu's open case — lifted beyond the reduced equation). Lanes live: 6.
