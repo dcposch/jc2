@@ -17365,3 +17365,9 @@ LEDGER: N5 → PROVED; N6 (classification) stands with N5 proved; with 17(nnn) a
 the (99,66) picture is: exactly two live branches, both faces licensed and rigid, both
 local lifts consistent, both high-z joint systems non-unit through depth 6 (δ = 5/2) /
 running (branch B); the decision needs the complete joint system (Sol design lane).
+
+## INTEGRATION #17 DELTA (sss) (2026-09-03T19:28Z, PROMOTED): N5 gated by GPT-5.5 — CONFIRMED[TOP-PRINCIPAL-N5]: den(δ) ≤ u_s for a genuine top principal-minor split (the μ_e action on t^{1/e}, not Moh p.201(8)'s increment action); NOT[N5-DIVIDES]; GAP[SUBCLUSTER-ABSOLUTE] (the child-packet version needs hypotheses — not used by the (99,66) classification, which is at the top packet); the (99,66) instances confirmed (δ = 2, 5/2 allowed; δ = 7/3 allowed by N5 and excluded by Xu's ODE, as claimed); sanity (64,48), (75,50; V₂ = 3) confirmed
+
+`n5-gate-gpt55-20260903.md`. LEDGER: N5 PROMOTED at the top packet; the (99,66) split-order
+classification {2 [2,1], 5/2 [1,1,1]} is COMPLETE and PROMOTED (17(nnn) + 17(rrr) + this);
+the decider is exhaustive over the two branches.
