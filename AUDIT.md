@@ -16079,3 +16079,63 @@ conditions cut G2 to 14 (h) + 27 (β) + 1 = 42 unknowns — COUNTING-BOUND
 Moh-pattern β) saturates EMPTY at c ≠ 0 — a SLICE, not a kill of G2; G3
 likewise COUNTING-BOUND. (D = 105 is in any case empty under delta
 17(r); G2/G3 remain calibration objects for theorem (T)'s machinery.)
+
+## INTEGRATION #17 DELTA (u) (2026-09-03T12:16Z, REVIEWED — second gate; CORRECTION TO 17(r)): THE WHOLE-TREE SCREEN SPLIT INTO ITS GAP-FREE AND GAPPED PARTS; PASSPORT DERIVED; RECENTRING IS MOH p.190; OPEN[CENTRE-SUPPORT]
+
+Second hostile review `whole-tree-review-opus5-20260903.md` (Opus; a third
+independent recursion in box/wholetree-drivers-20260903/opus5_probe.py; every
+charged number replicates: 60/58/55/23/20, the (75,50) residue, 1692/1189/670,
+183/113/57, 152/96/45). PROMOTED, stronger than typed in 17(r): (a) the
+universal sibling extension (PROVED-IN-SOURCE; level s vacuous, 0/658
+violations; Lemma 5.3 gives exactly two top roots); (b) the orbit partition
+P = b + AΣu (Moh's (10)/(11) ARE its two halves; PROVED-IN-SOURCE) and the
+capacity A_j | Q_j − 1 (DERIVED in three lines from Lemma 5.2 + Def 5.1(3);
+automatic, 0 failures at 1,996 nodes — so 58 → 55 is entirely the passport);
+(c) the branch-correct recursion (M, d global; child P, Q from u and the
+level; radii/L/A per branch; a (level, multiplicity) state would be unsound);
+(d) the ODE step (3.7) (assembled PROVED-IN-SOURCE: A.3's RHS is cp; its
+hypothesis holds at every node by p.171(6) + Prop 4.6(2) — Moh's printed
+weight arguments are transposed); (e) the PASSPORT d₊/g ≥ S — RETYPED
+EXTERNAL → DERIVED from Moh's own equation (h = p^Q/q^P, h'/h = −c/q, descent
+to z = π^A, ord_∞(H₁ − ζ₀) = S ≤ deg H₁; Riemann–Hurwitz tight, so no stronger
+numerical passport exists); (f) the RECENTRING y ↦ y − ax − b is PROVED-IN-
+SOURCE at p.190 (not Prop 5.4), preserves J, deg = deg_y and every M_i, and
+licenses "danger = True at the root" — OPEN[FULL-TREE-RECENTER] is RETRACTED
+as stated. THE GAP (binding): the step "every edge of the chain carries the
+zero factor ⇒ σ₁ = πt^{δ₁}" (the Prop 5.6 zero-leaf kill in C_ZERO_PATH /
+C_FULL_TREE) assumes the centre of D₁ carries no term outside the chain's
+radii; Def 1.3 (p.146) allows the whole lattice (1/L_i)Z per window and Moh's
+own p.190 display has such a term (the constant b), removable at s = 2 only
+because L₁ = 1; at s ≥ 3 (all 658 rows; Moh's own (6)) the free set is
+non-empty on 500/658 selected chains and on five of Moh's six rows (empty only
+for (99,66)). Moh's p.201 sentence "(11) can not always happen as established
+by Prop 5.6" is an ASIDE, SOURCE-ASSERTED WITH A PROOF GAP as a universal
+rule — OPEN[CENTRE-SUPPORT] (bounded: a proof of vanishing restores 204 → 55
+rows / 21 → 11 classes at n ≤ 100 and re-empties D = 60, 81, 105 at raw-row
+level; a refutation costs 149 rows / 10 classes and those three degrees;
+cheapest test: the (75,50; 55,73; V = 3,4) chain with free set {2/5} — one
+resultant in two unknowns over Q; lane launched). RETYPED: C_ZERO_PATH (153),
+C_FULL_TREE (60), _ODE (58), _PASSPORT (55), _POLYNOMIAL* (23/20) →
+SOURCE-ASSERTED, GAPPED (Prop 5.6 component); the headline "the tree gives
+exactly Moh's two rows at (75,50)" needs the gapped step (gap-free residue
+{40/1, 40/2, 55/2, 55/3, 60/9}). PROMOTED GAP-FREE SCREENS (fail-closed,
+6/6): partition + universal siblings + (12)/(13) at siblings, NO Prop 5.6:
+658 → 348 / 52 classes; + ODE 347; + passport 330 / 52; with the GATED
+Prop 5.6 (kill only when the chain's free set is empty): 216 / 21, + ODE +
+passport 204 / 21 (the recommended repair). FRONTIER, GAP-FREE: the pinned-N
+emptiness of BOTH D = 105 and D = 117 holds under EVERY screen including the
+weakest gap-free one (0 UNI groups at integer N ≥ 6, 0 mixed in [6,16]
+already under partition-only; D = 105's two gap-free raw survivors
+(m = 63, M = [91,103], V = (7,6), q = 15/11) and (m = 70, M = [90,103],
+V = (5,3), q = 1/4) attain no integer N ≥ 6); D = 117 is raw-empty gap-free;
+BOTH RAYS DIE GAP-FREE (8/8 members killed by the forced zero sibling at D₂
+failing (12)/(13) — no Prop 5.6, no recentring, no passport). So D_min ≥ 108
+on the screened, pinned census STANDS; the raw-row emptiness of D = 60, 81,
+105 depends on OPEN[CENTRE-SUPPORT]. 48 ≤ D ≤ 190 (Opus's implementation,
+K ≥ 16; D = 192's s = 6 skeleton exceeded the desk budget): baseline
+13,584 / 8,434 / 5,417 (rows/groups/UNI-alive); partition-only 6,628 / 3,501 /
+2,086; gated tree 5,573 / 2,863 / 1,847; gated + ODE + passport 5,227 / 2,702 /
+1,727; ungated C_FULL_TREE 1,615 / 843 / 544. OPEN[MOH-PROGRAM-ARTIFACT]
+re-based: 324 excess rows / 48 excess classes gap-free (198 / 17 gated).
+OPEN[SIBLING-COEFFICIENT-COMPATIBILITY] is the ranked residual (per-node
+screens never force the p_j, q_j at different nodes to come from one pair).

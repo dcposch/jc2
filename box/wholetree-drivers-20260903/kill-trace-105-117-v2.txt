@@ -1,0 +1,353 @@
+
+######## D=105 -- bare source tree (charged C_FULL_TREE) ########
+
+  (n,m)=(105,42) M=[49, 103] V={2: 2, 3: 5} -> DEAD
+    D_2: delta=5/13 A=13 P=15 Q=40 thr=3/8 selected V_2=2
+        zero-root multiplicity b == P mod A == 2 (mod 13) -> b in [2, 15]
+        b=2: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=15: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,63) M=[28, 103] V={2: 5, 3: 6} -> DEAD
+    D_2: delta=2/13 A=13 P=18 Q=66 thr=3/11 selected V_2=5
+        zero-root multiplicity b == P mod A == 5 (mod 13) -> b in [5, 18]
+        b=5: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=18: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,63) M=[70, 103] V={2: 12, 3: 4} -> DEAD
+    D_2: delta=14/19 A=19 P=12 Q=20 thr=3/5 selected V_2=12
+        zero-root multiplicity b == P mod A == 12 (mod 19) -> b in [12]
+        b=12: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,63) M=[91, 103] V={2: 7, 3: 6} -> DEAD
+    D_2: delta=1/11 A=11 P=18 Q=12 thr=3/2 selected V_2=7
+        zero-root multiplicity b == P mod A == 7 (mod 11) -> b in [7, 18]
+        b=7: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=18: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,84) M=[28, 103] V={2: 1, 3: 6} -> DEAD
+    D_2: delta=2/13 A=13 P=18 Q=66 thr=3/11 selected V_2=1
+        zero-root multiplicity b == P mod A == 5 (mod 13) -> b in [5, 18]
+        b=5: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=18: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,84) M=[70, 103] V={2: 1, 3: 5} -> DEAD
+    D_2: delta=3/8 A=8 P=15 Q=25 thr=3/5 selected V_2=1
+        zero-root multiplicity b == P mod A == 7 (mod 8) -> b in [7, 15]
+        b=7: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=15: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[10, 103] V={2: 1, 3: 4} -> DEAD
+    D_2: delta=6/25 A=25 P=28 Q=76 thr=7/19 selected V_2=1
+        zero-root multiplicity b == P mod A == 3 (mod 25) -> b in [3, 28]
+        b=3: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=28: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[40, 103] V={2: 1, 3: 4} -> DEAD
+    D_2: delta=4/17 A=17 P=28 Q=52 thr=7/13 selected V_2=1
+        zero-root multiplicity b == P mod A == 11 (mod 17) -> b in [11, 28]
+        b=11: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=28: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[90, 103] V={2: 5, 3: 3} -> DEAD
+    D_2: delta=5/8 A=8 P=21 Q=9 thr=7/3 selected V_2=5
+        zero-root multiplicity b == P mod A == 5 (mod 8) -> b in [5, 13, 21]
+        b=5: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=13: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=21: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[90, 103] V={2: 13, 3: 3} -> DEAD
+    D_2: delta=5/8 A=8 P=21 Q=9 thr=7/3 selected V_2=13
+        zero-root multiplicity b == P mod A == 5 (mod 8) -> b in [5, 13, 21]
+        b=5: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=13: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=21: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[-42, 103] V={2: 1, 3: 6} -> DEAD
+    D_2: delta=4/25 A=25 P=30 Q=126 thr=5/21 selected V_2=1
+        zero-root multiplicity b == P mod A == 5 (mod 25) -> b in [5, 30]
+        b=5: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=30: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[28, 103] V={2: 1, 3: 5} -> DEAD
+    D_2: delta=7/18 A=18 P=25 Q=55 thr=5/11 selected V_2=1
+        zero-root multiplicity b == P mod A == 7 (mod 18) -> b in [7, 25]
+        b=7: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=25: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[28, 103] V={2: 1, 3: 6} -> DEAD
+    D_2: delta=2/13 A=13 P=30 Q=66 thr=5/11 selected V_2=1
+        zero-root multiplicity b == P mod A == 4 (mod 13) -> b in [4, 17, 30]
+        b=4: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=17: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=30: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[63, 103] V={2: 4, 3: 6} -> DEAD
+    D_2: delta=1/7 A=7 P=30 Q=36 thr=5/6 selected V_2=4
+        zero-root multiplicity b == P mod A == 2 (mod 7) -> b in [2, 9, 16, 23, 30]
+        b=2: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=9: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=16: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=23: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=30: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[84, 103] V={2: 9, 3: 4} -> DEAD
+    D_2: delta=8/11 A=11 P=20 Q=12 thr=5/3 selected V_2=9
+        zero-root multiplicity b == P mod A == 9 (mod 11) -> b in [9, 20]
+        b=9: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=20: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  D=105: 15 baseline rows, 0 survive under bare source tree (charged C_FULL_TREE)
+
+######## D=105 -- gap-free gated tree ########
+
+  (n,m)=(105,42) M=[49, 103] V={2: 2, 3: 5} -> DEAD
+    D_2: delta=5/13 A=13 P=15 Q=40 thr=3/8 selected V_2=2
+        zero-root multiplicity b == P mod A == 2 (mod 13) -> b in [2, 15]
+        b=2: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=15: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,63) M=[28, 103] V={2: 5, 3: 6} -> DEAD
+    D_2: delta=2/13 A=13 P=18 Q=66 thr=3/11 selected V_2=5
+        zero-root multiplicity b == P mod A == 5 (mod 13) -> b in [5, 18]
+        b=5: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=18: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,63) M=[70, 103] V={2: 12, 3: 4} -> DEAD
+    D_2: delta=14/19 A=19 P=12 Q=20 thr=3/5 selected V_2=12
+        zero-root multiplicity b == P mod A == 12 (mod 19) -> b in [12]
+        b=12: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,63) M=[91, 103] V={2: 7, 3: 6} -> ALIVE
+    D_2: delta=1/11 A=11 P=18 Q=12 thr=3/2 selected V_2=7
+        zero-root multiplicity b == P mod A == 7 (mod 11) -> b in [7, 18]
+        b=7: usable
+        b=18: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+
+  (n,m)=(105,84) M=[28, 103] V={2: 1, 3: 6} -> DEAD
+    D_2: delta=2/13 A=13 P=18 Q=66 thr=3/11 selected V_2=1
+        zero-root multiplicity b == P mod A == 5 (mod 13) -> b in [5, 18]
+        b=5: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=18: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,84) M=[70, 103] V={2: 1, 3: 5} -> DEAD
+    D_2: delta=3/8 A=8 P=15 Q=25 thr=3/5 selected V_2=1
+        zero-root multiplicity b == P mod A == 7 (mod 8) -> b in [7, 15]
+        b=7: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=15: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[10, 103] V={2: 1, 3: 4} -> DEAD
+    D_2: delta=6/25 A=25 P=28 Q=76 thr=7/19 selected V_2=1
+        zero-root multiplicity b == P mod A == 3 (mod 25) -> b in [3, 28]
+        b=3: FORCED MAJOR zero sibling fails (12)/(13) at A_1=7
+        b=28: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[40, 103] V={2: 1, 3: 4} -> DEAD
+    D_2: delta=4/17 A=17 P=28 Q=52 thr=7/13 selected V_2=1
+        zero-root multiplicity b == P mod A == 11 (mod 17) -> b in [11, 28]
+        b=11: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=28: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[90, 103] V={2: 5, 3: 3} -> ALIVE
+    D_2: delta=5/8 A=8 P=21 Q=9 thr=7/3 selected V_2=5
+        zero-root multiplicity b == P mod A == 5 (mod 8) -> b in [5, 13, 21]
+        b=5: usable
+        b=13: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=21: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+
+  (n,m)=(105,70) M=[90, 103] V={2: 13, 3: 3} -> DEAD
+    D_2: delta=5/8 A=8 P=21 Q=9 thr=7/3 selected V_2=13
+        zero-root multiplicity b == P mod A == 5 (mod 8) -> b in [5, 13, 21]
+        b=5: usable
+        b=13: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=21: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+
+  (n,m)=(105,70) M=[-42, 103] V={2: 1, 3: 6} -> DEAD
+    D_2: delta=4/25 A=25 P=30 Q=126 thr=5/21 selected V_2=1
+        zero-root multiplicity b == P mod A == 5 (mod 25) -> b in [5, 30]
+        b=5: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=30: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[28, 103] V={2: 1, 3: 5} -> DEAD
+    D_2: delta=7/18 A=18 P=25 Q=55 thr=5/11 selected V_2=1
+        zero-root multiplicity b == P mod A == 7 (mod 18) -> b in [7, 25]
+        b=7: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=25: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[28, 103] V={2: 1, 3: 6} -> DEAD
+    D_2: delta=2/13 A=13 P=30 Q=66 thr=5/11 selected V_2=1
+        zero-root multiplicity b == P mod A == 4 (mod 13) -> b in [4, 17, 30]
+        b=4: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=17: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=30: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[63, 103] V={2: 4, 3: 6} -> DEAD
+    D_2: delta=1/7 A=7 P=30 Q=36 thr=5/6 selected V_2=4
+        zero-root multiplicity b == P mod A == 2 (mod 7) -> b in [2, 9, 16, 23, 30]
+        b=2: FORCED MAJOR zero sibling fails (12)/(13) at A_1=9
+        b=9: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=16: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=23: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=30: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(105,70) M=[84, 103] V={2: 9, 3: 4} -> DEAD
+    D_2: delta=8/11 A=11 P=20 Q=12 thr=5/3 selected V_2=9
+        zero-root multiplicity b == P mod A == 9 (mod 11) -> b in [9, 20]
+        b=9: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=20: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  D=105: 15 baseline rows, 2 survive under gap-free gated tree
+
+######## D=117 -- bare source tree (charged C_FULL_TREE) ########
+
+  (n,m)=(117,78) M=[13, 115] V={2: 3, 3: 8} -> DEAD
+    D_2: delta=13/21 A=21 P=24 Q=64 thr=3/8 selected V_2=3
+        zero-root multiplicity b == P mod A == 3 (mod 21) -> b in [3, 24]
+        b=3: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=24: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[52, 115] V={2: 1, 3: 8} -> DEAD
+    D_2: delta=8/13 A=13 P=24 Q=40 thr=3/5 selected V_2=1
+        zero-root multiplicity b == P mod A == 11 (mod 13) -> b in [11, 24]
+        b=11: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=24: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[52, 115] V={2: 1, 3: 10} -> DEAD
+    D_2: delta=2/7 A=7 P=30 Q=50 thr=3/5 selected V_2=1
+        zero-root multiplicity b == P mod A == 2 (mod 7) -> b in [2, 9, 16, 23, 30]
+        b=2: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=9: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=16: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=23: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=30: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[52, 115] V={2: 1, 3: 11} -> DEAD
+    D_2: delta=1/6 A=6 P=33 Q=55 thr=3/5 selected V_2=1
+        zero-root multiplicity b == P mod A == 3 (mod 6) -> b in [3, 9, 15, 21, 27, 33]
+        b=3: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=9: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=15: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=21: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=27: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=33: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[91, 115] V={2: 8, 3: 7} -> DEAD
+    D_2: delta=11/13 A=13 P=21 Q=14 thr=3/2 selected V_2=8
+        zero-root multiplicity b == P mod A == 8 (mod 13) -> b in [8, 21]
+        b=8: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=21: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[91, 115] V={2: 2, 3: 11} -> DEAD
+    D_2: delta=1/7 A=7 P=33 Q=22 thr=3/2 selected V_2=2
+        zero-root multiplicity b == P mod A == 5 (mod 7) -> b in [5, 12, 19, 26, 33]
+        b=5: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=12: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=19: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=26: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=33: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[104, 115] V={2: 17, 3: 8} -> DEAD
+    D_2: delta=4/7 A=7 P=24 Q=8 thr=3 selected V_2=17
+        zero-root multiplicity b == P mod A == 3 (mod 7) -> b in [3, 10, 17, 24]
+        b=3: minor, stops (p.200(5))
+        b=10: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=17: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=24: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+
+  D=117: 7 baseline rows, 0 survive under bare source tree (charged C_FULL_TREE)
+
+######## D=117 -- gap-free gated tree ########
+
+  (n,m)=(117,78) M=[13, 115] V={2: 3, 3: 8} -> DEAD
+    D_2: delta=13/21 A=21 P=24 Q=64 thr=3/8 selected V_2=3
+        zero-root multiplicity b == P mod A == 3 (mod 21) -> b in [3, 24]
+        b=3: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=24: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[52, 115] V={2: 1, 3: 8} -> DEAD
+    D_2: delta=8/13 A=13 P=24 Q=40 thr=3/5 selected V_2=1
+        zero-root multiplicity b == P mod A == 11 (mod 13) -> b in [11, 24]
+        b=11: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=24: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[52, 115] V={2: 1, 3: 10} -> DEAD
+    D_2: delta=2/7 A=7 P=30 Q=50 thr=3/5 selected V_2=1
+        zero-root multiplicity b == P mod A == 2 (mod 7) -> b in [2, 9, 16, 23, 30]
+        b=2: FORCED MAJOR zero sibling fails (12)/(13) at A_1=9
+        b=9: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=16: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=23: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=30: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[52, 115] V={2: 1, 3: 11} -> DEAD
+    D_2: delta=1/6 A=6 P=33 Q=55 thr=3/5 selected V_2=1
+        zero-root multiplicity b == P mod A == 3 (mod 6) -> b in [3, 9, 15, 21, 27, 33]
+        b=3: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=9: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=15: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=21: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=27: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=33: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[91, 115] V={2: 8, 3: 7} -> DEAD
+    D_2: delta=11/13 A=13 P=21 Q=14 thr=3/2 selected V_2=8
+        zero-root multiplicity b == P mod A == 8 (mod 13) -> b in [8, 21]
+        b=8: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=21: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[91, 115] V={2: 2, 3: 11} -> DEAD
+    D_2: delta=1/7 A=7 P=33 Q=22 thr=3/2 selected V_2=2
+        zero-root multiplicity b == P mod A == 5 (mod 7) -> b in [5, 12, 19, 26, 33]
+        b=5: FORCED MAJOR zero sibling fails (12)/(13) at A_1=8
+        b=12: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=19: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=26: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=33: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        => no admissible partition at D_2: killed here
+
+  (n,m)=(117,78) M=[104, 115] V={2: 17, 3: 8} -> DEAD
+    D_2: delta=4/7 A=7 P=24 Q=8 thr=3 selected V_2=17
+        zero-root multiplicity b == P mod A == 3 (mod 7) -> b in [3, 10, 17, 24]
+        b=3: minor, stops (p.200(5))
+        b=10: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=17: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+        b=24: FORCED MAJOR zero sibling; all-zero chain reaches D_1 -> Prop.5.6
+
+  D=117: 7 baseline rows, 0 survive under gap-free gated tree
