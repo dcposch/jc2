@@ -1,0 +1,599 @@
+{
+  "skeletons": {
+    "64_48": {
+      "label": "(64,48)",
+      "n": 64,
+      "m": 48,
+      "s": 3,
+      "d": {
+        "1": 64,
+        "2": 16,
+        "3": 4,
+        "4": 2
+      },
+      "V": {
+        "3": 3,
+        "2": 3,
+        "4": 2
+      },
+      "u_s": 1,
+      "v_s": 3,
+      "N_prin_f": 12,
+      "Q_maj_f": 36,
+      "n_over_ds": 16,
+      "m_over_ds": 12,
+      "m_over_d2": 3,
+      "n_over_d2": 4,
+      "delta": {
+        "1": "9/16",
+        "2": "1/4",
+        "3": "-1"
+      },
+      "A": {
+        "1": 4,
+        "2": 4
+      },
+      "v_over_u": "3",
+      "den_bound_principal": 1
+    },
+    "75_50_V2=3": {
+      "label": "(75,50) V2=3",
+      "n": 75,
+      "m": 50,
+      "s": 3,
+      "d": {
+        "1": 75,
+        "2": 25,
+        "3": 5,
+        "4": 1
+      },
+      "V": {
+        "3": 4,
+        "2": 3,
+        "4": 1
+      },
+      "u_s": 1,
+      "v_s": 4,
+      "N_prin_f": 10,
+      "Q_maj_f": 40,
+      "n_over_ds": 15,
+      "m_over_ds": 10,
+      "m_over_d2": 2,
+      "n_over_d2": 3,
+      "delta": {
+        "1": "1/2",
+        "2": "1/5",
+        "3": "-1"
+      },
+      "A": {
+        "1": 2,
+        "2": 5
+      },
+      "v_over_u": "4",
+      "den_bound_principal": 1
+    },
+    "75_50_V2=2": {
+      "label": "(75,50) V2=2",
+      "n": 75,
+      "m": 50,
+      "s": 3,
+      "d": {
+        "1": 75,
+        "2": 25,
+        "3": 5,
+        "4": 1
+      },
+      "V": {
+        "3": 4,
+        "2": 2,
+        "4": 1
+      },
+      "u_s": 1,
+      "v_s": 4,
+      "N_prin_f": 10,
+      "Q_maj_f": 40,
+      "n_over_ds": 15,
+      "m_over_ds": 10,
+      "m_over_d2": 2,
+      "n_over_d2": 3,
+      "delta": {
+        "1": "2/3",
+        "2": "1/5",
+        "3": "-1"
+      },
+      "A": {
+        "1": 3,
+        "2": 5
+      },
+      "v_over_u": "4",
+      "den_bound_principal": 1
+    },
+    "99_66": {
+      "label": "(99,66)",
+      "n": 99,
+      "m": 66,
+      "s": 3,
+      "d": {
+        "1": 99,
+        "2": 33,
+        "3": 11,
+        "4": 1
+      },
+      "V": {
+        "3": 8,
+        "2": 8,
+        "4": 1
+      },
+      "u_s": 3,
+      "v_s": 8,
+      "N_prin_f": 18,
+      "Q_maj_f": 48,
+      "n_over_ds": 9,
+      "m_over_ds": 6,
+      "m_over_d2": 2,
+      "n_over_d2": 3,
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "-1"
+      },
+      "A": {
+        "1": 3,
+        "2": 3
+      },
+      "v_over_u": "8/3",
+      "den_bound_principal": 3
+    }
+  },
+  "sanity": {
+    "row_64_48": {
+      "u_s": 1,
+      "N_prin_f": 12,
+      "den_bound": 1,
+      "unramified_principal": true,
+      "tree": "single Puiseux series; Prop 6.4 pins delta*=v_s/u_s=3",
+      "check_N5": "deg p = u_s = 1 => den(delta)=1; no split of p",
+      "major_A_not_N5": {
+        "A1": 4,
+        "A2": 4,
+        "delta1": "9/16"
+      }
+    },
+    "row_75_50_V2_3": {
+      "principal_u_s": 1,
+      "N_prin_f": 10,
+      "principal_N5_vacuous": "u_s=1 => principal p degree 1, den=1, no principal split",
+      "descended": "(n',m')=(u_s n/d_s, u_s m/d_s)=(15,10)",
+      "printed_226": "Moh p.210: descended D2 has three subdiscs with 2,2,6 roots of f",
+      "delta1": "1/2",
+      "A1": 2,
+      "m_over_d2": 2,
+      "cluster_sizes_even": true,
+      "mu2_stable": "den(delta1)=2=A1; sizes 2,2,6 are mu_2-orbits (or unions). Analog of N5 at that disc, not the principal-minor bound.",
+      "flag_place": "major A1=2 is not principal-minor den(delta)"
+    },
+    "row_99_66": {
+      "u_s": 3,
+      "N_prin_f": 18,
+      "v_over_u": "8/3",
+      "window": "(1, 8/3)",
+      "deg_p": 3,
+      "deg_q": 40
+    }
+  },
+  "galois_cubic": {
+    "1": {
+      "(1, 1, 1)": {
+        "ok": true,
+        "reason": "unramified"
+      },
+      "(2, 1)": {
+        "ok": true,
+        "reason": "unramified"
+      },
+      "(3,)": {
+        "ok": true,
+        "reason": "unramified"
+      }
+    },
+    "2": {
+      "(1, 1, 1)": {
+        "ok": true,
+        "reason": "0 plus size-e nonzero orbits"
+      },
+      "(2, 1)": {
+        "ok": false,
+        "reason": "no mu_e-stable embedding of this partition"
+      },
+      "(3,)": {
+        "ok": false,
+        "reason": "single support: unsplit (all mass at one root)"
+      }
+    },
+    "3": {
+      "(1, 1, 1)": {
+        "ok": true,
+        "reason": "union of size-e nonzero orbits"
+      },
+      "(2, 1)": {
+        "ok": false,
+        "reason": "no mu_e-stable embedding of this partition"
+      },
+      "(3,)": {
+        "ok": false,
+        "reason": "single support: unsplit (all mass at one root)"
+      }
+    },
+    "4": {
+      "(1, 1, 1)": {
+        "ok": false,
+        "reason": "orbit size e > deg p = u; cannot embed except all-at-0 (unsplit)"
+      },
+      "(2, 1)": {
+        "ok": false,
+        "reason": "orbit size e > deg p = u; cannot embed except all-at-0 (unsplit)"
+      },
+      "(3,)": {
+        "ok": false,
+        "reason": "single support: unsplit (all mass at one root)"
+      }
+    },
+    "5": {
+      "(1, 1, 1)": {
+        "ok": false,
+        "reason": "orbit size e > deg p = u; cannot embed except all-at-0 (unsplit)"
+      },
+      "(2, 1)": {
+        "ok": false,
+        "reason": "orbit size e > deg p = u; cannot embed except all-at-0 (unsplit)"
+      },
+      "(3,)": {
+        "ok": false,
+        "reason": "single support: unsplit (all mass at one root)"
+      }
+    },
+    "6": {
+      "(1, 1, 1)": {
+        "ok": false,
+        "reason": "orbit size e > deg p = u; cannot embed except all-at-0 (unsplit)"
+      },
+      "(2, 1)": {
+        "ok": false,
+        "reason": "orbit size e > deg p = u; cannot embed except all-at-0 (unsplit)"
+      },
+      "(3,)": {
+        "ok": false,
+        "reason": "single support: unsplit (all mass at one root)"
+      }
+    },
+    "7": {
+      "(1, 1, 1)": {
+        "ok": false,
+        "reason": "orbit size e > deg p = u; cannot embed except all-at-0 (unsplit)"
+      },
+      "(2, 1)": {
+        "ok": false,
+        "reason": "orbit size e > deg p = u; cannot embed except all-at-0 (unsplit)"
+      },
+      "(3,)": {
+        "ok": false,
+        "reason": "single support: unsplit (all mass at one root)"
+      }
+    }
+  },
+  "N5_from_galois": {
+    "statement": "den(delta) <= u_s for any genuine split of deg-p = u_s",
+    "divides_u_s": false,
+    "divides_counterexample": "delta=5/2, e=2, u_s=3, 2 does not divide 3; p=pi(pi^2-c)",
+    "bound": "<=",
+    "e_gt_3_killed": true,
+    "e_le_3_split_possible": {
+      "1": true,
+      "2": true,
+      "3": true
+    }
+  },
+  "subcluster_deg2": {
+    "bound": "den <= mm = 2 <= u_s",
+    "e_gt_2_killed": true,
+    "xu_8_iii": "Xu p.13 deg p=2 on the double packet; further split den <= 2"
+  },
+  "window_den_le_3": [
+    "2",
+    "3/2",
+    "5/2",
+    "4/3",
+    "5/3",
+    "7/3"
+  ],
+  "den_le_3_screen": {
+    "2": {
+      "ord_g": "-18",
+      "rho": "25/2",
+      "xu_q_eq_p13_pic_identity": false,
+      "screen": {
+        "(1, 1, 1)": {
+          "rho": "25/2",
+          "nonresonant_total": 42,
+          "feasible": []
+        },
+        "(2, 1)": {
+          "rho": "25/2",
+          "nonresonant_total": 41,
+          "feasible": [
+            [
+              25,
+              14
+            ]
+          ]
+        }
+      },
+      "ode_alive": [
+        "(2, 1)"
+      ],
+      "galois_ok": {
+        "(1, 1, 1)": {
+          "ok": true,
+          "reason": "unramified"
+        },
+        "(2, 1)": {
+          "ok": true,
+          "reason": "unramified"
+        }
+      },
+      "galois_and_ode": [
+        "(2, 1)"
+      ]
+    },
+    "3/2": {
+      "ord_g": "-63/2",
+      "rho": "90/7",
+      "xu_q_eq_p13_pic_identity": false,
+      "screen": {
+        "(1, 1, 1)": {
+          "rho": "90/7",
+          "nonresonant_total": 42,
+          "feasible": []
+        },
+        "(2, 1)": {
+          "rho": "90/7",
+          "nonresonant_total": 41,
+          "feasible": []
+        }
+      },
+      "ode_alive": [],
+      "galois_ok": {
+        "(1, 1, 1)": {
+          "ok": true,
+          "reason": "0 plus size-e nonzero orbits"
+        },
+        "(2, 1)": {
+          "ok": false,
+          "reason": "no mu_e-stable embedding of this partition"
+        }
+      },
+      "galois_and_ode": []
+    },
+    "5/2": {
+      "ord_g": "-9/2",
+      "rho": "10",
+      "xu_q_eq_p13_pic_identity": false,
+      "screen": {
+        "(1, 1, 1)": {
+          "rho": "10",
+          "nonresonant_total": 42,
+          "feasible": [
+            [
+              10,
+              10,
+              10
+            ],
+            [
+              10,
+              10,
+              14
+            ],
+            [
+              10,
+              14,
+              10
+            ],
+            [
+              10,
+              14,
+              14
+            ],
+            [
+              14,
+              10,
+              10
+            ],
+            [
+              14,
+              10,
+              14
+            ],
+            [
+              14,
+              14,
+              10
+            ]
+          ]
+        },
+        "(2, 1)": {
+          "rho": "10",
+          "nonresonant_total": 41,
+          "feasible": [
+            [
+              20,
+              10
+            ],
+            [
+              20,
+              14
+            ],
+            [
+              27,
+              10
+            ]
+          ]
+        }
+      },
+      "ode_alive": [
+        "(1, 1, 1)",
+        "(2, 1)"
+      ],
+      "galois_ok": {
+        "(1, 1, 1)": {
+          "ok": true,
+          "reason": "0 plus size-e nonzero orbits"
+        },
+        "(2, 1)": {
+          "ok": false,
+          "reason": "no mu_e-stable embedding of this partition"
+        }
+      },
+      "galois_and_ode": [
+        "(1, 1, 1)"
+      ]
+    },
+    "4/3": {
+      "ord_g": "-36",
+      "rho": "155/12",
+      "xu_q_eq_p13_pic_identity": false,
+      "screen": {
+        "(1, 1, 1)": {
+          "rho": "155/12",
+          "nonresonant_total": 42,
+          "feasible": []
+        },
+        "(2, 1)": {
+          "rho": "155/12",
+          "nonresonant_total": 41,
+          "feasible": []
+        }
+      },
+      "ode_alive": [],
+      "galois_ok": {
+        "(1, 1, 1)": {
+          "ok": true,
+          "reason": "union of size-e nonzero orbits"
+        },
+        "(2, 1)": {
+          "ok": false,
+          "reason": "no mu_e-stable embedding of this partition"
+        }
+      },
+      "galois_and_ode": []
+    },
+    "5/3": {
+      "ord_g": "-27",
+      "rho": "115/9",
+      "xu_q_eq_p13_pic_identity": false,
+      "screen": {
+        "(1, 1, 1)": {
+          "rho": "115/9",
+          "nonresonant_total": 42,
+          "feasible": []
+        },
+        "(2, 1)": {
+          "rho": "115/9",
+          "nonresonant_total": 41,
+          "feasible": []
+        }
+      },
+      "ode_alive": [],
+      "galois_ok": {
+        "(1, 1, 1)": {
+          "ok": true,
+          "reason": "union of size-e nonzero orbits"
+        },
+        "(2, 1)": {
+          "ok": false,
+          "reason": "no mu_e-stable embedding of this partition"
+        }
+      },
+      "galois_and_ode": []
+    },
+    "7/3": {
+      "ord_g": "-9",
+      "rho": "35/3",
+      "xu_q_eq_p13_pic_identity": false,
+      "screen": {
+        "(1, 1, 1)": {
+          "rho": "35/3",
+          "nonresonant_total": 42,
+          "feasible": []
+        },
+        "(2, 1)": {
+          "rho": "35/3",
+          "nonresonant_total": 41,
+          "feasible": []
+        }
+      },
+      "ode_alive": [],
+      "galois_ok": {
+        "(1, 1, 1)": {
+          "ok": true,
+          "reason": "union of size-e nonzero orbits"
+        },
+        "(2, 1)": {
+          "ok": false,
+          "reason": "no mu_e-stable embedding of this partition"
+        }
+      },
+      "galois_and_ode": []
+    }
+  },
+  "den_le_3_survivors": [
+    "2",
+    "5/2"
+  ],
+  "xu_generic_iterate_never_identity": true,
+  "wide_den_le_30": {
+    "n_candidates": 463,
+    "ode_alive_not_den3": [
+      "9/4",
+      "13/5",
+      "17/7",
+      "18/7",
+      "21/8",
+      "26/11",
+      "33/13",
+      "34/13",
+      "41/16",
+      "42/17",
+      "49/19",
+      "57/22",
+      "58/23",
+      "73/28",
+      "74/29"
+    ],
+    "galois_and_ode": [
+      "2",
+      "5/2"
+    ],
+    "note": "ODE-only extras with den>3 exist; all Galois-killed. N5 is load-bearing for Xu's printed tool, redundant with Galois for the classification."
+  },
+  "faces": {
+    "delta2_charged_residual_zero": true,
+    "delta52_k_solves": [
+      {
+        "k": "10"
+      }
+    ],
+    "delta52_residual_after_k": "0"
+  },
+  "verdict": {
+    "N5": "PROVED",
+    "bound": "den(delta) <= u_s",
+    "not_divides": true,
+    "classification_complete": true,
+    "branches": [
+      "2 [2,1]",
+      "5/2 [1,1,1]"
+    ],
+    "hypothesis_xu_omits": "Puiseux mu_e action (Moh p.201 prints it for major discs; Xu p.1 gives char 0)",
+    "skeleton_satisfies": true
+  }
+}

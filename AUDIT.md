@@ -17354,3 +17354,14 @@ uniform problem is now a concrete family of 2t polynomials in t + 2 variables ov
 rank-two algebra, with the closed form of E_t and σ_t available — the smallest form the
 question has ever had. Lanes: k16-spine-gate-opus5 (gate §2–§6), k16-terminal-proof-sol56
 and k16-terminal-proof-fable5 (independent attacks on RESIDUAL-ZERO + TOP-TAIL-UNIT / (8.1)).
+
+## INTEGRATION #17 DELTA (rrr) (2026-09-03T19:18Z, PROVED-HERE, producer Grok): N5 IS PROVED — for a genuine principal-minor split of order δ = p/e in lowest terms, the Puiseux Galois action (μ_e on t^{1/e}) produces an orbit of e distinct nonzero π-roots of the degree-u_s leading polynomial of Xu Prop 7.3, impossible if e > u_s; hence den(δ) = e ≤ u_s (Xu p.13's unproved assertion); the bound is ≤, NOT "divides" (δ = 5/2 has e = 2 ∤ 3 with the Galois-stable p = π(π² − c) — promoting to e | u_s would be a false strengthening killing a surviving branch); PROVED[SUBCLUSTER]: den ≤ the packet multiplicity ≤ u_s on any child packet; the split-order classification δ ∈ {2, 5/2} is COMPLETE inside the detector window (1, 8/3), so the (99,66) decider is exhaustive over {2 [2,1], 5/2 [1,1,1]} (partition [3] is unsplit — Moh's linear-power branch A, dead)
+
+`n5-denominator-grok46-20260903.md` (Grok; 8/8 hashes; box/n5-20260903/; Moh pp.190–194,
+Xu pp.10–13 as images). Sanity: (64,48) (u_s = 1: den = 1 ✓); (75,50; V₂ = 3) with the 2,2,6
+split (u = 2 ✓). Typed scope §5: the lemma needs only the Galois action on the leading
+polynomial (no extra geometric hypothesis; the (99,66) skeleton satisfies what is used).
+LEDGER: N5 → PROVED; N6 (classification) stands with N5 proved; with 17(nnn) and 17(mmm)
+the (99,66) picture is: exactly two live branches, both faces licensed and rigid, both
+local lifts consistent, both high-z joint systems non-unit through depth 6 (δ = 5/2) /
+running (branch B); the decision needs the complete joint system (Sol design lane).

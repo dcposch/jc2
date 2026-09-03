@@ -20961,3 +20961,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T19:06Z EVENT — launched `g9966-branchB-joint-gpt55-20260903` (branch B high-z joint system, no face parameter; both branches extended two bands lower). Lanes live: 7.
 
 ## 2026-09-03T19:08Z EVENT — `k16-middle-spine-sol56` sealed (30KB): SECOND AFFINE SPINE PROVED for all t ≥ 2 (split-safe; the split indices t = 3s² − 1 obstruct the naive order and are bypassed); (T) on the ray ⇔ ⟨T_{t,0..2t−1}⟩ = [1] in A_t[b₃, b₄, q_{·,0}] (8.1), explicit closed form; two sharpened lemmas with base cases t ≤ 4 (mod-1009 at 5, 6). → AUDIT delta 17(qqq). Launching gate (Opus) + two terminal-proof attacks (Sol, Fable). DC notified. Lanes live: 9.
+
+## 2026-09-03T19:18Z EVENT — `n5-denominator-grok46` sealed (10KB): N5 PROVED (den(δ) ≤ u_s by the Galois-orbit argument; ≤ not |); the (99,66) split classification is complete; the decider is exhaustive over the two branches. → AUDIT delta 17(rrr). Lanes live: 8.
