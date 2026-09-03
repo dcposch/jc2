@@ -20853,3 +20853,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T13:36Z EVENT — `jet-edge-1612-sol56` sealed (15KB): exact common-jet edge on Moh (16,12) (transition (0.1), determined lower coefficient (0.2), ζ₄ action (0.3)); general recipe typed; ready for (90,60)/D = 108. → AUDIT delta 17(nn). Queued: the edge recipe on the u_s > 1 residue ((99,66); D = 108 u_s = 2 row) as the MINOR-DICHOTOMY probe. Lanes live: 3.
 
 ## 2026-09-03T13:37Z EVENT — launched `minor-dichotomy-opus5-20260903` (source-read of Moh p.209 u_s > 1 handling; apply to (99,66) and the D = 108 u_s = 2 row; template for the 177 u_s > 1 groups). Lanes live: 4.
+
+## 2026-09-03T13:43Z EVENT — `minor-dichotomy-opus5` FAILED at 5 min: Anthropic API 529 Overloaded (no work done). Relaunched verbatim as `minor-dichotomy-opus5-v2-20260903`; fall back to Grok if it recurs.
