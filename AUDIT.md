@@ -17412,3 +17412,13 @@ recorded); §6 scope: each elimination is an isomorphism of the quotient ring; o
 t = 6 GAP concerns a record comparison (not the derivation). STATUS: the ray problem is
 now a single explicit, fully licensed uniform statement — the smallest form in the
 campaign's history; two proof lanes (Sol, Fable) are on it.
+
+## INTEGRATION #17 DELTA (www) (2026-09-03T20:02Z, PROVED-HERE/UNREVIEWED at t = 5; t = 6 OPEN, producer Grok): THEOREM (T) AT t = 5 ON THE K = 16 RAY — (64,44; 61; 3; J = cγ): gauged chart 54 unknowns / 79 equations, 19 Q-pivots, H₅ irreducible (Q(√18) = Q(√2)), c a unit; terminal 10 × 5 (heuristic pivot order; the canonical band-descending A-elimination aborted by swell), exact nfmodStd [1] in 100.9 s (input 234 KB), all controls PASS; modular [1] over three primes in ≈ 5.6 s; t = 6: 22 Q-pivots, H₆, three A_t-units MEASURED, the A_t triangular pass did not finish (OPEN); t = 2, 3, 4 replays match the banked charts and certificates; the 2t × t / bands 0..2t−1 / degrees 4t+1..2t+2 / tag (0,1) pattern MEASURED on four consecutive t
+
+`k16-t5t6-grok46-20260903.md` (Grok, 13KB; box/k16t56-20260903/; 15/15 hashes). Notes: two
+documented A_t orders (canonical vs the banked short-remainder heuristic) give the same
+2t × t count; the heuristic reproduces the one-generator-per-band family; remaining
+variable NAMES differ from the banked (b₃, b₄, …) by pivot sequence — the quotient is the
+same. STATUS of the ray: (T) PROMOTED t = 1..4; PROVED-HERE t = 5 (gate needed — will be
+folded into the bridge-chart gate's t = 3..8 run, which is an independent chart); t = 6
+open (bridge chart pending); uniform: (8.1) OPEN (three proof lanes).

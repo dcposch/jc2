@@ -20971,3 +20971,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T19:43Z EVENT — `k16-spine-gate-opus5` sealed (24KB): everything CONFIRMED except one derivation — the closed pivot forms (5.9)–(5.15) are asserted (verified at t = 2..5) not derived; cheapest closing test is a minutes-long symbolic (t, j) perturbation calculation. → AUDIT delta 17(uuu). Launching `k16-pivot-forms-grok46`. Lanes live: 8.
 
 ## 2026-09-03T19:59Z EVENT — `k16-pivot-forms-grok46` sealed (10KB): (5.9)–(5.15) DERIVED symbolically — the second affine spine is a THEOREM for all t ≥ 2 and (T) ⇔ (8.1) is PROMOTED (Sol + Opus + Grok). → AUDIT delta 17(vvv). The ray's theorem (T) = one explicit uniform ideal-membership statement, OPEN. Lanes live: 7.
+
+## 2026-09-03T20:02Z EVENT — `k16-t5t6-grok46` sealed (13KB): (T) at t = 5 PROVED-HERE (exact nfmodStd [1], 101 s); t = 6 OPEN (A_t pass unfinished); pattern 2t × t on t = 2..5. → AUDIT delta 17(www). The bridge-chart gate (t = 3..8 on the 6t + 5 chart) will serve as the independent check at t = 5, 6. Lanes live: 7.

@@ -1,0 +1,47 @@
+// t=2 exact over A_t=Q[q5_1]/(300*q5_1^2 - 180*q5_1 + 24); method=std
+LIB "resources.lib";
+setcores(1);
+LIB "elim.lib";
+ring RAC=0,(gamma,pi),dp;
+poly FAC=pi;
+poly GAC=pi-(gamma^2)/2;
+poly JAC=diff(FAC,gamma)*diff(GAC,pi)-diff(FAC,pi)*diff(GAC,gamma);
+if (JAC==gamma) { print("CONTROL_ACTUAL_PAIR_PASS J=gamma"); } else { print("CONTROL_ACTUAL_PAIR_FAIL"); }
+if (nameof(basering)=="RAC") { print("CONTROL_RAC_RING_PASS"); } else { print("CONTROL_RAC_RING_FAIL"); }
+ring RC=(0,q5_1),(u,W),dp;
+minpoly=300*q5_1^2 - 180*q5_1 + 24;
+number cbar=7*q5_1*(3 - 30*q5_1)/375;
+number cbar_inverse=1/cbar;
+if (cbar*cbar_inverse==1) { print("CONTROL_C_UNIT_PASS"); } else { print("CONTROL_C_UNIT_FAIL"); }
+if (nameof(basering)=="RC") { print("CONTROL_RC_RING_PASS"); } else { print("CONTROL_RC_RING_FAIL"); }
+ideal RCE=u,W*u-1;
+ideal RCGE=std(RCE);
+if (typeof(RCGE)=="ideal" && nameof(basering)=="RC") { print("CONTROL_RC_EMPTY_EXTRACT_RING_PASS"); } else { print("CONTROL_RC_EMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,RCGE)==0) { print("CONTROL_RC_EMPTY_PASS"); } else { print("CONTROL_RC_EMPTY_FAIL"); }
+ideal RCN=u-1,W*u-1;
+ideal RCGN=std(RCN);
+if (typeof(RCGN)=="ideal" && nameof(basering)=="RC") { print("CONTROL_RC_NONEMPTY_EXTRACT_RING_PASS"); } else { print("CONTROL_RC_NONEMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,RCGN)!=0) { print("CONTROL_RC_NONEMPTY_PASS"); } else { print("CONTROL_RC_NONEMPTY_FAIL"); }
+ring RK=(0,q5_1),(q3_0,q4_1,W),dp;
+minpoly=300*q5_1^2 - 180*q5_1 + 24;
+option(redSB);
+if (nameof(basering)=="RK") { print("CONTROL_RK_RING_PASS"); } else { print("CONTROL_RK_RING_FAIL"); }
+ideal RKE=q3_0,W*q3_0-1;
+ideal RKGE=std(RKE);
+if (typeof(RKGE)=="ideal" && nameof(basering)=="RK") { print("CONTROL_RK_EMPTY_EXTRACT_RING_PASS"); } else { print("CONTROL_RK_EMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,RKGE)==0) { print("CONTROL_RK_EMPTY_PASS"); } else { print("CONTROL_RK_EMPTY_FAIL"); }
+ideal RKN=q3_0-1,W*q3_0-1;
+ideal RKGN=std(RKN);
+if (typeof(RKGN)=="ideal" && nameof(basering)=="RK") { print("CONTROL_RK_NONEMPTY_EXTRACT_RING_PASS"); } else { print("CONTROL_RK_NONEMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,RKGN)!=0) { print("CONTROL_RK_NONEMPTY_PASS"); } else { print("CONTROL_RK_NONEMPTY_FAIL"); }
+print("MAIN_START t=2 field=At rows=4 vars=2 method=std");
+ideal I=561593000000*q5_1*q3_0^2*q4_1^3 + 33073364692000*q5_1*q3_0*q4_1^6 - 99695603783005*q5_1*q4_1^9 - 7840000000*q5_1 - 300478600000*q3_0^2*q4_1^3 - 11279472938400*q3_0*q4_1^6 + 1711120756601*q4_1^9 + 1254400000,
+19789800000*q5_1*q3_0^2*q4_1^2 + 1672695694000*q5_1*q3_0*q4_1^5 + 10093630693345*q5_1*q4_1^8 - 6309960000*q3_0^2*q4_1^2 - 738299138800*q3_0*q4_1^5 - 4527526138669*q4_1^8,
+63000000*q5_1*q3_0^2*q4_1 - 3006238000*q5_1*q3_0*q4_1^4 + 21571960135*q5_1*q4_1^7 - 12600000*q3_0^2*q4_1 + 825247600*q3_0*q4_1^4 - 4034392027*q4_1^7,
+200000*q5_1*q3_0^2 + 36646000*q5_1*q3_0*q4_1^3 + 249105445*q5_1*q4_1^6 - 40000*q3_0^2 - 16129200*q3_0*q4_1^3 - 101821089*q4_1^6;
+ideal G=std(I);
+print("MAIN_DONE basis_size=");
+size(G);
+if (typeof(G)=="ideal" && nameof(basering)=="RK") { print("MAIN_EXTRACT_RING_PASS"); } else { print("MAIN_EXTRACT_RING_FAIL"); }
+if (reduce(1,G)==0) { print("MAIN_EXACT_UNIT"); G; } else { print("MAIN_NONUNIT"); print("BASIS_OUTPUT_TRUNCATED_TO_10"); int basis_cap=size(G); if (basis_cap>10) { basis_cap=10; } for (int basis_i=1; basis_i<=basis_cap; basis_i++) { G[basis_i]; } }
+quit;
