@@ -15591,3 +15591,46 @@ geometric realisability of any packet (OPEN[BRANCH-ORBITS] geometric,
 OPEN[STAR-REALISABILITY], OPEN[MOH-PROGRAM]). OPEN[NESTED-PACK] (s > 3):
 bounded by a tuple of length s − 2 ≤ 3 with parts ≤ Q_j; cheapest test: a
 parent-indexed DP (one zero child per parent, free nonzero packets), desk.
+
+## INTEGRATION #17 DELTA (k) (2026-09-03T10:54Z, SOURCE-READ + DIFFERENT-MODEL): MAJOR-MULT IS NOT MOH'S; A₁ ≥ 2 IS DERIVED FROM p.188 (CONDITION (16)); APPENDIX II USES NON-SKELETON DATA; NO SECOND TOWER
+
+`moh-source-three-questions-grok46-20260903.md` (Grok, page images pp.179–212
++ 187/190/193–201) on the Opus round submission's three-clause sieve (§0–§1).
+(Q1) MAJOR-MULT (V_j ≥ 2, j = 2..s) is NOT-IN-SOURCE and not a consequence of
+Moh's definitions: Def 5.1 (p.179) fixes V_i by the windows
+V_{i+1}d_i/d_{i+1} ≥ V_i > d_i/(n − M_i); Prop 5.3 (p.180) takes V_r as the
+MULTIPLICITY of a factor π − C_r with V_r = 1 allowed when 1 > d_r/(n − M_r);
+§6 (p.190) writes V_r ≥ 1 on the minor side and no V_r ≥ 2 on the major
+side; the p.200 Theorem's major/minor test is the root COUNT (n/d_{i+1})V_{i+1}
+> n/(n − M_r), not V_i. The j = s slice V_s ≥ 3 is DERIVED (search (7) +
+Cor 6.1 d_s ≥ 4; 658/658). MAJOR-MULT stays a campaign CONJECTURE
+(OPEN[MAJOR-MULT], 161 rows at n ≤ 100, 744 groups at D ≤ 200, the D = 105
+trio: the trio's V₂ = 1 discs are MAJOR by Moh's own test). Hence "D = 105
+empties under MOH-4" is UNSOURCED. (Q2) p.188 l.1–13 derives the EXCLUSIVE
+disjunction "A | n*V₂ ∧ A ∤ m*V₂ or A ∤ n*V₂ ∧ A | m*V₂" with
+A | (n* + m*)V₂ − 1, and p.187 states A > 1 — PROVED-IN-SOURCE for Prop 5.5's
+A; the printed (12)/(13) (p.201) are conjunctions joined by "or" and both
+hold at A₁ = 1; reading them against the cited derivation gives the DERIVED
+search predicate **(16): A₁ ≥ 2** (equivalently (12) xor (13)), which keeps
+Moh's six rows and cuts 658 → 458 at n ≤ 100 (200 rows have A₁ = 1; the
+increment A₁ = den(L₁δ₁) is the right A — xor on den δ₁ kills four printed
+rows). PROMOTED as a census condition at the (1)–(13) tier: (16) A₁ ≥ 2.
+A_j ≥ 2 for j ≥ 2 is NOT-IN-SOURCE (A_{r−1} = 1 makes (9)–(11) vacuous, not
+excluded; such levels are still characteristic: the gcd drops; 92 rows).
+(Q3) Appendix II (pp.207–211): every kill uses data outside {n, m, M_*, V_*}
+— Prop 6.4 (u_s = 1 ⇒ δ*_{s−1} ≥ v_s) + Prop 6.3's monomial-Jacobian
+transform to (n/d_s, m/d_s) with J = −(u_s/b)γ^{v_s−u_s−1} ((64,48) → (16,12);
+(84,56) → (21,14)/(21,18); (75,50) → (15,10), J = X²), approximate roots and
+remainder-degree identities, the minor-disc π-root; (99,66) (u₃ = 3): the
+factor type of g_σ(π) in the minor disc D*₂ or the inversion Ω. §6 analyses
+the other point at infinity LOCALLY (Props 6.1–6.4; deg_z g̃ = u_s n/d_s);
+there is NO second Def 5.1 tower and no second search — the coordinator's
+SECOND-POINT candidate is retyped as the descent hypothesis. REPRODUCED to
+the unit: 6/6 kept; the (75,50) residue; 658 → 391 → 247 → 86 → 51; D = 105
+empties under MOH-4; the emptied-degree list; 14,016 → 2,652 → 1,908.
+Discrepancy (uncharged): the Opus submission's "MOH-4" per-degree counts at
+D = 108/120/144/180/192 are MOH-3's; MOH-4 is 25, 82, 168, 430, 357.
+Consequence for the record: of the four round-1015Z candidate gates, only the
+A₁ ≥ 2 clause is sourced; MAJOR-MULT, M₂ > m and Sol's pair await
+m2-descent / p202-ten-rows; the leaderboard (mohsieve lane) must register
+(16) as DERIVED and the rest as CONJECTURE.
