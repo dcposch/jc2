@@ -15956,3 +15956,63 @@ one-place data reduced to four integers (n', m', M₂', V₂'). CHEAPEST NEXT
 half a day — which closes OPEN[DESCENT-RADII], automates the Appendix-II
 reduction for any descended row, and turns the 172-unknown systems into
 ~20-unknown ones. Lane launched.
+
+## INTEGRATION #17 DELTA (r) (2026-09-03T11:42Z, REVIEWED — different-model gate passed; second gate (Opus) running): THE WHOLE-MAJOR-TREE OBLIGATION PROMOTED; C_FULL_TREE PROMOTED AS A NAMED DERIVED NECESSARY FILTER; D = 105 AND D = 117 EMPTY ON PATH-ARITH; BOTH FIXED-N RAYS DEAD
+
+Review `whole-tree-review-grok46-20260903.md` (Grok; image-first
+re-transcription of Props 4.6, 5.2, 5.3, 5.4, 5.6, Lemma 5.2, Lemma 5.3, the
+p.200 Theorem, Prop A.3; an independent recursion written BEFORE reading the
+charged code; three-way row-for-row agreement on 60/58/55/23/20) of delta
+17(p). PROMOTED (PROVED-IN-SOURCE): the LOCAL WHOLE-MAJOR-TREE OBLIGATION —
+Prop 5.3's hypothesis "let π − C_r be a factor of p(π) … with multiplicity V_r
+satisfying deg p ≥ V_r > d_r/(n − M_r)" is a UNIVERSAL conditional (the proof
+uses only the multiplicity, never a privileged choice); the p.200 Theorem (4)
+"if the number of roots of g in E_i is > n/(n − M_r) then the tower extends to
+E_i" holds for EVERY E_i of the covering ((7) is the separate existential);
+hence every above-threshold sibling factor at every major disc extends —
+Moh's statement and a consequence of his proof, not an over-reading of Prop
+5.2's existential gloss. PROMOTED (DERIVED, fail-closed, MEASURED with
+three-way agreement): C_FULL_TREE — the finite DP over all Galois-orbit
+partitions P_j = b + A_j Σ u_ℓ (b ≡ P_j mod A_j; nonzero orbits of size
+exactly A_j; a unique fixed root; unused q-slots allowed; child Q' = u·(n −
+M_{j−1})/d_j determined by u and the globals, but δ and A recomputed per
+branch so the DP state must carry the higher V-tuple — both working codes do)
+with the Lemma 5.3 top-chart "danger" flag (the selected tower begins as a
+zero factor; a nonzero label clears it) and Prop 5.6 killing a still-centred
+zero leaf at D₁ — uniquely reproduces 658 → 60 rows / 12 classes keeping
+Moh's six and EXACTLY the (75,50) residue {M₂ = 55, V₂ ∈ {2,3}} (a recursion
+killing every zero at D₁ gives 20; ignoring Prop 5.6 gives 348 — the 60 is
+the unique source-faithful coupling). PROMOTED (PROVED-IN-SOURCE local
+identity; DERIVED as a scan of all siblings): the ODE consequence (3.7)
+(P − Qu)q_a(a) = c ⇒ P − Qu ≠ 0 at every p-root (Prop A.3, RHS = cp; needs
+only q squarefree and u ≥ 1) — new content only for a minor sibling of
+multiplicity exactly P/Q: 60 → 58 (kills (84,56) M = (70,77,82) V = (5,10,5)
+and (96,72) M = (84,88,94) V = (3,9,3)). TYPE REPAIRS (binding): A_j | Q_j − 1
+is NOT Lemma 5.2 (a δ(L) lemma) — it is the DERIVED Galois capacity
+Q = ε + AS, automatic on all 658 rows; the passport (3.8) d₊/g ≥ S is
+EXTERNAL (Davenport–Zannier-type; OPEN[PASSPORT-SHARPNESS], 3 rows); the
+edgewise recentring is an OVER-READING of Prop 5.4 (which translates only at
+the globally selected D_i) — OPEN[FULL-TREE-RECENTER] (55 → 20, quantifier
+change); C_FULL_TREE is not Moh's lost program (49 excess rows remain after
+passport; OPEN[MOH-PROGRAM-ARTIFACT] NOT closed; no desk test — needs the CDC
+listing). FRONTIER (MEASURED for PATH-ARITH after the derived screen; NOT a
+source-proved emptiness of Jacobian pairs): D = 105 (all 15 rows / 14
+groups, the trio included) and D = 117 (all 7 rows) have NO C_FULL_TREE
+survivor — uniform mechanism: at j = 2, P mod A₂ > h = d₂/(n − M₂) forces a
+major zero sibling, the parent's danger flag is still set from the top
+chart, Prop 5.6 kills it (e.g. the L = 5 / group-A row: A₂ = 18, P = 25,
+b = 7 > 5/11); Sol's L = 8a + 5 ray dies at a = 0..3 (b_min = 10a + 7 > h =
+(8a+5)/(16a+11), a uniform DERIVED kill) and the A₂ = 6 ray's geometric
+members n = 9(7t+6), t = 0..3, die by the forced zero b = 3 > 3/5 — delta
+17(n)'s cofinal-nonemptiness statement is therefore RETYPED: it holds for
+PATH-ARITH(1–13) + integrality, and is FALSE after C_FULL_TREE for both
+named rays (whether the screened space is still cofinally nonempty is
+OPEN — the screened census has 1,261 groups at D ≤ 200 and grows).
+Consequences: the smallest campaign degree with a screened survivor above
+100 is D = 108 (18 rows / 11 groups / 8 UNI-alive under the passport
+screen; 21/13/8 under bare tree); every count in deltas (h), (j), (n) and
+the nested-pack numbers must be re-based on C_FULL_TREE (or C_FULL_TREE_ODE);
+the descended D = 105 problems (delta 17(q)) are now calibration objects.
+CRITICAL TRIGGER: a non-echo change to the promoted ledger and the
+frontier — a full round fires (packet to be frozen after the Opus second
+gate lands or within 75 min, whichever first).
