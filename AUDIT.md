@@ -16380,3 +16380,31 @@ parent factor (C₂ ≠ 0) a twist a = λC₂² is Galois-legal as a polynomial 
 OPEN[NONZERO-PARENT-TWIST] (not an input to Prop 5.6). If the gate confirms, delta 17(u)'s
 gap-free/gapped split collapses: the gapped column becomes the operative one, and the
 K = 16 ray, the D = 105/117 emptiness, and the dead rays are unchanged (already gap-free).
+
+## INTEGRATION #17 DELTA (dd) (2026-09-03T12:50Z, PROMOTED-QUALIFIED): delta 17(y) gated — Φ_eff PROMOTED as the descent radii rule for Prop 6.3/6.4 u_s = 1 descendants in the reviewed finite universe (raw s' ≤ 4, s_eff ≤ 4, k ∈ {1..6}); the Lemma 2.1(k) terminal statement is a TYPED GAP; one count corrected (s_eff = 3: 27/57, not 14/57)
+
+`anchor-audit-gate-gpt55-20260903.md` (GPT-5.5; 11/11 hashes by mechanical manifest;
+box/anchor-gate-20260903/; pages 151, 173–179, 196–199, 207 opened at 200 dpi;
+measure_anchor.json replay byte-identical). (a) CONFIRMED: p.179 prints 1/(n − M_s − 1);
+p.179 Def 5.1(2) also prints V_{s+1} = d_{s+1} — so the truncation convention is Moh's.
+(b) CONFIRMED/GAP: p.174 drops a terminal M_h = n − 1 (effective characteristic pairs);
+Prop 5.1(1) gives the finite radius −1/(n − M_{h−1} − 1); BUT Lemma 2.1 (p.151) is printed
+for J = c ≠ 0 constant only — "Lemma 2.1 forces every Jacobian pair to have M_h = n − 1" is
+confirmed for constant J and is a GAP for the descended J = cγ^k child (do not fill by
+analogy; note prop55k-opus5 §2.1 claims Lemma 2.1(k) PROVED-HERE — under Grok gate,
+delta 17(z)). (c) CONFIRMED: Prop 6.3/6.4 hypotheses never mention the child's anchor.
+(d) CONFIRMED with source split: the drop and V_{top+1} = d_{top+1} are Moh conventions;
+the factor (k+1) is the p.207-controlled conversion (now PROVED by delta 17(z) pending
+gate). (e) counts CONFIRMED exactly (658 → 58; 57; 38; 0; 1/58 = (99,66); 217 → 21 → 20;
+19; 12; 0; 1/20) and s_eff = 2 on 29/57, 12/19 confirmed; CORRECTION: all-row s_eff after
+the drop at n ≤ 100 is {2: 29, 3: 27, 4: 1} (the 14 is the anchor-zero parent-s = 5
+sub-block; the s_eff = 4 row is (96,64; M = (−48,−8,20,94); V = (1,1,6,3))); n = 108:
+{2: 12, 3: 7}. PROMOTION (scope fields per Sol's systems upgrade): producer_scope = p.207
+rows, raw s' = 2, k ∈ {1,2}, 10/10 rationals + drop-factor negative control;
+reviewed_scope = Φ_eff on the C_FULL_TREE_ODE n ≤ 100 and n = 108 frozen universes, 76/76
+descendable u_s = 1 rows defined after the drop, 50/50 anchor-zero rows repaired, raw
+s' ≤ 4, s_eff ≤ 4, k ∈ {1,…,6}; promoted_scope = the reviewed scope (NOT a standalone
+theorem for arbitrary monomial-Jacobian pairs). OPEN[DESCENT-ANCHOR] → CLOSED (ii).
+OPEN[LEMMA21-K] (typed): the terminal M_h = n − 1 statement for J = cγ^k — cheapest
+test: the prop55k gate's verdict on §2.1, else a one-page re-derivation from p.151's
+proof with the (k+1) shift.

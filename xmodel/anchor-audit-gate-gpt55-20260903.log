@@ -1,0 +1,3721 @@
+cli=codex-cli 0.153.0 model=gpt-5.5 effort=xhigh config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.153.0
+--------
+workdir: /home/ubuntu/jc2
+model: gpt-5.5
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a06747-751b-7472-a9f1-6350f04abfe9
+--------
+user
+# Hostile gate (fast): OPEN[DESCENT-ANCHOR] closure by Moh's p.174 normalisation — is Φ_eff sourced, and do the counts reproduce?
+
+Charged claim (descent-anchor-audit-grok46-20260903.md §0–§5; AUDIT delta 17(y)
+PROVISIONAL): (a) Def 5.1(3) as printed at p.179 carries the factor
+1/(n − M_s − 1); (b) Moh p.174 Definition–Remark drops M_h = n − 1 from the
+characteristic sequence (the last effective exponent is M_s) and Lemma 2.1
+forces every Jacobian pair to have M_h = n − 1, so a descended child with
+M'_{s'} = n' − 1 is the generic termination, not a degeneration (Prop 5.1(1):
+coinciding discs, finite radius); (c) Prop 6.3/6.4 hypotheses never mention
+the child's anchor, so the 38 (n ≤ 100) / 12 (n = 108) anchor-zero rows are
+neither undefined nor killed; (d) Φ_eff := after the Prop 6.3 image, drop
+M'_{s'} if it equals n' − 1, set V_{s*+1} = d_{s*+1}, then δ' = (k+1)·Def
+5.1(3)(effective tuple); no-op on all five p.207 rows (10/10 rationals
+MATCH), and dropping the factor instead breaks (15,10); (e) counts: n ≤ 100
+658 → 58, 57 descendable, 38 anchor-zero, 0 undefined after the drop, u_s > 1
+residue 1/58 = (99,66); n = 108: 217 → 21 → 20, 19 descendable, 12 anchor-zero,
+0 undefined, residue 1/20; s_eff = 2 on 29/57 and 12/19, s_eff = 3 on 14/57.
+Task: (1) open Moh pp.173–179, 196–198 as page images (pdftoppm -r 200 on the
+charged PDF; name the pages opened) and check (a)–(c) against the print —
+in particular whether p.174's drop is a definition that applies to the
+DESCENDED (non-Keller, monomial-Jacobian) pair as well, whether Lemma 2.1's
+"M_h = n − 1" statement is for J = const only or also for J = cγ^k (state
+what the print says; do not fill the gap), and whether setting V_{s*+1} =
+d_{s*+1} on the truncated dictionaries is Moh's convention or the lane's
+choice; (2) replay measure_anchor.py on the frozen drivers and reproduce
+the counts in (e), plus the 10/10 p.207 control and the (15,10) negative
+control; (3) verdict per item CONFIRMED / GAP / REFUTED; state whether Φ_eff
+can be PROMOTED as the descent radii rule (scope: s' ≤ ?, k ≥ ?) and what
+its producer_scope / reviewed_scope are. Desk-scale; no ledger edits; no
+jc2-lean; do not read any ideation-20260903T1200Z-* file other than the
+charged Opus submission (its H1/§13 only), nor in-progress lane reports.
+Drivers to box/anchor-gate-20260903/.
+Report: xmodel/anchor-audit-gate-gpt55-20260903.md
+Seal-at-completion (standard <!-- BODY-END --> marker; skeleton without it);
+bounded writes; target 8-14KB; 60 minutes.
+charged_input=xmodel/descent-anchor-audit-grok46-20260903.md
+charged_input=box/anchor-audit-20260903/measure_anchor.py
+charged_input=box/anchor-audit-20260903/measure_anchor.json
+charged_input=box/anchor-audit-20260903/anchor_zero_rows.txt
+charged_input=xmodel/ideation-20260903T1200Z-opus5.md
+charged_input=xmodel/descent-radii-grok46-20260903.md
+charged_input=box/descentradii-drivers-20260903/phi_delta.py
+charged_input=box/moh_skeleton_full.py
+charged_input=box/mohprog-drivers-20260903/full_tree_partition.py
+charged_input=refs/moh1983_jram340_configurations_of_roots.pdf
+charged_input=FALLACY-v2.md
+
+Your inputs are frozen read-only copies in /tmp/jc2-lane.gg5Ofk/inputs;
+verify these SHA-256 hashes first, MECHANICALLY and without retyping any digit: the lane receipt `xmodel/anchor-audit-gate-gpt55-20260903.run.v2` (readable in your sandbox) carries `charged_input_<i>_sha256=` and `charged_input_<i>_basename=` lines that reproduce this block; generate the manifest from it with awk and run `sha256sum -c`; stop only on a real content mismatch, not on a transcription slip of your own — recheck once before stopping:
+
+```text
+5c5d0e132196b3110c9027d220244534b5763a7d311bcc8efb7219ac596bfa77  /tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md
+4a5866d5e655add9ee37c6d684e2e12b017da3d8d5a52040d5b4e89a2ac372f6  /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.py
+611c0588c28bf9bcb718386f8c046561ca4fc6c77c5e93743fa15eab6aaa39f7  /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.json
+62525b610fc2011ba88730fe4ebbfd9a897243052b29c9e198067a2516a93967  /tmp/jc2-lane.gg5Ofk/inputs/anchor_zero_rows.txt
+2e4e817267cbfdba97607a41df0433b11f3d4542dbb5418226aa48982830accd  /tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md
+2482ae1e8550cbaf6042a59ff20ca990eef78d7b77c590c1958a816c66a4e512  /tmp/jc2-lane.gg5Ofk/inputs/descent-radii-grok46-20260903.md
+4bcb512d47cf9f935c6a2c0c7b8251ae16b3e4f73b4794abbef2d1702846c7c1  /tmp/jc2-lane.gg5Ofk/inputs/phi_delta.py
+d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2  /tmp/jc2-lane.gg5Ofk/inputs/moh_skeleton_full.py
+875c098a2a9465e146c77757e3d197be8af35f46ee4e772321acf8ca33b5fef8  /tmp/jc2-lane.gg5Ofk/inputs/full_tree_partition.py
+6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51  /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf
+e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  /tmp/jc2-lane.gg5Ofk/inputs/FALLACY-v2.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll verify the frozen input hashes from the lane receipt first, then work only from the `/tmp/jc2-lane.gg5Ofk/inputs` copies and the requested Moh PDF page renders.
+exec
+/bin/bash -lc "pwd && ls -la && awk -F= '/"'^charged_input_[0-9]+_sha256=/{i=$1; sub(/''^charged_input_/,"",i); sub(/_sha256$/,"",i); sha[i]=$2} /''^charged_input_[0-9]+_basename=/{i=$1; sub(/''^charged_input_/,"",i); sub(/_basename$/,"",i); base[i]=$2} END{for (i=0; i<100; i++) if ((i in sha) && (i in base)) print sha[i] "  /tmp/jc2-lane.gg5Ofk/inputs/" base[i]}'"' xmodel/anchor-audit-gate-gpt55-20260903.run.v2 > /tmp/jc2-lane.gg5Ofk/manifest.sha256 && sha256sum -c /tmp/jc2-lane.gg5Ofk/manifest.sha256" in /home/ubuntu/jc2
+ exited 1 in 0ms:
+/home/ubuntu/jc2
+total 11028
+drwxrwxr-x  21 ubuntu ubuntu    4096 Sep  3 12:07 .
+drwxr-x---  16 ubuntu ubuntu    4096 Sep  3 12:39 ..
+drwxrwxr-x   8 ubuntu ubuntu    4096 Sep  3 12:38 .git
+-rw-rw-r--   1 ubuntu ubuntu     405 Sep  3 09:42 .gitattributes
+-rw-rw-r--   1 ubuntu ubuntu    2057 Sep  3 10:08 .gitignore
+-rw-rw-r--   1 ubuntu ubuntu      87 Sep  3 09:42 .gitmodules
+-rw-rw-r--   1 ubuntu ubuntu     234 Sep  3 09:42 .ignore
+drwxrwxr-x  11 ubuntu ubuntu    4096 Sep  3 12:38 .lane-locks
+-rw-rw-r--   1 ubuntu ubuntu   50899 Sep  3 12:34 APPROACHES.md
+-rw-rw-r--   1 ubuntu ubuntu  952343 Sep  3 12:38 AUDIT.md
+-rw-rw-r--   1 ubuntu ubuntu   45402 Sep  3 10:40 COORDINATION.md
+-rw-rw-r--   1 ubuntu ubuntu    1985 Sep  3 09:42 FALLACY-v2.md
+-rw-rw-r--   1 ubuntu ubuntu    1839 Sep  3 09:42 FALLACY.md
+-rw-rw-r--   1 ubuntu ubuntu  463875 Sep  3 12:34 PROGRESS.md
+-rw-rw-r--   1 ubuntu ubuntu    1124 Sep  3 09:42 README.md
+drwxrwxr-x   2 ubuntu ubuntu    4096 Sep  3 09:42 archive
+drwxrwxr-x   2 ubuntu ubuntu    4096 Sep  3 09:42 avenues
+drwxrwxr-x  52 ubuntu ubuntu    4096 Sep  3 12:33 box
+drwxrwxr-x 856 ubuntu ubuntu  118784 Sep  3 09:42 cases
+-rw-rw-r--   1 ubuntu ubuntu 3651047 Sep  3 09:42 directionb_tails_D21.pkl
+-rw-rw-r--   1 ubuntu ubuntu 3834278 Sep  3 09:42 directionb_window_conditions.pkl
+drwxrwxr-x   3 ubuntu ubuntu    4096 Sep  3 09:42 dist
+-rw-rw-r--   1 ubuntu ubuntu      91 Sep  3 11:06 genfun.log
+drwxrwxr-x   2 ubuntu ubuntu    4096 Sep  3 09:42 history
+dr-x------   2 ubuntu ubuntu    4096 Sep  3 12:38 jc2-lean
+drwxrwxr-x   2 ubuntu ubuntu    4096 Sep  3 09:42 jc72108
+drwxrwxr-x   2 ubuntu ubuntu    4096 Sep  3 09:42 ladder
+drwxrwxr-x   3 ubuntu ubuntu    4096 Sep  3 09:42 lean
+drwxrwxr-x   2 ubuntu ubuntu    4096 Sep  3 09:42 lib
+-rw-rw-r--   1 ubuntu ubuntu 1373984 Sep  3 12:38 notes.md
+drwxrwxr-x   5 ubuntu ubuntu   12288 Sep  3 10:08 ops
+drwxrwxr-x   4 ubuntu ubuntu    4096 Sep  3 09:42 papers
+-rw-rw-r--   1 ubuntu ubuntu   87179 Sep  3 12:38 pilot-local.log
+drwxrwxr-x   2 ubuntu ubuntu    4096 Sep  3 09:42 prompts
+drwxrwxr-x   2 ubuntu ubuntu    4096 Sep  3 10:08 refs
+drwxrwxr-x   2 ubuntu ubuntu    4096 Sep  3 09:42 tests
+drwxrwxr-x   4 ubuntu ubuntu  557056 Sep  3 12:38 xmodel
+/bin/bash: line 1: /tmp/jc2-lane.gg5Ofk/manifest.sha256: Read-only file system
+
+codex
+The receipt directory itself is read-only, so I’ll place the generated checksum manifest in the workspace/output area while still deriving every hash and basename from the receipt mechanically.
+exec
+/bin/bash -lc "mkdir -p box/anchor-gate-20260903 && awk -F= '/"'^charged_input_[0-9]+_sha256=/{i=$1; sub(/''^charged_input_/,"",i); sub(/_sha256$/,"",i); sha[i]=$2} /''^charged_input_[0-9]+_basename=/{i=$1; sub(/''^charged_input_/,"",i); sub(/_basename$/,"",i); base[i]=$2} END{for (i=0; i<100; i++) if ((i in sha) && (i in base)) print sha[i] "  /tmp/jc2-lane.gg5Ofk/inputs/" base[i]}'"' xmodel/anchor-audit-gate-gpt55-20260903.run.v2 > box/anchor-gate-20260903/input-manifest.sha256 && sha256sum -c box/anchor-gate-20260903/input-manifest.sha256" in /home/ubuntu/jc2
+ succeeded in 0ms:
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md: OK
+/tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.py: OK
+/tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.json: OK
+/tmp/jc2-lane.gg5Ofk/inputs/anchor_zero_rows.txt: OK
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md: OK
+/tmp/jc2-lane.gg5Ofk/inputs/descent-radii-grok46-20260903.md: OK
+/tmp/jc2-lane.gg5Ofk/inputs/phi_delta.py: OK
+/tmp/jc2-lane.gg5Ofk/inputs/moh_skeleton_full.py: OK
+/tmp/jc2-lane.gg5Ofk/inputs/full_tree_partition.py: OK
+/tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf: OK
+/tmp/jc2-lane.gg5Ofk/inputs/FALLACY-v2.md: OK
+
+codex
+Hashes match. Next I’m rendering the cited Moh pages from the frozen PDF and checking the page numbering before reading the relevant text.
+exec
+/bin/bash -lc "pdfinfo /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf | sed -n '1,40p'" in /home/ubuntu/jc2
+ succeeded in 0ms:
+Title:           
+Subject:         
+Keywords:        
+Author:          
+Creator:         ABBYY FineReader
+Producer:        ; modified using iText® 5.4.1 ©2000-2012 1T3XT BVBA (AGPL-version)
+CreationDate:    Sun Mar 22 21:45:20 2009 UTC
+ModDate:         Fri May 29 20:39:29 2015 UTC
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           74
+Encrypted:       no
+Page size:       556 x 770 pts
+Page rot:        0
+File size:       6563749 bytes
+Optimized:       no
+PDF version:     1.2
+
+exec
+/bin/bash -lc 'ls -la /tmp/jc2-lane.gg5Ofk/inputs && wc -l /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.py /tmp/jc2-lane.gg5Ofk/inputs/anchor_zero_rows.txt /tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md /tmp/jc2-lane.gg5Ofk/inputs/descent-radii-grok46-20260903.md' in /home/ubuntu/jc2
+ succeeded in 0ms:
+total 6660
+drwxrwxr-x 2 ubuntu ubuntu    4096 Sep  3 12:38 .
+drwx------ 4 ubuntu ubuntu    4096 Sep  3 12:38 ..
+-r-------- 1 ubuntu ubuntu    1985 Sep  3 12:38 FALLACY-v2.md
+-r-------- 1 ubuntu ubuntu    8954 Sep  3 12:38 anchor_zero_rows.txt
+-r-------- 1 ubuntu ubuntu   20795 Sep  3 12:38 descent-anchor-audit-grok46-20260903.md
+-r-------- 1 ubuntu ubuntu   26471 Sep  3 12:38 descent-radii-grok46-20260903.md
+-r-------- 1 ubuntu ubuntu   20515 Sep  3 12:38 full_tree_partition.py
+-r-------- 1 ubuntu ubuntu   45122 Sep  3 12:38 ideation-20260903T1200Z-opus5.md
+-r-------- 1 ubuntu ubuntu   46994 Sep  3 12:38 measure_anchor.json
+-r-------- 1 ubuntu ubuntu   16271 Sep  3 12:38 measure_anchor.py
+-r-------- 1 ubuntu ubuntu 6563749 Sep  3 12:38 moh1983_jram340_configurations_of_roots.pdf
+-r-------- 1 ubuntu ubuntu   28761 Sep  3 12:38 moh_skeleton_full.py
+-r-------- 1 ubuntu ubuntu    2032 Sep  3 12:38 phi_delta.py
+  437 /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.py
+   54 /tmp/jc2-lane.gg5Ofk/inputs/anchor_zero_rows.txt
+  414 /tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md
+  547 /tmp/jc2-lane.gg5Ofk/inputs/descent-radii-grok46-20260903.md
+ 1452 total
+
+codex
+The PDF has 74 pages, consistent with printed pages 159-232, so I’m mapping printed p.173 to PDF page 15 and rendering through that offset. I’ll also render p.207 for the control table because the replay task depends on those rows.
+exec
+/bin/bash -lc 'mkdir -p box/anchor-gate-20260903/moh-pages && pdftoppm -r 200 -png -f 15 -l 21 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/moh-pages/moh-p173-179 && pdftoppm -r 200 -png -f 38 -l 40 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/moh-pages/moh-p196-198 && pdftoppm -r 200 -png -f 49 -l 49 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/moh-pages/moh-p207 && ls -1 box/anchor-gate-20260903/moh-pages' in /home/ubuntu/jc2
+ succeeded in 7713ms:
+moh-p173-179-15.png
+moh-p173-179-16.png
+moh-p173-179-17.png
+moh-p173-179-18.png
+moh-p173-179-19.png
+moh-p173-179-20.png
+moh-p173-179-21.png
+moh-p196-198-38.png
+moh-p196-198-39.png
+moh-p196-198-40.png
+moh-p207-49.png
+
+codex
+The required images are rendered under `box/anchor-gate-20260903/moh-pages/`. I’m opening them now and will use OCR/text extraction only as an aid against the page images.
+codex
+The first render exposed the actual offset: PDF page 15 is printed p.154, so printed page = PDF page + 139. I’m rerendering with the corrected mapping: p.173-179 are PDF pages 34-40, p.196-198 are PDF pages 57-59, and p.207 is PDF page 68.
+2026-09-03T12:40:16.430037Z ERROR codex_core::tools::router: error=exec_command failed: CreateProcess { message: "Rejected(\"`/bin/bash -lc 'rm -f box/anchor-gate-20260903/moh-pages/*.png && pdftoppm -r 200 -png -f 34 -l 40 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/moh-pages/moh-printed-p173-179 && pdftoppm -r 200 -png -f 57 -l 59 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/moh-pages/moh-printed-p196-198 && pdftoppm -r 200 -png -f 68 -l 68 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/moh-pages/moh-printed-p207 && ls -1 box/anchor-gate-20260903/moh-pages'` rejected: rm -f style commands are not permitted. Use a safer approach\")" }
+codex
+The command guard rejected removing the earlier mis-mapped PNGs, so I’ll leave them untouched and render the corrected page set into a separate `corrected-pages` directory.
+exec
+/bin/bash -lc 'mkdir -p box/anchor-gate-20260903/corrected-pages && pdftoppm -r 200 -png -f 34 -l 40 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179 && pdftoppm -r 200 -png -f 57 -l 59 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198 && pdftoppm -r 200 -png -f 68 -l 68 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/corrected-pages/moh-printed-p207 && ls -1 box/anchor-gate-20260903/corrected-pages' in /home/ubuntu/jc2
+ succeeded in 5637ms:
+moh-printed-p173-179-34.png
+moh-printed-p173-179-35.png
+moh-printed-p173-179-36.png
+moh-printed-p173-179-37.png
+moh-printed-p173-179-38.png
+moh-printed-p173-179-39.png
+moh-printed-p173-179-40.png
+moh-printed-p196-198-57.png
+moh-printed-p196-198-58.png
+moh-printed-p196-198-59.png
+moh-printed-p207-68.png
+
+codex
+The corrected page images are named by printed-page spans plus the PDF page number suffix: for example `moh-printed-p173-179-34.png` is printed p.173. I’m checking the definitions and propositions directly from those images now.
+codex
+The p.174 definition and p.179 formula are both visible in the rendered pages. The key nuance so far is that Moh gives a general “effective characteristic pairs” convention in Section 5, but the page itself does not discuss the descended monomial-Jacobian child by name.
+codex
+On p.197, Prop. 6.3’s stated hypotheses are exactly about `g`, degree `n`, `δ_s = -1`, and the minor-disc radius inequality; I do not see an anchor condition in the proposition header.
+codex
+Prop. 6.4 starts at the bottom of p.198, so I need its continuation to avoid guessing about the full statement. I’m rendering p.199 as an extra supporting page and will identify it separately in the report.
+exec
+/bin/bash -lc 'pdftoppm -r 200 -png -f 60 -l 60 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/corrected-pages/moh-printed-p199 && ls -1 box/anchor-gate-20260903/corrected-pages/moh-printed-p199-60.png' in /home/ubuntu/jc2
+ succeeded in 651ms:
+box/anchor-gate-20260903/corrected-pages/moh-printed-p199-60.png
+
+codex
+I also need Lemma 2.1 for the `M_h = n - 1` claim. I’m locating that lemma in the same frozen PDF and will keep the report clear about what Moh actually states versus what would have to be inferred.
+exec
+/bin/bash -lc "pdftotext /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf - | rg -n \"Lemma 2\\.|Lemma 2|M_h|Jacobian condition|monomial\"" in /home/ubuntu/jc2
+ succeeded in 0ms:
+81:polynomials f(x, y) and g(x, y) satisfying the Jacobian condition
+86:It can be illustrated that the Jacobian condition implies some similarities between the
+106:In § 2 we show that the Jacobian condition implies the existence of a finite sequence
+113:In § 3 we relate the sequence of polynomials Tf with the Jacobian condition for
+117:in our study. From the next section on the Jacobian condition is assumed.
+504:Jacobian condition
+583:Lemma 2.1. Lei f(x,y), g(x, y) ek[x, y] be two polynomiah monic in y with
+608:we know all M/s terminate at n — l if the Jacobian condition is satisfied. Note that this
+664:precise let e be an integer defined by (cf. Lemma 2. 1).
+829:We are primarily interested in the case that the Jacobian condition is satisfied
+1238:From this section on we shall assume that the following Jacobian condition is
+1241:Jacobian condition:
+1420:Therearetwocasesi.e. (1) Mh^n — l, thus Mh<n — 2(cf. Lemma 2. 1) (2) Mh = n — 1.
+1567:Remark. With a verbatim proof, for a slightly general Jacobian condition of the
+1700:Remark. With a verbatim proof, for a slightly general Jacobian condition of the
+3114:to a monomial.
+3256:the Jacobian condition with
+3290:Theorem. Lei f(x, y) and g(x, y) be two polynomials satisfying the Jacobian condition and the following conditions:
+
+exec
+/bin/bash -lc "pdftotext /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf - | sed -n '560,625p'" in /home/ubuntu/jc2
+ succeeded in 0ms:
+and the following auxiliary notations
+n O-l- i ,
+H
+
+= Σ
+
+n—4j~~ Λ
+
+n
+
+=-
+
+Το make some sense out of the long list of notations introduced above, we shall
+insert the following lemma first observed by S. S. Abhyankar ([A.l], p. 149).
+
+Brought to you by | University of Iowa Libraries
+Authenticated
+Download Date | 5/29/15 10:39 PM
+
+M o h, On the Jacobian conjecture
+
+151
+
+Lemma 2.1. Lei f(x,y), g(x, y) ek[x, y] be two polynomiah monic in y with
+y-degree m, n respectively. Lei
+
+Then JXfy(f(x,
+
+y), g(x,y)) = c a nonzero constant iff
+
+and
+
+Proof. It follows from chain rule that
+
+Jx,y(f(x> y)> £(*> y)) = /*,„(/(*, y), g(x, y)) Jx.y(x, n)
+
+The right hand side is in k[x, y] and a unit in k[_x\ [M],
+iff
+
+hence a nonzero constant,
+
+and
+
+fn- 1 (x) — nonzero constant .
+
+Q. E. D.
+
+Note that since /„_ι(χ)φΟ and (w,n-l) = l, then M^n-l for all i^A. Thus
+we know all M/s terminate at n — l if the Jacobian condition is satisfied. Note that this
+implies that f ( x 9 y ) has n conjugates over k[x] ((g"1)) and yek(x, g(x,y), f(x,y)). We
+shall call the reader's attention to our ignorance about the numbers M{. For instance,
+after long computation we ( s verified by A. Sathaye) established that for the following
+polynomials over k
+
+the value M2 could never be 13. It shows how little we know about M( in the polynomial
+case.
+The characteristic data \d{\ MJ are analytic in nature. We shall replace them,
+and thus algebraicize them, by the approximate roots. This method has been well
+demonstrated in [A-M.l]. In the present article we are interested in some specializations
+of the approximate roots. Let
+
+n/,£)=fi(/- i (T m + Σ y}w^))=°
+i =l
+
+j>-m
+
+
+codex
+OCR found Lemma 2.1 on printed p.151 but garbled the displayed conditions, so I’m rendering that page image as a supporting citation.
+exec
+/bin/bash -lc 'pdftoppm -r 200 -png -f 12 -l 12 /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf box/anchor-gate-20260903/corrected-pages/moh-printed-p151 && ls -1 box/anchor-gate-20260903/corrected-pages/moh-printed-p151-12.png' in /home/ubuntu/jc2
+ succeeded in 519ms:
+box/anchor-gate-20260903/corrected-pages/moh-printed-p151-12.png
+
+codex
+Lemma 2.1 is now checked from the page image: the printed iff is for `J_x,y(f,g)=c`, a nonzero constant. The subsequent sentence ties termination at `n-1` to “the Jacobian condition,” not to the monomial Jacobian produced later by Prop. 6.3.
+exec
+/bin/bash -lc "pdftotext /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf - | sed -n '1545,1585p' && printf '\\n---\\n' && pdftotext /tmp/jc2-lane.gg5Ofk/inputs/moh1983_jram340_configurations_of_roots.pdf - | sed -n '1688,1710p'" in /home/ubuntu/jc2
+ succeeded in 126ms:
+
+.
+
+'
+
+After simplifying, the above equation becomes
+(deg ΐ£,(π) + ε) Τ*σ(π) ρ'(π)-νρ(π) (Τ*σ(π)}'
+— μΓ + Μr — η
+
+= c*p(n)
+
+d
+
+"
+
++1
+
+.
+
+It follows from Proposition A. 2 of Appendix I that the polynomials p (n) and Τ*σ(π)
+are powers of a common linear polynomial in π. Our proposition is thus established.
+Q.E.D.
+Remark. With a verbatim proof, for a slightly general Jacobian condition of the
+following form (cf. Appendix II)
+
+Proposition 4. 4 is still valid with the condition (6) replaced by the following
+
+(6)*
+
+The following proposition will be proved after Proposition 4. 6. The purpose of
+inserting Proposition 4. 5 is to illustrate the Splitting phenomena. One Interpretation of
+Proposition 4. 5 is that there are at most two points at infinite for f(x, y) = 0. Note that
+the conditions of Proposition 4. 5 complete the conditions of Proposition 4. 3 (cf. [A.l],
+p. 139).
+Proposition 4. 5. Suppose that degg(x, ^) = degyg(x, y) = n>\ and Mr = n-2 for
+some r. Then the highest homogeneous forms of g(x, y), T i ( f ( x , y ) , g ( x , y ) } for i<r are
+powers of a common form which has at most two distinct linear factors. Moreover the
+multiplicities for the two factors are different.
+The following proposition gives some sufficient conditions for the general Splitting
+phenomena.
+
+
+---
+' ™'
+
+") + ^(JL/^)·
+
+Then the conclusions (2), (3), (4) and (5) follow at once from Propositions A.3 and A.4
+of Appendix 1.
+Let us consider the case r = l. As in the preceding argument we shall apply Proposition 4. l for h(y) = Tf(y). Note that
+7f =/+polynomial in g.
+It follows
+It is elementary to show that Orders of both sides of the equation (1) of Proposition 4. l
+are equal. Thus the leading coefficients £σ(π) and 7\ σ(π) must satisfy the said equation.
+Q.E.D.
+Remark. With a verbatim proof, for a slightly general Jacobian condition of the
+following form (cf. Appendix II)
+Proposition 4. 6 is still valid with the condition (3) replaced by the following:
+
+(3)*
+
+, -l-/+<5
+-1A=-<
+n — mr
+n
+
+
+codex
+I’m moving to the computational replay now: first reading the frozen driver script and its data layout, then I’ll run it from a copied driver directory so the inputs remain untouched.
+exec
+/bin/bash -lc "sed -n '1,260p' /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.py" in /home/ubuntu/jc2
+ succeeded in 0ms:
+#!/usr/bin/env python3
+"""DESCENT-ANCHOR AUDIT — desk measurement.
+
+Frozen copies: repro/moh_skeleton_full.py, full_tree_partition.py, phi_delta.py.
+Reproduces Opus 38/57 (n<=100) and 12/20 (n=108); lists every anchor-zero row;
+checks p.207 non-degeneracy; negative control (drop the Def 5.1(3) factor);
+repaired rule (drop M_h = n'-1, Moh p.174 Definition-Remark).
+"""
+from __future__ import annotations
+
+import json
+import sys
+from fractions import Fraction as F
+from math import gcd
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(HERE / "repro"))
+
+import moh_skeleton_full as M  # noqa: E402
+import full_tree_partition as T  # noqa: E402
+
+
+def def51(n, M, d, V, s, i):
+    """Def 5.1(3) p.179 as printed, 1-based M,d,V dicts. M[s] is last effective."""
+    num = F(n - M[i])
+    den = F(n - M[s] - 1)
+    if den == 0:
+        return None  # undefined
+    for j in range(i + 1, s + 1):
+        num *= V[j] * (n - M[j]) - d[j]
+        den *= V[j] * (n - M[j - 1]) - d[j]
+        if den == 0:
+            return None
+    return 1 - num / den
+
+
+def def51_drop_factor(n, M, d, V, s, i):
+    """Negative control: omit 1/(n-M_s-1), i.e. replace that factor by 1."""
+    num = F(n - M[i])
+    den = F(1)
+    for j in range(i + 1, s + 1):
+        num *= V[j] * (n - M[j]) - d[j]
+        den *= V[j] * (n - M[j - 1]) - d[j]
+    return 1 - num / den
+
+
+def u_s_of(S):
+    return S.d[S.s] - S.V[S.s]
+
+
+def descend(S):
+    """Prop 6.3 map as used by the charged lanes (u_s = 1 required)."""
+    us = u_s_of(S)
+    ds = S.d[S.s]
+    Vs = S.V[S.s]
+    k = Vs - us - 1  # = V_s - 2 when u_s = 1
+    n2, m2 = S.n // ds, S.m // ds
+    s2 = S.s - 1
+    M2 = {i: S.M[i] // ds for i in range(1, s2 + 1)}
+    d2 = {i: S.d[i] // ds for i in range(1, s2 + 2)}
+    V2 = {i: S.V[i] for i in range(2, s2 + 1)}
+    V2[s2 + 1] = d2[s2 + 1]
+    return {
+        "n": n2, "m": m2, "s": s2, "M": M2, "d": d2, "V": V2,
+        "k": k, "u_s": us, "d_s": ds, "V_s": Vs,
+    }
+
+
+def truncate_jacobian(D):
+    """Moh p.174 Definition-Remark: drop M_h if M_h = n-1."""
+    n, s, M, d, V = D["n"], D["s"], dict(D["M"]), dict(D["d"]), dict(D["V"])
+    dropped = 0
+    while s >= 1 and M.get(s) == n - 1:
+        dropped += 1
+        s -= 1
+        M.pop(s + 1, None)
+        V.pop(s + 1, None)
+        if (s + 1) in d and s >= 1:
+            V[s + 1] = d[s + 1]
+    D2 = dict(D)
+    D2.update({"s": s, "M": M, "d": d, "V": V, "dropped": dropped})
+    return D2
+
+
+def anchor_den(D):
+    """n - M_s - 1 on the (possibly untruncated) descended tuple."""
+    if D["s"] < 1 or D["s"] not in D["M"]:
+        return None
+    return D["n"] - D["M"][D["s"]] - 1
+
+
+def phi_on(D):
+    """(k+1) * Def 5.1(3) at every i=1..s. None if undefined."""
+    n, M, d, V, s, k = D["n"], D["M"], D["d"], D["V"], D["s"], D["k"]
+    if s < 1:
+        return None
+    if n - M[s] - 1 == 0:
+        return None
+    out = []
+    for i in range(1, s + 1):
+        raw = def51(n, M, d, V, s, i)
+        if raw is None:
+            return None
+        out.append((k + 1) * raw)
+    return out
+
+
+def skel_tuple(S):
+    Ms = [S.M[i] for i in range(2, S.s + 1)]
+    Vs = {i: S.V[i] for i in range(2, S.s + 1)}
+    return S.n, S.m, tuple(Ms), tuple(sorted(Vs.items()))
+
+
+def collect_rows(nmax=100, nmin=4, only_n=None):
+    if only_n is not None:
+        ns = [only_n]
+    else:
+        ns = list(range(nmin, nmax + 1))
+    rows = []
+    for n in ns:
+        for m, Ms, V in M.census(n, Kmin=2, full=True):
+            rows.append(M.Skel(n, m, list(Ms), V))
+    return rows
+
+
+def screen_ode(rows):
+    surv = []
+    for S in rows:
+        if T.full_tree_ode_ok(S):
+            surv.append(S)
+    return surv
+
+
+# ---------------------------------------------------------------------------
+print("=" * 78)
+print("ANCHOR-AUDIT measurement  (frozen moh_skeleton_full + full_tree_partition)")
+print("=" * 78)
+
+# ---- A. Def 5.1(3) factor and the 10 printed rationals --------------------
+print("\n== A. Def 5.1(3) as coded vs p.207 Φ; negative control ==")
+from phi_delta import rows as PHI_ROWS, def51 as phi_def51  # charged copy
+
+# reconstruct the charged 10/10
+ok10 = True
+for n, m, M2, V2, k, pd2, pd1, lab in PHI_ROWS:
+    d2 = gcd(n, m)
+    Md = {1: -m, 2: M2}
+    dd = {1: n, 2: d2, 3: gcd(d2, M2)}
+    Vd = {2: V2, 3: dd[3]}
+    raw2, raw1 = def51(n, Md, dd, Vd, 2, 2), def51(n, Md, dd, Vd, 2, 1)
+    p2, p1 = (k + 1) * raw2, (k + 1) * raw1
+    match = (p2 == pd2 and p1 == pd1)
+    ok10 = ok10 and match
+    drop2 = def51_drop_factor(n, Md, dd, Vd, 2, 2)
+    print("  %-44s Phi=(%s, %s) printed=(%s, %s) %s  drop-factor δ2=%s"
+          % (lab, p2, p1, pd2, pd1, "MATCH" if match else "FAIL", drop2))
+print("  10/10 MATCH:", ok10)
+
+# the charged negative control: (15,10) drop-factor gives -3 not -1/3
+n, m, M2, V2 = 15, 10, 11, 3
+d2 = gcd(n, m)
+Md = {1: -m, 2: M2}
+dd = {1: n, 2: d2, 3: gcd(d2, M2)}
+Vd = {2: V2, 3: dd[3]}
+raw2 = def51(n, Md, dd, Vd, 2, 2)
+drop2 = def51_drop_factor(n, Md, dd, Vd, 2, 2)
+print("  (15,10) V2=3  Def51 δ2 = %s  (expect -1/3);  drop-factor δ2 = %s  (expect -3)"
+      % (raw2, drop2))
+print("  drop-factor BREAKS the match:", drop2 != raw2 and drop2 == F(-3) and raw2 == F(-1, 3))
+
+# repaired Φ is a no-op on p.207 (no M_s' = n'-1)
+print("\n== A2. repaired Φ (drop M_h=n'-1) is a no-op on all five p.207 rows ==")
+p207_parents = [
+    (64, 48, [52, 62], {3: 3, 2: 3}, " (64,48)"),
+    (84, 56, [64, 82], {3: 3, 2: 2}, " (84,56) M2=64,V2=2"),
+    (84, 56, [72, 82], {3: 3, 2: 5}, " (84,56) M2=72,V2=5"),
+    (75, 50, [55, 73], {3: 4, 2: 3}, " (75,50) V2=3"),
+    (75, 50, [55, 73], {3: 4, 2: 2}, " (75,50) V2=2"),
+]
+print("  %-32s u_s d_s  n' m'  M'                 Ms_raw  n'-1  n'-2  den  dropped  Phi"
+      % "parent")
+for n, m, Ms, Vs, lab in p207_parents:
+    S = M.Skel(n, m, Ms, Vs)
+    D = descend(S)
+    Dt = truncate_jacobian(D)
+    den = anchor_den(D)
+    den_t = anchor_den(Dt)
+    Ms_raw = [D["M"][i] for i in range(2, D["s"] + 1)]
+    print("  %-32s %3d %3d  %2d %2d  %-18s %5s  %4d  %4d  %3s  drop=%d  Φ=%s  Φt=%s"
+          % (lab, D["u_s"], D["d_s"], D["n"], D["m"], Ms_raw,
+             D["M"][D["s"]], D["n"] - 1, D["n"] - 2, den, Dt["dropped"],
+             phi_on(D), phi_on(Dt)))
+
+# ---- B. (84,56) census vs p.202 ------------------------------------------
+print("\n== B. all (1)-(13) rows at (n,m)=(84,56) vs p.202 ==")
+rows8456 = []
+for m, Ms, V in M.census(84, Kmin=2, full=True):
+    if m == 56:
+        S = M.Skel(84, m, list(Ms), V)
+        rows8456.append(S)
+        us = u_s_of(S)
+        ds = S.d[S.s]
+        Ms_l = [S.M[i] for i in range(1, S.s + 1)]
+        print("    s=%d  M=%s  V=%s  d=%s  d_s=%d u_s=%d  M_{s-1}=%s  n-d_s=%s  anchor0=%s"
+              % (S.s, Ms_l, {i: S.V[i] for i in range(2, S.s + 1)},
+                 [S.d[i] for i in range(1, S.s + 2)],
+                 ds, us, S.M[S.s - 1], 84 - ds,
+                 S.M[S.s - 1] == 84 - ds))
+print("  count (84,56) (1)-(13) rows:", len(rows8456))
+printed_8456 = {
+    (84, 56, (64, 82), ((2, 2), (3, 3))),
+    (84, 56, (72, 82), ((2, 5), (3, 3))),
+}
+got_8456 = {skel_tuple(S) for S in rows8456}
+print("  p.202 two rows present:", printed_8456 <= got_8456)
+print("  extra (84,56) rows beyond p.202:", len(got_8456 - printed_8456))
+
+# hypothetical d_s=7 rows named by Opus
+print("\n== B2. Opus-named d_s=7 (84,56) skeletons (may or may not be (1)-(13)) ==")
+hyp = [
+    (84, 56, [-56, 42, 77, 82]),
+    (84, 56, [-56, 70, 77, 82]),
+]
+for n, m, fullM in hyp:
+    Ms = fullM[1:]  # M_2..M_s
+    # try every V that census would admit at this M
+    found = [(S.V, u_s_of(S), S.d[S.s]) for S in rows8456
+             if [S.M[i] for i in range(1, S.s + 1)] == fullM]
+    print("  M=%s  in (1)-(13) with V's: %s" % (fullM, found if found else "NONE"))
+    # also list (1)-(7) V-assignments (no (8)-(13) prune)
+    v17 = []
+    for mm, Mss, V in M.census(n, Kmin=2, full=False):
+        if mm == m and list(Mss) == Ms:
+            S = M.Skel(n, m, list(Mss), V)
+            v17.append(({i: S.V[i] for i in range(2, S.s + 1)}, u_s_of(S), S.d[S.s],
+                        S.M[S.s - 1] == n - S.d[S.s]))
+    print("    (1)-(7) V-assignments: %s" % (v17 if v17 else "NONE"))
+
+# ---- C. n<=100 C_FULL_TREE_ODE screen + descent/anchor --------------------
+print("\n== C. n<=100 C_FULL_TREE_ODE + descent/anchor (reproduce 38/57) ==")
+rows100 = collect_rows(100)
+print("  (1)-(13) rows n<=100:", len(rows100))
+surv100 = screen_ode(rows100)
+print("  C_FULL_TREE_ODE survivors:", len(surv100))
+
+desc, us_gt1, az, az_after_drop, evalable = [], [], [], [], []
+records = []
+for S in surv100:
+    us = u_s_of(S)
+    rec = {
+        "n": S.n, "m": S.m,
+        "M": [S.M[i] for i in range(1, S.s + 1)],
+        "V": {i: S.V[i] for i in range(2, S.s + 1)},
+        "d": [S.d[i] for i in range(1, S.s + 2)],
+        "s": S.s, "d_s": S.d[S.s], "u_s": us, "V_s": S.V[S.s],
+    }
+    if us != 1:
+        rec["status"] = "US-GT-1"
+
+exec
+/bin/bash -lc "sed -n '261,520p' /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.py" in /home/ubuntu/jc2
+ succeeded in 0ms:
+        us_gt1.append(rec)
+        records.append(rec)
+        continue
+    D = descend(S)
+    den = anchor_den(D)
+    Dt = truncate_jacobian(D)
+    den_t = anchor_den(Dt)
+    rec.update({
+        "n_prime": D["n"], "m_prime": D["m"], "k": D["k"],
+        "M_prime": [D["M"][i] for i in range(1, D["s"] + 1)],
+        "s_prime": D["s"],
+        "den": den,
+        "dropped": Dt["dropped"],
+        "s_eff": Dt["s"],
+        "M_eff": [Dt["M"][i] for i in range(1, Dt["s"] + 1)] if Dt["s"] >= 1 else [],
+        "den_eff": den_t,
+        "n_minus_2_child": D["n"] - 2,
+        "n_minus_1_child": D["n"] - 1,
+        "top_raw": D["M"][D["s"]] if D["s"] in D["M"] else None,
+        "top_eff": Dt["M"][Dt["s"]] if Dt["s"] in Dt["M"] else None,
+        "phi_raw": None if den == 0 else [str(x) for x in (phi_on(D) or [])],
+        "phi_eff": None if den_t == 0 else [str(x) for x in (phi_on(Dt) or [])],
+    })
+    rec["M_s_eq_n_minus_2_child"] = rec["top_raw"] == rec["n_minus_2_child"]
+    rec["anchor_zero"] = (den == 0)
+    desc.append(rec)
+    if den == 0:
+        az.append(rec)
+        if den_t == 0:
+            az_after_drop.append(rec)
+            rec["status"] = "ANCHOR-ZERO-AFTER-DROP"
+        else:
+            rec["status"] = "ANCHOR-ZERO-DROPPED-OK"
+            evalable.append(rec)
+    else:
+        rec["status"] = "EVALABLE-AS-CHARGED"
+        evalable.append(rec)
+    records.append(rec)
+
+print("  survivors:", len(surv100))
+print("  u_s=1 (descendable):", len(desc))
+print("  u_s>1:", len(us_gt1))
+print("  anchor-zero (n'-M_s'-1=0, before drop):", len(az))
+print("  evaluable as charged (den!=0):", len(desc) - len(az))
+print("  after p.174 drop, still den=0:", len(az_after_drop))
+print("  evaluable after repair:", len(evalable))
+print("  s_eff after drop, among anchor-zero:")
+from collections import Counter
+print("   ", Counter(r["s_eff"] for r in az))
+print("  top_eff == n'-2 among repaired az:",
+      sum(1 for r in az if r["top_eff"] == r["n_prime"] - 2))
+print("  top_eff <  n'-2 among repaired az:",
+      sum(1 for r in az if r["top_eff"] is not None and r["top_eff"] < r["n_prime"] - 2))
+
+print("\n  u_s>1 rows:")
+for r in us_gt1:
+    print("    n=%s m=%s M=%s V=%s d_s=%s u_s=%s" %
+          (r["n"], r["m"], r["M"], r["V"], r["d_s"], r["u_s"]))
+
+print("\n  ANCHOR-ZERO rows (n<=100), with (n,m,M,V,d_s) and repaired data:")
+for r in az:
+    print("    n=%s m=%s M=%s V=%s d_s=%s k=%s -> (n',m')=(%s,%s) M'=%s den=0 "
+          "drop=%s s_eff=%s M_eff=%s den_eff=%s top_eff=%s n'-2=%s Φt=%s"
+          % (r["n"], r["m"], r["M"], r["V"], r["d_s"], r["k"],
+             r["n_prime"], r["m_prime"], r["M_prime"],
+             r["dropped"], r["s_eff"], r["M_eff"], r["den_eff"],
+             r["top_eff"], r["n_prime"] - 2, r["phi_eff"]))
+
+# ---- D. n=108 screen ------------------------------------------------------
+print("\n== D. n=108 C_FULL_TREE_ODE + descent/anchor (reproduce 12/20) ==")
+rows108 = collect_rows(only_n=108)
+print("  (1)-(13) rows n=108:", len(rows108))
+# partition vs ode: Opus 217→21→20 is (1)-(13) of something?  compute-notes
+# said 206 V at D=108.  The 217 may be a different Kmin/window.  We report both
+# (1)-(13) count and the ODE-screened count.
+surv108_part = [S for S in rows108 if T.full_tree_ok(S)]
+surv108 = [S for S in rows108 if T.full_tree_ode_ok(S)]
+print("  C_FULL_TREE (no ODE) survivors n=108:", len(surv108_part))
+print("  C_FULL_TREE_ODE survivors n=108:", len(surv108))
+
+desc108, us108, az108 = [], [], []
+for S in surv108:
+    us = u_s_of(S)
+    if us != 1:
+        us108.append(S)
+        continue
+    D = descend(S)
+    den = anchor_den(D)
+    Dt = truncate_jacobian(D)
+    rec = {
+        "n": S.n, "m": S.m,
+        "M": [S.M[i] for i in range(1, S.s + 1)],
+        "V": {i: S.V[i] for i in range(2, S.s + 1)},
+        "d_s": S.d[S.s], "u_s": us, "k": D["k"],
+        "n_prime": D["n"], "m_prime": D["m"],
+        "M_prime": [D["M"][i] for i in range(1, D["s"] + 1)],
+        "den": den, "dropped": Dt["dropped"],
+        "s_eff": Dt["s"],
+        "M_eff": [Dt["M"][i] for i in range(1, Dt["s"] + 1)] if Dt["s"] >= 1 else [],
+        "den_eff": anchor_den(Dt),
+        "top_eff": Dt["M"][Dt["s"]] if Dt["s"] in Dt["M"] else None,
+        "phi_eff": None if anchor_den(Dt) == 0 else [str(x) for x in (phi_on(Dt) or [])],
+    }
+    desc108.append(rec)
+    if den == 0:
+        az108.append(rec)
+
+print("  u_s=1:", len(desc108), " u_s>1:", len(us108),
+      " anchor-zero:", len(az108),
+      " evaluable-as-charged:", len(desc108) - len(az108))
+print("  u_s>1 at n=108:")
+for S in us108:
+    print("    n=%s m=%s M=%s V=%s d_s=%s u_s=%s" %
+          (S.n, S.m, [S.M[i] for i in range(1, S.s + 1)],
+           {i: S.V[i] for i in range(2, S.s + 1)}, S.d[S.s], u_s_of(S)))
+print("  ANCHOR-ZERO at n=108:")
+for r in az108:
+    print("    n=%s m=%s M=%s V=%s d_s=%s k=%s -> (%s,%s) M'=%s drop=%s s_eff=%s "
+          "M_eff=%s den_eff=%s top_eff=%s n'-2=%s Φt=%s"
+          % (r["n"], r["m"], r["M"], r["V"], r["d_s"], r["k"],
+             r["n_prime"], r["m_prime"], r["M_prime"], r["dropped"],
+             r["s_eff"], r["M_eff"], r["den_eff"], r["top_eff"],
+             r["n_prime"] - 2, r["phi_eff"]))
+
+# ---- E. five p.207 + two d_s=7: top characteristic exponent ---------------
+print("\n== E. top characteristic exponent of the descended pair ==")
+extra = []
+# any (1)-(13) (84,56) with d_s=7
+for S in rows8456:
+    if S.d[S.s] == 7:
+        extra.append(S)
+print("  (84,56) (1)-(13) rows with d_s=7: %d" % len(extra))
+for S in [M.Skel(n, m, Ms, Vs) for n, m, Ms, Vs, _ in p207_parents] + extra:
+    D = descend(S)
+    Dt = truncate_jacobian(D)
+    print("  parent (%s,%s) M=%s V=%s d_s=%s u_s=%s"
+          % (S.n, S.m, [S.M[i] for i in range(1, S.s + 1)],
+             {i: S.V[i] for i in range(2, S.s + 1)}, S.d[S.s], u_s_of(S)))
+    print("    child n'=%s m'=%s M'=%s  top_raw=%s  n'-2=%s n'-1=%s  "
+          "Keller-top? %s  Jacobian-top? %s  drop=%s  top_eff=%s  Φ=%s Φt=%s"
+          % (D["n"], D["m"], [D["M"][i] for i in range(1, D["s"] + 1)],
+             D["M"][D["s"]], D["n"] - 2, D["n"] - 1,
+             D["M"][D["s"]] == D["n"] - 2,
+             D["M"][D["s"]] == D["n"] - 1,
+             Dt["dropped"], Dt["M"].get(Dt["s"]),
+             phi_on(D), phi_on(Dt)))
+
+# ---- dump JSON ------------------------------------------------------------
+out = {
+    "n100": {
+        "input_rows": len(rows100),
+        "ode_survivors": len(surv100),
+        "u_s_eq_1": len(desc),
+        "u_s_gt_1": len(us_gt1),
+        "anchor_zero": len(az),
+        "evaluable_as_charged": len(desc) - len(az),
+        "anchor_zero_after_drop": len(az_after_drop),
+        "evaluable_after_repair": len(evalable),
+        "anchor_zero_rows": az,
+        "u_s_gt_1_rows": us_gt1,
+    },
+    "n108": {
+        "input_rows": len(rows108),
+        "partition_survivors": len(surv108_part),
+        "ode_survivors": len(surv108),
+        "u_s_eq_1": len(desc108),
+        "u_s_gt_1": len(us108),
+        "anchor_zero": len(az108),
+        "evaluable_as_charged": len(desc108) - len(az108),
+        "anchor_zero_rows": az108,
+    },
+    "rows8456_count": len(rows8456),
+    "phi_10_of_10": ok10,
+}
+(HERE / "measure_anchor.json").write_text(json.dumps(out, indent=2, default=str) + "\n")
+print("\nwrote", HERE / "measure_anchor.json")
+print("DONE")
+
+exec
+/bin/bash -lc "head -80 /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.json && printf '\\nTAIL\\n' && tail -80 /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.json" in /home/ubuntu/jc2
+ succeeded in 0ms:
+{
+  "n100": {
+    "input_rows": 658,
+    "ode_survivors": 58,
+    "u_s_eq_1": 57,
+    "u_s_gt_1": 1,
+    "anchor_zero": 38,
+    "evaluable_as_charged": 19,
+    "anchor_zero_after_drop": 0,
+    "evaluable_after_repair": 57,
+    "anchor_zero_rows": [
+      {
+        "n": 72,
+        "m": 48,
+        "M": [
+          -48,
+          60,
+          68,
+          70
+        ],
+        "V": {
+          "2": 11,
+          "3": 7,
+          "4": 3
+        },
+        "d": [
+          72,
+          24,
+          12,
+          4,
+          2
+        ],
+        "s": 4,
+        "d_s": 4,
+        "u_s": 1,
+        "V_s": 3,
+        "n_prime": 18,
+        "m_prime": 12,
+        "k": 1,
+        "M_prime": [
+          -12,
+          15,
+          17
+        ],
+        "s_prime": 3,
+        "den": 0,
+        "dropped": 1,
+        "s_eff": 2,
+        "M_eff": [
+          -12,
+          15
+        ],
+        "den_eff": 2,
+        "n_minus_2_child": 16,
+        "n_minus_1_child": 17,
+        "top_raw": 17,
+        "top_eff": 15,
+        "phi_raw": null,
+        "phi_eff": [
+          "-1/2",
+          "-1"
+        ],
+        "M_s_eq_n_minus_2_child": false,
+        "anchor_zero": true,
+        "status": "ANCHOR-ZERO-DROPPED-OK"
+      },
+      {
+        "n": 72,
+        "m": 48,
+        "M": [
+          -48,
+          60,
+          66,
+          70
+        ],
+        "V": {
+          "2": 11,
+          "3": 10,
+          "4": 5
+        },
+
+TAIL
+        "n": 108,
+        "m": 72,
+        "M": [
+          -72,
+          90,
+          99,
+          106
+        ],
+        "V": {
+          "2": 11,
+          "3": 10,
+          "4": 8
+        },
+        "d_s": 9,
+        "u_s": 1,
+        "k": 6,
+        "n_prime": 12,
+        "m_prime": 8,
+        "M_prime": [
+          -8,
+          10,
+          11
+        ],
+        "den": 0,
+        "dropped": 1,
+        "s_eff": 2,
+        "M_eff": [
+          -8,
+          10
+        ],
+        "den_eff": 1,
+        "top_eff": 10,
+        "phi_eff": [
+          "-14/3",
+          "-7"
+        ]
+      },
+      {
+        "n": 108,
+        "m": 72,
+        "M": [
+          -72,
+          90,
+          99,
+          106
+        ],
+        "V": {
+          "2": 17,
+          "3": 16,
+          "4": 8
+        },
+        "d_s": 9,
+        "u_s": 1,
+        "k": 6,
+        "n_prime": 12,
+        "m_prime": 8,
+        "M_prime": [
+          -8,
+          10,
+          11
+        ],
+        "den": 0,
+        "dropped": 1,
+        "s_eff": 2,
+        "M_eff": [
+          -8,
+          10
+        ],
+        "den_eff": 1,
+        "top_eff": 10,
+        "phi_eff": [
+          "-11/2",
+          "-7"
+        ]
+      }
+    ]
+  },
+  "rows8456_count": 46,
+  "phi_10_of_10": true
+}
+
+exec
+/bin/bash -lc "sed -n '1,120p' /tmp/jc2-lane.gg5Ofk/inputs/anchor_zero_rows.txt" in /home/ubuntu/jc2
+ succeeded in 0ms:
+# anchor-zero C_FULL_TREE_ODE rows
+# n m M V d_s k -> n' m' M'(raw) M_eff s_eff den_eff top_eff n'-2 Phi_eff
+## n<=100
+n=72 m=48 M=[-48, 60, 68, 70] V={'2': 11, '3': 7, '4': 3} d_s=4 k=1 -> (18,12) Mraw=[-12, 15, 17] Meff=[-12, 15] s_eff=2 den_eff=2 top_eff=15 n-2=16 Phi=['-1/2', '-1']
+n=72 m=48 M=[-48, 60, 66, 70] V={'2': 11, '3': 10, '4': 5} d_s=6 k=3 -> (12,8) Mraw=[-8, 10, 11] Meff=[-8, 10] s_eff=2 den_eff=1 top_eff=10 n-2=10 Phi=['-8/3', '-4']
+n=80 m=32 M=[-32, 56, 76, 78] V={'2': 8, '3': 4, '4': 3} d_s=4 k=1 -> (20,8) Mraw=[-8, 14, 19] Meff=[-8, 14] s_eff=2 den_eff=5 top_eff=14 n-2=18 Phi=['-6/25', '-2/5']
+n=84 m=56 M=[-56, 42, 77, 82] V={'2': 1, '3': 12, '4': 6} d_s=7 k=4 -> (12,8) Mraw=[-8, 6, 11] Meff=[-8, 6] s_eff=2 den_eff=5 top_eff=6 n-2=10 Phi=['5/2', '-1']
+n=84 m=56 M=[-56, 42, 77, 82] V={'2': 3, '3': 12, '4': 6} d_s=7 k=4 -> (12,8) Mraw=[-8, 6, 11] Meff=[-8, 6] s_eff=2 den_eff=5 top_eff=6 n-2=10 Phi=['0', '-1']
+n=84 m=56 M=[-56, 70, 77, 82] V={'2': 11, '3': 10, '4': 6} d_s=7 k=4 -> (12,8) Mraw=[-8, 10, 11] Meff=[-8, 10] s_eff=2 den_eff=1 top_eff=10 n-2=10 Phi=['-10/3', '-5']
+n=90 m=60 M=[-60, 10, 85, 88] V={'2': 1, '3': 8, '4': 4} d_s=5 k=2 -> (18,12) Mraw=[-12, 2, 17] Meff=[-12, 2] s_eff=2 den_eff=15 top_eff=2 n-2=16 Phi=['1/2', '-1/5']
+n=90 m=60 M=[-60, 10, 85, 88] V={'2': 3, '3': 8, '4': 4} d_s=5 k=2 -> (18,12) Mraw=[-12, 2, 17] Meff=[-12, 2] s_eff=2 den_eff=15 top_eff=2 n-2=16 Phi=['0', '-1/5']
+n=90 m=60 M=[-60, 70, 85, 88] V={'2': 8, '3': 7, '4': 4} d_s=5 k=2 -> (18,12) Mraw=[-12, 14, 17] Meff=[-12, 14] s_eff=2 den_eff=3 top_eff=14 n-2=16 Phi=['-1/3', '-1']
+n=90 m=60 M=[-60, 80, 85, 88] V={'2': 17, '3': 8, '4': 4} d_s=5 k=2 -> (18,12) Mraw=[-12, 16, 17] Meff=[-12, 16] s_eff=2 den_eff=1 top_eff=16 n-2=16 Phi=['-2', '-3']
+n=90 m=60 M=[-60, 75, 85, 88] V={'2': 11, '3': 7, '4': 4} d_s=5 k=2 -> (18,12) Mraw=[-12, 15, 17] Meff=[-12, 15] s_eff=2 den_eff=2 top_eff=15 n-2=16 Phi=['-3/4', '-3/2']
+n=96 m=80 M=[-80, 24, 92, 94] V={'2': 6, '3': 3, '4': 3} d_s=4 k=1 -> (24,20) Mraw=[-20, 6, 23] Meff=[-20, 6] s_eff=2 den_eff=17 top_eff=6 n-2=22 Phi=['-6/85', '-2/17']
+n=96 m=72 M=[-72, 56, 92, 94] V={'2': 1, '3': 5, '4': 3} d_s=4 k=1 -> (24,18) Mraw=[-18, 14, 23] Meff=[-18, 14] s_eff=2 den_eff=9 top_eff=14 n-2=22 Phi=['26/27', '-2/9']
+n=96 m=72 M=[-72, 56, 92, 94] V={'2': 7, '3': 5, '4': 3} d_s=4 k=1 -> (24,18) Mraw=[-18, 14, 23] Meff=[-18, 14] s_eff=2 den_eff=9 top_eff=14 n-2=22 Phi=['-2/27', '-2/9']
+n=96 m=72 M=[-72, 88, 92, 94] V={'2': 7, '3': 5, '4': 3} d_s=4 k=1 -> (24,18) Mraw=[-18, 22, 23] Meff=[-18, 22] s_eff=2 den_eff=1 top_eff=22 n-2=22 Phi=['-1/3', '-2']
+n=96 m=64 M=[-64, 24, 92, 94] V={'2': 20, '3': 5, '4': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 6, 23] Meff=[-16, 6] s_eff=2 den_eff=17 top_eff=6 n-2=22 Phi=['-14/153', '-2/17']
+n=96 m=64 M=[-64, 72, 92, 94] V={'2': 7, '3': 6, '4': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 18, 23] Meff=[-16, 18] s_eff=2 den_eff=5 top_eff=18 n-2=22 Phi=['0', '-2/5']
+n=96 m=64 M=[-64, 80, 92, 94] V={'2': 11, '3': 10, '4': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 20, 23] Meff=[-16, 20] s_eff=2 den_eff=3 top_eff=20 n-2=22 Phi=['-2/9', '-2/3']
+n=96 m=64 M=[-64, 48, 88, 94] V={'2': 1, '3': 12, '4': 7} d_s=8 k=5 -> (12,8) Mraw=[-8, 6, 11] Meff=[-8, 6] s_eff=2 den_eff=5 top_eff=6 n-2=10 Phi=['3', '-6/5']
+n=96 m=64 M=[-64, 48, 88, 94] V={'2': 3, '3': 12, '4': 7} d_s=8 k=5 -> (12,8) Mraw=[-8, 6, 11] Meff=[-8, 6] s_eff=2 den_eff=5 top_eff=6 n-2=10 Phi=['0', '-6/5']
+n=96 m=64 M=[-64, 80, 88, 94] V={'2': 11, '3': 10, '4': 7} d_s=8 k=5 -> (12,8) Mraw=[-8, 10, 11] Meff=[-8, 10] s_eff=2 den_eff=1 top_eff=10 n-2=10 Phi=['-4', '-6']
+n=96 m=64 M=[-64, -48, 24, 92, 94] V={'2': 20, '3': 10, '4': 5, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, -12, 6, 23] Meff=[-16, -12, 6] s_eff=3 den_eff=17 top_eff=6 n-2=22 Phi=['-14/153', '-142/1513', '-2/17']
+n=96 m=64 M=[-64, -16, 24, 92, 94] V={'2': 1, '3': 8, '4': 4, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, -4, 6, 23] Meff=[-16, -4, 6] s_eff=3 den_eff=17 top_eff=6 n-2=22 Phi=['24/187', '-18/187', '-2/17']
+n=96 m=64 M=[-64, -16, 24, 92, 94] V={'2': 5, '3': 8, '4': 4, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, -4, 6, 23] Meff=[-16, -4, 6] s_eff=3 den_eff=17 top_eff=6 n-2=22 Phi=['-1/17', '-18/187', '-2/17']
+n=96 m=64 M=[-64, -16, 24, 92, 94] V={'2': 20, '3': 10, '4': 5, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, -4, 6, 23] Meff=[-16, -4, 6] s_eff=3 den_eff=17 top_eff=6 n-2=22 Phi=['-14/153', '-118/1173', '-2/17']
+n=96 m=64 M=[-64, -16, 72, 92, 94] V={'2': 1, '3': 8, '4': 4, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, -4, 18, 23] Meff=[-16, -4, 18] s_eff=3 den_eff=5 top_eff=18 n-2=22 Phi=['0', '-6/25', '-2/5']
+n=96 m=64 M=[-64, -16, 72, 92, 94] V={'2': 2, '3': 8, '4': 4, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, -4, 18, 23] Meff=[-16, -4, 18] s_eff=3 den_eff=5 top_eff=18 n-2=22 Phi=['-2/15', '-6/25', '-2/5']
+n=96 m=64 M=[-64, 16, 24, 92, 94] V={'2': 20, '3': 10, '4': 5, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 4, 6, 23] Meff=[-16, 4, 6] s_eff=3 den_eff=17 top_eff=6 n-2=22 Phi=['-14/153', '-94/833', '-2/17']
+n=96 m=64 M=[-64, 48, 72, 92, 94] V={'2': 24, '3': 12, '4': 6, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 12, 18, 23] Meff=[-16, 12, 18] s_eff=3 den_eff=5 top_eff=18 n-2=22 Phi=['-2/7', '-58/175', '-2/5']
+n=96 m=64 M=[-64, 48, 88, 92, 94] V={'2': 1, '3': 12, '4': 6, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 12, 22, 23] Meff=[-16, 12, 22] s_eff=3 den_eff=1 top_eff=22 n-2=22 Phi=['4/7', '-10/7', '-2']
+n=96 m=64 M=[-64, 48, 88, 92, 94] V={'2': 3, '3': 12, '4': 6, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 12, 22, 23] Meff=[-16, 12, 22] s_eff=3 den_eff=1 top_eff=22 n-2=22 Phi=['-6/7', '-10/7', '-2']
+n=96 m=64 M=[-64, 48, 88, 92, 94] V={'2': 17, '3': 12, '4': 6, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 12, 22, 23] Meff=[-16, 12, 22] s_eff=3 den_eff=1 top_eff=22 n-2=22 Phi=['-4/3', '-10/7', '-2']
+n=96 m=64 M=[-64, 80, 88, 92, 94] V={'2': 5, '3': 10, '4': 5, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 20, 22, 23] Meff=[-16, 20, 22] s_eff=3 den_eff=1 top_eff=22 n-2=22 Phi=['-2/9', '-14/9', '-2']
+n=96 m=64 M=[-64, 80, 88, 92, 94] V={'2': 11, '3': 10, '4': 5, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 20, 22, 23] Meff=[-16, 20, 22] s_eff=3 den_eff=1 top_eff=22 n-2=22 Phi=['-26/27', '-14/9', '-2']
+n=96 m=64 M=[-64, 80, 88, 92, 94] V={'2': 11, '3': 7, '4': 6, '5': 3} d_s=4 k=1 -> (24,16) Mraw=[-16, 20, 22, 23] Meff=[-16, 20, 22] s_eff=3 den_eff=1 top_eff=22 n-2=22 Phi=['-7/9', '-4/3', '-2']
+n=100 m=40 M=[-40, 70, 95, 98] V={'2': 8, '3': 4, '4': 4} d_s=5 k=2 -> (20,8) Mraw=[-8, 14, 19] Meff=[-8, 14] s_eff=2 den_eff=5 top_eff=14 n-2=18 Phi=['-9/25', '-3/5']
+n=100 m=80 M=[-80, 50, 95, 98] V={'2': 1, '3': 8, '4': 4} d_s=5 k=2 -> (20,16) Mraw=[-16, 10, 19] Meff=[-16, 10] s_eff=2 den_eff=9 top_eff=10 n-2=18 Phi=['3/4', '-1/3']
+n=100 m=80 M=[-80, 50, 95, 98] V={'2': 3, '3': 8, '4': 4} d_s=5 k=2 -> (20,16) Mraw=[-16, 10, 19] Meff=[-16, 10] s_eff=2 den_eff=9 top_eff=10 n-2=18 Phi=['0', '-1/3']
+## n=108
+n=108 m=72 M=[-72, 84, 104, 106] V={'2': 8, '3': 7, '4': 3} d_s=4 k=1 -> (27,18) Mraw=[-18, 21, 26] Meff=[-18, 21] s_eff=2 den_eff=5 top_eff=21 n-2=25 Phi=['0', '-2/5']
+n=108 m=72 M=[-72, 84, 104, 106] V={'2': 21, '3': 7, '4': 3} d_s=4 k=1 -> (27,18) Mraw=[-18, 21, 26] Meff=[-18, 21] s_eff=2 den_eff=5 top_eff=21 n-2=25 Phi=['-1/4', '-2/5']
+n=108 m=72 M=[-72, 84, 104, 106] V={'2': 8, '3': 8, '4': 3} d_s=4 k=1 -> (27,18) Mraw=[-18, 21, 26] Meff=[-18, 21] s_eff=2 den_eff=5 top_eff=21 n-2=25 Phi=['0', '-2/5']
+n=108 m=72 M=[-72, 12, 102, 106] V={'2': 1, '3': 8, '4': 5} d_s=6 k=3 -> (18,12) Mraw=[-12, 2, 17] Meff=[-12, 2] s_eff=2 den_eff=15 top_eff=2 n-2=16 Phi=['2/3', '-4/15']
+n=108 m=72 M=[-72, 12, 102, 106] V={'2': 3, '3': 8, '4': 5} d_s=6 k=3 -> (18,12) Mraw=[-12, 2, 17] Meff=[-12, 2] s_eff=2 den_eff=15 top_eff=2 n-2=16 Phi=['0', '-4/15']
+n=108 m=72 M=[-72, 84, 102, 106] V={'2': 8, '3': 7, '4': 5} d_s=6 k=3 -> (18,12) Mraw=[-12, 14, 17] Meff=[-12, 14] s_eff=2 den_eff=3 top_eff=14 n-2=16 Phi=['-4/9', '-4/3']
+n=108 m=72 M=[-72, 96, 102, 106] V={'2': 17, '3': 8, '4': 5} d_s=6 k=3 -> (18,12) Mraw=[-12, 16, 17] Meff=[-12, 16] s_eff=2 den_eff=1 top_eff=16 n-2=16 Phi=['-8/3', '-4']
+n=108 m=72 M=[-72, 90, 102, 106] V={'2': 11, '3': 7, '4': 5} d_s=6 k=3 -> (18,12) Mraw=[-12, 15, 17] Meff=[-12, 15] s_eff=2 den_eff=2 top_eff=15 n-2=16 Phi=['-1', '-2']
+n=108 m=72 M=[-72, 54, 99, 106] V={'2': 1, '3': 12, '4': 8} d_s=9 k=6 -> (12,8) Mraw=[-8, 6, 11] Meff=[-8, 6] s_eff=2 den_eff=5 top_eff=6 n-2=10 Phi=['7/2', '-7/5']
+n=108 m=72 M=[-72, 54, 99, 106] V={'2': 3, '3': 12, '4': 8} d_s=9 k=6 -> (12,8) Mraw=[-8, 6, 11] Meff=[-8, 6] s_eff=2 den_eff=5 top_eff=6 n-2=10 Phi=['0', '-7/5']
+n=108 m=72 M=[-72, 90, 99, 106] V={'2': 11, '3': 10, '4': 8} d_s=9 k=6 -> (12,8) Mraw=[-8, 10, 11] Meff=[-8, 10] s_eff=2 den_eff=1 top_eff=10 n-2=10 Phi=['-14/3', '-7']
+n=108 m=72 M=[-72, 90, 99, 106] V={'2': 17, '3': 16, '4': 8} d_s=9 k=6 -> (12,8) Mraw=[-8, 10, 11] Meff=[-8, 10] s_eff=2 den_eff=1 top_eff=10 n-2=10 Phi=['-11/2', '-7']
+
+codex
+I’m copying only the frozen driver files into `box/anchor-gate-20260903/` for the replay. The script writes its own JSON output next to itself, so this keeps the frozen `/tmp` copies unchanged.
+exec
+/bin/bash -lc 'cp /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.py box/anchor-gate-20260903/ && cp /tmp/jc2-lane.gg5Ofk/inputs/phi_delta.py box/anchor-gate-20260903/ && cp /tmp/jc2-lane.gg5Ofk/inputs/moh_skeleton_full.py box/anchor-gate-20260903/ && cp /tmp/jc2-lane.gg5Ofk/inputs/full_tree_partition.py box/anchor-gate-20260903/ && ls -l box/anchor-gate-20260903/measure_anchor.py box/anchor-gate-20260903/phi_delta.py box/anchor-gate-20260903/moh_skeleton_full.py box/anchor-gate-20260903/full_tree_partition.py' in /home/ubuntu/jc2
+ succeeded in 0ms:
+-r-------- 1 ubuntu ubuntu 20515 Sep  3 12:43 box/anchor-gate-20260903/full_tree_partition.py
+-r-------- 1 ubuntu ubuntu 16271 Sep  3 12:43 box/anchor-gate-20260903/measure_anchor.py
+-r-------- 1 ubuntu ubuntu 28761 Sep  3 12:43 box/anchor-gate-20260903/moh_skeleton_full.py
+-r-------- 1 ubuntu ubuntu  2032 Sep  3 12:43 box/anchor-gate-20260903/phi_delta.py
+
+codex
+The replay driver is in place. I’m running it now and capturing stdout as the mechanical transcript for the report.
+exec
+/bin/bash -lc 'python3 box/anchor-gate-20260903/measure_anchor.py | tee box/anchor-gate-20260903/measure_anchor.stdout' in /home/ubuntu/jc2
+ succeeded in 523ms:
+
+
+== C. n<=100 C_FULL_TREE_ODE + descent/anchor (reproduce 38/57) ==
+  (1)-(13) rows n<=100: 658
+  C_FULL_TREE_ODE survivors: 58
+  survivors: 58
+  u_s=1 (descendable): 57
+  u_s>1: 1
+  anchor-zero (n'-M_s'-1=0, before drop): 38
+  evaluable as charged (den!=0): 19
+  after p.174 drop, still den=0: 0
+  evaluable after repair: 57
+  s_eff after drop, among anchor-zero:
+    Counter({2: 24, 3: 14})
+  top_eff == n'-2 among repaired az: 11
+  top_eff <  n'-2 among repaired az: 27
+
+  u_s>1 rows:
+    n=99 m=66 M=[-66, 77, 97] V={2: 8, 3: 8} d_s=11 u_s=3
+
+  ANCHOR-ZERO rows (n<=100), with (n,m,M,V,d_s) and repaired data:
+    n=72 m=48 M=[-48, 60, 68, 70] V={2: 11, 3: 7, 4: 3} d_s=4 k=1 -> (n',m')=(18,12) M'=[-12, 15, 17] den=0 drop=1 s_eff=2 M_eff=[-12, 15] den_eff=2 top_eff=15 n'-2=16 Φt=['-1/2', '-1']
+    n=72 m=48 M=[-48, 60, 66, 70] V={2: 11, 3: 10, 4: 5} d_s=6 k=3 -> (n',m')=(12,8) M'=[-8, 10, 11] den=0 drop=1 s_eff=2 M_eff=[-8, 10] den_eff=1 top_eff=10 n'-2=10 Φt=['-8/3', '-4']
+    n=80 m=32 M=[-32, 56, 76, 78] V={2: 8, 3: 4, 4: 3} d_s=4 k=1 -> (n',m')=(20,8) M'=[-8, 14, 19] den=0 drop=1 s_eff=2 M_eff=[-8, 14] den_eff=5 top_eff=14 n'-2=18 Φt=['-6/25', '-2/5']
+    n=84 m=56 M=[-56, 42, 77, 82] V={2: 1, 3: 12, 4: 6} d_s=7 k=4 -> (n',m')=(12,8) M'=[-8, 6, 11] den=0 drop=1 s_eff=2 M_eff=[-8, 6] den_eff=5 top_eff=6 n'-2=10 Φt=['5/2', '-1']
+    n=84 m=56 M=[-56, 42, 77, 82] V={2: 3, 3: 12, 4: 6} d_s=7 k=4 -> (n',m')=(12,8) M'=[-8, 6, 11] den=0 drop=1 s_eff=2 M_eff=[-8, 6] den_eff=5 top_eff=6 n'-2=10 Φt=['0', '-1']
+    n=84 m=56 M=[-56, 70, 77, 82] V={2: 11, 3: 10, 4: 6} d_s=7 k=4 -> (n',m')=(12,8) M'=[-8, 10, 11] den=0 drop=1 s_eff=2 M_eff=[-8, 10] den_eff=1 top_eff=10 n'-2=10 Φt=['-10/3', '-5']
+    n=90 m=60 M=[-60, 10, 85, 88] V={2: 1, 3: 8, 4: 4} d_s=5 k=2 -> (n',m')=(18,12) M'=[-12, 2, 17] den=0 drop=1 s_eff=2 M_eff=[-12, 2] den_eff=15 top_eff=2 n'-2=16 Φt=['1/2', '-1/5']
+    n=90 m=60 M=[-60, 10, 85, 88] V={2: 3, 3: 8, 4: 4} d_s=5 k=2 -> (n',m')=(18,12) M'=[-12, 2, 17] den=0 drop=1 s_eff=2 M_eff=[-12, 2] den_eff=15 top_eff=2 n'-2=16 Φt=['0', '-1/5']
+    n=90 m=60 M=[-60, 70, 85, 88] V={2: 8, 3: 7, 4: 4} d_s=5 k=2 -> (n',m')=(18,12) M'=[-12, 14, 17] den=0 drop=1 s_eff=2 M_eff=[-12, 14] den_eff=3 top_eff=14 n'-2=16 Φt=['-1/3', '-1']
+    n=90 m=60 M=[-60, 80, 85, 88] V={2: 17, 3: 8, 4: 4} d_s=5 k=2 -> (n',m')=(18,12) M'=[-12, 16, 17] den=0 drop=1 s_eff=2 M_eff=[-12, 16] den_eff=1 top_eff=16 n'-2=16 Φt=['-2', '-3']
+    n=90 m=60 M=[-60, 75, 85, 88] V={2: 11, 3: 7, 4: 4} d_s=5 k=2 -> (n',m')=(18,12) M'=[-12, 15, 17] den=0 drop=1 s_eff=2 M_eff=[-12, 15] den_eff=2 top_eff=15 n'-2=16 Φt=['-3/4', '-3/2']
+    n=96 m=80 M=[-80, 24, 92, 94] V={2: 6, 3: 3, 4: 3} d_s=4 k=1 -> (n',m')=(24,20) M'=[-20, 6, 23] den=0 drop=1 s_eff=2 M_eff=[-20, 6] den_eff=17 top_eff=6 n'-2=22 Φt=['-6/85', '-2/17']
+    n=96 m=72 M=[-72, 56, 92, 94] V={2: 1, 3: 5, 4: 3} d_s=4 k=1 -> (n',m')=(24,18) M'=[-18, 14, 23] den=0 drop=1 s_eff=2 M_eff=[-18, 14] den_eff=9 top_eff=14 n'-2=22 Φt=['26/27', '-2/9']
+    n=96 m=72 M=[-72, 56, 92, 94] V={2: 7, 3: 5, 4: 3} d_s=4 k=1 -> (n',m')=(24,18) M'=[-18, 14, 23] den=0 drop=1 s_eff=2 M_eff=[-18, 14] den_eff=9 top_eff=14 n'-2=22 Φt=['-2/27', '-2/9']
+    n=96 m=72 M=[-72, 88, 92, 94] V={2: 7, 3: 5, 4: 3} d_s=4 k=1 -> (n',m')=(24,18) M'=[-18, 22, 23] den=0 drop=1 s_eff=2 M_eff=[-18, 22] den_eff=1 top_eff=22 n'-2=22 Φt=['-1/3', '-2']
+    n=96 m=64 M=[-64, 24, 92, 94] V={2: 20, 3: 5, 4: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 6, 23] den=0 drop=1 s_eff=2 M_eff=[-16, 6] den_eff=17 top_eff=6 n'-2=22 Φt=['-14/153', '-2/17']
+    n=96 m=64 M=[-64, 72, 92, 94] V={2: 7, 3: 6, 4: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 18, 23] den=0 drop=1 s_eff=2 M_eff=[-16, 18] den_eff=5 top_eff=18 n'-2=22 Φt=['0', '-2/5']
+    n=96 m=64 M=[-64, 80, 92, 94] V={2: 11, 3: 10, 4: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 20, 23] den=0 drop=1 s_eff=2 M_eff=[-16, 20] den_eff=3 top_eff=20 n'-2=22 Φt=['-2/9', '-2/3']
+    n=96 m=64 M=[-64, 48, 88, 94] V={2: 1, 3: 12, 4: 7} d_s=8 k=5 -> (n',m')=(12,8) M'=[-8, 6, 11] den=0 drop=1 s_eff=2 M_eff=[-8, 6] den_eff=5 top_eff=6 n'-2=10 Φt=['3', '-6/5']
+    n=96 m=64 M=[-64, 48, 88, 94] V={2: 3, 3: 12, 4: 7} d_s=8 k=5 -> (n',m')=(12,8) M'=[-8, 6, 11] den=0 drop=1 s_eff=2 M_eff=[-8, 6] den_eff=5 top_eff=6 n'-2=10 Φt=['0', '-6/5']
+    n=96 m=64 M=[-64, 80, 88, 94] V={2: 11, 3: 10, 4: 7} d_s=8 k=5 -> (n',m')=(12,8) M'=[-8, 10, 11] den=0 drop=1 s_eff=2 M_eff=[-8, 10] den_eff=1 top_eff=10 n'-2=10 Φt=['-4', '-6']
+    n=96 m=64 M=[-64, -48, 24, 92, 94] V={2: 20, 3: 10, 4: 5, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, -12, 6, 23] den=0 drop=1 s_eff=3 M_eff=[-16, -12, 6] den_eff=17 top_eff=6 n'-2=22 Φt=['-14/153', '-142/1513', '-2/17']
+    n=96 m=64 M=[-64, -16, 24, 92, 94] V={2: 1, 3: 8, 4: 4, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, -4, 6, 23] den=0 drop=1 s_eff=3 M_eff=[-16, -4, 6] den_eff=17 top_eff=6 n'-2=22 Φt=['24/187', '-18/187', '-2/17']
+    n=96 m=64 M=[-64, -16, 24, 92, 94] V={2: 5, 3: 8, 4: 4, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, -4, 6, 23] den=0 drop=1 s_eff=3 M_eff=[-16, -4, 6] den_eff=17 top_eff=6 n'-2=22 Φt=['-1/17', '-18/187', '-2/17']
+    n=96 m=64 M=[-64, -16, 24, 92, 94] V={2: 20, 3: 10, 4: 5, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, -4, 6, 23] den=0 drop=1 s_eff=3 M_eff=[-16, -4, 6] den_eff=17 top_eff=6 n'-2=22 Φt=['-14/153', '-118/1173', '-2/17']
+    n=96 m=64 M=[-64, -16, 72, 92, 94] V={2: 1, 3: 8, 4: 4, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, -4, 18, 23] den=0 drop=1 s_eff=3 M_eff=[-16, -4, 18] den_eff=5 top_eff=18 n'-2=22 Φt=['0', '-6/25', '-2/5']
+    n=96 m=64 M=[-64, -16, 72, 92, 94] V={2: 2, 3: 8, 4: 4, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, -4, 18, 23] den=0 drop=1 s_eff=3 M_eff=[-16, -4, 18] den_eff=5 top_eff=18 n'-2=22 Φt=['-2/15', '-6/25', '-2/5']
+    n=96 m=64 M=[-64, 16, 24, 92, 94] V={2: 20, 3: 10, 4: 5, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 4, 6, 23] den=0 drop=1 s_eff=3 M_eff=[-16, 4, 6] den_eff=17 top_eff=6 n'-2=22 Φt=['-14/153', '-94/833', '-2/17']
+    n=96 m=64 M=[-64, 48, 72, 92, 94] V={2: 24, 3: 12, 4: 6, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 12, 18, 23] den=0 drop=1 s_eff=3 M_eff=[-16, 12, 18] den_eff=5 top_eff=18 n'-2=22 Φt=['-2/7', '-58/175', '-2/5']
+    n=96 m=64 M=[-64, 48, 88, 92, 94] V={2: 1, 3: 12, 4: 6, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 12, 22, 23] den=0 drop=1 s_eff=3 M_eff=[-16, 12, 22] den_eff=1 top_eff=22 n'-2=22 Φt=['4/7', '-10/7', '-2']
+    n=96 m=64 M=[-64, 48, 88, 92, 94] V={2: 3, 3: 12, 4: 6, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 12, 22, 23] den=0 drop=1 s_eff=3 M_eff=[-16, 12, 22] den_eff=1 top_eff=22 n'-2=22 Φt=['-6/7', '-10/7', '-2']
+    n=96 m=64 M=[-64, 48, 88, 92, 94] V={2: 17, 3: 12, 4: 6, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 12, 22, 23] den=0 drop=1 s_eff=3 M_eff=[-16, 12, 22] den_eff=1 top_eff=22 n'-2=22 Φt=['-4/3', '-10/7', '-2']
+    n=96 m=64 M=[-64, 80, 88, 92, 94] V={2: 5, 3: 10, 4: 5, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 20, 22, 23] den=0 drop=1 s_eff=3 M_eff=[-16, 20, 22] den_eff=1 top_eff=22 n'-2=22 Φt=['-2/9', '-14/9', '-2']
+    n=96 m=64 M=[-64, 80, 88, 92, 94] V={2: 11, 3: 10, 4: 5, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 20, 22, 23] den=0 drop=1 s_eff=3 M_eff=[-16, 20, 22] den_eff=1 top_eff=22 n'-2=22 Φt=['-26/27', '-14/9', '-2']
+    n=96 m=64 M=[-64, 80, 88, 92, 94] V={2: 11, 3: 7, 4: 6, 5: 3} d_s=4 k=1 -> (n',m')=(24,16) M'=[-16, 20, 22, 23] den=0 drop=1 s_eff=3 M_eff=[-16, 20, 22] den_eff=1 top_eff=22 n'-2=22 Φt=['-7/9', '-4/3', '-2']
+    n=100 m=40 M=[-40, 70, 95, 98] V={2: 8, 3: 4, 4: 4} d_s=5 k=2 -> (n',m')=(20,8) M'=[-8, 14, 19] den=0 drop=1 s_eff=2 M_eff=[-8, 14] den_eff=5 top_eff=14 n'-2=18 Φt=['-9/25', '-3/5']
+    n=100 m=80 M=[-80, 50, 95, 98] V={2: 1, 3: 8, 4: 4} d_s=5 k=2 -> (n',m')=(20,16) M'=[-16, 10, 19] den=0 drop=1 s_eff=2 M_eff=[-16, 10] den_eff=9 top_eff=10 n'-2=18 Φt=['3/4', '-1/3']
+    n=100 m=80 M=[-80, 50, 95, 98] V={2: 3, 3: 8, 4: 4} d_s=5 k=2 -> (n',m')=(20,16) M'=[-16, 10, 19] den=0 drop=1 s_eff=2 M_eff=[-16, 10] den_eff=9 top_eff=10 n'-2=18 Φt=['0', '-1/3']
+
+== D. n=108 C_FULL_TREE_ODE + descent/anchor (reproduce 12/20) ==
+  (1)-(13) rows n=108: 217
+  C_FULL_TREE (no ODE) survivors n=108: 21
+  C_FULL_TREE_ODE survivors n=108: 20
+  u_s=1: 19  u_s>1: 1  anchor-zero: 12  evaluable-as-charged: 7
+  u_s>1 at n=108:
+    n=108 m=72 M=[-72, 81, 106] V={2: 7, 3: 7} d_s=9 u_s=2
+  ANCHOR-ZERO at n=108:
+    n=108 m=72 M=[-72, 84, 104, 106] V={2: 8, 3: 7, 4: 3} d_s=4 k=1 -> (27,18) M'=[-18, 21, 26] drop=1 s_eff=2 M_eff=[-18, 21] den_eff=5 top_eff=21 n'-2=25 Φt=['0', '-2/5']
+    n=108 m=72 M=[-72, 84, 104, 106] V={2: 21, 3: 7, 4: 3} d_s=4 k=1 -> (27,18) M'=[-18, 21, 26] drop=1 s_eff=2 M_eff=[-18, 21] den_eff=5 top_eff=21 n'-2=25 Φt=['-1/4', '-2/5']
+    n=108 m=72 M=[-72, 84, 104, 106] V={2: 8, 3: 8, 4: 3} d_s=4 k=1 -> (27,18) M'=[-18, 21, 26] drop=1 s_eff=2 M_eff=[-18, 21] den_eff=5 top_eff=21 n'-2=25 Φt=['0', '-2/5']
+    n=108 m=72 M=[-72, 12, 102, 106] V={2: 1, 3: 8, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 2, 17] drop=1 s_eff=2 M_eff=[-12, 2] den_eff=15 top_eff=2 n'-2=16 Φt=['2/3', '-4/15']
+    n=108 m=72 M=[-72, 12, 102, 106] V={2: 3, 3: 8, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 2, 17] drop=1 s_eff=2 M_eff=[-12, 2] den_eff=15 top_eff=2 n'-2=16 Φt=['0', '-4/15']
+    n=108 m=72 M=[-72, 84, 102, 106] V={2: 8, 3: 7, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 14, 17] drop=1 s_eff=2 M_eff=[-12, 14] den_eff=3 top_eff=14 n'-2=16 Φt=['-4/9', '-4/3']
+    n=108 m=72 M=[-72, 96, 102, 106] V={2: 17, 3: 8, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 16, 17] drop=1 s_eff=2 M_eff=[-12, 16] den_eff=1 top_eff=16 n'-2=16 Φt=['-8/3', '-4']
+    n=108 m=72 M=[-72, 90, 102, 106] V={2: 11, 3: 7, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 15, 17] drop=1 s_eff=2 M_eff=[-12, 15] den_eff=2 top_eff=15 n'-2=16 Φt=['-1', '-2']
+    n=108 m=72 M=[-72, 54, 99, 106] V={2: 1, 3: 12, 4: 8} d_s=9 k=6 -> (12,8) M'=[-8, 6, 11] drop=1 s_eff=2 M_eff=[-8, 6] den_eff=5 top_eff=6 n'-2=10 Φt=['7/2', '-7/5']
+    n=108 m=72 M=[-72, 54, 99, 106] V={2: 3, 3: 12, 4: 8} d_s=9 k=6 -> (12,8) M'=[-8, 6, 11] drop=1 s_eff=2 M_eff=[-8, 6] den_eff=5 top_eff=6 n'-2=10 Φt=['0', '-7/5']
+    n=108 m=72 M=[-72, 90, 99, 106] V={2: 11, 3: 10, 4: 8} d_s=9 k=6 -> (12,8) M'=[-8, 10, 11] drop=1 s_eff=2 M_eff=[-8, 10] den_eff=1 top_eff=10 n'-2=10 Φt=['-14/3', '-7']
+    n=108 m=72 M=[-72, 90, 99, 106] V={2: 17, 3: 16, 4: 8} d_s=9 k=6 -> (12,8) M'=[-8, 10, 11] drop=1 s_eff=2 M_eff=[-8, 10] den_eff=1 top_eff=10 n'-2=10 Φt=['-11/2', '-7']
+
+== E. top characteristic exponent of the descended pair ==
+  (84,56) (1)-(13) rows with d_s=7: 30
+  parent (64,48) M=[-48, 52, 62] V={2: 3, 3: 3} d_s=4 u_s=1
+    child n'=16 m'=12 M'=[-12, 13]  top_raw=13  n'-2=14 n'-1=15  Keller-top? False  Jacobian-top? False  drop=0  top_eff=13  Φ=[Fraction(1, 4), Fraction(-1, 1)] Φt=[Fraction(1, 4), Fraction(-1, 1)]
+  parent (84,56) M=[-56, 64, 82] V={2: 2, 3: 3} d_s=4 u_s=1
+    child n'=21 m'=14 M'=[-14, 16]  top_raw=16  n'-2=19 n'-1=20  Keller-top? False  Jacobian-top? False  drop=0  top_eff=16  Φ=[Fraction(7, 6), Fraction(-1, 2)] Φt=[Fraction(7, 6), Fraction(-1, 2)]
+  parent (84,56) M=[-56, 72, 82] V={2: 5, 3: 3} d_s=4 u_s=1
+    child n'=21 m'=14 M'=[-14, 18]  top_raw=18  n'-2=19 n'-1=20  Keller-top? False  Jacobian-top? False  drop=0  top_eff=18  Φ=[Fraction(1, 3), Fraction(-1, 1)] Φt=[Fraction(1, 3), Fraction(-1, 1)]
+  parent (75,50) M=[-50, 55, 73] V={2: 3, 3: 4} d_s=5 u_s=1
+    child n'=15 m'=10 M'=[-10, 11]  top_raw=11  n'-2=13 n'-1=14  Keller-top? False  Jacobian-top? False  drop=0  top_eff=11  Φ=[Fraction(1, 2), Fraction(-1, 1)] Φt=[Fraction(1, 2), Fraction(-1, 1)]
+  parent (75,50) M=[-50, 55, 73] V={2: 2, 3: 4} d_s=5 u_s=1
+    child n'=15 m'=10 M'=[-10, 11]  top_raw=11  n'-2=13 n'-1=14  Keller-top? False  Jacobian-top? False  drop=0  top_eff=11  Φ=[Fraction(4, 3), Fraction(-1, 1)] Φt=[Fraction(4, 3), Fraction(-1, 1)]
+  parent (84,56) M=[-56, 7, 82] V={2: 2, 3: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 1]  top_raw=1  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=1  Φ=[Fraction(0, 1), Fraction(-3, 10)] Φt=[Fraction(0, 1), Fraction(-3, 10)]
+  parent (84,56) M=[-56, 21, 82] V={2: 20, 3: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 3]  top_raw=3  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=3  Φ=[Fraction(-1, 3), Fraction(-3, 8)] Φt=[Fraction(-1, 3), Fraction(-3, 8)]
+  parent (84,56) M=[-56, 49, 82] V={2: 2, 3: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 7]  top_raw=7  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=7  Φ=[Fraction(1, 2), Fraction(-3, 4)] Φt=[Fraction(1, 2), Fraction(-3, 4)]
+  parent (84,56) M=[-56, 63, 82] V={2: 7, 3: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 9]  top_raw=9  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=9  Φ=[Fraction(-5, 4), Fraction(-5, 2)] Φt=[Fraction(-5, 4), Fraction(-5, 2)]
+  parent (84,56) M=[-56, -42, 21, 82] V={2: 20, 3: 10, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, -6, 3]  top_raw=3  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=3  Φ=[Fraction(-1, 3), Fraction(-30, 89), Fraction(-3, 8)] Φt=[Fraction(-1, 3), Fraction(-30, 89), Fraction(-3, 8)]
+  parent (84,56) M=[-56, -42, 49, 82] V={2: 2, 3: 1, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, -6, 7]  top_raw=7  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=7  Φ=[Fraction(1, 2), Fraction(15, 32), Fraction(-3, 4)] Φt=[Fraction(1, 2), Fraction(15, 32), Fraction(-3, 4)]
+  parent (84,56) M=[-56, -14, 21, 82] V={2: 1, 3: 8, 4: 4} d_s=7 u_s=3
+    child n'=12 m'=8 M'=[-8, -2, 3]  top_raw=3  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=3  Φ=[Fraction(1, 176), Fraction(-5, 44), Fraction(-1, 8)] Φt=[Fraction(1, 176), Fraction(-5, 44), Fraction(-1, 8)]
+  parent (84,56) M=[-56, -14, 21, 82] V={2: 20, 3: 10, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, -2, 3]  top_raw=3  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=3  Φ=[Fraction(-1, 3), Fraction(-8, 23), Fraction(-3, 8)] Φt=[Fraction(-1, 3), Fraction(-8, 23), Fraction(-3, 8)]
+  parent (84,56) M=[-56, -14, 49, 82] V={2: 2, 3: 1, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, -2, 7]  top_raw=7  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=7  Φ=[Fraction(1, 2), Fraction(3, 8), Fraction(-3, 4)] Φt=[Fraction(1, 2), Fraction(3, 8), Fraction(-3, 4)]
+  parent (84,56) M=[-56, -14, 63, 82] V={2: 1, 3: 8, 4: 4} d_s=7 u_s=3
+    child n'=12 m'=8 M'=[-8, -2, 9]  top_raw=9  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=9  Φ=[Fraction(-1, 4), Fraction(-2, 5), Fraction(-1, 2)] Φt=[Fraction(-1, 4), Fraction(-2, 5), Fraction(-1, 2)]
+  parent (84,56) M=[-56, -14, 63, 82] V={2: 2, 3: 8, 4: 4} d_s=7 u_s=3
+    child n'=12 m'=8 M'=[-8, -2, 9]  top_raw=9  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=9  Φ=[Fraction(-1, 3), Fraction(-2, 5), Fraction(-1, 2)] Φt=[Fraction(-1, 3), Fraction(-2, 5), Fraction(-1, 2)]
+  parent (84,56) M=[-56, 14, 21, 82] V={2: 20, 3: 10, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 2, 3]  top_raw=3  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=3  Φ=[Fraction(-1, 3), Fraction(-18, 49), Fraction(-3, 8)] Φt=[Fraction(-1, 3), Fraction(-18, 49), Fraction(-3, 8)]
+  parent (84,56) M=[-56, 14, 35, 82] V={2: 1, 3: 8, 4: 4} d_s=7 u_s=3
+    child n'=12 m'=8 M'=[-8, 2, 5]  top_raw=5  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=5  Φ=[Fraction(7, 52), Fraction(-2, 13), Fraction(-1, 6)] Φt=[Fraction(7, 52), Fraction(-2, 13), Fraction(-1, 6)]
+  parent (84,56) M=[-56, 14, 49, 82] V={2: 2, 3: 1, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 2, 7]  top_raw=7  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=7  Φ=[Fraction(1, 2), Fraction(3, 16), Fraction(-3, 4)] Φt=[Fraction(1, 2), Fraction(3, 16), Fraction(-3, 4)]
+  parent (84,56) M=[-56, 14, 63, 82] V={2: 1, 3: 10, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 2, 9]  top_raw=9  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=9  Φ=[Fraction(-3, 14), Fraction(-9, 7), Fraction(-3, 2)] Φt=[Fraction(-3, 14), Fraction(-9, 7), Fraction(-3, 2)]
+  parent (84,56) M=[-56, 14, 63, 82] V={2: 2, 3: 10, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 2, 9]  top_raw=9  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=9  Φ=[Fraction(-17, 21), Fraction(-9, 7), Fraction(-3, 2)] Φt=[Fraction(-17, 21), Fraction(-9, 7), Fraction(-3, 2)]
+  parent (84,56) M=[-56, 14, 77, 82] V={2: 1, 3: 8, 4: 4} d_s=7 u_s=3
+    child n'=12 m'=8 M'=[-8, 2, 11]  top_raw=11  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? True  drop=1  top_eff=2  Φ=None Φt=[Fraction(1, 6), Fraction(-1, 9)]
+  parent (84,56) M=[-56, 14, 77, 82] V={2: 1, 3: 8, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 2, 11]  top_raw=11  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? True  drop=1  top_eff=2  Φ=None Φt=[Fraction(5, 6), Fraction(-5, 9)]
+  parent (84,56) M=[-56, 42, 49, 82] V={2: 2, 3: 1, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 6, 7]  top_raw=7  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=7  Φ=[Fraction(1, 2), Fraction(-3, 8), Fraction(-3, 4)] Φt=[Fraction(1, 2), Fraction(-3, 8), Fraction(-3, 4)]
+  parent (84,56) M=[-56, 42, 49, 82] V={2: 1, 3: 12, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 6, 7]  top_raw=7  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=7  Φ=[Fraction(135, 56), Fraction(-17, 14), Fraction(-5, 4)] Φt=[Fraction(135, 56), Fraction(-17, 14), Fraction(-5, 4)]
+  parent (84,56) M=[-56, 42, 49, 82] V={2: 3, 3: 12, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 6, 7]  top_raw=7  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=7  Φ=[Fraction(-5, 28), Fraction(-17, 14), Fraction(-5, 4)] Φt=[Fraction(-5, 28), Fraction(-17, 14), Fraction(-5, 4)]
+  parent (84,56) M=[-56, 42, 63, 82] V={2: 1, 3: 12, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 6, 9]  top_raw=9  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=9  Φ=[Fraction(55, 28), Fraction(-16, 7), Fraction(-5, 2)] Φt=[Fraction(55, 28), Fraction(-16, 7), Fraction(-5, 2)]
+  parent (84,56) M=[-56, 42, 63, 82] V={2: 3, 3: 12, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 6, 9]  top_raw=9  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=9  Φ=[Fraction(-15, 14), Fraction(-16, 7), Fraction(-5, 2)] Φt=[Fraction(-15, 14), Fraction(-16, 7), Fraction(-5, 2)]
+  parent (84,56) M=[-56, 42, 63, 82] V={2: 24, 3: 12, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 6, 9]  top_raw=9  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? False  drop=0  top_eff=9  Φ=[Fraction(-15, 7), Fraction(-16, 7), Fraction(-5, 2)] Φt=[Fraction(-15, 7), Fraction(-16, 7), Fraction(-5, 2)]
+  parent (84,56) M=[-56, 42, 77, 82] V={2: 3, 3: 7, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 6, 11]  top_raw=11  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? True  drop=1  top_eff=6  Φ=None Φt=[Fraction(0, 1), Fraction(-1, 1)]
+  parent (84,56) M=[-56, 42, 77, 82] V={2: 1, 3: 12, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 6, 11]  top_raw=11  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? True  drop=1  top_eff=6  Φ=None Φt=[Fraction(5, 2), Fraction(-1, 1)]
+  parent (84,56) M=[-56, 42, 77, 82] V={2: 3, 3: 12, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 6, 11]  top_raw=11  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? True  drop=1  top_eff=6  Φ=None Φt=[Fraction(0, 1), Fraction(-1, 1)]
+  parent (84,56) M=[-56, 70, 77, 82] V={2: 5, 3: 10, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 10, 11]  top_raw=11  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? True  drop=1  top_eff=10  Φ=None Φt=[Fraction(-3, 4), Fraction(-3, 1)]
+  parent (84,56) M=[-56, 70, 77, 82] V={2: 11, 3: 10, 4: 5} d_s=7 u_s=2
+    child n'=12 m'=8 M'=[-8, 10, 11]  top_raw=11  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? True  drop=1  top_eff=10  Φ=None Φt=[Fraction(-2, 1), Fraction(-3, 1)]
+  parent (84,56) M=[-56, 70, 77, 82] V={2: 11, 3: 10, 4: 6} d_s=7 u_s=1
+    child n'=12 m'=8 M'=[-8, 10, 11]  top_raw=11  n'-2=10 n'-1=11  Keller-top? False  Jacobian-top? True  drop=1  top_eff=10  Φ=None Φt=[Fraction(-10, 3), Fraction(-5, 1)]
+
+wrote /home/ubuntu/jc2/box/anchor-gate-20260903/measure_anchor.json
+DONE
+
+codex
+The replay completed and wrote `box/anchor-gate-20260903/measure_anchor.json`. I’m checking that generated JSON against the frozen JSON and extracting the exact counters needed for the report.
+exec
+/bin/bash -lc 'cmp -s box/anchor-gate-20260903/measure_anchor.json /tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.json; status=$?; if [ "$status" -eq 0 ]; then printf '"'generated JSON matches frozen measure_anchor.json\\n'; else printf 'generated JSON differs from frozen measure_anchor.json (cmp status %s)\\n' \""'$status"; fi' in /home/ubuntu/jc2
+ succeeded in 0ms:
+generated JSON matches frozen measure_anchor.json
+
+exec
+/bin/bash -lc "python3 - <<'PY'
+import json
+p='box/anchor-gate-20260903/measure_anchor.json'
+with open(p) as f: data=json.load(f)
+for key in ['n100','n108']:
+    d=data[key]
+    print(key)
+    for k,v in d.items():
+        if not isinstance(v,list): print(' ',k,'=',v)
+    if key=='n100':
+        print(' s_eff counts anchor_zero:', {s:sum(1 for r in d['anchor_zero_rows'] if r['s_eff']==s) for s in sorted({r['s_eff'] for r in d['anchor_zero_rows']})})
+        print(' s_eff counts descendable:', {s:sum(1 for r in d['anchor_zero_rows'] if r['s_eff']==s) for s in sorted({r['s_eff'] for r in d['anchor_zero_rows']})})
+    else:
+        print(' s_eff counts anchor_zero:', {s:sum(1 for r in d['anchor_zero_rows'] if r['s_eff']==s) for s in sorted({r['s_eff'] for r in d['anchor_zero_rows']})})
+print('rows8456_count=',data['rows8456_count'])
+print('phi_10_of_10=',data['phi_10_of_10'])
+PY" in /home/ubuntu/jc2
+ succeeded in 0ms:
+n100
+  input_rows = 658
+  ode_survivors = 58
+  u_s_eq_1 = 57
+  u_s_gt_1 = 1
+  anchor_zero = 38
+  evaluable_as_charged = 19
+  anchor_zero_after_drop = 0
+  evaluable_after_repair = 57
+ s_eff counts anchor_zero: {2: 24, 3: 14}
+ s_eff counts descendable: {2: 24, 3: 14}
+n108
+  input_rows = 217
+  partition_survivors = 21
+  ode_survivors = 20
+  u_s_eq_1 = 19
+  u_s_gt_1 = 1
+  anchor_zero = 12
+  evaluable_as_charged = 7
+ s_eff counts anchor_zero: {2: 12}
+rows8456_count= 46
+phi_10_of_10= True
+
+exec
+/bin/bash -lc "rg -n \"\\(15,10\\)|10/10 MATCH|drop-factor BREAKS|n<=100|n=108|s_eff after drop|u_s>1 rows|C_FULL_TREE_ODE survivors|\\(1\\)-\\(13\\) rows\" box/anchor-gate-20260903/measure_anchor.stdout" in /home/ubuntu/jc2
+ succeeded in 0ms:
+10:  (15,10) V2=3 from (75,50)                    k+1=3  raw=(-1/3, 1/6)  Phi=(-1, 1/2)  printed=(-1, 1/2)  MATCH
+11:  (15,10) V2=2 from (75,50)                    k+1=3  raw=(-1/3, 4/9)  Phi=(-1, 4/3)  printed=(-1, 4/3)  MATCH
+22:  (15,10) V2=3 from (75,50)                    Phi=(-1, 1/2) printed=(-1, 1/2) MATCH  drop-factor δ2=-3
+23:  (15,10) V2=2 from (75,50)                    Phi=(-1, 4/3) printed=(-1, 4/3) MATCH  drop-factor δ2=-3
+24:  10/10 MATCH: True
+25:  (15,10) V2=3  Def51 δ2 = -1/3  (expect -1/3);  drop-factor δ2 = -3  (expect -3)
+26:  drop-factor BREAKS the match: True
+36:== B. all (1)-(13) rows at (n,m)=(84,56) vs p.202 ==
+83:  count (84,56) (1)-(13) rows: 46
+93:== C. n<=100 C_FULL_TREE_ODE + descent/anchor (reproduce 38/57) ==
+94:  (1)-(13) rows n<=100: 658
+95:  C_FULL_TREE_ODE survivors: 58
+103:  s_eff after drop, among anchor-zero:
+108:  u_s>1 rows:
+111:  ANCHOR-ZERO rows (n<=100), with (n,m,M,V,d_s) and repaired data:
+151:== D. n=108 C_FULL_TREE_ODE + descent/anchor (reproduce 12/20) ==
+152:  (1)-(13) rows n=108: 217
+153:  C_FULL_TREE (no ODE) survivors n=108: 21
+154:  C_FULL_TREE_ODE survivors n=108: 20
+156:  u_s>1 at n=108:
+157:    n=108 m=72 M=[-72, 81, 106] V={2: 7, 3: 7} d_s=9 u_s=2
+158:  ANCHOR-ZERO at n=108:
+159:    n=108 m=72 M=[-72, 84, 104, 106] V={2: 8, 3: 7, 4: 3} d_s=4 k=1 -> (27,18) M'=[-18, 21, 26] drop=1 s_eff=2 M_eff=[-18, 21] den_eff=5 top_eff=21 n'-2=25 Φt=['0', '-2/5']
+160:    n=108 m=72 M=[-72, 84, 104, 106] V={2: 21, 3: 7, 4: 3} d_s=4 k=1 -> (27,18) M'=[-18, 21, 26] drop=1 s_eff=2 M_eff=[-18, 21] den_eff=5 top_eff=21 n'-2=25 Φt=['-1/4', '-2/5']
+161:    n=108 m=72 M=[-72, 84, 104, 106] V={2: 8, 3: 8, 4: 3} d_s=4 k=1 -> (27,18) M'=[-18, 21, 26] drop=1 s_eff=2 M_eff=[-18, 21] den_eff=5 top_eff=21 n'-2=25 Φt=['0', '-2/5']
+162:    n=108 m=72 M=[-72, 12, 102, 106] V={2: 1, 3: 8, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 2, 17] drop=1 s_eff=2 M_eff=[-12, 2] den_eff=15 top_eff=2 n'-2=16 Φt=['2/3', '-4/15']
+163:    n=108 m=72 M=[-72, 12, 102, 106] V={2: 3, 3: 8, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 2, 17] drop=1 s_eff=2 M_eff=[-12, 2] den_eff=15 top_eff=2 n'-2=16 Φt=['0', '-4/15']
+164:    n=108 m=72 M=[-72, 84, 102, 106] V={2: 8, 3: 7, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 14, 17] drop=1 s_eff=2 M_eff=[-12, 14] den_eff=3 top_eff=14 n'-2=16 Φt=['-4/9', '-4/3']
+165:    n=108 m=72 M=[-72, 96, 102, 106] V={2: 17, 3: 8, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 16, 17] drop=1 s_eff=2 M_eff=[-12, 16] den_eff=1 top_eff=16 n'-2=16 Φt=['-8/3', '-4']
+166:    n=108 m=72 M=[-72, 90, 102, 106] V={2: 11, 3: 7, 4: 5} d_s=6 k=3 -> (18,12) M'=[-12, 15, 17] drop=1 s_eff=2 M_eff=[-12, 15] den_eff=2 top_eff=15 n'-2=16 Φt=['-1', '-2']
+167:    n=108 m=72 M=[-72, 54, 99, 106] V={2: 1, 3: 12, 4: 8} d_s=9 k=6 -> (12,8) M'=[-8, 6, 11] drop=1 s_eff=2 M_eff=[-8, 6] den_eff=5 top_eff=6 n'-2=10 Φt=['7/2', '-7/5']
+168:    n=108 m=72 M=[-72, 54, 99, 106] V={2: 3, 3: 12, 4: 8} d_s=9 k=6 -> (12,8) M'=[-8, 6, 11] drop=1 s_eff=2 M_eff=[-8, 6] den_eff=5 top_eff=6 n'-2=10 Φt=['0', '-7/5']
+169:    n=108 m=72 M=[-72, 90, 99, 106] V={2: 11, 3: 10, 4: 8} d_s=9 k=6 -> (12,8) M'=[-8, 10, 11] drop=1 s_eff=2 M_eff=[-8, 10] den_eff=1 top_eff=10 n'-2=10 Φt=['-14/3', '-7']
+170:    n=108 m=72 M=[-72, 90, 99, 106] V={2: 17, 3: 16, 4: 8} d_s=9 k=6 -> (12,8) M'=[-8, 10, 11] drop=1 s_eff=2 M_eff=[-8, 10] den_eff=1 top_eff=10 n'-2=10 Φt=['-11/2', '-7']
+173:  (84,56) (1)-(13) rows with d_s=7: 30
+
+codex
+The main counters match the frozen JSON. One item in the claim is about `s_eff` over all descendable rows, not only anchor-zero rows, so I’m computing that distribution separately from the same copied drivers.
+exec
+/bin/bash -lc "python3 - <<'PY'
+import sys
+from collections import Counter
+from pathlib import Path
+HERE=Path('box/anchor-gate-20260903').resolve()
+sys.path.insert(0,str(HERE))
+import moh_skeleton_full as M
+import full_tree_partition as T
+
+def u_s_of(S): return S.d[S.s]-S.V[S.s]
+def descend(S):
+    ds=S.d[S.s]; us=u_s_of(S); s2=S.s-1
+    D={'n':S.n//ds,'m':S.m//ds,'s':s2,'M':{i:S.M[i]//ds for i in range(1,s2+1)},'d':{i:S.d[i]//ds for i in range(1,s2+2)},'V':{i:S.V[i] for i in range(2,s2+1)},'k':S.V[S.s]-us-1}
+    D['V'][s2+1]=D['d'][s2+1]
+    return D
+def trunc(D):
+    n,s,M,V=D['n'],D['s'],dict(D['M']),dict(D['V'])
+    d=D['d']; dropped=0
+    while s>=1 and M.get(s)==n-1:
+        dropped+=1; s-=1; M.pop(s+1,None); V.pop(s+1,None)
+        if (s+1) in d and s>=1: V[s+1]=d[s+1]
+    return s,dropped,M,V
+for label, rows in [('n<=100',[M.Skel(n,m,list(Ms),V) for n in range(4,101) for m,Ms,V in M.census(n,Kmin=2,full=True)]),('n=108',[M.Skel(108,m,list(Ms),V) for m,Ms,V in M.census(108,Kmin=2,full=True)])]:
+    surv=[S for S in rows if T.full_tree_ode_ok(S)]
+    desc=[S for S in surv if u_s_of(S)==1]
+    c=Counter(); drops=Counter(); raw=Counter(); rawdrops=[]
+    for S in desc:
+        D=descend(S); s_eff,dropped,M2,V2=trunc(D)
+        c[s_eff]+=1; drops[dropped]+=1; raw[D['s']]+=1
+        rawdrops.append((D['s'],s_eff,dropped,S.n,S.m,[S.M[i] for i in range(1,S.s+1)],{i:S.V[i] for i in range(2,S.s+1)}))
+    print(label, 'surv',len(surv),'desc',len(desc),'s_eff',dict(sorted(c.items())),'dropped',dict(sorted(drops.items())),'raw_s_prime',dict(sorted(raw.items())))
+PY" in /home/ubuntu/jc2
+ succeeded in 351ms:
+n<=100 surv 58 desc 57 s_eff {2: 29, 3: 27, 4: 1} dropped {0: 19, 1: 38} raw_s_prime {2: 5, 3: 37, 4: 15}
+n=108 surv 20 desc 19 s_eff {2: 12, 3: 7} dropped {0: 7, 1: 12} raw_s_prime {3: 19}
+
+codex
+The replay confirms the headline counts, but a separate all-descendable `s_eff` tally gives `{2:29, 3:27, 4:1}` for `n<=100`. I’m checking the charged write-up’s wording before deciding whether that is a real mismatch or a scope difference.
+exec
+/bin/bash -lc "awk 'BEGIN{show=1} /"'^## §6/{show=0} show{print}'"' /tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md" in /home/ubuntu/jc2
+ succeeded in 0ms:
+# DESCENT-ANCHOR AUDIT — Grok 4.6 — 2026-09-03
+
+Lane `descent-anchor-audit-grok46-20260903`. Charged: Opus H1/§8/§13 of
+`xmodel/ideation-20260903T1200Z-opus5.md` (only 20260903T1200Z file opened).
+Frozen inputs `/tmp/jc2-lane.fQcJVU/inputs` SHA-256 9/9 match. Moh 1983
+`refs/moh1983_jram340_configurations_of_roots.pdf` (sha256 `6c8847a8…`),
+300 dpi; journal N = PDF N−139. Pages: **151, 173–185, 196–199, 202,
+207–212**. Citations `SOURCE-READ` or `SOURCE-UNVERIFIED`. No ledger
+edits; `jc2-lean` not inspected; no other 1200Z file; no running-lane
+report. Drivers: `box/anchor-audit-20260903/`. Desk CAS only.
+
+## 0. Headline
+
+1. **`OPEN[DESCENT-ANCHOR]` closes as outcome (ii).** Def 5.1(3) as
+   **printed** at p.179 carries the factor `1/(n−M_s−1)` (transcribed
+   below). Prop 6.3/6.4 descent of the *parent* is defined on every
+   `u_s=1` census row: its hypotheses are `deg g=deg_y g`, `δ_s=−1`, and
+   (when `u_s=1`) the automatic minor-disc bound of Prop 6.4 — none of
+   these mention the child's `n'−M'_{s'}−1`. The vanishing denominator
+   is a fact about the *child's* characteristic sequence. Moh p.174
+   Definition–Remark already names the repair: if `M_h=n−1`, drop it;
+   the last *effective* exponent is `M_s`. Apply Φ to the truncated
+   data. Negative control: truncation is a no-op on all five p.207
+   `u_s=1` rows, so the 10/10 printed rationals still MATCH. Dropping
+   the printed factor (instead of dropping `M_h`) still breaks (15,10)
+   (`δ_2=−3` not `−1/3`). §1–§3.
+2. **Not (i), not (iii) as a kill.** Prop 6.3's hypotheses do not fail
+   on the parent of an anchor-zero row. Moh does not send `δ'→−∞`: Prop
+   5.1(1) says `δ_h=δ_{h−1}=−1/(n−M_{h−1}−1)`, finite; the two top discs
+   coincide. Lemma 2.1 already forces every Jacobian pair to *have*
+   `M_h=n−1` in the full sequence. Landing the descent map on that slot
+   is the generic termination, not a degeneration of the disc and not a
+   kill of the 38. §3.
+3. **MEASURED.** Opus's 38/57 and 12/20 reproduce on the frozen
+   drivers: `C_FULL_TREE_ODE` is 658→58 at `n≤100` (57 descendable, 38
+   anchor-zero, 19 evaluable as charged) and 217→21→20 at `n=108` (19
+   descendable, 12 anchor-zero, 7 evaluable as charged). After the p.174
+   drop, **0/38** (resp. 0/12) remain undefined. The `u_s>1 ∪
+   still-undefined` residue is **1/58** and **1/20** — `(99,66)` and the
+   `n=108` analogue `u_s=2` row — not “much larger than 1/58”. p.207
+   contains **zero** anchor-degenerate rows. The three Opus-named
+   `(84,56)` `d_s=7` rows are census extras, not among Moh's printed
+   six. §2, §4.
+
+## 1. Task (a) — Def 5.1(3), Prop 5.3, `M_s=n−2`, the child's top exponent
+
+### 1.1 The displayed formula at p.179 (`SOURCE-READ`)
+
+Definition 5.1(3), p.179, displayed, for `i=r,…,s`:
+
+```text
+          (n − M_i)  Π_{j=i+1}^{s} [ V_j (n − M_j) − d_j ]
+δ_i = 1 − ─────────────────────────────────────────────────────
+          (n − M_s − 1) Π_{j=i+1}^{s} [ V_j (n − M_{j−1}) − d_j ]
+```
+
+The factor `1/(n−M_s−1)` is in the print, not a Keller transcription
+artefact. The same factor opens the page: the p.179 identity for
+`δ_s+(V_s/d_s)(δ_{s−1}−δ_s)` has denominator `(n−M_s−1)[V_s(n−M_{s−1})−d_s]`.
+`box/moh_skeleton_full.py` `Skel._delta` matches the display (census-rebase
+CONTROL 1). `PROVED-IN-SOURCE`.
+
+Lemma 5.1 p.176 (`SOURCE-READ`), under `L ≤ M_s < n−1` and
+`V_s(n−M_s)>d_s`:
+
+```text
+δ_s = δ(M_s) = 1 − (n−M_s)/(n−M_s−1) = −1/(n−M_s−1).
+```
+
+RADIUS-ORDER (`moh_skeleton_N.py:191–195`):
+`λ_g(δ_r)= −n(1−δ_r)(n−M_s−1)/(n−M_r)`. Here `c=n−M_s−1` is the
+`x`-degree of `f_{n−1}` in Lemma 2.1 (`deg_x f_{n−1}=1` ⇒ `c=1`); D1-PIN
+consumes that specialisation. For `J=c x^k` the same identity runs with
+`c=k+1`. Negative control, as charged: replacing `n−M_s−1` by `1` on
+`(15,10)`, `M_2=11`, `V_2=3` gives `δ_2=−3` not `−1/3`. `MEASURED`.
+
+### 1.2 Role in Prop 5.3 and Lemma 5.2
+
+Lemma 5.2 p.177 hypothesises `L ≤ M_r < ⋯ < M_s < n−1` and writes `δ(L)`
+with the same `(n−M_s−1)` in the denominator. The proof that `−1+δ*<0`
+uses `n−M_s > n−M_s−1 > 0` (p.178): if `M_s=n−1` this is false and the
+formula is undefined. Prop 5.3 pp.180–183 feeds Lemma 5.2 at `L=M_r` and
+`L=M_{r−1}`; the factor is the radius-order conversion that makes
+`λ*=(−1+δ*)d_r/(n−L)` strictly negative. Prop 5.3 therefore does **not**
+apply to an un-truncated sequence ending at `n−1`. After the p.174 drop,
+`M_s<n−1` is restored. Whether the proof also needs `J=const` (beyond
+Lemma 2.1) is `OPEN[DESCENDED-TREE-LICENSE]`. `PROVED-IN-SOURCE`.
+
+### 1.3 When Moh asserts `M_s=n−2`
+
+Search (2) p.200: `M_s=n−2`, with (3) “degrees cannot be reduced
+simultaneously”. Prop 5.4 p.183: if the smallest disc containing all
+roots of `g T_1^ψ` has `δ_i>−1`, then either `k[x,y]=k[f,g]` or an
+automorphism reduces degrees. Lemma 5.3 p.185: that disc has radius `−1`
+**iff** `M_s=n−2` and the highest form of `g` has two roots, one of
+multiplicity `(n/d_s)v_s` with `d_s>v_s>d_s/2`. Necessity: `−1=δ_i=
+−1/(n−M_i−1)` forces `M_i=n−2`. So `M_s=n−2` is a statement about a
+**minimal Keller counterexample**. The child has `J=cγ^k` with `k≥1` on
+every `u_s=1` row here; Lemma 5.3 is not licensed for it, and
+`M'_{s'}=n'−2` is not expected. `PROVED-IN-SOURCE`.
+
+### 1.4 Top characteristic exponent of the child
+
+Prop 5.1 p.173–174 (`SOURCE-READ`):
+
+* (1) If `M_h=n−1` then `δ_h=δ_{h−1}=−1/(n−M_{h−1}−1)`, and Prop 4.6
+  applies at `r=h−1`, `v=d_{h−1}`.
+* (2) If `M_h<n−1` then `δ_h=−1/(n−M_h−1)`, Prop 4.6 at `r=h`.
+
+**Definition–Remark, p.174, displayed:** *“The conclusion (1) implies
+that if `M_h=n−1`, then we should drop it from our own consideration.
+The ‘effective’ characteristic pairs exclude `M_h` if `M_h=n−1`. The
+last effective characteristic pair is denoted by `M_s` in this
+article.”*
+
+p.151 after Lemma 2.1: `f_{n−1}≠0` and `(n,n−1)=1` imply `M_i≤n−1`, and
+“all `M_i`'s terminate at `n−1` if the Jacobian condition is satisfied.”
+`M_h=n−1` is the Jacobian coefficient (x-linear for `k=0`; degree `k+1`
+for `J=c x^k`). Every Jacobian pair has it; Moh drops it before writing
+`M_s`.
+
+**Five p.207 rows** (all `u_s=1`; `MEASURED`). Child top never `n'−2` or
+`n'−1`; dens `2,4,2,3,3`; Prop 5.3 applies to the raw data; Φ defined as
+charged.
+
+```text
+(64,48) → (16,12) M'=[13]     n'-2=14 n'-1=15
+(84,56) M2=64 → (21,14) [16]  n'-2=19 n'-1=20
+(84,56) M2=72 → (21,14) [18]  n'-2=19 n'-1=20
+(75,50) V2=3  → (15,10) [11]  n'-2=13 n'-1=14
+(75,50) V2=2  → (15,10) [11]  n'-2=13 n'-1=14
+```
+
+**Opus-named `(84,56)` `d_s=7` ODE-survivors**, after Prop 6.3 and the
+p.174 drop. Raw last exponent `11=n'−1` (Jacobian). After drop, Prop 5.3
+applies (`6` or `10`, both `<11`). The `[70,77,82]` row has effective
+`M_s=n'−2`; Φ then gives `δ_top'=(k+1)(−1)=−5` (`k=4`), not `−1`. Lemma
+5.3's “radius `−1` iff `M_s=n−2`” is constant-`J`; for monomial `J` the
+geometric radius `−1` is `n−M_s−1=k+1`. `MEASURED` / `DERIVED`.
+
+```text
+M=[-56,42,77,82] V={2:1,3:12,4:6} → (12,8) raw=[-8,6,11]  Meff=[-8,6]  ≠ n'-2
+M=[-56,42,77,82] V={2:3,3:12,4:6} → (12,8) raw=[-8,6,11]  Meff=[-8,6]  ≠ n'-2
+M=[-56,70,77,82] V={2:11,3:10,4:6}→ (12,8) raw=[-8,10,11] Meff=[-8,10] = n'-2
+```
+
+## 2. Task (b) — p.207 has no anchor-degenerate row; why `d_s=7` is absent
+
+p.207 table (`SOURCE-READ`) is the Prop 6.4 image of the first three
+p.202 classes, licensed by the printed `u_3=d_3−v_3=1`. The five rows
+have `n'−M_2'−1 = 2,4,2,3,3`. **Zero anchor-degenerate rows.** Prediction
+confirmed. `(99,66)` is excluded because `u_3=3≠1`; Prop 6.4 does not
+apply (p.209 treats it by a linear-power / cubic dichotomy, not Prop
+6.3). `PROVED-IN-SOURCE`.
+
+p.202 (`SOURCE-READ`) prints, for `(84,56)`:
+
+```text
+n=84, m=56, M_2=64 [72], M_3=82, M_4=83, V_3=3, V_2=2 [5]
+```
+
+So `s=3`, `M_s=82=n−2`, `M_4=83=n−1` (the Jacobian term, to be dropped
+by p.174), `d_3=gcd(84,−56,64,82)=4`, `V_3=3`, `u_3=1`. Two printed data
+sets, both `d_s=4`. The campaign's `MOH_TABLE` matches: `[64,82]` with
+`V={3:3,2:2}` and `[72,82]` with `V={3:3,2:5}`. `PROVED-IN-SOURCE`.
+
+`(1)–(13)` at `(84,56)`: **46 rows**, two printed, **44 extras**. The
+Opus-named `s=4`, `d_s=7` chains `M=[−56,42,77,82]` (three V-assignments,
+two with `u_s=1`) and `M=[−56,70,77,82]` (three V-assignments, one with
+`u_s=1`) sit among the extras. They are **in the census and not on
+p.202** — not a misread of `[64]/[72]` (`M_3=82`, no `M=77`). They are
+`OPEN[MOH-PROGRAM]` residue at this class. `MEASURED`.
+
+Appendix II p.208 (`SOURCE-READ`): “Similar arguments can be applied to
+the **second case** to show the impossibility directly and to the third
+case to reduce the number of coefficients to 22 [15 or 13].” The three
+cases of p.207 are `(16,12)`, `(21,14)`, `(15,10)` — i.e. the `d_s=4`
+image of `(84,56)`, not a `(12,8)` image of the `d_s=7` extras. p.211
+closes `(15,10; M_2=11, V_2=3)` and then: “All other cases can be
+computed directly as above.” No `(12,8)` data, no `d_s=7` row, no
+`M_3'=11`. Moh did not treat the `d_s=7` rows elsewhere in Appendix II.
+`PROVED-IN-SOURCE`.
+
+## 3. Task (c) — the three outcomes
+
+**Verdict: (ii).** Repair Φ by Moh's own p.174 normalisation. The
+repaired rule, still hitting 10/10 printed rationals:
+
+> **Φ_eff.** Let `(n',m',M_i',V_i',k)` be the Prop 6.3 image of a
+> `u_s=1` row (`n'=n/d_s`, `m'=m/d_s`, `M_i'=M_i/d_s` for `i≤s−1`,
+> `V_i'=V_i`, `k=V_s−u_s−1`). If `M'_{s'}=n'−1`, drop that last
+> exponent and set `V_{s*+1}=d_{s*+1}` on the truncated dictionaries
+> (`s*=s'−1`). Then `δ_i'=(k+1)·`Def 5.1(3) on the effective tuple.
+
+On p.207 the drop is a no-op (`drop=0` on all five), so Φ_eff=Φ and the
+10 rationals MATCH. `MEASURED`. Cheapest negative control, as charged,
+passes.
+
+**(i) is false.** Prop 6.3 p.197 hypothesises: `g` monic in `y`,
+`deg g=deg_y g=n>1`, `δ_s=−1`, and `δ^*_{s−1}≥v_s/u_s`. Prop 6.4 p.198
+supplies the last of these when `u_s=1`. Every `(1)–(13)` parent has
+`M_s=n−2`, hence `δ_s=−1` (Lemma 5.1). The 38 (resp. 12) rows are
+`u_s=1` by construction of the descendable set. No Prop 6.3 hypothesis
+fails. What fails, if one refuses the p.174 drop, is Lemma 5.2 /
+Def 5.1(3) on the *child*. That is a radii-rule gap, not a descent-map
+gap. `OPEN[MINOR-DICHOTOMY]` stays at 1/58, not “much larger”.
+`PROVED-IN-SOURCE` / `MEASURED`.
+
+**(iii) is false as a kill.** The naive `δ_s=−1/(n−M_s−1)→−∞` as
+`M_s→n−1` applies Lemma 5.1 outside `M_s<n−1`. Prop 5.1(1) is the actual
+construction: the `h`-disc and the `(h−1)`-disc **coincide**, radius
+`−1/(n−M_{h−1}−1)` (times `k+1` for monomial `J`). The child “reaches
+the Jacobian term” because Lemma 2.1 already put `f_{n'−1}≠0` there;
+`(n',n'−1)=1` makes `d_{s'}∤n'−1` automatic. Forcing: drop `M_h`, apply
+Prop 4.6 at `r=h−1` with `deg q=n'−M_{\mathrm{eff}}≥2` (automatic). No
+disc collapses; no row dies. If the descent map writes `M'_{s'}=n'−1`,
+that entry is the child's Jacobian termination and must be shed before
+Def 5.1(3) or Prop 5.3. `PROVED-IN-SOURCE` / `DERIVED`.
+
+## 4. Task (d) — 38/57 and 12/20, the list, the domain of (T)
+
+Frozen copies of `full_tree_partition.py` + `moh_skeleton_full.py`,
+`python3 -O`, desk, < 2 s after import. Descent map as charged:
+`n'=n/d_s`, `m'=m/d_s`, `M_i'=M_i/d_s`, `V_i'=V_i`,
+`k=V_s−u_s−1`. Anchor-zero: `M_{s−1}=n−d_s`. Screen:
+`C_FULL_TREE_ODE` (`ode_nondegenerate=True`).
+
+```text
+n≤100  (1)–(13) 658 → ODE 58
+         u_s=1 : 57          u_s>1 : 1  = (99,66) V={2:8,3:8} d_s=11
+         anchor-zero : 38    evaluable as charged : 19
+         after p.174 drop, still den=0 : 0
+         Φ_eff defined : 57
+n=108  (1)–(13) 217 → partition 21 → ODE 20     [Opus 217→21→20]
+         u_s=1 : 19          u_s>1 : 1  = (108,72) M=[−72,81,106] V={2:7,3:7} d_s=9 u_s=2
+         anchor-zero : 12    evaluable as charged : 7
+         after p.174 drop, still den=0 : 0
+         Φ_eff defined : 19
+```
+
+Among the 38: parent `s` is 4 (24 rows) or 5 (14 rows, all at `(96,64)`);
+after the drop, `s_eff=2` on 24 and `s_eff=3` on 14; `s_eff=1` on **0**;
+`top_eff=n'−2` on 11, `<n'−2` on 27. Among the original 19 “evaluable as
+charged”, only **5** have `s'=2` (the p.207 shape: parent `s=3`); 13 have
+`s'=3` and 1 has `s'=4`. At `n=108` the split inverts: the 7 evaluable-as-charged
+all have `s'=3`, and the 12 anchor-zero rows become `s_eff=2` after the drop.
+
+### 4.1 The 38 + 12, with `(n,m,M,V,d_s)`
+
+Child data (`n'`, `M_eff`, `s_eff`, Φ_eff) in
+`box/anchor-audit-20260903/anchor_zero_rows.txt`. All 38 have `drop=1`
+and `den_eff≠0`. The 14 `s_eff=3` rows are the `(96,64)` parent-`s=5`
+block. All 12 at `n=108` have `s_eff=2`.
+
+**`n≤100` (38).**
+
+```text
+72,48  M=[-48,60,68,70] V={2:11,3:7,4:3}   ds=4
+72,48  M=[-48,60,66,70] V={2:11,3:10,4:5}  ds=6
+80,32  M=[-32,56,76,78] V={2:8,3:4,4:3}    ds=4
+84,56  M=[-56,42,77,82] V={2:1,3:12,4:6}   ds=7
+84,56  M=[-56,42,77,82] V={2:3,3:12,4:6}   ds=7
+84,56  M=[-56,70,77,82] V={2:11,3:10,4:6}  ds=7
+90,60  M=[-60,10,85,88] V={2:1,3:8,4:4}    ds=5
+90,60  M=[-60,10,85,88] V={2:3,3:8,4:4}    ds=5
+90,60  M=[-60,70,85,88] V={2:8,3:7,4:4}    ds=5
+90,60  M=[-60,80,85,88] V={2:17,3:8,4:4}   ds=5
+90,60  M=[-60,75,85,88] V={2:11,3:7,4:4}   ds=5
+96,80  M=[-80,24,92,94] V={2:6,3:3,4:3}    ds=4
+96,72  M=[-72,56,92,94] V={2:1,3:5,4:3}    ds=4
+96,72  M=[-72,56,92,94] V={2:7,3:5,4:3}    ds=4
+96,72  M=[-72,88,92,94] V={2:7,3:5,4:3}    ds=4
+96,64  M=[-64,24,92,94] V={2:20,3:5,4:3}   ds=4
+96,64  M=[-64,72,92,94] V={2:7,3:6,4:3}    ds=4
+96,64  M=[-64,80,92,94] V={2:11,3:10,4:3}  ds=4
+96,64  M=[-64,48,88,94] V={2:1,3:12,4:7}   ds=8
+96,64  M=[-64,48,88,94] V={2:3,3:12,4:7}   ds=8
+96,64  M=[-64,80,88,94] V={2:11,3:10,4:7}  ds=8
+96,64  M=[-64,-48,24,92,94] V={2:20,3:10,4:5,5:3} ds=4
+96,64  M=[-64,-16,24,92,94] V={2:1,3:8,4:4,5:3}   ds=4
+96,64  M=[-64,-16,24,92,94] V={2:5,3:8,4:4,5:3}   ds=4
+96,64  M=[-64,-16,24,92,94] V={2:20,3:10,4:5,5:3} ds=4
+96,64  M=[-64,-16,72,92,94] V={2:1,3:8,4:4,5:3}   ds=4
+96,64  M=[-64,-16,72,92,94] V={2:2,3:8,4:4,5:3}   ds=4
+96,64  M=[-64,16,24,92,94]  V={2:20,3:10,4:5,5:3} ds=4
+96,64  M=[-64,48,72,92,94]  V={2:24,3:12,4:6,5:3} ds=4
+96,64  M=[-64,48,88,92,94]  V={2:1,3:12,4:6,5:3}  ds=4
+96,64  M=[-64,48,88,92,94]  V={2:3,3:12,4:6,5:3}  ds=4
+96,64  M=[-64,48,88,92,94]  V={2:17,3:12,4:6,5:3} ds=4
+96,64  M=[-64,80,88,92,94]  V={2:5,3:10,4:5,5:3}  ds=4
+96,64  M=[-64,80,88,92,94]  V={2:11,3:10,4:5,5:3} ds=4
+96,64  M=[-64,80,88,92,94]  V={2:11,3:7,4:6,5:3}  ds=4
+100,40 M=[-40,70,95,98] V={2:8,3:4,4:4}    ds=5
+100,80 M=[-80,50,95,98] V={2:1,3:8,4:4}    ds=5
+100,80 M=[-80,50,95,98] V={2:3,3:8,4:4}    ds=5
+```
+
+**`n=108` (12).** All `(108,72)`, parent `s=4`.
+
+```text
+M=[-72,84,104,106] V={2:8,3:7,4:3}   ds=4
+M=[-72,84,104,106] V={2:21,3:7,4:3}  ds=4
+M=[-72,84,104,106] V={2:8,3:8,4:3}   ds=4
+M=[-72,12,102,106] V={2:1,3:8,4:5}   ds=6
+M=[-72,12,102,106] V={2:3,3:8,4:5}   ds=6
+M=[-72,84,102,106] V={2:8,3:7,4:5}   ds=6
+M=[-72,96,102,106] V={2:17,3:8,4:5}  ds=6
+M=[-72,90,102,106] V={2:11,3:7,4:5}  ds=6
+M=[-72,54,99,106]  V={2:1,3:12,4:8}  ds=9
+M=[-72,54,99,106]  V={2:3,3:12,4:8}  ds=9
+M=[-72,90,99,106]  V={2:11,3:10,4:8} ds=9
+M=[-72,90,99,106]  V={2:17,3:16,4:8} ds=9
+```
+
+Opus's “three of Moh's printed six” is a mislabel: the three ODE-surviving
+`d_s=7` `(84,56)` rows above are **census extras** at a printed `(n,m)`,
+not members of the p.202 six. Zero of the six printed rows are
+anchor-zero (the five `u_s=1` printed rows are the p.207 parents, all
+`den≠0`; `(99,66)` has `u_s=3`). `MEASURED`.
+
+### 4.2 Domain of theorem (T), restated
+
+Two numbers, because “Φ defined” and “`s'=2` monomial-Jacobian pair”
+are not the same predicate (Opus used the first as a proxy for (T)).
+
+| predicate | `n≤100` (of 57 / of 58) | `n=108` (of 19 / of 20) |
+|---|---|---|
+| Φ as charged (no drop) | **19 / 57** | **7 / 19** (7/20 of ODE) |
+| Φ_eff (p.174 drop) | **57 / 57** | **19 / 19** |
+| `s_eff=2` after Φ_eff | **29 / 57** (5 of the old 19 + 24 of the 38) | **12 / 19** (the *former* az rows) |
+| `u_s>1 ∪ still-undefined` | **1 / 58** | **1 / 20** |
+
+(T) as “evaluate Φ on a descended pair” now covers **all 57 / all 19**
+descendable screened rows. (T) as “bounded tower height `s'=2`” covers
+29/57 and 12/19 after the repair — and at `n=108` those 12 are exactly
+the rows Opus thought were undefined. The 14 `n≤100` rows with
+`s_eff=3` (all `(96,64)`, parent `s=5`) still want a second descent;
+that is a height question, not an anchor question. `OPEN[MINOR-DICHOTOMY]`
+is **not** enlarged. `MEASURED` / `DERIVED`.
+
+Coverage, retroactive, for the promoted `δ'` rule:
+`coverage={"defined_on":19,"of_live_rows":57,"undefined_reason":"M_{s-1}=n-d_s","printed_controls_covered":"10/10","after_p174_drop":{"defined_on":57,"of_live_rows":57}}`
+
+## 5. Bounded quantities, OPENs, cheapest tests
+
+* `OPEN[DESCENT-ANCHOR]` **CLOSED** as (ii). Φ charged: 19/57 and 7/19.
+  Φ_eff: 57/57 and 19/19. 10/10 preserved. 0 az on p.207. Not a kill.
+* `OPEN[MINOR-DICHOTOMY]` untouched, still 1/58 and 1/20. The count *is*
+  the cheapest test.
+* `OPEN[DESCENDED-TREE-LICENSE]` untouched. Prop 5.3's printed `M_s<n−1`
+  holds after the drop; whether the proof uses `J=const` besides Lemma
+  2.1 is the existing 45-minute re-read of pp.190–195, p.200. Load-bearing
+  only for a *kill* from the composite screen.
+* `OPEN[MOH-PROGRAM]` untouched. The `d_s=7` `(84,56)` extras (44 of 46
+  `(1)–(13)` rows at that class) are instances of the 652, not a new bound.
+* `OPEN[T-HEIGHT]` (new, not this lane). 14 of 57 have `s_eff=3` after one
+  descent+drop, all `(96,64)`. Cheapest test: if `u_{s*}=1` on the
+  effective child, descend once more (desk, minutes). If that yields
+  `s**=2`, (T) as `s'=2` covers 43/57.
+
+## 6. Typed block
+
+```text
+LANE     descent-anchor-audit-grok46-20260903 (Grok 4.6)
+SOURCE   Moh 1983 300 dpi: pp.151, 173-185, 196-199, 202, 207-212
+GATE     hashes 9/9; p.179 display; 10/10 Φ; drop-factor (15,10)=−3≠−1/3
+PROVED-IN-SOURCE  Def 5.1(3) has 1/(n−M_s−1).  Lem 5.1: δ_s=−1/(n−M_s−1)
+             for M_s<n−1.  Prop 5.1(1)+p.174: if M_h=n−1, DROP it;
+             δ_h=δ_{h−1}=−1/(n−M_{h−1}−1).  Prop 6.3 hyps ignore n'−M'−1.
+             Search (2)/Lem 5.3/Prop 5.4: M_s=n−2 for a minimal Keller CE.
+             p.207 has 0 az rows.  App II “second case” = (21,14) from d_s=4.
+DERIVED  Φ_eff=(k+1)·Def 5.1(3) after the p.174 drop.
+MEASURED 658→58 ODE n≤100; 57 u_s=1; 38 az; 19 as-charged.  217→21→20
+             at n=108; 19 u_s=1; 12 az; 7 as-charged.  After drop: 0 undefined.
+             Residue u_s>1 ∪ undef = 1/58, 1/20.  (84,56): 46 (1)–(13), 2 printed.
+NOT CLAIMED  kill of the 38; AUDIT 17(p); DESCENDED-TREE-LICENSE; MOH-PROGRAM
+TYPED    OPEN[DESCENT-ANCHOR] CLOSED as (ii).  (T) via Φ_eff: 57/57 and 19/19.
+             (T) as s_eff=2: 29/57 and 12/19.  MINOR-DICHOTOMY not enlarged.
+OPEN CLOSED  OPEN[DESCENT-ANCHOR]
+```
+
+## 7. Drivers
+
+```text
+box/anchor-audit-20260903/measure_anchor.py      Φ, drop-factor, p.207, (84,56), 38/57, 12/20, Φ_eff
+box/anchor-audit-20260903/measure_anchor.json    counts + rows
+box/anchor-audit-20260903/anchor_zero_rows.txt   the 38+12 with child data
+box/anchor-audit-20260903/phi_delta.py           frozen 10/10 (rerun)
+box/anchor-audit-20260903/full_tree_partition.py + repro/moh_skeleton_full.py  frozen
+  Page images not kept.  pdftoppm -r 300; journal N = PDF N−139.
+```
+
+## 8. FALLACY-v2
+
+No exit price, so no `charge_basis` line. No cv-flag / place / series;
+no per-ray charge; no pole identity; `sat()` does not arise.
+**Floor/attainment:** 38/57 and 12/20 are exact finite enumerations; Φ_eff
+equals the 10 printed rationals (negative control: dropping the printed
+factor fails). **Prime label/derivative:** `δ_i'`, `n'`, `M_i'`, `k` are
+labels; `f_i'(x)` in Lemma 2.1 is a derivative (p.151). Untruncated
+`M_s=n−1` was not used to “correct” p.207; the `d_s=7` `(84,56)` chains
+were not used to overwrite printed `[64]/[72]`. Outcome (i) was not
+filled by analogy (Prop 6.3 hyps read and checked). Outcome (iii) as
+`δ'=−∞` was not filled by a limit outside Lemma 5.1; the source
+replacement is Prop 5.1(1).
+
+## COLLISIONS
+
+status: EMPTY
+
+- `OPEN[DESCENT-ANCHOR]` (this report: closed as (ii)): NONE
+- `OPEN[MINOR-DICHOTOMY]` (re-priced, not re-typed): NONE
+
+<!-- BODY-END -->
+
+exec
+/bin/bash -lc "awk 'NR==1{print} /"'^## §13/{show=1} /''^## §14/{show=0} show && NR>1{print}'"' /tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md" in /home/ubuntu/jc2
+ succeeded in 0ms:
+# Blind ideation submission — round 20260903T1200Z — Opus 5
+
+exec
+/bin/bash -lc 'rg -n "s_eff|29/57|14/57|38|12/19|Phi_eff|PROMOT" /tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md /tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md' in /home/ubuntu/jc2
+ succeeded in 0ms:
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md:43:exactly when **M_{s−1} = n − d_s**. MEASURED: this holds on **38 of the 57
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md:131:| **Q1** exhibit a screened cofinal family (closed form) | **PROMOTE to the CE-side target** | §7 gives the construction recipe and the exact algebra to solve. |
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md:135:| **Q3** attack (T) via row-1 machinery | **PROMOTE** | See §6; the leading-form rigidity L_P = H^{n'/d}, L_Q = H^{m'/d} is free and unexploited. |
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md:149:   the descended data of 38/57 screened survivors and 3 of Moh's six. Until
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md:206:*Result (MEASURED).* 57/58 survivors are descendable (u_s = 1); 38 are
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md:423:*Why decisive.* It gates 38 of the 57 descendable screened survivors at
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md:450:the composite screen (§4) on the newly evaluable 38 rows (this is the one way
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md:453:candidate, and the 38 rows may die outright, which would be the largest
+/tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md:616:*Bounded quantity:* 38 of the 57 descendable C_FULL_TREE_ODE survivors at
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:33:   kill of the 38. §3.
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:34:3. **MEASURED.** Opus's 38/57 and 12/20 reproduce on the frozen
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:35:   drivers: `C_FULL_TREE_ODE` is 658→58 at `n≤100` (57 descendable, 38
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:38:   drop, **0/38** (resp. 0/12) remain undefined. The `u_s>1 ∪
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:202:`M_s=n−2`, hence `δ_s=−1` (Lemma 5.1). The 38 (resp. 12) rows are
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:220:## 4. Task (d) — 38/57 and 12/20, the list, the domain of (T)
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:231:         anchor-zero : 38    evaluable as charged : 19
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:241:Among the 38: parent `s` is 4 (24 rows) or 5 (14 rows, all at `(96,64)`);
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:242:after the drop, `s_eff=2` on 24 and `s_eff=3` on 14; `s_eff=1` on **0**;
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:246:all have `s'=3`, and the 12 anchor-zero rows become `s_eff=2` after the drop.
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:248:### 4.1 The 38 + 12, with `(n,m,M,V,d_s)`
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:250:Child data (`n'`, `M_eff`, `s_eff`, Φ_eff) in
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:251:`box/anchor-audit-20260903/anchor_zero_rows.txt`. All 38 have `drop=1`
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:252:and `den_eff≠0`. The 14 `s_eff=3` rows are the `(96,64)` parent-`s=5`
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:253:block. All 12 at `n=108` have `s_eff=2`.
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:255:**`n≤100` (38).**
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:330:| `s_eff=2` after Φ_eff | **29 / 57** (5 of the old 19 + 24 of the 38) | **12 / 19** (the *former* az rows) |
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:335:29/57 and 12/19 after the repair — and at `n=108` those 12 are exactly
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:337:`s_eff=3` (all `(96,64)`, parent `s=5`) still want a second descent;
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:356:* `OPEN[T-HEIGHT]` (new, not this lane). 14 of 57 have `s_eff=3` after one
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:373:MEASURED 658→58 ODE n≤100; 57 u_s=1; 38 az; 19 as-charged.  217→21→20
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:376:NOT CLAIMED  kill of the 38; AUDIT 17(p); DESCENDED-TREE-LICENSE; MOH-PROGRAM
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:378:             (T) as s_eff=2: 29/57 and 12/19.  MINOR-DICHOTOMY not enlarged.
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:385:box/anchor-audit-20260903/measure_anchor.py      Φ, drop-factor, p.207, (84,56), 38/57, 12/20, Φ_eff
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:387:box/anchor-audit-20260903/anchor_zero_rows.txt   the 38+12 with child data
+/tmp/jc2-lane.gg5Ofk/inputs/descent-anchor-audit-grok46-20260903.md:397:**Floor/attainment:** 38/57 and 12/20 are exact finite enumerations; Φ_eff
+
+codex
+The charged report itself clarifies the `s_eff` line: `29/57` is the height-2 subset after repair, while `14/57` names only the anchor-zero parent-`s=5` block; it does not enumerate every height-3 row. I’m keeping that distinction explicit in my report so the count is not overstated.
+exec
+/bin/bash -lc 'rg -n "''^#|''^##" /tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md | rg "H1|§13|13|Headline"' in /home/ubuntu/jc2
+ succeeded in 0ms:
+29:## 0. Headline
+313:## 6. Strongest proof attack
+513:## 10. Idea cards (three)
+515:### CARD 1 — `descent-anchor-audit` (the H1 repair)
+609:## 13. OPEN ledger raised here
+
+exec
+/bin/bash -lc "awk 'NR==1{print} /"'^## 13'"\\./{show=1} /"'^## 14'"\\./{show=0} show && NR>1{print}' /tmp/jc2-lane.gg5Ofk/inputs/ideation-20260903T1200Z-opus5.md" in /home/ubuntu/jc2
+ succeeded in 0ms:
+# Blind ideation submission — round 20260903T1200Z — Opus 5
+## 13. OPEN ledger raised here
+
+Each with its bounded quantity and cheapest test, per contract.
+
+**`OPEN[DESCENT-ANCHOR]`** — Is the descent (Prop 6.3/6.4) and the promoted
+δ' = (k+1)·Def 5.1(3) rule defined when M_{s−1} = n − d_s (⟺ the Def 5.1(3)
+anchor n' − M_{s'}' − 1 = 0)?
+*Bounded quantity:* 38 of the 57 descendable C_FULL_TREE_ODE survivors at
+n ≤ 100; 12 of the 20 at n = 108; 3 of Moh's printed six (the (84,56),
+d_s = 7 rows, descending to (12,8) with M_3' = 11 = n' − 1); and the count of
+p.207 printed rows with the property (predicted 0).
+*Cheapest test:* read Moh p.207–208 and p.179 as images (pdftoppm, ~20 min)
+and check (a) whether any printed descended row is anchor-degenerate,
+(b) whether 1/(n − M_s − 1) is in Def 5.1(3) at the source. Measured here:
+dropping the factor breaks the match (δ₂' = −3 instead of −1/3 on (15,10)),
+so it is required by the printed data.
+
+**`OPEN[DESCENDED-TREE-LICENSE]`** — Do Prop 5.3's threshold argument, the
+p.200 Theorem (4) and Prop 5.6 hold for a pair with J = cγ^k rather than
+J = const?
+*Bounded quantity:* three propositions; the ODE (3.7) is already known to
+degenerate on γ = 0 (X2), so at most two remain.
+*Cheapest test:* re-read pp.190–195 and p.200 asking only "where is J used,
+and is J = const or J ≠ 0 needed?" — 45 min. Only matters if someone wants a
+*kill* from the composite screen; the negative result of §4 is robust without
+it.
+
+**`OPEN[SAT-MONOMIAL]`** — Does row 32's accelerator (I : Δ = I : Δ^∞ =
+I + (det A)) transport when det A = cγ^k instead of a unit?
+*Bounded quantity:* one lemma; two controls (the m2-descent (15,10) Case 2
+saturation, which must give the same SATURATED-EMPTY verdict, and a negative
+control that must not).
+*Cheapest test:* one page of algebra plus the two reruns in
+`box/m2descent-drivers-20260903/moh_1510_control*.py` — under an hour.
+
+**`OPEN[T-LADDER]`** — Is the number of non-constant H-adic coefficients of a
+monomial-Jacobian pair (total degree = π-degree) absolutely bounded, with
+γ-degrees ≤ k + 1?
+*Bounded quantity:* the count and the γ-degrees on Moh's (15,10; k = 2) and
+(16,12; k = 1) shapes; must reproduce Moh's "22 [15 or 13]".
+*Cheapest test:* Card 3's discriminator, < 10 min of sympy on shapes already
+coded in `box/descentradii-drivers-20260903/g2_fullh_mohbeta.py`.
+
+**`OPEN[SCREEN-CONGRUENCE-RAY]`** — Along a linear family (n(t), m(t), M_i(t),
+V_i(t)) satisfying (1)–(13), is the residue b_j(t) = P_j(t) mod A_j(t)
+eventually constant and nonzero, or can it be driven to 0 on a progression?
+*Bounded quantity:* (A_j, P_j mod A_j) at the selected path for the 20 n = 108
+and the D = 112/120 screened survivors, as V_2 varies.
+*Cheapest test:* `TreePartition.level_data` already returns the tuple; a
+5-minute scan. This is Q1's true all-degree question, in congruence form.
+
+---
+
+## Method note / reproduction
+
+All MEASURED numbers in this submission come from
+`box/mohprog-drivers-20260903/full_tree_partition.py` +
+`repro/moh_skeleton_full.py` run under `python3 -O`, plus a ~40-line descent
+map written in this lane (n' = n/d_s, m' = m/d_s, M_i' = M_i/d_s,
+d_i' = d_i/d_s, V_i' = V_i, s' = s − 1, k = V_s − u_s − 1, u_s = d_s − V_s)
+and the radii rule δ' = (k+1)·Def 5.1(3)(descended data). Controls passed
+before any number was printed: the screen reproduces 658 → 60 → 58 at
+n ≤ 100 and 217 → 21 → 20 at n = 108 (delta 17(r)); the descent map reproduces
+p.207's (64,48) → (16,12,13; X), (75,50) → (15,10,11; X²),
+(84,56) → (21,14,16/18; X); the radii rule reproduces
+descent-radii's independently measured (−1, 1/2) on (15,10) and (−1, 1/4) on
+(16,12). Total wall time under three minutes; no run exceeded 4 GB.
+
+Nothing in this submission re-types a promoted claim. H1 is a **coverage**
+finding against delta 17(t), not a refutation of it: the rule's 10/10 match on
+the printed rationals is confirmed here by a second, independent derivation.
+
+Blind-lane compliance: charged input hash verified before reading; no
+`ideation-20260903T1200Z-*` submission opened; `final_status` checked in
+`.run.v2` for every named running lane before any `.md` was opened (only
+`descent-radii-grok46` and `a2six-ray-moment-sol56` were DONE, and neither was
+needed for the results above — the p.207/p.208 δ' values quoted for
+cross-validation are the ones recorded in AUDIT delta 17(t)); no canonical
+ledger edited; `jc2-lean` not inspected.
+
+<!-- BODY-END -->
+
+codex
+The Opus §13 source matches the bounded quantity in the user prompt. I’m now checking the p.207 control table image so the report can cite the printed control rows, not just the driver output.
+codex
+I’m checking the radii helper and prior descent-radii input next, only for the printed-control rule and its stated scope. This is to separate a verified desk rule from a broader theorem claim.
+exec
+/bin/bash -lc "sed -n '1,240p' /tmp/jc2-lane.gg5Ofk/inputs/phi_delta.py" in /home/ubuntu/jc2
+ succeeded in 0ms:
+#!/usr/bin/env python3
+"""RULE: delta_i' = (k+1) * Def5.1(3)(descended data, s'=2).
+k = Jacobian exponent of the descended pair.
+Verify all 10 printed p.207 rationals; emit G2/G3 values.
+"""
+from fractions import Fraction as F
+from math import gcd
+
+def def51(n, M, d, V, s, i):
+    num = F(n - M[i]); den = F(n - M[s] - 1)
+    for j in range(i+1, s+1):
+        num *= (V[j]*(n - M[j]) - d[j])
+        den *= (V[j]*(n - M[j-1]) - d[j])
+    return 1 - num/den
+
+rows = [
+    # n, m, M2, V2, k, printed d2, printed d1, label
+    (16, 12, 13, 3, 1, F(-1), F(1,4), "(16,12) from (64,48)"),
+    (21, 14, 16, 2, 1, F(-1,2), F(7,6), "(21,14) V2=2 from (84,56) M2=64"),
+    (21, 14, 18, 5, 1, F(-1), F(1,3), "(21,14) V2=5 from (84,56) M2=72"),
+    (15, 10, 11, 3, 2, F(-1), F(1,2), "(15,10) V2=3 from (75,50)"),
+    (15, 10, 11, 2, 2, F(-1), F(4,3), "(15,10) V2=2 from (75,50)"),
+]
+print("== PHI: delta' = (k+1) * Def 5.1(3) on descended (s'=2) ==")
+ok = True
+for n,m,M2,V2,k,pd2,pd1,lab in rows:
+    d2 = gcd(n, m)
+    M = {1: -m, 2: M2}
+    d = {1: n, 2: d2, 3: gcd(d2, M2)}
+    V = {2: V2, 3: d[3]}
+    raw2, raw1 = def51(n,M,d,V,2,2), def51(n,M,d,V,2,1)
+    p2, p1 = (k+1)*raw2, (k+1)*raw1
+    match = (p2==pd2 and p1==pd1)
+    ok = ok and match
+    print("  %-44s k+1=%d  raw=(%s, %s)  Phi=(%s, %s)  printed=(%s, %s)  %s" %
+          (lab, k+1, raw2, raw1, p2, p1, pd2, pd1, "MATCH" if match else "FAIL"))
+print("  all 10 rationals MATCH:", ok)
+
+print("\n== G2 / G3 under Phi ==")
+for lab, n, m, M2, V2, k in [
+    ("G2", 15, 10, 4, 1, 4),
+    ("G3", 21, 14, 8, 1, 2),
+]:
+    d2 = gcd(n, m)
+    M = {1: -m, 2: M2}
+    d = {1: n, 2: d2, 3: gcd(d2, M2)}
+    V = {2: V2, 3: d[3]}
+    raw2, raw1 = def51(n,M,d,V,2,2), def51(n,M,d,V,2,1)
+    print("  %s (n,m,M2,V2,d2,k)=(%d,%d,%d,%d,%d,%d)  raw=(%s,%s)  Phi delta2'=%s  delta1'=%s" %
+          (lab, n,m,M2,V2,d2,k, raw2, raw1, (k+1)*raw2, (k+1)*raw1))
+    u, v = d2-V2, V2
+    print("      u=%d v=%d  u/(v+1)=%s  (majority-at-0 heuristic; not used for V2=1)" %
+          (u, v, F(u, v+1)))
+
+exec
+/bin/bash -lc "rg -n \"Φ|Phi|p\\.207|10/10|scope|PROMOT|delta'|k\\+1|Def 5\\.1|s'|s_eff\" /tmp/jc2-lane.gg5Ofk/inputs/descent-radii-grok46-20260903.md" in /home/ubuntu/jc2
+ succeeded in 0ms:
+32:3. **`OPEN[DESCENT-RADII]` closed.** The p.207 columns `δ_2', δ_1'` are
+34:   (Prop 5.1: `δ = min ord_t(τ_i−τ_j)`, `t = x^{-1}`), **not** Def 5.1(3)
+36:   **`(k+1)` times Def 5.1(3) on the descended data with `s' = 2`**,
+176:### 1.5 Descent table (p.207 degree/Jacobian columns)
+196:Def 5.1(3) p.179 is the closed form of this iteration. Def 4.1 (major
+212:### 3.1 What Def 5.1(3) does *not* do on the descended data
+214:Def 5.1(3) at `s' = 2` on `(n', m' = −M_1', M_2', V_2')` produces
+217:  row                    Def51(δ2, δ1)     printed p.207
+227:Jacobian exponent plus one: **`k+1`**, where `J_{γ,π} = c γ^k` is Prop
+228:6.3(3) / the p.207 Jacobian column (`X` ⇒ `k = 1`, `X^2` ⇒ `k = 2`).
+237:> **Φ.** Let `(n', m', M_2', V_2')` be the Prop 6.3-descended data of a
+238:> `u_s = 1` row, `d_2' = gcd(n', m')`, `s' = 2`, and let `k` be the
+242:> **`δ_i' = (k+1) · δ_i^{51}`**.
+246:`δ_s = −(k+1)/(n−M_s−1)` for `J = c x^k`, and the same factor multiplies
+247:the whole of Def 5.1(3). When `k = 0` this is Def 5.1(3) verbatim.
+249:**All 10 printed p.207 rationals MATCH** (`phi_delta.py`):
+252:  (16,12) from (64,48)              k+1=2  Phi=(−1,   1/4)  printed=(−1,   1/4)  MATCH
+253:  (21,14) V2=2 from (84,56) M2=64   k+1=2  Phi=(−1/2, 7/6)  printed=(−1/2, 7/6)  MATCH
+254:  (21,14) V2=5 from (84,56) M2=72   k+1=2  Phi=(−1,   1/3)  printed=(−1,   1/3)  MATCH
+255:  (15,10) V2=3 from (75,50)         k+1=3  Phi=(−1,   1/2)  printed=(−1,   1/2)  MATCH
+256:  (15,10) V2=2 from (75,50)         k+1=3  Phi=(−1,   4/3)  printed=(−1,   4/3)  MATCH
+260:rule” *is* this rule: those ratios are `k+1`. `PROVED-HERE` as the unique
+261:per-row constant multiple of Def 5.1(3) that reproduces p.207, the
+262:constant being the Lemma 2.1 `x`-degree `k+1`. `SOURCE-READ` for Def
+264:parameter-change of `δ`; it is Def 5.1(3) on the descended characteristic
+266:to `t = x^{-1}` by the factor `k+1`.
+312:clusters, not the general rule. Φ is.
+325:| (16,12) `V_2=3` | `−1` | `1/4` | **CONFIRMED-PRINTED** (Φ + measured) |
+326:| (21,14) `V_2=2` | `−1/2` | `7/6` | **CONFIRMED-PRINTED** (Φ; no printed shape to measure) |
+327:| (21,14) `V_2=5` | `−1` | `1/3` | **CONFIRMED-PRINTED** (Φ; majority-heuristic agrees) |
+328:| (15,10) `V_2=3` | `−1` | `1/2` | **CONFIRMED-PRINTED** (Φ + measured + 2,2,6 split) |
+329:| (15,10) `V_2=2` | `−1` | `4/3` | **CONFIRMED-PRINTED** (Φ; no printed shape to measure) |
+331:None CORRECTED, none UNDECIDED. The printed p.207 `δ` columns are
+332:geometric radii in `t = x^{-1}`; Φ is the evaluation of Def 5.1(3) on
+337:stands independently: Φ does not read the parent `δ` column, and it
+341:`(k+1)·`Def 5.1(3) on descended data with `s' = 2`. Not a reindexing,
+344:**(iii)** Rule Φ, tested on all five `u_s = 1` rows of p.207: exact.
+358:### 4.2 Φ on G2/G3
+361:  G2: Def51 raw = (−1/10, 1/4);   k+1 = 5;   δ2' = −1/2,  δ1' = 5/4
+362:  G3: Def51 raw = (−1/12, 3/8);   k+1 = 3;   δ2' = −1/4,  δ1' = 9/8
+448:* `OPEN[DESCENT-RADII]` — the 10 rationals of p.207's `δ_2', δ_1'`
+450:  Φ = `(k+1)·`Def 5.1(3) on the descended data. Four of ten additionally
+461:  statement (3) / p.207, `SOURCE-READ` this lane (the determinant in the
+466:  `δ_j'`, and `δ_j'` is Φ. This lane does not evaluate (8)–(13) on the
+477:witness (attainment); §3.2's Φ is an equality matching 10 printed values
+492:(typed OPEN would have been returned for those rows had Φ not hit them;
+493:Φ did). The G2 Newton-tight SATURATED-EMPTY is labelled a slice; the
+505:             + pos/neg controls PASSES; descent_table p.207 degree columns True
+507:             δ = min ord_t(τ_i−τ_j) (Prop 5.1).  Rule Φ:
+508:             δ_i' = (k+1) * Def5.1(3)(n',m',M2',V2'; s'=2),
+510:             10/10 printed p.207 rationals MATCH.  Measured on Moh's
+525:box/descentradii-drivers-20260903/phi_delta.py          Φ vs p.207; G2/G3 values
+
+exec
+/bin/bash -lc "sed -n '1,220p' /tmp/jc2-lane.gg5Ofk/inputs/descent-radii-grok46-20260903.md" in /home/ubuntu/jc2
+ succeeded in 0ms:
+# DESCENT-RADII — Grok 4.6 — 2026-09-03
+
+Lane `descent-radii-grok46-20260903`. Instrument + review of
+`xmodel/m2-descent-opus5-20260903.md`. Frozen inputs in
+`/tmp/jc2-lane.N4YhZu/inputs` verified SHA-256 (9/9 match) before any
+read; stop-on-mismatch did not trigger. Moh 1983 read from
+`refs/moh1983_jram340_configurations_of_roots.pdf` (sha256 `6c8847a8…`,
+matches), rendered at 300 dpi with `pdftoppm`; journal page N = PDF page
+N−139. Pages opened as images: **141, 145–146, 173–181, 196–198, 202,
+207–211**. Every Moh citation below is `SOURCE-READ` or typed
+`SOURCE-UNVERIFIED`.
+
+Discipline: no canonical ledger edited; `jc2-lean` not inspected; no
+`ideation-20260903T1015Z-*` file opened; no running lane's report opened.
+Drivers in `box/descentradii-drivers-20260903/`. Different-model gate:
+every charged driver was rerun from the frozen copies (or a byte-identical
+workdir copy, needed because `/tmp/jc2-lane.N4YhZu/inputs` is read-only
+and `autoscan2.py` imports `autoscan`).
+
+## 0. Headline
+
+1. **`OPEN[M2-ABOVE-M]` as charged remains REFUTED.** Different-model
+   rerun of `autoscan2.py` reproduces the 12/25 split and the printed
+   `n=4, m=2` witness. An independent sympy engine (not `etaexp.py`)
+   recomputes `J = 1/1024`, `deg = deg_y`, `f_{-2..3}`, and `M = [-2, 1]`
+   from the printed `f, g`. Residual claim confirmed: every witness fails
+   (4) or (6). §1.
+2. **`ERRATUM[APPII-GAMMA-B]` confirmed by a hand derivation.**
+   `A^2 ≡ (a_6 x+a_7)A − a_8 B (mod h)` and `A y ≡ −a_8` give B-coefficient
+   `−a_9^2 a_8`, not `−a_9^2 a_{10}`. Control2 + positive/negative
+   saturation controls rerun identically. §1.4.
+3. **`OPEN[DESCENT-RADII]` closed.** The p.207 columns `δ_2', δ_1'` are
+   the *geometric* logarithmic radii of the descended pair's major discs
+   (Prop 5.1: `δ = min ord_t(τ_i−τ_j)`, `t = x^{-1}`), **not** Def 5.1(3)
+   applied raw to the descended `(M_i', V_i')`. They equal
+   **`(k+1)` times Def 5.1(3) on the descended data with `s' = 2`**,
+   where `k` is the exponent in `J = c x^k`. This hits all **10** printed
+   rationals. Independent numerical Newton–Puiseux (two-point fit)
+   confirms the four values attached to Moh's own (15,10) shapes (5)–(6)
+   and (16,12) shapes of p.208: `(−1, 1/2)` and `(−1, 1/4)`. The p.210
+   split “three subdiscs containing 2, 2, 6 roots of `f`” is what the
+   numerics show. §2–§3.
+4. **G2/G3.** With `δ_1'` in hand, the Appendix-II order conditions cut
+   G2 to 14 free coefficients of `h` plus 27 of `β` plus `c` = **42
+   unknowns > 30**: typed **COUNTING-BOUND**. A Newton-tight 12-unknown
+   slice (one-point-at-infinity leading form `y^5 + a x^2 y` plus
+   y-polynomial plus Moh-pattern `β = p A + q y + r x + s`) saturates
+   empty at `c ≠ 0`; that is a *slice*, not a kill of G2. G3 similarly
+   COUNTING-BOUND. AUDIT delta 17(p) (provisional whole-tree emptying of
+   `D = 105`) is noted, not consumed. §4.
+
+## 1. Task (A) — different-model gate
+
+### 1.1 `etaexp.py` on the printed `n = 4` witness, checked from `f, g`
+
+Printed witness (autoscan2, seed 7717; rerun this lane, identical
+polynomials):
+
+```text
+n = deg g = deg_y g = 4 ,  m = deg f = deg_y f = 2 ,  K = gcd(n,m) = 2
+g = y^4 - 3 x y^3 + 27/8 x^2 y^2 - 27/16 x^3 y + 81/256 x^4
+    + 2 y^3 - 35/8 x y^2 + 51/16 x^2 y - 99/128 x^3
+    + 9/8 y^2 - 25/16 x y + 139/256 x^2 + 9/64 y - 25/256 x + 1/256
+f = y^2 - 3/2 x y + 9/16 x^2 + y - 11/16 x
+```
+
+Independent sympy (driver `hand_n4.py`; own unit-power recursion, does
+not import `etaexp` until a final cross-check):
+
+```text
+  g monic in y, deg_y g = 4,  total deg = 4
+  f monic in y, deg_y f = 2,  total deg = 2
+  J(f,g) = 1/1024          constant nonzero: True
+  f = (y - 3/4 x)^2 + y - 11/16 x    identity: True
+  eta-expansion f = eta^{-2} + sum_j f_j(x) eta^j ,  eta = g^{-1/4}:
+     f_{-2} = 1
+     f_{-1} = 0
+     f_0    = -1/16
+     f_1    = -1/128
+     f_2    = 1/256
+     f_3    = -3/4096 + x/4096          deg_x f_3 = 1  (Lemma 2.1)
+  f_i constant for all i < 3: True
+  M = [-2, 1] ,  d = [4, 2, 1]
+  M_2 = 1  <=  m = 2    ->  M_2 > m is FALSE
+  etaexp.py cross-check M,d : match True
+```
+
+Hand content of the Jacobian check: `f` is monic of `y`-degree 2 equal
+to total degree; `g` is monic of `y`-degree 4 equal to total degree;
+`J = f_x g_y − f_y g_x` expands (sympy, exact `Rational`) to the constant
+`1/1024 ≠ 0`. Completing the square in `f` is the identity above, so the
+pair is visibly an elementary-automorphism image in Moh's gauge. Lemma
+2.1's two clauses hold: `f_i` constant for `i < n−1 = 3`, and
+`deg_x f_3 = 1`. Characteristic data: `−2` does not divide `n = 4`, so
+`M_1 = −2`, `d_2 = 2`; next non-multiple of 2 is `f_1 ≠ 0`, so `M_2 = 1`,
+`d_3 = 1`. `PROVED-HERE / UNREVIEWED`.
+
+### 1.2 `autoscan2.py`: 12/25 split, rerun
+
+```text
+  total pairs 25 ; M_2 > m : 13 ; M_2 <= m : 12
+  witnesses with M_2 <= m and d_s >= 4 :
+      (8, 4, [-4, 3],     [8, 4, 1])         d_s = 4
+      (10,5, [-5, 4],     [10, 5, 1])        d_s = 5
+      (12,6, [-6, 5],     [12, 6, 1])        d_s = 6
+      (16,8, [-8, 4, 11], [16, 8, 4, 1])     d_s = 4
+```
+
+The twelve `M_2 ≤ m` rows are exactly the charged table
+`[2,2], [3,2], [4,2], [2,2,2], [5,2], [3,2,2], [2,3,2], [6,2],
+[2,2,2,2], [4,2,2], [2,4,2], [3,3,2]`. Fail-closed: every row entered
+only after `J` is a single nonzero constant monomial and `deg = deg_y`.
+**CONFIRMED** (different model, same seed 7717, same 12/25).
+
+### 1.3 Residual claim: the witnesses fail (4) or (6)
+
+Moh p.201 `SOURCE-READ`: (4) `{n, M_1, …, M_s}` is the part of the
+characteristic data less than `n−2`, i.e. `M_s = n−2`; (6) `3 ≤ s ≤ 5`
+and `d_s ≥ 4`.
+
+Every one of the twelve has `M_s ≠ n−2` (fails (4)). The four with
+`d_s ≥ 4` still have `s = 2` (the first three) or `s = 3` with
+`M_s = 11 ≠ 14` (the `[4,2,2]` row): so (6) holds for that one row and
+(4) fails. None satisfies (4) and (6) together. The census and the
+witnesses remain disjoint. **CONFIRMED**.
+
+**Gate on “`M_2 > m` for Keller pairs in Moh's gauge”: REFUTED.**
+Residual form (not refuted): whether `(1)–(13)` plus
+minimal-counterexample hypotheses imply `M_2 > m`. Bounded residue
+unchanged: 564 rows / 54 classes at `n ≤ 100` with `M_2 ≤ m`.
+
+### 1.4 `γ` by hand; control2 + controls_pm rerun
+
+Moh p.211 `SOURCE-READ`: `h = A y + a_8 = B y^2 + (a_6 x+a_7) y + a_8`,
+`β = a_9 A + a_{10} y + a_{11} x + a_{12}`. Directly from the two
+expressions for `h`:
+
+```text
+  A y + a_8 = h            =>   A y ≡ −a_8 (mod h)          (exact, not just mod)
+  A = B y + (a_6 x+a_7)
+  A^2 = A (B y + (a_6 x+a_7)) = B (A y) + (a_6 x+a_7) A
+      ≡ −a_8 B + (a_6 x+a_7) A   (mod h)
+```
+
+Write `L = a_{10} y + a_{11} x + a_{12}`, `M = a_{11} x + a_{12}`. Then
+`β^2 = a_9^2 A^2 + 2 a_9 A L + L^2`, and `2 a_9 A L = 2 a_9 a_{10}(A y) + 2 a_9 M A
+≡ −2 a_8 a_9 a_{10} + 2 a_9 M A`. Substituting the identity for `A^2`:
+
+```text
+  β^2 ≡ [a_9^2 (a_6 x+a_7) + 2 a_9 M] A  − a_9^2 a_8 B  + L^2 − 2 a_8 a_9 a_{10}
+      = (printed α) h  +  (audited γ)
+  α = a_9^2 B + 2 a_9 a_{10}                         reproduced True
+  γ has B-coefficient −a_9^2 a_8, not −a_9^2 a_{10}  reproduced True / False
+```
+
+`ERRATUM[APPII-GAMMA-B]` **CONFIRMED**. Driver `gamma_hand.py`.
+
+Rerun of `moh_1510_control2.py`: printed `γ` not reproduced; audited `γ`
+reproduced; Case 1 (`a_9 = 0`) contradiction reproduced; Case 2 audited
+equations `a_8 = 0`, `a_6 = −2 a_{11}/a_9`, `a_7 = −2 a_{12}/a_9`; five
+monomials of `c_2 − 3γ` saturate to `[1]` at `a_9 ≠ 0` (Rabinowitsch
+`T a_9 − 1`, lex, ring `Q[a_1..a_{12}, T]`). Rerun of
+`moh_1510_controls_pm.py`:
+
+```text
+  MAIN     : saturate all 5 at a9!=0 -> EMPTY  [1]
+  POSITIVE : drop (2,0) -> NON-TRIVIAL (5)   drop (1,1) -> NON-TRIVIAL (5)
+             drop (0,2) -> NON-TRIVIAL (5)   drop (1,0) -> EMPTY [1]
+             drop (0,1) -> EMPTY [1]
+  NEGATIVE : a9=1, a10=2, a11=3 -> NON-TRIVIAL (4 gens)  [expected]
+```
+
+The kill uses exactly `(2,0), (1,1), (0,2)`, matching the hand argument
+`a_9^3 = 3 a_{10}^2 = −3 a_{11}^2` and `a_{10} a_{11} = 0`. **PASSES**.
+
+### 1.5 Descent table (p.207 degree/Jacobian columns)
+
+Rerun `descent_table.py`: `n', m', M_2', V_2', Jac` reproduced on all
+four `u_s = 1` rows (`True`); D = 105 trio G3/G1/G2 as charged. Not
+re-litigated.
+
+## 2. Convention (SOURCE-READ)
+
+Intro p.141: the Puiseux field is `k⟪t⟫` with **`t = x^{-1}`**; roots
+`τ_i` of `g(t^{-1}, y) = 0` (and of `f`, and of `T_i^ψ`) live in this
+field. Remark p.146: `|σ_i − σ_j| = 2^{−ord(σ_i−σ_j)}`, and
+`M_{ij} = −log_2 W_{ij} = ord(τ_i − τ_j)`. Prop 5.1 p.173, the
+definition used for every radius in this report:
+
+> `δ_s = min { ord(τ_i − τ_j) : τ_i, τ_j roots of g(y) ∏_{i=1}^s T_i^ψ(y) = 0 }`.
+
+Prop 5.2 p.176: `δ_{s−1}` is the same min, restricted to those roots
+with `ord(τ_i − τ) > δ_s` (the logarithmic radius of the subdisc).
+Lemma 5.1 / Prop 5.1(2) p.174, for **constant** Jacobian:
+`δ_s = −1/(n − M_s − 1)`, which is `−1` precisely when `M_s = n−2`.
+Def 5.1(3) p.179 is the closed form of this iteration. Def 4.1 (major
+vs minor) is by root-count against the window `d_i/(n−M_i)`.
+
+**Convention used throughout:** `t = x^{-1}`; `δ(D) = min{ ord_t(τ_i−τ_j) :
+τ_i, τ_j ∈ D }`; top disc of a pair whose highest form has two distinct
+linear factors has `δ = −1`. Numerically, at large `|X|`,
+`δ_ij ∼ −log|y_i−y_j|/log|X|`, and a two-point fit removes the
+`log|C|/log|X|` bias. Rational reconstruction is by
+`Fraction.limit_denominator`.
+
+Prime marks: `δ_i', n', m', M_i', V_i', d_i', k` are *labels* for
+descended data, never derivatives. `f_i'(x)` in Lemma 2.1 *is* a
+derivative, as Moh p.151.
+
+## 3. Task (B) — measure `δ'`; close the 10 rationals
+
+### 3.1 What Def 5.1(3) does *not* do on the descended data
+
+Def 5.1(3) at `s' = 2` on `(n', m' = −M_1', M_2', V_2')` produces
+
+```text
+  row                    Def51(δ2, δ1)     printed p.207
+  (16,12) V2=3           (−1/2, 1/8)       (−1,   1/4)
+  (21,14) V2=2           (−1/4, 7/12)      (−1/2, 7/6)
+  (21,14) V2=5           (−1/2, 1/6)       (−1,   1/3)
+
+codex
+The earlier radii lane explicitly scoped Φ to descended data with `s'=2`; my audit will only promote beyond that where this replay actually evaluated the same closed formula after the p.174 drop.
+exec
+/bin/bash -lc "sed -n '212,272p' /tmp/jc2-lane.gg5Ofk/inputs/descent-radii-grok46-20260903.md && sed -n '448,512p' /tmp/jc2-lane.gg5Ofk/inputs/descent-radii-grok46-20260903.md" in /home/ubuntu/jc2
+ succeeded in 0ms:
+### 3.1 What Def 5.1(3) does *not* do on the descended data
+
+Def 5.1(3) at `s' = 2` on `(n', m' = −M_1', M_2', V_2')` produces
+
+```text
+  row                    Def51(δ2, δ1)     printed p.207
+  (16,12) V2=3           (−1/2, 1/8)       (−1,   1/4)
+  (21,14) V2=2           (−1/4, 7/12)      (−1/2, 7/6)
+  (21,14) V2=5           (−1/2, 1/6)       (−1,   1/3)
+  (15,10) V2=3           (−1/3, 1/6)       (−1,   1/2)
+  (15,10) V2=2           (−1/3, 4/9)       (−1,   4/3)
+```
+
+Ratios printed/Def51 are `2, 2, 2, 3, 3`. The charged lane recorded
+those ratios and stopped (“no single rule”). The single rule is the
+Jacobian exponent plus one: **`k+1`**, where `J_{γ,π} = c γ^k` is Prop
+6.3(3) / the p.207 Jacobian column (`X` ⇒ `k = 1`, `X^2` ⇒ `k = 2`).
+
+Shift `δ_i' = δ_{i+1}` of the parent matches (64,48) and fails (84,56).
+The parameter-change `δ_new = v_s − u_s δ_old` gives `11/4, 39/16` on
+(64,48), as charged. Fake `M_3' = n'−2` has no integer `V_3'` hitting
+any printed pair. All of that is reproduced (`candidates_delta.py`).
+
+### 3.2 The rule
+
+> **Φ.** Let `(n', m', M_2', V_2')` be the Prop 6.3-descended data of a
+> `u_s = 1` row, `d_2' = gcd(n', m')`, `s' = 2`, and let `k` be the
+> exponent in the descended Jacobian `c x^k`. Let `δ_i^{51}` be Def
+> 5.1(3) p.179 evaluated on this descended tuple. Then the geometric
+> logarithmic radii of the descended pair (in `t = x^{-1}`) are
+> **`δ_i' = (k+1) · δ_i^{51}`**.
+
+Equivalently, Lemma 5.1's `δ_s = −1/(n−M_s−1)` (the `1` is
+`deg_x f_{n−1}` of Lemma 2.1, constant Jacobian) becomes
+`δ_s = −(k+1)/(n−M_s−1)` for `J = c x^k`, and the same factor multiplies
+the whole of Def 5.1(3). When `k = 0` this is Def 5.1(3) verbatim.
+
+**All 10 printed p.207 rationals MATCH** (`phi_delta.py`):
+
+```text
+  (16,12) from (64,48)              k+1=2  Phi=(−1,   1/4)  printed=(−1,   1/4)  MATCH
+  (21,14) V2=2 from (84,56) M2=64   k+1=2  Phi=(−1/2, 7/6)  printed=(−1/2, 7/6)  MATCH
+  (21,14) V2=5 from (84,56) M2=72   k+1=2  Phi=(−1,   1/3)  printed=(−1,   1/3)  MATCH
+  (15,10) V2=3 from (75,50)         k+1=3  Phi=(−1,   1/2)  printed=(−1,   1/2)  MATCH
+  (15,10) V2=2 from (75,50)         k+1=3  Phi=(−1,   4/3)  printed=(−1,   4/3)  MATCH
+```
+
+Zero free parameters, ten hits. The charged “ratios 2,2,2,3, no single
+rule” *is* this rule: those ratios are `k+1`. `PROVED-HERE` as the unique
+per-row constant multiple of Def 5.1(3) that reproduces p.207, the
+constant being the Lemma 2.1 `x`-degree `k+1`. `SOURCE-READ` for Def
+5.1(3), Lemma 2.1, Prop 6.3(3). Not a reindexing and not a parent-to-child
+parameter-change of `δ`; it is Def 5.1(3) on the descended characteristic
+data, evaluated in the Jacobian-normalized parameter and converted back
+to `t = x^{-1}` by the factor `k+1`.
+
+### 3.3 Measurement on Moh's own shapes (route (b) of charged §4.3)
+
+**(15,10) shapes (5)–(6), p.211 `SOURCE-READ`.** Random admissible
+rational `a_1..a_{12}` (three draws: seeds 20260903, 17, 99).
+`f = h^2 + 2β`, `g = h^3 + 3β h + (3/2)α` with `α` from
+* `OPEN[DESCENT-RADII]` — the 10 rationals of p.207's `δ_2', δ_1'`
+  columns. All 10 CONFIRMED-PRINTED as geometric `ord_t` radii, equal to
+  Φ = `(k+1)·`Def 5.1(3) on the descended data. Four of ten additionally
+  measured on Moh's printed shapes. Rule tested on all five `u_s = 1`
+  rows.
+
+OPENS CONFIRMED / NOT REOPENED
+
+* `OPEN[M2-ABOVE-M]` — REFUTED as charged (Keller pairs in Moh's gauge);
+  residual `(1)–(13)` form untouched. Different-model gate: CONFIRMED.
+* `ERRATUM[APPII-GAMMA-B]` — CONFIRMED by the identities
+  `A^2 ≡ (a_6 x+a_7)A − a_8 B (mod h)`, `A y ≡ −a_8`.
+* `ERRATUM[PROP63-JAC-SIGN]` — not re-opened; p.198 last display vs
+  statement (3) / p.207, `SOURCE-READ` this lane (the determinant in the
+  proof is `−u_s/(b γ^{v_s−u_s−1})`, i.e. the reciprocal of statement
+  (3); the table's `X, X, X^2` against `v_s−u_s−1 = 1, 1, 2` shows the
+  statement is meant).
+* `OPEN[DESCENT-CLOSURE]` — (8)–(13) now unblocked: they are functions of
+  `δ_j'`, and `δ_j'` is Φ. This lane does not evaluate (8)–(13) on the
+  descended D = 105 rows (not charged); the residue is no longer the
+  radii.
+* `OPEN[MINOR-DICHOTOMY]`, `OPEN[DESCENT-LIFT]`, `OPEN[MOH-PROGRAM]` —
+  untouched. `OPEN[MOH-PROGRAM]` is not sharpened; Fable's 28-row cut
+  still rests on the refuted `M_2 > m` theorem, and 17(p) is provisional.
+
+**FALLACY-v2 check.** No exit price is asserted, so no `charge_basis`
+line. No cv-flag / place / series identification. No per-ray charge.
+`REPRESENTATIVE` vs `FULL_ACTUAL_EXIT` does not arise. No pole identity.
+**Floor/attainment:** §1.1 is an existence statement with a printed
+witness (attainment); §3.2's Φ is an equality matching 10 printed values
+and 4 measurements, not a floor; §3.3's two-point fits are equalities
+`D = 1/2, 1/4` to six digits against the printed numbers, with the
+`log|C|/log|X|` term fitted out (not dropped). **`sat()` wrapping:**
+every saturation declares the ring (`Q[a_1..a_{12},T]` or
+`Q[a,b_0..b_4,e,p,q,r,s,c,T]`), grevlex or lex, the Rabinowitsch
+generator, and both controls; the returned object is the Gröbner basis
+of that *component*. **Raw remainder degree:** divisions by `h` are
+`sympy.div` in `y` by a polynomial monic in `y` (verified); the identity
+`β^2 − α h − γ = 0` is checked. **Variable/ring map:** Prop 6.3 variables
+are `(γ, π)`; Appendix II reuses `(x, y)` for the descended pair and `γ`
+for a remainder polynomial — this report never identifies the two `γ`'s.
+**Prime label/derivative:** as §2. **Merge-free / target-arrival:** do
+not arise. No `D ≤ C(N)` inferred. Unconstrained leading-form draws that
+failed to match printed `δ_1'` were *not* used to correct the print
+(typed OPEN would have been returned for those rows had Φ not hit them;
+Φ did). The G2 Newton-tight SATURATED-EMPTY is labelled a slice; the
+wrong two-point form is labelled wrong. AUDIT 17(p) is cited as
+provisional and not consumed.
+
+## 6. Typed block
+
+```text
+LANE         descent-radii-grok46-20260903 (Grok 4.6)
+SOURCE       Moh 1983 at 300 dpi: pp.141, 145-146, 173-181, 196-198, 202, 207-211
+GATE         hashes 9/9; autoscan2 12/25 CONFIRMED; n=4 witness J=1/1024,
+             f_{-2..3}, M=[-2,1] independently reproduced; witnesses fail
+             (4) or (6); gamma erratum re-derived; control2 SATURATED-EMPTY
+             + pos/neg controls PASSES; descent_table p.207 degree columns True
+PROVED-HERE  OPEN[DESCENT-RADII] CLOSED.  Convention: t=x^{-1},
+             δ = min ord_t(τ_i−τ_j) (Prop 5.1).  Rule Φ:
+             δ_i' = (k+1) * Def5.1(3)(n',m',M2',V2'; s'=2),
+             k = exponent of the descended monomial Jacobian.
+             10/10 printed p.207 rationals MATCH.  Measured on Moh's
+             (15,10) (5)-(6) and (16,12) p.208: (−1, 1/2) and (−1, 1/4),
+             two-point fits to 1e-5; 2,2,6 split of f CONFIRMED.
+
+codex
+I have enough source and replay evidence. I’m checking whether the target report already exists, then I’ll write a bounded report with the required seal marker and no ledger changes.
+exec
+/bin/bash -lc "if [ -e xmodel/anchor-audit-gate-gpt55-20260903.md ]; then ls -l xmodel/anchor-audit-gate-gpt55-20260903.md && sed -n '1,80p' xmodel/anchor-audit-gate-gpt55-20260903.md; else printf 'report target does not exist\\n'; fi" in /home/ubuntu/jc2
+ succeeded in 0ms:
+report target does not exist
+
+exec
+/bin/bash -lc 'git status --short -- xmodel/anchor-audit-gate-gpt55-20260903.md box/anchor-gate-20260903' in /home/ubuntu/jc2
+ succeeded in 0ms:
+?? box/anchor-gate-20260903/
+
+exec
+/bin/bash -lc 'find box/anchor-gate-20260903 -maxdepth 2 -type f | sort' in /home/ubuntu/jc2
+ succeeded in 0ms:
+box/anchor-gate-20260903/__pycache__/full_tree_partition.cpython-312.pyc
+box/anchor-gate-20260903/__pycache__/moh_skeleton_full.cpython-312.pyc
+box/anchor-gate-20260903/__pycache__/phi_delta.cpython-312.pyc
+box/anchor-gate-20260903/corrected-pages/moh-printed-p151-12.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-34.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-35.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-36.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-37.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-38.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-39.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-40.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-57.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-58.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-59.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p199-60.png
+box/anchor-gate-20260903/corrected-pages/moh-printed-p207-68.png
+box/anchor-gate-20260903/full_tree_partition.py
+box/anchor-gate-20260903/input-manifest.sha256
+box/anchor-gate-20260903/measure_anchor.json
+box/anchor-gate-20260903/measure_anchor.py
+box/anchor-gate-20260903/measure_anchor.stdout
+box/anchor-gate-20260903/moh-pages/moh-p173-179-15.png
+box/anchor-gate-20260903/moh-pages/moh-p173-179-16.png
+box/anchor-gate-20260903/moh-pages/moh-p173-179-17.png
+box/anchor-gate-20260903/moh-pages/moh-p173-179-18.png
+box/anchor-gate-20260903/moh-pages/moh-p173-179-19.png
+box/anchor-gate-20260903/moh-pages/moh-p173-179-20.png
+box/anchor-gate-20260903/moh-pages/moh-p173-179-21.png
+box/anchor-gate-20260903/moh-pages/moh-p196-198-38.png
+box/anchor-gate-20260903/moh-pages/moh-p196-198-39.png
+box/anchor-gate-20260903/moh-pages/moh-p196-198-40.png
+box/anchor-gate-20260903/moh-pages/moh-p207-49.png
+box/anchor-gate-20260903/moh_skeleton_full.py
+box/anchor-gate-20260903/phi_delta.py
+
+codex
+I’m also copying the frozen `anchor_zero_rows.txt` into the output driver box so the row list cited by the report is local to this gate.
+exec
+/bin/bash -lc 'cp /tmp/jc2-lane.gg5Ofk/inputs/anchor_zero_rows.txt box/anchor-gate-20260903/ && ls -l box/anchor-gate-20260903/anchor_zero_rows.txt' in /home/ubuntu/jc2
+ succeeded in 0ms:
+-r-------- 1 ubuntu ubuntu 8954 Sep  3 12:46 box/anchor-gate-20260903/anchor_zero_rows.txt
+
+codex
+Before writing the final report, I’m measuring the reviewed `k` and height ranges directly from the replay data so the promotion scope is concrete instead of inferred.
+exec
+/bin/bash -lc "python3 - <<'PY'
+import sys
+from collections import Counter
+from pathlib import Path
+HERE=Path('box/anchor-gate-20260903').resolve(); sys.path.insert(0,str(HERE))
+import moh_skeleton_full as M, full_tree_partition as T
+
+def u_s_of(S): return S.d[S.s]-S.V[S.s]
+def descend(S):
+    ds=S.d[S.s]; us=u_s_of(S); return {'raw_s':S.s-1,'k':S.V[S.s]-us-1,'ds':ds,'V_s':S.V[S.s],'n':S.n,'m':S.m,'M':[S.M[i] for i in range(1,S.s+1)],'V':{i:S.V[i] for i in range(2,S.s+1)}}
+def collect(nmax=None, only_n=None):
+    if only_n: ns=[only_n]
+    else: ns=range(4,nmax+1)
+    return [M.Skel(n,m,list(Ms),V) for n in ns for m,Ms,V in M.census(n,Kmin=2,full=True)]
+for label, rows in [('n<=100',collect(nmax=100)),('n=108',collect(only_n=108))]:
+    surv=[S for S in rows if T.full_tree_ode_ok(S)]
+    desc=[descend(S) for S in surv if u_s_of(S)==1]
+    print(label, 'count',len(desc), 'k_range', (min(d['k'] for d in desc), max(d['k'] for d in desc)), 'k_counts', dict(sorted(Counter(d['k'] for d in desc).items())))
+    print(label, 'raw_s_range',(min(d['raw_s'] for d in desc), max(d['raw_s'] for d in desc)), 'raw_s_counts', dict(sorted(Counter(d['raw_s'] for d in desc).items())))
+PY" in /home/ubuntu/jc2
+ succeeded in 341ms:
+n<=100 count 57 k_range (1, 5) k_counts {1: 33, 2: 14, 3: 4, 4: 3, 5: 3}
+n<=100 raw_s_range (2, 4) raw_s_counts {2: 5, 3: 37, 4: 15}
+n=108 count 19 k_range (1, 6) k_counts {1: 4, 3: 11, 6: 4}
+n=108 raw_s_range (3, 3) raw_s_counts {3: 19}
+
+codex
+There is one reviewed row with effective height 4 after the drop, so a scope claim of only `s_eff <= 3` would be too narrow for “57/57”. I’m identifying that row for the report footnote.
+exec
+/bin/bash -lc "python3 - <<'PY'
+import sys
+from pathlib import Path
+HERE=Path('box/anchor-gate-20260903').resolve(); sys.path.insert(0,str(HERE))
+import moh_skeleton_full as M, full_tree_partition as T
+
+def u_s_of(S): return S.d[S.s]-S.V[S.s]
+def descend(S):
+    ds=S.d[S.s]; s2=S.s-1
+    D={'n':S.n//ds,'m':S.m//ds,'s':s2,'M':{i:S.M[i]//ds for i in range(1,s2+1)},'d':{i:S.d[i]//ds for i in range(1,s2+2)},'V':{i:S.V[i] for i in range(2,s2+1)},'k':S.V[S.s]-u_s_of(S)-1}
+    D['V'][s2+1]=D['d'][s2+1]
+    return D
+def trunc(D):
+    n,s,M,V=D['n'],D['s'],dict(D['M']),dict(D['V']); d=D['d']; dropped=0
+    while s>=1 and M.get(s)==n-1:
+        dropped+=1; s-=1; M.pop(s+1,None); V.pop(s+1,None)
+        if (s+1) in d and s>=1: V[s+1]=d[s+1]
+    return s,dropped,M,V
+for n in range(4,101):
+ for m,Ms,V in M.census(n,Kmin=2,full=True):
+  S=M.Skel(n,m,list(Ms),V)
+  if T.full_tree_ode_ok(S) and u_s_of(S)==1:
+   D=descend(S); s_eff,dropped,M2,V2=trunc(D)
+   if s_eff==4:
+    print('parent',S.n,S.m,'s',S.s,'M',[S.M[i] for i in range(1,S.s+1)],'V',{i:S.V[i] for i in range(2,S.s+1)},'d',[S.d[i] for i in range(1,S.s+2)],'ds',S.d[S.s],'k',D['k'])
+    print('child',D['n'],D['m'],'raw_s',D['s'],'Mraw',[D['M'][i] for i in range(1,D['s']+1)],'s_eff',s_eff,'drop',dropped,'Meff',[M2[i] for i in range(1,s_eff+1)])
+PY" in /home/ubuntu/jc2
+ succeeded in 252ms:
+parent 96 64 s 5 M [-64, -48, -8, 20, 94] V {2: 1, 3: 1, 4: 6, 5: 3} d [96, 32, 16, 8, 4, 2] ds 4 k 1
+child 24 16 raw_s 4 Mraw [-16, -12, -2, 5] s_eff 4 drop 0 Meff [-16, -12, -2, 5]
+
+codex
+I’m writing the report now. It will mark each charged item as confirmed, gap, or refuted/qualified, and it will make the promotion scope explicit instead of treating the p.207 control as a universal theorem.
+apply patch
+patch: completed
+/home/ubuntu/jc2/xmodel/anchor-audit-gate-gpt55-20260903.md
+diff --git a/xmodel/anchor-audit-gate-gpt55-20260903.md b/xmodel/anchor-audit-gate-gpt55-20260903.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c4e694a0cd01a157296fec72e0f3394ab007934
+--- /dev/null
++++ b/xmodel/anchor-audit-gate-gpt55-20260903.md
+@@ -0,0 +1,260 @@
++# ANCHOR-AUDIT GATE -- GPT-5.5 -- 2026-09-03
++
++Lane target: `OPEN[DESCENT-ANCHOR]` hostile gate against
++`xmodel/descent-anchor-audit-grok46-20260903.md` sections 0-5.  No ledger
++edits.  `jc2-lean` was not inspected.  I used only the frozen inputs in
++`/tmp/jc2-lane.gg5Ofk/inputs` for the replay, plus the charged Opus
++submission H1/section 13.
++
++## 0. Mechanical Input Gate
++
++The checksum manifest was generated mechanically from
++`xmodel/anchor-audit-gate-gpt55-20260903.run.v2` with `awk` over the
++`charged_input_<i>_sha256=` and `charged_input_<i>_basename=` lines, then
++checked with `sha256sum -c`.
++
++Result: **11/11 OK**.  The generated manifest is
++`box/anchor-gate-20260903/input-manifest.sha256`.
++
++Frozen drivers copied for local replay:
++
++```text
++box/anchor-gate-20260903/measure_anchor.py
++box/anchor-gate-20260903/phi_delta.py
++box/anchor-gate-20260903/moh_skeleton_full.py
++box/anchor-gate-20260903/full_tree_partition.py
++box/anchor-gate-20260903/anchor_zero_rows.txt
++```
++
++Replay artifacts:
++
++```text
++box/anchor-gate-20260903/measure_anchor.stdout
++box/anchor-gate-20260903/measure_anchor.json
++```
++
++The generated `measure_anchor.json` is byte-identical to the frozen
++`/tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.json`.
++
++## 1. Moh Page Images Opened
++
++The PDF has 74 pages.  The first attempted offset was wrong; opening that
++image showed PDF page 15 is printed p.154.  The corrected mapping is:
++printed page = PDF page + 139.
++
++Required page images opened from the charged PDF, rendered with
++`pdftoppm -r 200 -png`:
++
++```text
++p.173  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-34.png
++p.174  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-35.png
++p.175  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-36.png
++p.176  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-37.png
++p.177  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-38.png
++p.178  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-39.png
++p.179  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-40.png
++p.196  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-57.png
++p.197  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-58.png
++p.198  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-59.png
++```
++
++Supporting images opened because the claims depend on them:
++
++```text
++p.151  box/anchor-gate-20260903/corrected-pages/moh-printed-p151-12.png
++p.199  box/anchor-gate-20260903/corrected-pages/moh-printed-p199-60.png
++p.207  box/anchor-gate-20260903/corrected-pages/moh-printed-p207-68.png
++```
++
++## 2. Source Check
++
++**Def. 5.1(3), p.179: CONFIRMED.**  The printed denominator contains the
++factor `n - M_s - 1`.  In ASCII transcription:
++
++```text
++delta_i = 1 - (n - M_i) prod_{j=i+1..s}(V_j(n-M_j)-d_j)
++              / ((n - M_s - 1)
++                 prod_{j=i+1..s}(V_j(n-M_{j-1})-d_j)).
++```
++
++The same page, Def. 5.1(2), also prints `V_{s+1}=d_{s+1}` for a tower
++`D_s superset ... superset D_r`.  Thus `V_{top+1}=d_{top+1}` is Moh's
++convention for a Def. 5.1 tower.  Applying it after truncating a dictionary
++is the lane's reconstruction of that Moh convention on the effective tuple;
++Moh does not print a separate "truncated dictionary" algorithm.
++
++**p.174 drop: CONFIRMED as Moh's effective-pair convention; GAP for a
++separate monomial-Jacobian theorem.**  The p.174 Definition-Remark says
++that if `M_h = n - 1`, it is dropped from consideration, and the effective
++characteristic pairs exclude that `M_h`; the last effective characteristic
++pair is denoted `M_s`.  The proposition statement around it is phrased for
++the root configuration of `g` and the approximate-root factors, not as a
++special Appendix-II child algorithm.
++
++For this gate I read the print as follows: once a descended tuple is accepted
++as characteristic data, p.174 supplies the normalization `drop M_h=n-1`.
++What is **not** supplied by p.174 or Lemma 2.1 is a fresh theorem that every
++monomial-Jacobian pair `J=c gamma^k` must have that terminal entry.
++
++**Lemma 2.1, p.151: GAP for `J=c gamma^k`.**  The printed lemma states an
++iff for `J_{x,y}(f,g)=c`, a nonzero constant.  Its note says that, if the
++Jacobian condition is satisfied, the `M_i` terminate at `n-1`.  The print
++does not state the same lemma for `J=c gamma^k`.  Therefore the sentence
++"Lemma 2.1 forces every Jacobian pair to have `M_h=n-1`" is confirmed only
++when "Jacobian pair" means the constant-J condition used in Lemma 2.1.  It
++is a gap if extended to the descended monomial-Jacobian child.
++
++**Prop. 5.1(1), pp.173-174: CONFIRMED, with the same scope caution.**  When
++`M_h=n-1`, the printed radius is finite:
++`delta_h=delta_{h-1}=-1/(n-M_{h-1}-1)`.  The construction uses the
++`h-1` disc containing all roots and applies Prop. 4.6 at `r=h-1`.  The
++naive expression `-1/(n-M_h-1)` is not the applicable formula at
++`M_h=n-1`.
++
++**Prop. 6.3/6.4, pp.197-199: CONFIRMED.**  The stated Prop. 6.3 hypotheses
++are `g` monic in `y`, `deg g = deg_y g = n > 1`, `delta_s=-1`, and the
++minor-disc bound `delta^*_{s-1} >= v_s/u_s`.  Prop. 6.4 assumes the same
++degree/monicity and `delta_s=-1, u_s=1`, then supplies that bound.  Neither
++proposition states a hypothesis involving the child's anchor
++`n' - M'_{s'} - 1`.
++
++## 3. Replay Results
++
++Command run:
++
++```text
++python3 box/anchor-gate-20260903/measure_anchor.py
++```
++
++The replay reproduces the p.207 control and the negative control:
++
++```text
++10/10 p.207 rationals MATCH: True
++(15,10), V2=3: Def51 delta_2 = -1/3
++drop-factor control: delta_2 = -3
++drop-factor BREAKS the match: True
++```
++
++p.207 itself has the five `u_s=1` transformed rows:
++`(16,12)`, two `(21,14)` rows, and two `(15,10)` rows.  The replay reports
++`drop=0` on all five, so `Phi_eff` is a no-op on that printed control set.
++
++Counts:
++
++```text
++n <= 100:
++  (1)-(13) rows                         658
++  C_FULL_TREE_ODE survivors              58
++  u_s=1 descendable                      57
++  u_s>1 residue                           1  = (99,66)
++  anchor-zero before p.174 drop          38
++  evaluable as charged before drop       19
++  still undefined after p.174 drop        0
++  evaluable after Phi_eff                57
++
++n = 108:
++  (1)-(13) rows                         217
++  C_FULL_TREE survivors                  21
++  C_FULL_TREE_ODE survivors              20
++  u_s=1 descendable                      19
++  u_s>1 residue                           1  = (108,72), M=[-72,81,106]
++  anchor-zero before p.174 drop          12
++  evaluable as charged before drop        7
++  still undefined after p.174 drop        0
++  evaluable after Phi_eff                19
++```
++
++Height distribution needs one qualification.  For all descendable rows in
++this replay:
++
++```text
++n <= 100, after drop: s_eff counts {2: 29, 3: 27, 4: 1}
++n = 108, after drop: s_eff counts {2: 12, 3: 7}
++```
++
++The charged report's `29/57` for `s_eff=2` is confirmed.  The `14/57` line
++is confirmed only as the anchor-zero parent-`s=5` block: among the 38
++anchor-zero rows, the post-drop split is `{2:24, 3:14}`.  If read as the
++complete all-descendable `s_eff=3` count, it is refuted by the replay:
++there are 27 such rows, plus one `s_eff=4` row
++`(96,64), M=[-64,-48,-8,20,94], V={2:1,3:1,4:6,5:3}`.
++
++## 4. Item Verdicts
++
++**(a) CONFIRMED.**  Def. 5.1(3) as printed at p.179 carries
++`1/(n-M_s-1)`.
++
++**(b) CONFIRMED/GAP.**  Confirmed: p.174 drops a terminal `M_h=n-1` from
++the effective characteristic sequence; Prop. 5.1(1) gives a finite radius
++using `M_{h-1}`.  Gap: Lemma 2.1's printed terminal statement is for
++`J=c` nonzero constant, not for the descended `J=c gamma^k` child.  Do not
++fill that extension by analogy.
++
++**(c) CONFIRMED.**  Prop. 6.3/6.4 hypotheses never mention the child's
++anchor.  Therefore the 38 and 12 anchor-zero rows are not killed by those
++proposition headers.  Their obstruction is only the later attempt to feed an
++untruncated child with `M'_{s'}=n'-1` into Def. 5.1(3).
++
++**(d) CONFIRMED, with source split.**  `Phi_eff` is:
++after the Prop. 6.3 image, drop a terminal `M'_{s'}=n'-1`, set the new
++`V_{s*+1}=d_{s*+1}`, then evaluate `(k+1)*Def. 5.1(3)` on the effective
++tuple.  The drop and `V_{top+1}=d_{top+1}` are Moh conventions for effective
++Def. 5.1 data; the multiplication by `k+1` is the p.207-controlled
++monomial-Jacobian radii conversion from the charged descent-radii driver.
++All ten p.207 rationals match, and dropping the printed factor breaks the
++`(15,10)` control.
++
++**(e) CONFIRMED except the literal all-row height wording.**  The headline
++counts reproduce exactly: `658 -> 58`, `57` descendable, `38` anchor-zero,
++`0` undefined after drop, residue `1/58=(99,66)`; and `217 -> 21 -> 20`,
++`19` descendable, `12` anchor-zero, `0` undefined after drop, residue
++`1/20`.  `s_eff=2` on `29/57` and `12/19` is confirmed.  Exact all-row
++`s_eff=3` at `n<=100` is `27/57`, not `14/57`; `14` is the anchor-zero
++subblock with parent height 5.
++
++## 5. Promotion Scope
++
++Verdict: **PROMOTE-QUALIFIED** for `OPEN[DESCENT-ANCHOR]` as the descent
++radii rule on the reviewed finite descent gate.  Do not promote it as a
++standalone theorem for arbitrary monomial-Jacobian pairs.
++
++Producer scope:
++
++```text
++rule:          delta_i' = (k+1) * Def5.1(3) on descended data
++producer:      descent-radii-grok46 phi_delta.py / p.207 controls
++printed scope: p.207 rows with raw s' = 2
++printed k:     k = 1 for Jacobian X, k = 2 for Jacobian X^2
++controls:      10/10 printed rationals; (15,10) drop-factor negative control
++```
++
++Reviewed scope in this gate:
++
++```text
++rule:          Phi_eff after p.174 terminal-drop normalization
++datasets:      C_FULL_TREE_ODE n<=100 and n=108 frozen drivers
++rows:          57 + 19 descendable u_s=1 rows
++raw height:    s' <= 4
++effective ht:  s_eff <= 4
++k observed:    k in {1,2,3,4,5,6}, hence k >= 1 in this reviewed descent set
++defined:       76/76 after the drop
++anchor repair: 50/50 anchor-zero rows repaired, 0 still undefined
++```
++
++So the safe campaign statement is: `Phi_eff` is promoted for Prop. 6.3/6.4
++`u_s=1` descendants in the reviewed finite driver universe, with raw
++`s'<=4`, effective `s_eff<=4`, and `k>=1` as observed.  The formal extension
++"Lemma 2.1 also forces monomial-Jacobian children to terminate at `n-1`" is
++not sourced by the opened print and remains a typed gap.
++
++## 6. FALLACY-v2 Check
++
++No exit-price assertion is made, so no `charge_basis` line is emitted.  No
++cv flag/place/series identification is used.  No floor is promoted to
++attainment: the counts are exact finite enumerations from the frozen driver,
++and the p.207 rationals are direct controls.  The prime marks in `delta_i'`,
++`n'`, and `M_i'` are labels; Lemma 2.1's `f_i'(x)` is the derivative in the
++printed proof.  The monomial-Jacobian extension is left as a GAP rather than
++filled by analogy.
++
++<!-- BODY-END -->
+
+diff --git a/xmodel/anchor-audit-gate-gpt55-20260903.md b/xmodel/anchor-audit-gate-gpt55-20260903.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c4e694a0cd01a157296fec72e0f3394ab007934
+--- /dev/null
++++ b/xmodel/anchor-audit-gate-gpt55-20260903.md
+@@ -0,0 +1,260 @@
++# ANCHOR-AUDIT GATE -- GPT-5.5 -- 2026-09-03
++
++Lane target: `OPEN[DESCENT-ANCHOR]` hostile gate against
++`xmodel/descent-anchor-audit-grok46-20260903.md` sections 0-5.  No ledger
++edits.  `jc2-lean` was not inspected.  I used only the frozen inputs in
++`/tmp/jc2-lane.gg5Ofk/inputs` for the replay, plus the charged Opus
++submission H1/section 13.
++
++## 0. Mechanical Input Gate
++
++The checksum manifest was generated mechanically from
++`xmodel/anchor-audit-gate-gpt55-20260903.run.v2` with `awk` over the
++`charged_input_<i>_sha256=` and `charged_input_<i>_basename=` lines, then
++checked with `sha256sum -c`.
++
++Result: **11/11 OK**.  The generated manifest is
++`box/anchor-gate-20260903/input-manifest.sha256`.
++
++Frozen drivers copied for local replay:
++
++```text
++box/anchor-gate-20260903/measure_anchor.py
++box/anchor-gate-20260903/phi_delta.py
++box/anchor-gate-20260903/moh_skeleton_full.py
++box/anchor-gate-20260903/full_tree_partition.py
++box/anchor-gate-20260903/anchor_zero_rows.txt
++```
++
++Replay artifacts:
++
++```text
++box/anchor-gate-20260903/measure_anchor.stdout
++box/anchor-gate-20260903/measure_anchor.json
++```
++
++The generated `measure_anchor.json` is byte-identical to the frozen
++`/tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.json`.
++
++## 1. Moh Page Images Opened
++
++The PDF has 74 pages.  The first attempted offset was wrong; opening that
++image showed PDF page 15 is printed p.154.  The corrected mapping is:
++printed page = PDF page + 139.
++
++Required page images opened from the charged PDF, rendered with
++`pdftoppm -r 200 -png`:
++
++```text
++p.173  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-34.png
++p.174  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-35.png
++p.175  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-36.png
++p.176  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-37.png
++p.177  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-38.png
++p.178  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-39.png
++p.179  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-40.png
++p.196  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-57.png
++p.197  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-58.png
++p.198  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-59.png
++```
++
++Supporting images opened because the claims depend on them:
++
++```text
++p.151  box/anchor-gate-20260903/corrected-pages/moh-printed-p151-12.png
++p.199  box/anchor-gate-20260903/corrected-pages/moh-printed-p199-60.png
++p.207  box/anchor-gate-20260903/corrected-pages/moh-printed-p207-68.png
++```
++
++## 2. Source Check
++
++**Def. 5.1(3), p.179: CONFIRMED.**  The printed denominator contains the
++factor `n - M_s - 1`.  In ASCII transcription:
++
++```text
++delta_i = 1 - (n - M_i) prod_{j=i+1..s}(V_j(n-M_j)-d_j)
++              / ((n - M_s - 1)
++                 prod_{j=i+1..s}(V_j(n-M_{j-1})-d_j)).
++```
++
++The same page, Def. 5.1(2), also prints `V_{s+1}=d_{s+1}` for a tower
++`D_s superset ... superset D_r`.  Thus `V_{top+1}=d_{top+1}` is Moh's
++convention for a Def. 5.1 tower.  Applying it after truncating a dictionary
++is the lane's reconstruction of that Moh convention on the effective tuple;
++Moh does not print a separate "truncated dictionary" algorithm.
++
++**p.174 drop: CONFIRMED as Moh's effective-pair convention; GAP for a
++separate monomial-Jacobian theorem.**  The p.174 Definition-Remark says
++that if `M_h = n - 1`, it is dropped from consideration, and the effective
++characteristic pairs exclude that `M_h`; the last effective characteristic
++pair is denoted `M_s`.  The proposition statement around it is phrased for
++the root configuration of `g` and the approximate-root factors, not as a
++special Appendix-II child algorithm.
++
++For this gate I read the print as follows: once a descended tuple is accepted
++as characteristic data, p.174 supplies the normalization `drop M_h=n-1`.
++What is **not** supplied by p.174 or Lemma 2.1 is a fresh theorem that every
++monomial-Jacobian pair `J=c gamma^k` must have that terminal entry.
++
++**Lemma 2.1, p.151: GAP for `J=c gamma^k`.**  The printed lemma states an
++iff for `J_{x,y}(f,g)=c`, a nonzero constant.  Its note says that, if the
++Jacobian condition is satisfied, the `M_i` terminate at `n-1`.  The print
++does not state the same lemma for `J=c gamma^k`.  Therefore the sentence
++"Lemma 2.1 forces every Jacobian pair to have `M_h=n-1`" is confirmed only
++when "Jacobian pair" means the constant-J condition used in Lemma 2.1.  It
++is a gap if extended to the descended monomial-Jacobian child.
++
++**Prop. 5.1(1), pp.173-174: CONFIRMED, with the same scope caution.**  When
++`M_h=n-1`, the printed radius is finite:
++`delta_h=delta_{h-1}=-1/(n-M_{h-1}-1)`.  The construction uses the
++`h-1` disc containing all roots and applies Prop. 4.6 at `r=h-1`.  The
++naive expression `-1/(n-M_h-1)` is not the applicable formula at
++`M_h=n-1`.
++
++**Prop. 6.3/6.4, pp.197-199: CONFIRMED.**  The stated Prop. 6.3 hypotheses
++are `g` monic in `y`, `deg g = deg_y g = n > 1`, `delta_s=-1`, and the
++minor-disc bound `delta^*_{s-1} >= v_s/u_s`.  Prop. 6.4 assumes the same
++degree/monicity and `delta_s=-1, u_s=1`, then supplies that bound.  Neither
++proposition states a hypothesis involving the child's anchor
++`n' - M'_{s'} - 1`.
++
++## 3. Replay Results
++
++Command run:
++
++```text
++python3 box/anchor-gate-20260903/measure_anchor.py
++```
++
++The replay reproduces the p.207 control and the negative control:
++
++```text
++10/10 p.207 rationals MATCH: True
++(15,10), V2=3: Def51 delta_2 = -1/3
++drop-factor control: delta_2 = -3
++drop-factor BREAKS the match: True
++```
++
++p.207 itself has the five `u_s=1` transformed rows:
++`(16,12)`, two `(21,14)` rows, and two `(15,10)` rows.  The replay reports
++`drop=0` on all five, so `Phi_eff` is a no-op on that printed control set.
++
++Counts:
++
++```text
++n <= 100:
++  (1)-(13) rows                         658
++  C_FULL_TREE_ODE survivors              58
++  u_s=1 descendable                      57
++  u_s>1 residue                           1  = (99,66)
++  anchor-zero before p.174 drop          38
++  evaluable as charged before drop       19
++  still undefined after p.174 drop        0
++  evaluable after Phi_eff                57
++
++n = 108:
++  (1)-(13) rows                         217
++  C_FULL_TREE survivors                  21
++  C_FULL_TREE_ODE survivors              20
++  u_s=1 descendable                      19
++  u_s>1 residue                           1  = (108,72), M=[-72,81,106]
++  anchor-zero before p.174 drop          12
++  evaluable as charged before drop        7
++  still undefined after p.174 drop        0
++  evaluable after Phi_eff                19
++```
++
++Height distribution needs one qualification.  For all descendable rows in
++this replay:
++
++```text
++n <= 100, after drop: s_eff counts {2: 29, 3: 27, 4: 1}
++n = 108, after drop: s_eff counts {2: 12, 3: 7}
++```
++
++The charged report's `29/57` for `s_eff=2` is confirmed.  The `14/57` line
++is confirmed only as the anchor-zero parent-`s=5` block: among the 38
++anchor-zero rows, the post-drop split is `{2:24, 3:14}`.  If read as the
++complete all-descendable `s_eff=3` count, it is refuted by the replay:
++there are 27 such rows, plus one `s_eff=4` row
++`(96,64), M=[-64,-48,-8,20,94], V={2:1,3:1,4:6,5:3}`.
++
++## 4. Item Verdicts
++
++**(a) CONFIRMED.**  Def. 5.1(3) as printed at p.179 carries
++`1/(n-M_s-1)`.
++
++**(b) CONFIRMED/GAP.**  Confirmed: p.174 drops a terminal `M_h=n-1` from
++the effective characteristic sequence; Prop. 5.1(1) gives a finite radius
++using `M_{h-1}`.  Gap: Lemma 2.1's printed terminal statement is for
++`J=c` nonzero constant, not for the descended `J=c gamma^k` child.  Do not
++fill that extension by analogy.
++
++**(c) CONFIRMED.**  Prop. 6.3/6.4 hypotheses never mention the child's
++anchor.  Therefore the 38 and 12 anchor-zero rows are not killed by those
++proposition headers.  Their obstruction is only the later attempt to feed an
++untruncated child with `M'_{s'}=n'-1` into Def. 5.1(3).
++
++**(d) CONFIRMED, with source split.**  `Phi_eff` is:
++after the Prop. 6.3 image, drop a terminal `M'_{s'}=n'-1`, set the new
++`V_{s*+1}=d_{s*+1}`, then evaluate `(k+1)*Def. 5.1(3)` on the effective
++tuple.  The drop and `V_{top+1}=d_{top+1}` are Moh conventions for effective
++Def. 5.1 data; the multiplication by `k+1` is the p.207-controlled
++monomial-Jacobian radii conversion from the charged descent-radii driver.
++All ten p.207 rationals match, and dropping the printed factor breaks the
++`(15,10)` control.
++
++**(e) CONFIRMED except the literal all-row height wording.**  The headline
++counts reproduce exactly: `658 -> 58`, `57` descendable, `38` anchor-zero,
++`0` undefined after drop, residue `1/58=(99,66)`; and `217 -> 21 -> 20`,
++`19` descendable, `12` anchor-zero, `0` undefined after drop, residue
++`1/20`.  `s_eff=2` on `29/57` and `12/19` is confirmed.  Exact all-row
++`s_eff=3` at `n<=100` is `27/57`, not `14/57`; `14` is the anchor-zero
++subblock with parent height 5.
++
++## 5. Promotion Scope
++
++Verdict: **PROMOTE-QUALIFIED** for `OPEN[DESCENT-ANCHOR]` as the descent
++radii rule on the reviewed finite descent gate.  Do not promote it as a
++standalone theorem for arbitrary monomial-Jacobian pairs.
++
++Producer scope:
++
++```text
++rule:          delta_i' = (k+1) * Def5.1(3) on descended data
++producer:      descent-radii-grok46 phi_delta.py / p.207 controls
++printed scope: p.207 rows with raw s' = 2
++printed k:     k = 1 for Jacobian X, k = 2 for Jacobian X^2
++controls:      10/10 printed rationals; (15,10) drop-factor negative control
++```
++
++Reviewed scope in this gate:
++
++```text
++rule:          Phi_eff after p.174 terminal-drop normalization
++datasets:      C_FULL_TREE_ODE n<=100 and n=108 frozen drivers
++rows:          57 + 19 descendable u_s=1 rows
++raw height:    s' <= 4
++effective ht:  s_eff <= 4
++k observed:    k in {1,2,3,4,5,6}, hence k >= 1 in this reviewed descent set
++defined:       76/76 after the drop
++anchor repair: 50/50 anchor-zero rows repaired, 0 still undefined
++```
++
++So the safe campaign statement is: `Phi_eff` is promoted for Prop. 6.3/6.4
++`u_s=1` descendants in the reviewed finite driver universe, with raw
++`s'<=4`, effective `s_eff<=4`, and `k>=1` as observed.  The formal extension
++"Lemma 2.1 also forces monomial-Jacobian children to terminate at `n-1`" is
++not sourced by the opened print and remains a typed gap.
++
++## 6. FALLACY-v2 Check
++
++No exit-price assertion is made, so no `charge_basis` line is emitted.  No
++cv flag/place/series identification is used.  No floor is promoted to
++attainment: the counts are exact finite enumerations from the frozen driver,
++and the p.207 rationals are direct controls.  The prime marks in `delta_i'`,
++`n'`, and `M_i'` are labels; Lemma 2.1's `f_i'(x)` is the derivative in the
++printed proof.  The monomial-Jacobian extension is left as a GAP rather than
++filled by analogy.
++
++<!-- BODY-END -->
+
+codex
+The report is written. I’m doing the closeout checks now: size target, seal marker, and changed-file summary.
+exec
+/bin/bash -lc 'wc -c xmodel/anchor-audit-gate-gpt55-20260903.md && tail -5 xmodel/anchor-audit-gate-gpt55-20260903.md' in /home/ubuntu/jc2
+ succeeded in 0ms:
+10721 xmodel/anchor-audit-gate-gpt55-20260903.md
+`n'`, and `M_i'` are labels; Lemma 2.1's `f_i'(x)` is the derivative in the
+printed proof.  The monomial-Jacobian extension is left as a GAP rather than
+filled by analogy.
+
+<!-- BODY-END -->
+
+exec
+/bin/bash -lc 'git status --short -- xmodel/anchor-audit-gate-gpt55-20260903.md box/anchor-gate-20260903' in /home/ubuntu/jc2
+ succeeded in 0ms:
+?? box/anchor-gate-20260903/
+?? xmodel/anchor-audit-gate-gpt55-20260903.md
+
+exec
+/bin/bash -lc 'rg -n "CONFIRMED|GAP|REFUTED|PROMOTE|BODY-END|11/11|s_eff counts|Producer scope|Reviewed scope" xmodel/anchor-audit-gate-gpt55-20260903.md' in /home/ubuntu/jc2
+ succeeded in 0ms:
+16:Result: **11/11 OK**.  The generated manifest is
+71:**Def. 5.1(3), p.179: CONFIRMED.**  The printed denominator contains the
+86:**p.174 drop: CONFIRMED as Moh's effective-pair convention; GAP for a
+99:**Lemma 2.1, p.151: GAP for `J=c gamma^k`.**  The printed lemma states an
+107:**Prop. 5.1(1), pp.173-174: CONFIRMED, with the same scope caution.**  When
+114:**Prop. 6.3/6.4, pp.197-199: CONFIRMED.**  The stated Prop. 6.3 hypotheses
+171:n <= 100, after drop: s_eff counts {2: 29, 3: 27, 4: 1}
+172:n = 108, after drop: s_eff counts {2: 12, 3: 7}
+184:**(a) CONFIRMED.**  Def. 5.1(3) as printed at p.179 carries
+187:**(b) CONFIRMED/GAP.**  Confirmed: p.174 drops a terminal `M_h=n-1` from
+193:**(c) CONFIRMED.**  Prop. 6.3/6.4 hypotheses never mention the child's
+198:**(d) CONFIRMED, with source split.**  `Phi_eff` is:
+207:**(e) CONFIRMED except the literal all-row height wording.**  The headline
+217:Verdict: **PROMOTE-QUALIFIED** for `OPEN[DESCENT-ANCHOR]` as the descent
+221:Producer scope:
+231:Reviewed scope in this gate:
+257:printed proof.  The monomial-Jacobian extension is left as a GAP rather than
+260:<!-- BODY-END -->
+
+diff --git a/xmodel/anchor-audit-gate-gpt55-20260903.md b/xmodel/anchor-audit-gate-gpt55-20260903.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c4e694a0cd01a157296fec72e0f3394ab007934
+--- /dev/null
++++ b/xmodel/anchor-audit-gate-gpt55-20260903.md
+@@ -0,0 +1,260 @@
++# ANCHOR-AUDIT GATE -- GPT-5.5 -- 2026-09-03
++
++Lane target: `OPEN[DESCENT-ANCHOR]` hostile gate against
++`xmodel/descent-anchor-audit-grok46-20260903.md` sections 0-5.  No ledger
++edits.  `jc2-lean` was not inspected.  I used only the frozen inputs in
++`/tmp/jc2-lane.gg5Ofk/inputs` for the replay, plus the charged Opus
++submission H1/section 13.
++
++## 0. Mechanical Input Gate
++
++The checksum manifest was generated mechanically from
++`xmodel/anchor-audit-gate-gpt55-20260903.run.v2` with `awk` over the
++`charged_input_<i>_sha256=` and `charged_input_<i>_basename=` lines, then
++checked with `sha256sum -c`.
++
++Result: **11/11 OK**.  The generated manifest is
++`box/anchor-gate-20260903/input-manifest.sha256`.
++
++Frozen drivers copied for local replay:
++
++```text
++box/anchor-gate-20260903/measure_anchor.py
++box/anchor-gate-20260903/phi_delta.py
++box/anchor-gate-20260903/moh_skeleton_full.py
++box/anchor-gate-20260903/full_tree_partition.py
++box/anchor-gate-20260903/anchor_zero_rows.txt
++```
++
++Replay artifacts:
++
++```text
++box/anchor-gate-20260903/measure_anchor.stdout
++box/anchor-gate-20260903/measure_anchor.json
++```
++
++The generated `measure_anchor.json` is byte-identical to the frozen
++`/tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.json`.
++
++## 1. Moh Page Images Opened
++
++The PDF has 74 pages.  The first attempted offset was wrong; opening that
++image showed PDF page 15 is printed p.154.  The corrected mapping is:
++printed page = PDF page + 139.
++
++Required page images opened from the charged PDF, rendered with
++`pdftoppm -r 200 -png`:
++
++```text
++p.173  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-34.png
++p.174  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-35.png
++p.175  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-36.png
++p.176  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-37.png
++p.177  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-38.png
++p.178  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-39.png
++p.179  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-40.png
++p.196  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-57.png
++p.197  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-58.png
++p.198  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-59.png
++```
++
++Supporting images opened because the claims depend on them:
++
++```text
++p.151  box/anchor-gate-20260903/corrected-pages/moh-printed-p151-12.png
++p.199  box/anchor-gate-20260903/corrected-pages/moh-printed-p199-60.png
++p.207  box/anchor-gate-20260903/corrected-pages/moh-printed-p207-68.png
++```
++
++## 2. Source Check
++
++**Def. 5.1(3), p.179: CONFIRMED.**  The printed denominator contains the
++factor `n - M_s - 1`.  In ASCII transcription:
++
++```text
++delta_i = 1 - (n - M_i) prod_{j=i+1..s}(V_j(n-M_j)-d_j)
++              / ((n - M_s - 1)
++                 prod_{j=i+1..s}(V_j(n-M_{j-1})-d_j)).
++```
++
++The same page, Def. 5.1(2), also prints `V_{s+1}=d_{s+1}` for a tower
++`D_s superset ... superset D_r`.  Thus `V_{top+1}=d_{top+1}` is Moh's
++convention for a Def. 5.1 tower.  Applying it after truncating a dictionary
++is the lane's reconstruction of that Moh convention on the effective tuple;
++Moh does not print a separate "truncated dictionary" algorithm.
++
++**p.174 drop: CONFIRMED as Moh's effective-pair convention; GAP for a
++separate monomial-Jacobian theorem.**  The p.174 Definition-Remark says
++that if `M_h = n - 1`, it is dropped from consideration, and the effective
++characteristic pairs exclude that `M_h`; the last effective characteristic
++pair is denoted `M_s`.  The proposition statement around it is phrased for
++the root configuration of `g` and the approximate-root factors, not as a
++special Appendix-II child algorithm.
++
++For this gate I read the print as follows: once a descended tuple is accepted
++as characteristic data, p.174 supplies the normalization `drop M_h=n-1`.
++What is **not** supplied by p.174 or Lemma 2.1 is a fresh theorem that every
++monomial-Jacobian pair `J=c gamma^k` must have that terminal entry.
++
++**Lemma 2.1, p.151: GAP for `J=c gamma^k`.**  The printed lemma states an
++iff for `J_{x,y}(f,g)=c`, a nonzero constant.  Its note says that, if the
++Jacobian condition is satisfied, the `M_i` terminate at `n-1`.  The print
++does not state the same lemma for `J=c gamma^k`.  Therefore the sentence
++"Lemma 2.1 forces every Jacobian pair to have `M_h=n-1`" is confirmed only
++when "Jacobian pair" means the constant-J condition used in Lemma 2.1.  It
++is a gap if extended to the descended monomial-Jacobian child.
++
++**Prop. 5.1(1), pp.173-174: CONFIRMED, with the same scope caution.**  When
++`M_h=n-1`, the printed radius is finite:
++`delta_h=delta_{h-1}=-1/(n-M_{h-1}-1)`.  The construction uses the
++`h-1` disc containing all roots and applies Prop. 4.6 at `r=h-1`.  The
++naive expression `-1/(n-M_h-1)` is not the applicable formula at
++`M_h=n-1`.
++
++**Prop. 6.3/6.4, pp.197-199: CONFIRMED.**  The stated Prop. 6.3 hypotheses
++are `g` monic in `y`, `deg g = deg_y g = n > 1`, `delta_s=-1`, and the
++minor-disc bound `delta^*_{s-1} >= v_s/u_s`.  Prop. 6.4 assumes the same
++degree/monicity and `delta_s=-1, u_s=1`, then supplies that bound.  Neither
++proposition states a hypothesis involving the child's anchor
++`n' - M'_{s'} - 1`.
++
++## 3. Replay Results
++
++Command run:
++
++```text
++python3 box/anchor-gate-20260903/measure_anchor.py
++```
++
++The replay reproduces the p.207 control and the negative control:
++
++```text
++10/10 p.207 rationals MATCH: True
++(15,10), V2=3: Def51 delta_2 = -1/3
++drop-factor control: delta_2 = -3
++drop-factor BREAKS the match: True
++```
++
++p.207 itself has the five `u_s=1` transformed rows:
++`(16,12)`, two `(21,14)` rows, and two `(15,10)` rows.  The replay reports
++`drop=0` on all five, so `Phi_eff` is a no-op on that printed control set.
++
++Counts:
++
++```text
++n <= 100:
++  (1)-(13) rows                         658
++  C_FULL_TREE_ODE survivors              58
++  u_s=1 descendable                      57
++  u_s>1 residue                           1  = (99,66)
++  anchor-zero before p.174 drop          38
++  evaluable as charged before drop       19
++  still undefined after p.174 drop        0
++  evaluable after Phi_eff                57
++
++n = 108:
++  (1)-(13) rows                         217
++  C_FULL_TREE survivors                  21
++  C_FULL_TREE_ODE survivors              20
++  u_s=1 descendable                      19
++  u_s>1 residue                           1  = (108,72), M=[-72,81,106]
++  anchor-zero before p.174 drop          12
++  evaluable as charged before drop        7
++  still undefined after p.174 drop        0
++  evaluable after Phi_eff                19
++```
++
++Height distribution needs one qualification.  For all descendable rows in
++this replay:
++
++```text
++n <= 100, after drop: s_eff counts {2: 29, 3: 27, 4: 1}
++n = 108, after drop: s_eff counts {2: 12, 3: 7}
++```
++
++The charged report's `29/57` for `s_eff=2` is confirmed.  The `14/57` line
++is confirmed only as the anchor-zero parent-`s=5` block: among the 38
++anchor-zero rows, the post-drop split is `{2:24, 3:14}`.  If read as the
++complete all-descendable `s_eff=3` count, it is refuted by the replay:
++there are 27 such rows, plus one `s_eff=4` row
++`(96,64), M=[-64,-48,-8,20,94], V={2:1,3:1,4:6,5:3}`.
++
++## 4. Item Verdicts
++
++**(a) CONFIRMED.**  Def. 5.1(3) as printed at p.179 carries
++`1/(n-M_s-1)`.
++
++**(b) CONFIRMED/GAP.**  Confirmed: p.174 drops a terminal `M_h=n-1` from
++the effective characteristic sequence; Prop. 5.1(1) gives a finite radius
++using `M_{h-1}`.  Gap: Lemma 2.1's printed terminal statement is for
++`J=c` nonzero constant, not for the descended `J=c gamma^k` child.  Do not
++fill that extension by analogy.
++
++**(c) CONFIRMED.**  Prop. 6.3/6.4 hypotheses never mention the child's
++anchor.  Therefore the 38 and 12 anchor-zero rows are not killed by those
++proposition headers.  Their obstruction is only the later attempt to feed an
++untruncated child with `M'_{s'}=n'-1` into Def. 5.1(3).
++
++**(d) CONFIRMED, with source split.**  `Phi_eff` is:
++after the Prop. 6.3 image, drop a terminal `M'_{s'}=n'-1`, set the new
++`V_{s*+1}=d_{s*+1}`, then evaluate `(k+1)*Def. 5.1(3)` on the effective
++tuple.  The drop and `V_{top+1}=d_{top+1}` are Moh conventions for effective
++Def. 5.1 data; the multiplication by `k+1` is the p.207-controlled
++monomial-Jacobian radii conversion from the charged descent-radii driver.
++All ten p.207 rationals match, and dropping the printed factor breaks the
++`(15,10)` control.
++
++**(e) CONFIRMED except the literal all-row height wording.**  The headline
++counts reproduce exactly: `658 -> 58`, `57` descendable, `38` anchor-zero,
++`0` undefined after drop, residue `1/58=(99,66)`; and `217 -> 21 -> 20`,
++`19` descendable, `12` anchor-zero, `0` undefined after drop, residue
++`1/20`.  `s_eff=2` on `29/57` and `12/19` is confirmed.  Exact all-row
++`s_eff=3` at `n<=100` is `27/57`, not `14/57`; `14` is the anchor-zero
++subblock with parent height 5.
++
++## 5. Promotion Scope
++
++Verdict: **PROMOTE-QUALIFIED** for `OPEN[DESCENT-ANCHOR]` as the descent
++radii rule on the reviewed finite descent gate.  Do not promote it as a
++standalone theorem for arbitrary monomial-Jacobian pairs.
++
++Producer scope:
++
++```text
++rule:          delta_i' = (k+1) * Def5.1(3) on descended data
++producer:      descent-radii-grok46 phi_delta.py / p.207 controls
++printed scope: p.207 rows with raw s' = 2
++printed k:     k = 1 for Jacobian X, k = 2 for Jacobian X^2
++controls:      10/10 printed rationals; (15,10) drop-factor negative control
++```
++
++Reviewed scope in this gate:
++
++```text
++rule:          Phi_eff after p.174 terminal-drop normalization
++datasets:      C_FULL_TREE_ODE n<=100 and n=108 frozen drivers
++rows:          57 + 19 descendable u_s=1 rows
++raw height:    s' <= 4
++effective ht:  s_eff <= 4
++k observed:    k in {1,2,3,4,5,6}, hence k >= 1 in this reviewed descent set
++defined:       76/76 after the drop
++anchor repair: 50/50 anchor-zero rows repaired, 0 still undefined
++```
++
++So the safe campaign statement is: `Phi_eff` is promoted for Prop. 6.3/6.4
++`u_s=1` descendants in the reviewed finite driver universe, with raw
++`s'<=4`, effective `s_eff<=4`, and `k>=1` as observed.  The formal extension
++"Lemma 2.1 also forces monomial-Jacobian children to terminate at `n-1`" is
++not sourced by the opened print and remains a typed gap.
++
++## 6. FALLACY-v2 Check
++
++No exit-price assertion is made, so no `charge_basis` line is emitted.  No
++cv flag/place/series identification is used.  No floor is promoted to
++attainment: the counts are exact finite enumerations from the frozen driver,
++and the p.207 rationals are direct controls.  The prime marks in `delta_i'`,
++`n'`, and `M_i'` are labels; Lemma 2.1's `f_i'(x)` is the derivative in the
++printed proof.  The monomial-Jacobian extension is left as a GAP rather than
++filled by analogy.
++
++<!-- BODY-END -->
+
+codex
+One housekeeping note: the output directory still contains an earlier mis-mapped render set from before the page offset was corrected. I’m leaving it unused rather than risk removing artifacts mid-gate; the report cites only `corrected-pages`.
+codex
+Done. Report written and sealed at [xmodel/anchor-audit-gate-gpt55-20260903.md](/home/ubuntu/jc2/xmodel/anchor-audit-gate-gpt55-20260903.md).
+
+Key outcomes:
+- SHA gate: `11/11 OK`.
+- Moh p.179 Def. 5.1(3) factor: `CONFIRMED`.
+- p.174 terminal `M_h=n-1` drop: `CONFIRMED` as Moh effective-pair convention.
+- Lemma 2.1 for `J=c gamma^k`: `GAP`; print states `J=c` nonzero constant.
+- Prop. 6.3/6.4 child-anchor hypothesis: `CONFIRMED` absent.
+- Replay reproduced headline counts and p.207 10/10 control; `(15,10)` drop-factor negative control breaks as expected.
+- `Phi_eff`: `PROMOTE-QUALIFIED`, reviewed for frozen finite scope `raw s'<=4`, `s_eff<=4`, observed `k>=1`.
+
+One correction is recorded: the exact all-descendable `n<=100` `s_eff` distribution is `{2:29, 3:27, 4:1}`. The `14/57` figure is valid only for the anchor-zero parent-height-5 subblock, not as the full `s_eff=3` count. No ledger edits; `jc2-lean` not inspected.
+diff --git a/xmodel/anchor-audit-gate-gpt55-20260903.md b/xmodel/anchor-audit-gate-gpt55-20260903.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..4c4e694a0cd01a157296fec72e0f3394ab007934
+--- /dev/null
++++ b/xmodel/anchor-audit-gate-gpt55-20260903.md
+@@ -0,0 +1,260 @@
++# ANCHOR-AUDIT GATE -- GPT-5.5 -- 2026-09-03
++
++Lane target: `OPEN[DESCENT-ANCHOR]` hostile gate against
++`xmodel/descent-anchor-audit-grok46-20260903.md` sections 0-5.  No ledger
++edits.  `jc2-lean` was not inspected.  I used only the frozen inputs in
++`/tmp/jc2-lane.gg5Ofk/inputs` for the replay, plus the charged Opus
++submission H1/section 13.
++
++## 0. Mechanical Input Gate
++
++The checksum manifest was generated mechanically from
++`xmodel/anchor-audit-gate-gpt55-20260903.run.v2` with `awk` over the
++`charged_input_<i>_sha256=` and `charged_input_<i>_basename=` lines, then
++checked with `sha256sum -c`.
++
++Result: **11/11 OK**.  The generated manifest is
++`box/anchor-gate-20260903/input-manifest.sha256`.
++
++Frozen drivers copied for local replay:
++
++```text
++box/anchor-gate-20260903/measure_anchor.py
++box/anchor-gate-20260903/phi_delta.py
++box/anchor-gate-20260903/moh_skeleton_full.py
++box/anchor-gate-20260903/full_tree_partition.py
++box/anchor-gate-20260903/anchor_zero_rows.txt
++```
++
++Replay artifacts:
++
++```text
++box/anchor-gate-20260903/measure_anchor.stdout
++box/anchor-gate-20260903/measure_anchor.json
++```
++
++The generated `measure_anchor.json` is byte-identical to the frozen
++`/tmp/jc2-lane.gg5Ofk/inputs/measure_anchor.json`.
++
++## 1. Moh Page Images Opened
++
++The PDF has 74 pages.  The first attempted offset was wrong; opening that
++image showed PDF page 15 is printed p.154.  The corrected mapping is:
++printed page = PDF page + 139.
++
++Required page images opened from the charged PDF, rendered with
++`pdftoppm -r 200 -png`:
++
++```text
++p.173  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-34.png
++p.174  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-35.png
++p.175  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-36.png
++p.176  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-37.png
++p.177  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-38.png
++p.178  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-39.png
++p.179  box/anchor-gate-20260903/corrected-pages/moh-printed-p173-179-40.png
++p.196  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-57.png
++p.197  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-58.png
++p.198  box/anchor-gate-20260903/corrected-pages/moh-printed-p196-198-59.png
++```
++
++Supporting images opened because the claims depend on them:
++
++```text
++p.151  box/anchor-gate-20260903/corrected-pages/moh-printed-p151-12.png
++p.199  box/anchor-gate-20260903/corrected-pages/moh-printed-p199-60.png
++p.207  box/anchor-gate-20260903/corrected-pages/moh-printed-p207-68.png
++```
++
++## 2. Source Check
++
++**Def. 5.1(3), p.179: CONFIRMED.**  The printed denominator contains the
++factor `n - M_s - 1`.  In ASCII transcription:
++
++```text
++delta_i = 1 - (n - M_i) prod_{j=i+1..s}(V_j(n-M_j)-d_j)
++              / ((n - M_s - 1)
++                 prod_{j=i+1..s}(V_j(n-M_{j-1})-d_j)).
++```
++
++The same page, Def. 5.1(2), also prints `V_{s+1}=d_{s+1}` for a tower
++`D_s superset ... superset D_r`.  Thus `V_{top+1}=d_{top+1}` is Moh's
++convention for a Def. 5.1 tower.  Applying it after truncating a dictionary
++is the lane's reconstruction of that Moh convention on the effective tuple;
++Moh does not print a separate "truncated dictionary" algorithm.
++
++**p.174 drop: CONFIRMED as Moh's effective-pair convention; GAP for a
++separate monomial-Jacobian theorem.**  The p.174 Definition-Remark says
++that if `M_h = n - 1`, it is dropped from consideration, and the effective
++characteristic pairs exclude that `M_h`; the last effective characteristic
++pair is denoted `M_s`.  The proposition statement around it is phrased for
++the root configuration of `g` and the approximate-root factors, not as a
++special Appendix-II child algorithm.
++
++For this gate I read the print as follows: once a descended tuple is accepted
++as characteristic data, p.174 supplies the normalization `drop M_h=n-1`.
++What is **not** supplied by p.174 or Lemma 2.1 is a fresh theorem that every
++monomial-Jacobian pair `J=c gamma^k` must have that terminal entry.
++
++**Lemma 2.1, p.151: GAP for `J=c gamma^k`.**  The printed lemma states an
++iff for `J_{x,y}(f,g)=c`, a nonzero constant.  Its note says that, if the
++Jacobian condition is satisfied, the `M_i` terminate at `n-1`.  The print
++does not state the same lemma for `J=c gamma^k`.  Therefore the sentence
++"Lemma 2.1 forces every Jacobian pair to have `M_h=n-1`" is confirmed only
++when "Jacobian pair" means the constant-J condition used in Lemma 2.1.  It
++is a gap if extended to the descended monomial-Jacobian child.
++
++**Prop. 5.1(1), pp.173-174: CONFIRMED, with the same scope caution.**  When
++`M_h=n-1`, the printed radius is finite:
++`delta_h=delta_{h-1}=-1/(n-M_{h-1}-1)`.  The construction uses the
++`h-1` disc containing all roots and applies Prop. 4.6 at `r=h-1`.  The
++naive expression `-1/(n-M_h-1)` is not the applicable formula at
++`M_h=n-1`.
++
++**Prop. 6.3/6.4, pp.197-199: CONFIRMED.**  The stated Prop. 6.3 hypotheses
++are `g` monic in `y`, `deg g = deg_y g = n > 1`, `delta_s=-1`, and the
++minor-disc bound `delta^*_{s-1} >= v_s/u_s`.  Prop. 6.4 assumes the same
++degree/monicity and `delta_s=-1, u_s=1`, then supplies that bound.  Neither
++proposition states a hypothesis involving the child's anchor
++`n' - M'_{s'} - 1`.
++
++## 3. Replay Results
++
++Command run:
++
++```text
++python3 box/anchor-gate-20260903/measure_anchor.py
++```
++
++The replay reproduces the p.207 control and the negative control:
++
++```text
++10/10 p.207 rationals MATCH: True
++(15,10), V2=3: Def51 delta_2 = -1/3
++drop-factor control: delta_2 = -3
++drop-factor BREAKS the match: True
++```
++
++p.207 itself has the five `u_s=1` transformed rows:
++`(16,12)`, two `(21,14)` rows, and two `(15,10)` rows.  The replay reports
++`drop=0` on all five, so `Phi_eff` is a no-op on that printed control set.
++
++Counts:
++
++```text
++n <= 100:
++  (1)-(13) rows                         658
++  C_FULL_TREE_ODE survivors              58
++  u_s=1 descendable                      57
++  u_s>1 residue                           1  = (99,66)
++  anchor-zero before p.174 drop          38
++  evaluable as charged before drop       19
++  still undefined after p.174 drop        0
++  evaluable after Phi_eff                57
++
++n = 108:
++  (1)-(13) rows                         217
++  C_FULL_TREE survivors                  21
++  C_FULL_TREE_ODE survivors              20
++  u_s=1 descendable                      19
++  u_s>1 residue                           1  = (108,72), M=[-72,81,106]
++  anchor-zero before p.174 drop          12
++  evaluable as charged before drop        7
++  still undefined after p.174 drop        0
++  evaluable after Phi_eff                19
++```
++
++Height distribution needs one qualification.  For all descendable rows in
++this replay:
++
++```text
++n <= 100, after drop: s_eff counts {2: 29, 3: 27, 4: 1}
++n = 108, after drop: s_eff counts {2: 12, 3: 7}
++```
++
++The charged report's `29/57` for `s_eff=2` is confirmed.  The `14/57` line
++is confirmed only as the anchor-zero parent-`s=5` block: among the 38
++anchor-zero rows, the post-drop split is `{2:24, 3:14}`.  If read as the
++complete all-descendable `s_eff=3` count, it is refuted by the replay:
++there are 27 such rows, plus one `s_eff=4` row
++`(96,64), M=[-64,-48,-8,20,94], V={2:1,3:1,4:6,5:3}`.
++
++## 4. Item Verdicts
++
++**(a) CONFIRMED.**  Def. 5.1(3) as printed at p.179 carries
++`1/(n-M_s-1)`.
++
++**(b) CONFIRMED/GAP.**  Confirmed: p.174 drops a terminal `M_h=n-1` from
++the effective characteristic sequence; Prop. 5.1(1) gives a finite radius
++using `M_{h-1}`.  Gap: Lemma 2.1's printed terminal statement is for
++`J=c` nonzero constant, not for the descended `J=c gamma^k` child.  Do not
++fill that extension by analogy.
++
++**(c) CONFIRMED.**  Prop. 6.3/6.4 hypotheses never mention the child's
++anchor.  Therefore the 38 and 12 anchor-zero rows are not killed by those
++proposition headers.  Their obstruction is only the later attempt to feed an
++untruncated child with `M'_{s'}=n'-1` into Def. 5.1(3).
++
++**(d) CONFIRMED, with source split.**  `Phi_eff` is:
++after the Prop. 6.3 image, drop a terminal `M'_{s'}=n'-1`, set the new
++`V_{s*+1}=d_{s*+1}`, then evaluate `(k+1)*Def. 5.1(3)` on the effective
++tuple.  The drop and `V_{top+1}=d_{top+1}` are Moh conventions for effective
++Def. 5.1 data; the multiplication by `k+1` is the p.207-controlled
++monomial-Jacobian radii conversion from the charged descent-radii driver.
++All ten p.207 rationals match, and dropping the printed factor breaks the
++`(15,10)` control.
++
++**(e) CONFIRMED except the literal all-row height wording.**  The headline
++counts reproduce exactly: `658 -> 58`, `57` descendable, `38` anchor-zero,
++`0` undefined after drop, residue `1/58=(99,66)`; and `217 -> 21 -> 20`,
++`19` descendable, `12` anchor-zero, `0` undefined after drop, residue
++`1/20`.  `s_eff=2` on `29/57` and `12/19` is confirmed.  Exact all-row
++`s_eff=3` at `n<=100` is `27/57`, not `14/57`; `14` is the anchor-zero
++subblock with parent height 5.
++
++## 5. Promotion Scope
++
++Verdict: **PROMOTE-QUALIFIED** for `OPEN[DESCENT-ANCHOR]` as the descent
++radii rule on the reviewed finite descent gate.  Do not promote it as a
++standalone theorem for arbitrary monomial-Jacobian pairs.
++
++Producer scope:
++
++```text
++rule:          delta_i' = (k+1) * Def5.1(3) on descended data
++producer:      descent-radii-grok46 phi_delta.py / p.207 controls
++printed scope: p.207 rows with raw s' = 2
++printed k:     k = 1 for Jacobian X, k = 2 for Jacobian X^2
++controls:      10/10 printed rationals; (15,10) drop-factor negative control
++```
++
++Reviewed scope in this gate:
++
++```text
++rule:          Phi_eff after p.174 terminal-drop normalization
++datasets:      C_FULL_TREE_ODE n<=100 and n=108 frozen drivers
++rows:          57 + 19 descendable u_s=1 rows
++raw height:    s' <= 4
++effective ht:  s_eff <= 4
++k observed:    k in {1,2,3,4,5,6}, hence k >= 1 in this reviewed descent set
++defined:       76/76 after the drop
++anchor repair: 50/50 anchor-zero rows repaired, 0 still undefined
++```
++
++So the safe campaign statement is: `Phi_eff` is promoted for Prop. 6.3/6.4
++`u_s=1` descendants in the reviewed finite driver universe, with raw
++`s'<=4`, effective `s_eff<=4`, and `k>=1` as observed.  The formal extension
++"Lemma 2.1 also forces monomial-Jacobian children to terminate at `n-1`" is
++not sourced by the opened print and remains a typed gap.
++
++## 6. FALLACY-v2 Check
++
++No exit-price assertion is made, so no `charge_basis` line is emitted.  No
++cv flag/place/series identification is used.  No floor is promoted to
++attainment: the counts are exact finite enumerations from the frozen driver,
++and the p.207 rationals are direct controls.  The prime marks in `delta_i'`,
++`n'`, and `M_i'` are labels; Lemma 2.1's `f_i'(x)` is the derivative in the
++printed proof.  The monomial-Jacobian extension is left as a GAP rather than
++filled by analogy.
++
++<!-- BODY-END -->
+
+tokens used
+214,928
+Done. Report written and sealed at [xmodel/anchor-audit-gate-gpt55-20260903.md](/home/ubuntu/jc2/xmodel/anchor-audit-gate-gpt55-20260903.md).
+
+Key outcomes:
+- SHA gate: `11/11 OK`.
+- Moh p.179 Def. 5.1(3) factor: `CONFIRMED`.
+- p.174 terminal `M_h=n-1` drop: `CONFIRMED` as Moh effective-pair convention.
+- Lemma 2.1 for `J=c gamma^k`: `GAP`; print states `J=c` nonzero constant.
+- Prop. 6.3/6.4 child-anchor hypothesis: `CONFIRMED` absent.
+- Replay reproduced headline counts and p.207 10/10 control; `(15,10)` drop-factor negative control breaks as expected.
+- `Phi_eff`: `PROMOTE-QUALIFIED`, reviewed for frozen finite scope `raw s'<=4`, `s_eff<=4`, observed `k>=1`.
+
+One correction is recorded: the exact all-descendable `n<=100` `s_eff` distribution is `{2:29, 3:27, 4:1}`. The `14/57` figure is valid only for the anchor-zero parent-height-5 subblock, not as the full `s_eff=3` count. No ledger edits; `jc2-lean` not inspected.
+DIVERT path=xmodel/anchor-audit-gate-gpt55-20260903.md status=CLEAN body_bytes=10721 body_sha256=6b707d3679568db87c2ca0acea405f7148b70cd9c7f5be266ab32a7038c494c6
