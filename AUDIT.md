@@ -17576,3 +17576,16 @@ now a 869-dimensional exact system shrinking by Jacobian bands. Gate: g9966-bran
 kill-gate-gpt55 (replay stage 0–4 on δ = 2; audit that every imposed row is necessary
 and that no unlicensed gauge/slice entered; the constant residue's provenance).
 Continuation: g9966-delta52-stage8-sol56 (the emitted next system, stages 8+).
+
+## INTEGRATION #17 DELTA (llll) (2026-09-03T22:10Z, PARTIAL, producer Sol): THE b₄ DIRECTION OF THE K = 16 TERMINAL CONE — PROVED[INDEXED-B4-AXIS-FORMULA] for all t ≥ 2 (every pure-b₄ coefficient of T_{t,k}|_{b₃ = q = 0} in closed indexed form from the frozen recurrence); PROVED[FIXED-B4-AXIS-UNITS] at t = 2..7 (every positive-row axis coefficient is a unit of A_t); OPEN[B4-AXIS-UNIT-UNIFORM] (the indexed formula does not give a fixed element of Q(t)[d], hence no fixed norm polynomial in t — uniform numerator non-vanishing open); and the STRUCTURAL POINT: an axis unit proves only b₄ ∈ √(I_{t,+} + (q_{2,0}, …, q_{t−1,0}, b₃)), NOT b₄ ∈ √I_{t,+}; the latter (OPEN[B4-GLOBAL]) is the whole b₄ ≠ 0 chart — exactly the cone gate's missing global statement — and Proposition SUBCHART does not assert radical membership in the full multivariable ideal
+
+`k16-b4-axis-sol56-20260903.md` (Sol, 20KB; box/k16b4-20260903/; 23/23 hashes). §5 the cone
+assembly and the ORDER of sub-chart arguments (the three axis theorems are each "modulo
+the other coordinates" — they do not compose into √I_{t,+} = irrelevant ideal without a
+global step); §6 the alternative τ_t/component branch. READING (coordinator): the
+axis/subchart programme has reached its limit: b₃-axis (Opus, Fable), q-directions (Opus,
+running), b₄-axis (Sol) each give radical membership modulo the remaining coordinates;
+the uniform statement dim I_{t,+} = 0 needs a genuinely global argument (an induction in
+t on the whole ideal, or a Gröbner structure uniform in t); meanwhile FIXED-t emptiness is
+cheap via the properness lemma (gate running) — the ray is dead for every t we have
+tried (1..7 certified, 8 and 11 pending under load). Uniform: OPEN.

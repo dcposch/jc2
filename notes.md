@@ -21003,3 +21003,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T21:40Z EVENT — `k16-cone-gate-gpt55` sealed (12KB): Lemma CONE, spine grading, SUBCHART, B3-AXIS all CONFIRMED (→ PROMOTED); RESIDUAL-ZERO refuted as an all-t target; GAP: the reduction to the q-directions alone omits the b₄ direction. → AUDIT delta 17(jjjj). Lanes live: 6.
 
 ## 2026-09-03T22:03Z EVENT — `g9966-global-band-sol56` sealed (22KB): MOH'S BRANCH B OF (99,66) KILLED in the joint chart at stage 4 (unit ideal; integer-constant residue; Singular dim −1); δ = 5/2 survives through stage 7 with 869 free coefficients (decrements 47 → 11). → AUDIT delta 17(kkkk) PROVISIONAL. Launching `g9966-branchB-kill-gate-gpt55` and `g9966-delta52-stage8-sol56`. DC notified. Lanes live: 8.
+
+## 2026-09-03T22:10Z EVENT — `k16-b4-axis-sol56` sealed (20KB): b₄-axis indexed formula (all t), units t = 2..7; the axis route cannot give b₄ ∈ √I_{t,+} — the global b₄ ≠ 0 chart is the missing statement; the axis/subchart programme is at its limit. → AUDIT delta 17(llll). Lanes live: 7.

@@ -1,0 +1,41 @@
+// Exact t=2, y=1/5 positive rows from the frozen terminal_laurent_t2.json.
+// Frozen-row / primitive ratios are respectively 7/25600, -7/640, 7/640.
+// They and the global T versus -T sign are units, so these primitive
+// generators define the same positive-row ideal.
+ring R=0,(b4,b3),dp;
+option(redSB);
+poly J1=b4^2*(192*b3^2-8960*b3*b4^3+28925*b4^6);
+poly J2=b4^4*(16*b3-35*b4^3);
+poly J3=b4^3*(88*b3-295*b4^3);
+ideal Ipos=J1,J2,J3;
+ideal G=std(Ipos);
+printf("T2_Y15_POSITIVE DIM=%s SIZE=%s",dim(G),size(G));
+printf("T2_Y15_POSITIVE BASIS=%s",G);
+printf("T2_Y15_POSITIVE LEAD=%s",lead(G));
+if (subst(J1,b4,0)==0 && subst(J2,b4,0)==0 && subst(J3,b4,0)==0)
+{ print("T2_Y15_ALL_ROWS_VANISH_ON_B3_AXIS=1"); }
+else { print("T2_Y15_ALL_ROWS_VANISH_ON_B3_AXIS=0"); }
+int N; int found=0;
+for (N=1;N<=20;N++)
+{
+  if (reduce(b4^N,G)==0)
+  {
+    printf("T2_Y15_B4_IN_RADICAL POWER=%s",N);
+    found=1;
+    break;
+  }
+}
+if (found==0) { print("T2_Y15_B4_RADICAL_POWER_NOT_FOUND"); }
+ideal Iaxis=subst(J1,b3,0),subst(J2,b3,0),subst(J3,b3,0);
+ideal Gaxis=std(Iaxis);
+printf("T2_Y15_B4_AXIS_IN_AMBIENT BASIS=%s",Gaxis);
+poly T3axis=(413/128)*b4^6;
+if (reduce(T3axis,Gaxis)==0)
+{ print("T2_Y15_ACTUAL_T3_AXIS_MATCHES_IDEAL=1"); }
+else { print("T2_Y15_ACTUAL_T3_AXIS_MATCHES_IDEAL=0"); }
+ring A=0,(u),dp;
+ideal Ia=(-8099/1024)*u^8,(-49/128)*u^7,(413/128)*u^6;
+ideal Ga=std(Ia);
+printf("T2_Y15_B4_AXIS_ONE_VARIABLE BASIS=%s DIM=%s",Ga,dim(Ga));
+print("T2_Y15_CONTROL_DONE");
+quit;
