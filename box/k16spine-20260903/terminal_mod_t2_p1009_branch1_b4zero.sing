@@ -1,0 +1,10 @@
+// modular terminal discovery; no characteristic-zero promotion
+ring R=1009,(b3),dp;
+option(redSB);
+print("MAIN t=2 y=404 chart=b4zero rows=2 vars=1");
+ideal I=142,
+-431*b3^2;
+ideal G=std(I);
+if (reduce(1,G)==0) { print("UNIT"); } else { print("NONUNIT"); }
+size(G);
+quit;

@@ -17336,3 +17336,21 @@ bands consistent, every partial object at (99,66) is consistent; the decision re
 COMPLETE joint system (all z bands + the T₂/T₃ recurrences + the 4/9 centre) — exactly
 Sol's g9966-global-design lane (running), whose design must now include the lower bands.
 (99,66) remains OPEN in both directions.
+
+## INTEGRATION #17 DELTA (qqq) (2026-09-03T19:08Z, PROVED-HERE/UNREVIEWED, producer Sol): THE SECOND AFFINE SPINE OF THE K = 16 NORMALISED SYSTEMS IS PROVED FOR EVERY t ≥ 2 (split-safe Laurent/Euler recurrence with uniformly nonzero pivot norms; the originally scheduled charged-coordinate order is OBSTRUCTED on every split index t = 3s² − 1, where a scheduled high scalar pivot is a nonzero zero-divisor of A_t — bypassed); the uniform post-H/c row skeleton, a compact closed polynomial form for every row, and the 2t zero/duplicate recurrence are proved; THEOREM (T) ON THE RAY IS NOW EXACTLY ONE STATEMENT: ⟨T_{t,0}, …, T_{t,2t−1}⟩ = [1] in A_t[b₃, b₄, q_{2,0}, …, q_{t−1,0}] for every t ≥ 2, where T_{t,k} = [X^k]σ_t(E_t), E_t(X) = (b₃y − LR)V' + (LS − b₃T − b₂g)U' + g·y (6.1), σ_t the proved spine substitutions through band 2t; base t = 1 exact; the terminal ideal is exactly [1] at t = 1, 2, 3, 4 and mod-1009 on both fibres of H₅, H₆; two sharpened lemmas RESIDUAL-ZERO (√⟨T_{t,1..2t−1}⟩|_{b₄=0} = (b₃, q_{2,0}, …, q_{t−1,0}) for t ≥ 3; proved at t = 3, 4) and TOP-TAIL-UNIT (⟨T_{t,t..2t−1}⟩|_{b₄=1} = [1]; proved at t = 2, 3, 4) would close (8.1)
+
+`k16-middle-spine-sol56-20260903.md` (Sol, 30KB; box/k16spine-20260903/ with
+terminal_laurent_t*.json; 15/15 hashes). §2 compact exact h-adic identity; §3 exact
+post-H/c support and the duplicate recurrence; §4 canonical second-spine order; §5 pivot
+coefficients and the proved split-safe spine (5.1 Laurent/Euler proof order); §6 closed
+terminal family (6.1)–(6.4); §7 finite exact data and controls (t = 1..4 exact; t = 5, 6
+modular on both fibres); §8 the exact residual statement (8.1) with its cheapest test:
+weighted two-chart elimination (b₄ ≠ 0: set b₄ = 1 and test the F_{t,k} of (6.4); b₄ = 0:
+test ⟨b₄, T_{t,0..2t−1}⟩), on split indices in the product algebra (d = ±s), never
+inverting a zero divisor; a certificate must be an indexed recurrence or carry a
+specialisation denominator with its integer roots checked; §9 denominators and
+FALLACY-v2. VERDICT: PARTIAL — (T) not proved; the spine PROVED-HERE for t ≥ 2. STATUS: the
+uniform problem is now a concrete family of 2t polynomials in t + 2 variables over a
+rank-two algebra, with the closed form of E_t and σ_t available — the smallest form the
+question has ever had. Lanes: k16-spine-gate-opus5 (gate §2–§6), k16-terminal-proof-sol56
+and k16-terminal-proof-fable5 (independent attacks on RESIDUAL-ZERO + TOP-TAIL-UNIT / (8.1)).

@@ -1,0 +1,551 @@
+{
+  "artifact": {
+    "bytes": 45634,
+    "path": "canonical_t3_post_hc_rows.tsv",
+    "sha256": "e57e76c9915c6bc9338846b3974fdea07bf3f15f2ac255aba4859bfea058caf3"
+  },
+  "elapsed_seconds": 44.22758873098064,
+  "first_spine": {
+    "pivot_bands": [
+      13,
+      12,
+      11,
+      10,
+      10,
+      9,
+      9,
+      8,
+      8,
+      7,
+      7,
+      6,
+      6
+    ],
+    "pivots": 13,
+    "rows": 37,
+    "unknowns_including_c": 23
+  },
+  "full": {
+    "rows": 51,
+    "unknowns_including_c": 36
+  },
+  "normalization": {
+    "H_band": 3,
+    "H_discriminant_raw": "9408",
+    "H_factorization_Q": "147*q7_1**2 - 84*q7_1 + 11",
+    "H_primitive": "147*q7_1**2 - 84*q7_1 + 11",
+    "H_raw": "588*q7_1**2 - 336*q7_1 + 44",
+    "H_raw_content": "4",
+    "H_row_associate_ratio": "5/343",
+    "H_source": 20,
+    "H_squarefree": true,
+    "Qstar_dropped": [
+      {
+        "band": 5,
+        "multiplier": "-49/3",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 30,
+        "source": 31
+      },
+      {
+        "band": 4,
+        "multiplier": "-343/3",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 25,
+        "source": 26
+      },
+      {
+        "band": 3,
+        "multiplier": "-343/3",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 19,
+        "source": 21
+      },
+      {
+        "band": 2,
+        "multiplier": "-343",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 13,
+        "source": 15
+      },
+      {
+        "band": 1,
+        "multiplier": "-343",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 7,
+        "source": 9
+      },
+      {
+        "band": 0,
+        "multiplier": "-2401",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 0,
+        "source": 3
+      }
+    ],
+    "c_band": 0,
+    "c_coefficient": "-1",
+    "c_inverse": "50421*q7_1/143 - 208887/1430",
+    "c_inverse_checked": true,
+    "c_slice": "-30*q7_1**2/49 + 20*q7_1/343",
+    "c_source": 2,
+    "initial_mod_H_dropped": [
+      {
+        "band": 3,
+        "reason": "zero_mod_H",
+        "source": 20,
+        "stage": "initial_mod_H"
+      }
+    ],
+    "post_Hc_auxiliaries": 20,
+    "post_Hc_rows": 29,
+    "raw_rows_excluding_c": 36,
+    "rows_after_Qstar_dedup": 30,
+    "x": "q4_1",
+    "y": "q7_1"
+  },
+  "post_Hc": {
+    "auxiliaries": 20,
+    "expected_tags": [
+      [
+        0,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "rows": 29,
+    "tag_pattern_checked": true,
+    "tags": [
+      [
+        0,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "variables": [
+      "a1_0",
+      "a2_0",
+      "a4_0",
+      "a5_0",
+      "a6_0",
+      "a7_0",
+      "a8_0",
+      "a9_0",
+      "q2_0",
+      "q3_0",
+      "q4_0",
+      "q5_0",
+      "q5_1",
+      "q6_0",
+      "q6_1",
+      "q7_0",
+      "b1",
+      "b2",
+      "b3",
+      "b4"
+    ],
+    "vector_sha256": "bbfd8157da038cc27b0f86c878d66424454244c27aa2ee644265cefd1444fabc"
+  },
+  "source_hashes": {
+    "t_order_system.py": "e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28",
+    "triangular_preprocess.py": "f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93"
+  },
+  "t": 3,
+  "typing": "EXACT fixed-t post-H/c rows from frozen charged drivers"
+}

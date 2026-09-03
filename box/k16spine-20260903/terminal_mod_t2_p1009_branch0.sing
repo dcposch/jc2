@@ -1,0 +1,10 @@
+// modular discovery only
+ring R=1009,(z),dp;
+option(redSB);
+print("MAIN t=2 y=202 top_rows=2");
+ideal I=497 - 429*z,
+-163*z - 153;
+ideal G=std(I);
+if (reduce(1,G)==0) { print("UNIT"); } else { print("NONUNIT"); }
+size(G);
+quit;

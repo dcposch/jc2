@@ -1,0 +1,11 @@
+// modular discovery only
+ring R=1009,(z,r2),dp;
+option(redSB);
+print("MAIN t=3 y=632 top_rows=3");
+ideal I=85*r2^5 + 418*r2^4 + 357*r2^3*z - 67*r2^3 - 230*r2^2*z + 426*r2^2 + 71*r2*z^2 - 213*r2*z + 284*r2 + 426*z^2 - 342*z + 147,
+208*r2^4 + 241*r2^3 + 53*r2^2*z + 100*r2^2 + 64*r2*z + 259*r2 - 244*z^2 - 111*z - 127,
+-131*r2^4 - 337*r2^3 - 321*r2^2*z - 258*r2^2 + 228*r2*z + 318*r2 - 475*z^2 - 169*z - 301;
+ideal G=std(I);
+if (reduce(1,G)==0) { print("UNIT"); } else { print("NONUNIT"); }
+size(G);
+quit;

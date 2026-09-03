@@ -1,0 +1,849 @@
+{
+  "artifact": {
+    "bytes": 470657,
+    "path": "canonical_t5_post_hc_rows.tsv",
+    "sha256": "01ef521348bb749319776a48be36d8bf5333410c5c7ad99dae23fc72a3742fb7"
+  },
+  "elapsed_seconds": 460.67547808703966,
+  "first_spine": {
+    "pivot_bands": [
+      21,
+      20,
+      19,
+      18,
+      17,
+      16,
+      16,
+      15,
+      15,
+      14,
+      14,
+      13,
+      13,
+      12,
+      12,
+      11,
+      11,
+      10,
+      10
+    ],
+    "pivots": 19,
+    "rows": 59,
+    "unknowns_including_c": 35
+  },
+  "full": {
+    "rows": 79,
+    "unknowns_including_c": 54
+  },
+  "normalization": {
+    "H_band": 5,
+    "H_discriminant_raw": "34848",
+    "H_factorization_Q": "242*q11_1**2 - 132*q11_1 + 17",
+    "H_primitive": "242*q11_1**2 - 132*q11_1 + 17",
+    "H_raw": "1452*q11_1**2 - 792*q11_1 + 102",
+    "H_raw_content": "6",
+    "H_row_associate_ratio": "40/3993",
+    "H_source": 32,
+    "H_squarefree": true,
+    "Qstar_dropped": [
+      {
+        "band": 9,
+        "multiplier": "-121/30",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 52,
+        "source": 53
+      },
+      {
+        "band": 8,
+        "multiplier": "-1331/6",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 47,
+        "source": 48
+      },
+      {
+        "band": 7,
+        "multiplier": "1331/3",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 42,
+        "source": 43
+      },
+      {
+        "band": 6,
+        "multiplier": "14641/3",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 37,
+        "source": 38
+      },
+      {
+        "band": 5,
+        "multiplier": "14641/3",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 31,
+        "source": 33
+      },
+      {
+        "band": 4,
+        "multiplier": "14641",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 25,
+        "source": 27
+      },
+      {
+        "band": 3,
+        "multiplier": "14641",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 19,
+        "source": 21
+      },
+      {
+        "band": 2,
+        "multiplier": "161051",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 13,
+        "source": 15
+      },
+      {
+        "band": 1,
+        "multiplier": "-161051",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 7,
+        "source": 9
+      },
+      {
+        "band": 0,
+        "multiplier": "-1771561",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 0,
+        "source": 3
+      }
+    ],
+    "c_band": 0,
+    "c_coefficient": "-1",
+    "c_inverse": "161051*q11_1/476 - 629563/4760",
+    "c_inverse_checked": true,
+    "c_slice": "-80*q11_1**2/121 + 80*q11_1/1331",
+    "c_source": 2,
+    "initial_mod_H_dropped": [
+      {
+        "band": 5,
+        "reason": "zero_mod_H",
+        "source": 32,
+        "stage": "initial_mod_H"
+      }
+    ],
+    "post_Hc_auxiliaries": 32,
+    "post_Hc_rows": 47,
+    "raw_rows_excluding_c": 58,
+    "rows_after_Qstar_dedup": 48,
+    "x": "q6_1",
+    "y": "q11_1"
+  },
+  "post_Hc": {
+    "auxiliaries": 32,
+    "expected_tags": [
+      [
+        0,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        4,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        7,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        8,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        9,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        9,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        9,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        9,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        10,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        10,
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "rows": 47,
+    "tag_pattern_checked": true,
+    "tags": [
+      [
+        0,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        4,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        7,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        8,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        9,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        9,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        9,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        9,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        10,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        10,
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "variables": [
+      "a1_0",
+      "a2_0",
+      "a3_0",
+      "a4_0",
+      "a6_0",
+      "a7_0",
+      "a8_0",
+      "a9_0",
+      "a10_0",
+      "a11_0",
+      "a12_0",
+      "a13_0",
+      "a14_0",
+      "a15_0",
+      "q2_0",
+      "q3_0",
+      "q4_0",
+      "q5_0",
+      "q6_0",
+      "q7_0",
+      "q7_1",
+      "q8_0",
+      "q8_1",
+      "q9_0",
+      "q9_1",
+      "q10_0",
+      "q10_1",
+      "q11_0",
+      "b1",
+      "b2",
+      "b3",
+      "b4"
+    ],
+    "vector_sha256": "7c90061117d0656d416fa60aebe9ae45979318603254dd5b37f2c81eedad28e3"
+  },
+  "source_hashes": {
+    "t_order_system.py": "e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28",
+    "triangular_preprocess.py": "f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93"
+  },
+  "t": 5,
+  "typing": "EXACT fixed-t post-H/c rows from frozen charged drivers"
+}

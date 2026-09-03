@@ -1,0 +1,45 @@
+{
+  "scope": "exact t=5 b4=1 terminal ideal bounded fallback",
+  "typing": "INCONCLUSIVE_TIMEOUT; NOT_NONUNIT; NO_CERTIFICATE",
+  "attempts": [
+    {
+      "algorithm": "std",
+      "bands": [5, 6, 7, 8, 9],
+      "rows": 5,
+      "variables": 4,
+      "input": "terminal_t5_high_from5_lean_exact.sing",
+      "input_sha256": "eb174094c13b07a14c1bb2278f8268944b2c6123e7c9c6acb26bfaa7a8924885",
+      "elapsed_seconds": 480.01,
+      "max_rss_kb": 222816,
+      "exit_status": 2,
+      "timeout_exit_status": 124,
+      "verdict": "NO_VERDICT_TIMEOUT",
+      "output_sha256": "42b62abbd23576e0cadade95e036c5aeddb8339816da7f4760df96175d838993",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "resource_sha256": "a2dffdaa24a7c5401341b19d20ffdd3ab9ac987bb60638ab2e379137be0a75a8"
+    },
+    {
+      "algorithm": "slimgb",
+      "bands": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "rows": 10,
+      "variables": 4,
+      "source_input": "terminal_laurent_t5_b4_1_exact.sing",
+      "source_input_sha256": "bf7ca564a3e2384cc9f75b3ccb61fac2990499eba39d46a03ff6a697eb002323",
+      "input": "canonical_t5_b4_1_full10_slimgb_fallback.sing",
+      "input_sha256": "e397b19efa7add531afd1f81be24e1daeff3560c58d2029ce498555df97bafd5",
+      "elapsed_seconds": 480.03,
+      "max_rss_kb": 346332,
+      "exit_status": 2,
+      "timeout_exit_status": 124,
+      "verdict": "NO_VERDICT_TIMEOUT",
+      "output_sha256": "95f4655bf271bba38021196153cb7dd9249e0aa1c3c37ee3ce34df9685646093",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "resource_sha256": "7159c1f44d715ca27275306744cf8276a76b9a81324d5b35075d073ce3607d1c"
+    }
+  ],
+  "controls": {
+    "jobs_overlapped_with_each_other": false,
+    "fallback_children_remaining": false,
+    "live_full_basis_pid_1504444_signaled_or_modified": false
+  }
+}

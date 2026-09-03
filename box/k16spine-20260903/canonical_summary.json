@@ -1,0 +1,43 @@
+{
+  "canonical_driver_sha256_at_start": "8abff4de5fc4c1ba124574d06be8682c008b49fcfaab94248a9b4ed6c80c3cbf",
+  "runs": {
+    "2": {
+      "all_pattern_checks": true,
+      "all_pivot_resultants_nonzero": true,
+      "elapsed_seconds": 36.16884083999321,
+      "measured": {
+        "affine_pivots": 12,
+        "constant_pivots": 10,
+        "constant_rows": 26,
+        "constant_unknowns_including_c": 17,
+        "full_rows": 37,
+        "full_unknowns": 27,
+        "post_auxiliaries": 14,
+        "post_rows": 20,
+        "terminal_bands": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "terminal_degrees": [
+          9,
+          8,
+          7,
+          6
+        ],
+        "terminal_rows": 4,
+        "terminal_variables": 2
+      },
+      "terminal_variables": [
+        "b3",
+        "b4"
+      ]
+    }
+  },
+  "source_hashes": {
+    "t_order_system.py": "e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28",
+    "triangular_preprocess.py": "f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93"
+  },
+  "typing": "EXACT fixed-t extractions; finite checks are not an all-t proof"
+}

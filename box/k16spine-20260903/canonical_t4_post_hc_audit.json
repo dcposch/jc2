@@ -1,0 +1,700 @@
+{
+  "artifact": {
+    "bytes": 156062,
+    "path": "canonical_t4_post_hc_rows.tsv",
+    "sha256": "2edeb1b1a392e2e89c5b73acb2f4f8653a71cf01319f4dd2df8f442d7fa05ced"
+  },
+  "elapsed_seconds": 149.94999877898954,
+  "first_spine": {
+    "pivot_bands": [
+      17,
+      16,
+      15,
+      14,
+      13,
+      13,
+      12,
+      12,
+      11,
+      11,
+      10,
+      10,
+      9,
+      9,
+      8,
+      8
+    ],
+    "pivots": 16,
+    "rows": 48,
+    "unknowns_including_c": 29
+  },
+  "full": {
+    "rows": 65,
+    "unknowns_including_c": 45
+  },
+  "normalization": {
+    "H_band": 4,
+    "H_discriminant_raw": "19440",
+    "H_factorization_Q": "486*q9_1**2 - 270*q9_1 + 35",
+    "H_primitive": "486*q9_1**2 - 270*q9_1 + 35",
+    "H_raw": "972*q9_1**2 - 540*q9_1 + 70",
+    "H_raw_content": "2",
+    "H_row_associate_ratio": "26/2187",
+    "H_source": 26,
+    "H_squarefree": true,
+    "Qstar_dropped": [
+      {
+        "band": 7,
+        "multiplier": "-81/2",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 41,
+        "source": 42
+      },
+      {
+        "band": 6,
+        "multiplier": "-729",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 36,
+        "source": 37
+      },
+      {
+        "band": 5,
+        "multiplier": "243",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 31,
+        "source": 32
+      },
+      {
+        "band": 4,
+        "multiplier": "729",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 25,
+        "source": 27
+      },
+      {
+        "band": 3,
+        "multiplier": "-2187",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 19,
+        "source": 21
+      },
+      {
+        "band": 2,
+        "multiplier": "-6561",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 13,
+        "source": 15
+      },
+      {
+        "band": 1,
+        "multiplier": "6561",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 7,
+        "source": 9
+      },
+      {
+        "band": 0,
+        "multiplier": "59049",
+        "reason": "duplicate_Qstar_before_H",
+        "representative_source": 0,
+        "source": 3
+      }
+    ],
+    "c_band": 0,
+    "c_coefficient": "-1",
+    "c_inverse": "531441*q9_1/1547 - 1062882/7735",
+    "c_inverse_checked": true,
+    "c_slice": "-52*q9_1**2/81 + 130*q9_1/2187",
+    "c_source": 2,
+    "initial_mod_H_dropped": [
+      {
+        "band": 4,
+        "reason": "zero_mod_H",
+        "source": 26,
+        "stage": "initial_mod_H"
+      }
+    ],
+    "post_Hc_auxiliaries": 26,
+    "post_Hc_rows": 38,
+    "raw_rows_excluding_c": 47,
+    "rows_after_Qstar_dedup": 39,
+    "x": "q5_1",
+    "y": "q9_1"
+  },
+  "post_Hc": {
+    "auxiliaries": 26,
+    "expected_tags": [
+      [
+        0,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        7,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "rows": 38,
+    "tag_pattern_checked": true,
+    "tags": [
+      [
+        0,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        0,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        1,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        2,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        3,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        4,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        4,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        5,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        5,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        6,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        6,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        7,
+        [
+          0,
+          2
+        ]
+      ],
+      [
+        7,
+        [
+          1,
+          2
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        8,
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "variables": [
+      "a1_0",
+      "a2_0",
+      "a3_0",
+      "a5_0",
+      "a6_0",
+      "a7_0",
+      "a8_0",
+      "a9_0",
+      "a10_0",
+      "a11_0",
+      "a12_0",
+      "q2_0",
+      "q3_0",
+      "q4_0",
+      "q5_0",
+      "q6_0",
+      "q6_1",
+      "q7_0",
+      "q7_1",
+      "q8_0",
+      "q8_1",
+      "q9_0",
+      "b1",
+      "b2",
+      "b3",
+      "b4"
+    ],
+    "vector_sha256": "61fbd4a8071573e9f0eaaa5c050af54c6fea6eb8fc517790bc8d1e87af9e5085"
+  },
+  "source_hashes": {
+    "t_order_system.py": "e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28",
+    "triangular_preprocess.py": "f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93"
+  },
+  "t": 4,
+  "typing": "EXACT fixed-t post-H/c rows from frozen charged drivers"
+}
