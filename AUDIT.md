@@ -17622,3 +17622,18 @@ and the target gauges cut them to 9t + 9 unknowns. The right next instrument for
 large rows is therefore the ORDER chart (the k16 t_order_system generalised to a general
 two-point datum with symbolic top-face slopes), not more machine power; recorded as the
 packet's instrument item. Two-point tally unchanged (7 dead / 10 open).
+
+## INTEGRATION #17 DELTA (pppp) (2026-09-03T22:47Z, PROMOTED — two models): MOH'S BRANCH B OF (99,66) IS DEAD — THEOREM (declared-necessary finite-chart kill): no Keller pair of degrees (99,66) in Moh's gauge with M = (−66,77,97), V = (8,8) and the δ = 2 principal-minor split [2,1] (packets 18 + 9; face p = π²(π + 3a), q = π²⁵(π + 3a)¹⁴(π − 2a)) exists — producer Sol (17(kkkk)), gate GPT-5.5 (`g9966-branchB-kill-gate-gpt55-20260903.md`, 16/16 hashes): CONFIRMED[EXACT-Q-REPLAY] (the 15-pivot endpoint and stages 0–4 replayed with the pinned engine band_engine.py 3bd2937d…), CONFIRMED[STAGE4-UNIT] (659 joint labels, 513 raw expressions, 118 integer constants), CONFIRMED[SINGULAR-REPLAY], CONFIRMED[NECESSARY-PREFIX] (Theorem 1.2 used only as an order LOWER bound), CONFIRMED[NECESSARY-STRICT-OUTER-ROWS] (the D₂/D₁ rows; the D₁ recentred gap 225 raw / rank 176), CONFIRMED[BRANCH-FACE-NECESSARY] (the δ = 2 face per the promoted classification 17(nnn)/(sss); the gauge a = 1 a scaling normalisation), CONFIRMED[CONSTANT-JACOBIAN-ROWS] (the Jacobian constant free, never inverted or set), CONFIRMED[LOWER-POLE-VANISHING], CONFIRMED[QUOTIENT-RING-ISOMORPHISMS] (pivots only on Q* coefficients), CONFIRMED[PRELOCALIZED-UNIT] (the constant residue precedes any ρ/c localisation), CONFIRMED[NO-UNLICENSED-SPECIALISATION], CONFIRMED[BRANCH-SPECIFIC-KILL] (the same engine and major rows leave δ = 5/2 alive)
+
+CONSEQUENCES: (1) Moh's p.209 case split for (99,66) is now MECHANICALLY COMPLETE on the
+campaign's ledger: branch A (linear power) dead (17(tt) predecessor + the joint chart's
+major rows), branch B (two-root cubic) dead (this delta), branch C (three simple roots)
+dead (17(yy), Xu Cor 7.5); the "unknown possible split" of Xu 2022 (δ = 5/2) is the ONLY
+surviving alternative — (99,66), and with it Moh's degree ≤ 100 theorem, reduces to the
+δ = 5/2 branch of the joint chart (17(kkkk): alive at stage 7, 869 free coefficients,
+continuation running). (2) Scope: the theorem is about the declared chart, which is a
+necessary relaxation of the locus of Keller pairs with that skeleton and split; it is not
+an attainment or a JC2 statement. (3) The joint-chart engine (major tower at one point +
+principal-minor split at the other + Jacobian, band-linear, Q*-pivots) has now produced
+its first kill in the u_s > 1 stratum — the packet's Q3 (uniformising it across the 166
+groups) is live.

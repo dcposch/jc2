@@ -1,0 +1,144 @@
+{
+  "delta2_dimension_path": [
+    1065,
+    1018,
+    976,
+    942,
+    "DEAD"
+  ],
+  "delta2_stages": [
+    {
+      "dimension": 1065,
+      "jacobian_degree": 162,
+      "joint_Qstar_pivots": 0,
+      "outer_D1_cumulative_pivots": 41,
+      "pole_exponents": {
+        "F": -77,
+        "G": -50
+      },
+      "raw_nonzero_count": 0,
+      "residual_count": 0,
+      "stage": 0,
+      "verdict": "COUNTING-BOUND"
+    },
+    {
+      "dimension": 1018,
+      "jacobian_degree": 162,
+      "joint_Qstar_pivots": 9,
+      "outer_D1_cumulative_pivots": 79,
+      "pole_exponents": {
+        "F": -76,
+        "G": -49
+      },
+      "raw_nonzero_count": 129,
+      "residual_count": 0,
+      "stage": 1,
+      "verdict": "COUNTING-BOUND"
+    },
+    {
+      "dimension": 976,
+      "jacobian_degree": 161,
+      "joint_Qstar_pivots": 18,
+      "outer_D1_cumulative_pivots": 112,
+      "pole_exponents": {
+        "F": -75,
+        "G": -48
+      },
+      "raw_nonzero_count": 257,
+      "residual_count": 0,
+      "stage": 2,
+      "verdict": "COUNTING-BOUND"
+    },
+    {
+      "dimension": 942,
+      "jacobian_degree": 160,
+      "joint_Qstar_pivots": 27,
+      "outer_D1_cumulative_pivots": 137,
+      "pole_exponents": {
+        "F": -74,
+        "G": -47
+      },
+      "raw_nonzero_count": 385,
+      "residual_count": 0,
+      "stage": 3,
+      "verdict": "COUNTING-BOUND"
+    },
+    {
+      "dimension": null,
+      "jacobian_degree": 159,
+      "joint_Qstar_pivots": 35,
+      "outer_D1_cumulative_pivots": 156,
+      "pole_exponents": {
+        "F": -73,
+        "G": -46
+      },
+      "raw_nonzero_count": 513,
+      "residual_count": 118,
+      "stage": 4,
+      "verdict": "DEAD"
+    }
+  ],
+  "delta2_validated_ledger": "box/g9966Bgate-20260903/runs/delta2/validated-ledger.json",
+  "delta52_contrast": {
+    "final_dimension": 869,
+    "final_verdict": "COUNTING-BOUND",
+    "residual_rows": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stage_count": 8,
+    "stage_dimensions": [
+      1063,
+      1016,
+      974,
+      940,
+      913,
+      894,
+      880,
+      869
+    ],
+    "validated_ledger": "box/g9966band-20260903/runs/delta52/validated-ledger.json"
+  },
+  "stage4": {
+    "all_labeled_rows_hash_matches_frozen": true,
+    "all_pivot_coefficients_are_nonzero_rationals": true,
+    "all_stage4_new_pivot_coefficients": [
+      "8",
+      "-684",
+      "-585",
+      "-486",
+      "-387",
+      "-288",
+      "-189",
+      "-90"
+    ],
+    "first_constant": {
+      "integer": 6264,
+      "label": "stage4_J_d159_k35"
+    },
+    "integer_constant_count": 118,
+    "nonzero_integer_constant_count": 118,
+    "pivots_on_rho_or_c": [],
+    "residual_hash_matches_frozen": true,
+    "singular": {
+      "active_variables": 1,
+      "basis_line_count": 1,
+      "basis_preview": [
+        "1"
+      ],
+      "basis_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "codimension": 2,
+      "dimension": -1,
+      "raw_residue_unit_ideal": true,
+      "unit_ideal": true,
+      "wrapper": "Zrho*rho-1",
+      "wrapper_control": "<p,Zp-1> unit; <p-1,Zp-1> nonunit"
+    }
+  }
+}

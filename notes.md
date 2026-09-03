@@ -21011,3 +21011,11 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T22:19Z EVENT — `k16-subchart-q-opus5` sealed (36KB): Lemma CHAIN; Theorem Q-PLANE (eight units, all t ≥ 3); UNIQUE-POWER; the tail of the chain proved (R = 1..5); the initial-form upgrade FAILS (proved); the residual is the chain's HEAD = the b₄ = 1 chart (OPEN[B4-GLOBAL]). → AUDIT delta 17(nnnn). The uniform question on the ray is exactly TOP-TAIL-UNIT; packet Q1. Lanes live: 5.
 
 ## 2026-09-03T22:44Z EVENT — `preprocess-native-gpt55` sealed (11KB): native pipeline validated (K16 charts in seconds) but the (25,15) rows are huge (42–180 MB) and even the native Q*-stage times out; the large rows need ORDER charts (Theorem-1.2 order bounds + gauges, as for K16), not more compute. → AUDIT delta 17(oooo). Lanes live: 5.
+
+## 2026-09-03T22:47Z EVENT — `g9966-branchB-kill-gate-gpt55` sealed (16KB): CONFIRMED on all twelve audited points → AUDIT delta 17(pppp) PROMOTED: Moh's branch B of (99,66) is dead; Moh's p.209 case split is mechanically complete; (99,66) reduces to Xu's δ = 5/2 split (continuation running). DC notified. Lanes live: 5.
+
+## LIVE STATE (2026-09-03T22:47Z)
+- (99,66): Moh's three branches all dead on the ledger (A 17(tt), B 17(pppp), C 17(yy)); the only live branch is Xu's δ = 5/2 split in the joint chart (869 free coefficients at stage 7; stage 8+ running; the nonlinear T₂/T₃ bridge rows not yet imposed).
+- K = 16 ray: (T) PROMOTED t = 1..7; fixed-t instrument promoted (17(mmmm)); the uniform question = the b₄ = 1 chart (OPEN[B4-GLOBAL]; Fable lane running); the tail of the chain proved (17(nnnn)).
+- Screens exhausted at skeleton level; large two-point rows need order charts (lane running).
+- Round 20260904T0000Z packet drafted (cf18d2aa + note); wake armed.
