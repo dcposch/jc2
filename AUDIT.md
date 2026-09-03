@@ -16572,3 +16572,27 @@ jet / Appendix II datum (CONJ[APPII-UNIFORM]), and for u_s > 1 MINOR-DICHOTOMY. 
 (4,3) remain OPEN. Different-model review: not requested (negative result; the
 counterfamily is explicit and checkable in seconds — cheapest test: run
 box/tladder-drivers-20260903 at e = 10, k = 1).
+
+## INTEGRATION #17 DELTA (jj) (2026-09-03T13:06Z, MEASURED / negative, producer Sol): the D = 108 (18,12; γ³) ramification-absorption attack is COUNTING-BOUND behind OPEN[DESCENT-STATE-S3]; one banked state corrected ((48,90,106) descends to M' = (8,15), second path V = (1,3,5)); the nonconstant h_π term lives in the BOTTOM h-adic block, so "top two blocks" cannot decide absorption; three exact controls
+
+`d108-1812-ramification-sol56-20260903.md` (Sol, 24KB; box/d108ram-drivers-20260903/).
+CORRECTIONS (RECOMPUTED): the (48,90,106) survivor descends to M' = (8,15), not (8,13)
+(the prompt-only state (8,13) is INPUT-INCONSISTENT — coordinator error inherited from the
+Sol 1200Z submission); its second full-tree path has V = (1,3,5), not (1,4,5). The strongest
+frozen D = 108 tree predicate has eight rows, seven with u_s = 1. GATES before any target
+saturation is defined: (i) the height-3 V'-map and the Φ radii at s' = 3 remain
+SOURCE-INFERRED / CONDITIONAL-COMPUTED (OPEN[DESCENT-STATE-S3]; note Φ_eff of delta 17(dd)
+now defines the radii on these rows — the lane predates that promotion; the V'-map remains
+the gap); (ii) in the literal approximate-root expansion the nonconstant h_π term sits in
+the BOTTOM h-adic block; the top two blocks vanish already on pure degree-6 inflation, so
+they cannot decide whether lower corrections absorb h_π — the "top two blocks" attack of
+Sol's own Card 2 is structurally unable to decide. Verdicts: both families COUNTING-BOUND /
+OPEN[DESCENT-STATE-S3]; no SATURATED-EMPTY, no SURVIVES, no pair claimed. EXACT CONTROLS:
+Moh's corrected (15,10; X²) SATURATED-EMPTY; a regenerated p.208 (16,12; X) source-form
+control SATURATED-EMPTY (third independent kill of that row today); the primitive
+(3,2; γ³) family is a smooth REPRESENTATIVE control; its pure degree-6 inflation is
+SATURATED-EMPTY AS A SLICE with an explicit two-generator unit certificate. Kummer
+characters block-grade but do not by themselves cut. READING: the D = 108 descendants are
+not decidable by a height-2 method; they need the s' = 3 inherited state (V'-map) and the
+full Appendix II tail, i.e. the same CONJ[APPII-UNIFORM] datum at height 3. The K = 16 ray
+(height 2) remains the cleaner client.
