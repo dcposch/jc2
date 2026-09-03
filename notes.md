@@ -20713,3 +20713,6 @@ launch lanes through a split loop; kill lanes only by their unique tag.
 GPT-5.5 0. AWS quotas 1920/548 vCPU; standing approvals unchanged.
 
 ## HANDOFF ADDENDUM 08:33Z — box01 ssh timed out from the laptop (FLEET.md standing instruction on ssh timeouts applies: likely local-IP drift vs the security group; the cloud coordinator's IP will need the SG rule). The census end state was not re-read; last monitor tick 639/975 done, 0 failed. Harvest per box/run-keller-census.sh / keller_cluster_census.py merge → validate once reachable. Grok branch-orbits exit confirmed (NO-REPORT, killed by coordinator).
+
+## HANDOFF ADDENDUM 08:35Z — box01 census END STATE (ssh restored after ops/sg_autoupdate.sh: "SG: current")
+run-20260902.oXm88P finished at its 12 h cap: parallel.rc = 124 (cap), 968 cells with exit 0 in joblog.tsv, 969 rows in all.jsonl (1.3 MB), merge.rc = 2 (merge fail-closed on the incomplete run — expected). Summary artifacts fetched to box/keller-census-run-20260902.oXm88P/ (all.jsonl, joblog.tsv, plan.json, SHA256SUMS, ENGINE_SHA256, self-test.json, cells.txt, rc files). Successor: run `keller_cluster_census.py merge` with the incomplete-run option and then `validate`; the run's role is auxiliary to the (B3) census. Box01 is otherwise idle (load 0.00).
