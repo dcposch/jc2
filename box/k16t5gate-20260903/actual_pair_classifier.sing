@@ -1,0 +1,12 @@
+// semantic negative classifier; not a chart point
+ring RAC=0,(gamma,pi),dp;
+poly FAC=pi;
+poly GAC=pi-(gamma^2)/2;
+poly JAC=diff(FAC,gamma)*diff(GAC,pi)-diff(FAC,pi)*diff(GAC,gamma);
+if (JAC==gamma) { print("CONTROL_ACTUAL_PAIR_PASS J=gamma"); } else { print("CONTROL_ACTUAL_PAIR_FAIL"); }
+if (nameof(basering)=="RAC") { print("CONTROL_RAC_RING_PASS"); } else { print("CONTROL_RAC_RING_FAIL"); }
+print("TUPLE_CHECK n=deg_pi(F) m=deg_pi(G) J=gamma");
+deg(FAC,pi);
+deg(GAC,pi);
+print("K16_TUPLE_FAIL pi_degrees_are_1_1_not_12t+4_8t+4");
+quit;

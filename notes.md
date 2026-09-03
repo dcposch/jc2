@@ -20987,3 +20987,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T20:50Z EVENT — `k16-t6-grok46` FAILED (report missing): the Grok CLI ended its turn at 33 min while its modular/nfmodStd jobs were still running (partials in box/k16t6-20260903: 12-row terminal TSV, chart rebuild). Relaunched as `k16-t6-grok46-v2` with a mandatory poll-until-done instruction. Operational rule for long-job lanes: write the skeleton first; never end the turn with jobs running.
 
 ## 2026-09-03T20:56Z EVENT — `g9966-outer-bridge-grok46` sealed (20KB): the outer Theorem-1.2 bands are 5,774 explicit linear pivots — the (99,66) joint relaxation drops from ~6,690 to 930 (δ = 2) / 928 (δ = 5/2) free coefficients; the T₂/T₃ bridge shape is printed (4 + 34 unknowns) but its identification with the minor leaders is nonlinear (OPEN[EFFECTIVE-T2-T3-BRIDGE]). → AUDIT delta 17(dddd). Launching `g9966-bridge-nonlinear-grok46`. Lanes live: 9.
+
+## 2026-09-03T21:01Z EVENT — `k16-t5-replay-gpt55` sealed (9KB): (T) at t = 5 CONFIRMED → PROMOTED (three routes). → AUDIT delta 17(eeee). Lanes live: 8.

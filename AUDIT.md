@@ -17507,3 +17507,5 @@ nonlinear bridge (residual of T₂(G,F), T₃(G,F) on the actual minor jets matc
 R / p¹⁰q₁) is a separate job — lane launched (g9966-bridge-nonlinear-grok46). READING: the
 (99,66) relaxation has shrunk from ~6,700 free coefficients to ~930 with linear rows alone;
 the decision is now a ~930-variable object plus the nonlinear bridge.
+
+## INTEGRATION #17 DELTA (eeee) (2026-09-03T21:01Z, PROMOTED): THEOREM (T) AT t = 5 ON THE K = 16 RAY — (64,44; 61; 3; J = cγ) — CONFIRMED by GPT-5.5 replay (byte-identical regeneration of the Q-pivots, A-pivots, terminal TSV and drivers; nfmodStd [1]; a second nfmodStd with reversed terminal variables [1]; three modular std [1] in 14–17 s; no zero resultant among the A-pivots); together with Grok's chart certificate (17(www)) and Sol's terminal-route proof (17(zzz)) this is a three-route promotion. STATUS: (T) PROMOTED at t = 1, 2, 3, 4, 5; t = 6 in computation (v2); uniform = (10.1) / (5.1)+(6.7) under three attacks.
