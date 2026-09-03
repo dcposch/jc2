@@ -1,0 +1,31 @@
+// delta52_highz_depth5
+// Ring variables are the displayed Gbar high-z coefficients, gamma, split_c, T.
+// Rabinowitsch localizer: T*gamma*split_c-1.  The delta=5/2 gauge also adds split_c-1.
+ring R=32003,(g_27_70,g_27_71,g_26_67,g_26_68,g_26_69,g_25_65,g_25_66,g_24_62,g_24_63,g_24_64,g_23_60,g_23_61,gamma,split_c,T),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS"); } else { print("CONTROL_RING_FAIL"); }
+ideal Eq =
+  g_27_70,
+  g_27_71;
+Eq=simplify(Eq,2);
+ideal EmptyControl=split_c,T*gamma*split_c-1;
+ideal GE=std(EmptyControl);
+if (typeof(GE)=="ideal" && reduce(1,GE)==0) { print("CONTROL_EMPTY_WRAPPER_PASS"); } else { print("CONTROL_EMPTY_WRAPPER_FAIL"); }
+ideal NonemptyControl=split_c-1,gamma-1,T*gamma*split_c-1;
+ideal GN=std(NonemptyControl);
+if (typeof(GN)=="ideal" && reduce(1,GN)!=0) { print("CONTROL_NONEMPTY_WRAPPER_PASS"); } else { print("CONTROL_NONEMPTY_WRAPPER_FAIL"); }
+ideal Unsat=Eq,split_c-1;
+ideal GU=std(Unsat);
+if (typeof(GU)=="ideal" && reduce(1,GU)!=0) { print("CONTROL_UNSATURATED_NONUNIT_PASS"); } else { print("CONTROL_UNSATURATED_NONUNIT_FAIL"); }
+ideal I=Eq,split_c-1,T*gamma*split_c-1;
+print("MAIN_START equations=" + string(size(Eq)) + " unknowns_excluding_T=" + string(nvars(R)-1) + " char=32003");
+ideal G=std(I);
+print("MAIN_DONE basis_size="); size(G);
+print("BASIS_BEGIN"); G; print("BASIS_END");
+if (reduce(1,G)==0) {
+  print("MAIN_SATURATED_EMPTY");
+} else {
+  print("MAIN_NONUNIT");
+  print("DIM="); dim(G);
+}
+quit;

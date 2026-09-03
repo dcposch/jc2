@@ -1,0 +1,871 @@
+{
+  "branchB_run": {
+    "reason": "delta=5/2 high-z necessary systems were nonunit, so the conditional branch-B fallback was not triggered",
+    "status": "NOT-RUN"
+  },
+  "charged_input_verification": {
+    "all_ok": true,
+    "method": "parsed receipt charged_input_i_basename/sha256 and recomputed every frozen input digest",
+    "rows": [
+      {
+        "actual_sha256": "47ca21fa9a633a4d2ffeff8380d2c33abf36076e96f8a1d078399576c500825a",
+        "basename": "g9966-source-review-opus5-20260903.md",
+        "expected_sha256": "47ca21fa9a633a4d2ffeff8380d2c33abf36076e96f8a1d078399576c500825a",
+        "index": 1,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/g9966-source-review-opus5-20260903.md"
+      },
+      {
+        "actual_sha256": "1e3aafcae25d811f033a8deeff8daaee022735f9f09a9d4bd20499a56a44c899",
+        "basename": "xu-delta52-lift-gpt55-20260903.md",
+        "expected_sha256": "1e3aafcae25d811f033a8deeff8daaee022735f9f09a9d4bd20499a56a44c899",
+        "index": 2,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/xu-delta52-lift-gpt55-20260903.md"
+      },
+      {
+        "actual_sha256": "1d4ff2c76301705fbfa0f324862fe8f8065d57840fbb3094bce596f54c6651c6",
+        "basename": "moh9966-B-lift-sol56-20260903.md",
+        "expected_sha256": "1d4ff2c76301705fbfa0f324862fe8f8065d57840fbb3094bce596f54c6651c6",
+        "index": 3,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/moh9966-B-lift-sol56-20260903.md"
+      },
+      {
+        "actual_sha256": "8338a702448a61ef10af214e5d156e0c14ad117ef231ae34aee462fb36fa649f",
+        "basename": "moh9966-branchB-sol56-20260903.md",
+        "expected_sha256": "8338a702448a61ef10af214e5d156e0c14ad117ef231ae34aee462fb36fa649f",
+        "index": 4,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/moh9966-branchB-sol56-20260903.md"
+      },
+      {
+        "actual_sha256": "aabc19a04839c1337fefea5ecd369f54654c4d0359f4ddd341ed1b73df4d4773",
+        "basename": "xu9966-read-gpt55-20260903.md",
+        "expected_sha256": "aabc19a04839c1337fefea5ecd369f54654c4d0359f4ddd341ed1b73df4d4773",
+        "index": 5,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/xu9966-read-gpt55-20260903.md"
+      },
+      {
+        "actual_sha256": "f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93",
+        "basename": "triangular_preprocess.py",
+        "expected_sha256": "f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93",
+        "index": 6,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/triangular_preprocess.py"
+      },
+      {
+        "actual_sha256": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "basename": "moh1983_jram340_configurations_of_roots.pdf",
+        "expected_sha256": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "index": 7,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/moh1983_jram340_configurations_of_roots.pdf"
+      },
+      {
+        "actual_sha256": "00fecb1614c98b6e7496097ab2d6b7496c3027feca66a8c30642aa7f5812de21",
+        "basename": "xu2016_intersection_numbers_split_minor_roots_arxiv1604.07683v4.pdf",
+        "expected_sha256": "00fecb1614c98b6e7496097ab2d6b7496c3027feca66a8c30642aa7f5812de21",
+        "index": 8,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/xu2016_intersection_numbers_split_minor_roots_arxiv1604.07683v4.pdf"
+      },
+      {
+        "actual_sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "basename": "FALLACY-v2.md",
+        "expected_sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "index": 9,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/FALLACY-v2.md"
+      },
+      {
+        "actual_sha256": "37a7b0e806dfb9f51f36af3d4854ac477b21b684ee81d0d7888f2f91c41c733e",
+        "basename": "g9966rev_driver.py",
+        "expected_sha256": "37a7b0e806dfb9f51f36af3d4854ac477b21b684ee81d0d7888f2f91c41c733e",
+        "index": 10,
+        "ok": true,
+        "path": "/tmp/jc2-lane.gSx1Ze/inputs/g9966rev_driver.py"
+      }
+    ]
+  },
+  "controls": {
+    "automorphisms": {
+      "degree_1_two_infinity": {
+        "ansatz": "f=A*x+y, g=C*x+y",
+        "jacobian_row": "A-C-gamma",
+        "point_separation": "top lines A*X+Y and C*X+Y meet infinity at distinct points when A!=C",
+        "survives_direct_check": true,
+        "typing": "EXACT two-infinity-point automorphism, degree (1,1)",
+        "witness": {
+          "A": 2,
+          "C": 1,
+          "gamma": 1
+        }
+      },
+      "degree_ge_6_same_infinity": {
+        "F": "x + y**6",
+        "G": "y + (x + y**6)**7",
+        "composition": "(x,y)->(x+y^6,y), then (u,v)->(u,v+u^7)",
+        "degrees": [
+          6,
+          42
+        ],
+        "infinity_scope": "both top forms are powers of y, so this is not a two-infinity-point control",
+        "jacobian": "1",
+        "survives_direct_check": true,
+        "typing": "EXACT degree>=6 triangular automorphism"
+      },
+      "degree_ge_6_two_infinity_request": {
+        "effect_on_promotion": "the degree>=6 control checks no over-constraint for J, but not the two-point branch geometry",
+        "statement": "A polynomial automorphism of A^2 with both coordinate degrees >1 has algebraically dependent highest homogeneous parts; in the triangular-composition normal form the two top forms are powers of one linear form. Therefore the requested combination `two points at infinity` plus both degrees >=6 is not available for a genuine automorphism control.",
+        "typing": "SPEC-CHECK"
+      }
+    },
+    "moh_64_48_appendixII": {
+      "equations": 77,
+      "minor_side": "u_s=1, so no added split variables",
+      "run": {
+        "basis_one": true,
+        "basis_size": 1,
+        "dimension": null,
+        "elapsed_seconds": 3.998066,
+        "fail_markers": [],
+        "log": "box/g9966d52-20260903/control_moh1612_appendixII_Q.log",
+        "log_sha256": "db7dc1e2e82ac7a0dbe05d0e8bfaffd21c63b62ce16467396b67be263b517ad8",
+        "pass_markers": [
+          "CONTROL_EMPTY_WRAPPER_PASS",
+          "CONTROL_NONEMPTY_WRAPPER_PASS",
+          "CONTROL_UNSATURATED_NONUNIT_PASS"
+        ],
+        "returncode": 0,
+        "script": "box/g9966d52-20260903/control_moh1612_appendixII_Q.sing",
+        "script_sha256": "0a2bd8b73d71276a1e64db036cfad08c6031e7e744a61872f516f21ae75afae6",
+        "stdout_excerpt": "CONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=77 unknowns_excluding_T=19 char=0\nMAIN_DONE basis_size=\n1\nBASIS_BEGIN\nG[1]=1\nBASIS_END\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "typing": "CONTROL: Moh (64,48) reduced p.208 common-polynomial ansatz",
+      "unknowns_excluding_T": 19,
+      "verdict": "SATURATED-EMPTY"
+    }
+  },
+  "delta52_high_z_systems": {
+    "4": {
+      "approximate_root_remainder_rows": 0,
+      "build_seconds": 0.420262,
+      "depth": 4,
+      "fixed_split_scale": "split_c-1, with Rabinowitsch localizer T*gamma*split_c-1",
+      "fixed_terms": [
+        {
+          "coefficient": "1",
+          "local_order": 0,
+          "y_degree": 72,
+          "z_degree": 27
+        },
+        {
+          "coefficient": "-9",
+          "local_order": 0,
+          "y_degree": 67,
+          "z_degree": 25
+        }
+      ],
+      "forced_linear_rows": 2,
+      "induced_Fbar_bands": [
+        {
+          "formula": "y^48",
+          "z_degree": 18
+        },
+        {
+          "formula": "2*g_26_68*y**44/3 + 2*g_26_69*y**45/3",
+          "z_degree": 17
+        },
+        {
+          "formula": "2*g_25_65*y**41/3 + 2*g_25_66*y**42/3 - g_26_68**2*y**40/9 - 2*g_26_68*g_26_69*y**41/9 - g_26_69**2*y**42/9 - 6*y**43",
+          "z_degree": 16
+        },
+        {
+          "formula": "2*g_24_63*y**39/3 + 2*g_24_64*y**40/3 - 2*g_25_65*g_26_68*y**37/9 - 2*g_25_65*g_26_69*y**38/9 - 2*g_25_66*g_26_68*y**38/9 - 2*g_25_66*g_26_69*y**39/9 + 4*g_26_68**3*y**36/81 + 4*g_26_68**2*g_26_69*y**37/27 + 4*g_26_68*g_26_69**2*y**38/27 + 2*g_26_68*y**39 + 4*g_26_69**3*y**39/81 + 2*g_26_69*y**40",
+          "z_degree": 15
+        }
+      ],
+      "jacobian_band_counts": {},
+      "jacobian_rows": 0,
+      "literal_Fbar_z_bands": [
+        18,
+        17,
+        16,
+        15
+      ],
+      "literal_Gbar_z_bands": [
+        27,
+        26,
+        25,
+        24
+      ],
+      "runs": [
+        {
+          "basis_one": false,
+          "basis_size": 4,
+          "dimension": 7,
+          "elapsed_seconds": 0.020986,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth4_F32003.log",
+          "log_sha256": "4e48ebda7e8c614dbc4a1b0032ff0962e60477def5fb625133248c018988b8da",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth4_F32003.sing",
+          "script_sha256": "e0730a01dbab2275778891c56aa6fab91c960aa052947c8456a28264515d6b0e",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=10 char=32003\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n7\n",
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis_one": false,
+          "basis_size": 4,
+          "dimension": 7,
+          "elapsed_seconds": 0.019668,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth4_F32009.log",
+          "log_sha256": "fb62db9ff0a31c6abc9808f3777f975ba4c27e555613cc8747cf7dd5781b2461",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth4_F32009.sing",
+          "script_sha256": "bdf8858cc12da7b54c4e4e51d85b1b94ff6ff52c1e0f7f6e893ac1d369bee00d",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=10 char=32009\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n7\n",
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis_one": false,
+          "basis_size": 4,
+          "dimension": 7,
+          "elapsed_seconds": 0.014798,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth4_F32027.log",
+          "log_sha256": "2b38339d87f519dc2fd292363642970ef4aaa48e3d63d4c9ce86e3d971c91661",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth4_F32027.sing",
+          "script_sha256": "1dce197e2490f28e1544970c5527377001e46062874304e10c60ff6d9cfc4a52",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=10 char=32027\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n7\n",
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis_one": false,
+          "basis_size": 4,
+          "dimension": 7,
+          "elapsed_seconds": 0.019839,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth4_Q.log",
+          "log_sha256": "44d0eb35c9e552c486973af435b0cac960f4a3ea23dfe4c5c0dc01bbbf2ab1bc",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth4_Q.sing",
+          "script_sha256": "7bea27446bc0d2bd162d4952bd223431443433b46388365ddbd3a9c352c22244",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=10 char=0\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n7\n",
+          "verdict": "NONUNIT"
+        }
+      ],
+      "unknown_Gbar_coefficients": 8,
+      "unknown_terms": [
+        {
+          "local_order": 4,
+          "name": "g_27_70",
+          "y_degree": 70,
+          "z_degree": 27
+        },
+        {
+          "local_order": 2,
+          "name": "g_27_71",
+          "y_degree": 71,
+          "z_degree": 27
+        },
+        {
+          "local_order": 3,
+          "name": "g_26_68",
+          "y_degree": 68,
+          "z_degree": 26
+        },
+        {
+          "local_order": 1,
+          "name": "g_26_69",
+          "y_degree": 69,
+          "z_degree": 26
+        },
+        {
+          "local_order": 4,
+          "name": "g_25_65",
+          "y_degree": 65,
+          "z_degree": 25
+        },
+        {
+          "local_order": 2,
+          "name": "g_25_66",
+          "y_degree": 66,
+          "z_degree": 25
+        },
+        {
+          "local_order": 3,
+          "name": "g_24_63",
+          "y_degree": 63,
+          "z_degree": 24
+        },
+        {
+          "local_order": 1,
+          "name": "g_24_64",
+          "y_degree": 64,
+          "z_degree": 24
+        }
+      ],
+      "unknowns_excluding_T_in_singular": 10,
+      "verdict": "NONUNIT"
+    },
+    "5": {
+      "approximate_root_remainder_rows": 0,
+      "build_seconds": 1.330975,
+      "depth": 5,
+      "fixed_split_scale": "split_c-1, with Rabinowitsch localizer T*gamma*split_c-1",
+      "fixed_terms": [
+        {
+          "coefficient": "1",
+          "local_order": 0,
+          "y_degree": 72,
+          "z_degree": 27
+        },
+        {
+          "coefficient": "-9",
+          "local_order": 0,
+          "y_degree": 67,
+          "z_degree": 25
+        },
+        {
+          "coefficient": "36",
+          "local_order": 0,
+          "y_degree": 62,
+          "z_degree": 23
+        }
+      ],
+      "forced_linear_rows": 2,
+      "induced_Fbar_bands": [
+        {
+          "formula": "y^48",
+          "z_degree": 18
+        },
+        {
+          "formula": "2*g_26_67*y**43/3 + 2*g_26_68*y**44/3 + 2*g_26_69*y**45/3",
+          "z_degree": 17
+        },
+        {
+          "formula": "2*g_25_65*y**41/3 + 2*g_25_66*y**42/3 - g_26_67**2*y**38/9 - 2*g_26_67*g_26_68*y**39/9 - 2*g_26_67*g_26_69*y**40/9 - g_26_68**2*y**40/9 - 2*g_26_68*g_26_69*y**41/9 - g_26_69**2*y**42/9 - 6*y**43",
+          "z_degree": 16
+        },
+        {
+          "formula": "2*g_24_62*y**38/3 + 2*g_24_63*y**39/3 + 2*g_24_64*y**40/3 - 2*g_25_65*g_26_67*y**36/9 - 2*g_25_65*g_26_68*y**37/9 - 2*g_25_65*g_26_69*y**38/9 - 2*g_25_66*g_26_67*y**37/9 - 2*g_25_66*g_26_68*y**38/9 - 2*g_25_66*g_26_69*y**39/9 + 4*g_26_67**3*y**33/81 + 4*g_26_67**2*g_26_68*y**34/27 + 4*g_26_67**2*g_26_69*y**35/27 + 4*g_26_67*g_26_68**2*y**35/27 + 8*g_26_67*g_26_68*g_26_69*y**36/27 + 4*g_26_67*g_26_69**2*y**37/27 + 2*g_26_67*y**38 + 4*g_26_68**3*y**36/81 + 4*g_26_68**2*g_26_69*y**37/27 + 4*g_26_68*g_26_69**2*y**38/27 + 2*g_26_68*y**39 + 4*g_26_69**3*y**39/81 + 2*g_26_69*y**40",
+          "z_degree": 15
+        },
+        {
+          "formula": "2*g_23_60*y**36/3 + 2*g_23_61*y**37/3 - 2*g_24_62*g_26_67*y**33/9 - 2*g_24_62*g_26_68*y**34/9 - 2*g_24_62*g_26_69*y**35/9 - 2*g_24_63*g_26_67*y**34/9 - 2*g_24_63*g_26_68*y**35/9 - 2*g_24_63*g_26_69*y**36/9 - 2*g_24_64*g_26_67*y**35/9 - 2*g_24_64*g_26_68*y**36/9 - 2*g_24_64*g_26_69*y**37/9 - g_25_65**2*y**34/9 - 2*g_25_65*g_25_66*y**35/9 + 4*g_25_65*g_26_67**2*y**31/27 + 8*g_25_65*g_26_67*g_26_68*y**32/27 + 8*g_25_65*g_26_67*g_26_69*y**33/27 + 4*g_25_65*g_26_68**2*y**33/27 + 8*g_25_65*g_26_68*g_26_69*y**34/27 + 4*g_25_65*g_26_69**2*y**35/27 + 2*g_25_65*y**36 - g_25_66**2*y**36/9 + 4*g_25_66*g_26_67**2*y**32/27 + 8*g_25_66*g_26_67*g_26_68*y**33/27 + 8*g_25_66*g_26_67*g_26_69*y**34/27 + 4*g_25_66*g_26_68**2*y**34/27 + 8*g_25_66*g_26_68*g_26_69*y**35/27 + 4*g_25_66*g_26_69**2*y**36/27 + 2*g_25_66*y**37 - 7*g_26_67**4*y**28/243 - 28*g_26_67**3*g_26_68*y**29/243 - 28*g_26_67**3*g_26_69*y**30/243 - 14*g_26_67**2*g_26_68**2*y**30/81 - 28*g_26_67**2*g_26_68*g_26_69*y**31/81 - 14*g_26_67**2*g_26_69**2*y**32/81 - 4*g_26_67**2*y**33/3 - 28*g_26_67*g_26_68**3*y**31/243 - 28*g_26_67*g_26_68**2*g_26_69*y**32/81 - 28*g_26_67*g_26_68*g_26_69**2*y**33/81 - 8*g_26_67*g_26_68*y**34/3 - 28*g_26_67*g_26_69**3*y**34/243 - 8*g_26_67*g_26_69*y**35/3 - 7*g_26_68**4*y**32/243 - 28*g_26_68**3*g_26_69*y**33/243 - 14*g_26_68**2*g_26_69**2*y**34/81 - 4*g_26_68**2*y**35/3 - 28*g_26_68*g_26_69**3*y**35/243 - 8*g_26_68*g_26_69*y**36/3 - 7*g_26_69**4*y**36/243 - 4*g_26_69**2*y**37/3 + 15*y**38",
+          "z_degree": 14
+        }
+      ],
+      "jacobian_band_counts": {},
+      "jacobian_rows": 0,
+      "literal_Fbar_z_bands": [
+        18,
+        17,
+        16,
+        15,
+        14
+      ],
+      "literal_Gbar_z_bands": [
+        27,
+        26,
+        25,
+        24,
+        23
+      ],
+      "runs": [
+        {
+          "basis_one": false,
+          "basis_size": 4,
+          "dimension": 11,
+          "elapsed_seconds": 0.017366,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth5_F32003.log",
+          "log_sha256": "aeaf6cea860da3f28afa903e6cd63663d9fdbb6b702f493df22ad9caf3013901",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth5_F32003.sing",
+          "script_sha256": "7d76a53b13ac9806e9b79de38daed47db927b2679b4cc488d9996c3ad2255812",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=14 char=32003\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n11\n",
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis_one": false,
+          "basis_size": 4,
+          "dimension": 11,
+          "elapsed_seconds": 0.017636,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth5_F32009.log",
+          "log_sha256": "1f014bad342f90391afc2daf191958f10d27057ee397abe3ba8ceaf63b3ec027",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth5_F32009.sing",
+          "script_sha256": "caa2e15a5393acb87077d25b64682237f118f9fcf91da71705bd847dec191400",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=14 char=32009\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n11\n",
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis_one": false,
+          "basis_size": 4,
+          "dimension": 11,
+          "elapsed_seconds": 0.017856,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth5_F32027.log",
+          "log_sha256": "aa34139279156bdefbaaeeb5377806d7ca9aee9cfab1ff1c77cc86e7c0823905",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth5_F32027.sing",
+          "script_sha256": "8b9fabbda27df8cdb27b10d7d30af1941c20ff8cae68393f6ae31238b9c646c3",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=14 char=32027\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n11\n",
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis_one": false,
+          "basis_size": 4,
+          "dimension": 11,
+          "elapsed_seconds": 0.018012,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth5_Q.log",
+          "log_sha256": "aeccd7ac4cd4fac66509cb4f41028d360f98fbec4e14d4a453fb9c021b19109a",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth5_Q.sing",
+          "script_sha256": "c4f1a6620ad6e3cecb2930f5f54c02dc859068a90707787bad8816f2030d7a01",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=14 char=0\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n11\n",
+          "verdict": "NONUNIT"
+        }
+      ],
+      "unknown_Gbar_coefficients": 12,
+      "unknown_terms": [
+        {
+          "local_order": 4,
+          "name": "g_27_70",
+          "y_degree": 70,
+          "z_degree": 27
+        },
+        {
+          "local_order": 2,
+          "name": "g_27_71",
+          "y_degree": 71,
+          "z_degree": 27
+        },
+        {
+          "local_order": 5,
+          "name": "g_26_67",
+          "y_degree": 67,
+          "z_degree": 26
+        },
+        {
+          "local_order": 3,
+          "name": "g_26_68",
+          "y_degree": 68,
+          "z_degree": 26
+        },
+        {
+          "local_order": 1,
+          "name": "g_26_69",
+          "y_degree": 69,
+          "z_degree": 26
+        },
+        {
+          "local_order": 4,
+          "name": "g_25_65",
+          "y_degree": 65,
+          "z_degree": 25
+        },
+        {
+          "local_order": 2,
+          "name": "g_25_66",
+          "y_degree": 66,
+          "z_degree": 25
+        },
+        {
+          "local_order": 5,
+          "name": "g_24_62",
+          "y_degree": 62,
+          "z_degree": 24
+        },
+        {
+          "local_order": 3,
+          "name": "g_24_63",
+          "y_degree": 63,
+          "z_degree": 24
+        },
+        {
+          "local_order": 1,
+          "name": "g_24_64",
+          "y_degree": 64,
+          "z_degree": 24
+        },
+        {
+          "local_order": 4,
+          "name": "g_23_60",
+          "y_degree": 60,
+          "z_degree": 23
+        },
+        {
+          "local_order": 2,
+          "name": "g_23_61",
+          "y_degree": 61,
+          "z_degree": 23
+        }
+      ],
+      "unknowns_excluding_T_in_singular": 14,
+      "verdict": "NONUNIT"
+    },
+    "6": {
+      "approximate_root_remainder_rows": 0,
+      "build_seconds": 15.734951,
+      "depth": 6,
+      "fixed_split_scale": "split_c-1, with Rabinowitsch localizer T*gamma*split_c-1",
+      "fixed_terms": [
+        {
+          "coefficient": "1",
+          "local_order": 0,
+          "y_degree": 72,
+          "z_degree": 27
+        },
+        {
+          "coefficient": "-9",
+          "local_order": 0,
+          "y_degree": 67,
+          "z_degree": 25
+        },
+        {
+          "coefficient": "36",
+          "local_order": 0,
+          "y_degree": 62,
+          "z_degree": 23
+        }
+      ],
+      "forced_linear_rows": 2,
+      "induced_Fbar_bands": [
+        {
+          "formula": "y^48",
+          "z_degree": 18
+        },
+        {
+          "formula": "2*g_26_67*g_27_69*y**40/3 + 2*g_26_67*y**43/3 + 2*g_26_68*g_27_69*y**41/3 + 2*g_26_68*y**44/3 + 2*g_26_69*g_27_69*y**42/3 + 2*g_26_69*y**45/3",
+          "z_degree": 17
+        },
+        {
+          "formula": "2*g_25_64*g_27_69*y**37/3 + 2*g_25_64*y**40/3 + 2*g_25_65*g_27_69*y**38/3 + 2*g_25_65*y**41/3 + 2*g_25_66*g_27_69*y**39/3 + 2*g_25_66*y**42/3 - 4*g_26_67**2*g_27_69**2*y**32/9 - 8*g_26_67**2*g_27_69*y**35/9 - g_26_67**2*y**38/9 - 8*g_26_67*g_26_68*g_27_69**2*y**33/9 - 16*g_26_67*g_26_68*g_27_69*y**36/9 - 2*g_26_67*g_26_68*y**39/9 - 8*g_26_67*g_26_69*g_27_69**2*y**34/9 - 16*g_26_67*g_26_69*g_27_69*y**37/9 - 2*g_26_67*g_26_69*y**40/9 - 4*g_26_68**2*g_27_69**2*y**34/9 - 8*g_26_68**2*g_27_69*y**37/9 - g_26_68**2*y**40/9 - 8*g_26_68*g_26_69*g_27_69**2*y**35/9 - 16*g_26_68*g_26_69*g_27_69*y**38/9 - 2*g_26_68*g_26_69*y**41/9 - 4*g_26_69**2*g_27_69**2*y**36/9 - 8*g_26_69**2*g_27_69*y**39/9 - g_26_69**2*y**42/9 - 6*g_27_69*y**40 - 6*y**43",
+          "z_degree": 16
+        },
+        {
+          "formula": "2*g_24_62*g_27_69*y**35/3 + 2*g_24_62*y**38/3 + 2*g_24_63*g_27_69*y**36/3 + 2*g_24_63*y**39/3 + 2*g_24_64*g_27_69*y**37/3 + 2*g_24_64*y**40/3 - 8*g_25_64*g_26_67*g_27_69**2*y**29/9 - 16*g_25_64*g_26_67*g_27_69*y**32/9 - 2*g_25_64*g_26_67*y**35/9 - 8*g_25_64*g_26_68*g_27_69**2*y**30/9 - 16*g_25_64*g_26_68*g_27_69*y**33/9 - 2*g_25_64*g_26_68*y**36/9 - 8*g_25_64*g_26_69*g_27_69**2*y**31/9 - 16*g_25_64*g_26_69*g_27_69*y**34/9 - 2*g_25_64*g_26_69*y**37/9 - 8*g_25_65*g_26_67*g_27_69**2*y**30/9 - 16*g_25_65*g_26_67*g_27_69*y**33/9 - 2*g_25_65*g_26_67*y**36/9 - 8*g_25_65*g_26_68*g_27_69**2*y**31/9 - 16*g_25_65*g_26_68*g_27_69*y**34/9 - 2*g_25_65*g_26_68*y**37/9 - 8*g_25_65*g_26_69*g_27_69**2*y**32/9 - 16*g_25_65*g_26_69*g_27_69*y**35/9 - 2*g_25_65*g_26_69*y**38/9 - 8*g_25_66*g_26_67*g_27_69**2*y**31/9 - 16*g_25_66*g_26_67*g_27_69*y**34/9 - 2*g_25_66*g_26_67*y**37/9 - 8*g_25_66*g_26_68*g_27_69**2*y**32/9 - 16*g_25_66*g_26_68*g_27_69*y**35/9 - 2*g_25_66*g_26_68*y**38/9 - 8*g_25_66*g_26_69*g_27_69**2*y**33/9 - 16*g_25_66*g_26_69*g_27_69*y**36/9 - 2*g_25_66*g_26_69*y**39/9 + 40*g_26_67**3*g_27_69**3*y**24/81 + 40*g_26_67**3*g_27_69**2*y**27/27 + 28*g_26_67**3*g_27_69*y**30/27 + 4*g_26_67**3*y**33/81 + 40*g_26_67**2*g_26_68*g_27_69**3*y**25/27 + 40*g_26_67**2*g_26_68*g_27_69**2*y**28/9 + 28*g_26_67**2*g_26_68*g_27_69*y**31/9 + 4*g_26_67**2*g_26_68*y**34/27 + 40*g_26_67**2*g_26_69*g_27_69**3*y**26/27 + 40*g_26_67**2*g_26_69*g_27_69**2*y**29/9 + 28*g_26_67**2*g_26_69*g_27_69*y**32/9 + 4*g_26_67**2*g_26_69*y**35/27 + 40*g_26_67*g_26_68**2*g_27_69**3*y**26/27 + 40*g_26_67*g_26_68**2*g_27_69**2*y**29/9 + 28*g_26_67*g_26_68**2*g_27_69*y**32/9 + 4*g_26_67*g_26_68**2*y**35/27 + 80*g_26_67*g_26_68*g_26_69*g_27_69**3*y**27/27 + 80*g_26_67*g_26_68*g_26_69*g_27_69**2*y**30/9 + 56*g_26_67*g_26_68*g_26_69*g_27_69*y**33/9 + 8*g_26_67*g_26_68*g_26_69*y**36/27 + 40*g_26_67*g_26_69**2*g_27_69**3*y**28/27 + 40*g_26_67*g_26_69**2*g_27_69**2*y**31/9 + 28*g_26_67*g_26_69**2*g_27_69*y**34/9 + 4*g_26_67*g_26_69**2*y**37/27 + 8*g_26_67*g_27_69**2*y**32 + 16*g_26_67*g_27_69*y**35 + 2*g_26_67*y**38 + 40*g_26_68**3*g_27_69**3*y**27/81 + 40*g_26_68**3*g_27_69**2*y**30/27 + 28*g_26_68**3*g_27_69*y**33/27 + 4*g_26_68**3*y**36/81 + 40*g_26_68**2*g_26_69*g_27_69**3*y**28/27 + 40*g_26_68**2*g_26_69*g_27_69**2*y**31/9 + 28*g_26_68**2*g_26_69*g_27_69*y**34/9 + 4*g_26_68**2*g_26_69*y**37/27 + 40*g_26_68*g_26_69**2*g_27_69**3*y**29/27 + 40*g_26_68*g_26_69**2*g_27_69**2*y**32/9 + 28*g_26_68*g_26_69**2*g_27_69*y**35/9 + 4*g_26_68*g_26_69**2*y**38/27 + 8*g_26_68*g_27_69**2*y**33 + 16*g_26_68*g_27_69*y**36 + 2*g_26_68*y**39 + 40*g_26_69**3*g_27_69**3*y**30/81 + 40*g_26_69**3*g_27_69**2*y**33/27 + 28*g_26_69**3*g_27_69*y**36/27 + 4*g_26_69**3*y**39/81 + 8*g_26_69*g_27_69**2*y**34 + 16*g_26_69*g_27_69*y**37 + 2*g_26_69*y**40",
+          "z_degree": 15
+        },
+        {
+          "formula": "2*g_23_59*g_27_69*y**32/3 + 2*g_23_59*y**35/3 + 2*g_23_60*g_27_69*y**33/3 + 2*g_23_60*y**36/3 + 2*g_23_61*g_27_69*y**34/3 + 2*g_23_61*y**37/3 - 8*g_24_62*g_26_67*g_27_69**2*y**27/9 - 16*g_24_62*g_26_67*g_27_69*y**30/9 - 2*g_24_62*g_26_67*y**33/9 - 8*g_24_62*g_26_68*g_27_69**2*y**28/9 - 16*g_24_62*g_26_68*g_27_69*y**31/9 - 2*g_24_62*g_26_68*y**34/9 - 8*g_24_62*g_26_69*g_27_69**2*y**29/9 - 16*g_24_62*g_26_69*g_27_69*y**32/9 - 2*g_24_62*g_26_69*y**35/9 - 8*g_24_63*g_26_67*g_27_69**2*y**28/9 - 16*g_24_63*g_26_67*g_27_69*y**31/9 - 2*g_24_63*g_26_67*y**34/9 - 8*g_24_63*g_26_68*g_27_69**2*y**29/9 - 16*g_24_63*g_26_68*g_27_69*y**32/9 - 2*g_24_63*g_26_68*y**35/9 - 8*g_24_63*g_26_69*g_27_69**2*y**30/9 - 16*g_24_63*g_26_69*g_27_69*y**33/9 - 2*g_24_63*g_26_69*y**36/9 - 8*g_24_64*g_26_67*g_27_69**2*y**29/9 - 16*g_24_64*g_26_67*g_27_69*y**32/9 - 2*g_24_64*g_26_67*y**35/9 - 8*g_24_64*g_26_68*g_27_69**2*y**30/9 - 16*g_24_64*g_26_68*g_27_69*y**33/9 - 2*g_24_64*g_26_68*y**36/9 - 8*g_24_64*g_26_69*g_27_69**2*y**31/9 - 16*g_24_64*g_26_69*g_27_69*y**34/9 - 2*g_24_64*g_26_69*y**37/9 - 4*g_25_64**2*g_27_69**2*y**26/9 - 8*g_25_64**2*g_27_69*y**29/9 - g_25_64**2*y**32/9 - 8*g_25_64*g_25_65*g_27_69**2*y**27/9 - 16*g_25_64*g_25_65*g_27_69*y**30/9 - 2*g_25_64*g_25_65*y**33/9 - 8*g_25_64*g_25_66*g_27_69**2*y**28/9 - 16*g_25_64*g_25_66*g_27_69*y**31/9 - 2*g_25_64*g_25_66*y**34/9 + 40*g_25_64*g_26_67**2*g_27_69**3*y**21/27 + 40*g_25_64*g_26_67**2*g_27_69**2*y**24/9 + 28*g_25_64*g_26_67**2*g_27_69*y**27/9 + 4*g_25_64*g_26_67**2*y**30/27 + 80*g_25_64*g_26_67*g_26_68*g_27_69**3*y**22/27 + 80*g_25_64*g_26_67*g_26_68*g_27_69**2*y**25/9 + 56*g_25_64*g_26_67*g_26_68*g_27_69*y**28/9 + 8*g_25_64*g_26_67*g_26_68*y**31/27 + 80*g_25_64*g_26_67*g_26_69*g_27_69**3*y**23/27 + 80*g_25_64*g_26_67*g_26_69*g_27_69**2*y**26/9 + 56*g_25_64*g_26_67*g_26_69*g_27_69*y**29/9 + 8*g_25_64*g_26_67*g_26_69*y**32/27 + 40*g_25_64*g_26_68**2*g_27_69**3*y**23/27 + 40*g_25_64*g_26_68**2*g_27_69**2*y**26/9 + 28*g_25_64*g_26_68**2*g_27_69*y**29/9 + 4*g_25_64*g_26_68**2*y**32/27 + 80*g_25_64*g_26_68*g_26_69*g_27_69**3*y**24/27 + 80*g_25_64*g_26_68*g_26_69*g_27_69**2*y**27/9 + 56*g_25_64*g_26_68*g_26_69*g_27_69*y**30/9 + 8*g_25_64*g_26_68*g_26_69*y**33/27 + 40*g_25_64*g_26_69**2*g_27_69**3*y**25/27 + 40*g_25_64*g_26_69**2*g_27_69**2*y**28/9 + 28*g_25_64*g_26_69**2*g_27_69*y**31/9 + 4*g_25_64*g_26_69**2*y**34/27 + 8*g_25_64*g_27_69**2*y**29 + 16*g_25_64*g_27_69*y**32 + 2*g_25_64*y**35 - 4*g_25_65**2*g_27_69**2*y**28/9 - 8*g_25_65**2*g_27_69*y**31/9 - g_25_65**2*y**34/9 - 8*g_25_65*g_25_66*g_27_69**2*y**29/9 - 16*g_25_65*g_25_66*g_27_69*y**32/9 - 2*g_25_65*g_25_66*y**35/9 + 40*g_25_65*g_26_67**2*g_27_69**3*y**22/27 + 40*g_25_65*g_26_67**2*g_27_69**2*y**25/9 + 28*g_25_65*g_26_67**2*g_27_69*y**28/9 + 4*g_25_65*g_26_67**2*y**31/27 + 80*g_25_65*g_26_67*g_26_68*g_27_69**3*y**23/27 + 80*g_25_65*g_26_67*g_26_68*g_27_69**2*y**26/9 + 56*g_25_65*g_26_67*g_26_68*g_27_69*y**29/9 + 8*g_25_65*g_26_67*g_26_68*y**32/27 + 80*g_25_65*g_26_67*g_26_69*g_27_69**3*y**24/27 + 80*g_25_65*g_26_67*g_26_69*g_27_69**2*y**27/9 + 56*g_25_65*g_26_67*g_26_69*g_27_69*y**30/9 + 8*g_25_65*g_26_67*g_26_69*y**33/27 + 40*g_25_65*g_26_68**2*g_27_69**3*y**24/27 + 40*g_25_65*g_26_68**2*g_27_69**2*y**27/9 + 28*g_25_65*g_26_68**2*g_27_69*y**30/9 + 4*g_25_65*g_26_68**2*y**33/27 + 80*g_25_65*g_26_68*g_26_69*g_27_69**3*y**25/27 + 80*g_25_65*g_26_68*g_26_69*g_27_69**2*y**28/9 + 56*g_25_65*g_26_68*g_26_69*g_27_69*y**31/9 + 8*g_25_65*g_26_68*g_26_69*y**34/27 + 40*g_25_65*g_26_69**2*g_27_69**3*y**26/27 + 40*g_25_65*g_26_69**2*g_27_69**2*y**29/9 + 28*g_25_65*g_26_69**2*g_27_69*y**32/9 + 4*g_25_65*g_26_69**2*y**35/27 + 8*g_25_65*g_27_69**2*y**30 + 16*g_25_65*g_27_69*y**33 + 2*g_25_65*y**36 - 4*g_25_66**2*g_27_69**2*y**30/9 - 8*g_25_66**2*g_27_69*y**33/9 - g_25_66**2*y**36/9 + 40*g_25_66*g_26_67**2*g_27_69**3*y**23/27 + 40*g_25_66*g_26_67**2*g_27_69**2*y**26/9 + 28*g_25_66*g_26_67**2*g_27_69*y**29/9 + 4*g_25_66*g_26_67**2*y**32/27 + 80*g_25_66*g_26_67*g_26_68*g_27_69**3*y**24/27 + 80*g_25_66*g_26_67*g_26_68*g_27_69**2*y**27/9 + 56*g_25_66*g_26_67*g_26_68*g_27_69*y**30/9 + 8*g_25_66*g_26_67*g_26_68*y**33/27 + 80*g_25_66*g_26_67*g_26_69*g_27_69**3*y**25/27 + 80*g_25_66*g_26_67*g_26_69*g_27_69**2*y**28/9 + 56*g_25_66*g_26_67*g_26_69*g_27_69*y**31/9 + 8*g_25_66*g_26_67*g_26_69*y**34/27 + 40*g_25_66*g_26_68**2*g_27_69**3*y**25/27 + 40*g_25_66*g_26_68**2*g_27_69**2*y**28/9 + 28*g_25_66*g_26_68**2*g_27_69*y**31/9 + 4*g_25_66*g_26_68**2*y**34/27 + 80*g_25_66*g_26_68*g_26_69*g_27_69**3*y**26/27 + 80*g_25_66*g_26_68*g_26_69*g_27_69**2*y**29/9 + 56*g_25_66*g_26_68*g_26_69*g_27_69*y**32/9 + 8*g_25_66*g_26_68*g_26_69*y**35/27 + 40*g_25_66*g_26_69**2*g_27_69**3*y**27/27 + 40*g_25_66*g_26_69**2*g_27_69**2*y**30/9 + 28*g_25_66*g_26_69**2*g_27_69*y**33/9 + 4*g_25_66*g_26_69**2*y**36/27 + 8*g_25_66*g_27_69**2*y**31 + 16*g_25_66*g_27_69*y**34 + 2*g_25_66*y**37 - 160*g_26_67**4*g_27_69**4*y**16/243 - 640*g_26_67**4*g_27_69**3*y**19/243 - 260*g_26_67**4*g_27_69**2*y**22/81 - 280*g_26_67**4*g_27_69*y**25/243 - 7*g_26_67**4*y**28/243 - 640*g_26_67**3*g_26_68*g_27_69**4*y**17/243 - 2560*g_26_67**3*g_26_68*g_27_69**3*y**20/243 - 1040*g_26_67**3*g_26_68*g_27_69**2*y**23/81 - 1120*g_26_67**3*g_26_68*g_27_69*y**26/243 - 28*g_26_67**3*g_26_68*y**29/243 - 640*g_26_67**3*g_26_69*g_27_69**4*y**18/243 - 2560*g_26_67**3*g_26_69*g_27_69**3*y**21/243 - 1040*g_26_67**3*g_26_69*g_27_69**2*y**24/81 - 1120*g_26_67**3*g_26_69*g_27_69*y**27/243 - 28*g_26_67**3*g_26_69*y**30/243 - 320*g_26_67**2*g_26_68**2*g_27_69**4*y**18/81 - 1280*g_26_67**2*g_26_68**2*g_27_69**3*y**21/81 - 520*g_26_67**2*g_26_68**2*g_27_69**2*y**24/27 - 560*g_26_67**2*g_26_68**2*g_27_69*y**27/81 - 14*g_26_67**2*g_26_68**2*y**30/81 - 640*g_26_67**2*g_26_68*g_26_69*g_27_69**4*y**19/81 - 2560*g_26_67**2*g_26_68*g_26_69*g_27_69**3*y**22/81 - 1040*g_26_67**2*g_26_68*g_26_69*g_27_69**2*y**25/27 - 1120*g_26_67**2*g_26_68*g_26_69*g_27_69*y**28/81 - 28*g_26_67**2*g_26_68*g_26_69*y**31/81 - 320*g_26_67**2*g_26_69**2*g_27_69**4*y**20/81 - 1280*g_26_67**2*g_26_69**2*g_27_69**3*y**23/81 - 520*g_26_67**2*g_26_69**2*g_27_69**2*y**26/27 - 560*g_26_67**2*g_26_69**2*g_27_69*y**29/81 - 14*g_26_67**2*g_26_69**2*y**32/81 - 40*g_26_67**2*g_27_69**3*y**24/3 - 40*g_26_67**2*g_27_69**2*y**27 - 28*g_26_67**2*g_27_69*y**30 - 4*g_26_67**2*y**33/3 - 640*g_26_67*g_26_68**3*g_27_69**4*y**19/243 - 2560*g_26_67*g_26_68**3*g_27_69**3*y**22/243 - 1040*g_26_67*g_26_68**3*g_27_69**2*y**25/81 - 1120*g_26_67*g_26_68**3*g_27_69*y**28/243 - 28*g_26_67*g_26_68**3*y**31/243 - 640*g_26_67*g_26_68**2*g_26_69*g_27_69**4*y**20/81 - 2560*g_26_67*g_26_68**2*g_26_69*g_27_69**3*y**23/81 - 1040*g_26_67*g_26_68**2*g_26_69*g_27_69**2*y**26/27 - 1120*g_26_67*g_26_68**2*g_26_69*g_27_69*y**29/81 - 28*g_26_67*g_26_68**2*g_26_69*y**32/81 - 640*g_26_67*g_26_68*g_26_69**2*g_27_69**4*y**21/81 - 2560*g_26_67*g_26_68*g_26_69**2*g_27_69**3*y**24/81 - 1040*g_26_67*g_26_68*g_26_69**2*g_27_69**2*y**27/27 - 1120*g_26_67*g_26_68*g_26_69**2*g_27_69*y**30/81 - 28*g_26_67*g_26_68*g_26_69**2*y**33/81 - 80*g_26_67*g_26_68*g_27_69**3*y**25/3 - 80*g_26_67*g_26_68*g_27_69**2*y**28 - 56*g_26_67*g_26_68*g_27_69*y**31 - 8*g_26_67*g_26_68*y**34/3 - 640*g_26_67*g_26_69**3*g_27_69**4*y**22/243 - 2560*g_26_67*g_26_69**3*g_27_69**3*y**25/243 - 1040*g_26_67*g_26_69**3*g_27_69**2*y**28/81 - 1120*g_26_67*g_26_69**3*g_27_69*y**31/243 - 28*g_26_67*g_26_69**3*y**34/243 - 80*g_26_67*g_26_69*g_27_69**3*y**26/3 - 80*g_26_67*g_26_69*g_27_69**2*y**29 - 56*g_26_67*g_26_69*g_27_69*y**32 - 8*g_26_67*g_26_69*y**35/3 - 160*g_26_68**4*g_27_69**4*y**20/243 - 640*g_26_68**4*g_27_69**3*y**23/243 - 260*g_26_68**4*g_27_69**2*y**26/81 - 280*g_26_68**4*g_27_69*y**29/243 - 7*g_26_68**4*y**32/243 - 640*g_26_68**3*g_26_69*g_27_69**4*y**21/243 - 2560*g_26_68**3*g_26_69*g_27_69**3*y**24/243 - 1040*g_26_68**3*g_26_69*g_27_69**2*y**27/81 - 1120*g_26_68**3*g_26_69*g_27_69*y**30/243 - 28*g_26_68**3*g_26_69*y**33/243 - 320*g_26_68**2*g_26_69**2*g_27_69**4*y**22/81 - 1280*g_26_68**2*g_26_69**2*g_27_69**3*y**25/81 - 520*g_26_68**2*g_26_69**2*g_27_69**2*y**28/27 - 560*g_26_68**2*g_26_69**2*g_27_69*y**31/81 - 14*g_26_68**2*g_26_69**2*y**34/81 - 40*g_26_68**2*g_27_69**3*y**26/3 - 40*g_26_68**2*g_27_69**2*y**29 - 28*g_26_68**2*g_27_69*y**32 - 4*g_26_68**2*y**35/3 - 640*g_26_68*g_26_69**3*g_27_69**4*y**23/243 - 2560*g_26_68*g_26_69**3*g_27_69**3*y**26/243 - 1040*g_26_68*g_26_69**3*g_27_69**2*y**29/81 - 1120*g_26_68*g_26_69**3*g_27_69*y**32/243 - 28*g_26_68*g_26_69**3*y**35/243 - 80*g_26_68*g_26_69*g_27_69**3*y**27/3 - 80*g_26_68*g_26_69*g_27_69**2*y**30 - 56*g_26_68*g_26_69*g_27_69*y**33 - 8*g_26_68*g_26_69*y**36/3 - 160*g_26_69**4*g_27_69**4*y**24/243 - 640*g_26_69**4*g_27_69**3*y**27/243 - 260*g_26_69**4*g_27_69**2*y**30/81 - 280*g_26_69**4*g_27_69*y**33/243 - 7*g_26_69**4*y**36/243 - 40*g_26_69**2*g_27_69**3*y**28/3 - 40*g_26_69**2*g_27_69**2*y**31 - 28*g_26_69**2*g_27_69*y**34 - 4*g_26_69**2*y**37/3 - 36*g_27_69**2*y**32 - 48*g_27_69*y**35 + 15*y**38",
+          "z_degree": 14
+        },
+        {
+          "formula": "2*g_22_57*g_27_69*y**30/3 + 2*g_22_57*y**33/3 + 2*g_22_58*g_27_69*y**31/3 + 2*g_22_58*y**34/3 + 2*g_22_59*g_27_69*y**32/3 + 2*g_22_59*y**35/3 - 8*g_23_59*g_26_67*g_27_69**2*y**24/9 - 16*g_23_59*g_26_67*g_27_69*y**27/9 - 2*g_23_59*g_26_67*y**30/9 - 8*g_23_59*g_26_68*g_27_69**2*y**25/9 - 16*g_23_59*g_26_68*g_27_69*y**28/9 - 2*g_23_59*g_26_68*y**31/9 - 8*g_23_59*g_26_69*g_27_69**2*y**26/9 - 16*g_23_59*g_26_69*g_27_69*y**29/9 - 2*g_23_59*g_26_69*y**32/9 - 8*g_23_60*g_26_67*g_27_69**2*y**25/9 - 16*g_23_60*g_26_67*g_27_69*y**28/9 - 2*g_23_60*g_26_67*y**31/9 - 8*g_23_60*g_26_68*g_27_69**2*y**26/9 - 16*g_23_60*g_26_68*g_27_69*y**29/9 - 2*g_23_60*g_26_68*y**32/9 - 8*g_23_60*g_26_69*g_27_69**2*y**27/9 - 16*g_23_60*g_26_69*g_27_69*y**30/9 - 2*g_23_60*g_26_69*y**33/9 - 8*g_23_61*g_26_67*g_27_69**2*y**26/9 - 16*g_23_61*g_26_67*g_27_69*y**29/9 - 2*g_23_61*g_26_67*y**32/9 - 8*g_23_61*g_26_68*g_27_69**2*y**27/9 - 16*g_23_61*g_26_68*g_27_69*y**30/9 - 2*g_23_61*g_26_68*y**33/9 - 8*g_23_61*g_26_69*g_27_69**2*y**28/9 - 16*g_23_61*g_26_69*g_27_69*y**31/9 - 2*g_23_61*g_26_69*y**34/9 - 8*g_24_62*g_25_64*g_27_69**2*y**24/9 - 16*g_24_62*g_25_64*g_27_69*y**27/9 - 2*g_24_62*g_25_64*y**30/9 - 8*g_24_62*g_25_65*g_27_69**2*y**25/9 - 16*g_24_62*g_25_65*g_27_69*y**28/9 - 2*g_24_62*g_25_65*y**31/9 - 8*g_24_62*g_25_66*g_27_69**2*y**26/9 - 16*g_24_62*g_25_66*g_27_69*y**29/9 - 2*g_24_62*g_25_66*y**32/9 + 40*g_24_62*g_26_67**2*g_27_69**3*y**19/27 + 40*g_24_62*g_26_67**2*g_27_69**2*y**22/9 + 28*g_24_62*g_26_67**2*g_27_69*y**25/9 + 4*g_24_62*g_26_67**2*y**28/27 + 80*g_24_62*g_26_67*g_26_68*g_27_69**3*y**20/27 + 80*g_24_62*g_26_67*g_26_68*g_27_69**2*y**23/9 + 56*g_24_62*g_26_67*g_26_68*g_27_69*y**26/9 + 8*g_24_62*g_26_67*g_26_68*y**29/27 + 80*g_24_62*g_26_67*g_26_69*g_27_69**3*y**21/27 + 80*g_24_62*g_26_67*g_26_69*g_27_69**2*y**24/9 + 56*g_24_62*g_26_67*g_26_69*g_27_69*y**27/9 + 8*g_24_62*g_26_67*g_26_69*y**30/27 + 40*g_24_62*g_26_68**2*g_27_69**3*y**21/27 + 40*g_24_62*g_26_68**2*g_27_69**2*y**24/9 + 28*g_24_62*g_26_68**2*g_27_69*y**27/9 + 4*g_24_62*g_26_68**2*y**30/27 + 80*g_24_62*g_26_68*g_26_69*g_27_69**3*y**22/27 + 80*g_24_62*g_26_68*g_26_69*g_27_69**2*y**25/9 + 56*g_24_62*g_26_68*g_26_69*g_27_69*y**28/9 + 8*g_24_62*g_26_68*g_26_69*y**31/27 + 40*g_24_62*g_26_69**2*g_27_69**3*y**23/27 + 40*g_24_62*g_26_69**2*g_27_69**2*y**26/9 + 28*g_24_62*g_26_69**2*g_27_69*y**29/9 + 4*g_24_62*g_26_69**2*y**32/27 + 8*g_24_62*g_27_69**2*y**27 + 16*g_24_62*g_27_69*y**30 + 2*g_24_62*y**33 - 8*g_24_63*g_25_64*g_27_69**2*y**25/9 - 16*g_24_63*g_25_64*g_27_69*y**28/9 - 2*g_24_63*g_25_64*y**31/9 - 8*g_24_63*g_25_65*g_27_69**2*y**26/9 - 16*g_24_63*g_25_65*g_27_69*y**29/9 - 2*g_24_63*g_25_65*y**32/9 - 8*g_24_63*g_25_66*g_27_69**2*y**27/9 - 16*g_24_63*g_25_66*g_27_69*y**30/9 - 2*g_24_63*g_25_66*y**33/9 + 40*g_24_63*g_26_67**2*g_27_69**3*y**20/27 + 40*g_24_63*g_26_67**2*g_27_69**2*y**23/9 + 28*g_24_63*g_26_67**2*g_27_69*y**26/9 + 4*g_24_63*g_26_67**2*y**29/27 + 80*g_24_63*g_26_67*g_26_68*g_27_69**3*y**21/27 + 80*g_24_63*g_26_67*g_26_68*g_27_69**2*y**24/9 + 56*g_24_63*g_26_67*g_26_68*g_27_69*y**27/9 + 8*g_24_63*g_26_67*g_26_68*y**30/27 + 80*g_24_63*g_26_67*g_26_69*g_27_69**3*y**22/27 + 80*g_24_63*g_26_67*g_26_69*g_27_69**2*y**25/9 + 56*g_24_63*g_26_67*g_26_69*g_27_69*y**28/9 + 8*g_24_63*g_26_67*g_26_69*y**31/27 + 40*g_24_63*g_26_68**2*g_27_69**3*y**22/27 + 40*g_24_63*g_26_68**2*g_27_69**2*y**25/9 + 28*g_24_63*g_26_68**2*g_27_69*y**28/9 + 4*g_24_63*g_26_68**2*y**31/27 + 80*g_24_63*g_26_68*g_26_69*g_27_69**3*y**23/27 + 80*g_24_63*g_26_68*g_26_69*g_27_69**2*y**26/9 + 56*g_24_63*g_26_68*g_26_69*g_27_69*y**29/9 + 8*g_24_63*g_26_68*g_26_69*y**32/27 + 40*g_24_63*g_26_69**2*g_27_69**3*y**24/27 + 40*g_24_63*g_26_69**2*g_27_69**2*y**27/9 + 28*g_24_63*g_26_69**2*g_27_69*y**30/9 + 4*g_24_63*g_26_69**2*y**33/27 + 8*g_24_63*g_27_69**2*y**28 + 16*g_24_63*g_27_69*y**31 + 2*g_24_63*y**34 - 8*g_24_64*g_25_64*g_27_69**2*y**26/9 - 16*g_24_64*g_25_64*g_27_69*y**29/9 - 2*g_24_64*g_25_64*y**32/9 - 8*g_24_64*g_25_65*g_27_69**2*y**27/9 - 16*g_24_64*g_25_65*g_27_69*y**30/9 - 2*g_24_64*g_25_65*y**33/9 - 8*g_24_64*g_25_66*g_27_69**2*y**28/9 - 16*g_24_64*g_25_66*g_27_69*y**31/9 - 2*g_24_64*g_25_66*y**34/9 + 40*g_24_64*g_26_67**2*g_27_69**3*y**21/27 + 40*g_24_64*g_26_67**2*g_27_69**2*y**24/9 + 28*g_24_64*g_26_67**2*g_27_69*y**27/9 + 4*g_24_64*g_26_67**2*y**30/27 + 80*g_24_64*g_26_67*g_26_68*g_27_69**3*y**22/27 + 80*g_24_64*g_26_67*g_26_68*g_27_69**2*y**25/9 + 56*g_24_64*g_26_67*g_26_68*g_27_69*y**28/9 + 8*g_24_64*g_26_67*g_26_68*y**31/27 + 80*g_24_64*g_26_67*g_26_69*g_27_69**3*y**23/27 + 80*g_24_64*g_26_67*g_26_69*g_27_69**2*y**26/9 + 56*g_24_64*g_26_67*g_26_69*g_27_69*y**29/9 + 8*g_24_64*g_26_67*g_26_69*y**32/27 + 40*g_24_64*g_26_68**2*g_27_69**3*y**23/27 + 40*g_24_64*g_26_68**2*g_27_69**2*y**26/9 + 28*g_24_64*g_26_68**2*g_27_69*y**29/9 + 4*g_24_64*g_26_68**2*y**32/27 + 80*g_24_64*g_26_68*g_26_69*g_27_69**3*y**24/27 + 80*g_24_64*g_26_68*g_26_69*g_27_69**2*y**27/9 + 56*g_24_64*g_26_68*g_26_69*g_27_69*y**30/9 + 8*g_24_64*g_26_68*g_26_69*y**33/27 + 40*g_24_64*g_26_69**2*g_27_69**3*y**25/27 + 40*g_24_64*g_26_69**2*g_27_69**2*y**28/9 + 28*g_24_64*g_26_69**2*g_27_69*y**31/9 + 4*g_24_64*g_26_69**2*y**34/27 + 8*g_24_64*g_27_69**2*y**29 + 16*g_24_64*g_27_69*y**32 + 2*g_24_64*y**35 + 40*g_25_64**2*g_26_67*g_27_69**3*y**18/27 + 40*g_25_64**2*g_26_67*g_27_69**2*y**21/9 + 28*g_25_64**2*g_26_67*g_27_69*y**24/9 + 4*g_25_64**2*g_26_67*y**27/27 + 40*g_25_64**2*g_26_68*g_27_69**3*y**19/27 + 40*g_25_64**2*g_26_68*g_27_69**2*y**22/9 + 28*g_25_64**2*g_26_68*g_27_69*y**25/9 + 4*g_25_64**2*g_26_68*y**28/27 + 40*g_25_64**2*g_26_69*g_27_69**3*y**20/27 + 40*g_25_64**2*g_26_69*g_27_69**2*y**23/9 + 28*g_25_64**2*g_26_69*g_27_69*y**26/9 + 4*g_25_64**2*g_26_69*y**29/27 + 80*g_25_64*g_25_65*g_26_67*g_27_69**3*y**19/27 + 80*g_25_64*g_25_65*g_26_67*g_27_69**2*y**22/9 + 56*g_25_64*g_25_65*g_26_67*g_27_69*y**25/9 + 8*g_25_64*g_25_65*g_26_67*y**28/27 + 80*g_25_64*g_25_65*g_26_68*g_27_69**3*y**20/27 + 80*g_25_64*g_25_65*g_26_68*g_27_69**2*y**23/9 + 56*g_25_64*g_25_65*g_26_68*g_27_69*y**26/9 + 8*g_25_64*g_25_65*g_26_68*y**29/27 + 80*g_25_64*g_25_65*g_26_69*g_27_69**3*y**21/27 + 80*g_25_64*g_25_65*g_26_69*g_27_69**2*y**24/9 + 56*g_25_64*g_25_65*g_26_69*g_27_69*y**27/9 + 8*g_25_64*g_25_65*g_26_69*y**30/27 + 80*g_25_64*g_25_66*g_26_67*g_27_69**3*y**20/27 + 80*g_25_64*g_25_66*g_26_67*g_27_69**2*y**23/9 + 56*g_25_64*g_25_66*g_26_67*g_27_69*y**26/9 + 8*g_25_64*g_25_66*g_26_67*y**29/27 + 80*g_25_64*g_25_66*g_26_68*g_27_69**3*y**21/27 + 80*g_25_64*g_25_66*g_26_68*g_27_69**2*y**24/9 + 56*g_25_64*g_25_66*g_26_68*g_27_69*y**27/9 + 8*g_25_64*g_25_66*g_26_68*y**30/27 + 80*g_25_64*g_25_66*g_26_69*g_27_69**3*y**22/27 + 80*g_25_64*g_25_66*g_26_69*g_27_69**2*y**25/9 + 56*g_25_64*g_25_66*g_26_69*g_27_69*y**28/9 + 8*g_25_64*g_25_66*g_26_69*y**31/27 - 640*g_25_64*g_26_67**3*g_27_69**4*y**13/243 - 2560*g_25_64*g_26_67**3*g_27_69**3*y**16/243 - 1040*g_25_64*g_26_67**3*g_27_69**2*y**19/81 - 1120*g_25_64*g_26_67**3*g_27_69*y**22/243 - 28*g_25_64*g_26_67**3*y**25/243 - 640*g_25_64*g_26_67**2*g_26_68*g_27_69**4*y**14/81 - 2560*g_25_64*g_26_67**2*g_26_68*g_27_69**3*y**17/81 - 1040*g_25_64*g_26_67**2*g_26_68*g_27_69**2*y**20/27 - 1120*g_25_64*g_26_67**2*g_26_68*g_27_69*y**23/81 - 28*g_25_64*g_26_67**2*g_26_68*y**26/81 - 640*g_25_64*g_26_67**2*g_26_69*g_27_69**4*y**15/81 - 2560*g_25_64*g_26_67**2*g_26_69*g_27_69**3*y**18/81 - 1040*g_25_64*g_26_67**2*g_26_69*g_27_69**2*y**21/27 - 1120*g_25_64*g_26_67**2*g_26_69*g_27_69*y**24/81 - 28*g_25_64*g_26_67**2*g_26_69*y**27/81 - 640*g_25_64*g_26_67*g_26_68**2*g_27_69**4*y**15/81 - 2560*g_25_64*g_26_67*g_26_68**2*g_27_69**3*y**18/81 - 1040*g_25_64*g_26_67*g_26_68**2*g_27_69**2*y**21/27 - 1120*g_25_64*g_26_67*g_26_68**2*g_27_69*y**24/81 - 28*g_25_64*g_26_67*g_26_68**2*y**27/81 - 1280*g_25_64*g_26_67*g_26_68*g_26_69*g_27_69**4*y**16/81 - 5120*g_25_64*g_26_67*g_26_68*g_26_69*g_27_69**3*y**19/81 - 2080*g_25_64*g_26_67*g_26_68*g_26_69*g_27_69**2*y**22/27 - 2240*g_25_64*g_26_67*g_26_68*g_26_69*g_27_69*y**25/81 - 56*g_25_64*g_26_67*g_26_68*g_26_69*y**28/81 - 640*g_25_64*g_26_67*g_26_69**2*g_27_69**4*y**17/81 - 2560*g_25_64*g_26_67*g_26_69**2*g_27_69**3*y**20/81 - 1040*g_25_64*g_26_67*g_26_69**2*g_27_69**2*y**23/27 - 1120*g_25_64*g_26_67*g_26_69**2*g_27_69*y**26/81 - 28*g_25_64*g_26_67*g_26_69**2*y**29/81 - 80*g_25_64*g_26_67*g_27_69**3*y**21/3 - 80*g_25_64*g_26_67*g_27_69**2*y**24 - 56*g_25_64*g_26_67*g_27_69*y**27 - 8*g_25_64*g_26_67*y**30/3 - 640*g_25_64*g_26_68**3*g_27_69**4*y**16/243 - 2560*g_25_64*g_26_68**3*g_27_69**3*y**19/243 - 1040*g_25_64*g_26_68**3*g_27_69**2*y**22/81 - 1120*g_25_64*g_26_68**3*g_27_69*y**25/243 - 28*g_25_64*g_26_68**3*y**28/243 - 640*g_25_64*g_26_68**2*g_26_69*g_27_69**4*y**17/81 - 2560*g_25_64*g_26_68**2*g_26_69*g_27_69**3*y**20/81 - 1040*g_25_64*g_26_68**2*g_26_69*g_27_69**2*y**23/27 - 1120*g_25_64*g_26_68**2*g_26_69*g_27_69*y**26/81 - 28*g_25_64*g_26_68**2*g_26_69*y**29/81 - 640*g_25_64*g_26_68*g_26_69**2*g_27_69**4*y**18/81 - 2560*g_25_64*g_26_68*g_26_69**2*g_27_69**3*y**21/81 - 1040*g_25_64*g_26_68*g_26_69**2*g_27_69**2*y**24/27 - 1120*g_25_64*g_26_68*g_26_69**2*g_27_69*y**27/81 - 28*g_25_64*g_26_68*g_26_69**2*y**30/81 - 80*g_25_64*g_26_68*g_27_69**3*y**22/3 - 80*g_25_64*g_26_68*g_27_69**2*y**25 - 56*g_25_64*g_26_68*g_27_69*y**28 - 8*g_25_64*g_26_68*y**31/3 - 640*g_25_64*g_26_69**3*g_27_69**4*y**19/243 - 2560*g_25_64*g_26_69**3*g_27_69**3*y**22/243 - 1040*g_25_64*g_26_69**3*g_27_69**2*y**25/81 - 1120*g_25_64*g_26_69**3*g_27_69*y**28/243 - 28*g_25_64*g_26_69**3*y**31/243 - 80*g_25_64*g_26_69*g_27_69**3*y**23/3 - 80*g_25_64*g_26_69*g_27_69**2*y**26 - 56*g_25_64*g_26_69*g_27_69*y**29 - 8*g_25_64*g_26_69*y**32/3 + 40*g_25_65**2*g_26_67*g_27_69**3*y**20/27 + 40*g_25_65**2*g_26_67*g_27_69**2*y**23/9 + 28*g_25_65**2*g_26_67*g_27_69*y**26/9 + 4*g_25_65**2*g_26_67*y**29/27 + 40*g_25_65**2*g_26_68*g_27_69**3*y**21/27 + 40*g_25_65**2*g_26_68*g_27_69**2*y**24/9 + 28*g_25_65**2*g_26_68*g_27_69*y**27/9 + 4*g_25_65**2*g_26_68*y**30/27 + 40*g_25_65**2*g_26_69*g_27_69**3*y**22/27 + 40*g_25_65**2*g_26_69*g_27_69**2*y**25/9 + 28*g_25_65**2*g_26_69*g_27_69*y**28/9 + 4*g_25_65**2*g_26_69*y**31/27 + 80*g_25_65*g_25_66*g_26_67*g_27_69**3*y**21/27 + 80*g_25_65*g_25_66*g_26_67*g_27_69**2*y**24/9 + 56*g_25_65*g_25_66*g_26_67*g_27_69*y**27/9 + 8*g_25_65*g_25_66*g_26_67*y**30/27 + 80*g_25_65*g_25_66*g_26_68*g_27_69**3*y**22/27 + 80*g_25_65*g_25_66*g_26_68*g_27_69**2*y**25/9 + 56*g_25_65*g_25_66*g_26_68*g_27_69*y**28/9 + 8*g_25_65*g_25_66*g_26_68*y**31/27 + 80*g_25_65*g_25_66*g_26_69*g_27_69**3*y**23/27 + 80*g_25_65*g_25_66*g_26_69*g_27_69**2*y**26/9 + 56*g_25_65*g_25_66*g_26_69*g_27_69*y**29/9 + 8*g_25_65*g_25_66*g_26_69*y**32/27 - 640*g_25_65*g_26_67**3*g_27_69**4*y**14/243 - 2560*g_25_65*g_26_67**3*g_27_69**3*y**17/243 - 1040*g_25_65*g_26_67**3*g_27_69**2*y**20/81 - 1120*g_25_65*g_26_67**3*g_27_69*y**23/243 - 28*g_25_65*g_26_67**3*y**26/243 - 640*g_25_65*g_26_67**2*g_26_68*g_27_69**4*y**15/81 - 2560*g_25_65*g_26_67**2*g_26_68*g_27_69**3*y**18/81 - 1040*g_25_65*g_26_67**2*g_26_68*g_27_69**2*y**21/27 - 1120*g_25_65*g_26_67**2*g_26_68*g_27_69*y**24/81 - 28*g_25_65*g_26_67**2*g_26_68*y**27/81 - 640*g_25_65*g_26_67**2*g_26_69*g_27_69**4*y**16/81 - 2560*g_25_65*g_26_67**2*g_26_69*g_27_69**3*y**19/81 - 1040*g_25_65*g_26_67**2*g_26_69*g_27_69**2*y**22/27 - 1120*g_25_65*g_26_67**2*g_26_69*g_27_69*y**25/81 - 28*g_25_65*g_26_67**2*g_26_69*y**28/81 - 640*g_25_65*g_26_67*g_26_68**2*g_27_69**4*y**16/81 - 2560*g_25_65*g_26_67*g_26_68**2*g_27_69**3*y**19/81 - 1040*g_25_65*g_26_67*g_26_68**2*g_27_69**2*y**22/27 - 1120*g_25_65*g_26_67*g_26_68**2*g_27_69*y**25/81 - 28*g_25_65*g_26_67*g_26_68**2*y**28/81 - 1280*g_25_65*g_26_67*g_26_68*g_26_69*g_27_69**4*y**17/81 - 5120*g_25_65*g_26_67*g_26_68*g_26_69*g_27_69**3*y**20/81 - 2080*g_25_65*g_26_67*g_26_68*g_26_69*g_27_69**2*y**23/27 - 2240*g_25_65*g_26_67*g_26_68*g_26_69*g_27_69*y**26/81 - 56*g_25_65*g_26_67*g_26_68*g_26_69*y**29/81 - 640*g_25_65*g_26_67*g_26_69**2*g_27_69**4*y**18/81 - 2560*g_25_65*g_26_67*g_26_69**2*g_27_69**3*y**21/81 - 1040*g_25_65*g_26_67*g_26_69**2*g_27_69**2*y**24/27 - 1120*g_25_65*g_26_67*g_26_69**2*g_27_69*y**27/81 - 28*g_25_65*g_26_67*g_26_69**2*y**30/81 - 80*g_25_65*g_26_67*g_27_69**3*y**22/3 - 80*g_25_65*g_26_67*g_27_69**2*y**25 - 56*g_25_65*g_26_67*g_27_69*y**28 - 8*g_25_65*g_26_67*y**31/3 - 640*g_25_65*g_26_68**3*g_27_69**4*y**17/243 - 2560*g_25_65*g_26_68**3*g_27_69**3*y**20/243 - 1040*g_25_65*g_26_68**3*g_27_69**2*y**23/81 - 1120*g_25_65*g_26_68**3*g_27_69*y**26/243 - 28*g_25_65*g_26_68**3*y**29/243 - 640*g_25_65*g_26_68**2*g_26_69*g_27_69**4*y**18/81 - 2560*g_25_65*g_26_68**2*g_26_69*g_27_69**3*y**21/81 - 1040*g_25_65*g_26_68**2*g_26_69*g_27_69**2*y**24/27 - 1120*g_25_65*g_26_68**2*g_26_69*g_27_69*y**27/81 - 28*g_25_65*g_26_68**2*g_26_69*y**30/81 - 640*g_25_65*g_26_68*g_26_69**2*g_27_69**4*y**19/81 - 2560*g_25_65*g_26_68*g_26_69**2*g_27_69**3*y**22/81 - 1040*g_25_65*g_26_68*g_26_69**2*g_27_69**2*y**25/27 - 1120*g_25_65*g_26_68*g_26_69**2*g_27_69*y**28/81 - 28*g_25_65*g_26_68*g_26_69**2*y**31/81 - 80*g_25_65*g_26_68*g_27_69**3*y**23/3 - 80*g_25_65*g_26_68*g_27_69**2*y**26 - 56*g_25_65*g_26_68*g_27_69*y**29 - 8*g_25_65*g_26_68*y**32/3 - 640*g_25_65*g_26_69**3*g_27_69**4*y**20/243 - 2560*g_25_65*g_26_69**3*g_27_69**3*y**23/243 - 1040*g_25_65*g_26_69**3*g_27_69**2*y**26/81 - 1120*g_25_65*g_26_69**3*g_27_69*y**29/243 - 28*g_25_65*g_26_69**3*y**32/243 - 80*g_25_65*g_26_69*g_27_69**3*y**24/3 - 80*g_25_65*g_26_69*g_27_69**2*y**27 - 56*g_25_65*g_26_69*g_27_69*y**30 - 8*g_25_65*g_26_69*y**33/3 + 40*g_25_66**2*g_26_67*g_27_69**3*y**22/27 + 40*g_25_66**2*g_26_67*g_27_69**2*y**25/9 + 28*g_25_66**2*g_26_67*g_27_69*y**28/9 + 4*g_25_66**2*g_26_67*y**31/27 + 40*g_25_66**2*g_26_68*g_27_69**3*y**23/27 + 40*g_25_66**2*g_26_68*g_27_69**2*y**26/9 + 28*g_25_66**2*g_26_68*g_27_69*y**29/9 + 4*g_25_66**2*g_26_68*y**32/27 + 40*g_25_66**2*g_26_69*g_27_69**3*y**24/27 + 40*g_25_66**2*g_26_69*g_27_69**2*y**27/9 + 28*g_25_66**2*g_26_69*g_27_69*y**30/9 + 4*g_25_66**2*g_26_69*y**33/27 - 640*g_25_66*g_26_67**3*g_27_69**4*y**15/243 - 2560*g_25_66*g_26_67**3*g_27_69**3*y**18/243 - 1040*g_25_66*g_26_67**3*g_27_69**2*y**21/81 - 1120*g_25_66*g_26_67**3*g_27_69*y**24/243 - 28*g_25_66*g_26_67**3*y**27/243 - 640*g_25_66*g_26_67**2*g_26_68*g_27_69**4*y**16/81 - 2560*g_25_66*g_26_67**2*g_26_68*g_27_69**3*y**19/81 - 1040*g_25_66*g_26_67**2*g_26_68*g_27_69**2*y**22/27 - 1120*g_25_66*g_26_67**2*g_26_68*g_27_69*y**25/81 - 28*g_25_66*g_26_67**2*g_26_68*y**28/81 - 640*g_25_66*g_26_67**2*g_26_69*g_27_69**4*y**17/81 - 2560*g_25_66*g_26_67**2*g_26_69*g_27_69**3*y**20/81 - 1040*g_25_66*g_26_67**2*g_26_69*g_27_69**2*y**23/27 - 1120*g_25_66*g_26_67**2*g_26_69*g_27_69*y**26/81 - 28*g_25_66*g_26_67**2*g_26_69*y**29/81 - 640*g_25_66*g_26_67*g_26_68**2*g_27_69**4*y**17/81 - 2560*g_25_66*g_26_67*g_26_68**2*g_27_69**3*y**20/81 - 1040*g_25_66*g_26_67*g_26_68**2*g_27_69**2*y**23/27 - 1120*g_25_66*g_26_67*g_26_68**2*g_27_69*y**26/81 - 28*g_25_66*g_26_67*g_26_68**2*y**29/81 - 1280*g_25_66*g_26_67*g_26_68*g_26_69*g_27_69**4*y**18/81 - 5120*g_25_66*g_26_67*g_26_68*g_26_69*g_27_69**3*y**21/81 - 2080*g_25_66*g_26_67*g_26_68*g_26_69*g_27_69**2*y**24/27 - 2240*g_25_66*g_26_67*g_26_68*g_26_69*g_27_69*y**27/81 - 56*g_25_66*g_26_67*g_26_68*g_26_69*y**30/81 - 640*g_25_66*g_26_67*g_26_69**2*g_27_69**4*y**19/81 - 2560*g_25_66*g_26_67*g_26_69**2*g_27_69**3*y**22/81 - 1040*g_25_66*g_26_67*g_26_69**2*g_27_69**2*y**25/27 - 1120*g_25_66*g_26_67*g_26_69**2*g_27_69*y**28/81 - 28*g_25_66*g_26_67*g_26_69**2*y**31/81 - 80*g_25_66*g_26_67*g_27_69**3*y**23/3 - 80*g_25_66*g_26_67*g_27_69**2*y**26 - 56*g_25_66*g_26_67*g_27_69*y**29 - 8*g_25_66*g_26_67*y**32/3 - 640*g_25_66*g_26_68**3*g_27_69**4*y**18/243 - 2560*g_25_66*g_26_68**3*g_27_69**3*y**21/243 - 1040*g_25_66*g_26_68**3*g_27_69**2*y**24/81 - 1120*g_25_66*g_26_68**3*g_27_69*y**27/243 - 28*g_25_66*g_26_68**3*y**30/243 - 640*g_25_66*g_26_68**2*g_26_69*g_27_69**4*y**19/81 - 2560*g_25_66*g_26_68**2*g_26_69*g_27_69**3*y**22/81 - 1040*g_25_66*g_26_68**2*g_26_69*g_27_69**2*y**25/27 - 1120*g_25_66*g_26_68**2*g_26_69*g_27_69*y**28/81 - 28*g_25_66*g_26_68**2*g_26_69*y**31/81 - 640*g_25_66*g_26_68*g_26_69**2*g_27_69**4*y**20/81 - 2560*g_25_66*g_26_68*g_26_69**2*g_27_69**3*y**23/81 - 1040*g_25_66*g_26_68*g_26_69**2*g_27_69**2*y**26/27 - 1120*g_25_66*g_26_68*g_26_69**2*g_27_69*y**29/81 - 28*g_25_66*g_26_68*g_26_69**2*y**32/81 - 80*g_25_66*g_26_68*g_27_69**3*y**24/3 - 80*g_25_66*g_26_68*g_27_69**2*y**27 - 56*g_25_66*g_26_68*g_27_69*y**30 - 8*g_25_66*g_26_68*y**33/3 - 640*g_25_66*g_26_69**3*g_27_69**4*y**21/243 - 2560*g_25_66*g_26_69**3*g_27_69**3*y**24/243 - 1040*g_25_66*g_26_69**3*g_27_69**2*y**27/81 - 1120*g_25_66*g_26_69**3*g_27_69*y**30/243 - 28*g_25_66*g_26_69**3*y**33/243 - 80*g_25_66*g_26_69*g_27_69**3*y**25/3 - 80*g_25_66*g_26_69*g_27_69**2*y**28 - 56*g_25_66*g_26_69*g_27_69*y**31 - 8*g_25_66*g_26_69*y**34/3 + 704*g_26_67**5*g_27_69**5*y**8/729 + 3520*g_26_67**5*g_27_69**4*y**11/729 + 6080*g_26_67**5*g_27_69**3*y**14/729 + 4160*g_26_67**5*g_27_69**2*y**17/729 + 910*g_26_67**5*g_27_69*y**20/729 + 14*g_26_67**5*y**23/729 + 3520*g_26_67**4*g_26_68*g_27_69**5*y**9/729 + 17600*g_26_67**4*g_26_68*g_27_69**4*y**12/729 + 30400*g_26_67**4*g_26_68*g_27_69**3*y**15/729 + 20800*g_26_67**4*g_26_68*g_27_69**2*y**18/729 + 4550*g_26_67**4*g_26_68*g_27_69*y**21/729 + 70*g_26_67**4*g_26_68*y**24/729 + 3520*g_26_67**4*g_26_69*g_27_69**5*y**10/729 + 17600*g_26_67**4*g_26_69*g_27_69**4*y**13/729 + 30400*g_26_67**4*g_26_69*g_27_69**3*y**16/729 + 20800*g_26_67**4*g_26_69*g_27_69**2*y**19/729 + 4550*g_26_67**4*g_26_69*g_27_69*y**22/729 + 70*g_26_67**4*g_26_69*y**25/729 + 7040*g_26_67**3*g_26_68**2*g_27_69**5*y**10/729 + 35200*g_26_67**3*g_26_68**2*g_27_69**4*y**13/729 + 60800*g_26_67**3*g_26_68**2*g_27_69**3*y**16/729 + 41600*g_26_67**3*g_26_68**2*g_27_69**2*y**19/729 + 9100*g_26_67**3*g_26_68**2*g_27_69*y**22/729 + 140*g_26_67**3*g_26_68**2*y**25/729 + 14080*g_26_67**3*g_26_68*g_26_69*g_27_69**5*y**11/729 + 70400*g_26_67**3*g_26_68*g_26_69*g_27_69**4*y**14/729 + 121600*g_26_67**3*g_26_68*g_26_69*g_27_69**3*y**17/729 + 83200*g_26_67**3*g_26_68*g_26_69*g_27_69**2*y**20/729 + 18200*g_26_67**3*g_26_68*g_26_69*g_27_69*y**23/729 + 280*g_26_67**3*g_26_68*g_26_69*y**26/729 + 7040*g_26_67**3*g_26_69**2*g_27_69**5*y**12/729 + 35200*g_26_67**3*g_26_69**2*g_27_69**4*y**15/729 + 60800*g_26_67**3*g_26_69**2*g_27_69**3*y**18/729 + 41600*g_26_67**3*g_26_69**2*g_27_69**2*y**21/729 + 9100*g_26_67**3*g_26_69**2*g_27_69*y**24/729 + 140*g_26_67**3*g_26_69**2*y**27/729 + 640*g_26_67**3*g_27_69**4*y**16/27 + 2560*g_26_67**3*g_27_69**3*y**19/27 + 1040*g_26_67**3*g_27_69**2*y**22/9 + 1120*g_26_67**3*g_27_69*y**25/27 + 28*g_26_67**3*y**28/27 + 7040*g_26_67**2*g_26_68**3*g_27_69**5*y**11/729 + 35200*g_26_67**2*g_26_68**3*g_27_69**4*y**14/729 + 60800*g_26_67**2*g_26_68**3*g_27_69**3*y**17/729 + 41600*g_26_67**2*g_26_68**3*g_27_69**2*y**20/729 + 9100*g_26_67**2*g_26_68**3*g_27_69*y**23/729 + 140*g_26_67**2*g_26_68**3*y**26/729 + 7040*g_26_67**2*g_26_68**2*g_26_69*g_27_69**5*y**12/243 + 35200*g_26_67**2*g_26_68**2*g_26_69*g_27_69**4*y**15/243 + 60800*g_26_67**2*g_26_68**2*g_26_69*g_27_69**3*y**18/243 + 41600*g_26_67**2*g_26_68**2*g_26_69*g_27_69**2*y**21/243 + 9100*g_26_67**2*g_26_68**2*g_26_69*g_27_69*y**24/243 + 140*g_26_67**2*g_26_68**2*g_26_69*y**27/243 + 7040*g_26_67**2*g_26_68*g_26_69**2*g_27_69**5*y**13/243 + 35200*g_26_67**2*g_26_68*g_26_69**2*g_27_69**4*y**16/243 + 60800*g_26_67**2*g_26_68*g_26_69**2*g_27_69**3*y**19/243 + 41600*g_26_67**2*g_26_68*g_26_69**2*g_27_69**2*y**22/243 + 9100*g_26_67**2*g_26_68*g_26_69**2*g_27_69*y**25/243 + 140*g_26_67**2*g_26_68*g_26_69**2*y**28/243 + 640*g_26_67**2*g_26_68*g_27_69**4*y**17/9 + 2560*g_26_67**2*g_26_68*g_27_69**3*y**20/9 + 1040*g_26_67**2*g_26_68*g_27_69**2*y**23/3 + 1120*g_26_67**2*g_26_68*g_27_69*y**26/9 + 28*g_26_67**2*g_26_68*y**29/9 + 7040*g_26_67**2*g_26_69**3*g_27_69**5*y**14/729 + 35200*g_26_67**2*g_26_69**3*g_27_69**4*y**17/729 + 60800*g_26_67**2*g_26_69**3*g_27_69**3*y**20/729 + 41600*g_26_67**2*g_26_69**3*g_27_69**2*y**23/729 + 9100*g_26_67**2*g_26_69**3*g_27_69*y**26/729 + 140*g_26_67**2*g_26_69**3*y**29/729 + 640*g_26_67**2*g_26_69*g_27_69**4*y**18/9 + 2560*g_26_67**2*g_26_69*g_27_69**3*y**21/9 + 1040*g_26_67**2*g_26_69*g_27_69**2*y**24/3 + 1120*g_26_67**2*g_26_69*g_27_69*y**27/9 + 28*g_26_67**2*g_26_69*y**30/9 + 3520*g_26_67*g_26_68**4*g_27_69**5*y**12/729 + 17600*g_26_67*g_26_68**4*g_27_69**4*y**15/729 + 30400*g_26_67*g_26_68**4*g_27_69**3*y**18/729 + 20800*g_26_67*g_26_68**4*g_27_69**2*y**21/729 + 4550*g_26_67*g_26_68**4*g_27_69*y**24/729 + 70*g_26_67*g_26_68**4*y**27/729 + 14080*g_26_67*g_26_68**3*g_26_69*g_27_69**5*y**13/729 + 70400*g_26_67*g_26_68**3*g_26_69*g_27_69**4*y**16/729 + 121600*g_26_67*g_26_68**3*g_26_69*g_27_69**3*y**19/729 + 83200*g_26_67*g_26_68**3*g_26_69*g_27_69**2*y**22/729 + 18200*g_26_67*g_26_68**3*g_26_69*g_27_69*y**25/729 + 280*g_26_67*g_26_68**3*g_26_69*y**28/729 + 7040*g_26_67*g_26_68**2*g_26_69**2*g_27_69**5*y**14/243 + 35200*g_26_67*g_26_68**2*g_26_69**2*g_27_69**4*y**17/243 + 60800*g_26_67*g_26_68**2*g_26_69**2*g_27_69**3*y**20/243 + 41600*g_26_67*g_26_68**2*g_26_69**2*g_27_69**2*y**23/243 + 9100*g_26_67*g_26_68**2*g_26_69**2*g_27_69*y**26/243 + 140*g_26_67*g_26_68**2*g_26_69**2*y**29/243 + 640*g_26_67*g_26_68**2*g_27_69**4*y**18/9 + 2560*g_26_67*g_26_68**2*g_27_69**3*y**21/9 + 1040*g_26_67*g_26_68**2*g_27_69**2*y**24/3 + 1120*g_26_67*g_26_68**2*g_27_69*y**27/9 + 28*g_26_67*g_26_68**2*y**30/9 + 14080*g_26_67*g_26_68*g_26_69**3*g_27_69**5*y**15/729 + 70400*g_26_67*g_26_68*g_26_69**3*g_27_69**4*y**18/729 + 121600*g_26_67*g_26_68*g_26_69**3*g_27_69**3*y**21/729 + 83200*g_26_67*g_26_68*g_26_69**3*g_27_69**2*y**24/729 + 18200*g_26_67*g_26_68*g_26_69**3*g_27_69*y**27/729 + 280*g_26_67*g_26_68*g_26_69**3*y**30/729 + 1280*g_26_67*g_26_68*g_26_69*g_27_69**4*y**19/9 + 5120*g_26_67*g_26_68*g_26_69*g_27_69**3*y**22/9 + 2080*g_26_67*g_26_68*g_26_69*g_27_69**2*y**25/3 + 2240*g_26_67*g_26_68*g_26_69*g_27_69*y**28/9 + 56*g_26_67*g_26_68*g_26_69*y**31/9 + 3520*g_26_67*g_26_69**4*g_27_69**5*y**16/729 + 17600*g_26_67*g_26_69**4*g_27_69**4*y**19/729 + 30400*g_26_67*g_26_69**4*g_27_69**3*y**22/729 + 20800*g_26_67*g_26_69**4*g_27_69**2*y**25/729 + 4550*g_26_67*g_26_69**4*g_27_69*y**28/729 + 70*g_26_67*g_26_69**4*y**31/729 + 640*g_26_67*g_26_69**2*g_27_69**4*y**20/9 + 2560*g_26_67*g_26_69**2*g_27_69**3*y**23/9 + 1040*g_26_67*g_26_69**2*g_27_69**2*y**26/3 + 1120*g_26_67*g_26_69**2*g_27_69*y**29/9 + 28*g_26_67*g_26_69**2*y**32/9 + 120*g_26_67*g_27_69**3*y**24 + 328*g_26_67*g_27_69**2*y**27 + 188*g_26_67*g_27_69*y**30 + 4*g_26_67*y**33 + 704*g_26_68**5*g_27_69**5*y**13/729 + 3520*g_26_68**5*g_27_69**4*y**16/729 + 6080*g_26_68**5*g_27_69**3*y**19/729 + 4160*g_26_68**5*g_27_69**2*y**22/729 + 910*g_26_68**5*g_27_69*y**25/729 + 14*g_26_68**5*y**28/729 + 3520*g_26_68**4*g_26_69*g_27_69**5*y**14/729 + 17600*g_26_68**4*g_26_69*g_27_69**4*y**17/729 + 30400*g_26_68**4*g_26_69*g_27_69**3*y**20/729 + 20800*g_26_68**4*g_26_69*g_27_69**2*y**23/729 + 4550*g_26_68**4*g_26_69*g_27_69*y**26/729 + 70*g_26_68**4*g_26_69*y**29/729 + 7040*g_26_68**3*g_26_69**2*g_27_69**5*y**15/729 + 35200*g_26_68**3*g_26_69**2*g_27_69**4*y**18/729 + 60800*g_26_68**3*g_26_69**2*g_27_69**3*y**21/729 + 41600*g_26_68**3*g_26_69**2*g_27_69**2*y**24/729 + 9100*g_26_68**3*g_26_69**2*g_27_69*y**27/729 + 140*g_26_68**3*g_26_69**2*y**30/729 + 640*g_26_68**3*g_27_69**4*y**19/27 + 2560*g_26_68**3*g_27_69**3*y**22/27 + 1040*g_26_68**3*g_27_69**2*y**25/9 + 1120*g_26_68**3*g_27_69*y**28/27 + 28*g_26_68**3*y**31/27 + 7040*g_26_68**2*g_26_69**3*g_27_69**5*y**16/729 + 35200*g_26_68**2*g_26_69**3*g_27_69**4*y**19/729 + 60800*g_26_68**2*g_26_69**3*g_27_69**3*y**22/729 + 41600*g_26_68**2*g_26_69**3*g_27_69**2*y**25/729 + 9100*g_26_68**2*g_26_69**3*g_27_69*y**28/729 + 140*g_26_68**2*g_26_69**3*y**31/729 + 640*g_26_68**2*g_26_69*g_27_69**4*y**20/9 + 2560*g_26_68**2*g_26_69*g_27_69**3*y**23/9 + 1040*g_26_68**2*g_26_69*g_27_69**2*y**26/3 + 1120*g_26_68**2*g_26_69*g_27_69*y**29/9 + 28*g_26_68**2*g_26_69*y**32/9 + 3520*g_26_68*g_26_69**4*g_27_69**5*y**17/729 + 17600*g_26_68*g_26_69**4*g_27_69**4*y**20/729 + 30400*g_26_68*g_26_69**4*g_27_69**3*y**23/729 + 20800*g_26_68*g_26_69**4*g_27_69**2*y**26/729 + 4550*g_26_68*g_26_69**4*g_27_69*y**29/729 + 70*g_26_68*g_26_69**4*y**32/729 + 640*g_26_68*g_26_69**2*g_27_69**4*y**21/9 + 2560*g_26_68*g_26_69**2*g_27_69**3*y**24/9 + 1040*g_26_68*g_26_69**2*g_27_69**2*y**27/3 + 1120*g_26_68*g_26_69**2*g_27_69*y**30/9 + 28*g_26_68*g_26_69**2*y**33/9 + 120*g_26_68*g_27_69**3*y**25 + 328*g_26_68*g_27_69**2*y**28 + 188*g_26_68*g_27_69*y**31 + 4*g_26_68*y**34 + 704*g_26_69**5*g_27_69**5*y**18/729 + 3520*g_26_69**5*g_27_69**4*y**21/729 + 6080*g_26_69**5*g_27_69**3*y**24/729 + 4160*g_26_69**5*g_27_69**2*y**27/729 + 910*g_26_69**5*g_27_69*y**30/729 + 14*g_26_69**5*y**33/729 + 640*g_26_69**3*g_27_69**4*y**22/27 + 2560*g_26_69**3*g_27_69**3*y**25/27 + 1040*g_26_69**3*g_27_69**2*y**28/9 + 1120*g_26_69**3*g_27_69*y**31/27 + 28*g_26_69**3*y**34/27 + 120*g_26_69*g_27_69**3*y**26 + 328*g_26_69*g_27_69**2*y**29 + 188*g_26_69*g_27_69*y**32 + 4*g_26_69*y**35",
+          "z_degree": 13
+        }
+      ],
+      "jacobian_band_counts": {
+        "39": 28,
+        "40": 23,
+        "41": 17,
+        "42": 12,
+        "43": 6,
+        "44": 1
+      },
+      "jacobian_rows": 87,
+      "literal_Fbar_z_bands": [
+        18,
+        17,
+        16,
+        15,
+        14,
+        13
+      ],
+      "literal_Gbar_z_bands": [
+        27,
+        26,
+        25,
+        24,
+        23,
+        22
+      ],
+      "runs": [
+        {
+          "basis_one": false,
+          "basis_size": 5,
+          "dimension": 16,
+          "elapsed_seconds": 0.030354,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth6_F32003.log",
+          "log_sha256": "9d656b1a8110823a5df9bc95e99c34f3a49093fcb1f2bb5a042ad035f7451b3f",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth6_F32003.sing",
+          "script_sha256": "2ceadd4c0aafdbcfb62a9e3076e21f94ace351082e3f439adc7c5e88a9806b8b",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=89 unknowns_excluding_T=20 char=32003\nMAIN_DONE basis_size=\n5\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=g_27_69\nG[5]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n16\n",
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis_one": false,
+          "basis_size": 5,
+          "dimension": 16,
+          "elapsed_seconds": 0.030014,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth6_F32009.log",
+          "log_sha256": "fb1a834db270bec5cacd18a3ea982288afee976e38de471a78f36bb53b8b59dc",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth6_F32009.sing",
+          "script_sha256": "0be73392aad5880fdc5dfca1e07b959570741a963fdff50533ec4e0d0e8b4df0",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=89 unknowns_excluding_T=20 char=32009\nMAIN_DONE basis_size=\n5\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=g_27_69\nG[5]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n16\n",
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis_one": false,
+          "basis_size": 5,
+          "dimension": 16,
+          "elapsed_seconds": 0.035578,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth6_F32027.log",
+          "log_sha256": "f8f09ee43c35ed9a1712da882bb5697370d5f98554db77943447f01079041374",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth6_F32027.sing",
+          "script_sha256": "a30f5a47856d525c3a6bea888f148885a8a21b3ffd1191a54abdbbba00c920d8",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=89 unknowns_excluding_T=20 char=32027\nMAIN_DONE basis_size=\n5\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=g_27_69\nG[5]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n16\n",
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis_one": false,
+          "basis_size": 5,
+          "dimension": 16,
+          "elapsed_seconds": 0.023756,
+          "fail_markers": [],
+          "log": "box/g9966d52-20260903/delta52_highz_depth6_Q.log",
+          "log_sha256": "0698fc3673cf7b09b2e71af3bf9cd8753171a5500446d61ded01272221e0c8d7",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RING_PASS",
+            "CONTROL_UNSATURATED_NONUNIT_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966d52-20260903/delta52_highz_depth6_Q.sing",
+          "script_sha256": "2e122e6af19f7f221369052ec73177995938bf9fe9741a83f8329b1cfd68fb54",
+          "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=89 unknowns_excluding_T=20 char=0\nMAIN_DONE basis_size=\n5\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=g_27_69\nG[5]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n16\n",
+          "verdict": "NONUNIT"
+        }
+      ],
+      "unknown_Gbar_coefficients": 18,
+      "unknown_terms": [
+        {
+          "local_order": 6,
+          "name": "g_27_69",
+          "y_degree": 69,
+          "z_degree": 27
+        },
+        {
+          "local_order": 4,
+          "name": "g_27_70",
+          "y_degree": 70,
+          "z_degree": 27
+        },
+        {
+          "local_order": 2,
+          "name": "g_27_71",
+          "y_degree": 71,
+          "z_degree": 27
+        },
+        {
+          "local_order": 5,
+          "name": "g_26_67",
+          "y_degree": 67,
+          "z_degree": 26
+        },
+        {
+          "local_order": 3,
+          "name": "g_26_68",
+          "y_degree": 68,
+          "z_degree": 26
+        },
+        {
+          "local_order": 1,
+          "name": "g_26_69",
+          "y_degree": 69,
+          "z_degree": 26
+        },
+        {
+          "local_order": 6,
+          "name": "g_25_64",
+          "y_degree": 64,
+          "z_degree": 25
+        },
+        {
+          "local_order": 4,
+          "name": "g_25_65",
+          "y_degree": 65,
+          "z_degree": 25
+        },
+        {
+          "local_order": 2,
+          "name": "g_25_66",
+          "y_degree": 66,
+          "z_degree": 25
+        },
+        {
+          "local_order": 5,
+          "name": "g_24_62",
+          "y_degree": 62,
+          "z_degree": 24
+        },
+        {
+          "local_order": 3,
+          "name": "g_24_63",
+          "y_degree": 63,
+          "z_degree": 24
+        },
+        {
+          "local_order": 1,
+          "name": "g_24_64",
+          "y_degree": 64,
+          "z_degree": 24
+        },
+        {
+          "local_order": 6,
+          "name": "g_23_59",
+          "y_degree": 59,
+          "z_degree": 23
+        },
+        {
+          "local_order": 4,
+          "name": "g_23_60",
+          "y_degree": 60,
+          "z_degree": 23
+        },
+        {
+          "local_order": 2,
+          "name": "g_23_61",
+          "y_degree": 61,
+          "z_degree": 23
+        },
+        {
+          "local_order": 5,
+          "name": "g_22_57",
+          "y_degree": 57,
+          "z_degree": 22
+        },
+        {
+          "local_order": 3,
+          "name": "g_22_58",
+          "y_degree": 58,
+          "z_degree": 22
+        },
+        {
+          "local_order": 1,
+          "name": "g_22_59",
+          "y_degree": 59,
+          "z_degree": 22
+        }
+      ],
+      "unknowns_excluding_T_in_singular": 20,
+      "verdict": "NONUNIT"
+    }
+  },
+  "elapsed_seconds": 41.424273,
+  "not_claimed": [
+    "SATURATED-EMPTY for the full delta=5/2 branch",
+    "a full (99,66) polynomial pair",
+    "SURVIVES as a Keller-pair claim",
+    "the unprinted Moh 11-variable elimination"
+  ],
+  "software": {
+    "python": "Python 3.12.3",
+    "singular": "Singular for x86_64-Linux version 4.3.2 (4330, 64 bit) Apr  1 2024 04:44:00",
+    "sympy": "1.12"
+  },
+  "source_reconstruction": {
+    "coordinates": "choose the major direction a=0; z=y-b*x-e with b!=0",
+    "moh_pages": {
+      "layout_text": "box/g9966d52-20260903/moh_pp190_196_pdf51_57.txt",
+      "p190": "box/g9966d52-20260903/moh_p190_pdf51.png",
+      "p191": "box/g9966d52-20260903/moh_p191_pdf52.png",
+      "p192": "box/g9966d52-20260903/moh_p192_pdf53.png",
+      "p193": "box/g9966d52-20260903/moh_p193_pdf54.png",
+      "p194": "box/g9966d52-20260903/moh_p194_pdf55.png",
+      "p195": "box/g9966d52-20260903/moh_p195_pdf56.png",
+      "p196": "box/g9966d52-20260903/moh_p196_pdf57.png"
+    },
+    "prop62_boxes": {
+      "Fbar": "0<=i<=48, 0<=j<=18, i+j<=66, corner y^48*z^18",
+      "Gbar": "0<=i<=72, 0<=j<=27, i+j<=99, corner y^72*z^27",
+      "T2bar": "0<=i<=40, 0<=j<=15, i+j<=55, corner y^40*z^15"
+    }
+  },
+  "type": "BOUNDED-HIGH-Z-JOINT / NECESSARY-SYSTEM",
+  "verdict": "OPEN[DELTA-5/2-FULL-JOINT-NOT-KILLED]"
+}

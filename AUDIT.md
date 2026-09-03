@@ -17325,3 +17325,14 @@ order 45). Moh source defects recorded: p.208 "c₅A + c₅B", the p.209 omissio
 next (producer): bridge_chart.py at t = 5, 6 (now plausibly seconds) — the first genuinely
 new data points for the spine. Gate launched (bridge-chart-gate-gpt55: verify the BNF
 proof and the subset/superset logic, replay t = 1, 2, run t = 3..8).
+
+## INTEGRATION #17 DELTA (ppp) (2026-09-03T19:06Z, COUNTING-BOUND, producer GPT-5.5): THE δ = 5/2 HIGH-z JOINT SYSTEM FOR (99,66) DOES NOT KILL — the Prop 6.2 bidegree-box joint systems (Ḡ unknowns on the top z-adic bands, p = π(π² − 1), μ₂-equivariant, Jacobian constant) are NON-UNIT through depth 6 over GF(32003), GF(32009), GF(32027) and Q, family dimension 16 (15 with γ fixed); the "≤ 60-unknown decider" of delta 17(iii) is necessary but not sufficient; controls: Moh's (64,48)/Appendix II kill reproduced (PASS), the automorphism F = x + y⁶, G = y + (x + y⁶)⁷ (J = 1, degrees (6,42)) SURVIVES (PASS); typed OPEN[DELTA-5/2-FULL-JOINT-NOT-KILLED]; missing pieces named: the lower z bands, the effective T₂, T₃ ∈ K[f,g] recurrences, the major 4/9 centre, and Moh's unprinted 11-variable elimination
+
+`g9966-delta52-joint-gpt55-20260903.md` (GPT-5.5; 10/10 hashes; box/g9966d52-20260903/;
+depth 4, 5, 6 systems over four fields with wrapper, non-empty and unsaturated-non-unit
+controls). READING: with Fable's Riemann–Hurwitz (tree-determined, 17(mmm)) and Xu's
+bookkeeping (tree-blind, 17(jjj), (nnn)) closed as discriminators, and the high-z joint
+bands consistent, every partial object at (99,66) is consistent; the decision requires the
+COMPLETE joint system (all z bands + the T₂/T₃ recurrences + the 4/9 centre) — exactly
+Sol's g9966-global-design lane (running), whose design must now include the lower bands.
+(99,66) remains OPEN in both directions.
