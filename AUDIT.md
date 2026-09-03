@@ -17282,3 +17282,17 @@ COUNTING-BOUND; no row killed, no survivor. READING: at δ₁' = 0 the descended
 integral bottom radius — the p.190 shear puts σ₁ = π exactly, and Lemma 2.1-type
 constraints are weakest there; these rows may need the honest 98-unknown chart with the
 native emitter (17(kkk) lane) rather than the level-1 chart. Queue behind the emitter.
+
+## INTEGRATION #17 DELTA (mmm) (2026-09-03T18:55Z, PROVED-HERE negative, producer Fable): THE FIBRE RIEMANN–HURWITZ IDENTITY IS TREE-DETERMINED, NOT TREE-CONSTRAINING — with e_P read from the root tree via Xu's Lemma 4.1 (no Puiseux coefficient needed), 2g_c − 2 + N + r_prop = Σ_np(e_P − 1) is EQUIVALENT to the plane-curve genus formula of {g = c} (Riemann–Hurwitz for the projection x: 2g_c − 2 + r = deg_x Disc_y(g − c) − deg_y g), hence holds on every contact tree (including the dead [1,1,1]-at-2 control, g_c = 16); on (99,66) both surviving branches are consistent with g_c = 7 (branch B: 27 non-proper places, 2g_c − 2 + 16 + 8 = 36; δ = 5/2: 18 non-proper places, same 36); Kaliman/Lê–Weber g_c ≥ 1 passes; N = 16 and IM = N literally (PROVED-HERE §3.1); the review's "only non-tree-blind condition" is corrected; SATURATED-EMPTY[RH-FIBRE-SEPARATION]
+
+`g9966-hurwitz-fable5-20260903.md` (Fable, 17KB; box/g9966hurwitz-20260903/rh_driver.py;
+9/9 hashes; exact fractions + one mpmath calibration). §1 the identity with a page-free
+proof (f|_{C_c} is étale: df|_{C_c} = J·ω with ω the nowhere-vanishing Gelfand–Leray form; C_c
+smooth and irreducible; places at infinity over x = ∞ as Galois orbits of Puiseux roots;
+proper iff ord_t f(α) < 0; e_P = −e·ord_t f(α) over ∞, e·ord_t(f(α) − a₀) over a₀; Lemma E:
+e_P from S_g(α) = −Σ ord(α − β)); §2 the theorem that (RH-f) with Lemma E is the genus
+formula; §5 calibration (Moh (64,48) consistent; automorphism N = 1, g_c = 0). LEDGER: the
+genus of the generic fibre of a (99,66) candidate is g_c = 7 on both branches (a
+DERIVED datum for any future construction); no kill; the RH route is closed as a
+discriminator (retire from APPROACHES as a screen; keep as a consistency check). The
+(99,66) decision rests entirely on the coefficient-level joint system (lane running).

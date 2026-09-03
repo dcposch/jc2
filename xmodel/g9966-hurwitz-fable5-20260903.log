@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The lane is complete: report sealed, validator passing, drivers and hashes in place. Nothing remains that needs another tool call.
+
+**Outcome: no kill.** The Riemann–Hurwitz identity is consistent on both surviving `(99,66)` branches and gives `g_c = 7` on each, so Kaliman/Lê–Weber's `g_c ≥ 1` passes too. Branch B has 8 proper places of pole order 2 and 27 non-proper places, the `δ = 5/2` branch has the same 8 proper places and 18 non-proper places, and both sides of the identity come to 36 in each case.
+
+**The stronger finding is negative.** Once the ramification orders are read from the tree through Xu's Lemma 4.1, which pins `ord(f(α) − a₀) = S_g(α) − 1` exactly with no Puiseux coefficient, the identity is equivalent to the ordinary genus formula of the plane curve `{g = c}`. It therefore holds on every contact tree, including the dead `[1,1,1]`-at-2 control, and can never separate or kill a branch. Opus's review called it the only non-tree-blind condition at `(99,66)`; it is tree-determined instead, and I typed it `SATURATED-EMPTY[RH-FIBRE-SEPARATION]`.
+
+**What was verified.**
+- All nine input hashes checked mechanically from the receipt with awk and `sha256sum -c`.
+- `IM = N` literally: Xu's `I` is the resultant degree, hence the affine intersection count, and the `f_ξ`-tree, the `g_c`-tree and D1-PIN all give 16 independently.
+- Three genus routes agree on every tree: the fibre identity, the `x`-projection Riemann–Hurwitz, and adjunction via delta-invariants at infinity.
+- Calibration on Moh's `(64,48)` gives `g_c = 3` with `N = 9`, matching D1-PIN. An explicit automorphism reproduces the ramification lemma numerically, and a non-Keller control confirms the constant-Jacobian hypothesis is where it is needed.
+
+**Bounded quantity and cheapest test.** Bin-packing the non-proper orders into fibres of 16 sheets forces at least 4 distinct escape values per fibre on both branches. The first `A(Φ)`-side constraint that is genuinely not tree-blind is the packing condition on the escape values themselves, which are polynomials in the branch-B band coefficients already computed by the lift lane.
+
+**Files.** Report at `xmodel/g9966-hurwitz-fable5-20260903.md` (body 16686 bytes, sealed on basis `61fcadf3`, `charge_basis` absent as no exit price is asserted). Driver, results, log, page images and hashes are in `box/g9966hurwitz-20260903/`. No ledger, `jc2-lean`, ideation file or in-progress lane report was touched, and nothing was committed.
+DIVERT path=xmodel/g9966-hurwitz-fable5-20260903.md status=CLEAN_SEALED body_bytes=16686 body_sha256=f8f0f1c0f56c0015229c1a068b0628313356ceec70e6b3e2b3cd9fd6c6cdf515
