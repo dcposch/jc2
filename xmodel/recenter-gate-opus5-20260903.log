@@ -1,0 +1,27 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed and verified. Summary of the gate:
+
+## Verdict: **GAP** (with the recentring move itself CONFIRMED)
+
+**Hash gate:** manifest generated with `awk` from the receipt, `sha256sum -c` — **9/9 charged inputs OK**, re-verified unmodified at the end.
+
+**Pages opened as images** (`pdftoppm -r 130`; PDF = journal − 139): pp. 164–166, 182–183, 185–188, 189–190.
+
+**What checks out (CONFIRMED):**
+- p.190's `y → y − ax − b` with `a = 0` is exactly the δ_j = 0 move; a label at δ_j = 0 *is* a constant.
+- Gauge preserved exactly (`deg_y` is untouched by a triangular shift ⇒ every `M_i`, `d_i`, monicity, leading form, `J`).
+- The tower translates rigidly; p.183's printed radius formula is byte-for-byte the driver's `TreePartition.radius`.
+- Lemma 5.3's top flag is covariant under the **whole** affine family, not just `a = 0` (it is a leading-form root-multiplicity statement).
+- p.189's (i)–(iii) all survive — and (i) is stronger than Fable claims: with a *constant* centre the proof runs with **no automorphism at all** (the π⁰ coefficient of `g(t⁻¹, c + πt^{δ₁})` is `g(t⁻¹,c)`, of order `−l`).
+- One centred path suffices; sibling constants may differ.
+- Only δ = 0 is integral among intermediate radii (proof: δ_i < 1 from the formula, δ_i ≥ 0 from p.189; measured: 5 578 DP level-visits, every integral radius = 0). The frozen rule fires only at integral δ — 2 262 firings, all at 0.
+- Fable's MEASURED block replays exactly: 38/52, mismatch 0, residue 14 rows in (90,60)/(96,64)/(96,72), all s ≥ 4, `u_s = 1`; at s = 3 the screen is Moh's six.
+
+**What fails:** the step *"makes the path zero-typed"*. Prop 5.6 as printed requires the **series** `σ₁ = π t^{δ₁}`, not zero tower *labels*; the centre of D₁ also carries the nonsplitting re-centrings of p.164/p.182 at non-radius exponents. Located precisely: `ord g(σ₁) ≤ −l` breaks exactly when the removed coefficient is not a constant. This is the §7.3 gap of the charged review — **inherited, not created**, by the POLY rule.
+
+**Operative numbers:** the charged POLY column (20/7; 1,420/686/459) is not promotable. The gap-free content of the rule is **19 rows and 1 class** at n ≤ 100 (gated 234/22 → 215/21); my gate reproduces the sealed charged §7.4 line "gated + ODE = 215/21" to the row.
+
+**K = 16 ray and Moh's six: untouched** — δ₂ = 1/4 (and 2/7, 1/5, 1/3) are non-integral, so the rule is structurally incapable of firing; verified at t = 1..12, `printed_killed = 0` on every screen.
+
+Drivers in `box/recenter-gate-20260903/` (5 replay scripts + logs, 10 page images). Three typed OPENs raised, the sharpest being `OPEN[NONSPLIT-RECENTRE]` — one page image (Prop 4.4) would either close the gap outright or confirm it.
+DIVERT path=xmodel/recenter-gate-opus5-20260903.md status=CLEAN_SEALED body_bytes=20079 body_sha256=2bf0aff0760c2b48b2bb40ba0b4e1b96be224d8948ec2f2ae7191fc55ef1ddd9

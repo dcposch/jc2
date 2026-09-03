@@ -16472,3 +16472,32 @@ the extension modulus 𝔄 (with A5-SIMPLE as a new cut). CARRIED: CONJ[APPII-UN
 17(dd); the gate did not adjudicate Lemma 2.1(k) — still typed GAP). Consequence: the
 descended K = 16 ray (12t+4, 8t+4; 12t+1; 3; γ) passes every arithmetic condition
 available after descent; its emptiness is a pure Appendix II / common-jet statement.
+
+## INTEGRATION #17 DELTA (gg) (2026-09-03T12:56Z, PROMOTED-QUALIFIED): Fable's recentring gated by Opus — OPEN[FULL-TREE-RECENTER] as posed CLOSES POSITIVE (the edgewise y ↦ y − c at an integral radius is licensed; gauge, tower, Lemma 5.3 flag and p.189's ingredients are chart-covariant; the rule fires only at δ = 0); the POLY column's operative numbers are CONDITIONAL on the centre-support step (the same gap as delta 17(u)/(cc)); unconditional worth = 19 rows / 1 class at n ≤ 100
+
+`recenter-gate-opus5-20260903.md` (Opus; pages 183, 185, 187–190; replay1/2/4.py). CONFIRMED
+(a)–(h): a nonzero label at δ_j = 0 is a constant removable by p.190's y ↦ y − ax − b with
+a = 0; the change preserves monic, deg = deg_y, all M_i, J; the tower translates rigidly;
+Lemma 5.3's top-chart flag is chart-covariant for the whole affine group y ↦ y − ax − b;
+p.189's (i)–(iii) survive; one centred path suffices, different killing paths may use
+different constants; only δ = 0 is integral among intermediate radii and the frozen rule
+fires only there; Fable's MEASURED block replays exactly (38/52, 0 mismatch, 14-row
+residue in (90,60)×4, (96,64)×4, (96,72)×6, all s ≥ 4, u_s = 1; s = 3 EXACT). GAP (i):
+"all tower labels zero ⇒ σ₁ = π t^{δ₁}" equates the centre of D₁ with the sum of the tower
+labels, but Def 1.3 writes the centre over ALL exponents below δ and Def 5.1 pins only the
+radius exponents; p.182/Prop 4.4 gives ord(τ_i − τ_j) > δ_{r−1} with no splitting inside
+(δ_r, δ_{r−1}); a nonsplitting shrink with a single nonzero root re-centres invisibly; with
+σ₁ = c(t) + πt^{δ₁}, c(t) non-constant, ord g(σ₁) ≤ −l breaks. Moh's s = 2 display survives
+because L₁ = 1 makes the support integral; for s ≥ 3 the lattice is finer. Replay of the
+§7.3 free-set: free set EMPTY on 14 of the 38 POLY-killed rows, NON-EMPTY on 24; on the 14
+residue rows EMPTY on 4, NON-EMPTY on 10. THIS IS EXACTLY the centre-support step: delta
+17(cc)'s zero-factor lemma (Grok; GPT-5.5 gate running) asserts those non-radius
+coefficients vanish by the parent Galois action. LEDGER: (1) the recentring rule is
+PROMOTED (licensed, gap-free): gated ODE 234/22 → gated POLY+ODE 215/21 at n ≤ 100 (19
+rows, 1 class; per-branch inside the DP; matches whole-tree-review-opus5 §7.4's 215/21);
+(2) the full POLY column (58 → 20 / 7 classes; D ≤ 200: 1,420/686/459; s = 3 exact; 14-row
+residue) is PROMOTED CONDITIONALLY on delta 17(cc) — if the centre-support gate confirms,
+both the ungated C_FULL_TREE and the POLY column become operative together and
+OPEN[MOH-PROGRAM-ARTIFACT] shrinks to 14 rows; if it refutes, the operative screen is the
+gated one (215/21) and the gap-free numbers of delta 17(u) stand. K = 16 ray and Moh's
+six untouched under either reading (§6).
