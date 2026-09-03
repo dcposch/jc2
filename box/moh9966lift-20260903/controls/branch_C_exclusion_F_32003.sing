@@ -1,0 +1,32 @@
+// C_THREE_SIMPLE_REDUCED_CONSEQUENCE; characteristic 32003
+ring R=32003,(a,b,ell,k,T),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS R"); } else { print("CONTROL_RING_FAIL"); }
+print("RING_BEGIN"); R; print("RING_END");
+ideal CE=a^2*b*k - a*b^2*k,T*(a^2*b*k - a*b^2*k)-1;
+ideal GCE=std(CE);
+if (reduce(1,GCE)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+ideal CN=a-(1),b-(2),k-(1),T-(-1/2);
+ideal GCN=std(CN);
+if (reduce(1,GCN)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+ideal E=
+  5 - k,
+  a*k - 4*a + b*k - 4*b + 3*ell,
+  -a*b*k + 3*a*b - 2*a*ell - 2*b*ell,
+  a*b*ell;
+ideal GU=std(E);
+if (reduce(1,GU)!=0) { print("UNSATURATED_NONUNIT_PASS"); } else { print("UNSATURATED_NONUNIT_FAIL"); }
+ideal I=
+  5 - k,
+  a*k - 4*a + b*k - 4*b + 3*ell,
+  -a*b*k + 3*a*b - 2*a*ell - 2*b*ell,
+  a*b*ell,
+  T*(a^2*b*k - a*b^2*k)-1;
+ideal G=std(I);
+if (typeof(G)=="ideal" && nameof(basering)=="R") { print("MAIN_IDEAL_RING_PASS"); } else { print("MAIN_IDEAL_RING_FAIL"); }
+print("GENERATOR_COUNT"); size(E);
+print("EXTENDED_GENERATOR_COUNT"); size(I);
+print("BASIS_SIZE"); size(G);
+print("BASIS_BEGIN"); G; print("BASIS_END");
+if (reduce(1,G)==0) { print("MAIN_SATURATED_EMPTY"); } else { print("MAIN_NONUNIT"); }
+quit;

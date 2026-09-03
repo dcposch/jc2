@@ -1,0 +1,167 @@
+{
+  "a_localization": {
+    "assumption": "a is a unit in Q(a)",
+    "normalization": "z=a*x, Fhat(x)=a^4*F(a*x), bhat=a^5*b",
+    "normalized_modulus": "x^6*(x+3)^2"
+  },
+  "ambient_dimension": 35,
+  "band_dimension_consequence": {
+    "band4_parameter_locus_after_band5": 30,
+    "band5_linear_kernel": 13,
+    "cumulative_fiber_dimension_over_Q(a)": 58,
+    "including_a": 59,
+    "unaffected_f4new_and_b4": 15
+  },
+  "components": {
+    "count": 15,
+    "dimension_histogram": {
+      "27": 3,
+      "28": 3,
+      "29": 8,
+      "30": 1
+    },
+    "krull_dimension": 30,
+    "minimal_pairings": [
+      [
+        "Z21|b=0",
+        "Lb",
+        29
+      ],
+      [
+        "Z3b",
+        "Lb",
+        30
+      ],
+      [
+        "Z20",
+        "Luv",
+        29
+      ],
+      [
+        "Z3u",
+        "Luv",
+        29
+      ],
+      [
+        "Z21",
+        "Luv",
+        29
+      ],
+      [
+        "Z1|b=0",
+        "Lb",
+        28
+      ],
+      [
+        "Z1",
+        "Luv",
+        28
+      ],
+      [
+        "Z0|b=0",
+        "Lb",
+        27
+      ],
+      [
+        "Z0",
+        "Luv",
+        27
+      ],
+      [
+        "Z20",
+        "Lu",
+        29
+      ],
+      [
+        "Z3b",
+        "Lu",
+        29
+      ],
+      [
+        "Z3u",
+        "Lu",
+        29
+      ],
+      [
+        "Z21",
+        "Lu",
+        29
+      ],
+      [
+        "Z1",
+        "Lu",
+        28
+      ],
+      [
+        "Z0",
+        "Lu",
+        27
+      ]
+    ],
+    "unique_top_component": {
+      "dimension_count": "b fixed; dim(U)+dim(W)+dim(f3new)=8+7+15=30",
+      "ideal_description": "b2=0 and z^3*(z+3*a) divides V",
+      "parameterization": "V=z^3*(z+3*a)*W, deg(W)<=6; U and f3new arbitrary"
+    }
+  },
+  "crt": {
+    "free_kernel_dimensions": {
+      "U": 0,
+      "V": 3,
+      "f3new": 7,
+      "total": 10
+    },
+    "isomorphism": true,
+    "local_equation_counts": {
+      "at_x_0": 6,
+      "at_x_minus_3": 2
+    },
+    "map": "p -> (coefficients x^0..x^5, p(-3), p'(-3))",
+    "matrix_determinant": "531441"
+  },
+  "degree_bounds": {
+    "U": 7,
+    "V": 10,
+    "f3new": 14
+  },
+  "field": "Q(a)",
+  "fixed_f3_shift_remainder_zero": true,
+  "inputs": {
+    "local_band_audit.json": "71ad85e40ee4162e718cf526071431961fde46b02b42c3710d27d049fd278514",
+    "local_band_audit.py": "a614e37d4dafbb6885599783983bec1aebeb74c20b44787b20f8f980506f58a5"
+  },
+  "scope": "exact reduced band-5 compatibility variety; not a full Keller-pair existence claim",
+  "singular": {
+    "controls": [
+      "CONTROL_RING_PASS",
+      "CONTROL_WRAPPER_NEGATIVE_PASS",
+      "CONTROL_WRAPPER_POSITIVE_PASS",
+      "MAIN_EXTRACT_RING_PASS",
+      "MAIN_IDEAL_CONTAINMENT_PASS",
+      "MAIN_MINASS_COUNT=15",
+      "MAIN_LOCAL_JET_DIM=20",
+      "MAIN_HISTOGRAM_17=3",
+      "MAIN_HISTOGRAM_18=3",
+      "MAIN_HISTOGRAM_19=8",
+      "MAIN_HISTOGRAM_20=1",
+      "MAIN_TOP_COMPONENT_UNIQUE_PASS"
+    ],
+    "input": "band5_component_controls.sing",
+    "input_sha256": "99525a30a7785eface116c5e13d2412a64f386171e56de7bababaa666bad5007",
+    "log": "band5_component_controls.log",
+    "log_sha256": "7974d4788ecccf88b139c9777bab86172a33e1c1c7f328e096f3a12ed57d2326",
+    "minimal_prime_count": 15,
+    "order": "dp (degree reverse lexicographic)",
+    "residue_ambient_dimension": 25,
+    "residue_dimension_histogram": {
+      "17": 3,
+      "18": 3,
+      "19": 8,
+      "20": 1
+    },
+    "residue_krull_dimension": 20,
+    "ring": "Q[u0..u5,v0..v5,f0..f5,x0,x1,y0,y1,g0,g1,b]",
+    "timeout_seconds": 240
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,120 @@
+{
+  "R6_decomposition_verified": true,
+  "compatibility": {
+    "additional_high_window_equations": 0,
+    "allowed_degree": 20,
+    "band6_divisibility": "z^12*L^5 divides R6",
+    "high_window_candidate_count": 9,
+    "high_window_candidate_positions": [
+      21,
+      29
+    ],
+    "high_window_identity_cancellations": 9,
+    "inherited_band5": "z^6*L^2 divides N5",
+    "remainder_rows": {
+      "all_structurally_nonzero": true,
+      "count": 17,
+      "crt_split": {
+        "at_z_0": 12,
+        "at_z_minus_3a": 5
+      }
+    }
+  },
+  "definitions": {
+    "D": "z^3*L^2",
+    "H": "z^2*L",
+    "L": "z+3*a",
+    "W3": "-8*z^4-18*a*z^3",
+    "W6": "28*z^5+45*a*z^4"
+  },
+  "differential_jet_identity_verified": true,
+  "equation": "E6=sum_{r+s=6}((18-s)*diff(f_r,z)*g_s+(r-12)*f_r*diff(g_s,z))=0",
+  "field": "Q(a)",
+  "high_window_cancellation_verified": true,
+  "new_unknowns": {
+    "f6new": {
+      "count": 12,
+      "degree_max": 11
+    },
+    "g6new": {
+      "count": 21,
+      "degree_max": 20
+    },
+    "total": 33
+  },
+  "operator": {
+    "cokernel_dimension": 2,
+    "domain_degree_max": 20,
+    "domain_dimension": 21,
+    "formula": "L6(q)=2*H*diff(q,z)-12*diff(H,z)*q",
+    "kernel": "Q(a)*H^6",
+    "kernel_dimension": 1,
+    "new_solution_kernel_dimension": 13,
+    "quotient_row_count": 22,
+    "quotient_row_positions": [
+      1,
+      22
+    ],
+    "rank": 20,
+    "raw_row_count": 27,
+    "raw_row_positions_after_3H5": [
+      11,
+      37
+    ]
+  },
+  "q6_formula_verified": true,
+  "references": {
+    "band5_component_audit.json": "4875c33356cf9a915edad877a8941d2a7276ba22c6ab4b51ca6920cfdf105135",
+    "local_band_audit.json": "71ad85e40ee4162e718cf526071431961fde46b02b42c3710d27d049fd278514",
+    "local_band_audit.py": "a614e37d4dafbb6885599783983bec1aebeb74c20b44787b20f8f980506f58a5"
+  },
+  "status": "PASS",
+  "tails": {
+    "alpha3": [
+      6,
+      8,
+      10,
+      13,
+      15,
+      17,
+      19,
+      22,
+      24,
+      26,
+      28,
+      31,
+      33,
+      35,
+      37
+    ],
+    "beta3": [
+      10,
+      12,
+      14,
+      16,
+      19,
+      21,
+      23,
+      25,
+      28,
+      30,
+      32,
+      34,
+      37,
+      39,
+      41,
+      43,
+      46,
+      48,
+      50,
+      52,
+      55,
+      57,
+      59,
+      61
+    ],
+    "g3new_definition": "g3-9*H^8*W3, with g3=(3*H^3*f3-q3)/2",
+    "tail_f6": "6*H^5*W6+15*H^4*W3^2-sum(alpha3[k]*f3new[k]*z^(k+1),k=0..14)",
+    "tail_g6": "9*H^8*W6+36*H^7*W3^2-sum(beta3[k]*coeff(g3new,z^k)*z^(k+1),k=0..23)"
+  }
+}

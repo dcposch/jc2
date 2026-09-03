@@ -1,0 +1,33 @@
+// Wrapper and Jacobian-orientation controls for local_band_audit.py.
+// This file does not claim to solve Moh's omitted full coefficient ideal.
+ring R0=0,(x,y),dp;
+poly F0=(x^2)/2;
+poly G0=y;
+poly J0=diff(F0,x)*diff(G0,y)-diff(F0,y)*diff(G0,x);
+if (J0==x) { print("CONTROL_ACTUAL_PAIR_PASS J=x"); }
+else { print("CONTROL_ACTUAL_PAIR_FAIL"); }
+
+ring R=0,(a,c,Ta,Tc),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS R"); }
+else { print("CONTROL_RING_FAIL"); }
+
+// Empty negative control: c=0 is incompatible with Tc*c=1.
+ideal IE=c,Ta*a-1,Tc*c-1;
+ideal GE=std(IE);
+if (typeof(GE)=="ideal" && nameof(basering)=="R")
+{ print("CONTROL_EMPTY_EXTRACT_RING_PASS"); }
+else { print("CONTROL_EMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,GE)==0) { print("CONTROL_EMPTY_PASS"); }
+else { print("CONTROL_EMPTY_FAIL"); }
+
+// Nonempty positive control and a point on every reported early band:
+// a=c=Ta=Tc=1, with all omitted band parameters zero.
+ideal IP=a-1,c-1,Ta-1,Tc-1;
+ideal GN=std(IP);
+if (typeof(GN)=="ideal" && nameof(basering)=="R")
+{ print("CONTROL_NONEMPTY_EXTRACT_RING_PASS"); }
+else { print("CONTROL_NONEMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,GN)!=0) { print("CONTROL_NONEMPTY_PASS"); }
+else { print("CONTROL_NONEMPTY_FAIL"); }
+quit;

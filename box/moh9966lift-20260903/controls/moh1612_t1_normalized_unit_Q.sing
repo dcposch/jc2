@@ -1,0 +1,32 @@
+// Exact normalized t=1 certificate derived from frozen drivers
+ring RAC=0,(gamma,pi),dp;
+poly FAC=pi;
+poly GAC=pi-(gamma^2)/2;
+poly JAC=diff(FAC,gamma)*diff(GAC,pi)-diff(FAC,pi)*diff(GAC,gamma);
+if (JAC==gamma) { print("CONTROL_ACTUAL_PAIR_PASS J=gamma"); } else { print("CONTROL_ACTUAL_PAIR_FAIL"); }
+ring RC=(0,q3_1),(u,T),dp;
+minpoly=54*q3_1^2 - 36*q3_1 + 5;
+if (nameof(basering)=="RC") { print("CONTROL_COEFF_RING_PASS RC"); } else { print("CONTROL_COEFF_RING_FAIL"); }
+number cbar=-4*q3_1*(9*q3_1 - 1)/81; number cbar_inverse=2187*q3_1/5 - 2187/10;
+if (cbar*cbar_inverse==1) { print("CONTROL_C_UNIT_PASS"); } else { print("CONTROL_C_UNIT_FAIL"); }
+number terminal=20*q3_1 - 10/3; number terminal_inverse=27/10 - 27*q3_1/5;
+if (terminal*terminal_inverse==1) { print("CONTROL_TERMINAL_UNIT_PASS"); } else { print("CONTROL_TERMINAL_UNIT_FAIL"); }
+ideal CE=u,T*u-1; ideal GE=std(CE);
+if (typeof(GE)=="ideal" && nameof(basering)=="RC") { print("CONTROL_EMPTY_EXTRACT_RING_PASS"); } else { print("CONTROL_EMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,GE)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+ideal CN=u-1,T*u-1; ideal GN=std(CN);
+if (typeof(GN)=="ideal" && nameof(basering)=="RC") { print("CONTROL_NONEMPTY_EXTRACT_RING_PASS"); } else { print("CONTROL_NONEMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,GN)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+ring RK=(0,q3_1),(b1,b3,a2_0,q2_0,u,T),dp;
+minpoly=54*q3_1^2 - 36*q3_1 + 5; option(redSB);
+if (nameof(basering)=="RK") { print("CONTROL_RING_PASS RK"); } else { print("CONTROL_RING_FAIL"); }
+ideal CE=u,T*u-1; ideal GE=std(CE);
+if (typeof(GE)=="ideal" && nameof(basering)=="RK" && reduce(1,GE)==0) { print("CONTROL_MAIN_RING_EMPTY_PASS"); } else { print("CONTROL_MAIN_RING_EMPTY_FAIL"); }
+ideal CN=u-1,T*u-1; ideal GN=std(CN);
+if (typeof(GN)=="ideal" && nameof(basering)=="RK" && reduce(1,GN)!=0) { print("CONTROL_MAIN_RING_NONEMPTY_PASS"); } else { print("CONTROL_MAIN_RING_NONEMPTY_FAIL"); }
+print("MAIN_START t=1 terminal_coefficient_field_unit");
+ideal I=1; ideal G=std(I);
+if (typeof(G)=="ideal" && nameof(basering)=="RK") { print("MAIN_IDEAL_RING_PASS"); } else { print("MAIN_IDEAL_RING_FAIL"); }
+print("MAIN_DONE basis_size="); size(G);
+if (reduce(1,G)==0) { print("MAIN_T1_EMPTY"); G; } else { print("MAIN_NONUNIT"); }
+quit;

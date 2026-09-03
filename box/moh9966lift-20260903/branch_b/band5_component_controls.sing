@@ -1,0 +1,90 @@
+// Exact minimal-prime control for the normalized band-5 CRT residue system.
+// Field/order: Q, degree reverse lexicographic (dp).  Over Q(a), a!=0, the
+// invertible map z=a*x, Fhat=a^4*F(a*x), bhat=a^5*b gives this system.
+LIB "primdec.lib";
+ring R=0,(u0,u1,u2,u3,u4,u5,v0,v1,v2,v3,v4,v5,f0,f1,f2,f3,f4,f5,x0,x1,y0,y1,g0,g1,b),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS"); }
+else { print("CONTROL_RING_FAIL"); }
+
+proc minass_wrapper(ideal J)
+{
+  list L=minAssGTZ(J);
+  return(L);
+}
+
+proc zero_ideal(ideal J)
+{
+  for (int k=1;k<=size(J);k++)
+  {
+    if (J[k]!=0) { return(0); }
+  }
+  return(1);
+}
+
+// Negative (empty variety) and positive (two coordinate components) controls
+// exercise the same wrapper and validate ideal extraction in the active ring.
+ideal Cempty=1;
+list LE=minass_wrapper(Cempty);
+if (size(LE)==1 && typeof(LE[1])=="ideal" && reduce(1,std(LE[1]))==0)
+{ print("CONTROL_WRAPPER_NEGATIVE_PASS"); }
+else { print("CONTROL_WRAPPER_NEGATIVE_FAIL"); }
+ideal Cnonempty=u0*v0;
+list LN=minass_wrapper(Cnonempty);
+if (size(LN)==2 && typeof(LN[1])=="ideal" && typeof(LN[2])=="ideal"
+    && reduce(1,std(LN[1]))!=0 && reduce(1,std(LN[2]))!=0)
+{ print("CONTROL_WRAPPER_POSITIVE_PASS"); }
+else { print("CONTROL_WRAPPER_POSITIVE_FAIL"); }
+
+// Six x=0 jet equations and two t=x+3 jet equations.  Nonzero rational
+// scalar factors have been removed generator by generator.
+ideal I=
+u0*v0^2,
+v0*(2*u0*v1+u1*v0),
+2*u0*v0*v2+u0*v1^2+2*u1*v0*v1+u2*v0^2,
+-48*f0*v0+2*u0*v0*v3+2*u0*v1*v2+2*u1*v0*v2+u1*v1^2+2*u2*v0*v1+u3*v0^2,
+640*b*u0^3-1296*f0*v0-3888*f0*v1-3888*f1*v0+162*u0*v0*v4+162*u0*v1*v3+81*u0*v2^2+162*u1*v0*v3+162*u1*v1*v2+162*u2*v0*v2+81*u2*v1^2+162*u3*v0*v1+81*u4*v0^2,
+640*b*u0^3+5760*b*u0^2*u1-3888*f0*v1-11664*f0*v2-3888*f1*v0-11664*f1*v1-11664*f2*v0+486*u0*v0*v5+486*u0*v1*v4+486*u0*v2*v3+486*u1*v0*v4+486*u1*v1*v3+243*u1*v2^2+486*u2*v0*v3+486*u2*v1*v2+486*u3*v0*v2+243*u3*v1^2+486*u4*v0*v1+243*u5*v0^2,
+x0*y0^2,
+640*b*x0^3+1296*g0*y0+6*x0*y0*y1+3*x1*y0^2;
+
+ideal GI=std(I);
+print("MAIN_LOCAL_JET_DIM="+string(dim(GI)));
+list L=minass_wrapper(I);
+if (typeof(L)=="list" && size(L)>0 && typeof(L[1])=="ideal" && nameof(basering)=="R")
+{ print("MAIN_EXTRACT_RING_PASS"); }
+else { print("MAIN_EXTRACT_RING_FAIL"); }
+print("MAIN_MINASS_COUNT="+string(size(L)));
+
+int containok=1;
+int h17=0; int h18=0; int h19=0; int h20=0; int topcount=0;
+ideal TOP=b,y0,v2,v1,v0;
+ideal GTOP=std(TOP);
+ideal Gj;
+int dj;
+for (int j=1;j<=size(L);j++)
+{
+  Gj=std(L[j]);
+  if (zero_ideal(reduce(I,Gj))!=1) { containok=0; }
+  dj=dim(Gj);
+  if (dj==17) { h17=h17+1; }
+  if (dj==18) { h18=h18+1; }
+  if (dj==19) { h19=h19+1; }
+  if (dj==20) { h20=h20+1; }
+  if (zero_ideal(reduce(Gj,GTOP))==1 && zero_ideal(reduce(GTOP,Gj))==1)
+  { topcount=topcount+1; }
+  print("COMPONENT="+string(j)+" DIM="+string(dj));
+  print(L[j]);
+}
+if (containok==1) { print("MAIN_IDEAL_CONTAINMENT_PASS"); }
+else { print("MAIN_IDEAL_CONTAINMENT_FAIL"); }
+print("MAIN_HISTOGRAM_17="+string(h17));
+print("MAIN_HISTOGRAM_18="+string(h18));
+print("MAIN_HISTOGRAM_19="+string(h19));
+print("MAIN_HISTOGRAM_20="+string(h20));
+// TOP is a coordinate prime.  Since I is contained in TOP, dim(TOP)=20,
+// and minAss has exactly one dimension-20 prime, TOP is that unique prime.
+if (zero_ideal(reduce(I,GTOP))==1 && dim(GTOP)==20 && h20==1)
+{ print("MAIN_TOP_COMPONENT_UNIQUE_PASS"); }
+else { print("MAIN_TOP_COMPONENT_UNIQUE_FAIL"); }
+quit;

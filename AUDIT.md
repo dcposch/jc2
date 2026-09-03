@@ -17181,3 +17181,25 @@ Sol) and exact replay; scope = the operative full-tree model ∧ Xu Cor. 5.3; ki
 necessary contradictions, survival is not attainment. Remaining opens (§6): exact Im needs
 the actual split tree (the same-tree optimisation of IM − Im is the cheapest strengthening);
 the principal roots' FINAL count is not bounded from the skeleton beyond the termwise floor.
+
+## INTEGRATION #17 DELTA (ggg) (2026-09-03T18:13Z, COUNTING-BOUND, producer Sol): MOH'S (99,66) BRANCH B — the banded lift of the radius-two face family in an old-polynomial, two-face, ZERO-JET slice is consistent through band 5 with exact fixed-c fibre dimension 58 (59 incl. a; 15 components at band 5); band 6's exact system emitted, not run; the slice cannot certify the full lift because Moh's pp.209–210 filtration-preserving change to "11 variables" is unprinted and an independent curved-centre calculation finds a surviving symbolic jet u = a₁ (setting a₁ = 0 is not proved to preserve the variety); Xu's δ = 5/2 leading face SURVIVES with dimension 2 (ρ, b₀); controls: branch-A predecessor [1], branch C [1] (three primes + Q), and Moh's (16,12) run through the SAME lift terminates in the Appendix II contradiction (second-spine terminal unit)
+
+`moh9966-B-lift-sol56-20260903.md` (Sol, 28KB; box/moh9966lift-20260903/; 12/12 hashes).
+§2 exact old-polynomiality relations after Ω; §3 why the zero-jet slice is not the full
+chart (the surviving jet u); §4 the radius-two branch-B face: exact localised ideal,
+nonunit, one-dimensional (SURVIVES[PRINTED-LEADER-ODE-FACE], conditional on T₃ being the
+radius-two leader); §5 band-by-band Jacobian lift with constant pivots exposed before
+nonlinear elimination: band 1–5 all consistent, cumulative fibre dimensions 12 → 29/30 →
+40/41 → 50/51 → 58/59 (band 5: 35 new unknowns, 28 → 23 rows after compatibility, rank 22,
+codimension-5 old compatibility, 15 minimal primes); band 6 exact system displayed. §6 δ =
+5/2: face ideal dimension 2. §7.3 CALIBRATION: Moh's (16,12) under the same banded lift
+reaches the terminal unit — the machinery kills where Moh kills. READING (coordinator):
+at (99,66) both surviving branches (δ = 2 [2,1] and δ = 5/2) stay consistent locally with
+GROWING freedom, whereas (16,12) dies; the difference is not the local machinery but
+the global closure — a (99,66) pair must satisfy the major-tower conditions at the first
+point at infinity AND the minor-split conditions at the second simultaneously, with f, g
+polynomial (finite support) in x, y; no lane has yet built that joint system. Typed:
+COUNTING-BOUND[B-FULL-LIFT]; OPEN[FULL-X-Y-KELLER-LIFT] stands as the decider; lanes:
+g9966-global-design-sol56 (build the joint two-point-at-infinity system) and
+g9966-source-review-opus5 (fresh-eyes source route: Props 6.1–6.2, Lemma 5.2 at the minor
+packet, Xu Cor 7.5 variants — anything both lanes missed).
