@@ -1,0 +1,2383 @@
+{
+  "0": {
+    "canonical_affine_bottom_left_kernel": {
+      "exists": false,
+      "formal_exponent": -19,
+      "reason": "K=18 <= proper leaf columns=36; no bottom left kernel of this form"
+    },
+    "conditional_parity_ranks": {
+      "degree_page_with_separate_monic_row": {
+        "equations": 18,
+        "note": "the last equation has affine target 1; these are Jacobian/tangent ranks",
+        "raw_leaf_coordinate_model": {
+          "D2_residual_incremental_Schur_rank": 0,
+          "D2_residual_unknowns_added": 9,
+          "left_cokernel_full": 0,
+          "left_cokernel_proper": 0,
+          "rank_full_over_Q": 18,
+          "rank_proper_over_Q": 18,
+          "rank_through_D2_over_Q": 18,
+          "top_minor_incremental_Schur_rank": 0,
+          "unknowns_full": 54,
+          "unknowns_proper": 36
+        },
+        "rigid_star_macro_model": {
+          "D2_residual_incremental_Schur_rank": 3,
+          "D2_residual_macro_unknowns_added": 3,
+          "left_cokernel_full": 0,
+          "left_cokernel_proper": 6,
+          "left_cokernel_through_D2": 3,
+          "rank_full_over_Q": 18,
+          "rank_proper_over_Q": 12,
+          "rank_through_D2_over_Q": 15,
+          "top_minor_incremental_Schur_rank": 3,
+          "top_minor_macro_unknowns_added": 3,
+          "unknowns_full": 18,
+          "unknowns_proper": 12
+        },
+        "three_good_prime_checks": {
+          "1009": {
+            "raw_leaf_full_witness": 18,
+            "raw_leaf_proper": 18,
+            "raw_leaf_through_D2": 18,
+            "rigid_star_macro_full_witness": 18,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 15
+          },
+          "1013": {
+            "raw_leaf_full_witness": 18,
+            "raw_leaf_proper": 18,
+            "raw_leaf_through_D2": 18,
+            "rigid_star_macro_full_witness": 18,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 15
+          },
+          "1019": {
+            "raw_leaf_full_witness": 18,
+            "raw_leaf_proper": 18,
+            "raw_leaf_through_D2": 18,
+            "rigid_star_macro_full_witness": 18,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 15
+          }
+        }
+      },
+      "equations": 17,
+      "qualification": "exact over Q for the displayed rational witness matrices; not the rank of an unprovided associated-graded deformation-to-H map",
+      "raw_leaf_coordinate_model": {
+        "D2_residual_incremental_Schur_rank": 0,
+        "D2_residual_unknowns_added": 9,
+        "exact_rank_proof": "Hermite/confluent Vandermonde minor at distinct rational witness centres; determinant is a nonzero product of centre differences and factorials",
+        "left_cokernel_after_nonproper": 0,
+        "left_cokernel_proper": 0,
+        "left_cokernel_through_D2": 0,
+        "nonproper_incremental_Schur_rank": 0,
+        "rank_after_nonproper_over_Q": 17,
+        "rank_proper_over_Q": 17,
+        "rank_through_D2_over_Q": 17,
+        "top_minor_incremental_Schur_rank": 0,
+        "unknowns_after_nonproper": 54,
+        "unknowns_proper": 36
+      },
+      "rigid_star_macro_model": {
+        "D2_residual_incremental_Schur_rank": 3,
+        "D2_residual_macro_unknowns_added": 3,
+        "exact_rank_proof": "ordinary Vandermonde minor at distinct rational witness centres",
+        "left_cokernel_after_nonproper": 0,
+        "left_cokernel_proper": 5,
+        "left_cokernel_through_D2": 2,
+        "nonproper_incremental_Schur_rank": 5,
+        "rank_after_nonproper_over_Q": 17,
+        "rank_proper_over_Q": 12,
+        "rank_through_D2_over_Q": 15,
+        "top_minor_incremental_Schur_rank": 2,
+        "top_minor_macro_unknowns_added": 3,
+        "unknowns_after_nonproper": 18,
+        "unknowns_proper": 12
+      },
+      "three_good_prime_checks": {
+        "1009": {
+          "raw_leaf_full_witness": 17,
+          "raw_leaf_proper": 17,
+          "raw_leaf_through_D2": 17,
+          "rigid_star_macro_full_witness": 17,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 15
+        },
+        "1013": {
+          "raw_leaf_full_witness": 17,
+          "raw_leaf_proper": 17,
+          "raw_leaf_through_D2": 17,
+          "rigid_star_macro_full_witness": 17,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 15
+        },
+        "1019": {
+          "raw_leaf_full_witness": 17,
+          "raw_leaf_proper": 17,
+          "raw_leaf_through_D2": 17,
+          "rigid_star_macro_full_witness": 17,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 15
+        }
+      }
+    },
+    "custody": {
+      "disc_orbit_cycles": 2,
+      "family": {
+        "A1": 2,
+        "A2": 6,
+        "D": 54,
+        "D2_to_D3_gap_z": 14,
+        "DEG_rows_with_monic": 18,
+        "K": 18,
+        "M": [
+          -36,
+          24,
+          52
+        ],
+        "N": "6",
+        "P": 6,
+        "V": {
+          "2": 1,
+          "3": 5
+        },
+        "aggregate_nonproper_roots": 18,
+        "bottom_to_D2_gap_z": 5,
+        "d": 2,
+        "delta": [
+          "-1",
+          "1/6",
+          "7/12"
+        ],
+        "derivative_valuations_t": {
+          "major_residual": "-3/2",
+          "proper": "-5/6",
+          "top_minor": "-29"
+        },
+        "disc_orbits": 2,
+        "e": 3,
+        "homogeneous_DEG_rows": 17,
+        "k": 12,
+        "m": 36,
+        "major_D2_roots": 45,
+        "major_residual_nonproper_roots": 9,
+        "minimal_display_uniformizer_R": 12,
+        "n": 54,
+        "nonproper_f_minus_a0_orders_t": {
+          "major_residual": "1/2",
+          "top_minor": "28"
+        },
+        "proper_bottom_roots": 36,
+        "q": "1/2",
+        "t": 0,
+        "top_minor_roots": 9,
+        "u": 15,
+        "v": 3,
+        "visible_proper_branch_orbits": 4,
+        "witness_completion_R": 48,
+        "witness_contacts_t": {
+          "cross_D2_children": "1/6",
+          "cross_D2_top": "-1",
+          "proper_internal": "7/12",
+          "residual_internal": "3/16",
+          "top_internal": "2"
+        }
+      },
+      "full_globalinterp_decoration": false,
+      "missing_for_full_decoration": [
+        "nonproper rooted contact tree (NONPROPER-COUNT is only a count)",
+        "complete Galois permutation on all n root series",
+        "post-star and nonproper tame exponent supports",
+        "outer/inner coefficient identifications",
+        "actual Puiseux coefficients and sufficient inverse/integration guard"
+      ],
+      "proper_branch_orbits_visible_at_rigid_star": 4,
+      "proper_integration_constants_after_explicit_star_sharing": 2,
+      "proper_integration_constants_before_global_equations": 4,
+      "requested_two_constant_warning": "one constant per disc orbit is not the Galois rule: A1=2 fixes pi=0 and swaps pi=+/-1, so each six-disc orbit displays a 6-branch and a 12-branch orbit",
+      "star_sharing_status": "EXTRA IDENTIFICATION, not implied by Galois: equate the zero-root and nonzero-root constants inside each disc orbit",
+      "status": "ACCEPTED[PROPER-PACKET-CUSTODY-ONLY]"
+    },
+    "family": {
+      "A1": 2,
+      "A2": 6,
+      "D": 54,
+      "D2_to_D3_gap_z": 14,
+      "DEG_rows_with_monic": 18,
+      "K": 18,
+      "M": [
+        -36,
+        24,
+        52
+      ],
+      "N": "6",
+      "P": 6,
+      "V": {
+        "2": 1,
+        "3": 5
+      },
+      "aggregate_nonproper_roots": 18,
+      "bottom_to_D2_gap_z": 5,
+      "d": 2,
+      "delta": [
+        "-1",
+        "1/6",
+        "7/12"
+      ],
+      "derivative_valuations_t": {
+        "major_residual": "-3/2",
+        "proper": "-5/6",
+        "top_minor": "-29"
+      },
+      "disc_orbits": 2,
+      "e": 3,
+      "homogeneous_DEG_rows": 17,
+      "k": 12,
+      "m": 36,
+      "major_D2_roots": 45,
+      "major_residual_nonproper_roots": 9,
+      "minimal_display_uniformizer_R": 12,
+      "n": 54,
+      "nonproper_f_minus_a0_orders_t": {
+        "major_residual": "1/2",
+        "top_minor": "28"
+      },
+      "proper_bottom_roots": 36,
+      "q": "1/2",
+      "t": 0,
+      "top_minor_roots": 9,
+      "u": 15,
+      "v": 3,
+      "visible_proper_branch_orbits": 4,
+      "witness_completion_R": 48,
+      "witness_contacts_t": {
+        "cross_D2_children": "1/6",
+        "cross_D2_top": "-1",
+        "proper_internal": "7/12",
+        "residual_internal": "3/16",
+        "top_internal": "2"
+      }
+    },
+    "first_bottom_separation": {
+      "complete_orbit_trace": {
+        "count": 3,
+        "criterion": "2r+8 = 0 mod 12",
+        "rows_with_nonzero_possible_at_that_raw_leading_order": [
+          2,
+          8,
+          14
+        ],
+        "warning": "other rows cancel at the displayed leading character; their first nonzero integer-t coefficient depends on unspecified tame support and sharing"
+      },
+      "junctions": {
+        "D2_to_D3_relative_z": 14,
+        "bottom_to_D2_relative_z": 5,
+        "status": "provenance labels only; the z^5 coefficient matrix cannot be emitted until outer unit coefficients and their sharing are supplied"
+      },
+      "local_star_trace": {
+        "consequence": "the first internal star correction is two bottom gaps later, not one",
+        "sum_p_f_over_p_g_prime": "1",
+        "sum_pi2_p_f_over_p_g_prime": "1/3",
+        "sum_pi_p_f_over_p_g_prime": "0"
+      },
+      "proper_derivation": {
+        "lambda_f_t": "-1/6",
+        "leading_order_formula_z": "12*(-1/6+r/6+5/6)=2r+8",
+        "ord_D_proper_t": "-5/6",
+        "ord_tau_proper_t": "1/6",
+        "row_first_raw_orders_z": {
+          "0": 8,
+          "1": 10,
+          "10": 28,
+          "11": 30,
+          "12": 32,
+          "13": 34,
+          "14": 36,
+          "15": 38,
+          "16": 40,
+          "2": 12,
+          "3": 14,
+          "4": 16,
+          "5": 18,
+          "6": 20,
+          "7": 22,
+          "8": 24,
+          "9": 26
+        }
+      }
+    },
+    "full_quadratic_lift_scale_guard": {
+      "branch_power_variables_lower_bound": 417645,
+      "excluded_from_bound": [
+        "derivative-product variables",
+        "inverse variables",
+        "time/integration variables",
+        "polynomial coefficient variables",
+        "evaluation equations and Python/SymPy expression overhead"
+      ],
+      "frozen_driver": "GLOBAL-INTERPOLATION/1.0 moh_total_degree quadratic lift",
+      "qmax_z": 5,
+      "status": "NOT-RUN: no full decorated input; scalable direct projection used"
+    },
+    "manifest": {
+      "disc_orbits": [
+        {
+          "expected_size": 6,
+          "generator": {
+            "O1_D1_0": "O1_D1_1",
+            "O1_D1_1": "O1_D1_2",
+            "O1_D1_2": "O1_D1_3",
+            "O1_D1_3": "O1_D1_4",
+            "O1_D1_4": "O1_D1_5",
+            "O1_D1_5": "O1_D1_0"
+          },
+          "kind": "nonzero-(10)",
+          "lower_data": {
+            "A1": 2,
+            "V2": 1,
+            "bottom_case": "(13)",
+            "bottom_star": {
+              "p_f": "pi^2-2/3",
+              "p_g": "pi^3-pi"
+            },
+            "delta1": "7/12"
+          },
+          "members": [
+            "O1_D1_0",
+            "O1_D1_1",
+            "O1_D1_2",
+            "O1_D1_3",
+            "O1_D1_4",
+            "O1_D1_5"
+          ],
+          "name": "O1",
+          "visible_branch_orbits": [
+            {
+              "integration_constant": "a_O1_zero",
+              "kind": "zero-star-root",
+              "length": 6,
+              "pi": "0"
+            },
+            {
+              "integration_constant": "a_O1_nonzero",
+              "kind": "nonzero-star-roots",
+              "length": 12,
+              "pi": "+/-1"
+            }
+          ]
+        },
+        {
+          "expected_size": 6,
+          "generator": {
+            "O2_D1_0": "O2_D1_1",
+            "O2_D1_1": "O2_D1_2",
+            "O2_D1_2": "O2_D1_3",
+            "O2_D1_3": "O2_D1_4",
+            "O2_D1_4": "O2_D1_5",
+            "O2_D1_5": "O2_D1_0"
+          },
+          "kind": "nonzero-(10)",
+          "lower_data": {
+            "A1": 2,
+            "V2": 1,
+            "bottom_case": "(13)",
+            "bottom_star": {
+              "p_f": "pi^2-2/3",
+              "p_g": "pi^3-pi"
+            },
+            "delta1": "7/12"
+          },
+          "members": [
+            "O2_D1_0",
+            "O2_D1_1",
+            "O2_D1_2",
+            "O2_D1_3",
+            "O2_D1_4",
+            "O2_D1_5"
+          ],
+          "name": "O2",
+          "visible_branch_orbits": [
+            {
+              "integration_constant": "a_O2_zero",
+              "kind": "zero-star-root",
+              "length": 6,
+              "pi": "0"
+            },
+            {
+              "integration_constant": "a_O2_nonzero",
+              "kind": "nonzero-star-roots",
+              "length": 12,
+              "pi": "+/-1"
+            }
+          ]
+        }
+      ],
+      "family_t": 0,
+      "k": 12,
+      "root_blocks": {
+        "major_D2_total": 45,
+        "major_residual_nonproper_roots": 9,
+        "proper_bottom_roots": 36,
+        "top_minor_roots": 9,
+        "total_nonproper_roots": 18
+      },
+      "schema": "A2SIX-DECORATION/1",
+      "tree": {
+        "D2_unique_major": {
+          "radius_t": "1/6",
+          "size": 45
+        },
+        "D3": {
+          "radius_t": "-1",
+          "size": 54
+        },
+        "nonproper_aggregate_is_not_a_tree": true,
+        "proper_D1_children": {
+          "count": 12,
+          "radius_t": "7/12",
+          "size_each": 3
+        }
+      },
+      "typing": "PROPER-PACKET EXACT; NONPROPER COMPLETION WITNESS-ONLY / UNREVIEWED",
+      "witness_only_extra_choices": {
+        "inner_sharing": "three branches share their D1 centre through z^6 and split at z^7; post-star tails are not supplied by the skeleton",
+        "major_residual_one_cluster_contact_t": "3/16",
+        "nonproper_galois_action": "UNSPECIFIED",
+        "outer_sharing": "all D2 descendants share ancestors below z^2; D2/D1 outer units first may change at relative z^5; D3/D2 outer units at relative z^14",
+        "precision_guard": "valuation-only parity projection, not a full quadratic lift",
+        "proper_disc_centres": "two formal cyclotomic 6-orbits (one for k=6)",
+        "proper_internal_roots": [
+          "0",
+          "+1",
+          "-1"
+        ],
+        "tame_support_and_sharing": "UNSPECIFIED beyond the displayed leading contacts",
+        "top_minor_one_cluster_contact_t": "2"
+      }
+    },
+    "tropical_sensitivity": {
+      "changed_choice": "residual internal contact 1/6+1/(6(Rres-1)) -> 1/6+3/(6(Rres-1)); derivative valuation -3/2 -> -7/6 remains < -1",
+      "conclusion": "tropical data depend on an input absent from the charged decoration",
+      "result": {
+        "contact_completion": {
+          "completion_uniformizer_R": 48,
+          "residual_derivative_valuation_t": "-7/6",
+          "residual_f_minus_a0_order_t": "1/6",
+          "residual_internal_t": "11/48",
+          "top_internal_t": "2"
+        },
+        "derivation": "val(det A_S)=-C_all+C(T); exact finite complement DP",
+        "matrix": "raw scaled-GRS homogeneous rows r=0,...,K-2",
+        "minimizers": [
+          {
+            "basis": {
+              "major_residual": 2,
+              "proper": 15,
+              "top_minor": 0
+            },
+            "complement": {
+              "major_residual": 7,
+              "proper": 21,
+              "top_minor": 9
+            },
+            "proper_complement_disc_occupancies_0_1_2_3": [
+              0,
+              3,
+              9,
+              0
+            ]
+          }
+        ],
+        "minimum_basis_weight_t": "621/16",
+        "minimum_basis_weight_z": "1863",
+        "number_of_composition_minimizers": 1,
+        "number_of_labelled_minimum_bases": "4209012720",
+        "typing": "WITNESS-ONLY exact valuated-matroid computation"
+      },
+      "same_minimizers": false,
+      "same_weight": false
+    },
+    "tropical_witness": {
+      "contact_completion": {
+        "completion_uniformizer_R": 48,
+        "residual_derivative_valuation_t": "-3/2",
+        "residual_f_minus_a0_order_t": "1/2",
+        "residual_internal_t": "3/16",
+        "top_internal_t": "2"
+      },
+      "derivation": "val(det A_S)=-C_all+C(T); exact finite complement DP",
+      "matrix": "raw scaled-GRS homogeneous rows r=0,...,K-2",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 0,
+            "proper": 17,
+            "top_minor": 0
+          },
+          "complement": {
+            "major_residual": 9,
+            "proper": 19,
+            "top_minor": 9
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            5,
+            7,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "467/12",
+      "minimum_basis_weight_z": "1868",
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "420901272",
+      "typing": "WITNESS-ONLY exact valuated-matroid computation"
+    },
+    "typing": "PROVED-HERE algebra / UNREVIEWED computation / WITNESS-ONLY completion",
+    "unknown_count_convention_repair": {
+      "convention": "Z_page includes leading/star variables",
+      "formula": "U_page=h_constants+|Z_page|",
+      "page_table_rule": "integration constants printed separately and excluded from parity columns",
+      "u0_added_again": false
+    },
+    "verdict": {
+      "caution": "the repair is not a theorem about a Keller realization because the map from actual tame/root coefficients to H-values is not supplied",
+      "family_intrinsic_associated_graded_matrix": "OPEN[NONPROPER-INTERFACE]",
+      "raw_proper_defect_behavior": "grows after t=0; repaired by witness nonproper Schur block",
+      "rigid_macro_defect_behavior": "21*t+5 for k=12 (21*t+11 for k=6); repaired exactly in witness"
+    }
+  },
+  "1": {
+    "canonical_affine_bottom_left_kernel": {
+      "bottom_left_cokernel_dimension": 3,
+      "exists": true,
+      "exponent": 2,
+      "functional_polynomial": "Lambda_{t,12}(Y)=Y^2*G_bot(Y), G_bot(Y)=product_(i in proper bottom leaves)(Y-tau_i)",
+      "generic_repair": "for eta not a bottom root this value is generically nonzero; a D2 residual column repairs the displayed affine functional",
+      "identity": "lambda^T A_bottom=0, while lambda^T b_monic=1",
+      "leading_coefficient": "lc(eta)^E * product_i lc(eta-tau_i) / lc(D_eta), nonzero on the declared separation open set",
+      "nonproper_column_value": "Lambda(eta)/D_eta",
+      "proper_leaf_columns": 36,
+      "rows_including_monic": 39,
+      "typing": "PROVED-HERE for the bottom parity block; not a full obstruction because the nonproper columns evaluate nontrivially",
+      "witness_tree_valuations": {
+        "D2_residual_eta": "243/31",
+        "derivation": "val(Lambda(eta)/D_eta)=E val(eta)+sum_bottom contact(eta,tau_i)-val(D_eta)",
+        "top_minor_eta": "27"
+      }
+    },
+    "conditional_parity_ranks": {
+      "degree_page_with_separate_monic_row": {
+        "equations": 39,
+        "note": "the last equation has affine target 1; these are Jacobian/tangent ranks",
+        "raw_leaf_coordinate_model": {
+          "D2_residual_incremental_Schur_rank": 3,
+          "D2_residual_unknowns_added": 63,
+          "left_cokernel_full": 0,
+          "left_cokernel_proper": 3,
+          "rank_full_over_Q": 39,
+          "rank_proper_over_Q": 36,
+          "rank_through_D2_over_Q": 39,
+          "top_minor_incremental_Schur_rank": 0,
+          "unknowns_full": 117,
+          "unknowns_proper": 36
+        },
+        "rigid_star_macro_model": {
+          "D2_residual_incremental_Schur_rank": 21,
+          "D2_residual_macro_unknowns_added": 21,
+          "left_cokernel_full": 0,
+          "left_cokernel_proper": 27,
+          "left_cokernel_through_D2": 6,
+          "rank_full_over_Q": 39,
+          "rank_proper_over_Q": 12,
+          "rank_through_D2_over_Q": 33,
+          "top_minor_incremental_Schur_rank": 6,
+          "top_minor_macro_unknowns_added": 6,
+          "unknowns_full": 39,
+          "unknowns_proper": 12
+        },
+        "three_good_prime_checks": {
+          "1009": {
+            "raw_leaf_full_witness": 39,
+            "raw_leaf_proper": 36,
+            "raw_leaf_through_D2": 39,
+            "rigid_star_macro_full_witness": 39,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 33
+          },
+          "1013": {
+            "raw_leaf_full_witness": 39,
+            "raw_leaf_proper": 36,
+            "raw_leaf_through_D2": 39,
+            "rigid_star_macro_full_witness": 39,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 33
+          },
+          "1019": {
+            "raw_leaf_full_witness": 39,
+            "raw_leaf_proper": 36,
+            "raw_leaf_through_D2": 39,
+            "rigid_star_macro_full_witness": 39,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 33
+          }
+        }
+      },
+      "equations": 38,
+      "qualification": "exact over Q for the displayed rational witness matrices; not the rank of an unprovided associated-graded deformation-to-H map",
+      "raw_leaf_coordinate_model": {
+        "D2_residual_incremental_Schur_rank": 2,
+        "D2_residual_unknowns_added": 63,
+        "exact_rank_proof": "Hermite/confluent Vandermonde minor at distinct rational witness centres; determinant is a nonzero product of centre differences and factorials",
+        "left_cokernel_after_nonproper": 0,
+        "left_cokernel_proper": 2,
+        "left_cokernel_through_D2": 0,
+        "nonproper_incremental_Schur_rank": 2,
+        "rank_after_nonproper_over_Q": 38,
+        "rank_proper_over_Q": 36,
+        "rank_through_D2_over_Q": 38,
+        "top_minor_incremental_Schur_rank": 0,
+        "unknowns_after_nonproper": 117,
+        "unknowns_proper": 36
+      },
+      "rigid_star_macro_model": {
+        "D2_residual_incremental_Schur_rank": 21,
+        "D2_residual_macro_unknowns_added": 21,
+        "exact_rank_proof": "ordinary Vandermonde minor at distinct rational witness centres",
+        "left_cokernel_after_nonproper": 0,
+        "left_cokernel_proper": 26,
+        "left_cokernel_through_D2": 5,
+        "nonproper_incremental_Schur_rank": 26,
+        "rank_after_nonproper_over_Q": 38,
+        "rank_proper_over_Q": 12,
+        "rank_through_D2_over_Q": 33,
+        "top_minor_incremental_Schur_rank": 5,
+        "top_minor_macro_unknowns_added": 6,
+        "unknowns_after_nonproper": 39,
+        "unknowns_proper": 12
+      },
+      "three_good_prime_checks": {
+        "1009": {
+          "raw_leaf_full_witness": 38,
+          "raw_leaf_proper": 36,
+          "raw_leaf_through_D2": 38,
+          "rigid_star_macro_full_witness": 38,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 33
+        },
+        "1013": {
+          "raw_leaf_full_witness": 38,
+          "raw_leaf_proper": 36,
+          "raw_leaf_through_D2": 38,
+          "rigid_star_macro_full_witness": 38,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 33
+        },
+        "1019": {
+          "raw_leaf_full_witness": 38,
+          "raw_leaf_proper": 36,
+          "raw_leaf_through_D2": 38,
+          "rigid_star_macro_full_witness": 38,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 33
+        }
+      }
+    },
+    "custody": {
+      "disc_orbit_cycles": 2,
+      "family": {
+        "A1": 2,
+        "A2": 6,
+        "D": 117,
+        "D2_to_D3_gap_z": 14,
+        "DEG_rows_with_monic": 39,
+        "K": 39,
+        "M": [
+          -78,
+          52,
+          115
+        ],
+        "N": "6",
+        "P": 13,
+        "V": {
+          "2": 1,
+          "3": 11
+        },
+        "aggregate_nonproper_roots": 81,
+        "bottom_to_D2_gap_z": 5,
+        "d": 2,
+        "delta": [
+          "-1",
+          "1/6",
+          "7/12"
+        ],
+        "derivative_valuations_t": {
+          "major_residual": "-3/2",
+          "proper": "-5/6",
+          "top_minor": "-65"
+        },
+        "disc_orbits": 2,
+        "e": 3,
+        "homogeneous_DEG_rows": 38,
+        "k": 12,
+        "m": 78,
+        "major_D2_roots": 99,
+        "major_residual_nonproper_roots": 63,
+        "minimal_display_uniformizer_R": 12,
+        "n": 117,
+        "nonproper_f_minus_a0_orders_t": {
+          "major_residual": "1/2",
+          "top_minor": "64"
+        },
+        "proper_bottom_roots": 36,
+        "q": "1/2",
+        "t": 1,
+        "top_minor_roots": 18,
+        "u": 33,
+        "v": 6,
+        "visible_proper_branch_orbits": 4,
+        "witness_completion_R": 372,
+        "witness_contacts_t": {
+          "cross_D2_children": "1/6",
+          "cross_D2_top": "-1",
+          "proper_internal": "7/12",
+          "residual_internal": "21/124",
+          "top_internal": "2"
+        }
+      },
+      "full_globalinterp_decoration": false,
+      "missing_for_full_decoration": [
+        "nonproper rooted contact tree (NONPROPER-COUNT is only a count)",
+        "complete Galois permutation on all n root series",
+        "post-star and nonproper tame exponent supports",
+        "outer/inner coefficient identifications",
+        "actual Puiseux coefficients and sufficient inverse/integration guard"
+      ],
+      "proper_branch_orbits_visible_at_rigid_star": 4,
+      "proper_integration_constants_after_explicit_star_sharing": 2,
+      "proper_integration_constants_before_global_equations": 4,
+      "requested_two_constant_warning": "one constant per disc orbit is not the Galois rule: A1=2 fixes pi=0 and swaps pi=+/-1, so each six-disc orbit displays a 6-branch and a 12-branch orbit",
+      "star_sharing_status": "EXTRA IDENTIFICATION, not implied by Galois: equate the zero-root and nonzero-root constants inside each disc orbit",
+      "status": "ACCEPTED[PROPER-PACKET-CUSTODY-ONLY]"
+    },
+    "family": {
+      "A1": 2,
+      "A2": 6,
+      "D": 117,
+      "D2_to_D3_gap_z": 14,
+      "DEG_rows_with_monic": 39,
+      "K": 39,
+      "M": [
+        -78,
+        52,
+        115
+      ],
+      "N": "6",
+      "P": 13,
+      "V": {
+        "2": 1,
+        "3": 11
+      },
+      "aggregate_nonproper_roots": 81,
+      "bottom_to_D2_gap_z": 5,
+      "d": 2,
+      "delta": [
+        "-1",
+        "1/6",
+        "7/12"
+      ],
+      "derivative_valuations_t": {
+        "major_residual": "-3/2",
+        "proper": "-5/6",
+        "top_minor": "-65"
+      },
+      "disc_orbits": 2,
+      "e": 3,
+      "homogeneous_DEG_rows": 38,
+      "k": 12,
+      "m": 78,
+      "major_D2_roots": 99,
+      "major_residual_nonproper_roots": 63,
+      "minimal_display_uniformizer_R": 12,
+      "n": 117,
+      "nonproper_f_minus_a0_orders_t": {
+        "major_residual": "1/2",
+        "top_minor": "64"
+      },
+      "proper_bottom_roots": 36,
+      "q": "1/2",
+      "t": 1,
+      "top_minor_roots": 18,
+      "u": 33,
+      "v": 6,
+      "visible_proper_branch_orbits": 4,
+      "witness_completion_R": 372,
+      "witness_contacts_t": {
+        "cross_D2_children": "1/6",
+        "cross_D2_top": "-1",
+        "proper_internal": "7/12",
+        "residual_internal": "21/124",
+        "top_internal": "2"
+      }
+    },
+    "first_bottom_separation": {
+      "complete_orbit_trace": {
+        "count": 6,
+        "criterion": "2r+8 = 0 mod 12",
+        "rows_with_nonzero_possible_at_that_raw_leading_order": [
+          2,
+          8,
+          14,
+          20,
+          26,
+          32
+        ],
+        "warning": "other rows cancel at the displayed leading character; their first nonzero integer-t coefficient depends on unspecified tame support and sharing"
+      },
+      "junctions": {
+        "D2_to_D3_relative_z": 14,
+        "bottom_to_D2_relative_z": 5,
+        "status": "provenance labels only; the z^5 coefficient matrix cannot be emitted until outer unit coefficients and their sharing are supplied"
+      },
+      "local_star_trace": {
+        "consequence": "the first internal star correction is two bottom gaps later, not one",
+        "sum_p_f_over_p_g_prime": "1",
+        "sum_pi2_p_f_over_p_g_prime": "1/3",
+        "sum_pi_p_f_over_p_g_prime": "0"
+      },
+      "proper_derivation": {
+        "lambda_f_t": "-1/6",
+        "leading_order_formula_z": "12*(-1/6+r/6+5/6)=2r+8",
+        "ord_D_proper_t": "-5/6",
+        "ord_tau_proper_t": "1/6",
+        "row_first_raw_orders_z": {
+          "0": 8,
+          "1": 10,
+          "10": 28,
+          "11": 30,
+          "12": 32,
+          "13": 34,
+          "14": 36,
+          "15": 38,
+          "16": 40,
+          "17": 42,
+          "18": 44,
+          "19": 46,
+          "2": 12,
+          "20": 48,
+          "21": 50,
+          "22": 52,
+          "23": 54,
+          "24": 56,
+          "25": 58,
+          "26": 60,
+          "27": 62,
+          "28": 64,
+          "29": 66,
+          "3": 14,
+          "30": 68,
+          "31": 70,
+          "32": 72,
+          "33": 74,
+          "34": 76,
+          "35": 78,
+          "36": 80,
+          "37": 82,
+          "4": 16,
+          "5": 18,
+          "6": 20,
+          "7": 22,
+          "8": 24,
+          "9": 26
+        }
+      }
+    },
+    "full_quadratic_lift_scale_guard": {
+      "branch_power_variables_lower_bound": 4305807,
+      "excluded_from_bound": [
+        "derivative-product variables",
+        "inverse variables",
+        "time/integration variables",
+        "polynomial coefficient variables",
+        "evaluation equations and Python/SymPy expression overhead"
+      ],
+      "frozen_driver": "GLOBAL-INTERPOLATION/1.0 moh_total_degree quadratic lift",
+      "qmax_z": 5,
+      "status": "NOT-RUN: no full decorated input; scalable direct projection used"
+    },
+    "manifest": {
+      "disc_orbits": [
+        {
+          "expected_size": 6,
+          "generator": {
+            "O1_D1_0": "O1_D1_1",
+            "O1_D1_1": "O1_D1_2",
+            "O1_D1_2": "O1_D1_3",
+            "O1_D1_3": "O1_D1_4",
+            "O1_D1_4": "O1_D1_5",
+            "O1_D1_5": "O1_D1_0"
+          },
+          "kind": "nonzero-(10)",
+          "lower_data": {
+            "A1": 2,
+            "V2": 1,
+            "bottom_case": "(13)",
+            "bottom_star": {
+              "p_f": "pi^2-2/3",
+              "p_g": "pi^3-pi"
+            },
+            "delta1": "7/12"
+          },
+          "members": [
+            "O1_D1_0",
+            "O1_D1_1",
+            "O1_D1_2",
+            "O1_D1_3",
+            "O1_D1_4",
+            "O1_D1_5"
+          ],
+          "name": "O1",
+          "visible_branch_orbits": [
+            {
+              "integration_constant": "a_O1_zero",
+              "kind": "zero-star-root",
+              "length": 6,
+              "pi": "0"
+            },
+            {
+              "integration_constant": "a_O1_nonzero",
+              "kind": "nonzero-star-roots",
+              "length": 12,
+              "pi": "+/-1"
+            }
+          ]
+        },
+        {
+          "expected_size": 6,
+          "generator": {
+            "O2_D1_0": "O2_D1_1",
+            "O2_D1_1": "O2_D1_2",
+            "O2_D1_2": "O2_D1_3",
+            "O2_D1_3": "O2_D1_4",
+            "O2_D1_4": "O2_D1_5",
+            "O2_D1_5": "O2_D1_0"
+          },
+          "kind": "nonzero-(10)",
+          "lower_data": {
+            "A1": 2,
+            "V2": 1,
+            "bottom_case": "(13)",
+            "bottom_star": {
+              "p_f": "pi^2-2/3",
+              "p_g": "pi^3-pi"
+            },
+            "delta1": "7/12"
+          },
+          "members": [
+            "O2_D1_0",
+            "O2_D1_1",
+            "O2_D1_2",
+            "O2_D1_3",
+            "O2_D1_4",
+            "O2_D1_5"
+          ],
+          "name": "O2",
+          "visible_branch_orbits": [
+            {
+              "integration_constant": "a_O2_zero",
+              "kind": "zero-star-root",
+              "length": 6,
+              "pi": "0"
+            },
+            {
+              "integration_constant": "a_O2_nonzero",
+              "kind": "nonzero-star-roots",
+              "length": 12,
+              "pi": "+/-1"
+            }
+          ]
+        }
+      ],
+      "family_t": 1,
+      "k": 12,
+      "root_blocks": {
+        "major_D2_total": 99,
+        "major_residual_nonproper_roots": 63,
+        "proper_bottom_roots": 36,
+        "top_minor_roots": 18,
+        "total_nonproper_roots": 81
+      },
+      "schema": "A2SIX-DECORATION/1",
+      "tree": {
+        "D2_unique_major": {
+          "radius_t": "1/6",
+          "size": 99
+        },
+        "D3": {
+          "radius_t": "-1",
+          "size": 117
+        },
+        "nonproper_aggregate_is_not_a_tree": true,
+        "proper_D1_children": {
+          "count": 12,
+          "radius_t": "7/12",
+          "size_each": 3
+        }
+      },
+      "typing": "PROPER-PACKET EXACT; NONPROPER COMPLETION WITNESS-ONLY / UNREVIEWED",
+      "witness_only_extra_choices": {
+        "inner_sharing": "three branches share their D1 centre through z^6 and split at z^7; post-star tails are not supplied by the skeleton",
+        "major_residual_one_cluster_contact_t": "21/124",
+        "nonproper_galois_action": "UNSPECIFIED",
+        "outer_sharing": "all D2 descendants share ancestors below z^2; D2/D1 outer units first may change at relative z^5; D3/D2 outer units at relative z^14",
+        "precision_guard": "valuation-only parity projection, not a full quadratic lift",
+        "proper_disc_centres": "two formal cyclotomic 6-orbits (one for k=6)",
+        "proper_internal_roots": [
+          "0",
+          "+1",
+          "-1"
+        ],
+        "tame_support_and_sharing": "UNSPECIFIED beyond the displayed leading contacts",
+        "top_minor_one_cluster_contact_t": "2"
+      }
+    },
+    "tropical_sensitivity": {
+      "changed_choice": "residual internal contact 1/6+1/(6(Rres-1)) -> 1/6+3/(6(Rres-1)); derivative valuation -3/2 -> -7/6 remains < -1",
+      "conclusion": "tropical data depend on an input absent from the charged decoration",
+      "result": {
+        "contact_completion": {
+          "completion_uniformizer_R": 372,
+          "residual_derivative_valuation_t": "-7/6",
+          "residual_f_minus_a0_order_t": "1/6",
+          "residual_internal_t": "65/372",
+          "top_internal_t": "2"
+        },
+        "derivation": "val(det A_S)=-C_all+C(T); exact finite complement DP",
+        "matrix": "raw scaled-GRS homogeneous rows r=0,...,K-2",
+        "minimizers": [
+          {
+            "basis": {
+              "major_residual": 14,
+              "proper": 24,
+              "top_minor": 0
+            },
+            "complement": {
+              "major_residual": 49,
+              "proper": 12,
+              "top_minor": 18
+            },
+            "proper_complement_disc_occupancies_0_1_2_3": [
+              0,
+              12,
+              0,
+              0
+            ]
+          }
+        ],
+        "minimum_basis_weight_t": "19745/124",
+        "minimum_basis_weight_z": "59235",
+        "number_of_composition_minimizers": 1,
+        "number_of_labelled_minimum_bases": "19869125813916510825",
+        "typing": "WITNESS-ONLY exact valuated-matroid computation"
+      },
+      "same_minimizers": true,
+      "same_weight": false
+    },
+    "tropical_witness": {
+      "contact_completion": {
+        "completion_uniformizer_R": 372,
+        "residual_derivative_valuation_t": "-3/2",
+        "residual_f_minus_a0_order_t": "1/2",
+        "residual_internal_t": "21/124",
+        "top_internal_t": "2"
+      },
+      "derivation": "val(det A_S)=-C_all+C(T); exact finite complement DP",
+      "matrix": "raw scaled-GRS homogeneous rows r=0,...,K-2",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 14,
+            "proper": 24,
+            "top_minor": 0
+          },
+          "complement": {
+            "major_residual": 49,
+            "proper": 12,
+            "top_minor": 18
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            12,
+            0,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "20263/124",
+      "minimum_basis_weight_z": "60789",
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "19869125813916510825",
+      "typing": "WITNESS-ONLY exact valuated-matroid computation"
+    },
+    "typing": "PROVED-HERE algebra / UNREVIEWED computation / WITNESS-ONLY completion",
+    "unknown_count_convention_repair": {
+      "convention": "Z_page includes leading/star variables",
+      "formula": "U_page=h_constants+|Z_page|",
+      "page_table_rule": "integration constants printed separately and excluded from parity columns",
+      "u0_added_again": false
+    },
+    "verdict": {
+      "caution": "the repair is not a theorem about a Keller realization because the map from actual tame/root coefficients to H-values is not supplied",
+      "family_intrinsic_associated_graded_matrix": "OPEN[NONPROPER-INTERFACE]",
+      "raw_proper_defect_behavior": "grows after t=0; repaired by witness nonproper Schur block",
+      "rigid_macro_defect_behavior": "21*t+5 for k=12 (21*t+11 for k=6); repaired exactly in witness"
+    }
+  },
+  "2": {
+    "canonical_affine_bottom_left_kernel": {
+      "bottom_left_cokernel_dimension": 24,
+      "exists": true,
+      "exponent": 23,
+      "functional_polynomial": "Lambda_{t,12}(Y)=Y^23*G_bot(Y), G_bot(Y)=product_(i in proper bottom leaves)(Y-tau_i)",
+      "generic_repair": "for eta not a bottom root this value is generically nonzero; a D2 residual column repairs the displayed affine functional",
+      "identity": "lambda^T A_bottom=0, while lambda^T b_monic=1",
+      "leading_coefficient": "lc(eta)^E * product_i lc(eta-tau_i) / lc(D_eta), nonzero on the declared separation open set",
+      "nonproper_column_value": "Lambda(eta)/D_eta",
+      "proper_leaf_columns": 36,
+      "rows_including_monic": 60,
+      "typing": "PROVED-HERE for the bottom parity block; not a full obstruction because the nonproper columns evaluate nontrivially",
+      "witness_tree_valuations": {
+        "D2_residual_eta": "2637/232",
+        "derivation": "val(Lambda(eta)/D_eta)=E val(eta)+sum_bottom contact(eta,tau_i)-val(D_eta)",
+        "top_minor_eta": "42"
+      }
+    },
+    "conditional_parity_ranks": {
+      "degree_page_with_separate_monic_row": {
+        "equations": 60,
+        "note": "the last equation has affine target 1; these are Jacobian/tangent ranks",
+        "raw_leaf_coordinate_model": {
+          "D2_residual_incremental_Schur_rank": 24,
+          "D2_residual_unknowns_added": 117,
+          "left_cokernel_full": 0,
+          "left_cokernel_proper": 24,
+          "rank_full_over_Q": 60,
+          "rank_proper_over_Q": 36,
+          "rank_through_D2_over_Q": 60,
+          "top_minor_incremental_Schur_rank": 0,
+          "unknowns_full": 180,
+          "unknowns_proper": 36
+        },
+        "rigid_star_macro_model": {
+          "D2_residual_incremental_Schur_rank": 39,
+          "D2_residual_macro_unknowns_added": 39,
+          "left_cokernel_full": 0,
+          "left_cokernel_proper": 48,
+          "left_cokernel_through_D2": 9,
+          "rank_full_over_Q": 60,
+          "rank_proper_over_Q": 12,
+          "rank_through_D2_over_Q": 51,
+          "top_minor_incremental_Schur_rank": 9,
+          "top_minor_macro_unknowns_added": 9,
+          "unknowns_full": 60,
+          "unknowns_proper": 12
+        },
+        "three_good_prime_checks": {
+          "1009": {
+            "raw_leaf_full_witness": 60,
+            "raw_leaf_proper": 36,
+            "raw_leaf_through_D2": 60,
+            "rigid_star_macro_full_witness": 60,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 51
+          },
+          "1013": {
+            "raw_leaf_full_witness": 60,
+            "raw_leaf_proper": 36,
+            "raw_leaf_through_D2": 60,
+            "rigid_star_macro_full_witness": 60,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 51
+          },
+          "1019": {
+            "raw_leaf_full_witness": 60,
+            "raw_leaf_proper": 36,
+            "raw_leaf_through_D2": 60,
+            "rigid_star_macro_full_witness": 60,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 51
+          }
+        }
+      },
+      "equations": 59,
+      "qualification": "exact over Q for the displayed rational witness matrices; not the rank of an unprovided associated-graded deformation-to-H map",
+      "raw_leaf_coordinate_model": {
+        "D2_residual_incremental_Schur_rank": 23,
+        "D2_residual_unknowns_added": 117,
+        "exact_rank_proof": "Hermite/confluent Vandermonde minor at distinct rational witness centres; determinant is a nonzero product of centre differences and factorials",
+        "left_cokernel_after_nonproper": 0,
+        "left_cokernel_proper": 23,
+        "left_cokernel_through_D2": 0,
+        "nonproper_incremental_Schur_rank": 23,
+        "rank_after_nonproper_over_Q": 59,
+        "rank_proper_over_Q": 36,
+        "rank_through_D2_over_Q": 59,
+        "top_minor_incremental_Schur_rank": 0,
+        "unknowns_after_nonproper": 180,
+        "unknowns_proper": 36
+      },
+      "rigid_star_macro_model": {
+        "D2_residual_incremental_Schur_rank": 39,
+        "D2_residual_macro_unknowns_added": 39,
+        "exact_rank_proof": "ordinary Vandermonde minor at distinct rational witness centres",
+        "left_cokernel_after_nonproper": 0,
+        "left_cokernel_proper": 47,
+        "left_cokernel_through_D2": 8,
+        "nonproper_incremental_Schur_rank": 47,
+        "rank_after_nonproper_over_Q": 59,
+        "rank_proper_over_Q": 12,
+        "rank_through_D2_over_Q": 51,
+        "top_minor_incremental_Schur_rank": 8,
+        "top_minor_macro_unknowns_added": 9,
+        "unknowns_after_nonproper": 60,
+        "unknowns_proper": 12
+      },
+      "three_good_prime_checks": {
+        "1009": {
+          "raw_leaf_full_witness": 59,
+          "raw_leaf_proper": 36,
+          "raw_leaf_through_D2": 59,
+          "rigid_star_macro_full_witness": 59,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 51
+        },
+        "1013": {
+          "raw_leaf_full_witness": 59,
+          "raw_leaf_proper": 36,
+          "raw_leaf_through_D2": 59,
+          "rigid_star_macro_full_witness": 59,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 51
+        },
+        "1019": {
+          "raw_leaf_full_witness": 59,
+          "raw_leaf_proper": 36,
+          "raw_leaf_through_D2": 59,
+          "rigid_star_macro_full_witness": 59,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 51
+        }
+      }
+    },
+    "custody": {
+      "disc_orbit_cycles": 2,
+      "family": {
+        "A1": 2,
+        "A2": 6,
+        "D": 180,
+        "D2_to_D3_gap_z": 14,
+        "DEG_rows_with_monic": 60,
+        "K": 60,
+        "M": [
+          -120,
+          80,
+          178
+        ],
+        "N": "6",
+        "P": 20,
+        "V": {
+          "2": 1,
+          "3": 17
+        },
+        "aggregate_nonproper_roots": 144,
+        "bottom_to_D2_gap_z": 5,
+        "d": 2,
+        "delta": [
+          "-1",
+          "1/6",
+          "7/12"
+        ],
+        "derivative_valuations_t": {
+          "major_residual": "-3/2",
+          "proper": "-5/6",
+          "top_minor": "-101"
+        },
+        "disc_orbits": 2,
+        "e": 3,
+        "homogeneous_DEG_rows": 59,
+        "k": 12,
+        "m": 120,
+        "major_D2_roots": 153,
+        "major_residual_nonproper_roots": 117,
+        "minimal_display_uniformizer_R": 12,
+        "n": 180,
+        "nonproper_f_minus_a0_orders_t": {
+          "major_residual": "1/2",
+          "top_minor": "100"
+        },
+        "proper_bottom_roots": 36,
+        "q": "1/2",
+        "t": 2,
+        "top_minor_roots": 27,
+        "u": 51,
+        "v": 9,
+        "visible_proper_branch_orbits": 4,
+        "witness_completion_R": 696,
+        "witness_contacts_t": {
+          "cross_D2_children": "1/6",
+          "cross_D2_top": "-1",
+          "proper_internal": "7/12",
+          "residual_internal": "39/232",
+          "top_internal": "2"
+        }
+      },
+      "full_globalinterp_decoration": false,
+      "missing_for_full_decoration": [
+        "nonproper rooted contact tree (NONPROPER-COUNT is only a count)",
+        "complete Galois permutation on all n root series",
+        "post-star and nonproper tame exponent supports",
+        "outer/inner coefficient identifications",
+        "actual Puiseux coefficients and sufficient inverse/integration guard"
+      ],
+      "proper_branch_orbits_visible_at_rigid_star": 4,
+      "proper_integration_constants_after_explicit_star_sharing": 2,
+      "proper_integration_constants_before_global_equations": 4,
+      "requested_two_constant_warning": "one constant per disc orbit is not the Galois rule: A1=2 fixes pi=0 and swaps pi=+/-1, so each six-disc orbit displays a 6-branch and a 12-branch orbit",
+      "star_sharing_status": "EXTRA IDENTIFICATION, not implied by Galois: equate the zero-root and nonzero-root constants inside each disc orbit",
+      "status": "ACCEPTED[PROPER-PACKET-CUSTODY-ONLY]"
+    },
+    "family": {
+      "A1": 2,
+      "A2": 6,
+      "D": 180,
+      "D2_to_D3_gap_z": 14,
+      "DEG_rows_with_monic": 60,
+      "K": 60,
+      "M": [
+        -120,
+        80,
+        178
+      ],
+      "N": "6",
+      "P": 20,
+      "V": {
+        "2": 1,
+        "3": 17
+      },
+      "aggregate_nonproper_roots": 144,
+      "bottom_to_D2_gap_z": 5,
+      "d": 2,
+      "delta": [
+        "-1",
+        "1/6",
+        "7/12"
+      ],
+      "derivative_valuations_t": {
+        "major_residual": "-3/2",
+        "proper": "-5/6",
+        "top_minor": "-101"
+      },
+      "disc_orbits": 2,
+      "e": 3,
+      "homogeneous_DEG_rows": 59,
+      "k": 12,
+      "m": 120,
+      "major_D2_roots": 153,
+      "major_residual_nonproper_roots": 117,
+      "minimal_display_uniformizer_R": 12,
+      "n": 180,
+      "nonproper_f_minus_a0_orders_t": {
+        "major_residual": "1/2",
+        "top_minor": "100"
+      },
+      "proper_bottom_roots": 36,
+      "q": "1/2",
+      "t": 2,
+      "top_minor_roots": 27,
+      "u": 51,
+      "v": 9,
+      "visible_proper_branch_orbits": 4,
+      "witness_completion_R": 696,
+      "witness_contacts_t": {
+        "cross_D2_children": "1/6",
+        "cross_D2_top": "-1",
+        "proper_internal": "7/12",
+        "residual_internal": "39/232",
+        "top_internal": "2"
+      }
+    },
+    "first_bottom_separation": {
+      "complete_orbit_trace": {
+        "count": 10,
+        "criterion": "2r+8 = 0 mod 12",
+        "rows_with_nonzero_possible_at_that_raw_leading_order": [
+          2,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56
+        ],
+        "warning": "other rows cancel at the displayed leading character; their first nonzero integer-t coefficient depends on unspecified tame support and sharing"
+      },
+      "junctions": {
+        "D2_to_D3_relative_z": 14,
+        "bottom_to_D2_relative_z": 5,
+        "status": "provenance labels only; the z^5 coefficient matrix cannot be emitted until outer unit coefficients and their sharing are supplied"
+      },
+      "local_star_trace": {
+        "consequence": "the first internal star correction is two bottom gaps later, not one",
+        "sum_p_f_over_p_g_prime": "1",
+        "sum_pi2_p_f_over_p_g_prime": "1/3",
+        "sum_pi_p_f_over_p_g_prime": "0"
+      },
+      "proper_derivation": {
+        "lambda_f_t": "-1/6",
+        "leading_order_formula_z": "12*(-1/6+r/6+5/6)=2r+8",
+        "ord_D_proper_t": "-5/6",
+        "ord_tau_proper_t": "1/6",
+        "row_first_raw_orders_z": {
+          "0": 8,
+          "1": 10,
+          "10": 28,
+          "11": 30,
+          "12": 32,
+          "13": 34,
+          "14": 36,
+          "15": 38,
+          "16": 40,
+          "17": 42,
+          "18": 44,
+          "19": 46,
+          "2": 12,
+          "20": 48,
+          "21": 50,
+          "22": 52,
+          "23": 54,
+          "24": 56,
+          "25": 58,
+          "26": 60,
+          "27": 62,
+          "28": 64,
+          "29": 66,
+          "3": 14,
+          "30": 68,
+          "31": 70,
+          "32": 72,
+          "33": 74,
+          "34": 76,
+          "35": 78,
+          "36": 80,
+          "37": 82,
+          "38": 84,
+          "39": 86,
+          "4": 16,
+          "40": 88,
+          "41": 90,
+          "42": 92,
+          "43": 94,
+          "44": 96,
+          "45": 98,
+          "46": 100,
+          "47": 102,
+          "48": 104,
+          "49": 106,
+          "5": 18,
+          "50": 108,
+          "51": 110,
+          "52": 112,
+          "53": 114,
+          "54": 116,
+          "55": 118,
+          "56": 120,
+          "57": 122,
+          "58": 124,
+          "6": 20,
+          "7": 22,
+          "8": 24,
+          "9": 26
+        }
+      }
+    },
+    "full_quadratic_lift_scale_guard": {
+      "branch_power_variables_lower_bound": 15744465,
+      "excluded_from_bound": [
+        "derivative-product variables",
+        "inverse variables",
+        "time/integration variables",
+        "polynomial coefficient variables",
+        "evaluation equations and Python/SymPy expression overhead"
+      ],
+      "frozen_driver": "GLOBAL-INTERPOLATION/1.0 moh_total_degree quadratic lift",
+      "qmax_z": 5,
+      "status": "NOT-RUN: no full decorated input; scalable direct projection used"
+    },
+    "manifest": {
+      "disc_orbits": [
+        {
+          "expected_size": 6,
+          "generator": {
+            "O1_D1_0": "O1_D1_1",
+            "O1_D1_1": "O1_D1_2",
+            "O1_D1_2": "O1_D1_3",
+            "O1_D1_3": "O1_D1_4",
+            "O1_D1_4": "O1_D1_5",
+            "O1_D1_5": "O1_D1_0"
+          },
+          "kind": "nonzero-(10)",
+          "lower_data": {
+            "A1": 2,
+            "V2": 1,
+            "bottom_case": "(13)",
+            "bottom_star": {
+              "p_f": "pi^2-2/3",
+              "p_g": "pi^3-pi"
+            },
+            "delta1": "7/12"
+          },
+          "members": [
+            "O1_D1_0",
+            "O1_D1_1",
+            "O1_D1_2",
+            "O1_D1_3",
+            "O1_D1_4",
+            "O1_D1_5"
+          ],
+          "name": "O1",
+          "visible_branch_orbits": [
+            {
+              "integration_constant": "a_O1_zero",
+              "kind": "zero-star-root",
+              "length": 6,
+              "pi": "0"
+            },
+            {
+              "integration_constant": "a_O1_nonzero",
+              "kind": "nonzero-star-roots",
+              "length": 12,
+              "pi": "+/-1"
+            }
+          ]
+        },
+        {
+          "expected_size": 6,
+          "generator": {
+            "O2_D1_0": "O2_D1_1",
+            "O2_D1_1": "O2_D1_2",
+            "O2_D1_2": "O2_D1_3",
+            "O2_D1_3": "O2_D1_4",
+            "O2_D1_4": "O2_D1_5",
+            "O2_D1_5": "O2_D1_0"
+          },
+          "kind": "nonzero-(10)",
+          "lower_data": {
+            "A1": 2,
+            "V2": 1,
+            "bottom_case": "(13)",
+            "bottom_star": {
+              "p_f": "pi^2-2/3",
+              "p_g": "pi^3-pi"
+            },
+            "delta1": "7/12"
+          },
+          "members": [
+            "O2_D1_0",
+            "O2_D1_1",
+            "O2_D1_2",
+            "O2_D1_3",
+            "O2_D1_4",
+            "O2_D1_5"
+          ],
+          "name": "O2",
+          "visible_branch_orbits": [
+            {
+              "integration_constant": "a_O2_zero",
+              "kind": "zero-star-root",
+              "length": 6,
+              "pi": "0"
+            },
+            {
+              "integration_constant": "a_O2_nonzero",
+              "kind": "nonzero-star-roots",
+              "length": 12,
+              "pi": "+/-1"
+            }
+          ]
+        }
+      ],
+      "family_t": 2,
+      "k": 12,
+      "root_blocks": {
+        "major_D2_total": 153,
+        "major_residual_nonproper_roots": 117,
+        "proper_bottom_roots": 36,
+        "top_minor_roots": 27,
+        "total_nonproper_roots": 144
+      },
+      "schema": "A2SIX-DECORATION/1",
+      "tree": {
+        "D2_unique_major": {
+          "radius_t": "1/6",
+          "size": 153
+        },
+        "D3": {
+          "radius_t": "-1",
+          "size": 180
+        },
+        "nonproper_aggregate_is_not_a_tree": true,
+        "proper_D1_children": {
+          "count": 12,
+          "radius_t": "7/12",
+          "size_each": 3
+        }
+      },
+      "typing": "PROPER-PACKET EXACT; NONPROPER COMPLETION WITNESS-ONLY / UNREVIEWED",
+      "witness_only_extra_choices": {
+        "inner_sharing": "three branches share their D1 centre through z^6 and split at z^7; post-star tails are not supplied by the skeleton",
+        "major_residual_one_cluster_contact_t": "39/232",
+        "nonproper_galois_action": "UNSPECIFIED",
+        "outer_sharing": "all D2 descendants share ancestors below z^2; D2/D1 outer units first may change at relative z^5; D3/D2 outer units at relative z^14",
+        "precision_guard": "valuation-only parity projection, not a full quadratic lift",
+        "proper_disc_centres": "two formal cyclotomic 6-orbits (one for k=6)",
+        "proper_internal_roots": [
+          "0",
+          "+1",
+          "-1"
+        ],
+        "tame_support_and_sharing": "UNSPECIFIED beyond the displayed leading contacts",
+        "top_minor_one_cluster_contact_t": "2"
+      }
+    },
+    "tropical_sensitivity": {
+      "changed_choice": "residual internal contact 1/6+1/(6(Rres-1)) -> 1/6+3/(6(Rres-1)); derivative valuation -3/2 -> -7/6 remains < -1",
+      "conclusion": "tropical data depend on an input absent from the charged decoration",
+      "result": {
+        "contact_completion": {
+          "completion_uniformizer_R": 696,
+          "residual_derivative_valuation_t": "-7/6",
+          "residual_f_minus_a0_order_t": "1/6",
+          "residual_internal_t": "119/696",
+          "top_internal_t": "2"
+        },
+        "derivation": "val(det A_S)=-C_all+C(T); exact finite complement DP",
+        "matrix": "raw scaled-GRS homogeneous rows r=0,...,K-2",
+        "minimizers": [
+          {
+            "basis": {
+              "major_residual": 35,
+              "proper": 24,
+              "top_minor": 0
+            },
+            "complement": {
+              "major_residual": 82,
+              "proper": 12,
+              "top_minor": 27
+            },
+            "proper_complement_disc_occupancies_0_1_2_3": [
+              0,
+              12,
+              0,
+              0
+            ]
+          }
+        ],
+        "minimum_basis_weight_t": "82027/232",
+        "minimum_basis_weight_z": "246081",
+        "number_of_composition_minimizers": 1,
+        "number_of_labelled_minimum_bases": "429516099418142009023015543835125842",
+        "typing": "WITNESS-ONLY exact valuated-matroid computation"
+      },
+      "same_minimizers": true,
+      "same_weight": false
+    },
+    "tropical_witness": {
+      "contact_completion": {
+        "completion_uniformizer_R": 696,
+        "residual_derivative_valuation_t": "-3/2",
+        "residual_f_minus_a0_order_t": "1/2",
+        "residual_internal_t": "39/232",
+        "top_internal_t": "2"
+      },
+      "derivation": "val(det A_S)=-C_all+C(T); exact finite complement DP",
+      "matrix": "raw scaled-GRS homogeneous rows r=0,...,K-2",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 35,
+            "proper": 24,
+            "top_minor": 0
+          },
+          "complement": {
+            "major_residual": 82,
+            "proper": 12,
+            "top_minor": 27
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            12,
+            0,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "84337/232",
+      "minimum_basis_weight_z": "253011",
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "429516099418142009023015543835125842",
+      "typing": "WITNESS-ONLY exact valuated-matroid computation"
+    },
+    "typing": "PROVED-HERE algebra / UNREVIEWED computation / WITNESS-ONLY completion",
+    "unknown_count_convention_repair": {
+      "convention": "Z_page includes leading/star variables",
+      "formula": "U_page=h_constants+|Z_page|",
+      "page_table_rule": "integration constants printed separately and excluded from parity columns",
+      "u0_added_again": false
+    },
+    "verdict": {
+      "caution": "the repair is not a theorem about a Keller realization because the map from actual tame/root coefficients to H-values is not supplied",
+      "family_intrinsic_associated_graded_matrix": "OPEN[NONPROPER-INTERFACE]",
+      "raw_proper_defect_behavior": "grows after t=0; repaired by witness nonproper Schur block",
+      "rigid_macro_defect_behavior": "21*t+5 for k=12 (21*t+11 for k=6); repaired exactly in witness"
+    }
+  },
+  "3": {
+    "canonical_affine_bottom_left_kernel": {
+      "bottom_left_cokernel_dimension": 45,
+      "exists": true,
+      "exponent": 44,
+      "functional_polynomial": "Lambda_{t,12}(Y)=Y^44*G_bot(Y), G_bot(Y)=product_(i in proper bottom leaves)(Y-tau_i)",
+      "generic_repair": "for eta not a bottom root this value is generically nonzero; a D2 residual column repairs the displayed affine functional",
+      "identity": "lambda^T A_bottom=0, while lambda^T b_monic=1",
+      "leading_coefficient": "lc(eta)^E * product_i lc(eta-tau_i) / lc(D_eta), nonzero on the declared separation open set",
+      "nonproper_column_value": "Lambda(eta)/D_eta",
+      "proper_leaf_columns": 36,
+      "rows_including_monic": 81,
+      "typing": "PROVED-HERE for the bottom parity block; not a full obstruction because the nonproper columns evaluate nontrivially",
+      "witness_tree_valuations": {
+        "D2_residual_eta": "2529/170",
+        "derivation": "val(Lambda(eta)/D_eta)=E val(eta)+sum_bottom contact(eta,tau_i)-val(D_eta)",
+        "top_minor_eta": "57"
+      }
+    },
+    "conditional_parity_ranks": {
+      "degree_page_with_separate_monic_row": {
+        "equations": 81,
+        "note": "the last equation has affine target 1; these are Jacobian/tangent ranks",
+        "raw_leaf_coordinate_model": {
+          "D2_residual_incremental_Schur_rank": 45,
+          "D2_residual_unknowns_added": 171,
+          "left_cokernel_full": 0,
+          "left_cokernel_proper": 45,
+          "rank_full_over_Q": 81,
+          "rank_proper_over_Q": 36,
+          "rank_through_D2_over_Q": 81,
+          "top_minor_incremental_Schur_rank": 0,
+          "unknowns_full": 243,
+          "unknowns_proper": 36
+        },
+        "rigid_star_macro_model": {
+          "D2_residual_incremental_Schur_rank": 57,
+          "D2_residual_macro_unknowns_added": 57,
+          "left_cokernel_full": 0,
+          "left_cokernel_proper": 69,
+          "left_cokernel_through_D2": 12,
+          "rank_full_over_Q": 81,
+          "rank_proper_over_Q": 12,
+          "rank_through_D2_over_Q": 69,
+          "top_minor_incremental_Schur_rank": 12,
+          "top_minor_macro_unknowns_added": 12,
+          "unknowns_full": 81,
+          "unknowns_proper": 12
+        },
+        "three_good_prime_checks": {
+          "1009": {
+            "raw_leaf_full_witness": 81,
+            "raw_leaf_proper": 36,
+            "raw_leaf_through_D2": 81,
+            "rigid_star_macro_full_witness": 81,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 69
+          },
+          "1013": {
+            "raw_leaf_full_witness": 81,
+            "raw_leaf_proper": 36,
+            "raw_leaf_through_D2": 81,
+            "rigid_star_macro_full_witness": 81,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 69
+          },
+          "1019": {
+            "raw_leaf_full_witness": 81,
+            "raw_leaf_proper": 36,
+            "raw_leaf_through_D2": 81,
+            "rigid_star_macro_full_witness": 81,
+            "rigid_star_macro_proper": 12,
+            "rigid_star_macro_through_D2": 69
+          }
+        }
+      },
+      "equations": 80,
+      "qualification": "exact over Q for the displayed rational witness matrices; not the rank of an unprovided associated-graded deformation-to-H map",
+      "raw_leaf_coordinate_model": {
+        "D2_residual_incremental_Schur_rank": 44,
+        "D2_residual_unknowns_added": 171,
+        "exact_rank_proof": "Hermite/confluent Vandermonde minor at distinct rational witness centres; determinant is a nonzero product of centre differences and factorials",
+        "left_cokernel_after_nonproper": 0,
+        "left_cokernel_proper": 44,
+        "left_cokernel_through_D2": 0,
+        "nonproper_incremental_Schur_rank": 44,
+        "rank_after_nonproper_over_Q": 80,
+        "rank_proper_over_Q": 36,
+        "rank_through_D2_over_Q": 80,
+        "top_minor_incremental_Schur_rank": 0,
+        "unknowns_after_nonproper": 243,
+        "unknowns_proper": 36
+      },
+      "rigid_star_macro_model": {
+        "D2_residual_incremental_Schur_rank": 57,
+        "D2_residual_macro_unknowns_added": 57,
+        "exact_rank_proof": "ordinary Vandermonde minor at distinct rational witness centres",
+        "left_cokernel_after_nonproper": 0,
+        "left_cokernel_proper": 68,
+        "left_cokernel_through_D2": 11,
+        "nonproper_incremental_Schur_rank": 68,
+        "rank_after_nonproper_over_Q": 80,
+        "rank_proper_over_Q": 12,
+        "rank_through_D2_over_Q": 69,
+        "top_minor_incremental_Schur_rank": 11,
+        "top_minor_macro_unknowns_added": 12,
+        "unknowns_after_nonproper": 81,
+        "unknowns_proper": 12
+      },
+      "three_good_prime_checks": {
+        "1009": {
+          "raw_leaf_full_witness": 80,
+          "raw_leaf_proper": 36,
+          "raw_leaf_through_D2": 80,
+          "rigid_star_macro_full_witness": 80,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 69
+        },
+        "1013": {
+          "raw_leaf_full_witness": 80,
+          "raw_leaf_proper": 36,
+          "raw_leaf_through_D2": 80,
+          "rigid_star_macro_full_witness": 80,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 69
+        },
+        "1019": {
+          "raw_leaf_full_witness": 80,
+          "raw_leaf_proper": 36,
+          "raw_leaf_through_D2": 80,
+          "rigid_star_macro_full_witness": 80,
+          "rigid_star_macro_proper": 12,
+          "rigid_star_macro_through_D2": 69
+        }
+      }
+    },
+    "custody": {
+      "disc_orbit_cycles": 2,
+      "family": {
+        "A1": 2,
+        "A2": 6,
+        "D": 243,
+        "D2_to_D3_gap_z": 14,
+        "DEG_rows_with_monic": 81,
+        "K": 81,
+        "M": [
+          -162,
+          108,
+          241
+        ],
+        "N": "6",
+        "P": 27,
+        "V": {
+          "2": 1,
+          "3": 23
+        },
+        "aggregate_nonproper_roots": 207,
+        "bottom_to_D2_gap_z": 5,
+        "d": 2,
+        "delta": [
+          "-1",
+          "1/6",
+          "7/12"
+        ],
+        "derivative_valuations_t": {
+          "major_residual": "-3/2",
+          "proper": "-5/6",
+          "top_minor": "-137"
+        },
+        "disc_orbits": 2,
+        "e": 3,
+        "homogeneous_DEG_rows": 80,
+        "k": 12,
+        "m": 162,
+        "major_D2_roots": 207,
+        "major_residual_nonproper_roots": 171,
+        "minimal_display_uniformizer_R": 12,
+        "n": 243,
+        "nonproper_f_minus_a0_orders_t": {
+          "major_residual": "1/2",
+          "top_minor": "136"
+        },
+        "proper_bottom_roots": 36,
+        "q": "1/2",
+        "t": 3,
+        "top_minor_roots": 36,
+        "u": 69,
+        "v": 12,
+        "visible_proper_branch_orbits": 4,
+        "witness_completion_R": 1020,
+        "witness_contacts_t": {
+          "cross_D2_children": "1/6",
+          "cross_D2_top": "-1",
+          "proper_internal": "7/12",
+          "residual_internal": "57/340",
+          "top_internal": "2"
+        }
+      },
+      "full_globalinterp_decoration": false,
+      "missing_for_full_decoration": [
+        "nonproper rooted contact tree (NONPROPER-COUNT is only a count)",
+        "complete Galois permutation on all n root series",
+        "post-star and nonproper tame exponent supports",
+        "outer/inner coefficient identifications",
+        "actual Puiseux coefficients and sufficient inverse/integration guard"
+      ],
+      "proper_branch_orbits_visible_at_rigid_star": 4,
+      "proper_integration_constants_after_explicit_star_sharing": 2,
+      "proper_integration_constants_before_global_equations": 4,
+      "requested_two_constant_warning": "one constant per disc orbit is not the Galois rule: A1=2 fixes pi=0 and swaps pi=+/-1, so each six-disc orbit displays a 6-branch and a 12-branch orbit",
+      "star_sharing_status": "EXTRA IDENTIFICATION, not implied by Galois: equate the zero-root and nonzero-root constants inside each disc orbit",
+      "status": "ACCEPTED[PROPER-PACKET-CUSTODY-ONLY]"
+    },
+    "family": {
+      "A1": 2,
+      "A2": 6,
+      "D": 243,
+      "D2_to_D3_gap_z": 14,
+      "DEG_rows_with_monic": 81,
+      "K": 81,
+      "M": [
+        -162,
+        108,
+        241
+      ],
+      "N": "6",
+      "P": 27,
+      "V": {
+        "2": 1,
+        "3": 23
+      },
+      "aggregate_nonproper_roots": 207,
+      "bottom_to_D2_gap_z": 5,
+      "d": 2,
+      "delta": [
+        "-1",
+        "1/6",
+        "7/12"
+      ],
+      "derivative_valuations_t": {
+        "major_residual": "-3/2",
+        "proper": "-5/6",
+        "top_minor": "-137"
+      },
+      "disc_orbits": 2,
+      "e": 3,
+      "homogeneous_DEG_rows": 80,
+      "k": 12,
+      "m": 162,
+      "major_D2_roots": 207,
+      "major_residual_nonproper_roots": 171,
+      "minimal_display_uniformizer_R": 12,
+      "n": 243,
+      "nonproper_f_minus_a0_orders_t": {
+        "major_residual": "1/2",
+        "top_minor": "136"
+      },
+      "proper_bottom_roots": 36,
+      "q": "1/2",
+      "t": 3,
+      "top_minor_roots": 36,
+      "u": 69,
+      "v": 12,
+      "visible_proper_branch_orbits": 4,
+      "witness_completion_R": 1020,
+      "witness_contacts_t": {
+        "cross_D2_children": "1/6",
+        "cross_D2_top": "-1",
+        "proper_internal": "7/12",
+        "residual_internal": "57/340",
+        "top_internal": "2"
+      }
+    },
+    "first_bottom_separation": {
+      "complete_orbit_trace": {
+        "count": 13,
+        "criterion": "2r+8 = 0 mod 12",
+        "rows_with_nonzero_possible_at_that_raw_leading_order": [
+          2,
+          8,
+          14,
+          20,
+          26,
+          32,
+          38,
+          44,
+          50,
+          56,
+          62,
+          68,
+          74
+        ],
+        "warning": "other rows cancel at the displayed leading character; their first nonzero integer-t coefficient depends on unspecified tame support and sharing"
+      },
+      "junctions": {
+        "D2_to_D3_relative_z": 14,
+        "bottom_to_D2_relative_z": 5,
+        "status": "provenance labels only; the z^5 coefficient matrix cannot be emitted until outer unit coefficients and their sharing are supplied"
+      },
+      "local_star_trace": {
+        "consequence": "the first internal star correction is two bottom gaps later, not one",
+        "sum_p_f_over_p_g_prime": "1",
+        "sum_pi2_p_f_over_p_g_prime": "1/3",
+        "sum_pi_p_f_over_p_g_prime": "0"
+      },
+      "proper_derivation": {
+        "lambda_f_t": "-1/6",
+        "leading_order_formula_z": "12*(-1/6+r/6+5/6)=2r+8",
+        "ord_D_proper_t": "-5/6",
+        "ord_tau_proper_t": "1/6",
+        "row_first_raw_orders_z": {
+          "0": 8,
+          "1": 10,
+          "10": 28,
+          "11": 30,
+          "12": 32,
+          "13": 34,
+          "14": 36,
+          "15": 38,
+          "16": 40,
+          "17": 42,
+          "18": 44,
+          "19": 46,
+          "2": 12,
+          "20": 48,
+          "21": 50,
+          "22": 52,
+          "23": 54,
+          "24": 56,
+          "25": 58,
+          "26": 60,
+          "27": 62,
+          "28": 64,
+          "29": 66,
+          "3": 14,
+          "30": 68,
+          "31": 70,
+          "32": 72,
+          "33": 74,
+          "34": 76,
+          "35": 78,
+          "36": 80,
+          "37": 82,
+          "38": 84,
+          "39": 86,
+          "4": 16,
+          "40": 88,
+          "41": 90,
+          "42": 92,
+          "43": 94,
+          "44": 96,
+          "45": 98,
+          "46": 100,
+          "47": 102,
+          "48": 104,
+          "49": 106,
+          "5": 18,
+          "50": 108,
+          "51": 110,
+          "52": 112,
+          "53": 114,
+          "54": 116,
+          "55": 118,
+          "56": 120,
+          "57": 122,
+          "58": 124,
+          "59": 126,
+          "6": 20,
+          "60": 128,
+          "61": 130,
+          "62": 132,
+          "63": 134,
+          "64": 136,
+          "65": 138,
+          "66": 140,
+          "67": 142,
+          "68": 144,
+          "69": 146,
+          "7": 22,
+          "70": 148,
+          "71": 150,
+          "72": 152,
+          "73": 154,
+          "74": 156,
+          "75": 158,
+          "76": 160,
+          "77": 162,
+          "78": 164,
+          "79": 166,
+          "8": 24,
+          "9": 26
+        }
+      }
+    },
+    "full_quadratic_lift_scale_guard": {
+      "branch_power_variables_lower_bound": 38816019,
+      "excluded_from_bound": [
+        "derivative-product variables",
+        "inverse variables",
+        "time/integration variables",
+        "polynomial coefficient variables",
+        "evaluation equations and Python/SymPy expression overhead"
+      ],
+      "frozen_driver": "GLOBAL-INTERPOLATION/1.0 moh_total_degree quadratic lift",
+      "qmax_z": 5,
+      "status": "NOT-RUN: no full decorated input; scalable direct projection used"
+    },
+    "manifest": {
+      "disc_orbits": [
+        {
+          "expected_size": 6,
+          "generator": {
+            "O1_D1_0": "O1_D1_1",
+            "O1_D1_1": "O1_D1_2",
+            "O1_D1_2": "O1_D1_3",
+            "O1_D1_3": "O1_D1_4",
+            "O1_D1_4": "O1_D1_5",
+            "O1_D1_5": "O1_D1_0"
+          },
+          "kind": "nonzero-(10)",
+          "lower_data": {
+            "A1": 2,
+            "V2": 1,
+            "bottom_case": "(13)",
+            "bottom_star": {
+              "p_f": "pi^2-2/3",
+              "p_g": "pi^3-pi"
+            },
+            "delta1": "7/12"
+          },
+          "members": [
+            "O1_D1_0",
+            "O1_D1_1",
+            "O1_D1_2",
+            "O1_D1_3",
+            "O1_D1_4",
+            "O1_D1_5"
+          ],
+          "name": "O1",
+          "visible_branch_orbits": [
+            {
+              "integration_constant": "a_O1_zero",
+              "kind": "zero-star-root",
+              "length": 6,
+              "pi": "0"
+            },
+            {
+              "integration_constant": "a_O1_nonzero",
+              "kind": "nonzero-star-roots",
+              "length": 12,
+              "pi": "+/-1"
+            }
+          ]
+        },
+        {
+          "expected_size": 6,
+          "generator": {
+            "O2_D1_0": "O2_D1_1",
+            "O2_D1_1": "O2_D1_2",
+            "O2_D1_2": "O2_D1_3",
+            "O2_D1_3": "O2_D1_4",
+            "O2_D1_4": "O2_D1_5",
+            "O2_D1_5": "O2_D1_0"
+          },
+          "kind": "nonzero-(10)",
+          "lower_data": {
+            "A1": 2,
+            "V2": 1,
+            "bottom_case": "(13)",
+            "bottom_star": {
+              "p_f": "pi^2-2/3",
+              "p_g": "pi^3-pi"
+            },
+            "delta1": "7/12"
+          },
+          "members": [
+            "O2_D1_0",
+            "O2_D1_1",
+            "O2_D1_2",
+            "O2_D1_3",
+            "O2_D1_4",
+            "O2_D1_5"
+          ],
+          "name": "O2",
+          "visible_branch_orbits": [
+            {
+              "integration_constant": "a_O2_zero",
+              "kind": "zero-star-root",
+              "length": 6,
+              "pi": "0"
+            },
+            {
+              "integration_constant": "a_O2_nonzero",
+              "kind": "nonzero-star-roots",
+              "length": 12,
+              "pi": "+/-1"
+            }
+          ]
+        }
+      ],
+      "family_t": 3,
+      "k": 12,
+      "root_blocks": {
+        "major_D2_total": 207,
+        "major_residual_nonproper_roots": 171,
+        "proper_bottom_roots": 36,
+        "top_minor_roots": 36,
+        "total_nonproper_roots": 207
+      },
+      "schema": "A2SIX-DECORATION/1",
+      "tree": {
+        "D2_unique_major": {
+          "radius_t": "1/6",
+          "size": 207
+        },
+        "D3": {
+          "radius_t": "-1",
+          "size": 243
+        },
+        "nonproper_aggregate_is_not_a_tree": true,
+        "proper_D1_children": {
+          "count": 12,
+          "radius_t": "7/12",
+          "size_each": 3
+        }
+      },
+      "typing": "PROPER-PACKET EXACT; NONPROPER COMPLETION WITNESS-ONLY / UNREVIEWED",
+      "witness_only_extra_choices": {
+        "inner_sharing": "three branches share their D1 centre through z^6 and split at z^7; post-star tails are not supplied by the skeleton",
+        "major_residual_one_cluster_contact_t": "57/340",
+        "nonproper_galois_action": "UNSPECIFIED",
+        "outer_sharing": "all D2 descendants share ancestors below z^2; D2/D1 outer units first may change at relative z^5; D3/D2 outer units at relative z^14",
+        "precision_guard": "valuation-only parity projection, not a full quadratic lift",
+        "proper_disc_centres": "two formal cyclotomic 6-orbits (one for k=6)",
+        "proper_internal_roots": [
+          "0",
+          "+1",
+          "-1"
+        ],
+        "tame_support_and_sharing": "UNSPECIFIED beyond the displayed leading contacts",
+        "top_minor_one_cluster_contact_t": "2"
+      }
+    },
+    "tropical_sensitivity": {
+      "changed_choice": "residual internal contact 1/6+1/(6(Rres-1)) -> 1/6+3/(6(Rres-1)); derivative valuation -3/2 -> -7/6 remains < -1",
+      "conclusion": "tropical data depend on an input absent from the charged decoration",
+      "result": {
+        "contact_completion": {
+          "completion_uniformizer_R": 1020,
+          "residual_derivative_valuation_t": "-7/6",
+          "residual_f_minus_a0_order_t": "1/6",
+          "residual_internal_t": "173/1020",
+          "top_internal_t": "2"
+        },
+        "derivation": "val(det A_S)=-C_all+C(T); exact finite complement DP",
+        "matrix": "raw scaled-GRS homogeneous rows r=0,...,K-2",
+        "minimizers": [
+          {
+            "basis": {
+              "major_residual": 56,
+              "proper": 24,
+              "top_minor": 0
+            },
+            "complement": {
+              "major_residual": 115,
+              "proper": 12,
+              "top_minor": 36
+            },
+            "proper_complement_disc_occupancies_0_1_2_3": [
+              0,
+              12,
+              0,
+              0
+            ]
+          }
+        ],
+        "minimum_basis_weight_t": "10566/17",
+        "minimum_basis_weight_z": "633960",
+        "number_of_composition_minimizers": 1,
+        "number_of_labelled_minimum_bases": "3171207370764793851866341856908684396168549593613560",
+        "typing": "WITNESS-ONLY exact valuated-matroid computation"
+      },
+      "same_minimizers": true,
+      "same_weight": false
+    },
+    "tropical_witness": {
+      "contact_completion": {
+        "completion_uniformizer_R": 1020,
+        "residual_derivative_valuation_t": "-3/2",
+        "residual_f_minus_a0_order_t": "1/2",
+        "residual_internal_t": "57/340",
+        "top_internal_t": "2"
+      },
+      "derivation": "val(det A_S)=-C_all+C(T); exact finite complement DP",
+      "matrix": "raw scaled-GRS homogeneous rows r=0,...,K-2",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 56,
+            "proper": 24,
+            "top_minor": 0
+          },
+          "complement": {
+            "major_residual": 115,
+            "proper": 12,
+            "top_minor": 36
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            12,
+            0,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "10832/17",
+      "minimum_basis_weight_z": "649920",
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "3171207370764793851866341856908684396168549593613560",
+      "typing": "WITNESS-ONLY exact valuated-matroid computation"
+    },
+    "typing": "PROVED-HERE algebra / UNREVIEWED computation / WITNESS-ONLY completion",
+    "unknown_count_convention_repair": {
+      "convention": "Z_page includes leading/star variables",
+      "formula": "U_page=h_constants+|Z_page|",
+      "page_table_rule": "integration constants printed separately and excluded from parity columns",
+      "u0_added_again": false
+    },
+    "verdict": {
+      "caution": "the repair is not a theorem about a Keller realization because the map from actual tame/root coefficients to H-values is not supplied",
+      "family_intrinsic_associated_graded_matrix": "OPEN[NONPROPER-INTERFACE]",
+      "raw_proper_defect_behavior": "grows after t=0; repaired by witness nonproper Schur block",
+      "rigid_macro_defect_behavior": "21*t+5 for k=12 (21*t+11 for k=6); repaired exactly in witness"
+    }
+  }
+}

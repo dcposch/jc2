@@ -1,0 +1,135 @@
+{
+  "disc_orbits": [
+    {
+      "expected_size": 6,
+      "generator": {
+        "O1_D1_0": "O1_D1_1",
+        "O1_D1_1": "O1_D1_2",
+        "O1_D1_2": "O1_D1_3",
+        "O1_D1_3": "O1_D1_4",
+        "O1_D1_4": "O1_D1_5",
+        "O1_D1_5": "O1_D1_0"
+      },
+      "kind": "nonzero-(10)",
+      "lower_data": {
+        "A1": 2,
+        "V2": 1,
+        "bottom_case": "(13)",
+        "bottom_star": {
+          "p_f": "pi^2-2/3",
+          "p_g": "pi^3-pi"
+        },
+        "delta1": "7/12"
+      },
+      "members": [
+        "O1_D1_0",
+        "O1_D1_1",
+        "O1_D1_2",
+        "O1_D1_3",
+        "O1_D1_4"
+      ],
+      "name": "O1",
+      "visible_branch_orbits": [
+        {
+          "integration_constant": "a_O1_zero",
+          "kind": "zero-star-root",
+          "length": 6,
+          "pi": "0"
+        },
+        {
+          "integration_constant": "a_O1_nonzero",
+          "kind": "nonzero-star-roots",
+          "length": 12,
+          "pi": "+/-1"
+        }
+      ]
+    },
+    {
+      "expected_size": 6,
+      "generator": {
+        "O2_D1_0": "O2_D1_1",
+        "O2_D1_1": "O2_D1_2",
+        "O2_D1_2": "O2_D1_3",
+        "O2_D1_3": "O2_D1_4",
+        "O2_D1_4": "O2_D1_5",
+        "O2_D1_5": "O2_D1_0"
+      },
+      "kind": "nonzero-(10)",
+      "lower_data": {
+        "A1": 2,
+        "V2": 1,
+        "bottom_case": "(13)",
+        "bottom_star": {
+          "p_f": "pi^2-2/3",
+          "p_g": "pi^3-pi"
+        },
+        "delta1": "7/12"
+      },
+      "members": [
+        "O2_D1_0",
+        "O2_D1_1",
+        "O2_D1_2",
+        "O2_D1_3",
+        "O2_D1_4",
+        "O2_D1_5"
+      ],
+      "name": "O2",
+      "visible_branch_orbits": [
+        {
+          "integration_constant": "a_O2_zero",
+          "kind": "zero-star-root",
+          "length": 6,
+          "pi": "0"
+        },
+        {
+          "integration_constant": "a_O2_nonzero",
+          "kind": "nonzero-star-roots",
+          "length": 12,
+          "pi": "+/-1"
+        }
+      ]
+    }
+  ],
+  "family_t": 0,
+  "k": 12,
+  "root_blocks": {
+    "major_D2_total": 45,
+    "major_residual_nonproper_roots": 9,
+    "proper_bottom_roots": 36,
+    "top_minor_roots": 9,
+    "total_nonproper_roots": 18
+  },
+  "schema": "A2SIX-DECORATION/1",
+  "tree": {
+    "D2_unique_major": {
+      "radius_t": "1/6",
+      "size": 45
+    },
+    "D3": {
+      "radius_t": "-1",
+      "size": 54
+    },
+    "nonproper_aggregate_is_not_a_tree": true,
+    "proper_D1_children": {
+      "count": 12,
+      "radius_t": "7/12",
+      "size_each": 3
+    }
+  },
+  "typing": "PROPER-PACKET EXACT; NONPROPER COMPLETION WITNESS-ONLY / UNREVIEWED",
+  "witness_only_extra_choices": {
+    "inner_sharing": "three branches share their D1 centre through z^6 and split at z^7; post-star tails are not supplied by the skeleton",
+    "major_residual_one_cluster_contact_t": "3/16",
+    "nonproper_galois_action": "UNSPECIFIED",
+    "outer_sharing": "all D2 descendants share ancestors below z^2; D2/D1 outer units first may change at relative z^5; D3/D2 outer units at relative z^14",
+    "precision_guard": "valuation-only parity projection, not a full quadratic lift",
+    "proper_disc_centres": "two formal cyclotomic 6-orbits (one for k=6)",
+    "proper_internal_roots": [
+      "0",
+      "+1",
+      "-1"
+    ],
+    "tame_support_and_sharing": "UNSPECIFIED beyond the displayed leading contacts",
+    "top_minor_one_cluster_contact_t": "2"
+  }
+}
