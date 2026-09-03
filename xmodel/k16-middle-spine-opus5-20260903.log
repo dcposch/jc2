@@ -1,0 +1,25 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/k16-middle-spine-opus5-20260903.md` (body 22163 B, SHA-256 `a3ee8ca5…`, basis `3ab29f7a`).
+
+## What happened
+
+**Custody:** 20/20 input hashes `OK` via awk-generated manifest from the receipt.
+
+**Attack A is resolved — and it is a refutation.** Working in `Φ := Q·η^m = (Q/h^q)·(P/h^e)^{-q/e}`, with `Ū = A·h^{-(t+1)}` of η-order `4t+1`, so `Ū^k` sits at η-exponent `k(4t+1) ≡ k (mod 4)`:
+
+- Bridge conditions `[Ū¹]=[Ū²]=[Ū³]=0` are **exactly** the charged Jacobian rows `E1,E2,E3`.
+- `E4 = 4e·φ₄` identically in `x,y,t` — the charged obstruction row *is* the bridge's free 4-divisible slot, and `φ₄ = t·Ĥ_t/(24(2t+1)³)` vanishes mod `H_t` anyway.
+- The required anchor `[Ū⁵] ≠ 0` at exponent `20t+5 = M₂+m` **holds**: `Res_y(H_t, num φ₅) = 12t²(t+1)²(2t+1)⁴(3t+2)(4t+1) ≠ 0` for every `t ≥ 1`, including the split set `t = 3s²−1`.
+- No bridge equation exists below η-exponent `4t+1` at all, so no fixed-index family is even available.
+
+So the charged hope ("bridge equations are not chart bands, so they may do what no fixed band collection can") is false on the graded face.
+
+**Positive by-product, promoted.** The same analysis recovers Moh's own p.209 construction and makes it all-`t`: `P = [Σ_{k=0}^{e} a_k Q^{(e−k)/q}]_{h ≥ 0}` with `a_k ∈ k`, gauges killing `a_t, a_{e−1}, a_e` (= the three charged gauges). Chart drops from `9t+9` to **`6t+5`** unknowns — at `t=1` exactly Moh's count of 10. Measured: `[1]` at `t=1` (0.03 s) and `t=2` (2.04 s, vs the charged chart's 37.33 s). Both wrapper controls pass; a containment control confirms every `α_i` lands in the charged `S_i`.
+
+**Source correction:** Moh's displayed p.209 formula omits `(2/3)a₂β₂` (he writes `a₂h²` where the truncation of `a₂f^{2/3}` is `a₂(h² + (2/3)β₂)`). Count unchanged; the family differs.
+
+**Attack C:** all Moh p.150/p.152 screens computed symbolically in `t` — `μ₂ = 1−24t²`, `θ₂ = −12t(2t+1)`, `deg_y T₂ = 24t²−1`, `E = n−1 = M₂+2` — all integral and satisfied uniformly; no obstruction. Xu Cor 5.3 assumes `J = 1`, so it is typed not-applicable to the `J = cγ` descended pair rather than used.
+
+**Verdict: (T) not proved for all `t`.** `t=1,2` re-proved on a smaller independent chart. Left open and typed: `OPEN[BRIDGE-SUBLEADING]` (12t−3 exponents), `OPEN[TAIL-INDUCTION]` (the new `J(Q,P) = −J(Q,S_{<0})` reformulation, derived not measured), `OPEN[RAY-GENUS]`. `t=3` was launched and did not finish inside the bound — no row is claimed for it, and the bottleneck (sympy `expand` in the binomial series, not Gröbner) is named.
+DIVERT path=xmodel/k16-middle-spine-opus5-20260903.md status=DIVERTED body_bytes=22163 body_sha256=a3ee8ca558fa04b3fd23851d609280dc04eaa35c9013e53e45dce5163a900c42 overflow=xmodel/k16-middle-spine-opus5-20260903.overflow overflow_bytes=333 raw=xmodel/k16-middle-spine-opus5-20260903.raw.md raw_sha256=1413e32d605f3b667fbe35c92ea84213830a972d6f86647f4d602d8e5f430411 overflow_sha256=b1451a8f98ad27755caed2bcf64bcc260a1c94c7a22b398909b099c31deb4aa1
+post-BODY-END overflow diverted; charged body preserved

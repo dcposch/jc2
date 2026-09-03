@@ -20953,3 +20953,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T18:55Z EVENT — `g9966-hurwitz-fable5` sealed (17KB): the fibre Riemann–Hurwitz identity is tree-DETERMINED (≡ plane-curve genus formula) — no kill; g_c = 7 on both (99,66) branches; N = IM = 16 proved. → AUDIT delta 17(mmm). Lanes live: 7.
 
 ## 2026-09-03T19:03Z EVENT — `g9966-review-gate-grok46` sealed (14KB): facts (1), (2) CONFIRMED; (3) confirmed as the (4.3)/Thm 3.4 identity, with a labelling GAP (not Thm 4.7(i)); the decider's ansatz is NOT a slice; N5 (den(δ) ≤ u_s) is SOURCE-ASSERTED — a one-page derivation queued. → AUDIT delta 17(nnn) PROMOTED. Lanes live: 6.
+
+## 2026-09-03T19:05Z EVENT — `k16-middle-spine-opus5` sealed (22KB): BRIDGE NORMAL FORM proved (P = [Σ a_k Q^{(e−k)/q}]_{h≥0}, scalar a_k; 6t + 5 unknowns = Moh's count at t = 1); kills t = 1, 2 in 0.03 s / 2 s; ERRATUM candidate for Moh p.209 ((2/3)a₂β₂); Attack A negative for uniformity; spine OPEN bounded by 6t + 5. → AUDIT delta 17(ooo). Launching `bridge-chart-gate-gpt55` (gate + t = 3..8 on the bridge chart). Lanes live: 7.

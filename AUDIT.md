@@ -17308,3 +17308,20 @@ completeness of the split-order list rests on Xu's unproved denominator bound; i
 split order with denominator > 3 existed it would be outside both branches — cheapest
 test: derive den(δ) ≤ u_s from the ramification of the principal place (u_s conjugate
 roots) — a one-page argument; queued.
+
+## INTEGRATION #17 DELTA (ooo) (2026-09-03T19:05Z, PROVED-HERE/UNREVIEWED + MEASURED, producer Opus): THE BRIDGE NORMAL FORM FOR THE K = 16 RAY — with η̃⁻⁴ = Q^{1/q} exactly, P = [Σ_{k=0}^{e} a_k Q^{(e−k)/q}]_{h-exponent ≥ 0}, a₀ = 1, with the a_k SCALARS by Lemma 2.1 in the reciprocal parameter (BNF); the three charged gauges are exactly a_t, a_e, a_{e−1}; the bridge chart has 6t + 5 unknowns (t = 1: 10 + c = Moh's p.209 count) and is a SUBSET of the charged Theorem-1.2 order chart (every α_i lands in S_i — control passed at t = 1, 2), hence still a necessary superset of the tuple locus; SATURATED-EMPTY on the bridge chart at t = 1 (12 vars / 24 gens, 0.03 s) and t = 2 (18 / 59, 2.04 s vs 37 s on the order chart); SOURCE CORRECTION: Moh's displayed p.209 formula differs from (BNF) at t = 1 by exactly (2/3)a₂β₂ (ERRATUM candidate); Attack A (the Laurent bridge as the missing uniform contradiction) CLOSED NEGATIVE — the bridge's content on the graded face is implied by the Jacobian; OPEN[T-UNIFORM-MIDDLE] stands, now bounded by 6t + 5
+
+`k16-middle-spine-opus5-20260903.md` (Opus, 22KB; box/k16spine-opus-20260903/ with
+bridge_chart.py, moh_p209_control.py; 20/20 hashes; Moh pp.149–152, 207–209). Also
+PROVED-HERE: the reciprocal exponent dictionary (charged as conditional in 17(mm), now
+proved); no bridge equation exists below η-exponent 4t + 1; the graded identification
+φ₁,₂,₃ ↔ E1–E3, E4 = 4e·φ₄, φ₄ = t·H_t/(24(2t+1)³), φ₅ a unit in A_t with Res_y(H_t, num φ₅) =
+12t²(t+1)²(2t+1)⁴(3t+2)(4t+1) (nonzero on the split set t = 3s² − 1 too). Attack B
+(induction in t): not delivered (§6: the J(Q,P) = −J(Q, S_{<0}) tail reformulation —
+OPEN[TAIL-INDUCTION], 8t + 2 tail coefficients). Attack C (structural screens incl. Xu on
+the descended pair): no obstruction; Xu declared not applicable on a source-hypothesis
+check. OPEN[BRIDGE-SUBLEADING] (12t − 3 exponents; test at t = 2 by expanding Φ to relative
+order 45). Moh source defects recorded: p.208 "c₅A + c₅B", the p.209 omission. Cheapest
+next (producer): bridge_chart.py at t = 5, 6 (now plausibly seconds) — the first genuinely
+new data points for the spine. Gate launched (bridge-chart-gate-gpt55: verify the BNF
+proof and the subset/superset logic, replay t = 1, 2, run t = 3..8).
