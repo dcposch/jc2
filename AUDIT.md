@@ -17610,3 +17610,15 @@ chain's HEAD: OPEN[B4-GLOBAL] (equivalently I_{t,+}|_{b₄=1} = (1) — the orig
 TOP-TAIL-UNIT). Consistent with 17(llll) and 17(ffff): every route through
 sub-charts, axes, free bases, generating functions and the Laurent bridge terminates at
 this one inhomogeneous statement; this is the packet's Q1 for round 20260904T0000Z.
+
+## INTEGRATION #17 DELTA (oooo) (2026-09-03T22:44Z, INSTRUMENT + COUNTING-BOUND, producer GPT-5.5): THE NATIVE PREPROCESSING PIPELINE IS BUILT AND VALIDATED (prep.sing: Q*-pivot detection/substitution inside Singular; prep.py streams the emitter TSV verbatim, no Python symbolic parsing; exact grading LP on the exponent-difference matrix; K16 t = 3: 13 pivots, residual 35 rows / 23 vars, positive grading, SATURATED-EMPTY in 0.17 s; t = 4: 16 pivots, 1.5 s; (33,22) [3] 0.04 s) — but on (25,15; 21; 2; 2) the NATIVE Q*-stage itself times out (row files 42 / 91 / 180 MB; only 13 / 6 / 3 constant pivots found before the cap; stuck residuals 498 / 510 / 514 rows written and replay-verified): the large rows are genuinely huge polynomial expressions, and the blocker has moved from Python parsing to native affine elimination on those expressions
+
+`preprocess-native-gpt55-20260903.md` (GPT-5.5; 12/12 hashes; box/preprocess-native-
+20260903/). READING (coordinator): the "corrected generic support" charts for the seven
+large two-point rows are two orders of magnitude bigger than the K = 16 order charts
+because they carry the full symbolic top face and every Theorem-1.2-allowed monomial;
+the K = 16 charts were tractable because the Theorem-1.2 ORDER bounds (not just support)
+and the target gauges cut them to 9t + 9 unknowns. The right next instrument for the
+large rows is therefore the ORDER chart (the k16 t_order_system generalised to a general
+two-point datum with symbolic top-face slopes), not more machine power; recorded as the
+packet's instrument item. Two-point tally unchanged (7 dead / 10 open).

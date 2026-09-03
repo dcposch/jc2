@@ -1,0 +1,510 @@
+// Native preprocessing helpers for prep.py.
+//
+// The caller must declare the working ring and the row ideal.  These routines
+// only invert rational constants during the Q-pivot phase.  Parameter-dependent
+// pivots are rejected by construction.
+
+proc pn_onehot(int vi)
+{
+  intvec W;
+  int j;
+  for (j = 1; j <= nvars(basering); j++)
+  {
+    W[j] = 0;
+  }
+  W[vi] = 1;
+  return(W);
+}
+
+proc pn_var_degree(poly f, int vi)
+{
+  if (f == 0)
+  {
+    return(-1);
+  }
+  intvec W = pn_onehot(vi);
+  return(deg(f, W));
+}
+
+proc pn_is_qstar_affine(poly f, int vi)
+{
+  list out;
+  if (f == 0 || pn_var_degree(f, vi) != 1)
+  {
+    out[1] = 0;
+    return(out);
+  }
+  poly v = var(vi);
+  poly coeff = diff(f, v);
+  if (coeff == 0 || deg(coeff) > 0)
+  {
+    out[1] = 0;
+    return(out);
+  }
+  poly rem = f - coeff * v;
+  if (pn_var_degree(rem, vi) > 0)
+  {
+    out[1] = 0;
+    return(out);
+  }
+  poly rhs = -rem / coeff;
+  if (pn_var_degree(rhs, vi) > 0)
+  {
+    out[1] = 0;
+    return(out);
+  }
+  out[1] = 1;
+  out[2] = coeff;
+  out[3] = rem;
+  out[4] = rhs;
+  return(out);
+}
+
+proc pn_pick_qpivot(ideal I, intvec alive, intvec src, intvec hpow, intvec xpow, intvec ypow, int cidx)
+{
+  int best_i = 0;
+  int best_v = 0;
+  int best_h = -2147483647;
+  int best_x = 2147483647;
+  int best_y = 2147483647;
+  int best_src = 2147483647;
+  poly best_coeff = 0;
+  poly best_rhs = 0;
+  int i;
+  int v;
+  int j;
+  int present;
+  ideal rowvars;
+  list aff;
+  for (i = 1; i <= size(I); i++)
+  {
+    if (I[i] != 0)
+    {
+      rowvars = variables(I[i]);
+      for (v = 1; v <= nvars(basering); v++)
+      {
+        if (alive[v] != 0 && v != cidx)
+        {
+          present = 0;
+          for (j = 1; j <= size(rowvars); j++)
+          {
+            if (rowvars[j] == var(v))
+            {
+              present = 1;
+              break;
+            }
+          }
+          if (present)
+          {
+            aff = pn_is_qstar_affine(I[i], v);
+            if (aff[1] != 0)
+            {
+              if (
+                hpow[i] > best_h ||
+                (hpow[i] == best_h && xpow[i] < best_x) ||
+                (hpow[i] == best_h && xpow[i] == best_x && ypow[i] < best_y) ||
+                (hpow[i] == best_h && xpow[i] == best_x && ypow[i] == best_y && src[i] < best_src)
+              )
+              {
+                best_i = i;
+                best_v = v;
+                best_h = hpow[i];
+                best_x = xpow[i];
+                best_y = ypow[i];
+                best_src = src[i];
+                best_coeff = aff[2];
+                best_rhs = aff[4];
+              }
+              break;
+            }
+          }
+        }
+      }
+    }
+  }
+  list out = best_i, best_v, best_coeff, best_rhs;
+  return(out);
+}
+
+proc pn_write_alive_vars(intvec alive, string path)
+{
+  write(":w " + path, "index_1based|name");
+  int v;
+  for (v = 1; v <= nvars(basering); v++)
+  {
+    if (alive[v] != 0)
+    {
+      write(":a " + path, string(v) + "|" + string(var(v)));
+    }
+  }
+}
+
+proc pn_write_residual(ideal I, intvec src, intvec hpow, intvec xpow, intvec ypow, string path)
+{
+  write(":w " + path, "source_index|h_power|x_power|y_power|expr");
+  int i;
+  for (i = 1; i <= size(I); i++)
+  {
+    if (I[i] != 0)
+    {
+      write(
+        ":a " + path,
+        string(src[i]) + "|" + string(hpow[i]) + "|" + string(xpow[i]) + "|" +
+        string(ypow[i]) + "|" + string(I[i])
+      );
+    }
+  }
+}
+
+proc pn_qpivot_reduce(ideal I, intvec src, intvec hpow, intvec xpow, intvec ypow, int cidx, int max_pivots, string prefix)
+{
+  intvec alive;
+  int v;
+  for (v = 1; v <= nvars(basering); v++)
+  {
+    alive[v] = 1;
+  }
+  if (cidx > 0)
+  {
+    alive[cidx] = 1;
+  }
+
+  string pivot_path = prefix + "_pivots.tsv";
+  string residual_path = prefix + "_residual.tsv";
+  string vars_path = prefix + "_variables.tsv";
+  string audit_path = prefix + "_qstage.txt";
+  write(":w " + pivot_path, "step|source_index|h_power|x_power|y_power|variable|coefficient_Qstar|rhs");
+
+  int step = 0;
+  int i;
+  list choice;
+  int best_i;
+  int best_v;
+  poly coeff;
+  poly rhs;
+  poly killed;
+  while (step < max_pivots)
+  {
+    choice = pn_pick_qpivot(I, alive, src, hpow, xpow, ypow, cidx);
+    best_i = choice[1];
+    best_v = choice[2];
+    if (best_i == 0)
+    {
+      break;
+    }
+    coeff = choice[3];
+    rhs = choice[4];
+    killed = subst(I[best_i], var(best_v), rhs);
+    if (killed != 0)
+    {
+      write(":a " + audit_path, "PIVOT_SUBSTITUTION_FAIL step=" + string(step + 1));
+      ERROR("Q-pivot substitution did not kill the pivot row");
+    }
+    step++;
+    write(
+      ":a " + pivot_path,
+      string(step) + "|" + string(src[best_i]) + "|" + string(hpow[best_i]) + "|" +
+      string(xpow[best_i]) + "|" + string(ypow[best_i]) + "|" + string(var(best_v)) +
+      "|" + string(coeff) + "|" + string(rhs)
+    );
+    I[best_i] = 0;
+    alive[best_v] = 0;
+    for (i = 1; i <= size(I); i++)
+    {
+      if (I[i] != 0 && pn_var_degree(I[i], best_v) > 0)
+      {
+        I[i] = subst(I[i], var(best_v), rhs);
+      }
+    }
+    print("PN_QPIVOT step=" + string(step) + " variable=" + string(var(best_v)));
+  }
+
+  int residual_count = 0;
+  int alive_count = 0;
+  for (i = 1; i <= size(I); i++)
+  {
+    if (I[i] != 0)
+    {
+      residual_count++;
+    }
+  }
+  for (v = 1; v <= nvars(basering); v++)
+  {
+    if (alive[v] != 0)
+    {
+      alive_count++;
+    }
+  }
+  pn_write_residual(I, src, hpow, xpow, ypow, residual_path);
+  pn_write_alive_vars(alive, vars_path);
+  write(":w " + audit_path, "pivot_count=" + string(step));
+  write(":a " + audit_path, "residual_rows=" + string(residual_count));
+  write(":a " + audit_path, "remaining_variables=" + string(alive_count));
+  print("PN_QDONE pivots=" + string(step) + " residual_rows=" + string(residual_count) + " remaining_vars=" + string(alive_count));
+  list out = I, alive, step, residual_count, alive_count;
+  return(out);
+}
+
+proc pn_term_weight_bounds(poly f, intvec W)
+{
+  int first = 1;
+  int mn = 0;
+  int mx = 0;
+  poly p = f;
+  poly lt;
+  int d;
+  while (p != 0)
+  {
+    lt = lead(p);
+    d = deg(lt, W);
+    if (first)
+    {
+      mn = d;
+      mx = d;
+      first = 0;
+    }
+    else
+    {
+      if (d < mn) { mn = d; }
+      if (d > mx) { mx = d; }
+    }
+    p = p - lt;
+  }
+  list out = mn, mx;
+  return(out);
+}
+
+proc pn_export_exponent_diffs(ideal I, string path)
+{
+  int n = nvars(basering);
+  string header = "row_index|term_index";
+  int v;
+  for (v = 1; v <= n; v++)
+  {
+    header = header + "|" + string(var(v));
+  }
+  write(":w " + path, header);
+
+  list unit_weights;
+  for (v = 1; v <= n; v++)
+  {
+    unit_weights[v] = pn_onehot(v);
+  }
+
+  int i;
+  int k;
+  int terms = 0;
+  int constraints = 0;
+  int term_index;
+  intvec base_exp;
+  poly p;
+  poly lt;
+  string line;
+  for (i = 1; i <= size(I); i++)
+  {
+    if (I[i] != 0)
+    {
+      p = I[i];
+      lt = lead(p);
+      for (v = 1; v <= n; v++)
+      {
+        base_exp[v] = deg(lt, unit_weights[v]);
+      }
+      p = p - lt;
+      terms++;
+      term_index = 1;
+      while (p != 0)
+      {
+        lt = lead(p);
+        line = string(i - 1) + "|" + string(term_index);
+        for (v = 1; v <= n; v++)
+        {
+          line = line + "|" + string(deg(lt, unit_weights[v]) - base_exp[v]);
+        }
+        write(":a " + path, line);
+        constraints++;
+        terms++;
+        p = p - lt;
+        term_index++;
+      }
+    }
+  }
+  print("PN_EXPONENTS constraints=" + string(constraints) + " terms=" + string(terms));
+  list out = constraints, terms;
+  return(out);
+}
+
+proc pn_weight_report(ideal I, intvec src, intvec hpow, intvec xpow, intvec ypow, intvec W, string path)
+{
+  write(":w " + path, "source_index|h_power|x_power|y_power|min_weight|max_weight|homogeneous");
+  int i;
+  int bad = 0;
+  int rows = 0;
+  list b;
+  for (i = 1; i <= size(I); i++)
+  {
+    if (I[i] != 0)
+    {
+      rows++;
+      b = pn_term_weight_bounds(I[i], W);
+      if (b[1] != b[2])
+      {
+        bad++;
+      }
+      write(
+        ":a " + path,
+        string(src[i]) + "|" + string(hpow[i]) + "|" + string(xpow[i]) + "|" +
+        string(ypow[i]) + "|" + string(b[1]) + "|" + string(b[2]) + "|" +
+        string(b[1] == b[2])
+      );
+    }
+  }
+  print("PN_WEIGHT rows=" + string(rows) + " nonhomogeneous=" + string(bad));
+  list out = rows, bad;
+  return(out);
+}
+
+proc pn_find_c_affine(ideal I, int cidx)
+{
+  int best_i = 0;
+  int best_len = 2147483647;
+  poly best_rhs = 0;
+  list aff;
+  int i;
+  int sz;
+  for (i = 1; i <= size(I); i++)
+  {
+    if (I[i] != 0)
+    {
+      aff = pn_is_qstar_affine(I[i], cidx);
+      if (aff[1] != 0)
+      {
+        sz = size(string(aff[4]));
+        if (sz < best_len)
+        {
+          best_i = i;
+          best_len = sz;
+          best_rhs = aff[4];
+        }
+      }
+    }
+  }
+  list out = best_i, best_rhs;
+  return(out);
+}
+
+proc pn_factor_symbol_candidates(poly f, intvec alive, intvec W, string path)
+{
+  write(":w " + path, "variable_index|variable|weight|factor_exponent");
+  list F = factorize(f);
+  ideal factors = F[1];
+  intvec exps = F[2];
+  int i;
+  int v;
+  int hits = 0;
+  for (i = 1; i <= size(factors); i++)
+  {
+    for (v = 1; v <= nvars(basering); v++)
+    {
+      if (alive[v] != 0 && factors[i] == var(v))
+      {
+        write(":a " + path, string(v) + "|" + string(var(v)) + "|" + string(W[v]) + "|" + string(exps[i]));
+        hits++;
+      }
+    }
+  }
+  print("PN_CFACTORS symbol_hits=" + string(hits));
+  return(hits);
+}
+
+proc pn_slice_and_scan_base(ideal I, intvec alive, intvec src, intvec hpow, intvec xpow, intvec ypow, int cidx, int normidx, intvec W, string prefix)
+{
+  string c_path = prefix + "_c_equation.txt";
+  string factor_path = prefix + "_c_factors.tsv";
+  string slice_path = prefix + "_slice.tsv";
+  string vars_path = prefix + "_slice_variables.tsv";
+  string base_path = prefix + "_base_candidates.tsv";
+  list cmatch = pn_find_c_affine(I, cidx);
+  int c_row = cmatch[1];
+  poly c_rhs = cmatch[2];
+  if (c_row == 0)
+  {
+    write(":w " + c_path, "status=NO_C_AFFINE_ROW");
+    print("PN_SLICE status=NO_C_AFFINE_ROW");
+    list no = I, alive, 0;
+    return(no);
+  }
+  write(":w " + c_path, "status=C_AFFINE_ROW");
+  write(":a " + c_path, "source_index=" + string(src[c_row]));
+  write(":a " + c_path, "rhs=" + string(c_rhs));
+  pn_factor_symbol_candidates(c_rhs, alive, W, factor_path);
+  if (normidx <= 0)
+  {
+    print("PN_SLICE status=NO_NORMALIZER_REQUESTED");
+    list out0 = I, alive, 0;
+    return(out0);
+  }
+  poly c_image = subst(c_rhs, var(normidx), 1);
+  int i;
+  for (i = 1; i <= size(I); i++)
+  {
+    if (I[i] != 0)
+    {
+      if (i == c_row)
+      {
+        I[i] = 0;
+      }
+      else
+      {
+        if (pn_var_degree(I[i], normidx) > 0)
+        {
+          I[i] = subst(I[i], var(normidx), 1);
+        }
+        if (pn_var_degree(I[i], cidx) > 0)
+        {
+          I[i] = subst(I[i], var(cidx), c_image);
+        }
+      }
+    }
+  }
+  alive[normidx] = 0;
+  alive[cidx] = 0;
+  pn_write_residual(I, src, hpow, xpow, ypow, slice_path);
+  pn_write_alive_vars(alive, vars_path);
+  write(":w " + base_path, "source_index|variable_index|variable|degree|expr");
+  int j;
+  int ok;
+  int degj;
+  for (i = 1; i <= size(I); i++)
+  {
+    if (I[i] != 0)
+    {
+      for (j = 1; j <= nvars(basering); j++)
+      {
+        if (alive[j] != 0)
+        {
+          degj = pn_var_degree(I[i], j);
+          if (degj > 0)
+          {
+            ok = 1;
+            for (v = 1; v <= nvars(basering); v++)
+            {
+              if (alive[v] != 0 && v != j && pn_var_degree(I[i], v) > 0)
+              {
+                ok = 0;
+                break;
+              }
+            }
+            if (ok)
+            {
+              write(":a " + base_path, string(src[i]) + "|" + string(j) + "|" + string(var(j)) + "|" + string(degj) + "|" + string(I[i]));
+            }
+          }
+        }
+      }
+    }
+  }
+  print("PN_SLICE status=SLICED norm=" + string(var(normidx)) + " c_row=" + string(src[c_row)));
+  list out = I, alive, 1;
+  return(out);
+}
