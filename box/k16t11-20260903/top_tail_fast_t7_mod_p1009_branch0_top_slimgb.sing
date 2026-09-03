@@ -1,0 +1,202 @@
+// b4=1 tau-free Laurent/Euler recurrence; RR=-E
+// t=7 mode=mod branch=0
+ring R=1009,(L,b2,b3,C1,C2,C3,C4,C5,C6,q2_0,q3_0,q4_0,q5_0,q6_0,q7_0,q8_0,q9_0,q10_0,q11_0,q12_0,q13_0,q14_0),dp;
+number yy=400;
+number d=2*15*yy-8;
+option(redSB);
+proc Lcoef(poly f, int k)
+{
+  matrix M=coef(f,L); int ii;
+  for (ii=1; ii<=ncols(M); ii++)
+  { if (M[1,ii]==L^k) { return(M[2,ii]); } }
+  return(0);
+}
+proc eulerInverse(poly f)
+{
+  matrix M=coef(f,L); poly a=0; int ii; int mm;
+  for (ii=1; ii<=ncols(M); ii++)
+  { mm=deg(M[1,ii]); a=a+M[2,ii]*M[1,ii]/((2*mm+1)*yy); }
+  return(a);
+}
+number g3=(154/225)*yy-(1232/20250);
+if (3*d^2-8!=0) { print("FAIL d relation"); quit; }
+poly U=(L+1)^15+q2_0*(L+1)^13+q3_0*(L+1)^12+q4_0*(L+1)^11+q5_0*(L+1)^10+q6_0*(L+1)^9+q7_0*(L+1)^8+q8_0*(L+1)^7+q9_0*(L+1)^6+q10_0*(L+1)^5+q11_0*(L+1)^4+q12_0*(L+1)^3+q13_0*(L+1)^2+q14_0*(L+1)^1;
+poly C=(L+1)^6+C1*(L+1)^5+C2*(L+1)^4+C3*(L+1)^3+C4*(L+1)^2+C5*(L+1)^1+C6*(L+1)^0;
+poly A=L*C;
+poly Bprime=g3*(5*C+3*L*diff(C,L))/(2*yy);
+matrix MB=coef(Bprime,L); poly B=0; int ii; int mm;
+for (ii=1; ii<=ncols(MB); ii++)
+{ mm=deg(MB[1,ii]); B=B+MB[2,ii]*L*MB[1,ii]/(mm+1); }
+if (diff(B,L)-Bprime!=0) { print("FAIL B recurrence"); quit; }
+poly rhsS=3*g3*diff(U,L)+A*B-L*A*diff(B,L)+2*L*diff(A,L)*B
+          +g3*b3*(C+(5/2)*diff(A,L));
+poly S=eulerInverse(rhsS);
+if (yy*(S+2*L*diff(S,L))-rhsS!=0) { print("FAIL S recurrence"); quit; }
+poly V=L*A-yy*b3;
+poly Y=L*S-b3*B-g3*b2;
+poly Z=L*B-g3*b3;
+poly NN=-V*diff(Y,L)+diff(V,L)*Y+2*diff(U,L)*Z;
+poly N0=subst(NN,L,0);
+poly Pprime=(NN-N0)/(2*yy*L);
+if (2*yy*L*Pprime-NN+N0!=0) { print("FAIL Pprime division"); quit; }
+poly RR=V*Pprime-diff(U,L)*Y-yy*g3;
+poly W1=Lcoef(RR,28);
+poly p1=diff(W1,C1);
+poly ep1=375067*d/73002 - 73304/109503;
+if (p1-ep1!=0) { print("FAIL pivot coefficient 1"); quit; }
+if (p1==0) { print("FAIL zero pivot 1"); quit; }
+poly v1rhs=-subst(W1,C1,0)/p1;
+if (subst(W1,C1,v1rhs)!=0) { print("FAIL pivot 1"); quit; }
+RR=subst(RR,C1,v1rhs);
+poly W2=Lcoef(RR,27);
+poly p2=diff(W2,C2);
+poly ep2=605913*d/121670 - 60291/121670;
+if (p2-ep2!=0) { print("FAIL pivot coefficient 2"); quit; }
+if (p2==0) { print("FAIL zero pivot 2"); quit; }
+poly v2rhs=-subst(W2,C2,0)/p2;
+if (subst(W2,C2,v2rhs)!=0) { print("FAIL pivot 2"); quit; }
+RR=subst(RR,C2,v2rhs);
+poly W3=Lcoef(RR,26);
+poly p3=diff(W3,C3);
+poly ep3=1351119*d/279841 - 179949/559682;
+if (p3-ep3!=0) { print("FAIL pivot coefficient 3"); quit; }
+if (p3==0) { print("FAIL zero pivot 3"); quit; }
+poly v3rhs=-subst(W3,C3,0)/p3;
+if (subst(W3,C3,v3rhs)!=0) { print("FAIL pivot 3"); quit; }
+RR=subst(RR,C3,v3rhs);
+poly W4=Lcoef(RR,25);
+poly p4=diff(W4,C4);
+poly ep4=56991*d/12167 - 1793/12167;
+if (p4-ep4!=0) { print("FAIL pivot coefficient 4"); quit; }
+if (p4==0) { print("FAIL zero pivot 4"); quit; }
+poly v4rhs=-subst(W4,C4,0)/p4;
+if (subst(W4,C4,v4rhs)!=0) { print("FAIL pivot 4"); quit; }
+RR=subst(RR,C4,v4rhs);
+poly W5=Lcoef(RR,24);
+poly p5=diff(W5,C5);
+poly ep5=2103717*d/462346 + 6237/231173;
+if (p5-ep5!=0) { print("FAIL pivot coefficient 5"); quit; }
+if (p5==0) { print("FAIL zero pivot 5"); quit; }
+poly v5rhs=-subst(W5,C5,0)/p5;
+if (subst(W5,C5,v5rhs)!=0) { print("FAIL pivot 5"); quit; }
+RR=subst(RR,C5,v5rhs);
+poly W6=Lcoef(RR,23);
+poly p6=diff(W6,C6);
+poly ep6=1832523*d/413678 + 83391/413678;
+if (p6-ep6!=0) { print("FAIL pivot coefficient 6"); quit; }
+if (p6==0) { print("FAIL zero pivot 6"); quit; }
+poly v6rhs=-subst(W6,C6,0)/p6;
+if (subst(W6,C6,v6rhs)!=0) { print("FAIL pivot 6"); quit; }
+RR=subst(RR,C6,v6rhs);
+poly W7=Lcoef(RR,22);
+poly p7=diff(W7,q7_0);
+poly ep7=-154*d/75;
+if (p7-ep7!=0) { print("FAIL pivot coefficient 7"); quit; }
+if (p7==0) { print("FAIL zero pivot 7"); quit; }
+poly v7rhs=-subst(W7,q7_0,0)/p7;
+if (subst(W7,q7_0,v7rhs)!=0) { print("FAIL pivot 7"); quit; }
+RR=subst(RR,q7_0,v7rhs);
+poly W8=Lcoef(RR,21);
+poly p8=diff(W8,q8_0);
+poly ep8=-67914*d/34385 - 2156/34385;
+if (p8-ep8!=0) { print("FAIL pivot coefficient 8"); quit; }
+if (p8==0) { print("FAIL zero pivot 8"); quit; }
+poly v8rhs=-subst(W8,q8_0,0)/p8;
+if (subst(W8,q8_0,v8rhs)!=0) { print("FAIL pivot 8"); quit; }
+RR=subst(RR,q8_0,v8rhs);
+poly W9=Lcoef(RR,20);
+poly p9=diff(W9,q9_0);
+poly ep9=-10059*d/5290 - 336/2645;
+if (p9-ep9!=0) { print("FAIL pivot coefficient 9"); quit; }
+if (p9==0) { print("FAIL zero pivot 9"); quit; }
+poly v9rhs=-subst(W9,q9_0,0)/p9;
+if (subst(W9,q9_0,v9rhs)!=0) { print("FAIL pivot 9"); quit; }
+RR=subst(RR,q9_0,v9rhs);
+poly W10=Lcoef(RR,19);
+poly p10=diff(W10,q10_0);
+poly ep10=-17479*d/9522 - 308/1587;
+if (p10-ep10!=0) { print("FAIL pivot coefficient 10"); quit; }
+if (p10==0) { print("FAIL zero pivot 10"); quit; }
+poly v10rhs=-subst(W10,q10_0,0)/p10;
+if (subst(W10,q10_0,v10rhs)!=0) { print("FAIL pivot 10"); quit; }
+RR=subst(RR,q10_0,v10rhs);
+poly W11=Lcoef(RR,18);
+poly p11=diff(W11,q11_0);
+poly ep11=-4719*d/2645 - 704/2645;
+if (p11-ep11!=0) { print("FAIL pivot coefficient 11"); quit; }
+if (p11==0) { print("FAIL zero pivot 11"); quit; }
+poly v11rhs=-subst(W11,q11_0,0)/p11;
+if (subst(W11,q11_0,v11rhs)!=0) { print("FAIL pivot 11"); quit; }
+RR=subst(RR,q11_0,v11rhs);
+poly W12=Lcoef(RR,17);
+poly p12=diff(W12,q12_0);
+poly ep12=-23331*d/13225 - 924/2645;
+if (p12-ep12!=0) { print("FAIL pivot coefficient 12"); quit; }
+if (p12==0) { print("FAIL zero pivot 12"); quit; }
+poly v12rhs=-subst(W12,q12_0,0)/p12;
+if (subst(W12,q12_0,v12rhs)!=0) { print("FAIL pivot 12"); quit; }
+RR=subst(RR,q12_0,v12rhs);
+poly W13=Lcoef(RR,16);
+poly p13=diff(W13,q13_0);
+poly ep13=-29183*d/15870 - 1232/2645;
+if (p13-ep13!=0) { print("FAIL pivot coefficient 13"); quit; }
+if (p13==0) { print("FAIL zero pivot 13"); quit; }
+poly v13rhs=-subst(W13,q13_0,0)/p13;
+if (subst(W13,q13_0,v13rhs)!=0) { print("FAIL pivot 13"); quit; }
+RR=subst(RR,q13_0,v13rhs);
+poly W14=Lcoef(RR,15);
+poly p14=diff(W14,q14_0);
+poly ep14=-13629*d/5290 - 2156/2645;
+if (p14-ep14!=0) { print("FAIL pivot coefficient 14"); quit; }
+if (p14==0) { print("FAIL zero pivot 14"); quit; }
+poly v14rhs=-subst(W14,q14_0,0)/p14;
+if (subst(W14,q14_0,v14rhs)!=0) { print("FAIL pivot 14"); quit; }
+RR=subst(RR,q14_0,v14rhs);
+poly W15=Lcoef(RR,14);
+poly p15=diff(W15,b2);
+poly ep15=77*d/345 + 616/15525;
+if (p15-ep15!=0) { print("FAIL pivot coefficient 15"); quit; }
+if (p15==0) { print("FAIL zero pivot 15"); quit; }
+poly v15rhs=-subst(W15,b2,0)/p15;
+if (subst(W15,b2,v15rhs)!=0) { print("FAIL pivot 15"); quit; }
+RR=subst(RR,b2,v15rhs);
+if (Lcoef(RR,14)!=0) { print("FAIL high L band 14"); quit; }
+if (Lcoef(RR,15)!=0) { print("FAIL high L band 15"); quit; }
+if (Lcoef(RR,16)!=0) { print("FAIL high L band 16"); quit; }
+if (Lcoef(RR,17)!=0) { print("FAIL high L band 17"); quit; }
+if (Lcoef(RR,18)!=0) { print("FAIL high L band 18"); quit; }
+if (Lcoef(RR,19)!=0) { print("FAIL high L band 19"); quit; }
+if (Lcoef(RR,20)!=0) { print("FAIL high L band 20"); quit; }
+if (Lcoef(RR,21)!=0) { print("FAIL high L band 21"); quit; }
+if (Lcoef(RR,22)!=0) { print("FAIL high L band 22"); quit; }
+if (Lcoef(RR,23)!=0) { print("FAIL high L band 23"); quit; }
+if (Lcoef(RR,24)!=0) { print("FAIL high L band 24"); quit; }
+if (Lcoef(RR,25)!=0) { print("FAIL high L band 25"); quit; }
+if (Lcoef(RR,26)!=0) { print("FAIL high L band 26"); quit; }
+if (Lcoef(RR,27)!=0) { print("FAIL high L band 27"); quit; }
+if (Lcoef(RR,28)!=0) { print("FAIL high L band 28"); quit; }
+poly Rh=subst(RR,L,L-1);
+poly T7=Lcoef(Rh,7);
+print("TOP_ROW band=7"); deg(T7); size(T7);
+poly T8=Lcoef(Rh,8);
+print("TOP_ROW band=8"); deg(T8); size(T8);
+poly T9=Lcoef(Rh,9);
+print("TOP_ROW band=9"); deg(T9); size(T9);
+poly T10=Lcoef(Rh,10);
+print("TOP_ROW band=10"); deg(T10); size(T10);
+poly T11=Lcoef(Rh,11);
+print("TOP_ROW band=11"); deg(T11); size(T11);
+poly T12=Lcoef(Rh,12);
+print("TOP_ROW band=12"); deg(T12); size(T12);
+poly T13=Lcoef(Rh,13);
+print("TOP_ROW band=13"); deg(T13); size(T13);
+print("RECURRENCE_PASS t=7");
+ideal Itop=T7,T8,T9,T10,T11,T12,T13;
+ring CR=1009,(b3,q2_0,q3_0,q4_0,q5_0,q6_0),dp;
+ideal I=imap(R,Itop);
+option(redSB);
+ideal G=slimgb(I);
+if (reduce(1,G)==0) { print("TOP_TAIL_UNIT"); } else { print("TOP_TAIL_NONUNIT"); }
+print("TOP_BASIS_SIZE"); size(G);
+print("DRIVER_DONE");
+quit;

@@ -17519,3 +17519,11 @@ quotient criterion, not a free basis); §7 why the axis route cannot prove RESID
 b₄ = 1 top tail is not q-affine and RESIDUAL-ZERO is not the right target; the live route
 is Lemma CONE + the q-directions (Opus SUBCHART lane running) — a radical-containment
 statement on the cone, which is exactly what the axis results here fall short of.
+
+## INTEGRATION #17 DELTA (gggg) (2026-09-03T21:23Z, MEASURED-MODULAR / OPEN, producer GPT-5.5): THE TERMINAL STATEMENT (8.1) AT t = 7, 8, 11 — NO REFUTATION POINT anywhere; the proved coefficient-array recurrence regenerates the t = 2..6 records (10/10 PASS) and passes formula controls at t = 7, 8, 11 on both fibres incl. the split fibres d = ±2 at t = 11 (p = 1009: y = 439, 746 ↔ exact 7/23, 5/23); t = 7: the b₄ = 0 chart is [1] on three good primes (1009, 1031, 1033) and both fibres (3.5–5 s each), but the b₄ = 1 chart and the direct full ideal timed out at 300 s under seven variants → OPEN[MODULAR-T7]; t = 8: b₄ = 0 [1] on one prime (both fibres), the rest timed out → OPEN[MODULAR-T8]; t = 11: the full-b₄ constructions and the b₄ = 0 chart timed out at 300 s on both split fibres → OPEN[MODULAR-T11-SPLIT]; no exact runs launched
+
+`k16-t11-modular-gpt55-20260903.md` (GPT-5.5; 17/17 hashes; box/k16t11-20260903/ with
+good_prime_audit.json). READING: the 300-s caps were too tight for t ≥ 7 on the raw
+two-chart tests; the cheapest fixed-t certificate is now Opus's weighted-homogeneous
+std + dim of I_{t,+} (17(cccc)), which replaces the two-chart pair by one homogeneous
+computation — relaunch with that test and 30-min caps (lane k16-t11-cone-gpt55).
