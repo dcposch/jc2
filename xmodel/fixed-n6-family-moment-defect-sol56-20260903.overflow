@@ -1,0 +1,11 @@
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->`
+  line, including its terminating newline; this seal is outside the body.
+- Body bytes: `38424`.
+- Body SHA-256:
+  `4d6ce0d800f286a8df338e10a4c2459c1dde507a12eaeffe550dec1a585c8fa5`.
+- Frozen basis: the eight-file SHA-256 custody manifest in section 0.
+- Workspace HEAD observed at seal: `22b86373bee5b66fbade11eb8c343b74c553953f`;
+  it was not used in place of the frozen inputs.

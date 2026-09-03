@@ -1,0 +1,858 @@
+{
+  "13": {
+    "custody": {
+      "family": {
+        "A2": 48,
+        "K": 91,
+        "L": 13,
+        "N": "24",
+        "R": 48,
+        "degree_rows_with_monic": 91,
+        "delta1": "7/12",
+        "delta2": "19/48",
+        "delta3": "-1",
+        "first_bottom_gap_z": 9,
+        "k": 48,
+        "m": 182,
+        "major_residual": 51,
+        "major_total": 195,
+        "n": 273,
+        "nonproper": 129,
+        "proper": 144,
+        "q1_z": 28,
+        "q2_z": 19,
+        "q3_z": -48,
+        "top_minor": 78,
+        "vanishing_rows": 90
+      },
+      "full_globalinterp_decoration": false,
+      "missing_for_full_decoration": [
+        "explicit nonproper Puiseux coefficients",
+        "complete Galois permutation on all n leaves",
+        "tail support and coefficient sharing",
+        "precision guard"
+      ],
+      "orbit_cycle_length": 48,
+      "root_blocks": {
+        "major_D2_total": 195,
+        "major_residual_roots": 51,
+        "proper_bottom_roots": 144,
+        "top_minor_roots": 78,
+        "total_nonproper_roots": 129
+      },
+      "status": "ACCEPTED[PROPER-PACKET-CUSTODY-ONLY]"
+    },
+    "family": {
+      "A2": 48,
+      "K": 91,
+      "L": 13,
+      "N": "24",
+      "R": 48,
+      "degree_rows_with_monic": 91,
+      "delta1": "7/12",
+      "delta2": "19/48",
+      "delta3": "-1",
+      "first_bottom_gap_z": 9,
+      "k": 48,
+      "m": 182,
+      "major_residual": 51,
+      "major_total": 195,
+      "n": 273,
+      "nonproper": 129,
+      "proper": 144,
+      "q1_z": 28,
+      "q2_z": 19,
+      "q3_z": -48,
+      "top_minor": 78,
+      "vanishing_rows": 90
+    },
+    "frozen_globalinterp_scale_guard": {
+      "branch_power_variables_lower_bound": 123348966,
+      "derivation": "top_minor*(m-1)*(R*m+1)",
+      "qmax_assumption": "qmax >= 0",
+      "status": "REFUSED[RESOURCE-CAP] for the full quadratic lift; use the scalable parity projection"
+    },
+    "raw_leaf_coordinate_model": {
+      "cokernel": 0,
+      "equations": 90,
+      "explanation": "proper confluent Vandermonde already has full row rank",
+      "nonproper_incremental_Schur_rank": 0,
+      "pivot": {
+        "allocation_by_disc": {
+          "one_jet": 6,
+          "two_jets": 42,
+          "zero_jets": 0
+        },
+        "determinant_factorization": "prod_(i<j) (j-i)^(a_i*a_j)",
+        "determinant_mod_good_primes": {
+          "1009": 96,
+          "1013": 939,
+          "1019": 376
+        },
+        "determinant_nonzero_over_Q": true
+      },
+      "prime_ranks": {
+        "1009": {
+          "raw_proper_confluent": 90,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 90,
+          "rigid_star_collapsed_proper": 48
+        },
+        "1013": {
+          "raw_proper_confluent": 90,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 90,
+          "rigid_star_collapsed_proper": 48
+        },
+        "1019": {
+          "raw_proper_confluent": 90,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 90,
+          "rigid_star_collapsed_proper": 48
+        }
+      },
+      "rank_over_Q": 90,
+      "unknowns_proper": 144
+    },
+    "rigid_star_collapsed_surrogate": {
+      "active_nonproper_columns": 52,
+      "cokernel": 42,
+      "cokernel_with_those_columns": 0,
+      "equations": 90,
+      "nonproper_block_rank_over_Q": 52,
+      "nonproper_incremental_Schur_rank": 42,
+      "qualification": "one amplitude per rigid star, one channel per residual leaf split before delta1, and one unresolved top-minor aggregate",
+      "rank_over_Q": 48,
+      "rank_with_those_columns": 90,
+      "unknowns_proper": 48
+    },
+    "tropical_alternative_top_contact_5_2": {
+      "completion_bottom_orders_z": {
+        "delta1": "168",
+        "delta2": "114",
+        "gap": "54"
+      },
+      "completion_uniformizer_denominator": 288,
+      "derivation": "w(S)=-C_all+C(T); exact DP over the complement T",
+      "extra_nonproper_contacts": {
+        "major_residual_internal_t": "115/288",
+        "top_minor_internal_t": "5/2"
+      },
+      "matrix": "raw scaled GRS rows r=0..7L-2, columns all roots",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 0,
+            "proper": 64,
+            "top_minor": 26
+          },
+          "complement": {
+            "major_residual": 51,
+            "proper": 80,
+            "top_minor": 52
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            16,
+            32,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "407/6",
+      "minimum_basis_weight_z": "19536",
+      "nonproper_checks": {
+        "major_residual_derivative_valuation_t": "-149/144",
+        "major_residual_frontier_gt_1": true,
+        "top_minor_derivative_valuation_t": "-5/2",
+        "top_minor_frontier_gt_1": true
+      },
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "62615362472106329670566892783092827958106146909294774028"
+    },
+    "tropical_raw_GRS": {
+      "completion_bottom_orders_z": {
+        "delta1": "168",
+        "delta2": "114",
+        "gap": "54"
+      },
+      "completion_uniformizer_denominator": 288,
+      "derivation": "w(S)=-C_all+C(T); exact DP over the complement T",
+      "extra_nonproper_contacts": {
+        "major_residual_internal_t": "115/288",
+        "top_minor_internal_t": "2"
+      },
+      "matrix": "raw scaled GRS rows r=0..7L-2, columns all roots",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 0,
+            "proper": 70,
+            "top_minor": 20
+          },
+          "complement": {
+            "major_residual": 51,
+            "proper": 74,
+            "top_minor": 58
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            22,
+            26,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "39283/48",
+      "minimum_basis_weight_z": "235698",
+      "nonproper_checks": {
+        "major_residual_derivative_valuation_t": "-149/144",
+        "major_residual_frontier_gt_1": true,
+        "top_minor_derivative_valuation_t": "-41",
+        "top_minor_frontier_gt_1": true
+      },
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "4325714331261643733318758775495165867028638917406493120"
+    },
+    "typing": "WITNESS-ONLY / PROVED-HERE algebra / UNREVIEWED computation"
+  },
+  "21": {
+    "custody": {
+      "family": {
+        "A2": 78,
+        "K": 147,
+        "L": 21,
+        "N": "39",
+        "R": 156,
+        "degree_rows_with_monic": 147,
+        "delta1": "7/12",
+        "delta2": "31/78",
+        "delta3": "-1",
+        "first_bottom_gap_z": 29,
+        "k": 78,
+        "m": 294,
+        "major_residual": 81,
+        "major_total": 315,
+        "n": 441,
+        "nonproper": 207,
+        "proper": 234,
+        "q1_z": 91,
+        "q2_z": 62,
+        "q3_z": -156,
+        "top_minor": 126,
+        "vanishing_rows": 146
+      },
+      "full_globalinterp_decoration": false,
+      "missing_for_full_decoration": [
+        "explicit nonproper Puiseux coefficients",
+        "complete Galois permutation on all n leaves",
+        "tail support and coefficient sharing",
+        "precision guard"
+      ],
+      "orbit_cycle_length": 78,
+      "root_blocks": {
+        "major_D2_total": 315,
+        "major_residual_roots": 81,
+        "proper_bottom_roots": 234,
+        "top_minor_roots": 126,
+        "total_nonproper_roots": 207
+      },
+      "status": "ACCEPTED[PROPER-PACKET-CUSTODY-ONLY]"
+    },
+    "family": {
+      "A2": 78,
+      "K": 147,
+      "L": 21,
+      "N": "39",
+      "R": 156,
+      "degree_rows_with_monic": 147,
+      "delta1": "7/12",
+      "delta2": "31/78",
+      "delta3": "-1",
+      "first_bottom_gap_z": 29,
+      "k": 78,
+      "m": 294,
+      "major_residual": 81,
+      "major_total": 315,
+      "n": 441,
+      "nonproper": 207,
+      "proper": 234,
+      "q1_z": 91,
+      "q2_z": 62,
+      "q3_z": -156,
+      "top_minor": 126,
+      "vanishing_rows": 146
+    },
+    "frozen_globalinterp_scale_guard": {
+      "branch_power_variables_lower_bound": 1693244070,
+      "derivation": "top_minor*(m-1)*(R*m+1)",
+      "qmax_assumption": "qmax >= 0",
+      "status": "REFUSED[RESOURCE-CAP] for the full quadratic lift; use the scalable parity projection"
+    },
+    "raw_leaf_coordinate_model": {
+      "cokernel": 0,
+      "equations": 146,
+      "explanation": "proper confluent Vandermonde already has full row rank",
+      "nonproper_incremental_Schur_rank": 0,
+      "pivot": {
+        "allocation_by_disc": {
+          "one_jet": 10,
+          "two_jets": 68,
+          "zero_jets": 0
+        },
+        "determinant_factorization": "prod_(i<j) (j-i)^(a_i*a_j)",
+        "determinant_mod_good_primes": {
+          "1009": 820,
+          "1013": 349,
+          "1019": 864
+        },
+        "determinant_nonzero_over_Q": true
+      },
+      "prime_ranks": {
+        "1009": {
+          "raw_proper_confluent": 146,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 146,
+          "rigid_star_collapsed_proper": 78
+        },
+        "1013": {
+          "raw_proper_confluent": 146,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 146,
+          "rigid_star_collapsed_proper": 78
+        },
+        "1019": {
+          "raw_proper_confluent": 146,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 146,
+          "rigid_star_collapsed_proper": 78
+        }
+      },
+      "rank_over_Q": 146,
+      "unknowns_proper": 234
+    },
+    "rigid_star_collapsed_surrogate": {
+      "active_nonproper_columns": 82,
+      "cokernel": 68,
+      "cokernel_with_those_columns": 0,
+      "equations": 146,
+      "nonproper_block_rank_over_Q": 82,
+      "nonproper_incremental_Schur_rank": 68,
+      "qualification": "one amplitude per rigid star, one channel per residual leaf split before delta1, and one unresolved top-minor aggregate",
+      "rank_over_Q": 78,
+      "rank_with_those_columns": 146,
+      "unknowns_proper": 78
+    },
+    "tropical_alternative_top_contact_5_2": {
+      "completion_bottom_orders_z": {
+        "delta1": "273",
+        "delta2": "186",
+        "gap": "87"
+      },
+      "completion_uniformizer_denominator": 468,
+      "derivation": "w(S)=-C_all+C(T); exact DP over the complement T",
+      "extra_nonproper_contacts": {
+        "major_residual_internal_t": "187/468",
+        "top_minor_internal_t": "5/2"
+      },
+      "matrix": "raw scaled GRS rows r=0..7L-2, columns all roots",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 0,
+            "proper": 104,
+            "top_minor": 42
+          },
+          "complement": {
+            "major_residual": 81,
+            "proper": 130,
+            "top_minor": 84
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            26,
+            52,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "329/3",
+      "minimum_basis_weight_z": "51324",
+      "nonproper_checks": {
+        "major_residual_derivative_valuation_t": "-121/117",
+        "major_residual_frontier_gt_1": true,
+        "top_minor_derivative_valuation_t": "-5/2",
+        "top_minor_frontier_gt_1": true
+      },
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "29126299355190742522085289606143421966418425040001735933304337651238173280675588849484583500"
+    },
+    "tropical_raw_GRS": {
+      "completion_bottom_orders_z": {
+        "delta1": "273",
+        "delta2": "186",
+        "gap": "87"
+      },
+      "completion_uniformizer_denominator": 468,
+      "derivation": "w(S)=-C_all+C(T); exact DP over the complement T",
+      "extra_nonproper_contacts": {
+        "major_residual_internal_t": "187/468",
+        "top_minor_internal_t": "2"
+      },
+      "matrix": "raw scaled GRS rows r=0..7L-2, columns all roots",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 0,
+            "proper": 114,
+            "top_minor": 32
+          },
+          "complement": {
+            "major_residual": 81,
+            "proper": 120,
+            "top_minor": 94
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            36,
+            42,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "54225/26",
+      "minimum_basis_weight_z": "976050",
+      "nonproper_checks": {
+        "major_residual_derivative_valuation_t": "-121/117",
+        "major_residual_frontier_gt_1": true,
+        "top_minor_derivative_valuation_t": "-65",
+        "top_minor_frontier_gt_1": true
+      },
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "295021720906568061891103168187251286348530002089354264459569072319038357965301451251413750"
+    },
+    "typing": "WITNESS-ONLY / PROVED-HERE algebra / UNREVIEWED computation"
+  },
+  "29": {
+    "custody": {
+      "family": {
+        "A2": 108,
+        "K": 203,
+        "L": 29,
+        "N": "54",
+        "R": 108,
+        "degree_rows_with_monic": 203,
+        "delta1": "7/12",
+        "delta2": "43/108",
+        "delta3": "-1",
+        "first_bottom_gap_z": 20,
+        "k": 108,
+        "m": 406,
+        "major_residual": 111,
+        "major_total": 435,
+        "n": 609,
+        "nonproper": 285,
+        "proper": 324,
+        "q1_z": 63,
+        "q2_z": 43,
+        "q3_z": -108,
+        "top_minor": 174,
+        "vanishing_rows": 202
+      },
+      "full_globalinterp_decoration": false,
+      "missing_for_full_decoration": [
+        "explicit nonproper Puiseux coefficients",
+        "complete Galois permutation on all n leaves",
+        "tail support and coefficient sharing",
+        "precision guard"
+      ],
+      "orbit_cycle_length": 108,
+      "root_blocks": {
+        "major_D2_total": 435,
+        "major_residual_roots": 111,
+        "proper_bottom_roots": 324,
+        "top_minor_roots": 174,
+        "total_nonproper_roots": 285
+      },
+      "status": "ACCEPTED[PROPER-PACKET-CUSTODY-ONLY]"
+    },
+    "family": {
+      "A2": 108,
+      "K": 203,
+      "L": 29,
+      "N": "54",
+      "R": 108,
+      "degree_rows_with_monic": 203,
+      "delta1": "7/12",
+      "delta2": "43/108",
+      "delta3": "-1",
+      "first_bottom_gap_z": 20,
+      "k": 108,
+      "m": 406,
+      "major_residual": 111,
+      "major_total": 435,
+      "n": 609,
+      "nonproper": 285,
+      "proper": 324,
+      "q1_z": 63,
+      "q2_z": 43,
+      "q3_z": -108,
+      "top_minor": 174,
+      "vanishing_rows": 202
+    },
+    "frozen_globalinterp_scale_guard": {
+      "branch_power_variables_lower_bound": 3090039030,
+      "derivation": "top_minor*(m-1)*(R*m+1)",
+      "qmax_assumption": "qmax >= 0",
+      "status": "REFUSED[RESOURCE-CAP] for the full quadratic lift; use the scalable parity projection"
+    },
+    "raw_leaf_coordinate_model": {
+      "cokernel": 0,
+      "equations": 202,
+      "explanation": "proper confluent Vandermonde already has full row rank",
+      "nonproper_incremental_Schur_rank": 0,
+      "pivot": {
+        "allocation_by_disc": {
+          "one_jet": 14,
+          "two_jets": 94,
+          "zero_jets": 0
+        },
+        "determinant_factorization": "prod_(i<j) (j-i)^(a_i*a_j)",
+        "determinant_mod_good_primes": {
+          "1009": 740,
+          "1013": 936,
+          "1019": 11
+        },
+        "determinant_nonzero_over_Q": true
+      },
+      "prime_ranks": {
+        "1009": {
+          "raw_proper_confluent": 202,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 202,
+          "rigid_star_collapsed_proper": 108
+        },
+        "1013": {
+          "raw_proper_confluent": 202,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 202,
+          "rigid_star_collapsed_proper": 108
+        },
+        "1019": {
+          "raw_proper_confluent": 202,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 202,
+          "rigid_star_collapsed_proper": 108
+        }
+      },
+      "rank_over_Q": 202,
+      "unknowns_proper": 324
+    },
+    "rigid_star_collapsed_surrogate": {
+      "active_nonproper_columns": 112,
+      "cokernel": 94,
+      "cokernel_with_those_columns": 0,
+      "equations": 202,
+      "nonproper_block_rank_over_Q": 112,
+      "nonproper_incremental_Schur_rank": 94,
+      "qualification": "one amplitude per rigid star, one channel per residual leaf split before delta1, and one unresolved top-minor aggregate",
+      "rank_over_Q": 108,
+      "rank_with_those_columns": 202,
+      "unknowns_proper": 108
+    },
+    "tropical_alternative_top_contact_5_2": {
+      "completion_bottom_orders_z": {
+        "delta1": "378",
+        "delta2": "258",
+        "gap": "120"
+      },
+      "completion_uniformizer_denominator": 648,
+      "derivation": "w(S)=-C_all+C(T); exact DP over the complement T",
+      "extra_nonproper_contacts": {
+        "major_residual_internal_t": "259/648",
+        "top_minor_internal_t": "5/2"
+      },
+      "matrix": "raw scaled GRS rows r=0..7L-2, columns all roots",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 0,
+            "proper": 144,
+            "top_minor": 58
+          },
+          "complement": {
+            "major_residual": 111,
+            "proper": 180,
+            "top_minor": 116
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            36,
+            72,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "303/2",
+      "minimum_basis_weight_z": "98172",
+      "nonproper_checks": {
+        "major_residual_derivative_valuation_t": "-335/324",
+        "major_residual_frontier_gt_1": true,
+        "top_minor_derivative_valuation_t": "-5/2",
+        "top_minor_frontier_gt_1": true
+      },
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "15841470283316368889857413999319159063507276753926514265777315916878950361674500625441068940987165888991749139406029173676496600"
+    },
+    "tropical_raw_GRS": {
+      "completion_bottom_orders_z": {
+        "delta1": "378",
+        "delta2": "258",
+        "gap": "120"
+      },
+      "completion_uniformizer_denominator": 648,
+      "derivation": "w(S)=-C_all+C(T); exact DP over the complement T",
+      "extra_nonproper_contacts": {
+        "major_residual_internal_t": "259/648",
+        "top_minor_internal_t": "2"
+      },
+      "matrix": "raw scaled GRS rows r=0..7L-2, columns all roots",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 0,
+            "proper": 158,
+            "top_minor": 44
+          },
+          "complement": {
+            "major_residual": 111,
+            "proper": 166,
+            "top_minor": 130
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            50,
+            58,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "424997/108",
+      "minimum_basis_weight_z": "2549982",
+      "nonproper_checks": {
+        "major_residual_derivative_valuation_t": "-335/324",
+        "major_residual_frontier_gt_1": true,
+        "top_minor_derivative_valuation_t": "-89",
+        "top_minor_frontier_gt_1": true
+      },
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "23418383390565501815024282041781464765254722209262955693270915622069640687010690585232920694591852349930763215689799899690104"
+    },
+    "typing": "WITNESS-ONLY / PROVED-HERE algebra / UNREVIEWED computation"
+  },
+  "5": {
+    "custody": {
+      "family": {
+        "A2": 18,
+        "K": 35,
+        "L": 5,
+        "N": "9",
+        "R": 36,
+        "degree_rows_with_monic": 35,
+        "delta1": "7/12",
+        "delta2": "7/18",
+        "delta3": "-1",
+        "first_bottom_gap_z": 7,
+        "k": 18,
+        "m": 70,
+        "major_residual": 21,
+        "major_total": 75,
+        "n": 105,
+        "nonproper": 51,
+        "proper": 54,
+        "q1_z": 21,
+        "q2_z": 14,
+        "q3_z": -36,
+        "top_minor": 30,
+        "vanishing_rows": 34
+      },
+      "full_globalinterp_decoration": false,
+      "missing_for_full_decoration": [
+        "explicit nonproper Puiseux coefficients",
+        "complete Galois permutation on all n leaves",
+        "tail support and coefficient sharing",
+        "precision guard"
+      ],
+      "orbit_cycle_length": 18,
+      "root_blocks": {
+        "major_D2_total": 75,
+        "major_residual_roots": 21,
+        "proper_bottom_roots": 54,
+        "top_minor_roots": 30,
+        "total_nonproper_roots": 51
+      },
+      "status": "ACCEPTED[PROPER-PACKET-CUSTODY-ONLY]"
+    },
+    "family": {
+      "A2": 18,
+      "K": 35,
+      "L": 5,
+      "N": "9",
+      "R": 36,
+      "degree_rows_with_monic": 35,
+      "delta1": "7/12",
+      "delta2": "7/18",
+      "delta3": "-1",
+      "first_bottom_gap_z": 7,
+      "k": 18,
+      "m": 70,
+      "major_residual": 21,
+      "major_total": 75,
+      "n": 105,
+      "nonproper": 51,
+      "proper": 54,
+      "q1_z": 21,
+      "q2_z": 14,
+      "q3_z": -36,
+      "top_minor": 30,
+      "vanishing_rows": 34
+    },
+    "frozen_globalinterp_scale_guard": {
+      "branch_power_variables_lower_bound": 5218470,
+      "derivation": "top_minor*(m-1)*(R*m+1)",
+      "qmax_assumption": "qmax >= 0",
+      "status": "REFUSED[RESOURCE-CAP] for the full quadratic lift; use the scalable parity projection"
+    },
+    "raw_leaf_coordinate_model": {
+      "cokernel": 0,
+      "equations": 34,
+      "explanation": "proper confluent Vandermonde already has full row rank",
+      "nonproper_incremental_Schur_rank": 0,
+      "pivot": {
+        "allocation_by_disc": {
+          "one_jet": 2,
+          "two_jets": 16,
+          "zero_jets": 0
+        },
+        "determinant_factorization": "prod_(i<j) (j-i)^(a_i*a_j)",
+        "determinant_mod_good_primes": {
+          "1009": 882,
+          "1013": 484,
+          "1019": 677
+        },
+        "determinant_nonzero_over_Q": true
+      },
+      "prime_ranks": {
+        "1009": {
+          "raw_proper_confluent": 34,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 34,
+          "rigid_star_collapsed_proper": 18
+        },
+        "1013": {
+          "raw_proper_confluent": 34,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 34,
+          "rigid_star_collapsed_proper": 18
+        },
+        "1019": {
+          "raw_proper_confluent": 34,
+          "rigid_star_collapsed_plus_active_nonproper_surrogate": 34,
+          "rigid_star_collapsed_proper": 18
+        }
+      },
+      "rank_over_Q": 34,
+      "unknowns_proper": 54
+    },
+    "rigid_star_collapsed_surrogate": {
+      "active_nonproper_columns": 22,
+      "cokernel": 16,
+      "cokernel_with_those_columns": 0,
+      "equations": 34,
+      "nonproper_block_rank_over_Q": 22,
+      "nonproper_incremental_Schur_rank": 16,
+      "qualification": "one amplitude per rigid star, one channel per residual leaf split before delta1, and one unresolved top-minor aggregate",
+      "rank_over_Q": 18,
+      "rank_with_those_columns": 34,
+      "unknowns_proper": 18
+    },
+    "tropical_alternative_top_contact_5_2": {
+      "completion_bottom_orders_z": {
+        "delta1": "63",
+        "delta2": "42",
+        "gap": "21"
+      },
+      "completion_uniformizer_denominator": 108,
+      "derivation": "w(S)=-C_all+C(T); exact DP over the complement T",
+      "extra_nonproper_contacts": {
+        "major_residual_internal_t": "43/108",
+        "top_minor_internal_t": "5/2"
+      },
+      "matrix": "raw scaled GRS rows r=0..7L-2, columns all roots",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 0,
+            "proper": 24,
+            "top_minor": 10
+          },
+          "complement": {
+            "major_residual": 21,
+            "proper": 30,
+            "top_minor": 20
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            6,
+            12,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "26",
+      "minimum_basis_weight_z": "2808",
+      "nonproper_checks": {
+        "major_residual_derivative_valuation_t": "-28/27",
+        "major_residual_frontier_gt_1": true,
+        "top_minor_derivative_valuation_t": "-5/2",
+        "top_minor_frontier_gt_1": true
+      },
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "216085969943090186940"
+    },
+    "tropical_raw_GRS": {
+      "completion_bottom_orders_z": {
+        "delta1": "63",
+        "delta2": "42",
+        "gap": "21"
+      },
+      "completion_uniformizer_denominator": 108,
+      "derivation": "w(S)=-C_all+C(T); exact DP over the complement T",
+      "extra_nonproper_contacts": {
+        "major_residual_internal_t": "43/108",
+        "top_minor_internal_t": "2"
+      },
+      "matrix": "raw scaled GRS rows r=0..7L-2, columns all roots",
+      "minimizers": [
+        {
+          "basis": {
+            "major_residual": 0,
+            "proper": 27,
+            "top_minor": 7
+          },
+          "complement": {
+            "major_residual": 21,
+            "proper": 27,
+            "top_minor": 23
+          },
+          "proper_complement_disc_occupancies_0_1_2_3": [
+            0,
+            9,
+            9,
+            0
+          ]
+        }
+      ],
+      "minimum_basis_weight_t": "531/4",
+      "minimum_basis_weight_z": "14337",
+      "nonproper_checks": {
+        "major_residual_derivative_valuation_t": "-28/27",
+        "major_residual_frontier_gt_1": true,
+        "top_minor_derivative_valuation_t": "-17",
+        "top_minor_frontier_gt_1": true
+      },
+      "number_of_composition_minimizers": 1,
+      "number_of_labelled_minimum_bases": "38347110903831444000"
+    },
+    "typing": "WITNESS-ONLY / PROVED-HERE algebra / UNREVIEWED computation"
+  }
+}

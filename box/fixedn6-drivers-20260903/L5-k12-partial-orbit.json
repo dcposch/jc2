@@ -1,0 +1,53 @@
+{
+  "schema": "FIXED-N6-DECORATION/1",
+  "typing": "NEGATIVE-CONTROL",
+  "family_L": 5,
+  "single_orbit": true,
+  "packet": {
+    "kind": "nonzero-(10)",
+    "expected_size": 12,
+    "members": [
+      "D1_000",
+      "D1_001",
+      "D1_002",
+      "D1_003",
+      "D1_004",
+      "D1_005",
+      "D1_006",
+      "D1_007",
+      "D1_008",
+      "D1_009",
+      "D1_010",
+      "D1_011"
+    ],
+    "generator": {
+      "D1_000": "D1_001",
+      "D1_001": "D1_002",
+      "D1_002": "D1_003",
+      "D1_003": "D1_004",
+      "D1_004": "D1_005",
+      "D1_005": "D1_006",
+      "D1_006": "D1_007",
+      "D1_007": "D1_008",
+      "D1_008": "D1_009",
+      "D1_009": "D1_010",
+      "D1_010": "D1_011",
+      "D1_011": "D1_000"
+    },
+    "V2": 1,
+    "bottom_star": {
+      "p_g": "pi^3-pi",
+      "p_f": "pi^2-2/3"
+    }
+  },
+  "root_blocks": {
+    "major_D2_total": 75,
+    "proper_bottom_roots": 36,
+    "major_residual_roots": 39,
+    "top_minor_roots": 30,
+    "total_nonproper_roots": 69
+  },
+  "extra_completion_choices": {
+    "status": "irrelevant: custody must refuse before use"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "skeleton": {
+    "n": 2,
+    "m": 1,
+    "M": [-1],
+    "V": [1],
+    "delta": ["-1/2"],
+    "u": 1,
+    "v": 0
+  },
+  "uniformizer_denominator": 2,
+  "max_t_order": "0",
+  "jacobian": "-1",
+  "parameters": [],
+  "monic": true,
+  "branches": [
+    {
+      "name": "plus",
+      "orbit": "O",
+      "min_exp": -1,
+      "terms": {"-1": "I"}
+    },
+    {
+      "name": "outsider",
+      "orbit": "O",
+      "min_exp": -1,
+      "terms": {"-1": "-I"}
+    }
+  ],
+  "orbits": {
+    "O": {
+      "verified": true,
+      "representative": "plus",
+      "expected_size": 3,
+      "generator": {"plus": "outsider", "outsider": "plus"}
+    }
+  }
+}
