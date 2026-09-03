@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "K": 7,
+    "alpha_dims": [
+      16,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "beta_dims": [
+      17
+    ],
+    "bound_h": "-1/7",
+    "delta1": "5/7",
+    "delta2": "-1",
+    "dprime": 2,
+    "eprime": 7,
+    "h_lower_count_corrected": 13,
+    "kind": "topface-generic",
+    "partition": [
+      3
+    ],
+    "partition_label": "3",
+    "row": {
+      "M2": 46,
+      "V2": 4,
+      "k": 1,
+      "key": "49_14",
+      "m": 14,
+      "n": 49,
+      "source": "(49,14;46;4;k=1)"
+    },
+    "slope_count": 0,
+    "support_rule": "ord h(sigma1)>=V2*delta1+u*delta2; beta x-degree<=k+1",
+    "top_face_factored": "y^4*(y-x)^3",
+    "unknown_estimate": 188,
+    "uprime": 3
+  },
+  "reason": "worker blocked: TimeLimitExceeded: stratum wall-clock budget exceeded",
+  "typing": "MEASURED",
+  "verdict": "COUNTING-BOUND"
+}

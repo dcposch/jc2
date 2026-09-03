@@ -17258,3 +17258,15 @@ final-root COUNT of the principal roots (not bounded from the skeleton — OPEN[
 final-count]) or coefficient-level data (the joint two-point system now running on
 (99,66)). Cheapest remaining strengthening of the screen: none at skeleton level; retire
 the "Xu strengthening" queue item.
+
+## INTEGRATION #17 DELTA (kkk) (2026-09-03T18:48Z, MEASURED negative / instrument, producer GPT-5.5): THE SEVEN LARGE OPEN TWO-POINT ROWS ARE BLOCKED BY THE EMITTER, NOT BY GRÖBNER — with the corrected support rule (17(uu)/(bbb)) the honest strata have 135–276 unknowns ((24,16; 17; 2; 5): 273–276 per stratum; (25,15): 135–137; (30,24): 143–144; (35,20): 190–192; (35,25): 148–149; (49,14): 188–189; (50,30): 217–218) and the sympy symbolic builder exceeded a 600-s wall-clock cap on 21/21 strata before any Q*-pivot stage; the reusable preprocessing driver is built and validated (K = 16 t = 3 control: 36 → 23 unknowns after 13 Q*-pivots, base row 147y² − 84y + 11, 17 field pivots, [1] in 0.072 s)
+
+`bigrows-preprocess-gpt55-20260903.md` (GPT-5.5; box/bigrows-20260903/preprocess.py;
+SEALED_AFTER_DIVERT). All 21 strata COUNTING-BOUND with blocker typed "corrected-emitter /
+preprocess wall clock"; no modular or exact verdict promoted; the (24,16) partial kills of
+17(rr) were on the OLD (unlicensed-support) A/B systems (37–40 unknowns) and are now
+SLICES under the corrected rule (re-typed; (192,128) → (24,16; 17; 2; 5) fully OPEN). ACTION:
+the emitter must be rewritten natively (Singular-side polynomial construction of the
+h-adic Jacobian coefficients, or a compiled/vectorised expansion) — instrument lane
+launched (emitter-native-gpt55). Note for DC: this is the first place where the fleet's
+larger boxes would help (parallel strata at 200+ unknowns), once the emitter is fast.
