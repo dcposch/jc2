@@ -16501,3 +16501,42 @@ both the ungated C_FULL_TREE and the POLY column become operative together and
 OPEN[MOH-PROGRAM-ARTIFACT] shrinks to 14 rows; if it refutes, the operative screen is the
 gated one (215/21) and the gap-free numbers of delta 17(u) stand. K = 16 ray and Moh's
 six untouched under either reading (§6).
+
+## INTEGRATION #17 DELTA (hh) (2026-09-03T13:03Z, PROMOTED): delta 17(cc) gated by GPT-5.5 — LEMMA[ZERO-FACTOR-CENTRE] CONFIRMED with a proof correction; the ungated Prop 5.6 zero-chain kill is a theorem for all still-centred all-zero major chains (including forced-zero siblings, any multiplicity b); the gap-free/gapped split of delta 17(u) COLLAPSES; delta 17(gg)'s conditional POLY column is thereby PROMOTED: the operative screen is C_FULL_TREE_POLYNOMIAL_ODE
+
+`centre-support-gate-gpt55-v2-20260903.md` (GPT-5.5; 10/10 hashes by mechanical
+manifest; pages 145–150, 183–184, 188–190, 200–201 at 200 dpi; box/centre-gate-20260903/;
+replays byte-exact). PROOF CORRECTION: the charged one-liner must not be quoted as "the
+p.201 increment action alone moves all non-integer exponents" when L > 1 — that action is
+over k((t̄^{A_{r−1}})) = k((t^{1/L})), so its fixed exponents are the old 1/L-lattice, not
+just the integers; the gap closes because on an all-zero still-centred chain every ancestor
+coefficient is 0, so the FULL Puiseux Galois over the original centred chart fixes every
+branch label and moves every non-integer centre term; the proof works for general L.
+SOURCE CHECKS: Def 1.3 (pp.146–147: metric radius 2^{−δ}; centres first differing at e <
+δ_{r−1} are at distance 2^{−e} > 2^{−δ_{r−1}}); Lemma 1.1 (p.145); Prop 5.3's packet
+definition (p.180: D_{r−1} is the minimal disc containing all roots with ord(τ − τ_i) >
+δ_r; pp.180–183 rule out an intermediate split before δ_{r−1}) — so a Galois orbit in the
+same zero packet with first separation e ∈ (δ_r, δ_{r−1}) contradicts the definition,
+INDEPENDENTLY of the multiplicity b of the zero factor (b ≥ 2 is one root value, one fixed
+packet); p.184 (0 is fixed by every multiplicative action on the π-line — stronger than
+Moh's nonzero-factor case); p.190 removal of t^{−1}, t^0 (the only integral exponents below
+δ₁ since all bottom radii < 1 and the top radius is −1). LEMMA[ZERO-FACTOR-CENTRE]
+(DERIVED): in the unique zero packet used to construct D_{r−1}, every non-integer centre
+coefficient at e ∈ (δ_r, δ_{r−1}) vanishes; after the p.190 removal, iteration along an
+all-zero still-centred chain gives σ₁ = π t^{δ₁}. Scope: all still-centred zero chains
+incl. forced-zero siblings; nonzero parent factors excluded (OPEN[NONZERO-PARENT-TWIST]
+correctly separated: with C₂ ≠ 0 the twist λC²W² is Galois-legal as a configuration).
+Cheapest test replayed: (75,50; 55,73; 3,4): δ = (−1, 1/5, 1/2), free {2/5}, 40 checks 0
+failures; the A₂ = 5 parent action kills a_{2/5} only on the zero child (orbit polynomial
+y⁵ − a⁵u^{10}; b = 5, 10, 15, 20 irrelevant); controls (64,48) free {1/2} split by an A₂ = 4
+orbit of size 2; (99,66) free set empty. Screen table reproduced (204 → 55 at n ≤ 100).
+LEDGER CONSEQUENCES: (1) OPEN[CENTRE-SUPPORT] CLOSED; the whole-major-tree obligation
+(delta 17(r)) with UNGATED Prop 5.6 is fully sourced; delta 17(u)'s gap-free columns are
+retired as the operative screen (kept as a regression column). (2) Delta 17(gg)'s
+condition is met: the POLY column is PROMOTED — operative screen C_FULL_TREE_POLYNOMIAL_ODE:
+n ≤ 100: 58 → 20 rows / 7 classes, excess 14 rows in (90,60)×4, (96,64)×4, (96,72)×6 (all
+s ≥ 4, u_s = 1); s = 3 EXACT at n ≤ 100 (Moh's six); 48 ≤ D ≤ 200: 1,420 / 686 / 459;
+degrees additionally empty {72, 80, 100, 176}; OPEN[MOH-PROGRAM-ARTIFACT] = 14 rows.
+(3) D = 105, 117 empty, both dead rays, the K = 16 ray (δ₂ = 1/4) and the (d,e)-fixed ray
+of delta 17(aa) (re-check under POLY: queued) are unaffected. (4) The rigid-stratum
+counts of delta 17(aa) revert to the gapped column: 3/19 survive.
