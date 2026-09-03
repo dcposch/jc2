@@ -1,0 +1,48 @@
+{
+  "name": "CONTROL-FAMILY-A",
+  "verdict": "SURVIVES",
+  "nstar": 3,
+  "mstar": 1,
+  "d2": 5,
+  "delta1": "11/3",
+  "delta2": "-1",
+  "ju": "-5*a*x**4",
+  "ju_ok": true,
+  "shifted_h": "5*x**4*y + 10*x**3*y**2 + 10*x**2*y**3 + 5*x*y**4 + y**5",
+  "h_monomials": [
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "fails_a": [],
+  "fails_alpha": [],
+  "tail": "a*x + a*y",
+  "tail_ok": "True",
+  "steps": {
+    "a_order_h": "SURVIVES",
+    "a_order_alpha3": "SURVIVES",
+    "b_deg": "SURVIVES",
+    "tail_cancellation": "SURVIVES",
+    "jacobian_unshifted": "SURVIVES",
+    "unlicensed_226_would_kill": true
+  },
+  "note": "m*=1: P=h, no beta; tail Q-h^3=a(y+x) after D1-centering. Unshifted J=-5 a x^4.  (c) 2,2,6 is a different leading form and would exclude this existing pair \u2014 not applied.",
+  "elapsed": 0.15333104133605957
+}

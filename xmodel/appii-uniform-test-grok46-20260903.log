@@ -1,0 +1,20 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by mechanically verifying the charged-input hashes from the lane receipt, then source-read Moh pp.207–211 and the charged reports before writing the reduction.The first `awk` pairing was off; I’ll rebuild the manifest from the receipt’s `sha256`/`basename` lines and re-run `sha256sum -c`.Hashes match. Next I’ll extract Moh pp.207–211 and read the charged reports plus the existing Appendix II / control drivers.Hashes check out. Rendering Moh pp.207–211 and reading the Appendix II control drivers next.Hashes verified. I’ll source-read the five page images and the existing Appendix II compiler next.I’ll read Prop 6.3 and the m2-descent inverse-split discussion so the G2 root-split is derived, not assumed.I have the page-level identities. Next I’ll implement the general reduction and start the control runs, using Singular for the Gröbner steps.I’ll smoke-test the closed-form gate, the (15,10) control, and the family witness before launching the longer Groebner jobs.Singular treated `p` as a reserved name, so the G2 tail run was a parser failure, not a survival. I’ll rename those coefficients and convert generators to integer form.The Moh-pattern slice survives identity (3). Next I’ll extract a point and check whether J is a genuine cγ⁴.Identity (3) leaves a J=0 component, as expected. I’ll impose `J = c x^4` on that slice and run the remaining controls.Calibration and slice GBs are in. I’ll write the sealed report from those certificates and the COUNTING-BOUND on the honest G2 support.The body is 25.6KB, above the 10–20KB target. I’ll trim it, then re-stamp.All 11 charged-input hashes matched. The report is `xmodel/appii-uniform-test-grok46-20260903.md` (sealed; body 20432 bytes). Pages 207–211 were read as images (`pdftoppm -r 200`; PDF 68–72). Singular 4.3.2 is present; Macaulay2 is not.
+
+**Calibration (must empty)**
+- Moh `(15,10; 11; 3; X²)`: **SATURATED-EMPTY**. Case 2 lex on `Q[a1..a12,T]`, `T a9−1`, Gröbner `{1}` in 0.008 s. `ERRATUM[APPII-GAMMA-B]` holds: Euclidean `γ` has B-coefficient `−a9² a8`, not the printed `−a9² a10`. The kill uses exactly `(2,0), (1,1), (0,2)`. Frozen control2/controls_pm replay matched.
+- Moh `(16,12; 13; 3; X)` p.209 η-form: **SATURATED-EMPTY**. Grevlex `{1}` in 0.95 s, 70 equations, 11+`T` unknowns. Unsaturated 65 gens; drop the `(1,0)` matching of `J−cc x` survives.
+
+**Fail-closed family (must survive)**  
+`P=π⁵−γ⁵`, `Q=P³+aπ` **SURVIVES** `(a)`, `(b)`, and tail cancellation after D1-centering. Direct differentiation: `J=−5a γ⁴`. Applying the unlicensed 2,2,6 leading form would exclude it; the routine does not.
+
+**G2 `(15,10; 4; 1; X⁴)`, `δ₁'=5/4`, `δ₂'=−1/2`**
+- `(c)` is **not licensed** (`δ₂'≠−1`; 2,2,6 is the `(75,50)` inverse-Prop-6.3 geometry).
+- Honest order support 14+27+`c` = **42**: **COUNTING-BOUND**. Construction of identity (3) in 41 parameters exceeded 240 s / 1 core; Gröbner not reached.
+- Slices, labelled as slices: Newton 12-unknown `{1}` in 0.10 s; 14 of `h` + Moh-pattern `β` + (3) + `J=cc x⁴` `{1}` in 0.66 s (unsaturated 103 gens; drop `(4,0)` survives). Unlicensed 2,2,6 empties because (3) does not see `k` — that is Moh’s Case 2, wrong shape.
+- On the Moh-`β` slice, (3) alone **survives**; a point has `J=27(x+y)(7x+5y)`, not `c x⁴`. The Jacobian hypothesis is load-bearing on G2 (it was not on Moh’s printed row).
+
+**`CONJ[APPII-UNIFORM]` remains CONJ** at this instance. `(a)`, `(b)`, and the `(2,3)`-tail identity generalise in `k`; `(c)` does not by copying 2,2,6. A G2-slice kill proves the **method**, not a frontier theorem: G2 is a `D=105` descendant, and `D=105` is already TREE-empty on AUDIT 17(p) (provisional, not consumed).
+
+Routine: `box/appii-uniform-20260903/appii_reduce.py`. Certificates: `box/appii-uniform-20260903/results/`.
+DIVERT path=xmodel/appii-uniform-test-grok46-20260903.md status=CLEAN_SEALED body_bytes=20432 body_sha256=3cb235849570660319cc2d58378f92606c7435f1edd93323ef5a21a1bc334b47

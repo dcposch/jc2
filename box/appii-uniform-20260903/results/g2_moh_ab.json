@@ -1,0 +1,43 @@
+{
+  "verdict": "SURVIVES",
+  "slice": true,
+  "beta_mode": "moh_ab",
+  "n_unknowns": 18,
+  "n_eqs": 33,
+  "n_eqs7": 7,
+  "n_eqs3": 22,
+  "main": {
+    "verdict": "SURVIVES",
+    "empty": false,
+    "basis_size": 42,
+    "elapsed": 0.08945178985595703,
+    "n_eqs": 33,
+    "n_vars": 19,
+    "order": "dp",
+    "ring": "Q[h_0_4,h_1_4,h_0_3,h_1_3,h_2_3,h_0_2,h_1_2,h_2_2,h_3_2,h_0_1,h_1_1,h_2_1,h_0_0,h_1_0,bp,bq,br,bs,T]",
+    "rabinowitsch": "T*bp-1",
+    "rc": 0,
+    "first": [],
+    "stdout_tail": "BEGIN_GB\nG[1]=h_1_0\nG[2]=h_0_0\nG[3]=h_2_1\nG[4]=h_3_2\nG[5]=h_2_2\nG[6]=h_1_2\nG[7]=2*bs*T+h_0_1\nG[8]=2*br*T+h_1_1\nG[9]=3*bq*T+h_0_2\nG[10]=bp*T-1\nG[11]=h_0_1*br-h_1_1*bs\nG[12]=h_1_3*br-2*h_2_3*bs\nG[13]=h_0_4*br-h_1_4*bs\nG[14]=3*h_1_1*bq-2*h_0_2*br\nG[15]=3*h_0_1*bq-2*h_0_2*bs\nG[16]=2*h_2_3*bq-h_1_4*br\nG[17]=h_1_3*bq-h_1_4*bs\nG[18]=h_1_4*bq-2*br\nG[19]=h_0_4*bq-2*bs\nG[20]=bp^2+h_0_2*bq\nG[21]=h_1_1*bp+2*br\nG[22]=h_0_1*bp+2*bs\nG[23]=h_0_2*bp+3*bq\nG[24]=3*h_1_1^2-4*h_2_3*bp\nG[25]=3*h_0_1*h_1_1-2*h_1_3*bp\nG[26]=h_0_2*h_1_1-h_1_4*bp\nG[27]=h_0_2*h_0_1-h_0_4*bp\nG[28]=2*h_2_3*h_0_1-h_1_3*h_1_1\nG[29]=h_1_4*h_0_1-h_0_4*h_1_1\nG[30]=h_0_2^2-3*bp\nG[31]=4*h_2_3*h_0_2-3*h_1_4*h_1_1\nG[32]=2*h_1_3*h_0_2-3*h_0_4*h_1_1\nG[33]=h_1_4*h_0_2-3*h_1_1\nG[34]=h_0_4*h_0_2-3*h_0_1\nG[35]=h_1_4*h_1_3-2*h_0_4*h_2_3\nG[36]=h_1_4^2-4*h_2_3\nG[37]=h_0_4*h_1_4-2*h_1_3\nG[38]=3*h_0_1^2*T-h_0_4^2\nG[39]=h_0_4^2*bp-3*h_0_1^2\nG[40]=h_0_4^2*h_1_1-2*h_1_3*h_0_1\nG[41]=3*h_0_1^3+2*h_0_4^2*bs\nG[42]=h_0_4^2*h_2_3-h_1_3^2\nN_G\n42\nIS_ONE\n0\nEND_GB\n"
+  },
+  "negative": {
+    "verdict": "SURVIVES",
+    "empty": false,
+    "basis_size": 2,
+    "elapsed": 0.010371923446655273,
+    "n_eqs": 1,
+    "n_vars": 19,
+    "order": "dp",
+    "ring": "Q[h_0_4,h_1_4,h_0_3,h_1_3,h_2_3,h_0_2,h_1_2,h_2_2,h_3_2,h_0_1,h_1_1,h_2_1,h_0_0,h_1_0,bp,bq,br,bs,T]",
+    "rabinowitsch": "T*bp-1",
+    "rc": 0,
+    "first": [],
+    "stdout_tail": "BEGIN_GB\nG[1]=T-1\nG[2]=bp-1\nN_G\n2\nIS_ONE\n0\nEND_GB\n"
+  },
+  "t_build": 6.253871202468872,
+  "note": "Moh-pattern beta is a SLICE at delta1'=5/4 (honest support has 27 mons)",
+  "elapsed": 6.439183712005615,
+  "ring": "Q[h_0_4,h_1_4,h_0_3,h_1_3,h_2_3,h_0_2,h_1_2,h_2_2,h_3_2,h_0_1,h_1_1,h_2_1,h_0_0,h_1_0,bp,bq,br,bs,T]",
+  "order": "dp",
+  "rabinowitsch": "T*bp-1"
+}

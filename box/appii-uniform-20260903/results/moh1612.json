@@ -1,0 +1,40 @@
+{
+  "name": "MOH-1612",
+  "verdict": "SATURATED-EMPTY",
+  "n_eta": 11,
+  "n_eqs_eta": 70,
+  "eta": {
+    "verdict": "SATURATED-EMPTY",
+    "empty": true,
+    "basis_size": 1,
+    "elapsed": 0.9508950710296631,
+    "n_eqs": 70,
+    "n_vars": 12,
+    "order": "dp",
+    "ring": "Q[b1,b2,b3,b4,bp,bq,br,bs,bt,a2,cc,T]",
+    "rabinowitsch": "T*cc-1",
+    "rc": 0,
+    "first": [],
+    "stdout_tail": "BEGIN_GB\nG[1]=1\nN_G\n1\nIS_ONE\n1\nEND_GB\n"
+  },
+  "negative": {
+    "verdict": "SURVIVES",
+    "empty": false,
+    "basis_size": 2,
+    "elapsed": 0.009444952011108398,
+    "n_eqs": 1,
+    "n_vars": 12,
+    "order": "dp",
+    "ring": "Q[b1,b2,b3,b4,bp,bq,br,bs,bt,a2,cc,T]",
+    "rabinowitsch": "T*cc-1",
+    "rc": 0,
+    "first": [],
+    "stdout_tail": "BEGIN_GB\nG[1]=T-1\nG[2]=cc-1\nN_G\n2\nIS_ONE\n0\nEND_GB\n"
+  },
+  "main17": null,
+  "elapsed": 13.360739707946777,
+  "notes": [
+    "c: two-point Lemma 5.3 leading form (NOT inverse-6.3 2,2,6); unlicensed as Prop 6.3 inverse split",
+    "p.209 eta-form 10 shape + cc; p.208 (1)-(5) if needed"
+  ]
+}

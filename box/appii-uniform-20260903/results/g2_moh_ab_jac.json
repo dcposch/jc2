@@ -1,0 +1,38 @@
+{
+  "verdict": "SATURATED-EMPTY",
+  "n_unknowns": 19,
+  "n_eqs": 81,
+  "n_tail": 33,
+  "n_jac": 48,
+  "main": {
+    "verdict": "SATURATED-EMPTY",
+    "empty": true,
+    "basis_size": 1,
+    "elapsed": 0.6598241329193115,
+    "n_eqs": 81,
+    "n_vars": 20,
+    "order": "dp",
+    "ring": "Q[h_0_4,h_1_4,h_0_3,h_1_3,h_2_3,h_0_2,h_1_2,h_2_2,h_3_2,h_0_1,h_1_1,h_2_1,h_0_0,h_1_0,bp,bq,br,bs,cc,T]",
+    "rabinowitsch": "T*cc-1",
+    "rc": 0,
+    "first": [],
+    "stdout_tail": "BEGIN_GB\nG[1]=1\nN_G\n1\nIS_ONE\n1\nEND_GB\n"
+  },
+  "negative": {
+    "verdict": "SURVIVES",
+    "empty": false,
+    "basis_size": 2,
+    "elapsed": 0.010142087936401367,
+    "n_eqs": 1,
+    "n_vars": 20,
+    "order": "dp",
+    "ring": "Q[h_0_4,h_1_4,h_0_3,h_1_3,h_2_3,h_0_2,h_1_2,h_2_2,h_3_2,h_0_1,h_1_1,h_2_1,h_0_0,h_1_0,bp,bq,br,bs,cc,T]",
+    "rabinowitsch": "T*cc-1",
+    "rc": 0,
+    "first": [],
+    "stdout_tail": "BEGIN_GB\nG[1]=T-1\nG[2]=cc-1\nN_G\n2\nIS_ONE\n0\nEND_GB\n"
+  },
+  "slice": true,
+  "elapsed": 46.27940821647644,
+  "note": "14 order-h + Moh-pattern beta + (3) + J=cc x^4; SLICE"
+}

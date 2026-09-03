@@ -1,0 +1,54 @@
+{
+  "name": "MOH-1510-V2=3",
+  "verdict": "SATURATED-EMPTY",
+  "licensed_c": true,
+  "n_h": 8,
+  "n_beta_moh": 4,
+  "n_eqs3": 5,
+  "printed_alpha_ok": true,
+  "printed_gamma_ok": false,
+  "audited_gamma_ok": true,
+  "erratum": "ERRATUM[APPII-GAMMA-B]: B-coeff of gamma is -a9^2 a8, not -a9^2 a10",
+  "case1_contra": true,
+  "case2_empty": true,
+  "case2_basis_size": 1,
+  "case2_gb_time": 0.008300542831420898,
+  "ring": "Q[a1..a12,T]",
+  "order": "lex",
+  "rabinowitsch": "T*a9-1",
+  "positive": [
+    {
+      "dropped": "(2, 0)",
+      "empty": false,
+      "size": 5
+    },
+    {
+      "dropped": "(1, 1)",
+      "empty": false,
+      "size": 5
+    },
+    {
+      "dropped": "(1, 0)",
+      "empty": true,
+      "size": 1
+    },
+    {
+      "dropped": "(0, 2)",
+      "empty": false,
+      "size": 5
+    },
+    {
+      "dropped": "(0, 1)",
+      "empty": true,
+      "size": 1
+    }
+  ],
+  "negative_nontrivial": true,
+  "replay_empty": true,
+  "replay_audited": true,
+  "replay_printed_false": true,
+  "elapsed": 6.222556114196777,
+  "notes": [
+    "c: 2,2,6 licensed (15,10;11;3;X^2), h_top=y^3(y^2-x^2)"
+  ]
+}

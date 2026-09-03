@@ -16596,3 +16596,26 @@ characters block-grade but do not by themselves cut. READING: the D = 108 descen
 not decidable by a height-2 method; they need the s' = 3 inherited state (V'-map) and the
 full Appendix II tail, i.e. the same CONJ[APPII-UNIFORM] datum at height 3. The K = 16 ray
 (height 2) remains the cleaner client.
+
+## INTEGRATION #17 DELTA (kk) (2026-09-03T13:13Z, MEASURED, producer Grok): CONJ[APPII-UNIFORM] cheapest test — the general Appendix II routine is calibrated (both Moh controls SATURATED-EMPTY, an existing pair SURVIVES every licensed step), the minor-disc split (c) is NOT licensed off δ₂' = −1, the honest G2 system (42 unknowns) is COUNTING-BOUND, and G2 slices empty (method only)
+
+`appii-uniform-test-grok46-20260903.md` (Grok, 21KB; box/appii-uniform-20260903/; Singular
+available). Routine: descended datum → closed-form radii (17(ff)) → Lemma 2.1 support →
+approximate root h of degree d₂' → order conditions (a) → remainder bounds (b) → π^{-1}-tail
+cancellation → optional licensed split (c) → saturation. Controls: (15,10; 11; 3; X²) with
+licensed (c) = the 2,2,6 split of p.210 and the audited γ: Case 1 Moh's contradiction, Case 2
+Gröbner {1} in 0.008 s (ERRATUM[APPII-GAMMA-B] reproduced: Euclidean γ matches −a₉²a₈, not
+the printed −a₉²a₁₀); the kill uses exactly the monomials (2,0), (1,1), (0,2). (16,12; 13; 3; X)
+in the p.209 η-form (10 + cc): Singular {1} in 0.95 s, 70 equations, 11 unknowns; unsaturated
+65 generators non-trivial; dropping the (1,0) matching survives. NEGATIVE CONTROL: P = π⁵ − γ⁵,
+Q = P³ + aπ (J = −5aγ⁴) SURVIVES (a), (b) and the tail after Moh's D₁-centering (p.207: choose
+x, y so the π-root in D₁ is σ = πt^{δ₁}); imposing the unlicensed 2,2,6 leading form WOULD
+exclude it — so (c) must not be copied. G2 (15,10; 4; 1; X⁴; δ' = (−1/2, 5/4)): honest order
+support 14 + 27 + c = 42 (matches descent-radii); (c) NOT licensed (δ₂' ≠ −1; the 2,2,6 split
+is the (75,50) → (15,10; V₂ = 3) geometry); identity construction in 41 parameters did not
+return in 240 s; COUNTING-BOUND. G2 slices: Newton-tight 12-unknown SATURATED-EMPTY (0.10 s);
+order-h (14) + Moh-pattern β (4) + (3) + J = cc·x⁴ SATURATED-EMPTY (0.66 s; 81 eqs; 19 + T
+vars); typed as METHOD (D = 105 is TREE-empty; not a frontier theorem). VERDICT: CONJ
+[APPII-UNIFORM] stays CONJ; what generalises (§6): (a)+(b)+tail as a fail-closed routine,
+with (c) replaced by the licensed inverse-Prop-6.3 split ONLY when δ₂' = −1 (two-point class)
+— which is exactly the K = 16 ray's class (δ₂' = −1, u' = 1, split y^{V₂}(y − x)).
