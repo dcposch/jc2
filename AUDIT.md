@@ -17555,3 +17555,24 @@ B3-AXIS PROMOTED (Opus + GPT-5.5); the uniform residual is (V0)/dim I_{t,+} = 0 
 in full (q-directions AND the b₄ direction) — the Opus SUBCHART lane (running) must
 address b₄ too; the properness lemma (17(iiii), Opus gate running) is the fixed-t
 instrument.
+
+## INTEGRATION #17 DELTA (kkkk) (2026-09-03T22:03Z, PROVISIONAL KILL — PROVED-HERE, producer Sol; gate launched): MOH'S BRANCH B OF (99,66) IS DEAD IN THE JOINT CHART — the exact joint global-band continuation (both common-h₃ branches in one declared coefficient chart over Q; variables eliminated only by Q*-pivots; ρ, c never used as pivots; residues sent to Singular with Rabinowitsch) reaches, on the δ = 2 [2,1] branch at stage 4 (pole band (F,G) = (−73,−46), all Jacobian degree-159 rows), 118 remaining expressions that are ALL nonzero integer constants (e.g. stage4_J_d159_k35 = 6264, so 1 = (1/6264)·stage4_J_d159_k35 ∈ Q) — the unlocalised reduced-residue ideal is the UNIT ideal before ρ is even localised; Singular independently returns dimension −1, basis [1]; the dimension path 6,689 → 1,065 → 1,018 → 976 → 942 → DEAD; ON THE δ = 5/2 BRANCH: consistent through stage 7 (pole band (−174,−111), all J156 rows) with dimension 6,687 → 1,063 → 1,016 → 974 → 940 → 913 → 894 → 880 → 869 (decrements 47, 42, 34, 27, 19, 14, 11, all positive; no residue at any stage; cumulative outer D₁ rank 176, joint Q* rank 59; 869 = 6,702 − 5,598 − 176 − 59); stage 8 was interrupted by the lane budget under host contention (not evidence); the exact next system (pole power 16, (F,G) = (−173,−110), the 156 coefficients of Jacobian degree 155) is emitted with the 869 free-coefficient list
+
+`g9966-global-band-sol56-20260903.md` (Sol, 22KB; box/g9966band-20260903/ runs/delta2,
+runs/delta52 with stage JSONs, next-stage8-system.json (a050af8c…), stage7-free-
+coefficients.txt (30d4f3e0…)). Rows imposed: the displayed common-h₃ / major-h₂ state, the
+outer base-h₂ D₂ support preblock and successive outer D₁ rows (rank 176 over eight offsets —
+matching 17(dddd)), direct minor F, G coefficient rows, direct Jacobian rows; NOT the
+effective T₂/T₃ bridge (absent by design — so the chart is a relaxation and a kill is
+valid; a survival is a counting bound). Controls (§7): Singular and consistency controls
+pass; Jacobian-first vs poles-first orders give the same ranks. LOGIC OF THE KILL: every
+row is a necessary condition on a Keller pair with the (99,66) skeleton and the δ = 2 [2,1]
+principal split (chart necessity gated in 17(aaaa); outer rows in 17(dddd); the split
+classification complete and promoted in 17(sss)); the unit ideal on the necessary
+relaxation ⇒ no such pair. CONSEQUENCE (if gated): with branch A (17(tt)), branch C
+(17(yy)) and now branch B dead, Moh's own p.209 case split for (99,66) is mechanically
+COMPLETE — and the (99,66) question reduces to Xu's δ = 5/2 split, whose relaxation is
+now a 869-dimensional exact system shrinking by Jacobian bands. Gate: g9966-branchB-
+kill-gate-gpt55 (replay stage 0–4 on δ = 2; audit that every imposed row is necessary
+and that no unlicensed gauge/slice entered; the constant residue's provenance).
+Continuation: g9966-delta52-stage8-sol56 (the emitted next system, stages 8+).

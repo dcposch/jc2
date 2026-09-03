@@ -1,0 +1,165 @@
+{
+  "branches": {
+    "delta2": {
+      "branch": "delta2",
+      "controls": {
+        "J_first_or_poles_first_same_Qstar_rank": true,
+        "all_pivot_coefficients_in_Qstar": true,
+        "all_rows_reduce_zero": true,
+        "resolved_pivot_count": 19,
+        "unit_triangular_extension_over_endpoint_base": true
+      },
+      "cumulative_Qstar_rank": 19,
+      "dependent_or_zero_rows_cumulative": 2,
+      "dimension_after_direct_extension": 6685,
+      "endpoint_dimension": 6689,
+      "endpoint_rank": 15,
+      "incremental_Qstar_rank": 4,
+      "new_Qstar_pivots": [
+        {
+          "coefficient": "1104",
+          "rhs": "-(2*A3_88_10 + 48*A3_89_9 - 3*B2_64_1)/2",
+          "row": "next_J_x135_y27",
+          "variable": "A2_64_1"
+        },
+        {
+          "coefficient": "1",
+          "rhs": "(-2*A2_63_0*C3_32_0 - 2*A2_64_0*C2_21_0*H_10_0 - 2*A2_64_0*C3_31_0 + 2*A3_88_10*C3_32_0*u + 2*A3_89_9*C2_20_0*H_10_0 + 2*A3_89_9*C2_21_0*H_9_0 + 2*A3_89_9*C3_30_0 + 2*A3_89_9*C3_31_1*u + 48*A3_89_9*C3_32_0*u + 2*A3_89_9*H_10_0**3 - 2*A3_96_1*u - 3*B2_64_1*C3_32_0*u - 6*C2_21_0*C3_32_0**2*H_10_0 - 6*C3_31_0*C3_32_0**2)/2",
+          "row": "next_F_exp-77_coord0",
+          "variable": "A3_95_0"
+        },
+        {
+          "coefficient": "1",
+          "rhs": "-B1_30_0*C3_32_0 - B1_31_0*C2_21_0*H_10_0 - B1_31_0*C3_31_0 - B1_31_1*C3_32_0*u - B1_32_0*C2_20_0*H_10_0 - B1_32_0*C2_21_0*H_9_0 - B1_32_0*C3_30_0 - B1_32_0*C3_31_1*u - B1_32_0*H_10_0**3 - B2_63_1*u - 2*C2_20_0*C3_32_0*H_10_0 - C2_21_0**2*H_10_0**2 - 2*C2_21_0*C3_31_0*H_10_0 - 2*C2_21_0*C3_32_0*H_9_0 - 2*C3_30_0*C3_32_0 - C3_31_0**2 - 2*C3_31_1*C3_32_0*u - 2*C3_32_0*H_10_0**3",
+          "row": "next_G_exp-50_coord0",
+          "variable": "B2_62_0"
+        },
+        {
+          "coefficient": "1",
+          "rhs": "0",
+          "row": "next_G_exp-50_coord1",
+          "variable": "B2_64_1"
+        }
+      ],
+      "new_row_count": 5,
+      "new_rows": [
+        {
+          "expression": "24*(46*A2_64_1 - 3640*A2_65_0 + 46*A3_88_10 - 2536*A3_89_9 + 67304*A3_90_8 - 1150184*A3_91_7 + 14269200*A3_92_6 - 137269704*A3_93_5 + 1067621544*A3_94_4 - 6908861256*A3_95_3 + 37986465396*A3_96_2 - 180288963800*A3_97_1 + 747821850776*A3_98_0 - 69*B2_64_1 + 5460*B2_65_0)",
+          "label": "next_J_x135_y27"
+        },
+        {
+          "expression": "A2_63_0*C3_32_0 + A2_64_0*C2_21_0*H_10_0 + A2_64_0*C3_31_0 + A2_64_1*C3_32_0*u + A2_65_0*C2_20_0*H_10_0 + A2_65_0*C2_21_0*H_9_0 + A2_65_0*C3_30_0 + A2_65_0*C3_31_1*u + A2_65_0*H_10_0**3 + A3_95_0 + A3_96_1*u + 3*C2_21_0*C3_32_0**2*H_10_0 + 3*C3_31_0*C3_32_0**2",
+          "label": "next_F_exp-77_coord0"
+        },
+        {
+          "expression": "A3_97_1",
+          "label": "next_F_exp-77_coord1"
+        },
+        {
+          "expression": "B1_30_0*C3_32_0 + B1_31_0*C2_21_0*H_10_0 + B1_31_0*C3_31_0 + B1_31_1*C3_32_0*u + B1_32_0*C2_20_0*H_10_0 + B1_32_0*C2_21_0*H_9_0 + B1_32_0*C3_30_0 + B1_32_0*C3_31_1*u + B1_32_0*H_10_0**3 + B2_62_0 + B2_63_1*u + 2*C2_20_0*C3_32_0*H_10_0 + C2_21_0**2*H_10_0**2 + 2*C2_21_0*C3_31_0*H_10_0 + 2*C2_21_0*C3_32_0*H_9_0 + 2*C3_30_0*C3_32_0 + C3_31_0**2 + 2*C3_31_1*C3_32_0*u + 2*C3_32_0*H_10_0**3",
+          "label": "next_G_exp-50_coord0"
+        },
+        {
+          "expression": "B2_64_1",
+          "label": "next_G_exp-50_coord1"
+        }
+      ],
+      "nonlinear_residue_appears": false,
+      "residual_count": 0,
+      "residual_rows": []
+    },
+    "delta52": {
+      "branch": "delta52",
+      "controls": {
+        "J_first_or_poles_first_same_Qstar_rank": true,
+        "all_pivot_coefficients_in_Qstar": true,
+        "all_rows_reduce_zero": true,
+        "resolved_pivot_count": 18,
+        "unit_triangular_extension_over_endpoint_base": true
+      },
+      "cumulative_Qstar_rank": 18,
+      "dependent_or_zero_rows_cumulative": 1,
+      "dimension_after_direct_extension": 6684,
+      "endpoint_dimension": 6687,
+      "endpoint_rank": 15,
+      "incremental_Qstar_rank": 3,
+      "new_Qstar_pivots": [
+        {
+          "coefficient": "1104",
+          "rhs": "-(2*A3_88_10 + 48*A3_89_9 - 3*B2_64_1)/2",
+          "row": "next_J_x135_y27",
+          "variable": "A2_64_1"
+        },
+        {
+          "coefficient": "1",
+          "rhs": "(-2*A2_63_0*C3_32_0 - 2*A2_64_0*C2_21_0*H_10_0 - 2*A2_64_0*C3_31_0 + 2*A3_88_10*C3_32_0*u + 2*A3_89_9*C2_20_0*H_10_0 + 2*A3_89_9*C2_21_0*H_9_0 + 2*A3_89_9*C3_30_0 + 2*A3_89_9*C3_31_1*u + 48*A3_89_9*C3_32_0*u + 2*A3_89_9*H_10_0**3 - 2*A3_96_1*u - 3*B2_64_1*C3_32_0*u - 6*C2_21_0*C3_32_0**2*H_10_0 - 6*C3_31_0*C3_32_0**2)/2",
+          "row": "next_F_exp-181_coord0",
+          "variable": "A3_95_0"
+        },
+        {
+          "coefficient": "1",
+          "rhs": "-B1_30_0*C3_32_0 - B1_31_0*C2_21_0*H_10_0 - B1_31_0*C3_31_0 - B1_31_1*C3_32_0*u - B1_32_0*C2_20_0*H_10_0 - B1_32_0*C2_21_0*H_9_0 - B1_32_0*C3_30_0 - B1_32_0*C3_31_1*u - B1_32_0*H_10_0**3 - B2_63_1*u - B2_64_1*v - 2*C2_20_0*C3_32_0*H_10_0 - C2_21_0**2*H_10_0**2 - 2*C2_21_0*C3_31_0*H_10_0 - 2*C2_21_0*C3_32_0*H_9_0 - 2*C3_30_0*C3_32_0 - C3_31_0**2 - 2*C3_31_1*C3_32_0*u - 2*C3_32_0*H_10_0**3",
+          "row": "next_G_exp-118_coord0",
+          "variable": "B2_62_0"
+        }
+      ],
+      "new_row_count": 3,
+      "new_rows": [
+        {
+          "expression": "24*(46*A2_64_1 - 3640*A2_65_0 + 46*A3_88_10 - 2536*A3_89_9 + 67304*A3_90_8 - 1150184*A3_91_7 + 14269200*A3_92_6 - 137269704*A3_93_5 + 1067621544*A3_94_4 - 6908861256*A3_95_3 + 37986465396*A3_96_2 - 180288963800*A3_97_1 + 747821850776*A3_98_0 - 69*B2_64_1 + 5460*B2_65_0)",
+          "label": "next_J_x135_y27"
+        },
+        {
+          "expression": "A2_63_0*C3_32_0 + A2_64_0*C2_21_0*H_10_0 + A2_64_0*C3_31_0 + A2_64_1*C3_32_0*u + A2_65_0*C2_20_0*H_10_0 + A2_65_0*C2_21_0*H_9_0 + A2_65_0*C3_30_0 + A2_65_0*C3_31_1*u + A2_65_0*H_10_0**3 + A3_95_0 + A3_96_1*u + A3_97_1*v + 3*C2_21_0*C3_32_0**2*H_10_0 + 3*C3_31_0*C3_32_0**2",
+          "label": "next_F_exp-181_coord0"
+        },
+        {
+          "expression": "B1_30_0*C3_32_0 + B1_31_0*C2_21_0*H_10_0 + B1_31_0*C3_31_0 + B1_31_1*C3_32_0*u + B1_32_0*C2_20_0*H_10_0 + B1_32_0*C2_21_0*H_9_0 + B1_32_0*C3_30_0 + B1_32_0*C3_31_1*u + B1_32_0*H_10_0**3 + B2_62_0 + B2_63_1*u + B2_64_1*v + 2*C2_20_0*C3_32_0*H_10_0 + C2_21_0**2*H_10_0**2 + 2*C2_21_0*C3_31_0*H_10_0 + 2*C2_21_0*C3_32_0*H_9_0 + 2*C3_30_0*C3_32_0 + C3_31_0**2 + 2*C3_31_1*C3_32_0*u + 2*C3_32_0*H_10_0**3",
+          "label": "next_G_exp-118_coord0"
+        }
+      ],
+      "nonlinear_residue_appears": false,
+      "residual_count": 0,
+      "residual_rows": []
+    }
+  },
+  "frozen_prefix": {
+    "Qstar_rank": 15,
+    "byte_identical_replay": true,
+    "driver_sha256": "9c123aaf14c8f52104f7b1ef0f0dac50fe5ae0ed294e6bf9f8a5037c175c68af",
+    "residual_count": 0,
+    "result_sha256": "f4a6f39c81e01f185bc0e6aed74e844639d21ffce3d219b6a539ee110553ae66",
+    "row_count": 16,
+    "rows_expression_identical": true
+  },
+  "scope": "Frozen 15-pivot direct prefix plus J[x^135 y^27] and the next F95/G62 pole-coordinate rows; no outer-major D2/D1 preblock.",
+  "triangular_fragment_certificate": {
+    "Jacobian_degree162_pairs": [
+      "J(F98,G66)",
+      "J(F99,G65)"
+    ],
+    "Jacobian_needed_y_degrees": {
+      "F98": [
+        0,
+        10
+      ],
+      "G65": [
+        0,
+        1
+      ]
+    },
+    "h2_coefficients": {
+      "d30": "C2_20_0*H_10_0 + C2_21_0*H_9_0 + C3_30_0 + H_10_0**3",
+      "d31": "C2_21_0*H_10_0 + C3_31_0",
+      "d32": "C3_32_0",
+      "e31": "C3_31_1"
+    },
+    "omitted_terms_cannot_reach_requested_slots": true,
+    "pole_needed_global_y_degrees": [
+      0,
+      1
+    ]
+  },
+  "type": "EXACT-Q PRE-OUTER DIRECT NEXT-BAND PROBE",
+  "verdict": "COUNTING-BOUND / DIRECT PRE-OUTER PREFIX ONLY"
+}
