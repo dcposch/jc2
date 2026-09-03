@@ -16540,3 +16540,35 @@ degrees additionally empty {72, 80, 100, 176}; OPEN[MOH-PROGRAM-ARTIFACT] = 14 r
 (3) D = 105, 117 empty, both dead rays, the K = 16 ray (δ₂ = 1/4) and the (d,e)-fixed ray
 of delta 17(aa) (re-check under POLY: queued) are unaffected. (4) The rigid-stratum
 counts of delta 17(aa) revert to the gapped column: 3/19 survive.
+
+## INTEGRATION #17 DELTA (ii) (2026-09-03T13:05Z, PROVED-HERE/UNREVIEWED negative + SOURCE corrections, producer Sol): T-LADDER IS FALSE AS STATED — a degree-independent bound on the number of nonconstant h-adic digits of a monomial-Jacobian pair fails already at the reduced-degree boundary q = 1 (k = 0: polynomial automorphisms with Θ(d) nonconstant digits); the charged h-adic identity of m2-descent §4.3 is algebraically wrong (corrected); the descended strata (3,2), (4,3) remain OPEN
+
+`t-ladder-sol56-20260903.md` (Sol, 30KB; box/tladder-drivers-20260903/). (1) PROVED-HERE:
+for every fixed k ≥ 0, p, r ≥ 2 and arbitrarily large e > k+1 there are monic pairs
+(P,Q) ∈ k[γ,π]² with J = γ^k, degrees (pre, re), canonical H-adic expansion P = H^p + U,
+Q = H, with deg_γ U = e > k+1; at k = 0 these are automorphisms; the sole exceptional digit
+carries Θ(e) = Θ(d) nonconstant inner π-coefficients and e free scalar parameters. So no
+"ladder" bound on nonconstant digits holds uniformly in degree, even at fixed reduced pair
+(p, 1). (2) The outer-digit count ≤ p + q is tautological and cannot reproduce Moh's
+22[15 or 13] or 17 → 10, which count scalar parameters inside h and its digits. (3)
+SOURCE-READ + PROVED-HERE: (16,12) gives 17 → 10 genuinely; the normalised 10-parameter
+family has five nonconstant canonical h-digits of x-degree ≤ 1 ≤ k+1; the exact system
+J = Cx, C ≠ 0 is EMPTY (consistent with the compiler's SATURATED-EMPTY, delta 17(bb)) — so
+it supplies no non-vacuous "constant digits" theorem. (4) (15,10): Moh states 22[15 or
+13] on p.208 and 12[10 or 7] after the η-simplification on p.209; pp.210–211 display
+exactly twelve parameters; the frozen shape reproduces 12 with three nonconstant h-digits
+of x-degree ≤ 2 ≤ k+1; the exact J = Cx², C ≠ 0 locus is empty. (5) PROVED-HERE: the
+h-adic identity quoted in the charge and in m2-descent §4.3 moves one term down an
+h-level and omits another; the corrected identity and the Euclidean carry rule are in §3
+(CORRECTION to the banked m2-descent §4.3 display — not load-bearing for any promoted
+delta; noted). (6) SOURCE-READ pp.173–174: denominator shedding when M_h = n − 1 —
+independently confirms delta 17(dd) (DESCENT-ANCHOR = indexing error). (7) The only
+unconditional degree-independent rigidity is the exact monomial-η lemma (§2: Moh's exact
+series rung extended to J = cγ^k); no source theorem transports it to h-adic digits.
+READING (§6): no degree-independent finite computation follows from the ladder; radii
+constrain the SUPPORT of h, not h itself; the genuine residual for u_s = 1 is the common
+jet / Appendix II datum (CONJ[APPII-UNIFORM]), and for u_s > 1 MINOR-DICHOTOMY. Strata
+(p,q) = (3,2) [the K = 16 ray's descendants have (n*, m*) = (3t+1, 2t+1) — NOT fixed] and
+(4,3) remain OPEN. Different-model review: not requested (negative result; the
+counterfamily is explicit and checkable in seconds — cheapest test: run
+box/tladder-drivers-20260903 at e = 10, k = 1).

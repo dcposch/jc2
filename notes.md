@@ -20839,3 +20839,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - Next full round: 20260904T0000Z or critical trigger.
 
 ## 2026-09-03T13:04Z EVENT — launched `post-poly-census-grok46-20260903` (re-base every live target on the operative screen C_FULL_TREE_POLYNOMIAL_ODE; K = 16 ray and (d,e)-fixed ray under POLY; rigid 19; D = 108; D ≤ 200 residue by u_s × s_eff × two-point; new compiler target list) and `jet-edge-1612-sol56-20260903` (sibling §7.4: one source-faithful common-jet edge on Moh (16,12)). Lanes live: 7.
+
+## 2026-09-03T13:05Z EVENT — `t-ladder-sol56` sealed (30KB): T-LADDER FALSE as stated (explicit counterfamily P = H^p + U, Q = H with Θ(d) nonconstant digits, automorphisms at k = 0); the m2-descent §4.3 h-adic identity is wrong (corrected §3); (16,12) 17 → 10 and (15,10) 12-parameter stage confirmed, both exact loci EMPTY; pp.173–174 shedding confirms 17(dd). → AUDIT delta 17(ii). Consequence: no ladder/counting theorem gives (T); the ray's emptiness is the Appendix II datum — unchanged frontier. Lanes live: 6.
