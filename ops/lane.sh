@@ -77,11 +77,20 @@ seal_tool=$script_dir/seal.py
   echo "required seal tool missing: $seal_tool" >&2
   exit 2
 }
+# Process sandbox: macOS Seatbelt, or bubblewrap on Linux with the same
+# boundary (excluded tree masked, custody root and receipt read-only).
 sandbox_exec=/usr/bin/sandbox-exec
-[ -x "$sandbox_exec" ] || {
-  echo "the macOS process sandbox is required for external-model lanes: $sandbox_exec" >&2
+sandbox_kind=
+bwrap_exec=
+if [ -x "$sandbox_exec" ]; then
+  sandbox_kind=MACOS_SEATBELT
+elif [ "$(uname -s)" = Linux ] && command -v bwrap >/dev/null 2>&1; then
+  sandbox_kind=LINUX_BWRAP
+  bwrap_exec=$(command -v bwrap)
+else
+  echo "a process sandbox is required for external-model lanes: $sandbox_exec (macOS) or bwrap (Linux)" >&2
   exit 2
-}
+fi
 
 fallacy_bytes=$(wc -c < "$fallacy_file" | tr -d '[:space:]') || exit 2
 case "$fallacy_bytes" in
@@ -379,18 +388,40 @@ if [ "$prepared_prompt_sha" != "$prompt_sha" ] || \
   echo "hashed lane input changed while preparing model prompt; run refused" >&2
   exit 2
 fi
-if ! {
-  printf '%s\n' '(version 1)'
-  printf '%s\n' '(allow default)'
-  printf '%s\n' '(deny file-read* (literal (param "EXCLUDED_TREE")))'
-  printf '%s\n' '(deny file-read* (subpath (param "EXCLUDED_TREE")))'
-  printf '%s\n' '(deny file-write* (literal (param "EXCLUDED_TREE")))'
-  printf '%s\n' '(deny file-write* (subpath (param "EXCLUDED_TREE")))'
-  printf '%s\n' '(deny file-write* (subpath (param "CUSTODY_ROOT")))'
-  printf '%s\n' '(deny file-write* (literal (param "RUN_FILE")))'
-} > "$sandbox_profile"; then
-  echo "could not create external-model sandbox profile" >&2
-  exit 2
+if [ "$sandbox_kind" = MACOS_SEATBELT ]; then
+  if ! {
+    printf '%s\n' '(version 1)'
+    printf '%s\n' '(allow default)'
+    printf '%s\n' '(deny file-read* (literal (param "EXCLUDED_TREE")))'
+    printf '%s\n' '(deny file-read* (subpath (param "EXCLUDED_TREE")))'
+    printf '%s\n' '(deny file-write* (literal (param "EXCLUDED_TREE")))'
+    printf '%s\n' '(deny file-write* (subpath (param "EXCLUDED_TREE")))'
+    printf '%s\n' '(deny file-write* (subpath (param "CUSTODY_ROOT")))'
+    printf '%s\n' '(deny file-write* (literal (param "RUN_FILE")))'
+  } > "$sandbox_profile"; then
+    echo "could not create external-model sandbox profile" >&2
+    exit 2
+  fi
+else
+  # bwrap has no deny rules: the excluded tree is masked by an empty
+  # read-only directory, the custody root and receipt are bound read-only,
+  # and the rest of the filesystem (and the network) stay as they are.
+  # The profile file records the exact argument list for the receipt hash.
+  empty_mask_dir=$lane_tmp_dir/empty
+  mkdir "$empty_mask_dir" || exit 2
+  chmod 500 "$empty_mask_dir" || exit 2
+  bwrap_args="--dev-bind / /"
+  if [ -d "$excluded_tree" ]; then
+    bwrap_args="$bwrap_args --ro-bind $empty_mask_dir $excluded_tree"
+  fi
+  bwrap_args="$bwrap_args --ro-bind $lane_tmp_dir $lane_tmp_dir --ro-bind $run_path $run_path"
+  if ! {
+    printf '%s\n' "# bwrap $(bwrap --version 2>/dev/null | head -1)"
+    printf '%s\n' "$bwrap_args"
+  } > "$sandbox_profile"; then
+    echo "could not create external-model sandbox profile" >&2
+    exit 2
+  fi
 fi
 chmod 400 "$model_prompt_file" "$sandbox_profile" || exit 2
 sandbox_profile_sha=$(sha256_file "$sandbox_profile") || exit 2
@@ -408,7 +439,7 @@ basis=$(git rev-parse HEAD 2>/dev/null || echo UNKNOWN)
   echo "adapter_sha256=$adapter_sha"
   echo "launcher=ops/lane.sh"
   echo "launcher_sha256=$launcher_sha"
-  echo "sandbox_enforcement=MACOS_SEATBELT"
+  echo "sandbox_enforcement=$sandbox_kind"
   echo "sandbox_profile_sha256=$sandbox_profile_sha"
   echo "charge_basis_validator=ops/validate_charge_basis.py"
   echo "charge_basis_validator_sha256=$charge_validator_sha"
@@ -436,12 +467,20 @@ basis=$(git rev-parse HEAD 2>/dev/null || echo UNKNOWN)
   echo "initial_status=RUNNING"
 } > "$run_file"
 
-"$sandbox_exec" \
-  -D "EXCLUDED_TREE=$excluded_tree" \
-  -D "CUSTODY_ROOT=$lane_tmp_dir" \
-  -D "RUN_FILE=$run_path" \
-  -f "$sandbox_profile" \
-  sh "$adapter_script" "$model_prompt_file" > "$log_file" 2>&1 &
+if [ "$sandbox_kind" = MACOS_SEATBELT ]; then
+  "$sandbox_exec" \
+    -D "EXCLUDED_TREE=$excluded_tree" \
+    -D "CUSTODY_ROOT=$lane_tmp_dir" \
+    -D "RUN_FILE=$run_path" \
+    -f "$sandbox_profile" \
+    sh "$adapter_script" "$model_prompt_file" > "$log_file" 2>&1 &
+else
+  # $bwrap_args is a space-separated argument list of absolute paths
+  # without whitespace (mktemp and the repo root are both checked above).
+  # shellcheck disable=SC2086
+  "$bwrap_exec" $bwrap_args -- \
+    sh "$adapter_script" "$model_prompt_file" > "$log_file" 2>&1 &
+fi
 child_pid=$!
 echo "child_pid=$child_pid" >> "$run_file"
 wait "$child_pid"
