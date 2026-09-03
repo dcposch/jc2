@@ -16925,3 +16925,27 @@ s_eff = 2, u_s = 1, D ≤ 200, 17 groups / 18 rows): DEAD — (64,48) [Moh + 4 r
 OPEN — (147,98), (168,112), (189,126) [δ₁' = 0, honest charts pending chart-fix],
 (160,112) [K16 t = 3, gate pending], (125,75), (175,100), (175,125), (180,144), (192,128)
 [partial], (196,56), (200,120) [143–228-unknown strata].
+
+## INTEGRATION #17 DELTA (ww) (2026-09-03T16:18Z, PROMOTED): delta 17(ss)'s t = 3 kill gated by GPT-5.5 — THEOREM (T) AT t = 3 ON THE K = 16 RAY CONFIRMED: (40,28; 37; 3; J = cγ) SATURATED-EMPTY; the triangular / weighted-scaling / quadratic-field preprocessing audited as a COVERING reduction (no promotion gap); modular replays ×3; t = 4 replay MEASURED-MODULAR
+
+`k16-t3-gate-gpt55-20260903.md` (GPT-5.5; 11/11 hashes; Singular 4.3.2; box/k16t3-gate-
+20260903/). Replay: generator hash matches; tuple (40,28; 37, 3), (e, q) = (10, 7), Φ =
+(−1, 3/10), filtration dimensions [1,1,1,2,2,2,3,3,3,5], α = 21, β = 10, h = 4, c = 1 → 36
+unknowns, 51 equations, level histogram reproduced; the three modular programs match by
+SHA-256 and return [1] (48–63 s); the normalised quadratic-field programs match (fc2c5046…,
+7f92d0ca…) and return [1] (std 0.04 s, slimgb 0.57 s), empty stderr. COVERING ARGUMENT (§4,
+audited): the 37 residual rows are weighted-homogeneous (wt x = 13, y = 26, c = 65); on
+c ≠ 0 the first identity forces x ≠ 0; the weighted torus action (over the algebraic
+closure, λ¹³x = 1) is an automorphism of the locus, so x = 1 loses no point; y then
+satisfies H(y) = 147y² − 84y + 11 (discriminant 588, non-square) with c = 10y(2 − 21y)/343 —
+both conjugates are covered because the normalised system is written over K = Q[y]/(H) and
+emptiness over K is emptiness at both roots; y and 2 − 21y are units in K (H(0) = 11,
+H(2/21) = 13/3) so no pivot vanishes; 17 affine-linear eliminations with verified inverses;
+the final six generators in (b₃, b₄, a₂₀) reduce to [1]. Hence the original c-saturated
+order-chart ideal is the unit ideal over Q. Independent exact attempt on the original
+36-unknown system (§5): not completed within the window (recorded, not needed). t = 4:
+one modular replay at GF(32003) confirms [1] — MEASURED-MODULAR only. PROMOTED: (T) at
+t = 3, scope = the gauged K = 16 Theorem-1.2 order chart (necessary superset) on c ≠ 0,
+characteristic zero. STATUS of the ray: t = 1 (Moh), t = 2 (17(oo)), t = 3 (this delta) —
+three consecutive members dead by three different mechanical routes; t = 4 modular; all t:
+OPEN[T-UNIFORM-COEFFICIENT] (k16-uniform-structure lane running).

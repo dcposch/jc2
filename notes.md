@@ -20889,3 +20889,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T15:55Z EVENT — launched `chart-fix-d1zero-gpt55-20260903` (fix the support rule + level-1 ODE sanity gate; verify the five surviving kills; re-attack the three δ₁' = 0 rows via R3 / honest chart). Lanes live: 5.
 
 ## 2026-09-03T16:12Z EVENT — `strata-gate-gpt55` sealed (12KB): (132,88) and (180,120) descendants CONFIRMED over all strata; (75,50; V₂ = 2) and (84,56) RESTORED as licensed kills (full strata, incl. a subset certificate for [1,1,1]); support-rule criterion checked: none of the four is a slice; β-cap re-verification pending in chart-fix. → AUDIT delta 17(vv) PROMOTED-QUALIFIED. Two-point tally at D ≤ 200: 7 groups dead, 10 open. Lanes live: 4.
+
+## 2026-09-03T16:18Z EVENT — `k16-t3-gate-gpt55` sealed (13KB): CONFIRMED — (T) at t = 3 promoted; the weighted-scaling / quadratic-field preprocessing is a covering reduction (torus action is an automorphism of the locus; both conjugates covered; unit pivots). → AUDIT delta 17(ww). Ray status: t = 1, 2, 3 dead; t = 4 modular; uniform open. Lanes live: 3.
