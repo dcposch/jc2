@@ -1,0 +1,31 @@
+trio105.py -- PS-GROWTH forced-vanishing ranges
+================================================================================================
+
+## the D = 105 trio (V_2 = 1 throughout; the MAJOR-MULT hostages)
+group                              q       delta_1  d      e      cmax=q/e K0    K1    u     
+m=70 M=[28, 103] V=[(2, 1), (3, 5)] 1/2     7/12     2      3      1/6      4     10    25    
+     R_k == 0 for k = 0..4 ; R_k in C[c_2] for k = 5..10 ;  first k with deg_x R_k possibly > 0 : 11
+     trivial (degree) vanishing range: k*m <= n-2  <=>  k <= 1
+     bottom star (d,e,V_2) = (2,3,1) ; a_1 = 3, b_1 = 2 ; N = k_B*q for k_B = #bottom discs
+m=70 M=[28, 103] V=[(2, 1), (3, 6)] 9/13    11/26    2      3      3/13     3     7     30    
+     R_k == 0 for k = 0..3 ; R_k in C[c_2] for k = 4..7 ;  first k with deg_x R_k possibly > 0 : 8
+     trivial (degree) vanishing range: k*m <= n-2  <=>  k <= 1
+     bottom star (d,e,V_2) = (2,3,1) ; a_1 = 3, b_1 = 2 ; N = k_B*q for k_B = #bottom discs
+m=70 M=[40, 103] V=[(2, 1), (3, 4)] 9/17    19/34    2      3      3/17     4     10    28    
+     R_k == 0 for k = 0..4 ; R_k in C[c_2] for k = 5..10 ;  first k with deg_x R_k possibly > 0 : 11
+     trivial (degree) vanishing range: k*m <= n-2  <=>  k <= 1
+     bottom star (d,e,V_2) = (2,3,1) ; a_1 = 3, b_1 = 2 ; N = k_B*q for k_B = #bottom discs
+
+## how K0 grows with D over the (1)-(13) census (single-profile / (UNI) reading:
+   cmax = q, i.e. all bottom discs share one profile, so cmax = q/e)
+D      #groups  max K0     median K0  max K1     #K0>=2    
+48     1609     14         2          30         1508      
+60     4899     30         2          62         4689      
+72     16498    26         2.0        54         15901     
+84     13012    46         3.0        94         10934     
+96     131914   30         2.0        62         123392    
+105    7307     48         3          97         6452      
+108    87721    62         2          126        80645     
+112    49463    46         2          94         42111     
+117    1686     57         2.0        115        1364      
+120    521447   62         2          126        496403    

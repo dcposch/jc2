@@ -1,0 +1,34 @@
+leadcheck.py -- RESIDUE-LEAD predicted vs measured   (k <= 24)
+========================================================================================
+
+A1 (y,x+y^2)                     n=2   cmax=1/2     star (1,2,1) x nu=1  1/(e*nu)=1/2
+   predicted {k : PS-3 bound ATTAINED} = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]
+   measured  {k : PS-3 bound ATTAINED} = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]
+   measured  {k : R_k != 0}             = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]
+   deg_x R_k vs the PS-3 bound (k+1)cmax-1 on the surviving k: [(1, 0, '0', 'TIGHT'), (3, 1, '1', 'TIGHT'), (5, 2, '2', 'TIGHT'), (7, 3, '3', 'TIGHT'), (9, 4, '4', 'TIGHT'), (11, 5, '5', 'TIGHT'), (13, 6, '6', 'TIGHT'), (15, 7, '7', 'TIGHT'), (17, 8, '8', 'TIGHT'), (19, 9, '9', 'TIGHT'), (21, 10, '10', 'TIGHT'), (23, 11, '11', 'TIGHT')]
+
+A2 (y,x+y^3)                     n=3   cmax=1/3     star (1,3,1) x nu=1  1/(e*nu)=1/3
+   predicted {k : PS-3 bound ATTAINED} = [2, 5, 8, 11, 14, 17, 20, 23]
+   measured  {k : PS-3 bound ATTAINED} = [2, 5, 8, 11, 14, 17, 20, 23]
+   measured  {k : R_k != 0}             = [2, 5, 8, 11, 14, 17, 20, 23]
+   deg_x R_k vs the PS-3 bound (k+1)cmax-1 on the surviving k: [(2, 0, '0', 'TIGHT'), (5, 1, '1', 'TIGHT'), (8, 2, '2', 'TIGHT'), (11, 3, '3', 'TIGHT'), (14, 4, '4', 'TIGHT'), (17, 5, '5', 'TIGHT'), (20, 6, '6', 'TIGHT'), (23, 7, '7', 'TIGHT')]
+
+A4 (y,x+y^4)                     n=4   cmax=1/4     star (1,4,1) x nu=1  1/(e*nu)=1/4
+   predicted {k : PS-3 bound ATTAINED} = [3, 7, 11, 15, 19, 23]
+   measured  {k : PS-3 bound ATTAINED} = [3, 7, 11, 15, 19, 23]
+   measured  {k : R_k != 0}             = [3, 7, 11, 15, 19, 23]
+   deg_x R_k vs the PS-3 bound (k+1)cmax-1 on the surviving k: [(3, 0, '0', 'TIGHT'), (7, 1, '1', 'TIGHT'), (11, 2, '2', 'TIGHT'), (15, 3, '3', 'TIGHT'), (19, 4, '4', 'TIGHT'), (23, 5, '5', 'TIGHT')]
+
+A6 (y,x+y^6)                     n=6   cmax=1/6     star (1,6,1) x nu=1  1/(e*nu)=1/6
+   predicted {k : PS-3 bound ATTAINED} = [5, 11, 17, 23]
+   measured  {k : PS-3 bound ATTAINED} = [5, 11, 17, 23]
+   measured  {k : R_k != 0}             = [5, 11, 17, 23]
+   deg_x R_k vs the PS-3 bound (k+1)cmax-1 on the surviving k: [(5, 0, '0', 'TIGHT'), (11, 1, '1', 'TIGHT'), (17, 2, '2', 'TIGHT'), (23, 3, '3', 'TIGHT')]
+
+D15 (x+y^5,y+(x+y^5)^3)          n=15  cmax=1/15    star (1,3,1) x nu=5  1/(e*nu)=1/15
+   predicted {k : PS-3 bound ATTAINED} = [14]
+   measured  {k : PS-3 bound ATTAINED} = [14]
+   measured  {k : R_k != 0}             = [14, 17, 20, 23]
+   deg_x R_k vs the PS-3 bound (k+1)cmax-1 on the surviving k: [(14, 0, '0', 'TIGHT'), (17, 0, '1/5', 'slack'), (20, 0, '2/5', 'slack'), (23, 0, '3/5', 'slack')]
+
+10 checks, 0 failures

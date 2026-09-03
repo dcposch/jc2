@@ -1,0 +1,273 @@
+psgrowth.py -- PS-GROWTH exact checker.  sympy 1.12   K = 20
+==============================================================================
+
+############ POSITIVE CONTROLS: Keller pairs in Moh's gauge, n = 2..6
+
+== A1  (y, x+y^2)  n=2 ==  n=2 m=1  J=-1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/2', '1/2']
+   cmax = 1/2     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : None   <= 1/2     | None   <= -1/2    | 0
+    1 : 1      <= 1       | 0      <= 0       | 1
+    2 : None   <= 3/2     | None   <= 1/2     | 0
+    3 : 2      <= 2       | 1      <= 1       | c - x
+    4 : None   <= 5/2     | None   <= 3/2     | 0
+    5 : 3      <= 3       | 2      <= 2       | c**2 - 2*c*x + x**2
+    6 : None   <= 7/2     | None   <= 5/2     | 0
+    7 : 4      <= 4       | 3      <= 3       | c**3 - 3*c**2*x + 3*c*x**2 - x
+    8 : None   <= 9/2     | None   <= 7/2     | 0
+    9 : 5      <= 5       | 4      <= 4       | c**4 - 4*c**3*x + 6*c**2*x**2 
+   10 : None   <= 11/2    | None   <= 9/2     | 0
+   11 : 6      <= 6       | 5      <= 5       | c**5 - 5*c**4*x + 10*c**3*x**2
+   12 : None   <= 13/2    | None   <= 11/2    | 0
+   [0.8 s]
+
+== A2  (y, x+y^3)  n=3 ==  n=3 m=1  J=-1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/3', '1/3', '1/3']
+   cmax = 1/3     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : None   <= 1/3     | None   <= -2/3    | 0
+    1 : None   <= 2/3     | None   <= -1/3    | 0
+    2 : 1      <= 1       | 0      <= 0       | 1
+    3 : None   <= 4/3     | None   <= 1/3     | 0
+    4 : None   <= 5/3     | None   <= 2/3     | 0
+    5 : 2      <= 2       | 1      <= 1       | c - x
+    6 : None   <= 7/3     | None   <= 4/3     | 0
+    7 : None   <= 8/3     | None   <= 5/3     | 0
+    8 : 3      <= 3       | 2      <= 2       | c**2 - 2*c*x + x**2
+    9 : None   <= 10/3    | None   <= 7/3     | 0
+   10 : None   <= 11/3    | None   <= 8/3     | 0
+   11 : 4      <= 4       | 3      <= 3       | c**3 - 3*c**2*x + 3*c*x**2 - x
+   12 : None   <= 13/3    | None   <= 10/3    | 0
+   [0.4 s]
+
+== A3  (y, x+y^3+y^2)  n=3 ==  n=3 m=1  J=-1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/3', '1/3', '1/3']
+   cmax = 1/3     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : 0      <= 1/3     | None   <= -2/3    | 0
+    1 : 0      <= 2/3     | None   <= -1/3    | 0
+    2 : 1      <= 1       | 0      <= 0       | 1
+    3 : 1      <= 4/3     | 0      <= 1/3     | -1
+    4 : 1      <= 5/3     | 0      <= 2/3     | 1
+    5 : 2      <= 2       | 1      <= 1       | c - x - 1
+    6 : 2      <= 7/3     | 1      <= 4/3     | -2*c + 2*x + 1
+    7 : 2      <= 8/3     | 1      <= 5/3     | 3*c - 3*x - 1
+    8 : 3      <= 3       | 2      <= 2       | c**2 - 2*c*x - 4*c + x**2 + 4*
+    9 : 3      <= 10/3    | 2      <= 7/3     | -3*c**2 + 6*c*x + 5*c - 3*x**2
+   10 : 3      <= 11/3    | 2      <= 8/3     | 6*c**2 - 12*c*x - 6*c + 6*x**2
+   11 : 4      <= 4       | 3      <= 3       | c**3 - 3*c**2*x - 10*c**2 + 3*
+   12 : 4      <= 13/3    | 3      <= 10/3    | -4*c**3 + 12*c**2*x + 15*c**2 
+   [2.1 s]
+
+== A4  (y, x+y^4)  n=4 ==  n=4 m=1  J=-1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/4', '1/4', '1/4', '1/4']
+   cmax = 1/4     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : None   <= 1/4     | None   <= -3/4    | 0
+    1 : None   <= 1/2     | None   <= -1/2    | 0
+    2 : None   <= 3/4     | None   <= -1/4    | 0
+    3 : 1      <= 1       | 0      <= 0       | 1
+    4 : None   <= 5/4     | None   <= 1/4     | 0
+    5 : None   <= 3/2     | None   <= 1/2     | 0
+    6 : None   <= 7/4     | None   <= 3/4     | 0
+    7 : 2      <= 2       | 1      <= 1       | c - x
+    8 : None   <= 9/4     | None   <= 5/4     | 0
+    9 : None   <= 5/2     | None   <= 3/2     | 0
+   10 : None   <= 11/4    | None   <= 7/4     | 0
+   11 : 3      <= 3       | 2      <= 2       | c**2 - 2*c*x + x**2
+   12 : None   <= 13/4    | None   <= 9/4     | 0
+   [0.2 s]
+
+== A5  (y, x+y^5+3y^2)  n=5 ==  n=5 m=1  J=-1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/5', '1/5', '1/5', '1/5', '1/5']
+   cmax = 1/5     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : None   <= 1/5     | None   <= -4/5    | 0
+    1 : None   <= 2/5     | None   <= -3/5    | 0
+    2 : 0      <= 3/5     | None   <= -2/5    | 0
+    3 : None   <= 4/5     | None   <= -1/5    | 0
+    4 : 1      <= 1       | 0      <= 0       | 1
+    5 : 0      <= 6/5     | None   <= 1/5     | 0
+    6 : None   <= 7/5     | None   <= 2/5     | 0
+    7 : 1      <= 8/5     | 0      <= 3/5     | -3
+    8 : 0      <= 9/5     | None   <= 4/5     | 0
+    9 : 2      <= 2       | 1      <= 1       | c - x
+   10 : 1      <= 11/5    | 0      <= 6/5     | 9
+   11 : 0      <= 12/5    | None   <= 7/5     | 0
+   12 : 2      <= 13/5    | 1      <= 8/5     | -6*c + 6*x
+   [0.5 s]
+
+== A6  (y, x+y^6)  n=6 ==  n=6 m=1  J=-1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/6', '1/6', '1/6', '1/6', '1/6', '1/6']
+   cmax = 1/6     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : None   <= 1/6     | None   <= -5/6    | 0
+    1 : None   <= 1/3     | None   <= -2/3    | 0
+    2 : None   <= 1/2     | None   <= -1/2    | 0
+    3 : None   <= 2/3     | None   <= -1/3    | 0
+    4 : None   <= 5/6     | None   <= -1/6    | 0
+    5 : 1      <= 1       | 0      <= 0       | 1
+    6 : None   <= 7/6     | None   <= 1/6     | 0
+    7 : None   <= 4/3     | None   <= 1/3     | 0
+    8 : None   <= 3/2     | None   <= 1/2     | 0
+    9 : None   <= 5/3     | None   <= 2/3     | 0
+   10 : None   <= 11/6    | None   <= 5/6     | 0
+   11 : 2      <= 2       | 1      <= 1       | c - x
+   12 : None   <= 13/6    | None   <= 7/6     | 0
+   [0.1 s]
+
+== B4  (x+y^2, y+(x+y^2)^2)  n=4 m=2 ==  n=4 m=2  J=1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/4', '1/4', '1/4', '1/4']
+   cmax = 1/4     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : None   <= 1/4     | None   <= -3/4    | 0
+    1 : 0      <= 1/2     | None   <= -1/2    | 0
+    2 : 0      <= 3/4     | None   <= -1/4    | 0
+    3 : 1      <= 1       | 0      <= 0       | -1
+    4 : 0      <= 5/4     | None   <= 1/4     | 0
+    5 : 1      <= 3/2     | 0      <= 1/2     | -2*c
+    6 : 1      <= 7/4     | 0      <= 3/4     | -1
+    7 : 2      <= 2       | 1      <= 1       | -3*c**2 + x
+    8 : 1      <= 9/4     | 0      <= 5/4     | -4*c
+    9 : 2      <= 5/2     | 1      <= 3/2     | -4*c**3 + 4*c*x - 1
+   10 : 2      <= 11/4    | 1      <= 7/4     | -10*c**2 + 2*x
+   11 : 3      <= 3       | 2      <= 2       | -5*c**4 + 10*c**2*x - 6*c - x*
+   12 : 2      <= 13/4    | 1      <= 9/4     | -20*c**3 + 12*c*x - 1
+   [1.4 s]
+
+== B6  (x+y^2, y+(x+y^2)^3)  n=6 m=2  [degree-6 tame] ==  n=6 m=2  J=1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/6', '1/6', '1/6', '1/6', '1/6', '1/6']
+   cmax = 1/6     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : None   <= 1/6     | None   <= -5/6    | 0
+    1 : None   <= 1/3     | None   <= -2/3    | 0
+    2 : 0      <= 1/2     | None   <= -1/2    | 0
+    3 : None   <= 2/3     | None   <= -1/3    | 0
+    4 : 0      <= 5/6     | None   <= -1/6    | 0
+    5 : 1      <= 1       | 0      <= 0       | -1
+    6 : None   <= 7/6     | None   <= 1/6     | 0
+    7 : 0      <= 4/3     | None   <= 1/3     | 0
+    8 : 1      <= 3/2     | 0      <= 1/2     | -2*c
+    9 : 0      <= 5/3     | None   <= 2/3     | 0
+   10 : 1      <= 11/6    | 0      <= 5/6     | -1
+   11 : 2      <= 2       | 1      <= 1       | -3*c**2 + x
+   12 : 0      <= 13/6    | None   <= 7/6     | 0
+   [0.8 s]
+
+== C6  (x+y^3, y+(x+y^3)^2)  n=6 m=3 ==  n=6 m=3  J=1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/6', '1/6', '1/6', '1/6', '1/6', '1/6']
+   cmax = 1/6     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : None   <= 1/6     | None   <= -5/6    | 0
+    1 : 0      <= 1/3     | None   <= -2/3    | 0
+    2 : None   <= 1/2     | None   <= -1/2    | 0
+    3 : 0      <= 2/3     | None   <= -1/3    | 0
+    4 : 0      <= 5/6     | None   <= -1/6    | 0
+    5 : 1      <= 1       | 0      <= 0       | 1
+    6 : 0      <= 7/6     | None   <= 1/6     | 0
+    7 : 1      <= 4/3     | 0      <= 1/3     | 3*c
+    8 : 0      <= 3/2     | None   <= 1/2     | 0
+    9 : 1      <= 5/3     | 0      <= 2/3     | 6*c**2
+   10 : 1      <= 11/6    | 0      <= 5/6     | -1
+   11 : 2      <= 2       | 1      <= 1       | 10*c**3 + x
+   12 : 1      <= 13/6    | 0      <= 7/6     | -6*c
+   [1.0 s]
+
+############ CHARGED COMPOSITION (n = 15)
+
+== D15 (x+y^5, y+(x+y^5)^3)  n=15 m=5  [charged composition] ==  n=15 m=5  J=1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/15', '1/15', '1/15', '1/15', '1/15', '1/15', '1/15', '1/15', '1/15', '1/15', '1/15', '1/15', '1/15', '1/15', '1/15']
+   cmax = 1/15     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+    0 : None   <= 1/15    | None   <= -14/15  | 0
+    1 : None   <= 2/15    | None   <= -13/15  | 0
+    2 : 0      <= 1/5     | None   <= -4/5    | 0
+    3 : None   <= 4/15    | None   <= -11/15  | 0
+    4 : None   <= 1/3     | None   <= -2/3    | 0
+    5 : 0      <= 2/5     | None   <= -3/5    | 0
+    6 : None   <= 7/15    | None   <= -8/15   | 0
+    7 : None   <= 8/15    | None   <= -7/15   | 0
+    8 : 0      <= 3/5     | None   <= -2/5    | 0
+    9 : None   <= 2/3     | None   <= -1/3    | 0
+   10 : None   <= 11/15   | None   <= -4/15   | 0
+   11 : 0      <= 4/5     | None   <= -1/5    | 0
+   12 : None   <= 13/15   | None   <= -2/15   | 0
+   [0.4 s]
+
+############ VACUITY GUARD: understate cmax and demand a violation
+
+== A2  (y, x+y^3)  n=3 ==  n=3 m=1  J=-1  Keller=True  gauge=True
+   {-ord_t f(tau_i)} = ['1/3', '1/3', '1/3']
+   cmax = 1/3     N (= sum of positive parts) = 1
+   k : deg_x P_{k+1} <= (k+1)cmax | deg_x R_k <= (k+1)cmax-1 | R_k
+   vacuity guard: understated cmax = 1/5 violated first at k = 2
+   [0.1 s]
+
+############ NEGATIVE CONTROLS: non-Keller pairs must FAIL PS-1
+
+== NK1 (y, y^2+xy+x)  J = -(1+y) ==  n=2 m=1  J=-y - 1
+   cmax = 1   (from chi's Newton polygon)
+   PS-1 (with a constant J) first REFUTED at k = 0
+   PS-3 (deg_x R_k <= (k+1)cmax - 1) first VIOLATED at None
+
+== NK2 (y^2-x, x+y^3)  J = 3y^2+2y ==  n=3 m=2  J=-3*y**2 - 2*y
+   cmax = 1   (from chi's Newton polygon)
+   PS-1 (with a constant J) first REFUTED at k = 0
+   PS-3 (deg_x R_k <= (k+1)cmax - 1) first VIOLATED at None
+
+== TT0 two-tower row 0 (m=2,n=3) ==  n=3 m=2  J=2*x**3 - 5*x**2*y + 85*x**2 + 4*x*y**2 - 108*x*y + 444*x - y**3 + 37*y**2 - 276*y + 616
+   cmax = 3/2   (from chi's Newton polygon)
+   PS-1 (with a constant J) first REFUTED at k = 0
+   PS-3 (deg_x R_k <= (k+1)cmax - 1) first VIOLATED at None
+
+== TT6 two-tower row 6 (m=4,n=6) ==  n=6 m=4  J=756*x**7 - 3420*x**6*y - 72*x**6 + 6561*x**5*y**2 + 432*x**5*y + 81*x**5 - 6966*x**4*y**3 - 702*x**4*y**2 - 324*x**4*y - 594*x**4 + 4455*x**3*y**4 + 360*x**3*y**3 + 432*x**3*y**2 + 504*x**3*y - 324*x**3 - 1728*x**2*y**5 + 66*x**2*y**4 - 216*x**2*y**3 + 216*x**2*y + 378*x*y**6 - 108*x*y**5 + 36*x*y**4 - 72*x*y**3 - 36*y**7 + 24*y**6
+   cmax = 3   (from chi's Newton polygon)
+   PS-1 (with a constant J) first REFUTED at k = 0
+   PS-3 (deg_x R_k <= (k+1)cmax - 1) first VIOLATED at None
+
+############ OPEN[PS-VACUITY] SUMMARY   (k <= 20)
+   pair                                           n     m     cmax    N   
+   A1  (y, x+y^2)  n=2                            2     1     1/2     1   
+        R_k == 0 for k in [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+        R_k a nonzero CONSTANT in x for k in [1]
+        first k with deg_x R_k > 0 : 3
+   A2  (y, x+y^3)  n=3                            3     1     1/3     1   
+        R_k == 0 for k in [0, 1, 3, 4, 6, 7, 9, 10, 12, 13, 15, 16, 18, 19]
+        R_k a nonzero CONSTANT in x for k in [2]
+        first k with deg_x R_k > 0 : 5
+   A3  (y, x+y^3+y^2)  n=3                        3     1     1/3     1   
+        R_k == 0 for k in [0, 1]
+        R_k a nonzero CONSTANT in x for k in [2, 3, 4]
+        first k with deg_x R_k > 0 : 5
+   A4  (y, x+y^4)  n=4                            4     1     1/4     1   
+        R_k == 0 for k in [0, 1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 14, 16, 17, 18, 20]
+        R_k a nonzero CONSTANT in x for k in [3]
+        first k with deg_x R_k > 0 : 7
+   A5  (y, x+y^5+3y^2)  n=5                       5     1     1/5     1   
+        R_k == 0 for k in [0, 1, 2, 3, 5, 6, 8, 11]
+        R_k a nonzero CONSTANT in x for k in [4, 7, 10, 13, 16]
+        first k with deg_x R_k > 0 : 9
+   A6  (y, x+y^6)  n=6                            6     1     1/6     1   
+        R_k == 0 for k in [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 20]
+        R_k a nonzero CONSTANT in x for k in [5]
+        first k with deg_x R_k > 0 : 11
+   B4  (x+y^2, y+(x+y^2)^2)  n=4 m=2              4     2     1/4     1   
+        R_k == 0 for k in [0, 1, 2, 4]
+        R_k a nonzero CONSTANT in x for k in [3, 5, 6, 8]
+        first k with deg_x R_k > 0 : 7
+   B6  (x+y^2, y+(x+y^2)^3)  n=6 m=2  [degree-6 t 6     2     1/6     1   
+        R_k == 0 for k in [0, 1, 2, 3, 4, 6, 7, 9, 12]
+        R_k a nonzero CONSTANT in x for k in [5, 8, 10, 13, 15, 18]
+        first k with deg_x R_k > 0 : 11
+   C6  (x+y^3, y+(x+y^3)^2)  n=6 m=3              6     3     1/6     1   
+        R_k == 0 for k in [0, 1, 2, 3, 4, 6, 8]
+        R_k a nonzero CONSTANT in x for k in [5, 7, 9, 10, 12, 14]
+        first k with deg_x R_k > 0 : 11
+   D15 (x+y^5, y+(x+y^5)^3)  n=15 m=5  [charged c 15    5     1/15    1   
+        R_k == 0 for k in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 18, 19]
+        R_k a nonzero CONSTANT in x for k in [14, 17, 20]
+        first k with deg_x R_k > 0 : None
+
+==============================================================================
+1495 checks, 0 failures

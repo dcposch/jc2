@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete and sealed. **1,659 exact checks over ℚ, 0 failures.**
+
+## What the lane found
+
+**(1) The identities are true and two are stronger than charged.** PS-0/PS-1/PS-2/PS-3/TRACE-CONSTANCY proved with hypotheses separated into (MON) monic, (SEP) generic c₂, (KEL) Keller, (GAU) Moh's gauge — PS-2 needs no Keller; PS-1′ (`dP_{k+1}/dx = (k+1)[y^{n−1}](J f^k)`) needs no hypothesis on J at all, Keller only pulls J out. PS-1 is the equality of mixed partials of `log χ` (verified independently to order T⁻⁹).
+
+**(2) THEOREM RESIDUE-LEAD — the leading coefficient, computed.** At a bottom-major disc, `S_k = Σ p_f(π_i)^k/p_g'(π_i) = (d/κ)·p̃_{k+1}` via BOTTOM-ODE: the leading x-term of R_k is a PS-GROWTH power sum *one level down*, for the Davenport–Stothers pair. Predicted `{k : PS-3 attained}` = measured, 5/5 pairs including the charged degree-15 composition.
+
+**(3) The residue lower bound cannot exist as posed — this kills the route.** PS-3 is *attained* whenever `(k+1)c_max ∈ ℤ` and `p̃_{k+1} ≠ 0`. A bound that is attained is a computation, not a constraint. The `Θ(km)` premise is refuted by witness: `(x+y⁵, y+(x+y⁵)³)` is Keller with `deg_x R_k = 0` for all k ≤ 20 while km = 100. Its forced-vanishing range (13) is *longer* than the D=105 trio's (4).
+
+**(4) The trio is untouched, and no DS contradiction arises.** R₂=R₃=R₄≡0 is forced by exponent arithmetic, not coefficient cancellation — the (2,3,1) star's `p̃_j ≠ 0` for every j ≥ 2. Charge (3)(c): **NO**.
+
+**(5) RES-DEGREE as charged is false** (witness `g = y³+xy, f = y+1`: Σ(1−δ⁰) = 0, deg_x Res = 1), and the ORTHO-DEFECT kill test collapses — both sides price N.
+
+**Reading:** shape constraint on (e, q_max), structurally incapable of D ≤ C(N) since K = gcd(m,n) is invisible to the family. Surviving value: a tree-free exact certificate for c_max off one resultant, plus EXPERIMENT NEXT-COEFF (1 h) which would re-base the interpolation program onto resultant coefficients over ℚ.
+
+Two things I caught and retracted in-lane: my own `sympy.solve` driver reported "no (2,3,2) star exists" — a solver artefact (saturated Gröbner shows one exists, as do all 12 census-relevant types); and the report withdraws the ideation's "PIN-NOT-CEILING is over-applied" claim on this lane's own measurements.
+DIVERT path=xmodel/ps-growth-opus5-20260903.md status=DIVERTED body_bytes=45388 body_sha256=9ef022e87f7f0193861e667a6bdaf22df58c4200cafe0d96c73122291e5c3e83 overflow=xmodel/ps-growth-opus5-20260903.overflow overflow_bytes=533 raw=xmodel/ps-growth-opus5-20260903.raw.md raw_sha256=a4ea98cf2a1e2bbcf872b763863d7304b0ae890c8734b0e7b2b0c46073a02559 overflow_sha256=c958081cc07ac2627b4a19f5b3b83876c8678091812caa61983076ee6facb20a
+post-BODY-END overflow diverted; charged body preserved

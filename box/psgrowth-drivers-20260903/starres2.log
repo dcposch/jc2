@@ -1,0 +1,41 @@
+starres2.py -- RESIDUE-LEAD via saturated Groebner.  sympy 1.12
+================================================================================
+
+-- controls on the vanishing test
+
+== bottom star (d,e,V_2) = (1,2,1):  a_1 = deg p_g = 2, b_1 = deg p_f = 1,  gamma = V(de-d-e)+1 = 0
+   ptilde_j = sum_{p_g(pi)=0} p_f(pi)^j  vanishes IDENTICALLY on the star variety
+     for j in [1, 3, 5, 7, 9, 11]   (j <= 12);  NONZERO (generically) for j in [2, 4, 6, 8, 10, 12]
+   => per-disc leading coefficient S_k = (d/kappa) ptilde_{k+1} is generically
+      NONZERO for k in [1, 3, 5, 7, 9, 11] ,  identically ZERO for k in [0, 2, 4, 6, 8, 10]
+   [0.4 s]
+
+== bottom star (d,e,V_2) = (1,3,1):  a_1 = deg p_g = 3, b_1 = deg p_f = 1,  gamma = V(de-d-e)+1 = 0
+   ptilde_j = sum_{p_g(pi)=0} p_f(pi)^j  vanishes IDENTICALLY on the star variety
+     for j in [1, 2, 4, 5, 7, 8, 10, 11]   (j <= 12);  NONZERO (generically) for j in [3, 6, 9, 12]
+   => per-disc leading coefficient S_k = (d/kappa) ptilde_{k+1} is generically
+      NONZERO for k in [2, 5, 8, 11] ,  identically ZERO for k in [0, 1, 3, 4, 6, 7, 9, 10]
+   [0.7 s]
+
+== bottom star (d,e,V_2) = (1,4,1):  a_1 = deg p_g = 4, b_1 = deg p_f = 1,  gamma = V(de-d-e)+1 = 0
+   ptilde_j = sum_{p_g(pi)=0} p_f(pi)^j  vanishes IDENTICALLY on the star variety
+     for j in [1, 2, 3, 5, 6, 7, 9, 10, 11]   (j <= 12);  NONZERO (generically) for j in [4, 8, 12]
+   => per-disc leading coefficient S_k = (d/kappa) ptilde_{k+1} is generically
+      NONZERO for k in [3, 7, 11] ,  identically ZERO for k in [0, 1, 2, 4, 5, 6, 8, 9, 10]
+   [1.1 s]
+
+== bottom star (d,e,V_2) = (1,6,1):  a_1 = deg p_g = 6, b_1 = deg p_f = 1,  gamma = V(de-d-e)+1 = 0
+   ptilde_j = sum_{p_g(pi)=0} p_f(pi)^j  vanishes IDENTICALLY on the star variety
+     for j in [1, 2, 3, 4, 5, 7, 8, 9, 10, 11]   (j <= 12);  NONZERO (generically) for j in [6, 12]
+   => per-disc leading coefficient S_k = (d/kappa) ptilde_{k+1} is generically
+      NONZERO for k in [5, 11] ,  identically ZERO for k in [0, 1, 2, 3, 4, 6, 7, 8, 9, 10]
+   [1.5 s]
+
+== bottom star (d,e,V_2) = (2,3,1):  a_1 = deg p_g = 3, b_1 = deg p_f = 2,  gamma = V(de-d-e)+1 = 2
+   ptilde_j = sum_{p_g(pi)=0} p_f(pi)^j  vanishes IDENTICALLY on the star variety
+     for j in [1]   (j <= 12);  NONZERO (generically) for j in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+   => per-disc leading coefficient S_k = (d/kappa) ptilde_{k+1} is generically
+      NONZERO for k in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] ,  identically ZERO for k in [0]
+   [15.3 s]
+
+== bottom star (d,e,V_2) = (2,3,2):  a_1 = deg p_g = 6, b_1 = deg p_f = 4,  gamma = V(de-d-e)+1 = 3

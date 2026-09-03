@@ -15764,3 +15764,59 @@ must consume a datum outside the scalar skeleton. Geometric realisation of
 either ray is NOT claimed (OPEN[STAR-REALISABILITY]; OPEN[SECOND-RAY-GEOM]:
 D = 54, 117, 180, 243 through the moment engine; OPEN[SOL-CARD2-RETYPE]:
 the fixed-N laboratory moves to the A₂ = 6 ray).
+
+## INTEGRATION #17 DELTA (o) (2026-09-03T11:09Z, PROVED-HERE/UNREVIEWED + MEASURED; NEGATIVE READING): PS-GROWTH / TRACE-CONSTANCY — THE IDENTITY FAMILY IS TRUE AND IS NOT A CEILING ROUTE; RESIDUE-LEAD; A TREE-FREE c_max CERTIFICATE
+
+`ps-growth-opus5-20260903.md` (Opus flagship; drivers
+box/psgrowth-drivers-20260903/, 1495 + 10 + 32 + 14 + 108 exact checks, 0
+failures; review pending — GPT-5.5/Grok gate launched). PROVED-HERE (exact
+hypotheses separated: (MON) g monic in y; (SEP) generic c; (KEL) J ∈ C*;
+(GAU) Moh's gauge): PS-0 (P_k = Tr_{A/R}(f^k) ∈ C[x,c], A = R[y]/(g − c)
+free); LEMMA EJ (Tr(h/g_y) = [y^{n−1}](h mod (g − c))); PS-1' with NO
+hypothesis on J: dP_{k+1}/dx = (k+1)[y^{n−1}](J f^k mod (g − c)) — PS-1 is the
+equality of mixed partials of log χ, χ = Res_y(g − c, T − f), via the
+generating functions Σ P_k T^{−k−1} = ∂_T log χ and Σ R_k T^{−k−1} =
+−(1/J)∂_x log χ; PS-1c: dP_k/dc = [y^{n−1}]((f^k)_y mod (g − c)); PS-2
+(deg_x P_{k+1} ≤ (k+1)c_max, c_max = max_i γ_f(τ_i)⁺, no Keller); PS-3 and
+PS-3+ (deg_x R_k ≤ ⌊(k+1)c_max⌋ − 1; R_k ≡ 0 when (k+1)c_max < 1; direct proof
+via JAC-FIBRE ord_t g_y = c(τ) − 1 at proper branches); TRACE-CONSTANT (P_1
+x-independent: a Keller test at k = 0 — refutes all four non-Keller controls);
+TRACE-CONSTANCY; PS-3-SHARP from D1-PIN: c_max = q_max/e (NOT ≤ d/(d+e):
+that needs δ₁ ≥ 0, SOURCE-UNVERIFIED and FALSE on the automorphism controls —
+OPEN[DELTA1-SIGN]); THEOREM RESIDUE-LEAD: the bottom-disc leading coefficient
+of R_k is S_k = Σ_{p_g(π)=0} p_f(π)^k/p_g'(π) = (d/κ)·p̃_{k+1}, the (k+1)-st
+power sum of the Davenport–Stothers bottom star (verified: predicted =
+measured attainment set on 5 Keller pairs incl. the degree-15 composition);
+the leading term is set by the BOTTOM star, s − 1 levels below the initial
+forms; across a Galois orbit the top term survives only if
+1 − (k+1)c_max ∈ Z. NEGATIVE READING (the point): PS-3 is generically ATTAINED
+(RESIDUE-LEAD + p̃_{k+1} ≠ 0 — for the trio's (2,3,1) star p̃_j = 3^{−j}((−2)^j
++ 2) ≠ 0 for all j ≥ 2), so no "residue lower bound" deg_x R_k ≥ φ(k,m,n) with
+φ > (k+1)c_max − 1 can exist (witnesses: the automorphisms, c_max = 1/15);
+the premise "deg_x R_k = Θ(km) generically" is REFUTED by (x + y⁵, y + (x + y⁵)³)
+(R_k ≡ 0 for k ≤ 13, deg_x R_k = 0 for k ≤ 20); every quantity in the family
+is a function of (m, n, q_max, e) — K = gcd(m, n) is invisible and D = Ke —
+so even a perfect residue floor gives e ≤ N(ψ + 1), never D ≤ C(N): PS-GROWTH
+is a SHAPE CONSTRAINT on (e, q_max), vacuous on the frontier (e ∈ {3,5});
+"PIN-NOT-CEILING is over-applied" (Opus round submission §2.1) is WITHDRAWN.
+D = 105 group A: R_0..R_4 ≡ 0 and R_5..R_10 ∈ C[c₂] (the charge's K1 was off
+by one) — forced by exponent arithmetic alone, contradicting nothing. RES-DEGREE
+as charged is REFUTED (witness g = y³ + xy, f = y + 1); the true forms are
+deg_x Res_y(g − c₂, f − c₁) = N (= FRONTIER-N restated) and deg_x Res_y(g − c₂,
+f) = N − shed₀ with shed₀ = Σ_{non-proper} ord_t f(τ) ≥ 0 (not Σ(1 − δ⁰)⁻); the
+"ORTHO-DEFECT minus RES-DEGREE" kill test COLLAPSES (both sides are N);
+OPEN[RES-SHED] RETYPED, not answered. OPEN[PS-VACUITY] CLOSED (R_k not
+identically zero; long vanishing ranges are what Keller pairs with many
+conjugate bottom discs look like — max K0 grows with D by divisor structure,
+median 2–3). ALL twelve census-relevant (d, e, V) bottom stars EXIST
+(saturated Gröbner; a sympy.solve artefact claiming "no (2,3,2) star" was
+caught and retracted) — so MAJOR-MULT does not follow from star existence.
+SURVIVING VALUE: (a) c_max and the whole multiset {γ_f(τ_i)} are read off the
+Newton polygon of χ = Res_y(g − c, T − f) w.r.t. ord_t — no tree, no Puiseux
+expansion, no exponent semigroup (on the composition: c_max = 1/15, {1/15}¹⁵,
+reproducing exact-n-rigidity §6(c)); (b) EXPERIMENT NEXT-COEFF: if the
+order-(k+1)c_max − 1 − j coefficient of R_k sees tower level j only, the
+n − m − 1 trace identities become resultant coefficients over Q and the
+global-interpolation engine re-bases onto exact polynomial algebra (lane
+launched). Do NOT charge any lane with RESIDUE-FLOOR in the form
+deg_x R_k ≥ φ(k, m, n).
