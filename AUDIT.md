@@ -17014,3 +17014,32 @@ Xu's δ = 5/2 split; counterexample side = lift the branch-B face family (or Xu'
 an actual Keller pair of degrees (99,66); (3) the u_s > 1 stratum is not "Moh's residue"
 but the frontier of the published theory. Lanes launched: xu9966-read-gpt55 (source-read
 Xu §8 against our skeleton), moh9966-B-lift-sol56 (the full lift computation).
+
+## INTEGRATION #17 DELTA (zz) (2026-09-03T16:48Z, SOURCE-READ EXTERNAL, producer GPT-5.5): XU §8 FULLY ENUMERATED — the exact open set for (99,66) is (a) the δ = 5/2 principal-minor split with p(π) = π(π² − c), q = p¹⁰q₁, deg q₁ = 10, reduced Jacobian equation ∂(q₁(π), p(π)t^{−1/2})/∂(t,π) = −p(π)⁴t^{−3/2} solved by q₁ = −2∫p³ ("can hold for any p"), and (b) the full lift of Moh's δ = 2 two-root branch; everything else is excluded by Xu (denominator ≤ u_s = 3 + Jacobian ODE (7.1); Corollary 7.5 for three roots; no child split in 2 < δ < 3); NEW CAMPAIGN TOOL: Xu's final-root intersection inequalities (Theorems 3.4, 4.7, 5.1; IM ≥ Im), which exclude one (75,50) split and (84,56; M₂ = 64; V₂ = 2) at skeleton level; p.202 misprint (bracketed (75,50) subcase has δ₁ = 2/3)
+
+`xu9966-read-gpt55-20260903.md` (GPT-5.5; 7/7 hashes; box/xu9966-20260903/ with page
+images of Xu pp.12–13 and Moh pp.202, 209, 210). Xu p.12: three claims would justify Moh's
+p.209 discussion — (i) principal minor roots split only at π-root order δ = 2; (ii) at δ = 2,
+g_σ cannot have three roots; (iii) in the δ = 2 [18,9] case the double packet does not split
+before final; Xu proves (ii), (iii) and leaves one exception to (i) open. Data: n = 99, m = 66,
+M₂ = 77, M₃ = 97, V = (8,8), δ₂ = 1/3, δ₁ = 4/9, −μ₂ = 55, −μ₃ = 145; for a principal-minor
+π-root of order δ: f(σ) = p⁶t^{6(−8+3δ)}, g(σ) = p⁹t^{9(−8+3δ)}, T₂(σ) = p⁵t^{5(−8+3δ)},
+(T₃)_f(σ) = p²²t^{22(−8+3δ)}, T₃(σ) = q·t^{13(−8+3δ)−1+δ}, deg p = 3, deg q = 40 (at δ = 2:
+ord T₃ = −25, matching today's radius-two R). SPLIT TABLE: δ ∉ {2, 5/2} with denominator ≤ 3
+— excluded by ODE (7.1) (q = p¹³(π − c) then (7.1) fails); δ = 2 three roots — excluded by
+Cor. 7.5 ((v_s+1)/(u_s+1) = 9/4 < ... forbids u_s = 3 distinct roots); δ = 2 two roots [2,1],
+packets 18 + 9 — NOT excluded (identity (8.2)); child split 2 < δ < 3 inside the double
+packet — excluded (deg p = 2, deg q = 25, zero Jacobian determinant, gcd(12,18,10,25) = 1);
+δ = 5/2 — OPEN as above. Xu does not use the final-root inequalities for (99,66). TYPED
+STATUS: NOT-PROVED "no Keller pair with the (99,66) skeleton"; EXCLUDED[Xu]: other orders,
+three roots, child splits; EXCLUDED[today]: A predecessor, C at radius two; OPEN: δ = 5/2
+full lift; branch B full Ω lift; A's bridge. OTHER XU RESULTS: (75,50) split case (ii)
+excluded by Im = 6 > IM = 4; (84,56; M₂ = 64; V₂ = 2) excluded by Im = 5 > IM = 4 (a
+SKELETON-LEVEL kill of a Moh-table row by a tool the campaign lacked); (84,56; M₂ = 72;
+V₂ = 5) not excluded (Im = 4 ≤ IM = 10); Theorem 3.4 exact split-root formula I(f_ξ, f_y) =
+−Σ(e(f_σ) − 1)λ_σ; Theorem 4.7 final-minor inequalities; Theorem 5.1 I(f_ξ, g) from final
+major roots; §7.3 principal-minor multiplicities via effective quasi-approximate roots
+and the characteristic δ-sequence. QUEUED (seats full): (1) the δ = 5/2 full lift (p = π(π²
+− c), q₁ = −2∫p³ explicit — a small, concrete Appendix-II-type computation); (2) implement
+Xu's IM ≥ Im inequalities as a skeleton screen on the operative census (in particular on
+the 177 u_s > 1 groups).
