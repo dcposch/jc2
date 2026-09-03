@@ -16674,3 +16674,20 @@ K = 16 ray is now empty at t = 1 (Moh) and t = 2 (this lane, PROVISIONAL). Cross
 running: appendix2-run-k16-grok46 (independent chart, compiler); gate launched:
 k16-t2-gate-gpt55 (replay the 7,315-byte program; audit the superset claim and the three
 gauges). Not a critical trigger by the standing rule (needs uniform-in-t or a SURVIVES).
+
+## INTEGRATION #17 DELTA (nn) (2026-09-03T13:36Z, PROVED-HERE method result, producer Sol): ONE SOURCE-FAITHFUL COMMON-JET EDGE on Moh's (16,12) — the exact D₂ → D₁ transition (0.1) in the common ramification u = t^{1/4}; a lower child coefficient is determined by the parent node plus the retained common band (0.2), not by the parent leading polynomial; the covariant ζ₄-action matrix (0.3); typed general edge recipe; readiness for (90,60)/D = 108
+
+`jet-edge-1612-sol56-20260903.md` (Sol, 15KB; box/jetedge-20260903/; pages 208–209). With
+Moh's literal common (ḡ, f̄, h) of p.208 and u = t^{1/4}: in_M h = −P³, in_M ḡ = P¹² − c₁P⁸ +
+c₅P⁴ − c₁₃, in_M f̄ = −P⁹ + c₃P⁵ − c₉P — formula (3.5) of the sibling report, not a Taylor
+expansion of stripped parent p, q; the active non-leading entries are the common-jet
+variables (c₁, c₃, c₅, c₉, c₁₃); [P⁸] in_M ḡ = −c₁ = [X⁸]G₅(X): one lower child coefficient
+is determined by parent node + common band. Action: (P, P*) ↦ diag(ζ, ζ³)(P, P*); character
+matrix diag(1, ζ, 1, ζ) on (g_M, f_M, g*, f*). Matched term-for-term to the charged local
+positive family before elimination; largest elimination 7 variables, 0.008 s; bottom-chart
+localisation nonunit; elimination recovers ρ² = 6. NOT CLAIMED: a global witness, an exit
+price, a minor-child ODE; (90,60)/D = 108 not run. Reading: OPEN[SOURCE-JET-GLUING] has a
+worked instance and a typed recipe (§7); §8 compares with Appendix II's π^{-1}-tail — the
+descended compiler already consumes the common band through the approximate root, which is
+why it discriminates where node-local engines do not. Allocation: the edge recipe is the
+tool for u_s > 1 rows (no descent) — queue "(99,66) edge" as the MINOR-DICHOTOMY probe.
