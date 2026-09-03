@@ -20859,3 +20859,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T13:49Z EVENT — `minor-dichotomy-opus5-v2` FAILED again (API 529 Overloaded; Opus seat unavailable right now — coordinator probe also hung). Handed to Grok: `minor-dichotomy-grok46-20260903`. Opus seats: avoid until the overload clears.
 
 ## 2026-09-03T13:50Z EVENT — `k16-t2-gate-gpt55` sealed (13KB): CONFIRMED — byte-exact replay of the certificate AND an independent chart derivation both return [1]; precise theorem and scope stated. → AUDIT delta 17(oo) PROMOTED (t = 2). Lanes live: 3 (appendix2-run-k16, k16-t3-uniform, minor-dichotomy-grok46).
+
+## 2026-09-03T13:51Z EVENT — launched `twopoint-batch-gpt55-20260903`: the Theorem-1.2 order chart on all 17 two-point s_eff = 2 u_s = 1 groups at D ≤ 200 (Moh rows as controls). If all die, the two-point stratum of the operative residue at D ≤ 200 is closed. Lanes live: 4.
