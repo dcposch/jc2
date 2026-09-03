@@ -20951,3 +20951,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T18:54Z EVENT — `r3-preprocess-gpt55` sealed (9KB): the three δ₁' = 0 rows stay OPEN at level 1 (R3 not triangular; r ≥ 5 excluded, r = 4 modular-empty, r ≤ 3 open). → AUDIT delta 17(lll). Queued behind the native emitter. Lanes live: 8.
 
 ## 2026-09-03T18:55Z EVENT — `g9966-hurwitz-fable5` sealed (17KB): the fibre Riemann–Hurwitz identity is tree-DETERMINED (≡ plane-curve genus formula) — no kill; g_c = 7 on both (99,66) branches; N = IM = 16 proved. → AUDIT delta 17(mmm). Lanes live: 7.
+
+## 2026-09-03T19:03Z EVENT — `g9966-review-gate-grok46` sealed (14KB): facts (1), (2) CONFIRMED; (3) confirmed as the (4.3)/Thm 3.4 identity, with a labelling GAP (not Thm 4.7(i)); the decider's ansatz is NOT a slice; N5 (den(δ) ≤ u_s) is SOURCE-ASSERTED — a one-page derivation queued. → AUDIT delta 17(nnn) PROMOTED. Lanes live: 6.

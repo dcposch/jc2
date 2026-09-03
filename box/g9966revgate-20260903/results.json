@@ -1,0 +1,541 @@
+{
+ "skeleton": {
+  "n": 99,
+  "m": 66,
+  "M": {
+   "1": -66,
+   "2": 77,
+   "3": 97
+  },
+  "d": {
+   "1": 99,
+   "2": 33,
+   "3": 11,
+   "4": 1
+  },
+  "v_s": 8,
+  "u_s": 3,
+  "d_s": 11,
+  "minus_mu": {
+   "0": 99,
+   "1": 66,
+   "2": 55,
+   "3": 145
+  },
+  "delta_major": {
+   "3": "-1",
+   "2": "1/3",
+   "1": "4/9"
+  }
+ },
+ "p190_dichotomy": {
+  "threshold": "11/2",
+  "V3_table_is_major": true,
+  "u_s_is_minor": true
+ },
+ "p194_delta2_major": {
+  "value": "1/3",
+  "matches_p202": true
+ },
+ "fact1_order_identity": {
+  "four_forms_agree": true,
+  "closed_form": "(n/d_s)(u_s*delta - v_s) = 9(3*delta-8)",
+  "V_r_used": "u_s=3 (minor factor), NOT table V_3=8",
+  "ord_g_delta_1": "-45",
+  "matches_prop62_p195": true,
+  "ord_g_delta_2": "-18",
+  "ord_g_delta_52": "-9/2",
+  "ceiling": "ord g < 0  <=>  delta < v_s/u_s = 8/3",
+  "major_V3_would_give": "117",
+  "hypotheses": [
+   "g monic in y, deg_y = n > 1",
+   "r=s=3, tower is the single major disc D_s of radius delta_s=-1",
+   "pi-c_s factor of p(pi) (Prop 4.6) with multiplicity V_r=u_s=3",
+   "minor test d_s/(n-M_s)=11/2 >= V_r=3 >= 1  (p.190 / Prop 6.1 hyp)",
+   "sigma a pi-root of g * prod_{i<s} T_i^psi with ord(sigma-tau)>delta_s",
+   "highest form [(y-ax)^{v_s}(y-bx)^{u_s}]^{n/d_s}, a!=b  (p.194)"
+  ]
+ },
+ "xu_section8_orders": {
+  "2": {
+   "f": "-12",
+   "g": "-18",
+   "T2": "-10",
+   "T3f": "-44",
+   "T3": "-25",
+   "matches_xu_printed": true,
+   "T3f_is_22_times": true,
+   "T3_is_13_times_shift": true
+  },
+  "5/2": {
+   "f": "-3",
+   "g": "-9/2",
+   "T2": "-5/2",
+   "T3f": "-11",
+   "T3": "-5",
+   "matches_xu_printed": true,
+   "T3f_is_22_times": true,
+   "T3_is_13_times_shift": true
+  }
+ },
+ "xu_index_identities": {
+  "T3_index": "13",
+  "T3f_index": "22",
+  "deg_q": 40,
+  "deg_p": 3
+ },
+ "prop62": {
+  "deg_y_g": 72,
+  "deg_z_g": 27,
+  "deg_y_f": 48,
+  "deg_z_f": 18,
+  "deg_y_T2": 40,
+  "deg_z_T2": 15
+ },
+ "face_ode": {
+  "equation": "9*a*q*p' - b*q'*p = c*p^14   (p'=d/dpi, q'=d/dpi)",
+  "a": "40*delta-105",
+  "b": "27*delta-72",
+  "leading_c_monic": "45",
+  "c_delta_independent": true,
+  "jacobian_exponents_match": true
+ },
+ "task_delta_screen": {
+  "4/3": {
+   "delta": "4/3",
+   "status": "in_window",
+   "ord_g": "-36",
+   "screen": {
+    "(1, 1, 1)": {
+     "rho": "155/12",
+     "nonresonant_total": 42,
+     "feasible": []
+    },
+    "(2, 1)": {
+     "rho": "155/12",
+     "nonresonant_total": 41,
+     "feasible": []
+    },
+    "(3,)": {
+     "rho": "155/12",
+     "nonresonant_total": 40,
+     "feasible": [
+      [
+       40
+      ]
+     ]
+    }
+   },
+   "alive_ode": true
+  },
+  "5/3": {
+   "delta": "5/3",
+   "status": "in_window",
+   "ord_g": "-27",
+   "screen": {
+    "(1, 1, 1)": {
+     "rho": "115/9",
+     "nonresonant_total": 42,
+     "feasible": []
+    },
+    "(2, 1)": {
+     "rho": "115/9",
+     "nonresonant_total": 41,
+     "feasible": []
+    },
+    "(3,)": {
+     "rho": "115/9",
+     "nonresonant_total": 40,
+     "feasible": [
+      [
+       40
+      ]
+     ]
+    }
+   },
+   "alive_ode": true
+  },
+  "2": {
+   "delta": "2",
+   "status": "in_window",
+   "ord_g": "-18",
+   "screen": {
+    "(1, 1, 1)": {
+     "rho": "25/2",
+     "nonresonant_total": 42,
+     "feasible": []
+    },
+    "(2, 1)": {
+     "rho": "25/2",
+     "nonresonant_total": 41,
+     "feasible": [
+      [
+       25,
+       14
+      ]
+     ]
+    },
+    "(3,)": {
+     "rho": "25/2",
+     "nonresonant_total": 40,
+     "feasible": [
+      [
+       40
+      ]
+     ]
+    }
+   },
+   "alive_ode": true
+  },
+  "7/3": {
+   "delta": "7/3",
+   "status": "in_window",
+   "ord_g": "-9",
+   "screen": {
+    "(1, 1, 1)": {
+     "rho": "35/3",
+     "nonresonant_total": 42,
+     "feasible": []
+    },
+    "(2, 1)": {
+     "rho": "35/3",
+     "nonresonant_total": 41,
+     "feasible": []
+    },
+    "(3,)": {
+     "rho": "35/3",
+     "nonresonant_total": 40,
+     "feasible": [
+      [
+       35
+      ],
+      [
+       40
+      ]
+     ]
+    }
+   },
+   "alive_ode": true
+  },
+  "8/3": {
+   "delta": "8/3",
+   "status": "excluded_by_ceiling_ord_g>=0",
+   "ord_g": "0",
+   "screen": {
+    "note": "ord g = 0; detector fails; ODE degenerates"
+   }
+  },
+  "5/2": {
+   "delta": "5/2",
+   "status": "in_window",
+   "ord_g": "-9/2",
+   "screen": {
+    "(1, 1, 1)": {
+     "rho": "10",
+     "nonresonant_total": 42,
+     "feasible": [
+      [
+       10,
+       10,
+       10
+      ],
+      [
+       10,
+       10,
+       14
+      ],
+      [
+       10,
+       14,
+       10
+      ],
+      [
+       10,
+       14,
+       14
+      ],
+      [
+       14,
+       10,
+       10
+      ],
+      [
+       14,
+       10,
+       14
+      ],
+      [
+       14,
+       14,
+       10
+      ]
+     ]
+    },
+    "(2, 1)": {
+     "rho": "10",
+     "nonresonant_total": 41,
+     "feasible": [
+      [
+       20,
+       10
+      ],
+      [
+       20,
+       14
+      ],
+      [
+       27,
+       10
+      ]
+     ]
+    },
+    "(3,)": {
+     "rho": "10",
+     "nonresonant_total": 40,
+     "feasible": [
+      [
+       30
+      ],
+      [
+       40
+      ]
+     ]
+    }
+   },
+   "alive_ode": true
+  },
+  "1": {
+   "delta": "1",
+   "status": "excluded_by_Xu_Prop_7.3_delta>1",
+   "note": "Prop 7.3: leaders at order 1 are powers of one linear poly (no split)"
+  },
+  "3": {
+   "delta": "3",
+   "status": "excluded_by_ceiling_ord_g>=0",
+   "ord_g": "9"
+  },
+  "3/2": {
+   "delta": "3/2",
+   "status": "in_window",
+   "ord_g": "-63/2",
+   "screen": {
+    "(1, 1, 1)": {
+     "rho": "90/7",
+     "nonresonant_total": 42,
+     "feasible": []
+    },
+    "(2, 1)": {
+     "rho": "90/7",
+     "nonresonant_total": 41,
+     "feasible": []
+    },
+    "(3,)": {
+     "rho": "90/7",
+     "nonresonant_total": 40,
+     "feasible": [
+      [
+       40
+      ]
+     ]
+    }
+   },
+   "alive_ode": true
+  }
+ },
+ "ode_survivors_in_task_list": [
+  "4/3",
+  "5/3",
+  "2",
+  "7/3",
+  "5/2",
+  "3/2"
+ ],
+ "wide_screen_den_le_30": {
+  "n_candidates": 463,
+  "ode_alive": [
+   "2",
+   "5/2",
+   "9/4",
+   "13/5",
+   "17/7",
+   "18/7",
+   "21/8",
+   "26/11",
+   "33/13",
+   "34/13",
+   "41/16",
+   "42/17",
+   "49/19",
+   "57/22",
+   "58/23",
+   "73/28",
+   "74/29"
+  ],
+  "galois_and_ode_alive": [
+   "2",
+   "5/2"
+  ],
+  "note": "Without Xu's den<=3 assertion, ODE+Galois still leaves only delta=2 and delta=5/2 as split survivors inside (1,8/3)."
+ },
+ "xu_den_bound": {
+  "printed": "Xu p.13: 'the denominator of order delta <= u_s = 3'",
+  "proof_exhibited_in_pp10_13": false,
+  "type": "SOURCE-ASSERTED",
+  "classification_survives_without_it": true,
+  "reason": "mu_e-orbits of size e>3 cannot embed in a cubic split"
+ },
+ "delta2_face": {
+  "charged_residual_is_zero": true,
+  "deg_q": 40,
+  "extra_root_solutions_w_of_s": [
+   "-2*s/3"
+  ],
+  "charged_is_w_eq_minus_two_thirds_s": true,
+  "unique_vector": "only (25,14) among [2,1]/[1,1,1] has sum r<=40",
+  "leftover_degree": 1,
+  "forced_how": "ODE local budget: [1,1,1] rho=25/2 not integral and nonres 42>40; [2,1] nonres 41>40; only resonant r(mm=2)=25 plus nonres r(mm=1)=14. Extra linear factor position then fixed by the ODE to w=-2s/3 (= 2a when s=-3a). Gauge pi|->lam*pi eats a. Face = a point."
+ },
+ "xu_8_2": {
+  "identity_holds": true
+ },
+ "delta52_face": {
+  "solved_k": [
+   {
+    "k": "10"
+   }
+  ],
+  "residual_after_k": "0",
+  "e0_drops_out_of_q1_prime": true,
+  "q1_xu_at_0": "0",
+  "q1_xu_at_sqrtc": "c**5/20",
+  "q1_xu_at_msqrtc": "c**5/20",
+  "q1_with_e0_at_0": "e0",
+  "vector_note": "Xu q1=-2 int p^3 (e0=0) vanishes at pi=0 to order 4, and the evaluation at +/-sqrt(c) is computed below; e0!=0 makes q1(0)!=0. Both live inside q=p^10 q1, q1'=k p^3, not a new partition."
+ },
+ "delta52_21_ode_alive_galois_dead": [
+  [
+   20,
+   10
+  ],
+  [
+   20,
+   14
+  ],
+  [
+   27,
+   10
+  ]
+ ],
+ "generic_q_p13": {
+  "squarefree_r_per_root": 13,
+  "total_if_3_simple": 40,
+  "note": "Xu's generic reduction is the all-simple iterate; it is the non-resonant-too-big / Cor 7.5 regime, not the delta=2 [2,1] case."
+ },
+ "trees": {
+  "B_delta2": {
+   "packets": [
+    18,
+    9
+   ],
+   "delta": "2",
+   "finals": [
+    "3",
+    "4"
+   ],
+   "ord_g_finals": [
+    "3",
+    "4"
+   ],
+   "derivations_agree": true,
+   "sum_D_delta_minus_1": "42",
+   "thm47i_extra_D_minus_1": "37",
+   "thm34_principal": "12",
+   "diff_4_3_minus_thm34": "30",
+   "diff_47i_minus_thm34": "25",
+   "Im": "6",
+   "floor_ok": true
+  },
+  "X_delta52": {
+   "packets": [
+    9,
+    9,
+    9
+   ],
+   "delta": "5/2",
+   "finals": [
+    "3",
+    "3",
+    "3"
+   ],
+   "ord_g_finals": [
+    "3",
+    "3",
+    "3"
+   ],
+   "derivations_agree": true,
+   "sum_D_delta_minus_1": "36",
+   "thm47i_extra_D_minus_1": "30",
+   "thm34_principal": "6",
+   "diff_4_3_minus_thm34": "30",
+   "diff_47i_minus_thm34": "24",
+   "Im": "7",
+   "floor_ok": true
+  },
+  "C_delta2_dead": {
+   "packets": [
+    9,
+    9,
+    9
+   ],
+   "delta": "2",
+   "finals": [
+    "4",
+    "4",
+    "4"
+   ],
+   "ord_g_finals": [
+    "4",
+    "4",
+    "4"
+   ],
+   "derivations_agree": true,
+   "sum_D_delta_minus_1": "54",
+   "thm47i_extra_D_minus_1": "45",
+   "thm34_principal": "24",
+   "diff_4_3_minus_thm34": "30",
+   "diff_47i_minus_thm34": "21",
+   "Im": "10",
+   "floor_ok": true
+  }
+ },
+ "identity_closed_form": {
+  "eq43_extra_minus_thm34": "30",
+  "is_30": true,
+  "thm47i_extra": "sum (|D|-1)(delta-1) is NOT this quantity and is not constant vs thm34"
+ },
+ "IM": {
+  "n_major_f": 48,
+  "lambda_g_delta1": "-1/3",
+  "IM_thm51_contact": "16",
+  "IM_thm51_second": "16",
+  "agrees": true,
+  "scope": "single printed major place at delta_1=4/9 covering all 48 major f-roots"
+ },
+ "cor53": {
+  "B_delta2": {
+   "Im": "6",
+   "IM": "16",
+   "passes": true
+  },
+  "X_delta52": {
+   "Im": "7",
+   "IM": "16",
+   "passes": true
+  },
+  "C_delta2_dead": {
+   "Im": "10",
+   "IM": "16",
+   "passes": true
+  }
+ }
+}

@@ -17296,3 +17296,15 @@ genus of the generic fibre of a (99,66) candidate is g_c = 7 on both branches (a
 DERIVED datum for any future construction); no kill; the RH route is closed as a
 discriminator (retire from APPROACHES as a screen; keep as a consistency check). The
 (99,66) decision rests entirely on the coefficient-level joint system (lane running).
+
+## INTEGRATION #17 DELTA (nnn) (2026-09-03T19:03Z, PROMOTED): delta 17(iii)'s three DERIVED-SOURCE facts gated by Grok — (1) the Prop 6.1 order identity ord g(σ) = 9(3δ − 8) and the five Xu orders CONFIRMED (the ceiling δ < 8/3 is derived, not a printed line); (2) the split-order classification δ ∈ {2, 5/2} CONFIRMED as a SPLIT classification, with N5 (den(δ) ≤ u_s = 3) typed SOURCE-ASSERTED (Xu asserts, no exhibited proof) — the classification survives by the Galois argument; the branch-B face point p = π²(π + 3a), q = π²⁵(π + 3a)¹⁴(π − 2a) and the δ = 5/2 cubic p = π(π² − c) are NOT slices of the face ODE after Galois (dropping Galois would reopen the ODE-admissible [2,1] vectors at δ = 5/2); (3) the difference-30 identity CONFIRMED as (4.3)'s extra term vs Theorem 3.4's principal term (30 = (v_s − u_s)m/d_s = 48 − 18), Im = 6, 7 and IM = 16 CONFIRMED; GAP[IDENTIFICATION]: the review's labelling of that identity as "Theorem 4.7(i)" is wrong — 4.7(i)'s extra term is (|D_σ| − 1)(δ_σ − 1), which is NOT tree-blind (but its inequality still does not kill either branch)
+
+`g9966-review-gate-grok46-20260903.md` (Grok; 9/9 hashes; box/g9966revgate-20260903/;
+Moh pp.190–196, 202 and Xu pp.4–13 as images). N-list status: N3, N6, N8, N9, N12 CONFIRMED;
+N5 SOURCE-ASSERTED; N13 confirmed as (4.3)-vs-3.4, not as 4.7(i). DECIDER CONSEQUENCE: the
+running joint decider's ansatz (δ = 5/2: p = π(π² − c) with μ₂-equivariance; branch B: the
+face point) is licensed — not a slice. (99,66) remains OPEN. Note: N5's status means the
+completeness of the split-order list rests on Xu's unproved denominator bound; if a
+split order with denominator > 3 existed it would be outside both branches — cheapest
+test: derive den(δ) ≤ u_s from the ramification of the principal place (u_s conjugate
+roots) — a one-page argument; queued.
