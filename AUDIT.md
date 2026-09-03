@@ -17509,3 +17509,13 @@ R / p¹⁰q₁) is a separate job — lane launched (g9966-bridge-nonlinear-grok
 the decision is now a ~930-variable object plus the nonlinear bridge.
 
 ## INTEGRATION #17 DELTA (eeee) (2026-09-03T21:01Z, PROMOTED): THEOREM (T) AT t = 5 ON THE K = 16 RAY — (64,44; 61; 3; J = cγ) — CONFIRMED by GPT-5.5 replay (byte-identical regeneration of the Q-pivots, A-pivots, terminal TSV and drivers; nfmodStd [1]; a second nfmodStd with reversed terminal variables [1]; three modular std [1] in 14–17 s; no zero resultant among the A-pivots); together with Grok's chart certificate (17(www)) and Sol's terminal-route proof (17(zzz)) this is a three-route promotion. STATUS: (T) PROMOTED at t = 1, 2, 3, 4, 5; t = 6 in computation (v2); uniform = (10.1) / (5.1)+(6.7) under three attacks.
+
+## INTEGRATION #17 DELTA (ffff) (2026-09-03T21:22Z, PARTIAL, producer Sol): THE DETERMINANT ROUTE TO TOP-TAIL-UNIT DOES NOT YIELD A UNIFORM CERTIFICATE — at the split base t = 2 the selected (t−1)-row quotient has different ranks on the two factors (1 and 2), so a single free A_t-basis is not a valid uniform target (both local determinants are nonzero); at t = 6 both mod-1009 fibres give finite quotient length 1224, which DISPROVES the extrapolation 9·5^{t−3} − 1 from the lengths 8, 44, 224 at t = 3, 4, 5; no indexed finite-basis construction or determinant recurrence results; the axis recurrence (6.4) executed in exact coefficient pairs — all denominators uniformly safe, reduced denominators and norms fully factored at t = 3..6, both exact factors pass at the split index t = 11, the norm positive in exact tests through t = 20 but no closed all-t factorisation; a two-solve calculation gives a closed, POSITIVE norm on every outer-third coordinate axis ⌈(2t+2)/3⌉ ≤ j < t — coordinate-axis image statements, not the ideal containments RESIDUAL-ZERO needs; (T) on the ray stays proved for t = 1..5 with the b₄ = 0 half at t = 6
+
+`k16-terminal-determinant-sol56-20260903.md` (Sol, 29KB; box/k16det-20260903/). §3.3 the
+exact open statement and cheapest test for TOP-TAIL-UNIT (a componentwise finite-
+quotient criterion, not a free basis); §7 why the axis route cannot prove RESIDUAL-ZERO
+(axis images vs radical containment). READING: consistent with Opus's 17(cccc): the
+b₄ = 1 top tail is not q-affine and RESIDUAL-ZERO is not the right target; the live route
+is Lemma CONE + the q-directions (Opus SUBCHART lane running) — a radical-containment
+statement on the cone, which is exactly what the axis results here fall short of.

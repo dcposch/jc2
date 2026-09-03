@@ -1,0 +1,118 @@
+// b4=1 tau-free Laurent/Euler recurrence; RR=-E
+// t=2 mode=mod branch=0
+ring R=1009,(L,b2,b3,C1,q2_0,q3_0,q4_0),dp;
+number yy=202;
+number d=2*5*yy-3;
+option(redSB);
+proc Lcoef(poly f, int k)
+{
+  matrix M=coef(f,L); int ii;
+  for (ii=1; ii<=ncols(M); ii++)
+  { if (M[1,ii]==L^k) { return(M[2,ii]); } }
+  return(0);
+}
+proc eulerInverse(poly f)
+{
+  matrix M=coef(f,L); poly a=0; int ii; int mm;
+  for (ii=1; ii<=ncols(M); ii++)
+  { mm=deg(M[1,ii]); a=a+M[2,ii]*M[1,ii]/((2*mm+1)*yy); }
+  return(a);
+}
+number g3=(14/25)*yy-(42/750);
+if (3*d^2-3!=0) { print("FAIL d relation"); quit; }
+poly U=(L+1)^5+q2_0*(L+1)^3+q3_0*(L+1)^2+q4_0*(L+1)^1;
+poly C=(L+1)^1+C1*(L+1)^0;
+poly A=L*C;
+poly Bprime=g3*(5*C+3*L*diff(C,L))/(2*yy);
+matrix MB=coef(Bprime,L); poly B=0; int ii; int mm;
+for (ii=1; ii<=ncols(MB); ii++)
+{ mm=deg(MB[1,ii]); B=B+MB[2,ii]*L*MB[1,ii]/(mm+1); }
+if (diff(B,L)-Bprime!=0) { print("FAIL B recurrence"); quit; }
+poly rhsS=3*g3*diff(U,L)+A*B-L*A*diff(B,L)+2*L*diff(A,L)*B
+          +g3*b3*(C+(5/2)*diff(A,L));
+poly S=eulerInverse(rhsS);
+if (yy*(S+2*L*diff(S,L))-rhsS!=0) { print("FAIL S recurrence"); quit; }
+poly V=L*A-yy*b3;
+poly Y=L*S-b3*B-g3*b2;
+poly Z=L*B-g3*b3;
+poly NN=-V*diff(Y,L)+diff(V,L)*Y+2*diff(U,L)*Z;
+poly N0=subst(NN,L,0);
+poly Pprime=(NN-N0)/(2*yy*L);
+if (2*yy*L*Pprime-NN+N0!=0) { print("FAIL Pprime division"); quit; }
+poly RR=V*Pprime-diff(U,L)*Y-yy*g3;
+poly W1=Lcoef(RR,8);
+poly p1=diff(W1,C1);
+poly ep1=61*d/16 - 3/16;
+if (p1-ep1!=0) { print("FAIL pivot coefficient 1"); quit; }
+if (p1==0) { print("FAIL zero pivot 1"); quit; }
+poly v1rhs=-subst(W1,C1,0)/p1;
+if (subst(W1,C1,v1rhs)!=0) { print("FAIL pivot 1"); quit; }
+RR=subst(RR,C1,v1rhs);
+poly W2=Lcoef(RR,7);
+poly p2=diff(W2,q2_0);
+poly ep2=-42*d/25;
+if (p2-ep2!=0) { print("FAIL pivot coefficient 2"); quit; }
+if (p2==0) { print("FAIL zero pivot 2"); quit; }
+poly v2rhs=-subst(W2,q2_0,0)/p2;
+if (subst(W2,q2_0,v2rhs)!=0) { print("FAIL pivot 2"); quit; }
+RR=subst(RR,q2_0,v2rhs);
+poly W3=Lcoef(RR,6);
+poly p3=diff(W3,q3_0);
+poly ep3=-63*d/40 - 7/40;
+if (p3-ep3!=0) { print("FAIL pivot coefficient 3"); quit; }
+if (p3==0) { print("FAIL zero pivot 3"); quit; }
+poly v3rhs=-subst(W3,q3_0,0)/p3;
+if (subst(W3,q3_0,v3rhs)!=0) { print("FAIL pivot 3"); quit; }
+RR=subst(RR,q3_0,v3rhs);
+poly W4=Lcoef(RR,5);
+poly p4=diff(W4,q4_0);
+poly ep4=-77*d/40 - 21/40;
+if (p4-ep4!=0) { print("FAIL pivot coefficient 4"); quit; }
+if (p4==0) { print("FAIL zero pivot 4"); quit; }
+poly v4rhs=-subst(W4,q4_0,0)/p4;
+if (subst(W4,q4_0,v4rhs)!=0) { print("FAIL pivot 4"); quit; }
+RR=subst(RR,q4_0,v4rhs);
+poly W5=Lcoef(RR,4);
+poly p5=diff(W5,b2);
+poly ep5=7*d/40 + 7/200;
+if (p5-ep5!=0) { print("FAIL pivot coefficient 5"); quit; }
+if (p5==0) { print("FAIL zero pivot 5"); quit; }
+poly v5rhs=-subst(W5,b2,0)/p5;
+if (subst(W5,b2,v5rhs)!=0) { print("FAIL pivot 5"); quit; }
+RR=subst(RR,b2,v5rhs);
+if (Lcoef(RR,4)!=0) { print("FAIL high L band 4"); quit; }
+if (Lcoef(RR,5)!=0) { print("FAIL high L band 5"); quit; }
+if (Lcoef(RR,6)!=0) { print("FAIL high L band 6"); quit; }
+if (Lcoef(RR,7)!=0) { print("FAIL high L band 7"); quit; }
+if (Lcoef(RR,8)!=0) { print("FAIL high L band 8"); quit; }
+poly Rh=subst(RR,L,L-1);
+poly T2=Lcoef(Rh,2);
+print("TOP_ROW band=2"); deg(T2); size(T2);
+poly T3=Lcoef(Rh,3);
+print("TOP_ROW band=3"); deg(T3); size(T3);
+print("RECURRENCE_PASS t=2");
+ideal Itop=T2,T3;
+ring CR=1009,(b3),dp;
+ideal I=imap(R,Itop);
+option(redSB);
+ideal J=I[2];
+ideal GJ=std(J);
+print("PROBE_DIM"); dim(GJ); vdim(GJ); size(GJ);
+ideal KB=kbase(GJ);
+
+int DD=vdim(GJ);
+matrix MM[DD][DD]; matrix CC; poly rrnf; int jj;
+poly va=b3;
+for (jj=1; jj<=DD; jj++)
+{
+  rrnf=reduce((I[1])*KB[jj],GJ);
+  CC=coeffs(rrnf,KB,va);
+  MM[jj,1..DD]=CC[1..DD,1];
+}
+poly DELTA=det(MM);
+print("PROBE_DELTA"); DELTA;
+ideal G=std(I);
+if (reduce(1,G)==0) { print("TOP_TAIL_UNIT"); } else { print("TOP_TAIL_NONUNIT"); }
+print("TOP_BASIS_SIZE"); size(G);
+print("DRIVER_DONE");
+quit;

@@ -20993,3 +20993,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T21:02Z EVENT — launched `k16-cone-gate-gpt55-20260903` (gate on Lemma CONE, the spine grading, SUBCHART, B3-AXIS). Lanes live: 9.
 
 ## 2026-09-03T21:13Z EVENT — `k16-t6-grok46-v2` FAILED the same way (turn ended at 22 min with a background poller "that will fire" — the grok CLI has no wake-on-job): PARTIAL skeleton banked. Handed to Sol: `k16-t6-sol56-20260903` (foreground `timeout`/`wait`). RULE: Grok lanes must not rely on background jobs; long compute goes to codex adapters or must block in the foreground.
+
+## 2026-09-03T21:22Z EVENT — `k16-terminal-determinant-sol56` sealed (29KB): PARTIAL — the determinant route has no uniform free basis (split base ranks 1/2; t = 6 length 1224 breaks the 9·5^{t−3} − 1 guess); axis recurrence exact through t = 20 with positive norms but no radical containment. → AUDIT delta 17(ffff). The live uniform route is Opus's cone/q-directions (running). Lanes live: 8.
