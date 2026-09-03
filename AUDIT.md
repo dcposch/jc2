@@ -16408,3 +16408,30 @@ theorem for arbitrary monomial-Jacobian pairs). OPEN[DESCENT-ANCHOR] → CLOSED 
 OPEN[LEMMA21-K] (typed): the terminal M_h = n − 1 statement for J = cγ^k — cheapest
 test: the prop55k gate's verdict on §2.1, else a one-page re-derivation from p.151's
 proof with the (k+1) shift.
+
+## INTEGRATION #17 DELTA (ee) (2026-09-03T12:52Z, SOURCE-READ corrections + PROVED-HERE controls, producer Sol): WHAT PROP 5.3 ATTACHES TO A NODE — the node ODE is D(P,Q,p,q) = c·p (non-bottom) vs constant (bottom); minor factors get no child ODE; q squarefree containing every root of p; the missing sibling datum is the COMMON JET, which no node-local engine sees; the tree-decorated moment engine is the node-local projection
+
+`sibling-coefficients-sol56-20260903.md` (Sol, 40KB; box/siblingcoef-drivers-20260903/).
+SOURCE-READ: Prop 5.3 glues charts of the same global polynomials, not coefficient lists —
+it fixes the factor centre, inherited Puiseux prefix, radius, multiplicity and child
+degrees; only the TOP coefficient after recentring follows from the old leading form; the
+lower coefficients use discarded higher t-jets (Jet lemma §3.1); q_j and q_{j−1} come from
+DIFFERENT approximate roots. Three type corrections to the campaign's node model:
+(i) non-bottom nodes obey D(P,Q,p,q) = Ppq' − Qqp' = c·p with c ≠ 0, the bottom has
+constant nonzero RHS (Prop A.3 as used by the campaign is the bottom form only);
+(ii) minor factors get no automatic child ODE; (iii) q is squarefree and contains every
+root of p, so p, q are NOT coprime — rad(p) and the q-only factor are. PROVED-HERE: the
+(64,48) and (75,50; V₂ = 3) parent/bottom projections are explicit two-dimensional
+positive controls (dimension-two loci with the printed multiplicities); the selected
+(90,60) excess witness and the D = 108 survivor parent curves also SURVIVE the node-local
+system; their child equations reduce to Padé-tail systems; exact transitive genus-zero
+triples prove both child loci nonempty with one-dimensional scaling families, and D = 108
+has explicit coefficients over a degree-5 field; the (90,60) coefficient Gröbner is
+COUNTING-BOUND. CONSEQUENCE (binding): the node-local ODE/Galois projection (= the
+tree-decorated moment engine once the tree supplies labels) does NOT discriminate
+printed rows from excess rows — it is not the missing common-jet gluing computation;
+Appendix II can still kill the controls because it uses the global polynomiality of the
+descended pair (the π^{-1}-tail), i.e. the common jet. This confirms the round-1200Z
+program: the coefficient theorem lives in the descended global coordinate ((T≤4) /
+CONJ[APPII-UNIFORM]), not in node-local data. Cheapest next per producer: see §7.4
+(recorded in notes).

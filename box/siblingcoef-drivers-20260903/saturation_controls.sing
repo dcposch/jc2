@@ -1,0 +1,106 @@
+// Saturation controls for the source-supported node-local projection.
+// Run: Singular -q saturation_controls.sing
+LIB "elim.lib";
+
+proc nonempty_sat(string label, ideal I, poly U)
+{
+  list wrapped = sat(I, ideal(U));
+  if (size(wrapped) != 1) { ERROR(label + ": sat wrapper has wrong size"); }
+  ideal Isat = wrapped[1];                 // extract the ideal component
+  if (typeof(Isat) != "ideal") { ERROR(label + ": sat component is not an ideal"); }
+  ideal G = std(Isat);                     // G lives in the current basering
+  if (reduce(1,G) == 0) { ERROR(label + ": unexpectedly EMPTY"); }
+  print(label + ": SAT; ring=" + string(basering));
+  print("  dim=" + string(dim(G)) + ", GB-size=" + string(size(G)));
+  return(G);
+}
+
+proc empty_sat(string label, ideal I, poly U)
+{
+  list wrapped = sat(I, ideal(U));
+  if (size(wrapped) != 1) { ERROR(label + ": sat wrapper has wrong size"); }
+  ideal Isat = wrapped[1];                 // extract the ideal component
+  if (typeof(Isat) != "ideal") { ERROR(label + ": sat component is not an ideal"); }
+  ideal G = std(Isat);
+  if (reduce(1,G) != 0) { ERROR(label + ": unexpectedly NONEMPTY"); }
+  print(label + ": EMPTY control passed; ring=" + string(basering));
+  return(G);
+}
+
+// (64,48), D2.  p=(z-a)^3, q=L*pi*(z-a)*(z-d).
+ring r64p = 0,(a,d,L,c),dp;
+ideal I64p = 5a-4d, c-12L*a*d;
+poly U64p = a*d*L*c*(a-d);
+ideal G64p = nonempty_sat("64-parent",I64p,U64p);
+ideal N64p = I64p,a;
+ideal GN64p = empty_sat("64-parent-negative-a=0",N64p,U64p);
+ideal N64pc = I64p,d-a;
+ideal GN64pc = empty_sat("64-parent-negative-collision-d=a",N64pc,U64p);
+
+// (64,48), bottom representative, monic quotient G_3,F_2.
+ring r64b = 0,(g2,g1,g0,f1,f0,kap),dp;
+ideal I64b =
+  -4*f1+3*g2,
+  -8*f0-f1*g2+6*g1,
+  -5*f0*g2+2*f1*g1+9*g0,
+  -2*f0*g1+5*f1*g0,
+  kap-4*f0*g0;
+poly U64b = kap*f0*g0;
+ideal G64b = nonempty_sat("64-bottom",I64b,U64b);
+ideal N64b = I64b,kap;
+ideal GN64b = empty_sat("64-bottom-negative-kappa=0",N64b,U64b);
+ideal N64bs = I64b,f1;
+ideal GN64bs = empty_sat("64-bottom-negative-scale=0",N64bs,U64b);
+
+// (75,50), D2.  p=(z-a)^3(z-b), q=L*pi*(z-a)(z-b)(z-d).
+ring r75p = 0,(a,b,d,L,c),dp;
+ideal I75p = -7a+b+5d, 3a*b+a*d-3b*d, c+20L*a*b*d;
+poly U75p = a*b*d*L*c*(a-b)*(a-d)*(b-d);
+ideal G75p = nonempty_sat("75-parent",I75p,U75p);
+ideal N75p = I75p,a;
+ideal GN75p = empty_sat("75-parent-negative-a=0",N75p,U75p);
+ideal N75pc = I75p,b-a;
+ideal GN75pc = empty_sat("75-parent-negative-collision-b=a",N75pc,U75p);
+
+// (75,50), V2=3 bottom representative, monic quotient G_4,F_3.
+ring r75b = 0,(g3,g2,g1,g0,f2,f1,f0,kap),dp;
+ideal I75b =
+  -3*f2+2*g3,
+  -6*f1-f2*g3+4*g2,
+  -9*f0-4*f1*g3+f2*g2+6*g1,
+  -7*f0*g3-2*f1*g2+3*f2*g1+8*g0,
+  -5*f0*g2+5*f2*g0,
+  -3*f0*g1+2*f1*g0,
+  kap+2*f0*g0;
+poly U75b = kap*f0*g0;
+ideal G75b = nonempty_sat("75-bottom",I75b,U75b);
+ideal N75b = I75b,kap;
+ideal GN75b = empty_sat("75-bottom-negative-kappa=0",N75b,U75b);
+ideal N75bs = I75b,f2;
+ideal GN75bs = empty_sat("75-bottom-negative-scale=0",N75bs,U75b);
+
+// Selected D=108 parent.  q=pi*(z-a)*U_4(z), U_4 monic.
+ring r108p = 0,(a,u3,u2,u1,u0,c),dp;
+ideal I108p =
+  17*a+4*u3,
+  13*a*u3+8*u2,
+  3*a*u2+4*u1,
+  5*a*u1+16*u0,
+  c+28*a*u0;
+poly U108p = a*u0*c;
+ideal G108p = nonempty_sat("108-parent",I108p,U108p);
+ideal N108p = I108p,c;
+ideal GN108p = empty_sat("108-parent-negative-c=0",N108p,U108p);
+poly Eval108 = a^4+a^3*u3+a^2*u2+a*u1+u0;
+ideal N108pc = I108p,Eval108;
+ideal GN108pc = empty_sat("108-parent-negative-U(a)=0",N108pc,U108p);
+
+// Lex-first (90,60) j=3 parent. p=pi^8,q=pi(pi^35-d).
+ring r90p = 0,(d,c),dp;
+ideal I90p = c-280d;
+poly U90p = c*d;
+ideal G90p = nonempty_sat("90-j3-parent",I90p,U90p);
+ideal N90p = I90p,c;
+ideal GN90p = empty_sat("90-j3-parent-negative-c=0",N90p,U90p);
+
+print("ALL SATURATION CONTROLS PASSED");
