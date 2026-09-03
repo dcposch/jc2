@@ -95,6 +95,8 @@ infinity (a theorem)? Price it.
 
 ## 3. Deliverables (per submission)
 
+Instrument note for §3: the large two-point rows need the general ORDER chart (order-chart-general-gpt55 running), not more compute (17(oooo)).
+
 Disposition vector over the APPROACHES rows (changes only); answers to Q1–Q4 with typed
 claims, bounded quantities and cheapest tests; three idea cards; the single first lane;
 continue/redesign/stop per running lane (k16-subchart-q-opus5, k16-t6-sol56, k16-t11-cone-
