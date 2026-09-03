@@ -16691,3 +16691,32 @@ worked instance and a typed recipe (§7); §8 compares with Appendix II's π^{-1
 descended compiler already consumes the common band through the approximate root, which is
 why it discriminates where node-local engines do not. Allocation: the edge recipe is the
 tool for u_s > 1 rows (no descent) — queue "(99,66) edge" as the MINOR-DICHOTOMY probe.
+
+## INTEGRATION #17 DELTA (oo) (2026-09-03T13:50Z, PROMOTED, scope-qualified): delta 17(mm) gated by GPT-5.5 — THEOREM (T) AT t = 2 ON THE K = 16 RAY IS CONFIRMED by exact replay (program SHA-256 reproduced byte-exact, Singular [1]) AND by an INDEPENDENT generator ([1], 48 s); the precise CAS theorem and its scope
+
+`k16-t2-gate-gpt55-20260903.md` (GPT-5.5; 9/9 hashes by mechanical manifest; Singular
+4.3.2; box/k16t2-gate-20260903/). REPLAY: regenerating from the frozen generator
+(t2_order_system.py --gauged --emit-singular) reproduces the charged 7,315-byte program
+exactly (6234d5ff…); Singular: CONTROL_EMPTY_PASS, CONTROL_NONEMPTY_PASS, MAIN equations
+37, parameters 27 + T, basis [1] → MAIN_SATURATED_EMPTY. INDEPENDENT RE-DERIVATION
+(t2_independent_order_system.py, 7ee7e29e…; program 4396e980…, 6,985 bytes): radii from
+Def 5.1 (−1/2, 1/7) and Φ (−1, 2/7); Theorem 1.2 (Moh p.149) coefficient order bound
+λ_P/7 = λ_Q/5 = −1/7; coefficient spaces i = 1..7 of dimensions [1,1,2,2,3,3,5] in the
+approximate-root tower z = π − γ, B = πz + b₁π + b₂, A = πB + b₃, h = πA + b₄; 27 parameters
+incl. c; 37 equations; numeric recomposition check True; Singular [1] in 47.9 s, 52 MB.
+SAFE NORMALISATIONS: automorphisms or approximate-root coordinate choices; they do not
+restrict the target locus. THE PRECISE THEOREM (DERIVED): there is no point in the gauged
+t = 2 Theorem-1.2 two-disc order chart over Q with π-degrees (28,20), top h = π³(π − γ) +
+lower, J(Q,P) = cγ, c ≠ 0 — this is STRONGER than the target tuple locus (the tuple-level
+Laurent bridge equations, the vanishings before p₁₇ and p₁₇ ≠ 0, are omitted) and WEAKER
+than "every (28,20) monomial-Jacobian pair in arbitrary support is impossible": the
+support/top-face/order-chart hypotheses are essential, and they are forced by the
+descended data (d₂ = 4, d₃ = 1, root counts (21,7)/(15,5), h_top, Φ radii). Moh p.151 Lemma
+2.1 supplies Laurent anchor information only. PROMOTION SCOPE: producer_scope = Sol's
+gauged chart at t = 2; reviewed_scope = the same chart replayed + an independent chart
+derivation, t = 2, K = 16 ray, characteristic-zero fields by scalar extension;
+promoted_scope = reviewed_scope. NOT COVERED: t ≥ 3 (lane k16-t3-uniform running),
+uniform-in-t, arbitrary support. Process note from the gate: a grep for the seal
+convention touched an ideation prompt filename (not used as input). STATUS: on the only
+known cofinal screened family, theorem (T) now holds at t = 1 (Moh, Appendix II; four
+mechanical replays today) and t = 2 (Sol + GPT-5.5, PROMOTED).

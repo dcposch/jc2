@@ -20857,3 +20857,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T13:43Z EVENT — `minor-dichotomy-opus5` FAILED at 5 min: Anthropic API 529 Overloaded (no work done). Relaunched verbatim as `minor-dichotomy-opus5-v2-20260903`; fall back to Grok if it recurs.
 
 ## 2026-09-03T13:49Z EVENT — `minor-dichotomy-opus5-v2` FAILED again (API 529 Overloaded; Opus seat unavailable right now — coordinator probe also hung). Handed to Grok: `minor-dichotomy-grok46-20260903`. Opus seats: avoid until the overload clears.
+
+## 2026-09-03T13:50Z EVENT — `k16-t2-gate-gpt55` sealed (13KB): CONFIRMED — byte-exact replay of the certificate AND an independent chart derivation both return [1]; precise theorem and scope stated. → AUDIT delta 17(oo) PROMOTED (t = 2). Lanes live: 3 (appendix2-run-k16, k16-t3-uniform, minor-dichotomy-grok46).
