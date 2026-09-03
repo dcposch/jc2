@@ -1,0 +1,33 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then read the charged sources and Moh's calibration so the compiler is built against those, not analogy.Hashes match. Next I’ll read the charged reports and drivers so the compiler follows those machines, not a reconstructed analogy.The remaining charged drivers, Moh’s Appendix II pages, and the survivor JSON are next so the shape rule can be gated on the printed (15,10) and (16,12) forms.I’ll pull Moh’s Appendix II pages and the survivor JSON so the shape gate and the run set are source-backed.I’ll read the existing shape-count drivers and the D=108 survivor records so the compiler’s monomial rule and run set match those charged measurements.I’ll probe shape counts, (12)/(13) on Φ radii, autoscan `u_s = 1`, and whether Moh’s (15,10) Jacobian system already saturates empty.I have the shape rule: D1 order plus a leading-form fix when `δ₂' = -1`. Next I’ll compute the calibration counts and start the compiler around that.The 52 excess rows all have parent height at least 4, so one descent leaves `s' ≥ 3` and the s=2 shape does not apply. I’ll implement the compiler around that, then solve the true s'=2 calibration systems.I’ll implement the compiler around the gated s'=2 shape, the (15,10) saturation control, and explicit `s'>2` handling so the 52 excess rows are not given a fake s=2 system.SIGALRM didn’t interrupt the Groebner C path, so I’m switching to a subprocess timeout and rerunning the known-fast (15,10) control.The planted scan is too heavy. I’ll switch it to the charged autoscan2 population and restart the compiler.Calibration holds and the run set is counted. Next I’ll write the sealed report.The compiler is in `box/appendix2/` and the sealed report is `xmodel/appendix2-compiler-grok46-20260903.md`. Frozen inputs matched 13/13. Moh’s six were the calibration gate; the (15,10; `V_2=3`) kill was reproduced before any new row was solved.
+
+**`s' = 2`:** (10)/(11) are vacuous. Only (12)/(13) is active.
+
+**Shape rule** (D1 order, leading-form fix iff `δ_2' = -1`, A,B `β` iff two-point and `d' = 2`): Moh’s (5)–(6) and p.208 (1) match; counts **22** and **15**; **17 → 10** is source-read; G2 is **42**, agreeing with the descent-radii lane.
+
+**Moh’s six**
+
+| row | verdict |
+|---|---|
+| (15,10) `V_2=3` | SATURATED-EMPTY (control2; γ erratum confirmed) |
+| (15,10) `V_2=2` | SATURATED-EMPTY (16 unknowns, `J = c x^2`) |
+| (21,14) `V_2=5` | SATURATED-EMPTY (16 unknowns, `J = c x`) |
+| (16,12) | SATURATED-EMPTY (18 unknowns, `J = c x`) |
+| (21,14) `V_2=2` | COUNTING-BOUND (68; `δ_2' = -1/2`, not two-point) |
+| (99,66) | `US-GT-1` |
+
+Planted descended automorphism: **NONE** (0/25 autoscan pairs have `M_s = n-2`). SURVIVES is uncalibrated. Unsaturated bases are non-trivial where computed (`c = 0` still lives).
+
+**The 52 excess C_FULL_TREE_ODE rows:** all have `u_s = 1`; all have parent `s ≥ 4`, so one descent leaves `s' ∈ {3,4}`. Appendix-II’s `s' = 2` shape does not apply.
+
+- coefficient-level kills: **0**
+- positive-dimensional survivors: **0**
+- counting-bound at `s' = 2`: **0**
+- out of the `s' = 2` budget (`S-PRIME-GT-2`): **52**
+
+D = 108 `u_s = 1`: 19 rows, all `s' = 3`, all `S-PRIME-GT-2`. G2/G3: COUNTING-BOUND 42 / 66.
+
+**Kill pattern:** every in-budget two-point (`δ_2' = -1`) descendant saturates empty at `J = c x^k`, `c ≠ 0`. That is a measured two-point specialisation of (T), not a theorem, and it does not cut the 52.
+
+**Cheapest next test:** a Newton-tight slice of the remaining Moh row (21,14) `V_2 = 2` (same class as G2), or measure `δ` on one descended pair with `M_{s'} = n'-2` (Def 5.1(3) has a vanishing denominator on 38/52).
+DIVERT path=xmodel/appendix2-compiler-grok46-20260903.md status=CLEAN body_bytes=29900 body_sha256=dea9f5be619b9507b5ca30db51ddd88401b293e7ab7a0e75c8ae8083a5c79c27

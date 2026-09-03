@@ -16325,3 +16325,30 @@ groups, reproducing Opus). Anchor-zero among screened u_s = 1: gap-free + ODE + 
 evaluable. CONSEQUENCE: theorem (T)'s domain is the u_s = 1 stratum (72–89 % of screened
 groups depending on the screen); OPEN[MINOR-DICHOTOMY] carries 11–28 %; a second
 independent cofinal family fixes the "target list" reading of the census.
+
+## INTEGRATION #17 DELTA (bb) (2026-09-03T12:44Z, MEASURED / instrument, producer Grok): THE APPENDIX II COMPILER EXISTS (box/appendix2/compile.py) — descent + Φ + (8)–(13) + Moh's SHAPE rule + exact Gröbner; FAIL-CLOSED on Moh's six; every in-budget two-point (δ₂' = −1) printed descended row is SATURATED-EMPTY at J = cx^k; the 52 excess rows and the 19 D = 108 u_s = 1 rows are all s' > 2 (S-PRIME-GT-2), so the compiler must be extended by the p.174 drop (Φ_eff) and to s' = 3
+
+`appendix2-compiler-grok46-20260903.md` (Grok, 30KB; box/appendix2/). Signatures match
+p.207 on all five u_s = 1 rows; (15,10; V₂ = 3) replays control2 (printed α reproduced,
+γ not — ERRATUM[APPII-GAMMA-B]; Case 1 contradiction; Case 2 saturates to [1] at a₉ ≠ 0);
+drop-one and toy controls pass. SOURCE-READ p.201: at s' = 2 conditions (10)/(11) are
+vacuous, only (12)/(13) active (holds on all five Moh rows). SHAPE rule (D1 order
+i ≤ δ₁'(j+1) for h, i ≤ δ₁'(j+d') for β, total-degree and deg_x bounds, leading form
+fixed to the split form y^{V₂}(y − x) [u' = 1] or y^{V₂}(y² − x²) [u' = 2] from the
+inverse-transform minor disc when δ₂' = −1) reproduces Moh's (15,10) shapes (5)–(6)
+(22 = 8 + 14 coefficients), (16,12) shape (1), the 17 → 10 of pp.208–209, and G2's 42.
+KILLS (SATURATED-EMPTY, exact, c ≠ 0): (15,10) V₂ = 3 [12 unknowns]; (15,10) V₂ = 2
+[16]; (21,14) V₂ = 5 [16]; (16,12) [18; 258 unsat generators]; negative controls
+non-trivial; (21,14) V₂ = 2 has δ₂' = −1/2: COUNTING-BOUND (68); (99,66) u_s = 3 N/A.
+Planted descended automorphism: none available (0/25 autoscan2 pairs have M_s = n − 2)
+— the positive control is the drop-one/toy pair only. NEGATIVE, binding: the 52
+C_FULL_TREE_ODE excess rows at n ≤ 100 (all u_s = 1) and the 19 D = 108 C_FULL_TREE
+u_s = 1 rows are S-PRIME-GT-2 after one descent (s' ∈ {3,4}); the s' = 2 shape does not
+apply; 38/52 have the anchor denominator zero (OPEN[DEF51-MONOMIAL-MS-NMINUS2] = the
+DESCENT-ANCHOR, now repaired by Φ_eff, delta 17(y): 24 of the 38 become s_eff = 2);
+exactly one row admits a second descent with u_{s'} = 1. Candidate (T)-shape (MEASURED,
+not proved): every in-budget two-point descended pair saturates empty at c ≠ 0 under
+D1 + leading + A,B and J = cx^k — one class, not one h-adic component. Cheapest next
+(producer): Newton-tight slice of (21,14) V₂ = 2. Coordinator: the decisive next
+compiler run is the K = 16 descendant (28,20; 25; 3; k = 1) — two-point (δ₂' = −2/2 =
+−1), s' = 2 — and the 24 + 12 s_eff = 2 rows after the p.174 drop. Lane launched.
