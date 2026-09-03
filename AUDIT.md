@@ -17466,3 +17466,13 @@ must add the outer D₁ bands and the effective-root bridge (T₂, T₃ ∈ K[f,
 next-band lane's design must be extended accordingly at its next iteration; a kill in
 the relaxation is still a valid kill (necessary rows only); a non-kill is a counting
 bound. (99,66) OPEN.
+
+## INTEGRATION #17 DELTA (bbbb) (2026-09-03T20:46Z, INSTRUMENT + COUNTING-BOUND, producer GPT-5.5): THE NATIVE SINGULAR EMITTER IS BUILT AND VALIDATED (box/emitter-20260903/emit_chart.py + emit_chart.sing: coefficient extraction by explicit (x,y) degrees, monic y-division, deg_x J gate; byte-compatible up to ordering with the charged emitters on (16,12), (28,20) [27/37, PASS], (33,22) [3] and [2,1] [PASS]; emission 0.02–0.26 s where sympy took minutes); on the large rows the blocker MOVES: (25,15; 21; 2; 2) strata [3], [2,1], [1,1,1] emit in seconds (135–137 unknowns, 517 saturated rows, TSVs 42–180 MB) but the modular standard bases TIME OUT at 20 min over each of three primes (RSS 2.4–4.6 GB) and the charged sympy preprocessing parser cannot digest the native TSVs (20-min timeout before the first Q*-pivot); (24,16; 17; 2; 5) still has a pre-row expansion blocker in the generic path; no verdict promoted
+
+`emitter-native-gpt55-20260903.md` (GPT-5.5; 11/11 hashes; python-flint absent; Singular
+4.3.2 with FLINT 3.0.1). READING: the seven large open two-point rows are now genuinely
+compute-bound at the standard-basis / preprocessing stage, not at emission; the two
+remedies are (i) a NATIVE preprocessing pipeline (Q*-pivot elimination, grading LP, torus
+slice done inside Singular or with a compiled sparse exact solver, replacing the sympy
+parser) — instrument lane launched; (ii) more machines for the modular runs in parallel
+(the fleet ask stands). Tally unchanged: two-point stratum 7/17 dead, 10 open.

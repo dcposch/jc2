@@ -1,0 +1,96 @@
+// Native h-adic coefficient extraction helpers for emit_chart.py.
+//
+// Load this file after declaring a build ring whose first two variables are
+// y,x.  The caller must also define global source_idx and max_nf_deg.
+
+proc native_coeff_xy(poly rem, int wantx, int wanty, intvec WX, intvec WY)
+{
+  matrix CX = coef(rem, x);
+  int i;
+  int j;
+  for (i = 1; i <= ncols(CX); i++)
+  {
+    if (deg(CX[1,i], WX) == wantx)
+    {
+      matrix CY = coef(CX[2,i], y);
+      for (j = 1; j <= ncols(CY); j++)
+      {
+        if (deg(CY[1,j], WY) == wanty)
+        {
+          return(CY[2,j]);
+        }
+      }
+    }
+  }
+  return(0);
+}
+
+proc native_coeff_y(poly rem, int wanty, intvec WY)
+{
+  matrix CY = coef(rem, y);
+  int j;
+  for (j = 1; j <= ncols(CY); j++)
+  {
+    if (deg(CY[1,j], WY) == wanty)
+    {
+      return(CY[2,j]);
+    }
+  }
+  return(0);
+}
+
+proc native_y_div(poly dividend, poly divisor, int y_degree, intvec WY)
+{
+  poly q = 0;
+  poly r = dividend;
+  int d;
+  poly lc;
+  poly term;
+  while (r != 0 && deg(r, WY) >= y_degree)
+  {
+    d = deg(r, WY);
+    lc = native_coeff_y(r, d, WY);
+    term = lc * y^(d - y_degree);
+    q = q + term;
+    r = r - term * divisor;
+  }
+  list out = q, r;
+  return(out);
+}
+
+proc native_append_coeffs(poly rem, int hpow, string rowsfile, intvec WX, intvec WY)
+{
+  if (rem == 0)
+  {
+    return();
+  }
+  int dx = deg(rem, WX);
+  if (dx > max_nf_deg)
+  {
+    max_nf_deg = dx;
+  }
+  matrix CX = coef(rem, x);
+  int i;
+  int j;
+  int xp;
+  int yp;
+  matrix CY;
+  poly cc;
+  for (i = 1; i <= ncols(CX); i++)
+  {
+    xp = deg(CX[1,i], WX);
+    CY = coef(CX[2,i], y);
+    for (j = 1; j <= ncols(CY); j++)
+    {
+      cc = CY[2,j];
+      if (cc != 0)
+      {
+        yp = deg(CY[1,j], WY);
+        write(":a " + rowsfile,
+          string(source_idx) + "|" + string(hpow) + "|" +
+          string(xp) + "|" + string(yp) + "|" + string(cc));
+        source_idx = source_idx + 1;
+      }
+    }
+  }
+}
