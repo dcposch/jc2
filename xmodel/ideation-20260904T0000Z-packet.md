@@ -43,7 +43,8 @@ promoted (17(nnn), (rrr), (sss)); branch A dead (17(tt)), branch C dead (17(yy))
 local/one-point lift stays consistent (17(aaa), (ggg), (ppp), (yyy)); the JOINT two-point
 chart (17(ttt), gated necessary 17(aaaa)) with the outer Theorem-1.2 bands (5,774 pivots,
 17(dddd)) and the nonlinear bridge rows (17(hhhh)) is the decider object; the exact band
-continuation (17(kkkk), PROVISIONAL, gate running) KILLS BRANCH B at stage 4 (unit ideal:
+continuation KILLS BRANCH B at stage 4 (17(kkkk); PROMOTED by the GPT-5.5 gate 17(pppp):
+Moh's p.209 case split is mechanically complete) (unit ideal:
 integer-constant residue) and leaves δ = 5/2 alive at stage 7 with 869 free coefficients
 (decrements 47 → 11); the stage-8+ continuation is running. Riemann–Hurwitz and Xu's
 bookkeeping are tree-determined / tree-blind (17(mmm), (jjj)).
