@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+All work is complete: hashes verified, source pages read, replay exact, hand recomputation done, report written with the BODY-END marker (the launcher performs the seal), validator passes, logs and drivers persisted.
+
+**Verdict: CONFIRMED (scoped)**, written to `xmodel/xu-screen-gate-fable5-20260903.md` (14.3 KB, standalone `<!-- BODY-END -->`, no charge_basis line; validator exit 0).
+
+**What I checked**
+
+- **Custody.** All 8 frozen inputs verified with an awk-generated manifest from the run.v2 receipt and `sha256sum -c`. No retyped digits.
+- **Source read (pp.1–13 as 200 dpi page images).** Theorem 3.4, Definitions 4.3/4.6, Lemma 4.4, Theorem 4.7, Theorem 5.1, Corollary 5.3, Section 7.3, Proposition 7.3 and Corollary 7.5 are all transcribed correctly. The screen's inequality is Corollary 5.3 (p.8), which chains Theorem 4.7(ii) with Theorem 5.1. All three are stated for Jacobian pairs only, and the inequality direction is as used. Theorem 3.4 is transcribed correctly but never used by the driver. Xu's three printed numbers match the calibration table.
+- **Are the floors theorems?** I rederived everything from Xu's Lemma 4.1 (chain rule) plus the ultrametric root tree: IM equals the sum over major roots of 1 minus a pure distance sum, and each final minor order equals that same distance sum. This makes the nonprincipal minor floor a theorem, and both the driver's leaf IM term and its minor floor turned out to be algebraic identities of Moh's Def 5.1(3). Zero mismatches on all 1420 operative rows and about 17k random paths, so no Moh page read was needed for Proposition 4.6.
+- **Replay.** Exact reproduction: 43/1420 rows, 29/686 groups, 37 touched, identical per-row bounds, calibration 3/3, in 48 s.
+- **Hand recomputation** with an independent enumerator that does not import the driver's bounder: (84,56;64,82) gives 4 < 5 killed; (144,108;126,135,142) gives 18/5 < 5 killed; (64,48) gives 9 ≥ 3; (99,66) gives 16 ≥ 1. All agree with the driver.
+
+**Two findings that shape the scope**
+
+- Without the operative constraints (bottom (12)/(13), Prop 5.6, ODE nondegeneracy), both hand-checked kills disappear. The 29 kills are theorems about skeletons only under the full-tree model, so the promotion must stay `C_FULL_TREE_POLYNOMIAL_ODE ∧ XU`.
+- The principal floor for u_s > 1 can be sharpened to V_s/u_s − 1 by the same distance argument. Section 7.3 alone does not yield a numeric floor. Post-processing shows this would kill 4 more groups at D ≤ 200 while (99,66) still survives. Typed DERIVED and left as the cheapest OPEN test, not consumed.
+
+Drivers and logs are in `box/xuscreen-gate-20260903/`. One project memory was saved recording the distance identity and the scope dependency.
+DIVERT path=xmodel/xu-screen-gate-fable5-20260903.md status=CLEAN body_bytes=14316 body_sha256=73810445b86518097594ce95d478a4f96000c74c7ad0455e376eccdc5f23218b

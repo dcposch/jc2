@@ -17141,3 +17141,21 @@ the t = 1..6 pivot counts are reproducible from the charged uniform drivers. STA
 RAY: (T) PROMOTED at t = 1 (Moh), 2, 3, 4; the all-t normalizer lemma PROMOTED; the sole
 remaining object is the second affine spine (OPEN[T-UNIFORM-MIDDLE]; k16-middle-spine-
 sol56 running).
+
+## INTEGRATION #17 DELTA (eee) (2026-09-03T17:54Z, PROMOTED, scoped): delta 17(ccc) gated by Fable — THE XU SCREEN IS PROMOTED: the OPERATIVE SCREEN IS NOW C_FULL_TREE_POLYNOMIAL_ODE ∧ XU (XU = Xu Cor. 5.3 = Theorem 4.7(ii) + Theorem 5.1, Jacobian pair monic in y, two points at infinity, generic ξ); transcriptions of Theorems 3.4/4.7/5.1, Cor. 5.3, §7.3, Prop 7.3, Cor 7.5 correct; the minor floor is a theorem (gate re-derived it from Lemma 4.1 and λ^f_σ = 0, numerically identical to the driver); the leaf IM term is an identity of Def 5.1(3); the max/min policy is fail-closed (finite enumeration of full trees under the operative model; the actual tree T* is in the set); replay 43 rows / 29 groups exact; four rows recomputed by hand; the 29 kills are theorems about skeletons UNDER THE OPERATIVE FULL-TREE MODEL (two hand-checked kills vanish without (12)/(13), Prop 5.6 and ODE-nondegeneracy) — not from Xu alone
+
+`xu-screen-gate-fable5-20260903.md` (Fable; 8/8 hashes; all 14 Xu pages as images;
+box/xuscreen-gate-20260903/ with xu_screen_replay.py, hand_check.py, hand_trees.py,
+identity_random.py). Scope notes: Xu arXiv:1604.07683v4 is a PREPRINT; its Cor. 5.3 was
+re-derived by the gate from Lemma 4.1 and the chain rule as a gate note (not a promoted
+proof); the load-bearing assumptions are (i) T* lies in the enumerated full-tree set
+(radii from Def 5.1(3) on every path, one major child per node, ≤ Q/A orbits, (12)/(13) at
+the bottom, Prop 5.6, ODE nondegeneracy) and (ii) Cor. 5.3. OPERATIVE NUMBERS: 48 ≤ D ≤ 200:
+686 → 657 groups (1,420 → 1,377 rows); u_s > 1: 177 → 170 groups; n ≤ 100 loses (84,56;
+M = (64,82)) and (90,60; (45,80,88)) [both rows]; Moh's printed (84,56; 64; 2) is now dead at
+skeleton level (as Xu published); the two-point Appendix-II list, the K = 16 ray and
+(99,66) are untouched. OPEN[principal-us-gt-1-floor] (gate-named, bounded): the promoted
+driver floors the principal u_s > 1 contribution at 0; the gate's §2 distance argument
+gives V_s/u_s − 1, expected +5 rows / +4 groups at D ≤ 200 — needs its own gate before use
+(lane launched). OPEN[minor-disc-exact-Im], OPEN[attainment-correlation] stand; the
+same-tree optimisation of IM − Im is the cheapest strengthening.

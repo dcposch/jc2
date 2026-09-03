@@ -20925,3 +20925,11 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T17:47Z EVENT — `k16-t4-normalizer-gate-gpt55` sealed (11KB): (T) at t = 4 CONFIRMED; all-t normalizer lemma CONFIRMED uniformly. → AUDIT delta 17(ddd) PROMOTED. Ray: t = 1..4 dead; middle spine is the last blocker. Lanes live: 5.
 
 ## 2026-09-03T17:47Z EVENT — launched `r3-preprocess-gpt55-20260903` (the three δ₁' = 0 rows: level-1 ODE chart R3 with the triangular/torus preprocessing). Lanes live: 6.
+
+## 2026-09-03T17:54Z EVENT — `xu-screen-gate-fable5` sealed (14KB): CONFIRMED (scoped) — the Xu screen is PROMOTED; operative screen = C_FULL_TREE_POLYNOMIAL_ODE ∧ XU: 657 groups at D ≤ 200, u_s > 1 = 170; n ≤ 100 loses (84,56; 64; 2) and (90,60). → AUDIT delta 17(eee). Launching `xu-principal-floor-sol56` (prove and gate the sharpened principal floor V_s/u_s − 1; rerun). Lanes live: 6.
+
+## LIVE STATE (2026-09-03T17:54Z)
+- OPERATIVE SCREEN: C_FULL_TREE_POLYNOMIAL_ODE ∧ XU (17(hh) + 17(eee)). D ≤ 200: 1,377 rows / 657 groups; u_s > 1: 170 groups; two-point s_eff = 2 u_s = 1: 17 groups (7 dead incl. K16 t = 2, 3; 2 PROVISIONAL pending corrected strata; 8 open).
+- K = 16 ray: (T) PROMOTED t = 1..4; normalizer lemma PROMOTED; middle spine = last blocker (lane running).
+- (99,66): OPEN in the literature (Xu); branch B lift + δ = 5/2 both survive locally; global Keller lift is the decider (B-lift lane running).
+- Providers: Opus and Grok down since ~13:40Z; Sol/GPT-5.5/Fable carrying.

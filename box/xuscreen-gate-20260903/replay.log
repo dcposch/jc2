@@ -1,0 +1,46 @@
+== Xu IM>=Im fail-closed skeleton screen ==
+Frozen imports: /tmp/jc2-lane.AQwgL6/inputs
+
+-- Controls --
+  [ok]   Moh (64,48) POLY_ODE operative survivor
+  [ok]   Moh (84,56) M2=64,V2=2 POLY_ODE operative survivor
+  [ok]   Moh (84,56) M2=72,V2=5 POLY_ODE operative survivor
+  [ok]   Moh (75,50) V2=3 POLY_ODE operative survivor
+  [ok]   Moh (75,50) V2=2 POLY_ODE operative survivor
+  [ok]   Moh (99,66) POLY_ODE operative survivor
+  [ok]   Xu (75,50) split ii Im=6 IM=4 excluded
+  [ok]   Xu (84,56) M2=64 Im=5 IM=4 excluded
+  [ok]   Xu (84,56) M2=72 Im=4 IM=10 not excluded
+
+-- Operative census, u_s>1 first --
+  [ok]   operative rows D<=200 = 1420
+  [ok]   operative groups D<=200 = 686
+  phase us_gt_1: 310 rows
+    us_gt_1 100/310 processed; killed rows total 6
+    us_gt_1 200/310 processed; killed rows total 9
+    us_gt_1 300/310 processed; killed rows total 9
+    us_gt_1 310/310 processed; killed rows total 9
+  phase us_eq_1: 1110 rows
+    us_eq_1 100/1110 processed; killed rows total 18
+    us_eq_1 200/1110 processed; killed rows total 20
+    us_eq_1 300/1110 processed; killed rows total 22
+    us_eq_1 400/1110 processed; killed rows total 24
+    us_eq_1 500/1110 processed; killed rows total 25
+    us_eq_1 600/1110 processed; killed rows total 28
+    us_eq_1 700/1110 processed; killed rows total 30
+    us_eq_1 800/1110 processed; killed rows total 38
+    us_eq_1 900/1110 processed; killed rows total 38
+    us_eq_1 1000/1110 processed; killed rows total 42
+    us_eq_1 1100/1110 processed; killed rows total 43
+    us_eq_1 1110/1110 processed; killed rows total 43
+
+-- Totals --
+  killed rows: 43 / 1420
+  killed groups: 29 / 686
+  touched groups: 37 / 686
+  killed groups D<=120: 4
+Wrote /home/ubuntu/jc2/box/xuscreen-gate-20260903/results.json
+
+real	0m48.068s
+user	0m43.189s
+sys	0m0.204s
