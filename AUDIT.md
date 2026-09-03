@@ -15730,3 +15730,37 @@ predicates of (n, m, M_*, V_*) for OPEN[MOH-PROGRAM]; the missing datum is
 outside the skeleton (descent + polynomiality / the global moment code);
 D = 105 is NOT emptied by any sourced condition; OPEN[MOH-PROGRAM] stays at
 652 excess rows (last mile 4 under the unlicensed conjunction).
+
+## INTEGRATION #17 DELTA (n) (2026-09-03T11:03Z, REVIEWED + PROVISIONAL): THE CENSUS IS COFINALLY NONEMPTY — SOL'S FAMILY PROMOTED (ALL a, FORMAL-UNI N = 6; ORBIT N = 15a + 9); A SECOND RAY WITH ORBIT-PINNED N = 6
+
+Sol's round submission §2.3 (ideation-20260903T1015Z-sol56.md, 20f290f7)
+reviewed by `n6-family-review-grok46-20260903.md` (Grok; sympy identities in
+a ≥ 0, census emission at L = 5, 13, 21, 29, 37, 45 and the first 21 members).
+PROMOTED: for every a ≥ 0, L = 8a + 5, the skeleton n = 21L, m = 14L,
+M = (−14L, 7(3L+1)/4, 21L − 2), s = 3, V = (1, 5) satisfies Moh's printed
+(1)–(13) as implemented (M₂ = 42a + 28 ∈ Z; d₂ = 7L; d₃ = 7 EXACTLY by Bezout
+4·(3L+1)/4 − 3L = 1; d₄ = 1; both windows 7/2 < 5 ≤ 7 and 4L/(9L−1) < 1 ≤ 5L;
+δ = (−1, (12a+7)/(6(5a+3)), 7/12); A₂ = 6(5a+3); (10) saturated at △₂ = 1,
+(11) never ((5L−1)/A₂ = 4/3); A₁ = 2 for a even, 1 for a odd; (12)∨(13)
+always; q = 1/2; u = 5L); the FORMAL (UNI) packet k = 12 gives N = 6 — a
+theorem about the printed numerical skeleton plus the size-1 knapsack.
+CORRECTION (delta 17(j) orbit law, exact at s = 3): the family is (10)-only
+with |O| = A₂ = 6(5a+3), the only orbit-admissible packet is k = A₂ (a second
+copy overfills u), so its ORBIT-ADMISSIBLE N is 15a + 9 (at L = 5 this is
+D = 105 group A: k = 18, N = 9); k = 12 is never orbit-admissible; the ray is
+NOT a fixed-N laboratory. PROVISIONAL (producer Grok, this review; sympy +
+Skel, t = 0..20, 30, 40, 50; census emission t = 0..3): the A₂ = 6 RAY — for
+every t ≥ 0 with P = 7t + 6: n = 9P, m = 6P, M = (−6P, 4P, 9P − 2), s = 3,
+V = (1, 6t + 5), d₂ = 3P, d₃ = P; δ = (−1, 1/6, 7/12), A₂ = 6 constant, A₁ = 2,
+Q = 18t + 15, (10)-only, (13); q = 1/2, u = 18t + 15; |O| = 6, up to 3t + 2
+copies; ORBIT-ADMISSIBLE N = {3, 6, 9, …, 3(3t+2)} — N = 6 (two copies,
+k = 12) for EVERY t; degrees D = 54, 117, 180, 243, 306, 369, 432, 495, …;
+D = 117's member is branch-orbits v2's live row m = 78, M = [52,115],
+V_s = 11, |O| = 6. CONSEQUENCE (promoted for the UNI form; provisional for
+the orbit form): "(1)–(13) + integral pinned N" is cofinally nonempty in D,
+under UNI and — via the A₂ = 6 ray — under the exact orbit packing at N = 6
+itself; emptiness of the numerical space cannot prove JC2; a uniform theorem
+must consume a datum outside the scalar skeleton. Geometric realisation of
+either ray is NOT claimed (OPEN[STAR-REALISABILITY]; OPEN[SECOND-RAY-GEOM]:
+D = 54, 117, 180, 243 through the moment engine; OPEN[SOL-CARD2-RETYPE]:
+the fixed-N laboratory moves to the A₂ = 6 ray).
