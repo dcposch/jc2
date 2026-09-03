@@ -1,0 +1,32 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes against the lane receipt, then load the spine report, gate, and pivot-formula sources.I'll generate the hash manifest from the receipt with awk and check it with `sha256sum -c`.The lane input dir is read-only; I'll write the manifest elsewhere and re-run the hash check.Hashes match. Next I’ll read the spine report’s closed-form sections and the gate’s derivation prescription.The asserted `b_j`, `d_j`, `n_j` match a two-term perturbation; I'll inspect records and the report skeleton, then implement the symbolic propagator.I'll start the t=2,3 rebuilds and write the symbolic perturbation driver in parallel.The rebuild is running in the background. I’ll write the symbolic perturbation driver next.Q-family exponents mixed the symbol `q` with `2t+1`; I’ll pin those exponents to `2t+1` and re-run.Derivation passed. Next I’ll compare the t=2,3 rebuilds to the charged records and write the sealed report.I’ll write the sealed report next, keeping it in the 6–14KB range.**(5.9)–(5.15) are DERIVED.** The second affine spine is a theorem for every integer \(t\ge 2\), and the reduction \((T)\Leftrightarrow(8.1)\) is **PROMOTED**. Statement (8.1) itself — that the terminal ideal is \([1]\) for every such \(t\) — remains **OPEN**.
+
+Charged inputs: receipt `awk` → `sha256sum -c` returned **13/13 OK**.
+
+The missing step was the symbolic \((t,j)\) jet. Over \(\mathbb{Q}(t,j,y,g_1,g_2,g_3,q)\), with \(d\) the generator of \(A_t=\mathbb{Q}(t,j)[d]/(3d^2-(t+1))\) and no zero divisor inverted:
+
+- perturb \(C\) by \(\varepsilon s^{t-1-j}\) (\(1\le j\le t-1\)) or \(U\) by \(\varepsilon s^{q-j}\) (\(t\le j\le 2t\));
+- push the two-jet through \(T'=(g_3/2y)(5C+3sC')\), the Euler inverse \([s^m]S=e_m/(y(2m+1))\), and the \(D1\) reconstruction of \(X'\);
+- read \([s^{4t+1-j}]\) of \(R_s:=-E_t\) and differentiate at \(\varepsilon=0\).
+
+The derived responses match the asserted forms **identically** (difference \(0\)):
+
+\[
+\begin{aligned}
+b_j&=g_3(3t+2-3j)/(2y(t-j)),\\
+d_j&=(g_2(t+1-2j)+b_j(t+1+j))/(y(4t-2j+1)),\\
+n_j&=-g_1(t+j)+(j-t)d_j+2q\,b_j,\\
+dq_j&=3g_3(q-j)/(y(4t-2j+1)),\\
+nq_j&=(j-t)dq_j+2(q-j)g_2,\\
+p_{b_2}&=g_3 d/(2y).
+\end{aligned}
+\]
+
+Reduction in \(A_t\) recovers \(L_C\), \(L_Q\), \(L_2\) and the closed pivots (5.10), (5.13), (5.15). Boundaries: \(j=0\) is not an unknown; \(j=t\) is the first \(Q\)-variable (the \(C\)-family pole \(t-j\)); \(j=2t\) is the last \(q_j\); \(j=2t+1\) is \(b_2\).
+
+Specialisation against the charged nonlinear records: **32/32** high pivots at \(t=2,3,4,5\) agree **exactly** in \(A_t\) (ratio \(1\)). There is no charged \(t=6\) Laurent JSON; the 13 specialised \(t=6\) resultants are nonzero, as a corollary of the positivity certificates, not as an independent record. The \(t=2,3\) rebuilds match the charged JSON field-by-field.
+
+Every denominator and its integer roots in \(t\) and \(j\) are listed in the report §5. The only integer \(t\)-root that occurs is \(t=-1\) (from \(t+1\) and from \(\mathrm{Res}_y(H_t,y)\)); \(4t-2j+1=0\) is never an integer pair; \(t-j\) and \(q-j\) are excluded by the spine ranges. No \(A_t\) zero divisor is inverted.
+
+Report: `xmodel/k16-pivot-forms-grok46-20260903.md` (body 9872 bytes, sealed). Drivers: `box/k16pivot-20260903/`. No ledger edits. No `charge_basis` line (no new exit-price).
+DIVERT path=xmodel/k16-pivot-forms-grok46-20260903.md status=CLEAN_SEALED body_bytes=9872 body_sha256=9e4b20438912e6efc3aca44697e6ec84794f387efcad79ff0660ae5ff174dfcb

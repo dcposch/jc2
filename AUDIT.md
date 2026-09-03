@@ -17401,3 +17401,14 @@ the cheapest closing test (perturb C by s^{t−1−j} resp. U by s^{q−j}; prop
 at symbolic t). LEDGER: the spine stays PROVED-HERE/UNREVIEWED pending (5.9)–(5.15); once
 derived, the spine and the reduction are PROMOTED and (T) on the ray = (8.1) exactly.
 Lane launched: k16-pivot-forms-grok46 (the symbolic derivation).
+
+## INTEGRATION #17 DELTA (vvv) (2026-09-03T19:59Z, PROMOTED — three models): THE SECOND AFFINE SPINE OF THE K = 16 RAY IS A THEOREM FOR EVERY INTEGER t ≥ 2 and THE REDUCTION (T) ⇔ (8.1) IS PROMOTED — Grok derived the closed pivot forms (5.9)–(5.15) symbolically in (t, j) as the first-order responses of the homogeneous-origin jet of −E_t to a weight-j perturbation, in the function field Q(t, j, y, g₁, g₂, g₃, q): b_j = g₃(3t+2−3j)/(2y(t−j)), d_j = (g₂(t+1−2j) + b_j(t+1+j))/(y(4t−2j+1)), n_j = −g₁(t+j) + (j−t)d_j + 2q·b_j, dq_j = 3g₃(q−j)/(y(4t−2j+1)), nq_j = (j−t)dq_j + 2(q−j)g₂, p_{b₂} = g₃d/(2y); differences with the asserted forms identically zero; reduction in A_t = Q(t,j)[d]/(3d² − (t+1)) recovers (5.9)–(5.15); denominators listed with integer roots (§5); 32 exact specialisations at t = 2..5 match; producer (Sol, 17(qqq)) + gate (Opus, 17(uuu)) + derivation (Grok) — PROMOTED; THEOREM (T) ON THE ONLY KNOWN COFINAL SCREENED FAMILY IS NOW EXACTLY: ⟨T_{t,0}, …, T_{t,2t−1}⟩ = [1] in A_t[b₃, b₄, q_{2,0}, …, q_{t−1,0}] for every t ≥ 2 (OPEN as a uniform claim; true at t = 1..4 exactly, 5, 6 modular)
+
+`k16-pivot-forms-grok46-20260903.md` (Grok, 10KB; box/k16pivot-20260903/; 13/13 hashes).
+§1 fixed-t rebuild (t = 2, 3); §2 the symbolic perturbation through T' = (g/2y)(5C + 3sC')
+and the Euler inverse; §3 reduction to (5.9)–(5.15); §4 specialisation; §5 denominators
+(y, g's, 2(t−j), 4t−2j+1 — no positive-integer root inside the spine's index ranges;
+recorded); §6 scope: each elimination is an isomorphism of the quotient ring; one typed
+t = 6 GAP concerns a record comparison (not the derivation). STATUS: the ray problem is
+now a single explicit, fully licensed uniform statement — the smallest form in the
+campaign's history; two proof lanes (Sol, Fable) are on it.
