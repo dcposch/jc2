@@ -17440,3 +17440,5 @@ used to keep the non-radical high-z ideal computable — typed, fail-closed. REA
 growing — which is what a family cut only by GLOBAL closure looks like; the complete
 joint chart's band computation (g9966-global-band-sol56, running; design gate running)
 is the only decider on the table.
+
+## ERRATUM[MOH-P209-TRUNCATION] (2026-09-03T20:16Z, PROMOTED, two models from the page image): Moh's displayed p.209 formula for the (16,12; 13; 3; X) reduction omits the h-non-negative part of a₂f^{2/3} = a₂h²(1 + β₂h⁻² + β₃h⁻³)^{2/3}, i.e. the term (2/3)a₂β₂ (Opus 17(ooo) §5 via the bridge normal form; GPT-5.5 17(xxx) §6 on the page image: same gauges, same definitions of β₂, γ, δ — "an omitted truncation term/misprint"); the coefficient count 10 is unaffected and the Appendix II kill of (16,12) stands (replayed four times today with the correct term).
