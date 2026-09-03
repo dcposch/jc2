@@ -20991,3 +20991,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T21:01Z EVENT — `k16-t5-replay-gpt55` sealed (9KB): (T) at t = 5 CONFIRMED → PROMOTED (three routes). → AUDIT delta 17(eeee). Lanes live: 8.
 
 ## 2026-09-03T21:02Z EVENT — launched `k16-cone-gate-gpt55-20260903` (gate on Lemma CONE, the spine grading, SUBCHART, B3-AXIS). Lanes live: 9.
+
+## 2026-09-03T21:13Z EVENT — `k16-t6-grok46-v2` FAILED the same way (turn ended at 22 min with a background poller "that will fire" — the grok CLI has no wake-on-job): PARTIAL skeleton banked. Handed to Sol: `k16-t6-sol56-20260903` (foreground `timeout`/`wait`). RULE: Grok lanes must not rely on background jobs; long compute goes to codex adapters or must block in the foreground.
