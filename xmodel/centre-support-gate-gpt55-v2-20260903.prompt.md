@@ -37,7 +37,7 @@ separated), GAP (name the step and the cheapest test), or REFUTED. Type
 every claim; FALLACY-v2 applies. Desk-scale; no ledger edits; no jc2-lean;
 no ideation-20260903T1200Z-* files; no in-progress lane reports. Drivers to
 box/centre-gate-20260903/.
-Report: xmodel/centre-support-gate-gpt55-20260903.md
+Report: xmodel/centre-support-gate-gpt55-v2-20260903.md
 Seal-at-completion (standard <!-- BODY-END --> marker; skeleton without it);
 bounded writes; target 8-14KB; 60 minutes.
 charged_input=xmodel/centre-support-grok46-20260903.md
@@ -48,14 +48,11 @@ charged_input=box/moh_skeleton_full.py
 charged_input=refs/moh1983_jram340_configurations_of_roots.pdf
 charged_input=FALLACY-v2.md
 charged_input=box/centresupport-drivers-20260903/centre_support_test.py
-charged_input=box/centresupport-drivers-20260903/full_tree_partition.py
-charged_input=box/centresupport-drivers-20260903/moh_skeleton_full.py
 charged_input=box/centresupport-drivers-20260903/moh_skeleton_full_frozen.py
-charged_input=box/centresupport-drivers-20260903/opus5_probe.py
 charged_input=box/centresupport-drivers-20260903/rerun_screens.py
 
 Your inputs are frozen read-only copies in {{LANE_INPUTS}};
-verify these SHA-256 hashes first, MECHANICALLY and without retyping any digit: the lane receipt `xmodel/centre-support-gate-gpt55-20260903.run.v2` (readable in your sandbox) carries `charged_input_<i>_sha256=` and `charged_input_<i>_basename=` lines that reproduce this block; generate the manifest from it with awk and run `sha256sum -c`; stop only on a real content mismatch, not on a transcription slip of your own — recheck once before stopping:
+verify these SHA-256 hashes first, MECHANICALLY and without retyping any digit: the lane receipt `xmodel/centre-support-gate-gpt55-v2-20260903.run.v2` (readable in your sandbox) carries `charged_input_<i>_sha256=` and `charged_input_<i>_basename=` lines that reproduce this block; generate the manifest from it with awk and run `sha256sum -c`; stop only on a real content mismatch, not on a transcription slip of your own — recheck once before stopping:
 
 ```text
 c6acd87403180ca492cae9479c0dc2ec54f359aaa46aa453e28a4ce40fefdc00  {{LANE_INPUTS}}/centre-support-grok46-20260903.md
@@ -66,9 +63,6 @@ d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2  {{LANE_INPUTS}
 6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51  {{LANE_INPUTS}}/moh1983_jram340_configurations_of_roots.pdf
 e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  {{LANE_INPUTS}}/FALLACY-v2.md
 ab27af0349154c2d3455366255c5a4978aec2140c10066ee26951c1c28d2d969  {{LANE_INPUTS}}/centre_support_test.py
-875c098a2a9465e146c77757e3d197be8af35f46ee4e772321acf8ca33b5fef8  {{LANE_INPUTS}}/full_tree_partition.py
-d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2  {{LANE_INPUTS}}/moh_skeleton_full.py
 d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2  {{LANE_INPUTS}}/moh_skeleton_full_frozen.py
-4402bf528d18f8c409935433ce7a0bea5e3b2e6c23a1735f4341218035d11ad9  {{LANE_INPUTS}}/opus5_probe.py
 1150ec4416bb690a2fcf4ed3b0983f389d2c400e5fefe8cda4612b55e1cf9372  {{LANE_INPUTS}}/rerun_screens.py
 ```
