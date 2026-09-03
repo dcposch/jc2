@@ -16262,3 +16262,36 @@ on 29/57 and 12/19; s_eff = 3 on 14/57 (all (96,64), parent s = 5) → OPEN[T-HE
 defined" covers every descendable screened row; (T) as "height 2" covers 29/57, 12/19 —
 consistent with Sol's (T≤4) framing (delta 17(w) synthesis) and with the K = 16 ray
 (anchor 2 ≠ 0, s' = 2). Different-model gate: `anchor-audit-gate-gpt55-20260903`.
+
+## INTEGRATION #17 DELTA (z) (2026-09-03T12:40Z, PROVISIONAL, producer Opus, gate Grok launched): Φ IS A THEOREM (the Jacobian enters Moh's radius system only through Prop 4.1's chain rule; δ^{(k)} = (k+1)δ^{(0)}); CLOSED FORM; r = 1 ODE unchanged; PROP 5.5(k) TRUE BUT SHARP for k ≥ 1 (not a contradiction); Moh's Galois modulus CORRECTED to 𝔄 = A'/gcd(A', L); G2/G3 NOT killed; the obstruction to (T) named; CONJ[APPII-UNIFORM]
+
+`prop55k-opus5-20260903.md` (Opus, 39KB; box/prop55k-drivers-20260903/). (1) SOURCE-READ
+p.164: J_{x,y}(f,g) = 1 enters only Prop 4.1's chain rule; J = c x^k replaces −1 by −(k+1)
+in Prop 4.4(3),(6) and Prop 4.6(3) and nowhere else; the δ-system is linear homogeneous
+so the solution scales: δ_i^{(k)} = (k+1)δ_i^{(0)} — a PROOF of Φ (delta 17(t) was fitted).
+(2) Closed form with d₂' = gcd(n',m'), n* = n'/d₂', m* = m'/d₂', Π = n*+m*, U₂' = d₂'−V₂',
+R = n'−M₂'−1: δ₂' = −(k+1)/R, δ₁' = (k+1)(ΠU₂' − R)/(R(ΠV₂' − 1)); at k = 0, R = 1 it is
+p.187's B/A verbatim; reproduces all ten p.207 rationals with zero free parameters; and
+confirmed by high-precision Newton–Puiseux on 20 genuinely existing pairs with J = cγ^k
+(§3.3). (3) The r = 1 ODE D(n', −M₁', ḡ_σ, T^ψ) = const survives J = cγ^k with only the
+constant changed (k shifts both sides of Prop 4.1(1) equally through λ): Appendix I and
+both p.187 coprimality conclusions apply unchanged; no π^k appears. (4) PROP 5.5(k) at
+δ₂' = −1: d₂' ≤ (k+1)V₂', g₀ | (k+2)V₂' − d₂', g₀ ≥ V₂'; at k = 0 collides with d₂ > V₂ and
+gives Prop 5.5; for k ≥ 1 SHARP: P = π^{k+1} − γ^{k+1}, Q = P^q + aπ (J = −(k+1)aγ^k)
+attains d₂' = (k+1)V₂' for every k ≥ 1, q ≥ 2. (5) CORRECTED-HERE: p.188's Galois modulus
+A' = denom(δ₁') is valid only when the common part of σ₁ lies in k((t)); the correct
+modulus is 𝔄 = A'/gcd(A', L), L the index of the t-exponent lattice of the common part —
+the uncorrected modulus kills two genuinely existing control pairs AND Moh's own printed
+row (21,14; 16; 2; X) at Prop 5.5 level (which would have made his Appendix II work on it
+unnecessary). (6) G2/G3 (D = 105 descendants): NOT killed with the corrected modulus (𝔄 = 2,
+residues (1,0)); negative reported; COUNTING-BOUND unchanged. (7) With 𝔄 plus a new Prop
+A.5 simplicity step: k = 0 kills 980/980 admissible rows at n' ≤ 60 (reproves Prop 5.5);
+k = 1..8 kills 88.4–95.5 %, residue = rows whose two π-degrees have residues {0,1} mod 𝔄
+(74, 135, 167, 213, 208, 251, 239, 257 rows); all five p.207 rows and G2/G3 are in the
+residue. (8) READING: theorem (T) does NOT follow from PROP 5.5(k); the obstruction is the
+degeneration of Def 5.1(2)'s window from V₂ > d₂/2 to V₂' > d₂'/(k+2); Appendix II's
+extra data fills it — CONJ[APPII-UNIFORM] (§4.2): the approximate root h of degree d₂',
+remainder-degree bounds, minor-disc root split. Consequence for the K = 16 ray (k = 1,
+d₂' = gcd(12t+4, 8t+4) = 4, V₂' = 3): PROP 5.5(1) gives 4 ≤ 6 — satisfied; the ray is in
+the residue; (T) on the ray needs the Appendix II datum, as Grok's Card III / the
+running k16-ray-T lane assume. Gate: `prop55k-gate-grok46-20260903`.

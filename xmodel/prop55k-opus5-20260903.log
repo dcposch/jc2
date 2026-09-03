@@ -1,0 +1,25 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete. Report sealed at `xmodel/prop55k-opus5-20260903.md` (38.7 KB, `<!-- BODY-END -->` present); drivers in `box/prop55k-drivers-20260903/`. All 11 input hashes verified before any read.
+
+## What came out
+
+**(1) Where the Jacobian enters.** One place only: the factor `J_{x,y}(f,g) = 1` in Prop 4.1's chain rule (p.164, read as image). Lemma 5.2 and Def 5.1(3) merely carry the resulting constant `−1` forward. Prop 4.4(3),(6) and Prop 4.6(3) are the only carriers.
+
+**(2) The k-generalisation.** `J = cγ^k` sends that `−1` to `−(k+1)` and changes nothing else; the rest of the system is linear homogeneous in the δ's, so `δ_i^{(k)} = (k+1)·δ_i^{(0)}` — this **proves** Φ, which the charged lane had fitted. Closed form:
+
+```
+δ_2' = −(k+1)/R,   δ_1' = (k+1)(Π U_2' − R)/(R(Π V_2' − 1)),  R = n'−M_2'−1, Π = n*+m*
+```
+
+Hits all ten printed p.207 rationals. The `r = 1` ODE `D(n',−M_1',ḡ_σ,T_{1,σ}) = const` is **invariant**, not shifted — so Appendix I and both coprimalities survive verbatim.
+
+**PROP 5.5(k) is true as a theorem but false as a contradiction for `k ≥ 1`.** At `δ_2' = −1` it gives `d_2' ≤ (k+1)V_2'` plus `g_0 ≥ V_2'`, `g_0 | (k+2)V_2'−d_2'`. At `k = 0` that collides with `V_2 < d_2` and *is* Moh's Prop 5.5. The exact obstruction: Def 5.1(2)'s window degrades from `V_2 > d_2/2` to `V_2' > d_2'/(k+2)`, so `U_2' > V_2'` becomes possible. It is **sharp** — the existing family `P = π^{k+1}−γ^{k+1}`, `Q = P^q + aπ` attains equality for every `k ≥ 1`.
+
+**(3) Tests.** None of Moh's five p.207 rows is killed. G2/G3 are **not** killed.
+
+**A correction I had to make mid-lane, which reversed a headline.** My first pass killed G2 and G3 outright using Moh's modulus `A' = denom(δ_1')`. The fail-closed controls refuted it: `P = π⁴−γ²`, `Q = P²+π` exists and was being killed. Moh's Galois step needs the common part of `σ_1` to be in `k((t))`; the right modulus is `𝔄 = A'/gcd(A',L)`. Independent confirmation: under the uncorrected modulus Moh's own `(21,14;16;2;X)` row would die at Prop 5.5 level, making his Appendix-II work on it pointless. I built 20 genuinely existing pairs with `J = cγ^k`, measured their radii by high-precision Newton–Puiseux (19/20 to <2e-3, the 20th to 7e-3 and converging), and the corrected test kills 0/20.
+
+**Census.** `k = 0`: 5338/5338 admissible rows killed (`n' ≤ 120`) — Prop 5.5 reproved. `k = 1..8`: 88.4–95.5 % killed, all of it from the leading-form level (Galois + a new Prop A.5 simplicity step); Moh's inequality contributes nothing once `k ≥ 1`.
+
+**(4) Reading.** Theorem (T) does not follow at `δ_2' = −1`. Appendix II's kill is level-2 data — approximate root `h` of degree `d_2'`, remainder-degree bounds, minor-disc root split — stated as `CONJ[APPII-UNIFORM]` with its exact datum and the cheapest test named (the p.210 reduction run on G2 against the `π⁵−γ⁵` control). I did not run that; it is Appendix-II work outside this charge, and the charged lane's `COUNTING-BOUND` on G2/G3 stands unconsumed.
+DIVERT path=xmodel/prop55k-opus5-20260903.md status=CLEAN body_bytes=38658 body_sha256=cb8244260483c3722569966053e11e7e13e8bd396d3e5a2ea0b800c17a4c3c3b
