@@ -1,0 +1,5 @@
+// Probe B: division by an expression that is 0 in GF(p) but nonzero over Q
+ring Rp = 32003,(x),dp;
+number b = 32003;             // == 0 in GF(p)
+number c = number(5)/b;
+print("B_reached");

@@ -1,0 +1,21 @@
+ring R=0,(b3,b4),wp(3,1);
+option(redSB);
+poly T0 = 4557/1024*b4^9-1337/640*b3*b4^6+21/100*b3^2*b4^3+7/625;
+poly T1 = -8099/1024*b4^8+49/20*b3*b4^5-21/400*b3^2*b4^2;
+poly T2 = -49/128*b4^7+7/40*b3*b4^4;
+poly T3 = 413/128*b4^6-77/80*b3*b4^3;
+print("WEIGHTS=" + string(ringlist(R)[3]));
+if (T1 == 0) { print("HOM k=1 ZERO"); } else { print("HOM k=1 homog=" + string(homog(T1)) + " deg=" + string(deg(T1)) + " expected=8"); }
+if (T2 == 0) { print("HOM k=2 ZERO"); } else { print("HOM k=2 homog=" + string(homog(T2)) + " deg=" + string(deg(T2)) + " expected=7"); }
+if (T3 == 0) { print("HOM k=3 ZERO"); } else { print("HOM k=3 homog=" + string(homog(T3)) + " deg=" + string(deg(T3)) + " expected=6"); }
+poly T0hom = T0 - subst(T0, b3,0, b4,0);
+poly T0con = T0 - T0hom;
+print("T0CONST=" + string(T0con));
+if (T0con == 0) { print("T0CONST_IS_ZERO -- UNIT CLAIM FAILS"); } else { print("T0CONST_NONZERO=yes"); }
+if (T0 == 0) { print("T0 ZERO"); } else { print("T0_homog=" + string(homog(T0)) + " (expected 0: T0 is INHOMOGENEOUS)"); }
+if (T0hom == 0) { print("T0HOM ZERO"); } else { print("T0HOM_homog=" + string(homog(T0hom)) + " deg=" + string(deg(T0hom)) + " expected=9"); }
+ideal Jp = T1,T2,T3;
+int tt = timer; ideal G = std(Jp); print("JPLUS t=2 dim=" + string(dim(G)) + " size=" + string(size(G)) + " time=" + string(timer-tt));
+print("JPLUS_LEAD=" + string(lead(G)));
+print("JPLUS_HOMOG_IDEAL=" + string(homog(Jp)));
+quit;

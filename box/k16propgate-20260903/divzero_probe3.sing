@@ -1,0 +1,6 @@
+// Probe C: affine_solve-style zero-pivot guard (laurent_spine.py path)
+ring Rp = 32003,(x,v),dp;
+poly row = 32003*v + x;       // coefficient of v is 0 in GF(p)
+poly cf = diff(row, v);
+print("CF=" + string(cf));
+if (cf == 0) { print("C_GUARD_FIRES"); } else { print("C_GUARD_SILENT"); }

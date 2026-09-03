@@ -1,0 +1,100 @@
+ring R=0,(s,b1,b2,b3,b4,B0,q(2),q(3),q(4),C(1)),dp;
+number yy = number(1)/5;
+int t=2; int q=5; int e=7; int N=9;
+number g1 = number(7)/5;
+number g2 = (number(7)/5)*yy + number(14)/50;
+number g = (number(14)/25)*yy - number(42)/750;
+number c = -yy*g;
+poly U = (s+b4)^q;
+U = U + q(2)*(s+b4)^3;
+U = U + q(3)*(s+b4)^2;
+U = U + q(4)*(s+b4)^1;
+poly Cp = (s+b4)^(t-1);
+Cp = Cp + C(1)*(s+b4)^0;
+
+proc binom(int m, int k) { // exact binomial as number
+  number r = 1; int i;
+  for (i=1; i<=k; i++) { r = r*(m-k+i)/i; }
+  return(r);
+}
+proc coefflist(poly f) { // list of coefficients of f in s: index m+1 -> [s^m]f
+  int dg = deg(f, intvec(1,0,0,0,0,0,0,0,0,0));
+  matrix M = coeffs(f, s);
+  list Lc; int i;
+  for (i=1; i<=nrows(M); i++) { Lc[i] = M[i,1]; }
+  return(Lc);
+}
+proc integrate_s(poly f) { // antiderivative with zero constant
+  list Lc = coefflist(f); poly r = 0; int i;
+  for (i=1; i<=size(Lc); i++) { r = r + Lc[i]*s^i/i; }
+  return(r);
+}
+proc euler_inverse(poly f, number yyv) { // solve yy*(1+2 s d/ds) S = f
+  list Lc = coefflist(f); poly r = 0; int i;
+  for (i=1; i<=size(Lc); i++) { r = r + (Lc[i]/(yyv*(2*(i-1)+1)))*s^(i-1); }
+  return(r);
+}
+proc hband(poly f, int k) { // [h^k] f(h-b4) = sum_{m>=k} binom(m,k)(-b4)^(m-k)[s^m]f
+  list Lc = coefflist(f); poly r = 0; int m;
+  for (m=k; m<size(Lc); m++) { r = r + binom(m,k)*(-b4)^(m-k)*Lc[m+1]; }
+  return(r);
+}
+proc affine_solve(poly row, poly v) { // returns list(coef, rhs) with row = coef*v + rem
+  poly cf = diff(row, v);
+  poly rem = subst(row, v, 0);
+  if (row - cf*v - rem != 0) { ERROR("row not affine in variable"); }
+  if (cf == 0) { ERROR("zero coefficient"); }
+  if (deg(cf) != 0) { ERROR("coefficient not a scalar"); }
+  number cn = leadcoef(cf);
+  return(list(cn, -rem/cn));
+}
+
+poly A = s*Cp;
+poly Bp = (g/(2*yy))*(5*Cp + 3*s*diff(Cp, s));
+poly B = B0 + integrate_s(Bp);
+if (diff(B,s) - Bp != 0) { ERROR("B recurrence"); }
+if (leadcoef(coeffs(B,s)[t+1,1]) - g2 != 0) { ERROR("B leading coefficient"); }
+poly rhsD = 3*g*diff(U,s) + A*B - s*A*diff(B,s) + 2*s*diff(A,s)*B + g*b3*(Cp + (5/2)*diff(A,s));
+poly D = euler_inverse(rhsD, yy);
+if (yy*(D + 2*s*diff(D,s)) - rhsD != 0) { ERROR("Euler inverse"); }
+if (leadcoef(coeffs(D,s)[2*t+1,1]) - g1 != 0) { ERROR("D leading coefficient"); }
+poly V = s*A - yy*b3;
+poly Y = s*D - b3*B - g*b2;
+poly Z = s*B - g*b3;
+poly num = yy*g*b1 - V*diff(Y,s) + diff(V,s)*Y + 2*diff(U,s)*Z;
+poly num0 = subst(num, s, 0);
+list sb1 = affine_solve(num0, b1);
+number b1coef = sb1[1]; poly b1rhs = sb1[2];
+num = subst(num, b1, b1rhs);
+if (subst(num, s, 0) != 0) { ERROR("not divisible by s"); }
+poly Xp = (num/s)/(2*yy);
+if (leadcoef(coeffs(Xp,s)[3*t+1,1]) - e != 0) { ERROR("Xp leading"); }
+poly gauge = hband(Xp, q-1);
+list sB0 = affine_solve(gauge, B0);
+number B0coef = sB0[1]; poly B0rhs = sB0[2];
+B = subst(B, B0, B0rhs); D = subst(D, B0, B0rhs); Y = subst(Y, B0, B0rhs); Z = subst(Z, B0, B0rhs); Xp = subst(Xp, B0, B0rhs); b1rhs = subst(b1rhs, B0, B0rhs);
+if (hband(Xp, q-1) != 0) { ERROR("gauge"); }
+poly Rs = V*Xp - diff(U,s)*Y - yy*g;
+list rows; int k; for (k=0; k<=N; k++) { rows[k+1] = hband(Rs, k); }
+if (rows[N+1] != 0) { ERROR("top band nonzero"); }
+list pivots; int j; poly pv; list sol; int band; int i;
+for (j=1; j<=2*t+1; j++) {
+  band = N - j;
+  if (j <= t-1) { pv = C(j); } else { if (j <= 2*t) { pv = q(j); } else { pv = b2; } }
+  sol = affine_solve(rows[band+1], pv);
+  pivots[j] = list(band, pv, sol[1], sol[2]);
+  for (i=1; i<=N+1; i++) { rows[i] = subst(rows[i], pv, sol[2]); }
+  if (rows[band+1] != 0) { ERROR("pivot substitution"); }
+  b1rhs = subst(b1rhs, pv, sol[2]); B0rhs = subst(B0rhs, pv, sol[2]);
+}
+for (k=2*t; k<=N; k++) { if (rows[k+1] != 0) { ERROR("high band survives"); } }
+print("SPINE_OK t=" + string(t));
+list PV; poly Tk; for (j=1; j<=2*t+1; j++) { PV = pivots[j]; print("PIVOT band=" + string(PV[1]) + " var=" + string(PV[2]) + " coef=" + string(PV[3])); }
+print("B1COEF=" + string(b1coef)); print("B0COEF=" + string(B0coef));
+for (k=0; k<2*t; k++) { Tk = rows[k+1]; Tk = -Tk; print("TERMINAL band=" + string(k) + " T=" + string(Tk)); }
+write(":w t2f15_rows.txt", "// terminal rows T_{t,k} = -[h^k]R_h, t=2");
+for (k=0; k<2*t; k++) { Tk = rows[k+1]; Tk = -Tk; write(":a t2f15_rows.txt", "T" + string(k) + " = " + string(Tk) + ";"); }
+write(":a t2f15_rows.txt", "B1RHS = " + string(b1rhs) + ";");
+write(":a t2f15_rows.txt", "B0RHS = " + string(B0rhs) + ";");
+for (j=1; j<=2*t+1; j++) { PV = pivots[j]; write(":a t2f15_rows.txt", "PIVOT " + string(PV[1]) + " " + string(PV[2]) + " " + string(PV[3]) + " " + string(PV[4]) + ";"); }
+quit;

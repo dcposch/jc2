@@ -1,0 +1,14 @@
+ring R=32003,(b3,b4),dp;
+poly E0 = 4557/1024*b4^9-1337/640*b3*b4^6+21/100*b3^2*b4^3+7/625;
+poly M0 = -7465*b4^9+948*b3*b4^6-2240*b3^2*b4^3-2253;
+if (E0 - M0 == 0) { print("ROWMATCH k=0 OK"); } else { print("ROWMATCH k=0 MISMATCH"); }
+poly E1 = -8099/1024*b4^8+49/20*b3*b4^5-21/400*b3^2*b4^2;
+poly M1 = 7024*b4^8-4798*b3*b4^5+560*b3^2*b4^2;
+if (E1 - M1 == 0) { print("ROWMATCH k=1 OK"); } else { print("ROWMATCH k=1 MISMATCH"); }
+poly E2 = -49/128*b4^7+7/40*b3*b4^4;
+poly M2 = 14751*b4^7+8801*b3*b4^4;
+if (E2 - M2 == 0) { print("ROWMATCH k=2 OK"); } else { print("ROWMATCH k=2 MISMATCH"); }
+poly E3 = 413/128*b4^6-77/80*b3*b4^3;
+poly M3 = 8254*b4^6-401*b3*b4^3;
+if (E3 - M3 == 0) { print("ROWMATCH k=3 OK"); } else { print("ROWMATCH k=3 MISMATCH"); }
+quit;

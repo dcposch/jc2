@@ -1,0 +1,4 @@
+// Probe A: does Singular fail loudly on a p-divisible denominator in GF(p)?
+ring Rp = 32003,(x),dp;
+number a = number(7)/32003;   // denominator == p
+print("A_reached");
