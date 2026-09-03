@@ -1,0 +1,189 @@
+{
+  "B": "-1/3",
+  "K": 11,
+  "build_elapsed": 25.906,
+  "corrected_beta_count": 28,
+  "corrected_beta_deg_x_cap": 2,
+  "delta1": "1/3",
+  "delta2": "-1",
+  "dprime": 2,
+  "eprime": 3,
+  "equations": 62,
+  "h_lower": [
+    [
+      0,
+      10
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "h_lower_count": 23,
+  "levels": [
+    0,
+    1
+  ],
+  "omega": "a2**2 - a2",
+  "partition": [
+    2,
+    1
+  ],
+  "partition_label": "2+1",
+  "recomposition_ok": "not-run; equation construction uses the same h-adic recurrence as prior strata_gate.py",
+  "row": {
+    "M2": 30,
+    "V2": 8,
+    "k": 1,
+    "key": "33_22_30_8_k1",
+    "label": "(33,22;30;8;k=1)",
+    "m": 22,
+    "n": 33,
+    "parent": "(132,88)"
+  },
+  "runs": [
+    {
+      "basis_size": "1",
+      "char": 32003,
+      "control_empty_pass": true,
+      "control_nonempty_pass": true,
+      "elapsed": 0.014,
+      "rc": 0,
+      "script": "box/strata-rerun-20260903/systems/33_22_30_8_k1_part_2_1_mod_32003.sing",
+      "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=29 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+      "verdict": "SATURATED-EMPTY"
+    },
+    {
+      "basis_size": "1",
+      "char": 32009,
+      "control_empty_pass": true,
+      "control_nonempty_pass": true,
+      "elapsed": 0.014,
+      "rc": 0,
+      "script": "box/strata-rerun-20260903/systems/33_22_30_8_k1_part_2_1_mod_32009.sing",
+      "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=29 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+      "verdict": "SATURATED-EMPTY"
+    },
+    {
+      "basis_size": "1",
+      "char": 32027,
+      "control_empty_pass": true,
+      "control_nonempty_pass": true,
+      "elapsed": 0.014,
+      "rc": 0,
+      "script": "box/strata-rerun-20260903/systems/33_22_30_8_k1_part_2_1_mod_32027.sing",
+      "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=29 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+      "verdict": "SATURATED-EMPTY"
+    },
+    {
+      "basis_size": "1",
+      "char": 0,
+      "control_empty_pass": true,
+      "control_nonempty_pass": true,
+      "elapsed": 0.013,
+      "rc": 0,
+      "script": "box/strata-rerun-20260903/systems/33_22_30_8_k1_part_2_1_Q.sing",
+      "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=29 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+      "verdict": "SATURATED-EMPTY"
+    }
+  ],
+  "sanity_gate": {
+    "deg_x_J": 4,
+    "deg_x_J_kind": "exact h-adic normalized level-0 Jacobian remainder before subtracting c*x^k",
+    "reaches_k": true,
+    "required_k": 1,
+    "status": "PASS"
+  },
+  "saturation_factor": "a2**2*c - a2*c",
+  "slope_symbols": [
+    "a2"
+  ],
+  "top_face_factored": "y^8*(y-x)^2*(y-a2*x)^1",
+  "u": 3,
+  "unknowns": 29,
+  "verdict": "SATURATED-EMPTY"
+}

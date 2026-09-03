@@ -20937,3 +20937,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T18:10Z EVENT — `xu-principal-floor-sol56` sealed (18KB): sharpened principal floor V_s/u_s − 1 PROVED (typed lemma; Fable + Sol = two-model) — +4 groups killed (all u_s > 1); (99,66) and (108,72) survive. → AUDIT delta 17(fff) PROMOTED. Operative screen now: 653 groups at D ≤ 200, u_s > 1 = 166. Lanes live: 5.
 
 ## 2026-09-03T18:13Z EVENT — `moh9966-B-lift-sol56` sealed (28KB): branch B banded lift consistent through band 5 (dim 59), δ = 5/2 face dim 2, Moh's (16,12) control dies under the same lift — (99,66) needs the JOINT two-point-at-infinity system. → AUDIT delta 17(ggg). Opus is back (probe OK). Launching `g9966-global-design-sol56` and `g9966-source-review-opus5`. Lanes live: 7.
+
+## 2026-09-03T18:24Z EVENT — `strata-rerun-corrected-gpt55` sealed (9KB): (132,88), (180,120), (84,56) CONFIRMED under the corrected generator; (75,50; V₂ = 2) [1,1,1] closed by the superset argument (old chart ⊇ new, old exact [1]). → AUDIT delta 17(hhh) PROMOTED. Two-point stratum: 8 groups dead. Lanes live: 6.

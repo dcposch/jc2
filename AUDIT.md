@@ -17203,3 +17203,21 @@ COUNTING-BOUND[B-FULL-LIFT]; OPEN[FULL-X-Y-KELLER-LIFT] stands as the decider; l
 g9966-global-design-sol56 (build the joint two-point-at-infinity system) and
 g9966-source-review-opus5 (fresh-eyes source route: Props 6.1–6.2, Lemma 5.2 at the minor
 packet, Xu Cor 7.5 variants — anything both lanes missed).
+
+## INTEGRATION #17 DELTA (hhh) (2026-09-03T18:24Z, PROMOTED): delta 17(vv)'s two full-stratum kills re-verified under the CORRECTED generator — (132,88) → (33,22; 30; 8; 1) [strata [3], [2,1]] and (180,120) → (45,30; 42; 11; 1) [[4], [3,1], [2,2]] CONFIRMED (h support equal, the corrected β inventory is a SUBSET of the old — the old kills were superset kills, not slices); (84,56) → (21,14; 18; 5; 1) [[2], [1,1]] CONFIRMED; (75,50; V₂ = 2) → (15,10; 11; 2; 2): [3], [2,1] CONFIRMED exactly, [1,1,1] three modular [1] but Q timed out at 900 s (lane verdict GAP) — CLOSED by the coordinator's superset argument: the corrected support is a strict subset of the old (h_all 15 → 13, β₂ 28 → 16) and the old [1,1,1] stratum has an exact Q unit certificate (delta 17(vv), saturated-subset argument), so the corrected stratum is empty a fortiori
+
+`strata-rerun-corrected-gpt55-20260903.md` (GPT-5.5; 9/9 hashes; box/strata-rerun-
+20260903/; every stratum with deg_x J reaching k; three primes + Q; timeout 900 s). Support
+comparison: (33,22): h_all 27 = 27, β₂ 33 → 28 new ⊂ old; (45,30): h_all 44 = 44, β₂ 55 → 40 new ⊂
+old; thresholds −1/3 = −1/3; (15,10; 11; 2): threshold −4/3 → −1/3 (stricter), h_all 15 → 13,
+h_lower 11 → 9, β₂ 28 → 16, all new ⊂ old. Rerun: every stratum of the first three rows [1]
+over three primes and Q; (15,10; 11; 2) [3] and [2,1] [1] over all fields; [1,1,1] 16 unk / 34
+eq, deg_x J = 5, [1] over 32003/32009/32027, Q TIMEOUT 900 s. LOGIC for the [1,1,1] closure:
+chart_new ⊆ chart_old as varieties (same equations restricted to fewer monomials, same
+saturation); 1 ∈ I_old (exact, 17(vv)) ⇒ 1 ∈ I_new. LEDGER: the two-point s_eff = 2 u_s = 1
+stratum at D ≤ 200 now stands at 7 groups DEAD and PROMOTED — (64,48), (75,50; V₂ = 2),
+(75,50; V₂ = 3), (84,56), (112,80) [K16 t = 2], (132,88), (180,120) — plus (160,112) [K16 t =
+3, 17(ww)] = 8 dead; OPEN 9: (147,98), (168,112), (189,126) [δ₁' = 0; r3-preprocess running],
+(125,75), (175,100), (175,125), (180,144), (192,128), (196,56), (200,120) [bigrows running]
+— wait: that is 10; the list of 17 = 8 dead + 9 open requires recount at the next census
+re-base (the batch's 18 rows / 17 groups include (75,50) twice as one group).
