@@ -20855,3 +20855,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T13:37Z EVENT — launched `minor-dichotomy-opus5-20260903` (source-read of Moh p.209 u_s > 1 handling; apply to (99,66) and the D = 108 u_s = 2 row; template for the 177 u_s > 1 groups). Lanes live: 4.
 
 ## 2026-09-03T13:43Z EVENT — `minor-dichotomy-opus5` FAILED at 5 min: Anthropic API 529 Overloaded (no work done). Relaunched verbatim as `minor-dichotomy-opus5-v2-20260903`; fall back to Grok if it recurs.
+
+## 2026-09-03T13:49Z EVENT — `minor-dichotomy-opus5-v2` FAILED again (API 529 Overloaded; Opus seat unavailable right now — coordinator probe also hung). Handed to Grok: `minor-dichotomy-grok46-20260903`. Opus seats: avoid until the overload clears.
