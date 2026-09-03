@@ -1,3 +1,19 @@
+<!-- OVERLAY 2026-09-03T12:34Z (round 20260903T1200Z synthesis) -->
+**2026-09-03T12:34Z overlay (round 20260903T1200Z).** Q1 settled NO: the screened census is
+cofinally nonempty (K = 16 ray, delta 17(w), PROMOTED, gap-free) — every "prove
+eventual emptiness of C_FULL_TREE(_ODE)" row is DEAD as a proof route and LIVE as a
+target generator. Row 1 (GGV corner / monomial-Jacobian pairs, [P,Q] = x^k) RAISED to
+the principal proof row: theorem (T≤4) on descended pairs with the entire inherited
+tree; canonical unbounded client = the K = 16 ray → (12t+4, 8t+4; 12t+1, 3; J = cγ),
+first honest instance t = 2 = (28,20). Sibling coefficients (Sol Card 1 fibre-product
+scheme) is the uniform coefficient object; tree-decorated moment engine DEFERRED.
+Descent rows: Φ re-typed to s' = 2 (OPEN[DESCENT-STATE-S3], OPEN[DESCENT-ANCHOR]).
+Recentring (POLY column) PROVISIONAL positive (Fable), gate running. MF-RATIONAL row
+CLOSED negative for counterexamples (EXTERNAL: Kaliman 1993 / Lê–Weber 1995 / Neumann–
+Norbury 1998 / Nguyen Van Chau 2008): g_gen ≥ 1 per component. New skeleton-external
+necessary conditions (Fable): pencil completion, unramified fibre map / Riemann–Hurwitz.
+See xmodel/ideation-20260903T1200Z-synthesis.md.
+
 # APPROACHES.md — Canonical merged survey of top-level JC2 approaches
 
 Date: 2026-08-21. Merge of three independently produced surveys:

@@ -29,6 +29,7 @@ day or inserts the completed day directly below this preamble (see
 > (Sol's sharpest: 10 rows); none sourced; a falsifier row with an exact bottom
 > solution is the test.** Eleven lanes live at 10:45Z on the cloud box; next
 > round floor 22:38Z.
+- 2026-09-03T12:34Z: round 20260903T1200Z synthesised (5/5 blind submissions). K = 16 ray PROMOTED (delta 17(w), GPT-5.5 gate): screened census cofinally nonempty — Q3(f) after the screen is NO; program = theorem (T≤4) in the descended coordinate; canonical client (28,20; M₂' = 25, V₂' = 3, J = cγ). Sol: D = 108 descendants are s' = 3 (Φ/V'-map scope over-promotion in 17(t) re-typed). Fable: recentring closes positive (gate running; POLY column would halve the operative census; s = 3 exact at n ≤ 100); pencil + unramified-fibre-map mechanisms; MF-RATIONAL closed by literature (delta 17(x)). Lanes launched: k16-ray-T (Sol, 2 hash-gate flakes), d108-1812-ramification (Sol), recenter-gate (Opus).
 
 ## 2026-09-02
 

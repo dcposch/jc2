@@ -16214,3 +16214,23 @@ homotheties λ = 2..6 of Moh's six are not screened families), and its members l
 the campaign window [6,16] only at t = 1, 2 — the fixed-N framing is retired.
 Typed OPENs carried: OPEN[T-K16] (theorem (T) on the ray; lane k16-ray-T-newton-sol56-v3
 running); OPEN[DESCENT-ANCHOR] does not bite on the ray (n' − M₂' − 1 = 2 ≠ 0).
+
+## INTEGRATION #17 DELTA (x) (2026-09-03T12:34Z, EXTERNAL / LITERATURE, web-verified abstracts): OPEN[MF-RATIONAL] CLOSES NEGATIVE FOR COUNTEREXAMPLES
+
+Raised by Fable's blind 1200Z submission §5.3 (SOURCE-UNVERIFIED from memory); coordinator
+web check (arXiv abstracts only, not the papers): Neumann–Norbury, "Nontrivial rational
+polynomials in two variables have reducible fibres" (arXiv math/9805093): "It has been
+proved several times in the literature that a polynomial map from C² to C with
+irreducible rational fibers cannot be a component of a counterexample to the Jacobian
+Conjecture" — the several proofs being Kaliman, Proc. AMS 117 (1993) 45–51 and Lê–Weber,
+C. R. Acad. Sci. Paris 320 (1995) 581–584, and the statement following from Miyanishi–
+Sugie 1980; Nguyen Van Chau, "Plane Jacobian conjecture for rational polynomials"
+(arXiv 0804.3172): "A non-zero constant Jacobian polynomial map F = (P,Q) of C² is
+invertible if P and Q are rational polynomials." Typed EXTERNAL (statements taken from
+abstracts; the exact hypotheses — irreducible rational generic fibre of ONE component vs
+both — must be read from the papers before any kill is executed on a specific skeleton).
+Consequence for the campaign: the generic fibre of each component of a counterexample
+has genus ≥ 1; with the unramified-fibre-map identity of Fable §5.2 (PROVED-HERE, one
+line, UNREVIEWED): Σ_{non-proper}(e_P − 1) ≥ N + r_prop. Ledger action: OPEN[MF-RATIONAL]
+→ CLOSED (EXTERNAL); MF-DEFECT's 2g_L + θ_inf ≥ 2 sharpens to g_L ≥ 1 once the papers'
+hypotheses are confirmed (24h web-sweep item: fetch the two 1990s papers' statements).
