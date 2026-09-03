@@ -1,0 +1,19 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll verify the frozen input hashes first, then read the charged sources and existing sieve/descent code so the harness can be fail-closed.Hashes match. Next I’ll read the charged ideation, skeleton, drivers, and COORDINATION notes for `-O`/assert rules.Hashes are good. I’ll pull the six predicates, Prop 6.3/6.4, and COORDINATION `-O` rules from the charged files.I’ll pull Def 5.1 / Prop 4.6 from the OCR and Moh PDF so Card I and SECOND-POINT can be typed, then write the report skeleton.I have the six predicates and the Prop 6.3 map. Next I’ll write the report skeleton, then the sieve and descent modules.Writing the report skeleton and the sieve, descent, test, and runner modules.I’ll split shared gates into a sibling module so script vs `-m` imports don’t collide, then add tests and the runner.The `mohsieve` file/package name clash is breaking imports. I’ll switch everything to package-relative imports and pin `box/` as the path.Gates G1/G6/G7 and the D=105 trio match. Next I’ll run the n≤100 census, then the full D≤200 leaderboard.All gates are green under `python3 -O`. Writing the full report next, then sealing it.The harness is in `box/mohsieve/`, the report is `xmodel/mohsieve-descent-engine-grok46-20260903.md` (sealed). Charged-input hashes matched. Nothing here is claimed to **be** Moh’s program — the leaderboard is MEASURED.
+
+**Registry.** Six typed predicates over `box/moh_skeleton_full.py`. SECOND-POINT is **UNDEFINED**: Def 5.1 is one major tower; `u ↔ v` on `L_1^u L_2^v` sends `V_s` to `d_s−V_s < d_s/2`, which is a minor disc (Prop 6.1), and lower `V_j` on the complementary factor are not a function of one skeleton. Probe `V_s ↦ d_s−V_s` keeps **0/6** printed rows. PARTITION (Card I) is implemented and **vacuous** (solo kill 0 on 658 / 1,189 / 14,016): given (1)–(13), a Prop 4.6 partition of `Q` always exists.
+
+**Negative control.** EMPTY reproduces **658/63** and **1,189 / 14,016**.
+
+**G2.** After UNI `N ≥ 6`, both charged stacks pin `(75,50)` to `{M_2=55, V_2∈{2,3}}`. INCREMENT ∧ NOT-ALL-11 still keeps `(40,1)`.
+
+**2×2 on n≤100.** M2-ABOVE-M vs MAJOR-MULT: `(77, 17; 235, 329)`. No implication either way.
+
+**Tightest G1-passing stack:** INCREMENT ∧ NOT-ALL-11 ∧ M2-ABOVE-M → **20 rows / 14 classes** (still 14 excess classes vs Moh’s 4). MOH-4 (INCREMENT ∧ NOT-ALL-11 ∧ MAJOR-MULT) → **51/13**, **1,908** groups, emptied `[48, 60, 63, 81, 88, 104, 105, 110, 152, 154]`.
+
+**Descent (G6 HARD).** p.207 to the unit: `(64,48)→(16,12,13; X)`, `(84,56)→(21,14,16[18]; X)`, `(75,50)→(15,10,11; X²)`. GPT-5.5 `(99,66)` X⁴ branch: `(27,18,21; k=4)` via the p.209 linear-power formula, not Prop 6.3. G8 does not empty D=64, 75, 84, 99. Of 14,016 groups, **4,012 (28.6%)** have `u_s>1` (p.209 dichotomy).
+
+**D=105 trio.** G2 → `(15,10; γ⁴, M_2'=4)`; G3 → `(21,14; γ², M_2'=8)` (both `M2-LE-M` after descent); G1 has `u_s=2` (no Prop 6.3). All three die on MAJOR-MULT (`V_2=1`) and on M2-ABOVE-M (`M_2<m`).
+
+**Replay.** `python3 box/mohsieve/run_all.py` and `python3 -O box/mohsieve/run_all.py` — 0 `ast.Assert` in the harness, 115 `[ok]`, 0 `[FAIL]`, wall **14.7 s**, RSS **70 MB**.
+DIVERT path=xmodel/mohsieve-descent-engine-grok46-20260903.md status=CLEAN body_bytes=19338 body_sha256=217cd382d25f5624d27f13c521462703aea083d42b125ca98fecde8bedebc804
