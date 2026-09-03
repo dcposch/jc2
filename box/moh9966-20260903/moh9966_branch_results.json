@@ -1,0 +1,158 @@
+{
+  "branches": [
+    {
+      "branch": "A",
+      "equations_excluding_rabinowitsch": 29,
+      "exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_c_one_pass": true,
+        "control_c_zero_pass": true,
+        "elapsed_s": 0.008,
+        "returncode": 0,
+        "script": "box/moh9966-20260903/systems/branch_A_linear_AB_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=29 unknowns=14 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "meta": {
+        "ab_forced": true,
+        "chart": "d2e3_ab",
+        "constructed_coefficients_excluding_c": 13,
+        "constructed_unknowns_including_c": 14,
+        "dprime": 2,
+        "eprime": 3,
+        "h_free_count": 9,
+        "interpretation": "p.210 two-point A/B Jacobian system for the transformed (27,18;M2=21;V2=8;k=4) row; not Moh's omitted eta-reduced ten-coefficient display",
+        "levels": [
+          0,
+          1
+        ],
+        "moh_printed_coefficients": 10,
+        "rabinowitsch_symbol": "T",
+        "ring": "Q[h(9),bp,bq,br,bs,c,T]",
+        "row": {
+          "M2": 21,
+          "V2": 8,
+          "k": 4,
+          "m": 18,
+          "n": 27,
+          "src": "99-branch-A-linear-power-AB-superset",
+          "tag": "MOH-p209"
+        },
+        "source_branch": "LINEAR-POWER",
+        "top_note": "fixed split top face",
+        "top_policy": "fixed"
+      },
+      "modular": [
+        {
+          "basis_size": "1",
+          "char": 32003,
+          "control_c_one_pass": true,
+          "control_c_zero_pass": true,
+          "elapsed_s": 0.008,
+          "returncode": 0,
+          "script": "box/moh9966-20260903/systems/branch_A_linear_AB_mod_32003.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=29 unknowns=14 char=32003\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32009,
+          "control_c_one_pass": true,
+          "control_c_zero_pass": true,
+          "elapsed_s": 0.009,
+          "returncode": 0,
+          "script": "box/moh9966-20260903/systems/branch_A_linear_AB_mod_32009.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=29 unknowns=14 char=32009\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis_size": "1",
+          "char": 32027,
+          "control_c_one_pass": true,
+          "control_c_zero_pass": true,
+          "elapsed_s": 0.009,
+          "returncode": 0,
+          "script": "box/moh9966-20260903/systems/branch_A_linear_AB_mod_32027.sing",
+          "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=29 unknowns=14 char=32027\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "name": "LINEAR-POWER",
+      "unknowns_including_c_and_T": 15,
+      "unknowns_including_c_excluding_T": 14,
+      "unsaturated_Q_control": {
+        "basis_size": "14",
+        "control_c1_nontrivial": true,
+        "elapsed_s": 0.008,
+        "returncode": 0,
+        "script": "box/moh9966-20260903/systems/branch_A_linear_AB_unsaturated_Q.sing",
+        "stdout_tail": "UNSAT_START\nUNSAT_DONE basis_size=\n14\nUNSAT_NONTRIVIAL\nUNSAT_CONTROL_C1_NONTRIVIAL\n",
+        "verdict": "NONTRIVIAL"
+      }
+    },
+    {
+      "branch": "B",
+      "constructed_unknowns_including_c": null,
+      "equations": null,
+      "exact": {
+        "reason": "SOURCE-OMITTED: p.209--210 prints Omega, five leading conditions, and the count 11, but not the monomial support or equations",
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "char": 32003,
+          "reason": "Moh omits the 11-variable equations after Omega",
+          "verdict": "NOT-RUN"
+        },
+        {
+          "char": 32009,
+          "reason": "Moh omits the 11-variable equations after Omega",
+          "verdict": "NOT-RUN"
+        },
+        {
+          "char": 32027,
+          "reason": "Moh omits the 11-variable equations after Omega",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "moh_printed_variables": 11,
+      "name": "TWO-ROOT-CUBIC"
+    },
+    {
+      "branch": "C",
+      "constructed_unknowns_including_c": null,
+      "equations": null,
+      "exact": {
+        "reason": "MISSING-PARTITION: the 1+1+1 cubic is not excluded on p.209, but the source supplies no corresponding Omega normal form or coefficient system",
+        "verdict": "COUNTING-BOUND"
+      },
+      "modular": [
+        {
+          "char": 32003,
+          "reason": "not a Moh printed branch; no transform/equations supplied",
+          "verdict": "NOT-RUN"
+        },
+        {
+          "char": 32009,
+          "reason": "not a Moh printed branch; no transform/equations supplied",
+          "verdict": "NOT-RUN"
+        },
+        {
+          "char": 32027,
+          "reason": "not a Moh printed branch; no transform/equations supplied",
+          "verdict": "NOT-RUN"
+        }
+      ],
+      "moh_printed_variables": null,
+      "name": "THREE-SIMPLE-ROOT-CUBIC"
+    }
+  ],
+  "frozen_driver": "/tmp/jc2-lane.4zSf7l/inputs/twopoint_order_batch.py",
+  "input_dir": "/tmp/jc2-lane.4zSf7l/inputs",
+  "primes": [
+    32003,
+    32009,
+    32027
+  ]
+}

@@ -16844,3 +16844,25 @@ either (i) a structural lemma about the middle bands (the "middle" scales with t
 recurrence/induction in t on the normalised triangular form), or (ii) a different
 invariant of the descended pair (the common-jet / Laurent bridge p₁₇ that all charts
 omit). Gate launched: k16-t3-gate-gpt55.
+
+## INTEGRATION #17 DELTA (tt) (2026-09-03T15:42Z, SOURCE-READ + PROVED-HERE partial, producer GPT-5.5): MOH'S (99,66) CASE SPLIT, MECHANICALLY — branch A (LINEAR-POWER, transformed (27,18; 21; 8; X⁴)): the A/B predecessor system (14 unknowns, 29 equations) is SATURATED-EMPTY over three primes and Q; branch B (TWO-ROOT-CUBIC, Ω, "11 variables") and the omitted 1+1+1 partition are SOURCE-OMITTED (Moh prints Ω, five leading terms, J = x and the count 11, but neither the variables nor the equations) → COUNTING-BOUND[SOURCE-OMITTED]; Moh's n ≤ 100 assertion remains source-asserted for (99,66)
+
+`moh9966-branches-gpt55-20260903.md` (GPT-5.5; pages 207–211 with OCR;
+box/moh9966-20260903/). Transcription (§Source): Appendix II's four classes (64,48),
+(84,56), (75,50), (99,66); Prop 6.4 used for the first three only (u₃ = 1); the p.208
+template for (16,12) (ḡ = h⁴ + α₁h³ + …, f̄ = h³ + β₂h + β₃, deg_y α_i, β_i ≤ 3, ord α_i(σ) ≥
+i(−1/4), h = y³(y − x) + b₁y³ + b₂y² + b₃y + b₄ = yA + b₄ = y²B + b₃y + b₄, α₂ = c₁A + c₂, …,
+α₄ = c₁₁A + c₁₂B + c₁₃(y − x)) and the η reduction. Branch A: the transformed linear-power
+row is treated with the same A/B predecessor ansatz: 14 unknowns + T, 29 equations + Tc − 1;
+[1] over GF(32003)/GF(32009)/GF(32027) and Q; unsaturated ideal non-trivial (wrapper
+non-vacuous). PROVED-HERE: branch A's A/B predecessor has no c ≠ 0 solution. Branch B: NOT
+RUN — the lane refused to invent monomial support from the five printed leading terms.
+Branch C (1+1+1): excluded on the page by assertion only. VERDICT: "no Keller pair with the
+(99,66) skeleton" is NOT established by this lane; B and C are COUNTING-BOUND
+[SOURCE-OMITTED], not SURVIVES. D = 108 readiness: the scaffold needs, in place of Moh's
+radius-2 probe, an ACTUAL minor first-separation datum ρ = δ₂* for the combined cluster of
+g, T₁^ψ, T₂^ψ, T₃^ψ with the leading polynomials at ρ; if ρ ≥ 7/2 Prop 6.3 applies; if
+ρ < 7/2 then ord g(σ_ρ) = 12(2ρ − 7) < 0 and the detector has degree 2 (one double root or
+two simple roots) — case-specific systems to be derived. Follow-up lane: derive Moh's
+branch B (and C) systems from first principles (polynomiality of Ω(f), Ω(g) after the
+printed transform + the order conditions), rather than from the print.
