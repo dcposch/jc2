@@ -45,8 +45,14 @@ chart (17(ttt), gated necessary 17(aaaa)) with the outer Theorem-1.2 bands (5,77
 17(dddd)) and the nonlinear bridge rows (17(hhhh)) is the decider object; the exact band
 continuation KILLS BRANCH B at stage 4 (17(kkkk); PROMOTED by the GPT-5.5 gate 17(pppp):
 Moh's p.209 case split is mechanically complete) (unit ideal:
-integer-constant residue) and leaves δ = 5/2 alive at stage 7 with 869 free coefficients
-(decrements 47 → 11); the stage-8+ continuation is running. Riemann–Hurwitz and Xu's
+integer-constant residue) and, at 23:0xZ, the δ = 5/2 branch ALSO DIED at stage 8 (residue = 64, unit ideal,
+Singular dim −1; 17(qqqq), PROVISIONAL, gate running): BOTH branches of the necessary joint
+chart are empty — conditional on the promoted necessity/exhaustiveness gates, NO KELLER
+PAIR WITH THE (99,66) SKELETON, closing the published gap in Moh's degree ≤ 100 theorem.
+Q2 is therefore RE-POSED: (a) hostile scrutiny of the two kills' dependency gates (the
+K2c coordinate change; the pole rows' necessity; the engine); (b) what the joint-chart
+engine's success at (99,66) implies for the u_s > 1 stratum (166 groups) and for a
+uniform theorem ("a Keller pair cannot carry a principal-minor split at all"?). Riemann–Hurwitz and Xu's
 bookkeeping are tree-determined / tree-blind (17(mmm), (jjj)).
 
 ## 2. Questions for this round

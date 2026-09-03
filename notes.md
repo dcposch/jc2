@@ -21019,3 +21019,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - K = 16 ray: (T) PROMOTED t = 1..7; fixed-t instrument promoted (17(mmmm)); the uniform question = the b₄ = 1 chart (OPEN[B4-GLOBAL]; Fable lane running); the tail of the chain proved (17(nnnn)).
 - Screens exhausted at skeleton level; large two-point rows need order charts (lane running).
 - Round 20260904T0000Z packet drafted (cf18d2aa + note); wake armed.
+
+## 2026-09-03T23:08Z EVENT — `g9966-delta52-stage8-sol56` sealed (19KB): THE δ = 5/2 BRANCH OF (99,66) IS DEAD at stage 8 (residue = 64; unit ideal; Singular dim −1). BOTH BRANCHES DEAD → conditional verdict NO KELLER PAIR WITH THE (99,66) SKELETON (pending the stage-8 gate) — the published gap in Moh's degree ≤ 100 theorem would be closed. → AUDIT delta 17(qqqq) PROVISIONAL. Launching `g9966-delta52-kill-gate-gpt55`. DC notified. CRITICAL TRIGGER folded into the 00:00Z round. Lanes live: 8.

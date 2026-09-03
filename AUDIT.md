@@ -17637,3 +17637,16 @@ an attainment or a JC2 statement. (3) The joint-chart engine (major tower at one
 principal-minor split at the other + Jacobian, band-linear, Q*-pivots) has now produced
 its first kill in the u_s > 1 stratum — the packet's Q3 (uniformising it across the 166
 groups) is live.
+
+## INTEGRATION #17 DELTA (qqqq) (2026-09-03T23:08Z, PROVISIONAL KILL — PROVED-HERE, producer Sol; gate launched): THE δ = 5/2 BRANCH OF (99,66) IS DEAD IN THE JOINT CHART AT STAGE 8 — the charged stage-7 endpoint replayed at exact localised dimension 869; stage 8 (pole power 16, (F,G) = (−173,−110), the 156 coefficients of Jacobian degree 155) imposed with the pinned engine (1,758 s, 279 MB): after seven new Q*-pivots (66 cumulative, all coefficients nonzero rationals; the localisation parameter never a pivot) the exact reduced residue contains stage8_G_local16_coord0 = 64, so 1 = (1/64)·stage8_G_local16_coord0 — the RAW reduced ideal is [1] before localisation; independent characteristic-zero Singular replay of the emitted Rabinowitsch system: dimension −1, basis 1, controls 0, 1, 0; the branch died at the first newly requested band (not by stagnation or budget); BOTH DECLARED BRANCHES ARE NOW EMPTY (δ = 2 at stage 4: stage4_J_d159_k35 = 6264, PROMOTED 17(pppp); δ = 5/2 at stage 8: 64) → NO-SURVIVING-BRANCH[DECLARED-(99,66)-JOINT-CHART]; TYPED CONDITIONAL VERDICT: NO-KELLER-PAIR-WITH-THE-(99,66)-SKELETON, conditional on (1) the necessity of the joint chart (17(aaaa), PROMOTED), (2) the necessity of the outer Theorem-1.2 rows (17(dddd)), (3) the completeness of the principal-minor split classification {2 [2,1], 5/2 [1,1,1]} (17(nnn), (rrr), (sss), PROMOTED), (4) the invertibility / unit-triangularity of the imported low-q K2c coordinate change on the declared structural state (the full inverse to the original C₂, C₃ names is not serialised — a custody item for the gate), (5) the faithfulness of the pinned engine and the two constant-unit certificates; the absent T₂/T₃ bridge only weakens the subsystem and cannot rescue a unit ideal; NOT a verdict about unrestricted JC2 or other skeletons
+
+`g9966-delta52-stage8-sol56-20260903.md` (Sol, 19KB; box/g9966s8-20260903/; 11/11 hashes;
+validate_run_ledger.py regenerated the accepted stage-0–7 ledger byte for byte). If the
+gate confirms: Moh's 1983 "no counter-example of polynomials of degrees ≤ 100" is
+COMPLETE — the (99,66) row that Moh left undisplayed and Xu (2022) called open is
+excluded by an exact finite computation on a necessary chart; every printed row of Moh's
+Appendix II table is then mechanically dead (17(bb), (oo), (ww), (pppp), this delta).
+Gate launched: g9966-delta52-kill-gate-gpt55 (replay stage 8; audit the seven new pivots,
+the K2c coordinate change's invertibility, the pole row's necessity and the constant's
+provenance; contrast with a control). CRITICAL TRIGGER: a kill closing a published gap —
+folded into round 20260904T0000Z (65 min away) rather than a separate round.
