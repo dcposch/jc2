@@ -7,6 +7,54 @@ Date: 2026-08-21. Merge of three independently produced surveys:
 The dated 46-row inventory and original scores trace to these three inputs;
 later correction and live-overlay sections cite post-survey campaign evidence.
 
+## Superseding strategy overlay (2026-09-03 10:45Z — round 20260903T1015Z: the census never empties; the all-degree program leaves the skeleton)
+
+- **The boundary program is closed as a ceiling program, and the arithmetic
+  census is closed as a proof program.** Integration #17: the boundary
+  computes `N` exactly and the value is `O(1)` (PIN-NOT-CEILING). Round
+  20260903T1015Z: Sol exhibited an explicit unbounded family of Moh
+  (1)–(13)-admissible skeletons with pinned `N = 6` (`L = 8a + 5`, degrees
+  105, 273, 441, …; PROVED-HERE/UNREVIEWED, verification lane running), so
+  "(1)–(13) + integral pinned N" is cofinally nonempty and any uniform
+  theorem must consume a datum outside the scalar skeleton. The D = 105
+  trio is a regression client, not a flagship (6/6).
+- **Three live all-degree mechanisms, one engine.** (A) the trace/moment
+  identity family `d/dx Tr(f^{k+1}) = (k+1) J [y^{n−1}](f^k mod (g − c))`
+  with `deg_x` bounded by `(k+1)·max pole` — an `O(k)` bound on an object of
+  natural size `Θ(k m)`; the `n − m − 1` global moment identities of the
+  sealed global-interpolation framework are its degree block (lanes:
+  ps-growth, d105-rank-gate, fixed-n6-family). (B) Moh's Prop 6.3/6.4
+  DESCENT (Fable, source-read): a `u_s = 1` skeleton descends to a
+  monomial-Jacobian pair in `k[γ,π]` of π-degrees `(n/d_s, m/d_s)` — the
+  `[P,Q] = x^k` world of row 1, which becomes a RECEIVER (its certificates
+  are kill conditions for Moh skeletons); two of the three D = 105 groups
+  descend to `(15,10; γ⁴)` and `(21,14; γ²)` (lanes: m2-descent,
+  mohsieve-descent-engine). (C) the Galois-orbit structure of bottom discs
+  (branch-orbits v2: (UNI) is NOT a theorem; `|O| = ∏ A_j` on (10)-levels;
+  the trio is single-orbit with `N = 9`) and its geometric form, the
+  DESSIN-TOWER expected dimension (lane: dessin-tower-dim).
+- **OPEN[MOH-PROGRAM] is a leaderboard, not an essay.** Four MEASURED
+  candidate gates keep Moh's six rows and empty D = 105 (Sol's
+  `M₂ > n − d₂ ∧ forced-(10)` leaves 10 rows; Fable's `M₂ > m` 94; Opus's
+  `A_j ≥ 2 ∧ NOT-ALL-(11) ∧ V_j ≥ 2` 51); none sourced; the row
+  `(75,50,M₂ = 40,V₂ = 1)` with an exact cyclic bottom solution is the
+  falsifier every local gate must face. The AM semigroup conditions are
+  AUTOMATIC on the census (Q3(d) refuted as the missing filter; the AM
+  one-place FRAME is raised). p.202's completeness is falsifiable, not an
+  oracle.
+- **Row dispositions (consensus, changes only):** row 1 REOPEN as receiver
+  (descent + RES-DEGREE `deg_x Res_y(g − c, f) = N − shed`); row 6 RAISE
+  (Moh's curve `F(f,g) = 0` over `k(x)` is the right one-place object);
+  row 16/45 RETYPE (the pencil's Gauss–Manin / moment cokernel, not a
+  slogan; dissent Fable vs four — decided by the residue lower bound);
+  row 20 LOWER (diagnostic/accelerator only); row 25 RAISE (STAR-ABC +
+  tower gluing); row 29 RAISE (`D_g f = 1` with Moh's filtration); row 36
+  RETARGET to `V₂ ≥ 2` survivors and descended small pairs.
+- **Disproof continuity:** the first honest positive signal above D = 100
+  would be a SURVIVES verdict on a descended trio problem or a
+  Galois-consistent lift on the fixed-`N = 6` family; a numerical lift is
+  `REPRESENTATIVE`, never a map.
+
 ## Superseding strategy overlay (2026-08-31 10:32Z — rank-four branch irreducibility promoted)
 
 - **Reducible rank four is closed by theorem.** `m=1` is promoted: the
