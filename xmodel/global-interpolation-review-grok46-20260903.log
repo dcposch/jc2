@@ -1,0 +1,29 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then read the charged Sol report and driver so the hostile review can be grounded in those files.Hashes match. Next I’ll read the charged Sol report, driver, FALLACY-v2, and a recent review so the verdict format matches the campaign.The Sol report and driver core are in; next I’ll finish the driver, pull the related charged reviews, and check how previous hostile reports are structured.I’ll pull the two-tower λ table and related charged sections next, then re-derive the interpolation identities independently.Hashes match. I’ll write the report skeleton and start the independent CAS: identities, driver reruns, composition reversion, two-tower λ, and a two-orbit coupling control.Identities through n=4 check out; selftest is 50/0. I’ll run the example rank next and split the slow reversion into a tighter script.I’ll split the remaining CAS into fast scripts: two-tower λ, two-orbit coupling, and a truncated composition reversion.Reversion matches (5.4)–(5.5), including vanishing intermediate `y` terms. Next I’ll write the full hostile report from the independent derivations and CAS.The hostile review is in `xmodel/global-interpolation-review-grok46-20260903.md` (sealed). Frozen hashes matched; nothing is **REFUTED**.
+
+**Headline.** The interpolation identities, the `n−m−1` degree count, polynomiality after descent, the log-block implication, the bare-tuple obstruction, the existential quadratic lift, and the charged driver numbers all survive independent re-derivation and rerun. Two binding repairs, and one empty requested control.
+
+| # | Verdict | Promote |
+|---|---|---|
+| (1) (1.3), (1.5)–(1.6) | **CONFIRMED** | CAN |
+| (2) `n−m−1` plus monic, not “`n−m` degrees to kill” | **CONFIRMED** | CAN |
+| (3) support test (1.9)–(1.11) | **CONFIRMED** | CAN |
+| (4) tree factorisation; BOTTOM-ODE as local block | **CONFIRMED** | CAN |
+| (5) Galois (2.4)–(2.6); no free integer-order kill | **CONFIRMED** with hypothesis repair | CAN after repair |
+| (6) (3.2); log-aware (DEG) is not circular | **CONFIRMED** | CAN |
+| (7) no bare-tuple `U_Q`; decorated counts | **CONFIRMED** §4.1, (4.7)–(4.12); **GAP** (4.13) vs (4.16) | repair `U(Q)` |
+| (8) quadratic lift existentially equivalent | **CONFIRMED** on the nonzero-separation open set | CAN |
+| (9) controls, (5.4)–(5.5), λ table, 40/0, 50/0, rank 26 | **CONFIRMED** | CAN the math |
+
+Mandatory attacks, in short:
+
+- **(a)** (1.3)/(1.5)/(1.6)/(1.8)/(DEG) re-derived; generic CAS for `n=2,3,4`.
+- **(b)** One free constant per finite Galois orbit. `NO-RESIDUE` is needed to land in the Puiseux field, not for the count. Averaging does not need the full `μ_R`, only a genuine finite orbit (`H^1(Γ,(C,+))=0`).
+- **(c)** (DEG)+(POLY) in `K[log x]` imply `NO-RESIDUE`. Not circular.
+- **(d)** Information obstruction, not just “`k` is missing.” A count as a function of the tuple plus only `(k, orbit partition)` still does not exist. The exact input is the decorated skeleton `D_Q`.
+- **(e)** Driver: 40/0, 50/0, example 36 raw / 35 dedup / 27 unknowns / rank 26. No polynomial automorphism has two local Galois orbits at `x=∞`. Coupling is shown on `f=y`, `g=(y^2-x)(y^2-4x)`: orbit contributions to `M_0` are `±1/(3x)` and to the monic moment `M_2` are `-1/3` and `+4/3`.
+- **(f)** Direct reversion confirms (5.4)–(5.5): five discs, three branches each; residue `[x^{-1}]=0`; next term is `O(x^{-17/15})` and sharp.
+- **(g)** Corrected two-tower λ table matches TFE-R; bracket degrees `2,3,4,2,2,5,2`.
+
+OPENs raised: `OPEN[KELLER-TWO-LOCAL-ORBITS]` (0 known; empty in `Aut(C^2)`), `OPEN[U0-Z-SPLIT]` (the two `U(Q)` readings differ by `u_0`). Producer `OPEN[PACKET-COUNT-AUGMENTATION(Q)]` left untouched. No `charge_basis` line.
+DIVERT path=xmodel/global-interpolation-review-grok46-20260903.md status=CLEAN body_bytes=28896 body_sha256=4e7d871926f69be87d28fd73e96972737552e44602bdf0c3e29041ee2f99d0d9

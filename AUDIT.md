@@ -15634,3 +15634,55 @@ Consequence for the record: of the four round-1015Z candidate gates, only the
 A₁ ≥ 2 clause is sourced; MAJOR-MULT, M₂ > m and Sol's pair await
 m2-descent / p202-ten-rows; the leaderboard (mohsieve lane) must register
 (16) as DERIVED and the rest as CONJECTURE.
+
+## INTEGRATION #17 DELTA (l) (2026-09-03T10:57Z, REVIEWED): THE GLOBAL-INTERPOLATION FRAMEWORK PROMOTED WITH REPAIRS — THE EXACT GLOBAL KELLER-MATE CONDITIONS
+
+`global-interpolation-sol56-20260902.md` (20d554a0; driver
+box/globalinterp-drivers-20260902/globalinterp.py 49ba5a01) with the
+different-model review `global-interpolation-review-grok46-20260903.md`
+(28KB; every item CONFIRMED, none REFUTED). PROMOTED: for a monic generic
+fibre G = g − c₂ = ∏(y − τ_i) with primitives H_i = F_i + a_i, F_i' = c/D_i,
+D_i = ∏_{j≠i}(τ_i − τ_j): the Lagrange coefficients
+A_q = (−1)^{n−1−q} Σ_i H_i e^{(i)}_{n−1−q}/D_i (1.3), the moment form
+M_r = Σ_i H_i τ_i^r/D_i with L/G = Σ M_r y^{−r−1} (1.5) and the unit-
+triangular conversion (1.6); the universal root identity Σ_i τ_i^r/D_i = 0
+(r ≤ n − 2), = 1 (r = n − 1); the DEGREE conditions are exactly
+n − m − 1 homogeneous identities M_0 = … = M_{n−m−2} = 0 plus the monic
+normalisation M_{n−m−1} = 1 — "n − m degrees to kill" is FALSE; POLYNOMIALITY
+is the support test (1.9)–(1.10), after Galois descent [t^h]A_q = 0 for
+h ≥ 1 (1.11); the exact all-level tree factorisation of D_i and e^{(i)}
+(2.1)–(2.2) (every coefficient sees every level); BOTTOM-ODE is the leading
+block of LOCAL-KELLER in one bottom chart; GALOIS gives exactly: one free
+integration constant per finite Galois orbit of branches (2.4 — repair: this
+needs neither NO-RESIDUE for the count nor the full μ_R for the averaging;
+NO-RESIDUE is only what lands the primitives in the Puiseux field),
+automatic cancellation of non-invariant fractional powers within a complete
+orbit (2.5), the support congruences p_g(χπ) = χ^a p_g(π) etc. (2.6) — and
+does NOT force invariant integer-order coefficients nor relate distinct
+orbits (coupling exhibited on the two-orbit pair f = y, g = (y² − x)(y² − 4x));
+NO-RESIDUE is the logarithmic block: (DEG) + (POLY) interpreted in K[log x]
+imply it (3.2, not circular), but in a Puiseux-field implementation it is an
+independent well-formedness equation to impose first; INFORMATION
+OBSTRUCTION (§4.1): no unknown count U_Q(n, m, M_*, V_*, δ_*, u, v) exists on
+the bare Moh tuple — the tuple omits the attained packet k, the orbit
+partition, coefficient sharing and the tame exponent support; exact raw
+counts on a DECORATED skeleton (4.7)–(4.12), (4.15) as COUNTING-BOUNDS only
+(a kill needs componentwise height/rank or an empty saturated ideal; the
+driver's own example has 36 lifted equations, 27 unknowns, rank 26 and a
+solution); the quadratic lift (4.17) is existentially equivalent on the
+nonzero-separation open set; controls (y, x + y³), (y, x + y⁵),
+(y + x², x + (y + x²)²), the composition (x + y⁵, y + (x + y⁵)³) with five
+bottom discs of three branches (reversion (5.4)–(5.5) CONFIRMED
+independently), the g-alone negative control y² − x² − x (residues ±1/2 at
+t-order 1), the corrected two-tower λ table (bracket degrees 2,3,4,2,2,5,2);
+driver controls 40/0, selftest 50/0. REPAIRS (binding): (4.13)
+U(Q) = h + u_0 + |Z_Q| vs the stationary (4.16) U = h + u_0 + pK — do not
+count u_0 twice (OPEN[U0-Z-SPLIT]); the driver's "five discs" check is a
+combinatorial proxy, not a reversion. NEW OPEN[KELLER-TWO-LOCAL-ORBITS]
+(reviewer): a Keller pair whose generic g-fibre has ≥ 2 local Galois orbits
+of branches at x = ∞ — EMPTY in Aut(C²) (X(u, c₂) − x has a single Newton
+segment of length n), so every automorphism is single-orbit; a two-orbit
+Keller pair is a JC hypothetical (0 known). Consequence for the record: the
+moment identities (DEG) are the exact global degree block; every
+"unknowns − conditions" count in the record that used the bare tuple is a
+COUNTING-BOUND at best (the endgame flagship's, GPT-5.5's 34-vs-35 razor).
