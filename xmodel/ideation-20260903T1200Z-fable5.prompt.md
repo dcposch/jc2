@@ -1,0 +1,48 @@
+# Blind ideation submission — round 20260903T1200Z (CRITICAL) — Fable 5
+
+You are one blind submitter in the campaign's full-spectrum ideation
+round 20260903T1200Z (COORDINATION.md, full-spectrum section), fired as a
+CRITICAL trigger: the promoted ledger and the frontier changed this
+morning (AUDIT integration #17 deltas (p)–(t); the whole-major-tree
+obligation; D = 105 and D = 117 empty on the screened census). Read the
+sealed packet (hash below) FIRST, then the banked reports as needed
+(xmodel/, AUDIT.md, APPROACHES.md, notes.md, PROGRESS.md — AUDIT deltas
+17(p)–(t), moh-program-review-sol56-20260903.md, whole-tree-review-grok46-
+20260903.md, m2-descent-opus5-20260903.md, descent-radii-grok46-20260903.md,
+ps-growth-opus5-20260903.md and the ideation-20260903T1015Z synthesis are
+the freshest; the newest LIVE STATE / EVENT blocks in notes.md are the
+binding state). Do NOT read any ideation-20260903T1200Z-* submission; do not
+read the in-progress reports of the running lanes named in the packet
+(check a lane's .run.v2 for final_status before opening its .md); do not
+edit canonical ledgers; do not inspect jc2-lean.
+The round's questions are Q1–Q4 as stated in the packet: challenge them,
+reframe them, or answer them. You are asked for boldness, creativity and
+directness: the boundary computes N, the tree computes the admissible
+multiplicity structure, the coefficients are the remaining freedom — say
+plainly what the all-degree program should be now, and if the
+coordinator's framing is wrong, where.
+Deliver ALL items of the submission contract in the packet (disposition
+vectors over the 46 rows AND over Q1–Q4's candidates and the queued
+fronts; reranked bottlenecks; at least one genuinely NEW avenue; at least
+one new cross-connection; strongest proof attack; strongest
+counterexample attack; one decisive experiment or software acceleration;
+the campaign-systems check; at most three idea cards; continue/redesign/
+stop per lane; the single first lane you would launch). State the
+bounded quantity AND the cheapest test of every OPEN you raise. Desk-scale
+CAS only (< 10 min, < 4 GB); the screen and descent tools in
+box/mohprog-drivers-20260903/, box/mohsieve/, box/m2descent-drivers-
+20260903/ and box/descentradii-drivers-20260903/ may be run; the Moh PDF
+is at refs/moh1983_jram340_configurations_of_roots.pdf (page N = PDF page
+N−139; read images via pdftoppm).
+Report: xmodel/ideation-20260903T1200Z-fable5.md
+Seal-at-completion (standard <!-- BODY-END --> marker; the skeleton you
+write first must NOT contain it; append sections in bounded writes);
+target 25-40KB; 75 minutes.
+charged_input=xmodel/ideation-20260903T1200Z-packet.md
+
+Your inputs are frozen read-only copies in {{LANE_INPUTS}};
+verify these SHA-256 hashes first and stop on mismatch:
+
+```text
+c90fa6876b069478f658845be6efa2bd056b2e340af7284104af4d042e6c4f95  {{LANE_INPUTS}}/ideation-20260903T1200Z-packet.md
+```
