@@ -20634,3 +20634,80 @@ the integrality filter adds almost nothing beyond the N ≥ 6 frontier
 encodes most of what integrality saw. Lanes: branch-orbits (Grok),
 census-rebase (Opus), tf-calibration-review (GPT-5.5),
 global-interpolation (Sol). Opus 1/5. Census 606/975.
+
+## LIVE STATE — HANDOFF 2026-09-03T08:33Z (Fable 5.1 laptop coordinator → cloud-machine coordinator). Basis 85b1f66d (pushed to origin/master).
+
+**Read first:** COORDINATION.md §Bootstrap; AUDIT.md from "INTEGRATION #15"
+through "#17 DELTA (h)"; `xmodel/integration17-coordinator-fable51-20260902.md`;
+`xmodel/census-rebase-opus5-20260902.md` (the current census truth);
+`xmodel/ideation-20260902T1608Z-synthesis.md` (+ addendum). Then this block.
+
+**Where the mathematics stands (reviewed unless marked):**
+1. N is PINNED per bottom disc: N = Σ_B V₂(B)·q(B), q = (1−δ₁)de/(d+e)
+   (JAC-FIBRE, FRONTIER-EXACT, D1-PIN, D1-STAR; integration #17). The
+   pinned value is O(1) at every degree (PIN-NOT-CEILING): the boundary
+   can never give D ≤ C(N). The one-directionality reading of #14–#16 was
+   a property of the contact functional only (UPPER-ONLY[CONTACT]).
+2. The bottom star is a dessin: BOTTOM-ODE d·p_f·p_g′ − e·p_g·p_f′ = κ ⟺
+   ABC-extremal pair (STAR-ABC; delta 17(f)); always realisable, so no
+   skeleton dies at the bottom order. STAR-REALISABILITY closed, zero kills.
+3. The exact machinery is H2-FREE and N_min = 6 holds on both branches
+   (delta 17(g), unreviewed); reducibility lives in the non-proper block.
+4. THE CENSUS TRUTH (delta 17(h)): the day's enumerator omitted Moh's
+   search conditions (8)–(13). Recovered verbatim (box/moh_skeleton_full.py).
+   True (1)–(13) space: 48 ≤ D ≤ 120 → 1,189 groups, 670 alive at N ≥ 6
+   (589 (UNI) / 648 mixed in [6,16]); D = 48 emptied; 66, 78 no skeleton;
+   NO D > 100 empties; D = 105 → 3 groups (m = 70, K = 35, (d,e) = (2,3):
+   M = [28,103] V_s = 5 (N ∈ 6..12), V_s = 6 (N = 9); M = [40,103] V_s = 4
+   (N = 9)); D = 117 → 4; D ≤ 200 → 14,016 groups. ALL earlier "no degree
+   emptied / 60% killed" numbers (#17 A.7, deltas (a)–(e)) were about the
+   (1)–(7) SUPERSET — never quote them as Moh's space.
+5. DECISIVE NEGATIVE: (1)–(13) as printed leaves 658 rows at n ≤ 100 where
+   Moh's table has 6 — the printed list is NOT his whole program
+   (OPEN[MOH-PROGRAM], bounded 652 rows). His extra eliminations (Appendix
+   II, Prop 5.6, …) are exactly the endgame the campaign now needs in
+   uniform form. p.202 n = 75 bracket is an erratum (DELTA75 closed).
+6. Direct reading for the successor: the all-degree program is
+   REALISABILITY of the (1)–(13)-admissible skeletons with integral pinned
+   N ≥ 6 — Moh's own endgame, exact form. The instrument is the GLOBAL
+   interpolation condition: f is the Lagrange interpolant of ∫dx/g_y over
+   the roots of g − c₂ and must be a polynomial (the endgame lane's LOCAL
+   version at one disc is only necessary; the review refuted its resonance
+   set (μ·{0,1,2,3}, not μZ) and its order-2 recurrence). NO-RESIDUE
+   ([x⁻¹] of 1/g_y = 0 on every branch) is promoted and coefficient-level.
+   First target: the three D = 105 groups above (not the dead
+   M = (−70,−63,103) skeleton the stopped lanes analysed).
+
+**Lanes at handoff (local processes die with the laptop; prompts are
+committed under xmodel/*.prompt.md — relaunch by tag with
+`nohup sh ops/lane.sh <adapter> <tag> xmodel/<tag>.prompt.md &`):**
+- `global-interpolation-sol56-20260902` (Sol; framework for the true
+  cross-disc conditions) — RUNNING at handoff, ~11 h, log active; if
+  unsealed on the cloud machine, relaunch it (same prompt).
+- `branch-orbits-grok46-20260902` — STUCK 14 h, KILLED; relaunch on Grok
+  (is (UNI) a theorem; orbit-aware knapsack) — now on the (1)–(13) space.
+- `disc-coupling-opus5-20260902` — STOPPED (dead target, refuted
+  resonances); relaunch as GLOBAL-COUPLING on a D = 105 survivor once the
+  Sol framework lands.
+- REVIEWS QUEUED (different model required): reducible-branch-reprice
+  (Opus → GPT-5.5/Grok/Sol); census-rebase (Opus → GPT-5.5/Grok/Sol; its
+  (8)–(13) transcription is corroborated by the GPT-5.5 calibration
+  review and the DELTA-DENOM lane, but MOH-PROGRAM's 658 rows need a
+  second reader of pp.200–202 and Appendix II).
+- Box03: stopped. Box01: Keller-cluster census run-20260902.oXm88P
+  (legacy-inclusive, 975 cells; last monitor tick 639 done, 0 failed;
+  12 h cap ~01:35Z 09-03) — harvest with box/keller_cluster_census.py
+  merge/validate; results are auxiliary (they inform the (B3) census,
+  not the pinned-N program).
+
+**Round cadence:** last full round 20260902T1608Z (COMPLETE, 5/5); next
+floor was 04:55Z 09-03 (missed while lanes ran) — the successor should
+run a full round early, headline = items 4–6 above, and charge every
+submitter with OPEN[MOH-PROGRAM] and the realisation of the D = 105 trio.
+
+**Rules learned today (see COORDINATION.md and memory):** N_min comes
+from the frontier line, never re-derived; universal directionality
+claims fail closed; stamp notes with `date -u`; under zsh never
+launch lanes through a split loop; kill lanes only by their unique tag.
+**Seats at handoff:** Opus 0/5, Sol 1 (global-interpolation), Grok 0,
+GPT-5.5 0. AWS quotas 1920/548 vCPU; standing approvals unchanged.
