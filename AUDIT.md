@@ -16866,3 +16866,36 @@ g, T₁^ψ, T₂^ψ, T₃^ψ with the leading polynomials at ρ; if ρ ≥ 7/2 P
 two simple roots) — case-specific systems to be derived. Follow-up lane: derive Moh's
 branch B (and C) systems from first principles (polynomiality of Ω(f), Ω(g) after the
 printed transform + the order conditions), rather than from the print.
+
+## INTEGRATION #17 DELTA (uu) (2026-09-03T15:54Z, REFUTATION + instrument bug, producer Fable): THE THREE k = 4 "KILLS" OF DELTA 17(pp) ARE SLICES, NOT THEOREMS — the batch chart's support rule (shape.py: x^i y^j ∈ h iff −i + δ₁'j ≥ −δ₁') is wrong whenever u'(Π + 1) ≠ (k+1)(V₂' + 1); at δ₁' = 0 it deletes every x-term of h below the top face, the chart cannot produce an x^k term of J at all, the first generator is −c and T·c − 1 closes it trivially; the correct threshold is ord h(σ₁) = V₂'δ₁' + u'δ₂' (Theorem 1.2 / root count); δ₁' = 0 is legitimate; the honest charts (98 unknowns / 159 equations) are OPEN
+
+`twopoint-kills-gate-fable5-20260903.md` (Fable; 11/11 hashes; pages 174, 179, 187–190,
+196–198; box/twopoint-gate-20260903/). MEASURED: all 12 charged Singular programs regenerate
+byte-identically and return [1] — but in each of the three k = 4 programs the first
+generator is the lone polynomial −c (0.006–0.008 s). PROVED-HERE: in the batch A/B chart
+(f = h² + 2β, g = h³ + 3βh + (3/2)α, deg_x h = 1, deg_x β ≤ 1) the x⁴-coefficient of J(f,g) is
+2f₂g₃' − 3f₂'g₃ = D(2, 3, h₁², −h₁³) ≡ 0 — this coefficient IS Moh's r = 1 ODE D(n', −M₁', ḡ_σ,
+T_{1,σ}) = nonzero constant (p.187), which prop55k §2.3 proved survives J = cγ^k; so the
+chart contradicts the level-1 datum by construction, independently of the tuple (CAS:
+deg_x J = 2 in the batch chart). CAUSE: shape.py's support rule agrees with the correct
+threshold iff u'(Π + 1) = (k+1)(V₂' + 1) (Π = e' + d'); true on Moh's printed rows ((16,12):
+8 = 8) and FALSE on the three k = 4 rows (6 ≠ 35 for (21,14; 15; 6; 4)); at δ₁' = 0 the rule
+kills every x-term of h below the top face and the A/B ansatz caps deg_x β ≤ 1 where Theorem
+1.2 allows 2. δ₁' = 0 is legitimate (0 > δ₂' = −1 satisfies Def 5.1; p.190's shear y ↦ y − ax
+puts σ₁ = π; the k-twisted Prop 5.6 chain gives only l ≤ k, consistent). VERDICTS:
+certificates CONFIRMED mechanically; kills REFUTED as theorems (SLICE); rows OPEN (honest
+Theorem-1.2 charts 98 unknowns / 159 equations: R2/R3 timed out on (21,14; 15; 6; 4), R3
+timed out on (24,16; 18; 7; 4), (27,18; 21; 8; 4) not run). SCOPE CHECK (coordinator, from
+the identity): rows where the batch's A/B rule coincides with the correct threshold —
+(16,12; 13; 3; 1) 8 = 8; (15,10; 11; 3; 2) 12 = 12; (21,14; 18; 5; 1) 12 = 12; (33,22; 30; 8; 1)
+18 = 18; (45,30; 42; 11; 1) 24 = 24 — their A/B-chart kills stand (subject to their own
+top-face licensing per delta 17(rr)); (15,10; 11; 2; 2): 18 ≠ 9 → SLICE (already re-typed
+in 17(rr), now doubly so); the K = 16 rows (28,20), (40,28) used the Theorem-1.2 order chart
+(Sol's generator; GPT-5.5's independent derivation), NOT shape.py — unaffected. LEDGER:
+delta 17(pp)'s "three new kills" → SLICES; the two-point tally at D ≤ 200 becomes: dead with
+licensed faces and correct charts — (64,48), (112,80), (132,88)*, (180,120)*; dead by
+Moh's licensed split — (75,50; V₂ = 3); slices pending — (75,50; V₂ = 2), (84,56), (147,98),
+(168,112), (189,126); open — the rest. INSTRUMENT FIX REQUIRED: shape.py / the batch
+generator must use the Theorem-1.2 threshold ord h(σ₁) = V₂'δ₁' + u'δ₂' and deg_x β ≤ k+1;
+every future compiler/batch run must print the level-1 ODE check (deg_x J must reach k)
+as a sanity gate before saturation.

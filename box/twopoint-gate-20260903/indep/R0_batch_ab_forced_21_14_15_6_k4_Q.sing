@@ -1,0 +1,41 @@
+// R0_batch_ab_forced_21_14_15_6_k4
+ring R=0,(h_0_0,h_0_1,h_0_2,h_0_3,h_0_4,h_0_5,h_0_6,bp,bq,br,bs,c,T),dp;
+option(redSB);
+ideal CE=c,T*c-1; ideal GE=std(CE);
+if (reduce(1,GE)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+ideal CN=c-1,T*c-1; ideal GN=std(CN);
+if (reduce(1,GN)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+print("MAIN_START equations=28 unknowns=12 char=0");
+ideal I=-c,
+42*bp*br,
+-36*br^2,
+-84*bp*br,
+3*bp^2*h_0_1 - 78*bp*br*h_0_6 + 6*bp*bs,
+-6*bp^2*h_0_0 - 72*bp*br*h_0_5,
+-3*bp^3 - 66*bp*br*h_0_4,
+-60*bp*br*h_0_3,
+-54*bp*br*h_0_2 - 30*bq*br + 42*br^2,
+-48*bp*br*h_0_1 + 36*br^2*h_0_6 - 36*br*bs,
+30*br^2*h_0_5,
+-12*bp^2*br + 24*br^2*h_0_4,
+18*br^2*h_0_3,
+12*br^2*h_0_2,
+6*br^2*h_0_1,
+42*bp*br,
+-3*bp^2*h_0_1 + 78*bp*br*h_0_6 - 6*bp*bs,
+6*bp^2*h_0_0 - 3*bp^2*h_0_1*h_0_6 + 72*bp*br*h_0_5 + 36*bp*br*h_0_6^2 - 6*bp*bs*h_0_6,
+3*bp^3 + 6*bp^2*h_0_0*h_0_6 - 3*bp^2*h_0_1*h_0_5 + 66*bp*br*h_0_4 + 66*bp*br*h_0_5*h_0_6 - 6*bp*bs*h_0_5,
+3*bp^3*h_0_6 + 6*bp^2*h_0_0*h_0_5 - 3*bp^2*h_0_1*h_0_4 + 60*bp*br*h_0_3 + 60*bp*br*h_0_4*h_0_6 + 30*bp*br*h_0_5^2 - 6*bp*bs*h_0_4,
+3*bp^3*h_0_5 + 6*bp^2*h_0_0*h_0_4 - 3*bp^2*h_0_1*h_0_3 + 54*bp*br*h_0_2 + 54*bp*br*h_0_3*h_0_6 + 54*bp*br*h_0_4*h_0_5 - 6*bp*bs*h_0_3 + 6*bq^2 + 42*bq*br,
+3*bp^3*h_0_4 + 6*bp^2*h_0_0*h_0_3 - 3*bp^2*h_0_1*h_0_2 + 48*bp*br*h_0_1 + 48*bp*br*h_0_2*h_0_6 + 48*bp*br*h_0_3*h_0_5 + 24*bp*br*h_0_4^2 - 6*bp*bs*h_0_2 + 36*bq*br*h_0_6 + 6*bq*bs + 42*br*bs,
+3*bp^3*h_0_3 + 6*bp^2*h_0_0*h_0_2 - 3*bp^2*h_0_1^2 + 42*bp*br*h_0_1*h_0_6 + 42*bp*br*h_0_2*h_0_5 + 42*bp*br*h_0_3*h_0_4 - 6*bp*bs*h_0_1 + 30*bq*br*h_0_5 + 36*br*bs*h_0_6,
+3*bp^3*h_0_2 + 3*bp^2*bq + 15*bp^2*br + 3*bp^2*h_0_0*h_0_1 + 36*bp*br*h_0_1*h_0_5 + 36*bp*br*h_0_2*h_0_4 + 18*bp*br*h_0_3^2 + 24*bq*br*h_0_4 + 30*br*bs*h_0_5,
+12*bp^2*br*h_0_6 + 30*bp*br*h_0_1*h_0_4 + 30*bp*br*h_0_2*h_0_3 + 18*bq*br*h_0_3 + 24*br*bs*h_0_4,
+9*bp^2*br*h_0_5 + 24*bp*br*h_0_1*h_0_3 + 12*bp*br*h_0_2^2 + 12*bq*br*h_0_2 + 18*br*bs*h_0_3,
+6*bp^2*br*h_0_4 + 18*bp*br*h_0_1*h_0_2 + 6*bq*br*h_0_1 + 12*br*bs*h_0_2,
+3*bp^2*br*h_0_3 + 6*bp*br*h_0_1^2 + 6*br*bs*h_0_1,
+T*c-1;
+ideal G=std(I);
+print("MAIN_DONE basis_size="); size(G);
+if (reduce(1,G)==0) { print("MAIN_SATURATED_EMPTY"); } else { print("MAIN_NONTRIVIAL"); dim(G); }
+quit;

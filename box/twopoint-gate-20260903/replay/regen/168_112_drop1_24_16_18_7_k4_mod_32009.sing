@@ -1,0 +1,44 @@
+// row (168,112) drop1 descended (24,16;18;7;k=4)
+// chart d2e3_ab
+ring R=32009,(h_0_7,h_0_6,h_0_5,h_0_4,h_0_3,h_0_2,h_0_1,h_0_0,bp,bq,br,bs,c,T),dp;
+option(redSB);
+print("CONTROL_EMPTY_START");
+ideal CE=c,T*c-1;
+ideal GE=std(CE);
+if (reduce(1,GE)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+print("CONTROL_NONEMPTY_START");
+ideal CN=c-1,T*c-1;
+ideal GN=std(CN);
+if (reduce(1,GN)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+print("MAIN_START equations=26 unknowns=13 char=32009");
+ideal I=-c,
+-42*br^2,
+6*bq^2 + 12*bq*br + 48*br^2,
+-6*bp*br*h_0_1 + 42*br^2*h_0_7 - 42*br*bs,
+48*bp*br*h_0_0 + 36*br^2*h_0_6,
+-15*bp^2*br + 30*br^2*h_0_5,
+24*br^2*h_0_4,
+18*br^2*h_0_3,
+12*br^2*h_0_2,
+6*br^2*h_0_1,
+6*bp*br*h_0_1 - 6*bq^2*h_0_7 - 6*bq*br*h_0_7 + 6*bq*bs + 48*br*bs,
+-48*bp*br*h_0_0 + 6*bp*br*h_0_1*h_0_7 - 6*bq^2*h_0_6 - 12*bq*br*h_0_6 + 42*br*bs*h_0_7,
+3*bp^2*bq + 18*bp^2*br - 42*bp*br*h_0_0*h_0_7 + 6*bp*br*h_0_1*h_0_6 + 6*bp*bs*h_0_0 - 6*bq^2*h_0_5 - 18*bq*br*h_0_5 + 36*br*bs*h_0_6,
+-3*bp^3*h_0_1 + 15*bp^2*br*h_0_7 - 6*bp^2*h_0_0^2 - 36*bp*br*h_0_0*h_0_6 + 6*bp*br*h_0_1*h_0_5 - 6*bq^2*h_0_4 - 24*bq*br*h_0_4 + 30*br*bs*h_0_5,
+-3*bp^3*h_0_0 + 12*bp^2*br*h_0_6 - 30*bp*br*h_0_0*h_0_5 + 6*bp*br*h_0_1*h_0_4 - 6*bq^2*h_0_3 - 30*bq*br*h_0_3 + 24*br*bs*h_0_4,
+9*bp^2*br*h_0_5 - 24*bp*br*h_0_0*h_0_4 + 6*bp*br*h_0_1*h_0_3 - 6*bq^2*h_0_2 - 36*bq*br*h_0_2 + 18*br*bs*h_0_3,
+6*bp^2*br*h_0_4 - 18*bp*br*h_0_0*h_0_3 + 6*bp*br*h_0_1*h_0_2 - 6*bq^2*h_0_1 - 42*bq*br*h_0_1 + 12*br*bs*h_0_2,
+3*bp^2*br*h_0_3 - 12*bp*br*h_0_0*h_0_2 + 6*bp*br*h_0_1^2 - 6*bq^2*h_0_0 - 48*bq*br*h_0_0 + 6*br*bs*h_0_1,
+-48*bp*br,
+48*bp*br,
+-3*bp^2*h_0_1 + 42*bp*br*h_0_7 - 6*bp*bs,
+6*bp^2*h_0_0 + 36*bp*br*h_0_6,
+3*bp^3 + 30*bp*br*h_0_5,
+24*bp*br*h_0_4,
+18*bp*br*h_0_3,
+12*bp*br*h_0_2 + 6*bq^2 + 48*bq*br,
+T*c-1;
+ideal G=std(I);
+print("MAIN_DONE basis_size="); size(G);
+if (reduce(1,G)==0) { print("MAIN_SATURATED_EMPTY"); } else { print("MAIN_NONTRIVIAL"); }
+quit;

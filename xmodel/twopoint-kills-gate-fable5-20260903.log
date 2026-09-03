@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Privately: nothing further is needed. The report is written and carries the BODY-END marker, the drivers are in place, no background runs remain, and the memory note is saved. There is nothing left to request.
+
+**Verdict: the three "new" two-point kills are refuted as theorems about the descended data.** The Singular certificates themselves are genuine, but they are vacuous. Report: `xmodel/twopoint-kills-gate-fable5-20260903.md` (12.7 KB, sealed). Drivers and outputs: `box/twopoint-gate-20260903/`.
+
+**What was verified mechanically**
+- All 11 input hashes matched via an awk-generated manifest and `sha256sum -c`.
+- All 12 charged Singular programs regenerate byte-identically from the frozen driver and return `[1]` with both wrapper controls passing, matching `results.json` and `summary.tsv`.
+
+**Why the kills are artefacts**
+- In each of the three programs the first ideal generator is the lone polynomial `-c`. The chart cannot produce an `x⁴` term at all, so `T*c-1` closes it in milliseconds. Dropping that one equation leaves a 9-dimensional nontrivial variety.
+- The `x⁴`-coefficient of `J(f,g)` is exactly Moh's `r=1` ODE on p.187, which the prop55k lane showed survives `J = cγ^k`. The batch ansatz forces `f₂ = h₁²` and `g₃ = −h₁³`, whose ODE expression is identically zero. The chart contradicts the level-1 datum by construction, independent of the row.
+- The cause is δ₁' = 0. The batch support rule uses threshold `−δ₁'`, while the Theorem-1.2 bound is `V₂'δ₁' + u'δ₂' = −1`. They coincide only when `u'(Π+1) = (k+1)(V₂'+1)`, which holds on Moh's printed controls and fails here. The correct chart allows `x`-degrees 1, 2, 3 in `h`, `f`, `g`.
+
+**Source reading**
+- δ₁' = 0 is a legitimate Def 5.1 tower value (p.179). The p.190 shear puts the general point at `σ₁ = π`, and Prop 5.6's contradiction (p.189) becomes the harmless bound `l ≤ k` under a monomial Jacobian. Prop 6.3(3) on p.197 confirms `k = 4` from `u_s = 1, V_s = 6`. The p.174 drop is applied correctly to the two drop rows.
+
+**Row status: OPEN, not survives.** The honest Theorem-1.2 chart (98 unknowns) and even the ODE-only chart (31 unknowns) timed out, so no representative is claimed. The batch's "8 of 18 killed" should read 5 of 18. Cheapest next step is the ODE chart with `slimgb` or a hand analysis via Moh's Appendix I; an empty result would re-kill all three rows at level 1.
+DIVERT path=xmodel/twopoint-kills-gate-fable5-20260903.md status=CLEAN body_bytes=12659 body_sha256=d68d13f6078172e955e9e987e60bd145e81ee0069c8b4f16181e64f7a558b681

@@ -1,0 +1,21 @@
+ring S=32003,(y,x,h_0_0,h_0_1,h_0_2,h_0_3,h_0_4,h_0_5,h_0_6,h_0_7,h_1_0,h_1_1,h_1_2,h_1_3,h_1_4,h_1_5,h_1_6,b_0_0,b_0_1,b_0_2,b_0_3,b_0_4,b_0_5,b_0_6,b_0_7,b_1_0,b_1_1,b_1_2,b_1_3,b_1_4,b_1_5,b_1_6,b_1_7,b_2_0,b_2_1,b_2_2,b_2_3,b_2_4,b_2_5,b_2_6,b_2_7,c,T),(dp(1),dp(42));
+poly h = y^8 - x*y^7 + h_0_0*y^0 + h_0_1*y^1 + h_0_2*y^2 + h_0_3*y^3 + h_0_4*y^4 + h_0_5*y^5 + h_0_6*y^6 + h_0_7*y^7 + h_1_0*x*y^0 + h_1_1*x*y^1 + h_1_2*x*y^2 + h_1_3*x*y^3 + h_1_4*x*y^4 + h_1_5*x*y^5 + h_1_6*x*y^6;
+poly beta = b_0_0*x^0*y^0 + b_0_1*x^0*y^1 + b_0_2*x^0*y^2 + b_0_3*x^0*y^3 + b_0_4*x^0*y^4 + b_0_5*x^0*y^5 + b_0_6*x^0*y^6 + b_0_7*x^0*y^7 + b_1_0*x^1*y^0 + b_1_1*x^1*y^1 + b_1_2*x^1*y^2 + b_1_3*x^1*y^3 + b_1_4*x^1*y^4 + b_1_5*x^1*y^5 + b_1_6*x^1*y^6 + b_1_7*x^1*y^7 + b_2_0*x^2*y^0 + b_2_1*x^2*y^1 + b_2_2*x^2*y^2 + b_2_3*x^2*y^3 + b_2_4*x^2*y^4 + b_2_5*x^2*y^5 + b_2_6*x^2*y^6 + b_2_7*x^2*y^7;
+poly f = h^2 + 2*beta;
+poly rem = reduce(beta^2, h); poly alpha = (beta^2 - rem)/h;
+if (alpha*h + rem - beta^2 != 0) { print("DIVISION_FAIL"); quit; }
+poly g = h^3 + 3*beta*h + (3/2)*alpha;
+poly J = diff(f,x)*diff(g,y) - diff(f,y)*diff(g,x);
+poly E = J - c*x^4;
+print("degx_f degx_g degx_J:"); deg(f,intvec(0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)); deg(g,intvec(0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)); deg(J,intvec(0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0));
+ideal Eq; matrix Mx = coeffs(E, x); int i; int j; matrix My;
+for (i=1; i<=nrows(Mx); i++) { My = coeffs(Mx[i,1], y); for (j=1; j<=nrows(My); j++) { if (My[j,1] != 0) { Eq = Eq, My[j,1]; } } }
+Eq = simplify(Eq, 2);
+ring R=32003,(h_0_0,h_0_1,h_0_2,h_0_3,h_0_4,h_0_5,h_0_6,h_0_7,h_1_0,h_1_1,h_1_2,h_1_3,h_1_4,h_1_5,h_1_6,b_0_0,b_0_1,b_0_2,b_0_3,b_0_4,b_0_5,b_0_6,b_0_7,b_1_0,b_1_1,b_1_2,b_1_3,b_1_4,b_1_5,b_1_6,b_1_7,b_2_0,b_2_1,b_2_2,b_2_3,b_2_4,b_2_5,b_2_6,b_2_7,c,T),dp; option(redSB);
+ideal I = imap(S, Eq); I = I, T*c-1;
+ideal CE=c,T*c-1; ideal GE=std(CE); if (reduce(1,GE)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+ideal CN=c-1,T*c-1; ideal GN=std(CN); if (reduce(1,GN)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+print("MAIN_START equations=" + string(size(I)-1) + " unknowns=" + string(nvars(R)-1) + " char=32003");
+ideal G = std(I); print("MAIN_DONE basis_size="); size(G);
+if (reduce(1,G)==0) { print("MAIN_SATURATED_EMPTY"); } else { print("MAIN_NONTRIVIAL"); print("dim="); dim(G); }
+quit;
