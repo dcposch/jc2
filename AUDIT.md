@@ -16047,3 +16047,35 @@ arithmetic with NO Puiseux expansion, exponent semigroup or outer/inner
 split; NO — those coefficients do not stratify by tower level, so the
 per-level counting the endgame lanes wanted is not available this way; no
 g-alone resultant form and no χ-deficit filter are licensed.
+
+## INTEGRATION #17 DELTA (t) (2026-09-03T11:58Z, REVIEWED): M2-DESCENT PROMOTED (M₂ > m REFUTED; DESCENT POLYGON; APPENDIX-II ERRATUM); OPEN[DESCENT-RADII] CLOSED — δ' = (k + 1)·Def 5.1(3) ON THE DESCENDED DATA
+
+`descent-radii-grok46-20260903.md` (Grok; drivers box/descentradii-drivers-
+20260903/; Moh pp.141, 145–146, 173–181, 196–198, 202, 207–211 as images) on
+delta 17(q). PROMOTED: M₂ > m is FALSE for Keller pairs in Moh's gauge (the
+12/25 automorphism split reproduced; the printed n = 4 witness re-derived by
+an independent sympy engine: J = 1/1024, f_{−2..3}, M = [−2, 1]; every
+witness fails (4) or (6), so the residual conditional form stays open);
+ERRATUM[APPII-GAMMA-B] confirmed by hand (A² ≡ (a₆x + a₇)A − a₈B, Ay ≡ −a₈
+mod h); Moh's (15,10) case SATURATED-EMPTY with positive/negative
+saturation controls; the p.207 degree columns and the descent rule
+(n' = n/d_s, m' = m/d_s, M_i' = M_i/d_s, d_i' = d_i/d_s, V_i' = V_i,
+J = γ^{v_s − u_s − 1}) reproduced. OPEN[DESCENT-RADII] CLOSED (PROVED-HERE +
+MEASURED): with the source convention (Prop 5.1: δ = min ord_t(τ_i − τ_j),
+t = x^{−1}) the p.207 columns δ₂', δ₁' are the GEOMETRIC logarithmic radii
+of the descended pair's major discs and obey the RULE Φ:
+δ_i' = (k + 1) · Def 5.1(3)(n', m', M₂', V₂'; s' = 2), k = the exponent of
+the descended monomial Jacobian J = cx^k — 10/10 printed rationals MATCH
+(CONFIRMED-PRINTED); independent numerical Newton–Puiseux (two-point fits
+to 1e−5) on Moh's (15,10) shapes (5)–(6) gives (−1, 1/2) and on the (16,12)
+shapes of p.208 gives (−1, 1/4); the p.210 "three subdiscs containing 2, 2,
+6 roots of f" split is what the numerics show. Consequence: Def 5.1 and
+conditions (8)–(13) can now be evaluated on any descended pair
+(OPEN[DESCENT-CLOSURE]'s (8)–(13) residue is unblocked) and Moh's
+Appendix-II shape reduction can be automated for any descended row.
+G2 (15,10; x⁴) and G3 (21,14; x²): with δ₁' the Appendix-II order
+conditions cut G2 to 14 (h) + 27 (β) + 1 = 42 unknowns — COUNTING-BOUND
+(> 30 desk cap); a Newton-tight 12-unknown slice (leading form y⁵ + ax²y,
+Moh-pattern β) saturates EMPTY at c ≠ 0 — a SLICE, not a kill of G2; G3
+likewise COUNTING-BOUND. (D = 105 is in any case empty under delta
+17(r); G2/G3 remain calibration objects for theorem (T)'s machinery.)

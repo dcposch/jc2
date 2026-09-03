@@ -1,0 +1,17 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then read the charged documents and Moh source so the gate, δ' measurement, and D=105 reduction stay on the same objects.Hashes match. Next I’ll read the charged report, drivers, and Moh pages so the gate and δ' measurements use the same definitions.Charged report is in. I’ll extract Moh’s definition pages and the driver code next so the δ' convention is taken from the source, not inferred.PDF render is still running. I’ll start the gate reruns and look up Newton–Puiseux tooling plus Def 5.1 while the pages finish.Pages are rendered. Next I’ll read Def 5.1 and Appendix II from the images, and start the gate reruns.Convention is `t = x^{-1}`, `δ = ord_t(τ_i − τ_j)`. I’ll write the measurement and gate drivers and start running them.Measurements already match the printed (15,10) and (16,12) radii. Next I’ll fit those contacts exactly, build the other p.207 shapes, and independently check the n=4 witness.Φ matches all ten printed radii. I’m writing the sealed report from the gate reruns, the measurements, and the G2/G3 counts.One sentence in the report overclaims how the parent erratum relates to Φ. I’ll correct that before sealing.Report: `xmodel/descent-radii-grok46-20260903.md` (sealed). Drivers: `box/descentradii-drivers-20260903/`. Frozen hashes matched 9/9.
+
+**Gate (A).** `M₂ > m` for Keller pairs in Moh’s gauge is **REFUTED**. Rerun of `autoscan2.py` gives the same 12/25 split. Independent sympy on the printed `n=4` witness recovers `J = 1/1024`, `deg = deg_y`, `f_{-2..3}`, and `M = [-2, 1]`. All twelve witnesses fail (4) or (6). The γ erratum is confirmed from `A² ≡ (a₆x+a₇)A − a₈B (mod h)` and `Ay ≡ −a₈`: B-coefficient `−a₉²a₈`, not `−a₉²a₁₀`. Control2 + saturation controls pass.
+
+**Radii (B).** Convention, from Prop 5.1: `t = x^{-1}`, `δ = min ord_t(τᵢ−τⱼ)`, top disc `δ_s = −1` when the highest form has two linear factors.
+
+The p.207 columns are those geometric radii, **not** raw Def 5.1(3) on the descended `(M',V')`. They are
+
+**Φ: `δᵢ' = (k+1) · Def 5.1(3)(n', m', M₂', V₂'; s'=2)`**
+
+with `k` the exponent in `J = c x^k`. That hits all **10** printed rationals. Numerics on Moh’s own (15,10) shapes (5)–(6) and (16,12) p.208 shapes confirm `(−1, 1/2)` and `(−1, 1/4)` by two-point fit; the p.210 split “2, 2, 6 roots of `f`” is what the roots do.
+
+`OPEN[DESCENT-RADII]` is **closed**: 10/10 CONFIRMED-PRINTED, 0 misprints in those columns.
+
+**G2/G3 (C).** Φ gives G2 `δ' = (−1/2, 5/4)` and G3 `δ' = (−1/4, 9/8)`. Because `δ₂' > −1`, there is one point at infinity, so the two-point form `y(y−x)^u` is the wrong leading form. Order conditions from `δ₁'` leave **42** unknowns on G2 (**COUNTING-BOUND**, over the ~30 Groebner cutoff). A 12-unknown Newton-tight slice saturates empty at `c ≠ 0`; that is a slice, not a kill of G2. No SURVIVES. AUDIT 17(p) is noted as provisional and not consumed.
+DIVERT path=xmodel/descent-radii-grok46-20260903.md status=CLEAN body_bytes=26471 body_sha256=2482ae1e8550cbaf6042a59ff20ca990eef78d7b77c590c1958a816c66a4e512
