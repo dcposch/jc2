@@ -1,0 +1,12 @@
+// Direct actual-pair control in Q[gamma,pi].
+// This checks the semantic wrapper control used in the K=16 lanes.
+ring R=0,(gamma,pi),dp;
+poly FAC=pi;
+poly GAC=pi-(gamma^2)/2;
+poly JAC=diff(FAC,gamma)*diff(GAC,pi)-diff(FAC,pi)*diff(GAC,gamma);
+if (JAC==gamma) { print("CONTROL_ACTUAL_PAIR_PASS J=gamma"); } else { print("CONTROL_ACTUAL_PAIR_FAIL"); }
+print("CONTROL_ACTUAL_PAIR_DEG_GAMMA_J=");
+intvec gamma_weight=1,0;
+deg(JAC,gamma_weight);
+if (deg(JAC,gamma_weight)!=4) { print("CONTROL_ACTUAL_PAIR_TUPLE_FAIL_FOR_REQUESTED_K4"); } else { print("CONTROL_ACTUAL_PAIR_TUPLE_UNEXPECTED_K4"); }
+quit;

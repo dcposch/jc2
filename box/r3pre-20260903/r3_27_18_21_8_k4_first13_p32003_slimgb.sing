@@ -1,0 +1,27 @@
+// r3_27_18_21_8_k4_first13_p32003_slimgb
+// first nonzero reciprocal coefficient: F13=1; previous F_i=0
+// open condition: h_39 != 0; c=-78*h_39
+ring R=32003,(T,F14,F15,F16),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS R"); } else { print("CONTROL_RING_FAIL"); }
+print("MAIN_START row=27_18_21_8_k4 first=13 char=32003 method=slimgb tails=14 vars=3");
+ideal I=0,
+3,
+3*F14,
+3*F14^2 + 6*F15,
+3*F14*F15 + 3*F16,
+6*F14*F16 + 3*F15^2,
+3*F15*F16,
+3*F16^2,
+0,
+0,
+0,
+0,
+0,
+0,
+-T - 16;
+ideal G=slimgb(I);
+print("MAIN_DONE basis_size=");
+size(G);
+if (reduce(1,G)==0) { print("BRANCH_EMPTY_UNIT"); G; } else { print("BRANCH_NONEMPTY"); print("dim_extended="); dim(G); print("vdim="); vdim(G); }
+quit;

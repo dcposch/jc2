@@ -1,0 +1,27 @@
+// r3_27_18_21_8_k4_first9_p32003_slimgb
+// first nonzero reciprocal coefficient: F9=1; previous F_i=0
+// open condition: h_39 != 0; c=-78*h_39
+ring R=32003,(T,F10,F11,F12,F13,F14,F15,F16),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS R"); } else { print("CONTROL_RING_FAIL"); }
+print("MAIN_START row=27_18_21_8_k4 first=9 char=32003 method=slimgb tails=14 vars=7");
+ideal I=3*F10*F15 + 3*F11*F14 + 3*F12*F13 + 3*F16,
+6*F10*F16 + 6*F11*F15 + 6*F12*F14 + 3*F13^2,
+12*F11*F16 + 12*F12*F15 + 12*F13*F14 - 1,
+-3*F10 + 12*F12*F16 + 12*F13*F15 + 6*F14^2,
+-3*F10^2 - 3*F11 + 12*F13*F16 + 12*F14*F15,
+-F10^3 - 6*F10*F11 - 3*F12 + 12*F14*F16 + 6*F15^2,
+-3*F10^2*F11 - 6*F10*F12 - 3*F11^2 - 3*F13 + 12*F15*F16,
+-3*F10^2*F12 - 3*F10*F11^2 - 6*F10*F13 - 6*F11*F12 - 3*F14 + 6*F16^2,
+-3*F10^2*F13 - 6*F10*F11*F12 - 6*F10*F14 - F11^3 - 6*F11*F13 - 3*F12^2 - 3*F15,
+-3*F10^2*F14 - 6*F10*F11*F13 - 3*F10*F12^2 - 6*F10*F15 - 3*F11^2*F12 - 6*F11*F14 - 6*F12*F13 - 3*F16,
+-3*F10^2*F15 - 6*F10*F11*F14 - 6*F10*F12*F13 - 6*F10*F16 - 3*F11^2*F13 - 3*F11*F12^2 - 6*F11*F15 - 6*F12*F14 - 3*F13^2,
+-24*F10^2*F16 - 48*F10*F11*F15 - 48*F10*F12*F14 - 24*F10*F13^2 - 24*F11^2*F14 - 48*F11*F12*F13 - 48*F11*F16 - 8*F12^3 - 48*F12*F15 - 48*F13*F14 + 3,
+-12*F10*F11*F16 - 12*F10*F12*F15 - 12*F10*F13*F14 + 3*F10 - 6*F11^2*F15 - 12*F11*F12*F14 - 6*F11*F13^2 - 6*F12^2*F13 - 12*F12*F16 - 12*F13*F15 - 6*F14^2,
+9*F10^2 - 24*F10*F12*F16 - 24*F10*F13*F15 - 12*F10*F14^2 - 12*F11^2*F16 - 24*F11*F12*F15 - 24*F11*F13*F14 + 6*F11 - 12*F12^2*F14 - 12*F12*F13^2 - 24*F13*F16 - 24*F14*F15,
+3*F10^3*T + 9*F10*F11*T - 12*F10*F13*F16*T - 12*F10*F14*F15*T - 12*F11*F12*F16*T - 12*F11*F13*F15*T - 6*F11*F14^2*T - 6*F12^2*F15*T - 12*F12*F13*F14*T + 3*F12*T - 2*F13^3*T - 12*F14*F16*T - 6*F15^2*T - 32;
+ideal G=slimgb(I);
+print("MAIN_DONE basis_size=");
+size(G);
+if (reduce(1,G)==0) { print("BRANCH_EMPTY_UNIT"); G; } else { print("BRANCH_NONEMPTY"); print("dim_extended="); dim(G); print("vdim="); vdim(G); }
+quit;

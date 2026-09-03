@@ -1,0 +1,23 @@
+// r3_21_14_15_6_k4_first6_Q_slimgb
+// first nonzero reciprocal coefficient: F6=1; previous F_i=0
+// open condition: h_29 != 0; c=-58*h_29
+ring R=0,(T,F7,F8,F9,F10,F11,F12),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS R"); } else { print("CONTROL_RING_FAIL"); }
+print("MAIN_START row=21_14_15_6_k4 first=6 char=0 method=slimgb tails=10 vars=6");
+ideal I=12*F10*F9 + 12*F11*F8 + 12*F12*F7 - 3*F7,
+6*F10^2 + 12*F11*F9 + 12*F12*F8 - 3*F7^2 - 3*F8,
+12*F10*F11 + 12*F12*F9 - F7^3 - 6*F7*F8 - 3*F9,
+12*F10*F12 - 3*F10 + 6*F11^2 - 3*F7^2*F8 - 6*F7*F9 - 3*F8^2,
+-6*F10*F7 + 12*F11*F12 - 3*F11 - 3*F7^2*F9 - 3*F7*F8^2 - 6*F8*F9,
+-24*F10*F7^2 - 48*F10*F8 - 48*F11*F7 + 48*F12^2 - 24*F12 - 48*F7*F8*F9 - 8*F8^3 - 24*F9^2 + 3,
+-12*F10*F7*F8 - 12*F10*F9 - 6*F11*F7^2 - 12*F11*F8 - 12*F12*F7 - 6*F7*F9^2 + 3*F7 - 6*F8^2*F9,
+-12*F10^2 - 24*F10*F7*F9 - 12*F10*F8^2 - 24*F11*F7*F8 - 24*F11*F9 - 12*F12*F7^2 - 24*F12*F8 + 9*F7^2 - 12*F8*F9^2 + 6*F8,
+-6*F10^2*F7 - 12*F10*F11 - 12*F10*F8*F9 - 12*F11*F7*F9 - 6*F11*F8^2 - 12*F12*F7*F8 - 12*F12*F9 + 3*F7^3 + 9*F7*F8 - 2*F9^3 + 3*F9,
+-24*F10^2*F8 - 48*F10*F11*F7 - 48*F10*F12 - 24*F10*F9^2 + 12*F10 - 24*F11^2 - 48*F11*F8*F9 - 48*F12*F7*F9 - 24*F12*F8^2 + 3*F7^4 + 36*F7^2*F8 + 36*F7*F9 + 18*F8^2,
+-6*F10^2*F9*T - 12*F10*F11*F8*T - 12*F10*F12*F7*T + 9*F10*F7*T - 6*F11^2*F7*T - 12*F11*F12*T - 6*F11*F9^2*T + 3*F11*T - 12*F12*F8*F9*T + 3*F7^3*F8*T + 9*F7^2*F9*T + 9*F7*F8^2*T + 9*F8*F9*T - 32;
+ideal G=slimgb(I);
+print("MAIN_DONE basis_size=");
+size(G);
+if (reduce(1,G)==0) { print("BRANCH_EMPTY_UNIT"); G; } else { print("BRANCH_NONEMPTY"); print("dim_extended="); dim(G); print("vdim="); vdim(G); }
+quit;

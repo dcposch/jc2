@@ -20947,3 +20947,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T18:46Z EVENT — `xu-sametree-gpt55` sealed (15KB): same-tree IM − Im gives 0 new kills; Theorem 3.4 + 4.7(i) redundant on a fixed tree (identity via (4.3)); the Xu screen is exhausted at skeleton level. → AUDIT delta 17(jjj). Lanes live: 8.
 
 ## 2026-09-03T18:48Z EVENT — `bigrows-preprocess-gpt55` sealed (13KB): the seven large two-point rows are emitter-bound (135–276 unknowns; sympy builder > 600 s per stratum on 21/21); preprocessing driver validated on the t = 3 control. → AUDIT delta 17(kkk). (24,16) partial kills re-typed SLICES. Launching `emitter-native-gpt55` (native/compiled emitter, then the (25,15) and (24,16) strata). Lanes live: 9.
+
+## 2026-09-03T18:54Z EVENT — `r3-preprocess-gpt55` sealed (9KB): the three δ₁' = 0 rows stay OPEN at level 1 (R3 not triangular; r ≥ 5 excluded, r = 4 modular-empty, r ≤ 3 open). → AUDIT delta 17(lll). Queued behind the native emitter. Lanes live: 8.

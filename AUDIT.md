@@ -17270,3 +17270,15 @@ the emitter must be rewritten natively (Singular-side polynomial construction of
 h-adic Jacobian coefficients, or a compiled/vectorised expansion) — instrument lane
 launched (emitter-native-gpt55). Note for DC: this is the first place where the fleet's
 larger boxes would help (parallel strata at 200+ unknowns), once the emitter is fast.
+
+## INTEGRATION #17 DELTA (lll) (2026-09-03T18:54Z, MEASURED / OPEN, producer GPT-5.5): THE THREE δ₁' = 0 ROWS STAY OPEN AT LEVEL 1 — the R3 (Moh r = 1 ODE) chart (31 unknowns) with the triangular/torus preprocessing gives neither a covering-chain unit certificate nor a surviving component with a point; branch analysis by root-multiplicity r: r ≥ 5 excluded, r = 4 modular-empty only, r = 1, 2, 3 open
+
+`r3-preprocess-gpt55-20260903.md` (GPT-5.5; 14/14 hashes; box/r3pre-20260903/ with
+r3_pade_branches.py). The preprocessing does not find enough Q*-pivots in R3 (the level-1
+ODE is not a triangular banded system like the K = 16 order charts); the Padé/branch
+split by the multiplicity r of the first non-centre root reduces the problem but the
+remaining branches time out or are modular-only. STATUS: (147,98), (168,112), (189,126)
+COUNTING-BOUND; no row killed, no survivor. READING: at δ₁' = 0 the descended pair has an
+integral bottom radius — the p.190 shear puts σ₁ = π exactly, and Lemma 2.1-type
+constraints are weakest there; these rows may need the honest 98-unknown chart with the
+native emitter (17(kkk) lane) rather than the level-1 chart. Queue behind the emitter.
