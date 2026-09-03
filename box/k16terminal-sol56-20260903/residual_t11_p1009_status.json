@@ -1,0 +1,55 @@
+{
+  "typing": "FINITE MODULAR RESIDUAL-ZERO CONTROL; no characteristic-zero or all-t promotion",
+  "t": 11,
+  "rank_two_algebra": {
+    "H_11": "12*(23*y-5)*(23*y-7)",
+    "exact_product_fibres": ["y=7/23", "y=5/23"],
+    "prime": 1009,
+    "modular_fibres": [
+      {"y": 439, "exact_lift": "7/23", "d": 2},
+      {"y": 746, "exact_lift": "5/23", "d": -2}
+    ],
+    "note": "The fibres were built independently; no zero divisor was inverted."
+  },
+  "recurrence_control": {
+    "terminal_bands": "0..21",
+    "positive_bands_in_input": "1..21",
+    "high_pivots_per_fibre": 23,
+    "all_high_pivots_nonzero": true,
+    "y_439_row_term_counts_bands_0_to_21": [4977, 4525, 3966, 3541, 3074, 2734, 2361, 2089, 1788, 1588, 1347, 1187, 1006, 885, 739, 652, 538, 470, 387, 337, 273, 241],
+    "y_746_row_term_counts_bands_0_to_21": [4978, 4522, 3966, 3542, 3072, 2732, 2357, 2089, 1789, 1587, 1346, 1187, 1005, 882, 739, 651, 536, 471, 388, 337, 272, 241]
+  },
+  "groebner_checks": [
+    {
+      "fibre": "y=439 (7/23)",
+      "order": "dp",
+      "method": "std",
+      "wall_bound_seconds": 600,
+      "exit_code": 124,
+      "stdout_tail": "halt 1",
+      "status": "INCONCLUSIVE_TIMEOUT",
+      "basis_or_radical_verdict": null
+    },
+    {
+      "fibre": "y=746 (5/23)",
+      "status": "NOT_RUN_AFTER_FIRST_FIBRE_TIMEOUT",
+      "basis_or_radical_verdict": null
+    }
+  ],
+  "artifacts": {
+    "driver": {
+      "path": "residual_sparse_b4zero_probe.py",
+      "sha256": "f3335e76c7a0deac0cc1926cfd432db2e71746eba6b1643dfe85a69d1428e33b"
+    },
+    "y_439_input": {
+      "path": "residual_t11_p1009_y439_positive.sing",
+      "bytes": 1059262,
+      "sha256": "dea770630f6e1552a94201991c65734db3274a50b371fd200dcdadde0cd9272c"
+    },
+    "y_746_input": {
+      "path": "residual_t11_p1009_y746_positive.sing",
+      "bytes": 1058750,
+      "sha256": "d623b6b9dd80019b53dabc460f3d34a2740c4fdc4f906f65b0ae36e2389719a2"
+    }
+  }
+}

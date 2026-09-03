@@ -1,0 +1,73 @@
+{
+  "audit_subsystems": true,
+  "branch": 0,
+  "chart": "top",
+  "coefficient_algebra": "F_1009, y=632",
+  "comparison": null,
+  "emitter": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_recurrence.py",
+  "emitter_sha256": "c196e8a05feb80c7410309afbf4d21532738df4f8665990129efd4f379ca7b62",
+  "mode": "mod",
+  "pivot_schedule": [
+    {
+      "band": 12,
+      "coefficient": "63225*d/14641 - 5400/14641",
+      "variable": "C1",
+      "weight": 1
+    },
+    {
+      "band": 11,
+      "coefficient": "5475*d/1331 - 65/1331",
+      "variable": "C2",
+      "weight": 2
+    },
+    {
+      "band": 10,
+      "coefficient": "-90*d/49",
+      "variable": "q3_0",
+      "weight": 3
+    },
+    {
+      "band": 9,
+      "coefficient": "-1458*d/847 - 108/847",
+      "variable": "q4_0",
+      "weight": 4
+    },
+    {
+      "band": 8,
+      "coefficient": "-1425*d/847 - 240/847",
+      "variable": "q5_0",
+      "weight": 5
+    },
+    {
+      "band": 7,
+      "coefficient": "-1845*d/847 - 540/847",
+      "variable": "q6_0",
+      "weight": 6
+    },
+    {
+      "band": 6,
+      "coefficient": "15*d/77 + 20/539",
+      "variable": "b2",
+      "weight": 7
+    }
+  ],
+  "prime": 1009,
+  "residual_variables": [
+    "b3",
+    "q2_0"
+  ],
+  "run": {
+    "elapsed_seconds": 0.056464456021785736,
+    "err": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_audit_t3_p1009_b0.err",
+    "err_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 0,
+    "out": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_audit_t3_p1009_b0.out",
+    "out_sha256": "03e6a15ffa5aefb42774a7198249416ad844dcc3eb3db91fd7d24414a46afb60",
+    "status": "PROVED_UNIT",
+    "timeout_seconds": 300
+  },
+  "singular_source": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_audit_t3_p1009_b0.sing",
+  "singular_source_sha256": "b30089beb96c508f6086a9b2f62aac05a0a8d101dd64eaa23bea9427a1e7aff5",
+  "t": 3,
+  "typing": "fixed-t execution of indexed b4=1 tau-free recurrence"
+}

@@ -17442,3 +17442,18 @@ joint chart's band computation (g9966-global-band-sol56, running; design gate ru
 is the only decider on the table.
 
 ## ERRATUM[MOH-P209-TRUNCATION] (2026-09-03T20:16Z, PROMOTED, two models from the page image): Moh's displayed p.209 formula for the (16,12; 13; 3; X) reduction omits the h-non-negative part of a₂f^{2/3} = a₂h²(1 + β₂h⁻² + β₃h⁻³)^{2/3}, i.e. the term (2/3)a₂β₂ (Opus 17(ooo) §5 via the bridge normal form; GPT-5.5 17(xxx) §6 on the page image: same gauges, same definitions of β₂, γ, δ — "an omitted truncation term/misprint"); the coefficient count 10 is unaffected and the Appendix II kill of (16,12) stands (replayed four times today with the correct term).
+
+## INTEGRATION #17 DELTA (zzz) (2026-09-03T20:24Z, PARTIAL + PROMOTED t = 5, producer Sol): THE TERMINAL FAMILY T_{t,k} HAS A CLOSED, COEFFICIENTWISE, SYMBOLIC-t RECURRENCE (PROVED-HERE, §2; checked against every charged record through t = 6; removes the need to expand σ_t) with weight/degree bounds, all high-spine leading coefficients, and a split-safe denominator audit (§3); NEW EXACT: TOP-TAIL-UNIT at t = 5 and RESIDUAL-ZERO at t = 5, 6 — hence (8.1) and THEOREM (T) AT t = 5 PROVED by the terminal route (independent of Grok's chart certificate 17(www): two models, two charts → PROMOTED at t = 5; the GPT-5.5 replay gate is a third); a UNIFORM lemma: the top positive row cuts the b₃-axis for every t ≥ 3 (§6.1); the multivariable containment of RESIDUAL-ZERO and the uniform TOP-TAIL-UNIT remain OPEN; t = 6: RESIDUAL-ZERO closes the b₄ = 0 half, the exact top-tail run inconclusive
+
+`k16-terminal-proof-sol56-20260903.md` (Sol, 29KB; box/k16terminal-sol56-20260903/). §7 the
+two-chart assembly (b₄ invertible from the b₄ = 0 chart, nilpotent from a homogenised
+b₄ = 1 certificate ⇒ I_t = [1]) — standard, no saturation suppressed. §8 cheapest next:
+for TOP-TAIL-UNIT prove a selected (t−1)-row subideal has finite quotient, then a
+recurrence for the DETERMINANT of multiplication by the omitted row with its resultant
+against 3d² − (t+1); for RESIDUAL-ZERO specialise b₄ = 0 in the recurrence (2.2)–(2.13) and
+derive the successive one-variable coefficients modulo (b₃, u_{t−1}, …, u_{j+1}) (§6.3 gives
+the exact recurrence for the next axis; D(t) and the norm (6.6) to be factored); cheapest
+falsification: the two-factor t = 11 job (d = ±2) modulo a good prime. STATUS of the ray:
+(T) PROMOTED at t = 1, 2, 3, 4, 5; t = 6 half-closed; uniform OPEN with the residual
+content exactly (5.1) + (6.7). Lanes launched: k16-terminal-determinant-sol56 (§8 proof
+target), k16-t11-modular-gpt55 (the t = 11 falsification/evidence job at a split index).

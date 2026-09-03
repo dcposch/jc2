@@ -1,0 +1,122 @@
+// b4=1 tau-free Laurent/Euler recurrence; RR=-E
+// t=3 mode=exact branch=None
+ring R=(0,d),(L,b2,b3,C1,C2,q2_0,q3_0,q4_0,q5_0,q6_0),dp;
+minpoly=d2-4/3;
+number yy=(d+4)/14;
+option(redSB);
+proc Lcoef(poly f, int k)
+{
+  matrix M=coef(f,L); int ii;
+  for (ii=1; ii<=ncols(M); ii++)
+  { if (M[1,ii]==L^k) { return(M[2,ii]); } }
+  return(0);
+}
+proc eulerInverse(poly f)
+{
+  matrix M=coef(f,L); poly a=0; int ii; int mm;
+  for (ii=1; ii<=ncols(M); ii++)
+  { mm=deg(M[1,ii]); a=a+M[2,ii]*M[1,ii]/((2*mm+1)*yy); }
+  return(a);
+}
+number g3=(30/49)*yy-(120/2058);
+if (3*d^2-4!=0) { print("FAIL d relation"); quit; }
+poly U=(L+1)^7+q2_0*(L+1)^5+q3_0*(L+1)^4+q4_0*(L+1)^3+q5_0*(L+1)^2+q6_0*(L+1)^1;
+poly C=(L+1)^2+C1*(L+1)^1+C2*(L+1)^0;
+poly A=L*C;
+poly Bprime=g3*(5*C+3*L*diff(C,L))/(2*yy);
+matrix MB=coef(Bprime,L); poly B=0; int ii; int mm;
+for (ii=1; ii<=ncols(MB); ii++)
+{ mm=deg(MB[1,ii]); B=B+MB[2,ii]*L*MB[1,ii]/(mm+1); }
+if (diff(B,L)-Bprime!=0) { print("FAIL B recurrence"); quit; }
+poly rhsS=3*g3*diff(U,L)+A*B-L*A*diff(B,L)+2*L*diff(A,L)*B
+          +g3*b3*(C+(5/2)*diff(A,L));
+poly S=eulerInverse(rhsS);
+if (yy*(S+2*L*diff(S,L))-rhsS!=0) { print("FAIL S recurrence"); quit; }
+poly V=L*A-yy*b3;
+poly Y=L*S-b3*B-g3*b2;
+poly Z=L*B-g3*b3;
+poly NN=-V*diff(Y,L)+diff(V,L)*Y+2*diff(U,L)*Z;
+poly N0=subst(NN,L,0);
+poly Pprime=(NN-N0)/(2*yy*L);
+if (2*yy*L*Pprime-NN+N0!=0) { print("FAIL Pprime division"); quit; }
+poly RR=V*Pprime-diff(U,L)*Y-yy*g3;
+poly W1=Lcoef(RR,12);
+poly p1=diff(W1,C1);
+poly ep1=63225*d/14641 - 5400/14641;
+if (p1-ep1!=0) { print("FAIL pivot coefficient 1"); quit; }
+if (p1==0) { print("FAIL zero pivot 1"); quit; }
+poly v1rhs=-subst(W1,C1,0)/p1;
+if (subst(W1,C1,v1rhs)!=0) { print("FAIL pivot 1"); quit; }
+RR=subst(RR,C1,v1rhs);
+poly W2=Lcoef(RR,11);
+poly p2=diff(W2,C2);
+poly ep2=5475*d/1331 - 65/1331;
+if (p2-ep2!=0) { print("FAIL pivot coefficient 2"); quit; }
+if (p2==0) { print("FAIL zero pivot 2"); quit; }
+poly v2rhs=-subst(W2,C2,0)/p2;
+if (subst(W2,C2,v2rhs)!=0) { print("FAIL pivot 2"); quit; }
+RR=subst(RR,C2,v2rhs);
+poly W3=Lcoef(RR,10);
+poly p3=diff(W3,q3_0);
+poly ep3=-90*d/49;
+if (p3-ep3!=0) { print("FAIL pivot coefficient 3"); quit; }
+if (p3==0) { print("FAIL zero pivot 3"); quit; }
+poly v3rhs=-subst(W3,q3_0,0)/p3;
+if (subst(W3,q3_0,v3rhs)!=0) { print("FAIL pivot 3"); quit; }
+RR=subst(RR,q3_0,v3rhs);
+poly W4=Lcoef(RR,9);
+poly p4=diff(W4,q4_0);
+poly ep4=-1458*d/847 - 108/847;
+if (p4-ep4!=0) { print("FAIL pivot coefficient 4"); quit; }
+if (p4==0) { print("FAIL zero pivot 4"); quit; }
+poly v4rhs=-subst(W4,q4_0,0)/p4;
+if (subst(W4,q4_0,v4rhs)!=0) { print("FAIL pivot 4"); quit; }
+RR=subst(RR,q4_0,v4rhs);
+poly W5=Lcoef(RR,8);
+poly p5=diff(W5,q5_0);
+poly ep5=-1425*d/847 - 240/847;
+if (p5-ep5!=0) { print("FAIL pivot coefficient 5"); quit; }
+if (p5==0) { print("FAIL zero pivot 5"); quit; }
+poly v5rhs=-subst(W5,q5_0,0)/p5;
+if (subst(W5,q5_0,v5rhs)!=0) { print("FAIL pivot 5"); quit; }
+RR=subst(RR,q5_0,v5rhs);
+poly W6=Lcoef(RR,7);
+poly p6=diff(W6,q6_0);
+poly ep6=-1845*d/847 - 540/847;
+if (p6-ep6!=0) { print("FAIL pivot coefficient 6"); quit; }
+if (p6==0) { print("FAIL zero pivot 6"); quit; }
+poly v6rhs=-subst(W6,q6_0,0)/p6;
+if (subst(W6,q6_0,v6rhs)!=0) { print("FAIL pivot 6"); quit; }
+RR=subst(RR,q6_0,v6rhs);
+poly W7=Lcoef(RR,6);
+poly p7=diff(W7,b2);
+poly ep7=15*d/77 + 20/539;
+if (p7-ep7!=0) { print("FAIL pivot coefficient 7"); quit; }
+if (p7==0) { print("FAIL zero pivot 7"); quit; }
+poly v7rhs=-subst(W7,b2,0)/p7;
+if (subst(W7,b2,v7rhs)!=0) { print("FAIL pivot 7"); quit; }
+RR=subst(RR,b2,v7rhs);
+if (Lcoef(RR,6)!=0) { print("FAIL high L band 6"); quit; }
+if (Lcoef(RR,7)!=0) { print("FAIL high L band 7"); quit; }
+if (Lcoef(RR,8)!=0) { print("FAIL high L band 8"); quit; }
+if (Lcoef(RR,9)!=0) { print("FAIL high L band 9"); quit; }
+if (Lcoef(RR,10)!=0) { print("FAIL high L band 10"); quit; }
+if (Lcoef(RR,11)!=0) { print("FAIL high L band 11"); quit; }
+if (Lcoef(RR,12)!=0) { print("FAIL high L band 12"); quit; }
+poly Rh=subst(RR,L,L-1);
+poly T3=Lcoef(Rh,3);
+print("TOP_ROW band=3"); deg(T3); size(T3);
+poly T4=Lcoef(Rh,4);
+print("TOP_ROW band=4"); deg(T4); size(T4);
+poly T5=Lcoef(Rh,5);
+print("TOP_ROW band=5"); deg(T5); size(T5);
+print("RECURRENCE_PASS t=3");
+poly Bank3=6239013856651*b3^2*(1)^2*yy*(1/8577356883865) - 77842039569279*b3^2*(1)^2*(1/480331985496440) + 21375*b3^2*q2_0*yy*(1/58849) - 422225*b3^2*q2_0*(1/4943316) + 9002613556800827010425971719*b3*(1)^6*yy*(1/3163808452252993339057973125) - 117955796192199534386311269624*b3*(1)^6*(1/110733295828854766867029059375) - 336832200667739744302308*b3*(1)^4*q2_0*yy*(1/254486172545486393259475) + 872118350426076192770196*b3*(1)^4*q2_0*(1/1781403207818404752816325) + 18234301177477939325*b3*(1)^2*q2_0^2*yy*(1/81880067006878701652) - 46241108732666761315*b3*(1)^2*q2_0^2*(1/573160469048150911564) + 1146967896250*b3*q2_0^3*yy*(1/7724430936859) - 8929296041875*b3*q2_0^3*(1/162213049674039) - 773204152532809296382659301111252766535619494*(1)^10*yy*(1/172804188550388128419422390107471873197265625) + 598079896283770832814771461052722009913733707*(1)^10*(1/345608377100776256838844780214943746394531250) - 3720594094414326038168002552853452203414*(1)^8*q2_0*yy*(1/397136888366304230782929939919498703125) + 9689008556780558698152233696783001238917*(1)^8*q2_0*(1/2779958218564129615480509579436490921875) - 14571349558583881662374058831583017*(1)^6*q2_0^2*yy*(1/982903486995913505130889737055750) + 37659124004525065328965962718879809*(1)^6*q2_0^2*(1/6880324408971394535916228159390250) - 687307179405079623431168023125*(1)^4*q2_0^3*yy*(1/102779910734418993354680799853) + 1779683189003284267675887729621*(1)^4*q2_0^3*(1/719459375140932953482765598971) - 360508240217517731076784625*(1)^2*q2_0^4*yy*(1/413363616857760961495412582) + 468183672775865496617156000*(1)^2*q2_0^4*(1/1446772659002163365233944037) + 1145669347575500000*q2_0^5*yy*(1/77992088354294509213) - 2977367685254359375*q2_0^5*(1/545944618480061564491);
+if (T3-Bank3!=0) { print("FAIL banked top row 3"); quit; }
+poly Bank4=1425433*b3^2*(1)*yy*(1/5306224) - 532583*b3^2*(1)*(1/18571784) - 7092936141835772894553*b3*(1)^5*yy*(1/611634962555001344375) + 73341910970773008992937*b3*(1)^5*(1/17125778951540037642500) - 52839349604593701*b3*(1)^3*q2_0*yy*(1/9839574232427485) + 54805419867983511*b3*(1)^3*q2_0*(1/27550807850796958) - 10717537131725*b3*(1)*q2_0^2*yy*(1/15829248980636) + 6987954902575*b3*(1)*q2_0^2*(1/27701185716113) + 1036632606356349093910407291166194439191*(1)^9*yy*(1/26725532847754667475953676109235937500) - 96084072950611613083873816837157664813*(1)^9*(1/6681383211938666868988419027308984375) + 462306108996853862423873865579747*(1)^7*q2_0*yy*(1/15355089254670880480295131346875) - 1204960481248972653750083817079584*(1)^7*q2_0*(1/107485624782696163362065919428125) + 324190159394070165844211154*(1)^5*q2_0^2*yy*(1/49404481370960603671159285) - 8525228230365569976369275667*(1)^5*q2_0^2*(1/3458313695967242256981149950) - 393320287757316568020*(1)^3*q2_0^3*yy*(1/1528435107492207039083) + 968714731961130553725*(1)^3*q2_0^3*(1/10699045752445449273581) - 26811432966006783125*(1)*q2_0^4*yy*(1/159824871912428429252) + 34926788042402485625*(1)*q2_0^4*(1/559387051693499502382);
+if (T4-Bank4!=0) { print("FAIL banked top row 4"); quit; }
+poly Bank5=575*b3^2*yy*(1/1232) - 5*b3^2*(1/44) - 1724309006348037339*b3*(1)^4*yy*(1/414667771223729725) + 90211341749588349111*b3*(1)^4*(1/58053487971322161500) + 5917878988347*b3*(1)^2*q2_0*yy*(1/33354488923483) - 28055155954017*b3*(1)^2*q2_0*(1/466962844928762) + 464148625*b3*q2_0^2*yy*(1/1837618874) - 2412280375*b3*q2_0^2*(1/25726664236) - 1012454036598481113035963634784611219*(1)^8*yy*(1/90595026602558194833741274946562500) + 183503025824870363630406526914270831*(1)^8*(1/45297513301279097416870637473281250) - 1262305787066119074267607086909*(1)^6*q2_0*yy*(1/52051150015833493153542818125) + 3253431676157892247047764797512*(1)^6*q2_0*(1/364358050110834452074799726875) - 3794944443088021128186849*(1)^4*q2_0^2*yy*(1/334945636413292228279046) + 24594369549940963711040832*(1)^4*q2_0^2*(1/5861548637232613994883305) - 501840690765701788425*(1)^2*q2_0^3*yy*(1/336773837244045618781) + 1306921948717435257750*(1)^2*q2_0^3*(1/2357416860708319331467) + 899681153346875*q2_0^4*yy*(1/37108166220670636) - 1171323778934375*q2_0^4*(1/129878581772347226);
+if (T5-Bank5!=0) { print("FAIL banked top row 5"); quit; }
+print("BANKED_TOP_ROWS_MATCH");
+print("DRIVER_DONE");
+quit;

@@ -1,0 +1,83 @@
+{
+  "algorithm": "std",
+  "branch": null,
+  "charts": "residual",
+  "coefficient_algebra": "Q[y]/(H_t)",
+  "comparison_record": {
+    "path": "box/k16spine-20260903/terminal_laurent_t5.json",
+    "sha256": "f68a4666afb25490ceb62ec2b2f9ebe9b22b61c415cbf66edc074eb50a650689"
+  },
+  "dump_rows": false,
+  "elapsed_seconds": 1.8684808679390699,
+  "mode": "exact",
+  "pivot_schedule": [
+    {
+      "band": 20,
+      "variable": "C1",
+      "weight": 1
+    },
+    {
+      "band": 19,
+      "variable": "C2",
+      "weight": 2
+    },
+    {
+      "band": 18,
+      "variable": "C3",
+      "weight": 3
+    },
+    {
+      "band": 17,
+      "variable": "C4",
+      "weight": 4
+    },
+    {
+      "band": 16,
+      "variable": "q5_0",
+      "weight": 5
+    },
+    {
+      "band": 15,
+      "variable": "q6_0",
+      "weight": 6
+    },
+    {
+      "band": 14,
+      "variable": "q7_0",
+      "weight": 7
+    },
+    {
+      "band": 13,
+      "variable": "q8_0",
+      "weight": 8
+    },
+    {
+      "band": 12,
+      "variable": "q9_0",
+      "weight": 9
+    },
+    {
+      "band": 11,
+      "variable": "q10_0",
+      "weight": 10
+    },
+    {
+      "band": 10,
+      "variable": "b2",
+      "weight": 11
+    }
+  ],
+  "prime": null,
+  "residual_variables": [
+    "b3",
+    "q2_0",
+    "q3_0",
+    "q4_0"
+  ],
+  "returncode": 0,
+  "status": "PASS",
+  "stderr": "terminal_t5_exact_residual.err",
+  "stdout": "terminal_t5_exact_residual.out",
+  "t": 5,
+  "terminal_sign": "T[k]=[X^k]E=-frozen_JSON_expr"
+}

@@ -1,0 +1,142 @@
+// Generated Laurent/Euler terminal recurrence.
+// t=2 mode=split-exact branch=1 charts=all
+ring R=0,(h,s,b1,b2,b3,b4,B0,C1,q2_0,q3_0,q4_0),dp;
+number yy=(2/5);
+option(redSB);
+proc hcoef(poly f, int k)
+{
+  matrix M=coef(f,h);
+  int ii;
+  for (ii=1; ii<=ncols(M); ii++)
+  { if (M[1,ii]==h^k) { return(M[2,ii]); } }
+  return(0);
+}
+proc eulerInverse(poly f)
+{
+  matrix M=coef(f,s);
+  poly answer=0; int ii; int mm;
+  for (ii=1; ii<=ncols(M); ii++)
+  { mm=deg(M[1,ii]); answer=answer+M[2,ii]*M[1,ii]/((2*mm+1)*yy); }
+  return(answer);
+}
+number g1=7/5;
+number g2=(7/5)*yy+(14/50);
+number g3=(14/25)*yy-(42/750);
+number cc=-yy*g3;
+poly Uh=h^5+q2_0*h^3+q3_0*h^2+q4_0*h^1;
+poly Ch=h^1+C1*h^0;
+poly U=subst(Uh,h,s+b4);
+poly Cp=subst(Ch,h,s+b4);
+poly A=s*Cp;
+poly Bprime=g3*(5*Cp+3*s*diff(Cp,s))/(2*yy);
+matrix MB=coef(Bprime,s);
+poly B=B0; int ii; int mm;
+for (ii=1; ii<=ncols(MB); ii++)
+{ mm=deg(MB[1,ii]); B=B+MB[2,ii]*s*MB[1,ii]/(mm+1); }
+if (diff(B,s)-Bprime!=0) { print("FAIL B derivative"); exit(2); }
+poly rhsD=3*g3*diff(U,s)+A*B-s*A*diff(B,s)+2*s*diff(A,s)*B
+          +g3*b3*(A/s+(5/2)*diff(A,s));
+poly D=eulerInverse(rhsD);
+if (yy*(D+2*s*diff(D,s))-rhsD!=0) { print("FAIL Euler inverse"); exit(2); }
+poly Q1=s*A-yy*b3;
+poly Y=s*D-b3*B-g3*b2;
+poly Z=s*B-g3*b3;
+poly numD1=yy*g3*b1-Q1*diff(Y,s)+diff(Q1,s)*Y+2*diff(U,s)*Z;
+poly constantS=subst(numD1,s,0);
+poly pb1=diff(constantS,b1);
+poly b1rhs=-subst(constantS,b1,0)/pb1;
+numD1=subst(numD1,b1,b1rhs);
+if (subst(numD1,s,0)!=0) { print("FAIL b1 divisibility"); exit(2); }
+poly Xprime=numD1/(2*yy*s);
+poly gauge=hcoef(subst(Xprime,s,h-b4),4);
+poly pB0=diff(gauge,B0);
+poly B0rhs=-subst(gauge,B0,0)/pB0;
+B=subst(B,B0,B0rhs);
+D=subst(D,B0,B0rhs);
+Y=subst(Y,B0,B0rhs);
+Z=subst(Z,B0,B0rhs);
+Xprime=subst(Xprime,B0,B0rhs);
+b1rhs=subst(b1rhs,B0,B0rhs);
+if (subst(gauge,B0,B0rhs)!=0) { print("FAIL B0 gauge"); exit(2); }
+// RR is -E.  The requested terminal row is T[k]=-hcoef(RR,h,k).
+poly RR=Q1*Xprime-diff(U,s)*Y-yy*g3;
+poly Rh=subst(RR,s,h-b4);
+poly W1=hcoef(Rh,8);
+poly p1=diff(W1,C1);
+poly v1rhs=-subst(W1,C1,0)/p1;
+if (subst(W1,C1,v1rhs)!=0) { print("FAIL pivot 1"); exit(2); }
+Rh=subst(Rh,C1,v1rhs);
+print("PIVOT weight=1 band=8 variable=C1"); p1;
+poly W2=hcoef(Rh,7);
+poly p2=diff(W2,q2_0);
+poly v2rhs=-subst(W2,q2_0,0)/p2;
+if (subst(W2,q2_0,v2rhs)!=0) { print("FAIL pivot 2"); exit(2); }
+Rh=subst(Rh,q2_0,v2rhs);
+print("PIVOT weight=2 band=7 variable=q2_0"); p2;
+poly W3=hcoef(Rh,6);
+poly p3=diff(W3,q3_0);
+poly v3rhs=-subst(W3,q3_0,0)/p3;
+if (subst(W3,q3_0,v3rhs)!=0) { print("FAIL pivot 3"); exit(2); }
+Rh=subst(Rh,q3_0,v3rhs);
+print("PIVOT weight=3 band=6 variable=q3_0"); p3;
+poly W4=hcoef(Rh,5);
+poly p4=diff(W4,q4_0);
+poly v4rhs=-subst(W4,q4_0,0)/p4;
+if (subst(W4,q4_0,v4rhs)!=0) { print("FAIL pivot 4"); exit(2); }
+Rh=subst(Rh,q4_0,v4rhs);
+print("PIVOT weight=4 band=5 variable=q4_0"); p4;
+poly W5=hcoef(Rh,4);
+poly p5=diff(W5,b2);
+poly v5rhs=-subst(W5,b2,0)/p5;
+if (subst(W5,b2,v5rhs)!=0) { print("FAIL pivot 5"); exit(2); }
+Rh=subst(Rh,b2,v5rhs);
+print("PIVOT weight=5 band=4 variable=b2"); p5;
+if (hcoef(Rh,4)!=0) { print("FAIL high band 4"); exit(2); }
+if (hcoef(Rh,5)!=0) { print("FAIL high band 5"); exit(2); }
+if (hcoef(Rh,6)!=0) { print("FAIL high band 6"); exit(2); }
+if (hcoef(Rh,7)!=0) { print("FAIL high band 7"); exit(2); }
+if (hcoef(Rh,8)!=0) { print("FAIL high band 8"); exit(2); }
+if (hcoef(Rh,9)!=0) { print("FAIL high band 9"); exit(2); }
+poly T0=-hcoef(Rh,0);
+print("TERMINAL band=0"); deg(T0); size(T0);
+poly T1=-hcoef(Rh,1);
+print("TERMINAL band=1"); deg(T1); size(T1);
+poly T2=-hcoef(Rh,2);
+print("TERMINAL band=2"); deg(T2); size(T2);
+poly T3=-hcoef(Rh,3);
+print("TERMINAL band=3"); deg(T3); size(T3);
+print("RECURRENCE_PASS t=2 rows=4");
+poly Bank0=11858603*b3^2*b4^3*yy*(1/17072300) - 14892259*b3^2*b4^3*(1/42680750) - 949662746927*b3*b4^6*yy*(1/91889947520) + 954740982191*b3*b4^6*(1/229724868800) + 2711190968040531*b4^9*yy*(1/123647113382912) - 2731229994972243*b4^9*(1/309117783457280) - 7*yy*(1/25) + 28*(1/625);
+if (T0+Bank0!=0) { print("FAIL banked row 0"); exit(2); }
+poly Bank1=-5660211*b3^2*b4^2*yy*(1/11774000) + 4375443*b3^2*b4^2*(1/29435000) + 174064436243*b3*b4^5*yy*(1/14357804300) - 174973769459*b3*b4^5*(1/35894510750) - 24187277806340401*b4^8*yy*(1/618235566914560) + 24317979372996913*b4^8*(1/1545588917286400);
+if (T1+Bank1!=0) { print("FAIL banked row 1"); exit(2); }
+poly Bank2=252*b3^2*b4*yy*(1/725) - 252*b3^2*b4*(1/3625) + 23828627*b3*b4^4*yy*(1/28291240) - 24291731*b3*b4^4*(1/70728100) - 135903824237*b4^7*yy*(1/76137385088) + 140817768941*b4^7*(1/190343462720);
+if (T2+Bank2!=0) { print("FAIL banked row 2"); exit(2); }
+poly Bank3=28*b3^2*yy*(1/125) - 28*b3^2*(1/625) - 46389721*b3*b4^3*yy*(1/9755600) + 46669273*b3*b4^3*(1/24389000) + 6055030568909*b4^6*yy*(1/380686925440) - 6098290679117*b4^6*(1/951717313600);
+if (T3+Bank3!=0) { print("FAIL banked row 3"); exit(2); }
+print("BANKED_ROWS_MATCH");
+ideal Rtop=subst(T2,b4,1),subst(T3,b4,1);
+ideal Rpositive=subst(T1,b4,0),subst(T2,b4,0),subst(T3,b4,0);
+ideal Rfullzero=subst(T0,b4,0),subst(T1,b4,0),subst(T2,b4,0),subst(T3,b4,0);
+ring C=0,(b3),dp;
+number yy=(2/5);
+ideal Itop=imap(R,Rtop);
+ideal Ipositive=imap(R,Rpositive);
+ideal Ifullzero=imap(R,Rfullzero);
+ideal Gtop=std(Itop);
+if (reduce(1,Gtop)==0) { print("TOP_TAIL_UNIT"); } else { print("TOP_TAIL_NONUNIT"); }
+print("TOP_BASIS_SIZE"); size(Gtop);
+ideal Gpositive=std(Ipositive);
+print("POSITIVE_BASIS_SIZE"); size(Gpositive);
+int foundb3=0; int powerb3;
+for (powerb3=1; powerb3<=8; powerb3++)
+{
+  if (reduce(b3^powerb3,Gpositive)==0)
+  { foundb3=powerb3; break; }
+}
+print("RADICAL_POWER variable=b3"); foundb3;
+ideal Gfullzero=std(Ifullzero);
+if (reduce(1,Gfullzero)==0) { print("B4ZERO_FULL_UNIT"); } else { print("B4ZERO_FULL_NONUNIT"); }
+print("FULLZERO_BASIS_SIZE"); size(Gfullzero);
+print("DRIVER_DONE");
+quit;

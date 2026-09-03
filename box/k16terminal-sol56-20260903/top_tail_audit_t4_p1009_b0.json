@@ -1,0 +1,86 @@
+{
+  "audit_subsystems": true,
+  "branch": 0,
+  "chart": "top",
+  "coefficient_algebra": "F_1009, y=468",
+  "comparison": null,
+  "emitter": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_recurrence.py",
+  "emitter_sha256": "c196e8a05feb80c7410309afbf4d21532738df4f8665990129efd4f379ca7b62",
+  "mode": "mod",
+  "pivot_schedule": [
+    {
+      "band": 16,
+      "coefficient": "7956*d/1715 - 832/1715",
+      "variable": "C1",
+      "weight": 1
+    },
+    {
+      "band": 15,
+      "coefficient": "1086*d/245 - 54/245",
+      "variable": "C2",
+      "weight": 2
+    },
+    {
+      "band": 14,
+      "coefficient": "80418*d/18865 + 78/1715",
+      "variable": "C3",
+      "weight": 3
+    },
+    {
+      "band": 13,
+      "coefficient": "-52*d/27",
+      "variable": "q4_0",
+      "weight": 4
+    },
+    {
+      "band": 12,
+      "coefficient": "-624*d/343 - 104/1029",
+      "variable": "q5_0",
+      "weight": 5
+    },
+    {
+      "band": 11,
+      "coefficient": "-2132*d/1225 - 52/245",
+      "variable": "q6_0",
+      "weight": 6
+    },
+    {
+      "band": 10,
+      "coefficient": "-3848*d/2205 - 52/147",
+      "variable": "q7_0",
+      "weight": 7
+    },
+    {
+      "band": 9,
+      "coefficient": "-572*d/245 - 104/147",
+      "variable": "q8_0",
+      "weight": 8
+    },
+    {
+      "band": 8,
+      "coefficient": "13*d/63 + 65/1701",
+      "variable": "b2",
+      "weight": 9
+    }
+  ],
+  "prime": 1009,
+  "residual_variables": [
+    "b3",
+    "q2_0",
+    "q3_0"
+  ],
+  "run": {
+    "elapsed_seconds": 0.14897483203094453,
+    "err": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_audit_t4_p1009_b0.err",
+    "err_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 0,
+    "out": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_audit_t4_p1009_b0.out",
+    "out_sha256": "52a248d008140289ef78a45836343f94e3a8f20b3efca1eebd9beae38436d445",
+    "status": "PROVED_UNIT",
+    "timeout_seconds": 300
+  },
+  "singular_source": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_audit_t4_p1009_b0.sing",
+  "singular_source_sha256": "163de00100f375d407eed12f23cb3c6c76da72cccd5945bf2bac6a6582c726a2",
+  "t": 4,
+  "typing": "fixed-t execution of indexed b4=1 tau-free recurrence"
+}

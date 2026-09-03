@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "verdict": "PARTIAL",
+  "all_t_claim": "OPEN: neither TOP-TAIL-UNIT nor RESIDUAL-ZERO is proved uniformly",
+  "uniform_results": {
+    "terminal_formula": "PROVED coefficient-array recurrence for every integer t>=2",
+    "high_pivots": "consumed from charged proved Laurent spine; resultants and specialization roots re-audited",
+    "residual_b3_axis": "PROVED unit-times-b3^2 for every integer t>=3",
+    "residual_q2_axis": "PROVED indexed scalar recurrence; final norm factorization OPEN",
+    "top_tail": "OPEN[TOP-TAIL-DETERMINANT-RECURRENCE]"
+  },
+  "fixed_characteristic_zero": {
+    "terminal_ideal_unit": [1, 2, 3, 4, 5],
+    "new_terminal_ideal_unit": [5],
+    "new_top_tail_unit": [5],
+    "new_residual_zero": [5, 6],
+    "t6_top_tail": "INCONCLUSIVE_TIMEOUT after exact recurrence pass; no UNIT/NONUNIT verdict"
+  },
+  "split_controls": {
+    "t2": "exact on both Q factors",
+    "t11": "both mod-1009 factors pass recurrence/high-pivot control; first residual Groebner job INCONCLUSIVE_TIMEOUT"
+  },
+  "report": "xmodel/k16-terminal-proof-sol56-20260903.md"
+}

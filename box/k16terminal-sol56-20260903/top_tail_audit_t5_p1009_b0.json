@@ -1,0 +1,99 @@
+{
+  "audit_subsystems": true,
+  "branch": 0,
+  "chart": "top",
+  "coefficient_algebra": "F_1009, y=433",
+  "comparison": null,
+  "emitter": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_recurrence.py",
+  "emitter_sha256": "c196e8a05feb80c7410309afbf4d21532738df4f8665990129efd4f379ca7b62",
+  "mode": "mod",
+  "pivot_schedule": [
+    {
+      "band": 20,
+      "coefficient": "453520*d/93347 - 52800/93347",
+      "variable": "C1",
+      "weight": 1
+    },
+    {
+      "band": 19,
+      "coefficient": "389840*d/83521 - 28400/83521",
+      "variable": "C2",
+      "weight": 2
+    },
+    {
+      "band": 18,
+      "coefficient": "22080*d/4913 - 560/4913",
+      "variable": "C3",
+      "weight": 3
+    },
+    {
+      "band": 17,
+      "coefficient": "277600*d/63869 + 7200/63869",
+      "variable": "C4",
+      "weight": 4
+    },
+    {
+      "band": 16,
+      "coefficient": "-240*d/121",
+      "variable": "q5_0",
+      "weight": 5
+    },
+    {
+      "band": 15,
+      "coefficient": "-6000*d/3179 - 800/9537",
+      "variable": "q6_0",
+      "weight": 6
+    },
+    {
+      "band": 14,
+      "coefficient": "-40160*d/22253 - 3840/22253",
+      "variable": "q7_0",
+      "weight": 7
+    },
+    {
+      "band": 13,
+      "coefficient": "-5568*d/3179 - 864/3179",
+      "variable": "q8_0",
+      "weight": 8
+    },
+    {
+      "band": 12,
+      "coefficient": "-5680*d/3179 - 1280/3179",
+      "variable": "q9_0",
+      "weight": 9
+    },
+    {
+      "band": 11,
+      "coefficient": "-7760*d/3179 - 2400/3179",
+      "variable": "q10_0",
+      "weight": 10
+    },
+    {
+      "band": 10,
+      "coefficient": "40*d/187 + 80/2057",
+      "variable": "b2",
+      "weight": 11
+    }
+  ],
+  "prime": 1009,
+  "residual_variables": [
+    "b3",
+    "q2_0",
+    "q3_0",
+    "q4_0"
+  ],
+  "run": {
+    "elapsed_seconds": 6.909401325043291,
+    "err": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_audit_t5_p1009_b0.err",
+    "err_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 0,
+    "out": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_audit_t5_p1009_b0.out",
+    "out_sha256": "40f88caf9bfea2f29f75621f414a366fe032747d433bcd3ed01ad65489bb897a",
+    "status": "PROVED_UNIT",
+    "timeout_seconds": 300
+  },
+  "singular_source": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_audit_t5_p1009_b0.sing",
+  "singular_source_sha256": "cbda9d4a504fc7f375c7de3544c88d3a21f0b9991c18e8702a4a0da2556a7310",
+  "t": 5,
+  "typing": "fixed-t execution of indexed b4=1 tau-free recurrence"
+}

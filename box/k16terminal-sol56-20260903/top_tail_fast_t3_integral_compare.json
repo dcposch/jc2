@@ -1,0 +1,76 @@
+{
+  "audit_subsystems": false,
+  "branch": null,
+  "chart": "none",
+  "coefficient_algebra": "Q[a]/(a^2-12), d=a/3",
+  "comparison": {
+    "path": "box/k16spine-20260903/terminal_laurent_t3.json",
+    "sha256": "6490d1923d8a14652d36ef77e47a2122410f30f6137a44b28af9807ca076b926"
+  },
+  "emitter": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_recurrence.py",
+  "emitter_sha256": "b6b1db68b89685d7d98828299d2128c47381b361e94c5b2c7ba049d8907429a3",
+  "mode": "exact",
+  "pivot_schedule": [
+    {
+      "band": 12,
+      "coefficient": "63225*d/14641 - 5400/14641",
+      "variable": "C1",
+      "weight": 1
+    },
+    {
+      "band": 11,
+      "coefficient": "5475*d/1331 - 65/1331",
+      "variable": "C2",
+      "weight": 2
+    },
+    {
+      "band": 10,
+      "coefficient": "-90*d/49",
+      "variable": "q3_0",
+      "weight": 3
+    },
+    {
+      "band": 9,
+      "coefficient": "-1458*d/847 - 108/847",
+      "variable": "q4_0",
+      "weight": 4
+    },
+    {
+      "band": 8,
+      "coefficient": "-1425*d/847 - 240/847",
+      "variable": "q5_0",
+      "weight": 5
+    },
+    {
+      "band": 7,
+      "coefficient": "-1845*d/847 - 540/847",
+      "variable": "q6_0",
+      "weight": 6
+    },
+    {
+      "band": 6,
+      "coefficient": "15*d/77 + 20/539",
+      "variable": "b2",
+      "weight": 7
+    }
+  ],
+  "prime": null,
+  "residual_variables": [
+    "b3",
+    "q2_0"
+  ],
+  "run": {
+    "elapsed_seconds": 0.3459447940113023,
+    "err": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_t3_integral_compare.err",
+    "err_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 0,
+    "out": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_t3_integral_compare.out",
+    "out_sha256": "0eec06a51fa35fe4afb92fda8c4b86e36575eade56acad2eb23f996b3322e93c",
+    "status": "PASS_RECURRENCE",
+    "timeout_seconds": 300
+  },
+  "singular_source": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_t3_integral_compare.sing",
+  "singular_source_sha256": "37d0c7df15ae0ec2c697554ebf6503399eb01d71a13dee3cb8824db9dff59f6f",
+  "t": 3,
+  "typing": "fixed-t execution of indexed b4=1 tau-free recurrence"
+}

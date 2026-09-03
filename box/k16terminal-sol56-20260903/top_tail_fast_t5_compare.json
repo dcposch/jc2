@@ -1,0 +1,101 @@
+{
+  "branch": null,
+  "chart": "none",
+  "coefficient_algebra": "Q[d]/(d^2-2)",
+  "comparison": {
+    "path": "box/k16spine-20260903/terminal_laurent_t5.json",
+    "sha256": "f68a4666afb25490ceb62ec2b2f9ebe9b22b61c415cbf66edc074eb50a650689"
+  },
+  "emitter": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_recurrence.py",
+  "emitter_sha256": "cf2e490d57d17a997674d45323fe8ea09b2f810f0f27fc921821e2fe4f56a8cc",
+  "mode": "exact",
+  "pivot_schedule": [
+    {
+      "band": 20,
+      "coefficient": "453520*d/93347 - 52800/93347",
+      "variable": "C1",
+      "weight": 1
+    },
+    {
+      "band": 19,
+      "coefficient": "389840*d/83521 - 28400/83521",
+      "variable": "C2",
+      "weight": 2
+    },
+    {
+      "band": 18,
+      "coefficient": "22080*d/4913 - 560/4913",
+      "variable": "C3",
+      "weight": 3
+    },
+    {
+      "band": 17,
+      "coefficient": "277600*d/63869 + 7200/63869",
+      "variable": "C4",
+      "weight": 4
+    },
+    {
+      "band": 16,
+      "coefficient": "-240*d/121",
+      "variable": "q5_0",
+      "weight": 5
+    },
+    {
+      "band": 15,
+      "coefficient": "-6000*d/3179 - 800/9537",
+      "variable": "q6_0",
+      "weight": 6
+    },
+    {
+      "band": 14,
+      "coefficient": "-40160*d/22253 - 3840/22253",
+      "variable": "q7_0",
+      "weight": 7
+    },
+    {
+      "band": 13,
+      "coefficient": "-5568*d/3179 - 864/3179",
+      "variable": "q8_0",
+      "weight": 8
+    },
+    {
+      "band": 12,
+      "coefficient": "-5680*d/3179 - 1280/3179",
+      "variable": "q9_0",
+      "weight": 9
+    },
+    {
+      "band": 11,
+      "coefficient": "-7760*d/3179 - 2400/3179",
+      "variable": "q10_0",
+      "weight": 10
+    },
+    {
+      "band": 10,
+      "coefficient": "40*d/187 + 80/2057",
+      "variable": "b2",
+      "weight": 11
+    }
+  ],
+  "prime": null,
+  "residual_variables": [
+    "b3",
+    "q2_0",
+    "q3_0",
+    "q4_0"
+  ],
+  "run": {
+    "elapsed_seconds": 2.265918305958621,
+    "err": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_t5_compare.err",
+    "err_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 0,
+    "out": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_t5_compare.out",
+    "out_sha256": "92d21c55b9a740b7bef3158552d25867120621775da92ed3fabf8fadf7811783",
+    "status": "PASS_RECURRENCE",
+    "timeout_seconds": 300
+  },
+  "singular_source": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_t5_compare.sing",
+  "singular_source_sha256": "e7c5d35746fdf5e24d243cabbae23ae8c409e36143bd99f42b328d3c9b374dda",
+  "t": 5,
+  "typing": "fixed-t execution of indexed b4=1 tau-free recurrence"
+}

@@ -1,0 +1,88 @@
+{
+  "branch": null,
+  "chart": "none",
+  "coefficient_algebra": "Q[d]/(d^2-5/3)",
+  "comparison": {
+    "path": "box/k16spine-20260903/terminal_laurent_t4.json",
+    "sha256": "0c6adb555b07624bac34ed2862ea259a4258f099d54a84f09d5b3824bda5858a"
+  },
+  "emitter": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_recurrence.py",
+  "emitter_sha256": "cf2e490d57d17a997674d45323fe8ea09b2f810f0f27fc921821e2fe4f56a8cc",
+  "mode": "exact",
+  "pivot_schedule": [
+    {
+      "band": 16,
+      "coefficient": "7956*d/1715 - 832/1715",
+      "variable": "C1",
+      "weight": 1
+    },
+    {
+      "band": 15,
+      "coefficient": "1086*d/245 - 54/245",
+      "variable": "C2",
+      "weight": 2
+    },
+    {
+      "band": 14,
+      "coefficient": "80418*d/18865 + 78/1715",
+      "variable": "C3",
+      "weight": 3
+    },
+    {
+      "band": 13,
+      "coefficient": "-52*d/27",
+      "variable": "q4_0",
+      "weight": 4
+    },
+    {
+      "band": 12,
+      "coefficient": "-624*d/343 - 104/1029",
+      "variable": "q5_0",
+      "weight": 5
+    },
+    {
+      "band": 11,
+      "coefficient": "-2132*d/1225 - 52/245",
+      "variable": "q6_0",
+      "weight": 6
+    },
+    {
+      "band": 10,
+      "coefficient": "-3848*d/2205 - 52/147",
+      "variable": "q7_0",
+      "weight": 7
+    },
+    {
+      "band": 9,
+      "coefficient": "-572*d/245 - 104/147",
+      "variable": "q8_0",
+      "weight": 8
+    },
+    {
+      "band": 8,
+      "coefficient": "13*d/63 + 65/1701",
+      "variable": "b2",
+      "weight": 9
+    }
+  ],
+  "prime": null,
+  "residual_variables": [
+    "b3",
+    "q2_0",
+    "q3_0"
+  ],
+  "run": {
+    "elapsed_seconds": 0.1551016200101003,
+    "err": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_t4_compare.err",
+    "err_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": 0,
+    "out": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_t4_compare.out",
+    "out_sha256": "473208ad938d95721903dc34b8e9938d1efc60b40198d880ee2d23f85262bc52",
+    "status": "PASS_RECURRENCE",
+    "timeout_seconds": 300
+  },
+  "singular_source": "/home/ubuntu/jc2/box/k16terminal-sol56-20260903/top_tail_fast_t4_compare.sing",
+  "singular_source_sha256": "49f217838ca49153d17badb8c8fc4777ccb2e34baabce37706f31ffb79f1ccd7",
+  "t": 4,
+  "typing": "fixed-t execution of indexed b4=1 tau-free recurrence"
+}
