@@ -17043,3 +17043,28 @@ and the characteristic δ-sequence. QUEUED (seats full): (1) the δ = 5/2 full l
 − c), q₁ = −2∫p³ explicit — a small, concrete Appendix-II-type computation); (2) implement
 Xu's IM ≥ Im inequalities as a skeleton screen on the operative census (in particular on
 the 177 u_s > 1 groups).
+
+## INTEGRATION #17 DELTA (aaa) (2026-09-03T17:09Z, MEASURED / COUNTING-BOUND, producer GPT-5.5): THE δ = 5/2 SPLIT OF (99,66) SURVIVES THE LOCAL LIFT — the reduced-equation family extends consistently through six further coefficient levels (s⁻¹ … s⁴) with a growing free family (dimension 5 localized incl. c; 4 after c = 1); Xu's exclusions ([1,1,1] at δ = 2; δ = 7/3) reproduced as controls; the local Jacobian condition at one π-root is NOT restrictive — the constraint is the global x,y Keller lift (OPEN[FULL-X-Y-KELLER-LIFT])
+
+`xu-delta52-lift-gpt55-20260903.md` (GPT-5.5; 8/8 hashes; box/xu52-20260903/ with Xu pp.
+10–13 and Moh pp.196–199, 207–209 page images). SOURCE-READ: Xu §7.2 ODE lemma (D(m, m(l−1),
+p, q) = c·p^l ⇒ q = (c/m)(π − a)p^{l−1}); §7.3 effective quasi-approximate roots T_i ∈ K[f,g],
+deg T_i = −μ_i, principal-minor multiplicities; (7.1) ∂(T_s(σ), g(σ))/∂(t,π) = −J·(T_s)_f(σ)
+t^{−2+δ}; the (99,66) data. Symbolic verification of q₁ = −2∫p³ for p = π(π² − c): PASS.
+Controls: δ = 2 [1,1,1]: 2pq' − 25p'q = kp¹⁴ forces multiplicity 14 at each of three simple
+roots ⇒ deg q ≥ 42 > 40 — EXCLUDED; δ = 7/3: after q = p¹³(π − d) the reduced polynomial
+saturated by c ≠ 0 gives [1] — EXCLUDED (both match Xu). δ = 5/2 lift (declared ring,
+Rabinowitsch, wrapper controls, every coefficient rechecked symbolically): s⁻¹: 21 eq / 21
+new vars / 20 solved, free b1_9 (a0_0 = b1_9·c/2, a0_2 = −3b1_9/2); s⁰: free b2_8 (a1_1 =
+(3b1_9² − 2b2_8)/10, a1_3 = 2(9b1_9² + 4b2_8)/(15c)); s¹: no new free (a2_2 = −b1_9(3b1_9² +
+b2_8)/(2c)); s²: free b4_8; s³: none; s⁴: free b6_8 — consistent throughout; denominators
+are constants and powers of c. VERDICT: SURVIVES[DELTA-5/2-REDUCED-LOCAL-LIFT-THROUGH-s⁴];
+no certificate excludes the split; (99,66) cannot be reduced to Moh's δ = 2 branch B. NOT
+DONE: the full original-coordinate system for f, g, T₂, T₃ (the quasi-approximate-root
+recurrences in K[f,g]) and the direct J(f,g) = 1 check. READING (coordinator): this is the
+minor-disc analogue of delta 17(ee) — node-local (one π-root) conditions are satisfiable
+with free parameters; only the GLOBAL polynomiality/common-jet condition can decide. The
+(99,66) decision therefore requires the full-pair system: f, g ∈ k[x,y] of degrees 99, 66
+with the whole major tower (M = (−66,77,97), V = (8,8)) AND the principal-minor split data
+(δ = 2 [2,1] or δ = 5/2), J = 1 — OPEN[FULL-X-Y-KELLER-LIFT]; design lane queued behind
+moh9966-B-lift.
