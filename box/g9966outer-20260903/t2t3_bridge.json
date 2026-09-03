@@ -1,0 +1,205 @@
+{
+  "T2": {
+    "chart": "T2 = G^3 + alpha1(F) G^2 + alpha2(F) G + alpha3(F)",
+    "display": "T2 = G^3 - F^2 + c0 G^2 + (a1 F + a0) G + (b1 F + b0)",
+    "exponents": {
+      "a": 3,
+      "b": 2,
+      "d2": 33,
+      "m": 66,
+      "n": 99,
+      "neg_mu2": 55
+    },
+    "formula_moh_p152": "T2^psi(f,g) = f^{n/d2} + alpha1(g) f^2 + alpha2(g) f + alpha3(g)",
+    "monic_leading_identity": "[F^2] in alpha3 = -1, i.e. T2 \u2261 G^3 - F^2 + lower",
+    "naive_y_degree_before_cancellation": 198,
+    "unknown_after_Tschirnhausen_alpha1_zero": 4,
+    "unknown_after_monic_G3_minus_F2": 5,
+    "unknown_coeffs_Moh_literal_including_leading": 6,
+    "y_degree_target": 55
+  },
+  "T3": {
+    "alpha_degree_bounds": [
+      {
+        "deg_g_bound": 0,
+        "i": 1,
+        "n_coeff": 1
+      },
+      {
+        "deg_g_bound": 1,
+        "i": 2,
+        "n_coeff": 2
+      },
+      {
+        "deg_g_bound": 2,
+        "i": 3,
+        "n_coeff": 3
+      },
+      {
+        "deg_g_bound": 2,
+        "i": 4,
+        "n_coeff": 3
+      },
+      {
+        "deg_g_bound": 3,
+        "i": 5,
+        "n_coeff": 4
+      },
+      {
+        "deg_g_bound": 4,
+        "i": 6,
+        "n_coeff": 5
+      },
+      {
+        "deg_g_bound": 4,
+        "i": 7,
+        "n_coeff": 5
+      },
+      {
+        "deg_g_bound": 5,
+        "i": 8,
+        "n_coeff": 6
+      },
+      {
+        "deg_g_bound": 6,
+        "i": 9,
+        "n_coeff": 7
+      }
+    ],
+    "chart": "T3 = G^9 + sum_{i=1}^{9} alpha_i(F) G^{9-i}",
+    "display": "T3 = G^9 - F^6 + sum_{k=0}^{8} p_k(F) G^k   (p_k = alpha_{9-k})",
+    "exponents": {
+      "d3": 11,
+      "m": 66,
+      "n": 99,
+      "n_over_d3": 9,
+      "neg_mu3": 145
+    },
+    "formula_moh_p152": "T3^psi(f,g) = f^{n/d3} + sum_{i=1}^{9} alpha_i(g) f^{9-i}",
+    "monic_leading_identity": "[F^6] in alpha9 = -1, i.e. T3 \u2261 G^9 - F^6 + lower",
+    "naive_y_degree_before_cancellation": 594,
+    "principal_minor_multiplicity_Xu_73": 40,
+    "unknown_after_Tschirnhausen_alpha1_zero": 34,
+    "unknown_after_monic_G9_minus_F6": 35,
+    "unknown_coeffs_Moh_literal_including_leading": 36,
+    "y_degree_target": 145
+  },
+  "branch_targets": {
+    "delta2": {
+      "T2_leader": "p^5",
+      "T3_leader": "R = z^25 (z+3 rho)^14 (z-2 rho)",
+      "face_ODE": "2 p R' - 25 p' R = 5 p^{14}   ('=d/dz)",
+      "p": "z^2 (z+3 rho)",
+      "status": "OPEN[EFFECTIVE-T2-T3-BRIDGE]"
+    },
+    "delta52": {
+      "T2_leader": "p^5",
+      "T3_leader": "q = p^{10} q1, q1' = 10 p^3 (Xu normalisation), deg q1=10",
+      "p": "pi (pi^2 - c)",
+      "reduced_ODE": "D_s(Q,h) + 2 s^2 h^4 = 0  (charged; not T3 in K[F,G])",
+      "status": "OPEN[EFFECTIVE-T2-T3-BRIDGE]"
+    },
+    "us_eq_1_triviality": {
+      "applies_to": "(64,48) parent and reduced (16,12) Appendix II",
+      "statement": "If u_s=1 the principal packet is a single Puiseux branch. Xu Prop 7.3 / Moh Prop 4.4 force T_i(sigma) to be powers of one linear polynomial.  There is no split leader R or q1 to identify, and no free T3 ODE.  The bridge is trivial.",
+      "u_s_9966": 3
+    }
+  },
+  "controls": {
+    "d_chain": true,
+    "face_p5_not_in_Tschirnhausen_span": true,
+    "mu2_55": true,
+    "mu3_145": true
+  },
+  "face_obstruction": {
+    "T2_face_span_p_powers": [
+      18,
+      15,
+      12,
+      9,
+      6,
+      0
+    ],
+    "T2_target_in_face_span": false,
+    "T2_target_p_power": 5,
+    "T3_delta2_deg_R": 40,
+    "T3_face_span_p_powers_homogeneous": [
+      54,
+      48,
+      42,
+      36,
+      30,
+      24,
+      18,
+      12,
+      6,
+      0
+    ],
+    "conclusion": "After the monic G^3-F^2 (resp. G^9-F^6) cancellation, the remaining Tschirnhausen span evaluated on the minor leading forms (p^9, p^6) does not contain p^5 nor a degree-40 polynomial with the (25,14) or p^{10} q1 shape.  Those leaders are residual, from subleading F,G jets.  Typed OPEN[EFFECTIVE-T2-T3-BRIDGE] as complete linear rows on the 7161-chart.  The polynomial *shape* of T2, T3 is PRINTED.",
+    "minor_leaders_Xu_s8": {
+      "F_Moh_g": "p^9",
+      "G_Moh_f": "p^6",
+      "T2": "p^5",
+      "T3_delta2": "R = z^25 (z+3 rho)^14 (z-2 rho), deg 40",
+      "T3_delta52": "q = p^{10} q1, deg q1 = 10, deg q = 40"
+    }
+  },
+  "label_reversal": {
+    "T0": "Moh g = chart F, deg 99",
+    "T1": "Moh f = chart G, deg 66",
+    "T2_in": "K[G, F] = K[f, g]",
+    "T3_in": "K[G, F]"
+  },
+  "mu_sequence": {
+    "M": [
+      -66,
+      77,
+      97
+    ],
+    "d": [
+      99,
+      33,
+      11,
+      1
+    ],
+    "lambda": [
+      -6534,
+      -1815,
+      -1595
+    ],
+    "mu": [
+      -66,
+      -55,
+      -145
+    ],
+    "n_over_d_r": [
+      1,
+      3,
+      9,
+      99
+    ],
+    "neg_mu": [
+      66,
+      55,
+      145
+    ],
+    "q": [
+      -66,
+      143,
+      20
+    ]
+  },
+  "rows_emitted": {
+    "linear_rows_on_7161_chart_from_bridge": 0,
+    "pi_root_identification_with_H_and_R": "OPEN[EFFECTIVE-T2-T3-BRIDGE]",
+    "shape_and_leading_monic": "PRINTED (2 leading identities G^3=F^2, G^9=F^6 on tops)",
+    "unknown_T2_coeffs": 5,
+    "unknown_T3_coeffs": 35
+  },
+  "source": {
+    "moh_p150_mu": "printed p.150 auxiliary mu from (q,d,lambda)",
+    "moh_p152_Tpsi": "printed p.152 T_r^psi = truncation of F^{1/d_r}",
+    "xu_s73": "printed p.10 T_i in K[f,g], T0=g, T1=f, deg=-mu_i"
+  },
+  "type": "DERIVED[T2-T3-SHAPE] / OPEN[EFFECTIVE-T2-T3-BRIDGE-ROWS]"
+}

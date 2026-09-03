@@ -1,0 +1,53 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes against the lane receipt, then source-read Moh/Xu and the existing chart driver before deriving the outer bands and the T₂/T₃ bridge.Hash verification next: I’ll generate the manifest from the lane receipt and check it with `sha256sum -c` before reading any source.Hashes all matched. Next I’ll extract Moh pp.150–152 and 164–172 plus Xu §7.3, and read the charged drivers in parallel.I’ll read the extracted Moh/Xu pages and render the critical images so the T_i construction and order bounds are taken from the source, not from later summaries.Page images are in. I’ll source-read Theorem 1.2, the T_i construction, and the D₁/D₂ order bounds from those renders.Numbers are in hand. I’ll implement the add-on driver next: D₂ unit bands, D₁ gap rank, T₂/T₃ shape, and the two controls — without touching the charged chart.D1 rank is 176 of 225 slots (49 dependent homogeneous rows), not full slot rank. I’ll correct that claim, keep the Q* rank as the dimension drop, and start the (16,12) control.Controls passed. I’ll compose `results.json` from the module outputs so we don’t rerun the Groebner step, then write the report.All module results are in. I’ll write the sealed report from those counts and then stamp it.The missing 17(aaaa) content is now explicit coefficient rows for (a), and a printed polynomial shape plus a typed gap for (b). Hashes: **21/21 OK**. Charged driver under `box/g9966-20260903/` was not modified. Report: `xmodel/g9966-outer-bridge-grok46-20260903.md`.
+
+## (a) Outer Theorem-1.2 D₁/D₂ bands
+
+These are linear vanishings in the `t^r(w-1)^q` chart of `K_Q=t^D Q(t^{-1},w/t)`. Theorem 1.2 is `≥`, so the equality face is not a row. Same rows for both minor branches (they live at the first point).
+
+| band | A2 | A3 | B1 | B2 | **total** |
+|---|---:|---:|---:|---:|---:|
+| ambient `S(D,33)` | 1650 | 2739 | 561 | 1650 | **6600** |
+| D₂ unit rows | 1386 | 2442 | 384 | 1386 | **5598** |
+| D₂ remaining | 264 | 297 | 177 | 264 | **1002** |
+| D₁ raw slots | 51 | 108 | 15 | 51 | **225** |
+| D₁ Q* rank | 44 | 73 | 15 | 44 | **176** |
+
+New outer pivots: **5774**. All 15 first-global-band outer pivots sit inside the D₂ unit rows. After union with the charged prefix:
+
+```text
+δ=2:           6689 → 1106 after D₂ → 930 after D₁
+δ=5/2, b0=0:   6687 → 1104 after D₂ → 928 after D₁
+```
+
+h₃-adic `F_j,G_j` D₂ bounds are **derived** from the chart expansion (`F_1=G_1=0` identities; the rest follow from D₂-h₂ plus the already-imposed `C2,C3` bounds): **0** new outer pivots.
+
+## (b) T₂, T₃ bridge
+
+Moh p.152 / Xu §7.3 p.10, with `F=` Moh `g`, `G=` Moh `f`:
+
+```text
+T2 = G^3 - F^2 + c0 G^2 + (a1 F + a0) G + (b1 F + b0)   # 5 unknown (4 after Tschirnhausen)
+T3 = G^9 - F^6 + ∑ α_i(F) G^{9-i},  deg α_i ≤ ⌊2i/3⌋   # 35 unknown (34 after Tschirnhausen)
+deg T2 = −μ₂ = 55,   deg T3 = −μ₃ = 145
+```
+
+The face evaluation on `(F,G)∼(p^9,p^6)` lands in `span{p^{18},p^{15},p^{12},p^9,p^6,p^0}` and does **not** contain `p^5` or a degree-40 `(25,14)` / `p^{10}q_1` leader. Those identifications need subleading jets. Linear bridge rows on the 7161-chart: **0**. Status: `OPEN[EFFECTIVE-T2-T3-BRIDGE]`.
+
+For `(16,12)`, `u_s=1`, so the bridge is **trivial**.
+
+## Controls
+
+- `(64,48)→(16,12)`: both p.208 `c_5` readings, 77 Jacobian rows + `T·κ−1`, Groebner over `GF(32003)` grevlex = `[1]`. Wrapper controls in `Q[κ,T]` pass. Order-spine unit identity holds over `Q`.
+- Automorphism `(ax+y,(a-1)x+y)`: `J≡1`, survives. Outer bands / T₂,T₃ are `NOT-APPLICABLE[degrees (1,1)]`.
+
+## Inventory and next system
+
+**PRINTED:** chart (2.1), charged 516→120, minor leaders, first FG/J prefix, T₂/T₃ *shape*.  
+**DERIVED:** D₂ 5598 + D₁ rank 176; h₃-adic implications.  
+**OPEN[EFFECTIVE-T2-T3-BRIDGE]:** π-root identification with `H` and `R` / `q_1`. Also still open: remainder of `IJ`, Moh’s unprinted 11-variable system.
+
+Next decider system: on the D₂-reduced 1002 outer coordinates (826 after D₁), continue the degree-162 Jacobian at `[x^{135} y^{27}]` plus pole rows `F_{(95,*)}/G_{(62,*)}`, with the D₁ gap matrix already ranked. Closing the T₂/T₃ jet identification is a separate nonlinear job.
+
+Drivers: `box/g9966outer-20260903/`. No new exit-price assertion, so no `charge_basis` line.
+DIVERT path=xmodel/g9966-outer-bridge-grok46-20260903.md status=CLEAN_SEALED body_bytes=19457 body_sha256=b9118232414b4dfef9c2767afc03922373d2eeff0b7341f3375c6a441b7e90f3

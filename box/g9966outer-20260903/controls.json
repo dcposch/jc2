@@ -1,0 +1,71 @@
+{
+  "automorphism": {
+    "J_identically": "1",
+    "J_is_1": true,
+    "T2_T3_bridge": "NOT-APPLICABLE[degrees (1,1); no mu2=55]",
+    "outer_D1_D2_bands": "NOT-APPLICABLE[degrees (1,1)]",
+    "pair": "F=a*x+y, G=(a-1)*x+y",
+    "row_is_A_minus_C_minus_1": true,
+    "s3_tower": "NOT-APPLICABLE[degrees (1,1)]",
+    "shared_ansatz_row": "A - C - 1",
+    "slice_A2_witness": {
+      "F": "2*x + y",
+      "G": "x + y",
+      "J": "1"
+    },
+    "survives": true,
+    "type": "EXACT-AUTOMORPHISM / SURVIVES[UNIVERSAL-GLOBAL-CHECKS]"
+  },
+  "compiler_c6_absorb_alpha1": {
+    "bridge": "TRIVIAL[u_s=1]",
+    "gb_head": [
+      "1"
+    ],
+    "gb_is_one": true,
+    "gb_len": 1,
+    "n_J_rows": 77,
+    "n_coeff_variables": 17,
+    "outer_bands_present": "the 17-coefficient p.208 chart is the order-truncated approximate-root tower; adding D1/D2 vanishings cannot enlarge it",
+    "ring": "GF(32003)[gens], grevlex",
+    "u_s": 1,
+    "variant": "absorbed_alpha1_distinct_c6",
+    "wrapper": "T*kappa-1"
+  },
+  "controls_pass": true,
+  "order_spine": {
+    "difference": "0",
+    "holds_over_Q": true,
+    "identity": "(20z-10/3)(27/10-27z/5)-1 = -2(54z^2-36z+5)",
+    "modulus": "Q[z]/(54z^2-36z+5)",
+    "terminal_unit": "20z-10/3"
+  },
+  "printed_c5": {
+    "bridge": "TRIVIAL[u_s=1]",
+    "gb_head": [
+      "1"
+    ],
+    "gb_is_one": true,
+    "gb_len": 1,
+    "n_J_rows": 77,
+    "n_coeff_variables": 17,
+    "outer_bands_present": "the 17-coefficient p.208 chart is the order-truncated approximate-root tower; adding D1/D2 vanishings cannot enlarge it",
+    "ring": "GF(32003)[gens], grevlex",
+    "u_s": 1,
+    "variant": "printed_repeated_c5",
+    "wrapper": "T*kappa-1"
+  },
+  "type": "SATURATED-EMPTY[P208-ANSATZ / GF(32003)] + SURVIVES[AUTOMORPHISM]",
+  "us1_bridge_trivial": true,
+  "wrapper_controls": {
+    "negative_is_one": true,
+    "negative_kappa_and_wrapper": [
+      "1"
+    ],
+    "positive_kappa_minus_1_and_wrapper": [
+      "kappa - 1",
+      "T - 1"
+    ],
+    "positive_not_one": true,
+    "ring": "Q[kappa, T]"
+  }
+}

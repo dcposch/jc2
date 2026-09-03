@@ -17494,3 +17494,16 @@ collisions at t = 3, 4, 5 are exact on the records (c4_subchart_check.py). LEDGE
 promotable structural lemmas (gate needed — fold into the next spine gate); the uniform
 problem is now (10.1), attacked by the SUBCHART closed-form route (lane launched) in
 parallel with the determinant route (Sol) and Fable's lane.
+
+## INTEGRATION #17 DELTA (dddd) (2026-09-03T20:56Z, DERIVED + MEASURED, producer Grok): THE OUTER THEOREM-1.2 BANDS OF THE (99,66) JOINT CHART ARE EXPLICIT LINEAR ROWS — in the invertible chart t^r(w−1)^q of K_Q = t^D Q(t⁻¹, w/t) (Theorem 1.2 is ≥, so the equality face is not a row): ambient outer space 6,600 (A₂ 1,650, A₃ 2,739, B₁ 561, B₂ 1,650); D₂ unit vanishings 3r + 4q < 3(D + bound) give 5,598 rows (thresholds 189, 285, 93, 189), leaving 1,002; D₁ raw (e, Π) slots 225 with exact Q*-Gaussian rank 176 (49 dependent, homogeneous, not an obstruction); 5,774 new independent outer pivots (the 15 first-global-band pivots lie among the D₂ rows, not double-counted); UNION WITH THE CHARGED PREFIX: δ = 2: 6,689 → 1,106 (after D₂) → 930 (after D₁); δ = 5/2 (b₀ = 0): 6,687 → 1,104 → 928 — both minor branches receive the same outer rows (they sit at the first point); THE T₂, T₃ BRIDGE: the SHAPE is PRINTED (Moh p.152, Xu §7.3 p.10): T₂ = G³ − F² + c₀G² + (a₁F + a₀)G + (b₁F + b₀) (4 unknowns after Tschirnhausen), T₃ = G⁹ − F⁶ + Σ_{i=1}^{9} α_i(F)G^{9−i} with deg α_i ≤ ⌊2i/3⌋, [F⁶]α₉ = −1 (34 unknowns); deg_y T₂ = 55, deg_y T₃ = 145; BUT the identification of T₂(σ) ∼ p⁵ and T₃(σ) ∼ R / p¹⁰q₁ with the minor leaders is NOT linear on the chart — after the monic cancellation the Tschirnhausen span on the leading pair (F,G) ∼ (p⁹, p⁶) is span{p¹⁸, p¹⁵, p¹², p⁹, p⁶, p⁰} and contains neither p⁵ nor a degree-40 (25,14) shape: the leaders are residuals of SUBLEADING F, G jets → OPEN[EFFECTIVE-T2-T3-BRIDGE] (nonlinear); linear bridge rows emitted: 0; controls: (64,48) → (16,12) with u_s = 1 (bridge trivial) [1] over GF(32003) for both c₅ readings; the automorphism (ax + y, (a−1)x + y) survives (tower NOT-APPLICABLE at degrees (1,1))
+
+`g9966-outer-bridge-grok46-20260903.md` (Grok, 20KB; box/g9966outer-20260903/; 21/21
+hashes). NEXT SYSTEM (§7): the charged continuation on the D₂-reduced outer space of
+1,002 A, B coordinates (826 after D₁): the degree-162 Jacobian at [x¹³⁵y²⁷] and the
+contiguous face, the pole rows F_(95,*)/G_(62,*) (branch-2 exponents −77/−50, branch-52
+−181/−118), and the D₁ rows (sparse binomial matrix, rank 176); an empty localised ideal
+is a valid kill of that branch inside the chart; nonempty remains a counting bound; the
+nonlinear bridge (residual of T₂(G,F), T₃(G,F) on the actual minor jets matched to p⁵ and
+R / p¹⁰q₁) is a separate job — lane launched (g9966-bridge-nonlinear-grok46). READING: the
+(99,66) relaxation has shrunk from ~6,700 free coefficients to ~930 with linear rows alone;
+the decision is now a ~930-variable object plus the nonlinear bridge.

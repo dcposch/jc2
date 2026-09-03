@@ -1,0 +1,1160 @@
+{
+  "controls": {
+    "automorphism": {
+      "J_identically": "1",
+      "J_is_1": true,
+      "T2_T3_bridge": "NOT-APPLICABLE[degrees (1,1); no mu2=55]",
+      "outer_D1_D2_bands": "NOT-APPLICABLE[degrees (1,1)]",
+      "pair": "F=a*x+y, G=(a-1)*x+y",
+      "row_is_A_minus_C_minus_1": true,
+      "s3_tower": "NOT-APPLICABLE[degrees (1,1)]",
+      "shared_ansatz_row": "A - C - 1",
+      "slice_A2_witness": {
+        "F": "2*x + y",
+        "G": "x + y",
+        "J": "1"
+      },
+      "survives": true,
+      "type": "EXACT-AUTOMORPHISM / SURVIVES[UNIVERSAL-GLOBAL-CHECKS]"
+    },
+    "compiler_c6_absorb_alpha1": {
+      "bridge": "TRIVIAL[u_s=1]",
+      "gb_head": [
+        "1"
+      ],
+      "gb_is_one": true,
+      "gb_len": 1,
+      "n_J_rows": 77,
+      "n_coeff_variables": 17,
+      "outer_bands_present": "the 17-coefficient p.208 chart is the order-truncated approximate-root tower; adding D1/D2 vanishings cannot enlarge it",
+      "ring": "GF(32003)[gens], grevlex",
+      "u_s": 1,
+      "variant": "absorbed_alpha1_distinct_c6",
+      "wrapper": "T*kappa-1"
+    },
+    "controls_pass": true,
+    "order_spine": {
+      "difference": "0",
+      "holds_over_Q": true,
+      "identity": "(20z-10/3)(27/10-27z/5)-1 = -2(54z^2-36z+5)",
+      "modulus": "Q[z]/(54z^2-36z+5)",
+      "terminal_unit": "20z-10/3"
+    },
+    "printed_c5": {
+      "bridge": "TRIVIAL[u_s=1]",
+      "gb_head": [
+        "1"
+      ],
+      "gb_is_one": true,
+      "gb_len": 1,
+      "n_J_rows": 77,
+      "n_coeff_variables": 17,
+      "outer_bands_present": "the 17-coefficient p.208 chart is the order-truncated approximate-root tower; adding D1/D2 vanishings cannot enlarge it",
+      "ring": "GF(32003)[gens], grevlex",
+      "u_s": 1,
+      "variant": "printed_repeated_c5",
+      "wrapper": "T*kappa-1"
+    },
+    "type": "SATURATED-EMPTY[P208-ANSATZ / GF(32003)] + SURVIVES[AUTOMORPHISM]",
+    "us1_bridge_trivial": true,
+    "wrapper_controls": {
+      "negative_is_one": true,
+      "negative_kappa_and_wrapper": [
+        "1"
+      ],
+      "positive_kappa_minus_1_and_wrapper": [
+        "kappa - 1",
+        "T - 1"
+      ],
+      "positive_not_one": true,
+      "ring": "Q[kappa, T]"
+    }
+  },
+  "elapsed_seconds": {
+    "controls": 0.0001,
+    "order_bands": 0.0003,
+    "t2t3_bridge": 0.0001,
+    "total": 0.0468
+  },
+  "frozen_input_verification": {
+    "all_hashes_match": true,
+    "charged_inputs": 21,
+    "files": [
+      {
+        "basename": "g9966-design-gate-grok46-20260903.md",
+        "sha256": "0cbeaf0735b92f18e3a7c5050775b99c3739b658584ce0d02965a24db2c1273b"
+      },
+      {
+        "basename": "g9966-global-design-sol56-20260903.md",
+        "sha256": "a81ff0263cf379a297b8d1812ebfa26eb95f7e58d91ef4edc62a3a68edf2d782"
+      },
+      {
+        "basename": "g9966-source-review-opus5-20260903.md",
+        "sha256": "47ca21fa9a633a4d2ffeff8380d2c33abf36076e96f8a1d078399576c500825a"
+      },
+      {
+        "basename": "xu9966-read-gpt55-20260903.md",
+        "sha256": "aabc19a04839c1337fefea5ecd369f54654c4d0359f4ddd341ed1b73df4d4773"
+      },
+      {
+        "basename": "sibling-coefficients-sol56-20260903.md",
+        "sha256": "a00d258b0b6469a64e433747692c01bb6e113de33b95a430e4917485e782b36a"
+      },
+      {
+        "basename": "moh1983_jram340_configurations_of_roots.pdf",
+        "sha256": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51"
+      },
+      {
+        "basename": "xu2016_intersection_numbers_split_minor_roots_arxiv1604.07683v4.pdf",
+        "sha256": "00fecb1614c98b6e7496097ab2d6b7496c3027feca66a8c30642aa7f5812de21"
+      },
+      {
+        "basename": "moh_skeleton_full.py",
+        "sha256": "d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2"
+      },
+      {
+        "basename": "FALLACY-v2.md",
+        "sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5"
+      },
+      {
+        "basename": "minor_row_count.py",
+        "sha256": "4e88918b8e08f3cb63da746b1155e9fbce5c045d61b4a5fff87970c7869250b7"
+      },
+      {
+        "basename": "major_h2-results.json",
+        "sha256": "6a4826431f03210cf4b9c13001108ba741a098aca7ddba8e53551a5fa5c7ec44"
+      },
+      {
+        "basename": "joint_probe.py",
+        "sha256": "6acd8b467369aa33a07482f341c86a48686db55950666ad70455d344301dc021"
+      },
+      {
+        "basename": "minor_row_count.json",
+        "sha256": "a62385d3432555946199dba6f6189dc74227e351e7aa0da3bc32c5b690837fe0"
+      },
+      {
+        "basename": "major_h2_probe.py",
+        "sha256": "8463c689fd5251219f36e7239ab13f7e3ebd053972809e0f3720295beac07780"
+      },
+      {
+        "basename": "joint_probe-results.json",
+        "sha256": "ed8cabc25df5dc8250f504df63444591d618380af0cf68f5378dd6ce2e97f587"
+      },
+      {
+        "basename": "xu_joint_extension.py",
+        "sha256": "007d205855af0e6b6c6c361bf71dd57933a5f391ac01edf7ae3eef143638f063"
+      },
+      {
+        "basename": "xu_joint_extension.json",
+        "sha256": "34d0bcbe8e0dbc98ddbdf796175d7b8443553619cec98a52965c386c0c01eee0"
+      },
+      {
+        "basename": "first_global_band.py",
+        "sha256": "9c123aaf14c8f52104f7b1ef0f0dac50fe5ae0ed294e6bf9f8a5037c175c68af"
+      },
+      {
+        "basename": "major_tower_structure.py",
+        "sha256": "555af27d631772f39e6f60f7b537a952190d21fd6f05ae94bbae84e1add7dea8"
+      },
+      {
+        "basename": "major_tower_structure.json",
+        "sha256": "77d791b33e5bfd2e2aecaff67faf72acb1c3b2560b1ff86157a22a121956989f"
+      },
+      {
+        "basename": "results.json",
+        "sha256": "f4a6f39c81e01f185bc0e6aed74e844639d21ffce3d219b6a539ee110553ae66"
+      }
+    ],
+    "lane_inputs_dir": "/tmp/jc2-lane.7FqcFq/inputs",
+    "manifest_ok_count": 21,
+    "receipt": "/home/ubuntu/jc2/xmodel/g9966-outer-bridge-grok46-20260903.run.v2"
+  },
+  "new_dimensions": {
+    "D1_new_pivots": 176,
+    "D2_new_pivots_beyond_prefix": 5583,
+    "after_D2_D1_delta2": 930,
+    "after_D2_D1_delta52_b0": 928,
+    "after_D2_delta2": 1106,
+    "after_D2_delta52_b0": 1104,
+    "charged_prefix_delta2": 6689,
+    "charged_prefix_delta52_b0": 6687,
+    "note": "the 15 first-global-band outer pivots sit inside the D2 unit rows, so they are not subtracted twice; the 10 Jacobian prefix rows become 0=0 after those unit substitutions"
+  },
+  "next_system": "On the D2-reduced outer space (1002 remaining A,B coordinates), impose the D1 gap rows (already ranked here) and continue the degree-162 Jacobian at [x^135 y^27] together with pole rows F_(95,*)/G_(62,*).  The T2/T3 jet identification remains OPEN[EFFECTIVE-T2-T3-BRIDGE] and is not a linear add-on of this prefix.",
+  "order_bands": {
+    "D1_substitution": "t=e^9, w=1+e^12+Pi*e^13",
+    "D2_substitution": "t=s^3, w=1+pi*s^4, weight 3r+4q",
+    "blocks": {
+      "A2": {
+        "D": 65,
+        "D1_Qstar_rank": 44,
+        "D1_dependent_slots": 7,
+        "D1_e_range": [
+          567,
+          582
+        ],
+        "D1_e_threshold": 583,
+        "D1_gap_support": 66,
+        "D1_pivot_columns_rq": [
+          [
+            63,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            62,
+            1
+          ],
+          [
+            63,
+            1
+          ],
+          [
+            61,
+            2
+          ],
+          [
+            62,
+            2
+          ],
+          [
+            59,
+            3
+          ],
+          [
+            60,
+            3
+          ],
+          [
+            58,
+            4
+          ],
+          [
+            59,
+            4
+          ],
+          [
+            57,
+            5
+          ],
+          [
+            55,
+            6
+          ]
+        ],
+        "D1_raw_slots": 51,
+        "D1_rows_by_e": {
+          "567": 1,
+          "568": 1,
+          "569": 1,
+          "570": 2,
+          "571": 2,
+          "572": 2,
+          "573": 3,
+          "574": 3,
+          "575": 3,
+          "576": 4,
+          "577": 4,
+          "578": 4,
+          "579": 5,
+          "580": 5,
+          "581": 5,
+          "582": 6
+        },
+        "D2_remaining": 264,
+        "D2_s_threshold": 189,
+        "D2_unit_rows": 1386,
+        "ambient": 1650,
+        "bound_t_D1": "-2/9",
+        "bound_t_D2": "-2",
+        "name": "A2",
+        "remain_r_min": 21,
+        "sample_D2_remain": [
+          [
+            63,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            65,
+            0
+          ],
+          [
+            62,
+            1
+          ],
+          [
+            63,
+            1
+          ]
+        ],
+        "sample_D2_vanish": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "thm12_j": 2,
+        "ycap": 33
+      },
+      "A3": {
+        "D": 98,
+        "D1_Qstar_rank": 73,
+        "D1_dependent_slots": 35,
+        "D1_e_range": [
+          855,
+          878
+        ],
+        "D1_e_threshold": 879,
+        "D1_gap_support": 88,
+        "D1_pivot_columns_rq": [
+          [
+            95,
+            0
+          ],
+          [
+            96,
+            0
+          ],
+          [
+            97,
+            0
+          ],
+          [
+            94,
+            1
+          ],
+          [
+            95,
+            1
+          ],
+          [
+            96,
+            1
+          ],
+          [
+            93,
+            2
+          ],
+          [
+            94,
+            2
+          ],
+          [
+            91,
+            3
+          ],
+          [
+            92,
+            3
+          ],
+          [
+            93,
+            3
+          ],
+          [
+            90,
+            4
+          ]
+        ],
+        "D1_raw_slots": 108,
+        "D1_rows_by_e": {
+          "855": 1,
+          "856": 1,
+          "857": 1,
+          "858": 2,
+          "859": 2,
+          "860": 2,
+          "861": 3,
+          "862": 3,
+          "863": 3,
+          "864": 4,
+          "865": 4,
+          "866": 4,
+          "867": 5,
+          "868": 5,
+          "869": 5,
+          "870": 6,
+          "871": 6,
+          "872": 6,
+          "873": 7,
+          "874": 7,
+          "875": 7,
+          "876": 8,
+          "877": 8,
+          "878": 8
+        },
+        "D2_remaining": 297,
+        "D2_s_threshold": 285,
+        "D2_unit_rows": 2442,
+        "ambient": 2739,
+        "bound_t_D1": "-1/3",
+        "bound_t_D2": "-3",
+        "name": "A3",
+        "remain_r_min": 53,
+        "sample_D2_remain": [
+          [
+            95,
+            0
+          ],
+          [
+            96,
+            0
+          ],
+          [
+            97,
+            0
+          ],
+          [
+            98,
+            0
+          ],
+          [
+            94,
+            1
+          ]
+        ],
+        "sample_D2_vanish": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "thm12_j": 3,
+        "ycap": 33
+      },
+      "B1": {
+        "D": 32,
+        "D1_Qstar_rank": 15,
+        "D1_dependent_slots": 0,
+        "D1_e_range": [
+          279,
+          286
+        ],
+        "D1_e_threshold": 287,
+        "D1_gap_support": 24,
+        "D1_pivot_columns_rq": [
+          [
+            31,
+            0
+          ],
+          [
+            30,
+            1
+          ],
+          [
+            29,
+            2
+          ],
+          [
+            27,
+            3
+          ],
+          [
+            26,
+            4
+          ],
+          [
+            25,
+            5
+          ],
+          [
+            23,
+            6
+          ],
+          [
+            22,
+            7
+          ],
+          [
+            19,
+            9
+          ],
+          [
+            18,
+            10
+          ],
+          [
+            15,
+            12
+          ],
+          [
+            14,
+            13
+          ]
+        ],
+        "D1_raw_slots": 15,
+        "D1_rows_by_e": {
+          "279": 1,
+          "280": 1,
+          "281": 1,
+          "282": 2,
+          "283": 2,
+          "284": 2,
+          "285": 3,
+          "286": 3
+        },
+        "D2_remaining": 177,
+        "D2_s_threshold": 93,
+        "D2_unit_rows": 384,
+        "ambient": 561,
+        "bound_t_D1": "-1/9",
+        "bound_t_D2": "-1",
+        "name": "B1",
+        "remain_r_min": 0,
+        "sample_D2_remain": [
+          [
+            31,
+            0
+          ],
+          [
+            32,
+            0
+          ],
+          [
+            30,
+            1
+          ],
+          [
+            31,
+            1
+          ],
+          [
+            29,
+            2
+          ]
+        ],
+        "sample_D2_vanish": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "thm12_j": 1,
+        "ycap": 33
+      },
+      "B2": {
+        "D": 65,
+        "D1_Qstar_rank": 44,
+        "D1_dependent_slots": 7,
+        "D1_e_range": [
+          567,
+          582
+        ],
+        "D1_e_threshold": 583,
+        "D1_gap_support": 66,
+        "D1_pivot_columns_rq": [
+          [
+            63,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            62,
+            1
+          ],
+          [
+            63,
+            1
+          ],
+          [
+            61,
+            2
+          ],
+          [
+            62,
+            2
+          ],
+          [
+            59,
+            3
+          ],
+          [
+            60,
+            3
+          ],
+          [
+            58,
+            4
+          ],
+          [
+            59,
+            4
+          ],
+          [
+            57,
+            5
+          ],
+          [
+            55,
+            6
+          ]
+        ],
+        "D1_raw_slots": 51,
+        "D1_rows_by_e": {
+          "567": 1,
+          "568": 1,
+          "569": 1,
+          "570": 2,
+          "571": 2,
+          "572": 2,
+          "573": 3,
+          "574": 3,
+          "575": 3,
+          "576": 4,
+          "577": 4,
+          "578": 4,
+          "579": 5,
+          "580": 5,
+          "581": 5,
+          "582": 6
+        },
+        "D2_remaining": 264,
+        "D2_s_threshold": 189,
+        "D2_unit_rows": 1386,
+        "ambient": 1650,
+        "bound_t_D1": "-2/9",
+        "bound_t_D2": "-2",
+        "name": "B2",
+        "remain_r_min": 21,
+        "sample_D2_remain": [
+          [
+            63,
+            0
+          ],
+          [
+            64,
+            0
+          ],
+          [
+            65,
+            0
+          ],
+          [
+            62,
+            1
+          ],
+          [
+            63,
+            1
+          ]
+        ],
+        "sample_D2_vanish": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "thm12_j": 2,
+        "ycap": 33
+      }
+    },
+    "branches": {
+      "delta2": "outer D2/D1 rows are at the first (major) point; identical for both minor branches",
+      "delta52": "same outer rows"
+    },
+    "chart": "F=h2^3+A2*h2+A3, G=h2^2+B1*h2+B2; S(D,33) blocks",
+    "controls": {
+      "D1_homogeneous_so_dependencies_are_not_inconsistencies": true,
+      "D1_rank_equals_independent_slot_count": true,
+      "D2_rows_are_unit_coordinate_vanishings": true,
+      "S_dimension_identity": true,
+      "h2_D1_replay_matches_charged_7": true,
+      "prefix_15_subset_of_D2": true,
+      "zero_point_kills_every_homogeneous_row": true
+    },
+    "face_policy": "Theorem 1.2 is >= ; equality face is not a row",
+    "field": "Q",
+    "h2_method_control": {
+      "Qstar_rank": 7,
+      "matches_charged_7": true,
+      "raw_slots_below_296_from_289": 7,
+      "rows_by_e": {
+        "291": 1,
+        "292": 1,
+        "293": 1,
+        "294": 2,
+        "295": 2
+      },
+      "strict_support": 169
+    },
+    "h3_adic": {
+      "F_j": {
+        "0": "1",
+        "1": "0",
+        "2": "3*C2",
+        "3": "3*C3",
+        "4": "3*C2^2",
+        "5": "6*C2*C3",
+        "6": "3*C3^2 + C2^3 + A2",
+        "7": "3*C2^2*C3",
+        "8": "3*C2*C3^2 + A2*C2",
+        "9": "C3^3 + A2*C3 + A3"
+      },
+      "G_j": {
+        "0": "1",
+        "1": "0",
+        "2": "2*C2",
+        "3": "2*C3 + B1",
+        "4": "C2^2",
+        "5": "2*C2*C3 + B1*C2",
+        "6": "C3^2 + B1*C3 + B2"
+      },
+      "identities": [
+        "F_1=0",
+        "G_1=0"
+      ],
+      "new_outer_pivots": 0,
+      "reason": "ord C2>=-2/3 and ord C3>=-1 are already in the 516-row h2 tower; ord A2>=-2, ord A3>=-3, ord B1>=-1, ord B2>=-2 are the D2-h2 outer unit rows of this module.  Each F_j, G_j is a polynomial in those blocks whose Theorem-1.2 lower bound follows by addition of lower bounds.  Not independent coordinates.",
+      "type": "DERIVED[h3-adic D2 bounds after chart expansion]"
+    },
+    "joint_dimensions": {
+      "D1_new_pivots": 176,
+      "D2_new_pivots_beyond_prefix": 5583,
+      "after_D2_D1_delta2": 930,
+      "after_D2_D1_delta52_b0": 928,
+      "after_D2_delta2": 1106,
+      "after_D2_delta52_b0": 1104,
+      "charged_prefix_delta2": 6689,
+      "charged_prefix_delta52_b0": 6687,
+      "note": "the 15 first-global-band outer pivots sit inside the D2 unit rows, so they are not subtracted twice; the 10 Jacobian prefix rows become 0=0 after those unit substitutions"
+    },
+    "prefix_overlap": {
+      "all_contained_in_D2": true,
+      "items": [
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_98_0",
+          "q": 0,
+          "r": 0,
+          "weight_3r4q": 0
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_97_0",
+          "q": 0,
+          "r": 1,
+          "weight_3r4q": 3
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_96_0",
+          "q": 0,
+          "r": 2,
+          "weight_3r4q": 6
+        },
+        {
+          "D2_threshold": 189,
+          "is_D2_unit_row": true,
+          "name": "B2_65_0",
+          "q": 0,
+          "r": 0,
+          "weight_3r4q": 0
+        },
+        {
+          "D2_threshold": 189,
+          "is_D2_unit_row": true,
+          "name": "B2_64_0",
+          "q": 0,
+          "r": 1,
+          "weight_3r4q": 3
+        },
+        {
+          "D2_threshold": 189,
+          "is_D2_unit_row": true,
+          "name": "B2_63_0",
+          "q": 0,
+          "r": 2,
+          "weight_3r4q": 6
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_97_1",
+          "q": 1,
+          "r": 0,
+          "weight_3r4q": 4
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_96_2",
+          "q": 2,
+          "r": 0,
+          "weight_3r4q": 8
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_95_3",
+          "q": 3,
+          "r": 0,
+          "weight_3r4q": 12
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_94_4",
+          "q": 4,
+          "r": 0,
+          "weight_3r4q": 16
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_93_5",
+          "q": 5,
+          "r": 0,
+          "weight_3r4q": 20
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_92_6",
+          "q": 6,
+          "r": 0,
+          "weight_3r4q": 24
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_91_7",
+          "q": 7,
+          "r": 0,
+          "weight_3r4q": 28
+        },
+        {
+          "D2_threshold": 285,
+          "is_D2_unit_row": true,
+          "name": "A3_90_8",
+          "q": 8,
+          "r": 0,
+          "weight_3r4q": 32
+        },
+        {
+          "D2_threshold": 189,
+          "is_D2_unit_row": true,
+          "name": "A2_65_0",
+          "q": 0,
+          "r": 0,
+          "weight_3r4q": 0
+        }
+      ],
+      "n_contained_in_D2": 15,
+      "n_prefix_outer_pivots": 15
+    },
+    "totals": {
+      "D1_Qstar_rank": 176,
+      "D1_dependent_slots": 49,
+      "D1_raw_slots": 225,
+      "D2_remaining": 1002,
+      "D2_unit_rows": 5598,
+      "new_pivots_D2_plus_D1": 5774,
+      "outer_ambient": 6600
+    },
+    "type": "EXACT-OUTER-THM12-D2-D1 / ADD-ON"
+  },
+  "row_inventory_summary": {
+    "DERIVED": [
+      "D2 unit vanishings A2+A3+B1+B2 = 5598",
+      "D1 gap Q* rank = 176",
+      "h3-adic F_j,G_j D2 bounds after chart expansion (0 new outer pivots)",
+      "T2 = G^3 - F^2 + 5 unknown k-coefficients (Moh-literal)",
+      "T3 = G^9 - F^6 + 35 unknown k-coefficients (Moh-literal)"
+    ],
+    "OPEN": [
+      "OPEN[EFFECTIVE-T2-T3-BRIDGE]: identification of T2(sigma), T3(sigma) with p^5 and R / p^{10} q1 from subleading F,G jets",
+      "unranked remainder of IJ",
+      "Moh unprinted 11-variable minor elimination"
+    ],
+    "PRINTED": [
+      "chart (2.1) 7161 coordinates",
+      "major h3-inside-h2 516 -> 120 (charged, not recomputed)",
+      "minor leaders (2.4)(2.6) and reduced T3 ODE (charged)",
+      "Jacobian IJ, first 10 deg-162 rows rank 15 (charged)",
+      "Moh Thm 1.2 (p.149), T_r^psi (p.152), Xu \u00a77.3 (p.10)"
+    ]
+  },
+  "t2t3_bridge": {
+    "T2": {
+      "chart": "T2 = G^3 + alpha1(F) G^2 + alpha2(F) G + alpha3(F)",
+      "display": "T2 = G^3 - F^2 + c0 G^2 + (a1 F + a0) G + (b1 F + b0)",
+      "exponents": {
+        "a": 3,
+        "b": 2,
+        "d2": 33,
+        "m": 66,
+        "n": 99,
+        "neg_mu2": 55
+      },
+      "formula_moh_p152": "T2^psi(f,g) = f^{n/d2} + alpha1(g) f^2 + alpha2(g) f + alpha3(g)",
+      "monic_leading_identity": "[F^2] in alpha3 = -1, i.e. T2 \u2261 G^3 - F^2 + lower",
+      "naive_y_degree_before_cancellation": 198,
+      "unknown_after_Tschirnhausen_alpha1_zero": 4,
+      "unknown_after_monic_G3_minus_F2": 5,
+      "unknown_coeffs_Moh_literal_including_leading": 6,
+      "y_degree_target": 55
+    },
+    "T3": {
+      "alpha_degree_bounds": [
+        {
+          "deg_g_bound": 0,
+          "i": 1,
+          "n_coeff": 1
+        },
+        {
+          "deg_g_bound": 1,
+          "i": 2,
+          "n_coeff": 2
+        },
+        {
+          "deg_g_bound": 2,
+          "i": 3,
+          "n_coeff": 3
+        },
+        {
+          "deg_g_bound": 2,
+          "i": 4,
+          "n_coeff": 3
+        },
+        {
+          "deg_g_bound": 3,
+          "i": 5,
+          "n_coeff": 4
+        },
+        {
+          "deg_g_bound": 4,
+          "i": 6,
+          "n_coeff": 5
+        },
+        {
+          "deg_g_bound": 4,
+          "i": 7,
+          "n_coeff": 5
+        },
+        {
+          "deg_g_bound": 5,
+          "i": 8,
+          "n_coeff": 6
+        },
+        {
+          "deg_g_bound": 6,
+          "i": 9,
+          "n_coeff": 7
+        }
+      ],
+      "chart": "T3 = G^9 + sum_{i=1}^{9} alpha_i(F) G^{9-i}",
+      "display": "T3 = G^9 - F^6 + sum_{k=0}^{8} p_k(F) G^k   (p_k = alpha_{9-k})",
+      "exponents": {
+        "d3": 11,
+        "m": 66,
+        "n": 99,
+        "n_over_d3": 9,
+        "neg_mu3": 145
+      },
+      "formula_moh_p152": "T3^psi(f,g) = f^{n/d3} + sum_{i=1}^{9} alpha_i(g) f^{9-i}",
+      "monic_leading_identity": "[F^6] in alpha9 = -1, i.e. T3 \u2261 G^9 - F^6 + lower",
+      "naive_y_degree_before_cancellation": 594,
+      "principal_minor_multiplicity_Xu_73": 40,
+      "unknown_after_Tschirnhausen_alpha1_zero": 34,
+      "unknown_after_monic_G9_minus_F6": 35,
+      "unknown_coeffs_Moh_literal_including_leading": 36,
+      "y_degree_target": 145
+    },
+    "branch_targets": {
+      "delta2": {
+        "T2_leader": "p^5",
+        "T3_leader": "R = z^25 (z+3 rho)^14 (z-2 rho)",
+        "face_ODE": "2 p R' - 25 p' R = 5 p^{14}   ('=d/dz)",
+        "p": "z^2 (z+3 rho)",
+        "status": "OPEN[EFFECTIVE-T2-T3-BRIDGE]"
+      },
+      "delta52": {
+        "T2_leader": "p^5",
+        "T3_leader": "q = p^{10} q1, q1' = 10 p^3 (Xu normalisation), deg q1=10",
+        "p": "pi (pi^2 - c)",
+        "reduced_ODE": "D_s(Q,h) + 2 s^2 h^4 = 0  (charged; not T3 in K[F,G])",
+        "status": "OPEN[EFFECTIVE-T2-T3-BRIDGE]"
+      },
+      "us_eq_1_triviality": {
+        "applies_to": "(64,48) parent and reduced (16,12) Appendix II",
+        "statement": "If u_s=1 the principal packet is a single Puiseux branch. Xu Prop 7.3 / Moh Prop 4.4 force T_i(sigma) to be powers of one linear polynomial.  There is no split leader R or q1 to identify, and no free T3 ODE.  The bridge is trivial.",
+        "u_s_9966": 3
+      }
+    },
+    "controls": {
+      "d_chain": true,
+      "face_p5_not_in_Tschirnhausen_span": true,
+      "mu2_55": true,
+      "mu3_145": true
+    },
+    "face_obstruction": {
+      "T2_face_span_p_powers": [
+        18,
+        15,
+        12,
+        9,
+        6,
+        0
+      ],
+      "T2_target_in_face_span": false,
+      "T2_target_p_power": 5,
+      "T3_delta2_deg_R": 40,
+      "T3_face_span_p_powers_homogeneous": [
+        54,
+        48,
+        42,
+        36,
+        30,
+        24,
+        18,
+        12,
+        6,
+        0
+      ],
+      "conclusion": "After the monic G^3-F^2 (resp. G^9-F^6) cancellation, the remaining Tschirnhausen span evaluated on the minor leading forms (p^9, p^6) does not contain p^5 nor a degree-40 polynomial with the (25,14) or p^{10} q1 shape.  Those leaders are residual, from subleading F,G jets.  Typed OPEN[EFFECTIVE-T2-T3-BRIDGE] as complete linear rows on the 7161-chart.  The polynomial *shape* of T2, T3 is PRINTED.",
+      "minor_leaders_Xu_s8": {
+        "F_Moh_g": "p^9",
+        "G_Moh_f": "p^6",
+        "T2": "p^5",
+        "T3_delta2": "R = z^25 (z+3 rho)^14 (z-2 rho), deg 40",
+        "T3_delta52": "q = p^{10} q1, deg q1 = 10, deg q = 40"
+      }
+    },
+    "label_reversal": {
+      "T0": "Moh g = chart F, deg 99",
+      "T1": "Moh f = chart G, deg 66",
+      "T2_in": "K[G, F] = K[f, g]",
+      "T3_in": "K[G, F]"
+    },
+    "mu_sequence": {
+      "M": [
+        -66,
+        77,
+        97
+      ],
+      "d": [
+        99,
+        33,
+        11,
+        1
+      ],
+      "lambda": [
+        -6534,
+        -1815,
+        -1595
+      ],
+      "mu": [
+        -66,
+        -55,
+        -145
+      ],
+      "n_over_d_r": [
+        1,
+        3,
+        9,
+        99
+      ],
+      "neg_mu": [
+        66,
+        55,
+        145
+      ],
+      "q": [
+        -66,
+        143,
+        20
+      ]
+    },
+    "rows_emitted": {
+      "linear_rows_on_7161_chart_from_bridge": 0,
+      "pi_root_identification_with_H_and_R": "OPEN[EFFECTIVE-T2-T3-BRIDGE]",
+      "shape_and_leading_monic": "PRINTED (2 leading identities G^3=F^2, G^9=F^6 on tops)",
+      "unknown_T2_coeffs": 5,
+      "unknown_T3_coeffs": 35
+    },
+    "source": {
+      "moh_p150_mu": "printed p.150 auxiliary mu from (q,d,lambda)",
+      "moh_p152_Tpsi": "printed p.152 T_r^psi = truncation of F^{1/d_r}",
+      "xu_s73": "printed p.10 T_i in K[f,g], T0=g, T1=f, deg=-mu_i"
+    },
+    "type": "DERIVED[T2-T3-SHAPE] / OPEN[EFFECTIVE-T2-T3-BRIDGE-ROWS]"
+  },
+  "type": "COUNTING-BOUND[OUTER-THM12-D2-D1 + PREFIX] / OPEN[EFFECTIVE-T2-T3-BRIDGE] / SATURATED-EMPTY[P208 / GF(32003)] / SURVIVES[AUTOMORPHISM]"
+}
