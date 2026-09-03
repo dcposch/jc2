@@ -1,0 +1,20 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then read the charged sources so the nested-pack DP and knapsack repairs match the review exactly.Hashes match. Next I’ll read the charged reports, knapsack driver, and existing box artifacts so the DP and repairs stay fail-closed.Charged reports are in. I’ll read the enumerator, census rebase, and a sealed report skeleton next so the DP and write-up match house format.I’ll pull the census rebase specials, knapsack log, and a recent sealed report so the DP controls and write-up stay consistent.I’ll inspect s>3 group structure and the D=105 listing so the nested DP state and specials match the charged numbers.I have the model. Next I’ll add the repaired knapsack driver and a nested-pack prototype, then probe s>3 groups before the full census.Bounds are small (Q ≤ 38, Umax ≤ 45). I’ll write the nested DP driver next and keep knapsack_v2 as the repaired charged path.Spot-checks match the charged Z01 numbers. Running the full nested census and the repaired knapsack controls next.Census totals match; D=88 failed only because it wasn’t in the specials collector. I’ll collect it and rerun.Z01 is 493 in `[6,16]` while nested is 470, so they are not nested as sets. I’ll count the two-way delta before writing the report.Numbers are in. I’ll write the sealed report next, including that Z01 is not a nested lower bound.Nested packing is now an exact parent-indexed DP on `48 ≤ D ≤ 120`. The flat UNB count 575 in `[6,16]` drops to **470**. Charged `knapsack.py` was left untouched; R1/R2 live in `knapsack_v2.py` (controls **336/0**).
+
+**Nested totals** (1 189 groups; cap 0; 0.8 s):
+
+| window | UNB (relaxation) | nested (exact packing) | s=3 (of 274) | s>3 (of 915) |
+|---|---|---|---|---|
+| `N ≥ 6` | 681 | **587** | 173 | 414 |
+| `[6,16]` | 575 | **470** | **138** | 332 |
+
+Fail-closed: s=3 nested = charged Z01 (173/138); Moh `{9},{},{10},{9},{8},{16}`; D=105 trio each `N={9}`; D=88 → `{18}`; D=117 4→3; nested ⊆ UNB (105 extra `[6,16]` kills: 10/80/15 at s=3/4/5). Empty degrees unchanged: `{48}` at `N≥6`, `{48,88}` in `[6,16]`. No `D>100` empties.
+
+Specials in `[6,16]`: D=108 70→**61** (10+51); D=112 22→**19** (9+10); D=120 222→**174** (31+143).
+
+Global Z01 493 is **not** a nested lower bound: 24 Z01-only (flat budget under-kills `Q_j`) and 1 nested-only (global one-`π` over-kills). Witness: `D=72 m=48 M=[32,68,70] V_s=3` — two NZ copies give UNB/Z01 `N=6` but two `D_2` of `V_3=5` do not pack into `Q_3=6`.
+
+OPEN[NESTED-PACK] is filled as a numerical filter on `D≤120`. Geometric realisation remains OPEN[STAR-REALISABILITY] / OPEN[BRANCH-ORBITS].
+
+Report: `xmodel/nested-pack-dp-grok46-20260903.md` (sealed, 17 546 body bytes).
+DIVERT path=xmodel/nested-pack-dp-grok46-20260903.md status=CLEAN_SEALED body_bytes=17546 body_sha256=999f42474b6b210394d6d49de94f617a91339044e25ec9ca34e143863b878b6e

@@ -1,0 +1,812 @@
+branch-orbits-v2 knapsack_v2 -- Moh (1)-(13) orbit-aware (R1/R2)
+charged knapsack.py sha256 aaea3c345b1d53f561798f6a3e4352722f56c50a762f141dfe5e59cf35b1f276
+enumerator /tmp/jc2-lane.HtQdiv/inputs/moh_skeleton_full.py
+==============================================================================
+
+-- CONTROL M: Moh six rows, orbit size vs (10)/(11) and A_2 --
+   row                        s   A2   V2    u (10)   (11)    |O|        w N orb [6,16]
+  [ok]   windows+full (64,48)
+  [ok]   |O|={A2} for (10)-only (64,48)
+   (64,48)                    3    4    3   12 True False    [4]   [12]      [9]  q=3/4  HIT
+  [ok]   (12) xor (13) at A1>1 (64,48)
+  [ok]   A1 | (n*+m*)V2-1 (64,48)
+  [ok]   windows+full (84,56) M2=64,V2=2
+  [ok]   |O|={A2} for (10)-only (84,56) M2=64,V2=2
+   (84,56) M2=64,V2=2         3    7    2   21 True False    [7]   [14]       []  q=2/7  miss
+  [ok]   (12) xor (13) at A1>1 (84,56) M2=64,V2=2
+  [ok]   A1 | (n*+m*)V2-1 (84,56) M2=64,V2=2
+  [ok]   windows+full (84,56) M2=72,V2=5
+   (84,56) M2=72,V2=5         3    4    5   21 True True [1, 4] [5, 20]     [10]  q=1/2  HIT
+  [ok]   (12) xor (13) at A1>1 (84,56) M2=72,V2=5
+  [ok]   A1 | (n*+m*)V2-1 (84,56) M2=72,V2=5
+  [ok]   windows+full (75,50) V2=3
+  [ok]   |O|={A2} for (10)-only (75,50) V2=3
+   (75,50) V2=3               3    5    3   20 True False    [5]   [15]      [9]  q=3/5  HIT
+  [ok]   (12) xor (13) at A1>1 (75,50) V2=3
+  [ok]   A1 | (n*+m*)V2-1 (75,50) V2=3
+  [ok]   windows+full (75,50) V2=2
+  [ok]   |O|={A2} for (10)-only (75,50) V2=2
+   (75,50) V2=2               3    5    2   20 True False    [5]   [10]      [8]  q=2/5  HIT
+  [ok]   (12) xor (13) at A1>1 (75,50) V2=2
+  [ok]   A1 | (n*+m*)V2-1 (75,50) V2=2
+  [ok]   windows+full (99,66)
+  [ok]   |O|={A2} for (10)-only (99,66)
+   (99,66)                    3    3    8   24 True False    [3]   [24]     [16]  q=2/3  HIT
+  [ok]   (12) xor (13) at A1>1 (99,66)
+  [ok]   A1 | (n*+m*)V2-1 (99,66)
+
+-- CONTROL Q: s=3 => deg p at D_2 = u  (algebra + census) --
+  [ok]   Q=u n=48
+  [ok]   Q=u n=54
+  [ok]   Q=u n=54
+  [ok]   Q=u n=60
+  [ok]   Q=u n=60
+  [ok]   Q=u n=60
+  [ok]   Q=u n=60
+  [ok]   Q=u n=60
+  [ok]   Q=u n=60
+  [ok]   Q=u n=60
+  [ok]   Q=u n=63
+  [ok]   Q=u n=63
+  [ok]   Q=u n=64
+  [ok]   Q=u n=64
+  [ok]   Q=u n=64
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=72
+  [ok]   Q=u n=75
+  [ok]   Q=u n=75
+  [ok]   Q=u n=75
+  [ok]   Q=u n=75
+  [ok]   Q=u n=75
+  [ok]   Q=u n=75
+  [ok]   Q=u n=75
+  [ok]   Q=u n=75
+  [ok]   Q=u n=75
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=80
+  [ok]   Q=u n=81
+  [ok]   Q=u n=81
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=84
+  [ok]   Q=u n=88
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=90
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=96
+  [ok]   Q=u n=99
+  [ok]   Q=u n=99
+  [ok]   Q=u n=99
+  [ok]   Q=u n=99
+  [ok]   Q=u n=99
+  [ok]   Q=u n=99
+  [ok]   Q=u n=99
+  [ok]   Q=u n=99
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=100
+  [ok]   Q=u n=102
+  [ok]   Q=u n=102
+  [ok]   Q=u n=102
+  [ok]   Q=u n=104
+  [ok]   Q=u n=104
+  [ok]   Q=u n=104
+  [ok]   Q=u n=104
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=105
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=108
+  [ok]   Q=u n=110
+  [ok]   Q=u n=110
+  [ok]   Q=u n=110
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=112
+  [ok]   Q=u n=114
+  [ok]   Q=u n=114
+  [ok]   Q=u n=114
+  [ok]   Q=u n=114
+  [ok]   Q=u n=117
+  [ok]   Q=u n=117
+  [ok]   Q=u n=117
+  [ok]   Q=u n=117
+  [ok]   Q=u n=117
+  [ok]   Q=u n=117
+  [ok]   Q=u n=117
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   Q=u n=120
+  [ok]   s=3 Q=u on all (1)-(13) s=3 assignments
+   305 s=3 V-assignments, Q=u always
+
+-- CONTROL FREE: (10)-only => A_{j} V_j <= Q_j  (six rows + census sample) --
+  [ok]   (10)-only implies A V <= Q on 48<=D<=100 full census
+   1096 levels, 0 (10)-only violations (want 0)
+
+-- CONTROL R: census-rebase §6 reproduction (uni / mix, size-1 packets) --
+   rebase D=48  groups=2    uni>=6=0    uni[6,16]=0    mix[6,16]=0    cap=0
+   rebase D=54  groups=2    uni>=6=2    uni[6,16]=2    mix[6,16]=2    cap=0
+   rebase D=60  groups=15   uni>=6=13   uni[6,16]=13   mix[6,16]=13   cap=0
+   rebase D=63  groups=2    uni>=6=1    uni[6,16]=1    mix[6,16]=1    cap=0
+   rebase D=64  groups=9    uni>=6=7    uni[6,16]=7    mix[6,16]=7    cap=0
+   rebase D=72  groups=46   uni>=6=26   uni[6,16]=26   mix[6,16]=26   cap=0
+   rebase D=75  groups=5    uni>=6=3    uni[6,16]=3    mix[6,16]=3    cap=0
+   rebase D=80  groups=40   uni>=6=23   uni[6,16]=23   mix[6,16]=23   cap=0
+   rebase D=81  groups=2    uni>=6=1    uni[6,16]=1    mix[6,16]=1    cap=0
+   rebase D=84  groups=38   uni>=6=21   uni[6,16]=21   mix[6,16]=23   cap=0
+   rebase D=88  groups=1    uni>=6=1    uni[6,16]=1    mix[6,16]=1    cap=0
+   rebase D=90  groups=62   uni>=6=36   uni[6,16]=36   mix[6,16]=36   cap=0
+   rebase D=96  groups=157  uni>=6=86   uni[6,16]=83   mix[6,16]=90   cap=0
+   rebase D=99  groups=7    uni>=6=6    uni[6,16]=4    mix[6,16]=4    cap=0
+   rebase D=100 groups=57   uni>=6=32   uni[6,16]=32   mix[6,16]=32   cap=0
+   rebase D=102 groups=3    uni>=6=3    uni[6,16]=3    mix[6,16]=3    cap=0
+   rebase D=104 groups=3    uni>=6=3    uni[6,16]=3    mix[6,16]=3    cap=0
+   rebase D=105 groups=14   uni>=6=7    uni[6,16]=3    mix[6,16]=3    cap=0
+   rebase D=108 groups=125  uni>=6=87   uni[6,16]=71   mix[6,16]=76   cap=0
+   rebase D=110 groups=3    uni>=6=1    uni[6,16]=1    mix[6,16]=1    cap=0
+   rebase D=112 groups=71   uni>=6=33   uni[6,16]=29   mix[6,16]=29   cap=0
+   rebase D=114 groups=3    uni>=6=3    uni[6,16]=3    mix[6,16]=3    cap=0
+   rebase D=117 groups=7    uni>=6=4    uni[6,16]=4    mix[6,16]=4    cap=0
+   rebase D=120 groups=515  uni>=6=271  uni[6,16]=219  mix[6,16]=264  cap=0
+   TOTAL groups 1189 uni>=6 670 uni[6,16] 589 mix[6,16] 648 cap 0  [0.8s]
+  [ok]   groups = 1189
+  [ok]   uni>=6 = 670
+  [ok]   uni[6,16] = 589
+  [ok]   mix[6,16] = 648
+  [ok]   rebase empty mix degrees = {48} (66,78 have no skeleton)
+  [ok]   D=105 groups = 14 (alive mix = 3)
+
+== ORBIT-AWARE KNAPSACK on (1)-(13), 48 <= D <= 120 ==
+       D     grp      s3  uni>=6  uni616  mix616  orb>=6  orb616     cap  empty?     wall
+      48       2       1       0       0       0       0       0       0       Y     0.0s EMPTY[6,16]
+      54       2       2       2       2       2       2       2       0             0.0s
+      60      15       7      13      13      13      13      13       0             0.0s
+      63       2       2       1       1       1       1       1       0             0.0s
+      64       9       3       7       7       7       7       7       0             0.0s
+      72      46      11      26      26      26      26      26       0             0.0s
+      75       5       5       3       3       3       3       3       0             0.0s
+      80      40      12      23      23      23      17      17       0             0.0s
+      81       2       2       1       1       1       1       1       0             0.0s
+      84      38      20      21      21      23      21      21       0             0.0s
+      88       1       1       1       1       1       1       0       0       Y     0.0s EMPTY[6,16]
+      90      62      18      36      36      36      36      35       0             0.0s
+      96     157      19      86      83      90      92      83       0             0.1s
+      99       7       7       6       4       4       6       4       0             0.0s
+     100      57      20      32      32      32      31      31       0             0.0s
+     102       3       3       3       3       3       3       3       0             0.0s
+     104       3       3       3       3       3       3       3       0             0.0s
+     105      14      14       7       3       3       7       3       0             0.0s
+     108     125      28      87      71      76      90      70       0             0.1s
+     110       3       3       1       1       1       1       1       0             0.0s
+     112      71      21      33      29      29      29      22       0             0.1s
+     114       3       3       3       3       3       3       3       0             0.0s
+     117       7       7       4       4       4       4       4       0             0.0s
+     120     515      62     271     219     264     284     222       0             0.4s
+   ---- totals ----
+   groups 1189  (s=3 groups 274)
+   (UNI)   N>=6 670   [6,16] 589
+   mixed   [6,16] 648
+   ORBIT   N>=6 681   [6,16] 575   capped 0
+   empty mix[6,16]     : [48]
+   empty orbit N>=6    : [48]
+   empty orbit [6,16]  : [48, 88]
+   mix-alive / orbit-dead [6,16] : 73 groups
+   uni-alive / orbit-dead N>=6   : 19 groups
+   wall 0.9s
+
+== D=105 SURVIVORS, full packet structure ==
+   orbit-alive groups in [6,16]: 3
+   all (1)-(13) groups at D=105: 14
+
+   -- m=42 M=[49, 103] V_s=5  s=3 K=21 (d,e)=(2,5) u=15 --
+      V={2: 2, 3: 5, 4: 1}  q=10/13  d1=6/13  A2=13 A1=1  (10)=False (11)=True  (12)=True (13)=True  |O|=[1]  packets=[(2, '20/13', 1, 'Z')]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=63 M=[28, 103] V_s=6  s=3 K=21 (d,e)=(3,5) u=18 --
+      V={2: 5, 3: 6, 4: 1}  q=20/13  d1=7/39  A2=13 A1=3  (10)=False (11)=True  (12)=False (13)=True  |O|=[1]  packets=[(5, '100/13', 1, 'Z')]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=63 M=[70, 103] V_s=4  s=3 K=21 (d,e)=(3,5) u=12 --
+      V={2: 12, 3: 4, 4: 1}  q=9/19  d1=71/95  A2=19 A1=5  (10)=False (11)=True  (12)=True (13)=False  |O|=[1]  packets=[(12, '108/19', 1, 'Z')]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=63 M=[91, 103] V_s=6  s=3 K=21 (d,e)=(3,5) u=18 --
+      V={2: 7, 3: 6, 4: 1}  q=15/11  d1=3/11  A2=11 A1=1  (10)=False (11)=True  (12)=True (13)=True  |O|=[1]  packets=[(7, '105/11', 1, 'Z')]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=70 M=[-42, 103] V_s=6  s=3 K=35 (d,e)=(2,3) u=30 --
+      V={2: 1, 3: 6, 4: 1}  q=24/25  d1=1/5  A2=25 A1=1  (10)=True (11)=False  (12)=True (13)=True  |O|=[25]  packets=[]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=70 M=[10, 103] V_s=4  s=3 K=35 (d,e)=(2,3) u=28 --
+      V={2: 1, 3: 4, 4: 1}  q=18/25  d1=2/5  A2=25 A1=1  (10)=True (11)=False  (12)=True (13)=True  |O|=[25]  packets=[]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=70 M=[28, 103] V_s=5  s=3 K=35 (d,e)=(2,3) u=25 --
+      V={2: 1, 3: 5, 4: 1}  q=1/2  d1=7/12  A2=18 A1=2  (10)=True (11)=False  (12)=False (13)=True  |O|=[18]  packets=[(18, '9', 18, 'NZ')]
+      achievable N (UNI)[6,16]  = [6, 7, 8, 9, 10, 11, 12]
+      achievable N (ORBIT)[6,16]= [9]
+      mixed[6,16] hit=True
+
+   -- m=70 M=[28, 103] V_s=6  s=3 K=35 (d,e)=(2,3) u=30 --
+      V={2: 1, 3: 6, 4: 1}  q=9/13  d1=11/26  A2=13 A1=2  (10)=True (11)=False  (12)=False (13)=True  |O|=[13]  packets=[(13, '9', 13, 'NZ')]
+      achievable N (UNI)[6,16]  = [9]
+      achievable N (ORBIT)[6,16]= [9]
+      mixed[6,16] hit=True
+
+   -- m=70 M=[40, 103] V_s=4  s=3 K=35 (d,e)=(2,3) u=28 --
+      V={2: 1, 3: 4, 4: 1}  q=9/17  d1=19/34  A2=17 A1=2  (10)=True (11)=False  (12)=False (13)=True  |O|=[17]  packets=[(17, '9', 17, 'NZ')]
+      achievable N (UNI)[6,16]  = [9]
+      achievable N (ORBIT)[6,16]= [9]
+      mixed[6,16] hit=True
+
+   -- m=70 M=[63, 103] V_s=6  s=3 K=35 (d,e)=(2,3) u=30 --
+      V={2: 4, 3: 6, 4: 1}  q=6/7  d1=2/7  A2=7 A1=1  (10)=True (11)=False  (12)=True (13)=True  |O|=[7]  packets=[]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=70 M=[84, 103] V_s=4  s=3 K=35 (d,e)=(2,3) u=20 --
+      V={2: 9, 3: 4, 4: 1}  q=3/11  d1=17/22  A2=11 A1=2  (10)=False (11)=True  (12)=False (13)=True  |O|=[1]  packets=[(9, '27/11', 1, 'Z')]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=70 M=[90, 103] V_s=3  s=3 K=35 (d,e)=(2,3) u=21 --
+      V={2: 5, 3: 3, 4: 1}  q=1/4  d1=19/24  A2=8 A1=3  (10)=False (11)=True  (12)=True (13)=False  |O|=[1]  packets=[(5, '5/4', 1, 'Z')]
+      V={2: 13, 3: 3, 4: 1}  q=3/8  d1=11/16  A2=8 A1=2  (10)=False (11)=True  (12)=False (13)=True  |O|=[1]  packets=[(13, '39/8', 1, 'Z')]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=84 M=[28, 103] V_s=6  s=3 K=21 (d,e)=(4,5) u=18 --
+      V={2: 1, 3: 6, 4: 1}  q=20/13  d1=4/13  A2=13 A1=1  (10)=True (11)=False  (12)=True (13)=True  |O|=[13]  packets=[]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+   -- m=84 M=[70, 103] V_s=5  s=3 K=21 (d,e)=(4,5) u=15 --
+      V={2: 1, 3: 5, 4: 1}  q=5/8  d1=23/32  A2=8 A1=4  (10)=True (11)=False  (12)=False (13)=True  |O|=[8]  packets=[(8, '5', 8, 'NZ')]
+      achievable N (UNI)[6,16]  = []
+      achievable N (ORBIT)[6,16]= []
+      mixed[6,16] hit=False
+
+== SPECIAL DEGREES: orbit-alive counts vs rebase ==
+   D=105 orbit-alive [6,16] groups: 3
+      m=70 M=[28, 103] V_s=5 u=25 V2=[1] |O|=[18] uni=True mix=True orb=True
+      m=70 M=[28, 103] V_s=6 u=30 V2=[1] |O|=[13] uni=True mix=True orb=True
+      m=70 M=[40, 103] V_s=4 u=28 V2=[1] |O|=[17] uni=True mix=True orb=True
+   D=108 orbit-alive [6,16] groups: 70
+   D=112 orbit-alive [6,16] groups: 22
+      m=32 M=[8, 36, 110] V_s=3 u=12 V2=[1] |O|=[1, 11] uni=True mix=True orb=True
+      m=32 M=[8, 52, 110] V_s=3 u=12 V2=[1] |O|=[7] uni=True mix=True orb=True
+      m=32 M=[8, 92, 110] V_s=3 u=12 V2=[1] |O|=[1, 11] uni=True mix=True orb=True
+      m=48 M=[72, 108, 110] V_s=3 u=12 V2=[1] |O|=[8] uni=True mix=True orb=True
+      m=48 M=[84, 110] V_s=3 u=12 V2=[1] |O|=[10] uni=True mix=True orb=True
+      m=48 M=[88, 110] V_s=7 u=14 V2=[1] |O|=[10] uni=True mix=True orb=True
+      m=64 M=[56, 110] V_s=7 u=14 V2=[1] |O|=[8] uni=True mix=True orb=True
+      m=80 M=[88, 110] V_s=5 u=10 V2=[3] |O|=[1] uni=True mix=True orb=True
+      m=80 M=[100, 110] V_s=3 u=12 V2=[3] |O|=[4] uni=True mix=True orb=True
+      m=84 M=[42, 105, 110] V_s=6 u=24 V2=[1, 4] |O|=[1, 6, 8, 13] uni=True mix=True orb=True
+      m=84 M=[42, 110] V_s=9 u=18 V2=[1] |O|=[11] uni=True mix=True orb=True
+      m=84 M=[60, 110] V_s=3 u=21 V2=[1] |O|=[19] uni=True mix=True orb=True
+      m=84 M=[68, 110] V_s=3 u=21 V2=[1] |O|=[16] uni=True mix=True orb=True
+      m=84 M=[70, 77, 110] V_s=5 u=20 V2=[1] |O|=[16] uni=True mix=True orb=True
+      m=84 M=[70, 77, 110] V_s=6 u=24 V2=[1] |O|=[7] uni=True mix=True orb=True
+      m=84 M=[70, 91, 110] V_s=6 u=24 V2=[1] |O|=[7] uni=True mix=True orb=True
+      m=84 M=[70, 105, 110] V_s=6 u=24 V2=[1] |O|=[7] uni=True mix=True orb=True
+      m=84 M=[70, 110] V_s=12 u=24 V2=[1] |O|=[7] uni=True mix=True orb=True
+      m=84 M=[70, 110] V_s=13 u=26 V2=[1] |O|=[19] uni=True mix=True orb=True
+      m=96 M=[8, 36, 110] V_s=3 u=12 V2=[1] |O|=[1, 11] uni=True mix=True orb=True
+      m=96 M=[8, 52, 110] V_s=3 u=12 V2=[1] |O|=[7] uni=True mix=True orb=True
+      m=96 M=[8, 92, 110] V_s=3 u=12 V2=[1] |O|=[1, 11] uni=True mix=True orb=True
+   D=117 orbit-alive [6,16] groups: 4
+      m=78 M=[13, 115] V_s=8 u=24 V2=[3] |O|=[1] uni=True mix=True orb=True
+      m=78 M=[52, 115] V_s=10 u=30 V2=[1] |O|=[7] uni=True mix=True orb=True
+      m=78 M=[52, 115] V_s=11 u=33 V2=[1] |O|=[6] uni=True mix=True orb=True
+      m=78 M=[91, 115] V_s=11 u=33 V2=[2] |O|=[7] uni=True mix=True orb=True
+   D=120 orbit-alive [6,16] groups: 222
+
+== DELTA: mix-alive / orbit-dead in [6,16] (73 groups) ==
+   D=80 m=32 M=[52, 78] V_s=3 s=3 u=12 UNI-N=[6]
+      V2=1 q=1/2 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=80 m=32 M=[56, 78] V_s=7 s=3 u=14 UNI-N=[6, 7]
+      V2=1 q=1/2 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=80 m=48 M=[-24, 68, 78] V_s=3 s=4 u=12 UNI-N=[6]
+      V2=2 q=1/2 |O|=[4] A[2:s]=[12, 4] 10/11=[(False, True), (True, False)]
+   D=80 m=48 M=[-8, 68, 78] V_s=3 s=4 u=12 UNI-N=[6]
+      V2=2 q=1/2 |O|=[4] A[2:s]=[10, 4] 10/11=[(False, True), (True, False)]
+   D=80 m=48 M=[24, 68, 78] V_s=3 s=4 u=12 UNI-N=[6]
+      V2=2 q=1/2 |O|=[4] A[2:s]=[6, 4] 10/11=[(False, True), (True, False)]
+   D=80 m=60 M=[52, 78] V_s=3 s=3 u=15 UNI-N=[6]
+      V2=1 q=2/5 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=84 m=56 M=[48, 82] V_s=3 s=3 u=21 UNI-N=[]
+      V2=1 q=3/13 |O|=[13] A[2:s]=[13] 10/11=[(True, False)]
+      V2=8 q=10/13 |O|=[1] A[2:s]=[13] 10/11=[(False, True)]
+   D=84 m=56 M=[14, 63, 82] V_s=5 s=4 u=20 UNI-N=[]
+      V2=1 q=27/49 |O|=[7] A[2:s]=[7, 14] 10/11=[(True, False), (False, True)]
+      V2=2 q=32/49 |O|=[7] A[2:s]=[7, 14] 10/11=[(True, False), (False, True)]
+   D=88 m=66 M=[-33, 86] V_s=9 s=3 u=18 UNI-N=[9]
+      V2=1 q=9/7 |O|=[14] A[2:s]=[14] 10/11=[(True, False)]
+   D=90 m=60 M=[-12, 88] V_s=5 s=3 u=25 UNI-N=[6, 12]
+      V2=1 q=6/7 |O|=[21] A[2:s]=[21] 10/11=[(True, False)]
+   D=96 m=72 M=[18, 94] V_s=5 s=3 u=20 UNI-N=[9]
+      V2=1 q=9/8 |O|=[16] A[2:s]=[16] 10/11=[(True, False)]
+   D=96 m=72 M=[-8, 94] V_s=7 s=3 u=21 UNI-N=[8, 12, 16]
+      V2=1 q=4/3 |O|=[15] A[2:s]=[15] 10/11=[(True, False)]
+   D=96 m=72 M=[-36, 94] V_s=11 s=3 u=22 UNI-N=[6, 9, 12, 15]
+      V2=1 q=3/2 |O|=[12] A[2:s]=[12] 10/11=[(True, False)]
+   D=96 m=72 M=[-12, 68, 94] V_s=3 s=4 u=18 UNI-N=[]
+      V2=1 q=21/20 |O|=[4] A[2:s]=[4, 10] 10/11=[(True, False), (False, True)]
+      V2=3 q=9/8 |O|=[4] A[2:s]=[4, 10] 10/11=[(True, False), (False, True)]
+   D=96 m=72 M=[-36, 90, 94] V_s=5 s=4 u=20 UNI-N=[9]
+      V2=1 q=9/7 |O|=[14] A[2:s]=[14, 1] 10/11=[(True, False), (True, True)]
+   D=96 m=64 M=[8, 60, 94] V_s=3 s=4 u=24 UNI-N=[]
+      V2=1 q=42/65 |O|=[5] A[2:s]=[5, 13] 10/11=[(True, False), (False, True)]
+      V2=2 q=48/65 |O|=[5] A[2:s]=[5, 13] 10/11=[(True, False), (False, True)]
+   D=96 m=64 M=[-16, 40, 94] V_s=7 s=4 u=28 UNI-N=[10, 15]
+      V2=2 q=5/6 |O|=[8] A[2:s]=[6, 8] 10/11=[(False, True), (True, False)]
+   D=100 m=80 M=[72, 98] V_s=3 s=3 u=15 UNI-N=[6, 7]
+      V2=1 q=1/2 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=108 m=81 M=[-9, 106] V_s=7 s=3 u=21 UNI-N=[10]
+      V2=1 q=10/9 |O|=[18] A[2:s]=[18] 10/11=[(True, False)]
+   D=108 m=81 M=[36, 106] V_s=8 s=3 u=24 UNI-N=[8, 16]
+      V2=2 q=4/3 |O|=[9] A[2:s]=[9] 10/11=[(True, False)]
+   D=108 m=72 M=[12, 54, 106] V_s=4 s=4 u=24 UNI-N=[10]
+      V2=1 q=10/21 |O|=[9] A[2:s]=[9, 35] 10/11=[(True, False), (False, True)]
+   D=108 m=72 M=[18, 106] V_s=17 s=3 u=34 UNI-N=[6, 12]
+      V2=1 q=6/7 |O|=[21] A[2:s]=[21] 10/11=[(True, False)]
+   D=108 m=72 M=[-18, 30, 106] V_s=5 s=4 u=30 UNI-N=[]
+      V2=1 q=45/52 |O|=[13] A[2:s]=[13, 16] 10/11=[(True, False), (False, True)]
+      V2=2 q=12/13 |O|=[13] A[2:s]=[13, 16] 10/11=[(True, False), (False, True)]
+   D=108 m=72 M=[-18, 78, 106] V_s=5 s=4 u=30 UNI-N=[8]
+      V2=2 q=4/9 |O|=[6] A[2:s]=[3, 6] 10/11=[(False, True), (True, False)]
+      V2=2 q=12/13 |O|=[13] A[2:s]=[13, 6] 10/11=[(True, False), (False, True)]
+   D=112 m=64 M=[-40, 100, 110] V_s=3 s=4 u=12 UNI-N=[8]
+      V2=2 q=2/3 |O|=[4] A[2:s]=[18, 4] 10/11=[(False, True), (True, False)]
+   D=112 m=64 M=[8, 100, 110] V_s=3 s=4 u=12 UNI-N=[8]
+      V2=2 q=2/3 |O|=[4] A[2:s]=[12, 4] 10/11=[(False, True), (True, False)]
+   D=112 m=64 M=[56, 100, 110] V_s=3 s=4 u=12 UNI-N=[8]
+      V2=2 q=2/3 |O|=[4] A[2:s]=[6, 4] 10/11=[(False, True), (True, False)]
+   D=112 m=84 M=[-42, 110] V_s=11 s=3 u=22 UNI-N=[6, 12]
+      V2=1 q=6/5 |O|=[15] A[2:s]=[15] 10/11=[(True, False)]
+   D=112 m=84 M=[14, 110] V_s=13 s=3 u=26 UNI-N=[8, 12, 16]
+      V2=1 q=4/3 |O|=[15] A[2:s]=[15] 10/11=[(True, False)]
+   D=112 m=84 M=[42, 110] V_s=13 s=3 u=26 UNI-N=[9]
+      V2=1 q=9/8 |O|=[16] A[2:s]=[16] 10/11=[(True, False)]
+   D=112 m=84 M=[-42, 105, 110] V_s=6 s=4 u=24 UNI-N=[9]
+      V2=1 q=9/7 |O|=[14] A[2:s]=[14, 1] 10/11=[(True, False), (True, True)]
+   D=120 m=100 M=[-50, -25, 118] V_s=4 s=4 u=16 UNI-N=[6, 8, 10, 12, 14, 16]
+      V2=1 q=2 |O|=[9] A[2:s]=[9, 115] 10/11=[(True, False), (False, True)]
+   D=120 m=100 M=[-50, 25, 118] V_s=4 s=4 u=16 UNI-N=[6, 8, 10, 12, 14, 16]
+      V2=1 q=2 |O|=[9] A[2:s]=[9, 25] 10/11=[(True, False), (False, True)]
+   D=120 m=100 M=[-50, 75, 118] V_s=4 s=4 u=16 UNI-N=[6, 8, 10, 12, 14, 16]
+      V2=1 q=2 |O|=[9] A[2:s]=[9, 35] 10/11=[(True, False), (False, True)]
+      V2=16 q=72/35 |O|=[1] A[2:s]=[9, 35] 10/11=[(False, True), (False, True)]
+   D=120 m=100 M=[-30, 55, 118] V_s=4 s=4 u=16 UNI-N=[]
+      V2=1 q=234/119 |O|=[7] A[2:s]=[7, 17] 10/11=[(True, False), (False, True)]
+      V2=2 q=240/119 |O|=[1, 7] A[2:s]=[7, 17] 10/11=[(True, True), (False, True)]
+   D=120 m=96 M=[16, 118] V_s=7 s=3 u=21 UNI-N=[10, 15]
+      V2=1 q=5/3 |O|=[15] A[2:s]=[15] 10/11=[(True, False)]
+   D=120 m=96 M=[32, 84, 118] V_s=3 s=4 u=18 UNI-N=[16]
+      V2=1 q=16/13 |O|=[5] A[2:s]=[5, 13] 10/11=[(True, False), (False, True)]
+   D=120 m=48 M=[12, 44, 118] V_s=3 s=4 u=18 UNI-N=[7, 14]
+      V2=1 q=7/8 |O|=[10] A[2:s]=[10, 28] 10/11=[(True, False), (False, True)]
+   D=120 m=72 M=[84, 100, 118] V_s=3 s=4 u=18 UNI-N=[]
+      V2=1 q=45/91 |O|=[13] A[2:s]=[13, 7] 10/11=[(True, False), (False, True)]
+      V2=5 q=15/13 |O|=[1] A[2:s]=[13, 7] 10/11=[(False, True), (False, True)]
+   D=120 m=90 M=[-10, 115, 118] V_s=4 s=4 u=24 UNI-N=[10]
+      V2=1 q=10/9 |O|=[18] A[2:s]=[18, 1] 10/11=[(True, False), (True, True)]
+   D=120 m=90 M=[40, 75, 118] V_s=4 s=4 u=24 UNI-N=[16]
+      V2=1 q=20/21 |O|=[3] A[2:s]=[3, 35] 10/11=[(True, False), (False, True)]
+      V2=2 q=8/7 |O|=[3] A[2:s]=[3, 35] 10/11=[(True, False), (False, True)]
+      V2=3 q=6/5 |O|=[1, 3] A[2:s]=[3, 35] 10/11=[(True, True), (False, True)]
+      V2=15 q=9/7 |O|=[1] A[2:s]=[3, 35] 10/11=[(False, True), (False, True)]
+   D=120 m=90 M=[-45, 115, 118] V_s=4 s=4 u=24 UNI-N=[6, 12]
+      V2=1 q=6/5 |O|=[15] A[2:s]=[15, 1] 10/11=[(True, False), (True, True)]
+   D=120 m=90 M=[-15, 85, 118] V_s=3 s=4 u=18 UNI-N=[]
+      V2=1 q=21/40 |O|=[4] A[2:s]=[4, 20] 10/11=[(True, False), (False, True)]
+      V2=3 q=9/16 |O|=[4] A[2:s]=[4, 20] 10/11=[(True, False), (False, True)]
+   D=120 m=90 M=[45, 100, 118] V_s=3 s=4 u=18 UNI-N=[]
+      V2=1 q=9/22 |O|=[4] A[2:s]=[4, 11] 10/11=[(True, False), (False, True)]
+      V2=4 q=6/11 |O|=[4] A[2:s]=[4, 11] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[96, 118] V_s=7 s=3 u=35 UNI-N=[6]
+      V2=2 q=1/5 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=120 m=80 M=[72, 92, 118] V_s=3 s=4 u=30 UNI-N=[]
+      V2=1 q=6/35 |O|=[7] A[2:s]=[7, 10] 10/11=[(True, False), (False, True)]
+      V2=4 q=24/35 |O|=[7] A[2:s]=[7, 10] 10/11=[(True, False), (False, True)]
+      V2=23 q=4/5 |O|=[1] A[2:s]=[7, 10] 10/11=[(False, True), (False, True)]
+   D=120 m=80 M=[72, 100, 118] V_s=3 s=4 u=30 UNI-N=[]
+      V2=1 q=6/35 |O|=[5] A[2:s]=[5, 7] 10/11=[(True, False), (False, True)]
+      V2=4 q=24/35 |O|=[5] A[2:s]=[5, 7] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[-10, 45, 118] V_s=3 s=4 u=24 UNI-N=[]
+      V2=1 q=27/77 |O|=[7] A[2:s]=[7, 44] 10/11=[(True, False), (False, True)]
+      V2=3 q=30/77 |O|=[1, 7] A[2:s]=[7, 44] 10/11=[(True, True), (False, True)]
+      V2=17 q=31/77 |O|=[1] A[2:s]=[7, 44] 10/11=[(False, True), (False, True)]
+   D=120 m=80 M=[10, 75, 118] V_s=3 s=4 u=24 UNI-N=[]
+      V2=1 q=21/65 |O|=[5] A[2:s]=[5, 26] 10/11=[(True, False), (False, True)]
+      V2=2 q=24/65 |O|=[5] A[2:s]=[5, 26] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[-20, 12, 118] V_s=3 s=4 u=30 UNI-N=[]
+      V2=1 q=75/104 |O|=[13] A[2:s]=[13, 40] 10/11=[(True, False), (False, True)]
+      V2=2 q=10/13 |O|=[13] A[2:s]=[13, 40] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[-20, 76, 118] V_s=3 s=4 u=30 UNI-N=[]
+      V2=1 q=75/104 |O|=[13] A[2:s]=[13, 16] 10/11=[(True, False), (False, True)]
+      V2=2 q=10/13 |O|=[13] A[2:s]=[13, 16] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[-20, 92, 118] V_s=3 s=4 u=30 UNI-N=[8]
+      V2=2 q=4/15 |O|=[10] A[2:s]=[3, 10] 10/11=[(False, True), (True, False)]
+   D=120 m=80 M=[-60, -5, 118] V_s=4 s=4 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 33] 10/11=[(True, False), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 33] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[-60, 5, 118] V_s=4 s=4 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[11] A[2:s]=[11, 91] 10/11=[(True, False), (False, True)]
+      V2=2 q=128/143 |O|=[11] A[2:s]=[11, 91] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[-60, 50, 118] V_s=8 s=4 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 55] 10/11=[(True, False), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 55] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[-20, 30, 118] V_s=9 s=4 u=36 UNI-N=[]
+      V2=2 q=14/15 |O|=[10] A[2:s]=[6, 10] 10/11=[(False, True), (True, False)]
+      V2=1 q=21/22 |O|=[11] A[2:s]=[11, 10] 10/11=[(True, False), (False, True)]
+      V2=1 q=24/25 |O|=[25] A[2:s]=[25, 10] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[-20, 50, 118] V_s=7 s=4 u=28 UNI-N=[10]
+      V2=2 q=5/9 |O|=[12] A[2:s]=[6, 12] 10/11=[(False, True), (True, False)]
+   D=120 m=80 M=[-60, -50, 5, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[11] A[2:s]=[11, 45, 91] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[11] A[2:s]=[11, 45, 91] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, -50, 105, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 45, 11] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 45, 11] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, -30, -5, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 119, 33] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 119, 33] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, -30, 5, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[11] A[2:s]=[11, 17, 91] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[11] A[2:s]=[11, 17, 91] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, -30, 105, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 119, 11] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 119, 11] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, -10, -5, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 103, 33] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 103, 33] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, -10, 5, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[11] A[2:s]=[11, 103, 91] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[11] A[2:s]=[11, 103, 91] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, -10, 105, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 103, 11] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 103, 11] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, 10, 105, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 29, 11] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 29, 11] 10/11=[(True, False), (False, True), (False, True)]
+      V2=6 q=288/319 |O|=[1] A[2:s]=[13, 29, 11] 10/11=[(False, True), (False, True), (False, True)]
+   D=120 m=80 M=[-60, 30, 105, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 71, 11] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 71, 11] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, 50, 55, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 55, 17] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 55, 17] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, 50, 65, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 55, 43] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 55, 43] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, 50, 85, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 55, 9] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 55, 9] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, 50, 95, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 55, 19] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 55, 19] 10/11=[(True, False), (False, True), (False, True)]
+   D=120 m=80 M=[-60, 50, 115, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=21/25 |O|=[25] A[2:s]=[25, 48, 1] 10/11=[(True, False), (False, True), (True, True)]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 55, 1] 10/11=[(True, False), (False, True), (True, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 55, 1] 10/11=[(True, False), (False, True), (True, True)]
+   D=120 m=80 M=[-60, 90, 105, 118] V_s=4 s=5 u=32 UNI-N=[]
+      V2=1 q=126/143 |O|=[13] A[2:s]=[13, 23, 11] 10/11=[(True, False), (False, True), (False, True)]
+      V2=2 q=128/143 |O|=[13] A[2:s]=[13, 23, 11] 10/11=[(True, False), (False, True), (False, True)]
+
+== DELTA: uni-alive N>=6 / orbit-dead N>=6 (19 groups) ==
+   D=80 m=32 M=[52, 78] V_s=3 s=3 u=12 UNI-N=[6]
+      V2=1 q=1/2 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=80 m=32 M=[56, 78] V_s=7 s=3 u=14 UNI-N=[6, 7]
+      V2=1 q=1/2 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=80 m=48 M=[-24, 68, 78] V_s=3 s=4 u=12 UNI-N=[6]
+      V2=2 q=1/2 |O|=[4] A[2:s]=[12, 4] 10/11=[(False, True), (True, False)]
+   D=80 m=48 M=[-8, 68, 78] V_s=3 s=4 u=12 UNI-N=[6]
+      V2=2 q=1/2 |O|=[4] A[2:s]=[10, 4] 10/11=[(False, True), (True, False)]
+   D=80 m=48 M=[24, 68, 78] V_s=3 s=4 u=12 UNI-N=[6]
+      V2=2 q=1/2 |O|=[4] A[2:s]=[6, 4] 10/11=[(False, True), (True, False)]
+   D=80 m=60 M=[52, 78] V_s=3 s=3 u=15 UNI-N=[6]
+      V2=1 q=2/5 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=96 m=64 M=[-16, 40, 94] V_s=7 s=4 u=28 UNI-N=[10, 15]
+      V2=2 q=5/6 |O|=[8] A[2:s]=[6, 8] 10/11=[(False, True), (True, False)]
+   D=100 m=80 M=[72, 98] V_s=3 s=3 u=15 UNI-N=[6, 7]
+      V2=1 q=1/2 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=108 m=72 M=[12, 54, 106] V_s=4 s=4 u=24 UNI-N=[10]
+      V2=1 q=10/21 |O|=[9] A[2:s]=[9, 35] 10/11=[(True, False), (False, True)]
+   D=112 m=64 M=[-40, 100, 110] V_s=3 s=4 u=12 UNI-N=[8]
+      V2=2 q=2/3 |O|=[4] A[2:s]=[18, 4] 10/11=[(False, True), (True, False)]
+   D=112 m=64 M=[8, 100, 110] V_s=3 s=4 u=12 UNI-N=[8]
+      V2=2 q=2/3 |O|=[4] A[2:s]=[12, 4] 10/11=[(False, True), (True, False)]
+   D=112 m=64 M=[56, 100, 110] V_s=3 s=4 u=12 UNI-N=[8]
+      V2=2 q=2/3 |O|=[4] A[2:s]=[6, 4] 10/11=[(False, True), (True, False)]
+   D=112 m=80 M=[8, 52, 110] V_s=3 s=4 u=12 UNI-N=[]
+      V2=1 q=20/11 |O|=[7] A[2:s]=[7, 22] 10/11=[(True, False), (False, True)]
+   D=120 m=96 M=[32, 84, 118] V_s=3 s=4 u=18 UNI-N=[16]
+      V2=1 q=16/13 |O|=[5] A[2:s]=[5, 13] 10/11=[(True, False), (False, True)]
+   D=120 m=48 M=[12, 44, 118] V_s=3 s=4 u=18 UNI-N=[7, 14]
+      V2=1 q=7/8 |O|=[10] A[2:s]=[10, 28] 10/11=[(True, False), (False, True)]
+   D=120 m=96 M=[12, 76, 118] V_s=3 s=4 u=18 UNI-N=[]
+      V2=1 q=21/16 |O|=[5] A[2:s]=[5, 16] 10/11=[(True, False), (False, True)]
+   D=120 m=80 M=[96, 118] V_s=7 s=3 u=35 UNI-N=[6]
+      V2=2 q=1/5 |O|=[10] A[2:s]=[10] 10/11=[(True, False)]
+   D=120 m=80 M=[-20, 92, 118] V_s=3 s=4 u=30 UNI-N=[8]
+      V2=2 q=4/15 |O|=[10] A[2:s]=[3, 10] 10/11=[(False, True), (True, False)]
+   D=120 m=80 M=[-20, 50, 118] V_s=7 s=4 u=28 UNI-N=[10]
+      V2=2 q=5/9 |O|=[12] A[2:s]=[6, 12] 10/11=[(False, True), (True, False)]
+
+== Z01 packing (NZ unbounded, at most one Z per group) ==
+   GLOBAL-Z01 = all s (NOT exact at s>3).  STRICT s=3 = exact.
+   D=60  grp=15   mix16=13   unb16=13   z01_16=12   z01_>=6=12   s3alive16=4
+   D=64  grp=9    mix16=7    unb16=7    z01_16=5    z01_>=6=5    s3alive16=3
+   D=72  grp=46   mix16=26   unb16=26   z01_16=21   z01_>=6=21   s3alive16=7
+   D=80  grp=40   mix16=23   unb16=17   z01_16=14   z01_>=6=14   s3alive16=6
+   D=84  grp=38   mix16=23   unb16=21   z01_16=20   z01_>=6=20   s3alive16=11
+   D=88  grp=1    mix16=1    unb16=0    z01_16=0    z01_>=6=1    s3alive16=0
+   D=90  grp=62   mix16=36   unb16=35   z01_16=31   z01_>=6=32   s3alive16=10
+   D=96  grp=157  mix16=90   unb16=83   z01_16=71   z01_>=6=82   s3alive16=10
+   D=100 grp=57   mix16=32   unb16=31   z01_16=28   z01_>=6=29   s3alive16=10
+   D=105 grp=14   mix16=3    unb16=3    z01_16=3    z01_>=6=7    s3alive16=3
+   D=108 grp=125  mix16=76   unb16=70   z01_16=64   z01_>=6=84   s3alive16=10
+   D=112 grp=71   mix16=29   unb16=22   z01_16=19   z01_>=6=28   s3alive16=9
+   D=117 grp=7    mix16=4    unb16=4    z01_16=3    z01_>=6=3    s3alive16=3
+   D=120 grp=515  mix16=264  unb16=222  z01_16=181  z01_>=6=250  s3alive16=31
+   GLOBAL-Z01 (all s, NOT exact at s>3): mix16 648  unb16 575  z01_16 493  z01_>=6 611
+   STRICT s=3 only (exact, 274 groups): UNI N>=6 187  UNI[6,16] 165  mix16 166  UNB[6,16] 148  z01_>=6 173  z01_16 138
+   STRICT s=3 subtotal: 274 groups, Z01 N>=6 = 173, Z01 [6,16] = 138
+   empty z01 [6,16]: [48, 88]
+   empty z01 N>=6 : [48]
+   D=88 z01 [6,16]=False N>=6=True
+   D=105 z01-alive [6,16]: 3
+      m=70 M=[40, 103] Vs=4
+      m=70 M=[28, 103] Vs=5
+      m=70 M=[28, 103] Vs=6
+   D=117 z01-alive [6,16]: 3
+      m=78 M=[52, 115] Vs=10 |O|=[7] 10/11=(True, False) V2=1 q=3/7
+      m=78 M=[52, 115] Vs=11 |O|=[6] 10/11=(True, False) V2=1 q=1/2
+      m=78 M=[91, 115] Vs=11 |O|=[7] 10/11=(True, False) V2=2 q=2/7
+
+==============================================================================
+ALL CONTROLS PASSED.  NCHECK=336
