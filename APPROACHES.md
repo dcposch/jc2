@@ -1,3 +1,12 @@
+<!-- OVERLAY 2026-09-03T16:36Z (baseline re-typing) -->
+**2026-09-03T16:36Z overlay.** BASELINE CORRECTION: Moh's degree ≤ 100 theorem is OPEN at (99,66)
+(AUDIT delta 17(yy); Xu arXiv:1604.07683 §8: "unknown possible split", "(99,66) is open").
+Rows that cite "Moh: no counterexample ≤ 100" are re-scoped to the three descendable
+printed classes. New top-priority target on BOTH sides: (99,66) branch B lift (proof) /
+face-family lift to a Keller pair (counterexample). The u_s > 1 (MINOR-DICHOTOMY) row is
+RAISED to co-principal with theorem (T) on the K = 16 ray (dead at t = 1..4; middle spine
+open). Instrument note: A/B-chart kills valid only when −δ₁' ≤ V₂'δ₁' + u'δ₂' (delta 17(uu)).
+
 <!-- OVERLAY 2026-09-03T12:34Z (round 20260903T1200Z synthesis) -->
 **2026-09-03T12:34Z overlay (round 20260903T1200Z).** Q1 settled NO: the screened census is
 cofinally nonempty (K = 16 ray, delta 17(w), PROMOTED, gap-free) — every "prove
