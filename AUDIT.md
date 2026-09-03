@@ -17656,3 +17656,13 @@ folded into round 20260904T0000Z (65 min away) rather than a separate round.
 `k16-t6-sol56-20260903.md` (Sol, 13KB; box/k16t6-20260903/; 18/18 hashes; reused the earlier
 Grok artifacts only after SHA-256 verification). Ray status unchanged: (T) PROMOTED
 t = 1..7; uniform OPEN (the b₄ = 1 chart).
+
+## INTEGRATION #17 DELTA (ssss) (2026-09-03T23:16Z, DERIVED-SOURCE + design, producer Opus): THE D = 108 u_s = 2 ROW (108,72; M = (−72,81,106); d = (108,36,9,1); V = (7,7); v₃/u₃ = 7/2; major radii (3/8, 1/4, −1)) HAS A SINGLE ADMISSIBLE PRINCIPAL-MINOR SPLIT — δ = 3 only, partition [1,1], face p = π² − c (c ≠ 0), q = p²³u with u' = 5p², deg u = 5, one parameter mod gauge (the constant e₀ of u); δ ∈ {3/2, 2, 5/2} EXCLUDED each by two independent routes (Xu Cor 7.5 below (v_s+1)/(u_s+1) = 8/3 — a genuine split with deg p = 2 IS a split to u_s roots — and the face-ODE budget); the tree is fully rigid (24 principal g-roots split 12 + 12, both final at δ' = 4; simple roots ⇒ no further split); Im = 7, IM = 21 (Cor 5.3 passes); the joint chart has the same shape as (99,66) (n/d₂ = 3, m/d₂ = 2; only the h₃ → h₂ step changes, d₂/d₃ = 4); DERIVED-SOURCE[FACE-ODE-CLOSED-FORM]: Xu's (7.1) at any principal-minor split order reduces for every row to one ODE (closed form); the no-split alternative has δ* ≥ 7/2 (Prop 6.3's bound) — OPEN[MINOR-RADIUS-108] typed on both sides
+
+`g108-minor-classification-opus5-20260903.md` (Opus, 22KB; 14/14 hashes; box/g108minor-
+20260903/; §1.1 semigroup data calibrated on Xu's printed (99,66); §1.2 the five Xu-type
+orders at (108,72); §3 the joint-chart design; §4 controls incl. the (99,66) replay of the
+classification). NEXT LANE (§6): run the band engine on the D = 108 δ = 3 branch (design
+in §3) and on the no-split alternative (Prop 6.3 with δ* ≥ 7/2 — a modified-hypothesis
+descent; state what it descends to). This is the joint-chart engine's second u_s > 1
+client and the first test of packet Q3.

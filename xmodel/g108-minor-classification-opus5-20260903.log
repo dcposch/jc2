@@ -1,0 +1,28 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete and sealed. No job left running.
+
+## Result: the `D = 108` split classification is a **single branch**
+
+**Inputs**: all 14 verified `OK` via `awk`-generated manifest + `sha256sum -c`; no digest retyped.
+
+**Classification** (window `1 < δ < v_s/u_s = 7/2`, `den(δ) ≤ u_s = 2` by N5):
+
+| `δ` | verdict |
+|---|---|
+| `3/2, 2, 5/2` | **EXCLUDED**, twice over — Xu Cor. 7.5 (printed; threshold `(v_s+1)/(u_s+1) = 8/3`, and at `u_s = 2` *every* genuine split is a split to `u_s` different roots) and the face-ODE resonance budget (`ρ` non-integral ⇒ `(26,26)`, `52 > 51`) |
+| `3` | **SURVIVES**: partition `[1,1]`, `p = π²−c` (`c ≠ 0`), `q = p²³u` with `u′ = 5p²`, `deg u = 5`; **1-parameter mod gauge** (the constant `e₀`) |
+
+Tree fully rigid: `24 → 12+12`, both final at `δ′ = 4`, no second split possible (simple roots ⇒ `deg p_child = 1`). `Im = 7`, `IM = 21`, Cor. 5.3 passes. `OPEN[MINOR-RADIUS-108]` stands as the dichotomy `δ* ≤ 3` (split) vs `δ* ≥ 7/2` (Prop. 6.3 descent).
+
+**Two derived-source items and one erratum**
+- The face ODE has a row-generic closed form `K_g a q p′ − b q′ p = K_g(v_s−u_s)p^{W+1}`; the constant is `δ`-independent (`45` at `(99,66)`, `60` here), and `J(f,T_s)` gives the *same* equation.
+- `ERRATUM[XU-COR-7.5-DISPLAY]`: Xu's printed Cor. 7.5 gives the `T_s(σ)` exponent and `deg q` as `(−μ_s+n−2)/d_s` — the `(T_s)_f` fraction. (7.1) forbids it; §7.3/§8's `(−μ_s−2)/d_s` is correct (`deg q = 40`, not `67`). The corollary's conclusion is unaffected.
+
+**Controls (39 + 51 `[ok]`, zero failures, exit 0)**: the recipe reproduces Xu's *printed* `−μ₂ = 55`, `−μ₃ = 145` and all ten five-order rows against an independent root-contact count; the required `(99,66)` replay returns exactly `{2 [2,1], 5/2 [1,1,1]}` with Xu's printed q-vectors; the tower chart reproduces the charged `77/198/319/1683/2772/594/1683 = 7326`.
+
+**Chart design**: `8694` monic coefficients (`8514` after fixing tops), Prop. 6.2 box `3094`, tower `(9, 36, 108/72)` with `d₂/d₃ = 4`. §3 tables every hard-coded `band_engine.py` constant; `build_FG` is unchanged (`n/d₂ = 3`, `m/d₂ = 2`). The bands were **not** run.
+
+Two things I flagged rather than resolved, both scoped out by the task: the `D₁`/`D₂` weight cut and pole exponents need the outer-bridge derivation rerun for `A₂ = 4`, `A₁ = 2` (weight `4r+6q`) — typed `OPEN[108-OUTER-WEIGHTS]` and named as the next lane `g108-outer-bridge`.
+
+Report: `xmodel/g108-minor-classification-opus5-20260903.md`, sealed, body `22158` bytes, `PASS` on `ops/seal.py verify`. Drivers, page images, and hashes in `box/g108minor-20260903/`. No ledger, `jc2-lean`, or `ideation-*` file was edited (the `ideation-…coordinator.md` in `git status` is a concurrent lane's, not mine). No exit-price assertion, so no `charge_basis` line.
+DIVERT path=xmodel/g108-minor-classification-opus5-20260903.md status=CLEAN_SEALED body_bytes=22158 body_sha256=ebc950a863bf3584ee5afce08f900844c09ff50bab3b9a0a1a522e659898e79f

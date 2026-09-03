@@ -1,0 +1,74 @@
+=== CONTROL 0: skeleton arithmetic ===
+  [ok]   (99,66) d=(99,33,11,1)
+  [ok]   (99,66) u_s=3, v_s=8
+  [ok]   (99,66) radii (4/9,1/3,-1)
+  [ok]   (108,72) d=(108,36,9,1)
+  [ok]   (108,72) u_s=2, v_s=7
+  [ok]   (108,72) radii (3/8,1/4,-1)
+
+=== CONTROL 1: semigroup vs Xu's PRINTED (99,66) data ===
+  [ok]   (99,66) -mu_1 = m = 66
+  [ok]   (99,66) -mu_2 = 55 [Xu p.13 printed]
+  [ok]   (99,66) -mu_3 = 145 [Xu p.13 printed]
+  [ok]   (99,66) mults (27,18,15,40) [Xu printed]
+  [ok]   (99,66) p-exponents (9,6,5,22) [Xu display]
+  [ok]   (99,66) ord T_3 = 13(3d-8)-1+d
+  [ok]   (99,66) Moh p.209 t^-18 at delta=2
+  [ok]   (99,66) delta=2 five orders (-12,-18,-10,-44,-25)
+  [ok]   (99,66) delta=5/2 five orders (-3,-9/2,-5/2,-11,-5)
+  [ok]   (99,66) five orders == direct root-contact count
+
+=== CONTROL 2: replay the (99,66) split classification ===
+   delta=4/3   rho=155/12   alive: {}
+   delta=3/2   rho=90/7     alive: {}
+   delta=5/3   rho=115/9    alive: {}
+   delta=2     rho=25/2     alive: {'(2, 1)': [(25, 14)]}
+   delta=7/3   rho=35/3     alive: {}
+   delta=5/2   rho=10       alive: {'(2, 1)': [(27, 10), (20, 14), (20, 10)], '(1, 1, 1)': [(10, 14, 14), (10, 10, 14), (10, 10, 10)]}
+   after Galois: {'2': ['(2, 1)'], '5/2': ['(1, 1, 1)']}
+  [ok]   (99,66) classification == {2 [2,1], 5/2 [1,1,1]}
+  [ok]   (99,66) delta=2 [2,1] q-vector forced (25,14)
+  [ok]   (99,66) delta=5/2 [1,1,1] vectors {(14,14,10),(14,10,10),(10,10,10)}
+  [ok]   (99,66) delta=5/2 [2,1] alive at ODE level, killed by Galois
+
+=== D = 108 row ===
+  d=[108, 36, 9, 1]  u_s=2 v_s=7  n/d_s=12  m/d_s=8
+  q={1: -72, 2: 153, 3: 25} lambda={1: -7776, 2: -2268, 3: -2043}  -mu={1: 72, 2: 63, 3: 227}
+  W=(-mu_3-2)/d_s=25   deg p=u_s=2   deg q=W*u_s+1=51
+  ceiling v_s/u_s=7/2   Cor 7.5 (v_s+1)/(u_s+1)=8/3   face constant c=Kg(v_s-u_s)=60
+  principal multiplicities  g:24 f:16 T_2:14 (T_3)_f:74 T_3(=deg q):51
+  [ok]   (108,72) five orders == direct root-contact count
+  [ok]   (108,72) -mu = (72,63,227)
+  [ok]   (108,72) -mu_3 = 2 mod d_s (W integral)
+  [ok]   (108,72) ord g = 12(2d-7)
+  [ok]   (108,72) face constant c = 60
+  [ok]   (108,72) c is delta-independent (= Kg(v_s-u_s))
+
+  --- candidate screen (N5: den <= u_s = 2; window (1, 7/2)) ---
+   delta=3/2  a=ordT3=-199/2   b=ordg=-48    rho=199/8    cor7.5(<8/3)=KILL  alive: {}
+   delta=2    a=ordT3=-74      b=ordg=-36    rho=74/3     cor7.5(<8/3)=KILL  alive: {}
+   delta=5/2  a=ordT3=-97/2    b=ordg=-24    rho=97/4     cor7.5(<8/3)=KILL  alive: {}
+   delta=3    a=ordT3=-23      b=ordg=-12    rho=23       cor7.5(<8/3)=pass  alive: {'(1, 1)': [(23, 26), (23, 23)]}
+  [ok]   (108,72) unique ODE survivor delta=3
+  [ok]   (108,72) Cor 7.5 independently kills 3/2, 2, 5/2
+  [ok]   (108,72) delta=3 passes Galois (e=1)
+
+=== CONTROL 3: symbolic face solutions (residual identically zero) ===
+  [ok]   (99,66) delta=2 branch B face residual == 0
+  [ok]   (99,66) delta=5/2 face residual == 0
+  [ok]   (99,66) delta=5/2 deg q = 40
+  [ok]   (108,72) delta=3 face residual == 0
+  [ok]   (108,72) delta=3 deg q = 51
+  [ok]   (108,72) delta=3 u' = 5 p^2, deg u = 5
+   p(pi) = -c + pi**2     u(pi) = 5*c**2*pi - 10*c*pi**3/3 + e0 + pi**5     q = p^23 u
+  [ok]   (108,72) delta=3 ODE holds for EVERY monic quadratic p (b1 free)
+   u(+sqrt c) = 8*c**(5/2)/3 + e0   -> r=(26,23) iff e0 = -8/3 c^(5/2)
+  [ok]   (108,72) (26,26) is unreachable: u vanishes at both roots only if c = 0
+  [ok]   J(f,T_3) reduces to the same face ODE as J(g,T_3)
+
+=== chart-design counts ===
+  (99,66) {"bideg_g": [72, 27], "bideg_f": [48, 18], "bideg_T2": [40, 15], "full_total_degree": 7328, "monic": 7326, "prop62_box": 2975, "cut": 2.463, "tower_ydeg": [99, 33, 11, 1]}
+  (108,72) {"bideg_g": [84, 24], "bideg_f": [56, 16], "bideg_T2": [49, 14], "full_total_degree": 8696, "monic": 8694, "prop62_box": 3094, "cut": 2.811, "tower_ydeg": [108, 36, 9, 1]}
+  [ok]   (99,66) box 2044+931=2975 and full 7328 reproduce the charged review
+
+FAILURES: none
