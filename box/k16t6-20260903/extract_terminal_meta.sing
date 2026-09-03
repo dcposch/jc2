@@ -1,0 +1,31 @@
+// Lex leading data of the charged t=6 heuristic terminal, band order 0..11.
+// Ring map: A_6 = Q[q13_1]/(H_6), remaining (q7_0,q8_1,q9_1,q10_1,q11_1,q12_1)
+// in that generator order, lp.  Matching names are not a proof; the map is this
+// declaration plus the charged QHy generators (H first, then 12 rows).
+LIB "elim.lib";
+ring RAC=0,(gamma,pi),dp;
+poly FAC=pi;
+poly GAC=pi-(gamma^2)/2;
+poly JAC=diff(FAC,gamma)*diff(GAC,pi)-diff(FAC,pi)*diff(GAC,gamma);
+if (JAC==gamma) { print("CONTROL_ACTUAL_PAIR_PASS J=gamma"); } else { print("CONTROL_ACTUAL_PAIR_FAIL"); }
+ring R=(0,q13_1),(q7_0,q8_1,q9_1,q10_1,q11_1,q12_1),lp;
+minpoly=2028*q13_1^2 - 1092*q13_1 + 140;
+option(redSB);
+execute(read("t6_heuristic_exact_QHy_std.sing.gens"));
+print("META_START n=");
+size(I);
+for (int i=1; i<=size(I); i++)
+{
+  print("ROW");
+  i;
+  print("DEG");
+  deg(I[i]);
+  print("NTERMS");
+  size(I[i]);
+  print("LM");
+  leadmonom(I[i]);
+  print("LC");
+  leadcoef(I[i]);
+}
+print("META_DONE");
+quit;
