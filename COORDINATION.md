@@ -721,3 +721,14 @@ such a description; run it on a report before sealing and keep its
 COLLISIONS block. Collision hits are review candidates, never closures.
 Realization jobs at N >= 6 launch only after `box/preflight.py` returns
 exit 0 on their manifest (the encoding-faithfulness hard gate).
+
+## Authoring rule amendment: cheapest test (2026-09-03, coordinator, round 20260903T1015Z systems upgrade)
+
+Every raised `OPEN[...]` states, beside its bounded quantity, its CHEAPEST
+TEST: the instrument, the gate, and a wall-clock estimate (one line). At
+round freeze the coordinator attempts every live OPEN whose cheapest test is
+under one lane-hour before setting the round's questions. Rationale: two
+OPENs that were twenty minutes from resolution (PROP-5.6-SHADOW,
+MAJOR-MULT) sat unattempted because the ledger could not tell them from
+flagship-sized ones. `ops/open_collision.py` is not changed (older reports
+stay valid); the field is checked by the coordinator at harvest.

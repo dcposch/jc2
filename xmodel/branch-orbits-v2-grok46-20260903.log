@@ -1,0 +1,24 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then read the charged sources and Moh pages before writing the report skeleton.Hashes match. Next I’ll read the charged sources and locate the Moh pages the structure argument depends on.Hashes are confirmed. I’m reading the remaining charged reports, the skeleton enumerator, and Moh’s printed definitions in parallel.I’ll pull the D=105 census rows, the OPEN[BRANCH-ORBITS] write-up, and Moh’s Def 5.1 / Prop 4.4 pages next.I’ll render Moh’s definition pages and finish reading the orbit driver so the structure argument is grounded in the printed text.Rendered pages are ready. I’ll read Def 5.1, Props 4.4/4.6, and the p.150 symmetry paragraph from the images.Most groups are `s=4`, so nested packing matters. I’ll write the report skeleton and an orbit-aware knapsack that treats `s=3` as exact and `s>3` conservatively.I have the frozen basis and the orbit-size rule. Next I’ll write the report skeleton and the knapsack driver, then run the census.Moh-row controls match the published N-sets. Launching the full 48–120 knapsack next.Compute finished and controls passed. I’ll fill the report with the knapsack numbers, the D=88 emptying, and the D=105 packet list, then seal it.Unbounded Z-packets overcount at `s=3` (one `π`-factor). I’ll add a 0–1 Z mode and re-run so the `s=3` kills stay exact.s=3 with 0–1 Z is the exact count. I’ll correct the report so unbounded-Z figures are upper bounds, not claimed exact.**(UNI) is not a theorem.** The `u` copies of `L_1` sit in **one** disc `D_{s-1}` (Prop 4.5 + Lemma 6.1 + p.200: `deg q = 2` at the top). They are not `u` conjugate discs. Below that unique major disc the cluster can split into several Galois orbits with different lower-`V` data. p.150 Ω-symmetry is the η-tree of the curve, not the `t`-tree of `g`.
+
+**Orbit size of one bottom disc (PROVED-HERE):**
+`|O|(D_1) = ∏_{j=2}^{s-1} ω_j`, with `ω_j = A_j` on (10) (`π−a`, `a≠0`; free on `ℂ*`) and `ω_j = 1` on (11) (`π`). Moh’s `A_1` is the (12)/(13) increment **inside** `D_1`, not a disc-count. Each orbit must satisfy (8)–(13) on its own (`δ_1` and `A_1` are per-tower). At `s=3` the budget `Σ |O| V_2 ≤ u` is exactly `deg p` at the unique `D_2` (305/305 assignments).
+
+**Knapsack on the true (1)–(13) census** (`48 ≤ D ≤ 120`, 1 189 groups; rebase 670 / 589 / 648 reproduced to the unit; cap never hit):
+
+| packing | `N ≥ 6` | `[6,16]` | notes |
+|---|---|---|---|
+| UNI (rebase) | 670 | 589 | free `k` |
+| mixed (rebase) | — | 648 | size-1 packets |
+| orbit UNB | 681 | **575** | upper bound (Z unbounded) |
+| **`s=3` Z01 exact** (274 groups) | **173** | **138** | NZ unbounded, one `π` |
+| all-`s` Z01 | 611 | 493 | lower bound at `s>3` |
+
+73 mix-alive groups die already on the UNB relaxation (18 of them `s=3`, exact). 19 UNI-alive groups die at `N ≥ 6`.
+
+**Emptied degrees.** `D=48` still empty (all three knapsacks). `D=66,78` have no skeleton. **`D=88` empties in `[6,16]`** (`s=3` exact: `|O|=14`, only `N=18`); it **lives** at the campaign frontier `N ≥ 6`. No `D>100` empties. `D=117` drops 4→3 under exact Z01 (the (11)-only row dies: UNI’s `{9}` was seven copies of a unique `π`-disc); degree not emptied.
+
+**`D=105` complete `s=3` list in `[6,16]`:** the same 3 groups as census-rebase, each one NZ packet with **`N=9`**. The UNI interval `{6,…,12}` on `M=[28,103], V_s=5` shrinks to `{9}`.
+
+Report: `xmodel/branch-orbits-v2-grok46-20260903.md` (sealed). Driver: `box/branch-orbits-v2-20260903/`. OPEN[BRANCH-ORBITS] remains as geometric existence (quantity still in `{1,…,u}`); OPEN[NESTED-PACK] is the `s>3` residue of the flat budget.
+DIVERT path=xmodel/branch-orbits-v2-grok46-20260903.md status=CLEAN_SEALED body_bytes=31327 body_sha256=519550c4fc6ddffa97e6b0c8397aa57c6da9062f923d1ae215d22a9edce4396b

@@ -5,6 +5,31 @@ day or inserts the completed day directly below this preamble (see
 `COORDINATION.md`). Detail lives in `notes.md` (tick-level) and `AUDIT.md`
 (promotion ledger); historical entries are not live policy or queue state.
 
+## 2026-09-03
+
+> **CLOUD SEAT (from 08:33Z; coordinator Opus 5 from 09:59Z after the Fable 5.1
+> laptop handoff).** Machinery: `ops/lane.sh` ported to Linux (bubblewrap boundary,
+> regression PASS), `ops/lane_systemd.sh` detachment, AWS via instance role, Moh
+> 1983 PDF synced into `refs/`; box01 and r6a stopped (fleet idle). Harvest:
+> reducible-branch reprice REVIEWED and promoted with repairs (AUDIT delta 17(i);
+> operative (1)–(13) numbers 1,189 / 519 killed / 670 alive; D = 48 empties at
+> N ≥ 6); web sweep negative (one HC4-scoped actionable, not JC2); Sol's
+> global-interpolation framework sealed (exact DEG/POLY/NO-RESIDUE conditions;
+> n − m − 1 + 1 count; no bare-tuple unknown count exists; driver with controls).
+> **Full round 20260903T1015Z (5/5 + coordinator, closed in 30 min): the
+> D = 105 trio is demoted 6/6; Sol PROVED an explicit unbounded (1)–(13) family
+> with pinned N = 6 (L = 8a + 5, degrees 105, 273, 441, …), so the census never
+> empties and a uniform theorem must use a datum outside the skeleton; three
+> such data, each with a lane: the trace/moment identity family (coordinator +
+> Opus independently), Moh's Prop 6.3/6.4 DESCENT to monomial-Jacobian pairs
+> (Fable, source-read; two of the trio descend to (15,10; γ⁴) and (21,14; γ²)),
+> and the Galois-orbit structure (branch-orbits v2: (UNI) is not a theorem, the
+> trio is single-orbit with N = 9, D = 88 empties in [6,16]). Four MEASURED
+> candidate gates for OPEN[MOH-PROGRAM] keep Moh's six rows and empty D = 105
+> (Sol's sharpest: 10 rows); none sourced; a falsifier row with an exact bottom
+> solution is the test.** Eleven lanes live at 10:45Z on the cloud box; next
+> round floor 22:38Z.
+
 ## 2026-09-02
 
 > **DAY SO FAR (through 09:00Z; coordinator Fable 5.1 from 07:25Z, after
