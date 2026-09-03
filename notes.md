@@ -20869,3 +20869,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T14:41Z NOTE — appendix2-run-k16 partial stage-2 summary (UNSEALED, untyped artifact; box/appendix2-k16-20260903/out/stage2_summary.json): 36 Φ_eff s_eff = 2 rows → SATURATED-EMPTY 9, SHAPE-FAIL:U-NEGATIVE 20 (V₂' > d₂': the s' = 2 A/B chart does not apply — not a kill), SKIP 5, TIMEOUT 2; (28,20) and (40,28) COUNTING-BOUND in that lane's compiler chart. To be re-run under a sealed lane with the licensed top face; the 20 U-NEGATIVE rows are a distinct class (OPEN[U-NEGATIVE-CHART]: what is the Theorem-1.2 chart when V₂' > d₂'?).
 
 ## 2026-09-03T14:43Z EVENT — `twopoint-kills-gate-grok46` FAILED (xAI 500 "model at capacity"); relaunched as v2; fall back to Fable if it recurs (Opus also overloaded).
+
+## 2026-09-03T14:43Z EVENT — `minor-dichotomy-grok46` stopped after 60 min with no activity (xAI capacity; 73-byte log, no drivers); handed to Sol: `minor-dichotomy-sol56-20260903`.
