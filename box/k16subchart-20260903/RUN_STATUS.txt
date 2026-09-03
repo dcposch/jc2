@@ -1,0 +1,53 @@
+k16-subchart-q-opus5-20260903 : long-running job status at seal time
+(this file is written after all producer processes of this lane were stopped)
+
+COMPLETE, EXACT (characteristic zero)
+  s1_r1.log                 symbolic-in-t sub-chart, r=1: c1..c5 and ALL EIGHT
+                            terminal scalars in closed form (3307 s)
+  s1_r2.log                 symbolic-in-t sub-chart, r=2: c1..c4 and ALL EIGHT
+                            terminal scalars in closed form
+  s1_r3.log / s1_r4.log / s1_r5.log
+                            symbolic-in-t sub-charts, r=3,4,5: c1..c4, alpha_t
+                            and A2^(r) (the x^3 scalar) in closed form
+  fixed_r1.json / s3_r1.log fixed-t engine, r=1, t = 6,7,9..14 (t=8 in-line)
+  fixed_r2.json / s3_r2.log fixed-t engine, r=2, t = 10,11,12
+  s12 symbolic checks       SYMBOLIC_VS_FIXED_T_r1 = PASS (9 coefficients,
+                            t=6,7,9..14) and _r2 = PASS (9, t=10,11,12)
+  plane_t{3,4,5,6,7}_r1.out restricted 2-variable ideal, r=1 : DIM=0 at all five
+  plane_t{4,5,6,7}_r2.out   restricted 2-variable ideal, r=2 : DIM=0 at all four
+  initial_t{4,5,6,7}*.out   in_w degeneration : DIM = 2,3,3,4  (upgrade fails)
+  dim_t2_spine_yvar_branch0 full cone, y=1/5 : DIM=1  (negative control)
+  dim_t2_spine_yvar_branch1 full cone, y=2/5 : DIM=0
+  dim_t3_spine_yvar_field   full cone        : DIM=0, 34 gens
+  dim_t4_spine_minpoly_field full cone       : DIM=0, 81 gens
+  s5_engine_control (r=1, t=6,7)  ENGINE_RECORD_CONTROL_r1 = PASS
+  s6_axes.py (t=3..7)       every coordinate axis killed, all norms nonzero
+  s10_unique.py             Lemma UNIQUE-POWER and its exception lists
+
+STATUS-AT-SEAL (see the lines appended below by the seal step)
+  dim_t5_spine_minpoly_field_slim.out   full cone, exact, t=5
+  dim_t7_0_minpoly_field.out            b4=0 cone, exact, t=7
+  s1_r{3,4,5}.log                       the terminal bands after the x^3 row
+
+STOPPED BY HAND (8-byte "halt 1" outputs; never read as a verdict)
+  dim_t4_spine_yvar_field.out, dim_t5_spine_yvar_field.out,
+  dim_t7_0_yvar_field.out, dim_t7_0_minpoly_field_slim.out,
+  chart_b4_free_t6.log  -- all stopped to keep the lane inside 4 cores.
+
+NOT ATTEMPTED, with reason
+  full (b4-free) chart records at t=6,7: the prior lane recorded the t=6 build
+  as not produced; a rebuild started here was stopped to stay inside the core
+  budget.  Consequently no full-cone dim test is claimed at t=6,7.
+  No modular run was used anywhere in this lane.
+
+Anything listed above without a verdict is typed INCONCLUSIVE_TIMEOUT and is
+never read as NONUNIT or as DIM>0.
+
+FINAL STATUS AT SEAL (2026-09-03T22:18Z; all lane producers then stopped)
+  dim_t5_spine_minpoly_field_slim.out : EMPTY after 62 min -> INCONCLUSIVE_TIMEOUT
+  dim_t7_0_minpoly_field.out          : EMPTY after 47 min -> INCONCLUSIVE_TIMEOUT
+  s1_r3.log, s1_r4.log, s1_r5.log     : complete through the x^3 row at band
+                                        t+3r+1, which is all that Sec. 5 uses;
+                                        the later bands were still running and
+                                        are typed INCONCLUSIVE_TIMEOUT.
+  Neither empty .out is read as NONUNIT or as DIM>0 anywhere in the report.

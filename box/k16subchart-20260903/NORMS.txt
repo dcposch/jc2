@@ -1,0 +1,46 @@
+k16-subchart-q-opus5-20260903 : norms of the restricted terminal scalars
+
+Convention: for u = (A d + B)/D with A,B,D polynomial in t, the value printed
+is N(D u) = B^2 - A^2 (t+1)/3.  Since N(u) = N(Du)/D^2 the vanishing locus is
+that of the polynomial below.  Q4 = 27 t^4 + 206 t^3 + 527 t^2 + 540 t + 300.
+All entries are the exact output of s1_subchart_r1.py 1 (see s1_r1.log).
+
+r = 1, sub-chart R = {x = q_(t-1,0), b3}, x weight t-1, b3 weight t+1
+
+ band    monomial   scalar   only positive integer root of the norm
+ 2t-1    b3^2       A1       t=2      (= alpha_t of the banked (4.5))
+ t+4     x^3        A2       t=1
+ t+2     x^2 b3     A3       t=1
+ t       x b3^2     A4       t=2
+ t-2     b3^3       A5       t=2      (= phi_t of the banked (4.6))
+ 5       x^4        A6       t=1
+ 3       x^3 b3     A7       t=1
+ 1       x^2 b3^2   A8       none
+ 0       1          c        none     (band zero: N = t^2(t+1)^2(3t+1)^2(3t+2)(4t+1)/3)
+
+N(A1) = -t^2 (t-2) (3t-1)^2 (3t+1)^2 (3t+2) (27t^3+17t^2+t+2)/3
+N(A2) = 3 t^2 (t-1)^6 (t+1) (t+2)^6 (3t+1)^2 (4t+1) (t^2+3t+6)
+        (25t^2+12t-12) Q4^3
+N(A3) = t^2 (t-1)^4 (t+1)^2 (t+2)^4 (3t-1)(3t+1)^2 (4t+1)(t^2+t+1)(t^2+3t+6)
+        Q4^2 (75t^4+231t^3+435t^2+248t-4)
+N(A4) = -t^2 (t-2)(t+1)(t+2)^2 (3t-1)^2 (3t+1)^2 (4t+1) Q4
+        (27t^4+95t^3+91t^2+13t+2)/3
+N(A5) = -t^2 (t-2)^2 (t+1)(3t-1)(3t+1)^2 (4t+1)
+N(A6) = 3 t^2 (t-1)^6 (t+1)^2 (t+2)^8 (3t+1)^2 (3t+2)(4t+1)(t^2+3t+6)^2 Q4^4
+        (6561t^6+26406t^5+45193t^4+50232t^3+32616t^2+2304t-3312)
+N(A7) = t^2 (t-1)^4 (t+1)^2 (t+2)^6 (3t-1)(3t+1)^2 (3t+2)(4t+1)(t^2+t+1)
+        (t^2+3t+6) Q4^3
+        (2187t^7+8019t^6+13890t^5+18030t^4+19059t^3+12899t^2+4272t+444)
+N(A8) = t^2 (t+1)^2 (t+2)^4 (3t-1)^2 (3t+1)^2 (3t+2)(4t+1)(t^2+t+1)^2
+        (t^2+3t+6) Q4^2 P12(t)/3,   P12 = 26244t^12+240300t^11+1049377t^10
+        +2471065t^9+2371367t^8-1757351t^7-5941531t^6-3076409t^5+3312577t^4
+        +3927975t^3+575094t^2-695052t-199656   (positive at every t>=1)
+
+r = 2 (all eight in s1_r2.log): every norm has t=2 as its only positive
+integer root; in particular
+N(A2^(2)) = 3 t^2 (t-2)^6 (t+1)^2 (t+3)^6 (3t+1)^2 (4t+1)(25t-23)(t^2+5t+13)
+            Q4^(2)^3,   Q4^(2) = 27t^4+278t^3+963t^2+1380t+1100
+N(A6^(2)) = 81 t^2 (t-2)^6 (t+1)^2 (t+3)^8 (3t+1)^2 (3t+2)^2 (4t+1)
+            (t^2+5t+13)^2 (3t^2+2t+11)(27t^3+92t^2+55t-46) Q4^(2)^4
+
+r = 3,4,5 (s1_r{3,4,5}.log): the x^3 scalars only, in report Sec. 5 (5.3).

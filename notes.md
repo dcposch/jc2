@@ -21007,3 +21007,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T22:10Z EVENT — `k16-b4-axis-sol56` sealed (20KB): b₄-axis indexed formula (all t), units t = 2..7; the axis route cannot give b₄ ∈ √I_{t,+} — the global b₄ ≠ 0 chart is the missing statement; the axis/subchart programme is at its limit. → AUDIT delta 17(llll). Lanes live: 7.
 
 ## 2026-09-03T22:17Z EVENT — `k16-properness-gate-opus5` sealed (24KB): the properness promotion lemma CONFIRMED (hypotheses supplied; R local domain suffices) and its application CONFIRMED with two corrections; (T) PROMOTED at t = 3..7 (so t = 1..7 promoted); (V0) ⇔ dim I_{t,+} = 0; τ-criterion strictly weaker; Fable's lead-ideal pattern refuted at t = 7. → AUDIT delta 17(mmmm). Lanes live: 6.
+
+## 2026-09-03T22:19Z EVENT — `k16-subchart-q-opus5` sealed (36KB): Lemma CHAIN; Theorem Q-PLANE (eight units, all t ≥ 3); UNIQUE-POWER; the tail of the chain proved (R = 1..5); the initial-form upgrade FAILS (proved); the residual is the chain's HEAD = the b₄ = 1 chart (OPEN[B4-GLOBAL]). → AUDIT delta 17(nnnn). The uniform question on the ray is exactly TOP-TAIL-UNIT; packet Q1. Lanes live: 5.

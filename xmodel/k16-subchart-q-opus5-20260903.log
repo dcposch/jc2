@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Sealed and verified. Custody: all 24 charged inputs `OK` (manifest generated from the receipt with `awk`, checked with `sha256sum -c`).
+
+## What the lane produced
+
+**(1) The SUBCHART computation on `R = {q_{t−1,0}, b3}`, symbolic in `t`.** The ansatz of §10 is confirmed: five surviving eliminated variables, four high bands + one divisibility equation, a triangular solve. All five scalars `c₁..c₅` are in closed form in `Q(t)[d]/(3d²−t−1)`; `c₂` comes out *identical* to the banked `lam` of (4.4). Exactly eight terminal (band, monomial) coefficients survive, and **all eight are in closed form with their norms** — `A₁ = α_t` and `A₅ = φ_t` reproduce the banked (4.5)/(4.6)/(4.8) on the nose, which was not built in. The new certifying unit is
+
+```
+N(A2) = 3t²(t−1)⁶(t+1)(t+2)⁶(3t+1)²(4t+1)(t²+3t+6)(25t²+12t−12)·Q4³
+```
+
+whose only positive integer root is `t = 1`. Hence **Theorem Q-PLANE** for all `t ≥ 6`; `t = 3,4,5` branched on the records (all three predicted collisions realised), and `DIM = 0` confirmed exactly at `t = 3..7`.
+
+**(2) Iteration.** Lemma UNIQUE-POWER (with a proved exception bound `t ≥ m(1+r)`) shows the two-variable chart already computes the coefficient on the *full* chain sub-chart, so it delivers the chain step `(C_{t−r})` itself, not just a coordinate-plane statement. `HYP(r)` proved at `r = 1,…,5`, giving `V(I_{t,+}) ∩ {b4 = q_{2,0} = … = q_{t−R−1,0} = 0} = {0}` for `t ≥ 3R+3`, `R ≤ 5`. Quadratic patterns fitted at `r=1,2,3` predicted `r=4` and `r=5` exactly — flagged as evidence, not proof; nothing uses the fit.
+
+**(3) Assembly — and a correction to the premise.** `(10.1)` as posed is **not** what a sub-chart delivers, and this is proved, not conjectured: Lemma CHAIN shows the method supplies the *tail* of a radical chain, never its head, and on `{b4=0}` the residual weights `2,3,…` generate everything so Prop. SUBCHART kills nothing there. The `b4`-direction does need its own theorem, and it is exactly `I|_{b4=1} = (1)` — the producer's two-chart split is the *first* link, not an artefact. The tempting upgrade (sub-chart restriction as an `in_w` degeneration) **fails**: `DIM = 2,3,3,4` at `t = 4,5,6,7`.
+
+**(4) Fixed-`t`.** `(8.1)` certified exactly here at `t=2` (both fibres, including the mandatory `DIM=1` negative control), `t=3`, `t=4`. `t=5` full cone and `t=7` `b4=0` cone ran 62/47 min with no output — typed `INCONCLUSIVE_TIMEOUT`, never read as `NONUNIT`. `t=6,7` full cone: no claim (the `b4`-free records do not exist).
+
+**(5) Verdict.** `(T)` on the ray: still **OPEN**. The `q`-directions are no longer the binding constraint — `(C0)`, the `b4=1` chart, is.
+
+Two things to flag: the body is **35.7 KB against the 14–30 KB target** — it grew when `HYP(3)`–`HYP(5)` landed late; I moved the full norm table to `box/k16subchart-20260903/NORMS.txt` but did not cut further, since every remaining block is a requested deliverable. And I used the prior lane's non-charged `chart_t6_b4_0.json`, marked as such at each use.
+DIVERT path=xmodel/k16-subchart-q-opus5-20260903.md status=CLEAN_SEALED body_bytes=35709 body_sha256=3511f8a21dd49b2bf7b32a68a5e51c4f46279764010d23a8934ee6ebc189ed56

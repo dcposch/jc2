@@ -17599,3 +17599,14 @@ cone ideal, with the five hypotheses checked as in §2, is a characteristic-zero
 (T) at that t. STATUS OF THE RAY: (T) PROMOTED at t = 1, 2, 3, 4, 5, 6, 7; the uniform
 statement (V0) for all t ≥ 3 OPEN — the axis/subchart programme is at its limit
 (17(llll)); a global argument is required (packet item for the 20260904T0000Z round).
+
+## INTEGRATION #17 DELTA (nnnn) (2026-09-03T22:19Z, PROVED-HERE structural results + a proved obstruction, producer Opus): THE q-DIRECTIONS OF THE K = 16 TERMINAL CONE — Lemma CHAIN: dim I_{t,+} = 0 iff the residual variables admit an ordering v₁..v_n with v_i ∈ √(I + (v₁..v_{i−1})); each step is a sub-chart statement, so the sub-chart method supplies the TAIL of the chain, never its HEAD — and the head of the natural ordering is exactly the b₄ = 1 top-tail unit test (OPEN[B4-GLOBAL]); Theorem Q-PLANE: for t ≥ 6 on S = {b₄ = q_{2,0} = … = q_{t−2,0} = 0} the spine collapses to five A_t-scalars in closed form, exactly eight (band, monomial) coefficients survive in the positive rows, ALL EIGHT units of A_t for t ≥ 3, T_{t,2t−1}|_S = α_t b₃², T_{t,t+4}|_S = A₂ q_{t−1,0}³ with α_t, A₂ units — so √(I_{t,+}|_S) = (q_{t−1,0}, b₃): chain step (C_{t−1}) proved (t = 3, 4, 5 on the exact records); Lemma UNIQUE-POWER: for fixed r and t ≥ m(1+r), q_{t−r,0}^m is the only monomial of weight m(t−r) in the chain residual, so the two-variable chart R_r computes the step (C_{t−r}) itself — the r = 1..5 closed forms give V(I_{t,+}) ∩ {b₄ = q_{2,0} = … = q_{t−R−1,0} = 0} = {0} for t ≥ 3R + 3, R = 1..5 (a coordinate subspace of dimension R + 1), every further step one unit test HYP(r) capped at r ≤ (t−3)/3; THE INITIAL-FORM UPGRADE FAILS (PROVED): sub-chart restriction is the in_w degeneration (w = 0 on R, 1 off R); dim⟨in_w(gens)⟩ = 0 would certify dim I_{t,+} = 0 but is 2, 3, 3, 4 at t = 4, 5, 6, 7; RESIDUAL: the head of the chain — b₄ ∈ √I_{t,+} (the b₄ = 1 chart) and then q_{2,0} on the full b₄ = 0 cone — neither a sub-chart statement
+
+`k16-subchart-q-opus5-20260903.md` (Opus, 36KB; 24/24 hashes; box/k16subchart-20260903/;
+§7 fixed-t confirmation; §8 denominators and split indices). LEDGER: (10.1) as stated is
+NOT reachable by sub-charts (proved obstruction); the tail of the chain is proved for all
+t (up to the HYP(r) unit tests for larger r); the whole uniform question is now the
+chain's HEAD: OPEN[B4-GLOBAL] (equivalently I_{t,+}|_{b₄=1} = (1) — the original
+TOP-TAIL-UNIT). Consistent with 17(llll) and 17(ffff): every route through
+sub-charts, axes, free bases, generating functions and the Laurent bridge terminates at
+this one inhomogeneous statement; this is the packet's Q1 for round 20260904T0000Z.
