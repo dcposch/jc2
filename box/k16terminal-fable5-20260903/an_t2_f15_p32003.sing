@@ -1,0 +1,19 @@
+ring R=32003,(b3,b4),wp(3,1);
+option(redSB);
+poly T0 = -7465*b4^9+948*b3*b4^6-2240*b3^2*b4^3-2253;
+poly T1 = 7024*b4^8-4798*b3*b4^5+560*b3^2*b4^2;
+poly T2 = 14751*b4^7+8801*b3*b4^4;
+poly T3 = 8254*b4^6-401*b3*b4^3;
+poly T0hom = T0 - subst(T0, b3,0, b4,0);
+print("T0CONST=" + string(T0 - T0hom));
+ideal Jp = T1,T2,T3;
+int tt = timer; ideal G = std(Jp); print("JPLUS t=2 dim=" + string(dim(G)) + " size=" + string(size(G)) + " time=" + string(timer-tt));
+print("JPLUS_LEAD=" + string(lead(G)));
+int NN; poly pw = 1; int found = 0; for (NN=1; NN<=80; NN++) { pw = pw*T0hom; if (reduce(pw, G) == 0) { print("T0HOM_IN_RADICAL power=" + string(NN)); found = 1; break; } } if (found == 0) { print("T0HOM_NOT_FOUND_UP_TO=80"); }
+ideal Jr = Jp, b4; tt = timer; ideal Gr = std(Jr); print("RESZ t=2 dim=" + string(dim(Gr)) + " time=" + string(timer-tt)); print("RESZ_LEAD=" + string(lead(Gr)));
+ideal Jt = T2,T3;
+tt = timer; ideal Gt = std(Jt); print("TOPT t=2 dim=" + string(dim(Gt)) + " time=" + string(timer-tt));
+pw = 1; found = 0; for (NN=1; NN<=80; NN++) { pw = pw*b4; if (reduce(pw, Gt) == 0) { print("TOPT_B4_POWER=" + string(NN)); found = 1; break; } } if (found == 0) { print("TOPT_B4_NOT_FOUND_UP_TO=80"); }
+ideal Jz = subst(T0, b4, 0),subst(T1, b4, 0),subst(T2, b4, 0),subst(T3, b4, 0);
+tt = timer; ideal Gz = std(Jz); if (reduce(1,Gz)==0) { print("CHART_B4_0=UNIT"); } else { print("CHART_B4_0=NONUNIT dim=" + string(dim(Gz))); }
+quit;

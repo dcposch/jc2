@@ -1,0 +1,24 @@
+// Coefficient ideal of T2_face - lam p^5 in z.  Three primes via -c.
+option(redSB);
+int pr = PRIME;
+ring R = pr,(z,c0,a1,a0,b1,lam),dp;
+poly p = z^2*(z+3);
+poly FF = p^9;
+poly GG = p^6;
+poly T2 = GG^3 - FF^2 + c0*GG^2 + (a1*FF + a0)*GG + b1*FF;
+poly H = T2 - lam*p^5;
+ideal I;
+int i;
+for (i=0; i<=deg(H); i++)
+{
+  I = I + coeff(H, z, i);
+}
+ideal Gstd = std(I);
+Gstd;
+// leftover in (c0,a1,a0,b1,lam) after killing z-coeffs
+ideal J = imap(R, Gstd);
+// actually Gstd already in all vars; z should be gone
+size(Gstd);
+Gstd[1];
+Gstd[size(Gstd)];
+exit;

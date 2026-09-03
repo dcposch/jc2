@@ -1,0 +1,92 @@
+{
+  "T2_target": {
+    "deg": 15,
+    "s_order": -5,
+    "shape": "p^5"
+  },
+  "T3_target": {
+    "deg_p10q1": 40,
+    "s_order": -10,
+    "shape": "p^{10} q1"
+  },
+  "Tschirnhausen_entry_s": {
+    "T2_target_s": -5,
+    "a0_G": {
+      "first_s": -6,
+      "in_T2_window": true
+    },
+    "a1_FG": {
+      "first_s": -15,
+      "in_T2_window": true
+    },
+    "b0": {
+      "first_s": 0,
+      "in_T2_window": false
+    },
+    "b1_F": {
+      "first_s": -9,
+      "in_T2_window": true
+    },
+    "c0_G2": {
+      "first_s": -12,
+      "in_T2_window": true
+    }
+  },
+  "elapsed_seconds": 0.002,
+  "h2_order_s": -3,
+  "linearity": {
+    "T2_s_window": "s^{-18}..s^{-5}; N=1 relative to face s^{-18} is linear; N>=2 quadratic",
+    "T3_leader_s_-10": "face G^9-F^6 at s^{-54}; leader not a face multiple of 6 in t, same residual phenomenon",
+    "p10q1_deg": 40
+  },
+  "outer_T2_window": {
+    "A2": {
+      "D2_remain": 264,
+      "T2_orders_min_max": [
+        -18,
+        -12
+      ],
+      "T2_window_k0": 9,
+      "k0_min": -88,
+      "shift": -12
+    },
+    "A3": {
+      "D2_remain": 297,
+      "T2_orders_min_max": [
+        -17,
+        -9
+      ],
+      "T2_window_k0": 14,
+      "k0_min": -90,
+      "shift": -9
+    },
+    "B1": {
+      "D2_remain": 177,
+      "T2_orders_min_max": [
+        -17,
+        -15
+      ],
+      "T2_window_k0": 3,
+      "k0_min": -64,
+      "shift": -15
+    },
+    "B2": {
+      "D2_remain": 264,
+      "T2_orders_min_max": [
+        -18,
+        -12
+      ],
+      "T2_window_k0": 9,
+      "k0_min": -88,
+      "shift": -12
+    }
+  },
+  "p": "pi(pi^2-1)",
+  "q1_monic_c1_b0": {
+    "10": 1,
+    "4": -2.5,
+    "6": 5,
+    "8": -3.75
+  },
+  "type": "DERIVED[DELTA-5/2-LINEAR-SUPPORT / u=v=0 c=1]"
+}

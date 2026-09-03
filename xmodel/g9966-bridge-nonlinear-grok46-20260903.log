@@ -1,0 +1,36 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes from the lane receipt, then write the report skeleton and launch the bounded source-read and computation jobs.Hashes come from the lane receipt; I’ll generate the manifest with awk, run `sha256sum -c`, then write the report skeleton.Hashes go in the workspace box; I’ll write the report skeleton next and start source-read plus the bounded compute jobs.Hashes check out (24/24). Next I’ll write the report skeleton and start source-read plus the bounded jet-expansion jobs.I have the jet picture: first T₂ residuals come from the inner tower, not the D₂-remaining outer A,B. Writing the skeleton and launching the bounded jobs.Writing the report skeleton, then launching the jet-support, residual, and control jobs with time caps.Jobs are running. I’ll poll until they finish, then fill in the report.All jobs are done. Writing the sealed report from the computed ranks, face GBs, and controls.The nonlinear T₂/T₃ bridge on the (99,66) minor jets is written and ranked as a linearized union. `(99,66)` is still **OPEN**. This is not a Keller pair.
+
+**Hashes.** All 24 frozen inputs matched (`sha256sum -c` on an awk manifest from the lane receipt).
+
+**Shapes (Moh p.152, Xu §7.3).** Confirmed:
+
+```text
+T2 = G³ − F² + c0 G² + (a1 F + a0) G + (b1 F + b0)     (4 after α₁=0)
+T3 = G⁹ − F⁶ + Σ α_i(F) G^{9−i}                          (34 after α₁=0)
+```
+
+**Bridge rows.** After (2.4), with `N` the exponent above the `G³−F²` face `t^{-36}` at `δ=2`:
+
+```text
+[t^{-36+N}] T2 = 0  (N=1…25),   = λ p⁵  (N=26)
+```
+
+`N=1` is linear in the chart jets once T-coefficients are fixed; `N≥2` is quadratic/cubic simultaneously, still Newton-affine in the new jets. `b0` first appears at order 0, after the T₂ leader.
+
+**Linearized straight slice** `u=0`, `a=1`, exact `Q*` over `Q`, leftover 0:
+
+| block | rank | remaining |
+|---|---:|---:|
+| `F,G` leaders | 570 | 537 |
+| T₂ vanishing `t^{-35}…^{-11}` | 544 | 563 |
+| union FG+T₂+T₃ | **974** | **167** |
+
+Tschirnhausen face vs `p⁵` / `R`: grevlex std over `GF(32003)`, `GF(104729)`, `GF(1299709)` is the origin `(λ, T-coeffs)`, not `[1]`. Those leaders are not face values.
+
+**Verdict.** `COUNTING-BOUND[LINEARIZED-STRAIGHT-u=0-a=1]` dimension **167** (floor 158 if nine leftover sampled D₁ `B2` columns are independent). Quadratic `N≥2` on those 167 was not completed. Next system: sequential Newton `N=2` on that remainder, plus `[x^{135} y^{27}]` Jacobian.
+
+**Controls.** `(16,12)` with `u_s=1`: bridge trivial, satisfied. Tame degree-6 automorphism `J=1` survives; 128 triangular compositions produced **no** two-factor leading form (`NOT-APPLICABLE`). Degenerate top `(P⁹,P⁶)` has `T2≡0 ≁ p⁵`.
+
+Report: `xmodel/g9966-bridge-nonlinear-grok46-20260903.md` (seal PASS, 15645 body bytes). Drivers: `box/g9966bridge-20260903/`.
+DIVERT path=xmodel/g9966-bridge-nonlinear-grok46-20260903.md status=CLEAN_SEALED body_bytes=15645 body_sha256=54dcc5a93d6faab332fa8979338746bfcd951e20ebcfe5d5ce7ad1ddcafa316f

@@ -1,0 +1,20 @@
+option(redSB);
+int pr = 32003;
+ring R = pr,(z,c2,c3,c4,c5,c6,c7,c8,lam),dp;
+poly p = z^2*(z+3);
+poly FF = p^9;
+poly GG = p^6;
+poly T3 = GG^9 - FF^6 + c2*GG^7 + c3*GG^6 + c4*GG^5 + c5*GG^4 + c6*GG^3 + c7*GG^2 + c8*GG;
+poly RR = z^25*(z+3)^14*(z-2);
+poly H = T3 - lam*RR;
+ideal I;
+int i;
+for (i=0; i<=deg(H); i++)
+{
+  I = I + coeff(H, z, i);
+}
+ideal Gstd = std(I);
+size(Gstd);
+Gstd[1];
+Gstd[size(Gstd)];
+exit;

@@ -1,0 +1,13 @@
+option(redSB);
+ring R = 104729,(z,c2,c3,c4,c5,c6,c7,c8,lam),dp;
+poly p = z^2*(z+3);
+poly F = p^9;
+poly G = p^6;
+poly T3 = G^9 - F^6 + c2*G^7 + c3*G^6 + c4*G^5 + c5*G^4 + c6*G^3 + c7*G^2 + c8*G;
+poly R = z^25*(z+3)^14*(z-2);
+ideal I = T3 - lam*R;
+ideal Gstd = std(I);
+Gstd;
+ideal Elim = eliminate(Gstd, z*c2*c3*c4*c5*c6*c7*c8);
+Elim;
+exit;

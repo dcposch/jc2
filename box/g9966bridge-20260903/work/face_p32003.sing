@@ -1,0 +1,17 @@
+
+// Face-span control: T2(p^6,p^9) Tschirnhausen cannot hit p^5.
+// Ring: GF(p)[z,c0,a1,a0,b1,lam].
+option(redSB);
+int pr = 32003;
+ring R = pr,(z,c0,a1,a0,b1,lam),dp;
+poly p = z^2*(z+3);
+poly F = p^9;
+poly G = p^6;
+poly T2 = G^3 - F^2 + c0*G^2 + (a1*F + a0)*G + b1*F;
+poly target = lam*p^5;
+ideal I = T2 - target;
+ideal Gstd = std(I);
+Gstd;
+ideal Elim = eliminate(Gstd, z*c0*a1*a0*b1);
+Elim;
+exit;

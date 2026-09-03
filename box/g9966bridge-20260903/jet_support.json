@@ -1,0 +1,1325 @@
+{
+  "C2_remain_rq_head": [
+    [
+      5,
+      10
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      7,
+      10
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      9
+    ]
+  ],
+  "C3_remain_rq_head": [
+    [
+      19,
+      10
+    ],
+    [
+      20,
+      10
+    ],
+    [
+      21,
+      9
+    ],
+    [
+      21,
+      10
+    ],
+    [
+      22,
+      8
+    ],
+    [
+      22,
+      9
+    ],
+    [
+      22,
+      10
+    ],
+    [
+      23,
+      8
+    ]
+  ],
+  "T2_Tschirnhausen_entry": {
+    "T2_target_N": 26,
+    "T2_target_order": -10,
+    "a0_G": {
+      "first_N": 24,
+      "first_order": -12,
+      "in_T2_vanishing_window": true
+    },
+    "a1_FG": {
+      "first_N": 6,
+      "first_order": -30,
+      "in_T2_vanishing_window": true
+    },
+    "b0": {
+      "first_N": 36,
+      "first_order": 0,
+      "in_T2_vanishing_window": false
+    },
+    "b1_F": {
+      "first_N": 18,
+      "first_order": -18,
+      "in_T2_vanishing_window": true
+    },
+    "c0_G2": {
+      "first_N": 12,
+      "first_order": -24,
+      "in_T2_vanishing_window": true
+    },
+    "note": "b0 does not appear in the T2 leader at \u03b4=2; a0 first appears at order -12, two steps before the leader."
+  },
+  "counts": {
+    "T2_k0_slots_all_four_blocks": 201,
+    "T2_unknowns_Tschirnhausen_after_alpha1": 4,
+    "T3_k0_slots_all_four_blocks": 201,
+    "T3_unknowns_Tschirnhausen_after_alpha1": 34,
+    "h3_free": 3,
+    "inner_after_D1": 99,
+    "joint_inner_plus_centre_charged": 104,
+    "outer_D2_remain": 1002,
+    "outer_after_D1_expected": 826
+  },
+  "h3_free_after_common_leader": [
+    "c_7_4",
+    "c_10_1",
+    "c_11_0"
+  ],
+  "inner_C2_C3": {
+    "C2_D2_pivots": 114,
+    "C2_ambient": 187,
+    "C2_remain_D2": 73,
+    "C2_remain_after_D1": 68,
+    "C3_D2_pivots": 275,
+    "C3_ambient": 308,
+    "C3_remain_D2": 33,
+    "C3_remain_after_D1": 31,
+    "inner_remain_after_D1": 99
+  },
+  "inner_remain_rq_counts_only": true,
+  "linearity_by_N_delta2_T2": [
+    {
+      "N": 0,
+      "T_coeffs_that_entered": [],
+      "has_cubic_jets": false,
+      "has_quadratic_jets": false,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "identity_cancel",
+      "t_order_delta2": -36
+    },
+    {
+      "N": 1,
+      "T_coeffs_that_entered": [],
+      "has_cubic_jets": false,
+      "has_quadratic_jets": false,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "linear_in_chart",
+      "t_order_delta2": -35
+    },
+    {
+      "N": 2,
+      "T_coeffs_that_entered": [],
+      "has_cubic_jets": false,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -34
+    },
+    {
+      "N": 3,
+      "T_coeffs_that_entered": [],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -33
+    },
+    {
+      "N": 4,
+      "T_coeffs_that_entered": [],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -32
+    },
+    {
+      "N": 5,
+      "T_coeffs_that_entered": [],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -31
+    },
+    {
+      "N": 6,
+      "T_coeffs_that_entered": [
+        "a1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -30
+    },
+    {
+      "N": 7,
+      "T_coeffs_that_entered": [
+        "a1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -29
+    },
+    {
+      "N": 8,
+      "T_coeffs_that_entered": [
+        "a1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -28
+    },
+    {
+      "N": 9,
+      "T_coeffs_that_entered": [
+        "a1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -27
+    },
+    {
+      "N": 10,
+      "T_coeffs_that_entered": [
+        "a1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -26
+    },
+    {
+      "N": 11,
+      "T_coeffs_that_entered": [
+        "a1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -25
+    },
+    {
+      "N": 12,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -24
+    },
+    {
+      "N": 13,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -23
+    },
+    {
+      "N": 14,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -22
+    },
+    {
+      "N": 15,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -21
+    },
+    {
+      "N": 16,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -20
+    },
+    {
+      "N": 17,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -19
+    },
+    {
+      "N": 18,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -18
+    },
+    {
+      "N": 19,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -17
+    },
+    {
+      "N": 20,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -16
+    },
+    {
+      "N": 21,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -15
+    },
+    {
+      "N": 22,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -14
+    },
+    {
+      "N": 23,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -13
+    },
+    {
+      "N": 24,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -12
+    },
+    {
+      "N": 25,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": true,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -11
+    },
+    {
+      "N": 26,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": true,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -10
+    },
+    {
+      "N": 27,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -9
+    },
+    {
+      "N": 28,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -8
+    },
+    {
+      "N": 29,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -7
+    },
+    {
+      "N": 30,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -6
+    },
+    {
+      "N": 31,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -5
+    },
+    {
+      "N": 32,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -4
+    },
+    {
+      "N": 33,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -3
+    },
+    {
+      "N": 34,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -2
+    },
+    {
+      "N": 35,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": -1
+    },
+    {
+      "N": 36,
+      "T_coeffs_that_entered": [
+        "a1",
+        "c0",
+        "b1",
+        "a0",
+        "b0"
+      ],
+      "has_cubic_jets": true,
+      "has_quadratic_jets": true,
+      "in_vanishing_window": false,
+      "is_T2_leader": false,
+      "sequential_Newton": "affine_in_new_jets_fN_gN",
+      "simultaneous_in_chart_after_T_fixed": "nonlinear_in_chart",
+      "t_order_delta2": 0
+    }
+  ],
+  "outer_T2_window_samples": {
+    "A2": [
+      {
+        "T2_k0_order": -26,
+        "T3_k0_order": -98,
+        "delta2": {
+          "highest_u0": -2,
+          "highest_u_generic": -2,
+          "k0_order": -2,
+          "lowest_u0": -2,
+          "lowest_u_generic": -2
+        },
+        "delta52": {
+          "highest_pi": -4,
+          "highest_u": -4,
+          "lowest": -4
+        },
+        "ij": [
+          2,
+          0
+        ],
+        "k0_order": -2,
+        "rq": [
+          63,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -25,
+        "T3_k0_order": -97,
+        "delta2": {
+          "highest_u0": -1,
+          "highest_u_generic": -1,
+          "k0_order": -1,
+          "lowest_u0": -1,
+          "lowest_u_generic": -1
+        },
+        "delta52": {
+          "highest_pi": -2,
+          "highest_u": -2,
+          "lowest": -2
+        },
+        "ij": [
+          1,
+          0
+        ],
+        "k0_order": -1,
+        "rq": [
+          64,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -24,
+        "T3_k0_order": -96,
+        "delta2": {
+          "highest_u0": 0,
+          "highest_u_generic": 0,
+          "k0_order": 0,
+          "lowest_u0": 0,
+          "lowest_u_generic": 0
+        },
+        "delta52": {
+          "highest_pi": 0,
+          "highest_u": 0,
+          "lowest": 0
+        },
+        "ij": [
+          0,
+          0
+        ],
+        "k0_order": 0,
+        "rq": [
+          65,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -27,
+        "T3_k0_order": -99,
+        "delta2": {
+          "highest_u0": 0,
+          "highest_u_generic": -1,
+          "k0_order": -3,
+          "lowest_u0": -3,
+          "lowest_u_generic": -3
+        },
+        "delta52": {
+          "highest_pi": 1,
+          "highest_u": -2,
+          "lowest": -6
+        },
+        "ij": [
+          2,
+          1
+        ],
+        "k0_order": -3,
+        "rq": [
+          62,
+          1
+        ]
+      },
+      {
+        "T2_k0_order": -26,
+        "T3_k0_order": -98,
+        "delta2": {
+          "highest_u0": 1,
+          "highest_u_generic": 0,
+          "k0_order": -2,
+          "lowest_u0": -2,
+          "lowest_u_generic": -2
+        },
+        "delta52": {
+          "highest_pi": 3,
+          "highest_u": 0,
+          "lowest": -4
+        },
+        "ij": [
+          1,
+          1
+        ],
+        "k0_order": -2,
+        "rq": [
+          63,
+          1
+        ]
+      }
+    ],
+    "A3": [
+      {
+        "T2_k0_order": -21,
+        "T3_k0_order": -93,
+        "delta2": {
+          "highest_u0": -3,
+          "highest_u_generic": -3,
+          "k0_order": -3,
+          "lowest_u0": -3,
+          "lowest_u_generic": -3
+        },
+        "delta52": {
+          "highest_pi": -6,
+          "highest_u": -6,
+          "lowest": -6
+        },
+        "ij": [
+          3,
+          0
+        ],
+        "k0_order": -3,
+        "rq": [
+          95,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -20,
+        "T3_k0_order": -92,
+        "delta2": {
+          "highest_u0": -2,
+          "highest_u_generic": -2,
+          "k0_order": -2,
+          "lowest_u0": -2,
+          "lowest_u_generic": -2
+        },
+        "delta52": {
+          "highest_pi": -4,
+          "highest_u": -4,
+          "lowest": -4
+        },
+        "ij": [
+          2,
+          0
+        ],
+        "k0_order": -2,
+        "rq": [
+          96,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -19,
+        "T3_k0_order": -91,
+        "delta2": {
+          "highest_u0": -1,
+          "highest_u_generic": -1,
+          "k0_order": -1,
+          "lowest_u0": -1,
+          "lowest_u_generic": -1
+        },
+        "delta52": {
+          "highest_pi": -2,
+          "highest_u": -2,
+          "lowest": -2
+        },
+        "ij": [
+          1,
+          0
+        ],
+        "k0_order": -1,
+        "rq": [
+          97,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -18,
+        "T3_k0_order": -90,
+        "delta2": {
+          "highest_u0": 0,
+          "highest_u_generic": 0,
+          "k0_order": 0,
+          "lowest_u0": 0,
+          "lowest_u_generic": 0
+        },
+        "delta52": {
+          "highest_pi": 0,
+          "highest_u": 0,
+          "lowest": 0
+        },
+        "ij": [
+          0,
+          0
+        ],
+        "k0_order": 0,
+        "rq": [
+          98,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -22,
+        "T3_k0_order": -94,
+        "delta2": {
+          "highest_u0": -1,
+          "highest_u_generic": -2,
+          "k0_order": -4,
+          "lowest_u0": -4,
+          "lowest_u_generic": -4
+        },
+        "delta52": {
+          "highest_pi": -1,
+          "highest_u": -4,
+          "lowest": -8
+        },
+        "ij": [
+          3,
+          1
+        ],
+        "k0_order": -4,
+        "rq": [
+          94,
+          1
+        ]
+      }
+    ],
+    "B1": [
+      {
+        "T2_k0_order": -31,
+        "T3_k0_order": -103,
+        "delta2": {
+          "highest_u0": -1,
+          "highest_u_generic": -1,
+          "k0_order": -1,
+          "lowest_u0": -1,
+          "lowest_u_generic": -1
+        },
+        "delta52": {
+          "highest_pi": -2,
+          "highest_u": -2,
+          "lowest": -2
+        },
+        "ij": [
+          1,
+          0
+        ],
+        "k0_order": -1,
+        "rq": [
+          31,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -30,
+        "T3_k0_order": -102,
+        "delta2": {
+          "highest_u0": 0,
+          "highest_u_generic": 0,
+          "k0_order": 0,
+          "lowest_u0": 0,
+          "lowest_u_generic": 0
+        },
+        "delta52": {
+          "highest_pi": 0,
+          "highest_u": 0,
+          "lowest": 0
+        },
+        "ij": [
+          0,
+          0
+        ],
+        "k0_order": 0,
+        "rq": [
+          32,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -32,
+        "T3_k0_order": -104,
+        "delta2": {
+          "highest_u0": 1,
+          "highest_u_generic": 0,
+          "k0_order": -2,
+          "lowest_u0": -2,
+          "lowest_u_generic": -2
+        },
+        "delta52": {
+          "highest_pi": 3,
+          "highest_u": 0,
+          "lowest": -4
+        },
+        "ij": [
+          1,
+          1
+        ],
+        "k0_order": -2,
+        "rq": [
+          30,
+          1
+        ]
+      },
+      {
+        "T2_k0_order": -31,
+        "T3_k0_order": -103,
+        "delta2": {
+          "highest_u0": 2,
+          "highest_u_generic": 1,
+          "k0_order": -1,
+          "lowest_u0": -1,
+          "lowest_u_generic": -1
+        },
+        "delta52": {
+          "highest_pi": 5,
+          "highest_u": 2,
+          "lowest": -2
+        },
+        "ij": [
+          0,
+          1
+        ],
+        "k0_order": -1,
+        "rq": [
+          31,
+          1
+        ]
+      },
+      {
+        "T2_k0_order": -33,
+        "T3_k0_order": -105,
+        "delta2": {
+          "highest_u0": 3,
+          "highest_u_generic": 1,
+          "k0_order": -3,
+          "lowest_u0": -3,
+          "lowest_u_generic": -3
+        },
+        "delta52": {
+          "highest_pi": 8,
+          "highest_u": 2,
+          "lowest": -6
+        },
+        "ij": [
+          1,
+          2
+        ],
+        "k0_order": -3,
+        "rq": [
+          29,
+          2
+        ]
+      }
+    ],
+    "B2": [
+      {
+        "T2_k0_order": -26,
+        "T3_k0_order": -98,
+        "delta2": {
+          "highest_u0": -2,
+          "highest_u_generic": -2,
+          "k0_order": -2,
+          "lowest_u0": -2,
+          "lowest_u_generic": -2
+        },
+        "delta52": {
+          "highest_pi": -4,
+          "highest_u": -4,
+          "lowest": -4
+        },
+        "ij": [
+          2,
+          0
+        ],
+        "k0_order": -2,
+        "rq": [
+          63,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -25,
+        "T3_k0_order": -97,
+        "delta2": {
+          "highest_u0": -1,
+          "highest_u_generic": -1,
+          "k0_order": -1,
+          "lowest_u0": -1,
+          "lowest_u_generic": -1
+        },
+        "delta52": {
+          "highest_pi": -2,
+          "highest_u": -2,
+          "lowest": -2
+        },
+        "ij": [
+          1,
+          0
+        ],
+        "k0_order": -1,
+        "rq": [
+          64,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -24,
+        "T3_k0_order": -96,
+        "delta2": {
+          "highest_u0": 0,
+          "highest_u_generic": 0,
+          "k0_order": 0,
+          "lowest_u0": 0,
+          "lowest_u_generic": 0
+        },
+        "delta52": {
+          "highest_pi": 0,
+          "highest_u": 0,
+          "lowest": 0
+        },
+        "ij": [
+          0,
+          0
+        ],
+        "k0_order": 0,
+        "rq": [
+          65,
+          0
+        ]
+      },
+      {
+        "T2_k0_order": -27,
+        "T3_k0_order": -99,
+        "delta2": {
+          "highest_u0": 0,
+          "highest_u_generic": -1,
+          "k0_order": -3,
+          "lowest_u0": -3,
+          "lowest_u_generic": -3
+        },
+        "delta52": {
+          "highest_pi": 1,
+          "highest_u": -2,
+          "lowest": -6
+        },
+        "ij": [
+          2,
+          1
+        ],
+        "k0_order": -3,
+        "rq": [
+          62,
+          1
+        ]
+      },
+      {
+        "T2_k0_order": -26,
+        "T3_k0_order": -98,
+        "delta2": {
+          "highest_u0": 1,
+          "highest_u_generic": 0,
+          "k0_order": -2,
+          "lowest_u0": -2,
+          "lowest_u_generic": -2
+        },
+        "delta52": {
+          "highest_pi": 3,
+          "highest_u": 0,
+          "lowest": -4
+        },
+        "ij": [
+          1,
+          1
+        ],
+        "k0_order": -2,
+        "rq": [
+          63,
+          1
+        ]
+      }
+    ]
+  },
+  "outer_blocks": {
+    "A2": {
+      "D2_remain": 264,
+      "D2_vanish": 1386,
+      "T2_shift": -24,
+      "T2_window_slots_k0": 46,
+      "T3_shift": -96,
+      "T3_window_slots_k0": 46,
+      "ambient": 1650,
+      "k0_counts_head": {
+        "-37": 6,
+        "-38": 6,
+        "-39": 5,
+        "-40": 4,
+        "-41": 3,
+        "-42": 3,
+        "-43": 2,
+        "-44": 1
+      },
+      "k0_counts_tail": {
+        "-1": 2,
+        "-2": 3,
+        "-3": 3,
+        "-4": 3,
+        "-5": 3,
+        "0": 1
+      },
+      "k0_order_max": 0,
+      "k0_order_min": -44,
+      "name": "A2",
+      "role": "F via A2*h2"
+    },
+    "A3": {
+      "D2_remain": 297,
+      "D2_vanish": 2442,
+      "T2_shift": -18,
+      "T2_window_slots_k0": 94,
+      "T3_shift": -90,
+      "T3_window_slots_k0": 94,
+      "ambient": 2739,
+      "k0_counts_head": {
+        "-38": 6,
+        "-39": 6,
+        "-40": 5,
+        "-41": 4,
+        "-42": 3,
+        "-43": 3,
+        "-44": 2,
+        "-45": 1
+      },
+      "k0_counts_tail": {
+        "-1": 2,
+        "-2": 3,
+        "-3": 4,
+        "-4": 4,
+        "-5": 4,
+        "0": 1
+      },
+      "k0_order_max": 0,
+      "k0_order_min": -45,
+      "name": "A3",
+      "role": "F via A3"
+    },
+    "B1": {
+      "D2_remain": 177,
+      "D2_vanish": 384,
+      "T2_shift": -30,
+      "T2_window_slots_k0": 15,
+      "T3_shift": -102,
+      "T3_window_slots_k0": 15,
+      "ambient": 561,
+      "k0_counts_head": {
+        "-25": 8,
+        "-26": 8,
+        "-27": 8,
+        "-28": 8,
+        "-29": 9,
+        "-30": 9,
+        "-31": 9,
+        "-32": 9
+      },
+      "k0_counts_tail": {
+        "-1": 2,
+        "-2": 2,
+        "-3": 2,
+        "-4": 2,
+        "-5": 3,
+        "0": 1
+      },
+      "k0_order_max": 0,
+      "k0_order_min": -32,
+      "name": "B1",
+      "role": "G via B1*h2"
+    },
+    "B2": {
+      "D2_remain": 264,
+      "D2_vanish": 1386,
+      "T2_shift": -24,
+      "T2_window_slots_k0": 46,
+      "T3_shift": -96,
+      "T3_window_slots_k0": 46,
+      "ambient": 1650,
+      "k0_counts_head": {
+        "-37": 6,
+        "-38": 6,
+        "-39": 5,
+        "-40": 4,
+        "-41": 3,
+        "-42": 3,
+        "-43": 2,
+        "-44": 1
+      },
+      "k0_counts_tail": {
+        "-1": 2,
+        "-2": 3,
+        "-3": 3,
+        "-4": 3,
+        "-5": 3,
+        "0": 1
+      },
+      "k0_order_max": 0,
+      "k0_order_min": -44,
+      "name": "B2",
+      "role": "G via B2"
+    }
+  },
+  "pullback": "D2 remaining (r,q) is t^r (w-1)^q, i.e. the (x,y) polynomial x^{D-r-q}(y-x)^q.  At the minor line this is NOT a pure x^i y^j pole: (y-x)^q ~ (-x)^q plus y-corrections, so the k=0 term has t-order r-D, which for remaining A3 starts at -45 (more singular than F_lead=-18).  Those slots are genuine subleading-to-the-top jets and must cancel in (2.4) before T2 is matched.",
+  "type": "DERIVED[MINOR-JET-SUPPORT]",
+  "windows": {
+    "delta2": {
+      "F_lead": -18,
+      "G3_F2_face": -36,
+      "G9_F6_face": -108,
+      "G_lead": -12,
+      "H": "z^2(z+3a)",
+      "T2_lead": -10,
+      "T2_shape": "p^5 = z^{10}(z+3a)^5",
+      "T3_lead": -25,
+      "T3_shape": "R = z^{25}(z+3a)^{14}(z-2a)",
+      "delta": 2,
+      "p": "z^2 (z+3a)",
+      "packets_F": "18+9"
+    },
+    "delta52": {
+      "F_lead": "-9/2",
+      "G3_F2_face": "-9",
+      "G9_F6_face": "-27",
+      "G_lead": "-3",
+      "H": "pi(pi^2-c)",
+      "T2_lead": "-5/2",
+      "T2_shape": "p^5",
+      "T3_lead": "-5",
+      "T3_shape": "p^{10} q1, q1=-2\u222bp^3",
+      "delta": "5/2",
+      "p": "pi (pi^2 - c)",
+      "packets_F": "9+9+9"
+    }
+  }
+}

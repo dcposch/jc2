@@ -1,0 +1,44 @@
+{
+  "D1_already_used": 39,
+  "D1_pivot_columns_total": 48,
+  "D1_still_in_remaining": 9,
+  "blocks": {
+    "A2": {
+      "D1_pivots": 12,
+      "already_pivoted_by_FG_or_T2": 12,
+      "present_head": [],
+      "still_remaining_after_linear_bridge": 0
+    },
+    "A3": {
+      "D1_pivots": 12,
+      "already_pivoted_by_FG_or_T2": 12,
+      "present_head": [],
+      "still_remaining_after_linear_bridge": 0
+    },
+    "B1": {
+      "D1_pivots": 12,
+      "already_pivoted_by_FG_or_T2": 12,
+      "present_head": [],
+      "still_remaining_after_linear_bridge": 0
+    },
+    "B2": {
+      "D1_pivots": 12,
+      "already_pivoted_by_FG_or_T2": 3,
+      "present_head": [
+        "B2_63_0",
+        "B2_64_0",
+        "B2_62_1",
+        "B2_63_1",
+        "B2_61_2",
+        "B2_62_2",
+        "B2_59_3",
+        "B2_60_3"
+      ],
+      "still_remaining_after_linear_bridge": 9
+    }
+  },
+  "counting_bound_after_D1_if_independent": 158,
+  "note": "If all D1 pivot columns still remaining are independent of the linear bridge, remaining drops by that count.  Independence not re-proved here; this is a floor.",
+  "type": "DERIVED[D1-INTERSECT + FACE-MODULAR-SCRIPTS]",
+  "union_remaining": 167
+}

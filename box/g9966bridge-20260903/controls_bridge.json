@@ -1,0 +1,210 @@
+{
+  "automorphism_11": {
+    "J": "1",
+    "J_is_1": true,
+    "T2_T3": "NOT-APPLICABLE[degrees (1,1); no mu2=55]",
+    "degrees": [
+      1,
+      1
+    ],
+    "pair": "F=a*x+y, G=(a-1)*x+y",
+    "survives": true
+  },
+  "controls_pass": true,
+  "degenerate_two_point_top": {
+    "J_is_0": true,
+    "T2_G3_minus_F2": "0",
+    "T2_equals_p5": false,
+    "T2_is_zero": true,
+    "degrees": [
+      99,
+      66
+    ],
+    "linear_factors_of_P": [
+      "y",
+      "y-x"
+    ],
+    "pair": "F=P^9, G=P^6, P=y^3(y-x)^8",
+    "status": "two-point leading form, not an automorphism (J=0); T2 identically 0 is not ~ p^5.  Degeneration.  The bridge does not hold vacuously of every two-point pair."
+  },
+  "source_identities": {
+    "face_ODE_holds": true,
+    "q1_degree": 10,
+    "q1_minus_2_int_p3": "pi**4*(10*c**3 - 20*c**2*pi**2 + 15*c*pi**4 - 4*pi**6)/20",
+    "xu_8_2_holds": true
+  },
+  "two_point_search": {
+    "compositions_tested": 128,
+    "construction_status": "NOT-APPLICABLE[tame-two-factor] / FALLACY-v2 no fill-by-analogy",
+    "hits": [],
+    "hits_two_distinct_linear_factors": 0,
+    "sample_head": [
+      {
+        "J": "1",
+        "deg": [
+          4,
+          2
+        ],
+        "ell": 2,
+        "k": 2,
+        "linear": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "n_lin_F": 1,
+        "n_lin_G": 1
+      },
+      {
+        "J": "1",
+        "deg": [
+          2,
+          4
+        ],
+        "ell": 2,
+        "k": 2,
+        "linear": [
+          0,
+          1,
+          -1,
+          0
+        ],
+        "n_lin_F": 1,
+        "n_lin_G": 1
+      },
+      {
+        "J": "1",
+        "deg": [
+          4,
+          2
+        ],
+        "ell": 2,
+        "k": 2,
+        "linear": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "n_lin_F": 1,
+        "n_lin_G": 1
+      },
+      {
+        "J": "1",
+        "deg": [
+          4,
+          4
+        ],
+        "ell": 2,
+        "k": 2,
+        "linear": [
+          1,
+          0,
+          1,
+          1
+        ],
+        "n_lin_F": 1,
+        "n_lin_G": 1
+      },
+      {
+        "J": "1",
+        "deg": [
+          4,
+          4
+        ],
+        "ell": 2,
+        "k": 2,
+        "linear": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "n_lin_F": 1,
+        "n_lin_G": 1
+      },
+      {
+        "J": "1",
+        "deg": [
+          4,
+          4
+        ],
+        "ell": 2,
+        "k": 2,
+        "linear": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "n_lin_F": 1,
+        "n_lin_G": 1
+      },
+      {
+        "J": "-1",
+        "deg": [
+          4,
+          4
+        ],
+        "ell": 2,
+        "k": 2,
+        "linear": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "n_lin_F": 1,
+        "n_lin_G": 1
+      },
+      {
+        "J": "2",
+        "deg": [
+          4,
+          4
+        ],
+        "ell": 2,
+        "k": 2,
+        "linear": [
+          1,
+          -1,
+          1,
+          1
+        ],
+        "n_lin_F": 1,
+        "n_lin_G": 1
+      }
+    ],
+    "tame_deg6_witness": {
+      "J": "1",
+      "J_is_1": true,
+      "deg_F": 6,
+      "deg_G": 2,
+      "leading_F": "x**6",
+      "leading_G": "x**2",
+      "linear_factors_F": [
+        [
+          "x",
+          6
+        ]
+      ],
+      "map": "\u03b2\u2218\u03b1, \u03b1=(x,y+x^2), \u03b2=(x+y^3,y)",
+      "status": "SURVIVES[J=1 / tame deg>=6] / NOT-APPLICABLE[two-point T2~p^5; leading form is a power of one linear]"
+    },
+    "theorem": "A polynomial coordinate has a unique point at infinity in P^2: its leading form is a power of a single linear form.  Triangular automorphisms (and their affine conjugates) are coordinates.  No composition in this search, and no tame automorphism, produces two distinct linear factors in in(F) or in(G)."
+  },
+  "type": "CONTROLS[u_s=1 + tame-deg6 + two-factor-search + degenerate-top]",
+  "us1_1612": {
+    "Moh_Prop_4_4": "nonsplitting at a disc; leading forms powers of a linear",
+    "Xu_Prop_7_3": "T0,sigma1,...,Ts,sigma1 are powers of a common linear polynomial",
+    "bridge_rows_added": 0,
+    "bridge_unknowns_added": 0,
+    "charged_GB": "SATURATED-EMPTY[P208-ANSATZ / GF(32003)] both c5 readings",
+    "parent": "(64,48)",
+    "reduced": "(16,12) Moh p.208",
+    "split_leader_R_or_q1": false,
+    "status": "TRIVIAL[u_s=1] / SATISFIED",
+    "u_s": 1
+  }
+}

@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Work is complete and sealed at the marker: the report is written to `xmodel/k16-terminal-proof-fable5-20260903.md` (27.3 KB, `<!-- BODY-END -->` as the last line, no placeholders), all producers are stopped, and the lane manifest `SHA256SUMS.final` covers 179 files in `box/k16terminal-fable5-20260903/`.
+
+**Verdict: PARTIAL.** Theorem (T) is not proved for all t. What the lane delivered:
+
+- **Closed indexed form of T_{t,k}.** The whole terminal family is written as five polynomial identities in w = 1/h whose w^j coefficients are the weight-j bands (the "w-picture"), with every division listed. A new Singular replay of the proved Laurent/Euler spine reproduces the banked t=2 record on both fibres and matches all of Sol's pivot closed forms at t = 3..7 exactly.
+- **b3-axis lemma, proved for all t.** On the axis b4 = q = 0 the family collapses to α_t b3² and β_t b3³ with explicit closed forms in Q(t)[d]. Their norms carry the factor (t − 2), so both are units for every t ≥ 3 and vanish exactly at t = 2. That derives the banked t = 2 exception to RESIDUAL-ZERO. A weight-1 linearization also gives the first b4-axis pivot γ_{t,1} in closed form, whose denominator is the cubic factor of F_C(t,1); this explains why no coefficient carrying b4 or q_j has a polynomial-in-t closed form.
+- **Promotion lemma.** Since T_{t,1..2t−1} are weighted homogeneous, their zero locus is a proper family over the valuation ring of a good prime, so a modular "cone = {0}" is a characteristic-zero certificate. Positive control: exact and modular t = 4 agree. Negative control: t = 2, y = 1/5 has a one-dimensional cone both exactly and mod 32003.
+- **New kills.** (8.1), hence (T), certified in characteristic zero at t = 5, 6, 7 (exact rows, modular cone dimension 0, promoted). t = 2, 3, 4 re-certified exactly.
+- **Split index t = 11.** The full spine replays mod 32003 on both rational fibres with all 23 pivots units and no zero divisor inverted. The cone tests themselves did not finish within budget on a host at load average 40 to 60 and are typed INCONCLUSIVE_TIMEOUT, as are t = 8, 9.
+- **Not obtained.** A t-uniform proof of TOP-TAIL-UNIT or RESIDUAL-ZERO. Both reduce, via the unit α_t, to resultant systems in the q-variables whose coefficients are t-indexed sequences with pivot-norm denominators.
+
+**Next step.** The remaining statement is V(T_{t,1}, …, T_{t,2t−1}) = {0} for every t ≥ 3. Its cheapest test at any new t is now a modular spine plus a modular homogeneous dimension test, which the promotion lemma turns into a proof; the t = 11 fibres need roughly an hour of dedicated CPU each.
+DIVERT path=xmodel/k16-terminal-proof-fable5-20260903.md status=CLEAN body_bytes=27275 body_sha256=16d5112ae6ed9a6de0c504b11df2e19c97ed031a1715a3916fd8d207cdf0d961
