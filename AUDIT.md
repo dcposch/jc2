@@ -15686,3 +15686,47 @@ Keller pair is a JC hypothetical (0 known). Consequence for the record: the
 moment identities (DEG) are the exact global degree block; every
 "unknowns − conditions" count in the record that used the bare tuple is a
 COUNTING-BOUND at best (the endgame flagship's, GPT-5.5's 34-vs-35 razor).
+
+## INTEGRATION #17 DELTA (m) (2026-09-03T11:00Z, SOURCE-READ, cross-model): THE SCALAR-GATE HUNT FOR OPEN[MOH-PROGRAM] CLOSES NEGATIVE — NOT-ALL-(11) IS THE ONLY LICENSED SHADOW; THE LAST MILE IS FOUR ROWS; THE FALSIFIER GLUES NUMERICALLY
+
+`p202-ten-rows-gate-audit-grok46-20260903.md` (Grok, pp.179–189, 193–194,
+196–202, 207–212 as images; drivers box/p202-audit-20260903/) on the round's
+four measured candidate gates (Opus, Fable, Sol; deltas (k)). MEASURED
+(fail-closed, 658 rows / 63 classes base): Sol's M₂ > n − d₂ ∧ forced-(10)
+at every level → 10 rows / 6 classes = Moh's six + four extras ((96,64)
+M = (68,94) V = (2,3); (76,94) (3,3); (72,94) (2,7); (100,40) (88,98) (3,3));
+on the 658 rows Sol's conjunction IMPLIES M₂ > m, MAJOR-MULT and Opus-3
+(10 ⊂ 51; M₂ > n − d₂ ⇒ M₂ > m since n − d₂ = K(e−1) ≥ m; ⇒ V₂ ≥ 2 since
+the lower window exceeds 1); Sol10 Δ Fable33 = 1 + 24 (the printed (84,56)
+M₂ = 64 is in Sol10 only, having no integral N ≥ 6). PROVED-IN-SOURCE:
+Prop 5.6 forbids the ALL-(11) tower (σ₁ = πt^{δ₁}); p.201 l.52 "the
+situation indicated by (11) can not always happen" = NOT-ALL-(11), the only
+licensed numerical shadow (DERIVED, 469/43); Prop 5.3's factor π − C_r has
+C_r FREE (both branches licensed) — forced-(10) at every level is an
+OVER-READING (NOT-IN-SOURCE); Def 5.1(2) gives the UPPER bound
+M₂ < n − d₂/V₂ and Lemma 6.1 (δ_s = −1 ⇒ δ_{s−1} ≥ 0) the UPPER bound
+M_{s−1} ≤ n − d_s/u_s (automatic on the census) — M₂ > n − d₂ and M₂ > m are
+NOT-IN-SOURCE (no display on pp.179–189, 194, 200–202 asserts a lower bound
+on M₂). Row-by-row on the ten (Def 5.1 + (9)–(13) factor data reconstructed;
+Prop 6.3 signatures (24,16,17; X), (24,16,19; X), (12,8,9; X⁵), (25,10,22; X)
+for the extras): NO printed assertion kills the four extras and spares the
+six (u_s = 1 kills (99,66); SQ = 0 kills the printed (84,56) V₂ = 5; A_{s−1} |
+(n − m) spares (100,40); e − d = 1 spares the three (96,64)). Appendix II
+(p.207) names only (64,48), (84,56), (75,50), (99,66) with 3370/5308/4352/
+7348 coefficients — the extras' classes (96,64), (100,40) are never named,
+so Sol's cut is NOT Moh's program output. FAVOURED READING (R1): an UNPRINTED
+program rule inside p.202's "computer program", strictly stronger than or
+incomparable with every measured scalar gate; (R2) p.202 incomplete — OPEN.
+THE FALSIFIER (75, 50, M₂ = 40, V₂ = 1): killed only by the unsourced clauses
+(M₂ > n − d₂ = 50; M₂ > m; V₂ ≥ 2; A_{s−1} | (n − m)); passes (1)–(13),
+INCREMENT, NOT-ALL-(11), forced-(10), Lemma 6.1; its bottom star
+p = π³ + (3b/2)π, q = π² + b (D = −3b², Res = b³/4, squarefree, coprime, C₂)
+exists for b ≠ 0 (PROVED-HERE); Prop 5.3's r = 2 numerical hypotheses HOLD
+(deg p_{D₂} = 20, orbit A₂V₂ = 9, remainder 11, δ₁ − δ₂ = 1/2) — the two-level
+numerical tower GLUES; a kill of this row is GLOBAL (Appendix-II scale) —
+its Prop 6.3 image is (15, 10, M₂ = 8, V₂ = 1; X²), not Moh's treated
+(15,10,11,3[2]; X²). CONSEQUENCE (binding for allocation): stop mining scalar
+predicates of (n, m, M_*, V_*) for OPEN[MOH-PROGRAM]; the missing datum is
+outside the skeleton (descent + polynomiality / the global moment code);
+D = 105 is NOT emptied by any sourced condition; OPEN[MOH-PROGRAM] stays at
+652 excess rows (last mile 4 under the unlicensed conjunction).
