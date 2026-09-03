@@ -1,0 +1,7 @@
+ring R=0,(b3,b4),dp;
+ideal I=-1;
+ideal G=std(I);
+print("ROWS 1");
+if(reduce(1,G)==0){print("UNIT");}else{print("NONUNIT");}
+size(G);
+quit;

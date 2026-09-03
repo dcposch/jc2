@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/k16-spine-gate-opus5-20260903.md`.
+
+## Verdict: **GAP** — one named step; everything else CONFIRMED
+
+**Inputs**: manifest generated from the receipt by `awk`, `sha256sum -c` → 19/19 OK, no digit retyped.
+
+**What reproduced** (144 symbolic PASS / 0 FAIL, plus 17 Singular `UNIT` verdicts):
+
+1. **§2** — re-derived from scratch, not imported. (2.4)/(2.5) match term for term; (2.2)/(2.3) derived by inverting `X = h(p,γ)`; and the two systems are proven equivalent by an explicit triangular certificate `D0 = -b₂C12 - b₁C11 - C01`, …, `D3 = L·C11`, `D4 = 0`. Instantiated against the frozen charged generator at t=2,3,4: every charged row equals `[X^k]` of a §2 tag, with nothing outside the support. Two things the report understates: **D4 − cL vanishes identically** (so (2.3) is four conditions, not five), and the `a_{e,0}=0` step it presupposes is a genuine constant unit pivot `3q`.
+
+2. **§3** — `[X^t]C11 = t(3t+1)H_t/(6q³)`, i.e. **the band-t tag-11 row *is* H_t**; the 2t duplicate rows are symbolic consequences of `C02 = -b₁C12 − C11`, not samples. Counts `14t+9` raw / `9t+2` / `6t+2` / `5t+2` / `2t` all check. One imprecision: degree bounds give `deg C00 = 3t`, `deg C01 = 4t`, so the support at 2t needs the banked `3t+4` first spine — banked as uniform in `k16-uniform-structure §4.2`, but cited only implicitly.
+
+3. **§5.1 norms** — every pivot's `Res_y(H_t,·)` printed; the only integer root anywhere is `t = −1`. `F_C` has all-nonnegative coefficients with constant 32; `F_Q ≥ 12`. The obstruction reproduced at t = 2, 11, 26: `d+s` is a nonzero zero divisor and `invert` refuses it; the §5.1 order never schedules it, so split-safety is structural, not a case split.
+
+4. **Terminal** — independent rebuild matches the charged records field-by-field at t=2,3; `[1]` replayed in Singular at t=1 (from the chart, all four `sat()` controls PASS), t=2 (both fibres × both charts), t=3, t=4, t=5 (`b4=0`), and mod 1009 at t=5,6 on both fibres. t=5 `b4=1` correctly stays `INCONCLUSIVE_TIMEOUT`.
+
+**The gap**: `laurent_pivot_formulas.py` checks `p_C`, `p_Q` against a linearization `b_j, d_j, n_j` that is *asserted* in that file and derived nowhere. The structural justification (weight-zero ⟹ linearization exact) is sound, and the forms match the exact nonlinear records at t=2,3,4,5 (32 coefficients — I re-ran with all four records; the frozen inputs dir has only t=2). But "for every t" is unproved, and since (8.1)'s variable list is the post-(5.8) residual, the gap propagates into (8.1)'s exact statement. **Cheapest test** (§8 of the report): propagate the perturbation symbolically in (t,j) over `Q(t,j)[d]/(3d²−t−1)` — the same computation `terminal_laurent_model.build` does at fixed t.
+
+Two caveats on my own output: the report is 23 KB against the 10–20 KB target (six deliverables, I chose not to cut substantive content), and I ran slightly past 120 minutes. Drivers and manifest in `box/k16spinegate-20260903/`; no ledger edits, no writes to the charged box.
+DIVERT path=xmodel/k16-spine-gate-opus5-20260903.md status=CLEAN_SEALED body_bytes=23302 body_sha256=9b01ee5348ae30ff078472c161ba7700cf096fe72359eb001f95f0a5435acc2c

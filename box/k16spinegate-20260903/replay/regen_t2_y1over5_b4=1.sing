@@ -1,0 +1,10 @@
+ring R=0,(b3,b4),dp;
+ideal I=-19200*b3^2 + 191000*b3 - 407899,
+192*b3^2 - 8960*b3 + 28925,
+35 - 16*b3,
+88*b3 - 295;
+ideal G=std(I);
+print("ROWS 4");
+if(reduce(1,G)==0){print("UNIT");}else{print("NONUNIT");}
+size(G);
+quit;

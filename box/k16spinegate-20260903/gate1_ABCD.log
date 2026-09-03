@@ -1,0 +1,41 @@
+PASS  A1 tag support == the seven charged tags
+PASS  A2 (2.4) C12
+PASS  A2 (2.4) C11
+PASS  A2 (2.4) C00
+PASS  A2 (2.4) C01
+PASS  A3 (2.5) C03 = -C12
+PASS  A3 (2.5) C02 = -b1*C12 - C11
+PASS  A3 (2.5) C10 = -y*g
+PASS  A4 c = -y*g is forced by the (1,0) tag
+PASS  B0 gamma(X,p) inverts h
+PASS  B1 A = L/p
+PASS  B1 B = L/p^2 - b3/p
+PASS  B1 z = -b1 - b2/p - b3/p^2 + L/p^3
+PASS  B2 (2.2) Q coefficients
+PASS  B2 (2.2) P coefficients
+PASS  B3 (2.3) p-coefficient 4
+PASS  B3 (2.3) p-coefficient 3
+PASS  B3 (2.3) p-coefficient 2
+PASS  B3 (2.3) p-coefficient 1
+PASS  B3 (2.3) p-coefficient 0
+PASS  B3 (2.3) no other p-coefficient
+PASS  B3b D4 - c*L vanishes identically (2.3) fifth row is automatic
+PASS  C1 tag reading == Laurent reading of the same element J(Q,P)
+PASS  C2 D-row is an explicit Q[X,b]-combination of the tags
+PASS  C2 D-row is an explicit Q[X,b]-combination of the tags
+PASS  C2 D-row is an explicit Q[X,b]-combination of the tags
+PASS  C2 D-row is an explicit Q[X,b]-combination of the tags
+PASS  C2 D-row is an explicit Q[X,b]-combination of the tags
+      D0 = (-b2)*C12 + (-b1)*C11 + (-1)*C01
+      D1 = (-b3)*C12 + (-b2)*C11 + (-1)*C00
+      D2 = (X - b4)*C12 + (-b3)*C11
+      D3 = (X - b4)*C11
+      D4 = 
+PASS  D1 C11 | (X=b4) forces R(b4)=0
+PASS  D2 (2.6) C11/L = 2y*T' - g(5C+3LC')
+PASS  D2b C11 vanishes at the solved T'
+PASS  D3 (5.7) is exactly C12 = 0 (after R=LC and the solved T')
+PASS  C3 backward: L = X-b4 is a nonzerodivisor (monic in X)
+PASS  D4 (5.7b) [L^(m+1)]T = g(3m+5)c_m/(2y(m+1))
+PASS  D4 (5.7b) [L^m]S = e_m/(y(2m+1))
+GATE1_PART_ABCD_DONE fails=0

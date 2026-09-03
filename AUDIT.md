@@ -17389,3 +17389,15 @@ EFFECTIVE-ROOT-BRIDGE]. READING: (99,66) is now a single explicit finite computa
 large sparse linear algebra plus small nonlinear residues — the first campaign object
 that genuinely wants the fleet's larger boxes (parallel bands / branches). Lane launched:
 g9966-global-band-sol56 (the exact next system, 8 cores, 150 min).
+
+## INTEGRATION #17 DELTA (uuu) (2026-09-03T19:43Z, GATE: CONFIRMED except one named derivation, producer Opus): delta 17(qqq)'s spine gated — §2 (compact h-adic identity, (2.2)–(2.6) derived not assumed, (2.3) ⇔ (2.4) with an explicit certificate), §3 (support, counts, duplicates; (5.7a) identities symbolic in t), §4, the §5 pivot table, the split-index obstruction and its bypass, the terminal data at t = 1..6, and the logical chain 1 ∈ ⟨T_{t,k}⟩ ⇔ gauged chart empty ⇔ (T) at t all CONFIRMED by independent re-derivation; the reduction is a genuine quotient-ring equivalence (no projection, no untyped localisation); every pivot norm in the §5.1 order is a nonzero polynomial in t with no positive-integer root, including on the split ray; THE ONE GAP: the closed high-E_t pivot forms (5.9)–(5.15) — b_j = g₃(3t+2−3j)/(2y(t−j)), d_j = (g₂(t+1−2j) + b_j(t+1+j))/(y(4t−2j+1)), n_j = −g₁(t+j) + (j−t)d_j + 2q·b_j and the analogous dq_j, nq_j — are ASSERTED in laurent_pivot_formulas.py, verified against the exact nonlinear records at t = 2, 3, 4, 5 (32 pivot coefficients), but derived nowhere; the structural linearisation argument (each new elimination variable sits in its own weight, so its affine coefficient has weight zero and lies in A_t) is sound; the missing step is the symbolic (t, j) propagation of the perturbation through T' = (g/2y)(5C + 3sC'), the Euler inverse [L^m]S = e_m/(y(2m+1)), and the E_t coefficient — expected minutes
+
+`k16-spine-gate-opus5-20260903.md` (Opus, 24KB; box/k16spinegate-20260903/ with
+gate1_compact.py, gate1e_chart.py, gate2_support.py, gate3_norms.py, gate4a_rebuild.py,
+replay/; 19/19 hashes). Orientation convention fixed (J(f,g) = f_γg_π − f_πg_γ, J(Q,P) =
+cγ; coordinate Jacobian −p³, c = −y·g). §7: where the report is stronger than it says. §8:
+the cheapest closing test (perturb C by s^{t−1−j} resp. U by s^{q−j}; propagate; read
+[s^{4t+1−j}] of E_t; differentiate in the perturbation — exactly terminal_laurent_model.build
+at symbolic t). LEDGER: the spine stays PROVED-HERE/UNREVIEWED pending (5.9)–(5.15); once
+derived, the spine and the reduction are PROMOTED and (T) on the ray = (8.1) exactly.
+Lane launched: k16-pivot-forms-grok46 (the symbolic derivation).
