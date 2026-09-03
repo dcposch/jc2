@@ -16748,3 +16748,37 @@ split that Moh derives by hand on p.210 for (15,10)) — 7 of the 10 open rows; 
 for 31–36-unknown charts. Typing: the three new kills are PROVED-HERE/UNREVIEWED (gate
 launched); the rest MEASURED. Under the operative screen, the two-point s_eff = 2 u_s = 1
 stratum at D ≤ 200 now stands at 8 dead / 10 open / 0 alive.
+
+## INTEGRATION #17 DELTA (qq) (2026-09-03T15:28Z, SOURCE-READ + MEASURED, producer Sol): OPEN[MINOR-DICHOTOMY] DOES NOT CLOSE — Moh's (99,66) treatment (p.209) is a row-specific two-branch case split whose kills are SOURCE-ASSERTED ("all other cases can be computed directly as above"), not displayed; the u_s > 1 stratum (310 rows / 177 groups at D ≤ 200) is decided 0/177 at skeleton level; typed procedure MINOR(S,R,P); the actual minor radius δ*_{s−1} is the missing datum
+
+`minor-dichotomy-sol56-20260903.md` (Sol, 18KB; box/minordich-20260903/census_usgt1.py;
+pages 150–152, 196–199, 207–211). SOURCE-READ: the major radius δ_{s−1} (Def 5.1) is NOT
+the minor radius δ*_{s−1} that Prop 6.3 needs (δ* ≥ v_s/u_s); Prop 6.4 certifies it only
+for u_s = 1; Prop 6.1 gives only δ* ≥ 1; at the top, (7) + M_s = n − 2 force v_s > d_s/2,
+hence v_s/u_s > 1, so the universal floor decides NONE of the u_s > 1 skeletons (measured
+thresholds 4/3 … 9/2). MOH'S (99,66) (u_s = 3, bound 8/3, μ₂ = −55, deg T₂^ψ = 55): p.209
+displays a radius-2 π-root of g and says "g_σ(π) is either a power of a linear polynomial
+or the 9-th power of a cubic polynomial with precisely two roots" — the "precisely two
+roots" is SOURCE-ASSERTED (the 1+1+1 partition is not excluded on the page; Props 4.5–4.6
+are not cited); branch A (LINEAR-POWER): Moh asserts the transformed row (27,18,21,8;
+δ = (−1, 0); X⁴) and reduces to 10 coefficients — no displayed contradiction
+(OPEN[99-LINEAR-10]); branch B (TWO-ROOT-CUBIC): g_σ = H⁹, deg H = 3, roots 2+1 → 18+9;
+Ω: x ↦ x⁻¹, y ↦ a₀ + a₁x + a₂x² + yx³, Ω(f) = x⁶y¹⁸ + …, Ω(g) = x⁹y²⁷ + …, J(Ω f, Ω g) = x;
+reduced to 11 variables — no displayed contradiction (OPEN[99-CUBIC-11]); in branch B
+δ*₂ ≤ 2 < 8/3 so Prop 6.3 fails there; branch A's δ* is undetermined. The explicit a₉
+contradiction of pp.210–211 is the (75,50) → (15,10; 11; 3) computation, not (99,66).
+p.211: "All other cases can be computed directly as above. There is no counter-example of
+polynomials of degrees ≤ 100" — an assertion of omitted computation, not an exhibited
+kill (FALLACY-v2: cannot promote A or B to KILLED). AUDIT CONSEQUENCE: Moh's printed
+n ≤ 100 theorem rests, for its one u_s > 1 row, on two undisplayed finite computations —
+both are explicit, small (10 and 11 unknowns) and mechanically checkable: lane launched.
+THE D = 108 ROW (108,72; M = (−72,81,106); V = (7,7); d = (108,36,9,1); u₃ = 2; bound 7/2;
+major δ = (3/8, 1/4, −1)): only δ* ≥ 1 known → OPEN[MINOR-RADIUS-108]; Moh's casework cannot
+be copied. Typed procedure MINOR(S,R,P) (§5: skeleton S, actual-disc data R, probe P;
+outputs DESCEND / BRANCH A / BRANCH B / OPEN; never relabel a probe radius as δ*). Census:
+POLY+ODE 1,420/686 reproduced; u_s > 1 = 310/177, identical to the ODE residue; D ≤ 120
+u_s > 1 rows: (99,66), (108,72), (120,80; s = 5; V = (1,1,6,3)), (120,100; V = (6,3,3)) —
+0/4 decided. READING: the u_s > 1 stratum (≈ 26 % of the operative residue) needs a
+NON-skeleton datum (the actual minor general point) or Moh's per-row branch computation;
+it is the largest untouched block of the residue and the place where Moh's own proof is
+thinnest.

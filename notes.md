@@ -20873,3 +20873,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T14:43Z EVENT — `minor-dichotomy-grok46` stopped after 60 min with no activity (xAI capacity; 73-byte log, no drivers); handed to Sol: `minor-dichotomy-sol56-20260903`.
 
 ## 2026-09-03T15:01Z EVENT — `twopoint-kills-gate-grok46-v2` FAILED again (xAI capacity). Handed to Fable: `twopoint-kills-gate-fable5-20260903` (scarce seat, short gate). Grok seat: avoid until capacity returns.
+
+## 2026-09-03T15:28Z EVENT — `minor-dichotomy-sol56` sealed (18KB): MINOR-DICHOTOMY does not close; Moh's (99,66) is a two-branch SOURCE-ASSERTED case split (10- and 11-unknown systems, contradictions not displayed; "all other cases can be computed directly as above"); the 177 u_s > 1 groups are 0 % decided at skeleton level (need the actual minor radius); typed procedure MINOR(S,R,P). → AUDIT delta 17(qq). Launching `moh9966-branches-gpt55-20260903`: run Moh's two (99,66) branch systems mechanically (audits Moh's n ≤ 100 claim; first u_s > 1 kill if both die). Lanes live: 4.
