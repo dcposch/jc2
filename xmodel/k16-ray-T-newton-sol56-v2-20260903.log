@@ -1,0 +1,1616 @@
+cli=codex-cli 0.153.0 model=gpt-5.6-sol effort=ultra config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.153.0
+--------
+workdir: /home/ubuntu/jc2
+model: gpt-5.6-sol
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: ultra
+reasoning summaries: none
+session id: 01a0673a-c696-7cf2-bbe0-21e2447fd995
+--------
+user
+# Research lane (proof attack, bounded): theorem (T) on the descended K = 16 ray — a t-uniform Newton-polygon / Lemma 2.1 obstruction for monomial-Jacobian pairs of π-degrees (12t+4, 8t+4) with M₂' = 12t+1 = n'−3, V₂' = 3, J = cγ
+
+Context (banked, AUDIT delta 17(v); Grok's blind 1200Z submission
+§2.2/§4.2/Card III; do NOT read other ideation-20260903T1200Z-* files):
+the screened census is cofinally nonempty — for every t ≥ 1 the skeleton
+n = 48t+16, m = 32t+16, M = (n−12, n−2), V = (3,3), s = 3, d = (n,16,4,2),
+u_s = 1 survives PATH-ARITH(1)–(13) + whole-major-tree (gap-free) + ODE +
+nested packing, with t = 1 Moh's printed (64,48). By Prop 6.3/6.4 (m2-descent
+§4; descent-radii; delta 17(q),(t)) each member descends to a
+monomial-Jacobian pair in k[γ,π]: π-degrees (n', m') = (12t+4, 8t+4),
+[P,Q] = cγ^{V_s−u_s−1} = cγ (k_jac = 1), with inherited descended tower data
+s' = 2, M₂' = M₂/d_s = 12t+1 = n'−3, V₂' = 3, and radii by Φ:
+δ' = (k_jac+1)·Def 5.1(3)(descended data). At t = 1 this is Moh's p.207 row
+(16,12; 13; 3; X), which Moh kills in Appendix II by hand (and which the
+campaign has re-killed mechanically, SATURATED-EMPTY, m2-descent §4 controls).
+Theorem (T) on this ray = no such pair exists for any t ≥ 1 — a proof of JC2
+along the only known cofinal screened family. Lemma 2.1 (Moh p.151,
+source-read in m2-descent §4.3): for a monomial-Jacobian pair with J = cγ^k
+(here k = 1), writing g = Σ g_j(γ)π^j (or in Moh's (x,y) of Appendix II), the
+coefficients g_j ∈ k are constants for j < m'−1 and deg_x g_{m'−1} = k+1 = 2;
+same for f with n'. Task: (1) SOURCE-READ Lemma 2.1 and Appendix II (refs/
+moh1983 pp.151, 205–212) and state precisely what Lemma 2.1 pins for
+(f,g) with J = cγ; (2) compute the Newton polygon / characteristic data
+(Puiseux slopes, the Moh M₂', V₂' of the descended tower per Def 5.1 and
+Prop 5.3 restricted to the descended s' = 2 data) of a Lemma-2.1-shaped pair
+of degrees (12t+4, 8t+4) as a function of t, and test compatibility with
+M₂' = 12t+1, V₂' = 3 — do it symbolically in t with sympy, and check the
+t = 1 control (must be incompatible / empty by Moh, or the derivation is
+wrong); (3) if the polygon alone does not obstruct, push one step further
+along Appendix II: approximate-root truncation with Φ-radii on the t = 2
+instance (28,20; M₂' = 25, V₂' = 3, J = cγ) — count unknowns after Lemma
+2.1 + order conditions, and if ≤ ~200 unknowns run the saturation
+(sympy/Singular if present; ideal + saturation by the leading coefficient),
+positive control Moh (16,12), negative control an actual monomial-Jacobian
+pair without the 4-tuple, e.g. (y, x²/2)-type with J = x — must SURVIVE the
+Lemma-2.1 shape but must FAIL the 4-tuple; (4) verdict: T-K16 PROVED for all
+t (with the obstruction stated as a theorem with proof), or PROVED at t = 2
+only (SATURATED-EMPTY, with the certificate size), or COUNTING-BOUND, or
+SURVIVES (a candidate pair — type REPRESENTATIVE, print it); type every
+claim (SOURCE-READ / DERIVED / MEASURED / PROVED-HERE), bounded quantity +
+cheapest test of every OPEN; state explicitly whether the Φ radii and the
+descended (8)–(13) were used and where OPEN[DESCENT-ANCHOR] (n' − M₂' − 1 =
+2 ≠ 0 here — check) bites. FALLACY-v2 applies: no over-read of a screen as
+attainment, no promotion of a control. Drivers to box/k16T-drivers-20260903/.
+Bounded: one core, ≤ 90 min wall; no ledger edits; no jc2-lean.
+Report: xmodel/k16-ray-T-newton-sol56-v2-20260903.md
+Seal-at-completion (standard <!-- BODY-END --> marker; skeleton without it);
+bounded writes; target 12-24KB; 90 minutes.
+charged_input=xmodel/ideation-20260903T1200Z-grok46.md
+charged_input=xmodel/m2-descent-opus5-20260903.md
+charged_input=xmodel/descent-radii-grok46-20260903.md
+charged_input=box/descentradii-drivers-20260903/phi_delta.py
+charged_input=box/m2descent-drivers-20260903/moh_1510_control.py
+charged_input=box/m2descent-drivers-20260903/moh_1510_control2.py
+charged_input=box/descentradii-drivers-20260903/g2_fullh_mohbeta.py
+charged_input=xmodel/screened-census-grok46-20260903.md
+charged_input=box/moh_skeleton_full.py
+charged_input=refs/moh1983_jram340_configurations_of_roots.pdf
+charged_input=FALLACY-v2.md
+
+Your inputs are frozen read-only copies in /tmp/jc2-lane.qoNOq6/inputs;
+verify these SHA-256 hashes first (programmatically: write the block to a file and run `sha256sum -c`; never transcribe digests by hand) and stop on mismatch:
+
+```text
+8d98cf8886304fd8e68f86b31c813013eb4ab495fd983ceaff9ec38128dff618  /tmp/jc2-lane.qoNOq6/inputs/ideation-20260903T1200Z-grok46.md
+8aa3ba20567cb810cb6f540ef451e7fb4cadb8ad89f77418837f5d65fae55668  /tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md
+2482ae1e8550cbaf6042a59ff20ca990eef78d7b77c590c1958a816c66a4e512  /tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md
+4bcb512d47cf9f935c6a2c0c7b8251ae16b3e4f73b4794abbef2d1702846c7c1  /tmp/jc2-lane.qoNOq6/inputs/phi_delta.py
+fe4acde9abf6661c85425fdc58f6f9308b3e6269e5506f0c6252284bd3de335f  /tmp/jc2-lane.qoNOq6/inputs/moh_1510_control.py
+5ea3845b6e6f7022a59b0620b22f017c632ef08e6e5d0675f9c3d0274032566b  /tmp/jc2-lane.qoNOq6/inputs/moh_1510_control2.py
+69a884c81cdc1d68f45e9b75aa2c9ee4f64bd24cdb49f90bc7c7d43784bdfdd6  /tmp/jc2-lane.qoNOq6/inputs/g2_fullh_mohbeta.py
+29a6f54dff3dbe2e2ad4cbb07dfdb7b18168e86848d5abb4644f2024f766b82d  /tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md
+d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2  /tmp/jc2-lane.qoNOq6/inputs/moh_skeleton_full.py
+6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51  /tmp/jc2-lane.qoNOq6/inputs/moh1983_jram340_configurations_of_roots.pdf
+e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  /tmp/jc2-lane.qoNOq6/inputs/FALLACY-v2.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll first verify every frozen input exactly as instructed. If all hashes pass, I’ll source-read the specified Moh pages and charged materials, then split the symbolic polygon audit and the bounded computational controls into parallel lanes while I integrate the proof status and final sealed report.
+apply patch
+2026-09-03T12:25:24.626438Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0 seconds
+Output:
+Failed to write file /tmp/jc2-lane.qoNOq6/inputs/SHA256SUMS.k16
+
+patch: failed
+/tmp/jc2-lane.qoNOq6/inputs/SHA256SUMS.k16
+codex
+The input directory itself is correctly non-writable, so the checksum manifest could not be placed beside the frozen files. I’m placing the same manifest one level above (without touching any input) and running the required check from there.
+apply patch
+2026-09-03T12:25:44.709633Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0 seconds
+Output:
+Failed to write file /tmp/jc2-lane.qoNOq6/SHA256SUMS.k16
+
+patch: failed
+/tmp/jc2-lane.qoNOq6/SHA256SUMS.k16
+exec
+/bin/bash -lc "pwd && rg --files -g 'AGENTS.md' -g '"'!xmodel/ideation-20260903T1200Z-*'"' | head -50 && ls -ld box box/k16T-drivers-20260903 2>/dev/null || true" in /home/ubuntu/jc2
+ succeeded in 0ms:
+/home/ubuntu/jc2
+drwxrwxr-x 49 ubuntu ubuntu 4096 Sep  3 12:24 box
+
+exec
+/bin/bash -lc 'mkdir -p /home/ubuntu/jc2/box/k16T-drivers-20260903' in /home/ubuntu/jc2
+ succeeded in 0ms:
+apply patch
+patch: completed
+/home/ubuntu/jc2/box/k16T-drivers-20260903/SHA256SUMS.input
+exec
+/bin/bash -lc 'sha256sum -c /home/ubuntu/jc2/box/k16T-drivers-20260903/SHA256SUMS.input' in /home/ubuntu/jc2
+ succeeded in 0ms:
+/tmp/jc2-lane.qoNOq6/inputs/ideation-20260903T1200Z-grok46.md: OK
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md: OK
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md: OK
+/tmp/jc2-lane.qoNOq6/inputs/phi_delta.py: OK
+/tmp/jc2-lane.qoNOq6/inputs/moh_1510_control.py: OK
+/tmp/jc2-lane.qoNOq6/inputs/moh_1510_control2.py: OK
+/tmp/jc2-lane.qoNOq6/inputs/g2_fullh_mohbeta.py: OK
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md: OK
+/tmp/jc2-lane.qoNOq6/inputs/moh_skeleton_full.py: OK
+/tmp/jc2-lane.qoNOq6/inputs/moh1983_jram340_configurations_of_roots.pdf: OK
+/tmp/jc2-lane.qoNOq6/inputs/FALLACY-v2.md: OK
+
+codex
+All eleven hashes pass. I’m now separating three independent checks: exact source transcription/interpretation of Moh, symbolic tower/polygon algebra in \(t\), and the bounded \(t=2\) algebra/control experiment. Each lane is restricted to the frozen charged inputs; I’ll independently reconcile their conclusions before any theorem-level promotion.
+exec
+/bin/bash -lc "ls -lh /tmp/jc2-lane.qoNOq6/inputs && command -v pdftotext && command -v pdfinfo && command -v singular || command -v Singular || true && python3 - <<'PY'
+import sympy
+print('sympy', sympy.__version__)
+PY" in /home/ubuntu/jc2
+ succeeded in 242ms:
+sympy 1.12
+
+exec
+/bin/bash -lc "pdfinfo /tmp/jc2-lane.qoNOq6/inputs/moh1983_jram340_configurations_of_roots.pdf | sed -n '1,25p'; pdftotext -f 1 -l 3 -layout /tmp/jc2-lane.qoNOq6/inputs/moh1983_jram340_configurations_of_roots.pdf - | sed -n '1,120p'" in /home/ubuntu/jc2
+ succeeded in 0ms:
+Title:           
+Subject:         
+Keywords:        
+Author:          
+Creator:         ABBYY FineReader
+Producer:        ; modified using iText® 5.4.1 ©2000-2012 1T3XT BVBA (AGPL-version)
+CreationDate:    Sun Mar 22 21:45:20 2009 UTC
+ModDate:         Fri May 29 20:39:29 2015 UTC
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           74
+Encrypted:       no
+Page size:       556 x 770 pts
+Page rot:        0
+File size:       6563749 bytes
+Optimized:       no
+PDF version:     1.2
+                     On the Jacobian conjecture
+                   and the conflgurations of roots
+                               By T. T. Moh*) at West Lafayette
+
+
+
+                                            Introduction
+
+      The well-known Jacobian conjecture states "let k be an algebraically closed field of
+characteristic zero and f(x, y), g(x, y) two polynomials over k. If
+
+
+then k[x, y] = &[/, g]." In other words a polynomial map from A2 to A2 is one-one and
+onto iff the Jacobian of the map is a nonzero coristant. Clearly this conjecture is false
+if the characteristic p of the field k is positive. For instance f=x + xp, g = y furnish
+a counter example. Furthermore this conjecture is false in the analytic case. The pair
+/=e*, g = ye~x furnishes a counter-example. For the history of this problem the reader
+is referred to [B-C-W.l] and [W. 2]. Throughout this article the field k is assumed to be
+algebraically closed and of characteristic zero.
+     The treatment in the present article is rather classical. Let K be a valued field
+and g(y) a polynomial which factors completely over K i.e.
+
+
+where τ,· e K. Then we may associate the following configuration data of real numbers
+
+
+
+where | | denotes the value of the field K. In the case of complex numbers the above
+data and the leading coefficients a0 uniquely determine the polynomial g (y) up to the
+translations, the rotations and the reflection. In the case of a non-archimedean valued
+field K the above data give some weak but valuable Information about the polynomial
+
+      Let the valued field K be k ((t)) the meromorphic field of one variable and the
+polynomial g(y) be irreducible over K. Then it can be shown that the configuration
+data of g(y) over its Splitting field is equivalent to the classical data of the characteristic
+pairs of an algebroid curve.
+
+      *) This work was partially supported by N.S.F. at Purdue University.
+
+0075-4102/83/0340-0008S02.00
+Copyright by Walter de Gruyter & Co.
+                             Brought to you by | University of Iowa Libraries
+                                                 Authenticated
+                                        Download Date | 5/29/15 10:39 PM
+                                         M o h, Onthe Jacobian conjecture                            141
+
+      In general, given a polynomial g(x, y) e k[x, y]9 we may factor g(x, y) completely
+over the Puiseux field fc<f> where t = x~1 and &«'» = U MC"))· Note the field fc«i»
+                                                                          n=l
+                                                                                           oo   _i
+is algebraically closed (cf. [W.l]). Similarly we defme k[n] «i» = U k\n] (('")) with π
+                                                                  n=1
+a symbol. Let us assume that
+
+                                        degx>y g(x, y) = degy g(x, 7).
+
+Then it is easy to see that the configuration data determine the number of points of the
+plane curve g(x, y) = Q at oo and the desingularization processes at those points.
+
+      Let K be a non-archimedian field and {τ 1 ? ..., τη} n elements in K. It is more
+convenient to consider the following tree data (cf. § 1) of { τ ΐ 9 . . . , τη} in place of the con-
+figuration data. Let D± be the minimal disc which contains all rt. Let {Dlj2} be the
+collection of the minimal subdiscs of D1 with
+
+      (1)                       (JD^^'.^eD,}                    ( = {τ 1 ? ...,τ Μ }),
+
+      (2)                               £> M 2 n/) l j 2 = 0 if i 2 =K/ 2 ,
+
+      (3)       the distance between Dl i2 and D1J2 is the radius of Dl if i2 3=j2 -
+
+
+       Due to the non-archimedean property of the field K the collection {D1>i2} uniquely
+exists. We may repeat the above process for D1>i2. Finally we stop when all discs are with
+radii zero. In this way we obtain a tree of discs in K. Then the tree data consist of the
+radii and the numbers of τ,-'s in those discs. It is easy to see this tree of numbers is the
+characteristic pairs for an algebroid curve g(x, y) = 0 if we set K= k^x^ and {τ^ , . . . , τη]
+the complete set of roots of g(x, y) = 0 over K.
+
+     The major portion of this article consists of the study of the tree data of two
+polynomials f(x, y) and g(x, y) satisfying the Jacobian condition
+
+                                                fxgy ~fygx    = l·
+
+
+
+It can be illustrated that the Jacobian condition implies some similarities between the
+two tree data. Namely consider any disc DaK—k^t^ where t = x~l with
+
+
+
+
+Then the number of roots of /(i~ 1 ,^) = 0 and g(i~ 1 ,> ; ) = 0 in D are proportional to
+the degrees of /(je, y) and g(x, y) if both numbers of roots are positive. This qualitative
+observation is not useful for our purpose. To obtain the useful quantitative properties
+of those similarities we have to adapt the concept of the approximate roots for the
+present task (cf. [M.l], [A-M.l]).
+     Journal f r Mathematik. Band 340                                                           19
+
+
+                                        Brought to you by | University of Iowa Libraries
+                                                        Authenticated
+                                             Download Date | 5/29/15 10:39 PM
+142                               M o h, On the Jacobian conjecture
+
+       In § 2 we show that the Jacobian condition implies the existence of a finite sequence
+of polynomials monic in y 1?(f(x, y)9 g(x, y)) e k[f(x, y), g(x, y)~] with .y-degree (-μ,·)
+(cf. § 2). The polynomials Tf are specialized approximate roots of the defining equation
+of f(x, y) and g(x9 y) over k [χ], This sequence {— μ{} determines and is determined
+by the characteristic sequence of the rational curve parametrized by (/(O, y), g(0, y))
+at y = oo. Our analysis of the distribution of roots of f(t"19 y) = 0 and g ( t ~ 1 9 y ) = Q over
+        solely depends on the existence of the said polynomials 7]*.
+
+
+       In § 3 we relate the sequence of polynomials Tf with the Jacobian condition for
+f(x9 y) and g(x9 y). It is easy to see that the task is to study the partial derivatives
+ of 7J*(/, g) with respect to /. Proposition 3.3 shows that if the similarity of the dis-
+ tribution of roots holds for g(x9 y), Tf (f(x9 y), g(x9y)),..., T* (f(x, y), g(x, y))9 then it
+holds for the extra polynomials — 1^+1 (f(x, y)9 g(x, y)). It furnishes an important step
+in our study. From the next section on the Jacobian condition is assumed.
+
+
+2026-09-03T12:26:55.366095Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0 seconds
+Output:
+Failed to write file /tmp/jc2-lane.qoNOq6/inputs/k16_symbolic.sha256
+
+exec
+/bin/bash -lc "pdftotext -f 11 -l 14 -layout /tmp/jc2-lane.qoNOq6/inputs/moh1983_jram340_configurations_of_roots.pdf - | nl -ba | sed -n '1,360p'" in /home/ubuntu/jc2
+ succeeded in 0ms:
+     1	150                               M oh, On the Jacobian conjecture
+     2	
+     3	Then we may view (f(x, y), g(x, y)} s a parametrization over k(x) of a plane rational
+     4	curve with y s the parameter. Clearly the said curve has only one place at 7=00.
+     5	Analytically, if we let
+     6	
+     7	
+     8	
+     9	
+    10	then
+    11	
+    12	                                                   j> — m
+    13	
+    14	       Let Ωί be the automoφhism of k[x] ((η)} defined by
+    15	
+    16	
+    17	where ω is a fixed n-th primitive root of unity. Suppose
+    18	                                      yek(x9f(x9y)9                 g(x9y)).
+    19	Since y is integral over k[x9 g(x9 y)"] which is integrally closed, we deduce that/(x, y)
+    20	satisfies a monic polynomial of degree n over k[x9 g(x, y)]. The equation is irreducible
+    21	over k[x] ((g~1)) = k[x] ((η*1)). Then the defining equation of f(x, y) over
+    22	                                      L·· Γ v· l l(vi^\\ — L·' Γγ· Ι l i ff
+    23	                                        L J \\ l // —          L J \Vo        //i i
+    24	is the following
+    25	                                             n
+    26	
+    27	
+    28	
+    29	
+    30	where / is a symbol s usual. In fact the above equation is the analytic factorization
+    31	of the defining equation of the said rational curve at g= oo or g"1 =0.
+    32	      Due t o the existence of the automorphisms Ωί9 the tree data associated with the
+    33	configuration of the roots of the equation (1) over k[x] ((η)} are completely Symmetrie.
+    34	Hence the tree data along any root will determine the tree data completely. Let the tree
+    35	data along one root (hence all roots) be (reindexed s) {M,·, dj}. We shall call {MJ9 dj}
+    36	the characteristic data of the pair of polynomials (f(x9 y), g(x, y)) with respect to x.
+    37	Recall(cf. [A-M.l] p. 68)
+    38	
+    39	
+    40	
+    41	
+    42	and the following auxiliary notations
+    43	
+    44	                         n O-l- i ,
+    45	                         H               n—4-
+    46	                                         n
+    47	                                         j~~ Λ
+    48	
+    49	
+    50	
+    51	
+    52	                            = Σ                             =-
+    53	
+    54	      Το make some sense out of the long list of notations introduced above, we shall
+    55	insert the following lemma first observed by S. S. Abhyankar ([A.l], p. 149).
+    56	
+    57	
+    58	                                 Brought to you by | University of Iowa Libraries
+    59	                                                 Authenticated
+    60	                                      Download Date | 5/29/15 10:39 PM
+    61	                                   M o h, On the Jacobian conjecture                               151
+    62	
+    63	      Lemma 2.1. Lei f(x,y), g(x, y) ek[x, y] be two polynomiah monic in y with
+    64	y-degree m, n respectively. Lei
+    65	
+    66	
+    67	
+    68	Then JXfy(f(x,   y), g(x,y)) = c a nonzero constant iff
+    69	
+    70	
+    71	and
+    72	
+    73	
+    74	      Proof. It follows from chain rule that
+    75	
+    76	                  Jx,y(f(x> y)> £(*> y)) = /*,„(/(*, y), g(x, y)) Jx.y(x, n)
+    77	
+    78	
+    79	The right hand side is in k[x, y] and a unit in k[_x\ [M],                 hence a nonzero constant,
+    80	iff
+    81	
+    82	and
+    83	                                     fn- 1 (x) — nonzero constant .                            Q. E. D.
+    84	
+    85	      Note that since /„_ι(χ)φΟ and (w,n-l) = l, then M^n-l for all i^A. Thus
+    86	we know all M/s terminate at n — l if the Jacobian condition is satisfied. Note that this
+    87	implies that f ( x 9 y ) has n conjugates over k[x] ((g"1)) and yek(x, g(x,y), f(x,y)). We
+    88	shall call the reader's attention to our ignorance about the numbers M{. For instance,
+    89	after long computation we ( s verified by A. Sathaye) established that for the following
+    90	polynomials over k
+    91	
+    92	
+    93	
+    94	
+    95	the value M2 could never be 13. It shows how little we know about M( in the polynomial
+    96	case.
+    97	
+    98	      The characteristic data \d{\ MJ are analytic in nature. We shall replace them,
+    99	and thus algebraicize them, by the approximate roots. This method has been well
+   100	demonstrated in [A-M.l]. In the present article we are interested in some specializations
+   101	of the approximate roots. Let
+   102	
+   103	                          n/,£)=fi(/- i (T m + Σ y}w^))=°
+   104	                                    i =l                   j>-m
+   105	
+   106	be the deflning equation of f(x9 y) and g(x, y) over k[x], Let ψ be the specialization
+   107	k[x]—*k defined by
+   108	
+   109	
+   110	                                                                                         20*
+   111	
+   112	
+   113	                                  Brought to you by | University of Iowa Libraries
+   114	                                                  Authenticated
+   115	                                       Download Date | 5/29/15 10:39 PM
+   116	152                             M o h, On the Jacobian conjecture
+   117	
+   118	we shall extend ψ naturally t o k[x} [/, g] with /, g symbols. Then clearly we have
+   119	
+   120	                         F*(f,g) = Π υ-Ωί(η~'" + Σ/](0)η%
+   121	                                     i=l
+   122	
+   123	      We shall establish the following proposition.
+   124	      Proposition 2. 1. Lei Tr(f,g) be the dr-th approximate root of F(f,g) with f viewed
+   125	 s the variable. Then 7^(/, g) is the dr-th approximate root of F*(f, g) with f viewed s
+   126	the variable.
+   127	      Proof. Recall the definition of the approximate roots in §1. Let the dr-th root of
+   128	
+   129	
+   130	
+   131	Then we have
+   132	
+   133	
+   134	
+   135	      Naturally we conclude the following
+   136	
+   137	                 W, * ) = / + Σ «,(<>,*)./ "'
+   138	                                     ί>0
+   139	                           = the dr^-th approximate root of F*(f, g).              Q. E. D.
+   140	
+   141	      The advantage of the specialization ψ:χ—+0 is that the polynomials Γ/(/, g)
+   142	are in k[f,g] while the polynomials Tr(f,g) are with coefficients in k[x\. Thus the
+   143	differentiation of the polynomial Tr(f(x, y), g(x, y)) with respect to χ which will be used
+   144	later on will be rather complicated. The most useful Information provided by the
+   145	polynomials Tr(f, g) are the ^-degrees of the polynomials Tr(f(x, y), g(x, y)). This valu-
+   146	able Information is largely retained by the simpler polynomials T*(f9g). To be more
+   147	precise let e be an integer defined by (cf. Lemma 2. 1).
+   148	
+   149	
+   150	We are primarily interested in T*(f, g) for Mr^e. Let us prove the following proposition
+   151	(cf.[A.l],p.!55).
+   152	      Proposition 2. 2. Let e be an integer defined by
+   153	
+   154	
+   155	Let Mr ^ e. Then we have
+   156	      (1) deg, T* (f(x, y), g(x, y)) = deg, Tr (f(x, y), g(x, y)) =-μ,.
+   157	If Mr<e, then we have
+   158	      (2) Tf(f(x,y),g(x,y))      and 1? (f(x, y), g(x, y)) are monic in y.
+   159	If Mr = e, then we have for some nonzero constant c the following
+   160	      (3) 1?(f(x, y), g(x, y)) = cfe(x)y'"' + lower terms in y.
+   161	
+   162	
+   163	                                Brought to you by | University of Iowa Libraries
+   164	                                                Authenticated
+   165	                                     Download Date | 5/29/15 10:39 PM
+   166	                                       M o h, On the Jacobian conjecture                       153
+   167	
+   168	      Proof. Let
+   169	      (4)                      o = n~m+              Σ        fjW
+   170	                                                -m<j<Mr
+   171	
+   172	Due to the restriction of Mr^e, i.e. f j ( x ) e k , we have that σ is also a π-root of the
+   173	equation
+   174	                                                ^(/,s)=o.
+   175	Let us set
+   176	                                       σ = i/~ M +        Σ     /,-W-
+   177	                                                     -m<j<Mr
+   178	
+   179	Then the greatest common divisor of all exponents of the terms with nonzero coefficients
+   180	in σ and the integer n is dr according to the deflnition of dr. The automorphisms Ω^
+   181	will produce ( — l distinct conjugates of σ. Let the corresponding π-roots for F(f9 g) in
+   182	             \dr /
+   183	the Mr-discs be {σ ΐ9 . . ., σ^}. Note that at is simply the summation of a conjugate of σ
+   184	                             dr
+   185	and iiv\Mr. Then this System of π-roots is coherent and complete for F(f9 g) with multi-
+   186	plicities {dr,. . . , dr} and accuracy λ. It follows from Proposition 1. 3 that
+   187	
+   188	
+   189	As we pointed out before, the inequality
+   190	
+   191	
+   192	implies f j ( x ) e k in the expression (4). Then the above reasoning works for F*(f9g).
+   193	Thus the same π-root System {σ1?. . ., σ^} is coherent and complete for F*(f,g) with
+   194	                                                     dr
+   195	identical multiplicities [dr,. . ., dr} and λ = λ, = μ,ά,..
+   196	
+   197	       Let us consider the polynomials Tr(f, g) and T*(f, g) with / viewed s the variable.
+   198	It follows from Theorem 1. 1 that the π-roots System {σ ΐ5 . . . , σκ} is coherent and com-
+   199	                                                                                    ~d
+   200	plete for T*(f, g) (resp. Tr(f, g)) with multiplicities {!,...,!}. Its accuracy can be easily
+   201	determined to be -f = a. s follows. Let { τ ΐ 5 . . . , τ η } be the complete set of roots of
+   202	                   dr
+   203	F(f,g) (resp. F*(f,g)) and {τ?,. . ., τ*} be the complete set of roots of Tr(f,g) (resp.
+   204	         )- Since the Mr-discs associated with a^s are all disjoint (cf. Definition 1.4), then
+   205	it follows from the strong triangle inequality that for TS, τ* belonging to the Mr-disc
+   206	associated with as with s Φ ι we always have
+   207	                   ord (σ, - τβ) = ord (at - σχ), ord (σ£ - τ*) = ord (at - σ8)
+   208	while in each Mr-disc there are dr TJ'S and only one τ*. Α simple computation verifles
+   209	that the accuracy is indeed -p = μΓ .
+   210	                                  «r
+   211	
+   212	
+   213	      Let us reorder if necessary the complete set of roots {τ*,. . ., τ^} so that
+   214	                                                                                          dr
+   215	
+   216	                                             ord (σt — τ?) = Mr .
+   217	
+   218	
+   219	                                       Brought to you by | University of Iowa Libraries
+   220	                                                       Authenticated
+   221	                                            Download Date | 5/29/15 10:39 PM
+   222	
+
+exec
+/bin/bash -lc 'mkdir -p /home/ubuntu/jc2/box/k16T-drivers-20260903/rendered && pdftoppm -f 12 -l 12 -png -r 180 -singlefile /tmp/jc2-lane.qoNOq6/inputs/moh1983_jram340_configurations_of_roots.pdf /home/ubuntu/jc2/box/k16T-drivers-20260903/rendered/moh-p151' in /home/ubuntu/jc2
+ succeeded in 654ms:
+2026-09-03T12:27:13.083765Z ERROR codex_core::tools::router: error=Exit code: 1
+Wall time: 0 seconds
+Output:
+Failed to write file /tmp/jc2-lane.qoNOq6/inputs/SHA256SUMS.k16T
+
+exec
+/bin/bash -lc "rg -n -C 8 \"Lemma 2\\.1|§4\\.3|4\\.3|monomial|degree 2|deg.*2|f_[nm]|f_j|Appendix II|OPEN\\[DESCENT-ANCHOR\\]|Def 5\\.1|Proposition 5\\.3|Prop 5\\.3|M_2|M₂|V_2|V₂|Phi|Φ|\\(8\\)|\\(13\\)\" /tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md /tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md /tmp/jc2-lane.qoNOq6/inputs/ideation-20260903T1200Z-grok46.md /tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md | sed -n '1,1000p'" in /home/ubuntu/jc2
+ succeeded in 0ms:
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-66-5. **Cofinality: a closed-form family survives the operative screen for
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-67-   every `t≥1`.** Not Sol's ray and not the `A₂=6` ray. It is the
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-68-   `K=16` ray through Moh `(64,48)` and the `D=112` `s=3` survivor:
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-69-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-70-```text
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-71-t ≥ 1 integer
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-72-e = 3t+1,  d = 2t+1,  gcd(d,e) = 1 identically
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-73-n = 16e = 48t+16,  m = 16d = 32t+16
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:74:M = (−m, n−12, n−2),  s = 3,  V₂ = 3,  V₃ = 3
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-75-d₂ = 16, d₃ = 4, d₄ = 2
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-76-A₂ = 4,  P = 12,  P ≡ 0 (mod A₂)     # no forced zero
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-77-u_s = 1,  q = (2t+1)/4,  u = 12
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-78-|O| = 4  ((10)-only),  N = 6t+3 ≥ 9
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-79-```
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-80-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-81-   Algebra in `t` is in §6 (sympy-exact, then `Skel` + TREE + ODE +
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-82-   nested + census emission at `t=1,2,3,8,20,50`). **Q3(f) after the
+--
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-86----
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-87-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-88-## 1. Composition
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-89-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-90-Per PATH-ARITH V-assignment, in this order:
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-91-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-92-- `C_FULL_TREE` (`FT.full_tree_ok`): every major sibling extends; selected
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-93-  path embeds; Lemma 5.3 top-chart danger; Prop 5.6 kills a still-centred
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:94:  zero leaf. DERIVED. State carries the higher V-tuple (Def 5.1(3)).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-95-- `C_FULL_TREE_ODE` (`FT.full_tree_ode_ok`): additionally `P−Qu ≠ 0` at
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-96-  every p-root (Prop A.3, RHS `cp`). Operative sharpening.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-97-- Nested-pack (`nested_pack.nested_values`) on the surviving V-assignments
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-98-  of each group `(m,M,V_s)`, windows `N≥6` and `[6,16]`. Exact at every
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-99-  `s`; at `s=3` equals Z01.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-100-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-101-Side columns, typed, not operative: `C_FULL_TREE_PASSPORT` (EXTERNAL,
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-102-(3.8)); `C_FULL_TREE_POLY` / `POLY+ODE` (`OPEN[FULL-TREE-RECENTER]`).
+--
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-108----
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-109-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-110-## 2. Controls (all abort-on-fail)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-111-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-112-- Hash gate 9/9 plus three workspace copies.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-113-- Moh six: TREE, ODE, PASSPORT, POLY, POLY+ODE, and TI `--zero-only` all
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-114-  keep every row. Nested `[6,16]` N-sets `{9}, {}, {10}, {9}, {8}, {16}`
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-115-  match the charged nested-pack control (the empty cell is
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:116:  `(84,56) M₂=64, V₂=2`, already charged).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-117-- `n≤100`, `K_min=2`: 658 rows, 63 `(n,m)` classes; TREE 60 / ODE 58 /
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-118-  PASSPORT 55 / POLY 23 / POLY+ODE 20; `(75,50)` ODE residue
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:119:  `{(M₂,V₂)=(55,2),(55,3)}`; printed keys ⊆ every screen; FT vs TI
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-120-  row-for-row 0 disagreements on TREE, PASSPORT, POLY.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-121-- Checkpoint `D≤120`: unscreened 1,189 / 587 / 470; TREE V/groups
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-122-  183/113; ODE V/groups 168/103 (match frozen `candidate-results.json`).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-123-- Checkpoint `D≤200`: unscreened groups 14,016; TREE groups 1,516; ODE
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-124-  groups 1,384; PASSPORT groups 1,261.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-125-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-126----
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-127-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:128:## 3. Per degree, `48≤D≤200`
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-129-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-130-Columns: PATH-ARITH groups and V-assignments; TREE / ODE groups; nested
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-131-N≥6 and `[6,16]` after TREE (`tN6`) and after ODE (`oN6`,`oN16`);
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-132-PASSPORT groups (side). Unscreened nested (`unN*`) only through 120.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-133-`EMPTY` marks ODE nested N≥6 empty among baseline-active degrees.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-134-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-135-```text
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-136-    D   grp     V  treeG  odeG   tN6   oN6  oN16  passG  unN6 unN16
+--
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-165-ODE nested N≥6 676 / [6,16] 480 / PASSPORT 1,165. Combined `48–200`:
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-166-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-167-| slice | PATH-ARITH g / V | TREE g | ODE g | ODE nest N≥6 | ODE nest [6,16] | PASSPORT g (side) |
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-168-|---|---:|---:|---:|---:|---:|---:|
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-169-| 48–120 | 1,189 / 1,692 | 113 | 103 | **51** | **43** | 96 |
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-170-| 121–200 | 12,827 / 22,028 | 1,403 | 1,281 | 676 | 480 | 1,165 |
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-171-| 48–200 | **14,016** / 23,720 | **1,516** | **1,384** | **727** | **523** | **1,261** |
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-172-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:173:Highly composite degrees dominate the raw count (`D=144`: 1,216 groups;
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-174-`D=180`: 2,559; `D=192`: 3,589; `D=200`: 1,591) and the screened count
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-175-(`D=180` ODE nested N≥6 = 150; `D=192` = 246).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-176-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-177-**Degrees EMPTIED by TREE** among baseline-active `D≤200` (no TREE
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-178-group): `48, 54, 60, 63, 81, 88, 102, 104, 105, 110, 114, 117, 130, 152,
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-179-153, 154, 170, 182, 186, 190, 195`. Matches charged `C_FULL_TREE`
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-180-`candidate_zero_degrees`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-181-
+--
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-203-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-204-### `D=108` — 5 groups in `[6,16]` (plus 3 N≥6-only)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-205-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-206-All five campaign-window groups are `s=4`, `m=72`, `(d,e)=(2,3)`,
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-207-`K=36`, `u_s=1`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-208-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-209-```text
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-210-m=72 M=[12,102,106] Vs=5 u=30 q=5/7  |O|={1,21} N={15}
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:211:  V=(1,8,5) NZ w=21 c=15 |O|=21  (10) at j=2, both at j=3; (13)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-212-  V=(3,8,5) Z  w=3  c=18/7 |O|=1  (11) at j=2
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-213-m=72 M=[24,78,106]  Vs=5 u=30 q=1/2  |O|={3,6,12} N={6..15} (and 17)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-214-  V=(1,1,5), (1,4,5)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-215-m=72 M=[48,90,106]  Vs=5 u=30 q=3/14 |O|={1,7,14} N={6}
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-216-  V=(1,1,5), (1,3,5)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-217-m=72 M=[54,99,106]  Vs=8 u=32 q=3/7  |O|={1,7}    N={6,9} (and 18)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-218-  V=(1,12,8), (3,12,8)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-219-m=72 M=[84,104,106] Vs=3 u=27 q=8/13 |O|={1,3}    N={16}
+--
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-275-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-276-Smallest `D>100` with an operative survivor: **108**. Named target
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-277-(lexicographic first of the five `[6,16]` groups):
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-278-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-279-```text
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-280-n=108, m=72, s=4, M=(12, 102, 106), V_s=5
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-281-K=36, e=3, d=2,  d = (108, 36, 12, 6, 2)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-282-u = 30,  u_s = d_s − V_s = 6 − 5 = 1
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:283:δ = (δ₁, δ₂, δ₃, δ₄) = (17/42 or 2/7, 5/21, 0, −1)   # δ₁ depends on V₂
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-284-```
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-285-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-286-Two V-assignments in the group:
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-287-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:288:| V | q | (10)/(11) | (12)/(13) | \|O\| | packet |
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-289-|---|---|---|---|---:|---|
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:290:| `(1,8,5)` | 5/7 | j=2 (10); j=3 both | (13) | 21 | NZ `w=21, c=15` |
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-291-| `(3,8,5)` | 6/7 | j=2 (11); j=3 both | both | 1 | Z `w=3, c=18/7` |
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-292-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-293-Nested mix: one NZ orbit of the first type hits `N=15` exactly
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-294-(`w=21≤u=30`). The Z packet `18/7` is not integral. Group `N={15}`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-295-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-296-**Prop 6.3 descent datum.** `u_s=1`, so Prop 6.4 applies: the minor-disc
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:297:radius inequality is automatic and Prop 6.3 produces a monomial-Jacobian
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:298:pair of π-degrees `u_s n/d_s = 108/6 = 18` and `u_s m/d_s = 12`, Jacobian
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-299-`∼ γ^{v_s−u_s−1} = γ^{3}`. This is a bounded descended problem (unlike
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-300-the §6 family, whose descended degrees grow). Cheapest next test on this
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-301-row: `OPEN[SIBLING-COEFFICIENTS]` at the `j=3` node (the sibling
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-302-`p,q` of degrees `P=10, Q=…` with the A.3 ODE), already launched as a
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-303-sibling lane.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-304-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-305----
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-306-
+--
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-313-`n=9(7t+6)`: `b_min=3 > h=3/5` identically; TREE-dead at every
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-314-constructed `t`. Delta 17(n)'s cofinal-nonemptiness is PATH-ARITH +
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-315-integrality, **false** after `C_FULL_TREE` for those two rays.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-316-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-317-### 6.2 The `K=16` family (PROVED-HERE, all `t≥1`)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-318-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-319-Search: among `s=3` ODE survivors, `P≡0 (mod A₂)` (so `b_min=0`, no
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-320-forced zero) with `h` possibly `<1`. Moh `(64,48)` and the `D=112` `s=3`
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:321:row share `K=16`, `M₂=n−12`, `V₃=3`, `A₂=4`, `P=12`. That is a ray.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-322-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-323-**Closed form.** For integer `t≥1` set `e=3t+1`, `d=2t+1`. Euclid:
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-324-`gcd(2t+1, 3t+1)=gcd(2t+1, t)=gcd(1,t)=1`. Then
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-325-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-326-```text
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:327:n = 16e = 48t+16,   m = 16d = 32t+16,   M₂ = n−12 = 48t+4,   M₃ = n−2
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:328:V₂ = V₃ = 3
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-329-```
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-330-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-331-**`d_j`.** `d₂=gcd(n,m)=16` because `gcd(e,d)=1`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-332-`d₃=gcd(16,48t+4)=gcd(16,4)=4` (`12t+1` is odd).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-333-`d₄=gcd(4,48t+14)=gcd(4,2)=2`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-334-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-335-**Windows.** `i=3`: `2 < 3 ≤ 4`. `i=2`: `4/3 < 3 ≤ 12`. Both, all `t`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-336-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:337:**Radii.** `δ₃=−1`. `w=n−M₂=12` is **constant**, so
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-338-`δ₂ = 1 − 12(6−4)/(36−4) = 1/4` independently of `t`. `A₂=4`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-339-`P=V₃ d₂/d₃=12`, `P≡0 (mod 4)`: **no forced zero**. `Q=V₃ w/d₃=9`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:340:(9): `12=3·4+0`, `△=3`, `□=0`. (10): `V₂=3≤3`. (11): `3≢0 (mod 4)`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-341-**(10)-only**, `|O|=A₂=4`. `u=12`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-342-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-343-**`δ₁` (sympy).** `δ₁=(7t+2)/(4(3t+1))`. `L₁=4`,
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-344-`L₁δ₁=(7t+2)/(3t+1)`. Euclid: `gcd(7t+2,3t+1)=1`, so **`A₁=3t+1=e`**.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-345-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:346:**(12).** `A₁ | e·V₂ = 3(3t+1)` and `A₁ | d·V₂−1 = 6t+2=2(3t+1)`: both
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:347:hold identically. **(13)** fails (`3t+1` leaves remainder 1 on `6t+3`).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:348:So (12)∨(13) for all `t`. `q=(1−δ₁)de/(d+e)=(2t+1)/4`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:349:`N=|O|V₂ q=12q=6t+3`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-350-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-351-**TREE / ODE.** At `j=2`: `b=0`, `total=3`, `max_orbits=⌊9/4⌋=2`,
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:352:`h=4/3`. Selected `V₂=3` is a major nonzero orbit; complement empty;
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-353-ODE `P−Q·3=12−27≠0` (and `12/9` is not an integer, so no minor
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-354-`u=P/Q` sibling). Danger clears on the nonzero label. Bottom (12)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-355-holds. The same partition is the generic tree (`b=0`, one major coin 3).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-356-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-357-**Nested.** `s=3` exact: one NZ packet `w=12=u`, `c=6t+3`. One copy
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-358-fits. `N={6t+3}≥9`. Cap never relevant.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-359-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-360-**Census.** `K=16≤n/3` for `t≥1`; divisor chain `[4]` gives `s=3`,
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:361:`gcd(16,M₂)=4`. Emitted at `t=1,2,3,8,20,50` (`n` up to 2,416).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-362-TREE+ODE+nested checked at those `t`. Members `t=1..8` with `n≤400`:
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-363-`64, 112, 160, 208, 256, 304, 352, 400`. Campaign window `[6,16]` holds
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-364-only for `t=1,2` (`N=9,15`); the family is cofinal at **`N≥6`**, not at
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-365-pinned `N=6` and not inside `[6,16]`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-366-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-367-`t=1` is Moh `(64,48)`. `u_s=1` for every `t`, so Prop 6.3/6.4
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:368:**descends the whole ray** to monomial-Jacobian pairs of degrees
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-369-`n/d_s=4e=12t+4` and `m/d_s=4d=8t+4`, unbounded in `t`. Descent does
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:370:not kill the family; it converts it into the unbounded-degree `s'=2`
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-371-objects of m2-descent theorem (T). That is a different proof program,
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-372-not emptiness of the screened census.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-373-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-374-### 6.3 Growth, and Q3(f)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-375-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-376-Through `D=200` the operative count is 727 groups at N≥6 and growing
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-377-(`D=180`: 150; `D=192`: 246). The `D≤400` loop completed every baseline-active degree through
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:378:**`D=238`** (73 degrees, 127 s) and stopped: `D=240` TREE+ODE is 26 s
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-379-on a prior bench (27,501 V) but nested mix-DP on those TREE groups did
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-380-not finish in the remaining desk budget. Snapshot `D≤238`: **1,224**
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-381-ODE+nested-N≥6 of 2,262 ODE groups. The §6.2 family independently puts
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-382-a survivor at `256, 304, 352, 400`. **The screened space is cofinally
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-383-nonempty.** Q3(f) after the screen is **no**. A uniform theorem still
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-384-needs a datum outside PATH-ARITH+TREE+ODE+nested — sibling
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:385:coefficients, or descended monomial-Jacobian analysis along `u_s=1`.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-386-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-387-Naive scalings of `(75,50)` and `(99,66)` fail for `t≥2`. No second
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-388-closed form was isolated in the `s=3` `P≡0` slice; the `K=16` ray is
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-389-the one proved.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-390-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-391----
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-392-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-393-## 7. Residue at `n≤100`: 58 − 6 = 52
+--
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-434-96  72  [36,80,94]           (1,9,3)/(4,9,3)  4
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-435-96  72  [56,92,94]           (1,5,3)/(7,5,3)  4  10; 10/11  and  11; 10/11
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-436-96  72  [88,92,94]           (7,5,3)          4  11; 10/11
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-437-96  80  [24,92,94]           (6,3,3)          4  11; 10/11
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-438-100 40  [70,95,98]           (8,4,4)          4  11; 10/11
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-439-100 80  [50,95,98]           (1,8,4)/(3,8,4)  4  10; 10/11  and  11; 10/11
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-440-```
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-441-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:442:Moh six, for the record: `(64,48)` `u_s=1` (10); `(84,56) M₂=64`
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:443:`u_s=1` (10); `(84,56) M₂=72` `u_s=1` (10) and (11); `(75,50)` both
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-444-`u_s=1` (10); `(99,66)` **`u_s=3`** (10), Prop 6.3 not automatic.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-445-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-446-**52/52 excess rows have `u_s=1`.** The `n≤100` ODE residue is a
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-447-descent residue: every excess row is a Prop 6.3/6.4 input. That does
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-448-not close `OPEN[MOH-PROGRAM-ARTIFACT]` (the CDC listing is still
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:449:missing); it retypes the 52 as descended monomial-Jacobian candidates
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-450-of bounded degree.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-451-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-452----
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-453-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-454-## 8. Side columns (not operative)
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-455-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-456-Through `D≤200`, PASSPORT groups = 1,261 (charged 1,261). POLY /
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-457-POLY+ODE were evaluated on TREE survivors through `D=200` (fail-closed
+--
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-475-OPEN[MOH-PROGRAM-ARTIFACT]  not closed.  49 excess after PASSPORT
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-476-   (52 after ODE).  No desk test.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-477-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-478-OPEN[FULL-TREE-RECENTER]  unchanged; side column.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-479-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-480-OPEN[PASSPORT-SHARPNESS]  unchanged; side column.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-481-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-482-OPEN[MINOR-DICHOTOMY] / theorem (T)  the §6 family has u_s=1 for
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:483:   every t, so Prop 6.3 produces an unbounded-degree s'=2
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:484:   monomial-Jacobian family (deg 12t+4).  That is the leftover
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-485-   proof program.  Cheapest: one large-t descended pair
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:486:   (t=3, n=160 → degrees 40, 28).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-487-```
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-488-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-489-Q3(f) after the screen is answered: **no proof program by emptiness**.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-490-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-491----
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-492-
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-493-## 10. Typed block
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-494-
+--
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-505-              D=105 and D=117 TREE-empty; both named rays TREE-dead
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-506-              with b_min>h identically; D≤200 TREE 1516 / ODE 1384 /
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-507-              PASSPORT 1261 groups.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-508-MEASURED      operative nested after ODE: D≤120  51 N≥6 / 43 [6,16]
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-509-              of 103 ODE groups; D≤200  727 / 523 of 1384;
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-510-              D≤238  1224 / 872 of 2262 (loop stopped: D=240 nested
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-511-              mix-DP exceeded remaining desk budget).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-512-              D=108: 5 groups in [6,16], all s=4 u_s=1; D=112: 2;
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md:513:              D=120: 18.  TREE-empty degrees at D≤200 as charged
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-514-              plus ODE-kills {174,184} and nested-kills {72,80}.
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-515-REFUTED       cofinal emptiness of C_FULL_TREE_ODE + nested N≥6
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-516-              (the K=16 family); Q3(f) as a screened-census proof
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-517-              program.  Sol L=8a+5 and A₂=6 rays as screened-cofinal
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-518-              (already delta 17(r); reconfirmed).
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-519-NOT CLAIMED   geometric realisation of any packet; Jacobian pairs at
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-520-              D=108 or along the family; passport/recenter as
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md-521-              operative; OPEN[MOH-PROGRAM] closed; UNI 865 as nested.
+--
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-17-workdir copy, needed because `/tmp/jc2-lane.N4YhZu/inputs` is read-only
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-18-and `autoscan2.py` imports `autoscan`).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-19-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-20-## 0. Headline
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-21-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-22-1. **`OPEN[M2-ABOVE-M]` as charged remains REFUTED.** Different-model
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-23-   rerun of `autoscan2.py` reproduces the 12/25 split and the printed
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-24-   `n=4, m=2` witness. An independent sympy engine (not `etaexp.py`)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:25:   recomputes `J = 1/1024`, `deg = deg_y`, `f_{-2..3}`, and `M = [-2, 1]`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-26-   from the printed `f, g`. Residual claim confirmed: every witness fails
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-27-   (4) or (6). §1.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-28-2. **`ERRATUM[APPII-GAMMA-B]` confirmed by a hand derivation.**
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-29-   `A^2 ≡ (a_6 x+a_7)A − a_8 B (mod h)` and `A y ≡ −a_8` give B-coefficient
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-30-   `−a_9^2 a_8`, not `−a_9^2 a_{10}`. Control2 + positive/negative
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-31-   saturation controls rerun identically. §1.4.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-32-3. **`OPEN[DESCENT-RADII]` closed.** The p.207 columns `δ_2', δ_1'` are
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-33-   the *geometric* logarithmic radii of the descended pair's major discs
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:34:   (Prop 5.1: `δ = min ord_t(τ_i−τ_j)`, `t = x^{-1}`), **not** Def 5.1(3)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-35-   applied raw to the descended `(M_i', V_i')`. They equal
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:36:   **`(k+1)` times Def 5.1(3) on the descended data with `s' = 2`**,
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-37-   where `k` is the exponent in `J = c x^k`. This hits all **10** printed
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-38-   rationals. Independent numerical Newton–Puiseux (two-point fit)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-39-   confirms the four values attached to Moh's own (15,10) shapes (5)–(6)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-40-   and (16,12) shapes of p.208: `(−1, 1/2)` and `(−1, 1/4)`. The p.210
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-41-   split “three subdiscs containing 2, 2, 6 roots of `f`” is what the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-42-   numerics show. §2–§3.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-43-4. **G2/G3.** With `δ_1'` in hand, the Appendix-II order conditions cut
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-44-   G2 to 14 free coefficients of `h` plus 27 of `β` plus `c` = **42
+--
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-52-## 1. Task (A) — different-model gate
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-53-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-54-### 1.1 `etaexp.py` on the printed `n = 4` witness, checked from `f, g`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-55-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-56-Printed witness (autoscan2, seed 7717; rerun this lane, identical
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-57-polynomials):
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-58-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-59-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:60:n = deg g = deg_y g = 4 ,  m = deg f = deg_y f = 2 ,  K = gcd(n,m) = 2
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-61-g = y^4 - 3 x y^3 + 27/8 x^2 y^2 - 27/16 x^3 y + 81/256 x^4
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-62-    + 2 y^3 - 35/8 x y^2 + 51/16 x^2 y - 99/128 x^3
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-63-    + 9/8 y^2 - 25/16 x y + 139/256 x^2 + 9/64 y - 25/256 x + 1/256
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-64-f = y^2 - 3/2 x y + 9/16 x^2 + y - 11/16 x
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-65-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-66-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-67-Independent sympy (driver `hand_n4.py`; own unit-power recursion, does
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-68-not import `etaexp` until a final cross-check):
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-69-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-70-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-71-  g monic in y, deg_y g = 4,  total deg = 4
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:72:  f monic in y, deg_y f = 2,  total deg = 2
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-73-  J(f,g) = 1/1024          constant nonzero: True
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-74-  f = (y - 3/4 x)^2 + y - 11/16 x    identity: True
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:75:  eta-expansion f = eta^{-2} + sum_j f_j(x) eta^j ,  eta = g^{-1/4}:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-76-     f_{-2} = 1
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-77-     f_{-1} = 0
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-78-     f_0    = -1/16
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-79-     f_1    = -1/128
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-80-     f_2    = 1/256
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:81:     f_3    = -3/4096 + x/4096          deg_x f_3 = 1  (Lemma 2.1)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-82-  f_i constant for all i < 3: True
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-83-  M = [-2, 1] ,  d = [4, 2, 1]
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:84:  M_2 = 1  <=  m = 2    ->  M_2 > m is FALSE
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-85-  etaexp.py cross-check M,d : match True
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-86-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-87-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:88:Hand content of the Jacobian check: `f` is monic of `y`-degree 2 equal
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-89-to total degree; `g` is monic of `y`-degree 4 equal to total degree;
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-90-`J = f_x g_y − f_y g_x` expands (sympy, exact `Rational`) to the constant
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-91-`1/1024 ≠ 0`. Completing the square in `f` is the identity above, so the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-92-pair is visibly an elementary-automorphism image in Moh's gauge. Lemma
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-93-2.1's two clauses hold: `f_i` constant for `i < n−1 = 3`, and
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:94:`deg_x f_3 = 1`. Characteristic data: `−2` does not divide `n = 4`, so
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:95:`M_1 = −2`, `d_2 = 2`; next non-multiple of 2 is `f_1 ≠ 0`, so `M_2 = 1`,
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-96-`d_3 = 1`. `PROVED-HERE / UNREVIEWED`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-97-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-98-### 1.2 `autoscan2.py`: 12/25 split, rerun
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-99-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-100-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:101:  total pairs 25 ; M_2 > m : 13 ; M_2 <= m : 12
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:102:  witnesses with M_2 <= m and d_s >= 4 :
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-103-      (8, 4, [-4, 3],     [8, 4, 1])         d_s = 4
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-104-      (10,5, [-5, 4],     [10, 5, 1])        d_s = 5
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-105-      (12,6, [-6, 5],     [12, 6, 1])        d_s = 6
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-106-      (16,8, [-8, 4, 11], [16, 8, 4, 1])     d_s = 4
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-107-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-108-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:109:The twelve `M_2 ≤ m` rows are exactly the charged table
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-110-`[2,2], [3,2], [4,2], [2,2,2], [5,2], [3,2,2], [2,3,2], [6,2],
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-111-[2,2,2,2], [4,2,2], [2,4,2], [3,3,2]`. Fail-closed: every row entered
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:112:only after `J` is a single nonzero constant monomial and `deg = deg_y`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-113-**CONFIRMED** (different model, same seed 7717, same 12/25).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-114-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-115-### 1.3 Residual claim: the witnesses fail (4) or (6)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-116-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-117-Moh p.201 `SOURCE-READ`: (4) `{n, M_1, …, M_s}` is the part of the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-118-characteristic data less than `n−2`, i.e. `M_s = n−2`; (6) `3 ≤ s ≤ 5`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-119-and `d_s ≥ 4`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-120-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-121-Every one of the twelve has `M_s ≠ n−2` (fails (4)). The four with
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-122-`d_s ≥ 4` still have `s = 2` (the first three) or `s = 3` with
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-123-`M_s = 11 ≠ 14` (the `[4,2,2]` row): so (6) holds for that one row and
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-124-(4) fails. None satisfies (4) and (6) together. The census and the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-125-witnesses remain disjoint. **CONFIRMED**.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-126-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:127:**Gate on “`M_2 > m` for Keller pairs in Moh's gauge”: REFUTED.**
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:128:Residual form (not refuted): whether `(1)–(13)` plus
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:129:minimal-counterexample hypotheses imply `M_2 > m`. Bounded residue
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:130:unchanged: 564 rows / 54 classes at `n ≤ 100` with `M_2 ≤ m`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-131-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-132-### 1.4 `γ` by hand; control2 + controls_pm rerun
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-133-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-134-Moh p.211 `SOURCE-READ`: `h = A y + a_8 = B y^2 + (a_6 x+a_7) y + a_8`,
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-135-`β = a_9 A + a_{10} y + a_{11} x + a_{12}`. Directly from the two
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-136-expressions for `h`:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-137-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-138-```text
+--
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-153-  γ has B-coefficient −a_9^2 a_8, not −a_9^2 a_{10}  reproduced True / False
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-154-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-155-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-156-`ERRATUM[APPII-GAMMA-B]` **CONFIRMED**. Driver `gamma_hand.py`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-157-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-158-Rerun of `moh_1510_control2.py`: printed `γ` not reproduced; audited `γ`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-159-reproduced; Case 1 (`a_9 = 0`) contradiction reproduced; Case 2 audited
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-160-equations `a_8 = 0`, `a_6 = −2 a_{11}/a_9`, `a_7 = −2 a_{12}/a_9`; five
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:161:monomials of `c_2 − 3γ` saturate to `[1]` at `a_9 ≠ 0` (Rabinowitsch
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-162-`T a_9 − 1`, lex, ring `Q[a_1..a_{12}, T]`). Rerun of
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-163-`moh_1510_controls_pm.py`:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-164-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-165-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-166-  MAIN     : saturate all 5 at a9!=0 -> EMPTY  [1]
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-167-  POSITIVE : drop (2,0) -> NON-TRIVIAL (5)   drop (1,1) -> NON-TRIVIAL (5)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-168-             drop (0,2) -> NON-TRIVIAL (5)   drop (1,0) -> EMPTY [1]
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-169-             drop (0,1) -> EMPTY [1]
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-170-  NEGATIVE : a9=1, a10=2, a11=3 -> NON-TRIVIAL (4 gens)  [expected]
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-171-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-172-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-173-The kill uses exactly `(2,0), (1,1), (0,2)`, matching the hand argument
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-174-`a_9^3 = 3 a_{10}^2 = −3 a_{11}^2` and `a_{10} a_{11} = 0`. **PASSES**.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-175-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-176-### 1.5 Descent table (p.207 degree/Jacobian columns)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-177-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:178:Rerun `descent_table.py`: `n', m', M_2', V_2', Jac` reproduced on all
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-179-four `u_s = 1` rows (`True`); D = 105 trio G3/G1/G2 as charged. Not
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-180-re-litigated.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-181-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-182-## 2. Convention (SOURCE-READ)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-183-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-184-Intro p.141: the Puiseux field is `k⟪t⟫` with **`t = x^{-1}`**; roots
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-185-`τ_i` of `g(t^{-1}, y) = 0` (and of `f`, and of `T_i^ψ`) live in this
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-186-field. Remark p.146: `|σ_i − σ_j| = 2^{−ord(σ_i−σ_j)}`, and
+--
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-188-definition used for every radius in this report:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-189-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-190-> `δ_s = min { ord(τ_i − τ_j) : τ_i, τ_j roots of g(y) ∏_{i=1}^s T_i^ψ(y) = 0 }`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-191-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-192-Prop 5.2 p.176: `δ_{s−1}` is the same min, restricted to those roots
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-193-with `ord(τ_i − τ) > δ_s` (the logarithmic radius of the subdisc).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-194-Lemma 5.1 / Prop 5.1(2) p.174, for **constant** Jacobian:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-195-`δ_s = −1/(n − M_s − 1)`, which is `−1` precisely when `M_s = n−2`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:196:Def 5.1(3) p.179 is the closed form of this iteration. Def 4.1 (major
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-197-vs minor) is by root-count against the window `d_i/(n−M_i)`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-198-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-199-**Convention used throughout:** `t = x^{-1}`; `δ(D) = min{ ord_t(τ_i−τ_j) :
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-200-τ_i, τ_j ∈ D }`; top disc of a pair whose highest form has two distinct
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-201-linear factors has `δ = −1`. Numerically, at large `|X|`,
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-202-`δ_ij ∼ −log|y_i−y_j|/log|X|`, and a two-point fit removes the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-203-`log|C|/log|X|` bias. Rational reconstruction is by
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-204-`Fraction.limit_denominator`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-205-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-206-Prime marks: `δ_i', n', m', M_i', V_i', d_i', k` are *labels* for
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:207:descended data, never derivatives. `f_i'(x)` in Lemma 2.1 *is* a
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-208-derivative, as Moh p.151.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-209-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-210-## 3. Task (B) — measure `δ'`; close the 10 rationals
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-211-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:212:### 3.1 What Def 5.1(3) does *not* do on the descended data
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-213-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:214:Def 5.1(3) at `s' = 2` on `(n', m' = −M_1', M_2', V_2')` produces
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-215-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-216-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-217-  row                    Def51(δ2, δ1)     printed p.207
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-218-  (16,12) V2=3           (−1/2, 1/8)       (−1,   1/4)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-219-  (21,14) V2=2           (−1/4, 7/12)      (−1/2, 7/6)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-220-  (21,14) V2=5           (−1/2, 1/6)       (−1,   1/3)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-221-  (15,10) V2=3           (−1/3, 1/6)       (−1,   1/2)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-222-  (15,10) V2=2           (−1/3, 4/9)       (−1,   4/3)
+--
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-229-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-230-Shift `δ_i' = δ_{i+1}` of the parent matches (64,48) and fails (84,56).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-231-The parameter-change `δ_new = v_s − u_s δ_old` gives `11/4, 39/16` on
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-232-(64,48), as charged. Fake `M_3' = n'−2` has no integer `V_3'` hitting
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-233-any printed pair. All of that is reproduced (`candidates_delta.py`).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-234-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-235-### 3.2 The rule
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-236-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:237:> **Φ.** Let `(n', m', M_2', V_2')` be the Prop 6.3-descended data of a
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-238-> `u_s = 1` row, `d_2' = gcd(n', m')`, `s' = 2`, and let `k` be the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-239-> exponent in the descended Jacobian `c x^k`. Let `δ_i^{51}` be Def
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-240-> 5.1(3) p.179 evaluated on this descended tuple. Then the geometric
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-241-> logarithmic radii of the descended pair (in `t = x^{-1}`) are
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-242-> **`δ_i' = (k+1) · δ_i^{51}`**.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-243-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-244-Equivalently, Lemma 5.1's `δ_s = −1/(n−M_s−1)` (the `1` is
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:245:`deg_x f_{n−1}` of Lemma 2.1, constant Jacobian) becomes
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-246-`δ_s = −(k+1)/(n−M_s−1)` for `J = c x^k`, and the same factor multiplies
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:247:the whole of Def 5.1(3). When `k = 0` this is Def 5.1(3) verbatim.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-248-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-249-**All 10 printed p.207 rationals MATCH** (`phi_delta.py`):
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-250-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-251-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:252:  (16,12) from (64,48)              k+1=2  Phi=(−1,   1/4)  printed=(−1,   1/4)  MATCH
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:253:  (21,14) V2=2 from (84,56) M2=64   k+1=2  Phi=(−1/2, 7/6)  printed=(−1/2, 7/6)  MATCH
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:254:  (21,14) V2=5 from (84,56) M2=72   k+1=2  Phi=(−1,   1/3)  printed=(−1,   1/3)  MATCH
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:255:  (15,10) V2=3 from (75,50)         k+1=3  Phi=(−1,   1/2)  printed=(−1,   1/2)  MATCH
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:256:  (15,10) V2=2 from (75,50)         k+1=3  Phi=(−1,   4/3)  printed=(−1,   4/3)  MATCH
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-257-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-258-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-259-Zero free parameters, ten hits. The charged “ratios 2,2,2,3, no single
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-260-rule” *is* this rule: those ratios are `k+1`. `PROVED-HERE` as the unique
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:261:per-row constant multiple of Def 5.1(3) that reproduces p.207, the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:262:constant being the Lemma 2.1 `x`-degree `k+1`. `SOURCE-READ` for Def
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:263:5.1(3), Lemma 2.1, Prop 6.3(3). Not a reindexing and not a parent-to-child
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:264:parameter-change of `δ`; it is Def 5.1(3) on the descended characteristic
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-265-data, evaluated in the Jacobian-normalized parameter and converted back
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-266-to `t = x^{-1}` by the factor `k+1`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-267-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:268:### 3.3 Measurement on Moh's own shapes (route (b) of charged §4.3)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-269-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-270-**(15,10) shapes (5)–(6), p.211 `SOURCE-READ`.** Random admissible
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-271-rational `a_1..a_{12}` (three draws: seeds 20260903, 17, 99).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-272-`f = h^2 + 2β`, `g = h^3 + 3β h + (3/2)α` with `α` from
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-273-`β^2 = α h + γ`. Leading form of `h` is `y^5 − x^2 y^3 = y^3(y−x)(y+x)`;
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-274-of `f` is `y^6(y−x)^2(y+x)^2`. Numerical roots of `f` at
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-275-`|X| ∈ {10^4, 3·10^4, 10^5, 3·10^5}`:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-276-
+--
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-297-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-298-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-299-  split vs X, 0:  X:3  0:9  other:0
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-300-  TOP min_delta → −1.000000 ~ −1
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-301-  0-cluster (9 roots), two-point fit |X|=3e5, 1e6:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-302-      min_delta → 0.250003 ~ 1/4 ;  scale expo → −0.250022 ~ −1/4
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-303-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-304-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:305:`V_2 = 3` predicts `(m/d_2) V_2 = (12/4)·3 = 9` roots of `f` in `D_1`:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-306-the 0-cluster. **`δ_2' = −1`, `δ_1' = 1/4`: CONFIRMED-PRINTED.**
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-307-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-308-A majority-at-0 heuristic `δ_1 = u/(v+1)` (`v δ_1 − u = −δ_1`, saturating
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-309-`ord h(σ)` against `−δ_1`) recovers `1/4` and `1/2` on these two rows and
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:310:the printed `1/3` on (21,14) `V_2 = 5`, but **fails** the two `V_2 = 2`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-311-rows (`1 ≠ 4/3`, `5/3 ≠ 7/6`). It is a check on the measured majority
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:312:clusters, not the general rule. Φ is.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-313-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-314-Generic leading-form shapes *without* Moh's order conditions on `α, β`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:315:(e.g. `h = y^2(y−x)^3 +` generic lower for a putative (15,10) `V_2 = 2`)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-316-do **not** reproduce the printed `δ_1'`: the `α, β` constraints change
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:317:the Newton polygon. That is why route (b) of the charged §4.3 specified
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-318-Moh's own shapes. FALLACY-v2: those unconstrained draws are not used to
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-319-“correct” any printed value.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-320-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-321-### 3.4 Decision on the 10 rationals
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-322-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-323-| row | `δ_2'` | `δ_1'` | status |
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-324-|---|---|---|---|
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:325:| (16,12) `V_2=3` | `−1` | `1/4` | **CONFIRMED-PRINTED** (Φ + measured) |
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:326:| (21,14) `V_2=2` | `−1/2` | `7/6` | **CONFIRMED-PRINTED** (Φ; no printed shape to measure) |
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:327:| (21,14) `V_2=5` | `−1` | `1/3` | **CONFIRMED-PRINTED** (Φ; majority-heuristic agrees) |
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:328:| (15,10) `V_2=3` | `−1` | `1/2` | **CONFIRMED-PRINTED** (Φ + measured + 2,2,6 split) |
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:329:| (15,10) `V_2=2` | `−1` | `4/3` | **CONFIRMED-PRINTED** (Φ; no printed shape to measure) |
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-330-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-331-None CORRECTED, none UNDECIDED. The printed p.207 `δ` columns are
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:332:geometric radii in `t = x^{-1}`; Φ is the evaluation of Def 5.1(3) on
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-333-the descended characteristic data converted from the Jacobian-normalized
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-334-parameter to that `t`. `OPEN[DESCENT-RADII]` **closed**. Bounded
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-335-quantity: 10 rationals, 10 confirmed printed, 0 misprints in these
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:336:columns. (The parent p.202 `δ_1 = 1/3` erratum on (75,50) `V_2=2`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:337:stands independently: Φ does not read the parent `δ` column, and it
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:338:returns the printed descended `4/3` from `(n', M_2', V_2', k)` alone.)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-339-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-340-**(i)** Convention: measured geometric `ord_t`, equal to
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:341:`(k+1)·`Def 5.1(3) on descended data with `s' = 2`. Not a reindexing,
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-342-not `δ_i' = δ_{i+1}`, not `v_s − u_s δ_old`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-343-**(ii)** The ten values: all CONFIRMED-PRINTED.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:344:**(iii)** Rule Φ, tested on all five `u_s = 1` rows of p.207: exact.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-345-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-346-## 4. Task (C) — G2/G3 Appendix-II reduction
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-347-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-348-### 4.1 Descended data (gate-checked, unchanged)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-349-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-350-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:351:  G2: (15,10), J = c x^4, M_2' = 4, V_2' = 1, d_2' = 5, u' = 4, v' = 1
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:352:  G3: (21,14), J = c x^2, M_2' = 8, V_2' = 1, d_2' = 7, u' = 6, v' = 1
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-353-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-354-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:355:Both have `M_2' ≤ m'` (`4 ≤ 10`, `8 ≤ 14`). Prop 6.4 applies
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-356-(`u_s = 1` on the parents).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-357-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:358:### 4.2 Φ on G2/G3
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-359-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-360-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-361-  G2: Def51 raw = (−1/10, 1/4);   k+1 = 5;   δ2' = −1/2,  δ1' = 5/4
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-362-  G3: Def51 raw = (−1/12, 3/8);   k+1 = 3;   δ2' = −1/4,  δ1' = 9/8
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-363-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-364-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-365-Because `δ_2' > −1` on both, Lemma 5.3 says the smallest disc containing
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-366-all roots of `g ∏ T` is **not** of radius `−1`: one point at infinity.
+--
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-369-`y(y−x)^4` is the *wrong* leading form for G2 (it forces `δ_2 = −1`).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-370-A specialization of G2 to that wrong form saturates empty at `c ≠ 0`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-371-(`g2_case_p0.py`: top of `J` forces `p = 0`, then unsaturated basis
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-372-`[q^2, r^2, c, …]` forces `c = 0`; MAIN with Rabinowitsch `T c − 1` is
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-373-`[1]`; negative control non-trivial). That kill is **not** a kill of G2
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-374-(wrong shape). FALLACY-v2: a slice is not the problem.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-375-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-376-The one-point-at-infinity Newton form compatible with
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:377:`(δ_2', δ_1') = (−1/2, 5/4)` and the `V_2 = 1` split (1 h-root in `D_1`,
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-378-4 in the complementary subdiscs of `D_2`) is: four `h`-roots at scale
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-379-`t^{−1/2}` (they realize `δ_2'`) and one at scale `t^{5/4}` (major
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-380-`D_1`). Polynomial model: `h = y^5 + a x^2 y +` lower, since
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-381-`y^4 ∼ x^2` gives `y ∼ x^{1/2} = t^{−1/2}`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-382-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:383:### 4.3 Forced monomials from `δ_1' = 5/4`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-384-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-385-Center `D_1` at 0 with `σ = π t^{5/4}`. Following p.208's bound
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-386-`ord h(σ) ≥ −δ_1` (which saturates on Moh's (16,12)):
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-387-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-388-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-389-  x^i y^j  at σ has val −i + (5/4) j
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-390-  −i + (5/4) j ≥ −5/4   <=>   i ≤ (5/4)(j+1)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-391-  together with i+j ≤ 5, i ≤ 4, j ≤ 5, drop the monic leader y^5.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:392:  Free in h: 14 monomials
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-393-      y^4, x y^4;  y^3, x y^3, x^2 y^3;
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-394-      y^2, x y^2, x^2 y^2, x^3 y^2;
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-395-      y, x y, x^2 y;  1, x.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-396-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-397-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:398:For `β`, `deg_y ≤ 4`, competing with `h^2` at `σ` (`ord ≥ −5/2`):
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:399:`i ≤ (5 j + 10)/4`, `deg_x ≤ 8` gives **27** monomials. Plus `c`:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-400-**42 unknowns**. The `g = h^3 + 3β h + (3/2)α` expansion (no free
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-401-`G_1, G_0`) is already included. **> 30. COUNTING-BOUND.** Desk Groebner
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-402-of the 19-unknown intermediate (14 of `h` plus Moh-pattern 4 of `β` plus
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-403-`c`) did not return in 3 minutes / 1 core and was killed; not claimed.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-404-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-405-A *tighter* (16,12)-style slice — `h = y^5 + a x^2 y +` (y-polynomial of
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:406:deg ≤ 4) `+ e x`, `β = p A + q y + r x + s`, 12 unknowns — *does* finish:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-407-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-408-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-409-  MAIN     : saturate J = c x^4 at c != 0  -> EMPTY  [1]
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-410-             ring Q[a,b0..b4,e,p,q,r,s,c,T], grevlex, Rabinowitsch T*c-1
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-411-  UNSATURATED: NON-TRIVIAL (23 gens)   [c=0 lives; J=0 pairs]
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-412-  NEGATIVE : toy c=1, p=1 -> NON-TRIVIAL (3 gens)  [expected]
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-413-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-414-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-415-Typed **SATURATED-EMPTY on this slice**, not on G2. The unsaturated
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-416-non-triviality plus the negative control are the FALLACY-v2 `sat()`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-417-discipline: emptiness is of the `c ≠ 0` *component*, in the declared
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-418-ring, not a wrapper artefact.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-419-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-420-G3: `δ_1' = 9/8`, `h` of `deg_y = 7`, `deg_x ≤ 6`, bound
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:421:`i ≤ (9/8)(j+1)` already leaves more than 30 monomials in `h` and `β`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-422-**COUNTING-BOUND.** No Groebner attempted.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-423-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-424-### 4.4 Typed outcome
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-425-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-426-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-427-  G2 (15,10; X^4; M2'=4, V2'=1, d2'=5; δ2'=-1/2, δ1'=5/4)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-428-      : COUNTING-BOUND   (42 order-condition unknowns)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-429-        Newton-tight 12-unknown slice: SATURATED-EMPTY (slice, not G2)
+--
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-442-investigate; none occurred.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-443-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-444-## 5. Bounded quantities and OPEN accounting
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-445-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-446-OPENS CLOSED
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-447-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-448-* `OPEN[DESCENT-RADII]` — the 10 rationals of p.207's `δ_2', δ_1'`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-449-  columns. All 10 CONFIRMED-PRINTED as geometric `ord_t` radii, equal to
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:450:  Φ = `(k+1)·`Def 5.1(3) on the descended data. Four of ten additionally
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-451-  measured on Moh's printed shapes. Rule tested on all five `u_s = 1`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-452-  rows.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-453-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-454-OPENS CONFIRMED / NOT REOPENED
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-455-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-456-* `OPEN[M2-ABOVE-M]` — REFUTED as charged (Keller pairs in Moh's gauge);
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:457:  residual `(1)–(13)` form untouched. Different-model gate: CONFIRMED.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-458-* `ERRATUM[APPII-GAMMA-B]` — CONFIRMED by the identities
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-459-  `A^2 ≡ (a_6 x+a_7)A − a_8 B (mod h)`, `A y ≡ −a_8`.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-460-* `ERRATUM[PROP63-JAC-SIGN]` — not re-opened; p.198 last display vs
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-461-  statement (3) / p.207, `SOURCE-READ` this lane (the determinant in the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-462-  proof is `−u_s/(b γ^{v_s−u_s−1})`, i.e. the reciprocal of statement
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-463-  (3); the table's `X, X, X^2` against `v_s−u_s−1 = 1, 1, 2` shows the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-464-  statement is meant).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:465:* `OPEN[DESCENT-CLOSURE]` — (8)–(13) now unblocked: they are functions of
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:466:  `δ_j'`, and `δ_j'` is Φ. This lane does not evaluate (8)–(13) on the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-467-  descended D = 105 rows (not charged); the residue is no longer the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-468-  radii.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-469-* `OPEN[MINOR-DICHOTOMY]`, `OPEN[DESCENT-LIFT]`, `OPEN[MOH-PROGRAM]` —
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-470-  untouched. `OPEN[MOH-PROGRAM]` is not sharpened; Fable's 28-row cut
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:471:  still rests on the refuted `M_2 > m` theorem, and 17(p) is provisional.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-472-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-473-**FALLACY-v2 check.** No exit price is asserted, so no `charge_basis`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-474-line. No cv-flag / place / series identification. No per-ray charge.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-475-`REPRESENTATIVE` vs `FULL_ACTUAL_EXIT` does not arise. No pole identity.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-476-**Floor/attainment:** §1.1 is an existence statement with a printed
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:477:witness (attainment); §3.2's Φ is an equality matching 10 printed values
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-478-and 4 measurements, not a floor; §3.3's two-point fits are equalities
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-479-`D = 1/2, 1/4` to six digits against the printed numbers, with the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-480-`log|C|/log|X|` term fitted out (not dropped). **`sat()` wrapping:**
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-481-every saturation declares the ring (`Q[a_1..a_{12},T]` or
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-482-`Q[a,b_0..b_4,e,p,q,r,s,c,T]`), grevlex or lex, the Rabinowitsch
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-483-generator, and both controls; the returned object is the Gröbner basis
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-484-of that *component*. **Raw remainder degree:** divisions by `h` are
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-485-`sympy.div` in `y` by a polynomial monic in `y` (verified); the identity
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-486-`β^2 − α h − γ = 0` is checked. **Variable/ring map:** Prop 6.3 variables
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:487:are `(γ, π)`; Appendix II reuses `(x, y)` for the descended pair and `γ`
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-488-for a remainder polynomial — this report never identifies the two `γ`'s.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-489-**Prime label/derivative:** as §2. **Merge-free / target-arrival:** do
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-490-not arise. No `D ≤ C(N)` inferred. Unconstrained leading-form draws that
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-491-failed to match printed `δ_1'` were *not* used to correct the print
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:492:(typed OPEN would have been returned for those rows had Φ not hit them;
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:493:Φ did). The G2 Newton-tight SATURATED-EMPTY is labelled a slice; the
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-494-wrong two-point form is labelled wrong. AUDIT 17(p) is cited as
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-495-provisional and not consumed.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-496-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-497-## 6. Typed block
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-498-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-499-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-500-LANE         descent-radii-grok46-20260903 (Grok 4.6)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-501-SOURCE       Moh 1983 at 300 dpi: pp.141, 145-146, 173-181, 196-198, 202, 207-211
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-502-GATE         hashes 9/9; autoscan2 12/25 CONFIRMED; n=4 witness J=1/1024,
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-503-             f_{-2..3}, M=[-2,1] independently reproduced; witnesses fail
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-504-             (4) or (6); gamma erratum re-derived; control2 SATURATED-EMPTY
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-505-             + pos/neg controls PASSES; descent_table p.207 degree columns True
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-506-PROVED-HERE  OPEN[DESCENT-RADII] CLOSED.  Convention: t=x^{-1},
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:507:             δ = min ord_t(τ_i−τ_j) (Prop 5.1).  Rule Φ:
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-508-             δ_i' = (k+1) * Def5.1(3)(n',m',M2',V2'; s'=2),
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:509:             k = exponent of the descended monomial Jacobian.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-510-             10/10 printed p.207 rationals MATCH.  Measured on Moh's
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-511-             (15,10) (5)-(6) and (16,12) p.208: (−1, 1/2) and (−1, 1/4),
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-512-             two-point fits to 1e-5; 2,2,6 split of f CONFIRMED.
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-513-NOT CLAIMED  any kill or survival of G2 or G3 as a whole; any sharpening
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-514-             of OPEN[MOH-PROGRAM]; any consumption of AUDIT 17(p)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-515-TYPED        G2, G3: COUNTING-BOUND (42 / >30 order-condition unknowns).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-516-             G2 Newton-tight 12-unknown slice: SATURATED-EMPTY (slice).
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-517-OPEN CLOSED  OPEN[DESCENT-RADII] (10 rationals, 10 CONFIRMED-PRINTED)
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-518-```
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-519-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-520-## 7. Drivers
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-521-
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-522-```text
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-523-box/descentradii-drivers-20260903/hand_n4.py            independent n=4 witness
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-524-box/descentradii-drivers-20260903/gamma_hand.py         A^2, Ay identities
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md:525:box/descentradii-drivers-20260903/phi_delta.py          Φ vs p.207; G2/G3 values
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-526-box/descentradii-drivers-20260903/candidates_delta.py   rejected candidates
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-527-box/descentradii-drivers-20260903/measure_numpy.py      disc trees, numpy roots
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-528-box/descentradii-drivers-20260903/measure_more.py       two-point fits; extra shapes
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-529-box/descentradii-drivers-20260903/g2_highy.py           top of J forces p=0
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-530-box/descentradii-drivers-20260903/g2_case_p0.py         wrong-shape slice empty
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-531-box/descentradii-drivers-20260903/g2_newton_solve.py    Newton-tight slice empty
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-532-  plus copies of the charged m2descent drivers used for the gate
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md-533-  (etaexp, autoscan, autoscan2, descent_table, moh_1510_control2,
+--
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-8-`SOURCE-READ` (page opened by this lane at 300 dpi) or `SOURCE-UNVERIFIED`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-9-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-10-Discipline: no canonical ledger edited; `jc2-lean` not inspected; no other
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-11-`ideation-20260903T1015Z-*` file than the charged Fable one opened; no running lane's
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-12-report opened. Drivers in `box/m2descent-drivers-20260903/`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-13-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-14-## 0. Headline
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-15-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:16:1. **`OPEN[M2-ABOVE-M]` — REFUTED as stated.** `M_2 > m` is **not** a theorem for
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-17-   Keller pairs in Moh's gauge. Twelve explicit witnesses (polynomial automorphisms of
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:18:   `A^2_Q`, put in Moh's gauge, Jacobian verified a nonzero constant) have `M_2 <= m`;
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:19:   the smallest is printed in full in §2.3 (`n = 4, m = 2, M_2 = 1`). Four of them
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-20-   satisfy Moh's condition (6) datum `d_s >= 4` as well. Consequently routes **H1**
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:21:   (Ω-symmetry + Lemma 2.1) and **H2** (Prop 5.6 coprimality) **cannot work as posed**:
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-22-   both use only hypotheses the witnesses satisfy. `PROVED-HERE / UNREVIEWED`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:23:2. **Source evidence that `M_2 > m` is not Moh's hidden restriction.** p.151
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:24:   (`SOURCE-READ`), immediately after Lemma 2.1: *"We shall call the reader's attention
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:25:   to our **ignorance about the numbers M_i**… the value `M_2` could never be 13. It
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-26-   shows how little we know about `M_i` in the polynomial case."* Moh explicitly
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:27:   disclaims a general constraint on `M_2`. §2.1.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-28-3. **The Fable measurement reproduces exactly** (fail-closed): 6/6 printed p.202 rows
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-29-   kept, 658 → 94 rows / 32 classes at `n <= 100`, `(75,50)` pinned to
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:30:   `M_2 ∈ {55,60}` and to Moh's two rows after integral `N >= 6`, 1189 → 179 groups at
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-31-   `48 <= D <= 120` → 63 alive (`N>=6`), 59 in `[6,16]`, `D = 105` with 0 alive. §1.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-32-4. **`OPEN[DESCENT-POLYGON]` — closed on the degrees, open on the radii.**
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-33-   `PROVED-HERE`: `deg_π P = deg_z ḡ = deg_x g = u_s n/d_s`; `P` monic in `π` forces the
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-34-   `z^B`-coefficient of `ḡ` to be `± y^{n v_s/d_s}`, whose consistency is exactly Moh's
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-35-   p.207 identity `u_s = d_s − v_s`; hence `g`'s leading form is
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-36-   `y^{n v_s/d_s}·(z‑part)^{n u_s/d_s}` and `deg_γ P = u' n'/d'`. Confirmed twice against
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-37-   the source (p.208, p.211). Moh's coefficient counts 244/373/202 are **exactly**
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-38-   `C(n'+2,2)+C(m'+2,2)`: the descended pair has total degree = π-degree. The
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-39-   `δ_2', δ_1'` columns of p.207 are **not** reproduced — typed residue, §3.4.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:40:5. **`OPEN[DESCENT-CLOSURE]` — partly closed.** `M_2 > m`, the windows (7), and the
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-41-   gcd conditions (2),(3),(5) descend verbatim (all are homogeneous of weight 1 in
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-42-   `{M_i, d_i}` and `V_i' = V_i`). Condition (6) does **not** descend (`s' = s−1`, and
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-43-   Moh's own descended rows have `s' = 2`); (4) `M_s = n−2` does not descend. §3.5.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:44:6. **Appendix II control PASSES — and turns up an erratum.** The `(15,10; X^2)` case
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-45-   (Moh pp.210–211) is re-run mechanically: his `α` is reproduced, his `γ` is **not** —
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-46-   the printed `−a_9^2 a_{10} B` must be `−a_9^2 a_8 B`. With the audited `γ`, his
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-47-   Case 2 (`a_9 ≠ 0 ⇒ a_{10}=0, deg_y γ = 0`) does not close; the kill instead comes one
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-48-   step later and is **decisive**: the five equations `c_2 − 3γ ∈ k` saturate to the
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-49-   unit ideal at `a_9 ≠ 0`. **SATURATED-EMPTY.** Moh's conclusion stands; his printed
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-50-   route to it does not. §4.2, `ERRATUM[APPII-GAMMA-B]`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:51:7. **The two descended D = 105 problems are written explicitly** (§4.3): G2 →
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:52:   `(15,10)`, `J = c x^4`, `M_2' = 4`, `V_2' = 1`, `d_2' = 5`; G3 → `(21,14)`,
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:53:   `J = c x^2`, `M_2' = 8`, `V_2' = 1`, `d_2' = 7`; G1 (`u_s = 2`) → conditionally
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-54-   `(30,20)`, `J = c x^2`. **Typed `COUNTING-BOUND only`**, not solved: the Appendix-II
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-55-   reduction from 202 coefficients to 22 [15 or 13] runs through the descended `δ_1'`
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-56-   (p.210: *"The datum `δ_1 = 1/2` implies that the polynomials `h` and `β` must be of
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-57-   the following form"*), which is exactly the §3.4 residue. The shape-free normal form
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-58-   stands at 172 unknowns — outside the desk budget, so the lane emits it and stops, as
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-59-   instructed.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-60-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-61-## 1. Reproduction of the measurement (fail-closed)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-62-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-63-Driver `box/m2descent-drivers-20260903/repro_m2_filter.py`, `repro_degrees.py`; both
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-64-import the tracked, unmodified `box/moh_skeleton_full.py`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-65-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-66-```text
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:67:CONTROL P (fail-closed gate): the six printed p.202 rows all have M_2 > m
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:68:   (64,48) M_2=52 | (84,56) M_2=64, 72 | (75,50) M_2=55 (twice) | (99,66) M_2=77
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-69-   printed kept: 6/6 ; Abhyankar-Moh semigroup: 6/6 ; u_s = 1 on five of the six
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-70-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:71:(1)-(13) baseline            rows= 658  classes= 63
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-72-+ Abhyankar-Moh semigroup    rows= 658  classes= 63   (AUTOMATIC: True)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:73:+ M_2 > m                    rows=  94  classes= 32
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-74-+ all M_i > m (i>=2)         rows=  94  classes= 32   (same set)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-75-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:76:(75,50): 9 rows -> 4 with M_2>m, M_2 in {55,60};
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:77:         M_2=60 rows have no integral N -> exactly Moh's two rows survive.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:78:M_2>m AND integral pinned N>=6 (UNI): 33 rows / 17 classes, 5/6 printed,
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-79-         28 residual rows (24 with u_s = 1).
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-80-```
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-81-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:82:Degree sweep `48 <= D <= 120` on the `(1)-(13)` space: **1189 groups → 179 under
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:83:`M_2 > m` → 63 alive at integral `N >= 6` → 59 in `[6,16]`**; twelve degrees empty
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-84-(48, 54, 63, 88, 102, 104, 110, 114 outright; 60, 72, 81, 105 lose all `N`-alive
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-85-groups); `D = 105` keeps 5 of 14 groups under the filter but **none** of the three
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:86:`N`-alive groups (the trio has `M_2 ∈ {28,40} < 70`); `D = 108` keeps 5 groups,
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-87-2 in `[6,16]`. Every number in Fable §2.2–§2.3 is reproduced to the unit.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-88-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-89-`MEASURED`. This lane changes none of it; what follows is about whether the filter is
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-90-a *theorem*.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-91-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:92:## 2. Task (1) — `M_2 > m`: REFUTED as a theorem for Keller pairs in Moh's gauge
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-93-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:94:### 2.1 What the source says about `M_2` (SOURCE-READ, p.150–151)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-95-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-96-p.150 fixes the object: `g = η^{-n}`, `η = g^{-1/n} = y^{-1}+α_2(x)y^{-2}+… ∈ k[x]((η))`,
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:97:`f = η^{-m} + Σ_{j>−m} f_j(x) η^j`; `Ω_i(x)=x, Ω_i(η)=ω^i η`; equation (1)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-98-`Π_{i=1}^n (f − Ω_i f) = 0` is the analytic factorisation of the defining equation at
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-99-`g = ∞`. *"Due to the existence of the automorphisms `Ω_i`, the tree data … are
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-100-completely symmetric. Hence the tree data along any root will determine the tree data
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-101-completely."* Then `d_1 = n`, `d_{j+1} = gcd(n, M_1,…,M_j)`,
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-102-`M_j = min{ i : f_i(x) ≠ 0, d_j ∤ i }`, `M_{h+1} = ∞`, and the auxiliary
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-103-`n_j = d_j/d_{j+1}`, `q_1 = M_1`, `q_j = M_j − M_{j−1}`, `λ_j = Σ_{i≤j} q_i d_i`,
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-104-`μ_j = λ_j/d_j`, `θ_j = μ_j − M_j`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-105-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:106:Lemma 2.1 (p.151): `J_{x,y}(f,g) = c ≠ 0` **iff**
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-107-`ord_η(Σ f_i(x)η^i − Σ f_i(0)η^i) = n−1` **and** `deg_x f_{n−1}(x) = 1`; equivalently
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-108-`f_i'(x) = 0 ∀ i < n−1` and `f_{n−1}'(x)` a nonzero constant.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-109-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-110-Immediately after, and this is the decisive citation for this lane:
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-111-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-112-> *"Note that since `f_{n−1}(x) ≠ 0` and `(n, n−1) = 1`, then `M_i ≤ n−1` for all
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-113-> `i ≤ h`. … **We shall call the reader's attention to our ignorance about the numbers
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-114-> `M_i`.** For instance, after long computation we (as verified by A. Sathaye)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-115-> established that for the following polynomials over `k`, `X = T^6+… = θ^{-6}`,
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:116:> `Y = T^8+… = θ^{-8}+…+θ^{M_2}+…`, the value `M_2` could never be 13. **It shows how
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-117-> little we know about `M_i` in the polynomial case.**"* — Moh, p.151, `SOURCE-READ`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-118-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-119-Two things follow. (i) The only constraint on `M_i` Moh states in §2 is the *upper*
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:120:bound `M_i ≤ n−1`; there is no lower bound `M_2 > m` anywhere on the pages read
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-121-(148–151, 179, 196–199, 207–212). (ii) Moh's own illustration is a *one-variable*
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-122-pair with no Jacobian condition at all, and the constraint he reports there
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:123:(`M_2 ≠ 13` for `(n,m) = (6,8)`) is of the wrong shape to be `M_2 > m` (`13 > 8`).
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:124:The hypothesis that `M_2 > m` is Moh's hidden restriction is **not supported** by the
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-125-source. `SOURCE-READ`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-126-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-127-### 2.2 The refutation
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-128-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:129:**Design.** `M_2 > m` as posed in the charge is a statement about *Keller pairs in
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-130-Moh's gauge*: `f, g ∈ k[x,y]` monic in `y`, `deg f = deg_y f = m`,
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-131-`deg g = deg_y g = n`, `J(f,g) ∈ k^*`. That class is non-empty and completely
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-132-computable: it contains every polynomial automorphism of `A^2` after a generic linear
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-133-precomposition. So the predicate can be *tested*, not merely searched for.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-134-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-135-**Engine** (`box/m2descent-drivers-20260903/etaexp.py`, stdlib only, exact
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-136-`Fraction` arithmetic, coefficients in `Q[x]`): from `g` monic in `y` build
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-137-`η = g^{-1/n}` as a Laurent series in `u = y^{-1}` (rational-exponent unit power by the
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-138-`N e_N = α Σ j g_j e_{N−j} − Σ k e_k g_{N−k}` recursion), then peel
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:139:`f = η^{-m} + Σ_{j>−m} f_j(x)η^j` greedily and read off `{M_j, d_j}` by Moh's p.150
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-140-definition. Smoke test: `g = y^2+x`, `f = y` returns
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-141-`f = η^{-1} − (x/2)η + …`, `M = [−1]`, `d = [2,1]`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-142-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-143-**Population** (`autoscan.py`, `autoscan2.py`): automorphisms built as compositions
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-144-`(F,G) ↦ (G, F + p(G))` of elementary maps over `Q`, then precomposed with a random
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-145-`GL_2` element and scaled monic. **Fail-closed**: a pair enters the table only after
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:146:`J(f,g)` is verified to be a single nonzero constant monomial and
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-147-`deg = deg_y` is verified for both members.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-148-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-149-```text
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:150:  build              n    m  M_1..M_s                 d_1..                M_2>m   s   d_s
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-151-  [2, 2]             4    2 [-2, 1]                   [4, 2, 1]            False   2     2
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-152-  [3, 2]             6    3 [-3, 2]                   [6, 3, 1]            False   2     3
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-153-  [4, 2]             8    4 [-4, 3]                   [8, 4, 1]            False   2     4
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-154-  [2, 2, 2]          8    4 [-4, 2, 5]                [8, 4, 2, 1]         False   3     2
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-155-  [5, 2]            10    5 [-5, 4]                   [10, 5, 1]           False   2     5
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-156-  [3, 2, 2]         12    6 [-6, 3, 8]                [12, 6, 3, 1]        False   3     3
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-157-  [2, 3, 2]         12    6 [-6, 4, 9]                [12, 6, 2, 1]        False   3     2
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-158-  [6, 2]            12    6 [-6, 5]                   [12, 6, 1]           False   2     6
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-159-  [2, 2, 2, 2]      16    8 [-8, 4, 10, 13]           [16, 8, 4, 2, 1]     False   4     2
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-160-  [4, 2, 2]         16    8 [-8, 4, 11]               [16, 8, 4, 1]        False   3     4
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-161-  [2, 4, 2]         16    8 [-8, 6, 13]               [16, 8, 2, 1]        False   3     2
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-162-  [3, 3, 2]         18    9 [-9, 6, 14]               [18, 9, 3, 1]        False   3     3
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:163:   ( the twelve M_2 <= m witnesses; the scan also produced 13 pairs with M_2 > m --
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-164-     [2,3],[2,4],[3,3],[2,5],[2,6],[3,4],[4,3],[2,2,3],[3,5],[5,3],[2,2,4],[4,4],[3,2,3] )
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-165-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:166:  total pairs 25 ; M_2 > m : 13 ; M_2 <= m : 12
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:167:  witnesses with M_2 <= m and d_s >= 4 : (8,4), (10,5), (12,6), (16,8) with d_s = 4,5,6,4
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-168-```
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-169-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-170-**Statement (PROVED-HERE / UNREVIEWED).** *There exist pairs `f, g ∈ Q[x,y]`, monic in
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-171-`y`, with `deg f = deg_y f = m`, `deg g = deg_y g = n`, `1 < m < n`, `n ∤ m`,
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:172:`J_{x,y}(f,g) ∈ Q^*`, whose Moh characteristic data satisfy `M_2 ≤ m`.* Twelve are
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:173:listed above; one is printed in full below. In particular the predicate `M_2 > m` is
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-174-**not** a consequence of the Jacobian condition together with Moh's gauge, and it is
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-175-not a consequence of the Jacobian condition together with `d_s ≥ 4`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-176-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-177-### 2.3 A witness, printed in full (checkable by hand)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-178-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-179-```text
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:180:n = deg g = deg_y g = 4 ,  m = deg f = deg_y f = 2 ,  K = gcd(n,m) = 2
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-181-g = y^4 - 3xy^3 + 27/8 x^2y^2 - 27/16 x^3y + 81/256 x^4
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-182-      + 2y^3 - 35/8 xy^2 + 51/16 x^2y - 99/128 x^3
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-183-      + 9/8 y^2 - 25/16 xy + 139/256 x^2 + 9/64 y - 25/256 x + 1/256
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-184-f = y^2 - 3/2 xy + 9/16 x^2 + y - 11/16 x
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-185-J(f,g) = 1/1024                      (a nonzero constant: FAIL-CLOSED check)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:186:deg g = deg_y g = 4 ;  deg f = deg_y f = 2 ;  both monic in y
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:187:eta-expansion  f = eta^{-2} + sum_j f_j(x) eta^j ,  eta = g^{-1/4} :
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-188-   f_{-2} = 1     f_0 = -1/16    f_1 = -1/128    f_2 = 1/256
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:189:   f_3 = -3/4096 + x/4096                         <- deg_x f_{n-1} = deg_x f_3 = 1 (Lemma 2.1)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-190-characteristic data  M = [-2, 1] ,  d = [4, 2, 1]
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:191:M_2 = 1  <=  m = 2      ->   "M_2 > m" is FALSE on a genuine Keller pair.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-192-```
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-193-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-194-Every hypothesis of Moh §2 holds: `f_i(x)` is constant for `i < n−1 = 3` and
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:195:`deg_x f_3 = 1` (Lemma 2.1, both clauses); `M_i ≤ n−1` (p.151 note); `y ∈ k(x,f,g)`
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-196-(the pair is an automorphism). `PROVED-HERE / UNREVIEWED`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-197-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-198-### 2.4 What this kills, and what it does not
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-199-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:200:* **H1 (Ω-symmetry + Lemma 2.1, Moh §2–§3) is dead as posed.** Ω-symmetry of the tree
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-201-  data, constancy of `f_i` below `n−1`, linearity of `f_{n−1}`, and `M_i ≤ n−1` all hold
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-202-  verbatim for the witnesses, so any argument using only those ingredients proves a
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:203:  false statement. The precise obstruction (`PROVED-HERE`): `M_2 = ord_η(f − Ω_i f)` for
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-204-  any `i` with `gcd(n,i) = n/K` — a *contact order between conjugate branches*, since
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:205:  `f − Ω_i f = Σ_j f_j(1−ω^{ij})η^j` has order `min{ j : f_j ≠ 0, (n/gcd(n,i)) ∤ j } = M_r`
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-206-  with `r = max{ r : (n/d_r) | i }`. Ω-symmetry fixes the *multiplicities*
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-207-  (`#{i : r(i)=r} = d_r − d_{r+1}`, so `ord_η Π_{i<n}(f−Ω_i f) = Σ_r (d_r−d_{r+1})M_r`)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-208-  but bounds no single `M_r` from below; and that "different" identity carries no
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-209-  information under the Jacobian condition, since `F(x,f,g) ≡ 0` gives
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:210:  `F_T·[f,g] = −F_x·g_y` while Lemma 2.1 gives `F_x(x,f,g) = −aη^{n−1}F_T(f,g)`, so it
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-211-  collapses to the automatic `g_y = (c/a)η^{-(n−1)}`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-212-* **H2 (Prop 5.6 coprimality, p.189) is dead as posed** for the same reason: `g` and
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-213-  `T_1^ψ` are coprime for the witnesses too, so an order inequality derived from
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:214:  coprimality alone cannot yield `M_2 > m`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-215-* **H3 (the elementary `h = f^e − c g^d` route) gives the wrong inequality.** With
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:216:  `n = Ke, m = Kd`, `[h,g] = e f^{e−1}[f,g]` gives `deg h ≥ K(de−d−e)+2` (the bound in
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-217-  the charge). In the `η`-gauge, `deg_y h = (e−1)m − j_0` where
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:218:  `j_0 = min{ j > −m : f_j ≠ 0 }`, so the Jacobian bound reads `j_0 ≤ n−2` — a
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:219:  *restatement of* `M_s ≤ n−2`, not a lower bound on `M_2`. The matching **upper**
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-220-  bound on `deg h` does not exist: weighted-degree (Newton-polygon) inequalities all
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-221-  run `w(J) ≤ w(P)+w(Q)−w(x)−w(y)`, i.e. they bound degrees from **below**. `PROVED-HERE`
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-222-  (the direction of every available inequality is the wrong one).
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:223:* **NOT refuted:** that `M_2 > m` holds for skeletons satisfying the *full* `(1)–(13)`
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-224-  together with the minimal-counterexample hypotheses. The witnesses all fail (6)
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-225-  (`3 ≤ s ≤ 5` and/or `d_s ≥ 4`) or (4) (`M_s = n−2`); indeed the census and the
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-226-  witnesses are disjoint by construction. So `OPEN[M2-ABOVE-M]` survives in the
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-227-  narrowed form below — but it is now a *conditional* statement whose proof must
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:228:  consume `(1)–(13)`, i.e. it can no longer be hoped for from the soft §2 theory.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-229-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:230:### 2.5 Candidate skeletons with `M_2 ≤ m` that no known necessary condition kills
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-231-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:232:`(1)–(13)` rows at `n ≤ 100` with `M_2 ≤ m`: **564 rows / 54 classes**; with an
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-233-integral pinned `N ≥ 6` (UNI, `uni_hits`, `N_min = 6` read from the frontier line and
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-234-not re-derived): **293 rows / 33 classes**, of which **243 have `u_s = 1`** and hence
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-235-descend by Prop 6.3. The six smallest:
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-236-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-237-```text
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-238-n=45 m=30 M=[-30,10,43] V={2:1,3:4} u_s=1 q=2/3 N=[6,8]    | n=48 m=36 M=[-36,18,46] V={2:1,3:5} u_s=1 N=[6..10]
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-239-n=54 m=36 M=[-36,24,52] V={2:1,3:5} u_s=1 q=1/2 N=[6,7]    | n=54 m=36 M=[-36,27,52] V={2:3,3:7} u_s=2 N=[9]
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-240-n=56 m=42 M=[-42,21,54] V={2:1,3:5} u_s=2 q=3/4 N=[6]      | n=60 m=40 M=[-40,-10,58] V={2:2,3:7} u_s=3 N=[8]
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:241:-- and at D = 105 the trio itself (all three have M_2 <= m):
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:242:m=70 M=[-70,40,103] V={2:1,3:4} M_2=40 u_s=1 N=[9] | M=[-70,28,103] V={2:1,3:5} M_2=28 u_s=2 N=[6..12]
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:243:                                                   | M=[-70,28,103] V={2:1,3:6} M_2=28 u_s=1 N=[9]
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-244-```
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-245-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:246:These satisfy `(1)–(13)`, the Abhyankar–Moh semigroup conditions (automatic, Fable
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:247:§2.4 reproduced here), the integrality/`N`-pin, and — being (1)–(13)-admissible — every
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-248-necessary condition the campaign owns. `n = 45, m = 30, M = [−30,10,43]` is the
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-249-smallest; it is the cheapest target for a direct realisability attack if one wants to
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:250:attack `M_2 ≤ m` head-on. `MEASURED`.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-251-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-252-### 2.6 Consequence for `OPEN[MOH-PROGRAM]`
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-253-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-254-The 658 → 94 cut may **not** be applied as a theorem. Fable's downstream numbers
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md:255:(`D = 105` empty, twelve degrees empty, `D_min ≥ 108`, the 28-row residue) are
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-256-therefore **conditional on an unproved and now source-unsupported hypothesis**, and
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-257-the campaign's frontier statement must not consume them. `OPEN[MOH-PROGRAM]` stays at
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-258-its banked bound (652 excess rows at `n ≤ 100`); this lane neither sharpens nor
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-259-loosens it.
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-260-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-261-## 3. Task (2) — `OPEN[DESCENT-POLYGON]`
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-262-
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md-263-### 3.1 The descent, as printed (SOURCE-READ, pp.196–198)
+
+codex
+A strict input-gate problem surfaced: the supplied `FALLACY-v2.md` digest is 63 hexadecimal characters, so it is not a valid SHA-256 value. The frozen file’s computed digest has an additional nibble (`…e6609dca…`), but your instruction says to stop on any mismatch and not repair a digest by inference. I’m halting the research lanes now; no theorem claim or report will be produced from an unverified input set.
+apply patch
+patch: completed
+/home/ubuntu/jc2/box/k16T-drivers-20260903/SHA256SUMS.input
+exec
+/bin/bash -lc 'sha256sum -c /home/ubuntu/jc2/box/k16T-drivers-20260903/SHA256SUMS.input; status=$?; sha256sum /tmp/jc2-lane.qoNOq6/inputs/FALLACY-v2.md; awk '"'"'$2 ~ /FALLACY-v2.md$/ {print "supplied_digest_hex_chars=" length($1)}'"' /home/ubuntu/jc2/box/k16T-drivers-20260903/SHA256SUMS.input; exit "'$status' in /home/ubuntu/jc2
+ succeeded in 0ms:
+/tmp/jc2-lane.qoNOq6/inputs/ideation-20260903T1200Z-grok46.md: OK
+/tmp/jc2-lane.qoNOq6/inputs/m2-descent-opus5-20260903.md: OK
+/tmp/jc2-lane.qoNOq6/inputs/descent-radii-grok46-20260903.md: OK
+/tmp/jc2-lane.qoNOq6/inputs/phi_delta.py: OK
+/tmp/jc2-lane.qoNOq6/inputs/moh_1510_control.py: OK
+/tmp/jc2-lane.qoNOq6/inputs/moh_1510_control2.py: OK
+/tmp/jc2-lane.qoNOq6/inputs/g2_fullh_mohbeta.py: OK
+/tmp/jc2-lane.qoNOq6/inputs/screened-census-grok46-20260903.md: OK
+/tmp/jc2-lane.qoNOq6/inputs/moh_skeleton_full.py: OK
+sha256sum: WARNING: 1 line is improperly formatted
+/tmp/jc2-lane.qoNOq6/inputs/moh1983_jram340_configurations_of_roots.pdf: OK
+e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  /tmp/jc2-lane.qoNOq6/inputs/FALLACY-v2.md
+supplied_digest_hex_chars=63
+
+codex
+Stopped at the mandatory hash gate.
+
+- First 10 inputs: verified.
+- `FALLACY-v2.md`: supplied digest has only 63 hexadecimal characters, so it is invalid.
+- Computed digest: `e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5`
+- Apparent missing nibble: `9` after `e660`.
+
+The exact failed manifest is [SHA256SUMS.input](/home/ubuntu/jc2/box/k16T-drivers-20260903/SHA256SUMS.input). Research lanes were halted and no report was created. Please provide or confirm the corrected 64-character digest to continue.
+tokens used
+50,403
+Stopped at the mandatory hash gate.
+
+- First 10 inputs: verified.
+- `FALLACY-v2.md`: supplied digest has only 63 hexadecimal characters, so it is invalid.
+- Computed digest: `e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5`
+- Apparent missing nibble: `9` after `e660`.
+
+The exact failed manifest is [SHA256SUMS.input](/home/ubuntu/jc2/box/k16T-drivers-20260903/SHA256SUMS.input). Research lanes were halted and no report was created. Please provide or confirm the corrected 64-character digest to continue.
+adapter exited 0 but required report is absent: xmodel/k16-ray-T-newton-sol56-v2-20260903.md
