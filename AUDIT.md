@@ -17650,3 +17650,9 @@ Gate launched: g9966-delta52-kill-gate-gpt55 (replay stage 8; audit the seven ne
 the K2c coordinate change's invertibility, the pole row's necessity and the constant's
 provenance; contrast with a control). CRITICAL TRIGGER: a kill closing a published gap —
 folded into round 20260904T0000Z (65 min away) rather than a separate round.
+
+## INTEGRATION #17 DELTA (rrrr) (2026-09-03T23:13Z, MEASURED-MODULAR corroboration, producer Sol): (T) at t = 6 on the K = 16 ray — the full terminal ideal ⟨T_{6,0..11}⟩ is [1] modulo 32003, 32009, 32027 (two split, one inert; 16 min each, 536 MB; wrapper controls) on the heuristic normalisation, with the proved Laurent/Euler spine giving the same 12 × 6 terminal in canonical band order; the bounded exact nfmodStd runs did not return — typed MEASURED-MODULAR by the lane (the inhomogeneous unit ideal mod p is the unsafe direction). NOTE: t = 6 is already PROMOTED via the homogeneous cone route (Fable JPLUS dim = 0, 17(iiii); properness instrument gated 17(mmmm)); this lane is corroboration, and its canonical-order terminal system is induction data.
+
+`k16-t6-sol56-20260903.md` (Sol, 13KB; box/k16t6-20260903/; 18/18 hashes; reused the earlier
+Grok artifacts only after SHA-256 verification). Ray status unchanged: (T) PROMOTED
+t = 1..7; uniform OPEN (the b₄ = 1 chart).

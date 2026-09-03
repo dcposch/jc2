@@ -35,17 +35,14 @@ os.environ.setdefault("OMP_NUM_THREADS", "1")
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-LANE_INPUTS = pathlib.Path("/tmp/jc2-lane.JEkzWZ/inputs")
+LANE_INPUTS = HERE  # this box: charged t_order_system.py + triangular_preprocess.py
 EXPECTED = {
     "t_order_system.py":
         "e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28",
     "triangular_preprocess.py":
         "f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93",
 }
-EXPECTED_T4 = {
-    "t4_order_system.py":
-        "db5e54450444f27c56f00bbec287aea284c8dc190e0e549c2fea51e0dbdd6cee",
-}
+# t4_order_system.py is not among this lane's charged files; only loaded if t==4.
 
 # Default modular primes.  Characteristic 2 is excluded (actual-pair uses 1/2).
 DEFAULT_PRIMES = (32003, 32009, 32027)
@@ -834,10 +831,7 @@ def run_pipeline(t: int, order: str, out_dir: pathlib.Path,
     out_dir.mkdir(parents=True, exist_ok=True)
     started = time.monotonic()
 
-    expected_files = dict(EXPECTED)
-    if t == 4:
-        expected_files.update(EXPECTED_T4)
-    for name, expected in expected_files.items():
+    for name, expected in EXPECTED.items():
         path = LANE_INPUTS / name
         if not path.is_file():
             raise RuntimeError("missing frozen input %s" % name)
@@ -974,10 +968,13 @@ def run_pipeline(t: int, order: str, out_dir: pathlib.Path,
     if stop_after == "units":
         audit = {
             "t": t, "stage": "units",
-            "chart": {"equations": n_eq, "unknowns": n_unk,
-                      "build_seconds": build_seconds},
+            "chart": {
+                "equations": n_eq, "unknowns_including_c": n_unk,
+                "build_seconds": round(build_seconds, 6),
+            },
             "q_pivots": {
                 "count": len(reduction.pivots),
+                "expected": 3 * t + 4,
                 "variables": [str(p.variable) for p in reduction.pivots],
                 "coefficients": [str(p.coefficient) for p in reduction.pivots],
                 "bands": q_bands,
@@ -1326,8 +1323,7 @@ def main() -> None:
     parser.add_argument("--run-singular", action="store_true")
     parser.add_argument("--singular-timeout", type=int, default=180)
     parser.add_argument("--skip-a", action="store_true")
-    parser.add_argument("--stop-after", choices=("", "units", "slice"),
-                        default="")
+    parser.add_argument("--stop-after", choices=("", "units"), default="")
     args = parser.parse_args()
     if args.t < 1:
         parser.error("t must be positive")

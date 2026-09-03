@@ -21021,3 +21021,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - Round 20260904T0000Z packet drafted (cf18d2aa + note); wake armed.
 
 ## 2026-09-03T23:08Z EVENT — `g9966-delta52-stage8-sol56` sealed (19KB): THE δ = 5/2 BRANCH OF (99,66) IS DEAD at stage 8 (residue = 64; unit ideal; Singular dim −1). BOTH BRANCHES DEAD → conditional verdict NO KELLER PAIR WITH THE (99,66) SKELETON (pending the stage-8 gate) — the published gap in Moh's degree ≤ 100 theorem would be closed. → AUDIT delta 17(qqqq) PROVISIONAL. Launching `g9966-delta52-kill-gate-gpt55`. DC notified. CRITICAL TRIGGER folded into the 00:00Z round. Lanes live: 8.
+
+## 2026-09-03T23:13Z EVENT — `k16-t6-sol56` sealed (13KB): t = 6 full terminal ideal [1] mod three primes (corroboration; t = 6 already promoted via the cone route). → AUDIT delta 17(rrrr). Lanes live: 8.
