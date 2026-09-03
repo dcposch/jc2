@@ -1,0 +1,207 @@
+{
+  "affine_elimination": {
+    "dropped": [
+      {
+        "reason": "zero_mod_H",
+        "source_index": 32
+      },
+      {
+        "reason": "zero_mod_H",
+        "source_index": 27
+      },
+      {
+        "reason": "zero_mod_H",
+        "source_index": 22
+      },
+      {
+        "reason": "zero_mod_H",
+        "source_index": 16
+      },
+      {
+        "reason": "zero_mod_H",
+        "source_index": 10
+      },
+      {
+        "reason": "zero_mod_H",
+        "source_index": 4
+      }
+    ],
+    "elapsed_seconds": 100.30165413400391,
+    "pivot_bands": [
+      2,
+      5,
+      1,
+      0,
+      4,
+      3,
+      2,
+      6,
+      1,
+      0,
+      5,
+      6,
+      0,
+      4,
+      3,
+      1,
+      2
+    ],
+    "pivot_count": 17,
+    "pivot_sources": [
+      14,
+      30,
+      8,
+      1,
+      25,
+      19,
+      13,
+      39,
+      7,
+      6,
+      34,
+      38,
+      0,
+      29,
+      24,
+      12,
+      18
+    ],
+    "pivot_variables": [
+      "a1_0",
+      "q5_1",
+      "q2_0",
+      "q7_0",
+      "q6_1",
+      "q3_0",
+      "q4_0",
+      "a4_0",
+      "q5_0",
+      "b1",
+      "a5_0",
+      "a7_0",
+      "q6_0",
+      "a6_0",
+      "b2",
+      "a9_0",
+      "a8_0"
+    ],
+    "remaining_rows": [
+      {
+        "h_power": 0,
+        "monomial_gamma_pi": [
+          0,
+          1
+        ],
+        "source_index_0based": 5,
+        "term_count_over_K": 17,
+        "total_degree_in_residual_unknowns": 13
+      },
+      {
+        "h_power": 1,
+        "monomial_gamma_pi": [
+          0,
+          1
+        ],
+        "source_index_0based": 11,
+        "term_count_over_K": 16,
+        "total_degree_in_residual_unknowns": 12
+      },
+      {
+        "h_power": 2,
+        "monomial_gamma_pi": [
+          0,
+          1
+        ],
+        "source_index_0based": 17,
+        "term_count_over_K": 12,
+        "total_degree_in_residual_unknowns": 11
+      },
+      {
+        "h_power": 3,
+        "monomial_gamma_pi": [
+          0,
+          1
+        ],
+        "source_index_0based": 23,
+        "term_count_over_K": 12,
+        "total_degree_in_residual_unknowns": 10
+      },
+      {
+        "h_power": 4,
+        "monomial_gamma_pi": [
+          0,
+          1
+        ],
+        "source_index_0based": 28,
+        "term_count_over_K": 9,
+        "total_degree_in_residual_unknowns": 9
+      },
+      {
+        "h_power": 5,
+        "monomial_gamma_pi": [
+          0,
+          1
+        ],
+        "source_index_0based": 33,
+        "term_count_over_K": 9,
+        "total_degree_in_residual_unknowns": 8
+      }
+    ],
+    "remaining_unknowns": [
+      "b3",
+      "b4",
+      "a2_0"
+    ]
+  },
+  "artifacts": {
+    "t3_normalized_K_std.sing": "fc2c504604c51e33e7c63e32bde4a952d0c6741b99fcf5e9c334c63eefb4796b",
+    "t3_residual_generators.tsv": "c09d9f0b8b7e763734c42d5c7cf69ca9adfd41d25ae53a3dbbbe1896badacae1"
+  },
+  "charged_sources_sha256": {
+    "t3_normalized_slice.py": "9e394dae1920e90413ff1aa6d0f5f8eb4dd9aa343a5826e0f4f8c586bd980ac7",
+    "t_order_system.py": "e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28",
+    "triangular_preprocess.py": "f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93"
+  },
+  "constant_pivot_reduction": {
+    "pivots": 13,
+    "rows": 37,
+    "unknowns_including_c": 23
+  },
+  "full_chart": {
+    "equations": 51,
+    "unknowns_including_c": 36
+  },
+  "grading": {
+    "weight_c": 65,
+    "weight_x": 13,
+    "weight_y": 26,
+    "x": "q4_1",
+    "y": "q7_1"
+  },
+  "normalization": {
+    "H": "147*q7_1**2 - 84*q7_1 + 11",
+    "H_at_c_second_factor_root": "13/3",
+    "H_at_y_0": "11",
+    "c_image": "10*q7_1*(2 - 21*q7_1)/343",
+    "c_image_before_slice": "10*q4_1*q7_1*(2*q4_1**2 - 21*q7_1)/343",
+    "discriminant": 588,
+    "homogeneous_H": "11*q4_1**4 - 84*q4_1**2*q7_1 + 147*q7_1**2"
+  },
+  "slice": {
+    "K_input_rows_excluding_minpoly": 29,
+    "auxiliary_unknowns_before_affine_pass": 20,
+    "q_duplicate_sources": [
+      3,
+      9,
+      15,
+      21,
+      26,
+      31
+    ],
+    "q_rows_after_primitive_duplicate_removal": 30,
+    "zero_mod_H_sources": [
+      20
+    ]
+  },
+  "typing": "EXACT symbolic replay; Singular input prepared only"
+}

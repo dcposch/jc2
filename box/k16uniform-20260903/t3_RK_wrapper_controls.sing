@@ -1,0 +1,32 @@
+// Independent EMPTY/NONEMPTY wrapper controls in the exact t=3 main ring.
+ring RK=(0,q7_1),(b3,b4,a2_0,W),dp;
+minpoly=147*q7_1^2-84*q7_1+11;
+if (nameof(basering)=="RK")
+{
+  print("CONTROL_RING_PASS RK");
+}
+else
+{
+  print("CONTROL_RING_FAIL");
+}
+ideal CE=b3,W*b3-1;
+ideal GE=std(CE);
+if (reduce(1,GE)==0)
+{
+  print("CONTROL_EMPTY_PASS RK");
+}
+else
+{
+  print("CONTROL_EMPTY_FAIL RK");
+}
+ideal CN=b3-1,W*b3-1;
+ideal GN=std(CN);
+if (reduce(1,GN)!=0)
+{
+  print("CONTROL_NONEMPTY_PASS RK");
+}
+else
+{
+  print("CONTROL_NONEMPTY_FAIL RK");
+}
+quit;

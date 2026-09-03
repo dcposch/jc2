@@ -1,0 +1,29 @@
+// exact normalized t=2 rational branch
+// x=q3_1=1, y=q5_1=1/5, c=-7/625
+// all preceding affine pivots have nonzero rational coefficients
+ring RAC=0,(gamma,pi),dp;
+poly FAC=pi;
+poly GAC=pi-(gamma^2)/2;
+poly JAC=diff(FAC,gamma)*diff(GAC,pi)-diff(FAC,pi)*diff(GAC,gamma);
+if (JAC==gamma) { print("CONTROL_ACTUAL_PAIR_PASS J=gamma"); } else { print("CONTROL_ACTUAL_PAIR_FAIL"); }
+ring R=0,(b4,a3_0,u,T),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS R"); } else { print("CONTROL_RING_FAIL"); }
+ideal CE=u,T*u-1;
+ideal GE=std(CE);
+if (typeof(GE)=="ideal" && nameof(basering)=="R") { print("CONTROL_EMPTY_EXTRACT_RING_PASS"); } else { print("CONTROL_EMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,GE)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+ideal CN=u-1,T*u-1;
+ideal GN=std(CN);
+if (typeof(GN)=="ideal" && nameof(basering)=="R") { print("CONTROL_NONEMPTY_EXTRACT_RING_PASS"); } else { print("CONTROL_NONEMPTY_EXTRACT_RING_FAIL"); }
+if (reduce(1,GN)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+print("MAIN_START t=2 y=1/5 rows=4 unknowns=2");
+ideal I=283924375*b4^9 + 93940000*b4^6*a3_0 + 7680000*b4^3*a3_0^2 + 50176,
+335013*b4^8 + 77056*b4^5*a3_0 + 3072*b4^2*a3_0^2,
+329*b4^7 + 64*b4^4*a3_0,
+1953*b4^6 + 352*b4^3*a3_0;
+ideal G=std(I);
+print("MAIN_DONE basis_size=");
+size(G);
+if (reduce(1,G)==0) { print("MAIN_BRANCH_EMPTY"); G; } else { print("MAIN_BRANCH_NONTRIVIAL"); G; }
+quit;

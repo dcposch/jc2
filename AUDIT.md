@@ -16949,3 +16949,39 @@ t = 3, scope = the gauged K = 16 Theorem-1.2 order chart (necessary superset) on
 characteristic zero. STATUS of the ray: t = 1 (Moh), t = 2 (17(oo)), t = 3 (this delta) —
 three consecutive members dead by three different mechanical routes; t = 4 modular; all t:
 OPEN[T-UNIFORM-COEFFICIENT] (k16-uniform-structure lane running).
+
+## INTEGRATION #17 DELTA (xx) (2026-09-03T16:32Z, PROVED-HERE/UNREVIEWED, producer Sol): THE ALL-t NORMALIZER LEMMA FOR THE K = 16 RAY — a uniform positive grading, 3t + 4 Q-constant pivots from band 4t+1 down to 2t, the closed base relation H_t(y) = 12(2t+1)²y² − 12(2t+1)(t+1)y + (t+1)(3t+2) (disc 48(2t+1)²(t+1)) and c_t(y) = t(3t+1)y((t+1) − 6(2t+1)y)/(6(2t+1)³), the x = 1 weighted slice losing no point — all proved for every t ≥ 1 as formulas; THEOREM (T) AT t = 4 PROVED-HERE (exact eight-generator basis [1] over Q(√15)); the blocker is now exactly the SECOND AFFINE SPINE in the t-scaling middle (terminal 2t rows in t variables, bands 0..2t−1) — OPEN[T-UNIFORM-MIDDLE]; the "fixed six-by-three residual" hypothesis is FALSE
+
+`k16-uniform-structure-sol56-20260903.md` (Sol, 23KB; box/k16uniform-20260903/; 15/15
+hashes). Chart (uniform in t): e = 3t+1, q = 2t+1; z = π − γ, B = πz + b₁π + b₂, A = πB + b₃,
+h = πA + b₄; coefficient spaces S_i = ⟨1⟩ (i ≤ t), ⟨1, A⟩ (t < i ≤ 2t), ⟨1, A, B⟩ (2t < i ≤ 3t),
+S_e = ⟨1, γ, A, B, z⟩; P = h^e + Σα_i h^{e−i}, Q = h^q + Σ_{j≥2} β_j h^{q−j}; gauges const(β_q) = 0,
+α_t = 0, const(α_e) = 0 (invertible triangular target changes); 9t + 9 unknowns incl. c,
+14t + 9 equations; the chart is a necessary superset (Laurent tail omitted). NORMALIZER
+LEMMA (formula proof, §1–2, not interpolation): the four high recurrences E1–E4 and the
+target row E0 give, with r = e/q, g₁ = rx, g₂ = ry + C(r,2)x², g₃ = 2C(r,2)xy + C(r,3)x³, and
+then (H) Ĥ_t(x,y) = 12q²y² − 12q(t+1)x²y + (t+1)(3t+2)x⁴ = 0 and (C) c = t(3t+1)/(6(2t+1)³)·
+xy((t+1)x² − 6(2t+1)y); (C) and c ≠ 0 force x ≠ 0; the weighted action λ^{4t+1}x = 1 slices
+to x = 1 with the inverse scaling recovering the orbit; normalised H_t, c_t as displayed;
+in the separable algebra A_t = Q[y]/(H_t) the image of c is a unit for every t (checked via
+resultants; H_t splits over Q iff 3(t+1) is a square, t = 3s² − 1 — an infinite set, handled
+in the product algebra, never by silently inverting a zero divisor). FIXED ROWS: t = 1
+PROVED-HERE (exact normalised unit + full chart [1]); t = 2 PROVED-HERE (both split fibres
++ full chart); t = 3 PROVED-HERE (six-generator quadratic-field replay); t = 4 PROVED-HERE
+(exact eight-generator Q(√15) basis [1]) — NEW. THE PATTERN (exact at t = 2, 3, 4; NOT
+promoted): post-H/c input 9t + 2 rows in 6t + 2 auxiliaries; 5t + 2 affine pivots; 2t
+zero/duplicate rows; terminal 2t rows in t variables, bands 0..2t−1, degrees 4t+1..2t+2;
+the coordinator's "six generators in (b₃, b₄, a₂₀) for every t" is FALSE (t = 1, 2 refute it;
+at t = 2 a₂₀ is eliminated by the gauge). BLOCKER: after passage to A_t every proposed
+pivot is an element u_{t,j}(y); a uniform elimination must give a closed formula or
+recurrence for them, prove u_{t,j} is a unit iff Res_y(H_t, u_{t,j}) ≠ 0 for every band and
+every t, prove the duplicate/zero recurrence, and identify the t-dependent terminal ideal;
+the coefficient-space boundaries move at low band t and high offset t — exactly where
+charts t and t+1 first differ. No fixed collection of low bands or low + fixed high bands
+can certify (the exact point Q = h^q + B, P = h^e + 2π − γ, c = −1 satisfies all low levels
+through 2t−1 and fails only at the moving bands 2t and 3t+1). Generic-t Gröbner: not
+available (no fixed presentation). Bounded next step (producer): prove the second affine
+recurrence by induction on the band index recording every pivot norm; prove or refute the
+2t-row/t-variable terminal family; seek a terminal recurrence ending in a nonzero
+constant of the coefficient algebra. Lanes launched: gate (GPT-5.5) on t = 4 + the
+normalizer lemma; attack (Sol) on the middle spine.
