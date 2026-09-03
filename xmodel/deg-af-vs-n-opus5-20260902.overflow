@@ -1,0 +1,11 @@
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `42774`.
+- Body SHA-256:
+  `d7cff053a856a61cc2401585737fc47c093eb6edb0562b1c3f4b82420deeb853`.
+- Charged inputs: the seven hashes in §0, verified before any input was read.
+- Repository files read (not edited): the four hashes in §0.
+- Drivers: `/tmp/degaf/{sg3,am2,am3,am4,family2,family3,delta2,ledger,tables}.py`.
