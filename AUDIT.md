@@ -16016,3 +16016,34 @@ the descended D = 105 problems (delta 17(q)) are now calibration objects.
 CRITICAL TRIGGER: a non-echo change to the promoted ledger and the
 frontier — a full round fires (packet to be frozen after the Opus second
 gate lands or within 75 min, whichever first).
+
+## INTEGRATION #17 DELTA (s) (2026-09-03T11:44Z, REVIEWED): PS-GROWTH IDENTITIES PROMOTED WITH REPAIRS; NEXT-COEFF PARTIAL — THE GLOBAL DEGREE IDENTITIES ARE REMAINDER COEFFICIENTS OVER Q, THE LEVEL DICTIONARY IS NOT
+
+Review `next-coeff-psreview-grok46-20260903.md` (Grok; drivers
+box/nextcoeff-drivers-20260903/; all five charged drivers rerun to the unit)
+of delta 17(o). PROMOTED: PS-0; LEMMA EJ; PS-1' (no hypothesis on J; the
+mixed partials of log χ); PS-1c; LEMMA DEG (quantifier order, c₂-
+independence); PS-2; PS-3 under (KEL) at proper branches; PS-3+;
+TRACE-CONSTANT; TRACE-CONSTANCY; PS-3-SHARP (c_max = q_max/e, with the
+δ₁ ≥ 0 caveat); the Newton-polygon certificate for c_max and {γ_f};
+RESIDUE-LEAD as an ATTAINMENT theorem on the (1,e,1) family incl. the
+degree-15 composition; the Galois survival condition 1 − (k+1)c_max ∈ Z;
+RES-DEGREE (RD-1)/(RD-2) with the witness; existence of all 12 census stars;
+the (2,3,2) retraction; the trio K1 = 10. GAPS (repairs, none fatal): PS-3's
+non-proper step "ord_t g_y = −δ⁰ < −1" — repair via JAC-FIBRE; RESIDUE-LEAD's
+leading-coefficient prefactor not numerically matched (OPEN[RESIDUE-LEAD-LC]
+if a formula is needed); PS-0 driver `or True`; existence.py checks
+"decided" not "exists"; genfun.py skipped compositions (filled: 21/21);
+"K invisible" is OVERSTATED (e = n/d₂ and the orbit count ν see d₂ on
+compositions) — the negative reading (no D-ceiling from PS-GROWTH) stands.
+REFUTED: "PS-3 needs no (KEL)" as (MON)+(SEP) ⇒ PS-3 (witness (y, y² + 1));
+the strict dictionary "the coefficient of x^{(k+1)c_max − 1 − j} is a
+function of the tower data down to level j only" (witnesses B6 k = 8, 10).
+NEXT-COEFF: PARTIAL — YES, every coefficient of R_k and every one of the
+n − m − 1 global trace identities Tr(f·s_r(τ̂)/g_y) = 0 is a REMAINDER
+coefficient over Q ([y^{n−1}](w·f mod (g − c)) for polynomial weights w) —
+so the DEG block of globalinterp.py can be re-based onto exact remainder
+arithmetic with NO Puiseux expansion, exponent semigroup or outer/inner
+split; NO — those coefficients do not stratify by tower level, so the
+per-level counting the endgame lanes wanted is not available this way; no
+g-alone resultant form and no χ-deficit filter are licensed.

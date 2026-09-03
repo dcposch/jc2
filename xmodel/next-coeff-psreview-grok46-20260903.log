@@ -1,0 +1,32 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then read the charged document and drivers before the hostile review and NEXT-COEFF experiment.Hashes match. Next I’ll read the charged paper, drivers, and the supporting interpolation/coordinator docs.Hashes checked out. Next I’ll finish the charged paper and drivers, then pull the interpolation/coordinator sections the experiment needs.I’ll pull the remaining drivers and the interpolation/coordinator sections that define the NEXT-COEFF identities.I’ll pull the coordinator’s moment identities, the interpolation engine, and the tower data for the Keller controls.Hashes match. Next I’ll rerun the original drivers and start the NEXT-COEFF / PS3-NEG experiments in parallel.Copied drivers are read-only; I’ll make them writable, point imports at the local copies, then start the reruns.Driver reruns are in the background. I’ll write the NEXT-COEFF and PS3-NEG experiment code while they finish.Driver reruns matched. NEXT-COEFF findings are in: I’ll pull the coefficient tables and tighten the dictionary checks so slack k aren’t treated as leading-term failures.I have the coefficient tables and GATE result. Next I’ll write the sealed report and a short driver README.The report is a bit over the 20–30KB target. I’ll trim repeated sections so it lands in range.Hashes matched (10/10). Sealed report: `xmodel/next-coeff-psreview-grok46-20260903.md`. Drivers: `box/nextcoeff-drivers-20260903/`.
+
+## PART A — review
+
+The identity family holds. Reruns matched every advertised count: **1495/0, 10/0, 32/0, 14/0, 108/0**.
+
+| Item | Verdict |
+|---|---|
+| PS-0, LEMMA EJ, PS-1' (no `J` hypothesis), PS-1c | **CONFIRMED** |
+| LEMMA DEG (quantifier order; bound independent of `c₂`) | **CONFIRMED** |
+| PS-2; PS-3 under (KEL) at proper branches; PS-3+ | **CONFIRMED** |
+| PS-3 non-proper step `ord_t g_y = −δ⁰` | **GAP** — false as written; repair via JAC-FIBRE |
+| RESIDUE-LEAD as attainment on `(1,e,1)` incl. D15; `Φ(δ₁)=1`; Galois `1−(k+1)c_max ∈ Z` | **CONFIRMED** |
+| RESIDUE-LEAD as a leading-*coefficient* formula `(d/κ)·p̃_{k+1}` | **GAP** — only the vanishing set was checked |
+| `K = d₂` “invisible” | **GAP** — seen as `e = n/d₂` and, on compositions, as `ν` |
+| RES-DEGREE witness `(y+1, y³+xy)` | **CONFIRMED** (`deg_x Res = 1 ≠ 0`) |
+| All 12 census stars exist; `(2,3,2)` retraction | **CONFIRMED** (print; the existence *check* is not fail-closed) |
+| OPEN[PS3-NEG] | **ANSWERED** for `(MON)+(SEP)`: `(y, y²+1)`, `J=0`, `deg_x R_1 = 0 > −1`. Still open for `J ≠ 0` |
+
+Driver holes: PS-0 is `cond or True`; `existence.py` asserts “decided”, not `GB ≠ {1}`; `genfun.py` skips compositions (B6 GF-R filled in here, 21/21).
+
+## PART B — NEXT-COEFF: **PARTIAL**
+
+**YES.** The `n−m−1` identities `M_r = Tr(f τ^r / g_y) = [y^{n−1}](y^r f mod (g−c))` are remainder coefficients over `Q`. They vanish (resp. equal 1 at the monic index) on every charged control, including D15’s nine identities. No Puiseux, no semigroup, no outer/inner split.
+
+**NO.** The coefficient of `x^{(k+1)c_max−1−j}` is not a function of tower data down to level `j` only.
+
+First mixing coefficient: **B6, `k=8`, `R_8 = −2c`**. Invisible to the bottom star and to `chi_N = T^6+x`; it is the `T^3` term of the level-2 composition. Next: **B6, `k=10`, `R_10 = −1`**, which is not even in `(T^3−c)²+x` and needs the `−T` from `g = y+u³`. C6, D15 (`R_17=5c`, `R_20=15c²`), and a 3-fold square repeat the same slack-then-mix pattern.
+
+Re-base the DEG block of `globalinterp.py` onto remainders in `Q[x,c][y]/(g−c)` (and onto `[T^{n−1}](T^k mod chi)` when `chi` is known). Do not filter `chi` by deficit, and do not claim a `g`-alone resultant: `Res_y(g−c, T−f)` still needs `f`.
+DIVERT path=xmodel/next-coeff-psreview-grok46-20260903.md status=CLEAN body_bytes=30637 body_sha256=48ce66675bfdc845e03d71d5e2e17b93ee933e65e6ff5fc07aa76a256a11bb0c

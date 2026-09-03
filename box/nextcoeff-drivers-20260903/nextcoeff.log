@@ -1,0 +1,456 @@
+nextcoeff.py -- EXPERIMENT NEXT-COEFF + attacks (d)(e)(f)
+sympy 1.12
+==============================================================================
+
+############ OPEN[PS3-NEG] -- search for a non-Keller monic witness
+   target: deg_x R_k > (k+1) c_max - 1
+   construction: ord_t(f^k/g_y) = (k+1)c - 1 + ord_t J  along a max branch,
+   so a violation needs J -> 0 there (ord_t J > 0), or c_max = 0 with R_k != 0.
+   NK-J0 (y, y^2+1)  J=0, cmax=0             J=0  cmax=0  VIOLATES PS-3
+        first at k=1: deg_x R_1 = 0 > -1  R = 1
+   NK-J0b (y, y^3+y+1)  J=0                  J=0  cmax=0  VIOLATES PS-3
+        first at k=2: deg_x R_2 = 0 > -1  R = 1
+   NK-W1 (y^2, y^3+x)  J=-2y                 J=-2*y  cmax=2/3  no violation k<=8
+   NK-W2 (y^2, y^3+xy)                       J=-2*y**2  cmax=1  no violation k<=8
+   NK-W3 (y, y^3+xy)  NP0                    J=-y  cmax=1/2  no violation k<=8
+   NK-W4 (y+1, y^3+xy)  NP1                  J=-y  cmax=1/2  no violation k<=8
+   NK-W5 (y^3, y^4+x)  J=-3y^2               J=-3*y**2  cmax=3/4  no violation k<=8
+   NK-W6 (xy+y^2, y^3+x)                     J=-x + 3*y**3 - 2*y  cmax=4/3  no violation k<=8
+   NK-W7 (y^2+x, y^3+x)                      J=3*y**2 - 2*y  cmax=1  no violation k<=8
+   NK-W8 (y^2-x, x+y^3)  =NK2                J=-3*y**2 - 2*y  cmax=1  no violation k<=8
+   NK-W9 (y, y^3+x+x^2)  J=-(1+2x)           J=-2*x - 1  cmax=2/3  no violation k<=8
+   NK-W10 (y, y^2+x^2)  J=-2x                J=-2*x  cmax=1  no violation k<=8
+   NK-W11 (y+x, y^2+1)  J=2y                 J=2*y  cmax=1  no violation k<=8
+   NK-W12 (y, y^4+xy+1)                      J=-y  cmax=1/3  no violation k<=8
+   TT1 two-tower row 1                       J=-8*x**5 + 32*x**4*y + 149*x**4 - 50*x**3*y**2 - 340*x**3*y - 31*x**3 + 38*x**2*y**3 + 285*x**2*y**2 + 30*x**2*y - 328*x**2 - 14*x*y**4 - 116*x*y**3 + 142*x*y**2 + 1000*x*y + 2*y**5 + 22*y**4 - 120*y**3  cmax=5/2  no violation k<=8
+   -- bounded monomial search n=2,3  (coeffs in {-1,0,1}, deg_x <= 2)
+   miss search g=x+y^n+xy f=y n=2                        J=-y - 1 cmax=1
+   miss search g=y^n+x^2 f=y n=2                         J=-2*x cmax=1
+   miss search g=y^n+1 f=y+x n=2                         J=2*y cmax=1
+   miss search f=y^{n-1} g=y^n+xy n=2                    J=-y cmax=1
+   miss search f=x g=y^n+y n=2                           J=2*y + 1 cmax=1
+   miss search f=y(1+x) g=x+y^n n=2                      J=-x + 2*y**2 - 1 cmax=3/2
+   miss search g=x+y^n+xy f=y n=3                        J=-y - 1 cmax=1/2
+   miss search g=y^n+x^2 f=y n=3                         J=-2*x cmax=2/3
+   miss search g=y^n+1 f=y+x n=3                         J=3*y**2 cmax=1
+   miss search f=y^{n-1} g=y^n+xy n=3                    J=-2*y**2 cmax=1
+   miss search f=x g=y^n+y n=3                           J=3*y**2 + 1 cmax=1
+   miss search f=y(1+x) g=x+y^n n=3                      J=-x + 3*y**3 - 1 cmax=4/3
+   => PS-3 FAILS without (KEL).  Witness NK-J0 (y, y^2+1)  J=0, cmax=0, k=1, cmax=0, deg_x R_1=0 > -1
+      J = 0   (zero=True, constant=True)
+
+############ attack (d): K = d_2 invisibility
+   Moh skeleton (moh_skeleton_N.Skel):
+      d_1 = n,  d_2 = K = gcd(m,n),  d_{j+1} = gcd(d_j, M_j),
+      e = n/K = n/d_2,  d = m/K = m/d_2,
+      a_1 = n V_2 / d_2 = e V_2,  b_1 = m V_2 / d_2 = d V_2,
+      q(B) = (1-delta_1) d e / (d+e),  c_max = q_max / e = q_max * d_2 / n.
+   PS-0..PS-3 live in Q[x,c] and their degree bounds use only c_max.
+   c_max = q_max/e sees d_2 only as the conversion e=n/d_2.
+   The star type (d,e,V_2) sees d_2 as the reduction (m,n)->(d,e).
+   No further d_2-dependent quantity (u, v, a_{s-1}, the chain d_3..d_s)
+   enters R_k, P_k, or the bound (k+1)c_max-1.
+   comparison: A3 (n=3,K=1,e=3,d=1) vs B6 (n=6,K=2,e=3,d=1)
+      same reduced (d,e)=(1,3); A3 has nu=1, B6 has nu=2 = K.
+      c_max(A3)=1/3 = 1/e,  c_max(B6)=1/6 = 1/(e nu) = 1/(e K).
+      nu=K here because the parent is a K-sheeted cover (the square).
+      The family sees K as nu (Galois orbit size) AND as e=n/K;
+      it does not see d_3,d_4,... of a longer chain.
+
+############ attack (e): RES-DEGREE witness re-check
+   NP0 f=y a0=0  deg_x Res(g-c,f)=0  sum(1-delta^0)=0  ords=[Fraction(-1, 1), Fraction(1, 2), Fraction(1, 2)]  Res=c
+   NP1 f=y+1 a0=1  deg_x Res(g-c,f)=1  sum(1-delta^0)=1  ords=[Fraction(0, 1), Fraction(1, 2), Fraction(1, 2)]  Res=c + x + 1
+    FAIL  NP1 f=y+1 a0=1 charged form (deg = sum(1-d0)) is TRUE 
+
+############ PART B: full x-expansion of R_k on the charged controls
+
+== A2 (y, x+y^2) ==  n=2 m=1  J=-1  cmax=1/2  tower s=1 star=(1, 2, 1) nu=1
+   discs: 1 disc of 2 roots, star (1,2,1)
+   k  deg  bound  tight  R_k as polynomial in x (coeffs in Q[c])
+    0  None  -1/2             0
+    1  0     0         YES    (1)*x^0
+    2  None  1/2              0
+    3  1     1         YES    (-1)*x^1 + (c)*x^0
+    4  None  3/2              0
+    5  2     2         YES    (1)*x^2 + (-2*c)*x^1 + (c**2)*x^0
+    6  None  5/2              0
+    7  3     3         YES    (-1)*x^3 + (3*c)*x^2 + (-3*c**2)*x^1 + (c**3)*x^0
+    8  None  7/2              0
+    9  4     4         YES    (1)*x^4 + (-4*c)*x^3 + (6*c**2)*x^2 + (-4*c**3)*x^1 + (c**4)*x^0
+   10  None  9/2              0
+   11  5     5         YES    (-1)*x^5 + (5*c)*x^4 + (-10*c**2)*x^3 + (10*c**3)*x^2 + (-5*c**4)*x^1 + (c**5)*x^0
+   12  None  11/2             0
+   13  6     6         YES    (1)*x^6 + (-6*c)*x^5 + (15*c**2)*x^4 + (-20*c**3)*x^3 + (15*c**4)*x^2 + (-6*c**5)*x^1 + (c**6)*x^0
+   14  None  13/2             0
+   15  7     7         YES    (-1)*x^7 + (7*c)*x^6 + (-21*c**2)*x^5 + (35*c**3)*x^4 + (-35*c**4)*x^3 + (21*c**5)*x^2 + (-7*c**6)*x^1 + (c**7 ...
+   16  None  15/2             0
+   17  8     8         YES    (1)*x^8 + (-8*c)*x^7 + (28*c**2)*x^6 + (-56*c**3)*x^5 + (70*c**4)*x^4 + (-56*c**5)*x^3 + (28*c**6)*x^2 + (-8*c ...
+   19  9     9         YES    (-1)*x^9 + (9*c)*x^8 + (-36*c**2)*x^7 + (84*c**3)*x^6 + (-126*c**4)*x^5 + (126*c**5)*x^4 + (-84*c**6)*x^3 + (3 ...
+   Newton-hull vertices j=[0, 2]
+   chi_N (Newton leading) = T**2 + x
+   chi_L (strictly lower)  = -c
+   Newton-leading chi predicts LEADING coeff of R_k for k in [1, 3, 5, 7, 9, 11, 13, 15] (of nonzero [1, 3, 5, 7, 9, 11, 13, 15])
+   Newton-leading chi predicts ALL coeffs of R_k for k in [1]
+   -- DEG block (n-m-1=0 identities), as remainder coefficients:
+   -- weighted R_k^{(e_r(hat))} x-support (r=0..0, k<=8):
+      r=0  nonzero (k,deg,bound,T/s) = [(1, 0, '0', 'T'), (3, 1, '1', 'T'), (5, 2, '2', 'T'), (7, 3, '3', 'T')]
+      r=1  nonzero (k,deg,bound,T/s) = [(0, 0, '-1/2', 's'), (2, 1, '1/2', 's'), (4, 2, '3/2', 's'), (6, 3, '5/2', 's'), (8, 4, '7/2', 's')]
+   [0.25 s]
+
+== A3 (y, x+y^3) ==  n=3 m=1  J=-1  cmax=1/3  tower s=1 star=(1, 3, 1) nu=1
+   discs: 1 disc of 3 roots, star (1,3,1)
+   k  deg  bound  tight  R_k as polynomial in x (coeffs in Q[c])
+    0  None  -2/3             0
+    1  None  -1/3             0
+    2  0     0         YES    (1)*x^0
+    3  None  1/3              0
+    4  None  2/3              0
+    5  1     1         YES    (-1)*x^1 + (c)*x^0
+    6  None  4/3              0
+    7  None  5/3              0
+    8  2     2         YES    (1)*x^2 + (-2*c)*x^1 + (c**2)*x^0
+    9  None  7/3              0
+   10  None  8/3              0
+   11  3     3         YES    (-1)*x^3 + (3*c)*x^2 + (-3*c**2)*x^1 + (c**3)*x^0
+   12  None  10/3             0
+   13  None  11/3             0
+   14  4     4         YES    (1)*x^4 + (-4*c)*x^3 + (6*c**2)*x^2 + (-4*c**3)*x^1 + (c**4)*x^0
+   15  None  13/3             0
+   16  None  14/3             0
+   17  5     5         YES    (-1)*x^5 + (5*c)*x^4 + (-10*c**2)*x^3 + (10*c**3)*x^2 + (-5*c**4)*x^1 + (c**5)*x^0
+   20  6     6         YES    (1)*x^6 + (-6*c)*x^5 + (15*c**2)*x^4 + (-20*c**3)*x^3 + (15*c**4)*x^2 + (-6*c**5)*x^1 + (c**6)*x^0
+   Newton-hull vertices j=[0, 3]
+   chi_N (Newton leading) = T**3 + x
+   chi_L (strictly lower)  = -c
+   Newton-leading chi predicts LEADING coeff of R_k for k in [2, 5, 8, 11, 14] (of nonzero [2, 5, 8, 11, 14])
+   Newton-leading chi predicts ALL coeffs of R_k for k in [2]
+   -- DEG block (n-m-1=1 identities), as remainder coefficients:
+   -- weighted R_k^{(e_r(hat))} x-support (r=0..1, k<=8):
+      r=0  nonzero (k,deg,bound,T/s) = [(2, 0, '0', 'T'), (5, 1, '1', 'T'), (8, 2, '2', 'T')]
+      r=1  nonzero (k,deg,bound,T/s) = [(1, 0, '-1/3', 's'), (4, 1, '2/3', 's'), (7, 2, '5/3', 's')]
+      r=2  nonzero (k,deg,bound,T/s) = [(0, 0, '-2/3', 's'), (3, 1, '1/3', 's'), (6, 2, '4/3', 's')]
+   [0.13 s]
+
+== A4 (y, x+y^4) ==  n=4 m=1  J=-1  cmax=1/4  tower s=1 star=(1, 4, 1) nu=1
+   discs: 1 disc of 4 roots, star (1,4,1)
+   k  deg  bound  tight  R_k as polynomial in x (coeffs in Q[c])
+    0  None  -3/4             0
+    1  None  -1/2             0
+    2  None  -1/4             0
+    3  0     0         YES    (1)*x^0
+    4  None  1/4              0
+    5  None  1/2              0
+    6  None  3/4              0
+    7  1     1         YES    (-1)*x^1 + (c)*x^0
+    8  None  5/4              0
+    9  None  3/2              0
+   10  None  7/4              0
+   11  2     2         YES    (1)*x^2 + (-2*c)*x^1 + (c**2)*x^0
+   12  None  9/4              0
+   13  None  5/2              0
+   14  None  11/4             0
+   15  3     3         YES    (-1)*x^3 + (3*c)*x^2 + (-3*c**2)*x^1 + (c**3)*x^0
+   16  None  13/4             0
+   19  4     4         YES    (1)*x^4 + (-4*c)*x^3 + (6*c**2)*x^2 + (-4*c**3)*x^1 + (c**4)*x^0
+   Newton-hull vertices j=[0, 4]
+   chi_N (Newton leading) = T**4 + x
+   chi_L (strictly lower)  = -c
+   Newton-leading chi predicts LEADING coeff of R_k for k in [3, 7, 11, 15] (of nonzero [3, 7, 11, 15])
+   Newton-leading chi predicts ALL coeffs of R_k for k in [3]
+   -- DEG block (n-m-1=2 identities), as remainder coefficients:
+   -- weighted R_k^{(e_r(hat))} x-support (r=0..2, k<=8):
+      r=0  nonzero (k,deg,bound,T/s) = [(3, 0, '0', 'T'), (7, 1, '1', 'T')]
+      r=1  nonzero (k,deg,bound,T/s) = [(2, 0, '-1/4', 's'), (6, 1, '3/4', 's')]
+      r=2  nonzero (k,deg,bound,T/s) = [(1, 0, '-1/2', 's'), (5, 1, '1/2', 's')]
+      r=3  nonzero (k,deg,bound,T/s) = [(0, 0, '-3/4', 's'), (4, 1, '1/4', 's'), (8, 2, '5/4', 's')]
+   [0.12 s]
+
+== A5 (y, x+y^5) ==  n=5 m=1  J=-1  cmax=1/5  tower s=1 star=(1, 5, 1) nu=1
+   discs: 1 disc of 5 roots, star (1,5,1)
+   k  deg  bound  tight  R_k as polynomial in x (coeffs in Q[c])
+    0  None  -4/5             0
+    1  None  -3/5             0
+    2  None  -2/5             0
+    3  None  -1/5             0
+    4  0     0         YES    (1)*x^0
+    5  None  1/5              0
+    6  None  2/5              0
+    7  None  3/5              0
+    8  None  4/5              0
+    9  1     1         YES    (-1)*x^1 + (c)*x^0
+   10  None  6/5              0
+   11  None  7/5              0
+   12  None  8/5              0
+   13  None  9/5              0
+   14  2     2         YES    (1)*x^2 + (-2*c)*x^1 + (c**2)*x^0
+   15  None  11/5             0
+   16  None  12/5             0
+   19  3     3         YES    (-1)*x^3 + (3*c)*x^2 + (-3*c**2)*x^1 + (c**3)*x^0
+   Newton-hull vertices j=[0, 5]
+   chi_N (Newton leading) = T**5 + x
+   chi_L (strictly lower)  = -c
+   Newton-leading chi predicts LEADING coeff of R_k for k in [4, 9, 14] (of nonzero [4, 9, 14])
+   Newton-leading chi predicts ALL coeffs of R_k for k in [4]
+   -- DEG block (n-m-1=3 identities), as remainder coefficients:
+   -- weighted R_k^{(e_r(hat))} x-support (r=0..3, k<=8):
+      r=0  nonzero (k,deg,bound,T/s) = [(4, 0, '0', 'T')]
+      r=1  nonzero (k,deg,bound,T/s) = [(3, 0, '-1/5', 's'), (8, 1, '4/5', 's')]
+      r=2  nonzero (k,deg,bound,T/s) = [(2, 0, '-2/5', 's'), (7, 1, '3/5', 's')]
+      r=3  nonzero (k,deg,bound,T/s) = [(1, 0, '-3/5', 's'), (6, 1, '2/5', 's')]
+   [0.11 s]
+
+== A6 (y, x+y^6) ==  n=6 m=1  J=-1  cmax=1/6  tower s=1 star=(1, 6, 1) nu=1
+   discs: 1 disc of 6 roots, star (1,6,1)
+   k  deg  bound  tight  R_k as polynomial in x (coeffs in Q[c])
+    0  None  -5/6             0
+    1  None  -2/3             0
+    2  None  -1/2             0
+    3  None  -1/3             0
+    4  None  -1/6             0
+    5  0     0         YES    (1)*x^0
+    6  None  1/6              0
+    7  None  1/3              0
+    8  None  1/2              0
+    9  None  2/3              0
+   10  None  5/6              0
+   11  1     1         YES    (-1)*x^1 + (c)*x^0
+   12  None  7/6              0
+   13  None  4/3              0
+   14  None  3/2              0
+   15  None  5/3              0
+   16  None  11/6             0
+   17  2     2         YES    (1)*x^2 + (-2*c)*x^1 + (c**2)*x^0
+   Newton-hull vertices j=[0, 6]
+   chi_N (Newton leading) = T**6 + x
+   chi_L (strictly lower)  = -c
+   Newton-leading chi predicts LEADING coeff of R_k for k in [5, 11] (of nonzero [5, 11])
+   Newton-leading chi predicts ALL coeffs of R_k for k in [5]
+   -- DEG block (n-m-1=4 identities), as remainder coefficients:
+   -- weighted R_k^{(e_r(hat))} x-support (r=0..3, k<=8):
+      r=0  nonzero (k,deg,bound,T/s) = [(5, 0, '0', 'T')]
+      r=1  nonzero (k,deg,bound,T/s) = [(4, 0, '-1/6', 's')]
+      r=2  nonzero (k,deg,bound,T/s) = [(3, 0, '-1/3', 's')]
+      r=3  nonzero (k,deg,bound,T/s) = [(2, 0, '-1/2', 's'), (8, 1, '1/2', 's')]
+   [0.10 s]
+
+== B6 (x+y^2, y+(x+y^2)^3) ==  n=6 m=2  J=1  cmax=1/6  tower s=2 star=(1, 3, 1) nu=2
+   discs: 2 conjugate D1 of 3 roots each (cube) under one D2 (square)
+   k  deg  bound  tight  R_k as polynomial in x (coeffs in Q[c])
+    0  None  -5/6             0
+    1  None  -2/3             0
+    2  None  -1/2             0
+    3  None  -1/3             0
+    4  None  -1/6             0
+    5  0     0         YES    (-1)*x^0
+    6  None  1/6              0
+    7  None  1/3              0
+    8  0     1/2              (-2*c)*x^0
+    9  None  2/3              0
+   10  0     5/6              (-1)*x^0
+   11  1     1         YES    (1)*x^1 + (-3*c**2)*x^0
+   12  None  7/6              0
+   13  0     4/3              (-4*c)*x^0
+   14  1     3/2              (4*c)*x^1 + (-4*c**3)*x^0
+   15  0     5/3              (-1)*x^0
+   16  1     11/6             (2)*x^1 + (-10*c**2)*x^0
+   17  2     2         YES    (-1)*x^2 + (10*c**2)*x^1 + (-5*c**4)*x^0
+   18  0     13/6             (-6*c)*x^0
+   19  1     7/3              (12*c)*x^1 + (-20*c**3)*x^0
+   20  2     5/2              (-6*c)*x^2 + (20*c**3)*x^1 + (-6*c**5 - 1)*x^0
+   Newton-hull vertices j=[0, 6]
+   chi_N (Newton leading) = T**6 + x
+   chi_L (strictly lower)  = -2*T**3*c - T + c**2
+   Newton-leading chi predicts LEADING coeff of R_k for k in [5, 11] (of nonzero [5, 8, 10, 11, 13, 14, 15, 16])
+   Newton-leading chi predicts ALL coeffs of R_k for k in [5]
+    FAIL  B6 (x+ k=8 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  B6 (x+ k=10 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  B6 (x+ k=13 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  B6 (x+ k=14 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  B6 (x+ k=15 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  B6 (x+ k=16 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   -- DEG block (n-m-1=3 identities), as remainder coefficients:
+   -- weighted R_k^{(e_r(hat))} x-support (r=0..3, k<=8):
+      r=0  nonzero (k,deg,bound,T/s) = [(5, 0, '0', 'T'), (8, 0, '1/2', 's')]
+      r=1  nonzero (k,deg,bound,T/s) = [(2, 0, '-1/2', 's'), (5, 0, '0', 'T'), (7, 0, '1/3', 's'), (8, 1, '1/2', 's')]
+      r=2  nonzero (k,deg,bound,T/s) = [(4, 0, '-1/6', 's'), (5, 1, '0', 's'), (7, 0, '1/3', 's'), (8, 1, '1/2', 's')]
+      r=3  nonzero (k,deg,bound,T/s) = [(1, 0, '-2/3', 's'), (2, 1, '-1/2', 's'), (4, 0, '-1/6', 's'), (5, 1, '0', 's'), (6, 0, '1/6', 's'), (7, 1, '1/3', 's'), (8, 2, '1/2', 's')]
+   [0.62 s]
+
+== C6 (x+y^3, y+(x+y^3)^2) ==  n=6 m=3  J=1  cmax=1/6  tower s=2 star=(1, 2, 1) nu=3
+   discs: 3 conjugate D1 of 2 roots each (square) under one D2 (cube)
+   k  deg  bound  tight  R_k as polynomial in x (coeffs in Q[c])
+    0  None  -5/6             0
+    1  None  -2/3             0
+    2  None  -1/2             0
+    3  None  -1/3             0
+    4  None  -1/6             0
+    5  0     0         YES    (1)*x^0
+    6  None  1/6              0
+    7  0     1/3              (3*c)*x^0
+    8  None  1/2              0
+    9  0     2/3              (6*c**2)*x^0
+   10  0     5/6              (-1)*x^0
+   11  1     1         YES    (1)*x^1 + (10*c**3)*x^0
+   12  0     7/6              (-6*c)*x^0
+   13  1     4/3              (6*c)*x^1 + (15*c**4)*x^0
+   14  0     3/2              (-21*c**2)*x^0
+   15  1     5/3              (21*c**2)*x^1 + (21*c**5 + 1)*x^0
+   16  1     11/6             (-2)*x^1 + (-56*c**3)*x^0
+   17  2     2         YES    (1)*x^2 + (56*c**3)*x^1 + (28*c**6 + 9*c)*x^0
+   18  1     13/6             (-18*c)*x^1 + (-126*c**4)*x^0
+   19  2     7/3              (9*c)*x^2 + (126*c**4)*x^1 + (36*c**7 + 45*c**2)*x^0
+   20  1     5/2              (-90*c**2)*x^1 + (-252*c**5 - 1)*x^0
+   Newton-hull vertices j=[0, 6]
+   chi_N (Newton leading) = T**6 - x
+   chi_L (strictly lower)  = -3*T**4*c + 3*T**2*c**2 + T - c**3
+   Newton-leading chi predicts LEADING coeff of R_k for k in [5, 11] (of nonzero [5, 7, 9, 10, 11, 12, 13, 14, 15, 16])
+   Newton-leading chi predicts ALL coeffs of R_k for k in [5]
+    FAIL  C6 (x+ k=7 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  C6 (x+ k=9 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  C6 (x+ k=10 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  C6 (x+ k=12 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  C6 (x+ k=13 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  C6 (x+ k=14 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  C6 (x+ k=15 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+    FAIL  C6 (x+ k=16 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   -- DEG block (n-m-1=2 identities), as remainder coefficients:
+   -- weighted R_k^{(e_r(hat))} x-support (r=0..3, k<=8):
+      r=0  nonzero (k,deg,bound,T/s) = [(5, 0, '0', 'T'), (7, 0, '1/3', 's')]
+      r=1  nonzero (k,deg,bound,T/s) = [(3, 0, '-1/3', 's'), (5, 0, '0', 'T'), (7, 0, '1/3', 's'), (8, 0, '1/2', 's')]
+      r=2  nonzero (k,deg,bound,T/s) = [(1, 0, '-2/3', 's'), (3, 0, '-1/3', 's'), (5, 0, '0', 'T'), (6, 0, '1/6', 's'), (7, 1, '1/3', 's'), (8, 0, '1/2', 's')]
+      r=3  nonzero (k,deg,bound,T/s) = [(4, 0, '-1/6', 's'), (5, 1, '0', 's'), (6, 0, '1/6', 's'), (7, 1, '1/3', 's'), (8, 0, '1/2', 's')]
+   [0.71 s]
+
+== D15 (x+y^5, y+(x+y^5)^3) ==  n=15 m=5  J=1  cmax=1/15  tower s=2 star=(1, 3, 1) nu=5
+   discs: 5 conjugate D1 of 3 roots each (cube) under one D2 (fifth)
+   k  deg  bound  tight  R_k as polynomial in x (coeffs in Q[c])
+    0  None  -14/15           0
+    1  None  -13/15           0
+    2  None  -4/5             0
+    3  None  -11/15           0
+    4  None  -2/3             0
+    5  None  -3/5             0
+    6  None  -8/15            0
+    7  None  -7/15            0
+    8  None  -2/5             0
+    9  None  -1/3             0
+   10  None  -4/15            0
+   11  None  -1/5             0
+   12  None  -2/15            0
+   13  None  -1/15            0
+   14  0     0         YES    (1)*x^0
+   15  None  1/15             0
+   16  None  2/15             0
+   17  0     1/5              (5*c)*x^0
+   20  0     2/5              (15*c**2)*x^0
+   Newton-hull vertices j=[0, 15]
+   chi_N (Newton leading) = T**15 - x
+   chi_L (strictly lower)  = -5*T**12*c + 10*T**9*c**2 - 10*T**6*c**3 + 5*T**3*c**4 + T - c**5
+   -- DEG block (n-m-1=9 identities), as remainder coefficients:
+   [0.29 s]
+
+############ GATE: B6 level-2 prediction
+   chi(T) = T**6 - 2*T**3*c - T + c**2 + x
+   k  bound  true R_k                    flat (T^6+x)           comp (T^3-c)^2+x
+    5  0       -1                          -1                    -1                  
+        [x^0]  deficit~0  <- flat/level-1-Newton   coeff=-1
+    8  1/2     -2*c                        0                     -2*c                
+        [x^0]  deficit~None  <- comp/level-2   coeff=-2*c
+   10  5/6     -1                          0                     0                   
+        [x^0]  deficit~None  <- full-chi (same 2-level, the -T term)   coeff=-1
+   11  1       -3*c**2 + x                 x                     -3*c**2 + x         
+        [x^1]  deficit~0  <- flat/level-1-Newton   coeff=1
+        [x^0]  deficit~1  <- comp/level-2   coeff=-3*c**2
+   13  4/3     -4*c                        0                     0                   
+        [x^0]  deficit~None  <- full-chi (same 2-level, the -T term)   coeff=-4*c
+   14  3/2     -4*c**3 + 4*c*x             0                     -4*c**3 + 4*c*x     
+        [x^1]  deficit~None  <- comp/level-2   coeff=4*c
+        [x^0]  deficit~None  <- comp/level-2   coeff=-4*c**3
+   15  5/3     -1                          0                     0                   
+        [x^0]  deficit~None  <- full-chi (same 2-level, the -T term)   coeff=-1
+   16  11/6    -10*c**2 + 2*x              0                     0                   
+        [x^1]  deficit~None  <- full-chi (same 2-level, the -T term)   coeff=2
+        [x^0]  deficit~None  <- full-chi (same 2-level, the -T term)   coeff=-10*c**2
+   17  2       -5*c**4 + 10*c**2*x - x**2  -x**2                 -5*c**4 + 10*c**2*x 
+        [x^2]  deficit~0  <- flat/level-1-Newton   coeff=-1
+        [x^1]  deficit~1  <- comp/level-2   coeff=10*c**2
+        [x^0]  deficit~2  <- comp/level-2   coeff=-5*c**4
+   18  13/6    -6*c                        0                     0                   
+        [x^0]  deficit~None  <- full-chi (same 2-level, the -T term)   coeff=-6*c
+   19  7/3     -20*c**3 + 12*c*x           0                     0                   
+        [x^1]  deficit~None  <- full-chi (same 2-level, the -T term)   coeff=12*c
+        [x^0]  deficit~None  <- full-chi (same 2-level, the -T term)   coeff=-20*c**3
+   20  5/2     -6*c**5 + 20*c**3*x - 6*c*  0                     -6*c**5 + 20*c**3*x 
+        [x^2]  deficit~None  <- comp/level-2   coeff=-6*c
+        [x^1]  deficit~None  <- comp/level-2   coeff=20*c**3
+        [x^0]  deficit~None  <- full-chi (same 2-level, the -T term)   coeff=-6*c**5 - 1
+
+   dictionary (B6):
+      deficit-0 (leading) predicted by chi_flat (Newton/level-1 flattened): 3  NOT: 5
+      deficit>0 predicted by chi_comp (level-2, drop -T): 5   need full -T: 7
+    FAIL  B6 GATE: every LEADING coeff (deficit 0) equals the Newton-flat prediction 
+      mix_at (first coeff needing the -T term) = (10, 0)
+
+############ C6 / D15: same filtration test
+
+   -- C6  chi = T**6 - 3*T**4*c + 3*T**2*c**2 + T - c**3 - x
+   chi_N = T**6 - x
+   chi_L = -3*T**4*c + 3*T**2*c**2 + T - c**3
+   k=5  deg=0 bound=0  lead_from_Newton=True  all_from_Newton=True  R=1
+   k=7  deg=0 bound=1/3  lead_from_Newton=False  all_from_Newton=False  R=3*c
+    FAIL  C6 k=7 leading coeff from chi_N                      
+   k=9  deg=0 bound=2/3  lead_from_Newton=False  all_from_Newton=False  R=6*c**2
+    FAIL  C6 k=9 leading coeff from chi_N                      
+   k=10 deg=0 bound=5/6  lead_from_Newton=False  all_from_Newton=False  R=-1
+    FAIL  C6 k=10 leading coeff from chi_N                     
+   k=11 deg=1 bound=1  lead_from_Newton=True  all_from_Newton=False  R=10*c**3 + x
+   k=12 deg=0 bound=7/6  lead_from_Newton=False  all_from_Newton=False  R=-6*c
+    FAIL  C6 k=12 leading coeff from chi_N                     
+
+   -- D15  chi = T**15 - 5*T**12*c + 10*T**9*c**2 - 10*T**6*c**3 + 5*T**3*c**4 + T - c**5 - x
+   chi_N = T**15 - x
+   chi_L = -5*T**12*c + 10*T**9*c**2 - 10*T**6*c**3 + 5*T**3*c**4 + T - c**5
+   k=14 deg=0 bound=0  lead_from_Newton=True  all_from_Newton=True  R=1
+   k=17 deg=0 bound=1/5  lead_from_Newton=False  all_from_Newton=False  R=5*c
+    FAIL  D15 k=17 leading coeff from chi_N                    
+   k=20 deg=0 bound=2/5  lead_from_Newton=False  all_from_Newton=False  R=15*c**2
+    FAIL  D15 k=20 leading coeff from chi_N                    
+
+############ 3-level probe (optional, n=8 triple square)
+   n=8 m=4 J=-1 gauge_monic LC_y f,g = 1 1
+   cmax=1/8  chi=T**8 - 4*T**6*c - 2*T**5 + 6*T**4*c**2 + 4*T**3*c + T**2*(2 - 4*c**3) - 2*T*c**2 + c**4 - c + x
+   chi_N=T**8 + x
+   chi_L=-4*T**6*c - 2*T**5 + 6*T**4*c**2 + 4*T**3*c + T**2*(2 - 4*c**3) - 2*T*c**2 + c**
+   k=7  deg=0 bound=0 leadN=True allN=True R=1
+   k=9  deg=0 bound=1/4 leadN=False allN=False R=4*c
+   k=10 deg=0 bound=3/8 leadN=False allN=False R=2
+   k=11 deg=0 bound=1/2 leadN=False allN=False R=10*c**2
+   k=12 deg=0 bound=5/8 leadN=False allN=False R=12*c
+   [0.49 s]
+
+==============================================================================
+214 checks, 22 failures
+   FAILED: NP1 f=y+1 a0=1 charged form (deg = sum(1-d0)) is TRUE 
+   FAILED: B6 (x+ k=8 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: B6 (x+ k=10 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: B6 (x+ k=13 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: B6 (x+ k=14 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: B6 (x+ k=15 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: B6 (x+ k=16 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: C6 (x+ k=7 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: C6 (x+ k=9 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: C6 (x+ k=10 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: C6 (x+ k=12 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: C6 (x+ k=13 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: C6 (x+ k=14 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: C6 (x+ k=15 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: C6 (x+ k=16 Newton-leading predicts the LEADING x-coeff of R_k true lead vs chi_N lead
+   FAILED: B6 GATE: every LEADING coeff (deficit 0) equals the Newton-flat prediction 
+   FAILED: C6 k=7 leading coeff from chi_N 
+   FAILED: C6 k=9 leading coeff from chi_N 
+   FAILED: C6 k=10 leading coeff from chi_N 
+   FAILED: C6 k=12 leading coeff from chi_N 
+   FAILED: D15 k=17 leading coeff from chi_N 
+   FAILED: D15 k=20 leading coeff from chi_N 
+Command exited with non-zero status 1
+elapsed 8.90 sec maxrss 59756 KB
