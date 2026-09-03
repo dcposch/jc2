@@ -16181,3 +16181,36 @@ sibling coefficients / the descended monomial-Jacobian analysis along u_s = 1
 (theorem (T)), for which the K = 16 ray is now the canonical unbounded test
 family. Residue at n ≤ 100: 58 − 6 = 52 excess ODE rows, ALL with u_s = 1.
 Different-model gate on the family: GPT-5.5 lane launched.
+
+## INTEGRATION #17 DELTA (w) (2026-09-03T12:32Z, PROMOTED): THE K = 16 RAY IS A THEOREM FOR ALL t ≥ 1 — THE SCREENED CENSUS IS COFINALLY NONEMPTY, GAP-FREE; Q3(f) AFTER THE SCREEN IS NO
+
+Producer: Grok (`screened-census-grok46-20260903.md` §6.2, delta 17(v)); independent
+same-round rediscovery: Grok's blind 1200Z submission §2.2 (OPEN[K16-RAY]); different-
+model hostile gate: `k16-ray-gate-gpt55-20260903.md` (GPT-5.5, box/k16gate-drivers-
+20260903/k16_gate.py; all nine charged hashes matched; six items, ALL CONFIRMED). What
+is promoted: for every integer t ≥ 1, e = 3t+1, d = 2t+1 (3d − 2e = 1, so coprime
+exactly), n = 48t+16, m = 32t+16, M = (−m, 48t+4, 48t+14), V₂ = V₃ = 3: the gcd ladder is
+exactly (n, 16, 4, 2) (12t+1 and 24t+7 odd); windows 2 < 3 ≤ 4 and 4/3 < 3 ≤ 12 constant;
+δ = (−1, 1/4, (7t+2)/(4(3t+1))); A₂ = 4; P = 12, Q = 9, P ≡ 0 (mod 4) so b = 0 (no forced
+major zero); (10) holds (V₂ = 3 ≤ △ = 3), (11) fails ((10)-only); L₁δ₁ = (7t+2)/(3t+1)
+reduced (3(7t+2) − 7(3t+1) = −1) so A₁ = 3t+1 = e; (12) identity (eV₂ = 3e, dV₂ − 1 =
+2e), (13) false; q = (2t+1)/4; |O| = 4; w = 12 = u; N = 6t+3. Census emission
+(frozen moh_skeleton_full.py) measured at t = 1, 2, 3, 5, 8 (n = 64…400): exactly one row
+per degree, full_ok. Whole-tree screens: gap-free partition-only, partition+ODE, gated
+Prop 5.6, gated+ODE all True (opus5_probe.py) and the charged C_FULL_TREE/_ODE True at
+every sample; sibling inventory exact (1 fixed zero root with b = 0, 2 nonzero A-orbits;
+the selected orbit major, 3 > 4/3, every conjugate with A₁ = 3t+1 and (12)); ODE uniform
+(12 − 27 ≠ 0; unused orbit 12 ≠ 0); the danger flag is cleared by the selected nonzero
+label, so no gapped zero-chain use of Prop 5.6 is consumed. Nested-pack DP: one packet,
+N-set = {6t+3} at every sample, cap false. Descent: u_s = d₃ − V₃ = 1 for every t; k =
+V_s − u_s − 1 = 1; (n', m', M₂', V₂', s') = (12t+4, 8t+4, 12t+1, 3, 2), J ∼ γ; p.207
+control at t = 1 = (16,12; 13; 3; X) matches; Φ radii by phi_delta.py. CONSEQUENCES
+(binding): (1) emptiness of the screened census cannot prove JC2 (Q3(f) NO); the
+screen is a target-list generator, not a proof program; (2) the K = 16 ray is the
+canonical unbounded client of theorem (T) at height 2 — t = 1 is Moh's Appendix II
+kill, t = 2 is (28,20; M₂' = 25, V₂' = 3, J = cγ), the first honest instance above Moh's
+table; (3) the ray is NOT a homothety of a printed row (Fable 1200Z §1.2 measured: the
+homotheties λ = 2..6 of Moh's six are not screened families), and its members lie in
+the campaign window [6,16] only at t = 1, 2 — the fixed-N framing is retired.
+Typed OPENs carried: OPEN[T-K16] (theorem (T) on the ray; lane k16-ray-T-newton-sol56-v3
+running); OPEN[DESCENT-ANCHOR] does not bite on the ray (n' − M₂' − 1 = 2 ≠ 0).
