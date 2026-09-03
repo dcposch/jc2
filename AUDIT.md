@@ -17476,3 +17476,21 @@ remedies are (i) a NATIVE preprocessing pipeline (Q*-pivot elimination, grading 
 slice done inside Singular or with a compiled sparse exact solver, replacing the sympy
 parser) — instrument lane launched; (ii) more machines for the modular runs in parallel
 (the fleet ask stands). Tally unchanged: two-point stratum 7/17 dead, 10 open.
+
+## INTEGRATION #17 DELTA (cccc) (2026-09-03T20:47Z, PROVED-HERE/UNREVIEWED structural results, producer Opus): THE TERMINAL STATEMENT (8.1) ON THE K = 16 RAY IS A WEIGHTED-CONE STATEMENT — LEMMA CONE: with I_{t,+} = ⟨T_{t,1}, …, T_{t,2t−1}⟩ and T_{t,0} = c + τ_t (c = −yg a unit, τ_t weighted homogeneous of weight 4t+1), (8.1) ⇔ τ_t ∈ √I_{t,+} on every geometric point of Spec A_t, and dim I_{t,+} = 0 ⇒ (8.1) (band zero leaves the search; the test becomes homogeneous); the (6.3) grading extends to all 6t + 2 spine variables (wt(h) = wt(b₄) = 1, wt(C_j) = wt(q_{j,0}) = j, wt(T(0)) = t, wt(b_i) = (4−i)t + 1; the 2t + 1 eliminated variables carry the distinct weights 1..2t+1 matched to bands 4t..2t); corollary deg_{b₃}T_{t,k} ≤ 3, ≤ 2 on the top tail; PROPOSITION SUBCHART (collapse principle) and THEOREM B3-AXIS: on S = {b₄ = 0, q_{·,0} = 0} the spine collapses to one scalar and for every t ≥ 2: T_{t,k}|_S = 0 for k ∉ {0, t−2, 2t−1}, T_{t,0}|_S = c, T_{t,2t−1}|_S = α_t b₃², T_{t,t−2}|_S = φ_t b₃³, with closed α_t, φ_t and exact norms, both UNITS of A_t for every t ≥ 3 — so b₃ ∈ √(I_{t,+} + (b₄, q)) for all t ≥ 3; the t = 2 anomaly is the single factor (t − 2) (degenerate on exactly the fibre d = −1, y = 1/5, where W is nonempty yet (8.1) holds) — hence RESIDUAL-ZERO is sufficient but NOT necessary and is not an induction candidate; Route (1) generating functions: closed structure, NOT hypergeometric; Route (2) the charged "q-affine top tail" hypothesis is FALSE (what survives: deg_{b₃} ≤ 2 on the tail); NEW EXACT evidence at t = 5 (and t = 6, 7 on the b₄ = 0 cone); the SHARPEST RESIDUAL STATEMENT: (10.1) q_{j,0} ∈ √(I_{t,+} + (b₄)) for 2 ≤ j ≤ t−1, uniformly in t
+
+`k16-terminal-proof-opus5-20260903.md` (Opus, 31KB; box/k16terminal-opus-20260903/; 20/20
+hashes; A_t = Q[d]/(3d² − (t+1)) with every inverted scalar's norm displayed; t = 2 handled on
+both rational fibres). CHEAPEST FIXED-t TEST (§10): one weighted-homogeneous std of I_{t,+}
+in A_t[b₄, q_{2,0}, …, q_{t−1,0}, b₃] with wp(1, 2, …, t−1, t+1) followed by dim; dim = 0
+certifies (8.1) outright (Cor. C1); mandatory negative control: the t = 2, y = 1/5 fibre
+(dim = 1 yet (8.1) holds by the τ criterion); if dim > 0 fall back to the Rabinowitsch test
+1 ∈ ⟨I_{t,+}, 1 − zτ_t⟩. CHEAPEST NEXT STEP TOWARDS (10.1): apply SUBCHART to R = {q_{t−1,0},
+b₃} (weights t−1, t+1): for t ≥ 6 the semigroup meets [1, 2t+1] only in {t−1, t+1, 2t−2, 2t},
+so the surviving eliminated variables are five A_t-scalars times single monomials (10.2)
+— C_{t−1} = c₁q_{t−1,0}, q_{t+1,0} = c₂b₃, q_{2t−2,0} = c₃q_{t−1,0}², q_{2t,0} = c₄q_{t−1,0}b₃, b₁ =
+c₅q_{t−1,0}b₃² — one linear solve gives the q_{t−1,0} direction for all t ≥ 6; the exceptional
+collisions at t = 3, 4, 5 are exact on the records (c4_subchart_check.py). LEDGER: four
+promotable structural lemmas (gate needed — fold into the next spine gate); the uniform
+problem is now (10.1), attacked by the SUBCHART closed-form route (lane launched) in
+parallel with the determinant route (Sol) and Fable's lane.

@@ -1,0 +1,36 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/k16-terminal-proof-opus5-20260903.md` (30,316 body bytes, `PASS` on verify); drivers and artifacts in `box/k16terminal-opus-20260903/` (66 files, manifest verified).
+
+## Verdict
+
+**(8.1) for all `t` is not proved.** Typed `OPEN`, with four things promoted and a strictly sharper criterion.
+
+**Lemma CONE (proved, all `t`).** `T_{t,0} = c + τ_t` with `c = −yg` a unit and `τ_t` weighted-homogeneous of weight `4t+1`; the other rows are homogeneous of positive weight, so `V(I_{t,+})` is a `G_m`-cone. Hence
+
+```
+(8.1)  ⟺  τ_t ∈ √I_{t,+}    and    dim I_{t,+} = 0  ⟹  (8.1)
+```
+
+Band zero leaves the search and the decision problem becomes **homogeneous** — which is why the `t=5`/`t=6` runs that the charged report left as `INCONCLUSIVE_TIMEOUT` went through here.
+
+**b3-axis theorem (proved, all `t ≥ 2`).** The (6.3) grading extends to all `6t+2` spine variables (`wt(b_i) = (4−i)t+1`, `wt(C_j)=wt(q_{j,0})=j`), and the weights *force* the whole `5t+2`-step spine to collapse to one scalar on `S = {b4 = q_i = 0}`. Solving that one equation gives, in closed form for every `t`:
+
+```
+T_{t,2t-1}|_S = α_t·b3²,  T_{t,t-2}|_S = φ_t·b3³,  T_{t,k}|_S = 0 otherwise
+φ_t ∝ (t−2)(6t·d − (t+1)),   N = −(t+1)(3t−1)(4t+1)      never 0
+N(α_t) = −(t−2)(3t−1)²(3t+2)(27t³+17t²+t+2)/3            zero only at t=2
+```
+
+Derived, not fitted, then matched band-by-band against 10 exact records (`t=2..7`).
+
+**The `t=2` anomaly is the factor `(t−2)`.** It degenerates on exactly one fibre (`y=1/5`), where `dim I_{2,+} = 1` — yet (8.1) still holds via `τ_2 ∈ (b4)`. So **`RESIDUAL-ZERO` is false as an all-`t` lemma**, and the producer's split is sufficient but not necessary.
+
+## On the two suggested routes
+
+- **Generating functions:** the operator description *is* closed and `t`-independent (`B` = an explicit integral of `C`; the Euler inverse is a half-integration; `T_{t,k}` is the `2t`-jet of `Φ` at `s=−b4`). Coefficients are **not** hypergeometric — the obstruction is the triangular band solve, not the Euler structure. The b3-axis case is the positive control: where the solve collapses, the answer *is* rational in `(t,d)`.
+- **`b4=1` top tail:** the charged premise is **false** — `deg_{q_2} T_{4,k} = 5,6` in the top tail, so no affine elimination of the `q`'s exists. What is true and proved: `deg_{b3} ≤ 2` throughout the top tail, and `[b3²]T_{t,2t−1}` is the scalar `α_t`.
+
+New exact evidence: `RESIDUAL-ZERO` now holds in characteristic zero at `t=3,4,5,6` (charged had exact only to `t=4`); `(8.1)` certified by `dim = 0` at `t=2,3,4` exact, `t=5` mod 1009 only. Incomplete jobs (`t=5` exact full cone, `t=7`) are recorded in `RUN_STATUS.txt` as `INCONCLUSIVE_TIMEOUT`, never `NONUNIT`.
+
+The remaining gap is exactly the `q`-directions, `q_{j,0} ∈ √(I_{t,+} + (b4))`; §10 specifies the next sub-chart (`R = {q_{t−1,0}, b3}`, five scalars, one linear solve, valid `t ≥ 6` with the three small-`t` collisions identified and confirmed on the records).
+DIVERT path=xmodel/k16-terminal-proof-opus5-20260903.md status=CLEAN_SEALED body_bytes=30316 body_sha256=96e924b90cb4289336917c5857281c3d2030f79fb3c2d6b9df5556325af104ad

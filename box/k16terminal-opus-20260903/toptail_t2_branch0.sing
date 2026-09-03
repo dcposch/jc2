@@ -1,0 +1,6 @@
+ring R=0,(b3),dp;
+ideal I=35 - 16*b3,
+88*b3 - 295;
+ideal G=std(I);
+printf("TOPTAIL t=2 branch0 rows=2 UNIT=%s DIM=%s", (size(G)==1 && G[1]==1), dim(G));
+quit;

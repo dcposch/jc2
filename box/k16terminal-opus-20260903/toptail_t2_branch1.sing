@@ -1,0 +1,6 @@
+ring R=0,(b3),dp;
+ideal I=287156086*b3^2 - 27046560*b3 + 106639425,
+1189646642*b3^2 + 304374720*b3 - 1207034325;
+ideal G=std(I);
+printf("TOPTAIL t=2 branch1 rows=2 UNIT=%s DIM=%s", (size(G)==1 && G[1]==1), dim(G));
+quit;
