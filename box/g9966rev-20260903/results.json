@@ -1,0 +1,628 @@
+{
+ "skeleton": {
+  "n": 99,
+  "m": 66,
+  "M": {
+   "1": -66,
+   "2": 77,
+   "3": 97
+  },
+  "d": {
+   "1": 99,
+   "2": 33,
+   "3": 11,
+   "4": 1
+  },
+  "v_s": 8,
+  "u_s": 3,
+  "d_s": 11,
+  "minus_mu": {
+   "1": 66,
+   "2": 55,
+   "3": 145
+  },
+  "delta": {
+   "3": "-1",
+   "2": "1/3",
+   "1": "4/9"
+  }
+ },
+ "moh_p194_delta2": {
+  "formula": "(u_s(n-M_{s-1})-d_s)/(v_s(n-M_{s-1})-d_s)",
+  "value": "1/3",
+  "matches_p202": true
+ },
+ "moh_p190_minor_test": {
+  "threshold": "11/2",
+  "v_s_is_major": true,
+  "u_s_is_minor": true
+ },
+ "prop61_order_identity": {
+  "agrees_for_all_delta": true,
+  "closed_form": "ord g(sigma) = (n/d_s)(u_s*delta - v_s) = 9(3*delta-8)",
+  "ord_g_at_delta_2": "-18",
+  "ord_lt_zero_iff": "delta < v_s/u_s = 8/3"
+ },
+ "xu_section8_orders": {
+  "2": {
+   "f": "-12",
+   "g": "-18",
+   "T2": "-10",
+   "T3f": "-44",
+   "T3": "-25",
+   "matches_xu_printed": true
+  },
+  "5/2": {
+   "f": "-3",
+   "g": "-9/2",
+   "T2": "-5/2",
+   "T3f": "-11",
+   "T3": "-5",
+   "matches_xu_printed": true
+  }
+ },
+ "face_ode": {
+  "equation": "9*a*q*p' - b*q'*p = c*p^14",
+  "a": "40*delta-105",
+  "b": "27*delta-72",
+  "deg_p": 3,
+  "deg_q": 40,
+  "leading_c": "45",
+  "c_is_delta_independent": true
+ },
+ "split_order_enumeration": {
+  "candidate_deltas": [
+   "2",
+   "3/2",
+   "5/2",
+   "4/3",
+   "5/3",
+   "7/3"
+  ],
+  "rows": [
+   {
+    "delta": "2",
+    "partitions": {
+     "(1, 1, 1)": {
+      "rho": {
+       "1": "25/2"
+      },
+      "nonresonant_total": 42,
+      "feasible_multiplicity_vectors": []
+     },
+     "(2, 1)": {
+      "rho": {
+       "1": "25/2",
+       "2": "25"
+      },
+      "nonresonant_total": 41,
+      "feasible_multiplicity_vectors": [
+       [
+        25,
+        14
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "delta": "3/2",
+    "partitions": {
+     "(1, 1, 1)": {
+      "rho": {
+       "1": "90/7"
+      },
+      "nonresonant_total": 42,
+      "feasible_multiplicity_vectors": []
+     },
+     "(2, 1)": {
+      "rho": {
+       "1": "90/7",
+       "2": "180/7"
+      },
+      "nonresonant_total": 41,
+      "feasible_multiplicity_vectors": []
+     }
+    }
+   },
+   {
+    "delta": "5/2",
+    "partitions": {
+     "(1, 1, 1)": {
+      "rho": {
+       "1": "10"
+      },
+      "nonresonant_total": 42,
+      "feasible_multiplicity_vectors": [
+       [
+        10,
+        10,
+        10
+       ],
+       [
+        10,
+        10,
+        14
+       ],
+       [
+        10,
+        14,
+        10
+       ],
+       [
+        10,
+        14,
+        14
+       ],
+       [
+        14,
+        10,
+        10
+       ],
+       [
+        14,
+        10,
+        14
+       ],
+       [
+        14,
+        14,
+        10
+       ]
+      ]
+     },
+     "(2, 1)": {
+      "rho": {
+       "1": "10",
+       "2": "20"
+      },
+      "nonresonant_total": 41,
+      "feasible_multiplicity_vectors": [
+       [
+        20,
+        10
+       ],
+       [
+        20,
+        14
+       ],
+       [
+        27,
+        10
+       ]
+      ]
+     }
+    }
+   },
+   {
+    "delta": "4/3",
+    "partitions": {
+     "(1, 1, 1)": {
+      "rho": {
+       "1": "155/12"
+      },
+      "nonresonant_total": 42,
+      "feasible_multiplicity_vectors": []
+     },
+     "(2, 1)": {
+      "rho": {
+       "1": "155/12",
+       "2": "155/6"
+      },
+      "nonresonant_total": 41,
+      "feasible_multiplicity_vectors": []
+     }
+    }
+   },
+   {
+    "delta": "5/3",
+    "partitions": {
+     "(1, 1, 1)": {
+      "rho": {
+       "1": "115/9"
+      },
+      "nonresonant_total": 42,
+      "feasible_multiplicity_vectors": []
+     },
+     "(2, 1)": {
+      "rho": {
+       "1": "115/9",
+       "2": "230/9"
+      },
+      "nonresonant_total": 41,
+      "feasible_multiplicity_vectors": []
+     }
+    }
+   },
+   {
+    "delta": "7/3",
+    "partitions": {
+     "(1, 1, 1)": {
+      "rho": {
+       "1": "35/3"
+      },
+      "nonresonant_total": 42,
+      "feasible_multiplicity_vectors": []
+     },
+     "(2, 1)": {
+      "rho": {
+       "1": "35/3",
+       "2": "70/3"
+      },
+      "nonresonant_total": 41,
+      "feasible_multiplicity_vectors": []
+     }
+    }
+   }
+  ],
+  "surviving": [
+   "2",
+   "5/2"
+  ]
+ },
+ "galois_filter": {
+  "2": {
+   "(1, 1, 1)": [
+    true,
+    "unramified"
+   ],
+   "(2, 1)": [
+    true,
+    "unramified"
+   ]
+  },
+  "3/2": {
+   "(1, 1, 1)": [
+    true,
+    "orbit {0, gamma, -gamma}: p(pi) = pi*(pi^2 - gamma^2)"
+   ],
+   "(2, 1)": [
+    false,
+    "mu_2 acts on the root multiset; a 2+1 multiset of distinct roots stable under pi->zeta*pi needs the double root fixed (=0) and the simple root fixed (=0): impossible"
+   ]
+  },
+  "5/2": {
+   "(1, 1, 1)": [
+    true,
+    "orbit {0, gamma, -gamma}: p(pi) = pi*(pi^2 - gamma^2)"
+   ],
+   "(2, 1)": [
+    false,
+    "mu_2 acts on the root multiset; a 2+1 multiset of distinct roots stable under pi->zeta*pi needs the double root fixed (=0) and the simple root fixed (=0): impossible"
+   ]
+  },
+  "4/3": {
+   "(1, 1, 1)": [
+    true,
+    "orbit {gamma, w*gamma, w^2*gamma}: p(pi) = pi^3 - gamma^3"
+   ],
+   "(2, 1)": [
+    false,
+    "mu_3 acts on the root multiset; a 2+1 multiset of distinct roots stable under pi->zeta*pi needs the double root fixed (=0) and the simple root fixed (=0): impossible"
+   ]
+  },
+  "5/3": {
+   "(1, 1, 1)": [
+    true,
+    "orbit {gamma, w*gamma, w^2*gamma}: p(pi) = pi^3 - gamma^3"
+   ],
+   "(2, 1)": [
+    false,
+    "mu_3 acts on the root multiset; a 2+1 multiset of distinct roots stable under pi->zeta*pi needs the double root fixed (=0) and the simple root fixed (=0): impossible"
+   ]
+  },
+  "7/3": {
+   "(1, 1, 1)": [
+    true,
+    "orbit {gamma, w*gamma, w^2*gamma}: p(pi) = pi^3 - gamma^3"
+   ],
+   "(2, 1)": [
+    false,
+    "mu_3 acts on the root multiset; a 2+1 multiset of distinct roots stable under pi->zeta*pi needs the double root fixed (=0) and the simple root fixed (=0): impossible"
+   ]
+  }
+ },
+ "branchB_face_check": {
+  "delta": "2",
+  "p": "pi^2*(pi+3a)",
+  "q": "pi^25*(pi+3a)^14*(pi-2a)",
+  "deg_q": 40,
+  "residual_is_zero": true
+ },
+ "delta52_face_check": {
+  "delta": "5/2",
+  "p": "pi*(pi^2-c)  (Galois-forced)",
+  "q_ansatz": "p^10 * q1,  deg q1 = 10",
+  "q1_prime_prop_p3": "q1' = k*p^3  (Xu section 8: q1 = -2 int p^3)",
+  "deg_q": 40,
+  "solved_k": [
+   {
+    "k": "10"
+   }
+  ],
+  "residual_after_solve": "0",
+  "free_parameters": [
+   "c (>0 distinct roots)",
+   "e0 (integration constant of q1)"
+  ]
+ },
+ "split_trees": {
+  "B_delta2": {
+   "split_order": "2",
+   "packets": [
+    18,
+    9
+   ],
+   "T3": [
+    25,
+    14
+   ],
+   "stages": [
+    {
+     "g_roots": 18,
+     "f_roots": 12,
+     "T2_roots": 10,
+     "gcd": 2,
+     "final_order": "3"
+    },
+    {
+     "g_roots": 9,
+     "f_roots": 6,
+     "T2_roots": 5,
+     "gcd": 1,
+     "final_order": "4"
+    }
+   ],
+   "pfr_dist_final_orders": [
+    "3",
+    "4"
+   ],
+   "ord_g_final_orders": [
+    "3",
+    "4"
+   ],
+   "two_derivations_agree": true,
+   "floor_V_over_u_ok": true,
+   "gcd_with_T3": [
+    1,
+    1
+   ],
+   "no_second_split": [
+    true,
+    true
+   ],
+   "Im": "6",
+   "sum_D_delta_minus_1": "42"
+  },
+  "X_delta52": {
+   "split_order": "5/2",
+   "packets": [
+    9,
+    9,
+    9
+   ],
+   "T3": [
+    10,
+    10,
+    10
+   ],
+   "stages": [
+    {
+     "g_roots": 9,
+     "f_roots": 6,
+     "T2_roots": 5,
+     "gcd": 1,
+     "final_order": "3"
+    },
+    {
+     "g_roots": 9,
+     "f_roots": 6,
+     "T2_roots": 5,
+     "gcd": 1,
+     "final_order": "3"
+    },
+    {
+     "g_roots": 9,
+     "f_roots": 6,
+     "T2_roots": 5,
+     "gcd": 1,
+     "final_order": "3"
+    }
+   ],
+   "pfr_dist_final_orders": [
+    "3",
+    "3",
+    "3"
+   ],
+   "ord_g_final_orders": [
+    "3",
+    "3",
+    "3"
+   ],
+   "two_derivations_agree": true,
+   "floor_V_over_u_ok": true,
+   "gcd_with_T3": [
+    1,
+    1,
+    1
+   ],
+   "no_second_split": [
+    true,
+    true,
+    true
+   ],
+   "Im": "7",
+   "sum_D_delta_minus_1": "36"
+  },
+  "C_delta2_dead": {
+   "split_order": "2",
+   "packets": [
+    9,
+    9,
+    9
+   ],
+   "T3": [
+    14,
+    14,
+    14
+   ],
+   "stages": [
+    {
+     "g_roots": 9,
+     "f_roots": 6,
+     "T2_roots": 5,
+     "gcd": 1,
+     "final_order": "4"
+    },
+    {
+     "g_roots": 9,
+     "f_roots": 6,
+     "T2_roots": 5,
+     "gcd": 1,
+     "final_order": "4"
+    },
+    {
+     "g_roots": 9,
+     "f_roots": 6,
+     "T2_roots": 5,
+     "gcd": 1,
+     "final_order": "4"
+    }
+   ],
+   "pfr_dist_final_orders": [
+    "4",
+    "4",
+    "4"
+   ],
+   "ord_g_final_orders": [
+    "4",
+    "4",
+    "4"
+   ],
+   "two_derivations_agree": true,
+   "floor_V_over_u_ok": true,
+   "gcd_with_T3": [
+    1,
+    1,
+    1
+   ],
+   "no_second_split": [
+    true,
+    true,
+    true
+   ],
+   "Im": "10",
+   "sum_D_delta_minus_1": "54"
+  }
+ },
+ "IM": {
+  "lambda_g_at_delta1": "-1/3",
+  "n_major_f_roots": 48,
+  "IM_all_major": "16",
+  "formula": "IM = -sum_{P_M} |D^f_sigma| * lambda^g_sigma  (Xu Thm 5.1)"
+ },
+ "corollary_5_3": {
+  "B_delta2": {
+   "Im": "6",
+   "IM": "16",
+   "passes": true
+  },
+  "X_delta52": {
+   "Im": "7",
+   "IM": "16",
+   "passes": true
+  },
+  "C_delta2_dead": {
+   "Im": "10",
+   "IM": "16",
+   "passes": true
+  }
+ },
+ "bookkeeping_identity": {
+  "rows": {
+   "B_delta2": {
+    "sum_D_delta_minus_1": "42",
+    "thm34_minor": "12",
+    "difference": "30"
+   },
+   "X_delta52": {
+    "sum_D_delta_minus_1": "36",
+    "thm34_minor": "6",
+    "difference": "30"
+   },
+   "C_delta2_dead": {
+    "sum_D_delta_minus_1": "54",
+    "thm34_minor": "24",
+    "difference": "30"
+   }
+  },
+  "all_differences_equal": true,
+  "reading": "eq(4.3) minus Thm 3.4 minor part is the SAME for every admissible tree: Thm 3.4 + Thm 4.7 carry no branch-separating information.",
+  "closed_form_difference": "30",
+  "closed_form_is_constant_30": true
+ },
+ "principal_places": {
+  "B_delta2": {
+   "ramification_index": 1,
+   "n_places": 27,
+   "sum_e_minus_1": 0
+  },
+  "X_delta52": {
+   "ramification_index": 2,
+   "n_places": 18,
+   "sum_e_minus_1": 9
+  },
+  "C_delta2_dead": {
+   "ramification_index": 1,
+   "n_places": 27,
+   "sum_e_minus_1": 0
+  }
+ },
+ "prop62_joint_object": {
+  "prop62": "deg_y gbar = v_s*n/d_s, deg_z gbar = u_s*n/d_s (and the same for T_i, i<s)",
+  "bidegrees": {
+   "f": [
+    48,
+    18
+   ],
+   "g": [
+    72,
+    27
+   ],
+   "T2": [
+    40,
+    15
+   ]
+  },
+  "top_forms": {
+   "f": "y^48 z^18",
+   "g": "y^72 z^27",
+   "T2": "y^40 z^15"
+  },
+  "monic_total_degree_counts": {
+   "f": 2278,
+   "g": 5050
+  },
+  "bidegree_cut_counts": {
+   "f": 931,
+   "g": 2044,
+   "total": 2975
+  },
+  "moh_p207_printed_count": 7348
+ },
+ "delta52_dimension": {
+  "raw_parameters": [
+   "c != 0",
+   "e0"
+  ],
+  "gauge": "pi -> lam*pi rescales c -> c/lam^2, so c may be normalised to 1",
+  "residual_free_parameters_after_gauge": 1,
+  "branchB_comparison": {
+   "raw_parameters": [
+    "a != 0"
+   ],
+   "residual_free_parameters_after_gauge": 0,
+   "note": "H=z^2(z+3a), R=z^25(z+3a)^14(z-2a): a is pure gauge"
+  }
+ }
+}

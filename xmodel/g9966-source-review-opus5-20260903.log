@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/g9966-source-review-opus5-20260903.md` (body 21198 B, `4e4db63a…`, basis `afb7e21b`). Drivers and page images under `box/g9966rev-20260903/`.
+
+## What the review found
+
+**Verdict: no source route excludes either surviving branch.** Nothing printed in Moh pp.190–199/207–211 or Xu pp.4–13 constrains the `(99,66)` principal minor roots beyond what the lanes used. Three new `DERIVED-SOURCE` results did come out of the pages:
+
+1. **Moh Prop. 6.1's proof is an exact order identity**, not just `δ* ≥ 1` — but only when read with the *minor* multiplicity `V_r = u_s = 3` (p.190's dichotomy `V_r ≤ d_r/(n−M_r) = 11/2`), not the p.202 major `V_3 = 8`. It gives `ord g(σ) = 9(3δ−8)`, which reproduces Moh's printed `t^-18` and **all five** of Xu §8's orders at both `δ = 2` and `δ = 5/2` from the skeleton alone. Corollary: the detector hypothesis `ord g < 0` holds iff `δ < v_s/u_s = 8/3` — the ceiling the lanes lacked, and the same `8/3` as `Im_min`.
+2. **Complete split-order classification.** Ceiling + Xu Prop. 7.3 (`δ>1`) + denominator ≤ 3 + the face-ODE resonance/degree budget leaves exactly `δ = 2` (partition `[2,1]`, vector `(25,14)` forced) and `δ = 5/2`. Independent re-derivation of Xu §8(i), which he asserts without the enumeration.
+3. **`δ = 5/2` is Galois-rigid.** The `μ₂` action `π ↦ −π` kills the ODE-admissible `[2,1]` vectors and forces `p(π) = π(π²−c)`. After gauge, that face is a **1-parameter** family; branch B's is a **single point**.
+
+**The two things the task asked to settle came out negative.** Theorem 3.4 + Theorem 4.7 is a *tree-blind identity* here: for any `k`-way split at any `δ`, `Σ|D_σ|(δ_σ−1) − (Thm 3.4 principal term) = 30` in closed form. Equality in 4.7(i) cannot separate the branches. Cor. 5.3 passes both (`IM = 16` vs `Im = 6`, `7`).
+
+**Prop. 6.2** — the task supposed no lane cites it. `moh9966-branchB-sol56` does, as the 27/72, 18/48, 15/40 table. Its real content is a *bidegree box with a forced monomial corner* in Moh's `(y,z)` coordinates; it cuts the joint object from 7328 to 2975 coefficients.
+
+**Why (16,12) dies:** `u_s = 1` ⇒ the principal packet never splits ⇒ one Puiseux branch ⇒ p.210's tail-cancellation ("the powerseries in `y⁻¹` shall naturally cancel out") is available. At `(99,66)`, `u_s = 3` and the packet splits into 2 or 3 branches with different final orders (`3,4` / `3,3,3`), so no single tail can be cancelled — which is exactly why the band lift grows.
+
+Two flags worth your eye: Moh p.207 prints the first case as **(64,68)**, evidently a typo for (64,48) (its transformed row is (16,12) at scale 4). And the genus/RH route is the one identified condition that is *not* tree-blind — principal places are 27 unramified for branch B vs 18 (nine with `e=2`) at `δ=5/2` — but I did not evaluate it; it needs the p.202 major tree's final structure, and I typed that `OPEN[9966-RH-FIBRE-EVAL]` rather than guess.
+DIVERT path=xmodel/g9966-source-review-opus5-20260903.md status=CLEAN_SEALED body_bytes=21198 body_sha256=4e4db63a70024910f9467accfe64ea9211700803019dd13725e080b7a404f8d2

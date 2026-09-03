@@ -17223,3 +17223,27 @@ stratum at D ≤ 200 now stands at 7 groups DEAD and PROMOTED — (64,48), (75,5
 re-base (the batch's 18 rows / 17 groups include (75,50) twice as one group).
 
 ## INTEGRATION #17 DELTA (hhh) — TALLY CORRECTION (2026-09-03T18:25Z): the 17-group two-point list = (64,48), (75,50) [one group, two rows], (84,56), (112,80), (125,75), (132,88), (147,98), (160,112), (168,112), (175,100), (175,125), (180,120), (180,144), (189,126), (192,128), (196,56), (200,120). DEAD (PROMOTED): 7 = (64,48), (75,50), (84,56), (112,80), (132,88), (160,112), (180,120). OPEN: 10 = (125,75), (147,98), (168,112), (175,100), (175,125), (180,144), (189,126), (192,128), (196,56), (200,120) — three δ₁' = 0 rows (r3-preprocess lane) and seven large-stratum rows (bigrows lane; (192,128) partially dead).
+
+## INTEGRATION #17 DELTA (iii) (2026-09-03T18:36Z, DERIVED-SOURCE, producer Opus): (99,66) FRESH-EYES SOURCE REVIEW — no printed route in Moh or Xu excludes either surviving branch; three new DERIVED-SOURCE facts: (1) Moh's Prop 6.1 proof (p.191) is an EXACT ORDER IDENTITY: with the minor multiplicity V_r = u_s = 3, ord g(σ) = (n/d_s)(u_sδ − v_s) = 9(3δ − 8), reproducing Moh's t⁻¹⁸ at δ = 2 and all five of Xu §8's orders at δ = 2 and 5/2 from the skeleton; corollary: the detector exists iff δ < v_s/u_s = 8/3 (the ceiling the lanes lacked); (2) EXHAUSTIVE split-order classification from that ceiling + Xu Prop 7.3 (δ > 1) + den(δ) ≤ u_s = 3 + the face-ODE degree budget: δ ∈ {2, 5/2} only; at δ = 2 the partition is [2,1] with multiplicity vector (25,14) FORCED (face = one point mod gauge); at δ = 5/2 the μ₂ Galois action π ↦ −π forces [1,1,1] with p = π(π² − c) (face = 1-parameter family mod gauge); (3) Theorem 3.4 + Theorem 4.7(i) are a TREE-BLIND identity at (99,66) (the bookkeeping difference equals 30 for every admissible tree — cannot separate the branches); Cor 5.3 exact: IM = 16 vs Im = 6 (branch B) / 7 (δ = 5/2) — passes; N1–N15 typed list; the cheapest decider identified
+
+`g9966-source-review-opus5-20260903.md` (Opus, 22KB; box/g9966rev-20260903/; 10/10 hashes;
+Moh pp.190–199, 207–211 and Xu pp.4–13 as images). Corrected premise (§1.1): Prop 6.2 gives
+the bidegree boxes for F̄, Ḡ with monomial corners (N14) — never used as a system yet. The
+status: OPEN[9966-DELTA-2-BRANCH-B] (face rigid, global lift unproved); OPEN[9966-DELTA-52-
+BRANCH] (face 1-parameter, global lift unproved); CLOSED[9966-DELTA-2-THREE-ROOT];
+CLOSED[9966-OTHER-SPLIT-ORDERS]. N15: the Ω-polynomiality of the π⁻¹ tail at the
+principal place is PRINTED for u_s = 1 only (p.210 method) — OPEN for u_s = 3. §6: why
+(16,12) closes and (99,66) does not (the closing constraint at (16,12) is the tail at the
+same point; at (99,66) it must come from the other point / the Prop 6.2 boxes). CHEAPEST
+DECIDER (§7): attack δ = 5/2 first (maximally rigid: (3,3,3) tree, ramified place): the joint
+two-point system restricted to the z-adic bands z²⁷ … z²⁴ of Ḡ compatible with p = π(π² − 1)
+(c gauged to 1), the three final-root coefficient vectors at δ = 3, the Jacobian constant;
+μ₂-equivariant; ≤ 60 unknowns after the Prop 6.2 y-degree box truncates each band;
+equations J_{y,z}(F̄, Ḡ) = c band by band through z-adic order 4 + the approximate-root
+relation + equivariance; Singular over three primes and Q with Rabinowitsch at c ≠ 0, γ ≠ 0.
+A [1] kills δ = 5/2 and reduces (99,66) to branch B, whose face is a single point (finite
+check). SECOND-CHEAPEST and the only NON-tree-blind condition identified: Fable's §5.2
+Riemann–Hurwitz identity 2g_c − 2 + N + r_prop = Σ_np(e_P − 1) with N = 16 on both trees
+(needs g_c, r_prop and the escape orders from the p.202 major tree's final structure plus
+one Puiseux coefficient per principal place). Lanes launched: g9966-delta52-joint-gpt55
+(the ≤ 60-unknown decider), g9966-hurwitz-fable5 (the Riemann–Hurwitz evaluation).
