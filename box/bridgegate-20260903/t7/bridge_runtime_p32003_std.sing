@@ -1,0 +1,319 @@
+// runtime BNF bridge builder, t=7, char=32003, method=std
+// e=22 q=15; unknowns including c=47; zero_a=7,21,22; free_a=1,2,3,4,5,6,8,9,10,11,12,13,14,15,16,17,18,19,20
+LIB "resources.lib";
+setcores(4);
+ring RB=32003,(p,g,b1,b2,b3,b4,q2_1,q3_1,q4_1,q5_1,q6_1,q7_1,q8_1,q8_A,q9_1,q9_A,q10_1,q10_A,q11_1,q11_A,q12_1,q12_A,q13_1,q13_A,q14_1,q14_A,q15_1,q15_A,q15_B,a1,a2,a3,a4,a5,a6,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,c,Tr),lp;
+option(redSB);
+poly z=p-g;
+poly B=p*z+b1*p+b2;
+poly A=p*B+b3;
+poly h=p*A+b4;
+ideal H=h;
+ideal Hstd=std(H);
+int LO=-25;
+int HI=47;
+int OFFSET=30;
+proc getAt(list S, int power)
+{
+  int idx=power+OFFSET;
+  if (idx<1) { return(0); }
+  if (typeof(S[idx])=="none") { return(0); }
+  return(S[idx]);
+}
+proc addAt(list S, int power, poly value)
+{
+  if (value==0) { return(S); }
+  int idx=power+OFFSET;
+  if (typeof(S[idx])=="none") { S[idx]=value; } else { S[idx]=S[idx]+value; }
+  return(S);
+}
+proc hred(poly f)
+{
+  list S;
+  int power=0;
+  poly cur=f;
+  list D;
+  poly quo;
+  poly rem;
+  while (cur!=0)
+  {
+    D=division(cur,Hstd);
+    quo=D[1][1,1];
+    rem=D[2][1];
+    if (rem!=0) { S=addAt(S,power,rem); }
+    if (quo==0) { return(S); }
+    cur=quo;
+    power++;
+  }
+  return(S);
+}
+proc hadd(list A0, list B0)
+{
+  list R=A0;
+  int i;
+  poly v;
+  for (i=LO; i<=HI; i++)
+  {
+    v=getAt(B0,i);
+    if (v!=0) { R=addAt(R,i,v); }
+  }
+  return(R);
+}
+proc hshift(list A0, int delta)
+{
+  list R;
+  int i;
+  poly v;
+  for (i=LO; i<=HI; i++)
+  {
+    v=getAt(A0,i);
+    if (v!=0) { R=addAt(R,i+delta,v); }
+  }
+  return(R);
+}
+proc hscal(list A0, poly scalar)
+{
+  list R;
+  int i;
+  poly v;
+  for (i=LO; i<=HI; i++)
+  {
+    v=getAt(A0,i);
+    if (v!=0) { R=addAt(R,i,scalar*v); }
+  }
+  return(R);
+}
+proc hmul(list A0, list B0)
+{
+  list R;
+  int i; int j; int d;
+  poly ai; poly bj; poly rd;
+  list Red;
+  for (i=LO; i<=HI; i++)
+  {
+    ai=getAt(A0,i);
+    if (ai!=0)
+    {
+      for (j=LO; j<=HI; j++)
+      {
+        bj=getAt(B0,j);
+        if ((bj!=0) && (i+j>=LO-1) && (i+j<=HI))
+        {
+          Red=hred(ai*bj);
+          for (d=0; d<=8; d++)
+          {
+            rd=getAt(Red,d);
+            if ((rd!=0) && (i+j+d>=LO) && (i+j+d<=HI)) { R=addAt(R,i+j+d,rd); }
+          }
+        }
+      }
+    }
+  }
+  return(R);
+}
+proc hpowUnit(list U, number exponent)
+{
+  list Res; list Term;
+  Res=addAt(Res,0,1);
+  Term=addAt(Term,0,1);
+  number coeffN=1;
+  int j;
+  for (j=1; j<=54; j++)
+  {
+    Term=hmul(Term,U);
+    if (size(Term)==0) { return(Res); }
+    coeffN=coeffN*(exponent-(j-1))/j;
+    Res=hadd(Res,hscal(Term,coeffN));
+  }
+  return(Res);
+}
+proc J(poly f, poly gg)
+{
+  return(diff(f,g)*diff(gg,p)-diff(f,p)*diff(gg,g));
+}
+list U;
+U=addAt(U,-2,(q2_1*(1)));
+U=addAt(U,-3,(q3_1*(1)));
+U=addAt(U,-4,(q4_1*(1)));
+U=addAt(U,-5,(q5_1*(1)));
+U=addAt(U,-6,(q6_1*(1)));
+U=addAt(U,-7,(q7_1*(1)));
+U=addAt(U,-8,(q8_1*(1)+q8_A*(A)));
+U=addAt(U,-9,(q9_1*(1)+q9_A*(A)));
+U=addAt(U,-10,(q10_1*(1)+q10_A*(A)));
+U=addAt(U,-11,(q11_1*(1)+q11_A*(A)));
+U=addAt(U,-12,(q12_1*(1)+q12_A*(A)));
+U=addAt(U,-13,(q13_1*(1)+q13_A*(A)));
+U=addAt(U,-14,(q14_1*(1)+q14_A*(A)));
+U=addAt(U,-15,(q15_1*(1)+q15_A*(A)+q15_B*(B)));
+list Pser;
+list Tk;
+// BNF summand k=0
+Tk=hpowUnit(U,number(22)/number(15));
+Tk=hshift(Tk,22);
+Tk=hscal(Tk,1);
+Pser=hadd(Pser,Tk);
+// BNF summand k=1
+Tk=hpowUnit(U,number(21)/number(15));
+Tk=hshift(Tk,21);
+Tk=hscal(Tk,a1);
+Pser=hadd(Pser,Tk);
+// BNF summand k=2
+Tk=hpowUnit(U,number(20)/number(15));
+Tk=hshift(Tk,20);
+Tk=hscal(Tk,a2);
+Pser=hadd(Pser,Tk);
+// BNF summand k=3
+Tk=hpowUnit(U,number(19)/number(15));
+Tk=hshift(Tk,19);
+Tk=hscal(Tk,a3);
+Pser=hadd(Pser,Tk);
+// BNF summand k=4
+Tk=hpowUnit(U,number(18)/number(15));
+Tk=hshift(Tk,18);
+Tk=hscal(Tk,a4);
+Pser=hadd(Pser,Tk);
+// BNF summand k=5
+Tk=hpowUnit(U,number(17)/number(15));
+Tk=hshift(Tk,17);
+Tk=hscal(Tk,a5);
+Pser=hadd(Pser,Tk);
+// BNF summand k=6
+Tk=hpowUnit(U,number(16)/number(15));
+Tk=hshift(Tk,16);
+Tk=hscal(Tk,a6);
+Pser=hadd(Pser,Tk);
+// BNF summand k=8
+Tk=hpowUnit(U,number(14)/number(15));
+Tk=hshift(Tk,14);
+Tk=hscal(Tk,a8);
+Pser=hadd(Pser,Tk);
+// BNF summand k=9
+Tk=hpowUnit(U,number(13)/number(15));
+Tk=hshift(Tk,13);
+Tk=hscal(Tk,a9);
+Pser=hadd(Pser,Tk);
+// BNF summand k=10
+Tk=hpowUnit(U,number(12)/number(15));
+Tk=hshift(Tk,12);
+Tk=hscal(Tk,a10);
+Pser=hadd(Pser,Tk);
+// BNF summand k=11
+Tk=hpowUnit(U,number(11)/number(15));
+Tk=hshift(Tk,11);
+Tk=hscal(Tk,a11);
+Pser=hadd(Pser,Tk);
+// BNF summand k=12
+Tk=hpowUnit(U,number(10)/number(15));
+Tk=hshift(Tk,10);
+Tk=hscal(Tk,a12);
+Pser=hadd(Pser,Tk);
+// BNF summand k=13
+Tk=hpowUnit(U,number(9)/number(15));
+Tk=hshift(Tk,9);
+Tk=hscal(Tk,a13);
+Pser=hadd(Pser,Tk);
+// BNF summand k=14
+Tk=hpowUnit(U,number(8)/number(15));
+Tk=hshift(Tk,8);
+Tk=hscal(Tk,a14);
+Pser=hadd(Pser,Tk);
+// BNF summand k=15
+Tk=hpowUnit(U,number(7)/number(15));
+Tk=hshift(Tk,7);
+Tk=hscal(Tk,a15);
+Pser=hadd(Pser,Tk);
+// BNF summand k=16
+Tk=hpowUnit(U,number(6)/number(15));
+Tk=hshift(Tk,6);
+Tk=hscal(Tk,a16);
+Pser=hadd(Pser,Tk);
+// BNF summand k=17
+Tk=hpowUnit(U,number(5)/number(15));
+Tk=hshift(Tk,5);
+Tk=hscal(Tk,a17);
+Pser=hadd(Pser,Tk);
+// BNF summand k=18
+Tk=hpowUnit(U,number(4)/number(15));
+Tk=hshift(Tk,4);
+Tk=hscal(Tk,a18);
+Pser=hadd(Pser,Tk);
+// BNF summand k=19
+Tk=hpowUnit(U,number(3)/number(15));
+Tk=hshift(Tk,3);
+Tk=hscal(Tk,a19);
+Pser=hadd(Pser,Tk);
+// BNF summand k=20
+Tk=hpowUnit(U,number(2)/number(15));
+Tk=hshift(Tk,2);
+Tk=hscal(Tk,a20);
+Pser=hadd(Pser,Tk);
+list Qser;
+Qser=addAt(Qser,15,1);
+Qser=hadd(Qser,hshift(U,15));
+list By;
+int rp; int spow; poly aa; poly bb; poly first; poly second;
+for (rp=0; rp<=15; rp++)
+{
+  aa=getAt(Qser,rp);
+  if (aa!=0)
+  {
+    for (spow=0; spow<=22; spow++)
+    {
+      bb=getAt(Pser,spow);
+      if (bb!=0)
+      {
+        first=J(aa,bb);
+        if (first!=0) { By=addAt(By,rp+spow,first); }
+        second=spow*bb*J(aa,h)+rp*aa*J(h,bb);
+        if (second!=0) { By=addAt(By,rp+spow-1,second); }
+      }
+    }
+  }
+}
+int hp; poly expr; poly quo; poly rem; list D;
+for (hp=0; hp<=57; hp++)
+{
+  expr=getAt(By,hp);
+  if (expr!=0)
+  {
+    D=division(expr,Hstd);
+    quo=D[1][1,1];
+    rem=D[2][1];
+    By[hp+OFFSET]=rem;
+    if (quo!=0) { By=addAt(By,hp+1,quo); }
+  }
+}
+ideal Icoeff;
+int coeff_count=0;
+proc addCoeffs(poly f)
+{
+  if (f==0) { return(); }
+  matrix Cp=coef(f,p);
+  int i; int j;
+  poly cp; poly cg;
+  matrix Cg;
+  for (i=1; i<=ncols(Cp); i++)
+  {
+    cp=Cp[2,i];
+    Cg=coef(cp,g);
+    for (j=1; j<=ncols(Cg); j++)
+    {
+      cg=Cg[2,j];
+      if (cg!=0) { Icoeff[size(Icoeff)+1]=cg; coeff_count++; }
+    }
+  }
+}
+for (hp=0; hp<=HI; hp++)
+{
+  expr=getAt(By,hp);
+  if (hp==0) { expr=expr-c*g; }
+  addCoeffs(expr);
+}
+Icoeff[size(Icoeff)+1]=Tr*c-1;
+print("BUILD_DONE t=7 coeff_generators=");
+coeff_count;
+print("BUILD_ONLY total_generators_with_Tr=");
+size(Icoeff);
+print("UNKNOWNS_INCLUDING_C 47");
+quit;

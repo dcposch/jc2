@@ -20973,3 +20973,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T19:59Z EVENT — `k16-pivot-forms-grok46` sealed (10KB): (5.9)–(5.15) DERIVED symbolically — the second affine spine is a THEOREM for all t ≥ 2 and (T) ⇔ (8.1) is PROMOTED (Sol + Opus + Grok). → AUDIT delta 17(vvv). The ray's theorem (T) = one explicit uniform ideal-membership statement, OPEN. Lanes live: 7.
 
 ## 2026-09-03T20:02Z EVENT — `k16-t5t6-grok46` sealed (13KB): (T) at t = 5 PROVED-HERE (exact nfmodStd [1], 101 s); t = 6 OPEN (A_t pass unfinished); pattern 2t × t on t = 2..5. → AUDIT delta 17(www). The bridge-chart gate (t = 3..8 on the 6t + 5 chart) will serve as the independent check at t = 5, 6. Lanes live: 7.
+
+## 2026-09-03T20:15Z EVENT — `bridge-chart-gate-gpt55` sealed (12KB): BNF CONFIRMED; bridge chart a subset; t = 1, 2 confirmed; t = 3 modular only; t ≥ 4 no verdict — the 6t + 5 chart is not cheaper in practice. → AUDIT delta 17(xxx). `g9966-branchB-joint-gpt55` sealed (11KB): branch B high-z non-unit through depth 6 (dims 9 → 14 → 20). → AUDIT delta 17(yyy). Lanes live: 6.

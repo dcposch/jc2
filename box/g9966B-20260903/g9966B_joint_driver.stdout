@@ -1,0 +1,2240 @@
+{
+  "branchB_face_check": {
+    "H": "z**2*(z + 3)",
+    "R": "z**25*(z - 2)*(z + 3)**14",
+    "gauge": "a=1",
+    "k": "5",
+    "multiplicity_vector": [
+      25,
+      14
+    ],
+    "ode": "2*H*R_z - 25*H_z*R = k*H^14",
+    "residual_zero": true
+  },
+  "charged_input_verification": {
+    "all_ok": true,
+    "input_dir": "/tmp/jc2-lane.44PSc4/inputs",
+    "manifest": "box/g9966B-20260903/charged-inputs.sha256",
+    "receipt": "xmodel/g9966-branchB-joint-gpt55-20260903.run.v2",
+    "rows": [
+      {
+        "actual_sha256": "789b31978fe9c66e5540e48aa0e748af991daa8844946970d6065dbba38e6c80",
+        "basename": "g9966-delta52-joint-gpt55-20260903.md",
+        "expected_sha256": "789b31978fe9c66e5540e48aa0e748af991daa8844946970d6065dbba38e6c80",
+        "index": 1,
+        "ok": true,
+        "path": "/tmp/jc2-lane.44PSc4/inputs/g9966-delta52-joint-gpt55-20260903.md"
+      },
+      {
+        "actual_sha256": "5c01e6971993935fcf9f96924a411dfc19e9093449ddaeb8bdb059744ee0d3a8",
+        "basename": "g9966_delta52_joint_driver.py",
+        "expected_sha256": "5c01e6971993935fcf9f96924a411dfc19e9093449ddaeb8bdb059744ee0d3a8",
+        "index": 2,
+        "ok": true,
+        "path": "/tmp/jc2-lane.44PSc4/inputs/g9966_delta52_joint_driver.py"
+      },
+      {
+        "actual_sha256": "cfd4515d9afe771cd8c30ae9095c888a58d2f46226ad9ed8c28ca63c59814483",
+        "basename": "g9966_delta52_joint_results.json",
+        "expected_sha256": "cfd4515d9afe771cd8c30ae9095c888a58d2f46226ad9ed8c28ca63c59814483",
+        "index": 3,
+        "ok": true,
+        "path": "/tmp/jc2-lane.44PSc4/inputs/g9966_delta52_joint_results.json"
+      },
+      {
+        "actual_sha256": "dc2355a81dd472993c9af0fb0f03eb5b6f3c087c3a2ed00120615b76bcf91be8",
+        "basename": "g9966-review-gate-grok46-20260903.md",
+        "expected_sha256": "dc2355a81dd472993c9af0fb0f03eb5b6f3c087c3a2ed00120615b76bcf91be8",
+        "index": 4,
+        "ok": true,
+        "path": "/tmp/jc2-lane.44PSc4/inputs/g9966-review-gate-grok46-20260903.md"
+      },
+      {
+        "actual_sha256": "47ca21fa9a633a4d2ffeff8380d2c33abf36076e96f8a1d078399576c500825a",
+        "basename": "g9966-source-review-opus5-20260903.md",
+        "expected_sha256": "47ca21fa9a633a4d2ffeff8380d2c33abf36076e96f8a1d078399576c500825a",
+        "index": 5,
+        "ok": true,
+        "path": "/tmp/jc2-lane.44PSc4/inputs/g9966-source-review-opus5-20260903.md"
+      },
+      {
+        "actual_sha256": "1d4ff2c76301705fbfa0f324862fe8f8065d57840fbb3094bce596f54c6651c6",
+        "basename": "moh9966-B-lift-sol56-20260903.md",
+        "expected_sha256": "1d4ff2c76301705fbfa0f324862fe8f8065d57840fbb3094bce596f54c6651c6",
+        "index": 6,
+        "ok": true,
+        "path": "/tmp/jc2-lane.44PSc4/inputs/moh9966-B-lift-sol56-20260903.md"
+      },
+      {
+        "actual_sha256": "8338a702448a61ef10af214e5d156e0c14ad117ef231ae34aee462fb36fa649f",
+        "basename": "moh9966-branchB-sol56-20260903.md",
+        "expected_sha256": "8338a702448a61ef10af214e5d156e0c14ad117ef231ae34aee462fb36fa649f",
+        "index": 7,
+        "ok": true,
+        "path": "/tmp/jc2-lane.44PSc4/inputs/moh9966-branchB-sol56-20260903.md"
+      },
+      {
+        "actual_sha256": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "basename": "moh1983_jram340_configurations_of_roots.pdf",
+        "expected_sha256": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "index": 8,
+        "ok": true,
+        "path": "/tmp/jc2-lane.44PSc4/inputs/moh1983_jram340_configurations_of_roots.pdf"
+      },
+      {
+        "actual_sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "basename": "FALLACY-v2.md",
+        "expected_sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "index": 9,
+        "ok": true,
+        "path": "/tmp/jc2-lane.44PSc4/inputs/FALLACY-v2.md"
+      }
+    ]
+  },
+  "controls": {
+    "automorphisms": {
+      "degree_1_two_infinity": {
+        "ansatz": "f=A*x+y, g=C*x+y",
+        "direct_jacobian_check": true,
+        "jacobian_row": "A - C",
+        "typing": "EXACT two-infinity-point automorphism control",
+        "witness": {
+          "A": 2,
+          "C": 1,
+          "jacobian": 1
+        }
+      },
+      "degree_ge_6_same_infinity": {
+        "F": "x + y**6",
+        "G": "y + (x + y**6)**7",
+        "degrees": [
+          6,
+          42
+        ],
+        "direct_jacobian_check": true,
+        "infinity_scope": "top forms are powers of y; not a two-infinity-point control",
+        "jacobian": "1",
+        "typing": "EXACT degree>=6 triangular automorphism control"
+      }
+    },
+    "moh_64_48_appendixII": {
+      "equations": 77,
+      "run": {
+        "basis_one": true,
+        "basis_size": 1,
+        "char": 0,
+        "dimension": null,
+        "elapsed_seconds": 3.845794,
+        "fail_markers": [],
+        "log": "box/g9966B-20260903/logs/control_moh1612_appendixII_Q.log",
+        "log_sha256": "db7dc1e2e82ac7a0dbe05d0e8bfaffd21c63b62ce16467396b67be263b517ad8",
+        "main_equations": 77,
+        "pass_markers": [
+          "CONTROL_EMPTY_WRAPPER_PASS",
+          "CONTROL_NONEMPTY_WRAPPER_PASS",
+          "CONTROL_UNSATURATED_NONUNIT_PASS"
+        ],
+        "returncode": 0,
+        "script": "box/g9966B-20260903/systems/control_moh1612_appendixII_Q.sing",
+        "script_sha256": "0a2bd8b73d71276a1e64db036cfad08c6031e7e744a61872f516f21ae75afae6",
+        "stdout_excerpt": "CONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=77 unknowns_excluding_T=19 char=0\nMAIN_DONE basis_size=\n1\nBASIS_BEGIN\nG[1]=1\nBASIS_END\nMAIN_SATURATED_EMPTY\n",
+        "unknowns_excluding_T": 19,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "typing": "CONTROL: Moh (64,48) reduced p.208 common-polynomial ansatz",
+      "unknowns_excluding_T": 19,
+      "verdict": "SATURATED-EMPTY"
+    }
+  },
+  "elapsed_seconds": 146.377998,
+  "extension_scope": {
+    "depth_extensions": {
+      "branchB": {
+        "7": {
+          "dimensions_seen": [],
+          "new_unknown_count_from_previous_depth": 13,
+          "new_unknowns_by_z": {
+            "21": 7,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1
+          },
+          "status": "NEXT-SYSTEM-NOT-SOLVED-IN-THIS-LANE",
+          "verdict": "NOT-RUN"
+        },
+        "8": {
+          "dimensions_seen": [],
+          "new_unknown_count_from_previous_depth": 15,
+          "new_unknowns_by_z": {
+            "20": 8,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1
+          },
+          "status": "NEXT-SYSTEM-NOT-SOLVED-IN-THIS-LANE",
+          "verdict": "NOT-RUN"
+        }
+      },
+      "delta52": {
+        "7": {
+          "dimensions_seen": [],
+          "new_unknown_count_from_previous_depth": 6,
+          "new_unknowns_by_z": {
+            "21": 3,
+            "22": 1,
+            "24": 1,
+            "26": 1
+          },
+          "status": "NEXT-SYSTEM-NOT-SOLVED-IN-THIS-LANE",
+          "verdict": "NOT-RUN"
+        },
+        "8": {
+          "dimensions_seen": [],
+          "new_unknown_count_from_previous_depth": 8,
+          "new_unknowns_by_z": {
+            "20": 4,
+            "21": 1,
+            "23": 1,
+            "25": 1,
+            "27": 1
+          },
+          "status": "NEXT-SYSTEM-NOT-SOLVED-IN-THIS-LANE",
+          "verdict": "NOT-RUN"
+        }
+      }
+    },
+    "licensed": [
+      "new Gbar coefficients in the added high-z bands and newly visible local-order slots",
+      "Fbar coefficients induced recursively from Gbar^2-Fbar^3",
+      "positive z-band coefficients of J_yz(Fbar,Gbar)=constant",
+      "delta=5/2 mu2 equivariance on ramified coefficients"
+    ],
+    "not_introduced": [
+      "independent T2 coefficients or a T2 in K[f,g] recurrence",
+      "T3 coefficients beyond the leading face ODE data",
+      "Omega centre parameters a1,a2 or the major 4/9 centre functional"
+    ],
+    "reason": "The frozen charged sources license Prop. 6.2 boxes and the constant-Jacobian high-z rows here.  They explicitly leave the canonical T2/T3 recurrences and the major 4/9 centre as missing full-lift data, so those variables are recorded as the next system rather than added by analogy."
+  },
+  "high_z_systems": {
+    "branchB": {
+      "delta": "2",
+      "face_note": "Gauge a=1: H=pi^2(pi+3), R=pi^25(pi+3)^14(pi-2)",
+      "label": "Branch B delta=2",
+      "systems": {
+        "4": {
+          "approximate_root_remainder_rows": 0,
+          "build_seconds": 0.466442,
+          "depth": 4,
+          "dimensions_seen": [
+            9
+          ],
+          "fixed_terms": [
+            {
+              "coefficient": "1",
+              "local_order": 0,
+              "y_degree": 72,
+              "z_degree": 27
+            },
+            {
+              "coefficient": "27",
+              "local_order": 0,
+              "y_degree": 70,
+              "z_degree": 26
+            },
+            {
+              "coefficient": "324",
+              "local_order": 0,
+              "y_degree": 68,
+              "z_degree": 25
+            },
+            {
+              "coefficient": "2268",
+              "local_order": 0,
+              "y_degree": 66,
+              "z_degree": 24
+            }
+          ],
+          "forced_linear_rows": 4,
+          "induced_Fbar_bands": [
+            {
+              "summary": {
+                "preview": "48:1",
+                "sha256": "f248e3e27d653a911b348811bb86852132870664bfe196e36980434e239a8096",
+                "terms": 1
+              },
+              "z_degree": 18
+            },
+            {
+              "summary": {
+                "preview": "46:18; 45:2*g_26_69/3; 44:2*g_26_68/3",
+                "sha256": "433266a887decf84c0ea50cddb92227fa9f00774866cdf3dd007244a92200ea9",
+                "terms": 3
+              },
+              "z_degree": 17
+            },
+            {
+              "summary": {
+                "preview": "44:135; 43:2*g_25_67/3 - 6*g_26_69; 42:2*g_25_66/3 - 6*g_26_68 - g_26_69**2/9; 41:2*g_25_65/3 - 2*g_26_68*g_26_69/9; 40:2*g_25_64/3 - g_26_68**2/9",
+                "sha256": "07dbe5d065edb8af65d1add0a055eb55e72941ecf1bb1f66004c8e82e88ee67e",
+                "terms": 5
+              },
+              "z_degree": 16
+            },
+            {
+              "summary": {
+                "preview": "42:540; 41:2*g_24_65/3 - 6*g_25_67 + 36*g_26_69; 40:2*g_24_64/3 - 6*g_25_66 + 2*g_25_67*g_26_69/3 + 36*g_26_68 - 4*g_26_69**2 - 4*g_26_69*(2*g_25_67/3 - 6*g_26_69)/3; 39:2*g_24_63/3 - 6*g_25_65 + 2*g_25_66*g_26_69/3 + 2*g_25_67*g_26_68/3 - 8*g_26_68*g_26_69/3 - 4*g_26_68*(2*g_25_67/3 - 6*g_26_69)/3 - 2*g_26_69*(24*g_26_68 + 4*g_26_69**2/9)/9 - 4*g_26_69*(2*g_25_66/3 - 6*g_26_68 - g_26_69**2/9)/3; 38:2*g_24_62/3 - 6*g_25_64 + 2*g_25_65*g_26_69/3 + 2*g_25_66*g_26_68/3 + 4*g_26_68**2/3 - 16*g_26_68",
+                "sha256": "727394c37c8a7e774fc142eef43b2dd2ff69ebf7f2bafd589aae02ecf929ac4a",
+                "terms": 5
+              },
+              "z_degree": 15
+            }
+          ],
+          "jacobian_band_counts": {
+            "41": 5
+          },
+          "jacobian_rows": 5,
+          "literal_Fbar_z_bands": [
+            18,
+            17,
+            16,
+            15
+          ],
+          "literal_Gbar_z_bands": [
+            27,
+            26,
+            25,
+            24
+          ],
+          "mu2_linear_constraints_recorded": 0,
+          "new_unknown_count_from_previous_depth": 16,
+          "new_unknowns_by_z_from_previous_depth": {
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "27": 4
+          },
+          "new_unknowns_from_previous_depth": [
+            {
+              "local_order": 4,
+              "name": "g_27_68",
+              "y_degree": 68,
+              "z_degree": 27
+            },
+            {
+              "local_order": 3,
+              "name": "g_27_69",
+              "y_degree": 69,
+              "z_degree": 27
+            },
+            {
+              "local_order": 2,
+              "name": "g_27_70",
+              "y_degree": 70,
+              "z_degree": 27
+            },
+            {
+              "local_order": 1,
+              "name": "g_27_71",
+              "y_degree": 71,
+              "z_degree": 27
+            },
+            {
+              "local_order": 4,
+              "name": "g_26_66",
+              "y_degree": 66,
+              "z_degree": 26
+            },
+            {
+              "local_order": 3,
+              "name": "g_26_67",
+              "y_degree": 67,
+              "z_degree": 26
+            },
+            {
+              "local_order": 2,
+              "name": "g_26_68",
+              "y_degree": 68,
+              "z_degree": 26
+            },
+            {
+              "local_order": 1,
+              "name": "g_26_69",
+              "y_degree": 69,
+              "z_degree": 26
+            },
+            {
+              "local_order": 4,
+              "name": "g_25_64",
+              "y_degree": 64,
+              "z_degree": 25
+            },
+            {
+              "local_order": 3,
+              "name": "g_25_65",
+              "y_degree": 65,
+              "z_degree": 25
+            },
+            {
+              "local_order": 2,
+              "name": "g_25_66",
+              "y_degree": 66,
+              "z_degree": 25
+            },
+            {
+              "local_order": 1,
+              "name": "g_25_67",
+              "y_degree": 67,
+              "z_degree": 25
+            },
+            {
+              "local_order": 4,
+              "name": "g_24_62",
+              "y_degree": 62,
+              "z_degree": 24
+            },
+            {
+              "local_order": 3,
+              "name": "g_24_63",
+              "y_degree": 63,
+              "z_degree": 24
+            },
+            {
+              "local_order": 2,
+              "name": "g_24_64",
+              "y_degree": 64,
+              "z_degree": 24
+            },
+            {
+              "local_order": 1,
+              "name": "g_24_65",
+              "y_degree": 65,
+              "z_degree": 24
+            }
+          ],
+          "pointset_linear_reductions": [
+            "g_26_66",
+            "g_26_67"
+          ],
+          "pointset_linear_rows": 2,
+          "pointset_pruning": {
+            "enabled": true,
+            "rule": "replace only rows c*x^k by x=0 when c is a unit over Q and all selected primes"
+          },
+          "raw_row_count": 11,
+          "runs": [
+            {
+              "basis_one": false,
+              "basis_size": 11,
+              "char": 32003,
+              "dimension": 9,
+              "elapsed_seconds": 0.021436,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth4_F32003.log",
+              "log_sha256": "dcfce6a51791130273672f87dd539cd777a9c6ebf80071ea899c8fc41786115e",
+              "main_equations": 8,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth4_F32003.sing",
+              "script_sha256": "5c8926adfb6ed705473daabed535e73e8d93303aa6a939487cf7b4c66c5714a7",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=8 unknowns_excluding_T=17 char=32003\nMAIN_DONE basis_size=\n11\nBASIS_BEGIN\nG[1]=g_26_67\nG[2]=g_26_66\nG[3]=g_27_71\nG[4]=g_27_70\nG[5]=g_27_69\nG[6]=g_27_68\nG[7]=gamma*T-1\nG[8]=g_26_69*g_25_64^2+16001*g_26_68*g_25_64*g_25_65\nG[9]=g_26_68*g_26_69*g_25_64+16001*g_26_68^2*g_25_65\nG[10]=g_26_68^2*g_26_69+16000*g_26_69*g_25_64+16000*g_26_68*g_25_65\nG[11]=g_26_68^3+15997*g_26_68*g_25_64\nBASIS_END\nMAIN_NONUNIT\nDIM=\n9\n",
+              "unknowns_excluding_T": 17,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 11,
+              "char": 32009,
+              "dimension": 9,
+              "elapsed_seconds": 0.012625,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth4_F32009.log",
+              "log_sha256": "285c8a1a20a424d98db95abb6559d96df509174c66da7e5db5aa66e2de1f363f",
+              "main_equations": 8,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth4_F32009.sing",
+              "script_sha256": "4bd3d2e80fb5d215a24274ae1c1a99a71dd44ac05693ea8ae1971b9cfc88bcba",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=8 unknowns_excluding_T=17 char=32009\nMAIN_DONE basis_size=\n11\nBASIS_BEGIN\nG[1]=g_26_67\nG[2]=g_26_66\nG[3]=g_27_71\nG[4]=g_27_70\nG[5]=g_27_69\nG[6]=g_27_68\nG[7]=gamma*T-1\nG[8]=g_26_69*g_25_64^2+16004*g_26_68*g_25_64*g_25_65\nG[9]=g_26_68*g_26_69*g_25_64+16004*g_26_68^2*g_25_65\nG[10]=g_26_68^2*g_26_69+16003*g_26_69*g_25_64+16003*g_26_68*g_25_65\nG[11]=g_26_68^3+16000*g_26_68*g_25_64\nBASIS_END\nMAIN_NONUNIT\nDIM=\n9\n",
+              "unknowns_excluding_T": 17,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 11,
+              "char": 32027,
+              "dimension": 9,
+              "elapsed_seconds": 0.018192,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth4_F32027.log",
+              "log_sha256": "762fecac2804d064801f8cf6f4c6f5968d5dbce90de0881466ce49ad6f3a66cb",
+              "main_equations": 8,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth4_F32027.sing",
+              "script_sha256": "6c411ca4a4fb10426ac235b8f6af726ed3f85a0376afedcdebc680c05d899cc7",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=8 unknowns_excluding_T=17 char=32027\nMAIN_DONE basis_size=\n11\nBASIS_BEGIN\nG[1]=g_26_67\nG[2]=g_26_66\nG[3]=g_27_71\nG[4]=g_27_70\nG[5]=g_27_69\nG[6]=g_27_68\nG[7]=gamma*T-1\nG[8]=g_26_69*g_25_64^2+16013*g_26_68*g_25_64*g_25_65\nG[9]=g_26_68*g_26_69*g_25_64+16013*g_26_68^2*g_25_65\nG[10]=g_26_68^2*g_26_69+16012*g_26_69*g_25_64+16012*g_26_68*g_25_65\nG[11]=g_26_68^3+16009*g_26_68*g_25_64\nBASIS_END\nMAIN_NONUNIT\nDIM=\n9\n",
+              "unknowns_excluding_T": 17,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 11,
+              "char": 0,
+              "dimension": 9,
+              "elapsed_seconds": 0.026332,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth4_Q.log",
+              "log_sha256": "deae78aa39266992154cff21926de74d41fb0c45eaa6780ba81b5e80ca9b740c",
+              "main_equations": 8,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth4_Q.sing",
+              "script_sha256": "a61a72612bb200a2d659cb049201c2f43e9cd78cdad60b91f64bd0fb00bc1c68",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=8 unknowns_excluding_T=17 char=0\nMAIN_DONE basis_size=\n11\nBASIS_BEGIN\nG[1]=g_26_67\nG[2]=g_26_66\nG[3]=g_27_71\nG[4]=g_27_70\nG[5]=g_27_69\nG[6]=g_27_68\nG[7]=gamma*T-1\nG[8]=2*g_26_69*g_25_64^2-g_26_68*g_25_64*g_25_65\nG[9]=2*g_26_68*g_26_69*g_25_64-g_26_68^2*g_25_65\nG[10]=2*g_26_68^2*g_26_69-3*g_26_69*g_25_64-3*g_26_68*g_25_65\nG[11]=2*g_26_68^3-9*g_26_68*g_25_64\nBASIS_END\nMAIN_NONUNIT\nDIM=\n9\n",
+              "unknowns_excluding_T": 17,
+              "verdict": "NONUNIT"
+            }
+          ],
+          "scripts": [
+            "box/g9966B-20260903/systems/branchB_depth4_F32003.sing",
+            "box/g9966B-20260903/systems/branchB_depth4_F32009.sing",
+            "box/g9966B-20260903/systems/branchB_depth4_F32027.sing",
+            "box/g9966B-20260903/systems/branchB_depth4_Q.sing"
+          ],
+          "unknown_Gbar_coefficients": 16,
+          "unknown_by_z": {
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "27": 4
+          },
+          "verdict": "NONUNIT"
+        },
+        "5": {
+          "approximate_root_remainder_rows": 0,
+          "build_seconds": 2.977753,
+          "depth": 5,
+          "dimensions_seen": [
+            14
+          ],
+          "fixed_terms": [
+            {
+              "coefficient": "1",
+              "local_order": 0,
+              "y_degree": 72,
+              "z_degree": 27
+            },
+            {
+              "coefficient": "27",
+              "local_order": 0,
+              "y_degree": 70,
+              "z_degree": 26
+            },
+            {
+              "coefficient": "324",
+              "local_order": 0,
+              "y_degree": 68,
+              "z_degree": 25
+            },
+            {
+              "coefficient": "2268",
+              "local_order": 0,
+              "y_degree": 66,
+              "z_degree": 24
+            },
+            {
+              "coefficient": "10206",
+              "local_order": 0,
+              "y_degree": 64,
+              "z_degree": 23
+            }
+          ],
+          "forced_linear_rows": 7,
+          "induced_Fbar_bands": [
+            {
+              "summary": {
+                "preview": "48:1",
+                "sha256": "f248e3e27d653a911b348811bb86852132870664bfe196e36980434e239a8096",
+                "terms": 1
+              },
+              "z_degree": 18
+            },
+            {
+              "summary": {
+                "preview": "46:18; 45:2*g_26_69/3; 44:2*g_26_68/3",
+                "sha256": "433266a887decf84c0ea50cddb92227fa9f00774866cdf3dd007244a92200ea9",
+                "terms": 3
+              },
+              "z_degree": 17
+            },
+            {
+              "summary": {
+                "preview": "44:135; 43:2*g_25_67/3 - 6*g_26_69; 42:2*g_25_66/3 - 6*g_26_68 - g_26_69**2/9; 41:2*g_25_65/3 - 2*g_26_68*g_26_69/9; 40:2*g_25_64/3 - g_26_68**2/9",
+                "sha256": "07dbe5d065edb8af65d1add0a055eb55e72941ecf1bb1f66004c8e82e88ee67e",
+                "terms": 5
+              },
+              "z_degree": 16
+            },
+            {
+              "summary": {
+                "preview": "42:540; 41:2*g_24_65/3 - 6*g_25_67 + 36*g_26_69; 40:2*g_24_64/3 - 6*g_25_66 + 2*g_25_67*g_26_69/3 + 36*g_26_68 - 4*g_26_69**2 - 4*g_26_69*(2*g_25_67/3 - 6*g_26_69)/3; 39:2*g_24_63/3 - 6*g_25_65 + 2*g_25_66*g_26_69/3 + 2*g_25_67*g_26_68/3 - 8*g_26_68*g_26_69/3 - 4*g_26_68*(2*g_25_67/3 - 6*g_26_69)/3 - 2*g_26_69*(24*g_26_68 + 4*g_26_69**2/9)/9 - 4*g_26_69*(2*g_25_66/3 - 6*g_26_68 - g_26_69**2/9)/3; 38:2*g_24_62/3 - 6*g_25_64 + 2*g_25_65*g_26_69/3 + 2*g_25_66*g_26_68/3 + 4*g_26_68**2/3 - 16*g_26_68",
+                "sha256": "8726dc2ce0c7a1d0bb2e6cbf1b2f237ad6a9b03be9d1202614873850393cf6dc",
+                "terms": 6
+              },
+              "z_degree": 15
+            },
+            {
+              "summary": {
+                "preview": "40:1215; 39:2*g_23_63/3 - 6*g_24_65 + 36*g_25_67 - 180*g_26_69; 38:2*g_23_62/3 - 6*g_24_64 + 2*g_24_65*g_26_69/3 + 36*g_25_66 + g_25_67**2/3 - 24*g_25_67*g_26_69 - 180*g_26_68 + 190*g_26_69**2 + 32*g_26_69*(2*g_25_67/3 - 6*g_26_69) - 4*g_26_69*(12*g_25_67 - 18*g_26_69)/9 - 4*g_26_69*(2*g_24_65/3 - 6*g_25_67 + 36*g_26_69)/3 - (2*g_25_67/3 - 6*g_26_69)**2; 37:2*g_23_61/3 - 6*g_24_63 + 2*g_24_64*g_26_69/3 + 2*g_24_65*g_26_68/3 + 36*g_25_65 + 2*g_25_66*g_25_67/3 - 24*g_25_66*g_26_69 - 24*g_25_67*g_2",
+                "sha256": "91030b1fa18f2bb32f9a34f595f8be7a00ad9fd2f5437b7dc859beed6229ba1b",
+                "terms": 6
+              },
+              "z_degree": 14
+            }
+          ],
+          "jacobian_band_counts": {
+            "40": 7,
+            "41": 5
+          },
+          "jacobian_rows": 12,
+          "literal_Fbar_z_bands": [
+            18,
+            17,
+            16,
+            15,
+            14
+          ],
+          "literal_Gbar_z_bands": [
+            27,
+            26,
+            25,
+            24,
+            23
+          ],
+          "mu2_linear_constraints_recorded": 0,
+          "new_unknown_count_from_previous_depth": 9,
+          "new_unknowns_by_z_from_previous_depth": {
+            "23": 5,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1
+          },
+          "new_unknowns_from_previous_depth": [
+            {
+              "local_order": 5,
+              "name": "g_27_67",
+              "y_degree": 67,
+              "z_degree": 27
+            },
+            {
+              "local_order": 5,
+              "name": "g_26_65",
+              "y_degree": 65,
+              "z_degree": 26
+            },
+            {
+              "local_order": 5,
+              "name": "g_25_63",
+              "y_degree": 63,
+              "z_degree": 25
+            },
+            {
+              "local_order": 5,
+              "name": "g_24_61",
+              "y_degree": 61,
+              "z_degree": 24
+            },
+            {
+              "local_order": 5,
+              "name": "g_23_59",
+              "y_degree": 59,
+              "z_degree": 23
+            },
+            {
+              "local_order": 4,
+              "name": "g_23_60",
+              "y_degree": 60,
+              "z_degree": 23
+            },
+            {
+              "local_order": 3,
+              "name": "g_23_61",
+              "y_degree": 61,
+              "z_degree": 23
+            },
+            {
+              "local_order": 2,
+              "name": "g_23_62",
+              "y_degree": 62,
+              "z_degree": 23
+            },
+            {
+              "local_order": 1,
+              "name": "g_23_63",
+              "y_degree": 63,
+              "z_degree": 23
+            }
+          ],
+          "pointset_linear_reductions": [
+            "g_26_65",
+            "g_25_63"
+          ],
+          "pointset_linear_rows": 2,
+          "pointset_pruning": {
+            "enabled": true,
+            "rule": "replace only rows c*x^k by x=0 when c is a unit over Q and all selected primes"
+          },
+          "raw_row_count": 21,
+          "runs": [
+            {
+              "basis_one": false,
+              "basis_size": 38,
+              "char": 32003,
+              "dimension": 14,
+              "elapsed_seconds": 0.018666,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth5_F32003.log",
+              "log_sha256": "485393dffbda9736356a876072e87faa33d3aff8c7f946016d42c9f7a1e30d82",
+              "main_equations": 13,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth5_F32003.sing",
+              "script_sha256": "7af963cd9c2e71f133dc38e3cc5293ac8cd4a3b74cda3c4879351efb12db23a0",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=13 unknowns_excluding_T=26 char=32003\nMAIN_DONE basis_size=\n38\nBASIS_BEGIN\nG[1]=g_25_63\nG[2]=g_26_67\nG[3]=g_26_66\nG[4]=g_26_65\nG[5]=g_27_71\nG[6]=g_27_70\nG[7]=g_27_69\nG[8]=g_27_68\nG[9]=g_27_67\nG[10]=gamma*T-1\nG[11]=g_25_64*g_25_65*g_24_61+g_26_68*g_24_61^2+16*g_25_64^2*g_24_62\nG[12]=g_25_64^2*g_24_61\nG[13]=g_26_68*g_25_64*g_24_61\nG[14]=g_25_64^2*g_25_65\nG[15]=g_25_64^3\nG[16]=g_26_69*g_25_64^2-10668*g_26_68*g_25_64*g_25_65+5334*g_26_68^2*g_24_61\nG[17]=g_26_68*g_25_64^2\nG[18]=g_26_68*g_26_69*g_25_64+10667*g_26_68^2*g_25_65+g_25_64*g_25_65+g_26_68*g_24_61\nG[19]=g_26_68^2*g_25_64-6*g_25_64^2\nG[20]=g_26_68^3+15997*g_26_68*g_25_64\nG[21]=g_26_69*g_25_64*g_24_61^2+16001*g_26_68*g_25_65*g_24_61^2\nG[22]=g_26_68^2*g_24_61^2\nG[23]=g_26_68*g_25_65^2*g_24_61+2*g_26_68*g_26_69*g_24_61^2+10689*g_26_68*g_25_64*g_25_65*g_24_62+10659*g_26_68^2*g_24_61*g_24_62\nG[24]=g_26_68^2*g_25_65*g_24_61+24*g_25_64^2*g_24_62\nG[25]=g_26_68^2*g_26_69*g_24_61+8000*g_25_64*g_25_65^2-15997*g_25_64^2*g_25_66+16000*g_26_69*g_25_64*g_24_61+16000*g_26_68*g_25_64*g_24_62\nG[26]=g_25_64*g_25_65^3-2*g_26_68*g_26_69*g_24_61^2+2*g_26_68*g_25_64*g_25_65*g_24_62\nG[27]=g_26_68*g_25_65^3-2*g_26_68*g_25_64*g_25_65*g_25_66+9156*g_26_69^2*g_25_64*g_24_61-13724*g_26_68*g_26_69*g_25_65*g_24_61+9141*g_26_68^2*g_25_66*g_24_61+10667*g_26_68^2*g_25_65*g_24_62+9145*g_25_65^2*g_24_61-13713*g_25_64*g_25_66*g_24_61-13713*g_26_69*g_24_61^2+4*g_25_64*g_25_65*g_24_62-13709*g_26_68*g_24_61*g_24_62\nG[28]=g_26_69*g_25_64*g_25_65^2-2*g_26_68*g_25_64*g_25_65*g_25_66-4571*g_26_69^2*g_25_64*g_24_61-9146*g_26_68*g_26_69*g_25_65*g_24_61-4572*g_26_68^2*g_25_66*g_24_61+10669*g_26_68^2*g_25_65*g_24_62-4571*g_25_65^2*g_24_61-9142*g_25_64*g_25_66*g_24_61-9142*g_26_69*g_24_61^2-2*g_25_64*g_25_65*g_24_62-9144*g_26_68*g_24_61*g_24_62\nG[29]=g_26_68*g_25_64*g_25_65^2+12*g_25_64^2*g_24_62\nG[30]=g_26_68^2*g_25_65^2+7997*g_25_64",
+              "unknowns_excluding_T": 26,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 38,
+              "char": 32009,
+              "dimension": 14,
+              "elapsed_seconds": 0.022234,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth5_F32009.log",
+              "log_sha256": "77e3242fc39bff02a7b0cdf32f5bbe8691a18bdb59fc152c1d3ff78454ae50f8",
+              "main_equations": 13,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth5_F32009.sing",
+              "script_sha256": "1050e862412505bc0999a6d7b7ee1e36ba7efc485a72626237acacae7fde1d77",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=13 unknowns_excluding_T=26 char=32009\nMAIN_DONE basis_size=\n38\nBASIS_BEGIN\nG[1]=g_25_63\nG[2]=g_26_67\nG[3]=g_26_66\nG[4]=g_26_65\nG[5]=g_27_71\nG[6]=g_27_70\nG[7]=g_27_69\nG[8]=g_27_68\nG[9]=g_27_67\nG[10]=gamma*T-1\nG[11]=g_25_64*g_25_65*g_24_61+g_26_68*g_24_61^2+16*g_25_64^2*g_24_62\nG[12]=g_25_64^2*g_24_61\nG[13]=g_26_68*g_25_64*g_24_61\nG[14]=g_25_64^2*g_25_65\nG[15]=g_25_64^3\nG[16]=g_26_69*g_25_64^2-10670*g_26_68*g_25_64*g_25_65+5335*g_26_68^2*g_24_61\nG[17]=g_26_68*g_25_64^2\nG[18]=g_26_68*g_26_69*g_25_64+10669*g_26_68^2*g_25_65+g_25_64*g_25_65+g_26_68*g_24_61\nG[19]=g_26_68^2*g_25_64-6*g_25_64^2\nG[20]=g_26_68^3+16000*g_26_68*g_25_64\nG[21]=g_26_69*g_25_64*g_24_61^2+16004*g_26_68*g_25_65*g_24_61^2\nG[22]=g_26_68^2*g_24_61^2\nG[23]=g_26_68*g_25_65^2*g_24_61+2*g_26_68*g_26_69*g_24_61^2+10691*g_26_68*g_25_64*g_25_65*g_24_62+10661*g_26_68^2*g_24_61*g_24_62\nG[24]=g_26_68^2*g_25_65*g_24_61+24*g_25_64^2*g_24_62\nG[25]=g_26_68^2*g_26_69*g_24_61-8003*g_25_64*g_25_65^2-16000*g_25_64^2*g_25_66+16003*g_26_69*g_25_64*g_24_61+16003*g_26_68*g_25_64*g_24_62\nG[26]=g_25_64*g_25_65^3-2*g_26_68*g_26_69*g_24_61^2+2*g_26_68*g_25_64*g_25_65*g_24_62\nG[27]=g_26_68*g_25_65^3-2*g_26_68*g_25_64*g_25_65*g_25_66+4585*g_26_69^2*g_25_64*g_24_61+9137*g_26_68*g_26_69*g_25_65*g_24_61+4570*g_26_68^2*g_25_66*g_24_61+10669*g_26_68^2*g_25_65*g_24_62+4574*g_25_65^2*g_24_61+9148*g_25_64*g_25_66*g_24_61+9148*g_26_69*g_24_61^2+4*g_25_64*g_25_65*g_24_62+9152*g_26_68*g_24_61*g_24_62\nG[28]=g_26_69*g_25_64*g_25_65^2-2*g_26_68*g_25_64*g_25_65*g_25_66+13719*g_26_69^2*g_25_64*g_24_61-4575*g_26_68*g_26_69*g_25_65*g_24_61+13718*g_26_68^2*g_25_66*g_24_61+10671*g_26_68^2*g_25_65*g_24_62+13719*g_25_65^2*g_24_61-4571*g_25_64*g_25_66*g_24_61-4571*g_26_69*g_24_61^2-2*g_25_64*g_25_65*g_24_62-4573*g_26_68*g_24_61*g_24_62\nG[29]=g_26_68*g_25_64*g_25_65^2+12*g_25_64^2*g_24_62\nG[30]=g_26_68^2*g_25_65^2-8006*g_25_64*",
+              "unknowns_excluding_T": 26,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 38,
+              "char": 32027,
+              "dimension": 14,
+              "elapsed_seconds": 0.018337,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth5_F32027.log",
+              "log_sha256": "9f3dab8293eb09d3526ffeb86e021c86281a1426ddb2b5f4766b221fca3cd43c",
+              "main_equations": 13,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth5_F32027.sing",
+              "script_sha256": "93a247204487c4ba46ed7a8b4ef639744e3f2ad69c74506ea10a6f41015cc4de",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=13 unknowns_excluding_T=26 char=32027\nMAIN_DONE basis_size=\n38\nBASIS_BEGIN\nG[1]=g_25_63\nG[2]=g_26_67\nG[3]=g_26_66\nG[4]=g_26_65\nG[5]=g_27_71\nG[6]=g_27_70\nG[7]=g_27_69\nG[8]=g_27_68\nG[9]=g_27_67\nG[10]=gamma*T-1\nG[11]=g_25_64*g_25_65*g_24_61+g_26_68*g_24_61^2+16*g_25_64^2*g_24_62\nG[12]=g_25_64^2*g_24_61\nG[13]=g_26_68*g_25_64*g_24_61\nG[14]=g_25_64^2*g_25_65\nG[15]=g_25_64^3\nG[16]=g_26_69*g_25_64^2-10676*g_26_68*g_25_64*g_25_65+5338*g_26_68^2*g_24_61\nG[17]=g_26_68*g_25_64^2\nG[18]=g_26_68*g_26_69*g_25_64+10675*g_26_68^2*g_25_65+g_25_64*g_25_65+g_26_68*g_24_61\nG[19]=g_26_68^2*g_25_64-6*g_25_64^2\nG[20]=g_26_68^3+16009*g_26_68*g_25_64\nG[21]=g_26_69*g_25_64*g_24_61^2+16013*g_26_68*g_25_65*g_24_61^2\nG[22]=g_26_68^2*g_24_61^2\nG[23]=g_26_68*g_25_65^2*g_24_61+2*g_26_68*g_26_69*g_24_61^2+10697*g_26_68*g_25_64*g_25_65*g_24_62+10667*g_26_68^2*g_24_61*g_24_62\nG[24]=g_26_68^2*g_25_65*g_24_61+24*g_25_64^2*g_24_62\nG[25]=g_26_68^2*g_26_69*g_24_61+8006*g_25_64*g_25_65^2-16009*g_25_64^2*g_25_66+16012*g_26_69*g_25_64*g_24_61+16012*g_26_68*g_25_64*g_24_62\nG[26]=g_25_64*g_25_65^3-2*g_26_68*g_26_69*g_24_61^2+2*g_26_68*g_25_64*g_25_65*g_24_62\nG[27]=g_26_68*g_25_65^3-2*g_26_68*g_25_64*g_25_65*g_25_66-4563*g_26_69^2*g_25_64*g_24_61-9159*g_26_68*g_26_69*g_25_65*g_24_61-4578*g_26_68^2*g_25_66*g_24_61+10675*g_26_68^2*g_25_65*g_24_62-4574*g_25_65^2*g_24_61-9148*g_25_64*g_25_66*g_24_61-9148*g_26_69*g_24_61^2+4*g_25_64*g_25_65*g_24_62-9144*g_26_68*g_24_61*g_24_62\nG[28]=g_26_69*g_25_64*g_25_65^2-2*g_26_68*g_25_64*g_25_65*g_25_66-13725*g_26_69^2*g_25_64*g_24_61+4573*g_26_68*g_26_69*g_25_65*g_24_61-13726*g_26_68^2*g_25_66*g_24_61+10677*g_26_68^2*g_25_65*g_24_62-13725*g_25_65^2*g_24_61+4577*g_25_64*g_25_66*g_24_61+4577*g_26_69*g_24_61^2-2*g_25_64*g_25_65*g_24_62+4575*g_26_68*g_24_61*g_24_62\nG[29]=g_26_68*g_25_64*g_25_65^2+12*g_25_64^2*g_24_62\nG[30]=g_26_68^2*g_25_65^2+8003*g_25_64*",
+              "unknowns_excluding_T": 26,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 38,
+              "char": 0,
+              "dimension": 14,
+              "elapsed_seconds": 0.01262,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth5_Q.log",
+              "log_sha256": "9398b0cd44ad91b96549ebd42aeb481e22d9714f8b7fa474f792001936637839",
+              "main_equations": 13,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth5_Q.sing",
+              "script_sha256": "e84f4db46f300560e2e68ab2a3b0f71870e9aeb4b0d4b3835cd86060622f3eec",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=13 unknowns_excluding_T=26 char=0\nMAIN_DONE basis_size=\n38\nBASIS_BEGIN\nG[1]=g_25_63\nG[2]=g_26_67\nG[3]=g_26_66\nG[4]=g_26_65\nG[5]=g_27_71\nG[6]=g_27_70\nG[7]=g_27_69\nG[8]=g_27_68\nG[9]=g_27_67\nG[10]=gamma*T-1\nG[11]=g_25_64*g_25_65*g_24_61+g_26_68*g_24_61^2+16*g_25_64^2*g_24_62\nG[12]=g_25_64^2*g_24_61\nG[13]=g_26_68*g_25_64*g_24_61\nG[14]=g_25_64^2*g_25_65\nG[15]=g_25_64^3\nG[16]=6*g_26_69*g_25_64^2-2*g_26_68*g_25_64*g_25_65+g_26_68^2*g_24_61\nG[17]=g_26_68*g_25_64^2\nG[18]=3*g_26_68*g_26_69*g_25_64-2*g_26_68^2*g_25_65+3*g_25_64*g_25_65+3*g_26_68*g_24_61\nG[19]=g_26_68^2*g_25_64-6*g_25_64^2\nG[20]=2*g_26_68^3-9*g_26_68*g_25_64\nG[21]=2*g_26_69*g_25_64*g_24_61^2-g_26_68*g_25_65*g_24_61^2\nG[22]=g_26_68^2*g_24_61^2\nG[23]=3*g_26_68*g_25_65^2*g_24_61+6*g_26_68*g_26_69*g_24_61^2+64*g_26_68*g_25_64*g_25_65*g_24_62-26*g_26_68^2*g_24_61*g_24_62\nG[24]=g_26_68^2*g_25_65*g_24_61+24*g_25_64^2*g_24_62\nG[25]=4*g_26_68^2*g_26_69*g_24_61-3*g_25_64*g_25_65^2+18*g_25_64^2*g_25_66-6*g_26_69*g_25_64*g_24_61-6*g_26_68*g_25_64*g_24_62\nG[26]=g_25_64*g_25_65^3-2*g_26_68*g_26_69*g_24_61^2+2*g_26_68*g_25_64*g_25_65*g_24_62\nG[27]=21*g_26_68*g_25_65^3-42*g_26_68*g_25_64*g_25_65*g_25_66+258*g_26_69^2*g_25_64*g_24_61-177*g_26_68*g_26_69*g_25_65*g_24_61-57*g_26_68^2*g_25_66*g_24_61-14*g_26_68^2*g_25_65*g_24_62+27*g_25_65^2*g_24_61+54*g_25_64*g_25_66*g_24_61+54*g_26_69*g_24_61^2+84*g_25_64*g_25_65*g_24_62+138*g_26_68*g_24_61*g_24_62\nG[28]=21*g_26_69*g_25_64*g_25_65^2-42*g_26_68*g_25_64*g_25_65*g_25_66+18*g_26_69^2*g_25_64*g_24_61-48*g_26_68*g_26_69*g_25_65*g_24_61-3*g_26_68^2*g_25_66*g_24_61+28*g_26_68^2*g_25_65*g_24_62+18*g_25_65^2*g_24_61+36*g_25_64*g_25_66*g_24_61+36*g_26_69*g_24_61^2-42*g_25_64*g_25_65*g_24_62-6*g_26_68*g_24_61*g_24_62\nG[29]=g_26_68*g_25_64*g_25_65^2+12*g_25_64^2*g_24_62\nG[30]=20*g_26_68^2*g_25_65^2-75*g_25_64*g_25_65^2-270*g_25_64^2*g_25_66-198*g_26_69*g_25_64*g_24",
+              "unknowns_excluding_T": 26,
+              "verdict": "NONUNIT"
+            }
+          ],
+          "scripts": [
+            "box/g9966B-20260903/systems/branchB_depth5_F32003.sing",
+            "box/g9966B-20260903/systems/branchB_depth5_F32009.sing",
+            "box/g9966B-20260903/systems/branchB_depth5_F32027.sing",
+            "box/g9966B-20260903/systems/branchB_depth5_Q.sing"
+          ],
+          "unknown_Gbar_coefficients": 25,
+          "unknown_by_z": {
+            "23": 5,
+            "24": 5,
+            "25": 5,
+            "26": 5,
+            "27": 5
+          },
+          "verdict": "NONUNIT"
+        },
+        "6": {
+          "approximate_root_remainder_rows": 0,
+          "build_seconds": 7.155391,
+          "depth": 6,
+          "dimensions_seen": [
+            20
+          ],
+          "fixed_terms": [
+            {
+              "coefficient": "1",
+              "local_order": 0,
+              "y_degree": 72,
+              "z_degree": 27
+            },
+            {
+              "coefficient": "27",
+              "local_order": 0,
+              "y_degree": 70,
+              "z_degree": 26
+            },
+            {
+              "coefficient": "324",
+              "local_order": 0,
+              "y_degree": 68,
+              "z_degree": 25
+            },
+            {
+              "coefficient": "2268",
+              "local_order": 0,
+              "y_degree": 66,
+              "z_degree": 24
+            },
+            {
+              "coefficient": "10206",
+              "local_order": 0,
+              "y_degree": 64,
+              "z_degree": 23
+            },
+            {
+              "coefficient": "30618",
+              "local_order": 0,
+              "y_degree": 62,
+              "z_degree": 22
+            }
+          ],
+          "forced_linear_rows": 10,
+          "induced_Fbar_bands": [
+            {
+              "summary": {
+                "preview": "48:1",
+                "sha256": "f248e3e27d653a911b348811bb86852132870664bfe196e36980434e239a8096",
+                "terms": 1
+              },
+              "z_degree": 18
+            },
+            {
+              "summary": {
+                "preview": "46:18; 45:2*g_26_69/3; 44:2*g_26_68/3",
+                "sha256": "433266a887decf84c0ea50cddb92227fa9f00774866cdf3dd007244a92200ea9",
+                "terms": 3
+              },
+              "z_degree": 17
+            },
+            {
+              "summary": {
+                "preview": "44:135; 43:2*g_25_67/3 - 6*g_26_69; 42:2*g_25_66/3 - 6*g_26_68 - g_26_69**2/9; 41:2*g_25_65/3 - 2*g_26_68*g_26_69/9; 40:2*g_25_64/3 - g_26_68**2/9",
+                "sha256": "07dbe5d065edb8af65d1add0a055eb55e72941ecf1bb1f66004c8e82e88ee67e",
+                "terms": 5
+              },
+              "z_degree": 16
+            },
+            {
+              "summary": {
+                "preview": "42:540; 41:2*g_24_65/3 - 6*g_25_67 + 36*g_26_69; 40:2*g_24_64/3 - 6*g_25_66 + 2*g_25_67*g_26_69/3 + 36*g_26_68 - 4*g_26_69**2 - 4*g_26_69*(2*g_25_67/3 - 6*g_26_69)/3; 39:2*g_24_63/3 - 6*g_25_65 + 2*g_25_66*g_26_69/3 + 2*g_25_67*g_26_68/3 - 8*g_26_68*g_26_69/3 - 4*g_26_68*(2*g_25_67/3 - 6*g_26_69)/3 - 2*g_26_69*(24*g_26_68 + 4*g_26_69**2/9)/9 - 4*g_26_69*(2*g_25_66/3 - 6*g_26_68 - g_26_69**2/9)/3; 38:2*g_24_62/3 - 6*g_25_64 + 2*g_25_65*g_26_69/3 + 2*g_25_66*g_26_68/3 + 4*g_26_68**2/3 - 16*g_26_68",
+                "sha256": "4ef54c80ae1472bce031dc81f1c36afb774ec792b7d3c615cb02ad19f71930d9",
+                "terms": 7
+              },
+              "z_degree": 15
+            },
+            {
+              "summary": {
+                "preview": "40:1215; 39:2*g_23_63/3 - 6*g_24_65 + 36*g_25_67 - 180*g_26_69; 38:2*g_23_62/3 - 6*g_24_64 + 2*g_24_65*g_26_69/3 + 36*g_25_66 + g_25_67**2/3 - 24*g_25_67*g_26_69 - 180*g_26_68 + 190*g_26_69**2 + 32*g_26_69*(2*g_25_67/3 - 6*g_26_69) - 4*g_26_69*(12*g_25_67 - 18*g_26_69)/9 - 4*g_26_69*(2*g_24_65/3 - 6*g_25_67 + 36*g_26_69)/3 - (2*g_25_67/3 - 6*g_26_69)**2; 37:2*g_23_61/3 - 6*g_24_63 + 2*g_24_64*g_26_69/3 + 2*g_24_65*g_26_68/3 + 36*g_25_65 + 2*g_25_66*g_25_67/3 - 24*g_25_66*g_26_69 - 24*g_25_67*g_2",
+                "sha256": "102932acdedb4e12aaf3b049ed91df1c0f2415f4c25ca87fbb2f6246f289841c",
+                "terms": 7
+              },
+              "z_degree": 14
+            },
+            {
+              "summary": {
+                "preview": "38:1458; 37:2*g_22_61/3 - 6*g_23_63 + 36*g_24_65 - 180*g_25_67 + 810*g_26_69; 36:2*g_22_60/3 - 6*g_23_62 + 2*g_23_63*g_26_69/3 + 36*g_24_64 + 2*g_24_65*g_25_67/3 - 24*g_24_65*g_26_69 - 180*g_25_66 - 12*g_25_67**2 + 468*g_25_67*g_26_69 + 810*g_26_68 - 3884*g_26_69**2 - 420*g_26_69*(2*g_25_67/3 - 6*g_26_69) + 16*g_26_69*(12*g_25_67 - 18*g_26_69) - 2*g_26_69*(180*g_25_67 - 1620*g_26_69)/9 + 32*g_26_69*(2*g_24_65/3 - 6*g_25_67 + 36*g_26_69) - 4*g_26_69*(12*g_24_65 - 108*g_25_67 + 1008*g_26_69)/9 - 4",
+                "sha256": "a4da038e4ebb8f047444b1ff4f3d6d7665323693fbe148d1224587b8bcf9d2ba",
+                "terms": 7
+              },
+              "z_degree": 13
+            }
+          ],
+          "jacobian_band_counts": {
+            "39": 9,
+            "40": 7,
+            "41": 5
+          },
+          "jacobian_rows": 21,
+          "literal_Fbar_z_bands": [
+            18,
+            17,
+            16,
+            15,
+            14,
+            13
+          ],
+          "literal_Gbar_z_bands": [
+            27,
+            26,
+            25,
+            24,
+            23,
+            22
+          ],
+          "mu2_linear_constraints_recorded": 0,
+          "new_unknown_count_from_previous_depth": 11,
+          "new_unknowns_by_z_from_previous_depth": {
+            "22": 6,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1
+          },
+          "new_unknowns_from_previous_depth": [
+            {
+              "local_order": 6,
+              "name": "g_27_66",
+              "y_degree": 66,
+              "z_degree": 27
+            },
+            {
+              "local_order": 6,
+              "name": "g_26_64",
+              "y_degree": 64,
+              "z_degree": 26
+            },
+            {
+              "local_order": 6,
+              "name": "g_25_62",
+              "y_degree": 62,
+              "z_degree": 25
+            },
+            {
+              "local_order": 6,
+              "name": "g_24_60",
+              "y_degree": 60,
+              "z_degree": 24
+            },
+            {
+              "local_order": 6,
+              "name": "g_23_58",
+              "y_degree": 58,
+              "z_degree": 23
+            },
+            {
+              "local_order": 6,
+              "name": "g_22_56",
+              "y_degree": 56,
+              "z_degree": 22
+            },
+            {
+              "local_order": 5,
+              "name": "g_22_57",
+              "y_degree": 57,
+              "z_degree": 22
+            },
+            {
+              "local_order": 4,
+              "name": "g_22_58",
+              "y_degree": 58,
+              "z_degree": 22
+            },
+            {
+              "local_order": 3,
+              "name": "g_22_59",
+              "y_degree": 59,
+              "z_degree": 22
+            },
+            {
+              "local_order": 2,
+              "name": "g_22_60",
+              "y_degree": 60,
+              "z_degree": 22
+            },
+            {
+              "local_order": 1,
+              "name": "g_22_61",
+              "y_degree": 61,
+              "z_degree": 22
+            }
+          ],
+          "pointset_linear_reductions": [
+            "g_26_64",
+            "g_25_62"
+          ],
+          "pointset_linear_rows": 2,
+          "pointset_pruning": {
+            "enabled": true,
+            "rule": "replace only rows c*x^k by x=0 when c is a unit over Q and all selected primes"
+          },
+          "raw_row_count": 33,
+          "runs": [
+            {
+              "basis_one": false,
+              "basis_size": 337,
+              "char": 32003,
+              "dimension": 20,
+              "elapsed_seconds": 5.104433,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth6_F32003.log",
+              "log_sha256": "368bc58bc40015c084deaa5d4a55c7d7bd46fa8ac74d0acab447e9860a10af8a",
+              "main_equations": 18,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth6_F32003.sing",
+              "script_sha256": "3175d7e16480ef078efc8ac18f7534bd17921156ff97b6150b3281c82e1a3258",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=18 unknowns_excluding_T=37 char=32003\nMAIN_DONE basis_size=\n337\nBASIS_BEGIN\nBASIS_OMITTED_SIZE_GT_80\nBASIS_END\nMAIN_NONUNIT\nDIM=\n20\n",
+              "unknowns_excluding_T": 37,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 337,
+              "char": 32009,
+              "dimension": 20,
+              "elapsed_seconds": 6.234174,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth6_F32009.log",
+              "log_sha256": "41b3e439a6e4b66805e3802aed3975f09ad0fd4a5b2cb16708863830e97581b6",
+              "main_equations": 18,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth6_F32009.sing",
+              "script_sha256": "318b7ed844b945b70aef702da65261aef00f092fdd352b9b01f20245579d4806",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=18 unknowns_excluding_T=37 char=32009\nMAIN_DONE basis_size=\n337\nBASIS_BEGIN\nBASIS_OMITTED_SIZE_GT_80\nBASIS_END\nMAIN_NONUNIT\nDIM=\n20\n",
+              "unknowns_excluding_T": 37,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 337,
+              "char": 32027,
+              "dimension": 20,
+              "elapsed_seconds": 6.768702,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth6_F32027.log",
+              "log_sha256": "7de7ef63d7576cfbc150e33dfaf17798c58f986c4d3c54751a33f29dec88e600",
+              "main_equations": 18,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth6_F32027.sing",
+              "script_sha256": "69baf23ed8360d10d7471fc1851befb6ab695df85b30a02f51cb7eaed40fd080",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=18 unknowns_excluding_T=37 char=32027\nMAIN_DONE basis_size=\n337\nBASIS_BEGIN\nBASIS_OMITTED_SIZE_GT_80\nBASIS_END\nMAIN_NONUNIT\nDIM=\n20\n",
+              "unknowns_excluding_T": 37,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 337,
+              "char": 0,
+              "dimension": 20,
+              "elapsed_seconds": 32.378461,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/branchB_depth6_Q.log",
+              "log_sha256": "efc6ed478d054701f8bb1272ec895f503b83d2fa87d9cea6a93a7319c45eb7f1",
+              "main_equations": 18,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/branchB_depth6_Q.sing",
+              "script_sha256": "021e4919adb1efe82616f6c58c9e971e0a2e89736a84bb2f5282a2021ed3cf75",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=18 unknowns_excluding_T=37 char=0\nMAIN_DONE basis_size=\n337\nBASIS_BEGIN\nBASIS_OMITTED_SIZE_GT_80\nBASIS_END\nMAIN_NONUNIT\nDIM=\n20\n",
+              "unknowns_excluding_T": 37,
+              "verdict": "NONUNIT"
+            }
+          ],
+          "scripts": [
+            "box/g9966B-20260903/systems/branchB_depth6_F32003.sing",
+            "box/g9966B-20260903/systems/branchB_depth6_F32009.sing",
+            "box/g9966B-20260903/systems/branchB_depth6_F32027.sing",
+            "box/g9966B-20260903/systems/branchB_depth6_Q.sing"
+          ],
+          "unknown_Gbar_coefficients": 36,
+          "unknown_by_z": {
+            "22": 6,
+            "23": 6,
+            "24": 6,
+            "25": 6,
+            "26": 6,
+            "27": 6
+          },
+          "verdict": "NONUNIT"
+        }
+      }
+    },
+    "delta52": {
+      "delta": "5/2",
+      "face_note": "Charged replay: H=pi(pi^2-1), mu2 parity, split_c gauge fixed",
+      "label": "Delta 5/2 charged replay",
+      "systems": {
+        "4": {
+          "approximate_root_remainder_rows": 0,
+          "build_seconds": 0.059292,
+          "depth": 4,
+          "dimensions_seen": [
+            7
+          ],
+          "fixed_terms": [
+            {
+              "coefficient": "1",
+              "local_order": 0,
+              "y_degree": 72,
+              "z_degree": 27
+            },
+            {
+              "coefficient": "-9",
+              "local_order": 0,
+              "y_degree": 67,
+              "z_degree": 25
+            }
+          ],
+          "forced_linear_rows": 2,
+          "induced_Fbar_bands": [
+            {
+              "summary": {
+                "preview": "48:1",
+                "sha256": "f248e3e27d653a911b348811bb86852132870664bfe196e36980434e239a8096",
+                "terms": 1
+              },
+              "z_degree": 18
+            },
+            {
+              "summary": {
+                "preview": "45:2*g_26_69/3; 44:2*g_26_68/3",
+                "sha256": "717b9a363881bca6d5662801b27006e22f9deaab529d8c5d5de08b60a9246059",
+                "terms": 2
+              },
+              "z_degree": 17
+            },
+            {
+              "summary": {
+                "preview": "43:-6; 42:2*g_25_66/3 - g_26_69**2/9; 41:2*g_25_65/3 - 2*g_26_68*g_26_69/9; 40:-g_26_68**2/9",
+                "sha256": "e0ca567ea64a2c920bff335740c308812c94dd5fb7545414ead729f8523b32a1",
+                "terms": 4
+              },
+              "z_degree": 16
+            },
+            {
+              "summary": {
+                "preview": "40:2*g_24_64/3 + 2*g_26_69; 39:2*g_24_63/3 + 2*g_25_66*g_26_69/3 + 2*g_26_68 - 8*g_26_69**3/81 - 4*g_26_69*(2*g_25_66/3 - g_26_69**2/9)/3; 38:2*g_25_65*g_26_69/3 + 2*g_25_66*g_26_68/3 - 8*g_26_68*g_26_69**2/27 - 4*g_26_68*(2*g_25_66/3 - g_26_69**2/9)/3 - 4*g_26_69*(2*g_25_65/3 - 2*g_26_68*g_26_69/9)/3; 37:2*g_25_65*g_26_68/3 - 4*g_26_68**2*g_26_69/27 - 4*g_26_68*(2*g_25_65/3 - 2*g_26_68*g_26_69/9)/3; 36:4*g_26_68**3/81",
+                "sha256": "d5948bd47e8e8524eb42fd9a4a83232d3539cdd5394a67229c345b5c594cc9f4",
+                "terms": 5
+              },
+              "z_degree": 15
+            }
+          ],
+          "jacobian_band_counts": {
+            "41": 3
+          },
+          "jacobian_rows": 3,
+          "literal_Fbar_z_bands": [
+            18,
+            17,
+            16,
+            15
+          ],
+          "literal_Gbar_z_bands": [
+            27,
+            26,
+            25,
+            24
+          ],
+          "mu2_linear_constraints_recorded": 0,
+          "new_unknown_count_from_previous_depth": 8,
+          "new_unknowns_by_z_from_previous_depth": {
+            "24": 2,
+            "25": 2,
+            "26": 2,
+            "27": 2
+          },
+          "new_unknowns_from_previous_depth": [
+            {
+              "local_order": 4,
+              "name": "g_27_70",
+              "y_degree": 70,
+              "z_degree": 27
+            },
+            {
+              "local_order": 2,
+              "name": "g_27_71",
+              "y_degree": 71,
+              "z_degree": 27
+            },
+            {
+              "local_order": 3,
+              "name": "g_26_68",
+              "y_degree": 68,
+              "z_degree": 26
+            },
+            {
+              "local_order": 1,
+              "name": "g_26_69",
+              "y_degree": 69,
+              "z_degree": 26
+            },
+            {
+              "local_order": 4,
+              "name": "g_25_65",
+              "y_degree": 65,
+              "z_degree": 25
+            },
+            {
+              "local_order": 2,
+              "name": "g_25_66",
+              "y_degree": 66,
+              "z_degree": 25
+            },
+            {
+              "local_order": 3,
+              "name": "g_24_63",
+              "y_degree": 63,
+              "z_degree": 24
+            },
+            {
+              "local_order": 1,
+              "name": "g_24_64",
+              "y_degree": 64,
+              "z_degree": 24
+            }
+          ],
+          "pointset_linear_reductions": [],
+          "pointset_linear_rows": 0,
+          "pointset_pruning": {
+            "enabled": false,
+            "rule": "not used for charged replay"
+          },
+          "raw_row_count": 5,
+          "runs": [
+            {
+              "basis_one": false,
+              "basis_size": 4,
+              "char": 32003,
+              "dimension": 7,
+              "elapsed_seconds": 0.020674,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth4_F32003.log",
+              "log_sha256": "4e48ebda7e8c614dbc4a1b0032ff0962e60477def5fb625133248c018988b8da",
+              "main_equations": 2,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth4_F32003.sing",
+              "script_sha256": "ca21a7387475e3778dcfedd8fb9c3fec0f6cf365856d857e576365436dec7eba",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=10 char=32003\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n7\n",
+              "unknowns_excluding_T": 10,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 4,
+              "char": 32009,
+              "dimension": 7,
+              "elapsed_seconds": 0.019183,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth4_F32009.log",
+              "log_sha256": "fb62db9ff0a31c6abc9808f3777f975ba4c27e555613cc8747cf7dd5781b2461",
+              "main_equations": 2,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth4_F32009.sing",
+              "script_sha256": "246cbd37286f0dee4b1b05bdf1c9dae27d6d7058e422ac92ad97e7c573df72df",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=10 char=32009\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n7\n",
+              "unknowns_excluding_T": 10,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 4,
+              "char": 32027,
+              "dimension": 7,
+              "elapsed_seconds": 0.018535,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth4_F32027.log",
+              "log_sha256": "2b38339d87f519dc2fd292363642970ef4aaa48e3d63d4c9ce86e3d971c91661",
+              "main_equations": 2,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth4_F32027.sing",
+              "script_sha256": "0019f8f829f1310ea3c47de91f4f5afbdfb6b3fa0433b1c2ce79238d204c7d9b",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=10 char=32027\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n7\n",
+              "unknowns_excluding_T": 10,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 4,
+              "char": 0,
+              "dimension": 7,
+              "elapsed_seconds": 0.016974,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth4_Q.log",
+              "log_sha256": "44d0eb35c9e552c486973af435b0cac960f4a3ea23dfe4c5c0dc01bbbf2ab1bc",
+              "main_equations": 2,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth4_Q.sing",
+              "script_sha256": "5ecf7d06f82f9ae1acb3ae74ff7a95fcde3a903d1dd649ac1f74574fbe297164",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=10 char=0\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n7\n",
+              "unknowns_excluding_T": 10,
+              "verdict": "NONUNIT"
+            }
+          ],
+          "scripts": [
+            "box/g9966B-20260903/systems/delta52_depth4_F32003.sing",
+            "box/g9966B-20260903/systems/delta52_depth4_F32009.sing",
+            "box/g9966B-20260903/systems/delta52_depth4_F32027.sing",
+            "box/g9966B-20260903/systems/delta52_depth4_Q.sing"
+          ],
+          "unknown_Gbar_coefficients": 8,
+          "unknown_by_z": {
+            "24": 2,
+            "25": 2,
+            "26": 2,
+            "27": 2
+          },
+          "verdict": "NONUNIT"
+        },
+        "5": {
+          "approximate_root_remainder_rows": 0,
+          "build_seconds": 0.395509,
+          "depth": 5,
+          "dimensions_seen": [
+            11
+          ],
+          "fixed_terms": [
+            {
+              "coefficient": "1",
+              "local_order": 0,
+              "y_degree": 72,
+              "z_degree": 27
+            },
+            {
+              "coefficient": "-9",
+              "local_order": 0,
+              "y_degree": 67,
+              "z_degree": 25
+            },
+            {
+              "coefficient": "36",
+              "local_order": 0,
+              "y_degree": 62,
+              "z_degree": 23
+            }
+          ],
+          "forced_linear_rows": 2,
+          "induced_Fbar_bands": [
+            {
+              "summary": {
+                "preview": "48:1",
+                "sha256": "f248e3e27d653a911b348811bb86852132870664bfe196e36980434e239a8096",
+                "terms": 1
+              },
+              "z_degree": 18
+            },
+            {
+              "summary": {
+                "preview": "45:2*g_26_69/3; 44:2*g_26_68/3; 43:2*g_26_67/3",
+                "sha256": "0d07367c6e3fbedbb4291b9033d89d59511fae567576ecce9afe72e262c36a1c",
+                "terms": 3
+              },
+              "z_degree": 17
+            },
+            {
+              "summary": {
+                "preview": "43:-6; 42:2*g_25_66/3 - g_26_69**2/9; 41:2*g_25_65/3 - 2*g_26_68*g_26_69/9; 40:-2*g_26_67*g_26_69/9 - g_26_68**2/9; 39:-2*g_26_67*g_26_68/9; 38:-g_26_67**2/9",
+                "sha256": "c36cf9b5452c0fcf59d8e068f9524d0d4b10e38817b9c7bd01863d88c72e1097",
+                "terms": 6
+              },
+              "z_degree": 16
+            },
+            {
+              "summary": {
+                "preview": "40:2*g_24_64/3 + 2*g_26_69; 39:2*g_24_63/3 + 2*g_25_66*g_26_69/3 + 2*g_26_68 - 8*g_26_69**3/81 - 4*g_26_69*(2*g_25_66/3 - g_26_69**2/9)/3; 38:2*g_24_62/3 + 2*g_25_65*g_26_69/3 + 2*g_25_66*g_26_68/3 + 2*g_26_67 - 8*g_26_68*g_26_69**2/27 - 4*g_26_68*(2*g_25_66/3 - g_26_69**2/9)/3 - 4*g_26_69*(2*g_25_65/3 - 2*g_26_68*g_26_69/9)/3; 37:2*g_25_65*g_26_68/3 + 2*g_25_66*g_26_67/3 - 8*g_26_67*g_26_69**2/81 - 4*g_26_67*(2*g_25_66/3 - g_26_69**2/9)/3 - 16*g_26_68**2*g_26_69/81 - 4*g_26_68*(2*g_25_65/3 - 2*",
+                "sha256": "c89b29dc37ddccd7b77ddee17e033c3fe6593c2c5eeb1f98ceb61405ffebf6fb",
+                "terms": 8
+              },
+              "z_degree": 15
+            },
+            {
+              "summary": {
+                "preview": "38:15; 37:2*g_23_61/3 + 2*g_24_64*g_26_69/3 + 2*g_25_66 + 4*g_26_69**2/3 - 4*g_26_69*(2*g_24_64/3 + 2*g_26_69)/3; 36:2*g_23_60/3 + 2*g_24_63*g_26_69/3 + 2*g_24_64*g_26_68/3 + 2*g_25_65 + g_25_66**2/3 + 8*g_26_68*g_26_69/9 - 4*g_26_68*(2*g_24_64/3 + 2*g_26_69)/3 - 4*g_26_69**2*(2*g_25_66/3 - g_26_69**2/9)/27 - 4*g_26_69*(-4*g_26_68 + 2*g_26_69*(2*g_25_66/3 - g_26_69**2/9)/3)/9 - 4*g_26_69*(2*g_24_63/3 + 2*g_25_66*g_26_69/3 + 2*g_26_68 - 8*g_26_69**3/81 - 4*g_26_69*(2*g_25_66/3 - g_26_69**2/9)/3)/",
+                "sha256": "ecc42a34ab4d953133773e55436efafd1e35ba0899a7f276922b96ad28e4a57d",
+                "terms": 11
+              },
+              "z_degree": 14
+            }
+          ],
+          "jacobian_band_counts": {
+            "40": 8,
+            "41": 5
+          },
+          "jacobian_rows": 13,
+          "literal_Fbar_z_bands": [
+            18,
+            17,
+            16,
+            15,
+            14
+          ],
+          "literal_Gbar_z_bands": [
+            27,
+            26,
+            25,
+            24,
+            23
+          ],
+          "mu2_linear_constraints_recorded": 0,
+          "new_unknown_count_from_previous_depth": 4,
+          "new_unknowns_by_z_from_previous_depth": {
+            "23": 2,
+            "24": 1,
+            "26": 1
+          },
+          "new_unknowns_from_previous_depth": [
+            {
+              "local_order": 5,
+              "name": "g_26_67",
+              "y_degree": 67,
+              "z_degree": 26
+            },
+            {
+              "local_order": 5,
+              "name": "g_24_62",
+              "y_degree": 62,
+              "z_degree": 24
+            },
+            {
+              "local_order": 4,
+              "name": "g_23_60",
+              "y_degree": 60,
+              "z_degree": 23
+            },
+            {
+              "local_order": 2,
+              "name": "g_23_61",
+              "y_degree": 61,
+              "z_degree": 23
+            }
+          ],
+          "pointset_linear_reductions": [],
+          "pointset_linear_rows": 0,
+          "pointset_pruning": {
+            "enabled": false,
+            "rule": "not used for charged replay"
+          },
+          "raw_row_count": 15,
+          "runs": [
+            {
+              "basis_one": false,
+              "basis_size": 4,
+              "char": 32003,
+              "dimension": 11,
+              "elapsed_seconds": 0.017826,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth5_F32003.log",
+              "log_sha256": "aeaf6cea860da3f28afa903e6cd63663d9fdbb6b702f493df22ad9caf3013901",
+              "main_equations": 2,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth5_F32003.sing",
+              "script_sha256": "9370b59da93224ffcef04d50fa79a1b5f2543704e446ca5f20aa5cf4f52fa821",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=14 char=32003\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n11\n",
+              "unknowns_excluding_T": 14,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 4,
+              "char": 32009,
+              "dimension": 11,
+              "elapsed_seconds": 0.018914,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth5_F32009.log",
+              "log_sha256": "1f014bad342f90391afc2daf191958f10d27057ee397abe3ba8ceaf63b3ec027",
+              "main_equations": 2,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth5_F32009.sing",
+              "script_sha256": "be9bc6313c9259da5494bb4501e85ff2c2f7d36db715e75f6dca8adeac3b9e37",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=14 char=32009\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n11\n",
+              "unknowns_excluding_T": 14,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 4,
+              "char": 32027,
+              "dimension": 11,
+              "elapsed_seconds": 0.020426,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth5_F32027.log",
+              "log_sha256": "aa34139279156bdefbaaeeb5377806d7ca9aee9cfab1ff1c77cc86e7c0823905",
+              "main_equations": 2,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth5_F32027.sing",
+              "script_sha256": "49a375fe1e7f889e5bf7441a5e9fca0f0127da00377a539cc6926fecb1e7406c",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=14 char=32027\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n11\n",
+              "unknowns_excluding_T": 14,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 4,
+              "char": 0,
+              "dimension": 11,
+              "elapsed_seconds": 0.018311,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth5_Q.log",
+              "log_sha256": "aeccd7ac4cd4fac66509cb4f41028d360f98fbec4e14d4a453fb9c021b19109a",
+              "main_equations": 2,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth5_Q.sing",
+              "script_sha256": "c0c82d46d814e03e8e4f912d3d8210c0cdde4fe68093e09b15aef366428c7e2d",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=2 unknowns_excluding_T=14 char=0\nMAIN_DONE basis_size=\n4\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n11\n",
+              "unknowns_excluding_T": 14,
+              "verdict": "NONUNIT"
+            }
+          ],
+          "scripts": [
+            "box/g9966B-20260903/systems/delta52_depth5_F32003.sing",
+            "box/g9966B-20260903/systems/delta52_depth5_F32009.sing",
+            "box/g9966B-20260903/systems/delta52_depth5_F32027.sing",
+            "box/g9966B-20260903/systems/delta52_depth5_Q.sing"
+          ],
+          "unknown_Gbar_coefficients": 12,
+          "unknown_by_z": {
+            "23": 2,
+            "24": 3,
+            "25": 2,
+            "26": 3,
+            "27": 2
+          },
+          "verdict": "NONUNIT"
+        },
+        "6": {
+          "approximate_root_remainder_rows": 0,
+          "build_seconds": 19.671141,
+          "depth": 6,
+          "dimensions_seen": [
+            16
+          ],
+          "fixed_terms": [
+            {
+              "coefficient": "1",
+              "local_order": 0,
+              "y_degree": 72,
+              "z_degree": 27
+            },
+            {
+              "coefficient": "-9",
+              "local_order": 0,
+              "y_degree": 67,
+              "z_degree": 25
+            },
+            {
+              "coefficient": "36",
+              "local_order": 0,
+              "y_degree": 62,
+              "z_degree": 23
+            }
+          ],
+          "forced_linear_rows": 2,
+          "induced_Fbar_bands": [
+            {
+              "summary": {
+                "preview": "48:1",
+                "sha256": "f248e3e27d653a911b348811bb86852132870664bfe196e36980434e239a8096",
+                "terms": 1
+              },
+              "z_degree": 18
+            },
+            {
+              "summary": {
+                "preview": "45:2*g_26_69/3; 44:2*g_26_68/3; 43:2*g_26_67/3; 42:2*g_26_69*g_27_69/3; 41:2*g_26_68*g_27_69/3; 40:2*g_26_67*g_27_69/3",
+                "sha256": "b64d6dee8fff0acdbe50dd6804cf30c560d9365f2bc576398699b204004c6175",
+                "terms": 6
+              },
+              "z_degree": 17
+            },
+            {
+              "summary": {
+                "preview": "43:-6; 42:2*g_25_66/3 - g_26_69**2/9; 41:2*g_25_65/3 - 2*g_26_68*g_26_69/9; 40:2*g_25_64/3 - 2*g_26_67*g_26_69/9 - g_26_68**2/9 - 6*g_27_69; 39:2*g_25_66*g_27_69/3 - 2*g_26_67*g_26_68/9 - 8*g_26_69**2*g_27_69/9; 38:2*g_25_65*g_27_69/3 - g_26_67**2/9 - 16*g_26_68*g_26_69*g_27_69/9; 37:2*g_25_64*g_27_69/3 - 16*g_26_67*g_26_69*g_27_69/9 - 8*g_26_68**2*g_27_69/9; 36:-16*g_26_67*g_26_68*g_27_69/9 - 4*g_26_69**2*g_27_69**2/9; 35:-8*g_26_67**2*g_27_69/9 - 8*g_26_68*g_26_69*g_27_69**2/9; 34:-8*g_26_67*g",
+                "sha256": "55736f878fd44f97f923709acc6fb9e6c5589935c8cad47688636cf6df863d09",
+                "terms": 12
+              },
+              "z_degree": 16
+            },
+            {
+              "summary": {
+                "preview": "40:2*g_24_64/3 + 2*g_26_69; 39:2*g_24_63/3 + 2*g_25_66*g_26_69/3 + 2*g_26_68 - 8*g_26_69**3/81 - 4*g_26_69*(2*g_25_66/3 - g_26_69**2/9)/3; 38:2*g_24_62/3 + 2*g_25_65*g_26_69/3 + 2*g_25_66*g_26_68/3 + 2*g_26_67 - 8*g_26_68*g_26_69**2/27 - 4*g_26_68*(2*g_25_66/3 - g_26_69**2/9)/3 - 4*g_26_69*(2*g_25_65/3 - 2*g_26_68*g_26_69/9)/3; 37:2*g_24_64*g_27_69/3 + 2*g_25_64*g_26_69/3 + 2*g_25_65*g_26_68/3 + 2*g_25_66*g_26_67/3 - 8*g_26_67*g_26_69**2/81 - 4*g_26_67*(2*g_25_66/3 - g_26_69**2/9)/3 - 16*g_26_68",
+                "sha256": "8a4e71c35cbad4d6a17b1d19800ba23b28c8df5c029dff666652925c21cc3141",
+                "terms": 17
+              },
+              "z_degree": 15
+            },
+            {
+              "summary": {
+                "preview": "38:15; 37:2*g_23_61/3 + 2*g_24_64*g_26_69/3 + 2*g_25_66 + 4*g_26_69**2/3 - 4*g_26_69*(2*g_24_64/3 + 2*g_26_69)/3; 36:2*g_23_60/3 + 2*g_24_63*g_26_69/3 + 2*g_24_64*g_26_68/3 + 2*g_25_65 + g_25_66**2/3 + 8*g_26_68*g_26_69/9 - 4*g_26_68*(2*g_24_64/3 + 2*g_26_69)/3 - 4*g_26_69**2*(2*g_25_66/3 - g_26_69**2/9)/27 - 4*g_26_69*(-4*g_26_68 + 2*g_26_69*(2*g_25_66/3 - g_26_69**2/9)/3)/9 - 4*g_26_69*(2*g_24_63/3 + 2*g_25_66*g_26_69/3 + 2*g_26_68 - 8*g_26_69**3/81 - 4*g_26_69*(2*g_25_66/3 - g_26_69**2/9)/3)/",
+                "sha256": "9066fcd7c88af0375e0788b21f78a87af3236421a06718778fd436a5eec47542",
+                "terms": 23
+              },
+              "z_degree": 14
+            },
+            {
+              "summary": {
+                "preview": "35:2*g_22_59/3 + 2*g_24_64 + 4*g_26_69; 34:2*g_22_58/3 + 2*g_23_61*g_26_69/3 + 2*g_24_63 + 2*g_24_64*g_25_66/3 + 8*g_25_66*g_26_69 + 4*g_26_68 - 32*g_26_69**3/27 - 4*g_26_69**2*(2*g_24_64/3 + 2*g_26_69)/9 - 2*g_26_69*(-8*g_25_66 + 4*g_26_69**2/3)/9 - 32*g_26_69*(2*g_25_66/3 - g_26_69**2/9)/3 - 4*g_26_69*(2*g_23_61/3 + 2*g_24_64*g_26_69/3 + 2*g_25_66 + 4*g_26_69**2/3 - 4*g_26_69*(2*g_24_64/3 + 2*g_26_69)/3)/3 - 2*(2*g_24_64/3 + 2*g_26_69)*(2*g_25_66/3 - g_26_69**2/9); 33:2*g_22_57/3 + 2*g_23_60*g",
+                "sha256": "d100ea4e0d73d7d48eb91de1e1a401555d1e78ec3ae380db210fe64744cacacf",
+                "terms": 28
+              },
+              "z_degree": 13
+            }
+          ],
+          "jacobian_band_counts": {
+            "39": 30,
+            "40": 25,
+            "41": 19,
+            "42": 12,
+            "43": 6,
+            "44": 1
+          },
+          "jacobian_rows": 93,
+          "literal_Fbar_z_bands": [
+            18,
+            17,
+            16,
+            15,
+            14,
+            13
+          ],
+          "literal_Gbar_z_bands": [
+            27,
+            26,
+            25,
+            24,
+            23,
+            22
+          ],
+          "mu2_linear_constraints_recorded": 0,
+          "new_unknown_count_from_previous_depth": 6,
+          "new_unknowns_by_z_from_previous_depth": {
+            "22": 3,
+            "23": 1,
+            "25": 1,
+            "27": 1
+          },
+          "new_unknowns_from_previous_depth": [
+            {
+              "local_order": 6,
+              "name": "g_27_69",
+              "y_degree": 69,
+              "z_degree": 27
+            },
+            {
+              "local_order": 6,
+              "name": "g_25_64",
+              "y_degree": 64,
+              "z_degree": 25
+            },
+            {
+              "local_order": 6,
+              "name": "g_23_59",
+              "y_degree": 59,
+              "z_degree": 23
+            },
+            {
+              "local_order": 5,
+              "name": "g_22_57",
+              "y_degree": 57,
+              "z_degree": 22
+            },
+            {
+              "local_order": 3,
+              "name": "g_22_58",
+              "y_degree": 58,
+              "z_degree": 22
+            },
+            {
+              "local_order": 1,
+              "name": "g_22_59",
+              "y_degree": 59,
+              "z_degree": 22
+            }
+          ],
+          "pointset_linear_reductions": [],
+          "pointset_linear_rows": 0,
+          "pointset_pruning": {
+            "enabled": false,
+            "rule": "not used for charged replay"
+          },
+          "raw_row_count": 95,
+          "runs": [
+            {
+              "basis_one": false,
+              "basis_size": 5,
+              "char": 32003,
+              "dimension": 16,
+              "elapsed_seconds": 0.029961,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth6_F32003.log",
+              "log_sha256": "9d656b1a8110823a5df9bc95e99c34f3a49093fcb1f2bb5a042ad035f7451b3f",
+              "main_equations": 89,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth6_F32003.sing",
+              "script_sha256": "4c3fd498cfcab6b5211d43189670cadd7f3072e533e7dcf7222255aaf34b5ff4",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=89 unknowns_excluding_T=20 char=32003\nMAIN_DONE basis_size=\n5\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=g_27_69\nG[5]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n16\n",
+              "unknowns_excluding_T": 20,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 5,
+              "char": 32009,
+              "dimension": 16,
+              "elapsed_seconds": 0.026163,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth6_F32009.log",
+              "log_sha256": "fb1a834db270bec5cacd18a3ea982288afee976e38de471a78f36bb53b8b59dc",
+              "main_equations": 89,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth6_F32009.sing",
+              "script_sha256": "2a80fc3ebcfc755510f9b976bd691a3bf5ea6859ba0d75730670f92f71f3e003",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=89 unknowns_excluding_T=20 char=32009\nMAIN_DONE basis_size=\n5\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=g_27_69\nG[5]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n16\n",
+              "unknowns_excluding_T": 20,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 5,
+              "char": 32027,
+              "dimension": 16,
+              "elapsed_seconds": 0.028872,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth6_F32027.log",
+              "log_sha256": "f8f09ee43c35ed9a1712da882bb5697370d5f98554db77943447f01079041374",
+              "main_equations": 89,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth6_F32027.sing",
+              "script_sha256": "8c91506e054b0d1638ec1b7eaedc78791bf528c53c42f588e2b1f8ace6e31aee",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=89 unknowns_excluding_T=20 char=32027\nMAIN_DONE basis_size=\n5\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=g_27_69\nG[5]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n16\n",
+              "unknowns_excluding_T": 20,
+              "verdict": "NONUNIT"
+            },
+            {
+              "basis_one": false,
+              "basis_size": 5,
+              "char": 0,
+              "dimension": 16,
+              "elapsed_seconds": 0.028777,
+              "fail_markers": [],
+              "log": "box/g9966B-20260903/logs/delta52_depth6_Q.log",
+              "log_sha256": "0698fc3673cf7b09b2e71af3bf9cd8753171a5500446d61ded01272221e0c8d7",
+              "main_equations": 89,
+              "pass_markers": [
+                "CONTROL_EMPTY_WRAPPER_PASS",
+                "CONTROL_NONEMPTY_WRAPPER_PASS",
+                "CONTROL_RING_PASS",
+                "CONTROL_UNSATURATED_NONUNIT_PASS"
+              ],
+              "returncode": 0,
+              "script": "box/g9966B-20260903/systems/delta52_depth6_Q.sing",
+              "script_sha256": "75b2a9d6419533fd3e9be5748665cff0600c1c76e2497f750c1f4cd86a2d45f1",
+              "stdout_excerpt": "CONTROL_RING_PASS\nCONTROL_EMPTY_WRAPPER_PASS\nCONTROL_NONEMPTY_WRAPPER_PASS\nCONTROL_UNSATURATED_NONUNIT_PASS\nMAIN_START equations=89 unknowns_excluding_T=20 char=0\nMAIN_DONE basis_size=\n5\nBASIS_BEGIN\nG[1]=split_c-1\nG[2]=g_27_71\nG[3]=g_27_70\nG[4]=g_27_69\nG[5]=gamma*T-1\nBASIS_END\nMAIN_NONUNIT\nDIM=\n16\n",
+              "unknowns_excluding_T": 20,
+              "verdict": "NONUNIT"
+            }
+          ],
+          "scripts": [
+            "box/g9966B-20260903/systems/delta52_depth6_F32003.sing",
+            "box/g9966B-20260903/systems/delta52_depth6_F32009.sing",
+            "box/g9966B-20260903/systems/delta52_depth6_F32027.sing",
+            "box/g9966B-20260903/systems/delta52_depth6_Q.sing"
+          ],
+          "unknown_Gbar_coefficients": 18,
+          "unknown_by_z": {
+            "22": 3,
+            "23": 3,
+            "24": 3,
+            "25": 3,
+            "26": 3,
+            "27": 3
+          },
+          "verdict": "NONUNIT"
+        }
+      }
+    }
+  },
+  "next_band_estimates": {
+    "branchB": {
+      "7": {
+        "new_unknown_count_from_previous_solved_or_estimated_depth": 13,
+        "new_unknowns": [
+          {
+            "local_order": 7,
+            "name": "g_27_65",
+            "y_degree": 65,
+            "z_degree": 27
+          },
+          {
+            "local_order": 7,
+            "name": "g_26_63",
+            "y_degree": 63,
+            "z_degree": 26
+          },
+          {
+            "local_order": 7,
+            "name": "g_25_61",
+            "y_degree": 61,
+            "z_degree": 25
+          },
+          {
+            "local_order": 7,
+            "name": "g_24_59",
+            "y_degree": 59,
+            "z_degree": 24
+          },
+          {
+            "local_order": 7,
+            "name": "g_23_57",
+            "y_degree": 57,
+            "z_degree": 23
+          },
+          {
+            "local_order": 7,
+            "name": "g_22_55",
+            "y_degree": 55,
+            "z_degree": 22
+          },
+          {
+            "local_order": 7,
+            "name": "g_21_53",
+            "y_degree": 53,
+            "z_degree": 21
+          },
+          {
+            "local_order": 6,
+            "name": "g_21_54",
+            "y_degree": 54,
+            "z_degree": 21
+          },
+          {
+            "local_order": 5,
+            "name": "g_21_55",
+            "y_degree": 55,
+            "z_degree": 21
+          },
+          {
+            "local_order": 4,
+            "name": "g_21_56",
+            "y_degree": 56,
+            "z_degree": 21
+          },
+          {
+            "local_order": 3,
+            "name": "g_21_57",
+            "y_degree": 57,
+            "z_degree": 21
+          },
+          {
+            "local_order": 2,
+            "name": "g_21_58",
+            "y_degree": 58,
+            "z_degree": 21
+          },
+          {
+            "local_order": 1,
+            "name": "g_21_59",
+            "y_degree": 59,
+            "z_degree": 21
+          }
+        ],
+        "new_unknowns_by_z": {
+          "21": 7,
+          "22": 1,
+          "23": 1,
+          "24": 1,
+          "25": 1,
+          "26": 1,
+          "27": 1
+        },
+        "status": "NEXT-SYSTEM-NOT-SOLVED-IN-THIS-LANE"
+      },
+      "8": {
+        "new_unknown_count_from_previous_solved_or_estimated_depth": 15,
+        "new_unknowns": [
+          {
+            "local_order": 8,
+            "name": "g_27_64",
+            "y_degree": 64,
+            "z_degree": 27
+          },
+          {
+            "local_order": 8,
+            "name": "g_26_62",
+            "y_degree": 62,
+            "z_degree": 26
+          },
+          {
+            "local_order": 8,
+            "name": "g_25_60",
+            "y_degree": 60,
+            "z_degree": 25
+          },
+          {
+            "local_order": 8,
+            "name": "g_24_58",
+            "y_degree": 58,
+            "z_degree": 24
+          },
+          {
+            "local_order": 8,
+            "name": "g_23_56",
+            "y_degree": 56,
+            "z_degree": 23
+          },
+          {
+            "local_order": 8,
+            "name": "g_22_54",
+            "y_degree": 54,
+            "z_degree": 22
+          },
+          {
+            "local_order": 8,
+            "name": "g_21_52",
+            "y_degree": 52,
+            "z_degree": 21
+          },
+          {
+            "local_order": 8,
+            "name": "g_20_50",
+            "y_degree": 50,
+            "z_degree": 20
+          },
+          {
+            "local_order": 7,
+            "name": "g_20_51",
+            "y_degree": 51,
+            "z_degree": 20
+          },
+          {
+            "local_order": 6,
+            "name": "g_20_52",
+            "y_degree": 52,
+            "z_degree": 20
+          },
+          {
+            "local_order": 5,
+            "name": "g_20_53",
+            "y_degree": 53,
+            "z_degree": 20
+          },
+          {
+            "local_order": 4,
+            "name": "g_20_54",
+            "y_degree": 54,
+            "z_degree": 20
+          },
+          {
+            "local_order": 3,
+            "name": "g_20_55",
+            "y_degree": 55,
+            "z_degree": 20
+          },
+          {
+            "local_order": 2,
+            "name": "g_20_56",
+            "y_degree": 56,
+            "z_degree": 20
+          },
+          {
+            "local_order": 1,
+            "name": "g_20_57",
+            "y_degree": 57,
+            "z_degree": 20
+          }
+        ],
+        "new_unknowns_by_z": {
+          "20": 8,
+          "21": 1,
+          "22": 1,
+          "23": 1,
+          "24": 1,
+          "25": 1,
+          "26": 1,
+          "27": 1
+        },
+        "status": "NEXT-SYSTEM-NOT-SOLVED-IN-THIS-LANE"
+      }
+    },
+    "delta52": {
+      "7": {
+        "new_unknown_count_from_previous_solved_or_estimated_depth": 6,
+        "new_unknowns": [
+          {
+            "local_order": 7,
+            "name": "g_26_66",
+            "y_degree": 66,
+            "z_degree": 26
+          },
+          {
+            "local_order": 7,
+            "name": "g_24_61",
+            "y_degree": 61,
+            "z_degree": 24
+          },
+          {
+            "local_order": 7,
+            "name": "g_22_56",
+            "y_degree": 56,
+            "z_degree": 22
+          },
+          {
+            "local_order": 6,
+            "name": "g_21_54",
+            "y_degree": 54,
+            "z_degree": 21
+          },
+          {
+            "local_order": 4,
+            "name": "g_21_55",
+            "y_degree": 55,
+            "z_degree": 21
+          },
+          {
+            "local_order": 2,
+            "name": "g_21_56",
+            "y_degree": 56,
+            "z_degree": 21
+          }
+        ],
+        "new_unknowns_by_z": {
+          "21": 3,
+          "22": 1,
+          "24": 1,
+          "26": 1
+        },
+        "status": "NEXT-SYSTEM-NOT-SOLVED-IN-THIS-LANE"
+      },
+      "8": {
+        "new_unknown_count_from_previous_solved_or_estimated_depth": 8,
+        "new_unknowns": [
+          {
+            "local_order": 8,
+            "name": "g_27_68",
+            "y_degree": 68,
+            "z_degree": 27
+          },
+          {
+            "local_order": 8,
+            "name": "g_25_63",
+            "y_degree": 63,
+            "z_degree": 25
+          },
+          {
+            "local_order": 8,
+            "name": "g_23_58",
+            "y_degree": 58,
+            "z_degree": 23
+          },
+          {
+            "local_order": 8,
+            "name": "g_21_53",
+            "y_degree": 53,
+            "z_degree": 21
+          },
+          {
+            "local_order": 7,
+            "name": "g_20_51",
+            "y_degree": 51,
+            "z_degree": 20
+          },
+          {
+            "local_order": 5,
+            "name": "g_20_52",
+            "y_degree": 52,
+            "z_degree": 20
+          },
+          {
+            "local_order": 3,
+            "name": "g_20_53",
+            "y_degree": 53,
+            "z_degree": 20
+          },
+          {
+            "local_order": 1,
+            "name": "g_20_54",
+            "y_degree": 54,
+            "z_degree": 20
+          }
+        ],
+        "new_unknowns_by_z": {
+          "20": 4,
+          "21": 1,
+          "23": 1,
+          "25": 1,
+          "27": 1
+        },
+        "status": "NEXT-SYSTEM-NOT-SOLVED-IN-THIS-LANE"
+      }
+    }
+  },
+  "not_claimed": [
+    "SATURATED-EMPTY for either full branch",
+    "a full (99,66) polynomial pair",
+    "SURVIVES as a Keller-pair claim",
+    "Moh's unprinted 11-variable elimination",
+    "the major 4/9 centre equations"
+  ],
+  "software": {
+    "max_workers": 4,
+    "python": "Python 3.12.3",
+    "singular": "Singular for x86_64-Linux version 4.3.2 (4330, 64 bit) Apr  1 2024 04:44:00",
+    "singular_timeout_seconds": 900,
+    "sympy": "1.12"
+  },
+  "type": "BOUNDED-HIGH-Z-JOINT / NECESSARY-SYSTEM",
+  "verdict": {
+    "branchB": "COUNTING-BOUND[BRANCH-B-HIGH-Z-DEPTH6-NONUNIT]",
+    "delta52": "COUNTING-BOUND[DELTA-5/2-HIGH-Z-DEPTH6-NONUNIT]",
+    "global": "OPEN[(99,66)-FULL-JOINT-NOT-DECIDED]"
+  }
+}

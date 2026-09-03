@@ -17422,3 +17422,21 @@ variable NAMES differ from the banked (b₃, b₄, …) by pivot sequence — th
 same. STATUS of the ray: (T) PROMOTED t = 1..4; PROVED-HERE t = 5 (gate needed — will be
 folded into the bridge-chart gate's t = 3..8 run, which is an independent chart); t = 6
 open (bridge chart pending); uniform: (8.1) OPEN (three proof lanes).
+
+## INTEGRATION #17 DELTA (xxx) (2026-09-03T20:15Z, GATE, producer GPT-5.5): delta 17(ooo)'s bridge normal form gated — BNF CONFIRMED (conditional only on the charged reciprocal dictionary, itself proved in 17(ooo) §2); the bridge chart is a SUBSET of the Theorem-1.2 order chart at t = 1..4 (subset_audit_t1_2_3_4.json); the t = 1, 2 bridge kills CONFIRMED by raw Singular replays with controls; t = 3 on the bridge chart MEASURED-MODULAR [1] over three primes (≈ 3 min each) but exact Q not completed; t = 4: no modular verdict in the bounded attempts; t = 5..8: construction/count data only (H_t as displayed; e.g. H₅ = 242y² − 132y + 17, H₆ = 507y² − 273y + 35) — so the 6t + 5 chart is NOT cheaper in practice than the normalised 9t + 9 chart (whose t = 5 closed in 101 s, 17(www)); the Moh p.209 discrepancy (2/3)a₂β₂ examined on the page image (§6)
+
+`bridge-chart-gate-gpt55-20260903.md` (GPT-5.5; 14/14 hashes; box/bridgegate-20260903/).
+LEDGER: BNF and the bridge chart PROMOTED as a valid alternative necessary superset
+(t = 1, 2 exact); the campaign's working chart for the ray stays the normalised order chart
++ spine (17(vvv)); (T) at t = 5 stands PROVED-HERE from 17(www) pending an independent
+replay (queue: replay the t = 5 nfmodStd certificate on a different seat); t = 6 OPEN.
+
+## INTEGRATION #17 DELTA (yyy) (2026-09-03T20:15Z, COUNTING-BOUND, producer GPT-5.5): (99,66) BRANCH B — the rigid high-z Prop 6.2 joint systems (a = 1: H = π²(π + 3), R = π²⁵(π + 3)¹⁴(π − 2), 2HR_z − 25H_zR = 5H¹⁴, vector (25,14); no face parameter) are NON-UNIT through depth 6 over GF(32003), GF(32009), GF(32027), Q with solved dimensions 9 (depth 4), 14 (depth 5), 20 (depth 6) — the family ENLARGES as lower coefficients are admitted; depth 7 is the next nonlinear system (not solved in budget); the δ = 5/2 replay through depth 6 matches the frozen input; the charged depth-7/8 builds did not finish
+
+`g9966-branchB-joint-gpt55-20260903.md` (GPT-5.5; 9/9 hashes; box/g9966B-20260903/). Note
+the point-set pruning step (rows c·x^k with c a unit → x = 0; product rows not collapsed)
+used to keep the non-radical high-z ideal computable — typed, fail-closed. READING: both
+(99,66) branches behave identically under every partial system — consistent and
+growing — which is what a family cut only by GLOBAL closure looks like; the complete
+joint chart's band computation (g9966-global-band-sol56, running; design gate running)
+is the only decider on the table.

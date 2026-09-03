@@ -1,0 +1,42 @@
+// bridge BNF direct chart; t=1; char=0; method=std
+// unknowns including c=11; Jacobian generators=15
+LIB "resources.lib";
+setcores(4);
+ring RAC=0,(gamma,pi),dp;
+poly FAC=pi;
+poly GAC=pi-(gamma^2)/2;
+poly JAC=diff(FAC,gamma)*diff(GAC,pi)-diff(FAC,pi)*diff(GAC,gamma);
+if (JAC==gamma) { print("CONTROL_ACTUAL_PAIR_PASS J=gamma"); } else { print("CONTROL_ACTUAL_PAIR_FAIL"); }
+ring R=0,(b1,b2,b3,b4,q2_1,q2_A,q3_1,q3_A,q3_B,a2,c,T),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS R"); } else { print("CONTROL_RING_FAIL"); }
+print("CONTROL_EMPTY_START");
+ideal CE=c,T*c-1;
+ideal GE=std(CE);
+if (reduce(1,GE)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+print("CONTROL_NONEMPTY_START");
+ideal CN=c-1,T*c-1;
+ideal GN=std(CN);
+if (reduce(1,GN)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+print("MAIN_START t=1 direct_bridge characteristic=0 method=std generators=16 unknowns=11");
+ideal I=2*b3*q2_A^4 - 18*b3*q2_A^2*q3_B - 54*b3*q3_B^2 - 18*b4^2*q2_A^3 + 36*b4*q2_A^2*q3_A - 162*b4*q3_A*q3_B + 6*q2_1*q2_A^3 - 36*q2_1*q2_A*q3_B - 18*q2_A*q3_A^2 + 27*q2_A*q3_B*a2,
+3*b4*q2_A^4 - 18*b4*q2_A^2*q3_B + 54*b4*q3_B^2 - 2*q2_A^3*q3_A + 18*q2_A*q3_A*q3_B,
+4*q2_A^3*q3_B - 36*q2_A*q3_B^2 - 81*c,
+2*b3*q2_A^4 - 18*b3*q2_A^2*q3_B - 54*b3*q3_B^2 - 18*b4^2*q2_A^3 + 36*b4*q2_A^2*q3_A - 162*b4*q3_A*q3_B + 6*q2_1*q2_A^3 - 36*q2_1*q2_A*q3_B - 18*q2_A*q3_A^2 + 27*q2_A*q3_B*a2,
+2*b1*b3*q2_A^4 - 18*b1*b3*q2_A^2*q3_B - 54*b1*b3*q3_B^2 - 18*b1*b4^2*q2_A^3 + 36*b1*b4*q2_A^2*q3_A - 162*b1*b4*q3_A*q3_B + 6*b1*q2_1*q2_A^3 - 36*b1*q2_1*q2_A*q3_B - 18*b1*q2_A*q3_A^2 + 27*b1*q2_A*q3_B*a2 - 6*b4*q2_A^4 + 36*b4*q2_A^2*q3_B - 108*b4*q3_B^2 + 4*q2_A^3*q3_A - 36*q2_A*q3_A*q3_B,
+6*b1*b4*q2_A^4 - 36*b1*b4*q2_A^2*q3_B + 108*b1*b4*q3_B^2 - 4*b1*q2_A^3*q3_A + 36*b1*q2_A*q3_A*q3_B - 2*b2*b3*q2_A^4 + 18*b2*b3*q2_A^2*q3_B + 54*b2*b3*q3_B^2 + 18*b2*b4^2*q2_A^3 - 36*b2*b4*q2_A^2*q3_A + 162*b2*b4*q3_A*q3_B - 4*b2*q2_1*q2_A^3 + 18*b2*q2_1*q2_A*q3_B + 18*b2*q2_A*q3_A^2 - 27*b2*q2_A*q3_B*a2 - 18*b3*q2_1*q2_A*q3_A + 54*b3*q3_1*q3_B - 18*b4*q2_1^2*q2_A - 27*b4*q2_1*q2_A*a2 + 54*b4*q3_1*q3_A - 2*q2_A^3*q3_B + 18*q2_A*q3_B^2,
+2*b1*q2_A^3*q3_B - 18*b1*q2_A*q3_B^2 - 4*b2*b4*q2_A^4 + 18*b2*b4*q2_A^2*q3_B - 108*b2*b4*q3_B^2 + 2*b2*q2_A^3*q3_A - 18*b2*q2_A*q3_A*q3_B + 2*b3^2*q2_A^4 - 18*b3^2*q2_A^2*q3_B - 18*b3*b4^2*q2_A^3 + 18*b3*b4*q2_A^2*q3_A - 54*b3*b4*q3_A*q3_B + 2*b3*q2_1*q2_A^3 - 18*b3*q2_1*q2_A*q3_B - 36*b4^2*q2_1*q2_A^2 - 27*b4^2*q2_A^2*a2 + 54*b4^2*q3_A^2 + 36*b4*q2_1*q2_A*q3_A - 108*b4*q3_1*q3_B,
+2*b4*q2_A^3 - 9*b4*q2_A*q3_B - 3*q2_A^2*q3_A + 9*q3_A*q3_B,
+5*q2_A^4 - 36*q2_A^2*q3_B + 54*q3_B^2,
+2*b4*q2_A^3 - 9*b4*q2_A*q3_B - 3*q2_A^2*q3_A + 9*q3_A*q3_B,
+18*b1*b4*q2_A^3 - 81*b1*b4*q2_A*q3_B - 27*b1*q2_A^2*q3_A + 81*b1*q3_A*q3_B + 5*q2_A^4 - 36*q2_A^2*q3_B + 54*q3_B^2,
+10*b1*q2_A^4 - 72*b1*q2_A^2*q3_B + 108*b1*q3_B^2 + 36*b2*b4*q2_A^3 - 162*b2*b4*q2_A*q3_B - 54*b2*q2_A^2*q3_A + 162*b2*q3_A*q3_B - 54*b3*q2_1*q3_B - 81*b3*q3_B*a2 - 54*b4*q2_1*q3_A - 54*b4*q2_A*q3_1 - 81*b4*q3_A*a2 - 18*q2_1^2*q2_A - 27*q2_1*q2_A*a2 + 54*q3_1*q3_A,
+b2*q2_A^4 - 6*b2*q2_A^2*q3_B + 18*b2*q3_B^2 + 6*b3*b4*q2_A^3 - 9*b3*b4*q2_A*q3_B - 3*b3*q2_A^2*q3_A + 9*b3*q3_A*q3_B + 18*b4^2*q2_A*q3_A + 12*b4*q2_1*q2_A^2 - 18*b4*q2_1*q3_B + 9*b4*q2_A^2*a2 - 18*b4*q3_A^2 - 27*b4*q3_B*a2 - 6*q2_1*q2_A*q3_A + 18*q3_1*q3_B,
+2*b2*q2_A^3 - 18*b2*q2_A*q3_B - 18*b3*q2_A*q3_A - 18*q2_1*q3_A - 18*q2_A*q3_1 - 27*q3_A*a2,
+4*b3*q2_A^3 + 36*b4*q2_A*q3_A + 12*q2_1*q2_A^2 - 36*q2_1*q3_B + 9*q2_A^2*a2 - 18*q3_A^2 - 54*q3_B*a2,
+T*c-1;
+ideal G=std(I);
+print("MAIN_DONE basis_size=");
+size(G);
+if (reduce(1,G)==0) { print("MAIN_UNIT"); G; } else { print("MAIN_NONUNIT"); int cap=size(G); if (cap>20) { cap=20; } for (int i=1; i<=cap; i++) { G[i]; } }
+quit;
