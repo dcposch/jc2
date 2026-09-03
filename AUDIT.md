@@ -17221,3 +17221,5 @@ stratum at D ≤ 200 now stands at 7 groups DEAD and PROMOTED — (64,48), (75,5
 (125,75), (175,100), (175,125), (180,144), (192,128), (196,56), (200,120) [bigrows running]
 — wait: that is 10; the list of 17 = 8 dead + 9 open requires recount at the next census
 re-base (the batch's 18 rows / 17 groups include (75,50) twice as one group).
+
+## INTEGRATION #17 DELTA (hhh) — TALLY CORRECTION (2026-09-03T18:25Z): the 17-group two-point list = (64,48), (75,50) [one group, two rows], (84,56), (112,80), (125,75), (132,88), (147,98), (160,112), (168,112), (175,100), (175,125), (180,120), (180,144), (189,126), (192,128), (196,56), (200,120). DEAD (PROMOTED): 7 = (64,48), (75,50), (84,56), (112,80), (132,88), (160,112), (180,120). OPEN: 10 = (125,75), (147,98), (168,112), (175,100), (175,125), (180,144), (189,126), (192,128), (196,56), (200,120) — three δ₁' = 0 rows (r3-preprocess lane) and seven large-stratum rows (bigrows lane; (192,128) partially dead).
