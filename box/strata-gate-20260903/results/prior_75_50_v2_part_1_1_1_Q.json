@@ -1,0 +1,51 @@
+{
+  "K": 5,
+  "build_elapsed": 7.99,
+  "cap": 4,
+  "cap_condition": "1+len(partition)<=n-M2",
+  "cap_ok": true,
+  "delta1": "4/3",
+  "delta2": "-1",
+  "dprime": 2,
+  "eprime": 3,
+  "equations": 42,
+  "exact": {
+    "elapsed": 900.213,
+    "stderr_tail": "",
+    "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=42 unknowns=18 char=0\n",
+    "timeout": 900,
+    "verdict": "TIMEOUT"
+  },
+  "h_lower_count": 11,
+  "levels": [
+    0,
+    1
+  ],
+  "omega": "a2**3*a3**2 - a2**3*a3 - a2**2*a3**3 + a2**2*a3 + a2*a3**3 - a2*a3**2",
+  "partition": [
+    1,
+    1,
+    1
+  ],
+  "partition_label": "1+1+1",
+  "recomposition_ok": true,
+  "row": {
+    "M2": 11,
+    "V2": 2,
+    "k": 2,
+    "key": "75_50_v2",
+    "m": 10,
+    "n": 15,
+    "parent": "(75,50) V2=2",
+    "source": "(15,10;11;2;k=2)"
+  },
+  "saturation_factor": "a2**3*a3**2*c - a2**3*a3*c - a2**2*a3**3*c + a2**2*a3*c + a2*a3**3*c - a2*a3**2*c",
+  "script": "box/strata-gate-20260903/systems/prior_75_50_v2_part_1_1_1_Q.sing",
+  "slope_symbols": [
+    "a2",
+    "a3"
+  ],
+  "top_face_factored": "y^2*(y-x)^1*(y-a2*x)^1*(y-a3*x)^1",
+  "unknowns": 18,
+  "uprime": 3
+}

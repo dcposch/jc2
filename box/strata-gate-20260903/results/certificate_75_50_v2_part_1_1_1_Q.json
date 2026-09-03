@@ -1,0 +1,74 @@
+{
+  "K": 5,
+  "cap": 4,
+  "cap_condition": "1+len(partition)<=n-M2",
+  "cap_ok": true,
+  "certificate_type": "subset-of-full-ideal",
+  "delta1": "4/3",
+  "delta2": "-1",
+  "dprime": 2,
+  "eprime": 3,
+  "equations": 42,
+  "exact": {
+    "basis_size": "1",
+    "control_empty_pass": true,
+    "control_nonempty_pass": true,
+    "elapsed": 0.224,
+    "rc": 0,
+    "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=17 unknowns=18 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+    "verdict": "SATURATED-EMPTY"
+  },
+  "full_equations": 42,
+  "h_lower_count": 11,
+  "levels": [
+    0,
+    1
+  ],
+  "omega": "a2**3*a3**2 - a2**3*a3 - a2**2*a3**3 + a2**2*a3 + a2*a3**3 - a2*a3**2",
+  "partition": [
+    1,
+    1,
+    1
+  ],
+  "partition_label": "1+1+1",
+  "recomposition_ok": true,
+  "row": {
+    "M2": 11,
+    "V2": 2,
+    "k": 2,
+    "key": "75_50_v2",
+    "m": 10,
+    "n": 15,
+    "parent": "(75,50) V2=2",
+    "source": "(15,10;11;2;k=2)"
+  },
+  "saturation_factor": "a2**3*a3**2*c - a2**3*a3*c - a2**2*a3**3*c + a2**2*a3*c + a2*a3**3*c - a2*a3**2*c",
+  "script": "box/strata-gate-20260903/systems/certificate_75_50_v2_part_1_1_1_Q.sing",
+  "slope_symbols": [
+    "a2",
+    "a3"
+  ],
+  "subset_equations": 17,
+  "subset_indices_1_based": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    9,
+    18,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    39,
+    42,
+    7
+  ],
+  "top_face_factored": "y^2*(y-x)^1*(y-a2*x)^1*(y-a3*x)^1",
+  "unknowns": 18,
+  "uprime": 3
+}

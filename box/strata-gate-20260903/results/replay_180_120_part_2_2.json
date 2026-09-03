@@ -1,0 +1,45 @@
+{
+  "charged_exact": {
+    "basis_size": "1",
+    "char": 0,
+    "control_empty_pass": true,
+    "control_nonempty_pass": true,
+    "elapsed": 0.016,
+    "rc": 0,
+    "script": "box/topface-20260903/systems/180_120_part_2_2_Q.sing",
+    "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=100 unknowns=45 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+    "unsat_empty": null,
+    "unsat_nontrivial": null,
+    "unsat_size": null,
+    "verdict": "SATURATED-EMPTY"
+  },
+  "equations": 100,
+  "partition": [
+    2,
+    2
+  ],
+  "partition_label": "2+2",
+  "replay_exact": {
+    "basis_size": "1",
+    "control_empty_pass": true,
+    "control_nonempty_pass": true,
+    "elapsed": 0.025,
+    "rc": 0,
+    "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=100 unknowns=45 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+    "verdict": "SATURATED-EMPTY"
+  },
+  "row": {
+    "M2": 42,
+    "V2": 11,
+    "k": 1,
+    "key": "180_120",
+    "m": 30,
+    "n": 45,
+    "parent": "(180,120)",
+    "source": "(45,30;42;11;k=1)"
+  },
+  "saturation_factor": "a2**2*c - a2*c",
+  "script": "box/topface-20260903/systems/180_120_part_2_2_Q.sing",
+  "top_face_factored": "y^11*(y-x)^2*(y-a2*x)^2",
+  "unknowns": 45
+}

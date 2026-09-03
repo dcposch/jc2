@@ -1,0 +1,44 @@
+{
+  "charged_exact": {
+    "basis_size": "1",
+    "char": 0,
+    "control_empty_pass": true,
+    "control_nonempty_pass": true,
+    "elapsed": 0.007,
+    "rc": 0,
+    "script": "box/topface-20260903/systems/132_88_part_3_Q.sing",
+    "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=28 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+    "unsat_empty": null,
+    "unsat_nontrivial": null,
+    "unsat_size": null,
+    "verdict": "SATURATED-EMPTY"
+  },
+  "equations": 62,
+  "partition": [
+    3
+  ],
+  "partition_label": "3",
+  "replay_exact": {
+    "basis_size": "1",
+    "control_empty_pass": true,
+    "control_nonempty_pass": true,
+    "elapsed": 0.011,
+    "rc": 0,
+    "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=28 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+    "verdict": "SATURATED-EMPTY"
+  },
+  "row": {
+    "M2": 30,
+    "V2": 8,
+    "k": 1,
+    "key": "132_88",
+    "m": 22,
+    "n": 33,
+    "parent": "(132,88)",
+    "source": "(33,22;30;8;k=1)"
+  },
+  "saturation_factor": "c",
+  "script": "box/topface-20260903/systems/132_88_part_3_Q.sing",
+  "top_face_factored": "y^8*(y-x)^3",
+  "unknowns": 28
+}

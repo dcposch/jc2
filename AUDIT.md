@@ -16899,3 +16899,29 @@ Moh's licensed split — (75,50; V₂ = 3); slices pending — (75,50; V₂ = 2)
 generator must use the Theorem-1.2 threshold ord h(σ₁) = V₂'δ₁' + u'δ₂' and deg_x β ≤ k+1;
 every future compiler/batch run must print the level-1 ODE check (deg_x J must reach k)
 as a sanity gate before saturation.
+
+## INTEGRATION #17 DELTA (vv) (2026-09-03T16:12Z, PROMOTED-QUALIFIED): delta 17(rr)'s two full-stratum kills gated by GPT-5.5 — (132,88) → (33,22; 30; 8; 1) and (180,120) → (45,30; 42; 11; 1) CONFIRMED (charged replay + independent re-derivation of one stratum each, recomposition true); the two PRIOR-SLICE rows RESTORED as licensed kills over their full symbolic strata — (75,50; V₂ = 2) → (15,10; 11; 2; 2): [3], [2,1] exact [1], [1,1,1] by an exact saturated-subset certificate (full basis timed out at 900 s); (84,56) → (21,14; 18; 5; 1): [2], [1,1] exact [1]
+
+`strata-gate-gpt55-20260903.md` (GPT-5.5; 10/10 hashes; Singular 4.3.2; box/strata-gate-
+20260903/strata_gate.py; SEALED_AFTER_DIVERT). Source/cap audit: the Prop 4.6 cap on distinct
+non-centre factors (deg q) checked against pp.168–172; saturation audit: every stratum
+saturated by c·Π a_i·Π(a_i − 1)·Π(a_i − a_j) (slopes nonzero, ≠ 1, distinct) in the declared
+ring with wrapper controls. Replay: (33,22; 30; 8; 1) [3] 28/62, [2,1] 29/62 — [1]; (45,30;
+42; 11; 1) [4] 44/100, [3,1] 45/100, [2,2] 45/100 — [1]; independent generator on [2,1] resp.
+[3,1]: [1], recomposition true. Prior-slice rows: (15,10; 11; 2; 2) u' = 3: [3] 16/42 [1];
+[2,1] 17/42 [1]; [1,1,1] 18/42 — full basis timed out (900 s) after controls passed, but an
+exact saturated SUBSET of the same equations has basis [1] under the same localisation,
+hence the stratum is empty (subset-ideal argument is sound: I ⊂ J, 1 ∈ I ⇒ 1 ∈ J); (21,14; 18;
+5; 1) u' = 2: [2] 16/32 [1]; [1,1] 17/32 [1]. SCOPE QUALIFICATION (coordinator, from delta
+17(uu)): all four rows use the A/B chart's support rule; by Fable's criterion the rule is a
+strict slice iff −δ₁' > B = V₂'δ₁' + u'δ₂' — here (33,22): δ₁' = 1/3, B = 8/3 − 3 = −1/3,
+−1/3 = −1/3 (equal); (45,30): δ₁' = 1/3, B = 11/3 − 4 = −1/3 (equal); (21,14; 18; 5): δ₁' =
+1/3, B = 5/3 − 2 = −1/3 (equal); (15,10; 11; 2): δ₁' = 4/3, B = 8/3 − 3 = −1/3, −4/3 < −1/3
+(superset) — none is a slice by the support rule; the remaining instrument caveat is the
+A/B ansatz's deg_x β cap (≤ 1) versus Theorem 1.2's k+1, which the running chart-fix lane
+re-verifies on exactly these rows; promotion is QUALIFIED on that check. TALLY (two-point
+s_eff = 2, u_s = 1, D ≤ 200, 17 groups / 18 rows): DEAD — (64,48) [Moh + 4 replays],
+(75,50; V₂ = 2) and (75,50; V₂ = 3), (84,56), (112,80) [K16 t = 2], (132,88), (180,120);
+OPEN — (147,98), (168,112), (189,126) [δ₁' = 0, honest charts pending chart-fix],
+(160,112) [K16 t = 3, gate pending], (125,75), (175,100), (175,125), (180,144), (192,128)
+[partial], (196,56), (200,120) [143–228-unknown strata].

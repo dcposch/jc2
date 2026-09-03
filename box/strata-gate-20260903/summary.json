@@ -1,0 +1,734 @@
+{
+  "independent_checks": [
+    {
+      "K": 11,
+      "build_elapsed": 32.998,
+      "cap": 3,
+      "cap_condition": "1+len(partition)<=n-M2",
+      "cap_ok": true,
+      "delta1": "1/3",
+      "delta2": "-1",
+      "dprime": 2,
+      "eprime": 3,
+      "equations": 62,
+      "exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.016,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=29 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "h_lower_count": 23,
+      "levels": [
+        0,
+        1
+      ],
+      "omega": "a2**2 - a2",
+      "partition": [
+        2,
+        1
+      ],
+      "partition_label": "2+1",
+      "recomposition_ok": true,
+      "row": {
+        "M2": 30,
+        "V2": 8,
+        "k": 1,
+        "key": "132_88",
+        "m": 22,
+        "n": 33,
+        "parent": "(132,88)",
+        "source": "(33,22;30;8;k=1)"
+      },
+      "saturation_factor": "a2**2*c - a2*c",
+      "script": "box/strata-gate-20260903/systems/independent_132_88_part_2_1_Q.sing",
+      "slope_symbols": [
+        "a2"
+      ],
+      "top_face_factored": "y^8*(y-x)^2*(y-a2*x)^1",
+      "unknowns": 29,
+      "uprime": 3
+    },
+    {
+      "K": 15,
+      "build_elapsed": 208.834,
+      "cap": 3,
+      "cap_condition": "1+len(partition)<=n-M2",
+      "cap_ok": true,
+      "delta1": "1/3",
+      "delta2": "-1",
+      "dprime": 2,
+      "eprime": 3,
+      "equations": 100,
+      "exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.015,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=100 unknowns=45 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "h_lower_count": 39,
+      "levels": [
+        0,
+        1
+      ],
+      "omega": "a2**2 - a2",
+      "partition": [
+        3,
+        1
+      ],
+      "partition_label": "3+1",
+      "recomposition_ok": true,
+      "row": {
+        "M2": 42,
+        "V2": 11,
+        "k": 1,
+        "key": "180_120",
+        "m": 30,
+        "n": 45,
+        "parent": "(180,120)",
+        "source": "(45,30;42;11;k=1)"
+      },
+      "saturation_factor": "a2**2*c - a2*c",
+      "script": "box/strata-gate-20260903/systems/independent_180_120_part_3_1_Q.sing",
+      "slope_symbols": [
+        "a2"
+      ],
+      "top_face_factored": "y^11*(y-x)^3*(y-a2*x)^1",
+      "unknowns": 45,
+      "uprime": 4
+    }
+  ],
+  "manifest": {
+    "checks": [
+      {
+        "basename": "topface-license-sol56-20260903.md",
+        "expected": "53c13d48eebd135841150fc36e2cd6a378d33cfe182be811046d3233b0f355ae",
+        "got": "53c13d48eebd135841150fc36e2cd6a378d33cfe182be811046d3233b0f355ae",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/topface-license-sol56-20260903.md"
+      },
+      {
+        "basename": "twopoint-batch-gpt55-20260903.md",
+        "expected": "52ac2f50b9c14b258b706cef4e931ca9afa1057dc542f64003c8df43a14c8a1b",
+        "got": "52ac2f50b9c14b258b706cef4e931ca9afa1057dc542f64003c8df43a14c8a1b",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/twopoint-batch-gpt55-20260903.md"
+      },
+      {
+        "basename": "twopoint_order_batch.py",
+        "expected": "db14cb1ef39da6277ec4edcd9988a17d38d8bc0062edca244af1155b820282eb",
+        "got": "db14cb1ef39da6277ec4edcd9988a17d38d8bc0062edca244af1155b820282eb",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/twopoint_order_batch.py"
+      },
+      {
+        "basename": "t2_independent_order_system.py",
+        "expected": "7ee7e29eca86dadecf4cffdc996539fc875851ce5803ad7ddaf68b888624f823",
+        "got": "7ee7e29eca86dadecf4cffdc996539fc875851ce5803ad7ddaf68b888624f823",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/t2_independent_order_system.py"
+      },
+      {
+        "basename": "appendix2-compiler-grok46-20260903.md",
+        "expected": "dea9f5be619b9507b5ca30db51ddd88401b293e7ab7a0e75c8ae8083a5c79c27",
+        "got": "dea9f5be619b9507b5ca30db51ddd88401b293e7ab7a0e75c8ae8083a5c79c27",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/appendix2-compiler-grok46-20260903.md"
+      },
+      {
+        "basename": "prop55k-opus5-20260903.md",
+        "expected": "cb8244260483c3722569966053e11e7e13e8bd396d3e5a2ea0b800c17a4c3c3b",
+        "got": "cb8244260483c3722569966053e11e7e13e8bd396d3e5a2ea0b800c17a4c3c3b",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/prop55k-opus5-20260903.md"
+      },
+      {
+        "basename": "moh1983_jram340_configurations_of_roots.pdf",
+        "expected": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "got": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/moh1983_jram340_configurations_of_roots.pdf"
+      },
+      {
+        "basename": "FALLACY-v2.md",
+        "expected": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "got": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/FALLACY-v2.md"
+      },
+      {
+        "basename": "topface_cases.py",
+        "expected": "369bafb1341f96708f6886e79c93fb9bdad8e70abb1ae4c69ddd1dd6a9c62082",
+        "got": "369bafb1341f96708f6886e79c93fb9bdad8e70abb1ae4c69ddd1dd6a9c62082",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/topface_cases.py"
+      },
+      {
+        "basename": "case_counts.json",
+        "expected": "b8ce67b93c105b62966d9003583da2c7dec302125cf79862f16f5b54513d3861",
+        "got": "b8ce67b93c105b62966d9003583da2c7dec302125cf79862f16f5b54513d3861",
+        "ok": true,
+        "path": "/tmp/jc2-lane.LR0om9/inputs/case_counts.json"
+      }
+    ],
+    "ok": true
+  },
+  "prior": [
+    {
+      "K": 5,
+      "build_elapsed": 7.247,
+      "cap": 4,
+      "cap_condition": "1+len(partition)<=n-M2",
+      "cap_ok": true,
+      "delta1": "4/3",
+      "delta2": "-1",
+      "dprime": 2,
+      "eprime": 3,
+      "equations": 42,
+      "exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.011,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=42 unknowns=16 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "h_lower_count": 11,
+      "levels": [
+        0,
+        1
+      ],
+      "omega": "1",
+      "partition": [
+        3
+      ],
+      "partition_label": "3",
+      "recomposition_ok": true,
+      "row": {
+        "M2": 11,
+        "V2": 2,
+        "k": 2,
+        "key": "75_50_v2",
+        "m": 10,
+        "n": 15,
+        "parent": "(75,50) V2=2",
+        "source": "(15,10;11;2;k=2)"
+      },
+      "saturation_factor": "c",
+      "script": "box/strata-gate-20260903/systems/prior_75_50_v2_part_3_Q.sing",
+      "slope_symbols": [],
+      "top_face_factored": "y^2*(y-x)^3",
+      "unknowns": 16,
+      "uprime": 3
+    },
+    {
+      "K": 5,
+      "build_elapsed": 9.748,
+      "cap": 4,
+      "cap_condition": "1+len(partition)<=n-M2",
+      "cap_ok": true,
+      "delta1": "4/3",
+      "delta2": "-1",
+      "dprime": 2,
+      "eprime": 3,
+      "equations": 42,
+      "exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.016,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=42 unknowns=17 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "h_lower_count": 11,
+      "levels": [
+        0,
+        1
+      ],
+      "omega": "a2**2 - a2",
+      "partition": [
+        2,
+        1
+      ],
+      "partition_label": "2+1",
+      "recomposition_ok": true,
+      "row": {
+        "M2": 11,
+        "V2": 2,
+        "k": 2,
+        "key": "75_50_v2",
+        "m": 10,
+        "n": 15,
+        "parent": "(75,50) V2=2",
+        "source": "(15,10;11;2;k=2)"
+      },
+      "saturation_factor": "a2**2*c - a2*c",
+      "script": "box/strata-gate-20260903/systems/prior_75_50_v2_part_2_1_Q.sing",
+      "slope_symbols": [
+        "a2"
+      ],
+      "top_face_factored": "y^2*(y-x)^2*(y-a2*x)^1",
+      "unknowns": 17,
+      "uprime": 3
+    },
+    {
+      "K": 5,
+      "build_elapsed": 7.99,
+      "cap": 4,
+      "cap_condition": "1+len(partition)<=n-M2",
+      "cap_ok": true,
+      "delta1": "4/3",
+      "delta2": "-1",
+      "dprime": 2,
+      "eprime": 3,
+      "equations": 42,
+      "exact": {
+        "elapsed": 900.213,
+        "stderr_tail": "",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=42 unknowns=18 char=0\n",
+        "timeout": 900,
+        "verdict": "TIMEOUT"
+      },
+      "h_lower_count": 11,
+      "levels": [
+        0,
+        1
+      ],
+      "omega": "a2**3*a3**2 - a2**3*a3 - a2**2*a3**3 + a2**2*a3 + a2*a3**3 - a2*a3**2",
+      "partition": [
+        1,
+        1,
+        1
+      ],
+      "partition_label": "1+1+1",
+      "recomposition_ok": true,
+      "row": {
+        "M2": 11,
+        "V2": 2,
+        "k": 2,
+        "key": "75_50_v2",
+        "m": 10,
+        "n": 15,
+        "parent": "(75,50) V2=2",
+        "source": "(15,10;11;2;k=2)"
+      },
+      "saturation_factor": "a2**3*a3**2*c - a2**3*a3*c - a2**2*a3**3*c + a2**2*a3*c + a2*a3**3*c - a2*a3**2*c",
+      "script": "box/strata-gate-20260903/systems/prior_75_50_v2_part_1_1_1_Q.sing",
+      "slope_symbols": [
+        "a2",
+        "a3"
+      ],
+      "top_face_factored": "y^2*(y-x)^1*(y-a2*x)^1*(y-a3*x)^1",
+      "unknowns": 18,
+      "uprime": 3
+    },
+    {
+      "K": 7,
+      "build_elapsed": 3.957,
+      "cap": 3,
+      "cap_condition": "1+len(partition)<=n-M2",
+      "cap_ok": true,
+      "delta1": "1/3",
+      "delta2": "-1",
+      "dprime": 2,
+      "eprime": 3,
+      "equations": 32,
+      "exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.009,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=32 unknowns=16 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "h_lower_count": 11,
+      "levels": [
+        0,
+        1
+      ],
+      "omega": "1",
+      "partition": [
+        2
+      ],
+      "partition_label": "2",
+      "recomposition_ok": true,
+      "row": {
+        "M2": 18,
+        "V2": 5,
+        "k": 1,
+        "key": "84_56",
+        "m": 14,
+        "n": 21,
+        "parent": "(84,56)",
+        "source": "(21,14;18;5;k=1)"
+      },
+      "saturation_factor": "c",
+      "script": "box/strata-gate-20260903/systems/prior_84_56_part_2_Q.sing",
+      "slope_symbols": [],
+      "top_face_factored": "y^5*(y-x)^2",
+      "unknowns": 16,
+      "uprime": 2
+    },
+    {
+      "K": 7,
+      "build_elapsed": 5.312,
+      "cap": 3,
+      "cap_condition": "1+len(partition)<=n-M2",
+      "cap_ok": true,
+      "delta1": "1/3",
+      "delta2": "-1",
+      "dprime": 2,
+      "eprime": 3,
+      "equations": 32,
+      "exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.016,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=32 unknowns=17 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "h_lower_count": 11,
+      "levels": [
+        0,
+        1
+      ],
+      "omega": "a2**2 - a2",
+      "partition": [
+        1,
+        1
+      ],
+      "partition_label": "1+1",
+      "recomposition_ok": true,
+      "row": {
+        "M2": 18,
+        "V2": 5,
+        "k": 1,
+        "key": "84_56",
+        "m": 14,
+        "n": 21,
+        "parent": "(84,56)",
+        "source": "(21,14;18;5;k=1)"
+      },
+      "saturation_factor": "a2**2*c - a2*c",
+      "script": "box/strata-gate-20260903/systems/prior_84_56_part_1_1_Q.sing",
+      "slope_symbols": [
+        "a2"
+      ],
+      "top_face_factored": "y^5*(y-x)^1*(y-a2*x)^1",
+      "unknowns": 17,
+      "uprime": 2
+    }
+  ],
+  "replay": [
+    {
+      "charged_exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.007,
+        "rc": 0,
+        "script": "box/topface-20260903/systems/132_88_part_3_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=28 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "equations": 62,
+      "partition": [
+        3
+      ],
+      "partition_label": "3",
+      "replay_exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.011,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=28 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "row": {
+        "M2": 30,
+        "V2": 8,
+        "k": 1,
+        "key": "132_88",
+        "m": 22,
+        "n": 33,
+        "parent": "(132,88)",
+        "source": "(33,22;30;8;k=1)"
+      },
+      "saturation_factor": "c",
+      "script": "box/topface-20260903/systems/132_88_part_3_Q.sing",
+      "top_face_factored": "y^8*(y-x)^3",
+      "unknowns": 28
+    },
+    {
+      "charged_exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.009,
+        "rc": 0,
+        "script": "box/topface-20260903/systems/132_88_part_2_1_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=29 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "equations": 62,
+      "partition": [
+        2,
+        1
+      ],
+      "partition_label": "2+1",
+      "replay_exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.013,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=62 unknowns=29 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "row": {
+        "M2": 30,
+        "V2": 8,
+        "k": 1,
+        "key": "132_88",
+        "m": 22,
+        "n": 33,
+        "parent": "(132,88)",
+        "source": "(33,22;30;8;k=1)"
+      },
+      "saturation_factor": "a2**2*c - a2*c",
+      "script": "box/topface-20260903/systems/132_88_part_2_1_Q.sing",
+      "top_face_factored": "y^8*(y-x)^2*(y-a2*x)^1",
+      "unknowns": 29
+    },
+    {
+      "charged_exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.008,
+        "rc": 0,
+        "script": "box/topface-20260903/systems/180_120_part_4_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=100 unknowns=44 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "equations": 100,
+      "partition": [
+        4
+      ],
+      "partition_label": "4",
+      "replay_exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.012,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=100 unknowns=44 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "row": {
+        "M2": 42,
+        "V2": 11,
+        "k": 1,
+        "key": "180_120",
+        "m": 30,
+        "n": 45,
+        "parent": "(180,120)",
+        "source": "(45,30;42;11;k=1)"
+      },
+      "saturation_factor": "c",
+      "script": "box/topface-20260903/systems/180_120_part_4_Q.sing",
+      "top_face_factored": "y^11*(y-x)^4",
+      "unknowns": 44
+    },
+    {
+      "charged_exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.015,
+        "rc": 0,
+        "script": "box/topface-20260903/systems/180_120_part_3_1_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=100 unknowns=45 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "equations": 100,
+      "partition": [
+        3,
+        1
+      ],
+      "partition_label": "3+1",
+      "replay_exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.024,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=100 unknowns=45 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "row": {
+        "M2": 42,
+        "V2": 11,
+        "k": 1,
+        "key": "180_120",
+        "m": 30,
+        "n": 45,
+        "parent": "(180,120)",
+        "source": "(45,30;42;11;k=1)"
+      },
+      "saturation_factor": "a2**2*c - a2*c",
+      "script": "box/topface-20260903/systems/180_120_part_3_1_Q.sing",
+      "top_face_factored": "y^11*(y-x)^3*(y-a2*x)^1",
+      "unknowns": 45
+    },
+    {
+      "charged_exact": {
+        "basis_size": "1",
+        "char": 0,
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.016,
+        "rc": 0,
+        "script": "box/topface-20260903/systems/180_120_part_2_2_Q.sing",
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=100 unknowns=45 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "unsat_empty": null,
+        "unsat_nontrivial": null,
+        "unsat_size": null,
+        "verdict": "SATURATED-EMPTY"
+      },
+      "equations": 100,
+      "partition": [
+        2,
+        2
+      ],
+      "partition_label": "2+2",
+      "replay_exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.025,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=100 unknowns=45 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "row": {
+        "M2": 42,
+        "V2": 11,
+        "k": 1,
+        "key": "180_120",
+        "m": 30,
+        "n": 45,
+        "parent": "(180,120)",
+        "source": "(45,30;42;11;k=1)"
+      },
+      "saturation_factor": "a2**2*c - a2*c",
+      "script": "box/topface-20260903/systems/180_120_part_2_2_Q.sing",
+      "top_face_factored": "y^11*(y-x)^2*(y-a2*x)^2",
+      "unknowns": 45
+    }
+  ],
+  "singular": "Singular for x86_64-Linux version 4.3.2 (4330, 64 bit) Apr  1 2024 04:44:00",
+  "subset_certificates": [
+    {
+      "K": 5,
+      "cap": 4,
+      "cap_condition": "1+len(partition)<=n-M2",
+      "cap_ok": true,
+      "certificate_type": "subset-of-full-ideal",
+      "delta1": "4/3",
+      "delta2": "-1",
+      "dprime": 2,
+      "eprime": 3,
+      "equations": 42,
+      "exact": {
+        "basis_size": "1",
+        "control_empty_pass": true,
+        "control_nonempty_pass": true,
+        "elapsed": 0.224,
+        "rc": 0,
+        "stdout_tail": "CONTROL_EMPTY_START\nCONTROL_EMPTY_PASS\nCONTROL_NONEMPTY_START\nCONTROL_NONEMPTY_PASS\nMAIN_START equations=17 unknowns=18 char=0\nMAIN_DONE basis_size=\n1\nMAIN_SATURATED_EMPTY\n",
+        "verdict": "SATURATED-EMPTY"
+      },
+      "full_equations": 42,
+      "h_lower_count": 11,
+      "levels": [
+        0,
+        1
+      ],
+      "omega": "a2**3*a3**2 - a2**3*a3 - a2**2*a3**3 + a2**2*a3 + a2*a3**3 - a2*a3**2",
+      "partition": [
+        1,
+        1,
+        1
+      ],
+      "partition_label": "1+1+1",
+      "recomposition_ok": true,
+      "row": {
+        "M2": 11,
+        "V2": 2,
+        "k": 2,
+        "key": "75_50_v2",
+        "m": 10,
+        "n": 15,
+        "parent": "(75,50) V2=2",
+        "source": "(15,10;11;2;k=2)"
+      },
+      "saturation_factor": "a2**3*a3**2*c - a2**3*a3*c - a2**2*a3**3*c + a2**2*a3*c + a2*a3**3*c - a2*a3**2*c",
+      "script": "box/strata-gate-20260903/systems/certificate_75_50_v2_part_1_1_1_Q.sing",
+      "slope_symbols": [
+        "a2",
+        "a3"
+      ],
+      "subset_equations": 17,
+      "subset_indices_1_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        18,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        39,
+        42,
+        7
+      ],
+      "top_face_factored": "y^2*(y-x)^1*(y-a2*x)^1*(y-a3*x)^1",
+      "unknowns": 18,
+      "uprime": 3
+    }
+  ]
+}
