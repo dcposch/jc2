@@ -20921,3 +20921,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T17:29Z EVENT — `chart-fix-d1zero-gpt55` sealed (11KB): generator fixed with a deg_x J sanity gate; Moh controls + (28,20) persist; the δ₁' = 0 rows are correctly refused by A/B and R3 times out (COUNTING-BOUND); CAVEAT: (33,22)/(45,30) β inventories changed → delta 17(vv) kills re-typed PROVISIONAL pending a corrected-generator rerun. → AUDIT delta 17(bbb). Launching `strata-rerun-corrected-gpt55`. Lanes live: 6.
 
 ## 2026-09-03T17:32Z EVENT — `xu-inequality-screen-gpt55` sealed (14KB): IM ≥ Im is a new independent skeleton screen — 29/686 groups killed at D ≤ 200 incl. 7 u_s > 1 groups (first ever) and Moh's (84,56; 64; 2); calibration 3/3 exact; two-point targets, K = 16 and (99,66) untouched. → AUDIT delta 17(ccc) PROVISIONAL. Launching `xu-screen-gate-fable5` (different-model source + policy gate). Lanes live: 6.
+
+## 2026-09-03T17:47Z EVENT — `k16-t4-normalizer-gate-gpt55` sealed (11KB): (T) at t = 4 CONFIRMED; all-t normalizer lemma CONFIRMED uniformly. → AUDIT delta 17(ddd) PROMOTED. Ray: t = 1..4 dead; middle spine is the last blocker. Lanes live: 5.

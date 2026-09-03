@@ -17129,3 +17129,15 @@ max/min extrema, not a same-tree optimum). LEDGER: PROVISIONAL until the differe
 gate (Fable) confirms the theorem transcriptions, the fail-closed policy and the
 calibration; if confirmed, the operative screen becomes C_FULL_TREE_POLYNOMIAL_ODE ∧ XU
 (657 groups at D ≤ 200; n ≤ 100 loses (84,56; 64; 2) and (90,60; 45,80,88)).
+
+## INTEGRATION #17 DELTA (ddd) (2026-09-03T17:47Z, PROMOTED): delta 17(xx) gated by GPT-5.5 — THEOREM (T) AT t = 4 ON THE K = 16 RAY CONFIRMED ((52,36; 49; 3; J = cγ): 45 unknowns / 65 equations → eight generators over Q(√15) → nfmodStd [1]; covering chain audited: Q*-pivots, positive grading, x ≠ 0 forced by (C) and c ≠ 0, the full quadratic algebra not one root, every later pivot verified by inverse and resultant, no pivot-zero or conjugate branch missing); THE ALL-t NORMALIZER LEMMA CONFIRMED UNIFORMLY IN t (sympy over Q(t): g₁, g₂, g₃, (H), (C), H_t, c_t, disc_y H_t = 48(2t+1)²(t+1), c_t a unit in A_t = Q[y]/(H_t) for every integer t ≥ 1; 3t + 4 Q-constant pivots confirmed at t = 1..6)
+
+`k16-t4-normalizer-gate-gpt55-20260903.md` (GPT-5.5; box/k16t4-gate-20260903/). Verdict
+matrix items 1–4 all CONFIRMED; scope: the t = 4 kill is fixed-t on the gauged necessary-
+superset chart; the lemma is uniform. Dependency note recorded by the gate: the generic
+t_order_system.py used by the extractor was taken from the workspace copy matching the
+extractor-expected SHA-256 (not in the receipt) — a custody nit, not a mathematical gap;
+the t = 1..6 pivot counts are reproducible from the charged uniform drivers. STATUS OF THE
+RAY: (T) PROMOTED at t = 1 (Moh), 2, 3, 4; the all-t normalizer lemma PROMOTED; the sole
+remaining object is the second affine spine (OPEN[T-UNIFORM-MIDDLE]; k16-middle-spine-
+sol56 running).
