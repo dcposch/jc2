@@ -16295,3 +16295,33 @@ remainder-degree bounds, minor-disc root split. Consequence for the K = 16 ray (
 d₂' = gcd(12t+4, 8t+4) = 4, V₂' = 3): PROP 5.5(1) gives 4 ≤ 6 — satisfied; the ray is in
 the residue; (T) on the ray needs the Appendix II datum, as Grok's Card III / the
 running k16-ray-T lane assume. Gate: `prop55k-gate-grok46-20260903`.
+
+## INTEGRATION #17 DELTA (aa) (2026-09-03T12:42Z, MEASURED + PROVED-HERE skeletons, producer Grok): THE RIGID STRATUM SURVIVES THE GAP-FREE SCREEN (19/19; 3/19 gapped); H4 IS AN IDENTITY (h_j = P_j/Q_j on 59,175/59,175 nodes); A SECOND SCREENED COFINAL RAY WITH (d,e) AND s FIXED THROUGH THE D = 108 SURVIVOR (108,72; M = (84,104,106); V = (8,8,3)); POST-SCREEN u_s > 1 FRACTIONS; ANCHOR-ZERO SHARE OF THE FRONTIER
+
+`rigid-congruence-grok46-20260903.md` (Grok; box/rigid-congruence-20260903/; nine
+charged hashes verified). (A) All 19 expdim-0 V-assignments of dessin-tower-dim §6.4
+survive partition + universal siblings + (12)/(13) + ODE + passport (gap-free); the gapped
+C_FULL_TREE(_ODE) keeps 3/19, the other 16 dying at the ungated Prop 5.6 step (j = 2 or 3).
+All 19 have |O| = 1 and a single zero-centred packet. Of the 13 with u_s = 1 none has a
+legal s' = 2 Appendix II system as charged: 11 descend to s' = 3, two to s' = 2 with
+V₂' > d₂' (U-NEGATIVE); the 3 gapped survivors are anchor-zero — now handled by Φ_eff
+(delta 17(y), PROVISIONAL): re-evaluate. These 19 are the campaign's most concrete
+zero-dimensional CE candidates (Belyi-rigid bottom stars). (B) Opus H4 is an identity:
+h_j = d_j/(n − M_j) = P_j/Q_j on every selected-path node at 48 ≤ D ≤ 200; on Q > P the
+screen is A_j | P_j, off it b ≤ h suffices. Construction (PROVED-HERE as skeletons,
+driver-checked at t = 0, 6, 15, 24, 33, 42 under (1)–(13) + gap-free + ODE + passport +
+gapped C_FULL_TREE_ODE + UNI N ≥ 6): a cofinal ray with (d, e) and s FIXED extending
+(108,72; M = (84,104,106); V = (8,8,3)) on t = 6 + 9k: A₂ = 3, P₂ = 56 + 48k, b₂ = 2
+constant, h₂ = (7 + 6k)/2 ≥ 7/2 > 2 so b ≤ h at every node; A₃ = 1. So the residue is NOT
+forced constant-and-nonzero along every linear extension (OPEN[SCREEN-CONGRUENCE-RAY]
+answered by construction); the K = 16 ray (b = 0 identically, t = 1..50) is the other
+mechanism. (C) Post-screen u_s > 1 share at 48 ≤ D ≤ 200, K_min = 16: gap-free partition
+12,323 rows / 6,382 groups, u_s > 1 = 26.0 % rows / 28.4 % groups; gap-free + ODE +
+passport 11,590 / 6,039, 26.0 % / 28.2 %; gapped C_FULL_TREE 3,090 / 1,516, 13.7 % /
+17.2 %; gapped C_FULL_TREE_ODE 2,824 / 1,384, 11.0 % / 12.8 % (pre-screen 4,012 / 14,016
+groups, reproducing Opus). Anchor-zero among screened u_s = 1: gap-free + ODE + passport
+1,345 / 8,576 rows (≈ 16 %); gapped ODE 1,494 / 2,514 (≈ 60 %); n ≤ 100: 57/58 u_s = 1,
+38/57 anchor-zero, 19 evaluable as charged — all reproducing Opus H1; with Φ_eff all are
+evaluable. CONSEQUENCE: theorem (T)'s domain is the u_s = 1 stratum (72–89 % of screened
+groups depending on the screen); OPEN[MINOR-DICHOTOMY] carries 11–28 %; a second
+independent cofinal family fixes the "target list" reading of the census.
