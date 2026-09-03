@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The submission is sealed at `xmodel/ideation-20260903T1015Z-fable5.md` (body 41,119 bytes, SHA-256 `486b0192…`, basis f5aa1caf). Packet hash verified before reading. The Moh 1983 PDF was present in `refs/` with the packet's hash prefix, so I read it and said so in the report. Every contract item is delivered, and the OPEN collision scan passed with rc=0.
+
+**What I found**
+
+- **Appendix II is not a uniform filter.** I read pp.207–212 directly. Moh finishes each of his four classes by a descent to a small pair with a monomial Jacobian, then approximate-root expansions and a coefficient count of 10 to 22 variables. The 658-versus-6 gap of delta (h) sits inside the printed program, not in the appendix.
+- **A fail-closed discriminator: M_2 > m.** Measured on the tool's census, it keeps all six printed rows and cuts 658 rows to 94 at n ≤ 100. With integral pinned N it reproduces Moh's (75,50) output exactly. On the (1)–(13) space at D ≤ 120 it cuts 1,189 groups to 179, then to 63 alive at N ≥ 6. It empties twelve degrees, including **D = 105**, since all three trio groups have M_2 < 70. Typed as MEASURED only, with `OPEN[M2-ABOVE-M]` and a bounded quantity. I did not find it printed on the pages I opened.
+- **The Abhyankar–Moh semigroup condition is automatic** on all 658 rows, so Q3(d)'s "silently used semigroup condition" is refuted as the missing filter.
+- **Two of the trio descend by Moh's Prop 6.3** to a (15,10) pair with Jacobian γ⁴ and a (21,14) pair with Jacobian γ². Those are desk-sized problems in the GGV corner-family world of APPROACHES row 1. That is the new cross-connection and the basis of the new avenue, a typed descent recursion.
+
+**Direct answers.** The all-degree program should be the descent recursion with interpolation applied on the descended pair, not order-by-order interpolation at degree 105. The trio does not merit a flagship seat. The single first lane is `M2-DESCENT` on an Opus seat, about six hours: prove or refute M_2 > m and write the two descended trio problems explicitly.
+
+**Caveat for the coordinator.** The collision tool mechanically surfaced snippet lines from other lanes' files in its output. I did not open those files and nothing in the submission derives from them; the report states this above the COLLISIONS block.
+DIVERT path=xmodel/ideation-20260903T1015Z-fable5.md status=DIVERTED body_bytes=41119 body_sha256=486b0192d6cb1f3e064e00d16b57877ed67a2360543d8ec662c837afe5fc6456 overflow=xmodel/ideation-20260903T1015Z-fable5.overflow overflow_bytes=426 raw=xmodel/ideation-20260903T1015Z-fable5.raw.md raw_sha256=ca0bd6f51e3fc4c1b4e0c9d7aa0513053068fe11e89947686b44d3d3d478eb36 overflow_sha256=c4a9cb7abc72d8455a89dcd42472289a7d064f445e29af084ea44f0387e9fc3c
+post-BODY-END overflow diverted; charged body preserved
