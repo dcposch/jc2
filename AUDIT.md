@@ -17068,3 +17068,30 @@ with free parameters; only the GLOBAL polynomiality/common-jet condition can dec
 with the whole major tower (M = (−66,77,97), V = (8,8)) AND the principal-minor split data
 (δ = 2 [2,1] or δ = 5/2), J = 1 — OPEN[FULL-X-Y-KELLER-LIFT]; design lane queued behind
 moh9966-B-lift.
+
+## INTEGRATION #17 DELTA (bbb) (2026-09-03T17:29Z, INSTRUMENT + MEASURED, producer GPT-5.5): THE TWO-POINT CHART GENERATOR IS FIXED (threshold −i + δ₁'j ≥ B = V₂'δ₁' + u'δ₂', β cap deg_x ≤ k+1, and a mandatory sanity gate INSTRUMENT-FAIL when the generic deg_x J < k); all four Moh controls and the (28,20) replay persist as [1]; the three δ₁' = 0 rows are correctly REFUSED by the A/B chart and remain COUNTING-BOUND (level-1 ODE chart R3, 31 unknowns, four 1800-s timeouts); CAVEAT: the corrected β inventory for (33,22; 30; 8; 1) and (45,30; 42; 11; 1) is not a superset of the old one (33 → 28, 55 → 40) — delta 17(vv)'s two full-stratum kills are RE-TYPED PROVISIONAL pending a rerun with the corrected generator
+
+`chart-fix-d1zero-gpt55-20260903.md` (GPT-5.5; 20/20 hashes; box/chartfix-20260903/
+shape.py, twopoint_order_batch.py). Fix: h-support −i + δ₁'j ≥ B (and ≥ rB at h-deficit r);
+β: deg_x ≤ k+1 with the endpoint cap; build_system computes deg_x J on the generic ansatz
+and returns INSTRUMENT-FAIL (no Singular script) if < k. Controls (three primes + Q, all
+[1]): (16,12; 13; 3; 1) 18/23 unchanged, deg_x J = 5; (15,10; 11; 3; 2) 13/22 unchanged, 4;
+(15,10; 11; 2; 2) chart CHANGED 16/42 → 14/34 (B = −1/3 stricter than −4/3, plus the β cap),
+deg_x J = 6, still [1]; (21,14; 18; 5; 1) 16/31 unchanged, 4; (28,20; 25; 3; 1) 27/37, deg_x
+J = 9, [1] (basis size 1); actual pair (π, π − γ²/2): deg_x J = 1, fails the tuple. δ₁' = 0
+rows: corrected supports are strict supersets (h_all 8 → 15, 9 → 17, 10 → 19; β_all 7 → 21,
+8 → 24, 9 → 27; A/B unknowns 12 → 18, 13 → 20, 14 → 22) but the A/B ansatz still gives deg_x
+J = 2 < 4 → INSTRUMENT-FAIL (the ansatz shape, not just the support, is inadequate at
+k = 4); R3 (level-1 ODE, 29 eq / 31 unk, deg_x J = 4): GF(32003) slimgb dp TIMEOUT 1800 s
+(1.9 GB), elim order TIMEOUT, Q slimgb elim TIMEOUT, modStd ABORTED[CORE-BOUND] → all
+three rows COUNTING-BOUND (no certificate, no survivor component). (33,22)/(45,30): h
+support equal, β inventory 33 → 28 / 55 → 40 — "not a superset after the k+1 cap"; the lane's
+own batch chart is unchanged in size (31 / 48) and COUNTING-BOUND there. LEDGER ACTION: the
+full-stratum kills of delta 17(vv) for these two rows were computed with the OLD generator
+(topface_cases.py / strata_gate.py); since the corrected inventory is not comparable, they
+are RE-TYPED PROVISIONAL until rerun with the corrected rule (lane launched); the two
+PRIOR-SLICE restorations ((15,10; 11; 2) — persists under the corrected chart per this lane
+— and (21,14; 18; 5), unchanged chart) stand. Tally at D ≤ 200 (two-point, 17 groups): DEAD
+with corrected charts — (64,48), (75,50)×2, (84,56), (112,80), (160,112) [t = 3, 17(ww)];
+PROVISIONAL — (132,88), (180,120); OPEN — (147,98), (168,112), (189,126) [R3 timeouts],
+(125,75), (175,100), (175,125), (180,144), (192,128), (196,56), (200,120) [bigrows lane].

@@ -1,0 +1,13 @@
+ring S=32003,(y,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,b0,b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,c,T),(dp(1),dp(32));
+poly f2 = y^12 + a0*y^0 + a1*y^1 + a2*y^2 + a3*y^3 + a4*y^4 + a5*y^5 + a6*y^6 + a7*y^7 + a8*y^8 + a9*y^9 + a10*y^10 + a11*y^11;
+poly g3 = -(y^18 + b0*y^0 + b1*y^1 + b2*y^2 + b3*y^3 + b4*y^4 + b5*y^5 + b6*y^6 + b7*y^7 + b8*y^8 + b9*y^9 + b10*y^10 + b11*y^11 + b12*y^12 + b13*y^13 + b14*y^14 + b15*y^15 + b16*y^16 + b17*y^17);
+poly E = 2*f2*diff(g3,y) - 3*diff(f2,y)*g3 - c;
+ideal Eq; matrix My = coeffs(E, y); int j; for (j=1; j<=nrows(My); j++) { if (My[j,1] != 0) { Eq = Eq, My[j,1]; } }
+ring R=32003,(a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,b0,b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,c,T),dp; option(redSB); ideal I = imap(S,Eq); I = I, T*c-1;
+ideal CE=c,T*c-1; ideal GE=std(CE); if (reduce(1,GE)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+ideal CN=c-1,T*c-1; ideal GN=std(CN); if (reduce(1,GN)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+print("SANITY_GATE deg_x_J=4 required_k=4 chart=R3_level1_only");
+print("MAIN_START equations=" + string(size(I)-1) + " unknowns=" + string(nvars(R)-1) + " char=32003 alg=slimgb order=dp");
+ideal G = slimgb(I); print("MAIN_DONE basis_size="); size(G);
+if (reduce(1,G)==0) { print("MAIN_SATURATED_EMPTY"); } else { print("MAIN_NONTRIVIAL"); print("dim="); dim(G); }
+quit;

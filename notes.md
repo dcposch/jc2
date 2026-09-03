@@ -20917,3 +20917,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T16:49Z EVENT — launched `xu-delta52-lift-gpt55-20260903` (the δ = 5/2 split of (99,66) — Xu's open case — lifted beyond the reduced equation). Lanes live: 6.
 
 ## 2026-09-03T17:09Z EVENT — `xu-delta52-lift-gpt55` sealed (12KB): the δ = 5/2 split SURVIVES the local lift through s⁴ (free family, dimension 4 after slice); Xu's exclusions reproduced; the local Jacobian condition is not restrictive — (99,66) needs the global Keller lift. → AUDIT delta 17(aaa). Launching `xu-inequality-screen-gpt55` (Xu's IM ≥ Im final-root inequalities as a skeleton screen on the operative census, esp. the 177 u_s > 1 groups). Lanes live: 6.
+
+## 2026-09-03T17:29Z EVENT — `chart-fix-d1zero-gpt55` sealed (11KB): generator fixed with a deg_x J sanity gate; Moh controls + (28,20) persist; the δ₁' = 0 rows are correctly refused by A/B and R3 times out (COUNTING-BOUND); CAVEAT: (33,22)/(45,30) β inventories changed → delta 17(vv) kills re-typed PROVISIONAL pending a corrected-generator rerun. → AUDIT delta 17(bbb). Launching `strata-rerun-corrected-gpt55`. Lanes live: 6.
