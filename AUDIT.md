@@ -17545,3 +17545,13 @@ homogeneous modular std); the whole chain at t = 11 is claimed to be minutes. Ga
 (k16-properness-gate-opus5). STATUS of the ray: (T) PROMOTED t = 1..5; PROVED-HERE t = 6, 7
 (pending the gate); uniform: (V0) for all t ≥ 3 OPEN — the q-directions of the cone
 (Opus SUBCHART lane running).
+
+## INTEGRATION #17 DELTA (jjjj) (2026-09-03T21:40Z, PROMOTED with one GAP, producer GPT-5.5): delta 17(cccc)'s cone lemmas gated — Lemma CONE CONFIRMED fibrewise for every t ≥ 2 (a nonzero point of a weighted-homogeneous cone carries a positive-dimensional G_m-orbit; τ_t of positive weight vanishes at 0), with split-index care; the spine grading (2.1) CONFIRMED as an indexed consequence of the Sol recurrence (symbolic weight audit) and on the records t = 2..6; Proposition SUBCHART CONFIRMED (scope: coordinate sub-charts after the affine eliminations); Theorem B3-AXIS CONFIRMED (axis restriction and unitness for t ≥ 3; symbolic derivation replayed); the t = 2 fibre: RESIDUAL-ZERO REFUTED for all-t (y = 1/5: dim I_{2,+} = 1) while (8.1) holds there; fixed-t homogeneous std + dim: t = 2 (y = 2/5) dim 0, t = 3 dim 0 exact (size 20), t = 4 dim 0 exact (size 81), t = 5 exact timed out at 1,200 s (modular dim 0 mod 1009, not promoted by this gate — the properness lemma of 17(iiii) is what would promote it; under gate); ONE GAP: the reduction of (8.1) to ONLY (10.1) (the q-directions) is incomplete — a b₄-direction / b₄ = 1-chart statement (or dim I_{t,+} = 0 outright) is also required
+
+`k16-cone-gate-gpt55-20260903.md` (GPT-5.5; 25/25 hashes; box/k16conegate-20260903/;
+every Singular job capped; one exact modStd variant aborted by the operator for spawning
+> 2 workers — recorded, not evidence). LEDGER: Lemma CONE, the grading, SUBCHART and
+B3-AXIS PROMOTED (Opus + GPT-5.5); the uniform residual is (V0)/dim I_{t,+} = 0 for all t ≥ 3
+in full (q-directions AND the b₄ direction) — the Opus SUBCHART lane (running) must
+address b₄ too; the properness lemma (17(iiii), Opus gate running) is the fixed-t
+instrument.

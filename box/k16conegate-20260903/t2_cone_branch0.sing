@@ -1,0 +1,9 @@
+ring R=0,(z,b4,b3),dp;
+ideal Ipos=192*b3^2*b4^2 - 8960*b3*b4^5 + 28925*b4^8,-16*b3*b4^4 + 35*b4^7,88*b3*b4^3 - 295*b4^6;
+ideal Rab=Ipos,1-z*(-768*b3^2*b4^3 + 7640*b3*b4^6 - 16275*b4^9);
+ideal GR=std(Rab);
+printf("T2_CONE branch=0 y=1/5 RABINOWITSCH_tau_in_radical=%s", (size(GR)==1 && GR[1]==1));
+ideal Ifull=-19200*b3^2*b4^3 + 191000*b3*b4^6 - 406875*b4^9 - 1024,192*b3^2*b4^2 - 8960*b3*b4^5 + 28925*b4^8,-16*b3*b4^4 + 35*b4^7,88*b3*b4^3 - 295*b4^6;
+ideal GF=std(Ifull);
+printf("T2_CONE branch=0 y=1/5 UNIT_IDEAL_8_1=%s", (size(GF)==1 && GF[1]==1));
+quit;
