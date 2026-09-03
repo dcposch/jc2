@@ -16985,3 +16985,32 @@ recurrence by induction on the band index recording every pivot norm; prove or r
 2t-row/t-variable terminal family; seek a terminal recurrence ending in a nonzero
 constant of the coefficient algebra. Lanes launched: gate (GPT-5.5) on t = 4 + the
 normalizer lemma; attack (Sol) on the middle spine.
+
+## INTEGRATION #17 DELTA (yy) (2026-09-03T16:36Z, PROVED-HERE partial + EXTERNAL literature, producer Sol): MOH'S (99,66) — branch C (three simple roots of the cubic, packets 9+9+9) is SATURATED-EMPTY at the fixed radius-two place (exact [1] over three primes and Q, five-term unit certificate; premise: p.209's x¹⁵y⁴⁰ + … read as the radius-two T₃ leader); branch B's leading-face ODE system SURVIVES with the exact family H = z²(z + 3a), R = z²⁵(z + 3a)¹⁴(z − 2a), a ≠ 0 (a face point, not a Keller pair); the full 11-variable lift and Moh's 10-variable branch-A bridge remain OPEN; EXTERNAL: Yansong Xu, "Intersection Numbers and Split of Minor Roots", arXiv:1604.07683 (v4, 15 Feb 2022), abstract: "we discuss all possibilities of the splits of principal minor roots for the case of degree (99,66) … find an unknown possible split and suggest case (99,66) is open" — THE (99,66) CASE IS OPEN IN THE LITERATURE; Moh's "no counter-example of degree ≤ 100" has a documented gap at his own last row
+
+`moh9966-branchB-sol56-20260903.md` (Sol, 22KB; box/moh9966B-20260903/; 9/9 hashes; pages
+150–152, 207–211). SOURCE-READ (§1–2): why the four printed corners x⁶y¹⁸, x⁹y²⁷, x⁵y¹⁵,
+x¹⁵y⁴⁰ are forced (Props 3.2, 3.3, 4.1, 6.1); SHAPE from old-coordinate polynomiality (§3):
+the inverse of Ω imposes 7,326 old-coordinate coefficient relations — a finite first-
+principles system exists but is NOT Moh's 11-variable system (his filtration-preserving
+h-adic/gauge eliminations are omitted on pp.209–210; an invented 11-monomial slice would
+not answer the question). Branch C: Props 3.2/3.3/4.1/6.1 force a degree-40 leading
+polynomial to vanish ≥ 14 times at each of three roots — impossible; exact reduced ideal
+[1] (SATURATED-EMPTY[FIXED-RADIUS-TWO]). Branch B: the Jacobian face equation J(T3₂, G₂) =
+45xy⁴⁴(xy + 3)²² is satisfied by T3₂ = y²⁵(xy + 3)¹⁴(xy − 2), G₂ = y¹⁸(xy + 3)⁹ (k = 5, q =
+z(z − 2a)(z + 3a)², T = (5a)⁻¹) — SURVIVES[PRINTED-LEADER-ODE-SYSTEM], REPRESENTATIVE of the
+leading-face variety only; OPEN[B-FULL-11-VARIABLE-LIFT]. Branch-A control: the charged
+14-unknown predecessor reconstructed independently → [1]; OPEN[A-PRINTED-10-VARIABLE-
+BRIDGE]. Exhaustiveness: at a fixed radius-two place [3], [2,1], [1,1,1] are exhaustive and
+the last is excluded; but p.209 does NOT prove that the principal minor roots cannot first
+split at another admissible radius — OPEN[PRINCIPAL-MINOR-RADIUS]; Xu §8 (EXTERNAL-
+SUPPLEMENT; PDF now in refs/xu2016_intersection_numbers_split_minor_roots_arxiv1604.07683v4.pdf)
+supplies the radius-two T₃ data, proves the three-root exclusion, records a possible
+δ = 5/2 split, and describes (99,66) as open. CONSEQUENCES: (1) the campaign's n ≤ 100
+baseline must be re-typed: Moh's theorem is complete for (64,48), (84,56), (75,50) (all
+mechanically replayed today) and OPEN for (99,66) — the u_s > 1 row; (2) (99,66) is the
+SMALLEST LIVE TARGET on both sides: proof side = complete Moh's omitted branch-B lift and
+Xu's δ = 5/2 split; counterexample side = lift the branch-B face family (or Xu's split) to
+an actual Keller pair of degrees (99,66); (3) the u_s > 1 stratum is not "Moh's residue"
+but the frontier of the published theory. Lanes launched: xu9966-read-gpt55 (source-read
+Xu §8 against our skeleton), moh9966-B-lift-sol56 (the full lift computation).

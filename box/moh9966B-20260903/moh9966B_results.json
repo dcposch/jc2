@@ -1,0 +1,805 @@
+{
+  "cores_used_by_driver": 1,
+  "execution": "serial",
+  "manifest_check": {
+    "input_dir": "/tmp/jc2-lane.WhlLe3/inputs",
+    "manifest": "box/moh9966B-20260903/charged-inputs.sha256",
+    "method": "receipt fields parsed mechanically; SHA-256 recomputed",
+    "ok": true,
+    "receipt": "/home/ubuntu/jc2/xmodel/moh9966-branchB-sol56-20260903.run.v2",
+    "rows": [
+      {
+        "basename": "moh9966-branches-gpt55-20260903.md",
+        "expected": "dc8c54218e3f98e56a31474090b8dd09e32c8991fa065a7bb797c44b77177434",
+        "got": "dc8c54218e3f98e56a31474090b8dd09e32c8991fa065a7bb797c44b77177434",
+        "index": 1,
+        "ok": true,
+        "path": "/tmp/jc2-lane.WhlLe3/inputs/moh9966-branches-gpt55-20260903.md"
+      },
+      {
+        "basename": "moh9966_branch_driver.py",
+        "expected": "e561072a601170d44102f2de7bd9e38a3de41a546ef1458e29941127bb805bfa",
+        "got": "e561072a601170d44102f2de7bd9e38a3de41a546ef1458e29941127bb805bfa",
+        "index": 2,
+        "ok": true,
+        "path": "/tmp/jc2-lane.WhlLe3/inputs/moh9966_branch_driver.py"
+      },
+      {
+        "basename": "moh9966_branch_results.json",
+        "expected": "ceb2625c8b8c27f07491242a9982d834c5a495a8db678eb5af6cb878dc76e215",
+        "got": "ceb2625c8b8c27f07491242a9982d834c5a495a8db678eb5af6cb878dc76e215",
+        "index": 3,
+        "ok": true,
+        "path": "/tmp/jc2-lane.WhlLe3/inputs/moh9966_branch_results.json"
+      },
+      {
+        "basename": "minor-dichotomy-sol56-20260903.md",
+        "expected": "184a689f3cd63405d922b8118632c7e17f96f471a0bc71f9a50cd161b8a87ad1",
+        "got": "184a689f3cd63405d922b8118632c7e17f96f471a0bc71f9a50cd161b8a87ad1",
+        "index": 4,
+        "ok": true,
+        "path": "/tmp/jc2-lane.WhlLe3/inputs/minor-dichotomy-sol56-20260903.md"
+      },
+      {
+        "basename": "client_arithmetic.py",
+        "expected": "7a2bdf276df3324c3fcc57a25a3409c62ab07ffde9131775020d69cf910ecb00",
+        "got": "7a2bdf276df3324c3fcc57a25a3409c62ab07ffde9131775020d69cf910ecb00",
+        "index": 5,
+        "ok": true,
+        "path": "/tmp/jc2-lane.WhlLe3/inputs/client_arithmetic.py"
+      },
+      {
+        "basename": "appendix2-compiler-grok46-20260903.md",
+        "expected": "dea9f5be619b9507b5ca30db51ddd88401b293e7ab7a0e75c8ae8083a5c79c27",
+        "got": "dea9f5be619b9507b5ca30db51ddd88401b293e7ab7a0e75c8ae8083a5c79c27",
+        "index": 6,
+        "ok": true,
+        "path": "/tmp/jc2-lane.WhlLe3/inputs/appendix2-compiler-grok46-20260903.md"
+      },
+      {
+        "basename": "moh_skeleton_full.py",
+        "expected": "d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2",
+        "got": "d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2",
+        "index": 7,
+        "ok": true,
+        "path": "/tmp/jc2-lane.WhlLe3/inputs/moh_skeleton_full.py"
+      },
+      {
+        "basename": "moh1983_jram340_configurations_of_roots.pdf",
+        "expected": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "got": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "index": 8,
+        "ok": true,
+        "path": "/tmp/jc2-lane.WhlLe3/inputs/moh1983_jram340_configurations_of_roots.pdf"
+      },
+      {
+        "basename": "FALLACY-v2.md",
+        "expected": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "got": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "index": 9,
+        "ok": true,
+        "path": "/tmp/jc2-lane.WhlLe3/inputs/FALLACY-v2.md"
+      }
+    ]
+  },
+  "orientation_controls": {
+    "Moh_J_equals_x_requires": "c=-1 (or an equivalent sign normalization)",
+    "det_DPhi": "-x",
+    "if_original_J_is_c": "J(Omega(f),Omega(g))=-c*x",
+    "positive_control_J_x": "x",
+    "positive_control_J_x4": "x**4"
+  },
+  "per_run_timeout_seconds": 120,
+  "primes": [
+    32003,
+    32009,
+    32027
+  ],
+  "shape_counts": {
+    "individual_P_spaces_in_zero_jet_slice": {
+      "strict_interior_preserving_all_faces": {
+        "f": 68,
+        "g": 165
+      },
+      "type": "COUNTING-BOUND on separate f,g shapes, before approximate-root/Jacobian equations",
+      "with_Omega_polynomiality": {
+        "f": 103,
+        "g": 217
+      },
+      "without_Omega_polynomiality": {
+        "f": 181,
+        "g": 388
+      }
+    },
+    "maximal_envelope_support_sites": {
+      "Omega_polynomial_slice": {
+        "T2": 4261,
+        "T3": 29116,
+        "f": 6109,
+        "g": 13645
+      },
+      "branch_C_forced_face_minimum_x_only": {
+        "T2": -5,
+        "f": -6,
+        "g": -9
+      },
+      "raw_Laurent_from_forward_polynomiality_and_two_faces": {
+        "T2": 4316,
+        "T3": 29441,
+        "f": 6187,
+        "g": 13816
+      },
+      "type": "support-site counts, not independent coefficient counts; forced-face minima are not full-support lower bounds"
+    },
+    "raw_original_coefficient_count": {
+      "f_monic_free": 2277,
+      "g_monic_free": 5049,
+      "total": 7326
+    },
+    "straightened_two_arc_h": {
+      "affine_free_after_monic": 8,
+      "branch_B_after_double_root_and_Omega_polynomiality_free": 5,
+      "branch_B_open_condition": "c3 != 0",
+      "linear_dimension": 9,
+      "rows": [
+        {
+          "basis": "x^0*w^3*(w-1)^8",
+          "dimension": 1,
+          "w_degree_cap": 11,
+          "w_one_vanishing": 8,
+          "w_zero_vanishing": 3,
+          "x_degree": 0
+        },
+        {
+          "basis": "x^3*w^2*(w-1)^6",
+          "dimension": 1,
+          "w_degree_cap": 8,
+          "w_one_vanishing": 6,
+          "w_zero_vanishing": 2,
+          "x_degree": 3
+        },
+        {
+          "basis": "x^4*w^2*(w-1)^5",
+          "dimension": 1,
+          "w_degree_cap": 7,
+          "w_one_vanishing": 5,
+          "w_zero_vanishing": 2,
+          "x_degree": 4
+        },
+        {
+          "basis": "x^6*w^1*(w-1)^4",
+          "dimension": 1,
+          "w_degree_cap": 5,
+          "w_one_vanishing": 4,
+          "w_zero_vanishing": 1,
+          "x_degree": 6
+        },
+        {
+          "basis": "x^7*w^1*(w-1)^3",
+          "dimension": 1,
+          "w_degree_cap": 4,
+          "w_one_vanishing": 3,
+          "w_zero_vanishing": 1,
+          "x_degree": 7
+        },
+        {
+          "basis": "x^8*w^1*(w-1)^2",
+          "dimension": 1,
+          "w_degree_cap": 3,
+          "w_one_vanishing": 2,
+          "w_zero_vanishing": 1,
+          "x_degree": 8
+        },
+        {
+          "basis": "x^9*w^0*(w-1)^2",
+          "dimension": 1,
+          "w_degree_cap": 2,
+          "w_one_vanishing": 2,
+          "w_zero_vanishing": 0,
+          "x_degree": 9
+        },
+        {
+          "basis": "x^10*w^0*(w-1)^1",
+          "dimension": 1,
+          "w_degree_cap": 1,
+          "w_one_vanishing": 1,
+          "w_zero_vanishing": 0,
+          "x_degree": 10
+        },
+        {
+          "basis": "x^11*w^0*(w-1)^0",
+          "dimension": 1,
+          "w_degree_cap": 0,
+          "w_one_vanishing": 0,
+          "w_zero_vanishing": 0,
+          "x_degree": 11
+        }
+      ],
+      "surviving_indices": [
+        3,
+        4,
+        7,
+        8,
+        11
+      ],
+      "type": "GAUGE-SLICE; literal a0,a1,a2 straightening is not proved by p.209"
+    }
+  },
+  "software": {
+    "python": "Python 3.12.3",
+    "singular": "Singular for x86_64-Linux version 4.3.2 (4330, 64 bit) Apr  1 2024 04:44:00",
+    "sympy": "1.12"
+  },
+  "systems": [
+    {
+      "runs": [
+        {
+          "basis": [
+            "G[1]=1"
+          ],
+          "basis_size": "1",
+          "characteristic": 32003,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.013174,
+          "extended_generator_count": "30",
+          "generator_count": "29",
+          "log": "box/moh9966B-20260903/logs/a_control_predecessor_32003.log",
+          "returncode": 0,
+          "ring_variables": [
+            "h_0_8",
+            "h_0_7",
+            "h_0_6",
+            "h_0_5",
+            "h_0_4",
+            "h_0_3",
+            "h_0_2",
+            "h_0_1",
+            "h_0_0",
+            "bp",
+            "bq",
+            "br",
+            "bs",
+            "c",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/a_control_predecessor_32003.sing",
+          "script_sha256": "907165363b655d00a4b36615e163925dd0b815c8a261963e15411935abb1eeba",
+          "timeout_seconds": 120,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis": [
+            "G[1]=1"
+          ],
+          "basis_size": "1",
+          "characteristic": 32009,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.009394,
+          "extended_generator_count": "30",
+          "generator_count": "29",
+          "log": "box/moh9966B-20260903/logs/a_control_predecessor_32009.log",
+          "returncode": 0,
+          "ring_variables": [
+            "h_0_8",
+            "h_0_7",
+            "h_0_6",
+            "h_0_5",
+            "h_0_4",
+            "h_0_3",
+            "h_0_2",
+            "h_0_1",
+            "h_0_0",
+            "bp",
+            "bq",
+            "br",
+            "bs",
+            "c",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/a_control_predecessor_32009.sing",
+          "script_sha256": "ec450a67b0ff939916f568cb39569ecc514303d2c55e3a3d532fd6226fa33c76",
+          "timeout_seconds": 120,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis": [
+            "G[1]=1"
+          ],
+          "basis_size": "1",
+          "characteristic": 32027,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.014106,
+          "extended_generator_count": "30",
+          "generator_count": "29",
+          "log": "box/moh9966B-20260903/logs/a_control_predecessor_32027.log",
+          "returncode": 0,
+          "ring_variables": [
+            "h_0_8",
+            "h_0_7",
+            "h_0_6",
+            "h_0_5",
+            "h_0_4",
+            "h_0_3",
+            "h_0_2",
+            "h_0_1",
+            "h_0_0",
+            "bp",
+            "bq",
+            "br",
+            "bs",
+            "c",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/a_control_predecessor_32027.sing",
+          "script_sha256": "af58e0780e2809214257017686b5fe74cc112e6fb7058257e1252742d6c2de4b",
+          "timeout_seconds": 120,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis": [
+            "G[1]=1"
+          ],
+          "basis_size": "1",
+          "characteristic": 0,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.012412,
+          "extended_generator_count": "30",
+          "generator_count": "29",
+          "log": "box/moh9966B-20260903/logs/a_control_predecessor_Q.log",
+          "returncode": 0,
+          "ring_variables": [
+            "h_0_8",
+            "h_0_7",
+            "h_0_6",
+            "h_0_5",
+            "h_0_4",
+            "h_0_3",
+            "h_0_2",
+            "h_0_1",
+            "h_0_0",
+            "bp",
+            "bq",
+            "br",
+            "bs",
+            "c",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/a_control_predecessor_Q.sing",
+          "script_sha256": "1030f947ba94d856023f818988a368e0f1f069f99d1ecaa7cb9faa484219440e",
+          "timeout_seconds": 120,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "system": {
+        "T": "T",
+        "certificate": "1 = -(T*c-1) - T*(-c)",
+        "certificate_max_multiplier_degree": 1,
+        "certificate_terms": 2,
+        "equations": [
+          "-c",
+          "-48*br**2",
+          "6*bq**2 + 12*bq*br + 54*br**2",
+          "-6*bp*br*h_0_1 + 48*br**2*h_0_8 - 48*br*bs",
+          "54*bp*br*h_0_0 + 42*br**2*h_0_7",
+          "-18*bp**2*br + 36*br**2*h_0_6",
+          "30*br**2*h_0_5",
+          "24*br**2*h_0_4",
+          "18*br**2*h_0_3",
+          "12*br**2*h_0_2",
+          "6*br**2*h_0_1",
+          "6*bp*br*h_0_1 - 6*bq**2*h_0_8 - 6*bq*br*h_0_8 + 6*bq*bs + 54*br*bs",
+          "-54*bp*br*h_0_0 + 6*bp*br*h_0_1*h_0_8 - 6*bq**2*h_0_7 - 12*bq*br*h_0_7 + 48*br*bs*h_0_8",
+          "3*bp**2*bq + 21*bp**2*br - 48*bp*br*h_0_0*h_0_8 + 6*bp*br*h_0_1*h_0_7 + 6*bp*bs*h_0_0 - 6*bq**2*h_0_6 - 18*bq*br*h_0_6 + 42*br*bs*h_0_7",
+          "-3*bp**3*h_0_1 + 18*bp**2*br*h_0_8 - 6*bp**2*h_0_0**2 - 42*bp*br*h_0_0*h_0_7 + 6*bp*br*h_0_1*h_0_6 - 6*bq**2*h_0_5 - 24*bq*br*h_0_5 + 36*br*bs*h_0_6",
+          "-3*bp**3*h_0_0 + 15*bp**2*br*h_0_7 - 36*bp*br*h_0_0*h_0_6 + 6*bp*br*h_0_1*h_0_5 - 6*bq**2*h_0_4 - 30*bq*br*h_0_4 + 30*br*bs*h_0_5",
+          "12*bp**2*br*h_0_6 - 30*bp*br*h_0_0*h_0_5 + 6*bp*br*h_0_1*h_0_4 - 6*bq**2*h_0_3 - 36*bq*br*h_0_3 + 24*br*bs*h_0_4",
+          "9*bp**2*br*h_0_5 - 24*bp*br*h_0_0*h_0_4 + 6*bp*br*h_0_1*h_0_3 - 6*bq**2*h_0_2 - 42*bq*br*h_0_2 + 18*br*bs*h_0_3",
+          "6*bp**2*br*h_0_4 - 18*bp*br*h_0_0*h_0_3 + 6*bp*br*h_0_1*h_0_2 - 6*bq**2*h_0_1 - 48*bq*br*h_0_1 + 12*br*bs*h_0_2",
+          "3*bp**2*br*h_0_3 - 12*bp*br*h_0_0*h_0_2 + 6*bp*br*h_0_1**2 - 6*bq**2*h_0_0 - 54*bq*br*h_0_0 + 6*br*bs*h_0_1",
+          "-54*bp*br",
+          "54*bp*br",
+          "-3*bp**2*h_0_1 + 48*bp*br*h_0_8 - 6*bp*bs",
+          "6*bp**2*h_0_0 + 42*bp*br*h_0_7",
+          "3*bp**3 + 36*bp*br*h_0_6",
+          "30*bp*br*h_0_5",
+          "24*bp*br*h_0_4",
+          "18*bp*br*h_0_3",
+          "12*bp*br*h_0_2 + 6*bq**2 + 54*bq*br"
+        ],
+        "factor": "c",
+        "levels": [
+          0,
+          1
+        ],
+        "name": "A_CONTROL_PREDECESSOR",
+        "parameters": [
+          "h_0_8",
+          "h_0_7",
+          "h_0_6",
+          "h_0_5",
+          "h_0_4",
+          "h_0_3",
+          "h_0_2",
+          "h_0_1",
+          "h_0_0",
+          "bp",
+          "bq",
+          "br",
+          "bs",
+          "c"
+        ],
+        "raw_equation_count": 36
+      }
+    },
+    {
+      "runs": [
+        {
+          "basis": [
+            "G[1]=q0",
+            "G[2]=k-5",
+            "G[3]=a-8001*q3",
+            "G[4]=q1*T+12800*q2",
+            "G[5]=q2*T-1600*q3",
+            "G[6]=q3*T-12802",
+            "G[7]=q2^2-12001*q3*q1",
+            "G[8]=q3*q2+10667*q1",
+            "G[9]=q3^2+10673*q2"
+          ],
+          "basis_size": "9",
+          "characteristic": 32003,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.008729,
+          "extended_generator_count": "6",
+          "generator_count": "5",
+          "log": "box/moh9966B-20260903/logs/b_two_root_reduced_ode_32003.log",
+          "returncode": 0,
+          "ring_variables": [
+            "a",
+            "k",
+            "q3",
+            "q2",
+            "q1",
+            "q0",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/b_two_root_reduced_ode_32003.sing",
+          "script_sha256": "4ac4c7eb9767e76fa1086334ba55e1a426b5f1fc8c9d0787f54fc96ce618bbbf",
+          "timeout_seconds": 120,
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis": [
+            "G[1]=q0",
+            "G[2]=k-5",
+            "G[3]=a+8002*q3",
+            "G[4]=q1*T-6403*q2",
+            "G[5]=q2*T-11203*q3",
+            "G[6]=q3*T+6401",
+            "G[7]=q2^2-4001*q3*q1",
+            "G[8]=q3*q2+10669*q1",
+            "G[9]=q3^2+10675*q2"
+          ],
+          "basis_size": "9",
+          "characteristic": 32009,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.010123,
+          "extended_generator_count": "6",
+          "generator_count": "5",
+          "log": "box/moh9966B-20260903/logs/b_two_root_reduced_ode_32009.log",
+          "returncode": 0,
+          "ring_variables": [
+            "a",
+            "k",
+            "q3",
+            "q2",
+            "q1",
+            "q0",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/b_two_root_reduced_ode_32009.sing",
+          "script_sha256": "5eb5757efb8db054f4fbabcd837c15c34e273329de92aee2fb7790683d4d872f",
+          "timeout_seconds": 120,
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis": [
+            "G[1]=q0",
+            "G[2]=k-5",
+            "G[3]=a-8007*q3",
+            "G[4]=q1*T-12812*q2",
+            "G[5]=q2*T-14412*q3",
+            "G[6]=q3*T+12810",
+            "G[7]=q2^2-12010*q3*q1",
+            "G[8]=q3*q2+10675*q1",
+            "G[9]=q3^2+10681*q2"
+          ],
+          "basis_size": "9",
+          "characteristic": 32027,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.018377,
+          "extended_generator_count": "6",
+          "generator_count": "5",
+          "log": "box/moh9966B-20260903/logs/b_two_root_reduced_ode_32027.log",
+          "returncode": 0,
+          "ring_variables": [
+            "a",
+            "k",
+            "q3",
+            "q2",
+            "q1",
+            "q0",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/b_two_root_reduced_ode_32027.sing",
+          "script_sha256": "f778579de9336a19048a169315f8e8639259c3bb216ccd021f9c50482c3b69c9",
+          "timeout_seconds": 120,
+          "verdict": "NONUNIT"
+        },
+        {
+          "basis": [
+            "G[1]=q0",
+            "G[2]=k-5",
+            "G[3]=4*a-q3",
+            "G[4]=5*q1*T-6*q2",
+            "G[5]=20*q2*T+3*q3",
+            "G[6]=5*q3*T-4",
+            "G[7]=8*q2^2+q3*q1",
+            "G[8]=3*q3*q2-2*q1",
+            "G[9]=3*q3^2+16*q2"
+          ],
+          "basis_size": "9",
+          "characteristic": 0,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.008861,
+          "extended_generator_count": "6",
+          "generator_count": "5",
+          "log": "box/moh9966B-20260903/logs/b_two_root_reduced_ode_Q.log",
+          "returncode": 0,
+          "ring_variables": [
+            "a",
+            "k",
+            "q3",
+            "q2",
+            "q1",
+            "q0",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/b_two_root_reduced_ode_Q.sing",
+          "script_sha256": "b2005299bf293e0a08a55852648c75c3691b75aea0c763110f993aa6bfc3b4ab",
+          "timeout_seconds": 120,
+          "verdict": "NONUNIT"
+        }
+      ],
+      "system": {
+        "T": "T",
+        "dropped_redundant": "True",
+        "equations": [
+          "5 - k",
+          "-6*a*k + 18*a + 3*q3",
+          "-9*a**2*k + 12*a*q3 + q2",
+          "6*a*q2 - q1",
+          "-3*q0"
+        ],
+        "factor": "a*k",
+        "logical_premise": "p.209 x^15*y^40 is the radius-two T3 leader; explicit in the task, not proved by Moh's unspecified ellipsis",
+        "name": "B_TWO_ROOT_REDUCED_ODE",
+        "parameters": [
+          "a",
+          "k",
+          "q3",
+          "q2",
+          "q1",
+          "q0"
+        ],
+        "raw_equations": [
+          "5 - k",
+          "-6*a*k + 18*a + 3*q3",
+          "-9*a**2*k + 12*a*q3 + q2",
+          "6*a*q2 - q1",
+          "-3*q0",
+          "-6*a*q0"
+        ],
+        "witness": {
+          "H": "z**3 + 3*z**2",
+          "R": "z**25*(z - 2)*(z + 3)**14",
+          "T": "1/5",
+          "a": 1,
+          "bivariate_face_jacobian": "45*x*y**44*(x*y + 3)**22",
+          "bivariate_face_jacobian_expected": "45*x*y**44*(x*y + 3)**22",
+          "full_ode_remainder": "0",
+          "k": 5,
+          "q": "z*(z - 2)*(z + 3)**2",
+          "q0": 0,
+          "q1": -18,
+          "q2": -3,
+          "q3": 4,
+          "type": "REPRESENTATIVE[PRINTED-LEADER-ODE-FACE], not a Keller pair"
+        }
+      }
+    },
+    {
+      "runs": [
+        {
+          "basis": [
+            "G[1]=1"
+          ],
+          "basis_size": "1",
+          "characteristic": 32003,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.010681,
+          "extended_generator_count": "5",
+          "generator_count": "4",
+          "log": "box/moh9966B-20260903/logs/c_three_simple_reduced_consequence_32003.log",
+          "returncode": 0,
+          "ring_variables": [
+            "a",
+            "b",
+            "ell",
+            "k",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/c_three_simple_reduced_consequence_32003.sing",
+          "script_sha256": "fe284853d622efd355e7df8cd3b3e8bd4778ca33bb6e288f5035accc77a567b6",
+          "timeout_seconds": 120,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis": [
+            "G[1]=1"
+          ],
+          "basis_size": "1",
+          "characteristic": 32009,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.009181,
+          "extended_generator_count": "5",
+          "generator_count": "4",
+          "log": "box/moh9966B-20260903/logs/c_three_simple_reduced_consequence_32009.log",
+          "returncode": 0,
+          "ring_variables": [
+            "a",
+            "b",
+            "ell",
+            "k",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/c_three_simple_reduced_consequence_32009.sing",
+          "script_sha256": "11c02fb5fddf9bc7f1d1f7096f5b0296a32eef4a59205b62596980feebc3e863",
+          "timeout_seconds": 120,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis": [
+            "G[1]=1"
+          ],
+          "basis_size": "1",
+          "characteristic": 32027,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.011169,
+          "extended_generator_count": "5",
+          "generator_count": "4",
+          "log": "box/moh9966B-20260903/logs/c_three_simple_reduced_consequence_32027.log",
+          "returncode": 0,
+          "ring_variables": [
+            "a",
+            "b",
+            "ell",
+            "k",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/c_three_simple_reduced_consequence_32027.sing",
+          "script_sha256": "fa307c393a59e73c658bb2ac16a279775b273a08c91f16244d84b1bc3fb42d2d",
+          "timeout_seconds": 120,
+          "verdict": "SATURATED-EMPTY"
+        },
+        {
+          "basis": [
+            "G[1]=1"
+          ],
+          "basis_size": "1",
+          "characteristic": 0,
+          "controls": {
+            "empty_wrapper": true,
+            "nonempty_wrapper": true,
+            "unsaturated_nonunit": true
+          },
+          "elapsed_seconds": 0.008133,
+          "extended_generator_count": "5",
+          "generator_count": "4",
+          "log": "box/moh9966B-20260903/logs/c_three_simple_reduced_consequence_Q.log",
+          "returncode": 0,
+          "ring_variables": [
+            "a",
+            "b",
+            "ell",
+            "k",
+            "T"
+          ],
+          "script": "box/moh9966B-20260903/systems/c_three_simple_reduced_consequence_Q.sing",
+          "script_sha256": "f6549ea14725cf84efcb262c3c06ad2f9a8c079dd78b27dbdab9c3ec42617bc8",
+          "timeout_seconds": 120,
+          "verdict": "SATURATED-EMPTY"
+        }
+      ],
+      "system": {
+        "T": "T",
+        "certificate": {
+          "identity_remainder": "0",
+          "max_multiplier_total_degree": 7,
+          "multipliers": [
+            "T*k*(a - b)*(a*b/2 - ell*(a + b))",
+            "-T*ell*k*(a - b)",
+            "-T*k*(a - b)/2",
+            "3*T**2*ell*k**2*(a - b)**2",
+            "-3*T*ell**2*k*(a - b) - 1"
+          ],
+          "terms": 5
+        },
+        "equations": [
+          "5 - k",
+          "a*k - 4*a + b*k - 4*b + 3*ell",
+          "-a*b*k + 3*a*b - 2*a*ell - 2*b*ell",
+          "a*b*ell"
+        ],
+        "factor": "a*b*k*(a - b)",
+        "logical_premise": "p.209 x^15*y^40 is the radius-two T3 leader; explicit in the task, not proved by Moh's unspecified ellipsis",
+        "name": "C_THREE_SIMPLE_REDUCED_CONSEQUENCE",
+        "parameters": [
+          "a",
+          "b",
+          "ell",
+          "k"
+        ],
+        "unsaturated_degenerate_point": {
+          "a": 0,
+          "b": 0,
+          "ell": 0,
+          "k": 5
+        }
+      }
+    }
+  ]
+}
