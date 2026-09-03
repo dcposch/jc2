@@ -1,0 +1,29 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then read the charged sources and Moh's printed pages for the descent-anchor audit.Hashes match. Next I’ll read the charged reports and extract Moh’s printed pages.Charged reports match the task. Next I’ll pull Moh’s printed pages and the skeleton formulas.Hashes match. I’ll render Moh’s cited pages at 300 dpi and continue reading the descent proofs.PDF rendering is still running. I’ll inspect existing descent drivers and wait for the page images.Page images are ready. I’ll read Def 5.1, Props 5.3–5.4, 6.3–6.4, and the descent table next.Def 5.1(3) includes `1/(n − M_s − 1)`. Next I’ll read Props 5.3–5.4 and 6.3–6.4, then Lemma 5.2.p.174 says to drop `M_h = n−1`. Next I’ll measure the census counts and check the (84,56) rows.I’ll write the measurement drivers next, then run the 38/57 and 12/20 counts from the frozen census.Counts match Opus. I’ll write the audit report with the p.174 repair, the 38/57 list, and the domain restatement.The report is ~26KB, over the 12–20KB target. I’ll compress prose and keep the required row lists.I’ll keep only the charged `(n, m, M, V, d_s)` fields in the in-report list and move the extra columns to the dump file.`OPEN[DESCENT-ANCHOR]` closes as **outcome (ii)**. Prop 6.3/6.4 descent is defined on every `u_s=1` parent; Def 5.1(3) as charged is not defined on the child when `M_{s-1}=n-d_s`. Moh already gives the repair. Report: `xmodel/descent-anchor-audit-grok46-20260903.md`.
+
+**(a) PROVED-IN-SOURCE.** The displayed Def 5.1(3) at p.179 contains the factor `1/(n-M_s-1)`:
+
+```text
+δ_i = 1 − [(n−M_i) Π_{j=i+1}^s [V_j(n−M_j)−d_j]]
+          / [(n−M_s−1) Π_{j=i+1}^s [V_j(n−M_{j−1})−d_j]]
+```
+
+That factor is Lemma 5.1’s `δ_s=−1/(n-M_s−1)` under `M_s<n−1`, i.e. RADIUS-ORDER’s `c=n-M_s−1`, which D1-PIN consumes at `c=1`. Lemma 5.2 and Prop 5.3 use the same `M_s<n−1`. Search (2) / Prop 5.4 / Lemma 5.3 assert `M_s=n−2` only for a **minimal Keller counterexample**. None of the five p.207 children has top exponent `n'−2` or `n'−1`. The two named `(84,56)` `d_s=7` children have raw top `11=n'−1`; after Moh’s drop, effective tops are `6` and `10`. Prop 5.3 applies only after that drop. Negative control: omitting the printed factor on `(15,10)` gives `δ_2=−3` instead of `−1/3`.
+
+**(b) PROVED-IN-SOURCE / MEASURED.** p.207 has **zero** anchor-degenerate rows (`n'−M_2'−1 = 2,4,2,3,3`). `(99,66)` is out because `u_3=3≠1`. The printed `(84,56)` data are `d_s=4`, `M_2=64[72]`, `M_3=82`, `V_3=3`. Appendix II’s “second case” is `(21,14)` from that descent, not `(12,8)`. The `d_s=7` chains `M=[−56,42,77,82]` and `[−56,70,77,82]` are among 44 `(1)–(13)` extras at `(84,56)` (46 rows, 2 printed); they are census residue, not a misread of p.202.
+
+**(c) Outcome (ii), not (i) or (iii).** Prop 6.3’s hypotheses (`deg=deg_y`, `δ_s=−1`, and `u_s=1` ⇒ Prop 6.4) do not fail on the parent. p.174 Definition–Remark: if `M_h=n−1`, **drop it**; `δ_h=δ_{h−1}=−1/(n−M_{h−1}−1)`, finite. That is the Jacobian term (Lemma 2.1 / p.151), present in every Jacobian pair, not a disc collapse and not a kill of the 38. Repaired rule **Φ_eff** = `(k+1)·`Def 5.1(3) after the drop; 10/10 p.207 rationals still MATCH.
+
+**(d) MEASURED.** Opus’s counts reproduce on the frozen drivers:
+
+| | `n≤100` | `n=108` |
+|---|---|---|
+| ODE survivors | 658→58 | 217→21→20 |
+| `u_s=1` | 57 | 19 |
+| anchor-zero | **38** | **12** |
+| Φ as charged | 19 | 7 |
+| Φ_eff after p.174 drop | **57** | **19** |
+| `u_s>1 ∪` still-undefined | **1/58** (`(99,66)`) | **1/20** |
+
+`OPEN[MINOR-DICHOTOMY]` is not enlarged. Theorem (T) via Φ_eff covers **57/57** and **19/19** descendable screened rows. If (T) also wants `s_eff=2`, that is 29/57 and 12/19 (at `n=108` those 12 are the former anchor-zero rows). The 38+12 rows with `(n,m,M,V,d_s)` are listed in the report and in `box/anchor-audit-20260903/anchor_zero_rows.txt`.
+DIVERT path=xmodel/descent-anchor-audit-grok46-20260903.md status=CLEAN body_bytes=20795 body_sha256=5c5d0e132196b3110c9027d220244534b5763a7d311bcc8efb7219ac596bfa77

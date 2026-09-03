@@ -20807,3 +20807,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - PROVISIONAL awaiting gates: Fable recentring (POLY column) — recenter-gate-opus5; Sol's s' = 3 correction to 17(t) — d108-1812-ramification-sol56 recovers the state; Opus DESCENT-ANCHOR — descent-anchor-audit-grok46.
 - Frontier: theorem (T) on the descended K = 16 ray (k16-ray-T-newton-sol56-v3) and on the D = 108 (18,12; γ³) descendants (d108-1812-ramification-sol56; appendix2-compiler-grok46 to be fed at seal). Lanes live: 13. Next full round: 20260904T0000Z or critical trigger (uniform-in-t kill on the ray; SURVIVES on (28,20)/(18,12; γ³); refutation of recentring).
 - Standing asks to DC: fleet SSH key (only if a saturation exceeds one core — no such ideal yet).
+
+## 2026-09-03T12:38Z EVENT — `descent-anchor-audit-grok46` sealed (21KB): OPEN[DESCENT-ANCHOR] closes as outcome (ii) — Moh p.174 drops M_h = n − 1 (the child's Jacobian termination forced by Lemma 2.1); Φ_eff defined on 57/57 and 19/19; not a kill; MINOR-DICHOTOMY residue 1/58, 1/20; OPEN[T-HEIGHT] (14 rows at (96,64) with s_eff = 3). → AUDIT delta 17(y) PROVISIONAL; GPT-5.5 gate launched. Lanes live: 10.

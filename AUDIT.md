@@ -16234,3 +16234,31 @@ has genus ≥ 1; with the unramified-fibre-map identity of Fable §5.2 (PROVED-H
 line, UNREVIEWED): Σ_{non-proper}(e_P − 1) ≥ N + r_prop. Ledger action: OPEN[MF-RATIONAL]
 → CLOSED (EXTERNAL); MF-DEFECT's 2g_L + θ_inf ≥ 2 sharpens to g_L ≥ 1 once the papers'
 hypotheses are confirmed (24h web-sweep item: fetch the two 1990s papers' statements).
+
+## INTEGRATION #17 DELTA (y) (2026-09-03T12:38Z, PROVISIONAL, producer Grok, gate GPT-5.5 launched): OPEN[DESCENT-ANCHOR] CLOSES AS OUTCOME (ii) — Moh's p.174 normalisation (drop M_h = n−1) repairs Φ; Φ_eff defined on 57/57 (n ≤ 100) and 19/19 (n = 108); not a kill; MINOR-DICHOTOMY residue stays 1/58, 1/20
+
+`descent-anchor-audit-grok46-20260903.md` (Grok; pages 151, 173–185, 196–199, 202,
+207–212 at 300 dpi; box/anchor-audit-20260903/measure_anchor.py). SOURCE-READ: Def
+5.1(3) as printed at p.179 carries the factor 1/(n − M_s − 1) (not a transcription
+artefact; the same factor opens the page; Lemma 5.1 p.176 gives δ_s = −1/(n − M_s − 1)
+under M_s < n − 1); Moh p.174 Definition–Remark: if M_h = n − 1 it is dropped — the last
+EFFECTIVE exponent is M_s; Lemma 2.1 forces every Jacobian pair to HAVE M_h = n − 1 in the
+full sequence, so a descent map landing on that slot is the child's generic Jacobian
+termination, not a degeneration (Prop 5.1(1): the h- and (h−1)-discs coincide, radius
+−1/(n − M_{h−1} − 1), finite). Prop 6.3's hypotheses (g monic, deg g = deg_y g, δ_s = −1,
+δ*_{s−1} ≥ v_s/u_s — the last automatic by Prop 6.4 when u_s = 1) never mention the child's
+anchor: outcome (i) false; outcome (iii) false as a kill. Repaired rule Φ_eff: after the
+Prop 6.3 image (n', m', M_i' = M_i/d_s, V_i' = V_i, k = V_s − u_s − 1), if M'_{s'} = n' − 1 drop
+it and set V_{s*+1} = d_{s*+1} on the truncated dictionaries; then δ_i' = (k+1)·Def
+5.1(3)(effective tuple). Drop is a no-op on all five p.207 u_s = 1 rows (10/10 rationals
+still MATCH); dropping the printed factor instead breaks (15,10) (δ₂ = −3 ≠ −1/3).
+MEASURED: n ≤ 100: 658 → 58 ODE; 57 descendable, 38 anchor-zero, 19 evaluable as charged,
+0 still undefined after the drop; n = 108: 217 → 21 → 20; 19 descendable, 12 anchor-zero,
+7 evaluable as charged, 0 undefined after the drop; u_s > 1 ∪ undefined = 1/58 ((99,66)) and
+1/20 ((108,72; M = (81,106); V = (7,7); d_s = 9, u_s = 2)). Height after Φ_eff: s_eff = 2
+on 29/57 and 12/19; s_eff = 3 on 14/57 (all (96,64), parent s = 5) → OPEN[T-HEIGHT]
+(second descent if u_{s*} = 1; desk). p.207 contains zero anchor-degenerate rows; the
+(84,56) d_s = 7 rows are census extras, not printed. Consequence: theorem (T) as "Φ_eff
+defined" covers every descendable screened row; (T) as "height 2" covers 29/57, 12/19 —
+consistent with Sol's (T≤4) framing (delta 17(w) synthesis) and with the K = 16 ray
+(anchor 2 ≠ 0, s' = 2). Different-model gate: `anchor-audit-gate-gpt55-20260903`.
