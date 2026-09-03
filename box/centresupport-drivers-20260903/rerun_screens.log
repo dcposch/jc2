@@ -1,0 +1,15 @@
+input rows: 658 printed: 6
+PARTITION              rows=  348 classes= 52 printed=6/6 excess= 342 (0.4s)
+PARTITION_ODE          rows=  347 classes= 52 printed=6/6 excess= 341 (0.3s)
+PARTITION_PASS         rows=  330 classes= 52 printed=6/6 excess= 324 (0.2s)
+GATED                  rows=  216 classes= 21 printed=6/6 excess= 210 (0.6s)
+GATED_ODE              rows=  215 classes= 21 printed=6/6 excess= 209 (0.6s)
+GATED_PASS             rows=  204 classes= 21 printed=6/6 excess= 198 (0.6s)
+UNGATED                rows=   60 classes= 12 printed=6/6 excess=  54 (0.3s)
+UNGATED_ODE            rows=   58 classes= 12 printed=6/6 excess=  52 (0.3s)
+UNGATED_PASS           rows=   55 classes= 11 printed=6/6 excess=  49 (0.3s)
+
+restoration check: GATED_PASS rows -> UNGATED_PASS rows  (charged 204 -> 55 if lemma accepted)
+  GATED_PASS  = 204/21
+  UNGATED_PASS= 55/11
+  restored 204->55? True

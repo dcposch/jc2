@@ -1,0 +1,157 @@
+==============================================================================
+PART 0.  Def 5.1(1) degrees and p.201 Galois data
+==============================================================================
+
+75-3: n*=3 m*=2 V2=3  deg g_sigma=9 deg T_sigma=6
+  delta={1: '1/2', 2: '1/5', 3: '-1'}
+  L1=5 A1=2  L2=1 A2=5
+  D2: P=20 Q=16 P mod A2=0
+  (10)/(11)=(True, True, False)  (12)/(13)=(True, False, True)
+  free in (delta2, delta1) = ['2/5']
+  selected V2 is a (11)-style zero factor? False
+
+75-2: n*=3 m*=2 V2=2  deg g_sigma=6 deg T_sigma=4
+  delta={1: '2/3', 2: '1/5', 3: '-1'}
+  L1=5 A1=3  L2=1 A2=5
+  D2: P=20 Q=16 P mod A2=0
+  (10)/(11)=(True, True, False)  (12)/(13)=(True, True, False)
+  free in (delta2, delta1) = ['2/5', '3/5']
+  selected V2 is a (11)-style zero factor? False
+
+64: n*=4 m*=3 V2=3  deg g_sigma=12 deg T_sigma=9
+  delta={1: '9/16', 2: '1/4', 3: '-1'}
+  L1=4 A1=4  L2=1 A2=4
+  D2: P=12 Q=9 P mod A2=0
+  (10)/(11)=(True, True, False)  (12)/(13)=(True, True, False)
+  free in (delta2, delta1) = ['1/2']
+  selected V2 is a (11)-style zero factor? False
+
+99: n*=3 m*=2 V2=8  deg g_sigma=24 deg T_sigma=16
+  delta={1: '4/9', 2: '1/3', 3: '-1'}
+  L1=3 A1=3  L2=1 A2=3
+  D2: P=24 Q=16 P mod A2=0
+  (10)/(11)=(True, True, False)  (12)/(13)=(True, True, False)
+  free in (delta2, delta1) = []
+  selected V2 is a (11)-style zero factor? False
+  [ok]   (75,3) deg g_sigma = n* V2 = 9
+  [ok]   (75,3) deg T_sigma = m* V2 = 6
+  [ok]   (75,3) A1=2 A2=5
+  [ok]   (75,3) free={2/5}
+  [ok]   (64) free={1/2}
+  [ok]   (99) free empty
+  [ok]   all four printed selected paths are (10), not (11)
+
+==============================================================================
+PART 1.  p.201 conjugation action on a centre monomial t^e
+==============================================================================
+
+75-3: parent Galois order A2=5 (tbar^5=t at D2)
+  t^{2/5}: tbar-exp at D2 = 2; parent-invariant iff e in Z? False
+           tbar-exp at D1 = 4; A1-increment always fixes (1/L1)Z
+  [ok]   75-3 free 2/5 NOT invariant under parent Galois of order A2=5
+
+75-2: parent Galois order A2=5 (tbar^5=t at D2)
+  t^{2/5}: tbar-exp at D2 = 2; parent-invariant iff e in Z? False
+           tbar-exp at D1 = 6; A1-increment always fixes (1/L1)Z
+  [ok]   75-2 free 2/5 NOT invariant under parent Galois of order A2=5
+  t^{3/5}: tbar-exp at D2 = 3; parent-invariant iff e in Z? False
+           tbar-exp at D1 = 9; A1-increment always fixes (1/L1)Z
+  [ok]   75-2 free 3/5 NOT invariant under parent Galois of order A2=5
+
+64: parent Galois order A2=4 (tbar^4=t at D2)
+  t^{1/2}: tbar-exp at D2 = 2; parent-invariant iff e in Z? False
+           tbar-exp at D1 = 8; A1-increment always fixes (1/L1)Z
+  [ok]   64 free 1/2 NOT invariant under parent Galois of order A2=4
+
+99: parent Galois order A2=3 (tbar^3=t at D2)
+
+Explicit cyclotomic: A2=5, e=2/5, t = u^5, t^{2/5}=u^2
+  [ok]   omega^2 != 1 for primitive 5th root
+  omega^2 = exp(4*I*pi/5)   (a t^{2/5} |-> a omega^2 t^{2/5})
+  [ok]   A1=2 fixes t^{2/5}  ((-1)^4=1)
+
+==============================================================================
+PART 2.  Galois-orbit polynomials over Q  (C2 != 0 vs C2 = 0)
+==============================================================================
+  resultant deg_y = 5
+  time 0.014s
+  [ok]   nonzero-C orbit polynomial has coefficients in Q[C,lam,y,u] (no cyclotomic leftover)
+  [ok]   orbit poly is monic of degree A2=5 in y
+  lam=0: -C**5*u**5 + y**5
+  [ok]   lam=0 reduces to y^5 - C^5 u^5
+  generic-lam polynomial:
+    (-C**2*lam*u**2 - C*u + y)*(C**8*lam**4*u**8 - C**7*lam**3*u**7 + C**6*lam**3*u**6*y + C**6*lam**2*u**6 - 2*C**5*lam**2*u**5*y - C**5*lam*u**5 + C**4*lam**2*u**4*y**2 + 3*C**4*lam*u**4*y + C**4*u**4 + 2*C**3*lam*u**3*y**2 + C**3*u**3*y + C**2*lam*u**2*y**3 + C**2*u**2*y**2 + C*u*y**3 + y**4)
+    [y^0] deg_u=10  -C**10*lam**5*u**10 - C**5*u**5
+    [y^1] deg_u=5  -5*C**5*lam*u**5
+    [y^2] deg_u=5  -5*C**5*lam**2*u**5
+    [y^5] deg_u=0  1
+
+  C2=0, a t^{2/5}, A=5: orbit polynomial = -a**5*u**10 + y**5
+  [ok]   C2=0 orbit is y^5 - a^5 u^{10}  (5 distinct a-images)
+  [ok]   a=0 collapses the C2=0 orbit to y^5 (one centre)
+
+  (64,48) C2=0, a t^{1/2}, A2=4:
+    a**4*u**8 - 2*a**2*u**4*y**2 + y**4
+  [ok]   (64) C2=0 orbit factors as (y^2 - a^2 u^4)^2  (2 distinct a-images)
+  [ok]   (64) a=0 collapses to y^4
+
+  (99,66): empty free set, no orbit polynomial to form.
+  [ok]   (99) control: no non-radius non-integer lattice point in (delta2,delta1)
+
+==============================================================================
+PART 3.  Prop 1.2 root-product: g_sigma independent of the centre
+==============================================================================
+  Pi_j (sigma - tau_j) / t^{delta1} = -al0*al1*al2*al3*al4*al5*al6*al7*al8 + al0*al1*al2*al3*al4*al5*al6*al7*pi + al0*al1*al2*al3*al4*al5*al6*al8*pi - al0*al1*al2*al3*al4*al5*al6*pi**2 + al0*al1*al2*al3*al4*al5*al7*al8*pi - al0*al1*al2*al3*al4*al5*al7*pi**2 - al0*al1*al2*al3*al4*al5*al8*pi**2 + al0*al1*al2*al3*al4*al5*pi**3 + al0*al1*al2*al3*al4*al6*al7*al8*pi - al0*al1*al2*al3*al4*al6*al7*pi**2 - al0*al1*al2*al3*al4*al6*al8*pi**2 + al0*al1*al2*al3*al4*al6*pi**3 - al0*al1*al2*al3*al4*al7*al8*pi**2 + al0*al1*al2*al3*al4*al7*pi**3 + al0*al1*al2*al3*al4*al8*pi**3 - al0*al1*al2*al3*al4*pi**4 + al0*al1*al2*al3*al5*al6*al7*al8*pi - al0*al1*al2*al3*al5*al6*al7*pi**2 - al0*al1*al2*al3*al5*al6*al8*pi**2 + al0*al1*al2*al3*al5*al6*pi**3 - al0*al1*al2*al3*al5*al7*al8*pi**2 + al0*al1*al2*al3*al5*al7*pi**3 + al0*al1*al2*al3*al5*al8*pi**3 - al0*al1*al2*al3*al5*pi**4 - al0*al1*al2*al3*al6*al7*al8*pi**2 + al0*al1*al2*al3*al6*al7*pi**3 + al0*al1*al2*al3*al6*al8*pi**3 - al0*al1*al2*al3*al6*pi**4 + al0*al1*al2*al3*al7*al8*pi**3 - al0*al1*al2*al3*al7*pi**4 - al0*al1*al2*al3*al8*pi**4 + al0*al1*al2*al3*pi**5 + al0*al1*al2*al4*al5*al6*al7*al8*pi - al0*al1*al2*al4*al5*al6*al7*pi**2 - al0*al1*al2*al4*al5*al6*al8*pi**2 + al0*al1*al2*al4*al5*al6*pi**3 - al0*al1*al2*al4*al5*al7*al8*pi**2 + al0*al1*al2*al4*al5*al7*pi**3 + al0*al1*al2*al4*al5*al8*pi**3 - al0*al1*al2*al4*al5*pi**4 - al0*al1*al2*al4*al6*al7*al8*pi**2 + al0*al1*al2*al4*al6*al7*pi**3 + al0*al1*al2*al4*al6*al8*pi**3 - al0*al1*al2*al4*al6*pi**4 + al0*al1*al2*al4*al7*al8*pi**3 - al0*al1*al2*al4*al7*pi**4 - al0*al1*al2*al4*al8*pi**4 + al0*al1*al2*al4*pi**5 - al0*al1*al2*al5*al6*al7*al8*pi**2 + al0*al1*al2*al5*al6*al7*pi**3 + al0*al1*al2*al5*al6*al8*pi**3 - al0*al1*al2*al5*al6*pi**4 + al0*al1*al2*al5*al7*al8*pi**3 - al0*al1*al2*al5*al7*pi**4 - al0*al1*al2*al5*al8*pi**4 + al0*al1*al2*al5*pi**5 + al0*al1*al2*al6*al7*al8*pi**3 - al0*al1*al2*al6*al7*pi**4 - al0*al1*al2*al6*al8*pi**4 + al0*al1*al2*al6*pi**5 - al0*al1*al2*al7*al8*pi**4 + al0*al1*al2*al7*pi**5 + al0*al1*al2*al8*pi**5 - al0*al1*al2*pi**6 + al0*al1*al3*al4*al5*al6*al7*al8*pi - al0*al1*al3*al4*al5*al6*al7*pi**2 - al0*al1*al3*al4*al5*al6*al8*pi**2 + al0*al1*al3*al4*al5*al6*pi**3 - al0*al1*al3*al4*al5*al7*al8*pi**2 + al0*al1*al3*al4*al5*al7*pi**3 + al0*al1*al3*al4*al5*al8*pi**3 - al0*al1*al3*al4*al5*pi**4 - al0*al1*al3*al4*al6*al7*al8*pi**2 + al0*al1*al3*al4*al6*al7*pi**3 + al0*al1*al3*al4*al6*al8*pi**3 - al0*al1*al3*al4*al6*pi**4 + al0*al1*al3*al4*al7*al8*pi**3 - al0*al1*al3*al4*al7*pi**4 - al0*al1*al3*al4*al8*pi**4 + al0*al1*al3*al4*pi**5 - al0*al1*al3*al5*al6*al7*al8*pi**2 + al0*al1*al3*al5*al6*al7*pi**3 + al0*al1*al3*al5*al6*al8*pi**3 - al0*al1*al3*al5*al6*pi**4 + al0*al1*al3*al5*al7*al8*pi**3 - al0*al1*al3*al5*al7*pi**4 - al0*al1*al3*al5*al8*pi**4 + al0*al1*al3*al5*pi**5 + al0*al1*al3*al6*al7*al8*pi**3 - al0*al1*al3*al6*al7*pi**4 - al0*al1*al3*al6*al8*pi**4 + al0*al1*al3*al6*pi**5 - al0*al1*al3*al7*al8*pi**4 + al0*al1*al3*al7*pi**5 + al0*al1*al3*al8*pi**5 - al0*al1*al3*pi**6 - al0*al1*al4*al5*al6*al7*al8*pi**2 + al0*al1*al4*al5*al6*al7*pi**3 + al0*al1*al4*al5*al6*al8*pi**3 - al0*al1*al4*al5*al6*pi**4 + al0*al1*al4*al5*al7*al8*pi**3 - al0*al1*al4*al5*al7*pi**4 - al0*al1*al4*al5*al8*pi**4 + al0*al1*al4*al5*pi**5 + al0*al1*al4*al6*al7*al8*pi**3 - al0*al1*al4*al6*al7*pi**4 - al0*al1*al4*al6*al8*pi**4 + al0*al1*al4*al6*pi**5 - al0*al1*al4*al7*al8*pi**4 + al0*al1*al4*al7*pi**5 + al0*al1*al4*al8*pi**5 - al0*al1*al4*pi**6 + al0*al1*al5*al6*al7*al8*pi**3 - al0*al1*al5*al6*al7*pi**4 - al0*al1*al5*al6*al8*pi**4 + al0*al1*al5*al6*pi**5 - al0*al1*al5*al7*al8*pi**4 + al0*al1*al5*al7*pi**5 + al0*al1*al5*al8*pi**5 - al0*al1*al5*pi**6 - al0*al1*al6*al7*al8*pi**4 + al0*al1*al6*al7*pi**5 + al0*al1*al6*al8*pi**5 - al0*al1*al6*pi**6 + al0*al1*al7*al8*pi**5 - al0*al1*al7*pi**6 - al0*al1*al8*pi**6 + al0*al1*pi**7 + al0*al2*al3*al4*al5*al6*al7*al8*pi - al0*al2*al3*al4*al5*al6*al7*pi**2 - al0*al2*al3*al4*al5*al6*al8*pi**2 + al0*al2*al3*al4*al5*al6*pi**3 - al0*al2*al3*al4*al5*al7*al8*pi**2 + al0*al2*al3*al4*al5*al7*pi**3 + al0*al2*al3*al4*al5*al8*pi**3 - al0*al2*al3*al4*al5*pi**4 - al0*al2*al3*al4*al6*al7*al8*pi**2 + al0*al2*al3*al4*al6*al7*pi**3 + al0*al2*al3*al4*al6*al8*pi**3 - al0*al2*al3*al4*al6*pi**4 + al0*al2*al3*al4*al7*al8*pi**3 - al0*al2*al3*al4*al7*pi**4 - al0*al2*al3*al4*al8*pi**4 + al0*al2*al3*al4*pi**5 - al0*al2*al3*al5*al6*al7*al8*pi**2 + al0*al2*al3*al5*al6*al7*pi**3 + al0*al2*al3*al5*al6*al8*pi**3 - al0*al2*al3*al5*al6*pi**4 + al0*al2*al3*al5*al7*al8*pi**3 - al0*al2*al3*al5*al7*pi**4 - al0*al2*al3*al5*al8*pi**4 + al0*al2*al3*al5*pi**5 + al0*al2*al3*al6*al7*al8*pi**3 - al0*al2*al3*al6*al7*pi**4 - al0*al2*al3*al6*al8*pi**4 + al0*al2*al3*al6*pi**5 - al0*al2*al3*al7*al8*pi**4 + al0*al2*al3*al7*pi**5 + al0*al2*al3*al8*pi**5 - al0*al2*al3*pi**6 - al0*al2*al4*al5*al6*al7*al8*pi**2 + al0*al2*al4*al5*al6*al7*pi**3 + al0*al2*al4*al5*al6*al8*pi**3 - al0*al2*al4*al5*al6*pi**4 + al0*al2*al4*al5*al7*al8*pi**3 - al0*al2*al4*al5*al7*pi**4 - al0*al2*al4*al5*al8*pi**4 + al0*al2*al4*al5*pi**5 + al0*al2*al4*al6*al7*al8*pi**3 - al0*al2*al4*al6*al7*pi**4 - al0*al2*al4*al6*al8*pi**4 + al0*al2*al4*al6*pi**5 - al0*al2*al4*al7*al8*pi**4 + al0*al2*al4*al7*pi**5 + al0*al2*al4*al8*pi**5 - al0*al2*al4*pi**6 + al0*al2*al5*al6*al7*al8*pi**3 - al0*al2*al5*al6*al7*pi**4 - al0*al2*al5*al6*al8*pi**4 + al0*al2*al5*al6*pi**5 - al0*al2*al5*al7*al8*pi**4 + al0*al2*al5*al7*pi**5 + al0*al2*al5*al8*pi**5 - al0*al2*al5*pi**6 - al0*al2*al6*al7*al8*pi**4 + al0*al2*al6*al7*pi**5 + al0*al2*al6*al8*pi**5 - al0*al2*al6*pi**6 + al0*al2*al7*al8*pi**5 - al0*al2*al7*pi**6 - al0*al2*al8*pi**6 + al0*al2*pi**7 - al0*al3*al4*al5*al6*al7*al8*pi**2 + al0*al3*al4*al5*al6*al7*pi**3 + al0*al3*al4*al5*al6*al8*pi**3 - al0*al3*al4*al5*al6*pi**4 + al0*al3*al4*al5*al7*al8*pi**3 - al0*al3*al4*al5*al7*pi**4 - al0*al3*al4*al5*al8*pi**4 + al0*al3*al4*al5*pi**5 + al0*al3*al4*al6*al7*al8*pi**3 - al0*al3*al4*al6*al7*pi**4 - al0*al3*al4*al6*al8*pi**4 + al0*al3*al4*al6*pi**5 - al0*al3*al4*al7*al8*pi**4 + al0*al3*al4*al7*pi**5 + al0*al3*al4*al8*pi**5 - al0*al3*al4*pi**6 + al0*al3*al5*al6*al7*al8*pi**3 - al0*al3*al5*al6*al7*pi**4 - al0*al3*al5*al6*al8*pi**4 + al0*al3*al5*al6*pi**5 - al0*al3*al5*al7*al8*pi**4 + al0*al3*al5*al7*pi**5 + al0*al3*al5*al8*pi**5 - al0*al3*al5*pi**6 - al0*al3*al6*al7*al8*pi**4 + al0*al3*al6*al7*pi**5 + al0*al3*al6*al8*pi**5 - al0*al3*al6*pi**6 + al0*al3*al7*al8*pi**5 - al0*al3*al7*pi**6 - al0*al3*al8*pi**6 + al0*al3*pi**7 + al0*al4*al5*al6*al7*al8*pi**3 - al0*al4*al5*al6*al7*pi**4 - al0*al4*al5*al6*al8*pi**4 + al0*al4*al5*al6*pi**5 - al0*al4*al5*al7*al8*pi**4 + al0*al4*al5*al7*pi**5 + al0*al4*al5*al8*pi**5 - al0*al4*al5*pi**6 - al0*al4*al6*al7*al8*pi**4 + al0*al4*al6*al7*pi**5 + al0*al4*al6*al8*pi**5 - al0*al4*al6*pi**6 + al0*al4*al7*al8*pi**5 - al0*al4*al7*pi**6 - al0*al4*al8*pi**6 + al0*al4*pi**7 - al0*al5*al6*al7*al8*pi**4 + al0*al5*al6*al7*pi**5 + al0*al5*al6*al8*pi**5 - al0*al5*al6*pi**6 + al0*al5*al7*al8*pi**5 - al0*al5*al7*pi**6 - al0*al5*al8*pi**6 + al0*al5*pi**7 + al0*al6*al7*al8*pi**5 - al0*al6*al7*pi**6 - al0*al6*al8*pi**6 + al0*al6*pi**7 - al0*al7*al8*pi**6 + al0*al7*pi**7 + al0*al8*pi**7 - al0*pi**8 + al1*al2*al3*al4*al5*al6*al7*al8*pi - al1*al2*al3*al4*al5*al6*al7*pi**2 - al1*al2*al3*al4*al5*al6*al8*pi**2 + al1*al2*al3*al4*al5*al6*pi**3 - al1*al2*al3*al4*al5*al7*al8*pi**2 + al1*al2*al3*al4*al5*al7*pi**3 + al1*al2*al3*al4*al5*al8*pi**3 - al1*al2*al3*al4*al5*pi**4 - al1*al2*al3*al4*al6*al7*al8*pi**2 + al1*al2*al3*al4*al6*al7*pi**3 + al1*al2*al3*al4*al6*al8*pi**3 - al1*al2*al3*al4*al6*pi**4 + al1*al2*al3*al4*al7*al8*pi**3 - al1*al2*al3*al4*al7*pi**4 - al1*al2*al3*al4*al8*pi**4 + al1*al2*al3*al4*pi**5 - al1*al2*al3*al5*al6*al7*al8*pi**2 + al1*al2*al3*al5*al6*al7*pi**3 + al1*al2*al3*al5*al6*al8*pi**3 - al1*al2*al3*al5*al6*pi**4 + al1*al2*al3*al5*al7*al8*pi**3 - al1*al2*al3*al5*al7*pi**4 - al1*al2*al3*al5*al8*pi**4 + al1*al2*al3*al5*pi**5 + al1*al2*al3*al6*al7*al8*pi**3 - al1*al2*al3*al6*al7*pi**4 - al1*al2*al3*al6*al8*pi**4 + al1*al2*al3*al6*pi**5 - al1*al2*al3*al7*al8*pi**4 + al1*al2*al3*al7*pi**5 + al1*al2*al3*al8*pi**5 - al1*al2*al3*pi**6 - al1*al2*al4*al5*al6*al7*al8*pi**2 + al1*al2*al4*al5*al6*al7*pi**3 + al1*al2*al4*al5*al6*al8*pi**3 - al1*al2*al4*al5*al6*pi**4 + al1*al2*al4*al5*al7*al8*pi**3 - al1*al2*al4*al5*al7*pi**4 - al1*al2*al4*al5*al8*pi**4 + al1*al2*al4*al5*pi**5 + al1*al2*al4*al6*al7*al8*pi**3 - al1*al2*al4*al6*al7*pi**4 - al1*al2*al4*al6*al8*pi**4 + al1*al2*al4*al6*pi**5 - al1*al2*al4*al7*al8*pi**4 + al1*al2*al4*al7*pi**5 + al1*al2*al4*al8*pi**5 - al1*al2*al4*pi**6 + al1*al2*al5*al6*al7*al8*pi**3 - al1*al2*al5*al6*al7*pi**4 - al1*al2*al5*al6*al8*pi**4 + al1*al2*al5*al6*pi**5 - al1*al2*al5*al7*al8*pi**4 + al1*al2*al5*al7*pi**5 + al1*al2*al5*al8*pi**5 - al1*al2*al5*pi**6 - al1*al2*al6*al7*al8*pi**4 + al1*al2*al6*al7*pi**5 + al1*al2*al6*al8*pi**5 - al1*al2*al6*pi**6 + al1*al2*al7*al8*pi**5 - al1*al2*al7*pi**6 - al1*al2*al8*pi**6 + al1*al2*pi**7 - al1*al3*al4*al5*al6*al7*al8*pi**2 + al1*al3*al4*al5*al6*al7*pi**3 + al1*al3*al4*al5*al6*al8*pi**3 - al1*al3*al4*al5*al6*pi**4 + al1*al3*al4*al5*al7*al8*pi**3 - al1*al3*al4*al5*al7*pi**4 - al1*al3*al4*al5*al8*pi**4 + al1*al3*al4*al5*pi**5 + al1*al3*al4*al6*al7*al8*pi**3 - al1*al3*al4*al6*al7*pi**4 - al1*al3*al4*al6*al8*pi**4 + al1*al3*al4*al6*pi**5 - al1*al3*al4*al7*al8*pi**4 + al1*al3*al4*al7*pi**5 + al1*al3*al4*al8*pi**5 - al1*al3*al4*pi**6 + al1*al3*al5*al6*al7*al8*pi**3 - al1*al3*al5*al6*al7*pi**4 - al1*al3*al5*al6*al8*pi**4 + al1*al3*al5*al6*pi**5 - al1*al3*al5*al7*al8*pi**4 + al1*al3*al5*al7*pi**5 + al1*al3*al5*al8*pi**5 - al1*al3*al5*pi**6 - al1*al3*al6*al7*al8*pi**4 + al1*al3*al6*al7*pi**5 + al1*al3*al6*al8*pi**5 - al1*al3*al6*pi**6 + al1*al3*al7*al8*pi**5 - al1*al3*al7*pi**6 - al1*al3*al8*pi**6 + al1*al3*pi**7 + al1*al4*al5*al6*al7*al8*pi**3 - al1*al4*al5*al6*al7*pi**4 - al1*al4*al5*al6*al8*pi**4 + al1*al4*al5*al6*pi**5 - al1*al4*al5*al7*al8*pi**4 + al1*al4*al5*al7*pi**5 + al1*al4*al5*al8*pi**5 - al1*al4*al5*pi**6 - al1*al4*al6*al7*al8*pi**4 + al1*al4*al6*al7*pi**5 + al1*al4*al6*al8*pi**5 - al1*al4*al6*pi**6 + al1*al4*al7*al8*pi**5 - al1*al4*al7*pi**6 - al1*al4*al8*pi**6 + al1*al4*pi**7 - al1*al5*al6*al7*al8*pi**4 + al1*al5*al6*al7*pi**5 + al1*al5*al6*al8*pi**5 - al1*al5*al6*pi**6 + al1*al5*al7*al8*pi**5 - al1*al5*al7*pi**6 - al1*al5*al8*pi**6 + al1*al5*pi**7 + al1*al6*al7*al8*pi**5 - al1*al6*al7*pi**6 - al1*al6*al8*pi**6 + al1*al6*pi**7 - al1*al7*al8*pi**6 + al1*al7*pi**7 + al1*al8*pi**7 - al1*pi**8 - al2*al3*al4*al5*al6*al7*al8*pi**2 + al2*al3*al4*al5*al6*al7*pi**3 + al2*al3*al4*al5*al6*al8*pi**3 - al2*al3*al4*al5*al6*pi**4 + al2*al3*al4*al5*al7*al8*pi**3 - al2*al3*al4*al5*al7*pi**4 - al2*al3*al4*al5*al8*pi**4 + al2*al3*al4*al5*pi**5 + al2*al3*al4*al6*al7*al8*pi**3 - al2*al3*al4*al6*al7*pi**4 - al2*al3*al4*al6*al8*pi**4 + al2*al3*al4*al6*pi**5 - al2*al3*al4*al7*al8*pi**4 + al2*al3*al4*al7*pi**5 + al2*al3*al4*al8*pi**5 - al2*al3*al4*pi**6 + al2*al3*al5*al6*al7*al8*pi**3 - al2*al3*al5*al6*al7*pi**4 - al2*al3*al5*al6*al8*pi**4 + al2*al3*al5*al6*pi**5 - al2*al3*al5*al7*al8*pi**4 + al2*al3*al5*al7*pi**5 + al2*al3*al5*al8*pi**5 - al2*al3*al5*pi**6 - al2*al3*al6*al7*al8*pi**4 + al2*al3*al6*al7*pi**5 + al2*al3*al6*al8*pi**5 - al2*al3*al6*pi**6 + al2*al3*al7*al8*pi**5 - al2*al3*al7*pi**6 - al2*al3*al8*pi**6 + al2*al3*pi**7 + al2*al4*al5*al6*al7*al8*pi**3 - al2*al4*al5*al6*al7*pi**4 - al2*al4*al5*al6*al8*pi**4 + al2*al4*al5*al6*pi**5 - al2*al4*al5*al7*al8*pi**4 + al2*al4*al5*al7*pi**5 + al2*al4*al5*al8*pi**5 - al2*al4*al5*pi**6 - al2*al4*al6*al7*al8*pi**4 + al2*al4*al6*al7*pi**5 + al2*al4*al6*al8*pi**5 - al2*al4*al6*pi**6 + al2*al4*al7*al8*pi**5 - al2*al4*al7*pi**6 - al2*al4*al8*pi**6 + al2*al4*pi**7 - al2*al5*al6*al7*al8*pi**4 + al2*al5*al6*al7*pi**5 + al2*al5*al6*al8*pi**5 - al2*al5*al6*pi**6 + al2*al5*al7*al8*pi**5 - al2*al5*al7*pi**6 - al2*al5*al8*pi**6 + al2*al5*pi**7 + al2*al6*al7*al8*pi**5 - al2*al6*al7*pi**6 - al2*al6*al8*pi**6 + al2*al6*pi**7 - al2*al7*al8*pi**6 + al2*al7*pi**7 + al2*al8*pi**7 - al2*pi**8 + al3*al4*al5*al6*al7*al8*pi**3 - al3*al4*al5*al6*al7*pi**4 - al3*al4*al5*al6*al8*pi**4 + al3*al4*al5*al6*pi**5 - al3*al4*al5*al7*al8*pi**4 + al3*al4*al5*al7*pi**5 + al3*al4*al5*al8*pi**5 - al3*al4*al5*pi**6 - al3*al4*al6*al7*al8*pi**4 + al3*al4*al6*al7*pi**5 + al3*al4*al6*al8*pi**5 - al3*al4*al6*pi**6 + al3*al4*al7*al8*pi**5 - al3*al4*al7*pi**6 - al3*al4*al8*pi**6 + al3*al4*pi**7 - al3*al5*al6*al7*al8*pi**4 + al3*al5*al6*al7*pi**5 + al3*al5*al6*al8*pi**5 - al3*al5*al6*pi**6 + al3*al5*al7*al8*pi**5 - al3*al5*al7*pi**6 - al3*al5*al8*pi**6 + al3*al5*pi**7 + al3*al6*al7*al8*pi**5 - al3*al6*al7*pi**6 - al3*al6*al8*pi**6 + al3*al6*pi**7 - al3*al7*al8*pi**6 + al3*al7*pi**7 + al3*al8*pi**7 - al3*pi**8 - al4*al5*al6*al7*al8*pi**4 + al4*al5*al6*al7*pi**5 + al4*al5*al6*al8*pi**5 - al4*al5*al6*pi**6 + al4*al5*al7*al8*pi**5 - al4*al5*al7*pi**6 - al4*al5*al8*pi**6 + al4*al5*pi**7 + al4*al6*al7*al8*pi**5 - al4*al6*al7*pi**6 - al4*al6*al8*pi**6 + al4*al6*pi**7 - al4*al7*al8*pi**6 + al4*al7*pi**7 + al4*al8*pi**7 - al4*pi**8 + al5*al6*al7*al8*pi**5 - al5*al6*al7*pi**6 - al5*al6*al8*pi**6 + al5*al6*pi**7 - al5*al7*al8*pi**6 + al5*al7*pi**7 + al5*al8*pi**7 - al5*pi**8 - al6*al7*al8*pi**6 + al6*al7*pi**7 + al6*al8*pi**7 - al6*pi**8 + al7*al8*pi**7 - al7*pi**8 - al8*pi**8 + pi**9
+  [ok]   leading D1 product is Pi(pi-alpha_j), independent of a and C2
+  [ok]   sibling difference is led by (C2-Cp) t^{1/5}, a is strictly higher
+  [ok]   outside-D2 difference led by t^{-1} < 1/5, independent of a
+
+==============================================================================
+PART 4.  Prop 4.6 r=1 ODE  D(n, -M1, g_sigma, T_sigma) = const
+         = 25 * (3 g T' - 2 T g')  for the (75,50) row
+==============================================================================
+  deg g=9 deg T=6  #eqs (positive powers)=13  #unk=16
+  kappa (pi^0) = -2*T0*g1 + 3*T1*g0
+  [ok]   ODE equations do not contain a_{2/5}
+  [ok]   leading ODE terms cancel identically (3*6 = 2*9)
+  conclusion: V(ODE, kappa!=0) is a cylinder along a_{2/5}.
+  [ok]   charged D1 ODE + degree tests do not cut a_{2/5}
+
+  p.188 A1=2 does not divide deg g_sigma=9 => pi | g_sigma.
+  [ok]   p.188 forces pi | g_sigma, not a=0
+
+==============================================================================
+PART 5.  Zero-factor child: orbit size vs root count vs next radius
+==============================================================================
+  (75,50) zero child, e=2/5, A2=5, sample b=5: {'orbit_size': 5, 'nroots_in_zero_child': 15, 'would_split_at_e': True, 'nroots_divisible_by_N': True, 'forces_a_zero': True}
+  [ok]   (75) C2=0 + a!=0 produces orbit of 5 distinct centres (split at 2/5)
+  [ok]   (75) b=5: orbit 5, would insert radius 2/5 < delta1=1/2
+  [ok]   (75) b=10: orbit 5, would insert radius 2/5 < delta1=1/2
+  [ok]   (75) b=15: orbit 5, would insert radius 2/5 < delta1=1/2
+  [ok]   (75) b=20: orbit 5, would insert radius 2/5 < delta1=1/2
+  (64,48) zero child, e=1/2, A2=4, sample b=4: {'orbit_size': 2, 'nroots_in_zero_child': 16, 'would_split_at_e': True, 'nroots_divisible_by_N': True, 'forces_a_zero': True}
+  [ok]   (64) C2=0 + a!=0 produces orbit of 2 distinct centres (split at 1/2)
+  [ok]   (99) no free e => no split to force
+  [ok]   (75) nonzero C2: Galois orbit polynomial over Q exists for generic lam
+
+==============================================================================
+PART 6.  Probe vs centre: if a is NOT in the true centre, sigma leaves D1
+==============================================================================
+  [ok]   ord(a t^{2/5})=2/5 < delta1=1/2, so a probe with extra a leaves D1
+  unshared-a face order = -6/5  required ord g(sigma) = -3/10
+  [ok]   unshared a drops ord g(sigma) from -3/10 to -6/5 and deg_pi from 9 to 0
+
+==============================================================================
+PART 7.  Control (99,66): empty free set
+==============================================================================
+  delta={1: '4/9', 2: '1/3', 3: '-1'} L1=3
+  after p.190 and with C2 the D2-centre: sigma1 = C2 t^{1/3} + pi t^{4/9}
+  no lattice point in (1/3, 4/9) cap (1/3)Z
+  [ok]   next (1/3)Z point after 1/3 is 2/3 > 4/9
+  [ok]   selected V2=8 is not a zero factor (8 mod 3 = 2)
+  on a still-centred zero child at D2, C2=0 and free empty => sigma1 = pi t^{4/9}
+  Prop 5.6 applies to that child with no extra hypothesis.
+
+==============================================================================
+40 checks, 0 failures
+ALL CHECKS PASSED

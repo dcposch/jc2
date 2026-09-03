@@ -16352,3 +16352,31 @@ D1 + leading + A,B and J = cx^k — one class, not one h-adic component. Cheapes
 (producer): Newton-tight slice of (21,14) V₂ = 2. Coordinator: the decisive next
 compiler run is the K = 16 descendant (28,20; 25; 3; k = 1) — two-point (δ₂' = −2/2 =
 −1), s' = 2 — and the 24 + 12 s_eff = 2 rows after the p.174 drop. Lane launched.
+
+## INTEGRATION #17 DELTA (cc) (2026-09-03T12:47Z, PROVISIONAL, producer Grok, gate GPT-5.5 launched): OPEN[CENTRE-SUPPORT] CLOSES — the zero-factor centre-support lemma justifies the Prop 5.6 zero-chain kill; the UNGATED C_FULL_TREE is the correct screen; 204 → 55 restored at n ≤ 100 (21 → 11 classes); OPEN[NONZERO-PARENT-TWIST] typed
+
+`centre-support-grok46-20260903.md` (Grok; box/centresupport-drivers-20260903/; eight
+charged hashes matched). LEMMA (zero-factor centre support; DERIVED from source
+statements, not quoted from Moh): for a tower of major discs per Def 5.1 with the chart at
+D_r centred at 0 and π a factor of the Prop 4.6 polynomial p(π), with L, A_{r−1} as in
+p.201(8) and ω a primitive A_{r−1}-th root of unity acting by t̄ ↦ ωt̄, every coefficient of
+the centre of the unique zero-factor child D_{r−1} at an exponent e ∈ (δ_r, δ_{r−1}) moved
+by the action vanishes — proof: a moved term a·t^e would produce an orbit of distinct
+centres at logarithmic distance e, which by Lemma 1.1 cannot lie in one disc of radius
+δ_{r−1} > e, contradicting uniqueness of the zero root of p (Moh's p.184 argument "a
+noninteger exponent produces different roots" applied to the Galois-fixed root π = 0);
+fixed exponents are the integers, removed by p.190. Hence on a still-centred chain
+σ₁ = π·t^{δ₁} and Prop 5.6 applies to every all-(11) major path reaching D₁. Hypotheses
+all source: Def 1.3, p.201(8), uniqueness of the zero root, Lemma 1.1, p.184, p.190; no
+Jacobian identity beyond the existence of p. The charged D₁ tests (deg g_σ = n*V₂; the
+r = 1 ODE; increment Galois of order A₁) do NOT cut the free coefficient a_{2/5} on the
+cheapest row (75,50; M = 55,73; V = 3,4) — the kill is the PARENT ramification A₂ = 5.
+MEASURED (frozen opus5_probe.py, 658 rows): PARTITION 348/52; +ODE 347; +passport 330;
+GATED 216/21, +ODE 215, +passport 204/21; UNGATED (C_FULL_TREE) 60/12, +ODE 58, +passport
+55/11 — 204 → 55 restored; raw-row emptiness of D = 60, 81, 105 restored; the 288 of 598
+kills flagged gapped by the second gate are exactly the still-centred zero children;
+MOH-PROGRAM-ARTIFACT residue re-based to 49 rows / 5 classes. Residual: on a NONZERO
+parent factor (C₂ ≠ 0) a twist a = λC₂² is Galois-legal as a polynomial configuration —
+OPEN[NONZERO-PARENT-TWIST] (not an input to Prop 5.6). If the gate confirms, delta 17(u)'s
+gap-free/gapped split collapses: the gapped column becomes the operative one, and the
+K = 16 ray, the D = 105/117 emptiness, and the dead rays are unchanged (already gap-free).
