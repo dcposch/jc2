@@ -1,0 +1,24 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes from the lane receipt, then read the charged sources and Moh pages before replaying the drivers.The first awk pairing was off; I'll rebuild the manifest from basename + sha256 and re-run `sha256sum -c`.Hashes match. Next I’ll render the Moh pages, read the charged descent-radii report, and inspect the skeleton.Hashes are good and the pages are rendered. Next I’ll rename them to journal numbers, read Prop 4.1–5.5 from the images, and start independent driver replays.Prop 4.1 on p.164 has the Jacobian factor `1` in the chain rule; Moh’s p.169 remark already treats `J = x^l`. I’ll keep reading 4.4/4.6 and the Galois pages.Moh’s p.171 remark already replaces −1 by −1−l in Prop 4.6(3). Next I’ll read Prop 5.5 and the Galois step on pp.186–188.I have the source-read on Prop 4.1–5.5. Next I’ll write independent drivers and replay the closed form, census, Galois modulus, and K=16 descendants.`gate_replay.py` runs on import; I’ll wrap the main block so `independent_np.py` can reuse the functions.Arithmetic, census, and seven independent NP pairs all match. I’ll run the path-fixed control suite and a leading-form check, then write the report.Leading forms match after `ω^4=1`. Next I’ll write the sealed verdict report.The report is ~800 bytes over the 18KB cap. I’ll trim redundant quotes and tables so it lands in range.Gate report is at `xmodel/prop55k-gate-grok46-20260903.md` (sealed). Charged-input hashes: **9/9 OK**. Moh pp.164–188 and p.207 were read as named 200 dpi page images.
+
+**Verdicts**
+
+| claim | verdict |
+|---|---|
+| (1) Φ from Prop 4.1 | **CONFIRMED** |
+| (2) closed form, 10/10 + NP | **CONFIRMED** |
+| (3) `r=1` ODE invariance | **CONFIRMED** |
+| (4) PROP 5.5(k), sharp | **CONFIRMED** |
+| (5) modulus `𝔄` | **CONFIRMED** as an *extension* correction; **not** an erratum to printed Prop 5.5 |
+| (6) G2/G3 under `𝔄` | **CONFIRMED** (not killed) |
+| (7) 980/980 and 88.4–95.5% | **CONFIRMED** |
+| (8) (T) does not follow | **CONFIRMED**; `CONJ[APPII-UNIFORM]` untested |
+
+**Source-read.** Prop 4.1 p.164 puts `J_{x,y}(f,g)=1` in the chain rule — the only primitive Jacobian entry. Moh already records the `J=x^l` change: p.169 `(6)*` and p.171 `(3)*` send `−1` to `−1−l=−(k+1)`. The `r=1` ODE is the last display of Prop 4.6; orders still match under `J=c t^{-k}`. p.188 **does** use conjugations of `k((t^{1/A}))` over `k((t))`; the common-part-in-`k((t))` hypothesis is the field choice, not a numbered extra assumption.
+
+**Replay.** Closed form hits all ten p.207 rationals. 20/20 existing pairs have `s'=2` and are not killed by `𝔄` (19/20 NP within `2·10^{-3}`; C3 ~`7·10^{-3}`). Seven independently constructed pairs (sharpness family + compositions) match the closed form; `(8,4)` and `(12,6)` exist, are killed by `A'`, and survive `𝔄`. Exact Jacobian of `P=π^{k+1}−γ^{k+1}`, `Q=P^q+aπ` is `−a(k+1)γ^k`, with `d_2'=(k+1)V_2'`. Census integers match. K=16 descendants `(12t+4, 8t+4)` for `t=1..6`: **none killed**.
+
+**`(21,14; 16; 2; X)` under `A'`.** Killed by **A5-SIMPLE** (`π^4 ‖ T_σ`), not by Moh’s XOR (which holds). The row is Appendix II, `k=1`, `δ_2'≠−1` — outside printed Prop 5.5. Precision GAP on the headline “killed at Prop 5.5 level.”
+
+**Promotability.** Φ is a theorem for Def 5.1 towers at `s=2` with `J=c x^k`. `𝔄=A'/gcd(A',L)` is the Galois modulus of the **extension** of p.188 to `k≥1` / `δ_2'≠−1`. It is **not** an ERRATUM candidate for Moh’s proof of Prop 5.5 (`k=0`, `δ_2=−1`, `𝔄=A`), unless `OPEN[COMMON-PART-LATTICE]` is later answered yes at `k=0`.
+DIVERT path=xmodel/prop55k-gate-grok46-20260903.md status=CLEAN body_bytes=17558 body_sha256=e3698eac22b1966467d1c23ef5fe9471fcc2f09dd081a5997e00a0e7604002c6

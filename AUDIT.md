@@ -16435,3 +16435,40 @@ descended pair (the π^{-1}-tail), i.e. the common jet. This confirms the round-
 program: the coefficient theorem lives in the descended global coordinate ((T≤4) /
 CONJ[APPII-UNIFORM]), not in node-local data. Cheapest next per producer: see §7.4
 (recorded in notes).
+
+## INTEGRATION #17 DELTA (ff) (2026-09-03T12:54Z, PROMOTED): delta 17(z) gated by Grok — Φ IS A THEOREM (s = 2 scope; Moh's own p.169/p.171 x^l remarks are the localisation), closed form 10/10 + 20/20, r = 1 ODE invariant, PROP 5.5(k) sharp, corrected Galois modulus promoted as the EXTENSION rule (not an ERRATUM to printed Prop 5.5), G2/G3 negative confirmed, census byte-identical, the K = 16 descendants survive PROP 5.5(k) for t = 1..6, theorem (T) does not follow
+
+`prop55k-gate-grok46-20260903.md` (Grok; 9/9 hashes by mechanical manifest; pages 151,
+164–166, 168–172, 176–179, 186–188, 207 at 200 dpi; box/prop55k-gate-20260903/). (1)
+CONFIRMED: p.164 Prop 4.1's chain rule J_{f,g}(h,g)·J_{x,y}(f,g)·J_{t,π}(x,σ) carries the
+factor 1 = J_{x,y}(f,g) — the unique primitive entry; J = cx^k = ct^{−k} shifts the order by
+−k, so (n − M_r)λ = −(k+1) + δ; p.169 Remark and p.171 Remark (SOURCE-READ): Moh already
+treats J_{x,y} = x^l "with a verbatim proof", replacing (6) by (6)* and 4.6(3) by (3)*
+λ = (−1 − l + δ)/(n − m_r) — so −1 ↦ −(k+1) is Moh's own localisation (nit: p.169 lists
+only (6)* for 4.4; charged 4.4(3) is the consistent completion of Prop 4.2(3)); the radius
+system is homogeneous in (δ, λ) closed by one inhomogeneous relation, hence scaling:
+δ^{(k)} = (k+1)·Def 5.1(3). Scope: pairs to which Def 5.1's major-disc tower applies at
+s = 2 (Lemma 5.2 pp.177–179 scales likewise; s > 2 not separately checked). (2) CONFIRMED:
+10/10 p.207; 20/20 existing pairs, 0 killed, 19/20 NP within 2·10⁻³ (C3 ≈ 7·10⁻³); 7/7
+independent NP reconstructions. (3) CONFIRMED: p.170 display + p.171 order-match; both
+sides of Prop 4.1(1) have order δ − k − 2; the constant absorbs c/λ; no π^k; p.187
+coprimality and Prop A.5 survive (the charged "Prop A.3 form" is loose: A.3 is the r ≥ 2
+reduction, the ODE is the 4.6 display). (4) CONFIRMED incl. sharpness (exact J =
+−(k+1)aγ^k). (5) CONFIRMED as an extension correction: the modulus 𝔄 = A'/gcd(A', L)
+with working rule L = denom(δ₂'), fail-closed on every control; NOT an ERRATUM to printed
+Prop 5.5 (at k = 0 Moh's chain is the proof; precision GAP: the "(21,14) killed at Prop 5.5
+level" is by A5-SIMPLE, a NEW cut, not Moh's XOR). (6) CONFIRMED negative: G2 (𝔄 = 2, res
+(1,0)) and G3 (𝔄 = 2) SURVIVE; with L = 1 both would be killed four ways — the correction
+is load-bearing. (7) CONFIRMED: independent census byte-identical (k = 0: 980/980; k = 1..8:
+95.5 → 88.4 %); k = 0 extension n' ≤ 120: 5338/5338, XOR holds on 0 rows; DIVCHAIN/MASTER
+contribute 0 kills — for k ≥ 1 the residue is exactly the XOR set. (c) K = 16 descendants
+t = 1..6: d₂' = 4, R = 2, δ₂' = −1, δ₁' = t/(3t+1), A' = 𝔄 = 3t+1, residues (0,1), g₀ = 5 ≥ 3,
+4 ≤ 6 — NONE killed (t = 1 = Moh's (16,12; X)); they survive because {0,1} is satisfiable
+and (ii) is consistent. (8) CONFIRMED: (T) at δ₂' = −1 does not follow for k ≥ 1; the
+obstruction is Def 5.1(2)'s window V₂' > d₂'/(k+2). PROMOTED: Φ (theorem, s = 2 scope,
+J = cx^k), the closed form, the r = 1 ODE invariance, PROP 5.5(k) with sharpness, and
+the extension modulus 𝔄 (with A5-SIMPLE as a new cut). CARRIED: CONJ[APPII-UNIFORM]
+(lane running), OPEN[A-PRIME-ONE], OPEN[COMMON-PART-LATTICE], OPEN[LEMMA21-K] (delta
+17(dd); the gate did not adjudicate Lemma 2.1(k) — still typed GAP). Consequence: the
+descended K = 16 ray (12t+4, 8t+4; 12t+1; 3; γ) passes every arithmetic condition
+available after descent; its emptiness is a pure Appendix II / common-jet statement.
