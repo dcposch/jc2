@@ -15890,3 +15890,69 @@ quantifier over siblings, the orbit partition (3.3)/(3.4), the recursion's
 soundness, the ODE step (3.7); Grok: source images, independent
 reimplementation, the D-slice counts, both rays, combination with the
 nested-pack orbit knapsack).
+
+## INTEGRATION #17 DELTA (q) (2026-09-03T11:20Z, PROVED-HERE/UNREVIEWED + SOURCE-READ): M₂ > m IS NOT A THEOREM; THE DESCENT POLYGON (DEGREES) AND CLOSURE; APPENDIX II (15,10) REPRODUCED WITH AN ERRATUM; THE DESCENT PROGRAMME STATED AS THEOREM (T); OPEN[DESCENT-RADII]
+
+`m2-descent-opus5-20260903.md` (Opus flagship; drivers
+box/m2descent-drivers-20260903/; Moh pp.148–151, 179, 196–199, 207–212 read as
+images). REFUTED (PROVED-HERE): OPEN[M2-ABOVE-M] as charged — "M₂ > m for
+Keller pairs in Moh's gauge" is FALSE: twelve polynomial automorphisms of
+A²_Q put in Moh's gauge (J verified a nonzero constant; deg = deg_y) have
+M₂ ≤ m; smallest printed in full: n = 4, m = 2, g = y⁴ − 3xy³ + …, f = y² −
+(3/2)xy + (9/16)x² + y − (11/16)x, J = 1/1024, η-expansion f = η^{−2} −
+η⁰/16 − η/128 + η²/256 + (−3/4096 + x/4096)η³, M = [−2, 1], d = [4, 2, 1];
+four witnesses also satisfy d_s ≥ 4. Moh p.151 (SOURCE-READ) explicitly
+disclaims a general constraint: "our ignorance about the numbers M_i … It
+shows how little we know about M_i in the polynomial case." Hence Fable's
+routes H1 (Ω-symmetry + Lemma 2.1) and H2 (Prop 5.6 coprimality) cannot work
+as posed (the witnesses satisfy their hypotheses); H3's Newton-polygon
+inequalities bound deg(f^e − cg^d) from BELOW only. RESIDUAL (not refuted):
+M₂ > m for skeletons satisfying the FULL (1)–(13) + minimal-counterexample
+hypotheses (the witnesses fail (4)/(6)); bounded: 564 rows / 54 classes with
+M₂ ≤ m at n ≤ 100, 293 / 33 with integral N ≥ 6, 243 with u_s = 1; smallest
+n = 45, m = 30, M = [−30, 10, 43], V = (1, 4). Consequence: Fable's 658 → 94
+cut and its D = 105 emptying are CONDITIONAL on an unproved, source-
+unsupported hypothesis — the frontier may not consume them (consistent with
+delta 17(m)). PROVED-HERE (twice source-confirmed on p.208 and p.211):
+OPEN[DESCENT-POLYGON] degree part — deg_π P = deg_x g = u_s n/d_s; the
+z-leading coefficient of ḡ is y^{n v_s/d_s}; u_s + v_s = d_s is the equality
+case of a + B ≤ n; deg_γ P = u'n'/d₂'; Moh's coefficient counts 3370/5308/
+4352/7348 and 244/373/202 are exactly C(n+2,2) + C(m+2,2) (the descended
+pair has total degree = π-degree). DESCENT-CLOSURE (partial): (2), (3), (5),
+(7) and M₂ > m descend verbatim (weight-1 homogeneity, V_i' = V_i); (4)
+M_s = n − 2 and the s ≥ 3 half of (6) do NOT (s' = s − 1; Moh's descended
+rows have s' = 2); (8)–(13) blocked on the radii. The p.207 δ₂', δ₁' columns
+are NOT reproduced by any natural candidate: OPEN[DESCENT-RADII], bounded
+10 rationals — the single gate of the descent programme. APPENDIX II CONTROL
+PASSES with an erratum: Moh's (15,10; M₂ = 11, V₂ = 3; X²) case (pp.210–211)
+rerun mechanically — his α reproduced, his printed γ's B-coefficient is
+−a₉²a₈, not −a₉²a₁₀ (ERRATUM[APPII-GAMMA-B]), so his Case 2 (a₉ ≠ 0) does not
+close as printed; the kill comes one step later and is decisive: the five
+equations c₂ − 3γ ∈ k saturate to the unit ideal at a₉ ≠ 0 (Rabinowitsch,
+lex; positive/negative controls on the saturation) — SATURATED-EMPTY; Moh's
+conclusion stands, his printed route does not. Also ERRATUM[PROP63-JAC-SIGN]
+(p.198 last display prints the reciprocal). THE TWO DESCENDED D = 105
+PROBLEMS written explicitly: G2 → (15,10), J = cx⁴, M₂' = 4, V₂' = 1, d₂' = 5
+(deg_x g = 12, deg_x f = 8, h monic deg_y 5, f = h² + 2β, g = h³ + G₁h + G₀;
+Lemma 2.1 for a monomial Jacobian: g_j ∈ k for j < m' − 1 and deg_x g_{m'−1}
+= k + 1 — source-checked on Moh's p.208–210 expansion; exponent dictionary
+M₂ = N + (n' − m')); G3 → (21,14), J = cx², M₂' = 8, V₂' = 1, d₂' = 7; G1
+(u_s = 2) conditionally (30,20), J = cx² (OPEN[MINOR-DICHOTOMY]); both
+inherit M₂' ≤ m'. Typed COUNTING-BOUND ONLY: the shape-free G2 system has 172
+unknowns; Moh's reduction to 22 [15 or 13] consumes δ₁' ("the datum δ₁ = 1/2
+implies that h and β must be of the following form", p.210), which is the
+OPEN[DESCENT-RADII] residue. NO kill and NO survival of G2/G3 claimed.
+READING: DESCENT-RECURSION is a FINITE REDUCTION (depth ≤ s − 1 ≤ 4; the tower
+does not regenerate), not an induction on degree; THE THEOREM THAT WOULD MAKE
+MOH'S LINE A PROOF, stated: (T) for every k ≥ 0 and every (n', m') = (u_s n/d_s,
+u_s m/d_s) arising from a (1)–(13) skeleton, no pair P, Q ∈ k[γ,π], monic in π
+of π-degrees n', m' and total degrees n', m', with J_{γ,π}(P,Q) = cγ^k, c ≠ 0,
+and the inherited characteristic data {M_i/d_s, d_i/d_s}, V_i' = V_i, exists;
+(T) + the descent + OPEN[MINOR-DICHOTOMY] (u_s > 1) = JC2 along Moh's line.
+(T) concerns monomial-Jacobian pairs of bounded tower height s' = 2 but
+unbounded degree — the objects of APPROACHES row 1 ([P,Q] = x^k), with the
+one-place data reduced to four integers (n', m', M₂', V₂'). CHEAPEST NEXT
+(the lane's verdict): measure δ₁' on Moh's own (15,10) shapes (5)–(6) —
+half a day — which closes OPEN[DESCENT-RADII], automates the Appendix-II
+reduction for any descended row, and turns the 172-unknown systems into
+~20-unknown ones. Lane launched.

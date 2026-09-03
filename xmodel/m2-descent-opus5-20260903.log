@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete and sealed at `xmodel/m2-descent-opus5-20260903.md` (49 KB, `<!-- BODY-END -->` present; `ops/open_collision.py` rc=0, status EMPTY).
+
+## What the lane found
+
+**(1) `M_2 > m` — REFUTED as a theorem for Keller pairs in Moh's gauge.**
+
+I first reproduced Fable's measurement exactly, fail-closed (6/6 printed p.202 rows kept; 658 → 94 rows / 32 classes; the (75,50) residue collapsing to Moh's two rows; 1189 → 179 → 63/59 at 48 ≤ D ≤ 120). Then I built an exact η-expansion engine and tested the predicate on a population where it *can* be tested: polynomial automorphisms of A², put into Moh's gauge, with the Jacobian verified a nonzero constant. **Twelve witnesses have `M_2 ≤ m`**; four of them also satisfy `d_s ≥ 4`. The smallest is printed in full in the report and is checkable by hand (n=4, m=2, J = 1/1024, M = [−2,1], `M_2 = 1 ≤ 2`), and it satisfies both clauses of Lemma 2.1.
+
+Since routes H1 (Ω-symmetry + Lemma 2.1) and H2 (Prop 5.6 coprimality) use only hypotheses these witnesses satisfy, both are dead as posed. H3 is dead for a different reason: every available weighted-degree inequality bounds degrees from *below*, so no matching upper bound on `deg h` exists. Supporting this, p.151 (SOURCE-READ) has Moh explicitly writing of "our **ignorance about the numbers M_i** … how little we know about `M_i` in the polynomial case."
+
+Consequence: Fable's downstream numbers (D = 105 empty, twelve degrees empty, the 28-row sharpening) are conditional on an unproved and now source-unsupported hypothesis. `OPEN[MOH-PROGRAM]` stays at 652.
+
+**(2) `OPEN[DESCENT-POLYGON]` — degrees closed, radii open.** Proved `deg_π P = deg_x g = u_s n/d_s`, that monicity forces the z-leading coefficient of ḡ to be `y^{n v_s/d_s}` (whose consistency *is* Moh's identity `u_s = d_s − v_s`), and `deg_γ P = u'n'/d_2'` — each confirmed twice against Moh's own p.208 and p.211 shapes. Moh's counts 244/373/202 are exactly `C(n'+2,2)+C(m'+2,2)`, fixing total degree = π-degree. Four of the six p.207 columns reproduce exactly; the two δ' columns reproduce under no rule I tried — typed as a 10-rational residue, `OPEN[DESCENT-RADII]`.
+
+**(3) Control passes; two errata.** Re-running Moh's (15,10; X²) case mechanically reproduces his α but **not** his γ: the printed `−a₉²a₁₀B` must be `−a₉²a₈B`, and with the audited γ his Case 2 does not close. The kill comes one step later and is decisive — five equations saturating to the unit ideal at a₉ ≠ 0, with positive and negative controls run. His conclusion stands; his printed route does not.
+
+**Where I stopped short:** G2 and G3 are written out explicitly but typed **COUNTING-BOUND only**, not solved. Moh's reduction from 202 coefficients to 22 runs through the descended `δ_1'` — precisely the residue above — and without it the shape-free system stands at 172 unknowns, far outside the desk budget. So I emitted it with counts and stopped, as the charge permits. No kill and no survival is claimed for the trio, and the pipeline's `SURVIVES` branch is uncalibrated (the planted-automorphism control was not run).
+
+The single cheapest unblock is to *measure* `δ_1'` on Moh's own (15,10) shapes with the engine already built — half a day, and everything downstream depends on it.
+DIVERT path=xmodel/m2-descent-opus5-20260903.md status=CLEAN body_bytes=49757 body_sha256=8aa3ba20567cb810cb6f540ef451e7fb4cadb8ad89f77418837f5d65fae55668
