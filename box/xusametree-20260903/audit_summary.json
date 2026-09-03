@@ -1,0 +1,272 @@
+{
+  "by_u_s_class": {
+    "u_s=1": {
+      "independent_sharp": {
+        "groups": 509,
+        "killed_groups": 22,
+        "killed_rows": 34,
+        "rows": 1110,
+        "touched_groups": 29
+      },
+      "same_tree_all": {
+        "groups": 509,
+        "killed_groups": 22,
+        "killed_rows": 34,
+        "rows": 1110,
+        "touched_groups": 29
+      },
+      "same_tree_cor53": {
+        "groups": 509,
+        "killed_groups": 22,
+        "killed_rows": 34,
+        "rows": 1110,
+        "touched_groups": 29
+      }
+    },
+    "u_s>1": {
+      "independent_sharp": {
+        "groups": 177,
+        "killed_groups": 11,
+        "killed_rows": 14,
+        "rows": 310,
+        "touched_groups": 13
+      },
+      "same_tree_all": {
+        "groups": 177,
+        "killed_groups": 11,
+        "killed_rows": 14,
+        "rows": 310,
+        "touched_groups": 13
+      },
+      "same_tree_cor53": {
+        "groups": 177,
+        "killed_groups": 11,
+        "killed_rows": 14,
+        "rows": 310,
+        "touched_groups": 13
+      }
+    }
+  },
+  "calibration": {
+    "75_50_split_i": {
+      "I": "72",
+      "IM": "8",
+      "Im": "4",
+      "cor53_slack": "4",
+      "excluded_by_all": false,
+      "t47i_slack": "4",
+      "weighted_minor": "27"
+    },
+    "75_50_split_ii": {
+      "I": "80",
+      "IM": "4",
+      "Im": "6",
+      "cor53_slack": "-2",
+      "excluded_by_all": true,
+      "t47i_slack": "-2",
+      "weighted_minor": "29"
+    },
+    "84_56_M2_64_V2_2": {
+      "I": "84",
+      "IM": "4",
+      "Im": "5",
+      "cor53_slack": "-1",
+      "excluded_by_all": true,
+      "t47i_slack": "-1",
+      "weighted_minor": "28"
+    },
+    "84_56_M2_72_V2_5": {
+      "I": "76",
+      "IM": "10",
+      "Im": "4",
+      "cor53_slack": "6",
+      "excluded_by_all": false,
+      "t47i_slack": "6",
+      "weighted_minor": "27"
+    }
+  },
+  "killers": {
+    "groups": {
+      "Corollary 5.3 / Theorem 4.7(ii)": 33,
+      "Theorem 3.4 + Theorem 4.7(i)": 0,
+      "mixed": 0
+    },
+    "rows": {
+      "Corollary 5.3 / Theorem 4.7(ii)": 48,
+      "survives": 1372
+    }
+  },
+  "new_same_tree_groups_D_le_120_vs_independent": 0,
+  "policies": {
+    "independent_sharp": {
+      "groups": 686,
+      "killed_groups": 33,
+      "killed_rows": 48,
+      "rows": 1420,
+      "touched_groups": 42
+    },
+    "same_tree_all": {
+      "groups": 686,
+      "killed_groups": 33,
+      "killed_rows": 48,
+      "rows": 1420,
+      "touched_groups": 42
+    },
+    "same_tree_cor53": {
+      "groups": 686,
+      "killed_groups": 33,
+      "killed_rows": 48,
+      "rows": 1420,
+      "touched_groups": 42
+    }
+  },
+  "targets": {
+    "108_72_V_7_7": {
+      "M": [
+        81,
+        106
+      ],
+      "V": {
+        "2": 7,
+        "3": 7
+      },
+      "V_s": 7,
+      "all_killer": "survives",
+      "independent_IM_max": "21",
+      "independent_Im_min": "7/2",
+      "independent_ok": true,
+      "m": 72,
+      "n": 108,
+      "same_tree_all_ok": true,
+      "same_tree_best_balanced_c53_slack": "35/2",
+      "same_tree_best_balanced_t47i_slack": "35/2",
+      "same_tree_c53_ok": true,
+      "same_tree_max_c53_slack": "35/2",
+      "same_tree_max_t47i_slack": "35/2",
+      "u_s": 2
+    },
+    "99_66": {
+      "M": [
+        77,
+        97
+      ],
+      "V": {
+        "2": 8,
+        "3": 8
+      },
+      "V_s": 8,
+      "all_killer": "survives",
+      "independent_IM_max": "16",
+      "independent_Im_min": "8/3",
+      "independent_ok": true,
+      "m": 66,
+      "n": 99,
+      "same_tree_all_ok": true,
+      "same_tree_best_balanced_c53_slack": "40/3",
+      "same_tree_best_balanced_t47i_slack": "40/3",
+      "same_tree_c53_ok": true,
+      "same_tree_max_c53_slack": "40/3",
+      "same_tree_max_t47i_slack": "40/3",
+      "u_s": 3
+    },
+    "K_16_entries": [
+      {
+        "M": [
+          52,
+          62
+        ],
+        "V": {
+          "2": 3,
+          "3": 3
+        },
+        "V_s": 3,
+        "all_killer": "survives",
+        "independent_IM_max": "9",
+        "independent_Im_min": "3",
+        "independent_ok": true,
+        "m": 48,
+        "n": 64,
+        "same_tree_all_ok": true,
+        "same_tree_best_balanced_c53_slack": "6",
+        "same_tree_best_balanced_t47i_slack": "6",
+        "same_tree_c53_ok": true,
+        "same_tree_max_c53_slack": "6",
+        "same_tree_max_t47i_slack": "6",
+        "u_s": 1
+      },
+      {
+        "M": [
+          100,
+          110
+        ],
+        "V": {
+          "2": 3,
+          "3": 3
+        },
+        "V_s": 3,
+        "all_killer": "survives",
+        "independent_IM_max": "15",
+        "independent_Im_min": "3",
+        "independent_ok": true,
+        "m": 80,
+        "n": 112,
+        "same_tree_all_ok": true,
+        "same_tree_best_balanced_c53_slack": "12",
+        "same_tree_best_balanced_t47i_slack": "12",
+        "same_tree_c53_ok": true,
+        "same_tree_max_c53_slack": "12",
+        "same_tree_max_t47i_slack": "12",
+        "u_s": 1
+      },
+      {
+        "M": [
+          148,
+          158
+        ],
+        "V": {
+          "2": 3,
+          "3": 3
+        },
+        "V_s": 3,
+        "all_killer": "survives",
+        "independent_IM_max": "21",
+        "independent_Im_min": "3",
+        "independent_ok": true,
+        "m": 112,
+        "n": 160,
+        "same_tree_all_ok": true,
+        "same_tree_best_balanced_c53_slack": "18",
+        "same_tree_best_balanced_t47i_slack": "18",
+        "same_tree_c53_ok": true,
+        "same_tree_max_c53_slack": "18",
+        "same_tree_max_t47i_slack": "18",
+        "u_s": 1
+      }
+    ],
+    "direct_two_point_list": {
+      "groups": 17,
+      "independent_sharp": {
+        "groups": 17,
+        "killed_groups": 0,
+        "killed_rows": 0,
+        "rows": 18,
+        "touched_groups": 0
+      },
+      "rows": 18,
+      "same_tree_all": {
+        "groups": 17,
+        "killed_groups": 0,
+        "killed_rows": 0,
+        "rows": 18,
+        "touched_groups": 0
+      },
+      "same_tree_cor53": {
+        "groups": 17,
+        "killed_groups": 0,
+        "killed_rows": 0,
+        "rows": 18,
+        "touched_groups": 0
+      }
+    }
+  }
+}

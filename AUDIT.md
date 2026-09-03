@@ -17247,3 +17247,14 @@ Riemann–Hurwitz identity 2g_c − 2 + N + r_prop = Σ_np(e_P − 1) with N = 1
 (needs g_c, r_prop and the escape orders from the p.202 major tree's final structure plus
 one Puiseux coefficient per principal place). Lanes launched: g9966-delta52-joint-gpt55
 (the ≤ 60-unknown decider), g9966-hurwitz-fable5 (the Riemann–Hurwitz evaluation).
+
+## INTEGRATION #17 DELTA (jjj) (2026-09-03T18:46Z, MEASURED negative, producer GPT-5.5): THE XU SCREEN IS EXHAUSTED AT SKELETON LEVEL — the same-tree optimisation of IM − Im over the frozen finite tree model (with the sharpened principal floor) is row-identical to the independent-extrema policy (48 rows / 33 groups at D ≤ 200; 0 new kills; 5 groups' slack tightens but none crosses zero), and adding Theorem 3.4's exact I(f_ξ, f_y) with Theorem 4.7(i) gives NO independent constraint on a fixed tree — Xu's (4.3) makes the 4.7(i) slack equal to the IM − Im slack (PROVED-HERE identity §3); (99,66), the two-point list and the K = 16 entries unchanged (no refutation trigger)
+
+`xu-sametree-gpt55-20260903.md` (GPT-5.5; 12/12 hashes; box/xusametree-20260903/; Xu pp.
+4–7 as images). Same-tree policy lemma (§7): the actual tree is in the enumerated set;
+each constraint necessary. Consequence: further skeleton-level progress on the u_s > 1
+stratum (166 groups) cannot come from Xu's intersection bookkeeping; it needs either the
+final-root COUNT of the principal roots (not bounded from the skeleton — OPEN[principal-
+final-count]) or coefficient-level data (the joint two-point system now running on
+(99,66)). Cheapest remaining strengthening of the screen: none at skeleton level; retire
+the "Xu strengthening" queue item.

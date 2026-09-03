@@ -20943,3 +20943,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T18:26Z EVENT — Grok and Opus seats are back (probes OK). Launched `k16-t5t6-grok46-20260903` ((T) at t = 5, 6 by the promoted normalisation; canonical-order terminal systems as induction data) and, earlier, `k16-middle-spine-opus5-20260903` (independent route). Lanes live: 8.
 
 ## 2026-09-03T18:36Z EVENT — `g9966-source-review-opus5` sealed (22KB): no missed source route; Prop 6.1 is an exact order identity (ceiling δ < 8/3); split orders exhaustively {2 [2,1] (25,14) forced; 5/2 [1,1,1] by Galois}; Thm 3.4/4.7 tree-blind at (99,66); exact IM = 16 vs Im = 6/7; N1–N15; cheapest decider = the μ₂-equivariant joint system at δ = 5/2 (≤ 60 unknowns), then branch B (a point). → AUDIT delta 17(iii). Launching `g9966-delta52-joint-gpt55` and `g9966-hurwitz-fable5`. Lanes live: 9.
+
+## 2026-09-03T18:46Z EVENT — `xu-sametree-gpt55` sealed (15KB): same-tree IM − Im gives 0 new kills; Theorem 3.4 + 4.7(i) redundant on a fixed tree (identity via (4.3)); the Xu screen is exhausted at skeleton level. → AUDIT delta 17(jjj). Lanes live: 8.
