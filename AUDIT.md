@@ -16642,3 +16642,35 @@ u_s = 1 groups (18 rows, all UNI) at D ≤ 200 — includes Moh's (64,48), (75,5
 (84,56) V₂ = 5, and K = 16 at t = 1, 2, 3; the 14-row n ≤ 100 excess is all u_s = 1, s ≥ 4,
 none two-point s_eff = 2 (needs the s' = 3 mode). Allocation: run the compiler on the 17
 after appendix2-run-k16 reports the budget at t = 2, 3.
+
+## INTEGRATION #17 DELTA (mm) (2026-09-03T13:31Z, PROVISIONAL — PROVED-HERE, producer Sol; different-model replay gate launched): THEOREM (T) IS PROVED AT t = 2 ON THE K = 16 RAY — the descended pair (28,20; M₂' = 25; V₂' = 3; J = cγ) is SATURATED-EMPTY (Singular 4.3.2, exact rational arithmetic, gauged 27-unknown Theorem-1.2 order chart, 38 generators incl. Rabinowitsch T·c − 1, reduced standard basis [1], 37.33 s, 40 MB); the Newton/Lemma 2.1 polygon gives NO uniform obstruction (compatible for all t); OPEN[T-UNIFORM-COEFFICIENT] bounded by 9t + 12 ungauged unknowns
+
+`k16-ray-T-newton-sol56-v3-20260903.md` (Sol, 24KB; box/k16T-drivers-20260903/; 11/11
+hashes by mechanical manifest; sealed CLEAN). (1) PROVED-HERE: Lemma 2.1 support / Newton
+compatibility of the 4-tuple (12t+4, 8t+4; 12t+1; 3; k = 1) holds for ALL t ≥ 1 — Grok's
+Card III polygon obstruction does not exist; the descended (8)–(13) and the Φ radii were
+evaluated and used. (2) t = 1 control: Moh's (16,12) in the enlarged chart returns [1]
+(fourth independent kill of that row today). (3) MAIN: t = 2 certificate — chart unknowns
+incl. c: 27; Rabinowitsch 1; Jacobian coefficient generators 37; total 38; reduced basis
+G[1] = 1; the generated Singular program is 7,315 bytes, SHA-256 6234d5ffa0a4f278eed294006
+2abedac749cf63c7d8326e0dad927401227414d (box/k16T-drivers-20260903/t2_sat_certificate.txt).
+Wrapper controls in the identical ring: EMPTY ⟨c, Tc − 1⟩ → reduce(1,G) = 0 PASS; NONEMPTY
+⟨c − 1, Tc − 1⟩ → ≠ 0 PASS; independent actual-pair control (π, π − γ²/2) is monic, passes
+both reciprocal Lemma shapes and FAILS the 4-tuple (so the classifier is not over-broad).
+Logic: every target pair lies, after safe coordinate/target normalisations, in the
+Theorem-1.2 order chart, which deliberately omits the tuple-level Laurent bridge equations
+and is therefore a SUPERSET; unit ideal on the superset's c ≠ 0 component implies unit
+ideal for the (28,20; 25; 3; cγ) component; 1 ∈ I over Q, preserved by scalar extension.
+Non-results retained for audit: the ungauged 30-unknown version did not finish in 600 s;
+an earlier 54-variable weak superset timed out — the proof uses only the sharp gauged run.
+(4) NOT PROVED: (T) for all t; t ≥ 3; any lift to a Keller pair (the t = 1 result is a
+control, not an induction). (5) OPEN[DESCENT-ANCHOR] as the lane names it is a tuple-level
+coefficient p₁₇ vs the Lemma anchor p₁₉ (does not affect the t = 2 proof; the superset is
+already empty) — distinct from the closed 17(dd). (6) OPEN[T-UNIFORM-COEFFICIENT]: fixed-t
+size 9t + 12 ungauged (t = 2: 30 → 27 gauged; t = 3: 39 → ~36); cheapest next: the three
+safe target gauges + the banded h-adic identity at t = 3, then a generic-t recurrence.
+STATUS: the first honest theorem-(T) instance above Moh's printed table is killed; the
+K = 16 ray is now empty at t = 1 (Moh) and t = 2 (this lane, PROVISIONAL). Cross-checks
+running: appendix2-run-k16-grok46 (independent chart, compiler); gate launched:
+k16-t2-gate-gpt55 (replay the 7,315-byte program; audit the superset claim and the three
+gauges). Not a critical trigger by the standing rule (needs uniform-in-t or a SURVIVES).

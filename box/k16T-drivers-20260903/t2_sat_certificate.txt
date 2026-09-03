@@ -1,0 +1,37 @@
+K16 t=2 order-chart saturation certificate
+===========================================
+
+Generator:
+  python3 box/k16T-drivers-20260903/t2_order_system.py --gauged --emit-singular
+
+Generated Singular program:
+  bytes: 7315
+  sha256: 6234d5ffa0a4f278eed2940062abedac749cf63c7d8326e0dad927401227414d
+
+CAS:
+  Singular 4.3.2 (Debian 1:4.3.2-p10+ds-1.1build1)
+  exact coefficient field Q
+  degree-reverse-lexicographic order (dp)
+  27 chart variables including c, plus Rabinowitsch variable T
+  37 Jacobian coefficient generators plus T*c-1
+
+Standard output:
+  CONTROL_EMPTY_START
+  CONTROL_EMPTY_PASS
+  CONTROL_NONEMPTY_START
+  CONTROL_NONEMPTY_PASS
+  MAIN_START equations=37 parameters=27 plus_T=1
+  MAIN_DONE basis_size=
+  1
+  MAIN_SATURATED_EMPTY
+  G[1]=1
+
+Resource measurement:
+  TIME_SEC=37.33 MAX_RSS_KB=40060 EXIT=0
+  PIPE_STATUS=0
+
+Typing:
+  SATURATED-EMPTY for the c!=0 component of the gauged Theorem-1.2
+  necessary order-chart superset.  This proves emptiness of the requested
+  (28,20; M2=25, V2=3; J=c*gamma) component a fortiori.  It is not a
+  uniform-in-t certificate.
