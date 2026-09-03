@@ -1,0 +1,470 @@
+202                                 M oh, Onthe Jacobian conjecture
+
+       The above discussion can be easily put into a Computer program. The Computer
+program produces only the following exceptions which satisfy the necessary numerical
+restrictions.
+
+
+      n         m = —Ml     M2         M3           M4            ^3           ^2       δ2        «5i
+
+                                                                                         1        9
+      64          48        52          62           63            3            3
+                                                                                         i        16
+                                                                                       2Γ1Ί     16Γ7Ί
+      84          56      64 [72]       82           83            3         2 [5]
+                                                                                       7[ 4 J   21 |_12j
+
+                                                                                         1
+      75          50        55          73                        4          3 [2]
+                                                                                         I      1[ι]
+                                                                                          1        4
+      99          66        77          97                         8            8
+                                                                                         "3        9^
+
+
+It is easy to see that the above table is very restrictive. For instance given degg = 75
+deg/=50 there are 25 possible values for M2 and 2 possible values for F3 etc. The
+above table determines only one possible value for M2 and one for F3. These data are
+very useful in excluding these four exceptional data from the possible counterexamples
+to the Jacobian conjecture. Without them a br te force computation will involve the
+four thousands coefficients of g(x, y) and/(;c, y). The treatment of these four exceptional
+cases will be presented in Appendix II.
+
+
+
+
+            Appendix I. The polynomial Solutions of some ordinary differential equations
+
+      Recall Definition 4.1 of the Symbol D(a,b,p(n},q(n)] from Section4. We shall
+further assume that p(n) and q(n) are nonconstants in this section.
+
+       Proposition A. 1. Suppose that at hast one of the constants a, b is not zero. Then
+the following equation
+                                        D(a,b,p(n),q(n)) = 0
+
+implies for some e, cek the following:
+
+          (1) a = edeg„p(n),
+
+          (2) b = edeg„q(n),
+
+          (3)
+
+
+                                    Brought to you by | University of Iowa Libraries
+                                                    Authenticated
+                                         Download Date | 5/29/15 10:39 PM
+                                M o h, Onthe Jacobian conjecture                      203
+
+     Proof. Let p (n) and q(n) be expressed s
+                             p(n) = ainm + lower terms in π,
+                             q(n) = a2nn + lower terms in π.
+Then we have
+                       D (a, b,p(n), q(n)) = ap(n) q'(n)-bq(n) p'(n)
+                                            = (an — bm)a1a2nn+m~1 -hlower terms.
+Clearly we must have
+                                           an = bm.
+
+Thus the conclusions (1) and (2) follow. Clearly we have
+
+                    D (a, b,p(n), q(n}} = 0 o D (m, Λ, ρ(π), 9(π)) = 0.
+
+The following identity is elementary
+                                            n      ^     D       n
+                    ,p(nTj                        ρ(π)2η
+Thus we conclude
+
+
+                                         ρ(πγ
+and (3) follows.                                                                   Q.E.D.
+
+      Proposition A. 2. Let m = degp(n) and n = degq(n). Suppose that « = ( / — l ) m + l
+and p (π), q(n) satisfy the following equation
+                             D(m,n + ε,p(n\ q(n)} = cp(n)1 Φ0
+where cek and ε is a rational number > — 1. Then p (n) and q(n) are powers of a
+common linear polynomial.
+
+      Proof. Let us prove the case /= 1. Then we have n = deg q(n) = 1. We may assume
+q(n) = n. The differential equation is reduced to the following form
+
+
+
+Note that the coefficients are not zero. Consider the multiplicities of roots of p (n).
+We deduce that π is the only root of p (n). Hence the proposition has been established
+for the case /= 1.
+
+      Inductively let us assume that />! and the proposition has been proved for
+smaller /. We claim that
+                                           p(n)\q(n).
+
+
+                                Brought to you by | University of Iowa Libraries
+                                                Authenticated
+                                     Download Date | 5/29/15 10:39 PM
+204                             M oh τ On the Jacobian conjecture
+
+Let π (or in general π — α) be a factor of p (π) with
+
+                                                  with
+                                                  with
+
+Το prove our claim it suffices to show that u ^ v. Note that the differential equation is
+of the following form
+      (1)              mp(n) q'(n)-
+
+Let
+
+
+
+
+Then the left hand side of the differential equation is of the following form
+
+                      [mv — (n4-B)u']b()CQnu+v~1 +higher terms in π.
+
+The restriction
+                                             ε>-1
+implies
+
+
+Thus the inequality
+      (2)                                      u>v
+implies
+
+
+After comparing π-orders on the two sides of the differential equation (1) we conclude
+                                              v — \ =lu.
+
+It contradicts the inequality (2). Thus we must have
+
+
+
+It is clear that the above argument works for an arbitrary factor (n — ) of p (n). Thus
+we conclude
+
+
+A simple computation shows
+
+                                       )1 o D (m, (n-m) + β,/>(π), q*(n)) = cp(n)l~1 .
+
+Thus by the induction hypothesis we conclude that the polynomials p (n), q*(n) and q(n)
+are all powers of a common linear polynomial.                                   Q.E. D.
+
+
+                                Brought to you by | University of Iowa Libraries
+                                                Authenticated
+                                     Download Date | 5/29/15 10:39 PM
+                                          M o h, On the Jacobian conjecture                          205
+
+     Proposition A. 3. Lei m = deg/?(7i), n = dQgq(n). Suppose that the polynomiah p (τι)
+and q(n) satisfy
+                                          D (m, n, p (n), q(n)} = cp(n)
+where c=^0ek. Then we have:
+
+     (1) every root ofp(n) is a root of q(n),
+
+     (2) q(n) has no multiple root,
+
+     (3) p (n) is not a power of q(n),
+
+     (4) there is at least one root ofp(n) with multiplicity > — .
+
+     Proof. The differential equation can be rewritten s
+                                        nq(n) p' (n) = (mq'(n) - c) p(n) .
+Let (π — ) be a factor of p (n). Comparing the multiplicities of (π — α) on both sides of
+the above equation, we conclude that (n -a) is a factor of q(n). The conclusion (1) thus
+follows.
+
+      It is easy to see that every multiple root of q(n) must be a root of p (n). Let (π — a),
+say a = 0, be a multiple factor of q(n) with
+
+
+
+
+Then we have
+                                       if+v-l\D(m,n,p(n)9q(n)) = cp(n).
+A contradiction. The conclusion (2) thus follows.
+
+      In case that p (n) is a power of q(n) it is elementary to verify
+
+                                             D(m9n,p(n),q(n)) = 0.
+
+It contradicts our assumptions on c and p (π).
+
+
+      Suppose that all roots of p (π) are with multiplicities ^ — . Then it follows from
+
+conclusions (1) and (2) that all multiplicities must be equal to — . Thus we must have
+                                                                 n
+
+
+
+It contradicts conclusion (3).                                                                    Q.E. D.
+    Journal f r Mathematik. Band 340                                                         27
+
+
+
+                                          Brought to you by | University of Iowa Libraries
+                                                          Authenticated
+                                               Download Date | 5/29/15 10:39 PM
+206                             M o h, On the Jacobian conjecture
+
+      Proposition A. 4. Lei m = degp(n) and n~dQgq*(n). Suppose that we have
+
+
+
+where c=i=0 € k and /^O. Then we have
+
+      (1) 9*(π) = ρ(π)'9(π),
+
+      (2) D (m, n- Im, p(n\q (π)) = cp (n) .
+
+
+     Proof. For / = 0 it is Proposition A. 3. Let us assume that /^ l and our proposition
+has been proved for all smaller /. Clearly we have
+                                             n>m.
+
+Otherwise the right hand side of the differential equation has a larger π-degree. Let
+π — α, say a = 0, be a factor of p (n) with
+
+
+
+
+Let
+
+
+
+Then we have
+
+
+If we have
+                                              v<u
+then the leading coefflcient
+                                     (mv — nu)b0cQ=^0.
+
+After comparing the multiplicities of π on both sides of the differential equation we
+deduce a contradiction. Thus we conclude
+
+
+
+It is clear that the above arguments work for any factor (π — α) of p (n). Thus we
+conclude
+                               p(n)\q*(n)=p(n)q(n).
+We clearly have
+
+
+Our proposition has been established by mathematical induction.                   Q.E. D.
+
+
+
+                               Brought to you by | University of Iowa Libraries
+                                               Authenticated
+                                    Download Date | 5/29/15 10:39 PM
+                                  M o h, Onthe Jacobian conjecture                                    207
+
+          Proposition A. 5. Lei w = deg/?(7i) and n = degq(n). Suppose that p (n) and q(n)
+satisfy
+                                       D(m,n,p(n),q(n)) = c
+where £ Φ Ο e k. Then p (n) - q(n) has only simple roots.
+          Proof. Routine.
+
+
+                                Appendix II. Some special cases
+
+      A simple Computer program shows that the only possible counter-examples to the
+Jacobian conjecture for polynomials of degrees less than 100 are of degrees (64, 68),
+(84, 56), (75, 50) and (99, 66) with some special data attached. A routine computation
+shows that the numbers of coefficients of the pairs of polynomials involved are 3370,
+5308, 4352 and 7348 respectively. The task of direct verification of the Jacobian con-
+jecture by computation for those pairs of polynomials with the said degrees is beyond
+the capacity of a large Computer. In this Appendix we shall illustrate some methods to
+reduce the numbers of coefficients, and then settle the problems of computations.
+     We shall apply Proposition 6. 4 to the first three cases. Note that in these cases
+we always have
+
+
+Thus it follows from Proposition 6. 3 that our table can be transformed to the following
+table.
+
+
+          n       m = — Mj       M2                 V2             δ2                <5i   Jacobian
+
+                                                                   _i                1
+          16          12          13                3                                            X
+                                                                                     4
+
+          21          14        16 [18]           2 [5]       -it-n              m               X
+
+
+          15          10          11              3 [2]            -1
+                                                                                 m               X2
+
+
+
+The numbers of coefficients are reduced to 244, 373 and 202 respectively.
+      We shall use the first case to illustrate the method of further reduction of the
+numbers of coefficients. We shall choose x, y properly so that the π-root in the major
+disc £>! is of the following form
+
+
+and the π-root σ* in the minor disc D* is of the following form
+                                          l
+                                σ* = r        + a0 + a^ t + a212 + nt3.
+                                                                                           27*
+
+
+
+                                  Brought to you by | University of Iowa Libraries
+                                                  Authenticated
+                                       Download Date | 5/29/15 10:39 PM
+208                                 M o h, On the Jacobian conjecture
+
+To truncate σ* properly we define σ s
+                                                                        11
+
+
+Then it is easy to see that {σ, σ} is a coherent complete System of π-roots for g(y)
+                                        (         3\
+(and j ( y ) — Tl(y)} with accuracy — l l resp. — 7 ) . Then it follows from Theorem 1.2
+                                                 4
+that                                    V          S
+                                                  +-a 2 (y) h(y)2 + *3(y) h(y) + &4(y),
+
+
+with
+                         = ihQ fourth approximate root of f ( y )
+
+
+
+                                    -9
+
+
+
+
+                  ord A (σ) ^ - -, ord Α(σ) ^ - - .
+
+It is easy to see that
+
+       (1)   h(x9y)^
+
+
+
+
+with A(x, y) and B(x, y) defined by the above equations and
+
+       (2)   o^ is a constant,
+       (3) a2 = c1
+
+
+       (5) a4 = c n ^-f c
+
+Thus the total number of coefflcients is further reduced to 17.
+      Similar arguments can be applied to the second case to show the impossibility
+directly and to the third case to reduce the number of coefflcients to 22 [15 or 13].
+       We shall use the following method to further simplify our computations. Let
+
+
+
+
+                                   Brought to you by | University of Iowa Libraries
+                                                   Authenticated
+                                        Download Date | 5/29/15 10:39 PM
+                                 M oh, Onthe Jacobian conjecture                               209
+
+Then we may replace (/, g) by If- — a3, g-a1f-a4\ to reduce the above expression to
+
+                                               in η with positive exponents.
+Note that
+
+It is easy to conclude that
+
+
+
+where γ and δ are defined by
+
+with
+                         degy y* < deg h = 4, deg δ* < deg h2 = 8.
+Thus the total number of coefficients are reduced to 10. This method can be used to
+reduce the numbers of coefficients of the third case to 12 [10 or 7].
+      In the fourth case there are complications. First, there are two possibilities according
+to the distribution of the roots of g(y) in the minor disc J5J. Namely, there is an unique
+π-root σ of g(y) of the following form
+
+with
+
+
+The polynomial gff(n) is either a power of a linear polynomial or the 9-th power of
+a cubic polynomial with precisely two roots. For the first possibility the data can be
+transformed to
+
+
+       n       m = — M!         M2               V2              *2                *1   Jacobian
+
+       27          18            21              8               -1                0      X4
+
+
+The above mentioned method can be used to reduce the number of coefficients to 10.
+For the second possibility we can show that for suitable variables χ and y there is
+a transformation Ω of the following form
+                                 ,.-1
+                                        y                       t 2 + yx3
+such that
+
+
+
+
+                                Brought to you by | University of Iowa Libraries
+                                                Authenticated
+                                     Download Date | 5/29/15 10:39 PM
+210                                M o h, On the Jacobian conjecture
+
+A discussion of the Solutions of Q(g(x, j)) = 0 in k^x~1^ and in fcO"1^ w h a slightly
+modified Version of the above method we may reduce the direct computation to involve
+only 11 variables.
+
+     Now we are in the position to settle these cases by direct computation. Let us
+handle the case « = 15, m = 10, M2 = ll, F2 = 3. After simplifying, we may assume
+
+
+
+
+                                    ~         ~                          -
+
+where a, fc, c, i/ are constants and b Φ 0, c Φ 0. Clearly we have
+                                                                     2           3       4
+                                          i                      3           l       3
+
+
+
+              "Ml·-]·
+Substituting the above expressions into the expression for g we have
+
+      (1)     g = h3 ,
+
+where d* is a constant and a, y are deflned by the following equations:
+                                                  2
+      (2)                                             = aA + y
+with the restriction
+                                          deg y y<deg y A = 5.
+
+Since g is a polynomial in y, then the powerseries in y~l in the expression (1) shall
+naturally cancel out. Thus we must have the following equations (3) and (4)
+
+      (3)                               /?3 = (3y + 0)A2 + sh + δ
+
+where ε and δ are polynomials with j-degrees less than 4,
+                       \        JL
+      (4)              — ε = bf10 + c(x3 + </*) j + a powerseries in j; *.
+
+
+      Let us consider the possible forms of the polynomial h(x9 y). Since we assume that
+the polynomials f(x9 y) and g(jc, y) are the transforms of some polynomials of degrees
+50 and 75 respectively according to Proposition 6. 3, the inverse transformation implies
+that there is a minor disc. Thus in the major disc D2 there are precisely three subdiscs
+which contains 2, 2, 6 of roots / respectively. The datum δ1 =~ implies that the poly-
+
+
+
+                          Brought to you by | University of Iowa Libraries
+                                          Authenticated
+                               Download Date | 5/29/15 10:39 PM
+

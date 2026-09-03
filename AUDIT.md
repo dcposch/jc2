@@ -17095,3 +17095,37 @@ PRIOR-SLICE restorations ((15,10; 11; 2) — persists under the corrected chart 
 with corrected charts — (64,48), (75,50)×2, (84,56), (112,80), (160,112) [t = 3, 17(ww)];
 PROVISIONAL — (132,88), (180,120); OPEN — (147,98), (168,112), (189,126) [R3 timeouts],
 (125,75), (175,100), (175,125), (180,144), (192,128), (196,56), (200,120) [bigrows lane].
+
+## INTEGRATION #17 DELTA (ccc) (2026-09-03T17:32Z, PROVISIONAL new screen, producer GPT-5.5; gate launched): XU'S FINAL-ROOT INTERSECTION INEQUALITY IM ≥ Im (Theorems 3.4, 4.7, 5.1) IMPLEMENTED AS A FAIL-CLOSED SKELETON SCREEN — calibration exact on Xu's three worked cases; on the operative census 48 ≤ D ≤ 200 it kills 43 rows / 29 groups of 686 that every previous screen passed, INCLUDING 7 GROUPS OF THE u_s > 1 STRATUM (the first kills ever in that stratum) and Moh's printed (84,56; M₂ = 64; V₂ = 2); it does not touch the 17 two-point Appendix-II targets, the K = 16 ray, or (99,66)
+
+`xu-inequality-screen-gpt55-20260903.md` (GPT-5.5; 8/8 hashes; box/xuscreen-20260903/
+xu_screen.py; Xu pages 4, 5, 7–13 as images). SOURCE-READ: Theorem 3.4 (exact I(f_ξ, f_y) =
+−Σ(e(f_σ) − 1)λ_σ over split π-roots), Theorem 4.7 (final-minor bounds), Theorem 5.1 /
+Cor. 5.3 (I(f_ξ, g) from final major roots), §7.3 (principal-minor multiplicities). Skeleton
+inputs: IM is maximised over all full-tree embeddings (final-major capacity); Im is a floor
+from forced final-minor charge (nonprincipal minor children charged by the first zero-
+order floor δ_j + (d_j/(n − M_j))(1 − δ_j)/v − 1; principal u_s > 1 contribution floored at 0);
+the screen fires iff IM_max < Im_min. CALIBRATION 3/3 exact: (75,50) split (ii) IM = 4 < Im =
+6 excluded; (84,56; 64; 2) IM = 4 < Im = 5 excluded; (84,56; 72; 5) IM = 10 ≥ Im = 4 not
+excluded ((75,50; V₂ = 2) as a row is not killed fail-closed: the permissive split [2,2]
+gives IM = 8 ≥ Im = 4, as Xu prints). CENSUS: Moh's six pass the operative screen 6/6;
+1,420/686 reproduced; killed 43 rows / 29 groups (37 touched); u_s > 1: 9 rows / 7 groups of
+310/177; u_s = 1: 34 / 22 of 1110/509; by s: s = 3 not-two-point 1 group, s = 4 12, s = 5 6 (+2
+two-point), s = 6 1; killed by degree 84:1, 90:1, 108:1, 120:1, 135:1, 144:6, 150:1, 168:1,
+180:8, 192:7, 200:1; D ≤ 120 kills: (84,56; M = (64,82); V_s = 3) IM_max = 4 < 5; (90,60;
+(45,80,88); V_s = 4) 43/7 < 7 (both operative rows); (108,72; (60,100,106); 3) 12/5 < 5;
+(120,90; (75,110,118); 4) 30/7 < 7; the 7 u_s > 1 kills: (144,96; (120,132,138,142); V_s = 4;
+u_s = 2), (144,96; (120,132,142); 8; 4), (144,108; (126,135,142); 6; 3), (168,112;
+(84,154,161,166); 5; 2), (180,120; (150,168,178); 4; 2), (180,120; (150,170,175,178); 3; 2),
+(180,120; (150,174,178); 4; 2). Two-point s_eff = 2 target list: 0 kills (untouched); K = 16
+entries at D = 64, 112, 160 survive; (99,66) survives (principal floor 0). Moh's six under the
+screen: (64,48) 9 ≥ 3; (84,56; 64; 2) KILLED 4 < 5; (84,56; 72; 5) 10 ≥ 4; (75,50; V₂ = 3) 9 ≥ 5;
+(75,50; V₂ = 2) 8 ≥ 4; (99,66) 16 ≥ 1. VERDICT (producer): a NEW INDEPENDENT skeleton screen —
+it tests a global final-root intersection balance that PATH-ARITH, tree, ODE and POLY do
+not. OPENs: principal-u_s>1-exact (§7.3 gives multiplicities and non-splitting at order 1
+but not final counts/orders; floor 0 — sharpening would bite on (99,66) and the 170
+untouched u_s > 1 groups), minor-disc-exact-Im, attainment-correlation (independent
+max/min extrema, not a same-tree optimum). LEDGER: PROVISIONAL until the different-model
+gate (Fable) confirms the theorem transcriptions, the fail-closed policy and the
+calibration; if confirmed, the operative screen becomes C_FULL_TREE_POLYNOMIAL_ODE ∧ XU
+(657 groups at D ≤ 200; n ≤ 100 loses (84,56; 64; 2) and (90,60; 45,80,88)).
