@@ -20837,3 +20837,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - Descent: Φ theorem (17(ff)); Φ_eff promoted-qualified (17(dd)); PROP 5.5(k) sharp — no arithmetic kill after descent; the K = 16 descendants pass everything arithmetic.
 - Frontier = coefficient level in the descended coordinate: k16-ray-T-newton-sol56-v3 (Newton/Appendix II on (28,20)), appendix2-run-k16-grok46 (compiler on (28,20), (40,28) + Φ_eff rows), d108-1812-ramification-sol56, appii-uniform-test-grok46 (CONJ[APPII-UNIFORM] on G2 + controls), t-ladder-sol56. Queued: sibling §7.4 edge experiment; POLY re-check of the (d,e)-fixed ray; rigid 3/19 under Φ_eff.
 - Next full round: 20260904T0000Z or critical trigger.
+
+## 2026-09-03T13:04Z EVENT — launched `post-poly-census-grok46-20260903` (re-base every live target on the operative screen C_FULL_TREE_POLYNOMIAL_ODE; K = 16 ray and (d,e)-fixed ray under POLY; rigid 19; D = 108; D ≤ 200 residue by u_s × s_eff × two-point; new compiler target list) and `jet-edge-1612-sol56-20260903` (sibling §7.4: one source-faithful common-jet edge on Moh (16,12)). Lanes live: 7.
