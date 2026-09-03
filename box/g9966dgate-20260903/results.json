@@ -1,0 +1,170 @@
+{
+  "W3W6_match_joint_probe": true,
+  "automorphism": {
+    "J_identically_1": true,
+    "ansatz_row": "A-C-1",
+    "inverse_recovers_xy": true,
+    "slice_A2_witness": [
+      "2*x+y",
+      "x+y"
+    ],
+    "two_points": "P_F=[1:-a:0], P_G=[1:1-a:0]"
+  },
+  "chart": {
+    "fixed_top_blocks": {
+      "A2": 1650,
+      "A3": 2739,
+      "B1": 561,
+      "B2": 1650,
+      "C2": 187,
+      "C3": 308,
+      "H": 66
+    },
+    "fixed_top_total": 7161,
+    "monic_99_66": 7326,
+    "removed_by_two_tops": 165,
+    "unfixed_total": 7326
+  },
+  "delta2_face_ode": {
+    "family": "p2=z^2(z+3*rho), R=z^25(z+3*rho)^14(z-2*rho)",
+    "k_ratio": "5",
+    "remainder_after_p2_14": 0
+  },
+  "h3_D2": {
+    "equality_sites": [
+      [
+        4,
+        5
+      ],
+      [
+        8,
+        2
+      ]
+    ],
+    "linear_rows": 45,
+    "lower": 66,
+    "strict_below_32": 43,
+    "strict_ge_33": 21
+  },
+  "jacobian_degree": {
+    "first_possible_nonzero": 162,
+    "first_row_1764": 1764,
+    "generic_max": 163,
+    "in_F": "y^27 (y-x)^72",
+    "in_G": "y^18 (y-x)^48",
+    "next_band_monomial": "x^135 y^27",
+    "next_band_total_degree": 162,
+    "slots_deg_0_through_162": 13366,
+    "top_vanishes": true
+  },
+  "major_516": {
+    "D1_rank": 7,
+    "D2_rank": 389,
+    "D2_slots": 392,
+    "ambient": 516,
+    "det97": 59049,
+    "det98": -3,
+    "dimension": 120,
+    "h3_free": 21,
+    "identities": [
+      [
+        1,
+        22
+      ],
+      [
+        1,
+        23
+      ],
+      [
+        2,
+        22
+      ]
+    ]
+  },
+  "moh_p208_count": {
+    "f_Tschirnhausen_no_h2": true,
+    "h": "y^3(y-x)+b1 y^3+b2 y^2+b3 y+b4",
+    "keeps_alpha1_h3": true,
+    "plus_kappa": 18,
+    "printed_repeated_c5_coefficients": 17
+  },
+  "multiplicities": {
+    "T2": 15,
+    "T3": 40,
+    "f_Moh_G_chart_minor": 18,
+    "f_major": 48,
+    "g_Moh_F_chart_minor": 27,
+    "g_major": 72
+  },
+  "packets": {
+    "delta2_F_Moh_g": [
+      18,
+      9
+    ],
+    "delta2_G_Moh_f": [
+      12,
+      6
+    ],
+    "delta52_F": [
+      9,
+      9,
+      9
+    ],
+    "delta52_G": [
+      6,
+      6,
+      6
+    ],
+    "sum_F": 27,
+    "sum_G": 18
+  },
+  "q1_ode": {
+    "driver_q1_at_c1_matches_up_to_b0": true,
+    "monic_q1_prime_times_minus_1_5_plus_2p3": 0
+  },
+  "skeleton": {
+    "A1": 3,
+    "V3_is_major": true,
+    "cond12": true,
+    "cond13": false,
+    "d": [
+      99,
+      33,
+      11,
+      1
+    ],
+    "deltas": {
+      "1": "4/9",
+      "2": "1/3",
+      "3": "-1"
+    },
+    "m_star": 2,
+    "minor_threshold_d3_over_n_M3": "11/2",
+    "n_star": 3,
+    "u3": 3,
+    "u3_is_minor": true,
+    "v3": 8
+  },
+  "spine_1612": {
+    "identity": true,
+    "modulus": "54z^2-36z+5",
+    "unit": "20z-10/3"
+  },
+  "thm12_orders": {
+    "D1_h2": {
+      "A2": "-2/9",
+      "A3": "-1/3",
+      "B1": "-1/9",
+      "B2": "-2/9",
+      "ord_h2": "-1/9"
+    },
+    "D2_h3": {
+      "F_j_bound": ">= -j/3",
+      "ord_h3": "-1/3"
+    },
+    "design_rephrase": "ord Q_j >= j * ord h  iff  ord h = lambda/d",
+    "no_h3_at_D1": "F-multiplicity 24 is not divisible by 9",
+    "printed": "ord h_j(sigma_i) >= (lambda/d)*j  (Moh p.149)"
+  },
+  "type": "G9966-DESIGN-GATE / EXACT-ARITHMETIC"
+}

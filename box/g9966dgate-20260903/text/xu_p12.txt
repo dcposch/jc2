@@ -1,0 +1,52 @@
+Proof. Suppose σ split to us different roots. For simplify we denote δσ = δ. First from last
+Proposition we know δ > 1. We can write
+                                                            m       m
+                                 f (σ) = a0 p(π)m/ds t−vs ds +us ds δ + · · ·
+here
+                                      p(π) = (π − c1 ) · · · (π − cus )
+with
+                                              ci 6= cj if i 6= j
+From above Proposition, we know that δ > 1 and we can write
+                                                            n       n
+                                 g(σ) = a1 p(π)n/ds t−vs ds +us ds δ + · · ·
+                                                            −µs +n−2
+                                                                     +us −µsd+n−2 δ
+                     (Ts )f (σ) = bp(π)(−µs +n−2)/ds t−vs      ds            s        + ···
+                                             −vs −µsd+n−2 −1+(us −µsd+n−2 +1)δ
+                         Ts (σ) = as q(π)t           s               s           + ···
+here deg q(π) = us −µsd+n−2
+                        s
+                            + 1. By [Moh83] [Proposition 4.1], we have
+                                  ∂(Ts (σ), g(σ))
+(7.1)                                             = −J·(Ts )f (σ)t−2+δ
+                                     ∂(t, π)
+With the above information, and note that
+                −µs + n − 2           −µs + n − 2
+           −vs              − 1 + (us             + 1)δ < −vs − 1 + (us + 1)δ < 0,
+                     ds                   ds
+so every root of p(π) is a root of q(π) and p(π) has no multi roots, we have q(π) = p(π)q1 (π). We
+can use same reason to q1 (π) and on. Finally we have
+                                                      −µs +n−2
+                                       q(π) = p(π)       ds      (π − c)
+for some c. the above equation 7.1 can be simplified to
+                         ∂
+                               (p(π)t−vs +us , (π − c)t−1+δ ) = Cp(π)t−vs +us −2+δ .
+                       ∂(t, π)
+But this equation can not hold and it is a contradiction.                                              
+
+                    8. Case (99, 66) and split of principal minor roots
+  Moh writes in [Moh83] page 209 on the principal minor roots, “Namely, there is an [sic] unique
+π-root σ of g(y) of the following form
+                                      σ = a−1 t−1 + a0 + a1 t + πt2
+with
+                        g(σ) = gπ (σ)t−18 + · · ·     [sic, gπ (σ) should be gσ (π)]
+The polynomial gσ (π) is either a power of a linear polynomial or the 9-th power of a cubic polynomial
+with precisely two roots.”
+  For a long time, we try to give judgement for this statement. To do so, there are three claims
+have to be proven.
+     (i) The principal minor roots do not split except at π-root order δ = 2.
+    (ii) gσ (π) can not have three roots when δ = 2.
+   (iii) Let δ = 2 and let gσ (π) = c(π − b1 )18 (π − b2 )9 . Roots in the disc with the center σ|π=b1 do
+         not split before final.
+                                                      12
+

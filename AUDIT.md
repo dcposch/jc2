@@ -17457,3 +17457,12 @@ falsification: the two-factor t = 11 job (d = ±2) modulo a good prime. STATUS o
 (T) PROMOTED at t = 1, 2, 3, 4, 5; t = 6 half-closed; uniform OPEN with the residual
 content exactly (5.1) + (6.7). Lanes launched: k16-terminal-determinant-sol56 (§8 proof
 target), k16-t11-modular-gpt55 (the t = 11 falsification/evidence job at a split index).
+
+## INTEGRATION #17 DELTA (aaaa) (2026-09-03T20:27Z, GATE: CONFIRMED as a necessary chart, GAP[COMPLETE-JOINT-SYSTEM], producer Grok): the (99,66) joint chart (delta 17(ttt)) gated — (1) the label reversal CONFIRMED (F of degree 99 is Moh/Xu's g, G of degree 66 is their f; u_s·m/d_s = 18 on f; the chart puts the MINOR line at y = 0 where Moh's (8) puts the major line — a gauge, not a degree swap); (2) the major rows 516 → 120 CONFIRMED as a necessary PREFIX of Theorem 1.2 on h₃ ⊂ h₂ (not a 17(rr) slice; u₃ = 3 lives at the second point); (3) the minor leaders CONFIRMED as necessary leaders of the promoted split classification (the reduced ODE is not yet T₃ ∈ k(x)[F,G]; s²⁸ not re-executed); (4) the Jacobian prefix CONFIRMED (15 independent pivots; J ≤ 163, top J(P⁹, P⁶) ≡ 0, [x¹³⁵y²⁷] is the next degree-162 monomial); (5) controls CONFIRMED ((16,12) replayed over GF(32003), 77 rows, both c₅ readings [1]; the automorphism survives over Q); OVERALL: the displayed rows are a necessary RELAXATION — MISSING: the outer F, G D₁ Theorem-1.2 bands (the outer A, B order rows are not in the 516), the effective-root bridge, and the unranked remainder of I_J; so the running next-band computation is the right kill-or-bound test of that relaxation, NOT a complete decider
+
+`g9966-design-gate-grok46-20260903.md` (Grok, 15KB; 21/21 hashes; box/g9966dgate-20260903/).
+LEDGER: the joint chart is PROMOTED as a necessary coordinate chart; the complete decider
+must add the outer D₁ bands and the effective-root bridge (T₂, T₃ ∈ K[f,g]) — the
+next-band lane's design must be extended accordingly at its next iteration; a kill in
+the relaxation is still a valid kill (necessary rows only); a non-kill is a counting
+bound. (99,66) OPEN.

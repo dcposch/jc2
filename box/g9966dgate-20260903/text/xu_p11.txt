@@ -1,0 +1,56 @@
+   We claim p(π) = (π − a)us . If not, let π = b be a root of p(π) and b 6= a. We extend σ1 |π=b to a
+final minor π-root σ0 with split order δ0 .
+   First we point out that for any 1 < δ < δ0 and π-root σ = σ0 |<δ + πtδ we have that for some
+λ < 0,
+                                        ord T0 (σ) = (−µ0 )λ
+                                                  ..
+                                                   .
+                                     ord Ts−1 (σ) = (−µs−1 )λ
+                                        ord Ts (σ) = (−µs − 2)λ
+Using the proof of [Moh83] Proposition 4.2 verbatim, we conclude that σ is a distribution detector
+for T0 (y), . . . , Ts (y).
+   Hence we have
+
+
+                                      T0 (σ0 ) = T0,σ0 (π)t0 + · · ·
+                                              ..
+                                               .
+                                   Ts−1 (σ0 ) = Ts−1,σ0 (π)t0 + · · ·
+                                      Ts (σ0 ) = Ts,σ0 (π)t0 + · · ·
+where
+                                                          −µ0
+                                       deg T0,σ0 (π) =        r
+                                                           ds
+                                                     ..
+                                                      .
+                                                       −µs−1
+                                     deg Ts−1,σ0 (π) =       r
+                                                        ds
+                                                       −µs − 2
+                                           deg Ts,σ0 =         r
+                                                         ds
+for some positive integer r and r satisfies 1 ≤ r ≤ us .
+   We consider polynomial curve (fσ0 (π), gσ0 (π)) with π as the parameter. Then {Ti,σ0 (π)}0≤i≤s−1
+are quasi-approximate roots of the curve.
+                         Ts,σ0 (π) = Ts (fσ0 (π), gσ0 (π)) ∈ K[fσ0 (π), gσ0 (π)]
+                      −µs−1
+As gcd( −µ
+         ds r, . . . , ds r) = r and r divides deg Ts,σ0 (π) =
+           0                                                   −µs −2
+                                                                ds r, we conclude that
+                                                                                       −µs −2
+                                                                                        ds r is in
+                      −µ0     −µs−1
+the semigroup Γ( ds r, . . . , ds r).
+  On the other hand,
+                          −µs − 2 = −µs + Ms − n ∈
+                                                 / Γ(−µ0 , . . . , −µs−1 )
+by Lemma 7.1. This is a contradiction.                                                             
+Remark 7.4. By [ML14] the coefficient of t in any root α of f (y) is zero. We do not find this
+information can simplify the proof that Ts is not split at order 1.
+Corollary 7.5. Suppose us > 1 and let σ be a π−root of f for the principle minor roots. If order
+     vs + 1
+δσ <        then σ can not split to us different roots.
+     us + 1
+                                                   11
+
