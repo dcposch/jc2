@@ -20965,3 +20965,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T19:18Z EVENT — `n5-denominator-grok46` sealed (10KB): N5 PROVED (den(δ) ≤ u_s by the Galois-orbit argument; ≤ not |); the (99,66) split classification is complete; the decider is exhaustive over the two branches. → AUDIT delta 17(rrr). Lanes live: 8.
 
 ## 2026-09-03T19:28Z EVENT — `n5-gate-gpt55` sealed (10KB): N5 CONFIRMED at the top packet (child-packet version GAP, unused). → AUDIT delta 17(sss) PROMOTED; the (99,66) classification is complete and promoted. Lanes live: 8.
+
+## 2026-09-03T19:42Z EVENT — `g9966-global-design-sol56` sealed (32KB): the complete joint chart for (99,66) is an exact 7,161-coefficient system; joint prefixes nonempty (6,689 / 6,687 after the first direct F,G/J prefix); controls pass; no kill, no pair; next = the [x¹³⁵y²⁷] Jacobian band + pole rows + outer D₁ band. → AUDIT delta 17(ttt). Launching `g9966-global-band-sol56`. ASK TO DC: the (99,66) global chart (~6,700 unknowns, band-linear) is the first object that wants the fleet — the SSH key for box01/r6a would let bands/branches run in parallel. Lanes live: 8.

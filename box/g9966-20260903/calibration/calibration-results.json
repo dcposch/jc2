@@ -1,0 +1,214 @@
+{
+  "affine_two_point_automorphism": {
+    "Q_witness": {
+      "f": "2*x + y",
+      "g": "x + y",
+      "inverse": "x=f-g, y=2*g-f",
+      "jacobian": "1"
+    },
+    "composition": {
+      "f": "a*x + y",
+      "g": "a*x - x + y",
+      "jacobian": "1"
+    },
+    "exact_two_chart_jets": {
+      "at_P_f": {
+        "t*f": "pi",
+        "t*g": "pi - 1"
+      },
+      "at_P_g": {
+        "t*f": "pi + 1",
+        "t*g": "pi"
+      }
+    },
+    "field": "Q(a), with a != 0 for the displayed two-factor decomposition; witness a=2 lies over Q",
+    "finite_support": {
+      "free_global_coefficients_after_monic_gauge": [
+        "a",
+        "a-1"
+      ],
+      "homogenized_degree_one_forms": [
+        "a*X+Y",
+        "(a-1)*X+Y"
+      ],
+      "support_size_f": 2,
+      "support_size_g": 2
+    },
+    "moh_gauge": {
+      "f_total_degree": 1,
+      "f_y_degree": 1,
+      "f_y_leader": "1",
+      "g_total_degree": 1,
+      "g_y_degree": 1,
+      "g_y_leader": "1"
+    },
+    "physical_infinity_points": {
+      "closure_f_equals_0": "P_f=[1:-a:0]",
+      "closure_g_equals_0": "P_g=[1:1-a:0]",
+      "distinct_certificate": "the Y/X coordinates differ by 1",
+      "interpretation": "two distinct points for the union of the two coordinate fibres, one on each line"
+    },
+    "polynomial_inverse": {
+      "x": "f-g",
+      "y": "a*g-(a-1)*f"
+    },
+    "shared_global_ansatz": {
+      "ansatz": "f=A*x+y, g=C*x+y",
+      "band_table": [
+        {
+          "dimension": 2,
+          "independent_rows": 0,
+          "stage": "monic finite affine support"
+        },
+        {
+          "dimension": 1,
+          "independent_rows": 1,
+          "stage": "P_f canonical jet"
+        },
+        {
+          "dimension": 1,
+          "independent_rows": 1,
+          "stage": "P_g canonical jet"
+        },
+        {
+          "dimension": 1,
+          "independent_rows": 1,
+          "stage": "J=1"
+        },
+        {
+          "dimension": 0,
+          "independent_rows": 2,
+          "stage": "slice A=2"
+        }
+      ],
+      "jacobian_row": "A - C - 1",
+      "joint_dimension": 1,
+      "joint_row_rank": 1,
+      "point_f_row": "A - C - 1",
+      "point_g_row": "A - C - 1",
+      "unknowns": 2
+    },
+    "special_tower_tests": "NOT-APPLICABLE[degrees (1,1): no s=3 tower, no principal-minor split]",
+    "triangular_factors": {
+      "T1": "(x,y) -> (a*x+y,y)",
+      "T2": "(u,v) -> (u,((a-1)*u+v)/a)",
+      "det_T1": "a",
+      "det_T2": "1/a"
+    },
+    "typing": "EXACT-AUTOMORPHISM / SURVIVES[UNIVERSAL-GLOBAL-CHECKS]"
+  },
+  "moh_64_48_reduced_16_12": {
+    "joint_count_first_global_stage": {
+      "equations": 77,
+      "minor_extra_equations": 0,
+      "unknowns": 18
+    },
+    "minor_side": "TRIVIAL[u_s=1]: zero added split variables and zero added split equations",
+    "order_spine_terminal": {
+      "H": "54*z**2 - 36*z + 5",
+      "H_discriminant": "216",
+      "H_irreducible_over_Q": true,
+      "c_unit_identity": "cbar*cbar_inverse - 1 = -(18*z+1)*H/5",
+      "c_unit_identity_remainder": "0",
+      "cbar": "-4*z*(9*z - 1)/81",
+      "cbar_inverse": "2187*z/5 - 2187/10",
+      "charged_Qstar_reduction": {
+        "pivots": 7,
+        "residual_rows": 15,
+        "residual_unknowns": 11
+      },
+      "charged_band_counts": {
+        "h^0": 7,
+        "h^1": 6,
+        "h^2": 5,
+        "h^3": 2,
+        "h^4": 2,
+        "h^5": 1
+      },
+      "charged_full_shape": {
+        "rows": 23,
+        "unknowns_including_jacobian_scalar": 18
+      },
+      "charged_normalized_tail": {
+        "affine_pivots": 4,
+        "auxiliary_unknowns": 8,
+        "rows_over_Qz_mod_H": 11,
+        "terminal_unit_rows": 1
+      },
+      "terminal": "20*z - 10/3",
+      "terminal_identity": "terminal*terminal_inverse - 1 = -2*H",
+      "terminal_identity_remainder": "0",
+      "terminal_inverse": "27/10 - 27*z/5",
+      "typing": "EXACT-CERTIFICATE; preceding 23-row construction is charged provenance, not rebuilt here"
+    },
+    "typing": "CALIBRATION: original (64,48) chart divided by d=4; not a constructed global (64,48) Keller pair",
+    "variants": {
+      "absorbed_alpha1_distinct_c6": {
+        "coefficient_parameters_excluding_jacobian_scalar": 17,
+        "equations": 77,
+        "localization": "T*kappa-1",
+        "reduced_degrees_f_g": [
+          12,
+          16
+        ],
+        "run": {
+          "basis_one": true,
+          "elapsed_seconds": 0.035713,
+          "fail_markers": [],
+          "log": "box/g9966-20260903/calibration/moh1612_absorbed_alpha1_distinct_c6.log",
+          "log_sha256": "4a7a1dc69c144bd919c67756076a1b3634a1ccb54631b674229e29e773e95b33",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RAW_ORIGIN_PASS",
+            "CONTROL_RESULT_RING_PASS",
+            "CONTROL_RING_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966-20260903/calibration/moh1612_absorbed_alpha1_distinct_c6.sing",
+          "script_sha256": "2db3b05d35394d94a260edc2951bb5e2b385d61f154f0ef84f48ba1a83f81d1c",
+          "verdict": "SATURATED-EMPTY"
+        },
+        "typing": "EXACT-CAS within the declared common-polynomial ansatz",
+        "unknowns_excluding_wrapper_T": 18,
+        "unsaturated_origin": "all coefficient parameters and kappa equal zero"
+      },
+      "printed_repeated_c5": {
+        "coefficient_parameters_excluding_jacobian_scalar": 17,
+        "equations": 77,
+        "localization": "T*kappa-1",
+        "reduced_degrees_f_g": [
+          12,
+          16
+        ],
+        "run": {
+          "basis_one": true,
+          "elapsed_seconds": 0.033368,
+          "fail_markers": [],
+          "log": "box/g9966-20260903/calibration/moh1612_printed_repeated_c5.log",
+          "log_sha256": "4a7a1dc69c144bd919c67756076a1b3634a1ccb54631b674229e29e773e95b33",
+          "pass_markers": [
+            "CONTROL_EMPTY_WRAPPER_PASS",
+            "CONTROL_NONEMPTY_WRAPPER_PASS",
+            "CONTROL_RAW_ORIGIN_PASS",
+            "CONTROL_RESULT_RING_PASS",
+            "CONTROL_RING_PASS"
+          ],
+          "returncode": 0,
+          "script": "box/g9966-20260903/calibration/moh1612_printed_repeated_c5.sing",
+          "script_sha256": "1c3a656f3e85e1a063382a4677c655f71e4a427acf985dcc2a8df079096edaec",
+          "verdict": "SATURATED-EMPTY"
+        },
+        "typing": "EXACT-CAS within the declared common-polynomial ansatz",
+        "unknowns_excluding_wrapper_T": 18,
+        "unsaturated_origin": "all coefficient parameters and kappa equal zero"
+      }
+    },
+    "verdict": "SATURATED-EMPTY[P208-COMMON-POLYNOMIAL-ANSATZ]"
+  },
+  "software": {
+    "python": "Python 3.12.3",
+    "singular": "Singular for x86_64-Linux version 4.3.2 (4330, 64 bit) Apr  1 2024 04:44:00",
+    "sympy": "1.12"
+  }
+}

@@ -17371,3 +17371,21 @@ running (branch B); the decision needs the complete joint system (Sol design lan
 `n5-gate-gpt55-20260903.md`. LEDGER: N5 PROMOTED at the top packet; the (99,66) split-order
 classification {2 [2,1], 5/2 [1,1,1]} is COMPLETE and PROMOTED (17(nnn) + 17(rrr) + this);
 the decider is exhaustive over the two branches.
+
+## INTEGRATION #17 DELTA (ttt) (2026-09-03T19:42Z, COUNTING-BOUND / exact finite object, producer Sol): THE COMPLETE JOINT TWO-POINT CHART FOR (99,66) IS NOW AN EXACT FINITE SYSTEM — fixed-top ambient 7,161 coefficients; the major tower (h₃ ⊂ h₂ ⊂ f at the first point) as finite coefficient rows (exact 516 → 120 for the simultaneous h₃-D₂ / h₂-D₂ faces and the first h₂-D₁ vanishing band); the two minor incidence blocks (δ = 2 [2,1] common-h₃ leader; δ = 5/2 common-h₃ leader with the reduced T₃ ODE consistent through s²⁸, dimension 3 at c = 1); the joint prefixes: major ∩ δ = 2 leader dimension 104 (6,704 with the untouched outer F, G blocks), major ∩ δ = 5/2 6,702; after the first direct outer/minor/Jacobian prefix (15 independent pivots) 6,689 / 6,687; direct Jacobian coefficient slots ≤ 13,366; NO KILL, NO PAIR; the cheapest genuinely new test is the exact next system: the degree-162 Jacobian at [x¹³⁵y²⁷] + pole rows F_(95,*)/G_(62,*) + the matching outer-F,G D₁ major band, Q*-pivots before Gröbner
+
+`g9966-global-design-sol56-20260903.md` (Sol, 32KB; box/g9966-20260903/; 19/19 hashes).
+§1.1 an essential label reversal (which polynomial is "f" at the second point) recorded;
+§2.2 what Lemma 2.1 does and does not supply; §3 where the two points first share
+coefficients (3.1 major h₃ inside h₂: 516 → 120; 3.2 δ = 2 common leader; 3.3 δ = 5/2
+leader and ODE through s²⁸; 3.4 the first direct overlap); §4 controls: Moh's (64,48) →
+(16,12) kill reproduced in the same chart (PASS); a genuine automorphism SURVIVES (PASS).
+The straight-centre δ = 2 local lift (17(ggg), dimension 59 at band 5) has no complete map
+to the 7,161 global coordinates and is not added. VERDICTS: COUNTING-BOUND[MAJOR-h3/h2 +
+MINOR-h3 JOINT]; SURVIVES[δ=2 COMMON-h3 LEADER]; COUNTING-BOUND[δ=5/2 CONSISTENT-THROUGH-
+s^28]; COUNTING-BOUND[FIRST-GLOBAL-FG/J-BAND]; OPEN[COMPLETE-GLOBAL-FG/J + OUTER-MAJOR +
+EFFECTIVE-ROOT-BRIDGE]. READING: (99,66) is now a single explicit finite computation of
+~6,700 unknowns whose bands are LINEAR in the new unknowns at each step (Q*-pivots), i.e.
+large sparse linear algebra plus small nonlinear residues — the first campaign object
+that genuinely wants the fleet's larger boxes (parallel bands / branches). Lane launched:
+g9966-global-band-sol56 (the exact next system, 8 cores, 150 min).

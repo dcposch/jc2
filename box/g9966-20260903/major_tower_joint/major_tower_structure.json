@@ -1,0 +1,104 @@
+{
+  "D1_mod_D2": {
+    "chosen_free_columns": [
+      "C2(11,8)",
+      "C2(15,5)",
+      "C2(19,2)",
+      "C3(23,7)",
+      "C3(27,4)",
+      "C2(10,9)",
+      "C2(14,6)"
+    ],
+    "rank": 7,
+    "residual_rows": 0,
+    "rows_by_u_power": {
+      "291": 1,
+      "292": 1,
+      "293": 1,
+      "294": 2,
+      "295": 2
+    },
+    "weight_97_Qstar_diagonal": [
+      "1",
+      "-3",
+      "9",
+      "-27",
+      "81"
+    ],
+    "weight_97_minor_determinant": "59049",
+    "weight_97_q_values": [
+      16,
+      13,
+      10,
+      7,
+      4
+    ],
+    "weight_98_Qstar_diagonal": [
+      "1",
+      "-3"
+    ],
+    "weight_98_minor_determinant": "-3",
+    "weight_98_q_values": [
+      17,
+      14
+    ]
+  },
+  "D2": {
+    "C2_unit_pivots": 114,
+    "C3_unit_pivots": 275,
+    "identity_slots": [
+      [
+        1,
+        22
+      ],
+      [
+        1,
+        23
+      ],
+      [
+        2,
+        22
+      ]
+    ],
+    "nominal_output_slots": 392,
+    "nonidentity_rows": 389,
+    "rank": 389,
+    "residual_rows": 0
+  },
+  "ambient": {
+    "C2_variables": 187,
+    "C3_variables": 308,
+    "h3_free_variables": 21,
+    "total_variables": 516
+  },
+  "controls": {
+    "all_D2_slots_enumerated": true,
+    "all_three_identities_have_no_source_or_target_support": true,
+    "both_D1_minors_have_nonzero_exact_determinant": true,
+    "every_D2_pivot_has_diagonal_one_and_no_earlier_column_incidence": true,
+    "perturbing_any_solved_pivot_violates_its_unit-diagonal row": true
+  },
+  "frozen_input_verification": {
+    "all_hashes_match": true,
+    "charged_inputs": 14,
+    "lane_inputs_dir": "/tmp/jc2-lane.eijAga/inputs",
+    "receipt": "/home/ubuntu/jc2/xmodel/g9966-global-design-sol56-20260903.run.v2"
+  },
+  "joint_result": {
+    "consistency_reason": "unit-triangular affine pivots over Q[h3]",
+    "dimension": 120,
+    "free_h3_projection_dimension": 21,
+    "h3_projection_is_surjective": true,
+    "total_rank": 396
+  },
+  "scope": {
+    "not_claimed": [
+      "outer F99/G66 order blocks",
+      "either direct minor F/G leader",
+      "the effective T2/T3 bridge",
+      "J(F,G)=1"
+    ],
+    "proved": "fixed h3 D2 face, h2 D2 face, and first h2 D1 vanishing band"
+  },
+  "type": "EXACT-SPARSE-STRUCTURAL-CERTIFICATE / MAJOR-h3-IN-h2"
+}
