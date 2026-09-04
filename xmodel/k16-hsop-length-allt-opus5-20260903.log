@@ -1,0 +1,25 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/k16-hsop-length-allt-opus5-20260903.md` (39.9 KB), drivers in `box/k16hsop-20260903/` (55 artifacts, `artifacts.sha256` verifies).
+
+**Custody:** manifest generated from the receipt with `awk`, `sha256sum -c` → 8/8 OK.
+
+**Verdict: PARTIAL.** The all-`t` hsop statement is not proved. What is:
+
+**Length side — closed completely.** The CI numerator/denominator cancellation is the single identity `(1−s^{2t+2})/(1−s^{t+1}) = 1+s^{t+1}`, giving
+`P_t(s) = (1+s^{t+1})·[3t+1 choose t−1]_s` — manifestly nonnegative (Gaussian binomial), palindromic, degree `(2t−1)(t+1)`, and
+`L_t = 2·binom(3t+1,t−1) = 2·#{monomials of total degree ≤ 2t+2 in t−1 variables}`. Verified exactly for `t=2..16`.
+
+**Structure side — a real reduction.** `α_t` is a unit (its norm factors as `−4(t−2)(2t+1)²(3t−1)²(3t+2)(27t³+17t²+t+2)`, re-derived from scratch; only integer root `t=2`). Hence `T_{t,2t−1}` is a unit-quadratic in `b3`, `S_t/(T_{t,2t−1})` is `P_t`-free of rank 2, and `J^tail = (T_{t,2t−1}, G_1..G_{t−1})` with the `G_r` **b3-linear** of degrees `2t+3..3t+1`. The two factors of `P_t(s)` are exactly this rank and this CI part — so `L_t` is derived from the structure, not fitted.
+
+**Two card routes are impossible, not merely unfinished.**
+- *NO-COPRIME-LEADERS*: for `t ∉ {3,5}` no order and no generators give coprime leaders. Coprime forces pure powers; degrees are forced to `2t+2..3t+1`; a prime in `[2t+3,3t+1]` admits only weight 1, two of them break Hall. Nagura gives two primes for `t ≥ 16`; `t ≤ 15` is a table (matching run to `t=400`).
+- *DEGREE-BLIND*: the two `t=2` fibres have identical degree data and opposite dimensions (dim 1 at `y=1/5`; dim 0, length 14 at `y=2/5` — new here). So no Bezout/Fröberg argument can decide dim 0.
+
+**Boundary case lands exactly as required:** `α_2 = 28(5y−1)/625` vanishes on `y=1/5`, where `b4³` divides both tail rows and the b3-axis enters `V(J)`.
+
+**Residual, stated exactly:** criterion RANK — a non-vanishing along the (expected-dimension-1) rank-≤1 locus of a `(t−1)×2` matrix whose entries carry the whole spine.
+
+Independent verification: I re-implemented the closed recurrence from the banked equations and it reproduces nine charged values digit-for-digit (including three fable5 resultants from a different driver and sign convention); structure confirmed at `t=2,3,4,5`; dim 0 with `vdim = 90, 572` at `t=3,4` on both modular roots; and at `t=3` the *full graded series* matches `P_3(s)`, not just the length.
+
+One honest overrun: `t4_ideal.py` took 608.9 s, 8.9 s past the card's 10-minute guidance; reported as measured.
+DIVERT path=xmodel/k16-hsop-length-allt-opus5-20260903.md status=CLEAN body_bytes=39901 body_sha256=a2637d38f715334fec463d947c6be29d2efd93e9ee2175a57e9e6eda266edd83
