@@ -1,0 +1,26 @@
+# Blind coordinator submission — round 20260904T1200Z (written before reading any other submission)
+
+## Disposition (changes only)
+- (H1) MINOR-EMPTY as a THEOREM: DOWNGRADE from flagship-theorem to "census + one open structural row". The disc route is dead (17(ooooo)); no uniform kill mechanism is in hand. The engine is a census tool.
+- K16 hsop-length: PROMOTE to the primary theorem hope — it is the one half that could close by a clean combinatorial identity, and a running lane attacks it.
+- Both compute-bound OPENs ((25,15), D=108 no-split, case (A)): retype from "gate pending" to "needs a better solver OR a structural δ₁=0 argument" — do not keep throwing 1800s foreground jobs at them.
+
+## Q1 (K16) — my answer
+The tail-hsop/length statement is the right all-t target, and the cheapest real test is NOT another Gröbner run: it is the LEADING-TERM/triangularity question. Card A proved the length holds t=3..6 and the method validates; what is missing is a t-uniform reason the tail is a regular sequence. Concretely: from the closed forms T_{t,t+j} (weighted degree 2t+2+j), compute the initial ideal in the REVERSE weighted order (heaviest variable b₃ first) and test whether the t leading terms are a triangular system in (b₃, q_{t−1,0}, …, q_{2,0}, b₄) — one new variable's pure power per row. If triangular, the tail is automatically a regular sequence (Gröbner basis by coprime-ish leading terms) for ALL t and (V0) follows. The round Opus V4 / Fable E2 showed the OBVIOUS order fails (dim 2,3); the question is whether a DIFFERENT order or a triangular change of generators works. This is desk algebra, no Gröbner. Bounded test: t=3,4,5 symbolic leading terms in the reverse order, look for the triangular pattern; if present, prove it in t from the closed forms.
+
+## Q2 ((99,66) unsplit + paper-grade) — my answer
+Case (A) δ₁=0: the corrected full-basis is compute-bound, so attack the δ₁=0 STRATUM structurally. δ₁=0 means the first descended radius vanishes — the recentring/zero-factor-centre lemma (banked) already governs this; apply it to reduce (27,18; δ₁=0) to a lower object BEFORE building the full basis (the 10-coefficient reduction Moh already writes at p.209 for case (A) is the starting point, not the full chart). N1/N2: YES, a source read closes them — N1 is Moh's classification theorem (the census IS the finite list of skeletons for a given degree; cite Moh §5–6), N2 is Xu §8's claim (i) plus the den(δ)≤u_s bound which 17(rrr) already PROVED (N5). So N2 is likely already closed and mis-typed; reconcile. One source-read lane closes both. THEOREM 8.1 (split) becomes unconditional modulo case (A).
+
+## Q3 ((H1) theorem vs census) — my answer
+Commit to the CENSUS as the deliverable, but do NOT abandon the theorem — reframe it as a FITTING-IDEAL statement. 17(ooooo) named the missing object precisely: disc(p_red) ∈ radical(I_joint) uniformly. That is a Fitting-ideal / rank-jump statement about the incidence-Jacobian map as the split datum varies. The right tool is NOT the discriminant but the FITTING IDEALS of the packet-evaluation-plus-Jacobian matrix: the chart dies iff a specific Fitting ideal is the unit ideal, and THAT is a determinantal condition that could be uniform in the datum. Cheapest test: at D=108 and (99,66), form the actual incidence+Jacobian matrix (the certificate-slice rows, 8/7/10 of them) and compute its Fitting ideals; see whether the SAME Fitting index gives the unit ideal in all three. Minimal compute change for the full-basis systems: modular + CRT with a Hilbert-driven std (the Card A method that cut t=6 to 33s) instead of a naive Q Gröbner — the 1800s timeouts are naive-Q; a guided modular run + rational reconstruction should finish.
+
+## Q4 (the finish / framing challenge) — my answer
+The two-half program (H1)∧(H2) is NOT yet proved COMPLETE as a reduction: it assumes every skeleton is either a clean split or a clean descent. The banked case (A) is exactly the worrying third type — an UNSPLIT configuration that does NOT cleanly descend (δ₁=0 blocks Prop 6.3, whose hypothesis needs δ*≥v_s/u_s). So there IS a third configuration already in hand: unsplit-with-degenerate-descent (δ₁=0). The single most valuable object is therefore the δ₁=0 stratum itself — it is the shared obstacle of case (A), (25,15), and D=108 no-split, and it is where the reduction's completeness is unproven. Close δ₁=0 (structurally, via the recentring lemma) and the reduction's third gap closes with it. My single first lane: the δ₁=0 structural reduction lane (Q2+Q4 shared).
+
+## Systems upgrade
+The full-basis 1800s timeouts (17(nnnnn)) show foreground Gröbner over Q is the wrong default for the order charts. Upgrade: a shared guided-modular-Gröbner helper (Hilbert-series-driven std mod several primes + CRT + rational reconstruction, with the Card A control battery) as box/lib/guided_gb.py, callable by every order-chart and cone lane. This is the single change that unblocks the most compute-bound OPENs.
+
+## First lane
+`k16-tail-triangular-order` (Q1): the reverse-weighted-order leading-term test for the tail regular sequence — cheapest decisive test on the primary theorem hope, desk algebra, both outcomes informative.
+
+<!-- BODY-END -->
