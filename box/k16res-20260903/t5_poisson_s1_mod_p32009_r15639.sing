@@ -1,0 +1,39 @@
+ring W=32009,(b4,q2_0,q3_0,q4_0),wp(1,2,3,4);
+number yy=15639;
+option(redSB);
+
+proc purepowers(ideal G)
+{ // list, per ring variable, the least pure power in lead(G) (0 if none)
+  ideal L=lead(G); int i; int v; intvec e; string s=""; int found; int cnt; int k;
+  for (v=1; v<=nvars(basering); v++) {
+    found=0;
+    for (i=1; i<=size(L); i++) { e=leadexp(L[i]); cnt=0; for (k=1;k<=nvars(basering);k++){ if (e[k]>0){cnt++;} }
+      if (cnt==1 and e[v]>0) { if (found==0 or e[v]<found) { found=e[v]; } } }
+    s=s+string(var(v))+"^"+string(found)+" ";
+  }
+  return(s);
+}
+proc onlymono(poly f, poly mon)
+{ // coefficient of the monomial mon in f (all other monomials ignored)
+  matrix M=coef(f,mon); // not used
+  poly g=f; int i; 
+  for (i=1;i<=nvars(basering);i++){ if (mon/var(i)==0) { g=subst(g,var(i),0); } }
+  return(g);
+}
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/restop_t5_exact.sing"));
+int tt=5; int m; int r; ideal RR;
+for (m=1;m<=tt-1;m++){ r=tt-m; RR[r]=RStop[m]; }
+for (r=1;r<=tt-1;r++){ if (homog(RR[r])!=1) { print("FAIL inhomogeneous r="+string(r)); exit(2); }
+  if (deg(RR[r])!=4*tt+4+2*r) { print("FAIL weight r="+string(r)); exit(2); }
+  print("R r="+string(r)+" wdeg="+string(deg(RR[r]))+" size="+string(size(RR[r]))+" vars="+string(variables(RR[r]))); }
+ideal RR1=subst(RR,b4,1);
+ring WA=32009,(q2_0,q3_0,q4_0),dp; number yy=15639; option(redSB);
+ideal RA=imap(W,RR1); int tt=5; int r; int c=0; ideal SA;
+for (r=1;r<=tt-1;r++){ if (r!=1) { c++; SA[c]=RA[r]; } }
+int tm=timer; ideal GA=std(SA); print("B dim="+string(dim(GA))+" vdim="+string(vdim(GA))+" time="+string(timer-tm));
+ideal KA=kbase(GA); int nb=size(KA); int i; int j; ideal Img;
+for (i=1;i<=nb;i++){ Img[i]=reduce(RA[1]*KA[i],GA); }
+matrix MA=coeffs(Img,KA); string sline;
+write(":w /home/ubuntu/jc2/box/k16res-20260903/t5_poisson_s1_mod_p32009_r15639_matrix.txt", "NB="+string(nb));
+for (i=1;i<=nb;i++){ sline=""; for (j=1;j<=nb;j++){ sline=sline+string(MA[i,j])+","; } write(":a /home/ubuntu/jc2/box/k16res-20260903/t5_poisson_s1_mod_p32009_r15639_matrix.txt", sline); }
+print("EXPORT_DONE"); quit;

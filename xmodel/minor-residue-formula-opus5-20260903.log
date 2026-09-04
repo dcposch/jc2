@@ -1,0 +1,27 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete. Report sealed at `xmodel/minor-residue-formula-opus5-20260903.md` (23 KB, `<!-- BODY-END -->`). All 17 frozen inputs verified `OK` from the receipt manifest; no tracked file modified.
+
+## Verdict: the Card-B residue formula is refuted as posed
+
+**The conjecture has a type error.** "The residue is a rational function of the datum; the chart dies iff it's a unit" asks for a formula for a non-invariant. Over `Q` *every* nonzero residue is a unit. The `delta=2` stage-4 run emits **118** nonzero constant residues — any one certifies `1`. `6264` is just the first (and their gcd); `64` is a normal form *after* 66 pivots. Bounded 2- and 3-atom multiplicative grammars over 22 datum atoms return **0** fits on `(6264, 64)`; 4 atoms fit but with 5 free parameters against 2 equations.
+
+## What I got instead
+
+**A derived row law** (this is the real result). For a chart with `K2` top form `y^A(y−x)^B`:
+
+```
+|c(p,k)| = e·A·(jK − p) − n·(k − k0),   k0 = A(e+f−j) − 1
+```
+
+The `k=k0` member is **derived** from the top forms alone — the coordinate index `Q` cancels identically, so the row is a scalar times *one* alternating linear form. It reproduces **66/66** banked ladder entries with signs and all 8 terminations. And it decomposes the certificate exactly: `6264 = 8 × 783`, where `783 = e·A·(K−p) = 27·29` and `8` is the pole row's offset. The prime 29 is the band-index complement `K−p`, not a datum prime.
+
+**The uniform object is `disc(p_red)`**, the discriminant of the squarefree part of Xu Cor. 7.5's shared leader. It equals the declared localisation in 3/3 charged branches (`9ρ²`, `4c³`, `b²+4c`). At `D=108` the incidence forces `p = (π − jet1²)²` — the `[1,1]` partition collapses to `[2]`; kill order 1.
+
+## The fourth point isn't a fourth test
+
+Moh's `(16,12)` is the Prop. 6.3 descent of `(64,48)` with **`u_s = 1`** — outside the stratum, open condition `J ≠ 0` rather than a partition condition. I computed it anyway (new): chart **empty**, `dim −1`, kill order **2**, residue the Jacobian constant, all four Singular controls passing. Its `k0` row is identically zero (`β₂`'s top form is `y²`-divisible), so the `(99,66)` instrument is vacuous there. Its top Jacobian band is rank one — `(3c₁ − 4c₃)·y¹⁶(y−x)⁵` — which independently recovers Moh's `4/3 = n/m`.
+
+**So: MINOR-EMPTY gets no theorem route from a residue formula.** It gets one transferable derived law and one sourced mechanism; what remains to prove is a statement about the incidence compiler, not a number-theoretic one.
+
+Two side observations flagged, no edits: `descent_table.py:20` computes `M₂` without the `u_s` factor (Moh p.209 gives 21, the driver gives 7 — they agree iff `u_s = 1`, which is the only case gate G1 checks), and the ladder's hard stop at `p = jK` is a cheap tier-0 screen.
+DIVERT path=xmodel/minor-residue-formula-opus5-20260903.md status=CLEAN body_bytes=23020 body_sha256=b009dee9b3aee4c48ab97a4c0a4f61d41c3430923461b7fce22077fb9eb2547f

@@ -1,0 +1,109 @@
+// Closed Laurent/Euler recurrence; T[k]=[X^k]E.
+ring R=0,(h,s,b1,b2,b3,b4,B0,C1,q2_0,q3_0,q4_0),dp;
+number yy=(2/5);
+option(noredSB);
+proc hcoef(poly f, int k)
+{
+  matrix M=coef(f,h); int ii;
+  for (ii=1; ii<=ncols(M); ii++)
+  { if (M[1,ii]==h^k) { return(M[2,ii]); } }
+  return(0);
+}
+proc eulerInverse(poly f)
+{
+  matrix M=coef(f,s); poly answer=0; int ii; int mm;
+  for (ii=1; ii<=ncols(M); ii++)
+  { mm=deg(M[1,ii]); answer=answer+M[2,ii]*M[1,ii]/((2*mm+1)*yy); }
+  return(answer);
+}
+number g1=7/5;
+number g2=(7/5)*yy+(14/50);
+number g3=(14/25)*yy-(42/750);
+number cc=-yy*g3;
+poly Uh=h^5+q2_0*h^3+q3_0*h^2+q4_0*h^1;
+poly Ch=h^1+C1*h^0;
+poly U=subst(Uh,h,s+b4);
+poly Cp=subst(Ch,h,s+b4);
+poly A=s*Cp;
+poly Bprime=g3*(5*Cp+3*s*diff(Cp,s))/(2*yy);
+matrix MB=coef(Bprime,s); poly B=B0; int ii; int mm;
+for (ii=1; ii<=ncols(MB); ii++)
+{ mm=deg(MB[1,ii]); B=B+MB[2,ii]*s*MB[1,ii]/(mm+1); }
+if (diff(B,s)-Bprime!=0) { print("FAIL B derivative"); exit(2); }
+poly rhsD=3*g3*diff(U,s)+A*B-s*A*diff(B,s)+2*s*diff(A,s)*B+g3*b3*(A/s+(5/2)*diff(A,s));
+poly D=eulerInverse(rhsD);
+if (yy*(D+2*s*diff(D,s))-rhsD!=0) { print("FAIL Euler inverse"); exit(2); }
+poly Q1=s*A-yy*b3; poly Y=s*D-b3*B-g3*b2; poly Z=s*B-g3*b3;
+poly numD1=yy*g3*b1-Q1*diff(Y,s)+diff(Q1,s)*Y+2*diff(U,s)*Z;
+poly constantS=subst(numD1,s,0); poly pb1=diff(constantS,b1);
+poly b1rhs=-subst(constantS,b1,0)/pb1;
+numD1=subst(numD1,b1,b1rhs);
+if (subst(numD1,s,0)!=0) { print("FAIL b1 divisibility"); exit(2); }
+poly Xprime=numD1/(2*yy*s);
+poly gauge=hcoef(subst(Xprime,s,h-b4),4);
+poly pB0=diff(gauge,B0); poly B0rhs=-subst(gauge,B0,0)/pB0;
+B=subst(B,B0,B0rhs); D=subst(D,B0,B0rhs);
+Y=subst(Y,B0,B0rhs); Z=subst(Z,B0,B0rhs);
+Xprime=subst(Xprime,B0,B0rhs); b1rhs=subst(b1rhs,B0,B0rhs);
+if (subst(gauge,B0,B0rhs)!=0) { print("FAIL B0 gauge"); exit(2); }
+poly RR=Q1*Xprime-diff(U,s)*Y-yy*g3;
+poly Rh=subst(RR,s,h-b4);
+poly W1=hcoef(Rh,8);
+poly p1=diff(W1,C1);
+if (p1==0) { ERROR("zero pivot 1"); }
+poly v1rhs=-subst(W1,C1,0)/p1;
+if (subst(W1,C1,v1rhs)!=0) { print("FAIL pivot 1"); exit(2); }
+Rh=subst(Rh,C1,v1rhs);
+poly W2=hcoef(Rh,7);
+poly p2=diff(W2,q2_0);
+if (p2==0) { ERROR("zero pivot 2"); }
+poly v2rhs=-subst(W2,q2_0,0)/p2;
+if (subst(W2,q2_0,v2rhs)!=0) { print("FAIL pivot 2"); exit(2); }
+Rh=subst(Rh,q2_0,v2rhs);
+poly W3=hcoef(Rh,6);
+poly p3=diff(W3,q3_0);
+if (p3==0) { ERROR("zero pivot 3"); }
+poly v3rhs=-subst(W3,q3_0,0)/p3;
+if (subst(W3,q3_0,v3rhs)!=0) { print("FAIL pivot 3"); exit(2); }
+Rh=subst(Rh,q3_0,v3rhs);
+poly W4=hcoef(Rh,5);
+poly p4=diff(W4,q4_0);
+if (p4==0) { ERROR("zero pivot 4"); }
+poly v4rhs=-subst(W4,q4_0,0)/p4;
+if (subst(W4,q4_0,v4rhs)!=0) { print("FAIL pivot 4"); exit(2); }
+Rh=subst(Rh,q4_0,v4rhs);
+poly W5=hcoef(Rh,4);
+poly p5=diff(W5,b2);
+if (p5==0) { ERROR("zero pivot 5"); }
+poly v5rhs=-subst(W5,b2,0)/p5;
+if (subst(W5,b2,v5rhs)!=0) { print("FAIL pivot 5"); exit(2); }
+Rh=subst(Rh,b2,v5rhs);
+if (hcoef(Rh,4)!=0) { print("FAIL high band 4"); exit(2); }
+if (hcoef(Rh,5)!=0) { print("FAIL high band 5"); exit(2); }
+if (hcoef(Rh,6)!=0) { print("FAIL high band 6"); exit(2); }
+if (hcoef(Rh,7)!=0) { print("FAIL high band 7"); exit(2); }
+if (hcoef(Rh,8)!=0) { print("FAIL high band 8"); exit(2); }
+if (hcoef(Rh,9)!=0) { print("FAIL high band 9"); exit(2); }
+poly T0=-hcoef(Rh,0);
+poly T1=-hcoef(Rh,1);
+poly T2=-hcoef(Rh,2);
+poly T3=-hcoef(Rh,3);
+ideal RAW=T0,T1,T2,T3;
+ring S=0,(b4,b3),wp(1,3);
+number yy=(2/5);
+ideal TT=imap(R,RAW);
+poly T3=TT[4]; poly T2=TT[3]; poly T1=TT[2]; poly T0=TT[1];
+print("T3="+string(T3)); print("T2="+string(T2)); print("T1="+string(T1)); print("T0="+string(T0));
+if (homog(T3)!=1 or deg(T3)!=6 or homog(T2)!=1 or deg(T2)!=7) { print("FAIL weights"); exit(2); }
+matrix C0=coeffs(T3,b3); matrix C1=coeffs(T2,b3);
+poly a0=0; poly b0=0; poly c0=C0[1,1]; if (nrows(C0)>=2){ b0=C0[2,1]; } if (nrows(C0)>=3){ a0=C0[3,1]; }
+poly a1=0; poly b1=0; poly c1=C1[1,1]; if (nrows(C1)>=2){ b1=C1[2,1]; } if (nrows(C1)>=3){ a1=C1[3,1]; }
+print("a0="+string(a0)+" b0="+string(b0)+" c0="+string(c0)); print("a1="+string(a1)+" b1="+string(b1)+" c1="+string(c1));
+poly Rf=(a0*c1-a1*c0)^2-(a0*b1-a1*b0)*(b0*c1-b1*c0);
+print("FORMAL R1 = "+string(Rf)+"   (rho_2 * b4^14)");
+poly Ra=resultant(T3,T2,b3);
+print("ACTUAL-DEGREE resultant(T3,T2,b3) = "+string(Ra));
+poly Rl=b0*c1-b1*c0; print("LINEAR-PART b0*c1-b1*c0 = "+string(Rl));
+ideal Gt=std(ideal(T3,T2,T1)); print("CONE J+ dim="+string(dim(Gt))+" lead="+string(lead(Gt)));
+print("JOB_DONE t2 fibre 2/5");
+quit;

@@ -1,0 +1,57 @@
+ring W=(0,yy),(b4,q2_0),wp(1,2);
+minpoly=588*yy^2-336*yy+44;
+option(redSB);
+
+proc purepowers(ideal G)
+{ // list, per ring variable, the least pure power in lead(G) (0 if none)
+  ideal L=lead(G); int i; int v; intvec e; string s=""; int found; int cnt; int k;
+  for (v=1; v<=nvars(basering); v++) {
+    found=0;
+    for (i=1; i<=size(L); i++) { e=leadexp(L[i]); cnt=0; for (k=1;k<=nvars(basering);k++){ if (e[k]>0){cnt++;} }
+      if (cnt==1 and e[v]>0) { if (found==0 or e[v]<found) { found=e[v]; } } }
+    s=s+string(var(v))+"^"+string(found)+" ";
+  }
+  return(s);
+}
+proc onlymono(poly f, poly mon)
+{ // coefficient of the monomial mon in f (all other monomials ignored)
+  matrix M=coef(f,mon); // not used
+  poly g=f; int i; 
+  for (i=1;i<=nvars(basering);i++){ if (mon/var(i)==0) { g=subst(g,var(i),0); } }
+  return(g);
+}
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/restop_t3_exact.sing"));
+int tt=3; int m; int r; ideal RR;
+for (m=1;m<=tt-1;m++){ r=tt-m; RR[r]=RStop[m]; }
+for (r=1;r<=tt-1;r++){ if (homog(RR[r])!=1) { print("FAIL inhomogeneous r="+string(r)); exit(2); }
+  if (deg(RR[r])!=4*tt+4+2*r) { print("FAIL weight r="+string(r)); exit(2); }
+  print("R r="+string(r)+" wdeg="+string(deg(RR[r]))+" size="+string(size(RR[r]))+" vars="+string(variables(RR[r]))); }
+poly R1=RR[1]; poly R2=RR[2];
+print("R1="+string(R1)); print("R2="+string(R2));
+// facial: q2-axis
+poly c10=subst(R2,b4,0); print("C10 q2^10 coefficient of R2: "+string(c10));
+poly c9=subst(R1,b4,0); print("R1 at b4=0 (expect 0): "+string(c9));
+poly tau1=subst(R1,q2_0,0); poly tau2=subst(R2,q2_0,0); print("TAU1 b4^18 coeff: "+string(tau1)); print("TAU2 b4^20 coeff: "+string(tau2));
+// dehomogenise b4=1: univariate in q2_0
+ideal DH=subst(R1,b4,1),subst(R2,b4,1); ideal PB=subst(R1,b4,1,q2_0,q2_0^2),subst(R2,b4,1,q2_0,q2_0^2);
+ring U=(0,yy),(q2_0),dp; minpoly=588*yy^2-336*yy+44;
+ideal DH=imap(W,DH); poly f1=DH[1]; poly f2=DH[2];
+print("deg f1="+string(deg(f1))+" deg f2="+string(deg(f2)));
+poly sred=resultant(f1,f2,q2_0); print("SIGMA_RED = Res_{8,10}(f1,f2) = "+string(sred));
+number c10=leadcoef(f2); print("lc f2 = c10 = "+string(c10));
+number lc1=leadcoef(f1); print("lc f1 = "+string(lc1));
+poly Pi=sred/(c10^8); print("PI3 = N_{A[q2]/(R2|1)}(R1|1) = sred/c10^8 = "+string(Pi));
+poly sig=c10*sred; print("SIGMA3 = Res_{9,10}(P1,P2) (formal degrees) = c10*sred = "+string(sig));
+ideal PB=imap(W,PB); poly F1=PB[1]; poly F2=PB[2];
+print("deg F1="+string(deg(F1))+" deg F2="+string(deg(F2)));
+poly rp=resultant(F1,F2,q2_0); print("PULLBACK Res_{16,20}(F1,F2) = "+string(rp));
+print("CHECK pullback == sred^2 : "+string(rp-sred^2==0)+"  or == -sred^2 : "+string(rp+sred^2==0));
+// Poisson with R1 as F0: B'=A[q2]/(R2|1), N(R1|1)
+ideal G2=std(f2); ideal K2=kbase(G2); ideal Img; int i; for (i=1;i<=size(K2);i++){ Img[i]=reduce(f1*K2[i],G2); } matrix M2=coeffs(Img,K2); poly d2=det(M2);
+print("POISSON nb="+string(size(K2))+" det(mult R1|1 on A[q2]/(R2|1)) = "+string(d2)+"  equals PI3: "+string(d2-Pi==0));
+setring W;
+intvec WTS=1,2; int tm=timer; ideal G=std(RR);
+print("FULL dim="+string(dim(G))+" vdim="+string(vdim(G))+" size="+string(size(G))+" time="+string(timer-tm));
+print("FULL_PUREPOWERS "+purepowers(G)); print("FULL_HILB_BEGIN"); intvec hn=hilb(G,1,WTS); hn; print("FULL_HILB_END");
+print("JOB_DONE t3 exact");
+quit;

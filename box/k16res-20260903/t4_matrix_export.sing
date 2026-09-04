@@ -1,0 +1,22 @@
+ring W=(0,yy),(b4,q2_0,q3_0),wp(1,2,3);
+minpoly=972*yy^2-540*yy+70;
+option(redSB);
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/restop_t4_exact.sing"));
+ideal RR; RR[1]=RStop[3]; RR[2]=RStop[2]; RR[3]=RStop[1];
+ideal RR1=subst(RR,b4,1);
+ring WA=(0,yy),(q2_0,q3_0),dp;
+minpoly=972*yy^2-540*yy+70;
+option(redSB);
+ideal RA=imap(W,RR1);
+int tm=timer; ideal GA=std(ideal(RA[1],RA[2]));
+print("B4 dim="+string(dim(GA))+" vdim="+string(vdim(GA))+" time="+string(timer-tm));
+ideal KA=kbase(GA); int nb=size(KA); int i;
+ideal Img; for (i=1;i<=nb;i++){ Img[i]=reduce(RA[3]*KA[i],GA); }
+matrix MA=coeffs(Img,KA);
+print("MA "+string(nrows(MA))+"x"+string(ncols(MA)));
+write(":w /home/ubuntu/jc2/box/k16res-20260903/t4_multmatrix_exact.txt", "NB="+string(nb));
+write(":a /home/ubuntu/jc2/box/k16res-20260903/t4_multmatrix_exact.txt", "KBASE="+string(KA));
+int j; string s;
+for (i=1;i<=nb;i++){ s=""; for (j=1;j<=nb;j++){ s=s+string(MA[i,j])+";"; } write(":a /home/ubuntu/jc2/box/k16res-20260903/t4_multmatrix_exact.txt", "ROW "+string(i)+" "+s); }
+print("EXPORT_DONE");
+quit;

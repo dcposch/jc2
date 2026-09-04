@@ -1,0 +1,10 @@
+// Negative control for "nondegenerate boundary + finite chart => rho != 0": weights (1,2), forms of weight 2 and 4.
+ring W=0,(b4,q2_0),wp(1,2);
+poly R1=q2_0-b4^2; poly R2=q2_0^2-b4^4;
+ideal G=std(ideal(R1,R2)); print("cone dim="+string(dim(G)));               // 1: the line q2=b4^2
+poly B1=subst(R1,b4,0); print("boundary R1|b4=0 = "+string(B1));              // q2 : boundary of the omitted-R2 system is {0}
+ring U=0,(q2_0),dp; poly f1=imap(W,R1); poly f2=imap(W,R2);                   // imap sends b4->0 !  use subst first
+setring W; ideal C=subst(R1,b4,1),subst(R2,b4,1); setring U; ideal C=imap(W,C);
+ideal GC=std(C[1]); print("chart algebra dim="+string(vdim(GC)));            // 1 point
+poly nm=reduce(C[2],GC); print("N_B(R2|b4=1) = "+string(nm));                 // 0 : Pi = 0, rho = 0
+quit;
