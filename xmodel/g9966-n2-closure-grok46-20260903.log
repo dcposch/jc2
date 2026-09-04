@@ -1,0 +1,17 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes against the lane receipt, then read the source materials for Xu §8 claim (i).Hashes come from the lane receipt via awk, then I'll run `sha256sum -c` against the frozen inputs.Hashes match. Next I’ll extract Xu §8 claim (i) from the PDF and read the banked chart-necessity notes.Xu is a 14-page PDF. I’ll extract §7–§8 and the chart-necessity N2 section next.Xu §8 is on PDF pages 12–13. Next I’ll pull the face-ODE identities, Prop 6.1, and the N5 denominator argument.N5 already records the face ODE. I’ll extract Moh Prop 6.1, Xu Cor 7.5, and the chart-necessity face identities, then run the four finite tests.Xu’s sentence is on printed page 13. I’ll derive the face ODE and run the four finite tests plus the δ=2 and δ=5/2 controls.Tests match the controls. Next I’ll write the N2 lemma report and stamp the BODY-END seal.Custody overclaimed a “no reads” line. I’ll correct it, strip the old seal, and re-stamp.**N2 is discharged.** The `(99,66)` split classification is `{δ=2 [2,1], δ=5/2 [1,1,1]}` with every step sourced or proved in the sealed report; N1 was left untouched.
+
+Report: `xmodel/g9966-n2-closure-grok46-20260903.md` (body 18941 bytes, seal verified). Charged-input hashes: 4/4 OK.
+
+Xu p.13’s missing sentence is the elimination, for `δ ≠ 2` and `δ ≠ 5/2`, of `q = p^{13}(π−c)` via (7.1). That sentence is a proof only for square-free splits with `δ < 9/4`. At `δ = 7/3` the `t`-order peel stops at 12 factors, so the sentence does not cover that case.
+
+The four extra orders in `(1, 8/3)` with `den ≤ 3` are excluded by the same tests the two survivors pass:
+
+| `δ` | why it dies |
+|---|---|
+| `4/3`, `5/3`, `7/3` | Galois forces `[1,1,1]`, `p = π^3−c`; valuation budget empty (`14+14+14 = 42 > 40`); linear face ODE kernel `0` |
+| `3/2` | Galois forces `[1,1,1]`, `p = π(π^2−c)`; same empty budget and kernel `0` |
+| `8/3` | not in-window (`ord g = 0`) |
+
+Controls: `δ=2 [2,1]` is the unique face (Xu (8.2), `λ=45`); `δ=5/2 [1,1,1]` is the 2-parameter face `q = p^{10} q_1`, `q_1' = −2p^3`. Xu’s printed claim (i) (“split only at `δ=2`”) is reconstructed as split only at `{2, 5/2}`. No residual N2 sub-step. No `charge_basis` line.
+DIVERT path=xmodel/g9966-n2-closure-grok46-20260903.md status=CLEAN_SEALED body_bytes=18941 body_sha256=2e9c36b36ca6465199ba06d0fa4d1b7782a81dea992e46ec117eba27117e764a
