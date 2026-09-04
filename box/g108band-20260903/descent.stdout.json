@@ -1,0 +1,205 @@
+{
+  "artifacts": {
+    "singular_log": "descent-singular.log",
+    "singular_log_sha256": "44bc69de23a24d2954a5ff1ea2b4195c5e9162f43302c5d0e91b744f3c3936fb",
+    "singular_replay": "descent-replay.sing",
+    "singular_replay_sha256": "019b1922e6e5afa962e2215f4f78ef2b84baf5941316bcb5b4d4d10de9f70474",
+    "system": "descent-system.txt",
+    "system_sha256": "28ee521cafa215f79e00fe4c4418e92d660d815ffdb9c5d5ec3ebaf089e23139"
+  },
+  "compiler": {
+    "A": "h1 + h2*y + h3*y**2 + h4*y**3 + h5*y**4 + h6*y**5 + h7*y**6 - x*y**6 + y**7",
+    "alpha_quotient": "bp**2*h2 + bp**2*h3*y + bp**2*h4*y**2 + bp**2*h5*y**3 + bp**2*h6*y**4 + bp**2*h7*y**5 - bp**2*x*y**5 + bp**2*y**6 + 2*bp*bq",
+    "beta": "bp*h1 + bp*h2*y + bp*h3*y**2 + bp*h4*y**3 + bp*h5*y**4 + bp*h6*y**5 + bp*h7*y**6 - bp*x*y**6 + bp*y**7 + bq*y + br*x + bs",
+    "coefficient_unknowns": [
+      "h0",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "h7",
+      "bp",
+      "bq",
+      "br",
+      "bs",
+      "c"
+    ],
+    "field": "Q",
+    "generator_order": [
+      "h0",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "h7",
+      "bp",
+      "bq",
+      "br",
+      "bs",
+      "c",
+      "T"
+    ],
+    "h": "h0 + h1*y + h2*y**2 + h3*y**3 + h4*y**4 + h5*y**5 + h6*y**6 + h7*y**7 - x*y**7 + y**8",
+    "h_adic_row_split": [
+      18,
+      8
+    ],
+    "high_h_adic_terms": [
+      [
+        "1",
+        3
+      ],
+      [
+        "3*beta",
+        1
+      ],
+      [
+        "3/2*alpha",
+        0
+      ]
+    ],
+    "jacobian_coefficient_mode": "h-adic-monic-y-normal-form",
+    "jacobian_target": "c*x^4",
+    "localization_wrapper": "T*c-1",
+    "low_h_adic_terms": [
+      [
+        "1",
+        2
+      ],
+      [
+        "2*beta",
+        0
+      ]
+    ],
+    "n_charged_equations": 26,
+    "n_coefficient_unknowns": 13,
+    "n_localized_equations_including_wrapper": 27,
+    "n_raw_J_rows": 26,
+    "n_ring_generators": 14,
+    "name": "charged-dprime2-eprime3-A/B",
+    "ordering": "dp",
+    "raw_origin_c0_verified": true,
+    "raw_rows_sha256": "ad2dc16abe9e5f494dabc8945a85613363b6a74f9589217f6aacf89812f79390"
+  },
+  "conditional_only": true,
+  "datum": {
+    "M": [
+      -16,
+      18
+    ],
+    "V": [
+      7,
+      2
+    ],
+    "approximate_root_profile": [
+      24,
+      16,
+      14
+    ],
+    "d": [
+      24,
+      8,
+      2
+    ],
+    "height_defect": 6,
+    "jet_height": 7,
+    "k": 4,
+    "m": 16,
+    "n": 24,
+    "s_prime": 2,
+    "u_prime": 1,
+    "v_prime": 7
+  },
+  "derivation": {
+    "parent": {
+      "M": [
+        -72,
+        81,
+        106
+      ],
+      "V_2_V_3": [
+        7,
+        7
+      ],
+      "d": [
+        108,
+        36,
+        9,
+        1
+      ],
+      "d_s": 9,
+      "m": 72,
+      "n": 108,
+      "s": 3,
+      "u_s": 2,
+      "v_s": 7
+    },
+    "proposition_6_3_hypothesis": {
+      "branch": "NO-SPLIT-ALTERNATIVE",
+      "delta_star_lower_bound": "7/2",
+      "licensed_directly_by": "Moh Proposition 6.3",
+      "not_by": "Proposition 6.4 (its u_s=1 hypothesis is false here)",
+      "v_s_over_u_s": "7/2"
+    },
+    "scale": "2/9",
+    "semigroup_check": {
+      "lambda_prime": [
+        -384,
+        -112
+      ],
+      "negative_mu_prime": [
+        16,
+        14
+      ],
+      "q_prime": [
+        -16,
+        34
+      ]
+    }
+  },
+  "diagnostic_status": "DEAD[CONDITIONAL-ENLARGED-CHARGED-COMPILER]",
+  "promoted_status": "OPEN[DESCENT-SUPPORT/VARIABLE-MAP]",
+  "promotion_blocker": "Moh Proposition 6.3 does not prove the ordinary total-degree support and variable map used by the enlarged charged compiler.",
+  "schema": "g108-prop63-descent-v1",
+  "singular": {
+    "controls": {
+      "empty_c_and_wrapper_reduce_1": "0",
+      "localized_reduce_1": "0",
+      "localized_unit_lift_recomposition": "1",
+      "point_c1_and_wrapper_reduce_1": "1",
+      "raw_reduce_1": "1"
+    },
+    "elapsed_seconds": 0.012763,
+    "localized_basis": "1",
+    "localized_dimension": -1,
+    "outcome": "UNIT[CONDITIONAL-ENLARGED-CHARGED-COMPILER]",
+    "ran": true,
+    "raw_dimension": 10,
+    "returncode": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "f47ffa4a0693a438d744109d4721bc4053767223c12f1104efcbc83bdab9e017",
+    "timeout_seconds": 1200,
+    "unit_ideal": true,
+    "unit_lift": "-T,\n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n0, \n-1"
+  },
+  "source_support_audit": {
+    "at_level_exponent": 7,
+    "at_level_parting": "Pi*Y^7",
+    "denominator_shedding": 2,
+    "odd_strict_below_terms_introduced": false,
+    "reason": "Prop. 6.3 source support is audited exactly; the charged A/B compiler is intentionally an enlarged conditional diagnostic.",
+    "restricts_enlarged_diagnostic": false,
+    "strict_below_exponents": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "strict_below_series": "a0+a1*Y^2+a2*Y^4+a3*Y^6"
+  },
+  "type": "CONDITIONAL-PROP-6.3-DESCENT/EXACT-Q"
+}

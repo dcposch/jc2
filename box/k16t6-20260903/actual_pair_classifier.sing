@@ -6,7 +6,17 @@ poly JAC=diff(FAC,gamma)*diff(GAC,pi)-diff(FAC,pi)*diff(GAC,gamma);
 if (JAC==gamma) { print("CONTROL_ACTUAL_PAIR_PASS J=gamma"); } else { print("CONTROL_ACTUAL_PAIR_FAIL"); }
 if (nameof(basering)=="RAC") { print("CONTROL_RAC_RING_PASS"); } else { print("CONTROL_RAC_RING_FAIL"); }
 print("TUPLE_CHECK n=deg_pi(F) m=deg_pi(G) J=gamma");
-deg(FAC,pi);
-deg(GAC,pi);
-print("K16_TUPLE_FAIL pi_degrees_are_1_1_not_12t+4_8t+4");
+intvec pi_weight=0,1;
+int degpi_F=deg(FAC,pi_weight);
+int degpi_G=deg(GAC,pi_weight);
+print("DEG_PI_F"); degpi_F;
+print("DEG_PI_G"); degpi_G;
+if (degpi_F==1 && degpi_G==1)
+{
+  print("K16_TUPLE_EXCLUDED_PASS pi_degrees_are_1_1_not_76_52");
+}
+else
+{
+  print("K16_TUPLE_CLASSIFIER_ERROR unexpected_pi_degrees");
+}
 quit;

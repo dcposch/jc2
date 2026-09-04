@@ -1,0 +1,10 @@
+ring R=0,(rho,Zrho),dp;
+ideal I=6264,Zrho*rho-1;
+ideal S=std(I);
+"BEGIN_DIM"; dim(S); "END_DIM";
+"BEGIN_GB"; S; "END_GB";
+ideal C1=std(ideal(rho,Zrho*rho-1));
+ideal C2=std(ideal(rho-1,Zrho*rho-1));
+ideal C3=std(ideal(6264));
+"BEGIN_CONTROLS"; dim(C1); dim(C2); dim(C3); "END_CONTROLS";
+quit;

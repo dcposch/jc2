@@ -1,0 +1,234 @@
+// Closed Laurent/Euler recurrence; T[k]=[X^k]E.
+ring R=1009,(h,s,b1,b2,b3,b4,B0,C1,C2,C3,C4,C5,q2_0,q3_0,q4_0,q5_0,q6_0,q7_0,q8_0,q9_0,q10_0,q11_0,q12_0),dp;
+number yy=380;
+option(noredSB);
+proc hcoef(poly f, int k)
+{
+  matrix M=coef(f,h); int ii;
+  for (ii=1; ii<=ncols(M); ii++)
+  { if (M[1,ii]==h^k) { return(M[2,ii]); } }
+  return(0);
+}
+proc eulerInverse(poly f)
+{
+  matrix M=coef(f,s); poly answer=0; int ii; int mm;
+  for (ii=1; ii<=ncols(M); ii++)
+  { mm=deg(M[1,ii]); answer=answer+M[2,ii]*M[1,ii]/((2*mm+1)*yy); }
+  return(answer);
+}
+number g1=19/13;
+number g2=(19/13)*yy+(114/338);
+number g3=(114/169)*yy-(798/13182);
+number cc=-yy*g3;
+poly Uh=h^13+q2_0*h^11+q3_0*h^10+q4_0*h^9+q5_0*h^8+q6_0*h^7+q7_0*h^6+q8_0*h^5+q9_0*h^4+q10_0*h^3+q11_0*h^2+q12_0*h^1;
+poly Ch=h^5+C1*h^4+C2*h^3+C3*h^2+C4*h^1+C5*h^0;
+poly U=subst(Uh,h,s+b4);
+poly Cp=subst(Ch,h,s+b4);
+poly A=s*Cp;
+poly Bprime=g3*(5*Cp+3*s*diff(Cp,s))/(2*yy);
+matrix MB=coef(Bprime,s); poly B=B0; int ii; int mm;
+for (ii=1; ii<=ncols(MB); ii++)
+{ mm=deg(MB[1,ii]); B=B+MB[2,ii]*s*MB[1,ii]/(mm+1); }
+if (diff(B,s)-Bprime!=0) { print("FAIL B derivative"); exit(2); }
+poly rhsD=3*g3*diff(U,s)+A*B-s*A*diff(B,s)+2*s*diff(A,s)*B+g3*b3*(A/s+(5/2)*diff(A,s));
+poly D=eulerInverse(rhsD);
+if (yy*(D+2*s*diff(D,s))-rhsD!=0) { print("FAIL Euler inverse"); exit(2); }
+poly Q1=s*A-yy*b3; poly Y=s*D-b3*B-g3*b2; poly Z=s*B-g3*b3;
+poly numD1=yy*g3*b1-Q1*diff(Y,s)+diff(Q1,s)*Y+2*diff(U,s)*Z;
+poly constantS=subst(numD1,s,0); poly pb1=diff(constantS,b1);
+poly b1rhs=-subst(constantS,b1,0)/pb1;
+numD1=subst(numD1,b1,b1rhs);
+if (subst(numD1,s,0)!=0) { print("FAIL b1 divisibility"); exit(2); }
+poly Xprime=numD1/(2*yy*s);
+poly gauge=hcoef(subst(Xprime,s,h-b4),12);
+poly pB0=diff(gauge,B0); poly B0rhs=-subst(gauge,B0,0)/pB0;
+B=subst(B,B0,B0rhs); D=subst(D,B0,B0rhs);
+Y=subst(Y,B0,B0rhs); Z=subst(Z,B0,B0rhs);
+Xprime=subst(Xprime,B0,B0rhs); b1rhs=subst(b1rhs,B0,B0rhs);
+if (subst(gauge,B0,B0rhs)!=0) { print("FAIL B0 gauge"); exit(2); }
+poly RR=Q1*Xprime-diff(U,s)*Y-yy*g3;
+poly Rh=subst(RR,s,h-b4);
+poly W1=hcoef(Rh,24);
+poly p1=diff(W1,C1);
+if (p1==0) { ERROR("zero pivot 1"); }
+poly v1rhs=-subst(W1,C1,0)/p1;
+if (subst(W1,C1,v1rhs)!=0) { print("FAIL pivot 1"); exit(2); }
+Rh=subst(Rh,C1,v1rhs);
+poly W2=hcoef(Rh,23);
+poly p2=diff(W2,C2);
+if (p2==0) { ERROR("zero pivot 2"); }
+poly v2rhs=-subst(W2,C2,0)/p2;
+if (subst(W2,C2,v2rhs)!=0) { print("FAIL pivot 2"); exit(2); }
+Rh=subst(Rh,C2,v2rhs);
+poly W3=hcoef(Rh,22);
+poly p3=diff(W3,C3);
+if (p3==0) { ERROR("zero pivot 3"); }
+poly v3rhs=-subst(W3,C3,0)/p3;
+if (subst(W3,C3,v3rhs)!=0) { print("FAIL pivot 3"); exit(2); }
+Rh=subst(Rh,C3,v3rhs);
+poly W4=hcoef(Rh,21);
+poly p4=diff(W4,C4);
+if (p4==0) { ERROR("zero pivot 4"); }
+poly v4rhs=-subst(W4,C4,0)/p4;
+if (subst(W4,C4,v4rhs)!=0) { print("FAIL pivot 4"); exit(2); }
+Rh=subst(Rh,C4,v4rhs);
+poly W5=hcoef(Rh,20);
+poly p5=diff(W5,C5);
+if (p5==0) { ERROR("zero pivot 5"); }
+poly v5rhs=-subst(W5,C5,0)/p5;
+if (subst(W5,C5,v5rhs)!=0) { print("FAIL pivot 5"); exit(2); }
+Rh=subst(Rh,C5,v5rhs);
+poly W6=hcoef(Rh,19);
+poly p6=diff(W6,q6_0);
+if (p6==0) { ERROR("zero pivot 6"); }
+poly v6rhs=-subst(W6,q6_0,0)/p6;
+if (subst(W6,q6_0,v6rhs)!=0) { print("FAIL pivot 6"); exit(2); }
+Rh=subst(Rh,q6_0,v6rhs);
+poly W7=hcoef(Rh,18);
+poly p7=diff(W7,q7_0);
+if (p7==0) { ERROR("zero pivot 7"); }
+poly v7rhs=-subst(W7,q7_0,0)/p7;
+if (subst(W7,q7_0,v7rhs)!=0) { print("FAIL pivot 7"); exit(2); }
+Rh=subst(Rh,q7_0,v7rhs);
+poly W8=hcoef(Rh,17);
+poly p8=diff(W8,q8_0);
+if (p8==0) { ERROR("zero pivot 8"); }
+poly v8rhs=-subst(W8,q8_0,0)/p8;
+if (subst(W8,q8_0,v8rhs)!=0) { print("FAIL pivot 8"); exit(2); }
+Rh=subst(Rh,q8_0,v8rhs);
+poly W9=hcoef(Rh,16);
+poly p9=diff(W9,q9_0);
+if (p9==0) { ERROR("zero pivot 9"); }
+poly v9rhs=-subst(W9,q9_0,0)/p9;
+if (subst(W9,q9_0,v9rhs)!=0) { print("FAIL pivot 9"); exit(2); }
+Rh=subst(Rh,q9_0,v9rhs);
+poly W10=hcoef(Rh,15);
+poly p10=diff(W10,q10_0);
+if (p10==0) { ERROR("zero pivot 10"); }
+poly v10rhs=-subst(W10,q10_0,0)/p10;
+if (subst(W10,q10_0,v10rhs)!=0) { print("FAIL pivot 10"); exit(2); }
+Rh=subst(Rh,q10_0,v10rhs);
+poly W11=hcoef(Rh,14);
+poly p11=diff(W11,q11_0);
+if (p11==0) { ERROR("zero pivot 11"); }
+poly v11rhs=-subst(W11,q11_0,0)/p11;
+if (subst(W11,q11_0,v11rhs)!=0) { print("FAIL pivot 11"); exit(2); }
+Rh=subst(Rh,q11_0,v11rhs);
+poly W12=hcoef(Rh,13);
+poly p12=diff(W12,q12_0);
+if (p12==0) { ERROR("zero pivot 12"); }
+poly v12rhs=-subst(W12,q12_0,0)/p12;
+if (subst(W12,q12_0,v12rhs)!=0) { print("FAIL pivot 12"); exit(2); }
+Rh=subst(Rh,q12_0,v12rhs);
+poly W13=hcoef(Rh,12);
+poly p13=diff(W13,b2);
+if (p13==0) { ERROR("zero pivot 13"); }
+poly v13rhs=-subst(W13,b2,0)/p13;
+if (subst(W13,b2,v13rhs)!=0) { print("FAIL pivot 13"); exit(2); }
+Rh=subst(Rh,b2,v13rhs);
+if (hcoef(Rh,12)!=0) { print("FAIL high band 12"); exit(2); }
+if (hcoef(Rh,13)!=0) { print("FAIL high band 13"); exit(2); }
+if (hcoef(Rh,14)!=0) { print("FAIL high band 14"); exit(2); }
+if (hcoef(Rh,15)!=0) { print("FAIL high band 15"); exit(2); }
+if (hcoef(Rh,16)!=0) { print("FAIL high band 16"); exit(2); }
+if (hcoef(Rh,17)!=0) { print("FAIL high band 17"); exit(2); }
+if (hcoef(Rh,18)!=0) { print("FAIL high band 18"); exit(2); }
+if (hcoef(Rh,19)!=0) { print("FAIL high band 19"); exit(2); }
+if (hcoef(Rh,20)!=0) { print("FAIL high band 20"); exit(2); }
+if (hcoef(Rh,21)!=0) { print("FAIL high band 21"); exit(2); }
+if (hcoef(Rh,22)!=0) { print("FAIL high band 22"); exit(2); }
+if (hcoef(Rh,23)!=0) { print("FAIL high band 23"); exit(2); }
+if (hcoef(Rh,24)!=0) { print("FAIL high band 24"); exit(2); }
+if (hcoef(Rh,25)!=0) { print("FAIL high band 25"); exit(2); }
+poly T0=-hcoef(Rh,0);
+poly T1=-hcoef(Rh,1);
+poly T2=-hcoef(Rh,2);
+poly T3=-hcoef(Rh,3);
+poly T4=-hcoef(Rh,4);
+poly T5=-hcoef(Rh,5);
+poly T6=-hcoef(Rh,6);
+poly T7=-hcoef(Rh,7);
+poly T8=-hcoef(Rh,8);
+poly T9=-hcoef(Rh,9);
+poly T10=-hcoef(Rh,10);
+poly T11=-hcoef(Rh,11);
+ideal RAW=T0,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11;
+ring S=1009,(b4,q2_0,q3_0,q4_0,q5_0,b3),wp(1,2,3,4,5,7);
+number yy=380;
+ideal TT=imap(R,RAW);
+setring R; ideal BACK=imap(S,TT); int jj;
+for (jj=1; jj<=size(RAW); jj++)
+{ if (BACK[jj]-RAW[jj]!=0) { print("FAIL residual ring map"); exit(2); } }
+setring S; option(noredSB);
+intvec WTS=1,2,3,4,5,7;
+print("META t=6 vars=b4,q2_0,q3_0,q4_0,q5_0,b3 weights=1,2,3,4,5,7");
+if (homog(TT[2])!=1) { print("FAIL inhomogeneous T1"); exit(2); }
+if (deg(TT[2])!=24) { print("FAIL degree T1"); exit(2); }
+if (homog(TT[3])!=1) { print("FAIL inhomogeneous T2"); exit(2); }
+if (deg(TT[3])!=23) { print("FAIL degree T2"); exit(2); }
+if (homog(TT[4])!=1) { print("FAIL inhomogeneous T3"); exit(2); }
+if (deg(TT[4])!=22) { print("FAIL degree T3"); exit(2); }
+if (homog(TT[5])!=1) { print("FAIL inhomogeneous T4"); exit(2); }
+if (deg(TT[5])!=21) { print("FAIL degree T4"); exit(2); }
+if (homog(TT[6])!=1) { print("FAIL inhomogeneous T5"); exit(2); }
+if (deg(TT[6])!=20) { print("FAIL degree T5"); exit(2); }
+if (homog(TT[7])!=1) { print("FAIL inhomogeneous T6"); exit(2); }
+if (deg(TT[7])!=19) { print("FAIL degree T6"); exit(2); }
+if (homog(TT[8])!=1) { print("FAIL inhomogeneous T7"); exit(2); }
+if (deg(TT[8])!=18) { print("FAIL degree T7"); exit(2); }
+if (homog(TT[9])!=1) { print("FAIL inhomogeneous T8"); exit(2); }
+if (deg(TT[9])!=17) { print("FAIL degree T8"); exit(2); }
+if (homog(TT[10])!=1) { print("FAIL inhomogeneous T9"); exit(2); }
+if (deg(TT[10])!=16) { print("FAIL degree T9"); exit(2); }
+if (homog(TT[11])!=1) { print("FAIL inhomogeneous T10"); exit(2); }
+if (deg(TT[11])!=15) { print("FAIL degree T10"); exit(2); }
+if (homog(TT[12])!=1) { print("FAIL inhomogeneous T11"); exit(2); }
+if (deg(TT[12])!=14) { print("FAIL degree T11"); exit(2); }
+ideal J=TT[7],TT[8],TT[9],TT[10],TT[11],TT[12];
+print("SUBSET_TAIL_T_ROWS=6,7,8,9,10,11");
+int tm=timer; ideal G=std(J);
+print("SUBSET_TAIL_T_STD_SECONDS="+string(timer-tm));
+print("SUBSET_TAIL_T_GB_SIZE="+string(size(G)));
+print("SUBSET_TAIL_T_DIM="+string(dim(G)));
+print("SUBSET_TAIL_T_HILB_NUMERATOR_BEGIN");
+intvec HNUM=hilb(G,1,WTS); HNUM;
+print("SUBSET_TAIL_T_HILB_NUMERATOR_END");
+print("SUBSET_TAIL_T_HILB_REDUCED_BEGIN");
+intvec HRED=hilb(G,2,WTS); HRED;
+print("SUBSET_TAIL_T_HILB_REDUCED_END");
+if (dim(G)==0) { print("SUBSET_TAIL_T_LENGTH="+string(vdim(G))); }
+ideal LM=minbase(lead(G)); ideal GLM=std(LM);
+print("SUBSET_TAIL_T_INITIAL_MIN_GENS_BEGIN"); LM;
+for (jj=1; jj<=size(LM); jj++)
+{ print("SUBSET_TAIL_T_INITIAL_EXP_"+string(jj)+"="+string(leadexp(LM[jj]))); }
+print("SUBSET_TAIL_T_INITIAL_MIN_GENS_END");
+int foundb4=0; int powb4;
+for (powb4=1; powb4<=128; powb4++)
+{ if (reduce(b4^powb4,GLM)==0) { foundb4=powb4; break; } }
+print("SUBSET_TAIL_T_PURE_POWER b4="+string(foundb4));
+int foundq20=0; int powq20;
+for (powq20=1; powq20<=128; powq20++)
+{ if (reduce(q2_0^powq20,GLM)==0) { foundq20=powq20; break; } }
+print("SUBSET_TAIL_T_PURE_POWER q2_0="+string(foundq20));
+int foundq30=0; int powq30;
+for (powq30=1; powq30<=128; powq30++)
+{ if (reduce(q3_0^powq30,GLM)==0) { foundq30=powq30; break; } }
+print("SUBSET_TAIL_T_PURE_POWER q3_0="+string(foundq30));
+int foundq40=0; int powq40;
+for (powq40=1; powq40<=128; powq40++)
+{ if (reduce(q4_0^powq40,GLM)==0) { foundq40=powq40; break; } }
+print("SUBSET_TAIL_T_PURE_POWER q4_0="+string(foundq40));
+int foundq50=0; int powq50;
+for (powq50=1; powq50<=128; powq50++)
+{ if (reduce(q5_0^powq50,GLM)==0) { foundq50=powq50; break; } }
+print("SUBSET_TAIL_T_PURE_POWER q5_0="+string(foundq50));
+int foundb3=0; int powb3;
+for (powb3=1; powb3<=128; powb3++)
+{ if (reduce(b3^powb3,GLM)==0) { foundb3=powb3; break; } }
+print("SUBSET_TAIL_T_PURE_POWER b3="+string(foundb3));
+intvec CINU=1,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,-1,-1,-1,-1,0,0,0,0,0,0,0,0,0,1,1,2,2,3,2,2,1,1,0,0,0,0,0,0,0,-1,-1,-2,-3,-3,-3,-3,-2,-1,-1,0,0,0,0,0,0,0,1,1,2,2,3,2,2,1,1,0,0,0,0,0,0,0,0,0,-1,-1,-1,-1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,1;
+print("SUBSET_TAIL_T_CI_NUMERATOR_BEGIN"); CINU;
+print("SUBSET_TAIL_T_CI_NUMERATOR_END");
+if (HNUM==CINU) { print("SUBSET_TAIL_T_CI_HILB_EQUAL=1"); } else { print("SUBSET_TAIL_T_CI_HILB_EQUAL=0"); }
+print("JOB_DONE t=6 label=SUBSET_TAIL_T");
+quit;

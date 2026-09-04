@@ -1,0 +1,88 @@
+{
+  "analysis_ring_variables": [
+    "b4",
+    "q2_0",
+    "b3"
+  ],
+  "analysis_rows": [
+    3,
+    4,
+    5
+  ],
+  "analysis_weights": [
+    1,
+    2,
+    4
+  ],
+  "branch": 0,
+  "ci_numerator": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    -1,
+    -1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -1
+  ],
+  "derived_from_sha256": {
+    "singular_terminal_driver.py": "0cc821ff59adc955d2c6c33a572766b01569d578f1034f343c4f3661cebcf8ed",
+    "terminal_array_recurrence.py": "8a935838ac01731110efd5f36652cae3d66bd00ffa23ae4450cdadaa41438001"
+  },
+  "label": "SUBSET_TAIL_T",
+  "mode": "exact",
+  "modular_integrality_audit": null,
+  "prime": null,
+  "regular_sequence_length_possible": true,
+  "ring_dimension": 3,
+  "row_degrees": [
+    10,
+    9,
+    8
+  ],
+  "row_weight_formula": "deg_wp(T[t,k])=4*t+1-k for k>=1",
+  "run_command": "timeout 1800 Singular -q box/k16hilb-20260903/t3_exact_tail_t.sing > box/k16hilb-20260903/t3_exact_tail_t.out 2> box/k16hilb-20260903/t3_exact_tail_t.err",
+  "selected_row_count": 3,
+  "singular_source": "box/k16hilb-20260903/t3_exact_tail_t.sing",
+  "singular_source_sha256": "ab0b223a86f2f7333a54ed8886c9a2329f1b7096560873c3e4c568f31b75e68c",
+  "source_ring_variables": [
+    "h",
+    "s",
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "B0",
+    "C1",
+    "C2",
+    "q2_0",
+    "q3_0",
+    "q4_0",
+    "q5_0",
+    "q6_0"
+  ],
+  "subset": "tail-t",
+  "t": 3,
+  "task": "subset",
+  "y": "None"
+}

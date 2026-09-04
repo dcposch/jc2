@@ -1,0 +1,792 @@
+{
+  "D1_offsets_occupied": [
+    {
+      "Qstar_rank": 53,
+      "by_block": {
+        "A2": {
+          "positions": 18,
+          "raw_rows": 14
+        },
+        "A3": {
+          "positions": 18,
+          "raw_rows": 21
+        },
+        "B1": {
+          "positions": 12,
+          "raw_rows": 7
+        },
+        "B2": {
+          "positions": 18,
+          "raw_rows": 14
+        }
+      },
+      "dependent": 3,
+      "offset": 0,
+      "raw_rows": 56
+    },
+    {
+      "Qstar_rank": 40,
+      "by_block": {
+        "A2": {
+          "positions": 18,
+          "raw_rows": 10
+        },
+        "A3": {
+          "positions": 18,
+          "raw_rows": 17
+        },
+        "B1": {
+          "positions": 12,
+          "raw_rows": 3
+        },
+        "B2": {
+          "positions": 18,
+          "raw_rows": 10
+        }
+      },
+      "dependent": 0,
+      "offset": 2,
+      "raw_rows": 40
+    },
+    {
+      "Qstar_rank": 25,
+      "by_block": {
+        "A2": {
+          "positions": 18,
+          "raw_rows": 6
+        },
+        "A3": {
+          "positions": 18,
+          "raw_rows": 13
+        },
+        "B1": {
+          "positions": 12,
+          "raw_rows": 0
+        },
+        "B2": {
+          "positions": 18,
+          "raw_rows": 6
+        }
+      },
+      "dependent": 0,
+      "offset": 4,
+      "raw_rows": 25
+    },
+    {
+      "Qstar_rank": 13,
+      "by_block": {
+        "A2": {
+          "positions": 18,
+          "raw_rows": 2
+        },
+        "A3": {
+          "positions": 18,
+          "raw_rows": 9
+        },
+        "B1": {
+          "positions": 12,
+          "raw_rows": 0
+        },
+        "B2": {
+          "positions": 18,
+          "raw_rows": 2
+        }
+      },
+      "dependent": 0,
+      "offset": 6,
+      "raw_rows": 13
+    },
+    {
+      "Qstar_rank": 5,
+      "by_block": {
+        "A2": {
+          "positions": 18,
+          "raw_rows": 0
+        },
+        "A3": {
+          "positions": 18,
+          "raw_rows": 5
+        },
+        "B1": {
+          "positions": 12,
+          "raw_rows": 0
+        },
+        "B2": {
+          "positions": 18,
+          "raw_rows": 0
+        }
+      },
+      "dependent": 0,
+      "offset": 8,
+      "raw_rows": 5
+    },
+    {
+      "Qstar_rank": 1,
+      "by_block": {
+        "A2": {
+          "positions": 18,
+          "raw_rows": 0
+        },
+        "A3": {
+          "positions": 18,
+          "raw_rows": 1
+        },
+        "B1": {
+          "positions": 11,
+          "raw_rows": 0
+        },
+        "B2": {
+          "positions": 18,
+          "raw_rows": 0
+        }
+      },
+      "dependent": 0,
+      "offset": 10,
+      "raw_rows": 1
+    }
+  ],
+  "D1_offsets_rank": [
+    53,
+    40,
+    25,
+    13,
+    5,
+    1
+  ],
+  "D1_offsets_raw": [
+    56,
+    40,
+    25,
+    13,
+    5,
+    1
+  ],
+  "Moh8": {
+    "A1": 2,
+    "A2": 4,
+    "D1_sub": "t=e^8, w=1+e^12+Pi*e^13",
+    "D2_sub": "t=s^4, w=1+pi*s^6",
+    "E": "(N/A2)*W + k = 2*W + k",
+    "L1": 4,
+    "L2": 1,
+    "N_D1": 8,
+    "Ww": 6,
+    "delta": [
+      "3/8",
+      "1/4",
+      "-1"
+    ],
+    "weight": "4*r + 6*q"
+  },
+  "OPEN": [
+    "OPEN[EFFECTIVE-T2-T3-BRIDGE]: T2(sigma)~p^7 and T3(sigma)~q, deg q=51, from subleading F,G jets; 0 linear rows",
+    "OPEN[H2-D2-FACE-TRUNCATION]: (pi^4-1)^7 coefficients k=5,6,7 have r+q>36, not ambient in S(36,36)"
+  ],
+  "OUTER_SPECS": {
+    "A2": {
+      "D1_Qstar_rank": 32,
+      "D1_dependent_slots": 0,
+      "D1_e_range": [
+        552,
+        565
+      ],
+      "D1_raw_slots": 32,
+      "D1_rows_by_e": {
+        "552": 1,
+        "553": 1,
+        "554": 1,
+        "555": 1,
+        "556": 2,
+        "557": 2,
+        "558": 2,
+        "559": 2,
+        "560": 3,
+        "561": 3,
+        "562": 3,
+        "563": 3,
+        "564": 4,
+        "565": 4
+      },
+      "D1_threshold": 566,
+      "D2_remaining": 414,
+      "D2_unit_rows": 1548,
+      "W0": 276,
+      "ambient": 1962,
+      "bound_t_D1": "-1/4",
+      "bound_t_D2": "-2",
+      "degree": 71,
+      "remain_r_min": 17,
+      "thm12_j": 2,
+      "ycap": 36
+    },
+    "A3": {
+      "D1_Qstar_rank": 63,
+      "D1_dependent_slots": 3,
+      "D1_e_range": [
+        832,
+        852
+      ],
+      "D1_raw_slots": 66,
+      "D1_rows_by_e": {
+        "832": 1,
+        "833": 1,
+        "834": 1,
+        "835": 1,
+        "836": 2,
+        "837": 2,
+        "838": 2,
+        "839": 2,
+        "840": 3,
+        "841": 3,
+        "842": 3,
+        "843": 3,
+        "844": 4,
+        "845": 4,
+        "846": 4,
+        "847": 4,
+        "848": 5,
+        "849": 5,
+        "850": 5,
+        "851": 5,
+        "852": 6
+      },
+      "D1_threshold": 853,
+      "D2_remaining": 450,
+      "D2_unit_rows": 2808,
+      "W0": 416,
+      "ambient": 3258,
+      "bound_t_D1": "-3/8",
+      "bound_t_D2": "-3",
+      "degree": 107,
+      "remain_r_min": 52,
+      "thm12_j": 3,
+      "ycap": 36
+    },
+    "B1": {
+      "D1_Qstar_rank": 10,
+      "D1_dependent_slots": 0,
+      "D1_e_range": [
+        272,
+        278
+      ],
+      "D1_raw_slots": 10,
+      "D1_rows_by_e": {
+        "272": 1,
+        "273": 1,
+        "274": 1,
+        "275": 1,
+        "276": 2,
+        "277": 2,
+        "278": 2
+      },
+      "D1_threshold": 279,
+      "D2_remaining": 258,
+      "D2_unit_rows": 408,
+      "W0": 136,
+      "ambient": 666,
+      "bound_t_D1": "-1/8",
+      "bound_t_D2": "-1",
+      "degree": 35,
+      "remain_r_min": 0,
+      "thm12_j": 1,
+      "ycap": 36
+    },
+    "B2": {
+      "D1_Qstar_rank": 32,
+      "D1_dependent_slots": 0,
+      "D1_e_range": [
+        552,
+        565
+      ],
+      "D1_raw_slots": 32,
+      "D1_rows_by_e": {
+        "552": 1,
+        "553": 1,
+        "554": 1,
+        "555": 1,
+        "556": 2,
+        "557": 2,
+        "558": 2,
+        "559": 2,
+        "560": 3,
+        "561": 3,
+        "562": 3,
+        "563": 3,
+        "564": 4,
+        "565": 4
+      },
+      "D1_threshold": 566,
+      "D2_remaining": 414,
+      "D2_unit_rows": 1548,
+      "W0": 276,
+      "ambient": 1962,
+      "bound_t_D1": "-1/4",
+      "bound_t_D2": "-2",
+      "degree": 71,
+      "remain_r_min": 17,
+      "thm12_j": 2,
+      "ycap": 36
+    }
+  },
+  "T2_T3_shape": {
+    "T2": "G^3 - F^2 + lower",
+    "T2_unknowns_Moh_literal": 5,
+    "T3": "G^12 - F^8 + lower",
+    "T3_unknowns_Moh_literal": 59,
+    "deg_y_T2": 63,
+    "deg_y_T3": 227,
+    "identification": "OPEN[EFFECTIVE-T2-T3-BRIDGE]"
+  },
+  "build_major_h2": {
+    "D1_ebound": 287,
+    "D1_note": "empty: min E=2*169=338 > ebound 287, so D2 support implies D1",
+    "D1_rows": [],
+    "D2_strict": "4*r + 6*q >= 169",
+    "face_weight": 168,
+    "major_multiplicity_D2": 28,
+    "n_strict_r_ge_1": 100,
+    "q_range": "range(37-r)",
+    "r_range": [
+      1,
+      36
+    ],
+    "weight": "4*r + 6*q"
+  },
+  "chart": {
+    "F": "h2^3 + A2*h2 + A3",
+    "G": "h2^2 + B1*h2 + B2",
+    "after_fixing_tops": 8514,
+    "fixed_top_outer_ambient": 7848,
+    "h2": "P^4 + C2*P^2 + C3*P + C4",
+    "h3": "P",
+    "inner_after_fixing": 666,
+    "k_F": 3,
+    "k_G": 2,
+    "k_h2": 4,
+    "top_h2": {
+      "form": "z^28 w^8 = (z^7 w^2)^4"
+    },
+    "top_h3": {
+      "(0,7)": 1,
+      "(0,8)": 2,
+      "(0,9)": 1,
+      "form": "z^7 w^2"
+    },
+    "unfixed_blocks": {
+      "A2": 1998,
+      "A3": 3294,
+      "B1": 702,
+      "B2": 1998,
+      "C2": 135,
+      "C3": 216,
+      "C4": 297,
+      "H": 54
+    },
+    "unfixed_monic": 8694
+  },
+  "control_6448": {
+    "N_equals_A1A2": true,
+    "W0_formula_still": "The same W=A2 r+Ww q, W0=A2*(D-j), E0=N*D-j rules apply to each Tschirnhausen block of F,G once the (D,j) of that block is named.  They are not consumed by a (108,72) engine.",
+    "d": [
+      64,
+      16,
+      4,
+      2
+    ],
+    "k_F": 4,
+    "k_G": 3,
+    "k_h2": 4,
+    "label": "(64,48)",
+    "tower_shape": "n/d2=4, m/d2=3: F=h2^4+A2 h2^2+A3 h2+A4, G=h2^3+B1 h2+B2 (not the A2/A3/B1/B2 3+2 chart).  Outer-band naming of (99,66) does not apply.  u_s=1: T2,T3 bridge trivial (Xu Prop 7.3 / Moh Prop 4.4).",
+    "us": 1,
+    "vs": 3,
+    "weight": {
+      "A1": 4,
+      "A2": 4,
+      "D1_sub": "t=e^16, w=1+e^36+Pi*e^37",
+      "D2_sub": "t=s^4, w=1+pi*s^9",
+      "E_coeff": 4,
+      "L1": 4,
+      "L2": 1,
+      "N_D1": 16,
+      "Ww": 9,
+      "delta_1": "9/16",
+      "delta_2": "1/4",
+      "delta_s": "-1",
+      "weight": "4*r + 9*q"
+    }
+  },
+  "control_9966": {
+    "D1_offsets_rank": [
+      41,
+      38,
+      33,
+      25,
+      19,
+      11,
+      6,
+      3
+    ],
+    "D1_offsets_raw": [
+      64,
+      52,
+      40,
+      29,
+      20,
+      11,
+      6,
+      3
+    ],
+    "h2_D1_rows": 7,
+    "h3_strict_variables": 21,
+    "reproduces_charged": true,
+    "totals": {
+      "D1_Qstar_rank": 176,
+      "D1_dependent_slots": 49,
+      "D1_raw_slots": 225,
+      "D2_remaining": 1002,
+      "D2_unit_rows": 5598,
+      "new_pivots_D2_plus_D1": 5774,
+      "outer_ambient": 6600
+    }
+  },
+  "elapsed_seconds": 2.8326,
+  "general_formula": {
+    "D1_E0": "E0 = N*D - j          [E = (N/A2)*W + k < E0 on the D2-remaining]",
+    "D1_rank": "Q* rank of the binomial matrix (e,k) vs remaining (r,q)",
+    "D1_sub": "t=e^N, w=1+e^{N*Ww/A2}+Pi e^{N*Ww/A2+1}",
+    "D2_W0": "W0 = A2 * (D - j)     [vanish W < W0; equality face is not a row]",
+    "D2_rank": "rank = count (unit coordinate vanishings)",
+    "D2_sub": "t=s^{A2}, w=1+pi s^{Ww}",
+    "Moh8": "L_j = lcm{den delta_s, ..., den delta_{j+1}}, A_j = den(L_j * delta_j), Ww = A_2 * L_1 * delta_1, N = den(delta_1).  On the three charged rows N = A1*A2.",
+    "S": "S(D,d2) = {deg <= D, deg_y < d2}, dim = d2*(D+1)-d2*(d2-1)/2",
+    "Thm12_outer": "ord A_j >= j * ord h2,  ord B_j >= j * ord h2  (j as above)",
+    "expected_outer_rank": "D2_unit_rows + D1_Qstar_rank",
+    "fixed_top_degrees": {
+      "A2": "D = n-d2-1, j=2",
+      "A3": "D = n-1,     j=3",
+      "B1": "D = m-d2-1, j=1",
+      "B2": "D = m-1,     j=2"
+    },
+    "h3_in_h2": "h2 = h3^{k2} + C2 h3^{k2-2} + ... + C_{k2} (Tschirnhausen drops h3^{k2-1}); Thm 1.2: ord C_i >= i * ord h3",
+    "h3_vmin": "vmin(r) = max(0, ceil((Ww*v_s + 1 - A2*r)/Ww)), r=1..d3, cap=d3-r",
+    "inner_ord_h3_D2": "-d3/d2 = -1/k2",
+    "ord_h2_D1": "-1/N",
+    "ord_h2_D2": -1,
+    "scope": "Outer A,B of the Tschirnhausen tower F=h2^{n/d2}+A2 h2+A3, G=h2^{m/d2}+B1 h2+B2, which requires n/d2=3, m/d2=2.  A2,A1,Ww come from Moh (8) on the row's radii, not from (n,m,d2,d3) alone.",
+    "weight": "W(r,q) = A2*r + Ww*q"
+  },
+  "h2_D2_equality": {
+    "calibration": "same rule; out-of-disk k are not ambient coordinates",
+    "face_polynomial": "(pi^4 - 1)^7",
+    "in_disk": [
+      {
+        "coeff": 1,
+        "k": 0,
+        "q": 28,
+        "r": 0,
+        "r_plus_q": 28
+      },
+      {
+        "coeff": -7,
+        "k": 1,
+        "q": 24,
+        "r": 6,
+        "r_plus_q": 30
+      },
+      {
+        "coeff": 21,
+        "k": 2,
+        "q": 20,
+        "r": 12,
+        "r_plus_q": 32
+      },
+      {
+        "coeff": -35,
+        "k": 3,
+        "q": 16,
+        "r": 18,
+        "r_plus_q": 34
+      },
+      {
+        "coeff": 35,
+        "k": 4,
+        "q": 12,
+        "r": 24,
+        "r_plus_q": 36
+      }
+    ],
+    "n_in_disk_beyond_leading": 4,
+    "outside_S(d2,d2)": [
+      {
+        "coeff": -21,
+        "k": 5,
+        "q": 8,
+        "r": 30,
+        "r_plus_q": 38
+      },
+      {
+        "coeff": 7,
+        "k": 6,
+        "q": 4,
+        "r": 36,
+        "r_plus_q": 40
+      },
+      {
+        "coeff": -1,
+        "k": 7,
+        "q": 0,
+        "r": 42,
+        "r_plus_q": 42
+      }
+    ]
+  },
+  "h3_adic": {
+    "F_j": {
+      "0": "1",
+      "1": "0",
+      "10": "A2*C2 + 3*C2*C4**2 + 3*C3**2*C4",
+      "11": "A2*C3 + 3*C3*C4**2",
+      "12": "A2*C4 + A3 + C4**3",
+      "2": "3*C2",
+      "3": "3*C3",
+      "4": "3*C2**2 + 3*C4",
+      "5": "6*C2*C3",
+      "6": "C2**3 + 6*C2*C4 + 3*C3**2",
+      "7": "3*C2**2*C3 + 6*C3*C4",
+      "8": "A2 + 3*C2**2*C4 + 3*C2*C3**2 + 3*C4**2",
+      "9": "6*C2*C3*C4 + C3**3"
+    },
+    "G_j": {
+      "0": "1",
+      "1": "0",
+      "2": "2*C2",
+      "3": "2*C3",
+      "4": "B1 + C2**2 + 2*C4",
+      "5": "2*C2*C3",
+      "6": "B1*C2 + 2*C2*C4 + C3**2",
+      "7": "B1*C3 + 2*C3*C4",
+      "8": "B1*C4 + B2 + C4**2"
+    },
+    "identities": [
+      "F_1=0",
+      "G_1=0"
+    ],
+    "inner_D2": {
+      "C2": {
+        "D": 17,
+        "D2_remaining": 29,
+        "D2_s_threshold": 66,
+        "D2_unit_rows": 97,
+        "ambient": 126,
+        "bound_t_D2": "-1/2",
+        "ycap": 9
+      },
+      "C3": {
+        "D": 26,
+        "D2_remaining": 29,
+        "D2_s_threshold": 101,
+        "D2_unit_rows": 178,
+        "ambient": 207,
+        "bound_t_D2": "-3/4",
+        "ycap": 9
+      },
+      "C4": {
+        "D": 35,
+        "D2_remaining": 34,
+        "D2_s_threshold": 136,
+        "D2_unit_rows": 254,
+        "ambient": 288,
+        "bound_t_D2": "-1",
+        "ycap": 9
+      },
+      "H": {
+        "D": 8,
+        "D2_remaining": 18,
+        "D2_s_threshold": 31,
+        "D2_unit_rows": 27,
+        "ambient": 45,
+        "bound_t_D2": "-1/4",
+        "ycap": 9
+      }
+    },
+    "new_outer_pivots": 0,
+    "ord_h3_D2_tower": "-1/4"
+  },
+  "h3_branch_map": {
+    "branch": "delta3",
+    "free": [
+      "jet_1",
+      "jet_2",
+      "c"
+    ],
+    "localization": "c != 0",
+    "mu_e": "trivial (e=1)"
+  },
+  "h3_template": {
+    "cap": "9 - r",
+    "face_weight": 42,
+    "n_below_face": 43,
+    "n_vars": 7,
+    "r_range": [
+      1,
+      9
+    ],
+    "strict_threshold": 43,
+    "top": {
+      "(0,7)": 1,
+      "(0,8)": 2,
+      "(0,9)": 1
+    },
+    "unwanted_equality_in_disk": [
+      [
+        0,
+        7,
+        42
+      ],
+      [
+        3,
+        5,
+        42
+      ],
+      [
+        6,
+        3,
+        42
+      ]
+    ],
+    "variables": [
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "vmin": "max(0, (43 - 4*r + 5)//6)",
+    "vmin_formula": "max(0, ceil((42+1 - 4*r)/6))"
+  },
+  "jacobian_band_scalars": [
+    108,
+    -72
+  ],
+  "prop62": {
+    "F": {
+      "box": 2125,
+      "corner": "y^84 z^24",
+      "deg": 108,
+      "deg_y": 84,
+      "deg_z": 24
+    },
+    "F_plus_G_box": 3094,
+    "G": {
+      "box": 969,
+      "corner": "y^56 z^16",
+      "deg": 72,
+      "deg_y": 56,
+      "deg_z": 16
+    },
+    "T2": {
+      "box": 750,
+      "corner": "y^49 z^14",
+      "deg": 63,
+      "deg_y": 49,
+      "deg_z": 14
+    },
+    "h2": {
+      "box": 261,
+      "corner": "y^28 z^8",
+      "deg": 36,
+      "deg_y": 28,
+      "deg_z": 8
+    },
+    "h3": {
+      "box": 24,
+      "corner": "y^7 z^2",
+      "deg": 9,
+      "deg_y": 7,
+      "deg_z": 2
+    }
+  },
+  "row": {
+    "M": [
+      -72,
+      81,
+      106
+    ],
+    "V": [
+      7,
+      7
+    ],
+    "d": [
+      108,
+      36,
+      9,
+      1
+    ],
+    "m": 72,
+    "n": 108,
+    "negmu": {
+      "1": 72,
+      "2": 63,
+      "3": 227
+    },
+    "us": 2,
+    "vs": 7
+  },
+  "stage_spec_delta3": {
+    "first_poles": {
+      "F": -95,
+      "G": -63,
+      "slots": [
+        "A3_107_0",
+        "B2_71_0"
+      ]
+    },
+    "formula": "exponent of [x^i] in t^{-ord F(sigma)} F is -ord - i; ord F(sigma)=-12, ord G(sigma)=-8 at delta=3",
+    "leader": {
+      "t12_F": "p^12",
+      "t8_G": "p^8"
+    },
+    "next_poles": {
+      "F": -92,
+      "G": -60,
+      "slots": [
+        "F_104_*",
+        "G_68_*"
+      ]
+    }
+  },
+  "totals": {
+    "D1_Qstar_rank": 137,
+    "D1_dependent_slots": 3,
+    "D1_raw_slots": 140,
+    "D2_remaining": 1536,
+    "D2_unit_rows": 6312,
+    "new_pivots_D2_plus_D1": 6449,
+    "outer_ambient": 7848
+  },
+  "type": "DERIVED[108-OUTER-WEIGHTS] / engine constants"
+}

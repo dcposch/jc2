@@ -1,0 +1,284 @@
+{
+  "builder": "box/orderchart-20260903/builders/45_30_42_11_k1_part_2_2_builder.sing",
+  "manifest_ok": true,
+  "meta": {
+    "K": 15,
+    "Pi": 5,
+    "R": 2,
+    "actual_pair_control": {
+      "J_low_high": "x",
+      "monic_pi_degrees": [
+        1,
+        1
+      ],
+      "pair": "(pi, pi-gamma^2/2)",
+      "reason": "pi-degrees are 1,1 and do not match any requested descended tuple",
+      "tuple_classifier": "FAIL"
+    },
+    "alpha_dims": [
+      0,
+      2,
+      4
+    ],
+    "alpha_dims_pre_gauge": [
+      1,
+      2,
+      5
+    ],
+    "basis_weights": {
+      "1": "0",
+      "H1": "-1",
+      "H10": "-2",
+      "H11": "-5/3",
+      "H12": "-4/3",
+      "H13": "-1",
+      "H14": "-2/3",
+      "H2": "-2",
+      "H3": "-3",
+      "H4": "-4",
+      "H5": "-11/3",
+      "H6": "-10/3",
+      "H7": "-3",
+      "H8": "-8/3",
+      "H9": "-7/3",
+      "x": "-1"
+    },
+    "beta_dims": [
+      1
+    ],
+    "beta_dims_pre_gauge": [
+      2
+    ],
+    "bound_unit": "-1/3",
+    "d2prime": 15,
+    "d3prime": 3,
+    "delta1": "1/3",
+    "delta2": "-1",
+    "dprime_q": 2,
+    "eprime_e": 3,
+    "equations": 84,
+    "gauge_notes": [],
+    "gauge_policy": "const(beta_q) and const(alpha_e) are target translations; alpha_(e-q) shear only when scalar and beta spaces embed after the shift",
+    "gauges": [
+      "P -> P - alpha_1 Q",
+      "Q -> Q - const(beta_2)",
+      "P -> P - const(alpha_3)"
+    ],
+    "h_lower": [
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        13
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        0,
+        12
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        1,
+        11
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "h_lower_count": 15,
+    "h_lower_support_count": 20,
+    "h_parameter_count": 15,
+    "lambda_P_over_e": "-1/3",
+    "lambda_Q_over_q": "-1/3",
+    "lemma21_h_support_count": 39,
+    "lemma21_support_ok": true,
+    "native_high_terms": [
+      {
+        "coefficient": "1",
+        "h_power": 3
+      },
+      {
+        "coefficient": "AA1",
+        "h_power": 2
+      },
+      {
+        "coefficient": "AA2",
+        "h_power": 1
+      },
+      {
+        "coefficient": "AA3",
+        "h_power": 0
+      }
+    ],
+    "native_low_terms": [
+      {
+        "coefficient": "1",
+        "h_power": 2
+      },
+      {
+        "coefficient": "BB2",
+        "h_power": 0
+      }
+    ],
+    "omega": "s2^2 - s2",
+    "params_without_T": 24,
+    "partition": [
+      2,
+      2
+    ],
+    "partition_label": "2+2",
+    "row": {
+      "M2": 42,
+      "V2": 11,
+      "k": 1,
+      "key": "45_30_42_11_k1",
+      "label": "(45,30;42;11;k=1)",
+      "m": 30,
+      "n": 45
+    },
+    "sanity_gate": {
+      "deg_x_J0": 4,
+      "kind": "native h-adic normalized level-0 remainder before subtracting c*x^k",
+      "max_nf_deg_x_after_minus_c": 4,
+      "required_k": 1,
+      "status": "PASS",
+      "target_xk_level0_nonzero": false
+    },
+    "saturation_factor": "c*s2^2 - c*s2",
+    "slope_count": 1,
+    "top_face_factored": "y^11*(y-x)^2*(y-s2*x)^2",
+    "tower_factor_order": [
+      "y-x",
+      "y-x",
+      "y-s2*x",
+      "y-s2*x",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y",
+      "y"
+    ],
+    "tower_weights": {
+      "1": "-1",
+      "10": "-2",
+      "11": "-5/3",
+      "12": "-4/3",
+      "13": "-1",
+      "14": "-2/3",
+      "15": "-1/3",
+      "2": "-2",
+      "3": "-3",
+      "4": "-4",
+      "5": "-11/3",
+      "6": "-10/3",
+      "7": "-3",
+      "8": "-8/3",
+      "9": "-7/3"
+    },
+    "unknowns": 24,
+    "uprime": 4
+  },
+  "row_file": {
+    "bytes": 6392,
+    "rows": 84,
+    "sha256": "864707ef31da28a4e6008ad5a5bf2092bd189be50d6cb22c977e101f429da52b"
+  },
+  "rows_path": "box/orderchart-20260903/rows/45_30_42_11_k1_part_2_2_rows.tsv",
+  "sat": "c*s2^2 - c*s2",
+  "systems": {
+    "0": "box/orderchart-20260903/systems/45_30_42_11_k1_part_2_2_Q_std.sing"
+  },
+  "variables": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "b6",
+    "b7",
+    "b8",
+    "b9",
+    "b10",
+    "b11",
+    "b12",
+    "b13",
+    "b14",
+    "b15",
+    "s2",
+    "A2_0",
+    "A2_1",
+    "A3_0",
+    "A3_1",
+    "A3_2",
+    "A3_3",
+    "B2_0",
+    "c"
+  ]
+}

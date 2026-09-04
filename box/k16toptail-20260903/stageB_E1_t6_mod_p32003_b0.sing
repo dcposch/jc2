@@ -1,0 +1,17 @@
+ring W=32003,(b4,q2_0,q3_0,q4_0,q5_0,b3),wp(1,2,3,4,5,7);
+number yy=27617;
+int tt=6; int k; int NN; int tm; int mm;
+option(redSB);
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/rows_t6_exact.sing"));
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/restop_t6_exact.sing"));
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/reslow_t6_exact.sing"));
+ideal RStop1=subst(RStop,b4,1); ideal RSlow1=subst(RSlow,b4,1); ideal TT1=subst(TT,b4,1);
+ideal RStop0=subst(RStop,b4,0); ideal RSlow0=subst(RSlow,b4,0); ideal TT0=subst(TT,b4,0);
+ring Wq=32003,(q2_0,q3_0,q4_0,q5_0),dp;
+number yy=27617;
+ideal Ktop=imap(W,RStop1); ideal Klow=imap(W,RSlow1); ideal Ktop0=imap(W,RStop0); ideal Klow0=imap(W,RSlow0); option(redSB);
+tm=timer; ideal G=std(Ktop0);
+print("E1 unit="+string(reduce(1,G)==0)+" dim="+string(dim(G))+" size="+string(size(G))+" time="+string(timer-tm));
+if (size(G)<=12) { print("LEAD "+string(lead(G))); }
+print("STAGEB_DONE E1");
+quit;

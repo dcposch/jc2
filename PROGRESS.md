@@ -7241,3 +7241,8 @@ fleet spun up.
   test refuted (signal = Moh's (10)–(13)); ORTHO-DEFECT promoted;
   rigidity/star batch promoted with NO-RESIDUE.
 - Handoff to a cloud-machine coordinator: see notes.md HANDOFF block.
+
+## 2026-09-04 morning digest (2026-09-04T08:22Z)
+- (99,66): the δ = 5/2 branch is dead in the necessary joint chart, PROMOTED by a GPT-5.5 gate (explicit certificate, char-0 replay) and an Opus clean-room re-implementation (row-level agreement). With δ = 2 (PROMOTED yesterday) and the complete split classification, the skeleton verdict NO-KELLER-PAIR-WITH-THE-(99,66)-SKELETON is PROMOTED: the published open case of Moh's ≤ 100 theorem is closed at skeleton level (AUDIT 17(tttt)). Remaining for a paper-grade statement: the chart-necessity dossier.
+- Second engine client: the D = 108 row's only split branch dies at preflight on incidence rows (PROVISIONAL); the (25,15) row is SATURATED-EMPTY in the general order chart (PROVISIONAL).
+- K16 ray: fixed-t certification exhausted at t = 7; the uniform statement is now a square weighted-homogeneous resultant (Lemma SQUARE).

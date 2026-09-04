@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+All work is complete and nothing is running except the lane harness itself. Final recap:
+
+**Outcome.** (C0), the head of the chain, is not proved uniformly, and the report shows why the proposed route cannot reach it. The report is sealed at `xmodel/k16-toptail-quadratics-fable5-20260903.md` (body 22539 bytes, seal verify PASS), with all drivers and outputs in `box/k16toptail-20260903/` under a 202-line manifest. All 24 input hashes verified mechanically from the receipt.
+
+**What is proved (uniform in t ≥ 3).**
+- **Theorem TOPTAIL.** On b₄ = 1 the top tail is t quadratics in b₃ whose coefficients are the images of weighted forms of weights r, t+1+r, 2t+2+r. The b₃² coefficient a_r involves only q₂..q_r, a₀ = α_t is a unit, and for r ≤ t−2 a_r is determined by a truncated spine of 2r+1 scalars, so it is a single rational function of (t,d) for each fixed r. The b₃-linear and constant coefficients carry the whole spine and have full monomial support at every t = 3..7.
+- **Lemma SQUARE.** The t−1 resultants of the top row against the other top rows form a square weighted system in (b₄, q); its cone being {0} implies (V0). Its head implies (C0), and its tail inherits the proved chain steps r ≤ 5 with explicit units.
+- **The top-weight trap.** The top-weight part of the dehomogenised ideal is the b₄ = 0 cone in disguise. Its dim = 0 certifies that the b₄ = 1 fibre is finite, never that it is empty. An exact Singular counterexample passes RESIDUAL-ZERO and the top-weight test while b₄ is not in the radical.
+
+**Exact results.** At t = 3 the two top-tail resultants alone generate the unit ideal on b₄ = 1 and their b₄ = 0 parts have dim 0, so the top-tail cone is {0} there. At t = 4 both charts are unit and b₄²² lies in the cone ideal. At t = 2 the head holds on both fibres (b₄⁷ and b₄⁸), including the fibre whose cone is the b₃-axis. The resultant head is unit modulo good primes at t = 4, 5 (evidence only). In char 0 the resultant route timed out at t = 4 in both encodings while the direct chart finished in 74 s, so the elimination is a structural reformulation and not a computational shortcut.
+
+**Open.** Closed forms in t for a₁ and a₂ (exact values and unit norms tabulated at t = 3..7), and (C0) itself. The cheapest fixed-t test remains the direct b₄ = 1 top-tail chart; the cheapest falsification test is the modular resultant head.
+DIVERT path=xmodel/k16-toptail-quadratics-fable5-20260903.md status=CLEAN_SEALED body_bytes=22539 body_sha256=3810488568a668e733982b82644207b65d39c01b104bd473f07f3e7112701c98

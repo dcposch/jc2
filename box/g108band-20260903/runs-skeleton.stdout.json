@@ -1,0 +1,1116 @@
+{
+  "FALLACY_v2": {
+    "Qstar_pivots": "Q* only; c and all branch parameters excluded",
+    "c_localization": "Rabinowitsch wrapper; no sat()",
+    "e0_map": "not identified with an F/G coefficient; effective-root bridge not assumed",
+    "exit_price_assertion_made": false,
+    "flag_place_series_separated": true,
+    "representative_claimed": false,
+    "strict_below_and_at_level_separated": true
+  },
+  "Singular": {
+    "status": "not run in skeleton-only mode"
+  },
+  "continuation_metadata": {
+    "Jacobian": {
+      "first_nonzero_degree": 177,
+      "formula": "108*KF*(KG)_w-t*(KF)_t*(KG)_w-72*(KF)_w*KG+(KF)_w*t*(KG)_t",
+      "normalization_control": "J[t^1,w^15]=1712*f0=(108-1)*16*f0",
+      "prior": "degree 177, w powers 15..24 (10 rows)",
+      "required_constant": "at degree 0 subtract 1; all positive degrees target 0",
+      "stage_0": "degree 177, w power 25",
+      "stage_1": "degree 177, w powers 26..177",
+      "stage_n_ge_2": "degree 178-n, all w powers 0..178-n",
+      "top_degree": 178,
+      "top_degree_status": "identically zero (proportional top forms)",
+      "warning": "synchronization is a driver convention, not a theorem"
+    },
+    "pole_rows": {
+      "F": {
+        "degree": 108,
+        "formula": "e=12-i+j+b+2*k; local_power=e+96",
+        "local_power_max": 96,
+        "local_power_min": 1,
+        "normalizing_shift": 96,
+        "object": "F",
+        "pole": 12,
+        "raw_tag_count": 1200,
+        "rows_by_local_power": {
+          "1": 1,
+          "10": 3,
+          "11": 3,
+          "12": 3,
+          "13": 4,
+          "14": 4,
+          "15": 4,
+          "16": 4,
+          "17": 5,
+          "18": 5,
+          "19": 5,
+          "2": 1,
+          "20": 5,
+          "21": 6,
+          "22": 6,
+          "23": 6,
+          "24": 6,
+          "25": 7,
+          "26": 7,
+          "27": 7,
+          "28": 7,
+          "29": 8,
+          "3": 1,
+          "30": 8,
+          "31": 8,
+          "32": 8,
+          "33": 9,
+          "34": 9,
+          "35": 9,
+          "36": 9,
+          "37": 10,
+          "38": 10,
+          "39": 10,
+          "4": 1,
+          "40": 10,
+          "41": 11,
+          "42": 11,
+          "43": 11,
+          "44": 11,
+          "45": 12,
+          "46": 12,
+          "47": 12,
+          "48": 12,
+          "49": 13,
+          "5": 2,
+          "50": 13,
+          "51": 13,
+          "52": 13,
+          "53": 14,
+          "54": 14,
+          "55": 14,
+          "56": 14,
+          "57": 15,
+          "58": 15,
+          "59": 15,
+          "6": 2,
+          "60": 15,
+          "61": 16,
+          "62": 16,
+          "63": 16,
+          "64": 16,
+          "65": 17,
+          "66": 17,
+          "67": 17,
+          "68": 17,
+          "69": 18,
+          "7": 2,
+          "70": 18,
+          "71": 18,
+          "72": 18,
+          "73": 19,
+          "74": 19,
+          "75": 19,
+          "76": 19,
+          "77": 20,
+          "78": 20,
+          "79": 20,
+          "8": 2,
+          "80": 20,
+          "81": 21,
+          "82": 21,
+          "83": 21,
+          "84": 21,
+          "85": 22,
+          "86": 22,
+          "87": 22,
+          "88": 22,
+          "89": 23,
+          "9": 3,
+          "90": 23,
+          "91": 23,
+          "92": 23,
+          "93": 24,
+          "94": 24,
+          "95": 24,
+          "96": 24
+        },
+        "target_at_leading_power": "(pi^2-c)^12"
+      },
+      "G": {
+        "degree": 72,
+        "formula": "e=8-i+j+b+2*k; local_power=e+64",
+        "local_power_max": 64,
+        "local_power_min": 1,
+        "normalizing_shift": 64,
+        "object": "G",
+        "pole": 8,
+        "raw_tag_count": 544,
+        "rows_by_local_power": {
+          "1": 1,
+          "10": 3,
+          "11": 3,
+          "12": 3,
+          "13": 4,
+          "14": 4,
+          "15": 4,
+          "16": 4,
+          "17": 5,
+          "18": 5,
+          "19": 5,
+          "2": 1,
+          "20": 5,
+          "21": 6,
+          "22": 6,
+          "23": 6,
+          "24": 6,
+          "25": 7,
+          "26": 7,
+          "27": 7,
+          "28": 7,
+          "29": 8,
+          "3": 1,
+          "30": 8,
+          "31": 8,
+          "32": 8,
+          "33": 9,
+          "34": 9,
+          "35": 9,
+          "36": 9,
+          "37": 10,
+          "38": 10,
+          "39": 10,
+          "4": 1,
+          "40": 10,
+          "41": 11,
+          "42": 11,
+          "43": 11,
+          "44": 11,
+          "45": 12,
+          "46": 12,
+          "47": 12,
+          "48": 12,
+          "49": 13,
+          "5": 2,
+          "50": 13,
+          "51": 13,
+          "52": 13,
+          "53": 14,
+          "54": 14,
+          "55": 14,
+          "56": 14,
+          "57": 15,
+          "58": 15,
+          "59": 15,
+          "6": 2,
+          "60": 15,
+          "61": 16,
+          "62": 16,
+          "63": 16,
+          "64": 16,
+          "7": 2,
+          "8": 2,
+          "9": 3
+        },
+        "target_at_leading_power": "(pi^2-c)^8"
+      },
+      "leading_targets": "subtract p^12 at F local 96 and p^8 at G local 64",
+      "minor_series": "y=jet1*t+jet2*t^2+pi*t^3",
+      "prior_prefix": {
+        "cleared_exponents_F": [
+          -95,
+          -94,
+          -93
+        ],
+        "cleared_exponents_G": [
+          -63,
+          -62,
+          -61
+        ],
+        "local_powers": [
+          1,
+          2,
+          3
+        ],
+        "rows": 6
+      },
+      "stage_rule": "stage s would add local power 4+s: F exponent -92+s, G exponent -60+s"
+    }
+  },
+  "custody": {
+    "all_hashes_match": true,
+    "charged_inputs": 18,
+    "checked": [
+      {
+        "basename": "g108-minor-classification-opus5-20260903.md",
+        "sha256": "8b97a8972cff0dfccfa9396bae8849dbda4318fb47150645e76d55785d9decd3"
+      },
+      {
+        "basename": "g9966-global-band-sol56-20260903.md",
+        "sha256": "0c8dc291e306f15806e6c14099ab69feda9d1532abcbc22e79e55b02df427701"
+      },
+      {
+        "basename": "g9966-delta52-stage8-sol56-20260903.md",
+        "sha256": "679671e7be4aef40128b133b26ab75c083f95a7283d9ab97aebcccea5bc21b01"
+      },
+      {
+        "basename": "g9966-outer-bridge-grok46-20260903.md",
+        "sha256": "7facb109db6eb21b73970c2b6a0d4339bc51c7b73f3ce16782950550508e2674"
+      },
+      {
+        "basename": "g9966-global-design-sol56-20260903.md",
+        "sha256": "a81ff0263cf379a297b8d1812ebfa26eb95f7e58d91ef4edc62a3a68edf2d782"
+      },
+      {
+        "basename": "g9966-branchB-kill-gate-gpt55-20260903.md",
+        "sha256": "84b2a04cc41231eeaa3711b03b9a3d0e23630581bdf63a230799fdeafeb4d468"
+      },
+      {
+        "basename": "band_engine.py",
+        "sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9"
+      },
+      {
+        "basename": "moh_skeleton_full.py",
+        "sha256": "d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2"
+      },
+      {
+        "basename": "moh1983_jram340_configurations_of_roots.pdf",
+        "sha256": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51"
+      },
+      {
+        "basename": "xu2016_intersection_numbers_split_minor_roots_arxiv1604.07683v4.pdf",
+        "sha256": "00fecb1614c98b6e7496097ab2d6b7496c3027feca66a8c30642aa7f5812de21"
+      },
+      {
+        "basename": "FALLACY-v2.md",
+        "sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5"
+      },
+      {
+        "basename": "g108_chart_design.py",
+        "sha256": "b2c3b4d894b6fbcd46cb39cda469fe4aefdac2c581f7297b93c9aea27c8d408e"
+      },
+      {
+        "basename": "g108_minor_driver.py",
+        "sha256": "d7569169bff57c412f336a3d9126a5a6796b463daf07dc9cf25ced1e19e68d67"
+      },
+      {
+        "basename": "outer_order_bands.py",
+        "sha256": "5b51e91b820a623c614622626f4df7e3c8144bfff3603a030a771de7b1e77421"
+      },
+      {
+        "basename": "driver.py",
+        "sha256": "12d8f9d09cb41e1e0a27a9654ce12da1304ad4baff7286ff7a28a16b946bab8c"
+      },
+      {
+        "basename": "controls.py",
+        "sha256": "cb616b8ee886097ace1f74a8f0c5307d1882f8a9ecd54742839577833f2f66a7"
+      },
+      {
+        "basename": "build_death_certificate.py",
+        "sha256": "b53acfa2e483d9974d57470f17fec65542763554100c4604e47786416f3c5fa5"
+      },
+      {
+        "basename": "prepare_workspace.py",
+        "sha256": "33fbe24c2ef49d85f183413cf5e5ecaa1b85e1b8a0e5bc77fb4a3dfa7497dbb9"
+      }
+    ],
+    "lane_inputs_dir": "/tmp/jc2-lane.BhSYQx/inputs",
+    "manifest": "box/g108band-20260903/runs/skeleton/inputs.sha256",
+    "manifest_sha256": "530034c276bc8e84b9a3d4a3078d023d6d13d61bd8547c2172091784567d60a7",
+    "receipt": "/home/ubuntu/jc2/xmodel/g108-joint-band-sol56-20260903.run.v2",
+    "receipt_sha256": "aab531983bfb7b96982261d285024a29ce38b7118ca551d99a9370d88cdb4c37",
+    "sha256sum_check_lines": 18
+  },
+  "datum": {
+    "M": [
+      -72,
+      81,
+      106
+    ],
+    "V": [
+      7,
+      7
+    ],
+    "d": [
+      108,
+      36,
+      9,
+      1
+    ],
+    "degrees": [
+      108,
+      72
+    ],
+    "split": {
+      "U_prime": "5*p^2",
+      "degree_U": 5,
+      "delta": 3,
+      "mod_gauge": "one parameter e0",
+      "p": "pi^2-c",
+      "partition": [
+        1,
+        1
+      ],
+      "q": "p^23*U",
+      "tree": "24 -> 12+12; final order 4 on both children"
+    },
+    "u3": 2,
+    "v3": 7
+  },
+  "driver_provenance": {
+    "band_engine": "/home/ubuntu/jc2/box/g108band-20260903/band_engine.py",
+    "band_engine_sha256": "dbe6574f72d1b4a70a71a2400a46ea2c1e0e1d8892d567c9fd4d437edfe2d69a",
+    "charged_engine_sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9",
+    "outer_order_bands": "/home/ubuntu/jc2/box/g108band-20260903/outer_order_bands.py",
+    "outer_order_bands_sha256": "de28e2e5f5234e1f6c2ceb66fe30e2e6a8a148b94fa2f941f27e6e8a11dd8eb8"
+  },
+  "major_structure": {
+    "controls": {
+      "D1_minor_nonzero_over_Q": true,
+      "all_D2_slots_enumerated": true,
+      "every_nonidentity_D2_row_has_a_unit_triangular_leader": true,
+      "one_identity_has_no_source_or_target_support": true,
+      "strict_below_separate_from_at_level": true
+    },
+    "conventions": {
+      "D1": "s=e^2, t=e^8, z=e^12*(1+Pi*e)",
+      "D2": "t=s^4, z=pi*s^6; weight 4*r+6*q",
+      "D2_K2_face": "pi^12*(pi^2-1)^8",
+      "K2": "t^36*h2(t^-1,w/t)",
+      "K3": "t^9*h3(t^-1,w/t)",
+      "major_coordinate": "z=w-1",
+      "top_K2": "z^28*(1+z)^8",
+      "top_K3": "z^7*(1+z)^2"
+    },
+    "h2_D1": {
+      "chosen_minor_determinant": "64",
+      "chosen_q_values": [
+        25,
+        23,
+        21,
+        19
+      ],
+      "face_leading_exponent": 344,
+      "full_weight": 170,
+      "primitive_weight": 85,
+      "rank": 4,
+      "raw_rows": 4,
+      "residual_rows": 0,
+      "row_exponents": [
+        340,
+        341,
+        342,
+        343
+      ]
+    },
+    "h2_D2": {
+      "dimension_after_D2": 63,
+      "face_incidence_rows": 8,
+      "face_sites": [
+        [
+          3,
+          26
+        ],
+        [
+          6,
+          24
+        ],
+        [
+          9,
+          22
+        ],
+        [
+          12,
+          20
+        ],
+        [
+          15,
+          18
+        ],
+        [
+          18,
+          16
+        ],
+        [
+          21,
+          14
+        ],
+        [
+          24,
+          12
+        ]
+      ],
+      "face_values": [
+        "-8",
+        "28",
+        "-56",
+        "70",
+        "-56",
+        "28",
+        "-8",
+        "1"
+      ],
+      "identity_sites": [
+        [
+          1,
+          27
+        ]
+      ],
+      "nominal_rows": 566,
+      "rank": 565,
+      "residual_rows": 0,
+      "strict_Theorem_1_2_rows": 558,
+      "unit_pivots": {
+        "C2": 79,
+        "C3": 198,
+        "C4": 288
+      }
+    },
+    "h3_D2": {
+      "equality_sites": [
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "face_incidence_rank": 2,
+      "face_incidence_rows": 2,
+      "fixed_top_lower_ambient": 45,
+      "strict_order_rank": 36,
+      "strict_order_rows": 36,
+      "surviving_coordinates": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "surviving_count": 7
+    },
+    "joint_major": {
+      "fixed_inner_ambient": 666,
+      "free_dimension": 59,
+      "free_h3_projection_dimension": 7,
+      "h2_D1_rank": 4,
+      "h2_D2_rank": 565,
+      "h3_D2_rank": 38,
+      "post_h3_ambient": 628,
+      "total_rank_from_fixed_inner": 607
+    },
+    "post_h3_ambient_516_analogue": {
+      "C2": 126,
+      "C3": 207,
+      "C4": 288,
+      "H": 7,
+      "total": 628
+    }
+  },
+  "minor_incidence": {
+    "Qstar": {
+      "dependent_zero_rows": 1,
+      "eligible": [
+        "Hc_1_7",
+        "Hc_1_8",
+        "Hc_2_6",
+        "Hc_2_7",
+        "Hc_3_6",
+        "Hc_4_5",
+        "Hc_5_4"
+      ],
+      "excluded": [
+        "jet1",
+        "jet2",
+        "c",
+        "e0",
+        "Zc"
+      ],
+      "pivots": [
+        {
+          "coefficient": "-1",
+          "resolved_value": "0",
+          "row": "minor_n1_pi0",
+          "variable": "Hc_1_7"
+        },
+        {
+          "coefficient": "1",
+          "resolved_value": "0",
+          "row": "minor_n2_pi0",
+          "variable": "Hc_2_6"
+        },
+        {
+          "coefficient": "1",
+          "resolved_value": "0",
+          "row": "minor_n3_pi0",
+          "variable": "Hc_3_6"
+        },
+        {
+          "coefficient": "-1",
+          "resolved_value": "jet1**2",
+          "row": "minor_n4_pi0",
+          "variable": "Hc_4_5"
+        },
+        {
+          "coefficient": "1",
+          "resolved_value": "0",
+          "row": "minor_n5_pi0",
+          "variable": "Hc_5_4"
+        },
+        {
+          "coefficient": "-1",
+          "resolved_value": "0",
+          "row": "minor_n5_pi1",
+          "variable": "Hc_1_8"
+        },
+        {
+          "coefficient": "1",
+          "resolved_value": "2*jet1",
+          "row": "minor_n6_pi1",
+          "variable": "Hc_2_7"
+        }
+      ],
+      "rank": 7
+    },
+    "branch_face": {
+      "U_derivative": "5*p^2",
+      "child_final_orders": [
+        4,
+        4
+      ],
+      "degree_U": 5,
+      "localization": "c!=0 via Zc*c-1",
+      "mod_gauge_parameter": "e0 (bridge-neutral; absent from this necessary h3 block)",
+      "p": "pi^2-c",
+      "q": "p^23*U",
+      "rigid_packets": [
+        12,
+        12
+      ]
+    },
+    "certificate": {
+      "coefficients": {
+        "localization_Zc_c_minus_1": "-1",
+        "minor_n6_pi0": "0",
+        "minor_n7_pi0": "0",
+        "minor_n7_pi1": "-9*Zc*jet1*jet2/2",
+        "minor_n8_pi0": "-Zc",
+        "minor_n8_pi1": "-Zc*jet1**2/2"
+      },
+      "expanded_identity": "1",
+      "localized_unit_ideal": true,
+      "wrapper": "Zc*c - 1"
+    },
+    "equality_retained_control": {
+      "Qstar_pivots": 9,
+      "h3_coordinates": 9,
+      "localized_certificate_expands_to": "1",
+      "residual": {
+        "minor_n8_pi0": "-c - jet1**4",
+        "minor_n8_pi1": "2*jet1**2"
+      },
+      "status": "DEAD-IN-LARGER-CHART"
+    },
+    "minor_series": "w=jet1*t^2+jet2*t^3+pi*t^4",
+    "raw": {
+      "coefficient_labels": 13,
+      "nonzero_rows": 12,
+      "rows": {
+        "minor_n1_pi0": "-Hc_1_7",
+        "minor_n2_pi0": "Hc_2_6",
+        "minor_n3_pi0": "7*Hc_1_7*jet1 - Hc_1_8*jet1 + Hc_3_6",
+        "minor_n4_pi0": "7*Hc_1_7*jet2 - Hc_1_8*jet2 - 6*Hc_2_6*jet1 + Hc_2_7*jet1 - Hc_4_5 - jet1**2",
+        "minor_n5_pi0": "-21*Hc_1_7*jet1**2 + 7*Hc_1_8*jet1**2 - 6*Hc_2_6*jet2 + Hc_2_7*jet2 - 6*Hc_3_6*jet1 + Hc_5_4 - 2*jet1*jet2",
+        "minor_n5_pi1": "7*Hc_1_7 - Hc_1_8",
+        "minor_n6_pi0": "-42*Hc_1_7*jet1*jet2 + 14*Hc_1_8*jet1*jet2 + 15*Hc_2_6*jet1**2 - 6*Hc_2_7*jet1**2 - 6*Hc_3_6*jet2 + 5*Hc_4_5*jet1 + 7*jet1**3 - jet2**2",
+        "minor_n6_pi1": "-6*Hc_2_6 + Hc_2_7 - 2*jet1",
+        "minor_n7_pi0": "35*Hc_1_7*jet1**3 - 21*Hc_1_7*jet2**2 - 21*Hc_1_8*jet1**3 + 7*Hc_1_8*jet2**2 + 30*Hc_2_6*jet1*jet2 - 12*Hc_2_7*jet1*jet2 + 15*Hc_3_6*jet1**2 + 5*Hc_4_5*jet2 - 4*Hc_5_4*jet1 + 21*jet1**2*jet2",
+        "minor_n7_pi1": "-42*Hc_1_7*jet1 + 14*Hc_1_8*jet1 - 6*Hc_3_6 - 2*jet2",
+        "minor_n8_pi0": "105*Hc_1_7*jet1**2*jet2 - 63*Hc_1_8*jet1**2*jet2 - 20*Hc_2_6*jet1**3 + 15*Hc_2_6*jet2**2 + 15*Hc_2_7*jet1**3 - 6*Hc_2_7*jet2**2 + 30*Hc_3_6*jet1*jet2 - 10*Hc_4_5*jet1**2 - 4*Hc_5_4*jet2 - c - 21*jet1**4 + 21*jet1*jet2**2",
+        "minor_n8_pi1": "-42*Hc_1_7*jet2 + 14*Hc_1_8*jet2 + 30*Hc_2_6*jet1 - 12*Hc_2_7*jet1 + 5*Hc_4_5 + 21*jet1**2",
+        "minor_n8_pi2": "0"
+      },
+      "zero_rows": 1
+    },
+    "residual": {
+      "minor_n6_pi0": "-jet2**2",
+      "minor_n7_pi0": "2*jet1**2*jet2",
+      "minor_n7_pi1": "-2*jet2",
+      "minor_n8_pi0": "-c - jet1**4 + 9*jet1*jet2**2",
+      "minor_n8_pi1": "2*jet1**2"
+    },
+    "residual_count": 5,
+    "sign_control": {
+      "literal_plus_p_target_pi2_residue": "-2",
+      "status": "REJECTED-SPURIOUS-SCALAR-KILL"
+    },
+    "target": "K3=-t^8*(pi^2-c)+O(t^9)",
+    "target_scalar_reason": "w^2*(w-1)^7=-w^2+O(w^3)",
+    "type": "EXACT-QSTAR / COMMON-h3-MINOR-INCIDENCE / delta=3"
+  },
+  "mode": "skeleton-only",
+  "outer": {
+    "blocks": {
+      "A2": {
+        "D1": {
+          "dependent_rows": 19,
+          "exponent_threshold": 680,
+          "offsets": [
+            {
+              "dependent_rows": 10,
+              "offset": 0,
+              "positions": 6,
+              "primitive_weight": 166,
+              "q_values": [
+                34,
+                32,
+                30,
+                28,
+                26,
+                24
+              ],
+              "rank": 6,
+              "raw_rows": 16
+            },
+            {
+              "dependent_rows": 6,
+              "offset": 1,
+              "positions": 6,
+              "primitive_weight": 167,
+              "q_values": [
+                35,
+                33,
+                31,
+                29,
+                27,
+                25
+              ],
+              "rank": 6,
+              "raw_rows": 12
+            },
+            {
+              "dependent_rows": 3,
+              "offset": 2,
+              "positions": 5,
+              "primitive_weight": 168,
+              "q_values": [
+                34,
+                32,
+                30,
+                28,
+                26
+              ],
+              "rank": 5,
+              "raw_rows": 8
+            },
+            {
+              "dependent_rows": 0,
+              "offset": 3,
+              "positions": 5,
+              "primitive_weight": 169,
+              "q_values": [
+                35,
+                33,
+                31,
+                29,
+                27
+              ],
+              "rank": 4,
+              "raw_rows": 4
+            }
+          ],
+          "rank": 21,
+          "raw_rows": 40
+        },
+        "D2": {
+          "primitive_threshold": 166,
+          "rank": 1920,
+          "retained": 42,
+          "strict_coordinate_rows": 1920
+        },
+        "ambient": 1962,
+        "fixed_top_degree": 71,
+        "redundant_D1_labels_on_D2_deleted_support": 3983
+      },
+      "A3": {
+        "D1": {
+          "dependent_rows": 0,
+          "exponent_threshold": 1024,
+          "offsets": [
+            {
+              "dependent_rows": 0,
+              "offset": 0,
+              "positions": 0,
+              "primitive_weight": 250,
+              "q_values": [],
+              "rank": 0,
+              "raw_rows": 0
+            },
+            {
+              "dependent_rows": 0,
+              "offset": 1,
+              "positions": 0,
+              "primitive_weight": 251,
+              "q_values": [],
+              "rank": 0,
+              "raw_rows": 0
+            },
+            {
+              "dependent_rows": 0,
+              "offset": 2,
+              "positions": 0,
+              "primitive_weight": 252,
+              "q_values": [],
+              "rank": 0,
+              "raw_rows": 0
+            },
+            {
+              "dependent_rows": 0,
+              "offset": 3,
+              "positions": 0,
+              "primitive_weight": 253,
+              "q_values": [],
+              "rank": 0,
+              "raw_rows": 0
+            }
+          ],
+          "rank": 0,
+          "raw_rows": 0
+        },
+        "D2": {
+          "primitive_threshold": 250,
+          "rank": 3258,
+          "retained": 0,
+          "strict_coordinate_rows": 3258
+        },
+        "ambient": 3258,
+        "fixed_top_degree": 107,
+        "redundant_D1_labels_on_D2_deleted_support": 6992
+      },
+      "B1": {
+        "D1": {
+          "dependent_rows": 0,
+          "exponent_threshold": 336,
+          "offsets": [
+            {
+              "dependent_rows": 0,
+              "offset": 0,
+              "positions": 8,
+              "primitive_weight": 82,
+              "q_values": [
+                26,
+                24,
+                22,
+                20,
+                18,
+                16,
+                14,
+                12
+              ],
+              "rank": 8,
+              "raw_rows": 8
+            },
+            {
+              "dependent_rows": 0,
+              "offset": 1,
+              "positions": 8,
+              "primitive_weight": 83,
+              "q_values": [
+                27,
+                25,
+                23,
+                21,
+                19,
+                17,
+                15,
+                13
+              ],
+              "rank": 4,
+              "raw_rows": 4
+            },
+            {
+              "dependent_rows": 0,
+              "offset": 2,
+              "positions": 8,
+              "primitive_weight": 84,
+              "q_values": [
+                28,
+                26,
+                24,
+                22,
+                20,
+                18,
+                16,
+                14
+              ],
+              "rank": 0,
+              "raw_rows": 0
+            },
+            {
+              "dependent_rows": 0,
+              "offset": 3,
+              "positions": 7,
+              "primitive_weight": 85,
+              "q_values": [
+                27,
+                25,
+                23,
+                21,
+                19,
+                17,
+                15
+              ],
+              "rank": 0,
+              "raw_rows": 0
+            }
+          ],
+          "rank": 12,
+          "raw_rows": 12
+        },
+        "D2": {
+          "primitive_threshold": 82,
+          "rank": 558,
+          "retained": 108,
+          "strict_coordinate_rows": 558
+        },
+        "ambient": 666,
+        "fixed_top_degree": 35,
+        "redundant_D1_labels_on_D2_deleted_support": 1099
+      },
+      "B2": {
+        "D1": {
+          "dependent_rows": 19,
+          "exponent_threshold": 680,
+          "offsets": [
+            {
+              "dependent_rows": 10,
+              "offset": 0,
+              "positions": 6,
+              "primitive_weight": 166,
+              "q_values": [
+                34,
+                32,
+                30,
+                28,
+                26,
+                24
+              ],
+              "rank": 6,
+              "raw_rows": 16
+            },
+            {
+              "dependent_rows": 6,
+              "offset": 1,
+              "positions": 6,
+              "primitive_weight": 167,
+              "q_values": [
+                35,
+                33,
+                31,
+                29,
+                27,
+                25
+              ],
+              "rank": 6,
+              "raw_rows": 12
+            },
+            {
+              "dependent_rows": 3,
+              "offset": 2,
+              "positions": 5,
+              "primitive_weight": 168,
+              "q_values": [
+                34,
+                32,
+                30,
+                28,
+                26
+              ],
+              "rank": 5,
+              "raw_rows": 8
+            },
+            {
+              "dependent_rows": 0,
+              "offset": 3,
+              "positions": 5,
+              "primitive_weight": 169,
+              "q_values": [
+                35,
+                33,
+                31,
+                29,
+                27
+              ],
+              "rank": 4,
+              "raw_rows": 4
+            }
+          ],
+          "rank": 21,
+          "raw_rows": 40
+        },
+        "D2": {
+          "primitive_threshold": 166,
+          "rank": 1920,
+          "retained": 42,
+          "strict_coordinate_rows": 1920
+        },
+        "ambient": 1962,
+        "fixed_top_degree": 71,
+        "redundant_D1_labels_on_D2_deleted_support": 3983
+      }
+    },
+    "controls": {
+      "all_ranks_exact_over_Q": true,
+      "at_level_D2_coordinates_retained": true,
+      "blocks_have_disjoint_coordinates": true
+    },
+    "conventions": {
+      "D1_exponent": "8*r+12*q+k=4*W+k",
+      "D1_map": "t=e^8, w-1=e^12*(1+Pi*e)",
+      "D2_weight": "4*r+6*q; primitive W=2*r+3*q",
+      "basis": "K_Q=t^D Q(t^-1,w/t)=sum c[r,q] t^r (w-1)^q",
+      "pivot_field": "Q* only",
+      "support": "r>=0, 0<=q<36, r+q<=D"
+    },
+    "primitive_weight_offsets": [
+      {
+        "offset": 0,
+        "rank": 20,
+        "raw_rows": 40
+      },
+      {
+        "offset": 1,
+        "rank": 16,
+        "raw_rows": 28
+      },
+      {
+        "offset": 2,
+        "rank": 10,
+        "raw_rows": 16
+      },
+      {
+        "offset": 3,
+        "rank": 8,
+        "raw_rows": 8
+      }
+    ],
+    "totals": {
+      "D1_dependent_rows": 38,
+      "D1_rank": 54,
+      "D1_raw_rows": 92,
+      "D2_rank": 7656,
+      "fixed_outer_ambient": 7848,
+      "outer_free_dimension": 138,
+      "rank_D2_plus_D1": 7710,
+      "redundant_D1_labels_on_D2_deleted_support": 16057,
+      "retained_after_D2": 192
+    },
+    "type": "EXACT-Q / OUTER-THEOREM-1.2-BANDS / D108"
+  },
+  "software": {
+    "Singular": "Singular for x86_64-Linux version 4.3.2 (4330, 64 bit) Apr  1 2024 04:44:00",
+    "declared_max_cores": 4,
+    "pid_affinity": "pid 1879868's current affinity list: 0-3",
+    "platform": "Linux-7.0.0-1011-aws-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]",
+    "sympy": "1.12"
+  },
+  "stage": {
+    "ambient_before_wrapper": 8518,
+    "branch": "delta3",
+    "branch_parameters": [
+      "jet1",
+      "jet2",
+      "c",
+      "e0"
+    ],
+    "dimension_after_Qstar_before_residue": 194,
+    "dimension_before_minor_incidence": 201,
+    "exact_localized_dimension": null,
+    "fixed_chart_coordinates": 8514,
+    "joint_Qstar_pivots_cumulative": 8324,
+    "joint_Qstar_pivots_new": 7,
+    "killing_family": null,
+    "major_order_rank": 607,
+    "nonlinear_residue_rows": 5,
+    "outer_D1_rank": 54,
+    "outer_D2_rank": 7656,
+    "outer_rank": 7710,
+    "peak_RSS_KiB": 55748,
+    "preflight_families": [
+      "major h3 D2 strict-order and face rows",
+      "projected h2 D2 and h2 D1 rows",
+      "outer D2 support preblock and all four D1 offsets",
+      "common-h3 delta=3 minor incidence"
+    ],
+    "reached": false,
+    "residue": {
+      "minor_n6_pi0": "-jet2**2",
+      "minor_n7_pi0": "2*jet1**2*jet2",
+      "minor_n7_pi1": "-2*jet2",
+      "minor_n8_pi0": "-c - jet1**4 + 9*jet1*jet2**2",
+      "minor_n8_pi1": "2*jet1**2"
+    },
+    "scheduled_but_unreached": [
+      "prior six direct F/G pole rows",
+      "prior ten Jacobian rows",
+      "stage-0 F/G local-power-4 rows",
+      "stage-0 Jacobian w^25 row"
+    ],
+    "stage": 0,
+    "status": "COMPILED-SKELETON",
+    "stop_reason": null,
+    "wall_seconds_internal": 1.316228
+  },
+  "tower": {
+    "F": "h2^3+A2*h2+A3; degree 108",
+    "G": "h2^2+B1*h2+B2; degree 72",
+    "fixed_top_blocks": {
+      "A2": 1962,
+      "A3": 3258,
+      "B1": 666,
+      "B2": 1962,
+      "C2": 126,
+      "C3": 207,
+      "C4": 288,
+      "H": 45
+    },
+    "fixed_top_total": 8514,
+    "h2": "P^4+C2*P^2+C3*P+C4; degree 36",
+    "h3": "P; degree 9; top y^2*(y-x)^7",
+    "raw_blocks": {
+      "A2": 1998,
+      "A3": 3294,
+      "B1": 702,
+      "B2": 1998,
+      "C2": 135,
+      "C3": 216,
+      "C4": 297,
+      "H": 54
+    }
+  },
+  "type": "D108-JOINT-BAND-ENGINE / EXACT-Q"
+}

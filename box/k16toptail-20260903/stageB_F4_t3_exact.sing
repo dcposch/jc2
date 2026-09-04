@@ -1,0 +1,17 @@
+ring W=(0,yy),(b4,q2_0,b3),wp(1,2,4);
+minpoly=588*yy^2 - 336*yy + 44;
+int tt=3; int k; int NN; int tm; int mm;
+option(redSB);
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/rows_t3_exact.sing"));
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/restop_t3_exact.sing"));
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/reslow_t3_exact.sing"));
+ideal RStop1=subst(RStop,b4,1); ideal RSlow1=subst(RSlow,b4,1); ideal TT1=subst(TT,b4,1);
+ideal RStop0=subst(RStop,b4,0); ideal RSlow0=subst(RSlow,b4,0); ideal TT0=subst(TT,b4,0);
+ideal Jt=0; mm=0; for (k=tt; k<=2*tt-1; k++) { mm++; Jt[mm]=TT[k]; }
+tm=timer; ideal GW=std(Jt);
+print("F4 TOPCONE dim="+string(dim(GW))+" size="+string(size(GW))+" time="+string(timer-tm));
+int vv; string pw="";
+for (vv=1; vv<=nvars(basering); vv++) { NN=0; for (k=1; k<=8*tt+4; k++) { if (reduce(var(vv)^k,GW)==0) { NN=k; break; } } pw=pw+string(var(vv))+"^"+string(NN)+" "; }
+print("F5 PURE_POWERS_IN_TOPCONE "+pw);
+print("STAGEB_DONE F4");
+quit;

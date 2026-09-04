@@ -1,0 +1,51 @@
+{
+  "algorithm": "std",
+  "branch": 1,
+  "charts": "none",
+  "coefficient_algebra": "Q, y=2/5",
+  "comparison_record": {
+    "path": "/tmp/jc2-lane.x0liVT/inputs/terminal_laurent_t2.json",
+    "sha256": "234da78b92c8e5afd95919fa0ae4597cd2fca272653b88f3365261ac327e445a"
+  },
+  "dump_rows": false,
+  "elapsed_seconds": 0.02005425503011793,
+  "mode": "split-exact",
+  "pivot_schedule": [
+    {
+      "band": 8,
+      "variable": "C1",
+      "weight": 1
+    },
+    {
+      "band": 7,
+      "variable": "q2_0",
+      "weight": 2
+    },
+    {
+      "band": 6,
+      "variable": "q3_0",
+      "weight": 3
+    },
+    {
+      "band": 5,
+      "variable": "q4_0",
+      "weight": 4
+    },
+    {
+      "band": 4,
+      "variable": "b2",
+      "weight": 5
+    }
+  ],
+  "prime": null,
+  "residual_variables": [
+    "b3"
+  ],
+  "returncode": 0,
+  "specialize_b4_before_expansion": null,
+  "status": "PASS",
+  "stderr": "terminal_t2_split-exact_branch1_none.err",
+  "stdout": "terminal_t2_split-exact_branch1_none.out",
+  "t": 2,
+  "terminal_sign": "T[k]=[X^k]E=-frozen_JSON_expr"
+}

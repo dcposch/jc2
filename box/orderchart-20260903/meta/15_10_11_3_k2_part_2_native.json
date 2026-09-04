@@ -1,0 +1,186 @@
+{
+  "builder": "box/orderchart-20260903/builders/15_10_11_3_k2_part_2_builder.sing",
+  "manifest_ok": true,
+  "meta": {
+    "K": 5,
+    "Pi": 5,
+    "R": 3,
+    "actual_pair_control": {
+      "J_low_high": "x",
+      "monic_pi_degrees": [
+        1,
+        1
+      ],
+      "pair": "(pi, pi-gamma^2/2)",
+      "reason": "pi-degrees are 1,1 and do not match any requested descended tuple",
+      "tuple_classifier": "FAIL"
+    },
+    "alpha_dims": [
+      0,
+      4,
+      4
+    ],
+    "alpha_dims_pre_gauge": [
+      1,
+      4,
+      5
+    ],
+    "basis_weights": {
+      "1": "0",
+      "H1": "-1",
+      "H2": "-2",
+      "H3": "-3/2",
+      "H4": "-1",
+      "x": "-1"
+    },
+    "beta_dims": [
+      3
+    ],
+    "beta_dims_pre_gauge": [
+      4
+    ],
+    "bound_unit": "-1/2",
+    "d2prime": 5,
+    "d3prime": 1,
+    "delta1": "1/2",
+    "delta2": "-1",
+    "dprime_q": 2,
+    "eprime_e": 3,
+    "equations": 37,
+    "gauge_notes": [],
+    "gauge_policy": "const(beta_q) and const(alpha_e) are target translations; alpha_(e-q) shear only when scalar and beta spaces embed after the shift",
+    "gauges": [
+      "P -> P - alpha_1 Q",
+      "Q -> Q - const(beta_2)",
+      "P -> P - const(alpha_3)"
+    ],
+    "h_lower": [
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "h_lower_count": 5,
+    "h_lower_support_count": 5,
+    "h_parameter_count": 5,
+    "lambda_P_over_e": "-1/2",
+    "lambda_Q_over_q": "-1/2",
+    "lemma21_h_support_count": 8,
+    "lemma21_support_ok": true,
+    "native_high_terms": [
+      {
+        "coefficient": "1",
+        "h_power": 3
+      },
+      {
+        "coefficient": "AA1",
+        "h_power": 2
+      },
+      {
+        "coefficient": "AA2",
+        "h_power": 1
+      },
+      {
+        "coefficient": "AA3",
+        "h_power": 0
+      }
+    ],
+    "native_low_terms": [
+      {
+        "coefficient": "1",
+        "h_power": 2
+      },
+      {
+        "coefficient": "BB2",
+        "h_power": 0
+      }
+    ],
+    "omega": "1",
+    "params_without_T": 17,
+    "partition": [
+      2
+    ],
+    "partition_label": "2",
+    "row": {
+      "M2": 11,
+      "V2": 3,
+      "k": 2,
+      "key": "15_10_11_3_k2",
+      "label": "(15,10;11;3;k=2)",
+      "m": 10,
+      "n": 15
+    },
+    "sanity_gate": {
+      "deg_x_J0": 3,
+      "kind": "native h-adic normalized level-0 remainder before subtracting c*x^k",
+      "max_nf_deg_x_after_minus_c": 3,
+      "required_k": 2,
+      "status": "PASS",
+      "target_xk_level0_nonzero": true
+    },
+    "saturation_factor": "c",
+    "slope_count": 0,
+    "top_face_factored": "y^3*(y-x)^2",
+    "tower_factor_order": [
+      "y-x",
+      "y-x",
+      "y",
+      "y",
+      "y"
+    ],
+    "tower_weights": {
+      "1": "-1",
+      "2": "-2",
+      "3": "-3/2",
+      "4": "-1",
+      "5": "-1/2"
+    },
+    "unknowns": 17,
+    "uprime": 2
+  },
+  "row_file": {
+    "bytes": 3191,
+    "rows": 37,
+    "sha256": "a6ff400a350df600a60c04c935735e9952c2f132db4509ff4bd218d36dee4db4"
+  },
+  "rows_path": "box/orderchart-20260903/rows/15_10_11_3_k2_part_2_rows.tsv",
+  "sat": "c",
+  "systems": {
+    "0": "box/orderchart-20260903/systems/15_10_11_3_k2_part_2_Q_std.sing"
+  },
+  "variables": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "A2_0",
+    "A2_1",
+    "A2_2",
+    "A2_3",
+    "A3_0",
+    "A3_1",
+    "A3_2",
+    "A3_3",
+    "B2_0",
+    "B2_1",
+    "B2_2",
+    "c"
+  ]
+}

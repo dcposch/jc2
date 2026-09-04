@@ -1,0 +1,42 @@
+emit_dmodel exact validation
+source=t6_heuristic_exact_QHy_std.sing
+source_sha256=d840675b403e7e97c650294a73b9080f568150aab0a485fcbf6079122a1f69cd
+output=emit_dmodel_t6_exact_nfmodStd.sing
+output_sha256=ba4f6d23f2de39680a7b75acbcaaa5bfcac36af444a4e2166699e5b060842bb0
+output_bytes=939745
+source_rows=12 PASS
+source_H=2028*y^2-1092*y+140=4*H6 PASS
+forward_map=y->(d+21)/78 PASS
+inverse_map=d->78*y-21 PASS
+map_compositions=identity PASS
+H6_forward=(d^2-21)/12 PASS
+d_minpoly_inverse=12*H6 PASS
+c_forward=-665*(d+9)/171366 PASS
+c_inverse=19*y*(7-78*y)/2197_mod_H6 PASS
+c_norm=2211125/2447192163_nonzero PASS
+c_inverse=28561*(d-9)/6650 PASS
+main_ring_variables=q7_0,q8_1,q9_1,q10_1,q11_1,q12_1
+main_ring_W=omitted PASS
+nfmodStd_cores=3
+shortest_first_source_order=12,11,10,9,8,7,6,5,4,3,2,1
+
+source_row source_terms d_terms component_gcd raw_scale row_sha256 inverse_map
+12 168 84 39 2 3f005344ed28acd2b2402982b36f597923e0e6724181857973729f1cd75fe6f1 PASS
+11 206 103 39 2 6578717155467a01dcc562eb1578d454ea71760144b973935590483290e2ddc5 PASS
+10 252 126 78 1 5d6a49b1191602c4eb2d1d62f62785b91cfbeed7782810136ad499d7b5e3fd49 PASS
+9 304 152 39 2 5e507caa1bc03425997b78bdcaf60bfa326302f95609c766464604e28acfe9e6 PASS
+8 366 183 39 2 2037caf6d7fd0737849edbb37f01afb0924be9cc838a1095e3283daa4c3281aa PASS
+7 436 218 39 2 315621ca18e4650412edcc0b66d06a9f1410592a57faca67c5448340dc25006c PASS
+6 518 259 39 2 545a61f3a569418419c1ed83ae44fcaf6edfdd4d6a1d429e841e0bdd760aa84b PASS
+5 610 305 39 2 42d30c678fb9264c42d62e922092b291405ea7f1a6bf690f0d943b966b4db9c3 PASS
+4 716 358 78 1 c806b24681821f3e1a8289161b07197c026fbd4187ab6398b8f10e8b76da9d66 PASS
+3 834 417 78 1 643df13420e0adb629a9138f9464548f753c3639a1b32e8ef38811d49bbf80a9 PASS
+2 968 484 39 2 6db24823de201d3f21deb68ff9546cae5fd9832dcb0a577543800e0439806cf7 PASS
+1 1112 556 78 1 af4c767ad1ec9dc1dd5137c667e9ca3634674c8df174918c049d29e9b7b614c5 PASS
+
+Inverse-map meaning: for every monomial in every emitted raw row,
+substitution d=78*y-21 returns (78/component_gcd)*source_row exactly
+over Z[y], hence also in Q[y]/(H6).  All 12 checks passed.
+Runtime monic scalings are checked by leadcoef(row)*monic_scale==1
+before the scaled rows are placed in the nfmodStd ideal.
+VALIDATION_PASS

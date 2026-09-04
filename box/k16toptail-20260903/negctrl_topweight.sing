@@ -1,0 +1,20 @@
+// Negative control for the "top-weight dim=0 => unit ideal" inference.
+// Weighted-homogeneous model ideal at t=3 shape: variables b4 (wt 1), q2 (wt 2), b3 (wt 4).
+ring W=0,(b4,q2,b3),wp(1,2,4);
+ideal I=q2-b4^2, b3;
+ideal G=std(I);
+print("MODEL cone dim="+string(dim(G)));            // 1: the curve q2=b4^2, b3=0
+ideal I0=subst(I,b4,0)+ideal(b4);  ideal G0=std(I0);
+print("MODEL b4=0 slice dim="+string(dim(G0))+" lead="+string(lead(G0)));   // (q2,b3): dim 0 -> RESIDUAL-ZERO holds
+ideal I1=subst(I,b4,1);
+ring Q=0,(q2,b3),wp(2,4);
+ideal J=imap(W,I1); ideal GJ=std(J);
+print("MODEL b4=1 chart unit="+string(reduce(1,GJ)==0)+" dim="+string(dim(GJ)));   // NOT unit: point q2=1,b3=0
+// top-weight (initial) forms of the generators of J:
+ideal Jtop=q2, b3; ideal GT=std(Jtop);
+print("MODEL top-weight part dim="+string(dim(GT)));   // 0, yet J is not the unit ideal
+// b4 not in radical:
+setring W;
+int k; int N=0; for (k=1;k<=12;k++){ if (reduce(b4^k,G)==0){N=k;break;} }
+print("MODEL b4^N in I: N="+string(N)+" (0 = none up to 12)");
+quit;

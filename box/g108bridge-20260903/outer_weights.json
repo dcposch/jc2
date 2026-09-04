@@ -1,0 +1,1316 @@
+{
+  "control_9966": {
+    "D1_offsets_rank": [
+      41,
+      38,
+      33,
+      25,
+      19,
+      11,
+      6,
+      3
+    ],
+    "D1_offsets_raw": [
+      64,
+      52,
+      40,
+      29,
+      20,
+      11,
+      6,
+      3
+    ],
+    "blocks": {
+      "A2": {
+        "D": 65,
+        "D1_Qstar_rank": 44,
+        "D1_dependent_slots": 7,
+        "D1_e_range": [
+          567,
+          582
+        ],
+        "D1_e_threshold": 583,
+        "D1_raw_slots": 51,
+        "D2_remaining": 264,
+        "D2_s_threshold": 189,
+        "D2_unit_rows": 1386,
+        "ambient": 1650,
+        "remain_r_min": 21
+      },
+      "A3": {
+        "D": 98,
+        "D1_Qstar_rank": 73,
+        "D1_dependent_slots": 35,
+        "D1_e_range": [
+          855,
+          878
+        ],
+        "D1_e_threshold": 879,
+        "D1_raw_slots": 108,
+        "D2_remaining": 297,
+        "D2_s_threshold": 285,
+        "D2_unit_rows": 2442,
+        "ambient": 2739,
+        "remain_r_min": 53
+      },
+      "B1": {
+        "D": 32,
+        "D1_Qstar_rank": 15,
+        "D1_dependent_slots": 0,
+        "D1_e_range": [
+          279,
+          286
+        ],
+        "D1_e_threshold": 287,
+        "D1_raw_slots": 15,
+        "D2_remaining": 177,
+        "D2_s_threshold": 93,
+        "D2_unit_rows": 384,
+        "ambient": 561,
+        "remain_r_min": 0
+      },
+      "B2": {
+        "D": 65,
+        "D1_Qstar_rank": 44,
+        "D1_dependent_slots": 7,
+        "D1_e_range": [
+          567,
+          582
+        ],
+        "D1_e_threshold": 583,
+        "D1_raw_slots": 51,
+        "D2_remaining": 264,
+        "D2_s_threshold": 189,
+        "D2_unit_rows": 1386,
+        "ambient": 1650,
+        "remain_r_min": 21
+      }
+    },
+    "h2_D1_active_W": [
+      {
+        "W": 97,
+        "k_range": "0..4",
+        "kmax_inclusive": 4,
+        "n_positions": 8,
+        "n_rows": 5
+      },
+      {
+        "W": 98,
+        "k_range": "0..1",
+        "kmax_inclusive": 1,
+        "n_positions": 8,
+        "n_rows": 2
+      }
+    ],
+    "h2_D1_rows": 7,
+    "h3_strict_variables": 21,
+    "offset_replay": {
+      "rank": [
+        41,
+        38,
+        33,
+        25,
+        19,
+        11,
+        6,
+        3
+      ],
+      "rank_matches_charged": true,
+      "raw": [
+        64,
+        52,
+        40,
+        29,
+        20,
+        11,
+        6,
+        3
+      ],
+      "raw_matches_charged": true
+    },
+    "reproduces_charged": true,
+    "totals": {
+      "D1_Qstar_rank": 176,
+      "D1_dependent_slots": 49,
+      "D1_raw_slots": 225,
+      "D2_remaining": 1002,
+      "D2_unit_rows": 5598,
+      "new_pivots_D2_plus_D1": 5774,
+      "outer_ambient": 6600
+    },
+    "weight": {
+      "A1": 3,
+      "A2": 3,
+      "D1_sub": "t=e^9, w=1+e^12+Pi*e^13",
+      "D2_sub": "t=s^3, w=1+pi*s^4",
+      "E_coeff": 3,
+      "L1": 3,
+      "L2": 1,
+      "N_D1": 9,
+      "Ww": 4,
+      "delta_1": "4/9",
+      "delta_2": "1/3",
+      "delta_s": "-1",
+      "weight": "3*r + 4*q"
+    }
+  },
+  "elapsed_seconds": 2.8326,
+  "face_policy": "Theorem 1.2 is >= ; equality face is not a row",
+  "field": "Q",
+  "general_formula": {
+    "D1_E0": "E0 = N*D - j          [E = (N/A2)*W + k < E0 on the D2-remaining]",
+    "D1_rank": "Q* rank of the binomial matrix (e,k) vs remaining (r,q)",
+    "D1_sub": "t=e^N, w=1+e^{N*Ww/A2}+Pi e^{N*Ww/A2+1}",
+    "D2_W0": "W0 = A2 * (D - j)     [vanish W < W0; equality face is not a row]",
+    "D2_rank": "rank = count (unit coordinate vanishings)",
+    "D2_sub": "t=s^{A2}, w=1+pi s^{Ww}",
+    "Moh8": "L_j = lcm{den delta_s, ..., den delta_{j+1}}, A_j = den(L_j * delta_j), Ww = A_2 * L_1 * delta_1, N = den(delta_1).  On the three charged rows N = A1*A2.",
+    "S": "S(D,d2) = {deg <= D, deg_y < d2}, dim = d2*(D+1)-d2*(d2-1)/2",
+    "Thm12_outer": "ord A_j >= j * ord h2,  ord B_j >= j * ord h2  (j as above)",
+    "expected_outer_rank": "D2_unit_rows + D1_Qstar_rank",
+    "fixed_top_degrees": {
+      "A2": "D = n-d2-1, j=2",
+      "A3": "D = n-1,     j=3",
+      "B1": "D = m-d2-1, j=1",
+      "B2": "D = m-1,     j=2"
+    },
+    "h3_in_h2": "h2 = h3^{k2} + C2 h3^{k2-2} + ... + C_{k2} (Tschirnhausen drops h3^{k2-1}); Thm 1.2: ord C_i >= i * ord h3",
+    "h3_vmin": "vmin(r) = max(0, ceil((Ww*v_s + 1 - A2*r)/Ww)), r=1..d3, cap=d3-r",
+    "inner_ord_h3_D2": "-d3/d2 = -1/k2",
+    "ord_h2_D1": "-1/N",
+    "ord_h2_D2": -1,
+    "scope": "Outer A,B of the Tschirnhausen tower F=h2^{n/d2}+A2 h2+A3, G=h2^{m/d2}+B1 h2+B2, which requires n/d2=3, m/d2=2.  A2,A1,Ww come from Moh (8) on the row's radii, not from (n,m,d2,d3) alone.",
+    "weight": "W(r,q) = A2*r + Ww*q"
+  },
+  "row_108": {
+    "D1_offsets": [
+      {
+        "Qstar_rank": 53,
+        "by_block": {
+          "A2": {
+            "positions": 18,
+            "raw_rows": 14
+          },
+          "A3": {
+            "positions": 18,
+            "raw_rows": 21
+          },
+          "B1": {
+            "positions": 12,
+            "raw_rows": 7
+          },
+          "B2": {
+            "positions": 18,
+            "raw_rows": 14
+          }
+        },
+        "dependent": 3,
+        "offset": 0,
+        "positions": 66,
+        "raw_rows": 56
+      },
+      {
+        "Qstar_rank": 0,
+        "by_block": {
+          "A2": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "A3": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B1": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B2": {
+            "positions": 0,
+            "raw_rows": 0
+          }
+        },
+        "dependent": 0,
+        "offset": 1,
+        "positions": 0,
+        "raw_rows": 0
+      },
+      {
+        "Qstar_rank": 40,
+        "by_block": {
+          "A2": {
+            "positions": 18,
+            "raw_rows": 10
+          },
+          "A3": {
+            "positions": 18,
+            "raw_rows": 17
+          },
+          "B1": {
+            "positions": 12,
+            "raw_rows": 3
+          },
+          "B2": {
+            "positions": 18,
+            "raw_rows": 10
+          }
+        },
+        "dependent": 0,
+        "offset": 2,
+        "positions": 66,
+        "raw_rows": 40
+      },
+      {
+        "Qstar_rank": 0,
+        "by_block": {
+          "A2": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "A3": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B1": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B2": {
+            "positions": 0,
+            "raw_rows": 0
+          }
+        },
+        "dependent": 0,
+        "offset": 3,
+        "positions": 0,
+        "raw_rows": 0
+      },
+      {
+        "Qstar_rank": 25,
+        "by_block": {
+          "A2": {
+            "positions": 18,
+            "raw_rows": 6
+          },
+          "A3": {
+            "positions": 18,
+            "raw_rows": 13
+          },
+          "B1": {
+            "positions": 12,
+            "raw_rows": 0
+          },
+          "B2": {
+            "positions": 18,
+            "raw_rows": 6
+          }
+        },
+        "dependent": 0,
+        "offset": 4,
+        "positions": 66,
+        "raw_rows": 25
+      },
+      {
+        "Qstar_rank": 0,
+        "by_block": {
+          "A2": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "A3": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B1": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B2": {
+            "positions": 0,
+            "raw_rows": 0
+          }
+        },
+        "dependent": 0,
+        "offset": 5,
+        "positions": 0,
+        "raw_rows": 0
+      },
+      {
+        "Qstar_rank": 13,
+        "by_block": {
+          "A2": {
+            "positions": 18,
+            "raw_rows": 2
+          },
+          "A3": {
+            "positions": 18,
+            "raw_rows": 9
+          },
+          "B1": {
+            "positions": 12,
+            "raw_rows": 0
+          },
+          "B2": {
+            "positions": 18,
+            "raw_rows": 2
+          }
+        },
+        "dependent": 0,
+        "offset": 6,
+        "positions": 66,
+        "raw_rows": 13
+      },
+      {
+        "Qstar_rank": 0,
+        "by_block": {
+          "A2": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "A3": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B1": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B2": {
+            "positions": 0,
+            "raw_rows": 0
+          }
+        },
+        "dependent": 0,
+        "offset": 7,
+        "positions": 0,
+        "raw_rows": 0
+      },
+      {
+        "Qstar_rank": 5,
+        "by_block": {
+          "A2": {
+            "positions": 18,
+            "raw_rows": 0
+          },
+          "A3": {
+            "positions": 18,
+            "raw_rows": 5
+          },
+          "B1": {
+            "positions": 12,
+            "raw_rows": 0
+          },
+          "B2": {
+            "positions": 18,
+            "raw_rows": 0
+          }
+        },
+        "dependent": 0,
+        "offset": 8,
+        "positions": 66,
+        "raw_rows": 5
+      },
+      {
+        "Qstar_rank": 0,
+        "by_block": {
+          "A2": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "A3": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B1": {
+            "positions": 0,
+            "raw_rows": 0
+          },
+          "B2": {
+            "positions": 0,
+            "raw_rows": 0
+          }
+        },
+        "dependent": 0,
+        "offset": 9,
+        "positions": 0,
+        "raw_rows": 0
+      },
+      {
+        "Qstar_rank": 1,
+        "by_block": {
+          "A2": {
+            "positions": 18,
+            "raw_rows": 0
+          },
+          "A3": {
+            "positions": 18,
+            "raw_rows": 1
+          },
+          "B1": {
+            "positions": 11,
+            "raw_rows": 0
+          },
+          "B2": {
+            "positions": 18,
+            "raw_rows": 0
+          }
+        },
+        "dependent": 0,
+        "offset": 10,
+        "positions": 65,
+        "raw_rows": 1
+      }
+    ],
+    "blocks": {
+      "A2": {
+        "D": 71,
+        "D1_Qstar_rank": 32,
+        "D1_dependent_slots": 0,
+        "D1_e_range": [
+          552,
+          565
+        ],
+        "D1_e_threshold": 566,
+        "D1_gap_support": 72,
+        "D1_pivot_columns_rq": [
+          [
+            69,
+            0
+          ],
+          [
+            70,
+            0
+          ],
+          [
+            68,
+            1
+          ],
+          [
+            69,
+            1
+          ],
+          [
+            66,
+            2
+          ],
+          [
+            67,
+            2
+          ],
+          [
+            65,
+            3
+          ],
+          [
+            66,
+            3
+          ],
+          [
+            63,
+            4
+          ],
+          [
+            64,
+            4
+          ],
+          [
+            62,
+            5
+          ],
+          [
+            60,
+            6
+          ]
+        ],
+        "D1_raw_slots": 32,
+        "D1_rows_by_e": {
+          "552": 1,
+          "553": 1,
+          "554": 1,
+          "555": 1,
+          "556": 2,
+          "557": 2,
+          "558": 2,
+          "559": 2,
+          "560": 3,
+          "561": 3,
+          "562": 3,
+          "563": 3,
+          "564": 4,
+          "565": 4
+        },
+        "D2_remaining": 414,
+        "D2_s_threshold": 276,
+        "D2_unit_rows": 1548,
+        "ambient": 1962,
+        "bound_t_D1": "-1/4",
+        "bound_t_D2": "-2",
+        "name": "A2",
+        "remain_r_min": 17,
+        "sample_D2_remain": [
+          [
+            69,
+            0
+          ],
+          [
+            70,
+            0
+          ],
+          [
+            71,
+            0
+          ],
+          [
+            68,
+            1
+          ],
+          [
+            69,
+            1
+          ]
+        ],
+        "sample_D2_vanish": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "thm12_j": 2,
+        "ycap": 36
+      },
+      "A3": {
+        "D": 107,
+        "D1_Qstar_rank": 63,
+        "D1_dependent_slots": 3,
+        "D1_e_range": [
+          832,
+          852
+        ],
+        "D1_e_threshold": 853,
+        "D1_gap_support": 108,
+        "D1_pivot_columns_rq": [
+          [
+            104,
+            0
+          ],
+          [
+            105,
+            0
+          ],
+          [
+            106,
+            0
+          ],
+          [
+            103,
+            1
+          ],
+          [
+            104,
+            1
+          ],
+          [
+            105,
+            1
+          ],
+          [
+            101,
+            2
+          ],
+          [
+            102,
+            2
+          ],
+          [
+            103,
+            2
+          ],
+          [
+            100,
+            3
+          ],
+          [
+            101,
+            3
+          ],
+          [
+            98,
+            4
+          ]
+        ],
+        "D1_raw_slots": 66,
+        "D1_rows_by_e": {
+          "832": 1,
+          "833": 1,
+          "834": 1,
+          "835": 1,
+          "836": 2,
+          "837": 2,
+          "838": 2,
+          "839": 2,
+          "840": 3,
+          "841": 3,
+          "842": 3,
+          "843": 3,
+          "844": 4,
+          "845": 4,
+          "846": 4,
+          "847": 4,
+          "848": 5,
+          "849": 5,
+          "850": 5,
+          "851": 5,
+          "852": 6
+        },
+        "D2_remaining": 450,
+        "D2_s_threshold": 416,
+        "D2_unit_rows": 2808,
+        "ambient": 3258,
+        "bound_t_D1": "-3/8",
+        "bound_t_D2": "-3",
+        "name": "A3",
+        "remain_r_min": 52,
+        "sample_D2_remain": [
+          [
+            104,
+            0
+          ],
+          [
+            105,
+            0
+          ],
+          [
+            106,
+            0
+          ],
+          [
+            107,
+            0
+          ],
+          [
+            103,
+            1
+          ]
+        ],
+        "sample_D2_vanish": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "thm12_j": 3,
+        "ycap": 36
+      },
+      "B1": {
+        "D": 35,
+        "D1_Qstar_rank": 10,
+        "D1_dependent_slots": 0,
+        "D1_e_range": [
+          272,
+          278
+        ],
+        "D1_e_threshold": 279,
+        "D1_gap_support": 24,
+        "D1_pivot_columns_rq": [
+          [
+            34,
+            0
+          ],
+          [
+            33,
+            1
+          ],
+          [
+            31,
+            2
+          ],
+          [
+            30,
+            3
+          ],
+          [
+            28,
+            4
+          ],
+          [
+            27,
+            5
+          ],
+          [
+            25,
+            6
+          ],
+          [
+            22,
+            8
+          ],
+          [
+            19,
+            10
+          ],
+          [
+            16,
+            12
+          ]
+        ],
+        "D1_raw_slots": 10,
+        "D1_rows_by_e": {
+          "272": 1,
+          "273": 1,
+          "274": 1,
+          "275": 1,
+          "276": 2,
+          "277": 2,
+          "278": 2
+        },
+        "D2_remaining": 258,
+        "D2_s_threshold": 136,
+        "D2_unit_rows": 408,
+        "ambient": 666,
+        "bound_t_D1": "-1/8",
+        "bound_t_D2": "-1",
+        "name": "B1",
+        "remain_r_min": 0,
+        "sample_D2_remain": [
+          [
+            34,
+            0
+          ],
+          [
+            35,
+            0
+          ],
+          [
+            33,
+            1
+          ],
+          [
+            34,
+            1
+          ],
+          [
+            31,
+            2
+          ]
+        ],
+        "sample_D2_vanish": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "thm12_j": 1,
+        "ycap": 36
+      },
+      "B2": {
+        "D": 71,
+        "D1_Qstar_rank": 32,
+        "D1_dependent_slots": 0,
+        "D1_e_range": [
+          552,
+          565
+        ],
+        "D1_e_threshold": 566,
+        "D1_gap_support": 72,
+        "D1_pivot_columns_rq": [
+          [
+            69,
+            0
+          ],
+          [
+            70,
+            0
+          ],
+          [
+            68,
+            1
+          ],
+          [
+            69,
+            1
+          ],
+          [
+            66,
+            2
+          ],
+          [
+            67,
+            2
+          ],
+          [
+            65,
+            3
+          ],
+          [
+            66,
+            3
+          ],
+          [
+            63,
+            4
+          ],
+          [
+            64,
+            4
+          ],
+          [
+            62,
+            5
+          ],
+          [
+            60,
+            6
+          ]
+        ],
+        "D1_raw_slots": 32,
+        "D1_rows_by_e": {
+          "552": 1,
+          "553": 1,
+          "554": 1,
+          "555": 1,
+          "556": 2,
+          "557": 2,
+          "558": 2,
+          "559": 2,
+          "560": 3,
+          "561": 3,
+          "562": 3,
+          "563": 3,
+          "564": 4,
+          "565": 4
+        },
+        "D2_remaining": 414,
+        "D2_s_threshold": 276,
+        "D2_unit_rows": 1548,
+        "ambient": 1962,
+        "bound_t_D1": "-1/4",
+        "bound_t_D2": "-2",
+        "name": "B2",
+        "remain_r_min": 17,
+        "sample_D2_remain": [
+          [
+            69,
+            0
+          ],
+          [
+            70,
+            0
+          ],
+          [
+            71,
+            0
+          ],
+          [
+            68,
+            1
+          ],
+          [
+            69,
+            1
+          ]
+        ],
+        "sample_D2_vanish": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "thm12_j": 2,
+        "ycap": 36
+      }
+    },
+    "h2_D1": {
+      "D1_active_W": [],
+      "ebound": 287,
+      "face_weight": 168,
+      "major_multiplicity_D2": 28,
+      "n_D1_rows": 0,
+      "n_strict_r_ge_1": 100,
+      "note": "D1 window is empty iff every remaining W already has (N/A2)*W >= ebound, i.e. the D2 cut implies the D1 bound",
+      "strict_threshold": 169
+    },
+    "h2_equality": {
+      "calibration": "same rule; out-of-disk k are not ambient coordinates",
+      "face_polynomial": "(pi^4 - 1)^7",
+      "in_disk": [
+        {
+          "coeff": 1,
+          "k": 0,
+          "q": 28,
+          "r": 0,
+          "r_plus_q": 28
+        },
+        {
+          "coeff": -7,
+          "k": 1,
+          "q": 24,
+          "r": 6,
+          "r_plus_q": 30
+        },
+        {
+          "coeff": 21,
+          "k": 2,
+          "q": 20,
+          "r": 12,
+          "r_plus_q": 32
+        },
+        {
+          "coeff": -35,
+          "k": 3,
+          "q": 16,
+          "r": 18,
+          "r_plus_q": 34
+        },
+        {
+          "coeff": 35,
+          "k": 4,
+          "q": 12,
+          "r": 24,
+          "r_plus_q": 36
+        }
+      ],
+      "n_in_disk_beyond_leading": 4,
+      "outside_S(d2,d2)": [
+        {
+          "coeff": -21,
+          "k": 5,
+          "q": 8,
+          "r": 30,
+          "r_plus_q": 38
+        },
+        {
+          "coeff": 7,
+          "k": 6,
+          "q": 4,
+          "r": 36,
+          "r_plus_q": 40
+        },
+        {
+          "coeff": -1,
+          "k": 7,
+          "q": 0,
+          "r": 42,
+          "r_plus_q": 42
+        }
+      ]
+    },
+    "h3_adic": {
+      "F": "h2^3 + A2*h2 + A3",
+      "F_j": {
+        "0": "1",
+        "1": "0",
+        "10": "A2*C2 + 3*C2*C4**2 + 3*C3**2*C4",
+        "11": "A2*C3 + 3*C3*C4**2",
+        "12": "A2*C4 + A3 + C4**3",
+        "2": "3*C2",
+        "3": "3*C3",
+        "4": "3*C2**2 + 3*C4",
+        "5": "6*C2*C3",
+        "6": "C2**3 + 6*C2*C4 + 3*C3**2",
+        "7": "3*C2**2*C3 + 6*C3*C4",
+        "8": "A2 + 3*C2**2*C4 + 3*C2*C3**2 + 3*C4**2",
+        "9": "6*C2*C3*C4 + C3**3"
+      },
+      "G": "h2^2 + B1*h2 + B2",
+      "G_j": {
+        "0": "1",
+        "1": "0",
+        "2": "2*C2",
+        "3": "2*C3",
+        "4": "B1 + C2**2 + 2*C4",
+        "5": "2*C2*C3",
+        "6": "B1*C2 + 2*C2*C4 + C3**2",
+        "7": "B1*C3 + 2*C3*C4",
+        "8": "B1*C4 + B2 + C4**2"
+      },
+      "h2": "h3^4 + C2*h3^2 + C3*h3 + C4",
+      "identities": [
+        "F_1=0",
+        "G_1=0"
+      ],
+      "new_outer_pivots": 0,
+      "reason": "ord C2>=-1/2, ord C3>=-3/4, ord C4>=-1 follow from Thm 1.2 at D2 with base h3, ord h3=-1/4; ord A2>=-2, ord A3>=-3, ord B1>=-1, ord B2>=-2 are the outer D2-h2 unit rows.  Each F_j, G_j is a polynomial in those blocks; the Thm-1.2 lower bound follows by addition of lower bounds.  Not independent coordinates.",
+      "type": "DERIVED[h3-adic D2 bounds after chart expansion, k2=4]"
+    },
+    "h3_strict": {
+      "equality_sites_in_disk": [
+        [
+          0,
+          7,
+          42
+        ],
+        [
+          3,
+          5,
+          42
+        ],
+        [
+          6,
+          3,
+          42
+        ]
+      ],
+      "face_weight": 42,
+      "formula_vmin": "max(0, ceil((42+1 - 4*r)/6))",
+      "n_below_face": 43,
+      "n_strict_variables": 7,
+      "strict_threshold": 43,
+      "variables_sample": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "vmin": {
+        "1": 7,
+        "2": 6,
+        "3": 6,
+        "4": 5,
+        "5": 4,
+        "6": 4,
+        "7": 3,
+        "8": 2,
+        "9": 2
+      }
+    },
+    "inner_D2": {
+      "C2": {
+        "D": 17,
+        "D2_remaining": 29,
+        "D2_s_threshold": 66,
+        "D2_unit_rows": 97,
+        "ambient": 126,
+        "bound_t_D2": "-1/2",
+        "ycap": 9
+      },
+      "C3": {
+        "D": 26,
+        "D2_remaining": 29,
+        "D2_s_threshold": 101,
+        "D2_unit_rows": 178,
+        "ambient": 207,
+        "bound_t_D2": "-3/4",
+        "ycap": 9
+      },
+      "C4": {
+        "D": 35,
+        "D2_remaining": 34,
+        "D2_s_threshold": 136,
+        "D2_unit_rows": 254,
+        "ambient": 288,
+        "bound_t_D2": "-1",
+        "ycap": 9
+      },
+      "H": {
+        "D": 8,
+        "D2_remaining": 18,
+        "D2_s_threshold": 31,
+        "D2_unit_rows": 27,
+        "ambient": 45,
+        "bound_t_D2": "-1/4",
+        "ycap": 9
+      }
+    },
+    "prop62": {
+      "F": {
+        "box": 2125,
+        "corner": "y^84 z^24",
+        "deg": 108,
+        "deg_y": 84,
+        "deg_z": 24
+      },
+      "F_plus_G_box": 3094,
+      "G": {
+        "box": 969,
+        "corner": "y^56 z^16",
+        "deg": 72,
+        "deg_y": 56,
+        "deg_z": 16
+      },
+      "T2": {
+        "box": 750,
+        "corner": "y^49 z^14",
+        "deg": 63,
+        "deg_y": 49,
+        "deg_z": 14
+      },
+      "h2": {
+        "box": 261,
+        "corner": "y^28 z^8",
+        "deg": 36,
+        "deg_y": 28,
+        "deg_z": 8
+      },
+      "h3": {
+        "box": 24,
+        "corner": "y^7 z^2",
+        "deg": 9,
+        "deg_y": 7,
+        "deg_z": 2
+      }
+    },
+    "totals": {
+      "D1_Qstar_rank": 137,
+      "D1_dependent_slots": 3,
+      "D1_raw_slots": 140,
+      "D2_remaining": 1536,
+      "D2_unit_rows": 6312,
+      "new_pivots_D2_plus_D1": 6449,
+      "outer_ambient": 7848
+    },
+    "tower": {
+      "after_fixing_tops": 8514,
+      "blocks": {
+        "A2": 1998,
+        "A3": 3294,
+        "B1": 702,
+        "B2": 1998,
+        "C2": 135,
+        "C3": 216,
+        "C4": 297,
+        "H": 54
+      },
+      "exact": true,
+      "k_F": 3,
+      "k_G": 2,
+      "k_h2": 4,
+      "monic_array": 8694,
+      "total": 8694
+    },
+    "weight": {
+      "A1": 2,
+      "A2": 4,
+      "D1_sub": "t=e^8, w=1+e^12+Pi*e^13",
+      "D2_sub": "t=s^4, w=1+pi*s^6",
+      "E_coeff": 2,
+      "L1": 4,
+      "L2": 1,
+      "N_D1": 8,
+      "Ww": 6,
+      "delta_1": "3/8",
+      "delta_2": "1/4",
+      "delta_s": "-1",
+      "weight": "4*r + 6*q"
+    }
+  },
+  "row_64": {
+    "N_equals_A1A2": true,
+    "W0_formula_still": "The same W=A2 r+Ww q, W0=A2*(D-j), E0=N*D-j rules apply to each Tschirnhausen block of F,G once the (D,j) of that block is named.  They are not consumed by a (108,72) engine.",
+    "d": [
+      64,
+      16,
+      4,
+      2
+    ],
+    "k_F": 4,
+    "k_G": 3,
+    "k_h2": 4,
+    "label": "(64,48)",
+    "tower_shape": "n/d2=4, m/d2=3: F=h2^4+A2 h2^2+A3 h2+A4, G=h2^3+B1 h2+B2 (not the A2/A3/B1/B2 3+2 chart).  Outer-band naming of (99,66) does not apply.  u_s=1: T2,T3 bridge trivial (Xu Prop 7.3 / Moh Prop 4.4).",
+    "us": 1,
+    "vs": 3,
+    "weight": {
+      "A1": 4,
+      "A2": 4,
+      "D1_sub": "t=e^16, w=1+e^36+Pi*e^37",
+      "D2_sub": "t=s^4, w=1+pi*s^9",
+      "E_coeff": 4,
+      "L1": 4,
+      "L2": 1,
+      "N_D1": 16,
+      "Ww": 9,
+      "delta_1": "9/16",
+      "delta_2": "1/4",
+      "delta_s": "-1",
+      "weight": "4*r + 9*q"
+    }
+  },
+  "type": "EXACT-OUTER-THM12-D2-D1 / (108,72) with (99,66) control"
+}

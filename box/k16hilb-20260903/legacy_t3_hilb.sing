@@ -1,0 +1,10 @@
+ring R=32003,(b3,b4,q(2)),wp(4,1,2);
+intvec w=4,1,2;
+ideal M=b3^2,b3*b4^5,b4^10,b4^9*q(2),b4^8*q(2)^2,b3*b4^4*q(2)^2,b3*b4*q(2)^4,b4^7*q(2)^3,b3*b4^3*q(2)^3,b4^4*q(2)^5,b3*q(2)^5,b4^6*q(2)^4,b4*q(2)^7,b4^3*q(2)^6,q(2)^8;
+print("LEGACY_T=3");
+print("LEGACY_SIZE="+string(size(M)));
+print("LEGACY_DIM="+string(dim(M)));
+print("LEGACY_VDIM="+string(vdim(M)));
+print("LEGACY_HNUM");
+hilb(M,1,w);
+quit;

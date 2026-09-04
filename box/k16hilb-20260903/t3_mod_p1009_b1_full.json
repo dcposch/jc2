@@ -1,0 +1,81 @@
+{
+  "analysis_ring_variables": [
+    "b4",
+    "q2_0",
+    "b3"
+  ],
+  "analysis_rows": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "analysis_weights": [
+    1,
+    2,
+    4
+  ],
+  "branch": 1,
+  "ci_numerator": null,
+  "derived_from_sha256": {
+    "singular_terminal_driver.py": "0cc821ff59adc955d2c6c33a572766b01569d578f1034f343c4f3661cebcf8ed",
+    "terminal_array_recurrence.py": "8a935838ac01731110efd5f36652cae3d66bd00ffa23ae4450cdadaa41438001"
+  },
+  "label": "FULL",
+  "mode": "mod",
+  "modular_integrality_audit": {
+    "g": 287,
+    "p_gt_8t_plus_3": true,
+    "pivots": [
+      559,
+      990,
+      306,
+      452,
+      199,
+      180,
+      795
+    ],
+    "roots": [
+      632,
+      810
+    ],
+    "y": 810,
+    "yg": 400
+  },
+  "prime": 1009,
+  "regular_sequence_length_possible": false,
+  "ring_dimension": 3,
+  "row_degrees": [
+    12,
+    11,
+    10,
+    9,
+    8
+  ],
+  "row_weight_formula": "deg_wp(T[t,k])=4*t+1-k for k>=1",
+  "run_command": "timeout 1800 Singular -q box/k16hilb-20260903/t3_mod_p1009_b1_full.sing > box/k16hilb-20260903/t3_mod_p1009_b1_full.out 2> box/k16hilb-20260903/t3_mod_p1009_b1_full.err",
+  "selected_row_count": 5,
+  "singular_source": "box/k16hilb-20260903/t3_mod_p1009_b1_full.sing",
+  "singular_source_sha256": "00ebc841a1787916eb9be79f2b708a3c6da8daa1216f1977777b31b0ac9d8d6b",
+  "source_ring_variables": [
+    "h",
+    "s",
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "B0",
+    "C1",
+    "C2",
+    "q2_0",
+    "q3_0",
+    "q4_0",
+    "q5_0",
+    "q6_0"
+  ],
+  "subset": null,
+  "t": 3,
+  "task": "full",
+  "y": "810"
+}

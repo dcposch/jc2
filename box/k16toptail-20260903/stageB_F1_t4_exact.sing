@@ -1,0 +1,15 @@
+ring W=(0,yy),(b4,q2_0,q3_0,b3),wp(1,2,3,5);
+minpoly=972*yy^2 - 540*yy + 70;
+int tt=4; int k; int NN; int tm; int mm;
+option(redSB);
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/rows_t4_exact.sing"));
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/restop_t4_exact.sing"));
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/reslow_t4_exact.sing"));
+ideal RStop1=subst(RStop,b4,1); ideal RSlow1=subst(RSlow,b4,1); ideal TT1=subst(TT,b4,1);
+ideal RStop0=subst(RStop,b4,0); ideal RSlow0=subst(RSlow,b4,0); ideal TT0=subst(TT,b4,0);
+tm=timer; ideal GW=std(TT);
+print("F1 CONE dim="+string(dim(GW))+" size="+string(size(GW))+" time="+string(timer-tm));
+NN=0; for (k=1; k<=8*tt+4; k++) { if (reduce(b4^k,GW)==0) { NN=k; break; } } print("F2 B4_POWER_IN_I N="+string(NN));
+NN=0; for (k=1; k<=8*tt+4; k++) { if (reduce(b3^k,GW)==0) { NN=k; break; } } print("F3 B3_POWER_IN_I N="+string(NN));
+print("STAGEB_DONE F1");
+quit;

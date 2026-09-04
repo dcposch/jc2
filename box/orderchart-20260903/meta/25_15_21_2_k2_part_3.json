@@ -1,0 +1,300 @@
+{
+  "K": 5,
+  "Pi": 8,
+  "R": 3,
+  "actual_pair_control": {
+    "J_low_high": "x",
+    "monic_pi_degrees": [
+      1,
+      1
+    ],
+    "pair": "(pi, pi-gamma^2/2)",
+    "reason": "pi-degrees are 1,1 and do not match any requested descended tuple",
+    "tuple_classifier": "FAIL"
+  },
+  "alpha_dims": [
+    1,
+    0,
+    1,
+    1,
+    2
+  ],
+  "alpha_dims_pre_gauge": [
+    1,
+    1,
+    1,
+    1,
+    3
+  ],
+  "basis_weights": {
+    "1": "0",
+    "H1": "-1",
+    "H2": "-2",
+    "H3": "-3",
+    "H4": "-8/5",
+    "x": "-1"
+  },
+  "beta_dims": [
+    1,
+    0
+  ],
+  "beta_dims_pre_gauge": [
+    1,
+    1
+  ],
+  "bound_unit": "-1/5",
+  "build_elapsed": 6.207,
+  "d2prime": 5,
+  "d3prime": 1,
+  "delta1": "7/5",
+  "delta2": "-1",
+  "dprime_q": 3,
+  "eprime_e": 5,
+  "equation_text_bytes": 485,
+  "equations": 21,
+  "gauge_notes": [],
+  "gauge_policy": "const(beta_q) and const(alpha_e) are target translations; alpha_(e-q) shear only when scalar and beta spaces embed after the shift",
+  "gauges": [
+    "P -> P - alpha_2 Q",
+    "Q -> Q - const(beta_3)",
+    "P -> P - const(alpha_5)"
+  ],
+  "h_levels": [
+    0,
+    2
+  ],
+  "h_lower": [
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "h_lower_count": 5,
+  "h_lower_support_count": 7,
+  "h_parameter_count": 5,
+  "lambda_P_over_e": "-1/5",
+  "lambda_Q_over_q": "-1/5",
+  "lemma21_h_support_count": 9,
+  "lemma21_support_ok": true,
+  "meta_path": "box/orderchart-20260903/meta/25_15_21_2_k2_part_3.json",
+  "omega": "1",
+  "params_without_T": 12,
+  "partition": [
+    3
+  ],
+  "partition_label": "3",
+  "recomposition_ok": true,
+  "row": {
+    "M2": 21,
+    "V2": 2,
+    "k": 2,
+    "key": "25_15_21_2_k2",
+    "label": "(25,15;21;2;k=2)",
+    "m": 15,
+    "n": 25
+  },
+  "sanity_gate": {
+    "deg_x_J0": 3,
+    "kind": "h-adic normalized level-0 remainder before subtracting c*x^k",
+    "required_k": 2,
+    "status": "PASS"
+  },
+  "saturation_factor": "c",
+  "scripts": {
+    "Q": "box/orderchart-20260903/systems/25_15_21_2_k2_part_3_Q_std.sing",
+    "mod_32003": "box/orderchart-20260903/systems/25_15_21_2_k2_part_3_mod_32003_std.sing",
+    "mod_32009": "box/orderchart-20260903/systems/25_15_21_2_k2_part_3_mod_32009_std.sing",
+    "mod_32027": "box/orderchart-20260903/systems/25_15_21_2_k2_part_3_mod_32027_std.sing"
+  },
+  "slope_count": 0,
+  "tagged_rows": [
+    {
+      "h_power": 0,
+      "monomial": [
+        3,
+        1
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        2,
+        2
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        2,
+        0
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        1,
+        3
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        1,
+        2
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        1,
+        1
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        0,
+        4
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        0,
+        3
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        0,
+        2
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        0,
+        1
+      ]
+    },
+    {
+      "h_power": 0,
+      "monomial": [
+        0,
+        0
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        3,
+        1
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        2,
+        2
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        1,
+        3
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        1,
+        2
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        1,
+        1
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        0,
+        4
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        0,
+        3
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        0,
+        2
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        0,
+        1
+      ]
+    },
+    {
+      "h_power": 2,
+      "monomial": [
+        0,
+        0
+      ]
+    }
+  ],
+  "top_face_factored": "y^2*(y-x)^3",
+  "tower_factor_order": [
+    "y-x",
+    "y-x",
+    "y-x",
+    "y",
+    "y"
+  ],
+  "tower_weights": {
+    "1": "-1",
+    "2": "-2",
+    "3": "-3",
+    "4": "-8/5",
+    "5": "-1/5"
+  },
+  "unknowns": 12,
+  "uprime": 3
+}

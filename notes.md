@@ -21025,3 +21025,10 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-03T23:13Z EVENT — `k16-t6-sol56` sealed (13KB): t = 6 full terminal ideal [1] mod three primes (corroboration; t = 6 already promoted via the cone route). → AUDIT delta 17(rrrr). Lanes live: 8.
 
 ## 2026-09-03T23:16Z EVENT — `g108-minor-classification-opus5` sealed (22KB): the D = 108 u_s = 2 row has exactly ONE admissible split (δ = 3, [1,1], p = π² − c, rigid tree); joint chart designed. → AUDIT delta 17(ssss). Launching `g108-joint-band-sol56` (the engine on the second u_s > 1 client). Lanes live: 9.
+
+## 2026-09-04T08:22Z EVENT — ten seals harvested after a coordinator pause (23:20Z–08:20Z, credits). HEADLINE: both (99,66) δ = 5/2 gates CONFIRM (GPT-5.5 kill gate: certificate 1 = (1/64)·stage8_G_local16_coord0, char-0 Singular replay; Opus clean-room engine: row-level agreement, no disagreement) → 17(qqqq) PROMOTED; NO-KELLER-PAIR-WITH-THE-(99,66)-SKELETON PROMOTED (conditional on chart necessity + classification exhaustiveness, both banked) → AUDIT 17(tttt). Also: D = 108 δ = 3 branch DEAD at preflight (incidence rows; PROVISIONAL, 17(aaaaa)); (25,15) row SATURATED-EMPTY in the general order chart (PROVISIONAL, 17(zzzz)); K16: Lemma SQUARE / Theorem TOPTAIL (17(wwww)) reduce (V0) to a SQUARE weighted-homogeneous resultant — the new uniform target; literal Proposal A refuted, corrected tail regular at t = 3..6 (17(vvvv)); chain gate CONFIRMED (17(xxxx)); cone Gröbner exhausted at t = 7 (17(yyyy)).
+
+## LIVE STATE (2026-09-04T08:22Z)
+- (99,66): CLOSED AT SKELETON LEVEL (PROMOTED, conditional on the two banked pillars). Next: chart-necessity dossier (paper-grade), then the (25,15) and D = 108 gates, then the 166-group u_s > 1 census with the engine.
+- K16 ray: (T) proved t = 1..7; uniform target = Res_w(R_1..R_{t−1}) ≠ 0 in A_t (Lemma SQUARE) or the all-t Fröberg/pure-power statement; fixed-t Gröbner exhausted.
+- Round 20260904T0000Z: launching late (~08:30Z); 5 blind lanes + 4 follow-up lanes.

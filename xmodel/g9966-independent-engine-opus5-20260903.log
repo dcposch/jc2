@@ -1,0 +1,27 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/g9966-independent-engine-opus5-20260903.md` (24.8 KB, `<!-- BODY-END -->` present); drivers in `box/g9966indep-20260903/`.
+
+## Verdict: CONFIRMED-INDEPENDENTLY
+
+I rebuilt the engine from the design prose only — `band_engine.py` was never opened — and both branches reproduce, at row level rather than just dimension level:
+
+| | charged | mine |
+|---|---|---|
+| δ=2 path | 6704 → 1065 → 1018 → 976 → 942 → DEAD | **identical** |
+| δ=2 residue | `stage4_J_d159_k35 = 6264`, 118 constants | **`J_d159_k35 = 6264`, 118 constants** |
+| δ=5/2 path | 6702 → 1063 → 1016 → 974 → 940 → 913 → 894 → 880 → 869 → DEAD | **identical** |
+| δ=5/2 residue | `stage8_G_local16_coord0 = 64` | **`G_local16_pi^0 = 64`** |
+| stage-8 pivots | `B1c_7_19…7_25` at 675, 576, 477, 378, 279, 180, 81 | **all seven identical** |
+
+Also reproduced from first principles: 7161/6600/5598/1002, outer D1 `225` raw with per-offset ranks `41,38,33,25,19,11,6,3` = 176, h3 66→21, K2c 561→106 low-q, the 7 h2-D1 rows at e-powers 291–295, the design's identities `c₂,₉=3u, c₃,₈=−3v, c₇,₄=c−3u²v, c₁₀,₁=−cv`, and `[x¹⁴⁵y¹⁷]J = 1764·A3₉₈,₀`. Singular replays: dim −1, basis 1, controls pass. Runtime 33 s / 26 MB RSS versus the charged engine's ~2 h / 279 MB — because after the D2 preblock `KF ≡ K2³` and `KG ≡ K2² + tK_B1K2` exactly through t-power 21.
+
+**Two things you should know.**
+
+The `(16,12)` calibration is a **GAP**, not a pass: printed pp. 207–209 extract as prose, but every display equation defining Moh's 17-coefficient p.208 ansatz is missing from the PDF text layer, and the charged reports give only its counts. I did not reconstruct it.
+
+The requested control has a false premise: **no two-point automorphism of degrees ≥ 6 exists** (Jung–van der Kulk forces a common leading linear form above degree 1) — a two-point pair with J=1 at those degrees *is* the counterexample under test. I built the nearest real object instead, a tame `(6,36)` automorphism with its single point inside the chart; its entire band family collapses to the one slot `[t⁴⁰w⁰]=1`, and a perturbed weight breaks it.
+
+Two relaxation controls also pin the mechanism: dropping the Jacobian band leaves δ=2 alive at 945, dropping the pole rows leaves it at 915 — the death is their interaction, and the four-stage gap between branches is that `t = s²` gives δ=5/2 a nonzero G-pole row only at even local powers.
+
+The chart-wide conclusion still rests on the same necessity and branch-exhaustiveness gates; re-implementation removes implementation fidelity as a doubt, nothing more.
+DIVERT path=xmodel/g9966-independent-engine-opus5-20260903.md status=CLEAN body_bytes=24831 body_sha256=be5b5758a789415f6ed46661c257ec14add697134c6cc85a63e977866c874d18

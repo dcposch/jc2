@@ -1,0 +1,16 @@
+ring R=32003,(x,y),wp(1,2);
+ideal I=x^3,y^2;
+ideal G=std(I);
+print("G"); G;
+print("LEAD"); lead(G);
+print("HILB_G_1");
+hilb(G,1);
+print("HILB_G_2");
+hilb(G,2);
+intvec w=1,2;
+print("WHILB_G_1");
+hilb(G,1,w);
+print("WHILB_G_2");
+hilb(G,2,w);
+print("VDIM"); vdim(G);
+quit;

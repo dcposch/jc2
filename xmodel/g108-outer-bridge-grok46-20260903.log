@@ -1,0 +1,36 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes from the lane receipt, then read the frozen inputs needed for the D = 108 outer-bridge derivation.I'll generate the hash manifest from the receipt and check it mechanically, then load the charged reports.The lane dir is read-only, so I'll write the manifest under `/tmp` and re-run the hash check.Hashes all matched. Next I’ll read the design, band engine, and the (99,66) outer-band scripts that the D = 108 derivation has to specialize.I’ll pull Moh Theorem 1.2 / Prop. 6.2, the (99,66) design table, and any existing D = 108 chart-design code so the formulas can be specialized exactly.Hashes are good. I’ll write a small exact script that generalizes the (99,66) outer-band formulas, checks it against the charged numbers, then specializes to (108,72) and (64,48).I’ll put the general (n, m, d₂, d₃) formulas in a foreground exact script, then run the (99,66) control and the (108,72) specialisation.I’ll write the sealed report and `constants.json` from the derived numbers, keeping the (99,66) replay as the control.**`OPEN[108-OUTER-WEIGHTS]` is `DERIVED`.** The D₂ weight cut and the D₁ boundary bands for the `(108,72)` row are exact linear rows under `A₂ = 4`, `A₁ = 2`, `weight = 4r + 6q`. All 11 charged-input hashes checked `OK` via an `awk` manifest from the lane receipt.
+
+## Outer ranks (fixed-top `A,B` chart)
+
+| | A2 | A3 | B1 | B2 | total |
+|---|---:|---:|---:|---:|---:|
+| ambient `S(D,36)` | 1962 | 3258 | 666 | 1962 | **7848** |
+| D₂ unit rows (`4r+6q < W₀`) | 1548 | 2808 | 408 | 1548 | **6312** |
+| D₂ remaining | 414 | 450 | 258 | 414 | **1536** |
+| D₁ raw slots | 32 | 66 | 10 | 32 | **140** |
+| D₁ `Q*` rank | 32 | 63 | 10 | 32 | **137** |
+
+New outer pivots: **6449** (`6312+137`). Occupied D₁ offsets are even (`W` is even): raw `56,40,25,13,5,1`, rank `53,40,25,13,5,1`.
+
+**`(99,66)` control.** The same formulae reproduce the charged numbers exactly: `5598+176=5774`, offsets `64,52,40,29,20,11,6,3` / ranks `41,38,33,25,19,11,6,3`, 21 `h3` variables, 7 `h2` D₁ rows.
+
+## Other derived engine constants
+
+- **General formula** (for the `n/d₂=3`, `m/d₂=2` tower): `W₀ = A₂(D−j)`, `E₀ = N D − j`, `W = A₂ r + W_w q` with `W_w = A₂ L₁ δ₁` from Moh (8).
+- **`h3` vmin:** `ceil((43−4r)/6)`, **7** variables; top `z⁷ w²`.
+- **`h2` D₁:** empty (`min E = 338 > 287`); D₂ support already implies D₁.
+- **Tower:** **8694** monic coefficients (`9 ⊂ 36 ⊂ 108/72`); `h2 = h3⁴ + C₂ h3² + C₃ h3 + C₄`; `F₁ = G₁ = 0`; 0 new outer pivots.
+- **Poles at `δ=3`:** first `−95/−63`, next `−92/−60`. Jacobian scalars `108, −72`.
+- **`(64,48)`:** `W = 4r+9q`, `A₁=A₂=4`, but `n/d₂=4` so the 3+2 `A,B` chart does not apply; `u_s=1` bridge trivial.
+
+## Residual
+
+```text
+DERIVED[108-OUTER-WEIGHTS]
+OPEN[H2-D2-FACE-TRUNCATION]   (π⁴−1)⁷  k=5,6,7 have r+q>36
+OPEN[EFFECTIVE-T2-T3-BRIDGE]  pre-existing; 0 linear rows
+```
+
+Report: `xmodel/g108-outer-bridge-grok46-20260903.md` (12.5KB, sealed). Engine JSON: `box/g108bridge-20260903/constants.json`. Replay: `python3 box/g108bridge-20260903/outer_weights.py` (~3 s).
+DIVERT path=xmodel/g108-outer-bridge-grok46-20260903.md status=CLEAN_SEALED body_bytes=12501 body_sha256=ac40a2784c6227000486bbd768bcb0d8b53b3d43f24f9eea9e643c333f0256fe

@@ -1,0 +1,27 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes from the lane receipt, then read the charged reports and drivers before any CAS work.I'll generate the hash manifest from the receipt and start reading the charged reports in parallel.Hashes match. Next I’ll read the cone/spine reports and the charged drivers so the CAS checks can be derived independently.I'll inspect the original subchart drivers and JSON records so I can write independent CAS checks that don't depend on uncharged loaders.I'll write the independent CAS drivers next, then run the unique-power, ansatz, record, and initial-form checks.The A2 replay is still running; I’ll wait on that bounded `timeout 600` job and inspect its output before starting the symbolic r=1 derivation.A2 replay passed at the chain-step bounds. Next I’ll run a targeted symbolic r=1 derivation of the five scalars and of A1/A2.I have the CAS results. Next I’ll write the sealed report from those checks, then stamp it.The tail-of-chain theorems survive a hostile re-proof, with one closed-form gap and one finite-t gap. Sealed report: `xmodel/k16-chain-gate-grok46-20260903.md` (body 10736 bytes). Drivers: `box/k16chaingate-20260903/`. Charged hashes: 16/16 `OK` from the receipt via `awk` + `sha256sum -c`. No `charge_basis` line (no exit-price claim).
+
+| Claim | Verdict |
+|---|---|
+| Lemma CHAIN, fibrewise over `A_t → K` | **CONFIRMED** |
+| Sub-chart = tail; head `b₄` unreachable by sub-charts | **CONFIRMED** |
+| Theorem Q-PLANE `(3.6)` for `t ≥ 6` | **CONFIRMED** |
+| Five high-band scalars; `A1=α_t`, `A2`, `A5=φ_t` units | **CONFIRMED** (symbolic in `t`) |
+| All eight closed-form units | **GAP** for `A3,A4,A6,A7,A8` |
+| `(3.6)` at `t=3,4,5` on charged records | **CONFIRMED**, `DIM=0` |
+| Lemma UNIQUE-POWER, bound `t ≥ m(1+r)` | **CONFIRMED** |
+| `HYP(1)..HYP(5)` / `A₂^{(1..5)}` | **CONFIRMED** |
+| Initial-form upgrade fails | **CONFIRMED** at `t=4,5` (`DIM=2,3`) |
+| `DIM=3,4` at `t=6,7` | **GAP** (no charged full records) |
+
+**CHAIN.** After a geometric point of `Spec A_t`, `v_i ∈ √(I+(v_1..v_{i-1}))` iterates to `√(I)=(v's)`, so `dim I=0`. Conversely a 0-dimensional weighted cone is `{0}`, so every ordering works. At split indices (`t=3s²-1`) the product-algebra statement holds iff it holds on both factors; inverting a zerodivisor (the `t=2` `α_t` fibre) is a fibrewise claim, not an `A_t` claim. A sub-chart is restriction to a coordinate subspace, so it is a tail step. `(C0)` is `b₄ ∈ √(I)`, equivalent by homogeneity to `I|_{b₄=1}=(1)` — an open chart. `wt(b₄)=1` makes `Sem({b₄})=ℕ`, so the sub-chart collapse does not kill eliminated variables; the `b₄`-axis only gives the tail `b₄ ∈ √(I+(q's,b₃))`.
+
+**Q-PLANE.** Re-derived in `t` with the charged engine: four high bands vanish after the triangular solve; `c1,c2` match the charged formulas; `T_{t,2t-1}|_S=α_t b₃²` and `T_{t,t+4}|_S=A₂ x³` with
+`N(A₁)` vanishing only at `t=2` and `N(A₂)` only at `t=1`. So `√(I_{t,+}|_S)=(q_{t-1,0},b₃)` for `t≥6`. Records: `t=3,4,5` all `DIM=0` (`q⁴` at `t=3,4`; `q³` at `t=5`). The five remaining closed-form scalars timed out at 600s; they are units on charged `fixed_r1.json` at `t=6..14`, which does not promote.
+
+**UNIQUE-POWER / HYP.** Weight arithmetic forces `q_{t-r,0}^m` uniquely for `t≥m(1+r)`; both bounds are attained and there are no extras above them. Symbolic `A₂^{(r)}` norms for `r=1..5` match Opus `(5.3)`; every positive integer root lies strictly below `t≥3r+3`. For `r≥2` the `b₁` condition is identically 0, so the `t=4r+1` `b₁` flags do not break the four-scalar collapse.
+
+**Initial forms.** Exact `std+dim` on charged full records: `t=4 → DIM=2`, `t=5 → DIM=3`. The degeneration is not a Groebner degeneration of `I_{t,+}`. That already kills the upgrade; `t=6,7` are not in the charged inputs.
+
+`(C0)` and `(8.1)` for all `t` remain **OPEN**. All CAS ran in the foreground under `timeout 600`; none is still running.
+DIVERT path=xmodel/k16-chain-gate-grok46-20260903.md status=CLEAN_SEALED body_bytes=10736 body_sha256=bdbf14bfa12c8c2daca4a31a5b95a96a2b447fc98c80df5eef30be5678aac047

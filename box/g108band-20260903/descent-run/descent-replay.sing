@@ -1,0 +1,20 @@
+// Conditional enlarged D=108 Proposition-6.3 descent diagnostic.
+// Exact field Q; dp order; c is localized only by T*c-1.
+ring R=0,(h0,h1,h2,h3,h4,h5,h6,h7,bp,bq,br,bs,c,T),dp;
+ideal Raw=-c,-42*br^2,6*bq^2 + 12*bq*br + 48*br^2,-6*bp*br*h1 + 42*br^2*h7 - 42*br*bs,48*bp*br*h0 + 36*br^2*h6,-15*bp^2*br + 30*br^2*h5,24*br^2*h4,18*br^2*h3,12*br^2*h2,6*br^2*h1,6*bp*br*h1 - 6*bq^2*h7 - 6*bq*br*h7 + 6*bq*bs + 48*br*bs,-48*bp*br*h0 + 6*bp*br*h1*h7 - 6*bq^2*h6 - 12*bq*br*h6 + 42*br*bs*h7,3*bp^2*bq + 18*bp^2*br - 42*bp*br*h0*h7 + 6*bp*br*h1*h6 + 6*bp*bs*h0 - 6*bq^2*h5 - 18*bq*br*h5 + 36*br*bs*h6,-3*bp^3*h1 + 15*bp^2*br*h7 - 6*bp^2*h0^2 - 36*bp*br*h0*h6 + 6*bp*br*h1*h5 - 6*bq^2*h4 - 24*bq*br*h4 + 30*br*bs*h5,-3*bp^3*h0 + 12*bp^2*br*h6 - 30*bp*br*h0*h5 + 6*bp*br*h1*h4 - 6*bq^2*h3 - 30*bq*br*h3 + 24*br*bs*h4,9*bp^2*br*h5 - 24*bp*br*h0*h4 + 6*bp*br*h1*h3 - 6*bq^2*h2 - 36*bq*br*h2 + 18*br*bs*h3,6*bp^2*br*h4 - 18*bp*br*h0*h3 + 6*bp*br*h1*h2 - 6*bq^2*h1 - 42*bq*br*h1 + 12*br*bs*h2,3*bp^2*br*h3 - 12*bp*br*h0*h2 + 6*bp*br*h1^2 - 6*bq^2*h0 - 48*bq*br*h0 + 6*br*bs*h1,-48*bp*br,48*bp*br,-3*bp^2*h1 + 42*bp*br*h7 - 6*bp*bs,6*bp^2*h0 + 36*bp*br*h6,3*bp^3 + 30*bp*br*h5,24*bp*br*h4,18*bp*br*h3,12*bp*br*h2 + 6*bq^2 + 48*bq*br;
+ideal Localized=-c,-42*br^2,6*bq^2 + 12*bq*br + 48*br^2,-6*bp*br*h1 + 42*br^2*h7 - 42*br*bs,48*bp*br*h0 + 36*br^2*h6,-15*bp^2*br + 30*br^2*h5,24*br^2*h4,18*br^2*h3,12*br^2*h2,6*br^2*h1,6*bp*br*h1 - 6*bq^2*h7 - 6*bq*br*h7 + 6*bq*bs + 48*br*bs,-48*bp*br*h0 + 6*bp*br*h1*h7 - 6*bq^2*h6 - 12*bq*br*h6 + 42*br*bs*h7,3*bp^2*bq + 18*bp^2*br - 42*bp*br*h0*h7 + 6*bp*br*h1*h6 + 6*bp*bs*h0 - 6*bq^2*h5 - 18*bq*br*h5 + 36*br*bs*h6,-3*bp^3*h1 + 15*bp^2*br*h7 - 6*bp^2*h0^2 - 36*bp*br*h0*h6 + 6*bp*br*h1*h5 - 6*bq^2*h4 - 24*bq*br*h4 + 30*br*bs*h5,-3*bp^3*h0 + 12*bp^2*br*h6 - 30*bp*br*h0*h5 + 6*bp*br*h1*h4 - 6*bq^2*h3 - 30*bq*br*h3 + 24*br*bs*h4,9*bp^2*br*h5 - 24*bp*br*h0*h4 + 6*bp*br*h1*h3 - 6*bq^2*h2 - 36*bq*br*h2 + 18*br*bs*h3,6*bp^2*br*h4 - 18*bp*br*h0*h3 + 6*bp*br*h1*h2 - 6*bq^2*h1 - 42*bq*br*h1 + 12*br*bs*h2,3*bp^2*br*h3 - 12*bp*br*h0*h2 + 6*bp*br*h1^2 - 6*bq^2*h0 - 48*bq*br*h0 + 6*br*bs*h1,-48*bp*br,48*bp*br,-3*bp^2*h1 + 42*bp*br*h7 - 6*bp*bs,6*bp^2*h0 + 36*bp*br*h6,3*bp^3 + 30*bp*br*h5,24*bp*br*h4,18*bp*br*h3,12*bp*br*h2 + 6*bq^2 + 48*bq*br,T*c - 1;
+ideal RawStd=std(Raw);
+ideal LocalizedStd=std(Localized);
+print("BEGIN_RAW_DIM"); print(dim(RawStd)); print("END_RAW_DIM");
+print("BEGIN_LOCALIZED_DIM"); print(dim(LocalizedStd)); print("END_LOCALIZED_DIM");
+print("BEGIN_LOCALIZED_GB"); print(LocalizedStd); print("END_LOCALIZED_GB");
+print("BEGIN_RAW_NF"); print(reduce(1,RawStd)); print("END_RAW_NF");
+print("BEGIN_LOCALIZED_NF"); print(reduce(1,LocalizedStd)); print("END_LOCALIZED_NF");
+ideal EmptyControl=c,T*c-1;
+ideal PointControl=c-1,T*c-1;
+print("BEGIN_EMPTY_NF"); print(reduce(1,std(EmptyControl))); print("END_EMPTY_NF");
+print("BEGIN_POINT_NF"); print(reduce(1,std(PointControl))); print("END_POINT_NF");
+matrix UnitLift=lift(Localized,ideal(1));
+print("BEGIN_UNIT_LIFT"); print(UnitLift); print("END_UNIT_LIFT");
+print("BEGIN_LIFT_CHECK"); print(matrix(Localized)*UnitLift); print("END_LIFT_CHECK");
+quit;

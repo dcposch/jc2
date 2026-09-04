@@ -1,0 +1,19 @@
+ring W=(0,yy),(b4,q2_0,q3_0,q4_0,b3),wp(1,2,3,4,6);
+minpoly=1452*yy^2 - 792*yy + 102;
+int tt=5; int k; int NN; int tm; int mm;
+option(redSB);
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/rows_t5_exact.sing"));
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/restop_t5_exact.sing"));
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/reslow_t5_exact.sing"));
+ideal RStop1=subst(RStop,b4,1); ideal RSlow1=subst(RSlow,b4,1); ideal TT1=subst(TT,b4,1);
+ideal RStop0=subst(RStop,b4,0); ideal RSlow0=subst(RSlow,b4,0); ideal TT0=subst(TT,b4,0);
+ring Wb=(0,yy),(q2_0,q3_0,q4_0,b3),dp;
+minpoly=1452*yy^2 - 792*yy + 102;
+ideal J1=imap(W,TT1); ideal J0=imap(W,TT0); ideal Jtop=0; ideal Jtop0=0; mm=0;
+for (k=tt; k<=2*tt-1; k++) { mm++; Jtop[mm]=J1[k]; Jtop0[mm]=J0[k]; }
+option(redSB);
+tm=timer; ideal G=std(Jtop0);
+print("E3 unit="+string(reduce(1,G)==0)+" dim="+string(dim(G))+" size="+string(size(G))+" time="+string(timer-tm));
+if (size(G)<=12) { print("LEAD "+string(lead(G))); }
+print("STAGEB_DONE E3");
+quit;
