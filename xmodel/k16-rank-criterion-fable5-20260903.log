@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Privately: nothing further depends on a pending result. The report is written and internally consistent, the manifest verifies, no job of mine is running, and the memory note is saved. No more requests are needed; here is the recap.
+
+**Verdict: PARTIAL.** Criterion RANK is not proved uniformly in t. The report `xmodel/k16-rank-criterion-fable5-20260903.md` (35 KB, sealed with the standalone BODY-END marker) records what was proved, what was verified per index, and the exact residual.
+
+**Proved uniformly (desk algebra, all t ≥ 3):**
+- **Theorem FITT.** The tail hsop statement is equivalent to the 0-th Fitting ideal F_t = I₂(N) + (W_r) + (X_rs) of M_t/(G)M_t being m-primary in P_t, and V(F_t) = V(I₂(N) + (W_r)). On a rank-1 point with kernel (1:β), W_r = B_r²·T_{t,2t−1}(p,β), so clause (ii) is exactly "the top row is a nonzerodivisor on S_t/(G₁..G_{t−1})".
+- **Theorem EN-CURVE.** Given dim 0, I₂(N) has maximal grade t−2, so the rank-1 curve is a Cohen–Macaulay Eagon–Northcott scheme with no embedded components. I derived the closed form of its Hilbert numerator, [Π(1−s^{2t+2+r}) − s^{t+1}Π(1−s^{t+1+r})]/(1−s^{t+1}), verified symbolically for t=3..15 and against Singular at t=3,4,5. Its weighted degree is d_Γ(t) = [C(3t+1,t−1) − C(2t,t−1)]/(t+1), and L_t = 2·C(2t,t−1) + (2t+2)·d_Γ(t) is an identity: the tail length splits into a b₃-axis part and a curve part. Clause (ii) is therefore one scalar non-vanishing per weighted point of the curve, d_Γ(t) in all.
+- **Theorem DOMINANT-LEADER.** Every B_r, C_r has full support, so in the prompt order all leaders are b₄-powers; the "closed form of leading terms making a subset an sop" route cannot work.
+
+**Verified per index.** Both clauses hold exactly at t=3,4 and by properness at t=5,6. Clause (i) holds at t=7 and, new, at t=8 (modular, promoted; t=8 carries a detector-only integrality caveat). At every tested t=2..8 the b₃-linear parts (B_r) alone form an hsop with length exactly C(2t,t−1), and the C_r alone with length C(3t+1,t−1) = L_t/2 (t ≤ 7). The t=2 control discriminates as required: a₀=0 at y=1/5 makes N ≡ 0, while y=2/5 gives (W₁) = (b₄¹⁴). At t=3,4 the non-sop subsets of {B_r,C_r} are exactly those failing a coordinate-axis divisibility test.
+
+**Not obtained.** Closed forms of b_r, c_r (the banked obstruction stands), any uniform proof of either clause, and the t=5 subset/primdec, t=6/7/8 curve and exact t=5/6 runs, which I killed at about 1470 s of wall time and typed INCONCLUSIVE_TIMEOUT. Singular's block-buffered stdout discarded those jobs' unflushed lines, which I noted in the report and in a memory file alongside the driver-naming bug (a coefficient poly named `b3` shadowed the ring variable; every reported run postdates the fix).
+
+Artifacts: `box/k16rank-20260903/` with a 175-file `artifacts.sha256` manifest that verifies.
+DIVERT path=xmodel/k16-rank-criterion-fable5-20260903.md status=CLEAN body_bytes=35148 body_sha256=7cfa230c0c9ec1b4124b9581b1c461cb19ef004e8a36c2820e7efece0fb185c5
