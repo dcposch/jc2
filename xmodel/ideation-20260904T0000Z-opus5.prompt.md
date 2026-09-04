@@ -1,0 +1,57 @@
+# Blind ideation submission — round 20260904T0000Z (fired late, 08:30Z) — Opus 5
+
+You are one blind submitter in the campaign's full-spectrum ideation round
+20260904T0000Z (COORDINATION.md, full-spectrum section). The round was
+scheduled at 00:00Z and fires at 08:30Z because the coordinator was paused;
+the packet carries an ADDENDUM (§4) with the ten seals of the night — the
+(99,66) skeleton verdict is now PROMOTED, the D = 108 branch dies at preflight
+on incidence rows, the (25,15) row is order-chart-empty, and the K16 uniform
+target is a square weighted-homogeneous resultant (Lemma SQUARE). Read the
+sealed packet (hash below) FIRST, then the banked reports as needed
+(xmodel/, AUDIT.md — deltas 17(tttt)–(ccccc) are the freshest —
+APPROACHES.md, notes.md (the newest LIVE STATE / EVENT blocks are binding),
+PROGRESS.md; the freshest reports: g9966-delta52-kill-gate-gpt55,
+g9966-independent-engine-opus5, g108-joint-band-sol56, g108-outer-bridge-
+grok46, k16-toptail-quadratics-fable5, k16-hilbert-regseq-sol56, k16-chain-
+gate-grok46, order-chart-general-gpt55, all -20260903). Do NOT read any
+ideation-20260904T0000Z-* submission (the coordinator's is committed but
+blind); do not read the in-progress reports of running lanes (check a
+lane's .run.v2 for final_status before opening its .md: g108-delta3-kill-
+gate-gpt55, g9966-chart-necessity-opus5, k16-square-resultant-fable5,
+row2515-order-gate-sol56 are running); do not edit canonical ledgers; do
+not inspect jc2-lean.
+The round's questions are Q1–Q4 as stated in the packet AND revised in §4:
+challenge them, reframe them, or answer them. You are asked for boldness,
+creativity and directness. The campaign has now (a) a promoted skeleton
+closure of the one published open case below 100 and (b) a ray of
+skeletons where the uniform statement is a single resultant per t —
+say plainly what the ALL-DEGREE program should be now: what is the
+theorem that (99,66), D = 108 and (25,15) are instances of, and is the
+K = 16 ray's uniform statement provable by a structural (non-Gröbner)
+argument — and if the coordinator's framing is wrong, where.
+Deliver ALL items of the submission contract in the packet §3
+(disposition vector; answers to Q1–Q4 with typed claims, bounded
+quantities and cheapest tests; three idea cards; the single first lane;
+continue/redesign/stop per running lane — receipts only; systems check;
+OPENs raised with the collision scan ops/open_collision.py). Desk-scale
+CAS only (< 10 min, < 4 GB); the drivers under box/*-20260903/ may be run;
+the Moh PDF is at refs/moh1983_jram340_configurations_of_roots.pdf (page N
+= PDF page N−139; read images via pdftoppm); Xu is at refs/xu2016_*.pdf.
+Report: xmodel/ideation-20260904T0000Z-opus5.md
+Seal-at-completion (standard <!-- BODY-END --> marker; the skeleton you
+write first must NOT contain it; append sections in bounded writes);
+target 25-45KB; 150 minutes.
+charged_input=xmodel/ideation-20260904T0000Z-packet.md
+charged_input=xmodel/ideation-20260903T1200Z-synthesis.md
+charged_input=FALLACY-v2.md
+charged_input=COORDINATION.md
+
+Your inputs are frozen read-only copies in {{LANE_INPUTS}};
+verify these SHA-256 hashes first, MECHANICALLY and without retyping any digit: the lane receipt `xmodel/ideation-20260904T0000Z-opus5.run.v2` (readable in your sandbox) carries `charged_input_<i>_sha256=` and `charged_input_<i>_basename=` lines that reproduce this block; generate the manifest from it with awk and run `sha256sum -c`; stop only on a real content mismatch, not on a transcription slip of your own — recheck once before stopping:
+
+```text
+ba345ef122050b2b7fd6f5ddbfe9db44d71b594f0e5138d691741dd1cc641980  {{LANE_INPUTS}}/ideation-20260904T0000Z-packet.md
+ddbb5770e3b143f946a6d6fc9586362c6e209d45ccf814454602a95fd21158a6  {{LANE_INPUTS}}/ideation-20260903T1200Z-synthesis.md
+e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  {{LANE_INPUTS}}/FALLACY-v2.md
+c66b70e460a609ff5210fd16015fc7b2ff18dda26f68597a0d817c5b9aeb19d5  {{LANE_INPUTS}}/COORDINATION.md
+```
