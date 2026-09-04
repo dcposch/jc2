@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/g9966-chart-necessity-opus5-20260903.md` (body 51,805 bytes, SHA-256 `12994be1…`, basis `ce00e907…`, `seal.py verify` → PASS).
+
+**Custody.** Manifest generated with `awk` from the receipt's indexed `charged_input_<i>_sha256`/`_basename` lines and checked with `sha256sum -c`: **11/11 OK**, no digit retyped.
+
+**What the dossier establishes.** Every row family is now traced to a printed statement, and several charged assertions are re-derived here independently rather than cited:
+
+- **Prop 1.2** — the chart is a *bijection* `k^7161 ↔ {(F,G) : deg = deg_y = (99,66), monic, in F = P⁹, in G = P⁶}`, with the degree bounds on all seven blocks proved from the approximate-root property plus division with remainder (so "no lost solutions" is a theorem, not a count). `7161 = 5049 + 2277 − 165` recomputed.
+- **Gauges** — the group is listed and the orbit representative derived; the torus normalisation `a = 1` and the Jacobian normalisation `J₀ = 1` turn out to be *the same single gauge* (the residual one-parameter group scales `J₀` by `s^-163`).
+- **Recomputed from scratch, all matching**: `h3: 66 = 43+2+21`, `h2: 561 = 384+8+169` with the eight face sites; outer `D₂` `6600 → 5598 → 1002`; outer `D₁` `225` raw rows of exact ℚ-rank `176` (`51/108/15/51`; `44/73/15/44`); the `h2` `D₁` band `7/7` at e-powers `291:1,292:1,293:1,294:2,295:2`; the three face-ODE identities including the constant `k = 5` in design (2.5).
+- **§6 pivots** — all 66 (δ=5/2) and 31 of 35 (δ=2) joint `Q*` pivot coefficients re-derived in **closed form**, `|coeff| = 9(99 − 3n − 11i)`, from the factored `KJ`; never zero because 11 ∤ 3n for 1 ≤ n ≤ 8. So "every pivot divides by a nonzero rational constant" is now proved, not audited.
+
+**Two new gaps found** (both are the point of §9):
+
+- **N3 `GAP[TWO-CENTRE-NORMALISATION]`** — the chart sets the major `D₂` centre constant `w₀` and the minor centre constant `a₀` both to 0, but the affine gauge supplies one constant `y`-translation which moves them *together*; it normalises only `8w₀ + 3a₀ = −[y¹⁰]H`. Two consistency probes show neither vanishing follows from the order data. This is a *necessity* gap (the chart may cover only `a₀ = w₀`), with a one-dimension remedy.
+- **N4 `GAP[D1-RECENTRING-SCALE]`** — the `e¹²` coefficient fixed to 1. I proved all `D₁` ranks are scale-free (`M(α) = diag(α^-j) M(1) diag(α^q)`), so what remains missing is narrow.
+
+Plus the inherited ones: Moh's printed (1)–(13) leave **8** V-assignments at (99,66), not the single p.202 row; and Xu §8(i)'s one-sentence elimination of δ ∈ {4/3, 3/2, 5/3, 7/3} plus the unproved `den(δ) ≤ u_s`.
+
+**Two things to flag.** The report came in at 51.8 KB against the 25–45 KB target — I made five condensation passes, and further cutting would have removed mandated content (all ten components carry substantive material; §6's 66-coefficient list and §9's four gap statements are explicitly required). Second, the split classification is stated as **Lemma 7.1 with (A) unsplit / (B) δ=2 / (C) δ=5/2**, and case (A) is explicitly *not addressed* here — the dossier lists it as a dependency (`17(tt)`), not as something it closes.
+
+Artifacts: `box/g9966necessity-20260903/` — five drivers with their outputs and `artifacts.sha256` (all entries pass `-c`). No ledger, `jc2-lean`, `ideation-*`, or in-progress lane report was read or edited.
+DIVERT path=xmodel/g9966-chart-necessity-opus5-20260903.md status=CLEAN_SEALED body_bytes=51805 body_sha256=12994be18a3c1564f5536a8eb0407aca89a83152784f2d98ebb52f4ae191e034
