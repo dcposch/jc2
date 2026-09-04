@@ -1,0 +1,44 @@
+# Blind ideation submission — round 20260904T1200Z — Fable 5
+
+You are one blind submitter in the campaign's full-spectrum ideation round
+20260904T1200Z (COORDINATION.md, full-spectrum section). Read the sealed
+packet (hash below) FIRST, then the banked reports as needed (xmodel/,
+AUDIT.md — deltas 17(tttt)–(ooooo) are the freshest — APPROACHES.md, notes.md
+(newest LIVE STATE/EVENT binding), PROGRESS.md; freshest reports:
+g9966-chart-necessity-opus5, g9966-gauge-gaps-grok46, two-place-obstruction-
+core-sol56, minor-residue-formula-opus5, minor-empty-disc-sol56,
+k16-dep-locus-fable5, k16-square-tail-stdhilb-gpt55, order-basis-full-gpt55,
+g108-delta3-kill-gate-gpt55, g108-nosplit-descent-grok46, row2515-order-gate-
+sol56, all -20260903, and the 20260904T0000Z synthesis). Do NOT read any
+ideation-20260904T1200Z-* submission (the coordinator's is committed but
+blind); do not read the in-progress report of the running lane
+k16-hsop-length-allt-opus5 (check its .run.v2 for final_status before opening
+its .md); do not edit canonical ledgers; do not inspect jc2-lean.
+The headline: BOTH halves of the program have exhausted foreground
+COMPUTATION and now need STRUCTURAL theorems (or a better solver); the
+disc(p_red) theorem route for the (H1) flagship is REFUTED. Answer Q1–Q4 of
+the packet with boldness and directness; if the coordinator's framing is
+wrong, say where. Deliver ALL items of the submission contract §3 (disposition
+vector; Q1–Q4 with typed claims, bounded quantities, cheapest tests; three
+idea cards; the single first lane; continue/redesign/stop for the running lane
+— receipt only; one systems upgrade; OPENs with the collision scan
+ops/open_collision.py). Desk-scale CAS only (< 10 min, < 4 GB); drivers under
+box/*-20260903/ may be run; the Moh PDF is refs/moh1983_jram340_configurations_
+of_roots.pdf (page N = PDF page N−139; pdftoppm for images); Xu is refs/xu2016_*.pdf.
+Report: xmodel/ideation-20260904T1200Z-fable5.md
+Seal-at-completion (standard <!-- BODY-END --> marker; the skeleton you write
+first must NOT contain it; append in bounded writes); target 25-45KB; 150 minutes.
+charged_input=xmodel/ideation-20260904T1200Z-packet.md
+charged_input=xmodel/ideation-20260904T0000Z-synthesis.md
+charged_input=FALLACY-v2.md
+charged_input=COORDINATION.md
+
+Your inputs are frozen read-only copies in {{LANE_INPUTS}};
+verify these SHA-256 hashes first, MECHANICALLY and without retyping any digit: the lane receipt `xmodel/ideation-20260904T1200Z-fable5.run.v2` (readable in your sandbox) carries `charged_input_<i>_sha256=` and `charged_input_<i>_basename=` lines that reproduce this block; generate the manifest from it with awk and run `sha256sum -c`; stop only on a real content mismatch, not on a transcription slip of your own — recheck once before stopping:
+
+```text
+1ee8e07b8da6a786157d08c076e12f7d065c7cb09d436d4ff85a3a7a0faef7a7  {{LANE_INPUTS}}/ideation-20260904T1200Z-packet.md
+aa9054f24a3845d206f0f66908b042b90b72158bc74e25feb9b7deed0578fcc3  {{LANE_INPUTS}}/ideation-20260904T0000Z-synthesis.md
+e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  {{LANE_INPUTS}}/FALLACY-v2.md
+c66b70e460a609ff5210fd16015fc7b2ff18dda26f68597a0d817c5b9aeb19d5  {{LANE_INPUTS}}/COORDINATION.md
+```
