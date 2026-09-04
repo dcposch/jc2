@@ -21034,3 +21034,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - Round 20260904T0000Z: launching late (~08:30Z); 5 blind lanes + 4 follow-up lanes.
 
 ## 2026-09-04T08:40Z SYSTEMS — ops/open_collision.py corpus guard (GPT-5.5 round submission §11): same-round ideation submissions and unsealed lane reports (receipt without final_status) are excluded from the collision corpus automatically. Round lanes already running used the old scanner; the synthesis will discount any same-round candidate.
+
+## 2026-09-04T08:44Z EVENT — `g108-delta3-kill-gate-gpt55` sealed: CONFIRMED; the common-h₃ incidence block is sourced NECESSARY (Xu Cor 7.5: one p(π)); 17(aaaaa) → PROMOTED as 17(ddddd). D = 108 now hinges only on the no-split descent (launching `g108-nosplit-descent-grok46`). Round: gpt55 and grok46 sealed; fable5, sol56, opus5 running.

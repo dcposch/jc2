@@ -1,0 +1,210 @@
+Proof. δ1 + M1 = 0. As
+                                   dk−1                    dk−1
+                  δk + Mk = δk−1        − qk + Mk = δk−1 (      − 1) + δk−1 + Mk−1
+                                    dk                      dk
+by induction, we have
+                                                   dk−1                    d1
+                             δk + Mk = δk−1 (           − 1) + · · · + δ1 ( − 1)
+                                                    dk                     d2
+(i) is proved. Now
+                                           dk−1                    d1
+                        δk + Mk − δ0 = δk−1 (   − 1) + · · · + δ1 ( − 1) − δ0
+                                            dk                     d2
+is a standard expansion by the δ-sequence, by [Xu14] Lemma 2.3, (ii) is proved.                            
+7.2. One kind of special ordinary differential equations of polynomials. After analyzing
+the proof of the second part of [Moh83] Proposition A.2, we have
+Lemma 7.2. Let deg p(π) = m and deg q(π) = (l−1)m+1. Suppose p(π), q(π) satisfy the following
+equation
+                               D(m, m(l − 1), p(π), q(π)) = cp(π)l
+                           c
+where c ∈ K∗ . Then q(π) = m (π − a)p(π)l−1 for some a ∈ K.
+7.3. Quasi-approximate roots of a polynomial curve. Let (f, g) be a Jacobian pair, monic in
+y and f has two points at infinity. Let deg f = m and deg g = n. Consider y as a parameter, (f, g)
+defines a polynomial curve. From [Moh83], there are effective index s > 2 and quasi-approximate
+roots Ti (f, g) ∈ K[f, g] with T0 = g, T1 = f and deg Ti = −µi for i = 0, . . . , s.
+   Let di = gcd(−µ0 , . . . , −µi−1 ) for i = 1, . . . , s + 1. Then (−µ0 /ds+1 , . . . , −µs /ds+1 ) is a δ-
+sequence. Let the multiplicity of the principal minor roots of f is m udss , here us < vs = ds − us .
+Then the multiplicities of the principal minor roots of T0 , . . . , Ts−1 , Ts are
+                                      us              us            us
+                                −µ0 , . . . , −µs−1 , (−µs − 2) + 1
+                                      ds              ds             ds
+respectively.
+Proposition 7.3. Let σ1 be the π-root of order 1 for the principal minor roots of f . Let
+
+                                                             vs −us
+                                                                    µ0
+                                    T0 (σ1 ) = T0,σ1 (π)t      ds        + ···
+                                            ..
+                                             .
+                                                                vs −us
+                                                                       µs−1
+                                 Ts−1 (σ1 ) = Ts−1,σ1 (π)t        ds          + ···
+                                                             vs −us
+                                                                    (µs +2)
+                                    Ts (σ1 ) = Ts,σ1 (π)t      ds             + ···
+Then T0,σ1 (π), . . . , Ts,σ1 (π) are powers of a common linear polynomial.
+Proof. Using the proof of [Moh83] Proposition 4.6 verbatim, we get
+                                             −µ0                                      −µs−1
+                        T0,σ1 (π) = C0 p(π) ds , . . . , Ts−1,σ1 (π) = Cs−1 p(π)        ds
+
+
+where deg p(π) = us .
+  Finally by Lemma 7.2, we have
+                                                              −µs −2
+                                     Ts,σ1 (π) = Cs p(π)       ds      (π − a)
+where a ∈ K, Ci ∈ K∗ for i = 0, . . . , s.
+                                                        10
+   We claim p(π) = (π − a)us . If not, let π = b be a root of p(π) and b 6= a. We extend σ1 |π=b to a
+final minor π-root σ0 with split order δ0 .
+   First we point out that for any 1 < δ < δ0 and π-root σ = σ0 |<δ + πtδ we have that for some
+λ < 0,
+                                        ord T0 (σ) = (−µ0 )λ
+                                                  ..
+                                                   .
+                                     ord Ts−1 (σ) = (−µs−1 )λ
+                                        ord Ts (σ) = (−µs − 2)λ
+Using the proof of [Moh83] Proposition 4.2 verbatim, we conclude that σ is a distribution detector
+for T0 (y), . . . , Ts (y).
+   Hence we have
+
+
+                                      T0 (σ0 ) = T0,σ0 (π)t0 + · · ·
+                                              ..
+                                               .
+                                   Ts−1 (σ0 ) = Ts−1,σ0 (π)t0 + · · ·
+                                      Ts (σ0 ) = Ts,σ0 (π)t0 + · · ·
+where
+                                                          −µ0
+                                       deg T0,σ0 (π) =        r
+                                                           ds
+                                                     ..
+                                                      .
+                                                       −µs−1
+                                     deg Ts−1,σ0 (π) =       r
+                                                        ds
+                                                       −µs − 2
+                                           deg Ts,σ0 =         r
+                                                         ds
+for some positive integer r and r satisfies 1 ≤ r ≤ us .
+   We consider polynomial curve (fσ0 (π), gσ0 (π)) with π as the parameter. Then {Ti,σ0 (π)}0≤i≤s−1
+are quasi-approximate roots of the curve.
+                         Ts,σ0 (π) = Ts (fσ0 (π), gσ0 (π)) ∈ K[fσ0 (π), gσ0 (π)]
+                      −µs−1
+As gcd( −µ
+         ds r, . . . , ds r) = r and r divides deg Ts,σ0 (π) =
+           0                                                   −µs −2
+                                                                ds r, we conclude that
+                                                                                       −µs −2
+                                                                                        ds r is in
+                      −µ0     −µs−1
+the semigroup Γ( ds r, . . . , ds r).
+  On the other hand,
+                          −µs − 2 = −µs + Ms − n ∈
+                                                 / Γ(−µ0 , . . . , −µs−1 )
+by Lemma 7.1. This is a contradiction.                                                             
+Remark 7.4. By [ML14] the coefficient of t in any root α of f (y) is zero. We do not find this
+information can simplify the proof that Ts is not split at order 1.
+Corollary 7.5. Suppose us > 1 and let σ be a π−root of f for the principle minor roots. If order
+     vs + 1
+δσ <        then σ can not split to us different roots.
+     us + 1
+                                                   11
+Proof. Suppose σ split to us different roots. For simplify we denote δσ = δ. First from last
+Proposition we know δ > 1. We can write
+                                                            m       m
+                                 f (σ) = a0 p(π)m/ds t−vs ds +us ds δ + · · ·
+here
+                                      p(π) = (π − c1 ) · · · (π − cus )
+with
+                                              ci 6= cj if i 6= j
+From above Proposition, we know that δ > 1 and we can write
+                                                            n       n
+                                 g(σ) = a1 p(π)n/ds t−vs ds +us ds δ + · · ·
+                                                            −µs +n−2
+                                                                     +us −µsd+n−2 δ
+                     (Ts )f (σ) = bp(π)(−µs +n−2)/ds t−vs      ds            s        + ···
+                                             −vs −µsd+n−2 −1+(us −µsd+n−2 +1)δ
+                         Ts (σ) = as q(π)t           s               s           + ···
+here deg q(π) = us −µsd+n−2
+                        s
+                            + 1. By [Moh83] [Proposition 4.1], we have
+                                  ∂(Ts (σ), g(σ))
+(7.1)                                             = −J·(Ts )f (σ)t−2+δ
+                                     ∂(t, π)
+With the above information, and note that
+                −µs + n − 2           −µs + n − 2
+           −vs              − 1 + (us             + 1)δ < −vs − 1 + (us + 1)δ < 0,
+                     ds                   ds
+so every root of p(π) is a root of q(π) and p(π) has no multi roots, we have q(π) = p(π)q1 (π). We
+can use same reason to q1 (π) and on. Finally we have
+                                                      −µs +n−2
+                                       q(π) = p(π)       ds      (π − c)
+for some c. the above equation 7.1 can be simplified to
+                         ∂
+                               (p(π)t−vs +us , (π − c)t−1+δ ) = Cp(π)t−vs +us −2+δ .
+                       ∂(t, π)
+But this equation can not hold and it is a contradiction.                                              
+
+                    8. Case (99, 66) and split of principal minor roots
+  Moh writes in [Moh83] page 209 on the principal minor roots, “Namely, there is an [sic] unique
+π-root σ of g(y) of the following form
+                                      σ = a−1 t−1 + a0 + a1 t + πt2
+with
+                        g(σ) = gπ (σ)t−18 + · · ·     [sic, gπ (σ) should be gσ (π)]
+The polynomial gσ (π) is either a power of a linear polynomial or the 9-th power of a cubic polynomial
+with precisely two roots.”
+  For a long time, we try to give judgement for this statement. To do so, there are three claims
+have to be proven.
+     (i) The principal minor roots do not split except at π-root order δ = 2.
+    (ii) gσ (π) can not have three roots when δ = 2.
+   (iii) Let δ = 2 and let gσ (π) = c(π − b1 )18 (π − b2 )9 . Roots in the disc with the center σ|π=b1 do
+         not split before final.
+                                                      12
+We can not find materials to support these claims in his paper. We sent Moh an email to point
+out the possible gaps. He replied with, “I will make an investigation of the issue and reply to your
+e-mail as soon as possible.” on Jan. 06, 2016.
+  We show that (ii) and (iii) are true, but there is one exception case for (i) open.
+  Our tools are two constrains: one is that the denominator of order δ ≤ us = 3; another is
+equation 7.1.
+  From [Moh83] page 202, we have data
+(8.1)    n = 99,    m = 66,     M2 = 77,     M3 = 97,      V3 = 8,       V2 = 8,   δ2 = 1/3,   δ1 = 4/9.
+Let σ be π-root of the principal minor roots. From data 8.1 we get that −µ2 = 55 and −µ3 = 145.
+We have
+                                    f (σ) = p(π)6 t6(−8+3δ) + · · ·
+                                       g(σ) = p(π)9 t9(−8+3δ) + · · ·
+                                      T2 (σ) = p(π)5 t5(−8+3δ) + · · ·
+                                   (T3 )f (σ) = p(π)22 t22(−8+3δ) + · · ·
+                                 T3 (σ) = q(π)t13(−8+3δ)−1+δ + · · ·
+here deg p(π) = u3 = 3 and deg q(π) = 13 ∗ 3 + 1.
+  (i) By the constrain of the denominator of δ, if δ splits, it must split to 2 or 3 roots.
+  When δ 6= 2 and δ 6= 25 . From equation 7.1, we can step by step deduce
+                                           q(π) = p(π)13 (π − c)
+and the equation 7.1 can not hold for it.
+   When δ = 2. As there is equation
+                  ∂
+(8.2)                   (π(π + 3a)2 (π − 2a)t−1 , π 2 (π + 3a)t−2 ) = 5π 4 (π + 3a)2 t−4 ,
+                ∂(t, π)
+The equation 7.1 produces Moh’s 2 roots split case.
+  When δ = 52 . From equation 7.1, we can deduce
+                                           q(π) = p(π)10 q1 (π)
+here deg q1 (π) = 3 ∗ 3 + 1. The equation 7.1 gives us
+                                  ∂                     1               3
+                                        (q1 (π), p(π)t− 2 ) = −p(π)4 t− 2 .
+                                ∂(t, π)
+But this can hold for any p(π) and q1 (π) = −2 p(π)3 dx. So there is possible p(π) = π(π 2 − c).
+                                                     R
+
+Thus this case is open and it suggests case (99, 66) is open.
+  (ii) This case is proved by Corollary 7.5.
+  (iii) After π-root extends to δ > 2 and δ < 3 along σ|π=b1 , we have
+                                      f (σ) = p(π)6 t12(−3+δ) + · · ·
+                                       g(σ) = p(π)9 t18(−3+δ) + · · ·
+                                      T2 (σ) = p(π)5 t10(−3+δ) + · · ·
+                                      T3 (σ) = q(π)t25(−3+δ) + · · ·
+                                           ∂
+here deg p(π) = 2, deg q(π) = 25 and            (q(π)t25(−3+δ) , p(π)9 t18(−3+δ) ) = 0.
+                                        ∂(t, π)
+   As gcd(12, 18, 10, 25) = 1, p(π) and q(π) are powers of a common linear factor (π − c), i.e. π-root
+is not split at this order δ. The claim is proved.
+                                                     13
+

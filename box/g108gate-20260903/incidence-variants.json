@@ -1,0 +1,60 @@
+{
+  "type": "D108-HOSTILE-INCIDENCE-VARIANTS",
+  "variants": [
+    {
+      "h3_coordinates": 7,
+      "notes": [
+        "b is excluded from Q-star pivots",
+        "this weakens only the translation gauge; it still uses one common h3 polynomial"
+      ],
+      "qstar_pivots": 7,
+      "residual": {
+        "minor_n6_pi0": "-jet2**2",
+        "minor_n7_pi0": "2*jet1**2*jet2",
+        "minor_n7_pi1": "-2*jet2",
+        "minor_n8_pi0": "-c - jet1**4 + 9*jet1*jet2**2",
+        "minor_n8_pi1": "b + 2*jet1**2"
+      },
+      "residual_count": 5,
+      "substitutions": {
+        "Hc_1_7": "0",
+        "Hc_1_8": "0",
+        "Hc_2_6": "0",
+        "Hc_2_7": "2*jet1",
+        "Hc_3_6": "0",
+        "Hc_4_5": "jet1**2",
+        "Hc_5_4": "0"
+      },
+      "target": "K3=-t^8*(pi^2+b*pi-c)+O(t^9)",
+      "variant": "linear_term_free_cutoff_43",
+      "zero_rows": 1
+    },
+    {
+      "h3_coordinates": 9,
+      "notes": [
+        "b is excluded from Q-star pivots",
+        "this weakens only the translation gauge; it still uses one common h3 polynomial"
+      ],
+      "qstar_pivots": 9,
+      "residual": {
+        "minor_n8_pi0": "-c - jet1**4",
+        "minor_n8_pi1": "b + 2*jet1**2"
+      },
+      "residual_count": 2,
+      "substitutions": {
+        "Hc_1_7": "0",
+        "Hc_1_8": "0",
+        "Hc_2_6": "0",
+        "Hc_2_7": "2*jet1",
+        "Hc_3_5": "0",
+        "Hc_3_6": "-2*jet2",
+        "Hc_4_5": "jet1**2",
+        "Hc_5_4": "-2*jet1*jet2",
+        "Hc_6_3": "jet2**2"
+      },
+      "target": "K3=-t^8*(pi^2+b*pi-c)+O(t^9)",
+      "variant": "linear_term_free_cutoff_42",
+      "zero_rows": 2
+    }
+  ]
+}

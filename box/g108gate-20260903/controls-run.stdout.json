@@ -1,0 +1,188 @@
+{
+  "appendix_ii": {
+    "both_exact_Q_localizations_empty": true,
+    "c_role": "control-local nonzero Jacobian scalar",
+    "convention": "control degree16=main F and degree12=main G; the frozen ordered Jacobian is J(degree12,degree16)-c, harmless up to c -> -c",
+    "variants": [
+      {
+        "controls": {
+          "empty_c_and_wrapper_reduce_1": "0",
+          "localized_reduce_1": "0",
+          "localized_unit_lift_recomposition": "1",
+          "point_c1_and_wrapper_reduce_1": "1",
+          "raw_reduce_1": "1"
+        },
+        "elapsed_seconds": 26.247719,
+        "field": "Q",
+        "generator_order": [
+          "b1",
+          "b2",
+          "b3",
+          "b4",
+          "a1",
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c7",
+          "c8",
+          "c9",
+          "c10",
+          "c11",
+          "c12",
+          "c13",
+          "c",
+          "Zc"
+        ],
+        "localized_basis": "1",
+        "localized_dimension": -1,
+        "n_J_coefficient_rows": 77,
+        "n_coefficient_variables": 17,
+        "n_unknowns_before_wrapper": 18,
+        "ordering": "dp",
+        "raw_origin_c0_verified": true,
+        "raw_rows_sha256": "655a937e76b8fd75ea69204cf8349eaa81a1b1e9be41791a950ec73417e19448",
+        "singular_script": "appendixii-printed_repeated_c5-Q.sing",
+        "singular_script_sha256": "d7d8b58bc1e2401ac476117b05d42e9a4080ffb1d6bcf7b54c7ba6327648dd73",
+        "singular_stderr": "",
+        "singular_stdout_sha256": "4bdfda436ebfedea06350f6b67aaa2637c7733a5ed43e7e9b71bf4abdcb2dd07",
+        "variant": "printed_repeated_c5",
+        "verdict": "SATURATED-EMPTY[P208-COMMON-POLYNOMIAL-ANSATZ/Q]",
+        "wrapper": "Zc*c-1"
+      },
+      {
+        "controls": {
+          "empty_c_and_wrapper_reduce_1": "0",
+          "localized_reduce_1": "0",
+          "localized_unit_lift_recomposition": "1",
+          "point_c1_and_wrapper_reduce_1": "1",
+          "raw_reduce_1": "1"
+        },
+        "elapsed_seconds": 0.362777,
+        "field": "Q",
+        "generator_order": [
+          "b1",
+          "b2",
+          "b3",
+          "b4",
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6",
+          "c7",
+          "c8",
+          "c9",
+          "c10",
+          "c11",
+          "c12",
+          "c13",
+          "c",
+          "Zc"
+        ],
+        "localized_basis": "1",
+        "localized_dimension": -1,
+        "n_J_coefficient_rows": 77,
+        "n_coefficient_variables": 17,
+        "n_unknowns_before_wrapper": 18,
+        "ordering": "dp",
+        "raw_origin_c0_verified": true,
+        "raw_rows_sha256": "5a8a5974b5f135453aacf27b0bfec3ec4fa9bee0f7839d66a21b46cd86eeab88",
+        "singular_script": "appendixii-absorbed_alpha1_distinct_c6-Q.sing",
+        "singular_script_sha256": "b05f1c5c7d57409f21a1315bbe56be37464226455ac33438d66ba7b7b295617d",
+        "singular_stderr": "",
+        "singular_stdout_sha256": "4bdfda436ebfedea06350f6b67aaa2637c7733a5ed43e7e9b71bf4abdcb2dd07",
+        "variant": "absorbed_alpha1_distinct_c6",
+        "verdict": "SATURATED-EMPTY[P208-COMMON-POLYNOMIAL-ANSATZ/Q]",
+        "wrapper": "Zc*c-1"
+      }
+    ]
+  },
+  "controls_pass": true,
+  "frozen_reference": {
+    "basename": "controls.py",
+    "mechanical_changes": [
+      "derive (16,12) from the frozen (64,48) parent row",
+      "rename kappa,T to c,Zc",
+      "replace GF(32003) Groebner by exact Q Singular dp",
+      "add raw/localized, empty/point, and lift controls"
+    ],
+    "sha256": "cb616b8ee886097ace1f74a8f0c5307d1882f8a9ecd54742839577833f2f66a7"
+  },
+  "parent_reduction": {
+    "M_1_through_M_3": [
+      -48,
+      52,
+      62
+    ],
+    "V_2_V_3": [
+      3,
+      3
+    ],
+    "bridge": "TRIVIAL[u_s=1]",
+    "d_1_through_d_4": [
+      64,
+      16,
+      4,
+      2
+    ],
+    "d_s": 4,
+    "descent_factor": 4,
+    "parent_degrees": [
+      64,
+      48
+    ],
+    "reduced_degrees": [
+      16,
+      12
+    ],
+    "u_s": 1,
+    "v_s": 3
+  },
+  "schema": "g108band-exact-Q-controls-v1",
+  "tame_automorphism": {
+    "checks": {
+      "factor_determinants_multiply_to_one": true,
+      "infinity_points_are_distinct": true,
+      "inverse_x_is_x": true,
+      "inverse_y_is_y": true,
+      "jacobian_is_one": true,
+      "shared_ansatz_row_is_A_minus_C_minus_1": true,
+      "slice_witness_jacobian_is_one": true,
+      "tame_composition_F": true,
+      "tame_composition_G_for_a_nonzero": true
+    },
+    "factor_determinants": [
+      "a",
+      "1/a"
+    ],
+    "field": "Q(a)",
+    "inverse": {
+      "x": "F-G",
+      "y": "a*G-(a-1)*F"
+    },
+    "pair": {
+      "F": "a*x + y",
+      "G": "x*(a - 1) + y",
+      "J": "1"
+    },
+    "point_coordinate_difference": "-1",
+    "points_at_infinity": [
+      "[1:-a:0]",
+      "[1:1-a:0]"
+    ],
+    "shared_ansatz_row": "A - C - 1",
+    "slice_A2_C1": {
+      "F": "2*x + y",
+      "G": "x + y",
+      "J": "1"
+    },
+    "special_D108_tower": "NOT-APPLICABLE[degrees (1,1)]",
+    "survives": true,
+    "tame_factorization_condition": "a != 0",
+    "type": "EXACT-AUTOMORPHISM/SURVIVES[UNIVERSAL-GLOBAL-CHECKS]"
+  },
+  "type": "APPENDIX-II-KILL/EXACT-Q + TAME-AUTOMORPHISM-SURVIVAL"
+}

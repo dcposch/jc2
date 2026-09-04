@@ -1,0 +1,10 @@
+ring R=0,(jet1,b,c,ZD),dp;
+poly r80=-c-jet1^4;
+poly r81=b+2*jet1^2;
+poly L=ZD*(b^2+4*c)-1;
+ideal I=r80,r81,L;
+ideal S=std(I);
+print("DIM"); dim(S);
+print("SIZE"); size(S);
+print("NF1"); reduce(1,S);
+quit;
