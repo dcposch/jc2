@@ -1,0 +1,42 @@
+// independent_order_gate.py: direct Jacobian plus monic h-adic division
+// row={'key': 'k16_t1', 'n': 16, 'm': 12, 'M2': 13, 'V2': 3, 'k': 1} partition=[1] mode=sparse
+// target_before=-A4_2*B3_1 + A4_3*B3_1
+ring R=0,(b1,b2,b3,b4,A2_0,A2_1,A3_0,A3_1,A3_2,A4_0,A4_1,A4_2,A4_3,B2_0,B2_1,B3_0,B3_1,c,T),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS"); } else { print("CONTROL_RING_FAIL"); }
+ideal emptyControl=(c),T*(c)-1;
+ideal emptyBasis=std(emptyControl);
+if (reduce(1,emptyBasis)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+ideal liveControl=(c)-1,T*(c)-1;
+ideal liveBasis=std(liveControl);
+if (reduce(1,liveBasis)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+print("MAIN_START equations=23 unknowns=18 char=0");
+ideal I=-2*A3_1*B3_1*b4 - A3_2*B3_0*b4 - A3_2*B3_1*b3 + A4_0*B3_1 + 2*A4_1*B2_1*b4 - A4_1*B3_0 - 3*A4_2*B2_0 - A4_2*B2_1*b3 + 3*A4_3*B2_0 + A4_3*B2_1*b3,
+-2*A3_2*B3_1*b4 + 3*A4_2*B2_1*b4 - 2*A4_2*B3_0 - 3*A4_3*B2_1*b4 + 2*A4_3*B3_0,
+-A4_2*B3_1 + A4_3*B3_1 - c,
+2*A3_1*B3_1*b4 + A3_2*B3_0*b4 + A3_2*B3_1*b3 - A4_0*B3_1 - 2*A4_1*B2_1*b4 + A4_1*B3_0 + 3*A4_2*B2_0 + A4_2*B2_1*b3 - 4*A4_3*B2_0 - A4_3*B2_1*b3,
+2*A3_1*B3_1*b1*b4 + A3_2*B3_0*b1*b4 + A3_2*B3_1*b1*b3 + 2*A3_2*B3_1*b4 - A4_0*B3_1*b1 - 2*A4_1*B2_1*b1*b4 + A4_1*B3_0*b1 + 3*A4_2*B2_0*b1 + A4_2*B2_1*b1*b3 - 3*A4_2*B2_1*b4 + 2*A4_2*B3_0 - 3*A4_3*B2_0*b1 - A4_3*B2_1*b1*b3 + 4*A4_3*B2_1*b4 - 3*A4_3*B3_0,
+A3_0*B3_0*b4 + A3_0*B3_1*b3 + 2*A3_1*B3_1*b2*b4 + A3_2*B3_0*b2*b4 + 2*A3_2*B3_1*b1*b4 + A3_2*B3_1*b2*b3 - A4_0*B2_0*b4 - A4_0*B3_1*b2 - A4_1*B2_0*b3 - 2*A4_1*B2_1*b2*b4 + A4_1*B3_0*b2 + 2*A4_2*B2_0*b2 - 3*A4_2*B2_1*b1*b4 + A4_2*B2_1*b2*b3 + 2*A4_2*B3_0*b1 + A4_2*B3_1 - 2*A4_3*B2_0*b2 + 3*A4_3*B2_1*b1*b4 - A4_3*B2_1*b2*b3 - 2*A4_3*B3_0*b1 - 2*A4_3*B3_1,
+2*A3_0*B3_1*b4 - A3_1*B3_0*b4^2 + A3_1*B3_1*b3*b4 + 2*A3_2*B3_1*b2*b4 + A4_0*B2_1*b4^2 - 2*A4_1*B2_0*b4 - A4_1*B2_1*b3*b4 + A4_2*B2_0*b3 - 2*A4_2*B2_1*b2*b4 + A4_2*B2_1*b3^2 + A4_2*B3_0*b2 + A4_2*B3_1*b1 - A4_3*B2_0*b3 + 2*A4_3*B2_1*b2*b4 - A4_3*B2_1*b3^2 - A4_3*B3_0*b2 - A4_3*B3_1*b1,
+-4*A2_1*B3_1*b4 + 3*A3_1*B3_1 + A3_2*B2_1*b4 - 3*A4_1*B2_1,
+2*A3_2*B3_1 - 5*A4_2*B2_1 + 5*A4_3*B2_1,
+4*A2_1*B3_1*b4 - 3*A3_1*B3_1 - A3_2*B2_1*b4 + 3*A4_1*B2_1,
+4*A2_1*B3_1*b1*b4 - 3*A3_1*B3_1*b1 - A3_2*B2_1*b1*b4 - 2*A3_2*B3_1 + 3*A4_1*B2_1*b1 + 5*A4_2*B2_1 - 7*A4_3*B2_1,
+2*A2_0*B3_0*b4 + 2*A2_0*B3_1*b3 + 4*A2_1*B3_1*b2*b4 + A3_0*B2_1*b4 - A3_0*B3_0 - A3_1*B2_0*b4 - 3*A3_1*B3_1*b2 - A3_2*B2_0*b3 - A3_2*B2_1*b2*b4 - 2*A3_2*B3_1*b1 + A4_0*B2_0 + 3*A4_1*B2_1*b2 + 5*A4_2*B2_1*b1 - 5*A4_3*B2_1*b1,
+4*A2_0*B3_1*b4 - 2*A2_1*B3_0*b4^2 + 2*A2_1*B3_1*b3*b4 - 2*A3_0*B3_1 + 2*A3_1*B3_0*b4 - A3_1*B3_1*b3 - 2*A3_2*B2_0*b4 - A3_2*B2_1*b3*b4 - 2*A3_2*B3_1*b2 - 2*A4_0*B2_1*b4 + 2*A4_1*B2_0 + A4_1*B2_1*b3 + 3*A4_2*B2_1*b2 - 3*A4_3*B2_1*b2,
+5*A2_1*B3_1 - 2*A3_2*B2_1 - 9*A4_2 + 9*A4_3,
+-5*A2_1*B3_1 + 2*A3_2*B2_1 + 9*A4_2 - 12*A4_3,
+-5*A2_1*B3_1*b1 + 2*A3_2*B2_1*b1 + 9*A4_2*b1 - 9*A4_3*b1,
+2*A2_0*B2_1*b4 - 2*A2_0*B3_0 - A2_1*B2_0*b4 - 5*A2_1*B3_1*b2 - A3_0*B2_1 + A3_1*B2_0 + 2*A3_2*B2_1*b2 - 3*A4_0*b4 - 3*A4_1*b3 + 6*A4_2*b2 - 6*A4_3*b2,
+-4*A2_0*B3_1 - A2_1*B2_1*b4^2 + 4*A2_1*B3_0*b4 - 2*A2_1*B3_1*b3 - A3_1*B3_0 + 2*A3_2*B2_0 + A3_2*B2_1*b3 + A4_0*B2_1 - 6*A4_1*b4 + 3*A4_2*b3 - 3*A4_3*b3,
+-2*A2_0*B2_1 + A2_1*B2_0 - 3*A3_1*b4 - 3*A3_2*b3 + 3*A4_0 + 4*B3_0*b4 + 4*B3_1*b3,
+2*A2_1*B2_1*b4 - 2*A2_1*B3_0 - 6*A3_2*b4 + 6*A4_1 + 8*B3_1*b4,
+-3*A2_1*b4 + 3*A3_1 + 4*B2_1*b4 - 4*B3_0,
+-A2_1*B2_1 + 6*A3_2 - 8*B3_1,
+3*A2_1 - 4*B2_1,
+T*(c)-1;
+ideal G=std(I);
+print("MAIN_BASIS_SIZE");
+size(G);
+if (reduce(1,G)==0) { print("MAIN_SATURATED_EMPTY"); } else { print("MAIN_SURVIVES"); }
+quit;

@@ -1,0 +1,44 @@
+// independent_order_gate.py: direct Jacobian plus monic h-adic division
+// row={'key': 'open_25_15', 'n': 25, 'm': 15, 'M2': 21, 'V2': 2, 'k': 2} partition=[3] mode=envelope
+// target_before=0
+ring R=32051,(b1,b2,b3,b4,b5,r13,r12,r22,r11,A1_0,A3_0,A4_0,A5_0,A5_1,B2_0,c,T),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS"); } else { print("CONTROL_RING_FAIL"); }
+ideal emptyControl=(c),T*(c)-1;
+ideal emptyBasis=std(emptyControl);
+if (reduce(1,emptyBasis)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+ideal liveControl=(c)-1,T*(c)-1;
+ideal liveBasis=std(liveControl);
+if (reduce(1,liveBasis)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+print("MAIN_START equations=25 unknowns=16 char=32051");
+ideal I=-2*A5_0*B2_0 + 2*A5_1*B2_0,
+6*A5_0*B2_0 - 9*A5_1*B2_0,
+2*A5_0*B2_0*r22 - 2*A5_1*B2_0*r22,
+-c,
+-6*A5_0*B2_0 + 12*A5_1*B2_0,
+-3*A5_0*B2_0*b1 + 3*A5_0*B2_0*r13 + 2*A5_0*B2_0*r22 + 3*A5_1*B2_0*b1 - 3*A5_1*B2_0*r13,
+-2*A5_0*B2_0*b2 + 2*A5_0*B2_0*r12 + 2*A5_1*B2_0*b2 - 2*A5_1*B2_0*r12,
+A5_0*B2_0*r11 - A5_1*B2_0*r11,
+2*A5_0*B2_0 - 5*A5_1*B2_0,
+3*A5_0*B2_0*b1 + A5_0*B2_0*r13 - 4*A5_1*B2_0*b1,
+2*A5_0*B2_0*b2 + A5_0*B2_0*r12 - 3*A5_1*B2_0*b2,
+2*A5_0*B2_0*b3 + A5_0*B2_0*r11 - 2*A5_1*B2_0*b3,
+A5_0*B2_0*b4 - A5_1*B2_0*b4,
+-6*A5_0 + 6*A5_1,
+18*A5_0 - 27*A5_1,
+6*A5_0*r22 - 6*A5_1*r22,
+-18*A5_0 + 36*A5_1,
+-9*A5_0*b1 + 9*A5_0*r13 + 6*A5_0*r22 + 9*A5_1*b1 - 9*A5_1*r13,
+-6*A5_0*b2 + 6*A5_0*r12 + 6*A5_1*b2 - 6*A5_1*r12,
+3*A5_0*r11 - 3*A5_1*r11,
+6*A5_0 - 15*A5_1,
+9*A5_0*b1 + 3*A5_0*r13 - 12*A5_1*b1,
+6*A5_0*b2 + 3*A5_0*r12 - 9*A5_1*b2,
+6*A5_0*b3 + 3*A5_0*r11 - 6*A5_1*b3,
+3*A5_0*b4 - 3*A5_1*b4,
+T*(c)-1;
+ideal G=std(I);
+print("MAIN_BASIS_SIZE");
+size(G);
+if (reduce(1,G)==0) { print("MAIN_SATURATED_EMPTY"); } else { print("MAIN_SURVIVES"); }
+quit;

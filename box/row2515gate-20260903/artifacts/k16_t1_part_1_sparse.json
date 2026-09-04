@@ -1,0 +1,154 @@
+{
+  "allowed_h_support": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "allowed_h_support_count": 4,
+  "alpha_dims": [
+    0,
+    2,
+    3,
+    4
+  ],
+  "alpha_dims_pre": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "basis": [
+    {
+      "name": "1",
+      "weight": "0"
+    },
+    {
+      "name": "H3",
+      "weight": "-1/2"
+    },
+    {
+      "name": "H2",
+      "weight": "-3/4"
+    },
+    {
+      "name": "H1",
+      "weight": "-1"
+    },
+    {
+      "name": "x",
+      "weight": "-1"
+    }
+  ],
+  "beta_dims": [
+    2,
+    2
+  ],
+  "beta_dims_pre": [
+    2,
+    3
+  ],
+  "closed_form": {
+    "B": "-1/4",
+    "K": 4,
+    "Pi": 7,
+    "R": 2,
+    "delta1": "1/4",
+    "delta2": "-1",
+    "e": 4,
+    "q": 3,
+    "u": 1
+  },
+  "equations": 23,
+  "factor_order": [
+    "y-x",
+    "y",
+    "y",
+    "y"
+  ],
+  "gauge_notes": [],
+  "gauges": [
+    "shear alpha_1",
+    "translate beta_3",
+    "translate alpha_4"
+  ],
+  "h": "b1*y^3 + b2*y^2 + b3*y + b4 - x*y^3 + y^4",
+  "h_levels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "h_parameter_count": 4,
+  "h_parameters": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+  ],
+  "h_support": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ]
+  ],
+  "h_support_count": 4,
+  "jacobian_method": "identity",
+  "max_x_degree_among_remainders": 1,
+  "mode": "sparse",
+  "omega": "1",
+  "partition": [
+    1
+  ],
+  "row": {
+    "M2": 13,
+    "V2": 3,
+    "k": 1,
+    "key": "k16_t1",
+    "m": 12,
+    "n": 16
+  },
+  "saturation_factor": "c",
+  "shear_embedding_check": true,
+  "shear_scalar_check": true,
+  "systems": {
+    "0": "artifacts/k16_t1_part_1_sparse_Q.sing"
+  },
+  "target_coefficient_before_minus_c": "-A4_2*B3_1 + A4_3*B3_1",
+  "target_rows": [
+    {
+      "expr": "-A4_2*B3_1 + A4_3*B3_1 - c",
+      "h_power": 0,
+      "x_power": 1,
+      "y_power": 0
+    }
+  ],
+  "top_face": "-x*y^3 + y^4",
+  "unknowns_excluding_T": 18
+}

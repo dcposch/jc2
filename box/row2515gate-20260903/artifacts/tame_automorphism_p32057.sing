@@ -1,0 +1,11 @@
+// (Q,P)=(y,y^2-x), J(Q,P)=1; inverse y=Q, x=Q^2-P
+ring A=32057,(x,y),dp;
+poly Q=y;
+poly P=y^2-x;
+poly D=diff(Q,x)*diff(P,y)-diff(Q,y)*diff(P,x);
+if (D-1==0) { print("TAME_J_PASS"); } else { print("TAME_J_FAIL"); }
+ring R=32057,(c,T),dp;
+ideal I=c-1,T*c-1;
+ideal G=std(I);
+if (reduce(1,G)!=0) { print("TAME_SURVIVES"); } else { print("TAME_FALSE_EMPTY"); }
+quit;

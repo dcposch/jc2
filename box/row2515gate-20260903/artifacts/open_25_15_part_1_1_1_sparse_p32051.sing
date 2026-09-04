@@ -1,0 +1,40 @@
+// independent_order_gate.py: direct Jacobian plus monic h-adic division
+// row={'key': 'open_25_15', 'n': 25, 'm': 15, 'M2': 21, 'V2': 2, 'k': 2} partition=[1, 1, 1] mode=sparse
+// target_before=0
+ring R=32051,(b1,b2,b3,b4,b5,s2,s3,A1_0,A3_0,A4_0,A5_0,A5_1,B2_0,c,T),dp;
+option(redSB);
+if (nameof(basering)=="R") { print("CONTROL_RING_PASS"); } else { print("CONTROL_RING_FAIL"); }
+ideal emptyControl=(c*s2^3*s3^2 - c*s2^3*s3 - c*s2^2*s3^3 + c*s2^2*s3 + c*s2*s3^3 - c*s2*s3^2),T*(c*s2^3*s3^2 - c*s2^3*s3 - c*s2^2*s3^3 + c*s2^2*s3 + c*s2*s3^3 - c*s2*s3^2)-1;
+ideal emptyBasis=std(emptyControl);
+if (reduce(1,emptyBasis)==0) { print("CONTROL_EMPTY_PASS"); } else { print("CONTROL_EMPTY_FAIL"); }
+ideal liveControl=(c*s2^3*s3^2 - c*s2^3*s3 - c*s2^2*s3^3 + c*s2^2*s3 + c*s2*s3^3 - c*s2*s3^2)-1,T*(c*s2^3*s3^2 - c*s2^3*s3 - c*s2^2*s3^3 + c*s2^2*s3 + c*s2*s3^3 - c*s2*s3^2)-1;
+ideal liveBasis=std(liveControl);
+if (reduce(1,liveBasis)!=0) { print("CONTROL_NONEMPTY_PASS"); } else { print("CONTROL_NONEMPTY_FAIL"); }
+print("MAIN_START equations=21 unknowns=14 char=32051");
+ideal I=-2*A5_0*B2_0*s2*s3 + 2*A5_1*B2_0*s2*s3,
+3*A5_0*B2_0*s2 + 3*A5_0*B2_0*s3 - 3*A5_1*B2_0*s2*s3 - 3*A5_1*B2_0*s2 - 3*A5_1*B2_0*s3,
+-c,
+2*A5_0*B2_0*s2*s3 - 2*A5_0*B2_0*s2 - 2*A5_0*B2_0*s3 - 4*A5_0*B2_0 + 4*A5_1*B2_0*s2 + 4*A5_1*B2_0*s3 + 4*A5_1*B2_0,
+-3*A5_0*B2_0*b1*s3 + 3*A5_1*B2_0*b1*s3,
+-2*A5_0*B2_0*b2*s3 + 2*A5_1*B2_0*b2*s3,
+-A5_0*B2_0*s2 - A5_0*B2_0*s3 + 4*A5_0*B2_0 - 5*A5_1*B2_0,
+-A5_0*B2_0*b1*s3 + 4*A5_0*B2_0*b1 - 4*A5_1*B2_0*b1,
+-A5_0*B2_0*b2*s3 + 3*A5_0*B2_0*b2 - 3*A5_1*B2_0*b2,
+2*A5_0*B2_0*b3 - 2*A5_1*B2_0*b3,
+A5_0*B2_0*b4 - A5_1*B2_0*b4,
+-6*A5_0*s2*s3 + 6*A5_1*s2*s3,
+9*A5_0*s2 + 9*A5_0*s3 - 9*A5_1*s2*s3 - 9*A5_1*s2 - 9*A5_1*s3,
+6*A5_0*s2*s3 - 6*A5_0*s2 - 6*A5_0*s3 - 12*A5_0 + 12*A5_1*s2 + 12*A5_1*s3 + 12*A5_1,
+-9*A5_0*b1*s3 + 9*A5_1*b1*s3,
+-6*A5_0*b2*s3 + 6*A5_1*b2*s3,
+-3*A5_0*s2 - 3*A5_0*s3 + 12*A5_0 - 15*A5_1,
+-3*A5_0*b1*s3 + 12*A5_0*b1 - 12*A5_1*b1,
+-3*A5_0*b2*s3 + 9*A5_0*b2 - 9*A5_1*b2,
+6*A5_0*b3 - 6*A5_1*b3,
+3*A5_0*b4 - 3*A5_1*b4,
+T*(c*s2^3*s3^2 - c*s2^3*s3 - c*s2^2*s3^3 + c*s2^2*s3 + c*s2*s3^3 - c*s2*s3^2)-1;
+ideal G=std(I);
+print("MAIN_BASIS_SIZE");
+size(G);
+if (reduce(1,G)==0) { print("MAIN_SATURATED_EMPTY"); } else { print("MAIN_SURVIVES"); }
+quit;
