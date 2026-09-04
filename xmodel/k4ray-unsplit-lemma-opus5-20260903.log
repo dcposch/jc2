@@ -1,0 +1,32 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete. No jobs running; report sealed and verified.
+
+## Result: **PARTIAL** — the ray is not closed
+
+**Inputs:** 11/11 verified by `sha256sum -c` against a manifest generated with `awk` from the receipt. Moh p. 207–209 read from the PDF text layer directly.
+
+### What is proved uniformly in K
+
+1. **The composite arm of the dichotomy (step 2) — PROVED, unconditional, chart-free.** In the general shape `f = h²+B₂`, `g = h³+A₂h+A₃`, if `B₂ ∈ k` then `J = 2h[hJ(h,A₂)+J(h,A₃)]`, so `h | J`. Since `h` is monic in `y` of degree `K ≥ 1`, it cannot divide `x⁴` — dead for every `K`, and for every target `c·x^k`. On the tower, additionally `α = 0` and `(f,g) = (φ(h), ψ(h))` composite with `J ≡ 0`.
+
+2. **`deg_y B₂ < K` is a theorem, not a normalisation** — it *is* the defining property of the 2nd approximate root. That discharges the prompt's bound in the `y` direction.
+
+3. **A sharpened identity (new):** `J(f,g) = 3[J(β,α) − J(h,ρ)]` with `β² = αh + ρ`. The α-tower collapses into one remainder.
+
+4. **TOP-BAND LEMMA (new, uniform):** `[J]_{2b+K−2} = −3J(H, rem_y(β_b², H))`, and vanishing forces `y^⌈(K−1)/2⌉(y−x) | β_b` whenever `β ∉ k`. **This is the only result here that bites on the open rows K = 7, 8, 9.**
+
+5. **The K-uniform ladder** `J_l = 3Σ_{i+j=l+1}[(i·a_i·b_j′ − j·a_i′·b_j) + (i·c_i·r_j′ − j·c_i′·r_j)]`, verified row-by-row at K = 4, 5, 7, 9, with top rows `3K·r′_{K−1}` and `3[K·r′_{K−2} + (K−1)r_{K−1}]`.
+
+### What the charts gave, and what they don't
+
+Exact over **Q**, by `cst^N ∈ I` (an exact cofactor identity, stronger than Rabinowitsch): **K=4 empty** (`N=1`, `lift`-verified, 4.76 s), **K=5 empty** (`N=2`). Positive control survives correctly. K=6 and K=4-at-full-β-degree **timed out** — reported as timeouts, not kills.
+
+**These close nothing in the census.** K=4 and K=5 sit *below* the ray's open members (K=7,8,9). Case (A), D=108, and the three δ₁′=0 rows all remain open, and the (99,66) skeleton verdict is *not* complete for all three configurations.
+
+### Scope gaps I did not close
+
+- `deg β ≤ K−1` (total degree) is **unproved** — only `deg β ≤ 2K−1` is. Everything in the chart section is scoped by it.
+- **The second instrument was not built**, so the required two-instrument agreement is not satisfied; no result here is cross-checked.
+
+Five typed OPENs raised with bounded quantities and cheapest tests. Artifacts in `box/k4ray-20260903/` (31 files, `artifacts.sha256`); two new memories written plus a status update on the existing ray memory.
+DIVERT path=xmodel/k4ray-unsplit-lemma-opus5-20260903.md status=CLEAN_SEALED body_bytes=26157 body_sha256=bcafc9a0e92fc94f5617092d221e55454404aa73ef12b5d19607f70832f115e3
