@@ -1,0 +1,4 @@
+The Singular job files (10.5 MB each) were deleted after the runs; regenerate with
+  ROWS=/home/ubuntu/jc2/box/k16terminal-fable5-20260903/t8_p32003_r11288_rows.txt
+  python3 probe_t8.py {full|b4zero|b4one|resz|topt} $ROWS <log> 590 > job.sing ; timeout 590 Singular -q job.sing
+(slimgb variant: sed 's/ideal G = std(Jo);/ideal G = slimgb(Jo);/' on the b4one job).

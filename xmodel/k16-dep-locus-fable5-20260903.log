@@ -1,0 +1,27 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The lane is complete and sealed. Report: `xmodel/k16-dep-locus-fable5-20260903.md` (18.8 KB, BODY-END marker in place); drivers and logs in `box/k16dep-20260903/` (33 files, manifest verified); no job left running; 68 of 170 minutes used.
+
+**Verdict: CONJECTURE DEP is REFUTED at t = 2.** At y = 1/5 on the b3-axis cone point, the actual chart pair (degrees 20 and 28 in γ, π), rebuilt from the residual point through the proved spine, has
+
+```text
+J(Q,P) = (7/625)(π − γ) = −c·z,   c = −yg = −7/625,   z = π − γ
+```
+
+not 0. The whole axis is an explicit family with the same Jacobian, verified symbolically for every b3.
+
+**What the τ = 0 part of the cone is instead.** A line-by-line rederivation (step 3) gives, for every t and every residual point p,
+
+```text
+J(Q_p, P_p) = c·γ + π·E_t(h),   E_t(h) = Σ_k T_{t,k}(p) h^k
+```
+
+so cone points have a linear-form Jacobian and the τ = 0 ones are exactly the "z-type" pairs J = −c·z. The flagged gap resolves against DEP: g = g₃ is the Jacobian constant through c = −yg, and D1..D4 stay equal to −cb1, −cb2, −cb3, cL on the spine. Controls: exact at t = 2 on both fibres (banked JSON rows matched at every point, gauge-independent), mod p at t = 3..6, and the t = 4 banked record mod p.
+
+**Step 4 outcome.** Dependent pairs cannot exist in the chart at any t: the π⁰ coefficient of π³J is yg(h − b4) ≠ 0. So the literal DEP-EMPTY system at t = 8 is inconsistent identically (holds vacuously, size 0) and decides nothing about (V0). The decision-grade replacement is Z-EMPTY: (V0) ⟺ (T) ∧ Z-EMPTY, and Z-EMPTY is the cone plus one homogeneous generator, not a smaller system. At t = 8 mod 32003:
+
+- b4 = 0 half of Z-EMPTY: dim 0 in 34 s, promoted to characteristic zero by the properness lemma.
+- b4 = 1 z-chart (17 generators, 7 variables): INCONCLUSIVE_TIMEOUT with std and slimgb at the 590 s tool cap; the full z-system and the top-tail cone also timed out.
+- Bonus: RESIDUAL-ZERO at t = 8 is now certified (dim 0 in 21 s, promoted).
+
+**Open items raised:** `OPEN[K16-Z-EMPTY-T8-B4ONE]` (the b4 = 1 z-chart with a longer bound) and `OPEN[K16-Z-TYPE-RECEIVER]` (whether the receiver descent ever yields a Jacobian line through the simple place at infinity, which decides whether z-type pairs matter to (T) at all). §1.2 of my round submission is withdrawn in the report; the memory note `k16-cone-tau-zero-is-z-type` records the corrected reading.
+DIVERT path=xmodel/k16-dep-locus-fable5-20260903.md status=CLEAN body_bytes=18804 body_sha256=d564bc5c5b35a95ee146bca73e67f260e9b70600c9d6f9c931ae17263af085ae
