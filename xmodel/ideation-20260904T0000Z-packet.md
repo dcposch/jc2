@@ -111,4 +111,14 @@ gpt55, preprocess-native-gpt55, g9966-branchB-kill-gate-gpt55, g9966-delta52-sta
 receipts only, not reports); systems check (one upgrade); OPENs raised with the
 collision scan (ops/open_collision.py). Target 25–45KB; 150 minutes; seal.
 
+
+## 4. ADDENDUM (08:30Z, appended by the coordinator before launch; the round fires 8.5 h late)
+
+Ten lanes sealed between 23:20Z and 08:20Z (AUDIT deltas 17(tttt)–(bbbbb)); they change Q1–Q4:
+- (99,66): the δ = 5/2 branch is DEAD, PROMOTED by two gates (explicit certificate 1 = (1/64)·stage8_G_local16_coord0, char-0 replay; clean-room engine agrees row-for-row). Skeleton verdict NO-KELLER-PAIR-WITH-THE-(99,66)-SKELETON is PROMOTED, conditional on chart necessity and split exhaustiveness (both banked). Q3 is now "how to make this paper-grade and uniform", not "does it die".
+- D = 108 (second engine client): single split branch δ = 3, DEAD at stage 0 on branch-specific common-h₃ incidence rows (PROVISIONAL); the (99,66) pole/Jacobian schedule is NOT what kills it — uniformisation needs an incidence compiler ahead of the scheduler. Outer weights DERIVED (6,449 pivots). No-split alternative: conditional Prop 6.3 descent to (24,16), variable map OPEN.
+- (25,15) row: SATURATED-EMPTY in the general order chart over Q (PROVISIONAL).
+- K16 ray: literal Proposal A (top t + 2 rows regular) is IMPOSSIBLE for every t; a corrected tail is regular at t = 3..6; Lemma SQUARE (Fable): (V0) ⇐ V(R_1..R_{t−1}) = {0} for a SQUARE weighted-homogeneous system of resultants in the t − 1 variables (b₄, q) — i.e. the uniform target is Res_w(R_1, …, R_{t−1}) ≠ 0 in A_t; proved obstruction: top-weight/initial-form arguments certify finiteness of the b₄ = 1 fibre, never emptiness; fixed-t Gröbner is exhausted at t = 7.
+Revised Q1: is the weighted resultant of Lemma SQUARE computable in closed form in t (it is one element of A_t = Q[y]/(H_t))? Revised Q3: what is the minimal necessity dossier for the joint chart, and which row families are needed for the D = 108 and (25,15) kills? Q4 stands.
+
 <!-- BODY-END -->
