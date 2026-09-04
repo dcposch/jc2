@@ -1,0 +1,20 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes from the lane receipt, then read the N3/N4 dossier material and the gauge-group sources.I'll generate the hash manifest from the lane receipt and check it with `sha256sum -c`, without retyping any hash digits.Hashes match. Next I’ll extract N3/N4 and the gauge-group action from the charged dossiers.Hashes are good. Next I’ll pull Moh’s gauge group, the residual torus, and how the chart treats translations.Moh p.194 confirms the two-line affine picture. I’ll now run small exact scripts for the translation action on the centres and the residual torus action on β.I’ll run a single exact sympy script covering translations, the residual torus, the tame control, and the pivot coefficient.All 45 controls passed. Next I’ll write the sealed report with the orbit argument, row-family actions, and residual gap list.Both N3 and N4 are free gauges. The split-branch kills need no extra assumption. Report: `xmodel/g9966-gauge-gaps-grok46-20260903.md` (body 21101 bytes, sealed).
+
+**N3 `DISCHARGED`.** The residual translation group on the chart is two-dimensional, not one. After the two points at infinity and the monic tops are fixed,
+
+- `y`-translation moves `(w_0,a_0)` together and normalises only `8w_0+3a_0=-[y^{10}]H`;
+- `x`-translation moves `w_0` and leaves `a_0` fixed, so it moves the `y`-only invariant `w_0-a_0`.
+
+The unique translation `(b,c)=(a_0,a_0-w_0)` sends both centres to 0, and Vieta then forces `h_{10}=0`. Exact check: `(y-a_0)^3(y-x-w_0)^8` has leading form `P` and becomes `P` identically after that translation.
+
+**N4 `DISCHARGED`.** Dossier §2.1(iii) used the wrong 2-torus `(sx,s'y)`, which preserves the coordinate axes rather than `y=0` and `y=x`. The torus that preserves both eigenlines is
+
+`A(x,y)=(γx+(δ-γ)y, δy)`,
+
+with `P∘A=γ^8 δ^3 P` and Jacobian factor `γ^{-119}δ^{-44}`. After `J=1`, one parameter remains; it acts by `β ↦ β/(γ^3 δ)`. Solving `γ^{13}=β^{44}` over algebraically closed `k` sets `β=1` (hence the `e^{12}` coefficient to 1) jointly with every other row family. The local stretch `Qc_{r,q}→α^q Qc_{r,q}` still does **not** preserve `y=0`; it is not the joint-ideal group element.
+
+No kill was re-run: both gaps are type (a). The pivot formula `9(99-3n-11i)` lives on `B1c` against the top form `A_0=w^9(w-1)^{24}` and does not see `w_0`, `a_0`, or `β`. The tame control `(ax+y,(a-1)x+y)` keeps `J=1` under both group elements.
+
+**THEOREM 8.1 residual gaps:** N1, N2, and case (A). Charged inputs 8/8 `sha256sum -c` OK. No `charge_basis` line.
+DIVERT path=xmodel/g9966-gauge-gaps-grok46-20260903.md status=CLEAN_SEALED body_bytes=21101 body_sha256=171853b414995596288889ebde545e183c329d3cc096883cbc3f215145f2c539
