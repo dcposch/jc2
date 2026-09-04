@@ -401,3 +401,10 @@ Status flags in the table quote each survey's own words; where a Fable status ("
 - PROGRAM RE-TYPED: JC2 along Moh's line = (H1) MINOR-EMPTY ∧ (H2) descent + (T). Flagship: (H1) (three clients, one engine, four certificates). K16 ray: (H2) prototype; uniform target = tail hsop with length 2·binom(3t+1, t−1); (V0) split into (8.1) ∧ DEP-EMPTY.
 - (99,66): PROMOTED at skeleton level; paper-grade = certificate slice + necessity dossier (running). D = 108: split branch PROMOTED dead; no-split descent OPEN (running). (25,15): descended (T)-row; order-chart kill PROVISIONAL pending coverage.
 - STOP: fixed-t cone-dim lanes at t ≥ 8; native preprocessing.
+
+## Overlay 2026-09-04T12:47Z (round 20260904T1200Z synthesis)
+- K16 (H2): (V0)-for-all-t ⟺ CRITERION RANK (curve non-vanishing, 17(ppppp)); the JC2-relevant target is the WEAKER (8.1) = τ_t ∈ radical. RANK lane running.
+- The k=4 RAY (3K,2K; 3K−6; K−1; k=4) unifies (99,66) case (A) = K9, D=108 no-split = K8, and the δ₁'=0 rows = K7. UNSPLIT-CONFIGURATION LEMMA decides all uniformly. THE #1 object.
+- (H1): disc dead; census is the deliverable; NONRES(S) coprimality predicate is the new theorem lead.
+- SCOPE: (H1)∧(H2) reduces the TWO-POINT M_s=n−2 stratum along Moh's line, NOT all plane JC2 (leaks: one-place, N1's 8 V-assignments, U-NEGATIVE, s'>2). N1 = a genuine open hole in Moh's published work.
+- STOP: all-t cone-dim beyond RANK; monolithic full-D1 Gröbner.
