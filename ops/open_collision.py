@@ -333,6 +333,26 @@ def banked_corpus(root: Path, report: Path) -> tuple[Path, ...]:
     paths = list(xmodel.glob("*.md"))
     if not paths:
         raise CollisionError(f"banked corpus has no xmodel/*.md files: {xmodel}")
+    # Corpus guard (round 20260904T0000Z systems upgrade): during a blind
+    # ideation round the other same-round submissions must not be scanned,
+    # and unsealed lane reports (receipt without final_status) are not banked.
+    import re as _re
+    m = _re.match(r"ideation-(\d{8}T\d{4}Z)-", report.name)
+    round_tag = m.group(1) if m else None
+    guarded: list[Path] = []
+    for path in paths:
+        if round_tag and path.name.startswith(f"ideation-{round_tag}-") \
+                and not path.name.endswith("-packet.md"):
+            continue
+        receipt = path.with_suffix(".run.v2")
+        if receipt.is_file():
+            try:
+                if "final_status=" not in receipt.read_text(errors="replace"):
+                    continue
+            except OSError:
+                continue
+        guarded.append(path)
+    paths = guarded
     paths.extend(root / name for name in REQUIRED_TOP_LEVEL)
 
     result: list[Path] = []

@@ -21032,3 +21032,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - (99,66): CLOSED AT SKELETON LEVEL (PROMOTED, conditional on the two banked pillars). Next: chart-necessity dossier (paper-grade), then the (25,15) and D = 108 gates, then the 166-group u_s > 1 census with the engine.
 - K16 ray: (T) proved t = 1..7; uniform target = Res_w(R_1..R_{t−1}) ≠ 0 in A_t (Lemma SQUARE) or the all-t Fröberg/pure-power statement; fixed-t Gröbner exhausted.
 - Round 20260904T0000Z: launching late (~08:30Z); 5 blind lanes + 4 follow-up lanes.
+
+## 2026-09-04T08:40Z SYSTEMS — ops/open_collision.py corpus guard (GPT-5.5 round submission §11): same-round ideation submissions and unsealed lane reports (receipt without final_status) are excluded from the collision corpus automatically. Round lanes already running used the old scanner; the synthesis will discount any same-round candidate.
