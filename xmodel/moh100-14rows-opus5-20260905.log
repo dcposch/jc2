@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete at 76 minutes, sealed and verified, with nothing running.
+
+## Result: **PARTIAL** — 0 of 14 rows killed
+
+Moh's ≤100 theorem is **not** resolved as a whole. Report: `xmodel/moh100-14rows-opus5-20260905.md` (body 36,003 bytes, sealed, `verify PASS`).
+
+**What is done and controlled:**
+
+1. **The 14 rows re-enumerated fail-closed** — two independent halves agreeing (charged POLY+ODE screen artifact ∧ charged (1)–(13) census). `(90,60)×4, (96,64)×4, (96,72)×6`; `u_s = 1` and `δ_s = −1` on 14/14, so Prop 6.4 makes the descent radius-automatic with nothing assumed.
+
+2. **All 14 descended**, and the descent + descended-radius map validated against **Moh's own Appendix II table (p.207)** — all five rows including both bracketed alternates, every column. It also reproduces the charged `order_basis_full.closed_form` exactly where that is defined, so it's a strict extension.
+
+3. **A new structural fact** (`shape.py`): the operative screen is **exact at `s = 3`** — 212 input rows → Moh's six, zero excess — and the entire residue is `s ≥ 4`. Descended, Moh's four published cases all have `s' = 2` (the shape of Appendix II *and* of the charged instrument); all 14 excess rows have `s' ∈ {3,4}`. `OPEN[MOH-PROGRAM-ARTIFACT]` *is* the descended-depth-≥3 shape.
+
+**What blocked the kills.** 14 rows → 14 distinct charts → 89 instances at 78–335 unknowns; no banked chart transfers. Four solver routes on the smallest charts all timed out over exact Q (1200–2500 s). The weighted-cone dehomogenisation `1 ∈ (I, c−1)` is *licensed* — `CONTROL_H` verifies the grading on 261/261 generators — but the standard bases don't close. The incremental band recursion localises the wall precisely: it clears bands 4 and 3 cheaply and dies inside the band-2 `std`.
+
+**Two things I'd flag as worth acting on:** the fix is in the *emitter* (pivot substitution before expansion), not the solver; and generator bulk, not unknown count, drives cost — the 76-unknown chart (500 gens, 52 MB) is strictly worse than the 88-unknown one (261 gens, 13 MB).
+
+Three typed OPENs are new: `OPEN[DESCENDED-S3-FULL-BASIS]`, `OPEN[DESCENDED-U-PRIME-ZERO]` (row 12 has `u' = 0`; the charged builder raises at `order_basis_full.py:238`), and `OPEN[B-SAFE-VS-B-TIGHT]`. Per FALLACY-v2 I used the weaker `B_safe` threshold throughout — `B_tight` is a floor only at `s' = 2`, and using it would have made every chart a sub-slice. Nothing here touches 17(ffffff); the `(99,66)` closure stands as banked.
+DIVERT path=xmodel/moh100-14rows-opus5-20260905.md status=CLEAN_SEALED body_bytes=36003 body_sha256=39cd7b56f73997b2357651628e4764bf662386490d9111620a52cd33f984222c
