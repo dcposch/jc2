@@ -1,0 +1,33 @@
+# IDEATION ROUND 2026-09-06T00:00Z — BLIND SEALED SUBMISSION (opus5). Read the frozen packet (charged) — the state of the campaign after 2026-09-05's 50+ deltas — and answer its three questions with CONCRETE, PRICED proposals (a proposal = the mathematical statement, the printed sources it rests on, the instrument, its cost, and the check that would refute it). Do NOT read any other model's submission (none is charged; do not search xmodel/ideation-20260906T0000Z-*). Be bold: the program's remaining obligations all have the shape "a distinguished coordinate is not nilpotent on a necessary chart" — say which coordinate, at what weight, and how to decide it; if you see a route that avoids charts entirely (a global invariant, a semigroup/genus obstruction at the two places, an Abhyankar–Moh-type theorem, a Lean-checkable lemma), say so with its exact hypotheses. Also give your top-3 ranked avenues for the next 12 hours with lane specs. DISK DISCIPLINE: the host has ~3 GB free — write ONLY the report and small notes (no artifact trees, no worker copies). FALLACY-v2 applies (necessary ≠ sufficient; a floor is not attainment; a row needs its printed line). ≤ 120 min; no ledger edits; no jc2-lean; no other ideation-* input. Notes to box/ideation-20260906T0000Z/opus5/.
+Report: xmodel/ideation-20260906T0000Z-opus5.md
+Seal (<!-- BODY-END -->); 10-25KB; 120 min.
+charged_input=box/ideation-20260906T0000Z/packet.md
+charged_input=xmodel/own-data-gate-opus5-20260905.md
+charged_input=xmodel/census-coverage-gate-opus5-20260905.md
+charged_input=xmodel/residual65-structure-fable5-20260905.md
+charged_input=xmodel/joint-chart-degenerate-fable5-20260905.md
+charged_input=xmodel/cone-vertex-gate-opus5-20260905.md
+charged_input=xmodel/char-degree-instrument-astra-r2-20260905.md
+charged_input=xmodel/k16-tacnode-fable5-20260905.md
+charged_input=xmodel/k16-t8-gate-astra-20260905.md
+charged_input=box/residual66-20260905/roster.jsonl
+charged_input=refs/moh1983_jram340_configurations_of_roots.pdf
+charged_input=FALLACY-v2.md
+
+Your inputs are frozen read-only copies in {{LANE_INPUTS}};
+verify these SHA-256 hashes first, MECHANICALLY: the receipt `xmodel/ideation-20260906T0000Z-opus5.run.v2` carries `charged_input_<i>_sha256=`/`_basename=` lines; build the manifest with awk and run `sha256sum -c`; stop only on a real content mismatch:
+
+```text
+0509ca8eaf3e37dbf419f71c5a329fe2065577a83e7aa66153ecf0ce5f9e8d3b  {{LANE_INPUTS}}/packet.md
+3020c79b350ec46703690762b0959dcd8d0408205979f5e37796730f5ffab80f  {{LANE_INPUTS}}/own-data-gate-opus5-20260905.md
+502abb3b2c2cffd255e114bc6ccdd89a76571b72ac47c44867b1e142a01d5e6f  {{LANE_INPUTS}}/census-coverage-gate-opus5-20260905.md
+7d3ffbba4791a64c7c7d9e28546de67190d96edd3a47b431c116fec35394c927  {{LANE_INPUTS}}/residual65-structure-fable5-20260905.md
+078f179d36ba99d3069ded660b72f3f8bb8b28d4593b2d5c5c1f87a6c68bf0b8  {{LANE_INPUTS}}/joint-chart-degenerate-fable5-20260905.md
+72dfcd371f338767e303c6da0eab02337f257ad29409a9fc6b60cd2e85c20ecd  {{LANE_INPUTS}}/cone-vertex-gate-opus5-20260905.md
+d9b95ce9c4588104c9f306d987f91957988611b80d2025a05f14c40568e33b45  {{LANE_INPUTS}}/char-degree-instrument-astra-r2-20260905.md
+ab1c4ca249f85f3978108fe9e26f391695805e443fdb51a6be135635b2a0fa31  {{LANE_INPUTS}}/k16-tacnode-fable5-20260905.md
+54d79d02e8962b7d4e3a50384ea9aaa132e11d22138f5bfeed58a4acd8b9eb16  {{LANE_INPUTS}}/k16-t8-gate-astra-20260905.md
+cb384ecdaf41cb96288ff12184a0c22ded49c276842f136919e675e8248534bf  {{LANE_INPUTS}}/roster.jsonl
+6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51  {{LANE_INPUTS}}/moh1983_jram340_configurations_of_roots.pdf
+e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  {{LANE_INPUTS}}/FALLACY-v2.md
+```
