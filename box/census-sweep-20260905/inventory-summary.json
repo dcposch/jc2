@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "elapsed_seconds": 17.953,
+    "full": true,
+    "kmin": 16,
+    "nmin": 16,
+    "nmax": 200,
+    "n_raw_1_13": 23720,
+    "n_us_ge2": 6117,
+    "n_descended_rows": 6117,
+    "n_descended_classes_with_V_fibre": 6117,
+    "n_groups_n_m_M_ell": 4012,
+    "n_four_int_keys": 1291,
+    "n_coarse_n_m_ell": 523,
+    "n_split_or_mixed": 3754,
+    "n_unsplit": 2363,
+    "n_k4ray_shape": 6,
+    "n_sizeable": 6117
+  },
+  "sharpened_xu_ok_candidate": {
+    "n_us_gt_1": 310,
+    "n_xu_ok_candidate": 296,
+    "n_four_int_keys": 132,
+    "unmatched": 0
+  },
+  "size_histogram_solvable_nunk": {
+    "<=80": 19,
+    "81-120": 135,
+    "121-200": 841,
+    ">200": 5122
+  },
+  "note": "Measured on frozen moh_skeleton_full.py, Kmin=16, 48<=n<=200 (nmin=16 is the Kmin convention). The synthesis 6209->1359 grain is not reproduced: fibre-complete keys are 1:1 with rows (6117); (n',m',M',ell) groups are 4012 (matching the h1-nonres raw-group count); four-int (n',m',ell,V2') keys are 1291. The Astra 296->132 four-int keys on the xu_ok_candidate cohort ARE reproduced."
+}

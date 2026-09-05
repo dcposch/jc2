@@ -1,0 +1,47 @@
+{
+  "chart_kind": "k4ray_pin_lower_band",
+  "class_id": "K8_d108_nosplit",
+  "class_verdict": "DEAD",
+  "control": true,
+  "engine": "singular_replay",
+  "exact_q": true,
+  "expected": "UNIT",
+  "fallacy_v2": "A class kill needs the FULL necessary chart (h-support included; for u_s>=2 split rows the joint chart: order + minor-incidence + pole + Jacobian) AND every stem UNIT AND exact-Q confirm. Modular [1] is not a kill. A surviving point is not a counterexample unless J is a nonzero constant and the point lifts.",
+  "kind": "unsplit",
+  "label": "D=108 no-split k=4 ray K=8 pin+lower-band",
+  "matched_expected": true,
+  "n_unknowns": 36,
+  "note": "36-var reduced chart; UNIT_IDEAL_CHAR0; 17(bbbbbb)",
+  "schema": "census-sweep-class-certificate-v1",
+  "sources": [
+    {
+      "M2": 18,
+      "V2": 7,
+      "ell": 4,
+      "m": 72,
+      "m_prime": 16,
+      "n": 108,
+      "n_prime": 24
+    }
+  ],
+  "stems": [
+    {
+      "accepted": true,
+      "basis_size": 1,
+      "dimension": -1,
+      "elapsed_seconds": 0.064,
+      "nf1_size": 0,
+      "returncode": 0,
+      "script": "/home/ubuntu/jc2/box/census-sweep-20260905/controls/K8_d108_nosplit/K8_single_rho_p0_Q.sing",
+      "script_sha256": "275c07e900f67e1b2630e72460843b3d8b0c6b7b7a2497a81132aba7646b9216",
+      "stderr": "/home/ubuntu/jc2/box/census-sweep-20260905/controls/K8_d108_nosplit/K8_d108_nosplit.err",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "/home/ubuntu/jc2/box/census-sweep-20260905/controls/K8_d108_nosplit/K8_d108_nosplit.out",
+      "stdout_sha256": "790b8b2e4a429e4cca3aa2ad03a30fe447b1f5d614e85f408abb1818f3515b33",
+      "stem": "K8_d108_nosplit",
+      "timed_out": false,
+      "unit": true,
+      "verdict": "UNIT"
+    }
+  ]
+}

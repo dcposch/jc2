@@ -1,0 +1,234 @@
+{
+  "n_swept": 19,
+  "verdicts": {
+    "TIMEOUT": 5,
+    "DEAD": 14
+  },
+  "dead": [
+    "C_n32m24_Mm20_2_ell0_s3_V1_6",
+    "C_n32m24_Mm20_m6_ell0_s3_V1_6",
+    "C_n36m24_Mm16_6_ell0_s3_V1_6",
+    "C_n36m24_Mm16_m2_ell0_s3_V1_6",
+    "C_n36m24_Mm18_2_ell0_s3_V2_9",
+    "C_n36m24_Mm18_m8_ell0_s3_V2_9",
+    "C_n36m24_Mm8_2_ell0_s3_V5_6",
+    "C_n40m24_M12_14_ell0_s3_V12_6",
+    "C_n40m24_M14_ell0_s2_V12",
+    "C_n40m24_M4_14_ell0_s3_V12_6",
+    "C_n40m24_Mm12_14_ell0_s3_V12_6",
+    "C_n40m24_Mm20_14_ell0_s3_V12_6",
+    "C_n40m24_Mm4_14_ell0_s3_V12_6",
+    "C_n40m32_Mm12_2_ell0_s3_V1_6"
+  ],
+  "timeout": [
+    "C_n18m12_Mm3_ell3_s2_V2",
+    "C_n24m16_Mm4_6_ell1_s3_V5_8",
+    "C_n32m24_Mm12_14_ell0_s3_V1_6",
+    "C_n32m24_Mm12_14_ell0_s3_V7_6",
+    "C_n36m24_Mm18_14_ell0_s3_V2_9"
+  ],
+  "compute_bound_threshold": {
+    "real_jacobian_order_std_seconds": 180,
+    "smallest_timeout_unknowns": 67,
+    "note": "mixed order chart 67 unk / 75 eqs timed out at 180s exact-Q; ell=0 x-free charts UNIT in <1s through 76 unk / 39 eqs"
+  },
+  "certificates": [
+    {
+      "class_id": "C_n18m12_Mm3_ell3_s2_V2",
+      "class_verdict": "TIMEOUT",
+      "kind": "mixed",
+      "n_unknowns": 67,
+      "jacobian_identically_zero": null,
+      "exact_q": false,
+      "solve_skipped_compute_bound": null,
+      "note": "NON_EMPTY is not a counterexample unless a point with J=const lifts. TIMEOUT at this size is the compute-bound threshold."
+    },
+    {
+      "class_id": "C_n24m16_Mm4_6_ell1_s3_V5_8",
+      "class_verdict": "TIMEOUT",
+      "kind": "mixed",
+      "n_unknowns": 71,
+      "jacobian_identically_zero": null,
+      "exact_q": false,
+      "solve_skipped_compute_bound": null,
+      "note": "NON_EMPTY is not a counterexample unless a point with J=const lifts. TIMEOUT at this size is the compute-bound threshold."
+    },
+    {
+      "class_id": "C_n32m24_Mm12_14_ell0_s3_V1_6",
+      "class_verdict": "TIMEOUT",
+      "kind": "unsplit",
+      "n_unknowns": 79,
+      "jacobian_identically_zero": null,
+      "exact_q": false,
+      "solve_skipped_compute_bound": null,
+      "note": "NON_EMPTY is not a counterexample unless a point with J=const lifts. TIMEOUT at this size is the compute-bound threshold."
+    },
+    {
+      "class_id": "C_n32m24_Mm12_14_ell0_s3_V7_6",
+      "class_verdict": "TIMEOUT",
+      "kind": "unsplit",
+      "n_unknowns": 79,
+      "jacobian_identically_zero": null,
+      "exact_q": false,
+      "solve_skipped_compute_bound": true,
+      "note": "same size band as C_n32m24_Mm12_14_ell0_s3_V1_6 (79 unk, 61 eqs, 180s std timeout); extract only, solve not retried"
+    },
+    {
+      "class_id": "C_n32m24_Mm20_2_ell0_s3_V1_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 59,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n32m24_Mm20_m6_ell0_s3_V1_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 55,
+      "jacobian_identically_zero": true,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. Jacobian identically 0 on the D1 support (x-free inventory); J=c is impossible."
+    },
+    {
+      "class_id": "C_n36m24_Mm16_6_ell0_s3_V1_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 71,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n36m24_Mm16_m2_ell0_s3_V1_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 61,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n36m24_Mm18_14_ell0_s3_V2_9",
+      "class_verdict": "TIMEOUT",
+      "kind": "unsplit",
+      "n_unknowns": 79,
+      "jacobian_identically_zero": null,
+      "exact_q": false,
+      "solve_skipped_compute_bound": true,
+      "note": "same size band as C_n32m24_Mm12_14_ell0_s3_V1_6 (79 unk, 61 eqs, 180s std timeout); extract only, solve not retried"
+    },
+    {
+      "class_id": "C_n36m24_Mm18_2_ell0_s3_V2_9",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 63,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n36m24_Mm18_m8_ell0_s3_V2_9",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 59,
+      "jacobian_identically_zero": true,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. Jacobian identically 0 on the D1 support (x-free inventory); J=c is impossible."
+    },
+    {
+      "class_id": "C_n36m24_Mm8_2_ell0_s3_V5_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 63,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n40m24_M12_14_ell0_s3_V12_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 79,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n40m24_M14_ell0_s2_V12",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 79,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n40m24_M4_14_ell0_s3_V12_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 79,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n40m24_Mm12_14_ell0_s3_V12_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 79,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n40m24_Mm20_14_ell0_s3_V12_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 79,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n40m24_Mm4_14_ell0_s3_V12_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 79,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    },
+    {
+      "class_id": "C_n40m32_Mm12_2_ell0_s3_V1_6",
+      "class_verdict": "DEAD",
+      "kind": "unsplit",
+      "n_unknowns": 76,
+      "jacobian_identically_zero": false,
+      "exact_q": true,
+      "solve_skipped_compute_bound": null,
+      "note": "union UNIT implies every unsplit fibre UNIT. full necessary order chart, exact-Q unit."
+    }
+  ],
+  "controls": [
+    "D108_delta3",
+    "G9966_delta2_stage4",
+    "K8_d108_nosplit",
+    "K9A_9966_unsplit",
+    "tame"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "chart_kind": "joint_order_incidence_pole_jacobian",
+  "class_id": "G9966_delta2_stage4",
+  "class_verdict": "DEAD",
+  "control": true,
+  "engine": "singular_replay",
+  "exact_q": true,
+  "expected": "UNIT",
+  "fallacy_v2": "A class kill needs the FULL necessary chart (h-support included; for u_s>=2 split rows the joint chart: order + minor-incidence + pole + Jacobian) AND every stem UNIT AND exact-Q confirm. Modular [1] is not a kill. A surviving point is not a counterexample unless J is a nonzero constant and the point lifts.",
+  "kind": "split",
+  "label": "(99,66) delta=2 stage-4 unit (6264)",
+  "matched_expected": true,
+  "n_unknowns": 2,
+  "note": "stage4_J_d159_k35 = 6264; 17(pppp)",
+  "schema": "census-sweep-class-certificate-v1",
+  "sources": [
+    {
+      "M": [
+        -66,
+        77,
+        97
+      ],
+      "V": {
+        "2": 8,
+        "3": 8
+      },
+      "delta": "2",
+      "m": 66,
+      "n": 99,
+      "partition": [
+        2,
+        1
+      ],
+      "u_s": 3,
+      "v_s": 8
+    }
+  ],
+  "stems": [
+    {
+      "accepted": true,
+      "basis_size": 1,
+      "dimension": -1,
+      "elapsed_seconds": 0.008,
+      "nf1_size": 0,
+      "returncode": 0,
+      "script": "/home/ubuntu/jc2/box/census-sweep-20260905/controls/G9966_delta2_stage4/stage4.sing",
+      "script_sha256": "1657767c5c90ca5f05629c8872174ec93ea4828fb83174443ee159f00d2491e3",
+      "stderr": "/home/ubuntu/jc2/box/census-sweep-20260905/controls/G9966_delta2_stage4/G9966_delta2_stage4.err",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "/home/ubuntu/jc2/box/census-sweep-20260905/controls/G9966_delta2_stage4/G9966_delta2_stage4.out",
+      "stdout_sha256": "236517b4a8e5567c586d39194059d49207001416a1d922efaec1fc3d2b9c7b73",
+      "stem": "G9966_delta2_stage4",
+      "timed_out": false,
+      "unit": true,
+      "verdict": "UNIT"
+    }
+  ]
+}

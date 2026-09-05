@@ -1,0 +1,47 @@
+{
+  "chart_kind": "k4ray_pin_lower_band",
+  "class_id": "K9A_9966_unsplit",
+  "class_verdict": "DEAD",
+  "control": true,
+  "engine": "singular_replay",
+  "exact_q": true,
+  "expected": "UNIT",
+  "fallacy_v2": "A class kill needs the FULL necessary chart (h-support included; for u_s>=2 split rows the joint chart: order + minor-incidence + pole + Jacobian) AND every stem UNIT AND exact-Q confirm. Modular [1] is not a kill. A surviving point is not a counterexample unless J is a nonzero constant and the point lifts.",
+  "kind": "unsplit",
+  "label": "(99,66) case A internal split A, K=9 pin+lower-band",
+  "matched_expected": true,
+  "n_unknowns": 36,
+  "note": "36-var chart A; UNIT_IDEAL_CHAR0; 17(bbbbbb)",
+  "schema": "census-sweep-class-certificate-v1",
+  "sources": [
+    {
+      "M2": 21,
+      "V2": 8,
+      "ell": 4,
+      "m": 66,
+      "m_prime": 18,
+      "n": 99,
+      "n_prime": 27
+    }
+  ],
+  "stems": [
+    {
+      "accepted": true,
+      "basis_size": 1,
+      "dimension": -1,
+      "elapsed_seconds": 7.478,
+      "nf1_size": 0,
+      "returncode": 0,
+      "script": "/home/ubuntu/jc2/box/census-sweep-20260905/controls/K9A_9966_unsplit/K9_A_full96_exact_Q_p0_Q.sing",
+      "script_sha256": "f7ef5ea453a2a2d6dc62af0cf337ee7f15ebd63a532409f4524c418a40dd53e1",
+      "stderr": "/home/ubuntu/jc2/box/census-sweep-20260905/controls/K9A_9966_unsplit/K9A_9966_unsplit.err",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "/home/ubuntu/jc2/box/census-sweep-20260905/controls/K9A_9966_unsplit/K9A_9966_unsplit.out",
+      "stdout_sha256": "b0c407d6f5718c43acf77302b7afba2de0eaad481abf566bd23c2de8cf38de08",
+      "stem": "K9A_9966_unsplit",
+      "timed_out": false,
+      "unit": true,
+      "verdict": "UNIT"
+    }
+  ]
+}
