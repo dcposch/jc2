@@ -16,7 +16,7 @@ math-hq over their **private IP** (same subnet/SG). SSH: `~/.ssh/jc2-fleet`.
 
 ## Usage
 ```
-ops/fleet/fleet.sh launch 4 c7i.4xlarge   # 4 x86 workers (8 real cores each)
+ops/fleet/fleet.sh launch 4 c7i.4xlarge spot  # 4 spot workers (~58% cheaper, restartable)
 ops/fleet/fleet.sh wait all               # block until provisioned; prints versions
 ops/fleet/fleet.sh ips                     # list workers
 ops/fleet/fleet.sh push <IP> box/job/ '~/job/'

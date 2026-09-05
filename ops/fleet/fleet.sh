@@ -6,7 +6,7 @@
 # the jc2-fleet key (private key on math-hq at ~/.ssh/jc2-fleet).
 #
 # Usage:
-#   ops/fleet/fleet.sh launch [COUNT] [TYPE]     # default COUNT=1 TYPE=$DEFAULT_TYPE
+#   ops/fleet/fleet.sh launch [COUNT] [TYPE] [spot|ondemand]  # default 1 $DEFAULT_TYPE ondemand; spot ~58% cheaper
 #   ops/fleet/fleet.sh ips                        # list workers: id, private IP, provision state
 #   ops/fleet/fleet.sh wait <ID...|all>          # block until running + PROVISION_DONE
 #   ops/fleet/fleet.sh run <IP> <cmd...>          # ssh exec on a worker
@@ -30,11 +30,13 @@ udata(){ sed "s|__JC2_FLEET_PUB__|$(tr -d '\n' < "$HERE/jc2-fleet.pub")|" "$HERE
 cmd=${1:-help}; shift || true
 case "$cmd" in
   launch)
-    COUNT=${1:-1}; TYPE=${2:-$DEFAULT_TYPE}; TS=$(date -u +%Y%m%dT%H%M%SZ)
+    # launch [COUNT] [TYPE] [spot|ondemand]   (default ondemand; spot ~58% cheaper, restartable batch)
+    COUNT=${1:-1}; TYPE=${2:-$DEFAULT_TYPE}; MARKET=${3:-ondemand}; TS=$(date -u +%Y%m%dT%H%M%SZ)
+    MOPT=""; [ "$MARKET" = spot ] && MOPT="--instance-market-options MarketType=spot"
     q run-instances --image-id $AMI --instance-type "$TYPE" --count "$COUNT" \
-      --key-name $KEY --security-group-ids $SG --subnet-id $SUBNET \
+      --key-name $KEY --security-group-ids $SG --subnet-id $SUBNET $MOPT \
       --associate-public-ip-address --user-data "$(udata)" \
-      --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=jc2-worker-$TS},{Key=jc2fleet,Value=1}]" \
+      --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=jc2-worker-$TS},{Key=jc2fleet,Value=1},{Key=market,Value=$MARKET}]" \
       --query 'Instances[].InstanceId' --output text ;;
   ips)
     q describe-instances --filters Name=tag:jc2fleet,Values=1 Name=instance-state-name,Values=running,pending \
