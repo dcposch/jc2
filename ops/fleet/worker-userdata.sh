@@ -4,6 +4,9 @@
 # and the campaign PyPI tools qqideal + msolveio (latest). SSH via jc2-fleet.
 set -x
 exec > /var/log/jc2-provision.log 2>&1
+# --- prefer IPv4 globally (subnet has no IPv6 route; IPv6 timeouts stall apt AND pip) ---
+printf 'precedence ::ffff:0:0/96  100\n' >> /etc/gai.conf
+
 # --- SSH key (belt-and-suspenders; --key-name jc2-fleet also injects it) ---
 mkdir -p /home/ubuntu/.ssh
 cat >> /home/ubuntu/.ssh/authorized_keys <<'PUBKEY'
