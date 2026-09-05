@@ -38,6 +38,14 @@ case "$cmd" in
       --associate-public-ip-address --user-data "$(udata)" \
       --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=jc2-worker-$TS},{Key=jc2fleet,Value=1},{Key=market,Value=$MARKET},{Key=Owner,Value=${FLEET_OWNER:-${JC2_LANE:-manual}}}]" \
       --query 'Instances[].InstanceId' --output text ;;
+  msolve)
+    # install the official msolve 0.10.1 (AVX-512 build) on workers; msolveio requires 0.10.x
+    MSB=${MSOLVE_BIN:-$HOME/.local/share/jc2/msolve-0.10.1-avx512}
+    [ -x "$MSB" ] || MSB=/home/ubuntu/jc2/box/moh14-charts-20260905/tools/msolve-0.10.1-official-intel-avx512/msolve
+    for ip in "$@"; do
+      scp -q -o StrictHostKeyChecking=no -i $SSHK "$MSB" ubuntu@$ip:/home/ubuntu/msolve-0.10.1 && \
+      ssh -o StrictHostKeyChecking=no -i $SSHK ubuntu@$ip 'sudo install -m755 /home/ubuntu/msolve-0.10.1 /usr/local/bin/msolve && msolve -h 2>&1 | grep -oE "0\.[0-9]+\.[0-9]+" | head -1' && echo "msolve 0.10.1 installed on $ip" || echo "msolve install FAILED on $ip"
+    done ;;
   ips)
     q describe-instances --filters Name=tag:jc2fleet,Values=1 Name=instance-state-name,Values=running,pending \
       --query 'Reservations[].Instances[].{ID:InstanceId,Priv:PrivateIpAddress,State:State.Name,Type:InstanceType,Owner:Tags[?Key==`Owner`]|[0].Value,Launched:LaunchTime}' --output table ;;
@@ -47,7 +55,7 @@ case "$cmd" in
       until [ "$(q describe-instances --instance-ids $id --query 'Reservations[].Instances[].State.Name' --output text)" = running ]; do sleep 8; done
       ip=$(q describe-instances --instance-ids $id --query 'Reservations[].Instances[].PrivateIpAddress' --output text)
       echo -n "$id ($ip) provisioning"; for i in $(seq 1 60); do
-        if ssh $SSHO ubuntu@$ip 'test -f ~/PROVISION_DONE' 2>/dev/null; then echo " READY"; ssh $SSHO ubuntu@$ip 'cat ~/PROVISION_VERSIONS' 2>/dev/null; break; fi
+        if ssh $SSHO ubuntu@$ip 'test -f ~/PROVISION_DONE' 2>/dev/null; then echo " READY"; ssh $SSHO ubuntu@$ip 'cat ~/PROVISION_VERSIONS' 2>/dev/null; sh "$0" msolve $ip; break; fi
         echo -n .; sleep 20; done; done ;;
   run)  IP=$1; shift; ssh $SSHO ubuntu@$IP "$@" ;;
   push) IP=$1; rsync -az -e "ssh $SSHO" "$2" ubuntu@$IP:"$3" ;;
