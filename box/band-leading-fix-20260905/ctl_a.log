@@ -1,0 +1,38 @@
+ctl_a_joint_wz6_jet0pinned_stage0: rows=21 free=224 piv=0 zero=18 resid=3 dim=-1 UNIT=True (23.8s)
+{
+  "a1_frozen_cut43_groebner": {
+    "coords": 7,
+    "raw_rows": 13,
+    "nonzero_rows": 12,
+    "pivots": 7,
+    "residual": {
+      "minor_n6_pi0": "-jet2**2",
+      "minor_n7_pi0": "2*jet1**2*jet2",
+      "minor_n7_pi1": "-2*jet2",
+      "minor_n8_pi0": "-c - jet1**4 + 9*jet1*jet2**2",
+      "minor_n8_pi1": "2*jet1**2"
+    },
+    "localized_unit": true,
+    "groebner": [
+      "1"
+    ],
+    "reproduces_[1]": true
+  },
+  "stage0_pole_local_power": 4,
+  "stage0_is_strictly_below_leading": true,
+  "stage0_pole_coeff_is_table_get": true,
+  "a2_joint_frozen_stage0": {
+    "tag": "ctl_a_joint_wz6_jet0pinned_stage0",
+    "raw_row_count": 21,
+    "Qstar_pivots": 0,
+    "residual_row_count": 3,
+    "dimension": -1,
+    "unit_ideal": true,
+    "reduce_1_in_std": "0",
+    "pipeline_can_still_kill": true,
+    "wall_seconds": 23.8
+  },
+  "wall_seconds": 24.5
+}
+CTL_A_OK
+EXIT:0

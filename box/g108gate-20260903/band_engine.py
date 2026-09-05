@@ -7,6 +7,11 @@ outer D2/D1 preblock, the delta=3 common-h3 incidence, direct-pole support,
 and the Jacobian schedule.  Q-star reduction uses only nonzero rational
 coefficients.  The branch dies in the common-h3 incidence preflight, so the
 scheduled direct F/G pole and Jacobian rows are compiled but never imposed.
+
+Leading-row repair 2026-09-05 (cone-vertex gate §6–§7 / rekill §7):
+``pole_coeff`` subtracts p^12 at F local 96 and p^8 at G local 64. Stage 0
+is terminal here, so this helper is the emission contract for any later
+continuation. Canonical: box/band-leading-fix-20260905/leading_pole.py.
 """
 
 from __future__ import annotations
@@ -657,6 +662,34 @@ def raw_minor_support(name: str) -> dict:
         "rows_by_local_power": {str(power): len(values) for power, values in grouped.items()},
         "target_at_leading_power": "(pi^2-c)^12" if name == "F" else "(pi^2-c)^8",
     }
+
+
+# Leading-row repair 2026-09-05. Keep in sync with
+# box/band-leading-fix-20260905/leading_pole.py (d108_*).
+# continuation_schedule already recorded "subtract p^12 at F local 96 and
+# p^8 at G local 64"; this is the emission that implements it.
+def leading_pole_power(name: str) -> int:
+    if name == "F":
+        return 96
+    if name == "G":
+        return 64
+    raise ValueError(name)
+
+
+def leading_pole_target_table(name: str) -> dict[int, sp.Expr]:
+    """[π^k] of p^12 (F) or p^8 (G), p = π²−c. Gate §6 / rekill §7."""
+    pi, c = sp.symbols("pi c")
+    p = pi**2 - c
+    poly = sp.Poly(sp.expand(p ** (12 if name == "F" else 8)), pi)
+    return {int(mon[0]): sp.expand(cf) for mon, cf in poly.terms()}
+
+
+def pole_coeff(table, n, k, name):
+    """F/G pole entry: coefficient minus target at the leading local power."""
+    value = table.get((n, k), sp.Integer(0))
+    if n != leading_pole_power(name):
+        return value
+    return sp.expand(value - leading_pole_target_table(name).get(k, 0))
 
 
 def continuation_schedule() -> dict:

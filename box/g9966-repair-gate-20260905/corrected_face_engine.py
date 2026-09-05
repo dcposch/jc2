@@ -1,23 +1,13 @@
 #!/usr/bin/env python3
-"""Exact sparse continuation of the (99,66) joint two-point chart.
+"""Diagnostic (99,66) repair allowing the two h3 equality-face coefficients.
 
-This driver reconstructs the charged common-h3/major-h2 state, imposes the
-outer base-h2 D2 support preblock, and then uses the charged major weight
-W=3*r+4*q for the D1 boundary bands.  It never divides by a parameter:
-``qstar_reduce`` accepts only coefficients in QQ*.
-
-The three native filtrations are independent.  The explicit driver convention
-is recorded in the JSON output:
-
-  stage 0: D1 offset 0, the named next pole exponent, and J(162,27);
-  stage 1: D1 offset 1, the next occupied pole exponent, and the rest of J162;
-  stage n>=2: D1 offset n (while present), the next occupied pole exponent,
-              and the complete Jacobian degree 163-n.
-
-The chart is represented in z=w-1 coordinates.  The 99 free C2/C3 directions
-are replaced by the output coordinates of K2=t^33*h2; this is an invertible
-unit-triangular coordinate change certified by the charged major-tower pivot
-pattern.  The seven h2-D1 rows are imposed exactly in these coordinates.
+The source h3 strict-floor restriction is replaced by weight >=32, with
+the t4*z5 coefficient fixed to -8/3 by the h2 face and t8*z2 initially free.
+The old strict-support basis is retained and these two pure face terms added.
+Both branch minor leaders are re-solved exactly with jet0 and Hc_11_0 free.
+This diagnostic does not establish necessity of every imported chart block.
+In particular the delta2 double-root coordinate remains at zeta=0.
+No original input is modified; provenance and exact diff accompany this file.
 
 Leading-row repair 2026-09-05 (cone-vertex gate §6–§7): ``pole_coeff``
 subtracts the forced F/G face at the top pole tag (δ=2: 81/54; δ=5/2:
@@ -45,8 +35,9 @@ import sympy as sp
 
 
 ROOT = Path(__file__).resolve().parents[2]
-RECEIPT = ROOT / "xmodel/g9966-global-band-sol56-20260903.run.v2"
-FROZEN = Path("/tmp/jc2-lane.cNPqDa/inputs")
+HERE = Path(__file__).resolve().parent
+RECEIPT = ROOT / "box/g9966-d2-precise-20260905/receipt.run.v2"
+FROZEN = ROOT / "box/g9966-d2-precise-20260905/frozen"
 
 
 def sha256(path: Path) -> str:
@@ -64,7 +55,6 @@ def verify_inputs() -> dict:
             key, value = line.split("=", 1)
             fields[key] = value
     count = int(fields["charged_inputs"])
-    assert Path(fields["lane_inputs_dir"]) == FROZEN
     checked = []
     for index in range(1, count + 1):
         name = fields[f"charged_input_{index}_basename"]
@@ -73,7 +63,7 @@ def verify_inputs() -> dict:
         actual = sha256(FROZEN / name)
         assert actual == expected, f"charged input mismatch: {name}"
         checked.append((name, actual))
-    assert count == 20
+    assert count == 8
     return {
         "receipt": str(RECEIPT),
         "lane_inputs_dir": str(FROZEN),
@@ -85,25 +75,15 @@ def verify_inputs() -> dict:
     }
 
 
-def reproduce_charged_endpoint() -> dict:
-    """Replay the frozen self-contained 16-row endpoint driver."""
-    driver = FROZEN / "first_global_band.py"
-    expected_path = FROZEN / "results.json"
-    replay = subprocess.run(
-        ["python3", str(driver)], capture_output=True, check=True
-    ).stdout
-    expected = expected_path.read_bytes()
-    assert replay == expected
-    parsed = json.loads(replay)
-    assert parsed["rank"]["plus_first_10_J_through_G65"] == 15
-    assert parsed["residual_count"] == 0
+def charged_driver_control() -> dict:
+    """Pin the pristine engine; endpoint controls run separately before replay."""
+    charged = FROZEN / "band_engine.py"
+    actual = sha256(charged)
+    expected = "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9"
+    assert actual == expected
     return {
-        "byte_identical": True,
-        "result_sha256": hashlib.sha256(replay).hexdigest(),
-        "rank": 15,
-        "residual_count": 0,
-        "delta2_dimension": 6704 - 15,
-        "delta52_dimension": 6702 - 15,
+        "charged_driver_sha256": actual,
+        "separate_original_controls_required": True,
     }
 
 
@@ -256,33 +236,33 @@ def h3_template() -> tuple[TZ, list[sp.Symbol]]:
             for j in range(degree - vmin + 1):
                 out[(r, vmin + j)] = out.get((r, vmin + j), 0) + variable * comb(degree - vmin, j)
     assert len(variables) == 21
+    out[(4,5)] = out.get((4,5),0) - sp.Rational(8,3)
+    out[(8,2)] = out.get((8,2),0) + symbol("E82")
+    variables.append(symbol("E82"))
+    assert len(variables) == 22
     return {key: sp.expand(value) for key, value in out.items()}, variables
 
 
 def h3_branch_map(branch: str) -> tuple[dict[sp.Symbol, sp.Expr], list[sp.Symbol], dict]:
-    rho, u, v, c = map(symbol, ("rho", "u", "v", "c"))
-    names = {(r, d): symbol(f"Hc_{r}_{d}") for r in range(1, 12) for d in range(12-r)}
-    if branch == "delta2":
-        values = {
-            (1,8):0,(1,9):0,(1,10):0,(2,7):0,(2,8):0,(2,9):3*u,
-            (3,6):0,(3,7):0,(3,8):3*rho,(4,6):0,(4,7):3*u**2,
-            (5,5):0,(5,6):6*rho*u,(6,4):-u**3,(6,5):u**3,
-            (7,3):-3*rho*u**2,(8,3):0,(9,2):-u*(3*rho*u**2-symbol("Hc_7_4")),
-        }
-        free = [symbol("Hc_7_4"), symbol("Hc_10_1"), symbol("Hc_11_0"), rho, u]
-        centre = {"parameters":["rho","u"],"localization":"rho!=0"}
+    """Exact minor-leader solution after correcting the h3 D2 equality face."""
+    if branch == 'delta2':
+        encoded = {'E82': '-(-3*Hc_7_4*jet0 - 3*Hc_8_3 - 9*jet0**4*u**2 - 18*jet0**3*rho*u + 18*jet0**2*u**3 + 16*jet0**2*u + 27*jet0*rho*u**2 - 8*u**2)/3', 'Hc_1_10': '-3*jet0', 'Hc_1_8': '0', 'Hc_1_9': '0', 'Hc_2_7': '0', 'Hc_2_8': '-3*jet0**2', 'Hc_2_9': '3*(jet0**2 + u)', 'Hc_3_6': '-jet0**3', 'Hc_3_7': '2*jet0*(jet0**2 + 3*u)', 'Hc_3_8': '-jet0**3 - 3*jet0*u + 3*rho', 'Hc_4_6': '-(9*jet0**2*u + 8)/3', 'Hc_4_7': '(-9*jet0**2*u - 18*jet0*rho + 9*u**2 - 8)/3', 'Hc_5_5': '3*jet0*(-jet0**2*u - jet0*rho + u**2)', 'Hc_5_6': '(9*jet0**3*u + 9*jet0**2*rho + 9*jet0*u**2 + 16*jet0 + 18*rho*u)/3', 'Hc_6_4': '-(-18*jet0**2*u**2 - 8*jet0**2 - 18*jet0*rho*u + 3*u**3)/3', 'Hc_6_5': '(-9*jet0**2*u**2 - 8*jet0**2 + 3*u**3 - 16*u)/3', 'Hc_7_3': '-u*(-9*jet0**3*u - 18*jet0**2*rho + 9*jet0*u**2 + 16*jet0 + 9*rho*u)/3', 'Hc_9_2': '-(3*Hc_7_4*jet0**2 - 3*Hc_7_4*u + 3*Hc_8_3*jet0 + 9*jet0**5*u**2 + 18*jet0**4*rho*u - 30*jet0**3*u**3 - 16*jet0**3*u - 54*jet0**2*rho*u**2 + 9*jet0*u**4 + 24*jet0*u**2 + 9*rho*u**3)/3'}
+        free_names = ['Hc_10_1', 'Hc_11_0', 'Hc_7_4', 'Hc_8_3', 'jet0', 'rho', 'u']
+        localizer = 'rho'
+    elif branch == 'delta52':
+        encoded = {'E82': '-(-3*Hc_8_3 - 3*c*jet0 + 9*jet0**2*u**3 + 16*jet0**2*u - 18*jet0*u**2*v - 16*jet0*v - 8*u**2 + 9*u*v**2)/3', 'Hc_10_1': '-(-3*Hc_8_3*u - 6*c*jet0*u + 3*c*v + 9*jet0**2*u**4 + 24*jet0**2*u**2 - 18*jet0*u**3*v - 32*jet0*u*v - 8*u**3 + 9*u**2*v**2 + 8*v**2)/3', 'Hc_1_10': '-3*jet0', 'Hc_1_8': '0', 'Hc_1_9': '0', 'Hc_2_7': '0', 'Hc_2_8': '-3*jet0**2', 'Hc_2_9': '3*(jet0**2 + u)', 'Hc_3_6': '-jet0**3', 'Hc_3_7': '2*jet0*(jet0**2 + 3*u)', 'Hc_3_8': '-jet0**3 - 3*jet0*u - 3*v', 'Hc_4_6': '-(9*jet0**2*u + 8)/3', 'Hc_4_7': '(-9*jet0**2*u + 18*jet0*v + 9*u**2 - 8)/3', 'Hc_5_5': '3*jet0*(-jet0**2*u + jet0*v + u**2)', 'Hc_5_6': '(9*jet0**3*u - 9*jet0**2*v + 9*jet0*u**2 + 16*jet0 - 18*u*v)/3', 'Hc_6_4': '-(-18*jet0**2*u**2 - 8*jet0**2 + 18*jet0*u*v + 3*u**3)/3', 'Hc_6_5': '(-9*jet0**2*u**2 - 8*jet0**2 + 3*u**3 - 16*u + 9*v**2)/3', 'Hc_7_3': '-(-9*jet0**3*u**2 + 18*jet0**2*u*v + 9*jet0*u**3 + 16*jet0*u - 9*jet0*v**2 - 9*u**2*v)/3', 'Hc_7_4': '(3*c - 9*jet0**3*u**2 + 18*jet0**2*u*v + 9*jet0*u**3 - 9*jet0*v**2 - 9*u**2*v + 16*v)/3', 'Hc_9_2': '(-3*Hc_8_3*jet0 - 3*c*jet0**2 + 3*c*u + 12*jet0**3*u**3 + 16*jet0**3*u - 27*jet0**2*u**2*v - 16*jet0**2*v - 24*jet0*u**2 + 18*jet0*u*v**2 + 16*u*v - 3*v**3)/3'}
+        free_names = ['Hc_11_0', 'Hc_8_3', 'jet0', 'u', 'v', 'c']
+        localizer = 'c'
     else:
-        values = {
-            (1,8):0,(1,9):0,(1,10):0,(2,7):0,(2,8):0,(2,9):3*u,
-            (3,6):0,(3,7):0,(3,8):-3*v,(4,6):0,(4,7):3*u**2,
-            (5,5):0,(5,6):-6*u*v,(6,4):-u**3,(6,5):u**3+3*v**2,
-            (7,3):3*u**2*v,(7,4):c-3*u**2*v,(8,3):3*u*v**2,
-            (9,2):c*u-v**3,(10,1):-c*v,(11,0):0,
-        }
-        free = [u, v, c]
-        centre = {"parameters":["u","v","c"],"localization":"c!=0","b0":"fixed_zero"}
-    substitutions = {names[key]: sp.expand(value) for key, value in values.items()}
-    return substitutions, free, centre
+        raise ValueError(branch)
+    substitutions = {symbol(name):sp.sympify(rhs) for name,rhs in encoded.items()}
+    free = list(map(symbol,free_names))
+    centre = {"parameters":free_names,"localization":localizer+"!=0",
+              "minor_constant":"free","Hc_11_0":"free",
+              "h3_face":"pi^8-(8/3)*pi^5+E82*pi^2",
+              "E82":"solved in terms of retained Hc_8_3 and other free coefficients",
+              "scope":"diagnostic corrected h3 equality face, no full necessity assertion"}
+    return substitutions,free,centre
 
 
 def h3_minor_control(branch: str, h3: TZ) -> dict:
@@ -298,7 +278,8 @@ def h3_minor_control(branch: str, h3: TZ) -> dict:
             want = expected.get(n, {})
             assert set(got) == set(want)
             assert all(sp.expand(got[k] - want[k]) == 0 for k in got)
-        return {"target":"t^9*zeta^2*(zeta+3*rho)","verified":True}
+        return {"target":"t^9*zeta^2*(zeta+3*rho)","verified":True,
+                "minor_series":"y=jet0+u*t+zeta*t^2","jet0":"free"}
     rows = local_rows(h3, "delta52", 21, exact_only=False)
     expected = {21: {1: -c, 3: 1}}
     for n in range(22):
@@ -306,7 +287,9 @@ def h3_minor_control(branch: str, h3: TZ) -> dict:
         want = expected.get(n, {})
         assert set(got) == set(want)
         assert all(sp.expand(got[k] - want[k]) == 0 for k in got)
-    return {"target":"s^21*pi*(pi^2-c)","verified":True,"ODE_compatibility":"Hc_11_0=0"}
+    return {"target":"s^21*pi*(pi^2-c)","verified":True,
+            "minor_series":"y=jet0+u*t+v*t^2+pi*t^(5/2)","jet0":"free",
+            "Hc_11_0":"free; no ODE compatibility imposed"}
 
 
 def build_major_h2(branch: str, max_t: int) -> tuple[TZ, set[sp.Symbol], dict]:
@@ -381,7 +364,7 @@ def build_major_h2(branch: str, max_t: int) -> tuple[TZ, set[sp.Symbol], dict]:
             if value!=0:
                 k2[(r,q)]=value
     inner_free=set(hfree)|dfree
-    expected=104 if branch=="delta2" else 102
+    expected=106 if branch=="delta2" else 105
     assert len(inner_free)==expected
     return k2,inner_free,{
         "h3_control":control,"centre":centre,
@@ -550,24 +533,33 @@ def all_w_bands(item: TZ) -> dict[int,dict[int,sp.Expr]]:
 def local_rows(item: TZ,branch: str,max_power: int,exact_only: bool=True) -> dict[tuple[int,int],sp.Expr]:
     wbands=all_w_bands(item)
     out: dict[tuple[int,int],sp.Expr]=defaultdict(lambda:sp.Integer(0))
-    u,v=map(symbol,("u","v"))
+    jet0,u,v=map(symbol,("jet0","u","v"))
     if branch=="delta2":
         for r,poly in wbands.items():
             for j,coefficient in poly.items():
-                for k in range(j+1):
-                    n=r+2*j+k
-                    if n<=max_power:
-                        out[(n,k)]+=coefficient*comb(j,k)*u**(j-k)
+                if r+j>max_power:
+                    continue
+                for d in range(j+1):
+                    for k in range(j-d+1):
+                        a=j-d-k
+                        n=r+d+2*a+3*k
+                        if n<=max_power:
+                            multinomial=factorial(j)//(factorial(d)*factorial(a)*factorial(k))
+                            out[(n,k)]+=coefficient*multinomial*jet0**d*u**a
     else:
         for r,poly in wbands.items():
             for j,coefficient in poly.items():
-                for b in range(j+1):
-                    for k in range(j-b+1):
-                        a=j-b-k
-                        n=2*r+4*j+2*b+3*k
-                        if n<=max_power:
-                            multinomial=factorial(j)//(factorial(a)*factorial(b)*factorial(k))
-                            out[(n,k)]+=coefficient*multinomial*u**a*v**b
+                if 2*r+2*j>max_power:
+                    continue
+                for d in range(j+1):
+                    for b in range(j-d+1):
+                        for k in range(j-d-b+1):
+                            a=j-d-b-k
+                            n=2*r+2*d+4*a+6*b+7*k
+                            if n<=max_power:
+                                multinomial=(factorial(j)//(factorial(d)*factorial(a)
+                                             *factorial(b)*factorial(k)))
+                                out[(n,k)]+=coefficient*multinomial*jet0**d*u**a*v**b
     return {tag:sp.expand(value) for tag,value in out.items() if value!=0}
 
 
@@ -641,6 +633,76 @@ def pole_coeff(table, n, k, branch, name):
 def rows_hash(rows: Iterable[tuple[str,sp.Expr]]) -> str:
     payload="".join(f"{label}\t{sp.srepr(sp.expand(row))}\n" for label,row in rows)
     return hashlib.sha256(payload.encode()).hexdigest()
+
+
+def small_rational_point(
+    rows: list[tuple[str,sp.Expr]], residual: list[tuple[str,sp.Expr]],
+    linear_map: dict[sp.Symbol,sp.Expr], all_free: set[sp.Symbol],
+    localized: sp.Symbol,
+) -> dict:
+    """Try a bounded QQ section, then verify every cumulative row exactly."""
+    remaining=all_free-set(linear_map)
+    jet0=symbol("jet0")
+    trials=[sp.Rational(1),sp.Rational(-1),sp.Rational(2),sp.Rational(-2),
+            sp.Rational(1,2),sp.Rational(-1,2)]
+    settings=[]
+    if jet0 in remaining:
+        settings=[{jet0:value} for value in trials]
+    else:
+        dependencies=sorted(linear_map[jet0].free_symbols.intersection(remaining)
+                            -{localized},key=str)
+        for dependency in dependencies:
+            settings.extend({dependency:value} for value in trials)
+        if dependencies:
+            settings.append({dependency:sp.Integer(1) for dependency in dependencies})
+        else:
+            settings=[{}]
+    attempted=0
+    for local_value in trials:
+        for setting in settings:
+            attempted+=1
+            point={variable:sp.Integer(0) for variable in remaining}
+            point[localized]=local_value
+            point.update(setting)
+            if any(sp.expand(row.xreplace(point))!=0 for _label,row in residual):
+                continue
+            full=dict(point)
+            for variable,rhs in linear_map.items():
+                value=sp.cancel(rhs.xreplace(point))
+                if value.free_symbols or not value.is_Rational:
+                    break
+                full[variable]=value
+            else:
+                assert set(full)==all_free
+                assert full[localized]!=0
+                assert all(not value.free_symbols and value.is_Rational for value in full.values())
+                assert all(sp.expand(row.xreplace(full))==0 for _label,row in rows)
+                if full[jet0]==0:
+                    continue
+                payload="".join(f"{variable}={full[variable]}\n" for variable in sorted(full,key=str))
+                zero_payload="".join(f"{label}\t0\n" for label,_row in rows)
+                nonzero={str(variable):str(full[variable]) for variable in sorted(full,key=str)
+                         if full[variable]!=0}
+                return {
+                    "status":"FOUND","field":"Q","localized":str(localized),
+                    "localized_value":str(full[localized]),"jet0_value":str(full[jet0]),
+                    "jet0_nonzero":full[jet0]!=0,"all_free_count":len(all_free),
+                    "nonzero_assignment":nonzero,"omitted_all_free_default":"0",
+                    "full_assignment_sha256":hashlib.sha256(payload.encode()).hexdigest(),
+                    "resolved_Qstar_back_substitutions":len(linear_map),
+                    "raw_rows_verified_zero":len(rows),"residual_rows_verified_zero":len(residual),
+                    "raw_rows_hash":rows_hash(rows),
+                    "raw_zero_image_sha256":hashlib.sha256(zero_payload.encode()).hexdigest(),
+                    "localization_wrapper_value":str(1/full[localized]),
+                    "gauge_ledger":{"group_element":"(x,y)->(x,y+a1)",
+                                    "minor_jet0_pin_released":True,
+                                    "Hc_11_0_free":True},
+                    "scope":"rational point of cumulative necessary chart; not a Keller pair",
+                    "attempts":attempted,
+                }
+    return {"status":"NOT_FOUND_BOUNDED_Q","attempts":attempted,
+            "trial_values":[str(value) for value in trials],
+            "scope":"failure of this bounded search is not nonexistence"}
 
 
 def singular_dimension(
@@ -764,7 +826,7 @@ def cumulative_rows(branch:str,stage:int,KF:TZ,KG:TZ) -> tuple[list[tuple[str,sp
 def run(branch:str,stage:int,emit_singular:Path|None=None)->dict:
     started=time.perf_counter()
     custody=verify_inputs()
-    endpoint=reproduce_charged_endpoint()
+    endpoint=charged_driver_control()
     jac_control=jacobian_normalization_control()
     raw_counts={
         "delta2_F":sum(map(len,raw_minor_support("delta2","F").values())),
@@ -790,7 +852,12 @@ def run(branch:str,stage:int,emit_singular:Path|None=None)->dict:
     assert localized in remaining
     residual_symbols=set().union(*(row.free_symbols for _label,row in residual)) if residual else set()
     assert residual_symbols.issubset(remaining)
+    rational_point=small_rational_point(rows,residual,linear_map,all_free,localized)
     singular=singular_dimension(residual,branch,emit_singular)
+    if rational_point["status"]=="FOUND":
+        # An exact point in the localized chart and a unit Gröbner basis are
+        # mutually exclusive.  Fail closed if either certificate path drifts.
+        assert singular["unit_ideal"] is False
     if singular["unit_ideal"]:
         dimension=None
         verdict="DEAD"
@@ -808,6 +875,14 @@ def run(branch:str,stage:int,emit_singular:Path|None=None)->dict:
             "pole":"next occupied local exponent (branch-specific)",
             "Jacobian":"named d162,k27; finish d162; then total degrees downward",
             "warning":"synchronization is a driver convention, not a source theorem",
+        },
+        "precise_gauge_repair":{
+            "sound_D2_floor_retained":True,
+            "minor_constant":"jet0 free",
+            "released_gauge_pin":"minor jet0=0",
+            "delta52_Hc_11_0":"free",
+            "h3_equality_face_correction":True,
+            "new_free_dimensions_over_pristine":2 if branch=="delta2" else 3,
         },
         "custody":custody,"driver_sha256":sha256(Path(__file__)),
         "charged_endpoint":endpoint,
@@ -832,6 +907,7 @@ def run(branch:str,stage:int,emit_singular:Path|None=None)->dict:
             "linear_free_before_residue":len(remaining),
             "exact_Krull_dimension_localized":dimension,
         },
+        "necessary_chart_rational_point":rational_point,
         "verdict":verdict,"nonlinear_residue_appears":bool(residual),
         "resources":{"wall_seconds":elapsed,"peak_rss_kib":rss,
                      "self_peak_rss_kib":rss_self,"children_peak_rss_kib":rss_children,

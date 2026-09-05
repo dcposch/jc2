@@ -1,0 +1,174 @@
+[c] build_major_h2(delta2, 27)
+[c] local_rows K2, 175 slots
+[c] qstar_reduce 123 h2-only rows, eligible=105
+[c] pivots=76 zeros=47 residual=0
+[c] specialized K2 slots=156; local_rows at 27
+[c] a27_ok=True viol_below=0
+{
+  "branch": "delta2",
+  "depth": 27,
+  "h2_only_rows": 123,
+  "Qstar_pivots": 76,
+  "dependent_zero": 47,
+  "residual_rows": 0,
+  "witness_violations_p_lt_27": [],
+  "witness_a27": "zeta**6*(zeta + 3)**3",
+  "witness_a27_matches_(zeta^2*(zeta+3))^3": true,
+  "localizer_rho": "1",
+  "leading_F": {
+    "n": 81,
+    "stage": 77,
+    "n_tags": 27,
+    "old_nonzero_at_witness": [
+      [
+        18,
+        "19683"
+      ],
+      [
+        19,
+        "59049"
+      ],
+      [
+        20,
+        "78732"
+      ],
+      [
+        21,
+        "61236"
+      ],
+      [
+        22,
+        "30618"
+      ],
+      [
+        23,
+        "10206"
+      ],
+      [
+        24,
+        "2268"
+      ],
+      [
+        25,
+        "324"
+      ],
+      [
+        26,
+        "27"
+      ]
+    ],
+    "old_k0": "0",
+    "new_all_zero": true,
+    "new_nonzero": [],
+    "old_constant_nonzero": [
+      [
+        18,
+        "19683"
+      ],
+      [
+        19,
+        "59049"
+      ],
+      [
+        20,
+        "78732"
+      ],
+      [
+        21,
+        "61236"
+      ],
+      [
+        22,
+        "30618"
+      ],
+      [
+        23,
+        "10206"
+      ],
+      [
+        24,
+        "2268"
+      ],
+      [
+        25,
+        "324"
+      ],
+      [
+        26,
+        "27"
+      ]
+    ],
+    "spurious_unit_from_old_constant": true
+  },
+  "leading_G": {
+    "n": 54,
+    "stage": 50,
+    "n_tags": 18,
+    "old_nonzero_at_witness": [
+      [
+        12,
+        "729"
+      ],
+      [
+        13,
+        "1458"
+      ],
+      [
+        14,
+        "1215"
+      ],
+      [
+        15,
+        "540"
+      ],
+      [
+        16,
+        "135"
+      ],
+      [
+        17,
+        "18"
+      ]
+    ],
+    "old_k0": "0",
+    "new_all_zero": true,
+    "new_nonzero": [],
+    "old_constant_nonzero": [
+      [
+        12,
+        "729"
+      ],
+      [
+        13,
+        "1458"
+      ],
+      [
+        14,
+        "1215"
+      ],
+      [
+        15,
+        "540"
+      ],
+      [
+        16,
+        "135"
+      ],
+      [
+        17,
+        "18"
+      ]
+    ],
+    "spurious_unit_from_old_constant": true
+  },
+  "poly_identity_F": true,
+  "poly_identity_G": true,
+  "stage_spec_F77_pole": 81,
+  "stage_spec_G50_pole": 54,
+  "leading_row_alone_is_unit_OLD": true,
+  "leading_row_alone_is_unit_NEW": false,
+  "NEW_leading_rows_satisfied_on_Delta_witness": true,
+  "secs": 369.9
+}
+CTL_C_OK
+EXIT:0
