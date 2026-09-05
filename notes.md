@@ -21159,3 +21159,9 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - Fleet: 12 workers incl. 8 × r7i.24xlarge/x2idn.16xlarge launched 13:49Z by moh-bigmem (must terminate by ~17:50Z; verify at its seal); .67/.86 r7i.16xlarge = graded-moh (r2 adopted); lean-02 is NOT ours.
 - Ops: graded-moh r1 died at 30 min on a Codex "model at capacity" error (not math) → r2 with draft charged. Lane launcher rejects duplicate charged basenames (d108-center hit it; fixed). Adapter edits by DC (00:31Z) and the compiler's source-complete default (h-support lane) committed at 16:20Z.
 - Round wake 00:00Z Sept 6 armed (bk8h762xp).
+
+## 2026-09-05 16:04Z LIVE STATE
+- Banked since 14:0x: 17(ggggggg) split-window theorem PROMOTED; (hhhhhhh) D=108 δ=3 kill REFUTED (radius) → D=108 OPEN both arms; (iiiiiii) operative sweep: 0 cheap kills in 1,420 rows; (jjjjjjj) K16 (UF) Abel 2nd kind, finiteness theory inapplicable; (kkkkkkk) (C-TOP) 936-row kill REFUTED — descend() copies parent V; U-NEG conditional; (lllllll) charts are graded cones, c∉I (N≥2); (mmmmmmm) k4-ray β strata not closed; (nnnnnnn) t=8: F4 done, FGLM running; (ooooooo) child-top u_s≥2 refuted-as-posed, PROVED reduction child data = parent x-side datum; (ppppppp) Macaulay route infeasible by size.
+- HONEST STATE: (99,66) skeleton verdict + degree-wide closure CONDITIONAL (precise replay running); D=108 OPEN; Moh ≤100 charts complete but unkillable by any brute force so far; K16 (T) t≤7 solid, t=8 three steps away; all-degree residual counts are label-level until child-own-v reseeds V'.
+- Lanes (9): s56-recert, gi-only, bigmem-harvest, d2-precise [Sol 4] | d108-rekill, k4ray-strata-solve, t8-fglm-harvest [Opus 3] | child-own-v [Astra 1] | k16-universal-series [Fable 1]. Crons: round 23:55Z, heartbeat :23.
+- Fleet: 8 big workers under bigmem-harvest (hard stop 16:50Z); .163 orphan idle (DC to terminate: i-0cd415bd9d3abed39); fleet.sh now tags Owner, installs msolve 0.10.1 on wait.
