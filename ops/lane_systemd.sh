@@ -13,6 +13,8 @@ cmd=${1:-}
 unit_for() { printf 'jc2-lane-%s' "$1"; }
 case "$cmd" in
   launch)
+    # DISK GUARD (2026-09-05): a full root disk killed a lane mid-run; refuse to launch below 400 MB free.
+    _free_kb=$(df -Pk / | awk 'NR==2{print $4}'); if [ "${_free_kb:-0}" -lt 409600 ]; then echo "lane_systemd: REFUSING launch — root filesystem has ${_free_kb} KB free (< 400 MB); free space first" >&2; exit 75; fi
     [ "$#" -eq 4 ] || { echo "usage: $0 launch ADAPTER TAG PROMPT" >&2; exit 2; }
     adapter=$2; tag=$3; prompt=$4
     case "$prompt" in /*) ;; *) prompt=$(pwd -P)/$prompt ;; esac
