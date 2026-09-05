@@ -21153,7 +21153,7 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 - 2026-09-05T13:58Z h-support gate DECIDED (17(wwwwww)); 8 lanes running; see AUDIT.
 
-## 2026-09-05 16:20Z LIVE STATE
+## 2026-09-05 14:0xZ LIVE STATE (clock-corrected; written ~14:05Z)
 - Banked today: 17(wwwwww) h-support gate decided (charts COMPLETE; source-support theorem); (xxxxxx) First-Separation lemma; (yyyyyy) U-negative = degenerate datum; (zzzzzz) REGRESSION: D2-centering load-bearing → (99,66) skeleton verdict, 17(ffffff) degree-wide closure, D=108 closure, S5/S6 all CONDITIONAL; (aaaaaaa) Lemma A + source-support theorem PROMOTED (caps false in 4/12 fibres only); (bbbbbbb) U-neg licence proved, child-top proved at u_s=1, (C-TOP) kills 936 rows pending gate; (ccccccc) K16 exact quotient survives, certs t≤5, uniform residual (R) ⟺ Abel ODE (UF).
 - 13 lanes: Astra 3/3 (d108-center, graded-moh-r2, ctop-gate) | Grok 5/8 (k16-t8, census-sweep, moh-bigmem, g9966-d2-replay, k4ray-beta-strata) | Sol 2/4 (split-window-alldeg, s56-recert) | Opus 1/4 (source-support-closeout) | Fable 1/1 (abel-polysol).
 - Fleet: 12 workers incl. 8 × r7i.24xlarge/x2idn.16xlarge launched 13:49Z by moh-bigmem (must terminate by ~17:50Z; verify at its seal); .67/.86 r7i.16xlarge = graded-moh (r2 adopted); lean-02 is NOT ours.
