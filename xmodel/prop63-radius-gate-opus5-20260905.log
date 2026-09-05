@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/prop63-radius-gate-opus5-20260905.md` (23,334 body bytes, `PASS`).
+
+## Verdict: FLAG CLEARED
+
+**(1) The hypothesis, exactly (Moh p.197 = PDF p.58, read from the rendered page — the text layer drops the fraction):** Prop 6.3 requires `δ_s = −1` **and the logarithmic radius `δ*_{s−1}` of the minor disc `D*_{s−1} ≥ v_s/u_s`**. Prop 6.4 (p.198) is exactly that inequality proved under `u_s = 1`. Moh's own usage confirms the gate: p.207 — *"apply Proposition 6.4 to the first three cases. Note that in these cases we always have `u_3 = d_3 − v_3 = 1`"* — he descends (64,68),(84,56),(75,50) and skips (99,66), the one Appendix II row with `u_s ≥ 2`.
+
+`u_s = 1` is load-bearing, not conservative: the p.199 proof forces `deg p = 1` via `gcd(n/d_s, −μ_i/d_s) = 1`; at general `u_s` the π-degrees carry a factor `u_s`, so `deg p | u_s` and the contradiction does not close.
+
+**(2)–(3) Per row.** Running that same proof at general `u_s` turns the failure into a usable dichotomy — (R) holds, **or** the cluster splits at `δ* ∈ [1, v_s/u_s)` with `2 ≤ q ≤ deg p ≤ u_s`; a Galois argument then gives `den(δ*) ≤ u_s`, re-deriving the campaign's relayed `N5`. So the hypothesis is a finite per-row window check, and I did it:
+
+- **D=108 no-split** (`u_s=2`, needs `δ*≥7/2`): window `{3/2, 2, 5/2, 3}` — matches 17(ssss) verbatim; first three excluded by two independent routes, `δ=3` killed by 17(ddddd). **DISCHARGED**, not assumed.
+- **(99,66) case (A) = S8** (`u_s=3`, needs `δ*≥8/3`): window `{4/3, 3/2, 5/3, 2, 7/3, 5/2}`; the charged C2 replay returns exactly `{2 [2,1], 5/2 [1,1,1]}`, and those two *are* branches B and C. **DISCHARGED**.
+- **k=4 ray K=7**: the gate's premise is wrong here. `ℓ=4` forces `u_s | K`, and `(57,38)` — the only `u_s ≥ 2` candidate — has **0** admissible rows. Every K=7 ancestor is `(147,98)` with `u_s=1`. **Unconditional.** Same for the K=8/K=9 `u_s=1` arms.
+
+**(4)** Split kills confirmed unaffected — Prop 6.3 only changes variables, and the joint charts are built in un-descended coordinates. No circularity, but the coupling runs the other way and is worth banking: the split kills *license* the complementary descent, so withdrawing 17(ddddd) would re-open the D=108 no-split descent too.
+
+Two things I could not close and typed as OPENs rather than assume: the sibling row S4 shares case (A)'s window but not its `μ₂`, so it needs its own screen replay; and the "14 excess ≤100 rows" list isn't reproducible from the charged inputs — the unscreened census has 24 excess pairs, only 7 of them entirely `u_s = 1`.
+DIVERT path=xmodel/prop63-radius-gate-opus5-20260905.md status=CLEAN_SEALED body_bytes=23334 body_sha256=25ad811f497d974946a7a991a5c3c2fa9bda9f9ab4d06a14080d44fdf3fbae69
