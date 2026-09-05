@@ -17,7 +17,7 @@ systemctl stop apt-daily.timer apt-daily-upgrade.timer unattended-upgrades.servi
 systemctl disable apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
 for i in $(seq 1 180); do fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1 || break; sleep 5; done
 export DEBIAN_FRONTEND=noninteractive
-APT="apt-get -o DPkg::Lock::Timeout=900 -y"
+APT="apt-get -o Acquire::ForceIPv4=true -o DPkg::Lock::Timeout=900 -y"
 $APT update
 $APT install singular msolve python3-pip python3-venv rsync git build-essential \
   libgmp-dev libmpfr-dev libflint-dev time || exit 1
