@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Sealed. Final summary:
+
+## Verdict: PARTIAL — 0 of 6 classes DEAD. The Moh ≤100 theorem is **not** resolved.
+
+**The reported bug does not exist.** AUDIT 17(qqqqqq)'s premise — a Singular type fault at `string(cc)` — is refuted three ways: `string()` renders transext coefficients including genuine fractions (direct control); no log in the chart dir contains "wrong type"; `NATIVE_DONE equations=0` was never emitted. The failing stems were **OOM-killed**: I measured 64.2 GB RSS after 6 min on `V2_1` (144 unknowns, 0 rows), and 184 GB after 20 min on `V1_2` (230) on an r7i. The 2026-09-05T06:22Z ops note calling it OOM was right; the 07:00Z reinterpretation was wrong.
+
+Root cause is the emitted ring: `ring R=(0,p1..pN),(y,x),dp;` puts all 77–336 unknowns in a `transext` coefficient field, and the h-adic division allocates fractions without bound.
+
+**Fixed** (`builder_fix.py`, committed as `c68adfa7`): unknowns move into the polynomial ring under a y-first block order so `lead(h)=y^K` — sound because `h` is monic in y, so the division never needed denominators — with `division()` doing the y-division behind a gate that passes on every stem. Peak RSS for the two previously impossible stems is now 3–4 GB. **Regression passes exactly**: 425/425 generators reproduced on the one stem with a complete prior artefact, same keys, identical term multisets. All 18 stems re-emitted, originals preserved.
+
+**The solve did not kill anything, and the chart looks like the reason.** `modular_solve.py` replaces the exact-Q `std` (still unfinished at 90 min) with a char-p prefix ladder plus a degree-bounded probe. All four extracted class unions complete a full degree-6 modular `std` over every generator in 19–63 s **without producing 1**; the s'=4 class also survives degree 12. Unbounded ladders grow monotonically rather than collapsing.
+
+Two things I did not deliver: the `M12_17` and `M9_20` union extractions were still running at seal (24 min, memory-flat, past the gate), and the 12 V-stems were re-emitted but not run — they only become necessary because the unions failed to kill, which I found out too late in the budget. `NO_KILL` is recorded as such, not as `SURVIVES`: a degree-bounded non-unit certifies nothing, and these charts are necessary over-approximations, so nothing here is evidence for a counterexample.
+
+Report: `xmodel/moh14-fix-solve-opus5-20260905.md` (18.7 KB, sealed, `PASS`). Nothing was terminated at seal, so the in-flight jobs can be collected without a relaunch. §5 lists four corrections for the coordinator to carry into `notes.md`/`AUDIT.md` — I left both untouched per scope.
+DIVERT path=xmodel/moh14-fix-solve-opus5-20260905.md status=CLEAN_SEALED body_bytes=18706 body_sha256=eb36982c8194079a9f085080612760e79ecbf031470ae17ff70398b7c9947028
