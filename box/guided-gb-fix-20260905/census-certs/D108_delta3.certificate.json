@@ -1,0 +1,58 @@
+{
+  "chart_kind": "joint_order_incidence_pole_jacobian",
+  "class_id": "D108_delta3",
+  "class_verdict": "DEAD",
+  "control": true,
+  "engine": "singular_replay",
+  "exact_q": true,
+  "expected": "UNIT",
+  "fallacy_v2": "A class kill needs the FULL necessary chart (h-support included; for u_s>=2 split rows the joint chart: order + minor-incidence + pole + Jacobian) AND every stem UNIT AND exact-Q confirm. Modular [1] is not a kill. A surviving point is not a counterexample unless J is a nonzero constant and the point lifts.",
+  "kind": "split",
+  "label": "D=108 delta=3 common-h3 minor incidence",
+  "matched_expected": true,
+  "n_unknowns": 4,
+  "note": "killing family = common-h3 minor incidence; 17(ddddd)/17(aaaaa)",
+  "schema": "census-sweep-class-certificate-v1",
+  "sources": [
+    {
+      "M": [
+        -72,
+        81,
+        106
+      ],
+      "V": {
+        "2": 7,
+        "3": 7
+      },
+      "delta": "3",
+      "m": 72,
+      "n": 108,
+      "partition": [
+        1,
+        1
+      ],
+      "u_s": 2,
+      "v_s": 7
+    }
+  ],
+  "stems": [
+    {
+      "accepted": true,
+      "basis_size": 1,
+      "dimension": -1,
+      "elapsed_seconds": 0.008,
+      "nf1_size": 0,
+      "returncode": 0,
+      "script": "/home/ubuntu/jc2/box/guided-gb-fix-20260905/census-controls/controls/D108_delta3/death_replay.sing",
+      "script_sha256": "a3adc4ef5f845f9a5317e51fb33bedcba1e02d23f0da4be3c9dac3a647e7c4f4",
+      "stderr": "/home/ubuntu/jc2/box/guided-gb-fix-20260905/census-controls/controls/D108_delta3/D108_delta3.err",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "/home/ubuntu/jc2/box/guided-gb-fix-20260905/census-controls/controls/D108_delta3/D108_delta3.out",
+      "stdout_sha256": "c1245f8b7e10cff37b1dd32bfe19619574d3c4d9d84cd0d7ff84194506b2e431",
+      "stem": "D108_delta3",
+      "timed_out": false,
+      "unit": true,
+      "verdict": "UNIT"
+    }
+  ]
+}

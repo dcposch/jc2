@@ -1,0 +1,17 @@
+unpatched Hilbert-seed path (gi70 analogue):
+  subprocess.run(Singular sleep-3 seed, timeout=1)
+  -> subprocess.TimeoutExpired after 1.003s
+  uncaught this is driver error 1
+
+unpatched guided_gb std path:
+  timeout_seconds=1 on 3s prelude
+  -> Verdict.INCONCLUSIVE_TIMEOUT
+  promotion_note: "no accepted result before timeout"
+  timed_out True, returncode 1
+  certificate has no timeout_stage
+
+patched:
+  std timeout -> INCONCLUSIVE_TIMEOUT at stage std
+  hilbert_seed timeout -> INCONCLUSIVE_TIMEOUT at stage hilbert_seed
+  TimeoutExpired never escapes
+  outer_watchdog_seconds suppresses inherited timeout_seconds
