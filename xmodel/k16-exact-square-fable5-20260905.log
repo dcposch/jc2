@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Nothing further is needed. All jobs are finished or cancelled, the report is sealed, and the drivers are hashed.
+
+**Outcome.** The exact-square lever is refuted as posed, and the report explains why with exact computations. Report: `xmodel/k16-exact-square-fable5-20260905.md`, sealed at 27 KB. Drivers in `box/k16sq-20260905/`. No notify is warranted.
+
+**What I found.**
+
+- **Tail support is false from t=4.** τ² lies in the tail ideal at t=3 only because its weight 26 exceeds the tail socle 20. At t=4 the tail socle is 35 and τ² has weight 34, and τ² is exactly not in the tail. This reproduces Astra's banked observation and explains it.
+- **Every verified square is degree-forced.** The quotient S_t/I_{t,+} is a fat point with socle weights 7, 14, 21, 30, 39, 49 at t=2..7. Since τ² has weight 8t+2, its membership at these indices is a corollary of (V0), not evidence of an identity. All sub-ideal tests at t=3,4,5 follow the rule "in iff weight above socle" with no exception, and every natural quantity of weight at or below the socle is outside I₊.
+- **New measured law.** The weighted Hilbert function of S_t/I_{t,+} equals the Fröberg-type expected series truncated at its first non-positive coefficient, exact at t=2,3,4 and mod p at t=5,6,7 with lengths 1709, 8621, 43133. It predicts the socle reaches 74 at t=9, exactly the weight of τ², and exceeds it from t=10. So the all-t exact square is predicted false from t=9, with generic exponent 3.
+- **Only uniform certificate.** Astra's identity τ + g·b₂·R = −Σ b4^k T_k reduces the square to the single membership b₂²R² ∈ I₊, for which nothing beyond the degree argument exists.
+- **Controls.** At t=2 the exponent is 1 on both fibres. On the failure fibre y=1/5 the membership is explicit: τ is b4³ times a weight-6 form and the tail is b4³ times an ideal of socle 3.
+
+**Exactness status.** τ ∉ I₊ is exact at t=3,4,5 and τ² ∈ I₊ is exact at t=3,4 by direct reduction and at t=5,6,7 by rank semicontinuity, backed by a term-by-term check that the mod-p rows reduce from the exact rows. The direct exact weight-42 run at t=5 and the weight-25 run at t=6 timed out and are recorded as such.
+
+**Next.** Two typed OPENs replace the lever: the socle law itself, and the exponent N₉, decidable by a single-weight Macaulay rank mod p at t=9 on a fleet worker. A memory note records the degree-forcing check and the cheap degBound truncation trick.
+DIVERT path=xmodel/k16-exact-square-fable5-20260905.md status=CLEAN body_bytes=27236 body_sha256=fb2be9f86f5dca40912005b92603aedcb36a195cffbe34c3bc50ce9afdf370f6

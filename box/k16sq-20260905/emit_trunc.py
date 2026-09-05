@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+"""Exact degBound-truncated analysis: std(I_+) truncated at weight W=8t+2 (homogeneous => correct in weights <= W),
+HF by weight up to W via weightKB, tau/tau^2 membership, lift(I_+, tau^2) verified explicitly."""
+import sys
+from pathlib import Path
+D = Path('/home/ubuntu/jc2/box/k16sq-20260905')
+tag, t = sys.argv[1], int(sys.argv[2]); q, e = 2*t+1, 3*t+1
+wts = list(range(1, t)) + [t+1]; W = 8*t+2
+o = []; say = o.append
+say(f'< "{D}/{tag}_rows.sing";'); say('option(redSB);')
+say(f'intvec wv={",".join(map(str,wts))}; int W={W}; int t={t};')
+say(f'ideal Iplus={",".join(f"T{k}" for k in range(1,2*t))};')
+say(f'degBound={W}; int tt=timer; ideal GI=std(Iplus); print("TRUNC_STD_MS "+string(timer-tt)+" size "+string(size(GI)));')
+say('int w; string s=""; int mx=-1; int zeros=0; for(w=0;w<=W;w++){ int hw=size(weightKB(GI,w,wv)); s=s+string(hw)+","; if(hw>0){mx=w;} kill hw; } print("HF_BY_WEIGHT_TRUNC "+s); print("LAST_NONZERO_WEIGHT_LE_W "+string(mx));')
+say('print("TAU_NF_ZERO "+string(reduce(tau,GI)==0)); print("TAU2_NF_ZERO "+string(reduce(tau^2,GI)==0));')
+say('tt=timer; matrix M=lift(Iplus,ideal(tau^2)); print("LIFT_MS "+string(timer-tt));')
+say('poly chk=0; int k; for(k=1;k<=ncols(Iplus);k++){ chk=chk+Iplus[k]*M[k,1]; } print("LIFT_VERIFIED "+string(chk==tau^2));')
+say('string sup=""; for(k=1;k<=ncols(Iplus);k++){ if(M[k,1]!=0){ sup=sup+string(k)+"(w"+string(deg(M[k,1]))+",n"+string(size(M[k,1]))+") "; } } print("LIFT_SUPPORT "+sup);')
+say(f'write("{D}/{tag}_trunc_lift.txt",string(M));')
+say('print("TRUNC_COMPLETE"); quit;')
+print('\n'.join(o))
