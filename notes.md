@@ -21165,3 +21165,11 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - HONEST STATE: (99,66) skeleton verdict + degree-wide closure CONDITIONAL (precise replay running); D=108 OPEN; Moh ≤100 charts complete but unkillable by any brute force so far; K16 (T) t≤7 solid, t=8 three steps away; all-degree residual counts are label-level until child-own-v reseeds V'.
 - Lanes (9): s56-recert, gi-only, bigmem-harvest, d2-precise [Sol 4] | d108-rekill, k4ray-strata-solve, t8-fglm-harvest [Opus 3] | child-own-v [Astra 1] | k16-universal-series [Fable 1]. Crons: round 23:55Z, heartbeat :23.
 - Fleet: 8 big workers under bigmem-harvest (hard stop 16:50Z); .163 orphan idle (DC to terminate: i-0cd415bd9d3abed39); fleet.sh now tags Owner, installs msolve 0.10.1 on wait.
+
+## 2026-09-05 16:47Z LIVE STATE
+- MILESTONE 17(vvvvvvv): operative residual at n≤200 = 66 NECESSARY ROWS (own-data reduction, Astra; gated by Opus, one filter fix); at n≤100 the survivors are exactly Moh's 5 rows + (99,66); the 12 Moh ≤100 fibres are EMPTY by tower arithmetic ⇒ Moh ≤100 reduces to the (99,66) closure.
+- (99,66): δ=2/δ=5/2 branch kills RE-CERTIFIED on gauge-paid charts (17(wwwwwww); gate g9966-repair-gate-astra running); configuration (A) still conditional on the K=9 β strata (k4ray-strata-solve running).
+- D=108: δ=3 split branch is a NECESSARY-CHART SURVIVOR at the correct radius (17(uuuuuuu)); deep rows being pushed (d108-survivor-deep). No-split arm conditional on deg β=b_min.
+- Moh ≤100 order charts: brute force exhausted (Gröbner time-bound, Macaulay size-bound, G_i-only 70-unknown chart compute-bound; gi70-longsolve running as a last 170-min bet) — but no longer needed for the 12 fibres (see milestone).
+- K16: (T) t≤7; t=8 three steps away (FGLM running, k16-t8-fglm-harvest); uniform gap = degenerate-tacnode dichotomy (k16-tacnode running).
+- Lanes (9): census-coverage, g9966-repair-gate [Astra 2] | survivor-deep, t8-fglm, k4ray-strata [Opus 3] | bigmem-harvest, gi70-longsolve, residual66-roster [Sol 3] | k16-tacnode [Fable 1]. Crons: round 23:55Z, heartbeat :23. Orphan .163 awaits DC. Big workers: harvest lane hard stop 16:50Z.
