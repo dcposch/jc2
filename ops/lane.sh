@@ -11,6 +11,7 @@ fi
 
 adapter=$1
 tag=$2
+export JC2_LANE=$tag
 prompt_arg=$3
 launch_dir=$(pwd -P)
 script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)

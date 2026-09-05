@@ -36,11 +36,11 @@ case "$cmd" in
     q run-instances --image-id $AMI --instance-type "$TYPE" --count "$COUNT" \
       --key-name $KEY --security-group-ids $SG --subnet-id $SUBNET $MOPT \
       --associate-public-ip-address --user-data "$(udata)" \
-      --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=jc2-worker-$TS},{Key=jc2fleet,Value=1},{Key=market,Value=$MARKET}]" \
+      --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=jc2-worker-$TS},{Key=jc2fleet,Value=1},{Key=market,Value=$MARKET},{Key=Owner,Value=${FLEET_OWNER:-${JC2_LANE:-manual}}}]" \
       --query 'Instances[].InstanceId' --output text ;;
   ips)
     q describe-instances --filters Name=tag:jc2fleet,Values=1 Name=instance-state-name,Values=running,pending \
-      --query 'Reservations[].Instances[].{ID:InstanceId,Priv:PrivateIpAddress,Pub:PublicIpAddress,State:State.Name,Type:InstanceType}' --output table ;;
+      --query 'Reservations[].Instances[].{ID:InstanceId,Priv:PrivateIpAddress,State:State.Name,Type:InstanceType,Owner:Tags[?Key==`Owner`]|[0].Value,Launched:LaunchTime}' --output table ;;
   wait)
     IDS="$*"; [ "$IDS" = all ] && IDS=$(q describe-instances --filters Name=tag:jc2fleet,Values=1 Name=instance-state-name,Values=running,pending --query 'Reservations[].Instances[].InstanceId' --output text)
     for id in $IDS; do
