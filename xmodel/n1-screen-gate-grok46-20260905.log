@@ -1,0 +1,22 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes from the lane receipt, then re-enumerate the eight skeletons and run the charged screen exactly as specified.Generating the hash manifest from the receipt and checking it mechanically, without retyping any digits.The lane directory is read-only; I'll write the awk-generated manifest elsewhere and re-run `sha256sum -c`.Hashes all match. Next I’ll read the screen driver, enumerator, and the charged skeleton/promotion sources.I have the promotion record. Next I’ll write the eight-skeleton screen driver and pull the S8 chart citation plus Prop 5.6 source.Writing the enumerator/screen driver and running it in the foreground on the eight skeletons, using unmodified charged imports.Screen table matches the claim. Next I’ll write the hostile report with exact kill conditions, promotion status, and the S8 citation.**DEGREE-WIDE `(99,66)` is CLOSED BY CITATION. NOTIFY-WORTHY.**
+
+The charged whole-tree screen, imports unmodified, kills seven of the eight `(1)`–`(13)`-admissible skeletons; S8 is the printed Moh row and is already dead by the banked trichotomy. Report: `xmodel/n1-screen-gate-grok46-20260905.md`. Drivers: `box/n1gate-20260905/`.
+
+Charged-input hashes: **9/9 OK** (`awk` manifest from the lane receipt, `sha256sum -c`). Enumeration: **exactly eight** rows at `(99,66)`, matched S1..S8.
+
+| id | result | first kill | exact condition | source |
+|---|---|---|---|---|
+| S1, S4, S5, S6 | **PASS** (dead) | `PARTITION` | forced major zero sibling at `D_2` fails `(12)∨(13)` | Moh Thm p.200(4) + Prop. 5.5; **17(r)** |
+| S2 | **PASS** (dead) | `UNGATED` Prop. 5.6 (also `GATED`) | p.200(4) forces the major zero sibling, which **is S3**; empty-free still-centred zero leaf | Prop. 5.6 p.188; **17(r)+17(hh)** |
+| S3, S7 | **PASS** (dead) | `UNGATED` Prop. 5.6 (also `GATED`) | selected `V_2` is the `(11)`-branch zero factor; empty free set | Prop. 5.6 p.188; p.201 `(11)` remark; **17(r)+17(hh)** |
+| S8 | **PASS** (survives screen; dead by chart) | — | unique row whose `D_2` zero factor is minor (`b=0 ≰ 3/2`) | **17(pppp)** B, **17(tttt)** C, **17(bbbbbb)** A |
+
+**Citation list:** 17(r) + 17(hh) + 17(pppp) + 17(tttt) + 17(bbbbbb). 17(ll) is a MEASURED re-base of the same screen, not a third necessary condition.
+
+**Ungated Prop. 5.6 (17(hh)):** promoted for still-centred **all-zero** chains, including forced-zero siblings. `OPEN[NONZERO-PARENT-TWIST]` remains, and is **not used** here. On S2/S3/S7 the relevant zero chains already have empty free sets, so even **gated** Prop. 5.6 kills them; ungating is not load-bearing on these three rows. Fable’s prose that S2’s selected chain is all-zero is false; the screen column is right.
+
+**S8:** 17(bbbbbb) is cited correctly as the completing delta (unsplit case A), with split legs 17(pppp) and 17(tttt) named in its chain.
+
+**Scope:** this closes N1 as Moh’s published open case under p.200-bottom (3) (degrees not simultaneously reducible). It does **not** close Moh `≤100` (14 excess `u_s=1` rows remain). Batch-3 receipt is still `RUNNING` with no `final_status`; its `.md` was not opened. Those joint charts are a redundant cross-check, not the proof.
+DIVERT path=xmodel/n1-screen-gate-grok46-20260905.md status=CLEAN body_bytes=20937 body_sha256=1beb3800bcfb96cd56b6a0060b4c88927225725adb62330cf19cf3450395ed6e
