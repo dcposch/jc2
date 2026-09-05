@@ -14,7 +14,7 @@
 #   ops/fleet/fleet.sh pull <IP> <src> <dst>      # rsync worker -> math-hq
 #   ops/fleet/fleet.sh term <ID...>               # terminate specific workers
 #   ops/fleet/fleet.sh term-all                   # terminate ALL jc2-worker instances
-set -euo pipefail
+set -eu; (set -o pipefail 2>/dev/null) && set -o pipefail
 REGION=us-east-1
 AMI=ami-066263bf15bd856de   # jc2-worker-base (math-hq snapshot: Singular+python+repo). Fast boot; apt fallback in userdata if bare.
 SG=sg-09ffa8932558f0a79
