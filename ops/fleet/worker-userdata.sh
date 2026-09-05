@@ -10,11 +10,16 @@ cat >> /home/ubuntu/.ssh/authorized_keys <<'PUBKEY'
 __JC2_FLEET_PUB__
 PUBKEY
 chown -R ubuntu:ubuntu /home/ubuntu/.ssh; chmod 700 /home/ubuntu/.ssh; chmod 600 /home/ubuntu/.ssh/authorized_keys
-# --- system CAS stack (universe for singular/msolve) ---
-add-apt-repository -y universe
+# --- system CAS stack (universe already enabled on the Ubuntu EC2 AMI) ---
+# Neutralise first-boot apt contention: unattended-upgrades holds the dpkg lock
+# for ~20 min on a fresh image; stop the timers and wait for the lock cleanly.
+systemctl stop apt-daily.timer apt-daily-upgrade.timer unattended-upgrades.service 2>/dev/null || true
+systemctl disable apt-daily.timer apt-daily-upgrade.timer 2>/dev/null || true
+for i in $(seq 1 180); do fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1 || break; sleep 5; done
 export DEBIAN_FRONTEND=noninteractive
-apt-get update -y
-apt-get install -y singular msolve python3-pip python3-venv rsync git build-essential \
+APT="apt-get -o DPkg::Lock::Timeout=900 -y"
+$APT update
+$APT install singular msolve python3-pip python3-venv rsync git build-essential \
   libgmp-dev libmpfr-dev libflint-dev time || exit 1
 # --- python CAS tools (campaign) ---
 pip3 install --break-system-packages --upgrade sympy python-flint qqideal msolveio || \
