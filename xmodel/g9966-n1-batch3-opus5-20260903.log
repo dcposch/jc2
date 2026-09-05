@@ -1,0 +1,30 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete. Report sealed at `xmodel/g9966-n1-batch3-opus5-20260903.md` (35.6 KB), all jobs stopped, drivers and artifacts under `box/g9966n1b3-20260903/`.
+
+## Verdict: PARTIAL — tally unchanged at 3 dead / 5 open of 8
+
+**N1 is not closed. No new skeleton died.** No claim of `NO-KELLER-PAIR-(99,66)`.
+
+All 15 charged inputs verified `OK` via an awk-generated manifest from the receipt.
+
+### What actually moved
+
+**1. The split branch is now a certified finite list.** The charged triage's `surviving_face_types` was a *hardcoded dict* — `face_charts()` only verified the listed `(p,q)`, it never enumerated the window. I derived two exact necessary conditions and ran them over every `(δ, partition)` pair:
+
+- **(G)** `δ=P/Q` ⇒ the face root multiset is `ζ_Q`-stable (nonzero roots in orbits of size exactly `Q`, equal multiplicity).
+- **(L)** at a root of multiplicity `λ`, order-matching forces `ν = kλ` **or exactly** `ν = λW+1`; summing against `deg q = Wu+1` gives `#high ≤ t·a_L + 1`.
+
+**66 charts examined, 54 killed, 12 survive** — reproducing the charged list exactly (the four mixed low/high leaves needed a direct triangular solve; residual `0`). The screen is provably **`W`-independent** (`t = (δ−1)/(v−uδ)` carries no `W`; verified over `W=5..59`, zero verdicts move), and `W` matches the row-generic `(−μ_s−2)/d_s` identically.
+
+**2. A declared assumption in the banked S8 death is now proved.** S8 has `u_s=3`, so it *does* have a split window. The screen returns exactly `δ=2,[2,1]` and `δ=5/2,[1,1,1]` — precisely the two branches `box/g9966s8-20260903/death-certificate.json` declares, under an explicit "depends on branch exhaustiveness" warning. S5/S6 (`u_s=1`) have an empty window. All three banked deaths are now complete on the split axis.
+
+**3. The dense charts are reducible.** All seven S1 order charts emitted with the target gate — including `[1,1,1,1,1]`, which batch 2 left as a 42-byte header; the other six reproduce batch 2 **byte-for-byte**. An ideal-preserving affine pivot reduction takes `[5]` from 111 vars / 51.5 MB to 61 vars / 66+169 rows, over `Q` and mod 32003, six of seven charts gated.
+
+### What did not work
+
+The reduced systems still do not finish a Gröbner basis. `guided_gb` types the exact-`Q` reduced `[5]` chart `INCONCLUSIVE_TIMEOUT`; `std`/`slimgb`/`Dp` on the full 235-row image ran 39 minutes without a basis. Byte count only fell 1.6×, which is the honest limit of the reduction as built.
+
+A **replay gate I wrote caught a real defect in my own reducer** — it was publishing each pivot's rhs as recorded rather than the resolved image, so the published map was stale. Everything derived from it was discarded and recomputed; the gate now passes on all six reductions.
+
+**Remaining duty, now exactly specified: 12 split joint charts + 105 no-split order charts.** The cheapest next step is deciding the reduced S1 `[5]` system (61 variables, 66 or 235 rows, both forms in custody).
+DIVERT path=xmodel/g9966-n1-batch3-opus5-20260903.md status=CLEAN body_bytes=35595 body_sha256=c9f853dc490dba611d8b229aea43d293a7bcbfee151c6c1f16b4655bc676c545
