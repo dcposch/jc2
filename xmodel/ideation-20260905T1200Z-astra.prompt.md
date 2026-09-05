@@ -1,0 +1,31 @@
+# Blind ideation submission — round 20260905T1200Z — Astra (GPT-6, PRIMARY)
+
+One blind submitter, full-spectrum round 20260905T1200Z. Read the sealed packet
+(hash below) FIRST, then banked reports as needed (AUDIT.md deltas 17(mmmmmm)–
+(ssssss) freshest; notes.md newest LIVE STATE binding; the 0200Z synthesis;
+freshest lane reports named in the packet). Do NOT read any
+ideation-20260905T1200Z-* submission; do NOT read the in-progress lane
+moh14-msolve-sol56 (receipt only). Roster: Astra (primary), Grok, Fable, Opus,
+Sol; GPT-5.5 retired. Answer Q1–Q4 of the packet with boldness; challenge the
+coordinator framing where wrong. Deliver ALL §3 items (disposition; Q1–Q4 typed
+w/ bounded quantities + cheapest tests; three idea cards; single first lane;
+continue/stop the running lane — receipt only; one systems upgrade; OPENs w/
+collision scan). Desk-scale CAS only (<10min); Moh PDF refs/moh1983_*.pdf (page
+N=PDF N−139); Xu refs/xu2016_*.pdf. The fleet (ops/fleet/) + msolve are available
+but this submission is desk-scale ideation, not a fleet job.
+Report: xmodel/ideation-20260905T1200Z-astra.md
+Seal (<!-- BODY-END -->; skeleton first without it); target 25-45KB; 150 min.
+charged_input=xmodel/ideation-20260905T1200Z-packet.md
+charged_input=xmodel/ideation-20260905T0200Z-synthesis.md
+charged_input=FALLACY-v2.md
+charged_input=COORDINATION.md
+
+Your inputs are frozen read-only copies in {{LANE_INPUTS}};
+verify these SHA-256 hashes first, MECHANICALLY: the receipt `xmodel/ideation-20260905T1200Z-astra.run.v2` carries `charged_input_<i>_sha256=`/`_basename=` lines; build the manifest with awk and run `sha256sum -c`; stop only on a real content mismatch:
+
+```text
+caf32f2f2faf822fca2e0fc4b49ac3556af88a97a3a8d3c71e25c97b035778f3  {{LANE_INPUTS}}/ideation-20260905T1200Z-packet.md
+4695f855267b451cfd27205fc6f59ca330c307a91cc1306ab737064e8e64a96e  {{LANE_INPUTS}}/ideation-20260905T0200Z-synthesis.md
+e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  {{LANE_INPUTS}}/FALLACY-v2.md
+26940fc8079763c6ff21476a6a8b5f17f4f3b752e965526a3e10c10d54b1182b  {{LANE_INPUTS}}/COORDINATION.md
+```
