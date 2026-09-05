@@ -11,15 +11,33 @@ from functools import lru_cache
 from math import gcd,lcm
 
 
+def _is_q_power_completion(P,Q,distinct_roots,all_multiplicity_w):
+    """Production final test for the completed Prop. 4.6(5) pattern."""
+    return (Q>0 and P%Q==0 and all_multiplicity_w and distinct_roots==Q)
+
+
+def is_q_power_pattern(P,Q,A,z,orbits):
+    """Expose the exact whole-pattern predicate for regression controls."""
+    P=int(P);Q=int(Q);A=int(A);z=int(z);orbits=tuple(map(int,orbits))
+    if Q<=0 or P%Q:return False
+    w=P//Q
+    multiplicities=((z,) if z>0 else ())+orbits
+    return _is_q_power_completion(
+        P,Q,int(z>0)+A*len(orbits),
+        bool(multiplicities) and all(value==w for value in multiplicities)
+    )
+
+
 class OwnVRouteTree:
     """Reuse one instance across selected first-support positions for one row."""
-    def __init__(self, source):
+    def __init__(self, source, *, legacy_resonance_filter=False):
         self.n=int(source.n);self.m=int(source.m);self.s=int(source.s)
         self.M={i:int(source.M[i]) for i in range(1,self.s+1)}
         self.V={i:int(source.V[i]) for i in range(2,self.s+1)}
         self.d={1:self.n}
         for i in range(1,self.s+1):self.d[i+1]=gcd(self.d[i],self.M[i])
         self.ns=self.n//self.d[2];self.ms=self.m//self.d[2]
+        self.legacy_resonance_filter=bool(legacy_resonance_filter)
         self._memo={}
 
     def delta(self,i,high):
@@ -60,7 +78,9 @@ class OwnVRouteTree:
             return self.ok(j-1,next_high,next_L,next_danger,tail,next_first)
 
         for z in range(P%A,P+1,A):
-            if z>0 and P==Q*z:continue  # PropA.3 resonance exclusion.
+            # Historical control only: this per-factor test is strictly
+            # stronger than Prop 4.6(5), which excludes p=q^w as a whole.
+            if self.legacy_resonance_filter and z>0 and P==Q*z:continue
             zmajor=F(z)>lo
             zero_witness=child(z,True) if zmajor else None
             if zmajor and zero_witness is None:continue
@@ -68,7 +88,7 @@ class OwnVRouteTree:
             cap=(Q-int(z>0))//A
             coins=[];coin_witness={}
             for r in range(1,total+1):
-                if P==Q*r:continue
+                if self.legacy_resonance_filter and P==Q*r:continue
                 major=F(r)>lo
                 witness=child(r,False) if major else None
                 if major and witness is None:continue
@@ -88,22 +108,38 @@ class OwnVRouteTree:
                 remaining=total-sum(pre); slots=cap-len(pre)
                 if remaining<0 or slots<0:continue
 
+                w=P//Q if P%Q==0 else None
+                distinct=int(z>0)+A*len(pre)
+                all_w=(w is not None and (z==0 or z==w)
+                       and all(value==w for value in pre))
+
                 @lru_cache(maxsize=None)
-                def fill(rem,left,index,major):
-                    if rem==0:return () if major else None
+                def fill(rem,left,index,major,distinct_roots,all_multiplicity_w):
+                    if rem==0:
+                        if not major:return None
+                        # Prop 4.6(5): reject exactly p=q^w, not an
+                        # individual factor whose multiplicity happens to w.
+                        if (not self.legacy_resonance_filter and
+                            _is_q_power_completion(
+                                P,Q,distinct_roots,all_multiplicity_w)):return None
+                        return ()
                     if left==0:return None
                     for idx in range(index,len(coins)):
                         value,is_major=coins[idx]
                         if value>rem:break
-                        rest=fill(rem-value,left-1,idx,major or is_major)
+                        rest=fill(rem-value,left-1,idx,major or is_major,
+                                  distinct_roots+A,
+                                  all_multiplicity_w and value==w)
                         if rest is not None:return (value,)+rest
                     return None
 
-                orbit_tail=fill(remaining,slots,0,zmajor or bool(pre))
+                orbit_tail=fill(remaining,slots,0,zmajor or bool(pre),distinct,all_w)
                 if orbit_tail is None:continue
                 orbits=pre+orbit_tail
                 return dict(j=j,delta=delta,centre_L=centre_L,A=A,P=P,Q=Q,
                             z=z,orbits=orbits,mode=mode,first_requested=first,
+                            resonance_filter=("legacy-per-factor" if
+                                self.legacy_resonance_filter else "exact-p-not-q-power"),
                             danger=danger,selected_child=selected,
                             zero_major_child=zero_witness,
                             nonzero_major_children={r:coin_witness[r] for r in set(orbits)
@@ -117,5 +153,7 @@ class OwnVRouteTree:
         return self.ok(self.s-1,(self.V[self.s],),1,True,need,j)
 
 
-def compatible_first_support(source,j):
-    return OwnVRouteTree(source).compatible_first_support(j)
+def compatible_first_support(source,j,*,legacy_resonance_filter=False):
+    return OwnVRouteTree(
+        source,legacy_resonance_filter=legacy_resonance_filter
+    ).compatible_first_support(j)
