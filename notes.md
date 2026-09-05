@@ -21088,3 +21088,15 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 ## 2026-09-04T22:22Z EVENT — `g9966-n1-skeletons-gpt55` sealed: N1 enumeration CONFIRMED (exactly 8 admissible skeletons at (99,66)); S6 (u_s=1 → (9,6)) DEAD exact-Q; 6 remain OPEN (S5 u_s=1 timeout-retryable; S1-S4,S7 u_s≥2 charts unbuilt). N1 = a finite list of 6 skeleton kills → the degree-wide (99,66) theorem. → AUDIT 17(cccccc). Launching g9966-n1-batch2-sol56 (close S5 like K89 + build/triage S1-S4,S7). Live: 1. Round wake 23:55Z.
 
 ## 2026-09-04T23:42Z EVENT — `g9966-n1-batch2-sol56` sealed: S5 DEAD; ERRATUM — 17(cccccc)'s S6 used wrong Jacobian exponent (ℓ=2 vs correct v_s−u_s−1=8), rebuilt here (S6 still dead, corrected cert). N1 tally: 3 dead / 5 open of 8. S1-S4,S7 (u_s≥2 joint charts, 2271-3441 coeffs) OPEN. The k=4 ray & D=108 used the correct exponent (no other error). → AUDIT 17(dddddd). Round wake 23:55Z imminent. Live: 0.
+
+## LIVE STATE (2026-09-05T00:32Z) — DC DIRECTIVE: ASTRA REPLACES SOL; DROP GPT-5.5
+
+- DC directive just now: GPT-6 Astra is now the primary co-researcher **in place of Sol**. Delegate the hardest work to Astra as the new frontier model.
+- Exact Codex model id verified via `codex debug models` after CLI update: `gpt-6-astra` (display GPT-6-Astra). Still listed alongside `gpt-5.6-sol` / `gpt-5.5` in catalog; campaign default switched away from Sol.
+- Adapter wiring: `ops/adapters/codex.sh` default `CODEX_MODEL` changed `gpt-5.6-sol` → `gpt-6-astra` (backup `codex.sh.bak-pre-astra`). Override still via `CODEX_MODEL` if needed.
+- Drop GPT-5.5 for jc2 routing: do **not** launch new lanes on `ops/adapters/codex55.sh` / `gpt-5.5` (now two generations old). File kept with DEPRECATED header so historical review-receipt hashes remain auditable (`codex55.sh.bak-pre-astra`). Remaining roster for non-Astra seats: Astra / Grok / Fable / Opus as appropriate.
+- Codex CLI updated on math-hq to 0.153.3 (was 0.153.0; vendor binary replaced under nvm `@openai/codex` linux-x64 path). Mac Codex already at 0.153.3.
+- Coordinators (jc2 + max11): treat Astra as primary co-research; stop routing to Sol/GPT-5.5 for new hard work; acknowledge in-session and act.
+
+
+## 2026-09-05T00:34Z OPS — ACK DC directive (banked 00:32Z): Astra (gpt-6-astra) replaces Sol as primary; codex.sh default verified = gpt-6-astra; codex55/GPT-5.5 DROPPED for new lanes. Nothing in-flight to reroute (batch3=Opus, round sol56/gpt55 lanes sealed pre-directive, Fable round lane running). Seat convention for new lanes: astra:codex, grok, fable5:claude, opus5:opus (no codex55). Delegating the hardest OPEN — the K16 atom (8.1)/nonzerodivisor-on-Γ — to Astra as its debut.
