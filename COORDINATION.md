@@ -6,6 +6,40 @@ ranking belong in `APPROACHES.md`; the detailed Keller-to-book / `G2-PSC` /
 `G2-BD` dependency map belongs in `ladder/REDUCTION.md`; claim-level evidence
 belongs in `AUDIT.md`. None is duplicated here.
 
+## Operating budget, seats, and fleet (2026-09-05, DC)
+
+**Coordinator host:** `math-hq` (i-0252f535410c26ebc, r6i.4xlarge, us-east-1a).
+Runs the coordinator (Opus 5) + all AGENT lanes. Agent lanes are model-side and
+light locally; **heavy computer-algebra is farmed to the fleet, not run here.**
+
+**Concurrent lane budget (per model; use only to the extent it raises overall
+rate of progress — the coordinator maximises throughput, not utilisation):**
+
+| Seat | Model | Adapter | Max lanes |
+|---|---|---|---|
+| Astra (PRIMARY, hardest work) | gpt-6-astra | `codex.sh` | 3 |
+| Fable (coordinator seat + 1 lane) | fable 5.1 | `claude.sh` | 1 |
+| Opus | opus 5 | `opus.sh` | 4 |
+| Sol (worker seat; demoted from primary) | gpt-5.6-sol | `sol.sh` | 4 |
+| Grok | grok 4.6 | `grok.sh` | 8 |
+
+Total ≤ 20 agent lanes. GPT-5.5 (`codex55.sh`) is DEPRECATED — do not route new
+lanes to it (kept only for historical review-hash auditability). Astra replaced
+Sol as PRIMARY (2026-09-05T00:32Z); Sol remains a valid worker seat per this
+budget.
+
+**Fleet (heavy CAS) — `ops/fleet/`.** Self-sufficient ephemeral workers launched
+from math-hq under the `jc2-fleet` key (no `claude-cli` key, no IAM instance
+profile; the role denies SSM / Instance-Connect / PassRole and this path avoids
+all three). `ops/fleet/fleet.sh launch|wait|run|push|pull|term-all`; each worker
+provisions Singular, msolve, python-flint, sympy, qqideal, msolveio (fail-gated).
+A **heavy-CAS lane runs its Gröbner/std/solve jobs on a worker via `fleet.sh`**,
+not locally; a light lane (ideation, derivation, source-read, gate) runs on
+math-hq. AWS: On-Demand Standard quota 1920 vCPU (~1904 free), Spot 256 vCPU.
+Default worker `c7i.4xlarge` (8 real cores, one Singular job per core); big-mem
+fallback `r7i`; cost lever `c7g.4xlarge` (Graviton, ~½ $/core — validate ARM).
+**Stop-idle discipline: `term-all` when a batch finishes; never leave idle workers.**
+
 ## Mission and decision rule
 
 Resolve the plane Jacobian conjecture, by proof or counterexample, as quickly
