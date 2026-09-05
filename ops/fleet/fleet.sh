@@ -16,7 +16,7 @@
 #   ops/fleet/fleet.sh term-all                   # terminate ALL jc2-worker instances
 set -euo pipefail
 REGION=us-east-1
-AMI=ami-0d7f022123f8ff19d           # Ubuntu 24.04 noble amd64 (bare; worker-userdata apt fallback installs the stack). Custom AMI TODO once snapshot reliable.
+AMI=ami-066263bf15bd856de   # jc2-worker-base (math-hq snapshot: Singular+python+repo). Fast boot; apt fallback in userdata if bare.
 SG=sg-09ffa8932558f0a79
 SUBNET=subnet-948915c9
 KEY=jc2-fleet
