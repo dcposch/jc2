@@ -1,0 +1,286 @@
+{
+  "c_zero_control": {
+    "certificate": {
+      "accepted_run_count": 1,
+      "crt_rational_reconstruction": {
+        "available": false,
+        "items": {},
+        "method": "CRT plus bounded rational reconstruction for scalar invariants"
+      },
+      "hilbert_hint": null,
+      "policy": {
+        "allow_modular_unit_promotion": false,
+        "note": "",
+        "require_controls": true,
+        "scope": "EXACT_Q"
+      },
+      "promotion_note": "exact Q standard basis has positive dimension",
+      "properness_scope": {
+        "positive_weights": [
+          []
+        ],
+        "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+        "systems_declared_homogeneous": false
+      },
+      "runs": [
+        {
+          "characteristic": 0,
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "Singular",
+            "--cpus=1",
+            "--threads=1",
+            "--flint-threads=1",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.sing"
+          ],
+          "elapsed_seconds": 0.020603,
+          "label": "c-zero-control",
+          "main": {
+            "accepted": true,
+            "basis_size": 12,
+            "dimension": 7,
+            "lead_dim": 7,
+            "lead_vdim": null,
+            "missing_markers": [],
+            "nf_all_zero": true,
+            "unit": false,
+            "vdim": null,
+            "vdim_matches_predicted": null
+          },
+          "perturbed": null,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.sing",
+          "script_sha256": "991747fbafd99bb3a58264605839c573228e76ce295c22ee273b5da40c10049f",
+          "stderr": "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.err",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout": "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.out",
+          "stdout_sha256": "f3d332039e9193f74d114785b26a861b3fec230650094a43444d4f4479350577",
+          "timed_out": false
+        }
+      ]
+    },
+    "verdict": "POSDIM"
+  },
+  "constant_row_omitted_witness": {
+    "J": "-2*gamma",
+    "P": "pi",
+    "Q": "gamma**2 + pi",
+    "literal_bound": false
+  },
+  "laurent_wedge_witness": {
+    "Jacobian": "c*gamma",
+    "P": "gamma^(-1)",
+    "Q": "-c*gamma^3*pi"
+  },
+  "literal_unit": {
+    "certificate": {
+      "accepted_run_count": 1,
+      "crt_rational_reconstruction": {
+        "available": false,
+        "items": {},
+        "method": "CRT plus bounded rational reconstruction for scalar invariants"
+      },
+      "hilbert_hint": null,
+      "policy": {
+        "allow_modular_unit_promotion": false,
+        "note": "",
+        "require_controls": true,
+        "scope": "EXACT_Q"
+      },
+      "promotion_note": "exact Q standard basis reduced 1 to 0",
+      "properness_scope": {
+        "positive_weights": [
+          []
+        ],
+        "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+        "systems_declared_homogeneous": false
+      },
+      "runs": [
+        {
+          "characteristic": 0,
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "Singular",
+            "--cpus=1",
+            "--threads=1",
+            "--flint-threads=1",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/recvatlas-20260905/literal-unit/literal-unit_Q.sing"
+          ],
+          "elapsed_seconds": 0.021606,
+          "label": "literal-unit",
+          "main": {
+            "accepted": true,
+            "basis_size": 1,
+            "dimension": -1,
+            "lead_dim": -1,
+            "lead_vdim": null,
+            "missing_markers": [],
+            "nf_all_zero": true,
+            "unit": true,
+            "vdim": null,
+            "vdim_matches_predicted": null
+          },
+          "perturbed": null,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/recvatlas-20260905/literal-unit/literal-unit_Q.sing",
+          "script_sha256": "47472649855aee1a843f99797619b001edf6f921c3024ad76835daf179b6c050",
+          "stderr": "/home/ubuntu/jc2/box/recvatlas-20260905/literal-unit/literal-unit_Q.err",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout": "/home/ubuntu/jc2/box/recvatlas-20260905/literal-unit/literal-unit_Q.out",
+          "stdout_sha256": "3d34afef2c235d463b007c13e784cca621608cd3a8e7306e3d9e3bfae20ff0a4",
+          "timed_out": false
+        }
+      ]
+    },
+    "verdict": "UNIT_IDEAL_CHAR0"
+  },
+  "omitted_negative_rows_control": {
+    "full_J": "-gamma",
+    "positive_part_J": "0",
+    "rejected": true,
+    "required_J": "-gamma",
+    "source_J": "1"
+  },
+  "pullback_controls": [
+    {
+      "F_excluded": "a0*f4/gamma + f1/gamma + f3/gamma**2 + f5*gamma**6*pi**2",
+      "F_retained": "a0**2*f5 + 2*a0*a1*f5*gamma + 2*a0*a2*f5*gamma**2 + a0*f2 + 2*a0*f5*gamma**3*pi + a1**2*f5*gamma**2 + 2*a1*a2*f5*gamma**3 + a1*f2*gamma + a1*f4 + 2*a1*f5*gamma**4*pi + a2**2*f5*gamma**4 + a2*f2*gamma**2 + a2*f4*gamma + 2*a2*f5*gamma**5*pi + f0 + f2*gamma**3*pi + f4*gamma**2*pi",
+      "G_excluded": "a0*h4/gamma + gamma**6*h5*pi**2 + h1/gamma + h3/gamma**2",
+      "G_retained": "a0**2*h5 + 2*a0*a1*gamma*h5 + 2*a0*a2*gamma**2*h5 + 2*a0*gamma**3*h5*pi + a0*h2 + a1**2*gamma**2*h5 + 2*a1*a2*gamma**3*h5 + 2*a1*gamma**4*h5*pi + a1*gamma*h2 + a1*h4 + a2**2*gamma**4*h5 + 2*a2*gamma**5*h5*pi + a2*gamma**2*h2 + a2*gamma*h4 + gamma**3*h2*pi + gamma**2*h4*pi + h0",
+      "K": "f1*h2 + f1*h4*y + 2*f1*h5*w - f2*h1 - 2*f2*h3*y - f2*h4*w + 2*f3*h2*y + 2*f3*h4*y**2 + 4*f3*h5*w*y - f4*h1*y + f4*h2*w - 2*f4*h3*y**2 + 2*f4*h5*w**2 - 2*f5*h1*w - 4*f5*h3*w*y - 2*f5*h4*w**2 - 1",
+      "chain_zero": true,
+      "correction": "2*a0**2*f4*gamma*h5 - 2*a0**2*f5*gamma*h4 + 2*a0*a1*f4*gamma**2*h5 - 2*a0*a1*f5*gamma**2*h4 + 2*a0*a2*f4*gamma**3*h5 - 2*a0*a2*f5*gamma**3*h4 + 2*a0*f1*gamma*h5 - a0*f2*gamma*h4 + 4*a0*f3*h5 + 2*a0*f4*gamma**4*h5*pi + a0*f4*gamma*h2 - 2*a0*f5*gamma**4*h4*pi - 2*a0*f5*gamma*h1 - 4*a0*f5*h3 + 2*a1*f1*gamma**2*h5 - 2*a1*f2*gamma**6*h5*pi + 4*a1*f3*gamma*h5 + 2*a1*f5*gamma**6*h2*pi - 2*a1*f5*gamma**2*h1 - 4*a1*f5*gamma*h3 + 2*a2*f1*gamma**3*h5 - 4*a2*f2*gamma**7*h5*pi + 4*a2*f3*gamma**2*h5 - 2*a2*f4*gamma**6*h5*pi + 4*a2*f5*gamma**7*h2*pi + 2*a2*f5*gamma**6*h4*pi - 2*a2*f5*gamma**3*h1 - 4*a2*f5*gamma**2*h3 + 2*f1*gamma**4*h5*pi + f1*gamma*h2 + f1*h4 - f2*gamma*h1 - 2*f2*h3 + 4*f3*gamma**3*h5*pi + 2*f3*h2 + 2*f3*h4/gamma + 2*f4*gamma**7*h5*pi**2 - f4*h1 - 2*f4*h3/gamma - 2*f5*gamma**7*h4*pi**2 - 2*f5*gamma**4*h1*pi - 4*f5*gamma**3*h3*pi",
+      "ell": 1,
+      "excluded_negative_or_high_pi_row_count": 6,
+      "jacobian_rows": {
+        "(1, 0)": "1",
+        "(2, 0)": "-2*a0*a1*f4*h5 + 2*a0*a1*f5*h4 + a1*f2*h4 - a1*f4*h2",
+        "(3, 0)": "-2*a0*a2*f4*h5 + 2*a0*a2*f5*h4 - 2*a1**2*f4*h5 + 2*a1**2*f5*h4 + a2*f2*h4 - a2*f4*h2",
+        "(4, 0)": "-4*a1*a2*f4*h5 + 4*a1*a2*f5*h4",
+        "(4, 1)": "-2*a0*f4*h5 + 2*a0*f5*h4 + f2*h4 - f4*h2",
+        "(5, 0)": "-2*a2**2*f4*h5 + 2*a2**2*f5*h4",
+        "(5, 1)": "-4*a1*f4*h5 + 4*a1*f5*h4",
+        "(6, 1)": "-2*a1*f2*h5 + 2*a1*f5*h2 - 6*a2*f4*h5 + 6*a2*f5*h4",
+        "(7, 1)": "-4*a2*f2*h5 + 4*a2*f5*h2"
+      },
+      "pullback_difference_zero": true,
+      "receiver_pi_cap": 1,
+      "receiver_row_count": 9,
+      "source_monomials": [
+        "1",
+        "y",
+        "w",
+        "y**2",
+        "w*y",
+        "w**2"
+      ],
+      "u": 1,
+      "v": 3
+    },
+    {
+      "F_excluded": "a0*f4/gamma**2 + a1*f4/gamma + f1/gamma**2 + f3/gamma**4 + f5*gamma**10*pi**2",
+      "F_retained": "a0**2*f5 + 2*a0*a1*f5*gamma + 2*a0*a2*f5*gamma**2 + 2*a0*a3*f5*gamma**3 + 2*a0*a4*f5*gamma**4 + a0*f2 + 2*a0*f5*gamma**5*pi + a1**2*f5*gamma**2 + 2*a1*a2*f5*gamma**3 + 2*a1*a3*f5*gamma**4 + 2*a1*a4*f5*gamma**5 + a1*f2*gamma + 2*a1*f5*gamma**6*pi + a2**2*f5*gamma**4 + 2*a2*a3*f5*gamma**5 + 2*a2*a4*f5*gamma**6 + a2*f2*gamma**2 + a2*f4 + 2*a2*f5*gamma**7*pi + a3**2*f5*gamma**6 + 2*a3*a4*f5*gamma**7 + a3*f2*gamma**3 + a3*f4*gamma + 2*a3*f5*gamma**8*pi + a4**2*f5*gamma**8 + a4*f2*gamma**4 + a4*f4*gamma**2 + 2*a4*f5*gamma**9*pi + f0 + f2*gamma**5*pi + f4*gamma**3*pi",
+      "G_excluded": "a0*h4/gamma**2 + a1*h4/gamma + gamma**10*h5*pi**2 + h1/gamma**2 + h3/gamma**4",
+      "G_retained": "a0**2*h5 + 2*a0*a1*gamma*h5 + 2*a0*a2*gamma**2*h5 + 2*a0*a3*gamma**3*h5 + 2*a0*a4*gamma**4*h5 + 2*a0*gamma**5*h5*pi + a0*h2 + a1**2*gamma**2*h5 + 2*a1*a2*gamma**3*h5 + 2*a1*a3*gamma**4*h5 + 2*a1*a4*gamma**5*h5 + 2*a1*gamma**6*h5*pi + a1*gamma*h2 + a2**2*gamma**4*h5 + 2*a2*a3*gamma**5*h5 + 2*a2*a4*gamma**6*h5 + 2*a2*gamma**7*h5*pi + a2*gamma**2*h2 + a2*h4 + a3**2*gamma**6*h5 + 2*a3*a4*gamma**7*h5 + 2*a3*gamma**8*h5*pi + a3*gamma**3*h2 + a3*gamma*h4 + a4**2*gamma**8*h5 + 2*a4*gamma**9*h5*pi + a4*gamma**4*h2 + a4*gamma**2*h4 + gamma**5*h2*pi + gamma**3*h4*pi + h0",
+      "K": "f1*h2 + f1*h4*y + 2*f1*h5*w - f2*h1 - 2*f2*h3*y - f2*h4*w + 2*f3*h2*y + 2*f3*h4*y**2 + 4*f3*h5*w*y - f4*h1*y + f4*h2*w - 2*f4*h3*y**2 + 2*f4*h5*w**2 - 2*f5*h1*w - 4*f5*h3*w*y - 2*f5*h4*w**2 - 1",
+      "chain_zero": true,
+      "correction": "4*a0**2*f4*gamma**2*h5 - 4*a0**2*f5*gamma**2*h4 + 6*a0*a1*f4*gamma**3*h5 - 6*a0*a1*f5*gamma**3*h4 + 4*a0*a2*f4*gamma**4*h5 - 4*a0*a2*f5*gamma**4*h4 + 4*a0*a3*f4*gamma**5*h5 - 4*a0*a3*f5*gamma**5*h4 + 4*a0*a4*f4*gamma**6*h5 - 4*a0*a4*f5*gamma**6*h4 + 4*a0*f1*gamma**2*h5 - 2*a0*f2*gamma**2*h4 + 8*a0*f3*h5 + 4*a0*f4*gamma**7*h5*pi + 2*a0*f4*gamma**2*h2 - 4*a0*f5*gamma**7*h4*pi - 4*a0*f5*gamma**2*h1 - 8*a0*f5*h3 + 2*a1**2*f4*gamma**4*h5 - 2*a1**2*f5*gamma**4*h4 + 2*a1*a2*f4*gamma**5*h5 - 2*a1*a2*f5*gamma**5*h4 + 2*a1*a3*f4*gamma**6*h5 - 2*a1*a3*f5*gamma**6*h4 + 2*a1*a4*f4*gamma**7*h5 - 2*a1*a4*f5*gamma**7*h4 + 4*a1*f1*gamma**3*h5 - 2*a1*f2*gamma**10*h5*pi - a1*f2*gamma**3*h4 + 8*a1*f3*gamma*h5 + 2*a1*f4*gamma**8*h5*pi + a1*f4*gamma**3*h2 + 2*a1*f5*gamma**10*h2*pi - 2*a1*f5*gamma**8*h4*pi - 4*a1*f5*gamma**3*h1 - 8*a1*f5*gamma*h3 + 4*a2*f1*gamma**4*h5 - 4*a2*f2*gamma**11*h5*pi + 8*a2*f3*gamma**2*h5 + 4*a2*f5*gamma**11*h2*pi - 4*a2*f5*gamma**4*h1 - 8*a2*f5*gamma**2*h3 + 4*a3*f1*gamma**5*h5 - 6*a3*f2*gamma**12*h5*pi + 8*a3*f3*gamma**3*h5 - 2*a3*f4*gamma**10*h5*pi + 6*a3*f5*gamma**12*h2*pi + 2*a3*f5*gamma**10*h4*pi - 4*a3*f5*gamma**5*h1 - 8*a3*f5*gamma**3*h3 + 4*a4*f1*gamma**6*h5 - 8*a4*f2*gamma**13*h5*pi + 8*a4*f3*gamma**4*h5 - 4*a4*f4*gamma**11*h5*pi + 8*a4*f5*gamma**13*h2*pi + 4*a4*f5*gamma**11*h4*pi - 4*a4*f5*gamma**6*h1 - 8*a4*f5*gamma**4*h3 + 4*f1*gamma**7*h5*pi + 2*f1*gamma**2*h2 + 2*f1*h4 - 2*f2*gamma**2*h1 - 4*f2*h3 + 8*f3*gamma**5*h5*pi + 4*f3*h2 + 4*f3*h4/gamma**2 + 4*f4*gamma**12*h5*pi**2 - 2*f4*h1 - 4*f4*h3/gamma**2 - 4*f5*gamma**12*h4*pi**2 - 4*f5*gamma**7*h1*pi - 8*f5*gamma**5*h3*pi",
+      "ell": 2,
+      "excluded_negative_or_high_pi_row_count": 8,
+      "jacobian_rows": {
+        "(10, 0)": "-4*a4**2*f4*h5 + 4*a4**2*f5*h4",
+        "(10, 1)": "-2*a1*f2*h5 + 2*a1*f5*h2 - 10*a3*f4*h5 + 10*a3*f5*h4",
+        "(11, 1)": "-4*a2*f2*h5 + 4*a2*f5*h2 - 12*a4*f4*h5 + 12*a4*f5*h4",
+        "(12, 1)": "-6*a3*f2*h5 + 6*a3*f5*h2",
+        "(13, 1)": "-8*a4*f2*h5 + 8*a4*f5*h2",
+        "(2, 0)": "2",
+        "(3, 0)": "-2*a0*a1*f4*h5 + 2*a0*a1*f5*h4 + a1*f2*h4 - a1*f4*h2",
+        "(4, 0)": "-4*a0*a2*f4*h5 + 4*a0*a2*f5*h4 - 2*a1**2*f4*h5 + 2*a1**2*f5*h4 + 2*a2*f2*h4 - 2*a2*f4*h2",
+        "(5, 0)": "-4*a0*a3*f4*h5 + 4*a0*a3*f5*h4 - 6*a1*a2*f4*h5 + 6*a1*a2*f5*h4 + 2*a3*f2*h4 - 2*a3*f4*h2",
+        "(6, 0)": "-4*a0*a4*f4*h5 + 4*a0*a4*f5*h4 - 6*a1*a3*f4*h5 + 6*a1*a3*f5*h4 - 4*a2**2*f4*h5 + 4*a2**2*f5*h4 + 2*a4*f2*h4 - 2*a4*f4*h2",
+        "(7, 0)": "-6*a1*a4*f4*h5 + 6*a1*a4*f5*h4 - 8*a2*a3*f4*h5 + 8*a2*a3*f5*h4",
+        "(7, 1)": "-4*a0*f4*h5 + 4*a0*f5*h4 + 2*f2*h4 - 2*f4*h2",
+        "(8, 0)": "-8*a2*a4*f4*h5 + 8*a2*a4*f5*h4 - 4*a3**2*f4*h5 + 4*a3**2*f5*h4",
+        "(8, 1)": "-6*a1*f4*h5 + 6*a1*f5*h4",
+        "(9, 0)": "-8*a3*a4*f4*h5 + 8*a3*a4*f5*h4",
+        "(9, 1)": "-8*a2*f4*h5 + 8*a2*f5*h4"
+      },
+      "pullback_difference_zero": true,
+      "receiver_pi_cap": 1,
+      "receiver_row_count": 16,
+      "source_monomials": [
+        "1",
+        "y",
+        "w",
+        "y**2",
+        "w*y",
+        "w**2"
+      ],
+      "u": 2,
+      "v": 5
+    },
+    {
+      "F_excluded": "a0*f4/gamma**2 + a1*f4/gamma + f1/gamma**2 + f3/gamma**4 + f5*gamma**8*pi**2",
+      "F_retained": "a0**2*f5 + 2*a0*a1*f5*gamma + 2*a0*a2*f5*gamma**2 + 2*a0*a3*f5*gamma**3 + a0*f2 + 2*a0*f5*gamma**4*pi + a1**2*f5*gamma**2 + 2*a1*a2*f5*gamma**3 + 2*a1*a3*f5*gamma**4 + a1*f2*gamma + 2*a1*f5*gamma**5*pi + a2**2*f5*gamma**4 + 2*a2*a3*f5*gamma**5 + a2*f2*gamma**2 + a2*f4 + 2*a2*f5*gamma**6*pi + a3**2*f5*gamma**6 + a3*f2*gamma**3 + a3*f4*gamma + 2*a3*f5*gamma**7*pi + f0 + f2*gamma**4*pi + f4*gamma**2*pi",
+      "G_excluded": "a0*h4/gamma**2 + a1*h4/gamma + gamma**8*h5*pi**2 + h1/gamma**2 + h3/gamma**4",
+      "G_retained": "a0**2*h5 + 2*a0*a1*gamma*h5 + 2*a0*a2*gamma**2*h5 + 2*a0*a3*gamma**3*h5 + 2*a0*gamma**4*h5*pi + a0*h2 + a1**2*gamma**2*h5 + 2*a1*a2*gamma**3*h5 + 2*a1*a3*gamma**4*h5 + 2*a1*gamma**5*h5*pi + a1*gamma*h2 + a2**2*gamma**4*h5 + 2*a2*a3*gamma**5*h5 + 2*a2*gamma**6*h5*pi + a2*gamma**2*h2 + a2*h4 + a3**2*gamma**6*h5 + 2*a3*gamma**7*h5*pi + a3*gamma**3*h2 + a3*gamma*h4 + gamma**4*h2*pi + gamma**2*h4*pi + h0",
+      "K": "f1*h2 + f1*h4*y + 2*f1*h5*w - f2*h1 - 2*f2*h3*y - f2*h4*w + 2*f3*h2*y + 2*f3*h4*y**2 + 4*f3*h5*w*y - f4*h1*y + f4*h2*w - 2*f4*h3*y**2 + 2*f4*h5*w**2 - 2*f5*h1*w - 4*f5*h3*w*y - 2*f5*h4*w**2 - 1",
+      "chain_zero": true,
+      "correction": "4*a0**2*f4*gamma*h5 - 4*a0**2*f5*gamma*h4 + 6*a0*a1*f4*gamma**2*h5 - 6*a0*a1*f5*gamma**2*h4 + 4*a0*a2*f4*gamma**3*h5 - 4*a0*a2*f5*gamma**3*h4 + 4*a0*a3*f4*gamma**4*h5 - 4*a0*a3*f5*gamma**4*h4 + 4*a0*f1*gamma*h5 - 2*a0*f2*gamma*h4 + 8*a0*f3*h5/gamma + 4*a0*f4*gamma**5*h5*pi + 2*a0*f4*gamma*h2 - 4*a0*f5*gamma**5*h4*pi - 4*a0*f5*gamma*h1 - 8*a0*f5*h3/gamma + 2*a1**2*f4*gamma**3*h5 - 2*a1**2*f5*gamma**3*h4 + 2*a1*a2*f4*gamma**4*h5 - 2*a1*a2*f5*gamma**4*h4 + 2*a1*a3*f4*gamma**5*h5 - 2*a1*a3*f5*gamma**5*h4 + 4*a1*f1*gamma**2*h5 - 2*a1*f2*gamma**8*h5*pi - a1*f2*gamma**2*h4 + 8*a1*f3*h5 + 2*a1*f4*gamma**6*h5*pi + a1*f4*gamma**2*h2 + 2*a1*f5*gamma**8*h2*pi - 2*a1*f5*gamma**6*h4*pi - 4*a1*f5*gamma**2*h1 - 8*a1*f5*h3 + 4*a2*f1*gamma**3*h5 - 4*a2*f2*gamma**9*h5*pi + 8*a2*f3*gamma*h5 + 4*a2*f5*gamma**9*h2*pi - 4*a2*f5*gamma**3*h1 - 8*a2*f5*gamma*h3 + 4*a3*f1*gamma**4*h5 - 6*a3*f2*gamma**10*h5*pi + 8*a3*f3*gamma**2*h5 - 2*a3*f4*gamma**8*h5*pi + 6*a3*f5*gamma**10*h2*pi + 2*a3*f5*gamma**8*h4*pi - 4*a3*f5*gamma**4*h1 - 8*a3*f5*gamma**2*h3 + 4*f1*gamma**5*h5*pi + 2*f1*gamma*h2 + 2*f1*h4/gamma - 2*f2*gamma*h1 - 4*f2*h3/gamma + 8*f3*gamma**3*h5*pi + 4*f3*h2/gamma + 4*f3*h4/gamma**3 + 4*f4*gamma**9*h5*pi**2 - 2*f4*h1/gamma - 4*f4*h3/gamma**3 - 4*f5*gamma**9*h4*pi**2 - 4*f5*gamma**5*h1*pi - 8*f5*gamma**3*h3*pi",
+      "ell": 1,
+      "excluded_negative_or_high_pi_row_count": 8,
+      "jacobian_rows": {
+        "(1, 0)": "2",
+        "(10, 1)": "-6*a3*f2*h5 + 6*a3*f5*h2",
+        "(2, 0)": "-2*a0*a1*f4*h5 + 2*a0*a1*f5*h4 + a1*f2*h4 - a1*f4*h2",
+        "(3, 0)": "-4*a0*a2*f4*h5 + 4*a0*a2*f5*h4 - 2*a1**2*f4*h5 + 2*a1**2*f5*h4 + 2*a2*f2*h4 - 2*a2*f4*h2",
+        "(4, 0)": "-4*a0*a3*f4*h5 + 4*a0*a3*f5*h4 - 6*a1*a2*f4*h5 + 6*a1*a2*f5*h4 + 2*a3*f2*h4 - 2*a3*f4*h2",
+        "(5, 0)": "-6*a1*a3*f4*h5 + 6*a1*a3*f5*h4 - 4*a2**2*f4*h5 + 4*a2**2*f5*h4",
+        "(5, 1)": "-4*a0*f4*h5 + 4*a0*f5*h4 + 2*f2*h4 - 2*f4*h2",
+        "(6, 0)": "-8*a2*a3*f4*h5 + 8*a2*a3*f5*h4",
+        "(6, 1)": "-6*a1*f4*h5 + 6*a1*f5*h4",
+        "(7, 0)": "-4*a3**2*f4*h5 + 4*a3**2*f5*h4",
+        "(7, 1)": "-8*a2*f4*h5 + 8*a2*f5*h4",
+        "(8, 1)": "-2*a1*f2*h5 + 2*a1*f5*h2 - 10*a3*f4*h5 + 10*a3*f5*h4",
+        "(9, 1)": "-4*a2*f2*h5 + 4*a2*f5*h2"
+      },
+      "pullback_difference_zero": true,
+      "receiver_pi_cap": 1,
+      "receiver_row_count": 13,
+      "source_monomials": [
+        "1",
+        "y",
+        "w",
+        "y**2",
+        "w*y",
+        "w**2"
+      ],
+      "u": 2,
+      "v": 4
+    }
+  ],
+  "shifted_support_control": {
+    "constant_coefficient": "gamma",
+    "descendant": "gamma**2*pi + gamma + pi**2",
+    "shifted": "gamma**2*pi + pi**2 - 1 - 2*pi/gamma - 2*pi/gamma**2 + gamma**(-2) + 2/gamma**3 + gamma**(-4)",
+    "source": "w*y + (w*y**3 - y**2 - y)**2 - 1"
+  },
+  "uniform_unit_certificate": {
+    "all_degrees": true,
+    "identity": "1=(-z)*rho+h",
+    "normalizer": "h=1-z*c",
+    "rho": "[gamma^1*pi^0](J(P,Q)-c*gamma)=-c"
+  },
+  "versions": {
+    "frozen_guided_gb_sha256": "501f3b1fed8ad0d26c7535a3c79d6ca74c448a4555f94570a4835d9f740781f3",
+    "sympy": "1.12"
+  }
+}
