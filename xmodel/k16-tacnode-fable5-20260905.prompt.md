@@ -1,0 +1,17 @@
+# UNIFORM lane (the ONE new uniform handle on the K16 ray: the tacnode dichotomy): your universal-series lane (frozen) proved that (UF) ⟺ Q_P(x, L(x)) ≡ 0 for the quartic Q_P = R − G·P − (θ−3)P² with Q_P(0, L) = (3/16)(L+b)²(L²+b²) — a TACNODE at (0, −b), non-degenerate iff 4η + 3b·l₂ ≠ 0 — and that a polynomial solution (P, L) with the marked jets has EITHER a degenerate tacnode (4η + 3bl₂ = 0, as every known solution at t = 2..8 does) OR a second convergent Hensel branch L̃ of F₀ = L² + sL + p through (0, −b) that is a formal solution of (UF) with the SAME P (an involution L ↔ L̃). OPEN[K16-UF-DEGENERATE-TACNODE]: prove 4η + 3bl₂ ∈ rad J_t for every t. TASK: (1) NON-DEGENERATE case: assume 4η + 3bl₂ ≠ 0 and P polynomial of degree 2N with the marked jets; then both Hensel branches L, L̃ are power series with L polynomial of degree N; study L̃: it satisfies the same recursion with the same P; is L̃ forced to be a polynomial too (then L + L̃ = −s and L·L̃ = p are polynomials — s, p are determined by P: derive them explicitly; polynomiality of s and p is a strong constraint on P — is it compatible with deg P = 2N and the ∞-behaviour (UT)?), or is L̃ transcendental with a growth/Gevrey type incompatible with the entire ∞-germ (the ∞-germ is unique and convergent; can L̃ be continued to ∞?) — use the involution to derive a contradiction, e.g. compare the ∞-expansions of L and L̃ (both must satisfy the same asymptotics fixed by P at ∞: does the quartic have only one branch with lc = 1/y at ∞?); (2) DEGENERATE case: put η = −(3/4)bl₂ and write the reduced recursion governed by the second pivot 2Bl₂ + b²l₃ + 2bw₂; does the dichotomy iterate (a second-order degeneracy), giving a descent on the jet data that must terminate — and if it terminates, does it force B = 0 or η = 0 (i.e. Bη = 0, which IS (R))?; (3) verify every identity exactly at t = 3, 4, 5 against the frozen certificates and the frozen universal_recursion.json; (4) VERDICT: a uniform theorem (⇒ (R) ⇒ (T) on the whole ray — type PROVED-HERE for gate) / the tacnode statement proved (⇒ (R) reduced to the degenerate stratum: state the residual precisely) / the exact obstruction. FALLACY-v2 (a formal branch is not a convergent one; an involution proves nothing until both branches are pinned at ∞). ≤ 180 min; no ledger edits; no jc2-lean; no ideation-*. Drivers to box/k16-tacnode-20260905/.
+Report: xmodel/k16-tacnode-fable5-20260905.md
+Seal (<!-- BODY-END -->); 15-30KB; 180 min.
+charged_input=xmodel/k16-universal-series-fable5-20260905.md
+charged_input=xmodel/abel-polysol-fable5-20260905.md
+charged_input=xmodel/k16-xempty-astra-20260905.md
+charged_input=FALLACY-v2.md
+
+Your inputs are frozen read-only copies in {{LANE_INPUTS}};
+verify these SHA-256 hashes first, MECHANICALLY: the receipt `xmodel/k16-tacnode-fable5-20260905.run.v2` carries `charged_input_<i>_sha256=`/`_basename=` lines; build the manifest with awk and run `sha256sum -c`; stop only on a real content mismatch:
+
+```text
+5ac0ff1ddcfc766dd1d5050c73e08203795f1ecc56be954b388ef0c1eaeb41bb  {{LANE_INPUTS}}/k16-universal-series-fable5-20260905.md
+9516589ac6228b6a2cf9d9258f0d7e1160cfd7768dd4fee50c29e9db4005c3d0  {{LANE_INPUTS}}/abel-polysol-fable5-20260905.md
+1f06694fb58d53c4a4b3c54dad88722cd31a5ccc894679ac52b0620b91e2623f  {{LANE_INPUTS}}/k16-xempty-astra-20260905.md
+e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  {{LANE_INPUTS}}/FALLACY-v2.md
+```
