@@ -1,0 +1,28 @@
+== CONTROL P: no false kill on Moh's own printed rows (p.202 -> p.207) ==
+  [ok]   (64,48)                  (n',m')=(16,12) K'=4 V'_2=3 u'=1 >= 0
+  [ok]   (84,56) M2=64,V2=2       (n',m')=(21,14) K'=7 V'_2=2 u'=5 >= 0
+  [ok]   (84,56) M2=72,V2=5       (n',m')=(21,14) K'=7 V'_2=5 u'=2 >= 0
+  [ok]   (75,50) V2=3             (n',m')=(15,10) K'=5 V'_2=3 u'=2 >= 0
+  [ok]   (75,50) V2=2             (n',m')=(15,10) K'=5 V'_2=2 u'=3 >= 0
+   (99,66)                  u_s=3 != 1, Prop 6.4 not applicable (Moh skips it)
+
+== CONTROL Q: the 12 charged n<=100 receiver rows have u' >= 0 ==
+  [ok]   n<=100 operative rows: no u'<0   {"u'>0": 18, "u'=0": 1, 'u_s>=2': 1}
+
+== the exact residual partition of the 1420 operative rows (16<=n<=200) ==
+   A U-NEG u_s=1 (descent forced, datum degenerate)        84
+   B U-NEG u_s>=2 (radius dichotomy)                        6
+   C s'>=3 Phi_eff receiver (compute-bound)               978
+   D s'=2 Appendix II covered                              48
+   E u_s>=2 non-U-NEG (radius dichotomy first)            304
+  [ok]   partition totals 1420   1420
+
+== B-family split windows ==
+   B rows with EMPTY split window (=> (R) forced, descent unconditional): 2
+   B rows with a non-empty window: 4
+      (192, 144, [32, 88, 190], {2: 19, 3: 12, 4: 6}, ['3/2', '2', '5/2'])
+      (192, 144, [-72, 12, 18, 190], {2: 22, 3: 16, 4: 8, 5: 4}, ['3/2'])
+      (192, 144, [-72, 12, 78, 190], {2: 31, 3: 16, 4: 8, 5: 4}, ['3/2'])
+      (192, 144, [32, 88, 190], {2: 19, 3: 12, 4: 6}, ['3/2', '2', '5/2'])
+
+FAILURES: none

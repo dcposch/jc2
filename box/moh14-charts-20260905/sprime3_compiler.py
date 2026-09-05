@@ -13,12 +13,15 @@ outer roots of h sit in D'_2,...,D'_{s'}, so B_tight = V'_2 δ'_1 + u' δ'_2
 is only a floor of the true order; cutting by it is a strict sub-slice
 (FALLACY-v2 / 17(ggggg)).  B_safe is the weakest correct D1 threshold.
 
-The necessary receiver (no two-point leading-form fix, no root-partition
-slice, no tot-degree envelope) is:
+The raw D1 receiver, conditional on the D1 centre normalization, is:
 
-    h = y^{K'} + sum_{D1, tot<=K', (a,b)!=(0,K')} h_{a,b} x^a y^b
+    h = y^{K'} + sum_{0<=b<K', 0<=a<=floor(δ'_1 b-B_safe)} h_{a,b} x^a y^b
     P = h^{e'} + sum_i α_i h^{e'-i},   Q = h^{q'} + sum_{i>=2} β_i h^{q'-i}
     J(P,Q) = c · x^ℓ,  c ≠ 0.
+
+For unconditional source coverage use coeff_inventory_source_complete:
+it adjoins the outer-disc supports after the explicit polynomial trace
+translation.  See hsupport-gate-20260905/source_complete_emit.py.
 
 A class chart is the UNION of the V'-fibre inventories: if that over-
 approximation is the unit ideal, every fibre row dies; matching names are
@@ -184,25 +187,17 @@ def order_allowed(delta1: F, threshold: F, xpow: int, ypow: int) -> bool:
 
 
 def h_inventory_necessary(C: dict) -> list[tuple[int, int]]:
-    """Free leading form: every D1 monomial except monic y^K.
+    """Full monic D1 support of the approximate root.
 
-    No two-point (y-x)^{u'} fix, no slope partition.  deg_x <= max(u',0)
-    is the y^{V2} condition on the degree-K face (tot=K and deg_x<=u'
-    forces deg_y >= V2).  At s'=2 with δ_2=-1 this is a *superset* of
-    Moh's fixed leading form; emptiness of this chart still kills the
-    Appendix II chart.  At s'>=3 the two-point fix is not licensed.
+    Polynomiality and monicity give xpow >= 0 and 0 <= ypow < K.
+    The D1 valuation floor gives -xpow + delta1*ypow >= B_safe.
+    No total-degree or x-width bound follows from these hypotheses.
+    In particular the old xpow<=K-V2 and xpow+ypow<=K cuts deleted
+    76 allowed coordinates on eight of the twelve descended fibres.
+    This is the same finite support loop as a deficit-one coefficient;
+    h itself is not subjected to any coefficient translation gauge.
     """
-    K, u, d1, B = C["K"], max(C["u"], 0), C["delta1"], C["B"]
-    out = []
-    for ypow in range(K, -1, -1):
-        for xpow in range(0, u + 1):
-            if xpow + ypow > K:
-                continue
-            if xpow == 0 and ypow == K:
-                continue
-            if order_allowed(d1, B, xpow, ypow):
-                out.append((xpow, ypow))
-    return out
+    return coeff_inventory_necessary(C, 1)
 
 
 def coeff_inventory_envelope(C: dict, deficit: int) -> list[tuple[int, int]]:
@@ -239,6 +234,34 @@ def coeff_inventory_necessary(C: dict, deficit: int) -> list[tuple[int, int]]:
         for xpow in range(0, max_x + 1):
             out.append((xpow, ypow))
     return out
+
+
+def coeff_inventory_outer_disc(C: dict, deficit: int) -> list[tuple[int, int]]:
+    """Support after the polynomial shear by the mean of the Q roots.
+
+    All P,Q roots belong to the outermost common disc of radius delta_s.
+    The mean is polynomial in x and lies in that disc.  After subtracting
+    it, roots have valuation >= delta_s.  With d=-delta_s, monic root
+    extraction and y-division preserve weighted degree wt(x)=1,wt(y)=d.
+    See hsupport-gate-20260905/source_complete_emit.py and the gate report.
+    """
+    K, d = C["K"], -C["delta_s"]
+    if d <= 0:
+        raise ValueError("outer-disc completion requires delta_s < 0")
+    return [(b, a) for a in range(K - 1, -1, -1)
+            for b in range(floor(d * (deficit * K - a)) + 1)]
+
+
+def coeff_inventory_source_complete(C: dict, deficit: int) -> list[tuple[int, int]]:
+    """Retain all raw D1 coordinates and include the trace-normalized source.
+
+    Raw D1 weights need a centered D1 generic root.  The union with the
+    outer-disc support avoids assuming that normalization.  This union
+    is an over-approximation, with extra coordinates independently free.
+    """
+    return sorted(set(coeff_inventory_necessary(C, deficit)) |
+                  set(coeff_inventory_outer_disc(C, deficit)),
+                  key=lambda t: (-t[1], t[0]))
 
 
 def inventory_cokernel(full: list[tuple[int, int]], sub: list[tuple[int, int]]) -> list[tuple[int, int]]:
@@ -318,7 +341,10 @@ def build_spec(C: dict, h_mons, alpha_mons, beta_mons, row: OB.Row, stem_tag: st
         "row": asdict(row),
         "partition": [],
         "partition_label": stem_tag,
-        "chart": "sprime3_full_D1_thm12_nocap",
+        "chart": ("sprime34_source_complete_D1_union_outer_disc_v1"
+                  if C.get("support_basis") == "raw_D1_union_trace_centered_outer_disc_v1"
+                  else "sprime3_full_D1_thm12_nocap"),
+        "support_basis": C.get("support_basis", "raw_D1_centered_hypothesis_required"),
         "closed_form": {
             "K": C["K"], "e": C["e"], "q": C["q"], "u": C["u"],
             "R": C["R"], "Pi": C["Pi"], "d3prime": C["d3prime"],
@@ -366,6 +392,10 @@ def write_builder(spec: dict, stem: str, dest: Path) -> dict:
         p.mkdir(parents=True, exist_ok=True)
     text = OB.native_builder_text(spec, rows_path)
     text = text.replace(str(rows_path.resolve()), "rows/%s_rows.tsv" % stem)
+    # Apply the validated polynomial-ring/y-monic-division fix on every
+    # emission, so an inventory repair cannot reintroduce transext OOMs.
+    from builder_fix import fix_text
+    text, builder_fix_info = fix_text(text)
     header = [
         "// s'=3 monomial-Jacobian compiler  box/moh14-charts-20260905",
         "// chart=%s  stem=%s  unknowns=%d  ell=%d" % (
@@ -382,6 +412,7 @@ def write_builder(spec: dict, stem: str, dest: Path) -> dict:
         "builder": str(builder_path.relative_to(ROOT)),
         "rows_path": str(rows_path.relative_to(ROOT)),
         "parameter_count": spec["meta"]["params_without_T"],
+        "builder_fix": builder_fix_info,
     }
     meta_path.write_text(json.dumps(payload, indent=2, sort_keys=True, default=jdefault) + "\n",
                          encoding="utf-8")
@@ -406,7 +437,7 @@ SINGULAR="${{SINGULAR:-Singular}}"
 echo "FLEET_START class={class_id} stem={stem} unknowns={pc}"
 "$SINGULAR" --cpus=1 --threads=1 --flint-threads=1 -q --no-rc \\
     "builders/{stem}_builder.sing"
-python3 "{compiler}" emit-guided --dest "$HERE" --stem "{stem}"
+python3 "{compiler}" --mode emit-guided --dest "$HERE" --stem "{stem}"
 echo "FLEET_STAGE2 guided job at jobs/{stem}_Q_guided.sing"
 echo "FLEET_HINT timeout 3600 $SINGULAR --cpus=1 --threads=1 --flint-threads=1 -q --no-rc jobs/{stem}_Q_guided.sing"
 """.format(
@@ -567,6 +598,26 @@ def enumerate_12() -> dict:
     )
 
 
+def complete_source_support(enum: dict) -> dict:
+    """Enlarge live raw D1 rows to the proved source-support inventory.
+
+    Kept explicit so diagnostic callers can still enumerate raw D1 alone.
+    The command-line emitter uses this completion by default.
+    """
+    for r in enum["live"]:
+        C = r["C"]
+        C["support_basis"] = "raw_D1_union_trace_centered_outer_disc_v1"
+        r["h"] = coeff_inventory_source_complete(C, 1)
+        r["alpha"] = {i: coeff_inventory_source_complete(C, i) for i in r["alpha"]}
+        r["beta"] = {i: coeff_inventory_source_complete(C, i) for i in r["beta"]}
+        am, bm, gauges, notes, audit = apply_gauges(
+            C["e"], C["q"], r["alpha"], r["beta"])
+        r.update(alpha_g=am, beta_g=bm, gauges=gauges,
+                 nunk=len(r["h"]) + sum(map(len, am.values()))
+                 + sum(map(len, bm.values())) + 1)
+    return enum
+
+
 # ---------------------------------------------------------------------------
 # Controls
 # ---------------------------------------------------------------------------
@@ -680,9 +731,10 @@ def union_inv(rows: list[dict]):
     return h, alpha, beta
 
 
-def emit_all(enum: dict) -> dict:
+def emit_all(enum: dict, output_root: Path | None = None) -> dict:
     manifest = []
-    class_dir_root = HERE / "classes"
+    output_root = HERE if output_root is None else output_root.resolve()
+    class_dir_root = output_root / "classes"
     class_dir_root.mkdir(parents=True, exist_ok=True)
     # dominating C for union: most negative B_safe (weakest cutoff) together
     # with the explicit monomial union (not a representative slice).
@@ -707,6 +759,7 @@ def emit_all(enum: dict) -> dict:
         )
         specU = build_spec(C_union, hU, aU, bU, row_ob, "freelead_union")
         payU = write_builder(specU, cid + "_union", dest)
+        nunkU = payU["parameter_count"]
         jobU = write_fleet_job(dest, cid + "_union", payU, cid)
         per_row = []
         for r in rows:
@@ -728,12 +781,15 @@ def emit_all(enum: dict) -> dict:
             fibre_size=len(rows),
             union_parameter_count=nunkU,
             union_h_count=len(hU),
-            union_alpha_dims=[len(aU[i]) for i in sorted(aU)],
-            union_beta_dims=[len(bU[i]) for i in sorted(bU)],
+            union_alpha_dims=specU["meta"]["alpha_dims"],
+            union_beta_dims=specU["meta"]["beta_dims"],
             union_B_safe=qstr(C_union["B_safe"]),
             union_builder=payU["builder"],
             union_fleet_job=str(jobU.relative_to(ROOT)),
-            chart="full_D1_thm12_nocap_class_union",
+            chart=("source_complete_D1_union_outer_disc_class_union_v1"
+                   if C_union.get("support_basis") == "raw_D1_union_trace_centered_outer_disc_v1"
+                   else "full_D1_thm12_nocap_class_union"),
+            support_basis=C_union.get("support_basis", "raw_D1_centered_hypothesis_required"),
             not_a_subslice=True,
             fallacy_v2=(
                 "class chart = union of V'-fibre full Theorem-1.2 D1 "
@@ -748,7 +804,7 @@ def emit_all(enum: dict) -> dict:
         manifest.append(class_json)
         print("  EMIT %s  union_unk=%d  fibre=%d  dest=%s" % (
             cid, nunkU, len(rows), dest.relative_to(ROOT)))
-    (HERE / "classes_manifest.json").write_text(
+    (output_root / "classes_manifest.json").write_text(
         json.dumps(manifest, indent=2, sort_keys=True, default=jdefault) + "\n",
         encoding="utf-8")
     return dict(n_classes=len(manifest), classes=manifest)
@@ -879,6 +935,11 @@ def main() -> int:
                              "emit-guided", "sanity", "run-small"))
     ap.add_argument("--dest", type=str, default="")
     ap.add_argument("--stem", type=str, default="")
+    ap.add_argument("--support", choices=("source-complete", "raw-D1"),
+                    default="source-complete",
+                    help="raw-D1 is diagnostic and retains a D1-centering hypothesis")
+    ap.add_argument("--output-root", type=Path, default=None,
+                    help="separate directory for emitted classes and manifest")
     a = ap.parse_args()
 
     print("sprime3_compiler -- Moh Appendix II extended by Φ_eff")
@@ -900,6 +961,8 @@ def main() -> int:
     if a.mode in ("all", "enumerate", "emit", "run-small"):
         print("\n== enumerate POLY_ODE n<=100, then Xu screen ==")
         enum = enumerate_12()
+        if a.support == "source-complete":
+            complete_source_support(enum)
         print("  raw (1)-(13) %d  POLY_ODE %d  printed %d  excess %d  Xu-dead %d  live %d  [%.2fs]"
               % (enum["n_raw"], enum["n_poly"], enum["n_printed"], enum["n_excess"],
                  enum["n_xu_dead"], enum["n_live"], enum["sec"]))
@@ -928,7 +991,7 @@ def main() -> int:
 
     if a.mode in ("all", "emit") and enum is not None:
         print("\n== emit 6 class charts + V' fallbacks ==")
-        emit_all(enum)
+        emit_all(enum, output_root=a.output_root)
 
     if a.mode in ("all", "sanity"):
         print("\n== tiny guided_gb sanity (not a Moh chart) ==")

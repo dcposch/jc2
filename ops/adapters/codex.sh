@@ -1,9 +1,9 @@
 #!/bin/sh
 # Codex CLI adapter. It uses the primary authenticated home without reading or
-# mutating its user config, and pins the campaign's Sol model/effort explicitly.
+# mutating its user config, and pins the campaign's Astra model/effort explicitly.
 set -u
 pf=$1
-model=${CODEX_MODEL:-gpt-5.6-sol}
+model=${CODEX_MODEL:-gpt-6-astra}
 effort=${CODEX_REASONING_EFFORT:-ultra}
 case "$effort" in
   low|medium|high|xhigh|max|ultra) ;;

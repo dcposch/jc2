@@ -1,0 +1,32 @@
+  n=20: 0 rows (0s)
+  n=40: 4 rows (0s)
+  n=60: 44 rows (0s)
+  n=80: 178 rows (0s)
+  n=100: 658 rows (1s)
+  n=120: 1802 rows (2s)
+  n=140: 2585 rows (3s)
+  n=160: 6780 rows (10s)
+  n=180: 13628 rows (20s)
+  n=200: 24063 rows (41s)
+CENSUS (1)-(13) Kmin=2, 16<=n<=200: 24063 rows, 41s
+operative C_FULL_TREE_POLYNOMIAL_ODE residue: 1420 rows
+
+== census ==
+  by s'      : {2: 2020, 3: 10464, 4: 9746, 5: 1833}
+  by sign(u'): {"u'<0": 2999, "u'=0": 117, "u'>0": 20947}
+  u'<0 by s' : {2: 600, 3: 1464, 4: 879, 5: 56}
+  u'=0 by s' : {2: 10, 3: 69, 4: 38}
+  u_s hist   : {1: 17854, 2: 4459, 3: 1117, 4: 312, 5: 199, 6: 37, 7: 43, 8: 17, 9: 14, 10: 3, 11: 4, 12: 3, 13: 1}
+  non-integral M' : 0
+
+== operative ==
+  by s'      : {2: 43, 3: 414, 4: 797, 5: 166}
+  by sign(u'): {"u'<0": 90, "u'=0": 2, "u'>0": 1328}
+  u'<0 by s' : {3: 9, 4: 63, 5: 18}
+  u'=0 by s' : {3: 1, 4: 1}
+  u_s hist   : {1: 1110, 2: 265, 3: 34, 4: 9, 5: 2}
+  non-integral M' : 0
+
+U-NEGATIVE: census 2999, operative 90
+u'=0      : census 117, operative 2
+wrote scope_enum.json  (41s)

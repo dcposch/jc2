@@ -1,5 +1,8 @@
 #!/bin/sh
-# Dedicated different-model review adapter. Unlike the Sol adapter, this has
+# DEPRECATED for jc2 routing (DC 2026-09-05): drop GPT-5.5 (2 gens old).
+# Prefer ops/adapters/codex.sh (gpt-6-astra). Kept only so old review-receipt
+# hashes that named this adapter remain auditable; do not launch new lanes here.
+# Dedicated different-model review adapter. Unlike the Sol/Astra adapter, this has
 # no environment-variable model override: its hash certifies the exact model
 # family and reasoning effort charged by a review receipt.
 set -u
