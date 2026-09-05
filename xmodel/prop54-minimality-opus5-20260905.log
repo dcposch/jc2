@@ -1,0 +1,27 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete, sealed, and verified.
+
+## Verdict: `MINIMALITY-COVERS` — no `OPEN[ONE-PLACE-GAP]`
+
+**Inputs:** 5/5 SHA-256 verified mechanically (awk-generated manifest from the receipt → `sha256sum -c`), no mismatch.
+
+**(1) Prop 5.4 exactly (p.183 = PDF p.44, read from a 300-dpi render — the text layer drops the displayed index):**
+
+> *…the smallest disc which contains all roots of `g(y)T₁^ψ(y)` is the `D_i` with `i = max{r : V_{r+1}d_r/d_{r+1} > V_r}`. Moreover if `δ_i > −1` then either `k[x,y] = k[T₁^ψ,g] = k[f,g]` or there exists an automorphism of `k[x,y]` which reduces the degrees of `T₁^ψ(f,g)`, `g` and `f` simultaneously.*
+
+Lemma 5.3 (p.185): radius `−1` ⟺ `M_s = n−2` **and** the top form of `g` has two roots, one of multiplicity `(n/d_s)v_s`, `d_s > v_s > d_s/2`. p.194 (image; the text layer garbles the exponent): `[(y−ax)^{v_s}(y−bx)^{u_s}]^{n/d_s}`, `a ≠ b`.
+
+**(2) Minimality does force it.** The step Moh never labels is exhaustiveness — `δ_i < −1` must be impossible. Proved two ways: (a) Def 5.1(2) carries `≥`, so maximality of `i` forces `V_j = d_j` for `j > i` and Def 5.1(3) **telescopes** to `δ_i = −1/(n−M_i−1)` with *no* sign hypothesis on `δ_i` (symbolically checked, all `1 ≤ i ≤ s ≤ 8`, residual `0`), and `M_i ≤ M_s ≤ n−2` is definitional (Prop 5.2, p.176); (b) index-free: `deg g = deg_y g = n` ⟹ every root has `ord_t ≥ −1` ⟹ pairwise distances do too. Then: `δ > −1` ⟹ automorphism (contradicts counterexample) or simultaneous degree drop (contradicts minimality, since `Aut k[x,y]` preserves the counterexample class) ⟹ `δ = −1` ⟹ two distinct points at infinity.
+
+**(3) Program complete ⟹ plane JC2**, by the standard minimal-counterexample step; and only the *weak* minimality (Moh p.200 (3), "degrees not simultaneously reducible") is needed.
+
+**(4) Scope reconciliation.** 17(qqqqq)(5) listed four leaks. Leak (i) "one-place/Abhyankar–Moh is a different program" is **refuted**; leaks (ii) U-NEGATIVE, (iii) `s′>2`, (iv) routing maps **stand**. The caveat narrows, it does not vanish.
+
+**Two corrections worth flagging:**
+- The excluded configuration is one **point** at infinity (Moh's own parenthetical, Prop 4.3 p.166), not one **place** — so an AMT-based disposal would have had a place-count gap that Prop 5.4 does not have.
+- `[A.1]` is **Abhyankar, TATA notes 1977**, not Abhyankar–Moh (that is `[A-M.2]`). A banked memory had this wrong; corrected.
+
+Also flagged for you, not adjudicated: the packet contradicts itself on whether U-NEGATIVE (`V₂′ > d₂′`) is inside or outside the two-point stratum — 17(qqqqq)(5) says outside, `ideation-...-fable5.md` §4.3 says it's a per-row chart condition inside. That is now the least-settled part of the scope statement.
+
+Report: `xmodel/prop54-minimality-opus5-20260905.md` (19,428 body bytes, seal `613a89ce…`, basis `37589ccb`, `verify` PASS). Drivers: `box/prop54-20260905/`. No ledger edits.
+DIVERT path=xmodel/prop54-minimality-opus5-20260905.md status=CLEAN_SEALED body_bytes=19428 body_sha256=613a89ce7a2fd9b09409ab5b86dbbb4c09c5bddec9d4b5b14987fe6c8612c00a
