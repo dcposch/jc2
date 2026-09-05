@@ -12,6 +12,6 @@ SINGULAR="${SINGULAR:-Singular}"
 echo "FLEET_START class=C_n16m12_M6_13_ell3_s3 stem=C_n16m12_M6_13_ell3_s3_V4_3 unknowns=155"
 "$SINGULAR" --cpus=1 --threads=1 --flint-threads=1 -q --no-rc \
     "builders/C_n16m12_M6_13_ell3_s3_V4_3_builder.sing"
-python3 "/home/ubuntu/jc2/box/moh14-charts-20260905/sprime3_compiler.py" --mode emit-guided --dest "$HERE" --stem "C_n16m12_M6_13_ell3_s3_V4_3"
+python3 "/home/ubuntu/jc2/box/moh14-charts-20260905/sprime3_compiler.py" emit-guided --dest "$HERE" --stem "C_n16m12_M6_13_ell3_s3_V4_3"
 echo "FLEET_STAGE2 guided job at jobs/C_n16m12_M6_13_ell3_s3_V4_3_Q_guided.sing"
 echo "FLEET_HINT timeout 3600 $SINGULAR --cpus=1 --threads=1 --flint-threads=1 -q --no-rc jobs/C_n16m12_M6_13_ell3_s3_V4_3_Q_guided.sing"

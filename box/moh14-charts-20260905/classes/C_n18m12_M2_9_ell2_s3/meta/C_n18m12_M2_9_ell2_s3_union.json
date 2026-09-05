@@ -1,10 +1,8 @@
 {
   "builder": "box/moh14-charts-20260905/classes/C_n18m12_M2_9_ell2_s3/builders/C_n18m12_M2_9_ell2_s3_union_builder.sing",
-  "equations": 333,
-  "guided_job": "box/moh14-charts-20260905/classes/C_n18m12_M2_9_ell2_s3/jobs/C_n18m12_M2_9_ell2_s3_union_Q_guided.sing",
   "meta": {
     "alpha_dims": [
-      15,
+      18,
       27,
       35
     ],
@@ -19,6 +17,14 @@
           5
         ],
         [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
           0,
           4
         ],
@@ -28,6 +34,10 @@
         ],
         [
           2,
+          4
+        ],
+        [
+          3,
           4
         ],
         [
@@ -435,7 +445,7 @@
         ]
       ]
     },
-    "chart": "sprime3_necessary_D1_freelead_Bsafe",
+    "chart": "sprime3_full_D1_thm12_nocap",
     "closed_form": {
       "B": "-3/2",
       "B_safe": "-3/2",
@@ -456,9 +466,10 @@
       "two_point": false,
       "u": 5
     },
-    "fallacy_v2": "necessary over-approx: free leading form + B_safe; not a partition/two-point sub-slice",
+    "delta1_zero": false,
+    "fallacy_v2": "necessary over-approx: free leading form + B_safe + full Theorem-1.2 D1 inventory (no tot-degree cap); not a partition/two-point/envelope sub-slice",
     "gauge_audit": {
-      "alpha_shear_dim": 15,
+      "alpha_shear_dim": 18,
       "alpha_shear_scalar": false,
       "shear_index": 1,
       "shifted_beta_embeds": false
@@ -552,7 +563,7 @@
     ],
     "levels_cap": 29,
     "omega": "1",
-    "params_without_T": 119,
+    "params_without_T": 122,
     "partition": [],
     "partition_label": "freelead_union",
     "row": {
@@ -567,8 +578,7 @@
     "saturation_factor": "c",
     "top_face_factored": "y^6"
   },
-  "parameter_count": 119,
-  "rows_bytes": 80258778,
+  "parameter_count": 122,
   "rows_path": "box/moh14-charts-20260905/classes/C_n18m12_M2_9_ell2_s3/rows/C_n18m12_M2_9_ell2_s3_union_rows.tsv",
   "sat": "c",
   "variables": [
@@ -589,9 +599,12 @@
     "h_1_0",
     "A1_0_5",
     "A1_1_5",
+    "A1_2_5",
+    "A1_3_5",
     "A1_0_4",
     "A1_1_4",
     "A1_2_4",
+    "A1_3_4",
     "A1_0_3",
     "A1_1_3",
     "A1_2_3",

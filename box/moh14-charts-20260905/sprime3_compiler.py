@@ -14,7 +14,7 @@ is only a floor of the true order; cutting by it is a strict sub-slice
 (FALLACY-v2 / 17(ggggg)).  B_safe is the weakest correct D1 threshold.
 
 The necessary receiver (no two-point leading-form fix, no root-partition
-slice) is:
+slice, no tot-degree envelope) is:
 
     h = y^{K'} + sum_{D1, tot<=K', (a,b)!=(0,K')} h_{a,b} x^a y^b
     P = h^{e'} + sum_i α_i h^{e'-i},   Q = h^{q'} + sum_{i>=2} β_i h^{q'-i}
@@ -205,8 +205,14 @@ def h_inventory_necessary(C: dict) -> list[tuple[int, int]]:
     return out
 
 
-def coeff_inventory_necessary(C: dict, deficit: int) -> list[tuple[int, int]]:
-    """Full D1 coefficient space at threshold deficit·B_safe (Thm 1.2 floor)."""
+def coeff_inventory_envelope(C: dict, deficit: int) -> list[tuple[int, int]]:
+    """17(nnnnn) tot-capped envelope (NOT the Theorem-1.2 floor).
+
+    The extra cut `r + s <= deficit·K` is the 'conservative local finite
+    envelope' of order_basis_full.coeff_inventory.  It is not in Moh
+    Theorem 1.2.  When max_x_order > deficit·K − s it is a strict
+    sub-slice (17(ggggg) / FALLACY-v2 floor/attainment).
+    """
     K, d1, B = C["K"], C["delta1"], C["B"]
     th = deficit * B
     out = []
@@ -216,6 +222,29 @@ def coeff_inventory_necessary(C: dict, deficit: int) -> list[tuple[int, int]]:
             if xpow + ypow <= deficit * K:
                 out.append((xpow, ypow))
     return out
+
+
+def coeff_inventory_necessary(C: dict, deficit: int) -> list[tuple[int, int]]:
+    """Full Theorem-1.2 D1 coefficient space at threshold deficit·B_safe.
+
+    Every monomial x^r y^s with s < K and wt = −r + δ₁'·s >= deficit·B_safe.
+    No total-degree cap.  When δ₁' = 0 this is the zero-slope centre-support
+    r <= −deficit·B_safe for every centre power s < K (17(nnnnn)).
+    """
+    K, d1, B = C["K"], C["delta1"], C["B"]
+    th = deficit * B
+    out = []
+    for ypow in range(K - 1, -1, -1):
+        max_x = floor(d1 * ypow - th)
+        for xpow in range(0, max_x + 1):
+            out.append((xpow, ypow))
+    return out
+
+
+def inventory_cokernel(full: list[tuple[int, int]], sub: list[tuple[int, int]]) -> list[tuple[int, int]]:
+    """Monomials in the full D1 inventory missing from a sub-slice."""
+    return sorted(set(map(tuple, full)) - set(map(tuple, sub)),
+                  key=lambda t: (-t[1], t[0]))
 
 
 def apply_gauges(e: int, q: int, alpha: dict, beta: dict):
@@ -289,7 +318,7 @@ def build_spec(C: dict, h_mons, alpha_mons, beta_mons, row: OB.Row, stem_tag: st
         "row": asdict(row),
         "partition": [],
         "partition_label": stem_tag,
-        "chart": "sprime3_necessary_D1_freelead_Bsafe",
+        "chart": "sprime3_full_D1_thm12_nocap",
         "closed_form": {
             "K": C["K"], "e": C["e"], "q": C["q"], "u": C["u"],
             "R": C["R"], "Pi": C["Pi"], "d3prime": C["d3prime"],
@@ -311,14 +340,16 @@ def build_spec(C: dict, h_mons, alpha_mons, beta_mons, row: OB.Row, stem_tag: st
         "beta_inventories": {str(i): [list(m) for m in bm[i]] for i in range(2, q + 1)},
         "alpha_dims": [len(am[i]) for i in range(1, e + 1)],
         "beta_dims": [len(bm[i]) for i in range(2, q + 1)],
+        "delta1_zero": C["delta1"] == 0,
         "gauge_audit": audit,
         "gauges": gauges,
         "gauge_notes": notes,
         "params_without_T": len(params),
         "levels_cap": e + q + 2 * K + 12,
         "fallacy_v2": (
-            "necessary over-approx: free leading form + B_safe; "
-            "not a partition/two-point sub-slice"
+            "necessary over-approx: free leading form + B_safe + full "
+            "Theorem-1.2 D1 inventory (no tot-degree cap); not a "
+            "partition/two-point/envelope sub-slice"
         ),
     }
     return dict(
@@ -474,6 +505,10 @@ def pack_row(S: MS.Skel, xu: dict) -> dict:
     beta = {i: coeff_inventory_necessary(C, i) for i in range(2, C["q"] + 1)}
     am, bm, gauges, notes, audit = apply_gauges(C["e"], C["q"], alpha, beta)
     nunk = len(h) + sum(len(v) for v in am.values()) + sum(len(v) for v in bm.values()) + 1
+    a_env = {i: coeff_inventory_envelope(C, i) for i in range(1, C["e"] + 1)}
+    b_env = {i: coeff_inventory_envelope(C, i) for i in range(2, C["q"] + 1)}
+    a_coker = {i: inventory_cokernel(alpha[i], a_env[i]) for i in alpha}
+    b_coker = {i: inventory_cokernel(beta[i], b_env[i]) for i in beta}
     Mp = tuple(D["M"][i] for i in range(2, D["s"] + 1))
     return dict(
         src_n=S.n, src_m=S.m,
@@ -487,6 +522,15 @@ def pack_row(S: MS.Skel, xu: dict) -> dict:
         delta={i: P[i] for i in P},
         C=C, h=h, alpha=alpha, beta=beta,
         alpha_g=am, beta_g=bm, gauges=gauges, nunk=nunk,
+        envelope_cokernel={
+            "delta1_zero": C["delta1"] == 0,
+            "alpha_omitted": {str(i): [list(m) for m in a_coker[i]] for i in a_coker},
+            "beta_omitted": {str(i): [list(m) for m in b_coker[i]] for i in b_coker},
+            "alpha_coker_dim": {str(i): len(a_coker[i]) for i in a_coker},
+            "beta_coker_dim": {str(i): len(b_coker[i]) for i in b_coker},
+            "total_coker": sum(len(v) for v in a_coker.values()) + sum(len(v) for v in b_coker.values()),
+            "shear": audit,
+        },
         class_key=(D["n"], D["m"], Mp, D["ell"], D["s"]),
         xu_ok=xu["xu_ok"], IM_max=xu["IM_max"], Im_min=xu["Im_min"],
     )
@@ -612,6 +656,9 @@ def serial_row(r: dict) -> dict:
         nunk=r["nunk"], h_count=len(r["h"]),
         alpha_dims=[len(r["alpha_g"][i]) for i in sorted(r["alpha_g"])],
         beta_dims=[len(r["beta_g"][i]) for i in sorted(r["beta_g"])],
+        envelope_coker_total=r["envelope_cokernel"]["total_coker"],
+        delta1_zero=r["envelope_cokernel"]["delta1_zero"],
+        shear_scalar=r["envelope_cokernel"]["shear"]["alpha_shear_scalar"],
         xu_ok=r["xu_ok"], IM_max=qstr(r["IM_max"]), Im_min=qstr(r["Im_min"]),
     )
 
@@ -686,11 +733,12 @@ def emit_all(enum: dict) -> dict:
             union_B_safe=qstr(C_union["B_safe"]),
             union_builder=payU["builder"],
             union_fleet_job=str(jobU.relative_to(ROOT)),
-            chart="necessary_D1_freelead_Bsafe_class_union",
+            chart="full_D1_thm12_nocap_class_union",
             not_a_subslice=True,
             fallacy_v2=(
-                "class chart = union of V'-fibre D1 inventories; "
-                "a representative row is not FULL_ACTUAL"
+                "class chart = union of V'-fibre full Theorem-1.2 D1 "
+                "inventories (no tot-degree cap); a representative row "
+                "is not FULL_ACTUAL"
             ),
             rows=per_row,
         )
