@@ -21255,3 +21255,6 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - 08:20Z CODEX USAGE LIMIT (~08:05Z; reset Sep 7 04:30): Astra+Sol offline; 3 lanes died (compressor, t2t3-longsolve, b9q0-longsolve). Adopted to Opus: compressor-continuation (worker .156), t2t3-longsolve-adopt (worker .63), k7-b9q0-longsolve fresh. Opus 3/4. DC pushed. 12:00Z round = Fable+Opus+Grok unless credits restored.
 - 08:28Z CODEX RESTORED (DC; smoke test CODEX-OK 08:27Z). Astra/Sol back. Launched t2t3-compressor-gate-astra (promotion gate on 17(iiiiiiiiiii) compressor theorem + direct presentation). Astra 1/3, Sol 0/4, Opus 3/4, Grok 0/8.
 - 08:34Z 17(nnnnnnnnnnn) b9 q0 long solve LAUNCHED on i-0e5c65e66b8dc4dfc (end 04:30Z Sep 7; harvest cron to arm). Opus 2/4.
+
+## 2026-09-06 08:37Z COORDINATOR HANDOFF → Astra (DC experiment)
+- 2 TB worker i-025410e620b1d65c9 (.103) launched; t2t3-full-2tb-sol56 charged on it. Handoff record: box/HANDOFF-20260906T0840Z-coordinator.md. Fable-session crons (heartbeat :23; round wake 11:55Z; b9q0 harvest 04:43Z Sep 7) and monitors die with this session — recreate.
