@@ -1,0 +1,81 @@
+{
+  "argv_count": 10,
+  "argv_sha256": "f58db8473b6dc78fc6d8e2e686a4f65ea152afef3807ebd04eee414d0a0451ce",
+  "caps": {
+    "cpu_seconds": null,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": null,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 60.0,
+    "wall_seconds": 9000.0
+  },
+  "child_exit_code": null,
+  "child_returncode": -15,
+  "child_signal": 15,
+  "cwd": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000",
+  "enforcement": {
+    "cpu": "disabled",
+    "rss": "disabled",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/time",
+  "identity_checks": [
+    {
+      "observed_pgid": 100508,
+      "observed_pid": 100508,
+      "observed_start_identity": "boot=3fe161b7-b599-41fc-b86d-d49e3ac8e201;start_ticks=929631",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-09-06T07:39:43.542714Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-09-06T07:39:43.542809Z"
+    }
+  ],
+  "invocation_cwd": "/home/ubuntu/t2t3-direct-20260906",
+  "max_observed_group_rss_bytes": 133051543552,
+  "pgid": 100508,
+  "pid": 100508,
+  "resource": null,
+  "runner_exit_code": 124,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=3fe161b7-b599-41fc-b86d-d49e3ac8e201;start_ticks=929631",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "WALL_TIMEOUT",
+  "stderr": {
+    "bytes": 2488,
+    "path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/solver.stderr",
+    "sha256": "0ad384916a62ff721149d49bea788fc4a50c75c384a984100e51d7777320a76c"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 0,
+    "path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/solver.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "telemetry_path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/caprun.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      100508,
+      100509
+    ],
+    "kill_sent": false,
+    "leader_reaped": true,
+    "reason": "wall_timeout",
+    "term_sent": true
+  },
+  "utc_end": "2026-09-06T07:39:43.552307Z",
+  "utc_start": "2026-09-06T05:09:43.524719Z",
+  "wall_elapsed_seconds": 9000.027586387
+}

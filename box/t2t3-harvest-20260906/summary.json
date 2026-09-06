@@ -1,0 +1,379 @@
+{
+  "build": {
+    "bytes": 4037,
+    "canonical_primitive_generator_sequence_sha256": "a78c6a46e4b50dec6df51712c9c4b8d3c717b52490488d6819563cb5e18044fe",
+    "case": "99-delta2",
+    "classification_scope": "literal full-direct-ideal generator subset; UNIT is conclusive for the full ideal, NONUNIT is inconclusive",
+    "complete_T2_face": false,
+    "driver_sha256": "c9110260fd86bc981e745a29768a9fe929973332b6ea4d3a108584d3a2ec44f4",
+    "emitted_generator_count": 466,
+    "emitted_row_labels_sha256": "e86f01d0a0200d9a58e93ddbd1bb40cd86a980d4b6405c8727a95567972a4e6e",
+    "field": "Q",
+    "kind": "T2_FACE_SUBSET_UNIT_CERTIFICATE",
+    "labels_file": "99-delta2.labels.tsv",
+    "labels_file_sha256": "ef8083969910b3709e084b0285d21e5a87328055a77accc3d8aacc7c895d5344",
+    "modular_prime": 1073741827,
+    "msolve_file": "99-delta2.ms",
+    "msolve_file_bytes": 271944646,
+    "msolve_file_sha256": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572",
+    "omitted_blocks": [
+      "T2_strict",
+      "T3_recurrence",
+      "T3_strict",
+      "T3_face"
+    ],
+    "order": {
+      "matrix_flat_sha256": "547fabda8bf5874666699a9e296a06b796299774191b59583e156001d6e5cf00",
+      "singular": "(M(two-site 446x446),dp(3))",
+      "site_r_sha256": null,
+      "site_z_sha256": null
+    },
+    "original_name_generator_text_sha256": "100824ff0c0df46cd1101b096271126e253e72c7640964933a6844c7cd75fac3",
+    "path": "/home/ubuntu/t2t3-direct-20260906/harvest-compact-20260906/99-delta2-slimgb.build.json",
+    "raw_row_labels_sha256": "e86f01d0a0200d9a58e93ddbd1bb40cd86a980d4b6405c8727a95567972a4e6e",
+    "schema": "T2T3_DIRECT_T2_FACE_SUBSET/v1",
+    "selected_T2_face_indices": [
+      55
+    ],
+    "selected_blocks": [
+      "source_residual",
+      "T2_upper",
+      "T2_face_subset",
+      "inverse"
+    ],
+    "semantic_variable_count": 449,
+    "sha256": "9c03f12190fa06b0b883a1c11051c063d3ddca10c664c390d819d40925c3376e",
+    "shared_emitter_driver_sha256": "4346db07a8d66c19f28ded96f4d4750fab2f9f796899f2d1d09273eea2e69879",
+    "singular_file": "99-delta2-slimgb.sing",
+    "singular_file_bytes": 357263336,
+    "singular_file_sha256": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c",
+    "solver_variable_count": 449,
+    "solver_variable_order_sha256": "46e7a6a8bf467f6f7be994336c03fedf86bfacc139641711e4210605cd6438d5",
+    "source_input": "/home/ubuntu/t2t3-direct-20260906/inputs/delta2_stage8.strongest.json",
+    "source_input_sha256": "778eda933ee9b2acbad20f6dc862c25db94776cb25ffd5782646427a3b63e1ea",
+    "status": "EMITTED_EXACT_Q_AND_MODULAR_NOT_RUN",
+    "valid": true,
+    "variable_map_file": "99-delta2.variables.json",
+    "variable_map_sha256": "755d3a864301c5b4c4837f417261f1f4694626676c0e379ec853be663f8a4c75"
+  },
+  "combined_verdict": "OPEN",
+  "created_utc": "2026-09-06T07:41:42.699106Z",
+  "generator_custody": {
+    "both_solver_inputs_match_build": true,
+    "build_metadata_valid": true,
+    "canonical_primitive_generator_sequence_sha256": "a78c6a46e4b50dec6df51712c9c4b8d3c717b52490488d6819563cb5e18044fe",
+    "msolve_input_matches_build": true,
+    "singular_input_matches_build": true
+  },
+  "guardrails": {
+    "certificate_nonunit_has_no_force_for_full_ideal": true,
+    "exact_Q_requires_identical_generator_custody": true,
+    "modular_unit_is_signal_only": true,
+    "necessary_chart_survivor_is_not_a_Keller_pair": true,
+    "nonunit_basis_is_not_a_sample_point": true
+  },
+  "msolve": {
+    "address_space_limit": {
+      "current_matches_postflight": true,
+      "current_sha256": "244242bec1ac7f0c4aa1d4b6cbcf96a6d43d433fa169650fd403353c7503a19d",
+      "custody_limit_kind": "RLIMIT_AS",
+      "custody_limit_units": "KiB",
+      "custody_limit_value": "419430400",
+      "exists": true,
+      "limit_kib": 419430400,
+      "postflight_sha256": "244242bec1ac7f0c4aa1d4b6cbcf96a6d43d433fa169650fd403353c7503a19d",
+      "proc_hard_bytes": 429496729600,
+      "proc_soft_bytes": 429496729600,
+      "valid": true
+    },
+    "artifact_hash_checks": {
+      "caprun_current_matches_postflight": true,
+      "caprun_current_sha256": "acfce9e84f2ffdd381c6b5919bb89dfe14fe62aef05c9213d542fb5302a6af2c",
+      "caprun_postflight_sha256": "acfce9e84f2ffdd381c6b5919bb89dfe14fe62aef05c9213d542fb5302a6af2c",
+      "custody_current_matches_postflight": true,
+      "custody_current_sha256": "f0a98ca56f60161832f26391664c7032a4dd08cbe23c50167c71fea12e5b6197",
+      "custody_postflight_sha256": "f0a98ca56f60161832f26391664c7032a4dd08cbe23c50167c71fea12e5b6197",
+      "stderr_caprun_matches_postflight": true,
+      "stderr_postflight_sha256": "0ad384916a62ff721149d49bea788fc4a50c75c384a984100e51d7777320a76c",
+      "stdout_caprun_matches_postflight": true,
+      "stdout_postflight_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "basis": {
+      "body_characters": 0,
+      "bytes": 0,
+      "classification": "INCOMPLETE",
+      "current_matches_postflight": true,
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "declared_basis_length": null,
+      "declared_count_matches_body": false,
+      "exists": true,
+      "field_characteristic": null,
+      "field_header_count": 0,
+      "grammar_error": null,
+      "grammar_valid": false,
+      "length_header_count": 0,
+      "parsed_basis_count": 0,
+      "postflight_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "standard_header_count": 0,
+      "structurally_complete": false
+    },
+    "caprun": {
+      "argv_sha256": "f58db8473b6dc78fc6d8e2e686a4f65ea152afef3807ebd04eee414d0a0451ce",
+      "child_returncode": -15,
+      "child_signal": 15,
+      "cleanup_complete": true,
+      "max_observed_group_rss_bytes": 133051543552,
+      "runner_exit_code": 124,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "status": "WALL_TIMEOUT",
+      "stderr": {
+        "bytes": 2488,
+        "path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/solver.stderr",
+        "sha256": "0ad384916a62ff721149d49bea788fc4a50c75c384a984100e51d7777320a76c"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/solver.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "termination_reason": "wall_timeout",
+      "wall_elapsed_seconds": 9000.027586387
+    },
+    "core_artifact_hashes_match": true,
+    "custody": {
+      "TMPDIR": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/tmp",
+      "argv_shellquoted": " /usr/bin/time -v -o /home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/time.txt /home/ubuntu/t2t3-direct-20260906/run_worker_capped.sh __msolve_exec /home/ubuntu/t2t3-direct-20260906/msolve_m5000_wrapper.sh /home/ubuntu/t2t3-direct-20260906/presentations/d2-z55/99-delta2.ms /home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/basis.ms /home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/limit.txt",
+      "caprun_sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "hostname": "ip-172-30-0-55",
+      "input": "/home/ubuntu/t2t3-direct-20260906/presentations/d2-z55/99-delta2.ms",
+      "input_sha256": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572",
+      "limit_kind": "RLIMIT_AS",
+      "limit_units": "KiB",
+      "limit_value": "419430400",
+      "mode": "msolve",
+      "nproc": "64",
+      "schema": "T2T3_WORKER_RUN/v1",
+      "solver": "/home/ubuntu/t2t3-direct-20260906/msolve_m5000_wrapper.sh",
+      "solver_sha256": "324f4e8c8a5b112dbf6051e5bb84aff0d6de4ccc973cfca1919881766145f9b9",
+      "term_grace_seconds": "60",
+      "wall_seconds": "9000",
+      "wrapper_sha256": "2684bc5eb52705a7999a5034003c1d8201bc7181baf1f3c14021182cfde4cb4c"
+    },
+    "custody_fields_valid": true,
+    "errors": [],
+    "exists": true,
+    "expected_modular_prime": 1073741827,
+    "f4": {
+      "accepted_interleave_count": 0,
+      "alternate_recognized_rows": 0,
+      "completed_rows": 10,
+      "current_sha256": "0ad384916a62ff721149d49bea788fc4a50c75c384a984100e51d7777320a76c",
+      "equation_count_matches_build": true,
+      "expected_equations": 466,
+      "finished_marker": false,
+      "finished_marker_seen": false,
+      "invalid_equations": 0,
+      "largest_completed_f4_round_matrix": {
+        "cols": 3843843,
+        "degree": 4,
+        "entries": 2252003829939,
+        "line": 45,
+        "rows": 585873
+      },
+      "largest_f4_round_matrix": {
+        "cols": 3843843,
+        "degree": 4,
+        "entries": 2252003829939,
+        "line": 45,
+        "rows": 585873,
+        "stage": "done"
+      },
+      "largest_matrix_including_final_reduction": {
+        "cols": 3843843,
+        "degree": 4,
+        "entries": 2252003829939,
+        "kind": "f4_round",
+        "line": 45,
+        "rows": 585873,
+        "stage": "done"
+      },
+      "last_row": {
+        "degree": 4,
+        "line": 46,
+        "pairs": 1184777,
+        "selected": 5000,
+        "stage": "selected"
+      },
+      "log_exists": true,
+      "max_completed_degree": 4,
+      "max_selected_degree": 4,
+      "recognized_rows": 11,
+      "reduce_final": null,
+      "reported_equations": 466,
+      "source": "solver.stderr",
+      "stderr_hashes_match": true,
+      "stdout_hashes_match": true,
+      "trailing_diagnostic_count": 0,
+      "trailing_diagnostic_samples": []
+    },
+    "input_hashes": {
+      "build_sha256": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572",
+      "matches_build": true,
+      "postflight_sha256": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572",
+      "pre_post_agree": true,
+      "preflight_sha256": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572"
+    },
+    "interpretation": "A modular result is a screen, never an exact-Q certificate.",
+    "mode_matches": true,
+    "normal_completion": false,
+    "path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000",
+    "prime_matches_build": false,
+    "provided": true,
+    "runner_rc": 124,
+    "time": {
+      "current_matches_postflight": true,
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed": null,
+      "exists": true,
+      "max_rss_KiB": null,
+      "postflight_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "time_record_valid": false,
+    "verdict": "OPEN_INCOMPLETE_OR_CAPPED"
+  },
+  "schema": "T2T3_DIRECT_WORKER_SUMMARY/v1",
+  "singular": {
+    "artifact_hash_checks": {
+      "caprun_current_matches_postflight": true,
+      "caprun_current_sha256": "df10146c5f8a5109b590f19b027c8cf0455677990448bdf92de1c09e66a939b9",
+      "caprun_postflight_sha256": "df10146c5f8a5109b590f19b027c8cf0455677990448bdf92de1c09e66a939b9",
+      "custody_current_matches_postflight": true,
+      "custody_current_sha256": "28a07494e3a9a231b609e18ecbe033e3625b9c89573baa3459e0c08bd758d4d9",
+      "custody_postflight_sha256": "28a07494e3a9a231b609e18ecbe033e3625b9c89573baa3459e0c08bd758d4d9",
+      "stderr_caprun_matches_postflight": true,
+      "stderr_postflight_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_caprun_matches_postflight": true,
+      "stdout_postflight_sha256": "9bc32e61a392947091e82fb8fe307804618d023894b40eb5d95f864bba4c8160"
+    },
+    "caprun": {
+      "argv_sha256": "7fa376a76119c2f5e2f66fe0b23398189a65b680367806aad216dfca433060c4",
+      "child_returncode": -15,
+      "child_signal": 15,
+      "cleanup_complete": true,
+      "max_observed_group_rss_bytes": 114269331456,
+      "runner_exit_code": 124,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "status": "WALL_TIMEOUT",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-q-slimgb/solver.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 34,
+        "path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-q-slimgb/solver.stdout",
+        "sha256": "9bc32e61a392947091e82fb8fe307804618d023894b40eb5d95f864bba4c8160"
+      },
+      "termination_reason": "wall_timeout",
+      "wall_elapsed_seconds": 9002.955034249
+    },
+    "core_artifact_hashes_match": true,
+    "custody": {
+      "TMPDIR": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-q-slimgb/tmp",
+      "argv_shellquoted": " /usr/bin/time -v -o /home/ubuntu/t2t3-direct-20260906/runs/d2-z55-q-slimgb/time.txt /usr/bin/Singular -q --no-rc --no-warn --no-shell --threads=1 --flint-threads=1 /home/ubuntu/t2t3-direct-20260906/presentations/d2-z55/99-delta2-slimgb.sing",
+      "caprun_sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "hostname": "ip-172-30-0-55",
+      "input": "/home/ubuntu/t2t3-direct-20260906/presentations/d2-z55/99-delta2-slimgb.sing",
+      "input_sha256": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c",
+      "limit_kind": "sampled_aggregate_PGID_RSS",
+      "limit_units": "bytes",
+      "limit_value": "214748364800",
+      "mode": "singular",
+      "nproc": "64",
+      "schema": "T2T3_WORKER_RUN/v1",
+      "solver": "/usr/bin/Singular",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "term_grace_seconds": "60",
+      "wall_seconds": "9000",
+      "wrapper_sha256": "2684bc5eb52705a7999a5034003c1d8201bc7181baf1f3c14021182cfde4cb4c"
+    },
+    "custody_fields_valid": true,
+    "errors": [],
+    "exists": true,
+    "input_hashes": {
+      "build_sha256": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c",
+      "matches_build": true,
+      "postflight_sha256": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c",
+      "pre_post_agree": true,
+      "preflight_sha256": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c"
+    },
+    "markers_and_result": {
+      "bytes": 34,
+      "classification": "INCOMPLETE_OR_AMBIGUOUS",
+      "current_sha256": "9bc32e61a392947091e82fb8fe307804618d023894b40eb5d95f864bba4c8160",
+      "diagnostic_count": 0,
+      "diagnostic_samples": [],
+      "exists": true,
+      "marker_counts": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_RESULT": 0,
+        "BEGIN_STD": 1,
+        "END_RESULT": 0,
+        "END_STD": 0
+      },
+      "marker_lines": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_RESULT": null,
+        "BEGIN_STD": 2,
+        "END_RESULT": null,
+        "END_STD": null
+      },
+      "ordered_complete_markers": false,
+      "result": {
+        "BASIS_SIZE": null,
+        "DIMENSION": null,
+        "REDUCE_ONE": null
+      },
+      "unexpected_line_count": 1,
+      "unexpected_line_samples": [
+        "halt 1"
+      ]
+    },
+    "mode_matches": true,
+    "normal_completion": false,
+    "path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-q-slimgb",
+    "provided": true,
+    "result_output_hashes_match": true,
+    "runner_rc": 124,
+    "solver_diagnostic": true,
+    "stderr": {
+      "bytes": 0,
+      "caprun_record": {
+        "bytes": 0,
+        "path": "/home/ubuntu/t2t3-direct-20260906/runs/d2-z55-q-slimgb/solver.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "exists": true,
+      "hashes_match": true,
+      "scan": {
+        "bytes": 0,
+        "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exists": true,
+        "nonempty_line_count": 0,
+        "samples": []
+      }
+    },
+    "time": {
+      "current_matches_postflight": true,
+      "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "elapsed": null,
+      "exists": true,
+      "max_rss_KiB": null,
+      "postflight_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "time_record_valid": false,
+    "verdict": "OPEN_INCOMPLETE_OR_CAPPED"
+  }
+}

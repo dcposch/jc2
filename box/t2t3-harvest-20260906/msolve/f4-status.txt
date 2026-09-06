@@ -1,0 +1,24 @@
+LANE STATUS  /home/ubuntu/t2t3-direct-20260906/runs/d2-z55-mod-m5000/solver.stderr   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-06 06:56:18 UTC  (2605 s (43.4 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 449 vars / 466 eqs, char 1073741827, threads 64, order DRL
+  phase     : F4 round 11 IN PROGRESS at deg 4 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 10 completed + 1 in progress; sum of round wall time 6318 s (105.3 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d2@r1 d3@r2 d4@r5   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+        3    3      606         4702       5864 x 29723         0.12%      368      238          2.91
+        4    3      275        13795       3458 x 19971         0.23%      248       27          2.17
+        5    4     5000        22214     216034 x 913997        0.01%     2489     2511         72.71
+        6    3       79       102933       3012 x 35555         0.28%       53       26          3.01
+        7    4     5000       108090     235430 x 1469877       0.01%     2943     2057        260.26
+        8    4     5000       323694     447570 x 2713749       0.01%     3065     1935       1164.72
+        9    4     5000       627563     495448 x 2776544       0.01%     3102     1899       1708.61
+       10    4     5000       912083     585873 x 3843843       0.01%     3128     1872       3102.64
+  largest matrix so far: 585873 x 3843843 0.01% at deg 4 (round 10, 3103 s (51.7 min))
+  live round: r11 deg 4, sel 5000 of 1184777 pairs  [stage: selected]
+    nearest precedent (last completed deg-4 round r10): sel 5000 -> 585873 x 3843843 0.01%, 3103 s (51.7 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 4702 -> 912083 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 1184777 (list still growing)
+      - degree plateau: max deg 4 unchanged for 6 rounds (6312 s (105.2 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
