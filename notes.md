@@ -21224,3 +21224,5 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 ## 2026-09-06 03:02Z LIVE STATE
 - 17(uuuuuuuuuu) six rows SURVIVE the R063 template (Sol; integral complete sums 17/22,17,17/22,22,18,18 = exact-contact parent certificates; the shifted-46 fractions were premature-finality artifacts — Prop 5.3 carries the unselected packet to D'_2). 17(vvvvvvvvvv) LEMMA [CHILD-INTEGRALITY] proved conditionally (Astra); R063 = 71/4 reconfirmed under the SAME carry rule. Both PROVISIONAL; Opus gates running (six-rows-gate, lemma-gate). Residual 64 (returns to 65 only if the six-rows gate refutes R063). Running: k16-utac, lambda-lowweight [Astra 2/3] | t2t3-direct, k7-cofactors-r2, descent-invariance-gate [Sol 3/4] | six-rows-gate, lemma-gate [Opus 2/4] | actual-stabilizer-census [Grok 1/8].
+
+- 03:09Z 17(wwwwwwwwww) DATA: actual-stabilizer operative count = 90 (vs 1,420), = printed-closure N>0; residual 64 unaffected; only R063 drops from the roster. Opus proving the sharpened screen necessary (actual-stabilizer-soundness). Opus 3/4.
