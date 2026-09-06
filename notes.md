@@ -21233,3 +21233,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - 03:34Z 17(bbbbbbbbbbb) child-integrality LEMMA PROMOTED (Opus gate); R063 71/4 confirmed 4×; single point of failure = forbidden-average exclusion (re-derived, holds). Opus 1/4.
 - 03:35Z 17(ccccccccccc) λ-localizer kill route REFUTED (x-charge obstruction, proved); order charts remain the full c-inverted system. Astra 2/3.
 - 03:36Z 17(ddddddddddd) THEOREM [ACTUAL-STABILIZER SCREEN] proved-here (Opus; n≤100 actual survivors = Moh p.202 exactly; coarse has 14 excess contradicting App. II). Astra gate running. Astra 3/3, Opus 0/4, Sol 2/4, Grok 0/8.
+- 03:37Z launched us2-descent-licence-opus5 (family C: radius + terminal identification at u_s ≥ 2). Opus 1/4.
