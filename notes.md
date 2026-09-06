@@ -21200,3 +21200,6 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 ## 2026-09-06 01:22Z LIVE STATE — disk recovered
 - In-place gzip of 184 large regenerable CAS text files complete (originals hashed in box/_compressed-manifests/compress-20260906T0110Z.sha256); root at 13 GB free. 8 lanes running: k16-t2-closing, t2t3-chain, lambda-lowweight, nodal-diagonal, k7-cofactors-r2, xu71-offset-one-r2, exact-contact-gate, im-descent-replay. PROVISIONAL headline under gate: exact-contact integrality test (924/1080 configurations pruned; six family-B rows dead mod depth cap ⇒ 65→59).
+
+## 2026-09-06 01:35Z LIVE STATE
+- Post-round: face-level Xu closed as an instrument (0/36); CQ-ELIM proper + multiplicity law; exact-contact calculus PROVISIONAL under Astra gate (924/1080 pruned; 6 family-B kills mod depth cap; R063 child I_M = 71/4 ⇒ descent-sensitive kill if the l-shift holds — xu-ell-shift-opus5 launched); K16 two-step certificate fails at t=6. 8 lanes running; disk 13 GB; next round wake 11:55Z armed.
