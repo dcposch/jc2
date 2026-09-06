@@ -1,0 +1,18 @@
+diff --git a/src/msolve/iofiles.c b/src/msolve/iofiles.c
+--- a/src/msolve/iofiles.c
++++ b/src/msolve/iofiles.c
+@@ -25 +25 @@
+-static inline void store_exponent(const char *term, data_gens_ff_t *gens, int32_t pos)
++static inline void store_exponent(const char *term, data_gens_ff_t *gens, int64_t pos)
+@@ -776 +776 @@
+-    store_exponent(term, gens, pos*gens->nvars);
++    store_exponent(term, gens, (int64_t)pos*gens->nvars);
+@@ -799 +799 @@
+-        store_exponent(term, gens, (pos+j)*gens->nvars);
++        store_exponent(term, gens, (int64_t)(pos+j)*gens->nvars);
+@@ -887 +887 @@
+-    store_exponent(term, gens, pos/2*gens->nvars);
++    store_exponent(term, gens, (int64_t)(pos/2)*gens->nvars);
+@@ -891 +891 @@
+-      store_exponent(term, gens, ((pos+j)/2)*gens->nvars);
++      store_exponent(term, gens, (int64_t)((pos+j)/2)*gens->nvars);
