@@ -21253,3 +21253,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - 08:17Z 17(lllllllllll) K=7 strata 9/10 certified (b10 unconditional; b9 needs b9 q0 — long-solve candidate). Sol 2/4.
 - 08:18Z launched k7-b9q0-longsolve-sol56 (decoupled 20 h exact-Q on b9 q0; own 256 GB worker). Sol 3/4.
 - 08:20Z CODEX USAGE LIMIT (~08:05Z; reset Sep 7 04:30): Astra+Sol offline; 3 lanes died (compressor, t2t3-longsolve, b9q0-longsolve). Adopted to Opus: compressor-continuation (worker .156), t2t3-longsolve-adopt (worker .63), k7-b9q0-longsolve fresh. Opus 3/4. DC pushed. 12:00Z round = Fable+Opus+Grok unless credits restored.
+- 08:28Z CODEX RESTORED (DC; smoke test CODEX-OK 08:27Z). Astra/Sol back. Launched t2t3-compressor-gate-astra (promotion gate on 17(iiiiiiiiiii) compressor theorem + direct presentation). Astra 1/3, Sol 0/4, Opus 3/4, Grok 0/8.
