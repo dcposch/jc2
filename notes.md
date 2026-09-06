@@ -21241,3 +21241,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - 04:04Z launched classA-smallest-receiver-sol56 (smallest class-A receiver; guided_gb/msolve/Singular on idle worker .163; ≤200 min). Sol 3/4.
 - 04:23Z 17(hhhhhhhhhhh) K=7 strata: 7/10 charts theorem-tier (b11–b13 unconditional; b9, b10 conditional on 3 charts) → r3 launched on worker .108. Sol 4/4.
 - 04:30Z k7-cofactors r3 FAILED (worker .108 terminated 04:17Z before CAS work; nothing run) → r3b launched with own-worker authorization. Sol 4/4.
+- 04:42Z HEARTBEAT: 3 active lanes (classA probe, k7 r3b on own worker .77, t2t3 on .55) all under live monitors (→05:06/05:31Z). No unbanked seals (3 MISSING lanes diagnosed: k7 r1→r2 banked, r3→r3b running, xu71 superseded). ORPHANS (>4h, no owner; NOT terminated; for DC): .7, .28, .18 (c7i.8xl, 09-05 05:xxZ), .163 (r7i.8xl, 09-05 14:19Z; currently used by the classA probe under explicit authorization). Disk 12G.
