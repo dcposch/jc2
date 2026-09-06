@@ -1,0 +1,35 @@
+// Exact-Q controls: positive weighted homogeneous truncation and localizer repair.
+ring r=0,(b,a),wp(2,1);
+ideal I=b2-a4,a*b;
+degBound=4;
+ideal G4=std(I);
+print("CONTROL_BOUND4_A5_NONZERO="+string(reduce(a5,G4)!=0));
+degBound=5;
+ideal G5=std(I);
+print("CONTROL_BOUND5_A5_ZERO="+string(reduce(a5,G5)==0));
+print("CONTROL_BOUND5_A4_NONZERO="+string(reduce(a4,G5)!=0));
+print("CONTROL_WEIGHT5_IDENTITY="+string(a5-(-a*(b2-a4)+b*(a*b))==0));
+degBound=0;
+ring rh=0,(l,Z,s),wp(1,1,1);
+// I=(l^2), lambda=l. Homogeneous localizer ideal.
+ideal H=l2,Z*l-s2;
+degBound=3;
+ideal H3=std(H);
+print("HOMOG_BOUND3_S3_NONZERO="+string(reduce(s3,H3)!=0));
+degBound=4;
+ideal H4=std(H);
+print("HOMOG_BOUND4_S4_ZERO="+string(reduce(s4,H4)==0));
+print("HOMOG_BOUND4_IDENTITY="+string(s4-(Z2*l2-(Z*l+s2)*(Z*l-s2))==0));
+degBound=0;
+// Vertex control in actual inhomogeneous localizer ring.
+ring rv=0,(l,Z),wp(1,1);
+ideal V=l,Z*l-1;
+ideal GV=std(V);
+print("VERTEX_UNIT="+string(reduce(1,GV)==0));
+print("VERTEX_IDENTITY="+string(1-(Z*l-(Z*l-1))==0));
+ideal U=Z*l-1;
+ideal GU=std(U);
+print("POSITIVE_X_PROJECTION_PROPER="+string(reduce(1,GU)!=0));
+print("POSITIVE_X_PROJECTION_POINT="+string(subst(subst(U[1],l,1),Z,1)==0));
+print("GRADING_CONTROLS_FINISHED=1");
+quit;

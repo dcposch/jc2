@@ -1,0 +1,22 @@
+{
+ "status": "PASS",
+ "installed_backend": "Singular 4.3.2 x86_64",
+ "syntax": "list RL=ringlist(R); attrib(RL,\"maxExp\",255); def Packed=ring(RL); setring Packed; emit every polynomial only now",
+ "variables": 458,
+ "source_variable_order_sha256": "684c92cf0e6da78cf5fb9ebf225849cf80b87f200afcb22b7277d3404ba1913f",
+ "source_weights_sha256": "42a6dfefa194bf4790ea8b0aef01fc792b960204e27369df749d3486a6a5578f",
+ "emitted_control_sha256": "1b5fe808c8e1449320057823dbf149c8295fce19a66c538b6dd35c18095573e4",
+ "stdout": "FIELD_EQUAL=1\nVARIABLE_ORDER_EQUAL=1\nORDER_WEIGHTS_EQUAL=1\nVARIABLE_COUNT=458\nPACKMASK=255\nEXP114=114\nMULTIPLICATION_EXACT=1\n// ** G4 is no standard basis\nBOUND4_NONZERO=1\n// ** G5 is no standard basis\nBOUND5_ZERO=1\n// ** G5 is no standard basis\nLOWER_NONZERO=1\nIDENTITY=1\n// ** mapped is no standard basis\nEXACT_BASES_EQUAL=1\n",
+ "stderr": "PEAK_KIB=11388\n",
+ "storage_mask": 255,
+ "safe_power_guard_capacity": 127,
+ "largest_requested_B": 57,
+ "conservative_intermediate_exponent_bound": 114,
+ "degree_argument": "All selected generators are homogeneous of positive weighted degree <=B. Required S-polynomials and all reductions remain at weight <=B. Pair lcm weights before rejection are <=2B, and even temporary products from these pairs have exponents <=2B<=114. The 255 mask has signed power-guard capacity127. No exponent is truncated or quotiented. Reject any OVERFLOW/error; never interpret it as zero.",
+ "packing_estimate": "For 458 variables on 64-bit: 16-bit default stores4 exponents/word; 8-bit mask255 stores8. Exponent-array words fall from ceil(458/4)=115 to ceil(458/8)=58, excluding fixed overhead. Total RSS reduction is not guaranteed.",
+ "primary_sources": [
+  "https://github.com/Singular/Singular/blob/spielwiese/doc/reference.doc",
+  "https://github.com/Singular/Singular/blob/spielwiese/libpolys/polys/monomials/ring.cc",
+  "https://github.com/Singular/Singular/blob/spielwiese/kernel/GBEngine/kstd2.cc"
+ ]
+}

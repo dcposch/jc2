@@ -1,0 +1,217 @@
+{
+ "schema": "jc2.lambda.chargezero-independent-audit/v1",
+ "status": "PASS",
+ "run_count": 30,
+ "checked_by": "grading_audit independent review",
+ "driver_sha256": "b6e7f6aab8b6e6711031bcb0da4dcd32961b9ae0384566e1bd331729257abc1f",
+ "run_cases_sha256": "faaba9243af33b183663738ac7bf535d8bc84211752035ec5ebf739915774712",
+ "ordered_result_bundle_sha256": "b7f2bbf7631ecf3f4640cf5083df4007165e572883f60b0f7e7ef85881e0d0c6",
+ "checks": {
+  "all_results_clean_rc0": true,
+  "all_original_variables_retained": true,
+  "original_rows_selected": 0,
+  "all_basis_sizes": 1,
+  "all_NF_ssB_equals_ssB": true,
+  "all_lambda_normalized_hashes_match_pinned_derivations": true,
+  "no_qring_or_added_overflow_monomials": true,
+  "no_parameter_specialization": true,
+  "keller_option_disallowed_with_chargezero": true
+ },
+ "component_theorem": "Give Z,ss charge0 and original variables their nonnegative x charges. Every Jacobian row has charge>=1, while lambda and g=Zlambda-ss^(W+1) have charge0. Thus H_(0,B)=(g)_(0,B) for every B. Projection of homogeneous sums proves both inclusions. No quotient by positive-charge variables is formed.",
+ "independent_buchberger_closure": "A single nonzero polynomial g is a complete Groebner basis of (g): LM(a*g)=LM(a)*LM(g), and there are no distinct S-pairs. With the declared one wp block and ss last, equal-weight reverse lex compares ss-exponent0 in Zlambda against W+1 in ss^(W+1), hence LM(g)=Z*LM(lambda). It cannot divide the pure ss power ss^B, so its normal form is ss^B for every B.",
+ "allowed_claim": "Exact nonmembership in target component (0,B), even when a separate all-row std run at B timed out. Record target-component completion separately; do not mark the all-row truncated basis complete.",
+ "saturation_boundary": "This does not quotient by overflow monomials, does not introduce nilpotence, and does not invert a variable in a finite quotient. The charge argument fails after Tc-ss^(n+m), which is not homogeneous in the same x charge. It also does not ignore charge-zero characteristic equations U.",
+ "runs_columns": [
+  "case",
+  "N",
+  "B"
+ ],
+ "runs": [
+  [
+   "C70",
+   1,
+   7
+  ],
+  [
+   "C70",
+   2,
+   11
+  ],
+  [
+   "C70",
+   3,
+   15
+  ],
+  [
+   "C109",
+   1,
+   17
+  ],
+  [
+   "C109",
+   2,
+   31
+  ],
+  [
+   "C109",
+   3,
+   45
+  ],
+  [
+   "C127",
+   1,
+   6
+  ],
+  [
+   "C127",
+   2,
+   9
+  ],
+  [
+   "C127",
+   3,
+   12
+  ],
+  [
+   "C171",
+   1,
+   31
+  ],
+  [
+   "C171",
+   2,
+   59
+  ],
+  [
+   "C171",
+   3,
+   87
+  ],
+  [
+   "C341",
+   1,
+   30
+  ],
+  [
+   "C341",
+   2,
+   57
+  ],
+  [
+   "C341",
+   3,
+   84
+  ],
+  [
+   "C455",
+   1,
+   21
+  ],
+  [
+   "C455",
+   2,
+   39
+  ],
+  [
+   "C455",
+   3,
+   57
+  ],
+  [
+   "R001",
+   1,
+   33
+  ],
+  [
+   "R001",
+   2,
+   63
+  ],
+  [
+   "R001",
+   3,
+   93
+  ],
+  [
+   "R002",
+   1,
+   24
+  ],
+  [
+   "R002",
+   2,
+   45
+  ],
+  [
+   "R002",
+   3,
+   66
+  ],
+  [
+   "R003",
+   1,
+   24
+  ],
+  [
+   "R003",
+   2,
+   45
+  ],
+  [
+   "R003",
+   3,
+   66
+  ],
+  [
+   "R004",
+   1,
+   28
+  ],
+  [
+   "R004",
+   2,
+   53
+  ],
+  [
+   "R004",
+   3,
+   78
+  ]
+ ],
+ "fresh_final_driver_replay": true,
+ "all_loaded_driver_hashes_equal_current": true,
+ "replay_sum_wall_seconds": 19.193,
+ "replay_peak_single_process_rss_bytes": 152477696,
+ "replay_process_pids": [
+  2173542,
+  2173574,
+  2173583,
+  2173596,
+  2173617,
+  2173636,
+  2173641,
+  2173644,
+  2173647,
+  2173666,
+  2173673,
+  2173708,
+  2173729,
+  2173768,
+  2173776,
+  2173824,
+  2173866,
+  2173875,
+  2173962,
+  2173969,
+  2173972,
+  2173980,
+  2173983,
+  2173987,
+  2174008,
+  2174015,
+  2174018,
+  2174021,
+  2174024,
+  2174033
+ ]
+}

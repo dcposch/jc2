@@ -1,0 +1,85 @@
+{
+ "status": "PASS",
+ "schema": "jc2.lambda.UX-independent-audit/v1",
+ "UX_sha256": "983b31ac5a4ad439f9fec32adb1adf75f204e2b922f6d823e4e887f4109e92d3",
+ "driver_sha256": "8f5bb03bc62435cdabd98579c5f2b59fb5703f4970d196d3bddb8bfaf69831fe",
+ "constraint_count": 140,
+ "lambda_monomials_checked": 76134,
+ "lambda_monomials_removed": 74340,
+ "checks": {
+  "all_UX_lists_equal_independent_rule": true,
+  "all_source_and_reduced_formula_hashes_match": true,
+  "all_reduced_polynomial_dicts_equal_exact_coordinate_images": true,
+  "all_removed_monomial_cofactors_reconstruct_exactly": true
+ },
+ "ideal_consequence_proof": "At y-deficit r<=K the ordinary T2 coefficient is -q*A1_(x,K-r) modulo earlier A1 coefficients of deficit<r. Every higher A/B block has deficit>=K+1; alpha1 powers and h corrections have an earlier A1 factor. At r=K the additional gamma_top is scalar, so only its charge0 coefficient survives. Constant nonzero pivots -q prove UX subset U as ideals. For W<K stop at W-1 and then use positive-x scalar-leader rows at W.",
+ "admissible_use": "A separate necessary realization refinement may adjoin UX to I_J plus c and lambda localizers. Replacing lambda by lambda_UX and every Jacobian row by its image is exact only with UX retained or the explicit quotient isomorphism declared. This is not an equivalence to the original baseline without U; a unit still needs cofactor lifting through these maps.",
+ "columns": [
+  "case",
+  "UX_coordinates",
+  "original_lambda_terms",
+  "reduced_lambda_terms"
+ ],
+ "cases": [
+  [
+   "C70",
+   3,
+   6,
+   1
+  ],
+  [
+   "C109",
+   10,
+   108,
+   4
+  ],
+  [
+   "C127",
+   2,
+   4,
+   1
+  ],
+  [
+   "C171",
+   16,
+   7075,
+   228
+  ],
+  [
+   "C341",
+   17,
+   42866,
+   317
+  ],
+  [
+   "C455",
+   23,
+   2672,
+   79
+  ],
+  [
+   "R001",
+   18,
+   3263,
+   294
+  ],
+  [
+   "R002",
+   19,
+   417,
+   78
+  ],
+  [
+   "R003",
+   19,
+   417,
+   78
+  ],
+  [
+   "R004",
+   13,
+   19306,
+   714
+  ]
+ ]
+}

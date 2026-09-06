@@ -1,0 +1,32 @@
+   ? identifier `QQ` in use
+   ? error occurred in or before STDIN line 17: `poly QQ=h^3+BB2*h^1+BB3*h^0;`
+   ? wrong type declaration. type 'help poly;'
+PAIR_READY
+   ? diff(`cring`,`poly`) failed
+   ? expected diff(`poly`,`poly`)
+   ? expected diff(`vector`,`poly`)
+   ? expected diff(`ideal`,`poly`)
+   ? expected diff(`module`,`poly`)
+   ? expected diff(`matrix`,`poly`)
+   ? error occurred in or before STDIN line 19: `poly JP=diff(PP,x)*diff(QQ,y)-diff(PP,y)*diff(QQ,x)-c*x^1;`
+   ? expected poly-expression. type 'help poly;'
+DIRECT_J_READY
+   ? `JP` is not defined
+   ? error occurred in or before STDIN line 21: `matrix CM=coef(JP,x*y);`
+   ? expected matrix-expression. type 'help matrix;'
+COEFFICIENTS_READY
+   ? `CM` is not defined
+   ? error occurred in or before STDIN line 23: `forif (!(jj<=ncols(CM))) break;`
+   ? `JP` is not defined
+   ? error occurred in or before STDIN line 39: `_ROWS="+string(selectedcount));print("SELECTED_TERMS="+string(selectedterms));`
+ROW_GRADES_PASS
+   ? `CM` is not defined
+   ? error occurred in or before STDIN line 39: `_ROWS="+string(selectedcount));print("SELECTED_TERMS="+string(selectedterms));`
+   ? wrong type declaration. type 'help string;'
+TOTAL_TERMS=0
+SELECTED_ROWS=0
+SELECTED_TERMS=0
+COEFFICIENT_RING_MAP_READY
+INPUT_READY
+BENCHMARK_COMPLETE
+PEAK_RSS_KIB=75240

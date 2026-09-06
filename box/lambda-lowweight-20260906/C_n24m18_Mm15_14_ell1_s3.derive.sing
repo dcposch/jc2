@@ -1,0 +1,48 @@
+ring R=0,(y,hh,h_0_5,h_0_4,h_0_3,h_0_2,h_0_1,h_0_0,A1_0_5,A1_0_4,A1_0_3,A1_0_2,A1_0_1,A1_0_0,A2_0_5,A2_0_4,A2_0_3,A2_0_2,A2_0_1,A2_0_0,A3_0_5,A3_0_4,A3_0_3,A3_0_2,A3_0_1,A3_0_0,A4_0_5,A4_0_4,A4_0_3,A4_0_2,A4_0_1,B2_0_5,B2_0_4,B2_0_3,B2_0_2,B2_0_1,B2_0_0,B3_0_5,B3_0_4,B3_0_3,B3_0_2,B3_0_1),(lp(1),dp(41));
+option(redSB);
+intvec WY=1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+intvec WH=0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+poly h=y^6+h_0_5*y^5+h_0_4*y^4+h_0_3*y^3+h_0_2*y^2+h_0_1*y^1+h_0_0*y^0;
+poly A1=A1_0_5*y^5+A1_0_4*y^4+A1_0_3*y^3+A1_0_2*y^2+A1_0_1*y^1+A1_0_0*y^0;
+poly A2=A2_0_5*y^5+A2_0_4*y^4+A2_0_3*y^3+A2_0_2*y^2+A2_0_1*y^1+A2_0_0*y^0;
+poly A3=A3_0_5*y^5+A3_0_4*y^4+A3_0_3*y^3+A3_0_2*y^2+A3_0_1*y^1+A3_0_0*y^0;
+poly A4=A4_0_5*y^5+A4_0_4*y^4+A4_0_3*y^3+A4_0_2*y^2+A4_0_1*y^1;
+poly B2=B2_0_5*y^5+B2_0_4*y^4+B2_0_3*y^3+B2_0_2*y^2+B2_0_1*y^1+B2_0_0*y^0;
+poly B3=B3_0_5*y^5+B3_0_4*y^4+B3_0_3*y^3+B3_0_2*y^2+B3_0_1*y^1;
+poly P=hh^4+A1*hh^3+A2*hh^2+A3*hh^1+A4*hh^0;
+poly Q=hh^3+B2*hh^1+B3*hh^0;
+
+proc ha(poly f,int L)
+{
+ matrix R[1][L+1];
+ int ii,jj;
+ matrix C=coef(f,hh);
+ for(ii=1;ii<=ncols(C);ii++)
+ { jj=deg(C[1,ii],WH)+1; R[1,jj]=R[1,jj]+C[2,ii]; }
+ list dv;
+ for(ii=1;ii<=L+1;ii++)
+ {
+  if(R[1,ii]!=0)
+  {
+   dv=division(R[1,ii],ideal(h));
+   if(dv[3][1,1]!=1){ print("DIVISION_ERROR"); quit; }
+   R[1,ii]=dv[2][1];
+   if(ii<L+1){R[1,ii+1]=R[1,ii+1]+dv[1][1,1];}
+   else {if(dv[1][1,1]!=0){print("CARRY_ERROR");quit;}}
+  }
+ }
+ return(R);
+}
+proc yc(poly f,int a)
+{
+ matrix C=coef(f,y);int i;
+ for(i=1;i<=ncols(C);i++) {if(deg(C[1,i],WY)==a){return(C[2,i]);}}
+ return(poly(0));
+}
+
+matrix H=ha(Q^4-P^3,12);
+matrix F;poly gam;int jj;
+poly lam=yc(H[1,12],3);
+write(":w box/lambda-lowweight-20260906/C_n24m18_Mm15_14_ell1_s3.lambda.txt",string(lam));
+print("DONE C_n24m18_Mm15_14_ell1_s3 "+string(size(lam)));
+quit;

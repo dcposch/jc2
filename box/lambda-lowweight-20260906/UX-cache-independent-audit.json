@@ -1,0 +1,75 @@
+{
+ "schema": "jc2.lambda.UX-cache-independent-audit/v1",
+ "status": "PASS",
+ "driver_sha256": "b6e7f6aab8b6e6711031bcb0da4dcd32961b9ae0384566e1bd331729257abc1f",
+ "audited_functions_sha256": "3d70774a06381482404441242c1dc246b43a6078cecfc181670fd09b12944dfc",
+ "cached_cases_sha256": "6482ec50c6d4272531d09c60fc5478db2e35eeee1c8fab458660a79263e276de",
+ "cache_builder_sha256": "d28146f136e1c3723d7a16233348e3a22c4283458fc818c1adeb875ebca138a9",
+ "checks": {
+  "all_original_paths_and_declared_hashes_bound": true,
+  "all_cache_paths_hashes_sizes_bound_to_receipts": true,
+  "all_original_variable_orders_retained": true,
+  "all_coordinate_lists_equal_current_UX": true,
+  "all_snapshot_audit_filter_function_bodies_equal_current": true,
+  "R003_R002_alias_checked": true,
+  "driver_requires_UX_and_all_cache_eliminated_coordinates": true
+ },
+ "chunk_reconstruction_proof": "Source is a sum of signed monomials with nonnegative integer exponents. Splitting before the final plus/minus preserves its sign in the carry buffer. Each earlier chunk consists of complete monomials. Retained chunks append a plus exactly when a prior chunk was written and the next chunk starts without a minus. Original source_index/h/x/y prefixes are preserved; all-zero rows are omitted only after each monomial has an explicit UX factor. Thus chunking changes neither the exact coordinate image nor its cofactor decomposition.",
+ "scope": "No new large cache hashing or CAS performed here; runtime runner checks full cache SHA while streaming. Independent metadata checks and audited identical filter functions supply I_original+UX=I_cache+UX. Cache alone is not asserted equivalent to original I.",
+ "columns": [
+  "case",
+  "original_rows",
+  "cached_rows",
+  "removed_terms"
+ ],
+ "cases": [
+  [
+   "C109",
+   150,
+   145,
+   37445
+  ],
+  [
+   "C171",
+   247,
+   238,
+   554256
+  ],
+  [
+   "C341",
+   560,
+   548,
+   874449
+  ],
+  [
+   "C455",
+   756,
+   736,
+   1931148
+  ],
+  [
+   "R001",
+   289,
+   277,
+   737960
+  ],
+  [
+   "R002",
+   300,
+   285,
+   562638
+  ],
+  [
+   "R003",
+   300,
+   285,
+   562638
+  ],
+  [
+   "R004",
+   378,
+   368,
+   162335
+  ]
+ ]
+}
