@@ -1,0 +1,155 @@
+{
+ "schema": "k7-b9q0-longsolve-custody-v1",
+ "lane": "k7-b9q0-longsolve-opus5-20260906",
+ "purpose": "Decoupled 20-hour exact-Q long solve of the K=7 beta-stratum b9 q0 cover chart, the last chart keeping stratum b9 conditional. THIS LANE MAKES NO MATHEMATICAL VERDICT; it only launches and hands off.",
+ "receipt": {
+  "path": "xmodel/k7-b9q0-longsolve-opus5-20260906.run.v2",
+  "start_utc": "2026-09-06T08:20:53Z",
+  "basis": "911f852ee1464f49879a82a0acce70a819a6e32c"
+ },
+ "frozen_input_verification": {
+  "method": "awk built the manifest mechanically from the numbered receipt charged_input_<i>_basename/_sha256 fields; sha256sum -c",
+  "inputs_checked": 7,
+  "all_ok": true,
+  "manifest_path": "/tmp/manifest.sha256"
+ },
+ "host_disk": {"before_first_write": {"size": "96G", "used": "85G", "available": "12G", "use_percent": "88%"}},
+ "worker": {
+  "instance_id": "i-0e5c65e66b8dc4dfc",
+  "private_ip": "172.30.0.73",
+  "public_ip": "18.232.84.6",
+  "type": "r7i.8xlarge",
+  "vcpu": 32,
+  "mem_gib": 247,
+  "root_disk_available_at_launch": "23G",
+  "owner_tag": "k7-b9q0-longsolve-20260906",
+  "launch_utc": "2026-09-06T08:22:17Z",
+  "literal_launch_attempt": {
+   "command": "sh ops/fleet/fleet.sh launch r7i.8xlarge",
+   "result": "rejected by AWS before instance creation; the frozen driver parses the first positional argument as COUNT"
+  },
+  "launch_command": "FLEET_OWNER=k7-b9q0-longsolve-20260906 sh ops/fleet/fleet.sh launch 1 r7i.8xlarge",
+  "wait_command": "sh ops/fleet/fleet.sh wait i-0e5c65e66b8dc4dfc",
+  "provisioned": true,
+  "root": "/home/ubuntu/k7-b9q0-longsolve",
+  "DO_NOT_TERMINATE": true,
+  "termination_owner": "the harvest lane"
+ },
+ "engines": {
+  "singular": {"version": "4.3.2", "path": "/usr/bin/Singular",
+   "binary_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+   "matches_r3b_custody": true},
+  "msolve": {"version": "0.10.1", "path": "/usr/bin/msolve",
+   "binary_sha256": "c2722288d22c3a1eab00c0b818d0204d4a98104d059b2fd4ecb7343e8ef759fa",
+   "note": "installed by fleet.sh wait; NOT used by any of the three launched jobs"},
+  "coefficient_field": "Q (characteristic 0) for jobs a and b; Q(v69) for job c"
+ },
+ "chart": {
+  "name": "K7_B9_Q0",
+  "path_on_worker": "/home/ubuntu/k7-b9q0-longsolve/chart/K7_B9_Q0_p0.ms",
+  "sha256": "15b4b715767a72e152f340dda11354af380897f6670d6370f0542841cdb4c275",
+  "sha256_matches_frozen_r3b_custody": true,
+  "bytes": 12675213,
+  "variables": 72,
+  "generators": 241,
+  "regenerated_from_frozen_custody": true,
+  "generator_command": "python3 /home/ubuntu/jc2/box/k4ray-strata-solve-20260905/msolve_export.py 7 9 --pin-index 0 --char 0 --dump-timeout 3000 --outdir /home/ubuntu/k7-b9q0-longsolve/chart",
+  "generator_sources": [
+   {"file": "box/k4ray-strata-solve-20260905/msolve_export.py", "sha256": "601d3089a74d0ae7f3efa7bf10c76d05125a5074d8f1dfc5e601942449a40679", "origin": "pushed from host"},
+   {"file": "box/k4ray-strata-solve-20260905/strata_chart.py", "sha256": "2fd608a3238e45205d0c84d60dafc42f6ed494ea0a0944706c18705a1b2a2c9b", "origin": "pushed from host; differs from the frozen producer copy box/k4ray-beta-strata-20260905/strata_chart.py (7f9d0610f1e42e964155350256dc4b14bdbfb52ec379894048015dfe3281d9c1) in exactly one line, the output-root assignment, per k7-strata-gate-sol56-20260905.md"},
+   {"file": "box/lib/guided_gb.py", "sha256": "501f3b1fed8ad0d26c7535a3c79d6ca74c448a4555f94570a4835d9f740781f3", "origin": "worker AMI copy; this is the exact version pinned in box/k4ray-strata-solve-20260905/source-charts.sha256, i.e. the producer version. The host's current box/lib/guided_gb.py is 95d12f5b23975e8699b634b1ba8c6f0e6fc4e24abfcd4bad2db936e1c74e9826 and was NOT used."}
+  ],
+  "ring_map": {
+   "declaration": "positional; the .ms header names ARE the Singular variable names",
+   "header_checked_equals": "v0,...,v71",
+   "coordinate": "v69 = q0", "other_coordinate": "v70 = q1", "inverse": "v71 = q0_inv",
+   "localizer_index": 241, "localizer_row_checked": "v69*v71-1",
+   "characteristic_line_checked": "0"
+  },
+  "wp_vector_equals_frozen_r3_custody": true,
+  "wp": [7,6,5,4,3,2,1,6,5,4,3,2,1,5,4,3,2,1,4,3,2,1,3,2,1,2,1,14,13,12,11,10,9,8,7,6,13,12,11,10,9,8,7,6,12,11,10,9,8,7,6,11,10,9,8,7,6,10,9,8,7,6,9,8,7,6,8,7,6,5,5,1],
+  "formation_markers": {"DUMP__N": "241", "DUMP__VARS": "72", "PRE__HOMOG_I": "1", "PRE__HOMOG_CST": "1", "PRE__CST_ZERO": "0", "PRE__THEOREM_SKIPPED": "disabled", "PRE__LOCALIZER": "q0*q0_inv-1"},
+  "formation_wall_s": 71.79
+ },
+ "builders": {
+  "mkjobs.py": {"path": "/home/ubuntu/k7-b9q0-longsolve/mkjobs.py", "sha256": "3388baaf0f4932341e84c3903ef033701698b47ca57733d6b37ff59e81694603",
+   "asserts": ["chart sha256 equals the frozen value", "characteristic line is 0", "72 names / 241 rows", "names are exactly v0..v71 in order", "row 241 is v69*v71-1", "72 weights"]},
+  "watchdog.py": {"path": "/home/ubuntu/k7-b9q0-longsolve/watchdog.py", "sha256": "a724775f3c479f99152ae42e6a8ae5506d8af24843cb726cd8a1865982e49c52",
+   "behaviour": "polls the summed VmRSS of the whole descendant tree every 15 s, records peak, SIGKILLs the tree above the cap, and writes caprun.json continuously"},
+  "runner.sh": {"path": "/home/ubuntu/k7-b9q0-longsolve/runner.sh", "sha256": "4165a5b8989043b6efbcf5034d27b91c625584139688a85423fd86c96a776f9b"},
+  "jobs_manifest": "/home/ubuntu/k7-b9q0-longsolve/jobs-manifest.json"
+ },
+ "caps": {
+  "wall_seconds": 72000,
+  "wall_mechanism": "timeout -s TERM --kill-after=120 72000",
+  "rss_cap_kib": 73400320,
+  "rss_cap_gib": 70,
+  "rss_mechanism": "watchdog.py descendant-tree poll, 15 s interval",
+  "no_ulimit_v": "deliberate: RSS, not address space, is the binding cap",
+  "total_worst_case_rss_gib": 210,
+  "worker_mem_gib": 247,
+  "nice": 4
+ },
+ "jobs": [
+  {"job": "a_slimgb_dp",
+   "route": "Singular exact-Q slimgb, dp, option(redSB), short=0, full 241-row chart",
+   "dir": "/home/ubuntu/k7-b9q0-longsolve/runs/a_slimgb_dp/",
+   "job_sing_sha256": "308e6198ba6c9f8ec456be78dec500bed123af181709618f0afb754c18de3cfc",
+   "job_sing_bytes": 12676040,
+   "command": "setsid nohup /home/ubuntu/k7-b9q0-longsolve/runner.sh a_slimgb_dp </dev/null > runs/a_slimgb_dp/runner.log 2>&1 &",
+   "inner_command": "/usr/bin/time -v -o time.txt timeout -s TERM --kill-after=120 72000 nice -n 4 Singular --no-rc -q job.sing > stdout.txt 2> stderr.txt",
+   "singular_pid_at_launch": 3462, "start_utc": "2026-09-06T08:30:00Z"},
+  {"job": "b_std_wp",
+   "route": "Singular exact-Q std under the frozen chart bigrading; ring R=0,(v0..v71),wp(<frozen 72-weight vector>), option(redSB), short=0, full 241-row chart",
+   "dir": "/home/ubuntu/k7-b9q0-longsolve/runs/b_std_wp/",
+   "job_sing_sha256": "4435caf9b8eb5f5eaf294dcb8fb884f7a545de39ee94d2d98bfe7245816d014d",
+   "job_sing_bytes": 12676198,
+   "command": "setsid nohup /home/ubuntu/k7-b9q0-longsolve/runner.sh b_std_wp </dev/null > runs/b_std_wp/runner.log 2>&1 &",
+   "singular_pid_at_launch": 3463, "start_utc": "2026-09-06T08:30:00Z"},
+  {"job": "c_tri_qv69_slimgb",
+   "route": "exact-Q(v69) triangular pre-reduction then slimgb on the reduced system (r2 section 3, r3b section 5); ring R=(0,v69),(71 remaining vars),dp",
+   "dir": "/home/ubuntu/k7-b9q0-longsolve/runs/c_tri_qv69_slimgb/",
+   "job_sing_sha256": "50dee16947b02f7c24379d06d07a8b2c4fe6a86e9a35163cec11349269428cea",
+   "job_sing_bytes": 12680540,
+   "pivots": [{"row": 1, "var": "v6"}, {"row": 2, "var": "v12"}, {"row": 3, "var": "v35"}, {"row": 4, "var": "v43"}, {"row": 8, "var": "v5"}, {"row": 9, "var": "v11"}, {"row": 10, "var": "v16"}, {"row": 11, "var": "v20"}],
+   "pivots_source": "k7-cofactors-sol56-r3b-20260906.md section 5, verbatim row and variable lists",
+   "per_pivot_checks_printed": ["LINEAR", "COEF_IS_FIELD", "NONZERO", "EXACT_DIV", "ROW_VANISHES", "NO_PIVOT_LEFT"],
+   "command": "setsid nohup /home/ubuntu/k7-b9q0-longsolve/runner.sh c_tri_qv69_slimgb </dev/null > runs/c_tri_qv69_slimgb/runner.log 2>&1 &",
+   "singular_pid_at_launch": 3464, "start_utc": "2026-09-06T08:30:00Z",
+   "PROMOTION_CAVEAT": "A unit here is a unit in the localization Q(v69)[rest]. It is NOT by itself an exact-Q certificate in the source ring: the harvest lane must clear the v69-power denominators and re-close with the original Rabinowitsch generator v69*v71-1, as r2 section 3 did for b11 q0."}
+ ],
+ "launch_confirmed": {
+  "utc": "2026-09-06T08:30:28Z",
+  "singular_processes_running": 3,
+  "watchdogs_running": 3,
+  "all_three_printed": ["CERT__PARSED 1", "CERT__NGEN 241"],
+  "survived_ssh_disconnect": true,
+  "worker_free_disk": "23G", "worker_mem_used_gib": 5
+ },
+ "smoke_tests": {
+  "method": "parse-only truncations of the three job files, run to completion before launch",
+  "results": {"a_slimgb_dp": "rc 0, CERT__NGEN 241, CERT__PARSED 1",
+              "b_std_wp": "rc 0, CERT__NGEN 241, CERT__PARSED 1",
+              "c_tri_qv69_slimgb": "rc 0, CERT__NPARS 1, pivots 1-2 all checks 1, nnz 238 then 233"}
+ },
+ "expected_end_utc": "2026-09-07T04:30:00Z",
+ "harvest_lane_must_read": {
+  "worker": "ssh via sh ops/fleet/fleet.sh run 172.30.0.73 <cmd>",
+  "per_job_files": ["runs/<job>/stdout.txt", "runs/<job>/stderr.txt", "runs/<job>/runner.rc", "runs/<job>/time.txt", "runs/<job>/caprun.json", "runs/<job>/start.utc", "runs/<job>/end.utc", "runs/<job>/runner.log", "runs/<job>/job.sing"],
+  "chart": "chart/K7_B9_Q0_p0.ms and chart/K7_B9_Q0_p0.json",
+  "manifest": "jobs-manifest.json",
+  "delimiters": {"begin": "CERT__GB_BEGIN", "end": "CERT__GB_END",
+   "accept_only": "exit code 0, exactly one delimiter pair, body bytes exactly 31 0a, CERT__GB_SIZE 1, CERT__UNIT 1, CERT__DONE 1",
+   "note": "if size(G) > 25 the body holds lead terms only and CERT__GB_LEADS_ONLY 1 is printed; that is not a certificate"},
+  "resource_semantics": {"rc_124": "wall watchdog: a resource wall, never a non-unit result",
+   "caprun.rss_killed_true": "RSS cap: a resource wall, never a non-unit result",
+   "rc_137_or_missing_CERT__DONE": "check caprun.json before classifying"},
+  "termination": "sh ops/fleet/fleet.sh term i-0e5c65e66b8dc4dfc after harvest; verify Owner tag k7-b9q0-longsolve-20260906 first"
+ },
+ "no_mathematical_verdict": true,
+ "b9_q0_status_unchanged_at_seal": "STILL_SIGNAL_ONLY per box/k7-cofactors-20260906/r3-custody.json",
+ "host_new_writes": ["box/k7-b9q0-longsolve-20260906/custody.json", "xmodel/k7-b9q0-longsolve-opus5-20260906.md"],
+ "no_ledger_edits": true,
+ "no_new_exit_price": true,
+ "charge_basis_required": false
+}
