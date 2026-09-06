@@ -1,0 +1,179 @@
+// Exact-Q controls for the class-A basis change and recursive monic pivots.
+// Structural x,y; coefficient variables a,b,c,u,v,w. No receiver solve.
+ring R=0,(y,x,a,b,c,u,v,w),(lp(1),dp(7));
+int failures=0;
+proc check(int ok,string label)
+{
+  if(ok) { print("CONTROL PASS "+label); }
+  else { print("CONTROL FAIL "+label); failures=failures+1; }
+}
+proc zeroideal(ideal II)
+{
+  int ii;
+  for(ii=1;ii<=size(II);ii++) { if(II[ii]!=0) { return(0); } }
+  return(1);
+}
+proc sameordered(ideal left,ideal right)
+{
+  if(size(left)!=size(right)) { return(0); }
+  int ii;
+  for(ii=1;ii<=size(left);ii++) { if(left[ii]!=right[ii]) { return(0); } }
+  return(1);
+}
+proc xycoeffs(poly ff)
+{
+  ideal result=0;
+  if(ff==0) { return(result); }
+  matrix cc=coef(ff,x*y);
+  int ii; int jj=1;
+  for(ii=1;ii<=ncols(cc);ii++)
+  {
+    if(cc[2,ii]!=0) { result[jj]=cc[2,ii]; jj=jj+1; }
+  }
+  return(result);
+}
+// A monic h whose lower coefficients depend on x and free parameters.
+poly hh=y^2+a*x*y+b*x^2+c;
+poly jj1=u^2-v;
+poly jj2=v^2-w;
+poly FF=jj1+x*jj2*y+((x^2+1)*jj1+x*jj2)*hh
+       +(x*jj1+(x^2+1)*jj2)*y*hh+(jj1+jj2)*hh^2;
+ideal ordinary=xycoeffs(FF);
+ideal hadic=0;
+ideal HDIV=hh;
+poly remainder=FF;
+poly rebuilt=0;
+poly hpower=1;
+poly piece;
+list dv;
+int levels=0;
+while(remainder!=0)
+{
+  dv=division(remainder,HDIV);
+  check(dv[3][1,1]==1,"basis_division_unit_one");
+  piece=dv[2][1];
+  check(deg(piece,intvec(1,0,0,0,0,0,0,0))<2,"basis_remainder_y_degree");
+  hadic=hadic+xycoeffs(piece);
+  rebuilt=rebuilt+piece*hpower;
+  remainder=dv[1][1,1];
+  hpower=hpower*hh;
+  levels=levels+1;
+}
+check(rebuilt==FF,"basis_exact_polynomial_reconstruction");
+check(levels==3,"basis_three_levels");
+ideal ordinaryGB=std(ordinary);
+ideal hadicGB=std(hadic);
+check(zeroideal(reduce(ordinary,hadicGB)),"basis_ordinary_in_hadic");
+check(zeroideal(reduce(hadic,ordinaryGB)),"basis_hadic_in_ordinary");
+check(reduce(1,hadicGB)!=0,"basis_control_ideal_is_proper");
+ideal perturbed=hadic;
+perturbed[1]=perturbed[1]+1;
+check(!zeroideal(reduce(perturbed,hadicGB)),"basis_one_unit_perturbation_rejected");
+
+// Q makes a nonzero constant derivative equivalent to scalar-monic degree 1.
+proc scalar_monic(poly ff,int variable_index)
+{
+  poly leader=diff(ff,var(variable_index));
+  if(leader==0) { return(0); }
+  if(deg(leader)!=0) { return(0); }
+  poly tail=ff-leader*var(variable_index);
+  if(subst(tail,var(variable_index),0)!=tail) { return(0); }
+  return(1);
+}
+proc pivot_image(poly ff,int variable_index)
+{
+  if(!scalar_monic(ff,variable_index))
+  { print("CONTROL FAIL invalid_pivot_requested"); failures=failures+1; return(poly(0)); }
+  poly leader=diff(ff,var(variable_index));
+  return(-subst(ff,var(variable_index),0)/leader);
+}
+// Ring indices: c=5, v=7, w=8. Each row uses only earlier graph values.
+poly fone=v-u^2-a;
+poly ftwo=2*w-v*u-b;
+poly fthree=3*c-w^2-v-a;
+poly gone=c+v*w-u;
+poly gtwo=w^2+v*c+b;
+ideal definitions=fone,ftwo,fthree;
+ideal original=fone,ftwo,fthree,gone,gtwo;
+check(scalar_monic(fone,7),"pivot_first_scalar_monic");
+poly imagev=pivot_image(fone,7);
+poly currenttwo=subst(ftwo,v,imagev);
+check(scalar_monic(currenttwo,8),"pivot_second_scalar_monic_after_substitution");
+poly imagew=pivot_image(currenttwo,8);
+poly currentthree=subst(subst(fthree,v,imagev),w,imagew);
+check(scalar_monic(currentthree,5),"pivot_third_scalar_monic_after_substitution");
+poly imagec=pivot_image(currentthree,5);
+map Phi=R,y,x,a,b,imagec,u,imagev,imagew;
+check(zeroideal(Phi(definitions)),"pivot_recursive_definition_images_zero");
+ideal residuals=gone,gtwo;
+ideal compressed=Phi(residuals);
+ideal lifted=definitions+compressed;
+check(zeroideal(reduce(original,std(lifted))),"pivot_original_in_graph_lift");
+check(zeroideal(reduce(lifted,std(original))),"pivot_graph_lift_in_original");
+ideal remaining=y,x,a,b,u;
+ideal remainingimage=Phi(remaining);
+ideal compressedtwice=Phi(compressed);
+check(sameordered(remainingimage,remaining),"pivot_reverse_map_fixes_remaining_coordinates");
+check(sameordered(compressedtwice,compressed),"pivot_substitution_is_idempotent");
+check(subst(subst(subst(imagec,c,0),v,0),w,0)==imagec,
+      "pivot_reconstruction_uses_only_remaining_coordinates");
+check(!scalar_monic(v^2-u,7),"pivot_nonlinear_row_rejected");
+check(!scalar_monic(a*v-u,7),"pivot_variable_leader_rejected");
+check(!scalar_monic(u^2-a,7),"pivot_absent_variable_rejected");
+map wrong=R,y,x,a,b,imagec,u,imagev+1,imagew;
+check(!zeroideal(wrong(definitions)),"pivot_one_unit_reconstruction_perturbation_rejected");
+check(diff(gone,v)!=0 && diff(diff(gtwo,w),w)!=0,
+      "pivot_other_row_nonlinearity_is_substituted");
+// Substituting small coefficient blocks and recomputing J must give the
+// same images as substituting every expanded coefficient row.
+poly blockH=y^2+a*x*y+b*x^2+v;
+poly blockA=w*x+v*y+u;
+poly blockB=c*x^2+v*x*y+w;
+poly blockD=v*x^2+w*y+c*x;
+poly blockE=w*x+c*y+u*x^2;
+poly sourceP=blockH^3+blockA*blockH^2+blockB*blockH+blockD;
+poly sourceQ=blockH^2+blockE;
+poly sourceJ=diff(sourceP,x)*diff(sourceQ,y)-diff(sourceP,y)*diff(sourceQ,x)-c*x;
+poly mappedH=Phi(blockH);
+poly mappedA=Phi(blockA);
+poly mappedB=Phi(blockB);
+poly mappedD=Phi(blockD);
+poly mappedE=Phi(blockE);
+poly sourcec=c;
+poly mappedc=Phi(sourcec);
+poly rebuiltP=mappedH^3+mappedA*mappedH^2+mappedB*mappedH+mappedD;
+poly rebuiltQ=mappedH^2+mappedE;
+poly rebuiltJ=diff(rebuiltP,x)*diff(rebuiltQ,y)-diff(rebuiltP,y)*diff(rebuiltQ,x)-mappedc*x;
+poly mappedJ=Phi(sourceJ);
+check(mappedJ==rebuiltJ,"composition_block_recomputation_equals_mapped_Jacobian");
+matrix oldCoefficients=coef(sourceJ,x*y);
+matrix newCoefficients=coef(rebuiltJ,x*y);
+int oi; int ni; int nonzeroimages=0; int coordinatechecks=1;
+poly oldcoefficient; poly wanted; poly found;
+for(oi=1;oi<=ncols(oldCoefficients);oi++) {
+  oldcoefficient=oldCoefficients[2,oi];
+  wanted=Phi(oldcoefficient);
+  if(wanted!=0) { nonzeroimages=nonzeroimages+1; }
+  found=0;
+  for(ni=1;ni<=ncols(newCoefficients);ni++) {
+    if(oldCoefficients[1,oi]==newCoefficients[1,ni]) { found=newCoefficients[2,ni]; }
+  }
+  if(wanted!=found || diff(wanted,x)!=0 || diff(wanted,y)!=0) { coordinatechecks=0; }
+}
+check(coordinatechecks && nonzeroimages==ncols(newCoefficients),
+      "composition_every_coefficient_image_matches_recomputed_coordinate");
+check(diff(imagev,x)==0 && diff(imagev,y)==0 && diff(imagew,x)==0
+      && diff(imagew,y)==0 && diff(imagec,x)==0 && diff(imagec,y)==0,
+      "composition_pivot_images_are_parameter_only");
+// Scalar-monic alone does not permit a structural-dependent coefficient map.
+map structuralBad=R,y,x,a,b,c,u,v+x,w;
+poly wrongP=structuralBad(sourceP);
+poly wrongQ=structuralBad(sourceQ);
+poly wrongJ=structuralBad(sourceJ);
+poly wrongRebuilt=diff(wrongP,x)*diff(wrongQ,y)-diff(wrongP,y)*diff(wrongQ,x)-c*x;
+check(wrongJ!=wrongRebuilt,"composition_structural_dependent_derivative_map_rejected");
+check(scalar_monic(v-x,7) && diff(x,x)!=0,
+      "composition_structural_rhs_requires_separate_rejection");
+if(failures==0) { print("CLASSA_EXACT_Q_CONTROLS PASS failures=0"); }
+else { print("CLASSA_EXACT_Q_CONTROLS FAIL failures="+string(failures)); }
+quit;

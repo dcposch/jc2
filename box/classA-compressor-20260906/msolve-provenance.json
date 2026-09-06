@@ -1,0 +1,181 @@
+{
+  "task": "classA-compressor-20260906",
+  "worker_id": "i-0b019d96be51d78a4",
+  "worker_ip": "172.30.0.156",
+  "source_url": "https://github.com/algebraic-solving/msolve.git",
+  "source_tag": "v0.10.1",
+  "source_commit": "185e7b92fa0687f4db68b0f2f453a835668ac132",
+  "patches": [
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/inputs/msolve-0.10.1-heap-sort-permutation.patch",
+      "sha256": "c49a9fb322c3c6518ff2234a7e521de3aa6a372efbe27dc4c9aa9360db3b2242"
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/inputs/msolve-0.10.1-int64-input-offset.patch",
+      "sha256": "4f2e723575ff2acbfcee4144d4c2e47cd314f6f25d1241bd1286c202c3863055"
+    }
+  ],
+  "applied_patch_verification": "forward dry-runs, patch apply, reverse dry-runs, git diff --check all passed",
+  "build_commands": [
+    "./autogen.sh",
+    "./configure --prefix=/home/ubuntu/classA-compressor-20260906/msolve-build/install CFLAGS='-O3 -march=native'",
+    "make -j8"
+  ],
+  "binary_launcher": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/msolve",
+  "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "make_check": {
+    "command": "timeout 240 make check -j8",
+    "exit_code": 0,
+    "total": 64,
+    "pass": 64,
+    "skip": 0,
+    "fail": 0,
+    "error": 0
+  },
+  "controls": {
+    "prime": 65521,
+    "options": "-t 2 -v 2 -g 2",
+    "proper": {
+      "generators": [
+        "x*y-1",
+        "y^2-x"
+      ],
+      "basis": [
+        "y^2-x",
+        "x*y-1",
+        "x^2-y"
+      ],
+      "f4_degrees": [
+        3,
+        3
+      ],
+      "exit_code": 0
+    },
+    "unit": {
+      "generators": [
+        "x*y-1",
+        "x"
+      ],
+      "basis": [
+        "1"
+      ],
+      "exit_code": 0
+    }
+  },
+  "R005_run_started": false,
+  "host_writes_bytes": 0,
+  "timestamp_utc": "2026-09-06T07:42:49.676907+00:00",
+  "artifacts": [
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/src/neogb/io.c",
+      "sha256": "71077383a1b2c1bdb2c01cffd0956593879fe627ae13766fa3342a40247ef3e6",
+      "bytes": 43349
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/src/msolve/iofiles.c",
+      "sha256": "e0107ae05994a3480ca95d0f289529b9fe4537826702458fe467b68652bae874",
+      "bytes": 35989
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/.libs/msolve",
+      "sha256": "175283d6f5bf3659e83d67e3cfb873746c2727fb7db731265fbd3bbd291a56ae",
+      "bytes": 360344
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/src/msolve/.libs/libmsolve.so.3.0.7",
+      "sha256": "28c2e19f0ee549dd5def6a2e52218327bd73d0fd3eecb874b3dcbdc273f61b92",
+      "bytes": 328072
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/patch-heap.log",
+      "sha256": "6e9e10008152a05c4e4b9887c9fd8fb47dd60a5273418e1d634f8fefcf4fb268",
+      "bytes": 29
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/patch-int64.log",
+      "sha256": "1dfb62954a6ba76e1ed6c9e594421d5ccdfa207bb5c2325e3e102f60f04bc981",
+      "bytes": 35
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/patch-heap-reverse-check.log",
+      "sha256": "cebbf0127f5b167deb26daa08ecca2b826c305ba4ed3b2ad1c22d3c6da77f1eb",
+      "bytes": 29
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/patch-int64-reverse-check.log",
+      "sha256": "3dc10eeb999040acd6f4d6d671f7e7bc3c7873237b7568fdd6fc2b266329970e",
+      "bytes": 35
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/configure.log",
+      "sha256": "e267245490994732dc73aff342f125c4f22ba1a80bac2ecd15cd807bf0a14458",
+      "bytes": 10916
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/make.log",
+      "sha256": "ea25f24ec1c104c9ed4ec6d47485024efb11c41cd70c10ce3bac86946e40ac78",
+      "bytes": 12693
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/make-check.log",
+      "sha256": "babc552b211fb8173e95df3d12ca4293b0e331f1be0fdc62a36e5ca1f6f458e7",
+      "bytes": 12249
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/control-proper.ms",
+      "sha256": "69774e3db154f22a2c49d56335dab4b2a11f83a5a005d66f75dd89054cb5c118",
+      "bytes": 23
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/control-proper.out",
+      "sha256": "f33a431fcee21083176053fe51f8f41c43118f55d93e64a91261e0e8dd6ad566",
+      "bytes": 276
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/control-proper.log",
+      "sha256": "ee48531e519354296bcf50698e3ce8eb4ac2f3f16f2ef7275813cf38017f6a69",
+      "bytes": 3053
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/control-unit.ms",
+      "sha256": "71cfc1f0d7d77dc3cdd5e2682f20e52988b763c1934e1666b1f35173bffc786c",
+      "bytes": 19
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/control-unit.out",
+      "sha256": "8e8be99951d86e92323d04160a0d2351081fde198e475894ae25564bcbc17c9b",
+      "bytes": 188
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/control-unit.log",
+      "sha256": "21736243a2b776303b139d112bc753bb74c6bcf9cc05a0c054b4ecb6f42ab7ec",
+      "bytes": 2997
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/src/neogb/.libs/libneogb.so.3.0.7",
+      "sha256": "4fd482dc7964dfca213c521136fc445c2e16b9727036c6de6e509f69d7768079",
+      "bytes": 354600
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/src/neogb/.libs/libneogb.a",
+      "sha256": "4c366ee40fd14e0e65be4e1598e75102e695acf96b1c61bdb1304042520cb7f8",
+      "bytes": 467786
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/src/fglm/.libs/libfglm.a",
+      "sha256": "b2c15ebd30ce1c3b626b4e2a8313c855dff282623bf3bca839531540f4f6882b",
+      "bytes": 75786
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/src/usolve/.libs/libusolve.a",
+      "sha256": "3fbcac8f88ee7bdbb41b6bd608f8103501cec81b25e09fcf57e5cff4bc0d731b",
+      "bytes": 77614
+    },
+    {
+      "path": "/home/ubuntu/classA-compressor-20260906/msolve-build/source/msolve",
+      "sha256": "91fe2ada517281eb10c93086f9f60cd01ac131c318445d7049f4cfe13d0775f1",
+      "bytes": 6335
+    }
+  ],
+  "dynamic_neogb_note": "Use source/msolve launcher, which sets LD_LIBRARY_PATH for task-local patched libneogb.so.3; do not call .libs/msolve directly without equivalent LD_LIBRARY_PATH."
+}

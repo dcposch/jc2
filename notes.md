@@ -21252,3 +21252,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - 07:55Z 17(kkkkkkkkkkk) (99,66) δ=2 subset: both engines TIMEOUT at 9,000 s (msolve F4 round ~11, progressing); worker .55 terminated. → t2t3-longsolve-sol56 launched (own 512 GB worker, 20 h caps, decoupled; harvest due ~+20 h). Sol 3/4.
 - 08:17Z 17(lllllllllll) K=7 strata 9/10 certified (b10 unconditional; b9 needs b9 q0 — long-solve candidate). Sol 2/4.
 - 08:18Z launched k7-b9q0-longsolve-sol56 (decoupled 20 h exact-Q on b9 q0; own 256 GB worker). Sol 3/4.
+- 08:20Z CODEX USAGE LIMIT (~08:05Z; reset Sep 7 04:30): Astra+Sol offline; 3 lanes died (compressor, t2t3-longsolve, b9q0-longsolve). Adopted to Opus: compressor-continuation (worker .156), t2t3-longsolve-adopt (worker .63), k7-b9q0-longsolve fresh. Opus 3/4. DC pushed. 12:00Z round = Fable+Opus+Grok unless credits restored.
