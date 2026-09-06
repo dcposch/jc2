@@ -21240,3 +21240,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - 04:02Z 17(ggggggggggg) ACTUAL-STABILIZER SCREEN THEOREM PROMOTED (Astra gate, with notation fixes). Citable: 24,063 → 90 → 64. Astra 1/3.
 - 04:04Z launched classA-smallest-receiver-sol56 (smallest class-A receiver; guided_gb/msolve/Singular on idle worker .163; ≤200 min). Sol 3/4.
 - 04:23Z 17(hhhhhhhhhhh) K=7 strata: 7/10 charts theorem-tier (b11–b13 unconditional; b9, b10 conditional on 3 charts) → r3 launched on worker .108. Sol 4/4.
+- 04:30Z k7-cofactors r3 FAILED (worker .108 terminated 04:17Z before CAS work; nothing run) → r3b launched with own-worker authorization. Sol 4/4.
