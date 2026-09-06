@@ -21206,3 +21206,6 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 ## 2026-09-06 01:40Z LIVE STATE
 - Exact-contact gate (Astra): 65→59 REJECTED (six kills survive the printed closure; Lemma A false); integrality test confirmed with fix; R009/R050 promotably pinned; R063 child kill OPEN pending the descent comparison (xu-ell-shift-opus5 + descent-partition-theorem-astra running). Residual = 65. Lanes (7): k16-t2-closing, t2t3, lambda-lowweight, nodal-diagonal, k7-cofactors-r2, xu-ell-shift, descent-partition, integrality-table. Disk 13 GB.
+
+## 2026-09-06 02:07Z LIVE STATE
+- l-shifted Xu calculus DERIVED (17(jjjjjjjjjj), Opus); R063 claimed DEAD by child integrality — gates in flight (r063-ell-gate-sol56, descent-partition-theorem-astra) + data replays (r063-child-pattern, child-xu-shifted-46). Integrality at the parent level is vacuous (109/109). Residual 65 (64 if R063 gates). 9 lanes running; disk 13 GB; heartbeat 02:23; round wake 11:55Z.
