@@ -21209,3 +21209,6 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 ## 2026-09-06 02:07Z LIVE STATE
 - l-shifted Xu calculus DERIVED (17(jjjjjjjjjj), Opus); R063 claimed DEAD by child integrality — gates in flight (r063-ell-gate-sol56, descent-partition-theorem-astra) + data replays (r063-child-pattern, child-xu-shifted-46). Integrality at the parent level is vacuous (109/109). Residual 65 (64 if R063 gates). 9 lanes running; disk 13 GB; heartbeat 02:23; round wake 11:55Z.
+
+## 2026-09-06 02:20Z LIVE STATE
+- ORBIT TRANSPORT THEOREM (Astra, 17(mmmmmmmmmm)): I_M transports as I'_M = u_s·I_M on mapped roots ⇒ child integrality is not a new condition at u_s=1 (gate: orbit-transport-gate-opus5). R063: live claim is PARENT-level (N=0 complete configurations under the printed closure; r063-ell-gate-sol56 adjudicating); printed-closure-screen-grok46 runs the closure on all 1,420 rows. Nodal-diagonal: transport proved, decision open. Lanes (8): k16-t2-closing, t2t3-chain, lambda-lowweight, k7-cofactors-r2, r063-ell-gate, child-xu-shifted-46, printed-closure-screen, orbit-transport-gate. Disk 13 GB. Round wake 11:55Z.
