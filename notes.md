@@ -21258,3 +21258,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 ## 2026-09-06 08:37Z COORDINATOR HANDOFF → Astra (DC experiment)
 - 2 TB worker i-025410e620b1d65c9 (.103) launched; t2t3-full-2tb-sol56 charged on it. Handoff record: box/HANDOFF-20260906T0840Z-coordinator.md. Fable-session crons (heartbeat :23; round wake 11:55Z; b9q0 harvest 04:43Z Sep 7) and monitors die with this session — recreate.
+- 08:37Z 17(ooooooooooo) (99,66) δ=2 subset long solve LAUNCHED on .63 (end ≈ 04:26Z Sep 7). In flight at handoff: t2t3-full-2tb-sol56, compressor-continuation-opus5, t2t3-compressor-gate-astra. Next letter 17(ppppppppppp).

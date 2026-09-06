@@ -1,0 +1,98 @@
+{
+  "schema": "T2T3_LONGSOLVE_CUSTODY/v1",
+  "lane": "t2t3-longsolve-adopt-opus5-20260906",
+  "adopted_worker": {
+    "instance_id": "i-07e1212591a6acae9",
+    "private_ip": "172.30.0.63",
+    "instance_type": "r7i.16xlarge",
+    "hostname": "ip-172-30-0-63",
+    "nproc": 64,
+    "ram_bytes_total_approx": 532326535168,
+    "boot_utc_approx": "2026-09-06T07:56Z",
+    "provisioned": true,
+    "terminated": false,
+    "termination_policy": "DO NOT TERMINATE until harvest"
+  },
+  "adoption_finding": {
+    "predecessor_state_at_adoption": "worker up, PROVISION_DONE, patched msolve already built and installed to /tmp/msolve-patched/bin/msolve; input regeneration (focused_selector.py --case 99-delta2 --face-z 55) RUNNING since 2026-09-06T08:01Z; NO solve had been started",
+    "action": "waited for the regeneration to finish (rc 0), verified both required input SHAs exactly, derived the slimgb script, launched both detached solves"
+  },
+  "inputs": {
+    "source_dir": "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source",
+    "regeneration": {
+      "driver": "drivers/focused_selector.py --case 99-delta2 --output presentations/d2-z55-source --face-z 55",
+      "build_rc": 0,
+      "build_wall_seconds": 1184.095,
+      "build_peak_RSS_KiB": 89535620,
+      "frozen_report_reference_wall_seconds": 1185.54,
+      "frozen_report_reference_peak_RSS_KiB": 89535404,
+      "emitted_generator_count": 466,
+      "semantic_variables": 449,
+      "expanded_term_count": 6448959,
+      "canonical_primitive_generator_sequence_sha256": "a78c6a46e4b50dec6df51712c9c4b8d3c717b52490488d6819563cb5e18044fe"
+    },
+    "artifacts": [
+      {"file": "99-delta2.ms", "bytes": 271944646, "sha256": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572", "required_sha256": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572", "match": "EXACT"},
+      {"file": "99-delta2.sing", "bytes": 357263333, "sha256": "a604ed314ced1a33ff46e43081c2222430f24bde96a10405a3a8562ec6dccbbc", "role": "exact-Q std base (emitted)", "match": "EXACT vs frozen report table"},
+      {"file": "99-delta2-slimgb.sing", "bytes": 357263336, "sha256": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c", "required_sha256": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c", "match": "EXACT", "derivation": "sed 's/^ideal G=std(I);$/ideal G=slimgb(I);/' on 99-delta2.sing, sole occurrence at line 472"},
+      {"file": "99-delta2.labels.tsv", "sha256": "ef8083969910b3709e084b0285d21e5a87328055a77accc3d8aacc7c895d5344"}
+    ]
+  },
+  "binaries": {
+    "msolve_patched": {
+      "path": "/tmp/msolve-patched/bin/msolve",
+      "sha256": "da552c7c21d5339973fa6cc2157a171555af6d359ad7a4a392199702d5837530",
+      "version": "0.10.1",
+      "source_tree": "/tmp/msolve-src-0101 @ 185e7b9",
+      "patches_applied": ["msolve-0.10.1-heap-sort-permutation.patch", "msolve-0.10.1-int64-input-offset.patch"],
+      "patch_verification": "src/msolve/iofiles.c and src/neogb/io.c modified; 4 (int64_t) store_exponent casts present; 4 malloc/4 free heap permutations present; 0 residual VLA 'hm_t *phm[len];'"
+    },
+    "msolve_wrapper": {"path": "/home/ubuntu/t2t3-longsolve/msolve_m5000_wrapper.sh", "sha256": "324f4e8c8a5b112dbf6051e5bb84aff0d6de4ccc973cfca1919881766145f9b9", "charged": true},
+    "singular": {"path": "/usr/bin/Singular", "sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4", "version": "4.3.2"},
+    "runner": {"path": "/home/ubuntu/t2t3-longsolve/run_longsolve.sh", "sha256": "a2e4779ec0e1b3f1a7ac6fe86b4052cbab213f8fb2282b95c3638096158e5ac2"},
+    "caprun": {"path": "/home/ubuntu/t2t3-longsolve/run_capped.py", "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"}
+  },
+  "jobs": [
+    {
+      "job": "d2-z55-msolve",
+      "run_dir": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve",
+      "caprun_start_utc": "2026-09-06T08:25:46Z",
+      "solver_pid": 20597,
+      "pgid": 20596,
+      "input_sha256": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572",
+      "effective_command": "/tmp/msolve-patched/bin/msolve -m 5000 -g 2 -t 64 -v 2 --random-seed 0 -f .../99-delta2.ms -o .../basis.ms",
+      "launch_command": "setsid nohup env MSOLVE_BIN=/home/ubuntu/t2t3-longsolve/msolve_m5000_wrapper.sh /home/ubuntu/t2t3-longsolve/run_longsolve.sh msolve /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve /home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.ms </dev/null &",
+      "wall_cap_seconds": 72000,
+      "term_grace_seconds": 60,
+      "memory_cap": {"kind": "RLIMIT_AS", "bytes": 429496729600, "verified_in_proc_limits": true},
+      "TMPDIR": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/tmp",
+      "expected_end_utc": "2026-09-07T04:25:46Z"
+    },
+    {
+      "job": "d2-z55-singular",
+      "run_dir": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-singular",
+      "caprun_start_utc": "2026-09-06T08:25:49Z",
+      "solver_pid": 20637,
+      "pgid": 20636,
+      "input_sha256": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c",
+      "effective_command": "/usr/bin/Singular -q --no-rc --no-warn --no-shell --threads=1 --flint-threads=1 .../99-delta2-slimgb.sing",
+      "launch_command": "setsid nohup /home/ubuntu/t2t3-longsolve/run_longsolve.sh singular /home/ubuntu/t2t3-longsolve/runs/d2-z55-singular /home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2-slimgb.sing </dev/null &",
+      "wall_cap_seconds": 72000,
+      "term_grace_seconds": 60,
+      "memory_cap": {"kind": "sampled_aggregate_PGID_RSS", "bytes": 214748364800},
+      "TMPDIR": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/tmp",
+      "expected_end_utc": "2026-09-07T04:25:49Z"
+    }
+  ],
+  "harvest_paths": {
+    "per_job": ["runner.rc", "caprun.json", "time.txt", "limit.txt", "custody.txt", "postflight.sha256", "solver.stdout", "solver.stderr", "basis.ms (msolve only)"],
+    "singular_terminal_markers": ["ALL_ROWS_PARSED", "BEGIN_STD", "END_STD", "BEGIN_RESULT", "REDUCE_ONE=", "DIMENSION=", "BASIS_SIZE=", "END_RESULT"],
+    "msolve_terminal": "solver.stdout F4 table (degree/selected/pairs : rows x cols : density : new/zero : real|cpu) then basis; -g 2 emits '[1]:' on a unit ideal",
+    "ssh": "ssh -i ~/.ssh/jc2-fleet -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@172.30.0.63"
+  },
+  "classification_scope": "d2-z55 is a LITERAL 466-generator subset of the direct ideal: a UNIT is conclusive for the full ideal; a NONUNIT or timeout has no properness force and leaves the chart OPEN. A modular msolve unit is a signal only; a characteristic-zero kill needs the exact-Q confirmation or an exact cofactor identity.",
+  "risks": [
+    "Co-run headroom: physical RAM 495 GiB; caps sum to 200 GiB (Singular RSS) + 400 GiB (msolve address space) = 600 GiB > physical. At the predecessor 9,000 s stop the pair held ~111 GB + ~130 GB = ~241 GB. Over the 72,000 s cap the kernel OOM killer could fire before either configured cap. Not mitigated: the caps are the lane specification.",
+    "Root filesystem has 22 GB free; msolve basis.ms and both TMPDIRs share it."
+  ]
+}

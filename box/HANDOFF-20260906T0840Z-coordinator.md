@@ -1,13 +1,12 @@
 # COORDINATOR HANDOFF — 2026-09-06 08:40Z — Fable 5.1 → Astra (experiment, DC's call)
 
-Everything below is the live state at handoff. The ledger (AUDIT.md) is authoritative for mathematics; this file is authoritative for *what is in flight*. Next free AUDIT letter: **17(ooooooooooo)** (eleven letters).
+Everything below is the live state at handoff. The ledger (AUDIT.md) is authoritative for mathematics; this file is authoritative for *what is in flight*. Next free AUDIT letter: **17(ppppppppppp)** (eleven letters).
 
 ## 1. Lanes in flight (systemd units `jc2-lane-<tag>`; reports land in `xmodel/<tag>.md`, receipts `xmodel/<tag>.run.v2` with `final_status=`)
 
 | tag | model | started | what it does | on seal |
 |---|---|---|---|---|
 | t2t3-full-2tb-sol56-20260906 | Sol | 08:35Z | launches the FULL (99,66) δ=2 direct ideal (2,754 gens / 449 vars) as detached 20 h solves (msolve p=1073741827 + Singular exact-Q slimgb) on the 2 TB worker; writes `box/t2t3-full-2tb-20260906/custody.json`; seals LAUNCHED | bank the custody; arm a harvest ~+20 h (≈ 2026-09-07 05:00Z) |
-| t2t3-longsolve-adopt-opus5-20260906 | Opus | 08:20Z | adopts worker .63 (512 GB): verifies/regenerates the 466-gen subset inputs, starts/records two detached 20 h solves; custody `box/t2t3-longsolve-20260906/custody.json`; seals LAUNCHED | bank; harvest due ~+20 h from its start time |
 | compressor-continuation-opus5-20260906 | Opus | 08:20Z | adopts worker .156: finishes the R005 class-A receiver compression (53.2M → 2.9M terms already; pivot chain in progress), proves the substitution lemma, runs patched msolve on the compressed system; terminates .156 | bank as instrument + (if lemma holds) PROVISIONAL; gate with a different model; if compression is large, port to R006/R008 |
 | t2t3-compressor-gate-astra-20260906 | Astra | 08:28Z | hostile gate on 17(iiiiiiiiiii): compressor theorem (j ∈ k^× via attained T₂+T₃) and the direct presentation's soundness/subset claim; own worker .240 | CONFIRMED → promote 17(iiiiiiiiiii); REFUTED → the (99,66) direct chart loses its kill force, stop the long solves |
 
@@ -18,7 +17,7 @@ Monitors on these are session-local to the Fable session and will die with it. *
 | worker | job | custody | expected end | harvest lane must |
 |---|---|---|---|---|
 | i-0e5c65e66b8dc4dfc (172.30.0.73, r7i.8xlarge) | K=7 b9 q0: 3 exact-Q routes, 20 h caps | `box/k7-b9q0-longsolve-20260906/custody.json` | 2026-09-07 04:30Z | read runner.rc/stdout; exact-Q {1} = CERTIFIED-Q ⇒ stratum b9 UNCONDITIONAL (17(lllllllllll)); copy compact receipts; terminate worker |
-| i-07e1212591a6acae9 (172.30.0.63, r7i.16xlarge 512 GB) | (99,66) δ=2 literal subset d2-z55, 2 engines, 20 h | `box/t2t3-longsolve-20260906/custody.json` (written by the adopt lane) | ~+20 h from start | Singular {1} on the literal subset = theorem-tier kill of the δ=2 direct chart (under 17(iiiiiiiiiii), pending its gate); msolve [1] = signal; terminate worker |
+| i-07e1212591a6acae9 (172.30.0.63, r7i.16xlarge 512 GB) | (99,66) δ=2 literal subset d2-z55, 2 engines, 20 h | `box/t2t3-longsolve-20260906/custody.json` (17(ooooooooooo)) | 2026-09-07 04:26Z | Singular {1} on the literal subset = theorem-tier kill of the δ=2 direct chart (under 17(iiiiiiiiiii), pending its gate); msolve [1] = signal; terminate worker |
 | i-025410e620b1d65c9 (172.30.0.103, x2idn.32xlarge 2 TB, Owner=coordinator-2tb-20260906) | FULL (99,66) δ=2 direct ideal, 20 h | `box/t2t3-full-2tb-20260906/custody.json` (being written) | ~2026-09-07 05:00Z | same typing on the full ideal; **do not terminate the 2 TB worker without DC** — it is the campaign's big-memory asset; reuse it for class-A receivers next |
 
 ## 3. Fleet (all us-east-1; `sh ops/fleet/fleet.sh ips`; launch form is `fleet.sh launch 1 <type>` — first positional is COUNT)
