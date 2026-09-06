@@ -1,0 +1,2379 @@
+{
+  "custody": {
+    "charged_all_ok": true,
+    "executed_descend_own": {
+      "byte_identical": true,
+      "frozen_sha256": "3fbb5bb885acbd7f50f307ac083a762020b7ca1158e18d06a84a0325b2a3dcc2",
+      "repo_import_copy_sha256": "3fbb5bb885acbd7f50f307ac083a762020b7ca1158e18d06a84a0325b2a3dcc2",
+      "uncharged_runtime_import_only": {
+        "box/lib/__init__.py": "dc127b2f29405a4a9ec8077b7831d23a085f657d32dd161fe02fa6653ef46623",
+        "box/lib/own_v_routes.py": "f07dd9b0e38118132ed2ec2e5e7e972f98ba8f223213062fed356a30188b3bf3",
+        "role": "Required imports of the charged executable; not independent mathematical evidence."
+      }
+    },
+    "files": [
+      {
+        "actual_sha256": "af2cdd30754952745d8f781cf5fca7e482e8ae329604a5818b5b31496801e0ff",
+        "basename": "descent-invariance-lemma-opus5-20260905.md",
+        "expected_sha256": "af2cdd30754952745d8f781cf5fca7e482e8ae329604a5818b5b31496801e0ff",
+        "ok": true
+      },
+      {
+        "actual_sha256": "571de68164ed5c8c1ba2a4a159a4c24f4f4c217d8530ec15712b1605c58c771a",
+        "basename": "orbit-transport-gate-opus5-20260906.md",
+        "expected_sha256": "571de68164ed5c8c1ba2a4a159a4c24f4f4c217d8530ec15712b1605c58c771a",
+        "ok": true
+      },
+      {
+        "actual_sha256": "628c1b0939717b8e6046aac2fb501a401dd4b8739f9f18af5450f552b4bee2c2",
+        "basename": "descent-partition-theorem-astra-20260906.md",
+        "expected_sha256": "628c1b0939717b8e6046aac2fb501a401dd4b8739f9f18af5450f552b4bee2c2",
+        "ok": true
+      },
+      {
+        "actual_sha256": "3fbb5bb885acbd7f50f307ac083a762020b7ca1158e18d06a84a0325b2a3dcc2",
+        "basename": "descend_own.py",
+        "expected_sha256": "3fbb5bb885acbd7f50f307ac083a762020b7ca1158e18d06a84a0325b2a3dcc2",
+        "ok": true
+      },
+      {
+        "actual_sha256": "cb384ecdaf41cb96288ff12184a0c22ded49c276842f136919e675e8248534bf",
+        "basename": "roster.jsonl",
+        "expected_sha256": "cb384ecdaf41cb96288ff12184a0c22ded49c276842f136919e675e8248534bf",
+        "ok": true
+      },
+      {
+        "actual_sha256": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "basename": "moh1983_jram340_configurations_of_roots.pdf",
+        "expected_sha256": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+        "ok": true
+      },
+      {
+        "actual_sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "basename": "FALLACY-v2.md",
+        "expected_sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "ok": true
+      }
+    ],
+    "manifest_sha256": "d6e4132f2b4da222d16d81cc25053ee3f6484ddf9ce233a4d15fb7602029be86",
+    "receipt": "/home/ubuntu/jc2/xmodel/descent-invariance-gate-sol56-20260906.run.v2",
+    "verification_method": "receipt pairs extracted mechanically with awk; sha256sum -c"
+  },
+  "date_utc": "2026-09-06",
+  "fallacy_v2": {
+    "charge_basis_line_required": false,
+    "controls": [
+      "Moh bottom counts, actual orbit sizes, and relative stabilizer increments are separately named.",
+      "Prime marks denote generations; derivatives are written explicitly in the report.",
+      "The SD argument checks delta_child_top=-1, simple multiplicity, and minor threshold before using the ODE.",
+      "No necessary row is treated as a polynomial witness and no attainment is claimed."
+    ],
+    "new_exit_price_assertion": false
+  },
+  "identity_verdicts": {
+    "I1": "CONFIRMED",
+    "I2": "CONFIRMED",
+    "I3": "REFUTED_AS_WRITTEN_UNDER_ACTUAL_ORBIT_N; REPAIRED_MOH_BOTTOM_VERSION_CONFIRMED",
+    "I4": "CONFIRMED-WITH-FIX",
+    "I5": "CONFIRMED",
+    "I6": "CONFIRMED",
+    "corollary": "CONFIRMED-WITH-FIX"
+  },
+  "overall_verdict": "CONFIRMED-WITH-FIX",
+  "p207_expected": {
+    "R001": {
+      "M2_prime": 16,
+      "V2_prime": 2,
+      "delta1_prime": "7/6",
+      "delta2_prime": "-1/2",
+      "ell": 1,
+      "m_prime": 14,
+      "n_prime": 21
+    },
+    "R002": {
+      "M2_prime": 11,
+      "V2_prime": 2,
+      "delta1_prime": "4/3",
+      "delta2_prime": "-1",
+      "ell": 2,
+      "m_prime": 10,
+      "n_prime": 15
+    },
+    "R003": {
+      "M2_prime": 11,
+      "V2_prime": 3,
+      "delta1_prime": "1/2",
+      "delta2_prime": "-1",
+      "ell": 2,
+      "m_prime": 10,
+      "n_prime": 15
+    },
+    "R004": {
+      "M2_prime": 13,
+      "V2_prime": 3,
+      "delta1_prime": "1/4",
+      "delta2_prime": "-1",
+      "ell": 1,
+      "m_prime": 12,
+      "n_prime": 16
+    },
+    "R007": {
+      "M2_prime": 18,
+      "V2_prime": 5,
+      "delta1_prime": "1/3",
+      "delta2_prime": "-1",
+      "ell": 1,
+      "m_prime": 14,
+      "n_prime": 21
+    }
+  },
+  "promotion": {
+    "mandatory_fixes": [
+      "Reserve N for actual centre-orbit size; rename Moh bottom quantities B_n=(n/d2)V2 and B_m=(m/d2)V2.",
+      "Type A1_actual=den(L_actual*delta1) as a relative denominator increment, not a total orbit size.",
+      "Limit the corollary to arithmetic expressions literally transported by I1-I6; child-only integrality and Galois residues remain independent tests.",
+      "Read copied-range degree equality as a guaranteed scope, not an iff outside that range."
+    ],
+    "repaired_typed_lemma_promotable": true,
+    "unamended_claim_promotable": false
+  },
+  "rows": [
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/4"
+      },
+      "I2": {
+        "H": 2,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "7/6",
+          "2": "-1/2"
+        },
+        "epsilon": "2/7",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "4",
+        "Moh_bottom_Bm_prime": "4",
+        "Moh_bottom_Bn": "6",
+        "Moh_bottom_Bn_prime": "6",
+        "V2": "2",
+        "V2_prime": "2",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 2,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 7
+        }
+      },
+      "I4": {
+        "A1_actual": 3,
+        "A1_actual_prime": 3,
+        "A1_coarse_prime_diagnostic": 3,
+        "L_actual": 7,
+        "L_actual_prime": 2,
+        "L_coarse_prime_diagnostic": 2,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "6",
+            "P_prime": "6",
+            "Q": "10",
+            "Q_prime": "10",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "21",
+            "P_prime": "7",
+            "Q": "15",
+            "Q_prime": "5",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "7/5",
+        "lo_parent_s_minus_1": "7/5",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 20,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 12,
+        "delta_child_top_minus_one": false,
+        "kill_cell": false,
+        "l_double_prime": "3",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 1,
+        "m": 14,
+        "n": 21,
+        "s": 2
+      },
+      "cohort": "MOH_P207",
+      "p207_print_check": {
+        "expected": {
+          "M2_prime": 16,
+          "V2_prime": 2,
+          "delta1_prime": "7/6",
+          "delta2_prime": "-1/2",
+          "ell": 1,
+          "m_prime": 14,
+          "n_prime": 21
+        },
+        "got": {
+          "M2_prime": 16,
+          "V2_prime": 2,
+          "delta1_prime": "7/6",
+          "delta2_prime": "-1/2",
+          "ell": 1,
+          "m_prime": 14,
+          "n_prime": 21
+        },
+        "pass": true
+      },
+      "row_id": "R001",
+      "source": {
+        "d_s": 4,
+        "epsilon": "2/7",
+        "j_first_nonzero": 2,
+        "m": 56,
+        "n": 84,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 3
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/5"
+      },
+      "I2": {
+        "H": 3,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "4/3",
+          "2": "-1"
+        },
+        "epsilon": "1/5",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "4",
+        "Moh_bottom_Bm_prime": "4",
+        "Moh_bottom_Bn": "6",
+        "Moh_bottom_Bn_prime": "6",
+        "V2": "2",
+        "V2_prime": "2",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 5
+        }
+      },
+      "I4": {
+        "A1_actual": 3,
+        "A1_actual_prime": 3,
+        "A1_coarse_prime_diagnostic": 3,
+        "L_actual": 5,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "6",
+            "P_prime": "6",
+            "Q": "10",
+            "Q_prime": "10",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "20",
+            "P_prime": "5",
+            "Q": "16",
+            "Q_prime": "4",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "5/4",
+        "lo_parent_s_minus_1": "5/4",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 20,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 20,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "0",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 2,
+        "m": 10,
+        "n": 15,
+        "s": 2
+      },
+      "cohort": "MOH_P207",
+      "p207_print_check": {
+        "expected": {
+          "M2_prime": 11,
+          "V2_prime": 2,
+          "delta1_prime": "4/3",
+          "delta2_prime": "-1",
+          "ell": 2,
+          "m_prime": 10,
+          "n_prime": 15
+        },
+        "got": {
+          "M2_prime": 11,
+          "V2_prime": 2,
+          "delta1_prime": "4/3",
+          "delta2_prime": "-1",
+          "ell": 2,
+          "m_prime": 10,
+          "n_prime": 15
+        },
+        "pass": true
+      },
+      "row_id": "R002",
+      "source": {
+        "d_s": 5,
+        "epsilon": "1/5",
+        "j_first_nonzero": 2,
+        "m": 50,
+        "n": 75,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 4
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/5"
+      },
+      "I2": {
+        "H": 3,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "1/2",
+          "2": "-1"
+        },
+        "epsilon": "1/5",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "6",
+        "Moh_bottom_Bm_prime": "6",
+        "Moh_bottom_Bn": "9",
+        "Moh_bottom_Bn_prime": "9",
+        "V2": "3",
+        "V2_prime": "3",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 5
+        }
+      },
+      "I4": {
+        "A1_actual": 2,
+        "A1_actual_prime": 2,
+        "A1_coarse_prime_diagnostic": 2,
+        "L_actual": 5,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "9",
+            "P_prime": "9",
+            "Q": "15",
+            "Q_prime": "15",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "20",
+            "P_prime": "5",
+            "Q": "16",
+            "Q_prime": "4",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "5/4",
+        "lo_parent_s_minus_1": "5/4",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 20,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 20,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "0",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 2,
+        "m": 10,
+        "n": 15,
+        "s": 2
+      },
+      "cohort": "MOH_P207",
+      "p207_print_check": {
+        "expected": {
+          "M2_prime": 11,
+          "V2_prime": 3,
+          "delta1_prime": "1/2",
+          "delta2_prime": "-1",
+          "ell": 2,
+          "m_prime": 10,
+          "n_prime": 15
+        },
+        "got": {
+          "M2_prime": 11,
+          "V2_prime": 3,
+          "delta1_prime": "1/2",
+          "delta2_prime": "-1",
+          "ell": 2,
+          "m_prime": 10,
+          "n_prime": 15
+        },
+        "pass": true
+      },
+      "row_id": "R003",
+      "source": {
+        "d_s": 5,
+        "epsilon": "1/5",
+        "j_first_nonzero": 2,
+        "m": 50,
+        "n": 75,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 4
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/4"
+      },
+      "I2": {
+        "H": 2,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "1/4",
+          "2": "-1"
+        },
+        "epsilon": "1/4",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "9",
+        "Moh_bottom_Bm_prime": "9",
+        "Moh_bottom_Bn": "12",
+        "Moh_bottom_Bn_prime": "12",
+        "V2": "3",
+        "V2_prime": "3",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 4
+        }
+      },
+      "I4": {
+        "A1_actual": 4,
+        "A1_actual_prime": 4,
+        "A1_coarse_prime_diagnostic": 4,
+        "L_actual": 4,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "12",
+            "P_prime": "12",
+            "Q": "21",
+            "Q_prime": "21",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "12",
+            "P_prime": "4",
+            "Q": "9",
+            "Q_prime": "3",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "4/3",
+        "lo_parent_s_minus_1": "4/3",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 12,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 12,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "0",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 1,
+        "m": 12,
+        "n": 16,
+        "s": 2
+      },
+      "cohort": "MOH_P207",
+      "p207_print_check": {
+        "expected": {
+          "M2_prime": 13,
+          "V2_prime": 3,
+          "delta1_prime": "1/4",
+          "delta2_prime": "-1",
+          "ell": 1,
+          "m_prime": 12,
+          "n_prime": 16
+        },
+        "got": {
+          "M2_prime": 13,
+          "V2_prime": 3,
+          "delta1_prime": "1/4",
+          "delta2_prime": "-1",
+          "ell": 1,
+          "m_prime": 12,
+          "n_prime": 16
+        },
+        "pass": true
+      },
+      "row_id": "R004",
+      "source": {
+        "d_s": 4,
+        "epsilon": "1/4",
+        "j_first_nonzero": 2,
+        "m": 48,
+        "n": 64,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 3
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/4"
+      },
+      "I2": {
+        "H": 2,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "1/3",
+          "2": "-1"
+        },
+        "epsilon": "1/4",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "10",
+        "Moh_bottom_Bm_prime": "10",
+        "Moh_bottom_Bn": "15",
+        "Moh_bottom_Bn_prime": "15",
+        "V2": "5",
+        "V2_prime": "5",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 4
+        }
+      },
+      "I4": {
+        "A1_actual": 3,
+        "A1_actual_prime": 3,
+        "A1_coarse_prime_diagnostic": 3,
+        "L_actual": 4,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "15",
+            "P_prime": "15",
+            "Q": "25",
+            "Q_prime": "25",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "21",
+            "P_prime": "7",
+            "Q": "9",
+            "Q_prime": "3",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "7/3",
+        "lo_parent_s_minus_1": "7/3",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 12,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 12,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "3",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 1,
+        "m": 14,
+        "n": 21,
+        "s": 2
+      },
+      "cohort": "MOH_P207",
+      "p207_print_check": {
+        "expected": {
+          "M2_prime": 18,
+          "V2_prime": 5,
+          "delta1_prime": "1/3",
+          "delta2_prime": "-1",
+          "ell": 1,
+          "m_prime": 14,
+          "n_prime": 21
+        },
+        "got": {
+          "M2_prime": 18,
+          "V2_prime": 5,
+          "delta1_prime": "1/3",
+          "delta2_prime": "-1",
+          "ell": 1,
+          "m_prime": 14,
+          "n_prime": 21
+        },
+        "pass": true
+      },
+      "row_id": "R007",
+      "source": {
+        "d_s": 4,
+        "epsilon": "1/4",
+        "j_first_nonzero": 2,
+        "m": 56,
+        "n": 84,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 3
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/5"
+      },
+      "I2": {
+        "H": 3,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "10/7",
+          "2": "-1"
+        },
+        "epsilon": "1/5",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "8",
+        "Moh_bottom_Bm_prime": "8",
+        "Moh_bottom_Bn": "14",
+        "Moh_bottom_Bn_prime": "14",
+        "V2": "2",
+        "V2_prime": "2",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 5
+        }
+      },
+      "I4": {
+        "A1_actual": 7,
+        "A1_actual_prime": 7,
+        "A1_coarse_prime_diagnostic": 7,
+        "L_actual": 5,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "14",
+            "P_prime": "14",
+            "Q": "22",
+            "Q_prime": "22",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "20",
+            "P_prime": "5",
+            "Q": "16",
+            "Q_prime": "4",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "5/4",
+        "lo_parent_s_minus_1": "5/4",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 20,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 20,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "0",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 2,
+        "m": 20,
+        "n": 35,
+        "s": 2
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R036",
+      "source": {
+        "d_s": 5,
+        "epsilon": "1/5",
+        "j_first_nonzero": 2,
+        "m": 100,
+        "n": 175,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 4
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/4"
+      },
+      "I2": {
+        "H": 2,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "1/3",
+          "2": "-1"
+        },
+        "epsilon": "1/4",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "16",
+        "Moh_bottom_Bm_prime": "16",
+        "Moh_bottom_Bn": "24",
+        "Moh_bottom_Bn_prime": "24",
+        "V2": "8",
+        "V2_prime": "8",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 4
+        }
+      },
+      "I4": {
+        "A1_actual": 3,
+        "A1_actual_prime": 3,
+        "A1_coarse_prime_diagnostic": 3,
+        "L_actual": 4,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "24",
+            "P_prime": "24",
+            "Q": "40",
+            "Q_prime": "40",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "33",
+            "P_prime": "11",
+            "Q": "9",
+            "Q_prime": "3",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "11/3",
+        "lo_parent_s_minus_1": "11/3",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 12,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 12,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "7",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 1,
+        "m": 22,
+        "n": 33,
+        "s": 2
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R031",
+      "source": {
+        "d_s": 4,
+        "epsilon": "1/4",
+        "j_first_nonzero": 2,
+        "m": 88,
+        "n": 132,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 3
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/4"
+      },
+      "I2": {
+        "H": 2,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "3/10",
+          "2": "-1"
+        },
+        "epsilon": "1/4",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "21",
+        "Moh_bottom_Bm_prime": "21",
+        "Moh_bottom_Bn": "30",
+        "Moh_bottom_Bn_prime": "30",
+        "V2": "3",
+        "V2_prime": "3",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 4
+        }
+      },
+      "I4": {
+        "A1_actual": 10,
+        "A1_actual_prime": 10,
+        "A1_coarse_prime_diagnostic": 10,
+        "L_actual": 4,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "30",
+            "P_prime": "30",
+            "Q": "51",
+            "Q_prime": "51",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "12",
+            "P_prime": "4",
+            "Q": "9",
+            "Q_prime": "3",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "4/3",
+        "lo_parent_s_minus_1": "4/3",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 12,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 12,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "0",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 1,
+        "m": 28,
+        "n": 40,
+        "s": 2
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R046",
+      "source": {
+        "d_s": 4,
+        "epsilon": "1/4",
+        "j_first_nonzero": 2,
+        "m": 112,
+        "n": 160,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 3
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/4"
+      },
+      "I2": {
+        "H": 2,
+        "affine_level_checks": {
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "1/3",
+          "2": "0",
+          "3": "-1"
+        },
+        "epsilon": "1/4",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "22",
+        "Moh_bottom_Bm_prime": "22",
+        "Moh_bottom_Bn": "33",
+        "Moh_bottom_Bn_prime": "33",
+        "V2": "11",
+        "V2_prime": "11",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 4
+        }
+      },
+      "I4": {
+        "A1_actual": 3,
+        "A1_actual_prime": 3,
+        "A1_coarse_prime_diagnostic": 3,
+        "L_actual": 4,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "33",
+            "P_prime": "33",
+            "Q": "55",
+            "Q_prime": "55",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "12",
+            "P_prime": "12",
+            "Q": "6",
+            "Q_prime": "6",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 2,
+            "ratio_equal": true
+          },
+          {
+            "P": "24",
+            "P_prime": "8",
+            "Q": "9",
+            "Q_prime": "3",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 3,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "8/3",
+        "lo_parent_s_minus_1": "8/3",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 12,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 12,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "4",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 1,
+        "m": 32,
+        "n": 48,
+        "s": 3
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R060",
+      "source": {
+        "d_s": 4,
+        "epsilon": "1/4",
+        "j_first_nonzero": 3,
+        "m": 128,
+        "n": 192,
+        "s": 4,
+        "u_s": 1,
+        "v_s": 3
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/8"
+      },
+      "I2": {
+        "H": 6,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "8/3",
+          "2": "-1"
+        },
+        "epsilon": "1/8",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "4",
+        "Moh_bottom_Bm_prime": "4",
+        "Moh_bottom_Bn": "6",
+        "Moh_bottom_Bn_prime": "6",
+        "V2": "2",
+        "V2_prime": "2",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 8
+        }
+      },
+      "I4": {
+        "A1_actual": 3,
+        "A1_actual_prime": 3,
+        "A1_coarse_prime_diagnostic": 3,
+        "L_actual": 8,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "6",
+            "P_prime": "6",
+            "Q": "10",
+            "Q_prime": "10",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "56",
+            "P_prime": "8",
+            "Q": "49",
+            "Q_prime": "7",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "8/7",
+        "lo_parent_s_minus_1": "8/7",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 56,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 56,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "0",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 5,
+        "m": 16,
+        "n": 24,
+        "s": 2
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R013",
+      "source": {
+        "d_s": 8,
+        "epsilon": "1/8",
+        "j_first_nonzero": 2,
+        "m": 128,
+        "n": 192,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 7
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/7"
+      },
+      "I2": {
+        "H": 5,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "0",
+          "2": "-1"
+        },
+        "epsilon": "1/7",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "12",
+        "Moh_bottom_Bm_prime": "12",
+        "Moh_bottom_Bn": "18",
+        "Moh_bottom_Bn_prime": "18",
+        "V2": "6",
+        "V2_prime": "6",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 7
+        }
+      },
+      "I4": {
+        "A1_actual": 1,
+        "A1_actual_prime": 1,
+        "A1_coarse_prime_diagnostic": 1,
+        "L_actual": 7,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "18",
+            "P_prime": "18",
+            "Q": "30",
+            "Q_prime": "30",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "42",
+            "P_prime": "7",
+            "Q": "36",
+            "Q_prime": "6",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "7/6",
+        "lo_parent_s_minus_1": "7/6",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 42,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 42,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "0",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 4,
+        "m": 14,
+        "n": 21,
+        "s": 2
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R008",
+      "source": {
+        "d_s": 7,
+        "epsilon": "1/7",
+        "j_first_nonzero": 2,
+        "m": 98,
+        "n": 147,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 6
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/4"
+      },
+      "I2": {
+        "H": 2,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "5/7",
+          "2": "-1"
+        },
+        "epsilon": "1/4",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "8",
+        "Moh_bottom_Bm_prime": "8",
+        "Moh_bottom_Bn": "28",
+        "Moh_bottom_Bn_prime": "28",
+        "V2": "4",
+        "V2_prime": "4",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 4
+        }
+      },
+      "I4": {
+        "A1_actual": 7,
+        "A1_actual_prime": 7,
+        "A1_coarse_prime_diagnostic": 7,
+        "L_actual": 4,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "28",
+            "P_prime": "28",
+            "Q": "36",
+            "Q_prime": "36",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "21",
+            "P_prime": "7",
+            "Q": "9",
+            "Q_prime": "3",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "7/3",
+        "lo_parent_s_minus_1": "7/3",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 12,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 12,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "3",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 1,
+        "m": 14,
+        "n": 49,
+        "s": 2
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R050",
+      "source": {
+        "d_s": 4,
+        "epsilon": "1/4",
+        "j_first_nonzero": 2,
+        "m": 56,
+        "n": 196,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 3
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/6"
+      },
+      "I2": {
+        "H": 4,
+        "affine_level_checks": {
+          "1": true,
+          "2": true,
+          "3": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "3/2",
+          "2": "0",
+          "3": "-1"
+        },
+        "epsilon": "1/6",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "6",
+        "Moh_bottom_Bm_prime": "6",
+        "Moh_bottom_Bn": "9",
+        "Moh_bottom_Bn_prime": "9",
+        "V2": "3",
+        "V2_prime": "3",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 1,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 6
+        }
+      },
+      "I4": {
+        "A1_actual": 2,
+        "A1_actual_prime": 2,
+        "A1_coarse_prime_diagnostic": 2,
+        "L_actual": 6,
+        "L_actual_prime": 1,
+        "L_coarse_prime_diagnostic": 1,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "9",
+            "P_prime": "9",
+            "Q": "15",
+            "Q_prime": "15",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "5",
+            "P_prime": "5",
+            "Q": "4",
+            "Q_prime": "4",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 2,
+            "ratio_equal": true
+          },
+          {
+            "P": "10",
+            "P_prime": "2",
+            "Q": "25",
+            "Q_prime": "5",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 3,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "2/5",
+        "lo_parent_s_minus_1": "2/5",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 30,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 30,
+        "delta_child_top_minus_one": true,
+        "kill_cell": false,
+        "l_double_prime": "-4",
+        "pass": true,
+        "simple_point_minor_by_threshold": false
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 3,
+        "m": 20,
+        "n": 30,
+        "s": 3
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R027",
+      "source": {
+        "d_s": 6,
+        "epsilon": "1/6",
+        "j_first_nonzero": 3,
+        "m": 120,
+        "n": 180,
+        "s": 4,
+        "u_s": 1,
+        "v_s": 5
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/5"
+      },
+      "I2": {
+        "H": 3,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "1/2",
+          "2": "-1/2"
+        },
+        "epsilon": "2/9",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "8",
+        "Moh_bottom_Bm_prime": "8",
+        "Moh_bottom_Bn": "12",
+        "Moh_bottom_Bn_prime": "12",
+        "V2": "4",
+        "V2_prime": "4",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 2,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 9
+        }
+      },
+      "I4": {
+        "A1_actual": 1,
+        "A1_actual_prime": 1,
+        "A1_coarse_prime_diagnostic": 1,
+        "L_actual": 9,
+        "L_actual_prime": 2,
+        "L_coarse_prime_diagnostic": 2,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "12",
+            "P_prime": "12",
+            "Q": "20",
+            "Q_prime": "20",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "36",
+            "P_prime": "9",
+            "Q": "28",
+            "Q_prime": "7",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "9/7",
+        "lo_parent_s_minus_1": "9/7",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 35,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 20,
+        "delta_child_top_minus_one": false,
+        "kill_cell": false,
+        "l_double_prime": "4",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 2,
+        "m": 18,
+        "n": 27,
+        "s": 2
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R005",
+      "source": {
+        "d_s": 5,
+        "epsilon": "2/9",
+        "j_first_nonzero": 2,
+        "m": 90,
+        "n": 135,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 4
+      }
+    },
+    {
+      "I1": {
+        "checks": {
+          "m_over_d2": true,
+          "m_scaled": true,
+          "mu_scaled": true,
+          "n_over_d2": true,
+          "n_scaled": true,
+          "raw_M_scaled": true,
+          "raw_d_scaled": true
+        },
+        "pass": true,
+        "scale": "1/4"
+      },
+      "I2": {
+        "H": 2,
+        "affine_level_checks": {
+          "1": true,
+          "2": true
+        },
+        "checks": {
+          "affine_i_le_j": true,
+          "generalized_def51_agrees": true,
+          "mobius_at_j": true
+        },
+        "child_delta": {
+          "1": "4/3",
+          "2": "-1/5"
+        },
+        "epsilon": "5/16",
+        "pass": true
+      },
+      "I3": {
+        "Moh_bottom_Bm": "4",
+        "Moh_bottom_Bm_prime": "4",
+        "Moh_bottom_Bn": "6",
+        "Moh_bottom_Bn_prime": "6",
+        "V2": "2",
+        "V2_prime": "2",
+        "checks": {
+          "Moh_bottom_Bm_equal": true,
+          "Moh_bottom_Bn_equal": true,
+          "V2_equal": true
+        },
+        "repaired_statement_pass": true,
+        "selected_first_support_orbit_denominator": {
+          "child": 5,
+          "equal": false,
+          "note": "Diagnostic for the frozen actual-orbit N convention; this is not Moh's bottom Bn.",
+          "parent": 16
+        }
+      },
+      "I4": {
+        "A1_actual": 3,
+        "A1_actual_prime": 3,
+        "A1_coarse_prime_diagnostic": 3,
+        "L_actual": 16,
+        "L_actual_prime": 5,
+        "L_coarse_prime_diagnostic": 5,
+        "checks": {
+          "active_lattice_integral": true,
+          "actual_increment_equal": true,
+          "parent_increment_recomputed": true
+        },
+        "pass": true,
+        "transport_formula": "L_actual_prime = numerator(epsilon) * L_actual / denominator(epsilon)"
+      },
+      "I5": {
+        "checks": {
+          "degrees_equal_on_copied_range": true,
+          "ratios_all_levels": true,
+          "top_threshold_equal": true
+        },
+        "levels": [
+          {
+            "P": "6",
+            "P_prime": "6",
+            "Q": "10",
+            "Q_prime": "10",
+            "copied_range": true,
+            "degrees_equal": true,
+            "i": 1,
+            "ratio_equal": true
+          },
+          {
+            "P": "48",
+            "P_prime": "16",
+            "Q": "33",
+            "Q_prime": "11",
+            "copied_range": false,
+            "degrees_equal": false,
+            "i": 2,
+            "ratio_equal": true
+          }
+        ],
+        "lo_child_top": "16/11",
+        "lo_parent_s_minus_1": "16/11",
+        "pass": true,
+        "scope_note": "No converse is asserted outside the copied range."
+      },
+      "I6": {
+        "X_n_minus_M_s_minus_1": 44,
+        "checks": {
+          "SD_kill_cell_not_occupied": true,
+          "exponent_formulas_equal": true,
+          "top_minus_one_iff_lattice_condition": true
+        },
+        "d_s_times_d_s_minus_1": 12,
+        "delta_child_top_minus_one": false,
+        "kill_cell": false,
+        "l_double_prime": "12",
+        "pass": true,
+        "simple_point_minor_by_threshold": true
+      },
+      "all_six_repaired_identities_pass": true,
+      "child": {
+        "ell": 1,
+        "m": 32,
+        "n": 48,
+        "s": 2
+      },
+      "cohort": "RANDOM_COMPLETE_US1",
+      "p207_print_check": null,
+      "row_id": "R009",
+      "source": {
+        "d_s": 4,
+        "epsilon": "5/16",
+        "j_first_nonzero": 2,
+        "m": 128,
+        "n": 192,
+        "s": 3,
+        "u_s": 1,
+        "v_s": 3
+      }
+    }
+  ],
+  "schema": "jc2.descent-invariance-hostile-gate/v1",
+  "scope_boundary": {
+    "covered": [
+      "Raw copied characteristic lattice under the Prop 6.3 scalar.",
+      "Transported radii for a fixed licensed first-support route.",
+      "Moh bottom root-count quantities B_n and B_m.",
+      "Actual relative bottom denominator increment A1.",
+      "ODE degree ratios at all matched levels and degree pairs on the copied range.",
+      "Contradiction of the typed simple-minor second-descent kill cell."
+    ],
+    "not_covered": [
+      "Existence of a child route when descend_own returns an empty route set.",
+      "A total map or bijection between parent and child necessary configurations.",
+      "Child finite-line multiplicity/integrality constraints.",
+      "The child's own Galois residue laws at newly created or uncopied levels.",
+      "A parent counterpart for every child-side necessary condition.",
+      "Realizability or attainment by a polynomial pair.",
+      "Heavy second descent or u_s>1 terminal identification."
+    ]
+  },
+  "selection": {
+    "complete_us1_frame_size": 46,
+    "no_redraw": true,
+    "p207_ids": [
+      "R001",
+      "R002",
+      "R003",
+      "R004",
+      "R007"
+    ],
+    "random_frame": "sorted complete u_s=1 NONEMPTY LICENSED_AND_FORCED rows excluding the five p.207 controls",
+    "random_frame_size": 41,
+    "random_ids_in_draw_order": [
+      "R036",
+      "R031",
+      "R046",
+      "R060",
+      "R013",
+      "R008",
+      "R050",
+      "R027",
+      "R005",
+      "R009"
+    ],
+    "rng": "Python random.Random (MT19937)",
+    "seed": 20260906,
+    "tested_ids": [
+      "R001",
+      "R002",
+      "R003",
+      "R004",
+      "R007",
+      "R036",
+      "R031",
+      "R046",
+      "R060",
+      "R013",
+      "R008",
+      "R050",
+      "R027",
+      "R005",
+      "R009"
+    ],
+    "without_replacement": true
+  },
+  "supplementary_exhaustive_complete_us1": {
+    "I4_actual_increment_equal": 46,
+    "I5_ratio_and_copied_degree_scope": 46,
+    "all_six_repaired_identities_pass": 46,
+    "coarse_child_L_differs_from_actual_child_L": 4,
+    "frame_size": 46
+  },
+  "tag": "descent-invariance-gate-sol56-20260906",
+  "test_summary": {
+    "SD_kill_cell_occupied": 0,
+    "actual_orbit_N_equal_diagnostic": 0,
+    "all_six_repaired_identities_pass": 15,
+    "p207_exact_print_matches": 5,
+    "per_identity_pass_counts": {
+      "I1": 15,
+      "I2": 15,
+      "I3_repaired_Moh_bottom": 15,
+      "I4_actual_increment": 15,
+      "I5": 15,
+      "I6": 15
+    },
+    "tested_rows": 15
+  }
+}
