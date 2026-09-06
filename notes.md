@@ -21194,3 +21194,6 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 ## 2026-09-06 00:33Z LIVE STATE
 - Round 00:00Z sealed + synthesized (17(vvvvvvvvv)). 12 lanes on the convergent instruments: Sol 4/4 (xu71, t2-face, t2t3, k7-cofactors) | Opus 3/4 (t2-closing, cq-elim, exact-contact) | Grok 3/8 (socle-gate, npr, k16-radical) | Astra 2/3 (nodal-diagonal, lambda-lowweight). K=8 b=11 OPEN; K=7 closures conditional on cofactors. Disk 2.7 GB. Orphan .163 + resize await DC.
+
+## 2026-09-06 01:07Z LIVE STATE — second disk incident
+- 01:05Z: root filled again (a cofactor lane wrote ~1 GB of trial scratch to /tmp); xu71-offset-one and k7-cofactors died; 7 lanes survived. Cleanup + in-place gzip of large regenerable CAS text (184 files; originals hashed in box/_compressed-manifests/) running. Both dead lanes relaunched as r2 with scratch on the worker. DC: resize still needed.
