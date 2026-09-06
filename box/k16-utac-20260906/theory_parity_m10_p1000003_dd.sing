@@ -1,0 +1,26 @@
+ring r=(1000003,d),(x,l2,l4,l6,l8,b),(dp(1),wp(8,6,4,2,10));
+minpoly=d2-10/3;
+proc cf(poly f,int k) { matrix c=coeffs(f,x); if(nrows(c)<k+1){return(0);} return(c[k+1,1]); }
+poly L=-b+l2*x2+l4*x4+l6*x6+l8*x8+x10;
+poly G=3/2*L*(L+b);
+poly R0=3/16*L^3*(L+2*b);
+number dd=d; number pp=1/(4*(2*dd+1));
+poly P=pp*x20;
+poly F;
+number pivot;
+int j;
+for(j=38;j>=20;j=j-2) { F=x*diff(P^2,x)-3*P^2+G*P-R0; pivot=2*pp*(j-3)+3/2; P=P-cf(F,j)/pivot*x^(j-20); }
+poly eta=cf(P,2);
+poly R=R0-eta*x2*b*L/2;
+F=x*diff(P^2,x)-3*P^2+G*P-R;
+ideal J=cf(P,0)+b2/4;
+for(j=0;j<=40;j++){ if(cf(F,j)!=0){J[size(J)+1]=cf(F,j);} }
+print("BUILT");print(size(J));
+ring S=(1000003,d),(l2,l4,l6,l8,b),wp(8,6,4,2,10);
+minpoly=d2-10/3;
+ideal J=imap(r,J);poly eta=imap(r,eta);option(redSB);
+ideal H=std(J);
+print("GB_DONE");print(size(H));print(dim(H));print(vdim(H));
+poly z=1;int e;for(e=1;e<=100;e++){z=reduce(z*eta,H);if(z==0){print("ETA_EXP");print(e);break;}}
+z=1;for(e=1;e<=100;e++){z=reduce(z*b,H);if(z==0){print("B_EXP");print(e);break;}}
+print("DONE");quit;

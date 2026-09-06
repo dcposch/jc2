@@ -1,0 +1,52 @@
+{
+  "Phi4_matches_frozen": true,
+  "Phi5_matches_frozen": true,
+  "T2_identity": true,
+  "B_axis_residual": true,
+  "cubic_axis_residual": true,
+  "mixed_ansatz_residual": true,
+  "eta_nonzero_pivot_zero": true,
+  "eta_zero_pivot_nonzero": true,
+  "union_coordinate_ring": "Q[z,v]/(z*v)",
+  "normalization": "Q[z] x Q[v]",
+  "UT_parametrization": true,
+  "top_pivot_identity": true,
+  "B_pivot_identity": true,
+  "localization_boundary_control": {
+    "ring": "Q[b,eta]",
+    "ideal": "(b)",
+    "localized_ideal": "(1)",
+    "eta_not_in_radical": true,
+    "claim_about_UF_solutions": false
+  },
+  "slice_coefficients_nonzero": true,
+  "slice_Euler_identity": true,
+  "slice_examples": {
+    "4": {
+      "image_ideal": "(z^5)",
+      "first_closing_coefficient": "224",
+      "uniform_proof": "all even closing coefficients are nonzero multiples of z^r, N+1 <= r <= 2N"
+    },
+    "5": {
+      "image_ideal": "(z^6)",
+      "first_closing_coefficient": "1344",
+      "uniform_proof": "all even closing coefficients are nonzero multiples of z^r, N+1 <= r <= 2N"
+    },
+    "6": {
+      "image_ideal": "(z^7)",
+      "first_closing_coefficient": "8448",
+      "uniform_proof": "all even closing coefficients are nonzero multiples of z^r, N+1 <= r <= 2N"
+    },
+    "8": {
+      "image_ideal": "(z^9)",
+      "first_closing_coefficient": "366080",
+      "uniform_proof": "all even closing coefficients are nonzero multiples of z^r, N+1 <= r <= 2N"
+    },
+    "12": {
+      "image_ideal": "(z^13)",
+      "first_closing_coefficient": "852017152",
+      "uniform_proof": "all even closing coefficients are nonzero multiples of z^r, N+1 <= r <= 2N"
+    }
+  },
+  "all_polynomial_identity_checks_pass": true
+}

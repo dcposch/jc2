@@ -1,0 +1,220 @@
+{
+  "schema": 1,
+  "lane": "k16-utac-astra-20260906",
+  "basis": "e584173b8a751ddd6b7fbc5627958ac64cc3d4e7",
+  "sealed_utc": "2026-09-06T03:10:35.169086+00:00",
+  "verdict": {
+    "uniform_U_eta": "OPEN",
+    "counterexample_found": false,
+    "uniform_R": "NOT_PROVED",
+    "whole_ray_T": "NOT_PROMOTED"
+  },
+  "custody": {
+    "mechanism": "receipt awk manifest and sha256sum -c, before reading inputs",
+    "inputs": [
+      {
+        "basename": "k16-t2-closing-opus5-20260906.md",
+        "sha256": "2294486a92148654ff13930dcc3a8732684cb8e48097a37387247527a90d249d",
+        "verified": true
+      },
+      {
+        "basename": "k16-universal-series-fable5-20260905.md",
+        "sha256": "5ac0ff1ddcfc766dd1d5050c73e08203795f1ecc56be954b388ef0c1eaeb41bb",
+        "verified": true
+      },
+      {
+        "basename": "k16-tacnode-fable5-20260905.md",
+        "sha256": "ab1c4ca249f85f3978108fe9e26f391695805e443fdb51a6be135635b2a0fa31",
+        "verified": true
+      },
+      {
+        "basename": "k16-radical-steps-grok46-20260906.md",
+        "sha256": "ebd1dfd57a7b17c0bad7414a222a14ca35d7f5f2a83bfd456f8f380f3289c528",
+        "verified": true
+      },
+      {
+        "basename": "k16-xempty-astra-20260905.md",
+        "sha256": "1f06694fb58d53c4a4b3c54dad88722cd31a5ccc894679ac52b0620b91e2623f",
+        "verified": true
+      },
+      {
+        "basename": "FALLACY-v2.md",
+        "sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+        "verified": true
+      }
+    ],
+    "final_recheck": "6/6 OK"
+  },
+  "proved_here": {
+    "exact_radical": {
+      "N": [
+        3,
+        4,
+        5
+      ],
+      "field": "Q",
+      "ideal": "(u,l2,l4,...,lN,l3-2*w2,B*w2)",
+      "coordinate_ring": "Q[B,w2]/(B*w2)",
+      "dimension": 1,
+      "components": [
+        {
+          "L": "-1",
+          "P": "-1/4-B*x",
+          "eta": "0",
+          "B": "free",
+          "w2": "0"
+        },
+        {
+          "L": "-1+a*x^3",
+          "P": "-L^2/4",
+          "eta": "0",
+          "B": "0",
+          "w2": "a/2"
+        }
+      ],
+      "normalization": "A1 disjoint union A1",
+      "component_genera": [
+        0,
+        0
+      ],
+      "ordinary_projective_arithmetic_genus": 0,
+      "B_in_radical": false,
+      "w2_in_radical": false,
+      "input_scope": "fresh UF coefficient reconstruction; no ray certificate"
+    },
+    "universal_inclusion": {
+      "N_min": 3,
+      "claim": "two stated lines contained in V(I_close,N)"
+    },
+    "uniform_exponent_lower_bound": {
+      "N_min": 4,
+      "bound": "e >= 2N",
+      "targets": [
+        "eta",
+        "u",
+        "B*eta"
+      ],
+      "also_after_localizing_B": true,
+      "proof": "Artin solution over Q[z]/(z^(2N)), B=1,eta=z,L=-1",
+      "finite_identity_checks": [
+        4,
+        5,
+        6
+      ],
+      "not_a_reduced_counterexample": true
+    },
+    "square_root_slice": {
+      "map": "u=4z;B=w2=l2=...=lN=0",
+      "P": "-1/4*sqrt(1-8z*x^2)",
+      "image_ideal": "(z^(N+1))"
+    },
+    "saturation_controls": {
+      "exact_N": [
+        4,
+        5
+      ],
+      "inverse_equation_unit": [
+        "u",
+        "eta"
+      ],
+      "inverse_equation_nonunit": [
+        "u+1",
+        "B",
+        "w2"
+      ],
+      "method": "exact radical theorem plus explicit points in original closing variety"
+    }
+  },
+  "modular_only": {
+    "radical_N6": {
+      "prime": 1000003,
+      "ideal": "(u,l2,l4,l5,l6,l3-2*w2,B*w2)",
+      "all_lower_actual_degrees_checked": true,
+      "split_fields_handled_factorwise": true
+    },
+    "N4_p31991": {
+      "field_only": "finite characteristic",
+      "GB_size": 854,
+      "dimension": 1,
+      "minimal_exponents_replayed": {
+        "u": 19,
+        "l2": 15,
+        "eta": 19,
+        "Beta": 19
+      },
+      "diagnostic_error_in_original_log": false,
+      "full_script_completed": true,
+      "raw_output": "check_closing_N4_p31991_wp.out"
+    },
+    "N4_p1000003": {
+      "field_only": "finite characteristic",
+      "GB_size": 854,
+      "dimension": 1,
+      "minimal_exponents_replayed": {
+        "u": 19,
+        "l2": 15,
+        "eta": 19,
+        "Beta": 19
+      },
+      "diagnostic_error_in_original_log": false,
+      "full_script_completed": true,
+      "raw_output": "check_closing_N4_p1000003_wp.out"
+    },
+    "N5_p1000003": {
+      "field_only": "finite characteristic",
+      "GB_size": 5249,
+      "dimension": 1,
+      "minimal_exponents_replayed": {
+        "u": 27,
+        "l2": 20,
+        "eta": 27
+      },
+      "diagnostic_error_in_original_log": true,
+      "full_script_completed": false,
+      "raw_output": "check_closing_N5_p1000003_wp.out"
+    },
+    "N5_Beta_power_upper_bound": 27,
+    "N5_Beta_minimum": "not determined; stopped optional search after eta minimum",
+    "N4_first_row_prefix_dimensions": [
+      5,
+      4,
+      3
+    ],
+    "parity_exploration": {
+      "actual_degrees": [
+        8,
+        10,
+        12
+      ],
+      "prime": 1000003,
+      "quotient_lengths": [
+        206,
+        1005,
+        4914
+      ],
+      "not_full_closing_classification": true
+    }
+  },
+  "limits": {
+    "exact_N6": "TIMEOUT at 600 seconds; no char0 exclusion claimed",
+    "parity_N16": "TIMEOUT at 120 seconds",
+    "char0_min_eta_exponents_19_27": "not established; these minima are modular",
+    "original_N5_diagnostic": "Phi4 print precedence error; construction unaffected; repaired coefficient replay passes",
+    "uniform_obstruction": "eta_m in sqrt(K_m:b^infinity) for every unbounded actual degree m",
+    "boundary_bridge": "also need B*eta in sqrt(J_t+(b)) uniformly for the full R chain"
+  },
+  "report": {
+    "path": "xmodel/k16-utac-astra-20260906.md",
+    "body_bytes": 29588,
+    "body_sha256": "a37f89f6c0583df4d5fe6eb8f125f5cb54f880205eca32a5204ac9992ed16e81",
+    "sealed_bytes": 29815,
+    "sealed_sha256": "839f88fc47a2915fabb06cf9e6a59da6d09c2d81daa52ba3a6366bcf7474ccef"
+  },
+  "discipline": {
+    "no_ledger_edits": true,
+    "no_jc2_lean": true,
+    "no_ideation_input": true,
+    "no_fleet": true,
+    "no_lane_process_left_running": true
+  }
+}

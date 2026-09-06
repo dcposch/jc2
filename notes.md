@@ -21227,3 +21227,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 - 03:09Z 17(wwwwwwwwww) DATA: actual-stabilizer operative count = 90 (vs 1,420), = printed-closure N>0; residual 64 unaffected; only R063 drops from the roster. Opus proving the sharpened screen necessary (actual-stabilizer-soundness). Opus 3/4.
 - 03:11Z 17(xxxxxxxxxx) descent-invariance lemma PROMOTED-WITH-FIX (I3 repaired to B_g/B_f; A_1 is a relative increment). Sol 2/4.
+- 03:13Z 17(yyyyyyyyyy) K16 U-TAC OPEN: two-line exact geometry at N=4,5; THICK e ≥ 2N; precise open = polynomial-solution classification of (UF) in actual degree m ≥ 4 (k16-ueta-classification-astra charged). Astra 3/3.

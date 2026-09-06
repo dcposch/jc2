@@ -1,0 +1,207 @@
+{
+  "derivation": "UF coefficient equations only; actual-leading-degree stratification; no ray imports",
+  "characteristic_zero_reduced_ideals": {
+    "N4": "(u,l2,l4,l3-2w2,B*w2)",
+    "N5": "(u,l2,l4,l5,l3-2w2,B*w2)"
+  },
+  "modular_reduced_ideals": {
+    "N6,p1000003": "(u,l2,l4,l5,l6,l3-2w2,B*w2)"
+  },
+  "geometry": "two affine lines meeting at the origin; normalization A1 disjoint union A1",
+  "field_controls": [
+    {
+      "actual_degree": 2,
+      "d_squared": 333335,
+      "euler_criterion": 1,
+      "irreducible": false,
+      "roots": [
+        804413,
+        195590
+      ],
+      "roots_checked": true
+    },
+    {
+      "actual_degree": 3,
+      "d_squared": 1,
+      "euler_criterion": 1,
+      "irreducible": false,
+      "roots": [
+        1,
+        1000002
+      ],
+      "roots_checked": true
+    },
+    {
+      "actual_degree": 4,
+      "d_squared": 666670,
+      "euler_criterion": 1000002,
+      "irreducible": true,
+      "roots": null,
+      "roots_checked": null
+    },
+    {
+      "actual_degree": 5,
+      "d_squared": 333336,
+      "euler_criterion": 1,
+      "irreducible": false,
+      "roots": [
+        140269,
+        859734
+      ],
+      "roots_checked": true
+    },
+    {
+      "actual_degree": 6,
+      "d_squared": 2,
+      "euler_criterion": 1000002,
+      "irreducible": true,
+      "roots": null,
+      "roots_checked": null
+    }
+  ],
+  "runs": [
+    {
+      "N": 2,
+      "field": "1000003",
+      "branch": 195590,
+      "homogeneous_b": false,
+      "status": "PASS",
+      "seconds": 0.006,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=2 J_SIZE=1\nGB_SIZE=1\nDIM=-1\nGJ[1]=1\nDONE\n",
+      "script": "finite_m2_F1000003_d195590_b1.sing"
+    },
+    {
+      "N": 2,
+      "field": "1000003",
+      "branch": 804413,
+      "homogeneous_b": false,
+      "status": "PASS",
+      "seconds": 0.006,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=2 J_SIZE=1\nGB_SIZE=1\nDIM=-1\nGJ[1]=1\nDONE\n",
+      "script": "finite_m2_F1000003_d804413_b1.sing"
+    },
+    {
+      "N": 2,
+      "field": "0",
+      "branch": null,
+      "homogeneous_b": false,
+      "status": "PASS",
+      "seconds": 0.006,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=2 J_SIZE=1\nGB_SIZE=1\nDIM=-1\nGJ[1]=1\nDONE\n",
+      "script": "finite_m2_Q_b1.sing"
+    },
+    {
+      "N": 3,
+      "field": "1000003",
+      "branch": -1,
+      "homogeneous_b": false,
+      "status": "PASS",
+      "seconds": 0.006,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nCUBIC_B_ON_L2_ZERO=0\nCUBIC_ETA_ON_L2_ZERO=0\nCUBIC_P_FAMILY_CHECK=1\nN=3 J_SIZE=3\nGB_SIZE=1\nDIM=0\nGJ[1]=l(2)^2\nDONE\n",
+      "script": "finite_m3_F1000003_d-1_b1.sing"
+    },
+    {
+      "N": 3,
+      "field": "1000003",
+      "branch": 1,
+      "homogeneous_b": false,
+      "status": "PASS",
+      "seconds": 0.006,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=3 J_SIZE=3\nGB_SIZE=1\nDIM=-1\nGJ[1]=1\nDONE\n",
+      "script": "finite_m3_F1000003_d1_b1.sing"
+    },
+    {
+      "N": 3,
+      "field": "0",
+      "branch": -1,
+      "homogeneous_b": false,
+      "status": "PASS",
+      "seconds": 0.006,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nCUBIC_B_ON_L2_ZERO=0\nCUBIC_ETA_ON_L2_ZERO=0\nCUBIC_P_FAMILY_CHECK=1\nN=3 J_SIZE=3\nGB_SIZE=1\nDIM=0\nGJ[1]=l(2)^2\nDONE\n",
+      "script": "finite_m3_Q_d-1_b1.sing"
+    },
+    {
+      "N": 3,
+      "field": "0",
+      "branch": 1,
+      "homogeneous_b": false,
+      "status": "PASS",
+      "seconds": 0.006,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=3 J_SIZE=3\nGB_SIZE=1\nDIM=-1\nGJ[1]=1\nDONE\n",
+      "script": "finite_m3_Q_d1_b1.sing"
+    },
+    {
+      "N": 4,
+      "field": "1000003",
+      "branch": null,
+      "homogeneous_b": true,
+      "status": "PASS",
+      "seconds": 0.008,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=4 J_SIZE=5\nGB_SIZE=17\nDIM=0\nMIN_B_POWER=4\nDONE\n",
+      "script": "finite_m4_F1000003_hom.sing"
+    },
+    {
+      "N": 4,
+      "field": "0",
+      "branch": null,
+      "homogeneous_b": true,
+      "status": "PASS",
+      "seconds": 0.027,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=4 J_SIZE=5\nGB_SIZE=17\nDIM=0\nMIN_B_POWER=4\nDONE\n",
+      "script": "finite_m4_Q_hom.sing"
+    },
+    {
+      "N": 5,
+      "field": "1000003",
+      "branch": 140269,
+      "homogeneous_b": true,
+      "status": "PASS",
+      "seconds": 0.01,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=5 J_SIZE=7\nGB_SIZE=60\nDIM=0\nMIN_B_POWER=5\nDONE\n",
+      "script": "finite_m5_F1000003_d140269_hom.sing"
+    },
+    {
+      "N": 5,
+      "field": "1000003",
+      "branch": 859734,
+      "homogeneous_b": true,
+      "status": "PASS",
+      "seconds": 0.01,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=5 J_SIZE=7\nGB_SIZE=60\nDIM=0\nMIN_B_POWER=5\nDONE\n",
+      "script": "finite_m5_F1000003_d859734_hom.sing"
+    },
+    {
+      "N": 5,
+      "field": "0",
+      "branch": null,
+      "homogeneous_b": true,
+      "status": "PASS",
+      "seconds": 5.053,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=5 J_SIZE=7\nGB_SIZE=60\nDIM=0\nMIN_B_POWER=5\nDONE\n",
+      "script": "finite_m5_Q_hom.sing"
+    },
+    {
+      "N": 6,
+      "field": "1000003",
+      "branch": null,
+      "homogeneous_b": true,
+      "status": "PASS",
+      "seconds": 0.973,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=6 J_SIZE=9\nGB_SIZE=230\nDIM=0\nMIN_B_POWER=6\nDONE\n",
+      "script": "finite_m6_F1000003_hom.sing"
+    },
+    {
+      "N": 6,
+      "field": "0",
+      "branch": null,
+      "homogeneous_b": true,
+      "status": "TIMEOUT",
+      "seconds": 600.108,
+      "output": "B_PIVOT_CHECK=1\nHIGH_ROWS_ZERO=1\nLOW_ROWS_ZERO=1\nN=6 J_SIZE=9\n",
+      "script": "finite_m6_Q_hom.sing"
+    }
+  ],
+  "exact_m6_status": "TIMEOUT after600.108 seconds; no exact GB or radical result",
+  "successful_runs": 13,
+  "timeout_runs": 1
+}

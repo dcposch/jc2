@@ -1,0 +1,49 @@
+// Generated independently from frozen UF, normalized actual leading coefficient l_N=1.
+int N=5;
+ring R=1000003,(x,l(2),l(3),l(4),B,b),dp;
+
+proc xc(poly f,int k){matrix mm=coef(f,x);int ii;for(ii=1;ii<=ncols(mm);ii++){if(deg(mm[1,ii])==k){return(mm[2,ii]);}}return(poly(0));}
+poly L=-b+x^N;int j;
+L=L+l(2)*x^2;
+L=L+l(3)*x^3;
+L=L+l(4)*x^4;
+
+number p=number(1)/(4*(2*(140269)+1));
+poly G=3*L*(L+b)/2-B*x;
+poly RF0=3*(L^2)*(L*(L+2*b)-4*B*x)/16;
+poly P=p*x^(2*N);poly residual;poly pj;number pivot;
+for(j=2*N-1;j>=2;j--){
+ residual=x*diff(P^2,x)-3*(P^2)+G*P-RF0;
+ pivot=2*(2*N+j-3)*p+number(3)/2;
+ if(pivot==0){print("ERROR_ZERO_PIVOT");quit;}
+ pj=-xc(residual,2*N+j)/pivot;P=P+pj*x^j;
+}
+poly eta=xc(P,2);
+P=P-B*x-number(1)*(b^2)/4;
+poly RF=RF0-eta*x^2*(b*L/2+B*x);
+residual=x*diff(P^2,x)-3*(P^2)+G*P-RF;
+poly Brow=xc(residual,2*N+1);
+poly Bd=diff(Brow,B);
+number Bpivot=-((4*N-3)*p+number(3)/4);
+print("B_PIVOT_CHECK="+string(Bd==Bpivot));
+poly Bsol=-subst(Brow,B,0)/Bpivot;
+P=subst(P,B,Bsol);eta=subst(eta,B,Bsol);
+G=subst(G,B,Bsol);RF=subst(RF,B,Bsol);
+residual=x*diff(P^2,x)-3*(P^2)+G*P-RF;
+int highok=1;int lowok=1;
+for(j=2*N+1;j<=4*N;j++){if(xc(residual,j)!=0){highok=0;}}
+for(j=0;j<=3;j++){if(xc(residual,j)!=0){lowok=0;}}
+print("HIGH_ROWS_ZERO="+string(highok));print("LOW_ROWS_ZERO="+string(lowok));
+ideal J;for(j=4;j<=2*N;j++){J[j-3]=xc(residual,j);}
+
+ring S=1000003,(l(2),l(3),l(4),b),wp(3,2,1,5);
+map phi=R,0,l(2),l(3),l(4),0,b;
+ideal J=phi(J);
+print("N="+string(N)+" J_SIZE="+string(size(J)));
+option(redSB);ideal GJ=std(J);
+print("GB_SIZE="+string(size(GJ)));print("DIM="+string(dim(GJ)));
+
+proc mine(ideal H,poly f){int e;for(e=1;e<=30;e++){if(reduce(f^e,H)==0){return(e);}}return(0);}
+print("MIN_B_POWER="+string(mine(GJ,b)));
+
+print("DONE");quit;

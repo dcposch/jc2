@@ -1,0 +1,61 @@
+{
+  "status": "ALL_PASS",
+  "field": "characteristic zero; algebraic closure for normalization",
+  "normalization": "x scaling makes leading L=1; L(0)=-1, L1=0, P0=-1/4, P1=-B,P2=eta",
+  "cases": [
+    {
+      "degree_L": 2,
+      "leading_P": "-3/20 + sqrt(6)/10",
+      "B": "0",
+      "eta": "-(-2 + sqrt(6))/4",
+      "residual_coefficients": {
+        "4": "-(2*sqrt(6) + 7)/40"
+      },
+      "conclusion": "No polynomial solution of exact degree 2."
+    },
+    {
+      "degree_L": 2,
+      "leading_P": "-sqrt(6)/10 - 3/20",
+      "B": "0",
+      "eta": "(2 + sqrt(6))/4",
+      "residual_coefficients": {
+        "4": "(-7 + 2*sqrt(6))/40"
+      },
+      "conclusion": "No polynomial solution of exact degree 2."
+    },
+    {
+      "degree_L": 3,
+      "leading_P": "-1/4",
+      "B": "3*a**2*(6*a**3 - 125)/3125",
+      "eta": "3*a*(a**3 + 75)/250",
+      "residual_coefficients": {
+        "4": "3*a**2*(147*a**6 - 1000*a**3 - 46875)/1562500",
+        "5": "3*a**4*(34*a**3 - 775)/15625",
+        "6": "3*a**3*(59*a**3 - 1375)/31250"
+      },
+      "groebner_Q_B_eta_a_lex": [
+        "B",
+        "-9*a/10 + e",
+        "a**2"
+      ],
+      "conclusion": "Reduced locus B=eta=a=0."
+    },
+    {
+      "degree_L": 3,
+      "leading_P": "1/12",
+      "B": "-3*a**2*(1653*a**3 - 12716)/18708704",
+      "eta": "-33*a*(1131*a**3 + 628864)/187087040",
+      "residual_coefficients": {
+        "4": "3*a**2*(2447142003*a**6 + 1900896140544*a**3 - 3482903677878272)/35001560535961600",
+        "5": "3*a*(1986398181*a**6 - 16122815232*a**3 - 3806398081024)/18383172550400",
+        "6": "(48281373*a**6 - 392411136*a**3 - 49433741312)/154480441600"
+      },
+      "groebner_Q_B_eta_a_lex": [
+        "1"
+      ],
+      "conclusion": "No polynomial solution."
+    }
+  ],
+  "positive_degree3_resultant_absolute_factorization": "{2: 26, 3: 6, 5: 4, 17: 12, 411109337239: 1}",
+  "uniform_low_degree_conclusion": "All solutions with deg L<=3 are L=-1,P=-1/4-Bx or L=-1+a x^3,P=-L^2/4 (the two families meet at a=B=0)."
+}
