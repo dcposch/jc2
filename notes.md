@@ -21229,3 +21229,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - 03:11Z 17(xxxxxxxxxx) descent-invariance lemma PROMOTED-WITH-FIX (I3 repaired to B_g/B_f; A_1 is a relative increment). Sol 2/4.
 - 03:13Z 17(yyyyyyyyyy) K16 U-TAC OPEN: two-line exact geometry at N=4,5; THICK e ≥ 2N; precise open = polynomial-solution classification of (UF) in actual degree m ≥ 4 (k16-ueta-classification-astra charged). Astra 3/3.
 - 03:26Z 17(zzzzzzzzzz) 25 finite-pole rows STAND (Prop 6.3 child monicity); residual 64 robust. Grok 0/8.
+- 03:28Z 17(aaaaaaaaaaa) six rows PROMOTED SURVIVE (Opus gate; FIX: fractional values = honest no-split branch, removed by residue test); R063 DEAD 3× confirmed. Residual 64. Opus 2/4.
