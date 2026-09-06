@@ -21203,3 +21203,6 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 ## 2026-09-06 01:35Z LIVE STATE
 - Post-round: face-level Xu closed as an instrument (0/36); CQ-ELIM proper + multiplicity law; exact-contact calculus PROVISIONAL under Astra gate (924/1080 pruned; 6 family-B kills mod depth cap; R063 child I_M = 71/4 ⇒ descent-sensitive kill if the l-shift holds — xu-ell-shift-opus5 launched); K16 two-step certificate fails at t=6. 8 lanes running; disk 13 GB; next round wake 11:55Z armed.
+
+## 2026-09-06 01:40Z LIVE STATE
+- Exact-contact gate (Astra): 65→59 REJECTED (six kills survive the printed closure; Lemma A false); integrality test confirmed with fix; R009/R050 promotably pinned; R063 child kill OPEN pending the descent comparison (xu-ell-shift-opus5 + descent-partition-theorem-astra running). Residual = 65. Lanes (7): k16-t2-closing, t2t3, lambda-lowweight, nodal-diagonal, k7-cofactors-r2, xu-ell-shift, descent-partition, integrality-table. Disk 13 GB.
