@@ -1,0 +1,3900 @@
+{
+  "schema": "jc2.finite-pole-25-audit/v1",
+  "semantic_type": "NECESSARY_TOWER_CONFIGURATION_NOT_POLYNOMIAL_PAIR",
+  "type": "DATA",
+  "driver": "box/finite-pole-25-20260906/audit.py",
+  "uniform_removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+  "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+  "classification_all": "a",
+  "prop53_rule": "Moh Prop 5.3 p.180: every above-average p-factor is carried to the next prescribed disc. Replay: OwnVRouteTree witness zero_major_child / nonzero_major_children on every r>lo packet.",
+  "counts": {
+    "rows": 25,
+    "STANDS": 25,
+    "OPEN[PREMATURE-CLOSURE]": 0,
+    "OPEN[other]": 0,
+    "in_roster": 0
+  },
+  "rows": [
+    {
+      "id": "E0022",
+      "n": 108,
+      "m": 72,
+      "s": 4,
+      "M": [
+        -72,
+        84,
+        104,
+        106
+      ],
+      "d": [
+        108,
+        36,
+        12,
+        4,
+        2
+      ],
+      "V": [
+        8,
+        8,
+        3
+      ],
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 27,
+      "m_prime": 18,
+      "s_prime": 2,
+      "raw_M_sminus1": 26,
+      "np_minus_1": 26,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "8"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 13,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 9,
+        "Q": 3,
+        "lo": "3",
+        "selected_V": 8,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 13,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 9,
+          "Q": 3,
+          "A": 1,
+          "z": 8,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "3",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 8,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 24,
+          "Q": 16,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            8
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 8,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            8
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0053",
+      "n": 120,
+      "m": 80,
+      "s": 4,
+      "M": [
+        -80,
+        90,
+        115,
+        118
+      ],
+      "d": [
+        120,
+        40,
+        10,
+        5,
+        1
+      ],
+      "V": [
+        7,
+        7,
+        4
+      ],
+      "delta": {
+        "1": "3/8",
+        "2": "1/4",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 4,
+      "ds": 5,
+      "ell": 2,
+      "n_prime": 24,
+      "m_prime": 16,
+      "s_prime": 2,
+      "raw_M_sminus1": 23,
+      "np_minus_1": 23,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "7"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 4,
+        "source_p_exponent": 25,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 8,
+        "Q": 4,
+        "lo": "2",
+        "selected_V": 7,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 4,
+      "p_exponent": 25,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 8,
+          "Q": 4,
+          "A": 1,
+          "z": 7,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/4",
+          "P": 28,
+          "Q": 21,
+          "A": 4,
+          "z": 0,
+          "orbits": [
+            7
+          ],
+          "mode": "nonzero",
+          "lo": "4/3",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 7,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            7
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0097",
+      "n": 135,
+      "m": 90,
+      "s": 4,
+      "M": [
+        -90,
+        105,
+        130,
+        133
+      ],
+      "d": [
+        135,
+        45,
+        15,
+        5,
+        1
+      ],
+      "V": [
+        8,
+        8,
+        4
+      ],
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 4,
+      "ds": 5,
+      "ell": 2,
+      "n_prime": 27,
+      "m_prime": 18,
+      "s_prime": 2,
+      "raw_M_sminus1": 26,
+      "np_minus_1": 26,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "8"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 4,
+        "source_p_exponent": 13,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 12,
+        "Q": 4,
+        "lo": "3",
+        "selected_V": 8,
+        "selected_major": true,
+        "remaining_p_degree": 4,
+        "remaining_gt_lo": true
+      },
+      "q_degree": 4,
+      "p_exponent": 13,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 12,
+          "Q": 4,
+          "A": 1,
+          "z": 8,
+          "orbits": [
+            1,
+            1,
+            2
+          ],
+          "mode": "zero",
+          "lo": "3",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 8,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 2,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 24,
+          "Q": 16,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            8
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 8,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            8
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0120",
+      "n": 144,
+      "m": 96,
+      "s": 4,
+      "M": [
+        -96,
+        108,
+        138,
+        142
+      ],
+      "d": [
+        144,
+        48,
+        12,
+        6,
+        2
+      ],
+      "V": [
+        7,
+        7,
+        5
+      ],
+      "delta": {
+        "1": "3/8",
+        "2": "1/4",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 5,
+      "ds": 6,
+      "ell": 3,
+      "n_prime": 24,
+      "m_prime": 16,
+      "s_prime": 2,
+      "raw_M_sminus1": 23,
+      "np_minus_1": 23,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "7"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 5,
+        "source_p_exponent": 25,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 10,
+        "Q": 5,
+        "lo": "2",
+        "selected_V": 7,
+        "selected_major": true,
+        "remaining_p_degree": 3,
+        "remaining_gt_lo": true
+      },
+      "q_degree": 5,
+      "p_exponent": 25,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 10,
+          "Q": 5,
+          "A": 1,
+          "z": 7,
+          "orbits": [
+            1,
+            1,
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/4",
+          "P": 28,
+          "Q": 21,
+          "A": 4,
+          "z": 0,
+          "orbits": [
+            7
+          ],
+          "mode": "nonzero",
+          "lo": "4/3",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 7,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            7
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0127",
+      "n": 144,
+      "m": 96,
+      "s": 4,
+      "M": [
+        -96,
+        112,
+        140,
+        142
+      ],
+      "d": [
+        144,
+        48,
+        16,
+        4,
+        2
+      ],
+      "V": [
+        8,
+        11,
+        3
+      ],
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 36,
+      "m_prime": 24,
+      "s_prime": 2,
+      "raw_M_sminus1": 35,
+      "np_minus_1": 35,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "8"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 13,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 12,
+        "Q": 3,
+        "lo": "4",
+        "selected_V": 11,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 13,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 12,
+          "Q": 3,
+          "A": 1,
+          "z": 11,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "4",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 11,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 33,
+          "Q": 22,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            8,
+            1,
+            1,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 8,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            8
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0301",
+      "n": 160,
+      "m": 120,
+      "s": 4,
+      "M": [
+        -120,
+        130,
+        155,
+        158
+      ],
+      "d": [
+        160,
+        40,
+        10,
+        5,
+        1
+      ],
+      "V": [
+        3,
+        7,
+        4
+      ],
+      "delta": {
+        "1": "9/16",
+        "2": "1/4",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 4,
+      "ds": 5,
+      "ell": 2,
+      "n_prime": 32,
+      "m_prime": 24,
+      "s_prime": 2,
+      "raw_M_sminus1": 31,
+      "np_minus_1": 31,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "3"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 4,
+        "source_p_exponent": 89,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 8,
+        "Q": 4,
+        "lo": "2",
+        "selected_V": 7,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 4,
+      "p_exponent": 89,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 8,
+          "Q": 4,
+          "A": 1,
+          "z": 7,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/4",
+          "P": 28,
+          "Q": 21,
+          "A": 4,
+          "z": 0,
+          "orbits": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "4/3",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 3,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            3
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0344",
+      "n": 162,
+      "m": 108,
+      "s": 4,
+      "M": [
+        -108,
+        126,
+        156,
+        160
+      ],
+      "d": [
+        162,
+        54,
+        18,
+        6,
+        2
+      ],
+      "V": [
+        8,
+        8,
+        5
+      ],
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 5,
+      "ds": 6,
+      "ell": 3,
+      "n_prime": 27,
+      "m_prime": 18,
+      "s_prime": 2,
+      "raw_M_sminus1": 26,
+      "np_minus_1": 26,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "8"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 5,
+        "source_p_exponent": 13,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 15,
+        "Q": 5,
+        "lo": "3",
+        "selected_V": 8,
+        "selected_major": true,
+        "remaining_p_degree": 7,
+        "remaining_gt_lo": true
+      },
+      "q_degree": 5,
+      "p_exponent": 13,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 15,
+          "Q": 5,
+          "A": 1,
+          "z": 8,
+          "orbits": [
+            1,
+            1,
+            2,
+            3
+          ],
+          "mode": "zero",
+          "lo": "3",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 8,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 2,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 3,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 24,
+          "Q": 16,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            8
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 8,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            8
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0354",
+      "n": 168,
+      "m": 48,
+      "s": 4,
+      "M": [
+        -48,
+        152,
+        164,
+        166
+      ],
+      "d": [
+        168,
+        24,
+        8,
+        4,
+        2
+      ],
+      "V": [
+        4,
+        5,
+        3
+      ],
+      "delta": {
+        "1": "4/7",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 42,
+      "m_prime": 12,
+      "s_prime": 2,
+      "raw_M_sminus1": 41,
+      "np_minus_1": 41,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "4"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 49,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 6,
+        "Q": 3,
+        "lo": "2",
+        "selected_V": 5,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 49,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 6,
+          "Q": 3,
+          "A": 1,
+          "z": 5,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 5,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 15,
+          "Q": 10,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            4,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 4,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            4
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0355",
+      "n": 168,
+      "m": 72,
+      "s": 4,
+      "M": [
+        -72,
+        152,
+        164,
+        166
+      ],
+      "d": [
+        168,
+        24,
+        8,
+        4,
+        2
+      ],
+      "V": [
+        5,
+        5,
+        3
+      ],
+      "delta": {
+        "1": "11/21",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 42,
+      "m_prime": 18,
+      "s_prime": 2,
+      "raw_M_sminus1": 41,
+      "np_minus_1": 41,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "5"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 103,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 6,
+        "Q": 3,
+        "lo": "2",
+        "selected_V": 5,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 103,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 6,
+          "Q": 3,
+          "A": 1,
+          "z": 5,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 5,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 15,
+          "Q": 10,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            5
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 5,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            5
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0383",
+      "n": 168,
+      "m": 112,
+      "s": 4,
+      "M": [
+        -112,
+        126,
+        161,
+        166
+      ],
+      "d": [
+        168,
+        56,
+        14,
+        7,
+        1
+      ],
+      "V": [
+        7,
+        7,
+        6
+      ],
+      "delta": {
+        "1": "3/8",
+        "2": "1/4",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 6,
+      "ds": 7,
+      "ell": 4,
+      "n_prime": 24,
+      "m_prime": 16,
+      "s_prime": 2,
+      "raw_M_sminus1": 23,
+      "np_minus_1": 23,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "7"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 6,
+        "source_p_exponent": 25,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 12,
+        "Q": 6,
+        "lo": "2",
+        "selected_V": 7,
+        "selected_major": true,
+        "remaining_p_degree": 5,
+        "remaining_gt_lo": true
+      },
+      "q_degree": 6,
+      "p_exponent": 25,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 12,
+          "Q": 6,
+          "A": 1,
+          "z": 7,
+          "orbits": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/4",
+          "P": 28,
+          "Q": 21,
+          "A": 4,
+          "z": 0,
+          "orbits": [
+            7
+          ],
+          "mode": "nonzero",
+          "lo": "4/3",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 7,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            7
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0415",
+      "n": 180,
+      "m": 108,
+      "s": 4,
+      "M": [
+        -108,
+        156,
+        176,
+        178
+      ],
+      "d": [
+        180,
+        36,
+        12,
+        4,
+        2
+      ],
+      "V": [
+        7,
+        8,
+        3
+      ],
+      "delta": {
+        "1": "7/15",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 45,
+      "m_prime": 27,
+      "s_prime": 2,
+      "raw_M_sminus1": 44,
+      "np_minus_1": 44,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "7"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 67,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 9,
+        "Q": 3,
+        "lo": "3",
+        "selected_V": 8,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 67,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 9,
+          "Q": 3,
+          "A": 1,
+          "z": 8,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "3",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 8,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 24,
+          "Q": 16,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            7,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            7
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0452",
+      "n": 180,
+      "m": 120,
+      "s": 4,
+      "M": [
+        -120,
+        168,
+        176,
+        178
+      ],
+      "d": [
+        180,
+        60,
+        12,
+        4,
+        2
+      ],
+      "V": [
+        11,
+        9,
+        3
+      ],
+      "delta": {
+        "1": "7/12",
+        "2": "1/4",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 45,
+      "m_prime": 30,
+      "s_prime": 2,
+      "raw_M_sminus1": 44,
+      "np_minus_1": 44,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "11"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 29,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 9,
+        "Q": 3,
+        "lo": "3",
+        "selected_V": 9,
+        "selected_major": true,
+        "remaining_p_degree": 0,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 29,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 9,
+          "Q": 3,
+          "A": 1,
+          "z": 9,
+          "orbits": [],
+          "mode": "zero",
+          "lo": "3",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 9,
+              "major": true
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/4",
+          "P": 45,
+          "Q": 9,
+          "A": 4,
+          "z": 1,
+          "orbits": [
+            11
+          ],
+          "mode": "nonzero",
+          "lo": "5",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 11,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            11
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0467",
+      "n": 180,
+      "m": 120,
+      "s": 4,
+      "M": [
+        -120,
+        132,
+        174,
+        178
+      ],
+      "d": [
+        180,
+        60,
+        12,
+        6,
+        2
+      ],
+      "V": [
+        2,
+        9,
+        5
+      ],
+      "delta": {
+        "1": "2/3",
+        "2": "1/5",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 5,
+      "ds": 6,
+      "ell": 3,
+      "n_prime": 30,
+      "m_prime": 20,
+      "s_prime": 2,
+      "raw_M_sminus1": 29,
+      "np_minus_1": 29,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "2"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 5,
+        "source_p_exponent": 41,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 10,
+        "Q": 5,
+        "lo": "2",
+        "selected_V": 9,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 5,
+      "p_exponent": 41,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 10,
+          "Q": 5,
+          "A": 1,
+          "z": 9,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 9,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/5",
+          "P": 45,
+          "Q": 36,
+          "A": 5,
+          "z": 0,
+          "orbits": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "mode": "nonzero",
+          "lo": "5/4",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 2,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 2,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            2
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0468",
+      "n": 180,
+      "m": 120,
+      "s": 4,
+      "M": [
+        -120,
+        132,
+        174,
+        178
+      ],
+      "d": [
+        180,
+        60,
+        12,
+        6,
+        2
+      ],
+      "V": [
+        3,
+        9,
+        5
+      ],
+      "delta": {
+        "1": "1/2",
+        "2": "1/5",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 5,
+      "ds": 6,
+      "ell": 3,
+      "n_prime": 30,
+      "m_prime": 20,
+      "s_prime": 2,
+      "raw_M_sminus1": 29,
+      "np_minus_1": 29,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "3"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 5,
+        "source_p_exponent": 41,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 10,
+        "Q": 5,
+        "lo": "2",
+        "selected_V": 9,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 5,
+      "p_exponent": 41,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 10,
+          "Q": 5,
+          "A": 1,
+          "z": 9,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 9,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/5",
+          "P": 45,
+          "Q": 36,
+          "A": 5,
+          "z": 0,
+          "orbits": [
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "5/4",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 3,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            3
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0475",
+      "n": 180,
+      "m": 120,
+      "s": 4,
+      "M": [
+        -120,
+        135,
+        175,
+        178
+      ],
+      "d": [
+        180,
+        60,
+        15,
+        5,
+        1
+      ],
+      "V": [
+        7,
+        11,
+        4
+      ],
+      "delta": {
+        "1": "3/8",
+        "2": "1/4",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 4,
+      "ds": 5,
+      "ell": 2,
+      "n_prime": 36,
+      "m_prime": 24,
+      "s_prime": 2,
+      "raw_M_sminus1": 35,
+      "np_minus_1": 35,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "7"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 4,
+        "source_p_exponent": 25,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 12,
+        "Q": 4,
+        "lo": "3",
+        "selected_V": 11,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 4,
+      "p_exponent": 25,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 12,
+          "Q": 4,
+          "A": 1,
+          "z": 11,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "3",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 11,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/4",
+          "P": 44,
+          "Q": 33,
+          "A": 4,
+          "z": 0,
+          "orbits": [
+            7,
+            1,
+            1,
+            1,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "4/3",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            7
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0483",
+      "n": 180,
+      "m": 120,
+      "s": 4,
+      "M": [
+        -120,
+        140,
+        176,
+        178
+      ],
+      "d": [
+        180,
+        60,
+        20,
+        4,
+        2
+      ],
+      "V": [
+        8,
+        14,
+        3
+      ],
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 45,
+      "m_prime": 30,
+      "s_prime": 2,
+      "raw_M_sminus1": 44,
+      "np_minus_1": 44,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "8"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 13,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 15,
+        "Q": 3,
+        "lo": "5",
+        "selected_V": 14,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 13,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 15,
+          "Q": 3,
+          "A": 1,
+          "z": 14,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "5",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 14,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 42,
+          "Q": 28,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            8,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 8,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            8
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0489",
+      "n": 180,
+      "m": 120,
+      "s": 4,
+      "M": [
+        -120,
+        140,
+        175,
+        178
+      ],
+      "d": [
+        180,
+        60,
+        20,
+        5,
+        1
+      ],
+      "V": [
+        8,
+        11,
+        4
+      ],
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 4,
+      "ds": 5,
+      "ell": 2,
+      "n_prime": 36,
+      "m_prime": 24,
+      "s_prime": 2,
+      "raw_M_sminus1": 35,
+      "np_minus_1": 35,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "8"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 4,
+        "source_p_exponent": 13,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 16,
+        "Q": 4,
+        "lo": "4",
+        "selected_V": 11,
+        "selected_major": true,
+        "remaining_p_degree": 5,
+        "remaining_gt_lo": true
+      },
+      "q_degree": 4,
+      "p_exponent": 13,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 16,
+          "Q": 4,
+          "A": 1,
+          "z": 11,
+          "orbits": [
+            1,
+            1,
+            3
+          ],
+          "mode": "zero",
+          "lo": "4",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 11,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 3,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 33,
+          "Q": 22,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            8,
+            1,
+            1,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 8,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            8
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0608",
+      "n": 180,
+      "m": 120,
+      "s": 5,
+      "M": [
+        -120,
+        140,
+        170,
+        175,
+        178
+      ],
+      "d": [
+        180,
+        60,
+        20,
+        10,
+        5,
+        1
+      ],
+      "V": [
+        8,
+        8,
+        7,
+        4
+      ],
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "1/6",
+        "4": "0",
+        "5": "-1"
+      },
+      "us": 1,
+      "vs": 4,
+      "ds": 5,
+      "ell": 2,
+      "n_prime": 36,
+      "m_prime": 24,
+      "s_prime": 3,
+      "raw_M_sminus1": 35,
+      "np_minus_1": 35,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "8",
+          "3"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 4,
+        "source_p_exponent": 53,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 4,
+        "delta": "0",
+        "P": 8,
+        "Q": 4,
+        "lo": "2",
+        "selected_V": 7,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 4,
+      "p_exponent": 53,
+      "witness_nodes": [
+        {
+          "j": 4,
+          "delta": "0",
+          "P": 8,
+          "Q": 4,
+          "A": 1,
+          "z": 7,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 3,
+          "delta": "1/6",
+          "P": 14,
+          "Q": 7,
+          "A": 6,
+          "z": 8,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 8,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 24,
+          "Q": 16,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            8
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 8,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            8
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0724",
+      "n": 189,
+      "m": 126,
+      "s": 4,
+      "M": [
+        -126,
+        147,
+        182,
+        187
+      ],
+      "d": [
+        189,
+        63,
+        21,
+        7,
+        1
+      ],
+      "V": [
+        8,
+        8,
+        6
+      ],
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 6,
+      "ds": 7,
+      "ell": 4,
+      "n_prime": 27,
+      "m_prime": 18,
+      "s_prime": 2,
+      "raw_M_sminus1": 26,
+      "np_minus_1": 26,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "8"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 6,
+        "source_p_exponent": 13,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 18,
+        "Q": 6,
+        "lo": "3",
+        "selected_V": 8,
+        "selected_major": true,
+        "remaining_p_degree": 10,
+        "remaining_gt_lo": true
+      },
+      "q_degree": 6,
+      "p_exponent": 13,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 18,
+          "Q": 6,
+          "A": 1,
+          "z": 8,
+          "orbits": [
+            1,
+            1,
+            2,
+            3,
+            3
+          ],
+          "mode": "zero",
+          "lo": "3",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 8,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 2,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 3,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 3,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 24,
+          "Q": 16,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            8
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 8,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            8
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0771",
+      "n": 192,
+      "m": 144,
+      "s": 4,
+      "M": [
+        -144,
+        156,
+        186,
+        190
+      ],
+      "d": [
+        192,
+        48,
+        12,
+        6,
+        2
+      ],
+      "V": [
+        3,
+        7,
+        5
+      ],
+      "delta": {
+        "1": "9/16",
+        "2": "1/4",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 5,
+      "ds": 6,
+      "ell": 3,
+      "n_prime": 32,
+      "m_prime": 24,
+      "s_prime": 2,
+      "raw_M_sminus1": 31,
+      "np_minus_1": 31,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "3"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 5,
+        "source_p_exponent": 89,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 10,
+        "Q": 5,
+        "lo": "2",
+        "selected_V": 7,
+        "selected_major": true,
+        "remaining_p_degree": 3,
+        "remaining_gt_lo": true
+      },
+      "q_degree": 5,
+      "p_exponent": 89,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 10,
+          "Q": 5,
+          "A": 1,
+          "z": 7,
+          "orbits": [
+            1,
+            1,
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/4",
+          "P": 28,
+          "Q": 21,
+          "A": 4,
+          "z": 0,
+          "orbits": [
+            3,
+            1,
+            1,
+            1,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "4/3",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 3,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            3
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0773",
+      "n": 192,
+      "m": 144,
+      "s": 4,
+      "M": [
+        -144,
+        160,
+        188,
+        190
+      ],
+      "d": [
+        192,
+        48,
+        16,
+        4,
+        2
+      ],
+      "V": [
+        11,
+        11,
+        3
+      ],
+      "delta": {
+        "1": "5/12",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 48,
+      "m_prime": 36,
+      "s_prime": 2,
+      "raw_M_sminus1": 47,
+      "np_minus_1": 47,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "11"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 49,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 12,
+        "Q": 3,
+        "lo": "4",
+        "selected_V": 11,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 49,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 12,
+          "Q": 3,
+          "A": 1,
+          "z": 11,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "4",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 11,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 33,
+          "Q": 22,
+          "A": 3,
+          "z": 0,
+          "orbits": [
+            11
+          ],
+          "mode": "nonzero",
+          "lo": "3/2",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 11,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            11
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0939",
+      "n": 192,
+      "m": 128,
+      "s": 4,
+      "M": [
+        -128,
+        152,
+        188,
+        190
+      ],
+      "d": [
+        192,
+        64,
+        8,
+        4,
+        2
+      ],
+      "V": [
+        3,
+        5,
+        3
+      ],
+      "delta": {
+        "1": "11/16",
+        "2": "3/8",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 48,
+      "m_prime": 32,
+      "s_prime": 2,
+      "raw_M_sminus1": 47,
+      "np_minus_1": 47,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "3"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 99,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 6,
+        "Q": 3,
+        "lo": "2",
+        "selected_V": 5,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 99,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 6,
+          "Q": 3,
+          "A": 1,
+          "z": 5,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 5,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "3/8",
+          "P": 40,
+          "Q": 25,
+          "A": 8,
+          "z": 0,
+          "orbits": [
+            3,
+            1,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "8/5",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 3,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            3
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E0946",
+      "n": 192,
+      "m": 128,
+      "s": 4,
+      "M": [
+        -128,
+        144,
+        184,
+        190
+      ],
+      "d": [
+        192,
+        64,
+        16,
+        8,
+        2
+      ],
+      "V": [
+        7,
+        7,
+        7
+      ],
+      "delta": {
+        "1": "3/8",
+        "2": "1/4",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 7,
+      "ds": 8,
+      "ell": 5,
+      "n_prime": 24,
+      "m_prime": 16,
+      "s_prime": 2,
+      "raw_M_sminus1": 23,
+      "np_minus_1": 23,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "7"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 7,
+        "source_p_exponent": 25,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 14,
+        "Q": 7,
+        "lo": "2",
+        "selected_V": 7,
+        "selected_major": true,
+        "remaining_p_degree": 7,
+        "remaining_gt_lo": true
+      },
+      "q_degree": 7,
+      "p_exponent": 25,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 14,
+          "Q": 7,
+          "A": 1,
+          "z": 7,
+          "orbits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 2,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/4",
+          "P": 28,
+          "Q": 21,
+          "A": 4,
+          "z": 0,
+          "orbits": [
+            7
+          ],
+          "mode": "nonzero",
+          "lo": "4/3",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 7,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            7
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E1263",
+      "n": 200,
+      "m": 80,
+      "s": 4,
+      "M": [
+        -80,
+        184,
+        196,
+        198
+      ],
+      "d": [
+        200,
+        40,
+        8,
+        4,
+        2
+      ],
+      "V": [
+        8,
+        5,
+        3
+      ],
+      "delta": {
+        "1": "8/15",
+        "2": "1/3",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 3,
+      "ds": 4,
+      "ell": 1,
+      "n_prime": 50,
+      "m_prime": 20,
+      "s_prime": 2,
+      "raw_M_sminus1": 49,
+      "np_minus_1": 49,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "8"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 3,
+        "source_p_exponent": 83,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 6,
+        "Q": 3,
+        "lo": "2",
+        "selected_V": 5,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 3,
+      "p_exponent": 83,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 6,
+          "Q": 3,
+          "A": 1,
+          "z": 5,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 5,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/3",
+          "P": 25,
+          "Q": 10,
+          "A": 3,
+          "z": 1,
+          "orbits": [
+            8
+          ],
+          "mode": "nonzero",
+          "lo": "5/2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 8,
+              "major": true
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            8
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    },
+    {
+      "id": "E1279",
+      "n": 200,
+      "m": 160,
+      "s": 4,
+      "M": [
+        -160,
+        170,
+        195,
+        198
+      ],
+      "d": [
+        200,
+        40,
+        10,
+        5,
+        1
+      ],
+      "V": [
+        5,
+        7,
+        4
+      ],
+      "delta": {
+        "1": "7/16",
+        "2": "1/4",
+        "3": "0",
+        "4": "-1"
+      },
+      "us": 1,
+      "vs": 4,
+      "ds": 5,
+      "ell": 2,
+      "n_prime": 40,
+      "m_prime": 32,
+      "s_prime": 2,
+      "raw_M_sminus1": 39,
+      "np_minus_1": 39,
+      "dropped": true,
+      "route_state": "EMPTY_PROP6.3_FINITE_POLE",
+      "top_license": "NO_CHILD_PROP6.3_FINITE_POLE",
+      "outer_routes": 1,
+      "full_source_routes": 1,
+      "routes_after_obstruction": 0,
+      "rejected_first_support": [],
+      "outer_V": [
+        [
+          "5"
+        ]
+      ],
+      "V_vectors": [],
+      "first_nonzero": [
+        2
+      ],
+      "obstruction": {
+        "type": "DETERMINED",
+        "name": "PROP6.3_FINITE_POLE",
+        "source_q_degree": 4,
+        "source_p_exponent": 185,
+        "license": "Prop6.4; Prop4.6 p170; Prop6.3(1)(2)"
+      },
+      "sm1": {
+        "i": 3,
+        "delta": "0",
+        "P": 8,
+        "Q": 4,
+        "lo": "2",
+        "selected_V": 7,
+        "selected_major": true,
+        "remaining_p_degree": 1,
+        "remaining_gt_lo": false
+      },
+      "q_degree": 4,
+      "p_exponent": 185,
+      "witness_nodes": [
+        {
+          "j": 3,
+          "delta": "0",
+          "P": 8,
+          "Q": 4,
+          "A": 1,
+          "z": 7,
+          "orbits": [
+            1
+          ],
+          "mode": "zero",
+          "lo": "2",
+          "packets": [
+            {
+              "kind": "zero",
+              "r": 7,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": true,
+          "nonzero_major_children": []
+        },
+        {
+          "j": 2,
+          "delta": "1/4",
+          "P": 28,
+          "Q": 21,
+          "A": 4,
+          "z": 0,
+          "orbits": [
+            5,
+            1,
+            1
+          ],
+          "mode": "nonzero",
+          "lo": "4/3",
+          "packets": [
+            {
+              "kind": "nonzero",
+              "r": 5,
+              "major": true
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            },
+            {
+              "kind": "nonzero",
+              "r": 1,
+              "major": false
+            }
+          ],
+          "zero_major_child": false,
+          "nonzero_major_children": [
+            5
+          ]
+        }
+      ],
+      "sm1_unselected_majors_in_witness": [],
+      "prop53_every_above_average_packet_carried": true,
+      "prop53_notes": [],
+      "in_roster": false,
+      "roster_field": "actual_rows.roster=null; absent from roster.jsonl",
+      "removal_clause": "descend_own.py:142-144 dropped=(raw_M[s-1]==n'-1); 196-209 PROP6.3_FINITE_POLE obstruction wipes choices; 262-265 route_state=EMPTY_PROP6.3_FINITE_POLE; 256-258 top_license=NO_CHILD_PROP6.3_FINITE_POLE; build_roster.py:195 live iff V_vectors nonempty; chart_counts.py:1492 route_state==NONEMPTY; roster.jsonl provenance.own_route_state",
+      "printed_line": "Moh Prop 4.6 p.170: T_{s-1,initial}=p^A q, q squarefree of degree V_s*(n-M_{s-1})/d_s; Prop 6.3(1)(2) p.197: T_{s-1}(sigma) monic in pi over k[gamma]; Prop 6.4 p.198-199 licenses u_s=1. Code comment descend_own.py:196-201.",
+      "classification": "a",
+      "classification_label": "(a) own-V' contradiction at the child: Prop 6.3(1)(2) monicity of T_{s-1}(sigma) in k[gamma][pi]",
+      "verdict": "STANDS"
+    }
+  ]
+}
