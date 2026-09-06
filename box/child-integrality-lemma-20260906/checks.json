@@ -1,0 +1,613 @@
+{
+  "schema": "jc2.child-integrality-lemma/v1",
+  "lemma": {
+    "name": "CHILD-INTEGRALITY",
+    "status": "PROVED_CONDITIONAL",
+    "hypotheses": [
+      "reduced parent Keller data",
+      "licensed descent",
+      "finite correlated own-data cover",
+      "complete final-major signature cover with printed local hypotheses"
+    ],
+    "conclusion": "all complete sums nonintegral, or certified empty cover, implies no realizing polynomial pair",
+    "r063": "DEAD",
+    "six_other_rows": "OPEN[TRANSPORT-EXHAUSTION]",
+    "transport": "I'_M = u_s I_M on actual mapped major roots"
+  },
+  "scope": "exact finite numerical outer screen; report supplies geometric hypotheses",
+  "frozen_pure_functions": [
+    "characteristic_mu",
+    "def51_radii",
+    "exact_int",
+    "inverse_top",
+    "prefix_gcds"
+  ],
+  "R063_source": {
+    "M": {
+      "1": -112,
+      "2": 140,
+      "3": 160,
+      "4": 166
+    },
+    "d": {
+      "1": 168,
+      "2": 56,
+      "3": 28,
+      "4": 4,
+      "5": 2
+    },
+    "V": {
+      "2": 3,
+      "3": 21,
+      "4": 3,
+      "5": 2
+    },
+    "delta": {
+      "1": "3/4",
+      "2": "3/10",
+      "3": "1/5",
+      "4": "-1"
+    },
+    "route_steps": [
+      {
+        "i": 3,
+        "P": 21,
+        "zero_ok": true,
+        "nonzero_ok": false
+      },
+      {
+        "i": 2,
+        "P": 42,
+        "zero_ok": false,
+        "nonzero_ok": true
+      }
+    ],
+    "outer_V_vectors": [
+      [
+        "3",
+        "7"
+      ]
+    ],
+    "inverse_top": {
+      "source_p_degree": 42,
+      "source_radius": "3/10",
+      "child_growth": "1/3",
+      "source_roots_per_coefficient": "2",
+      "inverse_groups": [
+        {
+          "kind": "zero",
+          "V": "5",
+          "roots": "10"
+        },
+        {
+          "kind": "nonzero",
+          "orbit": 0,
+          "coefficient": 0,
+          "V": "3",
+          "roots": "6"
+        },
+        {
+          "kind": "nonzero",
+          "orbit": 0,
+          "coefficient": 1,
+          "V": "3",
+          "roots": "6"
+        },
+        {
+          "kind": "nonzero",
+          "orbit": 0,
+          "coefficient": 2,
+          "V": "3",
+          "roots": "6"
+        }
+      ]
+    }
+  },
+  "controls": {
+    "R063": {
+      "ungated": {
+        "n": 42,
+        "m": 28,
+        "H": 2,
+        "M": {
+          "1": -28,
+          "2": 35,
+          "3": 40
+        },
+        "d": {
+          "1": 42,
+          "2": 14,
+          "3": 7,
+          "4": 1
+        },
+        "V": [
+          3,
+          7
+        ],
+        "radii": {
+          "1": "7/6",
+          "2": "-1/3",
+          "3": "-2"
+        },
+        "signature_count": 1,
+        "sums": [
+          "71/4"
+        ],
+        "signatures": [
+          [
+            [
+              "major",
+              10,
+              "13/24",
+              15,
+              1
+            ],
+            [
+              "major",
+              6,
+              "7/6",
+              9,
+              3
+            ],
+            [
+              "major",
+              6,
+              "7/6",
+              9,
+              3
+            ],
+            [
+              "major",
+              6,
+              "7/6",
+              9,
+              3
+            ]
+          ]
+        ],
+        "final_galois": false
+      },
+      "galois_filtered": {
+        "n": 42,
+        "m": 28,
+        "H": 2,
+        "M": {
+          "1": -28,
+          "2": 35,
+          "3": 40
+        },
+        "d": {
+          "1": 42,
+          "2": 14,
+          "3": 7,
+          "4": 1
+        },
+        "V": [
+          3,
+          7
+        ],
+        "radii": {
+          "1": "7/6",
+          "2": "-1/3",
+          "3": "-2"
+        },
+        "signature_count": 0,
+        "sums": [],
+        "signatures": [],
+        "final_galois": true
+      },
+      "integrality_screen": "DEAD"
+    },
+    "R009": {
+      "ungated": {
+        "n": 48,
+        "m": 32,
+        "H": 2,
+        "M": {
+          "1": -32,
+          "2": 37
+        },
+        "d": {
+          "1": 48,
+          "2": 16,
+          "3": 1
+        },
+        "V": [
+          2
+        ],
+        "radii": {
+          "1": "4/3",
+          "2": "-1/5"
+        },
+        "signature_count": 2,
+        "sums": [
+          "8",
+          "592/29"
+        ],
+        "signatures": [
+          [
+            [
+              "major",
+              12,
+              "8/29",
+              18,
+              1
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ]
+          ],
+          [
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              1
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ]
+          ]
+        ],
+        "final_galois": false
+      },
+      "galois_filtered": {
+        "n": 48,
+        "m": 32,
+        "H": 2,
+        "M": {
+          "1": -32,
+          "2": 37
+        },
+        "d": {
+          "1": 48,
+          "2": 16,
+          "3": 1
+        },
+        "V": [
+          2
+        ],
+        "radii": {
+          "1": "4/3",
+          "2": "-1/5"
+        },
+        "signature_count": 1,
+        "sums": [
+          "8"
+        ],
+        "signatures": [
+          [
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "major",
+              4,
+              "4/3",
+              6,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              1
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ],
+            [
+              "minor-sink",
+              2,
+              "3",
+              3,
+              5
+            ]
+          ]
+        ],
+        "final_galois": true
+      },
+      "integrality_screen": "SURVIVES"
+    },
+    "R050": {
+      "ungated": {
+        "n": 49,
+        "m": 14,
+        "H": 2,
+        "M": {
+          "1": -14,
+          "2": 46
+        },
+        "d": {
+          "1": 49,
+          "2": 7,
+          "3": 1
+        },
+        "V": [
+          4
+        ],
+        "radii": {
+          "1": "5/7",
+          "2": "-1"
+        },
+        "signature_count": 2,
+        "sums": [
+          "8",
+          "146/13"
+        ],
+        "signatures": [
+          [
+            [
+              "major",
+              6,
+              "17/13",
+              21,
+              1
+            ],
+            [
+              "major",
+              8,
+              "5/7",
+              28,
+              1
+            ]
+          ],
+          [
+            [
+              "major",
+              8,
+              "5/7",
+              28,
+              1
+            ],
+            [
+              "minor-sink",
+              2,
+              "6",
+              7,
+              1
+            ],
+            [
+              "minor-sink",
+              4,
+              "5/2",
+              14,
+              1
+            ]
+          ]
+        ],
+        "final_galois": false
+      },
+      "galois_filtered": {
+        "n": 49,
+        "m": 14,
+        "H": 2,
+        "M": {
+          "1": -14,
+          "2": 46
+        },
+        "d": {
+          "1": 49,
+          "2": 7,
+          "3": 1
+        },
+        "V": [
+          4
+        ],
+        "radii": {
+          "1": "5/7",
+          "2": "-1"
+        },
+        "signature_count": 1,
+        "sums": [
+          "8"
+        ],
+        "signatures": [
+          [
+            [
+              "major",
+              8,
+              "5/7",
+              28,
+              1
+            ],
+            [
+              "minor-sink",
+              2,
+              "6",
+              7,
+              1
+            ],
+            [
+              "minor-sink",
+              4,
+              "5/2",
+              14,
+              1
+            ]
+          ]
+        ],
+        "final_galois": true
+      },
+      "integrality_screen": "SURVIVES"
+    }
+  },
+  "logical_controls": "passed: finite union, missing cover, empty certified cover, total-sum-only, side-bound cancellation",
+  "six_rows": {
+    "R025": {
+      "output": "SET-VALUED",
+      "reason": "OPEN[TRANSPORT-EXHAUSTION]"
+    },
+    "R026": {
+      "output": "SET-VALUED",
+      "reason": "OPEN[TRANSPORT-EXHAUSTION]"
+    },
+    "R027": {
+      "output": "SET-VALUED",
+      "reason": "OPEN[TRANSPORT-EXHAUSTION]"
+    },
+    "R028": {
+      "output": "SET-VALUED",
+      "reason": "OPEN[TRANSPORT-EXHAUSTION]"
+    },
+    "R057": {
+      "output": "SET-VALUED",
+      "reason": "OPEN[TRANSPORT-EXHAUSTION]"
+    },
+    "R058": {
+      "output": "SET-VALUED",
+      "reason": "OPEN[TRANSPORT-EXHAUSTION]"
+    }
+  }
+}
