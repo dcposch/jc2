@@ -1,0 +1,37 @@
+ring big=(0,d),(x,l2,l3,l4,b,B,eta),dp;
+minpoly=3*d^2-5;
+proc cx(poly ff,int jj) { return(subst(ff/(x^jj),x,0)); }
+proc uf(poly PP,poly LL,poly BB,poly ee) {return(2*x*PP*diff(PP,x)-3*PP^2+(3/2*LL*(LL+b)-BB*x)*PP-3/16*LL^2*(LL*(LL+2*b)-4*BB*x)+ee*x^2*(b*LL/2+BB*x));}
+int m=5; poly L=-b+l2*x^2+l3*x^3+l4*x^4+x^5; number p=1/(4*(2*d+1));
+poly P=p*x^(2*m); poly f; poly v; number Aj; int j;
+for(j=2*m-1;j>=2;j--) {
+ Aj=2*(2*m+j-3)*p+3/2;
+ if(Aj==0){ERROR("ZERO_HIGH_PIVOT");}
+ f=uf(P,L,0,0); v=-cx(f,2*m+j)/Aj; P=P+v*x^j;
+}
+poly etam=cx(P,2); P=P-B*x-(1/4)*b^2;
+f=uf(P,L,B,etam); poly brow=cx(f,2*m+1);
+number bp=-((4*m-3)*p+3/4);
+poly bcheck=subst(brow,B,1)-subst(brow,B,0)-bp;
+if(bcheck!=0){ERROR("BAD_B_PIVOT");}
+poly Bm=-subst(brow,B,0)/bp; P=subst(P,B,Bm);
+f=uf(P,L,Bm,etam);
+int check=1;
+for(j=0;j<=3;j++){if(cx(f,j)!=0){check=0;}}
+for(j=2*m+1;j<=4*m;j++){if(cx(f,j)!=0){check=0;}}
+print("ALL_UNUSED_ROWS_ZERO="+string(check));
+if(check==0){quit;}
+ideal K;
+for(j=4;j<=2*m;j++){K=K,cx(f,j);}
+K=simplify(K,2);
+print("ROW_COUNT="+string(size(K)));
+ring small=(0,d),(l2,l3,l4,b),wp(3,2,1,5);
+minpoly=3*d^2-5;
+ideal K=imap(big,K); poly em=imap(big,etam); poly bm=imap(big,Bm);
+option(redSB);
+print("STD_START");
+ideal G=std(K);
+print("STD_DONE");print("BASIS_SIZE="+string(size(G)));print("DIM="+string(dim(G)));
+int e;for(e=1;e<=20;e++){if(reduce(b^e,G)==0){print("B_POWER="+string(e));break;}}
+for(e=1;e<=12;e++){if(reduce((bm*em)^e,G)==0){print("BETA_POWER="+string(e));break;}}
+print("ETA_ZERO="+string(reduce(em,G)==0));quit;
