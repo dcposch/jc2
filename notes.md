@@ -21251,3 +21251,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - 07:42Z HEARTBEAT: 3 active lanes (compressor on own .156; k7 r3b on .77; harvest on .55) all monitored (→08:3x/08:4x). Both (99,66) δ=2 solves on .55 have ENDED (runner.rc present); harvest lane copying results. ORPHANS unchanged (.7, .28, .18, .163; NOT terminated; for DC). Disk 12G.
 - 07:55Z 17(kkkkkkkkkkk) (99,66) δ=2 subset: both engines TIMEOUT at 9,000 s (msolve F4 round ~11, progressing); worker .55 terminated. → t2t3-longsolve-sol56 launched (own 512 GB worker, 20 h caps, decoupled; harvest due ~+20 h). Sol 3/4.
 - 08:17Z 17(lllllllllll) K=7 strata 9/10 certified (b10 unconditional; b9 needs b9 q0 — long-solve candidate). Sol 2/4.
+- 08:18Z launched k7-b9q0-longsolve-sol56 (decoupled 20 h exact-Q on b9 q0; own 256 GB worker). Sol 3/4.
