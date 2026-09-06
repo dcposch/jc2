@@ -21218,3 +21218,6 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 ## 2026-09-06 02:42Z LIVE STATE (heartbeat)
 - 8 lanes: Astra 4/3 (OVER budget by one — lambda-lowweight, child-integrality-lemma, child-integrality-prefixes, k16-utac; no new Astra launches until one seals) | Sol 3/4 (k7-cofactors-r2, six-rows-child-sum, t2t3-direct on a 512 GB worker) | Opus 1/4 (orbit-transport-gate) | Grok 0/8. Residual 64. K16: my Q3 conjecture refuted; U-TAC target chart-free. Disk 13 GB. Round wake 11:55Z.
+
+## 2026-09-06 02:52Z LIVE STATE
+- Orbit transport PROMOTED-WITH-FIX (product invariant; actual centre orbit); "child integrality not new" REFUTED — R063 kill stands; residual 64. Prefix rows (family C): 20 survive child integrality. Coarse-stabilizer census convention flagged (actual-stabilizer-census-grok46 replaying). K16: U-TAC chart-free target (k16-utac-astra). Running: k16-utac, lambda-lowweight, child-integrality-lemma [Astra 3/3] | six-rows-child-sum, t2t3-direct (512 GB worker), k7-cofactors-r2, descent-invariance-gate [Sol 4/4] | actual-stabilizer-census [Grok 1/8] | Opus 0/4.
