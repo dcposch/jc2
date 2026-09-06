@@ -21197,3 +21197,6 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 
 ## 2026-09-06 01:07Z LIVE STATE — second disk incident
 - 01:05Z: root filled again (a cofactor lane wrote ~1 GB of trial scratch to /tmp); xu71-offset-one and k7-cofactors died; 7 lanes survived. Cleanup + in-place gzip of large regenerable CAS text (184 files; originals hashed in box/_compressed-manifests/) running. Both dead lanes relaunched as r2 with scratch on the worker. DC: resize still needed.
+
+## 2026-09-06 01:22Z LIVE STATE — disk recovered
+- In-place gzip of 184 large regenerable CAS text files complete (originals hashed in box/_compressed-manifests/compress-20260906T0110Z.sha256); root at 13 GB free. 8 lanes running: k16-t2-closing, t2t3-chain, lambda-lowweight, nodal-diagonal, k7-cofactors-r2, xu71-offset-one-r2, exact-contact-gate, im-descent-replay. PROVISIONAL headline under gate: exact-contact integrality test (924/1080 configurations pruned; six family-B rows dead mod depth cap ⇒ 65→59).
