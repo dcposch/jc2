@@ -1,0 +1,228 @@
+{
+  "schema": "k7-cofactors-r2-custody-v1",
+  "lane": "k7-cofactors-sol56-r2-20260906",
+  "receipt": {
+    "path": "xmodel/k7-cofactors-sol56-r2-20260906.run.v2",
+    "sha256": "f39ede5ca66adcfcab4fed5a46d6fc4f57c5886de39682831a1884f965321395",
+    "start_utc": "2026-09-06T01:07:40Z",
+    "basis": "2193fcad3f78e1dc2af93c80c7c140b9160f7822"
+  },
+  "frozen_input_verification": {
+    "method": "awk built manifest mechanically from numbered receipt basename/sha256 fields; sha256sum -c",
+    "manifest_bytes": 591,
+    "manifest_sha256": "e21ae2d43532611bbef39c4b6638e074992c29168bd2f544397e80510a7579c0",
+    "check_stdout_sha256": "82c737f8b6432f9d96b952809288a77a3302d4ade27392cc193f358da390dd2c",
+    "all_ok": true,
+    "inputs": [
+      {"basename":"k7-strata-gate-sol56-20260905.md","sha256":"78edece02efa7223d9130aa334416339f69c10de6d3cf4c6b7873581b791e1f8"},
+      {"basename":"k8-b11-q1-sol56-20260905.md","sha256":"c16199138f4e93d3babdde1372e0000fb02ef831e1dd2b9e143d486bb0a6b6ac"},
+      {"basename":"k4ray-strata-solve-opus5-20260905.md","sha256":"2af3e012dd4157669308f3855a22582967e2fffdc25cad3bf825b1050f25be4c"},
+      {"basename":"fleet.sh","sha256":"a9da94d341a691942e9d6a6a6d90d97008b2d7baa1cadb2592481cf6b9c11c4c"},
+      {"basename":"FALLACY-v2.md","sha256":"e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5"}
+    ]
+  },
+  "worker": {
+    "instance_id": "i-08c88c3e0b82fad5e",
+    "owner": "k7-cofactors-sol56-20260906",
+    "private_ip": "172.30.0.108",
+    "type": "r7i.8xlarge",
+    "launch_utc": "2026-09-06T00:36:53Z",
+    "root": "/home/ubuntu/k7-cofactors-20260906",
+    "tmpdir": "/home/ubuntu/k7-cofactors-20260906/tmp",
+    "pretermination_process_audit": {
+      "utc":"2026-09-06T04:15:47Z","singular_msolve_count":0,"workdir_process_count":0,
+      "sha256":"134b662dcdef03e9c6d3ade5be66f9158489170b179bb2ca6c00f2a63b92fd52"
+    },
+    "termination": {
+      "command":"bash ops/fleet/fleet.sh term i-08c88c3e0b82fad5e",
+      "initial_state":"shutting-down",
+      "confirmed_state":"terminated",
+      "confirmed_utc":"2026-09-06T04:18:18Z",
+      "owner_rechecked":"k7-cofactors-sol56-20260906",
+      "private_ip_after_termination":null
+    }
+  },
+  "engine": {
+    "name": "Singular",
+    "version": "4.3.2",
+    "binary_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+    "coefficient_field": "Q",
+    "identity_order": "authoritative wp; localized temporary coefficient fields cleared back to full wp ring",
+    "basis_fallback_order": "dp",
+    "basis_fallback_options": ["redSB", "slimgb"],
+    "command_templates": {
+      "identity_or_verify": "TMPDIR=/home/ubuntu/k7-cofactors-20260906/tmp /usr/bin/time -v Singular --no-rc -q SCRIPT",
+      "basis": "TMPDIR=/home/ubuntu/k7-cofactors-20260906/tmp /usr/bin/time -v timeout --signal=TERM --kill-after=30s 2400s /usr/bin/Singular SCRIPT"
+    }
+  },
+  "verdict": {
+    "q_certified": 7,
+    "total": 10,
+    "signal_only": ["K7_B9_Q0", "K7_B9_Q1", "K7_B10_Q1"],
+    "promotion": "PARTIAL: b11,b12,b13 closures Q-certified; b9,b10 not closed at theorem tier"
+  },
+  "charts": [
+    {
+      "chart":"K7_B9_Q0","variables":72,"generators":241,"bytes":12675213,
+      "source_sha256":"15b4b715767a72e152f340dda11354af380897f6670d6370f0542841cdb4c275",
+      "status":"SIGNAL_ONLY","certificate":{
+        "type":"none","exact_basis_attempts":[
+          {"order":"reverse","command":"timeout --signal=TERM --kill-after=15s 1200s nice -n 4 Singular --no-rc -q subset-jobs/K7_B9_Q0_full241_reverse_fullQ_dp_slimgb_redSB.sing","script_sha256":"4238a22343343a5a3ea852da5136f82a6f8f72743866fe8dce5ef97ff66329f8","log_sha256":"ef8c46e8e94fa576c5dce9022ccb8e0fae516dfa0ae19e1735d67d850fe993bf","wall_seconds":988.97,"max_rss_kib":1044096,"rc":1,"basis_delimiters":false},
+          {"order":"original","command":"timeout --signal=TERM --kill-after=15s 1000s nice -n 4 Singular --no-rc -q subset-jobs/K7_B9_Q0_full241_original_fullQ_dp_slimgb_redSB.sing","script_sha256":"d15cf599c3b54ebcc9ea2ca16389f38443a455766c7f7fee91dea99467bcef91","log_sha256":"8baef7927543e451b12d0cfb81208653ad467a7eb162e67c9523acd91cb09319","wall_seconds":841.42,"max_rss_kib":1030112,"rc":1,"basis_delimiters":false}
+        ],"msolve_unit_is_signal_only":true
+      }
+    },
+    {
+      "chart":"K7_B9_Q1","variables":71,"generators":235,"bytes":11511528,
+      "source_sha256":"09002c7229da517ca0d809f925873aeb94d44650467bd6addf71268aacbb7934",
+      "status":"SIGNAL_ONLY","certificate":{
+        "type":"none","guide_core_size":124,
+        "exact_basis_attempts":[
+          {"order":"core_original","command":"timeout --signal=TERM --kill-after=15s 1200s nice -n 4 Singular --no-rc -q subset-jobs/K7_B9_Q1_core124_fullQ_dp_slimgb_redSB.sing","script_sha256":"47bcf3afe5310baa4e4b2454b54bc9072a55f9d03d4f44f64b30dbb39ff48d54","log_sha256":"9f3889afd3a8b8dd2c09e431f7b1081987fd1323d85264131c6cd0accbed1fdf","wall_seconds":989.00,"max_rss_kib":1550280,"rc":1,"basis_delimiters":false},
+          {"order":"core_reverse","command":"timeout --signal=TERM --kill-after=15s 700s nice -n 4 Singular --no-rc -q subset-jobs/K7_B9_Q1_core124_reverse_fullQ_dp_slimgb_redSB.sing","script_sha256":"ded72faeab6dea62d7b92047b34a61d544f97f910fdabcfe76070c10a1148459","log_sha256":"51db3c4bf2ff0530de4fb3cf860896e2a1f1164e2ac480148dd66749d7160b9d","wall_seconds":517.74,"max_rss_kib":1290000,"rc":1,"basis_delimiters":false}
+        ],"msolve_unit_is_signal_only":true
+      }
+    },
+    {
+      "chart":"K7_B10_Q0","variables":79,"generators":261,"bytes":19173893,
+      "source_sha256":"273a1a0f65308af6019c3b8986fa921c76d4e27da30d0b675afc532bc3f3d434",
+      "status":"Q_CERTIFIED","certificate":{
+        "type":"exact_Q_reduced_basis_one","order":"dp","algorithm":"slimgb","redSB":true,
+        "command":"TMPDIR=/home/ubuntu/k7-cofactors-20260906/tmp /usr/bin/time -v timeout --signal=TERM --kill-after=30s 2400s /usr/bin/Singular subset-jobs/K7_B10_Q0_core21_dp_slimgb.sing",
+        "indices_1based":[27,28,29,30,35,36,37,38,39,40,41,47,48,49,50,59,68,69,80,260,261],
+        "script_sha256":"b729ddd61067c3c46e6392e48741858ccde7e0f5a4362c8aa854672060f13e4b",
+        "full_log_sha256":"e4bf35f32dd9a55f06e1d4cfb0257cc8e3a24c797fb329c6320fac70f53762c3",
+        "timing_stderr_sha256":"a5adc7cab868765f1c5017407d1dc4e835f3374c4061d4ff32118febdc77432a",
+        "meta_sha256":"40cf3d90e984315537c80d6241bb6274e9c3cf3a0daee66d3880b1a93dccda34",
+        "wall_seconds":61.04,"max_rss_kib":151996,"rc":0,"basis_body":"1",
+        "classifier_script_sha256":"dd6425495ee824a9a12dbfa7f9dbec62e01a93e8950661ca84e488938f9ad8ec",
+        "classifier_output_sha256":"01a5f67d7da3a404d06265f38a967206f5a06168d638cca5ef907fd78a4c6255","classifier_pass":true
+      }
+    },
+    {
+      "chart":"K7_B10_Q1","variables":78,"generators":255,"bytes":17715692,
+      "source_sha256":"a49433e9834c4fa7a76a89aef50e7f3852ee0e26ff1d665bc1c8516dc390f97d",
+      "status":"SIGNAL_ONLY","certificate":{
+        "type":"none","guide_core_size":48,
+        "guide_core_indices_1based":[21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,54,55,56,57,62,63,64,65,66,75,76,77,78,79,85,86,87,88,254,255],
+        "guide_subset_sha256":"18f0a1c5c5ab137559dce85f57196d95cbb7703ef813995e93368a989ce3b309",
+        "exact_basis_attempt":{
+          "order":"dp","algorithm":"slimgb","redSB":true,
+          "command":"TMPDIR=/home/ubuntu/k7-cofactors-20260906/tmp /usr/bin/time -v timeout --signal=TERM --kill-after=30s 2400s /usr/bin/Singular subset-jobs/K7_B10_Q1_core48_dp_slimgb.sing",
+          "script_sha256":"ba98a308216032f7990075cf5997551535087680c0fe36a7bad0394c4c22e5f5",
+          "partial_log_sha256":"5fd6eccddf78ed00134e2ae2574115e55226a28beaf2cfc91cb0c5eef14fa6fe",
+          "timing_stderr_sha256":"9cc7f4141101b4445ae213c0f06542b7a94eb8474a0159b774b00cb4ad76fbab",
+          "meta_sha256":"2a77ef65e7513fc1c4b7459d7440ce27acfdf91d27c27c13001a5ad6455870fd",
+          "start_utc":"2026-09-06T03:52:49Z","end_utc":"2026-09-06T04:15:00Z",
+          "wall_seconds":1331.51,"max_rss_kib":1459612,"rc":1,"basis_delimiters":false,"unit_marker":false
+        },
+        "terminal_manifest_sha256":"c81465d402e3d334395b2d90a170e56d30e2b1206505764121c475a76b2c4c91",
+        "msolve_unit_is_signal_only":true
+      }
+    },
+    {
+      "chart":"K7_B11_Q0","variables":86,"generators":281,"bytes":27133266,
+      "source_sha256":"e8e57139c2292f0535226e7fb8fc2fac90b459685e939b825abec31531b2367e",
+      "status":"Q_CERTIFIED","certificate":{
+        "type":"exact_Q_rational_cofactor_identity","indices_1based":[13,14,20,21,22,23,28,30,31,49,281],
+        "commands":["Singular --no-rc -q /home/ubuntu/k7-cofactors-20260906/localized-jobs/K7_B11_Q0_revmin15_tri8_tracked2_liftstd.sing","Singular --no-rc -q /home/ubuntu/k7-cofactors-20260906/localized-identities/K7_B11_Q0_construct_localizer.sing","Singular --no-rc -q /home/ubuntu/k7-cofactors-20260906/localized-identities/K7_B11_Q0_verify_full.sing"],
+        "identity_bytes":6880557,"identity_sha256":"514b2a21ab779520cb40efe0a4ba7906bd633dc36b655f79d56b4f027063be66",
+        "tracked_lift_script_sha256":"24d04eafddd8590304fda169870e7deab719ce4faa64404275c13a455d8364bb",
+        "tracked_lift_log_sha256":"711a5e5bb44d0f8b158948cbd17dc485bbc65cf939a746e6350962e30ec2ab65",
+        "tracked_lift_wall_seconds":1.67,"tracked_lift_max_rss_kib":149660,
+        "clear_script_sha256":"fb9252f474b2ece9a2ddf502e29e888b66f1e718e849c2314f6f03158e199fd3",
+        "clear_log_sha256":"37899b223c876bceba6fdca19ffc909cb06203ef9aa45f35aab38496d847e182",
+        "clear_wall_seconds":1.90,"clear_max_rss_kib":171656,"divisible":true,
+        "independent_full_ring_verifier_script_sha256":"a2ad23dfe39c3c6506dea03ba20d7ab86d07bfe640c8fe1bc73bcde80d82b561",
+        "independent_full_ring_verifier_log_sha256":"ab4e30e3634cbdd0b9b705b384f2e09416d11459c7192447fd2d1dd8a12a6b24",
+        "verify_wall_seconds":7.58,"verify_max_rss_kib":454232,"direct_product_one":true,"check_value":true
+      }
+    },
+    {
+      "chart":"K7_B11_Q1","variables":85,"generators":275,"bytes":25367692,
+      "source_sha256":"42f96a5f916e94457887e933cb8cb3f8656537e1547e719e30851075990fd4f1",
+      "status":"Q_CERTIFIED","certificate":{
+        "type":"exact_Q_reduced_basis_one","order":"dp","algorithm":"slimgb","redSB":true,
+        "command":"TMPDIR=/home/ubuntu/k7-cofactors-20260906/tmp /usr/bin/time -v timeout --signal=TERM --kill-after=30s 2400s /usr/bin/Singular subset-jobs/K7_B11_Q1_revmin23_dp_slimgb.sing",
+        "indices_1based":[13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,34,35,46,47,56,274,275],
+        "script_sha256":"028a2c3a5eefc89757ecf1b045a9b65fe80de1e995bb90f397484aa55c6482be",
+        "full_log_sha256":"d3bac1db42272023316be29f506eeaab7fbebec453e34de368dbedf9cdb7b314",
+        "timing_stderr_sha256":"712ea0cc14748e2a46d4095669c55028deccbbd70c836a2f2d83b0b324a3c811",
+        "meta_sha256":"4a5e5f468f9b34edf05e7e4f1e4d0a15867419a3d757164e77749f5de5f96519",
+        "start_utc":"2026-09-06T03:48:59Z","end_utc":"2026-09-06T03:50:18Z",
+        "wall_seconds":78.83,"max_rss_kib":256612,"rc":0,"basis_body":"1",
+        "classifier_script_sha256":"dd6425495ee824a9a12dbfa7f9dbec62e01a93e8950661ca84e488938f9ad8ec",
+        "classifier_output_sha256":"270308eb290271794a4214c2dde534c5491d4d0047a0b5f13d340f0991f93a6e","classifier_pass":true
+      }
+    },
+    {
+      "chart":"K7_B12_Q0","variables":93,"generators":301,"bytes":36605124,
+      "source_sha256":"3a3821db1511fa96096f627d5d5ed23b1b60a2c95022f33dfb90791a4c60561d",
+      "status":"Q_CERTIFIED","certificate":{
+        "type":"exact_Q_rational_cofactor_identity","order":"wp(2,1,1,1,1,1,1,3,3,3,3,3,2,2,1)",
+        "commands":["Singular --no-rc -q box/k7-cofactors-20260906/subset-jobs/K7_B12_Q0_liftstd.sing","Singular --no-rc -q box/k7-cofactors-20260906/identities/K7_B12_Q0_verify.sing"],
+        "indices_1based":[14,15,16,17,21,29,301],"identity_bytes":2244218,
+        "identity_sha256":"543fccec23528d6c701c50d7fe6aa960ec529da80ee314822b376709a4f44344",
+        "lift_script_sha256":"626d6d4f4ee50e07f94751ac9019c2d179fe21e155c7566bdf1fc566843ce3c7",
+        "lift_log_sha256":"67259462df8dd66fda8d96ed7f243a8610769718b7b2fb2bfe79c6b1faaaec57",
+        "lift_wall_seconds":23.52,"lift_max_rss_kib":549528,
+        "independent_full_ring_verifier_script_sha256":"4ac1d69f7d7fac1f0a1fa016241f42bbc3e178097ce5ed32fa8c8e20a48f5909",
+        "independent_full_ring_verifier_log_sha256":"ff29069307d90ee119b221d8985210b70182299d832272e6d6375d449bc7dcbf",
+        "verify_wall_seconds":13.43,"verify_max_rss_kib":1219016,"direct_product_one":true,"check_value":true
+      }
+    },
+    {
+      "chart":"K7_B12_Q1","variables":92,"generators":295,"bytes":34517061,
+      "source_sha256":"875573726b784dc4700de3835f0130617279eb5bab451f712f77088c26cae4e2",
+      "status":"Q_CERTIFIED","certificate":{
+        "type":"exact_Q_rational_cofactor_identity","indices_1based":[12,13,15,17,18,295],"clear_power":25,
+        "identity_output_sha256":"8be6169b5b0cfcadf769673750ef5fd4db34798b5ed7869c8b2347aaa706d4f0",
+        "independent_verifier_script_sha256":"35af3e1d11303b3c0e5fd2ba69b94a7073fe06296c38e28d050b9e27a95355eb",
+        "independent_verifier_output_sha256":"f8c7d678b5f463a15021a40ddc05c97b511f8230a4903b3ad537e28f60b1f2bf",
+        "verify_wall_seconds":0.68,"verify_max_rss_kib":31888,"direct_product_one":true,"check_value":true
+      }
+    },
+    {
+      "chart":"K7_B13_Q0","variables":100,"generators":325,"bytes":47622625,
+      "source_sha256":"970026efbf5ffd1150def477d64de057b8212455527a15f6abbf18807d5cce2c",
+      "status":"Q_CERTIFIED","certificate":{
+        "type":"exact_Q_rational_cofactor_identity","indices_1based":[2,8,325],
+        "identity_output_sha256":"27bdfa0266fb8347377c2cd1071c6335a9e5781f7700fd6bd89ccbc7820081e1",
+        "independent_verifier_script_sha256":"af1fc3e6d34d19d2b4a21e10693da165b6a1f63d440c1c5e87c34ed419b78de6",
+        "independent_verifier_output_sha256":"223821eaf05865df3215d097a8173e7bf3f6cc7465e6459d2f19bc136ba6f9b3",
+        "verify_wall_seconds":0.0,"verify_max_rss_kib":10288,"direct_product_one":true,"check_value":true
+      }
+    },
+    {
+      "chart":"K7_B13_Q1","variables":99,"generators":317,"bytes":45201213,
+      "source_sha256":"570e241e4e2515d1c97c77f9b7696e5d519fb97697543da93410ca5eb2797a8b",
+      "status":"Q_CERTIFIED","certificate":{
+        "type":"exact_Q_rational_cofactor_identity","indices_1based":[1,317],
+        "identity_output_sha256":"477229df8f0e296f7878a42e527c87003dc0a8b416859967031aeaac003a430e",
+        "independent_verifier_script_sha256":"43423e5723b4bcdcf2a81d68dcd3a0630e2af62e45d27a3dd443426f131cce2b",
+        "independent_verifier_output_sha256":"a456c399b7485768fc1f381d265216746b6315f59757f504d0cb6fb74407fefe",
+        "verify_wall_seconds":0.0,"verify_max_rss_kib":10056,"direct_product_one":true,"check_value":true
+      }
+    }
+  ],
+  "rejected_evidence": [
+    "all msolve characteristic-zero-header [1] results: signal only under campaign erratum",
+    "all modular bases/support/syzygies: search guides only",
+    "tiny+CST runs with UNIT 0 or CHECK 0",
+    "B11_Q1 first back-substitution with REPRESENTATION 0",
+    "timeouts and interrupted competitors: engine/resource limits, never nonunit"
+  ],
+  "b9_worker_inventory": {
+    "path": "/home/ubuntu/k7-cofactors-20260906/b9-custody-inventory.json",
+    "bytes": 182346,
+    "jobs": 102,
+    "strict_pass_count": 0,
+    "sha256": "9cdc762dcc55458c9dbf49e69f8f1361d9934b43f7feb5f5762e0f3dc07da9a6"
+  },
+  "host_new_writes": [
+    "xmodel/k7-cofactors-sol56-r2-20260906.md",
+    "box/k7-cofactors-20260906/r2-custody.json"
+  ],
+  "no_new_exit_price": true,
+  "charge_basis_required": false
+}

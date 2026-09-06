@@ -21239,3 +21239,4 @@ Parent-indexed exact DP (at each D_j: nonzero orbits of weight A_jV_j unbounded,
 - 03:55Z 17(fffffffffff) family C: radius licence proved-negative from print (20/20 NOT-LICENSED); terminal part PROVED FINITE (138 completions; R066 determined). Family C = split-branch class. Opus 0/4.
 - 04:02Z 17(ggggggggggg) ACTUAL-STABILIZER SCREEN THEOREM PROMOTED (Astra gate, with notation fixes). Citable: 24,063 → 90 → 64. Astra 1/3.
 - 04:04Z launched classA-smallest-receiver-sol56 (smallest class-A receiver; guided_gb/msolve/Singular on idle worker .163; ≤200 min). Sol 3/4.
+- 04:23Z 17(hhhhhhhhhhh) K=7 strata: 7/10 charts theorem-tier (b11–b13 unconditional; b9, b10 conditional on 3 charts) → r3 launched on worker .108. Sol 4/4.

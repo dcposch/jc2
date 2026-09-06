@@ -1,0 +1,38 @@
+option(redSB); short=0;
+// chart=K7_B10_Q1
+// source=/home/ubuntu/jc2/box/k7-strata-gate-20260905/chart-audit/emitted/K7_B10_Q1_p0.ms
+// source_sha256=a49433e9834c4fa7a76a89aef50e7f3852ee0e26ff1d665bc1c8516dc390f97d
+// original_indices=26,27,29,31,32,255
+// monomial_order=wp(1,1,1,1,1,1,5,5,5,5,5,4,1)
+ring R=0,(v6,v12,v17,v21,v24,v26,v36,v45,v53,v60,v66,v76,v77),wp(1,1,1,1,1,1,5,5,5,5,5,4,1);
+ideal I=
+85*v36*v76+49*v6*v76^2-85*v12*v76^2,
+v6^2*v76^2,
+27*v36^2+36*v6*v36*v76-11*v12*v36*v76-108*v6*v45*v76-47*v6*v12*v76^2+11*v12^2*v76^2+94*v6*v17*v76^2,
+119*v36*v45-47*v45^2-94*v36*v53+4*v17*v36*v76-54*v21*v36*v76-238*v12*v45*v76+188*v17*v45*v76-238*v6*v53*v76+188*v12*v53*v76+188*v6*v60*v76+234*v12*v17*v76^2-188*v17^2*v76^2+184*v6*v21*v76^2-134*v12*v21*v76^2-84*v6*v24*v76^2,
+56*v45^2+112*v36*v53-87*v45*v53-87*v36*v60+42*v21*v36*v76-92*v24*v36*v76-224*v17*v45*v76+174*v21*v45*v76-224*v12*v53*v76+174*v17*v53*v76-224*v6*v60*v76+174*v12*v60*v76+174*v6*v66*v76+224*v17^2*v76^2+182*v12*v21*v76^2-348*v17*v21*v76^2+132*v6*v24*v76^2-82*v12*v24*v76^2-32*v6*v26*v76^2,
+v76*v77-1;
+print("CERT__CHART K7_B10_Q1");
+print("CERT__SOURCE_SHA256 a49433e9834c4fa7a76a89aef50e7f3852ee0e26ff1d665bc1c8516dc390f97d");
+print("CERT__ORIGINAL_INDICES 26,27,29,31,32,255");
+print("CERT__ORDER wp(1,1,1,1,1,1,5,5,5,5,5,4,1)");
+print("CERT__COEFFICIENT_FIELD Q");
+print("CERT__NVARS "+string(nvars(basering)));
+print("CERT__NGEN "+string(size(I)));
+int t=timer; option(prot); matrix T; ideal G=liftstd(I,T); option(noprot);
+print("CERT__SECONDS "+string(timer-t));
+print("CERT__GB_SIZE "+string(size(G)));
+int UNITCONST=(size(G)==1 && deg(G[1])==0);
+number UNITCOEF; if (UNITCONST) { UNITCOEF=leadcoef(G[1]); T=(1/UNITCOEF)*T; G=ideal(1); }
+print("CERT__UNIT "+string(size(G)==1 && G[1]==1));
+matrix C=matrix(I)*T;
+print("CERT__INPROCESS_CHECK "+string(ncols(C)==1 && C[1,1]==1));
+print("CERT__COFACTORS_BEGIN");
+if (T[1,1]!=0) { print("CERT__COFACTOR 26 "+string(T[1,1])); }
+if (T[2,1]!=0) { print("CERT__COFACTOR 27 "+string(T[2,1])); }
+if (T[3,1]!=0) { print("CERT__COFACTOR 29 "+string(T[3,1])); }
+if (T[4,1]!=0) { print("CERT__COFACTOR 31 "+string(T[4,1])); }
+if (T[5,1]!=0) { print("CERT__COFACTOR 32 "+string(T[5,1])); }
+if (T[6,1]!=0) { print("CERT__COFACTOR 255 "+string(T[6,1])); }
+print("CERT__COFACTORS_END");
+quit;

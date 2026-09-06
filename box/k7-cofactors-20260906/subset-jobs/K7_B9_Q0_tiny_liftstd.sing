@@ -1,0 +1,40 @@
+option(redSB); short=0;
+// chart=K7_B9_Q0
+// source=/home/ubuntu/jc2/box/k7-strata-gate-20260905/chart-audit/emitted/K7_B9_Q0_p0.ms
+// source_sha256=15b4b715767a72e152f340dda11354af380897f6670d6370f0542841cdb4c275
+// original_indices=35,36,37,38,42,50,241
+// monomial_order=wp(2,1,1,1,1,1,1,6,6,6,6,6,5,5,1)
+ring R=0,(v5,v6,v12,v17,v21,v24,v26,v35,v43,v50,v56,v61,v69,v70,v71),wp(2,1,1,1,1,1,1,6,6,6,6,6,5,5,1);
+ideal I=
+37*v35*v69-49*v6*v69^2+86*v12*v69^2-37*v17*v69^2+172*v6*v69*v70-74*v12*v69*v70-37*v6*v70^2,
+158*v35*v69-67*v43*v69+91*v12*v69^2-158*v17*v69^2+67*v21*v69^2-67*v35*v70+182*v6*v69*v70-316*v12*v69*v70+134*v17*v69*v70-158*v6*v70^2+67*v12*v70^2,
+7*v35*v69-12*v43*v69-7*v17*v69^2+12*v21*v69^2-12*v35*v70-14*v12*v69*v70+24*v17*v69*v70-7*v6*v70^2+12*v12*v70^2,
+v6^2*v69^2,
+24*v35^2+13*v12*v35*v69+10*v17*v35*v69+36*v6*v43*v69-13*v12*v43*v69-96*v6*v50*v69-3*v12*v17*v69^2-10*v17^2*v69^2-3*v6*v21*v69^2-20*v12*v21*v69^2+40*v6*v24*v69^2+36*v6*v35*v70-13*v12*v35*v70-96*v6*v43*v70-26*v12^2*v69*v70-52*v6*v17*v69*v70+6*v12*v17*v69*v70+126*v6*v21*v69*v70-49*v6*v12*v70^2+13*v12^2*v70^2+86*v6*v17*v70^2,
+8*v17*v35^2+5*v12*v35*v43-3*v6*v43^2-6*v6*v35*v50-10*v12^2*v50*v69-20*v6*v17*v50*v69+2*v6*v12*v56*v69+12*v6^2*v61*v69-22*v5*v6*v69^2+10*v12^2*v24*v69^2+20*v6*v17*v24*v69^2-2*v6*v12*v26*v69^2-10*v12^2*v43*v70-20*v6*v17*v43*v70+2*v6*v12*v50*v70+12*v6^2*v56*v70+20*v12^2*v21*v69*v70+40*v6*v17*v21*v69*v70-4*v6*v12*v24*v69*v70-24*v6^2*v26*v69*v70+10*v12^2*v17*v70^2+20*v6*v17^2*v70^2-2*v6*v12*v21*v70^2-12*v6^2*v24*v70^2,
+v69*v71-1;
+print("CERT__CHART K7_B9_Q0");
+print("CERT__SOURCE_SHA256 15b4b715767a72e152f340dda11354af380897f6670d6370f0542841cdb4c275");
+print("CERT__ORIGINAL_INDICES 35,36,37,38,42,50,241");
+print("CERT__ORDER wp(2,1,1,1,1,1,1,6,6,6,6,6,5,5,1)");
+print("CERT__COEFFICIENT_FIELD Q");
+print("CERT__NVARS "+string(nvars(basering)));
+print("CERT__NGEN "+string(size(I)));
+int t=timer; option(prot); matrix T; ideal G=liftstd(I,T); option(noprot);
+print("CERT__SECONDS "+string(timer-t));
+print("CERT__GB_SIZE "+string(size(G)));
+int UNITCONST=(size(G)==1 && deg(G[1])==0);
+number UNITCOEF; if (UNITCONST) { UNITCOEF=leadcoef(G[1]); T=(1/UNITCOEF)*T; G=ideal(1); }
+print("CERT__UNIT "+string(size(G)==1 && G[1]==1));
+matrix C=matrix(I)*T;
+print("CERT__INPROCESS_CHECK "+string(ncols(C)==1 && C[1,1]==1));
+print("CERT__COFACTORS_BEGIN");
+if (T[1,1]!=0) { print("CERT__COFACTOR 35 "+string(T[1,1])); }
+if (T[2,1]!=0) { print("CERT__COFACTOR 36 "+string(T[2,1])); }
+if (T[3,1]!=0) { print("CERT__COFACTOR 37 "+string(T[3,1])); }
+if (T[4,1]!=0) { print("CERT__COFACTOR 38 "+string(T[4,1])); }
+if (T[5,1]!=0) { print("CERT__COFACTOR 42 "+string(T[5,1])); }
+if (T[6,1]!=0) { print("CERT__COFACTOR 50 "+string(T[6,1])); }
+if (T[7,1]!=0) { print("CERT__COFACTOR 241 "+string(T[7,1])); }
+print("CERT__COFACTORS_END");
+quit;
