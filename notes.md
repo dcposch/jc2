@@ -48301,3 +48301,93 @@ external delta or a newly specified coverage task.
   EBS billable. No AWS mutation, worker or scientific computation. Bank
   only completed cross/synthesis/ledgers/frozen prompt; preserve live fresh
   output, pilot-local.log and excluded nested trees. No global human impasse.
+
+## 2026-09-14 21:59 UTC — zero-base reset ends without a candidate
+
+The fresh Astra report
+xmodel/zero-base-constructive-swarmHQ-astra-20260914T2145Z.md is
+NO_CANDIDATE, MANUAL/PRODUCER-CHECKED, UNPROMOTED. It completed21:56,
+before target22:05/hard22:09. ROOT expected-manifest verification preceded
+whole body intake; full1476dba5f68eb4b06e500a933e1a1ea722d8c798e221861afe25a34bfa6d0db5,
+body56dcc708deca003382fc8893cd04acf700932b0472ed559a662db6303bcc922b,
+manifestf920fde8982ee49d7e9ef8c7038f04769754a554901db8c6dcecee4c2728c658.
+The prompt/STATE-DELTA/FALLACY pins and post-report pins match. Agent
+discloses an initial filename-discovery scope violation over /home/ubuntu;
+other contents were not opened, but protected-boundary traversal cannot
+be certified. This is a retained workflow qualification, not erased by the
+valid report transaction. Future fresh invitations must name exact governing
+instruction paths and explicitly prohibit administrative directory discovery.
+
+With z=y/x^3 the attempted pair has P=x+z^2 and
+Q=P^3*z-P^2*z^3+(3/5)*P*z^5-z^7/7. ROOT rechecked the complete derivative:
+Q_z at fixedP equals(P-z^2)^3=x^3, while J(x,z;x,y)=x^-3.
+Thus the rational J is1 and generic degree7. But its monic septic makes
+z integral over C[P,Q], with full normalization C[P,z]=C[x,z], an affine
+plane. Under any rational source substitution with polynomial pullbacks
+A,B, normality of C[u,v] forces w=z_pullback polynomial and then
+a=x_pullback=A-w^2 polynomial. The full Jacobian is a^3*J(a,w), which
+cannot be a nonzero constant. The explicit pole-removing substitution
+(x,y)=(u,u^3*v) gives Jacobianu^3, not a counterexample. No source-degree
+or birationality restriction was needed for this negative gate.
+
+This is a KNOWN normalization-screen attachment, not a new family
+programme, closing mechanism or proof. The first generic septic/history
+query was noisy and clipped; a narrower phrase pass was used without any
+exhaustive novelty claim. No second candidate, exponent ladder, Fable
+FIRST, scalar/r3 renewal, computation or further reset is selected.
+
+ROOT's independent proof-side work also obtained no actual-source premise.
+Selected September13 14:27 Gaussian/domain and18:34 finite-volume/metric
+records already retain the missing boundary estimates/completeness; no
+new analytic lane. A hand check on the EXISTING exact-volume control
+illustrates why an additive action on a normalization need not extend to
+a polynomial action on its marked plane. It is UNREVIEWED/unused, not a
+new surface or a promoted result. In R=C[u,v], let
+
+  a=uv, b=u^2*v, c=u*v^2, h=u^3*v-u, e=u*v^3-v,
+  B0=C[a,b,c,h,e],
+  delta=(u^2*v-1)*(u^3*partial_u-(3*u^2*v-1)*partial_v).
+
+Direct differentiation gives
+
+  delta(h)=0, delta(b)=-h^2, delta(a)=h*(1-2*b),
+  delta(c)=a*(b-1)*(2-5*b),
+  delta(e)=(b-1)*((3-8*b)*c+3*b-1).
+
+This triangular generator ordering makes delta locally nilpotent on B0.
+But delta^n(u)=n!*h^n*u^(n+1), so it is not locally nilpotent on R.
+For omega=du wedge dv, div(delta)=-h*u and Lie_delta^2(omega)=0.
+The old control supplies global exact extension of omega; even this finite
+orbit of its volume section does not make the marked open plane invariant.
+Importantly delta DOES NOT preserve omega: this does not refute a stronger
+volume-preserving-action premise, and no actual Keller pair in B0 is
+supplied. Stop at the known source-extension gap; no control successor.
+
+## 2026-09-14 21:59 UTC LIVE STATE — reset collected, no live lanes
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basisdc9deefdd8a3a0f6a921cdf12e314d9541627586,
+  fresh fetch unchanged. Policy team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Previous turn completed FULL2110 and launched the bounded reset; current
+  reset NO_CANDIDATE changes no global closing implication.
+- All native lanes independently COMPLETED at collection; no live model
+  unit, writer, science worker, provisional root, FIRST debt or speculative
+  descendant. New report/manifest and exact stop are above. The one-cycle
+  reset is CLOSED, not automatically repeated. No promoted claim or global
+  rerank; APP retains the full-degree/source gaps and qualified old stops.
+- FULL lastSep14 21:40:31, nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 overdue/access-coverage debt unchanged. No new web
+  sweep this turn; Mathstodon/Palomar STOPPED, Miyanishi source gate unchanged.
+  gh unauthenticated fresh21:49; GitHub blocked,0triaged/openUNKNOWN,
+  lastsuccessnone, original16:00 miss retained. DC authentication required.
+- Fresh21:57 both personal/us-east-1 nonterminal worker selectors[];
+ 21:58 no live jc2 unit, coordinator3674934 tree no science, pswpin/out0/0.
+  Fable cumulative101944 terminal lane-wall seconds unchanged, not billing,
+  tokens, credits or CPU; native usage/balances unknown, retained EBS billable.
+  No AWS mutation, scientific computation, new paid lane or framework.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE and
+  original48h debt retained. The next action is ROOT all-degree research
+  on a genuinely changed source implication, not automatic donor, Gaussian,
+  Ga-control or finite-family work. No new test is ready, and no human-only
+  global impasse is claimed. Bank the completed report and this record;
+  preserve pilot-local.log and excluded nested repositories.
