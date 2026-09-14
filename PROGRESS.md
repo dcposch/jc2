@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+17:24Z: [Bass specialization and web screen](xmodel/bass-specialization-web-scope-swarmHQ-root-20260914.md)
+is MANUAL/PRODUCER-CHECKED, UNPROMOTED. The actual-source lifting obstruction
+is explicit and injective: Euler-annihilated specialization classes do not
+lift, and total de Rham acyclicity does not remove the obstruction. Two
+primary web/flow theorem interfaces also supply no closing hypothesis.
+Completed bounded failed tests, not a JC2 gap closure or a new promotion;
+no automatic operator/web-family successor, paid model lane or computation.
+
 17:08Z: [Rational-pair target-change check](xmodel/rational-mate-monomial-targets-swarmHQ-root-20260914.md)
 excludes every integer-exponent monomial constant-J target modification of
 the specified rational pair, uniformly in dominant rational source maps.

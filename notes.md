@@ -46626,3 +46626,103 @@ verification and scoped diff-check passed. APP SHA
 PROGRESS9816bd7a, AUDITbda4b17b and policy50cf4548. Fresh origin fetch
 again returned ahead-behind0/0. No new scientific result is inferred from
 these custody checks; staged verification remains the final commit gate.
+
+## 2026-09-14 17:24 UTC -- actual-source specialization stops at lifting
+
+Previous goal turn: progress by banking the completed monomial obstruction,
+not a global JC2 closure. Fresh origin fetch at this tick finds
+2fa727465f267740a2dfa8de0b494a59dfd6e031=origin/master. The rational target
+family stays STOPPED after its second tranche; this tick selected a different
+actual-source question, not another exponent or control.
+
+For A=C[p,q] subset R=C[x,y], N=R/A and h=p-a centered through an actual
+image point, e=hD_p is injective by the recorded Bass import. Native Astra
+derived and ROOT checked the exact sequence of q,D_q-modules
+
+  0 -> N/hN -> N/(e+1)N -> N/D_p N -> 0,
+  [n] -> [D_p n].
+
+It follows from D_p(hk)=(e+1)k and D_p-injectivity. Every specialization
+class is killed by the induced e, but NONE of its nonzero classes lifts
+to an e-annihilated actual source section. The obstruction is injective,
+not an object which global acyclicity automatically annihilates. For
+generic p=a, N/hN has generic C(q)-rank d-1. The identity
+A intersect hR=hA retains the exact quotient. Source de Rham acyclicity
+only makes D_q bijective on N/D_p N and transfers D_q-cohomology between
+the first two terms. No nearby-cycle identification, nonhorizontal source
+section, D_p-surjectivity or characteristic-cycle positivity implication
+was obtained. Ordinary specialization is not silently identified with
+nearby cycles. The identity-source and ambient-polynomial-module controls
+keep the Bass injectivity premise visible.
+
+The native task was message-only, bounded10minutes, completed before17:20,
+and independently observed COMPLETED17:23. No files, paid models, compute
+or further agents. Same-model co-research is not different-model FIRST.
+This is a completed failed test and a precise lifting obstruction, not
+a promoted theorem, global gap closure or claimed literature novelty.
+Stop this lifting shortcut; no automatic operator/cokernel/control family.
+
+ROOT's orthogonal web idea also supplies NO_NEW_CLOSING_TEST. Primary
+Hwang1605.05018v1, Theorem1.3/Definition3.8: two distinct line subbundles
+on a surface span the entire tangent bundle, so the required pairwise
+non-integrability is impossible there. Even the cited general conclusion
+is a generically finite correspondence, not a single-valued inverse.
+The2015 Bustinduy--Giraldo--Mucino-Raymundo paper's main theorem assumes
+complete inverse flows on typical fibers. Local nonsingularity supplies
+neither this premise nor a global inverse. No web/classification successor.
+The prior2014 fiber-integration paper is distinct and not re-audited.
+
+Report xmodel/bass-specialization-web-scope-swarmHQ-root-20260914.md,
+MANUAL/DOCUMENTARY, PRODUCER-CHECKED and UNPROMOTED, records the full
+elementary calculation, primary URLs, exact PDF hashes and limited read
+scopes. Body34daecbd/full a8d0867d/manifest c401fec9, full pins in the
+tracked manifest. ROOT read back the complete body before close/finalize;
+expected-manifest verification passed. Two primary PDFs and two page renders
+are temporary only in /tmp/jc2-web-geometry-20260914-JMzTwH, not a promised
+durable source archive. Some broad history outputs clipped; no exhaustive
+novelty or primary-proof audit is claimed. Incidental social query hits
+were neither opened nor used. These targeted reads do not complete BROAD.
+
+## 2026-09-14 17:24 UTC LIVE STATE -- bounded lifting and web tests stopped
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved; all46 ranks unchanged. Basis
+  2fa727465f267740a2dfa8de0b494a59dfd6e031=origin/master on fresh fetch.
+  Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDITbda4b17b unchanged. Owned report/manifest, APP,
+  PROGRESS and notes are the explicit bank; final pins follow validation.
+- All native agents COMPLETED, no live paid lane, scientific process,
+  worker, provisional root, FIRST debt or descendant. Two stopped global
+  tests leave source-normality, source-selection and unrestricted polynomial
+  construction gaps unchanged. No theorem-interface consumer or new closing
+  hypothesis; coalesce as micro-round, no identical full-round echo.
+- FULL1300 completedSep14 13:33:26; nextSep15 01:33:26. Original10:17:55
+  missed checkpoint retained. BROAD originalSep12 21:53:56.598798932 stays
+  overdue with prior coverage/access/48h qualifications. Mathstodon/Palomar
+  STOPPED; this targeted source pass resets no clock or access debt.
+- GitHub sweep: blocked, gh not authenticated; command-v again finds no
+  binary this tick. Last successful none established,0 triaged,openUNKNOWN.
+  OriginalSep14 16:00 checkpoint missed, not reset. DC installation and
+  authentication needed; next prerequisite check at next tick.
+- Tick personal/us-east-1 pending/running/stopping/stopped selectors
+  jc2fleet=1 and Name=jc2-worker-* both[] exit0. User jc2 running or
+  transitioning services empty. Scoped coordinator3674934 tree17:21 has
+  no scientific child; tick pswpin/out0/0. No AWS mutation, CAS or scientific
+  Python; retained EBS evidence billable. Fable cumulative100220 terminal
+  lane-wall seconds unchanged, not billing/credits/tokens/CPU. Native usage
+  unmeasured and balances unknown. Astra primary, Fable5.1 independent
+  highest-value gates, Sol fallback; do not launch for occupancy.
+- Systems NO_UPGRADE: existing transaction/collision instruments unchanged;
+  no measured acceleration. Engineering CLOSED, scalar/preflight/r3 PARKED,
+  historical48h debt and Miyanishi legitimate-PDF prerequisite unchanged.
+  No human-only global mathematical impasse; no live wait or fake terminal.
+- Bank explicit owned files after staged verification; preserve
+  pilot-local.log, bulk artifacts and excluded nested repositories.
+  Next research requires a different actual-source mechanism or new complete
+  polynomial construction, not specialization lifting, web classification,
+  another rational-target family, or an unchanged operator/control test.
+
+Bank validation: expected-basis/manifest verification and scoped diff-check
+passed; APP SHA00f79a2aa9f436ebd2498b4da3fa6d81d75801e2f32e435ee58ed9a01e3d3c3b,
+PROGRESS48c09b2c, AUDITbda4b17b and policy50cf4548. Administrative checks
+are custody evidence only, not additional mathematical verification.

@@ -205,6 +205,14 @@ H_DR(N_g)=H_DR(Q), not localized acyclicity. No control of Q was obtained.
 Stop those two shortcuts, not all coordinate-uniform or boundary arguments;
 no new operator/control family or automatic successor is selected.
 
+The September14 [ordinary-specialization test](xmodel/bass-specialization-web-scope-swarmHQ-root-20260914.md)
+is MANUAL/PRODUCER-CHECKED, UNPROMOTED. For h=p-a, e=hD_p, the actual
+source has an injection N/hN -> N/(e+1)N, [n] -> [D_p n]. Thus nonzero
+specialization classes acquire Euler relations which CANNOT lift to source
+sections. Total de Rham acyclicity only makes D_q bijective on N/D_p N;
+it does not erase this obstruction. Stop this lifting shortcut, not all
+nearby-cycle methods; no operator/control successor or closing implication.
+
 The missing arrow is actual-source **first-order selection AND the tested normalization**, not further enlargement of G. [Actual-source attempt](xmodel/keller-source-selection-astra-20260911.md) remains MANUAL/UNREVIEWED, NO_NEW_SOURCE_MECHANISM: the tested operations preserve cyclic delta-degree; the p-commutator needs an unproved same-kernel premise. R/A is not an R-algebra. Stop unchanged slice descent and family expansion; no arbitrary-annihilator or JC2 theorem follows.
 
 The [2240 synthesis](xmodel/ideation-20260911T2240Z-synthesis.md) couples trace and Mellin structure through 0->kerTr->R/A->M/A->0. At the named conditional tiers, a nontrivial source has positive kernel rank. This gives no rank-zero contradiction: actual quotient-line existence, solvability of its additive difference-lifting equation and tested normalization remain separate gaps. K0=0 already forces the trivial source. ROOT's local traceless-pairing card is a duplicate; no echo gate or broader operator-family lane is selected.
@@ -304,6 +312,12 @@ The September14 screen recovered the following existing gaps, not new routes:
 
 These pointers change no claim tier or avenue rank and authorize no matrix,
 moduli, prime/support or fiber-product family successor.
+
+The September14 [web-geometry scope check](xmodel/bass-specialization-web-scope-swarmHQ-root-20260914.md)
+finds Hwang1605.05018v1 Theorem1.3's pairwise non-integrability impossible
+for a surface web. The2015 Bustinduy--Giraldo--Mucino-Raymundo inverse-flow
+criterion still assumes completeness on typical fibers. No global inverse,
+new source hypothesis or web/classification successor is supplied.
 
 **Actual-source genus restriction.** [GENUS-ZERO/ONE-BLOCK-LANDING-1](box/genus-one-block-landing-gate-fable5-20260912/INTAKE.md) and [FULL-NORMALIZATION-GENUS-SCOPE-1](box/full-normalization-genus-scope-gate-fable5-20260912/INTAKE.md) are PROMOTED/MANUAL: every actual proper intermediate, and separately the full-field finite normal projective normalization, has sectional genus>=2 for the actual line polarization. The full-source extension uses its literal open immersion, not an assumed proper block. The line net and complete series have equal GENERIC genus, not equal members; no special-direction/fiber bound follows. The proper-block proofs retain trace/Leray H1 without rational singularities, normal CM adjunction, reflexive extension, and the structure-map identification of the globally FREE relative dual. There is no genus ceiling, block-existence theorem, primitive exclusion or decisive finite-search client.
 
