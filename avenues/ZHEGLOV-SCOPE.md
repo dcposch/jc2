@@ -1,10 +1,10 @@
 # ZHEGLOV-SCOPE: Audit scoping for arXiv:2410.06959 v5 (DC(1))
 
 Status: COMPLETE (2026-08-04). Scoping done; T1 falsification experiment since executed (see §6) — L:polynomials NOT REFUTED, 640/640.
-Artifacts: `zheglov/v5src/DC5.tex` (v5 source), `zheglov/abs_v1..v5.html` (version metadata).
+Artifacts: `refs/zheglov/v5src/DC5.tex` (v5 source), `refs/zheglov/abs_v1..v5.html` (version metadata).
 
 ## 1. Paper architecture (v5)
-Source: `zheglov/v5src/DC5.tex` (3539 lines). Sections + line ranges:
+Source: `refs/zheglov/v5src/DC5.tex` (3539 lines). Sections + line ranges:
 - **S1 Intro** (171–565): full proof scheme + notation list.
 - **S2 Preliminaries, theory of normal forms** (565–1300, ~735 ln): imports from [A.Z]=Zheglov's generalized Schur theory, [GZ1]=Guo–Zheglov normal forms, Dixmier, Wilson, Sato. Ring tower A_1 ⊂ D_1=K[[x]][∂] ⊂ D̂_1^sym; Schur operator S with SPS⁻¹=∂^p; centralizer C(∂^p) ≅ M_p(K[D^p]), "vector form". Mostly cited, not reproved.
 - **S3 DC-pairs** (1300–1451): counterexample = DC-pair; reduction to *subrectangular* Newton-polygon type (from [GGV] minimal-counterexample results); L:9 from [GZ] (Berest-conjecture paper).

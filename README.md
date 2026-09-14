@@ -23,3 +23,22 @@ campaign to settle the question.
 ## Public progress
 
 For public progress, see [jc2-lean](https://github.com/dcposch/jc2-lean).
+
+## Repository layout
+
+| Location | Contents |
+| --- | --- |
+| [jc2-lean/](jc2-lean/README.md) | Formal proofs, including the former standalone Lean certificate |
+| `lib/`, `tests/` | Shared computational code and tests |
+| `cases/`, `box/` | Case-specific computations and research artifacts |
+| `avenues/`, `ladder/`, `papers/` | Research approaches, reductions, and papers |
+| [refs/](refs/README.md) | Third-party references and source snapshots |
+| `ops/`, `xmodel/`, `prompts/` | Orchestration and model research records |
+| `history/`, `archive/` | Historical notes and retained archives |
+| [dist/](dist/README.md) | Original release archives and reproduction instructions |
+
+The root campaign documents describe current strategy, evidence, and progress.
+Old release snapshots are historical; current corrections live in `AUDIT.md`.
+
+[Retired (72,108) campaign](history/jc72108/README.md): preserved evidence and
+old-to-new paths. Its obsolete standalone workflow has been removed.

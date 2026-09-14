@@ -13,8 +13,7 @@ jcpapers/
 __pycache__/
 *.pyc
 # reference papers (private repo: citations are tracked)
-# lean build artifacts (mathlib cache is GBs)
-lean/.lake/
+# formalization build artifacts are ignored inside the jc2-lean submodule
 archive/
 # recovered box01 checkpoint mirrors (regenerable; canonical copies on box01)
 cases/d43red/
@@ -62,3 +61,6 @@ cases/*_rebuilt.pkl
 /launcher.stdout
 /sourcecheck.stdout
 .scratch/
+
+# Release archives are canonical; unpacked copies are disposable.
+/dist/jc72108-theory-bundle-v1/
