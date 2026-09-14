@@ -47589,3 +47589,134 @@ No new closing discriminator or mathematical ranking change this tick.
   global impasse. Next construction task must change the GLOBAL source
   or descent test, not merely algebraize these already-algebraic formal
   charts. No new proof/counterexample or unrestricted S/T exclusion.
+
+## 2026-09-14 19:57 UTC LIVE STATE — one dynamical-minimization FIRST
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved. Basis
+  1c020ec21b75181883d3c75886716291d0c5607d; fresh fetch19:47 unchanged.
+  Previous turn NO MATHEMATICAL PROGRESS; this tick began19:47:24.
+  Policy team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDIT79fe0615/FALLACYe47fd16c unchanged.
+- New PROVISIONAL MANUAL/named-import consequence in
+  xmodel/keller-dynamical-minimization-swarmHQ-root-20260914.md,
+  full84837d2d/bodyedcb3bd3/manifestf370ac72, transaction verified.
+  Normalized Keller lambda1 is an integer>=d; hence the det1 left/right
+  frame infimum is attained. Separate single non-Keller birational
+  control M=(x^2*y,x*y) has lambda1(alpha M beta)>=sqrt2 for ALL
+  polynomial automorphisms: intersecting contracted curves exclude the
+  FJ lambda1=1 classification, and its quadratic-matrix description
+  supplies a uniform gap. No lowering step, minimum<=d or JC2 closure.
+  Two bounded native Astra tasks independently COMPLETED, message-only.
+- Different-model FIRST active: Fable5.1 tag
+  dynamical-minimization-gate-fable51-20260914, USER unit
+  jc2-lane-dynamical-minimization-gate-fable51-20260914.service.
+  Started19:56:36, invocation22d5db1add9348228981f6a2ddaefd3d;
+  Main1757102/bwrap1757285/model1757286 confirmed19:56:44.
+  Target20:01:36; independent RuntimeMax600 hard20:06:36, Stop5,
+  KillModecontrol-group, MemoryMax4G/Swap0. No reset/retry/descendant.
+  Five frozen inputs: producer/manifest, FJ PDF/text, prior DNT ROOT
+  intake as accepted lower-bound premise. ROOT owns terminal identities,
+  receipt/current pins FIRST, whole-report intake and prompt audit.
+  No live report/log/receipt read. Roster/source gates unchanged.
+- Both personal/us-east-1 nonterminal campaign selectors[] at19:52;
+  no AWS allocation or science. All native agents completed, no report
+  lease/other paid lane. Fable100789 terminal lane-wall seconds excludes
+  this live lane; balances/native usage unknown. Retained EBS billable.
+- FULL1300 completedSep14 13:33:26/nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 and inherited
+  access/coverage/48h debt unchanged. Mathstodon/Palomar STOPPED,
+  Miyanishi legitimate-PDF gate unchanged. No clock credit for this check.
+- GitHub sweep blocked: gh installed but not authenticated19:47;
+  last success none established,0triaged/openUNKNOWN, original16:00 miss
+  retained. DC authentication only needed; recheck next tick.
+- All46 ranks unchanged. This second dynamics tranche removes only a
+  proposed minimizer-existence dependency and rejects a general bound;
+  no automatic coordinate/control/valuation family. Systems NO_UPGRADE,
+  original48h debt; engineering CLOSED and scalar/preflight/r3 PARKED.
+  Bank only owned reports/intake/prompt/receipt/ledgers; preserve raw
+  local third-party primary files, pilot-local.log and excluded trees.
+
+## 2026-09-14 20:07 UTC — minimizer existence reviewed, lowering still missing
+
+Two bounded native Astra tasks separately completed the integer/attainment
+argument and the single M=(x^2*y,x*y) minimization control. Fable5.1 FIRST
+then returned PASS at named-import scope. KELLER-DYNAMICAL-MINIMUM-1 and
+NONKELLER-DYNAMICAL-MINIMUM-CONTROL-1 are PROMOTED/MANUAL in AUDIT.
+The normalized Keller frame minimum is attained, but no value/upper bound
+or lowering automorphism is supplied. M rejects a general degree-only
+bound without refuting Keller/quasi-finite-specific bounds. No JC2 closure.
+
+Producer84837d2d/bodyedcb3bd3/manifestf370ac72; FIRST173797aa;
+ROOT intake box/dynamical-minimization-gate-20260914/INTAKE.md,
+full93216b2c/body222c4af9/manifest6a4eb64e. Producer/intake ordinary
+transactions verified; no new raised OPEN, lexical collision checks EMPTY.
+Only locator correction: finite thinness uses FJ sections1.3 AND1.4.
+Underlying FJ/DNT theorems remain named imports, not freshly certified
+foundations. No novelty claim or unreviewed multiplier extension.
+
+Fable19:56:36--20:03:59,443seconds; target missed2m23, independent
+600-second cap not hit. Main0/Control0/dead20:04:15, original three PIDs
+absent before receipt/current pins and WHOLE report. DONE0/CLEAN/
+BODY_SEALED/ABSENT, five inputs UNCHANGED, current instruments matched.
+Receipt80d7f453 stable; exact composed prompt95d642f3 reconstructed from
+retained prompt/input-directory substitution/two LF/FALLACY. Ephemeral
+snapshots were cleaned by launcher, not claimed reread. Log HASH_ONLY.
+1478-word report exceeded1400 target by78; no hidden post-seal repair.
+Raw FJ PDF/text remain LOCAL, not redistributed; public intake gives
+source URL, full pins and Poppler24.02.0 reconstruction. No AWS science.
+
+During verified review wait, ROOT checked an orthogonal primary lead:
+Jelonek, On mappings with Jacobian one, arXiv2607.20597v1,
+https://arxiv.org/html/2607.20597v1 . Whole short mathematical HTML body,
+including Lemma2.1/Theorem2.2/Corollary2.3 and references, was read.
+Submission July22 and rendered internal date August24 are distinct.
+Lemma2.1 proves the bounded-degree automorphism locus is Zariski CLOSED;
+Theorem2.2 then gives its componentwise generic alternative. Neither
+supplies density, openness, all components' membership or the missing
+uniform polynomial-inverse bound for arbitrary Keller families. Inverse
+degree bounds in the proof apply to the APPROXIMATING AUTOMORPHISMS.
+Corollary2.3 concerns n>=3,d>=6 and explicitly consumes a July20 X-post
+counterexample report in reference3; this is not an independent proof of
+that premise or a JC2 result. No social retrieval, import of that external
+premise, acquisition bypass, new theorem promotion or follow-on lane.
+Scoped canonical searches found no exact arXiv identifier, not a complete
+novelty census. This is a ROOT-only documentary scope check, outside FIRST.
+The DDG1 primary URL also timed out once; no theorem imported or retry
+campaign. Targeted reads do not discharge BROAD/access/coverage debt.
+
+## 2026-09-14 20:09 UTC LIVE STATE — attained minimum banked, lowering open
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved. Basis
+  1c020ec21b75181883d3c75886716291d0c5607d=origin/master at fresh20:04 fetch.
+  Policy team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/FALLACYe47fd16c unchanged; new AUDIT58870b4b.
+  Bank owned four ledgers, producer/intake manifests, prompt and FIRST
+  report/receipt only. Preserve raw local primary PDF/text/log,
+  pilot-local.log and excluded nested trees.
+- Fable FIRST terminal and collected; all native authors COMPLETED.
+  No live paid lane, worker, scientific child, exec session, report lease,
+  provisional root, FIRST debt or descendant. New scope removes minimum
+  existence only; lowering/upper bounds and JC2 remain unresolved.
+  All46 ranks unchanged, no FULL trigger or automatic dynamics-family
+  successor. Next frontier work needs a changed global source constraint
+  or complete construction, not another unchanged frame/control family.
+- FULL1300 completedSep14 13:33:26/nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 overdue with
+  inherited access/coverage/48h debt. Mathstodon/Palomar STOPPED,
+  Miyanishi legitimate-PDF gate unchanged. Targeted reads reset no clock.
+- GitHub sweep blocked: gh installed, not authenticated, confirmed20:04.
+  Last success none established,0triaged/openUNKNOWN; originalSep14 16:00
+  miss retained. DC authentication only needed, surfaced this turn;
+  recheck next tick. No queue item/reply/contact/merge.
+- Fresh20:09 personal/us-east-1 pending/running/stopping/stopped selectors
+  jc2fleet=1 and Namejc2-worker-* both[] exit0. User jc2 running/transitioning
+  units0; coordinator3674934 tree no science; pswpin/out0/0. No AWS
+  mutation or scientific computation. Retained EBS billable. Fable443
+  delta/cumulative101232 terminal lane-wall seconds, not tokens/credits/
+  CPU/billing. Native usage and credit balances unknown. Astra primary,
+  Fable5.1 high-value independent work, Sol fallback; no occupancy lanes.
+- Systems NO_UPGRADE/no measured acceleration, original48h debt;
+  engineering CLOSED and scalar/preflight/r3 PARKED. No human-only
+  global impasse. Reviewed necessary consequences do not resolve JC2.

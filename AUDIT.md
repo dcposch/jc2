@@ -22575,3 +22575,50 @@ request was sent, and the Keller-specific headline itself is not refuted.
   public intake gives URL, exact hashes and reconstruction requirements.
   No finite-family search, computation, worker, automatic dynamics successor,
   global reranking or FULL/BROAD reset. Cost569 terminal lane-wall seconds.
+
+### KELLER-DYNAMICAL-MINIMUM-1 and NONKELLER-DYNAMICAL-MINIMUM-CONTROL-1 — 2026-09-14
+
+- PROMOTED / MANUAL with named published imports. Producer swarmHQ ROOT
+  (Astra), [report](xmodel/keller-dynamical-minimization-swarmHQ-root-20260914.md)
+  84837d2d29fd8b60c6e10a7de6cf7fa10d7b428a8e02c46a494e4b8ae3e24957,
+  manifestf370ac725264f71e5593abc3bc9be062e7d46083014de46b9b65f76c0fcc5c2e;
+  [different-model Fable5.1 FIRST](xmodel/dynamical-minimization-gate-fable51-20260914.md)
+  173797aa3dc2ff1f1cee41e935cdf4fe932f561f8c5c6e6271443686967c8e65;
+  [ROOT intake](box/dynamical-minimization-gate-20260914/INTAKE.md)
+  93216b2ca8366b2939248c457a1e79bfa0ce03a74985d28f0762365d5c8f311d,
+  manifest6a4eb64e7cdd3f6ba90dd6b2305c7575b491548c1dff0109e71aa2e1f393b68b.
+- KELLER-DYNAMICAL-MINIMUM-1: for polynomial detDF=1 and generic degree d,
+  lambda1(F) is an integer>=d. Parent KELLER-DYNAMICAL-DEGREE-1 gives
+  d<lambda1^2 when lambda1>1. Import FJ Proposition2.3/2.5, sections1.3--1.4
+  and the general Jacobian formula: the eigenvaluation lies in V1, with
+  FINITE thinness in[-2,0]; constant Jacobian forces thinness0, excluding
+  irrational valuations. Proposition2.5's dichotomy then gives integrality.
+  lambda1=1 is immediate. No d<lambda1 or properness assumption is used.
+  For every det1 polynomial alpha,beta, reapplication gives a nonempty
+  integer value-set, hence an attained minimum. Conjugacy by beta shows
+  that two-sided frames and single left compositions have the same set.
+  Independent changes do NOT generally preserve lambda1.
+- NONKELLER-DYNAMICAL-MINIMUM-CONTROL-1: M=(x^2*y,x*y), d=1,
+  JM=x^2*y, satisfies lambda1(alpha M beta)>=sqrt2>1 for ALL polynomial
+  automorphisms alpha,beta. Its two intersecting contracted curves persist.
+  If lambda1=1, FJ Propositions5.1--5.2 give an automorphism or polynomial
+  conjugate of (a*u+b,A(u)*v+B(u)), neither contracting intersecting curves.
+  The UNIFORM gap uses Proposition2.5's nonnegative integral2x2 spectral
+  matrix, not the weaker assertion 'quadratic integer'. Reducible matrices
+  give integral radius; irreducible zero-diagonal ones give sqrt(bc), and
+  the other cases dominate the golden-ratio matrix. No exact infimum.
+- Primary [FJ Annals173(2011),211--249](https://annals.math.princeton.edu/wp-content/uploads/annals-v173-n1-p06-p.pdf)
+  definitions and named statements/proofs were read directly, not the whole
+  paper or its foundational dependencies re-proved. Locator correction:
+  the thinness interval uses section1.4 as well as1.3. No mathematical
+  correction, novelty claim, unreviewed multiplier extension or removal of
+  DNT dependency. The M control is not quasi-finite/Keller. Neither result
+  supplies a lowering step, minimum<=d, frame-degree bound, properness,
+  inverse or JC2 proof. The old zero-thinness obstruction is unchanged.
+- FIRST19:56:36--20:03:59, DONE0/CLEAN/BODY_SEALED/ABSENT; all five pins
+  unchanged. Original processes absent before receipt-first WHOLE intake;
+  literal composed prompt reconstructed. Producer/intake transactions
+  verified. Fable exceeded the1400-word target by78; target time missed
+  2m23, hard cap not reached. Log HASH_ONLY, no full tool-log audit.
+  Primary PDF/text remain local, with public replay pins. Cost443 terminal
+  lane-wall seconds. No worker/science, automatic family, rerank or cadence reset.

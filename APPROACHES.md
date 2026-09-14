@@ -695,11 +695,24 @@ equidistribution would force affine repelling periodic points despite
 detD(F^n)=c^n. Applies afresh after determinant-one source/target polynomial
 automorphisms, not by invariance under independent changes. This excludes
 sqrt(d)<=lambda1<d in the normalized problem; equality and faster growth
-remain. No minimizing frame, properness, inverse, novelty or JC2 conclusion.
+remain. This implication alone supplies no minimizing frame, properness,
+inverse, novelty or JC2 conclusion.
 DLR1601.02226v2 requires equality of ALGEBRAIC and topological degrees,
 not merely lambda1=d, and does not ensure affine/constant-Jacobian-preserving
 projective perturbations. It supplies no equality closure. No automatic
 growth/control/degree family or reranking follows.
+
+The [reviewed minimization extension](box/dynamical-minimization-gate-20260914/INTAKE.md)
+is PROMOTED/MANUAL with named FJ imports: normalized Keller dynamical
+degrees are integers, so the determinant-one source/target-frame infimum
+is attained. This removes a minimizer-EXISTENCE issue, not the missing
+Keller-specific lowering step or upper bound. The same gate proves that
+M=(x^2*y,x*y), a NON-Keller birational map, has dynamical degree>=sqrt2
+after ALL polynomial source/target automorphisms: intersecting contracted
+curves exclude FJ's degree-one dynamics, and the matrix description gives
+a uniform gap. General degree-only minimization is therefore false;
+quasi-finiteness/Keller-specific minimization is not refuted. No exact
+minimizer, degree-bounded algorithm, JC2 closure or automatic successor.
 
 The September14 [Poisson-field applicability check](notes.md#2026-09-14-0652-utc--poisson-field-applicability-and-rational-gauge)
 is DOCUMENTARY/MANUAL, UNPROMOTED. Goodearl--Zhang2605.24835v1 does not

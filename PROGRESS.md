@@ -8,6 +8,16 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+20:07Z: [Dynamical minimization](box/dynamical-minimization-gate-20260914/INTAKE.md)
+passed Fable5.1 FIRST. Normalized Keller maps have integer dynamical degree,
+so the infimum over determinant-one polynomial frames is attained.
+A single non-Keller birational control disproves the corresponding general
+small-minimum claim, uniformly over all polynomial frames. PROMOTED/MANUAL
+with named FJ/DNT imports, not a new dynamics theorem or JC2 proof. The
+Keller-specific lowering/upper-bound step remains. Fable443seconds, no
+AWS computation/worker; all46 ranks unchanged. A separate Jelonek primary
+read supplied closedness, not density or an applicable JC2 closing step.
+
 19:32Z: [Dynamical-degree filter](box/keller-dynamical-degree-gate-20260914/INTAKE.md)
 passed different-model Fable5.1 FIRST: for normalized polynomial Keller
 maps, first dynamical degree is at least mapping degree. PROMOTED/MANUAL
