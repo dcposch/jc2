@@ -47491,3 +47491,101 @@ check compatibility; the old zero-thinness gap is not closed or re-audited.
   impasse. Further work needs an actual-source constraint or complete
   construction; no unchanged eigenvaluation/perturbation/degree-growth
   successor is selected. Normality/selection/algebraization gaps remain.
+
+## 2026-09-14 19:46 UTC — the formal two-chart mate is already algebraic
+
+Tick began19:37:08 on05f0e6cc88ffd23e3f9a264bbc44965aa83c0807.
+ROOT revisited the existing formal construction before asking an
+algebraization theorem to produce a global regular pair. ROOT and one
+bounded native Astra task read WHOLE
+xmodel/danielewski-two-chart-discriminator-astra-20260911.md,
+full82d8c0b9b4ffe984791b2bbe9b6c9798ecd9dc5530a06ae68cded9b852d21ec0.
+Its two plane charts, fixed-H=x obstruction and compatible formal mate
+are already known; the following is a scope refinement, not a new route.
+
+Let R=C[x,t,Z]/(t^2-1-x^2Z), T=SpecR, and set
+
+    E=R[g]/(x^2*g^2-2*t*g+Z),       s=x^2*g-t.
+
+Eliminating Z=2*t*g-x^2*g^2 turns the remaining defining equation
+into (t-x^2*g)^2-1=0. Thus, WITHOUT cancelling x^2,
+
+    E=C[x,g,s]/(s^2-1)=C[x,g] x C[x,g].
+
+The s=-1 component has t=1+x^2*g, Z=2*g+x^2*g^2; it is exactly
+the known chart T minus D_-. Its inverse is (t-1)/x^2 on D(x),
+and Z/(t+1) on D(t+1); these open subsets cover that chart, including
+D_+. The s=+1 component similarly has t=-1+x^2*g, Z=-2*g+x^2*g^2,
+with inverses (t+1)/x^2 and Z/(t-1), and image T minus D_+.
+Here D_+/- denotes x=0,t=+/-1. Both components are open immersions;
+their disjoint union is surjective etale, NOT finite. For example, a
+closed component has a proper dense open image, incompatible with a
+finite map. Also the derivative in g is2*s, a unit.
+
+The banked formal limit G_hat equals the two chart coordinates in their
+x-adic completions. It therefore satisfies the displayed quadratic.
+Its s_hat is -1 near D_+ and +1 near D_-: completion along x=0 is
+disconnected and allows this choice. Completing this cover along x=0
+recovers the same formal scheme. This is an exact algebraic realization
+on an etale cover, not a regular function on the original connected T.
+
+An R-section would force s=+1 or s=-1 everywhere because R is a domain.
+The resulting rational roots (t+1)/x^2 and (t-1)/x^2 fail on D_+ and
+D_- respectively: reduction of x^2*g=t+/-1 there gives0=+/-2.
+Over K=FracR, E tensor_R K=K x K; the quadratic already splits into
+these two rational roots. There is no quadratic FIELD extension, and
+choosing a root in a field extension cannot realize the mixed formal
+choice. The stronger no-mate claim for H=x remains the OLD transition
+proof y+a(x)=v+b(x), v=y+2/x^2. Arbitrary H is still unrestricted.
+
+ROOT separately read Stacks section16.13 (07QX), including the statements
+and proofs of16.13.1--2: https://stacks.math.columbia.edu/tag/07QX .
+Those approximation statements concern finite polynomial systems over
+local G-rings and solutions in a henselian ring or etale extension. They
+do not supply a section over this global R or identify derivative
+unknowns with derivatives of an unknown function. No approximation
+theorem is needed for the exact E calculation; no claim excludes all
+possible global algebraization methods. Other web hits stayed discovery
+only; no broad-sweep credit or imported Darboux theorem.
+
+Native author independently COMPLETED, message-only, before intake;
+ROOT checked the x=0 formulas and whole answer. Scoped canonical
+searches found no exact prior E presentation, not an exhaustive novelty
+census. MANUAL/PRODUCER-CHECKED, UNPROMOTED, unused by any client;
+no provisional root, FIRST, new report transaction, family or successor.
+No new closing discriminator or mathematical ranking change this tick.
+
+## 2026-09-14 19:46 UTC LIVE STATE — algebraic cover is not global descent
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved. Basis
+  05f0e6cc88ffd23e3f9a264bbc44965aa83c0807=origin/master after fresh fetch.
+  Contributor README/CI commits already incorporated; no pull or stash
+  needed. Policy team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDIT79fe0615/FALLACYe47fd16c unchanged.
+  Bank this journal only; preserve pilot-local.log, raw local primary
+  PDF/text/log, and excluded nested trees.
+- All native authors COMPLETED; no live paid lane, worker, scientific
+  child, exec session, report lease, provisional root, FIRST debt or
+  descendant. All46 ranks unchanged; no FULL trigger or automatic
+  successor to the already-known two-chart/formal-mate barrier.
+- FULL1300 completedSep14 13:33:26/nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 overdue with
+  inherited access/coverage/48h debt. Mathstodon/Palomar STOPPED,
+  Miyanishi legitimate-PDF gate unchanged. Targeted reads reset no clock.
+- GitHub sweep: blocked, gh not authenticated; fresh check19:44.
+  Binary installed; last success none established,0triaged/openUNKNOWN;
+  originalSep14 16:00 miss retained. DC authentication only needed,
+  surfaced this turn; check next tick. No queue item/reply/contact/merge.
+- Fresh19:44 personal/us-east-1 pending/running/stopping/stopped selectors
+  jc2fleet=1 and Namejc2-worker-* both[] exit0. User jc2 running/transitioning
+  units0; coordinator3674934 tree no science; pswpin/out0/0. No AWS
+  mutation, science or paid model. Retained EBS billable; Fable100789
+  cumulative terminal lane-wall seconds unchanged, not tokens/credits/
+  CPU/billed usage. Native use and credit balances unknown. Astra primary,
+  Fable5.1 high-value independent work, Sol fallback; no occupancy lanes.
+- Systems NO_UPGRADE/no measured acceleration, original48h debt;
+  engineering CLOSED and scalar/preflight/r3 PARKED. No human-only
+  global impasse. Next construction task must change the GLOBAL source
+  or descent test, not merely algebraize these already-algebraic formal
+  charts. No new proof/counterexample or unrestricted S/T exclusion.
