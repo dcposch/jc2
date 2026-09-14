@@ -159,6 +159,15 @@ every possible family invariant; no new normality or JC2 result follows.
 
 [TRACE-CUTOFF/SPLIT review](xmodel/keller-trace-shortcuts-gate-fable5-20260911.md) stops rank-only B scans: fixed pole orders permit arbitrarily late failure, and one element's every power can pass while its full algebra fails. Preserve the TRUE first-N Newton criterion for traces in the polynomial ring. For an actual nonproper source, Hom_A(Tr(R),R)=0; an A-linear trace section already implies properness. Conditional IC/de Rham comparison gives H2(ker Tr)=C^components, not its vanishing. Stop assumed splitting/semisimplicity, not all kernel methods. ROOT's iteration/derivative-gcd test stays MANUAL/UNREVIEWED and supplies no node-formation contradiction.
 
+**Mixed-Hodge weights do not remove that cancellation.** The September14
+[exact extension screen](xmodel/trace-weight-source-swarmHQ-astra-20260914.md)
+recovers the September13 14:42/17:47 and September14 05:48 stops. For the
+actual P=F_*Q_X^H[2], I=W_2 P and C=P/I, source acyclicity makes
+H^{-1}(C)->H^0(I) an isomorphism, not zero. Both sides can have weight2;
+pure graded pieces do not split the nonproper extension. KNOWN/MANUAL,
+PRODUCER-CHECKED/UNPROMOTED, no new source constraint. A new notation,
+duality operation or repetition of this weight check earns no successor.
+
 The [September11 iteration report](xmodel/keller-trace-iteration-root-20260911.md),
 Section4, already contains the exact derivative-gcd bound and eventual
 birationality on a fixed curve orbit. Do not commission it again as a new

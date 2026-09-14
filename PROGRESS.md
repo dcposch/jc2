@@ -8,6 +8,15 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+15:58Z: [Actual-source weight screen](xmodel/trace-weight-source-swarmHQ-astra-20260914.md)
+ends KNOWN/NO_NEW_SOURCE_CONSTRAINT: the precise boundary connecting map
+is an isomorphism compatible with weights, as the September13 history
+already records. ROOT's elementary-matrix and nonproperness-topology
+screens likewise recovered existing gaps. No new mathematical progress,
+promotion, Fable lane or computation. Added a concise canonical pointer
+to prevent another weight-only repeat; FULL1300 already supplied the
+recent zero-base reset, so no identical full round was commissioned.
+
 15:42Z: [Rational-mate polynomialization check](xmodel/rational-mate-polynomialization-swarmHQ-astra-20260914.md)
 excludes every dominant rational source substitution for ROOT's specified
 constant-Jacobian rational pair, uniformly in Q and the integration constant.

@@ -46258,3 +46258,86 @@ no exhaustive novelty, whole-source reading or broad-sweep credit is claimed.
 - Bank the single sealed report/manifest and own APP/PROGRESS/notes after
   staged verification, then commit/push. Preserve unrelated pilot-local.log
   and historical bulk outputs. No accepted-bound reproof or foundation audit.
+
+## 2026-09-14 15:58 UTC -- two global lenses recover old gaps
+
+Previous goal turn: scoped PROGRESS, banking the rational-pair obstruction.
+This continuation: NO NEW MATHEMATICAL PROGRESS / NO_NEW_CLOSING_TEST.
+No actual-source implication, global exclusion or counterexample emerged.
+
+Astra defined the actual mixed-Hodge extension 0->I->P->C->0 with
+P=F_*Q_X^H[2], I=W_2 P. Source A2 forces the connecting map
+H^{-1}(Y,C)->H^0(Y,I) to be an isomorphism. Boundary weight3 shifted
+by -1 and core weight2 can cancel at weight2; Saito's strict Ext-vanishing
+inequality excludes neither this extension nor the cancellation. This is
+the SAME September13 14:42/17:47 and September14 05:48 gap, not a new
+obstruction. Existing open-source and changed-target controls retain their
+different scopes; no new control was built or hypothesis generalized.
+
+Report xmodel/trace-weight-source-swarmHQ-astra-20260914.md,
+full1e3828cd7517d419432ca28357174d24c35cd80772f6f5336fa922a925c1c790,
+manifest2d02dfe461976cb2af711827f1dc6f0a5d563fecc178ce50a987187de95d09a0,
+body52f05cc071470c131a5c98d8c3327df2d648c3ab6b95201f79801d9e5416dfbc.
+First15:46:09, history collision15:49:55 stopped mathematics, finalized
+15:52:49, terminal15:52:59, before original16:01:09/16:06:09 caps.
+Independent COMPLETED status preceded expected-manifest verification and
+WHOLE189-line report/manifest intake. Post-read pins unchanged. MANUAL,
+PRODUCER-CHECKED/UNPROMOTED; no different-model FIRST or new review debt.
+The report names its selected Saito primary pages, not a whole-paper audit;
+ROOT checked the retained PDF hash, not those pages afresh. No promotion.
+
+ROOT's exact-matrix lens hit AUDIT's August24 EXACT-COFRAME/Wright entry
+before any computation. Both-gradient E2 membership still needs proof;
+the Broughton first row and its completion are already closed. Primary
+Shpilrain--Yu discovery does not override the recorded Proposition2.4
+warning. No matrix family, algorithm, source reproof or separate report.
+Jelonek2011.03472v3 Theorem1.2 retains SMOOTH nonproperness in its positive-
+Euler conclusion, exactly as notes41977 records. ROOT read the rendered
+v2 mathematical body and v3 introduction/section2 through the selected
+proof passage, not the entire v3/v4--v6 history afresh. No new import.
+Braun--Dias--Venato-Santos DOI10.1017/prm.2025.10079 remains abstract-only:
+it requires an AMBIENT homeomorphism to a real codimension-two affine
+subspace, not merely a polynomial parametrization of a complex curve.
+Primary discovery recovered that requirement; direct DOI/author fetches
+failed and Cambridge returned429. No bypass or further retrieval selected.
+Other targeted web hits supplied no new actionable result; no BROAD credit.
+
+## 2026-09-14 15:58 UTC LIVE STATE -- known screens stopped
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved, all46 ranks unchanged. This targeted
+  micro-round is not a new full reset or rank-changing theorem. FULL1300
+  was ALREADY a zero-base reset; no identical echo round is selected.
+- Basisa6fe1fa95ab05e61af3e7bf9cf53744ae054f8fa=origin/master, fresh15:58
+  fetch unchanged. Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDITbda4b17b unchanged. Own canonical edits follow
+  terminal author intake; all charged inputs unchanged during research.
+- All authors terminal; no paid lane, science, provisional root, FIRST
+  queue, descendant or authorized successor. Added only the missing
+  weight-screen navigation pointer, not a new endpoint or theorem claim.
+- FULL1300 last completedSep14 13:33:26; nextSep15 01:33:26; original
+  Sep14 10:17:55 miss retained. BROAD originalSep12 21:53:56.598798932
+  overdue, previous completion/coverage/access/48h qualifications unchanged.
+  Mathstodon/Palomar STOPPED; targeted primary discovery resets no clock.
+- Resources: fresh15:58 personal/us-east-1 jc2fleet=1 and Name=jc2-worker-*
+  selectors both[], terminalexit0, pending/running/stopping/stopped scope.
+  User jc2 running/transitioning services empty; scoped coordinator3674934
+  tree15:51 has no scientific child. pswpin/out0/0 at15:43 and15:58,
+  zero delta. No AWS mutation or science; retained evidence EBS billable.
+  Fable cumulative100220 terminal lane-wall seconds unchanged, not credits,
+  billing/tokens/CPU; balances unknown. Astra primary, Fable independent,
+  Sol fallback; no occupancy allocation.
+- GitHub sweep: blocked, gh not authenticated (binary absent15:58).
+  Last successful none established;0 triaged, openUNKNOWN. Next tick and
+  original16:00 checkpoint retained; DC installation/authentication needed.
+  Miyanishi legitimate-PDF prerequisite unchanged, no retry selected.
+- Systems15:58 NO_UPGRADE: history recovered duplicates before computation,
+  but the weight lane itself duplicated an earlier mathematical screen.
+  The new APP pointer reduces that retrieval gap without a second ledger;
+  no measured software acceleration or historical48h-debt clearance.
+  Engineering closed; scalar/preflight/r3 PARKED. No human-only global impasse.
+- Bank one sealed report/manifest and own APP/PROGRESS/notes, explicitly
+  staged verify then commit/push. Preserve pilot-local.log, bulk artifacts
+  and nested repositories. Next selection needs a genuinely different
+  actual-source mechanism or new primary evidence, not relabelled weights,
+  matrix membership, smoothness, formal inversion or a stopped control.
