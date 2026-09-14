@@ -8,6 +8,16 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+18:44Z: [Target-shear genus](xmodel/target-shear-genus-swarmHQ-root-20260914.md)
+grows without bound at fixed mapping degree CONDITIONAL on a Keller
+counterexample, after a suitable initial target frame. This separates
+arbitrary-frame genus ceilings from minimal-frame bounds; neither is
+supplied. An orthogonal real-symplectic check gives a finite-fiber
+nonproper exact local map after Nash rectification of Pinchuk, losing
+complex polynomiality. ROOT/native Astra, MANUAL/PRODUCER-CHECKED,
+UNPROMOTED; two bounded failed global shortcuts, not a JC2 gap closure.
+No paid lane, worker, computation or automatic family successor.
+
 18:17Z: [Rational-mate pole removal](xmodel/rational-mate-polar-fibers-swarmHQ-root-20260914.md)
 gives a finite conditional polynomialization test: a polynomial submersion's
 rational mate becomes polynomial after a target-rational correction when

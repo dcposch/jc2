@@ -47095,3 +47095,120 @@ This is a bounded source/scope micro-round, no global rerank or FULL trigger.
   global impasse. Next work needs a different actual candidate or an
   actual-source implication; no genus-only filter on a fixed component,
   pole-control expansion or duplicate eigenvaluation reformulation.
+
+## 2026-09-14 18:44 UTC — target-shear genus and the real-symplectic boundary
+
+The operator synchronization turn was NO MATHEMATICAL PROGRESS: pull
+refused the unrelated dirty pilot-local.log, but fresh fetch verified
+HEAD=origin/master=db5f94168f1cf1eb6eb8b25b62961f94efbc1642, already
+containing bf1e1ffe and91041f0b. No stash, reset, rebase or log edit was
+needed. This research tick began18:35; another fresh fetch18:44 keeps
+that basis. Campaign policy hashes are unchanged. Several combined tool
+outputs clipped; subsequent bounded reads recovered the required policy
+sections and the selected source passages, not an exhaustive history read.
+
+Two native bounded tasks completed, with terminal status independently
+checked. No paid lane or scientific computation was launched. First,
+ROOT and Astra tested an actual-source consequence of target variation,
+not another curve-only genus argument. Let B_i be the AFFINE branch
+components of the full finite normalization of an assumed counterexample,
+not every nonproperness component. In one generic SL2 target frame,
+each b_i(U,V) is monic of U-degree m_i=total degree. Generic graphs
+U+V^N+cV=t meet B_i at exactly N*m_i transverse good points for N>=2.
+With delta_i=d-(number of generic inertia cycles), M=sum m_i*delta_i>0,
+the compact inverse-curve Hurwitz formula is
+
+    2*g_N-2=N*M-d-s_N,     1<=s_N<=d.
+
+Only places over q=infinity count in s_N; deleted finite-value points
+remain in the compact cover. Per-N generic irreducibility is attached
+to the primary Bertini theorem, not assumed for every fiber. The ring
+C[p+q^N,q] is unchanged, so mapping degree stays d while genus diverges.
+This conditionally propagates an ASSUMED map; it does not exhibit one.
+An arbitrary-frame genus ceiling would therefore already prove JC2,
+whereas a selected/minimal-frame bound is a different open requirement.
+No bound is proved false: if JC2 holds the nonlinear case is empty.
+The old September2 report's non-Keller controls remain correctly scoped.
+No identical conditional statement was found in the targeted searches;
+no exhaustive priority or new Keller-only constraint is claimed.
+
+ROOT read Stacks0BMB purity statement/proof, Poonen--Slavov2001.08672v2
+introduction/Theorem1.5, and Stacks0C1B's characteristic-zero curve formula.
+These are standard/source-statement imports, not fresh whole-proof audits
+of every dependency. The report retains automorphism, hyperelliptic and
+bad-target-frame hand controls, no CAS. New report:
+xmodel/target-shear-genus-swarmHQ-root-20260914.md,
+full c3fa621dc03cab71470a063d85037f2bd61963f53bb7be87244a1dfb1a7d0c70,
+body ee95976b3c7c7ef1b1d7fca062e375032ba3670c17df51eb853944e1d0241ed3,
+manifest d1ee52f8f9f89e4b03506b9edd78fbb497c3c0ced0a0f113774768bca4e70f89.
+The local transaction completed begin/close/finalize/verify; collision
+session52977 was polled to authoritative exit0, EMPTY. Producer-checked,
+UNPROMOTED, no provisional root/descendants; native assent is not FIRST.
+
+Second, the orthogonal symplectic test supplied a decisive RELAXED
+countercontrol. Campbell1001.3318v1 sections2--3 provides a real
+polynomial Pinchuk map P with positive polynomial determinant J, at most
+two real preimages and exactly two off its asymptotic curve. Define
+
+    H(x,y)=(x, integral_0^y J(x,t)dt),     S=P composed with H^-1.
+
+For fixed x the positive-polynomial integral is increasing onto R.
+Hence H is a global Nash real-analytic diffeomorphism, detH=J, and
+detS=1. S retains P's nonproperness and real fiber counts. S times
+id_R2 is an exact local symplectomorphism of standard R4: its primitive
+difference is closed, and H1(R4)=0. These are REAL fiber cardinalities,
+not a complex function-field degree. Complex-holomorphic polynomiality
+is lost, so this is not a Keller counterexample. This rejects the pure
+real-symplectic relaxation, not all uses of complex/algebraic structure.
+Source https://arxiv.org/pdf/1001.3318v1 ; native read the whole273 parsed
+lines, ROOT independently read the displayed map/J and fiber assertions
+in sections2--3. No raw PDF pin or independent polynomial replay.
+
+Ritter1003.1781v5 section9.1/Theorem9.5 explicitly requires a
+Liouville-subdomain EMBEDDING, with contact-type collars for no escape.
+An exact local map is not that datum; the theorem does not supply
+properness/injectivity. Native read motivation and printed32--34 through
+Theorem9.6's statement; ROOT read motivation and selected9.1/9.2 passages
+including the definition and9.5 statement, not the whole86page paper.
+Source https://arxiv.org/pdf/1003.1781v5 . Historical Floer searches
+located plane-curve inequalities, not this shortcut. No exhaustive census,
+capacity theorem, new source infinity hypothesis or automatic successor.
+The orthogonal result is message/journal-only, MANUAL/UNPROMOTED.
+
+Both tests end here. All46 ranks/global gaps unchanged; this is a scoped
+micro-round, not a critical FULL trigger. Neither targeted source check
+resets the overdue broad-sweep clock. Engineering remains CLOSED; these
+results do not justify software work, parameter/control farms or workers.
+
+## 2026-09-14 18:44 UTC LIVE STATE — genus frame and symplectic source gaps
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis db5f94168f1cf1eb6eb8b25b62961f94efbc1642.
+  Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  COORD4ce5b29a/AUDITbda4b17b/FALLACYe47fd16c unchanged. Bank only
+  owned report/manifest, APP, PROGRESS and notes; preserve pilot-local.log,
+  bulk outputs and excluded nested repositories. No synchronization debt.
+- Both current native tasks COMPLETED; other native author also completed.
+  No live model lane, worker, scientific child, open report transaction,
+  provisional root, FIRST debt or descendant. New conditional report is
+  unpromoted/unused; future consequential use requires different-model FIRST.
+- FULL1300 completedSep14 13:33:26, nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 overdue, inherited
+  access/coverage/48h qualifications unchanged. Mathstodon/Palomar STOPPED;
+  Miyanishi legitimate-PDF prerequisite unchanged. No full-sweep credit.
+- GitHub sweep: blocked, gh not authenticated; binary absent18:43.
+  Last success none established,0 triaged,openUNKNOWN; originalSep14
+  16:00 miss retained. DC installation/authentication needed, next check
+  next tick. No queue reply, contact or merge.
+- Fresh personal/us-east-1 pending/running/stopping/stopped selectors
+  jc2fleet=1 and Namejc2-worker-* both[] exit0.18:43 user jc2 active/
+  transitioning units empty; coordinator3674934 tree has no scientific
+  child; pswpin/out0/0. No AWS mutation or science; retained EBS billable.
+  Fable100220 cumulative terminal lane-wall seconds unchanged, not credit,
+  token, CPU or billing usage; native usage unmeasured, balances unknown.
+  Astra primary, Fable5.1 highest-value independent work, Sol fallback.
+- Systems NO_UPGRADE, no measured acceleration; original48h debt retained.
+  Engineering CLOSED, scalar/preflight/r3 PARKED. No human-only global
+  impasse. Next action must obtain an actual-source constraint or genuinely
+  new construction, not extend the completed target-shear or real-symplectic
+  controls. Global normality/source-selection/algebraization gaps remain.

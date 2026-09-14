@@ -343,6 +343,26 @@ new source hypothesis or web/classification successor is supplied.
 
 The [primary-text priority check](box/generic-pencil-genus-priority-astra-20260912/ROOT-INTAKE.md) identifies the full-source generic genus-zero endpoint as KNOWN/DUPLICATE by [Chau0804.3172v3 Theorem2](https://arxiv.org/pdf/0804.3172v3), after choosing two independent rational generic directions; this does not duplicate the proper-block attachment. [Chau1005.3866v2 Theorem3](https://arxiv.org/pdf/1005.3866v2) requires ALL fibers irreducible and of equal genus, not just generic constancy. Exact generic-genus-one priority remains unresolved in the two substantive texts read. No exhaustive novelty claim, opposite bound or automatic genus ladder follows.
 
+The September14 [target-shear discriminator](xmodel/target-shear-genus-swarmHQ-root-20260914.md)
+is MANUAL/PRODUCER-CHECKED, UNPROMOTED: conditional on an actual
+counterexample, one generic linear target frame followed by (p+q^N,q)
+has generic inverse-line genus 2g_N-2=N*M-d-s_N, M>0 and1<=s_N<=d.
+Mapping degree d is unchanged. Thus a ceiling valid in EVERY target frame
+would already prove JC2; no such ceiling is disproved or supplied, and
+a minimal/specially selected frame is a different missing hypothesis.
+This is conditional propagation, not an attained Keller family. No
+global rerank, FIRST, genus/control successor or new source constraint.
+
+**Real symplectic relaxation is insufficient.** The September14
+[18:44 journal check](notes.md#2026-09-14-1844-utc--target-shear-genus-and-the-real-symplectic-boundary)
+rectifies a real Pinchuk map's positive Jacobian by a Nash source
+diffeomorphism. Its product with R2 is a nonproper exact local
+symplectomorphism of standard R4 with at most two real preimages.
+It loses complex-holomorphic polynomiality, so is NOT a JC2 construction.
+Ritter1003.1781v5 Theorem9.5 assumes a Liouville-subdomain EMBEDDING;
+it supplies neither embedding nor properness for a local map. MANUAL,
+UNPROMOTED; no capacity/Floer/control-family successor is selected.
+
 **Exact Liouville fibers need not be rational.** The September14
 [ROOT countercheck](xmodel/exact-plane-curve-genus-swarmHQ-root-20260914.md)
 gives smooth closed curves x^2+x^(3n+2)y^n=c, odd n>=3,c!=0, with genus
