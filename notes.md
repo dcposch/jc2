@@ -46822,3 +46822,86 @@ results. Record them in the journal rather than manufacture another report.
   actual-source hypothesis or complete polynomial construction, not another
   six-sheet passport, field-tower relabeling, D=B class-group echo or local
   control. Unchanged closing gaps earn no automatic incremental successor.
+
+## 2026-09-14 17:58 UTC — infinity test recovers its missing inequality
+
+Previous turn completed bounded source intake and stopped its successors;
+it did not close a JC2 gap. This tick began17:42:06. Fresh fetch confirms
+593b0c4474567b3b1a127781a5b830dbb84b4bc6=origin/master, with only the
+unrelated pilot-local.log modified. No new mathematical progress in this
+pass: history checks recovered already-stopped line-image, ruling,
+Lie-action and Long symplectic-reduction arguments before commissioning
+new tasks on them. ROOT's exploratory derivations are not new results.
+The Long primary read covered the introduction, formulas, coordinate
+change and symplectic argument through Section5, not the entire paper:
+https://arxiv.org/html/2608.23777v1 . The September13 06:26 journal already
+records the embedded-plane-transfer theorem and the direct reduction;
+no revalidation, import, slice or successor was selected.
+
+One message-only native Astra task tested the ACTUAL original source-line
+valuation at infinity. It completed and was independently observed
+COMPLETED before intake, inside the <=12minute/18:05 hard bound. No files,
+code, paid model, worker or descendants. ROOT read the exact source-line
+argument in xmodel/ideation-20260912T0920Z-synthesis.md:148--178 and the
+whole box/normal-log-numerical-gate-astra-20260912/ROOT-INTAKE.md, then
+recovered the September14 03:26 attachment at notes44452--44507.
+
+With d=max(deg f,deg g), r_L=coeff_L rho_num^*R and adjoint degree k>=0,
+the EXISTING calculation is
+
+    A_Y^num(L)=3d-r_L-2,       r_L>=2d+k.
+
+Half-ramification numerical LC at L would instead require
+r_L<=2A_Y^num(L), equivalently r_L<=2d-4/3. The source identity supplies
+no such opposite inequality. A genuine contraction matrix still needs
+every ramification intersection; negative definiteness and rational
+singularities do not supply the missing bound. The normal-log criterion
+stays promoted/conditional, and its source-line deduction manual/unpromoted.
+No new independent theorem or different-model FIRST is claimed.
+
+Correction affecting task selection: ROOT's invitation said the LC gap
+was ONLY at q. Withdrawn. The old attachment explicitly permits additional
+failures elsewhere; it gives rational singularities away from q, not LC
+of the pair there. q locates a necessary source-line failure, not all
+possible failures. APP now makes that distinction explicit. Native fresh
+primary reading was limited to Schroer1807.07297v1's introduction/surface
+construction; no new external result imported. No q/tree/control successor.
+ROOT's finite-module/differential-stability thoughts also supplied no new
+actual-source implication and are not recorded as lemmas.
+
+Some overbroad history regexes clipped on hashes/unrelated words; later
+exact contexts resolved the cited overlaps. No exhaustive corpus or broad
+web audit is claimed. Search-only valuation-label rediscovery supplies no
+new gate. No report is manufactured for these recovered mechanisms.
+
+## 2026-09-14 17:58 UTC LIVE STATE — no new closing test
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved, all46 ranks and global gaps unchanged.
+  Basis593b0c4474567b3b1a127781a5b830dbb84b4bc6; policy basis
+  team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  COORD4ce5b29a/AUDITbda4b17b/FALLACYe47fd16c unchanged. Bank APP and
+  notes only; preserve pilot-local.log, bulk outputs and nested repositories.
+- All native authors COMPLETED. No paid lane, scientific child, worker,
+  provisional root, FIRST debt or descendant. No new mathematical theorem.
+  Routine scope/history micro-round, no global rerank or echo FULL.
+- FULL1300 completedSep14 13:33:26, nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 overdue with
+  inherited coverage/access/48h qualifications. Targeted reads reset none.
+  Mathstodon/Palomar STOPPED; Miyanishi legitimate-PDF prerequisite unchanged.
+- GitHub sweep: blocked, gh not authenticated; binary still absent this
+  tick. Last successful none established,0 triaged,openUNKNOWN. Original
+  Sep14 16:00 miss retained; installation/authentication needed from DC,
+  next prerequisite check next tick. No external queue action or contact.
+- Tick personal/us-east-1 pending/running/stopping/stopped worker selectors
+  jc2fleet=1 and Name=jc2-worker-* both[] exit0; user jc2 active/transitioning
+  units empty.17:57 coordinator3674934 tree has no scientific child;
+  pswpin/out0/0. No AWS mutation or compute, retained EBS billable.
+  Fable cumulative100220 terminal lane-wall seconds unchanged, not billing,
+  credits, tokens or CPU. Native usage unmeasured, balances unknown.
+  Astra primary, Fable5.1 independent high-value gates, Sol fallback.
+- Systems NO_UPGRADE, no measured acceleration; engineering CLOSED,
+  scalar/preflight/r3 PARKED, historical48h debt unchanged. No human-only
+  global impasse. The next task must change an actual-source implication
+  or provide a complete construction; recovered identities and renamed
+  hypotheses do not authorize another tranche or a control family.

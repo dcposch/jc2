@@ -443,6 +443,10 @@ half-ramification LC at q, where the old source-line failure already lies;
 q need not itself be singular. No new global closing implication or
 singularity/tree/control successor follows.
 
+This locates one necessary half-ramification LC failure, not every possible
+failure. Rationality away from q does not establish LC of the pair there;
+the September14 17:58 check withdraws ROOT's stronger task wording.
+
 The September14 [03:41 exactness/index-one check](notes.md) reuses the
 EXISTING T:t^2-1=x^2Z, not a new surface family. Its marked plane area form
 is globally exact and nowhere zero, while the finite full-normalization map
