@@ -47816,3 +47816,98 @@ targeted reads earn no broad-sweep or coverage-debt reset.
   or a genuinely different complete construction and cheapest global
   discriminator, not another separable-primitive or translated-pencil
   family. Normality, source selection and algebraization remain open.
+
+## 2026-09-14 20:33 UTC — scope correction and logarithmic-lattice test
+
+Previous turn: NO GLOBAL-GAP PROGRESS. Correction to20:25's last genus
+sentence: the accepted genus floor concerns generic target LINE directions,
+not a single chosen component p. No exclusion of a hypothetical mate for
+that p is charged to the genus theorem. The explicit nonzero-residue
+proof already excludes its rational mate and is unchanged. This repeats
+the scope distinction already explicit in APPROACHES, not a theorem reversal.
+
+Tick began20:26:22; fresh fetch unchanged at2f5b4828, runtime log preserved.
+ROOT reread the current807-line APPROACHES in bounded ranges and the
+September13 16:10 compactified-variation stop before choosing the test.
+Active native Astra public_literature_delta, confirmed running20:33:
+one <=12-minute message-only test, stop no later than20:41, of whether
+target branch-logarithmic derivations lift to the full finite normalization
+and add a genuine whole-plane constraint. Inputs: whole current APP/FALLACY,
+scoped source/history, no excluded nested trees. Do not infer transverse
+regularity from logarithmic lifting or repeat adjoint/formal-flow containment.
+No files, CAS, paid lanes, successors or new provisional claims authorized.
+ROOT checks the same local-to-global implication independently; all other
+agents remain completed. Existing FULL/BROAD/system clocks and holds unchanged.
+GitHub sweep blocked: gh installed, not authenticated, fresh20:26 check;
+DC authentication prerequisite only, original16:00 miss retained.
+
+## 2026-09-14 20:37 UTC — logarithmic lifting is known, not transverse control
+
+Native Astra public_literature_delta independently COMPLETED before intake;
+ROOT read its whole message and checked the local valuation and determinant.
+NO_NEW_SOURCE_CONSTRAINT, MANUAL/DOCUMENTARY, UNPROMOTED and unused.
+Let A=C[p,q] subset S subset R=C[x,y], with S the finite normalization in
+Frac R, and let h define its REDUCED BRANCH divisor B. Then
+
+    {delta in Der_C(A): delta_tilde(S) subset S}
+      = {delta: delta(h) in h*A}.
+
+This is classical: Kallstrom, arXiv:math/0604559v3, Theorem2.2.1(L2--L3),
+https://arxiv.org/pdf/math/0604559v3 . Finiteness gives residual algebraicity;
+normality and characteristic zero give the Krull/tame hypotheses. ROOT read
+the introduction, theorem/proof and selected equal-characteristic local proof,
+not the whole paper. Version July21,2007; internal PDF date November2,2018.
+Locally h_i=c*z^e, e>1: regularity implies valuation(delta(h_i))>=e-1;
+the base-field valuation is a multiple of e, hence >=e. The converse uses
+tame lifting and the height-one intersection. Index-one omitted components
+do not impose this condition; B must NOT be replaced by nonproperness D.
+
+ROOT/Astra's direct source test: for two logarithmic fields with coefficient
+rows (a_i,b_i), their determinant is in h*A, by tangency at each generic
+branch point. Their inverse-Jacobian lifts consequently wedge into
+h(p,q)*R*(partial_x wedge partial_y). For nonconstant h this does NOT span
+the ordinary source tangent frame along h(p,q)=0, even using R-coefficients.
+Moreover arbitrary R-coefficients need not extend across the normalization
+boundary. Target coordinate changes transport the SAME intrinsic module;
+they add no transverse partial. Thus the proposed strengthening stops, not
+all derivation methods. No source-forced extra containment or new FIRST.
+
+A separate bounded primary read of Rodriguez Diaz2512.23614v1,
+https://arxiv.org/html/2512.23614v1 , covered the mathematical discussion
+through its final paragraph, not the cited originals or published revision.
+It diagnoses Kraus's unjustified derivative at a pole at infinity; it offers
+no missing ramification bound. No resultant/Puiseux theorem was imported or
+repair lane selected. Publisher PDF/page retrieval failed; arXiv was openly
+available. Other search snippets stayed discovery only. These are targeted
+scope checks, not a broad sweep or a new proof/counterexample.
+
+## 2026-09-14 20:37 UTC LIVE STATE — logarithmic route stopped at its boundary
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis2f5b482823f56eca5714e330429ae8afd79d6e44,
+  fresh fetch20:26 unchanged. Policy team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  fresh COORD4ce5b29a/AUDIT58870b4b/FALLACYe47fd16c unchanged.
+  Bank notes/current daily digest only; preserve runtime log, raw local
+  sources/logs and excluded nested trees. No promoted claim changed.
+- All native agents COMPLETED; no live paid lane, worker, scientific child,
+  exec session, report lease, provisional root, FIRST debt or descendant.
+  All46 ranks unchanged; scoped known endpoint, no FULL trigger or automatic
+  logarithmic/operator/control successor. Genus wording corrected above.
+- FULL1300 completedSep14 13:33:26/nextSep15 01:33:26; original10:17:55 miss
+  retained. BROAD originalSep12 21:53:56.598798932 overdue with inherited
+  access/coverage/48h debt. Mathstodon/Palomar STOPPED; Miyanishi legitimate
+  PDF gate unchanged. No targeted-read clock reset.
+- GitHub sweep blocked: gh installed, not authenticated, fresh20:36;
+  last success none established,0triaged/openUNKNOWN, original16:00 miss
+  retained. DC authentication only needed; surface/check next tick.
+- Fresh20:35 personal/us-east-1 nonterminal selectors jc2fleet=1 and
+  Namejc2-worker-* both[] exit0; user jc2 running/transitioning units0;
+  coordinator3674934 tree no science, pswpin/out0/0. No AWS mutation or CAS.
+  Fable101232 cumulative terminal lane-wall seconds unchanged, not billed
+  usage/tokens/credits. Native usage/balances unknown; retained EBS billable.
+  Astra primary, Fable5.1 highest-value independent work, Sol fallback.
+- Systems NO_UPGRADE/no measured acceleration; original48h debt,
+  engineering CLOSED and scalar/preflight/r3 PARKED. No human-only global
+  impasse. The next task must change a missing actual-source implication
+  or global construction discriminator; normalization stability, source
+  selection and polynomial algebraization remain gaps, not assumptions.

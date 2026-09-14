@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+20:37Z: [Logarithmic-lifting check](notes.md#2026-09-14-2037-utc--logarithmic-lifting-is-known-not-transverse-control)
+recovers a classical theorem but no new source constraint: the extendable
+fields remain tangent to the branch divisor and cannot supply a transverse
+frame. ROOT/native Astra, MANUAL/DOCUMENTARY, UNPROMOTED; no paid lane or
+computation. Corrected20:25's redundant genus wording: the accepted floor
+is generic-direction, not fixed-component; the candidate's direct residue
+obstruction is unchanged. No JC2 gap closure or change to promoted claims.
+
 20:07Z: [Dynamical minimization](box/dynamical-minimization-gate-20260914/INTAKE.md)
 passed Fable5.1 FIRST. Normalized Keller maps have integer dynamical degree,
 so the infimum over determinant-one polynomial frames is attained.
