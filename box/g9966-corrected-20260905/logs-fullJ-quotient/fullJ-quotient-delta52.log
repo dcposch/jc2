@@ -1,0 +1,61 @@
+delta52 inner minor solved in 1.53s
+delta52 inner low-weight product: 25 slots, 1.94s
+delta52 inner incidence reduced: 14 pivots, 3.00s
+delta52 inner: 76 preincidence, 14 QQ* pivots, 0 residual, 3.29s
+delta52 inner minor solved in 1.49s
+delta52 inner low-weight product: 25 slots, 1.90s
+delta52 inner incidence reduced: 14 pivots, 2.97s
+delta52 inner: 76 preincidence, 14 QQ* pivots, 0 residual, 3.25s
+{"status": "MATERIALIZED", "branch": "delta52", "source_image_sha256": "2bbd64819b07cc772872d70d83a943297a85bc86e60b0cbe028413cba04055c3", "generator_count": 1063}
+delta52: certified_quotient_transition 4 nonzero rows before QQ* reduction
+delta52: certified_quotient_transition 6 residual, 46 free; exact Singular
+delta52: certified_quotient_transition dimension=44
+delta52: generating exact w Jacobian bands t90..97
+FLINT rank-two quotient encoded 44 base generators plus retained Zface_H2_2; 4.32s
+FLINT quotient bands 90..97: 968142 terms; 1820.38s
+delta52: Jacobian_t90 55 nonzero rows before QQ* reduction
+delta52: Jacobian_t90 6 residual, 45 free; exact Singular
+delta52: Jacobian_t90 dimension=43
+Traceback (most recent call last):
+  File "/home/ubuntu/g9966-corrected-jacobian-quotient/deep_resume_jacobian_quotient.py", line 229, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-quotient/deep_resume_jacobian_quotient.py", line 215, in main
+    assert all(sp.Poly(value,sp.Symbol(quotient_cfg['d'])).degree()<=1 for value in band.values())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-quotient/deep_resume_jacobian_quotient.py", line 215, in <genexpr>
+    assert all(sp.Poly(value,sp.Symbol(quotient_cfg['d'])).degree()<=1 for value in band.values())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/polys/polytools.py", line 190, in __new__
+    return cls._from_expr(rep, opt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/polys/polytools.py", line 319, in _from_expr
+    rep, opt = _dict_from_expr(rep, opt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/polys/polyutils.py", line 388, in _dict_from_expr
+    rep, gens = _dict_from_expr_if_gens(expr, opt)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/polys/polyutils.py", line 327, in _dict_from_expr_if_gens
+    (poly,), gens = _parallel_dict_from_expr_if_gens((expr,), opt)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/polys/polyutils.py", line 242, in _parallel_dict_from_expr_if_gens
+    poly[monom] += Mul(*coeff)
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/decorators.py", line 248, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/decorators.py", line 118, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/expr.py", line 234, in __add__
+    return Add(self, other)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/operations.py", line 108, in __new__
+    c_part, nc_part, order_symbols = cls.flatten(args)
+                                     ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/add.py", line 347, in flatten
+    cs = s._new_rawargs(*((c,) + s.args)) # type: ignore
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

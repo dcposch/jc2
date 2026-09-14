@@ -1,0 +1,49 @@
+{
+  "field": "Q; parameter b free",
+  "generator_order": [
+    "b",
+    "gamma",
+    "pi"
+  ],
+  "F3_exact": true,
+  "REC_exact": true,
+  "Q": "b**5*pi**5 - 5*b**4*gamma*pi**7 + 5*b**4*pi**8 + 10*b**3*gamma**2*pi**9 - 20*b**3*gamma*pi**10 + 10*b**3*pi**11 + b**3*pi**2/2 - 10*b**2*gamma**3*pi**11 + 30*b**2*gamma**2*pi**12 - 30*b**2*gamma*pi**13 - 2*b**2*gamma*pi**4 + 10*b**2*pi**14 + 2*b**2*pi**5 + 5*b*gamma**4*pi**13 - 20*b*gamma**3*pi**14 + 30*b*gamma**2*pi**15 + 5*b*gamma**2*pi**6/2 - 20*b*gamma*pi**16 - 5*b*gamma*pi**7 + 5*b*pi**17 + 5*b*pi**8/2 - gamma**5*pi**15 + 5*gamma**4*pi**16 - 10*gamma**3*pi**17 - gamma**3*pi**8 + 10*gamma**2*pi**18 + 3*gamma**2*pi**9 - 5*gamma*pi**19 - 3*gamma*pi**10 - gamma*pi/5 + pi**20 + pi**11 + pi**2/5",
+  "P": "b**7*pi**7 - 7*b**6*gamma*pi**9 + 7*b**6*pi**10 + 21*b**5*gamma**2*pi**11 - 42*b**5*gamma*pi**12 + 21*b**5*pi**13 + 21*b**5*pi**4/20 - 35*b**4*gamma**3*pi**13 + 105*b**4*gamma**2*pi**14 - 105*b**4*gamma*pi**15 - 28*b**4*gamma*pi**6/5 + 35*b**4*pi**16 + 28*b**4*pi**7/5 + 35*b**3*gamma**4*pi**15 - 140*b**3*gamma**3*pi**16 + 210*b**3*gamma**2*pi**17 + 119*b**3*gamma**2*pi**8/10 - 140*b**3*gamma*pi**18 - 119*b**3*gamma*pi**9/5 + 35*b**3*pi**19 + 119*b**3*pi**10/10 + 7*b**3*pi/25 - 21*b**2*gamma**5*pi**17 + 105*b**2*gamma**4*pi**18 - 210*b**2*gamma**3*pi**19 - 63*b**2*gamma**3*pi**10/5 + 210*b**2*gamma**2*pi**20 + 189*b**2*gamma**2*pi**11/5 - 105*b**2*gamma*pi**21 - 189*b**2*gamma*pi**12/5 - 28*b**2*gamma*pi**3/25 + 21*b**2*pi**22 + 63*b**2*pi**13/5 + 28*b**2*pi**4/25 + 7*b*gamma**6*pi**19 - 42*b*gamma**5*pi**20 + 105*b*gamma**4*pi**21 + 133*b*gamma**4*pi**12/20 - 140*b*gamma**3*pi**22 - 133*b*gamma**3*pi**13/5 + 105*b*gamma**2*pi**23 + 399*b*gamma**2*pi**14/10 + 7*b*gamma**2*pi**5/5 - 42*b*gamma*pi**24 - 133*b*gamma*pi**15/5 - 14*b*gamma*pi**6/5 + 7*b*pi**25 + 133*b*pi**16/20 + 7*b*pi**7/5 - gamma**7*pi**21 + 7*gamma**6*pi**22 - 21*gamma**5*pi**23 - 7*gamma**5*pi**14/5 + 35*gamma**4*pi**24 + 7*gamma**4*pi**15 - 35*gamma**3*pi**25 - 14*gamma**3*pi**16 - 14*gamma**3*pi**7/25 + 21*gamma**2*pi**26 + 14*gamma**2*pi**17 + 42*gamma**2*pi**8/25 - 7*gamma*pi**27 - 7*gamma*pi**18 - 42*gamma*pi**9/25 - 7*gamma/125 + pi**28 + 7*pi**19/5 + 14*pi**10/25 + 7*pi/125",
+  "Q_pi_degree": 20,
+  "P_pi_degree": 28,
+  "monic_original": true,
+  "Jacobian_original": "-7*gamma/625 + 7*pi/625",
+  "Jacobian_reoriented": "-7*Gamma/625",
+  "original_forbidden_Q": [],
+  "original_forbidden_P": [
+    {
+      "gamma_power": 1,
+      "pi_power": 0,
+      "coefficient": "-7/125"
+    }
+  ],
+  "positive_pi_support_passes": true,
+  "reoriented_Q_pi_degree": 15,
+  "reoriented_P_pi_degree": 21,
+  "reoriented_Q_leading": "-Gamma**5",
+  "reoriented_P_leading": "-Gamma**7",
+  "generic_gamma_pi0_coefficient": "-G",
+  "polynomiality_countercontrol_original": "yy*zz + (yy**3*zz - yy)**2",
+  "polynomiality_countercontrol_sigma": "gamma**3*pi + gamma**2",
+  "polynomiality_countercontrol_descent": "gamma**2*pi + gamma + pi**2",
+  "extra_readonly_provenance": [
+    {
+      "path": "box/k16pivot-20260903/terminal_laurent_model.py",
+      "sha256": "53b9b3b43eaa067f4636df75dc6092fa74a1b3ee381ddac9abb53dcd0530c42e"
+    },
+    {
+      "path": "box/k16T-drivers-20260903/t2_order_system.py",
+      "sha256": "55067a8c74d6c360c72aaa40243dde7e8e1a804158b3c78abf523d77a25cb5e2"
+    },
+    {
+      "path": "box/k16astra-20260905/moh-linear-jacobian.md",
+      "sha256": "bf257e0e794df4dcce069a9e0a92a9b210ba2e5f8bc59486bc94c448ca7df9b3"
+    }
+  ],
+  "result": "PASS: candidate all-j receiver map fails support; no K16 kill"
+}

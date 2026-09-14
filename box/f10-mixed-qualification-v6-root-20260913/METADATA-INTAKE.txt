@@ -1,0 +1,107 @@
+Sun Sep 13 03:41:27 UTC 2026
+143 /opt/jc2-mixed-20260912/prep/imports.terminal.properties
+2 /opt/jc2-mixed-20260912/prep/imports.wait-exit
+0 /opt/jc2-mixed-20260912/prep/imports.stderr
+45695 /opt/jc2-mixed-20260912/prep/imports.stdout
+143 /opt/jc2-mixed-20260912/prep/inspect.terminal.properties
+2 /opt/jc2-mixed-20260912/prep/inspect.wait-exit
+0 /opt/jc2-mixed-20260912/prep/inspect.stderr
+572 /opt/jc2-mixed-20260912/prep/inspect.stdout
+144 /opt/jc2-mixed-20260912/prep/assembly.terminal.properties
+2 /opt/jc2-mixed-20260912/prep/assembly.wait-exit
+1103 /opt/jc2-mixed-20260912/prep/assembled/assembly-receipt.json
+588811 /opt/jc2-mixed-20260912/prep/assembled/native.sha256
+441385 /opt/jc2-mixed-20260912/prep/assembled/native-stat-records.json
+601943 /opt/jc2-mixed-20260912/prep/assembled/source-native-manifest.json
+732357 /opt/jc2-mixed-20260912/prep/assembled/native-manifest.json
+0 /opt/jc2-mixed-20260912/prep/assembly.stderr
+163 /opt/jc2-mixed-20260912/prep/assembly.stdout
+142 /opt/jc2-mixed-20260912/prep/native.terminal.properties
+2 /opt/jc2-mixed-20260912/prep/native.wait-exit
+0 /opt/jc2-mixed-20260912/prep/native.stderr
+1351704 /opt/jc2-mixed-20260912/prep/native.stdout
+223 /opt/jc2-mixed-20260912/prep/qualification-caps.properties
+PHASE native
+0
+Result=success
+ExecMainCode=0
+ExecMainStatus=0
+Id=jc2-mixed-v3-native-20260913.service
+LoadState=not-found
+ActiveState=inactive
+SubState=dead
+PHASE assembly
+0
+Result=success
+ExecMainCode=0
+ExecMainStatus=0
+Id=jc2-mixed-v3-assembly-20260913.service
+LoadState=not-found
+ActiveState=inactive
+SubState=dead
+PHASE inspect
+0
+Result=success
+ExecMainCode=0
+ExecMainStatus=0
+Id=jc2-mixed-v3-inspect-20260913.service
+LoadState=not-found
+ActiveState=inactive
+SubState=dead
+PHASE imports
+0
+Result=success
+ExecMainCode=0
+ExecMainStatus=0
+Id=jc2-mixed-v3-imports-20260913.service
+LoadState=not-found
+ActiveState=inactive
+SubState=dead
+{"receipt_sha256": "80a2272a88ba602f665068304dc92151dfec30cd5e5f39013d6cd7a66ba45caf", "science_outcome": "NONE", "status": "ASSEMBLED_METADATA_ONLY_UNQUALIFIED"}
+{"directories": 419, "files": 4361, "flags": "sys.flags(debug=0, inspect=0, interactive=0, optimize=0, dont_write_bytecode=1, no_user_site=1, no_site=1, ignore_environment=1, verbose=0, bytes_warning=0, quiet=0, hash_randomization=1, isolated=1, dev_mode=False, utf8_mode=0, warn_default_encoding=0, safe_path=True, int_max_str_digits=4300)", "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]", "status": "METADATA_PINS_PATHS_MODES_ACL_COPY_CHECKED_NOT_SCIENCE", "sys_path": ["/usr/lib/python312.zip", "/usr/lib/python3.12", "/usr/lib/python3.12/lib-dynload"]}
+{"boot_id":"ea614786-3720-4b83-b098-89a305fe4087","collector_sha256":"235d4237bed5150fda2b4979e4afd97823e3c5add05c2b11b63050794a341b54","hostname":"ip-172-30-0-123","packages":{"libpython3.12-stdlib":"3.12.3-1ubuntu0.16","procps":"2:4.0.4-4ubuntu3.3","python3.12":"3.12.3-1ubuntu0.16","python3.12-minimal":"3.12.3-1ubuntu0.16","util-linux":"2.39.3-9ubuntu6.6"},"pid_namespace":"pid:[4026531836]","schema":"r3-native-expected-facts/v1"}
+NextElapseUSecRealtime=Sun 2026-09-13 03:47:55 UTC
+Id=jc2-mixed-v3-qual-term-20260913.timer
+ActiveState=active
+
+NextElapseUSecRealtime=Sun 2026-09-13 03:48:00 UTC
+Id=jc2-mixed-v3-qual-kill-20260913.timer
+ActiveState=active
+80a2272a88ba602f665068304dc92151dfec30cd5e5f39013d6cd7a66ba45caf  /opt/jc2-mixed-20260912/prep/assembled/assembly-receipt.json
+b0a24420c75c0efc7039d46e440800463f9c87645d7b310d71a93dd8fe9d4dfb  /opt/jc2-mixed-20260912/prep/assembled/native-manifest.json
+0b49a98ccc93aba579b0b4cf37ff9f0ecae7aa42f81067e6c836e640b50d9ccd  /opt/jc2-mixed-20260912/prep/assembled/native-stat-records.json
+cb060c630ba2051a204b70226834415109a90211d315325a1af54375e9c98d01  /opt/jc2-mixed-20260912/prep/assembled/native.sha256
+e1220e14ef688728cd4c6af7ae79c0e135684dc088c0cc70fc041d5d449e1d86  /opt/jc2-mixed-20260912/prep/assembled/source-native-manifest.json
+1565197cb788cf10443ec5b6a5b1ebb7b6fdba19704bde8e39ad69184a013b27  /opt/jc2-mixed-20260912/prep/native.stdout
+9bb0741eaea0940f1bdb63ae92c5138e6592589a1140a1c89390dfe57e950a43  /opt/jc2-mixed-20260912/prep/imports.stdout
+45019c66cd2bea2911e69d69cca07b5ac0d645302a5d1a4521e34c189201814b  /opt/jc2-mixed-20260912/prep/inspect.stdout
+d2f71932d9eb4e341ac53c10dabc147134c327ca9dafcdbefe774bb5c231056b  /opt/jc2-mixed-20260912/meta/facts.json
+[
+  "final_paths",
+  "ground_types",
+  "loaded_modules",
+  "mpmath_version",
+  "startup_paths",
+  "status",
+  "sympy_version"
+]
+MainPID=0
+Id=jc2-mixed-v3-native-20260913.service
+ActiveState=inactive
+SubState=dead
+
+MainPID=0
+Id=jc2-mixed-v3-assembly-20260913.service
+ActiveState=inactive
+SubState=dead
+
+MainPID=0
+Id=jc2-mixed-v3-inspect-20260913.service
+ActiveState=inactive
+SubState=dead
+
+MainPID=0
+Id=jc2-mixed-v3-imports-20260913.service
+ActiveState=inactive
+SubState=dead
+Sun Sep 13 03:41:27 UTC 2026

@@ -1,0 +1,23 @@
+{
+  "launched_utc": "2026-09-05 20:13:11.271808+00:00",
+  "pid": 20429,
+  "pgid": 20429,
+  "timeout_seconds": 1008,
+  "command": [
+    "timeout",
+    "--signal=INT",
+    "--kill-after=20s",
+    "1008",
+    "python3",
+    "-u",
+    "deep_oracle_adjoin.py",
+    "--code",
+    "/home/ubuntu/g9966-corrected-jacobian/run-code-source-full",
+    "--state",
+    "/home/ubuntu/g9966-corrected-jacobian-threaded/threaded-resume-delta52.json",
+    "--oracle",
+    "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/minor-v4-firstband-delta52.json",
+    "--output",
+    "outputs/oracle-delta52-t90.json"
+  ]
+}

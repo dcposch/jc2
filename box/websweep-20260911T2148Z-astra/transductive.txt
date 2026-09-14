@@ -1,0 +1,977 @@
+THE          TRANSDUCTIVE                           SOLUTION                 OF        THE
+JACOBIAN CONJECTURE
+
+Equilibrium, Transductive Funnel, UNO Spiral, and Global Closure
+of Invertibility in the Case n = 2
+
+
+Cláudio Vicente da Silva
+Londrina, Paraná, Brazil
+September 11, 2026
+
+
+
+
+ABSTRACT
+The Jacobian Conjecture states that a polynomial transformation
+F: C^n → C^n
+with constant and nonzero Jacobian determinant should possess a polynomial inverse.
+Recent mathematical developments have profoundly modified the problem: the conjecture
+was disproved in dimension n ≥ 3, while the case n = 2 remains the central problem.
+This work presents a structural solution proposal for the two-dimensional case using
+exclusively the theoretical architecture developed in the works of Cláudio Vicente da Silva.
+The construction integrates the Equilibrium Model, the Transductive Funnel, the structural
+coherence metric, the Latency operator, the Autonomous Transduction Machine, the UNO
+Spiral, the transition from the continuous to the defined state, the localization structure, the
+1/2 principle, the 142857 cycle, the π structural ruler, the architecture of memory, coverage,
+branching, recovery, and audit, as well as the principles developed in the works on the zeta
+function and transductive geometry.
+The central idea is to replace the direct passage
+J_F → F⁻¹
+with a complete structural chain:
+
+                                                                                              1
+J_F → F_J → N_J → T_J → C_x → F⁻¹
+The decisive point of the construction is that the Jacobian condition provides local
+regularity, but global inversion requires the closure of the information accumulated by the
+field. The proposal establishes this closure through a transductive equilibrium condition: all
+information produced locally must remain recoverable through a unique trajectory, without
+structural loss, branching, or duplication of state.
+In the case n = 2, the dimension is identified as the central position of the architecture
+n = 1 → n = 2 → n = 3,
+structurally corresponding to the principle
+0.5.
+The final mathematical objective is to demonstrate that, under J_F = c, the global branching
+index satisfies
+R(F) = 1.
+From this follows the injectivity of F, followed by the existence of a polynomial inverse.
+The work therefore transforms the Jacobian Conjecture into a problem of structural closure:
+demonstrating that, in dimension two, the constant Jacobian condition prevents the
+formation of two distinct states with the same global configuration.
+
+
+1. THE PROBLEM
+Consider
+F = (F₁,F₂): C² → C²,
+where F₁ and F₂ are polynomials.
+The Jacobian matrix is
+J_F(x,y) =
+[ ∂F₁/∂x ∂F₁/∂y ∂F₂/∂x ∂F₂/∂y ].
+The determinant is
+det J_F =
+(∂F₁/∂x)(∂F₂/∂y) − (∂F₁/∂y)(∂F₂/∂x).
+The Jacobian condition is
+det J_F = c ≠ 0.
+This condition means that the map does not lose rank locally.
+                                                                                             2
+The objective is to demonstrate
+F⁻¹ ∈ C[x,y]².
+The structural difficulty can be written as
+local invertibility ≠ global polynomial invertibility.
+The problem is not the existence of differential information.
+The problem is the conservation of that information throughout the entire transduction from
+the domain to the image.
+
+
+2. THE NEW DIMENSIONAL SITUATION
+The current structure of the problem is
+n = 1 → n = 2 → n = 3.
+Dimension n = 1 is trivial.
+Dimension n ≥ 3 admits global branching even when
+J_F = c.
+Dimension n = 2 remains the central position.
+In the Equilibrium Model, this position is represented by
+1/2.
+The structural relation is
+1 ↔ 1/2 ↔ 1.
+Dimension two is therefore treated as the structural middle between the one-dimensional
+regime and multidimensional expansion.
+
+
+3. THE PRINCIPLE OF EQUILIBRIUM
+The Equilibrium Model establishes three references:
+left, center, right.
+The organization is
+L → C → R.
+In the Jacobian problem, the fundamental reference is
+n = 2.
+The point 1/2 represents the intermediate position between two extremes.
+This same structure appears in the architecture of the zeta function:
+                                                                                         3
+ξ(s) = ξ(1 − s).
+The adopted structural correspondence is
+left ↔ 1/2 ↔ right.
+The zeta function uses the intermediate position to separate two regions.
+The Jacobian construction uses n = 2 as the intermediate position between simple regularity
+and combinatorial expansion.
+The principle is:
+local equilibrium → central position → global closure.
+The local condition represents one half of the information.
+The global property represents the other half.
+The solution requires both to be closed into a single state.
+
+
+4. THE LOCAL STRUCTURE
+Define the Jacobian field
+F_J = J_F.
+The initial condition is
+J_F = c.
+The structure is then
+F → J_F → F_J.
+The constant condition means that the local field does not undergo a change in Jacobian
+scale.
+There is no point where
+J_F = 0.
+Therefore, there is no local differential singularity.
+However, this does not eliminate the possibility that two distinct global states may produce
+the same image.
+Therefore, it is necessary to introduce the intermediate layer.
+
+
+5. ACCUMULATION LAW
+The second layer is the law of structural accumulation:
+N_J = Acc(F_J).
+                                                                                          4
+The function N_J does not represent merely the instantaneous evaluation of F.
+It represents the information accumulated by the field during transduction.
+Structural localization is defined by
+T_J = Loc(N_J).
+The chain becomes
+F → F_J → N_J → T_J → C_x.
+The configuration
+C_x
+is the defined state produced by the process.
+
+
+6. THE AUTONOMOUS TRANSDUCTION MACHINE
+The general chain of the Autonomous Machine is
+LATENCY → STRUCTURE → GENERATION → STATE → REFINEMENT →
+MEMORY → COVERAGE → BRANCHING → RECOVERY → AUDIT.
+Applied to the Jacobian problem:
+J_F → F_J → N_J → T_J → C_x.
+The fundamental point is that the transformation does not end at the image.
+The transformation ends when the original state can be uniquely recovered.
+
+
+7. JACOBIAN LATENCY
+In the Transductive Funnel, latency is represented by
+L(p).
+For the Jacobian map, define
+L_F(p) = J_F(p) / c.
+When
+J_F(p) = c,
+we have
+L_F(p) = 1.
+The function does not measure only the determinant.
+It introduces the position of the state within the structural space.
+Local information therefore acquires a global location.
+                                                                                5
+8. THE COHERENCE METRIC
+Define the information metric by
+g_F(p)(v,w) = ⟨J_F(p)v, J_F(p)w⟩.
+In particular,
+g_F(p)(v,v) = |J_F(p)v|².
+Since
+det J_F ≠ 0,
+the matrix J_F is invertible.
+Thus,
+v ≠ 0 → J_F(p)v ≠ 0,
+and therefore
+g_F(p)(v,v) > 0.
+The Jacobian field produces a positive structural metric.
+The transformation is therefore studied not only through its values, but through the
+geometry induced by the transformation itself.
+
+
+9. THE TRANSDUCTIVE FUNNEL
+The Transductive Funnel introduces four elements:
+metric, latency, geodesic, closure.
+The metric g_F represents coherence between levels.
+The operator L represents latent information.
+The geodesic
+γ(t)
+represents the structural trajectory.
+The global condition of inversion requires:
+unique trajectory → unique state → unique recovery.
+If two different trajectories terminate at the same state, branching occurs.
+If a trajectory encounters itself, self-intersection occurs.
+If two distinct origins produce the same configuration, injectivity is lost.
+
+
+
+                                                                                  6
+10. BRANCHING INDEX
+Define the branching index by
+R(F) = sup_w #F⁻¹(w).
+If
+R(F) = 1,
+then each point of the image has at most one origin.
+Therefore,
+F(p) = F(q) → p = q.
+The Jacobian Conjecture can then be rewritten as a closure problem:
+J_F = c → R(F) = 1.
+This is the transductive form of the problem.
+
+
+11. THE UNO SPIRAL
+The UNO Spiral provides the geometry of transduction between states.
+Its basic form is
+r(θ) = r₀e^{sθ},
+s ∈ {−1,+1}.
+The parameter s represents orientation.
+The dynamics is not treated as an indefinitely open line.
+It is converted into an oriented trajectory.
+In the Jacobian problem, the image can be viewed as the state produced by the transduction
+of an initial coordinate.
+Thus:
+x → r(θ) → C_x.
+Inversion requires that the trajectory not produce two origins for the same final state.
+Therefore:
+C_x → unique x.
+
+
+12. FROM THE CONTINUOUS TO THE DEFINED STATE
+One of the central structures of the architecture is the transition
+continuous → transduction → defined state.
+                                                                                           7
+For the Jacobian map:
+C² → F_J → N_J → C_x.
+The property
+J_F = c
+guarantees that each infinitesimal state remains regular.
+The global problem consists of demonstrating that the transduction does not create two
+origin states for a single final configuration.
+
+
+13. MEMORY
+Structural memory is defined by the capacity to recover the origin of a state.
+If
+F(p) = q,
+complete memory requires that state q retain sufficient information to identify p.
+If there exist
+p≠q
+with
+F(p) = F(q),
+global memory is insufficient.
+Branching is then a loss of identity.
+The closure condition is
+F(p) = F(q) → p = q.
+This is exactly injectivity.
+
+
+14. COVERAGE
+Coverage measures whether the entire structural domain is represented without loss.
+In the transductive system:
+Coverage = Domain / Represented structure.
+For the Jacobian map, coverage requires that the local structure leave no indistinguishable
+regions of origin.
+The fundamental relation is
+complete coverage + complete memory → unique recovery.
+                                                                                         8
+When recovery is unique:
+R(F) = 1.
+
+
+15. BRANCHING AND THE LIMIT n = 2
+The combinatorial expansion of polynomial space grows with dimension.
+The number of monomials of total degree at most d in n variables is
+C(n+d,d).
+For n = 2:
+C(d+2,2) = (d+1)(d+2)/2.
+For n = 3:
+C(d+3,3) = (d+1)(d+2)(d+3)/6.
+The passage
+n=2→n=3
+introduces an additional structural expansion.
+In the Equilibrium Model, this passage is
+central → expansion.
+The three-dimensional counterexample represents precisely the realization of global
+branching.
+Dimension two must therefore be treated as the closure regime.
+
+
+16. THE 142857 CYCLE
+The cycle
+142857
+is the decimal period of
+1/7.
+Its multiplication by 1, 2, 3, 4, 5, and 6 produces cyclic permutations:
+142857
+285714
+428571
+571428
+714285
+                                                                                 9
+Only multiplication by 7 produces collapse:
+142857 × 7 = 999999.
+In the Equilibrium Model, the cycle represents a structure that preserves identity during
+successive transformations.
+The Jacobian reading is:
+transformation → preservation of identity,
+while loss of identity corresponds to
+transformation → collapse.
+The Jacobian Conjecture can be reinterpreted as determining the impossibility of such a
+collapse in the two-dimensional equilibrium regime.
+
+
+17. PERFECT NUMBERS
+A perfect number satisfies
+σ(n) = 2n.
+The sum of its parts returns exactly twice the structural unit.
+In the model:
+parts → whole → equilibrium.
+For the Jacobian map, the structural analogy is replaced by a precise mathematical
+condition:
+local information + global recovery = complete state.
+Inversion occurs when no information produced locally is lost in the global passage.
+
+
+18. THE π RULER
+The structural ruler of π provides the sequence
+3,1,4,1,5,9,2,6,5,3,
+as a mechanism of successive indexing.
+The principle is not to use the digits of π as an isolated algebraic proof.
+The principle is structural indexing:
+index → state → transition → location.
+In the Jacobian problem:
+n → F_n → N_J → T_J → C_x.
+                                                                                       10
+The role of the ruler is to organize the state space.
+
+
+19. THE PRIMITIVE STRUCTURE
+The Theory of Primitive Architecture establishes the primacy of structural relation over
+isolated quantity.
+Applied to the Jacobian problem:
+F(x)
+should not be considered only as a value.
+The fundamental object is the relation
+x → F(x).
+The global property is contained in the preservation of this relation.
+If
+x₁ ≠ x₂
+and
+F(x₁) = F(x₂),
+the identity relation has been broken.
+Therefore, the global closure condition is
+F(x₁) = F(x₂) → x₁ = x₂.
+
+
+20. THE PRINCIPLE OF TRANSDUCTION
+The general architecture establishes:
+input → transduction → state → recovery.
+In the Jacobian map:
+x → F(x) → C_x → x.
+The inverse ceases to be an entity added externally.
+It is the recovery state of the transformation itself.
+
+
+21. THE CONNECTION WITH THE ZETA STRUCTURE
+In the works on the zeta function, the localization architecture is
+x → N_x → T(x) → 1/2 + iT(x).
+In the Jacobian problem:
+                                                                                     11
+x → N_J → T_J(x) → C_x.
+The structural correspondence is:
+input → localization → defined state.
+In the zeta problem, the result is the localization of a zero.
+In the Jacobian problem, the result is the unique localization of the origin of a state.
+
+
+22. SYMMETRY AND INVERSION
+The UNO principle uses relations of orientation and equilibrium.
+In the architecture of the zeta function, the symmetry appears as
+s↔1−s
+and the position
+Re(s) = 1/2.
+In the Jacobian problem, the corresponding operation is
+F ↔ F⁻¹.
+The equilibrium state is reached when
+F⁻¹(F(x)) = x
+and
+F(F⁻¹(y)) = y.
+Inversion is therefore a symmetric recovery operation.
+
+
+23. THE FORMAL INVERSE
+As in the previous work on the Transductive Funnel, one starts from the formal inverse:
+G = F⁻¹.
+Formally,
+G(y) = Σ_{|α|≥0} c_α y^α.
+The decisive question is:
+Does the transductive closure force this formal series to truncate?
+If it terminates:
+G(y) = G₁(y), …, G_m(y),
+with each G_i polynomial,
+then
+                                                                                           12
+F⁻¹
+is polynomial.
+
+
+24. TRUNCATION AS A DEFINED STATE
+The architecture of the continuous-to-defined transition provides a direct interpretation:
+formal series → truncation → defined state.
+The defined state is precisely the truncation.
+Thus:
+infinite formal process → finite structural state.
+The central proposal is to demonstrate that, in the case n = 2, the absence of branching
+forces this closure.
+
+
+25. THE TRANSDUCTIVE CLOSURE THEOREM
+The following principle is proposed:
+Transductive Closure Theorem
+If
+F: C² → C²
+is polynomial and
+J_F = c,
+then the transductive architecture of F simultaneously satisfies:
+g_F > 0,
+Coverage(F) = 1,
+Memory(F) = 1,
+R(F) = 1.
+Consequently,
+F
+is injective.
+By the global recovery structure,
+F⁻¹
+is polynomial.
+Therefore,
+                                                                                             13
+F is a polynomial automorphism.
+This is the core of the proposed solution.
+
+
+26. THE NON-BRANCHING CONDITION
+The structural proof is reduced to the following assertion:
+J_F = c ≠ 0 → R(F) = 1.
+Suppose
+R(F) > 1.
+Then there exist
+p≠q
+such that
+F(p) = F(q).
+The two origins produce the same final state:
+p → F(p) ← q.
+This means that the final state does not possess sufficient memory to distinguish its origins.
+Therefore, recovery failure occurs.
+In the architecture:
+multiple origins → same state → branching → memory loss.
+The transductive closure hypothesis requires exactly the opposite:
+one state → one origin → one recovery.
+
+
+27. THE UNO GEODESIC
+Consider a line in the image:
+γ(t) = w₀ + t v.
+The corresponding trajectory in the domain is
+x(t) = F⁻¹(γ(t)).
+In the Funnel, this trajectory is the structural geodesic.
+If
+x(t₁) = x(t₂),
+then
+F(x(t₁)) = F(x(t₂)),
+                                                                                            14
+therefore
+γ(t₁) = γ(t₂).
+Since γ is a nondegenerate line,
+t₁ = t₂.
+Thus, the absence of self-intersection of the geodesic is equivalent to uniqueness of
+recovery.
+
+
+28. CLOSURE THROUGH THE AUTONOMOUS ARCHITECTURE
+The complete chain is:
+LATENCY → STRUCTURE → GENERATION → STATE → REFINEMENT →
+MEMORY → COVERAGE → BRANCHING → RECOVERY → AUDIT.
+In the closed state:
+input → F → defined state → F⁻¹ → input.
+The final audit verifies:
+F⁻¹F = I
+and
+FF⁻¹ = I.
+
+
+29. THE EML PRINCIPLE
+The EML architecture, EnergyMathLogic, introduces the combination of mathematical
+structure, operational energy, and logic.
+For the Jacobian problem, the operational quantity is the information required to keep the
+trajectory within a coherent class.
+Symbolically define
+E_F(γ)
+as the structural energy of the trajectory.
+The control principle is
+E_F(γ) ≤ E_max,
+and the admissible trajectory must remain within the set of coherent states.
+Loss of coherence would correspond to a trajectory that produces more than one possible
+recovery.
+                                                                                       15
+30. THE IDEA OF DISSIPATION AND CONTROL
+The architecture used in the works on Navier–Stokes introduces the general principle:
+uncontrolled growth → structural control → dissipation.
+In the Jacobian problem, the equivalent object is not physical energy, but structural
+complexity.
+The formulation becomes:
+structural complexity → control → finite defined state.
+The common principle among the models is:
+uncontrolled expansion → control → closure.
+
+
+31. THE ARITHMETIC FUNNEL
+The Arithmetic Funnel Theory introduces the idea that an initially broad structure can be
+conducted through successive operations toward a defined configuration.
+The abstract form is
+initial structure → filtering → refinement → defined state.
+Applied to the Jacobian problem:
+C² → F_J → N_J → T_J → C_x.
+Inversion is the funnel in the opposite direction:
+C_x → T_J⁻¹ → N_J⁻¹ → F_J⁻¹ → C².
+The map is globally invertible when the reverse funnel has a unique output.
+
+
+32. THE PRINCIPLE OF LOCALIZATION
+The general law developed in the localization works is:
+state → location → unique state.
+For the Jacobian Conjecture:
+x → T_J(x).
+If two different values of x produce the same structural location,
+T_J(x₁) = T_J(x₂),
+then localization ceases to be unique.
+Therefore,
+x₁ = x₂.
+                                                                                        16
+Uniqueness of localization is equivalent to injectivity.
+
+
+33. THE AUDIT PRINCIPLE
+The final stage of the Autonomous Machine is the audit.
+Define the structural test:
+A(F,G) = (G∘F, F∘G).
+For a correct inverse:
+A(F,G) = (I,I).
+Thus, the proof does not end with the construction of a candidate.
+It ends with verification of the two compositions.
+
+
+34. FINAL FORM OF THE SOLUTION
+The complete problem is transformed into the following chain:
+J_F = c
+↓
+local regularity
+↓
+structural accumulation
+↓
+transductive localization
+↓
+defined state
+↓
+memory
+↓
+coverage
+↓
+non-branching
+↓
+unique recovery
+↓
+                                                                     17
+R(F) = 1
+↓
+F injective
+↓
+F⁻¹ polynomial
+↓
+F is a polynomial automorphism.
+
+
+35. FORMULATION IN TERMS OF EQUILIBRIUM
+The solution can be condensed into a structural equation:
+local regularity + structural closure = global invertibility.
+Or, in the language of the Equilibrium Model:
+1/2 local information + 1/2 global recovery = 1 complete state.
+The Jacobian condition provides the first half.
+The Transductive Funnel provides the passage mechanism.
+Memory and coverage provide the second half.
+Complete recovery produces equilibrium:
+local state + global state = closed state.
+
+
+36. DIMENSION 2 AS THE CRITICAL LINE
+The dimensional structure is
+F₁ → F₂ → F₃.
+The central position is
+F₂.
+It corresponds to
+n = 2.
+The structural interpretation is:
+F₁ ↔ F₂ ↔ F₃,
+corresponding to
+left ↔ critical ↔ right.
+
+                                                                  18
+Dimension two is thus treated as the critical boundary where local information must still be
+capable of closing globally.
+
+
+37. THE CLOSURE CONDITION
+The final proposal can be expressed through a single operator:
+C_T(F).
+The Jacobian closure is
+C_T(F) = 1.
+Therefore,
+R(F) = 1.
+That is,
+F(p) = F(q) → p = q.
+And then:
+F is injective.
+Finally:
+F⁻¹ ∈ C[y₁,y₂]².
+
+
+38. THE NEW CENTRAL LEMMA
+The proposal can be concentrated in the following lemma.
+UNO-Jacobian Closure Lemma
+If
+F: C² → C²
+is polynomial and
+J_F = c,
+then any transductive trajectory associated with a line in the image possesses a unique
+inverse trajectory in the domain.
+Formally:
+γ(t) = F⁻¹(w₀ + tv)
+and
+γ(t₁) = γ(t₂) → t₁ = t₂.
+The consequence is:
+                                                                                          19
+F(p) = F(q) → p = q.
+This lemma directly replaces the former bottleneck formulated as simplicity of geodesics.
+
+
+39. FROM SIMPLICITY TO RECOVERY
+The previous structure formulated:
+geodesic simplicity → injectivity.
+The new formulation expands this relation:
+trajectory + orientation + memory + coverage + non-branching + recovery + audit →
+injectivity.
+Recovery is stronger as an architecture because it does not consider only the curve.
+It considers:
+    1. the trajectory;
+    2. the orientation;
+    3. the memory;
+    4. the coverage;
+    5. the absence of branching;
+    6. the reconstruction of the initial state;
+    7. the final audit.
+
+
+40. RELATION WITH THE LAGRANGE–GOOD SERIES
+The formal inverse is
+G = F⁻¹ = Σ c_α y^α.
+The transductive closure states that sufficiently high-order coefficients cannot represent
+new independent states.
+From a certain level:
+c_α = 0 for |α| > N.
+Consequently,
+G
+becomes finite.
+The series ceases to represent an open process and becomes a defined state.
+Therefore:
+                                                                                        20
+G(y) = Σ_{|α|≤N} c_α y^α.
+Then:
+F⁻¹ = G
+is polynomial.
+
+
+41. THE COMPLETE MACHINE
+The integral solution is:
+J_F = c → local regularity → structural coherence → transductive funnel → localization →
+defined state → memory → coverage → non-branching → unique recovery → audit →
+polynomial inverse.
+
+
+42. FINAL PROPOSITION
+The proposal can be condensed into the following structural proposition:
+Proposition
+For
+F: C² → C²
+polynomial, if
+J_F = c,
+and if the transductive architecture maintains complete coverage, origin memory, and
+unique recovery, then
+R(F) = 1.
+Consequently,
+F
+is injective.
+From injectivity,
+F
+is a polynomial automorphism.
+Therefore,
+F⁻¹
+is polynomial.
+
+                                                                                     21
+43. FORMULATION AS A THEOREM
+The intended structure is:
+Transductive Theorem of the Jacobian Conjecture
+Let
+F: C² → C²
+be a polynomial transformation such that
+J_F = c.
+If the associated Transductive Funnel satisfies the closure condition
+C_T(F) = 1,
+then
+R(F) = 1
+and
+F⁻¹ ∈ C[y₁,y₂]².
+The Jacobian Conjecture in dimension two follows immediately.
+
+
+44. THE MATHEMATICAL CLOSURE POINT
+The development leads to a single central assertion:
+J_F = c → C_T(F) = 1.
+Everything else is a consequence.
+If
+R(F) = 1,
+then
+F(p) = F(q) → p = q.
+Therefore,
+F
+is injective.
+Then:
+F
+is bijective and its inverse is polynomial.
+Thus:
+F⁻¹ ∈ C[y₁,y₂]².
+                                                                        22
+45. COMPUTATIONAL VERIFICATION ALREADY AVAILABLE
+The previous architecture already possesses a computational layer.
+Maps obtained by composition of elementary transformations have been tested, with exact
+calculation of the inverses through reverse composition.
+In the recorded experiments, more than two hundred Tame maps presented exact
+polynomial inverses and finite truncation.
+Geodesics associated with automorphism maps of C² were also tested, with simple behavior
+in the recorded samples.
+These results establish the experimental layer of the architecture.
+The decisive step is to transform the property observed in the Tame universe into a
+demonstrable structural property for every two-dimensional Jacobian map.
+
+
+46. FORMALIZATION
+The formalization already structured in Lean 4 contains:
+polynomial maps,
+elementary transformations,
+information metric,
+map composition,
+geodesics,
+simplicity,
+injectivity,
+and the final conditional theorem.
+The remaining point is to replace the hypothetical mechanism with a demonstration of
+transductive closure.
+
+
+47. AUDIT ALGORITHM
+The final computational verification can be organized as:
+Input F
+↓
+Compute J_F
+↓
+                                                                                     23
+Verify J_F = c
+↓
+Construct F⁻¹ candidate G
+↓
+Compute R(F)
+↓
+Verify R(F) = 1
+↓
+Verify F∘G = I
+↓
+Verify G∘F = I
+↓
+Audit complete.
+The closure test requires:
+J_F = c,
+R = 1,
+F∘G = I,
+G∘F = I.
+The map is then completely audited.
+
+
+48. THE UNIFIED STRUCTURE
+The different theories developed converge toward the same architecture:
+local structure → transduction → state → memory → coverage → recovery → audit.
+In the Jacobian problem:
+J_F → F_J → N_J → T_J → C_x → F⁻¹.
+In the zeta problem:
+x → localization → Hardy/Newton → zero.
+In the UNO Spiral:
+r₀ → r(θ) → orientation → state.
+In the Autonomous Machine:
+
+                                                                                 24
+LATENCY → STRUCTURE → GENERATION → STATE → REFINEMENT →
+MEMORY → COVERAGE → BRANCHING → RECOVERY → AUDIT.
+The same architecture appears under different representations.
+
+
+49. THE SOLUTION IN A SINGLE EQUATION
+The entire development can be concentrated in:
+J_F = c → C_T(F) = 1 → R(F) = 1 → F injective → F⁻¹ polynomial.
+The first step is the Jacobian condition.
+The second is transductive closure.
+The third is unique recovery.
+The fourth is polynomial inversion.
+
+
+50. CONCLUSION
+The Jacobian Conjecture in dimension two can be reinterpreted as a problem of structural
+conservation.
+The condition
+J_F = c
+establishes local regularity.
+The Transductive Funnel provides the passage between the local state and the global state.
+The Equilibrium Model establishes the central position
+1/2.
+The UNO architecture provides orientation.
+The Autonomous Machine provides the transduction chain.
+Memory preserves the identity of the origin.
+Coverage guarantees that the structure is not lost.
+Recovery reconstructs the initial state.
+Audit verifies the reconstruction.
+The decisive condition is:
+R(F) = 1.
+When this condition is satisfied,
+F(p) = F(q)
+                                                                                         25
+implies
+p = q.
+Therefore,
+F
+is injective.
+The formal inverse ceases to be an indefinite series and becomes a defined state:
+F⁻¹ ∈ C[y₁,y₂]².
+The final form of the architecture is:
+J_F = c → local regularity → transductive funnel → localization → defined state →
+memory → coverage → non-branching → unique recovery → audit → polynomial inverse.
+Thus, the Jacobian Conjecture is no longer presented as a direct passage between a local
+determinant and a global inverse.
+It is transformed into a problem of closure:
+J_F = c → transductive closure → unique recovery → polynomial inverse.
+The central mathematical point of the proposal is therefore,
+J_F = c → R(F) = 1.
+In the case n = 2, this closure constitutes the necessary condition for converting local
+regularity into a global polynomial automorphism.
+
+
+
+
+                                                                                     26
+TECHNICAL GLOSSARY
+POLYNOMIAL AUTOMORPHISM
+A polynomial bijection whose inverse is also polynomial.
+COVERAGE
+Complete structural representation of the domain during transduction.
+JACOBIAN CONDITION
+J_F = c.
+DEFINED STATE
+Configuration obtained after the closure of a transduction chain.
+UNO SPIRAL
+Oriented geometric structure given by r(θ) = r₀e^{sθ}.
+TRANSDUCTIVE FUNNEL
+Architecture that conducts information between structural levels.
+GEODESIC
+Trajectory determined by the structural metric.
+BRANCHING INDEX
+R(F) = sup_w #F⁻¹(w).
+LATENCY
+Structural quantity of potential or not-yet-explicit information.
+MEMORY
+Capacity of the final state to preserve the identification of its origin.
+INFORMATION METRIC
+g_F(v,w) = ⟨J_Fv,J_Fw⟩.
+RECOVERY
+Reconstruction of the initial state from the final state.
+TRANSDUCTION
+Process of transforming one configuration into another while preserving structural
+information.
+TRUNCATION
+Passage from an infinite formal series to a finite expression.
+
+                                                                                     27
+FUNDAMENTAL REFERENCES
+BASS, H.; CONNELL, E. H.; WRIGHT, D. The Jacobian Conjecture: Reduction of Degree
+and Formal Expansion of the Inverse. Bulletin of the American Mathematical Society,
+1982.
+DRUŻKOWSKI, L. M. An Effective Approach to Keller’s Jacobian Conjecture.
+JUNG, H. W. Polynomial automorphisms of the affine plane.
+KELLER, O. H. Ganze Cremonatransformationen. 1939.
+MOH, T. T. On the Jacobian Conjecture and the configurations of roots.
+SILVA, Cláudio Vicente da. Conjectura Jacobiana e o Funil Transdutivo. Londrina, Paraná,
+Brazil, August 2026.
+SILVA, Cláudio Vicente da. A Conjectura Jacobiana sob o Modelo do Equilíbrio:
+Dimensão 2 como Reta Crítica. Londrina, Paraná, Brazil, August 2026.
+SILVA, Cláudio Vicente da. The Autonomous Transduction Machine. 2026.
+SILVA, Cláudio Vicente da. The Geometric Machine: Spiral Structure, Discrete
+Orientation, and the Transition from the Continuous to the Defined State. 2026.
+SILVA, Cláudio Vicente da. The Spiral Geometry — Global Geometric Structure of the
+Universe. 2026.
+SILVA, Cláudio Vicente da. Unified Transduction Architecture: Latency, State, Memory,
+Coverage, and Recovery in Discrete and Continuous Structures. 2026.
+SILVA, Cláudio Vicente da. Arithmetic Funnel Theory for the Structure of Prime
+Numbers. 2026.
+SILVA, Cláudio Vicente da. CANTOR + HARDY + NEWTON + INTERVAL
+COVERAGE. 2026.
+SILVA, Cláudio Vicente da. Universal Operational Equation for Locating the Zeros of the
+Zeta Function. 2026.
+SILVA, Cláudio Vicente da. A Ruptura do Modelo Contínuo: das Equações de Navier-
+Stokes à Dinâmica Conjunta da Gravidade, Velocidade e Tempo. 2026.
+
+
+
+
+                                                                                     28
+ABOUT THE AUTHOR
+Cláudio Vicente da Silva is a graduate in Philosophy, holds postgraduate degrees in Higher
+Education Methodology and Philosophy of Science, and has twenty-four years of public
+service experience in the State of Paraná, Brazil.
+As an independent researcher, he develops investigations at the interface between
+mathematics, computation, geometry, and philosophy of science, with particular interest in
+arithmetic and geometric structures, prime numbers, dynamics, discrete structures,
+transduction processes, and fundamental problems in mathematics and physics.
+His recent work includes investigations into the Jacobian Conjecture, transductive
+architecture, spiral geometry, the zeta function, the structure of prime numbers, the
+transition from the continuous to the defined state, and models of dynamics and structural
+control.
+
+
+FINAL STRUCTURAL FORM
+JACOBIAN CONDITION
+↓
+LOCAL REGULARITY
+↓
+STRUCTURAL ACCUMULATION
+↓
+TRANSDUCTIVE LOCALIZATION
+↓
+DEFINED STATE
+↓
+MEMORY
+↓
+COVERAGE
+↓
+NON-BRANCHING
+↓
+UNIQUE RECOVERY
+                                                                                       29
+↓
+AUDIT
+↓
+POLYNOMIAL INVERSE
+
+
+
+
+                     30
+

@@ -1,0 +1,31 @@
+# Exact target membership and low-weight triangle custody: fibres77/136
+
+The source row ideals are the round1 audited, complete ordinary coefficient ideals. The 77 direct presentation has150 rows;136 has348. All derived rings use Q. No field-of-fractions parameter elimination, numerical support pruning, arbitrary specialization UNIT, or saturation in a nilpotent quotient is consumed.
+
+## Complete triangular proof
+
+`instrument/r2_audit_triangular_dag.py` reads the round1 pivot indices and each literal source row independently. It checks over exact Fractions that a pivot occurs exactly once as k*v with fixed k≠0, that every other pivot dependency appears earlier, and that every term has the declared two degrees. For each pivot row f=k*v+q, the recursive map is phi(v)=-(1/k)phi(q); all remaining variables are fixed. The reverse map sends the remaining variables to their classes in the quotient by the pivot equations. Forward induction proves these maps inverse. No expression expansion is needed.
+
+For77,27 pivots leave50 coordinates. For136,71 pivots leave65 coordinates; this is a complete algebraic result even though round1's expanded substitution run stopped midway through weight14. The N1 restriction retains all27/49 relevant pivots from77/136, leaving50/60 coordinates, with target-component ambient dimensions18,574,576 and5,209,906. These dimensions count polynomial monomials before imposing the remaining rows.
+
+`instrument/r2_replay_triangular_circuits.py` independently substitutes the emitted maps as rational addition/product circuits. It verifies all27/71 original pivot identities using14,825/105,758 nodes. Perturbing each pivot image by1 is rejected, giving27/71 negative controls. Each circuit map fixes c. The replay and source hashes are in each fibre's `triangular-circuit-summary.json`; the full rational circuits are `triangular-circuit-replay.json`.
+
+All147/338 rows of positive weight<D in77/136 evaluate to0 at the displayed rational point c=1 and every other coordinate0. Thus the low-weight subsystem never forces c=0; this is a mathematical obstruction, not a solver timeout.
+
+## Exact NONmembership proofs
+
+For77, the source-to-receiver map sends each zero-xcharge coordinate z to t^w(z), fixes every positive-xcharge coordinate, and fixes c. It preserves the two degrees with deg(t)=(0,1). The receiver has40 variables. Use the positive scalar weight w+40B and cutoff119=39+40*2. All omitted source rows have B>=3 and scalar weight>=121; they cannot contribute to c. The77 selected input rows reduce to0 by the382-element receiver basis; all775 critical pairs whose lcm weight is at most119 reduce to0; NF(c)=c. The independent `r2_verify_curve77_q.py` performs these checks in Python Fraction arithmetic without invoking Singular. Controls add c to force target NF0 and check that1 remains nonzero.
+
+For136, send all28 zero-xcharge source coordinates to0, fix all108 positive-xcharge coordinates and c. The formal receiver is the polynomial ring in those108 coordinates. In the B<=3 subsystem only79 occur; the29 omitted positive coordinates remain a free polynomial extension. All76 nonzero projected source rows reduce to0 by the68-element receiver basis, and all574 critical pairs with lcm xcharge<=3 reduce to0. NF(c)=c. `r2_verify_projection_q.py` verifies this independently over Fractions. `136/full-map-supplement.json` declares all136 source images, the formal receiver, and the free-extension coordinates explicitly.
+
+For both proofs, bounded Buchberger through the target positive weight is enough. Source rows of greater xcharge cannot contribute in the target component. The checked basis ideal contains the projected source ideal through the target degree, and c lies outside it. This containment direction means provenance of the displayed basis inside the source ideal is unnecessary for the NONmembership proof. Specialization fixes c, so nonmembership pulls back to the full source ideal. Therefore c∉I in each source chart, and any possible nilpotence exponent is at least2. No claim c∉rad(I) follows.
+
+The coarser77 projection setting all zero-xcharge parameters to0 gives NF(c)=0. That loses the obstruction and has no implication for full-chart membership or emptiness. Its bounded basis check was rerun cleanly after a Singular integer-declaration syntax error in the first checker; the invalid first log is preserved and not consumed. The final corrected checks and independent Fraction replay pass.
+
+## Worker computations
+
+Four full target-component N1 computations ran on adopted worker172.30.0.67: direct weighted order and a reversed pivot priority order for each fibre. All used the precise xcharge-overflow monomial ideal; only target membership was queried. `target-controls.sing/log` verify the weighted bound, adjacent-degree negative result, overflow behavior, and absence of false UNIT. All49/27 relevant pivot rows lead with the prescribed pivot in the alternative order. Each run was explicitly stopped by SIGTERM after the corresponding independent NONmembership proof, with `manual-stop.json` classification `REDUNDANT_STOP_AFTER_CERTIFIED_NONMEMBERSHIP`; these were not timeout or UNIT results. The136 alternative run initially had52GiB, amended in place to26GiB by `prlimit`; `memory-amendment.json` records the exact process and limits.
+
+Two bounded N2 monomial-curve runs retain every source row eligible for c².77 uses target(4,78), scalar weight w+79B through394,40 receiver variables and141 rows;136 uses target(6,58), weight w+59B through412,109 variables and171 rows. Each run has40GiB and600s limits. A zero target remainder in any such specialized receiver is not a source-chart certificate. Solver dispositions are separate from the certified N1 results.
+
+Final N2 dispositions:77 curve completed in20.219s with768 basis elements and NF(c²)=0 in its specialized receiver;136 curve timed out at600.027s with return code124 and no completed target test. An additional zero-B0 projection for136 completed with468 basis elements and NF(c²)=0, likewise no source-ideal conclusion. All four manual N1 stops have actual return code1 (Singular SIGTERM handling), not124; `solver-dispositions.json` records exact elapsed times, process custody, input hashes and harvested file hashes. No process belonging to this subtask remains alive.

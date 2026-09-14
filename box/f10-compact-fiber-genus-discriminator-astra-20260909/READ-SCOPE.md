@@ -1,0 +1,7 @@
+# Read scope
+
+First action 2026-09-09 15:32:35 UTC; controlling deadline 15:44:35 UTC, earlier than 15:47. Targets absent before begin. The exact two allowed local reports were hashed before WHOLE reads, including their tails/seals. Historical provisional headers are superseded only by the task's accepted16q/r scopes. No local provenance, corpus, coefficient artifact, peer or live review was read.
+
+Primary web: Nguyen Van Chau, arXiv:1005.3866v2, 3 June2010, https://arxiv.org/pdf/1005.3866v2. Browser returned the full six-page text; load-bearing read was Theorem3 on printed1 and its proof through Lemmas1–2 on printed2–4. Section3/remaining text was also displayed, but its separate rational-fiber/classification references are not imported. Own PDF SHA d99b81bbad007a6c33f7db70e142d39eb885d3b23d784e0d02e9ecdd7f3b5479. No Friedland retrieval retry was attempted. A narrow search for generic-fiber indecomposability returned primary and secondary snippets; none was imported: the rational smooth point supplies the needed geometric-integrality argument directly.
+
+All algebra and geometry are manual. No mathematical subprocess, Python arithmetic, source expansion, CAS, compilation/import/test, worker/process census, AWS/SSH or agent ran. Only documentary retrieval, reads, hashes, apply_patch edits and transaction/custody tooling ran. This is not a broad sweep and resets no external clock. Standard curve adjunction and Bezout are explicitly used in the hand proof, not inferred from a computation.

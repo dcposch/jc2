@@ -1,0 +1,64 @@
+{
+  "schema": "jc2-manual-custody/v1",
+  "task": "liouville-primitive-element-astra-20260912",
+  "status": "COMPLETE_MANUAL_UNREVIEWED",
+  "first_action_utc": "2026-09-12T12:09:59Z",
+  "original_reserve_utc": "2026-09-12T12:25:00Z",
+  "original_hard_stop_utc": "2026-09-12T12:28:00Z",
+  "opened_utc": "2026-09-12T12:11:29Z",
+  "closed_utc": "2026-09-12T12:18:35Z",
+  "finalized_utc": "2026-09-12T12:18:35Z",
+  "final_readback_postpin_verification_completed_by_utc": "2026-09-12T12:18:51Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "lease_id": "1234827dc7220cee4b157837cb3fa09c",
+  "expected_manifest_sha256": "f29bc94da8b56031a0b312aaee711204bddc6612f07755c8a6ffbfd03cac97d5",
+  "expected_manifest_verification": "VERIFIED",
+  "body_bytes": 8899,
+  "body_sha256": "4188592722733d09456b15b08f72fa34153ebfdc80be7a33ffe731cfb7d07787",
+  "inputs_pre_and_post_identical": [
+    {
+      "path": "/home/ubuntu/jc2/COORDINATION.md",
+      "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+      "read_scope": "FRESH_WHOLE before TASK; 806 lines read as 1-220, 221-440, 441-660, 661-806; later marker/protocol text lookup within these same bytes"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/liouville-primitive-element-astra-20260912/TASK.md",
+      "sha256": "8d686aa448ff15f784e15cf4df1f21fd17573bc27836c62d1dfb33583aa60452",
+      "read_scope": "FRESH_WHOLE after coordination; repeated WHOLE on continuation"
+    }
+  ],
+  "owned_outputs_excluding_this_custody": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/liouville-primitive-element-astra-20260912.md",
+      "sha256": "6a9e43ec24bbf35624e887eb48abe33723a9fa93f6f5ac54135f49679df5b5cc",
+      "read_scope": "WHOLE private body before marker, WHOLE final sealed report after publication"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/liouville-primitive-element-astra-20260912.md.artifact.json",
+      "sha256": "f29bc94da8b56031a0b312aaee711204bddc6612f07755c8a6ffbfd03cac97d5",
+      "read_scope": "WHOLE; exact expected-basis and expected-manifest verification"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/liouville-primitive-element-astra-20260912/PINS.json",
+      "sha256": "91b505e5a766198a360504bef6026d4813b48db3bec2cf33f8b75c5ccb56aad7",
+      "read_scope": "WHOLE owned readback"
+    }
+  ],
+  "scope": "Proof of C(f,g,S)=C(x,y) for polynomial complex Keller pairs only; generic birational lift, not ring equality, finiteness, injectivity, normality, individual-divisor saturation or JC2. Punctured-plane degree-two control is explicitly outside polynomial full-plane hypotheses.",
+  "input_census": "Exactly two pinned text inputs. Parent scope and independent-control notices were not used as additional mathematical premises; no root or peer proof body was accessed.",
+  "checks": {
+    "initial_owned_targets_absent": true,
+    "preseal_final_manifest_custody_targets_absent": true,
+    "own_whole_before_marker": true,
+    "unique_body_end_appended_last": true,
+    "final_report_and_manifest_whole": true,
+    "all_input_postpins_match": true,
+    "quantity_and_cheapest_test_explicit": true,
+    "canonical_open_or_charge_basis": false,
+    "scientific_execution": false,
+    "network_worker_or_agents": false,
+    "protected_shared_or_linked_source_access": false,
+    "administrative_finalizer_only_interpreter_use": true
+  },
+  "completion_handshake": "No further authored changes are intended after this custody. Its WHOLE readback and SHA, final unchanged vector and actual ALL WRITERS IDLE UTC are delivered in the terminal message. No runtime or follow-on authority."
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "manual-research-pins/v1",
+  "tag": "full-normalization-ruling-astra-20260913",
+  "first_action_utc": "2026-09-13 05:39:26.876716499 UTC",
+  "publication_reserve_utc": "2026-09-13 05:58:00 UTC",
+  "hard_stop_utc": "2026-09-13 06:01:00 UTC",
+  "inputs": [
+    {"path": "/home/ubuntu/jc2/box/full-normalization-ruling-astra-20260913/TASK.md", "sha256": "4fd74af2cff3d1b520a85f2541703645e0eb5cac4635561e8eebe9ab16227871", "read_mode": "FRESH_WHOLE"},
+    {"path": "/home/ubuntu/jc2/box/full-normalization-ruling-astra-20260913/APPROACHES.snapshot.md", "sha256": "1c69a6caa516279d78d11b4fa5e1fd4d284a35d2f0deab7d5a40dacddf4a4a1b", "read_mode": "FRESH_WHOLE lines1-307, ranges1-75,76-115,116-175,176-225,226-267,268-307"},
+    {"path": "/home/ubuntu/jc2/box/full-normalization-ruling-astra-20260913/COORDINATION.snapshot.md", "sha256": "517fca6f67f3d705f9b4045e10f9039aaf11bf3280dfd27bb90bf003ee4a3ead", "read_mode": "REUSED_WHOLE exact-byte personal read of830lines in global-construction-reset-astra-20260913 at05:09-05:14 today; fresh current pin"},
+    {"path": "/home/ubuntu/jc2/xmodel/block-descent-a1-cubic-one-place-euler-obstruction-coordinator-integration-sol56-20260830.md", "sha256": "8ccb92fd3676e9f8b58e3ace4eb9157d0fa290ea24abc84d9913e94ec407e16d", "read_mode": "FRESH_WHOLE lines1-205; import exact historical scope, no replay or linked source"},
+    {"path": "/home/ubuntu/jc2/xmodel/pseudoplane-ml-equivariance-scope-root-20260912.md", "sha256": "d09a07312122aa2882437f0b1a76003b938c4720bff4adae2a74039d177aef31", "read_mode": "FRESH_WHOLE lines1-99; bounded historical scope, no linked paper reads"}
+  ],
+  "administrative_instrument": {"path": "/home/ubuntu/jc2/ops/artifact_finalize.py", "sha256": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d", "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d"},
+  "primary_text": {
+    "url": "https://www.numdam.org/item/10.24033/bsmf.2692.pdf",
+    "title": "Dubouloz-Kishimoto, Log-uniruled affine varieties without cylinder-like open subsets",
+    "read_mode": "BROWSER_ONLY opening and section1.1 whole including Proposition2; nearby returned context through beginning section2; NOT whole22page paper",
+    "read_interval_utc": ["2026-09-13 05:39:26.876716499 UTC", "2026-09-13 05:44:57.375970061 UTC"],
+    "raw_bytes_saved": false,
+    "sha256": null,
+    "use": "Scope distinction only; explicit control proved directly, not inferred from paper"
+  },
+  "history_discovery": "Filename-only scoped search in xmodel/AUDIT.md/PROGRESS.md/ladder/REDUCTION.md for affine extension, affine-base, open A2, coordinate-pulling/integrality and cylinder phrases; then exact control-formula/leading-form filename search in xmodel. No absence-of-hit novelty claim.",
+  "web_discovery": {
+    "domains": ["arxiv.org", "numdam.org"],
+    "queries": ["\"affine surface\" \"contains\" \"affine plane\" \"open\" coordinate", "\"affine extensions\" \"affine plane\"", "\"affine surfaces\" \"open subset isomorphic to\" \"plane\"", "\"affine plane\" \"open embedding\" \"surface\" Gizatullin"],
+    "scope": "Four bounded primary-host discovery queries; noisy/clipped initial results and empty later results are not theorem premises or exhaustive coverage"
+  },
+  "excluded": ["live peer and ROOT parallel bodies", "execution-reliability-delta-first-sol-20260913 files", "protected repository and public mirror", "linked historic source and engines", "scientific execution", "AWS and agents"],
+  "result_scope": "Explicit one-surface countercontrol to open-chart-only coordinate implication; actual Keller-source implication GAP",
+  "promotion_or_followon_authority": false
+}

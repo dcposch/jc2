@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-lift-hermite-gate-fable5-20260906/gate_controls.py", line 175, in <module>
+    req(col_ok and fac_ok and d == want == detU*detT and matmul(M, inv) == ident
+  File "/home/ubuntu/jc2/box/d125-lift-hermite-gate-fable5-20260906/gate_controls.py", line 18, in req
+    raise RuntimeError('FAIL ' + name)
+RuntimeError: FAIL C4 s=1 r=1: Bareiss det=1=(-1)^(rs+r(r-1)/2), U*T factorisation, integer inverse
+Command exited with non-zero status 1
+	Command being timed: "timeout 30 bash -c ulimit -t 25 -v 524288; python3 gate_controls.py --mutate-sign"
+	User time (seconds): 0.12
+	System time (seconds): 0.01
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.13
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 32264
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4953
+	Voluntary context switches: 3
+	Involuntary context switches: 1
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

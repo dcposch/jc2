@@ -1,0 +1,180 @@
+{
+  "batches": [
+    {
+      "command": "env PYTHONDONTWRITEBYTECODE=1 timeout --signal=KILL 30s prlimit --as=536870912 --cpu=25 -- python3 -B gate_checks.py",
+      "exit_code": 0,
+      "metrics": {
+        "child_cpu_seconds": 0.401787,
+        "child_maxrss_kib": 29412,
+        "self_cpu_seconds": 0.064306,
+        "self_maxrss_kib": 29412,
+        "wall_seconds": 5.0192339069908485
+      },
+      "outcome_count": 33,
+      "python_optimize": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "env PYTHONDONTWRITEBYTECODE=1 timeout --signal=KILL 30s prlimit --as=536870912 --cpu=25 -- python3 -B -O gate_checks.py",
+      "exit_code": 0,
+      "metrics": {
+        "child_cpu_seconds": 1.926605,
+        "child_maxrss_kib": 31972,
+        "self_cpu_seconds": 0.063411,
+        "self_maxrss_kib": 31972,
+        "wall_seconds": 6.48158672999125
+      },
+      "outcome_count": 33,
+      "python_optimize": 1,
+      "status": "PASS"
+    }
+  ],
+  "bounds_per_batch": {
+    "as_bytes": 536870912,
+    "cpu_seconds": 25,
+    "wall_seconds": 30
+  },
+  "derived_control": {
+    "bytes": 1072,
+    "engine_executed": false,
+    "footer_control": true,
+    "rows": 7,
+    "sha256": "59295067207d4f17eb2acdbd4eac9d4755d16c94bfc36884e2f14d2731b9ad11",
+    "uses_direct_lift_I_ideal_1": true,
+    "uses_slimgb": false,
+    "variables": 4
+  },
+  "delta_objects": {
+    "new_driver_sha256": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+    "old_driver_reconstructed_in_memory_sha256": "faf7a1e08fa7fafac09160b57587eb325ef4542da30a7defbf5165bc329569d9",
+    "patch_changed_lines_match": true,
+    "patch_eof_blank_context_lines_elided": 2,
+    "patch_reverse_dry_run_exit_code": 0,
+    "patch_sha256": "5daab0735fd9fceb83acf6886a4364c3f533c7fb67dc88baea7885526a7ce2df"
+  },
+  "engine_executed": false,
+  "frozen_pins_unchanged_after_each_batch": true,
+  "outcomes": [
+    "all_10_frozen_pins_match",
+    "new_driver_hash",
+    "reconstructed_old_driver_hash",
+    "whole_delta_matches_patch_edits_with_two_blank_eof_context_lines_restored",
+    "implementation_and_gate_have_no_ast_assert",
+    "arm_immediate_and_one_setitimer",
+    "old_mismatch_publishes_result",
+    "new_mismatch_has_no_result",
+    "new_match_publishes_exact_phase_and_postpin",
+    "old_accepts_phase_control",
+    "new_rejects_phase_control",
+    "old_accepts_phase_verify",
+    "new_rejects_phase_verify",
+    "old_accepts_phase_missing",
+    "new_rejects_phase_missing",
+    "old_accepts_postpin_wrong",
+    "new_rejects_postpin_wrong",
+    "old_accepts_postpin_empty",
+    "new_rejects_postpin_empty",
+    "old_accepts_postpin_extra",
+    "new_rejects_postpin_extra",
+    "old_accepts_postpin_missing",
+    "new_rejects_postpin_missing",
+    "new_accepts_exact_decision_phase_and_postpin",
+    "arm_sets_default_unblocks_and_uses_fresh_absolute_minimum",
+    "arm_preserves_smaller_phase_duration",
+    "expired_arm_rejects_without_zero_setitimer",
+    "old_parse_actual_timed_python_path",
+    "new_parse_actual_timed_python_path",
+    "old_exec_actual_timed_python_path",
+    "new_exec_actual_timed_python_path",
+    "tiny_control_footer_derived_in_memory_not_executed",
+    "all_frozen_pins_unchanged_after_controls"
+  ],
+  "probes": {
+    "normal": [
+      {
+        "case": "parse",
+        "deadline_return_lag_seconds": 1.181215763092041,
+        "parse_done": true,
+        "returncode": 0,
+        "survived": true,
+        "timer_at_parse_enter_seconds": 0.0,
+        "version": "old"
+      },
+      {
+        "case": "parse",
+        "deadline_return_lag_seconds": 0.0016260147094726562,
+        "parse_done": false,
+        "returncode": -14,
+        "survived": false,
+        "timer_at_parse_enter_seconds": 0.546022,
+        "version": "new"
+      },
+      {
+        "case": "exec",
+        "deadline_return_lag_seconds": 0.381303071975708,
+        "exec_blocked_sigalrm": true,
+        "exec_default_sigalrm": false,
+        "exec_same_pid": true,
+        "returncode": 0,
+        "survived": true,
+        "timer_after_exec_seconds": 0.0,
+        "version": "old"
+      },
+      {
+        "case": "exec",
+        "deadline_return_lag_seconds": 0.0006773471832275391,
+        "exec_blocked_sigalrm": false,
+        "exec_default_sigalrm": true,
+        "exec_same_pid": true,
+        "returncode": -14,
+        "survived": false,
+        "timer_after_exec_seconds": 0.423023,
+        "version": "new"
+      }
+    ],
+    "optimized": [
+      {
+        "case": "parse",
+        "deadline_return_lag_seconds": 1.2430353164672852,
+        "parse_done": true,
+        "returncode": 0,
+        "survived": true,
+        "timer_at_parse_enter_seconds": 0.0,
+        "version": "old"
+      },
+      {
+        "case": "parse",
+        "deadline_return_lag_seconds": 0.0020380020141601562,
+        "parse_done": false,
+        "returncode": -14,
+        "survived": false,
+        "timer_at_parse_enter_seconds": 0.546153,
+        "version": "new"
+      },
+      {
+        "case": "exec",
+        "deadline_return_lag_seconds": 0.4444444179534912,
+        "exec_blocked_sigalrm": true,
+        "exec_default_sigalrm": false,
+        "exec_same_pid": true,
+        "returncode": 0,
+        "survived": true,
+        "timer_after_exec_seconds": 0.0,
+        "version": "old"
+      },
+      {
+        "case": "exec",
+        "deadline_return_lag_seconds": 0.0011212825775146484,
+        "exec_blocked_sigalrm": false,
+        "exec_default_sigalrm": true,
+        "exec_same_pid": true,
+        "returncode": -14,
+        "survived": false,
+        "timer_after_exec_seconds": 0.360751,
+        "version": "new"
+      }
+    ]
+  },
+  "schema": "jc2.caller-repair-delta-gate-runs/v1",
+  "status": "PASS"
+}

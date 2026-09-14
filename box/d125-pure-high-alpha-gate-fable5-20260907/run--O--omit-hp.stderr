@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/jc2-fable5-scratch.H5jz0r/box/d125-pure-high-alpha-discriminator-20260907/check.py", line 108, in <module>
+    else: print(json.dumps(check(mode),sort_keys=True,indent=2))
+                           ^^^^^^^^^^^
+  File "/tmp/jc2-fable5-scratch.H5jz0r/box/d125-pure-high-alpha-discriminator-20260907/check.py", line 41, in check
+    need(P==add(mul(Rs,qq),rr),'actual division reconstruction')
+  File "/tmp/jc2-fable5-scratch.H5jz0r/box/d125-zero-k-deformation-discriminator-20260907/check.py", line 15, in need
+    if not ok: raise ValueError(msg)
+               ^^^^^^^^^^^^^^^^^^^^^
+ValueError: actual division reconstruction

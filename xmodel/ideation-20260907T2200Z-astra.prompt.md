@@ -1,0 +1,49 @@
+# Independent blind full-spectrum scan — 2200 round
+
+Write exactly xmodel/ideation-20260907T2200Z-astra.md. DeadlineSep7 22:40UTC,
+<=35minutes,<=2600words. Read {{LANE_INPUTS}} and the WHOLE packet.md,
+whole current approach map and ALL46 IDs in the historical master table.
+Return EVERY identical contract item. Root report is sealed and HIDDEN.
+Do not read any2200 peer/root submission, or any live report/code/log/receipt.
+The two local specialists' new low-alpha and Furter preparation reports are
+POST-SNAPSHOT/UNCHARGED; do not read them. Current mutable canonical ledgers
+are NOT substitutes for the pinned copies. Use frozen AUDIT latest14c–14y
+and historical entries for scoped history checks. No theorem promotion here.
+
+Packet SHAa7fd2e4613b4bb74f8199ae6db412db08ca4f7dc9476715fd07b267f33f0baf9,
+manifest608229b673ddfece7504397c6c522e59d6ca61b10dd8a7e0103de2f1da6ef460.
+The full round is OVERDUE, not timely. Blind model consensus cannot override
+a source theorem. The new Furter result is an UNGATED external claim, not
+a license to apply automorphism-stratum closure to arbitrary Keller maps.
+Boundary radical(J+(k)) is not radical(J) or guarded emptiness. No global125.
+
+No AWS/SSH/heavy CAS/fullsource products, shared edits, public posts,
+protected-tree inspection or new agents. Tiny optional <=30wall/25CPU/512MiB,
+-B before imports; actual generators degree<=5, formal identities/factored
+accounting only. Targeted primary fetch permitted if needed, not broad sweep.
+Declare unread primary, missing arrows and no-gain explicitly. One precise
+new mechanism or supported NO_NEW_MECHANISM beats recycled lane slogans.
+
+Publish skeleton WITHOUT completion marker, bounded sections, final standalone
+<!-- BODY-END --> ONLY at completion with NOTHING after. NO authored seal.
+Never include a line beginning charge_basis, even code/placeholder; OMIT it.
+Do not alter launcher, adapters, validator, seal helper or FALLACY.
+
+charged_input=box/ideation-20260907T2200Z/packet.md
+charged_input=box/ideation-20260907T2200Z/MANIFEST.json
+charged_input=box/ideation-20260907T2200Z/snapshots/APPROACHES.md
+charged_input=box/ideation-20260907T2200Z/snapshots/AUDIT.md
+charged_input=box/ideation-20260907T2200Z/snapshots/PROGRESS.md
+charged_input=box/ideation-20260907T2200Z/snapshots/notes.md
+charged_input=box/ideation-20260907T2200Z/snapshots/COORDINATION.md
+charged_input=box/ideation-20260907T2200Z/snapshots/REDUCTION.md
+charged_input=box/ideation-20260907T2200Z/snapshots/APPROACHES-before-20260906-cleanup.md
+charged_input=box/ideation-20260907T2200Z/snapshots/ideation-20260906T1435Z-synthesis.md
+charged_input=box/ideation-20260907T2200Z/snapshots/websweep-20260907T0735Z-astra.md
+charged_input=box/ideation-20260907T2200Z/snapshots/d125-pure-uniform-discriminator-astra-20260907.md
+charged_input=box/ideation-20260907T2200Z/snapshots/d125-pure-uniform-gate-fable5-20260907.md
+charged_input=box/ideation-20260907T2200Z/snapshots/d125-exceptional-pure-gate-fable5-20260907.md
+charged_input=box/ideation-20260907T2200Z/snapshots/d125-arc-closure-interface-astra-20260907.md
+charged_input=box/ideation-20260907T2200Z/snapshots/furter-proof.typ
+charged_input=box/ideation-20260907T2200Z/snapshots/furter-primary-author.pdf
+charged_input=box/ideation-20260907T2200Z/snapshots/FALLACY-v2.md

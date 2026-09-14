@@ -1,0 +1,78 @@
+{
+  "tag": "bass-general-delta1-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED_MANUAL_THEOREM_CANDIDATE",
+  "first_action_utc": "2026-09-11 21:36:50 UTC",
+  "publication_reserve_utc": "2026-09-11 21:52:00 UTC",
+  "hard_stop_utc": "2026-09-11 21:55:00 UTC",
+  "clock_reset": false,
+  "publication": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "lease_id": "acda42490a38b5e6c34ba75aa9445951",
+    "opened_utc": "2026-09-11T21:37:03Z",
+    "closed_utc": "2026-09-11T21:47:45Z",
+    "finalized_utc": "2026-09-11T21:47:45Z",
+    "expected_manifest_sha256": "2b57ee9fcc6fae0553f099e0950f10ccd458047730af903bff729493e36e11b5",
+    "verification": "VERIFIED with exact expected basis and manifest; sealed WHOLE report and manifest and all input/owned pins checked in administrative call ending 2026-09-11 21:48:00 UTC",
+    "body_sha256": "1c51485f6881294627c5269d62335ed8b471f6278ca52955550a36457f4eed7e",
+    "body_bytes": 11290,
+    "file_bytes": 11623,
+    "preseal_word_count": 1627
+  },
+  "inputs": [
+    {
+      "path": "box/bass-general-delta1-astra-20260911/TASK.md",
+      "sha256": "dac6224cf1221f3f56cef078afebe1274531fe3288acaacad1dd890830187a5a",
+      "read": "FRESH_WHOLE after current hash at first action; preseal and postpublication pins MATCHED"
+    },
+    {
+      "path": "box/bass-resonant-operators-root-20260911/bass-1989.pdf",
+      "sha256": "86f642941d2cea0f1d438996d8e81833ac53b6039c4c81e1564adc411f614b1e",
+      "read": "Fresh whole-file hash after TASK discovery and before PDF-to-stdout read; assigned printed 41--49 / PDF 4--12 WHOLE, no clipping or reuse. No other page or reference read claimed. Preseal and postpublication pins MATCHED."
+    },
+    {
+      "path": "box/bass-general-delta1-astra-20260911/ADDENDUM.md",
+      "sha256": "5c87998a98dc8c277178c2302ef4207d6923c779dff87c214d14bbde9c6b7803",
+      "read": "ROOT-authorized input 3; current hash before FRESH_WHOLE read at 21:43:06 UTC; preseal and postpublication pins MATCHED"
+    }
+  ],
+  "owned_pins_excluding_custody": [
+    {
+      "path": "box/bass-general-delta1-astra-20260911/PINS.json",
+      "sha256": "63b6b5958c273eade297aaa7ecd3d818e2e71dc722c1ca2b40e18b5fd5f913cb",
+      "read": "OWN_WHOLE before marker; unchanged current pin"
+    },
+    {
+      "path": "xmodel/bass-general-delta1-astra-20260911.md",
+      "sha256": "f4d2eedb3254659deb36d4437e1f632825af9ef68ba1caf38c81d8b10e91f9d7",
+      "read": "OWN_WHOLE private partial before unique marker; OWN_WHOLE sealed report after expected verification"
+    },
+    {
+      "path": "xmodel/bass-general-delta1-astra-20260911.md.artifact.json",
+      "sha256": "2b57ee9fcc6fae0553f099e0950f10ccd458047730af903bff729493e36e11b5",
+      "read": "OWN_WHOLE; exact expected transaction VERIFIED"
+    }
+  ],
+  "provenance": "ROOT ADDENDUM supplied the general Puiseux lead, explicitly acknowledged and independently checked in report section 3. Original TASK and clocks stayed fixed. Neither any earlier report nor the live affine review was an input or proof premise.",
+  "mathematical_scope": {
+    "result": "Manual candidate: every e_p-r+delta G(e_p,e_q), r>=0 and G in C[X,Y], acts injectively on the actual normalized Keller quotient R/C[p,q].",
+    "formal_part": "For nonconstant G without an accessible factor X-(r+J), J>=0, every algebraic formal kernel element is polynomial. Accessible vertical factors reduce to a bounded-p diagonal annihilator; constants reduce by an actual linear target shear to Bass's diagonal theorem.",
+    "nonlinear_test": "The exact G=Y-(X-r)^2 family is separately proved via integer recurrence products and quadratic exceptional degrees; it refutes an unqualified uniform linear nonzero window.",
+    "general_proof": "Convergent Puiseux branches separate late factors; bounded/non-real branches have polynomial distance bounds; positive-real sublinear roots create only a counting-O(X^sigma), sigma<1, exceptional set. Product growth outside that set and algebraicity of the leading coefficient series close by an entire-plus-Fabry argument.",
+    "standard_inputs": "Complex algebraic formal-series convergence and convergent Laurent--Puiseux root expansions at infinity, differentiable along positive real n, are explicitly named standard background, not freshly primary-verified. Bass's diagonal torsion theorem and printed page 49 Fabry mechanism are the charged source premises.",
+    "remaining_limit": "No proof that arbitrary actual Keller annihilators reduce to this family; no general U torsion theorem, JC2 or novelty claim, promotion, new OPEN, computation or successor. ROOT independently controls any FIRST review."
+  },
+  "checks": {
+    "clipping": "NONE",
+    "reuse": "NONE",
+    "additional_inputs": "NONE beyond the three pinned inputs",
+    "collision": "Owned report/manifest/PINS/custody absent initially; final report/manifest/custody absent before publication. ROOT TASK and ADDENDUM preserved; no shared or other-lane writes.",
+    "quantity_cheapest_test": "Exact general recurrence, nonlinear sparse truncation and full complex-G Puiseux/Fabry estimate; scientific runtime UNMEASURED",
+    "execution": "Manual reasoning, administrative date/hash/text/PDF-to-stdout, apply_patch and existing artifact-finalize publication only. No scientific subprocess, code/import/AST/test/dummy/CAS, coefficient artifact, network/AWS/SSH/Git/protected/shared access, live report or agent."
+  },
+  "terminal": {
+    "custody": "Last authored object; its digest is returned externally and excluded from its own pin vector.",
+    "writers": "No writer remains after custody creation. Only read-only custody WHOLE/hash/clock checks follow; filesystem mtime records final authored write and final handoff records observed ALL WRITERS IDLE time.",
+    "handoff": "Custody digest FIRST, independent COMPLETED/ALL WRITERS IDLE, exact report and expected-manifest pins. ROOT performs independent intake."
+  }
+}

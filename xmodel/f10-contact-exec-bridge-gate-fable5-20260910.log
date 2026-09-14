@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written at 05:19:43 UTC, inside the reserve boundary. Stopping here.
+
+**Outcome.** All 12 frozen inputs matched the charged SHA list before any body was read. My own report and box were absent at 05:16:18 UTC and are the only files written. Nothing was executed, imported, or fetched; the optional Singular manual URL was not retrieved for lack of time, so the startup-flag semantics stay unverified in this lane.
+
+**Verdict by section.**
+- **A Admission/authority: CONFIRMED.** Exact four-argument CLI, canonical regular-file arguments, gate hashed before metadata import, bounded authority reread bound to the receipt SHA, and selected-file membership enforced in every mode. The declared limit: the unchanged gate parses one read and hashes a second, so the binding is cooperative-custody evidence only, which the interface already states.
+- **B Exec/runtime: CONFIRMED with one interface gap.** Only os.execv, no fork, shell, or PGID change. The producer uses kernel commands only and ends with quit. Gap: the bridge prints its authorization JSON line to stdout before exec, and the interface does not say CHECK_OK must be matched as a line after that event, nor that producer stage markers never count as success.
+- **C Mutation correctness: CONFIRMED with one declaration gap.** Shallow copies leave the source untouched, headers and block order match the checker token for token, reparse proves exactly one +1 delta, exclusive creation with readback, non-atomic pair declared. Gap: serialization allocates before the 64 MiB refusal, and nothing says so.
+- **D Future controls: GAP, the smallest actual defect.** The interface accepts status 2 plus CHECK_FAIL for both corruptions without the reason string, so a truncated or mis-staged control file would count as success.
+
+**Minimal remedy.** Three sentences in ROOT-execution-interface.md: match the exact CHECK_FAIL reason `exact polynomial identity is nonzero` for both corruptions, match CHECK_OK as a line after the bridge event, and state the post-allocation refusal. No source change is needed.
+
+Own outputs: `xmodel/f10-contact-exec-bridge-gate-fable5-20260910.md` (SHA 9d7cda0b…) and `box/f10-contact-exec-bridge-gate-fable5-20260910/PINS.md` with the 12 verified input hashes. No seal, no charge_basis, no launch or promotion authorized.
+DIVERT path=xmodel/f10-contact-exec-bridge-gate-fable5-20260910.md status=CLEAN body_bytes=6427 body_sha256=9d7cda0b6a181b52608a013fac31585541743b086da7d3e2dab773f1db2f831c

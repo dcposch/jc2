@@ -1,0 +1,125 @@
+{
+  "counts_type": "DETERMINED arithmetic on finite necessary sets; no attainment claim",
+  "operative_rows": 1420,
+  "stages": {
+    "('V_set_size', 1)": 65,
+    "('outer_V_set_size', 1)": 323,
+    "('full_source_route_count', 1)": 90,
+    "('route_state', 'NONEMPTY')": 65,
+    "('us', 1)": 1110,
+    "('drop', False)": 1330,
+    "('V_set_size', 0)": 1355,
+    "('full_source_route_count', 0)": 1330,
+    "('route_state', 'EMPTY_NECESSARY_WHOLE_SOURCE_TREE')": 214,
+    "('outer_V_set_size', 0)": 1095,
+    "('route_state', 'EMPTY_NECESSARY_FIRST_SUPPORT')": 1051,
+    "('us', 3)": 34,
+    "('us', 2)": 265,
+    "('route_state', 'EMPTY_PROP6.3_FINITE_POLE')": 90,
+    "('drop', True)": 90,
+    "('us', 4)": 9,
+    "('outer_V_set_size', 2)": 2,
+    "('us', 5)": 2
+  },
+  "per_effective_level": {
+    "2": {
+      "DETERMINED_SAME": 65,
+      "SET-VALUED_EMPTY": 1355
+    },
+    "3": {
+      "SET-VALUED_EMPTY": 1331,
+      "DETERMINED_SAME": 15,
+      "DETERMINED_DIFFERENT": 7
+    },
+    "4": {
+      "SET-VALUED_EMPTY": 926,
+      "DETERMINED_SAME": 1
+    },
+    "5": {
+      "SET-VALUED_EMPTY": 136
+    }
+  },
+  "per_raw_level": {
+    "2": {
+      "DETERMINED_SAME": 65,
+      "SET-VALUED_EMPTY": 1355
+    },
+    "3": {
+      "SET-VALUED_EMPTY": 1355,
+      "DETERMINED_SAME": 15,
+      "DETERMINED_DIFFERENT": 7
+    },
+    "4": {
+      "SET-VALUED_EMPTY": 962,
+      "DETERMINED_SAME": 1
+    },
+    "5": {
+      "SET-VALUED_EMPTY": 166
+    }
+  },
+  "per_local_implication_level": {
+    "2": {
+      "DETERMINED_SAME": 1420
+    },
+    "3": {
+      "DETERMINED_DIFFERENT": 833,
+      "DETERMINED_SAME": 161,
+      "SET-VALUED_EMPTY": 360,
+      "SET-VALUED_MIXED": 23
+    },
+    "4": {
+      "DETERMINED_DIFFERENT": 889,
+      "DETERMINED_SAME": 54,
+      "SET-VALUED_MIXED": 8,
+      "SET-VALUED_EMPTY": 12
+    },
+    "5": {
+      "DETERMINED_DIFFERENT": 164,
+      "DETERMINED_SAME": 2
+    }
+  },
+  "partition": {
+    "OWN_V_CANDIDATES_US1": 45,
+    "EMPTY_NECESSARY_DATA_US1": 891,
+    "OWN_V_CANDIDATES_US_GE2": 20,
+    "PROP6.3_FINITE_POLE_US1": 90,
+    "U_NEG_US1": 84,
+    "EMPTY_NECESSARY_DATA_US_GE2": 284,
+    "U_NEG_US2_RADIUS_CONDITIONAL": 6
+  },
+  "old_to_new": {
+    "('live_us1', 'OWN_V_CANDIDATES_US1')": 39,
+    "('ctop_killed', 'EMPTY_NECESSARY_DATA_US1')": 790,
+    "('live_us1', 'EMPTY_NECESSARY_DATA_US1')": 101,
+    "('us_ge2', 'OWN_V_CANDIDATES_US_GE2')": 20,
+    "('live_us1', 'PROP6.3_FINITE_POLE_US1')": 34,
+    "('ctop_killed', 'U_NEG_US1')": 84,
+    "('us_ge2', 'EMPTY_NECESSARY_DATA_US_GE2')": 284,
+    "('ctop_killed', 'OWN_V_CANDIDATES_US1')": 6,
+    "('ctop_killed', 'PROP6.3_FINITE_POLE_US1')": 56,
+    "('us_ge2', 'U_NEG_US2_RADIUS_CONDITIONAL')": 6
+  },
+  "ctop": {
+    "('DETERMINED_COMPLETE_US1', (True,))": 45,
+    "('DETERMINED_COMPLETE_US1', ())": 975,
+    "('OPEN_CHILD_TERMINAL_IDENTIFICATION', (True,))": 20,
+    "('NO_CHILD_PROP6.3_FINITE_POLE', ())": 90,
+    "('OPEN_CHILD_TERMINAL_IDENTIFICATION', ())": 290
+  },
+  "local_top_predicates": {
+    "(True, False, 'DETERMINED_V', (True,))": 1007,
+    "(False, False, 'DETERMINED_V', (True,))": 302,
+    "(True, True, 'DETERMINED_V', (True,))": 90,
+    "(True, False, 'SET-VALUED_V', (True,))": 13,
+    "(False, False, 'SET-VALUED_V', (True,))": 8
+  },
+  "verifications": {
+    "fresh_enumerator_count": 24063,
+    "full_source_rows_match_gate": true,
+    "full_source_rows_match_inventory": true,
+    "hard_rows_multiset_match": true,
+    "characteristic_labels_match_every_row": true,
+    "U2_identity_predicate_matches_legacy_arithmetic": true
+  },
+  "elapsed_seconds": 20.778
+}

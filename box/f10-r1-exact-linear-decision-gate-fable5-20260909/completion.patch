@@ -1,0 +1,9 @@
+*** Begin Patch
+*** Update File: xmodel/f10-r1-exact-linear-decision-gate-fable5-20260909.md
+@@
+ ## Own whole-read and completion
++
++Own whole-read at 22:07 UTC by cat -n of lines 1-119: title, status line, sections 0, A, B, C, D, E, GAPs, custody table (21 rows), OPEN(S) RAISED, COLLISIONS. All 21 distinct 64-hex tokens in this report equal, by comm in both directions, the 21 digests of the owned expected-sha256.txt, which sha256sum -c verified 21 of 21 against the charged inputs before any body read and again at 22:07. The six 8-hex prefixes in section C (11ebf430, 6547063b, d262f3d4, 168bdfd3, d444d022, 091bbf35) are the accepted-version constants read at evidence.py:10-16, not custody rows; 20260909 is the date. No placeholder, TODO, exit-price line, Seal or closing hash section exists; no marker precedes this section. Owned box final inventory: expected-sha256.txt, custody-rows.md, content.patch, completion.patch, report-hex64.txt, list-hex64.txt; git status shows no write outside the two owned paths. Verdict unchanged after the whole-read: A, B, C, D, E CONFIRMED; STATIC correctness accepted at the imported 17m scope only. No source acceptance, runtime authority, worker, dependency installation, actual decision, registration or fixture was created; the first validation may proceed only by separate root registration. Completed before the 22:19:22 UTC stop; all writers idle after the marker.
++
++<!-- BODY-END -->
+*** End Patch

@@ -1,0 +1,34 @@
+{
+  "t8p_plus": {
+    "command": "timeout 1800 stdbuf -oL Singular -q box/k16astra-20260905/t8p_plus.sing",
+    "returncode": 124,
+    "status": "INCONCLUSIVE_TIMEOUT",
+    "completed_markers": ["CONE_START"],
+    "dimension_result": null,
+    "promotion": "NONE"
+  },
+  "t8p_tailhint": {
+    "command": "timeout 1800 stdbuf -oL Singular -q box/k16astra-20260905/t8p_tailhint.sing",
+    "returncode": 124,
+    "status": "INCONCLUSIVE_TIMEOUT",
+    "completed_markers": ["CONE_START"],
+    "dimension_result": null,
+    "promotion": "NONE"
+  },
+  "t4_checks_suffix": {
+    "returncode": 1,
+    "status": "DELIBERATELY_STOPPED_AFTER_COMPLETED_CHECKPOINTS",
+    "completed_results": ["Iplus dim 0", "Iplus length 338", "tau nonzero modulo Iplus", "tau squared zero modulo Iplus", "tail dim 0", "tail length 572", "tau squared nonzero modulo tail"],
+    "unfinished_operation": "direct raw tau cubed reduction modulo tail",
+    "replacement": "Exact tail CI socle weight 35 implies tau cubed of weight 51 is zero."
+  },
+  "t8p_generate_slow": {
+    "returncode": 1,
+    "status": "DELIBERATELY_REPLACED",
+    "reason": "Replace quadratic term indexing by grouped coefficient extraction.",
+    "replacement": "t8p_generate.sing completed all 17 pivots and local identities."
+  },
+  "new_uniform_theorem_T": false,
+  "all_t_status": "OPEN",
+  "main_new_result": "Exact all-t equivalence of 8.1 failure to a normalized polynomial Abel solution with B*eta nonzero."
+}

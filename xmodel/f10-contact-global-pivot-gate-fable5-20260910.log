@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete and all writers idle at 02:36:32 UTC, four minutes before the 02:40:30 reserve. Nothing further to write.
+
+**Verdict: all four items CONFIRMED by independent hand recomputation.** The producer's new claim stands: on the entire c-unit chart with every guard factor inverted, the quadratic remainder coefficient U is a unit with nilpotents retained, so the single global quadratic pivot is licensed. No mathematical defect was found.
+
+What I checked, all by hand with no subprocess:
+
+- **A.** The literal d,e,f,g follow from the accepted17zi coefficients, the three numerator identities hold, and expanding c²U and c²T term by term gives exactly the producer's U0 and T0 after dividing by 60. Identity (3) cancels its W² term exactly and matches coefficientwise in W and W⁰. Identity (4) reduces to (20/9)V(1−3V)³.
+- **B.** Monic division gives the exact identities T=−sU and Z=pU in the chart, so U=0 forces T=Z=0. Both branches of (3) are exhausted: the first forces V=0 then W=0, killed by the W guard; the second forces V=1/4 then W=1/108, where Z=5/54 is nonzero. No field point exists, so the quotient by U is the zero ring.
+- **C.** Both equations in (7) are the two coefficients of the remainder of h modulo q after substituting s=−T/U and p=Z/U and clearing U². The two ring maps are mutually inverse, giving the isomorphism.
+- **D.** The W-dropped control at V=W=0, x=3, y=4 reproduces U=T=Z=0 with all other guard values nonzero (Delta 1, Gamma 256, Omega 128). At (1/4, 1/108) T vanishes automatically, so the retained row Z=0 is indispensable.
+
+Two documentary defects only. The producer cites accepted17zj finiteness for the field point, but any nonzero ring has a maximal ideal, so finiteness is stronger than needed and the proof does not depend on it. The sharper identities T=−sU, Z=pU are what the pivot actually uses.
+
+The prescribed rational-exponent exclusion, enumeration, and any source or JC2 closure remain GAP, as the producer states. The claim is provisional and reviewed once. Files written:
+
+- `xmodel/f10-contact-global-pivot-gate-fable5-20260910.md` with one body-end marker, no seal, no charge_basis
+- `box/f10-contact-global-pivot-gate-fable5-20260910/READ-SCOPE.md` with the six input hashes, cross-checked against generated output
+
+Root retains custody. No Git, network, or other-lane action was taken.
+DIVERT path=xmodel/f10-contact-global-pivot-gate-fable5-20260910.md status=CLEAN body_bytes=13451 body_sha256=504fa198dce3cb73d6298f1afe7db4f3efe809ab6249ea68c6591ee084a23e9e

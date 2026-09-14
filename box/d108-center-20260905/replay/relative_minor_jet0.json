@@ -1,0 +1,113 @@
+{
+  "tag": "relative_minor_jet0",
+  "weight": [
+    4,
+    6
+  ],
+  "cutoff": 43,
+  "minor_jet0": true,
+  "h3_coordinate_count": 7,
+  "variables": [
+    "Hc_1_7",
+    "Hc_1_8",
+    "Hc_2_6",
+    "Hc_2_7",
+    "Hc_3_6",
+    "Hc_4_5",
+    "Hc_5_4"
+  ],
+  "template": {
+    "0,7": "1",
+    "0,8": "2",
+    "0,9": "1",
+    "1,7": "Hc_1_7 + Hc_1_8",
+    "1,8": "Hc_1_8",
+    "2,6": "Hc_2_6 + Hc_2_7",
+    "2,7": "Hc_2_7",
+    "3,6": "Hc_3_6",
+    "4,5": "Hc_4_5",
+    "5,4": "Hc_5_4"
+  },
+  "raw_rows": {
+    "minor_n1_pi0": "-Hc_1_7",
+    "minor_n2_pi0": "7*Hc_1_7*jet0 - Hc_1_8*jet0 + Hc_2_6 - jet0**2",
+    "minor_n3_pi0": "-21*Hc_1_7*jet0**2 + 7*Hc_1_7*jet1 + 7*Hc_1_8*jet0**2 - Hc_1_8*jet1 - 6*Hc_2_6*jet0 + Hc_2_7*jet0 + Hc_3_6 + 7*jet0**3 - 2*jet0*jet1",
+    "minor_n4_pi0": "35*Hc_1_7*jet0**3 - 42*Hc_1_7*jet0*jet1 + 7*Hc_1_7*jet2 - 21*Hc_1_8*jet0**3 + 14*Hc_1_8*jet0*jet1 - Hc_1_8*jet2 + 15*Hc_2_6*jet0**2 - 6*Hc_2_6*jet1 - 6*Hc_2_7*jet0**2 + Hc_2_7*jet1 - 6*Hc_3_6*jet0 - Hc_4_5 - 21*jet0**4 + 21*jet0**2*jet1 - 2*jet0*jet2 - jet1**2",
+    "minor_n5_pi0": "-35*Hc_1_7*jet0**4 + 105*Hc_1_7*jet0**2*jet1 - 42*Hc_1_7*jet0*jet2 - 21*Hc_1_7*jet1**2 + 35*Hc_1_8*jet0**4 - 63*Hc_1_8*jet0**2*jet1 + 14*Hc_1_8*jet0*jet2 + 7*Hc_1_8*jet1**2 - 20*Hc_2_6*jet0**3 + 30*Hc_2_6*jet0*jet1 - 6*Hc_2_6*jet2 + 15*Hc_2_7*jet0**3 - 12*Hc_2_7*jet0*jet1 + Hc_2_7*jet2 + 15*Hc_3_6*jet0**2 - 6*Hc_3_6*jet1 + 5*Hc_4_5*jet0 + Hc_5_4 + 35*jet0**5 - 84*jet0**3*jet1 + 21*jet0**2*jet2 + 21*jet0*jet1**2 - 2*jet1*jet2",
+    "minor_n5_pi1": "7*Hc_1_7 - Hc_1_8 - 2*jet0",
+    "minor_n6_pi0": "21*Hc_1_7*jet0**5 - 140*Hc_1_7*jet0**3*jet1 + 105*Hc_1_7*jet0**2*jet2 + 105*Hc_1_7*jet0*jet1**2 - 42*Hc_1_7*jet1*jet2 - 35*Hc_1_8*jet0**5 + 140*Hc_1_8*jet0**3*jet1 - 63*Hc_1_8*jet0**2*jet2 - 63*Hc_1_8*jet0*jet1**2 + 14*Hc_1_8*jet1*jet2 + 15*Hc_2_6*jet0**4 - 60*Hc_2_6*jet0**2*jet1 + 30*Hc_2_6*jet0*jet2 + 15*Hc_2_6*jet1**2 - 20*Hc_2_7*jet0**4 + 45*Hc_2_7*jet0**2*jet1 - 12*Hc_2_7*jet0*jet2 - 6*Hc_2_7*jet1**2 - 20*Hc_3_6*jet0**3 + 30*Hc_3_6*jet0*jet1 - 6*Hc_3_6*jet2 - 10*Hc_4_5*jet0**2 + 5*Hc_4_5*jet1 - 4*Hc_5_4*jet0 - 35*jet0**6 + 175*jet0**4*jet1 - 84*jet0**3*jet2 - 126*jet0**2*jet1**2 + 42*jet0*jet1*jet2 + 7*jet1**3 - jet2**2",
+    "minor_n6_pi1": "-42*Hc_1_7*jet0 + 14*Hc_1_8*jet0 - 6*Hc_2_6 + Hc_2_7 + 21*jet0**2 - 2*jet1",
+    "minor_n7_pi0": "-7*Hc_1_7*jet0**6 + 105*Hc_1_7*jet0**4*jet1 - 140*Hc_1_7*jet0**3*jet2 - 210*Hc_1_7*jet0**2*jet1**2 + 210*Hc_1_7*jet0*jet1*jet2 + 35*Hc_1_7*jet1**3 - 21*Hc_1_7*jet2**2 + 21*Hc_1_8*jet0**6 - 175*Hc_1_8*jet0**4*jet1 + 140*Hc_1_8*jet0**3*jet2 + 210*Hc_1_8*jet0**2*jet1**2 - 126*Hc_1_8*jet0*jet1*jet2 - 21*Hc_1_8*jet1**3 + 7*Hc_1_8*jet2**2 - 6*Hc_2_6*jet0**5 + 60*Hc_2_6*jet0**3*jet1 - 60*Hc_2_6*jet0**2*jet2 - 60*Hc_2_6*jet0*jet1**2 + 30*Hc_2_6*jet1*jet2 + 15*Hc_2_7*jet0**5 - 80*Hc_2_7*jet0**3*jet1 + 45*Hc_2_7*jet0**2*jet2 + 45*Hc_2_7*jet0*jet1**2 - 12*Hc_2_7*jet1*jet2 + 15*Hc_3_6*jet0**4 - 60*Hc_3_6*jet0**2*jet1 + 30*Hc_3_6*jet0*jet2 + 15*Hc_3_6*jet1**2 + 10*Hc_4_5*jet0**3 - 20*Hc_4_5*jet0*jet1 + 5*Hc_4_5*jet2 + 6*Hc_5_4*jet0**2 - 4*Hc_5_4*jet1 + 21*jet0**7 - 210*jet0**5*jet1 + 175*jet0**4*jet2 + 350*jet0**3*jet1**2 - 252*jet0**2*jet1*jet2 - 84*jet0*jet1**3 + 21*jet0*jet2**2 + 21*jet1**2*jet2",
+    "minor_n7_pi1": "105*Hc_1_7*jet0**2 - 42*Hc_1_7*jet1 - 63*Hc_1_8*jet0**2 + 14*Hc_1_8*jet1 + 30*Hc_2_6*jet0 - 12*Hc_2_7*jet0 - 6*Hc_3_6 - 84*jet0**3 + 42*jet0*jet1 - 2*jet2",
+    "minor_n8_pi0": "Hc_1_7*jet0**7 - 42*Hc_1_7*jet0**5*jet1 + 105*Hc_1_7*jet0**4*jet2 + 210*Hc_1_7*jet0**3*jet1**2 - 420*Hc_1_7*jet0**2*jet1*jet2 - 140*Hc_1_7*jet0*jet1**3 + 105*Hc_1_7*jet0*jet2**2 + 105*Hc_1_7*jet1**2*jet2 - 7*Hc_1_8*jet0**7 + 126*Hc_1_8*jet0**5*jet1 - 175*Hc_1_8*jet0**4*jet2 - 350*Hc_1_8*jet0**3*jet1**2 + 420*Hc_1_8*jet0**2*jet1*jet2 + 140*Hc_1_8*jet0*jet1**3 - 63*Hc_1_8*jet0*jet2**2 - 63*Hc_1_8*jet1**2*jet2 + Hc_2_6*jet0**6 - 30*Hc_2_6*jet0**4*jet1 + 60*Hc_2_6*jet0**3*jet2 + 90*Hc_2_6*jet0**2*jet1**2 - 120*Hc_2_6*jet0*jet1*jet2 - 20*Hc_2_6*jet1**3 + 15*Hc_2_6*jet2**2 - 6*Hc_2_7*jet0**6 + 75*Hc_2_7*jet0**4*jet1 - 80*Hc_2_7*jet0**3*jet2 - 120*Hc_2_7*jet0**2*jet1**2 + 90*Hc_2_7*jet0*jet1*jet2 + 15*Hc_2_7*jet1**3 - 6*Hc_2_7*jet2**2 - 6*Hc_3_6*jet0**5 + 60*Hc_3_6*jet0**3*jet1 - 60*Hc_3_6*jet0**2*jet2 - 60*Hc_3_6*jet0*jet1**2 + 30*Hc_3_6*jet1*jet2 - 5*Hc_4_5*jet0**4 + 30*Hc_4_5*jet0**2*jet1 - 20*Hc_4_5*jet0*jet2 - 10*Hc_4_5*jet1**2 - 4*Hc_5_4*jet0**3 + 12*Hc_5_4*jet0*jet1 - 4*Hc_5_4*jet2 - c - 7*jet0**8 + 147*jet0**6*jet1 - 210*jet0**5*jet2 - 525*jet0**4*jet1**2 + 700*jet0**3*jet1*jet2 + 350*jet0**2*jet1**3 - 126*jet0**2*jet2**2 - 252*jet0*jet1**2*jet2 - 21*jet1**4 + 21*jet1*jet2**2",
+    "minor_n8_pi1": "-140*Hc_1_7*jet0**3 + 210*Hc_1_7*jet0*jet1 - 42*Hc_1_7*jet2 + 140*Hc_1_8*jet0**3 - 126*Hc_1_8*jet0*jet1 + 14*Hc_1_8*jet2 - 60*Hc_2_6*jet0**2 + 30*Hc_2_6*jet1 + 45*Hc_2_7*jet0**2 - 12*Hc_2_7*jet1 + 30*Hc_3_6*jet0 + 5*Hc_4_5 + 175*jet0**4 - 252*jet0**2*jet1 + 42*jet0*jet2 + 21*jet1**2",
+    "minor_n8_pi2": "0"
+  },
+  "Qstar_pivots": [
+    {
+      "row": "minor_n1_pi0",
+      "variable": "Hc_1_7",
+      "coefficient": "-1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n2_pi0",
+      "variable": "Hc_2_6",
+      "coefficient": "1",
+      "resolved_value": "-jet0**2"
+    },
+    {
+      "row": "minor_n3_pi0",
+      "variable": "Hc_3_6",
+      "coefficient": "1",
+      "resolved_value": "-2*jet0*jet1"
+    },
+    {
+      "row": "minor_n4_pi0",
+      "variable": "Hc_4_5",
+      "coefficient": "-1",
+      "resolved_value": "jet1**2"
+    },
+    {
+      "row": "minor_n5_pi0",
+      "variable": "Hc_5_4",
+      "coefficient": "1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n5_pi1",
+      "variable": "Hc_1_8",
+      "coefficient": "-1",
+      "resolved_value": "-2*jet0"
+    },
+    {
+      "row": "minor_n6_pi1",
+      "variable": "Hc_2_7",
+      "coefficient": "1",
+      "resolved_value": "jet0**2 + 2*jet1"
+    }
+  ],
+  "zero_rows": 1,
+  "residual": {
+    "minor_n6_pi0": "-jet0**2*jet1**2 + 2*jet0*jet1*jet2 - jet2**2",
+    "minor_n7_pi0": "5*jet0**3*jet1**2 - 12*jet0**2*jet1*jet2 - 2*jet0*jet1**3 + 7*jet0*jet2**2 + 2*jet1**2*jet2",
+    "minor_n7_pi1": "2*jet0*jet1 - 2*jet2",
+    "minor_n8_pi0": "-c - 10*jet0**4*jet1**2 + 30*jet0**3*jet1*jet2 + 15*jet0**2*jet1**3 - 21*jet0**2*jet2**2 - 26*jet0*jet1**2*jet2 - jet1**4 + 9*jet1*jet2**2",
+    "minor_n8_pi1": "-12*jet0**2*jet1 + 14*jet0*jet2 + 2*jet1**2"
+  },
+  "coefficient_field": "QQ",
+  "ring_variables": [
+    "Zc",
+    "c",
+    "jet0",
+    "jet1",
+    "jet2"
+  ],
+  "generator_order": "residual label ascending, then Zc*c-1",
+  "groebner_order": "grevlex",
+  "groebner_basis": [
+    "1"
+  ],
+  "localized_unit": true,
+  "elapsed_seconds": 0.3830607490381226
+}

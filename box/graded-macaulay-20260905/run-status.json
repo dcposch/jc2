@@ -1,0 +1,83 @@
+{
+  "start_utc": "2026-09-05T15:19:17+00:00",
+  "closeout_utc": "2026-09-05T16:02:45.098132+00:00",
+  "elapsed_seconds": 2608.098132,
+  "deadline_utc": "2026-09-05T18:19:17+00:00",
+  "target_N2_N3_status": {
+    "77": "NOT_ASSEMBLED_INFEASIBLE_EXACT_SIZE",
+    "111": "NOT_ASSEMBLED_INFEASIBLE_EXACT_SIZE",
+    "129": "NOT_ASSEMBLED_INFEASIBLE_EXACT_SIZE",
+    "136": "NOT_ASSEMBLED_INFEASIBLE_EXACT_SIZE"
+  },
+  "target_membership": {
+    "77": {
+      "c2": "OPEN",
+      "c3": "OPEN",
+      "radical": "OPEN"
+    },
+    "111": {
+      "c2": "OPEN",
+      "c3": "OPEN",
+      "radical": "OPEN"
+    },
+    "129": {
+      "c2": "OPEN",
+      "c3": "OPEN",
+      "radical": "OPEN"
+    },
+    "136": {
+      "c2": "OPEN",
+      "c3": "OPEN",
+      "radical": "OPEN"
+    }
+  },
+  "class_kills": 0,
+  "groebner_computations": 0,
+  "fleet_instances_launched": [],
+  "fleet_instances_owned": [],
+  "termination_obligation": "NONE_NO_WORKER_LAUNCHED_OR_ADOPTED",
+  "other_workers_used_or_terminated": [],
+  "active_lane_computation_pids": [],
+  "hilbert_grids": [
+    {
+      "fibre": 77,
+      "path": "box/graded-macaulay-20260905/hilbert/hilbert_77_B4_Y14.json",
+      "sha256": "471f925a322c5a19169863ef87a3cf085ef18d2819a8378b41a80389846d3f6e",
+      "components": 75,
+      "direct_components": 75,
+      "unit_map_components": 0
+    },
+    {
+      "fibre": 111,
+      "path": "box/graded-macaulay-20260905/hilbert/hilbert_111_B6_Y14.json",
+      "sha256": "2de9c8b867d492dc30d88b093d06a816a22191f0327351eedc9f2a7d232c150d",
+      "components": 105,
+      "direct_components": 105,
+      "unit_map_components": 0
+    },
+    {
+      "fibre": 129,
+      "path": "box/graded-macaulay-20260905/hilbert/hilbert_129_B4_Y14.json",
+      "sha256": "6e82f67af3c4608b2645b9a48b1874bc6d4a909a6e28a81a93dcf6eb028ea461",
+      "components": 75,
+      "direct_components": 75,
+      "unit_map_components": 0
+    },
+    {
+      "fibre": 136,
+      "path": "box/graded-macaulay-20260905/hilbert/hilbert_136_B6_Y12.json",
+      "sha256": "16b3a74e7e1cb4c038c95114e9923fc775e442b5ac830155cdc87c894e73dbce",
+      "components": 91,
+      "direct_components": 90,
+      "unit_map_components": 1
+    }
+  ],
+  "root_reduction_command": "python3 box/graded-macaulay-20260905/reduced/reduce_counts.py",
+  "root_reduction_observed_exit_code": 0,
+  "frozen_input_verification": "SIX_OK",
+  "source_mutations": [],
+  "allowed_new_outputs": [
+    "box/graded-macaulay-20260905",
+    "xmodel/graded-macaulay-astra-20260905.md"
+  ]
+}

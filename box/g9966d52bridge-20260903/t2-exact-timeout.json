@@ -1,0 +1,22 @@
+{
+  "type": "FOREGROUND TIMEOUT RECORD / EXACT SYMBOLIC T2",
+  "status": "TIMEOUT[3000s,EXIT-124]",
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 timeout 3000 /usr/bin/time -v python3 bridge_engine.py --phase t2",
+  "accepted_output": "checkpoint.json only",
+  "checkpoint_status": "localized-blocks",
+  "checkpoint_sha256": "cac9688cda9fb7534d06231090339038c727c70aa61e100c4587f6927280b4b0",
+  "engine_sha256": "fe83421e6b316791580cc75fcc43470fe22d6f1af43ea19db5d95fde764370f7",
+  "completed_before_timeout": {
+    "H": {"slots": 1657, "s_min": 8, "s_max": 231, "pi_max": 33},
+    "A2": {"slots": 2013, "s_min": 44, "s_max": 292, "pi_max": 32},
+    "A3": {"slots": 2013, "s_min": 110, "s_max": 358, "pi_max": 32},
+    "B1": {"slots": 1001, "s_min": 16, "s_max": 191, "pi_max": 25},
+    "B2": {"slots": 2013, "s_min": 44, "s_max": 292, "pi_max": 32}
+  },
+  "not_completed": [
+    "exact expanded U2",
+    "exact total T2 coefficient-row count/hash",
+    "full Qstar reduction"
+  ],
+  "claim_guard": "No row count, rank, dimension, or consistency conclusion is inferred from this timeout."
+}

@@ -1,0 +1,253 @@
+                                                          SIEGEL’S THEOREM ON INTEGRAL POINTS
+                                                                          AND
+arXiv:1502.00328v3 [math.AG] 17 Oct 2016
+
+
+
+
+                                                    THE JACOBIAN CONJECTURE OVER THE RATIONAL FIELD
+
+                                                                                       NGUYEN VAN CHAU
+
+
+
+
+                                                     A BSTRACT. It is shown that a polynomial map (P,Q) ∈ Q[x,y]2 with Px Qy − Py Qx ≡ 1
+                                                     has an inverse map in Q[x,y]2 if the fiber P = 0 contains an infinite subset of d −1 Z2 for an
+                                                     integer d.
+
+
+                                                                                       1. I NTRODUCTION
+                                              A polynomial map F ∈ C[X]n , X = (X1 , X2 , . . . , Xn ), is a Keller map if it satisfies the
+                                           Jacobian condition det DF ≡ 1. The mysterious Jacobian conjecture, firstly posed by Ott-
+                                           Heinrich Keller [10] since 1939 and still opened, asserts that every Keller map F ∈ C[X]n
+                                           has an inverse map in C[X]n (see [6] and [4]). This paper is to present a simple application
+                                           of Siegel’s theorem on integral points on affine curves to this conjecture over the rational
+                                           field.
+                                               Recall that a subset of Qn is quasi-integral if it is contained in d −1 Zn for an integer
+                                           d. Obviously, if a Keller map F = (F1 , F2 , . . . , Fn ) ∈ Q[X]n has an inverse G ∈ Q[X]n , for
+                                           each α = (α1 , α2 , . . . , αn−1 ) ∈ Qn−1 , the image G({α } × Z) is an infinite quasi-integral set
+                                           contained in the affine curve defined by Fi = αi , i = 1, 2, . . . , n − 1, where d is the common
+                                           denominator of all αi and coefficients in G.
+                                               Our main result here is the following.
+                                           Theorem 1.1 (Main Theorem). Let (P, Q) ∈ Q[x, y]2 be a Keller map. If the fiber P = 0
+                                           contains an infinite quasi-integral subset of Q2 , then (P, Q) has an inverse map in Q[x, y]2 .
+                                              An important and immediate consequence of Theorem 1.1 with together the formal
+                                           inverse function theorem is the following.
+                                           Theorem 1.2. Every Keller map (P, Q) ∈ Z[x, y]2 has an inverse map in Z[x, y]2 if, for an
+                                           α ∈ Q, the fiber P = α contains an infinite quasi-integral subset of Q2 .
+                                              Let us denote
+                                                                       C(S, H, α ) := {(a, b) ∈ S × S : H(a, b) = α }
+                                           for H ∈ Q[x, y] , S ⊂ Q and α ∈ Q. In view of Theorem 1.1, for any possible counterexam-
+                                           ple (P, Q) ∈ Q[x, y]2 to the Jacobian conjecture, if exists, the inequality
+                                                                                    #C(d −1 Z2 , P, α ) < +∞
+                                           must holds true for all d ∈ N and all α ∈ Q.
+
+                                              2010 Mathematics Subject Classification. 14R15; 11G05 .
+                                              The author was partially supported by Vietnam National Foundation for Science and Technology Develop-
+                                           ment (NAFOSTED) grant 101.04-2014.23, and VIASM..
+                                                                                                   1
+2                                     NGUYEN VAN CHAU
+
+
+   Theorem 1.2 is a slight improvement of the main result in [12], which says that Keller
+maps (P, Q) ∈ Z[x, y]2 with fiber P = 0 having infinitely many integral points are automor-
+phisms of Z2 . This result is reduced from an interesting observation that if a Keller map
+(P, Q) ∈ Z[x, y]2 is not inverse, then there is a constant M > 0 depended only on (P, Q) such
+that #C(Z, P, k) ≤ M for all k ∈ Z (Lemma 2, [12]). Our approach here does not cover this
+result.
+   In studying the Jacobian conjecture over the rational field Q it is worthy to consider the
+following questions for Keller maps (P, Q) ∈ Q[x, y]2 :
+Question 1.3. Is (P, Q) inverse if #C(Q, P, 0) = +∞?
+Question 1.4. Is uniformly bounded the numbers #C(Q, P, α ), α ∈ Q, if (P, Q) is not in-
+verse?
+   Under the Jacobian condition det D(P, Q) ≡ 1, the complex fibers of P are nonsingular
+curves and P is a primitive polynomial in C[x, y]. It is known that for all except a finite
+number of α ∈ C, the fibers P = α are diffeomorphic to same a Riemann surface of genus
+gP and of nP punctures. In view of the celebrated Faltings theorem [7] on rational points
+on algebraic curves, if #C(Q, P, 0) = ∞, the fiber P = 0 must contain a rational curve or
+an elliptic curve. Furthermore, if gP ≥ 2, one has #C(Q, P, α ) < +∞ for all except a finite
+number of α ∈ Q.
+   The Uniform Bound Conjecture (see, for example, in [5]) says that for every integer
+g ≥ 2, there exists a natural number B(Q; g) such that any algebraic curve defined over Q
+and of genus g cannot have more than B(Q, g) points in Q2 . If this conjecture is true and if
+Question 1.3 is positive, then one has a confirmation to Question 1.4, at least for the case
+gP ≥ 2. A confirmation to Question 1.4 will allow us to reduce the Jacobian problem over
+Q to the question whether there is no Keller maps (P, Q) ∈ Q[x, y]2 such that #C(Q, P, α ),
+α ∈ Q, are uniformly bounded.
+   A proof of Theorem 1.1 will be presented in the next section. A version of this theorem
+for high dimensions will be provided in the last section.
+
+                              2. P ROOF OF M AIN T HEOREM
+   Let us begin with a brief introduction on the celebrated Siegel’s theorem on integral
+points on affine curves. Let C be an irreducible affine curve in Cn defined by some poly-
+nomials in Q[X] and gC denote the geometric genus of a desingularization of C. Siegel’s
+theorem [14] asserts that if gC > 0 or if gC = 0 and C has more than two irreducible
+branches at infinity, then C may have at most finitely many integral points. We will use
+the following version of Siegel’s theorem, concerning with affine curves having infinitely
+many integral points.
+Theorem 2.1. If C has infinitely many integral points, then
+      i) C has genus zero and has no more than two irreducible branches at infinity, and
+     ii) on each irreducible branch at infinity of C, there is a sequence of integral points
+         of C tending to infinity.
+    Property (i) is just Siegel’s theorem stated in an equivalent statement. Property (ii) is
+known later due to Silverman [15]. This property ensures that, in some sense, the behavior
+at infinity of a regular function on such curve C is completely reflected on its restriction on
+the set of integral points of C. The consequence below may be well-known for experts and
+appear somewhere.
+           SIEGEL’S THEOREM AND THE JACOBIAN CONJECTURE OVER THE RATIONAL FIELD                 3
+
+
+Corollary 2.2. Let C be an irreducible affine curve in Cn , defined over Q. Assume that C
+has an infinite quasi-integral subset. Then, for any H ∈ Q[X], the restriction H|C : C −→ C
+of H on C is either a constant function or a proper function. In particular, if C is smooth
+and H|C has no singularities, then H|C is an isomorphism of C and C.
+Proof. Let H ∈ Q[X] be fixed. By assumptions, there is a number d ∈ N such that the
+intersection C ∩ (d −1 Zn ) is infinite and H ∈ d −1 Z[X]. So, by changing variables X 7→ dX
+and H 7→ dH, we can assume that C has infinitely many integral points and H ∈ Z[X].
+   First, assume that H is not constant on C. We will prove that the restriction H|C : C −→ C
+is proper. Observe that by Property (ii) in Theorem 2.1 it suffices to show that for each
+sequence of integral points ai ∈ C tending to ∞, the corresponding sequence H(ai ) must
+tend to ∞. To see it, assume the contrary that H is bounded on a subsequence of ai s. Since
+any bounded subset of Z is finite, H must be a constant on an infinite subset of {ai }. This
+implies that H is constant on C - a contradiction. Hence, H|C is proper.
+   Now, assume that C is smooth and H|C has no singularities. Since H|C is proper, H|C :
+C −→ C determines a unramified covering of C. Thus, by the simple connectedness of C,
+H|C is isomorphic.                                                                          
+Lemma 2.3. Let (P, Q) ∈ C[x, y]2 be a Keller map. If the fiber P = 0 has a component
+diffeomorphic to C, then (P, Q) is inverse.
+Proof. Assume that C is a component of the fiber P = 0, diffeomorphic to C. As J(P, Q) ≡
+1, the restriction Q|C : C −→ C gives a unramified covering of C, and hence, is bijective. It
+implies that the restriction (P, Q)|C = (0, Q|C ) is injective. By Abhyankar-Moh-Suzuki em-
+bedding theorem [1] , C is a line in a suitable algebraic coordinate of C2 . The invertibility
+of (P, Q) now follows from a well-known result due to Gwrozdiewicz [9], which asserts
+that every Keller map of C2 is inverse if its restriction to a line is injective (see Theorem 1
+in [9], Theorem 10.2.31 in [6]).                                                             
+Proof of Theorem 1.1. Let (P, Q) ∈ Q[x, y]2 be a given Keller map such that the fiber
+P = 0 contains an infinite quasi-integral set of Q2 . In view of Siegel’s theorem, the fiber
+P = 0 must contain an irreducible component C of genus zero and at most two irreducible
+branches at infinity. Since J(P, Q) ≡ 1, C is smooth and the restriction Q|C has no singu-
+larities. Therefore, by Corollary 2.2, the component C is diffeomorphic to C. Hence, by
+Lemma 2.3, (P, Q) has an inverse map in Q[x, y]2 .                                        
+
+                                3. H IGH DIMENSIONAL CASE
+   Recall that a value c ∈ Cm is a generic value of a polynomial map h : Cn −→ Cm ,
+n ≥ m, if there is an open neighborhood U of c such that the restriction h : h−1 (U) −→ U
+determines a locally trivial fibration. Let Eh denote the the complement of the set of all
+generic values of h. By definitions, the restriction h : Cn \ h−1(Eh ) −→ Cm \ Eh determines
+a locally trivial fibration. It is well-known that either Eh is empty and h is a trivial fibration
+or Eh is an algebraic hypersurface of Cm (for example, see [16]).
+   Our version of Theorem 1.1 for high dimensional cases can be stated as follows.
+Theorem 3.1. Let F = (F1 , F2 , . . . , Fn ) ∈ Q[X]n be a Keller map. Assume that there is a
+generic value α ∈ Qn−1 of the map F̂ = (F1 , F2 , . . . , Fn−1 ) : Cn −→ Cn−1 such that the fiber
+F̂ = α contains an infinite quasi-integral set of Qn . Then, F has an inverse map in Q[X]n .
+   In view of Siegel’s theorem, the assumption on the fiber F̂ = α ensures that the generic
+fiber of F̂ is diffeomorphic to either C or C∗ . Theorem 3.1 is an immediate consequence
+of the formal inverse function theorem and the following lemma.
+4                                         NGUYEN VAN CHAU
+
+
+Lemma 3.2. Let F = (F1 , F2 , . . . , Fn ) ∈ C[X]n be a Keller map and F̂ := (F1 , F2 , . . . , Fn−1 ) :
+Cn −→ Cn−1 . Then,
+     a) F is inverse if the generic fiber of F̂ is diffeomorphic to C;
+     b) the generic fiber of F̂ can never be diffeomorphic to C∗ .
+Proof. For λ ∈ Cn−1 , let us denote Cλ := F̂ −1 (λ ), Lλ := {λ } × C and fλ : Cλ −→ Lλ ⊂ Cn
+the restriction to Cλ of F, fλ (a) = (λ , Fn (a)), a ∈ Cλ . Since JF ≡ 1, the fibers Cλ
+are smooth and the maps fλ have no singularities. By definitions, the map F̂ : Cn \
+F̂ −1 (EF̂ ) −→ Cn−1 \ EF̂ is a locally trivial fibration. So, the fibres Cλ , λ ∈ Cn−1 \ EF̂ ,
+are nonsingular irreducible affine curves of same a topological type.
+    a) Assume that the generic fiber of F̂ is diffeomorphic to the line C. Then, for every
+λ ∈ Cn−1 \ EF̂ , the map fλ : Cλ −→ Lλ ⊂ Cn is diffeomorphic. It follows that #F −1 (a) = 1
+for all points a of the open dense algebraic subset Cn \ (EF̂ × C) of Cn . Since F is locally
+diffeomorphic by the Jacobian condition, it follows that F is injective. Hence, by Ax-
+Grothendieck Theorem (Theorem 10.4.11 in [8], see also [2, 11]), F is inverse.
+    b) Assume the contrary that Cα is diffeomorphic to C∗ . Then, F is not inverse and the
+sets EF and EF̂ are hypersurfaces of Cn and Cn−1 , respectively.
+    First, we will show that for each λ ∈ Cn−1 \ EF̂ there is a bλ ∈ C such that F −1 (λ , bλ ) =
+0/ and the map
+                                   fλ : Cλ −→ Lλ \ {(λ , bλ )}                                (∗)
+gives a unramified covering.
+    Let λ ∈ Cn−1 \ EF̂ be fixed. Let Γ1 and Γ2 be the two unique irreducible branches
+at infinity of Cλ and b1 and b2 be the corresponding limiters of sequences Fn (ak ) where
+ak ∈ Γi tend to infinity. Observe that at least one of bi is ∞. Otherwise, if both of bi are ∞,
+fλ must be proper, and hence, must be a diffeomorphism from Cλ onto Lλ . Thus, we can
+assume that b1 = ∞ and b2 := bλ ∈ C.
+    Consider the covering
+                            fλ : Cλ \ F −1 (λ , bλ ) −→ Lλ \ {(λ , bλ )}.
+By applying the Riemann-Huzwicz relation we have
+     χ (Cλ \ F −1 (λ , bλ )) = deggeo. fλ .χ (Lλ \ {(λ , bλ )}) −          ∑              deg p fλ − 1.
+                                                                    p∈Cλ \F −1 (λ ,bλ )
+
+Here, χ (V ), deggeo. fλ and deg p fλ denote the Euler-Poincare characteristic of an affine
+curve V , the geometric degree of fλ and the local degree of fλ at p ∈ Cλ , respectively.
+Note that χ (Lλ \ {(λ , bλ )})) = 0 and fλ has no singularities. From the above equality it
+follows that χ (Cλ \ F −1 (λ , bλ )) = 0. Since Cλ is diffeomorphic to C∗ , the inverse image
+F −1 (λ , bλ ) is just empty and the covering (*) is unramified.
+    Now, let E0 := {a ∈ Cn : F −1 (a) = 0}       / and consider the projection π : E0 −→ Cn−1 ,
+π (X) := (X1 , X2 , . . . , Xn−1 ). Note that E0 is a closed algebraic subset of Cn . By the previous
+claim the restriction π : π −1 (Cn−1 \ EF̂ ) −→ Cn−1 \ EF̂ is one-to-one. It follows that the
+inverse image π −1 (Cn−1 \ EF̂ ), which is an open algebraic subset of E0 , is of dimension n −
+1. Therefore, E0 contains a hypersurface of Cn . This is impossible. Indeed, if E0 contains
+a hypersurface defined by a nonconstant polynomial H ∈ C[X], it must be that H(F(X)) ≡
+c 6= 0. Therefore, DH(F(X))DF(X) ≡ 0 that contradicts to the Jacobian condition.                   
+
+                                                 ***
+            SIEGEL’S THEOREM AND THE JACOBIAN CONJECTURE OVER THE RATIONAL FIELD                              5
+
+
+    To conclude the article, we would like to present some remarks related to Theorem 1.1
+and Theorem 3.1.
+    i) Siegel’s theorem is stated and valid for number fields. Property (ii) in Theorem 2.1 is
+also valid for an arbitrary number field. Its proof is implicit in the proof of the main results
+in [13] and in the algorithms finding integral points in [3].
+    ii) As seen in its proof, Theorem 3.1 still holds true for when Q is replaced by an
+arbitrary number field.
+    iii) In our arguments to prove Corollary 2.2 the only fact on the integral ring Z of Q used
+                  √ subset of Z is finite. This is true for integral rings of imaginary
+is that any bounded                                                                     √ qua-
+dratic fields Q( −m), m ∈ N. Thus, Theorem 1.1 is valid for the fields Q and Q( −m),
+m ∈ N. The analogous statement of this theorem for number fields would be true if one
+could prove that for Keller maps (P, Q) ∈ C[x, y]2 , fibers of P cannot have components
+diffeomorphic to C∗ .
+
+Acknowledgments: The author wishes to express his thank to the professors Arno Van
+den Essen, Ha Huy Vui and Pierrette Cassou-Noguès for valuable discussions. The author
+would like to thank the VAST-JSPS and the VIASM for their helps.
+
+                                               R EFERENCES
+ [1] S. S. Abhyankar and T. T. Moh, Embeddings of the line in the plane, J. Reine Angew. Math. 276 (1975),
+     148–166.
+ [2] J. Ax, The elementary theory of finite fields, Annals of Mathematics (2nd ser.) (Annals of Mathematics), 88
+     (2) (1968), 239–271.
+ [3] P. Alvanos, D. Poulakis, Solving genus zero Diophantine equations over number fields, Journal of Symbolic
+     Computation, 46 (2011), 54–69.
+ [4] H. Bass, E. Connell and D. Wright, The Jacobian conjecture: reduction of degree and formal expansion of
+     the inverse, Bull. Amer. Math. Soc. (N.S.) 7 (1982), 287–330.
+ [5] L. Caporaso, J. Harris and M. Barry, Uniformity of rational points, J. Amer. Math. Soc. 10 (1997), no. 1,
+     1–35.
+ [6] A. Van den Essen, Polynomial automorphisms and the Jacobian conjecture, Progress in Mathematics 190,
+     Birkhauser, Basel, 2000.
+ [7] G. Faltings, Endlichkeitsstze fr abelsehe Varietten ber Zahlkrpern, Invent. Math. 73 (1983), 349–366.
+ [8] A. Grothendieck, lments de gomtrie algbrique. IV. tude locale des schmas et des morphismes de schmas. III.
+     , Inst. Hautes tudes Sci. Publ. Math. 28 (1966).
+ [9] J. Gwrozdiewicz, Injectivity on one line, Bull. Soc. Sci. Lodz, 7(1993), 59–60, Series Recherches sur les
+     deformationes XV.
+[10] O. Keller, Ganze Cremona-Transformatione, Monatsh. Math. Phys. 47 (1939), 299–306.
+[11] K. McKenna and L. van den Dries, Surjective polynomial maps, and a remark on the Jacobian problem,
+     Manuscripta Mathematica 67 (1) (1990), 1–15.
+[12] Nguyen Van Chau, Integer points on a curve and the plane Jacobian problem, Ann. Polon. Math. 88 (2006),
+     no. 1, 53–58.
+[13] D. Poulakis and E. Voskos, Solving genus zero Diophantine equations with at most two infinite valuations,
+     J. Symbolic Comput. 33 (4) (2002), 479–491.
+[14] C. L. Siegel, Uber einige Anwendungen Diophantischer Approximationen, Abh. Preuss Akad. Wiss. Phys.-
+     Math. Kl., 1929, Nr. 1; Ges. Abh., Band 1, 209–266.
+[15] J. H. Silverman, On the distribution of integer points on curves of genus zero, Theor. Computer Sc. 235
+     (2000) 163–170.
+[16] A. N. Varchenko, Algebro-geometrical equisingularity and local topological classification of smooth map-
+     pings. Proceedings of the International Congress of Mathematicians (Vancouver, B.C., 1974), Vol. 1, pp.
+     427–431. Canad. Math. Congress, Montreal, Que., 1975.
+
+    I NSTITUTE OF M ATHEMATICS , V IETNAM A CADEMY OF S CIENCE AND T ECHNOLOGY, 18 H OANG Q UOC
+V IET, 10307 H ANOI , V IETNAM .
+    E-mail address: nvchau@math.ac.vn
+

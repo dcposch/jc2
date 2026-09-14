@@ -1,0 +1,80 @@
+{
+  "cas_sympy_aws_network": false,
+  "each_rejected_by": [
+    "independent_semantic_verifier",
+    "frozen_strict_replay"
+  ],
+  "elapsed_seconds": 0.10180241009220481,
+  "limits": {
+    "address_space_bytes": 536870912,
+    "cpu_seconds": 25,
+    "wall_seconds": 30
+  },
+  "maxrss_KiB": 22036,
+  "method": {
+    "footer": "canonical syntax plus independently recomputed counts, used ids, record count, and SHA-256",
+    "jacobian": "independent formal derivatives then polynomial multiplication",
+    "lift": "independent finite powers of the four-term Laurent substitution"
+  },
+  "mutation_count": 6,
+  "mutations": {
+    "exponent": {
+      "bytes": 6840,
+      "footer_repaired": true,
+      "frozen_replay_rejected": "ValueError: strict full stream replay mismatch at row",
+      "independent_rejected": "ControlFailure: semantic mismatch at record 70: LIFT/A/0/-6",
+      "sha256": "9265efdab3d3cd456380b489536f67f2cc6ee68f3364cd97065f191fe8b53be0"
+    },
+    "face": {
+      "bytes": 6838,
+      "footer_repaired": true,
+      "frozen_replay_rejected": "ValueError: strict full stream replay mismatch at coefficient",
+      "independent_rejected": "ControlFailure: semantic mismatch at record 7: coefficient",
+      "sha256": "9a8e823c31352c77a4f1f0bee784b0ca29969e967ddd7f5c06ee0121ba312aea"
+    },
+    "field": {
+      "bytes": 6902,
+      "footer_repaired": true,
+      "frozen_replay_rejected": "ValueError: strict full stream replay mismatch at row",
+      "independent_rejected": "ControlFailure: semantic record count mismatch",
+      "sha256": "0da89240cc21abc9bef36041f30aba70746ea5602732e617dd893615e8ea4cd9"
+    },
+    "guard": {
+      "bytes": 6810,
+      "footer_repaired": true,
+      "frozen_replay_rejected": "ValueError: strict full stream replay mismatch at row",
+      "independent_rejected": "ControlFailure: semantic mismatch at record 85: GUARD/c",
+      "sha256": "a1d0367815c273615f102fff4429454b9ae61cb464b70852871a2289ff92c18d"
+    },
+    "row": {
+      "bytes": 6708,
+      "footer_repaired": true,
+      "frozen_replay_rejected": "ValueError: strict full stream replay mismatch at row",
+      "independent_rejected": "ControlFailure: semantic record count mismatch",
+      "sha256": "08f20c104ae4aa290ffc6e45837ba1b5799c8296ae5085fa8a3c88b3b329e410"
+    },
+    "target": {
+      "bytes": 6837,
+      "footer_repaired": true,
+      "frozen_replay_rejected": "ValueError: strict full stream replay mismatch at row",
+      "independent_rejected": "ControlFailure: semantic mismatch at record 35: J/2/0",
+      "sha256": "6840df27a2ccb519d28ae9b19a758cec05c4e512cc404757e3f9ac7f456e1577"
+    }
+  },
+  "pins": {
+    "baseline.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "exporter.py": "9fd003e420f3ee069f1ed1c06a365e5b4500d361bc3951f2f8f17ef733ab3703",
+    "test_exporter.py": "331e97c84f22592a1a28842df7c11e84e4f72355a906c156403eb5eaca490b2b"
+  },
+  "production_rows_generated": 0,
+  "python_optimized": false,
+  "source_stream": {
+    "bytes": 6838,
+    "jacobian_rows": 49,
+    "lift_rows": 14,
+    "path": "/home/ubuntu/jc2/box/d125-small-exporter-code-gate-sol56-20260906/root-replay-sLln9Z/tiny-normal/original.jsonl",
+    "rows": 71,
+    "sha256": "805255af6a1fc4590b44ebdf8fcc8b058f926784771f50d351e4307e430b235f"
+  },
+  "status": "PASS"
+}

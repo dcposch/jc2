@@ -1,0 +1,19 @@
+J0 dim=0 vdim=13 ell=1 norm=1
+STATS J0 length=13 top=6
+BUILD F
+F dim=0 vdim=84
+STATS F length=84 top=18
+D 1 power1=1 power2=1
+D 2 power1=1 power2=1
+D 3 power1=1 power2=1
+D 4 power1=0 power2=1
+BUILD FFITT
+FFITT dim=0 vdim=84
+STATS FFITT length=84 top=18
+DFITT 1 power1=1 power2=1
+DFITT 2 power1=1 power2=1
+DFITT 3 power1=1 power2=1
+DFITT 4 power1=0 power2=1
+SLICE dim=0 vdim=29 tau=1
+STATS SLICE length=29 top=10
+AUDIT_BASE_DONE

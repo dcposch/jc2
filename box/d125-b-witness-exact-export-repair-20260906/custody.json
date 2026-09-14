@@ -1,0 +1,49 @@
+{
+  "schema": "jc2.bounded-desk-custody/v1",
+  "task": "d125-b-witness-exact-export-repair-astra-20260906",
+  "owner": "nonemptiness_certificate",
+  "recipient": "root",
+  "status": "TERMINAL_EXACT_EXPORT_REPAIRED",
+  "terminal_utc": "2026-09-06T23:47:31Z",
+  "all_writers_done": true,
+  "background_jobs": [],
+  "workers": [],
+  "no_live_edit_promise": true,
+  "old_artifacts_preserved": true,
+  "old_exact_serialization_claim": "REFUTED",
+  "confirmed_cause": "Original checker stdout passed through JavaScript JSON.parse and native-number store, then JSON.stringify into apply_patch",
+  "report": {
+    "path": "xmodel/d125-b-witness-exact-export-repair-astra-20260906.md",
+    "bytes": 7525,
+    "sha256": "e456830948ce1f48dbdba3ddfba47e6a8c2b58ffa67b6cf183fe4b08cb98f0df",
+    "body_sha256": "acce81421b96c6fdaf371d751f2106b4d095c76077676aa3c45db505114bbde4",
+    "manifest_sha256": "417c7b9a55b9793f4d00cb14c70032837d4085369c89e43663abbf6c522d3c6f",
+    "transaction_verified": true
+  },
+  "owned_artifacts": {
+    "box/d125-b-witness-exact-export-repair-20260906/exact-witnesses-v2.json": "07b4ce881b4f90f9a41a3f8cb01fcd3a120ff64a4f04969e60126dbdb6e7f246",
+    "box/d125-b-witness-exact-export-repair-20260906/export_exact.py": "3921fb188b333fadf75dc4f79bdb1be160b9c02d67da53dc72fa916cd0abe064",
+    "box/d125-b-witness-exact-export-repair-20260906/repair-receipt.json": "6acf120816d98a0cec5bfea49dd3cf62057482dcc356c2294ad362c21d982be0",
+    "box/d125-b-witness-exact-export-repair-20260906/audit_recent.py": "49b50ec533f1fcada5ae07751af06635029caed48d4279266e319e2c12dd0be0",
+    "box/d125-b-witness-exact-export-repair-20260906/registration.json": "07a0ec559650d1ecda2fe51c12b456044353ed44ebb66c38b2879f764e881f78"
+  },
+  "controls": {
+    "normal_verify_only": "PASS",
+    "optimized_verify_only": "PASS",
+    "last_batch_wall_seconds": 0.646935409,
+    "minors": 144,
+    "wrong_original_minors": 57,
+    "wrong_original_integer_only_minors": 0,
+    "real_float_mutation": "REJECTED",
+    "real_rounded_integer_mutation": "REJECTED",
+    "raw_stdout_matches_gate_hash": true
+  },
+  "same_mechanism_audit": {
+    "named_owned_boxes": 4,
+    "top_level_json_files": 17,
+    "other_affected_mathematical_number_payloads_found": [],
+    "additional_claim_correction": "Original B replay.json equal_witness compares after lossy conversion and is not exact-byte evidence",
+    "not_a_repository_wide_audit": true
+  },
+  "perimeter": "No new mathematics, AWS, CAS, residual expansion, solver, live peer read, shared ledger or protected-project edit"
+}

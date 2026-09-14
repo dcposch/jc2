@@ -1,0 +1,63 @@
+{
+  "caps": "30wall/25CPU seconds,512MiB",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fac3910177f640869e69517e266126ce08f54f0950061e4b50a5eada53f336ee"
+    },
+    {
+      "mutation": "--mutate-R",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "03f8bc4ad993c23f7d9fd8a34615802209bf4dc5d25130a1a97a02de08f40e5c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-second-factor",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "87b7462891cfce4f0c5d1cb23c6fd82d32d238e1d42e38cae9b0a8ac33139528",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-faces",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1bed4b7af7e74523a6adf61f838e7c96e076be4aebb16c0741a6f818633ead7f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fac3910177f640869e69517e266126ce08f54f0950061e4b50a5eada53f336ee"
+    },
+    {
+      "mutation": "--mutate-R",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "03f8bc4ad993c23f7d9fd8a34615802209bf4dc5d25130a1a97a02de08f40e5c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-second-factor",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "87b7462891cfce4f0c5d1cb23c6fd82d32d238e1d42e38cae9b0a8ac33139528",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-faces",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1bed4b7af7e74523a6adf61f838e7c96e076be4aebb16c0741a6f818633ead7f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "writers_finished": true
+}

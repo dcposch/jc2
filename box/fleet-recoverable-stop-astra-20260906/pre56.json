@@ -1,0 +1,766 @@
+{
+  "audit_pid": 115131,
+  "blocks": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"loop0\",\n         \"type\": \"loop\",\n         \"size\": 29777920,\n         \"fstype\": \"squashfs\",\n         \"mountpoints\": [\n             \"/snap/amazon-ssm-agent/13349\"\n         ],\n         \"serial\": null\n      },{\n         \"name\": \"loop1\",\n         \"type\": \"loop\",\n         \"size\": 77586432,\n         \"fstype\": \"squashfs\",\n         \"mountpoints\": [\n             \"/snap/core22/2437\"\n         ],\n         \"serial\": null\n      },{\n         \"name\": \"loop2\",\n         \"type\": \"loop\",\n         \"size\": 52535296,\n         \"fstype\": \"squashfs\",\n         \"mountpoints\": [\n             \"/snap/snapd/27710\"\n         ],\n         \"serial\": null\n      },{\n         \"name\": \"nvme0n1\",\n         \"type\": \"disk\",\n         \"size\": 107374182400,\n         \"fstype\": null,\n         \"mountpoints\": [\n             null\n         ],\n         \"serial\": \"vol0eb6450d18ffa89f1\",\n         \"children\": [\n            {\n               \"name\": \"nvme0n1p1\",\n               \"type\": \"part\",\n               \"size\": 106299375104,\n               \"fstype\": \"ext4\",\n               \"mountpoints\": [\n                   \"/\"\n               ],\n               \"serial\": null\n            },{\n               \"name\": \"nvme0n1p14\",\n               \"type\": \"part\",\n               \"size\": 4194304,\n               \"fstype\": null,\n               \"mountpoints\": [\n                   null\n               ],\n               \"serial\": null\n            },{\n               \"name\": \"nvme0n1p15\",\n               \"type\": \"part\",\n               \"size\": 111149056,\n               \"fstype\": \"vfat\",\n               \"mountpoints\": [\n                   \"/boot/efi\"\n               ],\n               \"serial\": null\n            },{\n               \"name\": \"nvme0n1p16\",\n               \"type\": \"part\",\n               \"size\": 957350400,\n               \"fstype\": \"ext4\",\n               \"mountpoints\": [\n                   \"/boot\"\n               ],\n               \"serial\": null\n            }\n         ]\n      }\n   ]\n}\n",
+  "boot_id": "7e5d7a33-163a-4ed7-a08d-780788a2c186",
+  "dev_shm_top_level": [
+    {
+      "mode": 16832,
+      "path": "/dev/shm/eic-hostkey-DUDCUhNm",
+      "size": 40,
+      "symlink": null
+    }
+  ],
+  "df": "Filesystem        1B-blocks        Used    Available Use% Mounted on\n/dev/root      102888095744 82571493376  20299825152  81% /\n/dev/root      102888095744 82571493376  20299825152  81% /\ntmpfs          132992917504           0 132992917504   0% /dev/shm\n",
+  "home_top_level": [
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 41471,
+      "path": "/home/ubuntu/keystone-graph",
+      "size": 26,
+      "symlink": "lean/verify/keystone-graph"
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/.elan",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 33188,
+      "path": "/home/ubuntu/.bashrc",
+      "size": 4156,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/.nvm",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/linear-c-discriminator-20260906",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/home/ubuntu/.ssh",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/factored-jacobian-review-20260906",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 33152,
+      "path": "/home/ubuntu/.bash_history",
+      "size": 211,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/factored-jacobian-root-replay-20260906",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/linear-c-root-replay-20260906",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 33188,
+      "path": "/home/ubuntu/.bash_logout",
+      "size": 220,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/.config",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/jc2",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/.local",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 33152,
+      "path": "/home/ubuntu/.claude.json",
+      "size": 49245,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/.aws",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/home/ubuntu/.claude",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 33188,
+      "path": "/home/ubuntu/.sudo_as_admin_successful",
+      "size": 0,
+      "symlink": null
+    },
+    {
+      "mode": 33188,
+      "path": "/home/ubuntu/.profile",
+      "size": 844,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/.codex",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/full-j-solver-pilot-20260906",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 33188,
+      "path": "/home/ubuntu/PROVISION_VERSIONS",
+      "size": 355,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/k16-gate-root-replay-20260906",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/lean",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/.npm",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 41471,
+      "path": "/home/ubuntu/coord",
+      "size": 16,
+      "symlink": "lean/seats/max11"
+    },
+    {
+      "mode": 16832,
+      "path": "/home/ubuntu/.cache",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16893,
+      "path": "/home/ubuntu/archive",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 33188,
+      "path": "/home/ubuntu/PROVISION_DONE",
+      "size": 0,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/home/ubuntu/.grok",
+      "size": 4096,
+      "symlink": null
+    }
+  ],
+  "hostname": "ip-172-30-0-56",
+  "meminfo": "MemTotal:       259751796 kB\nMemFree:        253638652 kB\nMemAvailable:   257004660 kB\nBuffers:           27428 kB\nCached:          5108152 kB\nSwapCached:            0 kB\nActive:           363912 kB\nInactive:        4835688 kB\nActive(anon):      90616 kB\nInactive(anon):        0 kB\nActive(file):     273296 kB\nInactive(file):  4835688 kB\nUnevictable:       43852 kB\nMlocked:           27220 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              3452 kB\nWriteback:             4 kB\nAnonPages:        108012 kB\nMapped:           121500 kB\nShmem:              3100 kB\nKReclaimable:     274556 kB\nSlab:             447380 kB\nSReclaimable:     274556 kB\nSUnreclaim:       172824 kB\nKernelStack:        7680 kB\nPageTables:         4964 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    129875896 kB\nCommitted_AS:     832672 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       21076 kB\nVmallocChunk:          0 kB\nPercpu:            25216 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:     86016 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:        17385472 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      123308 kB\nDirectMap2M:     6131712 kB\nDirectMap1G:    257949696 kB\n",
+  "mounts": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/\",\n         \"source\": \"/dev/nvme0n1p1\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,relatime,discard,errors=remount-ro,commit=30\",\n         \"children\": [\n            {\n               \"target\": \"/dev\",\n               \"source\": \"devtmpfs\",\n               \"fstype\": \"devtmpfs\",\n               \"options\": \"rw,nosuid,noexec,relatime,size=121159376k,nr_inodes=30289844,mode=755,inode64\",\n               \"children\": [\n                  {\n                     \"target\": \"/dev/shm\",\n                     \"source\": \"tmpfs\",\n                     \"fstype\": \"tmpfs\",\n                     \"options\": \"rw,nosuid,nodev,inode64\"\n                  },{\n                     \"target\": \"/dev/pts\",\n                     \"source\": \"devpts\",\n                     \"fstype\": \"devpts\",\n                     \"options\": \"rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000\"\n                  },{\n                     \"target\": \"/dev/mqueue\",\n                     \"source\": \"mqueue\",\n                     \"fstype\": \"mqueue\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime\"\n                  },{\n                     \"target\": \"/dev/hugepages\",\n                     \"source\": \"hugetlbfs\",\n                     \"fstype\": \"hugetlbfs\",\n                     \"options\": \"rw,nosuid,nodev,relatime,pagesize=2M\"\n                  }\n               ]\n            },{\n               \"target\": \"/proc\",\n               \"source\": \"proc\",\n               \"fstype\": \"proc\",\n               \"options\": \"rw,nosuid,nodev,noexec,relatime\",\n               \"children\": [\n                  {\n                     \"target\": \"/proc/sys/fs/binfmt_misc\",\n                     \"source\": \"systemd-1\",\n                     \"fstype\": \"autofs\",\n                     \"options\": \"rw,relatime,fd=32,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=19459\",\n                     \"children\": [\n                        {\n                           \"target\": \"/proc/sys/fs/binfmt_misc\",\n                           \"source\": \"binfmt_misc\",\n                           \"fstype\": \"binfmt_misc\",\n                           \"options\": \"rw,nosuid,nodev,noexec,relatime\"\n                        }\n                     ]\n                  }\n               ]\n            },{\n               \"target\": \"/sys\",\n               \"source\": \"sysfs\",\n               \"fstype\": \"sysfs\",\n               \"options\": \"rw,nosuid,nodev,noexec,relatime\",\n               \"children\": [\n                  {\n                     \"target\": \"/sys/kernel/security\",\n                     \"source\": \"securityfs\",\n                     \"fstype\": \"securityfs\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime\"\n                  },{\n                     \"target\": \"/sys/fs/cgroup\",\n                     \"source\": \"cgroup2\",\n                     \"fstype\": \"cgroup2\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot\"\n                  },{\n                     \"target\": \"/sys/fs/pstore\",\n                     \"source\": \"none\",\n                     \"fstype\": \"pstore\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime\"\n                  },{\n                     \"target\": \"/sys/firmware/efi/efivars\",\n                     \"source\": \"efivarfs\",\n                     \"fstype\": \"efivarfs\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime\"\n                  },{\n                     \"target\": \"/sys/fs/bpf\",\n                     \"source\": \"bpf\",\n                     \"fstype\": \"bpf\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime,mode=700\"\n                  },{\n                     \"target\": \"/sys/fs/fuse/connections\",\n                     \"source\": \"fusectl\",\n                     \"fstype\": \"fusectl\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime\"\n                  },{\n                     \"target\": \"/sys/kernel/config\",\n                     \"source\": \"configfs\",\n                     \"fstype\": \"configfs\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime\"\n                  },{\n                     \"target\": \"/sys/kernel/tracing\",\n                     \"source\": \"tracefs\",\n                     \"fstype\": \"tracefs\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime\"\n                  },{\n                     \"target\": \"/sys/kernel/debug\",\n                     \"source\": \"debugfs\",\n                     \"fstype\": \"debugfs\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime\"\n                  }\n               ]\n            },{\n               \"target\": \"/run\",\n               \"source\": \"tmpfs\",\n               \"fstype\": \"tmpfs\",\n               \"options\": \"rw,nosuid,nodev,size=51950360k,nr_inodes=819200,mode=755,inode64\",\n               \"children\": [\n                  {\n                     \"target\": \"/run/lock\",\n                     \"source\": \"tmpfs\",\n                     \"fstype\": \"tmpfs\",\n                     \"options\": \"rw,nosuid,nodev,noexec,relatime,size=5120k,inode64\"\n                  },{\n                     \"target\": \"/run/user/1000\",\n                     \"source\": \"tmpfs\",\n                     \"fstype\": \"tmpfs\",\n                     \"options\": \"rw,nosuid,nodev,relatime,size=25975176k,nr_inodes=6493794,mode=700,uid=1000,gid=1000,inode64\"\n                  }\n               ]\n            },{\n               \"target\": \"/snap/amazon-ssm-agent/13349\",\n               \"source\": \"/dev/loop0\",\n               \"fstype\": \"squashfs\",\n               \"options\": \"ro,nodev,relatime,errors=continue,threads=single\"\n            },{\n               \"target\": \"/snap/snapd/27710\",\n               \"source\": \"/dev/loop2\",\n               \"fstype\": \"squashfs\",\n               \"options\": \"ro,nodev,relatime,errors=continue,threads=single\"\n            },{\n               \"target\": \"/snap/core22/2437\",\n               \"source\": \"/dev/loop1\",\n               \"fstype\": \"squashfs\",\n               \"options\": \"ro,nodev,relatime,errors=continue,threads=single\"\n            },{\n               \"target\": \"/boot\",\n               \"source\": \"/dev/nvme0n1p16\",\n               \"fstype\": \"ext4\",\n               \"options\": \"rw,relatime\",\n               \"children\": [\n                  {\n                     \"target\": \"/boot/efi\",\n                     \"source\": \"/dev/nvme0n1p15\",\n                     \"fstype\": \"vfat\",\n                     \"options\": \"rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro\"\n                  }\n               ]\n            }\n         ]\n      }\n   ]\n}\n",
+  "processes": [
+    {
+      "argv": [
+        "/sbin/init"
+      ],
+      "cgroup": "0::/init.scope\n",
+      "cpu_ticks": 263,
+      "pgid": 1,
+      "pid": 1,
+      "ppid": 0,
+      "rss_pages": 3215,
+      "start_ticks": 87,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/lib/systemd/systemd-journald"
+      ],
+      "cgroup": "0::/system.slice/systemd-journald.service\n",
+      "cpu_ticks": 73,
+      "pgid": 382,
+      "pid": 382,
+      "ppid": 1,
+      "rss_pages": 4708,
+      "start_ticks": 1599,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/sbin/multipathd",
+        "-d",
+        "-s"
+      ],
+      "cgroup": "0::/system.slice/multipathd.service\n",
+      "cpu_ticks": 65,
+      "pgid": 437,
+      "pid": 437,
+      "ppid": 1,
+      "rss_pages": 6475,
+      "start_ticks": 1637,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/lib/systemd/systemd-udevd"
+      ],
+      "cgroup": "0::/system.slice/systemd-udevd.service/udev\n",
+      "cpu_ticks": 37,
+      "pgid": 441,
+      "pid": 441,
+      "ppid": 1,
+      "rss_pages": 2023,
+      "start_ticks": 1638,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/lib/systemd/systemd-resolved"
+      ],
+      "cgroup": "0::/system.slice/systemd-resolved.service\n",
+      "cpu_ticks": 6,
+      "pgid": 775,
+      "pid": 775,
+      "ppid": 1,
+      "rss_pages": 3189,
+      "start_ticks": 4557,
+      "state": "S",
+      "uid": 991
+    },
+    {
+      "argv": [
+        "/usr/lib/systemd/systemd-networkd"
+      ],
+      "cgroup": "0::/system.slice/systemd-networkd.service\n",
+      "cpu_ticks": 3,
+      "pgid": 879,
+      "pid": 879,
+      "ppid": 1,
+      "rss_pages": 2462,
+      "start_ticks": 5216,
+      "state": "S",
+      "uid": 998
+    },
+    {
+      "argv": [
+        "/usr/sbin/acpid"
+      ],
+      "cgroup": "0::/system.slice/acpid.service\n",
+      "cpu_ticks": 0,
+      "pgid": 934,
+      "pid": 934,
+      "ppid": 1,
+      "rss_pages": 468,
+      "start_ticks": 5578,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/sbin/cron",
+        "-f",
+        "-P"
+      ],
+      "cgroup": "0::/system.slice/cron.service\n",
+      "cpu_ticks": 1,
+      "pgid": 938,
+      "pid": 938,
+      "ppid": 1,
+      "rss_pages": 674,
+      "start_ticks": 5579,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "@dbus-daemon",
+        "--system",
+        "--address=systemd:",
+        "--nofork",
+        "--nopidfile",
+        "--systemd-activation",
+        "--syslog-only"
+      ],
+      "cgroup": "0::/system.slice/dbus.service\n",
+      "cpu_ticks": 71,
+      "pgid": 939,
+      "pid": 939,
+      "ppid": 1,
+      "rss_pages": 1256,
+      "start_ticks": 5579,
+      "state": "S",
+      "uid": 101
+    },
+    {
+      "argv": [
+        "/usr/sbin/irqbalance"
+      ],
+      "cgroup": "0::/system.slice/irqbalance.service\n",
+      "cpu_ticks": 47,
+      "pgid": 944,
+      "pid": 944,
+      "ppid": 1,
+      "rss_pages": 1118,
+      "start_ticks": 5581,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/usr/bin/networkd-dispatcher",
+        "--run-startup-triggers"
+      ],
+      "cgroup": "0::/system.slice/networkd-dispatcher.service\n",
+      "cpu_ticks": 5,
+      "pgid": 946,
+      "pid": 946,
+      "ppid": 1,
+      "rss_pages": 5132,
+      "start_ticks": 5582,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/lib/polkit-1/polkitd",
+        "--no-debug"
+      ],
+      "cgroup": "0::/system.slice/polkit.service\n",
+      "cpu_ticks": 50,
+      "pgid": 947,
+      "pid": 947,
+      "ppid": 1,
+      "rss_pages": 2285,
+      "start_ticks": 5582,
+      "state": "S",
+      "uid": 989
+    },
+    {
+      "argv": [
+        "/snap/amazon-ssm-agent/13349/amazon-ssm-agent"
+      ],
+      "cgroup": "0::/system.slice/snap.amazon-ssm-agent.amazon-ssm-agent.service\n",
+      "cpu_ticks": 64,
+      "pgid": 949,
+      "pid": 949,
+      "ppid": 1,
+      "rss_pages": 5111,
+      "start_ticks": 5583,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/lib/snapd/snapd"
+      ],
+      "cgroup": "0::/system.slice/snapd.service\n",
+      "cpu_ticks": 71,
+      "pgid": 951,
+      "pid": 951,
+      "ppid": 1,
+      "rss_pages": 9333,
+      "start_ticks": 5584,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/lib/systemd/systemd-logind"
+      ],
+      "cgroup": "0::/system.slice/systemd-logind.service\n",
+      "cpu_ticks": 48,
+      "pgid": 953,
+      "pid": 953,
+      "ppid": 1,
+      "rss_pages": 2212,
+      "start_ticks": 5584,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/libexec/udisks2/udisksd"
+      ],
+      "cgroup": "0::/system.slice/udisks2.service\n",
+      "cpu_ticks": 37,
+      "pgid": 955,
+      "pid": 955,
+      "ppid": 1,
+      "rss_pages": 3291,
+      "start_ticks": 5584,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/sbin/agetty",
+        "-o",
+        "-p -- \\u",
+        "--keep-baud",
+        "115200,57600,38400,9600",
+        "-",
+        "vt220"
+      ],
+      "cgroup": "0::/system.slice/system-serial\\x2dgetty.slice/serial-getty@ttyS0.service\n",
+      "cpu_ticks": 0,
+      "pgid": 963,
+      "pid": 963,
+      "ppid": 1,
+      "rss_pages": 469,
+      "start_ticks": 5586,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/sbin/agetty",
+        "-o",
+        "-p -- \\u",
+        "--noclear",
+        "-",
+        "linux"
+      ],
+      "cgroup": "0::/system.slice/system-getty.slice/getty@tty1.service\n",
+      "cpu_ticks": 0,
+      "pgid": 974,
+      "pid": 974,
+      "ppid": 1,
+      "rss_pages": 468,
+      "start_ticks": 5587,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/sbin/rsyslogd",
+        "-n",
+        "-iNONE"
+      ],
+      "cgroup": "0::/system.slice/rsyslog.service\n",
+      "cpu_ticks": 19,
+      "pgid": 997,
+      "pid": 997,
+      "ppid": 1,
+      "rss_pages": 1505,
+      "start_ticks": 5592,
+      "state": "S",
+      "uid": 102
+    },
+    {
+      "argv": [
+        "/usr/sbin/chronyd",
+        "-F",
+        "1"
+      ],
+      "cgroup": "0::/system.slice/chrony.service\n",
+      "cpu_ticks": 19,
+      "pgid": 1027,
+      "pid": 1028,
+      "ppid": 1,
+      "rss_pages": 872,
+      "start_ticks": 5613,
+      "state": "S",
+      "uid": 110
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/usr/share/unattended-upgrades/unattended-upgrade-shutdown",
+        "--wait-for-signal"
+      ],
+      "cgroup": "0::/system.slice/unattended-upgrades.service\n",
+      "cpu_ticks": 3,
+      "pgid": 1030,
+      "pid": 1030,
+      "ppid": 1,
+      "rss_pages": 5639,
+      "start_ticks": 5615,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/lib/systemd/systemd",
+        "--user"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/init.scope\n",
+      "cpu_ticks": 5,
+      "pgid": 1049,
+      "pid": 1049,
+      "ppid": 1,
+      "rss_pages": 2817,
+      "start_ticks": 5618,
+      "state": "S",
+      "uid": 1000
+    },
+    {
+      "argv": [
+        "/usr/sbin/ModemManager"
+      ],
+      "cgroup": "0::/system.slice/ModemManager.service\n",
+      "cpu_ticks": 23,
+      "pgid": 1060,
+      "pid": 1060,
+      "ppid": 1,
+      "rss_pages": 2834,
+      "start_ticks": 5620,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/sbin/chronyd",
+        "-F",
+        "1"
+      ],
+      "cgroup": "0::/system.slice/chrony.service\n",
+      "cpu_ticks": 0,
+      "pgid": 1027,
+      "pid": 1061,
+      "ppid": 1028,
+      "rss_pages": 541,
+      "start_ticks": 5626,
+      "state": "S",
+      "uid": 110
+    },
+    {
+      "argv": [
+        "(sd-pam)"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/init.scope\n",
+      "cpu_ticks": 0,
+      "pgid": 1049,
+      "pid": 1079,
+      "ppid": 1049,
+      "rss_pages": 921,
+      "start_ticks": 5640,
+      "state": "S",
+      "uid": 1000
+    },
+    {
+      "argv": [
+        "sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups"
+      ],
+      "cgroup": "0::/system.slice/ssh.service\n",
+      "cpu_ticks": 14,
+      "pgid": 1340,
+      "pid": 1340,
+      "ppid": 1,
+      "rss_pages": 2025,
+      "start_ticks": 6185,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/libexec/fwupd/fwupd"
+      ],
+      "cgroup": "0::/system.slice/fwupd.service\n",
+      "cpu_ticks": 128,
+      "pgid": 27026,
+      "pid": 27026,
+      "ppid": 1,
+      "rss_pages": 11658,
+      "start_ticks": 178714,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "/usr/bin/dbus-daemon",
+        "--session",
+        "--address=systemd:",
+        "--nofork",
+        "--nopidfile",
+        "--systemd-activation",
+        "--syslog-only"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/session.slice/dbus.service\n",
+      "cpu_ticks": 0,
+      "pgid": 39097,
+      "pid": 39097,
+      "ppid": 1049,
+      "rss_pages": 1230,
+      "start_ticks": 420161,
+      "state": "S",
+      "uid": 1000
+    },
+    {
+      "argv": [
+        "sshd: ubuntu [priv]"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/session-296.scope\n",
+      "cpu_ticks": 0,
+      "pgid": 115073,
+      "pid": 115073,
+      "ppid": 1340,
+      "rss_pages": 2599,
+      "start_ticks": 1053233,
+      "state": "S",
+      "uid": 0
+    },
+    {
+      "argv": [
+        "sshd: ubuntu@notty"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/session-296.scope\n",
+      "cpu_ticks": 0,
+      "pgid": 115073,
+      "pid": 115130,
+      "ppid": 115073,
+      "rss_pages": 1715,
+      "start_ticks": 1053273,
+      "state": "S",
+      "uid": 1000
+    },
+    {
+      "argv": [
+        "python3",
+        "-"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/session-296.scope\n",
+      "cpu_ticks": 2,
+      "pgid": 115131,
+      "pid": 115131,
+      "ppid": 115130,
+      "rss_pages": 3270,
+      "start_ticks": 1053277,
+      "state": "R",
+      "uid": 1000
+    }
+  ],
+  "swap_counters": {
+    "pswpin": 0,
+    "pswpout": 0
+  },
+  "tmp_top_level": [
+    {
+      "mode": 17407,
+      "path": "/tmp/.XIM-unix",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/tmp/systemd-private-7e5d7a33163a4ed7a08d780788a2c186-chrony.service-iv241b",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/tmp/systemd-private-7e5d7a33163a4ed7a08d780788a2c186-systemd-logind.service-32T5DJ",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 17407,
+      "path": "/tmp/.font-unix",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/tmp/systemd-private-7e5d7a33163a4ed7a08d780788a2c186-fwupd.service-5RY9Qu",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/tmp/systemd-private-7e5d7a33163a4ed7a08d780788a2c186-ModemManager.service-rFFCCY",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 17407,
+      "path": "/tmp/.ICE-unix",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/tmp/snap-private-tmp",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 17407,
+      "path": "/tmp/.X11-unix",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/tmp/systemd-private-7e5d7a33163a4ed7a08d780788a2c186-polkit.service-7tevK9",
+      "size": 4096,
+      "symlink": null
+    },
+    {
+      "mode": 16832,
+      "path": "/tmp/systemd-private-7e5d7a33163a4ed7a08d780788a2c186-systemd-resolved.service-r4ETPB",
+      "size": 4096,
+      "symlink": null
+    }
+  ],
+  "utc": "2026-09-06T12:41:28.330522+00:00"
+}

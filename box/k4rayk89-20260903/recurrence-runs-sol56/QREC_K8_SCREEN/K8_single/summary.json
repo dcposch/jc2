@@ -1,0 +1,103 @@
+{
+  "K": 8,
+  "branch": "single",
+  "chart_sha256": "3c47ee9c709b7b2379cc8039f97ee3a65531c75cb8c35f2449d79f3190865ad4",
+  "elapsed_seconds": 0.036257,
+  "exact": null,
+  "interpretation": {
+    "modular_unit": "F_p-only until exact-Q confirmation",
+    "posdim": "necessary subsystem only; not a full-chart point or counterexample",
+    "unit_exact_q": "kills this branch and hence the full chart"
+  },
+  "modular_kill": null,
+  "necessary_subsystem": true,
+  "per_call_timeout_seconds": 60,
+  "primes": [
+    32003,
+    32009,
+    32027
+  ],
+  "progress": [
+    {
+      "accepted_run_count": 0,
+      "crt_rational_reconstruction": {
+        "available": true,
+        "items": {},
+        "method": "CRT plus bounded rational reconstruction for scalar invariants"
+      },
+      "cumulative_row_count": 5,
+      "last_band": "n04",
+      "promotion_note": "controls did not accept a characteristic-zero conclusion",
+      "runs": [
+        {
+          "basis_size": null,
+          "characteristic": 32003,
+          "dimension": null,
+          "elapsed_seconds": 0.017335,
+          "label": "QREC_K8_single_stage00_n04_weight-desc_p32003",
+          "missing_markers": [
+            "BASIS_SIZE",
+            "NF_ZERO"
+          ],
+          "nf_all_zero": true,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32003_p32003.sing",
+          "script_sha256": "b3ef60471c86aee6bc37bf93d3496cc2b4c19243ce36caddb6d8d238cc42f89c",
+          "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32003_p32003.out",
+          "stdout_sha256": "3d178b53019c90df54c637e3c671cd54164f7a55c4831cf45e6008bb4c4ca5e9",
+          "timed_out": false,
+          "unit": false,
+          "vdim": null
+        },
+        {
+          "basis_size": null,
+          "characteristic": 32009,
+          "dimension": null,
+          "elapsed_seconds": 0.017133,
+          "label": "QREC_K8_single_stage00_n04_weight-desc_p32009",
+          "missing_markers": [
+            "BASIS_SIZE",
+            "NF_ZERO"
+          ],
+          "nf_all_zero": true,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32009_p32009.sing",
+          "script_sha256": "53f454ff518e8ab72562d35a5449ee3406f1b3bc1df8084f07c45d5d7058a78a",
+          "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32009_p32009.out",
+          "stdout_sha256": "e29100d6bab76bd9e259599c718c7f03477eb2fdc7a3c45b380c8e5644c2406f",
+          "timed_out": false,
+          "unit": false,
+          "vdim": null
+        },
+        {
+          "basis_size": null,
+          "characteristic": 32027,
+          "dimension": null,
+          "elapsed_seconds": 0.032918,
+          "label": "QREC_K8_single_stage00_n04_weight-desc_p32027",
+          "missing_markers": [
+            "BASIS_SIZE",
+            "NF_ZERO"
+          ],
+          "nf_all_zero": true,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32027_p32027.sing",
+          "script_sha256": "280a7b62252c32b0ccbae22f80227289649fcaa348d66eaf19f83e1c90a39376",
+          "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32027_p32027.out",
+          "stdout_sha256": "b7a1552637cb7f3a067480066326094ba05d4f39a8291a0a568dd1c8ec942a9b",
+          "timed_out": false,
+          "unit": false,
+          "vdim": null
+        }
+      ],
+      "stage": "stage00_n04",
+      "stage_index": 0,
+      "verdict": "MODULAR_ONLY"
+    }
+  ],
+  "tag": "QREC_K8_SCREEN",
+  "tie_order": "weight-desc",
+  "total_cores": 3,
+  "type": "K4RAY-QUOTIENT-RECURRENCE-STAGED-RUN",
+  "verdict": "OPEN"
+}

@@ -1,0 +1,21 @@
+schema=T2T3_WORKER_RUN/v1
+utc_preflight=2026-09-06T08:25:49Z
+mode=singular
+hostname=ip-172-30-0-63
+nproc=64
+run_dir=/home/ubuntu/t2t3-longsolve/runs/d2-z55-singular
+TMPDIR=/home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/tmp
+input=/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2-slimgb.sing
+solver=/usr/bin/Singular
+wrapper=/home/ubuntu/t2t3-longsolve/run_longsolve.sh
+caprun=/home/ubuntu/t2t3-longsolve/run_capped.py
+wall_seconds=72000
+term_grace_seconds=60
+limit_kind=sampled_aggregate_PGID_RSS
+limit_value=214748364800
+limit_units=bytes
+input_sha256=354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c
+solver_sha256=90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4
+wrapper_sha256=a2e4779ec0e1b3f1a7ac6fe86b4052cbab213f8fb2282b95c3638096158e5ac2
+caprun_sha256=4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2
+argv_shellquoted= /usr/bin/time -v -o /home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/time.txt /usr/bin/Singular -q --no-rc --no-warn --no-shell --threads=1 --flint-threads=1 /home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2-slimgb.sing

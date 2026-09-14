@@ -1,0 +1,26 @@
+{
+  "schema":"jc2.source-preparation-custody/v1",
+  "task":"f10-mixed-native-live-capture-sol-20260913",
+  "status":"TERMINAL_SOURCE_COMPLETE_UNEXECUTED_UNREVIEWED",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc":"2026-09-13T01:04:47.070421595Z",
+  "custody_authored_utc":"2026-09-13T01:09:02.680741086Z",
+  "input_postpins":[
+    ["box/f10-mixed-dac-correction-root-20260913/PREPARE.template.sh","482c50538c144aef7d41aac834aca43bb2f8108c8a14017a2e85fa155cd55d6f"],
+    ["box/f10-mixed-v3-ready-root-20260913/OPERATOR-PROCEDURE.md","6b1128f840b1ae5c30a8e5ef03f11c9a2facb469a9f0c95280c066f72737113f"],
+    ["box/f10-mixed-qualification-v3-root-20260913/NATIVE-LIVE-UNIT-2.txt","665d73d5865f9846fd972818d2b510f92cddd494ffcb6f26987c415f9f823a99"],
+    ["box/f10-mixed-qualification-v3-root-20260913/NATIVE-LIVE-PROCESS.txt","553ea7d58461bd0638c1353a7c5105e6dd88d817a9483d7842b2cbc2f96ad2e7"],
+    ["ops/artifact_finalize.py","0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"]
+  ],
+  "outputs":[
+    ["box/f10-mixed-native-live-capture-sol-20260913/observe-native-live.template.sh","442567468f8452b090f0e481a2ab0bd408e95b1741968989fa19bd7a2114bf66"],
+    ["box/f10-mixed-native-live-capture-sol-20260913/PINS.json","a76d4074aef23ef5f692004d29fb4e94bcb2a47b9331eedae5a9c186552f0897"],
+    ["xmodel/f10-mixed-native-live-capture-sol-20260913.md","693bacaf3159f82d85cabe42430c525f9dce9ffc77902e7f6cc6d28cd1afdeeb"],
+    ["xmodel/f10-mixed-native-live-capture-sol-20260913.md.artifact.json","648b7b08abc50ee5766f55836829aea4c03cdb69cd49aee163e4c955994d2486"]
+  ],
+  "readback":{"source":"WHOLE","report":"WHOLE","manifest":"WHOLE"},
+  "artifact_verify":"VERIFIED",
+  "all_input_postpins_match":true,
+  "all_writers_idle_after_custody":true,
+  "authority":"NONE; disabled source preparation only"
+}

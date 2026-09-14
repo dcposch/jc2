@@ -1,0 +1,224 @@
+{
+  "all_children_terminal": true,
+  "caps_each": "30wall25CPU512MiB -I -B",
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "{\"A_leading_terms\": [-20, 252, -660, 455], \"B_leading_terms\": [-252, 6435, -43680, 116280, -131670, 53130], \"E\": \"E0-a*E2/81\", \"boundary_E\": 0, \"boundary_delta_factor\": 3, \"certificate_rows\": [0, 2, 4, 6], \"delta\": \"c-a*b/27+5*a^2/27\", \"nonreduced_axis_control\": true, \"scope\": \"individual projections/universal univariate jets only; no full source point or expansion\", \"status\": \"PASS\"}\n",
+      "stdout_sha256": "b26a87a29c7a9673b04e8018a620a2b48d440529edbdd2f015c232160d278697",
+      "wall_seconds": 0.03860905393958092
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "face-a"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 68, in main\n    need(sum(atop)==27,'actual A top projection')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual A top projection\n",
+      "stderr_sha256": "b9a9e932dcd64abfdeb480313c8c4331d1e71f1f07d49b8588712bb8552d98c8",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.10298827604856342
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "face-b"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 69, in main\n    need(sum(btop)==243,'actual B top projection')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual B top projection\n",
+      "stderr_sha256": "939cf7386e7c313c59b19f270d2b58505974b9ce09320587d04becdbee0e709d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.1008276860229671
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "delta-factor"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 90, in main\n    need(lhs==certificate,'universal four-row Bezout identity')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal four-row Bezout identity\n",
+      "stderr_sha256": "965b0d2e23a2d7a2da7b8b12b6385ba19d8284f0b8d7dd4a0a1a80956732e49d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.10106441401876509
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "omit-E2"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 90, in main\n    need(lhs==certificate,'universal four-row Bezout identity')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal four-row Bezout identity\n",
+      "stderr_sha256": "965b0d2e23a2d7a2da7b8b12b6385ba19d8284f0b8d7dd4a0a1a80956732e49d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.10115680401213467
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "omit-row6"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 90, in main\n    need(lhs==certificate,'universal four-row Bezout identity')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal four-row Bezout identity\n",
+      "stderr_sha256": "965b0d2e23a2d7a2da7b8b12b6385ba19d8284f0b8d7dd4a0a1a80956732e49d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.10108367400243878
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "target-sign"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 90, in main\n    need(lhs==certificate,'universal four-row Bezout identity')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal four-row Bezout identity\n",
+      "stderr_sha256": "965b0d2e23a2d7a2da7b8b12b6385ba19d8284f0b8d7dd4a0a1a80956732e49d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.10179202305153012
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "{\"A_leading_terms\": [-20, 252, -660, 455], \"B_leading_terms\": [-252, 6435, -43680, 116280, -131670, 53130], \"E\": \"E0-a*E2/81\", \"boundary_E\": 0, \"boundary_delta_factor\": 3, \"certificate_rows\": [0, 2, 4, 6], \"delta\": \"c-a*b/27+5*a^2/27\", \"nonreduced_axis_control\": true, \"scope\": \"individual projections/universal univariate jets only; no full source point or expansion\", \"status\": \"PASS\"}\n",
+      "stdout_sha256": "b26a87a29c7a9673b04e8018a620a2b48d440529edbdd2f015c232160d278697",
+      "wall_seconds": 0.13470043300185353
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "face-a"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 68, in main\n    need(sum(atop)==27,'actual A top projection')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual A top projection\n",
+      "stderr_sha256": "b9a9e932dcd64abfdeb480313c8c4331d1e71f1f07d49b8588712bb8552d98c8",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.5155626299092546
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "face-b"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 69, in main\n    need(sum(btop)==243,'actual B top projection')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual B top projection\n",
+      "stderr_sha256": "939cf7386e7c313c59b19f270d2b58505974b9ce09320587d04becdbee0e709d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.5194179660174996
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "delta-factor"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 90, in main\n    need(lhs==certificate,'universal four-row Bezout identity')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal four-row Bezout identity\n",
+      "stderr_sha256": "965b0d2e23a2d7a2da7b8b12b6385ba19d8284f0b8d7dd4a0a1a80956732e49d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.518165207002312
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "omit-E2"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 90, in main\n    need(lhs==certificate,'universal four-row Bezout identity')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal four-row Bezout identity\n",
+      "stderr_sha256": "965b0d2e23a2d7a2da7b8b12b6385ba19d8284f0b8d7dd4a0a1a80956732e49d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.5187018350698054
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "omit-row6"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 90, in main\n    need(lhs==certificate,'universal four-row Bezout identity')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal four-row Bezout identity\n",
+      "stderr_sha256": "965b0d2e23a2d7a2da7b8b12b6385ba19d8284f0b8d7dd4a0a1a80956732e49d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.5172148260753602
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-axis-bezout-unit-discriminator-20260908/check.py",
+        "target-sign"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 120, in <module>\n    if __name__=='__main__': print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True))\n                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 90, in main\n    need(lhs==certificate,'universal four-row Bezout identity')\n  File \"/home/ubuntu/jc2/box/d125-axis-bezout-unit-discriminator-20260908/check.py\", line 16, in need\n    if not ok: raise ValueError(why)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal four-row Bezout identity\n",
+      "stderr_sha256": "965b0d2e23a2d7a2da7b8b12b6385ba19d8284f0b8d7dd4a0a1a80956732e49d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.5209642940899357
+    }
+  ],
+  "script_sha256_after": "84e973bd8aa51943d9e7fb6fcd5e0dc03b32982ad22eabacaadcd5118840d206",
+  "script_sha256_before": "84e973bd8aa51943d9e7fb6fcd5e0dc03b32982ad22eabacaadcd5118840d206",
+  "status": "PASS"
+}

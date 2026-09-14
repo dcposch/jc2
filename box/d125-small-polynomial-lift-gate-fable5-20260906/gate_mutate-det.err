@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-small-polynomial-lift-gate-fable5-20260906/gate_controls.py", line 95, in <module>
+    req(det_inv==(var(1,2) if not m('--mutate-det') else var(1,2,K(-1))),"C1a inverse determinant d(gamma,pi)/d(u,v) = +v^2")
+  File "/home/ubuntu/jc2/box/d125-small-polynomial-lift-gate-fable5-20260906/gate_controls.py", line 79, in req
+    if not ok: raise AssertionError("FAIL "+msg)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: FAIL C1a inverse determinant d(gamma,pi)/d(u,v) = +v^2
+Command exited with non-zero status 1
+0.10 s 31880 KB

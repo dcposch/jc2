@@ -1,0 +1,66 @@
+{
+  "certificate": {
+    "accepted_run_count": 1,
+    "crt_rational_reconstruction": {
+      "available": false,
+      "items": {},
+      "method": "CRT plus bounded rational reconstruction for scalar invariants"
+    },
+    "hilbert_hint": null,
+    "policy": {
+      "allow_modular_unit_promotion": false,
+      "note": "inhomogeneous sparse-alpha/rho localization",
+      "require_controls": true,
+      "scope": "EXACT_Q"
+    },
+    "promotion_note": "modular unit ideal was not promoted to characteristic zero",
+    "properness_scope": {
+      "positive_weights": [
+        []
+      ],
+      "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+      "systems_declared_homogeneous": false
+    },
+    "runs": [
+      {
+        "characteristic": 32003,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/ROOT_K9A_FULL96_P32003_V1/K9_A_full96_p32003_p32003_p32003.sing"
+        ],
+        "elapsed_seconds": 13.047556,
+        "label": "K9_A_full96_p32003_p32003",
+        "main": {
+          "accepted": true,
+          "basis_size": 1,
+          "dimension": -1,
+          "lead_dim": -1,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": true,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/ROOT_K9A_FULL96_P32003_V1/K9_A_full96_p32003_p32003_p32003.sing",
+        "script_sha256": "050dabc70114228ff46a05fdbc39caf668dc405d0962892cded278961e266af4",
+        "stderr": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/ROOT_K9A_FULL96_P32003_V1/K9_A_full96_p32003_p32003_p32003.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/ROOT_K9A_FULL96_P32003_V1/K9_A_full96_p32003_p32003_p32003.out",
+        "stdout_sha256": "83488f1064b6b9be1dff1d42cc65615a4126c10964a08eee830a12671e7395a6",
+        "timed_out": false
+      }
+    ]
+  },
+  "verdict": "MODULAR_ONLY"
+}

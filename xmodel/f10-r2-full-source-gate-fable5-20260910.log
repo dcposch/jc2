@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 08:58:10 UTC, before the 09:00:00 reserve. All writers are idle; nothing further is pending.
+
+**What I did.** Hashed all 24 snapshots before reading; every digest matched the charged list. Read all 24 WHOLE. Reconstructed by hand the leading ring, the seven band maps, the new r2 ell-column proof, the 19-slot count, every scaling in the normalization, and the weighted envelopes. Wrote the unsealed gate report and the box custody file using apply_patch only, marker last.
+
+**Verdicts.**
+- **A, C, D, E, F, G: CONFIRMED.** The ell lemma replays exactly: the operator 7CQ'-5C'Q gives Q2=1, Q1=F/2, gE=(6H-F²)/10, the displayed L1, L0 and identity (11); the finite t3, t4 identities reduce to dL(Z), a unit of B, so (L1,L0)=L with no field or reducedness assumption. Every scaling in (15)-(17) checks, including the s^7 bracket, the (s^6 r1, s^7 r0) residual pair, the (s³, s⁴) columns and Psihat=s^10 Psi. The 18 variables and 32 residual slots are fully accounted, giving exactly 19 retained slots.
+- **B: CONFIRMED with one display defect.** The late operator is printed as 7CV'-18C'V+kD'. With h=6 and n-h=6, the accepted 17v operator is 7CV'-6C'V+kD'. The printed -18 is the theta² pivot, and it contradicts the report's own pivots -4, -11, -18. The theorem survives because the column ideal is imported from 17v and the rows come from recurrence (3), but a checker following the display verbatim would compute a wrong column. This is the smallest defect and the only REFUTED item.
+
+**GAP, unchanged and honest.** All inverse constants, Bezout cofactors and rows remain uncomputed. The report claims existence only, never possession of a certificate.
+
+**Custody note.** Two custody rows I typed by hand had slips. I corrected both by apply_patch and re-verified all 24 rows against live sha256sum, with 24 of 24 matching. The report body itself contains no hex digest.
+
+**Files.** `xmodel/f10-r2-full-source-gate-fable5-20260910.md` and `box/f10-r2-full-source-gate-fable5-20260910/input_custody.md`. No Seal, no charge_basis, no OPEN raised, collisions EMPTY.
+DIVERT path=xmodel/f10-r2-full-source-gate-fable5-20260910.md status=CLEAN body_bytes=13353 body_sha256=e89e6fb1d107eda73a2a1f334e2bdc4161fb9a78511ff8061cf7fba05ae0b514

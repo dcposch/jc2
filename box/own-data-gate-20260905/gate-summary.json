@@ -1,0 +1,86 @@
+{
+ "schema": "jc2.own-data-gate/v1",
+ "basis": "b1966334d0a6f0c2f6a5f77e56c3be467de617ea",
+ "independent_reimplementation": "box/own-data-gate-20260905/mygate.py (printed Def5.1/Prop4.6 only)",
+ "outer_first_support_agreement": "1420/1420",
+ "full_source_route_agreement": "90/90 rows, identical j-sets",
+ "route_state": {
+  "NONEMPTY": 65,
+  "EMPTY_NECESSARY_WHOLE_SOURCE_TREE": 214,
+  "EMPTY_NECESSARY_FIRST_SUPPORT": 1051,
+  "EMPTY_PROP6.3_FINITE_POLE": 90
+ },
+ "condition_load": {
+  "siblings_p200_4": 95,
+  "p188_bottom": 88,
+  "resonance_P_eq_Qz": 1,
+  "prop56_allzero_at_tree": 0,
+  "prop56_allzero_at_arithmetic": 12,
+  "cap_p200_6": 0,
+  "majortop": 0,
+  "delta_positive": 0
+ },
+ "no_row_has_negative_delta_between_2_and_s_minus_1": true,
+ "rows_with_delta_zero_in_range": 90,
+ "equals_dropped_set": true,
+ "controls": {
+  "moh_p207_five": "NONEMPTY, V'2 = 3,2,5,3,2 matching printed children",
+  "row_99_66": "NONEMPTY singleton V'2=8, child (27,18) M'=(-18,21)",
+  "moh_le100_residual_12_fibres": "ALL EMPTY (9 arithmetic, 3 source-tree)",
+  "singletons_with_source_n_le_100": "exactly 6 = Moh's five p.207 rows + (99,66)"
+ },
+ "child_side_def51_2_and_UNEG_on_65_singletons": "65/65 PASS (independent check not run by descend_own)",
+ "child_side_def51_2_corroborates_tree_rejections": "0 of 214",
+ "overstrict_step": {
+  "name": "resonance filter P==Q*z / P==Q*r",
+  "printed_line": "Prop 4.6(5) p.170: 'p(pi) is not a power of q(pi)'",
+  "why_overstrict": "P==Q*mult is necessary-not-sufficient for p=q^w; p=q^w also needs every multiplicity equal AND #distinct roots of p = deg q",
+  "rows_carried": 1,
+  "row": {
+   "n": 168,
+   "m": 112,
+   "M": [
+    -112,
+    140,
+    160,
+    166
+   ],
+   "V": [
+    3,
+    21,
+    3
+   ],
+   "us": 1,
+   "witness": "j=2: p = xi^2 (xi^10-c1)^3 (xi^10-c2)^1, P=42, Q=21, distinct=21=Q, multiplicities {2,3,1} not all equal so p != q^w",
+   "child": {
+    "n": 42,
+    "m": 28,
+    "M": [
+     -28,
+     35,
+     40
+    ],
+    "V_own": [
+     3,
+     7
+    ],
+    "V_copied": [
+     3,
+     21
+    ]
+   }
+  }
+ },
+ "corrected_counts": {
+  "empty": 1354,
+  "singleton": 66,
+  "singleton_us1": 46,
+  "singleton_us_gt1": 20
+ },
+ "astra_counts": {
+  "empty": 1355,
+  "singleton": 65,
+  "singleton_us1": 45,
+  "singleton_us_gt1": 20
+ }
+}

@@ -1,0 +1,321 @@
+{
+  "schema": "JC2_CALLER_FIRST_ROOT_INTAKE_V1",
+  "collected_utc": "2026-09-11 18:52:25 UTC",
+  "status": "ACCEPTED_OFFLINE_SUPPLIED_INPUT_EMITTER_ONLY",
+  "producer": "caprun-candidate-caller-astra-20260911",
+  "reviewer": "caprun-candidate-caller-first-fable5-20260911",
+  "terminal": {
+    "start_utc": "2026-09-11T18:30:09Z",
+    "end_utc": "2026-09-11T18:42:26Z",
+    "elapsed_lane_seconds": 737,
+    "original_reserve": "2026-09-11T18:48:00Z",
+    "original_hard": "2026-09-11T18:51:00Z",
+    "independent_terminal_before_receipt": true,
+    "unit": "jc2-lane-caprun-candidate-caller-first-fable5-20260911.service",
+    "launch_pid": 3544613,
+    "bwrap_pid": 3545137,
+    "model_pid": 3545138,
+    "invocation": "8321f9b95ea845758f2bf0a5c64e8448",
+    "terminal_rechecked": "2026-09-11 18:50 UTC",
+    "timers_retired_after_terminal": "2026-09-11 18:43:51 UTC"
+  },
+  "initial_collection": {
+    "receipt_first": true,
+    "whole_custody_report_controls": true,
+    "body_boundary_bytes": 9717,
+    "charge_basis": "ABSENT",
+    "composed_prompt_reconstructed_sha256": "bc4e5dffffba09d5e393bf614ce1f85908fe7b9d32848aa11660919e57a455ac",
+    "original_pins": 32
+  },
+  "replay": {
+    "directory": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1",
+    "command": "python3 -I -S -B box/caprun-candidate-caller-first-fable5-20260911/review_controls.py /home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1",
+    "mode": "ordinary only; five relocated in-process producer methods, not a standalone CLI claim",
+    "exit_code": 0,
+    "expectations": 170,
+    "failed": 0,
+    "stdout": "box/caprun-candidate-caller-first-prep-root-20260911/ROOT-REPLAY.stdout",
+    "stdout_sha256": "5f58337e0d57390ec9f3c895de950c2d477c81f3ee99951a6b5c17f1fb70fa93",
+    "byte_identical_to_fable": true,
+    "postpins": 58
+  },
+  "workflow_deviation": "Fable corrected claim-3 wording at 18:41 after appending the final marker at 18:40. This violates strict marker-last authoring. Final frozen bytes independently checked; no early downstream use and no source correction. Accept final terminal packet with this documented deviation, not a claim of flawless marker ordering.",
+  "delimitations": [
+    "ROOT authentication and physical/ACL/liveness duties remain external.",
+    "ROOT_ATTESTED_CANDIDATE changes only SUMMARY; keep all candidate bytes paired with SUMMARY.",
+    "No candidate installation, runtime release, full120-second qualification, source outcome or JC2 claim.",
+    "Eight universal-newline separators rejected; ordinary mode only; input filesystem immutability is external.",
+    "Additional hardening, repeat gates and actual worker allocation are not selected by acceptance."
+  ],
+  "pins": [
+    {
+      "path": "box/caprun-candidate-caller-astra-20260911/TASK.md",
+      "sha256": "34bfd0953a0f08cd2e2ea16284da01fe23d26e424ce7d44afde3d39304a6e937",
+      "bytes": 5756,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-latebinder-code-astra-20260911/latebind.py",
+      "sha256": "ff2beb48b68b55dc5035709a9114bc7202dd38cef488d20b8163d0c55e2366fe",
+      "bytes": 20881,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "xmodel/caprun-latebinder-first-fable5-20260911.md",
+      "sha256": "3201abe5cae352f9e12ec6c842c6efe7ac463394b515cf2279d8266717296661",
+      "bytes": 9956,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-candidate-stage-root-20260911/stage_patch.py",
+      "sha256": "f7c61db67a9982a99f1febaed6dae0b6e3595199ffccad70647b66556b907066",
+      "bytes": 3271,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-candidate-stage-root-20260911/EXERCISE.json",
+      "sha256": "e37735ceeee1d60ee97ce492e196c312a8b9ee5d887f8abc9809af71924ce5b5",
+      "bytes": 2566,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "xmodel/caprun-candidate-stage-first-fable5-20260911.md",
+      "sha256": "d96d979c950bf51faea0ad430af4f2eed1366d8f7b3e952e27d048ca2dff2273",
+      "bytes": 9330,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/ROOT-REGISTRATION.preholder.json",
+      "sha256": "31c942b17ed290f13b0bcd87457ec3a2b68f760fc4cf99443fee0e8386eceb74",
+      "bytes": 29235,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/ROOT-REGISTRATION.json",
+      "sha256": "4d0d8475ed7d4aac1e42b70b1c7b4ee0198270ead0c3bb46adb78d7a91153ba3",
+      "bytes": 28436,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/AUTHORITIES.preholder.json",
+      "sha256": "58d35c476c3dc7c4f6fe36adf73b79e5e0d8843e6ddd388c27a745b747a40d2e",
+      "bytes": 32118,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/ROOT-EXECUTION-CARD.preholder.md",
+      "sha256": "1d9f837a23bb94b9609c7ac572909afbb0a4a96e44cb3c84b4875a9b310d02be",
+      "bytes": 6396,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/ROOT-EXECUTION-CARD.md",
+      "sha256": "a92cf2680c8d6aff6044f5376fb1dcfeed87a29c527d55c953d940e39a99f281",
+      "bytes": 6465,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/final-install.preholder.sh",
+      "sha256": "6d414284920782a75a951fa3e59a8c23a391470a5efea28003b968bb1052fc62",
+      "bytes": 6357,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/final-install.sh",
+      "sha256": "abff072f218cbecaa6f47278891a62b36463a70e34ae4be546e44a5f3c3cd208",
+      "bytes": 6400,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/FINAL-INSTALL-INPUTS.sha256",
+      "sha256": "d90196456531bdf917098c84a84a88861384c220dcff6882a5305bacd48e8943",
+      "bytes": 258,
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-candidate-caller-astra-20260911/caller.py",
+      "sha256": "73596b115c73db9aac6751c08d26b2a90cbddccfaa1d6a8615ada65a8076df90",
+      "bytes": 3813
+    },
+    {
+      "path": "box/caprun-candidate-caller-astra-20260911/test_caller.py",
+      "sha256": "e5c6a438016c5b0129f13b2f0cf2ae5a1cdf450750429c8c5a5450c590b4cc35",
+      "bytes": 8931
+    },
+    {
+      "path": "box/caprun-candidate-caller-astra-20260911/CONTRACT.md",
+      "sha256": "f57c247414746a6f4576b45a84f8f17c52052be4414f69e951e3be093b82e9cd",
+      "bytes": 4850
+    },
+    {
+      "path": "box/caprun-candidate-caller-astra-20260911/PINS.json",
+      "sha256": "e465ca6c062a8de1822eedd3f29ed5cb7bc2490b8d09fccaa89e79890048970d",
+      "bytes": 4435
+    },
+    {
+      "path": "box/caprun-candidate-caller-astra-20260911/fixture-pins.json",
+      "sha256": "d4d68584e3b60bb166155a20fcedc5bb67a1526235726ca0b2c53fda8d96853a",
+      "bytes": 398
+    },
+    {
+      "path": "box/caprun-candidate-caller-astra-20260911/fixture-observation.json",
+      "sha256": "6b4ab0834f67b69fa4f6af8d7246ec4d1de5f26a3b2731a2f4cf637280430126",
+      "bytes": 2003
+    },
+    {
+      "path": "box/caprun-candidate-caller-astra-20260911/fixture-decision.json",
+      "sha256": "7f9ff04852b1d2c6a59815aff6ca28968204abb42ece7e5c5d444d489186e53e",
+      "bytes": 724
+    },
+    {
+      "path": "xmodel/caprun-candidate-caller-astra-20260911.md",
+      "sha256": "2a673cbd51a163c476f5b0a14faa4683a51851477a9780a0f76c5fbd05ca26da",
+      "bytes": 6436
+    },
+    {
+      "path": "xmodel/caprun-candidate-caller-astra-20260911.md.artifact.json",
+      "sha256": "511b7c06ab00dc1609039589415b231d0934f912332c3116badf443d6337bfc2",
+      "bytes": 689
+    },
+    {
+      "path": "box/caprun-candidate-caller-first-prep-root-20260911/fable.prompt.md",
+      "sha256": "633742acc2ce021047cc1162a724a62e1ef8ef7f69c1f818f5e75ba65778de28"
+    },
+    {
+      "path": "ops/adapters/claude.sh",
+      "sha256": "34070f15592c99d2c2fef012c5675f802469846899f26fe79018fb80cbe1b699"
+    },
+    {
+      "path": "ops/lane.sh",
+      "sha256": "0726b8428208ba3e8b0ca2ae7afd4bcf329b28c24a2b04caf977823f5d59f396"
+    },
+    {
+      "path": "ops/validate_charge_basis.py",
+      "sha256": "a89658bc2bf01c4cbbc601f3b9db60e46168d37f00367fdc87ef2e94b19a125e"
+    },
+    {
+      "path": "ops/seal.py",
+      "sha256": "222e6de4076e1a3169ff27bd0f6b9deff8c2389aa2ff9dd44b8b4ec90c2ea776"
+    },
+    {
+      "path": "FALLACY-v2.md",
+      "sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5"
+    },
+    {
+      "path": "xmodel/caprun-candidate-caller-first-fable5-20260911.md",
+      "sha256": "254bd2905fbc670374ffe717724733720e86b963c0a86dba9d98f73925a0dfe6"
+    },
+    {
+      "path": "xmodel/caprun-candidate-caller-first-fable5-20260911.log",
+      "sha256": "f30d0c1cfd01037267a8a94863e3b4275fd3b6ff10917f2047535708a049be47"
+    },
+    {
+      "path": "xmodel/caprun-candidate-caller-first-fable5-20260911.run.v2",
+      "sha256": "9dfd074b88fdfac62154d2c76468d166cfece10ad157d5b6d864e23d09223100"
+    },
+    {
+      "path": "box/caprun-candidate-caller-first-fable5-20260911/input_custody.md",
+      "sha256": "15242d3d724fec5e8200fa215b137fee47c691b54ecb41ae3e8adefb1d779949"
+    },
+    {
+      "path": "box/caprun-candidate-caller-first-fable5-20260911/review_controls.py",
+      "sha256": "1f74c77a16f6300e8ca8d33c3003302a2855943b50d760ff22627673cc531e3d"
+    },
+    {
+      "path": "box/caprun-candidate-caller-first-prep-root-20260911/ROOT-REPLAY.stdout",
+      "sha256": "5f58337e0d57390ec9f3c895de950c2d477c81f3ee99951a6b5c17f1fb70fa93"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/TASK.md",
+      "sha256": "34bfd0953a0f08cd2e2ea16284da01fe23d26e424ce7d44afde3d39304a6e937"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/latebind.py",
+      "sha256": "ff2beb48b68b55dc5035709a9114bc7202dd38cef488d20b8163d0c55e2366fe"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/caprun-latebinder-first-fable5-20260911.md",
+      "sha256": "3201abe5cae352f9e12ec6c842c6efe7ac463394b515cf2279d8266717296661"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/stage_patch.py",
+      "sha256": "f7c61db67a9982a99f1febaed6dae0b6e3595199ffccad70647b66556b907066"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/EXERCISE.json",
+      "sha256": "e37735ceeee1d60ee97ce492e196c312a8b9ee5d887f8abc9809af71924ce5b5"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/caprun-candidate-stage-first-fable5-20260911.md",
+      "sha256": "d96d979c950bf51faea0ad430af4f2eed1366d8f7b3e952e27d048ca2dff2273"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/ROOT-REGISTRATION.preholder.json",
+      "sha256": "31c942b17ed290f13b0bcd87457ec3a2b68f760fc4cf99443fee0e8386eceb74"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/ROOT-REGISTRATION.json",
+      "sha256": "4d0d8475ed7d4aac1e42b70b1c7b4ee0198270ead0c3bb46adb78d7a91153ba3"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/AUTHORITIES.preholder.json",
+      "sha256": "58d35c476c3dc7c4f6fe36adf73b79e5e0d8843e6ddd388c27a745b747a40d2e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/ROOT-EXECUTION-CARD.preholder.md",
+      "sha256": "1d9f837a23bb94b9609c7ac572909afbb0a4a96e44cb3c84b4875a9b310d02be"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/ROOT-EXECUTION-CARD.md",
+      "sha256": "a92cf2680c8d6aff6044f5376fb1dcfeed87a29c527d55c953d940e39a99f281"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/final-install.preholder.sh",
+      "sha256": "6d414284920782a75a951fa3e59a8c23a391470a5efea28003b968bb1052fc62"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/final-install.sh",
+      "sha256": "abff072f218cbecaa6f47278891a62b36463a70e34ae4be546e44a5f3c3cd208"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/FINAL-INSTALL-INPUTS.sha256",
+      "sha256": "d90196456531bdf917098c84a84a88861384c220dcff6882a5305bacd48e8943"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/caller.py",
+      "sha256": "73596b115c73db9aac6751c08d26b2a90cbddccfaa1d6a8615ada65a8076df90"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/test_caller.py",
+      "sha256": "e5c6a438016c5b0129f13b2f0cf2ae5a1cdf450750429c8c5a5450c590b4cc35"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/CONTRACT.md",
+      "sha256": "f57c247414746a6f4576b45a84f8f17c52052be4414f69e951e3be093b82e9cd"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/PINS.json",
+      "sha256": "e465ca6c062a8de1822eedd3f29ed5cb7bc2490b8d09fccaa89e79890048970d"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/fixture-pins.json",
+      "sha256": "d4d68584e3b60bb166155a20fcedc5bb67a1526235726ca0b2c53fda8d96853a"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/fixture-observation.json",
+      "sha256": "6b4ab0834f67b69fa4f6af8d7246ec4d1de5f26a3b2731a2f4cf637280430126"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/fixture-decision.json",
+      "sha256": "7f9ff04852b1d2c6a59815aff6ca28968204abb42ece7e5c5d444d489186e53e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/caprun-candidate-caller-astra-20260911.md",
+      "sha256": "2a673cbd51a163c476f5b0a14faa4683a51851477a9780a0f76c5fbd05ca26da"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-caller-first-replay-20260911.If6gz4V1/caprun-candidate-caller-astra-20260911.md.artifact.json",
+      "sha256": "511b7c06ab00dc1609039589415b231d0934f912332c3116badf443d6337bfc2"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Submitted and sealed: `xmodel/ideation-20260904T0000Z-opus5.md` (body 50,003 B, `sha256 759703cf…`, basis `ce00e907`). Seal verifies PASS; collision scan exits 0. Blindness held — no same-round submission and none of the four `initial_status=RUNNING` lane reports were opened.
+
+**Hashes:** manifest generated with `awk` from the receipt's paired `charged_input_<i>_*` lines, `sha256sum -c` → 4/4 OK, no digit retyped.
+
+## What I found
+
+**Two exact results, computed here.**
+- Sol's `t`-row tail `⟨T_{t,t..2t−1}⟩` and Fable's Lemma SQUARE act on **the same t rows** — the `R_r` are its `b₃`-eliminants. The implication runs one way only (`V(R)={0} ⟹ V(tail)={0}`, not conversely), so 17(wwww)'s target is *strictly stronger* than 17(vvvv)'s.
+- The CI length of that square tail is `L_t = 2·binom(3t+1, t−1)` — exactly Sol's measured 90, 572, 3640, 23256 — and the resultant system's Bézout number is `B_t = 2^{t−2}·L_t` (checked t = 3..12). The `b₃`-elimination is pure waste by a factor `2^{t−2}`, which is why Fable measured it as slower than the direct chart.
+
+**Revised Q1 answered NO, with a replacement.** `Res_w` is uncomputable (total degree ~7.4·10⁵ at t=7, ~10⁷ at t=8), wasteful, stronger than needed, and its vanishing criterion is uncited. The uniform target should be *"the tail is an hsop"*, certified by that binomial length — a Krull-dimension statement, usable with Hilbert-driven Gröbner (my first lane, with five mandatory controls since a guided `std` fails silently).
+
+**One flagged GAP closed.** `GAP[MOH p.208 (16,12) CALIBRATION]` closes positive: I read the page image. The chart is there, and it shows the campaign's `b₃, b₄` **are** Moh's h-tower coefficients — the K16 ray at parameter `t` is Moh's p.208 chart with `(3t+1, 2t+1)` in place of `(4,3)`. That makes the terminal cone an approximate-root system (Avenue 6), not a generic one.
+
+**Four places I say the coordinator's framing is wrong**, the sharpest being that `(V0)` is over-strong (false on the one fibre where it's been separated from `(8.1)`) and that K16 should be demoted from flagship — 17(ll) types it "the only *known* cofinal family", so killing it does not finitise the census. I name **MINOR-EMPTY** (no Keller pair carries a principal-minor split) as the theorem to chase, and flag `D3` GAUGE — one coordinate change realising both point-normalisations — as the single obligation that could invalidate every joint-chart verdict at once.
+
+Two notes: the report is 50 KB against a 25–45 KB target — I trimmed twice and stopped rather than cut contract sections. And I corrected one draft claim (a biconditional in §3.1 that holds one way only) before sealing; the correction strengthened the argument rather than weakening it.
+DIVERT path=xmodel/ideation-20260904T0000Z-opus5.md status=CLEAN_SEALED body_bytes=50003 body_sha256=759703cfcea4ab3013a5b4b2cc7211f72c7cf0fad37e596bd18d08259a9640af

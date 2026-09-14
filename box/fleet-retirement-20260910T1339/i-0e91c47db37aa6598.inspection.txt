@@ -1,0 +1,110 @@
+Warning: Permanently added '172.30.0.28' (ED25519) to the list of known hosts.
+INSPECTION_UTC 2026-09-10 13:40:22.178937242 UTC
+ip-172-30-0-28
+i-0e91c47db37aa6598
+244858cc-396a-4193-a876-89c05f7b8293
+      1       0       1 Ss    459936 systemd         /sbin/init
+      2       0       0 S     459936 kthreadd        [kthreadd]
+    382       1     382 S<s   459921 systemd-journal /usr/lib/systemd/systemd-journald
+    437       1     437 SLsl  459921 multipathd      /sbin/multipathd -d -s
+    442       1     442 Ss    459921 systemd-udevd   /usr/lib/systemd/systemd-udevd
+    774       1     774 Ss    459890 systemd-resolve /usr/lib/systemd/systemd-resolved
+    873       1     873 Ss    459882 systemd-network /usr/lib/systemd/systemd-networkd
+    932       1     932 Ss    459878 acpid           /usr/sbin/acpid
+    936       1     936 Ss    459878 cron            /usr/sbin/cron -f -P
+    937       1     937 Ss    459878 dbus-daemon     @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    942       1     942 Ssl   459878 irqbalance      /usr/sbin/irqbalance
+    944       1     944 Ss    459878 networkd-dispat /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    945       1     945 Ssl   459878 polkitd         /usr/lib/polkit-1/polkitd --no-debug
+    947       1     947 Ssl   459878 amazon-ssm-agen /snap/amazon-ssm-agent/13349/amazon-ssm-agent
+    951       1     951 Ss    459878 systemd-logind  /usr/lib/systemd/systemd-logind
+    954       1     954 Ssl   459878 udisksd         /usr/libexec/udisks2/udisksd
+    963       1     963 Ss+   459878 agetty          /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+    989       1     989 Ss+   459878 agetty          /sbin/agetty -o -p -- \u --noclear - linux
+    994       1     994 Ssl   459878 rsyslogd        /usr/sbin/rsyslogd -n -iNONE
+   1017       1    1017 Ssl   459878 unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+   1031       1    1031 Ssl   459878 ModemManager    /usr/sbin/ModemManager
+   1036       1    1036 Ss    459878 systemd         /usr/lib/systemd/systemd --user
+   1044       1    1043 S     459878 chronyd         /usr/sbin/chronyd -F 1
+   1064    1044    1043 S     459878 chronyd         /usr/sbin/chronyd -F 1
+   1088    1036    1036 S     459877 (sd-pam)        (sd-pam)
+   1381       1    1381 Ss    459812 sshd            sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups
+   5798       1    5798 Ssl   457603 fwupd           /usr/libexec/fwupd/fwupd
+  32497    1036   32497 Ss    433986 dbus-daemon     /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+  64271       1   64271 Ssl   343169 snapd           /usr/lib/snapd/snapd
+  76880    1381   76880 Ss         0 sshd            sshd: ubuntu [priv]
+  76940   76880   76880 S          0 sshd            sshd: ubuntu@notty
+  76941   76940   76941 Ss         0 bash            /bin/bash -s
+  76946   76941   76941 R          0 ps              ps -e -o pid=,ppid=,pgid=,stat=,etimes=,comm=,args=
+  76947   76941   76941 S          0 awk             awk $2 != 2
+/ /dev/nvme0n1p1 ext4
+/dev devtmpfs devtmpfs
+/proc proc proc
+/sys sysfs sysfs
+/sys/kernel/security securityfs securityfs
+/dev/shm tmpfs tmpfs
+/dev/pts devpts devpts
+/run tmpfs tmpfs
+/run/lock tmpfs tmpfs
+/sys/fs/cgroup cgroup2 cgroup2
+/sys/fs/pstore none pstore
+/sys/firmware/efi/efivars efivarfs efivarfs
+/sys/fs/bpf bpf bpf
+/proc/sys/fs/binfmt_misc systemd-1 autofs
+/sys/kernel/debug debugfs debugfs
+/dev/mqueue mqueue mqueue
+/sys/kernel/tracing tracefs tracefs
+/dev/hugepages hugetlbfs hugetlbfs
+/sys/fs/fuse/connections fusectl fusectl
+/sys/kernel/config configfs configfs
+/snap/amazon-ssm-agent/13349 /dev/loop0 squashfs
+/snap/snapd/27710 /dev/loop2 squashfs
+/snap/core22/2437 /dev/loop1 squashfs
+/boot /dev/nvme0n1p16 ext4
+/boot/efi /dev/nvme0n1p15 vfat
+/proc/sys/fs/binfmt_misc binfmt_misc binfmt_misc
+/run/user/1000 tmpfs tmpfs
+/snap/snapd/27738 /dev/loop3 squashfs
+NAME         TYPE  SIZE MODEL                      MOUNTPOINTS
+loop0        loop 28.4M                            /snap/amazon-ssm-agent/13349
+loop1        loop   74M                            /snap/core22/2437
+loop2        loop 50.1M                            /snap/snapd/27710
+loop3        loop 50.3M                            /snap/snapd/27738
+nvme0n1      disk  100G Amazon Elastic Block Store 
+├─nvme0n1p1  part   99G                            /
+├─nvme0n1p14 part    4M                            
+├─nvme0n1p15 part  106M                            /boot/efi
+└─nvme0n1p16 part  913M                            /boot
+Filesystem      Type      Size  Used Avail Use% Mounted on
+/dev/root       ext4       96G   74G   23G  77% /
+tmpfs           tmpfs      31G     0   31G   0% /dev/shm
+tmpfs           tmpfs      13G  1.2M   13G   1% /run
+tmpfs           tmpfs     5.0M     0  5.0M   0% /run/lock
+efivarfs        efivarfs  128K  3.3K  120K   3% /sys/firmware/efi/efivars
+/dev/nvme0n1p16 ext4      881M  202M  617M  25% /boot
+/dev/nvme0n1p15 vfat      105M  6.2M   99M   6% /boot/efi
+tmpfs           tmpfs     6.2G   12K  6.2G   1% /run/user/1000
+NEXT                            LEFT LAST                              PASSED UNIT                           ACTIVATES
+Thu 2026-09-10 13:50:00 UTC     9min Thu 2026-09-10 13:40:21 UTC    381ms ago sysstat-collect.timer          sysstat-collect.service
+Thu 2026-09-10 14:46:18 UTC  1h 5min Thu 2026-09-10 13:33:13 UTC     7min ago fwupd-refresh.timer            fwupd-refresh.service
+Thu 2026-09-10 16:40:03 UTC 2h 59min Wed 2026-09-09 21:51:37 UTC      15h ago apt-daily.timer                apt-daily.service
+Thu 2026-09-10 20:30:39 UTC       6h Thu 2026-09-10 04:11:37 UTC       9h ago motd-news.timer                motd-news.service
+Fri 2026-09-11 00:00:00 UTC      10h Thu 2026-09-10 00:00:23 UTC      13h ago dpkg-db-backup.timer           dpkg-db-backup.service
+Fri 2026-09-11 00:00:00 UTC      10h Thu 2026-09-10 00:00:23 UTC      13h ago logrotate.timer                logrotate.service
+Fri 2026-09-11 00:07:00 UTC      10h Thu 2026-09-10 00:07:23 UTC      13h ago sysstat-summary.timer          sysstat-summary.service
+Fri 2026-09-11 05:05:58 UTC      15h Thu 2026-09-10 10:12:13 UTC 3h 28min ago man-db.timer                   man-db.service
+Fri 2026-09-11 06:01:23 UTC      16h Thu 2026-09-10 06:01:23 UTC       7h ago update-notifier-download.timer update-notifier-download.service
+Fri 2026-09-11 06:02:54 UTC      16h Thu 2026-09-10 06:08:37 UTC       7h ago apt-daily-upgrade.timer        apt-daily-upgrade.service
+Fri 2026-09-11 06:11:23 UTC      16h Thu 2026-09-10 06:11:23 UTC       7h ago systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service
+Sun 2026-09-13 03:10:21 UTC   2 days Sun 2026-09-06 03:11:23 UTC   4 days ago e2scrub_all.timer              e2scrub_all.service
+Mon 2026-09-14 00:22:50 UTC   3 days Mon 2026-09-07 00:51:23 UTC   3 days ago fstrim.timer                   fstrim.service
+Mon 2026-09-14 09:06:59 UTC   3 days Tue 2026-09-08 12:47:23 UTC   2 days ago update-notifier-motd.timer     update-notifier-motd.service
+-                                  - -                                      - apport-autoreport.timer        apport-autoreport.service
+-                                  - -                                      - snapd.snap-repair.timer        snapd.snap-repair.service
+-                                  - -                                      - ua-timer.timer                 ua-timer.service
+
+17 timers listed.
+NEXT                        LEFT LAST                        PASSED UNIT                           ACTIVATES
+Fri 2026-09-11 06:06:23 UTC  16h Thu 2026-09-10 06:06:23 UTC 7h ago launchpadlib-cache-clean.timer launchpadlib-cache-clean.service
+
+1 timers listed.

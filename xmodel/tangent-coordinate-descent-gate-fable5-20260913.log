@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The review is complete and sealed at 09:11 UTC, ahead of the 09:18 reserve.
+
+**Verdict: CONFIRMED.** The clean-stratum theorem in Input1 holds under its stated hypotheses and the named classical imports. No bridge is refuted and none is a gap. All four input pins matched before whole reading and were unchanged after my own whole readback.
+
+**What I checked independently**
+
+- **Normalization.** The identity 4B+2wB'=A+wA' from q'=wp'/2 gives deg q=d+1 and B(0)=p1/4. Both w and v are integral, the field degree divides d and d+1, and the differential drops rank on nonzero hyperbolas, so Sigma is non-normal.
+- **Boundary attachment.** The source open over C≠0 is exactly the monic W-cover minus gamma=0. After a generic cut the deleted locus is a curve inside a pure-dimension-2 surface, so it sits in the closure of the source, and x=C/gamma escapes. No base-change rule is needed.
+- **Curve normalizations.** Input3's lift argument is sound: the normalization of a Jelonek component is A1, not a punctured rational curve, so smooth generic fibre components of f are A1.
+- **Lemmas.** The disconnected-fibre and hyperbola lemmas both hold and use that s is a coordinate, not just a submersion. They force f=P0(C) with k≥1.
+- **C=0 sheets and Euler count.** Exactly three preimages over Psi≠0 (one from x=0, two from gamma=0). W'=gamma gives m=2+ord p' at deleted roots, the per-line integral is N, and chi_c(S_c)=N−Nk−(N−3)l≤0 against 1.
+- **Family.** The m≥5 family verifies by hand: q' relation, both full divisibilities, p'(0)=4/(m−1), coprime A and B, J=−2, N=m+1.
+
+**Recorded, not gaps.** Four wording imprecisions in Input1 and Input3, all harmless and listed in the report.
+
+**Not closed.** The p'(0)=0 and gcd(A,B)≠1 strata, any other ambient construction, and JC2 itself.
+
+The report is at `xmodel/tangent-coordinate-descent-gate-fable5-20260913.md`, 1,657 words, with a single standalone BODY-END marker as the last line and no charge_basis line. Custody is left to the external lane script.
+DIVERT path=xmodel/tangent-coordinate-descent-gate-fable5-20260913.md status=CLEAN body_bytes=11818 body_sha256=00723c6add21f0c227d2a41b9b49ccc896c1db215eb291df83b763ec59ad250b

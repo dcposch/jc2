@@ -1,0 +1,393 @@
+{
+  "coefficient_field": "Q",
+  "control_sha256": "d457cc88cfbb7f8453eae01bb74c55ce9f04c0bf4e96bd6f6efff2ac4a0c5b11",
+  "elapsed_seconds": 116.36682737800038,
+  "expected_all_coefficient_hash": "5168662d600eded84f8f0ca01e1678357b0778e11f48230fb0c435848ef68821",
+  "full_checked_cutoffs": [
+    0,
+    149,
+    150,
+    157,
+    162,
+    163
+  ],
+  "full_constant_coefficient": "-3*a**4 - 9*a**3*b - 15*a**3 - 9*a**2*b**2 - 50*a**2*b - a**2*c + 24*a**2 - 3*a*b**3 - 53*a*b**2 - a*b*c + 36*a*b - 5*a*c + 54*a - 18*b**3 + 12*b**2 - 6*b*c + 58*b + 13*c + 26",
+  "full_degrees": [
+    99,
+    66
+  ],
+  "generator_reordering_checks": [
+    1,
+    7,
+    14,
+    28
+  ],
+  "helper_sha256": "61195ea97cba0859db3f8080a069872b2261ca9e1209f84e2b7031985af80126",
+  "invalid_inputs_rejected": [
+    "nonrational_coefficient",
+    "negative_parameter_exponent",
+    "fractional_parameter_exponent",
+    "reserved_w_collision"
+  ],
+  "new_symbol_automatically_retained": true,
+  "oracle": "Direct physical x,y differentiation and explicit monomial normalization; no shared sparse bracket oracle",
+  "source_ring_map": "x^i*y^j -> coefficient at (normalization_degree-i-j,j); active generator images preserved in sorted FLINT QQ context",
+  "status": "PASS",
+  "toy_all_cutoffs": [
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 0,
+      "cutoff": 0,
+      "w_slots": 0
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 30,
+      "cutoff": 1,
+      "w_slots": 19
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 38,
+      "cutoff": 2,
+      "w_slots": 20
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 84,
+      "cutoff": 3,
+      "w_slots": 21
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 129,
+      "cutoff": 4,
+      "w_slots": 21
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 234,
+      "cutoff": 5,
+      "w_slots": 24
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 297,
+      "cutoff": 6,
+      "w_slots": 23
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 424,
+      "cutoff": 7,
+      "w_slots": 22
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 512,
+      "cutoff": 8,
+      "w_slots": 21
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 672,
+      "cutoff": 9,
+      "w_slots": 20
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 740,
+      "cutoff": 10,
+      "w_slots": 19
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 886,
+      "cutoff": 11,
+      "w_slots": 18
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 946,
+      "cutoff": 12,
+      "w_slots": 17
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 1062,
+      "cutoff": 13,
+      "w_slots": 16
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 1089,
+      "cutoff": 14,
+      "w_slots": 15
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 1181,
+      "cutoff": 15,
+      "w_slots": 14
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 1162,
+      "cutoff": 16,
+      "w_slots": 13
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 1207,
+      "cutoff": 17,
+      "w_slots": 12
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 1102,
+      "cutoff": 18,
+      "w_slots": 11
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 1043,
+      "cutoff": 19,
+      "w_slots": 10
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 886,
+      "cutoff": 20,
+      "w_slots": 9
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 782,
+      "cutoff": 21,
+      "w_slots": 8
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 591,
+      "cutoff": 22,
+      "w_slots": 7
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 477,
+      "cutoff": 23,
+      "w_slots": 6
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 314,
+      "cutoff": 24,
+      "w_slots": 5
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 218,
+      "cutoff": 25,
+      "w_slots": 4
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 125,
+      "cutoff": 26,
+      "w_slots": 3
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 69,
+      "cutoff": 27,
+      "w_slots": 2
+    },
+    {
+      "active_generators": [
+        "w",
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "band_terms": 19,
+      "cutoff": 28,
+      "w_slots": 1
+    }
+  ],
+  "toy_constant_coefficient": "3*a**5*b**5/531589955962 + 9*a**4*b**5*c/15418119782 + 9*a**4*b**4/76078701005177 + 9*a**3*b**5*c**2/447183802 + 45*a**3*b**4*c/4413140285294 + a**3*b**3*c/19442774 + 18*a**3*b**3/21776065110789509 + 3*a**2*b**5*c**3/12970022 + 18*a**2*b**4*c**2/63998881817 + a**2*b**3*c**2/563914 + 63*a**2*b**3*c/1263176538582998 + 2*a**2*b**2*c/2782560079 + 15*a**2*b**2/6232979867480597153 + 9*a*b**4*c**3/3712419374 + 27*a*b**3*c**2/36636898344778 + 3*a*b**2*c**2/161409538 + 27*a*b**2*c/361559992312871966 + 3*a*b*c/1592908623686 + 9*a*b/3568141244137738770202",
+  "toy_degrees": [
+    18,
+    12
+  ],
+  "w_degree_bound_at_every_cutoff_verified": true,
+  "wrong_generator_image_negative_control": true
+}

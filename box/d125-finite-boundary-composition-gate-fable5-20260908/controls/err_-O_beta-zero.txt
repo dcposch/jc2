@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-finite-boundary-composition-gate-fable5-20260908/fable5_composition_controls.py", line 158, in <module>
+    print(json.dumps(main(sys.argv[1] if len(sys.argv)>1 else ''),sort_keys=True,indent=1))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/d125-finite-boundary-composition-gate-fable5-20260908/fable5_composition_controls.py", line 90, in main
+    need(c5+beta0*c3==0,'[p^15]B0=0 slice forces beta0=243 (not 0) at t0=-3')
+  File "/home/ubuntu/jc2/box/d125-finite-boundary-composition-gate-fable5-20260908/fable5_composition_controls.py", line 10, in need
+    if not x: raise ValueError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: [p^15]B0=0 slice forces beta0=243 (not 0) at t0=-3

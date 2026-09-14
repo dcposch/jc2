@@ -1,0 +1,164 @@
+{
+  "schema": "F10-LARGE-DECIMAL-CONTROLS-CUSTODY/v1",
+  "status": "TERMINAL-STATIC-UNREVIEWED",
+  "owner": "/root/model_productivity",
+  "first_action_utc": "2026-09-10T04:52:54.809838289Z",
+  "controlling_stop_utc": "2026-09-10T05:08:54.809838289Z",
+  "reserve_from_utc": "2026-09-10T05:06:54.809838289Z",
+  "sealed_utc": "2026-09-10T05:03:46.481229535Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report_sha256": "4f7c585e1df631ccfcca6986e3f78206ad7b8422aa78a7ac3d2b080ee749cfa1",
+  "expected_transaction_sha256": "e5dbb3421359c623ce015152390132ef9d078492c02c264b8f9a1212bba8c1ce",
+  "transaction_verification": "VERIFIED with expected basis and manifest",
+  "owned_count": 5,
+  "owned": [
+    {
+      "path": "box/f10-large-decimal-controls-astra-20260910/large_decimal_controls.py",
+      "sha256": "be4de57fc04bb9c1d32a17c9f208329723ee1d8ad69c34f527180cb59183c5bb",
+      "bytes": 17092
+    },
+    {
+      "path": "box/f10-large-decimal-controls-astra-20260910/EXECUTION-INTERFACE.md",
+      "sha256": "5708729024e15043a91ec8e6ddddb9047bb8d7034e5d807cc821d7b6ba0c16e9",
+      "bytes": 5618
+    },
+    {
+      "path": "box/f10-large-decimal-controls-astra-20260910/input-pins.json",
+      "sha256": "e295ceef47c7991426d0a79195fba25772d2bcfa8348055bd8aa72c1ae2f796f",
+      "bytes": 4208
+    },
+    {
+      "path": "xmodel/f10-large-decimal-controls-astra-20260910.md",
+      "sha256": "4f7c585e1df631ccfcca6986e3f78206ad7b8422aa78a7ac3d2b080ee749cfa1",
+      "bytes": 10131
+    },
+    {
+      "path": "xmodel/f10-large-decimal-controls-astra-20260910.md.artifact.json",
+      "sha256": "e5dbb3421359c623ce015152390132ef9d078492c02c264b8f9a1212bba8c1ce",
+      "bytes": 693
+    }
+  ],
+  "current_local_input_count": 12,
+  "card_named_count": 11,
+  "current_inputs": [
+    {
+      "id": "card",
+      "path": "box/f10-large-decimal-controls-prep-20260910/ROOT-CARD.md",
+      "sha256": "04c1fed91835a54ae80ef84da519987a8ead672f567a2a8da04b8d5966457a05",
+      "lines": 99,
+      "bytes": 7290,
+      "read_scope": "WHOLE fresh after matching current pin",
+      "current_match": true
+    },
+    {
+      "id": "report",
+      "path": "xmodel/f10-integer-wire-repair-astra-20260910.md",
+      "sha256": "78bafa2a4016c7b62e831048615ae779424fa71903a0a742558f076e8dca1cdf",
+      "lines": 275,
+      "bytes": 15701,
+      "read_scope": "Prior same-byte WHOLE read reused after matching current pin; own previous repair task",
+      "current_match": true
+    },
+    {
+      "id": "repair-gate",
+      "path": "xmodel/f10-integer-wire-repair-gate-fable5-20260910.md",
+      "sha256": "576ec8baa98a8390ed01b2aaa4e8634b35f001d22fd8bccf36865b425d559124",
+      "lines": 62,
+      "bytes": 12404,
+      "read_scope": "WHOLE fresh after matching current pin",
+      "current_match": true
+    },
+    {
+      "id": "spec",
+      "path": "box/f10-integer-wire-repair-astra-20260910/PROSPECTIVE-CONTROL.md",
+      "sha256": "acfc88ea4e1ae02c8297d99230d693c818dfaa2e0221741ccae150aff08a5320",
+      "lines": 65,
+      "bytes": 3859,
+      "read_scope": "WHOLE fresh after matching current pin",
+      "current_match": true
+    },
+    {
+      "id": "oldsolver",
+      "path": "box/f10-integer-wire-repair-astra-20260910/oldsolver.py",
+      "sha256": "961e22e64ec768da6d78a886aa987f7ebaf0325b21b87c68e04db88e91778589",
+      "lines": 334,
+      "bytes": 16099,
+      "read_scope": "Prior same-byte WHOLE read reused after matching current pin; own previous repair task",
+      "current_match": true
+    },
+    {
+      "id": "solver",
+      "path": "box/f10-integer-wire-repair-astra-20260910/solver.py",
+      "sha256": "4e9bb9d28c60360b39629d059b42778744c7d43c5677b52fb8351e3405e4d3f4",
+      "lines": 338,
+      "bytes": 16321,
+      "read_scope": "Prior same-byte WHOLE read reused after matching current pin; own previous repair task",
+      "current_match": true
+    },
+    {
+      "id": "checker",
+      "path": "box/f10-integer-wire-repair-astra-20260910/checker.py",
+      "sha256": "bb4263e1149eb1ba03d2dc47f5db339df6b05829280730ccf6c8420e0bc07045",
+      "lines": 179,
+      "bytes": 9220,
+      "read_scope": "Prior same-byte WHOLE read reused after matching current pin; own previous repair task",
+      "current_match": true
+    },
+    {
+      "id": "generic",
+      "path": "box/f10-integer-wire-repair-astra-20260910/generic_controls.py",
+      "sha256": "259990f7f226e0509a18f8a230f9bbc66b1241c2ab09f511fa4134110f6a1717",
+      "lines": 425,
+      "bytes": 18679,
+      "read_scope": "Prior same-byte WHOLE read reused after matching current pin; own previous repair task",
+      "current_match": true
+    },
+    {
+      "id": "algebra",
+      "path": "box/f10-r1-exact-linear-execution-20260909/remote/algebra.py",
+      "sha256": "7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc",
+      "lines": 170,
+      "bytes": 6325,
+      "read_scope": "WHOLE fresh after matching current pin",
+      "current_match": true
+    },
+    {
+      "id": "evidence",
+      "path": "box/f10-r1-exact-linear-execution-20260909/remote/evidence.py",
+      "sha256": "cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767",
+      "lines": 111,
+      "bytes": 6149,
+      "read_scope": "Prior same-byte WHOLE read reused after matching current pin; own previous repair task",
+      "current_match": true
+    },
+    {
+      "id": "execution-gate",
+      "path": "box/f10-r1-exact-linear-execution-20260909/remote/execution_gate.py",
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6",
+      "lines": 72,
+      "bytes": 3933,
+      "read_scope": "WHOLE fresh after matching current pin",
+      "current_match": true
+    },
+    {
+      "id": "plan",
+      "path": "box/f10-r1-quotient-generic-caller-astra-20260910/generic.plan.json",
+      "sha256": "ce193898e3114f1db018b86e6ebe0b2ea4fdac5f65296dee76245f94da0b964a",
+      "lines": 91,
+      "bytes": 1756,
+      "read_scope": "Prior same-byte WHOLE read reused after matching current pin; own previous repair task",
+      "current_match": true
+    }
+  ],
+  "own_report_source_interface_whole_read": true,
+  "body_marker_count": 1,
+  "raised_canonical_open_count": 0,
+  "collision_check": "Owned report and box absent first action; report absent immediately before marker",
+  "mathematical_subprocesses": 0,
+  "syntax_ast_compile_import_tests": 0,
+  "fixture_or_coefficient_artifacts": 0,
+  "worker_network_authority_actions": 0,
+  "runtime_outcomes": "UNEXECUTED; no PASS/candidate/source acceptance claimed",
+  "all_task_writers": "IDLE following this final custody publication",
+  "custody_self_excluded": true
+}

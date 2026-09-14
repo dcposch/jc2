@@ -1,0 +1,23 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll verify the charged-input hashes first, then locate `raw_minor_support` and the leading-row emission in the band engines.Building the receipt manifest with awk and checking SHA-256 against the frozen lane copies.Hashes match. Next I’ll read the gate, rekill notes, and the band engines to find the leading-row defect.Hashes are good. I’ll grep `raw_minor_support` and the row emitters next so the leading-target patch is exact.The gate already names the emitters. I’ll read those functions and the frozen g108 leading-target comments next.The support lists tags; the defect is in the emitters. I’ll open those next and pin the exact leading-row construction.The corrected deep driver already subtracts targets. I’ll copy that exact form and apply it in the three engines.I have the defect and the targets. Next I’ll add a shared helper, patch the emitters, and start the controls.Engines are patched. I’ll add the control drivers and start the three Q checks in parallel.Identity checks passed. Starting the three exact-Q controls in parallel.The diff only listed three files — I’ll check whether the rekill and corrected-face patches are tracked, then wait on the controls.Control C is stuck cubing the full K2 series. I’ll stop it and evaluate the leading row from the witness `a_27` instead.All three controls passed. I’ll write the sealed report, then commit the patches.The leading pole row is now `coefficient − target`. That is the only verdict this changes: the spurious `UNIT` the gate named at stage 92/60 (D=108) and 77/50 ((99,66) δ=2).
+
+**What was wrong.** `raw_minor_support` listed the top pole tag (`F`/`G` local 96/64 at D=108, 81/54 at (99,66) δ=2, 189/126 at δ=5/2). The emitters wrote it as a homogeneous `= 0` row. On the whole chart that is `1 = 0` — at D=108, `[π^0](π²−c)^{12} = c^{12}`.
+
+**The fix.** Shared helper `box/band-leading-fix-20260905/leading_pole.py`, copied into each engine as `pole_coeff`. Faces from gate §6 / rekill §7:
+
+| chart | `F` | `G` |
+|---|---|---|
+| D=108 | `(π²−c)^{12}` at 96 | `(π²−c)^{8}` at 64 |
+| (99,66) δ=2 | `(ζ²(ζ+3ρ))^{9}` at 81 | `(ζ²(ζ+3ρ))^{6}` at 54 |
+| (99,66) δ=5/2 | `(π(π²−c))^{9}` at 189 | `(π(π²−c))^{6}` at 126 |
+
+Every strictly-lower pole row is unchanged (`pole_coeff == table.get` for `n` below the lead).
+
+**Controls (exact `Q`).**
+
+- **(a)** Old-radius D=108 stage-0 still `[1]`: frozen cut-43 groebner `[1]`; joint `wz=6` stage 0 is `dim=-1`, `UNIT=True`. Pipeline can still kill.
+- **(b)** D=108 Δ-witness (`129` rows, `102` pivots, residual empty, `a_{32}=(π²−1)^{4}`). Old leading `k=0` is the constant `1`. After the patch, all `24+16` tagged leading rows vanish by direct substitution.
+- **(c)** (99,66) δ=2 (`76` pivots, residual empty, `a_{27}=ζ^{6}(ζ+3)^{3}`). Old `F` `k=26` is `27`, old `G` `k=17` is `18`. After the patch, all tagged leading rows vanish.
+
+Commit `64c4cb0e`. Report: `xmodel/band-leading-row-fix-grok46-20260905.md` (sealed, 8050 body bytes).
+DIVERT path=xmodel/band-leading-row-fix-grok46-20260905.md status=CLEAN_SEALED body_bytes=8050 body_sha256=5c0957608daa68370c66a864097b9927b3a2c1d5203f22729322766fcd6cf495

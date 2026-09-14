@@ -1,0 +1,180 @@
+#!/usr/bin/env python3
+"""Run one argv-only command under the CAPRUN/v1 lifecycle contract.
+
+The runner is intentionally opt-in.  It does not invoke a shell, inspect
+process names, or migrate any existing supervisor.  Child stdin is DEVNULL
+unless ``--stdin-file`` names a regular file.  Output and telemetry paths are
+regular files opened without following symlinks.  A run is complete only
+when its exact process group has no live member; the registered leader is
+then reaped once for the authoritative child status.  This prevents a leader
+that exits before one of its same-group descendants from orphaning work.
+
+CPU enforcement is an inherited per-process RLIMIT_CPU.  A CPU-cap outcome is
+reported only when the registered child is observed to die from SIGXCPU.
+RSS enforcement samples the aggregate resident set of non-zombie processes in
+the exact registered PGID; the sampling interval permits bounded overshoot and
+is recorded in telemetry.  No address-space limit is mislabeled as an RSS cap.
+"""
+
+from __future__ import annotations
+
+import argparse
+import datetime as _datetime
+import hashlib
+import json
+import os
+from pathlib import Path
+import signal
+import stat
+import subprocess
+import sys
+import time
+from dataclasses import dataclass
+from typing import Any, BinaryIO, Dict, List, Optional, Sequence, Tuple
+
+try:
+    import resource
+except ImportError:  # pragma: no cover - CAPRUN/v1 is POSIX-only.
+    resource = None  # type: ignore
+
+
+SCHEMA = "CAPRUN/v1"
+RUNNER_FAILURE_EXIT = 70
+WALL_TIMEOUT_EXIT = 124
+RESOURCE_CAP_EXIT = 125
+DEFAULT_RSS_SAMPLE_SECONDS = 0.05
+DEFAULT_LIFECYCLE_SAMPLE_SECONDS = 1.0
+POST_KILL_OBSERVE_SECONDS = 1.0
+SIGXCPU = getattr(signal, "SIGXCPU", None)
+
+
+class RunnerError(RuntimeError):
+    """A fail-closed runner or identity error."""
+
+
+class ForwardedSignal(BaseException):
+    """Raised in the main thread when the runner receives a handled signal."""
+
+    def __init__(self, signum: int) -> None:
+        super().__init__(signum)
+        self.signum = signum
+
+
+@dataclass
+class SignalLatch:
+    """Defer a handled signal until Popen has been assigned safely."""
+
+    pending: Optional[int] = None
+    armed: bool = False
+
+    def handler(self, signum, _frame) -> None:
+        if self.armed:
+            raise ForwardedSignal(signum)
+        if self.pending is None:
+            self.pending = signum
+
+    def arm(self) -> None:
+        self.armed = True
+        if self.pending is not None:
+            raise ForwardedSignal(self.pending)
+
+
+@dataclass(frozen=True)
+class ProcessIdentity:
+    pid: int
+    pgid: int
+    start_identity: str
+    source: str
+
+
+@dataclass(frozen=True)
+class GroupSample:
+    live_pids: Tuple[int, ...]
+    zombie_pids: Tuple[int, ...]
+    rss_bytes: int
+
+
+@dataclass(frozen=True)
+class CleanupResult:
+    term_sent: bool
+    kill_sent: bool
+    final_sample: GroupSample
+    leader_reaped: bool
+
+    @property
+    def complete(self) -> bool:
+        return self.leader_reaped and not self.final_sample.live_pids
+
+
+@dataclass
+class OpenedFile:
+    path: Path
+    stream: BinaryIO
+    device: int
+    inode: int
+
+
+def utc_now() -> str:
+    return _datetime.datetime.now(_datetime.timezone.utc).isoformat().replace(
+        "+00:00", "Z"
+    )
+
+
+def positive_float(text: str) -> float:
+    try:
+        value = float(text)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError("must be a positive number") from exc
+    if not value > 0.0 or value == float("inf"):
+        raise argparse.ArgumentTypeError("must be a finite positive number")
+    return value
+
+
+def positive_int(text: str) -> int:
+    try:
+        value = int(text)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError("must be a positive integer") from exc
+    if value <= 0:
+        raise argparse.ArgumentTypeError("must be a positive integer")
+    return value
+
+
+def parser() -> argparse.ArgumentParser:
+    result = argparse.ArgumentParser(description=__doc__)
+    result.add_argument("--wall-seconds", required=True, type=positive_float)
+    result.add_argument("--cpu-seconds", type=positive_int)
+    result.add_argument("--rss-bytes", type=positive_int)
+    result.add_argument(
+        "--rss-sample-seconds",
+        type=positive_float,
+        default=DEFAULT_RSS_SAMPLE_SECONDS,
+    )
+    result.add_argument(
+        "--lifecycle-sample-seconds",
+        type=positive_float,
+        default=DEFAULT_LIFECYCLE_SAMPLE_SECONDS,
+        help="exact-PGID completion sampling interval when RSS is disabled",
+    )
+    result.add_argument(
+        "--term-grace-seconds", type=positive_float, default=1.0
+    )
+    result.add_argument("--stdin-file")
+    result.add_argument("--stdout-file", required=True)
+    result.add_argument("--stderr-file", required=True)
+    result.add_argument("--telemetry-file", required=True)
+    result.add_argument("--cwd", default=os.getcwd())
+    result.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="replace existing regular output/telemetry files",
+    )
+    result.add_argument(
+        "command",
+        nargs=argparse.REMAINDER,
+        help="argv after --; no shell parsing is performed",
+    )
+    return result
+
+
+def absolute_path(text: str) -> Path:

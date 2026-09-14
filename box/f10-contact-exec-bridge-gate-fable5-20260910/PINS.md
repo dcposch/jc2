@@ -1,0 +1,17 @@
+# Input pins verified 05:16 UTC (sha256sum of /tmp/jc2-lane.GrPfhf/inputs; all 12 matched charged list)
+ab2ab26ca223569095faf9f7dbf2376a95db106e137be2d768b2ee2d1528ce4d  PINS.md
+4c64d016e6e439b2a91b62186582a52b7d535302a67227c99a117acec7c47472  ROOT-CARD.md
+e62418e44e86696136536ba0ce5ec7013f4f8b103399ee46d149ca8a56229670  ROOT-execution-interface.md
+2e0dda86514a0cdb2aa0a86acf3f32de72645f6566f80a77596b1394a3c9fca7  check_certificate.py
+cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6  execution_gate.py
+de2a31c1db6585dc2c642a8dba75ad5037caa3e71f65ed4e80c1316c4f3a9948  f10-contact-eliminant-code-gate-fable5-20260910.md
+1f283cc66d3c5e2206de03d2152b26fe0fb1b3f80ae5bf1ef4aed5af3134a1c5  f10-contact-exec-bridge-astra-20260910.md
+edfd3ee2fa02580005bde23b7df8a9f86a2abb39463737adbf89ef32ad2d8a59  mutate_certificate.py
+f99430f04d97df9b6c0a690ccbc1274305d8ad707dee6a1b23907fcf71581446  payload_exec.py
+02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7  probe.py
+3c4f18e6a7d0d63b0f3dfa539eca41712ba39f3204907b0e35badaced0b67d04  produce.sing
+4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2  run_capped.py
+
+# Own report
+9d7cda0b6a181b52608a013fac31585541743b086da7d3e2dab773f1db2f831c  /home/ubuntu/jc2/xmodel/f10-contact-exec-bridge-gate-fable5-20260910.md
+general.doc URL NOT fetched; no network.

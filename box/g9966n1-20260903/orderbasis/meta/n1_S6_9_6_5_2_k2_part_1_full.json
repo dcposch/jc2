@@ -1,0 +1,238 @@
+{
+  "builder": "box/g9966n1-20260903/orderbasis/builders/n1_S6_9_6_5_2_k2_part_1_full_builder.sing",
+  "manifest_ok": true,
+  "meta": {
+    "alpha_dims": [
+      4,
+      6,
+      6
+    ],
+    "alpha_inventories": {
+      "1": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "2": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "3": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "beta_dims": [
+      5
+    ],
+    "beta_inventories": {
+      "2": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "chart": "full_D1_monomial_overapprox",
+    "closed_form": {
+      "B": "-5/9",
+      "K": 3,
+      "Pi": 5,
+      "R": 3,
+      "d3prime": 1,
+      "delta1": "2/9",
+      "delta2": "-1",
+      "e": 3,
+      "lambda_P": "-5/3",
+      "lambda_Q": "-10/9",
+      "q": 2,
+      "u": 1
+    },
+    "equations": 54,
+    "gauge_audit": {
+      "alpha_dims_pre_translation": [
+        4,
+        6,
+        7
+      ],
+      "alpha_shear_dim": 4,
+      "alpha_shear_scalar": false,
+      "beta_dims_pre_translation": [
+        6
+      ],
+      "gauge_notes": [
+        "shear alpha_1 omitted in full monomial basis"
+      ],
+      "gauges_to_apply": [
+        "Q -> Q - const(beta_2)",
+        "P -> P - const(alpha_3)"
+      ],
+      "shear_index": 1,
+      "shifted_beta_embeds": false
+    },
+    "gauge_notes": [
+      "shear alpha_1 omitted in full monomial basis"
+    ],
+    "gauges": [
+      "Q -> Q - const(beta_2)",
+      "P -> P - const(alpha_3)"
+    ],
+    "h_inventory": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "h_inventory_count": 3,
+    "h_parameters": [
+      "h_0_2",
+      "h_0_1",
+      "h_0_0"
+    ],
+    "levels_cap": 23,
+    "native_gate": {
+      "equations": 54,
+      "level0_deg_x_before_minus_c": 5,
+      "max_nf_deg_x_after_minus_c": 5,
+      "target_xk_level0_nonzero": 1
+    },
+    "omega": "1",
+    "params_without_T": 25,
+    "partition": [
+      1
+    ],
+    "partition_label": "1",
+    "row": {
+      "M2": 5,
+      "V2": 2,
+      "k": 2,
+      "key": "n1_S6_9_6_5_2_k2",
+      "label": "N1 S6 descent from (99,66; M2=55,V3=10,V2=2,u_s=1)",
+      "m": 6,
+      "n": 9
+    },
+    "row_file": {
+      "bytes": 19007,
+      "path": "box/g9966n1-20260903/orderbasis/rows/n1_S6_9_6_5_2_k2_part_1_full_rows.tsv",
+      "sha256": "463c7d036cfd9f9a0a68d223e869d3b580c632a82cfb3183c581a81cea2b7550"
+    },
+    "saturation_factor": "c",
+    "top_face_factored": "y^2*(y-x)^1"
+  },
+  "rows_path": "box/g9966n1-20260903/orderbasis/rows/n1_S6_9_6_5_2_k2_part_1_full_rows.tsv",
+  "sat": "c",
+  "systems": {
+    "Q_std": "box/g9966n1-20260903/orderbasis/systems/n1_S6_9_6_5_2_k2_part_1_full_Q_std.sing",
+    "p32003_std": "box/g9966n1-20260903/orderbasis/systems/n1_S6_9_6_5_2_k2_part_1_full_p32003_std.sing",
+    "p32009_std": "box/g9966n1-20260903/orderbasis/systems/n1_S6_9_6_5_2_k2_part_1_full_p32009_std.sing",
+    "p32027_std": "box/g9966n1-20260903/orderbasis/systems/n1_S6_9_6_5_2_k2_part_1_full_p32027_std.sing"
+  },
+  "variables": [
+    "h_0_2",
+    "h_0_1",
+    "h_0_0",
+    "A1_0_2",
+    "A1_1_2",
+    "A1_0_1",
+    "A1_0_0",
+    "A2_0_2",
+    "A2_1_2",
+    "A2_0_1",
+    "A2_1_1",
+    "A2_0_0",
+    "A2_1_0",
+    "A3_0_2",
+    "A3_1_2",
+    "A3_2_2",
+    "A3_0_1",
+    "A3_1_1",
+    "A3_1_0",
+    "B2_0_2",
+    "B2_1_2",
+    "B2_0_1",
+    "B2_1_1",
+    "B2_1_0",
+    "c"
+  ]
+}

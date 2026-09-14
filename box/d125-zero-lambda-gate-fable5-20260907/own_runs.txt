@@ -1,0 +1,12 @@
+== gate: STATUS PASS controls=7 | 0.13 wall 0.12 user 12380 KB exit=0 
+== gate_mutate-sign:  | Fail: closed form mismatch at g^0p^1: {(0, 1, 0): -1} vs {(0, 1, 0): 1} 0.09 wall 0.08 user 30872 KB exit=1 
+== gate_mutate-map:  | Fail: closed form mismatch at g^0p^1: {(0, 1, 0): -1, (0, 0, 0): 1} vs {(0, 1, 0): -1} 0.09 wall 0.08 user 31176 KB exit=1 
+== gate_mutate-det:  | Fail: closed form mismatch at g^1p^0: {(0, 0, 0): 1} vs {} 0.10 wall 0.09 user 31028 KB exit=1 
+== gate_mutate-drop:  | Fail: toy must be rejected as nonordinary 0.21 wall 0.20 user 31252 KB exit=1 
+== gate_O: STATUS PASS controls=7 | 0.17 wall 0.16 user 14420 KB exit=0 
+== gate_O_mutate-sign:  | Fail: closed form mismatch at g^0p^1: {(0, 1, 0): -1} vs {(0, 1, 0): 1} 0.52 wall 0.50 user 38544 KB exit=1 
+== gate_O_mutate-map:  | Fail: closed form mismatch at g^0p^1: {(0, 1, 0): -1, (0, 0, 0): 1} vs {(0, 1, 0): -1} 0.52 wall 0.51 user 38432 KB exit=1 
+== gate_O_mutate-det:  | Fail: closed form mismatch at g^1p^0: {(0, 0, 0): 1} vs {} 0.53 wall 0.52 user 38720 KB exit=1 
+== gate_O_mutate-drop:  | Fail: toy must be rejected as nonordinary 0.63 wall 0.61 user 38800 KB exit=1 
+51644061231de9dca784df0fa9a3735f12292d569f5a9740be0024a47bc1c12e  /home/ubuntu/jc2/box/d125-zero-lambda-gate-fable5-20260907/gate_controls.py
+f0c9acb295d0ff8c1c2dcf8818c705174a04eb3e6d0386c93f2d7675c3c5f425  /home/ubuntu/jc2/box/d125-zero-lambda-gate-fable5-20260907/producer_check.py

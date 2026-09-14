@@ -1,0 +1,49 @@
+{
+  "active_generators": 369,
+  "address_space_limit_kib_per_job": 16777216,
+  "field": "Q",
+  "full_generators": 654,
+  "memory_measurement_scope": "Two actual ps snapshots; not maximumRSS. GNUtime wrapper terminated with timeout before flushing final maximum.",
+  "ps_observations": [
+    {
+      "active_rss_kib": 2325720,
+      "elapsed_seconds": 49,
+      "full_rss_kib": 5265844
+    },
+    {
+      "active_rss_kib": 3329708,
+      "elapsed_seconds": 107,
+      "full_rss_kib": 7599056
+    }
+  ],
+  "purpose": "performance profile only, no chart outcome",
+  "runs": [
+    {
+      "complete": false,
+      "elapsed_seconds": 180.026,
+      "errors": [],
+      "last_marker": "BEGIN_DIVIDE_vv2",
+      "log_sha256": "69669bdda7cc8e50b57710b4fd8f32cfed13fcd8b040edfc09191a9b221e730e",
+      "mode": "full",
+      "returncode": -15,
+      "script_sha256": "2a810b71ccc91b4fa9bce314c657b04803d24b045e3d70746e197b381189ca7a",
+      "time": null,
+      "timed_out": true
+    },
+    {
+      "complete": false,
+      "elapsed_seconds": 180.024,
+      "errors": [],
+      "last_marker": "BEGIN_DIVIDE_vv2",
+      "log_sha256": "957fe9162aeed74b109f2ca2f37c726040499133e34bf25f632e921614e36e48",
+      "mode": "active",
+      "returncode": -15,
+      "script_sha256": "82dec1a9b92f935971bac3db11a0f39fa4d492e43481194b7e85e269e717f205",
+      "time": null,
+      "timed_out": true
+    }
+  ],
+  "source_script_sha256": "f681792f52839b35c7a6b3e56cb23e3ddf3b5e5482f4ae35dce46e26b653fd46",
+  "stage": 0,
+  "timeout_seconds": 180
+}

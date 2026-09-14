@@ -1,0 +1,248 @@
+[
+  {
+    "sha": "82dc0b747df3347a19602163951b1bb89b783c63",
+    "node_id": "C_kwDOTqSOWdoAKDgyZGMwYjc0N2RmMzM0N2ExOTYwMjE2Mzk1MWIxYmI4OWI3ODNjNjM",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-09T16:48:33Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-09T16:48:33Z"
+      },
+      "message": "Keep the ring across a descent, and name DSC-4 when it is wrong\n\nWork package 8 of milestone 0.7, the first of the corrections the audit\nof 0.7.0rc1 asked for. Both findings reproduce exactly as reported.\n\nThe target was rebuilt with the expression constructor, which re-infers\na ring. A source over QQ gave a target over ZZ; over a finite field that\nchanges the characteristic and with it the arithmetic of every step\nafter this one, and step.ring was not equal to target.ring although the\nproperty promises the target's context. It is built with clone_ring and\nreindex now, which is the idiom peeling.undo already uses to drop a\ncoordinate. reindex is sound exactly when the deleted generator has\nexponent zero in every surviving term, which is the second half of\nDSC-3, so the check that stood there for another reason is what licenses\nthe call.\n\nThe ring property called PolyRing.clone, which goes through SymPy's\ncache and handed the same mutable object back on every access, so a\ncaller could reach a step's generators through it. That is precisely\nwhat clone_ring exists to prevent, and its docstring records the failure\n-- a shared domain that converted T*u to zero. The property uses it now.\nThe mistake is worth naming rather than quietly fixing: this milestone\nwrote a roadmap paragraph about that cache and then called past it.\n\nDSC-4 asked for automorphisms over the source's ring and nothing\nchecked. A wrong ring surfaced from inside\nElementaryAutomorphism.apply_to as a bare ValueError naming neither the\nobligation nor the side it came from. _verify_changes runs first in\nverify and is also called from the derived parts, so a caller who\nreaches for the conjugate or the target first gets the same named\nexception rather than the bare one.\n\nDSC-2 gains the domain and the order, and DSC-4 the sentence that being\nover the source's ring is checked. Neither is a new obligation; both say\nwhat the family already meant and what the code did not do.\n\nSix tests: the domain and order over QQ, GF(5) and a grlex ring, the\nring being a fresh object on every access, the two sides of the DSC-4\nmessage, and the derived parts refusing a foreign automorphism.\n\nNo figure moves. This package changes what a step produces over rings\nother than the default and what it says when it refuses, and nothing\nabout which chains exist. The carrier selector the audit reported\nseparately is WP 10 and does move figures, which is why it is not here.",
+      "tree": {
+        "sha": "94d906a6aba95e71a1337a74e9c5b84f30c7b172",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/94d906a6aba95e71a1337a74e9c5b84f30c7b172"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/82dc0b747df3347a19602163951b1bb89b783c63",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqhjhEACgkQpYdnzilV\ndCUWVRAAtuVawK/7Z6QhAimqDst95YTgM4FIuAKbJdpGHEPOrhx3xDufGQabYONZ\nHYYPBwJmTfZf/Xmcaq2r2TiaZRIKPIyqrX3XZb1/ufd3ZWbQHPPhkt5OGD2HjF0W\n9JWC8mliyxU39E4Ep7+TvDJl1KaqeKaGADSce/xJOkjp6ve9iAxkhiShcBiOIzoQ\nRoe/DZtJyYTdqHgrQaONYCtNhZUcgxGOKi7QtDcDUGa8dmz67mLMKkFpKYaL0e3T\nGo/7zwILto3H0DEo3PalvsaaL5tBW68VFKobotyIRjGz/33Pp5BYtdHUPTmT3PA9\nf4z0LUaj0SiP9PqAc1nDDCzwQC3jKbmz2H3v6CUoyQh5vKSn7o6fByAuuX8Kbxxa\ndEpytbrlWpuVwAd1JSoQ9gemzTPfjBWttNUpu1g1LA34PqVF1BL8PV1hOWce9QlC\nCHenG64Cgqz0ZsJ59GSQF3tczJoAE9E8M49xdhsEzZntW0DtzcvRKcjwM+TiSqmu\ndJyewG/gBovmxktDNC9O/2AMZgOBsYYoWFraRrHKD7r0ZQxyj2NfgkDZaQTIvqqt\nieOc7qh6Wn6TXjo88ggBAVDLewkvEYMlXkYRtqZEbSNSnhgRyLZH5Xk11Fb+RO/D\nHN2AhcuucgpDiL81BxvwMzmAJYSClDWbP4MvQdVXEZKq99dW+Xc=\n=/HTU\n-----END PGP SIGNATURE-----",
+        "payload": "tree 94d906a6aba95e71a1337a74e9c5b84f30c7b172\nparent c21404d479046c93e9a9a701df520feae65397a3\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1788972513 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1788972513 +0200\n\nKeep the ring across a descent, and name DSC-4 when it is wrong\n\nWork package 8 of milestone 0.7, the first of the corrections the audit\nof 0.7.0rc1 asked for. Both findings reproduce exactly as reported.\n\nThe target was rebuilt with the expression constructor, which re-infers\na ring. A source over QQ gave a target over ZZ; over a finite field that\nchanges the characteristic and with it the arithmetic of every step\nafter this one, and step.ring was not equal to target.ring although the\nproperty promises the target's context. It is built with clone_ring and\nreindex now, which is the idiom peeling.undo already uses to drop a\ncoordinate. reindex is sound exactly when the deleted generator has\nexponent zero in every surviving term, which is the second half of\nDSC-3, so the check that stood there for another reason is what licenses\nthe call.\n\nThe ring property called PolyRing.clone, which goes through SymPy's\ncache and handed the same mutable object back on every access, so a\ncaller could reach a step's generators through it. That is precisely\nwhat clone_ring exists to prevent, and its docstring records the failure\n-- a shared domain that converted T*u to zero. The property uses it now.\nThe mistake is worth naming rather than quietly fixing: this milestone\nwrote a roadmap paragraph about that cache and then called past it.\n\nDSC-4 asked for automorphisms over the source's ring and nothing\nchecked. A wrong ring surfaced from inside\nElementaryAutomorphism.apply_to as a bare ValueError naming neither the\nobligation nor the side it came from. _verify_changes runs first in\nverify and is also called from the derived parts, so a caller who\nreaches for the conjugate or the target first gets the same named\nexception rather than the bare one.\n\nDSC-2 gains the domain and the order, and DSC-4 the sentence that being\nover the source's ring is checked. Neither is a new obligation; both say\nwhat the family already meant and what the code did not do.\n\nSix tests: the domain and order over QQ, GF(5) and a grlex ring, the\nring being a fresh object on every access, the two sides of the DSC-4\nmessage, and the derived parts refusing a foreign automorphism.\n\nNo figure moves. This package changes what a step produces over rings\nother than the default and what it says when it refuses, and nothing\nabout which chains exist. The carrier selector the audit reported\nseparately is WP 10 and does move figures, which is why it is not here.\n",
+        "verified_at": "2026-09-09T16:49:30Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/82dc0b747df3347a19602163951b1bb89b783c63",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/82dc0b747df3347a19602163951b1bb89b783c63",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/82dc0b747df3347a19602163951b1bb89b783c63/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c21404d479046c93e9a9a701df520feae65397a3",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/c21404d479046c93e9a9a701df520feae65397a3",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/c21404d479046c93e9a9a701df520feae65397a3"
+      }
+    ]
+  },
+  {
+    "sha": "c21404d479046c93e9a9a701df520feae65397a3",
+    "node_id": "C_kwDOTqSOWdoAKGMyMTQwNGQ0NzkwNDZjOTNlOWE5YTcwMWRmNTIwZmVhZTY1Mzk3YTM",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-09T12:22:21Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-09T12:22:21Z"
+      },
+      "message": "Prepare 0.7.0rc1\n\nThe version moves to 0.7.0rc1 in the four places that have to agree:\npyproject.toml, the project status of the README, the topmost heading of\nthe changelog and CITATION.cff.\n\nThe ten [0.7] markers are gone from docs/contracts.md, which moving the\ndeclared version forces: the marker test compares against the release\npart of the version, so 0.7.0rc1 makes every [0.7] on the page fail.\nHOM-11, HOM-12, UNT-12 and DSC-1 to DSC-7 are now plain obligations. The\npage gains the milestone paragraph, in the shape the 0.6 one has, and\nnames the two of the ten a reviewer should weigh differently: DSC-3, the\nonly obligation whose failure says nothing about the map it was given,\nand HOM-12, the only one whose hypothesis is a property the source is\nnot required to have.\n\nThe DOI does not move and the README no longer says it does. It said the\nnumber was the DOI of this version, which was true while the version was\n0.6.0. A release candidate is not deposited and has no DOI of its own,\nso both files say plainly that 10.5281/zenodo.22299353 belongs to 0.6.0\nand stands beside a version that has moved past it. The test that holds\nthe two copies together compares the two DOIs and neither against a\nversion, so it stayed green through the false sentence; that is worth\nknowing rather than fixing here.\n\nThe README's milestone section is rewritten for 0.7 and its \"next\" for\n0.8. Three claims elsewhere in it had gone stale with the descent: that\ncompression is the one step that lowers a dimension, that there are\nseven step types, and the feature list having no entry for the descent\nat all. The same sentence on the contract page said the family is not\nimplemented, which stopped being true with WP 5.1.\n\nThe changelog entry is one consolidated entry, as 0.6 has, and states\nthe two negatives the milestone ends on because they are the result and\nnot a shortfall: eleven variables are not reachable under the present\noffer from any map of the published chain where the question has been\nsettled, and widening the offer does not make the question askable.\n\ndocs/roadmap.md gains \"Where the milestone stands\", which lists the\nseven packages and what each answered, including WP 3 as withdrawn.\n\nGates run here: ruff format --check, ruff check, mypy src,\nmypy --strict scripts, pytest --cov (1880 passed, 16 deselected, 100%),\nmake reconstruct (16 of 16), make measure (every figure agrees). Left to\nthe maintainer and named as such: pytest -m \"\", scripts/mutation_probe.py\nand make release with its lock-check, coverage, build-test, sdist-test,\ndist-check and test-minimum. sdist-test is the one to watch: an audit of\n0.6.0rc1 found a test failing there that had been failing since 0.5, and\nthis milestone added two test modules.",
+      "tree": {
+        "sha": "f69cffe9389ba5648765d9db05aaa82163b37239",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/f69cffe9389ba5648765d9db05aaa82163b37239"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/c21404d479046c93e9a9a701df520feae65397a3",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqhT4cACgkQpYdnzilV\ndCWnYBAAnF42JTIa3/HUxeZmesDztHn2Vp5BpY3jC8My+VLfj+VVzBBVd1rcho84\nkZpQsNHAvNc8qb4wSyDfu0eNJycnT6danvM0bLs39Jqu7DYaJ+62at51HXfQ30X/\n+8corKMJtnge48hQ4NMPVZj9/qThnNs8Sya1kyfy7JNo45d0XvdVPjoxrd3KQDU/\nNVzODCXQCE/37AKvaQto4WsykPDcR6BaBqGPz8KmqryhUYY6eT9Ydccx6E/zH4zT\nMvPqcKz/sg5ZD78mJHcA2GBiGsSLzzkympR38A+k0HZbv6U4trxRCK1OzaKhvoeQ\ntuWCQ/XCj3xeiLNdRp3Ww2Ouifyr0lY84ZUUIcaG8D4MOA/pM8yOSagcrofc6NUa\nkfWJ9Yir8POuPl2VfAwe7U34Gi3xdSdBL34HSHkaifsLNF+dOufSkDrIpe+fJPqG\nI9deS2J9t/sX/Gksafio6NF83frJVCVqrkn13GMYbtK0srmjJuBS19Pi/NuGHoRh\nObM8+vcBUeM0A11hqdUSt4Cb7F2xngO+/n8PthNzX2Uw/XqaQkAEduXln0UKuCrW\nK+TM5wBui6aNWUcE47jTz9njKW37aE607ITQVCEQpinojxjncc33lSnAFhKXvDPG\nxo62DptmaMULZNumsARzbJ6KQIrCp1GCo3NTxdzxqXqMCEGE/O8=\n=pyoE\n-----END PGP SIGNATURE-----",
+        "payload": "tree f69cffe9389ba5648765d9db05aaa82163b37239\nparent 0bfc4019269de316141f99a20c6d91528f4f2715\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1788956541 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1788956541 +0200\n\nPrepare 0.7.0rc1\n\nThe version moves to 0.7.0rc1 in the four places that have to agree:\npyproject.toml, the project status of the README, the topmost heading of\nthe changelog and CITATION.cff.\n\nThe ten [0.7] markers are gone from docs/contracts.md, which moving the\ndeclared version forces: the marker test compares against the release\npart of the version, so 0.7.0rc1 makes every [0.7] on the page fail.\nHOM-11, HOM-12, UNT-12 and DSC-1 to DSC-7 are now plain obligations. The\npage gains the milestone paragraph, in the shape the 0.6 one has, and\nnames the two of the ten a reviewer should weigh differently: DSC-3, the\nonly obligation whose failure says nothing about the map it was given,\nand HOM-12, the only one whose hypothesis is a property the source is\nnot required to have.\n\nThe DOI does not move and the README no longer says it does. It said the\nnumber was the DOI of this version, which was true while the version was\n0.6.0. A release candidate is not deposited and has no DOI of its own,\nso both files say plainly that 10.5281/zenodo.22299353 belongs to 0.6.0\nand stands beside a version that has moved past it. The test that holds\nthe two copies together compares the two DOIs and neither against a\nversion, so it stayed green through the false sentence; that is worth\nknowing rather than fixing here.\n\nThe README's milestone section is rewritten for 0.7 and its \"next\" for\n0.8. Three claims elsewhere in it had gone stale with the descent: that\ncompression is the one step that lowers a dimension, that there are\nseven step types, and the feature list having no entry for the descent\nat all. The same sentence on the contract page said the family is not\nimplemented, which stopped being true with WP 5.1.\n\nThe changelog entry is one consolidated entry, as 0.6 has, and states\nthe two negatives the milestone ends on because they are the result and\nnot a shortfall: eleven variables are not reachable under the present\noffer from any map of the published chain where the question has been\nsettled, and widening the offer does not make the question askable.\n\ndocs/roadmap.md gains \"Where the milestone stands\", which lists the\nseven packages and what each answered, including WP 3 as withdrawn.\n\nGates run here: ruff format --check, ruff check, mypy src,\nmypy --strict scripts, pytest --cov (1880 passed, 16 deselected, 100%),\nmake reconstruct (16 of 16), make measure (every figure agrees). Left to\nthe maintainer and named as such: pytest -m \"\", scripts/mutation_probe.py\nand make release with its lock-check, coverage, build-test, sdist-test,\ndist-check and test-minimum. sdist-test is the one to watch: an audit of\n0.6.0rc1 found a test failing there that had been failing since 0.5, and\nthis milestone added two test modules.\n",
+        "verified_at": "2026-09-09T12:22:39Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/c21404d479046c93e9a9a701df520feae65397a3",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/c21404d479046c93e9a9a701df520feae65397a3",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/c21404d479046c93e9a9a701df520feae65397a3/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0bfc4019269de316141f99a20c6d91528f4f2715",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/0bfc4019269de316141f99a20c6d91528f4f2715",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/0bfc4019269de316141f99a20c6d91528f4f2715"
+      }
+    ]
+  },
+  {
+    "sha": "0bfc4019269de316141f99a20c6d91528f4f2715",
+    "node_id": "C_kwDOTqSOWdoAKDBiZmM0MDE5MjY5ZGUzMTYxNDFmOTlhMjBjNmQ5MTUyOGY0ZjI3MTU",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-09T08:55:01Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-09T08:55:01Z"
+      },
+      "message": "Write out what rewriting to degree three means, and take back a claim\n\nDocumentation only. The previous commit said that no BCWStep buys a\ncoordinate carrying a sum, and concluded that the published\neleven-variable map is not the output of a chain. Both are wrong.\n\nA Fresh slot takes an arbitrary polynomial. That is why UNT-6 exists at\nall, offering a divisor against a sum of cofactors, and a step whose\nbought coordinate carries -x^2 + x z_2 z_3 builds and verifies. The\nclaim was made from the shape of the published components rather than\nfrom the type of a slot, and one call would have settled it.\n\nThe conclusion was wrong too, and the worked example the maintainer\nasked for is what shows it. Alpoege's third component is\n2x - 3x^2 z_2 - x^3 z_3. One BCWStep with both slots fresh, buying\ncoordinates for -x^2 and for x z_3, turns it into\n-h k - h x z_3 + k x^2 - 3 x^2 z_2 + 2 x with h - x^2 and k + x z_3\nbeside it: one monomial of degree four becomes three of degree at most\nthree, which on the section h = x^2, k = -x z_3 sum back to -x^3 z_3.\nThat result is term for term the third component of\nexamples.spacerat11, and its ninth and tenth are the two bought ones. So\nthat component of the published map is one step of Proposition (3.1),\nand the six steps peel found are a chain and not an artefact.\n\nWhat survives is narrower and is what the package now says. The two\npresentations differ in whether the abbreviations are chosen one at a\ntime, each against the residue the last one left, or all at once against\nthe original map. The published construction does the second and uses\neight. A search that does the first has to guess, at every map, which\nabbreviation the ones after it will want. Whether the second formulation\nis worth building is what WP 7 should measure before it widens anything.\n\ndocs/errata.md records it. The near miss is worth keeping: the claim was\nabout a shape the library does support.",
+      "tree": {
+        "sha": "e6af560f72c128877ffa9ef7f7bd03c4d94544a2",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/e6af560f72c128877ffa9ef7f7bd03c4d94544a2"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/0bfc4019269de316141f99a20c6d91528f4f2715",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqhHvEACgkQpYdnzilV\ndCUwjhAAiEWXr9w6mkT7fg3TDGlPsuM4C6c/3k7XHvxt7QvT8OItSP7CLQUDiB2U\nMibEeR7QCJ6yMaIZZiY+40VPttQmNBhS5gyrvbhXXleIBbACR4kKLAm9vSCIQqzO\na2or8G7EugBuBRITfbNBCZO4idDitm+g1+4ztf9tnCVGrd4Gculn8SWyUqtTogTI\nfJUae70N9di18tJEKnq4c692fQf+RsnrK+WCjKt2yONLE7AMM0l8KlI6w1psT+Yv\nwCVj4N7xA+FPSlqaGRPw62O6vPlvBS9zo+KqS8ETaOeiycppEDvGaS1JKF4xTpE5\nHluxmghEstszoGE0aS0dqb1dmF1lPS25NWfwD3sWXURC+fHr6CACQ7WClQgqvc6T\nAmYCpLgxidacBtvBUxmhE99n0BS76hTavU1mF3WnnCSmGIapE8oW2jDs1nZRaac1\ne32+iEybM9+uqvoEA/JGpKWXohvVIM6g283pQ0xlh73PxR6d0/AI5601OWbC+yEK\nYYf9Hy4o49bDEvfdbXYeAPAlZyQMvVxWmMiIDdOCg1Wfy2vuEY3J0q+eDJw9RK3V\nnegWnKowtrVA+KYLudw6zHAOx6gBxjImtMb8PD6SoL48z0y5Eqv+t6DazO+JdYVZ\n80ZvK4EcEaqBE1siYHhFAhx7P8mFdPeoULefK7I6b/qveByW5RA=\n=BmEN\n-----END PGP SIGNATURE-----",
+        "payload": "tree e6af560f72c128877ffa9ef7f7bd03c4d94544a2\nparent dfe3b0e33dd2580614992af87855a4ab56c62a05\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1788944101 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1788944101 +0200\n\nWrite out what rewriting to degree three means, and take back a claim\n\nDocumentation only. The previous commit said that no BCWStep buys a\ncoordinate carrying a sum, and concluded that the published\neleven-variable map is not the output of a chain. Both are wrong.\n\nA Fresh slot takes an arbitrary polynomial. That is why UNT-6 exists at\nall, offering a divisor against a sum of cofactors, and a step whose\nbought coordinate carries -x^2 + x z_2 z_3 builds and verifies. The\nclaim was made from the shape of the published components rather than\nfrom the type of a slot, and one call would have settled it.\n\nThe conclusion was wrong too, and the worked example the maintainer\nasked for is what shows it. Alpoege's third component is\n2x - 3x^2 z_2 - x^3 z_3. One BCWStep with both slots fresh, buying\ncoordinates for -x^2 and for x z_3, turns it into\n-h k - h x z_3 + k x^2 - 3 x^2 z_2 + 2 x with h - x^2 and k + x z_3\nbeside it: one monomial of degree four becomes three of degree at most\nthree, which on the section h = x^2, k = -x z_3 sum back to -x^3 z_3.\nThat result is term for term the third component of\nexamples.spacerat11, and its ninth and tenth are the two bought ones. So\nthat component of the published map is one step of Proposition (3.1),\nand the six steps peel found are a chain and not an artefact.\n\nWhat survives is narrower and is what the package now says. The two\npresentations differ in whether the abbreviations are chosen one at a\ntime, each against the residue the last one left, or all at once against\nthe original map. The published construction does the second and uses\neight. A search that does the first has to guess, at every map, which\nabbreviation the ones after it will want. Whether the second formulation\nis worth building is what WP 7 should measure before it widens anything.\n\ndocs/errata.md records it. The near miss is worth keeping: the claim was\nabout a shape the library does support.\n",
+        "verified_at": "2026-09-09T08:55:27Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/0bfc4019269de316141f99a20c6d91528f4f2715",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/0bfc4019269de316141f99a20c6d91528f4f2715",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/0bfc4019269de316141f99a20c6d91528f4f2715/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "dfe3b0e33dd2580614992af87855a4ab56c62a05",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/dfe3b0e33dd2580614992af87855a4ab56c62a05",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/dfe3b0e33dd2580614992af87855a4ab56c62a05"
+      }
+    ]
+  }
+]

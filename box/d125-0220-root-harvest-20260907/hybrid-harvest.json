@@ -1,0 +1,128 @@
+{
+  "pins": {
+    "box/d125-parity-hybrid-cost-design-20260907/check-results.json": "a6a0d9b6710eb4153d0467e2a8a408a4358890012df211b28dc8e71e8579d374",
+    "box/d125-parity-hybrid-cost-design-20260907/check.py": "f8416529e6f19ad471ab54ec774b9dcb8b6657cf2116d4ceac58c8f5be535ba6",
+    "xmodel/d125-b-a-hermite-composition-astra-20260907.md": "769ffb37443260edbe68585c2a7e9d775123a674b987f9108c23ca84dbb8fe9c",
+    "xmodel/d125-lift-hermite-gate-fable5-20260906.md": "7e2594d53150bf4346f4e4cc6e7f6ff05a021b045b640128de763cc653a8a8ca",
+    "xmodel/d125-lift-hermite-pivots-astra-20260906.md": "b6a81fc0c925d63f13f72d4b8ee1203adcecb8a6f4dc349f8c2a62d5805cf126",
+    "xmodel/d125-parity-construction-attempt-astra-20260907.md": "d4f0ccc486fcc2f69f1901d4050cc1756de7f39ba2ccd28ed96cc39bb6dca284",
+    "xmodel/d125-parity-hybrid-cost-design-astra-20260907.md": "b33d6944976ac934535bcc516bae82c738cd2e957665bfffb2325ec63170aa5a",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-parity-unit-normalization-gate-fable5-20260907.md": "53f78754d8e567e145db4038f6f5b39f2f9a56c462178f20b1e94a2f6f0e7e10"
+  },
+  "runs": [
+    {
+      "flags": [],
+      "result": {
+        "A_pivots": 13,
+        "B_Hermite_pivots": 34,
+        "J_monomial_universe": 1362,
+        "det": "-1",
+        "extra_inverse_guard": 1,
+        "inverse": [
+          [
+            "78",
+            "12",
+            "1"
+          ],
+          [
+            "168",
+            "25",
+            "2"
+          ],
+          [
+            "91",
+            "13",
+            "1"
+          ]
+        ],
+        "max_A_map_terms": 22,
+        "max_B_map_terms": 62,
+        "max_J_degree": 3,
+        "optimized": false,
+        "original_positions": 803,
+        "production_metadata_or_constructor": false,
+        "shifted_B15_matrix": [
+          [
+            "1",
+            "-1",
+            "1"
+          ],
+          [
+            "-14",
+            "13",
+            "-12"
+          ],
+          [
+            "91",
+            "-78",
+            "66"
+          ]
+        ],
+        "source_rows_evaluated": 0,
+        "status": "TINY_DESK_CHECKS_PASS",
+        "variables": 81
+      },
+      "stdout_sha256": "ab521eca394f618142880522eefb2db28b7667f75e2290c3e4a36e0c8c23437a"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "result": {
+        "A_pivots": 13,
+        "B_Hermite_pivots": 34,
+        "J_monomial_universe": 1362,
+        "det": "-1",
+        "extra_inverse_guard": 1,
+        "inverse": [
+          [
+            "78",
+            "12",
+            "1"
+          ],
+          [
+            "168",
+            "25",
+            "2"
+          ],
+          [
+            "91",
+            "13",
+            "1"
+          ]
+        ],
+        "max_A_map_terms": 22,
+        "max_B_map_terms": 62,
+        "max_J_degree": 3,
+        "optimized": true,
+        "original_positions": 803,
+        "production_metadata_or_constructor": false,
+        "shifted_B15_matrix": [
+          [
+            "1",
+            "-1",
+            "1"
+          ],
+          [
+            "-14",
+            "13",
+            "-12"
+          ],
+          [
+            "91",
+            "-78",
+            "66"
+          ]
+        ],
+        "source_rows_evaluated": 0,
+        "status": "TINY_DESK_CHECKS_PASS",
+        "variables": 81
+      },
+      "stdout_sha256": "b4ecefe439381fccce6bd8e04cbe64405caee01f741dbea4e4af8911fb92f395"
+    }
+  ],
+  "scope": "tiny matrices and monomial spaces; no source rows",
+  "status": "PASS",
+  "wall_seconds": 0.1741775709670037
+}

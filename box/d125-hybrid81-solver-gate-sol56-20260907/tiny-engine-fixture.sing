@@ -1,0 +1,39 @@
+ring R=0,(x,y,k,z),dp;
+ideal I=
+// R/0
+0,
+// R/1
+(1/2)*x,
+// R/2
+0,
+// R/3
+(1/2)*x,
+// R/4
+1+-1*x,
+// R/5
+0,
+// UNIT/kz
+-1+1*k*z;
+option(redSB); short=0;
+int ci;
+print("JC2CERT 1 d00df83bafddcd3436dad44034bdb1680d306f6d67f8bfa83d4b32de19961bbf 2e0d0a769afbc8cfd8392d535b68209270db35b5e003698082ebdb1ead3c4558");
+print("I_SIZE "+string(size(I)));
+print("I_BEGIN "+string(ncols(matrix(I))));
+for(ci=1;ci<=ncols(matrix(I));ci++){print("I "+string(ci)+" "+string(I[ci]));}
+print("I_END");
+ideal G=slimgb(I);
+print("G_BEGIN "+string(ncols(matrix(G))));
+for(ci=1;ci<=ncols(matrix(G));ci++){print("G "+string(ci)+" "+string(G[ci]));}
+print("G_END");
+int hasunit=0;
+for(ci=1;ci<=ncols(matrix(G));ci++){if(G[ci]!=0 && deg(G[ci])==0){hasunit=1;}}
+if(hasunit){
+matrix T=lift(I,ideal(1));
+matrix CHECK=matrix(I)*T;
+print("T_BEGIN "+string(nrows(T)));
+for(ci=1;ci<=nrows(T);ci++){print("T "+string(ci)+" "+string(T[ci,1]));}
+print("T_END");
+if(nrows(CHECK)==1 && ncols(CHECK)==1 && ncols(T)==1){print("CHECK "+string(CHECK[1,1]));}
+print("END UNIT");
+}else{print("END NONUNIT");}
+quit;

@@ -1,0 +1,58 @@
+MainPID=0
+ControlPID=0
+Result=exit-code
+ExecMainStartTimestamp=Fri 2026-09-11 16:08:04 UTC
+ExecMainExitTimestamp=Fri 2026-09-11 16:10:05 UTC
+ExecMainStatus=2
+ExecStart={ path=/usr/bin/env ; argv[]=/usr/bin/env -i PATH=/usr/bin:/bin LANG=C LC_ALL=C TZ=UTC /usr/bin/python3.12 -I -S -B /opt/jc2-closedchild-preflight9-20260911c/admin/holder.py ; ignore_errors=no ; start_time=[Fri 2026-09-11 16:08:04 UTC] ; stop_time=[Fri 2026-09-11 16:10:05 UTC] ; pid=32315 ; code=exited ; status=2 }
+ControlGroup=
+MemoryPeak=4915200
+CPUUsageNSec=172041000
+Id=jc2-closedchild-preflight9-20260911c.service
+Triggers=
+ActiveState=failed
+SubState=failed
+
+TimersCalendar={ OnCalendar=2026-09-11 16:20:00 UTC ; next_elapse=Fri 2026-09-11 16:20:00 UTC }
+Result=success
+Id=jc2-closedchild-preflight9-20260911c-term.timer
+Triggers=jc2-closedchild-preflight9-20260911c-term.service
+ActiveState=active
+SubState=waiting
+
+MainPID=0
+ControlPID=0
+Result=success
+ExecMainStartTimestamp=
+ExecMainExitTimestamp=
+ExecMainStatus=0
+ExecStart={ path=/usr/bin/systemctl ; argv[]=/usr/bin/systemctl kill --kill-whom=all --signal=TERM jc2-closedchild-preflight9-20260911c.service ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }
+ControlGroup=
+MemoryPeak=[not set]
+CPUUsageNSec=[not set]
+Id=jc2-closedchild-preflight9-20260911c-term.service
+Triggers=
+ActiveState=inactive
+SubState=dead
+
+TimersCalendar={ OnCalendar=2026-09-11 16:20:05 UTC ; next_elapse=Fri 2026-09-11 16:20:05 UTC }
+Result=success
+Id=jc2-closedchild-preflight9-20260911c-kill.timer
+Triggers=jc2-closedchild-preflight9-20260911c-kill.service
+ActiveState=active
+SubState=waiting
+
+MainPID=0
+ControlPID=0
+Result=success
+ExecMainStartTimestamp=
+ExecMainExitTimestamp=
+ExecMainStatus=0
+ExecStart={ path=/usr/bin/systemctl ; argv[]=/usr/bin/systemctl kill --kill-whom=all --signal=KILL jc2-closedchild-preflight9-20260911c.service ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }
+ControlGroup=
+MemoryPeak=[not set]
+CPUUsageNSec=[not set]
+Id=jc2-closedchild-preflight9-20260911c-kill.service
+Triggers=
+ActiveState=inactive
+SubState=dead

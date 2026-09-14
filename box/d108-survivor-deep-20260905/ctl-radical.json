@@ -1,0 +1,21 @@
+{
+  "control": "rad(I_sat_T8) == <u,v>",
+  "generators": [
+    "K2c_3_26**2 + 16*K2c_3_26*jet2 + 64*jet2**2",
+    "-2*K2c_3_26*K2c_4_25 + 2*K2c_3_26*K2c_4_26 + 40*K2c_3_26*jet1**2 - 16*K2c_4_25*jet2 + 16*K2c_4_26*jet2 + 320*jet1**2*jet2",
+    "-120*Hc_5_4*K2c_3_26 - 960*Hc_5_4*jet2 - 52*K2c_3_26**2*jet1 - 2*K2c_3_26*K2c_5_25 + 2*K2c_3_26*K2c_5_26 - 512*K2c_3_26*jet1*jet2 - 14*K2c_3_26 + K2c_4_25**2 - 2*K2c_4_25*K2c_4_26 - 40*K2c_4_25*jet1**2 + K2c_4_26**2 + 40*K2c_4_26*jet1**2 - 16*K2c_5_25*jet2 + 16*K2c_5_26*jet2 + 400*jet1**4 - 768*jet1*jet2**2 - 112*jet2"
+  ],
+  "u": "K2c_3_26+8*jet2",
+  "v": "K2c_4_25-K2c_4_26-20*jet1^2",
+  "I_reduces_to_0_mod_uv": true,
+  "rad_I_contained_in_uv": true,
+  "uv_contained_in_rad_I": true,
+  "RADICAL_EQUALS_UV": true,
+  "dim_I": 6,
+  "dim_uv": 6,
+  "nvars": 8,
+  "I_not_unit": true,
+  "uv_not_unit": true,
+  "uv_strictly_larger_than_I": true,
+  "raw": "BEGIN_ICONT\n0\nEND_ICONT\nBEGIN_RADEQ\n0\n0\nEND_RADEQ\nBEGIN_DIMS\n6\n6\n8\nEND_DIMS\nBEGIN_NOTUNIT\n1\n1\nEND_NOTUNIT\nBEGIN_PROPER\n2\nEND_PROPER\n"
+}

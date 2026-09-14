@@ -1,0 +1,40 @@
+// CONJECTURE 1, dual reading (universal-series Prop. 4.2):
+// free jets on the P-side, L recovered.  Is l_{N+1} == 0 mod T_2 = -u^2/4 ?
+// Measured as ord_u(l_{N+1}).  b = 1, u = 4*eta + 3*l_2 (the k-independent pivot).
+int N = NNN;
+int M = N+1;          // highest l recovered
+int KT = N+3;         // last row used
+ring R = (0,u),(x,B,l(2..M),w2,Q(5..KT)),dp;
+proc xc(poly f,int k){matrix m=coef(f,x);int i;
+  for(i=1;i<=ncols(m);i++){if(deg(m[1,i])==k){return(m[2,i]);}} return(poly(0));}
+poly eta = (u - 3*l(2))/4;
+poly P4  = 2*(eta^2) - 6*B*w2 - 2*eta*l(2) - 3*(l(2)^2)/4;   // row 4 (= Phi_4)
+poly L = -1; int j;
+for(j=2;j<=M;j++){ L = L + l(j)*(x^j); }
+poly P = -1/4 - B*x + eta*(x^2) + w2*(x^3) + P4*(x^4);
+for(j=5;j<=KT;j++){ P = P + Q(j)*(x^j); }
+poly G  = 3*L*(L+1)/2 - B*x;
+poly RF = 3*(L^2)*(L*(L+2)-4*B*x)/16 - eta*(x^2)*(L/2 + B*x);
+poly PS = P*P;
+poly ff = x*diff(PS,x) - 3*PS + G*P - RF;
+print("row4_residual = "+string(xc(ff,4)));
+int k; poly band,piv,val; list lval;
+for(k=5;k<=KT;k++){
+  band = xc(ff,k);
+  piv  = diff(band,l(k-2));
+  print("row"+string(k)+" pivot(l_"+string(k-2)+") = "+string(piv));
+  val  = -subst(band,l(k-2),0)/piv;
+  lval[k-2] = val;
+  ff = subst(ff,l(k-2),val);
+  L  = subst(L, l(k-2),val);
+  P  = subst(P, l(k-2),val);
+  RF = subst(RF,l(k-2),val);
+  G  = subst(G, l(k-2),val);
+}
+// u-order of l_{N+1}: numerator/denominator degrees in the parameter u
+poly f = lval[M];
+print("l_"+string(M)+" nterms = "+string(size(f)));
+// extract u-order: multiply by u^e until every coefficient is u-polynomial, then divide
+print("l_"+string(M)+" = "+string(f));
+print("DONE_DUAL_N"+string(N));
+quit;

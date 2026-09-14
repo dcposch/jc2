@@ -1,0 +1,23 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by mechanically verifying the frozen input hashes against the receipt, then audit each of the 25 finite-pole rows against the removal clauses.Hashes come next from the receipt via awk, then I’ll read the charged census, six-rows report, and pipeline sources.The first awk pairing was off (basename vs sha256 order). I’ll rebuild the receipt manifest correctly and re-run `sha256sum -c`.Hashes are 9/9 OK. Next I’ll pull the 25 finite-pole rows from the census JSON and match them to the roster/`descend_own` removal clauses.Hashes checked out. I’ll extract the 25 finite-pole rows and replay `descend_own` so each removal clause is exact.I’ll replay `descend_own` on the 25 rows and inspect the roster pipeline so the removal clause is the actual code path, not a guess.All 25 share `EMPTY_PROP6.3_FINITE_POLE` with a nonempty tree witness. Next I’ll read Moh’s printed pole/Prop 5.3 lines and check whether unselected packets were carried.I have the uniform clause: all 25 are wiped by `PROP6.3_FINITE_POLE` after a nonempty tree witness. Next I’ll write the report, JSON, and driver.**DATA.** All **25** finite-pole rows were removed by one printed child clause. All **25 STANDS**. None reopen as `OPEN[PREMATURE-CLOSURE]`. None rejoin the residual.
+
+Frozen inputs: receipt `awk` manifest, `sha256sum -c` on `/tmp/jc2-lane.b5mnbI/inputs` → **9/9 OK**.
+
+**Uniform removal (all 25).** `descend_own` finds a nonempty own route (`outer=1`, `full_source_routes=1`, `first_nonzero=2`; `own_v_routes.py:149–153` returns a witness). Then `descend_own.py:142–144,196–209` fires `PROP6.3_FINITE_POLE` on the dropped `n'-1` tail at source `δ_{s-1}=0` and **wipes** `V_vectors`. `route_state=EMPTY_PROP6.3_FINITE_POLE`. The roster keeps only nonempty `V_vectors` / `NONEMPTY` (`build_roster.py:195`, `chart_counts.py:1492`, `roster.jsonl` `provenance.own_route_state`). The 25 are absent.
+
+**Printed line.** Moh Prop. 4.6 p.170 (`T_{s-1}=p^A q`, `deg q=V_s≥3`, `A≥13`) plus Prop. 6.3(1)(2) p.197 (transformed `T_{s-1}` monic in `π` over `k[γ]`) and Prop. 6.4 for `u_s=1`. Code comment: `descend_own.py:196–201`.
+
+**Class (a)** on all 25: own-`V'` contradicted by that child monicity condition. Not (b) (routes exist until the wipe). Not (c) (not a packet-depth closure).
+
+**Prop 5.3 replay.** Every above-average packet in the returned source-tree witness is carried. Unselected parts at `δ_{s-1}=0` are below average. Printed `N>0` is a source-tower Galois count, not a child-polynomiality license.
+
+| verdict | count |
+|---|---:|
+| STANDS | 25 |
+| OPEN[PREMATURE-CLOSURE] | 0 |
+| OPEN[other] | 0 |
+
+Do not promote the 25 as dead pairs, `N>0` as a child license, or any exit price.
+
+Report: `xmodel/finite-pole-25-audit-grok46-20260906.md` (body 6601 B, sealed). JSON/driver: `box/finite-pole-25-20260906/`. Replay: `python3 box/finite-pole-25-20260906/audit.py`.
+DIVERT path=xmodel/finite-pole-25-audit-grok46-20260906.md status=CLEAN_SEALED body_bytes=6601 body_sha256=0714895067a0104e6dcceb1f59648382bd16f651289252f246353d58c33dce33

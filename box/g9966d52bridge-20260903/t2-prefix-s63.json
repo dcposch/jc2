@@ -1,0 +1,56 @@
+{
+  "arithmetic": {
+    "localized_terms": 17381,
+    "products_considered": 63837,
+    "products_retained": 5092
+  },
+  "counting": {
+    "ambient_stage7_plus_38": 907,
+    "c1_slice_upper_bound_before_J_localization": 901,
+    "dimension_upper_bound_before_J_localization": 902,
+    "warning": "A necessary-prefix bound only; localization may empty the locus and cannot increase dimension."
+  },
+  "custody": {
+    "all_match": true,
+    "count": 21
+  },
+  "endpoint": {
+    "joint_all_zero": true,
+    "stage7_free": 869
+  },
+  "pivots": {
+    "all_coefficients_Qstar": true,
+    "ledger": "box/g9966d52bridge-20260903/t2-prefix-s63-pivots.jsonl",
+    "ledger_sha256": "2701193e77b24abb04594fb2ee30a5a892a0f78c038a77de745cad6c61c6ff7a",
+    "localized_variable_excluded": "c",
+    "variables": [
+      "B1c_7_19",
+      "B1c_8_18",
+      "B1c_9_17",
+      "B1c_10_17",
+      "B1c_7_20"
+    ]
+  },
+  "resources": {
+    "max_rss_kib": 440324,
+    "wall_seconds": 882.165
+  },
+  "rows": {
+    "Qstar_pivots": 5,
+    "first": "T2_s56_pi0",
+    "input_count": 5,
+    "input_sha256": "6c9f6da4b4c2f38b66f5799d1fa04985ef24782c257949ea11fe48a64c1a4ab7",
+    "last": "T2_s63_pi1",
+    "residual_count": 0,
+    "residual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "zero_or_dependent": 0
+  },
+  "scope": {
+    "Tschirnhausen_columns_present": false,
+    "cap": 63,
+    "logical_strength": "necessary prefix only",
+    "normalized_expression": "s^396*T2"
+  },
+  "status": "COMPLETE[LOW-PREFIX-QSTAR]",
+  "type": "EXACT-Q LOW T2 PREFIX / QSTAR ONLY"
+}

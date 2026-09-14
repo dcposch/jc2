@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete. Report sealed at `xmodel/own-data-gate-opus5-20260905.md` (body 25,512 B, `PASS`).
+
+## Verdict: CONFIRMED-WITH-FIX
+
+**The 1,355 are (almost all) genuine necessary contradictions.** I wrote two instruments from the printed pages, neither importing `descend_own.py`: they reproduce Astra's admissible first-support sets on **1,420/1,420** rows and the full source routes on **90/90**. So the numbers aren't in dispute — only their licences, and I traced each one to a line I read off a page image.
+
+**The one over-strict step**, found by single-flag ablation: `own_v_routes.py:66,74`'s `if P==Q*z / P==Q*r: continue`. Since `P/Q = d_j/(n−M_j)`, it forbids *any* factor multiplicity equal to `P/Q`. The printed line it implements — Prop 4.6(5) p.170, "`p(π)` is not a power of `q(π)`" — forbids only `p = q^w`, which additionally needs all multiplicities equal and `#distinct(p) = deg q`. It carries exactly **1 row**: `(168,112)`, `M=(−112,140,160,166)`, `V=(3,21,3)`, whose witness `p = ξ²(ξ¹⁰−c₁)³(ξ¹⁰−c₂)¹` satisfies Prop 4.6(5). Corrected: **1,354 empty / 66 singleton (46 at u=1, 20 at u>1)**.
+
+**Controls all pass.** Moh's five p.207 rows and (99,66) come out NONEMPTY with `V'₂ = 3,2,5,3,2,8` matching his printed children. Sharper than asked: exactly **six** singletons have source `n ≤ 100`, and they are precisely those six rows — every other `n ≤ 100` operative row, including all **12 Moh ≤100 residual fibres**, prints empty. That is the direction Moh's own theorem requires, so the 12 are corroboration rather than alarm.
+
+**My instrument's contribution**, stated honestly in the report: the π↔y / γ↔x reduction cannot print `V'` for a hypothetical row (the parent's x-side `V` is a free invariant), but it does supply (i) the child's own Def 5.1(2)+U-NEG as an independent necessary check `descend_own` never runs — **65/65 singletons pass**, and it corroborates **0 of 214** tree rejections; (ii) a shorter, normalization-free derivation of the finite-pole obstruction (three distinct residues make the leading x-coefficient non-monomial, contradicting the printed "monic in π" of Prop 6.3(2)).
+
+Two OPENs raised: the exact form of the resonance predicate (1 row), and the depth of the sibling-extension chain (95 rows — the heaviest unverified composition, and the one to re-audit before any promotion). Notes in `box/own-data-gate-20260905/`; no ledger, `jc2-lean`, or `ideation-*` file touched.
+DIVERT path=xmodel/own-data-gate-opus5-20260905.md status=CLEAN_SEALED body_bytes=25512 body_sha256=f62e51981d48653043a32daba24dcb821dfedac0fef5d5dee02ab3fc1fd1e4ef

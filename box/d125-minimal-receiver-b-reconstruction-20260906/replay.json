@@ -1,0 +1,56 @@
+{
+  "schema": "jc2.small-exact-block-replay/v1",
+  "script": "box/d125-minimal-receiver-b-reconstruction-20260906/check.py",
+  "script_sha256": "5a3cc2853c04b74faa7b256122a445c5435412c905966fd55ebfc2965e8c67d5",
+  "witness_sha256": "9551e7205d6918e5bf913b70b1ea9e5921b8e8eadeb2d9591b610a78cdc24f77",
+  "outcomes": [
+    {
+      "flags": "",
+      "exit": 0,
+      "wall": 0.143863848,
+      "status": "PASS",
+      "equal_witness": true
+    },
+    {
+      "flags": "-O",
+      "exit": 0,
+      "wall": 0.212186099,
+      "status": "PASS",
+      "equal_witness": true
+    },
+    {
+      "flags": "",
+      "mut": "--mutate",
+      "exit": 1,
+      "wall": 0.216581822,
+      "last": "ValueError: injected nonprimitive quintic"
+    },
+    {
+      "flags": "",
+      "mut": "--mutate-kernel",
+      "exit": 1,
+      "wall": 0.218999182,
+      "last": "ValueError: injected false homogeneous kernel"
+    },
+    {
+      "flags": "-O",
+      "mut": "--mutate",
+      "exit": 1,
+      "wall": 0.656633846,
+      "last": "ValueError: injected nonprimitive quintic"
+    },
+    {
+      "flags": "-O",
+      "mut": "--mutate-kernel",
+      "exit": 1,
+      "wall": 0.653887,
+      "last": "ValueError: injected false homogeneous kernel"
+    }
+  ],
+  "caps": {
+    "wall_seconds": 30,
+    "CPU_seconds": 25,
+    "memory_MiB": 512
+  },
+  "scope": "Fixed coefficient-field matrices and tiny gauge controls only; no A-dependent forcing or residual substitution"
+}

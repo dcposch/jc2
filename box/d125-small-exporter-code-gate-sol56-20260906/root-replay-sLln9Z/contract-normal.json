@@ -1,0 +1,119 @@
+{
+  "cas_or_solver_or_aws": false,
+  "checks": [
+    "all eight frozen input pins",
+    "six independent area-lattice and closed-face contracts",
+    "literal A/B then c,z ordering and lambda placement counts",
+    "30 plus 75 complete lift indices",
+    "independent repeated-power tiny lift coefficients",
+    "independent pair-derivative tiny Jacobian coefficients",
+    "common and fixed target/guard semantics",
+    "field, fixed-zero-face, target-sign, and support-bound sensitivity"
+  ],
+  "clients": {
+    "common_3/golden": {
+      "fixed": [
+        17,
+        27
+      ],
+      "free": 291,
+      "raw": [
+        94,
+        241
+      ],
+      "rows_after_lifts": 816,
+      "variables_after_lambdas": 295
+    },
+    "common_3/rational": {
+      "fixed": [
+        17,
+        27
+      ],
+      "free": 291,
+      "raw": [
+        94,
+        241
+      ],
+      "rows_after_lifts": 816,
+      "variables_after_lambdas": 295
+    },
+    "common_4/golden": {
+      "fixed": [
+        17,
+        27
+      ],
+      "free": 367,
+      "raw": [
+        115,
+        296
+      ],
+      "rows_after_lifts": 816,
+      "variables_after_lambdas": 371
+    },
+    "common_4/rational": {
+      "fixed": [
+        17,
+        27
+      ],
+      "free": 367,
+      "raw": [
+        115,
+        296
+      ],
+      "rows_after_lifts": 816,
+      "variables_after_lambdas": 371
+    },
+    "unequal/golden": {
+      "fixed": [
+        12,
+        19
+      ],
+      "free": 267,
+      "raw": [
+        83,
+        215
+      ],
+      "rows_after_lifts": 803,
+      "variables_after_lambdas": 269
+    },
+    "unequal/rational": {
+      "fixed": [
+        12,
+        19
+      ],
+      "free": 267,
+      "raw": [
+        83,
+        215
+      ],
+      "rows_after_lifts": 803,
+      "variables_after_lambdas": 269
+    }
+  },
+  "elapsed_seconds": 0.070039210957475,
+  "fixed_records_checked": 238,
+  "full_degree_lift_or_jacobian_generated": false,
+  "input_hashes": {
+    "FALLACY-v2.md": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+    "baseline.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "d125-minimal-preflight-gate-sol56-20260906.md": "f1fdd20da922454b6a2fa64dc0dea2fd973c488e5652462c6d131edffd1b9d36",
+    "d125-minimal-receiver-gate-fable5-20260906.md": "cd69c23885de119e4bd910992dad5ef695e7b12013168ec1c401546d8aa6ed8d",
+    "d125-small-polynomial-lift-gate-fable5-20260906.md": "4295593a57a65e4d31630aecdef0b54e9d6078935e07cfb5e64acfd83fae4122",
+    "d125-small-source-exporter-prep-astra-20260906.md": "eddaf82a9c793de1b4e5a223fef5d93ba3e214a0c61cf3775f95d023b99fb085",
+    "exporter.py": "9fd003e420f3ee069f1ed1c06a365e5b4500d361bc3951f2f8f17ef733ab3703",
+    "test_exporter.py": "331e97c84f22592a1a28842df7c11e84e4f72355a906c156403eb5eaca490b2b"
+  },
+  "inputs": "/home/ubuntu/jc2/box/d125-small-exporter-code-gate-sol56-20260906/root-replay-sLln9Z/inputs",
+  "limits": {
+    "as_bytes": 536870912,
+    "cpu_seconds": 25,
+    "wall_seconds": 30
+  },
+  "maxrss_KiB": 22580,
+  "metadata_records_checked": 2088,
+  "production_rows_generated": 0,
+  "status": "PASS",
+  "tiny_jacobian_comparisons": 24,
+  "tiny_lift_comparisons": 324,
+  "tiny_records_generated": 30
+}

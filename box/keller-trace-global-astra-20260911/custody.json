@@ -1,0 +1,66 @@
+{
+  "tag": "keller-trace-global-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED_MANUAL_CONDITIONAL_RESULT",
+  "first_action_utc": "2026-09-11 20:02:51 UTC",
+  "publication_reserve_utc": "2026-09-11 20:22:00 UTC",
+  "hard_stop_utc": "2026-09-11 20:25:00 UTC",
+  "clock_reset": false,
+  "publication": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "lease_id": "780b0ea544dde6cdf620bc822ff23202",
+    "opened_utc": "2026-09-11T20:06:15Z",
+    "closed_utc": "2026-09-11T20:15:43Z",
+    "finalized_utc": "2026-09-11T20:15:43Z",
+    "expected_manifest_sha256": "60185542f051500a916b6d0c4cae29c4072ba14059eca6999de66a14537cc93a",
+    "expected_verification": "VERIFIED with exact basis and manifest SHA256; sealed WHOLE readback and all current input/owned pins completed in administrative call ending 2026-09-11 20:15:53 UTC",
+    "body_sha256": "175fbfe028f2217c4c1d1a9882ba17d30c66894213dfdcbe15db914e83bff7ed",
+    "body_bytes": 14025,
+    "file_bytes": 14358
+  },
+  "inputs": [
+    {
+      "path": "box/keller-trace-global-astra-20260911/TASK.md",
+      "sha256": "930aea406e33704fb170f65f8ab429e376005eef64c82e1ad1a0593906ed588f",
+      "read": "FRESH_WHOLE after current pin in first administrative call; exact WHOLE reread during final scope check",
+      "postpin": "MATCHED before final marker and after publication"
+    }
+  ],
+  "owned_pins_excluding_custody": [
+    {
+      "path": "box/keller-trace-global-astra-20260911/PINS.json",
+      "sha256": "f8717c1943f9ab725264422f0e94b4948b9521e042e06c64090b0c803e89bbbd",
+      "read": "OWN_WHOLE; unchanged postpin"
+    },
+    {
+      "path": "xmodel/keller-trace-global-astra-20260911.md",
+      "sha256": "41697b048ffd5817f1578c1b6102960531e8db5799a289688ccca1a50677b399",
+      "read": "OWN_WHOLE private partial before marker; OWN_WHOLE sealed report including seal after expected verification"
+    },
+    {
+      "path": "xmodel/keller-trace-global-astra-20260911.md.artifact.json",
+      "sha256": "60185542f051500a916b6d0c4cae29c4072ba14059eca6999de66a14537cc93a",
+      "read": "OWN_WHOLE; exact expected transaction verification"
+    }
+  ],
+  "scope": {
+    "manual_results": "Height-one trace-dual saturation from finite normalization/open-source structural input; actual trace containment, derivative stability and top de Rham vanishing; conditional global inverse-image IC identification; exact pure-versus-mixed node quotient.",
+    "external_inputs": "Finite-normalization/Zariski-main structural input is named. Regular-holonomic localization/subquotients, stipulated IC exact sequence and smooth-branch interpretation, algebraic de Rham comparison and Borel-Moore Alexander duality are explicitly not independently literature-verified here.",
+    "hypothesis": "Every irreducible component normalization is A1, as in TASK; no extension to other normalizations.",
+    "base_change": "S tensor_A M and the flat-base-changed trace on S tensor_A R; NOT adic completion of either non-finite module.",
+    "remaining_gap": "No source-attached argument forces full mixed localization at a node. No actual Keller-map exclusion, JC2 closure, promotion, new OPEN identifier, computation or successor is claimed."
+  },
+  "checks": {
+    "target_absence": "Owned report, manifest, PINS and custody absent initially; final report/manifest/custody rechecked absent before publication; ROOT TASK preserved.",
+    "collisions": "NONE within exact owned targets; no shared/canonical or other-lane write.",
+    "whole_reads": "No clipping or reuse. Own partial and PINS read WHOLE before unique final BODY-END marker. Sealed report and manifest read WHOLE after expected verification.",
+    "quantity_cheapest_test": "Trace-dual lattice, generic IC intersection, top de Rham dimension comparison and explicit node quotient manually checked. No scientific runtime measurement.",
+    "execution": "Administrative date/hash/text, apply_patch documentary writes and existing artifact_finalize transaction only. No scientific subprocess, import, AST, syntax, test, dummy, CAS, code/payload, network/AWS/SSH/Git/protected access or agent.",
+    "additional_sources": "NONE"
+  },
+  "terminal": {
+    "custody": "This is the last authored object. Its digest is returned externally and is deliberately excluded from its own pin vector.",
+    "writers": "No process or writer remains after this custody creation. Only read-only custody readback/hash/clock checks follow; actual filesystem mtime records the final authored write, and the terminal handoff records observed ALL WRITERS IDLE time.",
+    "handoff_order": "Custody digest FIRST, report and expected manifest pins, explicit independent COMPLETED/ALL WRITERS IDLE. ROOT performs independent intake."
+  }
+}

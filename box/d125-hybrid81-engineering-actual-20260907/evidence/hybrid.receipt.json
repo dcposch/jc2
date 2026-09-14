@@ -1,0 +1,100 @@
+{
+  "authority_sha256": "0d75c7114eab9fce8201ae9df6cbd865a7c8b8d6e9b8c2449585d2c2961744da",
+  "boot": "886172be-22d4-42e8-939c-0fc0475346fa",
+  "checks": [
+    {
+      "flags": [],
+      "rc": 0,
+      "stderr": "",
+      "stdout": "{'status': 'TINY_HYBRID_ENGINE_REPLAY_PASS', 'verdict': 'EXACT_Q_UNIT_COFACTOR_CERTIFICATE', 'rows': 7, 'engine_columns': 7, 'cofactor_rows': 7, 'mapping': [0, 1, 0, 1, 4, 0, 6]}\n"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "stdout": "{'status': 'TINY_HYBRID_ENGINE_REPLAY_PASS', 'verdict': 'EXACT_Q_UNIT_COFACTOR_CERTIFICATE', 'rows': 7, 'engine_columns': 7, 'cofactor_rows': 7, 'mapping': [0, 1, 0, 1, 4, 0, 6]}\n"
+    }
+  ],
+  "group_members_after": [],
+  "hashes": {
+    "authority.json": "0d75c7114eab9fce8201ae9df6cbd865a7c8b8d6e9b8c2449585d2c2961744da",
+    "claim.json": "7fa7c35fedc421a5db6a471206a7bb4cf5ee594308a4b80638a303284eea2eb3",
+    "identity.json": "485602602263206c8ace003064af199b70ef2b55cff53db245e494fa692f0d1d",
+    "launch.json": "27720ffda2888a927f81a9ca03fb900bf52d22d4210a8e27aef54778e04cebd9",
+    "sing": "59295067207d4f17eb2acdbd4eac9d4755d16c94bfc36884e2f14d2731b9ad11",
+    "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "1cbf4e04c8391cffa50dcd7937d56a547512dbb9f7627a059b57497989267129",
+    "telemetry.json": "59ce637f3e3cf9e6f371fa4a6f0adde7835755c2da38dd0dd23913c9a0f3d3ef"
+  },
+  "operation": "hybrid",
+  "runner_rc": 0,
+  "runner_stderr": "",
+  "runner_stdout": "CAPRUN/v1 status=NORMAL_EXIT telemetry=/home/ubuntu/d125-hybrid81-exact-solver-20260907/engineering/hybrid.telemetry.json\n",
+  "source_access": false,
+  "status": "ENGINEERING_HYBRID_PASS",
+  "telemetry": {
+    "argv_count": 6,
+    "argv_sha256": "40d5d67156b443a55948f1d0a740b437f68cac9f51bd24590c5b2d0d78284c3d",
+    "caps": {
+      "cpu_seconds": 10,
+      "lifecycle_initial_seconds": 0.05,
+      "lifecycle_sample_seconds": 1.0,
+      "rss_bytes": 536870912,
+      "rss_sample_seconds": 0.05,
+      "term_grace_seconds": 0.25,
+      "wall_seconds": 10.0
+    },
+    "child_exit_code": 0,
+    "child_returncode": 0,
+    "child_signal": null,
+    "cwd": "/home/ubuntu/d125-hybrid81-exact-solver-20260907",
+    "enforcement": {
+      "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+      "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+      "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+    },
+    "error": null,
+    "executable": "/usr/bin/python3",
+    "identity_checks": [],
+    "invocation_cwd": "/home/ubuntu/d125-hybrid81-exact-solver-20260907",
+    "max_observed_group_rss_bytes": 10235904,
+    "pgid": 1925,
+    "pid": 1925,
+    "resource": null,
+    "runner_exit_code": 0,
+    "runner_signal": null,
+    "schema": "CAPRUN/v1",
+    "start_identity": "boot=886172be-22d4-42e8-939c-0fc0475346fa;start_ticks=29297",
+    "start_identity_source": "linux-proc-stat-field22",
+    "status": "NORMAL_EXIT",
+    "stderr": {
+      "bytes": 0,
+      "path": "/home/ubuntu/d125-hybrid81-exact-solver-20260907/engineering/hybrid.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdin": {
+      "mode": "devnull",
+      "path": null
+    },
+    "stdout": {
+      "bytes": 319,
+      "path": "/home/ubuntu/d125-hybrid81-exact-solver-20260907/engineering/hybrid.stdout",
+      "sha256": "1cbf4e04c8391cffa50dcd7937d56a547512dbb9f7627a059b57497989267129"
+    },
+    "telemetry_path": "/home/ubuntu/d125-hybrid81-exact-solver-20260907/engineering/hybrid.telemetry.json",
+    "termination": {
+      "cleanup_complete": null,
+      "group_live_before_reap": [],
+      "group_zombies_before_reap": [],
+      "kill_sent": false,
+      "leader_reaped": false,
+      "reason": null,
+      "term_sent": false
+    },
+    "utc_end": "2026-09-07T22:08:19.253245Z",
+    "utc_start": "2026-09-07T22:08:19.064976Z",
+    "wall_elapsed_seconds": 0.188275632
+  }
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/recursion_point_control.py", line 133, in <module>
+    need(blocked is None,'weight-15 input: recursion blocked at s^%s (V divides but R does not); Hensel leader at s^2 is h1*(1/p0-g0-p0) = %s'%(blocked,f0[2]==pole))
+  File "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/recursion_point_control.py", line 15, in need
+    if not ok: raise ValueError(msg)
+               ^^^^^^^^^^^^^^^^^^^^^
+ValueError: weight-15 input: recursion blocked at s^1 (V divides but R does not); Hensel leader at s^2 is h1*(1/p0-g0-p0) = True

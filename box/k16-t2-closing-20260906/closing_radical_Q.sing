@@ -1,0 +1,34 @@
+// TEST_A over exact Q (the closing ideal is defined over Q; d enters only via (UL)).
+// Is u = Lpivot in rad(Phi_{2N+1},...,Phi_{4N}) ?   <=>  1 in (I_close, 1-z*u).
+int N = NNN; int KMAX = 4*N;
+ring R = 0,(x,u,B,w2,l(2..N)),dp;
+proc xc(poly f,int k){matrix m=coef(f,x);int i;
+  for(i=1;i<=ncols(m);i++){if(deg(m[1,i])==k){return(m[2,i]);}} return(poly(0));}
+poly eta = (u - 3*l(2))/4;
+poly L = -1; int j; for(j=2;j<=N;j++){ L = L + l(j)*(x^j); }
+poly G  = 3*L*(L+1)/2 - B*x;
+poly RF = 3*(L^2)*(L*(L+2)-4*B*x)/16 - eta*(x^2)*(L/2 + B*x);
+poly P = -1/4 - B*x + eta*(x^2) + w2*(x^3);
+list Phi; int k; poly PS,Ex,br,Pk; number cc;
+for(k=4;k<=KMAX;k++){
+  PS=P*P; Ex=x*diff(PS,x)-3*PS+G*P-RF; br=xc(Ex,k);
+  cc=number(2)/number(k-3); Pk=cc*br; Phi[k]=Pk; P=P+Pk*(x^k);
+}
+ideal Icl; int i; int c=0;
+for(i=2*N+1;i<=KMAX;i++){ c=c+1; Icl[c]=Phi[i]; }
+poly lastP = Phi[2*N];
+ring S = 0,(z,u,B,w2,l(2..N)),dp;
+map ph = R,0,u,B,w2,l(2..N);
+ideal Icl = ph(Icl); poly lastP = ph(lastP);
+option(redSB);
+ideal Ga = std(Icl + ideal(1-z*u));
+print("TEST_A_Q  N="+string(N)+"  unit="+string(size(Ga)==1 && Ga[1]==1));
+// negative control: drop the LAST closing row; must NOT be unit
+ideal Icut; for(i=1;i<size(Icl);i++){ Icut[i]=Icl[i]; }
+ideal Gn = std(Icut + ideal(1-z*u));
+print("NEGCTRL_drop_last_row unit="+string(size(Gn)==1 && Gn[1]==1)+"  dim="+string(dim(Gn)));
+// what does I_close itself look like
+ideal Gi = std(Icl);
+print("dim V(I_close) = "+string(dim(Gi)));
+print("DONE_RADQ_N"+string(N));
+quit;

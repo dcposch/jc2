@@ -1,0 +1,184 @@
+{
+  "schema": "f10-necessary-rows-delta-preparation/v1",
+  "status": "PREPARED_STATIC_GATE_ONLY",
+  "clocks": {
+    "first_action_utc": "2026-09-11T06:11:53Z",
+    "root_prep_reserve_utc": "2026-09-11T06:20:00Z",
+    "root_prep_hard_utc": "2026-09-11T06:23:00Z",
+    "latest_launch_utc": "2026-09-11T06:21:00Z",
+    "review_reserve_utc": "2026-09-11T06:39:00Z",
+    "review_hard_utc": "2026-09-11T06:42:00Z",
+    "tag": "f10-necessary-rows-delta-gate-fable5-20260911",
+    "prep": "box/f10-necessary-rows-delta-gate-prep-root-20260911"
+  },
+  "read_scope": "ROOT: six byte-identical predecessor aliases verified by original hashes; old/new complete source text and actual diffs previously compared; exact six diffs and candidate/interface/review imports WHOLE (one clipped aggregate recovered in later bounded reads). Fable is charged an explicit DELTA review: six diffs and six documents WHOLE, twelve source text-diff objects plus necessary contexts, two unchanged arithmetic hashes only. No source execution.",
+  "source_execution": "NONE",
+  "inputs": [
+    {
+      "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-produce.py",
+      "sha256": "8a7bd82ea589744a9de22b54877156a329d724185948538958801475f983760e",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/produce.py",
+      "sha256": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/produce.diff",
+      "sha256": "592df59a401a2bf292b36214496b748cf6370c17f6bf65319db67e6245a210c4",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-authority.py",
+      "sha256": "5629db5df0a37fdaecaa66f5ad0cde47006cb0c3047b37243b045daedef2ac29",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/authority.py",
+      "sha256": "804c7aff56538fc332bf68638b03b7167eccdb49f73337f1a5f1823348b522a4",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/authority.diff",
+      "sha256": "6d74b9d7c879ad921a0c72f71d1a67d13fce933daa0b796653077487662f5c47",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-check.py",
+      "sha256": "5052884779d781e55693115c3065db1207667ce224a5914bbb95721d0abe9f7b",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-checker-astra-20260911/check.py",
+      "sha256": "1d2d5b5408bfbf13b96f09453b1f14dfe884d261e702843bc31e5a043ffa53d1",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-checker-astra-20260911/check.diff",
+      "sha256": "7ba8b176f40c37c9643856135f4d8a17fbe9d3f08b148f39c685c8158fc07044",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-dispatch.py",
+      "sha256": "f5b6e6c43da4574c1dd9fc241d2f0596071ab505d561e67579eb28d382814480",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/dispatch.py",
+      "sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/dispatch.py.diff",
+      "sha256": "f3c61b9a40d16e953950e3ff6a65401475a719fae6dbe3e1386cd05c49ef515f",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-probe.py",
+      "sha256": "09845fabff9a8b7f997e3b2d01160e5ff51d728124b9f5cd0b7176f8c19ea063",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/probe.py",
+      "sha256": "5f1211e1a77b5ce2bb4cc496deabc533e3c41cdea88ea750149dac886cc09c69",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/probe.py.diff",
+      "sha256": "6fccfd82949cc678b4c423690e098e02f902e0a62f89d9efed5c2c6dee386432",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-mutate.py",
+      "sha256": "cc0621aa44d17b1dac346e87d20a53f69ce950b343d68c8ed0d3791d42120af0",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/mutate.py",
+      "sha256": "12eac7bbe5566ac0372c51b36617409e0501595024d948d6086a767f90d84eec",
+      "read_mode": "PINNED_COMPLETE_DIFF_OBJECT_AND_DELTA_CONTEXT"
+    },
+    {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/mutate.py.diff",
+      "sha256": "f5e3967d1603fb3e02ed0cb4a21ab306c866227f4e892a2f5c79414f2e19ed73",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-direct-rows-powerfix-astra-20260911/arithmetic.py",
+      "sha256": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+      "read_mode": "HASH_ONLY_UNCHANGED_ACCEPTED"
+    },
+    {
+      "path": "box/f10-direct-rows-checker-astra-20260911/check_arithmetic.py",
+      "sha256": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e",
+      "read_mode": "HASH_ONLY_UNCHANGED_ACCEPTED"
+    },
+    {
+      "path": "box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md",
+      "sha256": "176363939a8aa6861995cd72a99c61f7d04bfeab5a9634f6d3143dcd3d3bd098",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "xmodel/f10-necessary-rows-design-gate-fable5-20260911.md",
+      "sha256": "8e07e419d321b09ecd13c61a1c5fdc3dbaf9a099c1a1ebedf9b9fe6ef280073b",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-direct-rows-deployment-prep-root-20260911/ROOT-SOURCE-CONTRACT.json",
+      "sha256": "feef0643e84fbd28307c3bd3469fba974fa6b7f58ed0ef42bc2f92aa3c597aa3",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-code-gate-fable5-20260911.md",
+      "sha256": "0d6cb121ebdd769fb909608043b38e6ef08923d6e6a0411ca5ec057325169784",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-runtime-gate-fable5-20260911.md",
+      "sha256": "a02f120acda2439197a9fc173ec068ec0a5a208ec8d15f6b96cc9dfe65ee6ff9",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/ROOT-NECESSARY-ROWS-CANDIDATE.json",
+      "sha256": "7beffe39c68b19e2998edc02949f8d24b3fe55a925d53139dff1c27a6690a482",
+      "read_mode": "FRESH_WHOLE"
+    }
+  ],
+  "instrument_pins": [
+    {
+      "path": "ops/adapters/claude.sh",
+      "sha256": "34070f15592c99d2c2fef012c5675f802469846899f26fe79018fb80cbe1b699"
+    },
+    {
+      "path": "ops/lane.sh",
+      "sha256": "0726b8428208ba3e8b0ca2ae7afd4bcf329b28c24a2b04caf977823f5d59f396"
+    },
+    {
+      "path": "ops/validate_charge_basis.py",
+      "sha256": "a89658bc2bf01c4cbbc601f3b9db60e46168d37f00367fdc87ef2e94b19a125e"
+    },
+    {
+      "path": "ops/seal.py",
+      "sha256": "222e6de4076e1a3169ff27bd0f6b9deff8c2389aa2ff9dd44b8b4ec90c2ea776"
+    },
+    {
+      "path": "FALLACY-v2.md",
+      "sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5"
+    },
+    {
+      "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/fable-invite.prompt.md",
+      "sha256": "5bd4db6a32ea6f394966f952338ed9ccc3d1eae7730497ac41bfe1a06f2b1099"
+    }
+  ],
+  "launcher": {
+    "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/fable-launch.sh",
+    "sha256": "85927ee2d3d408565c45df5088fea79f341c3d2d9a00e43d7ddd731c0f97b011"
+  },
+  "outputs": {
+    "report": "xmodel/f10-necessary-rows-delta-gate-fable5-20260911.md",
+    "custody": "box/f10-necessary-rows-delta-gate-fable5-20260911/input_custody.md"
+  },
+  "worker": "NONE",
+  "registration": "NOT_RELEASED"
+}

@@ -1,0 +1,69 @@
+========== 172.30.0.55 utc=2026-09-05T14:30:33Z ==========
+HOST=ip-172-30-0-55 DATE=2026-09-05T14:30:34Z UPTIME= 14:30:34 up 40 min,  2 users,  load average: 1.00, 1.00, 0.74
+--- mem ---
+               total        used        free      shared  buff/cache   available
+Mem:           999Gi        16Gi       987Gi       2.9Mi       1.2Gi       982Gi
+Swap:             0B          0B          0B
+--- dmesg OOM/kill ---
+--- pgrep msolve/Singular/python ---
+3176 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+3168 python3 /home/ubuntu/moh-bigmem-20260905/run_guided_job.py --workdir /home/ubuntu/moh-bigmem-20260905/targets/v38/guided --meta /home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json --rows /home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv --name v38 --primes 1073741827 --timeout 10800 --cpus 32
+3170 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+3173 /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+3166 bash run_guided_pipeline.sh v38
+3169 bash -c while true; do echo utc=$(date -u +%Y-%m-%dT%H:%M:%SZ) >> /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log; pid=$(pgrep -n Singular || true); echo pid=$pid >> /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log; if [ -n "$pid" ] && [ -r /proc/$pid/status ]; then awk '/VmPeak|VmSize|VmHWM|VmRSS/' /proc/$pid/status >> /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log; fi; sleep 20; done
+5124 bash -s
+--- ps RSS ---
+    PID    PPID USER         ELAPSED   RSS    VSZ %CPU CMD
+   3176    3173 ubuntu         18:27 10421608 10698356 99.8 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+   3168    3166 ubuntu         18:27 26784  36448  0.0 python3 /home/ubuntu/moh-bigmem-20260905/run_guided_job.py --workdir /home/ubuntu/moh-bigmem-20260905/targets/v38/guided --meta /home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json --rows /home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv --name v38 --primes 1073741827 --timeout 10800 --cpus 32
+   1265       1 root           40:03 22976 110032  0.0 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+   1196       1 root           40:04 20784  32540  0.0 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+   1633       1 root           39:35  8264  12028  0.0 sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups
+   5140    5124 ubuntu         00:00  3848   9732  0.0 awk NR==1 || /msolve|Singular|python|time |run_/ {print}
+   3166       1 ubuntu         18:27  3636   7764  0.0 bash run_guided_pipeline.sh v38
+   3169    3168 ubuntu         18:27  3616   7764  0.0 bash -c while true; do echo utc=$(date -u +%Y-%m-%dT%H:%M:%SZ) >> /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log; pid=$(pgrep -n Singular || true); echo pid=$pid >> /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log; if [ -n "$pid" ] && [ -r /proc/$pid/status ]; then awk '/VmPeak|VmSize|VmHWM|VmRSS/' /proc/$pid/status >> /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log; fi; sleep 20; done
+   3170    3168 ubuntu         18:27  2128   6148  0.0 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+   3173    3170 ubuntu         18:27  1652   2720  0.0 /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+--- logs in HOME ---
+-rw-rw-r-- 1 ubuntu ubuntu 305 Sep  5 14:12 /home/ubuntu/v38.guided.log
+--- find outputs ---
+/home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.out
+/home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log
+/home/ubuntu/moh-bigmem-20260905/targets/v38/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m15/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m15/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v18/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v18/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m12_union/meta.json
+/home/ubuntu/moh-bigmem-20260905/launched-workers.json
+--- HOME logs tail ---
+==== TAIL /home/ubuntu/v38.guided.log size=305 ====
+GUIDED_PIPELINE_START target=v38 rows=/home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv utc=2026-09-05T14:12:07Z
+GUIDED_START name=v38 gens=174 nvars=112 rows_sha=2b59ba92f2b889b09d38570f6f03bec865ede4d509e85c687f66f3033369254b
+MODULAR_START p=1073741827 timeout=10800 utc=2026-09-05T14:12:07Z
+
+--- time files ---
+/home/ubuntu/jc2/box/k4ray-20260903/K5_B4_Q_rab.time
+/home/ubuntu/jc2/box/k4ray-20260903/K4_B7_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/K5_B4_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/k4ray_K4_tower_B7.time
+/home/ubuntu/jc2/box/k4ray-20260903/K4_B3_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/K6_B5_Q.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-D121-200.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-passport-D121-200.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-D48-120.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-passport-D48-120.time
+--- /usr/bin/time leftover ---
+total 104
+drwxrwxrwt 12 root root 57344 Sep  5 13:56 .
+drwxr-xr-x 22 root root  4096 Sep  5 13:50 ..
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .ICE-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .X11-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .XIM-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .font-unix
+drwx------  2 root root  4096 Sep  5 13:50 snap-private-tmp
+drwx------  3 root root  4096 Sep  5 13:50 systemd-private-828a8552ce4c4eafa708e39d188c9b26-ModemManager.service-A0g7oH
+drwx------  3 root root  4096 Sep  5 13:50 systemd-private-828a8552ce4c4eafa708e39d188c9b26-chrony.service-HXLDtP
+POLL_DONE

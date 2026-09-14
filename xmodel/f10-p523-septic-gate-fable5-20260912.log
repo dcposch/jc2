@@ -1,0 +1,13 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Complete. The on-disk change is my own BODY-END append; no further edits.
+
+**Outcome:** `xmodel/f10-p523-septic-gate-fable5-20260912.md` is written and closed with a standalone `<!-- BODY-END -->` as its last line at 05:06:54Z, before the 05:16Z reserve. All three inputs matched their expected SHA-256 pins before reading and again at postpin. Body is 1310 words, under the 2200 cap.
+
+**Verdicts:**
+- **A. CONFIRMED.** dl, kl, ga, the linear factor [50,252], lead = −1270080 ≡ 287, and L⁻¹ = 441 all reconstructed from the exact rationals. Every denominator is a product of 2, 3, 5, 7, so all are 523-units. The inverse was derived from 7⁻¹·41⁻¹ and the product 287·441 = 242·523 + 1 is shown.
+- **B. CONFIRMED coefficientwise.** Full integer-then-residue ledger for kl², kl·dl, B·kl·dl, dl², ga·dl², the three summands, their sum, and the normalization. The result is [0,17,249,53,102,191,291,1]. Two independent evaluation checks at V=1 and V=−1 and the factored constant term all agree with the ledger.
+- **C. CONFIRMED.** Every initialize predicate traced in source order passes for this exact monic. The degree-one irreducibility loop is vacuous and Frobenius is trivial. The coefficient equality on line 114 is the only formula-sensitive predicate. The report states explicitly that ground() is defined only on the 523-localization, so no whole-field reduction is claimed.
+- **D. CONFIRMED.** The 17→18 control is rejected solely by `STOP_BAD_PLACE: actual monic coefficients` at arithmetic.py lines 114–115; the factor and Frobenius checks would still pass but are never reached.
+
+**Scope:** only this three-input scalar polynomial and metadata attachment. No build(), inverse nodes, source rows, rank, canonical anomaly, characteristic-zero or JC2 statement follows. The vector must still be recomputed by both scientific evaluators in an authorized execution. No artifact_finalize or charge_basis declaration was made; custody stays with the external launcher.
+DIVERT path=xmodel/f10-p523-septic-gate-fable5-20260912.md status=CLEAN body_bytes=12121 body_sha256=43ad1a3ecce49afdefa66efbb33344e964566131614de4296a264eade03e255e

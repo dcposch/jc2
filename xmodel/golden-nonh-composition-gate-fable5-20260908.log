@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete. Report delivered, evidence pinned, all children terminal.
+
+**Verdict: CONFIRMED on all six targets at the literal scope.** For the source system in source-proof.md with its A-only canonical reference F, the first nonzero correction F_j must be H-divisible. The source's two-regime argument correctly forces the non-H-divisible branch into j=12, kappa≥5, q0≥15, and the consumer's resonant initial system contradicts the weighted-face coefficient by the unit factor 3rho. No parity is used anywhere. First missing arrow inside scope: none.
+
+**What I verified independently**
+- Centralizer via the simple L root (Eisenstein at u+1, with 1+tu equal to rho there), identity (2) re-expanded by hand, the kernel induction bounds 15+j>2j and 2j<36, H|F_j² including the j=5 and j=10 scalar exceptions, and the forced shape P0_j=λp^(12−j)Δ.
+- The Morse coordinate over Kbar(p^1/2), including the nonnegative s-orders and the exact transverse coefficient λ(t−1)p^(25/2−j)/a.
+- Every order inequality in both regimes, enumerated over 26,814 (j, kappa, q0) triples including infinite orders, with zero violations. The survivors are exactly the resonant set.
+- The resonant bracket via six monomial-pair projections, with the Y^10 cancellation forcing the 5/3 factor. No degree-6 or degree-10 polynomial was expanded.
+- The regime-B and regime-A (b=0) kills directly from bracket rows, without the UFD step, as a cross-check on the Euler lemma.
+- Face slots, determinant rows, a_face=λt via the s^12 index triples and component weights, and the 3rho discrepancy in both embeddings.
+
+**Replay.** All 20 checker runs (both checkers, five modes each, normal and -O) matched the charged replay JSONs on rc, stdout bytes, and terminal error line under direct prlimit plus subprocess timeout. No gating asserts exist in either checker.
+
+**Corrections recorded, none load-bearing.** The source's "both v components vanish" should read "the nonzero component vanishes". The H²-normality of orders 1 to 5 is unused later. Source checker line 73 is a tautology.
+
+**Scope left open, as the proposal states.** The H-divisible branch F_j=HC is unexcluded. Nothing follows for all golden pairs, common polygons, whole D125, nilpotent algebras, or JC2.
+
+Report: `xmodel/golden-nonh-composition-gate-fable5-20260908.md` (23,606 bytes, BODY-END appended last, no Seal, no charge_basis). Evidence: `box/golden-nonh-composition-gate-fable5-20260908/`. All 16 hex tokens in the report were cross-checked against the pin files. Wall time about 20 minutes. STOP/IDLE.
+DIVERT path=xmodel/golden-nonh-composition-gate-fable5-20260908.md status=CLEAN body_bytes=23606 body_sha256=ddd2077da0d63d53aea062373f82ce7bdb21d9df1fcf4180127789e98409b9e2

@@ -1,0 +1,23 @@
+{
+  "schema": "F10-R1-V2-PREPARATION/v1",
+  "enabled": false,
+  "dispatch_authorized": false,
+  "job_tag": "f10-r1-exact-artifact-validation-v2-20260909",
+  "remote_cwd": "/home/ubuntu/f10-r1-exact-artifact-validation-v2-20260909",
+  "instance_id": "i-08d2a40f272ee9fa2",
+  "hostname": "ip-172-30-0-72",
+  "interpreter_sha256": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223",
+  "caller_sha256_for_root_external_preflight": "aaafa62a7aa96ab7823e889c7d8800add04b9699a9e736ccdeb883557e812640",
+  "probe_sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7",
+  "precision_sha256": "56400dd32f4940a0e77b2da79e9b90792b51588d01f0f1a2fded30efebb0af90",
+  "prospective_math_cutoff_utc": "2026-09-09T13:35:00Z",
+  "prospective_root_execution_task_cutoff_utc": "2026-09-09T13:40:00Z",
+  "aggregate_math_wall_seconds": 360,
+  "admission_margin_seconds": 15,
+  "builder_caps": {"wall_seconds": 60, "cpu_seconds": 50, "sampled_rss_bytes": 2147483648},
+  "checker_caps": {"wall_seconds": 30, "cpu_seconds": 25, "sampled_rss_bytes": 2147483648},
+  "inherited_file_size_bytes": 16777216,
+  "children_at_once": 1,
+  "self_hash_embedding": "NONE; root external preflight must compare the caller against this frozen pin",
+  "required_root_action": "Independent review, physical recheck, absent remote directory and outputs, enabled per-operation registration, and a NEW explicit invitation. This file is not consumed as execution authority."
+}

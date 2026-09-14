@@ -1,0 +1,8 @@
+< "/home/ubuntu/jc2/box/k16astra-20260905/t3_local_rows.sing";
+poly db=diff(spineB2,b4); number rr=leadcoef(rootR)/leadcoef(db);
+print("ROOT_DERIVATIVE_PROPORTIONAL "+string(rootR==rr*db));
+print("ROOT_DERIVATIVE_RATIO "+string(rr));
+ideal gradient; int i; for(i=1;i<=nvars(basering);i++){gradient[i]=diff(spineB2,var(i));}
+ideal GG=std(gradient);
+print("ROOT_IN_GRADIENT "+string(reduce(rootR,GG)==0));
+print("LOCAL_PROBE_COMPLETE");quit;

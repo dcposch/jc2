@@ -1,0 +1,332 @@
+{
+  "attempt_resources": {
+    "max_rss_kib": 279056,
+    "wall_seconds": 1870.89
+  },
+  "band": {
+    "D1_offset": null,
+    "Jacobian_degree": 155,
+    "Jacobian_t_power": 8,
+    "pole_exponents": {
+      "F": -173,
+      "G": -110
+    },
+    "pole_local_power": 16
+  },
+  "constant_residue_rows": [
+    {
+      "expression": "64",
+      "label": "stage8_G_local16_coord0"
+    }
+  ],
+  "dimension": null,
+  "dimension_decrement": null,
+  "dimension_history": [
+    1063,
+    1016,
+    974,
+    940,
+    913,
+    894,
+    880,
+    869,
+    null
+  ],
+  "external_resources": {
+    "max_rss_kib": 279056,
+    "wall_seconds": 1870.89
+  },
+  "free_coordinate_list_is_valid": false,
+  "joint_Qstar_pivots": {
+    "cumulative": 66,
+    "introduced": [
+      {
+        "row": "stage8_J_d155_k35",
+        "variable": "B1c_7_19"
+      },
+      {
+        "row": "stage8_J_d155_k36",
+        "variable": "B1c_7_20"
+      },
+      {
+        "row": "stage8_J_d155_k37",
+        "variable": "B1c_7_21"
+      },
+      {
+        "row": "stage8_J_d155_k38",
+        "variable": "B1c_7_22"
+      },
+      {
+        "row": "stage8_J_d155_k39",
+        "variable": "B1c_7_23"
+      },
+      {
+        "row": "stage8_J_d155_k40",
+        "variable": "B1c_7_24"
+      },
+      {
+        "row": "stage8_J_d155_k41",
+        "variable": "B1c_7_25"
+      }
+    ],
+    "introduced_with_coefficients": [
+      {
+        "coefficient": "675",
+        "rhs": "B1c_7_20 - B1c_7_21 + B1c_7_22 - B1c_7_23 + B1c_7_24 - B1c_7_25",
+        "row": "stage8_J_d155_k35",
+        "variable": "B1c_7_19"
+      },
+      {
+        "coefficient": "576",
+        "rhs": "2*B1c_7_21 - 3*B1c_7_22 + 4*B1c_7_23 - 5*B1c_7_24 + 6*B1c_7_25",
+        "row": "stage8_J_d155_k36",
+        "variable": "B1c_7_20"
+      },
+      {
+        "coefficient": "477",
+        "rhs": "3*B1c_7_22 - 6*B1c_7_23 + 10*B1c_7_24 - 15*B1c_7_25",
+        "row": "stage8_J_d155_k37",
+        "variable": "B1c_7_21"
+      },
+      {
+        "coefficient": "378",
+        "rhs": "2*(2*B1c_7_23 - 5*B1c_7_24 + 10*B1c_7_25)",
+        "row": "stage8_J_d155_k38",
+        "variable": "B1c_7_22"
+      },
+      {
+        "coefficient": "279",
+        "rhs": "5*(B1c_7_24 - 3*B1c_7_25)",
+        "row": "stage8_J_d155_k39",
+        "variable": "B1c_7_23"
+      },
+      {
+        "coefficient": "180",
+        "rhs": "6*B1c_7_25",
+        "row": "stage8_J_d155_k40",
+        "variable": "B1c_7_24"
+      },
+      {
+        "coefficient": "81",
+        "rhs": "0",
+        "row": "stage8_J_d155_k41",
+        "variable": "B1c_7_25"
+      }
+    ],
+    "net_new": 7,
+    "retired": []
+  },
+  "ledger": {
+    "path": "/home/ubuntu/jc2/box/g9966d52gate-20260903/validated-through-stage8.json",
+    "sha256": "6264ebc9aa5833e5328388241792be978cb5298af63853a01267ac972d5558bc"
+  },
+  "new_outer_D1": {
+    "Qstar_pivots": 0,
+    "offset": null,
+    "raw_rows": 0
+  },
+  "new_rows": {
+    "Jacobian": [
+      "stage8_J_d155_k0",
+      "stage8_J_d155_k1",
+      "stage8_J_d155_k2",
+      "stage8_J_d155_k3",
+      "stage8_J_d155_k4",
+      "stage8_J_d155_k5",
+      "stage8_J_d155_k6",
+      "stage8_J_d155_k7",
+      "stage8_J_d155_k8",
+      "stage8_J_d155_k9",
+      "stage8_J_d155_k10",
+      "stage8_J_d155_k11",
+      "stage8_J_d155_k12",
+      "stage8_J_d155_k13",
+      "stage8_J_d155_k14",
+      "stage8_J_d155_k15",
+      "stage8_J_d155_k16",
+      "stage8_J_d155_k17",
+      "stage8_J_d155_k18",
+      "stage8_J_d155_k19",
+      "stage8_J_d155_k20",
+      "stage8_J_d155_k21",
+      "stage8_J_d155_k22",
+      "stage8_J_d155_k23",
+      "stage8_J_d155_k24",
+      "stage8_J_d155_k25",
+      "stage8_J_d155_k26",
+      "stage8_J_d155_k27",
+      "stage8_J_d155_k28",
+      "stage8_J_d155_k29",
+      "stage8_J_d155_k30",
+      "stage8_J_d155_k31",
+      "stage8_J_d155_k32",
+      "stage8_J_d155_k33",
+      "stage8_J_d155_k34",
+      "stage8_J_d155_k35",
+      "stage8_J_d155_k36",
+      "stage8_J_d155_k37",
+      "stage8_J_d155_k38",
+      "stage8_J_d155_k39",
+      "stage8_J_d155_k40",
+      "stage8_J_d155_k41",
+      "stage8_J_d155_k42",
+      "stage8_J_d155_k43",
+      "stage8_J_d155_k44",
+      "stage8_J_d155_k45",
+      "stage8_J_d155_k46",
+      "stage8_J_d155_k47",
+      "stage8_J_d155_k48",
+      "stage8_J_d155_k49",
+      "stage8_J_d155_k50",
+      "stage8_J_d155_k51",
+      "stage8_J_d155_k52",
+      "stage8_J_d155_k53",
+      "stage8_J_d155_k54",
+      "stage8_J_d155_k55",
+      "stage8_J_d155_k56",
+      "stage8_J_d155_k57",
+      "stage8_J_d155_k58",
+      "stage8_J_d155_k59",
+      "stage8_J_d155_k60",
+      "stage8_J_d155_k61",
+      "stage8_J_d155_k62",
+      "stage8_J_d155_k63",
+      "stage8_J_d155_k64",
+      "stage8_J_d155_k65",
+      "stage8_J_d155_k66",
+      "stage8_J_d155_k67",
+      "stage8_J_d155_k68",
+      "stage8_J_d155_k69",
+      "stage8_J_d155_k70",
+      "stage8_J_d155_k71",
+      "stage8_J_d155_k72",
+      "stage8_J_d155_k73",
+      "stage8_J_d155_k74",
+      "stage8_J_d155_k75",
+      "stage8_J_d155_k76",
+      "stage8_J_d155_k77",
+      "stage8_J_d155_k78",
+      "stage8_J_d155_k79",
+      "stage8_J_d155_k80",
+      "stage8_J_d155_k81",
+      "stage8_J_d155_k82",
+      "stage8_J_d155_k83",
+      "stage8_J_d155_k84",
+      "stage8_J_d155_k85",
+      "stage8_J_d155_k86",
+      "stage8_J_d155_k87",
+      "stage8_J_d155_k88",
+      "stage8_J_d155_k89",
+      "stage8_J_d155_k90",
+      "stage8_J_d155_k91",
+      "stage8_J_d155_k92",
+      "stage8_J_d155_k93",
+      "stage8_J_d155_k94",
+      "stage8_J_d155_k95",
+      "stage8_J_d155_k96",
+      "stage8_J_d155_k97",
+      "stage8_J_d155_k98",
+      "stage8_J_d155_k99",
+      "stage8_J_d155_k100",
+      "stage8_J_d155_k101",
+      "stage8_J_d155_k102",
+      "stage8_J_d155_k103",
+      "stage8_J_d155_k104",
+      "stage8_J_d155_k105",
+      "stage8_J_d155_k106",
+      "stage8_J_d155_k107",
+      "stage8_J_d155_k108",
+      "stage8_J_d155_k109",
+      "stage8_J_d155_k110",
+      "stage8_J_d155_k111",
+      "stage8_J_d155_k112",
+      "stage8_J_d155_k113",
+      "stage8_J_d155_k114",
+      "stage8_J_d155_k115",
+      "stage8_J_d155_k116",
+      "stage8_J_d155_k117",
+      "stage8_J_d155_k118",
+      "stage8_J_d155_k119",
+      "stage8_J_d155_k120",
+      "stage8_J_d155_k121",
+      "stage8_J_d155_k122",
+      "stage8_J_d155_k123",
+      "stage8_J_d155_k124",
+      "stage8_J_d155_k125",
+      "stage8_J_d155_k126",
+      "stage8_J_d155_k127",
+      "stage8_J_d155_k128",
+      "stage8_J_d155_k129",
+      "stage8_J_d155_k130",
+      "stage8_J_d155_k131",
+      "stage8_J_d155_k132",
+      "stage8_J_d155_k133",
+      "stage8_J_d155_k134",
+      "stage8_J_d155_k135",
+      "stage8_J_d155_k136",
+      "stage8_J_d155_k137",
+      "stage8_J_d155_k138",
+      "stage8_J_d155_k139",
+      "stage8_J_d155_k140",
+      "stage8_J_d155_k141",
+      "stage8_J_d155_k142",
+      "stage8_J_d155_k143",
+      "stage8_J_d155_k144",
+      "stage8_J_d155_k145",
+      "stage8_J_d155_k146",
+      "stage8_J_d155_k147",
+      "stage8_J_d155_k148",
+      "stage8_J_d155_k149",
+      "stage8_J_d155_k150",
+      "stage8_J_d155_k151",
+      "stage8_J_d155_k152",
+      "stage8_J_d155_k153",
+      "stage8_J_d155_k154",
+      "stage8_J_d155_k155"
+    ],
+    "pole": {
+      "F": [
+        "stage8_F_local16_coord0",
+        "stage8_F_local16_coord2"
+      ],
+      "G": [
+        "stage8_G_local16_coord0",
+        "stage8_G_local16_coord2"
+      ]
+    }
+  },
+  "next_system": null,
+  "promoted_artifacts": [
+    {
+      "action": "linked",
+      "file": "stage8.json",
+      "sha256": "095c340d7729f97df9a1f1f4709c5afcde00be32fac15cb3ced540e4ae15ccb9"
+    },
+    {
+      "action": "linked",
+      "file": "stage8.time",
+      "sha256": "b44281b4e5d9cd428d964e285b125b0535ff04965fa37c040c252c5024082728"
+    },
+    {
+      "action": "linked",
+      "file": "stage8.sing",
+      "sha256": "36f7f21f9faa3f7fec6b1d9353a194c17c6aecb8d2a5c2e48096b680c6e77b2e"
+    },
+    {
+      "action": "linked",
+      "file": "stage8.err",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "residue": {
+    "codimension": 2,
+    "rows": 1,
+    "sha256": "e356693da067de90565ae0275ecd5d6779737e962b9d01476fc46b355ce3ccb4",
+    "status": "nonzero",
+    "unit_ideal": true
+  },
+  "stage": 8,
+  "stage_json_bytes": 44867,
+  "stage_json_sha256": "095c340d7729f97df9a1f1f4709c5afcde00be32fac15cb3ced540e4ae15ccb9",
+  "status": "ACCEPTED"
+}

@@ -1,0 +1,13 @@
+Sep 13 00:59:59 ip-172-30-0-114 systemd[1]: Starting jc2-mixed-v3-native-20260913.service - /usr/bin/bash /opt/jc2-mixed-20260912/meta/native-metadata.actual.sh...
+Sep 13 00:59:59 ip-172-30-0-114 systemd[1]: Started jc2-mixed-v3-native-20260913.service - /usr/bin/bash /opt/jc2-mixed-20260912/meta/native-metadata.actual.sh.
+Sep 13 01:00:38 ip-172-30-0-114 systemd[1]: jc2-mixed-v3-native-20260913.service: Deactivated successfully.
+Sep 13 01:00:38 ip-172-30-0-114 systemd[1]: jc2-mixed-v3-native-20260913.service: Consumed 29.567s CPU time, 49.1M memory peak, 0B memory swap peak.
+Sep 13 01:00:38 ip-172-30-0-114 systemd[1]: Starting jc2-mixed-v3-assembly-20260913.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/native_records.py --raw /opt/jc2-mixed-20260912/prep/native.stdout --raw-sha256 079cf9b5cf1eabaf8d70315b2d41e200af986a8d6fe08a9c460e776730384151 --facts /opt/jc2-mixed-20260912/meta/facts.json --facts-sha256 ff625fcdcc3cfa1a8ba9e18166c176c1c0148f28d4e43caae9d22526dd8c6af9 --out /opt/jc2-mixed-20260912/prep/assembled...
+Sep 13 01:00:38 ip-172-30-0-114 systemd[1]: Started jc2-mixed-v3-assembly-20260913.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/native_records.py --raw /opt/jc2-mixed-20260912/prep/native.stdout --raw-sha256 079cf9b5cf1eabaf8d70315b2d41e200af986a8d6fe08a9c460e776730384151 --facts /opt/jc2-mixed-20260912/meta/facts.json --facts-sha256 ff625fcdcc3cfa1a8ba9e18166c176c1c0148f28d4e43caae9d22526dd8c6af9 --out /opt/jc2-mixed-20260912/prep/assembled.
+Sep 13 01:00:38 ip-172-30-0-114 systemd[1]: jc2-mixed-v3-assembly-20260913.service: Deactivated successfully.
+Sep 13 01:00:39 ip-172-30-0-114 systemd[1]: Starting jc2-mixed-v3-inspect-20260913.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/inspect_native.py...
+Sep 13 01:00:39 ip-172-30-0-114 systemd[1]: Started jc2-mixed-v3-inspect-20260913.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/inspect_native.py.
+Sep 13 01:00:39 ip-172-30-0-114 systemd[1]: jc2-mixed-v3-inspect-20260913.service: Deactivated successfully.
+Sep 13 01:00:39 ip-172-30-0-114 systemd[1]: Starting jc2-mixed-v3-imports-20260913.service - /usr/bin/python3.12 -E -s -S -B /opt/jc2-mixed-20260912/meta/inspect_imports.py...
+Sep 13 01:00:39 ip-172-30-0-114 systemd[1]: Started jc2-mixed-v3-imports-20260913.service - /usr/bin/python3.12 -E -s -S -B /opt/jc2-mixed-20260912/meta/inspect_imports.py.
+Sep 13 01:00:39 ip-172-30-0-114 systemd[1]: jc2-mixed-v3-imports-20260913.service: Deactivated successfully.

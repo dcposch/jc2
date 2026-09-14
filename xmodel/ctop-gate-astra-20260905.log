@@ -1,0 +1,1845 @@
+cli=codex-cli 0.153.3 model=gpt-6-astra effort=ultra config=ignored approval=never sandbox=danger-full-access
+OpenAI Codex v0.153.3
+--------
+workdir: /home/ubuntu/jc2
+model: gpt-6-astra
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: ultra
+reasoning summaries: none
+session id: 01a071f1-c188-7b40-a38b-75c9972603b0
+--------
+user
+# HOSTILE GATE (a 936-row kill by a NEW screen; different model from the producer): the frozen child-data report (Opus) claims (C-TOP) := "V'_{s'} ≤ d'_{s'}" — Moh Def 5.1(2) applied at i = s' to the DESCENDED datum, licensed by the child-top convention V'_{s'+1} = d'_{s'+1} which it proves at u_s = 1 via the closed form d'_{s'+1} = gcd(n', M'₁..M'_{s'}) = u_s (p.150 termination M_{h+1} = ∞ + p.174's definition of M_s dropping a terminal M_h = n−1) — kills 936 of the 1,110 u_s=1 operative census rows (16 ≤ n ≤ 200), leaving 174 live; and that the U-NEGATIVE licence u' = K'−V'₂ ≥ 0 follows in one line from Def 5.1(1) p.179 ("in D_i, g has precisely (n/d_{i+1})V_{i+1} roots") + Prop 6.3(2) p.197 (g' has exactly n' roots). ADVERSARIAL CHECKS: (1) Def 5.1(2) — quote it; is "V_{i+1} ≤ d_{i+1}" (or whatever (2) literally says) a CONDITION on admissible data (so a row violating it is impossible ⇒ kill) or a DEFINITION/normalization (so violating rows are just mislabeled)? Is it stated for the source datum only, and does it transfer to the child's own datum — i.e. is the descended pair's characteristic data (M', d', V') computed by the campaign's descend() the child's OWN Def 5.1 data (OPEN[CHILD-LEVEL2-IDENTIFICATION]: V'₂ = V₂ printed only on Moh's five u_s=1 rows p.207)? Compute ONE child's data from first principles (p.150 recipe on the child's own expansion) and compare with descend()'s labels, at a row where (C-TOP) FAILS — is the row really impossible, or is the label wrong? (2) the top convention: p.174 says the last effective pair drops M_h = n−1; the closed form d'_{s'+1} = u_s — derive it yourself; at u_s = 1 does the chain close at s' (so V'_{s'+1} = d'_{s'+1} = 1 trivially)? (3) is the p.174 drop applied consistently between the kill and the enumerator (the report says 90 rows carry M'_{s'} = n'−1)? (4) the U-NEG one-liner: does Prop 6.3(2) give g' EXACTLY n' roots in the relevant disc, and does Def 5.1(1)'s count refer to the same disc D'₁ (centre, radius) as the campaign's V'₂? (5) run the screen yourself on the frozen enumerator (box/moh_skeleton_full.py + box/child-data-20260905/) and reproduce 936/174/310 — or report the discrepancy. VERDICT: (C-TOP) CONFIRMED as a kill (⇒ promote; residual 484 rows) / CONFIRMED-WITH-FIX / REFUTED (name the row that survives from first principles); U-NEG licence CONFIRMED/REFUTED. FALLACY-v2. ≤ 120 min; no ledger edits; no jc2-lean; no ideation-*. Notes to box/ctop-gate-20260905/.
+Report: xmodel/ctop-gate-astra-20260905.md
+Seal (<!-- BODY-END -->); 12-25KB; 120 min.
+charged_input=xmodel/child-data-tests-opus5-20260905.md
+charged_input=xmodel/scope-leaks-opus5-20260905.md
+charged_input=box/appendix2-k16-20260903/shape.py
+charged_input=box/moh_skeleton_full.py
+charged_input=refs/moh1983_jram340_configurations_of_roots.pdf
+charged_input=FALLACY-v2.md
+
+Your inputs are frozen read-only copies in /tmp/jc2-lane.RbaPkU/inputs;
+verify these SHA-256 hashes first, MECHANICALLY: the receipt `xmodel/ctop-gate-astra-20260905.run.v2` carries `charged_input_<i>_sha256=`/`_basename=` lines; build the manifest with awk and run `sha256sum -c`; stop only on a real content mismatch:
+
+```text
+219faa47b435222511168ffaa1cc4f0c33be7744209a29626999f464d66c9cff  /tmp/jc2-lane.RbaPkU/inputs/child-data-tests-opus5-20260905.md
+c3dd95b11ea3e12ba88e813860ecab703a275f745ce429944c8aeb04a5095eda  /tmp/jc2-lane.RbaPkU/inputs/scope-leaks-opus5-20260905.md
+d8750d4e512645366e9e0c53153484eb5daa9c785434c1cc59658986d0ab138c  /tmp/jc2-lane.RbaPkU/inputs/shape.py
+d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2  /tmp/jc2-lane.RbaPkU/inputs/moh_skeleton_full.py
+6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51  /tmp/jc2-lane.RbaPkU/inputs/moh1983_jram340_configurations_of_roots.pdf
+e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5  /tmp/jc2-lane.RbaPkU/inputs/FALLACY-v2.md
+```
+
+
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+
+codex
+I’ll verify the frozen-input hashes first, then independently check Moh’s definitions and reproduce the screen. I’ll keep the audit notes in `box/ctop-gate-20260905/` and write the sealed report at the requested path, without touching the ledger or excluded areas.
+
+exec
+/bin/bash -lc "pwd && rg --files -g 'AGENTS.md' -g 'ctop-gate-astra-20260905.run.v2' -g '"'!jc2-lean/**'"' -g '"'!ideation-*'"'" in /home/ubuntu/jc2
+ succeeded in 0ms:
+/home/ubuntu/jc2
+xmodel/ctop-gate-astra-20260905.run.v2
+
+exec
+/bin/bash -lc "awk -F= '/"'^charged_input_[0-9]+_sha256=/{key=$1; sub(/_sha256$/, "", key); hash[key]=$2} /''^charged_input_[0-9]+_basename=/{key=$1; sub(/_basename$/, "", key); base[key]=$2} END {for (key in hash) print hash[key] "  /tmp/jc2-lane.RbaPkU/inputs/" base[key]}'"' xmodel/ctop-gate-astra-20260905.run.v2 > /tmp/ctop-gate-astra-20260905.sha256
+sha256sum -c /tmp/ctop-gate-astra-20260905.sha256" in /home/ubuntu/jc2
+ succeeded in 0ms:
+/tmp/jc2-lane.RbaPkU/inputs/child-data-tests-opus5-20260905.md: OK
+/tmp/jc2-lane.RbaPkU/inputs/scope-leaks-opus5-20260905.md: OK
+/tmp/jc2-lane.RbaPkU/inputs/shape.py: OK
+/tmp/jc2-lane.RbaPkU/inputs/moh_skeleton_full.py: OK
+/tmp/jc2-lane.RbaPkU/inputs/moh1983_jram340_configurations_of_roots.pdf: OK
+/tmp/jc2-lane.RbaPkU/inputs/FALLACY-v2.md: OK
+
+exec
+/bin/bash -lc "ls -la /tmp/jc2-lane.RbaPkU/inputs
+ls -la box/child-data-20260905
+cat /tmp/jc2-lane.RbaPkU/inputs/FALLACY-v2.md
+sed -n '1,220p' /tmp/jc2-lane.RbaPkU/inputs/child-data-tests-opus5-20260905.md" in /home/ubuntu/jc2
+ succeeded in 0ms:
+total 6516
+drwxrwxr-x 2 ubuntu ubuntu    4096 Sep  5 14:21 .
+drwx------ 4 ubuntu ubuntu    4096 Sep  5 14:21 ..
+-r-------- 1 ubuntu ubuntu    1985 Sep  5 14:21 FALLACY-v2.md
+-r-------- 1 ubuntu ubuntu   20472 Sep  5 14:21 child-data-tests-opus5-20260905.md
+-r-------- 1 ubuntu ubuntu 6563749 Sep  5 14:21 moh1983_jram340_configurations_of_roots.pdf
+-r-------- 1 ubuntu ubuntu   28761 Sep  5 14:21 moh_skeleton_full.py
+-r-------- 1 ubuntu ubuntu   24762 Sep  5 14:21 scope-leaks-opus5-20260905.md
+-r-------- 1 ubuntu ubuntu    9937 Sep  5 14:21 shape.py
+total 3132
+drwxrwxr-x   2 ubuntu ubuntu   4096 Sep  5 14:13 .
+drwxrwxr-x 187 ubuntu ubuntu  12288 Sep  5 14:20 ..
+-rw-rw-r--   1 ubuntu ubuntu    428 Sep  5 14:18 artifacts.sha256
+-rw-rw-r--   1 ubuntu ubuntu    977 Sep  5 14:13 inputs.sha256
+-rw-rw-r--   1 ubuntu ubuntu 230544 Sep  5 14:11 p174-35.png
+-rw-rw-r--   1 ubuntu ubuntu 259641 Sep  5 14:01 p179-40.png
+-rw-rw-r--   1 ubuntu ubuntu 260312 Sep  5 14:02 p190-51.png
+-rw-rw-r--   1 ubuntu ubuntu 288842 Sep  5 14:01 pMID-11.png
+-rw-rw-r--   1 ubuntu ubuntu 260546 Sep  5 14:01 pMID-12.png
+-rw-rw-r--   1 ubuntu ubuntu 292077 Sep  5 14:01 pMID-13.png
+-rw-rw-r--   1 ubuntu ubuntu 291469 Sep  5 14:01 pMID-14.png
+-rw-rw-r--   1 ubuntu ubuntu 305495 Sep  5 14:01 pMID-15.png
+-rw-rw-r--   1 ubuntu ubuntu 257276 Sep  5 14:01 pMID-16.png
+-rw-rw-r--   1 ubuntu ubuntu 197311 Sep  5 14:02 pP63-57.png
+-rw-rw-r--   1 ubuntu ubuntu 214404 Sep  5 14:02 pP63-58.png
+-rw-rw-r--   1 ubuntu ubuntu 212217 Sep  5 14:02 pP63-59.png
+-rw-rw-r--   1 ubuntu ubuntu  50123 Sep  5 14:10 test12-childdata.json
+-rw-rw-r--   1 ubuntu ubuntu  10544 Sep  5 14:10 test12_childdata.py
+-rw-rw-r--   1 ubuntu ubuntu    705 Sep  5 14:12 test2-partition.log
+-rw-rw-r--   1 ubuntu ubuntu   4278 Sep  5 14:04 test3-split32.json
+-rw-rw-r--   1 ubuntu ubuntu   5951 Sep  5 14:04 test3_split32.py
+# FALLACY-v2.md: campaign reasoning guardrail
+
+Check before promotion.
+
+- **Flag/place/series.** Never identify a cv flag, physical place, and cover
+  series. Separate strict-below from at-level parting and denominator shedding.
+- **Per-ray/exit-set charge.** Charge only a typed first-separation set; prove
+  flags distinct and count each once.
+- **Carrier/attainment.** `REPRESENTATIVE` is not `FULL_ACTUAL_EXIT`. The
+  latter aliases `FULL_ACTUAL_FIRST_SEPARATION` and supplies only a floor,
+  never attainment.
+- **Pole/interior.** Use pole identities only after checking the vertex class
+  and every source hypothesis.
+- **Floor/attainment.** A lower bound is not exact; equality needs a theorem or
+  a witness covering every omitted term.
+- **`sat()` wrapping.** Extract the ideal component, assert its ring, and run
+  positive and negative controls.
+- **Raw remainder degree.** Normal-form in the declared quotient/localization,
+  branch on vanished leaders, and handle zero.
+- **Variable/ring map.** Declare the map, generator order, coefficient field,
+  and image checks; matching names prove nothing.
+- **Prime label/derivative.** A prime mark is a label unless the source defines
+  differentiation; rename ambiguity.
+- **Merge-free/M-descent.** Statement 8.5 needs each lower endpoint outside
+  `V_{2,a}`. A regular dirty `V_{2,a}` step can change `M` without an MP0 merge.
+- **Target/arrival index.** Keep fixed `nu_G` distinct from incoming `nu_U` and
+  legacy search indices; missing route-to-state data means fallback.
+
+If no safe replacement exists, return typed `OPEN`; never fill a gap by cap or
+analogy.
+
+For an exit claim, add exactly one line:
+`charge_basis={"delta":"3/2","branch":"q>=2","flag_count":1,"citation":"path:line"}`.
+Allowed branches: `q=1-exact`, `q>=2`, `multi-flag`. This declares, never
+infers, a basis. Declare only a new exit-price assertion; consuming a promoted
+price needs no line. Cite its mathematical source, not a prior validator result.
+# Child characteristic data — three decision tests on the U-NEGATIVE / child-top conventions
+
+Lane `child-data-tests-opus5-20260905`; adapter opus. Drivers
+`box/child-data-20260905/`. Frozen inputs `/tmp/jc2-lane.KOq6fN/inputs`.
+
+## 0. Verdict first
+
+```text
+TEST 1  OPEN[UNEG-SHAPE-LICENCE]   -> LICENCE PROVED, WRONG MECHANISM NAMED.
+  V'_2 does NOT count branches of h'.  Moh Def 5.1(1) p.179 makes V_{i+1} a
+  NORMALISED COUNT OF ROOTS OF g: "In the disc D_i the polynomials g(y) have
+  precisely (n/d_{i+1}) V_{i+1} roots."  For the child that reads: g' has
+  (n'/d'_2) V'_2 roots in D'_1.  Prop 6.3(2) p.197 gives g' EXACTLY n' roots
+  (monic in pi, pi-degree u_s n/d_s).  A disc holds at most all the roots, so
+      (n'/d'_2) V'_2 <= n'  =>  V'_2 <= d'_2 = gcd(n',m') = K'  =>  u' >= 0.
+  One line, no induction, no top convention, no h'.  The frozen h-support
+  theorem does NOT settle it and in fact REMOVES shape.py's mechanism.
+
+TEST 2  OPEN[CHILD-TOP-CONVENTION] -> PROVED AT u_s=1, UNPROVED AT u_s>=2.
+  Moh p.174 Definition-Remark: "The last effective characteristic pair is
+  denoted by M_s in this article" (drop a terminal M_h = n-1).  Moh p.150:
+  M_{h+1} = infinity, so the chain closes at the first h with d_{h+1}=1.
+  Closed form, checked 1420/1420:  d'_{s'+1} = gcd(n',M'_1..M'_{s'}) = u_s,
+  so the child's chain closes iff u_s = 1 (1,110 rows) and stays OPEN on all
+  310 u_s>=2 rows.  Instance (96,72) M=(36,78,94) V=(4,3,5): child (16,12)
+  M'=(-12,6,13), d'=(16,4,2,1), d'_4=1 -> M'_4 = infinity:  THE TOWER CLOSES
+  AT 13, not at n'-2 = 14.  Moh's p.207: the five rows he descends all have
+  u_s=1 and all close; the ONE he skips, (99,66), has u_s=3 and does not.
+
+TEST 3  OPEN[UNEG-192-144-SPLIT-3/2] -> EXCLUDED, all four rows, by (L).
+  (u_s,v_s)=(2,4), delta*=3/2: t = (delta-1)/(v_s-u_s*delta) = 1/2, k = W-1/2.
+  Only partition of u_s=2 with >=2 blocks is [1,1]; k*lam = W-1/2 is not an
+  integer so both roots are HIGH, sum nu = 2W+2 > deg q = 2W+1.  DEAD.
+
+CONSEQUENCE (a): all 90 operative U-NEGATIVE rows are dead -- 84 at u_s=1
+  (Prop 6.4 forces the descent), 2 at u_s=2 with an empty split window, and the
+  4 of TEST 3.  CONSEQUENCE (b): (C-TOP) becomes LICENSED on the 1,110 u_s=1
+  rows and kills 936 of them (p.174-effective count); it stays UNLICENSED on the
+  310 u_s>=2 rows.  Corrected partition in Sec. 3.4.  No ledger edit here.
+```
+
+No new exit-price assertion is made, so no `charge_basis` line is licensed.
+
+---
+
+## 1. Frozen-input gate
+
+Manifest built with `awk` from the `charged_input_<i>_basename=` /
+`charged_input_<i>_sha256=` lines of
+`xmodel/child-data-tests-opus5-20260905.run.v2` and checked with
+`sha256sum -c`: **8/8 `OK`**, no digest retyped. Banked at
+`box/child-data-20260905/inputs.sha256`; artifacts at `artifacts.sha256`.
+
+Page images rendered here at 300 dpi from the charged PDF (its text layer drops
+the display math on all of them): **p.150** (`pMID-11.png`), **p.174**
+(`p174-35.png`), **p.179** (`p179-40.png`), **p.196/197/198**
+(`pP63-57/58/59.png`). Every quotation below is read off those images.
+
+---
+
+## 2. TEST 1 — OPEN[UNEG-SHAPE-LICENCE]
+
+### 2.1 What V'_2 counts, from the print
+
+Moh 1983 **p.179, Definition 5.1(1)**, verbatim:
+
+> (1) In the disc `D_i` the polynomials `g(y)` have precisely `(n/d_{i+1}) V_{i+1}`
+> roots. `T_j^psi(y)` has precisely `(-mu_j/d_{i+1}) V_{i+1}` roots for `j=1,…,i`,
+
+and **Definition 5.1(2)**: "`V_{i+1} d_i/d_{i+1} >= V_i > d_i/(n-M_i)` for
+`i = r+1,…,s`, `V_{s+1} = d_{s+1}`". So `V_{i+1}` is a **normalised root count of `g` in `D_i`**: the fraction of
+roots inside `D_i` is `V_{i+1}/d_{i+1}`, the same for `g` and every `T_j^psi`.
+It is **not** a multiplicity in `h`; `h` does not occur in Def 5.1 at all.
+At `i = 1` for the child, `V'_2` is fixed by
+
+```text
+#{roots of g' in D'_1}  =  (n'/d'_2) V'_2 .
+```
+
+The charged docstring (`shape.py:1-21`, "`deg_x h = u' = d_2' - V_2'`", leading
+form `y^{V_2}(y-x)^{u'}`) is a *downstream* reading via Lemma 5.3's two-point
+leading form, licensed by its own text only at `delta'_2 = -1` — true on **1 of
+the 90** operative U-NEGATIVE rows. As the named mechanism it is **REFUTED**.
+
+### 2.2 The derivation that does work
+
+Moh **p.197, Prop 6.3(2)**, verbatim: "`gbar(sigma), T1bar^psi(sigma), …,
+T_{s-1}bar^psi(sigma)` are monic in `pi` with `pi`-degree `u_s n/d_s`,
+`u_s(-mu_1)/d_s`, …, `u_s(-mu_{s-1})/d_s` respectively", confirmed by the proof
+on **p.198**: `deg gbar_sigma(pi) = u_s n/d_s`. So `g'` is monic of degree
+exactly `n' = u_s n/d_s` in the child's root variable `pi`, with `n'` roots. Then
+
+```text
+(n'/d'_2) V'_2  =  #{roots of g' in D'_1}  <=  #{roots of g'}  =  n'
+        =>  V'_2 <= d'_2 = gcd(n',m') = K'        =>   u' = K' - V'_2 >= 0.
+```
+
+Two remarks. (i) The same one-liner at general `i` gives `V_{i+1} <= d_{i+1}` at
+**every** level with no induction and no top convention. (ii) It uses only
+`d'_2 = gcd(n',m')` and the child's level-2 identification — **not** the child's
+top — so it is untouched by TEST 2's negative half.
+
+### 2.3 The concrete row (delta'_2 != -1)
+
+`box/child-data-20260905/test12_childdata.py`, first of the 84:
+
+```text
+parent  n=108 m=72  M=(-72,-18,60,106)  V=(2:11, 3:15, 4:5)   s=4, d_s=6, u_s=1
+child   (n',m') = (18,12)   K' = d'_2 = 6   V'_2 = 11   u' = -5   ell = 3
+        delta'_2 != -1  (so Lemma 5.3's two-point leading form is unavailable)
+
+Def 5.1(1) at i=1, parent :  (n/d_2) V_2   = (108/36)*11 = 33 roots of g in D_1
+Def 5.1(1) at i=1, child  :  (n'/d'_2) V'_2 = (18/6)*11  = 33 roots of g' in D'_1
+Prop 6.3(2)               :  g' has exactly n' = 18 roots in all.
+                             33 > 18.   CONTRADICTION.
+```
+
+The count is *preserved* — `n'/d'_2 = n/d_2` identically, which is why Moh
+writes the parent's `V_2` as the child's on p.207 — while the *total* drops by
+`u_s/d_s`. U-NEGATIVE is exactly `(n/d_2)V_2 > n'`: the level-2 cluster is asked
+to hold more branches than the whole descended curve has. Mechanically, over the
+frozen enumeration (`test12-childdata.json`):
+
+| check | result |
+|---|---|
+| 90 U-NEG rows: parent `D_1` count `==` child `D'_1` count | **90/90** |
+| 90 U-NEG rows: child count `> n'` (Def 5.1(1) violated) | **90/90** |
+| CONTROL — 1,330 non-U-NEG operative rows: Def 5.1(1) violations | **0** |
+| CONTROL — Moh's five p.207 descended rows: all legal | **5/5** |
+
+### 2.4 Does the h-support theorem or Thm 1.2 settle it? No — and it matters
+
+The frozen source-support theorem
+(`moh-hsupport-gate-astra-20260905.md:110`) is
+
+```text
+deg_x [y^a] F <= floor(d (L-a)),   d = -delta_s > 0,
+G_1 = {(b,a) : 0 <= a < K, 0 <= b <= floor(d(K-a))}.
+```
+
+`floor(d(K'-a)) >= 0` for every `0 <= a < K'`, so `G_1` is **never empty** and
+never negative: it cannot produce the `U-NEGATIVE` verdict and cannot supply the
+licence. Worse for the old reading, `shape.py:141-147` returns
+`reason="U-NEGATIVE"` when `u < 0 or degx_h < 0` with `degx_h = u*K//d2` — the
+**old cap `deg_x h = u' = K'-V'_2`**, which the frozen h-support gate rejects in
+terms ("the two old h caps are not justified by D1", line 3). Under the promoted
+theorem the *code's* kill mechanism is void. Theorem 1.2 is ruled out by the same
+report, line 13: "Nor does it state that a y-monic polynomial of degree K has
+x-degree <= K-V2." The kill survives the repair **only because it rests on
+Def 5.1(1), not on any property of `h'`.**
+
+### 2.5 VERDICT (TEST 1)
+
+**LICENCE PROVED — with the source corrected.** `u' = K' - V'_2 >= 0` holds for
+every descended pair whose level-2 datum is the child's own Def 5.1 datum, by
+Def 5.1(1) p.179 + Prop 6.3(2) p.197. The charged wording ("a multiplicity among
+the `K'` branches of `h'`") is **not** the mechanism. The 86 kills of
+scope-leaks §3.2/§3.3 become unconditional. The residual hypothesis is no longer
+about `h'`: it is the single identification `V'_2 = V_2`, `d'_2 = gcd(n',m')`,
+printed by Moh 5/5 on p.207 (all `u_s=1`) — retyped as
+`OPEN[CHILD-LEVEL2-IDENTIFICATION]`, narrower than what it replaces.
+
+---
+
+## 3. TEST 2 — OPEN[CHILD-TOP-CONVENTION]
+
+### 3.1 The child's own characteristic data, from first principles
+
+Moh **p.150**, verbatim, for a pair `(f,g)` with `f = eta^{-m} + sum_{j>-m} f_j(x) eta^j`:
+
+> `d_1 = n`, `d_{j+1} = g.c.d.(n, M_1, …, M_j)`,
+> `M_j = min {i : f_i(x) != 0, d_j /| i}`, `M_{h+1} = infinity`.
+
+Two consequences, neither a convention: `d_j = 1` makes `{i : d_j /| i}`
+**empty**, so `M_j = min(empty) = infinity` — the chain terminates at exactly
+the first `h` with `d_{h+1} = 1` and nowhere else; and `M_1 = -m`, so
+`d_2 = gcd(n,m)`.
+
+Moh **p.174, Definition–Remark**, verbatim:
+
+> The conclusion (1) implies that if `M_h = n-1`, then we should drop it from
+> our own consideration. The "effective" characteristic pairs exclude `M_h` if
+> `M_h = n-1`. **The last effective characteristic pair is denoted by `M_s` in
+> this article.**
+
+So `s` is *defined* as the index of the last effective characteristic pair —
+**not** by `M_s = n-2` and **not** by `delta_s = -1`, which are the Keller-pair
+search conditions the census imposes on top. This is where scope-leaks §3.5 went
+wrong: it declined (C-TOP) because "the child has neither `M'_{s'} = n'-2` nor
+`delta'_{s'} = -1`". What the convention needs is that the child's chain closed.
+
+### 3.2 When does the child's chain close?
+
+`M'_i = M_i u_s/d_s` and `n' = n u_s/d_s` (Prop 6.3(2) + the banked closed
+form), so
+
+```text
+d'_{s'+1} = gcd(n', M'_1, …, M'_{s'}) = (u_s/d_s) gcd(n, M_1, …, M_{s-1})
+          = (u_s/d_s) d_s = u_s .
+```
+
+Checked mechanically on **1420/1420** operative rows, **0 violations**
+(`test12-childdata.json:T2_closed_form`). Hence
+
+| `u_s` | rows | `d'_{s'+1}` | child chain at level `s'+1` |
+|---:|---:|---:|---|
+| 1 | 1,110 | 1 | **closes** — `M'_{s'+1} = infinity` by p.150 |
+| 2 | 265 | 2 | stays open |
+| 3 | 34 | 3 | stays open |
+| 4 | 9 | 4 | stays open |
+| 5 | 2 | 5 | stays open |
+
+At `u_s = 1` the child's effective characteristic data is exactly
+`M'_1, …, M'_{s'}` — no further pair can exist — so `s'` is the last effective
+index and Def 5.1(2)'s `V'_{s'+1} = d'_{s'+1} = 1` is **forced**, not assumed.
+
+At `u_s >= 2` the chain has **not** closed: the child has at least one further
+pair `M'_{s'+1} < infinity` whose value is a fact about the child's own `f'`
+expansion, not determined by the parent's data. The convention could still be
+rescued if that extra pair were exactly `n'-1` — `gcd(u_s, n'-1) = 1`
+
+exec
+/bin/bash -lc "sed -n '220,460p' /tmp/jc2-lane.RbaPkU/inputs/child-data-tests-opus5-20260905.md
+sed -n '1,260p' box/child-data-20260905/test12_childdata.py
+sed -n '1,200p' /tmp/jc2-lane.RbaPkU/inputs/moh_skeleton_full.py" in /home/ubuntu/jc2
+ succeeded in 0ms:
+rescued if that extra pair were exactly `n'-1` — `gcd(u_s, n'-1) = 1`
+identically since `u_s | n'`, so one such level would close the chain and be
+dropped by p.174 — but whether it *is* `n'-1` is undecided here. **Not proved.**
+
+### 3.3 The named instance, and Moh's own table
+
+Parent `(96,72)`, `M = (-72, 36, 78, 94)`, `V = (4,3,5)`, `s = 4`,
+`d = (96, 24, 12, 6, 2)`, `d_s = 6`, `V_s = 5`, `u_s = 1`, `ell = 3`:
+
+```text
+child  n' = 16,  m' = 12,  M' = (-12, 6, 13),  s' = 3
+       d'_1..d'_4 = (16, 4, 2, 1)          <- gcd(16,-12)=4, gcd(4,6)=2, gcd(2,13)=1
+       d'_4 = 1  =>  M'_4 = min(empty) = infinity          [p.150]
+  ==>  THE TOWER CLOSES AT 13.  It cannot continue to n'-2 = 14, and the p.174
+       terminal level n'-1 = 15 does not arise.
+       V'_{s'} = V_3 = 3  vs  d'_{s'} = 2   ->  (C-TOP) FAILS on this row.
+       delta'_{s'} != -1 and M'_{s'} != n'-2, as required by the charge.
+```
+
+For contrast the parent's own chain does not close at `s`: `d_5 = 2 > 1`, so it
+has a further pair, necessarily the terminal `M_5 = n-1 = 95` (`gcd(2,95)=1`)
+that p.174 drops. That is the asymmetry §3.5 sensed but mis-attributed.
+
+Cross-check against Moh's printed p.202 → p.207 descent
+(`test12-childdata.json:T2_moh_p207_crosscheck`):
+
+| parent `(n,m)`, `V` | `u_s` | child `(n',m')`, `M'` | child `d'` | closes | Moh p.207 |
+|---|---:|---|---|---|---|
+| `(64,48)` `V=(3,3)` | 1 | `(16,12)` `M'=(-12,13)` | `16,4,1` | **yes** | `(16,12); 13; 3` ✓ |
+| `(84,56)` `V=(2,3)` | 1 | `(21,14)` `M'=(-14,16)` | `21,7,1` | **yes** | `(21,14); 16; 2` ✓ |
+| `(84,56)` `V=(5,3)` | 1 | `(21,14)` `M'=(-14,18)` | `21,7,1` | **yes** | `(21,14); 18; 5` ✓ |
+| `(75,50)` `V=(3,4)` | 1 | `(15,10)` `M'=(-10,11)` | `15,5,1` | **yes** | `(15,10); 11; 3` ✓ |
+| `(75,50)` `V=(2,4)` | 1 | `(15,10)` `M'=(-10,11)` | `15,5,1` | **yes** | `(15,10); 11; 2` ✓ |
+| `(99,66)` `V=(8,8)` | 3 | `(27,18)` `M'=(-18,21)` | `27,9,3` | **no** | *skipped by Moh* |
+
+5/5 match on `(n',m')`, `M'_2`, `V'_2`. The one row Moh declines to descend is
+exactly the one whose child chain does not close — a printed positive *and*
+negative control for the criterion, not an analogy.
+
+### 3.4 VERDICT (TEST 2), and the corrected partition
+
+**PROVED at `u_s = 1` by a general argument (p.150 termination + p.174's
+definition of `M_s` + the closed form `d'_{s'+1} = u_s`); UNPROVED at
+`u_s >= 2`.** It is not "holds for this instance only": the instance is a
+corollary of the general argument.
+
+Consequences over the 1,420 operative rows. (C-TOP) is `V'_{s'} <= d'_{s'}`,
+i.e. Def 5.1(2) at `i = s'` given the top convention, counted with the p.174
+drop applied to the child's `M'` list (90 rows carry `M'_{s'} = n'-1`; disjoint
+from the 90 U-NEGATIVE rows — the equal counts are a coincidence):
+
+| class | rows | status after this lane |
+|---|---:|---|
+| `u_s=1`, (C-TOP) fails | **936** | **licensed kill** (incl. all 84 `u_s=1` U-NEG) |
+| `u_s=1`, (C-TOP) holds | 174 | live; 46 degree pairs; by `s'` `{2:24, 3:100, 4:41, 5:9}` |
+| `u_s>=2` | 310 | (C-TOP) **not licensed**; 6 U-NEG rows dead by Secs. 2 and 4 |
+
+So scope-leaks §3.5's "1,195 of 1,420 die" splits into **936 licensed** and the
+rest unlicensed; the operative residual is **174 + 310 = 484 rows**, not 225,
+and the `u_s>=2` block is now the whole obstruction. No ledger entry here.
+
+---
+
+## 4. TEST 3 — OPEN[UNEG-192-144-SPLIT-3/2]
+
+Driver `box/child-data-20260905/test3_split32.py`; the screen functions are
+**imported** from `box/g9966n1b3-20260903/face_screen.py`, not retyped.
+`(u_s, v_s) = (2,4)`, `delta* = 3/2`, the sole member of the charged radius
+window `{delta in (1, v_s/u_s) : den(delta) <= u_s}`.
+
+Certificate, identical for all four rows (`test3-split32.json`):
+
+```text
+X = u*delta - v = -1 ,  a = W*X - 1 + delta = -W + 1/2 ,  k = a/X = W - 1/2 ,
+t = W - k = (delta-1)/(v - u*delta) = (1/2)/1 = 1/2 ,   Q = den(delta) = 2 ,
+deg q = W*u + 1 = 2W + 1 .
+
+partitions of u_s = 2 with >= 2 blocks:  [1,1]  (only one)
+(G): {r,-r}, r != 0, is zeta_2-stable  ->  (G) does NOT kill.
+(L): low branch needs k*lam = W - 1/2 in Z  ->  FAILS for lam = 1.
+     So both roots are high:  nu = lam*W + 1 = W + 1 each,  sum nu = 2W + 2.
+     2W + 2 > 2W + 1 = deg q.        ->  no admissible assignment.  DEAD.
+Equivalently the counting bound  #high <= t*(sum low) + 1 = 1  vs  #high = 2.
+```
+
+| row | `M` | `V_2` | `d_s` | `(u_s,v_s)` | window | verdict |
+|---|---|---:|---:|---|---|---|
+| R1 | `(-120,-12,18,190)` | 23 | 6 | (2,4) | `{3/2}` | **DEAD by (L)** |
+| R2 | `(-72,12,78,190)` | 22 | 6 | (2,4) | `{3/2}` | **DEAD by (L)** |
+| R3 | `(-72,12,78,190)` | 31 | 6 | (2,4) | `{3/2}` | **DEAD by (L)** |
+| R4 | `(-24,132,174,190)` | 23 | 6 | (2,4) | `{3/2}` | **DEAD by (L)** |
+
+Controls, all pass:
+
+* **CONTROL A (replay).** The imported screen reproduces the banked
+  `face-screen.json` (G)+(L) live/dead split on all five `(99,66)` skeletons
+  `S1,S2,S3,S4,S7`, every `(delta,partition)` chart: `pass = True`.
+* **CONTROL C (positive).** The same call at `(u,v) = (4,7)`, `delta = 3/2`
+  leaves `[2,2]` and `[2,1,1]` **alive** — the screen is not vacuously killing.
+* **CONTROL W.** The banked W-sweep was run at the `(99,66)` shape only; re-run
+  here for `(u,v) = (2,4)`, `W = 5…59`: the single verdict vector `['DEAD']`
+  throughout. `t = (delta-1)/(v-u*delta)` and the `(L)` test contain no `W`, so
+  no `W` closed form for `(192,144)` is needed.
+
+**VERDICT: EXCLUDED.** The window is empty for all four rows, `(R)` is forced,
+Prop 6.3 applies, and Sec. 2's contradiction kills them. Family (a) of the
+scope-leaks report is now **CLOSED, 90/90**, with no typed residual convention
+other than `OPEN[CHILD-LEVEL2-IDENTIFICATION]`.
+
+---
+
+## 5. FALLACY-v2 ledger
+
+| clause | where it bit |
+|---|---|
+| Carrier/attainment | Moh p.208(1) is one printed *instance* of a descended leading form; §2.1 refuses it as the definition of `V'_2`. The p.207 table is a 5/5 control, never the general theorem — §3.2's general statement comes from p.150. |
+| Floor/attainment | The h-support bound is a *bound*; §2.4 uses only its non-negativity and never promotes it to an equality. |
+| Prime label/derivative | `M'`, `d'`, `V'`, `s'`, `delta'` are descended-datum labels, never derivatives. `p'`/`q'` in §4 ARE derivatives — the banked face identity's own notation, flagged to keep the two apart. |
+| Target/arrival index | `s` (parent, last effective pair) and `s'` (child) kept distinct throughout; the p.174 drop is applied to the child's own `M'` list in §3.4 and the two 90-row sets checked disjoint. |
+| Merge-free / M-descent | §3.2's negative half is the refusal to assume a merge-free child top at `u_s>=2`. |
+| Variable/ring map | The child's root variable is `pi`, with `gamma = theta^{1/u_s}`, `theta = y^{-1}`, per p.198's inversion `x = (1/b)[theta^{-1}+…]`, `z = y - bx - e`: the child's roots are `z`-roots over `y`, **not** a sub-multiset of the parent's `y`-roots. `n'/d'_2 = n/d_2` is asserted as arithmetic only, never as a carry-over of individual roots. |
+| positive/negative controls | CONTROL A/C/W in §4; non-U-NEG (0/1,330) and Moh-5 in §2.3; the `(99,66)` printed negative control in §3.3. |
+| `sat()`, raw remainder degree | No Gröbner run in this lane; `k killed inline = 0`. |
+
+Corrections to earlier campaign statements, stated once:
+
+* scope-leaks §3.3 names the licence as a statement about branches of `h'`. That
+  is not what Def 5.1 says and it is unavailable on 89/90 of the rows; the true
+  source is Def 5.1(1)'s root count for `g'`. The conclusion is unchanged.
+* scope-leaks §3.5 declines (C-TOP) because the child lacks `M'_{s'} = n'-2` and
+  `delta'_{s'} = -1`. Those are not what `V_{s+1} = d_{s+1}` requires; p.174
+  defines `M_s` as the last **effective** characteristic pair, and the criterion
+  is `d'_{s'+1} = 1`, i.e. `u_s = 1`. (C-TOP) is licensed on 1,110 rows.
+* This lane's §3.4 (C-TOP) failure count is 936, not the 970 obtained without
+  the p.174 drop; both are in `test2-partition.log`.
+
+---
+
+## OPENS RAISED
+
+```text
+OPEN[CHILD-LEVEL2-IDENTIFICATION]
+  QUANTITY: the child's own Def 5.1 level-2 datum satisfies V'_2 = V_2 and
+    d'_2 = gcd(n',m'), for every descended pair, including u_s >= 2.
+  STATUS: d'_2 = gcd(n',m') is p.150 arithmetic on the child's degrees and is
+    not at issue.  V'_2 = V_2 is printed by Moh p.207 on 5/5 rows, ALL with
+    u_s = 1, and is re-derived here from the count identity n'/d'_2 = n/d_2.
+    Untested against print at u_s >= 2.
+  CHEAPEST TEST: descend one u_s >= 2 row and read V'_2 off the child's own
+    p.150 expansion; or find the u_s >= 2 analogue of Moh's p.207 column.
+  BLAST RADIUS: replaces OPEN[UNEG-SHAPE-LICENCE], which is now discharged.
+    The 84 u_s=1 U-NEGATIVE kills do not depend on it beyond what p.207 prints.
+
+OPEN[CHILD-TOP-AT-US-GE-2]
+  QUANTITY: at u_s >= 2 the child's chain has d'_{s'+1} = u_s > 1, so at least
+    one further characteristic pair M'_{s'+1} < infinity exists; is it equal to
+    n'-1 (whence p.174 drops it and V'_{s'+1} = d'_{s'+1} is restored), or not?
+  STATUS: undecided from the parent datum.  gcd(u_s, n'-1) = 1 identically, so
+    a single such level WOULD close the chain; existence is the open part.
+  CHEAPEST TEST: compute M'_{s'+1} for one u_s = 2 row from the child's own
+    f' expansion (p.150 recipe) rather than from the parent's transformed labels.
+  BLAST RADIUS: 310 operative rows; decides whether (C-TOP) extends from 936
+    to 1,161 kills and whether the residual is 484 rows or 259.
+
+OPEN[CTOP-PROMOTION]
+  QUANTITY: (C-TOP) = "V'_{s'} <= d'_{s'}" is licensed on the 1,110 u_s = 1
+    operative rows and kills 936 of them, leaving 174 in 46 degree pairs.
+  STATUS: derived here from Def 5.1(2) at i = s' plus the now-proved child top
+    convention; NOT entered in any ledger by this lane (no ledger edits charged).
+  CHEAPEST TEST: rerun_screens on the 174 survivors before any Groebner spend.
+  BLAST RADIUS: cuts the s'>=3 compute obligation (scope-leaks class C) from 978
+    chartable rows to the u_s=1 survivors only.
+```
+
+<!-- BODY-END -->
+#!/usr/bin/env python3
+"""TEST 1 (UNEG-SHAPE-LICENCE) + TEST 2 (CHILD-TOP-CONVENTION): mechanical part.
+
+Arithmetic on PRINTED definitions only, cited inline:
+
+  p.150  characteristic data {M_j,d_j} of a pair (f,g) w.r.t. x:
+           d_1 = n,  d_{j+1} = g.c.d.(n, M_1, ..., M_j),
+           M_j = min{ i : f_i(x) != 0, d_j /| i },   M_{h+1} = infinity.
+         Consequence used below: since d_j = 1 makes {i : d_j /| i} EMPTY, the
+         chain terminates at exactly the first h with d_{h+1} = 1, and nowhere
+         else.  M_1 = -m.
+  p.179  Def 5.1(1): in D_i the polynomials g(y) have precisely (n/d_{i+1})V_{i+1}
+         roots;  T_j^psi(y) has precisely (-mu_j/d_{i+1})V_{i+1} roots.
+         Def 5.1(2): V_{i+1} d_i/d_{i+1} >= V_i > d_i/(n-M_i),  V_{s+1}=d_{s+1}.
+         Def 5.1(3): the delta_i formula.
+  p.197  Prop 6.3(2): gbar(sigma) is monic in pi with pi-degree u_s*n/d_s.
+  p.198  the inversion x=(1/b)[theta^-1+...], y=theta^-1, z=y-bx-e, and
+         deg gbar_sigma(pi) = u_s n/d_s.
+"""
+import json
+from fractions import Fraction as F
+from math import gcd
+
+SRC = "/home/ubuntu/jc2/box/scopeleaks-20260905/scope_enum.json"
+OUT = "/home/ubuntu/jc2/box/child-data-20260905/test12-childdata.json"
+ROWS = json.load(open(SRC))["operative_rows"]
+
+
+def chain(n, Mlist):
+    """p.150: d_1=n, d_{j+1}=gcd(n,M_1..M_j).  Mlist = [M_1, M_2, ...]."""
+    d, g = [n], n
+    for M in Mlist:
+        g = gcd(g, abs(int(M)))
+        d.append(g)
+    return d                       # d[0]=d_1, d[1]=d_2, ...
+
+
+def parent_M(r):
+    return [-r["m"]] + list(r["Ms"])            # M_1 = -m, then M_2..M_s
+
+
+def child_M(r):
+    return [-r["m1"]] + [int(F(x)) for x in r["Mp"]]   # M'_1 = -m', M'_2..M'_{s'}
+
+
+out = {"schema": "jc2.child-data.test12/v1", "source": SRC, "n_operative": len(ROWS)}
+
+# ============================ TEST 2 =========================================
+# (a) the closed form  d'_{s'+1} = gcd(n', M'_1..M'_{s'}) = (u_s/d_s)*d_s = u_s
+bad, closes, open_chain = [], 0, 0
+for r in ROWS:
+    dch = chain(r["n1"], child_M(r))
+    dtop = dch[-1]                                   # = d'_{s'+1}
+    if dtop != r["u_s"]:
+        bad.append({"n": r["n"], "m": r["m"], "Ms": r["Ms"], "d_top": dtop, "u_s": r["u_s"]})
+    if dtop == 1:
+        closes += 1
+    else:
+        open_chain += 1
+out["T2_closed_form"] = {
+    "claim": "d'_{s'+1} = gcd(n', M'_1..M'_{s'}) = u_s   [p.150 chain on the descended M']",
+    "violations": bad, "holds_on": len(ROWS) - len(bad),
+    "child_chain_reaches_1_at_level_s'+1": closes,
+    "child_chain_still_>1_at_level_s'+1": open_chain}
+
+# (b) cross-tab against u_s
+by_us = {}
+for r in ROWS:
+    by_us.setdefault(r["u_s"], [0, 0])
+    by_us[r["u_s"]][0 if chain(r["n1"], child_M(r))[-1] == 1 else 1] += 1
+out["T2_by_u_s"] = {str(k): {"closes(d'=1)": v[0], "stays_open(d'>1)": v[1]}
+                    for k, v in sorted(by_us.items())}
+
+# (c) the named instance, in full
+inst = [r for r in ROWS if r["n"] == 96 and r["m"] == 72
+        and list(r["Ms"]) == [36, 78, 94]]
+inst_rec = []
+for r in inst:
+    pM, cM = parent_M(r), child_M(r)
+    pd, cd = chain(r["n"], pM), chain(r["n1"], cM)
+    # would a further child level at n'-2 or the p.174 terminal n'-1 be legal?
+    nxt2 = gcd(cd[-1], abs(r["n1"] - 2))
+    nxt1 = gcd(cd[-1], abs(r["n1"] - 1))
+    inst_rec.append({
+        "parent": {"n": r["n"], "m": r["m"], "M_1..M_s": pM, "V": r["V"], "s": r["s"],
+                   "d_1..d_{s+1}": pd,
+                   "note": "d_{s+1}=%d>1 so the PARENT chain also continues; the p.174 "
+                           "terminal level is M=n-1=%d, and gcd(d_{s+1},n-1)=%d=1 closes it"
+                           % (pd[-1], r["n"] - 1, gcd(pd[-1], r["n"] - 1))},
+        "child": {"n'": r["n1"], "m'": r["m1"], "M'_1..M'_{s'}": cM, "s'": r["sp"],
+                  "d'_1..d'_{s'+1}": cd, "d'_{s'+1}": cd[-1], "u_s": r["u_s"],
+                  "M'_{s'+1} by p.150": ("infinity (d'_{s'+1}=1: the set {i : d /| i} is empty)"
+                                         if cd[-1] == 1 else "finite: chain not closed"),
+                  "could_continue_to_n'-2=%d" % (r["n1"] - 2):
+                      ("NO - d'_{s'+1}=1 forbids any further level" if cd[-1] == 1
+                       else "possible, gcd->%d" % nxt2),
+                  "p174_terminal_n'-1=%d" % (r["n1"] - 1):
+                      ("not needed" if cd[-1] == 1 else "gcd->%d" % nxt1)},
+        "V'_{s'} vs d'_{s'}": {"V'_s'": r["Vp"][-1], "d'_s'": cd[-2],
+                               "CTOP_holds": r["Vp"][-1] <= cd[-2]},
+        "ell": r["ell"], "delta'_{s'}_is_-1":
+            (int(F(r["Mp"][-1])) == r["n1"] - r["ell"] - 2)})
+out["T2_named_instance_96_72"] = inst_rec
+
+# (d) Moh's own six p.202 rows, descended on p.207 -- printed cross-check
+MOH = [  # (n, m, [M_2..M_s], V dict)   p.202 table, as banked in CONTROL P
+    (64, 48, [52, 62], {2: 3, 3: 3}),
+    (84, 56, [64, 82], {2: 2, 3: 3}),
+    (84, 56, [72, 82], {2: 5, 3: 3}),
+    (75, 50, [55, 73], {2: 3, 3: 4}),
+    (75, 50, [55, 73], {2: 2, 3: 4}),
+    (99, 66, [77, 97], {2: 8, 3: 8}),
+]
+PRINTED_207 = {  # (n',m'); M'_2; V'_2   as printed by Moh on p.207
+    (64, 48, 3): ((16, 12), 13, 3),
+    (84, 56, 2): ((21, 14), 16, 2),
+    (84, 56, 5): ((21, 14), 18, 5),
+    (75, 50, 3): ((15, 10), 11, 3),
+    (75, 50, 2): ((15, 10), 11, 2),
+}
+moh_rec = []
+for (n, m, Ms, V) in MOH:
+    s = len(Ms) + 1
+    ds = chain(n, [-m] + Ms)[-1]           # d_{s+1}
+    # tower gcds: d_1..d_{s+1}; d_s is the one at index s-1
+    dch = chain(n, [-m] + Ms)
+    d_s = dch[s - 1]
+    us, vs = d_s - V[s], V[s]
+    n1, m1 = n * us // d_s, m * us // d_s
+    cM = [-m1] + [M * us // d_s for M in Ms[:-1]]
+    cd = chain(n1, cM)
+    key = (n, m, V[2])
+    pr = PRINTED_207.get(key)
+    moh_rec.append({"parent": {"n": n, "m": m, "M": [-m] + Ms, "V": V, "s": s,
+                               "d_1..d_{s+1}": dch, "d_s": d_s, "u_s": us, "v_s": vs},
+                    "child": {"n'": n1, "m'": m1, "M'": cM, "d'": cd,
+                              "d'_{s'+1}": cd[-1], "closes": cd[-1] == 1},
+                    "moh_p207_printed": pr,
+                    "matches_p207": (pr is not None
+                                     and pr[0] == (n1, m1) and pr[1] == cM[1] and pr[2] == V[2]),
+                    "skipped_by_moh": pr is None})
+out["T2_moh_p207_crosscheck"] = moh_rec
+
+# ============================ TEST 1 =========================================
+# Def 5.1(1) at i=1 -- root counts.  Parent: (n/d_2)V_2 roots of g in D_1.
+# Child : (n'/d'_2)V'_2 roots of g' in D'_1, and g' has exactly n' roots (p.197 (2)).
+uneg = [r for r in ROWS if r["up"] < 0]
+t1 = []
+for r in uneg:
+    par_D1 = F(r["n"], r["d2"]) * r["V2p"]
+    ch_D1 = F(r["n1"], r["d2p"]) * r["V2p"]
+    t1.append({"n": r["n"], "m": r["m"], "Ms": r["Ms"], "V": r["V"], "u_s": r["u_s"],
+               "n'": r["n1"], "m'": r["m1"], "K'=d'_2": r["d2p"], "V'_2": r["V2p"],
+               "u'": r["up"], "ell": r["ell"], "s'": r["sp"],
+               "roots_of_g_in_D1": str(par_D1), "roots_of_g'_in_D1'": str(ch_D1),
+               "counts_equal": par_D1 == ch_D1,
+               "child_total_roots_n'": r["n1"],
+               "Def51_1_violated": ch_D1 > r["n1"]})
+out["T1_uneg_root_counts"] = {"rows": len(t1), "all_counts_preserved":
+                              all(x["counts_equal"] for x in t1),
+                              "all_violate_Def51_1": all(x["Def51_1_violated"] for x in t1),
+                              "sample": t1[:6], "all": t1}
+
+# control: the same count on the NON-U-NEGATIVE operative rows must be legal
+nonneg = [r for r in ROWS if r["up"] >= 0]
+viol = [r for r in nonneg if F(r["n1"], r["d2p"]) * r["V2p"] > r["n1"]]
+out["T1_control_nonuneg"] = {"rows": len(nonneg), "Def51_1_violations": len(viol),
+                             "pass": len(viol) == 0}
+
+# control: Moh's own five descended rows
+mohc = []
+for rec in moh_rec:
+    if rec["skipped_by_moh"]:
+        continue
+    n1, m1 = rec["child"]["n'"], rec["child"]["m'"]
+    V2 = rec["parent"]["V"][2]
+    d2p = gcd(n1, m1)
+    mohc.append({"child": (n1, m1), "V'_2": V2, "K'": d2p,
+                 "roots_in_D1'": str(F(n1, d2p) * V2), "n'": n1,
+                 "legal": F(n1, d2p) * V2 <= n1})
+out["T1_control_moh5"] = {"all_legal": all(c["legal"] for c in mohc), "rows": mohc}
+
+# h-support envelope: can it ever be negative?   d = -delta'_{s'} > 0
+out["T1_hsupport"] = {
+    "theorem": "deg_x [y^a] h' <= floor(d*(K'-a)), d = -delta_s > 0  (frozen h-support gate)",
+    "note": "floor(d*(K'-a)) >= 0 for every 0<=a<K', so the envelope G_1 is NEVER empty; "
+            "it cannot produce the shape.py U-NEGATIVE early return and cannot supply the licence.",
+    "shape_py_mechanism": "shape.py:141-147 returns U-NEGATIVE when u<0 or degx_h<0, where "
+                          "degx_h = u*K//d2 uses the OLD cap deg_x h = u' = K'-V'_2, which the "
+                          "frozen h-support gate rejects as 'not justified by D1'."}
+
+json.dump(out, open(OUT, "w"), indent=1, sort_keys=False, default=str)
+
+print("=== TEST 2 ===")
+print("d'_{s'+1} = u_s  holds on %d/%d operative rows; violations: %d"
+      % (out["T2_closed_form"]["holds_on"], len(ROWS), len(out["T2_closed_form"]["violations"])))
+print("child chain closes (d'=1) :", out["T2_closed_form"]["child_chain_reaches_1_at_level_s'+1"])
+print("child chain stays open    :", out["T2_closed_form"]["child_chain_still_>1_at_level_s'+1"])
+print("by u_s:", json.dumps(out["T2_by_u_s"]))
+print("\nnamed instance (96,72):")
+print(json.dumps(inst_rec, indent=1, default=str))
+print("\nMoh p.207 cross-check:")
+for r in moh_rec:
+    print("  parent", r["parent"]["n"], r["parent"]["m"], r["parent"]["V"],
+          "u_s=%d" % r["parent"]["u_s"], "-> child", r["child"]["n'"], r["child"]["m'"],
+          "M'=%s d'=%s closes=%s" % (r["child"]["M'"], r["child"]["d'"], r["child"]["closes"]),
+          "| p207", r["moh_p207_printed"], "match", r["matches_p207"])
+print("\n=== TEST 1 ===")
+print("U-NEG rows:", out["T1_uneg_root_counts"]["rows"],
+      "counts preserved:", out["T1_uneg_root_counts"]["all_counts_preserved"],
+      "all violate Def5.1(1):", out["T1_uneg_root_counts"]["all_violate_Def51_1"])
+print("control non-U-NEG:", out["T1_control_nonuneg"])
+print("control Moh 5:", out["T1_control_moh5"]["all_legal"])
+for x in t1[:3]:
+    print("  ", x["n"], x["m"], x["Ms"], "V'_2=%d K'=%d" % (x["V'_2"], x["K'=d'_2"]),
+          "roots of g in D_1 =", x["roots_of_g_in_D1"],
+          "| roots of g' in D'_1 =", x["roots_of_g'_in_D1'"],
+          "> n' =", x["child_total_roots_n'"])
+#!/usr/bin/env python3
+"""
+box/moh_skeleton_full.py -- Moh 1983 search conditions (1)-(13), IMPLEMENTED VERBATIM.
+
+Lane CENSUS-REBASE (opus5, 2026-09-02).  Standard library only.  FAIL-CLOSED:
+every control must pass before any census/filter number is printed.
+
+This file is a DERIVED COPY of box/moh_skeleton_N.py: the (1)-(7) + Def 5.1 core
+(Skel, census) is RE-DERIVED here from the printed source and then CHECKED, row by
+row, against the imported original (CONTROL 0).  box/moh_skeleton_N.py itself is
+never modified.  New here: conditions (8)-(13), both branches.
+
+SOURCE (read from 300-dpi renderings of refs/moh1983_jram340_configurations_of_roots.pdf,
+sha256 6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51; the
+pdftotext OCR in box/depth-drivers-20260902/moh.txt drops all display math there):
+
+  p.201 l.1-8   (4) {n,M_1,...,M_s} is the part of characteristic data of (f,g) which
+                    are less than n-2,     (5) d_r = g.c.d.{n, M_1, ..., M_{r-1}}.
+  p.201 l.13    (6) 3 <= s <= 5,  d_s >= 4.
+  p.201 l.18    (7) V_{r+1}(d_r/d_{r+1}) >= V_r > d_r/(n - M_r).
+  p.201 l.20-26 (8) "the radii delta_s,...,delta_1 of D_s,...,D_1 can be computed from
+                    Definition 5.1.  We shall consider the increment of the denominator
+                    A_{r-1} of delta_{r-1} with respect to delta_s,...,delta_r.  Namely
+                    let the l.c.m. of the reduced denominators of delta_s,...,delta_r be
+                    L.  Then A_{r-1} is defined to be the reduced denominator of
+                    L*delta_{r-1}."
+  p.201 l.28    (9) V_r (d_{r-1}/d_r) = TRI_{r-1} A_{r-1} + SQ_{r-1}     [division algorithm]
+  p.201 l.30-34 "Let (tbar)^{L A_{r-1}} = t.  Due to the existence of the following
+                    automorphism of k<<tbar>> over k<<tbar^{A_{r-1}}>>,  tbar -> omega tbar,
+                    where omega is a A_{r-1}-th root of unity, the value of V_{r-1} is
+                    further restricted by"
+  p.201 l.36   (10) V_{r-1} <= TRI_{r-1}
+  p.201 l.38   "if the corresponding factor of p(pi) is of the form pi - a with a != 0
+                    or for some j the following"
+  p.201 l.41   (11) V_{r-1} = j A_{r-1} + SQ_{r-1}
+  p.201 l.43   "if the corresponding factor of p(pi) is of the form pi.  Finally, when
+                    r = 2 we must have the following (cf. the proof of Proposition 5.5):"
+  p.201 l.46   (12) A_1 | (n/d_2) V_2,   A_1 | (m/d_2) V_2 - 1
+  p.201 l.48   "or"
+  p.201 l.50   (13) A_1 | (m/d_2) V_2,   A_1 | (n/d_2) V_2 - 1.
+  p.201 l.52   "Furthermore we shall note that the situation indicated by the equation
+                    (11) can not always happen as established by Proposition 5.6."
+
+  p.179  Definition 5.1(2),(3) -- the windows and the logarithmic radii delta_i.
+  p.188  the derivation of (12)/(13): "A | n* V_2 and A -| m* V_2 or A -| n* V_2 and
+         A | m* V_2.  Moreover we always have from the very definition of A the
+         following  A | (n* + m*) V_2 - 1."
+  p.202  the published table of ALL surviving skeletons at n <= 100 (4 (n,m) classes,
+         6 rows counting Moh's bracketed alternates) -- the fail-closed control.
+
+INDEXING.  Moh's A_j is the object the TIME-FUNCTION CALIBRATION lane called Delta_j.
+Conditions (10)/(11) constrain V_{r-1} for r = s,...,3, i.e. they constrain
+V_j for j = s-1,...,2.  (12)/(13) is the separate bottom (r = 2) condition.
+"""
+import sys, os, time, argparse
+from fractions import Fraction as F
+from math import gcd, lcm
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+FAILURES = []
+def check(name, cond, detail=""):
+    if cond: print("  [ok]   %s" % name)
+    else:    print("  [FAIL] %s   %s" % (name, detail)); FAILURES.append(name)
+
+# ===========================================================================
+# PART 0.  the (1)-(7) core, re-derived (checked against moh_skeleton_N in CONTROL 0)
+# ===========================================================================
+class Skel:
+    """Moh skeleton (n, m, [M_2..M_s], {i: V_i}).  M_1 = -m, M_s = n-2, V_{s+1} = d_{s+1}."""
+    def __init__(self, n, m, Ms, Vs):
+        self.n, self.m = n, m
+        full = [-m] + list(Ms)
+        self.s = s = len(full)
+        self.M = {i+1: full[i] for i in range(s)}
+        d = [n]
+        for M in full: d.append(gcd(d[-1], M))
+        self.d = {i+1: d[i] for i in range(len(d))}
+        self.V = dict(Vs); self.V[s+1] = self.d[s+1]
+        self.K = self.d[2]; self.e = n//self.K; self.dd = m//self.K
+        self.delta = {i: self._delta(i) for i in range(1, s+1)}
+        self.u = F(self.V[s]*self.K, self.d[s])
+
+    def _delta(self, i):                              # Def 5.1(3), p.179
+        n, M, d, V, s = self.n, self.M, self.d, self.V, self.s
+        num = F(n-M[i]); den = F(n-M[s]-1)
+        for j in range(i+1, s+1):
+            num *= (V[j]*(n-M[j]) - d[j]); den *= (V[j]*(n-M[j-1]) - d[j])
+        return 1 - num/den
+
+    def windows_ok(self):                             # search (7) = Def 5.1(2)
+        for i in range(2, self.s+1):
+            lo = F(self.d[i], self.n-self.M[i]); hi = F(self.V[i+1]*self.d[i], self.d[i+1])
+            if not (self.V[i] > lo and self.V[i] <= hi): return False
+        return True
+
+    # ---- (8): the increment denominators A_j -----------------------------
+    def A(self, j):
+        """A_j = reduced denominator of L_j*delta_j,  L_j = lcm{den delta_s,...,den delta_{j+1}}."""
+        L = 1
+        for i in range(j+1, self.s+1): L = lcm(L, self.delta[i].denominator)
+        return (L*self.delta[j]).denominator
+
+    def L(self, j):
+        L = 1
+        for i in range(j+1, self.s+1): L = lcm(L, self.delta[i].denominator)
+        return L
+
+    # ---- (9),(10),(11) at level j = r-1 (j = s-1,...,2) -------------------
+    def div9(self, j):
+        """(9) with r = j+1:  V_{j+1}(d_j/d_{j+1}) = TRI_j A_j + SQ_j."""
+        Q = self.V[j+1]*self.d[j]//self.d[j+1]        # exact: d_{j+1} | d_j
+        assert self.V[j+1]*self.d[j] % self.d[j+1] == 0
+        A = self.A(j)
+        return divmod(Q, A) + (A, Q)                  # (TRI_j, SQ_j, A_j, Q)
+
+    def cond1011(self, j):
+        """returns (ok, by10, by11) for level j."""
+        tri, sq, A, Q = self.div9(j)
+        b10 = (self.V[j] <= tri)                       # (10) alpha != 0
+        b11 = ((self.V[j] - sq) % A == 0)              # (11) alpha  = 0
+        return (b10 or b11), b10, b11
+
+    def cond1213(self):
+        """(12)/(13) at r = 2, with n* = n/d_2, m* = m/d_2."""
+        A1 = self.A(1); ns, ms, V2 = self.e, self.dd, self.V[2]
+        b12 = (ns*V2 % A1 == 0) and ((ms*V2 - 1) % A1 == 0)
+        b13 = (ms*V2 % A1 == 0) and ((ns*V2 - 1) % A1 == 0)
+        return (b12 or b13), b12, b13
+
+    def full_ok(self):
+        """(8)-(13) verbatim."""
+        for j in range(self.s-1, 1, -1):
+            if not self.cond1011(j)[0]: return False
+        return self.cond1213()[0]
+
+    def any10(self):
+        """at least one level j in {2..s-1} admits the alpha != 0 branch (10).
+           = the numerical shadow of Moh's Prop 5.6 remark ('(11) can not always happen')."""
+        return any(self.cond1011(j)[1] for j in range(self.s-1, 1, -1))
+
+    # ---- integration-#17 quantities --------------------------------------
+    def q(self):
+        """D1-PIN:  q = (1-delta_1) d e/(d+e), the contribution of one unit of V_2 to N."""
+        return (1 - self.delta[1]) * F(self.dd*self.e, self.dd+self.e)
+
+def divisor_chains(K, floor=4):
+    out = []
+    def rec(cur, ch):
+        for dd in range(floor, cur):
+            if cur % dd == 0: out.append(ch+[dd]); rec(dd, ch+[dd])
+    rec(K, []); return out
+
+def census(n, Kmin=16, with_V=True, full=False):
+    """(1)-(7) [+ (8)-(13) if full] enumeration at degree n = deg g.
+       Yields (m, (M_2..M_s), {i: V_i}).  full=True prunes with (10)/(11) inside the
+       recursion and applies (12)/(13) at the bottom."""
+    for K in range(Kmin, n//3+1):
+        if n % K: continue
+        e = n//K
+        if e < 3: continue
+        for ch in divisor_chains(K, 4):
+            dfull = [n, K]+ch; dfull.append(gcd(dfull[-1], n-2))
+            s = 2+len(ch)
+            d = {i+1: dfull[i] for i in range(len(dfull))}
+            dlist = ([K]+ch)[:-1]; tg = ch
+            for dd in range(2, e):
+                if gcd(dd, e) != 1: continue
+                m = K*dd
+                M = {1: -m, s: n-2}
+                def Mrec(i, prev):
+                    if i == s:
+                        if prev < n-2: yield True
+                        return
+                    for Mi in range(prev+1, n-2):
+                        if gcd(dlist[i-2], Mi) == tg[i-2]:
+                            M[i] = Mi; yield from Mrec(i+1, Mi)
+                for _ in Mrec(2, -m):
+                    Ms = [M[i] for i in range(2, s+1)]
+                    if not with_V:
+                        yield (m, tuple(Ms), None); continue
+                    V = {s+1: d[s+1]}
+                    # R_i = prod_{j>i} P_j/Q_j  ;  delta_i = 1 - (n-M_i) R_i/(n-M_s-1)
+                    def delta_of(i, R): return 1 - F(n-M[i])*R/F(n-M[s]-1)
+                    def Vrec(i, R, Lcm):
+                        # R = R_i (needs V_{i+1..s}); Lcm = lcm{den delta_s..den delta_{i+1}}
+                        if i == 1:
+                            yield None; return
+                        lo = F(d[i], n-M[i]); hiQ = V[i+1]*d[i]//d[i+1]
+                        w0 = lo.numerator//lo.denominator + 1
+                        cand = range(max(w0, 1), hiQ+1)
+                        if full and i <= s-1:
+                            di = delta_of(i, R)
+                            A = (Lcm*di).denominator
+                            tri, sq = divmod(hiQ, A)
+                            cand = [w for w in cand if w <= tri or (w - sq) % A == 0]
+                        for w in cand:
+                            if i == s and w >= d[s]: continue
+                            V[i] = w
+                            R2 = R*F(V[i]*(n-M[i])-d[i], V[i]*(n-M[i-1])-d[i])
+
+exec
+/bin/bash -lc "mkdir -p box/ctop-gate-20260905
+cp /tmp/ctop-gate-astra-20260905.sha256 box/ctop-gate-20260905/inputs.sha256
+pdftotext -layout /tmp/jc2-lane.RbaPkU/inputs/moh1983_jram340_configurations_of_roots.pdf box/ctop-gate-20260905/moh-layout.txt
+rg -n 'Proposition 6.3|Definition 5.1|Definition-Remark|characteristic data|pi-degree' box/ctop-gate-20260905/moh-layout.txt
+sed -n '1,260p' /tmp/jc2-lane.RbaPkU/inputs/scope-leaks-opus5-20260905.md" in /home/ubuntu/jc2
+ succeeded in 0ms:
+511:                          § 2. The characteristic data for a pair of polynomials
+513:     The purpose of this section is to introduce the characteristic data for a pair of
+519: s equations over ;^.*"1^. Furthermore we shall show that the characteristic data
+566:the characteristic data of the pair of polynomials (f(x9 y), g(x, y)) with respect to x.
+628:      The characteristic data \d{\ MJ are analytic in nature. We shall replace them,
+787:implies that the characteristic data {dh MJ can be recovered by (cf. [A-M.l], [S.l],
+2769:from Definition 5.1 and Proposition 1. 3 that
+2904:following (cf. Definition 5.1)
+3201:        (2) the associated characteristic data {Mhdt} are with Ms = n — 2, flfs = 3,
+3210:        (5) the associated characteristic data are 1—^, -f> for i= l,..., s— l,
+3234:      (2) the associated characteristic data are {Mi9 4} for i= l , . . . , A,
+3238:according to Definition 5.1. The roots of f] g(y) T^(y) in Dr can be covered by a dis-
+3272:     (4) {«, M 1? . . ., MJ is the part of characteristic data of (/, g) which are less
+# SCOPE leaks (ii) U-NEGATIVE and (iii) s'>2 DEPTH — enumerated, typed, routed
+
+Lane `scope-leaks-opus5-20260905`; adapter opus. Drivers
+`box/scopeleaks-20260905/`. Frozen inputs under `/tmp/jc2-lane.TfnlJh/inputs`.
+
+## 0. Verdict first
+
+```text
+HEADLINE: leak (ii) U-NEGATIVE is NOT a third configuration.  It is a
+DEGENERATE descended datum: V'_2 > K' = gcd(n',m') asks a degree-K' form to
+carry multiplicity V'_2 > K'.  Family (a) CLOSED-conditionally (one named
+licence).  Family (b) s'>=3 is CHARACTERIZED, not closed: Phi_eff already
+emits the receiver at every height -- it does NOT need to iterate -- the
+wall is compute; a second DESCENT is licensed by Moh only on 31/1420 rows.
+
+(a) U-NEGATIVE, 16<=n<=200:  2,999 of 24,063 (1)-(13) census rows;
+    90 of the 1,420 operative (C_FULL_TREE_POLYNOMIAL_ODE) rows.
+    - ZERO of them are s'=2.  The classical Appendix-II shape never meets
+      the leak; all 90 sit inside the s'>=3 family (leaks (ii) c (iii)).
+    - 84/90 have u_s=1 => Prop 6.4 (p.198, read) discharges Prop 6.3's
+      radius hypothesis => the descent is FORCED => the datum is
+      contradictory => the skeleton is EMPTY.
+    - 6/90 have u_s=2 => Prop 6.3 radius dichotomy: 2 have an EMPTY split
+      window {delta in (1,v_s/u_s) : den <= u_s} => (R) forced => same kill;
+      4 leave exactly one candidate radius delta*=3/2 to exclude.
+    - No SECOND descent is needed and none is available: delta'_{s'} != -1
+      on 90/90.  Astra's avenue 5 is not the route for this family.
+
+(b) s'>=3 DEPTH, 16<=n<=200: 1,353 of 1,420 operative rows (95.3%);
+    by height s' = 3:426, 4:791, 5:136.  s'=2 (Appendix II) is 67 rows.
+    - Phi_eff is a SINGLE-STEP closed form in s'; it emits an s'=4 and an
+      s'=5 receiver as readily as s'=3.  "Does Phi_eff iterate?" is the
+      wrong question: it does not have to.
+    - A second Prop 6.3 descent needs delta'_{s'} = -1 on the child: true
+      on 157/1420; of those only 31 also have ell=0, i.e. are Moh's own
+      Cor 6.1 (p.199) genuine smaller Keller pairs.  The other 126 need
+      the monomial-Jacobian category to be closed under descent (avenue 5,
+      unproved).
+    - Priced with the charged inventories: 1,026 chartable u_s=1 receivers,
+      unknown-count quantiles (s'>=3) 78 / 149 / 221 / 405 / 906 / 1636 /
+      4952.  The cheapest s'>=3 chart in the whole residual is 78 unknowns
+      and is exactly the class the s'=3 compiler already failed to kill.
+
+KILLED INLINE by Groebner: 0.  Nothing in the residual is a <20 min std.
+The kills claimed here are STRUCTURAL (degenerate descended datum), with
+their single licence named in Sec. 3.3 and typed OPEN.
+```
+
+No new exit-price assertion is made, so no `charge_basis` line is licensed.
+
+---
+
+## 1. Frozen-input gate
+
+Manifest built with `awk` from the `charged_input_<i>_basename=` /
+`charged_input_<i>_sha256=` lines of
+`xmodel/scope-leaks-opus5-20260905.run.v2`, checked with `sha256sum -c`:
+**8/8 `OK`**, no digest retyped. Banked at
+`box/scopeleaks-20260905/inputs.sha256`.
+
+Workspace `box/moh_skeleton_full.py` and
+`box/centre-gate-20260903/moh_skeleton_full_frozen.py` are both byte-identical
+to the charged copy (`d20bf084…c506c2`), so the enumerator used by every
+driver below is the frozen one.
+
+Page images read at 200–300 dpi (the pdftotext layer drops the display math on
+all four): **p.190** (`box/centre-gate-20260903/moh_p190.png`), **p.197**,
+**p.198** (`box/prop63gate-20260905/`), **p.207** (ibid.), and **p.208**
+rendered here from the charged PDF
+(`box/scopeleaks-20260905/moh_p208-69.png`, pdf page 69).
+
+---
+
+## 2. What was enumerated, and against what screens
+
+`box/scopeleaks-20260905/scope_enum.py`, `depth.py`, `uneg.py`, `sizes.py`,
+`controls.py`. Two populations, both over `16 <= n <= 200`, `Kmin=2` (Moh's
+own space, not the 17(ll) `Kmin=16` slice):
+
+| population | rows |
+|---|---:|
+| Moh `(1)–(13)` census | **24,063** |
+| PROMOTED operative screen `C_FULL_TREE_POLYNOMIAL_ODE` (17(r)/(hh)/(ll)) | **1,420** |
+
+The operative count, its `u_s` histogram `{1:1110, 2:265, 3:34, 4:9, 5:2}` and
+its 70 degree pairs reproduce the banked 17(ll) figure exactly — and they do so
+from `Kmin=2, n>=16`, which independently shows the `Kmin=16, n>=48` convention
+loses nothing at `n <= 200`.
+
+Descent, per row (banked closed form, validated 5/5 against Moh p.207 by
+`box/moh14-20260905/descend14.py` and re-validated here in CONTROL P):
+
+```text
+u_s = d_s - V_s,  v_s = V_s,  ell = v_s - u_s - 1
+(n',m') = (n u_s/d_s, m u_s/d_s),  M'_i = M_i u_s/d_s (i=1..s-1),
+V'_i = V_i,  s' = s-1,  d'_r = u_s d_r/d_s,  d'_{s'+1} = u_s,
+K' = d'_2 = gcd(n',m'),  u' = K' - V'_2,
+delta'_i = (ell+1) * Def 5.1(3)(n',M',d',V',s',i)      [Phi_eff]
+```
+
+with Moh's p.174 drop of a terminal `M'_h = n'-1` applied before `Phi_eff`
+(90 of the 1,420 operative rows drop exactly one level; without the drop
+`delta'` is a 1/0 division on those).
+
+`delta_s = -1` holds on all 24,063 census rows, so Prop 6.3's first hypothesis
+is never the obstruction.
+
+---
+
+## 3. Family (a): U-NEGATIVE
+
+### 3.1 The enumeration
+
+`U-NEGATIVE` is `V'_2 > d'_2`, i.e. `u' = K' - V'_2 < 0`
+(`box/appendix2-k16-20260903/shape.py:146`, the `reason="U-NEGATIVE"` early
+return). Arithmetically it is `V_2/d_2 > u_s/d_s`.
+
+| slice | census | operative |
+|---|---:|---:|
+| `u' < 0` (U-NEGATIVE) | 2,999 | **90** |
+| `u' = 0` | 117 | 2 |
+| `u' > 0` | 20,947 | 1,328 |
+
+Operative U-NEGATIVE, cross-tabbed (`uneg.log`):
+
+```text
+by u_s : {1: 84, 2: 6}          by s' : {3: 9, 4: 63, 5: 18}   (s'=2: ZERO)
+by ell : {0:2, 1:61, 2:15, 3:6, 5:3, 6:2, 7:1}
+delta'_2 == -1 : 1 of 90        delta'_{s'} == -1 : 0 of 90
+V'_2/K' ranges over 17/16 .. 4  (one row wants multiplicity 4K')
+16 degree pairs: (108,72) (120,72) (128,96) (144,96) (144,108) (160,64)
+(160,120) (160,128) (162,108) (180,120) (192,128) (192,144) (192,160)
+(200,80) (200,120) (200,160)
+```
+
+Two facts settle the shape of the leak before any theory:
+
+1. **No operative U-NEGATIVE row has `s'=2`.** All 600 census `s'=2`
+   U-NEGATIVE rows die under the promoted whole-tree screen. So leak (ii)
+   never touches the covered Appendix-II shape; it is a strict sub-family of
+   leak (iii).
+2. **No U-NEGATIVE row has `delta'_{s'} = -1`**, so a second Prop 6.3 descent
+   is unavailable for every one of them. Avenue 5 ("closure of the marked
+   monomial-Jacobian category under a second descent") is *not* the route for
+   this family, whatever its status elsewhere.
+
+### 3.2 What Moh's theory says — is `V'_2 > d'_2` genuine?
+
+It is not excluded by conditions (1)–(13) on the **parent**: p.201 (7) is
+`V_{r+1}(d_r/d_{r+1}) >= V_r > d_r/(n-M_r)`, and p.190 shows why the left half
+holds — it is not a search condition but the identity
+
+> `deg p(pi) = V_{r+1} d_r/d_{r+1} >= V_r > d_r/(n - M_r)`
+> — Moh 1983 p.190, §6 opening, with `(pi - C_r)` a factor of `p(pi)` of
+> multiplicity `V_r`
+
+i.e. *multiplicity <= degree*. Downward induction from the top convention
+`V_{s+1} = d_{s+1}` gives `V_2 <= d_2 = gcd(n,m)` for the parent, which every
+census row satisfies by construction. **`V_2 <= u_s d_2/d_s` is strictly
+stronger and is nowhere imposed on the parent.** So U-NEGATIVE rows are
+genuinely present in Moh's own search space — as the audit's leak (ii) said.
+
+The exclusion is on the **child**. Moh's own two tables settle the descended
+datum: p.202 (parent skeletons) -> p.207 (Appendix II descended table) is,
+column for column,
+
+| parent p.202 `(n,m); M_2,M_3; V_2,V_3` | `d_s` | `u_s` | child p.207 `(n',m'); M'_2; V'_2` |
+|---|---:|---:|---|
+| `(64,48); 52,62; V_2=3, V_3=3` | 4 | 1 | `(16,12); 13; 3` |
+| `(84,56); 64,82; V_2=2, V_3=3` | 4 | 1 | `(21,14); 16; 2` |
+| `(84,56); 72,82; V_2=5, V_3=3` | 4 | 1 | `(21,14); 18; 5` |
+| `(75,50); 55,73; V_2=3, V_3=4` | 5 | 1 | `(15,10); 11; 3` |
+| `(75,50); 55,73; V_2=2, V_3=4` | 5 | 1 | `(15,10); 11; 2` |
+
+`M'_2 = M_2 u_s/d_s` and **`V'_2 = V_2` unchanged** — Moh writes the parent's
+`V_2` as the child's `V_2`. Then on p.208, for the first of those rows, he
+writes the descended approximate root explicitly:
+
+> `h(x,y) = y^3(y-x) + b_1 y^3 + b_2 y^2 + b_3 y + b_4`,
+> `h(y) =` the fourth approximate root of `f-bar(y)` — Moh 1983 p.208 (1)
+
+`deg h = 4 = gcd(16,12) = K'` and its leading form is `y^{V'_2}(y-x)^{u'}` with
+`V'_2 = 3`, `u' = 1`. So on the child, `V'_2` is a **multiplicity inside a form
+of degree `K'`**, and `u' = K' - V'_2 >= 0` is forced.
+
+**Conclusion.** When the Prop 6.3 descent applies, `V_2 > gcd(n',m')` is
+contradictory: the descended datum assigns the level-2 disc more branches than
+the descended approximate root has. The skeleton is EMPTY — a kill, not a
+configuration.
+
+`u_s = 1` makes "the descent applies" unconditional. Moh p.198, read from the
+image:
+
+> **Proposition 6.4.** Suppose that `g(x,y)` is monic in `y` with
+> `deg g = deg_y g = n > 1`, `delta_s = -1` and **`u_s = 1`**. Then the
+> logarithmic radius `delta*_{s-1}` of the minor disc `D*_{s-1} >= v_s/u_s = v_s`.
+
+That is exactly Prop 6.3's hypothesis. **84 of the 90 operative U-NEGATIVE rows
+are killed with no further input.**
+
+### 3.3 The single licence, typed
+
+The load-bearing hypothesis is *not* `V'_2 = V_2` (that is Moh's own
+p.202->p.207 transformation, 5/5 columns, re-checked in CONTROL P) and *not*
+`d'_2 = gcd(n',m')` (arithmetic from Prop 6.3(2) p.197 and (5)). It is:
+
+```text
+OPEN[UNEG-SHAPE-LICENCE]  (typed, not filled)
+  "V'_2 is a multiplicity among the K' = gcd(n',m') branches of the descended
+   approximate root h', hence u' = K' - V'_2 >= 0."
+  Status: charged campaign convention (box/appendix2-k16-20260903/shape.py
+  docstring, 'PROVED-HERE as the unique D1 bound reproducing Moh pp.208,
+  210-211'); printed by Moh at p.208(1) for the (16,12) child; Lemma 5.3's
+  two-point leading form is licensed only at delta'_2 = -1, which holds on
+  1 of the 90 rows.
+  Cheapest test (minutes-to-hours, NOT run here): derive deg_x h' for the
+  descended pair from Prop 6.2 / Theorem 1.2 directly, or exhibit one
+  descended pair with V'_2 > gcd(n',m').
+```
+
+Two independent controls that the reading does not over-kill
+(`controls.log`, both pass):
+
+* **CONTROL P** — Moh's own six p.202 rows: the five with `u_s = 1` all give
+  `u' >= 0` (1, 5, 2, 2, 3); `(99,66)` has `u_s = 3` and Prop 6.4 does not
+  apply, exactly as Moh skips it on p.207.
+* **CONTROL Q** — every operative row at `n <= 100`: `{u'>0: 18, u'=0: 1,
+  u_s>=2: 1}`; **no `u' < 0`**. The moh100 residue and Moh's six printed rows
+  are untouched by this kill.
+
+### 3.4 The 6 rows with `u_s >= 2`: the radius dichotomy
+
+At `u_s >= 2` Prop 6.4 is silent and Prop 6.3's `delta*_{s-1} >= v_s/u_s` is a
+hypothesis. The banked dichotomy (17, `prop63-radius-dichotomy`, re-derived
+from the p.199 proof) says: either `(R)` holds — and then §3.2 kills the row —
+or the minor cluster splits at some `delta* in (1, v_s/u_s)` with
+`den(delta*) <= u_s`. That window is a finite list:
+
+| row (n,m; M; V) | `d_s` | `u_s` | `v_s` | window |
+|---|---:|---:|---:|---|
+| `160,120; (-100,-50,55,158); V_2=23` | 5 | 2 | 3 | **empty** |
+| `200,80; (-60,-10,95,198); V_2=18` | 5 | 2 | 3 | **empty** |
+| `192,144; (-120,-12,18,190); V_2=23` | 6 | 2 | 4 | `{3/2}` |
+| `192,144; (-72,12,78,190); V_2=22` | 6 | 2 | 4 | `{3/2}` |
+| `192,144; (-72,12,78,190); V_2=31` | 6 | 2 | 4 | `{3/2}` |
+| `192,144; (-24,132,174,190); V_2=23` | 6 | 2 | 4 | `{3/2}` |
+
+Empty window ⟹ `(R)` is forced ⟹ §3.2 applies. **86 of 90 are unconditional**
+(modulo `OPEN[UNEG-SHAPE-LICENCE]`); the residue of family (a) is **four rows
+at `(192,144)` needing the single radius `delta* = 3/2` excluded** by the
+split-face screen (G)+(L). That is a minutes-scale desk test on a banked
+instrument; it was not run here for time and is typed
+`OPEN[UNEG-192-144-SPLIT-3/2]`.
+
+### 3.5 What I deliberately did NOT promote
+
+The same child-tower reading, pushed to the child's *top* level, gives
+
+```text
+(C-TOP)   V_{s-1} <= u_s d_{s-1}/d_s   ( = d'_{s'} )
+
+codex
+All six frozen inputs passed the mechanical SHA-256 check. The key issue is whether the copied `V′` values describe the child’s actual discs: the report proves a gcd identity, but that alone does not identify root counts. I’m checking that transfer separately from the census arithmetic.
+
+exec
+/bin/bash -lc "sed -n '510,630p' box/ctop-gate-20260905/moh-layout.txt
+sed -n '3120,3260p' box/ctop-gate-20260905/moh-layout.txt
+sed -n '1910,2030p' box/ctop-gate-20260905/moh-layout.txt
+pdftoppm -f 58 -l 59 -scale-to 2100 -png -singlefile /tmp/jc2-lane.RbaPkU/inputs/moh1983_jram340_configurations_of_roots.pdf box/ctop-gate-20260905/root-p197" in /home/ubuntu/jc2
+ succeeded in 330ms:
+exec
+/bin/bash -lc "PYTHONDONTWRITEBYTECODE=1 python - <<'PY'
+import importlib.util
+p='/tmp/jc2-lane.RbaPkU/inputs/moh_skeleton_full.py'
+s=importlib.util.spec_from_file_location('frozen',p);mod=importlib.util.module_from_spec(s);s.loader.exec_module(mod)
+for n,m,Ms,V in [(96,72,[36,78,94],{2:4,3:3,4:5}),(64,48,[52,62],{2:3,3:3}),(108,72,[-18,60,106],{2:11,3:15,4:5})]:
+ r=mod.Skel(n,m,Ms,V);print(n,m,r.d,r.delta)
+PY
+pdftoppm -f 11 -l 11 -scale-to 2100 -png -singlefile /tmp/jc2-lane.RbaPkU/inputs/moh1983_jram340_configurations_of_roots.pdf box/ctop-gate-20260905/root-p150
+pdftoppm -f 35 -l 35 -scale-to 2100 -png -singlefile /tmp/jc2-lane.RbaPkU/inputs/moh1983_jram340_configurations_of_roots.pdf box/ctop-gate-20260905/root-p174
+pdftoppm -f 68 -l 68 -scale-to 2100 -png -singlefile /tmp/jc2-lane.RbaPkU/inputs/moh1983_jram340_configurations_of_roots.pdf box/ctop-gate-20260905/root-p207" in /home/ubuntu/jc2
+ succeeded in 1422ms:
+exec
+/bin/bash -lc "PYTHONDONTWRITEBYTECODE=1 python3 - <<'PY'
+import importlib.util
+p='/tmp/jc2-lane.RbaPkU/inputs/moh_skeleton_full.py'
+s=importlib.util.spec_from_file_location('frozen',p);mod=importlib.util.module_from_spec(s);s.loader.exec_module(mod)
+for n,m,Ms,V in [(96,72,[36,78,94],{2:4,3:3,4:5}),(64,48,[52,62],{2:3,3:3}),(108,72,[-18,60,106],{2:11,3:15,4:5})]:
+ r=mod.Skel(n,m,Ms,V);print(n,m,r.d,r.delta)
+PY" in /home/ubuntu/jc2
+ succeeded in 0ms:
+96 72 {1: 96, 2: 24, 3: 12, 4: 6, 5: 2} {1: Fraction(1, 3), 2: Fraction(2, 7), 3: Fraction(1, 7), 4: Fraction(-1, 1)}
+64 48 {1: 64, 2: 16, 3: 4, 4: 2} {1: Fraction(9, 16), 2: Fraction(1, 4), 3: Fraction(-1, 1)}
+108 72 {1: 108, 2: 36, 3: 18, 4: 6, 5: 2} {1: Fraction(31, 156), 2: Fraction(5, 26), 3: Fraction(7, 39), 4: Fraction(-1, 1)}
+
+codex
+The independent replay reproduces **936 killed labels, 174 live labels, and 310 unscreened rows**. It also found a correction: all 90 terminal drops occur at `u_s=1`, and after the drop the effective boundary gcd need not be 1. The remaining question is mathematical—whether the screen is testing the child’s own `V′` values.
+
+exec
+/bin/bash -lc "ls -l box/ctop-gate-20260905
+sed -n '1,200p' box/ctop-gate-20260905/enum-replay.py
+sed -n '1,150p' box/ctop-gate-20260905/enum-replay.log" in /home/ubuntu/jc2
+ succeeded in 0ms:
+total 4796
+-rw-rw-r-- 1 ubuntu ubuntu  267599 Sep  5 14:24 child-p150.png
+-rw-rw-r-- 1 ubuntu ubuntu  221071 Sep  5 14:29 child-p170.png
+-rw-rw-r-- 1 ubuntu ubuntu  189005 Sep  5 14:24 child-p197.png
+-rw-rw-r-- 1 ubuntu ubuntu  253172 Sep  5 14:24 child-p207.png
+-rw-rw-r-- 1 ubuntu ubuntu 1675155 Sep  5 14:25 enum-replay.json
+-rw-rw-r-- 1 ubuntu ubuntu    3307 Sep  5 14:25 enum-replay.log
+-rw-rw-r-- 1 ubuntu ubuntu    7841 Sep  5 14:25 enum-replay.py
+-rw-rw-r-- 1 ubuntu ubuntu     717 Sep  5 14:22 inputs.sha256
+-rw-rw-r-- 1 ubuntu ubuntu  163157 Sep  5 14:22 moh-layout.txt
+-rw-rw-r-- 1 ubuntu ubuntu  163157 Sep  5 14:22 moh-source.txt
+-rw-rw-r-- 1 ubuntu ubuntu  253242 Sep  5 14:23 root-p150.png
+-rw-rw-r-- 1 ubuntu ubuntu  200644 Sep  5 14:23 root-p174.png
+-rw-rw-r-- 1 ubuntu ubuntu  183477 Sep  5 14:23 root-p197.png
+-rw-rw-r-- 1 ubuntu ubuntu  240310 Sep  5 14:23 root-p207.png
+-rw-rw-r-- 1 ubuntu ubuntu  228986 Sep  5 14:23 source-p179.png
+-rw-rw-r-- 1 ubuntu ubuntu  176245 Sep  5 14:23 source-p197.png
+-rw-rw-r-- 1 ubuntu ubuntu  175603 Sep  5 14:23 source-p198.png
+-rw-rw-r-- 1 ubuntu ubuntu  238937 Sep  5 14:26 source-p202.png
+-rw-rw-r-- 1 ubuntu ubuntu  244727 Sep  5 14:24 source-p207.png
+#!/usr/bin/env python3
+"""Independent fresh census replay; no precomputed JSON is an input to the screen.
+Frozen enumerator from /tmp lane; operative Tree read from campaign code.
+The labelled descent is independently recomputed with integer division and gcd.
+Counts below audit that algorithm, not identification with any actual child.
+"""
+import sys
+sys.dont_write_bytecode = True
+import hashlib, importlib.util, json, time
+from collections import Counter
+from fractions import Fraction as F
+from math import gcd
+from pathlib import Path
+ROOT = Path('/home/ubuntu/jc2')
+OUT = ROOT / 'box/ctop-gate-20260905'
+FROZEN = Path('/tmp/jc2-lane.RbaPkU/inputs/moh_skeleton_full.py')
+TREE = ROOT / 'box/centre-gate-20260903/opus5_probe.py'
+
+def imp(name, path):
+    sp = importlib.util.spec_from_file_location(name, path)
+    mod = importlib.util.module_from_spec(sp)
+    sys.modules[name] = mod
+    sp.loader.exec_module(mod)
+    return mod
+
+B = imp('moh_skeleton_full_frozen', FROZEN)
+P = imp('ctop_gate_operative_tree', TREE)
+assert P.B is B  # Tree's own import resolves to the charged frozen module.
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+def chain(n, M):
+    d = [n]
+    for z in M:
+        d.append(gcd(d[-1], z))
+    return d
+
+def labels(n, m, Ms, V):
+    parentM = [-m, *Ms]
+    parentd = chain(n, parentM)
+    s = len(parentM)
+    ds = parentd[-2]
+    us = ds - V[s]
+    assert n*us % ds == m*us % ds == 0
+    assert all(M*us % ds == 0 for M in parentM[:-1])
+    np, mp = n*us//ds, m*us//ds
+    rawM = [M*us//ds for M in parentM[:-1]]
+    rawV = [V[i] for i in range(2, s)]
+    rawd = chain(np, rawM)
+    # Check scaling from actual gcd calculations, not a replacement assignment.
+    assert rawd == [d*us//ds for d in parentd[:-1]]
+    assert rawd[-1] == us
+    effM = rawM[:]
+    effV = rawV[:]
+    drops = 0
+    while len(effM) >= 2 and effM[-1] == np-1:
+        effM.pop(); effV.pop(); drops += 1
+    effd = chain(np, effM)
+    assert len(effM) >= 2
+    return dict(n=n,m=m,Ms=list(Ms),V={str(i): V[i] for i in sorted(V)},
+        s=s,parent_M=parentM,parent_d=parentd,d_s=ds,u_s=us,v_s=V[s],ell=V[s]-us-1,
+        n1=np,m1=mp,raw_sp=len(rawM),raw_M=rawM,raw_d=rawd,raw_V=rawV,
+        effective_sp=len(effM),effective_M=effM,effective_d=effd,effective_V=effV,
+        drops=drops,raw_ctop_fail=rawV[-1]>rawd[-2],
+        effective_ctop_fail=effV[-1]>effd[-2],
+        up=gcd(np,mp)-V[2],U_NEG=(V[2]>gcd(np,mp)),
+        labelled_roots_in_D1=str(F(np,gcd(np,mp))*V[2]))
+
+def hist(rs, name):
+    return dict(sorted(Counter(r[name] for r in rs).items()))
+
+def summary(rs):
+    us1 = [r for r in rs if r['u_s']==1]
+    us2 = [r for r in rs if r['u_s']>=2]
+    fail = [r for r in us1 if r['effective_ctop_fail']]
+    live = [r for r in us1 if not r['effective_ctop_fail']]
+    return dict(rows=len(rs),by_us=hist(rs,'u_s'),
+        raw_sp=hist(rs,'raw_sp'),effective_sp=hist(rs,'effective_sp'),
+        drops=hist(rs,'drops'),drops_by_us=hist([r for r in rs if r['drops']],'u_s'),
+        us1=dict(rows=len(us1),raw_fail=sum(r['raw_ctop_fail'] for r in us1),
+            effective_fail=len(fail),effective_live=len(live),
+            fail_by_effective_sp=hist(fail,'effective_sp'),live_by_effective_sp=hist(live,'effective_sp'),
+            live_by_raw_sp=hist(live,'raw_sp'),
+            live_degree_pairs=len({(r['n'],r['m']) for r in live}),
+            U_NEG=sum(r['U_NEG'] for r in us1),U_NEG_and_ctop_live=sum(r['U_NEG'] for r in live),
+            rescued_by_drop=sum(r['raw_ctop_fail'] and not r['effective_ctop_fail'] for r in us1)),
+        us_ge2=dict(rows=len(us2),raw_fail=sum(r['raw_ctop_fail'] for r in us2),
+            effective_fail=sum(r['effective_ctop_fail'] for r in us2),
+            U_NEG=sum(r['U_NEG'] for r in us2)),
+        U_NEG=sum(r['U_NEG'] for r in rs),
+        drop_cross_tab={str(k):v for k,v in sorted(Counter((r['u_s'],r['raw_ctop_fail'],r['effective_ctop_fail']) for r in rs if r['drops']).items())})
+
+started=time.monotonic()
+census=[]; operative=[]; progress=[]
+for n in range(16,201):
+    for m,Ms,V in B.census(n,Kmin=2,full=True):
+        r=labels(n,m,Ms,V)
+        census.append(r)
+        tree=P.Tree(n,m,Ms,gate=False,ode=True,capacity=False,passport=False,recenter=True)
+        op=tree.embeds(V) is not None
+        r['operative']=op
+        if op: operative.append(r)
+    if n%20==0:
+        p=dict(n=n,census=len(census),operative=len(operative),seconds=round(time.monotonic()-started,3))
+        progress.append(p);print(json.dumps(p),flush=True)
+
+summary_out={'census':summary(census),'operative':summary(operative)}
+# Sanity controls that do not assume the headline screen numbers.
+keys=[(r['n'],r['m'],tuple(r['Ms']),tuple(sorted(r['V'].items()))) for r in census]
+assert len(set(keys))==len(keys)
+assert all(r['raw_d'][-1]==r['u_s'] for r in census)
+assert all(r['effective_sp']>=2 for r in operative)
+assert not any(r['effective_ctop_fail'] and not r['raw_ctop_fail'] for r in operative if r['drops'])
+assert all((F(r['labelled_roots_in_D1'])>r['n1'])==r['U_NEG'] for r in operative)
+printed=[]
+for n,m,Ms,V,*_ in B.MOH_TABLE:
+    r=labels(n,m,Ms,V)
+    r['operative']=P.Tree(n,m,Ms,gate=False,ode=True,capacity=False,passport=False,recenter=True).embeds(V) is not None
+    printed.append(r)
+assert all(r['operative'] for r in printed)
+assert all(not r['effective_ctop_fail'] for r in printed if r['u_s']==1)
+
+# Comparison against prior JSON is diagnostic only and occurs after independent regeneration.
+prior_path=ROOT/'box/scopeleaks-20260905/scope_enum.json'
+prior=json.loads(prior_path.read_text())['operative_rows']
+def key_old(r): return (r['n'],r['m'],tuple(r['Ms']),tuple(sorted((int(k),v) for k,v in r['V'].items())))
+def key_new(r): return (r['n'],r['m'],tuple(r['Ms']),tuple(sorted((int(k),v) for k,v in r['V'].items())))
+prior_by={key_old(r):r for r in prior}; fresh_by={key_new(r):r for r in operative}
+match_fields=[]
+for k in prior_by.keys()&fresh_by.keys():
+    a,b=prior_by[k],fresh_by[k]
+    for field in ('n1','m1','u_s','v_s','ell','up'):
+        if a[field]!=b[field]:match_fields.append([str(k),field,a[field],b[field]])
+    if a['sp']!=b['raw_sp'] or [int(F(z)) for z in a['Mp']]!=b['raw_M'][1:] or a['Vp']!=b['raw_V']:
+        match_fields.append([str(k),'label_vectors'])
+comparison=dict(prior_rows=len(prior),fresh_rows=len(operative),
+    prior_only=len(prior_by.keys()-fresh_by.keys()),fresh_only=len(fresh_by.keys()-prior_by.keys()),
+    field_discrepancies=match_fields)
+inputs=[FROZEN,TREE,ROOT/'box/scopeleaks-20260905/scope_enum.py',ROOT/'box/scopeleaks-20260905/depth.py',ROOT/'box/child-data-20260905/test12_childdata.py',ROOT/'box/child-data-20260905/test2-partition.log']
+output=dict(schema='jc2.ctop-gate.enum-independent/v1',settings=dict(nlo=16,nhi=200,Kmin=2,full=True,gate=False,ode=True,capacity=False,passport=False,recenter=True),
+    caution='Reproduces labels and numerical predicates only. Own-child characteristic-data identification is not assumed proved.',
+    input_sha256={str(p):sha(p) for p in inputs},prior_diagnostic=dict(path=str(prior_path),sha256=sha(prior_path),comparison=comparison),
+    summary=summary_out,controls=dict(unique_census_rows=True,gcd_scaling_all_census=True,moh_six_operative=True,moh_five_us1_screen_live=True),
+    moh_table=printed,named_instance=[r for r in operative if (r['n'],r['m'],r['Ms'])==(96,72,[36,78,94])],
+    rescued_by_drop=[r for r in operative if r['u_s']==1 and r['raw_ctop_fail'] and not r['effective_ctop_fail']],
+    operative_rows=operative,progress=progress,seconds=round(time.monotonic()-started,3))
+(OUT/'enum-replay.json').write_text(json.dumps(output,indent=2)+'\n')
+print(json.dumps(summary_out,indent=2),flush=True)
+print('PRIOR_DIAGNOSTIC '+json.dumps(comparison),flush=True)
+print('WROTE '+str(OUT/'enum-replay.json'),flush=True)
+{"n": 20, "census": 0, "operative": 0, "seconds": 0.0}
+{"n": 40, "census": 4, "operative": 0, "seconds": 0.003}
+{"n": 60, "census": 44, "operative": 0, "seconds": 0.025}
+{"n": 80, "census": 178, "operative": 3, "seconds": 0.102}
+{"n": 100, "census": 658, "operative": 20, "seconds": 0.379}
+{"n": 120, "census": 1802, "operative": 74, "seconds": 1.102}
+{"n": 140, "census": 2585, "operative": 101, "seconds": 1.681}
+{"n": 160, "census": 6780, "operative": 344, "seconds": 4.86}
+{"n": 180, "census": 13628, "operative": 716, "seconds": 10.313}
+{"n": 200, "census": 24063, "operative": 1420, "seconds": 20.473}
+{
+  "census": {
+    "rows": 24063,
+    "by_us": {
+      "1": 17854,
+      "2": 4459,
+      "3": 1117,
+      "4": 312,
+      "5": 199,
+      "6": 37,
+      "7": 43,
+      "8": 17,
+      "9": 14,
+      "10": 3,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "raw_sp": {
+      "2": 2020,
+      "3": 10464,
+      "4": 9746,
+      "5": 1833
+    },
+    "effective_sp": {
+      "2": 3310,
+      "3": 11053,
+      "4": 8217,
+      "5": 1483
+    },
+    "drops": {
+      "0": 20544,
+      "1": 3519
+    },
+    "drops_by_us": {
+      "1": 3519
+    },
+    "us1": {
+      "rows": 17854,
+      "raw_fail": 15673,
+      "effective_fail": 14372,
+      "effective_live": 3482,
+      "fail_by_effective_sp": {
+        "2": 632,
+        "3": 6623,
+        "4": 5813,
+        "5": 1304
+      },
+      "live_by_effective_sp": {
+        "2": 1728,
+        "3": 1096,
+        "4": 479,
+        "5": 179
+      },
+      "live_by_raw_sp": {
+        "2": 710,
+        "3": 1856,
+        "4": 712,
+        "5": 204
+      },
+      "live_degree_pairs": 211,
+      "U_NEG": 2346,
+      "U_NEG_and_ctop_live": 0,
+      "rescued_by_drop": 1301
+    },
+    "us_ge2": {
+      "rows": 6209,
+      "raw_fail": 4845,
+      "effective_fail": 4845,
+      "U_NEG": 653
+    },
+    "U_NEG": 2999,
+    "drop_cross_tab": {
+      "(1, True, False)": 1301,
+      "(1, True, True)": 2218
+    }
+  },
+  "operative": {
+    "rows": 1420,
+    "by_us": {
+      "1": 1110,
+      "2": 265,
+      "3": 34,
+      "4": 9,
+      "5": 2
+    },
+    "raw_sp": {
+      "2": 43,
+      "3": 414,
+      "4": 797,
+      "5": 166
+    },
+    "effective_sp": {
+      "2": 67,
+      "3": 426,
+      "4": 791,
+      "5": 136
+    },
+    "drops": {
+      "0": 1330,
+      "1": 90
+    },
+    "drops_by_us": {
+      "1": 90
+    },
+    "us1": {
+      "rows": 1110,
+      "raw_fail": 970,
+      "effective_fail": 936,
+      "effective_live": 174,
+      "fail_by_effective_sp": {
+        "3": 244,
+        "4": 565,
+        "5": 127
+      },
+      "live_by_effective_sp": {
+        "2": 48,
+        "3": 86,
+        "4": 31,
+        "5": 9
+      },
+      "live_by_raw_sp": {
+        "2": 24,
+        "3": 100,
+        "4": 41,
+        "5": 9
+      },
+      "live_degree_pairs": 46,
+      "U_NEG": 84,
+      "U_NEG_and_ctop_live": 0,
+      "rescued_by_drop": 34
+    },
+    "us_ge2": {
+      "rows": 310,
+      "raw_fail": 225,
+      "effective_fail": 225,
+      "U_NEG": 6
+    },
+    "U_NEG": 90,
+    "drop_cross_tab": {
+
+exec
+/bin/bash -lc "PYTHONDONTWRITEBYTECODE=1 python3 - <<'PY'
+import json, importlib.util,collections
+s=importlib.util.spec_from_file_location('frozen','/tmp/jc2-lane.RbaPkU/inputs/moh_skeleton_full.py');B=importlib.util.module_from_spec(s);s.loader.exec_module(B)
+rows=json.load(open('box/ctop-gate-20260905/enum-replay.json'))['operative_rows']
+counts=collections.Counter();examples=[]
+for r in rows:
+ if r['u_s']"'!=1 or not r['"'effective_ctop_fail']:continue
+ b=B.Skel(r['n'],r['m'],r['Ms'],{int(k):v for k,v in r['V'].items()});i=r['effective_sp'];counts[(r['drops'],b.cond1011(i)[1])]+=1
+ if b.cond1011(i)[1] or len(examples)<8:examples.append({'n':r['n'],'m':r['m'],'M':r['Ms'],'V':r['V'],'i':i,'drops':r['drops'],'deltas':{k:str(v) for k,v in b.delta.items()},'b10':b.cond1011(i)[1],'A':b.A(i)})
+print(counts);print(json.dumps(examples[:20],indent=2))
+PY" in /home/ubuntu/jc2
+ succeeded in 0ms:
+Counter({(0, False): 880, (1, False): 56})
+[
+  {
+    "n": 90,
+    "m": 60,
+    "M": [
+      10,
+      45,
+      88
+    ],
+    "V": {
+      "2": 1,
+      "3": 8,
+      "4": 4
+    },
+    "i": 3,
+    "drops": 0,
+    "deltas": {
+      "1": "17/42",
+      "2": "5/21",
+      "3": "8/35",
+      "4": "-1"
+    },
+    "b10": false,
+    "A": 35
+  },
+  {
+    "n": 90,
+    "m": 60,
+    "M": [
+      10,
+      45,
+      88
+    ],
+    "V": {
+      "2": 3,
+      "3": 8,
+      "4": 4
+    },
+    "i": 3,
+    "drops": 0,
+    "deltas": {
+      "1": "2/7",
+      "2": "5/21",
+      "3": "8/35",
+      "4": "-1"
+    },
+    "b10": false,
+    "A": 35
+  },
+  {
+    "n": 90,
+    "m": 60,
+    "M": [
+      45,
+      80,
+      88
+    ],
+    "V": {
+      "2": 2,
+      "3": 5,
+      "4": 4
+    },
+    "i": 3,
+    "drops": 0,
+    "deltas": {
+      "1": "11/21",
+      "2": "5/14",
+      "3": "1/7",
+      "4": "-1"
+    },
+    "b10": false,
+    "A": 7
+  },
+  {
+    "n": 90,
+    "m": 60,
+    "M": [
+      45,
+      80,
+      88
+    ],
+    "V": {
+      "2": 3,
+      "3": 5,
+      "4": 4
+    },
+    "i": 3,
+    "drops": 0,
+    "deltas": {
+      "1": "13/28",
+      "2": "5/14",
+      "3": "1/7",
+      "4": "-1"
+    },
+    "b10": false,
+    "A": 7
+  },
+  {
+    "n": 96,
+    "m": 72,
+    "M": [
+      -60,
+      56,
+      94
+    ],
+    "V": {
+      "2": 1,
+      "3": 9,
+      "4": 3
+    },
+    "i": 3,
+    "drops": 0,
+    "deltas": {
+      "1": "39/116",
+      "2": "19/58",
+      "3": "9/29",
+      "4": "-1"
+    },
+    "b10": false,
+    "A": 29
+  },
+  {
+    "n": 96,
+    "m": 72,
+    "M": [
+      36,
+      80,
+      94
+    ],
+    "V": {
+      "2": 1,
+      "3": 9,
+      "4": 3
+    },
+    "i": 3,
+    "drops": 0,
+    "deltas": {
+      "1": "23/44",
+      "2": "7/22",
+      "3": "3/11",
+      "4": "-1"
+    },
+    "b10": false,
+    "A": 11
+  },
+  {
+    "n": 96,
+    "m": 72,
+    "M": [
+      36,
+      80,
+      94
+    ],
+    "V": {
+      "2": 4,
+      "3": 9,
+      "4": 3
+    },
+    "i": 3,
+    "drops": 0,
+    "deltas": {
+      "1": "4/11",
+      "2": "7/22",
+      "3": "3/11",
+      "4": "-1"
+    },
+    "b10": false,
+    "A": 11
+  },
+  {
+    "n": 96,
+    "m": 72,
+    "M": [
+      36,
+      78,
+      94
+    ],
+    "V": {
+      "2": 1,
+      "3": 3,
+      "4": 5
+    },
+    "i": 3,
+    "drops": 0,
+    "deltas": {
+      "1": "1/2",
+      "2": "2/7",
+      "3": "1/7",
+      "4": "-1"
+    },
+    "b10": false,
+    "A": 7
+  }
+]
+
+ERROR: Selected model is at capacity. Please try a different model.
+ERROR: Selected model is at capacity. Please try a different model.
+tokens used
+64,585
+hashed lane input changed during execution; result is quarantined

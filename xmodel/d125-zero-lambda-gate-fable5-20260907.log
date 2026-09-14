@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done at 00:50 UTC, before the 01:00 deadline. The `pgrep` hit in the last output is my own shell command matching itself; no control process is running.
+
+**Verdict: CONFIRMED.** The producer's lemma holds as stated, at arbitrary degree, over any commutative K-algebra with nilpotents.
+
+**What I proved independently** in `xmodel/d125-zero-lambda-gate-fable5-20260907.md` (1289 words, single terminal BODY-END, no seal, no charge_basis line):
+
+- **Bracket and injection.** The chain rule is a formal Leibniz identity over Z, the inverse determinant is +v², and R[u,v] sits inside the Laurent ring as a direct summand of free modules, so nilpotents never matter.
+- **Origin evaluation.** Constant-coefficient extraction gives c = p1·f_B − q1·f_A as a ring identity with no point chosen.
+- **Membership, two ways.** A weight argument (mod (λ2,λ3) the map is homogeneous for w(u)=5, w(v)=−1, and u⁰v¹ has negative weight) and the explicit multinomial certificate with sign (−1)^j and constraint 3b+2d=i+j+1, which matches the producer's witnesses exactly.
+- **Ordinariness is essential.** The reused toy fails precisely at the injection step, with one negative row. A second example, [W, g²p+g³] = λ3·g², shows the single row −λ3v⁻¹ carries the obstruction.
+- **Precise consequence.** I+(λ2,λ3)=S, so I is proper iff at least one of the two λ-localized ideals is proper. Nothing follows about either λ being a unit, any λ=1 normalization, a point, properness, cost, or JC2.
+
+**Controls** in `box/d125-zero-lambda-gate-fable5-20260907/`: the producer checker replays clean in normal and -O and both of its mutations fail. My own stdlib script runs every check over a ring with a nilpotent ε and passes in both modes, with four mutations each failing at the intended check, all under 30 s wall, 25 s CPU and 512 MiB. One caveat recorded in the report: my script's first version failed at my own C3 through a comparison key-shape bug that I fixed without changing any claim.
+DIVERT path=xmodel/d125-zero-lambda-gate-fable5-20260907.md status=CLEAN body_bytes=7983 body_sha256=33cb032a5d7f52cb12bd9122032ff5336499c3e67b9e650aa2c3c211935dd607

@@ -1,0 +1,80 @@
+[delta2] engine cumulative rows at stage 4, outer=0: 659 rows, nonzero 0
+{
+ "branch": "delta2",
+ "engine_rows_outer_zero": {
+  "count": 659,
+  "nonzero": [],
+  "accounting": {
+   "prior": {
+    "F": 3,
+    "G": 3,
+    "J162": 10
+   },
+   "stages": [
+    {
+     "stage": 0,
+     "F": 2,
+     "G": 2,
+     "J": 1
+    },
+    {
+     "stage": 1,
+     "F": 2,
+     "G": 2,
+     "J": 135
+    },
+    {
+     "stage": 2,
+     "F": 2,
+     "G": 2,
+     "J": 162
+    },
+    {
+     "stage": 3,
+     "F": 3,
+     "G": 3,
+     "J": 161
+    },
+    {
+     "stage": 4,
+     "F": 3,
+     "G": 3,
+     "J": 160
+    }
+   ]
+  }
+ },
+ "jacobian_bands_1_to_T_zero": true,
+ "h3_factor_degrees": [
+  [
+   1,
+   2
+  ],
+  [
+   1,
+   5
+  ],
+  [
+   4,
+   1
+  ]
+ ],
+ "tower": {
+  "h3^3_coeff": "1",
+  "C1_h3^2_coeff": "0",
+  "deg_C2": 17,
+  "deg_C3": 28
+ },
+ "J0": "0",
+ "ord_K2_sigma": 5,
+ "a_p": {
+  "5": "64",
+  "6": "-1406",
+  "7": "13498",
+  "8": "-1344*zeta - 198274/3"
+ },
+ "first_failing_stage": 6,
+ "K3_D2_face_W32": "pi**5*(3*pi**3 - 8)/3",
+ "K2_D2_face_W96": "(pi - 1)**8*(pi**2 + pi + 1)**8",
+ "wall_seconds": 135.8
+}

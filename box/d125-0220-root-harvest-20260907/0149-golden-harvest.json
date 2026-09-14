@@ -1,0 +1,146 @@
+{
+  "corrections": [
+    "Producer rss_bytes denotes the address-space cap, not sampled RSS. Factor exponents, not an expanded F^2 or H^2, certify the displayed divisibility."
+  ],
+  "pins": {
+    "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py": "6cc91bcc44c336c7b3a3c36228415d2ecc78ae519fe7084fc63767c794706948",
+    "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/custody.json": "2da3a29b98017a17cb900ac440738237d0f421dd684aa91526769779128f30eb",
+    "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/custody.py": "785762ba0c4a7692a7d69c0ad56b2c6ecc5a10c9f8cbc73691ce85bc2dae35e0",
+    "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/replay.json": "1761aa7fd02cd1dc6849a85b53c334fca0d78d19475b34ad0ee9531daed5ac26",
+    "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/replay.py": "966fd65add59f5018535a6e5cc011a2d1db2a86ca2517649cf8c852ba8821625",
+    "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/witness.json": "dfb4996307ddc388c9db89667c188040e36361750bc5cc4915589767bb1f857d",
+    "/home/ubuntu/jc2/xmodel/d125-golden-divisibility-control-astra-20260908.md": "54a499bb55d401e88716dde5762ca39341817adaa7ea1f41faf5865570ac4b0e",
+    "/home/ubuntu/jc2/xmodel/d125-golden-divisibility-control-astra-20260908.md.artifact.json": "b30820f8a6490057009fe1f1f54b9373aba2013723ca5903e215b7352dacc268",
+    "/home/ubuntu/jc2/xmodel/d125-minimal-monomial-receiver-composition-astra-20260906.md": "7dec79af1aa62946b46ecb209a710dd95e1b226b6b78229a3f232160a5385413"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "normal"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "dfb4996307ddc388c9db89667c188040e36361750bc5cc4915589767bb1f857d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "wrong-middle"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "c6dcf7b2ccfe1afd3ccd2cb630472f868a63b9083534f0d5ca46dc3a458993e2",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "freeze-conjugate"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "c6dcf7b2ccfe1afd3ccd2cb630472f868a63b9083534f0d5ca46dc3a458993e2",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "wrong-motion-sign"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "c4bbf11f9c80dae13345af063a16e36ce84b4d6c6aad0eef1b6a8cc2b659246e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "wrong-c-normalization"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "a9a6e538a45a268ce733b470e7ade9d06ee1d59b5ef902926af3c64ddd598f87",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "normal"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "dfb4996307ddc388c9db89667c188040e36361750bc5cc4915589767bb1f857d"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "wrong-middle"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "c6dcf7b2ccfe1afd3ccd2cb630472f868a63b9083534f0d5ca46dc3a458993e2",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "freeze-conjugate"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "c6dcf7b2ccfe1afd3ccd2cb630472f868a63b9083534f0d5ca46dc3a458993e2",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "wrong-motion-sign"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "c4bbf11f9c80dae13345af063a16e36ce84b4d6c6aad0eef1b6a8cc2b659246e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py",
+        "wrong-c-normalization"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "a9a6e538a45a268ce733b470e7ade9d06ee1d59b5ef902926af3c64ddd598f87",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Terminal author idle; transaction and current pins checked before whole report/checker/replay. Exact degree-three classification and repeated-root reduced-branch countercontrol only. No source H|F^2 premise supplied; not a full-source point or exclusion. Both conjugates retained.",
+  "seconds": 0.7183905929559842,
+  "utc": "2026-09-08T01:47:26.622779+00:00"
+}

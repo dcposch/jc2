@@ -1,0 +1,12 @@
+ring r=0,(a,b),wp(1,2);
+ideal I=a^2-b,a*b;
+degBound=3;
+ideal G3=std(I);
+print("CONTROL_D3_nf_b2="+string(reduce(b^2,G3)));
+degBound=4;
+ideal G4=std(I);
+print("CONTROL_D4_nf_b2="+string(reduce(b^2,G4)));
+print("CONTROL_D3_nf_ab="+string(reduce(a*b,G3)));
+print("CONTROL_D3_G="+string(G3));
+print("CONTROL_D4_G="+string(G4));
+quit;

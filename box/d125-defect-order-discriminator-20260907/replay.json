@@ -1,0 +1,74 @@
+[
+  {
+    "mode": "normal",
+    "mutation": "none",
+    "exit_code": 0,
+    "telemetry": [
+      "WALL=0.06 MAXRSS_KB=19760"
+    ],
+    "diagnostic": "PASS; exact stdout in witnesses.json"
+  },
+  {
+    "mode": "normal",
+    "mutation": "w2",
+    "exit_code": 1,
+    "telemetry": [
+      "WALL=0.10 MAXRSS_KB=31748"
+    ],
+    "diagnostic": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 158, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 93, in main\n    need(key(target, weights, 269) > key(forcing, weights, 269), 'W2 forcing separation')\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 18, in need\n    raise ValueError(reason)\nValueError: W2 forcing separation\nCommand exited with non-zero status 1\nWALL=0.10 MAXRSS_KB=31748\n"
+  },
+  {
+    "mode": "normal",
+    "mutation": "w3",
+    "exit_code": 1,
+    "telemetry": [
+      "WALL=0.10 MAXRSS_KB=31928"
+    ],
+    "diagnostic": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 158, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 96, in main\n    need(key((ids['B_g3_p2'],), weights, 269) >\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 18, in need\n    raise ValueError(reason)\nValueError: W3 kernel marking\nCommand exited with non-zero status 1\nWALL=0.10 MAXRSS_KB=31928\n"
+  },
+  {
+    "mode": "normal",
+    "mutation": "nonprimitive",
+    "exit_code": 1,
+    "telemetry": [
+      "WALL=0.10 MAXRSS_KB=31900"
+    ],
+    "diagnostic": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 158, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 125, in main\n    need(leading == expected, 'restricted exact pivot/kernel mismatch')\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 18, in need\n    raise ValueError(reason)\nValueError: restricted exact pivot/kernel mismatch\nCommand exited with non-zero status 1\nWALL=0.10 MAXRSS_KB=31900\n"
+  },
+  {
+    "mode": "-O ",
+    "mutation": "none",
+    "exit_code": 0,
+    "telemetry": [
+      "WALL=0.23 MAXRSS_KB=26256"
+    ],
+    "diagnostic": "PASS; exact stdout in witnesses.json"
+  },
+  {
+    "mode": "-O ",
+    "mutation": "w2",
+    "exit_code": 1,
+    "telemetry": [
+      "WALL=0.51 MAXRSS_KB=38112"
+    ],
+    "diagnostic": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 158, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 93, in main\n    need(key(target, weights, 269) > key(forcing, weights, 269), 'W2 forcing separation')\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 18, in need\n    raise ValueError(reason)\nValueError: W2 forcing separation\nCommand exited with non-zero status 1\nWALL=0.51 MAXRSS_KB=38112\n"
+  },
+  {
+    "mode": "-O ",
+    "mutation": "w3",
+    "exit_code": 1,
+    "telemetry": [
+      "WALL=0.51 MAXRSS_KB=38064"
+    ],
+    "diagnostic": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 158, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 96, in main\n    need(key((ids['B_g3_p2'],), weights, 269) >\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 18, in need\n    raise ValueError(reason)\nValueError: W3 kernel marking\nCommand exited with non-zero status 1\nWALL=0.51 MAXRSS_KB=38064\n"
+  },
+  {
+    "mode": "-O ",
+    "mutation": "nonprimitive",
+    "exit_code": 1,
+    "telemetry": [
+      "WALL=0.52 MAXRSS_KB=38172"
+    ],
+    "diagnostic": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 158, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 125, in main\n    need(leading == expected, 'restricted exact pivot/kernel mismatch')\n  File \"/home/ubuntu/jc2/box/d125-defect-order-discriminator-20260907/check.py\", line 18, in need\n    raise ValueError(reason)\nValueError: restricted exact pivot/kernel mismatch\nCommand exited with non-zero status 1\nWALL=0.52 MAXRSS_KB=38172\n"
+  }
+]

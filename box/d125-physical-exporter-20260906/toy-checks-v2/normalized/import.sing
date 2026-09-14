@@ -1,0 +1,94 @@
+// IMPORT ONLY: no standard basis or solve
+ring R=0,(P_u0_v1,P_u0_v0,P_u1_v2,P_u1_v1,P_u1_v0,Q_u0_v1,Q_u0_v0,Q_u1_v1,Q_u1_v0,Q_u2_v2,Z_degree_guard),dp;
+ideal I=
+// jet_P_ell1_order0
+0,
+// jet_P_ell2_order0
+0,
+// jet_P_ell3_order0
+(1/1)*P_u1_v2,
+// jet_P_ell3_order1
+(2/1)*P_u1_v2,
+// jet_P_ell4_order0
+(1/1)*P_u1_v1,
+// jet_P_ell4_order1
+(1/1)*P_u1_v1,
+// jet_P_ell5_order0
+(1/1)*P_u1_v0,
+// jet_P_ell5_order1
+0,
+// jet_P_ell5_order2
+0,
+// jet_Q_ell1_order0
+0,
+// jet_Q_ell2_order0
+0,
+// jet_Q_ell3_order0
+0,
+// jet_Q_ell3_order1
+0,
+// jet_Q_ell4_order0
+(1/1)*Q_u1_v1,
+// jet_Q_ell4_order1
+(1/1)*Q_u1_v1,
+// jet_Q_ell5_order0
+(1/1)*Q_u1_v0,
+// jet_Q_ell5_order1
+0,
+// jet_Q_ell6_order0
+0,
+// jet_Q_ell6_order1
+0,
+// jet_Q_ell6_order2
+0,
+// jet_Q_ell7_order0
+0,
+// jet_Q_ell7_order1
+0,
+// jet_Q_ell7_order2
+0,
+// jet_Q_ell8_order0
+(1/1)*Q_u2_v2,
+// jet_Q_ell8_order1
+(2/1)*Q_u2_v2,
+// jet_Q_ell8_order2
+(1/1)*Q_u2_v2,
+// jet_Q_ell8_order3
+0,
+// pin_0_P_ell3_t3
+(1/1)*P_u1_v2+(-1/1),
+// pin_1_P_ell-2_t-1
+(-2/3),
+// pin_2_Q_ell8_t8
+(1/1)*Q_u2_v2+(1/1),
+// pin_3_Q_ell-1_t0
+(1/1)*Q_u0_v1+(3/1),
+// pin_4_Q_ell2_t3
+(9/5),
+// J_u0_v0
+(-1/1)*P_u0_v1*Q_u1_v0+(1/1)*P_u1_v0*Q_u0_v1+(-1/5),
+// J_u0_v1
+(-1/1)*P_u0_v1*Q_u1_v1+(1/1)*P_u1_v1*Q_u0_v1,
+// J_u0_v2
+(1/1)*P_u1_v2*Q_u0_v1,
+// J_u0_v3
+0,
+// J_u1_v0
+(-1/1)*P_u1_v1*Q_u1_v0+(1/1)*P_u1_v0*Q_u1_v1,
+// J_u1_v1
+(-2/1)*P_u1_v2*Q_u1_v0,
+// J_u1_v2
+(-2/1)*P_u0_v1*Q_u2_v2+(-1/1)*P_u1_v2*Q_u1_v1,
+// J_u1_v3
+0,
+// J_u2_v1
+(2/1)*P_u1_v0*Q_u2_v2,
+// J_u2_v2
+0,
+// J_u2_v3
+(-2/1)*P_u1_v2*Q_u2_v2,
+// original_degree_guard
+(1/1)*P_u1_v2*Q_u2_v2*Z_degree_guard+(-1/1);
+// COMPLETE prefix_sha256=177c1d537e016c2e338c603f7ce9d6aba9c631fa78f64666129a52eb8bfe5518
+print("D125_IMPORT_ONLY_NO_SOLVE");
+quit;

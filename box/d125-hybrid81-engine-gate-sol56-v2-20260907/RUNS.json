@@ -1,0 +1,45 @@
+{
+  "schema": "jc2.hybrid81-engine-hostile-gate-runs/v1",
+  "completed_utc": "2026-09-07T07:33:32Z",
+  "engine_executed": false,
+  "production_source_accessed": false,
+  "network_accessed": false,
+  "bounds": {"wall_seconds": 30, "cpu_seconds": 25, "as_bytes": 536870912, "fsize_bytes": 67108864, "core_bytes": 0},
+  "runs": [
+    {
+      "mode": "normal",
+      "python_argv": ["/usr/bin/python3", "-I", "-B", "gate_checks.py"],
+      "outcomes_passed": 10,
+      "outcomes_total": 10,
+      "exit": 0,
+      "wall_seconds": 0.10,
+      "user_seconds": 0.09,
+      "sys_seconds": 0.00,
+      "maxrss_kib": 26668
+    },
+    {
+      "mode": "optimized",
+      "python_argv": ["/usr/bin/python3", "-I", "-B", "-O", "gate_checks.py"],
+      "outcomes_passed": 10,
+      "outcomes_total": 10,
+      "exit": 0,
+      "wall_seconds": 0.42,
+      "user_seconds": 0.41,
+      "sys_seconds": 0.01,
+      "maxrss_kib": 30456
+    }
+  ],
+  "counter_control": {
+    "status": "REPRODUCED",
+    "property": "engine.py accepts a parent cmdline with the pinned runner pathname token but altered wall/output/child argv",
+    "stop_point": "mock sentinel at D.arm_deadline, before limits or any write"
+  },
+  "flat_frozen_test_engine": {
+    "normal_exit": 1,
+    "optimized_exit": 1,
+    "failure": "ModuleNotFoundError: No module named 'test_exact' at test_engine.py:13",
+    "note": "diagnostic only; producer's uncharged test-only sibling layout was not used"
+  },
+  "frozen_pins_before_after": "MATCH",
+  "children_and_writers": "TERMINAL"
+}

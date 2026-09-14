@@ -1,0 +1,25 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Both gates are done. The report is at `xmodel/small-certificate-gate-fable5-20260906.md` (16.7 KB, ends with the standalone marker, no charge_basis line), with notes under `box/small-certificate-gate-20260906/`. All five charged inputs are unchanged and their manifest hashes matched both the lane copies and the repo paths.
+
+**Verdicts**
+
+- **Claim 1, nonemptiness certificate contract: CONFIRMED** as a sufficient acceptance contract. A unital map into any nonzero `Q[T]/(H)` with H monic of positive degree proves properness, and a maximal ideal of that algebra gives a Qbar-point directly, so reducible or non-squarefree H is fine. Evaluating the acyclic circuit in that algebra computes exactly the images of the eliminated generators, so all-rows-zero suffices. The Hensel plus local-containment criterion, the rational-denominator rules, and the fixed-support scoping all hold as written. Two things are separated as book-relative: the identification of the 4,470 circuit slots with the complete ideal rests on the frozen compressor gate, and no verifier implementation exists yet.
+- **Claim 2, rank-vacuity lemma: CONFIRMED** as an elementary theorem with literal scope. The polarization, the degree bookkeeping, the two-line criterion with determinant −pq, and both automorphism controls check out by hand and by replay. The vacuity statement is correct row-by-row for any Keller pair in the normalized two-line unequal-degree locus. Atwell's provenance, the "64 rows" count, and the physical top forms are metadata I did not audit and the lemma does not depend on them.
+
+**Findings beyond the producer's text**
+
+- The `(x, x+p^L)` and `(x, p)` negative controls are refused by the contract's unit-multiplier clause itself, since the containment identity at x=0 forces the multiplier to vanish. This is stronger than merely observing the failure.
+- The `--mutate-local-containment` switch breaks the identity rather than the unit clause alone, and the preflight script contains no general verifier. Its controls are hand-identity transcriptions.
+- `target_e` rowlessness is pinned to a literal scope: the JSON expression fields the builder consumes plus the builder's explicit variable references in synthesized rows. That reference set equals the preflight's hard-coded `direct` set exactly, and `target_e` appears in the builder only in the monomial-order site table.
+- All nine inverse residuals were recomputed from the pinned metadata and are nonzero, so none of the three counting specializations satisfies the inverse rows. They cannot seed a lift.
+
+**Replays**
+
+| Script | Modes | Result |
+|---|---|---|
+| `preflight_controls.py` | normal, -O, -OO | rc 0, identical stdout, mutate rc 1 |
+| `check.py` | normal, -O, -OO | rc 0, identical stdout |
+| reviewer top-degree control | normal, -O, -OO | rc 0, identical stdout |
+
+The report is unsealed and awaits the harness stamp. Nothing was committed.
+DIVERT path=xmodel/small-certificate-gate-fable5-20260906.md status=CLEAN body_bytes=16711 body_sha256=057f2f1719c66f54026e62751e96781e765d6f0faa655e5ac33fcca77f0ac6f8

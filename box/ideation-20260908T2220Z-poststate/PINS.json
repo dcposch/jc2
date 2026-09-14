@@ -1,0 +1,131 @@
+{
+  "schema": "JC2-POST-CUTOFF/v1",
+  "freeze_utc": "2026-09-08T23:06:48.762892+00:00",
+  "original_blind_cutoff": "2026-09-08T22:26:47.147953+00:00",
+  "state": "POST_CUTOFF_ONLY_NO_LAUNCH",
+  "entries": [
+    {
+      "original": "xmodel/golden-resonant-source-consumer-coordinator-20260908.md",
+      "original_sha256": "1770c414adacb5f8a60438ed3379b3e39969c50e247cee2e5e898acc689f3c8f",
+      "snapshot": "box/ideation-20260908T2220Z-poststate/snapshots/consumer-full.md",
+      "snapshot_sha256": "1770c414adacb5f8a60438ed3379b3e39969c50e247cee2e5e898acc689f3c8f",
+      "bytes": 10364
+    },
+    {
+      "original": "xmodel/golden-nonh-composition-gate-fable5-20260908.md",
+      "original_sha256": "ddd2077da0d63d53aea062373f82ce7bdb21d9df1fcf4180127789e98409b9e2",
+      "snapshot": "box/ideation-20260908T2220Z-poststate/snapshots/nonh-gate-full.md",
+      "snapshot_sha256": "ddd2077da0d63d53aea062373f82ce7bdb21d9df1fcf4180127789e98409b9e2",
+      "bytes": 23606
+    },
+    {
+      "original": "xmodel/golden-nonh-composition-gate-fable5-20260908.run.v2",
+      "original_sha256": "7971057038e18affa811263af93b02311cbfc8c3ccbf7a0bf7bbe3089e08e4d9",
+      "snapshot": "box/ideation-20260908T2220Z-poststate/snapshots/nonh-gate.run.v2",
+      "snapshot_sha256": "7971057038e18affa811263af93b02311cbfc8c3ccbf7a0bf7bbe3089e08e4d9",
+      "bytes": 5127
+    },
+    {
+      "original": "box/d125-0220-root-harvest-20260907/2300-nonh-sweep-harvest.json",
+      "original_sha256": "f9613955aa159c71a930be449426d0bf38238913b9c9074a599f0b833e93f903",
+      "snapshot": "box/ideation-20260908T2220Z-poststate/snapshots/root-2300-replay.json",
+      "snapshot_sha256": "f9613955aa159c71a930be449426d0bf38238913b9c9074a599f0b833e93f903",
+      "bytes": 72626
+    },
+    {
+      "original": "xmodel/websweep-20260908T2212Z-astra.md",
+      "original_sha256": "364431f6267629e2f45e49785b18bf6393f4a9b4f2b59b4d3ee47047a70440dc",
+      "snapshot": "box/ideation-20260908T2220Z-poststate/snapshots/completed-sweep-full.md",
+      "snapshot_sha256": "364431f6267629e2f45e49785b18bf6393f4a9b4f2b59b4d3ee47047a70440dc",
+      "bytes": 13786
+    },
+    {
+      "original": "xmodel/websweep-20260908T2212Z-astra.md.artifact.json",
+      "original_sha256": "ce452b6238ea96d7ce4b367a117dbfa7290ec272e61718af9cba0b30d94be0ad",
+      "snapshot": "box/ideation-20260908T2220Z-poststate/snapshots/completed-sweep-transaction.json",
+      "snapshot_sha256": "ce452b6238ea96d7ce4b367a117dbfa7290ec272e61718af9cba0b30d94be0ad",
+      "bytes": 689
+    },
+    {
+      "original": "AUDIT.md",
+      "original_sha256": "bd5ef36d157b600e719fa47dde3fad58e54aba76d9af807c23ebbfd4d33332ac",
+      "section": "17(mmmmmmmmmmmmmmm)",
+      "snapshot": "box/ideation-20260908T2220Z-poststate/snapshots/audit-15m-only.md",
+      "snapshot_sha256": "b02ae267bb8cfef6956d6e0cec0b6188196b222d3d9d78e3d1582f4a5cc1a440",
+      "bytes": 5348
+    },
+    {
+      "original": "box/ideation-20260908T2220Z-poststate/delta.md",
+      "original_sha256": "26125a22720ce50c4645b4d53711ba9f9fbaec29e64ab638e5c5a5ca728be9e5",
+      "snapshot": "box/ideation-20260908T2220Z-poststate/delta.md",
+      "snapshot_sha256": "26125a22720ce50c4645b4d53711ba9f9fbaec29e64ab638e5c5a5ca728be9e5",
+      "bytes": 5304
+    }
+  ],
+  "reuse": [
+    {
+      "original": "xmodel/golden-two-regime-initial-discriminator-astra-20260908.md",
+      "original_sha256": "14c4cdeddf9b1166046759022378775fc7ebc147c7d939579cf93f6b78aa51c6",
+      "existing_snapshot": "box/ideation-20260908T2220Z/snapshots/provisional-golden-proof.md",
+      "snapshot_sha256": "14c4cdeddf9b1166046759022378775fc7ebc147c7d939579cf93f6b78aa51c6",
+      "reason": "already charged to every original blind; do not duplicate"
+    }
+  ],
+  "provenance_only": [
+    {
+      "path": "xmodel/golden-resonant-source-consumer-coordinator-20260908.md.artifact.json",
+      "sha256": "aec7cfe1801ec0b6b45855f2ab263289d2a6e1f9852f781905f07b400725a3c0"
+    },
+    {
+      "path": "box/websweep-20260908T2212Z/custody.json",
+      "sha256": "f1851987d1c174c9bc3515b19b6897d45d485a1541eb8e6b48949c74fd6fa31d"
+    }
+  ],
+  "gate_current_inputs": [
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/PINS.json",
+      "sha256": "5fb7ad6de6810b019b6d32fa64b9ae2ff574fa4ed702098f9a150061ebc1fd12"
+    },
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/inputs/source-proof.md",
+      "sha256": "14c4cdeddf9b1166046759022378775fc7ebc147c7d939579cf93f6b78aa51c6"
+    },
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/inputs/source-transaction.json",
+      "sha256": "a80659d8c6b38fd4800b7eb70b650af57a0065e0c67b077f2878c1c24377c8af"
+    },
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/inputs/source-custody.json",
+      "sha256": "fcc12304ee659dc5b83eb8f5e323a8c38a7cf3616e6a4b2f4b53cd1ca438568d"
+    },
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/inputs/source-check.py",
+      "sha256": "e49907ee44870195b3d437ea7b095619ecd9f6bc315702dc6932cfe7937687f8"
+    },
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/inputs/source-replay.json",
+      "sha256": "422c6258cbad8674d0138d360bfb82702a69939237c1d3cbe8f6e78369037c4f"
+    },
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/inputs/consumer-proof.md",
+      "sha256": "1770c414adacb5f8a60438ed3379b3e39969c50e247cee2e5e898acc689f3c8f"
+    },
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/inputs/consumer-transaction.json",
+      "sha256": "aec7cfe1801ec0b6b45855f2ab263289d2a6e1f9852f781905f07b400725a3c0"
+    },
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/inputs/consumer-check.py",
+      "sha256": "b47cffd1436080d8f32e925b94160361d6a781047d755b6ad2c387c47717a47b"
+    },
+    {
+      "path": "box/golden-nonh-composition-gate-20260908/inputs/consumer-replay.json",
+      "sha256": "afda7aeeb7ddecddbe528693d475b020f71b23e7c2f42ff07df2731be19e716b"
+    }
+  ],
+  "gate_report_sha256": "ddd2077da0d63d53aea062373f82ce7bdb21d9df1fcf4180127789e98409b9e2",
+  "parent_machine_observation_utc": "2026-09-08T22:54:45Z",
+  "own_machine_check": false,
+  "math_replays": 0,
+  "blind_body_or_receipt_reads": false
+}

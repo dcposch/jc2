@@ -1,0 +1,39 @@
+{
+  "schema": "jc2.static-first-custody/v1",
+  "task": "f10-mixed-loadstate-gate-sol-20260913",
+  "status": "TERMINAL_CONDITIONAL_STATIC_CONFIRMED",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-13T00:45:39.742144236Z",
+  "custody_authored_utc": "2026-09-13T00:47:39.220790538Z",
+  "read_scope": {
+    "whole_current_bodies": [
+      "box/f10-mixed-v3-ready-root-20260913/science-unit.template.sh",
+      "box/f10-mixed-operator-finish-sol-20260913/science-unit.template.sh",
+      "box/f10-mixed-dac-correction-root-20260913/PREPARE.template.sh",
+      "box/f10-mixed-v3-ready-root-20260913/missing-unit.properties",
+      "box/f10-mixed-v3-ready-root-20260913/missing-unit.exit",
+      "xmodel/f10-mixed-operator-finish-sol-20260913.md"
+    ],
+    "exact_pin_whole_reuse": ["COORDINATION.md"],
+    "administrative_prior_whole_reuse": ["ops/artifact_finalize.py"]
+  },
+  "input_postpins": [
+    ["box/f10-mixed-v3-ready-root-20260913/science-unit.template.sh", "338e45cef2e50e5bdedf25618bcd4ede02bba0f1c26f9faea8b0762ef064b788"],
+    ["box/f10-mixed-operator-finish-sol-20260913/science-unit.template.sh", "96258465fbc33d403072ad540bea782e4abf29092c4f5617a0c56043d3025b48"],
+    ["box/f10-mixed-dac-correction-root-20260913/PREPARE.template.sh", "482c50538c144aef7d41aac834aca43bb2f8108c8a14017a2e85fa155cd55d6f"],
+    ["box/f10-mixed-v3-ready-root-20260913/missing-unit.properties", "5c41a84581b7016ef5f0d21088c11bb78f668d50734456158f56b0dcbe0a66a5"],
+    ["box/f10-mixed-v3-ready-root-20260913/missing-unit.exit", "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"],
+    ["xmodel/f10-mixed-operator-finish-sol-20260913.md", "dec7b00072b59312175ca84ee5abfe09139b2babfafe69a7cec3fe1721a4e2b1"],
+    ["COORDINATION.md", "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597"],
+    ["ops/artifact_finalize.py", "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"]
+  ],
+  "outputs": [
+    ["box/f10-mixed-loadstate-gate-sol-20260913/PINS.json", "dd3a20ea47897cba2e4edd8af573ec7fda8d6a4cbbf0f21648cd4e2c1c02f0aa"],
+    ["xmodel/f10-mixed-loadstate-gate-sol-20260913.md", "deccc22218f96474225ae41bf20e64c50660caa66e536a0848175137fa350241"],
+    ["xmodel/f10-mixed-loadstate-gate-sol-20260913.md.artifact.json", "7bc2e5332e8b7e4e4da53acd9256cbbf1d67034392f7a75ea6d237c173ec654d"]
+  ],
+  "artifact_verify": "VERIFIED",
+  "all_input_postpins_match": true,
+  "all_writers_idle_after_custody": true,
+  "authority": "NONE; static review only"
+}

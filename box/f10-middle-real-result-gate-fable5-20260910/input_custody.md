@@ -1,0 +1,26 @@
+# input custody — f10-middle-real-result-gate-fable5-20260910
+
+Live sha256sum of the 22 immutable snapshots in /tmp/jc2-lane.CtJFkX/inputs, taken 2026-09-10 12:25:43 UTC BEFORE any body read; all 22 equal the charged list. certificate.json HASH ONLY (854264 bytes, never opened).
+
+790fa2c997982e56c0282a2d019e3436cd224573d8303a963ab43b8deb6a3e5e  CUSTODY.json
+f4d62113d16cd8573811780a3bb36a3cfa828684de313cd90c6718736ab49a13  POSITIVE-CUSTODY.json
+219151792c8ffbbaab2e745fa60bd72e9c05c705fcc2ded992bcd97badf05470  certificate.json
+a4974bfa116aa8b52eed560d5e478637cadae691008c8b4a451184150d674c58  check-R.stderr
+5d627b6b33a8a2aefd3dadb53073ccd780d7a8f3c842eab23e8d103ac6311e94  check-U.stderr
+ddcb3719eba9d61facb527400130454154bc04358bcca78c49da1944e70f23a1  check-bernstein.stderr
+0ba3a181b89e5f35da8f305161c8e4a854994aa1241835b8708316269b4ad07c  check-j.stderr
+1a9bb0f58e96fa5a0be086e72a725f3e1f7eabad89248888c3d8acc13323cf44  check.payload
+46a9d4bf21d4eac2502b6d128ae2dcddb22b60652a7ca34f6f3dc5b89b8f87f2  check.telemetry.json
+82f11ed717d1691bb37c36242fdd9eb1eea23ec5eb46b42db5590b1997db18e6  f10-middle-full-boundary-astra-20260910.md
+8a80bcc8ad7dd9068b503e9b1e18b4a5e6532d70f559658e3aa7077ec1928491  f10-middle-full-boundary-gate-fable5-20260910.md
+b84a4c4116b92757209507c0aebee1fbc9da646bc272a40beab40d2c130a8a8b  f10-middle-real-actual-execution-root-20260910.md
+d3b8c09234d50b51b9dbcfaa7a9f341f34263540bd35e798c9f794137640c932  f10-middle-real-code-gate-fable5-20260910.md
+8aa0e7601ba7c030f045dd37a60a2987cae15c67b150743637355dc753081b02  f10-middle-real-controls-actual-root-20260910.md
+4ba018dbbcdc552c40d4d324a0b38fba8e662969abcc2f10b434badfe4a49a64  f10-middle-real-controls-gate-fable5-20260910.md
+3f79cabecdb2c0f480bde3db644eac91ea5c8d3d472a3477f575b356993347ea  f10-middle-real-domain-astra-20260910.md
+f04c174e4b3111b2b9ee3e22e4ecceb619f0cfd2b9374e99a9ec9065cc52d21f  f10-middle-real-domain-gate-fable5-20260910.md
+8cf54b2f78840ced62fd35722da6d0d969eedd3344aa07d4ab08ff62c50df012  f10-middle-resonance-unit-astra-20260910.md
+dc43ef1cfba68da21d0e26f6422e6af626d15a75d551858e72e78c7236ac27ad  f10-middle-resonance-unit-gate-fable5-20260910.md
+cff18a06c050d64074ba9af70cea61b28b15614a61691125ebf26d3012577c62  f10-middle-septic-gate-fable5-20260910.md
+890e5c9c63a333bf873e963821c368d2dc080476eaf12c9fc6a10dce53db75e5  f10-middle-univariate-unit-astra-20260910.md
+beb732db5b838b84cdf6eb9ee8befd04a41704f4d5b5fa7eb479b2806423b633  mutate.payload

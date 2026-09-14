@@ -1,0 +1,122 @@
+{
+  "assert_nodes": 0,
+  "pins": {
+    "box/d125-minimal-receiver-client-preflight-20260906/client.py": {
+      "bytes": 11272,
+      "sha256": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53"
+    },
+    "box/d125-parity-unit-normalization-20260907/check.py": {
+      "bytes": 6851,
+      "sha256": "6c6e50674d69fc6731f4d3851aa314381e5a070676274841527581612321b071"
+    },
+    "box/d125-parity-unit-normalization-20260907/registration.json": {
+      "bytes": 452,
+      "sha256": "ecfb8e11574f43d6ce08c49d72b5b82ba29c718425e3ea526eb306bb6b556c1b"
+    },
+    "box/d125-parity-unit-normalization-20260907/replay.json": {
+      "bytes": 2339,
+      "sha256": "968e5279840c54272bb1ce4765172acbffd4648ff76a0db184de35e59b5cb352"
+    },
+    "box/d125-parity-unit-normalization-20260907/seal_custody.py": {
+      "bytes": 2404,
+      "sha256": "2bffe26bf2f77deb077931007baf0411e15c609025a855629fe12316d8910ca8"
+    },
+    "box/d125-parity-unit-normalization-20260907/witness-O.json": {
+      "bytes": 586,
+      "sha256": "a04393cf75fbc22d2ff4fb4480fa27600921fba57de42cd5b2556f80cff7e39c"
+    },
+    "box/d125-parity-unit-normalization-20260907/witness.json": {
+      "bytes": 586,
+      "sha256": "a04393cf75fbc22d2ff4fb4480fa27600921fba57de42cd5b2556f80cff7e39c"
+    },
+    "xmodel/d125-minimal-receiver-client-preflight-astra-20260906.md": {
+      "bytes": 15414,
+      "sha256": "e0debc7da22b8864ba43f0d29928e2104f2d8f161421ad26f29d8017f7b95e80"
+    },
+    "xmodel/d125-small-polynomial-lift-gate-fable5-20260906.md": {
+      "bytes": 14901,
+      "sha256": "4295593a57a65e4d31630aecdef0b54e9d6078935e07cfb5e64acfd83fae4122"
+    },
+    "xmodel/d125-small-receiver-polynomial-lift-contract-astra-20260906.md": {
+      "bytes": 15617,
+      "sha256": "433cc2fe9f11ce1b2e1f1fc57aab24def921afb1f93154a2d631ddee0b88cdad"
+    },
+    "xmodel/d125-zero-lambda-gate-fable5-20260907.md": {
+      "bytes": 7983,
+      "sha256": "33cb032a5d7f52cb12bd9122032ff5336499c3e67b9e650aa2c3c211935dd607"
+    },
+    "xmodel/d125-zero-lambda-obstruction-astra-20260907.md": {
+      "bytes": 4081,
+      "sha256": "a878a87bdeae772cc66d19ea817d43184882c649769c61d5babb47292d339d3a"
+    }
+  },
+  "runs": [
+    {
+      "flags": [],
+      "mutation": "",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a04393cf75fbc22d2ff4fb4480fa27600921fba57de42cd5b2556f80cff7e39c"
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-face",
+      "returncode": 1,
+      "stderr_sha256": "0c794234d1264f016dca1b61436e0a2fb740580480fef895aaa48ec37d9d4551",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-c-power",
+      "returncode": 1,
+      "stderr_sha256": "654ca1942bf037ee5fc52765120282bc1fd06efded90eeff198f4047435cfaba",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-omit-guard",
+      "returncode": 1,
+      "stderr_sha256": "40053d85b846bd0d1d1b021d49e8f146ca08311bee599ce61ffad2b26268cea1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a04393cf75fbc22d2ff4fb4480fa27600921fba57de42cd5b2556f80cff7e39c"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-face",
+      "returncode": 1,
+      "stderr_sha256": "0c794234d1264f016dca1b61436e0a2fb740580480fef895aaa48ec37d9d4551",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-c-power",
+      "returncode": 1,
+      "stderr_sha256": "654ca1942bf037ee5fc52765120282bc1fd06efded90eeff198f4047435cfaba",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-omit-guard",
+      "returncode": 1,
+      "stderr_sha256": "40053d85b846bd0d1d1b021d49e8f146ca08311bee599ce61ffad2b26268cea1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "producer desk normalization controls; not different-model gate or full row construction",
+  "status": "PASS",
+  "wall_seconds": 2.346550553920679
+}

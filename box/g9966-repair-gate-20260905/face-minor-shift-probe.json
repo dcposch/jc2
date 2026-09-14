@@ -1,0 +1,37 @@
+{
+  "branch": "delta2",
+  "free_h_coefficients": [
+    "Hc_10_1",
+    "Hc_11_0",
+    "Hc_7_4",
+    "Hc_8_3"
+  ],
+  "mapping": {
+    "E82": "-(-3*Hc_7_4*jet0 - 3*Hc_8_3 - 9*jet0**4*u**2 + 18*jet0**3*minor_a2*u - 18*jet0**3*rho*u - 9*jet0**2*minor_a2**2 + 18*jet0**2*minor_a2*rho + 18*jet0**2*u**3 + 16*jet0**2*u - 27*jet0*minor_a2*u**2 + 27*jet0*rho*u**2 + 9*minor_a2**2*u - 18*minor_a2*rho*u - 8*u**2)/3",
+    "Hc_1_10": "-3*jet0",
+    "Hc_1_8": "0",
+    "Hc_1_9": "0",
+    "Hc_2_7": "0",
+    "Hc_2_8": "-3*jet0**2",
+    "Hc_2_9": "3*(jet0**2 + u)",
+    "Hc_3_6": "-jet0**3",
+    "Hc_3_7": "2*jet0*(jet0**2 + 3*u)",
+    "Hc_3_8": "-jet0**3 - 3*jet0*u - 3*minor_a2 + 3*rho",
+    "Hc_4_6": "-(9*jet0**2*u + 8)/3",
+    "Hc_4_7": "(-9*jet0**2*u + 18*jet0*minor_a2 - 18*jet0*rho + 9*u**2 - 8)/3",
+    "Hc_5_5": "3*jet0*(-jet0**2*u + jet0*minor_a2 - jet0*rho + u**2)",
+    "Hc_5_6": "(9*jet0**3*u - 9*jet0**2*minor_a2 + 9*jet0**2*rho + 9*jet0*u**2 + 16*jet0 - 18*minor_a2*u + 18*rho*u)/3",
+    "Hc_6_4": "-(-18*jet0**2*u**2 - 8*jet0**2 + 18*jet0*minor_a2*u - 18*jet0*rho*u + 3*u**3)/3",
+    "Hc_6_5": "(-9*jet0**2*u**2 - 8*jet0**2 + 9*minor_a2**2 - 18*minor_a2*rho + 3*u**3 - 16*u)/3",
+    "Hc_7_3": "-(-9*jet0**3*u**2 + 18*jet0**2*minor_a2*u - 18*jet0**2*rho*u - 9*jet0*minor_a2**2 + 18*jet0*minor_a2*rho + 9*jet0*u**3 + 16*jet0*u - 9*minor_a2*u**2 + 9*rho*u**2)/3",
+    "Hc_9_2": "-(3*Hc_7_4*jet0**2 - 3*Hc_7_4*u + 3*Hc_8_3*jet0 + 9*jet0**5*u**2 - 18*jet0**4*minor_a2*u + 18*jet0**4*rho*u + 9*jet0**3*minor_a2**2 - 18*jet0**3*minor_a2*rho - 30*jet0**3*u**3 - 16*jet0**3*u + 54*jet0**2*minor_a2*u**2 - 54*jet0**2*rho*u**2 - 27*jet0*minor_a2**2*u + 54*jet0*minor_a2*rho*u + 9*jet0*u**4 + 24*jet0*u**2 + 3*minor_a2**3 - 9*minor_a2**2*rho - 9*minor_a2*u**3 + 9*rho*u**3)/3"
+  },
+  "new_parameter": "minor_a2",
+  "pivots": 18,
+  "raw_rows": 19,
+  "residual": [],
+  "status": "PASS",
+  "substitution": "y=jet0+u*t+(minor_a2+zeta)*t^2",
+  "target": "zeta^2*(zeta+3*rho)",
+  "zeros": 1
+}

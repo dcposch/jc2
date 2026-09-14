@@ -1,0 +1,76 @@
+{
+  "elapsed_seconds": 2.5742,
+  "runs": [
+    {
+      "mode": "normal",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "61b9b9e1b95792369610913b98f0c0e66ad214aabb9f49dff0e25915caa4613f"
+    },
+    {
+      "mode": "change-cubic-face",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 51, in <module>\n    need(outer_projection(H,H,C_U,(7,5))==smul(2,h2),'first degree12 scalar pivot')\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 8, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: first degree12 scalar pivot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-quadratic-face",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 56, in <module>\n    need(outer_projection(H,H,W,(6,4))==h2,'degree10 w pivot')\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 8, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: degree10 w pivot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-D",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 64, in <module>\n    need(residual==K(-2),'unavoidable gp row')\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 8, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: unavoidable gp row\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-target",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 64, in <module>\n    need(residual==K(-2),'unavoidable gp row')\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 8, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: unavoidable gp row\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "normal",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "61b9b9e1b95792369610913b98f0c0e66ad214aabb9f49dff0e25915caa4613f"
+    },
+    {
+      "mode": "change-cubic-face",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 51, in <module>\n    need(outer_projection(H,H,C_U,(7,5))==smul(2,h2),'first degree12 scalar pivot')\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 8, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: first degree12 scalar pivot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-quadratic-face",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 56, in <module>\n    need(outer_projection(H,H,W,(6,4))==h2,'degree10 w pivot')\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 8, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: degree10 w pivot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-D",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 64, in <module>\n    need(residual==K(-2),'unavoidable gp row')\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 8, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: unavoidable gp row\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-target",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 64, in <module>\n    need(residual==K(-2),'unavoidable gp row')\n  File \"/home/ubuntu/jc2/box/ideation-20260908T0200Z-cross-astra/check.py\", line 8, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: unavoidable gp row\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS"
+}

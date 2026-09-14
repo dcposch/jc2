@@ -1,0 +1,21 @@
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/fleet/i-06d4a0da61650ede5/results/mod32003.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-06 00:25:47 UTC  (96.92 s since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 32003, threads 64, order DRL
+  phase     : F4 round 59 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 58 completed + 1 in progress; sum of round wall time 24.34 s (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+       51    5       31        35658        782 x 1696          0.54%       10       21          0.06
+       52    5       25        35550        731 x 1204          0.51%        4       21          0.04
+       53    6      806        35619      26649 x 86973         0.04%      138      670          2.69
+       54    6      400        37294      22663 x 83750         0.04%      103      297          2.92
+       55    6      334        38871      11531 x 24374         0.06%       66      268          0.90
+       56    6      105        39862       4750 x 9641          0.13%       28       77          0.40
+       57    6       54        40626       3410 x 5657          0.15%       11       43          0.23
+       58    6       29        40853       1326 x 2107          0.36%        5       24          0.10
+  largest matrix so far: 70368 x 252667 0.03% at deg 6 (round 45, 5.24 s)
+  live round: r59 deg 7, sel 15443 of 40942 pairs  [stage: selected]
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 35658 -> 40853 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 40942 (list still growing)

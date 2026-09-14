@@ -1,0 +1,22 @@
+2026-09-07T00:17:07Z
+FINAL_QUIET: 0 owned_groups_present
+   9766    9766 bash -c D=/home/ubuntu/d125-small-full-stream-gate-fable5-20260906; date -u +%FT%TZ; echo FINAL_QUIET: $(ps -eo pgid= | grep -cE "^ *(8274|8278|8477|8479)$") owned_groups_present; ps -eo pid,pgid,args --no-headers | grep -E "[g]ate.py|[r]un_capped" || echo NO_GATE_PROCESS; cat /sys/class/dmi/id/board_asset_tag; find $D -type f | xargs sha256sum; find /home/ubuntu/d125-small-source-construction-pilot-20260906 -newer $D/gate.py -type f | head -3; echo PILOT_UNCHANGED_CHECK_DONE; sha256sum /home/ubuntu/d125-small-source-construction-pilot-20260906/*/client-*.jsonl /home/ubuntu/d125-small-source-construction-pilot-20260906/*/client-*.sing | sha256sum
+i-0da0cebfc97c9fd54
+e3c14f06c468c052c892a8fa394181d08b4eb6d9c3fbd6962d5354c16108de7e  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/gate.stdout
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/runner.err
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/gate.stderr
+1d04bc8f14c034d9b4f0d747593c69409a4e840f97b876c4ea5d6d6fe54d5d66  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/gate.stdout
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/runner.err
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/gate.stderr
+f88d0665bbe7e4f0dd519167c1f99c4a519235c2c127b76c35273d4b533118c6  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/gate.py
+290fb2cc4c63d895db3339374200f4d6105a8d4f356cd33ee59a7e28af0b0e18  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/results.json
+74e2964667b97f050d0a90d26f5b9cb9e7f1fc9f23b128dd0e66757b7b9c7867  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/runner.out
+6c024968194a8ab2d3ae20f72cee1deda63b3ae4483509b1ba26527956491058  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/launch.utc
+0eea714d68ba94129d5a5c437ff32d8eb84fed80b29185d9187932286818b331  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/gate.telemetry.json
+0c3e2d2d8734801f5bc215aa50e9d029110ee2a019675a46221ae71b356e601f  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/gate.py
+6c60e5ed5bb09922e3813a2c03373906a3850e18384adc9c50c899bc4f916216  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/results.json
+09240842eba24b7263e499494fa2e5580ad383df00c93cb00967067d2541af2d  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/runner.out
+c3d03b035e3ed2e1e4ccf15d43c05775525f1ab5c52dd39a6a5c167f286ba53e  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/launch.utc
+0f7f0afd139f3038f2cfa0a1251868bb3c7aaf3e8f98e4b0f104a81d31b84fb1  /home/ubuntu/d125-small-full-stream-gate-fable5-20260906/gate.telemetry.json
+PILOT_UNCHANGED_CHECK_DONE
+9d2cfe82167c8853deb7eac25406b8ad7dac03936dc7330eec653158cde28dbd  -

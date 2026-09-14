@@ -1,0 +1,31 @@
+{
+  "cases": {
+    "negative_wrong_target": {
+      "basis_size": 1,
+      "controls": [
+        "0",
+        "1"
+      ],
+      "dimension": -1,
+      "output_sha256": "4babad1f32354bb98016620f65d5b242e3d7683710707a6d2881ae2c7ab988c1",
+      "reduce_one": "0",
+      "script_sha256": "5d346f9eb7109f6a77f5bcbe70c48f281659a4ccdebcace9634bc3fde3769007"
+    },
+    "positive": {
+      "basis_size": 7,
+      "controls": [
+        "0",
+        "1"
+      ],
+      "dimension": 2,
+      "output_sha256": "7ae24509993972e1c94a015bf602a7b30e8d0784c5055f49efac497646515de8",
+      "reduce_one": "1",
+      "script_sha256": "12c83f97db180b34a8980774c6696257050cfa898f82781c8aa54251eac78b44"
+    }
+  },
+  "identity": true,
+  "positive_degree_after_degree11_composition": 55,
+  "positive_leader": "-1/4",
+  "scope": "characteristic rows only; deliberately fails actual D2 source faces",
+  "univariate_Q": "-s0**5/4 + 3*s0**4/8 - s0**3/2 + 47*s0**2/64 - 17*s0/32 - 1/64"
+}

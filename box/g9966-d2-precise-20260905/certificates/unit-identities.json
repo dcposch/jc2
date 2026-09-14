@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "coefficient_field": "Q",
+  "original_controls": {
+    "delta2": {
+      "Qstar_pivots": 35,
+      "json_sha256": "76c962a71ad088694d280bd5d398bdc8fa050ba81e8423e2260a92f1e99cc3f6",
+      "stage": 4,
+      "unit_generator": {
+        "inverse": "1/6264",
+        "label": "stage4_J_d159_k35",
+        "value": 6264
+      },
+      "verdict": "DEAD"
+    },
+    "delta52": {
+      "Qstar_pivots": 66,
+      "json_sha256": "e32651392afe0cceb28668f0de2c84bd846bbdb29be4b1f1ec4d97f20e217495",
+      "stage": 8,
+      "unit_generator": {
+        "inverse": "1/64",
+        "label": "stage8_G_local16_coord0",
+        "value": 64
+      },
+      "verdict": "DEAD"
+    },
+    "engine_sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9"
+  },
+  "precise_replays": {
+    "delta2": {
+      "first_unit_stage": 4,
+      "branch_verdict": "RE-CERTIFIED DEAD",
+      "re_certified_dead_ready": true,
+      "unit_generator": {
+        "identity": "1=(1/6264)*stage4_J_d159_k35",
+        "inverse": "1/6264",
+        "label": "stage4_J_d159_k35",
+        "value": "6264"
+      }
+    },
+    "delta52": {
+      "first_unit_stage": 8,
+      "branch_verdict": "RE-CERTIFIED DEAD",
+      "re_certified_dead_ready": true,
+      "unit_generator": {
+        "identity": "1=(1/64)*stage8_G_local16_coord0",
+        "inverse": "1/64",
+        "label": "stage8_G_local16_coord0",
+        "value": "64"
+      }
+    }
+  },
+  "singular_exact_Q": {
+    "delta2_stage4": "dimension=-1; basis=1; controls=0,1,0",
+    "delta52_stage8": "dimension=-1; basis=1; controls=0,1,0"
+  }
+}

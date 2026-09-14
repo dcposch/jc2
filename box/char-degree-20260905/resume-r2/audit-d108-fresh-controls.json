@@ -1,0 +1,150 @@
+[
+  {
+    "input_sha256": "c3944666893466b6a537c5103fa1994f37ab831eafba9922ac9a246835b6c6b2",
+    "driver_sha256": "9fd1880ade43659dccd8949391dc3ad000788a7d87e50b25abb4bf9b1c0e145a",
+    "script_sha256": "cb38e0883c431af48a9df07cf670a43c2205b5ea88d3fa55ec5252239bfb071a",
+    "status": "NONUNIT_NOT_POINT",
+    "cas": {
+      "returncode": 0,
+      "errors": [],
+      "log_sha256": "fe1d0a25714d55d0d0bf314f3d61ce3d042aa5be1f0b1c043edfcf3c8f68d039",
+      "controls": [
+        "0",
+        "1"
+      ],
+      "script_unchanged": true,
+      "result": [
+        "1",
+        "0",
+        "19"
+      ]
+    },
+    "version": "v1",
+    "label": "positive",
+    "field": "QQ",
+    "metadata_sha256": "fb7a8cfc7786ba5b5cc4c638b07d79bcb861eb70a51f288748f1c20044ae9c23",
+    "result_expected": "NONUNIT_NOT_POINT",
+    "pass": true
+  },
+  {
+    "input_sha256": "968af7e08f7d88005f6cb577a407d825931301d684eff891d5ef75148ba03b95",
+    "driver_sha256": "9fd1880ade43659dccd8949391dc3ad000788a7d87e50b25abb4bf9b1c0e145a",
+    "script_sha256": "c60ee2f96f81ddc582282f4b1a2b4c8ad78bc9dcf37a7c422886529c8f56c52c",
+    "status": "UNIT",
+    "cas": {
+      "returncode": 0,
+      "errors": [],
+      "log_sha256": "8f1bb2e2069903ec4548695787a5fb0f476f340a216f00b70f26f23612396fae",
+      "controls": [
+        "0",
+        "1"
+      ],
+      "script_unchanged": true,
+      "result": [
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    "version": "v1",
+    "label": "negative",
+    "field": "QQ",
+    "metadata_sha256": "af0dfea9fa021e5bd2a97784c73adcad103085761f41a3b79cb7f5ed9b23fd25",
+    "result_expected": "UNIT",
+    "pass": true
+  },
+  {
+    "input_sha256": "c3944666893466b6a537c5103fa1994f37ab831eafba9922ac9a246835b6c6b2",
+    "driver_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+    "script_sha256": "cb38e0883c431af48a9df07cf670a43c2205b5ea88d3fa55ec5252239bfb071a",
+    "status": "NONUNIT_NOT_POINT",
+    "cas": {
+      "returncode": 0,
+      "errors": [],
+      "log_sha256": "fe1d0a25714d55d0d0bf314f3d61ce3d042aa5be1f0b1c043edfcf3c8f68d039",
+      "controls": [
+        "0",
+        "1"
+      ],
+      "script_unchanged": true,
+      "result": [
+        "1",
+        "0",
+        "19"
+      ]
+    },
+    "version": "v2",
+    "label": "positive",
+    "field": "QQ",
+    "metadata_sha256": "b6490653827797bbae30ab970a0934c289b3d75e929eecb7e7fd48cf4991942a",
+    "result_expected": "NONUNIT_NOT_POINT",
+    "pass": true
+  },
+  {
+    "version": "v2-slimgb",
+    "label": "positive",
+    "input_sha256": "c3944666893466b6a537c5103fa1994f37ab831eafba9922ac9a246835b6c6b2",
+    "driver_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+    "script_sha256": "e3b261fd8d80074d0a4225257da859a7dcea646bec4eed59e340a1dcd0681ab5",
+    "output_sha256": "fe1d0a25714d55d0d0bf314f3d61ce3d042aa5be1f0b1c043edfcf3c8f68d039",
+    "returncode": 0,
+    "result": [
+      "1",
+      "0",
+      "19"
+    ],
+    "controls": [
+      "0",
+      "1"
+    ],
+    "parser_all_rows": true,
+    "pass_check": true
+  },
+  {
+    "input_sha256": "968af7e08f7d88005f6cb577a407d825931301d684eff891d5ef75148ba03b95",
+    "driver_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+    "script_sha256": "c60ee2f96f81ddc582282f4b1a2b4c8ad78bc9dcf37a7c422886529c8f56c52c",
+    "status": "UNIT",
+    "cas": {
+      "returncode": 0,
+      "errors": [],
+      "log_sha256": "8f1bb2e2069903ec4548695787a5fb0f476f340a216f00b70f26f23612396fae",
+      "controls": [
+        "0",
+        "1"
+      ],
+      "script_unchanged": true,
+      "result": [
+        "0",
+        "-1",
+        "1"
+      ]
+    },
+    "version": "v2",
+    "label": "negative",
+    "field": "QQ",
+    "metadata_sha256": "838a48ce3edfa4723c3c467ce36edbef3305be03cfc9f5ccf53d337f55814b83",
+    "result_expected": "UNIT",
+    "pass": true
+  },
+  {
+    "version": "v2-slimgb",
+    "label": "negative",
+    "input_sha256": "968af7e08f7d88005f6cb577a407d825931301d684eff891d5ef75148ba03b95",
+    "driver_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+    "script_sha256": "cf899e32fcd28a6f0a73ee2242de29cc0252c7a6f92bfccfd9df5a058a14ffe3",
+    "output_sha256": "8f1bb2e2069903ec4548695787a5fb0f476f340a216f00b70f26f23612396fae",
+    "returncode": 0,
+    "result": [
+      "0",
+      "-1",
+      "1"
+    ],
+    "controls": [
+      "0",
+      "1"
+    ],
+    "parser_all_rows": true,
+    "pass_check": true
+  }
+]

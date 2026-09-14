@@ -1,0 +1,34 @@
+// Exact Q(d): the closing ideal PLUS the two scale-invariant (UL) rows
+// l_N = 1/y and P_{2N} = omega, at b = 1.  Must be EMPTY (banked V(J_t)={0}).
+int N=NNN; int KMAX=4*N;
+ring R=(0,d),(x,u,B,w2,l(2..N)),dp;
+minpoly = 3*d^2 - N;
+number y=(d+N)/(2*(2*N-1));  number om=1/(4*y^2*(2*d+1));
+proc xc(poly f,int k){matrix m=coef(f,x);int i;
+  for(i=1;i<=ncols(m);i++){if(deg(m[1,i])==k){return(m[2,i]);}} return(poly(0));}
+poly eta=(u-3*l(2))/4;
+poly L=-1; int j; for(j=2;j<=N;j++){ L=L+l(j)*(x^j); }
+poly G=3*L*(L+1)/2-B*x;
+poly RF=3*(L^2)*(L*(L+2)-4*B*x)/16-eta*(x^2)*(L/2+B*x);
+poly P=-1/4-B*x+eta*(x^2)+w2*(x^3);
+list Phi; int k; poly PS,Ex,br,Pk; number cc;
+for(k=4;k<=KMAX;k++){ PS=P*P; Ex=x*diff(PS,x)-3*PS+G*P-RF; br=xc(Ex,k);
+  cc=number(2)/number(k-3); Pk=cc*br; Phi[k]=Pk; P=P+Pk*(x^k); }
+ideal Icl; int i; int c=0;
+for(i=2*N+1;i<=KMAX;i++){ c=c+1; Icl[c]=Phi[i]; }
+poly lastP=Phi[2*N];
+ring S=(0,d),(u,B,w2,l(2..N)),dp; minpoly=3*d^2-N;
+number y=(d+N)/(2*(2*N-1)); number om=1/(4*y^2*(2*d+1));
+map ph=R,0,u,B,w2,l(2..N); ideal Icl=ph(Icl); poly lastP=ph(lastP);
+option(redSB);
+ideal Iray = Icl + ideal(l(N)-1/y, lastP-om);
+ideal Gr = std(Iray);
+print("N="+string(N)+"  RAY(b=1) unit="+string(size(Gr)==1 && Gr[1]==1)+"  dim="+string(dim(Gr)));
+// negative control: drop the (UL) rows -> must NOT be unit
+ideal Gc = std(Icl);
+print("  NEGCTRL no-(UL) unit="+string(size(Gc)==1 && Gc[1]==1)+"  dim="+string(dim(Gc)));
+// negative control: wrong lc (l_N = 1/y + 1)
+ideal Gw = std(Icl + ideal(l(N)-1/y-1, lastP-om));
+print("  NEGCTRL wrong-lc unit="+string(size(Gw)==1 && Gw[1]==1)+"  dim="+string(dim(Gw)));
+print("DONE_RAYUL_N"+string(N));
+quit;

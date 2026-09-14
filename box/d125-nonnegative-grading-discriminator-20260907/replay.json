@@ -1,0 +1,77 @@
+{
+  "caps": "30wall25CPU512MiB each; Python-I-B",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e6efd2c671f9c4ef8a1588d8a27b81b9fbaf993e5a7cc52a34af6357d50d2e2d"
+    },
+    {
+      "mutation": "--mutate-top-pin",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "f8667271a16d3bfc20153bb6d6a62e540719f95fb18e6cd1d675aca64deb5260",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-lift-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "429f3e182c4a3388482dfbd9b24da6cc3c89c9b296496f23b794bab4477ca130",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-remove-constant",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "21a862560ae8d6e586a8c89ba64f68801eae7799dadfd16305da9498e9b4cb86",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-remove-k",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "21a862560ae8d6e586a8c89ba64f68801eae7799dadfd16305da9498e9b4cb86",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e6efd2c671f9c4ef8a1588d8a27b81b9fbaf993e5a7cc52a34af6357d50d2e2d"
+    },
+    {
+      "mutation": "--mutate-top-pin",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "f8667271a16d3bfc20153bb6d6a62e540719f95fb18e6cd1d675aca64deb5260",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-lift-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "429f3e182c4a3388482dfbd9b24da6cc3c89c9b296496f23b794bab4477ca130",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-remove-constant",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "21a862560ae8d6e586a8c89ba64f68801eae7799dadfd16305da9498e9b4cb86",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-remove-k",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "21a862560ae8d6e586a8c89ba64f68801eae7799dadfd16305da9498e9b4cb86",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "writers_finished": true
+}

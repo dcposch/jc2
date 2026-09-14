@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and delivered at 04:13:56 UTC, ahead of the 04:22 target.
+
+**Report:** `xmodel/d125-low-jet-saturation-gate-fable5-20260907.md`, 1240 words, single standalone `<!-- BODY-END -->` as the final line, nothing after it, no authored seal, no charge basis. Report SHA `65bb46ee…` is recorded in the box receipt. All eleven frozen inputs re-hash to their pins, and the primary report hash matches root's `57d85da3…`.
+
+**Verdicts, all CONFIRMED:**
+
+- **Item 1, rows.** The degree-0/2 rows and the exact g² cancellation against the parity table's values are reproduced. The a01·b21 and a01·b12 terms are genuine [A₁,B₃] contributions, tested before a01=0. A control with generic degree-5 terms shows higher parts cannot reach degrees 0 or 2.
+- **Item 2, saturation.** All three certificates and all three reverse identities hold as polynomial identities. The contraction argument is sound: after eliminating a01 and e, the quotient is a domain modulo an irreducible primitive generator, so G is already k-saturated. The report correctly limits this to the low ideal.
+- **Item 3, presentation.** Term count 7→5 is literal. a01 and a03 are Hermite pivots at levels 1 and 3, and e is the unique free B₁ column. One uncharged note: e is also the level-1 B-Hermite pivot, a pre-existing double booking that only strengthens the no-saving conclusion.
+- **Item 4, arc interface.** Truncated products from R_t reproduce a01, a03 and e exactly, plus a12=α(t+3), which the report omits. The DVR logic, the even-order consequence, and the t=−3/α=0 exception all check. The report's "PROVISIONAL" label on the classification is stale, since 14f is now promoted; only its field classification is used, not the order-two obstruction.
+- **Item 5, scope.** Stop clauses are present and accurate. Typed uncharged gaps: transaction root not in the frozen set, and the history checksum unverifiable.
+
+**Own controls** in `box/d125-low-jet-saturation-gate-fable5-20260907/`: stdlib-only script with zero Assert nodes and ordered named gates. Eight runs, normal and -O, positive witnesses byte-identical. Each mutation was recorded by its first failing gate, confirming every branch is actually reached. Runtime 0.9 s and 23 MB, well under caps. The frozen checker was run once read-only and its output re-hashes to the charged witness.
+DIVERT path=xmodel/d125-low-jet-saturation-gate-fable5-20260907.md status=CLEAN body_bytes=8531 body_sha256=65bb46ee40c9dc7c873de732a333f000206c2efa4016be06e1f89b880effa583

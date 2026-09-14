@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate report is complete and sealed at 13:23:02Z, ahead of the 13:28Z reserve. No further edits will be made.
+
+**Outcome:** all three sections of the ROOT control are CONFIRMED by independent manual reconstruction. The report is `xmodel/radial-euler-descent-gate-fable5-20260912.md` (177 lines, marker last, SHA-256 `526eba78…9f4c02`).
+
+**What I verified by hand**
+- **A.** `J(p,q)=1`, the exact identity `dT = α − p dq`, the inverse formulas, `R = A[X]/(X³−p)` free of rank 3 and étale, `τ = x+x²`, `x(τ+1) = τ+p`, and `Frac B = C(x,y)` proved directly. The pole of `q` along `x=0` is genuine. ROOT's injectivity sentence was terse, so I supplied the linear-independence step over `C(p,q)`. Not a gap.
+- **B.** The cubic `W = Z³−3pZ−p−p²` is minimal with exact kernel. `R` is the finite birational unramified normalization. Singular support is the line `p=1, τ=−1` times the `q`-axis. Sheets `ω, ω²` collide, `x=1` is smooth, slope gap `(ω²−ω)/3`. The conductor `C_R = (x²+x+1)R` holds by both inclusions: the three module products, then the two-point evaluation of `r` and `rx`. Saturation fails as stated.
+- **C.** `E(τ) = τ − x/2`, `x ∉ B`, so `E(B) ⊄ B` and `E(C_R) ⊄ C_R`. The matched-term deletion gives graph ring `R` with the same radial form and degree-3 étale map. The control refutes only the displayed open-plane automatic descent, nothing full-plane, BGV, or normality-related.
+
+**Own check added:** the Euler field does not even preserve the target ring `A`, since `E(q) = −q/2 + (4/3)x + (5/3)x²`. This is a reach limit on the discriminator, not an error in ROOT. If the named next-step inference assumed `E(A) ⊂ A`, this control does not test it.
+
+**Custody:** both input hashes matched at first read and at post-seal re-pin. The ROOT seal replays exactly (6811 body bytes, hash `81dc61…c13ef`). All writes used apply_patch; no interpreter, CAS, network, or other input was used. Result remains PROVISIONAL; no charge_basis declared.
+DIVERT path=xmodel/radial-euler-descent-gate-fable5-20260912.md status=CLEAN body_bytes=10499 body_sha256=526eba78f16bef813f148e39cfa5f5852cde5a916ea72845cd4780e3529f4c02

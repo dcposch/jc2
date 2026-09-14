@@ -1,0 +1,153 @@
+    expected: ProcessIdentity, stage: str, checks: List[Dict[str, Any]]
+) -> bool:
+    observed = read_identity(expected.pid)
+    record: Dict[str, Any] = {"stage": stage, "utc": utc_now()}
+    if observed is None:
+        record["result"] = "NOT_FOUND"
+        checks.append(record)
+        return False
+    record.update(
+        {
+            "observed_pid": observed.pid,
+            "observed_pgid": observed.pgid,
+            "observed_start_identity": observed.start_identity,
+            "result": "MATCH" if observed == expected else "MISMATCH",
+        }
+    )
+    checks.append(record)
+    if observed != expected:
+        raise RunnerError(
+            "process identity mismatch before %s; refusing to signal" % stage
+        )
+    return True
+
+
+def sample_group(pgid: int) -> GroupSample:
+    completed = subprocess.run(
+        [ps_path(), "-axo", "pid=,pgid=,rss=,state="],
+        check=False,
+        stdin=subprocess.DEVNULL,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        timeout=2.0,
+    )
+    if completed.returncode != 0:
+        raise RunnerError(
+            "ps group query failed with exit %d" % completed.returncode
+        )
+    live: List[int] = []
+    zombies: List[int] = []
+    rss_kib = 0
+    for line in completed.stdout.splitlines():
+        fields = line.split(None, 3)
+        if len(fields) != 4:
+            continue
+        try:
+            process_pid = int(fields[0])
+            process_pgid = int(fields[1])
+            process_rss = int(fields[2])
+        except ValueError:
+            continue
+        if process_pgid != pgid:
+            continue
+        state_text = fields[3]
+        if state_text.startswith("Z"):
+            zombies.append(process_pid)
+        else:
+            live.append(process_pid)
+            rss_kib += process_rss
+    return GroupSample(tuple(sorted(live)), tuple(sorted(zombies)), rss_kib * 1024)
+
+
+def send_group_signal(
+    expected: ProcessIdentity,
+    signum: int,
+    stage: str,
+    checks: List[Dict[str, Any]],
+) -> bool:
+    if not validate_identity(expected, stage, checks):
+        return False
+    try:
+        os.killpg(expected.pgid, signum)
+    except ProcessLookupError:
+        checks.append(
+            {"stage": stage + "-send", "utc": utc_now(), "result": "GROUP_GONE"}
+        )
+        return False
+    checks.append(
+        {
+            "stage": stage + "-send",
+            "utc": utc_now(),
+            "result": "SENT",
+            "signal": signum,
+        }
+    )
+    return True
+
+
+def wait_for_group_quiet(
+    pgid: int,
+    seconds: float,
+    sample_seconds: float,
+    maximum_rss: List[int],
+) -> GroupSample:
+    deadline = time.monotonic() + seconds
+    while True:
+        sample = sample_group(pgid)
+        maximum_rss[0] = max(maximum_rss[0], sample.rss_bytes)
+        if not sample.live_pids:
+            return sample
+        remaining = deadline - time.monotonic()
+        if remaining <= 0.0:
+            return sample
+        time.sleep(min(sample_seconds, remaining))
+
+
+def terminate_group_and_reap(
+    process: subprocess.Popen,
+    expected: ProcessIdentity,
+    grace_seconds: float,
+    sample_seconds: float,
+    checks: List[Dict[str, Any]],
+    maximum_rss: List[int],
+) -> CleanupResult:
+    initial = sample_group(expected.pgid)
+    maximum_rss[0] = max(maximum_rss[0], initial.rss_bytes)
+    term_sent = False
+    kill_sent = False
+    final_before_reap = initial
+
+    if initial.live_pids:
+        term_sent = send_group_signal(
+            expected, signal.SIGTERM, "before-term", checks
+        )
+        final_before_reap = wait_for_group_quiet(
+            expected.pgid, grace_seconds, sample_seconds, maximum_rss
+        )
+
+    if final_before_reap.live_pids:
+        kill_sent = send_group_signal(
+            expected, signal.SIGKILL, "before-kill", checks
+        )
+        final_before_reap = wait_for_group_quiet(
+            expected.pgid,
+            POST_KILL_OBSERVE_SECONDS,
+            sample_seconds,
+            maximum_rss,
+        )
+
+    # No wait/poll has competed with this point.  Bound even the authoritative
+    # reap: SIGKILL cannot wake an uninterruptible D-state process, so an
+    # unbounded wait here would violate every advertised cap.
+    try:
+        process.wait(timeout=POST_KILL_OBSERVE_SECONDS)
+        leader_reaped = True
+    except subprocess.TimeoutExpired:
+        leader_reaped = False
+    return CleanupResult(
+        term_sent, kill_sent, final_before_reap, leader_reaped
+    )
+
+
+def terminate_unidentified_spawn_and_reap(

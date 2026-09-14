@@ -1,0 +1,27 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. The gate report is written and closed with a unique standalone `<!-- BODY-END -->` line at 16:49:57 UTC, inside the 16:52:36 deadline.
+
+**Verdict: CONFIRMED at the conditional scope, A–D all confirmed.** Every full guarded solution over a characteristic-zero field has actual map degree [K(U,V):K(P,Q)] = 3n = 15r+6, so 21 at r = 1. Nothing beyond that conditional invariant is asserted.
+
+What I checked by hand:
+
+- **A.** A−λ is prime in F[S,t] by the domain argument, hence automatically primitive, so Gauss gives [E:F(S)] = 3. Residue-degree weights suffice; the rational place forces F algebraically closed in E, so geometric integrality is a consequence, not a hypothesis.
+- **B.** The weighted chain rule reproduces mCD'−nC'D = −θ^7 with the source orientation and leading coefficient 5m−3n = −1. Nonzero a forces three distinct nonzero roots with D nonzero there. Hensel on the monic x-model gives exactly one unramified place per irreducible factor of C, residue degrees summing to 3, B pole order exactly n at each.
+- **C.** Any place with S finite and t infinite is centred at the F-rational point (S,z) = (0,0), where Q_S = 1, so the DVR is unique. I rechecked s₁ = u, s₂ = −1 and s₃ = λ+d₀−u·v₀ from the coefficient formulas, and formula (3) term by term. Inverse polynomiality of B kills the pole there.
+- **D.** The fundamental identity over 1/B = 0 gives 3n; transport through the birational chain is verified including Π(pz³−z²+uz, 1/z) = p. All three controls hold, including B+t giving 3n+1 while breaking both the Jacobian (by A_S) and inverse polynomiality. Degree 21 is the product of place count 3 and pole order 7, distinct from 112·196.
+
+Additional items in the report:
+
+- **One provisional discriminator** derived from A–D only, not raised as an OPEN: the divisor of Δ on the generic fibre has zero-degree 21r+7, and two Riemann–Hurwitz counts force generic-fibre genus 3r with B unramified at the t-pole place. It is offered as a comparison against the uncharged fibre-genus line, wall estimate about 20 minutes by hand.
+- **GAPs listed:** the exact leading forms A₃ = S and B₅ = S² and contract conditions 1–4 are imported at accepted 16q/16r scope, not re-proved here.
+
+Outputs and custody:
+
+| Item | Value |
+|---|---|
+| Report | xmodel/f10-full-map-field-degree-gate-fable5-20260909.md, 12747 bytes |
+| Report SHA256 | 46833302999dbb14a2105d185dd7be0ebb4c3ccf8c43551fb04df2ff5c21b667 |
+| Box | box/f10-full-map-field-degree-gate-fable5-20260909/READ-SCOPE.md only |
+
+No Seal or charge_basis line was authored, no OPEN raised, collisions EMPTY. Only metadata commands ran, with zero CAS, scripts or subprocesses.
+DIVERT path=xmodel/f10-full-map-field-degree-gate-fable5-20260909.md status=CLEAN body_bytes=12747 body_sha256=46833302999dbb14a2105d185dd7be0ebb4c3ccf8c43551fb04df2ff5c21b667

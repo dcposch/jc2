@@ -1,0 +1,660 @@
+{
+  "corrected_delta2": {
+    "Hc_11_0": "free",
+    "a2_zero_specialization_matches_gate": true,
+    "coefficient_field": "QQ",
+    "every_row_rechecked": true,
+    "face": "3*rho*zeta**2 + zeta**3",
+    "face_derivation": {
+      "double_root_location": "minor_a2 (carried in the source series)",
+      "root_multiplicities": [
+        2,
+        1
+      ],
+      "root_source": "branch datum",
+      "signed_separation_coordinate": "3*rho"
+    },
+    "free_generators": [
+      "Hc_10_1",
+      "Hc_11_0",
+      "Hc_7_4",
+      "Hc_8_3",
+      "jet0",
+      "minor_a2",
+      "rho",
+      "u"
+    ],
+    "localization": "rho!=0",
+    "mapping": {
+      "E82": "-(-3*Hc_7_4*jet0 - 3*Hc_8_3 - 9*jet0**4*u**2 + 18*jet0**3*minor_a2*u - 18*jet0**3*rho*u - 9*jet0**2*minor_a2**2 + 18*jet0**2*minor_a2*rho + 18*jet0**2*u**3 + 16*jet0**2*u - 27*jet0*minor_a2*u**2 + 27*jet0*rho*u**2 + 9*minor_a2**2*u - 18*minor_a2*rho*u - 8*u**2)/3",
+      "Hc_1_10": "-3*jet0",
+      "Hc_1_8": "0",
+      "Hc_1_9": "0",
+      "Hc_2_7": "0",
+      "Hc_2_8": "-3*jet0**2",
+      "Hc_2_9": "3*(jet0**2 + u)",
+      "Hc_3_6": "-jet0**3",
+      "Hc_3_7": "2*jet0*(jet0**2 + 3*u)",
+      "Hc_3_8": "-jet0**3 - 3*jet0*u - 3*minor_a2 + 3*rho",
+      "Hc_4_6": "-(9*jet0**2*u + 8)/3",
+      "Hc_4_7": "(-9*jet0**2*u + 18*jet0*minor_a2 - 18*jet0*rho + 9*u**2 - 8)/3",
+      "Hc_5_5": "3*jet0*(-jet0**2*u + jet0*minor_a2 - jet0*rho + u**2)",
+      "Hc_5_6": "(9*jet0**3*u - 9*jet0**2*minor_a2 + 9*jet0**2*rho + 9*jet0*u**2 + 16*jet0 - 18*minor_a2*u + 18*rho*u)/3",
+      "Hc_6_4": "-(-18*jet0**2*u**2 - 8*jet0**2 + 18*jet0*minor_a2*u - 18*jet0*rho*u + 3*u**3)/3",
+      "Hc_6_5": "(-9*jet0**2*u**2 - 8*jet0**2 + 9*minor_a2**2 - 18*minor_a2*rho + 3*u**3 - 16*u)/3",
+      "Hc_7_3": "-(-9*jet0**3*u**2 + 18*jet0**2*minor_a2*u - 18*jet0**2*rho*u - 9*jet0*minor_a2**2 + 18*jet0*minor_a2*rho + 9*jet0*u**3 + 16*jet0*u - 9*minor_a2*u**2 + 9*rho*u**2)/3",
+      "Hc_9_2": "-(3*Hc_7_4*jet0**2 - 3*Hc_7_4*u + 3*Hc_8_3*jet0 + 9*jet0**5*u**2 - 18*jet0**4*minor_a2*u + 18*jet0**4*rho*u + 9*jet0**3*minor_a2**2 - 18*jet0**3*minor_a2*rho - 30*jet0**3*u**3 - 16*jet0**3*u + 54*jet0**2*minor_a2*u**2 - 54*jet0**2*rho*u**2 - 27*jet0*minor_a2**2*u + 54*jet0*minor_a2*rho*u + 9*jet0*u**4 + 24*jet0*u**2 + 3*minor_a2**3 - 9*minor_a2**2*rho - 9*minor_a2*u**3 + 9*rho*u**3)/3"
+    },
+    "minor_series": "y=jet0+u*t+(minor_a2+zeta)*t^2",
+    "mode": "corrected",
+    "parameter_divisions": [],
+    "parameters": [
+      "rho",
+      "u",
+      "jet0",
+      "minor_a2"
+    ],
+    "pivots": [
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s1_q0",
+        "variable": "Hc_1_8"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s2_q0",
+        "variable": "Hc_2_7"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s3_q0",
+        "variable": "Hc_3_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s4_q0",
+        "variable": "Hc_4_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s4_q1",
+        "variable": "Hc_1_9"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s5_q0",
+        "variable": "Hc_5_5"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s5_q1",
+        "variable": "Hc_2_8"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s6_q0",
+        "variable": "Hc_6_4"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s6_q1",
+        "variable": "Hc_3_7"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s7_q0",
+        "variable": "Hc_7_3"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s7_q1",
+        "variable": "Hc_4_7"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s7_q2",
+        "variable": "Hc_1_10"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s8_q0",
+        "variable": "E82"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s8_q1",
+        "variable": "Hc_5_6"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s8_q2",
+        "variable": "Hc_2_9"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s9_q0",
+        "variable": "Hc_9_2"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s9_q1",
+        "variable": "Hc_6_5"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s9_q2",
+        "variable": "Hc_3_8"
+      }
+    ],
+    "pole_order_derivation": {
+      "cover": 1,
+      "degree": 11,
+      "minor_root_count": 3,
+      "normalized_power": 9,
+      "other_root_count": 8,
+      "valuation": "-2"
+    },
+    "raw_rows": 19,
+    "raw_rows_sha256": "af15de1f43c3009b6580c73989f52f86c9813fd533feacecaf49fc149f7e0957",
+    "residual_count": 0
+  },
+  "corrected_delta52": {
+    "Hc_11_0": "free",
+    "a2_zero_specialization_matches_gate": true,
+    "coefficient_field": "QQ",
+    "every_row_rechecked": true,
+    "face": "-c*zeta + zeta**3",
+    "face_derivation": {
+      "deck_action": "zeta -> -zeta",
+      "orbit_relation": "minor_orbit_root^2=c",
+      "root_multiplicities": [
+        1,
+        1,
+        1
+      ],
+      "root_source": "branch datum and denominator-two deck action"
+    },
+    "free_generators": [
+      "Hc_11_0",
+      "Hc_8_3",
+      "c",
+      "jet0",
+      "u",
+      "v"
+    ],
+    "localization": "c!=0",
+    "mapping": {
+      "E82": "-(-3*Hc_8_3 - 3*c*jet0 + 9*jet0**2*u**3 + 16*jet0**2*u - 18*jet0*u**2*v - 16*jet0*v - 8*u**2 + 9*u*v**2)/3",
+      "Hc_10_1": "-(-3*Hc_8_3*u - 6*c*jet0*u + 3*c*v + 9*jet0**2*u**4 + 24*jet0**2*u**2 - 18*jet0*u**3*v - 32*jet0*u*v - 8*u**3 + 9*u**2*v**2 + 8*v**2)/3",
+      "Hc_1_10": "-3*jet0",
+      "Hc_1_8": "0",
+      "Hc_1_9": "0",
+      "Hc_2_7": "0",
+      "Hc_2_8": "-3*jet0**2",
+      "Hc_2_9": "3*(jet0**2 + u)",
+      "Hc_3_6": "-jet0**3",
+      "Hc_3_7": "2*jet0*(jet0**2 + 3*u)",
+      "Hc_3_8": "-jet0**3 - 3*jet0*u - 3*v",
+      "Hc_4_6": "-(9*jet0**2*u + 8)/3",
+      "Hc_4_7": "(-9*jet0**2*u + 18*jet0*v + 9*u**2 - 8)/3",
+      "Hc_5_5": "3*jet0*(-jet0**2*u + jet0*v + u**2)",
+      "Hc_5_6": "(9*jet0**3*u - 9*jet0**2*v + 9*jet0*u**2 + 16*jet0 - 18*u*v)/3",
+      "Hc_6_4": "-(-18*jet0**2*u**2 - 8*jet0**2 + 18*jet0*u*v + 3*u**3)/3",
+      "Hc_6_5": "(-9*jet0**2*u**2 - 8*jet0**2 + 3*u**3 - 16*u + 9*v**2)/3",
+      "Hc_7_3": "-(-9*jet0**3*u**2 + 18*jet0**2*u*v + 9*jet0*u**3 + 16*jet0*u - 9*jet0*v**2 - 9*u**2*v)/3",
+      "Hc_7_4": "(3*c - 9*jet0**3*u**2 + 18*jet0**2*u*v + 9*jet0*u**3 - 9*jet0*v**2 - 9*u**2*v + 16*v)/3",
+      "Hc_9_2": "(-3*Hc_8_3*jet0 - 3*c*jet0**2 + 3*c*u + 12*jet0**3*u**3 + 16*jet0**3*u - 27*jet0**2*u**2*v - 16*jet0**2*v - 24*jet0*u**2 + 18*jet0*u*v**2 + 16*u*v - 3*v**3)/3"
+    },
+    "minor_series": "y=jet0+u*t+v*t^2+zeta*t^(5/2)",
+    "mode": "corrected",
+    "parameter_divisions": [],
+    "parameters": [
+      "u",
+      "v",
+      "c",
+      "jet0"
+    ],
+    "pivots": [
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s2_q0",
+        "variable": "Hc_1_8"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s4_q0",
+        "variable": "Hc_2_7"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s6_q0",
+        "variable": "Hc_3_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s8_q0",
+        "variable": "Hc_4_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s9_q1",
+        "variable": "Hc_1_9"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s10_q0",
+        "variable": "Hc_5_5"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s11_q1",
+        "variable": "Hc_2_8"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s12_q0",
+        "variable": "Hc_6_4"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s13_q1",
+        "variable": "Hc_3_7"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s14_q0",
+        "variable": "Hc_7_3"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s15_q1",
+        "variable": "Hc_4_7"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s16_q0",
+        "variable": "E82"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s16_q2",
+        "variable": "Hc_1_10"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s17_q1",
+        "variable": "Hc_5_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s18_q0",
+        "variable": "Hc_9_2"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s18_q2",
+        "variable": "Hc_2_9"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s19_q1",
+        "variable": "Hc_6_5"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s20_q0",
+        "variable": "Hc_10_1"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s20_q2",
+        "variable": "Hc_3_8"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s21_q1",
+        "variable": "Hc_7_4"
+      }
+    ],
+    "pole_order_derivation": {
+      "cover": 2,
+      "degree": 11,
+      "minor_root_count": 3,
+      "normalized_power": 21,
+      "other_root_count": 8,
+      "valuation": "-1/2"
+    },
+    "raw_rows": 21,
+    "raw_rows_sha256": "6209f46a09f860b0285a21564b938aa4391a97d1d4410c7e0311550e83058793",
+    "residual_count": 0
+  },
+  "old_delta2": {
+    "Hc_11_0": "free",
+    "coefficient_field": "QQ",
+    "every_row_rechecked": true,
+    "face": "3*rho*zeta**2 + zeta**3",
+    "face_derivation": {
+      "double_root_location": "minor_a2 (carried in the source series)",
+      "root_multiplicities": [
+        2,
+        1
+      ],
+      "root_source": "branch datum",
+      "signed_separation_coordinate": "3*rho"
+    },
+    "free_generators": [
+      "Hc_10_1",
+      "Hc_11_0",
+      "Hc_7_4",
+      "rho",
+      "u"
+    ],
+    "frozen_h3_map_image_exact_match": true,
+    "frozen_local_row_exact_match": true,
+    "localization": "rho!=0",
+    "mapping": {
+      "Hc_1_10": "0",
+      "Hc_1_8": "0",
+      "Hc_1_9": "0",
+      "Hc_2_7": "0",
+      "Hc_2_8": "0",
+      "Hc_2_9": "3*u",
+      "Hc_3_6": "0",
+      "Hc_3_7": "0",
+      "Hc_3_8": "3*rho",
+      "Hc_4_6": "0",
+      "Hc_4_7": "3*u**2",
+      "Hc_5_5": "0",
+      "Hc_5_6": "6*rho*u",
+      "Hc_6_4": "-u**3",
+      "Hc_6_5": "u**3",
+      "Hc_7_3": "-3*rho*u**2",
+      "Hc_8_3": "0",
+      "Hc_9_2": "-u*(-Hc_7_4 + 3*rho*u**2)"
+    },
+    "minor_series": "y=u*t+zeta*t^2",
+    "mode": "old",
+    "parameter_divisions": [],
+    "parameters": [
+      "rho",
+      "u"
+    ],
+    "pivots": [
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s1_q0",
+        "variable": "Hc_1_8"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s2_q0",
+        "variable": "Hc_2_7"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s3_q0",
+        "variable": "Hc_3_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s4_q0",
+        "variable": "Hc_4_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s4_q1",
+        "variable": "Hc_1_9"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s5_q0",
+        "variable": "Hc_5_5"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s5_q1",
+        "variable": "Hc_2_8"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s6_q0",
+        "variable": "Hc_6_4"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s6_q1",
+        "variable": "Hc_3_7"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s7_q0",
+        "variable": "Hc_7_3"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s7_q1",
+        "variable": "Hc_4_7"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s7_q2",
+        "variable": "Hc_1_10"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s8_q0",
+        "variable": "Hc_8_3"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s8_q1",
+        "variable": "Hc_5_6"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s8_q2",
+        "variable": "Hc_2_9"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s9_q0",
+        "variable": "Hc_9_2"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s9_q1",
+        "variable": "Hc_6_5"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s9_q2",
+        "variable": "Hc_3_8"
+      }
+    ],
+    "pole_order_derivation": {
+      "cover": 1,
+      "degree": 11,
+      "minor_root_count": 3,
+      "normalized_power": 9,
+      "other_root_count": 8,
+      "valuation": "-2"
+    },
+    "raw_rows": 19,
+    "raw_rows_sha256": "69d09d927a22db1421069c51757da7dd505ef2241db2ab573bc6cbc36cbd2372",
+    "residual_count": 0
+  },
+  "old_delta52": {
+    "Hc_11_0": "historical unsupported pin",
+    "coefficient_field": "QQ",
+    "every_row_rechecked": true,
+    "face": "-c*zeta + zeta**3",
+    "face_derivation": {
+      "deck_action": "zeta -> -zeta",
+      "orbit_relation": "minor_orbit_root^2=c",
+      "root_multiplicities": [
+        1,
+        1,
+        1
+      ],
+      "root_source": "branch datum and denominator-two deck action"
+    },
+    "free_generators": [
+      "c",
+      "u",
+      "v"
+    ],
+    "frozen_h3_map_image_exact_match": true,
+    "frozen_local_row_exact_match": true,
+    "localization": "c!=0",
+    "mapping": {
+      "Hc_10_1": "-c*v",
+      "Hc_11_0": "0",
+      "Hc_1_10": "0",
+      "Hc_1_8": "0",
+      "Hc_1_9": "0",
+      "Hc_2_7": "0",
+      "Hc_2_8": "0",
+      "Hc_2_9": "3*u",
+      "Hc_3_6": "0",
+      "Hc_3_7": "0",
+      "Hc_3_8": "-3*v",
+      "Hc_4_6": "0",
+      "Hc_4_7": "3*u**2",
+      "Hc_5_5": "0",
+      "Hc_5_6": "-6*u*v",
+      "Hc_6_4": "-u**3",
+      "Hc_6_5": "u**3 + 3*v**2",
+      "Hc_7_3": "3*u**2*v",
+      "Hc_7_4": "c - 3*u**2*v",
+      "Hc_8_3": "3*u*v**2",
+      "Hc_9_2": "c*u - v**3"
+    },
+    "minor_series": "y=u*t+v*t^2+zeta*t^(5/2)",
+    "mode": "old",
+    "parameter_divisions": [],
+    "parameters": [
+      "u",
+      "v",
+      "c"
+    ],
+    "pivots": [
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s2_q0",
+        "variable": "Hc_1_8"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s4_q0",
+        "variable": "Hc_2_7"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s6_q0",
+        "variable": "Hc_3_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s8_q0",
+        "variable": "Hc_4_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s9_q1",
+        "variable": "Hc_1_9"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s10_q0",
+        "variable": "Hc_5_5"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s11_q1",
+        "variable": "Hc_2_8"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s12_q0",
+        "variable": "Hc_6_4"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s13_q1",
+        "variable": "Hc_3_7"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s14_q0",
+        "variable": "Hc_7_3"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s15_q1",
+        "variable": "Hc_4_7"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s16_q0",
+        "variable": "Hc_8_3"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s16_q2",
+        "variable": "Hc_1_10"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s17_q1",
+        "variable": "Hc_5_6"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s18_q0",
+        "variable": "Hc_9_2"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s18_q2",
+        "variable": "Hc_2_9"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s19_q1",
+        "variable": "Hc_6_5"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s20_q0",
+        "variable": "Hc_10_1"
+      },
+      {
+        "coefficient": "1",
+        "label": "h3_minor_s20_q2",
+        "variable": "Hc_3_8"
+      },
+      {
+        "coefficient": "-1",
+        "label": "h3_minor_s21_q1",
+        "variable": "Hc_7_4"
+      },
+      {
+        "coefficient": "1",
+        "label": "historical_unsupported_Hc_11_0_pin",
+        "variable": "Hc_11_0"
+      }
+    ],
+    "pole_order_derivation": {
+      "cover": 2,
+      "degree": 11,
+      "minor_root_count": 3,
+      "normalized_power": 21,
+      "other_root_count": 8,
+      "valuation": "-1/2"
+    },
+    "raw_rows": 22,
+    "raw_rows_sha256": "3e0ec61c288a6efc7cd4e43a97a5a482650c83d93afe3d55a4b127e1d78500e1",
+    "residual_count": 0
+  },
+  "status": "PASS"
+}

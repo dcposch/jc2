@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Submission sealed: `xmodel/ideation-20260904T1200Z-opus5.md` (47.1 KB, single `<!-- BODY-END -->`, collision scan exit 0 embedded).
+
+**Verification.** Manifest generated from the receipt with `awk`, `sha256sum -c` → 4/4 OK. The running lane was checked by receipt only; its `.md` and its live box dir were not opened.
+
+**Four things I computed or read from source, not just argued:**
+
+1. **Q1 framing is wrong.** `L_t = ∏_{2t+2}^{3t+1} d /((t−1)!(t+1))` is exactly the weighted Bézout number of the tail in the ring `wp(1,…,t−1,t+1)` (weights read from the frozen emitter). For a square weighted-homogeneous system in a CM ring, "length = `L_t`" **is** `dim 0` — so the length identity admits no proof route cheaper than the thing it was supposed to help prove. Same bookkeeping derives `B_t/L_t = 2^{t−2}` in one line (replayed t=3..12; matches Grok's measured 180/2288/29120/372096). Retarget: `dim 0 ⟺ I₂(M)` m-primary for an explicit `2×(2t−2)` matrix in `t−1` variables — a maximal-rank statement, which is the shape degeneration arguments prove.
+
+2. **Case (A) of (99,66) — the flagship's scope hole — is one lemma from closing.** The banked `branch_A_linear_AB_Q.sing` has `-c` as its literal first generator alongside `T*c-1`, so the 17(tt) "empty" is vacuous on sight. Deleting that row: residual locus is exactly `{bp=bq=br=0}` (dim 11, exact over Q, controls pass); localising at any of `bp,bq,br` instead gives `(1)`. On the residual stratum `β` is constant, `α=0`, and `f=h²+2β`, `g=h³+3βh` are both in `k[h]`, so `J≡0` — verified symbolically, and chart-free from Moh's p.209 normal form. Typed CONDITIONAL on one named, bounded OPEN.
+
+3. **The (H1) census is 129 + 48, not 177.** The (99,66) pivot closed form's non-vanishing generalises to `d_s ∤ u_s·j (j ≤ v_s)`. Scanned the full census (banked controls 1420/310/177 reproduced): holds on 129 groups, fails on 48, and **every** failure has `D ≥ 144`. The whole live frontier is non-resonant.
+
+4. **N2 cannot be closed by the source read the packet hopes for.** Xu §8 declares `den(δ) ≤ u_s` as a tool; the word "denominator" appears exactly twice in his paper, both times using it. Moh p.188's conjugation block is the only plausible source, and I quote its three divisibility constraints.
+
+**Q4 framing challenge:** (H2) is two things. Prop 6.3 is sourced at `u_s = 1`; the `u_s ≥ 2`-unsplit class descends by the *minor* reduction (`27 = (n/d_s)u_s`), has no sourced license, and had zero worked instances before today — and it is present at all 177 groups.
+
+Two caveats worth flagging: the report is 47 KB against a 25–45 KB target, and §9's recommendation was written blind, then patched honestly when the collision scanner revealed that `k16-hsop-length-allt-opus5` sealed at 12:03:36Z on `CRITERION RANK` — an independent convergence with my §3.3. I recorded only what the scanner printed and did not open that report.
+DIVERT path=xmodel/ideation-20260904T1200Z-opus5.md status=CLEAN body_bytes=47110 body_sha256=a32a3eb996435facabb7a39baf3972178e289009967e29f45be2500960633aa0

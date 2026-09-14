@@ -1,0 +1,1 @@
+ulimit -v 104857600; ulimit -f 2097152; /usr/bin/time -v -o /dev/shm/k8-b11-q1-full-lift.c3lpxc/time.txt timeout --signal=TERM --kill-after=30s 2700s /usr/bin/Singular --no-rc -q /home/ubuntu/jc2/box/k8-b11-q1-20260905/certificate-audit/full-lift/K8_B11_Q1_p0_lift.sing >/dev/shm/k8-b11-q1-full-lift.c3lpxc/stdout.txt 2>/dev/shm/k8-b11-q1-full-lift.c3lpxc/stderr.txt

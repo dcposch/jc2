@@ -1,0 +1,51 @@
+{
+  "task": "pseudoplane-fixed-target-astra-20260912",
+  "status": "COMPLETED / CONDITIONAL MANUAL UNREVIEWED",
+  "first_action_utc": "2026-09-12 02:21:47 UTC",
+  "publication_reserve_utc": "2026-09-12 02:41:00 UTC",
+  "hard_stop_utc": "2026-09-12 02:44:00 UTC",
+  "clock_reset": false,
+  "report_opened_utc": "2026-09-12 02:22:02 UTC",
+  "report_closed_utc": "2026-09-12 02:28:26 UTC",
+  "report_finalized_utc": "2026-09-12 02:28:26 UTC",
+  "verification_and_postpin_observation_utc": "2026-09-12 02:28:40 UTC",
+  "input_pins": {
+    "box/pseudoplane-fixed-target-astra-20260912/TASK.md": "38d2a3c0528758d0060a5fcf2aabcb9777bdd0e68348c91619f415b197206937"
+  },
+  "owned_pins_excluding_this_custody": {
+    "box/pseudoplane-fixed-target-astra-20260912/PINS.json": "ddb459772dcd166c65f0e2303580f2159e057a027516009f7f4c06aac0c76bcd",
+    "xmodel/pseudoplane-fixed-target-astra-20260912.md": "7e1a13319df44ff0825a0fdd397dad63d5047caffda3b21199c2742d7c3614f6",
+    "xmodel/pseudoplane-fixed-target-astra-20260912.md.artifact.json": "31bd7de66572bc9b597f9a7d8479cc292c2311dca90d10e58eb7eb5de2ee6c88"
+  },
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "owner": "astra-geometry",
+    "lease_id": "5383406346a6b7f3a87cba56d7188af4",
+    "workflow": "begin, unsealed skeleton, bounded sections, WHOLE/postpins/collision/OPEN checks, marker LAST, close, finalize, expected verify",
+    "expected_manifest_sha256": "31bd7de66572bc9b597f9a7d8479cc292c2311dca90d10e58eb7eb5de2ee6c88",
+    "verification": "VERIFIED with exact basis and expected manifest SHA",
+    "body_bytes": 7603,
+    "body_sha256": "7332ac4a8a1cc1801a5099ff96e13b2f9674cf970d912d74824d8cb53b952982",
+    "file_bytes": 7935
+  },
+  "read_scope": {
+    "input": "Exactly one; matching hash BEFORE FRESH_WHOLE",
+    "partial": "WHOLE after final body edit, before sole final marker; no Pending sections",
+    "sealed_report": "WHOLE including Seal after expected verification",
+    "manifest": "WHOLE after expected verification",
+    "PINS": "WHOLE before seal; unchanged postpin",
+    "clipping": "NONE",
+    "prior_whole_reuse": "NONE"
+  },
+  "collisions": "Report, manifest, PINS and custody initially absent; report/manifest/custody absence reconfirmed 02:27:49 UTC before seal; no collision or shared edit",
+  "result_scope": "Conditional on the stipulated complete scalar pair, exact S_F0=S_F union F(L) and S_Fk=S_F union F(C union L) for every k>=1. Both containments, closure, omitted-line intersection and non-surjective/nonproper F are covered. Geometric degrees are 2^(k+1)d and Jacobians 2^k c.",
+  "degree_bound_gap": "No uniform degree bound from the fixed target set is proved. Normalization ramification indices are an explicit uncontrolled datum; their growth is not asserted.",
+  "controls": "E is a surjective nonfinite etale selfmap of S, not A2; identity on S tests only composition, not the assumed scalar pair",
+  "OPEN": "No gap in stated set formula subject to review; separate degree-bound gap retained; no canonical OPEN created",
+  "quantity_cheapest_test": "Exact finite-cover/open-immersion and escaping-sequence audit; manual planning <=15 minutes; numerical/computational wall UNMEASURED",
+  "scientific_execution": "NONE, including code/import/AST/syntax/test/CAS/dummy of any size",
+  "other_inputs_network_AWS_agents_protected_shared_access": "NONE",
+  "administrative_tools": "Scoped date/text/hash/absence checks, apply_patch and existing artifact transaction only",
+  "writers": "Report and PINS writers IDLE; this custody is the last authored object, followed only by readback/hash and terminal handoff",
+  "promotion_or_follow_on_authority": "NONE"
+}

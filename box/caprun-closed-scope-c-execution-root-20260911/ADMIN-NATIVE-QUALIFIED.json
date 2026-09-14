@@ -1,0 +1,39 @@
+{
+  "schema": "jc2-actual-admin-native-qualification/v1",
+  "instance": "i-033947c617e8ad0e5",
+  "hostname": "ip-172-30-0-224",
+  "boot": "c682c214-afd7-4839-898d-e81fae3ccf27",
+  "physical_raw_sha256": "e17671ceb2a0913a5302e867f2f32cc65c5159aa32f037defeb332a55cc8f9db",
+  "native_collection": {
+    "exit_code": 0,
+    "start": "2026-09-11T15:56:57.070662669Z",
+    "end": "2026-09-11T15:57:08.791168705Z",
+    "raw_sha256": "31adbbbb49bf0cc0bbce6a7a6b6f66c82b463ffd239ab5fcf44091fbbe196a97",
+    "files": 1226,
+    "directories": 91,
+    "aliases": 31,
+    "reconstruction": "All six fields reconstructed from current raw observations, exactly equal to retained serialized native JSON content; copied those equal bytes only after full comparison. Source subset and every native.sha256 entry independently matched current raw. This is not reuse of old host observations."
+  },
+  "helper_collection": {
+    "exit_code": 0,
+    "start": "2026-09-11T15:57:08.798082840Z",
+    "end": "2026-09-11T15:57:32.326435090Z",
+    "raw_sha256": "9b148ca97eec7265d693eb12e7afe83a2d47502c116a802584dea6e6c782f4ff",
+    "collector_sha256": "b9cba3215bd90231320f5a4c9400ce4e431576595e558f9cd8e5648bdd1feca2",
+    "files": 91,
+    "aliases": 47,
+    "protected_objects_and_ancestors": 1461,
+    "checks": "All helper paths/packages matched selected Ubuntu specification; current resolved library/file hashes retained in raw output. All1461 protected objects and ancestors include root / and are ROOT-owned with group/other write absent."
+  },
+  "root_qualification": {
+    "ordinary_ubuntu_distribution_trust": true,
+    "matched_python_package": "3.12.3-1ubuntu0.16",
+    "matched_python_sha256": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223",
+    "acl_scope": "Effective nonowner writes bounded by POSIX ACL mask/group mode bits, not ACL absence. Actual source/channel/cgroup installation qualification remains separate.",
+    "namespace_scope": "Physical raw records actual ROOT/PID1 PID, mount, cgroup and user namespace equality; cgroup2 root mount covers filesystem root /.",
+    "source_execution": false,
+    "future_same_pid_exec_observed": false,
+    "hostile_root_safety": false
+  },
+  "remaining": "Pre-admission installation/security and worker-bound preholder objects, immediate coordinator retirement receipt, actual holder/topology/final readback and separate FIFO release. No phase or science result."
+}

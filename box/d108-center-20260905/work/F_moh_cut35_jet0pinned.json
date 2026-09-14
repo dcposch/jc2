@@ -1,0 +1,126 @@
+{
+  "tag": "F_moh_cut35_jet0pinned",
+  "z_s_order": 5,
+  "weight": "4*r+5*q",
+  "cutoff": 35,
+  "minor_jet0_free": false,
+  "coefficient_field": "QQ",
+  "h3_coordinates": [
+    "Hc_1_7",
+    "Hc_1_8",
+    "Hc_2_6",
+    "Hc_2_7",
+    "Hc_3_5",
+    "Hc_3_6",
+    "Hc_4_4",
+    "Hc_4_5",
+    "Hc_5_3",
+    "Hc_5_4",
+    "Hc_6_3",
+    "Hc_7_2",
+    "Hc_8_1",
+    "Hc_9_0"
+  ],
+  "h3_coordinate_count": 14,
+  "raw_rows": {
+    "minor_n1_pi0": "-Hc_1_7",
+    "minor_n2_pi0": "Hc_2_6",
+    "minor_n3_pi0": "7*Hc_1_7*jet1 - Hc_1_8*jet1 - Hc_3_5",
+    "minor_n4_pi0": "7*Hc_1_7*jet2 - Hc_1_8*jet2 - 6*Hc_2_6*jet1 + Hc_2_7*jet1 + Hc_4_4 - jet1**2",
+    "minor_n5_pi0": "-21*Hc_1_7*jet1**2 + 7*Hc_1_8*jet1**2 - 6*Hc_2_6*jet2 + Hc_2_7*jet2 + 5*Hc_3_5*jet1 - Hc_3_6*jet1 - Hc_5_3 - 2*jet1*jet2",
+    "minor_n5_pi1": "7*Hc_1_7 - Hc_1_8",
+    "minor_n6_pi0": "-42*Hc_1_7*jet1*jet2 + 14*Hc_1_8*jet1*jet2 + 15*Hc_2_6*jet1**2 - 6*Hc_2_7*jet1**2 + 5*Hc_3_5*jet2 - Hc_3_6*jet2 - 4*Hc_4_4*jet1 + Hc_4_5*jet1 - Hc_6_3 + 7*jet1**3 - jet2**2",
+    "minor_n6_pi1": "-6*Hc_2_6 + Hc_2_7 - 2*jet1",
+    "minor_n7_pi0": "35*Hc_1_7*jet1**3 - 21*Hc_1_7*jet2**2 - 21*Hc_1_8*jet1**3 + 7*Hc_1_8*jet2**2 + 30*Hc_2_6*jet1*jet2 - 12*Hc_2_7*jet1*jet2 - 10*Hc_3_5*jet1**2 + 5*Hc_3_6*jet1**2 - 4*Hc_4_4*jet2 + Hc_4_5*jet2 + 3*Hc_5_3*jet1 - Hc_5_4*jet1 + Hc_7_2 + 21*jet1**2*jet2",
+    "minor_n7_pi1": "-42*Hc_1_7*jet1 + 14*Hc_1_8*jet1 + 5*Hc_3_5 - Hc_3_6 - 2*jet2",
+    "minor_n8_pi0": "105*Hc_1_7*jet1**2*jet2 - 63*Hc_1_8*jet1**2*jet2 - 20*Hc_2_6*jet1**3 + 15*Hc_2_6*jet2**2 + 15*Hc_2_7*jet1**3 - 6*Hc_2_7*jet2**2 - 20*Hc_3_5*jet1*jet2 + 10*Hc_3_6*jet1*jet2 + 6*Hc_4_4*jet1**2 - 4*Hc_4_5*jet1**2 + 3*Hc_5_3*jet2 - Hc_5_4*jet2 + 3*Hc_6_3*jet1 - Hc_8_1 - c - 21*jet1**4 + 21*jet1*jet2**2",
+    "minor_n8_pi1": "-42*Hc_1_7*jet2 + 14*Hc_1_8*jet2 + 30*Hc_2_6*jet1 - 12*Hc_2_7*jet1 - 4*Hc_4_4 + Hc_4_5 + 21*jet1**2",
+    "minor_n8_pi2": "0"
+  },
+  "Qstar_pivots": [
+    {
+      "row": "minor_n1_pi0",
+      "variable": "Hc_1_7",
+      "coefficient": "-1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n2_pi0",
+      "variable": "Hc_2_6",
+      "coefficient": "1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n3_pi0",
+      "variable": "Hc_3_5",
+      "coefficient": "-1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n4_pi0",
+      "variable": "Hc_4_4",
+      "coefficient": "1",
+      "resolved_value": "-jet1**2"
+    },
+    {
+      "row": "minor_n5_pi0",
+      "variable": "Hc_5_3",
+      "coefficient": "-1",
+      "resolved_value": "2*jet1*jet2"
+    },
+    {
+      "row": "minor_n5_pi1",
+      "variable": "Hc_1_8",
+      "coefficient": "-1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n6_pi0",
+      "variable": "Hc_6_3",
+      "coefficient": "-1",
+      "resolved_value": "-2*jet1**3 + jet2**2"
+    },
+    {
+      "row": "minor_n6_pi1",
+      "variable": "Hc_2_7",
+      "coefficient": "1",
+      "resolved_value": "2*jet1"
+    },
+    {
+      "row": "minor_n7_pi0",
+      "variable": "Hc_7_2",
+      "coefficient": "1",
+      "resolved_value": "Hc_5_4*jet1 + 4*jet1**2*jet2"
+    },
+    {
+      "row": "minor_n7_pi1",
+      "variable": "Hc_3_6",
+      "coefficient": "-1",
+      "resolved_value": "-2*jet2"
+    },
+    {
+      "row": "minor_n8_pi0",
+      "variable": "Hc_8_1",
+      "coefficient": "-1",
+      "resolved_value": "-Hc_5_4*jet2 - c + jet1**4 - 2*jet1*jet2**2"
+    },
+    {
+      "row": "minor_n8_pi1",
+      "variable": "Hc_4_5",
+      "coefficient": "1",
+      "resolved_value": "-jet1**2"
+    }
+  ],
+  "zero_rows": 1,
+  "residual": {},
+  "ring_variables": [
+    "Zc",
+    "c"
+  ],
+  "groebner_order": "grevlex",
+  "groebner_basis": [
+    "Zc*c - 1"
+  ],
+  "localized_unit": false,
+  "seconds": 0.12
+}

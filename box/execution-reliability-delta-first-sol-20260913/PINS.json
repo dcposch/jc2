@@ -1,0 +1,24 @@
+{
+  "task": "execution-reliability-delta-first-sol-20260913",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-13T05:07:37.681682792Z",
+  "inputs": [
+    {"path":"xmodel/execution-reliability-first-sol-20260913.md","sha256":"e9d078786c5bfe513dea86ab23942a638629ca8053d9d4ed4650e33594e31bc1","read":"WHOLE"},
+    {"path":"xmodel/execution-reliability-fix-astra-20260913.md","sha256":"909c95efa05c3577d3b9b7d2c01683887c6e1910d896a36a9c18109c64101614","read":"WHOLE, 116 lines"},
+    {"path":"box/execution-reliability-fix-astra-20260913/PINS.sha256","sha256":"ffe0b569b670be0f5c7cc95c5955e7d67cea396092512afd413c65ae90f6af40","read":"WHOLE, 19 lines"},
+    {"path":"box/execution-reliability-fix-astra-20260913/TEST-PLAN.md","sha256":"d4ab1c78ed430c8aad26dd387afac2a1eb9d9fe785dbc584ca229221838ea2b6","read":"WHOLE, 105 lines"},
+    {"path":"ops/fleet/job.sh","sha256":"9c2255c7dcb7c91a8abeb2bd0ea7db30b4d4e8182abdbbd08cc1dc76f33d094d","read":"WHOLE, 318 lines"},
+    {"path":"ops/fleet/JOB.md","sha256":"3ab3d51402bc15339d6367aebaa8704dddf76f8d699eeb870908e03ee7619515","read":"WHOLE, 155 lines"},
+    {"path":"ops/fleet/tests/job-regression.sh","sha256":"25181501dae8b2833a1106843a908cd4b19d3e9e5d0ebbb00f408d85c62636e7","read":"WHOLE, 212 lines"},
+    {"path":"ops/fleet/tests/job-probe.sh","sha256":"9ec63784453264a67224a5d9355ecd9df3cf9e20b4f7b8b3454e8b6eccab1808","read":"WHOLE, 45 lines"},
+    {"path":"box/execution-reliability-fix-astra-20260913/reviewed/job.sh","sha256":"8a45be2542d9ac9b71322b8cd12cbc3c8a6b931d9c071fc6f5bb2cf0514d8586","read":"prior personal WHOLE; fresh pin and complete diff against current"},
+    {"path":"box/execution-reliability-fix-astra-20260913/reviewed/JOB.md","sha256":"db0216985af8c9f0577d9c09331476deb746b58de9edf1de0e9dbbf5bfc1a5e5","read":"prior personal WHOLE; fresh pin and complete diff against current"},
+    {"path":"box/execution-reliability-fix-astra-20260913/reviewed/job-regression.sh","sha256":"4ecc8ec0462ac54d67114bfc23875f2275a0eccafcc78ef4afe1fcecdd51c487","read":"prior personal WHOLE; fresh pin and complete diff against current"},
+    {"path":"box/execution-reliability-fix-astra-20260913/reviewed/job-probe.sh","sha256":"4c8f88cc987e5a4ca07d5ce38d3a6ed4b7d412ed7b74ede731b6df002b9d64b8","read":"prior personal WHOLE; fresh pin and complete diff against current"},
+    {"path":"COORDINATION.md","sha256":"517fca6f67f3d705f9b4045e10f9039aaf11bf3280dfd27bb90bf003ee4a3ead","read":"same-byte prior scoped/current read reuse; fresh pin"},
+    {"path":"ops/FLEET.md","sha256":"f0330ebc4129ec917ec7d293003f78a0d447686f313910bb23c5d0da19f5e16c","read":"same-byte prior WHOLE reuse; fresh pin"},
+    {"path":"ops/artifact_finalize.py","sha256":"0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d","read":"unchanged administrative finalizer"}
+  ],
+  "method": "manual static full-delta and control-flow review only",
+  "status": "TERMINAL_DIFFERENT_MODEL_DELTA_FIRST"
+}

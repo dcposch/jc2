@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Nothing further is needed; the gate is complete and all writers are idle at 23:00 UTC, before the 23:09 stop.
+
+**Outcome: A, B, C, D all CONFIRMED** at the documented scope. The report is at `xmodel/f10-r1-linear-compatibility-runtime-gate-fable5-20260909.md`, ending in a single standalone marker with nothing after it. The owned box directory was never created because nothing needed storing.
+
+**What was verified before any body read.** All 68 ordered SHA256 digests matched the frozen copies by diff. Both own targets were absent at launch. Every write went through apply_patch; no shell scratch files were produced.
+
+**Findings by verdict.**
+- **A, execution chain:** registration, physical instance, hostname, DMI, interpreter and module hashes, service unit properties, MainPID 7155 with start ticks 16607, and the cgroup all agree. The 111-line before pin list differs from the 110-line after list by exactly the registration file itself. All 53 charged remote artifacts hash to lines in the 85-file terminal manifest. Every dispatch record's authority and telemetry digests equal my hashes of the charged files, as do the five refusal stderr digests and the dummy stdout digest. The five deliberate defects are visible in authority metadata and match the five stderr messages. The dummy control shows MATCH, TERM 15, MATCH, KILL 9 with complete cleanup.
+- **B, generic receipt:** the receipt with digest c99eda14... embeds pins equal to the charged checker, harness, plan and authority bytes. All twelve fixture hash and size bindings match. The three scalar strings and both 2x5 RREF row sets equal, as strings, the hand traces in the accepted 17zb gate. The wire spells K and 1/K as string numerator/denominator pairs. No arithmetic was replayed.
+- **C, runtime bounds:** the compatibility child returned in 3.1 s under a 180 s cap with sampled group RSS far under 2 GiB, its cutoff is exactly first-math plus 240 s, and all eight children returned before their stored cutoffs. The leader_reaped false flag on normal exits is the CAPRUN contract shape, not a fault. The unit journal memory figure is treated as separate accounting only.
+- **D, scope:** the 0.9.0 module was checked once, no solver or source artifact exists in the pin vector, manifest, plan or receipt, and no control is presented as a frontier result.
+
+**Smallest actual defect.** No child process was ever observed independently of CAPRUN. Only the caller was seen live; child identities and resource figures are telemetry self-report, cross-bound by hashes and the later absence check. It is disclosed, not blocking for a generic-behaviour promotion, and would matter for an actual-source batch.
+
+**OPENS raised:** 0 new. No exit-price claim. One memory note was saved about the apply_patch Add File format, which cost the first skeleton attempt.
+DIVERT path=xmodel/f10-r1-linear-compatibility-runtime-gate-fable5-20260909.md status=CLEAN body_bytes=15371 body_sha256=e6934ad8d33eaec22d92c4a4b80a03e9a91f2eb7a46f00bd5f5664703f470aa6

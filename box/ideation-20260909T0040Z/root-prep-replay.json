@@ -1,0 +1,147 @@
+{
+  "utc": "2026-09-09T00:47:51.964921+00:00",
+  "status": "PASS",
+  "seconds": 0.8801462319679558,
+  "preflight_sha256": "1bc26f8d76c6af0ccd14d7f68dbeff342927c8edf1d62b01c3acc44905adc748",
+  "no_assert": true,
+  "outcomes": [
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "box/ideation-20260909T0040Z/preflight.py"
+      ],
+      "rc": 0,
+      "stdout": "{\"status\": \"PASS\", \"utc\": \"2026-09-09T00:47:51.125444+00:00\", \"charged_inputs\": 17, \"all46\": true, \"equal_contract\": true, \"indexed_key_corruption_rejected\": true, \"root_blind_pins\": null, \"proposed_invitation_deadline\": null, \"launch_performed\": false}\n",
+      "stderr": "",
+      "expected": "PASS"
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "box/ideation-20260909T0040Z/preflight.py",
+        "--invitation-ready"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "REFUSE: explicit fresh invitation deadline missing\n",
+      "expected": "explicit fresh invitation deadline missing"
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "box/ideation-20260909T0040Z/preflight.py",
+        "--invitation-ready",
+        "--deadline-utc",
+        "2000-01-01T00:00:00Z"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "REFUSE: deadline not future\n",
+      "expected": "deadline not future"
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "box/ideation-20260909T0040Z/preflight.py",
+        "--invitation-ready",
+        "--deadline-utc",
+        "DISABLED"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "REFUSE: invalid deadline\n",
+      "expected": "invalid deadline"
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/ideation-20260909T0040Z/preflight.py"
+      ],
+      "rc": 0,
+      "stdout": "{\"status\": \"PASS\", \"utc\": \"2026-09-09T00:47:51.431920+00:00\", \"charged_inputs\": 17, \"all46\": true, \"equal_contract\": true, \"indexed_key_corruption_rejected\": true, \"root_blind_pins\": null, \"proposed_invitation_deadline\": null, \"launch_performed\": false}\n",
+      "stderr": "",
+      "expected": "PASS"
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/ideation-20260909T0040Z/preflight.py",
+        "--invitation-ready"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "REFUSE: explicit fresh invitation deadline missing\n",
+      "expected": "explicit fresh invitation deadline missing"
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/ideation-20260909T0040Z/preflight.py",
+        "--invitation-ready",
+        "--deadline-utc",
+        "2000-01-01T00:00:00Z"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "REFUSE: deadline not future\n",
+      "expected": "deadline not future"
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/ideation-20260909T0040Z/preflight.py",
+        "--invitation-ready",
+        "--deadline-utc",
+        "DISABLED"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "REFUSE: invalid deadline\n",
+      "expected": "invalid deadline"
+    }
+  ]
+}

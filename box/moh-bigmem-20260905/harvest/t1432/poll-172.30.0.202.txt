@@ -1,0 +1,223 @@
+========== 172.30.0.202 utc=2026-09-05T14:30:33Z ==========
+HOST=ip-172-30-0-202 DATE=2026-09-05T14:30:34Z UPTIME= 14:30:34 up 40 min,  2 users,  load average: 32.00, 27.32, 16.56
+--- mem ---
+               total        used        free      shared  buff/cache   available
+Mem:           743Gi        43Gi       704Gi       3.4Mi       1.2Gi       700Gi
+Swap:             0B          0B          0B
+--- dmesg OOM/kill ---
+--- pgrep msolve/Singular/python ---
+3508 /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.g2.out
+3502 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.g2.out
+3505 /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.g2.out
+3475 bash run_msolve_pipeline.sh v38
+3477 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json /home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv 1073741827 10800 32 -l 44
+3501 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json /home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv 1073741827 10800 32 -l 44
+5529 bash -s
+--- ps RSS ---
+    PID    PPID USER         ELAPSED   RSS    VSZ %CPU CMD
+   3508    3505 ubuntu         19:19 38646888 54449256 2065 /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.g2.out
+   1662       1 root           40:03 22932 110032  0.0 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+   1586       1 root           40:04 20872  32540  0.0 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+   2117       1 root           38:31  8232  12028  0.0 sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups
+   5545    5529 ubuntu         00:00  3912   9732  0.0 awk NR==1 || /msolve|Singular|python|time |run_/ {print}
+   3477    3475 ubuntu         19:22  3676   7764  0.0 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json /home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv 1073741827 10800 32 -l 44
+   3475       1 ubuntu         19:22  3632   7764  0.0 bash run_msolve_pipeline.sh v38
+   3501    3477 ubuntu         19:20  2452   7764  0.0 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json /home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv 1073741827 10800 32 -l 44
+   3502    3477 ubuntu         19:20  2196   6148  0.0 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.g2.out
+   3505    3502 ubuntu         19:20  1644   2720  0.0 /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.g2.out
+--- logs in HOME ---
+-rw-rw-r-- 1 ubuntu ubuntu 12053 Sep  5 14:11 /home/ubuntu/v38.msolve.log
+--- find outputs ---
+/home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms
+/home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.manifest.json
+/home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.g2.out
+/home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.emit.json
+/home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.rss.log
+/home/ubuntu/moh-bigmem-20260905/targets/v38/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m15/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m15/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v18/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v18/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m12_union/meta.json
+/home/ubuntu/moh-bigmem-20260905/launched-workers.json
+--- HOME logs tail ---
+==== TAIL /home/ubuntu/v38.msolve.log size=12053 ====
+    "safe": "v74"
+    },
+    {
+      "original": "A3_1_1",
+      "safe": "v75"
+    },
+    {
+      "original": "A3_2_1",
+      "safe": "v76"
+    },
+    {
+      "original": "A3_3_1",
+      "safe": "v77"
+    },
+    {
+      "original": "A3_4_1",
+      "safe": "v78"
+    },
+    {
+      "original": "A3_5_1",
+      "safe": "v79"
+    },
+    {
+      "original": "A3_6_1",
+      "safe": "v80"
+    },
+    {
+      "original": "A3_1_0",
+      "safe": "v81"
+    },
+    {
+      "original": "A3_2_0",
+      "safe": "v82"
+    },
+    {
+      "original": "A3_3_0",
+      "safe": "v83"
+    },
+    {
+      "original": "A3_4_0",
+      "safe": "v84"
+    },
+    {
+      "original": "A3_5_0",
+      "safe": "v85"
+    },
+    {
+      "original": "A3_6_0",
+      "safe": "v86"
+    },
+    {
+      "original": "B2_0_5",
+      "safe": "v87"
+    },
+    {
+      "original": "B2_1_5",
+      "safe": "v88"
+    },
+    {
+      "original": "B2_2_5",
+      "safe": "v89"
+    },
+    {
+      "original": "B2_0_4",
+      "safe": "v90"
+    },
+    {
+      "original": "B2_1_4",
+      "safe": "v91"
+    },
+    {
+      "original": "B2_2_4",
+      "safe": "v92"
+    },
+    {
+      "original": "B2_3_4",
+      "safe": "v93"
+    },
+    {
+      "original": "B2_0_3",
+      "safe": "v94"
+    },
+    {
+      "original": "B2_1_3",
+      "safe": "v95"
+    },
+    {
+      "original": "B2_2_3",
+      "safe": "v96"
+    },
+    {
+      "original": "B2_3_3",
+      "safe": "v97"
+    },
+    {
+      "original": "B2_0_2",
+      "safe": "v98"
+    },
+    {
+      "original": "B2_1_2",
+      "safe": "v99"
+    },
+    {
+      "original": "B2_2_2",
+      "safe": "v100"
+    },
+    {
+      "original": "B2_3_2",
+      "safe": "v101"
+    },
+    {
+      "original": "B2_0_1",
+      "safe": "v102"
+    },
+    {
+      "original": "B2_1_1",
+      "safe": "v103"
+    },
+    {
+      "original": "B2_2_1",
+      "safe": "v104"
+    },
+    {
+      "original": "B2_3_1",
+      "safe": "v105"
+    },
+    {
+      "original": "B2_4_1",
+      "safe": "v106"
+    },
+    {
+      "original": "B2_1_0",
+      "safe": "v107"
+    },
+    {
+      "original": "B2_2_0",
+      "safe": "v108"
+    },
+    {
+      "original": "B2_3_0",
+      "safe": "v109"
+    },
+    {
+      "original": "B2_4_0",
+      "safe": "v110"
+    },
+    {
+      "original": "c",
+      "safe": "c"
+    }
+  ]
+}
+EMIT_RC=0 utc=2026-09-05T14:11:14Z
+input=4d3d8eac54467ba5be167c1d75b6c338772d5588e21bc38915dac2dc11c71128  /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms bytes=5066574
+
+--- time files ---
+/home/ubuntu/jc2/box/k4ray-20260903/K5_B4_Q_rab.time
+/home/ubuntu/jc2/box/k4ray-20260903/K4_B7_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/K5_B4_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/k4ray_K4_tower_B7.time
+/home/ubuntu/jc2/box/k4ray-20260903/K4_B3_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/K6_B5_Q.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-D121-200.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-passport-D121-200.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-D48-120.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-passport-D48-120.time
+--- /usr/bin/time leftover ---
+total 104
+drwxrwxrwt 12 root root 57344 Sep  5 13:56 .
+drwxr-xr-x 22 root root  4096 Sep  5 13:50 ..
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .ICE-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .X11-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .XIM-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .font-unix
+drwx------  2 root root  4096 Sep  5 13:50 snap-private-tmp
+drwx------  3 root root  4096 Sep  5 13:50 systemd-private-05b572b0c81d423fb780f7420dc2af1b-ModemManager.service-1NXgnI
+drwx------  3 root root  4096 Sep  5 13:50 systemd-private-05b572b0c81d423fb780f7420dc2af1b-chrony.service-O3QJq5
+POLL_DONE

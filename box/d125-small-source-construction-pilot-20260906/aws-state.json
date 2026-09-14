@@ -1,0 +1,176 @@
+{
+  "Reservations": [
+    {
+      "Groups": [],
+      "Instances": [
+        {
+          "AmiLaunchIndex": 0,
+          "Architecture": "x86_64",
+          "BlockDeviceMappings": [
+            {
+              "DeviceName": "/dev/sda1",
+              "Ebs": {
+                "AttachTime": "2026-09-06T09:45:48+00:00",
+                "DeleteOnTermination": true,
+                "EbsCardIndex": 0,
+                "Status": "attached",
+                "VolumeId": "vol-0eb6450d18ffa89f1"
+              }
+            }
+          ],
+          "BootMode": "uefi-preferred",
+          "CapacityReservationSpecification": {
+            "CapacityReservationPreference": "open"
+          },
+          "ClientToken": "f9ea370b-8bee-4f87-b32c-aa23ad5fe6f6",
+          "CpuOptions": {
+            "CoreCount": 16,
+            "ThreadsPerCore": 2
+          },
+          "CurrentInstanceBootMode": "uefi",
+          "EbsOptimized": false,
+          "EnaSupport": true,
+          "EnclaveOptions": {
+            "Enabled": false
+          },
+          "HibernationOptions": {
+            "Configured": false
+          },
+          "Hypervisor": "xen",
+          "ImageId": "ami-066263bf15bd856de",
+          "InstanceId": "i-0da0cebfc97c9fd54",
+          "InstanceType": "r7i.8xlarge",
+          "KeyName": "jc2-fleet",
+          "LaunchTime": "2026-09-06T23:35:13+00:00",
+          "MaintenanceOptions": {
+            "AutoRecovery": "default",
+            "RebootMigration": "default"
+          },
+          "MetadataOptions": {
+            "HttpEndpoint": "enabled",
+            "HttpProtocolIpv6": "disabled",
+            "HttpPutResponseHopLimit": 2,
+            "HttpTokens": "required",
+            "InstanceMetadataTags": "disabled",
+            "State": "applied"
+          },
+          "Monitoring": {
+            "State": "disabled"
+          },
+          "NetworkInterfaces": [
+            {
+              "Association": {
+                "IpOwnerId": "amazon",
+                "PublicDnsName": "",
+                "PublicIp": "54.237.229.28"
+              },
+              "Attachment": {
+                "AttachTime": "2026-09-06T09:45:47+00:00",
+                "AttachmentId": "eni-attach-0d8f56da76213adf5",
+                "DeleteOnTermination": true,
+                "DeviceIndex": 0,
+                "NetworkCardIndex": 0,
+                "Status": "attached"
+              },
+              "Description": "",
+              "Groups": [
+                {
+                  "GroupId": "sg-09ffa8932558f0a79",
+                  "GroupName": "claude-ssh"
+                }
+              ],
+              "InterfaceType": "interface",
+              "Ipv6Addresses": [],
+              "MacAddress": "0e:6b:52:cd:06:95",
+              "NetworkInterfaceId": "eni-0cbfbfa9f8e7f7d61",
+              "Operator": {
+                "Managed": false
+              },
+              "OwnerId": "871305167944",
+              "PrivateIpAddress": "172.30.0.56",
+              "PrivateIpAddresses": [
+                {
+                  "Association": {
+                    "IpOwnerId": "amazon",
+                    "PublicDnsName": "",
+                    "PublicIp": "54.237.229.28"
+                  },
+                  "Primary": true,
+                  "PrivateIpAddress": "172.30.0.56"
+                }
+              ],
+              "SourceDestCheck": true,
+              "Status": "in-use",
+              "SubnetId": "subnet-948915c9",
+              "VpcId": "vpc-0f261d77"
+            }
+          ],
+          "NetworkPerformanceOptions": {
+            "BandwidthWeighting": "default"
+          },
+          "Operator": {
+            "HiddenByDefault": false,
+            "Managed": false
+          },
+          "Placement": {
+            "AvailabilityZone": "us-east-1a",
+            "AvailabilityZoneId": "use1-az6",
+            "GroupName": "",
+            "Tenancy": "default"
+          },
+          "PlatformDetails": "Linux/UNIX",
+          "PrivateDnsName": "ip-172-30-0-56.ec2.internal",
+          "PrivateDnsNameOptions": {
+            "EnableResourceNameDnsAAAARecord": false,
+            "EnableResourceNameDnsARecord": false,
+            "HostnameType": "ip-name"
+          },
+          "PrivateIpAddress": "172.30.0.56",
+          "ProductCodes": [],
+          "PublicDnsName": "",
+          "PublicIpAddress": "54.237.229.28",
+          "RootDeviceName": "/dev/sda1",
+          "RootDeviceType": "ebs",
+          "SecondaryInterfaces": [],
+          "SecurityGroups": [
+            {
+              "GroupId": "sg-09ffa8932558f0a79",
+              "GroupName": "claude-ssh"
+            }
+          ],
+          "SourceDestCheck": true,
+          "State": {
+            "Code": 16,
+            "Name": "running"
+          },
+          "StateTransitionReason": "",
+          "SubnetId": "subnet-948915c9",
+          "Tags": [
+            {
+              "Key": "Owner",
+              "Value": "coordinator-factored-jacobian-20260906"
+            },
+            {
+              "Key": "market",
+              "Value": "ondemand"
+            },
+            {
+              "Key": "jc2fleet",
+              "Value": "1"
+            },
+            {
+              "Key": "Name",
+              "Value": "jc2-worker-20260906T094546Z"
+            }
+          ],
+          "UsageOperation": "RunInstances",
+          "UsageOperationUpdateTime": "2026-09-06T09:45:47+00:00",
+          "VirtualizationType": "hvm",
+          "VpcId": "vpc-0f261d77"
+        }
+      ],
+      "OwnerId": "871305167944",
+      "ReservationId": "r-0cd2536dbb785a917"
+    }
+  ]
+}

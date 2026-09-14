@@ -1,0 +1,38 @@
+{
+  "schema": "jc2.local-lane-custody/v1",
+  "tag": "execution-reliability-fix-astra-20260913",
+  "owner": "/root/execution_reliability",
+  "collector": "ROOT",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "state": "ALL_WRITERS_IDLE_ON_AGENT_COMPLETION",
+  "terminal_rule": "Independently confirm agent completed before custody-first report intake; this file alone is not proof of terminal status.",
+  "first_actual_clock_utc": "2026-09-13T04:54:53Z",
+  "original_reserve_utc": "2026-09-13T05:14:00Z",
+  "original_hard_utc": "2026-09-13T05:17:00Z",
+  "report_finalized_utc": "2026-09-13T05:04:40Z",
+  "final_whole_readback_postpins_utc": "2026-09-13T05:04:53.315519210Z",
+  "report": {
+    "path": "xmodel/execution-reliability-fix-astra-20260913.md",
+    "sha256": "909c95efa05c3577d3b9b7d2c01683887c6e1910d896a36a9c18109c64101614",
+    "manifest_path": "xmodel/execution-reliability-fix-astra-20260913.md.artifact.json",
+    "manifest_sha256": "af8a3da040b0303d66f54baf0596ff6b5e0943fba609aea08d8272e7fcdfe2b4",
+    "expected_verify": "VERIFIED; expected basis and manifest SHA; then WHOLE final report and manifest read"
+  },
+  "pins": {
+    "path": "box/execution-reliability-fix-astra-20260913/PINS.sha256",
+    "sha256": "ffe0b569b670be0f5c7cc95c5955e7d67cea396092512afd413c65ae90f6af40",
+    "postcheck": "All19 entries matched. Old reviewed source versions preserved in readonly snapshots; canonical four sources intentionally changed."
+  },
+  "test_plan": {
+    "path": "box/execution-reliability-fix-astra-20260913/TEST-PLAN.md",
+    "sha256": "d4ab1c78ed430c8aad26dd387afac2a1eb9d9fe785dbc584ca229221838ea2b6",
+    "readback": "WHOLE; one proposed worker, no allocation or execution"
+  },
+  "source_readback": "WHOLE four final owned sources/documents; one clipped combined read was followed by a complete standalone fixture read",
+  "whitespace_check": "Each explicit git diff --no-index --check reviewed_snapshot current_file emitted no whitespace diagnostics and returned ordinary difference exit1; not runtime testing",
+  "runtime_status": "UNRUN: no AWS API/SSH, syntax, schema, interpreter/import, dummy or CAS execution",
+  "network_or_model_or_extra_agent_calls": "NONE",
+  "unchanged_scope": "Sol FIRST, old sealed report/PINS/test plan, current COORDINATION/FLEET, finalizer, legacy user-dirty fleet.sh and dispatch.sh preserved",
+  "active_processes_or_sessions": [],
+  "result": "Implemented bounded corrective source slice; independent delta FIRST still required before proposed AWS pilot; no scientific migration."
+}

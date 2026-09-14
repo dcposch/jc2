@@ -1,0 +1,77 @@
+ring R=(0,rho),(A_g0_p1,A_g0_p2,A_g0_p3,A_g0_p4,A_g0_p5,A_g0_p6,A_g0_p7,A_g0_p8,A_g0_p9,A_g0_p10,A_g0_p11,A_g0_p12,A_g0_p13,A_g0_p14,A_g1_p1,A_g1_p2,A_g1_p3,A_g1_p4,A_g1_p5,A_g1_p6,A_g1_p7,A_g1_p8,A_g1_p9,A_g1_p10,A_g1_p11,A_g1_p12,A_g1_p13,A_g2_p2,A_g2_p3,A_g2_p4,A_g2_p5,A_g2_p6,A_g2_p7,A_g2_p8,A_g2_p9,A_g2_p10,A_g2_p11,A_g2_p12,A_g3_p2,A_g3_p3,A_g3_p4,A_g3_p5,A_g3_p6,A_g3_p7,A_g3_p8,A_g3_p9,A_g3_p10,A_g3_p11,A_g4_p3,A_g4_p4,A_g4_p5,A_g4_p6,A_g4_p7,A_g4_p8,A_g4_p9,A_g4_p10,A_g5_p4,A_g5_p5,A_g5_p6,A_g5_p7,A_g5_p8,A_g5_p9,A_g6_p4,A_g6_p5,A_g6_p6,A_g6_p7,A_g6_p8,A_g7_p5,A_g7_p6,A_g7_p7,A_g8_p6,B_g0_p1,B_g0_p2,B_g0_p3,B_g0_p4,B_g0_p5,B_g0_p6,B_g0_p7,B_g0_p8,B_g0_p9,B_g0_p10,B_g0_p11,B_g0_p12,B_g0_p13,B_g0_p14,B_g0_p15,B_g0_p16,B_g0_p17,B_g0_p18,B_g0_p19,B_g0_p20,B_g0_p21,B_g0_p22,B_g0_p23,B_g0_p24,B_g1_p1,B_g1_p2,B_g1_p3,B_g1_p4,B_g1_p5,B_g1_p6,B_g1_p7,B_g1_p8,B_g1_p9,B_g1_p10,B_g1_p11,B_g1_p12,B_g1_p13,B_g1_p14,B_g1_p15,B_g1_p16,B_g1_p17,B_g1_p18,B_g1_p19,B_g1_p20,B_g1_p21,B_g1_p22,B_g1_p23,B_g2_p1,B_g2_p2,B_g2_p3,B_g2_p4,B_g2_p5,B_g2_p6,B_g2_p7,B_g2_p8,B_g2_p9,B_g2_p10,B_g2_p11,B_g2_p12,B_g2_p13,B_g2_p14,B_g2_p15,B_g2_p16,B_g2_p17,B_g2_p18,B_g2_p19,B_g2_p20,B_g2_p21,B_g2_p22,B_g3_p2,B_g3_p3,B_g3_p4,B_g3_p5,B_g3_p6,B_g3_p7,B_g3_p8,B_g3_p9,B_g3_p10,B_g3_p11,B_g3_p12,B_g3_p13,B_g3_p14,B_g3_p15,B_g3_p16,B_g3_p17,B_g3_p18,B_g3_p19,B_g3_p20,B_g3_p21,B_g4_p3,B_g4_p4,B_g4_p5,B_g4_p6,B_g4_p7,B_g4_p8,B_g4_p9,B_g4_p10,B_g4_p11,B_g4_p12,B_g4_p13,B_g4_p14,B_g4_p15,B_g4_p16,B_g4_p17,B_g4_p1
+===TAIL
+3+(-6435)*B_g11_p13*lambda2+(-126)*B_g12_p9+(-2310)*B_g12_p11*lambda3+(3960)*B_g12_p12*lambda2+(1260)*B_g13_p10*lambda3+(-2310)*B_g13_p11*lambda2+(1260)*B_g14_p10*lambda2+((535650+(-1402350)*rho))*lambda3^2,
+// GUARD/A/0/15
+0,
+// GUARD/A/9/6
+0,
+// GUARD/A/2/1
+0,
+// GUARD/B/0/25
+0,
+// GUARD/B/15/10
+0,
+// GUARD/B/1/0
+0,
+// GUARD/c
+0;
+print("D125_COMPLETE_LITERAL_IMPORT_ONLY");
+print(size(I));
+quit;
+===ROWS
+{"kind":"jacobian","label":"J/2/0","terms":[],"type":"row"}
+
+{"kind":"scalar_guard","label":"GUARD/c","terms":[[[["-1","1"],["0","1"]],[]],[[["1","1"],["0","1"]],[291,292]]],"type":"row"}
+{"inverse":[["1","1"],["0","1"]],"kind":"fixed_unit_guard","label":"GUARD/A/0/15","terms":[],"type":"row","value":[["1","1"],["0","1"]]}
+{"kind":"polynomiality","label":"LIFT/A/0/-1","terms":[[[["-1","1"],["0","1"]],[0]],[[["-3","1"],["0","1"]],[2,268]],[[["4","1"],["0","1"]],[3,267]],[[["-10","1"],["0","1"]],[4,268,268]],[[["30","1"],["0","1"]],[5,267,268]],[[["-21","1"],["0","1"]],[6,267,267]],[[["-35","1"],["0","1"]],[6,268,268,268]],[[["168","1"],["0","1"]],[7,267,268,268]],[[["-252","1"],["0","1"]],[8,267,267,268]],[[["-126","1"],["0","1"]],[8,268,268,268,268]],[[["120","1"],["0","1"]],[9,267,267,267]],[[["840","1"],["0","1"]],[9,267,268,268,268]],[[["-1980","1"],["0","1"]],[10,267,267,268,268]],[[["-462","1"],["0","1"]],[
+===SINGROW
+// LIFT/A/0/-1
+(-1)*A_g0_p1+(-3)*A_g0_p3*lambda3+(4)*A_g0_p4*lambda2+(-10)*A_g0_p5*lambda3^2+(30)*A_g0_p6*lambda2*lambda3+(-21)*A_g0_p7*lambda2^2+(-35)*A_g0_p7*lambda3^3+(168)*A_g0_p8*lambda2*lambda3^2+(-252)*A_g0_p9*lambda2^2*lambda3+(-126)*A_g0_p9*lambda3^4+(120)*A_g0_p10*lambda2^3+(840)*A_g0_p10*lambda2*lambda3^3+(-1980)*A_g0_p11*lambda2^2*lambda3^2+(-462)*A_g0_p11*lambda3^5+(1980)*A_g0_p12*lambda2^3*lambda3+(3960)*A_g0_p12*lambda2*lambda3^4+(-715)*A_g0_p13*lambda2^4+(-12870)*A_g0_p13*lambda2^2*lambda3^3+(-1716)*A_g0_p13*lambda3^6+(20020)*A_g0_p14*lambda2^3*lambda3^2+(18018)*A_g0_p14*lambda2*lambda3^5+(2)*A_g1_p2*lambda3+(-3)*A_g1_p3*lambda2+(6)*A_g1_p4*lambda3^2+(-20)*A_g1_p5*lambda2*lambda3+(15)*A_g1_p6*lambda2^2+(20)*A_g1_p6*lambda3^3+(-105)*A_g1_p7*lambda2*lambda3^2+(168)*A_g1_p8*lambda2^2*lambda3+(70)*A_g1_p8*lambda3^4+(-84)*A_g1_p9*lambda2^3+(-504)*A_g1_p9*lambda2*lambda3^3+(126
+// GUARD/c
+(-1)+(1)*c*z;
+// J/2/0
+0,
+
+===SIZES
+   1638 /home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-golden/client-common_3-golden.sing
+   1637 /home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-rational/client-common_3-rational.sing
+   1638 /home/ubuntu/d125-small-source-construction-pilot-20260906/common_4-golden/client-common_4-golden.sing
+   1637 /home/ubuntu/d125-small-source-construction-pilot-20260906/common_4-rational/client-common_4-rational.sing
+   1612 /home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-golden/client-unequal-golden.sing
+   1611 /home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/client-unequal-rational.sing
+   9773 total
+authority.json
+case.result.json
+client-unequal-golden.jsonl
+client-unequal-golden.manifest.json
+client-unequal-golden.sing
+construct.receipt.json
+construct.stderr
+construct.stdout
+construct.telemetry.json
+footer.json
+header.json
+import.identity.json
+import.receipt.json
+import.stderr
+import.stdout
+import.telemetry.json
+D125_COMPLETE_LITERAL_IMPORT_ONLY
+554
+{
+  "branch": "golden",
+  "caps": {
+    "aggregate_output_bytes": 268435456,
+    "as_bytes": 8589934592,
+    "cpu_seconds": 180,
+    "wall_seconds": 180
+  },
+  "case": "unequal",
+  "construction_only": true,
+  "deadline_utc": "2026-09-06T23:45:48.092069+00:00",
+  "instance_id": "i-0da0cebfc97c9fd54",
+  "job_id": "d125-small-source-pilot-20260906/unequal/golden",
+  "pins": {
+    "baseline_sha256": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "exporter_sha256": "9fd003e420f3ee069f1ed1c06a365e5b4500d361bc3951f2f8f17ef733ab3703",
+    "lift_contract_sha256": "433cc2fe9f11

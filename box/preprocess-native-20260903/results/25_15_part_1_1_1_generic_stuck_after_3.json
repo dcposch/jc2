@@ -1,0 +1,26 @@
+{
+  "grading_lp": {
+    "status": "NOT_RUN_RESIDUAL_REPLAY_ONLY"
+  },
+  "pivot_count": 3,
+  "residual_bytes": 177977289,
+  "residual_rows_from_tsv": 514,
+  "residual_tsv": "box/preprocess-native-20260903/results/25_15_part_1_1_1_generic_stuck_after_3_residual.tsv",
+  "run": {
+    "elapsed": 70.551,
+    "rc": 0,
+    "status": "OK",
+    "stderr": "box/preprocess-native-20260903/logs/25_15_part_1_1_1_generic_stuck_after_3.err",
+    "stderr_tail": "",
+    "stdout": "box/preprocess-native-20260903/logs/25_15_part_1_1_1_generic_stuck_after_3.out",
+    "stdout_tail": "4\nPN_REPLAY step=1 variable=A1_1_1\n// ** redefining RHS (4+2/5*h0_0_3*A1_1_4-3/5*s2*A1_0_3-3/5*s3*A1_0_3+1/5*h0_0_4*A1_1_3-3/5*A1_0_3);) /home/ubuntu/jc2/box/preprocess-native-20260903/work/25_15_part_1_1_1_generic_stuck_after_3.sing:11334\nPN_REPLAY step=2 variable=A1_1_2\n// ** redefining RHS (poly RHS=(-4/5*s2*A1_0_4-4/5*s3*A1_0_4+1/5*h0_0_4*A1_1_4-4/5*A1_0_4);) /home/ubuntu/jc2/box/preprocess-native-20260903/work/25_15_part_1_1_1_generic_stuck_after_3.sing:11341\nPN_REPLAY step=3 variable=A1_1_3\nPN_REPLAY_DONE pivots=3\n",
+    "timeout": 900
+  },
+  "script": "box/preprocess-native-20260903/work/25_15_part_1_1_1_generic_stuck_after_3.sing",
+  "script_bytes": 180374598,
+  "status": "OK",
+  "variables_tsv": "box/preprocess-native-20260903/results/25_15_part_1_1_1_generic_stuck_after_3_variables.tsv",
+  "weight_report": {
+    "status": "NOT_RUN_RESIDUAL_REPLAY_ONLY"
+  }
+}

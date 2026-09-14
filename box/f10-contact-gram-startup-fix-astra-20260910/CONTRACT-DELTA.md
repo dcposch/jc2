@@ -1,0 +1,9 @@
+# One-line startup delta only
+
+Effective flags are exactly `-E -s -S -B`, with no `-I` or `-P`. The sole source change is authority.py's flags list: insert '-S' between '-s' and '-B'. This suppresses system-site initialization while retaining the script directory for the sibling authority import, matching the charged reusable runtime contract/gate. It is a startup tightening, not a mathematical change or observed runtime compatibility.
+
+ONLY the old exact-flag requirement is superseded. JOB, science pins, caps600wall/550CPU/2GiB/16MiB, deadline, authorization ordering, raw-byte receipt binding, wire/status/cofactor/sign logic remain unchanged. In particular complete INCONCLUSIVE sign artifacts still receive the same independent checker; no old-runtime candidate-only policy is imported.
+
+Future ROOT co-installation must place this authority.py together with the UNCHANGED original producer.py SHAafc617ae797661df8cbb1ca1d8a00825a6c607e1fb854754c0230376965f74ee and checker.py SHAceca0a07f1b2f6433de87bb7327280cb1165703ea9196f6d7e37b953a8631b06 in ONE root-owned sibling source directory. These two hashes are ROOT installation parameters, not bodies read/copied/hashed by this task. ROOT must bind the overlay authority's final SHA, actual resolved interpreter/full argv, flags list, science/native closure, immutable paths and later registration. Runtime code_pins naturally records the overlay authority beside those unchanged siblings.
+
+Original report, CONTRACT and disabled template remain frozen. A future ROOT-issued registration must use python_flags[-E,-s,-S,-B] and matching full_argv; the original disabled template is not enabled or edited here. No wrapper, native observation, worker, registration, probe, certificate or execution is supplied. ROOT will review the original packet PLUS this overlay in ONE FIRST code gate. All other old-runtime prerequisites/qualifications remain scoped history, not automatic deployment authority.

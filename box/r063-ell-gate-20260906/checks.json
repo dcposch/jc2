@@ -1,0 +1,105 @@
+{
+  "schema": "jc2.r063-ell-gate/checks-v1",
+  "custody": {
+    "receipt": "xmodel/r063-ell-gate-sol56-20260906.run.v2",
+    "charged_inputs_checked": 9,
+    "sha256sum_status": "9/9 OK",
+    "frozen_input_dir": "/tmp/jc2-lane.xjPjTp/inputs",
+    "sealed_crosscheck": {
+      "path": "xmodel/r063-child-pattern-grok46-20260906.md",
+      "body_bytes": 7410,
+      "body_sha256": "86d5cfb4759afcaa38993497223634bc9d3f46bcb82501277fa17e8cc1f38b17",
+      "status": "VERIFIED"
+    }
+  },
+  "child": {
+    "source_row": "R063",
+    "n": 42,
+    "m": 28,
+    "ell": 1,
+    "s": 3,
+    "M": [-28, 35, 40],
+    "d": [42, 14, 7, 1],
+    "V": [3, 7],
+    "V_type": "DETERMINED",
+    "V_vectors": [[3, 7]],
+    "radii": ["7/6", "-1/3", "-2"],
+    "descent_license": "DETERMINED_PROP6.4",
+    "top_license": "DETERMINED_COMPLETE_US1"
+  },
+  "route_steps": [
+    {
+      "source_index": 3,
+      "delta": "1/5",
+      "P": 21,
+      "selected_V": 21,
+      "zero_ok": true,
+      "nonzero_ok": false,
+      "outgoing_child_V": 7
+    },
+    {
+      "source_index": 2,
+      "delta": "3/10",
+      "P": 42,
+      "selected_V": 3,
+      "zero_ok": false,
+      "nonzero_ok": true,
+      "outgoing_child_V": 3
+    }
+  ],
+  "printed_closure": {
+    "level_3": {
+      "P": 7,
+      "Q": 2,
+      "A": 1,
+      "pattern": "(pi-c)^7"
+    },
+    "level_2": {
+      "P": 14,
+      "Q": 7,
+      "A": 3,
+      "average_multiplicity": 2,
+      "pattern": "pi^5 (pi^3-c)^3",
+      "pattern_count": 1
+    },
+    "packets": [
+      {
+        "kind": "nonzero",
+        "count": 3,
+        "reduced_multiplicity": 3,
+        "rho_f": 6,
+        "rho_g": 9,
+        "delta_final": "7/6",
+        "centre_stabilizer_L": 3,
+        "final_increment_A": 2,
+        "I_M_each": 3,
+        "galois": "PASS"
+      },
+      {
+        "kind": "zero",
+        "count": 1,
+        "reduced_multiplicity": 5,
+        "rho_f": 10,
+        "rho_g": 15,
+        "delta_final": "13/24",
+        "centre_stabilizer_L": 1,
+        "final_increment_A": 24,
+        "I_M_each": "35/4",
+        "galois": "FAIL"
+      }
+    ],
+    "rho_f_total": 28,
+    "rho_g_total": 42,
+    "final_minor_packets": 0,
+    "I_M_ungated": "71/4",
+    "I_m_ell": 2,
+    "galois_valid_complete_configurations": 0
+  },
+  "verdict": {
+    "row": "R063",
+    "status": "DEAD",
+    "reason": "Every parent-compatible child partition is forced to the exhaustive 10+6+6+6 final-major cover, so shifted Theorem 5.1 would make the polynomial resultant degree 71/4.",
+    "residual_before": 65,
+    "residual_after": 64
+  }
+}

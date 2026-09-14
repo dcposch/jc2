@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report delivered at 19:41:38Z, before the 19:45Z publication reserve. Nothing else remains to request.
+
+**Completion.** The gate report exists at `xmodel/danielewski-invariantization-gate-fable5-20260911.md`, ending with a single standalone body marker and nothing after it. Postpin SHA-256 of the full file:
+
+```
+688ce2cafce3ef85593468f517de850098ee801ee9a82dbcf762dc6b5a6fdae5
+```
+
+**Verdicts.** All five claims are CONFIRMED by independent hand derivation, with one scope GAP noted under E.
+
+- **A.** The invariant ring, the free involution, the degree-2 finite étale quotient, the open immersion of S as T minus the line L₋, and the étale non-finite selfmap E all check. The A² chart line D₋ is distinct and I recorded the divisor bookkeeping that separates them. The coordinate match to Dubouloz–Palka Example 5.3 and (5.2) holds after the stated target automorphism.
+- **B.** The three form identities check by direct computation, including a direct j-pullback that does not rely on faithful flatness, and a second chart showing Ω is global and nowhere zero.
+- **C.** I reproved the regularity criterion from the monomial basis rather than the two-chart Taylor argument, and confirmed E is the d=2 Chebyshev endomorphism of Dubouloz–Palka Example 4.3, which is why weights are exactly preserved. The block formula, parity, nonvanishing, and the degree law 2d+m all check.
+- **D.** All named controls reproduce, including the persisting order-2 pole and the failure of Reynolds averaging.
+- **E.** The Keller-map implication through the A² chart is sound and no claim exceeds it. The GAP is that the Newton reduction report cited in ROOT section 5 was not a charged input, so its endpoint ratio statement is unverified here.
+
+**Scope.** Both reports were read whole at verified hashes. The PDF was read at the selected items only. Manual mathematics only, no CAS, network, Git, jc2-lean, or parallel Astra report. No Seal authored, no charge_basis, no promotion or follow-on.
+DIVERT path=xmodel/danielewski-invariantization-gate-fable5-20260911.md status=CLEAN body_bytes=6886 body_sha256=688ce2cafce3ef85593468f517de850098ee801ee9a82dbcf762dc6b5a6fdae5

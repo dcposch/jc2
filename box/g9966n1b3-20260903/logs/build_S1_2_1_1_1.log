@@ -1,0 +1,27 @@
+{"meta": "/home/ubuntu/jc2/box/g9966n1b3-20260903/meta/S1_n18_m12_Mm4_V1_k6_part_2_1_1_1_full.json", "params_without_T": 113, "partition": "2+1+1+1"}
+{
+ "command": [
+  "timeout",
+  "600",
+  "stdbuf",
+  "-oL",
+  "-eL",
+  "Singular",
+  "--cpus=1",
+  "--threads=1",
+  "--flint-threads=1",
+  "--no-rc",
+  "-q",
+  "/home/ubuntu/jc2/box/g9966n1b3-20260903/builders/S1_n18_m12_Mm4_V1_k6_part_2_1_1_1_full_builder.sing"
+ ],
+ "elapsed_seconds": 509.636,
+ "native_done": true,
+ "returncode": 0,
+ "row_count": 352,
+ "rows_exists": true,
+ "rows_sha256": "7d2e296b2188a19894d437beea9bfc29587dd541a299dec1eae09febf1a94090",
+ "stdout": "/home/ubuntu/jc2/box/g9966n1b3-20260903/builders/S1_n18_m12_Mm4_V1_k6_part_2_1_1_1_full_builder.sing.out",
+ "stdout_sha256": "8ac73bf9af15408d1bb72e53a745bbf71ab8f4c45ef8d8c9f6e7afd4460fde9d",
+ "target_gate": true,
+ "timed_out": false
+}

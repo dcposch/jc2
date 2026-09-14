@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 22:17 UTC, ahead of the 22:31 deadline. All writers are finished and idle.
+
+**Verdict: all six charged claims CONFIRMED as stated; the interval 2j/3 ≤ ord(α) < j remains GAP, exactly as the producer declares.** No launch, promotion, source normalization or JC2 conclusion is drawn.
+
+**What I verified by hand**
+
+- Claim 1: rederived identity (1); the a_s·q_s − b_s = −δ_s cancellation is exact, and the coefficientwise induction with the moving R_s is sound with every power of R_s retained.
+- Claim 2: Hensel over L[[s,z]] with unit derivative 3p²g²; no negative powers; the critical substitution preserves precision and kills the G term exactly.
+- Claim 3: σ(g(s,z)) = −g(s,−z) by uniqueness; C|V nonconstant from C(0)=0 and V∤C; both the earlier-odd and equal-order cases give a transcendental leading coefficient.
+- Claim 4: all three cancellation cases including equality and δ=0 give a nonzero degree 1 or 2 polynomial in ψ, so 3a ≥ 2j and d ≥ 2j − a/2 follow. The producer's own prefix at (j,a,f,d) = (8,7,11,14) satisfies (6) with a < j, so the method cannot close the gap.
+- Claim 5: formula (7) is correct including α[p³]G and the b3·h³ term; the gauge determinant is the unit t, and b3 is not forced to zero.
+- Claim 6: H ≡ 0 mod s²⁴ confirmed by hand at orders 16, 19, 20, 22, 23 and by the replayed universal identity; faces, parity, origins, degrees and ordinary lifts check out; an independent degree-3 truncated-jet control reproduces y = −3s⁷, x = 2s¹¹, e = 5s²²/9 and both saturated low-row residuals.
+
+**Replay** ran in a fresh scratch subtree with both files byte-copied and hash-stable before and after. Normal and -O stdout equal the charged final witness bytes. All ten mutation runs fail with the intended messages. A scratch --record matched all twelve charged stdout hashes and return codes.
+
+**Two evidence-description defects, checker only.** The "actual scalar-kernel jet" uses a p-jet that is no R_t jet and never exercises the α[p³]G term. The parity toy uses p-exponent parity rather than σ parity and rejects its mutation by a hard-coded value. Neither affects the theorem.
+
+Outputs: the report at `xmodel/d125-pure-low-alpha-gate-fable5-20260907.md` ending in the standalone BODY-END line, with pins, commands, run logs, the control script and custody under `box/d125-pure-low-alpha-gate-fable5-20260907/`. Nothing was committed. STOP/IDLE.
+DIVERT path=xmodel/d125-pure-low-alpha-gate-fable5-20260907.md status=CLEAN body_bytes=8051 body_sha256=76f2444d17b0f04d302c3f4f33b8611025c6c85b2436dd1f437f944585e50de8

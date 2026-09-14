@@ -1,0 +1,3802 @@
+{
+  "coordinate_map": {
+    "coordinates": [
+      "t",
+      "pi"
+    ],
+    "determinant_order": "A_t*B_pi-A_pi*B_t",
+    "field": "K algebraically closed, characteristic 0; exact coefficient arithmetic below is over Q",
+    "map": "phi_sigma: K[x,y] -> K[pi]<<t>>, x |-> t^-1, y |-> sum_{j<rho} a_j*t^j+pi*t^rho",
+    "source": "Xu arXiv:1604.07683v4, pp.1-2 and equation (7.1) on printed/PDF p.12",
+    "warning": "rho is the split order; roster source.delta is a different array; theta is the split-screen auxiliary and is not Xu's t",
+    "xu_identity": "Jac_{t,pi}(T_s(sigma),g(sigma))=-(T_s)_f(sigma)*t^(rho-2) for J=1"
+  },
+  "count_reconciliation": {
+    "decision": 36,
+    "family_C_rows": 20,
+    "one_line_reducer": "jq -s '[.[]|select(.split_window.applies==true)|.split_window.leaves[]?|select(.type==\"ES_NECESSARY_LEAF_NOT_ATTAINMENT\")]|length' roster.jsonl",
+    "open": "OPEN[ROSTER-ES-LEAF-COUNT-36-VS-38]",
+    "residual_report_printed_price": 38,
+    "stale_38_phrase_occurrences_detected": 3,
+    "typed_ES_leaf_records": 36
+  },
+  "input_verification": {
+    "FALLACY-v2.md": {
+      "actual": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+      "expected": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+      "status": "PASS"
+    },
+    "cone-vertex-gate-opus5-20260905.md": {
+      "actual": "72dfcd371f338767e303c6da0eab02337f257ad29409a9fc6b60cd2e85c20ecd",
+      "expected": "72dfcd371f338767e303c6da0eab02337f257ad29409a9fc6b60cd2e85c20ecd",
+      "status": "PASS"
+    },
+    "moh1983_jram340_configurations_of_roots.pdf": {
+      "actual": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+      "expected": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+      "status": "PASS"
+    },
+    "residual65-structure-fable5-20260905.md": {
+      "actual": "7d3ffbba4791a64c7c7d9e28546de67190d96edd3a47b431c116fec35394c927",
+      "expected": "7d3ffbba4791a64c7c7d9e28546de67190d96edd3a47b431c116fec35394c927",
+      "status": "PASS"
+    },
+    "roster.jsonl": {
+      "actual": "cb384ecdaf41cb96288ff12184a0c22ded49c276842f136919e675e8248534bf",
+      "expected": "cb384ecdaf41cb96288ff12184a0c22ded49c276842f136919e675e8248534bf",
+      "status": "PASS"
+    },
+    "split-window-gate-opus5-20260905.md": {
+      "actual": "b72b7a3cd132f959dd7e083d10e8c1bdbd16637be3bf6066406d6c7172f707c5",
+      "expected": "b72b7a3cd132f959dd7e083d10e8c1bdbd16637be3bf6066406d6c7172f707c5",
+      "status": "PASS"
+    },
+    "split_window.py": {
+      "actual": "be99effafff67501f20c80d5e0366162091c3fe1c0fcd3b6672896cd3db9aedd",
+      "expected": "be99effafff67501f20c80d5e0366162091c3fe1c0fcd3b6672896cd3db9aedd",
+      "status": "PASS"
+    },
+    "xu2016_intersection_numbers_split_minor_roots_arxiv1604.07683v4.pdf": {
+      "actual": "00fecb1614c98b6e7496097ab2d6b7496c3027feca66a8c30642aa7f5812de21",
+      "expected": "00fecb1614c98b6e7496097ab2d6b7496c3027feca66a8c30642aa7f5812de21",
+      "status": "PASS"
+    }
+  },
+  "leaves": [
+    {
+      "D_user_to_source_n": 108,
+      "E": 12,
+      "P": 3,
+      "Q": 1,
+      "W": 25,
+      "X": "-1",
+      "alpha": "-23",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-12",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 9,
+      "degree_q": 51,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-37",
+      "kappa": "23",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-23)*q*p_pi-(-1)*p*q_pi-(5)*p^26=0",
+      "leading_witness": {
+        "degree": 51,
+        "homogeneous_solution_note": "eta*p^23 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "5*p^23*Integral(p^2,dpi)"
+      },
+      "leaf_id": "R012-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-35",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "3",
+      "roster_jsonl_line": 12,
+      "row_id": "R012",
+      "source_delta_not_split_order": [
+        "3/8",
+        "1/4",
+        -1
+      ],
+      "source_m": 72,
+      "special_alias": "D=108, delta=3 (same leaf; not an extra count)",
+      "special_control": {
+        "charged_face_source": "cone-vertex-gate-opus5-20260905.md:171-176",
+        "p": "pi^2-c",
+        "q": "(pi^2-c)^23*(pi^5-(10/3)c*pi^3+5c^2*pi)"
+      },
+      "theta_split_screen_not_Xu_t": "2",
+      "u": 2,
+      "v": 7,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 99,
+      "E": 9,
+      "P": 2,
+      "Q": 1,
+      "W": 13,
+      "X": "-2",
+      "alpha": "-25",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-18",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 11,
+      "degree_q": 40,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "-c",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2*(pi-c)",
+        "gauge_map": "put the double root at 0 and the simple root at c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        2,
+        1
+      ],
+      "gamma": "-44",
+      "kappa": "25/2",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        1
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-25)*q*p_pi-(-2)*p*q_pi-(5)*p^14=0",
+      "leading_witness": {
+        "degree": 40,
+        "kind": "fractional two-root witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "substitute y^r=pi-c into (u*theta+1)*Integral(p^theta,dpi)",
+        "q": "pi^25*(pi-c)^14*(pi+2/3*c)"
+      },
+      "leaf_id": "R015-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-43",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 15,
+      "row_id": "R015",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 66,
+      "special_alias": "(99,66), delta=2 / Xu (8.2) (same leaf; not an extra count)",
+      "special_control": {
+        "chart_map": "canonical c=-3*a",
+        "p": "pi^2*(pi+3*a)",
+        "q": "pi^25*(pi+3*a)^14*(pi-2*a)",
+        "source": "Xu v4 printed p.13, equation (8.2)"
+      },
+      "theta_split_screen_not_Xu_t": "1/2",
+      "u": 3,
+      "v": 8,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 99,
+      "E": 9,
+      "P": 5,
+      "Q": 2,
+      "W": 13,
+      "X": "-1/2",
+      "alpha": "-5",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-9/2",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 11,
+      "degree_q": 40,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "-c",
+          "p_2": "0",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^2-c)",
+        "gauge_map": "fixed zero plus one nonzero Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-11",
+      "kappa": "10",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-5)*q*p_pi-(-1/2)*p*q_pi-(5)*p^14=0",
+      "leading_witness": {
+        "degree": 40,
+        "homogeneous_solution_note": "eta*p^10 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^2-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "10*p^10*Integral(p^3,dpi)"
+      },
+      "leaf_id": "R015-L02",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-19/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 15,
+      "row_id": "R015",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 66,
+      "special_alias": "(99,66), delta=5/2 / Xu open case (same leaf; not an extra count)",
+      "special_control": {
+        "normalization_note": "Xu's literal q1'=-2p^3 differs by an absorbed nonzero leading scalar",
+        "p": "pi*(pi^2-c)",
+        "q": "p^10*(10*Integral(p^3,dpi))",
+        "source": "Xu v4 printed p.13, delta=5/2 paragraph"
+      },
+      "theta_split_screen_not_Xu_t": "3",
+      "u": 3,
+      "v": 8,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 168,
+      "E": 24,
+      "P": 2,
+      "Q": 1,
+      "W": 99,
+      "X": "-1",
+      "alpha": "-98",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-24",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 7,
+      "degree_q": 199,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-123",
+      "kappa": "98",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-98)*q*p_pi-(-1)*p*q_pi-(3)*p^100=0",
+      "leading_witness": {
+        "degree": 199,
+        "homogeneous_solution_note": "eta*p^98 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "3*p^98*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R016-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-122",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 16,
+      "row_id": "R016",
+      "source_delta_not_split_order": [
+        "11/16",
+        "3/8",
+        -1
+      ],
+      "source_m": 112,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 2,
+      "v": 5,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 165,
+      "E": 15,
+      "P": 4,
+      "Q": 1,
+      "W": 41,
+      "X": "-1",
+      "alpha": "-38",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-15",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 11,
+      "degree_q": 83,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-56",
+      "kappa": "38",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-38)*q*p_pi-(-1)*p*q_pi-(7)*p^42=0",
+      "leading_witness": {
+        "degree": 83,
+        "homogeneous_solution_note": "eta*p^38 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "7*p^38*Integral(p^3,dpi)"
+      },
+      "leaf_id": "R023-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-53",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "4",
+      "roster_jsonl_line": 23,
+      "row_id": "R023",
+      "source_delta_not_split_order": [
+        "2/3",
+        "1/5",
+        -1
+      ],
+      "source_m": 110,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "3",
+      "u": 2,
+      "v": 9,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 165,
+      "E": 15,
+      "P": 4,
+      "Q": 1,
+      "W": 41,
+      "X": "-1",
+      "alpha": "-38",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-15",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 11,
+      "degree_q": 83,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-56",
+      "kappa": "38",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-38)*q*p_pi-(-1)*p*q_pi-(7)*p^42=0",
+      "leading_witness": {
+        "degree": 83,
+        "homogeneous_solution_note": "eta*p^38 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "7*p^38*Integral(p^3,dpi)"
+      },
+      "leaf_id": "R024-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-53",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "4",
+      "roster_jsonl_line": 24,
+      "row_id": "R024",
+      "source_delta_not_split_order": [
+        "1/2",
+        "1/5",
+        -1
+      ],
+      "source_m": 110,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "3",
+      "u": 2,
+      "v": 9,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 168,
+      "E": 21,
+      "P": 3,
+      "Q": 2,
+      "W": 67,
+      "X": "-1/2",
+      "alpha": "-33",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-21/2",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 8,
+      "degree_q": 202,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "-c",
+          "p_2": "0",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^2-c)",
+        "gauge_map": "fixed zero plus one nonzero Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-44",
+      "kappa": "66",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-33)*q*p_pi-(-1/2)*p*q_pi-(2)*p^68=0",
+      "leading_witness": {
+        "degree": 202,
+        "homogeneous_solution_note": "eta*p^66 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^2-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "4*p^66*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R029-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-87/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "3/2",
+      "roster_jsonl_line": 29,
+      "row_id": "R029",
+      "source_delta_not_split_order": [
+        "16/21",
+        "4/7",
+        -1
+      ],
+      "source_m": 112,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 3,
+      "v": 5,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 144,
+      "E": 16,
+      "P": 3,
+      "Q": 1,
+      "W": 89,
+      "X": "-1",
+      "alpha": "-87",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-16",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 9,
+      "degree_q": 179,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-105",
+      "kappa": "87",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-87)*q*p_pi-(-1)*p*q_pi-(5)*p^90=0",
+      "leading_witness": {
+        "degree": 179,
+        "homogeneous_solution_note": "eta*p^87 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "5*p^87*Integral(p^2,dpi)"
+      },
+      "leaf_id": "R035-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-103",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "3",
+      "roster_jsonl_line": 35,
+      "row_id": "R035",
+      "source_delta_not_split_order": [
+        "9/16",
+        "1/4",
+        -1
+      ],
+      "source_m": 108,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "2",
+      "u": 2,
+      "v": 7,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 135,
+      "E": 9,
+      "P": 2,
+      "Q": 1,
+      "W": 13,
+      "X": "-3",
+      "alpha": "-38",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-27",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 15,
+      "degree_q": 53,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "0",
+          "p_3": "-c",
+          "p_4": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^3*(pi-c)",
+        "gauge_map": "put the triple root at 0 and the simple root at c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        3,
+        1
+      ],
+      "gamma": "-66",
+      "kappa": "38/3",
+      "lambda_partition_not_Moh_lambda_s": [
+        3,
+        1
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-38)*q*p_pi-(-3)*p*q_pi-(7)*p^14=0",
+      "leading_witness": {
+        "degree": 53,
+        "kind": "fractional two-root witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "substitute y^r=pi-c into (u*theta+1)*Integral(p^theta,dpi)",
+        "q": "pi^38*(pi-c)^14*(pi+3/4*c)"
+      },
+      "leaf_id": "R038-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-65",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 38,
+      "row_id": "R038",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 90,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1/3",
+      "u": 4,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 135,
+      "E": 9,
+      "P": 5,
+      "Q": 2,
+      "W": 13,
+      "X": "-1",
+      "alpha": "-23/2",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-9",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 15,
+      "degree_q": 53,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "c^2",
+          "p_1": "0",
+          "p_2": "-2*c",
+          "p_3": "0",
+          "p_4": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "(pi^2-c)^2",
+        "gauge_map": "one Q=2 orbit, both roots double",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null
+      ],
+      "gamma": "-22",
+      "kappa": "23/2",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        2
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-23/2)*q*p_pi-(-1)*p*q_pi-(7)*p^14=0",
+      "leading_witness": {
+        "degree": 53,
+        "homogeneous_solution_note": "eta*(pi^2-c)^23 may also be added",
+        "kind": "fractional double-orbit witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "p=(pi^2-c)^2, hence p^(3/2)=(pi^2-c)^3 on the declared chart",
+        "q": "7*(pi^2-c)^23*Integral((pi^2-c)^3,dpi)"
+      },
+      "leaf_id": "R038-L02",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-41/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 38,
+      "row_id": "R038",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 90,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "3/2",
+      "u": 4,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 135,
+      "E": 9,
+      "P": 5,
+      "Q": 2,
+      "W": 13,
+      "X": "-1",
+      "alpha": "-23/2",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-9",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 15,
+      "degree_q": 53,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "-c",
+          "p_3": "0",
+          "p_4": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2*(pi^2-c)",
+        "gauge_map": "double fixed zero plus one simple Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        2
+      ],
+      "gamma": "-22",
+      "kappa": "23/2",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-23/2)*q*p_pi-(-1)*p*q_pi-(7)*p^14=0",
+      "leading_witness": {
+        "degree": 53,
+        "kind": "fractional fixed-double witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "substitute y^2=pi^2-c into 7*Integral(p^(3/2),dpi)",
+        "q": "pi^23*(pi^2-c)^14*(pi^2+2/5*c)"
+      },
+      "leaf_id": "R038-L03",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-41/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 38,
+      "row_id": "R038",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 90,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "3/2",
+      "u": 4,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 135,
+      "E": 9,
+      "P": 8,
+      "Q": 3,
+      "W": 13,
+      "X": "-1/3",
+      "alpha": "-8/3",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-3",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 15,
+      "degree_q": 53,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "-c",
+          "p_2": "0",
+          "p_3": "0",
+          "p_4": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^3-c)",
+        "gauge_map": "fixed zero plus one Q=3 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-22/3",
+      "kappa": "8",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-8/3)*q*p_pi-(-1/3)*p*q_pi-(7)*p^14=0",
+      "leading_witness": {
+        "degree": 53,
+        "homogeneous_solution_note": "eta*p^8 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^3-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "21*p^8*Integral(p^5,dpi)"
+      },
+      "leaf_id": "R038-L04",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-17/3",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "8/3",
+      "roster_jsonl_line": 38,
+      "row_id": "R038",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 90,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "5",
+      "u": 4,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 168,
+      "E": 12,
+      "P": 3,
+      "Q": 1,
+      "W": 25,
+      "X": "-2",
+      "alpha": "-48",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-24",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 14,
+      "degree_q": 76,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "-c",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2*(pi-c)",
+        "gauge_map": "put the double root at 0 and the simple root at c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        2,
+        1
+      ],
+      "gamma": "-74",
+      "kappa": "24",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-48)*q*p_pi-(-2)*p*q_pi-(8)*p^26=0",
+      "leading_witness": {
+        "degree": 76,
+        "homogeneous_solution_note": "eta*p^24 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2*(pi-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "4*p^24*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R043-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-72",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "3",
+      "roster_jsonl_line": 43,
+      "row_id": "R043",
+      "source_delta_not_split_order": [
+        "3/8",
+        "1/4",
+        -1
+      ],
+      "source_m": 112,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 3,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 168,
+      "E": 12,
+      "P": 3,
+      "Q": 1,
+      "W": 25,
+      "X": "-2",
+      "alpha": "-48",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-24",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 14,
+      "degree_q": 76,
+      "face_chart": {
+        "base_change": "Q -> Q[r,c,Zc]/(c-(r*(r-1)),Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "r*(r-1)",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "r",
+          "p_2": "-r - 1",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi-1)*(pi-r)",
+        "gauge_map": "order three roots and use the affine gauge 0,1,r",
+        "generator_order": [
+          "r",
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[r,c,Zc]/(c-(r*(r-1)),Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "(r*(r-1))^-1",
+          "c": "r*(r-1)",
+          "r": "r"
+        },
+        "root_modulus_is_localized_c": false,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "r |-> r0 with r0*(r0-1) != 0; c |-> r0*(r0-1); Zc |-> (r0*(r0-1))^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-74",
+      "kappa": "24",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-48)*q*p_pi-(-2)*p*q_pi-(8)*p^26=0",
+      "leading_witness": {
+        "degree": 76,
+        "homogeneous_solution_note": "eta*p^24 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi-1)*(pi-r)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "4*p^24*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R043-L02",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-72",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "3",
+      "roster_jsonl_line": 43,
+      "row_id": "R043",
+      "source_delta_not_split_order": [
+        "3/8",
+        "1/4",
+        -1
+      ],
+      "source_m": 112,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 3,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 168,
+      "E": 12,
+      "P": 7,
+      "Q": 2,
+      "W": 25,
+      "X": "-1/2",
+      "alpha": "-10",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-6",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 14,
+      "degree_q": 76,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "-c",
+          "p_2": "0",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^2-c)",
+        "gauge_map": "fixed zero plus one nonzero Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-37/2",
+      "kappa": "20",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-10)*q*p_pi-(-1/2)*p*q_pi-(8)*p^26=0",
+      "leading_witness": {
+        "degree": 76,
+        "homogeneous_solution_note": "eta*p^20 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^2-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "16*p^20*Integral(p^5,dpi)"
+      },
+      "leaf_id": "R043-L03",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-16",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "7/2",
+      "roster_jsonl_line": 43,
+      "row_id": "R043",
+      "source_delta_not_split_order": [
+        "3/8",
+        "1/4",
+        -1
+      ],
+      "source_m": 112,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "5",
+      "u": 3,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 147,
+      "E": 21,
+      "P": 2,
+      "Q": 1,
+      "W": 49,
+      "X": "-1",
+      "alpha": "-48",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-21",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 7,
+      "degree_q": 99,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-70",
+      "kappa": "48",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-48)*q*p_pi-(-1)*p*q_pi-(3)*p^50=0",
+      "leading_witness": {
+        "degree": 99,
+        "homogeneous_solution_note": "eta*p^48 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "3*p^48*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R044-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-69",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 44,
+      "row_id": "R044",
+      "source_delta_not_split_order": [
+        "4/7",
+        "1/3",
+        -1
+      ],
+      "source_m": 42,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 2,
+      "v": 5,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 147,
+      "E": 21,
+      "P": 2,
+      "Q": 1,
+      "W": 103,
+      "X": "-1",
+      "alpha": "-102",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-21",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 7,
+      "degree_q": 207,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-124",
+      "kappa": "102",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-102)*q*p_pi-(-1)*p*q_pi-(3)*p^104=0",
+      "leading_witness": {
+        "degree": 207,
+        "homogeneous_solution_note": "eta*p^102 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "3*p^102*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R045-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-123",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 45,
+      "row_id": "R045",
+      "source_delta_not_split_order": [
+        "11/21",
+        "1/3",
+        -1
+      ],
+      "source_m": 63,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 2,
+      "v": 5,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 189,
+      "E": 21,
+      "P": 3,
+      "Q": 1,
+      "W": 67,
+      "X": "-1",
+      "alpha": "-65",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-21",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 9,
+      "degree_q": 135,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-88",
+      "kappa": "65",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-65)*q*p_pi-(-1)*p*q_pi-(5)*p^68=0",
+      "leading_witness": {
+        "degree": 135,
+        "homogeneous_solution_note": "eta*p^65 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "5*p^65*Integral(p^2,dpi)"
+      },
+      "leaf_id": "R049-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-86",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "3",
+      "roster_jsonl_line": 49,
+      "row_id": "R049",
+      "source_delta_not_split_order": [
+        "7/12",
+        "1/4",
+        -1
+      ],
+      "source_m": 126,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "2",
+      "u": 2,
+      "v": 7,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 180,
+      "E": 20,
+      "P": 3,
+      "Q": 1,
+      "W": 185,
+      "X": "-1",
+      "alpha": "-183",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-20",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 9,
+      "degree_q": 371,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-205",
+      "kappa": "183",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-183)*q*p_pi-(-1)*p*q_pi-(5)*p^186=0",
+      "leading_witness": {
+        "degree": 371,
+        "homogeneous_solution_note": "eta*p^183 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "5*p^183*Integral(p^2,dpi)"
+      },
+      "leaf_id": "R051-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-203",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "3",
+      "roster_jsonl_line": 51,
+      "row_id": "R051",
+      "source_delta_not_split_order": [
+        "7/16",
+        "1/4",
+        -1
+      ],
+      "source_m": 144,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "2",
+      "u": 2,
+      "v": 7,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 165,
+      "E": 15,
+      "P": 2,
+      "Q": 1,
+      "W": 67,
+      "X": "-2",
+      "alpha": "-133",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-30",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 11,
+      "degree_q": 202,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "-c",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2*(pi-c)",
+        "gauge_map": "put the double root at 0 and the simple root at c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        2,
+        1
+      ],
+      "gamma": "-164",
+      "kappa": "133/2",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        1
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-133)*q*p_pi-(-2)*p*q_pi-(5)*p^68=0",
+      "leading_witness": {
+        "degree": 202,
+        "kind": "fractional two-root witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "substitute y^r=pi-c into (u*theta+1)*Integral(p^theta,dpi)",
+        "q": "pi^133*(pi-c)^68*(pi+2/3*c)"
+      },
+      "leaf_id": "R052-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-163",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 52,
+      "row_id": "R052",
+      "source_delta_not_split_order": [
+        "7/15",
+        "1/3",
+        -1
+      ],
+      "source_m": 99,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1/2",
+      "u": 3,
+      "v": 8,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 165,
+      "E": 15,
+      "P": 5,
+      "Q": 2,
+      "W": 67,
+      "X": "-1/2",
+      "alpha": "-32",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-15/2",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 11,
+      "degree_q": 202,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "-c",
+          "p_2": "0",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^2-c)",
+        "gauge_map": "fixed zero plus one nonzero Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-41",
+      "kappa": "64",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-32)*q*p_pi-(-1/2)*p*q_pi-(5)*p^68=0",
+      "leading_witness": {
+        "degree": 202,
+        "homogeneous_solution_note": "eta*p^64 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^2-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "10*p^64*Integral(p^3,dpi)"
+      },
+      "leaf_id": "R052-L02",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-79/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 52,
+      "row_id": "R052",
+      "source_delta_not_split_order": [
+        "7/15",
+        "1/3",
+        -1
+      ],
+      "source_m": 99,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "3",
+      "u": 3,
+      "v": 8,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 200,
+      "E": 20,
+      "P": 2,
+      "Q": 1,
+      "W": 137,
+      "X": "-1",
+      "alpha": "-136",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-20",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 10,
+      "degree_q": 412,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "-c",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2*(pi-c)",
+        "gauge_map": "put the double root at 0 and the simple root at c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        2,
+        1
+      ],
+      "gamma": "-157",
+      "kappa": "136",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-136)*q*p_pi-(-1)*p*q_pi-(4)*p^138=0",
+      "leading_witness": {
+        "degree": 412,
+        "homogeneous_solution_note": "eta*p^136 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2*(pi-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "4*p^136*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R053-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-156",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 53,
+      "row_id": "R053",
+      "source_delta_not_split_order": [
+        "8/15",
+        "2/5",
+        -1
+      ],
+      "source_m": 150,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 3,
+      "v": 7,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 200,
+      "E": 20,
+      "P": 2,
+      "Q": 1,
+      "W": 137,
+      "X": "-1",
+      "alpha": "-136",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-20",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 10,
+      "degree_q": 412,
+      "face_chart": {
+        "base_change": "Q -> Q[r,c,Zc]/(c-(r*(r-1)),Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "r*(r-1)",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "r",
+          "p_2": "-r - 1",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi-1)*(pi-r)",
+        "gauge_map": "order three roots and use the affine gauge 0,1,r",
+        "generator_order": [
+          "r",
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[r,c,Zc]/(c-(r*(r-1)),Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "(r*(r-1))^-1",
+          "c": "r*(r-1)",
+          "r": "r"
+        },
+        "root_modulus_is_localized_c": false,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "r |-> r0 with r0*(r0-1) != 0; c |-> r0*(r0-1); Zc |-> (r0*(r0-1))^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-157",
+      "kappa": "136",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-136)*q*p_pi-(-1)*p*q_pi-(4)*p^138=0",
+      "leading_witness": {
+        "degree": 412,
+        "homogeneous_solution_note": "eta*p^136 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi-1)*(pi-r)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "4*p^136*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R053-L02",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-156",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 53,
+      "row_id": "R053",
+      "source_delta_not_split_order": [
+        "8/15",
+        "2/5",
+        -1
+      ],
+      "source_m": 150,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 3,
+      "v": 7,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 175,
+      "E": 25,
+      "P": 2,
+      "Q": 1,
+      "W": 83,
+      "X": "-1",
+      "alpha": "-82",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-25",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 7,
+      "degree_q": 167,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-108",
+      "kappa": "82",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-82)*q*p_pi-(-1)*p*q_pi-(3)*p^84=0",
+      "leading_witness": {
+        "degree": 167,
+        "homogeneous_solution_note": "eta*p^82 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "3*p^82*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R054-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-107",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 54,
+      "row_id": "R054",
+      "source_delta_not_split_order": [
+        "8/15",
+        "1/3",
+        -1
+      ],
+      "source_m": 70,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 2,
+      "v": 5,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 171,
+      "E": 9,
+      "P": 2,
+      "Q": 1,
+      "W": 13,
+      "X": "-4",
+      "alpha": "-51",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-36",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 19,
+      "degree_q": 66,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "0",
+          "p_3": "0",
+          "p_4": "-c",
+          "p_5": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^4*(pi-c)",
+        "gauge_map": "put the quadruple root at 0 and the simple root at c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        4,
+        1
+      ],
+      "gamma": "-88",
+      "kappa": "51/4",
+      "lambda_partition_not_Moh_lambda_s": [
+        4,
+        1
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-51)*q*p_pi-(-4)*p*q_pi-(9)*p^14=0",
+      "leading_witness": {
+        "degree": 66,
+        "kind": "fractional two-root witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "substitute y^r=pi-c into (u*theta+1)*Integral(p^theta,dpi)",
+        "q": "pi^51*(pi-c)^14*(pi+4/5*c)"
+      },
+      "leaf_id": "R055-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-87",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 114,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1/4",
+      "u": 5,
+      "v": 14,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 171,
+      "E": 9,
+      "P": 5,
+      "Q": 2,
+      "W": 13,
+      "X": "-3/2",
+      "alpha": "-18",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-27/2",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 19,
+      "degree_q": 66,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "0",
+          "p_3": "-c",
+          "p_4": "0",
+          "p_5": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^3*(pi^2-c)",
+        "gauge_map": "triple fixed zero plus one simple Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        3
+      ],
+      "gamma": "-33",
+      "kappa": "12",
+      "lambda_partition_not_Moh_lambda_s": [
+        3,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-18)*q*p_pi-(-3/2)*p*q_pi-(9)*p^14=0",
+      "leading_witness": {
+        "degree": 66,
+        "homogeneous_solution_note": "eta*p^12 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^3*(pi^2-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "6*p^12*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R055-L02",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-63/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 114,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 5,
+      "v": 14,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 171,
+      "E": 9,
+      "P": 5,
+      "Q": 2,
+      "W": 13,
+      "X": "-3/2",
+      "alpha": "-18",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-27/2",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 19,
+      "degree_q": 66,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "c^2",
+          "p_2": "0",
+          "p_3": "-2*c",
+          "p_4": "0",
+          "p_5": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^2-c)^2",
+        "gauge_map": "simple fixed zero plus one double Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-33",
+      "kappa": "12",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        2,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-18)*q*p_pi-(-3/2)*p*q_pi-(9)*p^14=0",
+      "leading_witness": {
+        "degree": 66,
+        "homogeneous_solution_note": "eta*p^12 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^2-c)^2",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "6*p^12*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R055-L03",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-63/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 114,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 5,
+      "v": 14,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 171,
+      "E": 9,
+      "P": 5,
+      "Q": 2,
+      "W": 13,
+      "X": "-3/2",
+      "alpha": "-18",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-27/2",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 19,
+      "degree_q": 66,
+      "face_chart": {
+        "base_change": "Q -> Q[r,c,Zc]/(c-(r*(r-1)),Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "r*(r-1)",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "r",
+          "p_2": "0",
+          "p_3": "-r - 1",
+          "p_4": "0",
+          "p_5": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^2-1)*(pi^2-r)",
+        "gauge_map": "fixed zero; scale one of two Q=2 orbits to +/-1",
+        "generator_order": [
+          "r",
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[r,c,Zc]/(c-(r*(r-1)),Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "(r*(r-1))^-1",
+          "c": "r*(r-1)",
+          "r": "r"
+        },
+        "root_modulus_is_localized_c": false,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "r |-> r0 with r0*(r0-1) != 0; c |-> r0*(r0-1); Zc |-> (r0*(r0-1))^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-33",
+      "kappa": "12",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-18)*q*p_pi-(-3/2)*p*q_pi-(9)*p^14=0",
+      "leading_witness": {
+        "degree": 66,
+        "homogeneous_solution_note": "eta*p^12 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^2-1)*(pi^2-r)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "6*p^12*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R055-L04",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-63/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 114,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 5,
+      "v": 14,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 171,
+      "E": 9,
+      "P": 8,
+      "Q": 3,
+      "W": 13,
+      "X": "-2/3",
+      "alpha": "-7",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-6",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 19,
+      "degree_q": 66,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "-c",
+          "p_3": "0",
+          "p_4": "0",
+          "p_5": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2*(pi^3-c)",
+        "gauge_map": "double fixed zero plus one simple Q=3 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        2
+      ],
+      "gamma": "-44/3",
+      "kappa": "21/2",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-7)*q*p_pi-(-2/3)*p*q_pi-(9)*p^14=0",
+      "leading_witness": {
+        "degree": 66,
+        "kind": "fractional fixed-double Q=3 witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "substitute y^2=pi^3-c into (27/2)*Integral(p^(5/2),dpi)",
+        "q": "pi^21*(pi^3-c)^14*(pi^3+2/7*c)"
+      },
+      "leaf_id": "R055-L05",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-13",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "8/3",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 114,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "5/2",
+      "u": 5,
+      "v": 14,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 171,
+      "E": 9,
+      "P": 11,
+      "Q": 4,
+      "W": 13,
+      "X": "-1/4",
+      "alpha": "-3/2",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-9/4",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 19,
+      "degree_q": 66,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "-c",
+          "p_2": "0",
+          "p_3": "0",
+          "p_4": "0",
+          "p_5": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^4-c)",
+        "gauge_map": "fixed zero plus one Q=4 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-11/2",
+      "kappa": "6",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-3/2)*q*p_pi-(-1/4)*p*q_pi-(9)*p^14=0",
+      "leading_witness": {
+        "degree": 66,
+        "homogeneous_solution_note": "eta*p^6 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^4-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "36*p^6*Integral(p^7,dpi)"
+      },
+      "leaf_id": "R055-L06",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-15/4",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "11/4",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        -1
+      ],
+      "source_m": 114,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "7",
+      "u": 5,
+      "v": 14,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 180,
+      "E": 12,
+      "P": 2,
+      "Q": 1,
+      "W": 49,
+      "X": "-3",
+      "alpha": "-146",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-36",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 15,
+      "degree_q": 197,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "0",
+          "p_3": "-c",
+          "p_4": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^3*(pi-c)",
+        "gauge_map": "put the triple root at 0 and the simple root at c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        3,
+        1
+      ],
+      "gamma": "-183",
+      "kappa": "146/3",
+      "lambda_partition_not_Moh_lambda_s": [
+        3,
+        1
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-146)*q*p_pi-(-3)*p*q_pi-(7)*p^50=0",
+      "leading_witness": {
+        "degree": 197,
+        "kind": "fractional two-root witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "substitute y^r=pi-c into (u*theta+1)*Integral(p^theta,dpi)",
+        "q": "pi^146*(pi-c)^50*(pi+3/4*c)"
+      },
+      "leaf_id": "R062-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-182",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "2",
+      "roster_jsonl_line": 62,
+      "row_id": "R062",
+      "source_delta_not_split_order": [
+        "5/12",
+        "1/3",
+        -1
+      ],
+      "source_m": 135,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1/3",
+      "u": 4,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 180,
+      "E": 12,
+      "P": 5,
+      "Q": 2,
+      "W": 49,
+      "X": "-1",
+      "alpha": "-95/2",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-12",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 15,
+      "degree_q": 197,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "c^2",
+          "p_1": "0",
+          "p_2": "-2*c",
+          "p_3": "0",
+          "p_4": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "(pi^2-c)^2",
+        "gauge_map": "one Q=2 orbit, both roots double",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null
+      ],
+      "gamma": "-61",
+      "kappa": "95/2",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        2
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-95/2)*q*p_pi-(-1)*p*q_pi-(7)*p^50=0",
+      "leading_witness": {
+        "degree": 197,
+        "homogeneous_solution_note": "eta*(pi^2-c)^95 may also be added",
+        "kind": "fractional double-orbit witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "p=(pi^2-c)^2, hence p^(3/2)=(pi^2-c)^3 on the declared chart",
+        "q": "7*(pi^2-c)^95*Integral((pi^2-c)^3,dpi)"
+      },
+      "leaf_id": "R062-L02",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-119/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 62,
+      "row_id": "R062",
+      "source_delta_not_split_order": [
+        "5/12",
+        "1/3",
+        -1
+      ],
+      "source_m": 135,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "3/2",
+      "u": 4,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 180,
+      "E": 12,
+      "P": 5,
+      "Q": 2,
+      "W": 49,
+      "X": "-1",
+      "alpha": "-95/2",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-12",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 15,
+      "degree_q": 197,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "0",
+          "p_2": "-c",
+          "p_3": "0",
+          "p_4": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2*(pi^2-c)",
+        "gauge_map": "double fixed zero plus one simple Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        2
+      ],
+      "gamma": "-61",
+      "kappa": "95/2",
+      "lambda_partition_not_Moh_lambda_s": [
+        2,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact SymPy Q(c,pi) logarithmic-derivative normal form",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-95/2)*q*p_pi-(-1)*p*q_pi-(7)*p^50=0",
+      "leading_witness": {
+        "degree": 197,
+        "kind": "fractional fixed-double witness",
+        "monic": true,
+        "polynomial": true,
+        "proof": "substitute y^2=pi^2-c into 7*Integral(p^(3/2),dpi)",
+        "q": "pi^95*(pi^2-c)^50*(pi^2+2/5*c)"
+      },
+      "leaf_id": "R062-L03",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-119/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 62,
+      "row_id": "R062",
+      "source_delta_not_split_order": [
+        "5/12",
+        "1/3",
+        -1
+      ],
+      "source_m": 135,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "3/2",
+      "u": 4,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 180,
+      "E": 12,
+      "P": 8,
+      "Q": 3,
+      "W": 49,
+      "X": "-1/3",
+      "alpha": "-44/3",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-4",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 15,
+      "degree_q": 197,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "-c",
+          "p_2": "0",
+          "p_3": "0",
+          "p_4": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^3-c)",
+        "gauge_map": "fixed zero plus one Q=3 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-61/3",
+      "kappa": "44",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-44/3)*q*p_pi-(-1/3)*p*q_pi-(7)*p^50=0",
+      "leading_witness": {
+        "degree": 197,
+        "homogeneous_solution_note": "eta*p^44 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^3-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "21*p^44*Integral(p^5,dpi)"
+      },
+      "leaf_id": "R062-L04",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-56/3",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "8/3",
+      "roster_jsonl_line": 62,
+      "row_id": "R062",
+      "source_delta_not_split_order": [
+        "5/12",
+        "1/3",
+        -1
+      ],
+      "source_m": 135,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "5",
+      "u": 4,
+      "v": 11,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 180,
+      "E": 15,
+      "P": 5,
+      "Q": 2,
+      "W": 29,
+      "X": "-3/2",
+      "alpha": "-42",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-45/2",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 12,
+      "degree_q": 88,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "0",
+          "p_1": "-c",
+          "p_2": "0",
+          "p_3": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi*(pi^2-c)",
+        "gauge_map": "fixed zero plus one nonzero Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        1
+      ],
+      "gamma": "-66",
+      "kappa": "28",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-42)*q*p_pi-(-3/2)*p*q_pi-(6)*p^30=0",
+      "leading_witness": {
+        "degree": 88,
+        "homogeneous_solution_note": "eta*p^28 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi*(pi^2-c)",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "4*p^28*Integral(p^1,dpi)"
+      },
+      "leaf_id": "R065-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-129/2",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "5/2",
+      "roster_jsonl_line": 65,
+      "row_id": "R065",
+      "source_delta_not_split_order": [
+        "7/12",
+        "1/4",
+        -1
+      ],
+      "source_m": 120,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "1",
+      "u": 3,
+      "v": 9,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    },
+    {
+      "D_user_to_source_n": 162,
+      "E": 18,
+      "P": 3,
+      "Q": 1,
+      "W": 53,
+      "X": "-1",
+      "alpha": "-51",
+      "arc_translation_control": "if pi->pi+z*t only, F_1=z*d(F_0)/dpi=0 modulo F_0",
+      "beta": "-18",
+      "charged_A1_B1_C1_present": false,
+      "d_s": 9,
+      "degree_q": 107,
+      "face_chart": {
+        "base_change": "Q -> Q[c,Zc]/(Zc*c-1)",
+        "coefficient_field": "Q",
+        "collision_polynomial_L": "c",
+        "face_coefficient_images": {
+          "p_0": "-c",
+          "p_1": "0",
+          "p_2": "1"
+        },
+        "face_coefficient_map": "p_i |-> coefficient [pi^i] of the displayed p; q_j |-> [pi^j] of the displayed q witness",
+        "face_polynomial_p": "pi^2-c",
+        "gauge_map": "translate the root midpoint to 0; c is the squared half-distance",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "image_checks": {
+          "G_allowed_degrees": true,
+          "collision_coordinate_inverted_by_Zc": true,
+          "degree_p_equals_u": true,
+          "p_monic": true
+        },
+        "localizer_relation": "Zc*c-1",
+        "polynomial_ring": "(Q[c,Zc]/(Zc*c-1))[pi]",
+        "quotient_generator_images": {
+          "Zc": "c^-1",
+          "c": "c"
+        },
+        "root_modulus_is_localized_c": true,
+        "scope": "added universal chart; the roster itself serializes only rho and the multiplicity partition",
+        "specialization_map_to_K_pi": "c |-> c0 != 0; Zc |-> c0^-1; pi |-> pi"
+      },
+      "galois_zero_choices_not_separate_leaves": [
+        null,
+        1
+      ],
+      "gamma": "-71",
+      "kappa": "51",
+      "lambda_partition_not_Moh_lambda_s": [
+        1,
+        1
+      ],
+      "leading_check": {
+        "method": "exact Q[c,pi] antiderivative plus integrating-factor identities",
+        "status": "PASS"
+      },
+      "leading_face_ode": "(-51)*q*p_pi-(-1)*p*q_pi-(5)*p^54=0",
+      "leading_witness": {
+        "degree": 107,
+        "homogeneous_solution_note": "eta*p^51 may also be added",
+        "kind": "integer-theta integrating-factor witness",
+        "monic": true,
+        "p_substitution": "pi^2-c",
+        "polynomial": true,
+        "proof": "I'=p^theta; alpha=X*(W-theta); -X*(u*theta+1)=v-u",
+        "q": "5*p^51*Integral(p^2,dpi)"
+      },
+      "leaf_id": "R066-L01",
+      "leaf_status": "SURVIVES_THIS_LANE_AS_NECESSARY_ONLY_NOT_ATTAINMENT",
+      "not_classified_as": [
+        "ES_LEAF_DEAD_BY_XU71",
+        "MODULUS_ONLY_ROOT_C_EQ_0",
+        "OPEN[XU71-PLUS-ONE-VACUOUS]"
+      ],
+      "offset_one_raw_t_power": "-69",
+      "offset_one_row_general": "sum_{r+s=1}((alpha+r)A_r*(B_s)_pi-(beta+s)*(A_r)_pi*B_s)+C_1=0",
+      "offset_one_row_if_integer_gap": "(alpha+1)A_1(B_0)_pi+alpha*A_0(B_1)_pi-(beta+1)(A_0)_pi*B_1-beta*(A_1)_pi*B_0+C_1=0",
+      "rho": "3",
+      "roster_jsonl_line": 66,
+      "row_id": "R066",
+      "source_delta_not_split_order": [
+        "4/9",
+        "1/3",
+        "1/6",
+        -1
+      ],
+      "source_m": 108,
+      "special_alias": null,
+      "special_control": null,
+      "theta_split_screen_not_Xu_t": "2",
+      "u": 2,
+      "v": 7,
+      "xu71_decision": "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]"
+    }
+  ],
+  "opens": [
+    "OPEN[ROSTER-ES-LEAF-COUNT-36-VS-38]",
+    "OPEN[XU71-PLUS-ONE-ARC-JET-DATA-MISSING]",
+    "OPEN[XU71-OFFSET-ONE-SUPPORT]",
+    "OPEN[XU71-FACE-GAUGE-LOCALIZER-MAP]"
+  ],
+  "per_row": {
+    "R012": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R015": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 2,
+      "surviving_necessary_leaf_count": 2
+    },
+    "R016": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R023": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R024": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R029": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R035": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R038": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 4,
+      "surviving_necessary_leaf_count": 4
+    },
+    "R043": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 3,
+      "surviving_necessary_leaf_count": 3
+    },
+    "R044": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R045": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R049": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R051": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R052": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 2,
+      "surviving_necessary_leaf_count": 2
+    },
+    "R053": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 2,
+      "surviving_necessary_leaf_count": 2
+    },
+    "R054": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R055": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 6,
+      "surviving_necessary_leaf_count": 6
+    },
+    "R062": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 4,
+      "surviving_necessary_leaf_count": 4
+    },
+    "R065": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    },
+    "R066": {
+      "D2_alternative_retained": true,
+      "all_leaves_dead": false,
+      "dead_count": 0,
+      "leaf_count": 1,
+      "surviving_necessary_leaf_count": 1
+    }
+  },
+  "schema": "jc2.xu71-es-leaves/v1",
+  "scope": "necessary face audit only; no carrier, attainment, or polynomial pair is asserted",
+  "universal_offset_rows": {
+    "actual_leaf_vacuity_proved": false,
+    "arc_translation_only_control": "F_1=z*d(F_0)/dpi=0 modulo F_0",
+    "exponent_identity": "alpha+beta-1=gamma+rho-2",
+    "missing_coefficients": [
+      "A_1",
+      "B_1",
+      "C_1"
+    ],
+    "missing_support_fact": "the charged inputs do not rule out rational offsets 0<r<1",
+    "raw_plus_one_power": "t^(gamma+rho-1), not bare t^(rho-1) unless t^gamma was first factored",
+    "row_h": "F_h=sum_{r+s=h}((alpha+r)A_r(B_s)_pi-(beta+s)(A_r)_pi B_s)+C_h=0",
+    "series": [
+      "T_s(sigma)=t^alpha*sum_r A_r(pi)t^r",
+      "g(sigma)=t^beta*sum_s B_s(pi)t^s",
+      "(T_s)_f(sigma)=t^gamma*sum_h C_h(pi)t^h"
+    ]
+  },
+  "verdict": {
+    "D2_alternatives_retained": 20,
+    "ES_LEAF_DEAD_BY_XU71": 0,
+    "OPEN_XU71_PLUS_ONE_ARC_JET_DATA_MISSING": 36,
+    "OPEN_XU71_PLUS_ONE_VACUOUS_actual_leaves": 0,
+    "fallacy_v2": "necessary != sufficient; no floor/attainment promotion; no exit-price assertion",
+    "family_C_row_residual": 20,
+    "leading_face_ode_admitted": 36,
+    "modulus_conditions_with_only_localized_root_c0": 0,
+    "overall_charged_residual_after_lane": 65,
+    "rows_with_every_leaf_dead": [],
+    "surviving_necessary_leaves": 36
+  }
+}

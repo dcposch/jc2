@@ -1,0 +1,32 @@
+{
+  "schema": "jc2.manual-terminal-custody/v1",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETE_CONDITIONAL_BOUND_NO_ACTUAL_COMPUTATION",
+  "first_utc": "2026-09-10T15:31:53Z",
+  "end_utc": "2026-09-10T15:42:00Z",
+  "end_scope": "Completed report, expected verification, sealed WHOLE read and all input/owned post-pins; only this final custody publication follows. Terminal all-writers-IDLE clock is returned with its hash.",
+  "hard_utc": "2026-09-10T15:53:00Z",
+  "reserve_utc": "2026-09-10T15:50:00Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_transaction_sha256": "4cc9ce14f41766b8f9f055d08cd8ccb3192c3e91522e1b5ddd0678c948021c78",
+  "verification": "VERIFIED with expected basis and expected manifest; report and transaction freshly read WHOLE after freezing",
+  "readscope": {
+    "fresh_whole": ["xmodel/f10-r2-modular-fullsource-gate-fable5-20260910.md"],
+    "explicit_same_byte_completed_whole_reuses": ["xmodel/f10-r2-modular-fullsource-route-astra-20260910.md", "xmodel/f10-r2-cyclic-core-astra-20260910.md", "xmodel/f10-r2-cyclic-core-gate-fable5-20260910.md"],
+    "clipping": "NONE; no missing tail",
+    "other_inputs": "NONE; no provenance, baseline, coefficient body, code, old arithmetic or live gate"
+  },
+  "inputs_pre_and_post_match": {
+    "xmodel/f10-r2-modular-fullsource-route-astra-20260910.md": "f774640bc2093ba4745cae52f5892170923c79d7ad80a400d00ddd06814d2200",
+    "xmodel/f10-r2-modular-fullsource-gate-fable5-20260910.md": "c5cb181aa28bd5d49971b02b68721e335b0972876f9cc1e8c2444d2f73c9af63",
+    "xmodel/f10-r2-cyclic-core-astra-20260910.md": "5afce82cc0478da08bfc8df5a6321c6edfefd1a4081be9bc50a032052dd54edd",
+    "xmodel/f10-r2-cyclic-core-gate-fable5-20260910.md": "41a586169d3a944ba5025d115041170bf7bacf5d9054dab71d57f293b0ccfc7b"
+  },
+  "owned_excluding_this_custody": {
+    "xmodel/f10-r2-modular-macaulay-bound-astra-20260910.md": "46e6e6b383ebb66012f7ae385a8325615871b14f94206fd468851cdc777bdc8c",
+    "xmodel/f10-r2-modular-macaulay-bound-astra-20260910.md.artifact.json": "4cc9ce14f41766b8f9f055d08cd8ccb3192c3e91522e1b5ddd0678c948021c78"
+  },
+  "collisions": "EMPTY; exact targets absent at first action, final report/transaction absent before sealing; own-only checks, no shared write",
+  "writers": "Report and transaction frozen 15:41:46Z; every prior owned writer IDLE. This is the last authored write. All owned writers IDLE on completion; no running process, mathematical subprocess, code, agent, execution or follow-on.",
+  "outcome": "Weight30 completeness proved under full special highest regularity; exact raw count247x754, optional quotient7x330; meaningful weighted counterexample without highest premise. No actual coefficients, rank, unit certificate, source result or JC2 claim."
+}

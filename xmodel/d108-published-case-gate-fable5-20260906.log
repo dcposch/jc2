@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is written to `xmodel/d108-published-case-gate-fable5-20260906.md` (12,341 bytes, one standalone `<!-- BODY-END -->` as the last line, no seal section, no charge-basis line), ten minutes before the 14:12 UTC deadline. Nothing further is needed from tools.
+
+**Verdicts**
+
+- **Arrow (1), source to standard pair and full edge: CONFIRMED.** My own parse of the frozen JSON reproduces the unique X^8 slot, the numeric face `X(XW^4-1)^7`, and the bounds. The change to (A,B) strictly lowers both the A-degree and the (4,-1)-weight for every non-leading term, so the faces transfer verbatim, no edge sits between (1,0) and (4,-1), and the corner is type II.b. This holds for every specialization because the load-bearing slots are numeric.
+- **Arrow (2), chain to the published row: CONFIRMED** at external-theorem trust. Theorem 2.20 in [5] quantifies over each standard pair. Minimality only bounds the invariant B. All four roots are simple with multiplicity 21, so every root choice gives A1 = (11/4, 7). Prop 5.19 forces type I at gcd(11,7) = 1, and 4 − 11/7 > 1 makes it final. The row's exhaustiveness is not needed in this direction.
+- **Arrow (3), Prop 4.3 antecedent: GAP.** GGHV's proof asserts that the predecessor of (−1,4) lies in ](0,−1),(1,−1)]. That is the swapped form of GGV1 Cor 5.21(4), a normalization GGV1 Prop 4.7 obtains by an automorphism, not a chain datum. I reduced it to one antecedent (U): A^24 B^84 is the unique B-degree-84 monomial of F. Given (U), [2] Prop 2.1 and the (−1,4) bound finish the step, and the Cor 7.4 lower limit is discharged through van den Essen 10.2.6. The packet does not prove (U). My expansion shows h carries B-exponents 29 to 33 with parametric coefficients, and only the B^33 coefficient is known to square to residual 0.
+- **Arrow (4): CONDITIONAL** on (U) plus the Helali/Suzuki exclusions exactly as CROSSCHECK retains them.
+
+**Corrections reviewed.** Prop 2.11 uniqueness is valid in original coordinates because (4,−1) is in V0 and p has four factors. The J = 0 control genuinely shows edge data alone do not reach the predecessor. The split-root test allows only Δ = 3 and the single-root branch gives σ in {−3, −2}. The arXiv-v2 crosswalk file was not among the inputs and was not checked.
+
+**Cheapest discriminator.** Test whether every h coefficient with B-exponent above 28 vanishes on the residual locus. If all do, and likewise for D and C, arrow (3) closes at the published interface. If one survives, that stratum is outside the case GGHV actually proved.
+DIVERT path=xmodel/d108-published-case-gate-fable5-20260906.md status=CLEAN body_bytes=12341 body_sha256=7c6a045bf2995a2efe1d1715a8c4d2390030ea79172f7ea61f82c42a9281cfa8

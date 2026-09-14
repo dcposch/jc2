@@ -1,0 +1,55 @@
+UTC=2026-09-05T14:32:07Z
+--- ps ---
+   3620       26:52 77089140 2021 /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.g2.out
+--- g2.out ---
+-rw-rw-r-- 1 ubuntu ubuntu    0 Sep  5 14:05 /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.g2.out
+-rw-rw-r-- 1 ubuntu ubuntu 9427 Sep  5 14:17 /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.g2.stderr
+-rw-rw-r-- 1 ubuntu ubuntu    0 Sep  5 14:05 /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.g2.stdout
+--- rss last ---
+VmSize:	205666524 kB
+VmHWM:	76769416 kB
+VmRSS:	76769416 kB
+utc=2026-09-05T14:31:58Z msolve_pid=3620
+VmPeak:	206066696 kB
+VmSize:	206001160 kB
+VmHWM:	76993376 kB
+VmRSS:	76993376 kB
+--- stderr progress (F4/degree/pairs) ---
+basis hash table resetting     OFF
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+new data  # new elements for basis in this round
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+--- stderr tail ---
+  5     119   29808    1639 x 3905        0.21%       22 new      97 zero         0.09 | 2.14         
+  6   28634   30097  335912 x 595355      0.00%     3834 new   24816 zero        31.19 | 644.19       
+  4      17   55324     200 x 624         1.04%       10 new       7 zero         0.14 | 1.44         
+  4      22   54961      58 x 60          3.48%        4 new      18 zero         0.06 | 0.68         
+  5     790   54855   13716 x 34520       0.05%      208 new     582 zero         2.46 | 28.13        
+  4      27   54364     151 x 561         1.50%        9 new      18 zero         0.13 | 1.34         
+  5     883   54261   18423 x 45092       0.04%      287 new     596 zero         2.73 | 38.05        
+  4      52   53235     293 x 740         1.03%       19 new      33 zero         0.22 | 2.64         
+  4      26   53034     258 x 932         1.66%       16 new      10 zero         0.18 | 2.24         
+  5    1579   52980   18036 x 40527       0.05%      387 new    1193 zero         3.63 | 51.48        
+  4      49   52654     329 x 849         1.34%       11 new      38 zero         0.14 | 1.64         
+  5    1784   52459   15425 x 34161       0.05%      400 new    1385 zero         3.72 | 53.14        
+  5     535   56971    6878 x 18324       0.09%      125 new     410 zero         1.29 | 16.77        
+  5     139   58864    1868 x 6168        0.20%       26 new     113 zero         0.31 | 3.64         
+  6   28407   59326  440488 x 828271      0.00%     4932 new   23527 zero        87.21 | 1036.01      
+  4      21  108299      89 x 242         4.29%        4 new      17 zero         0.17 | 0.78         
+  5    1046  108388   14775 x 38474       0.08%      281 new     765 zero         5.23 | 40.11        
+  5     521  108339   10821 x 30616       0.07%       95 new     426 zero         2.01 | 13.93        
+  5      32  108386     299 x 1258        0.97%        2 new      30 zero         0.13 | 0.52         
+  6   22001  108392  474232 x 950305      0.00%     4394 new   17629 zero       121.57 | 1062.56      
+  5     228  164241    4065 x 14782       0.20%       46 new     182 zero         1.46 | 7.35         
+  5      44  164561     406 x 1712        0.74%        1 new      43 zero         0.19 | 0.46         
+  6   13777  164534  358683 x 763490      0.01%     2863 new   10921 zero        95.83 | 660.35       
+  5      77  202192    1421 x 5758        0.50%       10 new      67 zero         0.57 | 2.00         
+  6    6805  202249  201866 x 504650      0.01%     1315 new    5493 zero        49.44 | 261.99       
+  5      30  220987     303 x 1446        1.01%        1 new      29 zero         0.28 | 0.55         
+  6    1624  220963  123909 x 336007      0.02%      249 new    1375 zero        13.55 | 47.01        
+  6     257  224081   47897 x 149070      0.03%       42 new     215 zero         4.01 | 9.71         
+  6      69  224522   48476 x 150804      0.03%        9 new      60 zero         3.11 | 4.72         
+  7  217208  224625 6024701 x 10924602     0.00%--- stdout tail ---

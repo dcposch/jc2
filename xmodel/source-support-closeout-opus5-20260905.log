@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. All three residuals closed, report sealed at `xmodel/source-support-closeout-opus5-20260905.md` (body 16,386 B; `charge_basis=ABSENT`, correct — no exit-price assertion is made).
+
+## Results
+
+**Inputs:** 5/5 SHA-256 verified mechanically from the `.run.v2` receipt via awk + `sha256sum -c`.
+
+**(1) `OPEN[Q-IS-T1]` — closed.** Printed p.198 (Prop 6.3 proof, conclusion (3)) shows the descent is *defined on* the pair `(g, T₁^ψ)`: `J_{γ,π}(ḡ(σ), T̄₁^ψ(σ)) = J_{γ,π}(x,y)·J_{x,y}(g, T₁^ψ(f,g))`. So `Q'` is the image of `T₁^ψ` by construction, and the question reduces from commutation to a gauge: `Q' ↦ Q' + p(P')` is Jacobian-free, and the only thing it can spoil is the row datum. Printed p.185 (`deg_y T₁^ψ = −M₁`) makes `M₁' = −m'` exactly the certificate that the normalisation is degree-neutral — **12/12**, alongside `ℓ = v_s−u_s−1` 12/12 and `M_s' ≤ n'−2` 12/12.
+
+**(2) `OPEN[PROP51-ELL-EXTENSION]` — closed, with a wider printed licence than the gate had.** There is a **second ℓ-Remark on printed p.169**, licensing **Prop 4.4** (condition (6)→(6)\*) — and p.173 names Props 4.4 and 4.6 as the two tools of Prop 5.1. Both are printed as ℓ-valid. The lemma is written out: step 2 is a one-line substitution `λ = δ` into (3)\*, giving `δ_s = −(ℓ+1)/(n−M_s−1)`. Step 1 needs one further shift — Prop 4.2/4.4 condition (3) → `λ < (−1−ℓ+δ)/(n−M_i)` — which is *unprinted* but has its printed source at p.165 and is **forced by Moh's own p.207 table**: the ℓ-form scores 4/4, the ℓ=0 form **0/4**, so the table refutes the "only (6) shifts" reading. Also 12/12 on the frozen fibres. Typed as new `OPEN[PROP42-ELL-CONDITION3]`.
+
+**(3) `OPEN[OLD-CAP-REGRESSION-αβ]` — closed; the list is final.** All 72 blocks × 12 fibres, against the *emitting code* (not a paraphrase). Control: `G_i \ uncapped-D1` reproduces the frozen `*_added_beyond_raw` **72/72**, and the gate's §3.d h-block test replicates exactly (11/11/20/3 escapees, same 4 fibres).
+
+- **Cap-refuted (genuinely FALSE): 4 fibres / 22 blocks** — the three `(16,12; 6,13; ℓ=3)` fibres (`d=2>1`) in *every* block `h`…`β₃`, plus `V4_9` at `h` only.
+- The α/β extension does not enlarge the *fibre* set but takes the *block* set from 4 to 22 — which is what matters, since a banked kill is regressed by any one false block.
+- The remaining 11 fibres / 66 blocks fail only against the uncapped D1 floor. I did **not** put those on the regression list: that is the D1-centred vs `φ`-centred coordinate difference, i.e. a normalisation gap, and calling it "false" would be the FALLACY-v2 flag/place identification.
+
+One thing worth flagging: `V4_9`'s h-block failure comes from the `b ≤ K−V₂` cut, and the emitted α/β inventories carry **no** `u`-cut at all — so that failure mode is structurally confined to `h`. That asymmetry is why the fibre count stayed at 4 while the block count tripled.
+DIVERT path=xmodel/source-support-closeout-opus5-20260905.md status=CLEAN_SEALED body_bytes=16386 body_sha256=a598beaf7f85ab9ab19805d052a6e124340fb85c2ec49fdd39f28b9438151ff1

@@ -1,0 +1,160 @@
+{
+ "lane": "k16-t2-closing-opus5-20260906",
+ "basis": "ed41ab403503f96ca603ab5711a0783d734b2180",
+ "custody": {
+  "charged_inputs": 5,
+  "sha256sum_c": "5/5 OK",
+  "frozen_bases_read_only": true
+ },
+ "identity_free_jets": "T_2 = -(1/4)*Lpivot^2 exactly (E_2 = 0 when P_4 = Phi_4)",
+ "conjecture_1": {
+  "verdict": "REFUTED",
+  "free_jets": {
+   "N4_t3": {
+    "closing_rows": "Phi_9..Phi_16",
+    "u_order": 0,
+    "divisible_by_T2": false
+   },
+   "N5_t4": {
+    "closing_rows": "Phi_11..Phi_20",
+    "u_order": 0,
+    "divisible_by_T2": false
+   },
+   "controls": {
+    "CTRL_PHI4_diff": 0,
+    "CTRL_PHI5_diff": 0,
+    "UF_rows_0_to_4N_nonzero_N4": 0,
+    "positive_control_N3_exceptional_family": "P = -L^2/4 reproduced; Phi_7..Phi_12 = 0"
+   }
+  },
+  "on_ray": {
+   "t3": {
+    "custody_B_eta_target_diff": 0,
+    "Lp2_plus_4T2_plus_24E2": 0,
+    "wt_T2": 12,
+    "wt_Lpivot": 6,
+    "wt_Beta": 13,
+    "rows_divisible_by_T2": "none of E_2..E_6",
+    "dim": 0,
+    "vdim": 66,
+    "T2_in_J": false,
+    "T2sq_in_J": true,
+    "Beta_in_J": false,
+    "Betasq_in_J": true
+   },
+   "t4": {
+    "custody_B_eta_target_diff": 0,
+    "Lp2_plus_4T2_plus_24E2": 0,
+    "wt_T2": 16,
+    "wt_Lpivot": 8,
+    "wt_Beta": 17,
+    "rows_divisible_by_T2": "none of E_2..E_8",
+    "dim": 0,
+    "vdim": 338,
+    "T2_in_J": false,
+    "T2sq_in_J": true,
+    "Beta_in_J": false,
+    "Betasq_in_J": true
+   },
+   "weight_proof_all_t": "wt E_k = 4t+2-k < 4t = wt T_2 for k>=3, S_t positively graded"
+  },
+  "dual_reading": {
+   "status": "VACUOUS as stated (u is a unit on the Prop 4.2 chart)",
+   "pivots": "-u/4 (k-independent, confirms Prop 2.2)",
+   "ord_u_l_Nplus1_at_N4": -5
+  }
+ },
+ "converse_U_TAC": {
+  "label": "MEASURED-MODULAR (p=1000003 and p=31991 agree)",
+  "N4": {
+   "GB_size": 1296,
+   "dim_V_Iclose": 1,
+   "min_e": {
+    "u": 19,
+    "l_2": 15,
+    "eta": 19,
+    "B_times_eta": 19
+   },
+   "not_in_radical": [
+    "B",
+    "w_2"
+   ],
+   "saturation_unit": true,
+   "negative_saturators_nonunit": [
+    "u+1",
+    "B",
+    "w_2"
+   ],
+   "graded_rows_1_2_3_dims": [
+    5,
+    4,
+    3
+   ]
+  },
+  "N5": {
+   "GB_size": 10017,
+   "dim_V_Iclose": 1,
+   "prime": 1000003,
+   "min_e": {
+    "u": 27,
+    "l_2": 20,
+    "eta": 27,
+    "B_times_eta": "inherited from eta"
+   },
+   "not_in_radical_e_le_45": [
+    "B",
+    "w_2"
+   ]
+  },
+  "exact_Q": "not completed in lane budget (std / slimgb / sat all over budget)",
+  "ray_UL_control": {
+   "N4_p100049": "unit, dim=-1 (reproduces V(J_3)={0})",
+   "N5_p100043": "unit, dim=-1 (reproduces V(J_4)={0})",
+   "N4_negctrl_no_UL": "non-unit, dim=1"
+  }
+ },
+ "conjecture_2": {
+  "verdict": "PREMISE REFUTED",
+  "ray_4tuple_source": "CONSUMED-UNCHARGED: k16-middle-spine-opus5-20260903.md:51,284,330-337",
+  "controls": {
+   "99_66_matches_charged_table": true,
+   "108_72_matches_charged_table": true
+  },
+  "ray": {
+   "n": "12t+4",
+   "m": "8t+4",
+   "M_2": "12t+1",
+   "d": [
+    "12t+4",
+    4,
+    1
+   ],
+   "n_1": "3t+1",
+   "n_2": 4,
+   "D_1": "8t+4",
+   "D_2": "24t^2-1",
+   "ambient_L": "4(3t+1)(2t+1)",
+   "leader_depth": "5(4t+1)",
+   "D_2_mod_4": 3,
+   "unique_equality_monomial": "F^(2t+1)",
+   "n_lower_target_coeffs": {
+    "t3": 43,
+    "t4": 69,
+    "t5": 101,
+    "t6": 139
+   }
+  },
+  "prompt_premise": {
+   "3to2": false,
+   "16_approximate_root": false,
+   "n_equals_48_on_ray": false,
+   "gcd_n_m": 4
+  },
+  "uniform_survivor": "4 = n_2 does not divide D_2 = 24t^2-1 for any t; cone-vertex stratum fails attainment uniformly, but it lies in {J=0} hence in {B*eta=0}"
+ },
+ "attainment_rows_t3_to_t6": {
+  "writable": false,
+  "blocker": "source-to-chart transport absent from all 5 charged inputs",
+  "vacuity": "V(J_t)={0} banked for t=3,4,5; characteristic-zero range banked through t=7 in the charged inputs and (T)_8 promoted at AUDIT.md:17892; first non-vacuous index = 9"
+ }
+}

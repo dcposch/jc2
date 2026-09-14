@@ -1,0 +1,23 @@
+{
+  "schema":"jc2.terminal-custody/v1",
+  "task":"f10-mixed-operator-finish-sol-20260913",
+  "status":"TERMINAL_UNIT_INTERNAL_UNREVIEWED_PREPARE_REFUTED",
+  "first_action_utc":"2026-09-13T00:31:02.105207200Z",
+  "custody_authored_utc":"2026-09-13T00:35:21.618116144Z",
+  "all_writers":"IDLE after custody publication; no further authored-file changes",
+  "inputs_postpin_status":"MATCHED_ALL_TEN",
+  "outputs":{
+    "unit":{"path":"box/f10-mixed-operator-finish-sol-20260913/science-unit.template.sh","sha256":"96258465fbc33d403072ad540bea782e4abf29092c4f5617a0c56043d3025b48"},
+    "delta":{"path":"box/f10-mixed-operator-finish-sol-20260913/DELTA.md","sha256":"66d507d1d4675995e0a0c0aad14430758365c4a457d713bbbbd11a029ac06213"},
+    "pins":{"path":"box/f10-mixed-operator-finish-sol-20260913/PINS.json","sha256":"d7e05b915ca1ae9f3ae7dfb8909c63f1bee311516109023e68033025113e5af8"},
+    "report":{"path":"xmodel/f10-mixed-operator-finish-sol-20260913.md","sha256":"dec7b00072b59312175ca84ee5abfe09139b2babfafe69a7cec3fe1721a4e2b1"},
+    "manifest":{"path":"xmodel/f10-mixed-operator-finish-sol-20260913.md.artifact.json","sha256":"0fb2e9d0bfd479993693b42eeeb0d1245ba931ccf42138049676808ab5cfc40c"}
+  },
+  "verification":{
+    "expected_basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256":"0fb2e9d0bfd479993693b42eeeb0d1245ba931ccf42138049676808ab5cfc40c",
+    "artifact_finalize":"VERIFIED",
+    "all_owned_readback":"WHOLE"
+  },
+  "verdict":"Unit two-defect derivative authored but unreviewed/unexecuted/unbound; PREPARE refuted for promotion due four unconditional post-wait systemctl-show calls."
+}

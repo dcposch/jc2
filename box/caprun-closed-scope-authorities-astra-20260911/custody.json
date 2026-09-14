@@ -1,0 +1,113 @@
+{
+  "schema": "documentary-custody/v1",
+  "task": "caprun-closed-scope-authorities-astra-20260911",
+  "owner": "/root/model_productivity",
+  "status": "COMPLETE_DISABLED_METADATA_ONLY",
+  "first_action_utc": "2026-09-11 08:41:28.154721347 UTC",
+  "publication_reserve_utc": "2026-09-11 08:50:00 UTC",
+  "hard_stop_utc": "2026-09-11 08:53:00 UTC",
+  "sealed_whole_and_expected_verify_utc": "2026-09-11 08:48:07 UTC",
+  "input_pins": [
+    {
+      "path": "box/caprun-closed-scope-registration-prep-root-20260911/ROOT-REGISTRATION.template.json",
+      "sha256": "db925cbf9dad59b39444ea4250b839584be68c3bc5353aee5af924d96034e8f4",
+      "bytes": 29126,
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-registration-prep-root-20260911/ROOT-SOURCE-CONTRACT.json",
+      "sha256": "57e10ec364c32acf08ee057d40af93d2df49b98b2c9863fb8d9dd7f5d2dd8e08",
+      "bytes": 10932,
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-implementation-astra-20260911/dispatch.py",
+      "sha256": "52b3d916f4fc3941bb98c8b4f7698ab940680d09ee4e065de1f167857e3fd436",
+      "bytes": 50258,
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-registration-prep-root-20260911/AUTHORITIES.template.json",
+      "sha256": "de6e1f9394a2942ce22fd32d593c8109bf096729a047cca3ef5fe1ff47eb3c9e",
+      "bytes": 43888,
+      "read_scope": "MACHINE_WHOLE_JSON_43888_BYTES plus targeted full key/status/mode/artifact/files/runtime/limits summaries and both policy objects"
+    },
+    {
+      "path": "box/f10-necessary-rows-registration-prep-root-20260911/valid.policy.json",
+      "sha256": "24029cb8f17d4159620a3e660b132fadad4d7fb6caa2988acf43abe150ac8591",
+      "bytes": 868,
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-registration-prep-root-20260911/dummy.policy.json",
+      "sha256": "889e75f6e95f3b42048939f1d11230b56208f465672bb4e94cec00983b6ffaf7",
+      "bytes": 866,
+      "read_scope": "FRESH_WHOLE"
+    }
+  ],
+  "owned_pins_excluding_custody": [
+    {
+      "path": "box/caprun-closed-scope-authorities-astra-20260911/AUTHORITIES.template.json",
+      "sha256": "ff1c9bdc1641862472b44ec866883da0c7477ec206c81924bbfdfe37fc3b358f",
+      "bytes": 31698
+    },
+    {
+      "path": "box/caprun-closed-scope-authorities-astra-20260911/valid.policy.template.json",
+      "sha256": "41757d91b43cade749c805126b8f68d9e11efe71d9970a8cd5643a0eb50f8850",
+      "bytes": 1152
+    },
+    {
+      "path": "box/caprun-closed-scope-authorities-astra-20260911/dummy.policy.template.json",
+      "sha256": "ae6be750928b154195af1169c3c09a628000c42f914df3210dbbe1ee07c7a5c6",
+      "bytes": 1150
+    },
+    {
+      "path": "box/caprun-closed-scope-authorities-astra-20260911/PINS.json",
+      "sha256": "65cc5ea65a5c3e243ccd16408beaaf9bcf58702131854c2fbf6ff61514a1e8a6",
+      "bytes": 3363
+    },
+    {
+      "path": "xmodel/caprun-closed-scope-authorities-astra-20260911.md",
+      "sha256": "167e23d113640edfcc528bab8c96e9e0f1fd56dee3fcc5b41faa7de6af66c6ce",
+      "bytes": 6950
+    },
+    {
+      "path": "xmodel/caprun-closed-scope-authorities-astra-20260911.md.artifact.json",
+      "sha256": "9254854fdd2d0261048250d0a7c8982d722c32b4db0f7bfc978dae99a16ad07a",
+      "bytes": 697
+    }
+  ],
+  "checks": {
+    "all_six_input_hashes_before_bodies": true,
+    "all_six_input_postpins_before_marker": true,
+    "all_nine_authority_fields_equal": true,
+    "all_nine_command_vectors_equal": true,
+    "source_vector_argc": 62,
+    "policy_vector_argc": 64,
+    "owned_json_whole_readback_equal": true,
+    "owned_human_whole_readback": true,
+    "old_bundle_scope": "MACHINE_WHOLE_JSON plus targeted human metadata, not human-WHOLE",
+    "parent_false_flags_preserved": true,
+    "device_inode_nulls_preserved": true,
+    "exact_nine_no_scientific_authority": true,
+    "raised_open_check_empty": true,
+    "own_target_collision_check_pass": true,
+    "unique_marker_last": true,
+    "expected_manifest_verification": "VERIFIED"
+  },
+  "scope": {
+    "source_execution": false,
+    "scientific_execution": false,
+    "network": false,
+    "process_control": false,
+    "agents": false,
+    "active_registration_or_authority_created": false,
+    "writer_state_after_publication": "ALL_WRITERS_IDLE",
+    "follow_on_authority": false
+  },
+  "notes": [
+    "Eight final per-phase digest placeholders remain; the refuse-hash supplied zero digest stays zero.",
+    "ROOT must authenticate and complete physical/native/clocks/leaf identities and exact canonical per-phase serialization; these templates are not release.",
+    "Custody excludes itself; final current-pin and custody-hash handoff follows this write."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "tag": "k16-full-boundary-proof-attempt-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED_DOCUMENTARY_PACKET",
+  "scientific_verdict": "NO_NEW_MECHANISM; all-orders local control only; entire marked all-m polynomial target remains OPEN",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-11 17:17:23 UTC",
+  "publication_reserve_utc": "2026-09-11 17:43:00 UTC",
+  "hard_stop_utc": "2026-09-11 17:46:00 UTC",
+  "report_closed_and_finalized_utc": "2026-09-11T17:28:49Z",
+  "end_of_report_verification_observed_utc": "2026-09-11 17:29:04 UTC",
+  "terminal_write": "This custody file is the final authored write. After its successful creation all owned writers are IDLE; only readback/hash/clock and terminal communication remain. Its filesystem mtime records the final write rather than a predicted future timestamp.",
+  "transaction": {
+    "lease_id": "b68058c665bfcf52d6796917290a78a5",
+    "report": "xmodel/k16-full-boundary-proof-attempt-astra-20260911.md",
+    "manifest": "xmodel/k16-full-boundary-proof-attempt-astra-20260911.md.artifact.json",
+    "expected_manifest_sha256": "9bf3b7d5907ff198c889f363e4f8ff599a94bf8756e6f1c6e77c5d0e885e5aae",
+    "expected_basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "verification": "VERIFIED against both exact expected values; sealed report and manifest then read WHOLE"
+  },
+  "inputs_current_sha256": {
+    "box/k16-full-boundary-proof-attempt-astra-20260911/TASK.md": "7bfbf27c6df998b07e0ca30255f1ee9669cd8c2d73452f921829d660b91ee21a",
+    "xmodel/k16-ueta-classification-astra-20260906.md": "f04c483c94f9c1320e4d630cfd52422ca3730ad396d0d653c3d3ef2a2c49e8ac",
+    "xmodel/k16-boundary-product-astra-20260906.md": "1c4a1100cc774932f23da27e11bf828a6fa10d5e256ce1528694d356d9031d9c",
+    "xmodel/k16-square-discriminant-ramification-discriminator-astra-20260908.md": "138c4a55971172494c60e6f4b99c061719b74ff6bdad8181ff12c29815f15e57"
+  },
+  "owned_current_sha256_excluding_custody": {
+    "xmodel/k16-full-boundary-proof-attempt-astra-20260911.md": "62aa46f9e3f10fb1c5adbdb0e479a25de60ddf753c2a91da998bc3608215094e",
+    "xmodel/k16-full-boundary-proof-attempt-astra-20260911.md.artifact.json": "9bf3b7d5907ff198c889f363e4f8ff599a94bf8756e6f1c6e77c5d0e885e5aae",
+    "box/k16-full-boundary-proof-attempt-astra-20260911/PINS.json": "900723fb99ef8f4c09208ec5d5c9ec11a4015bc2fe87db8afce0e93e7d4b1ed8"
+  },
+  "body_sha256": "e4117d5347302393b5e6436908fd571486f57eeb4466d3601a751d4770cce9e6",
+  "read_scope": "Exactly four inputs. All hash-before-body; all fresh WHOLE. Initial aggregate clipping recovered completely by bounded reads before mathematical use, by observed 17:20:29. No summary reuse, additional scientific inputs, linked source reads or live ROOT proof premise.",
+  "own_checks": "Final private partial WHOLE and PINS WHOLE; input postpins; explicit OPEN/QUANTITY/CHEAPEST TEST and own-target collision checks; marker absent until final append; close/finalize/expected VERIFY; final sealed report and manifest WHOLE; all four input and three owned hashes matched again.",
+  "collisions": "Initial report/manifest/PINS/custody absent; ROOT TASK preserved. Final report/manifest/custody checked absent again before publication. No unrelated or shared edits.",
+  "limits": "No proof of exclusion, target polynomial counterexample, global squarefreeness theorem, degree bound, source zero, JC2 result or novelty claim. No scientific execution, generated coefficient artifact, code, network, AWS, Git, protected access, agents or follow-on.",
+  "completion_policy": "Independent COMPLETED / ALL WRITERS IDLE notice and custody SHA precede ROOT intake. This custody intentionally does not hash itself."
+}

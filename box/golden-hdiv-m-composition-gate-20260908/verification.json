@@ -1,0 +1,104 @@
+{
+  "utc": "2026-09-08T23:52:53.219371+00:00",
+  "status": "PASS_METADATA_ONLY",
+  "parser_argv": [
+    "sed",
+    "-n",
+    "s/^charged_input=//p",
+    "/home/ubuntu/jc2/box/golden-hdiv-m-composition-gate-20260908/fable.prompt.md"
+  ],
+  "parser_stdout": "box/golden-hdiv-m-composition-gate-20260908/inputs/scope.md\nbox/golden-hdiv-m-composition-gate-20260908/inputs/coalesced-proof.md\nbox/golden-hdiv-m-composition-gate-20260908/inputs/coalesced-transaction.json\nbox/golden-hdiv-m-composition-gate-20260908/inputs/coalesced-custody.json\nbox/golden-hdiv-m-composition-gate-20260908/inputs/coalesced-input-pins.json\nbox/golden-hdiv-m-composition-gate-20260908/inputs/separated-proof.md\nbox/golden-hdiv-m-composition-gate-20260908/inputs/separated-transaction.json\nbox/golden-hdiv-m-composition-gate-20260908/inputs/source-framework.md\nbox/golden-hdiv-m-composition-gate-20260908/inputs/source-transaction.json\nbox/golden-hdiv-m-composition-gate-20260908/inputs/audit-15m.md\n",
+  "inputs": 10,
+  "math_runs": 0,
+  "launches": 0,
+  "transactions": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/golden-hdiv-coalesced-m-source-astra-20260908.md"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 12109, \"body_sha256\": \"5396b4d2029a85805efc008166a4339342af8bfbe6f0e00a4332a133bdbc1d78\", \"file_bytes\": 12442, \"final_path\": \"/home/ubuntu/jc2/xmodel/golden-hdiv-coalesced-m-source-astra-20260908.md\", \"full_sha256\": \"fd04a5fd0bbbbbe89e10a50310d931bbf72d442512422912b1dd62cdcaa38654\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/golden-hdiv-coalesced-m-source-astra-20260908.md.artifact.json\", \"manifest_sha256\": \"2f36b75b2ea2857b2264df0e992019300bad76a50461a498c8b937a42eedd9fa\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/golden-hdiv-separated-m-source-coordinator-20260908.md"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 13987, \"body_sha256\": \"4c8576a75051400099e2be5ba1226e3df81a4a1c455b5253cb10f30f5e928b48\", \"file_bytes\": 14320, \"final_path\": \"/home/ubuntu/jc2/xmodel/golden-hdiv-separated-m-source-coordinator-20260908.md\", \"full_sha256\": \"e8ae9f1ab4c319f12af4514ad9cb70f3b3b48541e0bf82d9acd55cd81e67ca87\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/golden-hdiv-separated-m-source-coordinator-20260908.md.artifact.json\", \"manifest_sha256\": \"bed766fae3fdaeff28d6ca82bab381267fa7ed5fc7c5686d06958e0193c12174\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/golden-two-regime-initial-discriminator-astra-20260908.md"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 17824, \"body_sha256\": \"0c59263b73729ead96ffe504ff34d0f00f8f83927b37bce9f71f8d4d78b8921e\", \"file_bytes\": 18157, \"final_path\": \"/home/ubuntu/jc2/xmodel/golden-two-regime-initial-discriminator-astra-20260908.md\", \"full_sha256\": \"14c4cdeddf9b1166046759022378775fc7ebc147c7d939579cf93f6b78aa51c6\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/golden-two-regime-initial-discriminator-astra-20260908.md.artifact.json\", \"manifest_sha256\": \"a80659d8c6b38fd4800b7eb70b650af57a0065e0c67b077f2878c1c24377c8af\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "close",
+        "--final",
+        "xmodel/golden-hdiv-m-composition-gate-prep-astra-20260908.md",
+        "--token",
+        "cf4032815ed4773d0dbb44374bcecf3ce0432cdd9e04418c7b400d3044631504"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"final_path\": \"/home/ubuntu/jc2/xmodel/golden-hdiv-m-composition-gate-prep-astra-20260908.md\", \"idempotent\": false, \"partial_path\": \"/home/ubuntu/jc2/xmodel/.golden-hdiv-m-composition-gate-prep-astra-20260908.md.partial-223028648cfb70a8779307bf70fa4bc4\", \"source_bytes\": 3446, \"source_sha256\": \"4ee05f257da29cf1bae6b554ab6bdffc0ac7ce4587d54d145eb15b7126d0ff0e\", \"status\": \"CLOSED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "finalize",
+        "--final",
+        "xmodel/golden-hdiv-m-composition-gate-prep-astra-20260908.md",
+        "--token",
+        "cf4032815ed4773d0dbb44374bcecf3ce0432cdd9e04418c7b400d3044631504"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 3446, \"body_sha256\": \"4ee05f257da29cf1bae6b554ab6bdffc0ac7ce4587d54d145eb15b7126d0ff0e\", \"file_bytes\": 3778, \"final_path\": \"/home/ubuntu/jc2/xmodel/golden-hdiv-m-composition-gate-prep-astra-20260908.md\", \"full_sha256\": \"aad846587de69a1fec68d26a1ceee0ebae90a1b17d991cd224b00e197dfb54de\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/golden-hdiv-m-composition-gate-prep-astra-20260908.md.artifact.json\", \"manifest_sha256\": \"bebf03b5cb29cf17839a828f24d37085c9f7a5f8da1ec88b4d2ce47f9719805f\", \"recovered\": false, \"status\": \"FINAL\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/golden-hdiv-m-composition-gate-prep-astra-20260908.md"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 3446, \"body_sha256\": \"4ee05f257da29cf1bae6b554ab6bdffc0ac7ce4587d54d145eb15b7126d0ff0e\", \"file_bytes\": 3778, \"final_path\": \"/home/ubuntu/jc2/xmodel/golden-hdiv-m-composition-gate-prep-astra-20260908.md\", \"full_sha256\": \"aad846587de69a1fec68d26a1ceee0ebae90a1b17d991cd224b00e197dfb54de\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/golden-hdiv-m-composition-gate-prep-astra-20260908.md.artifact.json\", \"manifest_sha256\": \"bebf03b5cb29cf17839a828f24d37085c9f7a5f8da1ec88b4d2ce47f9719805f\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    }
+  ]
+}

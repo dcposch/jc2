@@ -1,0 +1,58 @@
+{
+  "schema": "manual-terminal-custody/v1",
+  "tag": "pseudoplane-cover-pair-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED",
+  "scientific_status": "MANUAL_UNREVIEWED_NO_CLOSING_DISCRIMINATOR_KNOWN_LEDGER_BARRIER",
+  "first_action_utc": "2026-09-11 12:23:01 UTC",
+  "publication_reserve_utc": "2026-09-11 12:36:00 UTC",
+  "hard_stop_utc": "2026-09-11 12:40:00 UTC",
+  "clock_reset": false,
+  "own_targets_absent": true,
+  "existing_task_preserved": true,
+  "closed_utc": "2026-09-11 12:32:50 UTC",
+  "finalized_utc": "2026-09-11 12:32:51 UTC",
+  "expected_verification_sealed_whole_and_postpins_completed_by_utc": "2026-09-11 12:33:08 UTC",
+  "inputs": [
+    {
+      "path": "box/pseudoplane-cover-pair-astra-20260911/TASK.md",
+      "sha256": "709273a8b12b3a31f4780ee1cdf7e6fa031fe2685ec71770883437330a1b400a",
+      "read_scope": "FRESH_WHOLE after initial hash; sole charged file"
+    }
+  ],
+  "owned_excluding_custody": [
+    {
+      "path": "box/pseudoplane-cover-pair-astra-20260911/PINS.json",
+      "sha256": "0530340d36b8e3d13c29852f965b9637f400c429f3e2f6ebbab06496b75d8266",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "xmodel/pseudoplane-cover-pair-astra-20260911.md",
+      "sha256": "32c73dd46172cb6e87cd43414a9896c72878fadd7d0fc38b52f79fb310b9f0ab",
+      "read_scope": "WHOLE private body before marker; WHOLE sealed final"
+    },
+    {
+      "path": "xmodel/pseudoplane-cover-pair-astra-20260911.md.artifact.json",
+      "sha256": "82e92a97475da904b75204604b2e1120a68f1fce4e6530896987e43f9478867c",
+      "read_scope": "WHOLE"
+    }
+  ],
+  "expected_transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "manifest_sha256": "82e92a97475da904b75204604b2e1120a68f1fce4e6530896987e43f9478867c",
+    "status": "VERIFIED"
+  },
+  "coverage": {
+    "inputs": 1,
+    "fresh_whole": 1,
+    "reused_whole": 0,
+    "unrecovered_clipping": 0,
+    "historical_or_live_report_reads": false,
+    "history_status": "ROOT message attests broader ramification wash known; no historical mathematical input used."
+  },
+  "collision": "EMPTY own-only; no canonical OPEN. Quantity and <=15 minute UNMEASURED cheapest manual test stated.",
+  "scope": "Finite-etale cover verified; full-pair curve ramification ledger and exact double-cover cancellation; arbitrary-degree hyperbolic curve-level control ONLY, no surface or pair realization. No theorem promotion or JC2 claim.",
+  "writers_at_handoff": "ALL WRITERS IDLE after custody write/readback; no subprocess, background writer or child",
+  "prohibited_activity": "NONE: scientific execution/import/AST/syntax/test/CAS, code/payload, network/AWS/SSH/Git/process control, protected/shared writes, extra input or agent.",
+  "self_hash_rule": "Excluded; terminal handshake gives custody hash first."
+}

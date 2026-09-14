@@ -1,0 +1,54 @@
+ring r=0,(x,c1,b,B,w1,w2,w3,w4),dp;
+number d=-1;
+option(redSB);
+proc must(int ok,string msg){ if(!ok){print("FAIL "+msg);quit;} }
+proc xc(poly f,int k){matrix m=coef(f,x);int i;for(i=1;i<=ncols(m);i++){if(deg(m[1,i])==k){return(m[2,i]);}}return(poly(0));}
+number y=(d+3)/10; number om=3*(2*d-1)/(4*y^2*9);
+poly C=x^1+c1*x^0;
+poly W=om*x^5-B+w1*x^1+w2*x^2+w3*x^3+w4*x^4;
+poly A=3*x^3*C^2/(4*y^2); poly D=3*b*x*C/(2*y); poly K=x^2*C-y*b; poly eta=w1;
+poly rhs=W^2+(B-2*A+D)*W+A*(A-D)/3-B*(A-D)-b*eta*K/(2*y)-B*eta*x+(b^2*A/2-b^2*(B+W))/x;
+poly ff=2*(x*W-(b^2)/4)*diff(W,x)-rhs;
+must(xc(ff,10)==0,"leading");
+poly band,piv,val; poly solB;
+band=xc(ff,9); piv=diff(band,w4);
+must(deg(piv)==0 && piv!=0,"pivot_w4");
+val=-subst(band,w4,0)/piv; ff=subst(ff,w4,val); W=subst(W,w4,val);
+print("PIVOT w4 "+string(piv));
+band=xc(ff,8); piv=diff(band,w3);
+must(deg(piv)==0 && piv!=0,"pivot_w3");
+val=-subst(band,w3,0)/piv; ff=subst(ff,w3,val); W=subst(W,w3,val);
+print("PIVOT w3 "+string(piv));
+band=xc(ff,7); piv=diff(band,w2);
+must(deg(piv)==0 && piv!=0,"pivot_w2");
+val=-subst(band,w2,0)/piv; ff=subst(ff,w2,val); W=subst(W,w2,val);
+print("PIVOT w2 "+string(piv));
+band=xc(ff,6); piv=diff(band,w1);
+must(deg(piv)==0 && piv!=0,"pivot_w1");
+val=-subst(band,w1,0)/piv; ff=subst(ff,w1,val); W=subst(W,w1,val);
+print("PIVOT w1 "+string(piv));
+band=xc(ff,5); piv=diff(band,B);
+must(deg(piv)==0 && piv!=0,"pivot_B");
+val=-subst(band,B,0)/piv; ff=subst(ff,B,val); W=subst(W,B,val);
+print("PIVOT B "+string(piv));
+solB=val;
+must(xc(ff,0)==0 && xc(ff,1)==0,"low_two");
+for(int k=5;k<=10;k++){must(xc(ff,k)==0,"high");}
+eta=xc(W,1); poly target=solB*eta; ideal rows;
+for(k=2;k<5;k++){rows[k-1]=xc(ff,k);}
+write("/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t2_d-1_raw.sing","// Direct F1--F3; coefficient map is identity on c_i,b.");
+write("/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t2_d-1_raw.sing","ring rsmall=0,(c1,b),wp(1,3);");
+write("/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t2_d-1_raw.sing","number d=-1;");
+write("/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t2_d-1_raw.sing","ideal rows="+string(rows)+";");
+write("/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t2_d-1_raw.sing","poly Bsol="+string(solB)+";");
+write("/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t2_d-1_raw.sing","poly eta="+string(eta)+";");
+write("/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t2_d-1_raw.sing","poly target="+string(target)+";");
+ring rsmall=0,(c1,b),wp(1,3);
+number d=-1;
+ideal rows=imap(r,rows); poly target=imap(r,target); poly Bsol=imap(r,solB); poly eta=imap(r,eta);
+print("ROWS_BUILT"); print("Bsol="+string(Bsol)); print("eta="+string(eta));
+ideal gg=std(rows); print("GB_DONE dim="+string(dim(gg))+" vdim="+string(vdim(gg)));
+print("target_nf="+string(reduce(target,gg))); print("target2_nf="+string(reduce(target^2,gg)));
+write("/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t2_d-1_gb.txt",string(gg));
+if(nvars(basering)==2){print("GB="+string(gg));}
+print("DIRECT_CONTROL_DONE"); quit;

@@ -1,0 +1,63 @@
+{
+  "argv_count": 8,
+  "argv_sha256": "886c408c70333c7c5667b02cdc9ee3df654f7bc80ddce92b36851208d7555ec7",
+  "caps": {
+    "cpu_seconds": 3,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 2147483648,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 0.25,
+    "wall_seconds": 5.0
+  },
+  "child_exit_code": 1,
+  "child_returncode": 1,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909",
+  "max_observed_group_rss_bytes": 29982720,
+  "pgid": 2213,
+  "pid": 2213,
+  "resource": null,
+  "runner_exit_code": 1,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=8e78ddec-92dc-49b8-a419-8cc1f02a0409;start_ticks=18175",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 378,
+    "path": "/home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909/gate-wronghost.stderr",
+    "sha256": "9cd4f8239eef1d6269d2bd2814376ed53061a9e5c43dd2db43594a9c13e663bc"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 0,
+    "path": "/home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909/gate-wronghost.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "telemetry_path": "/home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909/gate-wronghost.telemetry.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-09T23:07:29.895505Z",
+  "utc_start": "2026-09-09T23:07:29.775982Z",
+  "wall_elapsed_seconds": 0.119527528
+}

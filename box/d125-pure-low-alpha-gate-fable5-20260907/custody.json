@@ -1,0 +1,138 @@
+{
+ "all_writers_finished": true,
+ "caps": "timeout 30 s wall, ulimit -t 25 CPU, ulimit -v 512 MiB, /usr/bin/python3 -B (and -O) before imports",
+ "frozen_inputs_dir": "/tmp/jc2-lane.TpVOVO/inputs",
+ "inputs_sha256": {
+  "check.py": "6e3583de15529e80742fcb9f1ad1845944f69f9fa4188e0e874117926c13edfd",
+  "custody.json": "0855f5ffae360b52aa9694b3e70f74212d6995d5ecb29732118ce41f0427667c",
+  "d125-exceptional-pure-discriminator-astra-20260907.md": "9b3538b8d7d65477f5fb273ce8abb4b9556c8529dc374dc9affb4266f2793fb8",
+  "d125-low-jet-saturation-discriminator-astra-20260907.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+  "d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+  "d125-pure-low-alpha-discriminator-astra-20260907.md": "e5416761dc0447a8fef0c83d228d731fdbc524cb6a12d04c34b2e78f4608d657",
+  "d125-pure-low-alpha-discriminator-astra-20260907.md.artifact.json": "ffbdf32bb7d7444aa8a91f71d4a50ae756e8108402cf26f2704176993798a299",
+  "d125-zero-k-boundary-classification-astra-20260907.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2",
+  "final-replay.json": "a26bbc94bc9cfdd86e90ed8310dd6fb95151da6eaa0915a9a27ee780aefe40cc",
+  "final-witness-O.json": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05",
+  "final-witness.json": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05",
+  "zero-k-factor-helper.py": "25be0862730df8b66076eb59a2d1d0909fbcf563ea73ce16924affdc7c70ad66"
+ },
+ "no_actions": [
+  "AWS",
+  "SSH",
+  "CAS",
+  "solver",
+  "source builder",
+  "production stream",
+  "protected tree",
+  "live peer/canonical reads",
+  "new agents",
+  "2200 blind round"
+ ],
+ "record_mode": {
+  "final_witness_O_matches_charged": true,
+  "final_witness_matches_charged": true,
+  "ran_in": "scratch only",
+  "stderr_hashes": "mutation-run stderr hashes differ from charged (path-sensitive tracebacks after relocation); exception messages identical; positive runs stderr empty (e3b0c442...)",
+  "stdout_rc_mode_identical_to_charged_final_replay": true
+ },
+ "role": "independent hostile gate; not a proof descendant",
+ "runs": [
+  {
+   "mutation": null,
+   "optimized": false,
+   "stderr_last_line": "",
+   "stdout_bytes": 6438,
+   "stdout_sha256": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05"
+  },
+  {
+   "mutation": "--mutate-delta-sign",
+   "optimized": false,
+   "stderr_last_line": "ValueError: universal pre-3j mixed identity",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-intermediate",
+   "optimized": false,
+   "stderr_last_line": "ValueError: universal pre-3j mixed identity",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-omit-alphaG",
+   "optimized": false,
+   "stderr_last_line": "ValueError: actual scalar-kernel jet identity",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-drop-scalar-cubic",
+   "optimized": false,
+   "stderr_last_line": "ValueError: actual retained scalar cubic coefficient",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-constant-C",
+   "optimized": false,
+   "stderr_last_line": "ValueError: nonconstant even leading transverse coefficient",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": null,
+   "optimized": true,
+   "stderr_last_line": "",
+   "stdout_bytes": 6438,
+   "stdout_sha256": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05"
+  },
+  {
+   "mutation": "--mutate-delta-sign",
+   "optimized": true,
+   "stderr_last_line": "ValueError: universal pre-3j mixed identity",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-intermediate",
+   "optimized": true,
+   "stderr_last_line": "ValueError: universal pre-3j mixed identity",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-omit-alphaG",
+   "optimized": true,
+   "stderr_last_line": "ValueError: actual scalar-kernel jet identity",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-drop-scalar-cubic",
+   "optimized": true,
+   "stderr_last_line": "ValueError: actual retained scalar cubic coefficient",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-constant-C",
+   "optimized": true,
+   "stderr_last_line": "ValueError: nonconstant even leading transverse coefficient",
+   "stdout_bytes": 0,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "scratch_copies": {
+  "check.py_post": "6e3583de15529e80742fcb9f1ad1845944f69f9fa4188e0e874117926c13edfd",
+  "check.py_pre": "6e3583de15529e80742fcb9f1ad1845944f69f9fa4188e0e874117926c13edfd",
+  "helper_as_check.py_post": "25be0862730df8b66076eb59a2d1d0909fbcf563ea73ce16924affdc7c70ad66",
+  "helper_as_check.py_pre": "25be0862730df8b66076eb59a2d1d0909fbcf563ea73ce16924affdc7c70ad66"
+ },
+ "scratch_dir": "/tmp/jc2-gate-fable5-scratch-1772257",
+ "task": "d125-pure-low-alpha-gate-fable5-20260907",
+ "tiny_control": {
+  "file": "low-jet-control.py",
+  "result": "PASS",
+  "scope": "degree<=3 truncated jets of the section-3 A,B; no R^3/R^5/C/A/B product expansion"
+ }
+}

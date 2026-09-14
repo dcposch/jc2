@@ -1,0 +1,16 @@
+{
+  "schema":"jc2.static-first-pins/v1",
+  "task":"f10-mixed-dac-gate-sol-20260913",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc":"2026-09-13T00:08:54.964129538Z",
+  "inputs":[
+    {"path":"box/f10-mixed-dac-correction-root-20260913/REVIEW-PROMPT.txt","sha256":"de609f246db2436fe8350926d3f0c4757cd9e0cf5fa632cffe7c4663041fb025","read":"WHOLE"},
+    {"path":"box/f10-mixed-dac-correction-root-20260913/COMMANDS.md","sha256":"7809c8ae3733d5e765cec4d5018e57dc4b90d30422dbef66f1f89882fee8cd70","read":"WHOLE"},
+    {"path":"box/f10-mixed-operator-corrections-root-20260912/COMMANDS.md","sha256":"5cf94c444a26c1052338518f17051f0a2abd838b2be2cabd001424568320673e","read":"WHOLE"},
+    {"path":"ops/run_capped.py","sha256":"4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2","read":"SELECTED: process cleanup 458-637, cpu_preexec 639-659, output/Popen path 696-845"},
+    {"path":"box/f10-mixed-operator-corrections-root-20260912/dispatch.py","sha256":"5cfff7e243482e2c5779b3d3af9ab716e4966adfadc70dcb988c079e208b52ed","read":"WHOLE"},
+    {"path":"box/f10-mixed-dummy-limits-sol-20260912/probe.py","sha256":"16d723b7fbe6dc218351274e4078df1959add5c2914174079d707fdc14e17158","read":"WHOLE"},
+    {"path":"COORDINATION.md","sha256":"33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597","read":"EXACT-PIN WHOLE REUSE"},
+    {"path":"ops/artifact_finalize.py","sha256":"0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d","read":"ADMINISTRATIVE FINALIZER; PRIOR WHOLE REUSE"}
+  ]
+}

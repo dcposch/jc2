@@ -1,0 +1,248 @@
+{
+  "schema": "T2T3_FULL_2TB_CUSTODY/v1",
+  "lane": "t2t3-full-2tb-sol56-20260906",
+  "recorded_utc": "2026-09-06T11:17:46Z",
+  "disposition": "COORDINATOR_STOP/NO_FULL_PRESENTATION/NO_SOLVER",
+  "no_mathematical_verdict": true,
+  "requested_launch_seal_issued": false,
+  "reason": "The whole-table builder was intentionally stopped by the active coordinator before it closed a full artifact. The full generator stream, inclusion replay, and all solver launch gates were therefore unavailable and failed closed.",
+  "receipt": {
+    "path": "xmodel/t2t3-full-2tb-sol56-20260906.run.v2",
+    "sha256": "2c7171ed7aaa49bb2b549e7c456e4837a40d3cc08aa87587d69c6e8b95f24e1e",
+    "basis": "f554ec1f3bc1f0100f4aa04ae3d2943be586b634",
+    "lane_start_utc": "2026-09-06T08:35:49Z"
+  },
+  "frozen_input_verification": {
+    "method": "awk mechanically paired charged_input_<i>_basename and charged_input_<i>_sha256 from the receipt, then sha256sum -c",
+    "manifest_path": "/tmp/t2t3-full-2tb-inputs.sha256",
+    "manifest_sha256": "15aeab0a6b75725cebc122bd36e383a07084be30ab741ca8a06420bf7a687336",
+    "checked_count": 10,
+    "all_ok": true,
+    "inputs": [
+      {"basename": "t2t3-direct-sol56-20260906.md", "sha256": "a0c3c3a0810e1765924ea06a8fdb6b0665feb3884195ea1514f01303eca8817c"},
+      {"basename": "t2t3-harvest-sol56-20260906.md", "sha256": "f3fce66b5412fd80c5cc0f882c6f531b18f2a22ee39e6f597d54f1a28d32852c"},
+      {"basename": "build_direct.py", "sha256": "77ef23b86f655e08a11913cf838a037c82adbb89cd1bc4a7e86c6471d034be3e"},
+      {"basename": "make_sound_prefix.py", "sha256": "92710ff81699850cd2b9fa93363bdda6d16b796db80f13365bd32e13c0174af2"},
+      {"basename": "build_t2_certificate.py", "sha256": "db7a83d6ec34c92c6c754c2b2a973da22aeac6b6c2847d2af141fc8e714add79"},
+      {"basename": "msolve-0.10.1-heap-sort-permutation.patch", "sha256": "c49a9fb322c3c6518ff2234a7e521de3aa6a372efbe27dc4c9aa9360db3b2242"},
+      {"basename": "msolve-0.10.1-int64-input-offset.patch", "sha256": "4f2e723575ff2acbfcee4144d4c2e47cd314f6f25d1241bd1286c202c3863055"},
+      {"basename": "msolve_m5000_wrapper.sh", "sha256": "324f4e8c8a5b112dbf6051e5bb84aff0d6de4ccc973cfca1919881766145f9b9"},
+      {"basename": "fleet.sh", "sha256": "a9da94d341a691942e9d6a6d90d97008b2d7baa1cadb2592481cf6b9c11c4c"},
+      {"basename": "FALLACY-v2.md", "sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5"}
+    ]
+  },
+  "host_disk_before_first_write": {
+    "command": "df -h /",
+    "filesystem": "/dev/root",
+    "size": "96G",
+    "used": "85G",
+    "available": "12G",
+    "use_percent": "88%"
+  },
+  "host_output_measurement": {
+    "scope": "all regular files under box/t2t3-full-2tb-20260906 plus the report, before canonical report seal",
+    "bytes": 46582,
+    "limit_bytes": 2097152,
+    "within_limit": true
+  },
+  "worker": {
+    "instance_id": "i-025410e620b1d65c9",
+    "private_ip": "172.30.0.103",
+    "hostname": "ip-172-30-0-103",
+    "instance_type": "x2idn.32xlarge",
+    "vcpu": 128,
+    "mem_total_kib": 2097111324,
+    "owner_tag": "coordinator-2tb-20260906",
+    "wait_command": "sh ops/fleet/fleet.sh wait i-025410e620b1d65c9",
+    "wait_result": "READY",
+    "state_at_2026_09_06T11_17_46Z": "running",
+    "scratch_root": "/home/ubuntu/t2t3-full",
+    "scratch_filesystem": "/dev/md0 RAID0 ext4, 3.5T size, 3.3T available after cleanup",
+    "do_not_terminate": true,
+    "termination_owner": "harvest/coordinator lane"
+  },
+  "toolchain": {
+    "msolve": {
+      "version": "0.10.1",
+      "source_commit": "185e7b92fa0687f4db68b0f2f453a835668ac132",
+      "binary_path": "/tmp/msolve-patched/bin/msolve",
+      "binary_sha256": "0ffbb5455a6ad94bc85b17c52d75d5cfe59fcb1d494f54bf8d97a0389606a111",
+      "libneogb_sha256": "20c129980f012bbd0acc0e02a17f927ef355b8fb001f7d923c522ece333f1d6b",
+      "patches": [
+        {"basename": "msolve-0.10.1-heap-sort-permutation.patch", "sha256": "c49a9fb322c3c6518ff2234a7e521de3aa6a372efbe27dc4c9aa9360db3b2242"},
+        {"basename": "msolve-0.10.1-int64-input-offset.patch", "sha256": "4f2e723575ff2acbfcee4144d4c2e47cd314f6f25d1241bd1286c202c3863055"}
+      ],
+      "build_and_test": "patch reverse checks and git diff --check passed; make check: 64 PASS, 0 FAIL, 0 ERROR"
+    },
+    "singular": {
+      "version": "4.3.2",
+      "binary_path": "/usr/bin/Singular",
+      "binary_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4"
+    },
+    "wrapper_sha256": "324f4e8c8a5b112dbf6051e5bb84aff0d6de4ccc973cfca1919881766145f9b9",
+    "runner_sha256": "62e0e68a10bb2688e9371fde0d118b49d8c513dce8f59412a4b0107249e03c18",
+    "caprun_sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+    "caprun_regression": "17 tests passed"
+  },
+  "full_presentation_attempt": {
+    "case": "99-delta2",
+    "scope": "FULL attained-T2+T3 direct ideal",
+    "expected_contract": {
+      "variables": 449,
+      "raw_slots": 4470,
+      "zero_slots_after_substitution": 1716,
+      "generators": 2754,
+      "semantic_variable_order_sha256": "ee778e93b4293b9399761911d80dd71dd63b5fa95d21055cf50cd0db51428a4b",
+      "order_matrix_flat_sha256": "547fabda8bf5874666699a9e296a06b796299774191b59583e156001d6e5cf00",
+      "source_map_sha256": "778eda933ee9b2acbad20f6dc862c25db94776cb25ffd5782646427a3b63e1ea"
+    },
+    "frozen_driver_sha256": "77ef23b86f655e08a11913cf838a037c82adbb89cd1bc4a7e86c6471d034be3e",
+    "whole_table_patch_sha256": "3e63a0b2e7c7ddbeba1430dca3ce77e9f73cd7d5849caf0bc11d2b0bcd8d2d39",
+    "derived_driver_sha256": "8ec0e982b77e54a4f5cdb52358e7bb21c2bbf41ed6837c5e8996b1f1d1b89ff5",
+    "command": "/usr/bin/time -v -o /home/ubuntu/t2t3-full/logs/full-build.time /usr/bin/python3 -u /home/ubuntu/t2t3-full/drivers/build_direct_whole.py --case 99-delta2 --output /home/ubuntu/t2t3-full/presentations/full",
+    "start_utc": "2026-09-06T08:48:49Z",
+    "coordinator_stop_requested_utc": "2026-09-06T11:11:10Z",
+    "receipt_finalized_utc": "2026-09-06T11:12:55.635172Z",
+    "rc": 143,
+    "signal": 15,
+    "elapsed": "2:24:06",
+    "user_seconds": 6171.46,
+    "system_seconds": 2471.56,
+    "maximum_resident_set_kib": 2086234548,
+    "kernel_oom_kill_count": 0,
+    "latest_completed_marker": "EMIT_PROGRESS case=99-delta2 rows=400 terms=1070351 block=T2_upper rssKiB=4221776",
+    "status": "INCOMPLETE; no metadata, variable map, closed labels, generator-stream SHA, or solver-ready input",
+    "canonical_primitive_generator_sequence_sha256": null,
+    "partial_files_not_solver_inputs": [
+      {"path": "/home/ubuntu/t2t3-full/presentations/full/99-delta2.ms", "bytes": 55245012, "sha256": "a34d57af1c3e4cb53b2fb5cd4d8748c1a45377010ad031ea0af35121b4ba3684"},
+      {"path": "/home/ubuntu/t2t3-full/presentations/full/99-delta2.sing", "bytes": 73006401, "sha256": "d408c32e8477432d27ef6c79a91c74641a1c34101b245906bab8daa7b0711a6a"},
+      {"path": "/home/ubuntu/t2t3-full/presentations/full/99-delta2.labels.tsv", "bytes": 0, "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}
+    ],
+    "log_artifacts": [
+      {"path": "/home/ubuntu/t2t3-full/logs/full-build.stdout", "sha256": "bb6b0f3240d3a046f2341430f6edeaf38ff6c85c0da64734f50dae784e26f876"},
+      {"path": "/home/ubuntu/t2t3-full/logs/full-build.time", "sha256": "039fd7c80eb4a88765d0c72ba290b39ad2c628a0f0ab4dd6274ff26495093e40"},
+      {"path": "/home/ubuntu/t2t3-full/logs/full-build.rc", "sha256": "9d9b18720961e9b4689fd763b85e7b6f36160ccd3a8a1c9ddc5103bb0f66c396"}
+    ]
+  },
+  "coordinator_stop": {
+    "local_path": "box/t2t3-full-2tb-20260906/COORDINATOR_STOP-20260906T1111Z.md",
+    "worker_path": "/home/ubuntu/t2t3-full/COORDINATOR_STOP-20260906T1111Z.md",
+    "sha256": "dbff415c7e25a5b2b7db6e05fc0c6a983562153e8664ef252a9d43920df5a368",
+    "classification": "intentional coordinator-side SIGTERM over SSH; not OOM, systemd, timer, watchdog, or session teardown",
+    "source_host": "172.30.0.46",
+    "source_evidence": "SSH session 459 opened 2026-09-06T11:11:10.266954Z and closed 11:11:10.660306Z; command auditing was not enabled, so the exact kill argv is not recoverable",
+    "instruction": "Retain partial artifacts; do not restart, launch a replacement, repurpose, or terminate the worker"
+  },
+  "temporary_build_swap": {
+    "files": [
+      {"path": "/home/ubuntu/t2t3-full/.build-swap", "logical_bytes": 549755813888, "enabled_utc": "2026-09-06T10:01:47Z"},
+      {"path": "/home/ubuntu/t2t3-full/.build-swap2", "logical_bytes": 549755813888, "enabled_utc": "2026-09-06T10:33:32Z"},
+      {"path": "/home/ubuntu/t2t3-full/.build-swap3", "logical_bytes": 549755813888, "enabled_utc": "2026-09-06T10:52:58Z"},
+      {"path": "/home/ubuntu/t2t3-full/.build-swap4", "logical_bytes": 549755813888, "enabled_utc": "2026-09-06T11:08:33Z"}
+    ],
+    "worker_local_only": true,
+    "all_disabled_and_removed_utc": "2026-09-06T11:14:09Z",
+    "verified_after_cleanup": {"swap_total_kib": 0, "swappiness": 60, "mem_available_kib": 2087986444}
+  },
+  "subset_artifact": {
+    "name": "d2-z55",
+    "directory": "/home/ubuntu/t2t3-full/presentations/d2-z55",
+    "build_command": "/usr/bin/python3 -u /home/ubuntu/t2t3-full/drivers/build_t2_certificate.py --case 99-delta2 --output /home/ubuntu/t2t3-full/presentations/d2-z55 --face-z 55",
+    "start_utc": "2026-09-06T08:48:49Z",
+    "end_utc": "2026-09-06T09:11:23Z",
+    "rc": 0,
+    "variables": 449,
+    "generators": 466,
+    "expanded_terms": 6448959,
+    "canonical_primitive_generator_sequence_sha256": "a78c6a46e4b50dec6df51712c9c4b8d3c717b52490488d6819563cb5e18044fe",
+    "artifacts": {
+      "metadata": {"bytes": 3685, "sha256": "2a27754a12f4cde7a9589126508cc931c3583583a3f0574d4313d3a49ab2141b"},
+      "labels": {"bytes": 45274, "sha256": "ef8083969910b3709e084b0285d21e5a87328055a77accc3d8aacc7c895d5344"},
+      "variables": {"bytes": 100182, "sha256": "755d3a864301c5b4c4837f417261f1f4694626676c0e379ec853be663f8a4c75"},
+      "msolve": {"bytes": 271944646, "sha256": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572"},
+      "singular": {"bytes": 357263333, "sha256": "a604ed314ced1a33ff46e43081c2222430f24bde96a10405a3a8562ec6dccbbc"}
+    },
+    "literal_subset_check": {
+      "checker_sha256": "ae8046b3b70fc4b36b3f487ade88ad17db545fa076ac0e51871c40b003808fb8",
+      "result": "UNAVAILABLE_NO_FULL_ARTIFACT",
+      "executed": false,
+      "literal_subset_claim": null,
+      "reason": "A literal rowwise comparison requires the completed full labels and variable-map artifacts; neither exists."
+    }
+  },
+  "planned_caps": {
+    "wall_seconds": 72000,
+    "term_grace_seconds": 60,
+    "msolve": {"address_space_kib": 1677721600, "address_space_bytes": 1717986918400, "threads": 120, "max_pairs_per_matrix": 5000},
+    "singular": {"aggregate_rss_bytes": 1288490188800, "threads": 1, "watchdog_sample_seconds": 0.05}
+  },
+  "jobs": [
+    {
+      "job": "msolve-p1073741827",
+      "required": true,
+      "run_dir": "/home/ubuntu/t2t3-full/runs/msolve-p1073741827",
+      "exact_solver_command": "/tmp/msolve-patched/bin/msolve -m 5000 -g 2 -t 120 -v 2 --random-seed 0 -f /home/ubuntu/t2t3-full/presentations/full/99-delta2.ms -o /home/ubuntu/t2t3-full/runs/msolve-p1073741827/basis.ms",
+      "launched": false,
+      "start_utc": null,
+      "expected_end_utc": null,
+      "runner_rc": null,
+      "reason": "full presentation gate failed"
+    },
+    {
+      "job": "singular-q-slimgb",
+      "required": true,
+      "run_dir": "/home/ubuntu/t2t3-full/runs/singular-q-slimgb",
+      "exact_solver_command": "/usr/bin/Singular -q --no-rc --no-warn --no-shell --threads=1 --flint-threads=1 /home/ubuntu/t2t3-full/presentations/full/99-delta2-slimgb.sing",
+      "launched": false,
+      "start_utc": null,
+      "expected_end_utc": null,
+      "runner_rc": null,
+      "reason": "full presentation gate failed"
+    },
+    {
+      "job": "msolve-p1073741783",
+      "required": false,
+      "run_dir": "/home/ubuntu/t2t3-full/runs/msolve-p1073741783",
+      "exact_solver_command": "/tmp/msolve-patched/bin/msolve -m 5000 -g 2 -t 120 -v 2 --random-seed 0 -f /home/ubuntu/t2t3-full/presentations/full/99-delta2-p1073741783.ms -o /home/ubuntu/t2t3-full/runs/msolve-p1073741783/basis.ms",
+      "launched": false,
+      "start_utc": null,
+      "expected_end_utc": null,
+      "runner_rc": null,
+      "reason": "full presentation gate failed before optional memory decision"
+    }
+  ],
+  "launch_confirmation": {
+    "checked_utc": "2026-09-06T11:17:46Z",
+    "process_query": "ps -C msolve -C Singular -C python3",
+    "matching_processes": 0,
+    "run_tree_entries": 0,
+    "full_validation_exists": false,
+    "subset_inclusion_result_exists": false,
+    "first_f4_lines": null
+  },
+  "harvest": {
+    "status": "FAILURE_CUSTODY_ONLY",
+    "expected_solver_end": null,
+    "preserve_paths": [
+      "/home/ubuntu/t2t3-full/COORDINATOR_STOP-20260906T1111Z.md",
+      "/home/ubuntu/t2t3-full/logs/full-build.*",
+      "/home/ubuntu/t2t3-full/logs/subset-build.*",
+      "/home/ubuntu/t2t3-full/presentations/full/99-delta2.*",
+      "/home/ubuntu/t2t3-full/presentations/d2-z55/99-delta2.*",
+      "/home/ubuntu/t2t3-full/drivers/*"
+    ],
+    "solver_run_paths": "/home/ubuntu/t2t3-full/runs/<job>/ (not created)",
+    "instruction": "Do not classify partial artifacts and do not terminate or repurpose the instance without coordinator/DC authority."
+  },
+  "classification_guard": {
+    "modular_unit": "signal only",
+    "exact_q_unit": "An exact-Q singleton basis on a proved full presentation would kill the delta=2 direct chart only under the compressor theorem hypotheses.",
+    "current_evidence": "No solver input or result was produced; no unit/nonunit statement exists."
+  },
+  "no_ledger_edits": true,
+  "no_jc2_lean": true,
+  "no_ideation_inputs": true,
+  "fallacy_v2_checked": true,
+  "no_new_exit_price": true,
+  "charge_basis_required": false
+}

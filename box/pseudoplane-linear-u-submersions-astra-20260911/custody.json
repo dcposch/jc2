@@ -1,0 +1,80 @@
+{
+  "schema": "jc2-pseudoplane-linear-u-terminal-custody/v1",
+  "task": "pseudoplane-linear-u-submersions-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED_MANUAL_THEOREM_UNREVIEWED",
+  "first_utc": "2026-09-11 08:08:59 UTC",
+  "initial_targets": "ABSENT",
+  "reserve_utc": "2026-09-11 08:19:00 UTC",
+  "hard_utc": "2026-09-11 08:22:00 UTC",
+  "clock_reset": false,
+  "scientific_closeout_utc": "2026-09-11 08:13:07 UTC",
+  "finalized_utc": "2026-09-11 08:13:25 UTC",
+  "sealed_whole_postpins_expected_verify_completed_utc": "2026-09-11 08:13:42 UTC",
+  "custody_prepared_utc": "2026-09-11 08:13:42 UTC",
+  "inputs": [
+    {
+      "path": "xmodel/pseudoplane-homogeneous-hamiltonian-root-20260911.md",
+      "sha256": "9909649753927f2dbb19bf1701b7f9b0442e1fbcf1a934b3f9080c7f81e43a14",
+      "scope": "FRESH_WHOLE; accepted exact homogeneous no-mate theorem and ring/bracket, no linked provenance"
+    },
+    {
+      "path": "xmodel/pseudoplane-homogeneous-hamiltonian-root-20260911.md.artifact.json",
+      "sha256": "bdba5b1c0c5eddca59d05bbabe83f429bd730f5607e1f13523e4df1751a8abde",
+      "scope": "FRESH_WHOLE documentary transaction"
+    },
+    {
+      "path": "xmodel/pseudoplane-homogeneous-gate-fable5-20260911.md",
+      "sha256": "e042b696f3dce19fe116fddc4fed328bb066dee86ef539fd2f13f9055a0f87b7",
+      "scope": "FRESH_WHOLE accepted FIRST A-F; BODY-END-only external report, no local Seal verifier"
+    },
+    {
+      "path": "xmodel/pseudoplane-homogeneous-gate-fable5-20260911.run.v2",
+      "sha256": "347b7e38435237c8e2ca77d830bdac82ae2d702898c50786b928bbf2adc1b9ad",
+      "scope": "FRESH_WHOLE original lane receipt; path spelling clarified by ROOT, no linked files"
+    }
+  ],
+  "owned_excluding_custody": [
+    {
+      "path": "box/pseudoplane-linear-u-submersions-astra-20260911/PINS.json",
+      "sha256": "45ee39b015b3a8516abdfb5b6c17fc1dc21d7a76a7637a8ba10f8828eb66e72d"
+    },
+    {
+      "path": "xmodel/pseudoplane-linear-u-submersions-astra-20260911.md",
+      "sha256": "86741d44fb280d0e0498bae7fb18ce01505b2d75814f50ce3f14aaf507b0f3bd"
+    },
+    {
+      "path": "xmodel/pseudoplane-linear-u-submersions-astra-20260911.md.artifact.json",
+      "sha256": "29298c37d2f1b4f487fbaa624069ea2dee5fa0b0fd52a001da08a22f87df02aa"
+    }
+  ],
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256": "29298c37d2f1b4f487fbaa624069ea2dee5fa0b0fd52a001da08a22f87df02aa",
+    "status": "VERIFIED",
+    "body_sha256": "4fc13293aa49b8c4444c4624c2d892ce837441500c76870ab19d15e765baf8fd",
+    "lease_id": "342650e425e06741def5a656cb51ae67"
+  },
+  "readback": {
+    "input_hash_before_body": true,
+    "input_scope": "Exactly4 FRESH_WHOLE, before08:09:44; no reuse/clipping/linked files",
+    "own_scope": "Report and PINS WHOLE before marker; sealed report and manifest WHOLE after finalize",
+    "postpins": "All4 inputs plus3 owned pins unchanged",
+    "receipt": "BODY-END-only external report used through charged original lane receipt; no wrong local Seal verifier"
+  },
+  "path_correction": "Initial .md.run.v2 was absent; no body read. Correct .run.v2 sibling matched before all bodies; ROOT confirmed same fourth input. No new source or clock.",
+  "result": {
+    "classification": "For algebraically closed characteristic0, H=P(Z)+UQ(Z) is everywhere submersive iff H=aU+b or aZ+b, a nonzero, with no degree bound",
+    "mate": "Accepted homogeneous parent then excludes every regular arbitrary G with nonzero scalar bracket; geometric base-change consequence over all characteristic-zero fields",
+    "exceptions": "D=0, E=0, Z=0, constants and nonzero constant E handled; U and Z independently shown submersive",
+    "control": "H=Z^2+U/4 passes every boundary differential check but is critical at (2,1,-1/4)",
+    "limits": "No arbitrary mixed-H classification, added A*S(Z), general R/Keller/source or JC2 result; no literature novelty certification"
+  },
+  "open_quantity": "Independent static validity of the all-degree classification and no-mate composition",
+  "cheapest_test": "Focused different-model manual review,10 minutes UNMEASURED planning only, not launched",
+  "collisions": "Own-only NONE; final report/manifest absent before finalize",
+  "execution": "ZERO scientific/code/import/AST/syntax/test/CAS/dummy; documentary artifact transaction only",
+  "other_access": "No coefficient bodies, linked provenance, mutable ledger, history/literature/network/AWS/Git/process control/protected/shared access or agents",
+  "optional_late_control": "ROOT message arrived after report finalize; not investigated or imported; frozen report retained",
+  "writer_state": "This custody is the last authored file. No background writers or delegated work exist. Only read-only custody WHOLE/hash/time and final handoff follow; ALL WRITERS IDLE."
+}

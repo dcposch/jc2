@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Everything is done. The report is written and marker-terminated, evidence is frozen, and the memory note is saved. Nothing further is needed from any tool.
+
+**Outcome: all six targets CONFIRMED.** The report is at `xmodel/golden-hdiv-simple-l-gate-fable5-20260908.md` (sha256 `f72285134924774c1e13928383ee50a886551aab0ce8dcee3b5730c4907d0f2e`), with exactly one standalone BODY-END marker as its last line and no exit-price line. Under source (S), the accepted references, and F_j = H·C with 1 ≤ j ≤ 9, the hypothesis C(−p,p) ≠ 0 is contradictory over the field K(p), for both roots rho and for infinite q or nu. The only conclusion is L | C in any remaining H-divisible source.
+
+**What I verified independently**
+
+- All nine input pins match, and the cross body hash matches its transaction record.
+- At the simple root g = −p the derivative is rho²·p⁴, so z = R_s inverts over K[p,1/p][[s,z]] with no square-root field and all integer p-exponents. This is simpler than the double-root Morse chart.
+- The A initial is Z³ + uZ + v with u = C(−p,p) present iff eta = j/2 and v present iff eta = q/3, with no Z² term. Every positive-z implicit term, both scalar references, all five B kernels, and every G block were placed by order.
+- The earlier-B constant is excluded by the bracket coefficient at order 3·eta + nu, and the B initial at 5·eta is a monic quintic that may carry both a linear and a constant term. These never enter the 3/5 common-power step.
+- The generalized lower-B lemma is correct as stated, including n = 0, without any Euler hypothesis on P.
+
+**Two hypotheses the cross leaves implicit**, recorded as notes rather than gaps. The lemma needs m ≥ 1, since P = 1 commutes with everything. Its last division needs the leading coefficient to be a non-zero-divisor, which is exactly what fails over dual numbers. Neither affects the application at m = 3.
+
+**One correction to prior wording.** H²-normality of orders 1 to 5 is load-bearing in this branch, because it yields deg_g C ≤ 2 and hence P2_j = 0 for j ≤ 5. The prior gate's remark that it is unused holds only for the non-H branch. The conclusion survives even without it, because H vanishes at the L root.
+
+**Evidence.** A tiny exact control in `box/golden-hdiv-simple-l-gate-fable5-20260908/` ran six modes under prlimit. The positive mode passes all three checks, the wrong-root changed object fails only the unit check, and the non-monic changed object fails only the lemma check. Normal and optimized runs produced byte-identical output, and all hashes in the report were generated from the frozen sums file and cross-checked. These are finite illustrations, not the proof.
+
+All writers and subprocesses are idle. The lane publisher owns the seal.
+DIVERT path=xmodel/golden-hdiv-simple-l-gate-fable5-20260908.md status=CLEAN body_bytes=15590 body_sha256=f72285134924774c1e13928383ee50a886551aab0ce8dcee3b5730c4907d0f2e

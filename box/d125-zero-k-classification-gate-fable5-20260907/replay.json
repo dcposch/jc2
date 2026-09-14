@@ -1,0 +1,62 @@
+{
+ "caps": "30wall/25CPU,512MiB",
+ "runs": [
+  {
+   "mutation": null,
+   "optimized": false,
+   "returncode": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "1461b907f837402cbeb2cf0bca3c1b99e669fd5fd4213e0affa73aa3279d5b2d"
+  },
+  {
+   "mutation": "--mutate-source-face",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "sg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: exactly three lower generator slots p,p^3,gp^2\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-missing-negative-row",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "           ^^^^^^^^^^^^^^^^^^^^^\nValueError: omitted negative row accepted a non-ordinary generator\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-wrong-factor",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": ")\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: same-field scalar r=g5/f3^2 normalizes both tops\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": null,
+   "optimized": true,
+   "returncode": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "1461b907f837402cbeb2cf0bca3c1b99e669fd5fd4213e0affa73aa3279d5b2d"
+  },
+  {
+   "mutation": "--mutate-source-face",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "sg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: exactly three lower generator slots p,p^3,gp^2\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-missing-negative-row",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "           ^^^^^^^^^^^^^^^^^^^^^\nValueError: omitted negative row accepted a non-ordinary generator\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-wrong-factor",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": ")\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: same-field scalar r=g5/f3^2 normalizes both tops\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "status": "PASS"
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "root-documentary-preparation-pins/v1",
+  "first_preparation_utc": "2026-09-11 09:40:43 UTC",
+  "original_reserve_utc": "2026-09-11 09:53:00 UTC",
+  "original_hard_utc": "2026-09-11 09:56:00 UTC",
+  "state": "CLOSED_DISABLED_STATIC_UNEXECUTED",
+  "files": [
+    {
+      "sha256": "85aba2f07894a1b02371d809ddd41b2d19881a4542899aa6cb3e1752df598232",
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/setup-pre-admission.template.sh"
+    },
+    {
+      "sha256": "a553f63157145c7c860795b6a8f1461040219d0baca9293ad242e566f0d3f55d",
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/physical-metadata.template.sh"
+    },
+    {
+      "sha256": "b386a6cd2d732e6618b994fdbdec67d8e2a59fc997206f296b4cf55513684ed0",
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/native-metadata.template.sh"
+    },
+    {
+      "sha256": "5f0cc7a9146c055b09ca0dd0db79e80cbb38ed64e79d64acfb177bbf0ffce9a4",
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/launch-worker.template.sh"
+    },
+    {
+      "sha256": "23838a09914bc412f86e7ad4a96e4624f334b44dd3d04914d138159b42fd21e9",
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/prepare-leaves.template.sh"
+    },
+    {
+      "sha256": "de8ac9c9712a2f501c3a55ffcfd815737e5ef57843b59e44360d32c2292e866f",
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/final-install.template.sh"
+    },
+    {
+      "sha256": "f87600f59c8e298b630faaf72d8a7aa7ed725b2d066df954516c8d5ca97f15b8",
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/preflight-policy.json"
+    },
+    {
+      "sha256": "476f880ab633b586940e631240cb626dca454505a58415bcb6bd8b4a34ccb2ee",
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/ROOT-EXECUTION-CARD.template.md"
+    },
+    {
+      "sha256": "39f48e352fb1ebfd6bdfdd673b5ec474b2406713da6c1a7d37c3f9816b0b370e",
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/README.md"
+    }
+  ],
+  "read_scope": "All nine owned bodies WHOLE read back; inputs and exact comparisons as README. No syntax/AST/test/import/scientific execution.",
+  "checks": {
+    "strict_postpins": true,
+    "native_copy_byte_identical": true,
+    "refusal_documentary_comparisons": 10,
+    "refusal_path_occurrences": 16,
+    "ready_manifest_absent": true
+  },
+  "remaining": [
+    "Known coordinator-versus-worker retirement timer mismatch in frozen admission candidate; minimal focused correction/gate required.",
+    "Actual-host/native/admin-helper/namespace/ACL qualification, exact future metadata serialization and final release not performed."
+  ],
+  "authority": {
+    "aws": false,
+    "enabled_registration": false,
+    "source_execution": false,
+    "token_write": false,
+    "retry": false
+  }
+}

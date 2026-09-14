@@ -1,0 +1,124 @@
+{
+  "input": "native-remainder-control-negative.input.json",
+  "input_sha256": "968af7e08f7d88005f6cb577a407d825931301d684eff891d5ef75148ba03b95",
+  "driver_sha256": "9fd1880ade43659dccd8949391dc3ad000788a7d87e50b25abb4bf9b1c0e145a",
+  "field": "QQ",
+  "status": "UNIT",
+  "graph_type": "monic polynomial coefficient graph, exact projection isomorphism",
+  "target_depth": 7,
+  "phases": [
+    {
+      "name": "input_lifts",
+      "seconds": 0.001,
+      "H": 2,
+      "v": 2,
+      "U": 2,
+      "variables": 4
+    },
+    {
+      "name": "R_graph",
+      "seconds": 0.001,
+      "positions": 2,
+      "counts": {
+        "source": 6,
+        "graph_h": 0,
+        "lift": 4,
+        "R_high": 2,
+        "R_low_graph": 2,
+        "H2_graph": 2,
+        "vU_graph": 2,
+        "Q": 4,
+        "localizers": 2
+      },
+      "body_bytes": 422
+    },
+    {
+      "name": "product_graphs",
+      "seconds": 0.001,
+      "HH": 2,
+      "vU": 2,
+      "variables": 10,
+      "body_bytes": 574
+    },
+    {
+      "name": "RH2_collected",
+      "seconds": 0.003,
+      "Q_positions": 3
+    },
+    {
+      "name": "full_rows_emitted",
+      "seconds": 0.004,
+      "counts": {
+        "source": 6,
+        "graph_h": 0,
+        "lift": 4,
+        "R_high": 2,
+        "R_low_graph": 2,
+        "H2_graph": 2,
+        "vU_graph": 2,
+        "Q": 4,
+        "localizers": 2
+      },
+      "body_bytes": 909
+    },
+    {
+      "name": "script_complete",
+      "seconds": 0.006,
+      "bytes": 1432,
+      "variables": 19
+    },
+    {
+      "name": "finished",
+      "seconds": 0.015,
+      "status": "UNIT"
+    }
+  ],
+  "ring_generator_order": [
+    "Z3",
+    "Zc",
+    "c",
+    "leader3",
+    "target_a",
+    "target_b",
+    "target_c",
+    "target_d",
+    "target_e",
+    "cxH_2_0",
+    "cxv_3_0",
+    "cxU_3_1",
+    "cxU_4_0",
+    "cxR_5_1",
+    "cxR_6_0",
+    "cxHH_0_4",
+    "cxHH_2_2",
+    "cxvU_5_2",
+    "cxvU_6_1"
+  ],
+  "counts": {
+    "source": 6,
+    "graph_h": 0,
+    "lift": 4,
+    "R_high": 2,
+    "R_low_graph": 2,
+    "H2_graph": 2,
+    "vU_graph": 2,
+    "Q": 4,
+    "localizers": 2
+  },
+  "script_sha256": "c60ee2f96f81ddc582282f4b1a2b4c8ad78bc9dcf37a7c422886529c8f56c52c",
+  "cas": {
+    "returncode": 0,
+    "errors": [],
+    "log_sha256": "8f1bb2e2069903ec4548695787a5fb0f476f340a216f00b70f26f23612396fae",
+    "controls": [
+      "0",
+      "1"
+    ],
+    "script_unchanged": true,
+    "result": [
+      "0",
+      "-1",
+      "1"
+    ]
+  }
+}

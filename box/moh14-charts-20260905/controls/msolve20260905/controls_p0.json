@@ -1,0 +1,41 @@
+{
+  "characteristic": 0,
+  "emitter": {
+    "function": "msolveio.emit_system",
+    "msolveio": "0.2.1",
+    "qqideal": "0.2.0"
+  },
+  "schema": "moh14-msolve-controls-v1",
+  "systems": {
+    "known_unit": {
+      "bytes": 90,
+      "expected_g2_status": "UNIT",
+      "generator_count": 6,
+      "path": "/home/ubuntu/jc2/box/moh14-charts-20260905/controls/msolve20260905/known_unit_p0.ms",
+      "provenance": "box/sysguidedgb-20260903/runs/T2_g108_unit/T2_g108_delta3_stage0_common_h3_Q.sing",
+      "sha256": "18975007b6b6ca203ea0e26d9b1ed750d44236bba7b0385e9e02e11f49d4a60b",
+      "variables": [
+        "jet1",
+        "jet2",
+        "c",
+        "z"
+      ]
+    },
+    "tame_live": {
+      "bytes": 39,
+      "expected_g2_status": "NONUNIT",
+      "generator_count": 4,
+      "path": "/home/ubuntu/jc2/box/moh14-charts-20260905/controls/msolve20260905/tame_live_p0.ms",
+      "provenance": "synthetic tame triangular automorphism family",
+      "sha256": "b240b7ff862fb25736c0aa4dca6175515aedf66c62dd9f453f4557f4ffe88699",
+      "variables": [
+        "p",
+        "q",
+        "x",
+        "y",
+        "c",
+        "z"
+      ]
+    }
+  }
+}

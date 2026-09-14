@@ -1,0 +1,74 @@
+{
+  "certificate": {
+    "accepted_run_count": 0,
+    "crt_rational_reconstruction": {
+      "available": false,
+      "items": {},
+      "method": "CRT plus bounded rational reconstruction for scalar invariants"
+    },
+    "hilbert_hint": null,
+    "policy": {
+      "allow_modular_unit_promotion": false,
+      "note": "Exact algebraic number field, no modular inference.",
+      "require_controls": true,
+      "scope": "EXACT_Q"
+    },
+    "promotion_note": "no accepted result before timeout",
+    "properness_scope": {
+      "positive_weights": [
+        []
+      ],
+      "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+      "systems_declared_homogeneous": false
+    },
+    "runs": [
+      {
+        "characteristic": 0,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/k16xempty-20260905/t4_boundary_exact/t4_boundary_Q.sing"
+        ],
+        "elapsed_seconds": 300.038931,
+        "label": "t4_boundary",
+        "main": {
+          "accepted": false,
+          "basis_size": null,
+          "dimension": null,
+          "lead_dim": null,
+          "lead_vdim": null,
+          "missing_markers": [
+            "NF_ALL_ZERO",
+            "UNIT",
+            "DIM",
+            "BASIS_SIZE",
+            "LEAD_DIM",
+            "ACCEPT",
+            "NF_ZERO"
+          ],
+          "nf_all_zero": false,
+          "unit": false,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 1,
+        "script": "/home/ubuntu/jc2/box/k16xempty-20260905/t4_boundary_exact/t4_boundary_Q.sing",
+        "script_sha256": "2be8a10913b079660c7650ad2c2aeeeeee96882687a5e1df0e3813373ae1bc95",
+        "stderr": "/home/ubuntu/jc2/box/k16xempty-20260905/t4_boundary_exact/t4_boundary_Q.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/k16xempty-20260905/t4_boundary_exact/t4_boundary_Q.out",
+        "stdout_sha256": "5e50451738b7530b5c4f80c26a82af4b8f1878721236ad2b4521553e12680f8a",
+        "timed_out": true
+      }
+    ]
+  },
+  "verdict": "INCONCLUSIVE_TIMEOUT"
+}

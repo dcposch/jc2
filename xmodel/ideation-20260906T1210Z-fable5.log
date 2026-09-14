@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report delivered at `xmodel/ideation-20260906T1210Z-fable5.md` (12:17:36Z, before the 12:22Z deadline).
+
+**Integrity**
+- Words: 1232 of 1800 allowed. One standalone `<!-- BODY-END -->` line.
+- Report SHA-256: `89bf0c839d2098482249edc676c388412f954d1c2673c8d7259e672d7abd0253`.
+- Lane input PDF and text hashes match the packet's stated SHAs. Packet reproduces frozen basis `0d39df3c`.
+
+**Primary 99 verdict: APPLIES_AS_EXTERNAL_THEOREM.** The charged GGHV text forms a closed chain for (66,99): the §2 table row A0=(9,24), (m,n)=(2,3), marked "no detail in [10]" so GGHV do not credit Moh, then Proposition 4.2 reduces to three Newton-polygon cases in L^(1), then Theorem 5.1 with Props 5.2–5.6 discards them via polynomial-equation systems. I verified the statements chain, not the proofs. Typed unread: the Prop 4.2 proof body, the §5 proofs, whether Thm 5.1 covers all three Prop 4.2 cases, and the five same-author dependencies [1][2][3][5][6]. The literal Theorem 2.1 must be read for normalised pairs, but the robust consequence "no counterexample with max degree below 108" survives normalisation and is all 99 needs. The full (99,66) ideal is therefore unit only conditionally on the external chain, and that implies nothing about any subset ideal. No specific recorded objection to §2/§4/§5 exists in the charged inputs. All recorded objections target Prop 4.3.
+
+**Disposition vector.** Avenues 2–35 and 37–46 unchanged. Avenue 1 lowered below degree 125 as a counterexample route and raised as the D108 interface route. Avenue 36 stopped at (99,66).
+
+**Two cards.** Card A reconciles the n≤200 census with Theorem 2.1 by a minutes-scale filter into three bins, leaving (72,108)-type rows and max≥125 as the honest residual. Card B is the new connection: D108's source top h=(X+W)^8·W^28 with F=h³, G=h² matches GGHV's starred open row A0=(8,28), (m,n)=(3,2) by inspection. The identification of which 108 row is open is typed as inferred from the §5 title and the star, since §4's (8,28) text was not read. The cheapest decisive test is a Newton-polygon corner comparison, no Gröbner.
+
+**Systems.** NO_UPGRADE except one bounded proposal: an explicit external-degree-overlay verdict field in the frontier tool with a stated normalisation convention, never altering the gcd field or arithmetic counts. A standing canonical-exclusions ledger is recommended since the heading index missed a 2022 theorem on the leading target.
+
+**Directions.** Stop all new (99,66) compute; running subset solves finish as instruments only. Redesign the counterexample front toward D108 after the Card B interface check. Continue the transverse C-rank root replay and low-priority K16. No external writes or ledger edits were made from this lane.
+DIVERT path=xmodel/ideation-20260906T1210Z-fable5.md status=CLEAN body_bytes=8143 body_sha256=89bf0c839d2098482249edc676c388412f954d1c2673c8d7259e672d7abd0253
+charge-basis validation failed; result is quarantined
+charge_basis: INVALID: line 97: delta must be an exact integer/fraction string

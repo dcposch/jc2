@@ -1,0 +1,17 @@
+Singular path: /usr/bin/Singular
+Singular version: Singular for x86_64-Linux version 4.3.2 (4330, 64 bit) Apr 1 2024 04:44:00
+Singular binary SHA-256: 90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4
+Singular coefficient/ring/order used: Q, polynomial ring in emitted variable order, dp; option(redSB)
+
+msolve build A path: box/moh14-charts-20260905/tools/msolve-0.10.1-official-intel-avx512/msolve
+msolve build A version: 0.10.1 (official upstream static AVX-512 release)
+msolve build A binary SHA-256: 0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f
+
+msolve build B path: box/k7-strata-gate-20260905/cert-audit/tools/apt-msolve/usr/bin/msolve
+msolve build B package: Ubuntu msolve 0.6.5-1build2 amd64, extracted without installation
+msolve build B binary SHA-256: c2722288d22c3a1eab00c0b818d0204d4a98104d059b2fd4ecb7343e8ef759fa
+msolve build B package SHA-256: dbbca584ac7518ed3924e5614a5b83ace6f89de6ab561ca63b336499fb3f575d
+
+Both msolve runs used -g 2 on characteristic-zero files. The build-B dynamic
+libraries were isolated under cert-audit/tools/apt-msolve and supplied through
+LD_LIBRARY_PATH; no system package was modified.

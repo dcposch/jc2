@@ -1,0 +1,63 @@
+{
+  "utc": "2026-09-08T23:41:34.532876+00:00",
+  "status": "PASS_METADATA_ONLY",
+  "parser_argv": [
+    "sed",
+    "-n",
+    "s/^charged_input=//p",
+    "/home/ubuntu/jc2/box/common4-bad-coefficient-typing-20260908/sol.prompt.md"
+  ],
+  "parser_stdout": "box/common4-bad-coefficient-typing-20260908/inputs/scope.md\nbox/common4-bad-coefficient-typing-20260908/inputs/receiver-composition.md\nbox/common4-bad-coefficient-typing-20260908/inputs/common-centering-interface.md\nbox/common4-bad-coefficient-typing-20260908/inputs/lift-contract.md\nbox/common4-bad-coefficient-typing-20260908/inputs/baseline.py\nbox/common4-bad-coefficient-typing-20260908/inputs/exporter.py\nbox/common4-bad-coefficient-typing-20260908/inputs/common4-header.json\nbox/common4-bad-coefficient-typing-20260908/inputs/common4-manifest.json\nbox/common4-bad-coefficient-typing-20260908/inputs/accepted-audit-context.md\nbox/common4-bad-coefficient-typing-20260908/inputs/history-context.md\n",
+  "inputs": 10,
+  "adapter": "sol",
+  "math_runs": 0,
+  "launches": 0,
+  "transaction": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "close",
+        "--final",
+        "xmodel/common4-bad-coefficient-typing-prep-astra-20260908.md",
+        "--token",
+        "1b5f758df3c34fcf046495d17abd675bafc335e3ef8956c0e846c8af7e80eed2"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"final_path\": \"/home/ubuntu/jc2/xmodel/common4-bad-coefficient-typing-prep-astra-20260908.md\", \"idempotent\": false, \"partial_path\": \"/home/ubuntu/jc2/xmodel/.common4-bad-coefficient-typing-prep-astra-20260908.md.partial-c3b2a2353e2263b2b26b88e1538b866e\", \"source_bytes\": 4656, \"source_sha256\": \"c441d24077d7a321459bddfa57d81c2e716749e19b566f209f59467210998b18\", \"status\": \"CLOSED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "finalize",
+        "--final",
+        "xmodel/common4-bad-coefficient-typing-prep-astra-20260908.md",
+        "--token",
+        "1b5f758df3c34fcf046495d17abd675bafc335e3ef8956c0e846c8af7e80eed2"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 4656, \"body_sha256\": \"c441d24077d7a321459bddfa57d81c2e716749e19b566f209f59467210998b18\", \"file_bytes\": 4988, \"final_path\": \"/home/ubuntu/jc2/xmodel/common4-bad-coefficient-typing-prep-astra-20260908.md\", \"full_sha256\": \"beb6e15dd594a3aa1904e7cec493238b639d08fb766cfe6ceafcc7405d7a6501\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/common4-bad-coefficient-typing-prep-astra-20260908.md.artifact.json\", \"manifest_sha256\": \"c06bc4586c46a179ef4bb558694f9911368c9fd058c450050e4f4377e16de902\", \"recovered\": false, \"status\": \"FINAL\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/common4-bad-coefficient-typing-prep-astra-20260908.md"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 4656, \"body_sha256\": \"c441d24077d7a321459bddfa57d81c2e716749e19b566f209f59467210998b18\", \"file_bytes\": 4988, \"final_path\": \"/home/ubuntu/jc2/xmodel/common4-bad-coefficient-typing-prep-astra-20260908.md\", \"full_sha256\": \"beb6e15dd594a3aa1904e7cec493238b639d08fb766cfe6ceafcc7405d7a6501\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/common4-bad-coefficient-typing-prep-astra-20260908.md.artifact.json\", \"manifest_sha256\": \"c06bc4586c46a179ef4bb558694f9911368c9fd058c450050e4f4377e16de902\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    }
+  ]
+}

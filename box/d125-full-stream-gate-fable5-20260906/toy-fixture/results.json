@@ -1,0 +1,230 @@
+{
+ "checker_sha256": "b175ccc7ed339e115c58e30a0893a0e6566a02152d837e4469d4b82d41ce673f",
+ "elapsed_seconds": 0.13557025394402444,
+ "inputs": {
+  "toy-fixture/out/import.sing": {
+   "bytes": 2474,
+   "sha256": "5ff5ac723d8b8b636377a2093d40b98d8e23b64d620713dd24d7efa346ce9851"
+  },
+  "toy-fixture/out/literal.jsonl": {
+   "bytes": 9382,
+   "sha256": "a0eb9c286cccfbc40114b41f72db57c12bdb581aafa6c14c80d257bf4a061bdc"
+  }
+ },
+ "json_controls": [
+  {
+   "control": "coefficient_sign_flip",
+   "reason": "coefficient/monomial mismatch in row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "determinant_plus_one",
+   "reason": "coefficient/monomial mismatch in row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "guard_row_removed",
+   "reason": "row type at original_degree_guard",
+   "result": "REJECTED"
+  },
+  {
+   "control": "guard_constant_removed",
+   "reason": "coefficient/monomial mismatch in row original_degree_guard",
+   "result": "REJECTED"
+  },
+  {
+   "control": "target_constant_removed",
+   "reason": "coefficient/monomial mismatch in row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "target_sign_flipped",
+   "reason": "coefficient/monomial mismatch in row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "pin_value_changed",
+   "reason": "coefficient/monomial mismatch in row pin_4_Q_ell2_t3",
+   "result": "REJECTED"
+  },
+  {
+   "control": "jet_binomial_changed",
+   "reason": "RuntimeError('control target absent')",
+   "result": "NOT_CONSTRUCTED"
+  },
+  {
+   "control": "variable_exponent_swapped",
+   "reason": "variable record drift at id 1",
+   "result": "REJECTED"
+  },
+  {
+   "control": "variable_name_changed",
+   "reason": "variable record drift at id 2",
+   "result": "REJECTED"
+  },
+  {
+   "control": "footer_complete_false",
+   "reason": "footer complete flag not true",
+   "result": "REJECTED"
+  },
+  {
+   "control": "footer_removed",
+   "reason": "stream truncated before footer",
+   "result": "REJECTED"
+  },
+  {
+   "control": "trailing_line_after_footer",
+   "reason": "trailing bytes after footer",
+   "result": "REJECTED"
+  },
+  {
+   "control": "trailing_partial_bytes",
+   "reason": "trailing bytes after footer",
+   "result": "REJECTED"
+  },
+  {
+   "control": "zero_row_omitted",
+   "reason": "row label mismatch: expected J_u2_v2, got J_u2_v3",
+   "result": "REJECTED"
+  },
+  {
+   "control": "last_physical_row_omitted",
+   "reason": "row label mismatch: expected J_u2_v3, got original_degree_guard",
+   "result": "REJECTED"
+  },
+  {
+   "control": "header_field_changed",
+   "reason": "header contract drift",
+   "result": "REJECTED"
+  }
+ ],
+ "max_rss_kib_self": 19216,
+ "schema": "d125-full-stream-gate-fable5/independent-check/v1",
+ "sing_controls": [
+  {
+   "control": "sing_sign_flip",
+   "reason": "Singular polynomial differs from JSON row J_u0_v1",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_guard_removed",
+   "reason": "row terminator at J_u2_v3",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_target_removed",
+   "reason": "Singular polynomial differs from JSON row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_ring_variable_renamed",
+   "reason": "ring variable list differs from JSON variable map (names/order/count)",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_ring_order_swapped",
+   "reason": "ring variable list differs from JSON variable map (names/order/count)",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_order_lp",
+   "reason": "ring line grammar",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_complete_marker_removed",
+   "reason": "COMPLETE marker/digest",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_hidden_command_before_quit",
+   "reason": "quit line",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_command_inside_polynomial",
+   "reason": "atom grammar violation at J_u0_v1: '(1/1)*P_u0_v1*Q_u1_v0;ideal J=std(I)'",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_trailing_text",
+   "reason": "bytes after quit",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_zero_row_omitted",
+   "reason": "Singular row label mismatch at row 44 (J_u2_v2)",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_polynomial_line_split",
+   "reason": "row terminator at J_u0_v1",
+   "result": "REJECTED"
+  }
+ ],
+ "spec": "toy",
+ "stages": {
+  "expected": {
+   "authority_canonical_sha256": null,
+   "envelope": {
+    "I_max": 2,
+    "J_max": 6,
+    "degree_bound": 5,
+    "nonzero_slots": 13,
+    "slots": 14,
+    "weight_bound": 9
+   },
+   "expected_rows": 47,
+   "seconds": 0.000339839025400579,
+   "source_counts": {
+    "P": 7,
+    "Q": 10
+   },
+   "variable_count": 18
+  },
+  "json_whole_row": {
+   "first_zero_physical_row": "J_u2_v2",
+   "lines": 67,
+   "prefix_sha256": "8b9fa422536cb0a4d5184862b07cbb76537177f5841dcc4de916f74e98e9e3bc",
+   "row_counts": {
+    "degree_guard": 1,
+    "jet": 27,
+    "physical_J": 14,
+    "pin": 5
+   },
+   "seconds": 0.007551447954028845,
+   "term_counts": {
+    "degree_guard": 2,
+    "jet": 14,
+    "physical_J": 39,
+    "pin": 10
+   },
+   "term_order_identical": true,
+   "unused_variable_ids": [
+    3,
+    11
+   ],
+   "unused_variable_names": [
+    "P_u0_v0",
+    "Q_u0_v0"
+   ],
+   "variable_count": 18,
+   "verdict": "PASS",
+   "zero_row_counts": {
+    "degree_guard": 0,
+    "jet": 13,
+    "physical_J": 1,
+    "pin": 0
+   }
+  },
+  "singular_whole_row": {
+   "atoms": 65,
+   "lines": 100,
+   "rows": 47,
+   "seconds": 0.012428772985003889,
+   "verdict": "PASS"
+  }
+ },
+ "status": "PASS",
+ "survived_controls": []
+}

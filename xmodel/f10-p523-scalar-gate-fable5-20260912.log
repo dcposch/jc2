@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report complete and sealed at 04:34:34Z, ahead of the 04:48Z reserve. The file `xmodel/f10-p523-scalar-gate-fable5-20260912.md` is 1,650 words, ends with the standalone `<!-- BODY-END -->` line, and has had no later edits. All six inputs matched the expected SHA256 values both before reading and after.
+
+Verdicts by section:
+
+- **A: CONFIRMED.** Prime 523, linear place, monic denominator support {2,3,5,7}, the full D0/D1/D2 registry, dL=310, W=151, t5=9, C and D, contact6/7 and the leading ODE were all re-derived from the literal code with my own arithmetic.
+- **B: partial.** The upper-solve recurrence, row/column order, h4 target, and inverse-routine orientation were derived from the code. I fully reconstructed M1 (all three columns, det1=80, inverse 85) and the M4 target column (449,331,33). The negative control shows that omitting the h4 target changes only the third column of M4. The 14 remaining basis columns and the entries of M2, M3, M5, M6 were not reconstructed, so those four determinants are GAP beyond their integer inverse products.
+- **C: CONFIRMED** for H7_5=428, H7_6=95 and the rho normalization. The inverse[2][2] relation holds on the supplied M5/M6 but is conditional on their unreconstructed entries.
+- **D: CONFIRMED.** z first appears at h7 and its coefficient is independent of earlier forcing. Bz=517+418T, low pair (439,356), Psi sign from the literal code, critical_c=36, and pivots 464/429/298 with all four inverse products.
+- **E:** census tabulated. Eleven of fifteen nodes independently reconstructed, det4 conditional, det2/3/5/6 on charged matrices only. No whole-circuit claim.
+- **F: GAP.** Only the constant and leading entries of the P7 vector were checked.
+
+No item was refuted. No code, prime, or scope was changed, and no charge_basis line was declared.
+DIVERT path=xmodel/f10-p523-scalar-gate-fable5-20260912.md status=CLEAN body_bytes=14424 body_sha256=f4b7fdab548eb4b7f9cc3ec03972939fab3f22c914133937c251614ea3136585

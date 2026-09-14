@@ -1,0 +1,27 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Review complete. Verdict: all six arrows CONFIRMED, no counterexample and no missing arrow found. STOP/IDLE.
+
+**What I found**
+
+- **The theorem stands** at the imported 14c/f/g/v and 15b trust. For every genuine characteristic-zero K[[s]] arc in the accepted 14v pure-center setup, ord(alpha) >= j, with alpha = 0 allowed. It is producer-checked and now independently reviewed, not promoted.
+- **Arrow 1.** The pure center forces a >= 1 because R^3 = p^6 V^3 has no p^3 term, so the critical-root substitution converges. The mixed [p]F = alpha·h is an ordinary weight −7 coefficient carried by the recursion. The scalar kernels b1, b3 never enter because D kills scalar polynomials in z.
+- **Arrow 2.** The weight lemma is exact: V | P and w(P) <= 3 force p^2 | P/V, with quotient weight <= 2 and degree <= 8. The moving correction keeps the bounds, and the first nonzero remainder is a polynomial mod V, so the leader is regular on affine V.
+- **Arrow 3.** Hensel in L[[s,z]] with unit derivative 3g^2p^2, the parity law from uniqueness, ker D = Kbar, and f = min(q, j+a/2) with the equality case handled by eigencomponents. C|V is nonconstant by evaluation at O.
+- **Arrow 4.** I re-derived the bracket identity, the chain rule with the Jacobian factor, the zero-fiber equation, and all four strict inequalities for every finite a < j including infinite q, d, v and half-integral orders. M = 3m is forced.
+- **Arrow 5.** Leader −5κ³/(27p²) with the g²/(3g²) cancellation, primitive −5κ³/(27p), and 1/p not regular at the affine point O. No genus or normality is used.
+- **Arrow 6.** Scope is exactly as stated. Infinite valuations are vanishing series, not geometric escape.
+
+**Evidence**
+
+- Replay in a fresh scratch layout: positive stdout is byte-identical to the charged witness in normal and -O mode. All twelve mutations exit 1 with the intended markers. A scratch --record reproduces all fourteen rows. Mutation stderr hashes differ only through the relocated traceback path.
+- Four owned controls, 26 capped runs, zero Assert nodes, byte-identical normal/-O output. The weight lemma was checked by exact linear algebra on the 64-monomial space. The chain rule was checked with a genuinely moving coordinate with nonconstant R_g. The valuation box covered 439,104 tuples with zero failures, and a = j produced 36,963 failures. The filtered recursion matched an independent Newton root at a point of V over a cubic field, and a weight-15 input showed the pole leader.
+- Input pins equal input-pins.json before and after all work. Scratch copies unchanged. No children running.
+
+**Defects recorded, none changing a verdict**
+
+- The producer checker tests the bracket identity only at z = g, so the Jacobian factor and moving implicit map are untested by it.
+- Its gpV control checks weight only, never the division lemma's conclusion.
+- The letter d is ord(delta) here but [g]B in 14g.
+
+Report: xmodel/d125-pure-critical-remainder-gate-fable5-20260907.md. Evidence and custody: box/d125-pure-critical-remainder-gate-fable5-20260907/.
+DIVERT path=xmodel/d125-pure-critical-remainder-gate-fable5-20260907.md status=CLEAN body_bytes=13295 body_sha256=6f6fef2133d33482b0f45f2db86d78712976a3f984c848d68e4c388615227be8

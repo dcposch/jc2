@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/msolve-allocation-repair-20260906/worker-v2.py", line 143, in <module>
+    elif sys.argv[1]=='tests': tests()
+                               ^^^^^^^
+  File "/home/ubuntu/msolve-allocation-repair-20260906/worker-v2.py", line 132, in tests
+    else: need(set(polys)=={'y^2-x','x*y-1','x^2-y'},'proper exact small basis')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/msolve-allocation-repair-20260906/worker-v2.py", line 19, in need
+    if not ok: raise RuntimeError(why)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: proper exact small basis

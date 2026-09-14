@@ -1,0 +1,24 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 22:08:03 UTC, before the 22:19:22 stop. All writers are idle; the report ends with the single `<!-- BODY-END -->` line and nothing after it.
+
+**Verdict:** A, B, C, D, E all CONFIRMED. No REFUTED, no blocking GAP, no new OPEN. STATIC correctness is accepted at the imported 17m scope only. Runtime readiness is not established and the packet is not dispatch-ready.
+
+**What I did**
+- Verified all 21 input hashes with sha256sum before any body read, and again twice after. 21 of 21 matched each time.
+- Read the five new sources, the caller diff, the three unchanged copies, the API note, the DISABLED template and all packet docs whole. Read the accepted 17m, 17p and 17u gates as slices only for premises.
+- Hand-checked the [M|b|I] RREF extraction for both branches, the checker's dense reduction and index laws, the cofactor identity, and the argv arithmetic. Confirmed all 45 added diff lines occur in the new caller and none of the 37 removed lines survive.
+- Traced every one of the eight controls to its first failing line in checker.py and confirmed all nine reason strings exist there. Hand-checked the four planned generic test specs for coherence.
+
+**Smallest defects found, all non-blocking and recorded in the GAP section**
+- The artifact's top-level r and h0 keys and the pair-spelt modulus are a 17p premise. A mismatch stops the run, never a false pass.
+- Installed fmpq comparison and string behaviour remain unknown. Each unsupported case is an exception or refusal.
+- The control named omitted-high-coordinate only alters the rows field. It is not window coverage.
+
+**Outputs**
+- `xmodel/f10-r1-exact-linear-decision-gate-fable5-20260909.md`, written via apply_patch in three steps: skeleton, content, completion plus marker.
+- `box/f10-r1-exact-linear-decision-gate-fable5-20260909/` holds the expected hash list, the generated custody rows, the two patch files and the two hex cross-check lists.
+
+The git status also shows a sibling `box/f10-r1-exact-linear-decision-gate-20260909/` directory and a `.log` and `.run.v2` beside my report. I did not create or touch those.
+
+**Next step** belongs to root: a separately registered compatibility and generic verifier harness, then a single real candidate/check/control batch.
+DIVERT path=xmodel/f10-r1-exact-linear-decision-gate-fable5-20260909.md status=CLEAN body_bytes=21312 body_sha256=4c3f5932e9ff77d73314fe02b3c088677f8fc3bc0971acad9ba56610cf7d405f

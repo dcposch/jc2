@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is done. Verdict: A, B, C, D all CONFIRMED, no blocking defect, no new OPEN.
+
+**Written** (both absent before the first write, owned only):
+- `xmodel/f10-r1-univariate-runtime-gate-fable5-20260909.md`, 95 lines, unique standalone `<!-- BODY-END -->` as the last line with nothing after it. Skeleton first, then two bounded apply_patch updates. No seal, no exit-price line.
+- `box/f10-r1-univariate-runtime-gate-fable5-20260909/input-custody.sha256`, the 17 charged digests in assignment order, built from sha256sum output.
+
+**Custody.** All 17 charged hashes matched the ordered list before any body read and again at close. Every 64-hex token in the report cross-checks both directions against the custody file. Launch 20:43:31 UTC, marker written 20:50:49 UTC, stop was 21:02:00 UTC.
+
+**What was checked and how.** Whole-read by cat -n: caller.diff, new caller, harness, checker, adapter, algebra, execution_gate, input_evidence, probe, the DISABLED template, READ-SCOPE, VALIDATION, the producer report, its artifact.json and custody.json. The two accepted gates were read as heading and verdict slices only, as premises. Only text and hash operations ran. No python, compile, import, test, CAS, fixture, network, AWS, SSH, proc or agents.
+
+**Findings by item.**
+- A: all 33 added diff lines occur verbatim in the new caller and none of the 16 removed lines survives. The only run() change is the acceptance key copied into each authority. The 13-file plus interpreter vector, adapter.py pinned in every authority, metadata-only normalized version hashes, and the fully null DISABLED template all hold.
+- B: argv lengths 5, 6, 7 match the three entrypoints. Build and check operations match. The prior receipt is only ever an input and the univariate receipt only ever the new output. The receipt is read only after a NORMAL_EXIT child wrote it, and root acceptance is consumed, never produced.
+- C: each of the seven controls was traced to its earliest failing line in checker.verify with the exact ValueError message. Canonical plus-one wires pass the checker parser, so no earlier refusal can pre-empt the designed reason. These remain designed, unobserved outcomes.
+- D: VALIDATION, report, custody counts and the producer body digest are consistent with the code. No caps, costs or mathematical outcomes are stated anywhere.
+
+**Documentary GAPs, non-blocking:** the old caller and harness are uncharged, so the delta rests on caller.diff plus root's cmp=0; the three external instrument digests are inherited from the accepted 17r gate; syntax and runtime compatibility stay unmeasured by design.
+
+**Next step belongs to root:** one separately registered batch, only after genuine normalized evidence acceptance and this gate. Nothing here authorizes a worker, cap, fixture or run.
+DIVERT path=xmodel/f10-r1-univariate-runtime-gate-fable5-20260909.md status=CLEAN body_bytes=14253 body_sha256=89f905c8fa9ce31aaae23d0c2da8d852756d099097f126d1ff27b2524e4893f5

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solver.py", line 334, in <module>
+    main()
+  File "/home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solver.py", line 327, in main
+    certificate = candidate(data, flint)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solver.py", line 314, in candidate
+    return generic_candidate([c / r.p[-1] for c in r.p], fs, q, flint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solver.py", line 243, in generic_candidate
+    solution[pivot] = rational(reduced[k, columns])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solver.py", line 218, in rational
+    num = int(pieces[0]); den = int(pieces[1]) if len(pieces) == 2 else 1
+          ^^^^^^^^^^^^^^
+ValueError: Exceeds the limit (4300 digits) for integer string conversion: value has 7422 digits; use sys.set_int_max_str_digits() to increase the limit

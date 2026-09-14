@@ -1,0 +1,104 @@
+print("RANKDRIVER t=3 mode=exact prime=None branch=0");
+print("RING S_t: vars b4,q2_0,b3 weights 1,2,4");
+ring S=(0,yy),(b4,q2_0,b3),wp(1,2,4);
+minpoly=588*yy^2-336*yy+44;
+option(redSB);
+poly T5=(1012454036598481113035963634784611219/90595026602558194833741274946562500*yy-183503025824870363630406526914270831/45297513301279097416870637473281250)*b4^8+(1262305787066119074267607086909/52051150015833493153542818125*yy-3253431676157892247047764797512/364358050110834452074799726875)*b4^6*q2_0+(3794944443088021128186849/334945636413292228279046*yy-24594369549940963711040832/5861548637232613994883305)*b4^4*q2_0^2+(1724309006348037339/414667771223729725*yy-90211341749588349111/58053487971322161500)*b3*b4^4+(501840690765701788425/336773837244045618781*yy-1306921948717435257750/2357416860708319331467)*b4^2*q2_0^3+(-5917878988347/33354488923483*yy+28055155954017/466962844928762)*b3*b4^2*q2_0+(-899681153346875/37108166220670636*yy+1171323778934375/129878581772347226)*q2_0^4+(-464148625/1837618874*yy+2412280375/25726664236)*b3*q2_0^2+(-575/1232*yy+5/44)*b3^2;
+poly T4=(-1036632606356349093910407291166194439191/26725532847754667475953676109235937500*yy+96084072950611613083873816837157664813/6681383211938666868988419027308984375)*b4^9+(-462306108996853862423873865579747/15355089254670880480295131346875*yy+1204960481248972653750083817079584/107485624782696163362065919428125)*b4^7*q2_0+(-324190159394070165844211154/49404481370960603671159285*yy+8525228230365569976369275667/3458313695967242256981149950)*b4^5*q2_0^2+(7092936141835772894553/611634962555001344375*yy-73341910970773008992937/17125778951540037642500)*b3*b4^5+(393320287757316568020/1528435107492207039083*yy-968714731961130553725/10699045752445449273581)*b4^3*q2_0^3+(52839349604593701/9839574232427485*yy-54805419867983511/27550807850796958)*b3*b4^3*q2_0+(26811432966006783125/159824871912428429252*yy-34926788042402485625/559387051693499502382)*b4*q2_0^4+(10717537131725/15829248980636*yy-6987954902575/27701185716113)*b3*b4*q2_0^2+(-1425433/5306224*yy+532583/18571784)*b3^2*b4;
+poly T3=(773204152532809296382659301111252766535619494/172804188550388128419422390107471873197265625*yy-598079896283770832814771461052722009913733707/345608377100776256838844780214943746394531250)*b4^10+(3720594094414326038168002552853452203414/397136888366304230782929939919498703125*yy-9689008556780558698152233696783001238917/2779958218564129615480509579436490921875)*b4^8*q2_0+(14571349558583881662374058831583017/982903486995913505130889737055750*yy-37659124004525065328965962718879809/6880324408971394535916228159390250)*b4^6*q2_0^2+(-9002613556800827010425971719/3163808452252993339057973125*yy+117955796192199534386311269624/110733295828854766867029059375)*b3*b4^6+(687307179405079623431168023125/102779910734418993354680799853*yy-1779683189003284267675887729621/719459375140932953482765598971)*b4^4*q2_0^3+(336832200667739744302308/254486172545486393259475*yy-872118350426076192770196/1781403207818404752816325)*b3*b4^4*q2_0+(360508240217517731076784625/413363616857760961495412582*yy-468183672775865496617156000/1446772659002163365233944037)*b4^2*q2_0^4+(-18234301177477939325/81880067006878701652*yy+46241108732666761315/573160469048150911564)*b3*b4^2*q2_0^2+(-1145669347575500000/77992088354294509213*yy+2977367685254359375/545944618480061564491)*q2_0^5+(-6239013856651/8577356883865*yy+77842039569279/480331985496440)*b3^2*b4^2+(-1146967896250/7724430936859*yy+8929296041875/162213049674039)*b3*q2_0^3+(-21375/58849*yy+422225/4943316)*b3^2*q2_0;
+int r; intvec b3wt=0,0,1;
+poly cc0=subst(T5,b3,0);
+poly bb0=subst(diff(T5,b3),b3,0);
+poly aa0=subst(diff(diff(T5,b3),b3),b3,0)/2;
+if (T5-(aa0*b3^2+bb0*b3+cc0)!=0) { print("FAIL b3-split r=0"); }
+print("STRUCT r=0 k=5: wt(T)="+string(deg(T5))+" homog="+string(homog(T5))+" deg_b3="+string(deg(T5,b3wt)));
+print("  a0: wt="+string(deg(aa0))+" size="+string(size(aa0))+" homog="+string(homog(aa0)));
+print("  b0: wt="+string(deg(bb0))+" size="+string(size(bb0))+" homog="+string(homog(bb0)));
+print("  c0: wt="+string(deg(cc0))+" size="+string(size(cc0))+" homog="+string(homog(cc0)));
+poly cc1=subst(T4,b3,0);
+poly bb1=subst(diff(T4,b3),b3,0);
+poly aa1=subst(diff(diff(T4,b3),b3),b3,0)/2;
+if (T4-(aa1*b3^2+bb1*b3+cc1)!=0) { print("FAIL b3-split r=1"); }
+print("STRUCT r=1 k=4: wt(T)="+string(deg(T4))+" homog="+string(homog(T4))+" deg_b3="+string(deg(T4,b3wt)));
+print("  a1: wt="+string(deg(aa1))+" size="+string(size(aa1))+" homog="+string(homog(aa1)));
+print("  b1: wt="+string(deg(bb1))+" size="+string(size(bb1))+" homog="+string(homog(bb1)));
+print("  c1: wt="+string(deg(cc1))+" size="+string(size(cc1))+" homog="+string(homog(cc1)));
+poly cc2=subst(T3,b3,0);
+poly bb2=subst(diff(T3,b3),b3,0);
+poly aa2=subst(diff(diff(T3,b3),b3),b3,0)/2;
+if (T3-(aa2*b3^2+bb2*b3+cc2)!=0) { print("FAIL b3-split r=2"); }
+print("STRUCT r=2 k=3: wt(T)="+string(deg(T3))+" homog="+string(homog(T3))+" deg_b3="+string(deg(T3,b3wt)));
+print("  a2: wt="+string(deg(aa2))+" size="+string(size(aa2))+" homog="+string(homog(aa2)));
+print("  b2: wt="+string(deg(bb2))+" size="+string(size(bb2))+" homog="+string(homog(bb2)));
+print("  c2: wt="+string(deg(cc2))+" size="+string(size(cc2))+" homog="+string(homog(cc2)));
+print("A0VALUE: "+string(aa0));
+if (aa0==0) { print("A0_ZERO: split unavailable (a0=0)"); }
+poly B1=aa0*bb1-aa1*bb0;
+poly C1=aa0*cc1-aa1*cc0;
+poly G1=B1*b3+C1;
+if (G1-(aa0*T4-aa1*T5)!=0) { print("FAIL G-identity r=1"); }
+poly W1=aa0*C1^2-bb0*B1*C1+cc0*B1^2;
+if (W1-(B1^2*T5-G1*(aa0*G1-2*aa0*C1+bb0*B1))!=0) { print("FAIL eliminant certificate r=1"); }
+print("SPLIT r=1: B1 wt="+string(deg(B1))+" size="+string(size(B1))+" homog="+string(homog(B1))+" lead="+string(leadmonom(B1))+" | C1 wt="+string(deg(C1))+" size="+string(size(C1))+" homog="+string(homog(C1))+" lead="+string(leadmonom(C1))+" | W1 wt="+string(deg(W1))+" size="+string(size(W1))+" homog="+string(homog(W1)));
+poly B2=aa0*bb2-aa2*bb0;
+poly C2=aa0*cc2-aa2*cc0;
+poly G2=B2*b3+C2;
+if (G2-(aa0*T3-aa2*T5)!=0) { print("FAIL G-identity r=2"); }
+poly W2=aa0*C2^2-bb0*B2*C2+cc0*B2^2;
+if (W2-(B2^2*T5-G2*(aa0*G2-2*aa0*C2+bb0*B2))!=0) { print("FAIL eliminant certificate r=2"); }
+print("SPLIT r=2: B2 wt="+string(deg(B2))+" size="+string(size(B2))+" homog="+string(homog(B2))+" lead="+string(leadmonom(B2))+" | C2 wt="+string(deg(C2))+" size="+string(size(C2))+" homog="+string(homog(C2))+" lead="+string(leadmonom(C2))+" | W2 wt="+string(deg(W2))+" size="+string(size(W2))+" homog="+string(homog(W2)));
+print("AXIS bb0 on b4-axis: "+string(subst(subst(bb0,q2_0,0),b3,0)));
+print("AXIS bb0 on q2_0-axis: "+string(subst(subst(bb0,b4,0),b3,0)));
+print("AXIS cc0 on b4-axis: "+string(subst(subst(cc0,q2_0,0),b3,0)));
+print("AXIS cc0 on q2_0-axis: "+string(subst(subst(cc0,b4,0),b3,0)));
+print("AXIS bb1 on b4-axis: "+string(subst(subst(bb1,q2_0,0),b3,0)));
+print("AXIS bb1 on q2_0-axis: "+string(subst(subst(bb1,b4,0),b3,0)));
+print("AXIS cc1 on b4-axis: "+string(subst(subst(cc1,q2_0,0),b3,0)));
+print("AXIS cc1 on q2_0-axis: "+string(subst(subst(cc1,b4,0),b3,0)));
+print("AXIS B1 on b4-axis: "+string(subst(subst(B1,q2_0,0),b3,0)));
+print("AXIS B1 on q2_0-axis: "+string(subst(subst(B1,b4,0),b3,0)));
+print("AXIS C1 on b4-axis: "+string(subst(subst(C1,q2_0,0),b3,0)));
+print("AXIS C1 on q2_0-axis: "+string(subst(subst(C1,b4,0),b3,0)));
+print("AXIS bb2 on b4-axis: "+string(subst(subst(bb2,q2_0,0),b3,0)));
+print("AXIS bb2 on q2_0-axis: "+string(subst(subst(bb2,b4,0),b3,0)));
+print("AXIS cc2 on b4-axis: "+string(subst(subst(cc2,q2_0,0),b3,0)));
+print("AXIS cc2 on q2_0-axis: "+string(subst(subst(cc2,b4,0),b3,0)));
+print("AXIS B2 on b4-axis: "+string(subst(subst(B2,q2_0,0),b3,0)));
+print("AXIS B2 on q2_0-axis: "+string(subst(subst(B2,b4,0),b3,0)));
+print("AXIS C2 on b4-axis: "+string(subst(subst(C2,q2_0,0),b3,0)));
+print("AXIS C2 on q2_0-axis: "+string(subst(subst(C2,b4,0),b3,0)));
+print("RING P_t: vars b4,q2_0 weights 1,2");
+ring P=(0,yy),(b4,q2_0),wp(1,2);
+minpoly=588*yy^2-336*yy+44;
+option(redSB);
+poly B1=imap(S,B1);
+poly C1=imap(S,C1);
+poly W1=imap(S,W1);
+poly B2=imap(S,B2);
+poly C2=imap(S,C2);
+poly W2=imap(S,W2);
+poly a0=imap(S,aa0); poly b0=imap(S,bb0); poly c0=imap(S,cc0);
+ideal Bs=B1,B2;
+ideal Cs=C1,C2;
+ideal Ws=W1,W2;
+ideal BC=Bs+Cs;
+
+LIB "primdec.lib";
+matrix N[2][2]=C1,B1,C2,B2;
+ideal I2=minor(N,2);
+ideal J1=I2+ideal(b4-1);
+ideal gJ1=std(J1);
+print("GAMMAX t=3 exact chart b4=1: vdim="+string(vdim(gJ1)));
+ideal rJ1=radical(J1);
+ideal grJ1=std(rJ1);
+print("GAMMAX t=3 exact chart b4=1 REDUCED: npoints="+string(vdim(grJ1)));
+ideal U1=finduni(grJ1);
+int i; int j; list FL;
+for(i=1;i<=size(U1);i++){
+  FL=factorize(U1[i]);
+  string s="";
+  for(j=1;j<=size(FL[1]);j++){ s=s+" "+string(deg(FL[1][j]))+"^"+string(FL[2][j]); }
+  print("GAMMAX t=3 exact finduni var "+string(var(i))+": wdeg="+string(deg(U1[i]))+" factor-wdegrees(over A_t)="+s);
+}
+print("GAMMAX_DONE t=3");
+quit;

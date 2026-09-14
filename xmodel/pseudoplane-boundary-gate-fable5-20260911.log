@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done at 08:51:16 UTC, before the 08:58 reserve. Both owned files are complete and no further writes will occur.
+
+**Outcome.** All four frozen inputs hashed exactly against the charged manifest before any body was read, and again after the report was written. Both reports were read whole through their Seals with no clipping. The owned report at `xmodel/pseudoplane-boundary-gate-fable5-20260911.md` ends with the single standalone marker as its last line, and the custody file in the owned box holds prepins, postpins and the pre-marker readback hashes generated from sha256sum output.
+
+**Verdicts, each recomputed by hand from the exact ring:**
+
+- **A CONFIRMED.** The chart on U≠0 is an actual isomorphism onto Spec C[u,u⁻¹,t,(1+t)⁻¹]: the inverse triple satisfies the relation and recovers t=AZ, injectivity follows from transcendence degree 2. t=0 allowed, t=−1 excluded exactly. The boundary cotangent space at L is spanned by dU and dZ, giving the stated criterion.
+- **B CONFIRMED.** Derivatives, the identity M′=f^(2d−1)K, the multiplicity count leaving r−1≥1 roots of M′ off M=0, the nonzero right-hand side 2dh/f, and the lift of every such root all check. The critical value (2d+1)uf(t0)/(2d) is nonzero but unused. A d=0 negative control shows the step u^(2d+1)=2dh/f is load-bearing.
+- **C CONFIRMED.** Weight spaces are exact, even weights are U-free, the origin forces the second component into weight 1 or −2, and both cases produce a critical point. No degree cap enters.
+- **D CONFIRMED.** E factors exactly as d^(2d)·s^((d−1)N)·R with the exponent bookkeeping 2d²−(d−1)N=d+1. R is nonconstant by strict degree, R(0)=d, R(−1)=−d, and both the q′(t0)=0 and q′(t0)≠0 lifts hold, including the sign in u^(2d)=−h′/q′. A hand check at d=1, q=0 in surface coordinates gives dH=0 directly.
+- **E CONFIRMED.** U+q(AZ) is submersive on all three covering sets, including every U=0 and A=0 point, with a direct cotangent check at U=0, A≠0 independent of the bracket argument. Deleting Z^d genuinely reverses the D result.
+- **F GAP as scoped.** Three or more independent u-powers in H_u have no proved lifting polynomial. Absence of a found nonlinear-boundary submersion is not proof of absence, and no general no-mate, classification, JC2 or novelty claim is made.
+
+**Composition.** Any H in the B or D family is excluded as a coordinate of a scalar-bracket pair with arbitrary regular G, since dH=0 at a point forces {H,G}=0 there. No external theorem imported.
+
+**Smallest correction.** None mathematical. Two wording notes only: the nonzero critical value in Section 2 is unused, and the corollary's one-component case is covered but unstated.
+
+**Recorded controls and planning.** QUANTITY is whether the three-weight family Uf(t)+Z^d g(t)+q(t) admits the same treatment. CHEAPEST TEST is one manual bounded elimination check, about 15 minutes UNMEASURED, not attempted. Own-only COLLISIONS: none. Static manual only, no subprocess, network, git or other agents.
+DIVERT path=xmodel/pseudoplane-boundary-gate-fable5-20260911.md status=CLEAN body_bytes=10686 body_sha256=a191ff3adbf4fc3144d43effd576f185c1c529c009265636bd9bdbb7e0275f72

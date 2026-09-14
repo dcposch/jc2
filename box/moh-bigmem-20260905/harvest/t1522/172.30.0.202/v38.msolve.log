@@ -1,0 +1,733 @@
+PIPELINE_NATIVE_START target=v38 utc=2026-09-05T14:11:12Z
+JOB_START stem=msolve_native char=1073741827 timeout=10800 threads=32 utc=2026-09-05T14:11:12Z
+host=ip-172-30-0-202 nproc=96 mem=779751856kB
+rows=2b59ba92f2b889b09d38570f6f03bec865ede4d509e85c687f66f3033369254b  /home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv
+meta=3040c7ce7e20b5d7d87b4458d0e4a08955f082c9de47efa9fe467a6c5dc5e3e6  /home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json
+msolve_bin=0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f  /home/ubuntu/moh-bigmem-20260905/bin/msolve
+0.10.1
+EMIT_START utc=2026-09-05T14:11:12Z
+{
+  "certification_warning": null,
+  "characteristic": 1073741827,
+  "emitter": {
+    "function": "msolveio.emit_system",
+    "msolveio": "0.2.1",
+    "python": "3.12.3",
+    "qqideal": "0.2.0"
+  },
+  "generator_count": 175,
+  "localization": {
+    "appended_generator": "z*c-1",
+    "method": "Rabinowitsch",
+    "open_polynomial_original": "c",
+    "open_polynomial_safe": "c",
+    "slack_variable": "z"
+  },
+  "manifest_path": "/home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.manifest.json",
+  "original_variable_count": 111,
+  "original_variable_order": [
+    "h_0_5",
+    "h_0_4",
+    "h_1_4",
+    "h_0_3",
+    "h_1_3",
+    "h_0_2",
+    "h_1_2",
+    "h_0_1",
+    "h_1_1",
+    "h_0_0",
+    "h_1_0",
+    "h_2_0",
+    "A1_0_5",
+    "A1_0_4",
+    "A1_1_4",
+    "A1_0_3",
+    "A1_1_3",
+    "A1_0_2",
+    "A1_1_2",
+    "A1_0_1",
+    "A1_1_1",
+    "A1_0_0",
+    "A1_1_0",
+    "A1_2_0",
+    "A2_0_5",
+    "A2_1_5",
+    "A2_2_5",
+    "A2_0_4",
+    "A2_1_4",
+    "A2_2_4",
+    "A2_3_4",
+    "A2_0_3",
+    "A2_1_3",
+    "A2_2_3",
+    "A2_3_3",
+    "A2_0_2",
+    "A2_1_2",
+    "A2_2_2",
+    "A2_3_2",
+    "A2_0_1",
+    "A2_1_1",
+    "A2_2_1",
+    "A2_3_1",
+    "A2_4_1",
+    "A2_0_0",
+    "A2_1_0",
+    "A2_2_0",
+    "A2_3_0",
+    "A2_4_0",
+    "A3_0_5",
+    "A3_1_5",
+    "A3_2_5",
+    "A3_3_5",
+    "A3_4_5",
+    "A3_0_4",
+    "A3_1_4",
+    "A3_2_4",
+    "A3_3_4",
+    "A3_4_4",
+    "A3_5_4",
+    "A3_0_3",
+    "A3_1_3",
+    "A3_2_3",
+    "A3_3_3",
+    "A3_4_3",
+    "A3_5_3",
+    "A3_0_2",
+    "A3_1_2",
+    "A3_2_2",
+    "A3_3_2",
+    "A3_4_2",
+    "A3_5_2",
+    "A3_6_2",
+    "A3_0_1",
+    "A3_1_1",
+    "A3_2_1",
+    "A3_3_1",
+    "A3_4_1",
+    "A3_5_1",
+    "A3_6_1",
+    "A3_1_0",
+    "A3_2_0",
+    "A3_3_0",
+    "A3_4_0",
+    "A3_5_0",
+    "A3_6_0",
+    "B2_0_5",
+    "B2_1_5",
+    "B2_2_5",
+    "B2_0_4",
+    "B2_1_4",
+    "B2_2_4",
+    "B2_3_4",
+    "B2_0_3",
+    "B2_1_3",
+    "B2_2_3",
+    "B2_3_3",
+    "B2_0_2",
+    "B2_1_2",
+    "B2_2_2",
+    "B2_3_2",
+    "B2_0_1",
+    "B2_1_1",
+    "B2_2_1",
+    "B2_3_1",
+    "B2_4_1",
+    "B2_1_0",
+    "B2_2_0",
+    "B2_3_0",
+    "B2_4_0",
+    "c"
+  ],
+  "outer_parentheses_removed": 0,
+  "output": {
+    "bytes": 5066574,
+    "path": "/home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms",
+    "sha256": "4d3d8eac54467ba5be167c1d75b6c338772d5588e21bc38915dac2dc11c71128"
+  },
+  "row_selection": {
+    "first_generator_ordinal": 1,
+    "kind": "full",
+    "last_generator_ordinal": 174
+  },
+  "safe_variable_order": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "v16",
+    "v17",
+    "v18",
+    "v19",
+    "v20",
+    "v21",
+    "v22",
+    "v23",
+    "v24",
+    "v25",
+    "v26",
+    "v27",
+    "v28",
+    "v29",
+    "v30",
+    "v31",
+    "v32",
+    "v33",
+    "v34",
+    "v35",
+    "v36",
+    "v37",
+    "v38",
+    "v39",
+    "v40",
+    "v41",
+    "v42",
+    "v43",
+    "v44",
+    "v45",
+    "v46",
+    "v47",
+    "v48",
+    "v49",
+    "v50",
+    "v51",
+    "v52",
+    "v53",
+    "v54",
+    "v55",
+    "v56",
+    "v57",
+    "v58",
+    "v59",
+    "v60",
+    "v61",
+    "v62",
+    "v63",
+    "v64",
+    "v65",
+    "v66",
+    "v67",
+    "v68",
+    "v69",
+    "v70",
+    "v71",
+    "v72",
+    "v73",
+    "v74",
+    "v75",
+    "v76",
+    "v77",
+    "v78",
+    "v79",
+    "v80",
+    "v81",
+    "v82",
+    "v83",
+    "v84",
+    "v85",
+    "v86",
+    "v87",
+    "v88",
+    "v89",
+    "v90",
+    "v91",
+    "v92",
+    "v93",
+    "v94",
+    "v95",
+    "v96",
+    "v97",
+    "v98",
+    "v99",
+    "v100",
+    "v101",
+    "v102",
+    "v103",
+    "v104",
+    "v105",
+    "v106",
+    "v107",
+    "v108",
+    "v109",
+    "v110",
+    "c",
+    "z"
+  ],
+  "safe_variable_order_mode": "source",
+  "schema": "moh14-msolve-chart-v1",
+  "source_row_generators": 174,
+  "source_rows_characteristic": 0,
+  "source_total_row_generators": 174,
+  "sources": {
+    "metadata": {
+      "bytes": 8875,
+      "path": "/home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json",
+      "sha256": "3040c7ce7e20b5d7d87b4458d0e4a08955f082c9de47efa9fe467a6c5dc5e3e6"
+    },
+    "rows": {
+      "bytes": 8399684,
+      "path": "/home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv",
+      "sha256": "2b59ba92f2b889b09d38570f6f03bec865ede4d509e85c687f66f3033369254b"
+    }
+  },
+  "stem": "native_meta",
+  "variable_count": 112,
+  "variable_map": [
+    {
+      "original": "h_0_5",
+      "safe": "v1"
+    },
+    {
+      "original": "h_0_4",
+      "safe": "v2"
+    },
+    {
+      "original": "h_1_4",
+      "safe": "v3"
+    },
+    {
+      "original": "h_0_3",
+      "safe": "v4"
+    },
+    {
+      "original": "h_1_3",
+      "safe": "v5"
+    },
+    {
+      "original": "h_0_2",
+      "safe": "v6"
+    },
+    {
+      "original": "h_1_2",
+      "safe": "v7"
+    },
+    {
+      "original": "h_0_1",
+      "safe": "v8"
+    },
+    {
+      "original": "h_1_1",
+      "safe": "v9"
+    },
+    {
+      "original": "h_0_0",
+      "safe": "v10"
+    },
+    {
+      "original": "h_1_0",
+      "safe": "v11"
+    },
+    {
+      "original": "h_2_0",
+      "safe": "v12"
+    },
+    {
+      "original": "A1_0_5",
+      "safe": "v13"
+    },
+    {
+      "original": "A1_0_4",
+      "safe": "v14"
+    },
+    {
+      "original": "A1_1_4",
+      "safe": "v15"
+    },
+    {
+      "original": "A1_0_3",
+      "safe": "v16"
+    },
+    {
+      "original": "A1_1_3",
+      "safe": "v17"
+    },
+    {
+      "original": "A1_0_2",
+      "safe": "v18"
+    },
+    {
+      "original": "A1_1_2",
+      "safe": "v19"
+    },
+    {
+      "original": "A1_0_1",
+      "safe": "v20"
+    },
+    {
+      "original": "A1_1_1",
+      "safe": "v21"
+    },
+    {
+      "original": "A1_0_0",
+      "safe": "v22"
+    },
+    {
+      "original": "A1_1_0",
+      "safe": "v23"
+    },
+    {
+      "original": "A1_2_0",
+      "safe": "v24"
+    },
+    {
+      "original": "A2_0_5",
+      "safe": "v25"
+    },
+    {
+      "original": "A2_1_5",
+      "safe": "v26"
+    },
+    {
+      "original": "A2_2_5",
+      "safe": "v27"
+    },
+    {
+      "original": "A2_0_4",
+      "safe": "v28"
+    },
+    {
+      "original": "A2_1_4",
+      "safe": "v29"
+    },
+    {
+      "original": "A2_2_4",
+      "safe": "v30"
+    },
+    {
+      "original": "A2_3_4",
+      "safe": "v31"
+    },
+    {
+      "original": "A2_0_3",
+      "safe": "v32"
+    },
+    {
+      "original": "A2_1_3",
+      "safe": "v33"
+    },
+    {
+      "original": "A2_2_3",
+      "safe": "v34"
+    },
+    {
+      "original": "A2_3_3",
+      "safe": "v35"
+    },
+    {
+      "original": "A2_0_2",
+      "safe": "v36"
+    },
+    {
+      "original": "A2_1_2",
+      "safe": "v37"
+    },
+    {
+      "original": "A2_2_2",
+      "safe": "v38"
+    },
+    {
+      "original": "A2_3_2",
+      "safe": "v39"
+    },
+    {
+      "original": "A2_0_1",
+      "safe": "v40"
+    },
+    {
+      "original": "A2_1_1",
+      "safe": "v41"
+    },
+    {
+      "original": "A2_2_1",
+      "safe": "v42"
+    },
+    {
+      "original": "A2_3_1",
+      "safe": "v43"
+    },
+    {
+      "original": "A2_4_1",
+      "safe": "v44"
+    },
+    {
+      "original": "A2_0_0",
+      "safe": "v45"
+    },
+    {
+      "original": "A2_1_0",
+      "safe": "v46"
+    },
+    {
+      "original": "A2_2_0",
+      "safe": "v47"
+    },
+    {
+      "original": "A2_3_0",
+      "safe": "v48"
+    },
+    {
+      "original": "A2_4_0",
+      "safe": "v49"
+    },
+    {
+      "original": "A3_0_5",
+      "safe": "v50"
+    },
+    {
+      "original": "A3_1_5",
+      "safe": "v51"
+    },
+    {
+      "original": "A3_2_5",
+      "safe": "v52"
+    },
+    {
+      "original": "A3_3_5",
+      "safe": "v53"
+    },
+    {
+      "original": "A3_4_5",
+      "safe": "v54"
+    },
+    {
+      "original": "A3_0_4",
+      "safe": "v55"
+    },
+    {
+      "original": "A3_1_4",
+      "safe": "v56"
+    },
+    {
+      "original": "A3_2_4",
+      "safe": "v57"
+    },
+    {
+      "original": "A3_3_4",
+      "safe": "v58"
+    },
+    {
+      "original": "A3_4_4",
+      "safe": "v59"
+    },
+    {
+      "original": "A3_5_4",
+      "safe": "v60"
+    },
+    {
+      "original": "A3_0_3",
+      "safe": "v61"
+    },
+    {
+      "original": "A3_1_3",
+      "safe": "v62"
+    },
+    {
+      "original": "A3_2_3",
+      "safe": "v63"
+    },
+    {
+      "original": "A3_3_3",
+      "safe": "v64"
+    },
+    {
+      "original": "A3_4_3",
+      "safe": "v65"
+    },
+    {
+      "original": "A3_5_3",
+      "safe": "v66"
+    },
+    {
+      "original": "A3_0_2",
+      "safe": "v67"
+    },
+    {
+      "original": "A3_1_2",
+      "safe": "v68"
+    },
+    {
+      "original": "A3_2_2",
+      "safe": "v69"
+    },
+    {
+      "original": "A3_3_2",
+      "safe": "v70"
+    },
+    {
+      "original": "A3_4_2",
+      "safe": "v71"
+    },
+    {
+      "original": "A3_5_2",
+      "safe": "v72"
+    },
+    {
+      "original": "A3_6_2",
+      "safe": "v73"
+    },
+    {
+      "original": "A3_0_1",
+      "safe": "v74"
+    },
+    {
+      "original": "A3_1_1",
+      "safe": "v75"
+    },
+    {
+      "original": "A3_2_1",
+      "safe": "v76"
+    },
+    {
+      "original": "A3_3_1",
+      "safe": "v77"
+    },
+    {
+      "original": "A3_4_1",
+      "safe": "v78"
+    },
+    {
+      "original": "A3_5_1",
+      "safe": "v79"
+    },
+    {
+      "original": "A3_6_1",
+      "safe": "v80"
+    },
+    {
+      "original": "A3_1_0",
+      "safe": "v81"
+    },
+    {
+      "original": "A3_2_0",
+      "safe": "v82"
+    },
+    {
+      "original": "A3_3_0",
+      "safe": "v83"
+    },
+    {
+      "original": "A3_4_0",
+      "safe": "v84"
+    },
+    {
+      "original": "A3_5_0",
+      "safe": "v85"
+    },
+    {
+      "original": "A3_6_0",
+      "safe": "v86"
+    },
+    {
+      "original": "B2_0_5",
+      "safe": "v87"
+    },
+    {
+      "original": "B2_1_5",
+      "safe": "v88"
+    },
+    {
+      "original": "B2_2_5",
+      "safe": "v89"
+    },
+    {
+      "original": "B2_0_4",
+      "safe": "v90"
+    },
+    {
+      "original": "B2_1_4",
+      "safe": "v91"
+    },
+    {
+      "original": "B2_2_4",
+      "safe": "v92"
+    },
+    {
+      "original": "B2_3_4",
+      "safe": "v93"
+    },
+    {
+      "original": "B2_0_3",
+      "safe": "v94"
+    },
+    {
+      "original": "B2_1_3",
+      "safe": "v95"
+    },
+    {
+      "original": "B2_2_3",
+      "safe": "v96"
+    },
+    {
+      "original": "B2_3_3",
+      "safe": "v97"
+    },
+    {
+      "original": "B2_0_2",
+      "safe": "v98"
+    },
+    {
+      "original": "B2_1_2",
+      "safe": "v99"
+    },
+    {
+      "original": "B2_2_2",
+      "safe": "v100"
+    },
+    {
+      "original": "B2_3_2",
+      "safe": "v101"
+    },
+    {
+      "original": "B2_0_1",
+      "safe": "v102"
+    },
+    {
+      "original": "B2_1_1",
+      "safe": "v103"
+    },
+    {
+      "original": "B2_2_1",
+      "safe": "v104"
+    },
+    {
+      "original": "B2_3_1",
+      "safe": "v105"
+    },
+    {
+      "original": "B2_4_1",
+      "safe": "v106"
+    },
+    {
+      "original": "B2_1_0",
+      "safe": "v107"
+    },
+    {
+      "original": "B2_2_0",
+      "safe": "v108"
+    },
+    {
+      "original": "B2_3_0",
+      "safe": "v109"
+    },
+    {
+      "original": "B2_4_0",
+      "safe": "v110"
+    },
+    {
+      "original": "c",
+      "safe": "c"
+    }
+  ]
+}
+EMIT_RC=0 utc=2026-09-05T14:11:14Z
+input=4d3d8eac54467ba5be167c1d75b6c338772d5588e21bc38915dac2dc11c71128  /home/ubuntu/moh-bigmem-20260905/targets/v38/msolve_native/msolve_native_p1073741827.ms bytes=5066574

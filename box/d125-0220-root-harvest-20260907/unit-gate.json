@@ -1,0 +1,112 @@
+{
+  "assert_nodes": 0,
+  "pins": {
+    "FALLACY-v2.md": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+    "box/d125-minimal-receiver-client-preflight-20260906/client.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "box/d125-parity-unit-normalization-20260907/check.py": "6c6e50674d69fc6731f4d3851aa314381e5a070676274841527581612321b071",
+    "box/d125-parity-unit-normalization-20260907/witness.json": "a04393cf75fbc22d2ff4fb4480fa27600921fba57de42cd5b2556f80cff7e39c",
+    "box/d125-parity-unit-normalization-gate-fable5-20260907/gate_controls.py": "d123d57bd13fa8790fd4154a6c32e4d39db84ec4b2e5eafb65e3a04c74125f50",
+    "box/d125-parity-unit-normalization-gate-fable5-20260907/replay.json": "df885b1a6abadec684bf7145560bc7515e04fc360e71f61feae4394dbc6c13fe",
+    "box/d125-parity-unit-normalization-gate-fable5-20260907/witness-O.json": "0dc1e2b824aafb88e0736d30351bbc5b33678d68b59050205bb386d31573d63e",
+    "box/d125-parity-unit-normalization-gate-fable5-20260907/witness.json": "0dc1e2b824aafb88e0736d30351bbc5b33678d68b59050205bb386d31573d63e",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-parity-unit-normalization-gate-fable5-20260907.md": "53f78754d8e567e145db4038f6f5b39f2f9a56c462178f20b1e94a2f6f0e7e10",
+    "xmodel/d125-small-polynomial-lift-gate-fable5-20260906.md": "4295593a57a65e4d31630aecdef0b54e9d6078935e07cfb5e64acfd83fae4122",
+    "xmodel/d125-zero-lambda-gate-fable5-20260907.md": "33cb032a5d7f52cb12bd9122032ff5336499c3e67b9e650aa2c3c211935dd607"
+  },
+  "runs": [
+    {
+      "flags": [],
+      "mutation": "",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "0dc1e2b824aafb88e0736d30351bbc5b33678d68b59050205bb386d31573d63e",
+      "wall_seconds": 10.06439864798449
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "0dc1e2b824aafb88e0736d30351bbc5b33678d68b59050205bb386d31573d63e",
+      "wall_seconds": 10.215053973020986
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-unchanged-face",
+      "returncode": 1,
+      "stderr_sha256": "f500616299600168ee75db62339e71241da16f1a196fa13941424bf5ccfc84be",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 6.001922786002979
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-unchanged-face",
+      "returncode": 1,
+      "stderr_sha256": "f500616299600168ee75db62339e71241da16f1a196fa13941424bf5ccfc84be",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 6.472080399980769
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-c-power",
+      "returncode": 1,
+      "stderr_sha256": "65385b6d9a44e6e764782c775e92299511f28aa926ab9859f472042524625a8c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 6.545925417100079
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-c-power",
+      "returncode": 1,
+      "stderr_sha256": "65385b6d9a44e6e764782c775e92299511f28aa926ab9859f472042524625a8c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 7.137747785076499
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-omit-guard",
+      "returncode": 1,
+      "stderr_sha256": "4f169106244c267582c2cff2df5f1ead32e4e81207a860005b41549613d7b04b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 10.06879028910771
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-omit-guard",
+      "returncode": 1,
+      "stderr_sha256": "4f169106244c267582c2cff2df5f1ead32e4e81207a860005b41549613d7b04b",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 10.61955882597249
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-parity",
+      "returncode": 1,
+      "stderr_sha256": "adca7881d6133de60f952f65d50f4fb085724e50ce525b3f6e8038e8679a9e6d",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 6.010904390946962
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-parity",
+      "returncode": 1,
+      "stderr_sha256": "adca7881d6133de60f952f65d50f4fb085724e50ce525b3f6e8038e8679a9e6d",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 6.471868034102954
+    }
+  ],
+  "scope": "independent tiny nilpotent moving-face/row transport controls; no full client or nonemptiness",
+  "status": "PASS",
+  "wall_seconds": 40.931116841034964
+}

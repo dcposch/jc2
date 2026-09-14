@@ -1,0 +1,784 @@
+{
+ "checker_sha256": "f88d0665bbe7e4f0dd519167c1f99c4a519235c2c127b76c35273d4b533118c6",
+ "harness_sha256": "9129f9ecc825963fd22483eebfc75df9d9f2271fac533b2790f21dfb30616994",
+ "identity": {
+  "boot": "69938ee6-48bb-4e45-bdf2-efb08c655368",
+  "cwd": "/home/ubuntu/d125-small-full-stream-root-replay-20260907",
+  "pgid": 10183,
+  "pid": 10183,
+  "pid_namespace": "pid:[4026531836]",
+  "start_ticks": "379895"
+ },
+ "mode": "normal",
+ "results": [
+  {
+   "branch": "rational",
+   "case": "unequal",
+   "counts": {
+    "fixed_assignment": 31,
+    "fixed_unit_guard": 6,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "rows": 803,
+    "scalar_guard": 1,
+    "terms": 27577,
+    "zero_rows": 249
+   },
+   "inapplicable_controls": [],
+   "rejected_controls": [
+    {
+     "control": "missing_row",
+     "error": "record count 1371 != 1372"
+    },
+    {
+     "control": "zero_row",
+     "error": "record 599 mismatch at row J/0/0"
+    },
+    {
+     "control": "lambda_swap",
+     "error": "record 1363 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_exponent",
+     "error": "record 1363 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_sign",
+     "error": "record 1363 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "jacobian_sign",
+     "error": "record 599 mismatch at row J/0/0"
+    },
+    {
+     "control": "rho_in_rational",
+     "error": "record 599 mismatch at row J/0/0"
+    },
+    {
+     "control": "minpoly_added",
+     "error": "unexpected minpoly in rational ring"
+    },
+    {
+     "control": "rho_in_rational_sing",
+     "error": "rho coefficient in rational ring"
+    },
+    {
+     "control": "monicity",
+     "error": "record 285 mismatch at coefficient A_g0_p15"
+    },
+    {
+     "control": "fixed_zero_face",
+     "error": "record 299 mismatch at coefficient A_g1_p14"
+    },
+    {
+     "control": "vertex_guard",
+     "error": "record 1367 mismatch at row GUARD/B/0/25"
+    },
+    {
+     "control": "c_target",
+     "error": "header mismatch"
+    },
+    {
+     "control": "scalar_guard",
+     "error": "record 1370 mismatch at row GUARD/c"
+    },
+    {
+     "control": "unknown_variable_id",
+     "error": "invalid variable id in J/0/0"
+    },
+    {
+     "control": "unknown_variable_sing",
+     "error": "undeclared variable lambda9"
+    },
+    {
+     "control": "sing_sign",
+     "error": "Singular polynomial != JSONL row J/0/1"
+    },
+    {
+     "control": "sing_missing_row",
+     "error": "Singular row count 802 != JSONL 803"
+    },
+    {
+     "control": "sing_zero_row",
+     "error": "Singular polynomial != JSONL row J/0/1"
+    },
+    {
+     "control": "sing_variable_order",
+     "error": "declared variables/order differ from JSONL"
+    },
+    {
+     "control": "trailing_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "inserted_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "duplicate_sing_row",
+     "error": "Singular row count 804 != JSONL 803"
+    },
+    {
+     "control": "duplicate_json_key",
+     "error": "duplicate JSON key authority_sha256"
+    },
+    {
+     "control": "trailing_json",
+     "error": "trailing data after complete footer"
+    },
+    {
+     "control": "truncated_no_footer",
+     "error": "missing footer"
+    }
+   ],
+   "singular_nonzero": 554,
+   "singular_rows": 803,
+   "variables": 269,
+   "verdict": "ALL_ACTUAL_ROWS_MATCH"
+  },
+  {
+   "branch": "golden",
+   "case": "unequal",
+   "counts": {
+    "fixed_assignment": 31,
+    "fixed_unit_guard": 6,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "rows": 803,
+    "scalar_guard": 1,
+    "terms": 29462,
+    "zero_rows": 249
+   },
+   "inapplicable_controls": [
+    {
+     "control": "fixed_zero_face",
+     "reason": "no nonorigin fixed-zero coefficient exists"
+    }
+   ],
+   "rejected_controls": [
+    {
+     "control": "missing_row",
+     "error": "record count 1371 != 1372"
+    },
+    {
+     "control": "zero_row",
+     "error": "record 599 mismatch at row J/0/0"
+    },
+    {
+     "control": "lambda_swap",
+     "error": "record 1363 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_exponent",
+     "error": "record 1363 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_sign",
+     "error": "record 1363 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "jacobian_sign",
+     "error": "record 599 mismatch at row J/0/0"
+    },
+    {
+     "control": "field_split",
+     "error": "record count 1373 != 1372"
+    },
+    {
+     "control": "minpoly",
+     "error": "minimal polynomial"
+    },
+    {
+     "control": "minpoly_removed",
+     "error": "minimal polynomial"
+    },
+    {
+     "control": "monicity",
+     "error": "record 285 mismatch at coefficient A_g0_p15"
+    },
+    {
+     "control": "vertex_guard",
+     "error": "record 1367 mismatch at row GUARD/B/0/25"
+    },
+    {
+     "control": "c_target",
+     "error": "header mismatch"
+    },
+    {
+     "control": "scalar_guard",
+     "error": "record 1370 mismatch at row GUARD/c"
+    },
+    {
+     "control": "unknown_variable_id",
+     "error": "invalid variable id in J/0/0"
+    },
+    {
+     "control": "unknown_variable_sing",
+     "error": "undeclared variable lambda9"
+    },
+    {
+     "control": "sing_sign",
+     "error": "Singular polynomial != JSONL row J/0/1"
+    },
+    {
+     "control": "sing_missing_row",
+     "error": "Singular row count 802 != JSONL 803"
+    },
+    {
+     "control": "sing_zero_row",
+     "error": "Singular polynomial != JSONL row J/0/1"
+    },
+    {
+     "control": "sing_variable_order",
+     "error": "declared variables/order differ from JSONL"
+    },
+    {
+     "control": "trailing_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "inserted_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "duplicate_sing_row",
+     "error": "Singular row count 804 != JSONL 803"
+    },
+    {
+     "control": "duplicate_json_key",
+     "error": "duplicate JSON key authority_sha256"
+    },
+    {
+     "control": "trailing_json",
+     "error": "trailing data after complete footer"
+    },
+    {
+     "control": "truncated_no_footer",
+     "error": "missing footer"
+    }
+   ],
+   "singular_nonzero": 554,
+   "singular_rows": 803,
+   "variables": 269,
+   "verdict": "ALL_ACTUAL_ROWS_MATCH"
+  },
+  {
+   "branch": "rational",
+   "case": "common_3",
+   "counts": {
+    "fixed_assignment": 44,
+    "fixed_unit_guard": 6,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "rows": 816,
+    "scalar_guard": 1,
+    "terms": 32699,
+    "zero_rows": 217
+   },
+   "inapplicable_controls": [],
+   "rejected_controls": [
+    {
+     "control": "missing_row",
+     "error": "record count 1447 != 1448"
+    },
+    {
+     "control": "zero_row",
+     "error": "record 675 mismatch at row J/0/0"
+    },
+    {
+     "control": "lambda_swap",
+     "error": "record 1439 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_exponent",
+     "error": "record 1439 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_sign",
+     "error": "record 1439 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "jacobian_sign",
+     "error": "record 675 mismatch at row J/0/0"
+    },
+    {
+     "control": "rho_in_rational",
+     "error": "record 675 mismatch at row J/0/0"
+    },
+    {
+     "control": "minpoly_added",
+     "error": "unexpected minpoly in rational ring"
+    },
+    {
+     "control": "rho_in_rational_sing",
+     "error": "rho coefficient in rational ring"
+    },
+    {
+     "control": "monicity",
+     "error": "record 311 mismatch at coefficient A_g0_p15"
+    },
+    {
+     "control": "fixed_zero_face",
+     "error": "record 326 mismatch at coefficient A_g1_p14"
+    },
+    {
+     "control": "vertex_guard",
+     "error": "record 1443 mismatch at row GUARD/B/0/25"
+    },
+    {
+     "control": "c_target",
+     "error": "record 752 mismatch at row J/2/0"
+    },
+    {
+     "control": "scalar_guard",
+     "error": "record 1446 mismatch at row GUARD/c"
+    },
+    {
+     "control": "unknown_variable_id",
+     "error": "invalid variable id in J/0/0"
+    },
+    {
+     "control": "unknown_variable_sing",
+     "error": "undeclared variable lambda9"
+    },
+    {
+     "control": "sing_sign",
+     "error": "Singular polynomial != JSONL row J/0/0"
+    },
+    {
+     "control": "sing_missing_row",
+     "error": "Singular row count 815 != JSONL 816"
+    },
+    {
+     "control": "sing_zero_row",
+     "error": "Singular polynomial != JSONL row J/0/0"
+    },
+    {
+     "control": "sing_variable_order",
+     "error": "declared variables/order differ from JSONL"
+    },
+    {
+     "control": "trailing_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "inserted_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "duplicate_sing_row",
+     "error": "Singular row count 817 != JSONL 816"
+    },
+    {
+     "control": "duplicate_json_key",
+     "error": "duplicate JSON key authority_sha256"
+    },
+    {
+     "control": "trailing_json",
+     "error": "trailing data after complete footer"
+    },
+    {
+     "control": "truncated_no_footer",
+     "error": "missing footer"
+    }
+   ],
+   "singular_nonzero": 599,
+   "singular_rows": 816,
+   "variables": 295,
+   "verdict": "ALL_ACTUAL_ROWS_MATCH"
+  },
+  {
+   "branch": "golden",
+   "case": "common_3",
+   "counts": {
+    "fixed_assignment": 44,
+    "fixed_unit_guard": 6,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "rows": 816,
+    "scalar_guard": 1,
+    "terms": 34820,
+    "zero_rows": 217
+   },
+   "inapplicable_controls": [
+    {
+     "control": "fixed_zero_face",
+     "reason": "no nonorigin fixed-zero coefficient exists"
+    }
+   ],
+   "rejected_controls": [
+    {
+     "control": "missing_row",
+     "error": "record count 1447 != 1448"
+    },
+    {
+     "control": "zero_row",
+     "error": "record 675 mismatch at row J/0/0"
+    },
+    {
+     "control": "lambda_swap",
+     "error": "record 1439 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_exponent",
+     "error": "record 1439 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_sign",
+     "error": "record 1439 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "jacobian_sign",
+     "error": "record 675 mismatch at row J/0/0"
+    },
+    {
+     "control": "field_split",
+     "error": "record count 1449 != 1448"
+    },
+    {
+     "control": "minpoly",
+     "error": "minimal polynomial"
+    },
+    {
+     "control": "minpoly_removed",
+     "error": "minimal polynomial"
+    },
+    {
+     "control": "monicity",
+     "error": "record 311 mismatch at coefficient A_g0_p15"
+    },
+    {
+     "control": "vertex_guard",
+     "error": "record 1443 mismatch at row GUARD/B/0/25"
+    },
+    {
+     "control": "c_target",
+     "error": "record 752 mismatch at row J/2/0"
+    },
+    {
+     "control": "scalar_guard",
+     "error": "record 1446 mismatch at row GUARD/c"
+    },
+    {
+     "control": "unknown_variable_id",
+     "error": "invalid variable id in J/0/0"
+    },
+    {
+     "control": "unknown_variable_sing",
+     "error": "undeclared variable lambda9"
+    },
+    {
+     "control": "sing_sign",
+     "error": "Singular polynomial != JSONL row J/0/0"
+    },
+    {
+     "control": "sing_missing_row",
+     "error": "Singular row count 815 != JSONL 816"
+    },
+    {
+     "control": "sing_zero_row",
+     "error": "Singular polynomial != JSONL row J/0/0"
+    },
+    {
+     "control": "sing_variable_order",
+     "error": "declared variables/order differ from JSONL"
+    },
+    {
+     "control": "trailing_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "inserted_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "duplicate_sing_row",
+     "error": "Singular row count 817 != JSONL 816"
+    },
+    {
+     "control": "duplicate_json_key",
+     "error": "duplicate JSON key authority_sha256"
+    },
+    {
+     "control": "trailing_json",
+     "error": "trailing data after complete footer"
+    },
+    {
+     "control": "truncated_no_footer",
+     "error": "missing footer"
+    }
+   ],
+   "singular_nonzero": 599,
+   "singular_rows": 816,
+   "variables": 295,
+   "verdict": "ALL_ACTUAL_ROWS_MATCH"
+  },
+  {
+   "branch": "rational",
+   "case": "common_4",
+   "counts": {
+    "fixed_assignment": 44,
+    "fixed_unit_guard": 6,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "rows": 816,
+    "scalar_guard": 1,
+    "terms": 44960,
+    "zero_rows": 97
+   },
+   "inapplicable_controls": [],
+   "rejected_controls": [
+    {
+     "control": "missing_row",
+     "error": "record count 1599 != 1600"
+    },
+    {
+     "control": "zero_row",
+     "error": "record 827 mismatch at row J/0/0"
+    },
+    {
+     "control": "lambda_swap",
+     "error": "record 1591 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_exponent",
+     "error": "record 1591 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_sign",
+     "error": "record 1591 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "jacobian_sign",
+     "error": "record 827 mismatch at row J/0/0"
+    },
+    {
+     "control": "rho_in_rational",
+     "error": "record 827 mismatch at row J/0/0"
+    },
+    {
+     "control": "minpoly_added",
+     "error": "unexpected minpoly in rational ring"
+    },
+    {
+     "control": "rho_in_rational_sing",
+     "error": "rho coefficient in rational ring"
+    },
+    {
+     "control": "monicity",
+     "error": "record 387 mismatch at coefficient A_g0_p15"
+    },
+    {
+     "control": "fixed_zero_face",
+     "error": "record 402 mismatch at coefficient A_g1_p14"
+    },
+    {
+     "control": "vertex_guard",
+     "error": "record 1595 mismatch at row GUARD/B/0/25"
+    },
+    {
+     "control": "c_target",
+     "error": "record 904 mismatch at row J/2/0"
+    },
+    {
+     "control": "scalar_guard",
+     "error": "record 1598 mismatch at row GUARD/c"
+    },
+    {
+     "control": "unknown_variable_id",
+     "error": "invalid variable id in J/0/0"
+    },
+    {
+     "control": "unknown_variable_sing",
+     "error": "undeclared variable lambda9"
+    },
+    {
+     "control": "sing_sign",
+     "error": "Singular polynomial != JSONL row J/0/0"
+    },
+    {
+     "control": "sing_missing_row",
+     "error": "Singular row count 815 != JSONL 816"
+    },
+    {
+     "control": "sing_zero_row",
+     "error": "Singular polynomial != JSONL row J/0/0"
+    },
+    {
+     "control": "sing_variable_order",
+     "error": "declared variables/order differ from JSONL"
+    },
+    {
+     "control": "trailing_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "inserted_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "duplicate_sing_row",
+     "error": "Singular row count 817 != JSONL 816"
+    },
+    {
+     "control": "duplicate_json_key",
+     "error": "duplicate JSON key authority_sha256"
+    },
+    {
+     "control": "trailing_json",
+     "error": "trailing data after complete footer"
+    },
+    {
+     "control": "truncated_no_footer",
+     "error": "missing footer"
+    }
+   ],
+   "singular_nonzero": 719,
+   "singular_rows": 816,
+   "variables": 371,
+   "verdict": "ALL_ACTUAL_ROWS_MATCH"
+  },
+  {
+   "branch": "golden",
+   "case": "common_4",
+   "counts": {
+    "fixed_assignment": 44,
+    "fixed_unit_guard": 6,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "rows": 816,
+    "scalar_guard": 1,
+    "terms": 47621,
+    "zero_rows": 97
+   },
+   "inapplicable_controls": [
+    {
+     "control": "fixed_zero_face",
+     "reason": "no nonorigin fixed-zero coefficient exists"
+    }
+   ],
+   "rejected_controls": [
+    {
+     "control": "missing_row",
+     "error": "record count 1599 != 1600"
+    },
+    {
+     "control": "zero_row",
+     "error": "record 827 mismatch at row J/0/0"
+    },
+    {
+     "control": "lambda_swap",
+     "error": "record 1591 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_exponent",
+     "error": "record 1591 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "lambda_sign",
+     "error": "record 1591 mismatch at row LIFT/B/4/-1"
+    },
+    {
+     "control": "jacobian_sign",
+     "error": "record 827 mismatch at row J/0/0"
+    },
+    {
+     "control": "field_split",
+     "error": "record count 1601 != 1600"
+    },
+    {
+     "control": "minpoly",
+     "error": "minimal polynomial"
+    },
+    {
+     "control": "minpoly_removed",
+     "error": "minimal polynomial"
+    },
+    {
+     "control": "monicity",
+     "error": "record 387 mismatch at coefficient A_g0_p15"
+    },
+    {
+     "control": "vertex_guard",
+     "error": "record 1595 mismatch at row GUARD/B/0/25"
+    },
+    {
+     "control": "c_target",
+     "error": "record 904 mismatch at row J/2/0"
+    },
+    {
+     "control": "scalar_guard",
+     "error": "record 1598 mismatch at row GUARD/c"
+    },
+    {
+     "control": "unknown_variable_id",
+     "error": "invalid variable id in J/0/0"
+    },
+    {
+     "control": "unknown_variable_sing",
+     "error": "undeclared variable lambda9"
+    },
+    {
+     "control": "sing_sign",
+     "error": "Singular polynomial != JSONL row J/0/0"
+    },
+    {
+     "control": "sing_missing_row",
+     "error": "Singular row count 815 != JSONL 816"
+    },
+    {
+     "control": "sing_zero_row",
+     "error": "Singular polynomial != JSONL row J/0/0"
+    },
+    {
+     "control": "sing_variable_order",
+     "error": "declared variables/order differ from JSONL"
+    },
+    {
+     "control": "trailing_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "inserted_command",
+     "error": "permitted trailer/commands only"
+    },
+    {
+     "control": "duplicate_sing_row",
+     "error": "Singular row count 817 != JSONL 816"
+    },
+    {
+     "control": "duplicate_json_key",
+     "error": "duplicate JSON key authority_sha256"
+    },
+    {
+     "control": "trailing_json",
+     "error": "trailing data after complete footer"
+    },
+    {
+     "control": "truncated_no_footer",
+     "error": "missing footer"
+    }
+   ],
+   "singular_nonzero": 719,
+   "singular_rows": 816,
+   "variables": 371,
+   "verdict": "ALL_ACTUAL_ROWS_MATCH"
+  }
+ ],
+ "seconds": 61.37383100499983,
+ "source_pins": {
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-golden/client-common_3-golden.jsonl": "7fa9f5d1be4aca6745f67a1e4a3dcc495f10ec6612fa13c9d87b01890643bc2c",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-golden/client-common_3-golden.sing": "101c4562a87f1ae5cff9745470f63f6a4fc0995ab7f9c54115bcb76f4595a607",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-rational/client-common_3-rational.jsonl": "cb6dd5a002db764412ed5f755d868ef11d91eaa20835a1d981e4fabe9d0eb177",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-rational/client-common_3-rational.sing": "1cf13975b7b4daea1f895defa38aa777af861d804d051605c610fa61d483f632",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_4-golden/client-common_4-golden.jsonl": "3e897ad6578a25aa0ce90e16ae8ab68c4ddf94f5bc2426045792982bf9ea892e",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_4-golden/client-common_4-golden.sing": "addff558c331a1e963e5a764feb192f6c3dc57a9e2b3a1b37aa355d3bcbd0f7b",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_4-rational/client-common_4-rational.jsonl": "276ee6f4c23df9577cbeb832f06e84ae1c06dcf29b960e067d08083d3a0db13e",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_4-rational/client-common_4-rational.sing": "0fde2d1d3cfcc3659f31431bbc2dca8ea506a870c6309e73217f4cd12b68ab7c",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-golden/client-unequal-golden.jsonl": "ad83add3ccdeb56914cf73ab06fe733f7b89aa984e586bb973dde04ca471613b",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-golden/client-unequal-golden.sing": "77f127a903152cc52ebb2fd40d8e0d7ca76aeba2fe7306b4e87872189c9c28ec",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/client-unequal-rational.jsonl": "b8db27661d1bfd3dcc5dfe1d1271b78c3f6375e06201654977a51380cd6ebcac",
+  "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/client-unequal-rational.sing": "c089c33301e3889e0c20527386719f411907cf2957ecfad3d93c65f7be24e718"
+ },
+ "status": "ALL_SIX_ACTUAL_STREAMS_MATCH_CONTROLS_REJECT"
+}

@@ -1,0 +1,66 @@
+{
+  "observed_utc": "2026-09-11 06:50:05 UTC",
+  "observations": [
+    {
+      "kind": "fleet",
+      "value": []
+    },
+    {
+      "kind": "quota",
+      "value": {
+        "Name": "Running On-Demand Standard (A, C, D, H, I, M, R, T, Z) instances",
+        "Value": 1920
+      }
+    },
+    {
+      "kind": "image",
+      "value": [
+        {
+          "Id": "ami-066263bf15bd856de",
+          "State": "available",
+          "Architecture": "x86_64",
+          "Root": "/dev/sda1"
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "value": [
+        {
+          "ID": "subnet-948915c9",
+          "VPC": "vpc-0f261d77",
+          "State": "available",
+          "AvailableIP": 247
+        }
+      ]
+    },
+    {
+      "kind": "usage",
+      "value": {
+        "Label": "ResourceCount",
+        "Datapoints": [
+          {
+            "Timestamp": "2026-09-11T06:45:00+00:00",
+            "Maximum": 84,
+            "Unit": "None"
+          },
+          {
+            "Timestamp": "2026-09-11T06:40:00+00:00",
+            "Maximum": 84,
+            "Unit": "None"
+          },
+          {
+            "Timestamp": "2026-09-11T06:35:00+00:00",
+            "Maximum": 84,
+            "Unit": "None"
+          },
+          {
+            "Timestamp": "2026-09-11T06:30:00+00:00",
+            "Maximum": 84,
+            "Unit": "None"
+          }
+        ]
+      }
+    }
+  ]
+}

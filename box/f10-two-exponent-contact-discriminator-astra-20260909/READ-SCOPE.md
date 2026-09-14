@@ -1,0 +1,5 @@
+# Read scope
+
+First action2026-09-09T20:44:51.005130624UTC; controlling cap20:59:51.005130624UTC, first+15minutes earlier than21:01. Both owned targets were absent before the lease. Sole science input is exactly the12982-byte accepted16l producer pinned in PINS.json; its current hash was verified before a new WHOLE read. No other source, provenance, current review, ledger, peer or runtime artifact was read. The literal finite H6/H7 formulas, single-contact u-unit argument and licensed scale are the only imported mathematical content. The new quartic criterion is an independent manual derivation, not a promoted theorem.
+
+ZERO mathematical subprocesses, arithmetic/CAS/import/compile/test, numerical sampling, coefficient artifacts, network/AWS/proc/agents or shared/frozen/protected writes. Documentary hash/time/read metadata, own apply_patch edits and the existing artifact_finalize publication tool only. Own report retains the unresolved assigned question without creating a canonical OPEN identifier; explicit quantity and cheapest future test are stated, with unknown cost and no authority.

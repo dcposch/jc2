@@ -1,0 +1,90 @@
+{
+  "pins": {
+    "FALLACY-v2.md": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+    "box/d125-low-jet-saturation-discriminator-20260907/check.py": "6613b91e1e380415afff5bca4d6fa1df7a43d9ab2d3c3cbb2576cb13aaf7e839",
+    "box/d125-low-jet-saturation-discriminator-20260907/witness.json": "37fc6434e2020d4580bf7401f0ed1eefde80778d6165e2cb406bbd045a1c92ca",
+    "box/d125-low-jet-saturation-gate-fable5-20260907/gate_controls.py": "2ce673dd76d6519d50a3a5a619676eee97ef9cee18a3870036144973bb30525e",
+    "box/d125-low-jet-saturation-gate-fable5-20260907/input_pins.txt": "67a5187dfc0f52fb086a14300e3a3850f5ae75c5d5a0f30e8a03eae0a204ed4e",
+    "box/d125-low-jet-saturation-gate-fable5-20260907/replay.json": "017d77fe51474d529b297f11c98afa4422aad4aae358d1614f81138d5af5deb8",
+    "box/d125-low-jet-saturation-gate-fable5-20260907/witness-O.json": "cc2f5336f63fe9dd9cf631bdaac17987d48ac393cd5db0d0e4cd7f19ff0e319e",
+    "box/d125-low-jet-saturation-gate-fable5-20260907/witness.json": "cc2f5336f63fe9dd9cf631bdaac17987d48ac393cd5db0d0e4cd7f19ff0e319e",
+    "box/d125-minimal-receiver-client-preflight-20260906/client.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "xmodel/d125-b-reconstruction-gate-fable5-20260906.md": "3f154e7816deb5de39e727f99cafac3328592c703af246614d4f1e9fe2ccf1ea",
+    "xmodel/d125-lift-hermite-gate-fable5-20260906.md": "7e2594d53150bf4346f4e4cc6e7f6ff05a021b045b640128de763cc653a8a8ca",
+    "xmodel/d125-low-jet-saturation-discriminator-astra-20260907.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+    "xmodel/d125-low-jet-saturation-gate-fable5-20260907.md": "65bb46ee40c9dc7c873de732a333f000206c2efa4016be06e1f89b880effa583",
+    "xmodel/d125-minimal-receiver-client-preflight-astra-20260906.md": "e0debc7da22b8864ba43f0d29928e2104f2d8f161421ad26f29d8017f7b95e80",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-zero-k-boundary-classification-astra-20260907.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2",
+    "xmodel/d125-zero-k-classification-gate-fable5-20260907.md": "68e04e8ce62585b824d73749b956f51ea58a46661375e4c810d747680be5370f"
+  },
+  "runs": [
+    {
+      "flags": [],
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "cc2f5336f63fe9dd9cf631bdaac17987d48ac393cd5db0d0e4cd7f19ff0e319e"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-wrong-sign",
+      "returncode": 1,
+      "stderr": "FAIL cert-k4-h2\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-omit-A1B3",
+      "returncode": 1,
+      "stderr": "FAIL A1B3-terms\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-false-unguarded-equivalence",
+      "returncode": 1,
+      "stderr": "FAIL false-unguarded-equivalence\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "cc2f5336f63fe9dd9cf631bdaac17987d48ac393cd5db0d0e4cd7f19ff0e319e"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-wrong-sign",
+      "returncode": 1,
+      "stderr": "FAIL cert-k4-h2\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-omit-A1B3",
+      "returncode": 1,
+      "stderr": "FAIL A1B3-terms\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-false-unguarded-equivalence",
+      "returncode": 1,
+      "stderr": "FAIL false-unguarded-equivalence\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "low Jacobian rows, truncated boundary coefficients, two degree-five inertness monomials; no full pair/source",
+  "status": "PASS",
+  "wall_seconds": 0.8465538469608873
+}

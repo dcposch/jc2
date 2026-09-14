@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-zero-lambda-gate-fable5-20260907/gate_controls.py", line 90, in <module>
+    need(obs==closed_form(i,j), f'closed form mismatch at g^{i}p^{j}: {obs} vs {closed_form(i,j)}')
+  File "/home/ubuntu/jc2/box/d125-zero-lambda-gate-fable5-20260907/gate_controls.py", line 14, in need
+    if not ok: raise Fail(msg)
+               ^^^^^^^^^^^^^^^
+Fail: closed form mismatch at g^0p^1: {(0, 1, 0): -1, (0, 0, 0): 1} vs {(0, 1, 0): -1}
+Command exited with non-zero status 1
+0.09 wall 0.08 user 31176 KB
+exit=1

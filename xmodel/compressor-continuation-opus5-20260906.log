@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/compressor-continuation-opus5-20260906.md` (13,159 body bytes, SHA `bcff96e3…`, verify PASS).
+
+## What I found and did
+
+**Custody.** 10/10 charged inputs verified via awk-built manifest → `sha256sum -c`, no mismatch.
+
+**(1) The Singular chain was already dead.** No `classA-compress-R005-v2` unit existed (loaded or unloaded) — only R006/R008 transients. Its end state survives solely in the charged `singular-superseded.json`: 6 pivots, 478 generators, 2,598,694 terms. It had been superseded on the worker by `fast_compress.py` (exact‑ℚ *block* regeneration), which was at pivot 38 at adoption.
+
+**(2) Continuation.** I left the exact‑ℚ run going — it reached pivot 54 (430 gens, 17,847,884 terms) then died at ~09:00Z with no OOM in `dmesg`/`journalctl -k` and no traceback; cause undetermined. I mirrored it at p = 2³⁰+3 and produced three complete presentations of the c=1 section: **P0** (0 pivots, 306 vars, 484 gens, 2,902,778 terms), **P13** (293/471/2,610,428), **P36** (270/448/10,659,629).
+
+**Completion is not reachable** — and that's the substantive finding. Term count bottoms at pivot 11 and then fills in at 1.046×/pivot; 208 arithmetic pivots would need ~6×10⁸–2×10¹⁰ terms. `t_regen` is 90% of wall, so the lever is an incremental regenerator, not a bigger box.
+
+**(3) Soundness proved.** Lemma stated with proof; (H1) `∂r/∂v == unit` (a *constant*) asserted at every pivot — 13/13, 34/34, 36/36, 54/54 — plus (H2)–(H4) and the rejection controls. Every unit is `18k`, k=1..13. I added an independent random-point lift certificate the engine lacked; it passed and is **non-vacuous** (exactly the 34 consumed rows vanish; the other 450 don't).
+
+**(4) msolve.** Patched build, both provenance controls replayed at p. P36 ran the full 60-min cap (exit 124, peak 76.7 GiB, 46 matrices, degrees 5–10, largest 314045×5601143). No `[1]`, no basis.
+
+**(5)/(6) Verdict.** Two things I'd flag rather than let stand as wins:
+- **≤600 variables is met but not evidence** — the uncompressed system already has 307.
+- **The telemetry does not rank the presentations.** F4 degree isn't a common index (substitution raises generator degree; the runs open at degrees 2/4/5), matrix sizes are mixed not ordered, and thread counts differed. Notably P13 — strictly smaller than P0 on all three axes — was the *worst* on memory (120.8 GiB). So the compression is sound and certified, but not established as a solver win.
+
+Worker `i-0b019d96be51d78a4` terminated; box is 268 KB / 25 files.
+DIVERT path=xmodel/compressor-continuation-opus5-20260906.md status=CLEAN_SEALED body_bytes=13159 body_sha256=bcff96e38ba81a800390d4f5942f3ade33886ce410c80f77eaccbf4948056f79

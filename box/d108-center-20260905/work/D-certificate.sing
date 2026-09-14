@@ -1,0 +1,5 @@
+ring R=0,(Zc,c,jet0,jet1,jet2),dp;
+ideal I=-jet0^2*jet1^2 + 2*jet0*jet1*jet2 - jet2^2,5*jet0^3*jet1^2 - 12*jet0^2*jet1*jet2 - 2*jet0*jet1^3 + 7*jet0*jet2^2 + 2*jet1^2*jet2,2*jet0*jet1 - 2*jet2,-c - 10*jet0^4*jet1^2 + 30*jet0^3*jet1*jet2 + 15*jet0^2*jet1^3 - 21*jet0^2*jet2^2 - 26*jet0*jet1^2*jet2 - jet1^4 + 9*jet1*jet2^2,-12*jet0^2*jet1 + 14*jet0*jet2 + 2*jet1^2,Zc*c-1;
+matrix T=lift(I,1);
+"LABELS minor_n6_pi0 minor_n7_pi0 minor_n7_pi1 minor_n8_pi0 minor_n8_pi1 Zc*c-1"; "COFACTORS"; print(T);
+poly chk=0; int i; for(i=1;i<=ncols(I);i++){chk=chk+I[i]*T[i,1];} "CHECK"; chk;

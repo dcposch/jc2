@@ -1,0 +1,100 @@
+                                                                 INJECTIVITY ON ONE LINE
+
+
+
+                                                                       by Janusz Gwoździewicz
+arXiv:alg-geom/9305008v1 19 May 1993
+
+
+
+
+                                            Abstract. Let k be an algebraically closed ﬁeld of characteristic zero. Let H : k 2 →
+                                            k 2 be a polynomial mapping such that the Jacobian Jac H is a non-zero constant. In
+                                            this note we prove, that if there is a line l ⊂ k 2 such that H|l : l → k 2 is an injection,
+                                            then H is a polynomial automorphism.
+
+
+
+
+                                                                              1. Main result
+                                         Let k be an algebraically closed field of characteristic zero. Put k ∗ = k \ {0}.
+                                       By Aut k 2 we denote the group of polynomial automorphisms i.e. all mappings
+                                       H = (f, g) : k 2 → k 2 , f , g ∈ k[x, y] for which there exists an inverse polynomial
+                                       mapping. Remind that for H ∈ Aut k 2 the Jacobian Jac H is a non-zero constant.
+                                       The famous Keller conjecture states that any polynomial mapping which has the
+                                       non-zero constant Jacobian is a polynomial automorphism.
+                                       Theorem 1.1. Let H : k 2 → k 2 be a polynomial mapping such that Jac H ∈ k ∗ . If
+                                       there exists a line l ⊂ k 2 such that H|l : l → k 2 is injective then H is a polynomial
+                                       automorphism.
+                                          The proof of the above theorem is given in Section 2 of this note. Let us note
+                                       here that a weaker result (injectivity on three lines) has been proved recently in [4].
+
+                                                                      2. Proof of the theorem
+                                          The proof of our result is based on the Abhyankar–Moh theorem and on some
+                                       properties of Newton’s polygon which we quote below.
+                                          If f is a polynomial in k[x, y] then Sf denotes the support of f , that is, Sf is
+                                       the set of integer points (i, j) such that the monomial xi y j appears in f with a
+                                       non-zero coefficient. We denote by Nf the convex hull (in the real space R2 ) of
+                                       Sf ∪ {(0, 0)}. The set Nf is called (see [2]) Newton’s polygon of f .
+                                       Theorem 2.1. ( [2], [3, theorem 3.4.]) Let f , g be polynomials in k[x, y]. Assume
+                                       that Jac(f, g) is a non-zero constant and deg f > 1, deg g > 1. Then the polygons
+                                                                             deg g
+                                       Nf and Ng are similar, that is Ng = deg   f Nf .
+
+                                         The following lemma is easy to check, so we omit the proof.
+                                       Lemma 2.2. Let f , g be polynomials in k[x, y] with Jac(f, g) ∈ k ∗ . If deg f ≤ 1
+                                       or deg g ≤ 1 then the mapping (f, g) is a polynomial automorphism.
+
+                                                                                                                      Typeset by AMS-TEX
+                                                                                         1
+2                               BY JANUSZ GWOŹDZIEWICZ
+
+Lemma 2.3. Let H = (f, g) be a polynomial mapping such that Jac H is a non-zero
+constant. If H(x, 0) = (x, 0) then H ∈ Aut k 2 .
+Proof. First suppose that deg f > 1, deg g > 1. We have
+
+(1)                                        f (x, 0) = x
+(2)                                        g(x, 0) = 0.
+
+                                                                          deg g
+From (1) the point (1, 0) belongs to the polygon Nf , so by theorem 2.1 ( deg f , 0) ∈
+Ng . This means that the polynomial g contains some monomials of the form xi ,
+i > 0 with non-zero coefficients but this is a cotradiction with (2).
+   We have deg f ≤ 1 or deg g ≤ 1 and by lemma 2.2 H is a polynomial automor-
+phism.
+Proof of theorem 1.1. Without loss of generality we may assume that the line l
+has an equation y = 0. Otherwiese we replace H by H ◦ L where L is an affine
+automorphism such that L({y = 0}) = l.
+   Put γ(x) = H(x, 0). By assumptions of the theorem the mapping γ : k → k 2 is
+an injection and γ ′ (x) 6= 0 for x ∈ k, hence γ is an embedding of the line in the
+plane. By Abhyankar-Moh theorem [1] there exist an automorphism H1 ∈ Aut k 2
+such that γ(x) = H1 (x, 0). Let G = H1 ◦ H. We get Jac G = Jac H1−1 Jac H is a
+non-zero constant and G(x, 0) = (x, 0), so by lemma 2.3 G ∈ Aut k 2 . Therefore
+H = H1 ◦ G is a polynomial automorphism.
+
+                                          References
+ 1. S. S. Abhyankar, T. T. Moh, Embeddings of the line in the plane, Journal Reine Angew. Math.
+    276 (1975), 149–166.
+ 2. S. S. Abhyankar, Expansion Techniques in Algebraic Geometry, Tata Inst. of Fundamental
+    Research, Bombay, 1977.
+ 3. J. Lang, Newton polygons of jacobian pairs, Journal of Pure and Applied Algebra 72 (1991),
+    39–51.
+ 4. A. van den Essen, H. Tutaj, A remark on the two-dimensional Jacobian conjecture, (preprint,
+    October, 1992).
+
+                           Injektywność na jednej prostej
+Streszczenie.
+    Niech k b edzie
+              ι     cialem algebraicznie domkni etym
+                                                ι    charakterystyki zero. Niech H : k 2 → k 2
+b edzie
+  ι     odwzorowaniem wielomianowym którego Jakobian Jac H jest stal aι różn aι od zera. W
+pracy dowodzimy, że jeśli istnieje prosta l ⊂ k 2 na której H|l : l → k 2 jest injekcj a,
+                                                                                          ι to H jest
+automorﬁzmem wielomianowym.
+
+  Department of Mathematics,
+Technical University,
+Al. 1000 LPP 7, 25–314 Kielce,
+Poland
+

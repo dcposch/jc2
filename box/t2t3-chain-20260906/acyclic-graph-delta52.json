@@ -1,0 +1,147 @@
+{
+  "T2_depths": {
+    "H_adic": 141,
+    "defect": 20,
+    "physical": 143
+  },
+  "T2_face": "leader55*z^40*(1+z)^15",
+  "T2_face_slots": 56,
+  "T2_face_vector_sha256": "031a1cb74948da83995f6d0d9d561c00fda5e7295e21dbaf88cf0e7d21c9a280",
+  "T3_equality_unit_row": "t3eq+leader55^3",
+  "T3_face": "lambda3*z^105*(1+z)^40",
+  "T3_face_slots": 146,
+  "T3_face_vector_sha256": "2ce824418b57ab57d41704d3f53f45583ca049455040ada2dc588866e2dcbe84",
+  "T3_passive_free_extension_dimension": 7,
+  "T3_passive_standard_coefficients_omitted_as_free_extension": [
+    {
+      "monomial": "G^2",
+      "shift": 33
+    },
+    {
+      "monomial": "G*Q",
+      "shift": 44
+    },
+    {
+      "monomial": "Q^2",
+      "shift": 55
+    },
+    {
+      "monomial": "F",
+      "shift": 66
+    },
+    {
+      "monomial": "G",
+      "shift": 99
+    },
+    {
+      "monomial": "Q",
+      "shift": 110
+    },
+    {
+      "monomial": "1",
+      "shift": 165
+    }
+  ],
+  "T3_recurrence_active": "Q^3+t3eq*F*G+t^11*t3_fq*F*Q",
+  "all_graph_roundtrip_count": 7136,
+  "all_graph_roundtrips_exact_zero": true,
+  "build_wall_seconds": 65.415,
+  "case": "99-delta52",
+  "constraint_row_count": 4470,
+  "decision": "COMPUTE_BOUND_OPEN",
+  "decision_reason": "exact graph quotient remains above 100 generators; no exact-Q Groebner basis was launched",
+  "driver_sha256": "9d0a1e3b2ebf43467c6431ef4b5fe8a194dafa59d6172ed0f14bb75bc1dfdd5f",
+  "field": "Q",
+  "graph_dependencies_all_preceding": true,
+  "graph_generator_count": 7136,
+  "graph_ledger_sha256": "218a0c5b7888a20881104fd0fc67f3218f2bec7f993aef36a679f2063c19332d",
+  "graph_row_count": 7136,
+  "graph_rows_all_monic_rational_leader_plus_one": true,
+  "input": "box/char-degree-20260905/active-gauge/inputs/delta52_stage8.strongest.json",
+  "input_sha256": "3f81dc99770d235099249a818a55b19f0c828d36109e30aa738995177f97dc46",
+  "localizers": [
+    "Z55*leader55-1",
+    "Z3*lambda3-1",
+    "Zc*c-1"
+  ],
+  "maximum_row_label": "def_F_20_69",
+  "maximum_row_terms": 1346,
+  "no_raw_Jacobian_rows": true,
+  "no_saturation": true,
+  "parsed_exact_term_count": 1074150,
+  "peak_RSS_KiB": 1350920,
+  "presentation_generator_count": 7583,
+  "presentation_generator_order_sha256": "774d9263cb704a457810942b1e25aed4c42fdbcae2fb6e83fb9cb962f509f859",
+  "roundtrip_images_sha256": "58f9d21c519edfba3160df7ec9aa063b5fac509b5df10a07ff09e253ca5e3c60",
+  "row_block_counts": {
+    "T2_face": 56,
+    "T2_strict": 1263,
+    "T2_upper": 462,
+    "T3_face": 146,
+    "T3_recurrence": 1,
+    "T3_strict": 2539,
+    "graph": 7136,
+    "inverse": 3
+  },
+  "row_expressions_sha256": "7c3743a6512851df24084bb6d64c3589422f5466c64a1510086660f0fdc7fa42",
+  "row_labels_sha256": "2c872ecf754610b8e3979b1b9efc7eeee47a2ae7cdb2b253af4a51ed220b44ab",
+  "semantic_quotient_generator_count_before_constraint_pivots": 447,
+  "source_free_generators": 442,
+  "source_input_images_exactly_parsed_in_coefficient_ring": true,
+  "source_input_to_presentation_map": "name-identity with the recorded order permutation",
+  "source_input_to_presentation_map_count": 442,
+  "source_input_to_presentation_map_sha256": "47bde14f8c0545593d175fafc58688a394e8d41f339348f9dcca498e5a966edd",
+  "source_plus_added_inverse_generators": 443,
+  "source_residual_rows": 0,
+  "source_support": {
+    "attained_rows": [
+      {
+        "depth": 21,
+        "target": "P"
+      },
+      {
+        "depth": 63,
+        "target": "P^3"
+      },
+      {
+        "depth": 189,
+        "object": "F",
+        "target": "P^9"
+      },
+      {
+        "depth": 126,
+        "object": "G",
+        "target": "P^6"
+      }
+    ],
+    "base": "pi*(pi^2-c)",
+    "common_h_top": "z^24*(1+z)^9",
+    "common_h_top_exactly_checked": true,
+    "delta": "5/2",
+    "frozen_map_support_counts": {
+      "A3": 201,
+      "B2": 194,
+      "C2": 33,
+      "C3": 37,
+      "h3": 24
+    },
+    "frozen_residual_count": 0,
+    "frozen_residual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inverse": "Zc*c-1",
+    "separation": "c",
+    "strict_below_zero": true
+  },
+  "status": "EXACT_ACYCLIC_PRESENTATION_AUDITED_NO_GB_DECISION",
+  "supports": {
+    "C": 201,
+    "D": 194,
+    "F": 501,
+    "G": 321,
+    "Q_defect_jet": 351,
+    "Q_expression": 1575,
+    "R_high": 462,
+    "T3_expression": 2661,
+    "h": 178
+  },
+  "total_row_count": 11606
+}

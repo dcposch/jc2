@@ -1,0 +1,38 @@
+{
+  "characteristic": 0,
+  "command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "Singular",
+    "--cpus=1",
+    "--threads=1",
+    "--flint-threads=1",
+    "--no-rc",
+    "-q",
+    "/home/ubuntu/jc2/box/k16xempty-20260905/t3_boundary_exact/t3_boundary_Q.sing"
+  ],
+  "elapsed_seconds": 1.223449,
+  "label": "t3_boundary",
+  "main": {
+    "accepted": true,
+    "basis_size": 1,
+    "dimension": -1,
+    "lead_dim": -1,
+    "lead_vdim": null,
+    "missing_markers": [],
+    "nf_all_zero": true,
+    "unit": true,
+    "vdim": null,
+    "vdim_matches_predicted": null
+  },
+  "perturbed": null,
+  "returncode": 0,
+  "script": "/home/ubuntu/jc2/box/k16xempty-20260905/t3_boundary_exact/t3_boundary_Q.sing",
+  "script_sha256": "4d5387ada56b2744fbbabb25464e57591c0cc691b6b401cd0229188a67299f61",
+  "stderr": "/home/ubuntu/jc2/box/k16xempty-20260905/t3_boundary_exact/t3_boundary_Q.err",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "/home/ubuntu/jc2/box/k16xempty-20260905/t3_boundary_exact/t3_boundary_Q.out",
+  "stdout_sha256": "ba227299b283481e5b357c2780ceabec8753a642cf3a833e4d4c2c1d301c2f45",
+  "timed_out": false
+}

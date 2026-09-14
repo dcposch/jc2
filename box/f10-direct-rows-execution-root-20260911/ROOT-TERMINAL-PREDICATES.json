@@ -1,0 +1,46 @@
+{
+  "scope": "ROOT metadata-only terminal predicate comparison; no source replay or mathematical promotion",
+  "source_outcome": "NONE",
+  "custody_sha256": "46194928c58f2b271adaca4d0bce3cfdd6a3a0d740fddcfd48b93bf824c9194f",
+  "refusals": [
+    {
+      "label": "refuse-status",
+      "exact_frozen_refusal": true
+    },
+    {
+      "label": "refuse-caps",
+      "exact_frozen_refusal": true
+    },
+    {
+      "label": "refuse-inventory",
+      "exact_frozen_refusal": true
+    },
+    {
+      "label": "refuse-source",
+      "exact_frozen_refusal": true
+    },
+    {
+      "label": "refuse-hash",
+      "exact_frozen_refusal": true
+    },
+    {
+      "label": "startup-produce",
+      "exact_frozen_refusal": true
+    },
+    {
+      "label": "startup-check",
+      "exact_frozen_refusal": true
+    }
+  ],
+  "valid_root_policy": true,
+  "dummy_exact_signal_rss_cleanup": true,
+  "ten_recorded_argv_exact": true,
+  "fast_python_capture_missed": [
+    "startup-produce"
+  ],
+  "actual_producer_python_capture": true,
+  "producer_result": "NORMAL_EXIT1/STOP_INTERNAL_TERM_CAP",
+  "remaining_phases": "NOT_RUN",
+  "whole_unit_cpu_seconds": "153.100505",
+  "whole_unit_peak_memory_bytes": 102072320
+}

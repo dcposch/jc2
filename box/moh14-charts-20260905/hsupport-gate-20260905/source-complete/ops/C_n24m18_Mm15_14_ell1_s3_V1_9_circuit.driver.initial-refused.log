@@ -1,0 +1,11 @@
+{"stem": "C_n24m18_Mm15_14_ell1_s3_V1_9", "mode": "circuit", "host": "172.30.0.28", "intrinsic_unknowns": 129, "auxiliary_unknowns": 225, "state": "EMITTING", "started_utc": "2026-09-05T13:05:04Z"}
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/ops/circuit_run.py", line 17, in <module>
+    with(work/'emit.log').open('w')as fh:run(cmd,stdout=fh,stderr=subprocess.STDOUT,timeout=1200)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/ops/circuit_run.py", line 14, in run
+    def run(args,**kw):return subprocess.run(args,check=True,**kw)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/tmp/jc2-hsupport-solver-venv/bin/python3', '/home/ubuntu/jc2/box/moh14-charts-20260905/msolve_chart.py', 'emit', '--meta', '/home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/circuit/C_n24m18_Mm15_14_ell1_s3/meta/C_n24m18_Mm15_14_ell1_s3_V1_9_circuit.json', '--rows', '/home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/circuit/C_n24m18_Mm15_14_ell1_s3/rows/C_n24m18_Mm15_14_ell1_s3_V1_9_circuit_rows.tsv', '--builder', '/home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/classes/C_n24m18_Mm15_14_ell1_s3/builders/C_n24m18_Mm15_14_ell1_s3_V1_9_builder.sing', '--characteristic', '1073741827', '--output', '/home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/fleet/172.30.0.28/C_n24m18_Mm15_14_ell1_s3_V1_9_circuit/C_n24m18_Mm15_14_ell1_s3_V1_9_circuit_full_p1073741827.ms', '--manifest', '/home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/fleet/172.30.0.28/C_n24m18_Mm15_14_ell1_s3_V1_9_circuit/input.manifest.json', '--json-output', '/home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/fleet/172.30.0.28/C_n24m18_Mm15_14_ell1_s3_V1_9_circuit/emit.json']' returned non-zero exit status 2.

@@ -1,0 +1,12 @@
+--- old/arithmetic.py
++++ new/arithmetic.py
+@@ -235,7 +235,8 @@
+     r=const(1,kindof(a))
+     while n:
+         if n%2:r=mul(r,a)
+-        a,n=mul(a,a),n//2
++        n//=2
++        if n:a=mul(a,a)
+     return r
+ 
+ 

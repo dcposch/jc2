@@ -1,0 +1,35 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll verify the frozen input hashes first, then read the exact-contact drivers and run the I_M / I'_M comparison on all 46 complete rows.Next I’ll build the receipt manifest and check hashes, then inspect the exact-contact drivers.The first awk pass mis-paired SHA and basename because those fields are not consecutive; I’ll pair by index and re-check.Hashes check out. Next I’ll inspect the roster, child-data API, and how the existing drivers consume them.Parent census already matches 1,080 / 995 / 77 / 924. I’ll write a thin replay driver that imports the existing calculus and `descend_own`, then run it on the 46 complete rows.Replay matched the 1,080-config table. I’ll pull the difference-row values and check R009/R050 against the charged report.R063 is a clean counterexample: parent `I_M = 19`, child `I'_M = 71/4`. I’ll write the sealed report and keep the JSON under the size cap.**Preservation FAILS.** The counterexample is R063: the parent has a unique surviving integer \(I_M = 19\), and the licensed child has a unique config with \(I'_M = 71/4 \notin \mathbb{Z}\).
+
+Frozen inputs verified **4/4 OK**. The packet calculus was not rewritten. Parent \(I_M\) is from `exact_contact.py`; child \(I'_M\) is from `child_xu.py` with live `descend_own` own-data (46/46 complete \(u_s=1\) rows: license DETERMINED, \(V\) a singleton, radii agree).
+
+**1080-configuration table (matched exactly):** 1,080 configs, 995 with \(I_M \notin \mathbb{Z}\), 77 with \(I_M < I_m\), 924 killed by integrality alone, 79 surviving.
+
+**46 complete rows** (child \(I'_M\) defined on all 46; 0 undetermined):
+
+| bucket | count | rows |
+|---|---|---|
+| \(I'_M = I_M\) on every surviving integer | 32 | R004 R005 R006 R007 R008 R009 R011 R014 R017 R018 R021 R022 R030–R034 R036 R037 R039–R042 R046–R048 R050 R056 R059 R060 R061 R064 |
+| difference | 8 | see below |
+| both defined, neither integer | 6 | R025–R028, R057, R058 |
+| child undetermined | 0 | — |
+
+**Differences:**
+
+| row | parent surviving \(I_M\) | child surviving \(I'_M\) |
+|---|---|---|
+| R001 | none (integer 4 with \(4 < I_m=5\)) | \(\{4\}\) |
+| R002 | \(\{8\}\) | \(\{4,8,13\}\) |
+| R003 | \(\{9\}\) | \(\{9,13\}\) |
+| R010 | \(\{12\}\) | \(\{6,12\}\) |
+| R013 | \(\{16,24\}\) | \(\{8,16,24,32\}\) |
+| R019 | \(\{18\}\) | \(\{9,18\}\) |
+| R020 | \(\{18\}\) | \(\{9,18\}\) |
+| **R063** | **\(\{19\}\)** | **none (\(71/4\))** |
+
+R009/R050 reproduce the charged numbers (\(I_M=I'_M=8\) on surviving configs). Extra child integers are extra child patterns, not a pairing. R063 does not use that gap: \(71/4\) fails the same integrality test.
+
+**Candidate statement (FAILS):** on a complete \(u_s=1\) necessary tower, the set of integer \(I_M\) of flat parent configs with \(I_M \ge I_m\) equals the set of integer \(I'_M\) of licensed Prop 6.3 child configs. A replay is evidence, not a lemma; the 32 matches are measured counts.
+
+Report: `xmodel/im-descent-replay-grok46-20260906.md` (sealed, 6.1 KB). Drivers: `box/im-descent-20260906/`.
+DIVERT path=xmodel/im-descent-replay-grok46-20260906.md status=CLEAN_SEALED body_bytes=6251 body_sha256=33f48b33880a1f48cab701122c0ad6696847afc8a585211e7352f6977d3fb1c0

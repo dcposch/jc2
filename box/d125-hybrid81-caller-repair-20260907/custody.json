@@ -1,0 +1,43 @@
+{
+  "schema": "jc2.hybrid81-caller-two-bug-repair/v1",
+  "status": "PREP_ONLY_PENDING_DELTA_GATE",
+  "files": {
+    "box/d125-hybrid81-caller-repair-20260907/alarm-semantics.md": "a11183911c23292165732b7db2afb17919fb22505db55f8aea238616f0d761eb",
+    "box/d125-hybrid81-caller-repair-20260907/driver-two-bugs.patch": "5daab0735fd9fceb83acf6886a4364c3f533c7fb67dc88baea7885526a7ce2df",
+    "box/d125-hybrid81-caller-repair-20260907/driver.py": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+    "box/d125-hybrid81-caller-repair-20260907/exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+    "box/d125-hybrid81-caller-repair-20260907/first-tests.json": "488eba7e6ff5727a4957f57af766c318afa88253ad7f4023cfe9f3b06977c225",
+    "box/d125-hybrid81-caller-repair-20260907/hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+    "box/d125-hybrid81-caller-repair-20260907/run_tests.py": "194ac92aae4889393d7777c3ec3df6f7f8a6e7d27bc14b0971398bf1c5c13eb9",
+    "box/d125-hybrid81-caller-repair-20260907/test-results.json": "c9bee29178d6d0d9273b1fb47a6e369a2270adcafe2ff7825cd5a19d18d38bd5",
+    "box/d125-hybrid81-caller-repair-20260907/test_caller.py": "53471683826c4fbc2e35440a08f9b062791c0eee2e8facb721e68bc3c2fad1f1",
+    "box/d125-hybrid81-caller-repair-20260907/test_exact.py": "e42166ce91c8da49b352c7cf3e3f71ada64928795f8a51e92f36e055234d3409",
+    "box/d125-hybrid81-caller-repair-20260907/test_hybrid.py": "b1e35d3935b8e808dcbd935567b77cea7457029e2968c2a3fd32e58ff4c71118",
+    "box/d125-hybrid81-caller-repair-20260907/timed_probe.py": "9c7508c39d3e56690e4398a0247adb48983fbe94165ad27ebbba3c30a7f8b635"
+  },
+  "old_driver": "faf7a1e08fa7fafac09160b57587eb325ef4542da30a7defbf5165bc329569d9",
+  "new_driver": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+  "sol_gate": "b4198c3689e0d713eca6a1a7dfe95854f88bb48f45217b737adb29e03c4fcc46",
+  "sol_fixture": {
+    "jsonl": "d00df83bafddcd3436dad44034bdb1680d306f6d67f8bfa83d4b32de19961bbf",
+    "sing": "d1c334443efb9d31eedc6a821970ce990f9ba9a551b6c8c94fa4411ab4904b2e",
+    "sing_contains_slimgb": true,
+    "sing_executed": false,
+    "engineering_must_derive_control_true_footer": true
+  },
+  "test_batches": 2,
+  "test_wall_total": 25.050054398947395,
+  "test_cpu_total": 5.294506999999999,
+  "peak_rss_kib": 29872,
+  "final_methods_per_mode": 31,
+  "cas_executed": false,
+  "aws_or_ssh": false,
+  "production_source_access": false,
+  "production_authority_created": false,
+  "all_test_children_reaped": true,
+  "pending": [
+    "independent scoped Sol caller delta gate",
+    "actual pinned-Singular tiny hybrid import/index and alarm behavior under separate ROOT engineering GREEN",
+    "actual production serialization size under unchanged2MiB cap"
+  ]
+}

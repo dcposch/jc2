@@ -1,0 +1,17 @@
+# Source perimeter and history checksum
+
+Owner /root/model_productivity, September9,2026. Active read start08:36:51UTC; stop no later than09:00 and within22minutes. ZERO mathematical subprocesses of any size. No uniform local theorem, pending gate, blind/cross body, protected project, AWS/SSH or new agent was read or used.
+
+Fresh hashes preceded WHOLE reads of the accepted minimal receiver composition and the two frozen accepted F2 chain producer/review reports. Their exact paths and hashes are in input-pins.json. These whole reports give a fixed(3,5) necessary chain and explicitly exponent-specific inner polygons. This task generalizes only the earlier ordinaryness/top-form arrow and does not reuse that inner successor classification for arbitrary exponents.
+
+Scoped history search: the three whole accepted reports plus named-pattern F2/all-parameter queries in APPROACHES.md, PROGRESS.md and ladder/REDUCTION.md. The visible canonical history identifies fixed(3,5) F2 receiver/source results; no exact all-q F2 arrow was found in this bounded search. This is not an exhaustive history or literature novelty determination. The search incidentally returned already published F9 status summaries; they are uncharged nonpremises. No current uniform proof/gate body was accessed. Current canonical text is not a scientific parent, and no snapshot of mutable ledgers is charged.
+
+Primary files were freshly hash-verified. Selected complete statement/proof reads (same retained versions independently read earlier today; no new retrieval):
+
+- GGV1401.1784v3: Proposition2.1, Theorem2.6, Proposition2.11(1–3) and proof as comparison; Definition4.3; Definition5.5/Proposition5.6/Corollary5.7 and proof, with the preceding joint-corner proof context; Proposition5.20 with proof; Proposition7.3 and Corollary7.4 with the preceding Corollary7.2 proof; relevant Theorem7.6 statement. This task derives the Euler endpoint directly and does not require a new7.6 or8.2 theorem import. Earlier same-day complete Proposition7.1/Corollary7.2 proof read is retained; mirrored7.3/7.4 remains a named external theorem.
+- GGHV1708.07936v1: exact Theorem2.20(6),(8),(13) and its source construction; full statement/proof read earlier today at the same hash, relevant statement reread now. Section3 Definition3.3 and(3.20) establish nonnegative family parameters; Section5 literal F2 row. Ordinary-rectangle introduction and standardization context previously read at unchanged pins.
+- Guccione–Guccione1605.09430v2: ordinary lower-side Proposition2.1 and whole proof freshly read; its Corollary1.6/preceding residue proof read earlier today at unchanged hash. Proposition2.2's standing minimal/standard hypotheses are NOT imported into the swapped pair.
+
+Retained2022 comparison text is box/ideation-20260906T1210Z/ggvh-2204.14178v1.txt, SHA f3eca2a560b98784ec787104c8b9049ca44bc3dde4bacb38f121376736d02368. Its path was located from the prior accepted provenance and hash-checked only; no new body read or theorem from it is needed. One guessed old input-pins filename was absent; no source data was inferred from that absence.
+
+Primary URLs: https://arxiv.org/pdf/1401.1784v3 ; https://arxiv.org/pdf/1708.07936v1 ; https://arxiv.org/pdf/1605.09430v2 . Selected primary reads are not a claim to have reread entire papers. No mathematical checker, coefficient emission, finite parameter solve, old code replay or source power expansion occurred. All new argument is manual factored prose; source pins/publication checks are metadata only.

@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 09:09:03 UTC, before the 09:15:53 reserve. All writers are idle; nothing remains to request.
+
+**Custody.** All six snapshots were hashed before any body read and match the charged list byte for byte. All six were then read whole with no clipping. Both body seals replay by hash. The inputs rehash unchanged after writing.
+
+**Verdict: every item A through F is CONFIRMED by independent hand replay.**
+- **A.** The fifth-root adjunction is monic, so free of rank five and faithfully flat. The unit w and the substitution X_i = w^(2i) Y_i turn each weight-k row into w^(2k) times its z=1 slice, with B coefficients untouched.
+- **B.** Both low rows replay exactly as w^32(L0 − w³) and w^28(L1 − w³U0). The row change to L1 − U0L0 is unimodular triangular. L0 = w³ is already a unit, so the localization discards no stratum.
+- **C.** Both algebras equal B[Y, w, w⁻¹, L0⁻¹] modulo the same nineteen relations. Every generator image and both composites were replayed. Rank three on the right, rank five on the left, so A = 0 iff C = 0 under arbitrary base change with nilpotents allowed. No A ≅ C is claimed.
+- **D.** The guard reads W·t5·w^40. Parent identities transfer because D is an A-algebra. Field-point extension degrees at most 3 and 5 hold without any chosen embedding. Etaleness holds and is correctly declared inessential.
+- **E.** The M_k envelope, the unique z exponent, the seventeen weights, the weight-19 final row, and the degree bounds 17, 25, 23 and 7 all check. No height, runtime or finiteness claim appears.
+- **F.** All four changed-object controls are genuine. No Y1 unit, rescaling symmetry, S translation or source point is claimed.
+
+**Smallest defect.** The unsigned phrase at line 47 about the difference of the two low rows depends on subtraction order. The exact signed identity at line 59 is correct, so nothing depends on it. REFUTED: nothing. GAP: coefficients, the eighteen sliced rows and the outcome C = 0 remain uncomputed.
+
+**Mandatory correction.** The cover never cites the late operator or the −18 coefficient, so the accepted corrected parent interface changes nothing in it.
+
+**Outputs.** Written only by apply_patch: the gate report at xmodel/f10-r2-scale-cover-gate-fable5-20260910.md, unsealed with the standalone marker as its last line and no hex digest in the body, and the custody file in box/f10-r2-scale-cover-gate-fable5-20260910/ whose six digests were cross-checked against live sha256sum. No Seal, no charge_basis, no OPEN raised, collisions empty.
+DIVERT path=xmodel/f10-r2-scale-cover-gate-fable5-20260910.md status=CLEAN body_bytes=10410 body_sha256=77c865e927726ae3932d3cd054d86d9935d56bb57337300ac59e2f5a4866cc09

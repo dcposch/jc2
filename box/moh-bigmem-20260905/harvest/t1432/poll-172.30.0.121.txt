@@ -1,0 +1,69 @@
+========== 172.30.0.121 utc=2026-09-05T14:30:33Z ==========
+HOST=ip-172-30-0-121 DATE=2026-09-05T14:30:34Z UPTIME= 14:30:34 up 40 min,  2 users,  load average: 1.00, 0.99, 0.75
+--- mem ---
+               total        used        free      shared  buff/cache   available
+Mem:           999Gi        13Gi       989Gi       3.0Mi       1.8Gi       985Gi
+Swap:             0B          0B          0B
+--- dmesg OOM/kill ---
+--- pgrep msolve/Singular/python ---
+8388 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+8381 python3 /home/ubuntu/moh-bigmem-20260905/run_guided_job.py --workdir /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided --meta /home/ubuntu/moh-bigmem-20260905/targets/m12_union/meta.json --rows /home/ubuntu/moh-bigmem-20260905/targets/m12_union/rows.tsv --name m12_union --primes 1073741827 --timeout 10800 --cpus 32
+8383 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+8387 /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+8379 bash run_guided_pipeline.sh m12_union
+8382 bash -c while true; do echo utc=$(date -u +%Y-%m-%dT%H:%M:%SZ) >> /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log; pid=$(pgrep -n Singular || true); echo pid=$pid >> /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log; if [ -n "$pid" ] && [ -r /proc/$pid/status ]; then awk '/VmPeak|VmSize|VmHWM|VmRSS/' /proc/$pid/status >> /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log; fi; sleep 20; done
+10419 bash -s
+--- ps RSS ---
+    PID    PPID USER         ELAPSED   RSS    VSZ %CPU CMD
+   8388    8387 ubuntu         18:27 6972660 7248472 99.8 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+   8381    8379 ubuntu         18:27 112912 122712 0.0 python3 /home/ubuntu/moh-bigmem-20260905/run_guided_job.py --workdir /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided --meta /home/ubuntu/moh-bigmem-20260905/targets/m12_union/meta.json --rows /home/ubuntu/moh-bigmem-20260905/targets/m12_union/rows.tsv --name m12_union --primes 1073741827 --timeout 10800 --cpus 32
+   1287       1 root           40:04 22932 110032  0.0 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+   1198       1 root           40:04 20828  32540  0.0 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+   1719       1 root           38:24  8204  12028  0.0 sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups
+  10435   10419 ubuntu         00:00  3836   9732  0.0 awk NR==1 || /msolve|Singular|python|time |run_/ {print}
+   8379       1 ubuntu         18:27  3632   7764  0.0 bash run_guided_pipeline.sh m12_union
+   8382    8381 ubuntu         18:27  3608   7764  0.0 bash -c while true; do echo utc=$(date -u +%Y-%m-%dT%H:%M:%SZ) >> /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log; pid=$(pgrep -n Singular || true); echo pid=$pid >> /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log; if [ -n "$pid" ] && [ -r /proc/$pid/status ]; then awk '/VmPeak|VmSize|VmHWM|VmRSS/' /proc/$pid/status >> /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log; fi; sleep 20; done
+   8383    8381 ubuntu         18:27  2132   6148  0.0 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+   8387    8383 ubuntu         18:27  1652   2720  0.0 /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+--- logs in HOME ---
+-rw-rw-r-- 1 ubuntu ubuntu 315 Sep  5 14:12 /home/ubuntu/m12_union.guided.log
+--- find outputs ---
+/home/ubuntu/moh-bigmem-20260905/targets/v38/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m15/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m15/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v18/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v18/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log
+/home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.out
+/home/ubuntu/moh-bigmem-20260905/targets/m12_union/meta.json
+/home/ubuntu/moh-bigmem-20260905/launched-workers.json
+--- HOME logs tail ---
+==== TAIL /home/ubuntu/m12_union.guided.log size=315 ====
+GUIDED_PIPELINE_START target=m12_union rows=/home/ubuntu/moh-bigmem-20260905/targets/m12_union/rows.tsv utc=2026-09-05T14:12:06Z
+GUIDED_START name=m12_union gens=425 nvars=78 rows_sha=af3cf058c7e949d7e9958b1c9120b9350436c6eca7a952afbc8ea32f9794ef58
+MODULAR_START p=1073741827 timeout=10800 utc=2026-09-05T14:12:07Z
+
+--- time files ---
+/home/ubuntu/jc2/box/k4ray-20260903/K5_B4_Q_rab.time
+/home/ubuntu/jc2/box/k4ray-20260903/K4_B7_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/K5_B4_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/k4ray_K4_tower_B7.time
+/home/ubuntu/jc2/box/k4ray-20260903/K4_B3_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/K6_B5_Q.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-D121-200.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-passport-D121-200.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-D48-120.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-passport-D48-120.time
+--- /usr/bin/time leftover ---
+total 108
+drwxrwxrwt 13 root root 57344 Sep  5 14:12 .
+drwxr-xr-x 22 root root  4096 Sep  5 13:50 ..
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .ICE-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .X11-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .XIM-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .font-unix
+drwx------  2 root root  4096 Sep  5 13:50 snap-private-tmp
+drwx------  3 root root  4096 Sep  5 13:50 systemd-private-c0fc8a243fd449f99dbebbe8f8f31e45-ModemManager.service-rVuUrZ
+drwx------  3 root root  4096 Sep  5 13:50 systemd-private-c0fc8a243fd449f99dbebbe8f8f31e45-chrony.service-78c9Ro
+POLL_DONE

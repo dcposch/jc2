@@ -1,0 +1,25 @@
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/fleet/i-06d4a0da61650ede5/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:49:25 UTC  (2278 s (38.0 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 679 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 678 completed + 1 in progress; sum of round wall time 6882 s (114.7 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      671    4       20       193654        215 x 226           1.48%        2       18          0.36
+      672    5      121       193348       9549 x 12864         0.07%        5      116          1.57
+      673    5       19       192796        803 x 848           0.66%        1       18          0.25
+      674    6      447       192788     265196 x 380450        0.01%       71      376         54.20
+      675    5       47       193503      12670 x 16813         0.07%        7       40          2.22
+      676    6      412       192994     232304 x 332172        0.01%       38      374         44.99
+      677    5       19       193792       5222 x 7170          0.12%        0       19          0.64
+      678    6       63       193773     114041 x 174650        0.01%        8       55         22.03
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r679 deg 7, sel 42152 of 194322 pairs  [stage: selected]
+    nearest precedent (last completed deg-7 round r196): sel 28232 -> 4024993 x 10777112 0.00%, 1941 s (32.3 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 193654 -> 193773 (only 1 consecutive drop(s) at tail)
+      - live round selected at pair-list size 194322 (list still growing)
+      - degree plateau: max deg 7 unchanged for 620 rounds (6857 s (114.3 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 715); first: line 20: 'Initial prime = 1266886877'

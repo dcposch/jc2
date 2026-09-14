@@ -1,0 +1,70 @@
+PASS C1 origin pole a=2: unique leader x^-2, coeff -(3/16)c^4
+PASS C1 origin pole a=3: unique leader x^-6, coeff -(3/16)c^4
+PASS C1 origin pole a=4: unique leader x^-10, coeff -(3/16)c^4
+PASS C1 alpha!=0 a=0 w=1: unique leader order -3
+PASS C1 alpha!=0 a=0 w=2: unique leader order -5
+PASS C1 alpha!=0 a=0 w=3: unique leader order -7
+PASS C1 alpha!=0 a=0 w=4: unique leader order -9
+PASS C1 alpha!=0 a=0 w=5: unique leader order -11
+PASS C1 alpha!=0 a=0 w=6: unique leader order -13
+PASS C1 alpha!=0 a=0 w=7: unique leader order -15
+PASS C1 alpha!=0 a=1 w=0: unique leader order -4
+PASS C1 alpha!=0 a=1 w=1: unique leader order -4
+PASS C1 alpha!=0 a=1 w=2: unique leader order -5
+PASS C1 alpha!=0 a=1 w=3: unique leader order -7
+PASS C1 alpha!=0 a=1 w=4: unique leader order -9
+PASS C1 alpha!=0 a=1 w=5: unique leader order -11
+PASS C1 alpha!=0 a=1 w=6: unique leader order -13
+PASS C1 alpha!=0 a=1 w=7: unique leader order -15
+PASS C1 alpha!=0 a=2 w=0: unique leader order -8
+PASS C1 alpha!=0 a=2 w=1: unique leader order -8
+PASS C1 alpha!=0 a=2 w=2: unique leader order -8
+PASS C1 alpha!=0 a=2 w=3: unique leader order -8
+PASS C1 alpha!=0 a=2 w=4: unique leader order -9
+PASS C1 alpha!=0 a=2 w=5: unique leader order -11
+PASS C1 alpha!=0 a=2 w=6: unique leader order -13
+PASS C1 alpha!=0 a=2 w=7: unique leader order -15
+PASS C1 alpha!=0 a=3 w=0: unique leader order -12
+PASS C1 alpha!=0 a=3 w=1: unique leader order -12
+PASS C1 alpha!=0 a=3 w=2: unique leader order -12
+PASS C1 alpha!=0 a=3 w=3: unique leader order -12
+PASS C1 alpha!=0 a=3 w=4: unique leader order -12
+PASS C1 alpha!=0 a=3 w=5: unique leader order -12
+PASS C1 alpha!=0 a=3 w=6: unique leader order -13
+PASS C1 alpha!=0 a=3 w=7: unique leader order -15
+PASS C1 origin simple pole: E regular, [x^1]E = B(eta-W'(0)-3c^2/4), a0,a1-free
+PASS C1 p0 root
+PASS C1 jet-omitted control: E==0, B eta!=0, W(0)=-B, W'(0)=eta-3c^2/4, A=c/x
+PASS C1 B=0 control: E==0, both markings hold, A=c/x still has a pole
+PASS C2 m=4 Etilde(x)=s^2 E(rx) mod h^2=s r^3, generic coefficients
+PASS C2 m=4 ratio lcW/lcA^2 preserved
+PASS C2 m=4 lambda^2 y^2 = B^(2m-2)/eta^(2m-1)
+PASS C2 m=5 Etilde(x)=s^2 E(rx) mod h^2=s r^3, generic coefficients
+PASS C2 m=5 ratio lcW/lcA^2 preserved
+PASS C2 m=5 lambda^2 y^2 = B^(2m-2)/eta^(2m-1)
+PASS C2 converse: s=1, r=1/eta0, h=lambda y eta0^(m-2) valid iff eta0^q lambda^2 y^2=1; lc W=p/y^2
+PASS C3 deg R = deg Q = 4m-3 = 13, Q(0)=Q(1)=-1
+PASS C3 Q - sigma Q = (2t-1) D
+PASS C3 norm identity Q(t)Q(1-t) = -R(f(t)), actual A
+PASS C3 phi well defined: Q(tau) = 0 in k[x]/(R)
+PASS C3 psi well defined: R(f) = 0 in k[t]/(Q)
+PASS C3 phi.psi = id: f(tau) = x mod R
+PASS C3 psi.phi = id: tau(f(t)) = t mod Q
+PASS C3 R(-3/4) = -(9/64)(Z(-3/4)^2+8/3)^2: vanishes iff Z(-3/4)^2 = -8/3 (both directions)
+PASS C3 R'(-3/4) = 4/3 whenever R(-3/4)=0, independent of Z'
+PASS C3 Q'(1/2) = -2 whenever Q(1/2)=0
+PASS C3 W-slope at the ramified root: 3W'^2 - 4W' - 2 = 0
+PASS C3 ramified root realised by an actual degree-2 A (cannot be dropped)
+PASS C4 instance: x0=4/3 root of R, t0=4/3 root of Q, tau(x0)=t0
+PASS C4 instance: divisor of Q selected by the factor W1 is t-4/3 only; 1-t0 is not a Q root
+PASS C4 instance: W1(f(t)) = [W1(0)/(M1(0)M1(1))] M1(t) M1(1-t)  (NF with the evaluation constant)
+PASS C4 V = d/dt[M sigma M] (prime means differentiate, then substitute)
+PASS C4 (DF) == 3a t(t-1)(2t-1) * link, actual polynomials
+PASS C4 (DF) is sigma-anti-invariant: DF(1-t) = -DF(t)
+PASS C4 (DF) = (2t-1) * G with G sigma-invariant, i.e. G = G0(f(t)): no equations beyond the x-line residual
+PASS C4 converse: J(0) = a N(0)N(1) = 1 and W(0) = -M(0)M(1)/a = -1 are forced by Q(0)=Q(1)=-1
+PASS C4 swap control m=4: R squarefree, R(0)=-1, next-to-leading coefficient 0
+PASS C4 swap control m=5: R squarefree, R(0)=-1, next-to-leading coefficient 0
+PASS C4 top of WJ=R is (UT) in p=lcW/lcA^2: the leading ratio is forced up to the choice of d-sign
+PASS HIST Xempty b=0 f(v) = 3t(t-1) with t = -(4/3)v^2: the quadratic model is the even-part reduction of the quartic map
+GATE_CONTROLS_PASS count=69

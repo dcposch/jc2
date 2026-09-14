@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate published at `xmodel/d125-b-a-hermite-composition-gate-fable5-20260907.md` (1054 words, single standalone BODY-END marker, nothing after it, no seal, no charge_basis line), finished at 00:19 UTC against the 00:30 deadline.
+
+**Verdict: CONFIRMED at exact desk scope, with one recorded scope correction.**
+
+What I checked and found:
+
+- **Root transaction and inputs.** The composition file hashes to `769ffb37…` as charged. All seven frozen inputs match the charge list and are pinned in the owned box.
+- **Base ring and B graphs.** The 27 A pivots sit at degrees 1 to 14, so A15 = H³, the faces and the origin are untouched, and R is a polynomial ring. The B pivot minors are units of K that depend on H³ alone, so the B graph presentation survives base change to any S-algebra, nonreduced included. No flatness or domain hypothesis is needed.
+- **Shear identity.** The four β formulas follow from the π-power coefficients of A being a5, a10, 1, 0. My control confirms the slots (0,5) and (0,10) are among the 27 A pivots, so a5 and a10 are graph values in R, and the inverse restores β. Uniqueness of the unit-pivot triangular solve over any commutative ring gives the full reconstructed shear identity without imposing compatibility rows.
+- **Lift rows.** B-negative rows are invariant only modulo the A-negative ideal. The requested control with P = t·v⁻¹, Q = 0, s = 1 shows the negative ideal moves from (0) to (t) unless t = 0 is imposed first. The composition does impose it first, so the complete quotient is T[s], with nonemptiness equivalent and dimension one higher where T is nonzero.
+- **Scope correction.** The producer's 444/426/371 unselected high rows count the 780-slot triangle. In all three polygons the γ-degrees of A and B are 9 and 15, so every slot with γ-exponent 24 or more is the zero polynomial. The exact retained count is 339/321/266. This overcounts explicit zeros only and hides no equation. The frozen text was not repaired, only the corrected scope recorded. A per-pair Minkowski census shows the true nonzero count is smaller still.
+
+Controls in `box/d125-b-a-hermite-composition-gate-fable5-20260907/`: stdlib only, exceptions not asserts, normal and `-O` exit 0 in under 0.1 s and 17 MB, three mutations exit 1 in both modes. No CAS, AWS, solver, live gate, ledger or protected file was touched. The baseline exact-solver sequence is unchanged.
+DIVERT path=xmodel/d125-b-a-hermite-composition-gate-fable5-20260907.md status=CLEAN body_bytes=7299 body_sha256=601cbe68958556ca736ade77b5b849d1326835f2328a2b951d2413609ebdbe59

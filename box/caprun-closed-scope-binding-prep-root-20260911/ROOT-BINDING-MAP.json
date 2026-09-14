@@ -1,0 +1,1353 @@
+{
+  "schema": "jc2-closed9-documentary-binding-map/v1",
+  "status": "DISABLED_NO_ACTUAL_VALUES_NO_EXECUTION",
+  "first_reference_inspection_utc": "2026-09-11 10:01:36 UTC",
+  "original_reserve_utc": "2026-09-11 10:13:00 UTC",
+  "original_hard_utc": "2026-09-11 10:16:00 UTC",
+  "inputs": [
+    {
+      "document": "reg",
+      "path": "box/caprun-closed-scope-registration-prep-root-20260911/ROOT-REGISTRATION.template.json",
+      "sha256": "db925cbf9dad59b39444ea4250b839584be68c3bc5353aee5af924d96034e8f4"
+    },
+    {
+      "document": "auth",
+      "path": "box/caprun-closed-scope-authorities-astra-20260911/AUTHORITIES.template.json",
+      "sha256": "ff1c9bdc1641862472b44ec866883da0c7477ec206c81924bbfdfe37fc3b358f"
+    },
+    {
+      "document": "valid",
+      "path": "box/caprun-closed-scope-authorities-astra-20260911/valid.policy.template.json",
+      "sha256": "41757d91b43cade749c805126b8f68d9e11efe71d9970a8cd5643a0eb50f8850"
+    },
+    {
+      "document": "dummy",
+      "path": "box/caprun-closed-scope-authorities-astra-20260911/dummy.policy.template.json",
+      "sha256": "ae6be750928b154195af1169c3c09a628000c42f914df3210dbbe1ee07c7a5c6"
+    }
+  ],
+  "counts": {
+    "string_occurrences": 89,
+    "distinct_tokens": 33,
+    "positive_integer_fields": 29,
+    "explicit_approval_flags": 3,
+    "retained_null_fields": 1
+  },
+  "string_bindings": [
+    {
+      "token": "JC2_INSTANCE_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "instance_id"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_HOSTNAME_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "hostname"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_BOOT_ID_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "boot_id"
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-status",
+            18
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-caps",
+            18
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-inventory",
+            18
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-source",
+            18
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-hash",
+            18
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "valid",
+            18
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-produce",
+            18
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-check",
+            18
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "dummy",
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_PID_NAMESPACE_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "pid_namespace"
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-status",
+            20
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-caps",
+            20
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-inventory",
+            20
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-source",
+            20
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-hash",
+            20
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "valid",
+            20
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-produce",
+            20
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-check",
+            20
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "dummy",
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_PYTHON_SHA_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "pins",
+            "/usr/bin/python3.12"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-status",
+            "runtime",
+            "python_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-caps",
+            "runtime",
+            "python_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-inventory",
+            "runtime",
+            "python_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-source",
+            "runtime",
+            "python_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-hash",
+            "runtime",
+            "python_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "startup-produce",
+            "runtime",
+            "python_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "startup-check",
+            "runtime",
+            "python_sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_SETPRIV_SHA_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "pins",
+            "/usr/bin/setpriv"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_NATIVE_MANIFEST_SHA_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "pins",
+            "/opt/jc2-closedchild-preflight9-20260911a/metadata/native-manifest.json"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_SOURCE_NATIVE_MANIFEST_SHA_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "pins",
+            "/opt/jc2-closedchild-preflight9-20260911a/metadata/source-native-manifest.json"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-status",
+            "runtime",
+            "native_inventory_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-caps",
+            "runtime",
+            "native_inventory_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-inventory",
+            "runtime",
+            "native_inventory_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-source",
+            "runtime",
+            "native_inventory_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "refuse-hash",
+            "runtime",
+            "native_inventory_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "startup-produce",
+            "runtime",
+            "native_inventory_sha256"
+          ]
+        },
+        {
+          "document": "auth",
+          "path": [
+            "startup-check",
+            "runtime",
+            "native_inventory_sha256"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_PREFLIGHT_POLICY_SHA_PLACEHOLDER",
+      "phase": "PRE_HOLDER_STATIC",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "pins",
+            "/opt/jc2-closedchild-preflight9-20260911a/metadata/preflight-policy.json"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_ADMISSION_DEADLINE_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "admission_deadline_utc"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_MATHEMATICAL_DEADLINE_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "mathematical_deadline_utc"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_TASK_DEADLINE_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "task_deadline_utc"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_WORKER_DEADLINE_PLACEHOLDER",
+      "phase": "PRE_HOLDER_OBSERVED",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "worker_deadline_utc"
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_DEVICE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-status",
+            8
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-caps",
+            8
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-inventory",
+            8
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-source",
+            8
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-hash",
+            8
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "valid",
+            8
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-produce",
+            8
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-check",
+            8
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "dummy",
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_REFUSE_STATUS_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-status",
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_OUTER_DEVICE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-status",
+            14
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-caps",
+            14
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-inventory",
+            14
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-source",
+            14
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-hash",
+            14
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "valid",
+            14
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-produce",
+            14
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-check",
+            14
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "dummy",
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_OUTER_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-status",
+            16
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-caps",
+            16
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-inventory",
+            16
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-source",
+            16
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-hash",
+            16
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "valid",
+            16
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-produce",
+            16
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-check",
+            16
+          ]
+        },
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "dummy",
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_REFUSE_STATUS_AUTH_SHA_PLACEHOLDER",
+      "phase": "AFTER_TOPOLOGY_AUTHORITY_HASH",
+      "type": "string",
+      "authority_label": "refuse-status",
+      "derivation": "SHA256 of exact per-label recursively sorted compact ASCII JSON plus one newline",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-status",
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_REFUSE_CAPS_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-caps",
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_REFUSE_CAPS_AUTH_SHA_PLACEHOLDER",
+      "phase": "AFTER_TOPOLOGY_AUTHORITY_HASH",
+      "type": "string",
+      "authority_label": "refuse-caps",
+      "derivation": "SHA256 of exact per-label recursively sorted compact ASCII JSON plus one newline",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-caps",
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_REFUSE_INVENTORY_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-inventory",
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_REFUSE_INVENTORY_AUTH_SHA_PLACEHOLDER",
+      "phase": "AFTER_TOPOLOGY_AUTHORITY_HASH",
+      "type": "string",
+      "authority_label": "refuse-inventory",
+      "derivation": "SHA256 of exact per-label recursively sorted compact ASCII JSON plus one newline",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-inventory",
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_REFUSE_SOURCE_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-source",
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_REFUSE_SOURCE_AUTH_SHA_PLACEHOLDER",
+      "phase": "AFTER_TOPOLOGY_AUTHORITY_HASH",
+      "type": "string",
+      "authority_label": "refuse-source",
+      "derivation": "SHA256 of exact per-label recursively sorted compact ASCII JSON plus one newline",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-source",
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_REFUSE_HASH_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "refuse-hash",
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_VALID_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "valid",
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_VALID_POLICY_SHA_PLACEHOLDER",
+      "phase": "AFTER_TOPOLOGY_AUTHORITY_HASH",
+      "type": "string",
+      "authority_label": "valid",
+      "derivation": "SHA256 of exact per-label recursively sorted compact ASCII JSON plus one newline",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "valid",
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_STARTUP_PRODUCE_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-produce",
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_STARTUP_PRODUCE_AUTH_SHA_PLACEHOLDER",
+      "phase": "AFTER_TOPOLOGY_AUTHORITY_HASH",
+      "type": "string",
+      "authority_label": "startup-produce",
+      "derivation": "SHA256 of exact per-label recursively sorted compact ASCII JSON plus one newline",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-produce",
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_STARTUP_CHECK_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-check",
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_STARTUP_CHECK_AUTH_SHA_PLACEHOLDER",
+      "phase": "AFTER_TOPOLOGY_AUTHORITY_HASH",
+      "type": "string",
+      "authority_label": "startup-check",
+      "derivation": "SHA256 of exact per-label recursively sorted compact ASCII JSON plus one newline",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "startup-check",
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_CHILD_DUMMY_INODE_PLACEHOLDER",
+      "phase": "AFTER_HOLDER_TOPOLOGY",
+      "type": "string",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "dummy",
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "token": "JC2_DUMMY_POLICY_SHA_PLACEHOLDER",
+      "phase": "AFTER_TOPOLOGY_AUTHORITY_HASH",
+      "type": "string",
+      "authority_label": "dummy",
+      "derivation": "SHA256 of exact per-label recursively sorted compact ASCII JSON plus one newline",
+      "occurrences": [
+        {
+          "document": "reg",
+          "path": [
+            "commands",
+            "dummy",
+            59
+          ]
+        }
+      ]
+    }
+  ],
+  "typed_fields": [
+    {
+      "document": "reg",
+      "path": [
+        "enabled"
+      ],
+      "kind": "false",
+      "action": "ROOT_EXPLICIT_APPROVAL_ONLY",
+      "phase": "FINAL_EXPLICIT_RELEASE"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "exclusive_no_concurrent_writer"
+      ],
+      "kind": "false",
+      "action": "ROOT_EXPLICIT_APPROVAL_ONLY",
+      "phase": "FINAL_EXPLICIT_RELEASE"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "durable_device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "PRE_HOLDER_OBSERVED"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "phase_policy"
+      ],
+      "kind": "null",
+      "action": "RETAIN_NULL",
+      "phase": "RETAIN_UNCHANGED"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "outer_device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "outer_inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "root_no_migration"
+      ],
+      "kind": "false",
+      "action": "ROOT_EXPLICIT_APPROVAL_ONLY",
+      "phase": "FINAL_EXPLICIT_RELEASE"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-status",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-status",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-caps",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-caps",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-inventory",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-inventory",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-source",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-source",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-hash",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "refuse-hash",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "valid",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "valid",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "startup-produce",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "startup-produce",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "startup-check",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "startup-check",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "dummy",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "reg",
+      "path": [
+        "closed_child_guard",
+        "leaves",
+        "dummy",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "auth",
+      "path": [
+        "valid",
+        "closed_scope",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "auth",
+      "path": [
+        "valid",
+        "closed_scope",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "auth",
+      "path": [
+        "dummy",
+        "closed_scope",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "auth",
+      "path": [
+        "dummy",
+        "closed_scope",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "valid",
+      "path": [
+        "closed_scope",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "valid",
+      "path": [
+        "closed_scope",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "dummy",
+      "path": [
+        "closed_scope",
+        "device"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    },
+    {
+      "document": "dummy",
+      "path": [
+        "closed_scope",
+        "inode"
+      ],
+      "kind": "null",
+      "action": "OBSERVED_POSITIVE_JSON_INTEGER",
+      "phase": "AFTER_HOLDER_TOPOLOGY"
+    }
+  ],
+  "requirements": [
+    "Authenticate all actual facts; this map contains no values or release authority.",
+    "One common child-device command token requires independently observed equal device values for all nine direct leaves.",
+    "Preserve phase_policy=null, typed_slot_policy={}, CPU origin string0 and PREFLIGHT_ONLY_9.",
+    "Build nine complete authority objects first; eight digests go in exact command slots, while refuse-hash's supplied digest remains64zeros.",
+    "Do not hash an entire template bundle as an authority digest.",
+    "Whole registration/authority/argv comparison and no unresolved placeholder precede final freeze.",
+    "No enabled registration, worker, token, dummy/test, source/import/syntax/AST/CAS execution here."
+  ]
+}

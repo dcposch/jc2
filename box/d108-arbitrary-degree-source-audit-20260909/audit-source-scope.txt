@@ -1,0 +1,170 @@
+DOCUMENTARY EXCERPTS; one-indexed inclusive source lines. Source: AUDIT.md
+Ranges: 9888,9922; 10292,10305; 10432,10455; 10540,10582; 18290,18298; 18335,18342; 18350,18355; 18367,18371; 18381,18386
+
+=== SOURCE LINES 9888,9922 ===
+> (case manifest/freeze SHAs `75c6cb496808ff0c9fd58f3988f6b556dd6c8951390c5573c64f4a2c101765ca`
+> / `ea69b7a086d19a7b0448237d8f6b00ebb79abdcfc3c3c424b7ed450b5382d026`).
+
+## Founding audit — GGV Proposition 4.3 subcase (2), the (8,28) family
+
+> **SUPERSEDING EVIDENCE ERRATUM (2026-08-23).** On a characteristic-zero
+> input, msolve 0.10.1's `-g` **unit-basis short circuit** can print `[1]`
+> from the first machine-prime computation and return before CRT or rational
+> reconstruction, while still printing
+> `#field characteristic: 0`.  Consequently the archived characteristic-zero
+> `[1]` outputs are modular trace evidence, not Gröbner bases or membership
+> certificates over Q.  This supersedes the original Claim 6 inventory and
+> every later proof-tier reading of the same output surface in this file.
+> The files under `dist/jc72108-theory-bundle-v1/` are an immutable historical
+> snapshot and still contain the superseded wording; they must be regenerated
+> from the corrected canonical sources before any further distribution.
+>
+> The generic chart `chartG` remains an exact internal theorem because
+> `jc72108/systems/open_8_28_c2_chartG.q.ms` itself contains the generator
+> `-1`; its one-term certificate is independent of msolve.  No rational
+> cofactor is archived for `cCa2` or `cCa6`, so the campaign's own three-stratum
+> characteristic-zero proof is incomplete.  Finitely many modular unit
+> ideals do not repair that gap without an effective bad-prime bound or a
+> reconstructed rational certificate.  Separately, the full `(72,108)`
+> exclusion retains exact characteristic-zero support from the independently
+> replayed Helali and Suzuki artifacts documented in `jc72108/CROSSCHECK.md`
+> and retained in `archive/crosscheck.tgz`; inference from those explicit
+> systems to the degree family remains conditional on the GGV-Horruitiner
+> reduction, normalization, and transcription bridge.
+
+Audited claim (2026-08-01): **Subcase (2) of Proposition 4.3 of
+Guccione–Guccione–Valqui/Horruitiner (arXiv:2204.14178) — the (8,28) family,
+(deg P, deg Q) = (108,72), reduced to [P,Q] = x^2 with prescribed Newton
+polygons — has no solutions over any field of characteristic 0.**
+
+
+=== SOURCE LINES 10292,10305 ===
+   contained lemma + asserted hypothesis), the strict-vs-nonorigin
+   convention question (settled by inclusion), and the bracket sign
+   convention (settled by negation).
+
+5. **Separate external completion.** `jc72108/CROSSCHECK.md` records exact
+   Helali and Suzuki replays for both Proposition-4.3 subcases, with the
+   archived bundles retained in `archive/crosscheck.tgz`.  Those certificates
+   preserve the conditional `(72,108)` exclusion without using the internal
+   cCa2/cCa6 traces.  Their perimeter is the faithful normalization and
+   transcription of the explicit coefficient systems and the correctness and
+   exhaustiveness of the upstream GGV-Horruitiner Proposition-4.3 reduction;
+   the lower
+   bound 125 additionally uses the upstream enumeration saying this is the
+   sole remaining family below 125.
+
+=== SOURCE LINES 10432,10455 ===
+
+1. **(72,108) subcase (2) — the claim-6 inventory.** The char-0-header
+   files are outside this parser hazard, but only `chartG` has an internal
+   exact certificate; cCa2/cCa6 are first-prime traces. The mod-p
+   corroboration lanes at p=65521/1048573 DID use unreduced files,
+   but all are word-sized (max 1.34e9 < 2^63): msolve parsed the
+   intended systems. Re-verified empirically today (see re-runs). The
+   third prime 2147483629 > 1.34e9: those emissions are reduced by
+   construction. chartG additionally rests on the symbolic -1 (claim
+   7), msolve-free. The full subcase-(2) characteristic-zero verdict stands
+   via the separate exact Helali/Suzuki record, conditional on the shared
+   reduction/transcription bridge; it does not stand on the internal msolve
+   traces.
+2. **(72,108) subcase (1).** The 16 c1_* leaves + open_8_28_c1_v6
+   ARE corrupt-class — but produced NO accepted verdict: every c1
+   lane run died without verdict (notes.md 2026-08-06/07: Xeon all-Z
+   leaf FAILED at 940GB/30h; ultramem I-leaf retired; leaf program
+   CLOSED, novelty rule). Subcase (1) is settled via the EXTERNAL
+   Helali + Suzuki artifacts (CROSSCHECK.md): Helali = gmpy2/flint
+   exact char-0 number-field certificates, Suzuki = exact char-0 +
+   F_23 descent with recorded pivot residues, byte-identical
+   regeneration — NEITHER uses msolve or unreduced mod-p input.
+   **The c1 corruption never touched an accepted verdict.**
+3. **Regression/validation verdicts.** reg_9_24_c3 mod-p suite
+
+=== SOURCE LINES 10540,10582 ===
+  hostile proof audit SOUND, all 5 attacks held (xmodel/
+  grok-td7-law-review.md). Effect: td-7 book 62 -> 6 live cells
+  ((9,15,7,3),(10,15,7,5),(15,25,8,5),(15,25,12,5),(18,27,13,9),
+  (39,65,32,13); 53 routes, 35 budget-equality), 1636/1689 routes
+  removed by theorem. The six are certified LOCAL T1 survivors
+  (explicit admissible solutions); next tier = transport/global.
+
+## SUPERMIND/GUO BOUNDED CERTIFICATE INTAKE (2026-08-24)
+xmodel/intake-supermind-guo-20260824.md (producer) and
+xmodel/review-external-intake-grok.md (different-model hostile review:
+**CONFIRMED WITH GAPS**). This is an artifact/provenance intake, not an
+independent proof count and not an unconditional degree theorem.
+- PROMOTED AT THE STATED ARTIFACT TIERS: the SuperMind first-layer and Case-II
+  exact Python checks; the pinned Case-I Singular characteristic-zero
+  52-dimensional/good-specialization full-rank terminal; Guo's authoritative
+  790-file manifest and its exact/hash/regression/conditional audits; the
+  degree-21 passport enumeration; the advertised characteristic-zero FGLM
+  *program* replay; and the two row-split polynomial identities.
+- EXACT CROSSWALK: SuperMind and Guo use the same two Proposition-4.3 Laurent
+  systems under a lossless renaming, and their Helali/Suzuki reductions give
+  exact zero remainders to the common quintic. Neither proof path invokes
+  msolve `-g`.
+- GAPS/QUALIFIERS: the SuperMind Python regeneration of the pinned Case-I
+  `.sing` file capped; Guo's Sage-only lift, `V(c)`, `D != 0`, and `D=E=0`
+  terminal expansions were not rerun. Guo's FGLM script uses Singular
+  `modStd(I,1)` on a nonhomogeneous global-order ideal: the advertised program
+  replay passes, but it is not to be described as a fully rational `std`
+  certificate.
+- NO GLOBAL PROMOTION: coordinate equivalence and artifact correctness do not
+  establish social or derivational independence. Both bounded exclusions
+  still depend on the GGV-Horruitiner reduction/transcription bridge. Thus no
+  unconditional exclusion of every `(72,108)` counterexample, no unconditional
+  degree-125 theorem, and no implication for JC2 is recorded here.
+
+## Lift retirement (2026-08-13)
+cCa2/cCa6 char-0 lift certificates: RETIRED under the last-chance rule
+(no LIFT-CERT at the post-outage ultramem check; runs killed).
+**CORRECTION (2026-08-23):** those lifts were load-bearing for the campaign's
+own characteristic-zero chart proof.  Three independent modular `[1]`
+verdicts plus satisfiability/emission guards are strong evidence but do not
+imply `1` belongs to the rational ideal.  The internal cCa2/cCa6 proof status
+is therefore open.  The separately replayed exact Helali/Suzuki systems
+preserve the conditional external `(72,108)` conclusion.
+
+=== SOURCE LINES 18290,18298 ===
+### 17(jjjjjjjjjjjj) — 2026-09-06T12:36Z — degree99 external applicability CONFIRMED; frontier STOP, no new internal exclusion
+
+- Primary GGHV arXiv2204.14178v1, PDF SHA ac18e80cc2391f204f73b908a6a6557eb1141d9fbb5ebdb9f6e0a22121db80bd: §2 degree99 table(9,24), Prop4.2 three nonnegative polynomial polygons with bracketx, Theorem5.1 common endpoint obstruction, Props5.2–5.6 and final5.11 contradiction. The external lower bound excludes actual maximum degree<108. This scope applies to the reviewed complete physical F99/G66 family; the one-way point-to-CE implication suffices independently of unproved source-to-chart necessity. Accept as EXTERNAL-THEOREM applicability, not an internal99unit or a replay of the imported corner enumeration/reduction chain. Prior papers [1],[2],[3],[5],[6],[12] remain dependencies at their stated trust tier.
+- Different-model1210 cross reports are terminal and root-read completely, all9commoninputpins/postUNCHANGED/fullhashes verified in box/ideation-20260906T1210Z/cross-collection.json (12:33:39UTC): Fable SHA1ae8efa8fc847bc8a75baef7c34d7b5f0103afcf3a521cfd2a3cafc1f31dd0e1, Opus3cbd420498aa202be457f4fac0aacbc99bbfb76b58ce3d90372f1c8fc059ea43, Sol0f3c65aa3c09d316fa487ea5327566a4581a3ea9810a535196ab6548aa8d3843, Astra bb81e06184f751302fd3ad9094525624fc2b9d50a30e08995e194508ab673888. These confirm the exact primary interface, not the full independent proof chain. Fable blind remains QUARANTINED for invalid charge_basis; the later valid cross report does not rewrite it.
+- Opus blind's specific Prop4.2 case1 objection is REFUTED and withdrawn in its cross. GGV1401.1784v3 Notation1.6/Remark1.7 defines st/en counterclockwise. On (-1,1), P runs from(6,18) to(0,12), determinant12>0; Q from(9,27) to(0,18), determinant18>0. Thus all3Prop4.2cases satisfyThm5.1. Root independently read the primary definition (local core-ggv-layout.txt SHA e3694dde3f83c2ab6ed8d957fc6b53472e6a6dd55486af1dff345eade39e37b1) and checked all6polygons and flipped-endpoint negative control. No corrective shear, literature-gap claim or author contact is warranted.
+- Nearby printed typos in the5.2recurrence and p18translation have explicit local repairs; correct shift is x-D2/3. Finite5.9 and Prop5.4 arithmetic has multiple concordant bounded replays. The new separately sealed integer-nine-generator certificate xmodel/ggvh99-eliminant-replay-astra-20260906.md SHA1fa8ecd4d63ce3b386ba48d1c01fc59d5a7b93d93e93a261609f63ddcd417a01 was root-read and replayed in1.08s/55MiB; all5actual mutations rejected. Its certificate SHAa50d7f535f9d29c4909df28fd25a3c91d1103bcc70ef34bde46138338a2b3c16 uses58integer multiplier terms and no saturation. Root replay banked beside it. This corroborates finite calculations, not an internal reconstruction of the whole theorem; no further duplicate arithmetic review is commissioned absent a new doubt.
+- Preserve two critical limits: fullidealunit does NOT imply466-row subsetunit; an independently checked subsetunit would remain an independent certificate. Literal arbitrary-pair sub125filter is NOT licensed: a hypothetical72/108pair becomes108/108 under target addition. Use only robustactualmax<108 without further normalization proof. Absolute polynomial-Keller degree bounds do not classify K7 J=x^k charts. The64arithmeticpopulation is unchanged and is not an externally open census.
+- STOP new99frontier compute; completed and retained instruments are METHOD/SOURCE-VALIDATION only with a named client for new work. Root authorized exact two-solver stop/harvest on .63; .73K7caps unchanged. D108source-to-GGHVmap remains open and separately assigned, not established by8,28topmatching. JC2 unresolved.
+
+
+=== SOURCE LINES 18335,18342 ===
+
+### 17(pppppppppppp) — 2026-09-06T13:46Z — D108 published-case implication PROVISIONAL; conditional exclusion under review
+
+- Terminal Astra report xmodel/d108-published-case-interface-astra-20260906.md SHA528d745faac9de5a7e80a57e534c1f36377eb99b8576c1cfa72894fa3b110a1e, manifest9e334f7b2fcc421405686d37b8ee86640301e6cb33945bc6bb8e13cc38009b0a, custody794c0995c8983397c5514a5aef5813256cced4a26e91bb9234dd751e1c2f3dc1. Root whole report/checker read, transaction verified, all24 owned/input/report hashes unchanged. Ordinary replay0.03s/17280KiB reproduces exact source edge, successor and six rejected changed-object controls. Root additionally read all of primary [5] Theorem2.20/proof, GGV1 Definition4.3 and Prop5.19/proof; prior whole GGHV Prop4.3 reading retained. No independent large certificate replay.
+- Claimed implication at EXTERNAL-THEOREM trust: an actual physical Keller point of the literal source is a standard(3,2) pair with complete edge A(AB^4-1)^7; Theorem2.20 quantifies over every standard pair, not just a global-gcd-minimal pair. Each root of z^4-1 has multiplicity7m, forcing ((8,28),(1,0))->(11/4,7), l1=4. Type-III removal preserves this corner; gcd(11,7)=1 excludes typeII there, identifying the actual published degree108 row. Proposition4.3 then supplies one of its two literal bracket-x^2 polygon systems existentially. This is stronger than numerical top matching but NOT explicit coefficientwise cut transport.
+- Independent reproof debt remains separate: Cor7.4 propagates only from its d_tilde positivity threshold, not every earlier direction; its range membership is not supplied merely by the fixed positive cone. GGV1 Prop2.11 requires rho>0 as well as rho+sigma>0, so use original(4,-1) four-root convention before swapping, not the old gate's direct(-1,4) s>0-only repair. Published[6] Prop2.5 is arXiv-v2 Prop1.5; split and single-root branches remain distinct. These corrections do not retroactively promote the old diverted source gate.
+- Root read all of jc72108/CROSSCHECK.md, SHA70bc10f8810e65400b40ddd88a5b575acd7dc43676432ec9a37d43e0a8ef40ba, and superseding audit passages. Retained Helali and Suzuki external exact exclusions cover BOTH literal polygon systems conditionally on the recorded reduction/transcription/normalizations; the internal cCa2/cCa6 and msolve-header errata do not revoke that separate route. Historical archive/crosscheck.tgz is absent on this host; no fresh replay or newly available archive is claimed. Targeted current primary web intake through13:34: https://github.com/bilLkarkariy/jc2-72-108-exact-certificates ; draft transcription-audit PR/1; issue/2's reported independent Fraction checks. These are current provenance/reported checks, not root recomputation or a new broad sweep. No universal degree>=125 theorem is promoted.
+- Different-model Fable d108-published-case-gate-fable5-20260906 ACTIVE since13:41:53, due14:12, frozen15-input packet, <=30s/512MiB tiny checks only. If confirmed, the composition conditionally retires this exact full-physical-Keller source family, without another solve. It does not imply the14 residual ideal is unit, prove source necessity, or compute an internal full-ideal certificate. Current lifecycle remains PROVISIONAL; no dependent expensive work. Confirmation with this scope would remove the current finite CE client and is a critical full-round trigger, not a routine pivot promotion to coalesce.
+
+=== SOURCE LINES 18350,18355 ===
+### 17(rrrrrrrrrrrr) — 2026-09-06T14:18Z — D108 gate finds normalization U; closure WITHHELD
+
+- Fable d108-published-case-gate-fable5-20260906 terminal14:01:58, exit0, CLEAN/BODY_SEALED, declaration ABSENT. Report7c6a045bf2995a2efe1d1715a8c4d2390030ea79172f7ea61f82c42a9281cfa8; all15 post-input states UNCHANGED and root15 current-input/report hashes verified before whole report read. The cleaned private snapshot is not claimed freshly rehashed by root. The gate confirms literal standard-pair/full-edge and complete-chain arguments, but verdict3 is GAP(U), verdict4 conditional. This supersedes the producer's unconditional applicability assertion in17(pppppppppppp), not the valid source arithmetic.
+- U requires, after a harmless A translation, deg_B F=84 and highest-B coefficient cA^24, with corresponding G data. Ambient source supports alone do not prove this; the14 residuals are not all Keller equations. Root proposes a short proof from polynomial weighted Euler fields (GGV1 Theorem2.6): an outward positive-weight edge is incompatible with its Euler polynomial's start; at weight(0,1), b>a forces the Euler coefficient linear and the top coefficient a power of a linear form. Local Astra model_productivity now owns d108-upper-envelope-euler-astra-20260906, due14:20; advisory agrees, sealed proof and fresh different-model gate still required. No expensive coefficient-membership test or family retirement yet.
+- Root read the entire reviewer scratch envelope.py; its deleted private-input path needs explicit relocation before replay. It is an ordinary-mode support control with assertions, not proof of U. One earlier broad report search did not explicitly exclude then-live report names; no live body was deliberately consumed, but do not describe that search boundary as perfect isolation. Subsequent searches exclude live paths. No immutable report repaired retroactively.
+
+
+=== SOURCE LINES 18367,18371 ===
+
+### 17(uuuuuuuuuuuu) — 2026-09-06T14:18Z — Euler U lemma sealed, fresh composition gate active
+
+- Astra report08d3fa09506b412dcbddeabb24d70da0f266b90174615cf39013a4311ecabd75 terminal14:14:52; manifestc8881cba3572b36b0c3021ec892f676e308df636f93dd2dc1fc71ffa78f41726. Root transaction verified, whole proof/checker read, four source/checker pins match. Twelve stdlib rational controls replay PASS normal/-O, including wrong common-root rejection; checkerd169f48554949d6660cb1749725913e5a28adbfadba0ab2fb782b8a5f37789a3. Proof is for arbitrary polynomial Keller P with unique total monomial cA^aB^b, a,b>0: deg_B P=b and, by swap, deg_A P=a. If b>a, its top-B coefficient is c(A+s)^a. The two D108 components share s by their zero top bracket. Translation preserves full(4,-1) faces and total/highest-A leaders. EXTERNAL-THEOREM for GGV1 Theorem2.6 existence; no novelty or source-residual radical claim.
+- Fable d108-euler-case-composition-gate-fable5-20260906 launched14:17Z, <=35minutes due14:52,14 frozen inputs. It reviews U and ALL remaining published case composition hypotheses, not only the ODE. No full family retirement before this review/root integration. Model_productivity is now idle; nonemptiness_certificate remains on bounded D125 intake due14:23. No dependent support trimming or full125 construction is authorized.
+
+=== SOURCE LINES 18381,18386 ===
+### 17(wwwwwwwwwwww) — 2026-09-06T14:35Z — D108 exact physical family RETIRED CONDITIONALLY after repaired full interface
+
+- Fresh Fable composition gate xmodel/d108-euler-case-composition-gate-fable5-20260906.md SHA db857b694a64f6cb3257935550ec996c5fc25a4452024b9c304be5c31ba977b5 terminal14:30:20, exit0, CLEAN/BODY_SEALED, ABSENT. Root read receipt only after user-systemd terminal status; all14 post states UNCHANGED,15 current input/report pins match; then whole proof and changed-object checker read. Euler envelope, shared translation, FULL Prop4.3 source interface and conditional family retirement all CONFIRMED. Root agrees at EXTERNAL-THEOREM trust, not independent reproof of the cited chain.
+- The repaired chain is exact-source Keller point -> preserved standard(3,2) pair/full((8,28),(1,0))->(11/4,7) chain -> U via GGV1 Thm2.6 -> both Prop4.3 literal bracket-x² outcomes -> retained external exclusions. In swapped coordinates the U rectangle puts the opposite predecessor in the required open interval by [2]Prop2.1; [2]Prop2.2 supplies the needed positive-weight range. No global-minimality antecedent is imported. Table wording in the gate saying st(R) has y=12d should be read as st(P)'s ordinate12d and st(R)'s ordinate d; its bound d<=1 is the intended scaled-lattice statement, not a new12d condition on R. All proof/certificate dependencies and unavailable fresh archive replay remain explicit.
+- Root replayed the independent15 changed-object controls normal/-O, including the b<a ODE counterobject and both exposed-edge cases. Script8bab78ad329e98fd6926669febafdbbbe408a8c4bd5030f493d6fd3ec6034d6d, reviewer stdout146418feabaad8e05fcbf67811bb454df291c9abce94334f0f7b6e8a78ad3ac6; exact copies retained via apply_patch in box/d108-euler-case-gate-root-replay-20260906/, hashes unchanged. Both runs within25CPU/512MiB/30swall. Earlier12 producer checks already replayed normally/-O; no duplicate large certificate run.
+- Operational consequence: STOP new counterexample search/expansion for this exact D108 full-physical family, just as degree99 was stopped at its different external bound. No subset-unit inference, internal full-ideal certificate, source necessity, explicit coefficientwise full cut map, blanket degree>=125 theorem or JC2 resolution. This is a genuine critical-path change:1435 full strategy round starts now, not a routine micro-round. K7 monomial-J jobs are not covered and retain their caps.

@@ -1,0 +1,55 @@
+{
+  "status": "SEALED_EXACT_Q_OPEN_NO_BRANCH_PROMOTION",
+  "clients": {
+    "99_delta2": "EXACT_Q_OPEN",
+    "99_delta52": "EXACT_Q_OPEN",
+    "108": "EXACT_Q_OPEN"
+  },
+  "source_rows": {
+    "99_delta2": 52893,
+    "99_delta52": 53672,
+    "108": 75111
+  },
+  "localization_control_unit_bits": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "input_hashes_passed": 7,
+  "report_bytes": 24918,
+  "report_sha256": "4b4f6f4e69dd34110f4d61cd16184136feeb20d51c8debad42c35f89ab49ef90",
+  "closed_utc": "2026-09-06T02:09:18.543359+00:00",
+  "elapsed_minutes": 100.32572265,
+  "expansion_attempts": [
+    {
+      "driver": "expanded_q_attempt",
+      "completed_prefix": 27,
+      "cpu_seconds": 600.166876085,
+      "max_rss_KiB": 510460
+    },
+    {
+      "driver": "flint_q_attempt",
+      "completed_prefix": 48,
+      "cpu_seconds": 599.658995998,
+      "max_rss_KiB": 1479492
+    },
+    {
+      "driver": "fast_q_attempt",
+      "completed_prefix": 58,
+      "cpu_seconds": 599.998672471,
+      "max_rss_KiB": 1838936
+    }
+  ],
+  "aggregate_CPU_accounting_upper_seconds": 3460,
+  "CPU_accounting_basis": {
+    "boundary_agent_upper": 1250,
+    "three_expansion_caps": 1800,
+    "root_construction_and_repeats_upper": 310,
+    "remaining_controls_and_allowance": 100
+  },
+  "retained_bytes_before_this_receipt_and_manifest": 704258,
+  "driver_sha256": "a6002823f5dff54ee20b9dab2cc172666511deb2f0d7e9bd88cdbfb4ffe091e8"
+}

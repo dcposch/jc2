@@ -1,0 +1,167 @@
+--- box/f10-r1-engineering-v2-execution-20260909/remote/dispatch_batch.py	2026-09-09 13:08:01.880633889 +0000
++++ box/f10-r1-retained-runtime-code-astra-20260909/dispatch_batch.py	2026-09-09 17:26:00.007788993 +0000
+@@ -6,10 +6,12 @@
+ sys.dont_write_bytecode = True
+ import os, json, hashlib, socket, resource, subprocess, time, datetime
+ from pathlib import Path
+-ROOT = Path('/home/ubuntu/f10-r1-exact-artifact-validation-v2-20260909')
+-INSTANCE = 'i-08d2a40f272ee9fa2'
+-JOB = 'f10-r1-exact-artifact-validation-v2-20260909'
+-DEADLINE = datetime.datetime(2026,9,9,13,35,tzinfo=datetime.timezone.utc).timestamp()
++# DISABLED without a fresh root-written, externally pinned registration.
++ROOT = Path(__file__).resolve().parent
++REGISTRATION = ROOT / 'dispatch.registration.json'
++INSTANCE = JOB = DEADLINE = AGGREGATE = None
++registration = None
++fixed_files = {}
+ first_math = None
+ records = []
+ 
+@@ -36,13 +38,16 @@
+         except (FileNotFoundError,ProcessLookupError,PermissionError): pass
+     return live
+ 
+-def run(name, script, trailing, operation='check', wall=30, cpu=25, rss=2147483648, defect=None, mathematical=False):
++def run(name, script, trailing, profile, operation='check', defect=None, mathematical=False):
+     global first_math
+-    hard = None
++    limits=registration['profiles'][profile]
++    wall,cpu,rss=(limits[k] for k in ('wall_seconds','cpu_seconds','rss_bytes'))
++    hard = DEADLINE
++    require(time.time()+wall+15 < hard, 'insufficient remaining task budget')
+     if mathematical:
+         now=time.time()
+         if first_math is None: first_math=now
+-        hard=min(DEADLINE, first_math+360)
++        hard=min(DEADLINE, first_math+AGGREGATE)
+         require(now+wall+15 < hard, 'insufficient remaining mathematical budget')
+     auth=ROOT/(name+'.authority.json')
+     child=['/usr/bin/python3','-I','-B',str(ROOT/script),str(auth),*map(str,trailing)]
+@@ -54,10 +59,17 @@
+             '--term-grace-seconds','0.25','--cwd',str(ROOT),
+             '--stdout-file',str(ROOT/(name+'.stdout')),'--stderr-file',str(ROOT/(name+'.stderr')),
+             '--telemetry-file',str(ROOT/(name+'.telemetry.json')),'--',*child]
+-    files={str(ROOT/n):digest(ROOT/n) for n in ['builder.py','checker.py','execution_gate.py','run_capped.py',
+-             'probe.py','precision.py','dispatch_batch.py','admissibility.md','frontier.json']}
+-    files['/usr/bin/python3']=digest('/usr/bin/python3')
+-    if operation=='check': files[str(trailing[0])]=digest(trailing[0])
++    files=dict(fixed_files)
++    for path in trailing:
++        candidate=Path(str(path))
++        if candidate.is_file():
++            filename=str(candidate.resolve())
++            if filename in files:
++                require(digest(candidate)==files[filename], 'fixed trailing input changed')
++            else:
++                files[filename]=digest(candidate)
++    for suffix in ('.authority.json','.stdout','.stderr','.telemetry.json','.caller.stdout','.caller.stderr','.dispatch.json'):
++        require(not (ROOT/(name+suffix)).exists(), 'operation output already exists')
+     spec={'schema':'F10-R1-REGISTERED/v1','enabled':True,'job_tag':JOB,'operation':operation,
+           'instance_id':INSTANCE,'hostname':socket.gethostname(),'admissibility_sha256':digest(ROOT/'admissibility.md'),
+           'runner_path':str(ROOT/'run_capped.py'),'cwd':str(ROOT),'caps':caps,
+@@ -69,6 +81,8 @@
+     if defect=='cap': spec['caps']=dict(caps,rss_bytes='1')
+     if defect=='missing-input': del spec['file_sha256'][str(trailing[0])]
+     exclusive(auth,spec)
++    auth.chmod(0o444)  # cooperative frozen per-operation authority; no concurrent writer
++    authority_sha=digest(auth)
+     namespace=os.readlink('/proc/self/ns/pid')
+     started=time.time()
+     with (ROOT/(name+'.caller.stdout')).open('x') as out, (ROOT/(name+'.caller.stderr')).open('x') as err:
+@@ -81,14 +95,15 @@
+     telemetry=json.loads((ROOT/(name+'.telemetry.json')).read_text())
+     require(not quiet(telemetry['pgid']), 'owned live PGID after CAPRUN')
+     for filename,want in files.items(): require(digest(filename)==want,'source/input changed')
++    require(digest(auth)==authority_sha, 'frozen authority changed')
+     record={'name':name,'returncode':rc,'started_utc':datetime.datetime.fromtimestamp(started,datetime.timezone.utc).isoformat(),
+             'ended_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'namespace':namespace,
+-            'caller_pid':process.pid,'caller_stat':caller_stat,'authority_sha256':digest(auth),
++            'caller_pid':process.pid,'caller_stat':caller_stat,'authority_sha256':authority_sha,
+             'telemetry_sha256':digest(ROOT/(name+'.telemetry.json')),'mathematical':mathematical,
+             'first_math_epoch':first_math,'hard_cutoff_epoch':hard,'returned_epoch':returned,
+             'admission_margin_seconds':15,'remaining_group_live':[]}
+     records.append(record); exclusive(ROOT/(name+'.dispatch.json'),record)
+-    require(not mathematical or returned < hard, 'mathematical return at/after hard cutoff: NONDECISION')
++    require(returned < hard, 'return at/after original stored hard cutoff: NONDECISION')
+     if defect:
+         require(rc!=0 and telemetry['status']=='NORMAL_EXIT','gate refusal was not ordinary nonzero exit')
+         require(not Path(trailing[1]).exists(),'postauthorize sentinel written by rejected authority')
+@@ -121,29 +136,60 @@
+     return record
+ 
+ def main():
+-    require(Path.cwd()==ROOT,'wrong remote cwd')
++    global registration, INSTANCE, JOB, DEADLINE, AGGREGATE, fixed_files
++    registration=json.loads(REGISTRATION.read_text())
++    require(registration.get('schema')=='F10-RETAINED-DISPATCH/v1' and registration.get('enabled') is True,
++            'DISABLED: fresh root registration required')
++    require(sys.flags.isolated and sys.flags.dont_write_bytecode, 'require caller Python -I -B')
++    require(Path.cwd()==ROOT and str(ROOT)==registration['cwd'], 'wrong remote cwd')
++    INSTANCE=registration['instance_id']; JOB=registration['job_tag']
++    require(Path('/sys/devices/virtual/dmi/id/sys_vendor').read_text().strip()=='Amazon EC2','wrong vendor')
+     require(Path('/sys/devices/virtual/dmi/id/board_asset_tag').read_text().strip()==INSTANCE,'wrong physical instance')
+-    require(socket.gethostname()=='ip-172-30-0-72','refuse math-hq or wrong host')
+-    require(digest('/usr/bin/python3')=='a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223','interpreter pin')
+-    require(digest(ROOT/'admissibility.md')=='02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a','admissibility pin')
+-    require(digest(ROOT/'frontier.json')=='f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34','frontier pin')
+-    require(digest(ROOT/'builder.py')=='2dcba70d4f14080535c4a58f06bfd50ba4949148e819a6827ab9326828d314b8','builder pin')
+-    require(digest(ROOT/'checker.py')=='e2970c71774607e211ecc7e0f001a0dc02d02410e303ca58cf7c17ab77b9f545','checker pin')
+-    require(digest(ROOT/'execution_gate.py')=='cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6','gate pin')
+-    require(digest(ROOT/'run_capped.py')=='4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2','CAPRUN pin')
+-    require(digest(ROOT/'probe.py')=='02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7','probe pin')
+-    require(digest(ROOT/'precision.py')=='56400dd32f4940a0e77b2da79e9b90792b51588d01f0f1a2fded30efebb0af90','corrected precision pin')
+-    # Caller self-hash is verified by root's external preflight, not recursively embedded here.
++    require(socket.gethostname()==registration['hostname'] and socket.gethostname()!='math-hq','wrong host')
++    require(registration['exclusive_no_concurrent_authority_writer'] is True, 'authority freeze contract missing')
++    for key in ('mathematical_deadline_utc','task_deadline_utc'):
++        stamp=registration[key]
++        require(isinstance(stamp,str) and stamp.endswith('+00:00'),'explicit UTC deadline required')
++    DEADLINE=min(datetime.datetime.fromisoformat(registration[key]).timestamp()
++                 for key in ('mathematical_deadline_utc','task_deadline_utc'))
++    AGGREGATE=registration['aggregate_wall_seconds']
++    require(type(AGGREGATE) is int and AGGREGATE>0,'explicit aggregate cap required')
++    require(registration['file_size_limit_bytes']==16777216,'file cap changed')
++    require(set(registration['profiles'])=={'probe','dummy','transform','check','controls'},'exact finite profiles')
++    for limits in registration['profiles'].values():
++        require(set(limits)=={'wall_seconds','cpu_seconds','rss_bytes'},'profile fields')
++        require(all(type(v) is int and v>0 for v in limits.values()),'explicit positive integer caps')
++    require(registration['profiles']['dummy']['rss_bytes']==33554432,'dummy must retain its reviewed RSS cap')
++    known={
++      'transformer.py':'ff5d08c8b8f0ec30b071893cc9cf99db3a3a56a30bb54d653a19c0a8dd5df869',
++      'checker.py':'7d80b261df626fa84ab72d7ff06e3c37e1ba6f6e98e40d6e7d2142d2397aacda',
++      'execution_gate.py':'cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6',
++      'run_capped.py':'4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2',
++      'probe.py':'02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7',
++      'exact.json':'168bdfd3a791f24a6631de66ae4e71c3f209ee9eb0d21fc466f9aa802f5ad576',
++      'admissibility.md':'02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a',
++      'frontier.json':'f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34'}
++    supplied=registration['file_sha256']
++    needed={str(ROOT/n) for n in [*known,'dispatch_batch.py','semantic_controls.py']} | {'/usr/bin/python3'}
++    require(set(supplied)==needed,'exact required runtime input vector')
++    for n,want in known.items():
++        require(supplied[str(ROOT/n)]==want,'frozen runtime pin altered')
++    for filename,want in supplied.items():
++        require(isinstance(want,str) and len(want)==64 and digest(filename)==want,'runtime source/interpreter pin')
++    fixed_files=dict(supplied); fixed_files[str(REGISTRATION)]=digest(REGISTRATION)
++    for name in ('retained.json','full.receipt.json','controls.receipt.json','preflight.PASS.json','batch.PASS.json','batch.STOP.json'):
++        require(not (ROOT/name).exists(),'exclusive job output already exists')
+     for defect in ['disabled','wronghost','argv','cap','missing-input']:
+-        run('gate-'+defect,'probe.py',[ROOT/'frontier.json',ROOT/('gate-'+defect+'.sentinel'),'plain'],wall=5,cpu=3,defect=defect)
+-    run('gate-valid','probe.py',[ROOT/'frontier.json',ROOT/'gate-valid.sentinel','plain'],wall=5,cpu=3)
++        run('gate-'+defect,'probe.py',[ROOT/'frontier.json',ROOT/('gate-'+defect+'.sentinel'),'plain'],'probe',defect=defect)
++    run('gate-valid','probe.py',[ROOT/'frontier.json',ROOT/'gate-valid.sentinel','plain'],'probe')
+     require((ROOT/'gate-valid.sentinel').read_text()=='POSTAUTHORIZE\n','valid gate failed')
+-    run('dummy-descendant','probe.py',[ROOT/'frontier.json',ROOT/'dummy-descendant.sentinel','descendant'],wall=5,cpu=3,rss=33554432)
++    run('dummy-descendant','probe.py',[ROOT/'frontier.json',ROOT/'dummy-descendant.sentinel','descendant'],'dummy')
+     exclusive(ROOT/'preflight.PASS.json',{'status':'PASS','records':records,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+-    run('build','builder.py',[ROOT/'exact.json'],operation='build',wall=60,cpu=50,mathematical=True)
+-    for mode in ['full','u-zero','dropped-constant','u-zero-dropped-constant','upper-coefficient','guard','leading-top']:
+-        run('check-'+mode,'checker.py',[ROOT/'exact.json',ROOT/('check-'+mode+'.receipt.json'),mode],mathematical=True)
+-    run('precision','precision.py',[ROOT/'exact.json',ROOT/'precision.receipt.json'],mathematical=True)
++    run('transform','transformer.py',[ROOT/'exact.json',ROOT/'retained.json'],'transform',operation='build',mathematical=True)
++    run('full-check','checker.py',[ROOT/'exact.json',ROOT/'retained.json',ROOT/'full.receipt.json'],'check',mathematical=True)
++    accepted=json.loads((ROOT/'full.receipt.json').read_text())
++    require(accepted['verdict']=='PASS-REPRESENTATION-NOT-IDEAL-DECISION','genuine checker receipt verdict')
++    run('semantic-controls','semantic_controls.py',[ROOT/'exact.json',ROOT/'retained.json',ROOT/'full.receipt.json',ROOT/'controls.receipt.json'],'controls',mathematical=True)
+     exclusive(ROOT/'batch.PASS.json',{'status':'ENGINEERING-PASS-NOT-IDEAL-DECISION','records':records,
+               'first_math_epoch':first_math,'end_epoch':time.time(),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})

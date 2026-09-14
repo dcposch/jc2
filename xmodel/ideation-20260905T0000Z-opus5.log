@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Submission delivered and sealed: `xmodel/ideation-20260905T0000Z-opus5.md` (42,641 body bytes, `seal.py verify` PASS, basis `2358a71e`).
+
+**Inputs:** all 4 charged hashes verified mechanically via a manifest generated from the receipt with awk → `sha256sum -c` (4/4 OK). Did not open any same-round submission or the running lane's `.md` (its receipt shows `initial_status=RUNNING`, no `final_status`).
+
+**The four things I found that change the shape of the questions:**
+
+1. **Q2 — the eight (99,66) skeletons sit on one line.** Regenerating the enumeration independently from the frozen census and fitting the batch-2 descent table gives a closed law: `u_s = d_s − V_s`, `(n′,m′) = ((n/d_s)u_s, (m/d_s)u_s)`, `ℓ = d_s − 2u_s − 1`. At (99,66) that forces `u_s + v_s = 11` and **2K′ + 3ℓ = 30** — only four descended degrees, two already dead. The "k=4 ray" is the slice ℓ=4 of a (K,ℓ) lattice, not a canonical object. S2/S3/S7 collapse to one V₂′-parametrised chart; S4 is *not* discharged by the case-(A) certificate (conjugate V₂′).
+
+2. **Q1 — A_t = Q(√(3(t+1)))**, fitted from the four banked minpolys as `H_t = 12(2t+1)²y² − 12(t+1)(2t+1)y + (t+1)(3t+2)`. It is a *field* except at t = 3m²−1, so the two "roots" are Galois-conjugate and cannot disagree — the factorwise hazard is real at 8 indices below 200, not everywhere. And the one known (V0) failure (t=2, y=1/5) is exactly α_t = 0, which re-types DEGREE-BLIND: "weights + a₀ ∈ A_t^×" is untested, not refuted.
+
+3. **17(wwww)'s uniform target is ill-posed.** The t=3 eliminant resultant computes exactly in 4.9 s and is nonzero, but its norm carries 59¹⁸⁰·73⁶⁰ — the resultant isn't invariant under rescaling the tail generators, which is likely why four lanes found no closed form.
+
+4. **A leak nobody has audited.** `prop63_automatic` is true *exactly* when u_s = 1; it is false for S1–S4, S7 **and S8**, so every u_s ≥ 2 kill the campaign owns — including the D = 108 closure — rests on an undischarged Prop 6.3 radius hypothesis.
+
+Contract items all present: disposition vector (7 changes), Q1–Q4 typed with bounded quantities and cheapest tests, three idea cards, one first lane (`h2-lattice-builder`), CONTINUE on the running lane (receipt only), one systems upgrade (`ops/descend.py` with the batch-2 table as golden test), and 5 OPENs scanned with `ops/open_collision.py` (exit 0; 2 NONE, 30 reviewed-and-dismissed lexical hits on one, the rest adjacent-not-duplicate).
+DIVERT path=xmodel/ideation-20260905T0000Z-opus5.md status=CLEAN_SEALED body_bytes=42641 body_sha256=0c417cddd5e31e12bf3d582438995ab7e94cb3017c372c02956c90db1ea12918

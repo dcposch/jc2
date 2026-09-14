@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report delivered at `xmodel/d125-full-stream-gate-fable5-20260906.md` (1,945 words, unique `<!-- BODY-END -->` last, no charge_basis line, file SHA `21fc3d36…4a82fa`), 21 minutes before the 22:25 UTC hard deadline.
+
+**Verdicts**
+
+| Question | Verdict |
+|---|---|
+| Complete-source semantics of every row (189 jets, 5 pins, 3,792 physical slots incl. 55 zero rows, cubic guard) | CONFIRMED |
+| Literal JSON / Singular equality (ring, order, all 2,123 variables, all 3,987 polynomials, footer, digest, EOF, no hidden command) | CONFIRMED |
+| Degree guard present and endpoints on the original degree boundary | CONFIRMED |
+| Instrument custody (host/volume identity, one capped run, producer files untouched, group quiet) | CONFIRMED |
+| Singular runtime import behaviour | GAP for this lane, producer-only by design |
+
+**How it was verified.** My own checker, with no producer imports, rebuilt every expected row by a different route: direct rectangular support enumeration, all-pairs P×Q convolution over 885,621 pairs, jet and pin rows read from actual integer powers of `Y+X^-1`, an envelope derived from the support extremes, and the explicit cubic guard. It then compared all 6,112 JSON lines and parsed all 7,980 Singular lines with a restricted grammar, matching 878,473 atoms to the JSON terms. Producer counts and the prefix digest `da8f3cc8…` were reproduced independently. On the full stream, 17 JSON and 12 Singular changed-object controls, each with a re-synced footer, were all rejected for semantic reasons.
+
+**Custody.** One CAPRUN run on the root-owned worker (identity, DMI, boot id, EBS serial all matched): NORMAL_EXIT, 41.7 s wall, 463 MB peak group RSS under the single 600 s / 8 GiB cap, PGID 3079 empty afterwards. Both producer inputs rehashed identical before and after. Only the fresh gate directory was created on .56, and receipts are copied under `box/d125-full-stream-gate-fable5-20260906/remote/`.
+
+**Boundaries.** Nothing here is a properness, unit, point, solver or global-125 statement. The normalized-to-original relation remains root's char-0 field-point licence, not scheme, ideal or mod-p equivalence.
+DIVERT path=xmodel/d125-full-stream-gate-fable5-20260906.md status=CLEAN body_bytes=14635 body_sha256=21fc3d363964376acb49198e77ab7b851eb6884fe71477bd9071f651c14a82fa

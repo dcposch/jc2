@@ -1,0 +1,197 @@
+PRIMARY EXCERPT: box/f2-fixed-degree-standardization-gate-20260909/ggv-1401.1784v3.txt
+Original SHA256 e3694dde3f83c2ab6ed8d957fc6b53472e6a6dd55486af1dff345eade39e37b1; bytes 268331.
+Only listed ranges charged. Omitted context and external lemmas cited within retained proofs are not independently re-proved.
+
+EXCERPT original lines 711-731 inclusive; exact body follows.
+           vρ,σ (P ) > 0,      vρ,σ (Q) > 0      and         vρ,σ (P ) + vρ,σ (Q) − (ρ + σ) > 0.
+Proof. Note that if (1, 0) ≤ (ρ, σ) ≤ (1, 1), then ρ ≥ σ ≥ 0, while if (1, 1) ≤ (ρ, σ) ≤ (0, 1), then
+σ ≥ ρ ≥ 0. In the case ρ ≥ σ ≥ 0 it is enough to prove that vρ,σ (P ), vρ,σ (Q) > ρ. Assume for
+example that vρ,σ (P ) ≤ ρ, then
+                 (i, j) ∈ Supp(P ) =⇒ iρ + jσ ≤ ρ =⇒ i = 0, or i = 1 and j = 0,
+which means that P = µx + f (y) for some µ ∈ K and f ∈ K[y], and obviously (P, Q) can not
+be a counterexample to JC. The case σ ≥ ρ ≥ 0 is similar.                              
+Remark 4.2. If (P, Q) is a minimal pair, then neither v1,1 (P ) divides v1,1 (Q) nor v1,1 (Q) divides
+v1,1 (P ). This fact can be proven using a classical argument[12] given for example in the proof
+of [14, Theorem 10.2.23].
+Definition 4.3. Let m, n ∈ N be coprime with n, m > 1. A pair (P, Q) of elements P, Q ∈ L(l)
+(respectively P, Q ∈ L) is called an (m, n)-pair in L(l) (respectively in L), if
+                                  v1,1 (P )   v1,0 (P )   m
+              [P, Q] ∈ K × ,                =           =       and v1,−1 (en1,0 (P )) < 0.
+                                  v1,1 (Q)    v1,0 (Q)    n
+An (m, n)-pair (P, Q) is called a standard (m, n)-pair if P, Q ∈ L(1) and v1,−1 (st1,0 (P )) < 0.
+Lemma 4.4. Let (ρ, σ), (ρ′ , σ ′ ) ∈ V and A, B ∈ 1l Z × N0 such that
+                 vρ,σ (A)vρ′ ,σ′ (B) = vρ,σ (B)vρ′ ,σ′ (A)    and   (ρ, σ) × (ρ′ , σ ′ ) 6= 0.
+Then A ∼ B.
+Proof. Write A = (a1 , a2 ) and B = (b1 , b2 ). The Lemma follows immediately from the equality
+                                                                      
+
+EXCERPT original lines 954-1088 inclusive; exact body follows.
+Proof. Assume A(P ) 6= ∅ and write A(P ) = {(ρ1 , σ1 ) < (ρ2 , σ2 ) < · · · < (ρk , σk )}, where we are
+considering the order of I. We will prove inductively statements (1), (2) and (3) for (ρj , σj ),
+starting from j = k. Let (ρ, σ) := max(A(P ) ∪ A(Q)). We have
+                                                   m               m
+                         enρ,σ (P ) = en1,0 (P ) =   en1,0 (Q) =      enρ,σ (Q),
+                                                   n               n
+where the first equality follows from Propositions 3.7 and 5.2, the second one, from Propo-
+sition 4.6(2) and the third one, from Propositions 3.7, since ](ρ, σ), (1, 0)] ∩ Dir(Q) = ∅ by
+Propositions 5.2 and 5.3. Hence, by Lemma 5.1 and Remark 3.1, we have
+                                                                         m
+                  (ρ, σ) ∈ Dir(P ) ∩ Dir(Q)        and      stρ,σ (P ) =     stρ,σ (Q).
+                                                                          n
+On the other hand by Proposition 5.2, we have (ρ, σ) = (ρk , σk ), and so statements (1), (2)
+and (3) hold for (ρk , σk ).
+    Let now j ≥ 1, assume that statements (1), (2) and (3) hold for (ρj+1 , σj+1 ) and set
+                        (ρ̃, σ̃) = max{PredP (ρj+1 , σj+1 ), PredQ (ρj+1 , σj+1 )}.
+Then
+                                               m                        m
+                   enρ̃,σ̃ (P ) = stρj+1 ,σj+1 (P ) =
+                                                   stρj+1 ,σj+1 (Q) =      enρ̃,σ̃ (Q),
+                                                n                        n
+where the second equality holds by condition 2) for (ρj+1 , σj+1 ). Moreover by Propositions 5.2
+and 3.7,
+               (ρ̃, σ̃) = (ρj , σj ) or   stρ̃,σ̃ (P ) = enρ̃,σ̃ (P ) = stρj+1 ,σj+1 (P ),
+and so v0,−1 (stρ̃,σ̃ (P )) < −1. Hence, by Lemma 5.1 and Remark 3.1, we have
+                                                                            m
+                      (ρ̃, σ̃) ∈ Dir(P ) ∩ Dir(Q)     and    stρ̃,σ̃ (P ) =   stρ̃,σ̃ (Q).
+                                                                            n
+On the other hand, by Proposition 5.2 we have (ρ̃, σ̃) = (ρj , σj ), and so statements (1), (2)
+and (3) hold for (ρj , σj ).
+   Now we will prove that A(P ) = A(Q). By symmetry it suffices to prove that A(P ) ⊆ A(Q).
+Let (ρ, σ) ∈ A(P ). By statement (3) we already know (ρ, σ) ∈ Dir(Q). So we have to prove only
+that
+                               v0,−1 (stρ,σ (Q)) < −1 and v1,−1 (stρ,σ (Q)) < 0.
+By statement (2)
+                                                        n
+                               v1,−1 (stρ,σ (Q)) =        v1,−1 (stρ,σ (P )) < 0.
+                                                        m
+Note now that again by statement (2)
+                                          1
+                                            v0,−1 (stρ,σ (P )) ∈ Z,
+                                          m
+and so
+                                         1
+                                           v0,−1 (stρ,σ (P )) ≤ −1,
+                                         m
+        ON THE SHAPE OF POSSIBLE COUNTEREXAMPLES TO THE JACOBIAN CONJECTURE                         21
+
+
+since v0,−1 (stρ,σ (P )) < 0. Hence, once again by statement (2),
+                                                n
+                           v0,−1 (stρ,σ (Q)) = v0,−1 (stρ,σ (P )) ≤ −n < −1,
+                                               m
+which proves A(P ) ⊆ A(Q), as desired.
+   Now we prove
+                            (ρ0 , σ0 ) := PredP (ρ1 , σ1 ) = PredQ (ρ1 , σ1 ) ∈ I.
+Set (ρ̂, σ̂) := max{PredP (ρ1 , σ1 ), PredQ (ρ1 , σ1 )}. We first prove that
+                                       (1, −1) < (ρ̂, σ̂) < (ρ1 , σ1 ).
+Assume by contradiction that (−ρ1 , −σ1 ) ≤ (ρ̂, σ̂) ≤ (1, −1), which, by Proposition 3.7, implies
+that
+                   en1,−1 (P ) = stρ1 ,σ1 (P ) and en1,−1 (Q) = stρ1 ,σ1 (Q).                (5.2)
+If (ρ1 , σ1 ) ∈ A(P ) ∩ A(Q), then this implies
+            v1,−1 (P ) = v1,−1 (stρ1 ,σ1 (P )) < 0 and v1,−1 (Q) = v1,−1 (stρ1 ,σ1 (Q)) < 0,
+and so, by inequality (1.2), we have v1,−1 ([P, Q]) < 0, which contradicts that [P, Q] ∈ K × . Hence
+we can suppose that A(P ) = ∅, which by Proposition 3.7, implies that
+                         stρ1 ,σ1 (P ) = en1,0 (P ) and       stρ1 ,σ1 (Q) = en1,0 (Q).
+Consequently, by (5.2),
+                         en1,−1 (P ) = en1,0 (P ) and         en1,−1 (Q) = en1,0 (Q).
+By the definition of (m, n)-pair and Proposition 4.6(3), this implies that
+              v1,−1 (P ) = v1,−1 (en1,0 (P )) < 0 and v1,−1 (Q) = v1,−1 (en1,0 (Q)) < 0,
+and so, again by inequality (1.2), we have v1,−1 ([P, Q]) < 0, which contradicts that [P, Q] ∈ K × .
+   In order to conclude the proof, we must show that PredP (ρ1 , σ1 ) = PredQ (ρ1 , σ1 ). Assume
+this is false and suppose for example that PredP (ρ1 , σ1 ) < PredQ (ρ1 , σ1 ), which implies
+                                   stρ̂,σ̂ (P ) = enρ̂,σ̂ (P ) = stρ1 ,σ1 (P ).                 (5.3)
+If A(P ) 6= ∅, then by Lemma 5.1, the conditions of Remark 3.1 are satisfied for (ρ̂, σ̂). Con-
+sequently, by this remark, (ρ̂, σ̂) ∈ Dir(P ), contradicting (5.3). Assume now A(P ) = ∅, which
+implies that (ρ̂, σ̂) ≤ (1, 0) < (ρ1 , σ1 ). Hence, by (5.3), Proposition 3.7 and Proposition 4.6(2),
+                                                                  n              n
+                     stρ̂,σ̂ (P ) = enρ̂,σ̂ (P ) = en1,0 (P ) =     en1,0 (Q) =    enρ̂,σ̂ (Q)
+                                                                 m               m
+and
+                                   v0,−1 (stρ̂,σ̂ (P )) = v0,−1 (en1,0 (P )) < −1.
+Hence again by Lemma 5.1, the conditions of Remark 3.1 are satisfied for (ρ̂, σ̂), and there-
+fore (ρ̂, σ̂) ∈ Dir(P ), which contradicts (5.3). The case PredQ (ρ1 , σ1 ) < PredP (ρ1 , σ1 ), can be
+discarded using a similar argument.                                                                 
+Definition 5.5. A regular corner of an (m, n)-pair (P, Q) in L(l) , is a pair (A, (ρ, σ)), where
+A = (a/l, b) ∈ 1l Z × N0 and (ρ, σ) ∈ I such that
+   (1) b ≥ 1 and b > a/l,
+   (2) (ρ, σ) ∈ Dir(P ),
+             
+   (3) al , b = m1
+                   enρ,σ (P ).
+A regular corner (A, (ρ, σ)) is said to be at the point A.
+22                  JORGE A. GUCCIONE, JUAN J. GUCCIONE, AND CHRISTIAN VALQUI
+
+
+Proposition 5.6. If (A, (ρ, σ)) is a regular corner of an (m, n)-pair (P, Q), then at least one of
+the following three facts is true:
+   (a) (ρ, σ) ∈ A(P ),
+   (b) enρ,σ (P ) = en1,0 (P ),
+   (c) (ρ, σ) = PredP (ρ1 , σ1 ), where (ρ1 , σ1 ) := min(A(P )).
+Moreover, there exists exactly one regular corner (A, (ρ, σ)) such that (ρ, σ) ∈
+                                                                               / A(P ).
+Proof. Assume that (ρ, σ) ∈   / A(P ) and define (ρ1 , σ1 ) := SuccP (ρ, σ). If (ρ, σ) < (ρ1 , σ1 ) ≤ (1, 0),
+then (ρ1 , σ1 ) ∈ A(P )[16] , which implies that (ρ1 , σ1 ) = min(A(P )) by Proposition 5.2, and so
+item (c) holds. Otherwise (ρ, σ) ≤ (1, 0) < (ρ1 , σ1 ) and, by Proposition 3.7, we conclude that
+enρ,σ (P ) = en1,0 (P ).                                                                                   
+Corollary 5.7. If (A, (ρ, σ)) is a regular corner of an (m, n)-pair (P, Q), then
+      (1) vρ,σ (P ) > 0 and vρ,σ (Q) > 0,
+      (2) enρ,σ (P ) = mn enρ,σ (Q),
+      (3) (ρ, σ) ∈ Dir(Q).
+Proof. If (ρ, σ) ∈ A(P ), or (ρ, σ) = PredP (ρ1 , σ1 ), where (ρ1 , σ1 ) := min(A(P )), then Lemma 5.1
+and Proposition 5.4 yield the result[17] . Hence, by Proposition 5.6, it suffices to prove the
+assertions when enρ,σ (P ) = en1,0 (P ) and (ρ, σ) ∈        / A(P ). We claim that A(P ) = ∅. In fact, if
+there exists (ρ′ , σ ′ ) ∈ A(P ) with (ρ′ , σ ′ ) < (ρ, σ), then (ρ, σ) ∈ A(P ) by Proposition 5.2. On the
+other hand, if there exists (ρ′ , σ ′ ) ∈ A(P ) with (ρ′ , σ ′ ) > (ρ, σ), then
+                           (ρ′ , σ ′ ) ≥ SuccP (ρ, σ) = SuccP (1, 0) > (1, 0), [18]
+which contradicts (ρ′ , σ ′ ) ∈ I. Now we set
+                               (ρ′1 , σ1′ ) := min(SuccP (1, 0), SuccQ (1, 0)).
+Then (ρ, σ) = PredP (ρ′1 , σ1′ )[19] and from Proposition 5.4 we obtain
+                                    (ρ, σ) = PredQ (ρ′1 , σ1′ ) ∈ Dir(Q).
+Since (ρ, σ) ≤ (1, 0) < (ρ′1 , σ1′ ), by Proposition 3.7 this implies enρ,σ (Q) = en1,0 (Q). Conse-
+quently, by Proposition 4.6(2),
+                                                  m              m
+                       enρ,σ (P ) = en1,0 (P ) =     en1,0 (Q) =   enρ,σ (Q),
+                                                   n             n
+and Lemma 5.1 concludes the proof.                                                               
+Remark 5.8. If ((a/l, b), (ρ, σ)) is a regular corner of an (m, n)-pair (P, Q) in L(l) , then a > 0[20] .
+     Let (A, (ρ, σ)) be a regular corner of an (m, n)-pair (P, Q) in L(l) . Write
+                      ℓρ,σ (P ) = xk/l p(z) where z := x−σ/ρ y and p(z) ∈ K[z].                        (5.4)
+   Since (ρ, σ) ∈ Dir(P ) the polynomial p(z) is not a constant. Moreover by Corollary 5.7(1)
+and Theorem 2.6(4) we know that v1,−1 (stρ,σ (P )) 6= 0. Hence, one of the following five mutually
+excluding conditions is true:
+      I.a) [ℓρ,σ (P ), ℓρ,σ (Q)] 6= 0 and stρ,σ (P ) ∼ stρ,σ (Q).
+      I.b) [ℓρ,σ (P ), ℓρ,σ (Q)] 6= 0 and stρ,σ (P ) ≁ stρ,σ (Q).
+
+EXCERPT original lines 1433-1464 inclusive; exact body follows.
+Proposition 5.20. For each (m, n)-pair (P, Q) in L(1) , there exists an automorphism ϕ of L(1)
+such that (ϕ(P ), ϕ(Q)) is a standard (m, n)-pair with
+          v1,1 (ϕ(P )) = v1,1 (P ),   v1,1 (ϕ(Q)) = v1,1 (Q)      and   en1,0 (ϕ(P )) = en1,0 (P ).
+Moreover, if (−1, 1) < SuccP (1, 0), SuccQ (1, 0) < (−1, 0), then
+                          (−1, 1) < Succϕ(P ) (1, 0), Succϕ(Q) (1, 0) < (−1, 0).
+Furthermore, if P, Q ∈ L, then we can take ϕ ∈ Aut(L).
+                                                                                    1
+                                                                                                        
+Proof. If v1,−1 (st1,0 (P )) < 0, then we can take ϕ := id. Otherwise m               en1,0 (P ), (1, 0) is a
+                                            1
+regular corner[25]. Write (a, b) := m         en1,0 (P ). Case I is impossible because a, b > 0 and Propo-
+sition 5.13 gives 1 − a/b > 1, and the Case II.a) is discarded, because v1,−1 (st1,0 (P )) ≥ 0. By
+Propositions 5.16 and 5.18 in Case II.b) and by Proposition 5.17 in Case III, we can find a
+ϕ ∈ Aut(L(1) ) such that
+           1
+                                        
+       - m    st1,0 (ϕ(P )), (ρ′ , σ ′ ) is a regular corner, for some (ρ′ , σ ′ ),
+       - ℓ1,1 (ϕ(P )) = ℓ1,1 (P ), ℓ1,1 (ϕ(Q)) = ℓ1,1 (Q) and en1,0 (ϕ(P )) = en1,0 (P ),
+       - If SuccP (1, 0), SuccQ (1, 0) < (−1, 0), then
+                  Succϕ(P ) (1, 0) = SuccP (1, 0)      and         Succϕ(Q) (1, 0) = SuccQ (1, 0).
+      - ϕ(x) = x and ϕ(y) = y + λ, for some λ ∈ K × .
+The assertions in the statement follow immediately from these facts.                                      
+Corollary 5.21. If B < ∞ (i. e., if the Jacobian conjecture is false), then there exists a Jacobian
+pair (P, Q) and m, n ∈ N coprime with m, n > 1, such that
+    (1) (P, Q) is a standard (m, n)-pair in L,
+                                                                
+    (2) (P, Q) is a minimal pair (i. e., gcd v1,1 (P ), v1,1 (Q) = B),
+    (3) st1,1 (P ) = en1,0 (P ),
+    (4) (−1, 1) < SuccP (1, 0), SuccQ (1, 0) < (−1, 0).
+
+Proof. By Propositions 3.7, 4.7 and 5.20.                                                                 
+                                                        (l)

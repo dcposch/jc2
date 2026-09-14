@@ -1,0 +1,37 @@
+stratum    q0 modp  q0 Q     q1 modp  q1 Q      verdict
+K=8 b=7    SEGV*    SEGV*    SEGV*    SEGV*     UNDECIDED (resource)
+K=8 b=8    SEGV*    SEGV*    SEGV*    SEGV*     UNDECIDED (resource)
+K=8 b=9    SEGV*    SEGV*    SEGV*    --        UNDECIDED (resource)
+K=8 b=10   SEGV*    SEGV*    SEGV*    --        UNDECIDED (resource)
+K=8 b=11   UNIT     --       SEGV*    --        partial (one cover decided)
+K=8 b=12   --       --       --       --        UNDECIDED (resource)
+K=8 b=13   --       --       --       --        UNDECIDED (resource)
+K=8 b=14   --       --       --       --        UNDECIDED (resource)
+K=8 b=15   --       --       --       --        UNDECIDED (resource)
+
+K=9 b=8    SEGV*    --       SEGV*    --        UNDECIDED (resource)
+K=9 b=9    SEGV*    --       SEGV*    --        UNDECIDED (resource)
+K=9 b=10   --       --       SEGV*    --        UNDECIDED (resource)
+K=9 b=11   --       --       --       --        UNDECIDED (resource)
+K=9 b=12   --       --       --       --        UNDECIDED (resource)
+K=9 b=13   --       --       --       --        UNDECIDED (resource)
+K=9 b=14   --       --       --       --        UNDECIDED (resource)
+K=9 b=15   --       --       --       --        UNDECIDED (resource)
+K=9 b=16   --       --       --       --        UNDECIDED (resource)
+K=9 b=17   --       --       --       --        UNDECIDED (resource)
+
+K=7 b=6    SEGV*    --       UNIT     --        partial (one cover decided)
+K=7 b=7    UNIT     UNIT     SEGV*    --        partial (one cover decided)
+K=7 b=8    SEGV*    UNIT     SEGV*    MSOLVE_RC_-9  partial (one cover decided)
+K=7 b=9    UNIT     UNIT     UNIT     UNIT      DEAD over Q (exact-Q, both covers)
+K=7 b=10   UNIT     UNIT     UNIT     UNIT      DEAD over Q (exact-Q, both covers)
+K=7 b=11   UNIT     UNIT     UNIT     UNIT      DEAD over Q (exact-Q, both covers)
+K=7 b=12   UNIT     UNIT     UNIT     UNIT      DEAD over Q (exact-Q, both covers)
+K=7 b=13   UNIT     UNIT     UNIT     UNIT      DEAD over Q (exact-Q, both covers)
+
+SEGV* = SIGSEGV under this lane's ulimit -v cap: a RESOURCE failure, not a verdict.
+TO    = engine wall-clock timeout.  -- = never reached the Groebner step (formation-bound).
+
+K=7: 8 strata | exact-Q DEAD [9, 10, 11, 12, 13] | modular-only [] | partial [6, 7, 8] | undecided []
+K=8: 9 strata | exact-Q DEAD [] | modular-only [] | partial [11] | undecided [7, 8, 9, 10, 12, 13, 14, 15]
+K=9: 10 strata | exact-Q DEAD [] | modular-only [] | partial [] | undecided [8, 9, 10, 11, 12, 13, 14, 15, 16, 17]

@@ -4,6 +4,19 @@ Ephemeral CAS workers launched from **math-hq** with the **jc2-fleet** key. No
 `claude-cli` key and no IAM instance profile are needed (the role denies SSM,
 EC2 Instance Connect, and PassRole; this path avoids all three).
 
+## Bounded jobs: current opt-in path
+
+[job.sh](job.sh) uses one manifest and one bounded service, preserving phase
+logs, partial outputs and terminal receipts. Its corrected version passed
+different-model static review and the [September13 AWS regression](../../box/execution-reliability-pilot-root-20260913/RESULT.md).
+[JOB.md](JOB.md) is the hash-frozen reviewed interface; its introductory
+pre-test status is superseded by that result. Scientific workloads still need
+their own qualification. No implicit retries or automatic migration.
+
+The legacy commands below are historical interface examples, not launch or
+broad-termination authority. Current exact-ID ownership, registration and
+retirement rules are in [FLEET.md](../FLEET.md) and the newest LIVE STATE.
+
 ## Stack installed per worker (worker-userdata.sh)
 Singular, msolve (apt/universe), python-flint, sympy, and the campaign PyPI
 tools **qqideal** and **msolveio** (latest). Provisioning is fail-gated: a worker
@@ -37,3 +50,7 @@ ops/fleet/fleet.sh term-all               # terminate every jc2-worker when idle
 
 ## Stop-idle discipline
 Workers are ephemeral. `term-all` when a batch finishes. Never leave idle workers.
+
+Workers launch with `--enable-api-termination` (the installed CLI flag used by
+`fleet.sh`): keep fleet terminable; do not re-enable API termination protection.
+The former `--no-disable-api-termination` spelling was rejected by this CLI.

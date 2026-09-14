@@ -1,0 +1,140 @@
+{
+  "chart": "the full proved G_i chart; no specialization and no omitted coordinate",
+  "class_id": "C_n24m18_M9_20_ell1_s3",
+  "coefficient_generators": 560,
+  "elapsed_seconds": 50.88552,
+  "exactness": {
+    "auxiliary_variables": 0,
+    "beta_1_zero": true,
+    "coefficient_domain": "Z[all original G coordinates,c] inside the required Q polynomial ring",
+    "coordinate_specializations": 0,
+    "division": "top-down determinate Euclidean division by monic y^K + h_lower",
+    "jacobian_formula": "J(a*h^r,b*h^s)=h^(r+s)J(a,b)+h^(r+s-1)(s*b*J(a,h)+r*a*J(h,b))"
+  },
+  "frozen_builder_fix_sha256": "d6662abfec114a443712600f87e3e7b7064071f445d9b177d2f0ea13c9d3836b",
+  "generator_count_including_Tc_minus_1": 561,
+  "initial_formal_levels": {
+    "0": {
+      "parameter_terms": 138410,
+      "xy_coefficients": 350
+    },
+    "1": {
+      "parameter_terms": 97803,
+      "xy_coefficients": 286
+    },
+    "2": {
+      "parameter_terms": 55429,
+      "xy_coefficients": 222
+    },
+    "3": {
+      "parameter_terms": 17583,
+      "xy_coefficients": 158
+    },
+    "4": {
+      "parameter_terms": 1938,
+      "xy_coefficients": 84
+    },
+    "5": {
+      "parameter_terms": 250,
+      "xy_coefficients": 40
+    }
+  },
+  "inverse_generator": "T*c-1",
+  "max_parameter_degree": 12,
+  "native_comparison": {
+    "literal_row_dictionary_equality": null,
+    "reference": null,
+    "reference_rows": null,
+    "requested": false,
+    "status": "NOT_REQUESTED"
+  },
+  "normalized_levels": [
+    {
+      "h_power": 0,
+      "input_parameter_terms": 138410,
+      "input_xy_coefficients": 350,
+      "quotient_parameter_terms": 406397,
+      "quotient_xy_coefficients": 198,
+      "remainder_parameter_terms": 4874099,
+      "remainder_rows": 152
+    },
+    {
+      "h_power": 1,
+      "input_parameter_terms": 497223,
+      "input_xy_coefficients": 286,
+      "quotient_parameter_terms": 261464,
+      "quotient_xy_coefficients": 158,
+      "remainder_parameter_terms": 3481794,
+      "remainder_rows": 128
+    },
+    {
+      "h_power": 2,
+      "input_parameter_terms": 312264,
+      "input_xy_coefficients": 222,
+      "quotient_parameter_terms": 121841,
+      "quotient_xy_coefficients": 118,
+      "remainder_parameter_terms": 1706758,
+      "remainder_rows": 104
+    },
+    {
+      "h_power": 3,
+      "input_parameter_terms": 137016,
+      "input_xy_coefficients": 158,
+      "quotient_parameter_terms": 26735,
+      "quotient_xy_coefficients": 78,
+      "remainder_parameter_terms": 439503,
+      "remainder_rows": 80
+    },
+    {
+      "h_power": 4,
+      "input_parameter_terms": 28059,
+      "input_xy_coefficients": 84,
+      "quotient_parameter_terms": 655,
+      "quotient_xy_coefficients": 28,
+      "remainder_parameter_terms": 33390,
+      "remainder_rows": 56
+    },
+    {
+      "h_power": 5,
+      "input_parameter_terms": 905,
+      "input_xy_coefficients": 40,
+      "quotient_parameter_terms": 44,
+      "quotient_xy_coefficients": 8,
+      "remainder_parameter_terms": 1484,
+      "remainder_rows": 32
+    },
+    {
+      "h_power": 6,
+      "input_parameter_terms": 44,
+      "input_xy_coefficients": 8,
+      "quotient_parameter_terms": 0,
+      "quotient_xy_coefficients": 0,
+      "remainder_parameter_terms": 44,
+      "remainder_rows": 8
+    },
+    {
+      "h_power": 7,
+      "input_parameter_terms": 0,
+      "input_xy_coefficients": 0,
+      "quotient_parameter_terms": 0,
+      "quotient_xy_coefficients": 0,
+      "remainder_parameter_terms": 0,
+      "remainder_rows": 0
+    }
+  ],
+  "peak_rss_kib": 1345180,
+  "production_orientation": "literal J(P,Q)-c*x^ell",
+  "ring": "ring R=0,(y,x,h_0_5,h_0_4,h_1_4,h_0_3,h_1_3,h_2_3,h_0_2,h_1_2,h_2_2,h_0_1,h_1_1,h_2_1,h_3_1,h_0_0,h_1_0,h_2_0,h_3_0,h_4_0,A1_0_5,A1_0_4,A1_1_4,A1_0_3,A1_1_3,A1_2_3,A1_0_2,A1_1_2,A1_2_2,A1_0_1,A1_1_1,A1_2_1,A1_3_1,A1_0_0,A1_1_0,A1_2_0,A1_3_0,A1_4_0,A2_0_5,A2_1_5,A2_2_5,A2_3_5,A2_4_5,A2_0_4,A2_1_4,A2_2_4,A2_3_4,A2_4_4,A2_5_4,A2_0_3,A2_1_3,A2_2_3,A2_3_3,A2_4_3,A2_5_3,A2_6_3,A2_0_2,A2_1_2,A2_2_2,A2_3_2,A2_4_2,A2_5_2,A2_6_2,A2_0_1,A2_1_1,A2_2_1,A2_3_1,A2_4_1,A2_5_1,A2_6_1,A2_7_1,A2_0_0,A2_1_0,A2_2_0,A2_3_0,A2_4_0,A2_5_0,A2_6_0,A2_7_0,A2_8_0,A3_0_5,A3_1_5,A3_2_5,A3_3_5,A3_4_5,A3_5_5,A3_6_5,A3_7_5,A3_8_5,A3_0_4,A3_1_4,A3_2_4,A3_3_4,A3_4_4,A3_5_4,A3_6_4,A3_7_4,A3_8_4,A3_9_4,A3_0_3,A3_1_3,A3_2_3,A3_3_3,A3_4_3,A3_5_3,A3_6_3,A3_7_3,A3_8_3,A3_9_3,A3_10_3,A3_0_2,A3_1_2,A3_2_2,A3_3_2,A3_4_2,A3_5_2,A3_6_2,A3_7_2,A3_8_2,A3_9_2,A3_10_2,A3_0_1,A3_1_1,A3_2_1,A3_3_1,A3_4_1,A3_5_1,A3_6_1,A3_7_1,A3_8_1,A3_9_1,A3_10_1,A3_11_1,A3_0_0,A3_1_0,A3_2_0,A3_3_0,A3_4_0,A3_5_0,A3_6_0,A3_7_0,A3_8_0,A3_9_0,A3_10_0,A3_11_0,A3_12_0,A4_0_5,A4_1_5,A4_2_5,A4_3_5,A4_4_5,A4_5_5,A4_6_5,A4_7_5,A4_8_5,A4_9_5,A4_10_5,A4_11_5,A4_12_5,A4_0_4,A4_1_4,A4_2_4,A4_3_4,A4_4_4,A4_5_4,A4_6_4,A4_7_4,A4_8_4,A4_9_4,A4_10_4,A4_11_4,A4_12_4,A4_13_4,A4_0_3,A4_1_3,A4_2_3,A4_3_3,A4_4_3,A4_5_3,A4_6_3,A4_7_3,A4_8_3,A4_9_3,A4_10_3,A4_11_3,A4_12_3,A4_13_3,A4_14_3,A4_0_2,A4_1_2,A4_2_2,A4_3_2,A4_4_2,A4_5_2,A4_6_2,A4_7_2,A4_8_2,A4_9_2,A4_10_2,A4_11_2,A4_12_2,A4_13_2,A4_14_2,A4_0_1,A4_1_1,A4_2_1,A4_3_1,A4_4_1,A4_5_1,A4_6_1,A4_7_1,A4_8_1,A4_9_1,A4_10_1,A4_11_1,A4_12_1,A4_13_1,A4_14_1,A4_15_1,A4_1_0,A4_2_0,A4_3_0,A4_4_0,A4_5_0,A4_6_0,A4_7_0,A4_8_0,A4_9_0,A4_10_0,A4_11_0,A4_12_0,A4_13_0,A4_14_0,A4_15_0,A4_16_0,B2_0_5,B2_1_5,B2_2_5,B2_3_5,B2_4_5,B2_0_4,B2_1_4,B2_2_4,B2_3_4,B2_4_4,B2_5_4,B2_0_3,B2_1_3,B2_2_3,B2_3_3,B2_4_3,B2_5_3,B2_6_3,B2_0_2,B2_1_2,B2_2_2,B2_3_2,B2_4_2,B2_5_2,B2_6_2,B2_0_1,B2_1_1,B2_2_1,B2_3_1,B2_4_1,B2_5_1,B2_6_1,B2_7_1,B2_0_0,B2_1_0,B2_2_0,B2_3_0,B2_4_0,B2_5_0,B2_6_0,B2_7_0,B2_8_0,B3_0_5,B3_1_5,B3_2_5,B3_3_5,B3_4_5,B3_5_5,B3_6_5,B3_7_5,B3_8_5,B3_0_4,B3_1_4,B3_2_4,B3_3_4,B3_4_4,B3_5_4,B3_6_4,B3_7_4,B3_8_4,B3_9_4,B3_0_3,B3_1_3,B3_2_3,B3_3_3,B3_4_3,B3_5_3,B3_6_3,B3_7_3,B3_8_3,B3_9_3,B3_10_3,B3_0_2,B3_1_2,B3_2_2,B3_3_2,B3_4_2,B3_5_2,B3_6_2,B3_7_2,B3_8_2,B3_9_2,B3_10_2,B3_0_1,B3_1_1,B3_2_1,B3_3_1,B3_4_1,B3_5_1,B3_6_1,B3_7_1,B3_8_1,B3_9_1,B3_10_1,B3_11_1,B3_1_0,B3_2_0,B3_3_0,B3_4_0,B3_5_0,B3_6_0,B3_7_0,B3_8_0,B3_9_0,B3_10_0,B3_11_0,B3_12_0,c),(lp(1),dp(342));",
+  "ring_from_frozen_builder_fix": true,
+  "rows": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m18_M9_20_ell1_s3/C_n24m18_M9_20_ell1_s3_G_sparse_rows.tsv",
+  "rows_bytes": 366812253,
+  "rows_sha256": "65889833e333f548aab81c25ed3e3ff15cc553b08d15742a614b9258df0a978b",
+  "schema": "moh-gi-only-sparse-hadic-extraction-experiment-v1",
+  "source_fixed_builder": "box/gi-only-20260905/classes/C_n24m18_M9_20_ell1_s3/builders/C_n24m18_M9_20_ell1_s3_G_builder.sing",
+  "source_fixed_builder_sha256": "8dd3b7800cdc2fc3519da5b99100ee7919860a13790f531e4ee5387dc0ddb698",
+  "status": "PASS",
+  "stem": "C_n24m18_M9_20_ell1_s3_G",
+  "total_expanded_parameter_terms": 10537072,
+  "unknowns_with_T": 342,
+  "unknowns_without_T": 341
+}

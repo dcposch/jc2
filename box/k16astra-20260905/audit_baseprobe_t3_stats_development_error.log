@@ -1,0 +1,35 @@
+J0 dim=0 vdim=13 ell=1 norm=1
+   ? length of lists in assignment does not match (l:4,r:1)
+   ? error occurred in or before ::auditStats line 1: `{tt=ww;}}print("STATS "+label+" length="+string(size(kk))+" top="+string(tt));`
+   ? expected int-expression. type 'help int;'
+   ? leaving ::auditStats (0)
+   skipping text from `;` error at token `)`
+BUILD F
+F dim=0 vdim=84
+   ? length of lists in assignment does not match (l:4,r:1)
+   ? error occurred in or before ::auditStats line 1: `{tt=ww;}}print("STATS "+label+" length="+string(size(kk))+" top="+string(tt));`
+   ? expected int-expression. type 'help int;'
+   ? leaving ::auditStats (0)
+   skipping text from `;` error at token `)`
+D 1 power1=1 power2=1
+D 2 power1=1 power2=1
+D 3 power1=1 power2=1
+D 4 power1=0 power2=1
+BUILD FFITT
+FFITT dim=0 vdim=84
+   ? length of lists in assignment does not match (l:4,r:1)
+   ? error occurred in or before ::auditStats line 1: `{tt=ww;}}print("STATS "+label+" length="+string(size(kk))+" top="+string(tt));`
+   ? expected int-expression. type 'help int;'
+   ? leaving ::auditStats (0)
+   skipping text from `;` error at token `)`
+DFITT 1 power1=1 power2=1
+DFITT 2 power1=1 power2=1
+DFITT 3 power1=1 power2=1
+DFITT 4 power1=0 power2=1
+SLICE dim=0 vdim=29 tau=1
+   ? length of lists in assignment does not match (l:4,r:1)
+   ? error occurred in or before ::auditStats line 1: `{tt=ww;}}print("STATS "+label+" length="+string(size(kk))+" top="+string(tt));`
+   ? expected int-expression. type 'help int;'
+   ? leaving ::auditStats (0)
+   skipping text from `;` error at token `)`
+AUDIT_BASE_DONE

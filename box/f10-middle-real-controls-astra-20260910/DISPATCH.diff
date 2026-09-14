@@ -1,0 +1,206 @@
+--- /home/ubuntu/jc2/box/f10-middle-real-runtime-astra-20260910/dispatch.py
++++ /home/ubuntu/jc2/box/f10-middle-real-controls-astra-20260910/dispatch.py
+@@ -1,4 +1,4 @@
+-"""Fixed real-certificate dispatcher. Metadata only; DISABLED without ROOT authority."""
++"""Exactly four semantic controls; metadata dispatcher, DISABLED without ROOT authority."""
+ import argparse
+ import datetime
+ import hashlib
+@@ -16,6 +16,11 @@
+ import time
+ 
+ JOB = 'f10-middle-real-certificate-20260910'
++CONTROL_JOB = 'f10-middle-real-controls-20260910'
++ORIGINAL_SHA = '219151792c8ffbbaab2e745fa60bd72e9c05c705fcc2ded992bcd97badf05470'
++POSITIVE_RECEIPT_SHA = '1a9bb0f58e96fa5a0be086e72a725f3e1f7eabad89248888c3d8acc13323cf44'
++CONTROLS = [('U','positive V cancellation'),('R','full cofactor identity'),
++            ('j','wrong maximal excluded-edge factor'),('bernstein','full Bernstein expansion')]
+ LIMIT = 16777216
+ RSS = 2147483648
+ CAPRUN_SHA = '4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2'
+@@ -33,11 +38,12 @@
+  'checker.py':'9369f0f311da9848f7d708a77413cda9115a4d8376aa626d7efaf017b4f8043c',
+  'authority.py':'4587133176acc66842f9ded5c6b6a6e37683ff9ffe980bf9f46e42088359d73d',
+  'f10-middle-real-code-astra-20260910.md':'c3111895d6d9c8ea217124aad44aefb351faf244ea13037935673f8f8fd785e9',
+- 'f10-middle-real-code-gate-fable5-20260910.md':'d3b8c09234d50b51b9dbcfaa7a9f341f34263540bd35e798c9f794137640c932'})
++ 'f10-middle-real-code-gate-fable5-20260910.md':'d3b8c09234d50b51b9dbcfaa7a9f341f34263540bd35e798c9f794137640c932',
++ 'f10-middle-real-runtime-gate-fable5-20260910.md':'0562b82afa2b6f6da1e2c488d261fc65f22f705629c12446bbfeaf85bdccbef2'})
+ JOINT = {'aggregate_wall_seconds':360, 'aggregate_cpu_seconds':330,
+          'rss_bytes':RSS, 'aggregate_wire_bytes':LIMIT}
+ PROFILES = {'preflight':[5,3,RSS], 'dummy':[5,3,33554432],
+-            'produce':[300,279,RSS], 'check':[45,49,RSS]}
++            'mutate':[10,9,RSS], 'check':[45,49,RSS]}
+ 
+ def need(ok, reason):
+     if not ok:
+@@ -123,20 +129,24 @@
+         need(stat.S_IMODE(self.path.stat().st_mode)==0o444,'registration mode must be 0444')
+         self.root_sha=sha(self.path); self.r=read_json(self.path)
+         r=self.r
+-        need(r.get('schema')=='f10-middle-real-runtime/v1' and r.get('enabled') is True,
++        need(r.get('schema')=='f10-middle-real-controls/v1' and r.get('enabled') is True,
+              'disabled root registration')
+-        need(r['jobtag']==JOB and r['exclusive_no_concurrent_writer'] is True,'root job/exclusivity')
++        need(r['jobtag']==CONTROL_JOB and r['exclusive_no_concurrent_writer'] is True,'root job/exclusivity')
+         need(r['caps']==JOINT and r['profiles']==PROFILES and r['preflight_wall_seconds']==180,
+              'fixed profiles or joint cap mismatch')
++        labels={'refuse-disabled','refuse-wronghost','refuse-argv','refuse-caps','refuse-missing',
++                'valid','startup-producer','startup-checker','dummy','mutate',
++                'check-U','check-R','check-j','check-bernstein'}
++        need(type(r['commands']) is dict and set(r['commands'])==labels,'exact fourteen command inventory')
+         need(type(r['uid']) is int and type(r['gid']) is int and r['uid']>0 and r['gid']>0,
+              'nonroot science uid/gid required')
+         need(pathlib.Path('/sys/class/dmi/id/sys_vendor').read_text().strip()=='Amazon EC2', 'EC2 vendor')
+         instance=pathlib.Path('/sys/class/dmi/id/board_asset_tag').read_text().strip()
+         need(re.fullmatch(r'i-[0-9a-f]+',instance) and instance==r['instance_id'],'EC2 instance')
+         need(socket.gethostname()==r['hostname'],'hostname')
+-        self.files={k:immutable(v,k in ('producer','checker','authority','probe','dispatcher','caprun'))
++        self.files={k:immutable(v,k in ('producer','checker','authority','probe','dispatcher','mutator','caprun'))
+                     for k,v in r['files'].items()}
+-        need(set(self.files)=={'python','setpriv','caprun','producer','checker','authority','probe','dispatcher'},
++        need(set(self.files)=={'python','setpriv','caprun','producer','checker','authority','probe','dispatcher','mutator'},
+              'exact executable/source roles')
+         need(str(self.files['python'])==os.path.realpath(sys.executable),'resolved interpreter')
+         need(str(self.files['dispatcher'])==str(pathlib.Path(__file__).resolve()),'dispatcher path')
+@@ -145,7 +155,7 @@
+         observed=pathlib.Path('/proc/self/cmdline').read_bytes().rstrip(b'\0').decode().split('\0')
+         need(r['outer_argv']==outer and observed==outer,'full dispatcher argv/flags')
+         self.source=canonical(r['source_root'])
+-        for role in ('producer','checker','authority','probe','dispatcher'):
++        for role in ('producer','checker','authority','probe','dispatcher','mutator'):
+             need(self.files[role].parent==self.source,'immutable sibling source directory')
+         need(os.getcwd()==str(self.source),'dispatcher cwd')
+         self.mount=canonical(r['output_mount']); self.writer=canonical(r['writer_dir'])
+@@ -193,10 +203,27 @@
+         for file in self.files.values():
+             need(str(file) in self.pins,'required executable/source pin absent')
+         need(self.pins[str(self.files['caprun'])]==CAPRUN_SHA,'unchanged CAPRUN pin')
++        for role in ('producer','checker','authority'):
++            need(self.pins[str(self.files[role])]==REQUIRED[role+'.py'] and self.files[role].name==role+'.py',
++                 'accepted scientific role-path pin')
++        need(self.pins[str(self.files['probe'])]=='d0df7ba6d9e0e082bed92321dd390fe91bc4bf8f32ce68cdf9c8a9180b4e39f4',
++             'unchanged probe pin')
+         for name,h in REQUIRED.items():
+             matches=[p for p,v in self.pins.items() if pathlib.Path(p).name==name and v==h]
+             need(len(matches)==1,'actual science/report file pin missing: '+name)
++        self.original=immutable(r['original_input'],True)
++        self.positive_receipt=immutable(r['positive_receipt'],True)
++        need(self.mount not in self.original.parents and self.mount not in self.positive_receipt.parents,
++             'baseline inputs must be outside working tmpfs')
++        need(self.pins.get(str(self.original))==ORIGINAL_SHA and self.original.stat().st_size==854264,
++             'literal original input pin/size')
++        need(self.pins.get(str(self.positive_receipt))==POSITIVE_RECEIPT_SHA,'literal positive receipt pin')
+         self.revalidate(); self.group_quiet()
++        positive=read_json(self.positive_receipt,4096)
++        need(positive.get('schema')=='f10-middle-real-check/v1' and positive.get('status')=='CERTIFIED_NONRESONANCE'
++             and positive.get('input_sha256')==ORIGINAL_SHA and positive.get('j')=='4'
++             and positive.get('code')=={role+'.py':REQUIRED[role+'.py'] for role in ('producer','checker','authority')},
++             'positive baseline metadata/code binding')
+ 
+     def revalidate(self):
+         need(sha(self.path)==self.root_sha,'root registration drift')
+@@ -252,14 +279,18 @@
+         output=self.writer/(label+'.payload')
+         authpath=self.auth/(label+'.authority.json')
+         args=[str(self.files[role])]+tail+['--registration',str(authpath)]
+-        if role=='checker':
++        outputs=[output]
++        if role=='mutator':
++            args+=['--input',str(self.original),'--positive-receipt',str(self.positive_receipt),
++                   '--output-dir',str(self.writer),'--receipt',str(output)]
++            outputs += [self.writer/('mutated-'+name+'.json') for name,_ in CONTROLS]
++        elif role=='checker':
+             input_name=input_pin if input_pin is not None else self.frozen/'startup-absent.input'
+             args+=['--input',str(input_name),'--receipt',str(output)]
+         else:
+             args+=['--output',str(output)]
+-        authority_path,authority_sha=self.authority(label,args,'probe' if role=='probe' else
+-                                                  'produce' if role=='producer' else 'check',
+-                                                  [output],mutation,input_pin)
++        operation={'probe':'probe','producer':'produce','checker':'check','mutator':'mutate'}[role]
++        authority_path,authority_sha=self.authority(label,args,operation,outputs,mutation,input_pin)
+         py=[str(self.files['python']),'-E','-s','-S','-B']+args
+         child=[str(self.files['setpriv']),'--reuid',str(self.r['uid']),'--regid',str(self.r['gid']),
+                '--clear-groups','--no-new-privs','--']+py
+@@ -393,29 +424,47 @@
+              events[1]['identity']==events[3]['identity'] and events[1]['identity']['pid']!=t['pid'],
+              'dummy parent-exit/child identity')
+         need(t['max_observed_group_rss_bytes']>33554432,'dummy RSS observed')
+-        t,out,err,payload=self.run('produce','producer',['--job',JOB],'produce',math_phase=True)
++        t,out,err,payload=self.run('mutate','mutator',['--job',JOB],'mutate',input_pin=self.original,math_phase=True)
+         self.normal(t,0)
+-        need(payload.is_file() and payload.stat().st_size<=LIMIT-4096,'complete producer output size')
+-        # Terminal-only ordinary metadata inspection; never interpret coefficients or perform arithmetic.
+-        candidate=read_json(payload,LIMIT)
+-        need(candidate.get('schema')=='f10-middle-real-certificate/v1' and candidate.get('status')=='CANDIDATE',
+-             'producer not a candidate; no checker run')
+-        target=self.frozen/'certificate.json'
+-        need(not target.exists() and not target.is_symlink(),'absent frozen input')
+-        before_sha=sha(payload); os.rename(payload,target); os.chown(target,0,0); os.chmod(target,0o444)
++        mutation=read_json(payload,8192)
++        expected_code={role+'.py':REQUIRED[role+'.py'] for role in ('producer','checker','authority')}
++        need(mutation.get('schema')=='f10-middle-real-mutator/v1' and mutation.get('status')=='FOUR_CHANGED_FIXTURES'
++             and mutation.get('original_sha256')==ORIGINAL_SHA
++             and mutation.get('positive_receipt_sha256')==POSITIVE_RECEIPT_SHA
++             and mutation.get('code')==expected_code
++             and mutation.get('mutator_sha256')==self.pins[str(self.files['mutator'])], 'mutator receipt binding')
++        entries=mutation.get('fixtures')
++        need(type(entries) is list and len(entries)==4,'exact four fixture inventory')
++        frozen=[]
++        for item,(name,reason) in zip(entries,CONTROLS):
++            source=self.writer/('mutated-'+name+'.json'); target=self.frozen/('mutated-'+name+'.json')
++            need(item['name']==name and item['path']==str(source) and item['expected_error']==reason
++                 and item['changed'] is True and item['readback']=='EXACT','literal changed fixture metadata')
++            need(source.is_file() and not source.is_symlink() and sha(source)==item['sha256']
++                 and str(source.stat().st_size)==item['bytes'] and item['sha256']!=ORIGINAL_SHA,'changed fixture hash')
++            need(not target.exists() and not target.is_symlink(),'fresh frozen fixture target')
++            os.rename(source,target); os.chown(target,0,0); os.chmod(target,0o444)
++            need(sha(immutable(target,True))==item['sha256'],'frozen fixture move/hash')
++            frozen.append((name,reason,target,item['sha256']))
+         os.chmod(self.frozen,0o555)
+-        need(sha(immutable(target,True))==before_sha,'frozen input move/hash')
+-        t,out,err,receipt=self.run('check','checker',['--job',JOB],'check',input_pin=target,math_phase=True)
+-        self.normal(t,0)
+-        result=read_json(receipt,4096)
+-        need(result.get('status')=='CERTIFIED_NONRESONANCE' and result.get('input_sha256')==before_sha,
+-             'independent checker did not certify')
++        checks=[]
++        for name,reason,target,fixture_sha in frozen:
++            t,out,err,receipt=self.run('check-'+name,'checker',['--job',JOB],'check',input_pin=target,math_phase=True)
++            self.normal(t,2)
++            need(not receipt.exists() and not receipt.is_symlink() and out.read_bytes()==b''
++                 and err.read_text()=='INCONCLUSIVE: '+reason+'\n', 'exact semantic rejection: '+name)
++            need(sha(target)==fixture_sha,'post semantic fixture pin')
++            checks.append({'name':name,'fixture_sha256':fixture_sha,'normal_exit':2,
++                           'expected_error':reason,'stderr_sha256':sha(err),
++                           'telemetry_sha256':self.runs[-1]['telemetry_sha256'],'receipt_absent':True})
+         used=resource.getrusage(resource.RUSAGE_CHILDREN); own=resource.getrusage(resource.RUSAGE_SELF)
+-        return {'status':'CERTIFICATE_CHECKED','checker_receipt_sha256':sha(receipt),'input_sha256':before_sha,
++        return {'status':'FOUR_SEMANTIC_REJECTIONS_CONFIRMED','original_input_sha256':ORIGINAL_SHA,
++                'positive_baseline_receipt_sha256':POSITIVE_RECEIPT_SHA,'mutator_receipt_sha256':sha(payload),
++                'checks':checks,'positive_science_reruns':0,
+                 'math_window_wall_seconds':time.monotonic()-self.math_begin,
+                 'conservative_cpu_including_caprun_and_ps':used.ru_utime+used.ru_stime-self.math_cpu_start,
+                 'dispatcher_cpu_seconds_separate':own.ru_utime+own.ru_stime,
+-                'scope':'accepted17zzi real triangle only; no source or JC2 promotion'}
++                'scope':'four semantic controls only; no certificate, source or JC2 promotion'}
+ 
+     def durable_copy(self,result):
+         self.group_quiet()
+@@ -443,6 +492,7 @@
+         write_json(self.durable/'CUSTODY.json',manifest)
+         for parent,dirs,names in os.walk(self.durable,topdown=False):
+             fd=os.open(parent,os.O_RDONLY); os.fsync(fd); os.close(fd)
++        fd=os.open(self.durable.parent,os.O_RDONLY); os.fsync(fd); os.close(fd)
+         need(now()<self.task_end,'durable finalization exceeded original task cutoff')
+         return sha(self.durable/'CUSTODY.json')
+ 
+@@ -465,7 +515,7 @@
+             return 2
+     else:
+         print(json.dumps(result))
+-    return 0 if result['status']=='CERTIFICATE_CHECKED' else 2
++    return 0 if result['status']=='FOUR_SEMANTIC_REJECTIONS_CONFIRMED' else 2
+ 
+ if __name__=='__main__':
+     raise SystemExit(main())

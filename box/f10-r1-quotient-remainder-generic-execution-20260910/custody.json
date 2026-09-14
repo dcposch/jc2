@@ -1,0 +1,99 @@
+{
+  "schema": "TASK-TERMINAL-CUSTODY/v1",
+  "utc": "2026-09-10T01:12:29.982643+00:00",
+  "status": "STOPPED-BEFORE-REMOTE-PREFLIGHT-NO-MATH-RUN",
+  "writer_status": "Report closed/finalized/expected-verified; final custody is last owned write",
+  "worker_state": "STOPPED",
+  "worker_confirmed_utc": "2026-09-10T01:08:43.156988318Z",
+  "first_math_utc": null,
+  "expected_transaction_sha256": "a54897da028fc869d0be425cdd86ad4eedcdd3cd245029f0cf5e02a1c0853034",
+  "owned_entries": [
+    {
+      "path": "box/f10-r1-quotient-remainder-generic-execution-20260910/input-pins.json",
+      "sha256": "314ab9a02d8d210d559f354305e654f5b13b0e5d398ff397141d1ccc87d65c6c",
+      "bytes": 2331
+    },
+    {
+      "path": "box/f10-r1-quotient-remainder-generic-execution-20260910/observations.json",
+      "sha256": "4e6f3fdc4d1b0161198e22457545dc63624fa40271d0d35c728c70068886c9c8",
+      "bytes": 3025
+    },
+    {
+      "path": "xmodel/f10-r1-quotient-remainder-generic-execution-astra-20260910.md",
+      "sha256": "3be3103354ed411fa79332564f2162daa55c25af454fb305528ce5862f5293b3",
+      "bytes": 6579
+    },
+    {
+      "path": "xmodel/f10-r1-quotient-remainder-generic-execution-astra-20260910.md.artifact.json",
+      "sha256": "a54897da028fc869d0be425cdd86ad4eedcdd3cd245029f0cf5e02a1c0853034",
+      "bytes": 703
+    }
+  ],
+  "current_input_entries": [
+    {
+      "path": "box/f10-r1-quotient-remainder-generic-execution-prep-20260910/ROOT-REGISTRATION.md",
+      "sha256": "5868c7b5ebfb15cbbe9c9517d52cbee0ce9e1857ef5925d4c00abeef21e46158",
+      "bytes": 10290
+    },
+    {
+      "path": "box/f10-r1-quotient-remainder-generic-execution-prep-20260910/ROOT-PINS.json",
+      "sha256": "78d078e6f327de04f91f04fc9a9335c25302bef91e1c84c7aca851fd4656c417",
+      "bytes": 17161
+    },
+    {
+      "path": "xmodel/f10-r1-quotient-remainder-static-gate-fable5-20260910.md",
+      "sha256": "a797cbed9ad4483ec453599fc8154e4d5ce2dd64b06d0796a79a0ad69655cbef",
+      "bytes": 16864
+    },
+    {
+      "path": "box/f10-r1-quotient-remainder-code-astra-20260910/solver.py",
+      "sha256": "58cdc4721143ec2be93cc720831c2235a9221b567f1903d2ffd6025b4f54b665",
+      "bytes": 15928
+    },
+    {
+      "path": "box/f10-r1-quotient-remainder-code-astra-20260910/checker.py",
+      "sha256": "122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69",
+      "bytes": 9123
+    },
+    {
+      "path": "box/f10-r1-quotient-remainder-code-astra-20260910/evidence.py",
+      "sha256": "cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767",
+      "bytes": 6149
+    },
+    {
+      "path": "box/f10-r1-quotient-remainder-code-astra-20260910/algebra.py",
+      "sha256": "7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc",
+      "bytes": 6325
+    },
+    {
+      "path": "box/f10-r1-quotient-remainder-code-astra-20260910/execution_gate.py",
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6",
+      "bytes": 3933
+    },
+    {
+      "path": "box/f10-r1-quotient-remainder-generic-controls-astra-20260910/generic_controls.py",
+      "sha256": "c369dc11b4e9562b050333225133aedf9cb63a04f3309424fdfab769465d363a",
+      "bytes": 18679
+    },
+    {
+      "path": "ops/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "bytes": 42671
+    },
+    {
+      "path": "box/f10-r1-exact-linear-decision-code-astra-20260909/probe.py",
+      "sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7",
+      "bytes": 910
+    }
+  ],
+  "excluded": [
+    "this custody file (self hash supplied in terminal handshake)",
+    "cooperative artifact lifecycle sidecars, verified by expected transaction"
+  ],
+  "owned_count": 4,
+  "current_input_count": 11,
+  "local_or_remote_math_invocations": 0,
+  "derivative_authorities": 0,
+  "remote_created_files": 0,
+  "documentary_path_correction": "Initial relative apply_patch placed input-pins.json and observations.json in /home/ubuntu/box/task rather than /home/ubuntu/jc2/box/task. A metadata custody read caught FileNotFoundError. Both own authored files were moved unchanged using apply_patch to the exact owned box; no scientific or execution file changed. The empty accidentally created task directory was removed after the move."
+}

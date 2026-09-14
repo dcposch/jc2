@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "negative_controls": [
+    "x**1.0",
+    "1/x",
+    "hidden+x",
+    "sqrt(2)",
+    "changed_native_map_image"
+  ],
+  "polynomial_parser_sha256_at_import": "249527788f8d3d0f72de6ce50a2e5ecf49a1331b3970824607c84278caa96e57",
+  "native_graph_control": {
+    "field": "Q",
+    "source_generator_order": [
+      "x",
+      "y",
+      "z"
+    ],
+    "target_generator_order": [
+      "y",
+      "z"
+    ],
+    "explicit_generator_images": [
+      [
+        "x",
+        "2*y**2 + z/7"
+      ],
+      [
+        "y",
+        "y"
+      ],
+      [
+        "z",
+        "z"
+      ]
+    ],
+    "source_and_target_generator_images_checked": true,
+    "all_complete_map_images_verified": 2,
+    "no_quotient_used_in_QQstar_map_composition": true,
+    "helper_sha256_at_import": "d538d2f1d3818cc45714ffe66cc5ac5b5de7ebf79f98f6b036cd4ca192e3ec35",
+    "python_flint": "0.9.0",
+    "elapsed_seconds": 0.001014233001114917
+  }
+}

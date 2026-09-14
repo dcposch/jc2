@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed and verified at `xmodel/joint-chart-degenerate-fable5-20260905.md` (body 22,560 bytes, seal PASS, basis 5f460930). All six input hashes verified OK at start and again at closeout. Drivers and JSON records are in `box/joint-degenerate-20260905/` with an artifact manifest.
+
+**Verdict: all three survivors are degenerate, and structurally so.** Each one is the pair (F, G) = (h2³, h2²). The outer blocks vanish identically, F² = G³, and the Jacobian is identically zero (computed directly on the reconstructed polynomials). The auxiliary-root configurations are not degenerate. The D=108 faces are π³(π⁴+2) and (π⁴−1)⁷, exactly Moh's shape, and the pivoted Hc coefficients are nonzero, so "all Hc = 0" was a misreading of the record. The degeneracy is entirely in the outer structure.
+
+**Theorem (cone vertex).** On the coordinate subspace Δ where the outer blocks are constants, every positive-degree Jacobian row vanishes identically, the pole rows collapse to conditions on K2 along the minor arc alone, and the four constant terms are invisible to every row. So Δ meets every truncation below the degree-0 row J₀ = f₁₀g₀₁ − f₀₁g₁₀ = 1, which sits at KJ t-power n+m−2. That row involves only the linear coefficients of F and G, which no truncated engine has ever emitted.
+
+**The h2-only system is consistent to full depth on all three corrected charts.**
+- D=108: 129 rows, 102 Q* pivots, empty residual through both leading targets. An explicit witness satisfies all 544 G pole rows by direct substitution, with ord K2(σ) = 32 and a₃₂ = (π²−1)⁴.
+- (99,66) δ=2: consistent through p = 27 (76 pivots). δ=5/2: consistent through p = 63 (94 pivots).
+
+Hence T₀ = 178 (stage 178) for D=108 δ=3 and T₀ = 163 for both (99,66) branches. A kill must contain J₀ = 1, at which point it is the whole system. The D=108 deep lane at T = 11, 16, 22 cannot return a unit, and its own log (dim 5 at n = 10) matches the prediction.
+
+**The historical kills explained.** On the old (99,66) charts the Δ-subsystem already reduces to the constant row a₄ = 8 (δ=2, stage 4) or a₈ = 8 (δ=5/2, stage 8), and 8² = 64 is literally the old δ=5/2 kill constant. The cause is one monomial: the K2 face term −8·t⁴z²¹ lacks its w⁶ factor without the h3 face coefficient κ = −8/3 that the repair gate found. The D=108 frozen kill was an h3-only block at the wrong radius. So all three refuted units were single-polynomial kills of over-restricted charts, exactly as the theorem requires for any unit below T₀.
+
+**Criterion for future units:** run the Δ-subsystem (outer = 0, rows a_p = 0, no Jacobian rows, seconds) on the same chart. If it is consistent, no unit can exist at that depth and any reported unit is a reduction error. If it is a unit, the kill rests entirely on the h3/h2 faces, floors and pins and must be audited there. I saved this as a project memory.
+
+No ledger edits, no jc2-lean, no ideation inputs, no fleet workers, no charge_basis line.
+DIVERT path=xmodel/joint-chart-degenerate-fable5-20260905.md status=CLEAN_SEALED body_bytes=22560 body_sha256=f602b330705dd6aecc2ec47b395c14d33c793ad65957c73b950c5f5c005cbf5e

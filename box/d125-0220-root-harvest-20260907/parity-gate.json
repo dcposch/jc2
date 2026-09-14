@@ -1,0 +1,106 @@
+{
+  "assert_nodes": 0,
+  "pins": {
+    "FALLACY-v2.md": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+    "box/d125-b-witness-exact-export-repair-20260906/exact-witnesses-v2.json": "07b4ce881b4f90f9a41a3f8cb01fcd3a120ff64a4f04969e60126dbdb6e7f246",
+    "box/d125-minimal-receiver-client-preflight-20260906/client.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "box/d125-symmetry-delta-gate-fable5-20260907/delta-replay.json": "0364430caf77a18a8dd1ef6dd9746cd66d65c772735ef6ade1979e0d4f7b1813",
+    "box/d125-symmetry-delta-gate-fable5-20260907/delta-witness-O.json": "f124fa364c2c31dcc3c61a06fa014adc52a6953c04bb67a2afe0b9039760ea25",
+    "box/d125-symmetry-delta-gate-fable5-20260907/delta-witness.json": "f124fa364c2c31dcc3c61a06fa014adc52a6953c04bb67a2afe0b9039760ea25",
+    "box/d125-symmetry-delta-gate-fable5-20260907/delta_check.py": "da93d650b8a4cd4b434a6cd0b2959057fe244c627b8d5ae6656f3f8185494588",
+    "box/d125-symmetry-discriminator-20260907/check.py": "5db7f9f02b4c4785b02f84af08c6ad8d1e2da8ce8cf360e0a361c23f8d1ec87b",
+    "box/d125-symmetry-discriminator-20260907/composition-witness.json": "2692591d3fc163efa7e27583d5a28c7805571942bbcf50eb3c0b2972429e8a1b",
+    "box/d125-symmetry-discriminator-20260907/composition_check.py": "7542fa817e0743f514721b51e81405d5e477978a97ae8c8d2daa589ad7c39731",
+    "box/d125-symmetry-discriminator-20260907/witness.json": "9c3708294dc3c0df25cb256598436db5736a9737a2504dada04d0777171c2e4a",
+    "xmodel/d125-b-a-hermite-composition-gate-fable5-20260907.md": "601cbe68958556ca736ade77b5b849d1326835f2328a2b951d2413609ebdbe59",
+    "xmodel/d125-b-reconstruction-gate-fable5-20260906.md": "3f154e7816deb5de39e727f99cafac3328592c703af246614d4f1e9fe2ccf1ea",
+    "xmodel/d125-lift-hermite-gate-fable5-20260906.md": "7e2594d53150bf4346f4e4cc6e7f6ff05a021b045b640128de763cc653a8a8ca",
+    "xmodel/d125-small-polynomial-lift-gate-fable5-20260906.md": "4295593a57a65e4d31630aecdef0b54e9d6078935e07cfb5e64acfd83fae4122",
+    "xmodel/d125-symmetry-delta-gate-fable5-20260907.md": "3940ba00aca8033bd8206250dc007881b9b50113061dc85588e06d1ccbe7c47d",
+    "xmodel/d125-symmetry-discriminator-astra-20260907.md": "9bed554644b1bd3c881ba4e289ea0950601ed6141677a45152577442fd477b12"
+  },
+  "private_snapshot_exists": false,
+  "relocated_input_paths": {
+    "FALLACY-v2.md": "/home/ubuntu/jc2/FALLACY-v2.md",
+    "check.py": "/home/ubuntu/jc2/box/d125-symmetry-discriminator-20260907/check.py",
+    "client.py": "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/client.py",
+    "composition-witness.json": "/home/ubuntu/jc2/box/d125-symmetry-discriminator-20260907/composition-witness.json",
+    "composition_check.py": "/home/ubuntu/jc2/box/d125-symmetry-discriminator-20260907/composition_check.py",
+    "d125-b-a-hermite-composition-gate-fable5-20260907.md": "/home/ubuntu/jc2/xmodel/d125-b-a-hermite-composition-gate-fable5-20260907.md",
+    "d125-b-reconstruction-gate-fable5-20260906.md": "/home/ubuntu/jc2/xmodel/d125-b-reconstruction-gate-fable5-20260906.md",
+    "d125-lift-hermite-gate-fable5-20260906.md": "/home/ubuntu/jc2/xmodel/d125-lift-hermite-gate-fable5-20260906.md",
+    "d125-small-polynomial-lift-gate-fable5-20260906.md": "/home/ubuntu/jc2/xmodel/d125-small-polynomial-lift-gate-fable5-20260906.md",
+    "d125-symmetry-discriminator-astra-20260907.md": "/home/ubuntu/jc2/xmodel/d125-symmetry-discriminator-astra-20260907.md",
+    "exact-witnesses-v2.json": "/home/ubuntu/jc2/box/d125-b-witness-exact-export-repair-20260906/exact-witnesses-v2.json",
+    "witness.json": "/home/ubuntu/jc2/box/d125-symmetry-discriminator-20260907/witness.json"
+  },
+  "runs": [
+    {
+      "flags": [],
+      "mutation": "",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f124fa364c2c31dcc3c61a06fa014adc52a6953c04bb67a2afe0b9039760ea25"
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-lambda-weight",
+      "returncode": 1,
+      "stderr_sha256": "41c2cf40b845671a496cc8e3d57eee7c20e52745033b78b5dc2fcb819285dd8e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-source-action",
+      "returncode": 1,
+      "stderr_sha256": "41c2cf40b845671a496cc8e3d57eee7c20e52745033b78b5dc2fcb819285dd8e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mutation": "--mutate-shear-sign",
+      "returncode": 1,
+      "stderr_sha256": "2b5f34ec6cd6bd33829df6d213cdd9b81c0fd80b424b986182209aca3688d568",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f124fa364c2c31dcc3c61a06fa014adc52a6953c04bb67a2afe0b9039760ea25"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-lambda-weight",
+      "returncode": 1,
+      "stderr_sha256": "41c2cf40b845671a496cc8e3d57eee7c20e52745033b78b5dc2fcb819285dd8e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-source-action",
+      "returncode": 1,
+      "stderr_sha256": "41c2cf40b845671a496cc8e3d57eee7c20e52745033b78b5dc2fcb819285dd8e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mutation": "--mutate-shear-sign",
+      "returncode": 1,
+      "stderr_sha256": "2b5f34ec6cd6bd33829df6d213cdd9b81c0fd80b424b986182209aca3688d568",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "independent parity fixed-locus/composition delta; small exact numeric controls, not full symbolic rows",
+  "status": "PASS",
+  "wall_seconds": 6.0079929729690775
+}

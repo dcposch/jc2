@@ -1,0 +1,29 @@
+ring r=31991,(x,B,eta,l2,l3,l4,P3,P4,P5,P6,P7,P8,P9,P10,u),dp;
+number d=4933;
+option(redSB);
+proc must(int ok,string msg){ if(!ok){print("FAIL "+msg);quit;} }
+proc xc(poly f,int k){matrix m=coef(f,x);int i;for(i=1;i<=ncols(m);i++){if(deg(m[1,i])==k){return(m[2,i]);}}return(poly(0));}
+number y=(d+5)/18; number om=1/(4*y^2*(2*d+1));
+poly L=-1+x^5/y+l2*x^2+l3*x^3+l4*x^4;   // b=1, l_N=1/y
+poly P=-1/4-B*x+eta*x^2+P3*x^3+P4*x^4+P5*x^5+P6*x^6+P7*x^7+P8*x^8+P9*x^9+P10*x^10;
+poly G=(3/2)*L*(L+1)-B*x;
+poly R=(3/16)*(L^2)*(L*(L+2)-4*B*x)-eta*x^2*(L/2+B*x);
+poly UF=x*diff(P^2,x)-3*P^2+G*P-R;
+must(xc(UF,0)==0 && xc(UF,1)==0 && xc(UF,2)==0 && xc(UF,3)==0,"low_four");
+poly Lpiv=4*eta+3*l2; poly band,piv,val;
+// row 4 -> P4
+band=xc(UF,4); piv=diff(band,P4); must(deg(piv)==0 && piv!=0,"pivP4"); val=-subst(band,P4,0)/piv; UF=subst(UF,P4,val); print("P4 solved");
+band=xc(UF,5); piv=diff(band,l3); must(piv+Lpiv/4==0,"Lpivot_row5"); val=-subst(band,l3,0)*4*u; UF=subst(UF,l3,val); print("l3 solved via u");
+band=xc(UF,6); piv=diff(band,l4); must(piv+Lpiv/4==0,"Lpivot_row6"); val=-subst(band,l4,0)*4*u; UF=subst(UF,l4,val); print("l4 solved via u");
+band=xc(UF,8); piv=diff(band,P8); must(deg(piv)==0 && piv!=0,"pivP8"); val=-subst(band,P8,0)/piv; UF=subst(UF,P8,val); print("P8 solved");
+band=xc(UF,9); piv=diff(band,P9); must(deg(piv)==0 && piv!=0,"pivP9"); val=-subst(band,P9,0)/piv; UF=subst(UF,P9,val); print("P9 solved");
+band=xc(UF,10); piv=diff(band,P10); must(deg(piv)==0 && piv!=0,"pivP10"); val=-subst(band,P10,0)/piv; UF=subst(UF,P10,val); print("P10 solved");
+ideal Jd=xc(UF,7); int k; for(k=11;k<=20;k++){Jd=Jd,xc(UF,k);}
+ideal Jfull=Jd,u*Lpiv-1;
+ring rs=31991,(B,eta,l2,l3,l4,P3,P4,P5,P6,P7,P8,P9,P10,u),dp;
+number d=4933;
+ideal Jfull=imap(r,Jfull); ideal Jd=imap(r,Jd);
+int tt=timer; ideal g=std(Jfull); print("DUAL_FULL dim="+string(dim(g))+" unit="+string(size(g)==1 && deg(g[1])==0)+" time="+string(timer-tt));
+tt=timer; ideal g0=std(Jd); print("DUAL_NO_U (pivot locus not excluded) dim="+string(dim(g0))+" unit="+string(size(g0)==1 && deg(g0[1])==0)+" time="+string(timer-tt));
+ideal Jneg=Jfull[1..5],u*imap(r,Lpiv)-1; tt=timer; ideal gn=std(Jneg); print("DUAL_NEGCTRL_first_5_conditions dim="+string(dim(gn))+" unit="+string(size(gn)==1 && deg(gn[1])==0)+" time="+string(timer-tt));
+print("DUAL_DONE"); quit;

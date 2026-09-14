@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 08:44:30 UTC, four minutes before the 08:48:38 reserve. All writers are idle; nothing follows the marker.
+
+**Custody and reads.** All nine snapshots in the lane inputs directory hashed to the charged values before any body was opened, and all nine were read whole (the three lane files by cat, the six premise reports by whole-file reads). Both owned targets were absent at first action and were authored only through apply_patch.
+
+**Verdicts, all by hand reconstruction:**
+
+- **A CONFIRMED.** The triangle bounds, the collapsed t=0 edge at (2,4), the actual s=0 and s=1 edges and the excluded t=1 edge all check. The D/K Bezout inverts only f and e, both nonzero on the half-open tau interval, so it holds at every real tau. The guard extends by the degree argument alone: q/p=nu has no solution with p at most 3 and q at most 5 in (5/3, 12/7], and residue fields are handled directly, so no étale or reality assumption enters.
+- **B CONFIRMED.** Total degrees 8 and 5, alpha-degree 3, V-degrees 7 and 5, leading coefficient 10080, three division steps cleared by c0 cubed, and the drop-safe coefficient bounds all reproduce.
+- **C CONFIRMED.** The 9x9 padded Sylvester map, the adjugate identity, the c0 to the 15th integrality (Frem cofactors cost 12 powers, T cofactors 15), the weight sum 76 minus 36 giving degree 40, the cofactor bounds, and the drop-safe resultant relation all check. The alpha-cubed coefficient of T is exactly D, so the alpha-21 coefficient of R is nonzero pointwise in tau; the producer never upgrades this to pointwise nonvanishing of R itself.
+- **D CONFIRMED.** Integrality after scaling by 21 to the 40th, bidegree (40,21), the tau=1/3 factorisation with D dividing T and D squared dividing S, and the corner-term strictness argument all hold. The factor (1-t) is forced, so j is at least 1.
+- **E CONFIRMED.** The success check is engine-independent, the refutation contract is exact real-algebraic with domain and divisibility obligations, and every capped or negative outcome is INCONCLUSIVE.
+
+**Smallest correction:** none mathematical. Two contract precisions only. On the collapsed edge the value is constant in s, so all 22 first-row Bernstein coefficients must equal the absolute corner value, and a j=0 or unequal-row artifact must be treated as defective rather than as a failed test. The identity check should explicitly assert that all positive V-power coefficients of U S plus Wcof T vanish.
+
+**GAP unchanged.** No whole-triangle nonresonance theorem exists; the contract is a sufficient certificate with unknown outcome, and no computation, registration, seal or charge_basis was authored. Report at `xmodel/f10-middle-real-domain-gate-fable5-20260910.md` with custody in the matching box directory.
+DIVERT path=xmodel/f10-middle-real-domain-gate-fable5-20260910.md status=CLEAN body_bytes=15851 body_sha256=f04c174e4b3111b2b9ee3e22e4ecceb619f0cfd2b9374e99a9ec9065cc52d21f

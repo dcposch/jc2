@@ -1,0 +1,12 @@
+ring r=0,(c1,b,z),dp;
+ideal E=(441/2500)*c1^8+(-6/25)*c1^5*b+(-9/4)*c1^2*b^2,(102/25)*c1^7+(-93/5)*c1^4*b,(177/50)*c1^6+(-33/2)*c1^3*b;
+poly B=(18/125)*c1^5+(-3/5)*c1^2*b;
+poly eta=(3/10)*c1^4+(9/2)*c1*b;
+poly D=(-3/5)*c1^2+(-9/2)*c1;
+poly A=(-18/125)*c1^5+(3/10)*c1^4;
+ideal trueSlice=E, B-eta,1-z*B; ideal G=std(trueSlice); print("TRUE_SLICE_UNIT "+string(reduce(1,G)==0));
+ideal bareSlice=B-eta,1-z*B; ideal GC=std(bareSlice); print("BARE_SLICE_NONUNIT "+string(reduce(1,GC)!=0));
+ideal boundary=E,D,A,1-z*B; ideal GB=std(boundary); print("BOUNDARY_UNIT "+string(reduce(1,GB)==0));
+poly HH=(-207/250)*c1^6;
+ideal main=(-243/62500)*c1^12+(12933/12500)*c1^11+(4617/1250)*c1^10,(144/625)*c1^9+(-1197/50)*c1^8,(63/250)*c1^8+(-522/25)*c1^7,1-z*D*HH; ideal GM=std(main); print("ELIM_MAIN_UNIT "+string(reduce(1,GM)==0));
+quit;

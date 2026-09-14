@@ -1,0 +1,52 @@
+{
+  "schema": "jc2-manual-discriminator-pins/v1",
+  "task": "pseudoplane-global-boundary-astra-20260912",
+  "first_action_utc": "2026-09-12T08:46:39Z",
+  "publication_reserve_utc": "2026-09-12T09:07:00Z",
+  "hard_stop_utc": "2026-09-12T09:10:00Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/pseudoplane-global-boundary-astra-20260912/TASK.md",
+      "sha256": "550b49dd601f2543a07e8842488a406e808903f0d6d11ee2cfe912682d5531f7",
+      "mode": "FRESH_WHOLE",
+      "scope": "Root-owned immutable task, not an authored output"
+    },
+    {
+      "path": "/home/ubuntu/jc2/COORDINATION.md",
+      "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+      "mode": "REUSED_WHOLE after matching current pin",
+      "scope": "Same agent read all 806 lines 2026-09-12 05:51-05:53 UTC in ranges 1-220, 221-440, 441-660, 661-806"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/pseudoplane-boundary-submersion-test-astra-20260911.md",
+      "sha256": "d9bb20f83678cde429f04a1f4a175b013d31be2b92ccdb87d6b98ad3edc24265",
+      "mode": "FRESH_WHOLE",
+      "scope": "Entire body and seal; general-H GAP retained, sparse-family claims not extrapolated"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/pseudoplane-boundary-gate-fable5-20260911.md",
+      "sha256": "a191ff3adbf4fc3144d43effd576f185c1c529c009265636bd9bdbb7e0275f72",
+      "mode": "FRESH_WHOLE",
+      "scope": "Entire terminal gate through BODY-END; A-E at exact scope, F remains GAP"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/pseudoplane-homogeneous-hamiltonian-root-20260911.md",
+      "sha256": "9909649753927f2dbb19bf1701b7f9b0442e1fbcf1a934b3f9080c7f81e43a14",
+      "mode": "FRESH_WHOLE",
+      "scope": "Entire body and seal; ring/bracket/source-chart and homogeneous scope only, no arbitrary-H classification"
+    }
+  ],
+  "input_census": "Five frozen objects including TASK",
+  "root_history_notice": "Euler-cancellation veto received and followed; no extra historical file opened or promoted",
+  "root_optional_control": "Message formula f_m=y+(xy)^m manually checked as a plane-only submersion/monodromy control; no additional file input, invariant descent or scalar mate",
+  "standard_imports_not_newly_primary_read": [
+    "Cohomology localization/Gysin sequence for a smooth complex curve minus finitely many points",
+    "Vanishing of ordinary H^2 for a smooth affine curve, including disconnected curves componentwise",
+    "Finite stratified topological triviality for complex algebraic maps and marked pairs after compactification"
+  ],
+  "scientific_execution": "NONE",
+  "network_source_code_payload_or_worker_reads": "NONE",
+  "new_result_scope": "All-H equivariant residue quotient and CritVal(p) contained in B_infty(h); general boundary-degree theorem remains GAP",
+  "promotion_or_followon_authority": "NONE"
+}

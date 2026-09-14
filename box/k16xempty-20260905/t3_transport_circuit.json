@@ -1,0 +1,58 @@
+{
+  "t": 3,
+  "field": "Q[d]/(3*d^2-4)",
+  "generator_order": [
+    "c1",
+    "c2",
+    "b"
+  ],
+  "input_sha256": {
+    "controls_t3_raw.sing": "ba5270b5585833df059c1c8fb10991e9098547b0e9f993718905980cb5990e52",
+    "t3_chart_data.txt": "38607d9f9079b0ec52b9283af5fd606cefb310ea9a49c7604fc5ce8bd0b9b185",
+    "t3_target2_lift.sing": "2a54a071520ebf2b11bd8ecbcf6c975adc0f5e0d5a3073065e7dcb96f8d2316d",
+    "t3_main_prelude.sing": "44914aa9eebba103712a1ae5545e09c7bd6a17d2300b2a8c862d703bc8e5fe67"
+  },
+  "selected_matrix_sha256": "0f3c90e2e9b089cff6cf577e439bcc5830a650bd6abb4cfe2bfd9653263dd237",
+  "source_identity": "sum_{k=2}^{2t} a_k E_k = (B eta)^2; a_k=LL[k-1,1]",
+  "coefficient_operator": "clear(f,e)=sum_{j=0}^e coeff_b(f,j)*A^j*Delta^(e-j)",
+  "main": {
+    "d_k": "deg_b E_k",
+    "e_k": "deg_b a_k",
+    "m": "max(4,max_k(e_k+d_k))",
+    "r": "max(m-4,4)",
+    "F_k": "clear(E_k,d_k)",
+    "Q_k": "Delta^(m-e_k-d_k)*clear(a_k,e_k)",
+    "cleared_identity": "sum Q_k F_k = Delta^(m-4) H^4",
+    "W": "u^r Delta^(r-m+4) H^(r-4)",
+    "inverse_coefficient": "sum_{j=0}^{r-1}(u Delta H)^j",
+    "literal_unit": "1=sum_k (W Q_k) F_k + (sum_{j=0}^{r-1}(u Delta H)^j)*(1-u Delta H)"
+  },
+  "boundary": {
+    "E_k_coefficient": "s^4 a_k",
+    "A_coefficient": "-s^4 B^2 (eta+B)",
+    "Delta_coefficient": "s^4 B^2 (eta+B) b",
+    "inverse_coefficient": "1+sB+(sB)^2+(sB)^3",
+    "literal_unit": "1=sum_k s^4*a_k*E_k-s^4*B^2*(eta+B)*A+s^4*B^2*(eta+B)*b*Delta+(1+sB+(sB)^2+(sB)^3)*(1-sB)"
+  },
+  "verification": "ALL_EXACT_ASSERTIONS_PASS",
+  "expanded_main_requested": true,
+  "row_b_degrees": [
+    3,
+    2,
+    2,
+    2,
+    2
+  ],
+  "lift_b_degrees": [
+    3,
+    3,
+    4,
+    4,
+    4
+  ],
+  "m": 6,
+  "r": 4,
+  "expanded_main_verified": true,
+  "transport_script_sha256": "c58434cd215b57d6dd5768591ecaa475a8f84c731b85ea37cb0232d7309d2dc1",
+  "log_sha256": "0174973dac384d067fd12eba00003f1d1850c26a1a915ff05b1ad978f4143d09"
+}

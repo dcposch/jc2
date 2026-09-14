@@ -1,0 +1,77 @@
+{
+  "schema": "f10-r3-vzero-manual-custody/v1",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "COMPLETED",
+  "writer_state": "ALL_WRITERS_IDLE_AFTER_CUSTODY_WRITE",
+  "first_action_utc": "2026-09-11T03:04:01.027875962Z",
+  "opened_utc": "2026-09-11T03:06:16Z",
+  "own_whole_review_utc": "2026-09-11T03:11:06Z",
+  "postpin_utc": "2026-09-11T03:11:38.636853225Z",
+  "closed_finalized_utc": "2026-09-11T03:11:38Z",
+  "expected_verify_and_final_whole_completed_by_utc": "2026-09-11T03:11:53.640557436Z",
+  "reserve_utc": "2026-09-11T03:13:00Z",
+  "hard_stop_utc": "2026-09-11T03:16:00Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_transaction_sha256": "72f5f3b6000c2373b36b0b13719e3d3294efd06deea289ebbb3d32222c089a4b",
+  "scientific_execution_count": 0,
+  "payload_read_count": 0,
+  "input_read_mode": "FRESH_WHOLE_ALL_FIVE_NO_PROVENANCE",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r3-vzero-place-prep-20260911/ROOT-CARD.md",
+      "pre_sha256": "9b19d73dfe86e9bda815a68973c006221e377e039230fb960d827fff2fd5aa7a",
+      "post_sha256": "9b19d73dfe86e9bda815a68973c006221e377e039230fb960d827fff2fd5aa7a",
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-source-cone-direct-circuit-astra-20260911/OPERATIONS.md",
+      "pre_sha256": "3be532afc6e784842694cf02d4399573228362abb47ae36130ef97c4274faa59",
+      "post_sha256": "3be532afc6e784842694cf02d4399573228362abb47ae36130ef97c4274faa59",
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-source-cone-direct-place-astra-20260911.md",
+      "pre_sha256": "e6df0a6458c682128c841a054e4cfb0be00cb2efde0325743f197cdcb0564725",
+      "post_sha256": "e6df0a6458c682128c841a054e4cfb0be00cb2efde0325743f197cdcb0564725",
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-source-cone-r3-code-astra-20260911/produce.py",
+      "pre_sha256": "76ad6c85a6c5d4ccbd01c642c43ff7002cb7060a1367e11ee5927a272ce06a5a",
+      "post_sha256": "76ad6c85a6c5d4ccbd01c642c43ff7002cb7060a1367e11ee5927a272ce06a5a",
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-source-cone-r3-code-astra-20260911/arithmetic.py",
+      "pre_sha256": "40b18453b6127d1b8217a6d6e1d3eb3aff1e911c15243ed9c640277f24175431",
+      "post_sha256": "40b18453b6127d1b8217a6d6e1d3eb3aff1e911c15243ed9c640277f24175431",
+      "scope": "FRESH_WHOLE"
+    }
+  ],
+  "owned_nonself": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r3-vzero-place-astra-20260911.md",
+      "sha256": "3f70c36d66bb9cc8fdbbb53a8546fcf1dc4547897374cc50a3b55658d7b1bbcb",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r3-vzero-place-astra-20260911.md.artifact.json",
+      "sha256": "72f5f3b6000c2373b36b0b13719e3d3294efd06deea289ebbb3d32222c089a4b",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r3-vzero-place-astra-20260911/PINS.json",
+      "sha256": "8e3738bbef857f140b75d8ff92b50c7aabfac5168e865b1d71340f45ac87d526",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r3-vzero-place-astra-20260911/READ-SCOPE.md",
+      "sha256": "f29496a5a59147792dc4b342cb741b6953e4c6cd1b7a8725ee2c648c02c8701d",
+      "read_scope": "WHOLE"
+    }
+  ],
+  "custody_self_hash": "EXCLUDED_RECURSIVE_SELF; supplied in terminal handoff",
+  "scope": "MANUAL_INITIAL_PLACE_PRECHECK_ONLY; no full admissibility, evaluator, rank, source outcome or follow-on authority",
+  "open": "Ten remaining scalar/coordinate inverse tests not evaluated; no fatal degeneration established in checked low-degree portion.",
+  "collision": "New report and manifest absent before publication; only own two text files in new box before custody; older direct-circuit box untouched."
+}

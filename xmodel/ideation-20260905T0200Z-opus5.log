@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Sealed. Submission written to `xmodel/ideation-20260905T0200Z-opus5.md` (47 KB, marginally over the 25–45 KB target because §13 was a required late addendum).
+
+**Inputs:** manifest generated with awk from the `.run.v2`, `sha256sum -c` → 4/4 OK, no digit retyped. Both running lanes had no `final_status` when I checked, so I read neither report nor `box/moh14-20260905/`; I also skipped `box/ideation-20260905T0200Z-grok46/`.
+
+**What I found (new work in `box/abelfact-20260905/`):**
+
+- **Q1 — the K16 atom is a factorization identity.** Astra's (F3) is *identically* `Phi·Lam = Gee` with `Phi = xW − b²/4`, `Gee` **W-free** and a quartic in `K = x²C − by`. Machine-verified: 0/6 residual at t=2,3,4 with `B`,`eta` free (`verify_master.py`). Consequences: the rigidity `B·W'(0)=0` **is** the divisibility `K | Gee`; a norm law `Res(K,Phi)·Res(K,Lam) = −(B·eta)^{t+1}b³y³`; the grading matches the frozen `wt(b4,u₂..,b₃)` exactly; the leading coefficient reproduces `3d² = t+1`. The operator `x d/dx − 3` is diagonal, so the whole atom is a *truncation* condition on a recursion — a dynamic argument, unlike every refuted route.
+- **Measured:** the resulting chart returns RAW **unit ideal** at t=3 (0 ms), t=4 (1 ms), t=5 (54 ms) — stronger than the atom. t≥6 **did not finish** and I report it as undecided, not a frontier. Negative result also reported: the recursion-substituted chart densifies and is worse.
+- **Q2** — the 17 screen-survivor rows descend to 5 classes on `(n',m',l)`, all recovered from the frozen enumerator (17/17).
+- **Q4 / systems** — the recurring pattern: a TIMEOUT recorded as a problem property. `t=5` went from "dedicated modular run" to 54 ms by changing chart form.
+
+**Two things I got wrong, corrected in §13:** my `(84,56)` `u_s=2` flag is discharged by 17(jjjjjj) (14/14 are `u_s=1`), and my `l ≤ 2` POSDIM prediction is not what the sealed lane found — the blocker is descended depth `s'`, not `l`. My class count (5 from 17 rows) is a coarser key than the lane's 7 classes / 89 instances; the lane's number is operative.
+
+Collision scan run: 5 of 6 raised OPENs return NONE; `OPEN[MOH-100-REDUCIBLE-BRANCH]`'s candidates reviewed and found distinct (they concern H2 reducibility of `A_F`, not Moh's condition (3)).
+DIVERT path=xmodel/ideation-20260905T0200Z-opus5.md status=CLEAN body_bytes=47166 body_sha256=4cd31d04bfb37251c886a9f50f1709a390347ed2ea2ad14f3f73c6f590379994

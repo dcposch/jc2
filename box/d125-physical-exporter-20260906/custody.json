@@ -1,0 +1,28 @@
+{
+  "schema": "jc2.d125-exporter-preflight-custody/v1",
+  "owner": "/root/model_productivity",
+  "status": "PREP_ONLY_TOY_TESTS_TERMINAL",
+  "production_authority_received": false,
+  "normalized_equivalence_status": "PROVISIONAL_UNLICENSED",
+  "production_generations": 0,
+  "full_support_generations": 0,
+  "full_pair_censuses": 0,
+  "solver_or_cas_invocations": 0,
+  "remote_operations": 0,
+  "live_owned_processes": [],
+  "source_reports": {
+    "xmodel/d125-client-interface-astra-20260906.md": "0c5270a432a6336c17c4693034e36cb496f139c3267843e3ac06628ec8c4b255",
+    "xmodel/d125-source-contract-gate-fable5-20260906.md": "a802587179b6f105bb47555ceb0e6a1d20c94c68a76c6ac4a26bbea1fce7b4e4",
+    "xmodel/d125-triangular-source-normalization-astra-20260906.md": "8ea55aaf26acbd4992aee9d14cce8712fda1c7590cd876ee974194c76bb3ad9e"
+  },
+  "charged_files": {
+    "exporter.py": "a8092908c9f4916306e24fdeca622426f8e6be09ab4f3d0d19e7488e05eca2f9",
+    "test_exporter.py": "5444310d1ebfa8a9c7b55fe40ffaa53c3dc934dd201a0e9a378798a3ed4c11d4",
+    "toy-checks-v3/summary.json": "322a7d9e84113ab296172e11c7701c2a3d793922ce35979f73012546b8a249b7",
+    "toy-checks-optimized-v3/summary.json": "ea831f68625f69fdd2c3ede82fae6bb1dc47351702e8dddf640a9d1777f91b6c"
+  },
+  "older_controls": "v1 and v2 normal/optimized checks are preserved superseded draft controls; use v3 for the charged builder",
+  "test_limits": {"alarm_seconds": 25, "address_space_bytes": 536870912},
+  "test_results": {"normal": "PASS", "optimized": "PASS", "mutation_rejections_each": 17},
+  "writer_boundary": "All toy subprocesses were waited synchronously to exit 0; denied production CLI subprocesses exited nonzero before creating an output directory. No background process or remote process was started."
+}

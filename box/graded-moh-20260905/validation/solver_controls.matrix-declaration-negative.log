@@ -1,0 +1,8 @@
+EXACT_UNIT_CONTROL=1
+EXACT_NONUNIT_CONTROL=1
+   ? matrix size not compatible(1x1, 2x1) in *
+   ? error occurred in or before box/graded-moh-20260905/validation/solver_controls.sing line 10: `matrix C=M*L;`
+   ? expected matrix-expression. type 'help matrix;'
+   ? `C` is not defined
+   ? error occurred in or before box/graded-moh-20260905/validation/solver_controls.sing line 11: `print("IDENTITY_CONTROL="+string(C[1,1]==1));`
+   ? wrong type declaration. type 'help string;'

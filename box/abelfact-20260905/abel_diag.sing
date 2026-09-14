@@ -1,0 +1,53 @@
+// Reduced (F3') chart over F_p, dehomogenised at b=1.
+// usage: Singular -q -c 'int TT=3; int PP=32003;' abel_modp.sing
+int q = 2*TT+1;  int N = 4*TT+4;
+int i,j,n;
+// find w = sqrt(3(TT+1)) mod PP by brute force over a small range
+int target = (3*(TT+1)) % PP;
+int W = -1;
+for(i=1;i<PP;i++){ if(((i*i) % PP)==target){W=i; break;} }
+if(W<0){ "NO SQRT: A_t inert at this prime"; quit; }
+if(FIB==1){ W = PP-W; }
+ring R = (PP),(x,B,eta,f3,c(0..(TT-2)),zz),dp;
+number w = number(W);
+number y = (w + 3*(TT+1))/number(6*q);
+number iy = 1/y;
+poly C = x^(TT-1);
+for(i=0;i<=TT-2;i++){ C = C + c(i)*x^i; }
+poly K = x^2*C - y;
+poly M = x^2*C;
+poly KM = K*M;
+poly Gee = (number(3)/16)*iy^4*K^3*(K+2*y) - (number(3)/4)*iy^2*B*x*K^2
+           - (number(1)/2)*iy*eta*x^2*K - B*eta*x^3;
+number c32 = (number(3)/2)*iy^2;
+matrix gm = coeffs(Gee,x);
+matrix km = coeffs(KM,x);
+proc cf(matrix m, int n){ if(n+1>nrows(m)){return(poly(0));} return(m[n+1,1]); }
+list phi;                       // phi[n+1] = phi_n
+phi[1] = poly(-1)/poly(4); 
+number q0 = number(-1)/number(4);
+phi[1] = q0; phi[2] = -B; phi[3] = eta; phi[4] = f3;
+int t0=timer;
+for(n=4;n<=N;n++){
+  poly known = 0;
+  for(i=1;i<=n-1;i++){ known = known + phi[i+1]*phi[n-i+1]; }
+  poly rhs = cf(gm,n) + B*phi[n];
+  for(j=2;j<=n;j++){ rhs = rhs - c32*cf(km,j)*phi[n-j+1]; }
+  phi[n+1] = (rhs/number(n-3) - known)/(2*q0);
+}
+ideal I;
+int cnt = 0;
+for(n=2*TT+3;n<=N;n++){ if(phi[n+1]!=0){ cnt++; I[cnt]=phi[n+1]; } }
+"t="+string(TT)+"  p="+string(PP)+"  fib="+string(FIB)+"  w="+string(W)+"  eqs="+string(cnt)+"  vars="+string(TT+2);
+"  recursion ms="+string(timer-t0);
+for(i=1;i<=cnt;i++){ "   gen "+string(i)+": size="+string(size(I[i]))+" deg="+string(deg(I[i])); }
+// incremental: smallest generators first
+ideal P; int k; int tm;
+for(k=1;k<=cnt;k++){
+  P[k]=I[k];
+  tm=timer; ideal gk=std(P);
+  "   k="+string(k)+" RAW dim="+string(dim(gk))+" size="+string(size(gk))+" ms="+string(timer-tm);
+  if(size(gk)==1 && gk[1]==1){ "   ==> UNIT at k="+string(k); break; }
+  kill gk;
+}
+quit;

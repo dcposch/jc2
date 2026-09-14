@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The report is complete and sealed at 12:43:09Z, five minutes before the substantive deadline. Nothing further is needed: the marker is the last line, the file ends in a newline, and no seal or manifest is mine to write.
+
+**Outcome.** ROOT's control survives independent reconstruction. Every one of the six charged scopes is CONFIRMED by hand derivation, with one GAP that the producer already declares.
+
+**Report.** `xmodel/exact-volume-no-coordinate-gate-fable5-20260913.md` (179 lines, about 1600 words, under the 1800 cap). Authored with apply_patch only: skeleton, two section appends, one repair, closing section, then the standalone BODY-END marker last.
+
+**Verdict vector.**
+1. **Subring and charts: CONFIRMED.** All six identities expand directly in C[u,v]. The localization at (a−1)(b−1) is a ring equality, and the (t,s) substitution is a field isomorphism with inverse t=1/u, s=c, giving B[a⁻¹]=C[t,s][(1+ts)⁻¹] and B[c⁻¹]=C[t,c,c⁻¹]. Since 1+ts and s have no common zero, the whole plane including t=0 sits inside Y. The three opens cover Y because a=b=0 forces (a−1)(b−1)=1.
+2. **Image of j and ruling: CONFIRMED.** At z=0 the identities leave (a,b) in {(0,0),(1,0),(0,1)}; the last two are literally the lines t=0 and r=0 of the two added charts, and (0,0) is the image of the source axes. D(z) and D((a−1)(b−1)) are both isomorphic images of source opens, so j is an isomorphism onto Y minus E1 ∪ E2. Fibres of c over c≠0 are A¹_t.
+3. **Forms: CONFIRMED.** β=−v du becomes (1+ts)dt and −(2+3rq)dr−r²dq, both polynomial; their derivatives −t dt∧ds and r dr∧dq agree with du∧dv computed directly. div(ω)=E1+E2 with multiplicity one.
+4. **No coordinate: CONFIRMED.** Along E1 the monomial u^i v^j has order 2j−i and the pure u^D term is the unique minimum, so its coefficient dies; mirror along E2. The top form is then divisible by uv, giving two points at infinity on every level curve, while a coordinate level curve has one. Sanity check passes: dropping E2 lets v=t²(1+ts) extend, dropping E1 lets u extend, so both opposing valuations are load-bearing.
+5. **Eliminant and Jacobian: CONFIRMED.** The z-eliminant expands term by term to exactly the displayed monic octic; a,b are quadratic over C[c,d][z], so B is finite and equals the integral closure of C[c,d] in C(u,v). d has t-degree 8 with leading coefficient c³, so generic degree is 8. J(c,d)=1−3a−3b+8z³, nonconstant.
+6. **Interpretation: CONFIRMED as scoped.** Keller etaleness is exactly the missing hypothesis. Whether some other pair in B² is Keller is **GAP**, untouched by any argument in CLAIM.md. No JC2 closure follows. No charge_basis line was declared, since no exit price is asserted.
+
+**Custody.** Both inputs hash identically before and after review. The first 8481 bytes of CLAIM.md match the producer's declared body hash. One authoring deviation is disclosed in the report: my second append duplicated one sentence, which I removed with a single apply_patch delete before the closing section and the final whole-draft readback.
+DIVERT path=xmodel/exact-volume-no-coordinate-gate-fable5-20260913.md status=CLEAN body_bytes=11094 body_sha256=d761d0db43b85439061af2f61c0c2f9db01a0a690a4ec4270e83eb90abc562d8

@@ -1,0 +1,31 @@
+UTC=2026-09-05T14:32:07Z
+--- ps ---
+   3207       19:59 1836812 99.9 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v18/guided/v18_p1073741827.sing
+--- files ---
+total 276
+-rw-rw-r-- 1 ubuntu ubuntu      0 Sep  5 14:12 v18_p1073741827.err
+-rw-rw-r-- 1 ubuntu ubuntu    196 Sep  5 14:12 v18_p1073741827.out
+-rw-rw-r-- 1 ubuntu ubuntu   6638 Sep  5 14:31 v18_p1073741827.rss.log
+-rw-rw-r-- 1 ubuntu ubuntu 267887 Sep  5 14:12 v18_p1073741827.sing
+--- rss last ---
+VmHWM:	 1801720 kB
+VmRSS:	 1801720 kB
+utc=2026-09-05T14:31:48Z
+pid=3207
+VmPeak:	 2096820 kB
+VmSize:	 2096820 kB
+VmHWM:	 1820624 kB
+VmRSS:	 1820624 kB
+--- out ---
+CONTROL_RING_PASS R
+CONTROL_EMPTY_PASS
+CONTROL_NONEMPTY_PASS
+MAIN_START equations=650 unknowns=438 char=1073741827 algorithm=std
+GG__RUN main START
+GG__GENERATOR_COUNT main 651
+GG__STD_BEGIN main
+--- err tail ---
+--- log ---
+GUIDED_PIPELINE_START target=v18 rows=/home/ubuntu/moh-bigmem-20260905/targets/v18/graph_rows.tsv utc=2026-09-05T14:12:07Z
+GUIDED_START name=v18 gens=650 nvars=439 rows_sha=35ad3ecbf9f9ed5a341df81e8b7c76d763bcd3b2ad273cec775c6ef101488fee
+MODULAR_START p=1073741827 timeout=10800 utc=2026-09-05T14:12:07Z

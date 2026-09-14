@@ -1,0 +1,25 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Replay clean. Done.
+
+## Result: **PROVED** — `THEOREM [ACTUAL-STABILIZER SCREEN]`
+
+**Report:** `xmodel/actual-stabilizer-soundness-opus5-20260906.md` (sealed, body 16,433 B, `ba4c45f5…`, basis `2c5d9046`). Custody: 9/9 charged inputs verified by `awk`-built manifest + `sha256sum -c` before any mathematical read.
+
+### The argument
+
+Moh's `L` in (8) p.201 does exactly one job: it names the fixed field of the automorphism `t̄ → ωt̄` ("**over** `k⟪t̄^{A_{r−1}}⟫`"; and in his own `s=2` instance on p.188, "the conjugations of `k((t^{1/A}))` **over `k((t))`**"). The automorphism is only ever required to **fix the centre** of the current disc. Prop 5.3 p.180 builds that centre one term at a time — `τ = Σα_j t^j + C_r t^{δ_r}` — so a selected factor `π` (Moh's own (11) case, `C_r = 0`) contributes no term and cannot enlarge the denominator lattice. That is the whole sharpening: `Lcal_j = lcm{den δ_i : i > j, C_i ≠ 0}`.
+
+The one gap **both** readings need is closed by **Lemma A**: every exponent in the centre's support has denominator dividing `Lcal_i`. The proof induces on the support; the automorphism fixing the earlier terms forces `ord(ξ − τξ) = e` exactly, contradicting either `D_s` minimal (p.179, Prop 5.1 note) or p.180's `δ_{j−1} = min{ord(τ_i − τ_j)…}` for the **minimal** disc — unless `e = δ_j` with `C_j ≠ 0`. Since `Lcal | L`, the actual modulus is a *multiple* of the coarse one, so (10)/(11) are strictly harder, and every clause — orbit enumeration, per-factor ODE (p.171, not Prop 4.6's `r=1` sentence), Prop 5.6 danger (pp.188–190), bottom (12)/(13) (p.188) — is necessary at the actual modulus. **Not refutable:** the screen is existential over branch patterns, so a realizing pair supplies its own passing pattern.
+
+### The calibration that settles the convention
+
+The `n ≤ 100` survivors under the **actual** rule are *exactly* Moh's six p.202 rows (set equality, mechanically checked). The **coarse** rule leaves 20 — 14 excess rows at (90,60), (96,72), (96,64), every one with `3 ≤ s ≤ 5` and `d_s ≥ 4`, i.e. inside Moh's own stated search range and contradicting his printed p.207 Appendix II list. His own output refutes the coarse reading of his own prose.
+
+All five p.207 descended rows survive; the only one where the conventions can differ, `(21,14; M₂=16; V₂=2)`, passes only on the `C₂ ≠ 0` branch — with `A₁ = 3`, **Moh's own number**.
+
+### Numbers (independent driver, not the charged one)
+
+24,063 → 1,420 coarse (0 mismatch vs live probe) → **90** actual = 65 roster + 25 finite-pole; only R063 drops; residual **64/64** unaffected. Sandwich control: the over-strong `centre_L ≡ 1` keeps 72, so `72 < 90 < 1,420`.
+
+**Not proved here:** the further `90 → 64`, which consumes the finite-pole obstruction and R001's Xu Cor. 5.3 removal — quoting "64" requires naming both. Two OPENs raised (the 14 excess rows' provenance; Lemma A at minor packets).
+DIVERT path=xmodel/actual-stabilizer-soundness-opus5-20260906.md status=CLEAN_SEALED body_bytes=16433 body_sha256=ba4c45f53204bb309f317542ab0aa37f8464c4835d89ac2e0ac816b6681482e0

@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The report is sealed at `xmodel/cubic-scroll-donor-gate-fable5-20260912.md` with `<!-- BODY-END -->` as its last line, 2080 words, finished at 00:37:53 UTC, well inside the 00:43 reserve. No further edits will be made.
+
+**Verdict: CUBIC-SCROLL-DONOR-1 CONFIRMED on all five heads (A through E).** No REFUTED item and no GAP, modulo the standard imports the reports already declare explicitly: embedded resolution by point blowups, log-form pullback when boundary maps into boundary, codimension-one determination of line-bundle sections on a smooth surface, and finiteness of proper quasi-finite maps.
+
+What I independently re-derived rather than took on trust:
+
+- **A.** The ample-class count, both normal forms with the exact extra-base-point conditions (a or b zero, C zero), the one-orbit scaling, the Kulikov net's zero-linear-part combination being 3(u²−uv+v²), and the optional G-removal substitution. All correct.
+- **B.** The Jacobian determinant −36R by the matrix determinant lemma, the expansion R = uv(u+v)+2wq, the restriction of the conics to Rbar giving the quartic F, the identity qA₂−uv(u+v)l = 3F coefficientwise, F never zero nor a fourth power, and the absence of rank-one conics. All correct.
+- **C.** The minus sign in theta = −π*eta ∧ dlog(R/(vQ)), the weight count, the E-order 1−k, and the contact control: for a contact of order m the factor t^(m−1) supplied by N/F is exactly what makes the form logarithmic on the final exceptional curve, verified by hand at m=2. All blowup centres lie in the actual boundary, so X is unchanged and the passage from omega(D'_big) to omega(D') is purely divisorial.
+- **D.** The Jacobian −2u(uw+2Guv−2Cv²), the blowup-chart Jacobian with no factor of t, the global coordinate r on the whole étale locus, the displayed morphism, and the nonconstancy of every line pullback L.
+- **E.** The reduction is invariant under source automorphisms and target projectivities, and no step uses the first-leg degree.
+
+Three non-blocking remarks are recorded in the report. The only one worth noting here: the Keller corollary uses finiteness of phi to get dominance of the first leg in addition to the chain rule, which is harmless.
+
+Input hashes were pinned before reading and re-pinned after the body; all three match the expected values. No code, network, other reports, or live artifacts were used.
+DIVERT path=xmodel/cubic-scroll-donor-gate-fable5-20260912.md status=CLEAN body_bytes=12816 body_sha256=c2f52680637bec1c7d7570bd07466eb408ba012dd6912c7ce89a6413677ec2cc

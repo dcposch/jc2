@@ -1,0 +1,12 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done at 12:13:29 UTC, inside the 12:20:47 cap. The gate is written at `xmodel/f10-low-residual-degree-gate-fable5-20260909.md` with pins and read scope in `box/f10-low-residual-degree-gate-fable5-20260909/`.
+
+**Verdict: A, B, C, D all CONFIRMED.** The new Astra lemma holds exactly as stated, and its attachment to the accepted 16r presentation is now unconditional.
+
+- **A.** E0 forces h nonzero and gcd(k',h)=1 by a Bézout relation over the field itself. deg N = tau+2r+1 with leader nb·H/(ma), needing only a, b nonzero and characteristic zero. The exact degree sits inside the retained envelope precisely because tau ≤ 2r+1.
+- **B.** I re-expanded h·E1 − 2f·E0 term by term. The B0' terms cancel exactly and the identity (6) holds with every printed sign, no division. The leader (2r+1)H²ν and the strict comparison fail only at r=1, tau=0. The excluded set is exactly r ≥ 2 with 3·tau < r; nothing at r=1 is excluded. u=0 and the scalar mate gauge leave D, E0, E1 and ν unchanged.
+- **C.** At r=1, tau=0 the right side has degree at most 2 below deg k' = 3, so both (8) equations follow and [S²]f = 21bH³/(8a). I replayed the control (9) fully: E0, E1 vanish, both module inverse tests pass, the t⁶ row leaves 6S³. Cross-check: the 16r reconstruction would set B4 = (6/5)S³, which cancels that term, so (9) is a deliberately changed object and not a complete or source point. The B2+1 and sign-flip controls give 8S³ and 4S² as printed.
+- **D.** Every S-coefficient of (6) is a combination of E0, E1 coefficients, so no new ideal row appears. The only earned reformulation is that 1 lies in L_r plus the high coefficients of h whenever 3·tau0 < r, a stratum unit, never a unit of L_r or I_r. tau = 2r+1 exhausts the margin because the envelope bound deg D ≤ tau+3r+2 reproduces exactly the given bound with equality.
+
+No seal or charge_basis line was authored. No OPENs raised. Whether L_r is proper or unit remains open for every r.
+DIVERT path=xmodel/f10-low-residual-degree-gate-fable5-20260909.md status=CLEAN body_bytes=11716 body_sha256=c99c3e9cedd9a0f802d947643c71b143fdd3f75884da6f5be737c5945c35e76e

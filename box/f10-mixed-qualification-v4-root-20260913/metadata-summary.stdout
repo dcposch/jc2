@@ -1,0 +1,40 @@
+assembly-receipt.json 1103
+native.sha256 588811
+native-stat-records.json 441384
+source-native-manifest.json 601943
+native-manifest.json 732357
+{"receipt_sha256": "4eba274a4617eaa06b7494331060455c72fa42160d21b23b1ad889d4c54a28c0", "science_outcome": "NONE", "status": "ASSEMBLED_METADATA_ONLY_UNQUALIFIED"}
+{"directories": 419, "files": 4361, "flags": "sys.flags(debug=0, inspect=0, interactive=0, optimize=0, dont_write_bytecode=1, no_user_site=1, no_site=1, ignore_environment=1, verbose=0, bytes_warning=0, quiet=0, hash_randomization=1, isolated=1, dev_mode=False, utf8_mode=0, warn_default_encoding=0, safe_path=True, int_max_str_digits=4300)", "python": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]", "status": "METADATA_PINS_PATHS_MODES_ACL_COPY_CHECKED_NOT_SCIENCE", "sys_path": ["/usr/lib/python312.zip", "/usr/lib/python3.12", "/usr/lib/python3.12/lib-dynload"]}
+{
+  "status": "IMPORT_PATHS_APIS_PINS_CHECKED_NOT_ALGEBRA",
+  "sympy_version": "1.12",
+  "mpmath_version": "1.2.1",
+  "ground_types": "python",
+  "startup_paths": [
+    "/opt/jc2-mixed-20260912/meta",
+    "/usr/lib/python312.zip",
+    "/usr/lib/python3.12",
+    "/usr/lib/python3.12/lib-dynload"
+  ],
+  "final_paths": [
+    "/opt/jc2-mixed-20260912/meta",
+    "/usr/lib/python312.zip",
+    "/usr/lib/python3.12",
+    "/usr/lib/python3.12/lib-dynload",
+    "/opt/jc2-mixed-20260912/lib"
+  ],
+  "loaded_module_count": 540
+}
+2026-09-13T01:27:47.477190+00:00 ip-172-30-0-92 systemd[1]: Starting jc2-mixed-v3-native-20260913.service - /usr/bin/bash /opt/jc2-mixed-20260912/meta/native-metadata.actual.sh...
+2026-09-13T01:27:47.482302+00:00 ip-172-30-0-92 systemd[1]: Started jc2-mixed-v3-native-20260913.service - /usr/bin/bash /opt/jc2-mixed-20260912/meta/native-metadata.actual.sh.
+2026-09-13T01:28:27.595963+00:00 ip-172-30-0-92 systemd[1]: jc2-mixed-v3-native-20260913.service: Deactivated successfully.
+2026-09-13T01:28:27.596119+00:00 ip-172-30-0-92 systemd[1]: jc2-mixed-v3-native-20260913.service: Consumed 30.720s CPU time, 17.2M memory peak, 0B memory swap peak.
+2026-09-13T01:28:27.676693+00:00 ip-172-30-0-92 systemd[1]: Starting jc2-mixed-v3-assembly-20260913.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/native_records.py --raw /opt/jc2-mixed-20260912/prep/native.stdout --raw-sha256 010bc838bbbe1b52dc72bfc5ea3906dccabd71fb72e6b5b4027c067d94182dd8 --facts /opt/jc2-mixed-20260912/meta/facts.json --facts-sha256 04df0557372e7e8515791727262ea08b85b5a01c709be66f0f6876418024b423 --out /opt/jc2-mixed-20260912/prep/assembled...
+2026-09-13T01:28:27.681869+00:00 ip-172-30-0-92 systemd[1]: Started jc2-mixed-v3-assembly-20260913.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/native_records.py --raw /opt/jc2-mixed-20260912/prep/native.stdout --raw-sha256 010bc838bbbe1b52dc72bfc5ea3906dccabd71fb72e6b5b4027c067d94182dd8 --facts /opt/jc2-mixed-20260912/meta/facts.json --facts-sha256 04df0557372e7e8515791727262ea08b85b5a01c709be66f0f6876418024b423 --out /opt/jc2-mixed-20260912/prep/assembled.
+2026-09-13T01:28:27.855680+00:00 ip-172-30-0-92 systemd[1]: jc2-mixed-v3-assembly-20260913.service: Deactivated successfully.
+2026-09-13T01:28:27.912720+00:00 ip-172-30-0-92 systemd[1]: Starting jc2-mixed-v3-inspect-20260913.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/inspect_native.py...
+2026-09-13T01:28:27.917981+00:00 ip-172-30-0-92 systemd[1]: Started jc2-mixed-v3-inspect-20260913.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/inspect_native.py.
+2026-09-13T01:28:28.337549+00:00 ip-172-30-0-92 systemd[1]: jc2-mixed-v3-inspect-20260913.service: Deactivated successfully.
+2026-09-13T01:28:28.382470+00:00 ip-172-30-0-92 systemd[1]: Starting jc2-mixed-v3-imports-20260913.service - /usr/bin/python3.12 -E -s -S -B /opt/jc2-mixed-20260912/meta/inspect_imports.py...
+2026-09-13T01:28:28.387547+00:00 ip-172-30-0-92 systemd[1]: Started jc2-mixed-v3-imports-20260913.service - /usr/bin/python3.12 -E -s -S -B /opt/jc2-mixed-20260912/meta/inspect_imports.py.
+2026-09-13T01:28:28.689098+00:00 ip-172-30-0-92 systemd[1]: jc2-mixed-v3-imports-20260913.service: Deactivated successfully.

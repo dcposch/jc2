@@ -1,0 +1,65 @@
+{
+  "schema": "keller-trace-node-custody/v1",
+  "owner": "/root/model_productivity",
+  "status": "COMPLETED_MANUAL_UNREVIEWED_CONDITIONAL",
+  "first_action_utc": "2026-09-11T19:53:25.708431496Z",
+  "original_reserve_utc": "2026-09-11T20:10:00Z",
+  "original_hard_stop_utc": "2026-09-11T20:13:00Z",
+  "finalized_utc": "2026-09-11T20:02:22Z",
+  "sealed_whole_and_expected_verify_utc": "2026-09-11T20:02:39.889534653Z",
+  "all_writers_idle_after_this_file": true,
+  "ongoing_jobs": [],
+  "input_count": 2,
+  "inputs": [
+    {
+      "path": "box/keller-trace-node-astra-20260911/TASK.md",
+      "sha256": "bdfc854563a3b0aed40c27bbca02de2d527885c9c4427a5d38a3ea0172fd4a4c",
+      "bytes": 4049,
+      "lines": 72,
+      "scope": "FRESH_WHOLE after its current hash; discovery of the sole other input"
+    },
+    {
+      "path": "xmodel/one-dicritical-defect-connectivity-astra-20260911.md",
+      "sha256": "577e506b78fc6990738d267701c9fab31c9b7b12d344def3a8df803b09448ef3",
+      "bytes": 10968,
+      "lines": 75,
+      "scope": "FRESH_WHOLE including seal, current hash before body; both input hashes then known/current; MANUAL_UNREVIEWED conditional model retained"
+    }
+  ],
+  "owned_count_excluding_custody": 3,
+  "owned": [
+    {
+      "path": "box/keller-trace-node-astra-20260911/PINS.json",
+      "sha256": "e78d72afe05a6573dbf19fd6a3bd9fb82bfdfec76a6d86920322fe3bc0cb144c",
+      "bytes": 1548
+    },
+    {
+      "path": "xmodel/keller-trace-node-astra-20260911.md",
+      "sha256": "97c4a0fda9e23bed5f16671abfb4d026a065ae040345240a82ecade3b878af76",
+      "bytes": 12910
+    },
+    {
+      "path": "xmodel/keller-trace-node-astra-20260911.md.artifact.json",
+      "sha256": "e31f365487af60742ac35e4c15d1f32847ceea8a221d4ec9da38223b449da1ad",
+      "bytes": 686
+    }
+  ],
+  "expected_transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "report_sha256": "97c4a0fda9e23bed5f16671abfb4d026a065ae040345240a82ecade3b878af76",
+    "manifest_sha256": "e31f365487af60742ac35e4c15d1f32847ceea8a221d4ec9da38223b449da1ad",
+    "status": "VERIFIED"
+  },
+  "result_scope": "For the stipulated actual node covering/fibre data, finite normalization and actual open membership yield the ordinary tensor-base-change model. Its trace image is S[1/u]+S[1/v], with cokernel H^2_(u,v)(S) and nonzero mixed residue despite K_p=0. Conditional/unreviewed; no existence, global Keller exclusion or JC2 theorem.",
+  "controls": "One branch, extra factor missing both branches, identity map with actual empty D, and source-completion loss all checked manually.",
+  "checks": {
+    "whole_inputs": "Both freshly pinned before their own whole bodies; parent seal included; no clipping or linked premises",
+    "own_whole": "Partial, PINS, sealed report and manifest whole read; quantity/cheapest-test/OPEN/collision checked before unique marker",
+    "input_postpins": "Both unchanged",
+    "scientific_execution": 0,
+    "network_or_worker": 0,
+    "shared_edits": 0,
+    "new_open_id": 0
+  },
+  "self_hash": "Excluded; terminal handoff supplies custody SHA."
+}

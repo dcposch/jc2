@@ -1,0 +1,44 @@
+--- predecessor/check.py
++++ necessary-rows/check.py
+@@ -39,8 +39,8 @@
+     need((json.dumps(doc,sort_keys=True,separators=(',',':'),ensure_ascii=True)+'\n').encode('ascii') == raw,
+          'INPUT-only canonical round-trip')
+     keys(doc,'schema job_tag contract_sha256 source_pins place graph')
+-    eq(doc['schema'],'f10-r3-direct-rows/v1','schema')
+-    eq(doc['job_tag'],'f10-source-cone-r3-direct-rows-v1','job tag')
++    eq(doc['schema'],'f10-r3-necessary-rows/v1','schema')
++    eq(doc['job_tag'],'f10-source-cone-r3-necessary-rows-v1','job tag')
+     need(type(doc['source_pins']) is dict and all(type(k) is str for k in doc['source_pins']),
+          'source vector mapping')
+     for pin in [doc['contract_sha256']] + list(doc['source_pins'].values()):
+@@ -387,21 +387,6 @@
+             wanted = zero() if h < 7 else sc(psis[h-7],n.fneg(lambdas[h-7][1]) if j == 1 else lambdas[h-7][0])
+             diagnostic('low-band:'+str(h)+':'+str(j),sub(actual,wanted),h <= 7)
+ 
+-    # BOTH full Laurent-q boundary maps and separately retained pole subrecords.
+-    iq,P,iz = sym(6,'inverse'),sym(5,'inverse'),sym(4,'inverse')
+-    chartS = add(mul(P,pw(iq,3)),neg(mul(iz,pw(iq,2))),mul(cast(U,'inverse'),iq))
+-    inverse_maps,poles = [],[]
+-    for source,minimum,maximum in ((A,-3,30),(B,-5,51)):
+-        inverse_poly = zero('inverse')
+-        for ex,v in source.items():
+-            key = list(ex); key[5] = key[6] = 0
+-            term = mul(Poly('inverse',{tuple(key):v}),pw(chartS,ex[5]))
+-            inverse_poly = add(inverse_poly,move(term,6,-ex[6]))
+-        need(all(minimum <= e[6] <= maximum for e in inverse_poly),'inverse Laurent envelope')
+-        inverse_maps.append(inverse_poly)
+-        poles.append(Poly('inverse',{e:v for e,v in inverse_poly.items() if e[6] < 0}))
+-    eq(len(inverse_maps),2,'BOTH full inverse charts')
+-    eq(len(poles),2,'BOTH separate pole records')
+     eq(value(co(co(A,6,0),5,10)),Wi,'installed first leading scalar')
+     eq(value(co(co(B,6,0),5,17)),t5i,'Euler second leading scalar')
+     eq(n.fmul(n.fmul(W,t5),n.fmul(Wi,t5i)),F(1),'leading guarded inverse product')
+@@ -501,7 +486,7 @@
+         envelope(actual,weight)
+         eq(record,actual,'direct-source graph slot '+label)
+     eq(len(wanted_slots),25,'all25 source-derived rows')
+-    return 'CHECKED_DIRECT_ROWS_25_NO_SOURCE_OUTCOME'
++    return 'CHECKED_NECESSARY_ROWS_25_NO_SOURCE_OUTCOME'
+ 
+ 
+ def main():

@@ -1,0 +1,35 @@
+{
+  "schema": "jc2-closedchild-preflight9-original-clocks/v1",
+  "state": "ORIGINAL_PREALLOCATION_CARD_NO_WORKER_OR_SOURCE_RELEASE",
+  "batch": "jc2-closedchild-preflight9-20260912a",
+  "first_execution_preparation_utc": "2026-09-12T08:01:01+00:00",
+  "preparation_reserve_utc": "2026-09-12T08:30:00+00:00",
+  "preparation_hard_utc": "2026-09-12T08:33:00+00:00",
+  "latest_worker_launch_utc": "2026-09-12T08:40:00+00:00",
+  "setup_deadline_utc": "2026-09-12T09:00:00+00:00",
+  "latest_holder_launch_utc": "2026-09-12T09:00:00+00:00",
+  "holder_cutoff_utc": "2026-09-12T09:02:00+00:00",
+  "admission_deadline_utc": "2026-09-12T09:02:15+00:00",
+  "mathematical_deadline_utc": "2026-09-12T09:08:00+00:00",
+  "outer_term_utc": "2026-09-12T09:08:00+00:00",
+  "outer_kill_utc": "2026-09-12T09:08:05+00:00",
+  "task_deadline_utc": "2026-09-12T09:13:00+00:00",
+  "worker_deadline_utc": "2026-09-12T09:18:00+00:00",
+  "systemd_calendars": {
+    "outer_term": "2026-09-12 09:08:00 UTC",
+    "outer_kill": "2026-09-12 09:08:05 UTC",
+    "worker_retirement": "2026-09-12 09:18:00 UTC"
+  },
+  "holder_monotonic_ceiling_seconds": 120,
+  "fixed_source_limits": {
+    "wall_seconds": 900,
+    "cpu_seconds": 600,
+    "rss_bytes": "8589934592",
+    "output_bytes": "134217728"
+  },
+  "aggregate_limits": {"wall_seconds": 3000, "cpu_seconds": 2100},
+  "mode": "PREFLIGHT_ONLY_9",
+  "science": "NOT_AUTHORIZED",
+  "no_retry": true,
+  "retire_earlier_after_secured_evidence": true
+}

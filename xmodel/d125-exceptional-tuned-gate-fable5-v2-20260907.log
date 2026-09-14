@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 06:52 UTC, about nine minutes after launch. STOP/IDLE.
+
+**Verdict: CONFIRMED.** The tuned exceptional-center obstruction in `xmodel/d125-exceptional-tuned-discriminator-astra-20260907.md` (frozen hash `d0937ebe…`, matching the producer terminal) is correct as written. No corrections are required.
+
+What I checked by hand and replayed independently:
+
+- **Identity (I)** holds exactly, including the −5/3 factor and the retained [F,G] cross term. Own controls replay it on two formal generators (R=g and R=g+p²) with moving scalar series. The wrong-quadratic, omit-cross and zero-cross mutations fail at the named gates.
+- **F reference bookkeeping** is sound. [p]F=0 comes from the exact a01=0 of the saturated low rows, [p³]F=0 from the definition of α(s), and [g²p]F=k(s) gives 1≤j≤m. Each F_j is ordinary because φ(R) is ordinary at t=−3.
+- **Reference removal (K)** is exact. The −ηs^ℓF correction and the induced change of δ are both retained. The omit-betaF mutation is rejected. The kernel step needs only that a₀≠0 in a domain, then the accepted centralizer.
+- **Finite induction (§4)** survives an order-by-order audit. At every intermediate order the δF, F² and [F,G] terms are absent for the stated index reasons, δ_d persists under later changes, and step 3 keeps δ zero below j.
+- **Order-2j fiber composition (§5)**: [F,G] drops only by the proved ord G≥2j. R±r is absolutely irreducible at t=−3 since the valuation set of a root is {3n,−2}. The quadratic has leading coefficient −5r/3≠0, splits, and a domain forces a constant. Oddness gives opposite constants, and coprime primes give F_j=cR+a₀U.
+- **Zero lemma (§3)**: slots p, p³, gp² follow from degree and weight alone. The v⁰ coefficient of φ(a₀) is the nonzero polynomial 27u²+α₀. The complete negative rows force U=dS, and the two low rows kill d and c. The low-p3 mutation is rejected.
+
+**One scope remark, not a defect.** The §4 branch with d=0 is exactly the untuned case δ₀≠0, so §§3–4 alone already prove the α₀≠0, δ₀≠0 obstruction. The producer correctly does not claim this.
+
+**Artifacts** are under `box/d125-exceptional-tuned-gate-fable5-v2-20260907/`. The runner did 12 capped runs (normal and -O, one positive plus five mutations each) with byte-identical witnesses at `45de42f6…`. Total wall time was 1.3 s. Input pins cover all seven frozen files. Only degree-5 R and S, R² for its weight, and cubic lifts were expanded.
+
+**Typed gaps, all uncharged dependencies**: the centralizer (external Arzhantsev–Petravchuk trust via 14f), the 14f center form, the 14c/14g literal source values, and the transaction roots that are not in the frozen set. The producer checker was read but not run, per the v2 instruction. No CAS, solver, network, live peer, ledger or frozen-file edit was used.
+DIVERT path=xmodel/d125-exceptional-tuned-gate-fable5-v2-20260907.md status=CLEAN body_bytes=9195 body_sha256=bfede999311fd933cb08f0b23dac1ec4aa404dd593b2b1f017b6ef1499e2446f

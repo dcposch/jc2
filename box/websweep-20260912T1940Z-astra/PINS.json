@@ -1,0 +1,950 @@
+{
+  "schema": "documentary-sweep-pins/v1",
+  "first_action_utc": "2026-09-12T19:38:43Z",
+  "network_closed_utc": "2026-09-12T19:52:17.128930360Z",
+  "network_cutoff_utc": "2026-09-12T20:02:00Z",
+  "publication_reserve_utc": "2026-09-12T20:08:00Z",
+  "hard_cutoff_utc": "2026-09-12T20:12:00Z",
+  "local_inputs": [
+    {
+      "path": "/home/ubuntu/jc2/COORDINATION.md",
+      "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/websweep-20260911T2148Z-astra.md",
+      "sha256": "807118f76508ff61ede6686f0f00108c9a88756eb48a762b49592c899809ab5b",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/SOURCE-INDEX.md",
+      "sha256": "333e9eb8d33780a9ec5794c134c3555736ce20ec146833b953b1d4e85b2284c9",
+      "read_mode": "FRESH_WHOLE"
+    }
+  ],
+  "administrative_instrument": {
+    "path": "/home/ubuntu/jc2/ops/artifact_finalize.py",
+    "sha256": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"
+  },
+  "owned_before_pins": [
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/READ-SCOPE.md",
+      "sha256": "184ad5e7d9d99c7660e6b332dc70b431f2321ada5f07c4083cb3e6767124edb7",
+      "bytes": 4496
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/SOURCE-INDEX.md",
+      "sha256": "2276f975a6b1301e162d9d89bc9f1d71526572efb50726cd2e1e3301346ec40a",
+      "bytes": 13405
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-AC.html",
+      "sha256": "c797140ad17ccca432524038a8fb98cf50d80b792a7ac6ad96de7cf6def454fc",
+      "bytes": 38171
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-AC.html.headers",
+      "sha256": "ce332d3c7b5589deb1320598f3e2d4dd899fa79942f19ab6f100b174456fd469",
+      "bytes": 551
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-AG.html",
+      "sha256": "50d4fce6c48a1922db4ea5fb93e965f82b9264e64bcb902fbb6ff25bfa6e9d9c",
+      "bytes": 110515
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-AG.html.headers",
+      "sha256": "fa502613ab124237ea759e66e7090f787776a8ad5bb52f8e7b9c30ce134b112c",
+      "bytes": 551
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-CV.html",
+      "sha256": "3c35f343eb5361602f38200b5fd07c45e4c11bf50ad56a526e063fa3f605a667",
+      "bytes": 36258
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-CV.html.headers",
+      "sha256": "9b9957ecd99117356542e0e0d89ea8981191918737bb62beccef0305dffcd0d2",
+      "bytes": 551
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-html-search.html",
+      "sha256": "4e24032f1cb70d611455b0281944182ff9139e02dd7e80878a89071da8ed6163",
+      "bytes": 225747
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-html-search.html.headers",
+      "sha256": "a9f0db45a081513cfb3553df4603d1cabafac451efdd01ccbf146cbe4252c7fb",
+      "bytes": 654
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-jc-0.xml.headers",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-jc-50.xml.headers",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-jc-page2.html",
+      "sha256": "341a5c62f04524c9d3df9a1334d51c7c74e2ae97d4452509a1f2e9e918f2a6aa",
+      "bytes": 226981
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-jc-page2.html.headers",
+      "sha256": "06f6bd8f20139fea3d558bdf554e93dc3aaddb3404df10c9b047c70170da5537",
+      "bytes": 654
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-related-keller.html",
+      "sha256": "122e124d18e7b9d52ea413b72f4dc835cfbe85fef09d91a1315a78b4c2387b04",
+      "bytes": 114793
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-related-keller.html.headers",
+      "sha256": "865112e21b294404584656022b4d12e100676d57d9ba84787fb90339982d041d",
+      "bytes": 655
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-related-mathieu.html",
+      "sha256": "ad58b2d548af973a7704e64b979917c2a38d5d47bd057296b3e8b0ee04e7540c",
+      "bytes": 67647
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-related-mathieu.html.headers",
+      "sha256": "38f3375ff8d90a0625f4ffc995a90aa3dd8432fe72a8b7ba615be2db1dc79ab2",
+      "bytes": 654
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-related.xml",
+      "sha256": "467622e2f17f01d302d6c790b13078569f17d71cd83910558535019a594e07c1",
+      "bytes": 14
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/arxiv-related.xml.headers",
+      "sha256": "44464eaeb527c2855146a626b2c7431bffb8fb26695290ca0e8c412c341059d0",
+      "bytes": 485
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/bgv-abs.html",
+      "sha256": "7f35eda4c0fd57c8e760852e75a3d6437d8529657c87099abaa867d28fbf2764",
+      "bytes": 43349
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/bgv-abs.html.headers",
+      "sha256": "7ee1a8ee95e9cc721340bebab43fbff2a990eb5da031d0393a615f6c64d739d4",
+      "bytes": 603
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/bgv-v1.pdf",
+      "sha256": "814c3f2572f660a47778663384077d6357e9947f1585c1e16372f6cdbe138425",
+      "bytes": 1659604
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/bgv-v1.pdf.headers",
+      "sha256": "f476ffff91bb66413b85bc13cd951eb0c14aaa9f71f3b61b350670f20ea95da3",
+      "bytes": 720
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/bluesky.json",
+      "sha256": "8609fbf6d25103698c09480062dd212a9f8e8acbc3d320f599bd871cef1a7048",
+      "bytes": 2334
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/bluesky.json.headers",
+      "sha256": "1ad2a25cc012ab5d926072656265bdfefad82acc3434a2c7b16c2bf89591c2fa",
+      "bytes": 296
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/datacite-4d.json",
+      "sha256": "ae88c9284462f6a404199bab65b4d91e452cfcd77fc2b138918234f432247cc5",
+      "bytes": 14048
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/datacite-4d.json.headers",
+      "sha256": "0d0c69d1a04464a31c0dba285d802857d5ea30e4dec6603aaecff6ad59ce2a36",
+      "bytes": 1065
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/datacite-zwart.json",
+      "sha256": "1a69c789ebc77fc8a606d56246b5ad749fcfc7e63d0be3e64d34498ec39e5bef",
+      "bytes": 14094
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/datacite-zwart.json.headers",
+      "sha256": "614e33c0f06805e91cbb513393fd99770c8d274abef308e86c8c4626e6027542",
+      "bytes": 463
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/ggv-publisher.html",
+      "sha256": "c63f4f69ce489539a32b12629d8d9d44f2b8a41d26117ddf6c9e48098bfa8dcf",
+      "bytes": 5545
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/ggv-publisher.html.headers",
+      "sha256": "3ad67f8a7c502e76a690ed2bb63a64f66505639e7be8eba4d6d7a6b250df061b",
+      "bytes": 2655
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-alok.json",
+      "sha256": "52f0bfc2fadbceb6793097f76fe5e7b1ff17d219850f2d13885260003c80ac06",
+      "bytes": 11411
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-alok.json.headers",
+      "sha256": "f383ca43782c55c342d7a00063f1f4432085610f4613888b1dd25c4db8e8fa9a",
+      "bytes": 1505
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-blueberry.json",
+      "sha256": "708eb2a74dfe8d200316be2e12832b72731e5e825ea7b41a201fb520d91067e4",
+      "bytes": 8688
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-blueberry.json.headers",
+      "sha256": "22232416bbf0765c10ffec76d61f8de3377fddf67399092f7ab1d3e51d65921e",
+      "bytes": 1321
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-duan.json",
+      "sha256": "465e7938c4724c139dfb061b9c6950df846d41bab288ab093d25be6c31c4aa2e",
+      "bytes": 15118
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-duan.json.headers",
+      "sha256": "9230e6fab12a8371a833cfac7ce18e1c51012143ba93e3540aa49c8dc85d1db0",
+      "bytes": 1504
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-jtpmath.json",
+      "sha256": "cc48a213074cde91cf5f1d20d48874e6957dc9229c15d83f297c6bc2507d3add",
+      "bytes": 15651
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-jtpmath.json.headers",
+      "sha256": "1afe539f9e6debaeeab0525b65bd89f3508c4a9f20d5c4d94e7b2d696f9a0cdd",
+      "bytes": 1504
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-kakarotto.json",
+      "sha256": "d688b784e8681fc31458376a76996867ab3d60a77119e0f0305dab99d50817db",
+      "bytes": 10079
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-kakarotto.json.headers",
+      "sha256": "a569def45b9d786a2995572da6550dfd07d11569220c5c542f8009488f62b8d8",
+      "bytes": 1502
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-kellermap.json",
+      "sha256": "9a10bc1be36f8100dcd93463faec2b1900d3dff8b194e1fdb6f5bd60f619487b",
+      "bytes": 27257
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-kellermap.json.headers",
+      "sha256": "fa062ec1f8109f1e061f29d5f0df4ffaa898fe3cc92dad640359efd1a0c3f524",
+      "bytes": 1483
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-nasqret.json",
+      "sha256": "ce99ce528dcbe1d714cb1979464db4e44e1bfeaa8decae6e19433f8c60641fc3",
+      "bytes": 11940
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-nasqret.json.headers",
+      "sha256": "794deadac87d2278ffafce853738fe9e8925eb62256228bd172ac7ba12fbefa6",
+      "bytes": 1502
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-reuellee.json",
+      "sha256": "45398af2f96beba4925ee4b5c3216f5408c516e4241c0381651eb7eeb4c39588",
+      "bytes": 13986
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-reuellee.json.headers",
+      "sha256": "d77d0bca11c2049c5191f0fea5495841404608d258865db48106b2fde8d319da",
+      "bytes": 1504
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-roy.json",
+      "sha256": "6a2de1af1fa074f3f4052acd05c389c7edd570f47182beb51bb6fb733ee0dd9c",
+      "bytes": 12024
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-roy.json.headers",
+      "sha256": "1183e081c20ed0a8e115989caf62652108de87406bf60e7cae0a8cffa0654296",
+      "bytes": 1506
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-supermind.json",
+      "sha256": "d83d41fa90e3fb7ac230a30b84e373b5aa29b477e2cd0d7534e0614e5d0078e1",
+      "bytes": 11929
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-supermind.json.headers",
+      "sha256": "fba74bf670f42ace4e7892c1d675c20bab67c2c7faf5888bfbd305badb6d79ef",
+      "bytes": 1504
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-wstrinz-72-108.json",
+      "sha256": "1a9f325e74dd9853e33674e75d9b9ad2bbaa7e7a0e5cd7ad7ee28a1df5e8e97e",
+      "bytes": 11859
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-wstrinz-72-108.json.headers",
+      "sha256": "04f18387772e702be09b495a4dedd29ef33f3517a02b6c014c328f6482b77767",
+      "bytes": 1505
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-wstrinz-75-125.json",
+      "sha256": "0ed8a8a7ba8d6379c0f4d696874e877a4932bc60cbf2d43abf34dd3978d1cb67",
+      "bytes": 11866
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/github-wstrinz-75-125.json.headers",
+      "sha256": "e941bdfdee82294da0f6e861d69f723ceb58f88ea7cbb192fff64454f462c862",
+      "bytes": 1502
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/kellermap-characteristic-fix.json",
+      "sha256": "cf07dda230d8005da0c267dfe8889d1262cb1ff84758a50c594b66dd1f922cef",
+      "bytes": 27569
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/kellermap-characteristic-fix.json.headers",
+      "sha256": "60e4cb5cb8e61800c23e383303b0d668397181c7e54bb45b1180c0daef491ca2",
+      "bytes": 1297
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/kellermap-shared-fix.json",
+      "sha256": "be58714f8cd7efd455fbdade4d79980f7015823859549f1e4b4ee0a2635320b1",
+      "bytes": 25291
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/kellermap-shared-fix.json.headers",
+      "sha256": "7eb8ebe27eceaf25a4a8669da01b57e3e823ad4596f6d94339ae0a87b6f82b1a",
+      "bytes": 1298
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mathse.json",
+      "sha256": "0a0f32a07c005b99b85d2a084a56babb8903d443c375983a9332245fa1ddd99c",
+      "bytes": 37913
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mathse.json.headers",
+      "sha256": "e0ae9afc4fec7e638f42c2a74b08b02ebb92b4ba231120dbc7315663170a2e97",
+      "bytes": 1468
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mathstodon-jctag.json",
+      "sha256": "d9b0f721b26903e014b58468cc9aca13cd5da55ce57199a5ea83894f2b3e5658",
+      "bytes": 32567
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mathstodon-jctag.json.headers",
+      "sha256": "088d0f88afee354159803377c1b5663cbc1e13f6707fd302e6bfab00e1795e5d",
+      "bytes": 1001
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mathstodon-tag.json",
+      "sha256": "dc6fb576378a88a17a536663c3efcefc3874be6734a5f5f0fbbbb1523788b62b",
+      "bytes": 64431
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mathstodon-tag.json.headers",
+      "sha256": "49635d9f073e0784836d51d87eb25284efd85c78e51d4cce8ea9bccd64c80d3e",
+      "bytes": 981
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mathstodon-tao.json",
+      "sha256": "ef5e2c4760e19936c15e1249d80a292c9b8811aa6ebfd49e6a3c8df6a8eaacf8",
+      "bytes": 193169
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mathstodon-tao.json.headers",
+      "sha256": "2205d09eeebf829bcaec49801834b07bf6eee191a60de832e11c2a29d6b778f1",
+      "bytes": 1013
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mo.json",
+      "sha256": "f0e1ef9d2a39ccafe7756f461f10d8634098e5508f2c122df346ab47343d1e40",
+      "bytes": 40364
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/mo.json.headers",
+      "sha256": "4ad6b5e905088e2058c4457bba1f95e8a122d0b25a46b6c8bdffa2da0b796770",
+      "bytes": 1468
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/poisson-norm-abs.html",
+      "sha256": "54e0fbd476782ac82ac7ca5dd6991447a774a153c2bbefa2e7549006aa31d9a1",
+      "bytes": 39981
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/poisson-norm-abs.html.headers",
+      "sha256": "4d8d66585f9b1da8255577deaf3c3823dde79dfa334cd05c7f5727e9ba42adbb",
+      "bytes": 603
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/reuellee-plane-path.json",
+      "sha256": "2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d",
+      "bytes": 5
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/reuellee-plane-path.json.headers",
+      "sha256": "471b7292098701de81f575f9ebb344bf0c20ed17cb4dfa4d11f92b930301e888",
+      "bytes": 1269
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/roy-plane-archive-readme.md",
+      "sha256": "8010943d463a09be460768b397985922daead0f7055e64dfc0368c94e980d171",
+      "bytes": 4406
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/roy-plane-archive-readme.md.headers",
+      "sha256": "afad95bdf07c7c23cbbd8023823f5de0b61d7e8b573956727573990b25464e71",
+      "bytes": 897
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/roy-plane-path.json",
+      "sha256": "474fd428abbe9686725024b23d696ea7ea2b5979fc471f6f35d2baf562dc6425",
+      "bytes": 4010
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/roy-plane-path.json.headers",
+      "sha256": "ce41ba5048c64424fa0357b6c6112aa047518ec9f65b456f60e58f54ae687a93",
+      "bytes": 1320
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/roy-plane-update.json",
+      "sha256": "e46a46c8d54062fea459ac5f620af3ae316d4d54187662b3276075ddb0d1ef71",
+      "bytes": 874119
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/roy-plane-update.json.headers",
+      "sha256": "90bdfbc480f61794bd879734864b75afd54c9f001d601f160b39057b4734f46a",
+      "bytes": 1540
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/roy-root-plane-path.json",
+      "sha256": "2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d",
+      "bytes": 5
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/roy-root-plane-path.json.headers",
+      "sha256": "ad339f7ebb1efe0bdc2bea70757c1ca97e78216e6512a2053bbe88aa9891a8f9",
+      "bytes": 1269
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/truong-properness.html",
+      "sha256": "e04e8735790669a902a120d7872b643c83626ffe69e9d13026ae941a96cc0ad5",
+      "bytes": 432140
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/truong-properness.html.headers",
+      "sha256": "5352ae9483badefec79e567fef271b14cc554d014757c0ae9fe819167b053e9c",
+      "bytes": 5325
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/x.html",
+      "sha256": "bf72831f01f51de6b03d13ea0b686491483b6b0a239b4c01d1bc26c3055c7fb5",
+      "bytes": 296567
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/x.html.headers",
+      "sha256": "bf4fb2e0738fcec446513b0af9e946f929e4422462c59e3c110675b7181b2486",
+      "bytes": 12167
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-4d-latest.json",
+      "sha256": "1ebf5a60ff7b111585403fc76f36191e078bdc36a48590d0ecde520158147a91",
+      "bytes": 8329
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-4d-latest.json.headers",
+      "sha256": "95073100c4a183500dd07f07f23682a37e3db7e52c7f0f8bc4d73fc45cd7adfc",
+      "bytes": 2007
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-4d-versions.json",
+      "sha256": "dd0d696ebb178c0a7fd89d5fd85b46224dd129223520b0956366c79d7c0f24b2",
+      "bytes": 8463
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-4d-versions.json.headers",
+      "sha256": "ad133c69cd83bf38d16bae4cc895852178f85df5cecdaa1a5904ffdb364ef2ed",
+      "bytes": 929
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-4d.json",
+      "sha256": "1ebf5a60ff7b111585403fc76f36191e078bdc36a48590d0ecde520158147a91",
+      "bytes": 8329
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-4d.json.headers",
+      "sha256": "7e88552dffdb3c3cda8ba5fd9a6d98fce051d024666546aec8315289264f1883",
+      "bytes": 1039
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-atwell-latest.json",
+      "sha256": "54381a240b9f0a5b1d39ab30855d17d371d2980bd28462a25e01af294a44ad52",
+      "bytes": 7635
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-atwell-latest.json.headers",
+      "sha256": "fe80143607a7c281b5b06fe439d923658f037eaadd34480f6558deda6c6615f3",
+      "bytes": 2007
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-atwell-versions.json",
+      "sha256": "7c3d18236cde0a9fc79c83644c215e8ad24f24c171caf0ade4ee01e45f418b8a",
+      "bytes": 7769
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-atwell-versions.json.headers",
+      "sha256": "f0fa0212770e9bb3203bdcc280cb61bde6698d5418930b9e28afa9796efc2da3",
+      "bytes": 929
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-atwell.json",
+      "sha256": "54381a240b9f0a5b1d39ab30855d17d371d2980bd28462a25e01af294a44ad52",
+      "bytes": 7635
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-atwell.json.headers",
+      "sha256": "efd6ca9ca0f783fed13c72eeae9ab818c792288a170ebc4853127eca54dabf32",
+      "bytes": 1039
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-rank-latest.json",
+      "sha256": "7b455c543a4de696d7e2775b07e06ea1808e9326ae9edb08341dae79ca57bf25",
+      "bytes": 7613
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-rank-latest.json.headers",
+      "sha256": "7339d91f217f02b62af0da2218b9c277d1980918df2619db3b13b54bc4dc53da",
+      "bytes": 2007
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-rank-versions1.json",
+      "sha256": "f86c0037558a8393278d9ab674f2f78a641d1a8af07fb63f716888fbfc1d4957",
+      "bytes": 14260
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-rank-versions1.json.headers",
+      "sha256": "569dbde4612869bfcc607fab97689b395a166ae539290ce1db8f8450ff74fcd1",
+      "bytes": 930
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-rank-versions2.json",
+      "sha256": "9f1103fa464e4f89b28bab0348e567e4a77fd4cb1356d2751c5e0202151a8017",
+      "bytes": 219
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-rank-versions2.json.headers",
+      "sha256": "ef163f4e9e5d446701a5be548e3431a35932eaa15c647ba7c7d38ca3ba3e9f42",
+      "bytes": 928
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-rank.json",
+      "sha256": "7b455c543a4de696d7e2775b07e06ea1808e9326ae9edb08341dae79ca57bf25",
+      "bytes": 7613
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-rank.json.headers",
+      "sha256": "cda69772fdf78ffa1211e24e7a4bd3447a4a516e8d6af5ad101a35ecee0ddc7e",
+      "bytes": 1039
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-transductive-latest.json",
+      "sha256": "28c6293314aac0f9b884a3672fd42bef89eadc8171da73c417543cd886c7e618",
+      "bytes": 7480
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-transductive-latest.json.headers",
+      "sha256": "41ad1b744e6f1b6d87bfdbad4410f5f4844c83b1a58114e54392deb5628c3b3c",
+      "bytes": 2007
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-transductive-versions.json",
+      "sha256": "8b3d82af3c3ed4dff404894417f93695030425142fb8c5867533c9683c5ff04b",
+      "bytes": 7614
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-transductive-versions.json.headers",
+      "sha256": "167f618fc9c0a7a6c5a9c214f94a104f8920f2da13a7423d8e2bd60c1dabb9fe",
+      "bytes": 929
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-transductive.json",
+      "sha256": "28c6293314aac0f9b884a3672fd42bef89eadc8171da73c417543cd886c7e618",
+      "bytes": 7480
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zenodo-transductive.json.headers",
+      "sha256": "15c3e7f665e838e6f3288b7a5ca9e479e7406c857760a637741d851963bb77fe",
+      "bytes": 1039
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zhang-abs.html",
+      "sha256": "ad28f3e2eabae1c675e55f8dc8bee130c69b1a18d5a592c23553a9d352272409",
+      "bytes": 38244
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zhang-abs.html.headers",
+      "sha256": "c04962d926bd36bedc79c1b272de7e2dd5f73bf60b9d6fb3a552d7946aa613ff",
+      "bytes": 602
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zhang-v1.pdf",
+      "sha256": "210dd708c651358ccd5765332ab708d8581fb990a7596b4ec34587b449b46148",
+      "bytes": 201899
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zhang-v1.pdf.headers",
+      "sha256": "9214c03e3e44b412cf648b6b4efb3177f08ccc98317a699f283a437886adc47a",
+      "bytes": 661
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zulip-public.html",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "bytes": 9379
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zulip-public.html.headers",
+      "sha256": "7580e51a0faebcadc3d2d63f6c9c84958d2150c712756444bf2ac6b7cba7ba88",
+      "bytes": 688
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zwart-abs.html",
+      "sha256": "590bc78af9ccbac22408e84f79e26b14b32e78375796e6b7939c09de0112f7bd",
+      "bytes": 38980
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zwart-abs.html.headers",
+      "sha256": "8649085d0cc304b323c67df98940d141bd53b7bcf158c4256c77318926c823b7",
+      "bytes": 603
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zwart-mathieu.html",
+      "sha256": "cd375cb09533feb005340d1acecaf410193dab5be1d5325fbeb2114bb042a1e7",
+      "bytes": 832803
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260912T1940Z-astra/zwart-mathieu.html.headers",
+      "sha256": "ff3a3414829ae0c5c45616efa4a95f2580f58f68623bf35d5b41a3b86dfe0779",
+      "bytes": 834
+    }
+  ],
+  "read_scope": "READ-SCOPE.md and SOURCE-INDEX.md; raw retention does not imply WHOLE",
+  "excluded_self_and_future": "PINS.json, custody.json, final report and finalizer manifest are bound by terminal custody",
+  "raw_requests": [
+    {
+      "name": "arxiv-jc-0.xml",
+      "url": "https://export.arxiv.org/api/query?search_query=all:%22jacobian%20conjecture%22&sortBy=lastUpdatedDate&sortOrder=descending&start=0&max_results=50",
+      "result": "000 / timeout / no body"
+    },
+    {
+      "name": "arxiv-jc-50.xml",
+      "url": "https://export.arxiv.org/api/query?search_query=all:%22jacobian%20conjecture%22&sortBy=lastUpdatedDate&sortOrder=descending&start=50&max_results=50",
+      "result": "000 / timeout / no body"
+    },
+    {
+      "name": "arxiv-related.xml",
+      "url": "https://export.arxiv.org/api/query?search_query=all:%22Keller%20maps%22%20OR%20all:%22Hessian%20conjecture%22%20OR%20all:%22Mathieu%20conjecture%22%20OR%20all:%22Poisson%20conjecture%22&sortBy=lastUpdatedDate&sortOrder=descending&max_results=50",
+      "result": "429"
+    },
+    {
+      "name": "arxiv-AG.html",
+      "url": "https://arxiv.org/list/math.AG/new",
+      "result": "200 / title window"
+    },
+    {
+      "name": "arxiv-AC.html",
+      "url": "https://arxiv.org/list/math.AC/new",
+      "result": "200 / title window"
+    },
+    {
+      "name": "arxiv-CV.html",
+      "url": "https://arxiv.org/list/math.CV/new",
+      "result": "200 / title window"
+    },
+    {
+      "name": "bgv-abs.html",
+      "url": "https://arxiv.org/abs/2609.05746",
+      "result": "200 / abstract+history"
+    },
+    {
+      "name": "zhang-abs.html",
+      "url": "https://arxiv.org/abs/2609.10180",
+      "result": "200 / abstract+history"
+    },
+    {
+      "name": "github-roy.json",
+      "url": "https://api.github.com/repos/royvanrijn/jacobian-research/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-wstrinz-72-108.json",
+      "url": "https://api.github.com/repos/wstrinz/plane-jacobian-72-108/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-wstrinz-75-125.json",
+      "url": "https://api.github.com/repos/wstrinz/plane-jacobian-75-125/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-blueberry.json",
+      "url": "https://api.github.com/repos/blueberryvertigo/polynomial-composition-rigidity/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-duan.json",
+      "url": "https://api.github.com/repos/YucongDuan/Plane-Jacobian-Conjecture-DIKWP-MESH-8.0-Bilingual-Proof-Package/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-kakarotto.json",
+      "url": "https://api.github.com/repos/Kakarottoooo/jacobian-2d-research/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-supermind.json",
+      "url": "https://api.github.com/repos/SuperMindAI/Jacobian-Conjecture/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-alok.json",
+      "url": "https://api.github.com/repos/alok/jacobian-two/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-nasqret.json",
+      "url": "https://api.github.com/repos/nasqret/jacobian-counterexample/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-kellermap.json",
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "github-jtpmath.json",
+      "url": "https://api.github.com/repos/jtpmath/jacobian-conjecture-sheaf-obstructions/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    },
+    {
+      "name": "kellermap-shared-fix.json",
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+      "result": "200 / all message+returned patches"
+    },
+    {
+      "name": "kellermap-characteristic-fix.json",
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/dca8f297546695ac86f20df96180dfd3ff43330f",
+      "result": "200 / all message+returned patches"
+    },
+    {
+      "name": "roy-plane-path.json",
+      "url": "https://api.github.com/repos/royvanrijn/jacobian-research/commits?path=research/plane-jc&since=2026-09-11T21:53:56Z&per_page=30",
+      "result": "200 / one result"
+    },
+    {
+      "name": "roy-root-plane-path.json",
+      "url": "https://api.github.com/repos/royvanrijn/jacobian-research/commits?path=plane-jc&since=2026-09-11T21:53:56Z&per_page=30",
+      "result": "200 / empty"
+    },
+    {
+      "name": "reuellee-plane-path.json",
+      "url": "https://api.github.com/repos/reuellee/finite-certificates/commits?path=jacobian&since=2026-09-11T21:53:56Z&per_page=30",
+      "result": "200 / empty"
+    },
+    {
+      "name": "zenodo-4d.json",
+      "url": "https://zenodo.org/api/records/22709821",
+      "result": "200 / selected record metadata"
+    },
+    {
+      "name": "zenodo-transductive.json",
+      "url": "https://zenodo.org/api/records/22708234",
+      "result": "200 / selected record metadata"
+    },
+    {
+      "name": "zenodo-atwell.json",
+      "url": "https://zenodo.org/api/records/22551146",
+      "result": "200 / selected record metadata"
+    },
+    {
+      "name": "zenodo-rank.json",
+      "url": "https://zenodo.org/api/records/22168498",
+      "result": "200 / selected record metadata"
+    },
+    {
+      "name": "datacite-4d.json",
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.22709821",
+      "result": "200 / DOI dates+version"
+    },
+    {
+      "name": "mo.json",
+      "url": "https://api.stackexchange.com/2.3/search/advanced?site=mathoverflow&order=desc&sort=activity&q=jacobian%20conjecture&pagesize=50",
+      "result": "200 / metadata window"
+    },
+    {
+      "name": "mathse.json",
+      "url": "https://api.stackexchange.com/2.3/search/advanced?site=math&order=desc&sort=activity&q=jacobian%20conjecture&pagesize=50",
+      "result": "200 / metadata window"
+    },
+    {
+      "name": "mathstodon-tag.json",
+      "url": "https://mathstodon.xyz/api/v1/timelines/tag/jacobian?limit=40",
+      "result": "200 / EXCLUDED BOUNDARY INCIDENT: raw retention before display filter"
+    },
+    {
+      "name": "mathstodon-jctag.json",
+      "url": "https://mathstodon.xyz/api/v1/timelines/tag/jacobianconjecture?limit=40",
+      "result": "200 / EXCLUDED BOUNDARY INCIDENT: raw retention before display filter"
+    },
+    {
+      "name": "mathstodon-tao.json",
+      "url": "https://mathstodon.xyz/api/v1/accounts/109378244433513115/statuses?limit=40",
+      "result": "200 / EXCLUDED BOUNDARY INCIDENT: raw retention before display filter"
+    },
+    {
+      "name": "bluesky.json",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=Jacobian%20conjecture&limit=30&sort=latest",
+      "result": "403"
+    },
+    {
+      "name": "x.html",
+      "url": "https://x.com/search?q=%22Jacobian%20conjecture%22&src=typed_query&f=live",
+      "result": "200 / JavaScript shell only"
+    },
+    {
+      "name": "zulip-public.html",
+      "url": "https://leanprover-community.github.io/archive/stream/113488-general/topic/Jacobian.20conjecture.html",
+      "result": "404"
+    },
+    {
+      "name": "roy-plane-update.json",
+      "url": "https://api.github.com/repos/royvanrijn/jacobian-research/commits/ec00a5a39eced576487e37e39e1f6484f88ad9b9",
+      "result": "200 / selected cleanup patch; file listing clipped at300"
+    },
+    {
+      "name": "zenodo-4d-latest.json",
+      "url": "https://zenodo.org/api/records/22709821/versions/latest",
+      "result": "200 / redirects to same named record"
+    },
+    {
+      "name": "zenodo-transductive-latest.json",
+      "url": "https://zenodo.org/api/records/22708234/versions/latest",
+      "result": "200 / redirects to same named record"
+    },
+    {
+      "name": "zenodo-atwell-latest.json",
+      "url": "https://zenodo.org/api/records/22551146/versions/latest",
+      "result": "200 / redirects to same named record"
+    },
+    {
+      "name": "zenodo-rank-latest.json",
+      "url": "https://zenodo.org/api/records/22168498/versions/latest",
+      "result": "200 / redirects to same named record"
+    },
+    {
+      "name": "bgv-v1.pdf",
+      "url": "https://arxiv.org/pdf/2609.05746v1",
+      "result": "200 / HASH_ONLY"
+    },
+    {
+      "name": "zhang-v1.pdf",
+      "url": "https://arxiv.org/pdf/2609.10180v1",
+      "result": "200 / HASH_ONLY"
+    },
+    {
+      "name": "ggv-publisher.html",
+      "url": "https://doi.org/10.2989/16073606.2026.2701437",
+      "result": "403 / publisher redirect"
+    },
+    {
+      "name": "arxiv-html-search.html",
+      "url": "https://arxiv.org/search/?query=jacobian+conjecture&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+      "result": "200 / 50 title/date pairs"
+    },
+    {
+      "name": "truong-properness.html",
+      "url": "https://link.springer.com/article/10.1007/s10013-026-00804-y",
+      "result": "200 / raw snapshot; selected primary text via browser"
+    },
+    {
+      "name": "zwart-mathieu.html",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0723086926000137",
+      "result": "403"
+    },
+    {
+      "name": "datacite-zwart.json",
+      "url": "https://api.crossref.org/works/10.1016/j.exmath.2026.125766",
+      "result": "200 / CROSSREF, despite historical local basename"
+    },
+    {
+      "name": "roy-plane-archive-readme.md",
+      "url": "https://raw.githubusercontent.com/royvanrijn/jacobian-research/ec00a5a39eced576487e37e39e1f6484f88ad9b9/research/archive/non-elliptic/plane-jc/README.md",
+      "result": "200 / WHOLE"
+    },
+    {
+      "name": "arxiv-related-keller.html",
+      "url": "https://arxiv.org/search/?query=%22Keller+maps%22&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+      "result": "200 / 26 title/date pairs"
+    },
+    {
+      "name": "arxiv-related-mathieu.html",
+      "url": "https://arxiv.org/search/?query=%22Mathieu+conjecture%22&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+      "result": "200 / 13 title/date pairs"
+    },
+    {
+      "name": "arxiv-jc-page2.html",
+      "url": "https://arxiv.org/search/?query=jacobian+conjecture&searchtype=all&abstracts=show&order=-announced_date_first&size=50&start=50",
+      "result": "200 / 50 title/date pairs"
+    },
+    {
+      "name": "zwart-abs.html",
+      "url": "https://arxiv.org/abs/2511.16561",
+      "result": "200 / abstract+history"
+    },
+    {
+      "name": "poisson-norm-abs.html",
+      "url": "https://arxiv.org/abs/2407.11291",
+      "result": "200 / abstract+history"
+    },
+    {
+      "name": "zenodo-4d-versions.json",
+      "url": "https://zenodo.org/api/records/22709821/versions?size=3&page=1",
+      "result": "200 / one version"
+    },
+    {
+      "name": "zenodo-transductive-versions.json",
+      "url": "https://zenodo.org/api/records/22708234/versions?size=3&page=1",
+      "result": "200 / one version"
+    },
+    {
+      "name": "zenodo-atwell-versions.json",
+      "url": "https://zenodo.org/api/records/22551146/versions?size=3&page=1",
+      "result": "200 / one version"
+    },
+    {
+      "name": "zenodo-rank-versions1.json",
+      "url": "https://zenodo.org/api/records/22168498/versions?size=3&page=1",
+      "result": "200 / two versions"
+    },
+    {
+      "name": "zenodo-rank-versions2.json",
+      "url": "https://zenodo.org/api/records/22168498/versions?size=3&page=2",
+      "result": "200 / empty; total2"
+    },
+    {
+      "name": "github-reuellee.json",
+      "url": "https://api.github.com/repos/reuellee/finite-certificates/commits?per_page=3",
+      "result": "200 / three commit metadata records"
+    }
+  ]
+}

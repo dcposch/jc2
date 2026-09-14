@@ -1,0 +1,119 @@
+# Exact original-ring Macaulay Hilbert truncations
+
+These are exact Q computations in the full original chart ring R=Q[z,c]. 
+No variable was specialized, no c=1 section was taken, and no polynomial 
+completion or Groebner basis was used. B denotes the positive first charge. 
+The older instrument audit stores its negative; the driver derives the 
+positive convention again from each variable name and source metadata.
+
+For each (B,Y), all monomials of that degree are explicit columns. 
+Every nonzero original generator g contributes every monomial multiple 
+of complementary degree, including dependent rows. Primitive integer 
+Gaussian row operations compute rank over Q exactly. A separate modular 
+elimination at p=1073741827 crosschecks the rank. High-degree generators 
+cannot contribute because every variable has nonnegative B and positive Y. 
+Thus these are full-ideal Hilbert pieces, despite the finite cutoff.
+
+| Fibre | B range | Y range | Exact pieces | Largest columns | Largest rows | Original run seconds |
+|---:|---|---|---:|---:|---:|---:|
+| 77 | 0..4 | 0..14 | 75 | 13,790 | 36,947 | 58.473 |
+| 111 | 0..6 | 0..14 | 105 | 7,448 | 7,608 | 13.541 |
+| 129 | 0..4 | 0..14 | 75 | 2,665 | 734 | 5.463 |
+| 136 | 0..6 | 0..12 | 91 | 80,415 | 146,269 | 1681.19 |
+
+The complete exact rows, column dimensions, rational and modular ranks, 
+and H_(B,Y) are in `hilbert_components.csv`. JSON files additionally 
+record all variable degrees and order, original generator order, 
+input SHA-256 values, matrix hashes, and exact echelon hashes.
+
+Every computed component with dim R_(B,Y)>0 has H_(B,Y)>0. 
+No nonempty ring component in these grids is killed entirely by I.
+
+There are 345 direct original-ring components and one explicitly 
+typed `EXACT_Q_VIA_HOMOGENEOUS_UNIT_MAP` component: fibre136 at 
+(6,12). Its reduced matrix has 8,765 columns and 5,554 rows, 
+rank_Q=4,945 and H=3,820. A verified homogeneous rational unit 
+quotient therefore gives original rank_Q=80,415-3,820=76,595. 
+All 71 ordered constant pivots were independently checked against 
+the original source rows and the exact images and both reduced 
+matrix ranks were replayed. The direct (5,12) value H=4,446 
+agrees with the reduced calculation. The redundant final original 
+elimination was stopped with SIGTERM after 1,681.19 seconds; 
+the observed process exit status was 143. No original echelon 
+hash or direct modular rank is claimed for the transferred cell.
+
+| Fibre | Y | H_(B,Y), with B ascending from 0 |
+|---:|---:|---|
+| 77 | 10 | (481, 462, 150, 86, 51) |
+| 77 | 12 | (1165, 1135, 347, 206, 128) |
+| 77 | 14 | (2665, 2620, 763, 460, 293) |
+| 111 | 10 | (481, 434, 188, 52, 7, 1, 0) |
+| 111 | 12 | (1164, 1215, 649, 240, 53, 7, 1) |
+| 111 | 14 | (2657, 3128, 1966, 892, 267, 48, 7) |
+| 129 | 10 | (481, 74, 4, 0, 0) |
+| 129 | 12 | (1165, 249, 27, 0, 0) |
+| 129 | 14 | (2665, 734, 121, 4, 0) |
+| 136 | 10 | (481, 734, 1282, 1554, 1637, 1371, 1166) |
+| 136 | 12 | (1164, 1967, 3582, 4568, 5076, 4446, 3820) |
+
+An N-independent support result was verified for every original 
+generator and every ring variable. For B,Y nonnegative integers,
+
+    I_(B,Y)=0 iff B=0 or Y<lambda(B),
+
+where lambda(B) is B (77), 2B (111), ceil(13B/3) (129), 
+or ceil(B/3) (136). Also R_(B,Y)=0 iff Y<lambda(B). 
+All (0,Y) pieces of I vanish, so H_(0,Y)=dim R_(0,Y) for every Y. 
+This does not say any nonempty quotient piece vanishes.
+
+The lower bound follows from dY>=aB for every variable and generator, 
+and B>=1 for every generator. For the converse, write B=r+kd 
+with 1<=r<=d. A displayed nonzero original generator in degree 
+(r,ceil(ar/d)), multiplied by a variable of degree (d,a) to power k 
+and by a variable of degree (0,1) to the remaining weight, gives 
+a nonzero member of I_(B,Y). The original polynomial ring is a 
+domain. `global_support_vanishing.json` supplies all residue 
+generators and variable names; this is not an extrapolation from 
+the finite Hilbert grid.
+
+| Fibre | Period variable (degree) | Residue source-index witnesses |
+|---:|---|---|
+| 77 | h_1_7 (1, 1) | 0 at (1, 1) |
+| 111 | h_1_4 (1, 2) | 0 at (1, 2) |
+| 129 | A3_3_5 (3, 13) | 0 at (1, 5), 4 at (2, 9), 12 at (3, 13) |
+| 136 | h_3_5 (3, 1) | 2 at (1, 1), 1 at (2, 1), 0 at (3, 1) |
+
+The linear algebra verification contains 100 deterministic random 
+dense crosschecks against python-flint fmpq_mat and nmod_mat, 
+plus four actual original-ring Macaulay components. Every check 
+passed. The controls include exact positive and negative membership, 
+and both bad-prime directions: A=[p], target=[1] is YES over Q 
+and NO modulo p; A=[1,p], target=[1,0] is NO over Q and YES 
+modulo p. Positive toy combinations are replayed exactly.
+
+A modular NO is an exact rational NO only after a suitable 
+good-prime condition is certified. One sufficient condition is 
+rank_Q(A)=rank_Fp(A): then a modular augmented-rank increase 
+forces an augmented-rank increase over Q. Integrality of the 
+input alone does not establish that condition. A modular YES 
+remains a signal; the required certificate for a c-power kill 
+is an exact rational combination replayed in the original ring.
+
+The computed Y cutoffs are below D=39,29,41,29, respectively. 
+Accordingly these grids do not test c, c^2, or c^3 and give 
+no c-power kill. They supply exact finite Hilbert data and 
+a complete N-independent support-vanishing criterion.
+
+Reproduce with:
+
+```bash
+python3 box/graded-macaulay-20260905/hilbert/compute_hilbert.py --parameters 77 --max-y 14
+python3 box/graded-macaulay-20260905/hilbert/compute_hilbert.py --parameters 111 --max-y 14
+python3 box/graded-macaulay-20260905/hilbert/compute_hilbert.py --parameters 129 --max-y 14
+python3 box/graded-macaulay-20260905/hilbert/compute_hilbert.py --parameters 136 --max-y 12
+python3 box/graded-macaulay-20260905/hilbert/verify_support.py
+python3 box/graded-macaulay-20260905/hilbert/verify_linear.py
+python3 box/graded-macaulay-20260905/hilbert/verify_unit_map.py
+python3 box/graded-macaulay-20260905/hilbert/summarize.py
+```
+

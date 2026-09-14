@@ -1,0 +1,22 @@
+# Independent all-exponent degree-seven local proof gate
+
+charged_input=xmodel/f9-all-exponents-local-exclusion-coordinator-20260909.md
+charged_input=xmodel/f9-all-exponents-local-exclusion-coordinator-20260909.md.artifact.json
+
+Start on root's actual invitation, no more than25minutes, absolute completion2026-09-09 08:30UTC (whichever is earlier); honest GAP/PARTIAL if needed. Exactly ONE destination xmodel/f9-all-exponents-local-gate-fable5-20260909.md and own matching box only. Do not write an alternate basename. This is an independent different-model mathematical gate, NOT the concurrent0730 Fable blind. Never access any live blind, peer report, forthcoming source proof or root blind. Read BOTH exact charged objects WHOLE from {{LANE_INPUTS}} before review. The proposed proof is NEW/UNREVIEWED: its own label or an old m3/n5 result supplies no mathematical evidence.
+
+Frozen producer report SHA2dba41ed5e07d62b2e96221e67fc2c3ba16325d1a99f0015f09194d285c3d192, transaction0879580aa4171f10e1a5368ba47bd49253e317f9f6b411e822d66add72fba98a. Root finalized and verified08:03; all root writing complete. Statement: K=(b²-a²)² b(b²-3a²/2), all coprime integers2<=m<n, ordinary polynomial topsK^m/K^n and degrees7m/7n, bracket2c*a³,c!=0 are impossible. Proposed weighted corollary uses g=a²,p=b, H=p(p²-g)²(p²-3g/2), bracketc*g. NO all-Keller-source or infinite-F9-source bridge is charged or to be invented.
+
+Give separate CONFIRMED/REFUTED/GAP verdicts A-H, with independent exact factored derivations and the strongest attempted failure, not just agreement with prose:
+A finite A-only canonical polynomial reference: quotient/complement choices at orders1..7; scalar removal later; first F_j neither K^(m-1)-divisible nor scalarK-power, including m2 and Fzero contradiction.
+B minimizing factor delta and j<=7(m-delta)-Delta, Delta1 or3/2; no equal-multiplicity or divisibility assumption smuggled in; strict margins for EVERY coprime m<n.
+C complete homogeneous formal charts over fields, Euler/commutation/UFD lemmas and permissible Puiseux extensions; monicity and generic X-dependence.
+D simple-line consumer using WHOLE B-R^n positive coefficient orders; earlier-initial exclusion and degree-n monicity, all scalars retained.
+E double coalesced consumer, exact formal Morse coordinate, equality and xi0, d<=2m-3 and full B monicity, all target exponents.
+F separated F even/odd regrouping, all infinite sums/convergence, anchors even AND odd d, eta>kappa/eta<7/eta<j, global earliest bases and BOTH sheets.
+G separated WHOLE B regrouping: positive base-order bound, actual earliest noncancelled tuple, no returning shifted terms at n*eta, exact inverse target N-kappa/2 and X-dependent chain rule, Euler exclusion and common-linear conclusion on both sheets. Do NOT assume an old ordG>=2j theorem, or impose a coefficient-degree bound on an individual returning shift.
+H exhaustive scope and weighted injective-cover consequence; controls c0, noncoprime, excessive correction degree, one-sheet cancellation, degree-zero P; distinguish formal field argument from nonreduced schemes/source classification/globalJC2. State whether the theorem is fully proved, partially proved or needs repair. If a gap exists, give the first literal failed implication and smallest honest countercontrol or repair hypothesis.
+
+ZERO mathematical subprocesses of ANY SIZE: no CAS, symbolic/scalar/toy Python, sample degree sweep, old checker, high powers/source expansion, enumeration, arithmetic tool, AWS/SSH, extra agent, external/public write, shared canonical edit or protected project access. ALL mathematics must be manual factored derivation in the report. Only bounded read-only metadata/hashing and writing your own report are permitted. No code control is requested or licensed; do not supply computational outputs/timings as proof. No foundation rereview or external-source search is necessary for this self-contained local theorem. Earlier tool-violating reviews do not authorize repeating that behavior.
+
+Use the existing external lane custody, not a local publication transaction. Initial skeleton MUST NOT have BODY-END; append sections in bounded writes. At substantive completion read the entire own body, check own raised-OPENs only (none is needed), then append ONE standalone <!-- BODY-END --> with nothing after it. Do not author a Seal or charge_basis declaration. Return exact report path, scoped verdicts and all writers IDLE. No downstream task or acceptance is authorized by your verdict alone.

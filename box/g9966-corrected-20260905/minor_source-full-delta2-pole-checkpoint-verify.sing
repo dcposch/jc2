@@ -1,0 +1,10 @@
+ring R=0,(rho,Zrho),dp;
+print("BEGIN_RING");print(char(R));print(nvars(R));
+int i;for(i=1;i<=nvars(R);i++){print(var(i));}
+print("END_RING");
+ideal Raw=0;ideal I=Raw,Zrho*rho-1;ideal B=std(I);
+print("BEGIN_DIM");print(dim(B));print(reduce(1,B));print("END_DIM");
+print("BEGIN_BASIS");print(B);print("END_BASIS");
+ideal Empty=rho,Zrho*rho-1;ideal Point=rho-1,Zrho*rho-1;
+print("BEGIN_CONTROLS");print(reduce(1,std(Empty)));print(reduce(1,std(Point)));print(reduce(1,std(Raw)));print("END_CONTROLS");
+quit;

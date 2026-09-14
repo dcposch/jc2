@@ -1,0 +1,779 @@
+{
+  "collected_utc": "2026-09-05T22:59:42.476166+00:00",
+  "coefficient_field": "QQ",
+  "rows": [
+    {
+      "stage": 0,
+      "normalized12GiB": {
+        "status": "MEMORY_BOUND_OPEN",
+        "elapsed_seconds": 360.409,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage0.json",
+        "metadata_sha256": "811a0531be2ec17efc131944e5838c2499686da6383748a4128611abe253ac96"
+      },
+      "normalized24GiB": {
+        "status": "COMPUTE_BOUND_OPEN",
+        "elapsed_seconds": 1200.666,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage0_m24.json",
+        "metadata_sha256": "a0849159ffe7ffb6476961a76846260a4804bb1233001c4659731ed98833a64c"
+      },
+      "coefficient_circuit": {
+        "status": "MEMORY_BOUND_OPEN",
+        "row_counts": {
+          "source": 0,
+          "graph_h": 0,
+          "lift": 641,
+          "R_high": 527,
+          "R_low_graph": 315,
+          "H2_graph": 611,
+          "vU_graph": 729,
+          "Q": 1256,
+          "localizers": 2
+        },
+        "total_rows": 4081,
+        "parsed_rows": 4081,
+        "variables": 2906,
+        "script_bytes": 10823269,
+        "source_raw_rows": 19,
+        "source_pivots": 0,
+        "source_residual": 0,
+        "jet0_free": true,
+        "checks": {
+          "script_hash_matches": true,
+          "input_hash_matches": true,
+          "generators_distinct": true,
+          "all_five_target_constants_declared": true,
+          "leaders_and_localizers_declared": true,
+          "all_declared_rows_parsed": true
+        },
+        "source_metadata": "d108_remainder_stage0_translated_strongfront.json",
+        "source_metadata_sha256": "b9eaacc12de1ac8f708fcab43916fb780a7be9bdfcbead427e763bf9f2dc15e6",
+        "metadata": "d108_circuit_stage0_translated_strongfront.circuit.json",
+        "metadata_sha256": "4bad465b2c47df61bde5c014ba3615a0f787b5f5a9f8340dad914dedb05e2899",
+        "script_sha256": "763d0f94f5801e60ae1a270edc82d169b973e4e43dd458a19c6879dde4d70e54",
+        "last_phase": {
+          "name": "finished",
+          "seconds": 587.789,
+          "status": "MEMORY_BOUND_OPEN"
+        },
+        "cas": {
+          "returncode": 14,
+          "errors": [],
+          "log_sha256": "37ea6786564ea9954fe424c9bf83ee644f41f7c50887fbc06a4493f0fc0cb6e2",
+          "controls": [],
+          "script_unchanged": true
+        }
+      }
+    },
+    {
+      "stage": 1,
+      "normalized12GiB": {
+        "status": "MEMORY_BOUND_OPEN",
+        "elapsed_seconds": 853.13,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage1.json",
+        "metadata_sha256": "467377ddc51ce64b58cf7a19e38e17ca2b347801d5ba51e3007f3b89a2ad806c"
+      },
+      "normalized24GiB": {
+        "status": "COMPUTE_BOUND_OPEN",
+        "elapsed_seconds": 1200.466,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage1_m24.json",
+        "metadata_sha256": "d381d1630b228991e8d434daf75798764ec801c9fef00fe85e0560862c18cf0e"
+      },
+      "coefficient_circuit": {
+        "status": "MEMORY_BOUND_OPEN",
+        "row_counts": {
+          "source": 0,
+          "graph_h": 0,
+          "lift": 607,
+          "R_high": 493,
+          "R_low_graph": 306,
+          "H2_graph": 611,
+          "vU_graph": 669,
+          "Q": 1245,
+          "localizers": 2
+        },
+        "total_rows": 3933,
+        "parsed_rows": 3933,
+        "variables": 2769,
+        "script_bytes": 9951742,
+        "source_raw_rows": 175,
+        "source_pivots": 0,
+        "source_residual": 0,
+        "jet0_free": true,
+        "checks": {
+          "script_hash_matches": true,
+          "input_hash_matches": true,
+          "generators_distinct": true,
+          "all_five_target_constants_declared": true,
+          "leaders_and_localizers_declared": true,
+          "all_declared_rows_parsed": true
+        },
+        "source_metadata": "d108_remainder_stage1_translated_strongfront.json",
+        "source_metadata_sha256": "73d00c3aac2a7e909410e728ae46eeb0c36a4c73ac37ea2db893f9fb9419a942",
+        "metadata": "d108_circuit_stage1_translated_strongfront.circuit.json",
+        "metadata_sha256": "1a62663ab386a9d29cf44c71d4ead0e7ae7622fdcf19c76e20bb7c29820321fe",
+        "script_sha256": "8c06848762e11dcf056cebeb37cdf6b6d2ee1bcead11fba37c3a020265b9d839",
+        "last_phase": {
+          "name": "finished",
+          "seconds": 605.353,
+          "status": "MEMORY_BOUND_OPEN"
+        },
+        "cas": {
+          "returncode": 14,
+          "errors": [],
+          "log_sha256": "b9065a52f0b69a98476e31adcd0ec0dd481bbcb9db87b1819a704e3061feeaef",
+          "controls": [],
+          "script_unchanged": true
+        }
+      }
+    },
+    {
+      "stage": 2,
+      "normalized12GiB": {
+        "status": "MEMORY_BOUND_OPEN",
+        "elapsed_seconds": 882.144,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage2.json",
+        "metadata_sha256": "18009c1ac1e68bfc9aa540ae1deb56394d97d5fe33bae11d4aeeb41c15907cb6"
+      },
+      "normalized24GiB": {
+        "status": "COMPUTE_BOUND_OPEN",
+        "elapsed_seconds": 1200.466,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage2_m24.json",
+        "metadata_sha256": "9e124f120c68cd26e0428fa14d91b03c8e9f31875489b3b1a60ac013eb0f21c3"
+      },
+      "coefficient_circuit": {
+        "status": "MEMORY_BOUND_OPEN",
+        "row_counts": {
+          "source": 1,
+          "graph_h": 0,
+          "lift": 593,
+          "R_high": 488,
+          "R_low_graph": 297,
+          "H2_graph": 611,
+          "vU_graph": 651,
+          "Q": 1233,
+          "localizers": 2
+        },
+        "total_rows": 3876,
+        "parsed_rows": 3876,
+        "variables": 2714,
+        "script_bytes": 9612943,
+        "source_raw_rows": 356,
+        "source_pivots": 0,
+        "source_residual": 1,
+        "jet0_free": true,
+        "checks": {
+          "script_hash_matches": true,
+          "input_hash_matches": true,
+          "generators_distinct": true,
+          "all_five_target_constants_declared": true,
+          "leaders_and_localizers_declared": true,
+          "all_declared_rows_parsed": true
+        },
+        "source_metadata": "d108_remainder_stage2_translated_strongfront.json",
+        "source_metadata_sha256": "befe98245b58043fbbac4ae738c7082256014907a0f9009a1a8d297e8addf542",
+        "metadata": "d108_circuit_stage2_translated_strongfront.circuit.json",
+        "metadata_sha256": "ae118b265954082d4bc88fb7c0bc9a54f935e7a7f388333e5ae856185e1cc402",
+        "script_sha256": "fbebfb27a43ede9223ddff4f56909d1f06a83d6ed187b3a13fd2dceafe3fb12a",
+        "last_phase": {
+          "name": "finished",
+          "seconds": 843.704,
+          "status": "MEMORY_BOUND_OPEN"
+        },
+        "cas": {
+          "returncode": 14,
+          "errors": [],
+          "log_sha256": "aa0c5475b64846cc501cb45aed1928b18f353dfdcfa4e2649851f0599ab2177f",
+          "controls": [],
+          "script_unchanged": true
+        }
+      }
+    },
+    {
+      "stage": 3,
+      "normalized12GiB": {
+        "status": "MEMORY_BOUND_OPEN",
+        "elapsed_seconds": 842.817,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage3.json",
+        "metadata_sha256": "4c2888e36dcaed36170df3c8e97688520fab1e737320adf58fcc702dd8d0b9e3"
+      },
+      "normalized24GiB": {
+        "status": "COMPUTE_BOUND_OPEN",
+        "elapsed_seconds": 1200.465,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage3_m24.json",
+        "metadata_sha256": "7d8f5d2cb17feeb8987e0d99e9bd58c0783d0f49a7e56d3fcfefd9959ef9bf71"
+      },
+      "coefficient_circuit": {
+        "status": "MEMORY_BOUND_OPEN",
+        "row_counts": {
+          "source": 2,
+          "graph_h": 0,
+          "lift": 579,
+          "R_high": 483,
+          "R_low_graph": 288,
+          "H2_graph": 606,
+          "vU_graph": 632,
+          "Q": 1205,
+          "localizers": 2
+        },
+        "total_rows": 3797,
+        "parsed_rows": 3797,
+        "variables": 2653,
+        "script_bytes": 9266124,
+        "source_raw_rows": 536,
+        "source_pivots": 0,
+        "source_residual": 2,
+        "jet0_free": true,
+        "checks": {
+          "script_hash_matches": true,
+          "input_hash_matches": true,
+          "generators_distinct": true,
+          "all_five_target_constants_declared": true,
+          "leaders_and_localizers_declared": true,
+          "all_declared_rows_parsed": true
+        },
+        "source_metadata": "d108_remainder_stage3_translated_strongfront.json",
+        "source_metadata_sha256": "cd465b83a1fd56d245bc057591461f3c863be9f02100de1c6319db9f2060acec",
+        "metadata": "d108_circuit_stage3_translated_strongfront.circuit.json",
+        "metadata_sha256": "51204395eacc6e8df487735660ca9b4591fdb3166a5cf0b65b5eba19e047211a",
+        "script_sha256": "2d2dd0edfea550c8dd00c17fa426e4b1e6f7167010da839436a7d2a255506702",
+        "last_phase": {
+          "name": "finished",
+          "seconds": 844.132,
+          "status": "MEMORY_BOUND_OPEN"
+        },
+        "cas": {
+          "returncode": 14,
+          "errors": [],
+          "log_sha256": "b1e03db6c3b60ee154fd7fc5be297e5d469d4da49a2b4d83f16487c30a22d903",
+          "controls": [],
+          "script_unchanged": true
+        }
+      }
+    },
+    {
+      "stage": 4,
+      "normalized12GiB": {
+        "status": "MEMORY_BOUND_OPEN",
+        "elapsed_seconds": 818.275,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage4.json",
+        "metadata_sha256": "cd41e239f7068cc1e995b89f86ca2177883c4250bf9a932acb0b013c28389fab"
+      },
+      "normalized24GiB": {
+        "status": "COMPUTE_BOUND_OPEN",
+        "elapsed_seconds": 1200.466,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage4_m24.json",
+        "metadata_sha256": "8d55c42c03214c81ceb1b73795735424143ebf00667166abda644bc407808cc1"
+      },
+      "coefficient_circuit": {
+        "status": "EMITTED_NOT_DECIDED",
+        "row_counts": {
+          "source": 3,
+          "graph_h": 0,
+          "lift": 571,
+          "R_high": 477,
+          "R_low_graph": 279,
+          "H2_graph": 606,
+          "vU_graph": 622,
+          "Q": 1194,
+          "localizers": 2
+        },
+        "total_rows": 3754,
+        "parsed_rows": 3754,
+        "variables": 2612,
+        "script_bytes": 9062041,
+        "source_raw_rows": 715,
+        "source_pivots": 0,
+        "source_residual": 3,
+        "jet0_free": true,
+        "checks": {
+          "script_hash_matches": true,
+          "input_hash_matches": true,
+          "generators_distinct": true,
+          "all_five_target_constants_declared": true,
+          "leaders_and_localizers_declared": true,
+          "all_declared_rows_parsed": true
+        },
+        "source_metadata": "d108_remainder_stage4_translated_strongfront.json",
+        "source_metadata_sha256": "c40aff9cceddfaf3ce33e6cdf85c8a95b22ff9c85ced01954fa69edc2954c1d4",
+        "metadata": "d108_circuit_stage4_translated_strongfront.circuit.json",
+        "metadata_sha256": "bf921545885ffeb8904a4cd687bf33e7359111de7ccead065e67167da9d151d1",
+        "script_sha256": "af9e9d8c450210d3745a16441b01608137806f9a0d4c170d2018bf32e6afb162",
+        "last_phase": {
+          "name": "script_complete",
+          "seconds": 0.314,
+          "bytes": 9062041,
+          "variables": 2612
+        },
+        "cas": null
+      }
+    },
+    {
+      "stage": 5,
+      "normalized12GiB": {
+        "status": "MEMORY_BOUND_OPEN",
+        "elapsed_seconds": 838.096,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage5.json",
+        "metadata_sha256": "e34fcc4eefc5d6f1a47fc8cf9b1921a04803d62c85945d2676d40573e646d9e2"
+      },
+      "normalized24GiB": {
+        "status": "COMPUTE_BOUND_OPEN",
+        "elapsed_seconds": 1200.466,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage5_m24.json",
+        "metadata_sha256": "c9bd7ed5cfa03a41b7d99e3944429aef2268454411deb4ddda03964df0fd2572"
+      },
+      "coefficient_circuit": {
+        "status": "EMITTED_NOT_DECIDED",
+        "row_counts": {
+          "source": 5,
+          "graph_h": 0,
+          "lift": 563,
+          "R_high": 471,
+          "R_low_graph": 270,
+          "H2_graph": 606,
+          "vU_graph": 611,
+          "Q": 1183,
+          "localizers": 2
+        },
+        "total_rows": 3711,
+        "parsed_rows": 3711,
+        "variables": 2572,
+        "script_bytes": 8849678,
+        "source_raw_rows": 895,
+        "source_pivots": 0,
+        "source_residual": 5,
+        "jet0_free": true,
+        "checks": {
+          "script_hash_matches": true,
+          "input_hash_matches": true,
+          "generators_distinct": true,
+          "all_five_target_constants_declared": true,
+          "leaders_and_localizers_declared": true,
+          "all_declared_rows_parsed": true
+        },
+        "source_metadata": "d108_remainder_stage5_translated_strongfront.json",
+        "source_metadata_sha256": "eb2536c990e47bd680767608a2604299ff006b70873ac1f1323bb3fb51c6cdad",
+        "metadata": "d108_circuit_stage5_translated_strongfront.circuit.json",
+        "metadata_sha256": "3e86c7de7bb4103ce7a0621f5e389e6c06e6715e4024b64e734dab9b37679c2d",
+        "script_sha256": "5e8f58ec13c83d5d9de3620c47d3ede3f8a8502e7b2a1c5f3fa4c6a56ddf2f2c",
+        "last_phase": {
+          "name": "script_complete",
+          "seconds": 0.307,
+          "bytes": 8849678,
+          "variables": 2572
+        },
+        "cas": null
+      }
+    },
+    {
+      "stage": 6,
+      "normalized12GiB": {
+        "status": "MEMORY_BOUND_OPEN",
+        "elapsed_seconds": 872.448,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage6.json",
+        "metadata_sha256": "386c983ccbf46167de1a2567fc75e482f06249fa4f9749b5e2b27bbe13476a3d"
+      },
+      "normalized24GiB": {
+        "status": "SUPERSEDED_NOT_DECIDED",
+        "elapsed_seconds": 1027.355,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage6_m24.json",
+        "metadata_sha256": "9c59a463ac4b0c7d33cc779cbf8d3d4da3f45a0cea11d4aadaec40a4bed49e81"
+      },
+      "coefficient_circuit": {
+        "status": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 7,
+      "normalized12GiB": {
+        "status": "MEMORY_BOUND_OPEN",
+        "elapsed_seconds": 861.583,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage7.json",
+        "metadata_sha256": "94d44f4a6d67bc141dad5ca8c7975c61bdbf960c7c927eb91b4b0c0101187b84"
+      },
+      "normalized24GiB": {
+        "status": "SUPERSEDED_NOT_DECIDED",
+        "elapsed_seconds": 1008.346,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage7_m24.json",
+        "metadata_sha256": "45131a245b95d112dcdb86b5e8842cd13ed8651d5bf7a43ec9e9714fdec1b755"
+      },
+      "coefficient_circuit": {
+        "status": "NOT_STARTED"
+      }
+    },
+    {
+      "stage": 8,
+      "normalized12GiB": {
+        "status": "MEMORY_BOUND_OPEN",
+        "elapsed_seconds": 841.547,
+        "last_marker": "BEGIN_DIVIDE_vv2",
+        "metadata": "d108_totalface_stage8.json",
+        "metadata_sha256": "409efab27cf03517fa4d8ce5df41c66921cb231949238a38ed8cf910ec3ca01c"
+      },
+      "normalized24GiB": {
+        "status": "SUPERSEDED_NOT_DECIDED",
+        "elapsed_seconds": null,
+        "last_marker": null,
+        "metadata": "d108_totalface_stage8_m24.json",
+        "metadata_sha256": "9190cd4ad06f82f0ea688100f683bce8685fd31f8a73dfba11986ca58675ec8a"
+      },
+      "coefficient_circuit": {
+        "status": "COMPUTE_BOUND_OPEN",
+        "row_counts": {
+          "source": 14,
+          "graph_h": 0,
+          "lift": 549,
+          "R_high": 461,
+          "R_low_graph": 252,
+          "H2_graph": 600,
+          "vU_graph": 593,
+          "Q": 1144,
+          "localizers": 2
+        },
+        "total_rows": 3615,
+        "parsed_rows": 3615,
+        "variables": 2495,
+        "script_bytes": 8473651,
+        "source_raw_rows": 1429,
+        "source_pivots": 0,
+        "source_residual": 14,
+        "jet0_free": true,
+        "checks": {
+          "script_hash_matches": true,
+          "input_hash_matches": true,
+          "generators_distinct": true,
+          "all_five_target_constants_declared": true,
+          "leaders_and_localizers_declared": true,
+          "all_declared_rows_parsed": true
+        },
+        "source_metadata": "d108_remainder_stage8_translated_strongfront.json",
+        "source_metadata_sha256": "61401711f2abc671df3a71520d8def0f3855cd23e75834e037faa9e2624c984c",
+        "metadata": "d108_circuit_stage8_translated_strongfront.circuit.json",
+        "metadata_sha256": "0c839d31b4d12a59ed7dc7f82e6c6770190dc782284d987bb4c7af251dc39062",
+        "script_sha256": "2b96cafe8fab0701460e51065ed7662fdf63be5b65c7d8aabafe6ef02572eb9f",
+        "last_phase": {
+          "name": "finished",
+          "seconds": 1800.881,
+          "status": "COMPUTE_BOUND_OPEN"
+        },
+        "cas": {
+          "returncode": 1,
+          "errors": [],
+          "log_sha256": "d394590a3fc11f7d5b0f28519a275a6d971a07a573bf8eb7d6e2170b51670a03",
+          "controls": [],
+          "script_unchanged": true
+        }
+      }
+    }
+  ],
+  "supplementary_mean_free_rows": [
+    {
+      "stage": 0,
+      "status": "COMPUTE_BOUND_OPEN",
+      "row_counts": {
+        "source": 0,
+        "graph_h": 0,
+        "lift": 649,
+        "R_high": 527,
+        "R_low_graph": 315,
+        "H2_graph": 627,
+        "vU_graph": 729,
+        "Q": 1256,
+        "localizers": 2
+      },
+      "total_rows": 4105,
+      "parsed_rows": 4105,
+      "variables": 2931,
+      "script_bytes": 11200413,
+      "checks": {
+        "script_hash_matches": true,
+        "input_hash_matches": true,
+        "generators_distinct": true,
+        "all_five_targets_and_mean_declared": true,
+        "leaders_and_localizers_declared": true,
+        "all_declared_rows_parsed": true,
+        "mean_free_and_arc_unchanged": true
+      },
+      "source_raw_rows": 19,
+      "source_pivots": 0,
+      "source_residual": 0,
+      "metadata": "d108_meanfree_circuit_stage0_strongfront.circuit.json",
+      "metadata_sha256": "ffe261186bc9e4ecf5640ba5f25799e98776ebe2a0fb03ecb9779b36d1e35440",
+      "source_metadata": "d108_meanfree_stage0_strongfront.map.json",
+      "source_metadata_sha256": "febea5d3507795c84edf7ce8d7e594850bc94d020730db8f05ba4a6b5f4cd144",
+      "script_sha256": "34e5dd0316bf8d2d7a4b2cb3c55d69d57ac036c96d4c5ab700013ea9bac8d66d",
+      "last_phase": {
+        "name": "finished",
+        "seconds": 600.803,
+        "status": "COMPUTE_BOUND_OPEN"
+      },
+      "cas": {
+        "returncode": 1,
+        "errors": [],
+        "log_sha256": "eafa8492634e656c95bd84783c2113ed2f079139d197f2c4dd059d1bd29b5261",
+        "controls": [],
+        "script_unchanged": true
+      }
+    },
+    {
+      "stage": 1,
+      "status": "COMPUTE_BOUND_OPEN",
+      "row_counts": {
+        "source": 0,
+        "graph_h": 0,
+        "lift": 615,
+        "R_high": 493,
+        "R_low_graph": 306,
+        "H2_graph": 627,
+        "vU_graph": 669,
+        "Q": 1245,
+        "localizers": 2
+      },
+      "total_rows": 3957,
+      "parsed_rows": 3957,
+      "variables": 2794,
+      "script_bytes": 10309982,
+      "checks": {
+        "script_hash_matches": true,
+        "input_hash_matches": true,
+        "generators_distinct": true,
+        "all_five_targets_and_mean_declared": true,
+        "leaders_and_localizers_declared": true,
+        "all_declared_rows_parsed": true,
+        "mean_free_and_arc_unchanged": true
+      },
+      "source_raw_rows": 175,
+      "source_pivots": 0,
+      "source_residual": 0,
+      "metadata": "d108_meanfree_circuit_stage1_strongfront.circuit.json",
+      "metadata_sha256": "7dd42cf69da1b558301e35b66cfcc0df1dd8b76ee8374411889c8f3494647b58",
+      "source_metadata": "d108_meanfree_stage1_strongfront.map.json",
+      "source_metadata_sha256": "2912629f6c812b7de99b28f5a6c7a2238770801f29b41df6a0a4de4b90227956",
+      "script_sha256": "8b0c6f027708bba281901cc859ac87db70788010a0271e631a62ae62573ee453",
+      "last_phase": {
+        "name": "finished",
+        "seconds": 600.767,
+        "status": "COMPUTE_BOUND_OPEN"
+      },
+      "cas": {
+        "returncode": 1,
+        "errors": [],
+        "log_sha256": "1c9a0e96acdeb5c22dc0737c2d8ace0de2d7d1ff053ee87880064fc565e6a695",
+        "controls": [],
+        "script_unchanged": true
+      }
+    },
+    {
+      "stage": 2,
+      "status": "COMPUTE_BOUND_OPEN",
+      "row_counts": {
+        "source": 1,
+        "graph_h": 0,
+        "lift": 601,
+        "R_high": 488,
+        "R_low_graph": 297,
+        "H2_graph": 627,
+        "vU_graph": 651,
+        "Q": 1233,
+        "localizers": 2
+      },
+      "total_rows": 3900,
+      "parsed_rows": 3900,
+      "variables": 2739,
+      "script_bytes": 9962751,
+      "checks": {
+        "script_hash_matches": true,
+        "input_hash_matches": true,
+        "generators_distinct": true,
+        "all_five_targets_and_mean_declared": true,
+        "leaders_and_localizers_declared": true,
+        "all_declared_rows_parsed": true,
+        "mean_free_and_arc_unchanged": true
+      },
+      "source_raw_rows": 356,
+      "source_pivots": 0,
+      "source_residual": 1,
+      "metadata": "d108_meanfree_circuit_stage2_strongfront.circuit.json",
+      "metadata_sha256": "97873bebb051e733064cbfc462bb50239e50de85dced8d4c5e47dcb1ac18fb81",
+      "source_metadata": "d108_meanfree_stage2_strongfront.map.json",
+      "source_metadata_sha256": "97b13493601e86f4d4bc4f8dc57ab869c517c2ec545dbb1ced3b5f157042b487",
+      "script_sha256": "b24bf734def270d9e51fcd84f087d8ed9ab9ba8d635c5feaaa8258c1a43e19dd",
+      "last_phase": {
+        "name": "finished",
+        "seconds": 600.766,
+        "status": "COMPUTE_BOUND_OPEN"
+      },
+      "cas": {
+        "returncode": 1,
+        "errors": [],
+        "log_sha256": "06b5e7cc1c2dcc43c126f75eeab0452c2546726d04955513b4a6c7505b97e445",
+        "controls": [],
+        "script_unchanged": true
+      }
+    },
+    {
+      "stage": 3,
+      "status": "COMPUTE_BOUND_OPEN",
+      "row_counts": {
+        "source": 2,
+        "graph_h": 0,
+        "lift": 587,
+        "R_high": 483,
+        "R_low_graph": 288,
+        "H2_graph": 622,
+        "vU_graph": 632,
+        "Q": 1205,
+        "localizers": 2
+      },
+      "total_rows": 3821,
+      "parsed_rows": 3821,
+      "variables": 2678,
+      "script_bytes": 9607576,
+      "checks": {
+        "script_hash_matches": true,
+        "input_hash_matches": true,
+        "generators_distinct": true,
+        "all_five_targets_and_mean_declared": true,
+        "leaders_and_localizers_declared": true,
+        "all_declared_rows_parsed": true,
+        "mean_free_and_arc_unchanged": true
+      },
+      "source_raw_rows": 536,
+      "source_pivots": 0,
+      "source_residual": 2,
+      "metadata": "d108_meanfree_circuit_stage3_strongfront.circuit.json",
+      "metadata_sha256": "5d8e378dae12df9f16ba1dc5df2650e376b86e8a545eeeb9ae752d135182c0ba",
+      "source_metadata": "d108_meanfree_stage3_strongfront.map.json",
+      "source_metadata_sha256": "4d275f2764e43885165c768552e3df7546819d1f44788130e8d3971c3ece9ec5",
+      "script_sha256": "9ce5fabf94c4da19713b5b6406b0c2016663b27e56abe20415884a419a02ffe5",
+      "last_phase": {
+        "name": "finished",
+        "seconds": 600.703,
+        "status": "COMPUTE_BOUND_OPEN"
+      },
+      "cas": {
+        "returncode": 1,
+        "errors": [],
+        "log_sha256": "8d424446fd05a4436f2f936135ec5504265e3d783de3f00d32a0fce5866c295b",
+        "controls": [],
+        "script_unchanged": true
+      }
+    },
+    {
+      "stage": 4,
+      "status": "EMITTED_NOT_DECIDED",
+      "row_counts": {
+        "source": 3,
+        "graph_h": 0,
+        "lift": 579,
+        "R_high": 477,
+        "R_low_graph": 279,
+        "H2_graph": 622,
+        "vU_graph": 622,
+        "Q": 1194,
+        "localizers": 2
+      },
+      "total_rows": 3778,
+      "parsed_rows": 3778,
+      "variables": 2637,
+      "script_bytes": 9396697,
+      "checks": {
+        "script_hash_matches": true,
+        "input_hash_matches": true,
+        "generators_distinct": true,
+        "all_five_targets_and_mean_declared": true,
+        "leaders_and_localizers_declared": true,
+        "all_declared_rows_parsed": true,
+        "mean_free_and_arc_unchanged": true
+      },
+      "source_raw_rows": 715,
+      "source_pivots": 0,
+      "source_residual": 3,
+      "metadata": "d108_meanfree_circuit_stage4_strongfront.circuit.json",
+      "metadata_sha256": "be8481ae43ffb01e0e521411e475b7e98535ba86082c3164f792dbbb07a9fa6b",
+      "source_metadata": "d108_meanfree_stage4_strongfront.map.json",
+      "source_metadata_sha256": "8d9adb0e8e5d30cedb97d824a48443b4454f719e45a0c601ef8ffd8e338b39ee",
+      "script_sha256": "e0ec478c14811d8d7e29411d83458405430f4d840fac066201b7e7012a3c7f70",
+      "last_phase": {
+        "name": "script_complete",
+        "seconds": 0.319,
+        "bytes": 9396697,
+        "variables": 2637
+      },
+      "cas": null
+    },
+    {
+      "stage": 5,
+      "status": "EMITTED_NOT_DECIDED",
+      "row_counts": {
+        "source": 5,
+        "graph_h": 0,
+        "lift": 571,
+        "R_high": 471,
+        "R_low_graph": 270,
+        "H2_graph": 622,
+        "vU_graph": 611,
+        "Q": 1183,
+        "localizers": 2
+      },
+      "total_rows": 3735,
+      "parsed_rows": 3735,
+      "variables": 2597,
+      "script_bytes": 9177533,
+      "checks": {
+        "script_hash_matches": true,
+        "input_hash_matches": true,
+        "generators_distinct": true,
+        "all_five_targets_and_mean_declared": true,
+        "leaders_and_localizers_declared": true,
+        "all_declared_rows_parsed": true,
+        "mean_free_and_arc_unchanged": true
+      },
+      "source_raw_rows": 895,
+      "source_pivots": 0,
+      "source_residual": 5,
+      "metadata": "d108_meanfree_circuit_stage5_strongfront.circuit.json",
+      "metadata_sha256": "8369a520d9f4da95d67b8754eb5e98399f23759d024e8635ed278abee29c230f",
+      "source_metadata": "d108_meanfree_stage5_strongfront.map.json",
+      "source_metadata_sha256": "35261a806e6f21b2cc76ef1f19792de894ebcd537b17278c38c8a9b49e7d0706",
+      "script_sha256": "5afa95e29d070912ca09fd5dd93d92f74b619557133957065b53fe208009f2ab",
+      "last_phase": {
+        "name": "script_complete",
+        "seconds": 0.314,
+        "bytes": 9177533,
+        "variables": 2597
+      },
+      "cas": null
+    },
+    {
+      "stage": 6,
+      "status": "NOT_STARTED"
+    },
+    {
+      "stage": 7,
+      "status": "NOT_STARTED"
+    },
+    {
+      "stage": 8,
+      "status": "NOT_STARTED"
+    }
+  ],
+  "classification": "A timeout or resource failure is OPEN; NONUNIT_NOT_POINT is not a necessary-chart survivor. No unrestricted unit or point is inferred from controls.",
+  "primary_schedule": "all stages0\u20138 full normalized characteristic degree/top rows, full source rows transported by rational pivots",
+  "circuit_schedule": "all stages0\u20138 stronger audited radical front consequences; invertible translation retains jet0; all polynomial coefficient graph and target rows"
+}

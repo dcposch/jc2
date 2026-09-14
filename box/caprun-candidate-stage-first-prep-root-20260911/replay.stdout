@@ -1,0 +1,37 @@
+PASS PREPIN 22/22 bad=[]
+PASS C01 stage_patch imports exactly hashlib/json/re ['hashlib', 'json', 're']
+PASS C02 stage_patch has no I/O/exec tokens
+PASS C03 historical_exercise imports stdlib only ['hashlib', 'importlib.util', 'json', 'pathlib', 'sys']
+PASS C04 historical_exercise reads only 2 pinned files, prints, never applies
+PASS R01 producer suite 9/9 ok run=9 fail=0 err=0
+  methods: test_bad_commitment test_bad_text test_duplicate_summary_key test_false_summary test_missing_extra_output test_no_mutation_or_missing_summary test_old_ascii_fails_utf8_transport_is_exact test_patch_looking_content_stays_data test_unsafe_prefix
+PASS H01 14 reconstructed hashes == EXERCISE.expected_sha256
+PASS H02 candidate_bytes == 78889
+PASS H03 SUMMARY hash 2d78477f...
+PASS H04 4 main docs == charged input hashes
+PASS H05 summary context HISTORICAL_TEST, no release
+PASS H06 main() JSON packet == EXERCISE map/status/context/bytes
+PASS H07 main() rejects argv count
+PASS A01 base round trip: 14 paths, bytes exact, keys == expected map
+PASS A02 deterministic
+PASS A03 ROOT_ATTESTED_CANDIDATE context accepted (contract positive)
+PASS A04 context HISTORICAL rejected
+PASS A05 schema drift rejected
+PASS A06 outputs containing SUMMARY.json rejected
+PASS A07 bool bytes commitment rejected
+PASS A08 uppercase digest commitment rejected
+PASS A09 extra record key rejected
+PASS A10 dict subclass rejected
+PASS A11 bytearray value rejected
+PASS A12 str value rejected
+PASS A13 invalid SUMMARY JSON raises ValueError family
+PASS A14 single-LF file round-trips
+PASS A15 131072-byte file accepted, 131073 rejected
+PASS A16 aggregate 524288 bound is non-vacuous (4x131072 + rest rejected)
+PASS A17 prefix regex: 3 accepted incl. non-date 99999999, 10 rejected
+PASS A18 directive lines in all 13 files stay data; exactly 14 paths; bytes exact
+PASS D01 DELIMIT: 8 universal-newline separators accepted; LF-only parser sees 14 paths, splitlines-parser sees 15 ['0xb', '0xc', '0x1c', '0x1d', '0x1e', '0x85', '0x2028', '0x2029']
+PASS A19 150 random UTF-8 candidates round-trip exactly ok=150
+PASS A20 inputs unchanged after all controls
+PASS POSTPIN 22/22 bad=[]
+CONTROLS 35/35 passed; FAIL=[]

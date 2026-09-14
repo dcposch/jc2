@@ -1,0 +1,92 @@
+{
+  "pins": 17,
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "ccf4b97501b337ef02bd1d6d5733dc47f004b513af90a312819779297e395145"
+    },
+    {
+      "mutation": "--mutate-delta-sign",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 31, in check\n    need(add(b,scale(mul(a,q),-1))==delta,'exact scalar remainder b modulo a')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: exact scalar remainder b modulo a\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-lift-row",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 50, in check\n    need(all(j>=0 for i,j,k in lift),'both actual U lift rows retained')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: both actual U lift rows retained\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-low-A",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 56, in check\n    need(lowA(Q(0)) and not lowA(Q(-2)),'actual alpha-unit low-A obstruction')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual alpha-unit low-A obstruction\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-low-B",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 57, in check\n    need(lowB(Q(0)) and not lowB(Q(-5)),'actual gamma-unit low-B obstruction')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual gamma-unit low-B obstruction\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-tangent",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 67, in check\n    need(add(bracket(A0,B1),bracket(A1,B0))=={},'actual full first-order bracket identity')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual full first-order bracket identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "ccf4b97501b337ef02bd1d6d5733dc47f004b513af90a312819779297e395145"
+    },
+    {
+      "mutation": "--mutate-delta-sign",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 31, in check\n    need(add(b,scale(mul(a,q),-1))==delta,'exact scalar remainder b modulo a')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: exact scalar remainder b modulo a\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-lift-row",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 50, in check\n    need(all(j>=0 for i,j,k in lift),'both actual U lift rows retained')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: both actual U lift rows retained\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-low-A",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 56, in check\n    need(lowA(Q(0)) and not lowA(Q(-2)),'actual alpha-unit low-A obstruction')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual alpha-unit low-A obstruction\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-low-B",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 57, in check\n    need(lowB(Q(0)) and not lowB(Q(-5)),'actual gamma-unit low-B obstruction')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual gamma-unit low-B obstruction\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-tangent",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 108, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-center-discriminator-20260907/check.py\", line 67, in check\n    need(add(bracket(A0,B1),bracket(A1,B0))=={},'actual full first-order bracket identity')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual full first-order bracket identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "finite h=0 arcs require delta=0; no tuned-stratum exclusion/degeneration/guarded point",
+  "status": "PASS_EXCEPTIONAL_DESK_PROVISIONAL",
+  "wall_seconds": 3.362112552043982
+}

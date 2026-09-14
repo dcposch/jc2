@@ -1,0 +1,94 @@
+{
+  "argv_count": 3,
+  "argv_sha256": "d37a40b78929e2864a5f13552b469b404cdf29e807f524f57b49838e61aa113c",
+  "caps": {
+    "cpu_seconds": 5,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 536870912,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 0.25,
+    "wall_seconds": 1.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906/controls",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [
+    {
+      "observed_pgid": 1967,
+      "observed_pid": 1967,
+      "observed_start_identity": "boot=69938ee6-48bb-4e45-bdf2-efb08c655368;start_ticks=44634",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-09-06T23:42:45.659509Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-09-06T23:42:45.659546Z"
+    },
+    {
+      "observed_pgid": 1967,
+      "observed_pid": 1967,
+      "observed_start_identity": "boot=69938ee6-48bb-4e45-bdf2-efb08c655368;start_ticks=44634",
+      "result": "MATCH",
+      "stage": "before-kill",
+      "utc": "2026-09-06T23:42:45.916719Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 9,
+      "stage": "before-kill-send",
+      "utc": "2026-09-06T23:42:45.916745Z"
+    }
+  ],
+  "invocation_cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906",
+  "max_observed_group_rss_bytes": 10514432,
+  "pgid": 1967,
+  "pid": 1967,
+  "resource": null,
+  "runner_exit_code": 124,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=69938ee6-48bb-4e45-bdf2-efb08c655368;start_ticks=44634",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "WALL_TIMEOUT",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/controls/orphan.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 46,
+    "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/controls/orphan.stdout",
+    "sha256": "0cf5677ec2e83b643d46aa5a86df26bbf94b1862a894be4da1cd4a4044f7d69c"
+  },
+  "telemetry_path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/controls/orphan.telemetry.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      1967
+    ],
+    "kill_sent": true,
+    "leader_reaped": true,
+    "reason": "wall_timeout",
+    "term_sent": true
+  },
+  "utc_end": "2026-09-06T23:42:45.923546Z",
+  "utc_start": "2026-09-06T23:42:44.651944Z",
+  "wall_elapsed_seconds": 1.271600129
+}

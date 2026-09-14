@@ -1,0 +1,16 @@
+ring r=0,(x,y),dp;
+ideal I=x*y-1/2,x;
+ideal G=slimgb(I);
+poly target=1;
+print("SLIM_UNIT="+string(reduce(target,G)==0));
+matrix W=lift(I,ideal(target));
+matrix M[1][size(I)]=I;
+matrix C=M*W;
+print("SLIM_IDENTITY="+string(C[1,1]==1));
+print("SLIM_PERTURBATION="+string(C[1,1]+x!=1));
+ideal J=x^2,x*y;
+ideal H=slimgb(J);
+print("SLIM_NONUNIT="+string(reduce(1,H)!=0));
+print("SLIM_NONMEMBER="+string(reduce(x,H)!=0));
+print("SLIM_MEMBER="+string(reduce(x^2,H)==0));
+quit;

@@ -1,0 +1,53 @@
+// Univariate S(la)=T5 on b4=1 chart reduced by the pencil; gcd(S,R).
+option(redSB);
+print("GCD start");
+poly cc0=subst(T5,b3,0);
+poly bb0=subst(diff(T5,b3),b3,0);
+poly aa0=subst(diff(diff(T5,b3),b3),b3,0)/2;
+poly cc1=subst(T4,b3,0);
+poly bb1=subst(diff(T4,b3),b3,0);
+poly aa1=subst(diff(diff(T4,b3),b3),b3,0)/2;
+poly cc2=subst(T3,b3,0);
+poly bb2=subst(diff(T3,b3),b3,0);
+poly aa2=subst(diff(diff(T3,b3),b3),b3,0)/2;
+poly B1=aa0*bb1-aa1*bb0; poly C1=aa0*cc1-aa1*cc0;
+poly B2=aa0*bb2-aa2*bb0; poly C2=aa0*cc2-aa2*cc0;
+ring Q=(0,d),(b4,u2,b3,la),dp;
+minpoly=3*d^2-4;
+poly B1=imap(rres,B1); poly B2=imap(rres,B2);
+poly C1=imap(rres,C1); poly C2=imap(rres,C2);
+poly T5=imap(rres,T5); poly tau=imap(rres,tau);
+poly B1d=subst(B1,b4,1); poly B2d=subst(B2,b4,1);
+poly C1d=subst(C1,b4,1); poly C2d=subst(C2,b4,1);
+poly P1=C1d-la*B1d; poly P2=C2d-la*B2d;
+poly T5s=subst(subst(T5,b4,1),b3,la);
+poly taus=subst(subst(tau,b4,1),b3,la);
+ring P=(0,d),(u2,la),dp;
+minpoly=3*d^2-4;
+poly P1=imap(Q,P1); poly P2=imap(Q,P2);
+poly T5s=imap(Q,T5s); poly taus=imap(Q,taus);
+poly R=resultant(P1,P2,u2);
+print("R deg="+string(deg(R))+" size="+string(size(R)));
+ideal g=std(ideal(P1,P2));
+poly ST=reduce(T5s,g);
+poly SU=reduce(taus,g);
+print("S_T size="+string(size(ST))+" deg="+string(deg(ST))+" zero="+string(ST==0)+" d_u2="+string(diff(ST,u2)==0));
+print("S_tau size="+string(size(SU))+" deg="+string(deg(SU))+" zero="+string(SU==0)+" d_u2="+string(diff(SU,u2)==0));
+print("ST="+string(ST));
+print("SU="+string(SU));
+if (diff(ST,u2)==0) {
+  ring L=(0,d),(la),dp;
+  minpoly=3*d^2-4;
+  poly R=imap(P,R); poly ST=imap(P,ST); poly SU=imap(P,SU);
+  poly gT=gcd(R,ST);
+  poly gU=gcd(R,SU);
+  print("gcd(R,S_T) deg="+string(deg(gT))+" size="+string(size(gT)));
+  print("gcd(R,S_tau) deg="+string(deg(gU))+" size="+string(size(gU)));
+  print("gcdRT="+string(gT));
+  print("gcdRU="+string(gU));
+} else {
+  print("S_T not univariate");
+  print("lead ST="+string(lead(ST)));
+}
+print("DONE_GCD");
+quit;

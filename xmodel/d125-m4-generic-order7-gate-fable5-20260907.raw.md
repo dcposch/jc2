@@ -1,0 +1,44 @@
+# Gate: generic k=s⁴ order-seven obstruction with moving reference (Fable 5.1, 2026-09-07)
+
+Bounded 15-minute hostile gate of `xmodel/d125-m4-order7-discriminator-astra-20260907.md` (frozen SHA `6ee3ee52…`, whole text read) with its `check.py` (`49fee2e2…`, read, NOT run: helper absent by design), `review-status-note.md`, the parent residue discriminator `d32b3965…` (whole text read), `reading-note.md`, and the four prior Fable gates (two-jet, zero-k classification, low-jet saturation, mixed-order), read from `/tmp/jc2-lane.364nji/inputs` only. Root's producer terminal state, transaction and ten-run receipt are custody premises only. The parent finite six-jet gate was not read. Promoted 14c/14f/14g and the first-tangent lemma 14i are consumed as dependencies; the independent necessity at orders 4, 6 and 7 was re-derived by hand below. No CAS, AWS, SSH, solver, peer, ledger, network or frozen-byte edit; own controls in `box/d125-m4-generic-order7-gate-fable5-20260907/` (`gate_controls.py` SHA `67aa3c2b…`, `run.py`, `witness.json` `52f39f9d…`, `replay.json`, `input_pins.txt`).
+
+## Verdict table
+
+| item | verdict |
+|---|---|
+| 1. §1 fixed prefix: Q₇=(5/3)R²A₇+(10/9)DU/R−(5/27)C²D/R², γs⁶X has no order-7 term (A₁=0), parent B≡X⁵+γs⁶X mod s⁷, [R,Z₇]=0, R²Z₇∈K[R] odd ⇒ R∣C²D | **CONFIRMED** |
+| 2. §2 point certificate: T(0,a)=0, C(0,a)=b²a², D(0,a)=b³a³/3, C²D=b⁷a⁷/3 a unit in Q[b,a]/(b⁴−3,a⁴−4a²+1); contradiction with R∣C²D; not a Keller/source point | **CONFIRMED** |
+| 3. §3 A₅/A₆: order-7 term gains only (10/9)CA₅; A₆ absent; order-5 X-kernel adds γ₅C/(3R) simple pole; order-6 X-kernel adds nothing at 7; (7) unchanged for fixed C,D | **CONFIRMED** |
+| 4. §4 generic setup: α=γ=0 centre, t(s) from y=−(t+3)³ with unit 3h², a=0 by e₁=0 (not by 14i), 14i a=0 branch ⇒ A₁=cR₀+dR₀²S, c=0 by a01, τ₁=d/3 removes the tangent, both departures at 2, order-4 pole (5/9)F₂²/R₀ with origin evaluation ⇒ R₀∣F₂² ⇒ F₂=R₀C; C even, deg≤8, w≤0, C(0)=[p²]C=0, ξ²=−3h; F₃=D₀ unconstrained | **CONFIRMED** (one ordering note, §2) |
+| 5. §5 moving identity through 7, γ₁..γ₅ killed by the triangular e-rows with diagonal −h, order-6 scalar/R₀ killed at the origin, M₀=R₀W₀, moving term (M₁−W₀R₁)/R₀ simple, γ₆R₁ polynomial, sole double pole −5C²D₀/(27R₀²), odd R₀²Y₇∈K[R₀] ⇒ R₀∣C²D₀ | **CONFIRMED** |
+| 6. §6 domain step: T irreducible (h≠0), (6)+(7) ⇒ T∣C, w(Q)≤−8, [gp](TQ)=0 vs ξ≠0; seven-jet counterpart with the three saturated rows imposed explicitly | **CONFIRMED** |
+| 7. Scope/stop clauses; evidence claims; history correction | **CONFIRMED** (typed gaps, none charged) |
+
+## 1. Fixed prefix and point certificate (items 1–3)
+
+Own hand expansion of R⁵(1+F/R³)^{5/3} with binomials 5/3, 5/9, −5/81, 5/243 and F=s²RC+s³D+s⁴U+s⁵A₅+s⁶A₆+s⁷A₇: order 7 collects (5/3)R²A₇ from the linear term, (10/9)(CA₅+DU/R) from F², and 3·(5/81)/… no: −(5/81)·3R²C²D/R⁴=−(5/27)C²D/R² from F³; F⁴ starts at s⁸. Order 6 is (5/3)R²A₆+(10/9)CU+[(5/9)D²−(5/81)C³]/R, which with A₆=0 equals the parent's B₆−γR, so the parent B is exactly X⁵+γs⁶X mod s⁷ and Z=B−X⁵−γs⁶X starts at s⁷. [A,X]=3X²[X,X]=0 in K[g,p,R⁻¹][[s]], so [R³,Z₇]=0, R²Z₇ is polynomial and lies in K[R]; B₇, A₇, D, U odd and C even make R²Z₇ odd, hence R∣h(R) and (5/27)C²D≡0 mod R. Own control C3 evaluates the literal r, T, Z, q at (g,p)=(0,a) with h=−1: T(0,a)=a⁴−4a²+1=0, C=b²a², D=b³a³/3, and 3·C²D·(b³/3)⁷(4a−a³)⁷ reduces to 1 in the rank-16 algebra, so C²D is a unit there; a divisor of R vanishes at that point. The changed point relation fails at "point lies on T=0". Item 3 is a direct reading of the same expansion.
+
+## 2. Generic §4 (item 4)
+
+Centre: a01=−α h=0 and e₀=−γh=0 with h≠0 give α=γ=0, and the constant β shear gives (R₀³,R₀⁵). Ordering note, uncharged: the report cites 14i before establishing a=0; 14i's a≠0 branch (two-jet gate item 2) gives A₁=cR₀+R₀²D″ with D″∈span{p²,gp}, not cR₀+dR₀²S. The report's next sentence kills a by e₁=[p]((a/3)R₀)=−ah/3=0, which is exactly what selects the a=0 branch, so the proof is complete; only the sentence order is loose. From e=(5/9)s⁴x and ord x=2 (x²=3s⁴y, y₀=−h³ a unit in a field), e₁,…,e₅=0 and e₆=(5/9)x₂. Own control C4 (degree-4 truncated products only): [p]R₀=−h, [gp²]R₀=h, [p²]R₀=0, [p³](R₀²S)=−h², [p³](R₀S²)=−h, no gp² or p terms in R₀²S, R₀S². Hence c=0, τ₁=d/3, F₁=0, [p³]A₂=−h[p²]C−3h²τ₂−3hτ₁² matches y₂ so [p²]C=0, [gp²]A₂=−hξ gives ξ=−x₂/h, and w(C)≤0 because no odd weight-2 slot exists (C4). At order 4, [s⁴](F²/R_s)=F₂²/R₀ since F₁=0 and 1/R_s=1/R₀+O(s); R₀Y₄ is even in K[R₀] and vanishes at the origin, so R₀∣F₂²; p and T are distinct primes, so F₂=R₀C. F₃ enters order 3 only polynomially.
+
+## 3. Moving identity and order 7 (item 5)
+
+Own hand expansion with F=s²R_sC+s³D(s): the pole part at order 7 is (5/9)[2D₀D₁/R₀−D₀²R₁/R₀²]−(5/81)[3C²D₀/R₀²−C³R₁/R₀²]=M₁/R₀−M₀R₁/R₀²−(5/27)C²D₀/R₀², where the a-priori double pole M₀R₁/R₀² is exactly what (6) reduces to W₀R₁/R₀. Own control C1 uses an independent toy R_s=g+2sp, C=36p², D₀=72p³+5gp², D₁=3p³−g²p, γ₆=7, with W₀R₁≠0, and verifies [A,B]≡0 mod s⁸ in the g-Laurent ring; omitting the moving derivative, replacing −5/27 by −5/81, or dropping the γ₆R₁ term each breaks the identity. Kernel accounting: Y_j for j≤5 is polynomial of degree ≤23 and odd, so Y_j=γ_jR₀+δ_jR₀³; the polynomial terms and W₀ have no linear part (D₀ has no linear terms since a01=0 at every order and [g]A=0), [p]A_i=0, so e_j=Σγ_i[p]X_{j−i} is triangular with diagonal −h (own C5; h=0 mutation fails, showing t₀≠−3 is load-bearing here too). At 6, h₆ is even with h₆(0)=−M₀(0)=0, so R₀∣M₀ and the residual kernel is γ₆R₀+δ₆R₀³ with γ₆=(5/9)ξ, matching the parent's −5b²/9. At 7, R₀²Y₇ is odd in K[R₀] (own C2 rejects the even kernel), so its only possible pole is scalar/R₀ and (5/27)C²D₀≡0 mod R₀.
+
+## 4. Domain step, seven-jet, scope (items 6–7)
+
+T=pg³+hpg+(p⁴+(h−3)p²−h): the cubic in g over Kbar((p)) has constant valuation −1 and g, g³ valuations n, 3n, never twice-minimal, so it is irreducible, primitive (constant −h), and coprime to p. In the domain, C²D₀=0 with 9D₀²=C³ forces C=D₀=0, so T∣C. w(T)=8 (C4), w(C)≤0, so Q=C/T has weight ≤−8; own slot enumeration gives only p², p⁴, gp³ (degree ≤4), never 1 or gp; T has no linear terms, so [gp](TQ)=0 against ξ²=−3h≠0. Seven-jet: over K[s]/(s⁸) the field rows s⁰, s², s⁴ of x²=3s⁴y give x₀=x₁=0 and x₂²=3y₀; every step above uses only coefficients through s⁷, so the counterpart with the three saturated rows imposed explicitly holds; raw jets have k²=s⁸=0 and are correctly not claimed. The stop clauses (K[[s]], literal k=s⁴, t₀≠−3, finite coefficients, no other m, no infinity, no degeneration guarantee, no guarded emptiness, no JC2) match the proof's actual uses of each hypothesis. The review-status note is consistent: no finite-six-jet review success is claimed or used here, and the six-jet mod s⁷ is not needed for the generic §§4–6 result.
+
+## 5. Controls and typed gaps
+
+Fourteen capped runs (seven modes × normal/−O), positive witnesses byte-identical, zero Assert nodes, 1.3 s wall; each mutation exits 1 at its intended gate (`replay.json`). No R³, R⁵, full R²S, A15/B25, C³, C²D, W or source-bracket expansion; only the toy identity, degree-4 truncations and one point evaluation. Typed gaps, none charged: **GAP-CENTRALIZER** (K[R_t] centralizer and its localized use remain the declared external trust); **GAP-14i-TEXT** (the lemma statement is not among the frozen files; its a=0 branch as confirmed by the two-jet gate is what is used); **GAP-TRANSACTION** (root receipts not in the frozen set). No exit-price claim, so no charge basis. **STOP:** review only; seven verdicts above, no promotion authority beyond them.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line, including its terminating newline; this seal is outside the body.
+- Body bytes: `8451`.
+- Body SHA-256: `facf4906db69369c33b4ecfb548db13a973af9a999ba8663a9fd77a724102aa4`.
+- Frozen basis: `0d39df3c9fd69c939a8420c54d03228b9077777d`.

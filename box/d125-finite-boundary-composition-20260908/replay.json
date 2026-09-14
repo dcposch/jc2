@@ -1,0 +1,91 @@
+{
+  "caps": "30wall25CPU512MiB each",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "57ede9d764ded48e047aaf5f1a7b6431279f0ab1b790dea46414469e1ed3bca2"
+    },
+    {
+      "mutation": "--change-hyperbola",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "9c71b0dfdbb02b57de76b05b180637f0634c6fa8f317629a89838e363de55c5e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--change-CRT-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "6d4bb15579bfdb7c3f27a40ef67c9beaeeae1e542a4d57f6b84ab6dacf3bedc9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--change-nilpotent-algebra",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "3fb75b681a8c269a32e3d7397780a1b4e1a8d2e2408f11a37776c907d64bf796",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--omit-gamma-shear",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "34b9e04d255a8ffb8b53132325fdd7e8b26d1b98c479e77f01abdfaaa6376e10",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--change-unit-root",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1ae69495e1e5ec3ebebb2c572a4cc798de869a097012cdf91887544fadce2707",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "57ede9d764ded48e047aaf5f1a7b6431279f0ab1b790dea46414469e1ed3bca2"
+    },
+    {
+      "mutation": "--change-hyperbola",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "9c71b0dfdbb02b57de76b05b180637f0634c6fa8f317629a89838e363de55c5e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--change-CRT-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "6d4bb15579bfdb7c3f27a40ef67c9beaeeae1e542a4d57f6b84ab6dacf3bedc9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--change-nilpotent-algebra",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "3fb75b681a8c269a32e3d7397780a1b4e1a8d2e2408f11a37776c907d64bf796",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--omit-gamma-shear",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "34b9e04d255a8ffb8b53132325fdd7e8b26d1b98c479e77f01abdfaaa6376e10",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--change-unit-root",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1ae69495e1e5ec3ebebb2c572a4cc798de869a097012cdf91887544fadce2707",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "writers_finished": true
+}

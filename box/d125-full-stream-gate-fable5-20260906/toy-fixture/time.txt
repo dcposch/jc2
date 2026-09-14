@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-full-stream-gate-fable5-20260906/gate_check.py", line 527, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/ubuntu/jc2/box/d125-full-stream-gate-fable5-20260906/gate_check.py", line 495, in main
+    for name, L in json_controls(json_lines, st["first_zero_physical_row"]):
+  File "/home/ubuntu/jc2/box/d125-full-stream-gate-fable5-20260906/gate_check.py", line 363, in json_controls
+    yield C("jet_binomial_changed", lambda L: edit_record(L, lambda r: r.get("kind") == "jet" and len(r["terms"]) > 1,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/d125-full-stream-gate-fable5-20260906/gate_check.py", line 346, in C
+    mutate(L)
+  File "/home/ubuntu/jc2/box/d125-full-stream-gate-fable5-20260906/gate_check.py", line 363, in <lambda>
+    yield C("jet_binomial_changed", lambda L: edit_record(L, lambda r: r.get("kind") == "jet" and len(r["terms"]) > 1,
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/d125-full-stream-gate-fable5-20260906/gate_check.py", line 335, in edit_record
+    raise RuntimeError("control target absent")
+RuntimeError: control target absent
+Command exited with non-zero status 1
+	Command being timed: "timeout 30 python3 gate_check.py --spec toy --jsonl toy-fixture/out/literal.jsonl --sing toy-fixture/out/import.sing --out toy-fixture/results.json --as-bytes 536870912"
+	User time (seconds): 0.11
+	System time (seconds): 0.01
+	Percent of CPU this job got: 77%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4616
+	Voluntary context switches: 23
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 88
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

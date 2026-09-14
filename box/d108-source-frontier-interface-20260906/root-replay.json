@@ -1,0 +1,14 @@
+{
+  "source_sha256": "1c927d83aa4684ae91bfffc8d03500fbabb73a500faa222fa349a6d129a10814",
+  "command": "timeout --foreground 30s bash -c 'ulimit -v 524288; exec python3 -B box/d108-source-frontier-interface-20260906/replay_all.py'",
+  "completed_utc": "2026-09-06T12:59:48Z",
+  "exit_code": 0,
+  "scope": "three read-only main objects; critical_jet.py read but not run because generation-only",
+  "source_seconds": 1.1049511379096657,
+  "controls_seconds": 11.760044149006717,
+  "edge_seconds": 0.0975768540520221,
+  "peak_rss_kib": 69196,
+  "mutations_rejected": 6,
+  "terminal_marker": "D108_INTERFACE_READ_ONLY_REPLAY=PASS",
+  "interpreter_scope": "NORMAL_ONLY"
+}

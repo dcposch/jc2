@@ -1,0 +1,132 @@
+{
+  "F_equality_generator": "a*p**3 + b",
+  "F_membership_identity": "a*p**3 + a*p*u + a*v + b + 3*p**7*u + 3*p**6*v + 3*p**5*u**2 + 6*p**4*u*v + p**3*u**3 + 3*p**3*v**2 + 3*p**2*u**2*v + 3*p*u*v**2 + v**3 = (u*p+v)*(a + p**6 + p**3*(p**3 + p*u + v) + (p**3 + p*u + v)**2) + (a*p^3+b)",
+  "G_equality_generator": "c*p**3 + d",
+  "G_membership_identity": "c*p**3 + c*p*u + c*v + d + 2*p**4*u + 2*p**3*v + p**2*u**2 + 2*p*u*v + v**2 = (u*p+v)*(c + 2*p**3 + p*u + v) + (c*p^3+d)",
+  "coefficient_ideal_rule": "If E(pi)=sum e_i*pi^i and M(pi)=sum m_j*pi^j, every coefficient of E*M lies in ideal(e_i), by convolution sum e_i*m_(k-i).",
+  "coefficient_ring": "The declared Q source polynomial ring, then the maintained quotient/localization; pi is an independent polynomial variable.",
+  "custody": {
+    "deep_accelerated.py": "101f5f1a63d7dabf0e10981e867f2790bf4ada6dcec9b5327d8b2eb86724631a",
+    "engine.py": "a04b8fcd64fd483f27f2cf7beeb8c68e5275f907d2a22dc55a2314553fa33564",
+    "print-audit-pole-membership.py": "1e2c37142635ee571baa57ef4657c22df465e214690b98cce862eabd4d25cd86",
+    "source_data.py": "5de1e6622669b0a2fac5c9380318e22eecf8ee7f62da63763c1e1164963c0368"
+  },
+  "higher_series_remainder_divisible_by_s": true,
+  "identities_verified": true,
+  "inner_equality_generator": "p*u + v",
+  "no_unknown_was_omitted_before_its_actual_coefficient_equation": true,
+  "records": [
+    {
+      "blanket_zero_face_negative_control": "(pi**3 + 3*pi**2)**9",
+      "branch": "delta2",
+      "cover": 1,
+      "face": "pi**3 + 3*pi**2*rho",
+      "historical_lower_support_counts": {
+        "F": 1134,
+        "G": 513
+      },
+      "independent_strict_negative_coefficient_checks": {
+        "C2": true,
+        "C3": true,
+        "h3": true
+      },
+      "negative_controls": {
+        "A2_strict_row_removed_F_endpoint_minus1": "pi**9 + 9*pi**8 + 27*pi**7 + 27*pi**6",
+        "A3_strict_row_removed_F_endpoint_minus1": "1",
+        "B1_strict_row_removed_G_endpoint_minus1": "pi**9 + 9*pi**8 + 27*pi**7 + 27*pi**6",
+        "B2_strict_row_removed_G_endpoint_minus1": "1",
+        "C2_strict_row_removed_F_endpoint_minus1": "3*pi**21 + 63*pi**20 + 567*pi**19 + 2835*pi**18 + 8505*pi**17 + 15309*pi**16 + 15309*pi**15 + 6561*pi**14",
+        "C2_strict_row_removed_G_endpoint_minus1": "2*pi**12 + 24*pi**11 + 108*pi**10 + 216*pi**9 + 162*pi**8",
+        "C3_strict_row_removed_F_endpoint_minus1": "3*pi**18 + 54*pi**17 + 405*pi**16 + 1620*pi**15 + 3645*pi**14 + 4374*pi**13 + 2187*pi**12",
+        "C3_strict_row_removed_G_endpoint_minus1": "2*pi**9 + 18*pi**8 + 54*pi**7 + 54*pi**6",
+        "F_target_removed_F_face_difference": "1",
+        "G_target_removed_G_face_difference": "1",
+        "h3_strict_row_removed_F_endpoint_minus1": "9*pi**24 + 216*pi**23 + 2268*pi**22 + 13608*pi**21 + 51030*pi**20 + 122472*pi**19 + 183708*pi**18 + 157464*pi**17 + 59049*pi**16",
+        "h3_strict_row_removed_G_endpoint_minus1": "6*pi**15 + 90*pi**14 + 540*pi**13 + 1620*pi**12 + 2430*pi**11 + 1458*pi**10",
+        "inner_target_removed_F_face_difference": "3*pi**18 + 54*pi**17 + 405*pi**16 + 1620*pi**15 + 3645*pi**14 + 4374*pi**13 + 2187*pi**12 + 3*pi**9 + 27*pi**8 + 81*pi**7 + 81*pi**6 + 1",
+        "inner_target_removed_G_face_difference": "2*pi**9 + 18*pi**8 + 54*pi**7 + 54*pi**6 + 1"
+      },
+      "normalized_floors": {
+        "A2_effective": 54,
+        "A3_effective": 81,
+        "B1_effective": 27,
+        "B2_effective": 54,
+        "C2": 18,
+        "C3": 27,
+        "F": 81,
+        "G": 54,
+        "H2": 27,
+        "h3": 9
+      },
+      "positive_control": "all higher blocks zero gives exact H2=P^3,F=P^9,G=P^6",
+      "scope_includes_all_coefficients_at_endpoint_even_when_not_in_historical_lower_tags": true,
+      "target_nonzero_coefficient_counts": {
+        "F": 10,
+        "G": 7
+      },
+      "unshifted_outer_floors": {
+        "A2": 53,
+        "A3": 80,
+        "B1": 26,
+        "B2": 53
+      }
+    },
+    {
+      "blanket_zero_face_negative_control": "(pi**3 - pi)**9",
+      "branch": "delta52",
+      "cover": 2,
+      "face": "-c*pi + pi**3",
+      "historical_lower_support_counts": {
+        "F": 1316,
+        "G": 594
+      },
+      "independent_strict_negative_coefficient_checks": {
+        "C2": true,
+        "C3": true,
+        "h3": true
+      },
+      "negative_controls": {
+        "A2_strict_row_removed_F_endpoint_minus1": "pi**9 - 3*pi**7 + 3*pi**5 - pi**3",
+        "A3_strict_row_removed_F_endpoint_minus1": "1",
+        "B1_strict_row_removed_G_endpoint_minus1": "pi**9 - 3*pi**7 + 3*pi**5 - pi**3",
+        "B2_strict_row_removed_G_endpoint_minus1": "1",
+        "C2_strict_row_removed_F_endpoint_minus1": "3*pi**21 - 21*pi**19 + 63*pi**17 - 105*pi**15 + 105*pi**13 - 63*pi**11 + 21*pi**9 - 3*pi**7",
+        "C2_strict_row_removed_G_endpoint_minus1": "2*pi**12 - 8*pi**10 + 12*pi**8 - 8*pi**6 + 2*pi**4",
+        "C3_strict_row_removed_F_endpoint_minus1": "3*pi**18 - 18*pi**16 + 45*pi**14 - 60*pi**12 + 45*pi**10 - 18*pi**8 + 3*pi**6",
+        "C3_strict_row_removed_G_endpoint_minus1": "2*pi**9 - 6*pi**7 + 6*pi**5 - 2*pi**3",
+        "F_target_removed_F_face_difference": "1",
+        "G_target_removed_G_face_difference": "1",
+        "h3_strict_row_removed_F_endpoint_minus1": "9*pi**24 - 72*pi**22 + 252*pi**20 - 504*pi**18 + 630*pi**16 - 504*pi**14 + 252*pi**12 - 72*pi**10 + 9*pi**8",
+        "h3_strict_row_removed_G_endpoint_minus1": "6*pi**15 - 30*pi**13 + 60*pi**11 - 60*pi**9 + 30*pi**7 - 6*pi**5",
+        "inner_target_removed_F_face_difference": "3*pi**18 - 18*pi**16 + 45*pi**14 - 60*pi**12 + 45*pi**10 + 3*pi**9 - 18*pi**8 - 9*pi**7 + 3*pi**6 + 9*pi**5 - 3*pi**3 + 1",
+        "inner_target_removed_G_face_difference": "2*pi**9 - 6*pi**7 + 6*pi**5 - 2*pi**3 + 1"
+      },
+      "normalized_floors": {
+        "A2_effective": 126,
+        "A3_effective": 189,
+        "B1_effective": 63,
+        "B2_effective": 126,
+        "C2": 42,
+        "C3": 63,
+        "F": 189,
+        "G": 126,
+        "H2": 63,
+        "h3": 21
+      },
+      "positive_control": "all higher blocks zero gives exact H2=P^3,F=P^9,G=P^6",
+      "scope_includes_all_coefficients_at_endpoint_even_when_not_in_historical_lower_tags": true,
+      "target_nonzero_coefficient_counts": {
+        "F": 10,
+        "G": 7
+      },
+      "unshifted_outer_floors": {
+        "A2": 124,
+        "A3": 187,
+        "B1": 61,
+        "B2": 124
+      }
+    }
+  ],
+  "required_provenance": "Every strict coefficient and every equality-target coefficient used here must be generated and its full graph/radical phase chain replayed. This universal proof then certifies all omitted product rows without re-expansion.",
+  "status": "PASS"
+}

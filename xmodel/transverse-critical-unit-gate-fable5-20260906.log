@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and delivered at 12:57 UTC, fifteen minutes before the deadline. The seal tool reports no seal yet, which is the expected state: the run contract says `body_end_contract=NONE` and the earlier Fable gate was left the same way for the coordinator to stamp.
+
+**Verdict: PROMOTED WITH FIX.** Report written to `xmodel/transverse-critical-unit-gate-fable5-20260906.md`, ending with a single standalone BODY-END and no charge_basis line. All five charged inputs hash-match the index and the repo copies.
+
+**The fix.** The producer's phrase "invertible constant matrix M" is literally false. My toy instantiation of the W-adapted pivot matrix has 16 of 28 lower entries depending on G, with diagonal entries of the form -2r and a constant determinant. The block-determinant proof only uses that the determinant is a nonzero rational, so under the corrected reading the argument is valid. The original bytes were not edited.
+
+**Per-claim readout, all CONFIRMED:**
+- **Claim 1.** The unit identity is a literal polynomial identity in the base with the inverse Z·F_X(s,0). Verified with fully symbolic coefficients and over the nilpotent base Q[eps]/(eps²). Refinement: it uses only the inverse relation and the W=0 rows. Mutations show both are essential, and W≥1 rows are not needed.
+- **Claim 2.** Evaluation annihilates V0 and yields beta·Delta exactly. Block determinant equals det(M)·Delta symbolically. A cubic restriction breaks the zero block. Monic can relax to a constant unit leading coefficient but not to a base-variable one.
+- **Claim 3.** The graph identity for beta holds in the ideal, no Keller stratum of the complete quotient is lost, but J_00 depends on beta, so j must be a fresh variable. Variable count does not decrease.
+- **Claim 4.** The D108 sign formula is correct as a symbolic composition, and the flipped-sign mutation is detected. General form: Delta equals J(h,D)(s,0) divided by h_X(s,0), so the (99,66) sign gives +J(h,D). Literal D108 jets are typed OPEN.
+
+**Cheapest D108 discriminator.** Read only the W⁰ and W¹ rows of h and D, form Delta as a base polynomial, and test it for identical vanishing and for reduction modulo the 14 residuals. Identically zero Delta empties the complete Keller quotient of that chart.
+
+Own artifacts are frozen read-only in `box/transverse-critical-unit-gate-fable5-20260906/` with 24 passing checks and 0 failures.
+DIVERT path=xmodel/transverse-critical-unit-gate-fable5-20260906.md status=CLEAN body_bytes=8050 body_sha256=c624f7f7ecd2d5f2f8fc4a5d00457460e489d03bfa795abee232de05967a9132

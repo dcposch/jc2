@@ -1,0 +1,19 @@
+2026-09-10T02:51:59,339377203+00:00
+MainPID=1422
+ExecMainStatus=0
+ControlGroup=/system.slice/jc2-f10-quotient-actual-execution-20260910.service
+ActiveState=active
+SubState=running
+InvocationID=6be0073ff4f048208f20e1e92f567337
+OWNED_PID=1422
+1422 (python3) S 1 1422 1422 0 -1 4194560 36519 88115 1 2 26 10 91 26 20 0 1 0 11033 42778624 8023 18446744073709551615 4325376 7353021 140728098512544 0 0 0 0 16781312 2 1 0 0 17 13 0 0 0 0 0 10657224 12220544 715317248 140728098516401 140728098516498 140728098516498 140728098516967 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/dispatch_batch.py 
+OWNED_PID=1552
+1552 (python3) S 1422 1422 1422 0 -1 4194304 3685 102327 0 0 15 3 40 95 20 0 1 0 11225 31244288 5344 18446744073709551615 4325376 7353021 140722081882576 0 0 0 0 16781312 16387 1 0 0 17 0 0 0 0 0 0 10657224 12220544 312487936 140722081884702 140722081885714 140722081885714 140722081886183 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/run_capped.py --wall-seconds 600 --cpu-seconds 550 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-quotient-actual-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/solve.stdout --stderr-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/solve.stderr --telemetry-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/solve.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/solver.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/solve.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/univariate.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/univariate.full.receipt.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/ROOT-UNIVARIATE-ACCEPTANCE.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/candidate.json 
+OWNED_PID=1553
+1553 (python3) R 1552 1553 1553 0 -1 4194304 50094 0 0 0 1506 6 0 0 20 0 1 0 11230 222535680 49047 18446744073709551615 4325376 7353021 140736887356480 0 0 0 0 16781312 2 0 0 0 17 7 0 0 0 0 0 10657224 12220544 403267584 140736887364656 140736887365138 140736887365138 140736887365607 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/solver.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/solve.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/univariate.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/univariate.full.receipt.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/ROOT-UNIVARIATE-ACCEPTANCE.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/candidate.json 

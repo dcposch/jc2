@@ -1,0 +1,38 @@
+reduction: 129 rows 102 pivots 27 zero rows; ord_t K2(sigma) at point = 32 ; a_32 = (pi - 1)**4*(pi + 1)**4 ; a32 == (pi^2-1)^4: True
+G pole rows local 1..64 checked: 544 failing: 0 []
+{
+ "ord_t_K2_sigma": 32,
+ "a32": "(pi - 1)**4*(pi + 1)**4",
+ "a32_equals_target": true,
+ "F_leading_target_via_a32_cubed": true,
+ "G_pole_rows_checked": 544,
+ "G_pole_rows_failing": [],
+ "jacobian_bands_1_12_zero": true,
+ "h3_factor_degrees": [
+  [
+   9,
+   1
+  ]
+ ],
+ "K3_D2_face": "pi**3*(4*pi**4 - 7)/4",
+ "K2_D2_face": "(pi - 1)**7*(pi + 1)**7*(pi**2 + 1)**7",
+ "free_after": [
+  "K2c_21_15",
+  "K2c_22_11",
+  "K2c_25_9",
+  "K2c_26_9",
+  "K2c_27_7",
+  "K2c_28_6",
+  "K2c_29_7",
+  "K2c_30_6",
+  "K2c_31_5",
+  "K2c_32_3",
+  "K2c_33_2",
+  "K2c_33_3",
+  "K2c_34_2",
+  "K2c_35_1",
+  "K2c_36_0",
+  "K2c_9_26"
+ ],
+ "wall_seconds": 341.5
+}

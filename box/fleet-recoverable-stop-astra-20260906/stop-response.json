@@ -1,0 +1,34 @@
+{
+  "action": "StopInstances",
+  "instance_ids": [
+    "i-07e1212591a6acae9",
+    "i-0da0cebfc97c9fd54"
+  ],
+  "response": {
+    "StoppingInstances": [
+      {
+        "CurrentState": {
+          "Code": 64,
+          "Name": "stopping"
+        },
+        "InstanceId": "i-07e1212591a6acae9",
+        "PreviousState": {
+          "Code": 16,
+          "Name": "running"
+        }
+      },
+      {
+        "CurrentState": {
+          "Code": 64,
+          "Name": "stopping"
+        },
+        "InstanceId": "i-0da0cebfc97c9fd54",
+        "PreviousState": {
+          "Code": 16,
+          "Name": "running"
+        }
+      }
+    ]
+  },
+  "utc": "2026-09-06T12:46:49.533497+00:00"
+}

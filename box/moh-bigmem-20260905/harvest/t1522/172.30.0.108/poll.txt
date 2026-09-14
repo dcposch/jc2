@@ -1,0 +1,20 @@
+UTC=2026-09-05T15:22:49Z
+               total        used        free      shared  buff/cache   available
+Mem:           743Gi        92Gi       654Gi       3.4Mi       1.7Gi       650Gi
+msolve=1
+Singular=0
+0
+    PID     ELAPSED   RSS %CPU CMD
+   8654    01:11:36  3640  0.0 bash run_msolve_pipeline.sh m15
+   8656    01:11:36  3632  0.0 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/m15/native_meta.json /home/ubuntu/moh-bigmem-20260905/targets/m15/native_rows.tsv 1073741827 10800 32 -l 44
+   8680    01:11:33  2396  0.0 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/m15/native_meta.json /home/ubuntu/moh-bigmem-20260905/targets/m15/native_rows.tsv 1073741827 10800 32 -l 44
+   8681    01:11:33  2196  0.0 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.out
+   8684    01:11:33  1652  0.0 /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.out
+   8685    01:11:33 90463264 413 /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.out
+  15029       00:00  3580  0.0 bash -c echo UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ); free -h | head -2; echo -n msolve=; pgrep -c -x msolve || echo 0; echo -n Singular=; pgrep -c Singular || echo 0; ps -eo pid,etime,rss,pcpu,cmd | awk 'NR==1||/msolve|Singular/' | head -20; echo '--- time ---'; grep -E 'Maximum resident|Elapsed \(wall|Exit status|Command exited' ~/moh-bigmem-20260905/targets/*/*/*.g2.stderr ~/moh-bigmem-20260905/targets/*/guided/*.err 2>/dev/null | tail -20; echo '--- last F4/GG ---'; tail -3 ~/moh-bigmem-20260905/targets/*/*/*.g2.stderr 2>/dev/null; tail -8 ~/moh-bigmem-20260905/targets/*/guided/*.out 2>/dev/null
+  15036       00:00  3916  0.0 awk NR==1||/msolve|Singular/
+--- time ---
+--- last F4/GG ---
+  5   19298  220369  283478 x 426134      0.04%     3314 new   16013 zero       317.82 | 942.78       
+  5     945  289383  132287 x 209521      0.09%      173 new     772 zero        85.25 | 111.43       
+  6  266428  293340

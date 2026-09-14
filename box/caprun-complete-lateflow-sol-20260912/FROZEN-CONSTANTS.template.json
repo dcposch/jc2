@@ -1,0 +1,52 @@
+{
+  "schema": "caprun-complete-lateflow-frozen/v1",
+  "armed": false,
+  "review_state": "UNREVIEWED_UNBOUND",
+  "context": "ROOT_ATTESTED_CANDIDATE",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "worker": {
+    "host": "JC2_WORKER_HOST_PLACEHOLDER",
+    "instance_id": "JC2_INSTANCE_PLACEHOLDER",
+    "hostname": "JC2_HOSTNAME_PLACEHOLDER",
+    "boot_id": "JC2_BOOT_ID_PLACEHOLDER",
+    "pid_namespace": "JC2_PID_NAMESPACE_PLACEHOLDER"
+  },
+  "transport": {
+    "identity_file": "JC2_IDENTITY_FILE_PLACEHOLDER",
+    "known_hosts": "JC2_KNOWN_HOSTS_PLACEHOLDER",
+    "remote_user": "root"
+  },
+  "batch": {
+    "name": "JC2_BATCH_PLACEHOLDER",
+    "prepared_directory": "JC2_PREPARED_DIRECTORY_PLACEHOLDER",
+    "prepared_pins": "JC2_PREPARED_PINS_PLACEHOLDER",
+    "remote_stage": "JC2_REMOTE_STAGE_PLACEHOLDER",
+    "remote_base": "JC2_REMOTE_BASE_PLACEHOLDER",
+    "remote_cgroup": "JC2_REMOTE_CGROUP_PLACEHOLDER",
+    "remote_fifo": "JC2_REMOTE_FIFO_PLACEHOLDER",
+    "coordinator_receipt": "JC2_COORDINATOR_RECEIPT_PLACEHOLDER",
+    "coordinator_receipt_sha256": "JC2_COORDINATOR_RECEIPT_SHA256_PLACEHOLDER",
+    "native_list": "JC2_NATIVE_LIST_PLACEHOLDER",
+    "native_list_sha256": "JC2_NATIVE_LIST_SHA256_PLACEHOLDER",
+    "native_manifest_sha256": "JC2_NATIVE_MANIFEST_SHA256_PLACEHOLDER",
+    "preholder_manifest": "JC2_PREHOLDER_MANIFEST_PLACEHOLDER",
+    "local_observation": "JC2_LOCAL_OBSERVATION_PLACEHOLDER",
+    "local_decision": "JC2_LOCAL_DECISION_PLACEHOLDER"
+  },
+  "scripts": {
+    "outer_admission": "JC2_BOUND_OUTER_ADMISSION_PLACEHOLDER",
+    "prepare_leaves": "JC2_BOUND_PREPARE_LEAVES_PLACEHOLDER",
+    "observe": "JC2_BOUND_OBSERVE_PLACEHOLDER",
+    "attest": "JC2_BOUND_ATTEST_PLACEHOLDER",
+    "release": "JC2_BOUND_RELEASE_PLACEHOLDER"
+  },
+  "clocks": {
+    "original_holder_cutoff_utc": "JC2_ORIGINAL_HOLDER_CUTOFF_PLACEHOLDER",
+    "original_admission_stop_utc": "JC2_ORIGINAL_ADMISSION_STOP_PLACEHOLDER",
+    "holder_max_monotonic_seconds": 120
+  },
+  "phases": ["refuse-status","refuse-caps","refuse-inventory","refuse-source","refuse-hash","valid","startup-produce","startup-check","dummy"],
+  "candidate_names": ["authority/refuse-status.json","authority/refuse-caps.json","authority/refuse-inventory.json","authority/refuse-source.json","authority/refuse-hash.json","authority/valid.json","authority/startup-produce.json","authority/startup-check.json","authority/dummy.json","ROOT-REGISTRATION.json","ROOT-EXECUTION-CARD.md","FINAL-INSTALL-INPUTS.sha256","final-install.sh","SUMMARY.json"],
+  "install_names": ["ROOT-REGISTRATION.json","ROOT-EXECUTION-CARD.md","FINAL-INSTALL-INPUTS.sha256","final-install.sh","native.sha256"],
+  "authority_disposition": "EXPECTED_RUNTIME_OUTPUTS_DO_NOT_PREINSTALL"
+}

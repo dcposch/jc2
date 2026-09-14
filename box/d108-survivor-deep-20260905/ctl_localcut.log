@@ -1,0 +1,28 @@
+  [t=0.2s] minor incidence: 13 rows, 12 pivots, residual 0
+  [t=0.4s] major h2: K2c=125 D1 rows=9 pivots=9 free=114
+  [t=7.8s] outer: offsets 0..9, pivots=188 free=780
+  [t=8.8s] KF/KG built (|KF|=236, |KG|=172)
+  [t=72.8s] minor local tables done
+    [J-fast] single-pass product at max_t=1 in 2.4s (39 (t,z) slots)
+  [t=83.8s] Jacobian bands t=0..1 done; t^0 band (J degree 178) nonzero w-slots = 0
+{
+  "control": "local_rows_fast(with n>=r+2j cut) == frozen local_rows",
+  "T": 10,
+  "MATCH": true,
+  "detail": {
+    "F": {
+      "slots_slow": 0,
+      "slots_fast": 0,
+      "mismatching_slots": [],
+      "seconds_slow": 24.9,
+      "seconds_fast": 23.5
+    },
+    "G": {
+      "slots_slow": 7,
+      "slots_fast": 7,
+      "mismatching_slots": [],
+      "seconds_slow": 40.8,
+      "seconds_fast": 33.5
+    }
+  }
+}

@@ -1,0 +1,13 @@
+< "/home/ubuntu/jc2/box/k16astra-20260905/t8p_rows.sing";
+ideal src=T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15;
+ring rcone=32003,(b3,b4,u2,u3,u4,u5,u6,u7),wp(9,1,2,3,4,5,6,7);
+ideal I=imap(rres,src);
+int i; for(i=1;i<=size(I);i++) { if(!homog(I[i])) { print("FAIL HOMOG"); quit; } }
+print("CONE_START");
+ideal G=std(I);
+print("GB_DONE"); print("CONE_DIM "+string(dim(G))); print("CONE_VDIM "+string(vdim(G)));
+print("INPUT_NF_ZERO "+string(size(reduce(I,G))==0));
+print("BASIS_SIZE "+string(size(G)));
+ideal LM=lead(G); print("LEAD_DIM "+string(dim(std(LM))));
+write("/home/ubuntu/jc2/box/k16astra-20260905/t8p_plus_leaders.txt",string(LM));
+print("CONE_COMPLETE");quit;

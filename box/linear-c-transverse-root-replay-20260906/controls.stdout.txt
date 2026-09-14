@@ -1,0 +1,17 @@
+V_C: 192 basis polys; max deg 35 max W-exp 32 any W^33: False
+CTRL A (drop transverse line): G=H^6, P=H: J==0: True H in V_C: True G(X,0)==0: True
+CTRL B (drop W^33 exclusion): P=H^3+X,G=P^2: J==0: True G(X,0): {(2, 0): Fraction(1, 1)} P has W^33: 1 P in V_C: False
+CTRL C (mutate G_top: no W^66): P=XW^32+X, G=P^2: J==0: True deg G 66 G(X,0): {(2, 0): Fraction(1, 1)} G_top W^66 coeff: None P deg 33 P max W 32 P in V_C: False
+CTRL D (mutate restriction degree: G(X,0)=X^4): P=H^3+X^2, G=P^2: J==0: True G(X,0): {(4, 0): Fraction(1, 1)} P in V_C: False
+CTRL C' (G_top mutated, P inside actual V_C): P=basis(A3c_97_0)= [((1, 0), Fraction(1, 1)), ((4, 9), Fraction(-56, 1)), ((5, 12), Fraction(210, 1)), ((6, 15), Fraction(-336, 1)), ((7, 18), Fraction(280, 1)), ((8, 21), Fraction(-120, 1)), ((9, 24), Fraction(21, 1))] G=P^2: J==0: True deg G 66 G(X,0): [((2, 0), Fraction(1, 1))] G_top W^66: None P in V_C: True by construction; P deg 33
+X alone in V_C: False  XW^32 alone in V_C: True
+CTRL E positive-only: J(X, X^2+W)= {(0, 0): Fraction(1, 1)}
+RANDOM base point: deg h=33 deg D=34 deg G=66 G_top==H^6:True G(X,0)=[((0, 0), Fraction(77, 1)), ((1, 0), Fraction(-55, 3)), ((2, 0), Fraction(1, 1))] | rank full C map=191 positive-only C=191 | (C,a) full=192 (C,a) positive-only=192
+D=0,b=0 base point: deg h=33 deg D=-1 deg G=66 G_top==H^6:True G(X,0)=[((0, 0), Fraction(100, 1)), ((1, 0), Fraction(20, 1)), ((2, 0), Fraction(1, 1))] | rank full C map=191 positive-only C=191 | (C,a) full=191 (C,a) positive-only=191
+D=const,b!=0 base point: deg h=33 deg D=0 deg G=66 G_top==H^6:True G(X,0)=[((0, 0), Fraction(997, 1)), ((1, 0), Fraction(63, 1)), ((2, 0), Fraction(1, 1))] | rank full C map=191 positive-only C=191 | (C,a) full=191 (C,a) positive-only=191
+W-adapted basis size: 190 distinct leading (i,r): 190 min r: 1 max r: 32
+W-lemma at RANDOM actual G: rows distinct=True all rows positive degree=True upper-zero=True diag==-2r:True zero-diag count=0 G_X(X,0)=[((0, 0), Fraction(-55, 3)), ((1, 0), Fraction(2, 1))]
+W-lemma at D=0,b=0 actual G: rows distinct=True all rows positive degree=True upper-zero=True diag==-2r:True zero-diag count=0 G_X(X,0)=[((0, 0), Fraction(20, 1)), ((1, 0), Fraction(2, 1))]
+W-lemma NEG G=H^6 (G(X,0)=0): rows distinct=True all rows positive degree=True upper-zero=True diag==-2r:False zero-diag count=190 G_X(X,0)=[]
+W-lemma NEG G=H^6+X (G(X,0) linear): rows distinct=True all rows positive degree=True upper-zero=True diag==-2r:False zero-diag count=190 G_X(X,0)=[((0, 0), Fraction(1, 1))]
+W-lemma non-monic G=H^6+3X^2: rows distinct=True all rows positive degree=True upper-zero=True diag==-2r:False zero-diag count=0 G_X(X,0)=[((1, 0), Fraction(6, 1))]

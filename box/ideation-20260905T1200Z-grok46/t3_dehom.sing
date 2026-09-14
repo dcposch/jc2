@@ -1,0 +1,42 @@
+// Corrected pencil: dehomogenize b4=1 so the origin-cone does not kill the resultant.
+option(redSB);
+print("DEHOM start");
+poly cc0=subst(T5,b3,0);
+poly bb0=subst(diff(T5,b3),b3,0);
+poly aa0=subst(diff(diff(T5,b3),b3),b3,0)/2;
+poly cc1=subst(T4,b3,0);
+poly bb1=subst(diff(T4,b3),b3,0);
+poly aa1=subst(diff(diff(T4,b3),b3),b3,0)/2;
+poly cc2=subst(T3,b3,0);
+poly bb2=subst(diff(T3,b3),b3,0);
+poly aa2=subst(diff(diff(T3,b3),b3),b3,0)/2;
+poly B1=aa0*bb1-aa1*bb0; poly C1=aa0*cc1-aa1*cc0;
+poly B2=aa0*bb2-aa2*bb0; poly C2=aa0*cc2-aa2*cc0;
+print("A0="+string(aa0));
+ring P=(0,d),(b4,u2,la),dp;
+minpoly=3*d^2-4;
+poly B1=imap(rres,B1); poly B2=imap(rres,B2);
+poly C1=imap(rres,C1); poly C2=imap(rres,C2);
+poly B1d=subst(B1,b4,1); poly B2d=subst(B2,b4,1);
+poly C1d=subst(C1,b4,1); poly C2d=subst(C2,b4,1);
+poly P1=C1d-la*B1d; poly P2=C2d-la*B2d;
+print("P1 size="+string(size(P1))+" P2 size="+string(size(P2)));
+int tm=timer;
+ideal g=std(ideal(P1,P2));
+print("DEHOM pencil: dim="+string(dim(g))+" vdim="+string(vdim(g))+" gbsize="+string(size(g))+" time="+string(timer-tm));
+ideal Elim=eliminate(g,u2);
+print("DEHOM elim in la: size="+string(size(Elim)));
+print(Elim);
+// resultant wrt u2
+poly R=resultant(P1,P2,u2);
+print("RES size="+string(size(R))+" deg="+string(deg(R))+" zero="+string(R==0));
+print("RES="+string(R));
+// b4=0 chart as control (the other infinity)
+poly B10=subst(B1,b4,0); poly B20=subst(B2,b4,0);
+poly C10=subst(C1,b4,0); poly C20=subst(C2,b4,0);
+poly Q1=C10-la*B10; poly Q2=C20-la*B20;
+poly R0=resultant(Q1,Q2,u2);
+print("RES_b4=0 size="+string(size(R0))+" deg="+string(deg(R0))+" zero="+string(R0==0));
+print("RES_b4=0="+string(R0));
+print("DONE_DEHOM");
+quit;

@@ -1,0 +1,1407 @@
+                                                SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM
+
+                                                                       F. PAKOVICH, M. MUZYCHUK
+arXiv:0710.4085v2 [math.CV] 19 Feb 2009
+
+
+
+
+                                                  Abstract. In this paper we give a solution of the following “polynomial mo-
+                                                  ment problem” which arose about ten years ago in connection with Poincaré’s
+                                                  center-focus problem: for a given polynomial P (z) to describe polynomials
+                                                  q(z) orthogonal to all powers of P (z) on a segment [a, b].
+
+
+
+
+                                                                             1. Introduction
+                                             In this paper we solve the following “polynomial moment problem”: for given
+                                          P (z) ∈ C[z] and distinct a, b ∈ C to describe q(z) ∈ C[z] such that
+                                                                           Z b
+                                          (1)                                  P i (z)q(z)dz = 0
+                                                                              a
+                                          for all i ≥ 0.
+                                             The polynomial moment problem was posed in the series of papers [2]-[5] in
+                                          connection with the center problem for the Abel differential equation
+                                                                           dy
+                                          (2)                                  = p(z)y 2 + q(z)y 3 .
+                                                                           dz
+                                          with polynomial coefficients p(z), q(z) in the complex domain. For given a, b ∈ C the
+                                          center problem for the Abel equation is to find necessary and sufficient conditions
+                                          on p(z), q(z) which imply the equality y(b) = y(a) for any solution y(z) of (2) with
+                                          y(a) small enough. This problem is closely related to the classical Center-Focus
+                                          problem of Poincaré and has been studied in many recent papers (see e.g. [1]-[9],
+                                          [29]).
+                                             The center problem for the Abel equation is connected with the polynomial
+                                          moment problem in several ways. For example, it was shown in [4] that for the
+                                          parametric version
+                                                                          dy
+                                                                              = p(z)y 2 + εq(z)y 3
+                                                                          dz
+                                          of (2) the “infinitesimal” Rcenter conditions with respect to ε reduce to moment
+                                          equations (1) with P (z) = p(z)dz. On the other hand, it was shown in [7] that “at
+                                          infinity” (under an appropriate projectivization of the parameter space) the system
+                                          of equations on the coefficients of q(z), describing the center set of (2) for fixed p(z),
+                                          also reduces to (1). Many other results concerning connections between the center
+                                          problem and the polynomial moment problem can be found in [7]. These results
+                                          convince that a thorough description of solutions of system (1) is an important step
+                                          in the understanding of the center problem for the Abel equation.
+
+                                            1991 Mathematics Subject Classification. Primary 30E99; Secondary 34C99; 20C05; 12F10.
+                                            Key words and phrases. Center-Focus problem, moments, Cauchy type integrals, S-rings.
+                                            The research of the first author was supported by the ISF grant no. 979/07.
+                                                                                       1
+2                            F. PAKOVICH, M. MUZYCHUK
+
+                                                        R
+  There exists a natural condition on P (z) and Q(z) = q(z)dz which reduces
+equations (1), (2) to similar equations with respect to polynomials of smaller
+degrees. Namely, suppose that there exist polynomials P̃ (z), Q̃(z), W (z) with
+deg W (z) > 1 such that
+
+(3)                   P (z) = P̃ (W (z)),         Q(z) = Q̃(W (z)).
+
+Then after the change of variable w = W (z) equations (1) transform to the equa-
+tions
+                           Z W (b)
+(4)                                P̃ i (w)Q̃′ (w)dw = 0,
+                               W (a)
+
+while equation (2) transforms to the equation
+                              dỹ
+(5)                               = P̃ ′ (w)ỹ 2 + Q̃′ (w)ỹ 3 .
+                              dw
+    Furthermore, if the polynomial W (z) in (3) satisfies the equality
+
+(6)                                    W (a) = W (b),
+
+then the Cauchy theorem implies that the polynomial Q̃′ (w) is a solution of system
+(4) and hence the polynomial q(z) = Q′ (z) is a solution of system (1). Similarly,
+since any solution y(z) of equation (2) is the pull-back
+
+(7)                                 y(z) = ỹ(W (z))
+
+of a solution ỹ(w) of equation (5), if W (z) satisfies (6) then equation (2) has a
+center. This justifies the following definition: a center for equation (2) or a solution
+of system (1) is called reducible if there exist polynomials P̃ (z), Q̃(z), W (z) such
+that conditions (3), (6) hold. The main conjecture concerning the center problem for
+the Abel equation (“the composition conjecture for the Abel equation”), supported
+by the results obtained in the papers cited above, states that any center for the
+Abel equation is reducible (see [7] and the bibliography there).
+   By analogy with the composition conjecture it was suggested (“the composition
+conjecture for the polynomial moment problem”) that, under the additional as-
+sumption P (a) = P (b), any solution of (1) is reducible. This conjecture was shown
+to be true in many cases. For instance, if a, b are not critical points of P (z) ([9]),
+if P (z) is indecomposable ([19]), and in some other special cases (see e. g. [4],
+[23], [22], [25]). Nevertheless, in general the composition conjecture for the poly-
+nomial moment problem fails to be true. Namely, it was shown in [18] that if P (z)
+has several “compositional right factors” W (z) such that W (a) = W (b), then it
+may happen that the sum of reducible solutions corresponding to these factors is a
+non-reducible solution.
+   It was conjectured in [20] that actually any non-reducible solution of (1) is a
+sum of reducible ones. Since compositional factors W (z) of a polynomial P (z) can
+be defined explicitly, such a description of non-reducible solutions of (1) would be
+very helpful, especially for applications to the Abel equation (cf. [7]). However,
+until now this conjecture was verified only in a single special case (see [21]).
+   Meanwhile, another necessary and sufficient condition for a polynomial q(z) to
+be a solution of (1) was constructed in [23]. Namely, it was shown in [23] that there
+                 SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                                     3
+
+
+exists a finite system of equations
+                 n
+                 X
+(8)                    fs,i Q(Pi−1 (z)) = 0,             fs,i ∈ Z,         1 ≤ s ≤ k,
+                 i=1
+
+where Q(z) = q(z)dz and Pi−1 (z), 1 ≤ i ≤ n, are branches of the algebraic
+                 R
+
+function P −1 (z), such that (1) holds if and only if (8) holds. Moreover, this system
+was constructed explicitly with the use of a special planar tree λP which represents
+the monodromy group GP of the algebraic function P −1 (z) in a combinatorial
+way. By construction, points a, b are vertices of λP and system (8) reflects the
+combinatorics of the path connecting a and b on λP .
+   A finite system of equations (8) is more convenient for a study than initial infinite
+system of equations (1). In particular, in many cases the analysis of (8) permits
+to conclude that for given P (z), a, b any solution of (1) is reducible (see [23]). In
+this paper we develop necessary algebraic and analytic techniques which allow us
+to describe solutions of (8) in the general case and to prove that any solution of
+(1) is a sum of reducible ones. So, our main result is the following theorem.
+TheoremR1.1. A non-zero polynomial q(z) is a solution of system (1) if and only
+if Q(z) = q(z)dz can be represented as a sum of polynomials Qj (z) such that
+(9)      P (z) = P̃j (Wj (z)),      Qj (z) = Q̃j (Wj (z)),           and     Wj (a) = Wj (b)
+for some polynomials P̃j (z), Q̃j (z), Wj (z).
+   Note that since conditions of the theorem impose no restrictions on the values
+of P (z) at the points a, b the theorem implies in particular that non-zero solutions
+of (1) exist if and only if the equality P (a) = P (b) holds. Indeed, if P (a) = P (b)
+then for any Q̃(z) ∈ C[z] the polynomial Q(z) = Q̃(P (z)) is a solution of (1) since
+we can set W (z) = P (z) in (3), (6). On the other hand, if Q(z) is a solution of (1)
+then equalities (9) imply that P (a) = P (b).
+   The paper is organized as follows. In the second section we give a detailed ac-
+count of definitions and previous results related to the polynomial moment problem.
+In particular, starting from system (8), we introduce a linear subspace MP,a,b of
+Qn generated by the vectors
+                 (fs,σ(1) , fs,σ(2) , ... , fs,σ(n) ),     σ ∈ GP ,    1 ≤ s ≤ k,
+and study its basic properties.
+   It follows from the definition that MP,a,b is invariant with respect to the permu-
+tation matrix representation of the group GP . In the third section of the paper,
+written entirely in the framework of the group theory, we describe a general struc-
+ture of such subspaces. More generally, we describe subspaces of Qn invariant
+with respect to the permutation matrix representation of a permutation group G
+of degree n, containing a cycle of length n. Roughly speaking, we show that the
+structure of invariant subspaces of Qn for such G depends on imprimitivity systems
+of G only. We believe that this result is new and interesting by itself.
+   Finally, in the fourth section, using the description of GP -invariant subspaces of
+Qn and results and techniques of [23], we prove Theorem 1.1.
+Acknowledgments. The authors would like to thank C. Christopher, J. P. Fran-
+çoise, L. Gavrilov, G. Jones, M. Klin, Y. Yomdin, and W. Zhao for discussions
+4                           F. PAKOVICH, M. MUZYCHUK
+
+
+of different questions related to the subject of this paper. The authors also are
+grateful to the anonymous referee for valuable comments and suggestions.
+
+                                   2. Preliminaries
+  In this section we collect basic definitions and results concerning the polynomial
+moment problem. In order to make the paper self-contained we outline proofs of
+main statements.
+2.1. Criterion for Ĥ(t) ≡ 0. For P (z), Q(z) ∈ C[z] and a path Γa,b ⊂ C connect-
+ing different points a, b of C let H(t) = H(P, Q, Γa,b , t) be a function defined on
+CP1 \ P (Γa,b ) by the integral
+                                           Q(z)P ′ (z)dz
+                                    Z
+(10)                         H(t) =                      .
+                                      Γa,b  P (z) − t
+Notice that although integral (10) depends on Γa,b the Cauchy theorem implies
+that if Γ̃a,b ⊂ C is another path connecting a and b, then for all t close enough to
+infinity the equality
+                          H(P, Q, Γ̃a,b , t) = H(P, Q, Γa,b , t)
+holds. Therefore, the Taylor expansion of H(t) at infinity and the corresponding
+germ Ĥ(t) do not depend on the choice of Γa,b .
+   After the change of variable z → P (z) integral (10) transforms to the Cauchy
+type integral
+                                               g(z)dz
+                                            Z
+(11)                             H(t) =               ,
+                                             γ z−t
+
+where γ = P (Γa,b ) and g(z) is obtained by the analytic continuation along γ of
+a germ of the algebraic function Q(P −1 (z)). Clearly, integral representation (11)
+defines an analytic function in each domain of the complement of γ in CP1 . Notice
+that for any choice of Γa,b the function defined in the domain containing infinity is
+the analytic continuation of the germ Ĥ(t).
+Lemma 2.1 ([23]). Assume that P (z), q(z) ∈ C[z] and a, b ∈ C, a 6= b, satisfy
+                      Z
+(12)                       P i (z)q(z)dz = 0, i ≥ 0,
+                            Γa,b
+
+and let Q(z) be a polynomial defined by the equalities
+                                  Z
+(13)                     Q(z) = q(z)dz, Q(a) = 0.
+
+Then for the germ Ĥ(t) defined near infinity by integral (10) the equality Ĥ(t) ≡ 0
+holds.
+Proof. Indeed, for all i ≥ 1 by integration by parts we have:
+       Z                                               Z
+             i                i            i
+(14)       P (z)q(z)dz = P (b)Q(b) − P (a)Q(a) − i          P i−1 (z)Q(z)P ′ (z)dz.
+        Γa,b                                             Γa,b
+
+Furthermore, Q(a) = 0 implies Q(b) = 0 in view of (12) taken for i = 0. Therefore,
+if (12) holds then all the integrals appearing in the right part of (14) vanish. On
+the other hand, these integrals are coefficients of the Taylor expansion of −Ĥ(t) at
+infinity. 
+                 SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                                   5
+
+
+    Lemma 2.1 shows that the polynomial moment problem reduces to the problem
+of finding conditions on Q(z) under which the equality Ĥ(t) ≡ 0 holds. On the other
+hand, we will show below (Corollary 2.5) that if Ĥ(t) ≡ 0 holds for some polynomial
+Q(z) then (12) holds for q(z) = Q′ (z). A condition of a general character for Ĥ(t)
+to vanish was given in the paper [22] in the context of the theory of Cauchy type
+integrals of algebraic functions. Subsequently, in the paper [23] was proposed a
+construction which permits to obtain conditions for the vanishing of Ĥ(t) in a very
+explicit form. Briefly, the idea of [23] is to choose the integration path Γa,b in such
+a way that its image under the mapping P (z) : CP1 → CP1 does not divide the
+Riemann sphere.
+    The construction of the paper [23] uses a special graph λP , embedded into the
+Riemann sphere, defined as follows (see [23]). Let S be a “star” joining a non-
+critical value c of a polynomial P (z) of degree n with all its finite critical values
+c1 , c2 , ..., ck by non intersecting oriented arcs γ1 , γ2 , ..., γk . Define λP as a preimage
+of S under the map P (z) : CP1 → CP1 (see Fig. 1). More precisely, define vertices
+
+
+
+
+                                          Figure 1
+
+of λP as preimages of the points c and cs , 1 ≤ s ≤ k, and edges of λP as preimages
+of the arcs γs , 1 ≤ s ≤ k. Furthermore, for each s, 1 ≤ s ≤ k, mark vertices of λP
+which are preimages of the point cs by the number s. Finally, define a star of λP
+as a subset of edges of λP consisting of edges adjacent to some non-marked vertex.
+   By construction, the restriction of P (z) on CP1 \ λP is a covering of the topo-
+logical punctured disk CP1 \ {S ∪ ∞} and therefore CP1 \ λP is a disjointed union
+of punctured disks (see e.g. [11]). Moreover, since the preimage of infinity under
+P (z) consists of a unique point, CP1 \ λP consists of a unique disk and hence the
+graph λP is a tree.
+   Set C = {c1 , c2 , ..., ck } and let U ⊂ C be a simply connected domain such that
+S \ C ⊂ U and U ∩ C = ∅. Then in U there exist n single-valued analytic branches
+of the algebraic function P −1 (z) inverse to P (z). We will denote these branches by
+Pi−1 (z), 1 ≤ i ≤ n. The stars of λP may be naturally identified with branches of
+P −1 (z) in U as follows: to the branch Pi−1 (z), 1 ≤ i ≤ n, corresponds the star Si ,
+1 ≤ i ≤ n, such that Pi−1 (z) maps bijectively the interior of S to the interior of Si .
+6                             F. PAKOVICH, M. MUZYCHUK
+
+
+   Under the analytic continuation along a closed curve the set Pi−1 (z), 1 ≤ i ≤ n,
+transforms to itself. This induces a homomorphism
+(15)                         π1 (CP1 \ {C ∪ ∞}, c) → Sn
+whose image GP is called the monodromy group of P (z). Notice that if ω∞ and
+ωi , 1 ≤ i ≤ k, are loops around ∞ and ci , 1 ≤ i ≤ k, respectively, such that
+ω1 ω2 . . . ωk ω∞ = 1 in π1 (CP1 \ {C ∪ ∞}, c), then the elements gi , 1 ≤ i ≤ k, of GP ,
+which are the images of ωi , 1 ≤ i ≤ k, under homomorphism (15), generate GP
+and satisfy the equality g1 g2 . . . gk g∞ = 1, where g∞ is the element of GP which is
+the image of ω∞ .
+     Having in mind the identification of the set of stars of λP with the set of branches
+of P −1 (z), the permutation gs , 1 ≤ s ≤ k, can be identified with a permutation
+ĝs , 1 ≤ s ≤ k, acting on the set of stars of λP in the following way: ĝs sends the
+star Si , 1 ≤ i ≤ n, to the “next” star under a counterclockwise rotation around the
+vertex of Si colored by the sth color. For example, for the tree shown on Fig. 1 we
+have: g1 = (1)(2)(37)(4)(5)(6)(8), g2 = (1)(2)(3)(47)(56)(8), g3 = (1238)(4)(57)(6).
+Notice that since P (z) is a polynomial, the permutation g∞ is a cycle of length n.
+We always will assume that the numeration of branches of P −1 (z) in U is chosen in
+such a way that g∞ coincides with the cycle (1 2 ... n). Clearly, such a numeration
+is defined uniquely up to a choice of P1−1 (z).
+     The tree constructed above is known under the name of “constellation” or “cac-
+tus” and is closely related to what is called a “dessin d’enfant” (see [15] for further
+details and other versions of this construction). Notice that the Riemann existence
+theorem implies that a polynomial P (z) is defined by c1 , c2 , ..., ck and λP up to a
+composition P (z) → P (µ(z)), where µ(z) is a linear function.
+     It follows from the definition that the points a and b are vertices of λP if and
+only if P (a) and P (b) are critical values of P (z). For our purposes however it is
+more convenient to define the tree λP so that the points a, b always would be its
+vertices. So, in the case when P (a) or P (b) (or both of them) is not a critical value
+of P (z) we modify the construction as follows. Define c1 , c2 , ..., ck as the set of all
+finite critical values of P (z) supplemented by P (a) or P (b) (or by both of them),
+and set as above λP = P −1 {S}, where S is a star connecting c with c1 , c2 , ..., ck
+(we suppose that c is chosen distinct from P (a), P (b)). Clearly, λP is still a tree
+and the points a, b are vertices of λP .
+     Since λP is connected and has no cycles there exists a unique oriented path
+µa,b ⊂ λP joining the point a with the point b. Furthermore, it follows from the
+definition of λP that if we set Γa,b = µa,b then after the change of variable z → P (z)
+integral (10) reduces to the sum of integrals
+                                           k Z
+                                          X      ϕs (z)
+(16)                            H(t) =                  dz,
+                                          s=1 γs
+                                                 z−t
+
+where each ϕs (z), 1 ≤ s ≤ k, is a linear combination of the functions Q(Pi−1 (z)),
+1 ≤ i ≤ n, in U . Namely,
+                                         n
+                                         X
+(17)                          ϕs (z) =         fs,i Q(Pi−1 (z)),
+                                         i=1
+
+where fs,i 6= 0 if and only if the path µa,b goes through the star Si across its s-
+vertex. Furthermore, if when going along µa,b the s-vertex of Si is followed by the
+                SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                            7
+
+
+center of Si then fs,i = −1 otherwise fs,i = 1. For example, for the graph λP
+shown on Fig. 1 and the path µa,b ⊂ λP pictured by the fat line we have:
+                 ϕ1 (z) = −Q(P2−1 (z)) + Q(P3−1 (z)) − Q(P7−1 (z)),
+                           ϕ2 (z) = Q(P7−1 (z)) − Q(P4−1 (z)),
+                  ϕ3 (z) = Q(P2−1 (z)) − Q(P3−1 (z)) + Q(P4−1 (z)).
+   Notice that the number k in (16) coincides with the number of critical values s
+of P (z) such that the path Γa,b passes through at least one vertex colored by the
+s-th color. Note also that equations (17) are linearly dependent. Indeed, for each
+i, 1 ≤ i ≤ n, such that there exists an index s, 1 ≤ s ≤ k, with fs,i 6= 0 there exist
+exactly two such indices s1 , s2 , and cs1 ,i = −cs2 ,i . Therefore, the equality
+                                          k
+                                          X
+                                                ϕs (t) = 0
+                                          s=1
+
+holds in U .
+Theorem 2.2 ([23]). Let P (z), Q(z) ∈ C[z] and a, b ∈ C, a 6= b. Then Ĥ(t) ≡ 0 if
+and only if ϕs (z) ≡ 0 for any s, 1 ≤ s ≤ k.
+
+Proof. Formula (16) defines the analytic continuation of Ĥ(t) to the domain CP1 \S.
+In particular, Ĥ(t) ≡ 0 if and only if H(t) ≡ 0 in CP1 \ S. On the other hand, by
+the well-known boundary property of Cauchy type integrals (see e.g. [16]), for any
+s, 1 ≤ s ≤ k, and any interior point z0 of γs we have:
+                         √
+(18)                  2π −1 ϕs (z0 ) = lim+ H(t) − lim− H(t),
+                                                t→z0           t→z0
+
+where the limits are taken when t approaches z0 from the “right” (resp. “left”)
+side of γs . Therefore, if H(t) ≡ 0 in CP1 \ S, then the limits in (18) equal zero and
+hence ϕs (z) ≡ 0 for any s, 1 ≤ s ≤ k.
+   Finally, if
+(19)                              ϕs (z) ≡ 0,           1 ≤ s ≤ k,
+then it follows directly from formula (16) that H(t) ≡ 0.              
+
+2.2. Subspace MP,a,b . For any element σ ∈ GP the equality ϕs (z) = 0, 1 ≤ s ≤ k,
+implies by the analytic continuation the equality
+                                  n
+                                  X
+                                                 −1
+                                         fs,i Q(Pσ(i) (z)) = 0.
+                                   i=1
+
+                                −1
+Therefore, replacing σ by σ   we see that Theorem 2.2 implies that Ĥ(t) ≡ 0 if
+and only if for any σ ∈ GP and s, 1 ≤ s ≤ k, the equality
+                                 n
+                                 X
+                                        fs,σ(i) Q(Pi−1 (z)) = 0
+                                  i=1
+
+holds.
+  Denote by MP,a,b the subspace of Qn generated by the vectors
+                (fs,σ(1) , fs,σ(2) , ... , fs,σ(n) ),     1 ≤ s ≤ k,   σ ∈ GP .
+8                               F. PAKOVICH, M. MUZYCHUK
+
+
+Abusing the notation we usually will not distinguish an element of MP,a,b and the
+corresponding equation connecting branches of Q(P −1 (z)). For example, instead
+of using the notation
+(20)                       (0, 0, ... , 1, ... , 0, 0, ... , −1, ... , 0, 0)
+for an element of MP,a,b we simply will use the equality
+(21)                             Q(Pi−1
+                                     1
+                                        (z)) = Q(Pi−1
+                                                   2
+                                                      (z)),
+for corresponding i1 6= i2 , 1 ≤ i1 , i2 ≤ n.
+   Equality (21) is the simplest example of the equality ϕs (z) = 0, 1 ≤ s ≤ k, and is
+equivalent to the statement that P (z) and Q(z) have a non-trivial “compositional
+right factor” (cf. [9], [25], [19], [22], [23]).
+Lemma 2.3. Let P (z), Q(z) ∈ C[z]. Then the equalities
+(22)                   P (z) = P̃ (W (z)),               Q(z) = Q̃(W (z))
+hold for some P̃ (z), Q̃(z), W (z) ∈ C[z] with deg W (z) > 1 if and only if equality
+(21) holds for some i1 6= i2 , 1 ≤ i1 , i2 ≤ n. Furthermore, Q(z) = Q̃(P (z)) for some
+Q̃(z) ∈ C[z] if and only if all the functions Q(Pi−1 (z)), 1 ≤ i ≤ n, are equal between
+themselves.
+Proof. Let d(Q(P −1 )) be a number of different functions in the collection of func-
+tions Q(Pi−1 (z)), 1 ≤ i ≤ n. Since any algebraic relation over C between Q(p−1 (z))
+and z, where p−1 (z) is a branch of the algebraic function P −1 (z) in U , supplies an
+algebraic relation between Q(z) and P (z) and vice versa, we have:
+         d(Q(P −1 )) = [C(Q, P ) : C(P )] = [C(z) : C(P )]/[C(z) : C(Q, P )] =
+                                    = n/[C(z) : C(Q, P )].
+Therefore,
+(23)                        [C(z) : C(Q, P )] = n/d(Q(P −1 )).
+It follows now from the Lüroth theorem that d(Q(P −1 )) < n if and only if (22) holds
+for some rational functions P̃ (z), Q̃(z), W (z) with deg W (z) > 1. Furthermore, if
+d(Q(P −1 )) = 1 then (23) implies that Q(z) = Q̃(P (z)) for some Q̃(z) ∈ C(z).
+    Observe now that, since P (z), Q(z) are polynomials, without loss of generality
+we may assume that C(Q, P ) = C(W ) for some polynomial W (z). Indeed, since
+P (z) is a polynomial the equality P (z) = U (V (z)), where U (z), V (z) are rational
+functions, implies that U (z) has a unique pole and that the preimage of this pole
+under V (z) consists of infinity only. This implies that V (z) = µ(W (z)) for some
+polynomial W (z) and Möbius transformation µ(z), and it is clear that the fields
+C(V (z)) and C(W (z)) coincide. Finally, if W (z) is a polynomial then obviously
+P̃ (z), Q̃(z) also are polynomials. 
+    Since (22) implies that
+                     Z b               Z W (b)
+                          i
+                         P (z)q(z)dz =         P̃ i (W )Q̃′ (W )dW,
+                       a                         W (a)
+
+Lemma 2.3 shows that if the subspace MP,a,b contains an element of the form
+(21), then any solution q(z) of the polynomial moment problem for P (z) is either
+                 SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                                 9
+
+
+reducible or the “pull-back” q(z) = q̃(W (z))W ′ (z) of a solution q̃(z) of the polyno-
+mial moment problem for a compositional left factor P̃ (z) of P (z) and the points
+ã = W (a) and b̃ = W (b).
+    If a, b are not critical points of P (z) then MP,a,b always contains elements of form
+(21). In general case however a more delicate conclusion is true. Denote by Pa−1    1
+                                                                                      (z),
+   −1            −1              −1        −1            −1                   −1
+Pa2 (z), ..., Pada (z) (resp. Pb1 (z), Pb2 (z), ... , Pbd (z)) branches of P (z) in U
+                                                          b
+which map points close to P (a) (resp. to P (b)) to points close to a (resp. b). In
+particular, the number da (resp. db ) equals the multiplicity of the point a (resp. b)
+with respect to P (z). The proposition below was proved in [22] and by a different
+method in [23]. Below we give a proof following [23].
+Proposition 2.4 ([22], [23]). If P (a) = P (b) then MP,a,b contains the element
+                            da                  db
+                        1 X                 1 X
+(24)                              −1
+                               Q(Pas (z)) =        Q(Pb−1 (z)).
+                        da s=1              db s=1     s
+
+
+
+On the other hand, if P (a) 6= P (b) then MP,a,b contains the elements
+                    da                                      db
+                1 X                                     1 X
+(25)                   Q(Pa−1 (z)) = 0,                        Q(Pb−1 (z)) = 0.
+                da s=1     s
+                                                        db s=1     s
+
+
+
+Proof. Suppose first that P (a) = P (b). Without loss of generality assume that
+P (a) = P (b) = c1 and consider the relation
+                                          n
+                                          X
+                            ϕ1 (z) =            f1,i Q(Pi−1 (z)) = 0
+                                          i=1
+
+corresponding to c1 . Let i, 1 ≤ i ≤ n, be an index such that f1,i 6= 0 and x be a
+vertex of the star Si such that P (x) = c1 . It follows from the definition of ϕi (z),
+1 ≤ i ≤ k, that if x 6= a, b then there exists an index j such that x also is a vertex
+of the star Sj and f1,j = −f1,i . Furthermore, we have j = g1l (i) for some natural
+number l (see Fig. 2). Therefore, ϕ1 (z) has the form
+
+
+
+
+                                            Figure 2
+
+
+                                 ϕ1 (z) = −Q(Pi−1
+                                               a
+                                                  (z))+
+          Q(Pi−1 (z)) − Q(P −1
+                            l1           (z)) + ... + Q(Pi−1 (z)) − Q(P −1
+                                                                        lr          (z))
+              1               g1 (i1 )                    r              g1 (ir )
+
+                                     +Q(Pi−1
+                                          b
+                                             (z)) = 0,
+where ia (resp. ib ) is an index such that a ⊂ Sia (resp. b ⊂ Sib ), i1 , i2 , ... ir are
+some other indices, and l1 , l2 , ... lr are some natural numbers.
+10                                    F. PAKOVICH, M. MUZYCHUK
+
+
+     For each s ≥ 0 the equality
+                                             −Q(Pg−1
+                                                  s (i ) (z))+
+                                                      a
+                                                      1
+
+        Q(Pg−1
+            s       (z)) − Q(P −1       (z)) + ... + Q(Pg−1
+                                                         s       (z)) − Q(P −1          (z))
+            1 (i1 )                                      1 (ir )
+                               l +s
+                              g 1 (i1 )
+                                  1
+                                                                           glr +s (ir )
+                                                                               1
+
+                                         +Q(Pg−1
+                                              s (i ) (z)) = 0
+                                                  b
+                                                  1
+
+holds by the analytic continuation of the equality ϕ1 (z) = 0. Summing now these
+equalities from s = 0 to s = r − 1, where r is the order of the element g1 in the
+group GP , and taking into account that for any i, 1 ≤ i ≤ n, and any natural
+number l we have:
+                       r−1
+                       X                    r−1
+                                            X
+                              −1
+                           Q(Pgs (i) (z)) =     Q(Pg−1
+                                                    l+s
+                                                        (i)
+                                                            (z)),
+                                         1                       1
+                            s=0                           s=0
+we obtain equality (24).
+   In order to prove the proposition in the case when P (a) 6= P (b) it is enough to
+examine in a similar way the relations ϕ1 (z) = 0 and ϕ2 (z) = 0, where P (a) = c1 ,
+P (b) = c2 . 
+Corollary 2.5. Let P (z), Q(z) ∈ C[z] and a, b ∈ C, a 6= b. Then Ĥ(t) ≡ 0 implies
+that (12) hold for q(z) = Q′ (z).
+Proof. Indeed, if P (a) = P (b) then equating the limits of both parts of equality
+(24) as z approaches to P (a) = P (b) we see that Q(a) = Q(b). On the other
+hand, if P (a) 6= P (b) then it follows from equalities (25) in a similar way that
+Q(a) = Q(b) = 0. In both case it follows from (14) that (12) holds. 
+   Recall that we assume that the numeration of branches Pi−1 (z), 1 ≤ i ≤ n, in
+U is chosen in such a way that the permutation g∞ ⊂ GP coincides with the cycle
+(1 2 ... n). The proposition below describes the position of branches appearing in
+Proposition 2.4 with respect to this numeration. More precisely, we describe the
+mutual position on the unit circle of the sets
+                                         a                                         bd
+           V (a) = {εan1 , εan2 , ..., εnda } and V (b) = {εbn1 , εbn2 , ..., εn b },
+                    √
+where εn = exp(2π −1/n).
+   Let us introduce the following definitions. Say that two sets of points X, Y on
+the unit circle S 1 are disjointed if there exist s1 , s2 ∈ S 1 such that one of two
+connected components of S 1 \ {s1 , s2 } contains all points from X while the other
+connected component of S 1 \ {s1 , s2 } contains all points from Y. Say that X, Y are
+almost disjointed if X ∩ Y consists of a single point s1 and there exists a point
+s2 ∈ S 1 such that one of two connected components of S 1 \ {s1 , s2 } contains all
+points from X \ s1 while the other connected component of S 1 \ {s1 , s2 } contains
+all points from Y \ s1 .
+Proposition 2.6 ([23]). The sets V (a) and V (b) are disjointed or almost disjointed.
+Furthermore, if P (a) = P (b) then V (a) and V (b) are disjointed.
+Proof. Consider first the case when P (a) = P (b) = c1 . Let Û be a simply-connected
+domain, containing no critical values of P (z), such that U ⊂ Û and ∞ ∈ ∂ Û . Any
+branch of P −1 (z) in U can be extended analytically to Û and we will assume that
+the numeration of branches of P −1 (z) in Û is induced by the numeration of branches
+of P −1 (z) in U. Furthermore, let M ⊂ Û be a simple curve connecting points c1 and
+                 SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                             11
+
+
+∞ and Ω = P −1 {M } be the preimage of M under the map P (z) : CP1 → CP1 . It is
+convenient to consider Ω as a bicolored graph embedded into the Riemann sphere.
+Namely, we define black vertices of Ω as preimages of c1 , a unique white vertex of Ω
+as the preimage of ∞, and edges of Ω as preimages of M (see Fig. 3). The edges of
+
+
+
+
+                                        Figure 3
+
+Ω may be identified with branches of P −1 (z) in Û as follows: to the branch Pi−1 (z),
+1 ≤ i ≤ n, corresponds the edge ei such that Pi−1 (z) maps bijectively the interior
+of M to the interior of ei . In particular, the ordering of branches of P −1 (z) in Û
+induces the ordering of edges of Ω. Since the multiplicity of the vertex ∞ equals n
+and Ω has n edges, Ω is connected.
+    Let Ea (resp. Eb ) be a union of edges of Ω which are adjacent to the vertex a
+(resp. b). It follows from the bijectivity of branches of P −1 (z) on the interior of M
+that if D is a domain from the collection of domains CP1 \ Ea such that b ∈ D, then
+D contains the whole set Eb \ ∞. Now the proposition follows from the observation
+that the cyclic ordering of edges of Ω, induced by the cyclic ordering of branches
+of P −1 (z) in Û , coincides with the cyclic ordering of edges of Ω, induced by the
+orientation of CP1 in a neighborhood of infinity.
+    In the case when P (a) 6= P (b) the proof is modified as follows. Take two simple
+curves M1 , M2 ⊂ Û connecting the point ∞ with the points P (a) and P (b) corre-
+spondingly and consider the preimage P −1 {M1 ∪ M2 } as a graph Ω embedded into
+the Riemann sphere. The vertices of Ω fall into three sets: the first one consists of a
+unique vertex which is the preimage of ∞, the second one consists of vertices which
+are preimages of P (a), and the third one consists of vertices which are preimages of
+P (b). Similarly, the edges of Ω fall into two sets: the first one consists of edges which
+are preimages of M1 and the second one consists of edges which are preimages of
+M2 (see Fig. 4).
+    Each of two sets of edges of Ω may be identified with branches of P −1 (z) in Û
+as follows: to the branch Pi−1 (z), 1 ≤ i ≤ n, corresponds the edge e1i from the
+first set (resp. the edge e2i from the second set) such that Pi−1 (z) maps bijectively
+the interior of M1 (resp. of M2 ) to the interior of e1i (resp. of e2i ). The ordering
+of branches of P −1 (z) in Û induces the ordering of edges of Ω in each of two
+sets. Clearly, this ordering coincides with the natural ordering induced by the
+orientation of CP1 . Furthermore, it is easy to see that when going round infinity in
+the counterclockwise direction the edge e1i , 1 ≤ i ≤ n, is followed by the edge e2i .
+12                          F. PAKOVICH, M. MUZYCHUK
+
+
+
+
+                                      Figure 4
+
+
+   Let Ea1 (resp. Eb2 ) be a union of edges from the first (resp. the second) set Ω
+which are adjacent to the vertex a (resp. b). The bijectivity of branches of P −1 (z)
+on the interior of M1 and M2 implies that if D is a domain from the collection of
+domains CP1 \ Ea1 such that b ∈ D, then D contains the whole set Eb2 \ ∞. Taking
+into account that for any k, 1 ≤ i ≤ n, the edge e1i is followed by e2i , this implies
+that V (a) and V (b) are disjointed or almost disjointed. 
+Remark. Since Q(Pi−1 (z)), 1 ≤ i ≤ n, are branches of an algebraic function,
+relations (19) are examples of linear relations between roots of an algebraic equation
+over the field C(z). A general algebraic approach to such relations, over an arbitrary
+field, was developed in the papers [12], [13]. In particular, it follows from Theorem
+1 of [13] that a necessary and sufficient condition for the existence of at least one
+solution Q(z) of (19), such that the functions Q(Pi−1 (z)), 1 ≤ i ≤ n, are distinct
+between themselves, is that the subspace MP,a,b does not contain elements of form
+(20). An equivalent form of this condition is that the subspace MP,a,b does not
+contain any of subspaces Vd⊥ , d ∈ D(GP ), which are defined below. Notice however
+that the method of [13] does not provide any information about the description or
+the actual finding of these solutions.
+
+3. Permutation matrix representations of groups containing a full
+                              cycle
+3.1. Invariant subspaces and the centralizer ring. The construction of MP,a,b
+implies that MP,a,b is an invariant subspace of Qn with respect to the so called
+permutation matrix representation of the group GP on Qn . By definition, the per-
+mutation matrix representation of a transitive permutation group H ⊆ Sn on Qn
+is a homomorphism RH : H → GLn (Q) which associates to h ∈ H a permutation
+matrix RH (h) ∈ GLn (Q) the elements ri,j , 1 ≤ i, j ≤ n, of which satisfy ri,j = 1 if
+i = j h and ri,j = 0 otherwise. In other words,
+                                                 
+                                x1              x1h
+                               x2            x2h 
+                               ..  = RH (h)  ..  .
+                                                 
+                               .             . 
+                                xn              xnh
+                                                               Pn
+Note that Qn admits a RH -invariant scalar product (x, y) := i=1 xi yi .
+                SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                            13
+
+
+   The goal of this section is to provide a full description of the invariant subspaces
+of Qn with respect to the permutation matrix representation of GP . More general,
+we classify all invariant subspaces of Qn with respect to the permutation matrix
+representation of an arbitrary group G ⊆ Sn containing the cycle (1 2 ... n). In the
+following G will always denote such a group.
+   Recall that a subset B of X = {1, 2, . . . , n} is called a block of a transitive
+permutation group H ⊆ Sn if for each h ∈ H the set B h is either disjoint or is
+equal to B (see e.g. [28]). For a block B the set B := {B h | h ∈ H} forms a
+partition of X into a disjoint union of blocks of equal cardinality which is called
+an imprimitivity system of H. Each permutation group H ⊆ Sn has two trivial
+imprimitivity systems: one formed by singletons and another formed by the whole
+X. A permutation group is called primitive if it has only trivial imprimitivity
+systems. Otherwise it is called imprimitive.
+   For each d | n we denote by Vd the subspace of Qn consisting of d-periodic vectors.
+The fact that the group G contains the cycle (1, ..., n) implies easily the following
+statement.
+Lemma 3.1. Any imprimitivity system for G coincides with the residue classes
+modulo d for some d | n. Furthermore, for given d such classes form an imprimi-
+tivity system for G if and only if the subspace Vd is G-invariant. 
+   Denote by D(G) the set of all divisors of n for which Vd is G-invariant. Clearly,
+1, n ∈ D(G). Notice that D(G) is a lattice with respect to the operations ∧, ∨,
+where d ∧ f := gcd(d, f ) and d ∨ f := lcm(d, f ). Indeed, for an element x ∈ X the
+intersection of two blocks containing x and corresponding to d, f ∈ D(G) is a block
+which corresponds to d ∨ f . On the other hand, the intersection of two invariant
+subspaces Vd , Vf is an invariant subspace which is equal to Vd∧f .
+   We say that d ∈ D(G) covers f ∈ D(G) if f | d, f < d, and there is no x ∈ D(G)
+such that f < x < d and f |x, x|d. Now we are ready to formulate the main result
+of this section.
+Theorem 3.1. Each RG -irreducible subspace of Qn has the form
+                       Ud := Vd ∩ Vf⊥1 ∩ ... ∩ Vf⊥ℓ ,
+                                                   
+
+where d ∈ D(G) and f1 , ..., fℓ is a complete set of elements of D(G) covered by d.
+The subspaces Ud are mutually orthogonal and every RG -invariant subspace of Qn
+is a direct sum of some Ud as above.
+   The proof of this theorem splits into several steps and is given below. We start
+from recalling some basic facts of the representations theory which we will use
+afterward (see e.g. [14]).
+   First, any representation TH : H → GLn (k) of a finite group H over a field k of
+characteristic not dividing |H| is completely reducible, that is k n is a direct sum of
+TH -invariant irreducible subspaces (Maschke’s theorem). Furthermore, irreducible
+subspaces of a completely reducible representation TH : H → GLn (k) are in one-
+to-one correspondence with minimal idempotents of the centralizer ring Vk (TH ).
+Recall that Vk (TH ) consists of all matrices A ∈ Mn (k) which commute with every
+TH (h), h ∈ H. Furthermore, a matrix E is called an idempotent if E 6= 0 and
+E 2 = E. Two idempotents E, F are called orthogonal if EF = F E = 0. Finally,
+an idempotent E ∈ Vk (TH ) is called minimal if it can not be presented as a sum of
+two orthogonal idempotents from Vk (TH ). Under this notation the correspondence
+14                           F. PAKOVICH, M. MUZYCHUK
+
+
+above is obtained as follows: to a minimal idempotent E ∈ Vk (TH ) corresponds an
+irreducible subspace V = Im{E}.
+   In general, the decomposition of k n into a sum of TH -invariant irreducible sub-
+spaces is not uniquely defined. Nevertheless, if
+(26)                          k n = V1⊕a1 ⊕ · · · ⊕ Vr⊕ar
+is a decomposition such that Vi , 1 ≤ i ≤ r, are pairwise non-isomorphic TH -invariant
+irreducible subspaces of k n , then the subspaces Vi⊕ai , 1 ≤ i ≤ r, are defined
+uniquely. They correspond to the minimal idempotents of the center C(Vk (TH ))
+of the centralizer ring Vk (TH ). Furthermore, Vk (TH ) is commutative if and only if
+ai = 1 for all i, 1 ≤ i ≤ r. Notice that if Vk (TH ) is commutative and the space k n
+admits a TH -invariant scalar product then all TH -invariant irreducible subspaces
+of k n are mutually orthogonal. Indeed, for any representation TH : H → GLn (k),
+which admits an invariant scalar product, k n can be decomposed into a sum of
+TH -invariant irreducible subspaces
+(27)                              k n = V1 ⊕ · · · ⊕ Vr
+with mutually orthogonal Vi . On the other hand, if Vk (TH ) is commutative then a
+decomposition of TH into a sum of TH -invariant irreducible subspaces is uniquely
+defined and therefore coincides with (27).
+   For the permutation matrix representation RH : H → GLn (k) of a transitive
+permutation group H ⊆ Sn instead of the notation Vk (RH ) we will use simply the
+symbol Vk (H). Below we will show (Proposition 3.5) that for any group G as above
+the ring VQ (G) is isomorphic to a subring of the group algebra of a cyclic group and
+hence is commutative. Therefore, the above remarks imply the following statement.
+Proposition 3.2. An RG -invariant subspace W ⊂ Qn is irreducible if and only if
+there exists a minimal idempotent E ∈ VQ (G) such that Im{E} = W . RG -invariant
+irreducible subspaces of Qn are mutually orthogonal and every RG -invariant sub-
+space is a direct sum of some W as above. 
+   For each transitive permutation group H ⊆ Sn we can construct some special
+basis of VC (H) via orbits of the stabilizer H1 of the point 1 as follows. To each orbit
+∆ of H1 associate a matrix A∆ , where A∆   i,j = 1 if there exist h ∈ H, δ ∈ ∆ such that
+1 = j, δ = i, and Ai,j = 0 otherwise. In particular, for the first column of A∆
+ h        h             ∆
+
+the equality A∆i,1 = 1 holds if and only if i ∈ ∆. It turns out that the matrices A
+                                                                                      ∆
+
+form a basis of VC (H) ([28], Theorem 28.4). Furthermore, since by construction the
+matrices A∆ are contained in Mn (Q) they form a basis of VQ (H). We summarize
+the properties of A∆ in the proposition below (see [28], §28).
+Proposition 3.3. The matrices A∆ satisfy the following conditions:
+      (1) A∆ form a basis of the algebra VQ (H) as of a Q-module;
+                              ones of A∆1 and A∆2 do not occur in the same place.
+      (2) If ∆1 6= ∆2 then theP
+          On the other hand, ∆ A∆ is a matrix all the entries of which are ones;
+      (3) For each orbit ∆ there exists an orbit Γ such that (A∆ )T = AΓ . 
+     Notice that the property (3) implies that for the first row of A∆ the equality
+A∆
+ 1,j = 1 holds if and only if j ∈ Γ. Furthermore, it is easy to see that the mapping
+∆ → Γ defines an involution on the set of orbits of H1 .
+                 SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                                 15
+
+
+3.2. Schur rings.
+3.2.1. Isomorphism between SQ (G) and VQ (G). In order to construct the minimal
+idempotents of VQ (G) we will use so called Schur rings introduced by Schur in his
+classical paper [27] for the investigation of permutation groups containing a regular
+subgroup C. Since in this paper C always will be a cyclic group, in the following
+we will restrict our attention to this case only (see [28] for the account of the Schur
+method in the general case).
+   The idea of the Schur approach can be described as follows. If G ⊆ Sn contains
+the cycle c := (1 2 ... n) then elements of the set {1, 2, . . . , n} can be identified
+with elements of the cyclic group C generated by c as follows: to the element i
+corresponds the element of C which transforms 1 to i. Therefore, we can consider
+G as a permutation group acting on its subgroup C. After such an identification
+we can “multiply” elements of the set {1, 2, . . . , n} and this multiplication agrees
+with the action of G in the following sense: if h, g ∈ C then hg = hg. Furthermore,
+identifying any two subsets of {1, 2, . . . , n} with the corresponding elements of the
+group algebra Q[C] we can define their “product” as the product of these elements
+in Q[C]. The remarkable result of Schur is that under such a multiplication the
+orbits of the stabilizer G1 form a basis of some subalgebra of Q[C]. To make this
+statement precise let us introduce the following definition.
+   For T ⊆ C denote by T (−1)  P the set of elements of C inverse to the elements of
+T and by T the formal sum h∈T h. The elements of Q[C] of the form T for some
+T ⊆ C are called simple quantities ([28]).
+Definition 3.4. A subalgebra A of the group algebra Q[C] is called a Schur ring
+or an S-ring over C if it satisfies the following axioms:
+   (S1) A as a Q-module has a basis consisting of simple quantities T0 , . . . , Td ,
+        where T0 = {e},
+                                    Sd
+   (S2) Ti ∩ Tj = ∅ for i 6= j and j=0 Tj = C,
+   (S3) For each i ∈ {0, 1, . . . , d} there exists i′ ∈ {0, 1, . . . , d} such that
+        Ti′ = Ti (−1) .
+   It is easy to see that the basis T0 , . . . , Td satisfying (S1) and (S2) is unique. Such
+a basis is called the standard basis of A. The number d + 1 is called the rank of
+A. The sets Ti , 0 ≤ i ≤ d, are called the basic sets of A. Finally, the notation
+A = hT0 , . . . , Td i is used if A is an S-ring over C whose basic sets are T0 , . . . , Td .
+We also write Basic(A) for the set {T0 , . . . , Td }. Notice that if Ã is an S-ring which
+is a subring of A then its basic sets are some unions of basic sets of A. There are
+two trivial S-rings, namely he, C \ {e}i and Q[C].
+Proposition 3.5. To any group G corresponds a Schur ring SQ (G) the basic sets
+of which are the orbits of the stabilizer G1 . Moreover, SQ (G) and VQ (G) are iso-
+morphic as Q-algebras.
+   The Proposition 3.5 is a particular case of Theorem 28.8 in [28]. It implies in
+particular that in order to describe the minimal idempotents of VQ (G) it is enough to
+describe the ones of SQ (G). Since however for this purpose an explicit construction
+of the isomorphism between SQ (G) and VQ (G) is needed, we give below a short
+proof of Proposition 3.5 which is based on Proposition 3.3
+Proof of Proposition 3.5. First of all observe that since G contains c each matrix
+M ∈ VQ (G) is necessarily a circulant that is each row vector of M is cyclically
+16                               F. PAKOVICH, M. MUZYCHUK
+
+
+shifted for one element to the right relative to the preceding row vector, in other
+words
+(28)                                 Mi,j = M1,j−i+1 mod n .
+     Define now a mapping ψ : VQ (G) → Q[C] by the formula
+                                                n
+                                                X
+                                     ψ(M ) :=         M1,j cj−1
+                                                j=1
+
+and show that ψ is an algebra monomorphism. Indeed, for any M, N ∈ VQ (G) we
+have:
+                         Xn                  n X
+                                             X n
+              ψ(M N ) =     (M N )1,ℓ cℓ−1 =     M1,i Ni,ℓ cℓ−1 =
+                               ℓ=1                     ℓ=1 i=1
+                   n X
+                   X n                                n X
+                                                      X n
+               =             M1,i N1,ℓ−i+1 cℓ−1 =               M1,i N1,j ci+j−2 =
+                   ℓ=1 i=1                            i=1 j=1
+
+                       n
+                                  ! n           
+                       X             X
+                   =     M1,i ci−1    N1,j cj−1  = ψ(M )ψ(N ).
+                       i=1                  j=1
+
+Thus ψ is an algebra homomorphism. Furthermore, ψ is injective since any matrix
+M ∈ VQ (G) is defined by its first row in view of (28).
+   Clearly, the image of VQ (G) is a subalgebra SQ (G) of Q[C]. Furthermore, by
+construction, the basis of this subalgebra consists of the orbits of the stabilizer G1 .
+The properties S1, S2 of SQ (G) are obvious. Finally, since any matrix from VQ (G)
+is a circulant, it follows from the third part of Proposition 3.3 that ∆(−1) = Γ. 
+   For d dividing n denote by Cd a unique subgroup of C of order d. For a Schur
+ring A denote by D(A) a set consisting of all divisors of n for which Cd ∈ A.
+Lemma 3.6. d ∈ D(G) ⇐⇒ n/d ∈ D(SQ (G)).
+Proof. Let d ∈ D(G). Then Cn/d under the identification of the set {1, 2, . . . , n}
+with C corresponds to the set X = {1, d + 1, 2d + 1, . . . , n − d + 1} and therefore
+is a block of G containing 1. This implies that Cn/d is a union of some G1 -orbits,
+say T0 , ..., Tℓ . Hence Cn/d = T0 + T1 + · · · + Tℓ and therefore Cn/d ∈ SQ (G).
+   Let now n/d ∈ D(SQ (G)). Then ψ −1 (Cn/d ) ∈ VQ (G). It follows from the
+definition of ψ that ψ −1 (Cn/d ) is a circulant matrix M such that M1,i = 1 if i ∈ X
+and 0 otherwise. Since M ∈ VQ (G) the subspace Im(M ) is G-invariant. On the
+other hand, it is easy to see that Im(M ) = Vd . Therefore, d ∈ D(G) by Lemma
+3.1. 
+3.2.2. Rational S-rings. The automorphism group of C is isomorphic to the multi-
+plicative group Z∗n . Namely, to the element m ∈ Z∗n corresponds the automorphism
+g 7→ g m , g ∈ C. Extending this action onto Q[C] by linearity we obtain an action
+of Z∗n on the group algebra Q[C]:
+                            X                      X
+                        α=      αg g −→ α(m) :=        αg g m .
+                                g∈C                         g∈C
+                                                            (m)
+An element α ∈ Q[C] is called rational if α = α for any m ∈ Z∗n . Note that
+                   (m)         ∗
+the mappings α 7→ α , m ∈ Zn , are automorphisms of Q[C]. Moreover, these
+                 SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                             17
+
+
+mappings are automorphisms of any S-ring A over C (see [28], Theorem 23.9). In
+particular, for each m ∈ Z∗n and T ⊆ C we have
+                           T ∈ Basic(A) ⇐⇒ T (m) ∈ Basic(A),
+where for a subset T ⊂ C by T (m) is denoted the set of m-th powers of elements of
+T.
+   Recall that the set of all irreducible complex representations of C consists of n
+one-dimensional representations (characters) χ0 , ..., χn−1 where
+                                       √
+                       χℓ (cj ) := e2π −1ℓj/n , 0 ≤ j, ℓ ≤ n − 1.
+We will keep the same notation for the extensions of χ0 , ..., χn−1 by linearity on
+Q[C]. The rational elements of an S-ring A admit the following characterization.
+Lemma 3.7. An element α ∈ Q[C] is rational if and only if χl (α) ∈ Q for all l,
+0 ≤ l ≤ n − 1.
+                              Pn
+Proof. For an element α = j=1 hj cj of Q[C] the condition that χl (α) ∈ Q for all
+l, 0 ≤ l ≤ n − 1, is equivalent to the condition that χl (α), 0 ≤ l ≤ n − 1,√is invariant
+with respect to the action of the Galois group Γ of the extension (Q(e2π −1/n ) : Q).
+The group Γ is isomorphic to Z∗n . Namely,
+                                         √
+                                               to the element
+                                                       √
+                                                                m ∈ Z∗n corresponds the
+                                       2π −1/n       2π −1m/n
+element σm ∈ Γ which transforms e               to e           . We have:
+                                   Xn                Xn       √
+             σm (χℓ (α)) = σm (χℓ (   hj cj )) = σm (   hj e2π −1ℓj/n ) =
+                                      j=1              j=1
+
+                     n
+                     X           √              Xn
+                 =         hj e2π −1mℓj/n = χℓ (   hj cmj ) = χℓ (α(m) ).
+                     j=1                         j=1
+
+Therefore, for ℓ, 0 ≤ ℓ ≤ n − 1, and m ∈ Z∗n the equality σm (χℓ (α)) = χℓ (α) is
+equivalent to the equality χℓ (α(m) ) = χℓ (α). Since for α, β ∈ Q[C] the equality
+χℓ (α) = χℓ (β) holds for all ℓ, 0 ≤ ℓ ≤ n − 1, if and only if α = β, we conclude that
+χℓ (α) ∈ Q for all ℓ, 0 ≤ ℓ ≤ n − 1, if and only if α is rational. 
+   An S-ring A is called rational if all its elements are rational. Clearly, A is rational
+if and only if T (m) = T for all T ∈ Basic(A) and m ∈ Z∗n . Any rational S-ring is
+a subring of some universal rational S-ring W. To construct W observe that the
+orbits of the action of Z∗n on C are parametrized by the divisors of n as follows: an
+orbit Om , m|n, consists of all generators of the group Cm . It turns out that the
+vector space spanned by Om , m|n, is a rational S-ring W ([27]). Furthermore, any
+rational S-ring A is a subring of W. Indeed, since any element of the standard basis
+of a rational S-ring A is invariant with respect to the action of Z∗n , such an element
+is a union of some Om , m|n. Therefore, A is a subring of W.
+   Denote by Dn the lattice of all divisors of n with respect to the operations ∧, ∨.
+The statement below describes the rational S-rings.
+Proposition 3.8. ([17]) An S-ring A over C is rational if and only if there exists
+a sublattice D of Dn with 1, n ∈ D such that C d , d ∈ D, is a basis of A. 
+   Notice that the basis Cd , d ∈ D, is not a standard basis of A in the sense of
+definition 3.4.
+18                             F. PAKOVICH, M. MUZYCHUK
+
+
+   To any S-ring A one can associate a rational S-ring Å, called the rational closure
+of A, which is constructed as follows. Introduce an equivalence relation on Basic(A)
+setting S ∼ T if there exists m ∈ Z∗n such that S = T (m) . For T ∈ Basic(A) set
+                                    [
+                              T̊ := {T (m) | m ∈ Z∗n }
+
+and denote by Å the Q-module spanned by T̊ , T ∈ Basic(A).
+
+Proposition 3.9. ([27]) Å is an S-ring consisting of all rational elements of A.
+     The Proposition 3.8 allows us to describe a rational closure of an arbitrary S-ring.
+Proposition 3.10. Let A be an S-ring over C. Then C d , d ∈ D(A), is a basis of
+Å.
+Proof. By Proposition 3.8 Å is spanned by vectors C d , d ∈ D, for a certain sub-
+lattice D of Dn . It remains to prove that D = D(A). The inclusion D ⊆ D(A)
+follows from the following line
+                d ∈ D =⇒ Cd ∈ Å ⊆ A =⇒ Cd ∈ A =⇒ d ∈ D(A).
+     Conversely, pick an arbitrary f ∈ D(A). Then Cf ∈ A. Furthermore, since
+                                         X
+                                    Cf =     Ot ,
+                                            t∈Df
+
+the element Cf is rational and therefore Cf ∈ Å. This means that Cf is a linear
+combination of Cd , d ∈ D. Therefore, in order to prove that Cf = Cd for suitable
+d ∈ D it is enough to show that the simple quantities Cd , d ∈ Dn , are linearly
+independent.
+   In order to prove the last statement assume that
+                                    X
+(29)                                   ld Cd = 0
+                                        d
+
+and let M be a maximal number d for which ld 6= 0. Clearly, any element u of C
+which generates CM can not be an element of Cd for d < M. But then u appears
+in the left part of equality (29) only once with the coefficient ld 6= 0. This is a
+contradiction and therefore Cd , d ∈ Dn , are linearly independent. 
+
+3.3. Proof of Theorem 3.1. Similarly to the definition given above for the ele-
+ments of D(G) say that for an S-ring A an element d ∈ D(A) covers an element
+f ∈ D(A) if f | d, f < d, and there is no x ∈ D(A) such that f < x < d and f |x,
+x|d.
+   Set
+                                   1
+                             σd := Cd , d ∈ D(A).
+                                   d
+It follows from
+(30)                              σf σd = σd σf = σf ∨d
+that σd , d ∈ D(A), are idempotents of the algebra A. Nevertheless, they are not
+pairwise orthogonal.
+                   SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                                              19
+
+
+Proposition 3.11. An element of an S-ring A over C is a minimal idempotent of
+A if and only if it has the form
+                                                   ℓ
+                                                   Y
+(31)                                    ǫd = σd          (1 − σfi ),
+                                                   i=1
+
+where d ∈ D(A) and f1 , ..., fℓ is a complete set of elements of D(A) covering d.
+Proof. Let us show first that ǫd , d ∈ D(A), are pairwise orthogonal idempotents.
+Since each σd , d ∈ Dn , is an idempotent, we have:
+                   ℓ
+                   Y                        ℓ
+                                            Y                                ℓ
+                                                                             Y
+       ǫ2d = σd2         (1 − σfi )2 = σd       (1 − 2σfi + σf2i ) = σd        (1 − σfi ) = ǫd .
+                   i=1                      i=1                              i=1
+
+Therefore, in order to show that ǫd is an idempotent we only must check that ǫd 6= 0.
+In view of (30), after opening the brackets in (31) we obtain a linear combination
+of σf in which σd appears with the coefficient one. Since σd , d ∈ Dn , are linearly
+independent this implies that ǫd 6= 0.
+   Let us check now the orthogonality. Take two distinct m, d ∈ D(A), where it is
+assumed that d < m, and consider the product ǫd ǫm . Let f1 , ..., fℓ and n1 , ..., nk be
+complete sets of elements of D(A) which cover d and m respectively. By (30) we
+have:
+                ℓ
+                Y                       k
+                                        Y                              i=ℓ,j=k
+                                                                         Y
+   ǫd ǫm = σd         (1 − σfi ) · σm         (1 − σnj ) = σd σm                 (1 − σfi )(1 − σnj ) =
+                i=1                     j=1                            i=1,j=1
+
+
+                                            i=ℓ,j=k
+                                              Y
+(32)                            = σd∨m                (1 − σfi )(1 − σnj )
+                                            i=1,j=1
+
+Since d | d ∨ m and d < d ∨ m, there exists an element fi ∈ D(A) which covers d
+and divides d ∨ m. For such an element (1 − σfi )σd∨m = 0 and this implies the
+vanishing of the right-hand side of (32).
+   Since the idempotents ǫd , d ∈ D(A), are pairwise orthogonal they are linearly
+independent elements of A. Furthermore, since Proposition 3.10 implies that ǫd ∈ Å
+for any d ∈ D(A) and
+(33)                                     dim (Å) = |D(A)|,
+the idempotents ǫd , d ∈ D(A), form a basis of Å which consists of pairwise or-
+thogonal idempotents. This implies that any minimal idempotent ǫ of Å coincides
+with some ǫd , d ∈ D(A). Indeed, since ǫP
+                                        d , d ∈ D(A), form a basis of Å there exist
+numbers ad , d ∈ D(A), such that ǫ = d∈D(A) ad ǫd . Furthermore, since ǫ is an
+idempotent, for any d ∈ D(A) the coefficient ad equals either 1 or 0. Therefore, if
+ǫ is minimal then ǫ = ǫd for some d ∈ D(A).
+   Finally, observe that the sets of minimal idempotents of Å and A coincide.
+Indeed, if ǫ is any idempotent of A then ǫ2 = ǫ implies that χi (ǫ) ∈ {0, 1} for all i,
+0 ≤ i ≤ n − 1. Therefore, by Proposition 3.9, ǫ ∈ Å. Furthermore, if ǫ is minimal
+in A then obviously it is also minimal in Å. On the other hand, any minimal
+idempotent of Å remains a minimal idempotent in A since all idempotents of A are
+contained in Å. 
+20                           F. PAKOVICH, M. MUZYCHUK
+
+
+Proof of Theorem 3.1. By Proposition 3.2 any RG -irreducible invariant subspace
+W of Qn corresponds to a minimal idempotent E ∈ VQ (G) such that Im{E} = W .
+Furthermore, since ψ is an isomorphism between VQ (G) and SQ (G), the element
+ψ(E) is a minimal idempotent of SQ (G) and therefore, by Proposition 3.11, ψ(E) =
+ǫd for some d ∈ D(SQ (G)). Thus W is RG -irreducible invariant subspace of Qn if
+and only if there exist d ∈ D(SQ (G)) such that
+              W = Im{ψ −1 (ǫd )} = Im ψ −1 (σd )Πℓi=1 (I − ψ −1 (σfi )) .
+                                      
+(34)
+  Observe now that if two idempotent matrices A, B commute then for the matrix
+C = AB = BA the equality
+                              Im{C} = Im{A} ∩ Im{B}
+holds. Indeed, it is clear that
+                              Im{C} ⊆ Im{A} ∩ Im{B}.
+On the other hand, if z ∈ Im{A} ∩ Im{B} then z = Ax = By for some vectors x, y
+and
+(35)             Az = A(Ax) = Ax = z,         Bz = B(By) = By = z.
+It follows that Cz = A(Bz) = Az = z and hence z ∈ Im{C}. Since Lemma 3.5
+implies that VQ (G) is commutative it follows now from (34) that
+                                          ℓ
+                                                               !
+                          −1           \
+                                                     −1
+                                              
+                 W = Im ψ (σd ) ∩           Im (I − ψ (σfi ))    .
+                                           i=1
+
+   It was observed in the proof of Lemma 3.6 that Im(ψ −1 (σd )) = Vn/d . Further-
+more, since the image of any idempotent matrix consists of its invariant vectors
+we have Im{I − ψ −1 (σd )} = Ker{ψ −1 (σd )}. On the other hand, since the matrix
+ψ −1 (σd ) is symmetric, Ker{ψ −1 (σd )} = Im{ψ −1 (σd )}⊥ . Therefore,
+                                       ⊥             ⊥
+                           W = Vn/d ∩ Vn/f1
+                                            ∩ ... ∩ Vn/fℓ
+                                                          .
+Finally, Lemma 3.6 implies that n/d ∈ D(G) and n/f1 , ..., n/fℓ is a complete set of
+elements of D(G) covered by n/d. Hence, W = Un/d .
+Remark. If G does not contain a full cycle, then Theorem 3.1 fails to be true.
+A simple example is provided by the group S5 acting on two element subsets of
+{1, 2, 3, 4, 5}. One can verify that in this way we obtain a primitive permutation
+group G on 10 points which yields a permutation matrix representation ρG of
+dimension 10. However, the collection of ρG -invariant irreducible subspaces of Q10
+is distinct from the collection U1 , U10 since U10 is a direct sum of two irreducible
+ρG -invariant subspaces of dimensions 4 and 5.
+   Notice also that Theorem 3.1 is not true for representations over C. In order to
+see this it is enough to take as G any cyclic group.
+
+                 4. Description of Q(z) satisfying ϕs (t) = 0
+4.1. Geometry of MP,a,b . In notation of Section 3 set
+                                  W = Vf⊥1 ∩ ... ∩ Vf⊥ℓ ,
+where f1 , ..., fℓ is the set of all elements of D(GP ) distinct from n. Notice that
+since n ∈ D(GP ) covers any other element of D(GP ), the subspace W coincides
+                 SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                                21
+
+
+with the subspace Un from Theorem 3.1 and therefore is GP -invariant irreducible
+subspace of Qn .
+   Theorem 3.1 together with Proposition 2.6 imply the following important geo-
+metric property of MP,a,b .
+
+Proposition 4.1. The subspace MP,a,b contains the subspace W.
+
+Proof. Indeed, since by construction MP,a,b is a GP -invariant subspace of Qn , it
+follows from Theorem 3.1 that either MP,a,b contains W or is orthogonal to W. In
+the last case MP,a,b also would be orthogonal to the complexification W C of W.
+                                                                          ~ ∈ WC
+Therefore, in order to prove the proposition it is enough to find vectors w
+and ~v ∈ MP,a,b such that (~v , w)
+                                ~ 6= 0.
+   In order to find such w
+                         ~ observe that the vectors
+
+                                ~ i = (1, εjn , ε2j
+                                w                           (n−1)j
+                                                 n , ... , εn      ),
+                                     √
+1 ≤ j ≤ n, where εn = exp(2π −1/n), form an orthogonal basis of Cn . Further-
+more, for d|n vectors w    ~ j for which (n/d) | j form a basis of VdC . Therefore, the
+vector w  ~ 1 is orthogonal to VfC for any f ∈ D(GP ), f 6= n, and hence w    ~ 1 ∈ W C . Set
+w
+~ =w   ~ 1.
+     Consider now two cases. Suppose first that P (a) = P (b) and show that in
+this case for the vector ~v ∈ MP,a,b corresponding to equation (24) the inequality
+      ~ 6= 0 holds. Indeed, the equality (~v , w)
+(~v , w)                                           ~ = 0 is equivalent to the equality
+                                  da
+                                  X                  db
+                                                     X
+                                        εans /da =         εbns /db
+                                  s=1                s=1
+
+which in its turn is equivalent to the statement that the “centers of mass” of the sets
+V (a) and V (b) coincide. But this contradicts to Proposition 2.6 since the center of
+mass of a system of points in C is inside of the convex envelope of this system and
+therefore the centers of mass of disjointed sets must be distinct.
+   Similarly, if P (a) 6= P (b) then (~v , w)
+                                           ~ 6= 0 for at least one of two vectors corre-
+sponding to equations (25). Indeed, otherwise
+                           da
+                           X                         db
+                                                     X
+                                 εans /da = 0,              εbns /db = 0
+                           s=1                       s=1
+
+that contradicts again to Proposition 2.6 since the fact that the sets V (a) and V (b)
+are almost disjointed implies that at least one of these sets is contained in an open
+half plane bounded by a line passing through the origin and therefore has the center
+of mass distinct from zero. 
+
+4.2. Puiseux expansions of Q(P −1 (z)). Let Û ⊂ C be a domain as in the proof of
+Proposition 2.6. Then, taking into account our convention about the numeration of
+branches of P −1 (z), at points of Û close enough to infinity the function Q(Pi−1 (z)),
+1 ≤ i ≤ n, is represented by the converging series
+                                              ∞
+                                                                      k
+                                              X
+(36)                       Q(Pi−1 (z)) =              sk εn(i−1)k z − n ,
+                                             k=−m
+22                            F. PAKOVICH, M. MUZYCHUK
+
+          1
+where z n denotes some fixed branch of the algebraic function inverse to z n in Û .
+Therefore, any relation of the form
+                         Xn
+(37)                         fi Q(Pi−1 (z)) = 0, fi ∈ C,
+                           i=1
+is equivalent to the system
+                           Xn
+(38)                          fi sk εk(i−1)
+                                     n      = 0,       k ≥ −m.
+                            i=1
+
+In particular, in view of Theorem 2.2, the equality Ĥ(t) ≡ 0 implies that for any
+k ≥ −m such that the coefficient sk of series (36) distinct from zero the vector w ~k
+is orthogonal to MP,a,b . This fact together with Proposition 4.1 imply the following
+statement (cf. [23], Theorem 4.1).
+Proposition 4.2. Let Q(z) be a polynomial such that Ĥ(t) ≡ 0. Then for any
+k ≥ −m such that the coefficient sk of series (36) is distinct from zero there exists
+f ∈ D(GP ), f 6= n, such that (n/f ) | k.
+Proof. Indeed, if sk 6= 0 then it follows from (38) that the vector w     ~ k is orthogonal
+      C
+to MP,a,b  and therefore by Proposition 4.1 is orthogonal to W C . Since the subspace
+(W C )⊥ is generated by the vectors w    ~ j , (n/f ) | j, f ∈ D(GP ), f 6= n, this implies
+that w~ k is a linear combination of these vectors and hence coincides with one of
+them since the vectors w ~ i , 1 ≤ i ≤ n, are linearly independent. Therefore, (n/f ) | k
+for some f ∈ D(GP ), f 6= n. 
+     For f ∈ D(GP ), f 6= n, set
+                                                              k
+                                              X
+                              ψf (z) =                 sk z − n ,
+                                           k≥−m
+                                         k≡0 mod n/f
+
+where sk , k ≥ −m, are coefficients of series (36). Clearly, ψf (z) is an analytic
+function in Û .
+Lemma 4.3. For any f ∈ D(GP ), f 6= n, there exists Sf (z) ∈ C[z] such that
+(39)                               ψf (z) = Sf (P1−1 (z)).
+Furthermore, we have:
+(40)                   P (z) = A1 (B1 (z)),     Sf (z) = R1 (B1 (z))
+for some A1 (z), B1 (z), R1 (z) ∈ C[z] with deg B1 (z) > 1.
+Proof. First, observe that since
+                          1 + (εkn )f + (εkn )2f + · · · + (εkn )n−f
+equals n/f if n|(f k) and zero otherwise, it follows from (36) that the equality
+      
+       n
+(41)       ψf (z) = Q(P1−1 (z)) + Q(Pf−1               −1                 −1
+                                       +1 (z)) + Q(P2f +1 (z)) + ... + Q(Pn−f +1 (z))
+       f
+holds.
+   Let now ΩP be a field generated by all branches of P −1 (z) considered as ele-
+ments of some fixed algebraic closure of C(z). Recall that the Galois group of the
+extension [ΩP : C(z)] is permutation equivalent to the group GP and under the
+                 SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                             23
+
+
+Galois correspondence to the stabilizer of P1−1 (z) in GP corresponds the invariant
+subfield C(P1−1 (z)) of ΩP . Since f ∈ D(GP ), the collection of branches appearing
+in the right part of equality (41) is a block of an imprimitivity system of GP con-
+taining P1−1 (z). Therefore, equality (41) implies that the function ψf (z) ∈ ΩP is
+invariant with respect to the action of the stabilizer of P1−1 (z) in GP and hence is
+contained in the field C(P1−1 (z)). So, there exists a rational function Sf (z) such
+that equality (39) holds. Furthermore, since the analytic continuation of the right
+side of (41) has no poles in C the function Sf (z) is a polynomial. Finally, since
+branches appearing in the right part of equality (41) form a block, it is easy to see
+that
+                  Sf (P1−1 (z)) = Sf (Plf−1+1 (z)), 1 ≤ l ≤ n/f − 1,
+and hence the last part of the lemma follows from Lemma 2.3.           
+4.3. Proof of Theorem 1.1. In view of Theorem 2.2 we essentially must show
+that the conclusion of the theorem holds for any non zero polynomial Q(z) such
+that Ĥ(t) ≡ 0. So, abusing the notation, below we will mean by a solution of the
+polynomial moment problem such a polynomial Q(z). The proof is by induction
+on the number i(P ) of imprimitivity systems of the group GP . If i(P ) = 2, that
+is if GP has only trivial imprimitivity systems, then Proposition 4.2 implies that
+for any non-zero coefficient sj , j ≥ m, of (36) the number k is a multiple of n.
+Therefore, all the functions Q(Pi−1 (z)), 1 ≤ i ≤ n, are equal between themselves
+and hence Q(z) = R(P (z)) for some polynomial R(z) by Lemma 2.3. Furthermore,
+necessarily P (a) = P (b). Indeed, otherwise after the change of variable z = P (z)
+we would obtain that the polynomial R(z) is orthogonal to all powers of z on the
+segment [P (a), P (b)]. However, for
+                   P (z) = z, Q(z) = R(z), a = P (a), b = P (b)
+any of relations (25) reduces to the equality R(z) ≡ 0 in contradiction with the
+condition Q(z) 6≡ 0 (of coarse instead of Proposition 2.1 we also could use the
+Weierstrass theorem). Therefore, if i(P ) = 2 then all solutions of the polynomial
+moment problem for P (z) are reducible (cf. [19], Theorem 1 and [23], Theorem
+5.3).
+   Suppose now that the theorem is proved for all P (z) with i(P ) < l and let Q(z)
+be a non-zero solution of the polynomial moment problem for a polynomial P (z)
+of degree n with i(P ) = l. If Q(z) = R(P (z)) for some polynomial R(z) then one
+can show as above that P (a) = P (b) and Q(z) is reducible. Otherwise there exists
+a non-zero coefficient sj1 , j1 ≥ m, of expansion (36) such that j1 is not a multiple
+of n. By Proposition 4.2 this implies that there exists f1 ∈ D(GP ), f1 6= n, such
+that (n/f1 ) | j1 . Furthermore, by Lemma 4.3 there exists a polynomial S1 (z) such
+that ψf1 (z) = S1 (P1−1 (z)) and equalities
+                       P (z) = A1 (B1 (z)),   S1 (z) = R1 (B1 (z))
+hold for some A1 (z), B1 (z), R1 (z) ∈ C[z] with deg B1 (z) > 1.
+   Define a polynomial T1 (z) by the equality T1 (z) = Q(z) − S1 (z). Then for any
+i, 1 ≤ i ≤ n, we have:
+                       Q(Pi−1 (z)) = S1 (Pi−1 (z)) + T1 (Pi−1 (z)).
+Since by construction the intersection of the supports of the series S1 (P −1 (z)) and
+T1 (P −1 (z)) is empty, if the series Q(Pi−1 (z)), 1 ≤ i ≤ n, satisfy some linear relation
+24                               F. PAKOVICH, M. MUZYCHUK
+
+
+over C then the series S1 (Pi−1 (z)), 1 ≤ i ≤ n, and T1 (Pi−1 (z)), 1 ≤ i ≤ n, also
+satisfy this relation. It follows now from Theorem 2.2 that each of germs defined
+in a neighborhood of infinity by the integrals
+                            S1 (z)P ′ (z)dz                   T1 (z)P ′ (z)dz
+                      Z                                 Z
+            Ĥ1 (t) =                       , F̂1 (t) =                       ,
+                       Γa,b    P (z) − t                 Γa,b    P (z) − t
+vanishes or in other words the polynomials S1 (z) and R1 (z) are solutions of the
+polynomial moment problem for P (z). Moreover, by construction the Puiseux series
+of T1 (P −1 (z)) contains no non-zero coefficients with indices which are multiple of
+n/f1 . In particular, this implies that all coefficients of T1 (P −1 (z)) whose indices
+are multiple of n vanish and hence T1 (z) may not have the form T1 (z) = R(P (z))
+for some R(z) ∈ C[z] unless T1 (z) ≡ 0.
+   If T1 (t) 6= 0 then arguing as above we conclude that there exist f2 ∈ D(GP ),
+f2 6= f1 , f2 6= n, and polynomials S2 (z), T2 (z), R2 (z), A2 (z), B2 (z) ∈ C[z] with
+deg B2 (z) > 1 such that the following conditions hold:
+                         T1 (P −1 (z)) = S2 (P −1 (z)) + T2 (P −1 (z)),
+                         P (z) = A2 (B2 (z)),      S2 (z) = R2 (B2 (z)),
+the germs
+                               S2 (z)P ′ (z)dz                       T2 (z)P ′ (z)dz
+                         Z                                      Z
+             Ĥ2 (t) =                         ,    F̂2 (t) =
+                          Γa,b   P (z) − t                      Γa,b    P (z) − t
+vanish, and the Puiseux expansion of T2 (P −1 (z)) contains no non-zero coefficients
+whose indices are multiple of n/f1 or n/f2 .
+   Since the number of divisors of n is finite, continuing in this way, after a finite
+number of steps we will arrive to a decomposition of the function Q(z) into a sum
+of polynomials Ss (z), 1 ≤ s ≤ r,
+                             Q(z) = S1 (z) + S2 (z) + · · · + Sr (z)
+such that the germs
+                                          Ss (z)P ′ (z)dz
+                                     Z
+                         Ĥs (t) =                        ,     1 ≤ s ≤ r,
+                                     Γa,b    P (z) − t
+vanish and
+               P (z) = As (Bs (z)),        Ss (z) = Rs (Bs (z)),      1 ≤ s ≤ r,
+for some Rs (z), As (z), Bs (z) ∈ C[z] with deg Bs (z) > 1.
+   In order to finish the proof it is enough to show any polynomial S(z) from the
+collection Ss (z), 1 ≤ s ≤ r, is a sum of reducible solutions of the polynomial moment
+problem for P (z). So, take some S(z) and let R(z), A(z), B(z), deg B(z) > 1, be
+polynomials such that
+                             P (z) = A(B(z)),       S(z) = R(B(z)).
+If B(a) = B(b) then S(z) itself is a reducible solution. Otherwise, since
+                         S(z)P ′ (z)dz              R(z)A′ (z)dz
+                   Z                      Z
+                                        =                        ,
+                    Γa,b   P (z) − t       B(Γa,b )  A(z) − t
+we conclude that the polynomial R(z) is a solution of the polynomial moment
+problem for the polynomial A(z) (and the points B(a), B(b)). Since the condition
+                 SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                          25
+
+
+deg B(z) > 1 implies that i(A) < i(P ) it follows from the induction assumption
+that there exist polynomials V1 (z), V2 (z), . . . , Vj (z) such that
+                           R(z) = V1 (z) + V2 (z) + · · · + Vj (z)
+and
+          Ve (z) = Ṽe (Ue (z)),   A(z) = Ãe (Ue (z)),    Ue (B(a)) = Ue (B(b)),
+for some Ṽe (z), Ãe (z), Ue (z) ∈ C[z], 1 ≤ e ≤ j.
+   Set now
+                Ee (x) = Ve (B(x)),       We (z) = Ue (B(z)),      1 ≤ e ≤ j.
+Then
+                       S(z) = E1 (z) + E2 (z) + · · · + Ej (z),
+where for each e, 1 ≤ e ≤ j, we have:
+            Ee (z) = Ṽe (We (z)),     P (z) = Ãe (We (z)),    We (a) = We (b).
+Therefore, S(z) is a sum of reducible solutions.          
+
+Remark. Theorem 1.1 implies that if for a given polynomial P (z) the correspond-
+ing polynomial moment problem has non-reducible solutions, then P (z) has at least
+one “double decomposition”
+                                     P =A◦B =C◦D
+such that
+                        B(z) ∈/ C(D(z)), D(z) ∈    / C(B(z)).
+Notice that this condition is quite restrictive. Namely, the results of Engstrom [10]
+and Ritt [24] imply that if polynomials A, B, C, D satisfy the equation
+                                       A◦B =C ◦D
+then there exist polynomials Â, B̂, Ĉ, D̂, U, V such that
+        A = U ◦ Â, C = U ◦ Ĉ, B = B̂ ◦ V, D = D̂ ◦ V, Â ◦ B̂ = Ĉ ◦ D̂,
+and up to a possible replacement of Â by Ĉ and B̂ by D̂ either
+                  Â ◦ B̂ ∼ z n ◦ z r R(z n ),    Ĉ ◦ D̂ ∼ z r Rn (z) ◦ z n ,
+where R(z) is a polynomial, r ≥ 0, n ≥ 1, and GCD(n, r) = 1, or
+                        Â ◦ B̂ ∼ Tn ◦ Tm ,       Ĉ ◦ D̂ ∼ Tm ◦ Tn ,
+where Tn (z), Tm (z) are the corresponding Chebyshev polynomials, n, m ≥ 1, and
+GCD(n, m) = 1.
+   Notice however that a polynomial P (z) may have more than one double decom-
+position satisfying the condition above. Indeed, for example for any distinct prime
+divisors p1 , p2 of a number n we have
+                         Tn (z) = Tn/p1 (Tp1 (z)) = Tn/p2 (Tp2 (z))
+and
+                                 / C(Tp2 (z)), Tp2 (z) ∈
+                         Tp1 (z) ∈                     / C(Tp1 (z).
+It would be interesting to investigate what conditions should be imposed on the
+collection P (z), a, b in order to conclude that any solution of the polynomial moment
+problem for P (z) can be represented as a sum at most r reducible solutions, where
+r ≥ 1 is a fixed number.
+26                               F. PAKOVICH, M. MUZYCHUK
+
+
+                                         References
+ 1. M. Blinov, M. Briskin, Y. Yomdin, Local center conditions for a polynomial Abel equation
+    and cyclicity of its zero solution, in “Complex analysis and dynamical systems II”, Contemp.
+    Math., AMS, Providence, RI, 2005, 65-82.
+ 2. M. Briskin, J.-P. Françoise, Y. Yomdin, Une approche au probleme du centre-foyer de
+    Poincaré, C. R. Acad. Sci., Paris, Ser. I, Math. 326, No.11, 1295-1298 (1998).
+ 3. M. Briskin, J.-P. Françoise, Y. Yomdin, Center conditions, compositions of polynomials and
+    moments on algebraic curve, Ergodic Theory Dyn. Syst. 19, no 5, 1201-1220 (1999).
+ 4. M. Briskin, J.-P. Françoise, Y. Yomdin, Center condition II: Parametric and model center
+    problems, Isr. J. Math. 118, 61-82 (2000).
+ 5. M. Briskin, J.-P. Françoise, Y. Yomdin, Center condition III: Parametric and model center
+    problems, Isr. J. Math. 118, 83-108 (2000).
+ 6. M. Briskin, J.-P. Françoise, Y. Yomdin, Generalized moments, center-focus conditions and
+    compositions of polynomials, in “Operator theory, system theory and related topics”, Oper.
+    Theory Adv. Appl., 123, 161–185 (2001).
+ 7. M. Briskin, N. Roytvarf, Y. Yomdin, Center conditions at infinity for Abel differential equa-
+    tion, Ann. Math., to appear.
+ 8. M. Briskin, Y. Yomdin, Tangential version of Hilbert 16th problem for the Abel equation,
+    Mosc. Math. J., 5, (2005), no. 1, 23-53.
+ 9. C. Christopher, Abel equations: composition conjectures and the model problem, Bull. Lond.
+    Math. Soc. 32, No.3, 332-338 (2000).
+10. H. Engstrom, Polynomial substitutions, Amer. J. Math. 63, 249-255 (1941).
+11. O. Forster, Lectures on Riemann surfaces, Graduate Texts in Mathematics, Vol. 81. New York
+    - Heidelberg -Berlin: Springer-Verlag.
+12. K. Girstmair, Linear dependence of zeros of polynomials and construction of primitive ele-
+    ments, Manuscripta Math. 39 (1982), no. 1, 81–97.
+13. K. Girstmair, Linear relations between roots of polynomials, Acta Arith. 89, No.1, 53-96 (1999)
+14. A. Kirillov, Elements of the theory of representations, Grundlehren der mathematischen
+    Wissenschaften. 220, Springer-Verlag. (1976).
+15. S. Lando, A. Zvonkin, Graphs on surfaces and their applications, Encyclopaedia of Mathe-
+    matical Sciences, 141. Low-Dimensional Topology, II. Springer-Verlag, Berlin, 2004.
+16. N. Muskhelishvili, Singular Integral Equations, P. Noordhoff N.V., Groningen, 1953.
+17. M.E. Muzychuk, The structure of rational Schur rings over cyclic groups, Europ. J. of Com-
+    bin., 14 (1993), 479-490.
+18. F. Pakovich, A counterexample to the “Composition Conjecture”, Proc. AMS, 130, no. 12
+    (2002), 3747-3749.
+19. F. Pakovich, On the polynomial moment problem, Math. Research Letters 10, (2003), 401-410.
+20. F. Pakovich, Polynomial moment problem, Addendum to the paper Center Problem for Abel
+    Equation, Compositions of Functions, and Moment Conditions by Y. Yomdin, Mosc. Math.
+    J., 3 (2003), no. 3, 1167-1195.
+21. F. Pakovich, On polynomials orthogonal to all powers of a Chebyshev polynomial on a seg-
+    ment, Isr. J. Math, Vol. 142 (2004), pp. 273–283.
+22. F. Pakovich, N. Roytvarf and Y. Yomdin. Cauchy type integrals of Algebraic functions, Isr.
+    J. Math., Vol. 144 (2004), pp. 221-291.
+23. F. Pakovich, On polynomials orthogonal to all powers of a given polynomial on a segment,
+    Bull. Sci. Math. 129 (2005), no. 9, 749–774.
+24. J. Ritt, Prime and composite polynomials, Trans. Amer. Math. Soc. 23, no. 1, 51–66 (1922).
+25. N. Roytvarf, Generalized moments, composition of polynomials and Bernstein classes, in
+    ”Entire functions in modern analysis. B.Ya. Levin memorial volume”, Isr. Math. Conf. Proc.
+    15, 339-355 (2001).
+26. A. Schinzel, Polynomials with special regard to reducibility, Encyclopedia of Mathematics and
+    Its Applications 77, Cambridge University Press, 2000.
+27. I. Schur, Zur Theorie der einfach transitiven Permutationsgruppen, Sitzungsber. Preuß. Akad.
+    Wiss., Phys.-Math. Kl. 1933, No.18/20, 598-623 (1933).
+28. H. Wielandt, Finite permutation groups, New York and London: Academic Press, 1964.
+29. Y. Yomdin, Center Problem for Abel Equation, Compositions of Functions, and Moment
+    Conditions, Mosc. Math. J., 3 (2003), no. 3, 1167-1195.
+               SOLUTION OF THE POLYNOMIAL MOMENT PROBLEM                       27
+
+
+  F. Pakovich, Department of Mathematics, Ben Gurion University, P.O.B. 653, Beer
+Sheva 84105, Israel
+  E-mail address: pakovich@math.bgu.ac.il
+
+  M. Muzychuk, Department of Mathematics, Netanya Academic College, Kibbutz
+Galuyot St. 16, Netanya 42365, Israel
+  E-mail address: muzy@netanya.ac.il
+

@@ -1,0 +1,21 @@
+{
+  "schema": "F10-GENERIC-COMPATIBILITY-PLAN/v1",
+  "generic_only": true,
+  "actual_source_inputs": [],
+  "verifier_calls": 12,
+  "positive_calls": 5,
+  "negative_calls": 7,
+  "flint_rref_calls": 2,
+  "flint_matrix_shapes": [[2, 5], [2, 5]],
+  "explicit_flint_fmpq_constructors": 23,
+  "actual_solver_calls": 0,
+  "fixture_names": [
+    "unit-positive", "unit-negative", "separator-zero-positive",
+    "separator-normalization-negative", "separator-T-positive",
+    "separator-column-negative", "precision-positive", "high-T30-negative",
+    "rounded-canonical-string-negative", "float-type-negative",
+    "zero-guard-positive", "zero-guard-false-separator"
+  ],
+  "authority_scope": "separate ROOT generic-only profile; no source acceptance or source inputs",
+  "scope": "STATIC UNEXECUTED specification; not an invitation or installed API evidence"
+}

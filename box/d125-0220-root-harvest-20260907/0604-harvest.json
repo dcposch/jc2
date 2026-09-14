@@ -1,0 +1,168 @@
+{
+  "pins": 70,
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/d125-uniform-ramification-discriminator-astra-20260907.md"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "6afd8e3fa28b38af8a4257fdb07bae4230ddddf4e28811400bc03f720b95d8b2"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/d125-hybrid-affine-first-attempt-astra-20260907.md"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "85a8baa28ff095900a0647a3d0c2993b93b0000d34c2478d70ac366518e5efff"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "53669df2e4c5b79023b466d53d484140fa0eaac87e643a53fad197419e431f44"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py",
+        "--mutate-moving-term"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 110, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 41, in check\n    need(ratio==expected,'moving remainder identity with all intermediate orders')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: moving remainder identity with all intermediate orders\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py",
+        "--mutate-double-factor"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 110, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 48, in check\n    need(factor==Q(-5,27),'mixed cubic double-pole factor')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: mixed cubic double-pole factor\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py",
+        "--mutate-omit-low-lift"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 110, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 69, in check\n    need(all(j>=0 for i,j,k in candidate),'both negative lift rows are necessary')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: both negative lift rows are necessary\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py",
+        "--mutate-origin-bound"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 110, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 75, in check\n    need(allowed==[1,3],'origin and infinity force only R and R^3 kernels')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: origin and infinity force only R and R^3 kernels\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "box/d125-hybrid-affine-first-attempt-20260907/verify_production.py"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "615191aa731dcc96396ee1b99d9e5d3cb4a63f5a491798741fbbffc05873bf99"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "53669df2e4c5b79023b466d53d484140fa0eaac87e643a53fad197419e431f44"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py",
+        "--mutate-moving-term"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 110, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 41, in check\n    need(ratio==expected,'moving remainder identity with all intermediate orders')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: moving remainder identity with all intermediate orders\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py",
+        "--mutate-double-factor"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 110, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 48, in check\n    need(factor==Q(-5,27),'mixed cubic double-pole factor')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: mixed cubic double-pole factor\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py",
+        "--mutate-omit-low-lift"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 110, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 69, in check\n    need(all(j>=0 for i,j,k in candidate),'both negative lift rows are necessary')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: both negative lift rows are necessary\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "box/d125-uniform-ramification-discriminator-20260907/check.py",
+        "--mutate-origin-bound"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 110, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-uniform-ramification-discriminator-20260907/check.py\", line 75, in check\n    need(allowed==[1,3],'origin and infinity force only R and R^3 kernels')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: origin and infinity force only R and R^3 kernels\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "box/d125-hybrid-affine-first-attempt-20260907/verify_production.py"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "615191aa731dcc96396ee1b99d9e5d3cb4a63f5a491798741fbbffc05873bf99"
+    }
+  ],
+  "scope": "uniform tiny controls; hybrid compact terminal custody only; no full source arithmetic, no independent mathematical promotion",
+  "status": "PASS_TERMINAL_UNIFORM_AND_HYBRID_CUSTODY",
+  "wall_seconds": 3.0475929199019447
+}

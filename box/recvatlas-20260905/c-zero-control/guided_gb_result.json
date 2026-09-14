@@ -1,0 +1,66 @@
+{
+  "certificate": {
+    "accepted_run_count": 1,
+    "crt_rational_reconstruction": {
+      "available": false,
+      "items": {},
+      "method": "CRT plus bounded rational reconstruction for scalar invariants"
+    },
+    "hilbert_hint": null,
+    "policy": {
+      "allow_modular_unit_promotion": false,
+      "note": "",
+      "require_controls": true,
+      "scope": "EXACT_Q"
+    },
+    "promotion_note": "exact Q standard basis has positive dimension",
+    "properness_scope": {
+      "positive_weights": [
+        []
+      ],
+      "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+      "systems_declared_homogeneous": false
+    },
+    "runs": [
+      {
+        "characteristic": 0,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.sing"
+        ],
+        "elapsed_seconds": 0.020603,
+        "label": "c-zero-control",
+        "main": {
+          "accepted": true,
+          "basis_size": 12,
+          "dimension": 7,
+          "lead_dim": 7,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": false,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.sing",
+        "script_sha256": "991747fbafd99bb3a58264605839c573228e76ce295c22ee273b5da40c10049f",
+        "stderr": "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.out",
+        "stdout_sha256": "f3d332039e9193f74d114785b26a861b3fec230650094a43444d4f4479350577",
+        "timed_out": false
+      }
+    ]
+  },
+  "verdict": "POSDIM"
+}

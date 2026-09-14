@@ -1,0 +1,32 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Both owned files are final, the marker is the last line of the report, and all writers are idle as of 01:24:42 UTC, inside the original 01:41 reserve.
+
+**Verdicts (static only, no execution of anything):** A CONFIRMED, B CONFIRMED, C CONFIRMED, D CONFIRMED, E CONFIRMED, F CONFIRMED, G CONFIRMED with no blocking static defect, H GAP (liveness unmeasured).
+
+**What I found in the new runtime, against the pinned authority/produce/check text:**
+- The five refusal probes land on the exact r3 ValueError strings in authority.py's actual check order, and the two WRONG-JOB startups refuse at the argv check before any file read.
+- The typed-slot logic substitutes only AUTHORIZATION_SHA256 (two checks) and ROOT_REGISTRATION_SHA256 (mutate), each exactly once behind its unique flag, then requires the whole CAPRUN vector to equal the registration byte for byte. The eleven other authority digests are deterministic, so ROOT must precompute them literally.
+- The mutator's edit is exactly graph.slots[24] += X1^27 in the basis element 1 of Q[V]/P7, validated against the checker's own wire grammar, canonical-wire proven before edit, and inverse-restored to whole bytes. The fixture reaches check.py line 520 with label T, and the dispatcher's four-frame traceback predicate matches the numbered source at check.py 540/536/520 and check_arithmetic.py 227 letter for letter.
+- Group quiet precedes every terminal read, the four UTC stops are immutable behind the registration SHA, and the 2775 wall / 1857 hard-CPU allocation sums are arithmetic, not measurements.
+
+**Non-blocking repairs recorded (ROOT's choice):**
+- The inherited ESRCH race at dispatch.py line 148 still gives a false STOP; catch ProcessLookupError too.
+- The mutate label also emits an unused produce-mode authority file naming the frozen baseline as UNFORMED; skip it.
+- A baseline sitting exactly at the 400000 aggregate term cap would turn the negative control into a parser refusal, which fails closed as STOP_NONDECISION.
+
+**Liveness GAP:** the charged code gate's estimate exceeds the fixed 900 wall / 599 CPU per science phase, so the modal outcome of the batch as registered is NONDECISION at produce. I did not raise any cap.
+
+**Custody:**
+
+| item | value |
+|---|---|
+| first action / targets absent | 01:11:09.939 UTC |
+| 16 pre-read pins = charged list | 01:11:16.808 UTC |
+| 16 post-read pins unchanged | 01:22:18.258 UTC |
+| custody rows re-verified live | 16 OK, no stray hex tokens |
+| report sha256 | 05775a6f4484e677aff987ef0f203861440721801471fb6f4b20a782cdcbeb11 |
+| input_custody.md sha256 | eced41ba07060b0c005a6c0e24d37a7933e521f1ee55d98bc24cbb4952eab981 |
+| report size | 76 lines, 3248 words, 24017 bytes |
+
+All 16 inputs were read fresh and whole to EOF. Writes were apply_patch only, no Seal or charge_basis authored. The one `apply_patch --help` probe printed only its own patch-format error. No coefficient, baseline, fixture, subprocess, import, network, Git or agent was touched.
+DIVERT path=xmodel/f10-source-cone-r3-runtime-gate-fable5-20260911.md status=CLEAN body_bytes=24017 body_sha256=05775a6f4484e677aff987ef0f203861440721801471fb6f4b20a782cdcbeb11

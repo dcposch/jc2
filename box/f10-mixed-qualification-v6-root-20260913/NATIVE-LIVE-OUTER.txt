@@ -1,0 +1,139 @@
+OBSERVER_OUTER_START 2026-09-13 03:39:50.175534629 UTC
+NATIVE_LIVE_CAPTURE_V1
+capture_utc=2026-09-13T03:40:09.088430356Z
+instance=i-0a59ae3233f3774a6
+boot=ea614786-3720-4b83-b098-89a305fe4087
+host=ip-172-30-0-123
+unit=jc2-mixed-v3-native-20260913.service
+invocation=4fe06355f4464fae90879a002e146e93
+pid=2202
+ppid=1
+pgid=2202
+start_ticks=76498
+exe=/usr/bin/bash
+pid_ns=pid:[4026531836]
+cgroup_ns=cgroup:[4026531835]
+argv0=/usr/bin/bash
+argv1=/opt/jc2-mixed-20260912/meta/native-metadata.actual.sh
+--- systemd-initial ---
+Restart=no
+TimeoutStopUSec=5s
+RuntimeMaxUSec=9min 55s
+MainPID=2202
+ExecStart={ path=/usr/bin/bash ; argv[]=/usr/bin/bash /opt/jc2-mixed-20260912/meta/native-metadata.actual.sh ; ignore_errors=no ; start_time=[Sun 2026-09-13 03:40:08 UTC] ; stop_time=[n/a] ; pid=2202 ; code=(null) ; status=0/0 }
+ControlGroup=/system.slice/jc2-mixed-v3-native-20260913.service
+CPUQuotaPerSecUSec=800ms
+CPUQuotaPeriodUSec=100ms
+MemoryMax=1073741824
+MemorySwapMax=0
+TasksMax=64
+LimitFSIZE=4194304
+LimitAS=1073741824
+KillMode=control-group
+Id=jc2-mixed-v3-native-20260913.service
+LoadState=loaded
+ActiveState=active
+SubState=running
+InvocationID=4fe06355f4464fae90879a002e146e93
+--- systemd-final ---
+MainPID=2202
+ControlGroup=/system.slice/jc2-mixed-v3-native-20260913.service
+Id=jc2-mixed-v3-native-20260913.service
+LoadState=loaded
+ActiveState=active
+InvocationID=4fe06355f4464fae90879a002e146e93
+--- proc-stat ---
+2202 (bash) S 1 2202 2202 0 -1 4194560 1007 2850 0 0 0 0 1 0 20 0 1 0 76498 8069120 977 18446744073709551615 109395449192448 109395450168109 140724070147024 0 0 0 2 4100 65536 1 0 0 17 4 0 0 0 0 0 109395450390960 109395450439600 109395992834048 140724070153838 140724070153907 140724070153907 140724070154218 0
+--- proc-status ---
+Name:	bash
+Umask:	0022
+State:	S (sleeping)
+Tgid:	2202
+Ngid:	0
+Pid:	2202
+PPid:	1
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	256
+Groups:	 
+NStgid:	2202
+NSpid:	2202
+NSpgid:	2202
+NSsid:	2202
+Kthread:	0
+VmPeak:	    7880 kB
+VmSize:	    7880 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	    3944 kB
+VmRSS:	    3944 kB
+RssAnon:	     420 kB
+RssFile:	    3524 kB
+RssShmem:	       0 kB
+VmData:	     436 kB
+VmStk:	     132 kB
+VmExe:	     956 kB
+VmLib:	    1824 kB
+VmPTE:	      48 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+CoreDumping:	0
+THP_enabled:	1
+untag_mask:	0xffffffffffffffff
+Threads:	1
+SigQ:	1/234295
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000002
+SigIgn:	0000000000001004
+SigCgt:	0000000000010000
+CapInh:	0000000000000000
+CapPrm:	000001ffffffffff
+CapEff:	000001ffffffffff
+CapBnd:	000001ffffffffff
+CapAmb:	0000000000000000
+NoNewPrivs:	0
+Seccomp:	0
+Seccomp_filters:	0
+Speculation_Store_Bypass:	thread vulnerable
+SpeculationIndirectBranch:	conditional enabled
+Cpus_allowed:	ff
+Cpus_allowed_list:	0-7
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	16
+nonvoluntary_ctxt_switches:	0
+x86_Thread_features:	
+x86_Thread_features_locked:	
+--- proc-limits ---
+Limit                     Soft Limit           Hard Limit           Units     
+Max cpu time              unlimited            unlimited            seconds   
+Max file size             4194304              4194304              bytes     
+Max data size             unlimited            unlimited            bytes     
+Max stack size            8388608              unlimited            bytes     
+Max core file size        0                    unlimited            bytes     
+Max resident set          unlimited            unlimited            bytes     
+Max processes             234295               234295               processes 
+Max open files            1024                 524288               files     
+Max locked memory         8388608              8388608              bytes     
+Max address space         1073741824           1073741824           bytes     
+Max file locks            unlimited            unlimited            locks     
+Max pending signals       234295               234295               signals   
+Max msgqueue size         819200               819200               bytes     
+Max nice priority         0                    0                    
+Max realtime priority     0                    0                    
+Max realtime timeout      unlimited            unlimited            us        
+--- proc-cgroup ---
+0::/system.slice/jc2-mixed-v3-native-20260913.service
+cpu.max=80000 100000
+cpu.max.burst=0
+memory.max=1073741824
+memory.swap.max=0
+pids.max=64
+cgroup.type=domain
+--- cgroup.procs ---
+2202
+2217
+NATIVE_LIVE_CAPTURE_COMPLETE
+OBSERVER_OUTER_END 2026-09-13 03:40:09.091707125 UTC

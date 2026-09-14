@@ -1,0 +1,161 @@
+{
+  "sha": "908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+  "node_id": "C_kwDOTqSOWdoAKDkwOGI1NDAxZWE5NTM1YTQ0ZjhjMGEwZWM0NWY1ODY2ZjhhNGM5ZGE",
+  "commit": {
+    "author": {
+      "name": "Raphael Kruse",
+      "email": "raphael.kruse@mathematik.uni-halle.de",
+      "date": "2026-09-12T18:31:21Z"
+    },
+    "committer": {
+      "name": "Raphael Kruse",
+      "email": "raphael.kruse@mathematik.uni-halle.de",
+      "date": "2026-09-12T18:31:21Z"
+    },
+    "message": "Separate equal factor values from a shared generator\n\nWork package 20 of milestone 0.7, the first high finding of the audit of\n0.7.0rc5. It stays under 0.7.0rc6, which the profiling commit already\nopened.\n\nCandidate inferred from two polynomials being equal that one coordinate\nwould serve both slots. Those are two different things, and the audit\nfound both directions of the conflation. The targeted search could not\nexpress a verified step with two distinct coordinates of one value: it\nreported its space exhausted after thirty maps although the target was\none step away. And it did build a shared one, which SEA-14 excludes,\nnaming two coordinates and consuming one without a word. Neither was a\nfalse certificate -- the step holds under BCW-12 -- and both were the\nsearch disagreeing with its own statement of where it looks.\n\nA shared field carries the decision now. enumerate_candidates never sets\nit, so equal values there are two coordinates and m = 2;\nuntargeted_candidates sets it, because UNT-1 wants BCW-12's saving where\nan anchor is a square. Both sites say so where they build.\n\nCandidate.factors refuses a surplus of names as well as a shortage. That\nis the invariant the audit asked for, and one caller relied on its\nabsence: scripts/untargeted_space.py handed two names over whatever the\ncandidate needed, and make measure failed the moment the guard went in.\nThat is the evidence the silence was worth ending rather than an\nargument against the guard, and the script asks for candidate.m now.\n\nFour tests: the m = 2 step being expressible and found, the shared one\nstaying outside the forward space and reported as a non-answer, the\nfield defaulting to off and to m = 2 on equal values, and the name\ninvariant in both directions.\n\nSEA-14 gains the paragraph saying equal values cost two coordinates\nhere, that sharing is asked for and not inferred, and what each\ndirection of the conflation did.",
+    "tree": {
+      "sha": "4a96be924f8471f84d50521172cbebe6678645c2",
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/4a96be924f8471f84d50521172cbebe6678645c2"
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqlmpQACgkQpYdnzilV\ndCV34Q/+NuLrNo0YnXR0sH5DQexTJZgZV5xUiBi/sYUW56RHZJkppPYbrP0ApuXI\ne9aboFbdZz/0jzL/uPCnA9ae8m6meZYCubcl+MOo4pAqu+10Vc8hjnrPDVPfPfLi\nDFRkCeCCvzs+3USVQ45zDPL+xIpa1UpHDw5OH1OVdHXjtL9gRlbOjvhIK2WBWA/e\nut+S7e1FHeJGVTecUPbMyqYs/QFvT8lgZI5hPvFNDjjeceDDQxX0769h3kAQnG/v\nQVxlbA1Attzpl2kRR3fm9j248KepnAqsOmDKYmF43+qp/wSh0m7q1XbQBlTIxCyO\nnmOqrw17dPp13WmwDsPE8FMuLy0uKdZjB4DI0+ajk4D1/Fwdo1mseSbC0w3Ti7ez\nQ2EtmcOHwDCOp6F/NMx0vQfoxC8DJDvINLaQv+f8xje1s1KbOxOwFgZYNPhD+JjQ\nFNEr581AcP3dBL8XRrnysyPmqdbbiaXM5rrR89Z/cfP1LofpqFJmMILgBDWjsFdf\nAstM5+BoUHhiTXCMguv8qtf89WZscBJR3bnSCaQTI6uqUInTl1dOSyTsnXC9371N\nEpg8oPO+I7coeRZE3kQF4qfei+doie3TaBQyhUADlkktbrL3NmWcjNYY1NogthUs\n8JU6QEBRd+cXo0yh/JIkmhqawrEjbXdf/Wj1z0uafdcPq3bwB7o=\n=NNzX\n-----END PGP SIGNATURE-----",
+      "payload": "tree 4a96be924f8471f84d50521172cbebe6678645c2\nparent 719105db03dc3192196125ac07882a89132bd620\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789237881 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789237881 +0200\n\nSeparate equal factor values from a shared generator\n\nWork package 20 of milestone 0.7, the first high finding of the audit of\n0.7.0rc5. It stays under 0.7.0rc6, which the profiling commit already\nopened.\n\nCandidate inferred from two polynomials being equal that one coordinate\nwould serve both slots. Those are two different things, and the audit\nfound both directions of the conflation. The targeted search could not\nexpress a verified step with two distinct coordinates of one value: it\nreported its space exhausted after thirty maps although the target was\none step away. And it did build a shared one, which SEA-14 excludes,\nnaming two coordinates and consuming one without a word. Neither was a\nfalse certificate -- the step holds under BCW-12 -- and both were the\nsearch disagreeing with its own statement of where it looks.\n\nA shared field carries the decision now. enumerate_candidates never sets\nit, so equal values there are two coordinates and m = 2;\nuntargeted_candidates sets it, because UNT-1 wants BCW-12's saving where\nan anchor is a square. Both sites say so where they build.\n\nCandidate.factors refuses a surplus of names as well as a shortage. That\nis the invariant the audit asked for, and one caller relied on its\nabsence: scripts/untargeted_space.py handed two names over whatever the\ncandidate needed, and make measure failed the moment the guard went in.\nThat is the evidence the silence was worth ending rather than an\nargument against the guard, and the script asks for candidate.m now.\n\nFour tests: the m = 2 step being expressible and found, the shared one\nstaying outside the forward space and reported as a non-answer, the\nfield defaulting to off and to m = 2 on equal values, and the name\ninvariant in both directions.\n\nSEA-14 gains the paragraph saying equal values cost two coordinates\nhere, that sharing is asked for and not inferred, and what each\ndirection of the conflation did.\n",
+      "verified_at": "2026-09-12T18:31:59Z"
+    }
+  },
+  "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+  "html_url": "https://github.com/rk-mlu/kellermap/commit/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+  "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/comments",
+  "author": {
+    "login": "rk-mlu",
+    "id": 65403623,
+    "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rk-mlu",
+    "html_url": "https://github.com/rk-mlu",
+    "followers_url": "https://api.github.com/users/rk-mlu/followers",
+    "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+    "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+    "repos_url": "https://api.github.com/users/rk-mlu/repos",
+    "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "rk-mlu",
+    "id": 65403623,
+    "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rk-mlu",
+    "html_url": "https://github.com/rk-mlu",
+    "followers_url": "https://api.github.com/users/rk-mlu/followers",
+    "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+    "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+    "repos_url": "https://api.github.com/users/rk-mlu/repos",
+    "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "719105db03dc3192196125ac07882a89132bd620",
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/719105db03dc3192196125ac07882a89132bd620",
+      "html_url": "https://github.com/rk-mlu/kellermap/commit/719105db03dc3192196125ac07882a89132bd620"
+    }
+  ],
+  "stats": {
+    "total": 197,
+    "additions": 184,
+    "deletions": 13
+  },
+  "files": [
+    {
+      "sha": "094a7610eb9a15be2f7d901edce0e5134ee4d789",
+      "filename": "CHANGELOG.md",
+      "status": "modified",
+      "additions": 17,
+      "deletions": 0,
+      "changes": 17,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/CHANGELOG.md",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/CHANGELOG.md",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/CHANGELOG.md?ref=908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+      "patch": "@@ -6,6 +6,23 @@ Notable changes per release. The milestone plan and its reasoning live in\n \n ## 0.7.0rc6\n \n+`Candidate` has a `shared` field, and two fresh slots carrying one value are\n+two coordinates unless a candidate asks for one. Sharing was inferred from the\n+two polynomials being equal, so the two could not be told apart, and an audit\n+of `0.7.0rc5` found both directions. The targeted search could not express a\n+verified step with two distinct coordinates of one value -- it reported its\n+space exhausted after thirty maps -- and it did build a shared one, which\n+SEA-14 excludes, naming two coordinates and consuming one. Neither was a false\n+certificate; both were the search disagreeing with its own statement of where\n+it looks. `untargeted_candidates` asks for the sharing where UNT-1 wants\n+BCW-12's saving.\n+\n+`Candidate.factors` refuses a surplus of names as well as a shortage, which is\n+the invariant that failed silently. One caller relied on that silence --\n+`scripts/untargeted_space.py` handed two names over whatever the candidate\n+needed -- and `make measure` failed the moment the guard went in, which is the\n+evidence the silence was worth ending.\n+\n The fast suite was profiled and one test marked slow. It had grown to 139\n seconds, of which the unweighted control of SEA-14 was 44: it examines 3189\n maps since `0.7.0rc5` widened the forward space, and it is now a test of its"
+    },
+    {
+      "sha": "a33e485117438e3a2549c57996a8e3e2676131a8",
+      "filename": "docs/contracts.md",
+      "status": "modified",
+      "additions": 17,
+      "deletions": 0,
+      "changes": 17,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/docs%2Fcontracts.md",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/docs%2Fcontracts.md",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/docs%2Fcontracts.md?ref=908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+      "patch": "@@ -2348,6 +2348,23 @@ plausible chain or silently reporting no result. A case it handles and does not\n solve reports no result, which is a different outcome and is spelled\n differently.\n \n+**Two fresh slots of one value are two coordinates here.** Sharing one is\n+BCW-12's saving, a `Candidate` asks for it with `shared`, and\n+`enumerate_candidates` never does: SEA-14 gives the forward space distinct\n+fresh coordinates, so equal values cost two and the step is `m = 2`.\n+\n+Asked for and not inferred from the two polynomials being equal, which is how\n+`Candidate` decided it until `0.7.0rc6`. An audit of `0.7.0rc5` found both\n+directions of that conflation. The forward search could not express a verified\n+step with two distinct coordinates of one value and called its space exhausted\n+after thirty maps instead; and it did build a shared one, naming two\n+coordinates and consuming one, which is a chain outside the space SEA-14\n+describes. Neither was a false certificate -- the step holds under BCW-12 --\n+and both were the search disagreeing with its own statement of where it looks.\n+\n+`Candidate.factors` refuses a surplus of names as well as a shortage since\n+then. That is the invariant which failed silently while `m` was inferred.\n+\n **SEA-14 — The forward search builds unweighted steps with distinct fresh\n coordinates, and says so.** It reaches a proper subset of the chains\n `BCWStep` admits, and the two omissions are structural rather than incidental."
+    },
+    {
+      "sha": "8c09c1b2a94713154f2903e067c12253adce814e",
+      "filename": "scripts/untargeted_space.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 1,
+      "changes": 5,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/scripts%2Funtargeted_space.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/scripts%2Funtargeted_space.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/scripts%2Funtargeted_space.py?ref=908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+      "patch": "@@ -219,7 +219,10 @@ def main() -> int:\n             else:\n                 ends.append(len(candidates))\n             for candidate in candidates:\n-                names = sp.symbols(\"untargeted_0 untargeted_1\")\n+                # As many as the candidate introduces and no more. Two were\n+                # handed over regardless until ``0.7.0rc6``, and a surplus was\n+                # dropped in silence; ``Candidate.factors`` refuses one now.\n+                names = sp.symbols(\"untargeted_0 untargeted_1\")[: candidate.m]\n                 step = BCWStep.build(\n                     source,\n                     candidate.index,"
+    },
+    {
+      "sha": "7cd4d9e6faabca011c8d05ae1934a70d40f1cf1c",
+      "filename": "src/kellermap/search.py",
+      "status": "modified",
+      "additions": 41,
+      "deletions": 12,
+      "changes": 53,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/src%2Fkellermap%2Fsearch.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/src%2Fkellermap%2Fsearch.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/src%2Fkellermap%2Fsearch.py?ref=908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+      "patch": "@@ -78,6 +78,21 @@ class Candidate:\n     left: Slot\n     right: Slot\n     coefficient: sp.Expr = sp.Integer(1)\n+    shared: bool = False\n+    \"\"\"Whether two fresh slots of one value are to share a generator, BCW-12.\n+\n+    A decision by whoever builds the candidate, and not a consequence of the\n+    two polynomials being equal. Those are two different things and this field\n+    is what separates them: two fresh slots carrying one value may take one\n+    coordinate between them or two, and which of the two a step is depends on\n+    what is wanted, not on the values.\n+\n+    It was inferred from equality until ``0.7.0rc6``, so the two could not be\n+    told apart. An audit of ``0.7.0rc5`` found both directions of that: the\n+    targeted enumerator could not express a verified step with two distinct\n+    coordinates of one value, reporting its space exhausted instead, and it did\n+    express a shared one, which SEA-14 excludes.\n+    \"\"\"\n \n     @property\n     def slots(self) -> tuple[Slot, Slot]:\n@@ -86,21 +101,22 @@ def slots(self) -> tuple[Slot, Slot]:\n \n     @property\n     def shares_one_generator(self) -> bool:\n-        \"\"\"Return whether both slots are fresh and carry the same value, BCW-12.\n+        \"\"\"Return whether one coordinate serves both slots, BCW-12.\n \n-        Then one coordinate serves both. Two would carry the same value and\n-        cost a dimension for nothing, which is the same saving that puts\n-        ``alpoege15`` two dimensions below ``bcw17``.\n+        ``shared`` and both slots fresh carrying one value. Then two would\n+        carry the same value and cost a dimension for nothing, which is the\n+        same saving that puts ``alpoege15`` two dimensions below ``bcw17``.\n \n-        It arises when the leading monomial is a square. The untargeted\n-        enumerator produces it; ``enumerate_candidates`` never has, measured\n-        over 2690 candidates along both long chains, because its two slots come\n-        from a pool value and from dividing by it.\n+        It arises when the leading monomial is a square, and the untargeted\n+        enumerator asks for it there. ``enumerate_candidates`` never asks for\n+        it: SEA-14 says the forward space has distinct fresh generators, so\n+        equal values there are two coordinates and the step is ``m = 2``.\n         \"\"\"\n         left, right = self.slots\n \n         return (\n-            not isinstance(left, Carried)\n+            self.shared\n+            and not isinstance(left, Carried)\n             and not isinstance(right, Carried)\n             and bool(left == right)\n         )\n@@ -117,9 +133,16 @@ def factors(self, names: Iterable[sp.Symbol]) -> tuple[Factor, Factor]:\n         \"\"\"Return the slots as ``BCWStep`` factors, taking names in slot order.\n \n         The names come from outside, by SEA-3. Exactly ``m`` of them are\n-        consumed, and a shorter supply raises rather than inventing one.\n-\n-        Two fresh slots carrying one value take one name between them, BCW-12.\n+        consumed: a shorter supply raises rather than inventing one, and a\n+        longer one raises rather than dropping a name. The second half is\n+        checked since ``0.7.0rc6``. It was the invariant that failed silently\n+        while ``m`` was inferred from the two values being equal -- the caller\n+        offered two names for two distinct coordinates and one was consumed\n+        without a word, which an audit of ``0.7.0rc5`` found from the other\n+        side.\n+\n+        Two fresh slots carrying one value take one name between them when the\n+        candidate asks for that, BCW-12, and two otherwise.\n         \"\"\"\n         supply = iter(names)\n         built: list[Factor] = []\n@@ -143,6 +166,12 @@ def factors(self, names: Iterable[sp.Symbol]) -> tuple[Factor, Factor]:\n                 shared = name\n             built.append(Fresh(slot, name))\n \n+        if next(supply, None) is not None:\n+            raise ValueError(\n+                f\"The candidate introduces {self.m} generators, \"\n+                \"and more names were supplied.\"\n+            )\n+\n         return (built[0], built[1])\n \n     def values(self, source: PolynomialMap) -> tuple[sp.Expr, sp.Expr]:"
+    },
+    {
+      "sha": "39ae839937a8918d32c8b100f591031d6009ab20",
+      "filename": "src/kellermap/untargeted.py",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 0,
+      "changes": 9,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/src%2Fkellermap%2Funtargeted.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/src%2Fkellermap%2Funtargeted.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/src%2Fkellermap%2Funtargeted.py?ref=908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+      "patch": "@@ -327,6 +327,11 @@ def untargeted_candidates(source: PolynomialMap) -> tuple[Candidate, ...]:\n                 left=left,\n                 right=right,\n                 coefficient=split.coefficient,\n+                # UNT-1 takes BCW-12's saving where the anchor is a square:\n+                # two fresh slots of one value share a coordinate. Asked for\n+                # here, where it was inferred from the two values being equal\n+                # until ``0.7.0rc6``.\n+                shared=True,\n             )\n         )\n \n@@ -342,6 +347,10 @@ def untargeted_candidates(source: PolynomialMap) -> tuple[Candidate, ...]:\n                 left=_slot(divisor, carried),\n                 right=_slot(cofactors, carried),\n                 coefficient=sp.Integer(1),\n+                # A divisor and the sum of its cofactors are equal only if the\n+                # component is a square of that divisor, which UNT-6 cannot\n+                # produce, so this is BCW-12's saving where it never applies.\n+                shared=True,\n             )\n         )\n "
+    },
+    {
+      "sha": "e86b1bd87648e0b37370edb50d6ab09fd1255c30",
+      "filename": "tests/test_search.py",
+      "status": "modified",
+      "additions": 96,
+      "deletions": 0,
+      "changes": 96,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/tests%2Ftest_search.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/tests%2Ftest_search.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/tests%2Ftest_search.py?ref=908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+      "patch": "@@ -1081,3 +1081,99 @@ def test_the_outcome_reports_its_ring_when_printed() -> None:\n     assert printed.startswith(\"SearchOutcome(reduction=\")\n     assert \"domain=ZZ\" in printed\n     assert \"_domain\" not in printed\n+\n+\n+# --------------------------------------------------------------------------\n+# Equal factor values against a shared generator, SEA-14 and BCW-12\n+# --------------------------------------------------------------------------\n+\n+\n+def equal_values() -> tuple[PolynomialMap, sp.Symbol, sp.Symbol]:\n+    \"\"\"A map whose leading monomial divides into two equal square factors.\"\"\"\n+    first, second = sp.symbols(\"u v\")\n+    source = over_field(PolynomialMap((x, y, z), (x + z**4, y + z**2, z)))\n+\n+    return source, first, second\n+\n+\n+def test_two_equal_values_are_two_coordinates_in_the_forward_space() -> None:\n+    \"\"\"SEA-14 says distinct fresh generators, so equal values cost two.\n+\n+    The candidate reported ``m = 1`` until ``0.7.0rc6``, because sharing was\n+    inferred from the two polynomials being equal rather than asked for. The\n+    step below verifies, uses two coordinates and exactly the pool's names and\n+    values, and was unreachable: the search called its space exhausted after\n+    thirty maps.\n+    \"\"\"\n+    source, first, second = equal_values()\n+    step = BCWStep.build(source, 0, Fresh(z**2, first), Fresh(z**2, second), 1)\n+    step.verify()\n+\n+    assert step.m == 2\n+\n+    found = [\n+        candidate\n+        for candidate in enumerate_candidates(source, [z**2])\n+        if candidate.m == 2\n+    ]\n+\n+    assert len(found) == 1\n+    assert found[0].shares_one_generator is False\n+\n+    outcome = search(source, step.target, {first: z**2, second: z**2}, budget=100)\n+\n+    assert outcome.reduction is not None\n+\n+\n+def test_a_shared_generator_stays_outside_the_forward_space() -> None:\n+    \"\"\"The other direction, and the one that had the search overreaching.\n+\n+    BCW-12's saving is a step the constructor admits and ``peel`` finds. SEA-14\n+    excludes it from the forward space, and the search built it anyway, naming\n+    two coordinates and consuming one. It reports a non-answer now.\n+    \"\"\"\n+    source, first, second = equal_values()\n+    shared = BCWStep.build(source, 0, Fresh(z**2, first), Fresh(z**2, first), 1)\n+    shared.verify()\n+\n+    assert shared.m == 1\n+\n+    outcome = search(source, shared.target, {first: z**2, second: z**2}, budget=100)\n+\n+    assert outcome.reduction is None\n+    assert outcome.exhausted is True\n+\n+\n+def test_sharing_is_asked_for_and_not_inferred() -> None:\n+    \"\"\"``shared`` is the field that separates the two, and it defaults to off.\"\"\"\n+    candidate = Candidate(0, z**2, z**2)\n+\n+    assert candidate.shared is False\n+    assert candidate.shares_one_generator is False\n+    assert candidate.m == 2\n+\n+    asked = Candidate(0, z**2, z**2, shared=True)\n+\n+    assert asked.shares_one_generator is True\n+    assert asked.m == 1\n+\n+\n+def test_a_name_is_never_consumed_silently() -> None:\n+    \"\"\"Exactly ``m`` names, and a surplus raises rather than being dropped.\n+\n+    This is the invariant that failed while ``m`` was inferred: two names were\n+    offered for two coordinates and one was used without a word.\n+    \"\"\"\n+    candidate = Candidate(0, z**2, z**2)\n+    first, second = sp.symbols(\"u v\")\n+\n+    with pytest.raises(ValueError, match=\"more names\"):\n+        candidate.factors([first, second, sp.Symbol(\"w\")])\n+\n+    with pytest.raises(ValueError, match=\"fewer names\"):\n+        candidate.factors([first])\n+\n+    assert candidate.factors([first, second]) == (\n+        Fresh(z**2, first),\n+        Fresh(z**2, second),\n+    )"
+    }
+  ]
+}

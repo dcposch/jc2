@@ -1,0 +1,24 @@
+{
+  "schema":"jc2.diagnosis-custody/v1",
+  "task":"f10-mixed-setresuid-diagnosis-sol-20260913",
+  "status":"TERMINAL_NARROW_CAUSE_CONFIRMED_DEEPER_ORIGIN_UNOBSERVED",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc":"2026-09-13T01:54:59.161785333Z",
+  "custody_authored_utc":"2026-09-13T01:58:33.882652371Z",
+  "input_postpins":[
+    ["box/f10-mixed-dac-correction-root-20260913/COMMANDS.md","7809c8ae3733d5e765cec4d5018e57dc4b90d30422dbef66f1f89882fee8cd70"],
+    ["ops/run_capped.py","4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"],
+    ["ops/artifact_finalize.py","0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"]
+  ],
+  "outputs":[
+    ["box/f10-mixed-setresuid-diagnosis-sol-20260913/PINS.json","f57adf34b0192a47f5d7b0c69b71ab8a57909bc35ea68552b73af5e3cea5a6bf"],
+    ["xmodel/f10-mixed-setresuid-diagnosis-sol-20260913.md","6e8b216a4e877f24e56bbc7f115ff3e9ded6334d34b1eb2888bb8827c2ec184a"],
+    ["xmodel/f10-mixed-setresuid-diagnosis-sol-20260913.md.artifact.json","d38efe8d0136e9c744e9d1e8c7b29acf9d1945e43d4b0258074d213d213477dc"]
+  ],
+  "conclusion":"setpriv direct setresuid returned EPERM; CAP_SETPCAP hypothesis refuted; origin of absent/denied CAP_SETUID unobserved",
+  "artifact_verify":"VERIFIED",
+  "whole_output_readback":true,
+  "all_local_input_postpins_match":true,
+  "all_writers_idle_after_custody":true,
+  "authority":"NONE; diagnosis only"
+}

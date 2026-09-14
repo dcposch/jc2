@@ -1,0 +1,8 @@
+split t = 3*m0^2-1 ; d=-m0 resonance index m=-6*m0*(m0-1) ; row E_k with k = 2N-2+m ; d=+m0 resonance m=-(2N+6m0) (below zone)
+m0=1 t=2 N=3 A_t=Q  d=-1: m_res=0 (E_4) in_zone=False (P_0 slot: b-axis free, exceptional family)   d=+1: m_res=-12 below zone
+m0=2 t=11 N=12 A_t=Q  d=-2: m_res=-12 (E_10) in_zone=True    d=+2: m_res=-36 below zone
+m0=3 t=26 N=27 A_t=Q  d=-3: m_res=-36 (E_16) in_zone=True    d=+3: m_res=-72 below zone
+m0=4 t=47 N=48 A_t=Q  d=-4: m_res=-72 (E_22) in_zone=True    d=+4: m_res=-120 below zone
+m0=5 t=74 N=75 A_t=Q  d=-5: m_res=-120 (E_28) in_zone=True    d=+5: m_res=-180 below zone
+m0=6 t=107 N=108 A_t=Q  d=-6: m_res=-180 (E_34) in_zone=True    d=+6: m_res=-252 below zone
+Briot-Bouquet at x=0: pivot of P_k in row x^k is -(k-3) b^2/2 for every t; resonance k=3 (w_2 free), compatibility row x^3 vanishes identically by the jets.

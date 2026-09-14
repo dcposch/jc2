@@ -1,0 +1,34 @@
+{
+  "task": "f10-r1-slice-low-weight-discriminator-astra-20260909",
+  "first_action_utc": "2026-09-09T18:29:54Z",
+  "controlling_stop_utc": "2026-09-09T18:41:54Z",
+  "postpin_utc": "2026-09-09T18:40:28.132410Z",
+  "status": "FINAL_VERIFIED",
+  "all_writers": "IDLE_AFTER_THIS_CUSTODY_PUBLICATION",
+  "inputs": {
+    "manifest": "box/f10-r1-slice-low-weight-discriminator-astra-20260909/PINS.json",
+    "sha256": "016aeaf9197b607db617f72c737fc61aad492f97293512c69f8d5cb2bb4af6e5",
+    "count": 12,
+    "pre_post_current": "ALL_MATCH",
+    "read_scope": "Prior whole reads of eleven unchanged accepted inputs reused after current-pin checks; frozen composition read whole. No live gate or new source read."
+  },
+  "owned": [
+    {"path":"xmodel/f10-r1-slice-low-weight-discriminator-astra-20260909.md","bytes":18688,"sha256":"6367aecf5e68fd53602a3b8e28d8174626ce0ede59eff044816bf5cac12b93cf"},
+    {"path":"xmodel/f10-r1-slice-low-weight-discriminator-astra-20260909.md.artifact.json","bytes":700,"sha256":"0eb23510a11c21900c3fea631b8508feaa1950ae5970afd7d3ecf8c9c1fd6e3c"},
+    {"path":"box/f10-r1-slice-low-weight-discriminator-astra-20260909/READ-SCOPE.md","bytes":893,"sha256":"05f9ae385c0d30f1b4ea9af682fc872eb3b744769ce9e8edca49e6bf5accd82e"},
+    {"path":"box/f10-r1-slice-low-weight-discriminator-astra-20260909/PINS.json","bytes":1881,"sha256":"016aeaf9197b607db617f72c737fc61aad492f97293512c69f8d5cb2bb4af6e5"}
+  ],
+  "body_bytes": 18355,
+  "body_sha256": "326372711573d0e05c69573b679c5657498f72ee5b8f73dd3b3c0fcb3ba737f6",
+  "own_whole_read": true,
+  "raised_open": [],
+  "collisions": "EMPTY_OWN_ONLY",
+  "transaction": "BEGIN_CLOSE_FINALIZE_VERIFY_COMPLETE",
+  "publication_note": "First close rejected a plain-text marker before closing; marker corrected to the required HTML-comment syntax, then close/finalize/verify passed. No frozen report was changed.",
+  "mathematical_subprocesses": 0,
+  "remote_actions": 0,
+  "new_agents": 0,
+  "code_or_coefficient_artifacts": 0,
+  "scope": "New conditional manual c-unit and complete univariate cubic-cover interface; no computed certificate, point, solver, performance or source exclusion.",
+  "lifecycle_note": "Root supplied a terminal promotion notice for the same composition scope at the end of this task. Its newly released gate was not read or added; this packet preserves its original twelve-input freeze and historical provisional-parent label."
+}

@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The lane is complete. Report sealed at `xmodel/residual65-structure-fable5-20260905.md` (body 26,930 bytes, basis `d9f8a8f6`), drivers and outputs in `box/residual65-20260905/`.
+
+**Outcome: 0 new kills. The residual stays at 65, and there is a structural reason.**
+
+**Classification.** The 65 rows are 65 distinct necessary tower configurations in 39 source degree pairs and 33 child degree pairs. They are not scalings or towers of Moh's five: `M_s = n−2` does not scale, and no child is another row's source. Three coarse families by `(u_s, s')`:
+- **A** `u_s=1, s'=2`: 23 rows (Appendix-II shape; smallest charts, 199 to 1819 unknowns).
+- **B** `u_s=1, s'≥3`: 22 rows (the depth residue; 706 to 3074 unknowns; six rows have a child whose top form carries two major towers).
+- **C** `u_s≥2` prefixes: 20 rows (38 typed split-window leaves still alive; 475 to 4889 unknowns).
+The finest natural key `(u_s, s', ℓ, e:q)` gives 41 families. Only three child degree pairs are shared with Moh's p.207 children.
+
+**Second-generation tests run on all 66 rows** (`second_gen.py`, exact rationals): child Def 5.1(2) windows, child Galois pattern + ODE at every level (p.201 (8)–(11), Prop 4.6 via the p.171 `J = x^l` Remark, A.3), child-bottom (12')/(13') (p.188), and a second-descent polynomiality test I derived from Prop 6.3(1) and the p.198 chain rule: `(v'−u−1) − u·ℓ ≥ 0`. All pass 66/66. Moh's five p.207 rows and (99,66) pass everything, as the controls require.
+
+**Why they all survive.** Moh's finite numerical sieve is descent-invariant. The child's bottom lattice equals the parent's actual centre stabilizer (44/46 also equal Moh's (8) value; the two exceptions R026, R028 are exactly the own-data lane's "zero coefficient adds no denominator" rule), and `N' = N`, `M' = M`. Child `P, Q` equal the parent's at common levels, and the child top pattern is the inversion image of the parent's level-`s−1` pattern. The one descent-sensitive quantity, the SD exponent, equals `d_{s−1}/d_s − d_s` at `u_s=1`, and its kill window forces `lo_{s−1}=1`, which the ODE excludes. The census-wide control confirms the window is empty on all 24,063 rows. Twenty rows sit exactly at the boundary `d_{s−1} = d_s²`.
+
+**Controls.** My engine on the parents accepts all 1,420 operative rows and rejects only 35 non-operative census rows. On 215 near-miss outer vectors of tree-empty rows, the child tests kill 23, so they are not tautologies.
+
+**Prices.** Xu's sharpened floor at `u_s>1` kills 0 of the 65; margins are 0 only on R009 (192,128) and R050 (196,56). No chart is under 70 unknowns. Prefix completion needs the 38 ES leaves killed and the child terminal pair fixed. Two OPENs raised, no exit-price assertion. One memory note saved on the descent-invariance result, plus an addendum to the pkill pitfall note after it bit twice here.
+DIVERT path=xmodel/residual65-structure-fable5-20260905.md status=CLEAN_SEALED body_bytes=26930 body_sha256=164c9377db02a992e28930cbed474bac1d9132f0e48957ea2c8a065fc181ac8c

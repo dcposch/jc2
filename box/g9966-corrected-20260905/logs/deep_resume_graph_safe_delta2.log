@@ -1,0 +1,52 @@
+delta2: loading complete checkpoint source-full-delta2_phase0117.json
+delta2 inner minor solved in 2.55s
+delta2 inner low-weight product: 25 slots, 4.35s
+delta2 inner incidence reduced: 14 pivots, 14.32s
+delta2 inner: 78 preincidence, 14 QQ* pivots, 0 residual, 16.57s
+delta2: extracting only D1 coefficient dependencies
+delta2: dependency positions h/C2/C3=9/8/9, outer=[21, 24, 10, 21]
+delta2: D1_graph, 13 equations, operation counts [16, 125, 4, 8, 14, 6, 12, 261, 2, 8, 4, 8, 14]
+delta2: D1_graph complete, dimension=351, residual=0
+delta2: D1_J, 14 equations, operation counts [3, 20, 59, 75, 134, 140, 120, 85, 38, 27, 13, 5, 2, 2]
+delta2: D1_J complete, dimension=337, residual=5
+delta2: corner_J, 1 equations, operation counts [555205]
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_graph_faces.py", line 181, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_graph_faces.py", line 176, in main
+    add(rows,'corner_J',{'constant_polynomial':str(value),'actual_polynomial_jets':jets,
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_graph_faces.py", line 85, in add
+    remaining,new,pivots,zeros=E.qstar_reduce(pending,free-set(mapping)-{loc}-set(protected))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/run-code-source-full/frozen/band_engine.py", line 205, in qstar_reduce
+    coefficient = sp.diff(row, variable)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/function.py", line 2482, in diff
+    return f.diff(*symbols, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/expr.py", line 3586, in diff
+    return _derivative_dispatch(self, *symbols, **assumptions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/function.py", line 1909, in _derivative_dispatch
+    return Derivative(expr, *variables, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/function.py", line 1234, in __new__
+    symbols_or_none = getattr(expr, "free_symbols", None)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/basic.py", line 580, in free_symbols
+    return empty.union(*(a.free_symbols for a in self.args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/basic.py", line 580, in <genexpr>
+    return empty.union(*(a.free_symbols for a in self.args))
+                         ^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/basic.py", line 580, in free_symbols
+    return empty.union(*(a.free_symbols for a in self.args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/basic.py", line 580, in <genexpr>
+    return empty.union(*(a.free_symbols for a in self.args))
+                         ^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/basic.py", line 580, in free_symbols
+    return empty.union(*(a.free_symbols for a in self.args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

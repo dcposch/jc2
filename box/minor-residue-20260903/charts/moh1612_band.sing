@@ -1,0 +1,23 @@
+option(redSB); short=0;
+ring R = 0,(b1,b2,b3,b4,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,x,y),dp;
+poly h  = y^3*(y-x) + b1*y^3 + b2*y^2 + b3*y + b4;
+poly AA = y^2*(y-x) + b1*y^2 + b2*y  + b3;
+poly BB = y*(y-x)   + b1*y  + b2;
+poly al2 = c1*AA + c2;         poly be2 = c3*AA + c4;
+poly al3 = c5*AA + c6*BB + c7; poly be3 = c8*AA + c9*BB + c10;
+poly al4 = c11*AA + c12*BB + c13*(y-x);
+poly f = h^3 + be2*h + be3;  poly g = h^4 + al2*h^2 + al3*h + al4;
+poly J = diff(f,x)*diff(g,y) - diff(f,y)*diff(g,x);
+matrix C = coef(J, x*y);
+int i,k;
+"MARK_TOPBAND p=5, x,y-degree 21";
+for (k=21; k>=0; k--) {
+  for (i=1;i<=ncols(C);i++) {
+    if (C[1,i]==x^(21-k)*y^k) { "k="; k; C[2,i]; }
+  }
+}
+"MARK_K0_beta2slot k0=A(e+f-2)-1=14"; 
+"MARK_TOPFORM_beta2"; jet(be2,3)-jet(be2,2);
+"MARK_beta2_top_at_y0"; subst(jet(be2,3)-jet(be2,2), y,0);
+"MARK_B1_analogue_at_9966: generic deg-32 form, x-pure term free";
+"MARK_DONE"; quit;

@@ -1,0 +1,35 @@
+ring W=32003,(b4,q2_0,q3_0,q4_0,q5_0),wp(1,2,3,4,5);
+number yy=27617;
+option(redSB);
+
+proc purepowers(ideal G)
+{ // list, per ring variable, the least pure power in lead(G) (0 if none)
+  ideal L=lead(G); int i; int v; intvec e; string s=""; int found; int cnt; int k;
+  for (v=1; v<=nvars(basering); v++) {
+    found=0;
+    for (i=1; i<=size(L); i++) { e=leadexp(L[i]); cnt=0; for (k=1;k<=nvars(basering);k++){ if (e[k]>0){cnt++;} }
+      if (cnt==1 and e[v]>0) { if (found==0 or e[v]<found) { found=e[v]; } } }
+    s=s+string(var(v))+"^"+string(found)+" ";
+  }
+  return(s);
+}
+proc onlymono(poly f, poly mon)
+{ // coefficient of the monomial mon in f (all other monomials ignored)
+  matrix M=coef(f,mon); // not used
+  poly g=f; int i; 
+  for (i=1;i<=nvars(basering);i++){ if (mon/var(i)==0) { g=subst(g,var(i),0); } }
+  return(g);
+}
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/restop_t6_exact.sing"));
+int tt=6; int m; int r; ideal RR;
+for (m=1;m<=tt-1;m++){ r=tt-m; RR[r]=RStop[m]; }
+for (r=1;r<=tt-1;r++){ if (homog(RR[r])!=1) { print("FAIL inhomogeneous r="+string(r)); exit(2); }
+  if (deg(RR[r])!=4*tt+4+2*r) { print("FAIL weight r="+string(r)); exit(2); }
+  print("R r="+string(r)+" wdeg="+string(deg(RR[r]))+" size="+string(size(RR[r]))+" vars="+string(variables(RR[r]))); }
+intvec WTS=1,2,3,4,5;
+int tm=timer; ideal G=std(RR);
+print("FULL dim="+string(dim(G))+" vdim="+string(vdim(G))+" size="+string(size(G))+" time="+string(timer-tm));
+print("FULL_PUREPOWERS "+purepowers(G));
+print("FULL_HILB_BEGIN"); intvec hn=hilb(G,1,WTS); hn; print("FULL_HILB_END");
+print("JOB_DONE full t=6 mod p=32003 r=27617");
+quit;

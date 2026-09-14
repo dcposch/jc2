@@ -1,0 +1,36 @@
+# D125 symmetry delta gate (Fable 5.1): μ2 fixed locus and 22-coordinate slice
+
+Status: **CONFIRMED as a restricted sufficient client presentation; two GAP notes; nothing REFUTED.** The μ12 action, the μ3/μ4 origin exclusions, the raw 128 / standalone 81 counts, the equivariance of the 13 odd A-Hermite blocks and of the constant-unit B graph, the two surviving B kernels, and the T₂[s] gauge decomposition on 22 coordinates all reproduce from my own derivation on the frozen inputs. No point, properness, dimension, speed or openness claim is made or endorsed.
+
+## Scope and inputs
+
+Reviewed only the fixed-locus/composition delta in `d125-symmetry-discriminator-astra-20260907.md` (body SHA `caedb904…`), its `check.py`, `composition_check.py`, `witness.json` and `composition-witness.json`, read from the frozen lane directory. Accepted without re-review: the complete unequal/Q source contract, the lift theorem, the unimodular A-Hermite graph, the constant-unit B reconstruction and the compatible T[s] decomposition, each represented by its terminal gate. My checker pins `client.py`, `witness.json` and `exact-witnesses-v2.json` by SHA-256 and never imports project code; the polygon census is rebuilt from the half-plane inequalities.
+
+## CONFIRMED
+
+**1. μ12 action.** With A_τ=τ⁻¹⁵A(τg,τp), B_τ=τ⁻²⁵B(τg,τp), a degree-s coefficient has character s−15 or s−25. I evaluated the literal lift at a random full point (all slots, both λ's) and verified the source form P_τ(u,v)=τ⁻¹⁵P(τ⁵u,τ⁻¹v) with λ₂τ=τ⁻³λ₂, λ₃τ=τ⁻²λ₃ as an exact identity at τ=3, which gives the negative-row character 5t−e−D. Jacobian rows carry d−38, so c at the g² row carries −36. Every nonzero fixed slot (four on H³, six on H⁵, (2,1), (1,0), (8,5)) has character 0 mod 12; the fixed zeros and the origin are preserved trivially. τ¹²=1 therefore preserves both whole faces, both constants, all seven guards and every equation.
+
+**2. Origin exclusions.** On the μ3 locus λ₃=0 and all four linear-jet coefficients have characters −10,−16,−20,−26, none 0 mod 3; a random fixed-locus point has all four zero. Under μ4 both λ's vanish and [u]P, [v]Q have characters 2 mod 4; no v-linear term exists at all. In both cases the imposed negative rows reduce the constant term of J(P,Q) to the linear-jet determinant, which is 0 against c=−5/9. μ6 and μ12 contain μ3. Only μ2 survives.
+
+**3. μ2 counts on actual slots.** τ=−1 forces λ₂=0, keeps λ₃, and leaves odd total degrees in A and B. Independent census: free 71/196, odd free 33/94, raw 33+94+1=128. Hermite pivots at level s<D are (i,s−i), i<⌈s/5⌉; I rebuilt each block from the λ-free expansion, matched the closed form (−1)^{s−i−t}C(s−i,t) and found every determinant ±1, totals 27/70, odd levels 13/34, standalone 128−47=81. Surviving negative rows 16/39 equal top rows 3/5 plus pivots; the top rows vanish because the outer face evaluated at (1,p) has p=−1 as a root of order 3 and 5. The μ3 counts 81/51 also agree. P and Q are centrally odd, since τ=−1 acts on the source as (u,v)↦(−u,−v). The exact toy (receivers g⁴p+g⁵+g³ and p+g, λ₂=0, λ₃=1) lifts to P=u, Q=uv⁴−v with J(0)=−1, so parity kills no origin and yields no point.
+
+**4. Equivariance of the two graphs and the slice.** Level-s Hermite rows have character s−D, the same as their pivot, and with λ₂=0 their higher inputs sit at degree s+2d of the same parity. Setting odd-character coordinates to zero therefore commutes with the unimodular descending solve; even-level pivots restrict to zero, odd blocks stay closed over any Q-algebra. For B, every product [A_s,B_j] in layer d+13 has character d−25 (checked for all s,j), so the triangular graph is equivariant. I rebuilt the matrix of B_d↦[H³,B_d] by actual differentiation on the odd free columns (0…⌊(7d+4)/12⌋), obtaining ranks 1,3,3,5,6,7,8,9,11,12,13,14: columns 94, rank 92, kernels exactly H at d=5 and H³ at d=15, both supported on free columns; d=10,20 carry odd characters −15,−5 and vanish. The rows match the composition witness and the repaired exact witness table. The whole shear B↦B−sA with s=[p¹⁵]B was applied to a random μ2 point: Jacobian unchanged, every fixed B slot untouched (A's support misses all of them), polygon and parity preserved, [p¹⁵]→0, [p⁵]→β₁−s·a₅, [p¹⁰]=[p²⁰]=0, inverse exact. s has character −10 and is invariant, and char(s·a_ij)=char(b_ij), so the shear commutes with μ2 and the fixed locus is X₀×A¹. The fixed locus is the intersection with the anti-invariant-coordinate subspace, not an invariant-ring quotient. The presentation is 33−13 A coordinates, β₁, λ₃: **22**, with β₃ as s. The 34 nontrivial B-negative rows, every unselected high row and all degree 0–13 rows remain; no B-Hermite pivot is subtracted and λ₃ is not eliminated or normalised.
+
+**5. Direction and envelope.** A field point of the 22-coordinate system is a point of the full client, hence by the accepted contract a Keller pair of degrees 75/125. A unit retires only this μ2-fixed locus of this unequal/Q client. The 660-slot envelope 0≤I≤23, I+J≤38 contains the support of J(A,B) for generic coefficients; the 780 triangle adds only identically zero rows.
+
+**6. Interface distinctions.** Polynomial conjugation preserves the constant Jacobian determinant. I conjugated exchange and central inversion by (x+y²,y) and recovered determinants −1 and +1, so no lemma can make central inversion conjugate to exchange, and the μ2 action here is central inversion of the source. A finite μ2 is not a nontrivial G_m action. I did not re-read either paper; root's reading is accepted as the primary interface record.
+
+## GAP
+
+- **G1. Envelope tightness.** The generic g-degree of J(A,B) is 22, not 23: the vertex bracket [g⁹p⁶,g¹⁵p¹⁰] vanishes because (9,6)∥(15,10). The 660 list is safe; it is not the minimal actual support. No count in the delta depends on this.
+- **G2. Origin kill scope.** The μ3 exclusion uses the imposed negative rows. Without them the cross terms p₁,₋ₖ·q₀,₁₊ₖ at k≡1 mod 3 are character-allowed, so "vanishing linear jets" alone is not a Laurent-level contradiction. The producer's wording "over the full coefficient quotient" is correct; the sharpening is recorded so nobody drops the polynomiality rows from a future μ3 argument.
+
+## Own controls
+
+`box/d125-symmetry-delta-gate-fable5-20260907/delta_check.py` (SHA-256 `da93d650…`), zero Assert nodes, run eight times under 30 s wall / 25 s CPU / 512 MiB in normal and −O modes. Witness `delta-witness.json` SHA-256 `f124fa36…` is byte-identical across modes; replay in `delta-replay.json`. Mutations, each failing in both modes on its intended check: λ₂ weight −2 (covariance), source exponent τ⁴ on u (covariance), shear sign B+sA (kernel-slot action). Peak wall 1.0 s. Producer controls read: both `check.py` mutations are meaningful; the two `composition_check.py` mutations act on literal fixtures, and its count line 33−13+1+1 is arithmetic on literals rather than data, which my census supplies independently.
+
+## Decision
+
+The delta is mathematically sound as a smaller **sufficient** counterexample client on a μ2-fixed locus with 22 coordinates. Nothing here evidences a point, a properness verdict, a solve-time advantage, or an exclusion theorem for the symmetric locus; absence of an applicable result is not openness. Stop after this delta; no construction authority follows.
+
+<!-- BODY-END -->

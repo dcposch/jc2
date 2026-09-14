@@ -1,0 +1,52 @@
+{
+  "schema": "f10-mixed-univariate-runtime/v2",
+  "enabled": false,
+  "job": "f10-mixed-univariate-bezout-20260912",
+  "worker": null,
+  "boot_id": null,
+  "hostname": null,
+  "not_before": null,
+  "deadline": null,
+  "uid": null,
+  "gid": null,
+  "paths": {
+    "work": "/opt/jc2-mixed-20260912",
+    "mount": "/opt/jc2-mixed-20260912/science-tmpfs",
+    "output": "/opt/jc2-mixed-20260912/science-tmpfs/output",
+    "admin": "/opt/jc2-mixed-20260912/science-tmpfs/admin",
+    "python": "/usr/bin/python3.12",
+    "setpriv": "/usr/bin/setpriv",
+    "caprun": "/opt/jc2-mixed-20260912/runtime/run_capped.py",
+    "dispatcher": "/opt/jc2-mixed-20260912/runtime/dispatch.py",
+    "authority": "/opt/jc2-mixed-20260912/science/authority.py",
+    "produce": "/opt/jc2-mixed-20260912/science/produce.py",
+    "check": "/opt/jc2-mixed-20260912/science/check.py",
+    "probe": "/opt/jc2-mixed-20260912/runtime/probe.py"
+  },
+  "pins": {
+    "python": null,
+    "setpriv": null,
+    "caprun": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+    "dispatcher": "079f9ad7b92e64af5c5fc6a5e17de14ffa5245627ee5c8a4ce0ef2a018a2fa5d",
+    "authority": "ecdd37dfb900a13dca6dac03dcec3a608c7fd575d3ffccb1ec3976fd400b2097",
+    "produce": "8aee305b5fc32f0a20f2bb8ccfe01ac1c389c98594ea7724070e1badfae2abe0",
+    "check": "1ab7f3b3e08178eecabd1b2af86620554a9006fbfffe35378c92940c27a4a5a5",
+    "probe": "16d723b7fbe6dc218351274e4078df1959add5c2914174079d707fdc14e17158"
+  },
+  "native_manifest": {
+    "path": "/opt/jc2-mixed-20260912/meta/source-native-manifest.json",
+    "sha256": null
+  },
+  "library_paths": ["/opt/jc2-mixed-20260912/lib"],
+  "qualification": {
+    "path": "/opt/jc2-mixed-20260912/meta/qualification.json",
+    "sha256": null
+  },
+  "caps": {
+    "wall": 3540,
+    "cpu_quota": "80000 100000",
+    "cpu_burst": "0",
+    "memory": 34359738368,
+    "tmpfs": 268435456
+  }
+}

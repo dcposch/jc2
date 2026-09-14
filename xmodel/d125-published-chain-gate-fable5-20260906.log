@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and published at `xmodel/d125-published-chain-gate-fable5-20260906.md` (SHA-256 `5be50d00…`, 1,851 words, unique terminal `<!-- BODY-END -->`, no seal, no `charge_basis` line). Finished at 22:23 UTC against the 22:35 deadline.
+
+**Overall verdict:** the necessary-direction implication survives. I found no failed arrow. Separate verdicts:
+
+- **q=5 and both root systems: CONFIRMED.** Definition 6.2 and Remark 6.3 make the starting corner type II.b, so Theorem 7.6(3) applies at j=0 and the weights 4 versus 5 give `en F=(4,16)` before A1 enters. I re-derived both quartic systems from the full two-variable bracket, and the `(2,2)` case by coefficient extraction; the producer's `c=(1+a)/(9a^2)` is the same field element as my `5/(9a(1+a))`.
+- **Lower transport: CONFIRMED, with my own reformulation.** I checked Prop 7.3's positivity chain direction by direction, the joint-edge argument via Prop 1.13 plus the monomial Euler identity, and the after-cut support bounds. GGV2 Prop 2.1 is self-contained; its dependence on Cor 1.6 only excludes k=1 and is not load-bearing.
+- **Upper completeness: CONFIRMED.** Six candidates, four exclusions replayed, unequal assignment forced by parallelism.
+- **Full polygon implication: CONFIRMED conditionally** on the stated hypothesis, the previously gated rectangle lemma, and the quoted GGV statements listed in the report.
+- **Inverse and Roy/Strinz attachment: GAP, correctly declared** by the producer.
+
+Two producer arguments were replaced with cheaper exact ones: Prop 2.11(5) is not licensed at ρ<0, so Euler uniqueness rests on a direct order-at-zero computation; the "both polygons have the edge" step needs no common-power lemma.
+
+**Controls** are in `box/d125-published-chain-gate-20260906/`: the producer's checker passes in normal and `-O` mode and fails on the injected vertex in both; my own 40-check script passes, including changed objects (ab=2, a∈{2,1/2,3}, an x^-3 witness, transposed assignment).
+DIVERT path=xmodel/d125-published-chain-gate-fable5-20260906.md status=CLEAN body_bytes=12879 body_sha256=5be50d001d285481233c8de415b2f4d22411a22cb930a0c1db287c0579b3cd7b

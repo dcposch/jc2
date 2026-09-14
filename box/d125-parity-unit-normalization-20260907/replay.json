@@ -1,0 +1,63 @@
+{
+  "caps": "30wall/25CPU seconds,512MiB per subprocess",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a04393cf75fbc22d2ff4fb4480fa27600921fba57de42cd5b2556f80cff7e39c"
+    },
+    {
+      "mutation": "--mutate-face",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "0c794234d1264f016dca1b61436e0a2fb740580480fef895aaa48ec37d9d4551",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-c-power",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "654ca1942bf037ee5fc52765120282bc1fd06efded90eeff198f4047435cfaba",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-guard",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "40053d85b846bd0d1d1b021d49e8f146ca08311bee599ce61ffad2b26268cea1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a04393cf75fbc22d2ff4fb4480fa27600921fba57de42cd5b2556f80cff7e39c"
+    },
+    {
+      "mutation": "--mutate-face",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "0c794234d1264f016dca1b61436e0a2fb740580480fef895aaa48ec37d9d4551",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-c-power",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "654ca1942bf037ee5fc52765120282bc1fd06efded90eeff198f4047435cfaba",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-guard",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "40053d85b846bd0d1d1b021d49e8f146ca08311bee599ce61ffad2b26268cea1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "writers_finished": true
+}

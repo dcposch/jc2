@@ -1,0 +1,112 @@
+{
+  "tag": "baseline43",
+  "weight": [
+    4,
+    6
+  ],
+  "cutoff": 43,
+  "minor_jet0": false,
+  "h3_coordinate_count": 7,
+  "variables": [
+    "Hc_1_7",
+    "Hc_1_8",
+    "Hc_2_6",
+    "Hc_2_7",
+    "Hc_3_6",
+    "Hc_4_5",
+    "Hc_5_4"
+  ],
+  "template": {
+    "0,7": "1",
+    "0,8": "2",
+    "0,9": "1",
+    "1,7": "Hc_1_7 + Hc_1_8",
+    "1,8": "Hc_1_8",
+    "2,6": "Hc_2_6 + Hc_2_7",
+    "2,7": "Hc_2_7",
+    "3,6": "Hc_3_6",
+    "4,5": "Hc_4_5",
+    "5,4": "Hc_5_4"
+  },
+  "raw_rows": {
+    "minor_n1_pi0": "-Hc_1_7",
+    "minor_n2_pi0": "Hc_2_6",
+    "minor_n3_pi0": "7*Hc_1_7*jet1 - Hc_1_8*jet1 + Hc_3_6",
+    "minor_n4_pi0": "7*Hc_1_7*jet2 - Hc_1_8*jet2 - 6*Hc_2_6*jet1 + Hc_2_7*jet1 - Hc_4_5 - jet1**2",
+    "minor_n5_pi0": "-21*Hc_1_7*jet1**2 + 7*Hc_1_8*jet1**2 - 6*Hc_2_6*jet2 + Hc_2_7*jet2 - 6*Hc_3_6*jet1 + Hc_5_4 - 2*jet1*jet2",
+    "minor_n5_pi1": "7*Hc_1_7 - Hc_1_8",
+    "minor_n6_pi0": "-42*Hc_1_7*jet1*jet2 + 14*Hc_1_8*jet1*jet2 + 15*Hc_2_6*jet1**2 - 6*Hc_2_7*jet1**2 - 6*Hc_3_6*jet2 + 5*Hc_4_5*jet1 + 7*jet1**3 - jet2**2",
+    "minor_n6_pi1": "-6*Hc_2_6 + Hc_2_7 - 2*jet1",
+    "minor_n7_pi0": "35*Hc_1_7*jet1**3 - 21*Hc_1_7*jet2**2 - 21*Hc_1_8*jet1**3 + 7*Hc_1_8*jet2**2 + 30*Hc_2_6*jet1*jet2 - 12*Hc_2_7*jet1*jet2 + 15*Hc_3_6*jet1**2 + 5*Hc_4_5*jet2 - 4*Hc_5_4*jet1 + 21*jet1**2*jet2",
+    "minor_n7_pi1": "-42*Hc_1_7*jet1 + 14*Hc_1_8*jet1 - 6*Hc_3_6 - 2*jet2",
+    "minor_n8_pi0": "105*Hc_1_7*jet1**2*jet2 - 63*Hc_1_8*jet1**2*jet2 - 20*Hc_2_6*jet1**3 + 15*Hc_2_6*jet2**2 + 15*Hc_2_7*jet1**3 - 6*Hc_2_7*jet2**2 + 30*Hc_3_6*jet1*jet2 - 10*Hc_4_5*jet1**2 - 4*Hc_5_4*jet2 - c - 21*jet1**4 + 21*jet1*jet2**2",
+    "minor_n8_pi1": "-42*Hc_1_7*jet2 + 14*Hc_1_8*jet2 + 30*Hc_2_6*jet1 - 12*Hc_2_7*jet1 + 5*Hc_4_5 + 21*jet1**2",
+    "minor_n8_pi2": "0"
+  },
+  "Qstar_pivots": [
+    {
+      "row": "minor_n1_pi0",
+      "variable": "Hc_1_7",
+      "coefficient": "-1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n2_pi0",
+      "variable": "Hc_2_6",
+      "coefficient": "1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n3_pi0",
+      "variable": "Hc_3_6",
+      "coefficient": "1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n4_pi0",
+      "variable": "Hc_4_5",
+      "coefficient": "-1",
+      "resolved_value": "jet1**2"
+    },
+    {
+      "row": "minor_n5_pi0",
+      "variable": "Hc_5_4",
+      "coefficient": "1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n5_pi1",
+      "variable": "Hc_1_8",
+      "coefficient": "-1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n6_pi1",
+      "variable": "Hc_2_7",
+      "coefficient": "1",
+      "resolved_value": "2*jet1"
+    }
+  ],
+  "zero_rows": 1,
+  "residual": {
+    "minor_n6_pi0": "-jet2**2",
+    "minor_n7_pi0": "2*jet1**2*jet2",
+    "minor_n7_pi1": "-2*jet2",
+    "minor_n8_pi0": "-c - jet1**4 + 9*jet1*jet2**2",
+    "minor_n8_pi1": "2*jet1**2"
+  },
+  "coefficient_field": "QQ",
+  "ring_variables": [
+    "Zc",
+    "c",
+    "jet1",
+    "jet2"
+  ],
+  "generator_order": "residual label ascending, then Zc*c-1",
+  "groebner_order": "grevlex",
+  "groebner_basis": [
+    "1"
+  ],
+  "localized_unit": true,
+  "elapsed_seconds": 0.12860003905370831
+}

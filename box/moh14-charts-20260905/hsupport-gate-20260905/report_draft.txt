@@ -1,0 +1,160 @@
+Moh h-support gate — Astra — 2026-09-05
+
+**Disposition: the two old h caps are not justified by D1. The raw 76-coordinate repair is necessary, but it is not the whole source-support proof. A second, explicit outer-disc completion supplies a source-to-chart map for all twelve fibres, while preserving the actual 425-generator control. No class is declared killed by this report.**
+
+The final consumable chart family is `box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/classes/`. The preceding `hsupport-gate-20260905/classes/` family records the literal 76-coordinate repair and is retained as an audited intermediate, with its D1-centering hypothesis explicit. Do not conflate those two families or transfer a solver answer between them by stem name. The source-complete charts have 487, 473, 455; 136, 111; 77; 218, 292, 185; 129; 376, 343 parameters respectively, including c and excluding its inverse variable.
+
+**Custody and scope.** Before reading the mathematical inputs I constructed a manifest mechanically with awk from `xmodel/moh-hsupport-gate-astra-20260905.run.v2`: join its numbered `_basename` and `_sha256` fields and prepend its `lane_inputs_dir`. `sha256sum -c` returned OK for all ten frozen files in `/tmp/jc2-lane.zzLFCU/inputs`. The retained manifest is `box/moh14-charts-20260905/hsupport-gate-20260905/frozen-inputs.sha256`. There was no content mismatch. The declared frozen basis is `9aede1030ef87e5c47f28aa793a4c431edf62882`; the run started at 12:43:39Z. Source/algebra, support enumeration, and solver operations were independently checked by same-model internal workers. This is a proof and instrument submission, not a claim of external review or promotion.
+
+Only the allowed chart directory and this requested report were edited. Frozen inputs, the desk comparison in `box/ideation1200-astra-20260905/`, other reports/ledgers, and the Lean tree were not edited. Old emitted classes and their generator files were preserved. No new exit-price assertion is made, so the FALLACY-v2 exit-charge declaration is not applicable.
+
+**1. What Moh's D1 statement actually gives.** Let k be algebraically closed of characteristic zero and put t=x^(-1). The descended pair is polynomial and monic in y, of y-degrees n'=eK and m'=qK, with K=gcd(n',m'), and J(P,Q)=c x^ell, c≠0. Prime marks are labels. Write a monomial as y^a x^b; the implementation stores the ordered pair `(b,a)`. The twelve source rows give s'=3 in eleven cases and s'=4 in one case, with ell=3,2,1 as in the class table below.
+
+Moh's approximate-root definition on printed p.148 and Theorem 1.1 on p.149 distinguish a polynomial approximate root from arbitrary matching leading terms. Theorem 1.2, printed p.149/PDF page 10, imposes y-degree <K on expansion coefficients and order at least j times the root accuracy. Its hypotheses include a common coherent complete system and the corresponding quasi-approximate root. It does not impose total degree ≤jK. Nor does it state that a y-monic polynomial of degree K has x-degree ≤K−V2. Frozen `order-basis-full-gpt55-20260903.md:38` correctly describes the result as a necessary order lower bound, but the later inventory also imposed caps that do not follow from that lower bound.
+
+For a CENTERED generic D1 root σ1=π t^(δ1), where π is transcendental over k, define
+
+    D_i = {(b,a) in Z_{≥0}² : 0≤a<K,
+                 b≤floor(a δ1 − i B)},
+    B = B_safe = V2 δ1 + (K−V2) δ_s.
+
+Then the full raw D1 h inventory is D_1:
+
+    h = y^K + Σ_{(b,a) in D_1} h_ba x^b y^a.
+
+Every listed coefficient is independently free in the over-approximation. The expansion uses
+
+    P = h^e + Σ_{i=1}^e α_i h^(e−i),
+    Q = h^q + Σ_{i=2}^q β_i h^(q−i),
+    supp(α_i), supp(β_i) ⊆ D_i,   deg_y α_i,deg_y β_i<K.
+
+The β1 block is zero because h is the unique qth approximate root of Q. This is not an optional coefficient gauge. Constants in the terminal α_e and β_q blocks may subsequently be removed by explicit translations of P and Q. No scalar shear is used on these twelve fibres: the relevant full α_(e−q) block is never just the scalar line.
+
+Here is the elementary support proof, conditional precisely on the centered root. Substitution sends x^b y^a to π^a t^(aδ1−b). At the smallest occurring t-exponent, different a give different powers of π; for fixed a the exponent determines b. Thus cancellation cannot raise the minimum. Consequently
+
+    ord_t F(t^(-1),πt^(δ1)) = min_{F_ba≠0}(aδ1−b).
+
+The order floor ≥iB is therefore equivalent to the displayed support inequality. Monicity isolates y^K, whose weight Kδ1 is ≥B because δ1≥δ_s. For h, root multiplicity V2 inside D1 and K−V2 outside it give an order floor B: each inner factor contributes δ1 at the generic point, and every outer separation is at least δ_s. This is the weak safe floor, not the tighter and generally unjustified replacement δ_s→δ2. Negative upper bounds in the floor loop contribute no monomial; nonnegative upper bounds include BOTH endpoints. There is no residual infinite support: a ranges over K integers and each b range is finite.
+
+The old code also imposed
+
+    b+a≤K,   b≤max(K−V2,0).
+
+Those are respectively a total-degree cap and an x-width cap. The source explanation about a y^V2 factor on the degree-K face cannot impose either condition on every lower coefficient, and cannot establish that degree K is the highest total-degree face. This is exactly the FALLACY-v2 distinction between an order floor and attainment/exhaustiveness.
+
+**2. The 76-coordinate comparison, per fibre.** The frozen compiler's `h_inventory_necessary` at lines 189–203 was compared with its actual emitted `poly h` line, not only with a prior inventory routine having the same caps. Exact rational enumeration independently matched all twelve old h polynomials and metadata. All twelve old supports are subsets of D_1; exactly eight are strict. Counts below exclude the monic term y^K. “Raw parameters” includes c and the unchanged α/β gauges, but excludes the inverse variable.
+
+{{RAW_TABLE}}
+
+For complete reproducibility, the following compact list gives ALL 76 missing monomials. In `y^a x^{r,…,s}`, every integer exponent in the indicated set is a separate free coordinate, not a tied coefficient or a binomial expansion:
+
+{{OMISSIONS}}
+
+The omissions split as 41 failing only the total-degree cap, six failing only the x-width cap, and 29 failing both. Therefore simply removing one of the two caps does not discharge the obligation. `independent-fibre-audit.json`, `verification.json`, and `verify_hsupport.py` record the exact tuples, parameter maps, builder hashes, and comparisons. The routine now returns the same full finite loop as a deficit-one D1 coefficient inventory. Every new h coordinate is free; none is tied to a pre-existing parameter.
+
+A useful negative control is h=y(y−x²)^3. It is monic in y of degree four, but has total degree seven. On M6_13/V1_1 its minimum D1 weight is −15/4; on V1_3 it is −11/2. In particular x²y³ is D1-allowed on both and excluded by total degree ≤4. This refutes an inference from monicity plus the given D1 floor. It does not assert a source-realized Jacobian pair. Also, when q=3 and K=4, [y^11]Q=3[y^3]h: the β2h and β3 blocks have y-degree ≤7 and ≤3. Hence an omitted y³ coefficient of h cannot simply be absorbed into those β blocks while keeping Q fixed. 
+
+There is no exhibited group action proving the OLD caps WLOG. A declaration that the characteristic would change is not such an action. To justify a normalization one must give a group element, show its effect on the missing directions, and prove that the allowed target chart and necessary hypotheses are preserved. The repair below uses a genuine group element, but it maps to a completed chart; it does not retroactively validate the old capped chart.
+
+**3. A second missing hypothesis: a centered D1 root.** The preceding raw support formula is exact for σ1=πt^(δ1). Moh's Definition 5.1(4), printed p.179, instead writes the generic point with a center, σ_i=Σ a_jt^j+πt^(δ_i). Proposition 5.6, printed p.188, separately assumes the special centered form. Polynomiality, monicity, and the numerical δ_i do not by themselves provide it for every descended pair. Proposition 6.3, pp.197–198, supplies polynomiality in the descended variables, monicity and specified y-degrees, and a monomial Jacobian; it is not an assertion of this D1 centering or of total degree equal to y-degree.
+
+The problem is not purely verbal. On the M6_13/V1_1 numerical data consider
+
+    h = y(y−x²)^3 + x^5,
+    x=t^(-1),   σ1=t+πt^(9/4).
+
+The t^(−5) terms from −x^6y and x^5 cancel. The first remaining term is −πt^(−15/4); all other terms have higher order. Thus ord h(σ1)=−15/4=B. One root is near t, and the other three are near x²; the outer logarithmic radius is −2. Yet x^5 has raw weight −5<B and is absent even from the literal 76-coordinate repair. This is a countercontrol to deriving raw monomial weights from a nonzero-center disc; `support-countercontrols.json` records exact Laurent expansion and trace-translation checks. It is not claimed to realize all characteristic data of a descended monomial-Jacobian pair. It shows exactly why an additional source argument is required.
+
+I therefore do not promote “all raw D1 monomials present” to “all sources covered” by terminology. Nor do I classify the centering issue only by whether δ1>1: nonintegral center exponents also need a source argument. Instead the final repair establishes a different finite source envelope and includes it alongside every raw D1 coordinate. This discharges the source-support gate without requiring a conjectural D1-centering theorem.
+
+**4. Source-support theorem using the outermost common disc.** The following argument applies to every class here, including s'=4. It assumes exactly the descended monomial-Jacobian datum and its effective characteristic tower; it does not assume two points at infinity for the descendant, a partition of h, or a second descent.
+
+Moh explicitly extends Proposition 4.6 to J=x^ell in the remark on printed p.171/PDF page 32. Its modified order equation replaces −1+δ by −1−ell+δ. Proposition 5.1, pp.173–175, constructs the minimal disc containing all roots of g and its relevant characteristic polynomials, and Definition 5.1's note on p.179 identifies it as D_s. In particular it contains the roots of P=g and Q=T1 in the descended datum. For the last effective characteristic entry M_s, where M_s≠n'−1 after the p.174 convention, the terminal equation is
+
+    δ_s = (δ_s−(ell+1))/(n'−M_s),
+    δ_s = −(ell+1)/(n'−M_s−1).
+
+A nonzero c has valuation zero and changes no order equation. Alternatively, the polynomial scaling x→a x with a^(ell+1)=c^(-1) reduces literally to J=x^ell over algebraically closed k, preserving y-monicity and root orders. The child terminal M is independently licensed: Prop.6.3(2) scales the y-degrees of the corresponding characteristic polynomials by u_s/d_s; Moh p.154 recovers characteristic data from those degrees, and the homogeneous auxiliary identities on p.150 give M_i′=(u_s/d_s)M_i. The outer radius therefore uses n′, M_s′ and ell, with no copied inner V root-count assumption. Raw V labels are used only to retain the frozen D1 coordinates. All twelve have δ_s<0, and the p.174 deletion is a no-op on their enumerated effective data. Put d=−δ_s>0.
+
+Let Q be monic of y-degree N=qK and let
+
+    η(x) = −[y^(N−1)]Q(x,y)/N ∈ k[x].
+
+This is the mean of the Q roots. If the outer disc is {z:ord(z−A)≥δ_s}, the average of roots in it also lies in it: division by the nonzero integer N has valuation zero and the ultrametric inequality applies. Every P root and Q root ρ therefore satisfies ord(ρ−η)≥δ_s. The explicitly allowed polynomial automorphism is
+
+    φ(x,y)=(x,y+η(x)),       φ^(-1)(x,y)=(x,y−η(x)).
+
+Its determinant is one. The pair P∘φ,Q∘φ remains polynomial and monic with the same y-degrees, and its Jacobian remains cx^ell because x is unchanged. The roots in the new y-coordinate are ρ−η. Pairwise root contacts, and hence disc radii, are unchanged. This is the group element required by FALLACY-v2. A denominator in η is only the constant N, a unit in characteristic zero; there is no localization at a parameter or discarded branch.
+
+Give x weight 1 and y weight d. For a monic polynomial F of y-degree L all of whose roots have valuation ≥−d, its coefficient of y^a is an elementary symmetric sum of L−a roots. Its t-order is ≥−d(L−a). Since that coefficient is polynomial in x=t^(-1),
+
+    deg_x [y^a]F ≤ floor(d(L−a)),
+    weighted_degree F ≤ dL.
+
+This applies simultaneously to the translated P and Q. It allows a possibly smaller subfamily than the raw D1 inventory in some directions and a larger one in others. It will be contained in our final UNION support; no equality with raw D1 is claimed.
+
+Take h to be the unique qth approximate root of the translated Q, monic of y-degree K. Write
+
+    h=y^K+Σ_{j=1}^K H_j(x)y^(K−j).
+
+Matching the coefficient of y^(qK−j), for j=1,…,K, in Q−h^q recursively solves qH_j as that coefficient of Q minus a polynomial in earlier H_i whose products have total index j. Induction gives deg_x H_j≤floor(dj): the degree of each such product is at most the sum of its bounds, hence at most floor(dj). Division by q is by a constant unit. This proves polynomiality and the necessary h support directly, without assuming a common inner-disc quasi-root theorem:
+
+    G_1 = {(b,a):0≤a<K, 0≤b≤floor(d(K−a))}.
+
+Moreover deg_y(Q−h^q)<(q−1)K, so the β1 coefficient in the h-adic expansion is exactly zero. That construction is compatible with all coefficient specializations over k; it introduces no nonvanishing hypothesis beyond c≠0.
+
+Monic division by h preserves the weighted bounds. If weighted_degree F≤dL, a leading-y monomial L_r(x)y^r produces quotient L_r(x)y^(r−K) of weight ≤d(L−K). Its product with h has weight ≤dL; subtracting it cannot introduce a term of larger weight. Repeating terminates in the y-degree, including when a leading coefficient vanishes under specialization. Iterating the division gives the displayed P,Q expansions with
+
+    G_i = {(b,a):0≤a<K, 0≤b≤floor(d(iK−a))}
+
+for α_i and β_i. All divisions are monic, over the declared polynomial coefficient ring; there is no hidden fraction field or pivot saturation.
+
+It follows that the FINAL inventory in block i may be
+
+    S_i = D_i ∪ G_i.
+
+Use S_1 for h, S_i for α_i, and S_i for β_i with i≥2. Every coordinate in the union is free. A trace-normalized actual pair is represented by its G_i coefficients and zero values for the other coordinates. This gives a source-to-chart map even if its D1 center is nonzero, and simultaneously retains all 76 previously omitted D1 h coordinates. The finite enlargement is deliberately an over-approximation: additional points do not certify a source or a Keller pair, but UNIT excludes every source in the fibre.
+
+Finally, remove the constant terms of α_e and β_q by translating P and Q by constants. The Jacobian is unchanged; h is unchanged because q≥2 and the top K coefficients defining its approximate root are unaffected by changing Q's constant. These are the only target gauges. Inverse of c is represented by a new variable T with Tc−1, rather than assumed by a fraction-field computation. This proves the support theorem needed for the final charts.
+
+**5. Final fibre verdicts and complete inventories.** Raw h completeness alone is recorded separately from source completeness. Ten fibres gain further h coordinates from G_1; Mm15/V1_9 has unchanged h but needs three further α/β coordinates; the s'=4 fibre is unchanged in every block. Thus the final completion adds 38 h coordinates beyond the raw 76, and 818 total parameters beyond the raw-h-repaired family. These numbers are not generator counts. Exact lists for every added α/β and h coordinate, including all endpoints, are in `source-complete/support-completion.json` and are independently verified by `verify_source_complete.py`.
+
+{{FINAL_TABLE}}
+
+“REPAIRED” means the completed chart has the full necessary source over-approximation proved above. It does not mean solved or killed. “h-SUPPORT-COMPLETE” for the unchanged s'=4 control means its existing h AND coefficient supports already contain the entire G_i source envelope; it requires no new equation. The raw-only source normalization remains unproved and is bypassed by a proved enlargement; raw-only solver results retain that limitation.
+
+**6. The control discrepancy and generator preservation.** The requested description “V3_2, 425 gens” combines two different artifacts. The frozen fix report identifies the 425-vs-425 semantic regression at lines 133–140 as `C_n24m16_Mm12_m2_5_ell1_s4_union`, with 77 parameters. At line 146 it identifies the legacy M12_17/V3_2 count as 514. The current original V3_2 rows file is only the 42-byte header, SHA-256 `7f2d716d35087e97752089d9d8041944bd5a49fe5c1c4b1118591e1f3d587130`; it is not a 425-generator certificate. One cannot both add its missing x²y^7 and x³y^7 coordinates and certify a literally unchanged full generator set.
+
+The true s'=4 union control has 425 data rows, 48,494,347 bytes, SHA-256 `af3cf058c7e949d7e9958b1c9120b9350436c6eca7a952afbc8ea32f9794ef58`. Its fibre copy also has 425 rows, SHA-256 `35bb95778825af58477001b645c564449fef2995b9ab3a61937efba3b041efab`. All 77 metadata variables occur. Its eleven h coordinates already equal raw D1 and contain G_1; all α/β coordinates contain G_i. The raw repair's builder is byte-identical to the old union builder, SHA-256 `5a0628fbba3bc036624162e477a91c80b9b3a3c715a1eda321b8644bbdbb460f`. The final source-complete executable body is also unchanged; only support-custody metadata/header wording changes. The original 425 generators were not overwritten.
+
+{{CONTROL_STATUS}}
+
+There is a stronger general control for all eighteen stems, including V3_2: setting EVERY added h/α/β coefficient to zero reproduces the original h, AA_i, BB_i setup polynomials exactly. Monic h-adic division commutes with this specialization. Therefore the old ideal is the image of the new ideal under that declared parameter map, even if a missing legacy generator file prevents a literal row-set comparison. This proves a specialization statement, not equality of old and new ideals. It is precisely why old UNIT cannot be transported to the completed chart.
+
+**7. Builder, ring, and solver consumption.** The compiler now defaults its CLI to source-complete support, keeps raw D1 as an explicitly conditional diagnostic, and applies `builder_fix.fix_text` at every emission. That ensures a support re-emission cannot silently restore the old transcendental coefficient field and its OOM behavior. The final ring is
+
+    Q[y,x,h_ba,Ai_ba,Bi_ba,c], order (lp(1),dp(N+1)),
+
+with the y-first block, so lead(h)=y^K independently of the x-degrees. Monic `division()` returns a unit matrix equal to one. Extraction writes all coefficient rows. The existing level cap is amply exhaustive: deg_y P=eK, deg_y Q=qK, so deg_y J≤(e+q)K−1 and its h-adic level is at most e+q−1. Adding x powers never increases that y-degree bound. The runtime gates check monicity, division units, a nonzero target coefficient polynomial, completion marker, and agreement between declared and actual row count. A header-only file, timeout, or `halt 1` is not a valid empty ideal or a full generator set.
+
+The native inherited builder uses low polynomial Q first in its Jacobian, whereas `jacobian_check.py` presents high polynomial P first. This is the harmless but explicit map c_native=−c_(P,Q), T_native=−T_(P,Q); Tc−1 maps to itself. The source-support and UNIT statements are invariant under this invertible sign map. Merely matching variable names would not establish it.
+
+For an expanded direct representation, the polynomial coefficient ideal of J−cx^ell in ordinary x,y equals the h-adic coefficient ideal. Over the parameter ring, monicity makes {y^a h^j:0≤a<K,j≥0} a triangular basis over Q[parameters,x] with diagonal ones. Both coefficient lists are finite polynomial combinations of the other. This proves equality of coefficient ideals before and after adjoining Tc−1, including nonreduced parameter fibres. A direct emitter therefore changes the generator list, not the chart or the support obligation. The original control generators were preserved; alternatives run in separate paths.
+
+{{SOLVER_STATUS}}
+
+UNIT custody includes exact input and row selection, coefficient field and variable map, inverse equation, solver identity, return code and valid output envelope. `msolve_chart.py` round-trips the rename and uses the pinned `msolveio` emitter. A subset UNIT is enough only if every selected generator is actually a generator of the declared completed presentation (including a validated graph extension). A cap, a prefix PARAMETER specialization, or a mismatched metadata/rows pair is not such a subset.
+
+A modular UNIT is only a signal. In particular the installed msolve 0.6.5/0.10.1 behavior can return a first-prime `[1]` even when invoked in characteristic zero; a zero-characteristic label alone is not an exact rational membership certificate. The acceptance rule is independent exact-Q confirmation on the identical selected generators, or an explicit rational identity Σ a_i f_i=1 checked in the declared ring. Degree-bounded or timed-out non-UNIT output proves neither nonemptiness nor emptiness. No old timeout, partial extraction, modular result, or solver success string is consumed as theorem (T).
+
+**8. Six-class consumption rule.** For a class, the “union chart” is the independent-coordinate union of all its completed fibre inventories. It contains the literal fibre union by setting extra coordinates to zero. UNIT on the full union is sufficient; NONUNIT on it does not prove a fibre has a source. A stronger consumption rule now holds: G_i depends only on (n′,m′,M_s′,ell), so it is the SAME support for every V label in a class. Every final S_i(V)=D_i(V)∪G_i contains that common source-receiving chart. Consequently exact-Q UNIT on ANY ONE final completed fibre suffices for the whole class, by the explicit G_i coefficient embedding. This is a proved coverage map, not representative-name matching; it was unavailable for the old raw-only charts. Corrected class manifests use post-gauge parameter counts; a pre-gauge count bug of two parameters was fixed without changing generators.
+
+{{CONSUMPTION_TABLE}}
+
+Each YES is conditional on an ACTUAL exact-Q UNIT on that exact completed union or any one completed fibre chart, with its declared ring/saturation and validated extraction. It is a valid (T)-kill of the indicated class because the source-support theorem above supplies the missing necessity map. This does not assert that any such UNIT exists. For the five enlarged classes, a UNIT on an old capped or raw-only chart is not covered by that YES. For the unchanged s'=4 chart the source-envelope containment is already verified, so an exact-Q UNIT on the correctly identified existing 425-generator chart would be consumable, subject to the unchanged non-support dependencies of the Moh census/descent pipeline.
+
+The mathematical endpoint of this gate is thus concrete: all twelve source maps land in the final finite charts, all requested omitted D1 coordinates have been freed, the true control has the same generators, and every computational result has a typed consumption rule. The ≤100 finish still requires actual characteristic-zero emptiness certificates covering all remaining classes, together with the already declared upstream census, Xu-screen, descent and printed-row dependencies. A nonempty over-approximation would not be a Jacobian-conjecture counterexample.
+
+**Reproduction and artifact custody.** `source_complete_emit.py` reproduces all eighteen final native builders through the fixed builder; `verify_hsupport.py` reproduces the 76-coordinate audit; `verify_source_complete.py` independently computes each D_i∪G_i inventory and checks actual setup polynomials, rings, gauges, counts, class unions, and specialization maps. `source-proof.md` gives the page and local-line source derivation; the proof here does not rely on solver output. `source-complete/ops/` and its fleet status records give launch, input, output, and return-code custody. The hash manifest banked with this report binds the completed support artifacts; it is an integrity record, not a substitute for their mathematical maps or exact-Q certificates.
+
+Operational cutoff: 13:40:51Z (57m12s). `source-complete/ops/final-custody.sha256` verifies 515 artifacts; no lane solver or driver remains running.

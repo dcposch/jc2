@@ -1,0 +1,135 @@
+{
+  "schema": "jc2-static-diagnosis-custody/v1",
+  "task": "caprun-false-quiet-diagnosis-astra-20260911",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "COMPLETED_STATIC_DIAGNOSIS",
+  "first_action_utc": "2026-09-11T07:11:56Z",
+  "publication_reserve_utc": "2026-09-11T07:25:00Z",
+  "hard_stop_utc": "2026-09-11T07:28:00Z",
+  "transaction_opened_utc": "2026-09-11T07:12:45Z",
+  "transaction_closed_and_finalized_utc": "2026-09-11T07:21:08Z",
+  "expected_verify_final_whole_and_postpins_completed_by_utc": "2026-09-11T07:21:27Z",
+  "custody_prepared_utc": "2026-09-11T07:23:33Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report": {
+    "sha256": "dee6b9472b5e2151963569342d2d9ad905524894e63f3a91c537d2589fbf69c5",
+    "path": "/home/ubuntu/jc2/xmodel/caprun-false-quiet-diagnosis-astra-20260911.md"
+  },
+  "transaction": {
+    "sha256": "0e2e5bfe478eab0954a5d3ef005360c79b64d650070c33ad1e8d411a0ad4c72f",
+    "path": "/home/ubuntu/jc2/xmodel/caprun-false-quiet-diagnosis-astra-20260911.md.artifact.json",
+    "expected_verification": "VERIFIED"
+  },
+  "input_census": {
+    "initial": 8,
+    "explicit_root_delta": 1,
+    "total": 9
+  },
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/ops/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "read_mode": "FRESH_WHOLE",
+      "charge": "INITIAL_EIGHT",
+      "pre_sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "post_sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/probe.py",
+      "sha256": "5f1211e1a77b5ce2bb4cc496deabc533e3c41cdea88ea750149dac886cc09c69",
+      "read_mode": "FRESH_WHOLE",
+      "charge": "INITIAL_EIGHT",
+      "pre_sha256": "5f1211e1a77b5ce2bb4cc496deabc533e3c41cdea88ea750149dac886cc09c69",
+      "post_sha256": "5f1211e1a77b5ce2bb4cc496deabc533e3c41cdea88ea750149dac886cc09c69"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/dispatch.py",
+      "sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24",
+      "read_mode": "FRESH_WHOLE",
+      "charge": "INITIAL_EIGHT",
+      "pre_sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24",
+      "post_sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-execution-root-20260911/harvest/run/jc2-r3-necessaryrows-20260911a/dummy.telemetry.json",
+      "sha256": "97274b0ec6c37a0abd3b1c9ce1e9ecaea6cd80e3eae888da121b4166793b1400",
+      "read_mode": "FRESH_WHOLE",
+      "charge": "INITIAL_EIGHT",
+      "pre_sha256": "97274b0ec6c37a0abd3b1c9ce1e9ecaea6cd80e3eae888da121b4166793b1400",
+      "post_sha256": "97274b0ec6c37a0abd3b1c9ce1e9ecaea6cd80e3eae888da121b4166793b1400"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-execution-root-20260911/harvest/run/jc2-r3-necessaryrows-20260911a/writer/dummy.payload",
+      "sha256": "571aa159908d6bc6bde11f241486d2030626c7ce6824a6c0db4f9482d6c3342a",
+      "read_mode": "FRESH_WHOLE",
+      "charge": "INITIAL_EIGHT",
+      "pre_sha256": "571aa159908d6bc6bde11f241486d2030626c7ce6824a6c0db4f9482d6c3342a",
+      "post_sha256": "571aa159908d6bc6bde11f241486d2030626c7ce6824a6c0db4f9482d6c3342a"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-execution-root-20260911/harvest/run/jc2-r3-necessaryrows-20260911a/dummy.runner-live.json",
+      "sha256": "70355c840fffe0446ac9743ad5236b488fe8f67921a7684d23bddef68431d8eb",
+      "read_mode": "FRESH_WHOLE",
+      "charge": "INITIAL_EIGHT",
+      "pre_sha256": "70355c840fffe0446ac9743ad5236b488fe8f67921a7684d23bddef68431d8eb",
+      "post_sha256": "70355c840fffe0446ac9743ad5236b488fe8f67921a7684d23bddef68431d8eb"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-execution-root-20260911/harvest/run/jc2-r3-necessaryrows-20260911a/dummy.python-live.json",
+      "sha256": "8b9cddd628bcd90ee2180b69860ab162ddb9dee79b60d6e29b20773ce4118f72",
+      "read_mode": "FRESH_WHOLE",
+      "charge": "INITIAL_EIGHT",
+      "pre_sha256": "8b9cddd628bcd90ee2180b69860ab162ddb9dee79b60d6e29b20773ce4118f72",
+      "post_sha256": "8b9cddd628bcd90ee2180b69860ab162ddb9dee79b60d6e29b20773ce4118f72"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-execution-root-20260911/harvest/run/jc2-r3-necessaryrows-20260911a/outer.stdout",
+      "sha256": "b58b6aa31b8d4ddef6c574dc358e4d6da688bee596ddf3900cde57c424aa254b",
+      "read_mode": "FRESH_WHOLE",
+      "charge": "INITIAL_EIGHT",
+      "pre_sha256": "b58b6aa31b8d4ddef6c574dc358e4d6da688bee596ddf3900cde57c424aa254b",
+      "post_sha256": "b58b6aa31b8d4ddef6c574dc358e4d6da688bee596ddf3900cde57c424aa254b"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-execution-root-20260911/harvest/var/lib/jc2-r3-necessaryrows-20260911a/ROOT-RECOVERY/outer-unit.journal.jsonl",
+      "sha256": "2db4e80b6545857fda7d481392e28ccc2af7de7a082da597d3459ea25da2e8ad",
+      "read_mode": "FRESH_WHOLE",
+      "charge": "EXPLICIT_ROOT_NINTH_INPUT_DELTA",
+      "pre_sha256": "2db4e80b6545857fda7d481392e28ccc2af7de7a082da597d3459ea25da2e8ad",
+      "post_sha256": "2db4e80b6545857fda7d481392e28ccc2af7de7a082da597d3459ea25da2e8ad"
+    }
+  ],
+  "owned_excluding_custody": [
+    {
+      "sha256": "dc2d1cb3def08e6d2718e52a680878725a8f46da843babdafe0785c4934deb31",
+      "path": "/home/ubuntu/jc2/box/caprun-false-quiet-diagnosis-astra-20260911/PINS.json"
+    },
+    {
+      "sha256": "dee6b9472b5e2151963569342d2d9ad905524894e63f3a91c537d2589fbf69c5",
+      "path": "/home/ubuntu/jc2/xmodel/caprun-false-quiet-diagnosis-astra-20260911.md"
+    },
+    {
+      "sha256": "0e2e5bfe478eab0954a5d3ef005360c79b64d650070c33ad1e8d411a0ad4c72f",
+      "path": "/home/ubuntu/jc2/xmodel/caprun-false-quiet-diagnosis-astra-20260911.md.artifact.json"
+    }
+  ],
+  "readback": {
+    "all_nine_inputs": "FRESH_WHOLE after prehash; all unchanged at posthash",
+    "report_and_transaction": "FINAL WHOLE readback complete",
+    "pins": "WHOLE readback complete",
+    "open_quantity_cheapest_test": "ONE prospective closed-membership attachment/FIRST review, then at most ONE root-authorized nine-phase AWS-only discriminator; no authorization issued",
+    "collision_check": "Own targets absent before begin; only authorized own files authored",
+    "body_marker": "Unique standalone BODY-END appended LAST before close",
+    "custody": "Self excluded from hash inventory; final custody WHOLE readback and SHA handoff required after creation"
+  },
+  "scope": {
+    "scientific_execution": "NONE",
+    "source_edits": "NONE",
+    "fix_implementation": "NONE; one conditional prose repair design",
+    "historical_kernel_interleaving": "UNKNOWN; counter-schedule is explicitly a hypothesis",
+    "observed_orphan": "Archived same-invocation journal documents systemd SIGKILL of PID8744 after CAPRUN NORMAL_EXIT",
+    "worker_status": "ROOT reports i-0de792cdaff6b0682 TERMINATED with EBS retained; no fresh AWS access or worker duty in this task",
+    "no_follow_on_authority": true
+  },
+  "writer_handoff": "All report and metadata writers cease after custody readback/hash; final message declares ALL WRITERS IDLE."
+}

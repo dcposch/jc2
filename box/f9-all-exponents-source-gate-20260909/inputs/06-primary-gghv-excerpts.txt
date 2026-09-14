@@ -1,0 +1,440 @@
+EXCERPTS ONLY. Original: box/f2-fixed-degree-standardization-gate-20260909/gghv-1708.07936v1.txt
+Original URL: https://arxiv.org/pdf/1708.07936v1
+Full original SHA256: 49df06d11bbc4556a9b09771cdd60ca40a75b7542d327bbb622e09434e6a467e
+Intervals use literal sed newline counting, retaining PDF formfeeds. Omitted intervals are not charged.
+
+=== EXACT ORIGINAL LINES 30-100; BYTES [2471,8385) ===
+                                           6      Possible counterexamples with max(deg(P ), deg(Q)) ≤ 150. . . .                .   .   .   .   .   .   27
+
+
+
+                                                                                          Introduction
+                                               Let K be a characteristic zero field and let L := K[x, y] be the polynomial algebra in two
+                                               indeterminates. The Jacobian Conjecture (JC) in dimension two stated by Keller in [4] says
+                                               that any pair of polynomials P, Q ∈ L with [P, Q] := ∂x P ∂y Q − ∂x Q∂y P ∈ K × defines an
+                                               automorphism f of L via f (x) := P and f (y) := Q. If this conjecture is false, then there exist
+                                               1 Universidad de Buenos Aires.        Facultad de Ciencias Exactas y Naturales. Departamento de
+                                               Matemática. Buenos Aires. Argentina
+                                               2 CONICET-Universidad de Buenos Aires. Instituto de Investigaciones Matemáticas “Luis A. santaló”
+
+                                               (IMAS). Buenos Aires. Argentina
+                                               3 CONICET. Instituto Argentino de Matemática (IAM). Buenos Aires. Argentina
+                                               4 Pontificia Universidad Católica del Perú, Sección Matemáticas, PUCP, Av. Universitaria 1801, San
+
+                                               Miguel, Lima 32, Perú.
+                                               5 Instituto de Matemática y Ciencias Afines (IMCA) Calle Los Biólogos 245. Urb San César. La
+
+                                               Molina, Lima 12, Perú.
+                                               E-mail addresses: vander@dm.uba.ar, jjgucci@dm.uba.ar, rhorruitiner@pucp.edu.pe ,
+                                               cvalqui@pucp.edu.pe.
+                                               2000 Mathematics Subject Classification. Primary 16S35; Secondary 16W30.
+                                               Jorge A. Guccione and Juan J. Guccione were supported by UBACyT 20020150100153BA (UBA) and PIP
+                                               11220110100800CO (CONICET).
+                                               Christian Valqui was supported by PUCP-DGI-CAP-2016-329.
+                                                                                                   1
+2    JORGE A. GUCCIONE, JUAN J. GUCCIONE, RODRIGO HORRUITINER, AND CHRISTIAN VALQUI
+
+
+P, Q ∈ L such that [P, Q] = K × , and there exist m, n, a, b ∈ N, such that m, n > 1 are coprime,
+a < b, the support of P is contained in the rectangle with vertices {(0, 0), m(a, 0), m(a, b), m(0, b)},
+the support of Q is contained in the rectangle with vertices {(0, 0), n(a, 0), n(a, b), n(0, b)}, the
+point m(a, b) is in the support of P and the point n(a, b) is in the support of Q. Note that
+deg(P ) = m(a + b) and deg(Q) = n(a + b).
+   In [3] Heitmann establishes several restrictions on these possible corners (a, b) and in [3, The-
+orem 2.24] he determines various of these possible corners (a, b). Moreover in [3, Theorem 2.25],
+for some of these corners, he finds families {(r + sj, t + uj) : j ∈ N} of admissible pairs (m, n).
+These corners were also found in [1, Remark 7.14], using more elementary methods and discrete
+geometry on the plane. In both articles the lists of possible corners where given without a formal
+proof, referring to a computer program.
+   In [2] we found more conditions on the points (a, b), and in this article we present an algorithm
+that generates the list of points satisfying all the conditions up to a fixed upper bound for a + b.
+Naturally this list is included in the one found in [1, Remark 7.14]. The algorithm also determines
+the families of admissible pairs (m, n), for each of these corners.
+   In order to exploit the simple geometric ideas of our method we also present a graphic interface
+of the program which includes all the filters and allows the user to grasp in detail if and why a
+certain corner is admissible or not.
+   At the end we list all possible corners (a, b) with a+b < 36, and their corresponding (m, n)-
+families. Furthermore if (P, Q) is a counterexample to the Jacobian Conjecture that satisfy
+the inequality gcd(deg(P ), deg(Q)) < 36, then we give additional information on the Newton
+polygons of P and Q. We also provide the same information for the counterexamples that satisfy
+max{deg(P ), deg(Q)} ≤ 150.
+   Along this paper we will freely use the notations of [1].
+
+                  1    Restrictions on possible last lower corners
+The first step in our strategy is to construct a set of points in N0 × N0 , that includes all the
+possible last lower corners (see [2, Definition 3.17]).
+
+Definition 1.1. Let (a, b) ∈ N × N0 and (ρ, σ) ∈ V ∩ [(0, −1), (1, −1)[ (see [1, Definition 1.5]).
+We say that ((a, b), (ρ, σ)) is a possible final pair if one of the following conditions is fulfilled:
+   (1) b = 0 and (ρ, σ) = (0, −1),
+   (2) there exists an admissible chain of length k ∈ N (see [2, Definition 3.15])
+                                                                                           
+                            C = (Cj )j∈{0,...,k} , (Rj )j∈{1,...,k} , (ρj , σj )j∈{1,...,k} ,
+        with Ck = (a, b) and (ρk , σk ) = (ρ, σ).
+Remark 1.2. Recall from [2, Definition 3.17] that if ((a, b), (ρ, σ)) is a possible final pair, then
+(a, b) is said to be a possible last lower corner.
+Remark 1.3. By [2, Definition 3.15(6)], if ((a, b), (ρ, σ)) is a possible final pair, then b < a.
+Remark 1.4. By [2, Remark 3.19], we know that if a > 2b > 0, then ((a, b), (1, −2)) is a possible
+
+=== EXACT ORIGINAL LINES 155-205; BYTES [11872,15281) ===
+13                (ρ, σ) ←      (b − s, r − a)
+                             N1
+14                g ← gcd(ρ + σ, ρa + σb)
+                        ρa + σb
+15                ϑ←
+                            g
+16                if (ρ, σ)r,s < (ρ, σ) < (ρ, σ)a,b , vρ,σ (a, b) ≥ ρ and (ϑ ≤ N1 or ϑ | N2 ) then
+17                    (ρ, σ)a,b ← (ρ, σ)
+18              if (ρ, σ)a,b < (1, −1) then
+                                         
+19                  add (a, b), (ρ, σ)a,b to PFL and add (a, b) to PLLC
+20          b←b+1
+21   return PLLC.
+4         JORGE A. GUCCIONE, JUAN J. GUCCIONE, RODRIGO HORRUITINER, AND CHRISTIAN VALQUI
+
+
+    2     Construction of admissible complete chains up to a certain bound
+Assume that the Jacobian Conjecture is false and define
+           
+   B := min gcd(v1,1 (P ), v1,1 (Q)) : where (P, Q) runs on the counterexamples of J.C. .             (2.1)
+Then, by [1, Corollary 5.21] there exists a counterexample (P, Q) and m, n ∈ N coprime such that
+(P, Q) is a standard (m, n)-pair and a minimal pair (that is, the greatest common divisor of v11 (P )
+and v11 (Q) is B). Let A0 be as in Remark 2.22. By [1, Proposition 5.2 and Corollary 5.21(3)]
+                              1
+                     A0 =         en10 (P ) and gcd(v11 (P ), v11 (Q)) = v11 (A0 ).
+                             m
+This point A0 corresponds to (a, b) in the introduction. In Theorem 2.20 below, we obtain a
+chain                                                                                     
+                        (C0 , . . . , Cj , Aj+1 ) = (A0 , A′0 ), . . . , (Aj , A′j ), Aj+1 ,
+such that A0 is the geometric realization of A0 (see Definition 2.1), and that satisfies (among
+others) certain geometric conditions, which are codified in Definition 2.19. Then, we show that
+this chain also satisfies certain arithmetic conditions (see the comment below Definition 2.25).
+The chains meeting the requirements of Definitions 2.19 and 2.25 are called admissible complete
+chains. In Algorithm 8 we construct all the admissible complete chains that satisfy v11 (A0 ) ≤ M
+for a given positive integer bound M .
+   By Theorem 2.20 and Remark 2.24 we know that A0 is the first coordinate of C0 for one of
+the admissible complete chains (C0 , . . . , Cj , Aj+1 ) obtained running Algorithm 8 with M ≥ B.
+For example we obtain immediately that the Jacobian Conjecture is false, then B ≥ 16, since
+there are no admissible complete chains with v11 (A0 ) < 16 (this result was already obtained in
+[1]). More importantly, we will see that many of the admissible complete chains obtained in
+Algorithm 6 can not come from a standard (m, n)-pair as in Theorem 2.20.
+
+2.1         Valid edges
+In this subsection and in the next one we introduce the basic ingredients for the definition and
+construction of the complete chains.
+   For each l ∈ N we let N(l) denote the set {(a, l) : a ∈ N}. In the sequel we will write a ≀ l
+instead of (a, l). Moreover we will use the notation I :=](1, −1), (1, 0)].
+Definition 2.1. A corner is a pair (a ≀ l, b) with a ≀ l ∈ N(l) and b ∈ N0 . For l = 1 we will
+write (a, b) instead of (a ≀ 1, b). The geometric realization of a corner A = (a ≀ l, b) is the point
+A := al , b ∈ 1l N × N0 .
+        Let l ∈ N. In the rest of this section given A, A′ ∈ N(l) × N0 with A 6= A′ , we write
+
+=== EXACT ORIGINAL LINES 640-820; BYTES [42334,55931) ===
+             length(CH) ≤ NumberOfFactors gcd b, ρ                  + 1, where (ρ, σ) := dir(A − A′ ).
+ 1   (ρ, σ) ← dir(A − A′ )            
+                                      ′
+ 2   Lmax ← NumberOfFactors gcd b, b−b
+                                    ρ      +1
+ 3 OpenChains ← (C0 )
+ 4 j←0
+ 5 while j < Lmax do
+ 6   POpenChains ← ∅
+ 7   for CH ∈ OpenChains do
+ 8       Last ← Last element in CH
+ 9       (ChildrenList, FinalList) ← GetChildrenAndFinalList(Last)
+10       for A1 ∈ FinalList do
+11          add CH ⊎ A1 to CompleteChains
+12          for (A1 , A′1 ) ∈ ChildrenList do
+13             add CH ⊎ (A1 , A′1 ) to POpenChains
+14      OpenChains ← POpenChains
+15      j ←j+1
+16   RETURN CompleteChains
+
+Theorem 2.20. For each standard (m, n)-pair (P, Q), there exist
+                                                                                                  
+      (Pi , Qi ), (Ai , A′i ), (ρi , σi ), li 0≤i≤j and (Pj+1 , Qj+1 ), Aj+1 , (ρj+1 , σj+1 ), lj+1 ),
+where j ∈ N, such that:
+   (1) l0 ≤ · · · ≤ lj+1 ∈ N with l0 = 1,
+   (2) (ρ0 , σ0 ) > · · · > (ρj+1 , σj+1 ) in I,
+      (3) (Pi , Qi ) is an (m, n)-pair in L(li ) for each 1 ≤ i ≤ j + 1 and (P0 , Q0 ) = (P, Q),
+      (4) ℓρh ,σh (Pi ) = ℓρh ,σh (Pi+1 ) for 0 ≤ h < i ≤ j,
+      (5) (Ah , (ρh , σh )) is a regular corner of type II.a) of (Pi , Qi ) for 0 ≤ h < i ≤ j + 1. Moreover
+                                                   1
+                                                      stρ ,σ (Pi ) = Ah+1 .
+                                                   m h h
+                   1
+      (6) A0 = m     en10 (P ) and (Ai , (ρi , σi )) is a regular corner of type II of (Pi , Qi ) for 0 ≤ i ≤ j,
+      (7) if (Ai , (ρi , σi )) is a regular corner of type II.a) of (Pi , Qi ), then
+                                                                                      1
+                     li+1 = li , (Pi+1 , Qi+1 ) = (Pi , Qi ) and Ai+1 = A′i =           stρ ,σ (Pi ),
+                                                                                      m i i
+      (8) if (Ai , (ρi , σi )) is a regular corner of type II.b) of (Pi , Qi ), then li+1 = lcm(ρi , li ) and
+          there exists a root λ ∈ K × of the polynomial pi (z), defined by
+                                                 ki
+                               ℓρi ,σi (Pi ) = x li pi (z),   where z := x−σi /ρi y,
+                    SOME ALGORITHMS RELATED TO THE JACOBIAN CONJECTURE                                     13
+
+
+        such that m | mλ , where mλ is the multiplicity of z − λ in pi (z) and
+            1                            k     m  σ                   1
+                                           i        λ      i
+              stρi ,σi (Pi+1 ) = Ai+1 =      ,0 +      − , 1 6= A′i =       stρ ,σ (Pi ).               (2.5)
+            m                            mli      m      ρi              m i i
+        Moreover ℓρi ,σi (Pi+1 ) = ϕ(ℓρi ,σi (Pi )), where ϕ ∈ Aut(L(li+1 ) ) is defined by
+                                     1             1                                      σi
+                               ϕ(x li+1 ) := x li+1          and          ϕ(y) := y + λx ρi ,
+    (9) (Aj+1 , (ρj+1 , σj+1 )) is a regular corner of type I of (Pj+1 , Qj+1 ) in L(lj+1 ) ,
+   (10) (Ai+1 , A′i+1 ) is a child of (Ai , A′i ) for 0 ≤ i < j,
+   (11) v01 (Ai+1 ) < v01 (Ai ) for 0 ≤ i ≤ j,
+   (12) the chain                                                              
+                                         (A0 , A′0 ), . . . , (Aj , A′j ), Aj+1 ,                     (2.6)
+        is complete,
+   (13) if t is the greatest index such that lt = 1, then
+              
+            - (Ai , (ρi , σi )) : 0 ≤ i ≤ t is the set of regular corners of (P, Q),
+            - (Ai , (ρi , σi )) is a regular corner of type IIa) of (P, Q) for 0 ≤ i < t and (At , (ρt , σt ))
+              is a regular corner of type IIb) of (P, Q),
+            - A′t is the last lower corner of (P, Q) (see [2, Definition 3.21]),
+            - (Pi , Qi ) = (P, Q) for all i ≤ t,
+   (14) The set of regular corners of (Pj+1 , Qj+1 ) is {(Ai , (ρi , σi )) : 0 ≤ i ≤ j + 1}.
+
+Proof. Take the set
+                                    {(A0 , (ρ0 , σ0 )), . . . , (At , (ρt , σt ))},
+of regular corners of (P, Q), with (ρi , σi ) > (ρi+1 , σi+1 ) for all i (note that we are using the
+                                                                                          1
+opposed enumeration of [1, Theorem 7.6]). By [1, Remark 5.12] we know that A0 = m           en10 (P ).
+          ′ := 1
+Setting Ai     m stρi ,σi (P ), we obtain a chain
+                                          ((A0 , A′0 ), . . . , (At , A′t )),
+where Ai , A′i ∈ N × N0 by [1, Remark 5.8]. By [1, Theorem 7.6(1)],
+                                   {(ρ0 , σ0 ), . . . , (ρt−1 , σt−1 )} = A(P )
+and the 3-uple (At , A′t , (ρt , σt )) is the starting triple of (P, Q).
+                                                                    Hence, by [1, Remark 5.10] we
+know that (Ai , (ρi , σi )) is a regular corner of type II.a) of (P, Q) for 0 ≤ i < t. Therefore
+v1,−1 (A′i ) < 0 for 0 ≤ i < t. Furthermore, by items (1) and (2) of Proposition 2.5 each one of
+the pairs (Ai , A′i ), with 0 ≤ i ≤ t, is a valid edge. Moreover,
+                      Ai+1 = A′i     and v01 (Ai+1 ) < v01 (Ai )                for 0 ≤ i < t.
+Consequently Ai+1 is a corner generated by (Ai , A′i ) for 0 ≤ i < t. Therefore (Ai+1 , A′i+1 ) is a
+child of (Ai , A′i ) for 0 ≤ i < t. Moreover, A′t is the last lower corner of (P, Q). For i ≤ t, set
+li := 1 and (Pi , Qi ) := (P, Q). By [1, Remark 6.3] we know that (At , (ρt , σt )) is a regular corner
+of type II.b), and so v1,−1 (stρt ,σt (P )) > 0. This implies that (ρt , σt ) 6= (1, 0), because (P, Q) is
+standard (see [1, Definition 4.3]). Since (ρt , σt ) ∈ I we obtain that ρt > 0. Let λ ∈ K × be as in
+Proposition 2.5(4) and let lt+1 := ρt . Applying [1, Proposition 5.18 and Remark 3.9] to (Pt , Qt )
+and (At , (ρt , σt )), we obtain an (m, n)-pair (Pt+1 , Qt+1 ) in L(lt+1 ) , such that
+       - enρt ,σt (Pt+1 ) = enρt ,σt (Pt ) and ℓρh ,σh (Pt+1 ) = ℓρh ,σh (Pt ) for 0 ≤ h < t,
+       - (At+1 , (ρt+1 , σt+1 )) is a regular corner of (Pt+1 , Qt+1 ), where
+                                                                                  1
+                        (ρt+1 , σt+1 ) := PredPt+1 (ρt , σt ) and At+1 :=           stρ ,σ (Pt+1 ),
+                                                                                 m t t
+14   JORGE A. GUCCIONE, JUAN J. GUCCIONE, RODRIGO HORRUITINER, AND CHRISTIAN VALQUI
+
+
+      - There exists λ ∈ K × such that m divides the multiplicity mλ of z − λ in pt (z) and
+                                          k      m  σ 
+                                             t         λ      t
+                                  At+1 =       ,0 +       − ,1 ,
+                                           mlt        m      ρt
+        Moreover ℓρt ,σt (Pt+1 ) = ϕ(ℓρt ,σt (Pt )), where ϕ ∈ Aut(L(lt+1 ) ) is defined by
+                                      1             1                                    σt
+                               ϕ(x lt+1 ) := x lt+1         and      ϕ(y) := y + λx ρt ,
+       - A(Pt+1 ) = A(Pt ) ∪ {(ρt , σt )} ∪ {(ρ, σ) ∈ A(Pt+1 ) : (ρ, σ) < (ρt , σt ) in I}, where A(Pt )
+         and A(Pt+1 ) are as in the discussion above [1, Proposition 5.2].
+By Remark 2.14 we know that At+1 is a corner generated by (At , A′t ), that At+1 6= A′t and that
+v01 (At+1 ) < v01 (At ). We claim that we can assume that (At+1 , (ρt+1 , σt+1 )) is of type I or II. In
+fact, suppose that it is a regular corner of type III and write
+                             κt+1                                    −σt+1
+
+      ℓρt+1 ,σt+1 (Pt+1 ) = x lt+1 µ0 (z − λ0 )r0       where z := x ρt+1 y, µ0 , λ0 ∈ K × and r0 ∈ N.
+Then, by [1, Theorem 7.6(1) and Remark 5.10],
+                                          A(Pt+1 ) = A(Pt ) ∪ {(ρt , σt )}
+while, by [1, Proposition 5.17], we have ρt+1 | lt+1 and there exists an (m, n)-pair (Pt+1,1 , Qt+1,1 )
+in L(lt+1 ) such that,
+                                                                 1
+       - enρt+1 ,σt+1 (Pt+1,1 ) = enρt+1 ,σt+1 (Pt+1 ) = At+1 = m   stρt+1 ,σt+1 (Pt+1,1 ),
+       - ℓρh ,σh (Pt+1,1 ) = ℓρh ,σh (Pt+1 ) for 0 ≤ h ≤ t,
+       - (At+1 , (ρt+1,1 , σt+1,1 )) is a regular corner of (Pt+1,1 , Qt+1,1 ), where
+                                (ρt+1,1 , σt+1,1 ) := PredPt+1,1 (ρt+1 , σt+1 ),
+      - A(Pt+1,1 ) = A(Pt+1 ) ∪ {(ρ, σ) ∈ A(Pt+1,1 ) : (ρ, σ) < (ρt+1 , σt+1 ) in I}.
+Note that (ρt+1,1 , σt+1,1 ) = PredPt+1,1 (ρt , σt ). As long as Case III occurs, we can find
+                             (ρt+1,1 , σt+1,1 ) > · · · > (ρt+1,u , σt+1,u ) > . . . ,
+and (m, n)-pairs (Pt+1,u , Qt+1,u ) in L(lt+1 ) such that for all u ≥ 1
+     - ρt+1,u | lt+1 ,
+                                                                          1
+     - enρt+1,u ,σt+1,u (Pt+1,u+1 ) = enρt+1,u ,σt+1,u (Pt+1,u ) = At+1 = m stρt+1,u ,σt+1,u (Pt+1,u+1 ),
+     - (At+1 , (ρt+1,u+1 , σt+1,u+1 )) is a regular corner of (Pt+1,u+1 , Qt+1,u+1 ), where
+            (ρt+1,u+1 , σt+1,u+1 ) := PredPt+1,u+1 (ρt+1,u , σt+1,u ) = PredPt+1,u+1 (ρt , σt ),
+     - ℓρh ,σh (Pt+1,u+1 ) = ℓρh ,σh (Pt+1,u ) for 0 ≤ h ≤ t,
+     - A(Pt+1,u+1 ) = A(Pt+1 ) ∪ {(ρ, σ) ∈ A(Pt+1,u+1 ) : (ρ, σ) < (ρt+1 , σt+1 ) in I}.
+But there are only finitely many ρt+1,u ’s with ρt+1,u | lt+1 . Moreover,
+                                             0 < −σt+1,u < ρt+1,u ,
+since (1, −1) < (ρt+1,u , σt+1,u ) < (1, 0), and so there are only finitely many (ρt+1,u , σt+1,u ) possi-
+ble. Thus, eventually cases I or II must occur, proving the claim. Note that by [1, Theorem 7.6(1)
+and Remarks 5.10 and 5.11]
+ (At+1 , (ρt+1 , σt+1 )) is of type II.a) ⇔ (ρt+1 , σt+1 ) ∈ A(Pt+1 ) ⇔ A(Pt ) ∪ {(ρt , σt )} ( A(Pt+1 ).
+                                                                                    1
+Assume that (At+1 , (ρt+1 , σt+1 )) is a regular corner of type II and set A′t+1 := m stρt+1 ,σt+1 (Pt+1 ).
+                                                  ′                        ′
+By Proposition 2.5(2) we know that (At+1 , At+1 ) is a child of (At , At ). If (At+1 , (ρt+1 , σt+1 )) is
+a regular corner of type II.a), then by [1, Remark 5.11], the pair
+                                                                               
+                        At+2 , (ρt+2 , σt+2 ) := A′t+1 , PredPt+1 (ρt+1 , σt+1 )
+                    SOME ALGORITHMS RELATED TO THE JACOBIAN CONJECTURE                                      15
+
+
+is a regular corner of (Pt+2 , Qt+2 ) := (Pt+1 , Qt+1 ). Moreover, by definition At+2 is generated by
+(At+1 , A′t+1 ) and v01 (At+2 ) < v01 (At+1 ). On the other hand, if (At+1 , (ρt+1 , σt+1 )) is a corner of
+type II.b), then, arguing as above we obtain a root λ of pt+1 (z) and an (m, n)-pair (Pt+2 , Qt+2 )
+in L(lt+2 ) , where lt+2 := lcm(lt+1 , ρt+1 ), such that
+       - enρt+1 ,σt+1 (Pt+2 ) = enρt+1 ,σt+1 (Pt+1 ) and ℓρh ,σh (Pt+2 ) = ℓρh ,σh (Pt+1 ) for 0 ≤ h < t + 1,
+       - (At+2 , (ρt+2 , σt+2 )) is a regular corner of type I or II of (Pt+2 , Qt+2 ), where
+                                                                               1
+                  (ρt+2 , σt+2 ) := PredPt+2 (ρt+1 , σt+1 ) and At+2 :=           stρ ,σ (Pt+2 ),
+                                                                              m t+1 t+1
+       - At+2 6= A′t+1 , the pair (At+1 , A′t+1 ) generates At+2 , and v01 (At+2 ) < v01 (At+1 ),
+       - there exists λ ∈ K × such that m divides the multiplicity mλ of z − λ in pt+1 (z) and
+                                                k         m  σ               
+                                                   t+1            λ      t+1
+                                      At+2 =           ,0 +          −       ,1 .
+                                                 mlt+1          m       ρt+1
+         Moreover ℓρt+1 ,σt+1 (Pt+2 ) = ϕ(ℓρt+1 ,σt+1 (Pt+1 )), where ϕ ∈ Aut(L(lt+2 ) ) is defined by
+                                       1              1                                   σt+1
+
+                               ϕ(x lt+2 ) := x lt+2         and         ϕ(y) := y + λx ρt+1 ,
+      - A(Pt+2 ) = A(Pt+1 ) ∪ {(ρt+1 , σt+1 )} ∪ {(ρ, σ) in A(Pt+1 ) : (ρ, σ) < (ρt+1 , σt+1 ) ∈ I}.
+While regular corners of type II occurs we continue with this process. Eventually a regular
+corner (Aj+1 , (ρj+1 , σj+1 )) of type I must occur. Finally, by [1, Proposition 5.13], the chain (2.6)
+is complete.                                                                                         
+
+Remark 2.21. By Theorem 3.1 below, if (Aj+1 , (ρj+1 , σj+1 )) is a regular corner of type I.a) of
+(Pj+1 , Qj+1 ) in L(lj+1 ) , then we can modify (Pj+1 , Qj+1 ) in such a way that (Aj+1 , (ρj+1 , σj+1 ))
+becomes of type I.b).
+
+Remark 2.22. Let (P, Q) be a standard (m, n)-pair, let j ∈ N and let
+                                                                                                    
+
+=== EXACT ORIGINAL LINES 1184-1240; BYTES [80262,83809) ===
+Definition 3.3. Let A := (a ≀ l, b) ∈ N(l) × N0 be a final corner and let
+                                                                             
+                                              a                  bl − a
+             I(A) := k ∈ N : 1 ≤ k < l − and gcd b,                           =1 .
+                                              b              gcd(k, bl − a)
+For each k ∈ I(A) we set
+                
+     MNk (A) := (m, n) ∈ N2 : m, n > 1, gcd(m, n) = 1 and (m + n)bk − n(bl − a) = k ,
+and we define the set MN(A), of possible (m, n) for A, by
+                                              [
+                                 MN(A) :=           MNk (A).
+                                                k∈I(A)
+
+   Next we describe these values as unions of infinite families of (m, n)’s, parameterized by N0 .
+                                                                                                 
+   Let k ∈ N be such that 1 ≤ k < l − ab and set ek := gcd(k, bl − a). Assume gcd b, bl−a     ek    =1
+and let Mk and Nk with Nk ∈ N minimum satisfying
+                                                   bl − a
+                                       M k b − Nk         = 1.
+                                                     ek
+Then
+                                                                                         
+                                    bl − a                       bl − a
+        (M, N ) ∈ Z × N : M b − N            =1 =         Mk + j         , Nk + jb : j ∈ Nk .
+                                      ek                           ek
+Set
+                              bl − a (Nk + jb)k                             (Nk + jb)k
+               m′kj := Mk + j        −                    and      n′kj :=             .
+                                ek           ek                                 ek
+Thus
+                     (1)                        (2)            (1)     bl − bk − a        (2)    bk
+   m′kj = m′k0 + j∆k     and n′kj = n′k0 + j∆k , where ∆k :=                       and ∆k := .
+                                                                            ek                   ek
+22    JORGE A. GUCCIONE, JUAN J. GUCCIONE, RODRIGO HORRUITINER, AND CHRISTIAN VALQUI
+
+
+So,
+                          m′k,j+1 > m′kj and n′k,j+1 > n′kj  for all j ∈ N0 .
+Hence, by the comments above Definition 3.3, we have 1 ≤ mk0 , n′k0 . Since we only want consider
+                                                             ′
+
+the m′kj ’s and n′kj ’s greater than 1, we set
+          (                                                  (
+            m′kj       if n′k0 > 1 and m′k0 > 1,               n′kj     if n′k0 > 1 and m′k0 > 1,
+ mkj :=       ′
+                                                  and nkj :=     ′
+            mk,j+1 otherwise,                                  nk,j+1 otherwise.
+Clearly
+                                             (1)                                  (2)
+                         mkj = mk0 + j∆k            and      nkj = nk0 + j∆k .         (3.20)
+With these notations,
+            
+ S(A, k) := (m, n) ∈ N2 : m, n > 1 and (m + n)bk − n(bl − a) = k = {(mkj , nkj ) : j ∈ N0 }.
+Since
+                          MNk (A) = {(m, n) ∈ S(A, k) : gcd(m, n) = 1} ,
+we must choose the (m, n)’s in S(A, k) such that gcd(m, n) = 1. Note that
+                                      k        k    bl − a    k
+
+=== EXACT ORIGINAL LINES 1350-1415; BYTES [90437,94965) ===
+         options.
+    (2) A numbered two-dimensional grid, with the ability to zoom and pan, which displays the
+         current items (a collection of corners and edges). A corner A can be clicked to display
+         an edge (A, A′ ), and the bottom point A′ of an edge can be clicked to display the corners
+         generated by it.
+    (3) A collection of filters in a right hand panel. These are checkboxes that can be used to
+         only show specific corners. For example, only corners of Type I and Type II, or only
+         corners leading to admissible complete chains.
+
+
+
+
+               5    Admissible complete chains with v11 (A0 ) ≤ 35
+
+
+
+
+Applying Algorithm 8 with M = 35 we obtain the admissible complete chains (C0 , . . . , Cj , Aj+1 )
+with v11 (A0 ) ≤ 35, where A0 is the first coordinate of C0 . This procedure yields 14 admissible
+complete chains of length 1 and 2 admissible complete chains of length 2. Applying now Al-
+gorithm 9 with input the final corner Aj+1 of any of these chains we obtain the corresponding
+(m, n)-families MNk (Aj+1 ) (see Definition 3.3). We obtain a two tables. The first consists of 17
+families of length 1, and the second one, of 7 families of length 2. We only list the cases satisfying
+equality (3.17). The other cases (satisfying (3.18)) can be obtained by swapping m with n.
+                    SOME ALGORITHMS RELATED TO THE JACOBIAN CONJECTURE                                        25
+
+
+
+
+                       Family         A0        A′0         A1         k      m           n
+                        F1           (4, 12)   (1, 0)     (7 ≀ 4, 3)   1   2j + 3 3j + 4
+                        F2           (5, 20)   (1, 0)     (7 ≀ 5, 2)   1    j+2    2j + 3
+                        F3           (5, 20)   (1, 0)     (8 ≀ 5, 3)   1   4j + 3 3j + 2
+                        F4           (5, 20)   (1, 0)     (8 ≀ 5, 3)   2   2j + 3 12j + 16
+                        F5           (5, 20)   (1, 0)     (9 ≀ 5, 4)   1   7j + 9 4j + 5
+                        F6           (5, 20)   (1, 0)     (9 ≀ 5, 4)   2   3j + 4 8j + 10
+                        F7           (6, 15)   (1, 0)     (7 ≀ 3, 4)   1    j+2    4j + 7
+                        F8           (6, 15)   (1, 0)     (8 ≀ 3, 5)   1   2j + 3 5j + 7
+                        F9           (7, 21)   (1, 0)    (11 ≀ 7, 2)   1    j+2    2j + 3
+                        F10          (7, 21)   (1, 0)    (13 ≀ 7, 3)   1   5j + 7 3j + 4
+                        F11          (7, 21)   (1, 0)    (13 ≀ 7, 3)   2    j+2    3j + 5
+                        F12          (8, 24)   (2, 0)    (13 ≀ 4, 5)   1   2j + 3 5j + 7
+                        F13          (9, 21)   (2, 0)    (13 ≀ 3, 7)   1    j + 2 7j + 13
+                        F14          (9, 24)   (1, 0)     (7 ≀ 3, 4)   1    j+2    4j + 7
+                        F15          (9, 24)   (1, 0)     (8 ≀ 3, 5)   1   2j + 3 5j + 7
+                        F16          (9, 24)   (1, 0)    (10 ≀ 3, 7)   1   4j + 3 7j + 5
+                        F17          (9, 24)   (1, 0)    (11 ≀ 3, 8)   1   5j + 2 8j + 3
+  and
+
+
+         Family        A0           A′0         A1             A′1           A2       k       m       n
+           F18       (6, 18)       (6, 15)  (6, 15)      (1, 0)     (7 ≀ 3, 4)        1    j+2     4j + 7
+           F19       (6, 18)       (6, 15)  (6, 15)      (1, 0)     (8 ≀ 3, 5)        1   2j + 3   5j + 7
+           F20       (6, 24)       (6, 15)  (6, 15)      (1, 0)     (7 ≀ 3, 4)        1    j+2     4j + 7
+           F21       (6, 24)       (6, 15)  (6, 15)      (1, 0)     (8 ≀ 3, 5)        1   2j + 3   5j + 7
+           F22       (8, 24)        (2, 0) (14 ≀ 4, 6) (5 ≀ 4, 2) (5 ≀ 4, 2)          1   j+2      2j + 3
+           F23       (8, 24)        (2, 0) (14 ≀ 4, 6) (11 ≀ 4, 4) (11 ≀ 4, 4)        1   j+2      4j + 7
+           F24       (8, 24)        (2, 0) (14 ≀ 4, 6) (5 ≀ 4, 0) (19 ≀ 8, 3)         1   2j + 3   3j + 4
+
+   For each one of these chains let (a ≀ l, b) be its final corner and let ek = gcd(k, bl − a). In all
+the cases except F4 , we have k/ek = 1. In case F4 we have k/ek = 2 and Jk (8 ≀ 5, 3) = {1}.
+   We claim that the families F18 , F19 , F20 and F21 can not be obtained from a standard (m, n)-
+pair (P, Q) as in Theorem 2.20. Note that with the notations used in that theorem for the four
+families we have
+
+         (ρ0 , σ0 ) = dir(A0 − A′0 ) = (1, 0)            and         (ρ1 , σ1 ) = dir(A1 − A′1 ) = (3, −1).

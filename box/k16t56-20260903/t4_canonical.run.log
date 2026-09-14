@@ -1,0 +1,47 @@
+START t=4 18:40:20
+HASH_OK t_order_system.py e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28
+HASH_OK triangular_preprocess.py f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93
+HASH_OK t4_order_system.py db5e54450444f27c56f00bbec287aea284c8dc190e0e549c2fea51e0dbdd6cee
+BUILD_CHART t=4
+CHART t=4 tuple=(52,36;49,3) (e,q)=(13,9) unknowns=45 equations=65
+PHI radii=(-1,4/13) gauges=True build_s=8.151
+T4_GENERIC_EQUALS_DEDICATED
+ACTUAL_PAIR J=gamma True; K16_TUPLE_FAIL True
+Q_PIVOTS t=4
+Q_PIVOTS count=16 expected=16 residual_rows=48 residual_unknowns=29 s=98.696
+Q_PIVOT_BANDS 17 .. 8 vars=['a5_1', 'a6_1', 'a7_1', 'a8_1', 'a9_2', 'a9_1', 'a10_2', 'a10_1', 'a11_2', 'a11_1', 'a12_2', 'a12_1', 'a13_2', 'a13_1', 'a13_0', 'a13_3']
+GRADING x=q5_1 wt=17 y=q9_1 wt=34 c wt=85 homogeneous_rows=48
+C_ROW source=2 band=0 image_ok
+H_ROW source=26 band=4 associate=26/2187
+H_t=972*q9_1**2 - 540*q9_1 + 70 primitive=486*q9_1**2 - 270*q9_1 + 35 disc=19440 irreducible=True content=2
+UNIT y res=70 inv=54/7 - 486*q9_1/35
+UNIT linear res=82620 inv=54*q9_1/85 - 5/17
+UNIT cbar res=4022200/4782969 inv=531441*q9_1/1547 - 1062882/7735
+SLICE q_rows=39 auxiliaries=26 q_duplicates=8
+A_ELIM t=4 order=canonical auxiliaries=26 rows=39
+A_PIVOT step=1 source=50 band=8 var=b3 rows=37 vars=25 terms=18662 res=16900
+A_PIVOT step=2 source=49 band=8 var=b2 rows=36 vars=24 terms=87074 res=40715466480
+A_PIVOT step=3 source=45 band=7 var=a6_0 rows=35 vars=23 terms=92746 res=46404365238
+A_PIVOT step=4 source=44 band=7 var=a10_0 rows=34 vars=22 terms=91805 res=31381059609
+A_PIVOT step=5 source=41 band=7 var=b4 rows=32 vars=21 terms=50406 res=1642680
+A_PIVOT step=6 source=40 band=6 var=a7_0 rows=31 vars=20 terms=51219 res=43391094768
+A_PIVOT step=7 source=39 band=6 var=a11_0 rows=30 vars=19 terms=50079 res=13947137604
+A_PIVOT step=8 source=36 band=6 var=a2_0 rows=28 vars=18 terms=32542 res=466802028
+A_PIVOT step=9 source=35 band=5 var=a8_0 rows=27 vars=17 terms=31884 res=-697356880200
+A_PIVOT step=10 source=34 band=5 var=a12_0 rows=26 vars=16 terms=30666 res=3486784401
+A_PIVOT step=11 source=31 band=5 var=a3_0 rows=24 vars=15 terms=22101 res=7435800
+A_PIVOT step=12 source=30 band=4 var=a9_0 rows=23 vars=14 terms=21567 res=-1115771008320
+A_PIVOT step=13 source=25 band=4 var=q4_0 rows=21 vars=13 terms=17052 res=-229975200
+A_PIVOT step=14 source=20 band=3 var=a1_0 rows=20 vars=12 terms=5010 res=-554273280
+A_PIVOT step=15 source=19 band=3 var=a5_0 rows=18 vars=11 terms=4095 res=-5685710112
+A_PIVOT step=16 source=14 band=2 var=q2_0 rows=17 vars=10 terms=1916 res=-187387200
+A_PIVOT step=17 source=13 band=2 var=q6_0 rows=15 vars=9 terms=1589 res=-162861865920/11
+A_PIVOT step=18 source=8 band=1 var=q3_0 rows=14 vars=8 terms=887 res=-2925795600/17
+A_PIVOT step=19 source=7 band=1 var=q7_0 rows=12 vars=7 terms=728 res=-116025773760/7
+A_PIVOT step=20 source=6 band=0 var=b1 rows=11 vars=6 terms=921 res=2932183800
+A_PIVOT step=21 source=1 band=0 var=q9_0 rows=10 vars=5 terms=524 res=55851120
+A_PIVOT step=22 source=0 band=0 var=q8_0 rows=8 vars=4 terms=311 res=905320372320
+A_ELIM done pivots=22 residual_rows=8 residual_vars=['q5_0', 'q6_1', 'q7_1', 'q8_1'] unit=False s=285.543
+AUDIT t4_canonical_audit.json sha256=30c33ada90b5b395b634195bb216dbd9b018b068907bcc659f7ed6635c7a55f0
+SUMMARY {"H_irreducible": true, "a_pivots": 22, "audit": "t4_canonical_audit.json", "audit_sha256": "30c33ada90b5b395b634195bb216dbd9b018b068907bcc659f7ed6635c7a55f0", "bands": [0, 1, 1, 2, 2, 3, 3, 4], "degrees": [17, 12, 16, 11, 15, 10, 14, 13], "elapsed": 440.062648, "order": "canonical", "pattern": {"all_tags_0_1": false, "bands": [0, 1, 1, 2, 2, 3, 3, 4], "bands_match_in_order": false, "bands_sorted": [0, 1, 2, 3, 4], "degrees": [17, 12, 16, 11, 15, 10, 14, 13], "degrees_match_as_multiset": true, "degrees_match_in_order": false, "degrees_sorted_desc": [17, 16, 15, 14, 13, 12, 11, 10], "expected_bands_0_to_2t-1": [0, 1, 2, 3, 4, 5, 6, 7], "expected_degrees_4t+1_down_to_2t+2": [17, 16, 15, 14, 13, 12, 11, 10], "matches_2t_by_t": true, "terminal_rows": 8, "terminal_vars": 4}, "q_pivots": 16, "singular_units": [], "t": 4, "terminal_rows": 8, "terminal_unit": false, "terminal_vars": ["q5_0", "q6_1", "q7_1", "q8_1"]}
+END t=4 exit=0 18:47:42

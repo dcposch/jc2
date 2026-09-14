@@ -1,0 +1,608 @@
+{
+  "builder_run": {
+    "command": [
+      "/home/ubuntu/jc2/box/gi-only-20260905/time_singular.sh",
+      "--cpus=1",
+      "--threads=1",
+      "--flint-threads=1",
+      "--no-rc",
+      "-q",
+      "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/builders/C_n24m18_Mm15_14_ell1_s3_G_builder.sing"
+    ],
+    "command_shell_quoted": "/home/ubuntu/jc2/box/gi-only-20260905/time_singular.sh --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/builders/C_n24m18_Mm15_14_ell1_s3_G_builder.sing",
+    "cwd": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3",
+    "elapsed_seconds": 22.55764,
+    "finished_utc": "2026-09-05T14:59:35Z",
+    "gnu_time_elapsed": "0:22.49",
+    "peak_rss_kib": 230676,
+    "peak_rss_source": "gnu_time",
+    "returncode": 0,
+    "rss_sample_count": 210,
+    "sampled_process_group_peak_rss_kib": 230700,
+    "started_utc": "2026-09-05T14:59:12Z",
+    "stderr": {
+      "bytes": 910,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/builder.stderr",
+      "sha256": "d94cab884a4fdaff191c4115202bfb53218f7c87ce87ff9fca62d46674b90ddd"
+    },
+    "stdout": {
+      "bytes": 175,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/builder.stdout",
+      "sha256": "5d845d66c7f0fcdca73ef632c9e254bbc338e6e42df93871dc28d0b2ca98a83f"
+    },
+    "timed_out": false,
+    "watchdog_seconds": 1800
+  },
+  "canonical_stem": "C_n24m18_Mm15_14_ell1_s3_G",
+  "class_id": "C_n24m18_Mm15_14_ell1_s3",
+  "class_uniform_chart": true,
+  "coefficient_generators": 173,
+  "emitter_run": {
+    "command": [
+      "/usr/bin/python3",
+      "/home/ubuntu/jc2/box/gi-only-20260905/gi_only_emit.py",
+      "emit-guided",
+      "--class-id",
+      "C_n24m18_Mm15_14_ell1_s3"
+    ],
+    "command_shell_quoted": "/usr/bin/python3 /home/ubuntu/jc2/box/gi-only-20260905/gi_only_emit.py emit-guided --class-id C_n24m18_Mm15_14_ell1_s3",
+    "cwd": "/home/ubuntu/jc2/box/gi-only-20260905",
+    "elapsed_seconds": 0.974943,
+    "finished_utc": "2026-09-05T15:09:38Z",
+    "gnu_time_elapsed": null,
+    "peak_rss_kib": 81452,
+    "peak_rss_source": "sampled_process_group_100ms",
+    "returncode": 0,
+    "rss_sample_count": 10,
+    "sampled_process_group_peak_rss_kib": 81452,
+    "started_utc": "2026-09-05T15:09:37Z",
+    "stderr": {
+      "bytes": 0,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/emit-guided.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 392,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/emit-guided.stdout",
+      "sha256": "c4d165b05411d3a4a1f58d83e4c9789afaec77de42aa49cae2ddb577e55a3890"
+    },
+    "timed_out": false,
+    "watchdog_seconds": 180
+  },
+  "exact_q": {
+    "controls": {
+      "complete": false,
+      "expected_generators_including_Tc_minus_1": 174,
+      "guided_generator_counts": [
+        174
+      ],
+      "guided_main": {
+        "accepted": false,
+        "basis_size": null,
+        "dimension": null,
+        "lead_dim": null,
+        "lead_vdim": null,
+        "missing_markers": [
+          "NF_ALL_ZERO",
+          "UNIT",
+          "DIM",
+          "BASIS_SIZE",
+          "LEAD_DIM",
+          "ACCEPT",
+          "NF_ZERO"
+        ],
+        "nf_all_zero": false,
+        "unit": false,
+        "vdim": null,
+        "vdim_matches_predicted": null
+      },
+      "named": {
+        "empty": {
+          "fail_count": 0,
+          "pass_count": 1
+        },
+        "nonempty": {
+          "fail_count": 0,
+          "pass_count": 1
+        },
+        "ring": {
+          "fail_count": 0,
+          "pass_count": 1
+        }
+      },
+      "named_controls_pass": true,
+      "nf_generator_rows": 0,
+      "script_done_count": 0,
+      "singular_error_lines": [],
+      "std_seconds_markers": []
+    },
+    "run": {
+      "command": [
+        "/home/ubuntu/jc2/box/gi-only-20260905/time_singular.sh",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "--no-rc",
+        "-q",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/jobs/C_n24m18_Mm15_14_ell1_s3_G_Q_guided.sing"
+      ],
+      "command_shell_quoted": "/home/ubuntu/jc2/box/gi-only-20260905/time_singular.sh --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/jobs/C_n24m18_Mm15_14_ell1_s3_G_Q_guided.sing",
+      "cwd": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3",
+      "elapsed_seconds": 600.009799,
+      "finished_utc": "2026-09-05T15:19:38Z",
+      "gnu_time_elapsed": null,
+      "peak_rss_kib": 667436,
+      "peak_rss_source": "sampled_process_group_100ms",
+      "returncode": -15,
+      "rss_sample_count": 5583,
+      "sampled_process_group_peak_rss_kib": 667436,
+      "started_utc": "2026-09-05T15:09:38Z",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/C_n24m18_Mm15_14_ell1_s3_G_Q.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 217,
+        "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/C_n24m18_Mm15_14_ell1_s3_G_Q.stdout",
+        "sha256": "3e9568944e95c5bae634f9b8e4005afd53533821ba4dd0823ed0a91aebe7d3fb"
+      },
+      "timed_out": true,
+      "watchdog_seconds": 600
+    }
+  },
+  "finished_utc": "2026-09-05T15:19:38Z",
+  "guided_script": {
+    "bytes": 12918204,
+    "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/jobs/C_n24m18_Mm15_14_ell1_s3_G_Q_guided.sing",
+    "sha256": "c36d547d235ef6e69930f65f5e267543c2d0d8a974804d7645f26d3ee56ca895"
+  },
+  "host": {
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8488C",
+    "hostname": "ip-172-30-0-235",
+    "pid": 8383,
+    "platform": "Linux-7.0.0-1011-aws-x86_64-with-glibc2.39"
+  },
+  "ideal_generators_including_Tc_minus_1": 174,
+  "inputs": {
+    "builder": {
+      "bytes": 16194,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/builders/C_n24m18_Mm15_14_ell1_s3_G_builder.sing",
+      "sha256": "f247124577a88763deb26c5c70fb74496d052afb86757726be71665655a56c16"
+    },
+    "class_json": {
+      "bytes": 6293,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/class.json",
+      "sha256": "f9055c2adb5bfcfd328f9a4a5eb6e905d491572e25c4f249c81167cdc722465a"
+    },
+    "meta_prebuild": {
+      "bytes": 12443,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/meta/C_n24m18_Mm15_14_ell1_s3_G.json",
+      "sha256": "48c6ce2d53ac93f370e08b3d9c639cba426530b8412cdd5dbad212643c62e24b"
+    }
+  },
+  "meta_postemit": {
+    "bytes": 12583,
+    "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/meta/C_n24m18_Mm15_14_ell1_s3_G.json",
+    "sha256": "6c20e779baf7b2832a69ecb81b7f4564dd9de3a6924d974de1eedc1e4a82f5e2"
+  },
+  "modular_policy": "SCREEN_ONLY_NEVER_PROMOTED",
+  "modular_screen": {
+    "characteristic": 1073741827,
+    "emission": {
+      "bytes": 13328,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.emit.json",
+      "sha256": "cffae2c371d95afd04896fb64346d1b2814ca98b42c012da47c11b5427c6821e"
+    },
+    "emit_run": {
+      "command": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/moh14-charts-20260905/msolve_chart.py",
+        "emit",
+        "--meta",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/meta/C_n24m18_Mm15_14_ell1_s3_G.json",
+        "--rows",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/rows/C_n24m18_Mm15_14_ell1_s3_G_rows.tsv",
+        "--builder",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/builders/C_n24m18_Mm15_14_ell1_s3_G_builder.sing",
+        "--characteristic",
+        "1073741827",
+        "--output",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.ms",
+        "--manifest",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.manifest.json",
+        "--json-output",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.emit.json"
+      ],
+      "command_shell_quoted": "/usr/bin/python3 /home/ubuntu/jc2/box/moh14-charts-20260905/msolve_chart.py emit --meta /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/meta/C_n24m18_Mm15_14_ell1_s3_G.json --rows /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/rows/C_n24m18_Mm15_14_ell1_s3_G_rows.tsv --builder /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/builders/C_n24m18_Mm15_14_ell1_s3_G_builder.sing --characteristic 1073741827 --output /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.ms --manifest /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.manifest.json --json-output /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.emit.json",
+      "cwd": "/home/ubuntu/jc2/box/gi-only-20260905",
+      "elapsed_seconds": 2.029426,
+      "finished_utc": "2026-09-05T14:59:37Z",
+      "gnu_time_elapsed": null,
+      "peak_rss_kib": 44412,
+      "peak_rss_source": "sampled_process_group_100ms",
+      "returncode": 0,
+      "rss_sample_count": 19,
+      "sampled_process_group_peak_rss_kib": 44412,
+      "started_utc": "2026-09-05T14:59:35Z",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/emit.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 13328,
+        "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/emit.stdout",
+        "sha256": "cffae2c371d95afd04896fb64346d1b2814ca98b42c012da47c11b5427c6821e"
+      },
+      "timed_out": false,
+      "watchdog_seconds": 180
+    },
+    "input": {
+      "bytes": 3913166,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.ms",
+      "sha256": "2eda489062fca97bfb06405eb017929e59b0c1c6ec16cbdc25faccb332ade5a6"
+    },
+    "label": "MODULAR SCREEN ONLY \u2014 NEVER A CHARACTERISTIC-ZERO KILL",
+    "manifest": {
+      "bytes": 13161,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.manifest.json",
+      "sha256": "543acdbc3d0b651d8e4225e92c9ddd3deab6dbd7a382f4c69f00b4c39e699c62"
+    },
+    "msolve_chart_tool": {
+      "bytes": 34876,
+      "path": "/home/ubuntu/jc2/box/moh14-charts-20260905/msolve_chart.py",
+      "sha256": "363840f615b63e567751474c1c6b461b0dae4e1203f7a9f303a3bf93c9555d96"
+    },
+    "output": {
+      "bytes": 0,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "parsed_status": {
+      "certainty": "none",
+      "output_exists": true,
+      "output_path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.out",
+      "returncode": 124,
+      "schema": "moh14-msolve-status-v1",
+      "status": "TIMEOUT",
+      "stderr_path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.stderr",
+      "stderr_sha256": "2498825f8747f5b3bd1b9afb4f41bb031daa38b73f79f561ca97526ec208de42",
+      "telemetry": {
+        "invalid_equations": 0,
+        "new_prime_messages": 0,
+        "positive_dimensional_message": false,
+        "single_element_message": false
+      },
+      "unit_ideal": null
+    },
+    "promotion_allowed": false,
+    "public_effect": "none; exact-Q production run is mandatory regardless of this screen",
+    "run": {
+      "command": [
+        "/usr/bin/time",
+        "-v",
+        "/usr/bin/msolve",
+        "-g",
+        "2",
+        "-t",
+        "8",
+        "-v",
+        "2",
+        "-l",
+        "44",
+        "-m",
+        "1000",
+        "-f",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.ms",
+        "-o",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.out"
+      ],
+      "command_shell_quoted": "/usr/bin/time -v /usr/bin/msolve -g 2 -t 8 -v 2 -l 44 -m 1000 -f /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.ms -o /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.out",
+      "cwd": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen",
+      "elapsed_seconds": 600.00936,
+      "finished_utc": "2026-09-05T15:09:37Z",
+      "gnu_time_elapsed": null,
+      "peak_rss_kib": 9594044,
+      "peak_rss_source": "sampled_process_group_100ms",
+      "returncode": -15,
+      "rss_sample_count": 5586,
+      "sampled_process_group_peak_rss_kib": 9594044,
+      "started_utc": "2026-09-05T14:59:37Z",
+      "stderr": {
+        "bytes": 619,
+        "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.stderr",
+        "sha256": "2498825f8747f5b3bd1b9afb4f41bb031daa38b73f79f561ca97526ec208de42"
+      },
+      "stdout": {
+        "bytes": 10571,
+        "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.stdout",
+        "sha256": "61ad2396ebe38a9143f33fb88f984a550889b126b4ba3eb9f0a558f4047cb986"
+      },
+      "timed_out": true,
+      "watchdog_seconds": 600
+    },
+    "schema": "moh-gi-only-modular-screen-v1",
+    "screen_signal": "MODULAR_TIMEOUT_SCREEN",
+    "solver": {
+      "bytes": 219288,
+      "path": "/usr/bin/msolve",
+      "sha256": "c2722288d22c3a1eab00c0b818d0204d4a98104d059b2fd4ecb7343e8ef759fa"
+    },
+    "state": "FINISHED",
+    "status_artifact": {
+      "bytes": 719,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.status.json",
+      "sha256": "0a3d6b1ba855d1063fbe70714df3cbdd6c05e3117ae04e1ed473f2e22f35afdb"
+    },
+    "status_parse_run": {
+      "command": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/moh14-charts-20260905/msolve_chart.py",
+        "status",
+        "--output",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.out",
+        "--stderr",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.stderr",
+        "--rc",
+        "124",
+        "--manifest",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.manifest.json",
+        "--json-output",
+        "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.status.json"
+      ],
+      "command_shell_quoted": "/usr/bin/python3 /home/ubuntu/jc2/box/moh14-charts-20260905/msolve_chart.py status --output /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.out --stderr /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.g2.stderr --rc 124 --manifest /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.manifest.json --json-output /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/C_n24m18_Mm15_14_ell1_s3_G_p1073741827.status.json",
+      "cwd": "/home/ubuntu/jc2/box/gi-only-20260905",
+      "elapsed_seconds": 0.072017,
+      "finished_utc": "2026-09-05T15:09:37Z",
+      "gnu_time_elapsed": null,
+      "peak_rss_kib": null,
+      "peak_rss_source": "sampled_process_group_100ms",
+      "returncode": 0,
+      "rss_sample_count": 1,
+      "sampled_process_group_peak_rss_kib": null,
+      "started_utc": "2026-09-05T15:09:37Z",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/status.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 719,
+        "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/solve/modular-screen/status.stdout",
+        "sha256": "0a3d6b1ba855d1063fbe70714df3cbdd6c05e3117ae04e1ed473f2e22f35afdb"
+      },
+      "timed_out": false,
+      "watchdog_seconds": 60
+    },
+    "watchdog_seconds": 600
+  },
+  "one_chart_per_class_suffices": true,
+  "promotion_scope": "EXACT_Q_ONLY",
+  "report_label": "COMPUTE-BOUND \u2014 NO EXACT-Q UNIT OR VERIFIED SAMPLE POINT",
+  "rows": {
+    "bytes": 6438204,
+    "header": "source_index|h_power|x_power|y_power|expr",
+    "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/rows/C_n24m18_Mm15_14_ell1_s3_G_rows.tsv",
+    "sha256": "8807a9fcc841d6c5fdd6e678f42757e1f8b7265a19fac2932114a42da6ba8f3c"
+  },
+  "schema": "moh-gi-only-exact-q-solve-v1",
+  "software": {
+    "guided_gb": {
+      "bytes": 32023,
+      "path": "/home/ubuntu/jc2/box/lib/guided_gb.py",
+      "sha256": "501f3b1fed8ad0d26c7535a3c79d6ca74c448a4555f94570a4835d9f740781f3"
+    },
+    "python": {
+      "executable": "/usr/bin/python3",
+      "version": "3.12.3 (main, Jul 15 2026, 23:46:41) [GCC 13.3.0]"
+    },
+    "singular": {
+      "path": "/usr/bin/Singular",
+      "sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "version_head": [
+        "Singular for x86_64-Linux version 4.3.2 (4330, 64 bit) Apr  1 2024 04:44:00",
+        "with",
+        "\tGMP(6.3.0),NTL(11.5.1),FLINT(3.0.1),",
+        "\tomalloc,static readline(8),Plural,vspace(2),DBM,",
+        "\tdynamic modules,OM_NDEBUG,SING_NDEBUG,",
+        "\tCC:OPTIMIZE,GenericAdd,TableMult,no invTable,",
+        "\teigenvalues,Gauss-Manin system,random=1788620978",
+        "built-in modules: {}"
+      ]
+    },
+    "time_wrapper": {
+      "bytes": 351,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/time_singular.sh",
+      "sha256": "95ddb4557d56eb294f737343acacbdb92d46365a9441599638621a9c6283ee4a"
+    }
+  },
+  "solver_variables_with_T": 128,
+  "started_utc": "2026-09-05T14:59:12Z",
+  "state": "FINISHED",
+  "unknowns_without_T": 127,
+  "verdict": "COMPUTE_BOUND",
+  "verdict_detail": "600 s exact-Q watchdog expired; Singular return code -15; control-complete exact-Q basis markers absent",
+  "verification": {
+    "class_result": {
+      "blockwise_subset_verified": true,
+      "canonical_stem": "C_n24m18_Mm15_14_ell1_s3_G",
+      "class_id": "C_n24m18_Mm15_14_ell1_s3",
+      "class_uniform_one_chart_suffices": true,
+      "fibres": [
+        {
+          "blockwise_subset_verified": true,
+          "chain_to_production": "frozen native S_i --zero D_i\\G_i--> native G_i companion --sign isomorphism--> literal J(P,Q) production G_i",
+          "commutation": "differentiation, coefficient extraction, and monic h-adic division commute with the zero-coordinate map",
+          "kept_parameter_count": 127,
+          "literal_PQ_S_to_production_G_executable_tail_byte_identical_after_setup": true,
+          "native_executable_tail_byte_identical_after_setup": true,
+          "native_orientation_verified": true,
+          "native_zero_specialization": {
+            "codomain": "G_i native companion: coeff(J(Q,P)-c_native*x^ell)+<T_native*c_native-1>",
+            "domain": "frozen emitted S_i native ideal: coeff(J(Q,P)-c_source*x^ell)+<T_source*c_source-1>",
+            "map": "G_i coordinates identity; c_source->c_native; T_source->T_native; every D_i\\G_i coordinate->0",
+            "verified": true
+          },
+          "no_coordinate_only_orientation_overclaim": true,
+          "production_coordinate_only_specialization": {
+            "codomain": "literal P-first production G_i chart",
+            "domain": "emitted source-complete S_i literal P-first presentation: coeff(J(P,Q)-c*x^ell)+<T*c-1>",
+            "map": "G_i coordinates,c,T identity; every D_i\\G_i coordinate->0",
+            "orientation_change": "none",
+            "verified": true
+          },
+          "production_coordinate_only_specialization_verified": true,
+          "production_orientation_verified": true,
+          "production_sign_isomorphism": {
+            "codomain": "G_i literal P-first production chart",
+            "domain": "G_i native Q-first companion",
+            "inverse_image": "T_literal*c_literal-1",
+            "map": "coefficient coordinates identity; c_native->-c_literal; T_native->-T_literal",
+            "target_image": "-(J(P,Q)-c_literal*x^ell)",
+            "verified": true
+          },
+          "production_sign_isomorphism_verified": true,
+          "set_to_zero_count": 2,
+          "specialization_verified": true,
+          "status": "PASS",
+          "stem": "C_n24m18_Mm15_14_ell1_s3_V1_9"
+        }
+      ],
+      "fresh_frozen_inventory_audits": [
+        {
+          "G_unknowns_with_T": 128,
+          "G_unknowns_without_T": 127,
+          "K": 6,
+          "blocks": [
+            {
+              "D_count": 8,
+              "D_minus_G_count": 0,
+              "G_count": 8,
+              "G_subset_S": true,
+              "S_count": 8,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "h",
+              "i": 1,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 8,
+              "D_minus_G_count": 0,
+              "G_count": 8,
+              "G_subset_S": true,
+              "S_count": 8,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_1",
+              "i": 1,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 16,
+              "D_minus_G_count": 0,
+              "G_count": 16,
+              "G_subset_S": true,
+              "S_count": 16,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_2",
+              "i": 2,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 24,
+              "D_minus_G_count": 1,
+              "G_count": 24,
+              "G_subset_S": true,
+              "S_count": 25,
+              "S_minus_G_count": 1,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_3",
+              "i": 3,
+              "specialize_to_zero": [
+                "A3_3_5"
+              ]
+            },
+            {
+              "D_count": 30,
+              "D_minus_G_count": 0,
+              "G_count": 31,
+              "G_subset_S": true,
+              "S_count": 31,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_4",
+              "i": 4,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 16,
+              "D_minus_G_count": 0,
+              "G_count": 16,
+              "G_subset_S": true,
+              "S_count": 16,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "beta_2",
+              "i": 2,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 23,
+              "D_minus_G_count": 1,
+              "G_count": 23,
+              "G_subset_S": true,
+              "S_count": 24,
+              "S_minus_G_count": 1,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "beta_3",
+              "i": 3,
+              "specialize_to_zero": [
+                "B3_3_5"
+              ]
+            }
+          ],
+          "blockwise_subset_verified": true,
+          "class_id": "C_n24m18_Mm15_14_ell1_s3",
+          "d": "2/9",
+          "e": 4,
+          "ell": 1,
+          "q": 3,
+          "source_complete_unknowns_without_T": 129,
+          "source_meta": "box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/classes/C_n24m18_Mm15_14_ell1_s3/meta/C_n24m18_Mm15_14_ell1_s3_V1_9.json",
+          "source_minus_G_unknowns": 2,
+          "specialization_coordinate_count": 2,
+          "specialization_map": {
+            "T_native": "T_native",
+            "c_native": "c_native",
+            "codomain": "G_i-only native Q-first specialization companion",
+            "domain": "frozen native S_i=D_i union G_i chart (J(Q,P), post terminal-constant gauges)",
+            "kept_coordinates": "identity",
+            "set_to_zero": [
+              "A3_3_5",
+              "B3_3_5"
+            ],
+            "set_to_zero_is_exactly_D_minus_G": true
+          },
+          "status": "PASS",
+          "stem": "C_n24m18_Mm15_14_ell1_s3_V1_9"
+        }
+      ],
+      "native_zero_specialization_verified": true,
+      "orientation_verified": true,
+      "production_coordinate_only_specialization_verified": true,
+      "production_sign_isomorphism_verified": true,
+      "specialization_verified": true,
+      "status": "PASS",
+      "unknowns_with_T": 128,
+      "unknowns_without_T": 127
+    },
+    "receipt": {
+      "bytes": 87638,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/verification.json",
+      "sha256": "ca9a0a1217f6beee2b40c704d1e350e5d65fcddf74779067caa91412c0f6e676"
+    }
+  }
+}

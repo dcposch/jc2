@@ -1,0 +1,101 @@
+BLIND Q2 AUDIT — Astra helper — 2026-09-05
+
+Definite correction: 14 is the pre-Xu whole-tree excess, not the strongest
+promoted live remainder. Replaying the historical promoted Xu driver kills
+exactly two of those rows, leaving 12 rows in six characteristic-data classes.
+
+Sources and custody:
+1. xmodel/xu-screen-gate-fable5-20260903.run.v2 final_status=DONE checked before
+   report. Driver + skeleton + full-tree imports mechanically checked against
+   receipt charged_input_2/6/7 sha256 lines; no digest retyped.
+2. Gate xmodel/xu-screen-gate-fable5-20260903.md:3-8,218-230 is CONFIRMED(scoped),
+   with hypotheses: Jacobian pair, monic f,g in y, two infinity points as in
+   skeleton, generic xi, operative full-tree model, Xu Cor5.3. Dictionary at
+   :65-74 is n=deg g,m=deg f. Sound max/min argument is :169-182.
+3. Formal campaign promotion AUDIT.md:17145 and explicit row deletion at
+   :17154-17155. This is original Xu screen, independent of the later principal
+   floor strengthening; u_s=1 unchanged by that strengthening (:17175).
+4. Both old-tree-surviving (90,60) rows with M=(45,80,88), V=(2,5,4) or (3,5,4)
+   satisfy IM_max=43/7 < Im_min=7. Exact gate artifact row keys are at
+   box/xuscreen-gate-20260903/results.json:10711 and :10749.
+
+The raw tree replay regenerates 658 PATH-ARITH rows at n<=100, exactly 20
+whole-tree survivors, six printed and 14 excess, matching every banked key.
+All 14 u_s=1. Runtime less than 1 sec, peak RSS about 19 MB.
+The Xu replay on 14 costs about 0.1 sec / 19 MB. No polynomial CAS used.
+See audit_rows.log, xu_crosscheck.log, and final_table.json for exact payloads.
+
+LIVE CLASS TABLE (M includes M1=-m; inherited V list is retained as ancestor
+metadata, not silently interpreted as the top multiplicity of a two-level
+descended chart):
+
+n' m' ell  M'                 d'              mult  ancestor V list     IM_max Im_min
+16 12  3   (-12,6,13)          (16,4,2,1)        3  (1,1),(1,3),(4,3)   86/7     5
+18 12  2   (-12,2,9)           (18,6,2,1)        2  (1,8),(3,8)         138/7     4
+24 16  1   (-16,-12,-2,5)      (24,8,4,2,1)      1  (1,1,6)             18        3
+24 16  1   (-16,12,17)         (24,8,4,1)        3  (1,2),(2,1),(3,2)   101/10    3
+24 18  1   (-18,-15,14)        (24,6,3,1)        1  (1,9)              594/29    3
+24 18  1   (-18,9,20)          (24,6,3,1)        2  (1,9),(4,9)        210/11    3
+
+Live ancestor degrees: (90,60)x2, (96,64)x4, (96,72)x6.
+Four coarse (n',m',ell) bins, six characteristic-data classes, twelve V-labeled
+rows. Equality of coarse bins is not a proof of chart equivalence. A common
+necessary-superset chart can kill all members of a characteristic class; if it
+does not, retain each inherited V assignment and its licensed row families.
+
+All twelve have s'>2: eleven at s'=3 and one at s'=4. None of these needs the
+old anchor-zero repair: n'-M'_last-1 is respectively 2,8,18,6,9,3, all positive.
+The old appendix2 shape compiler is only s'=2. Explicit source for this limit:
+xmodel/appendix2-compiler-grok46-20260903.md:62-73,158-163,377-418 (DONE checked).
+Its top formula u'=d2'-V2 cannot be applied to these longer towers. The later
+K16/k4-ray top pin must likewise not be ported by matching only n',m',ell.
+
+Moh p.150 recurrence q1=M1, qi=Mi-M(i-1), lambda_i=sum(qj*dj), mu_i=lambda_i/di
+gives complete descended pi-degree towers:
+  (16,12,30,53), (18,12,22,59), (24,16,44,78,149),
+  (24,16,20,35), (24,18,69,109), (24,18,45,79).
+Definition source: xmodel/m2-descent-opus5-20260903.md:96-104; transformation
+degree source xmodel/prop63-radius-gate-opus5-20260905.md:59-66.
+These high auxiliary degrees explain why degree<=24 is not a CAS runtime
+promise. The JSON pair_triangle_count is only the combinatorial count under
+an assumed total-degree triangle, not a proof that the general longer-tower
+chart admits this support or that such an ambient chart is small enough.
+
+Q2 answer, typed:
+MEASURED / CONSUMES-PROMOTED: 12 exact live rows under the strongest promoted
+screen, upper bound 14 if deliberately omitting Xu. No seventh unknown degree
+class is concealed by the frozen (1)-(13) enumeration, but saying ONLY requires
+the source-to-enumerator coverage and the existing five printed-row kills plus
+the (99,66) condition-(3) closure. It does not mean arbitrary simultaneously
+reducible (99,66) pairs are excluded by the citation alone; the degree-decreasing
+induction assembles that theorem (n1-screen gate :35-42,249-259).
+
+DESCENDED-CLASS SWEEP: yes as batching by the entire effective M,d tower, with
+ancestral V obligations carried; no as recycling a two-level coefficient chart.
+No uniform obstruction across all six is proved here. In particular all twelve
+have M2'<m', but the raw inequality M2>m for Keller pairs is already REFUTED
+(m2-descent report :16-27,170-196; AUDIT:16051-16058). A uniform theorem must consume
+the additional characteristic/two-point/minimal-parent hypotheses.
+
+Cheapest decisive next experiment: emit one necessary full-tower coefficient
+system per class in the broadest licensed gauge, Q*-eliminate before any CAS,
+and record all vanished leaders as branches. Start with (16,12;(-12,6,13);ell3)
+because its pair degrees are smallest and one ancestor V=(1,1,5) supplies a
+possible extra descent to investigate, not an automatically licensed one.
+The one s'=4 class must be included as a smoke test of compiler coverage.
+If residual vars exceed 40 or exact input exceeds a desk-scale memory gate,
+return COUNTING-BOUND and improve the emitter. This is a work gate, not a
+mathematical rejection. A modular [1] is a guide; exact-Q identity plus all
+denominator/branch checks is the kill.
+
+Price, explicit estimate rather than theorem: one source/coverage pass; six
+full-tower class charts, up to twelve V-specialized fallbacks if broad charts
+survive; each CAS attempt capped at 540 sec / <4 GB; one independent complete
+replay/assembly pass. A two-lane-day allocation is plausible for emission and
+triage; guaranteeing closure in that budget is unsupported. Reducing 14 to12
+is already achieved without CAS and should remove those two chart tasks.
+
+Running moh100-14rows-opus5 receipt only: no final_status at inspection, so
+recommend CONTINUE objective, REDESIGN its completion contract as twelve live
+rows/six full-tower classes plus two citations; do not duplicate its compute.
+No active report/log/artifact was read. No new exit-price assertion here.

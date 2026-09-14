@@ -1,0 +1,44 @@
+{
+  "branch": "none",
+  "characteristic": 0,
+  "counts": {
+    "active_variables_before_T": 46,
+    "branch_rows": 0,
+    "nonpivot_rows": 192,
+    "pivot_rows": 69,
+    "pivot_variables": 69,
+    "rabinowitsch_rows": 1,
+    "source_rows": 261,
+    "source_variables": 115
+  },
+  "custody": {
+    "meta": "box/s56-recert-20260905/source-complete/meta/S5_n9_m6_M2_V1_k8_part_2_source_complete.json",
+    "meta_sha256": "2ff27194699d5e3ccc1ca8e1ce1134c9cb68c4060bc692c9c0c69d57539d8395",
+    "plan": "box/s56-recert-20260905/reducer-analysis/S5_part2_including_c.plan.json",
+    "plan_sha256": "873c031930c24583103ce26b6ae02dcba6e79da6fea975f93f720462ab4f2a05",
+    "rows": "box/s56-recert-20260905/source-complete/rows/S5_n9_m6_M2_V1_k8_part_2_source_complete_rows.tsv",
+    "rows_sha256": "e8063f9885defd9c21d0fe57ce84636a70db0593d8a4bc721e322609a0db1d3b",
+    "script": "box/s56-recert-20260905/reducer-analysis/S5_part2_Q_including_c_seqcert.sing",
+    "script_sha256": "d0e02662f828b9eab8f1a98d69bd6d5d4040000eb70503769efdd84425cfee01"
+  },
+  "dump": null,
+  "equivalence": "iterated quotient isomorphism by audited scalar-unit pivots; all non-pivot rows retained; no weight-floor unknown truncation",
+  "pivot_scalar_histogram": {
+    "-1": 1,
+    "-12": 9,
+    "-18": 9,
+    "-24": 8,
+    "-30": 6,
+    "-36": 6,
+    "-42": 5,
+    "-48": 4,
+    "-54": 4,
+    "-6": 9,
+    "-60": 3,
+    "-66": 2,
+    "-72": 2,
+    "-78": 1
+  },
+  "schema": "jc2.s56-recert.independent-triangular-audit/v1",
+  "status": "PASS"
+}

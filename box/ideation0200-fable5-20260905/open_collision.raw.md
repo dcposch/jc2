@@ -1,0 +1,15 @@
+## COLLISIONS
+
+status: CANDIDATES
+
+### OPEN[ORDER-CHART-S3-BUILDER]
+
+- `xmodel/moh100-14rows-opus5-20260905.md:580` — * `OPEN[DESCENDED-S3-FULL-BASIS]` *(new)* — the 89 `s' ≥ 3` descended chart
+
+- `OPEN[D108-DEGREE-WIDE-US1-ROWS]` (report:571): NONE
+
+- `OPEN[K1-RECEIVER-FOLD]` (report:576): NONE
+
+- `OPEN[K16-TAU-SQUARE-CERTIFICATE]` (report:580): NONE
+
+- `OPEN[US1-RESIDUE-BY-ELL]` (report:584): NONE

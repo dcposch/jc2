@@ -1,0 +1,34 @@
+HASH_OK t_order_system.py e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28
+HASH_OK triangular_preprocess.py f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93
+HASH_OK t4_order_system.py db5e54450444f27c56f00bbec287aea284c8dc190e0e549c2fea51e0dbdd6cee
+BUILD_CHART t=2
+CHART t=2 tuple=(28,20;25,3) (e,q)=(7,5) unknowns=27 equations=37
+PHI radii=(-1,2/7) gauges=True build_s=2.318
+ACTUAL_PAIR J=gamma True; K16_TUPLE_FAIL True
+Q_PIVOTS t=2
+Q_PIVOTS count=10 expected=10 residual_rows=26 residual_unknowns=17 s=8.005
+Q_PIVOT_BANDS 9 .. 4 vars=['a3_1', 'a4_1', 'a5_2', 'a5_1', 'a6_2', 'a6_1', 'a7_2', 'a7_1', 'a7_0', 'a7_3']
+GRADING x=q3_1 wt=9 y=q5_1 wt=18 c wt=45 homogeneous_rows=26
+C_ROW source=2 band=0 image_ok
+H_ROW source=14 band=2 associate=7/375
+H_t=300*q5_1**2 - 180*q5_1 + 24 primitive=25*q5_1**2 - 15*q5_1 + 2 disc=3600 irreducible=False content=12
+UNIT y res=24 inv=15/2 - 25*q5_1/2
+UNIT linear res=8100 inv=10*q5_1/9 - 5/9
+UNIT cbar res=3528/15625 inv=15625*q5_1/42 - 6875/42
+SLICE q_rows=21 auxiliaries=14 q_duplicates=4
+A_ELIM t=2 order=heuristic auxiliaries=14 rows=21
+A_PIVOT step=1 source=8 band=1 var=b4 rows=19 vars=13 terms=462 res=588000
+A_PIVOT step=2 source=19 band=3 var=a1_0 rows=17 vars=12 terms=245 res=-2400
+A_PIVOT step=3 source=1 band=0 var=q5_0 rows=16 vars=11 terms=185 res=176400
+A_PIVOT step=4 source=13 band=2 var=q2_0 rows=14 vars=10 terms=133 res=-117600
+A_PIVOT step=5 source=6 band=0 var=b1 rows=13 vars=9 terms=192 res=3528
+A_PIVOT step=6 source=7 band=1 var=b3 rows=11 vars=8 terms=125 res=529200
+A_PIVOT step=7 source=28 band=4 var=a3_0 rows=10 vars=7 terms=89 res=-60000
+A_PIVOT step=8 source=0 band=0 var=a4_0 rows=8 vars=6 terms=49 res=135000
+A_PIVOT step=9 source=23 band=3 var=q4_0 rows=7 vars=5 terms=39 res=-205800
+A_PIVOT step=10 source=18 band=2 var=b2 rows=6 vars=4 terms=31 res=396900
+A_PIVOT step=11 source=27 band=4 var=a5_0 rows=5 vars=3 terms=21 res=-250000/3
+A_PIVOT step=12 source=12 band=1 var=a6_0 rows=4 vars=2 terms=13 res=1500000
+A_ELIM done pivots=12 residual_rows=4 residual_vars=['q3_0', 'q4_1'] unit=False s=0.287
+AUDIT t2_heuristic_audit.json sha256=331388a67a279ab5214b233e0098598c23976501d94aed2c6edb871c30a4a89e
+SUMMARY {"H_irreducible": false, "a_pivots": 12, "audit": "t2_heuristic_audit.json", "audit_sha256": "331388a67a279ab5214b233e0098598c23976501d94aed2c6edb871c30a4a89e", "bands": [0, 1, 2, 3], "degrees": [9, 8, 7, 6], "elapsed": 13.209577, "order": "heuristic", "pattern": {"all_tags_0_1": true, "bands": [0, 1, 2, 3], "bands_match_in_order": true, "bands_sorted": [0, 1, 2, 3], "degrees": [9, 8, 7, 6], "degrees_match_as_multiset": true, "degrees_match_in_order": true, "degrees_sorted_desc": [9, 8, 7, 6], "expected_bands_0_to_2t-1": [0, 1, 2, 3], "expected_degrees_4t+1_down_to_2t+2": [9, 8, 7, 6], "matches_2t_by_t": true, "terminal_rows": 4, "terminal_vars": 2}, "q_pivots": 10, "singular_units": [], "t": 2, "terminal_rows": 4, "terminal_unit": false, "terminal_vars": ["q3_0", "q4_1"]}

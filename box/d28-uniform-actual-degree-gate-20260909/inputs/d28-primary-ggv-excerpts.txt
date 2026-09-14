@@ -1,0 +1,116 @@
+PRIMARY DOCUMENTARY EXCERPTS
+URL: https://arxiv.org/pdf/1401.1784v3
+Whole source SHA256: e3694dde3f83c2ab6ed8d957fc6b53472e6a6dd55486af1dff345eade39e37b1
+No whole-paper proof claim. Literal sed line boundaries below.
+
+===== BEGIN literal lines 718-790 =====
+Remark 4.2. If (P, Q) is a minimal pair, then neither v1,1 (P ) divides v1,1 (Q) nor v1,1 (Q) divides
+v1,1 (P ). This fact can be proven using a classical argument[12] given for example in the proof
+of [14, Theorem 10.2.23].
+Definition 4.3. Let m, n ∈ N be coprime with n, m > 1. A pair (P, Q) of elements P, Q ∈ L(l)
+(respectively P, Q ∈ L) is called an (m, n)-pair in L(l) (respectively in L), if
+                                  v1,1 (P )   v1,0 (P )   m
+              [P, Q] ∈ K × ,                =           =       and v1,−1 (en1,0 (P )) < 0.
+                                  v1,1 (Q)    v1,0 (Q)    n
+An (m, n)-pair (P, Q) is called a standard (m, n)-pair if P, Q ∈ L(1) and v1,−1 (st1,0 (P )) < 0.
+Lemma 4.4. Let (ρ, σ), (ρ′ , σ ′ ) ∈ V and A, B ∈ 1l Z × N0 such that
+                 vρ,σ (A)vρ′ ,σ′ (B) = vρ,σ (B)vρ′ ,σ′ (A)    and   (ρ, σ) × (ρ′ , σ ′ ) 6= 0.
+Then A ∼ B.
+Proof. Write A = (a1 , a2 ) and B = (b1 , b2 ). The Lemma follows immediately from the equality
+                                                                      
+                            ρ σ      a1 b 1          vρ,σ (A)    vρ,σ (B)
+                                                =                            ,
+                            ρ′ σ ′   a2 b 2         vρ′ ,σ′ (A) vρ′ ,σ′ (B)
+taking determinants.                                                                                     
+                            (l)
+Remark 4.5. Let P, Q ∈ L and (ρ, σ) ∈ V. Assume that vρ,σ (P ) 6= 0, stρ,σ (P ) ∼ stρ,σ (Q) and
+enρ,σ (P ) ∼ enρ,σ (Q). Then
+                                                                                           vρ,σ (Q)
+          enρ,σ (Q) = λ enρ,σ (P ) and        stρ,σ (Q) = λ stρ,σ (P ),    with     λ :=             .
+                                                                                           vρ,σ (P )
+    If (P, Q) is an (m, n)-pair, then (Q, P ) is an (n, m)-pair, as is shown by the following propo-
+sition.
+Proposition 4.6. Let (P, Q) be an (m, n)-pair. Then the following properties hold:
+   (1) v1,0 (P ), v1,0 (Q) > 0.
+                                               n
+   (2) en1,0 (Q) ∼ en1,0 (P ) and en1,0 (Q) = m   en1,0 (P ).
+        1                1          1
+   (3) m en1,0 (P ) = n en1,0 (Q) ∈ l N × N and v1,−1 (en1,0 (Q)) < 0.
+   (4) v0,−1 (en1,0 (P )) < −1 and v0,−1 (en1,0 (Q)) < −1.
+   (5) Neither P nor Q are monomials.
+Proof. Item (1) follows from inequality (1.2), since v10 (P ) < 0 implies v10 (Q) < 0. Now we
+prove item (2). Assume by contradiction that en1,0 (Q) ≁ en1,0 (P ). By Propositions 1.13, 2.3,
+and 2.4(2) we have
+                                 en1,0 (Q) + en1,0 (P ) = (1, 1),                         (4.1)
+16                 JORGE A. GUCCIONE, JUAN J. GUCCIONE, AND CHRISTIAN VALQUI
+
+
+which combined with the fact that v1,−1 (en1,0 (P )) < 0 and v1,0 (P ) > 0 implies that there exists
+0 < r < l with en1,0 (P ) = (r/l, 1) and en1,0 (Q) = ((l − r)/l, 0). Set
+     M := {(1, 1)} ∪ ((Dir(P ) ∪ Dir(Q))∩](1, 0), (1, 1)[) = {(ρ0 , σ0 ) < · · · < (ρk , σk ) = (1, 1)}.
+We claim that
+                           v0,1 (stρj ,σj (P )) + v0,1 (stρj ,σj (Q)) > 1,    for j > 0.                 (4.2)
+In fact, if k = 0 this is trivial. Otherwise, by Proposition 3.7 and Remark 1.8, we have
+             v0,1 (stρj ,σj (P )) ≤ v0,1 (enρj ,σj (P )) = v0,1 (stρj+1 ,σj+1 (P )),   for 0 ≤ j < k,
+with strict inequality if (ρj , σj ) ∈ Dir(P ), and the same is true for Q. The claim follows imme-
+diately from these facts, since
+             (ρ0 , σ0 ) ∈ Dir(P ) ∪ Dir(Q) and v0,1 (stρ0 ,σ0 (P )) + v0,1 (stρ0 ,σ0 (Q)) = 1,
+where the equality follows from Proposition 3.7 and equality (4.1).
+  Inequality (4.2) implies that stρj ,σj (P )+stρj ,σj (Q) 6= (1, 1) for j > 0, and so Proposition 2.4(1)
+and Proposition 3.7 yield
+             enρj ,σj (P ) = stρj+1 ,σj+1 (P ) ∼ stρj+1 ,σj+1 (Q) = enρj ,σj (Q) for 0 ≤ j < k.          (4.3)
+On the other hand, ρj > 0 because (ρj , σj ) ∈ ](1, 0), (1, 1)], and hence,
+                                                                        l−r
+                                 vρj ,σj (Q) ≥ vρj ,σj (en1,0 (Q)) =        > 0.
+                                                                         l
+This allows us to use Remark 4.5 combined with (4.3), in order to prove inductively that
+                                  vρ0 ,σ0 (P )  vρ ,σ (P )    m   v1,0 (P )
+                                               = k k        =   =           .                            (4.4)
+                                  vρ0 ,σ0 (Q)   vρk ,σk (Q)   n   v1,0 (Q)
+Set A := en1,0 (P ) and B := en1,0 (Q). By Proposition 3.7, we have vρ0 ,σ0 (A) = vρ0 ,σ0 (P ) and
+vρ0 ,σ0 (B) = vρ0 ,σ0 (Q). Consequently, by (4.4),
+          v1,0 (A)vρ0 ,σ0 (B) − v1,0 (B)vρ0 ,σ0 (A) = v1,0 (P )vρ0 ,σ0 (Q) − v1,0 (Q)vρ0 ,σ0 (P ) = 0,
+which, by Lemma 4.4 with (ρ, σ) = (1, 0) and (ρ′ , σ ′ ) = (ρ0 , σ0 ), leads to A ∼ B, contradicting
+the assumption that en1,0 (Q) ≁ en1,0 (P ) and proving item (2).
+   From item (2) we obtain
+                  1             1           1
+                    en1,0 (P ) = en1,0 (Q) ∈ N × N0                and v1,−1 (en1,0 (Q)) < 0.
+                  m             n           l
+But v0,1 (en1,0 (P )), v0,1 (en1,0 (Q)) > 0, since v1,−1 (en1,0 (P )), v1,−1 (en1,0 (Q)) < 0, and so item (3)
+===== END literal lines 718-790 =====
+
+===== BEGIN literal lines 1431-1461 =====
+
+
+Proposition 5.20. For each (m, n)-pair (P, Q) in L(1) , there exists an automorphism ϕ of L(1)
+such that (ϕ(P ), ϕ(Q)) is a standard (m, n)-pair with
+          v1,1 (ϕ(P )) = v1,1 (P ),   v1,1 (ϕ(Q)) = v1,1 (Q)      and   en1,0 (ϕ(P )) = en1,0 (P ).
+Moreover, if (−1, 1) < SuccP (1, 0), SuccQ (1, 0) < (−1, 0), then
+                          (−1, 1) < Succϕ(P ) (1, 0), Succϕ(Q) (1, 0) < (−1, 0).
+Furthermore, if P, Q ∈ L, then we can take ϕ ∈ Aut(L).
+                                                                                    1
+                                                                                                        
+Proof. If v1,−1 (st1,0 (P )) < 0, then we can take ϕ := id. Otherwise m               en1,0 (P ), (1, 0) is a
+                                            1
+regular corner[25]. Write (a, b) := m         en1,0 (P ). Case I is impossible because a, b > 0 and Propo-
+sition 5.13 gives 1 − a/b > 1, and the Case II.a) is discarded, because v1,−1 (st1,0 (P )) ≥ 0. By
+Propositions 5.16 and 5.18 in Case II.b) and by Proposition 5.17 in Case III, we can find a
+ϕ ∈ Aut(L(1) ) such that
+           1
+                                        
+       - m    st1,0 (ϕ(P )), (ρ′ , σ ′ ) is a regular corner, for some (ρ′ , σ ′ ),
+       - ℓ1,1 (ϕ(P )) = ℓ1,1 (P ), ℓ1,1 (ϕ(Q)) = ℓ1,1 (Q) and en1,0 (ϕ(P )) = en1,0 (P ),
+       - If SuccP (1, 0), SuccQ (1, 0) < (−1, 0), then
+                  Succϕ(P ) (1, 0) = SuccP (1, 0)      and         Succϕ(Q) (1, 0) = SuccQ (1, 0).
+      - ϕ(x) = x and ϕ(y) = y + λ, for some λ ∈ K × .
+The assertions in the statement follow immediately from these facts.                                      
+Corollary 5.21. If B < ∞ (i. e., if the Jacobian conjecture is false), then there exists a Jacobian
+pair (P, Q) and m, n ∈ N coprime with m, n > 1, such that
+    (1) (P, Q) is a standard (m, n)-pair in L,
+                                                                
+    (2) (P, Q) is a minimal pair (i. e., gcd v1,1 (P ), v1,1 (Q) = B),
+    (3) st1,1 (P ) = en1,0 (P ),
+    (4) (−1, 1) < SuccP (1, 0), SuccQ (1, 0) < (−1, 0).
+===== END literal lines 1431-1461 =====
+
+END OF DOCUMENTARY BUNDLE

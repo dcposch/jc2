@@ -1,0 +1,106 @@
+{
+  "D108": {
+    "row": {
+      "n": 108,
+      "m": 72,
+      "M": [
+        81,
+        106
+      ],
+      "V": {
+        "2": 7,
+        "3": 7
+      },
+      "d": [
+        108,
+        36,
+        9,
+        1
+      ],
+      "delta": {
+        "1": "3/8",
+        "2": "1/4",
+        "3": "-1"
+      }
+    },
+    "z_radius_1_plus_delta": {
+      "1": "11/8",
+      "2": "5/4",
+      "3": "0"
+    },
+    "uniformizers": {
+      "D2": "t = s^4, z = pi*s^5",
+      "D1": "t = e^8, z = ...+ Pi*e^11"
+    },
+    "D2_weight_source": "4*r + 5*q",
+    "D2_weight_engine": "4*r + 6*q",
+    "D1_engine": "t=e^8, z=e^12*(1+Pi*e)",
+    "ord_t_K3_at_D2": "35/4",
+    "K3_D2_face_weight_source": "35",
+    "K3_D2_face_weight_engine": 42,
+    "K2_D2_face_degree_in_pi": 28,
+    "K2_D2_face_multiplicity_forced_by_V2": 7,
+    "MATCH": false
+  },
+  "G9966_delta2_and_delta52_major_block": {
+    "row": {
+      "n": 99,
+      "m": 66,
+      "M": [
+        77,
+        97
+      ],
+      "V": {
+        "2": 8,
+        "3": 8
+      },
+      "d": [
+        99,
+        33,
+        11,
+        1
+      ],
+      "delta": {
+        "1": "4/9",
+        "2": "1/3",
+        "3": "-1"
+      }
+    },
+    "z_radius_1_plus_delta": {
+      "1": "13/9",
+      "2": "4/3",
+      "3": "0"
+    },
+    "uniformizers": {
+      "D2": "t = s^3, z = pi*s^4",
+      "D1": "t = e^9, z = ...+ Pi*e^13"
+    },
+    "D2_weight_source": "3*r + 4*q",
+    "D2_weight_engine": "3*r + 4*q",
+    "D1_engine": "t=e^9, z=e^12+Pi*e^13",
+    "ord_t_K3_at_D2": "32/3",
+    "K3_D2_face_weight_source": "32",
+    "K3_D2_face_weight_engine": 32,
+    "K2_D2_face_degree_in_pi": 24,
+    "K2_D2_face_multiplicity_forced_by_V2": 8,
+    "MATCH": true
+  },
+  "witness_D108": {
+    "K3": "-t**8*z + z**7*(z + 1)**2",
+    "chart_coordinates": {
+      "Hc_8_1": -1,
+      "all_other_lower": 0
+    },
+    "D2_weight_of_t8z": 37,
+    "D2_floor_source": "4*r+5*q >= 35 (face weight), strict variant 36",
+    "in_chart_at_cutoff_35_and_36": true,
+    "ord_s_at_D2_generic_point": 35,
+    "leading_D2_face": "pi**9*s**45",
+    "minor_image": "pi**9*t**36 - 7*pi**8*t**32 + 21*pi**7*t**28 - 35*pi**6*t**24 + 35*pi**5*t**20 - 21*pi**4*t**16 + 7*pi**3*t**12 - pi**2*t**8 - pi*t**12 + t**8",
+    "target": "-t^8*(pi^2-c) + O(t^9) with c = 1",
+    "residual_after_target_ord_t": 12,
+    "localization_c": 1,
+    "c_nonzero": true,
+    "claim": "rational point of the NECESSARY common-h3 incidence block at the Def 5.1(3) D2 radius; NOT a claim of a Jacobian pair"
+  }
+}

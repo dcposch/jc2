@@ -1,0 +1,20 @@
+{
+  "schema": "f10-mixed-elimination-first-static-pins/v1",
+  "first_action_utc": "2026-09-12T18:57:00+00:00",
+  "reserve_utc": "2026-09-12T19:10:00+00:00",
+  "hard_utc": "2026-09-12T19:13:00+00:00",
+  "inputs": {
+    "/home/ubuntu/jc2/COORDINATION.md": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+    "/home/ubuntu/jc2/box/f10-mixed-scalar-elimination-sol-20260912/eliminate.sing": "8b8e8541141ee6a863b3fe97c09eb705431fb34ba1df9abd62dce36c5a7553ec",
+    "/home/ubuntu/jc2/box/f10-mixed-scalar-elimination-sol-20260912/check-certificate.sing": "27383b9d9c819639b1115d3129834caa193da6642c75cc17699ff5d9a157b742",
+    "/home/ubuntu/jc2/box/f10-mixed-scalar-elimination-sol-20260912/run-aws.template.sh": "bcdb4c6e765c66c8e2698a5f6d2fe7209deb9c32f5e30c2bc17b208ac056d4be",
+    "/home/ubuntu/jc2/box/f10-mixed-scalar-elimination-sol-20260912/CONTRACT.md": "ddac6d970539b8b0c8e13d7ba6fb5d8f6573713e1ab8b69d0cc599bd0b8905e0",
+    "/home/ubuntu/jc2/xmodel/f10-mixed-scalar-unit-gate-fable5-20260911.md": "aa8b0148f8bfb63ef072b23106f92bafa703a6b83033984e17a62f49eb70230f"
+  },
+  "administrative_instrument": {
+    "/home/ubuntu/jc2/ops/artifact_finalize.py": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"
+  },
+  "read_scope": "All six input pins checked before body reads. All six FRESH_WHOLE; COORDINATION explicitly read in ranges1..280,281..560,561..806. Generator111 lines, checker89 lines and wrapper24 lines additionally reread with line numbers. No linked sources, producer report, ROOT forcing note, intake body, live peer output, native or coefficient payload was read. Finalizer hash and administrative begin/close/finalize/expected-verify only.",
+  "execution": "ZERO source import, syntax, AST, compile, test, dummy, fixture, CAS, scientific/helper execution, network or worker activity. Static counter-controls described only; no executable fixture emitted.",
+  "verdict": "BLOCKING_CERTIFICATE_DATA_CODE_BOUNDARY_REFUTED; MATHEMATICAL_METHOD_CONFIRMED_AT_STIPULATED_SCOPE; RUNTIME_AND_FORCING_ATTACHMENT_GAPS"
+}

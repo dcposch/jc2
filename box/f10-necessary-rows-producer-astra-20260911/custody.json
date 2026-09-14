@@ -1,0 +1,86 @@
+{
+  "schema": "necessary-rows-producer-static-custody-v1",
+  "owner": "/root/model_productivity",
+  "status": "COMPLETE_STATIC_UNEXECUTED",
+  "first_action_utc": "2026-09-11T05:53:45.519212733Z",
+  "publication_verified_utc": "2026-09-11T05:57:11.569391865Z",
+  "original_reserve_utc": "2026-09-11T06:04:00Z",
+  "original_hard_utc": "2026-09-11T06:07:00Z",
+  "clock_reset": false,
+  "inputs": [
+    {
+      "path": "box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md",
+      "sha256": "176363939a8aa6861995cd72a99c61f7d04bfeab5a9634f6d3143dcd3d3bd098",
+      "bytes": 8647
+    },
+    {
+      "path": "xmodel/f10-necessary-rows-design-gate-fable5-20260911.md",
+      "sha256": "8e07e419d321b09ecd13c61a1c5fdc3dbaf9a099c1a1ebedf9b9fe6ef280073b",
+      "bytes": 13070
+    },
+    {
+      "path": "box/f10-direct-rows-producer-astra-20260911/produce.py",
+      "sha256": "8a7bd82ea589744a9de22b54877156a329d724185948538958801475f983760e",
+      "bytes": 19562
+    },
+    {
+      "path": "box/f10-direct-rows-producer-astra-20260911/authority.py",
+      "sha256": "5629db5df0a37fdaecaa66f5ad0cde47006cb0c3047b37243b045daedef2ac29",
+      "bytes": 6496
+    }
+  ],
+  "owned": [
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/produce.py",
+      "sha256": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a",
+      "bytes": 18811
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/authority.py",
+      "sha256": "804c7aff56538fc332bf68638b03b7167eccdb49f73337f1a5f1823348b522a4",
+      "bytes": 6499
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/produce.diff",
+      "sha256": "592df59a401a2bf292b36214496b748cf6370c17f6bf65319db67e6245a210c4",
+      "bytes": 2530
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/authority.diff",
+      "sha256": "6d74b9d7c879ad921a0c72f71d1a67d13fce933daa0b796653077487662f5c47",
+      "bytes": 393
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/PINS.json",
+      "sha256": "573bc6c4957e1a3580711cf0fd1c8eda0b318f4dd2291f6eaf84aa56ddd4d29f",
+      "bytes": 1182
+    },
+    {
+      "path": "xmodel/f10-necessary-rows-producer-astra-20260911.md",
+      "sha256": "c56456efc885ce046cd816f374ea9e1fd4856535d518a78c3c668e377e6192d7",
+      "bytes": 5427
+    },
+    {
+      "path": "xmodel/f10-necessary-rows-producer-astra-20260911.md.artifact.json",
+      "sha256": "3510014c90adbbf5350e53cb7e1063f24f28b35d437772e2c23a1a5ee41c7d70",
+      "bytes": 693
+    }
+  ],
+  "custody_self_excluded": true,
+  "read_scope": "All four inputs freshly pinned before bodies and FRESH_WHOLE. Aggregate clipping recovered via separate whole gate and full producer ranges1-200/201-EOF. New source, diffs, PINS and report all WHOLE; sealed report reread after verify. No arithmetic or peer-source read.",
+  "source_delta": "Exactly producer original265-277 deletion, only two inverse/pole length conjuncts removed preserving scale13 and raise, schema/job/success literals; authority TAG only. Retained literal diffs byte-identical to freshly regenerated actual diffs. All other bytes unchanged.",
+  "prospective_arithmetic_pin": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+  "arithmetic_not_read_or_copied": true,
+  "postpins": "All four input pins and five source/document pins matched after own WHOLE before seal; final custody-first current check follows.",
+  "collision": "Own box/report/manifest absent before begin; own final paths absent before seal; raised-OPEN/premature BODY-END extraction empty.",
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256": "3510014c90adbbf5350e53cb7e1063f24f28b35d437772e2c23a1a5ee41c7d70",
+    "result": "VERIFIED",
+    "body_bytes": 5095,
+    "body_sha256": "cfb7fc036fe8db69fa0abbfbdac7933f535431c09c0c994138d5f7c37e0f33af"
+  },
+  "execution": "ZERO scientific subprocess/import/AST/syntax/compile/test/CAS/dummy/payload/place/worker/network/agents; documentary metadata publication only",
+  "authority": "No runtime, registration, source outcome, unseen checker/runtime acceptance, or follow-on authority",
+  "all_writers": "IDLE after final custody write; no background jobs"
+}

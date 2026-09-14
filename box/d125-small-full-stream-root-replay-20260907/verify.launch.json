@@ -1,0 +1,31 @@
+{
+ "command": [
+  "/usr/bin/python3",
+  "-B",
+  "/home/ubuntu/d125-small-full-stream-root-replay-20260907/run_capped.py",
+  "--cwd",
+  "/home/ubuntu/d125-small-full-stream-root-replay-20260907",
+  "--wall-seconds",
+  "600",
+  "--cpu-seconds",
+  "600",
+  "--rss-bytes",
+  "8589934592",
+  "--term-grace-seconds",
+  ".25",
+  "--rss-sample-seconds",
+  ".05",
+  "--stdout-file",
+  "verify.stdout",
+  "--stderr-file",
+  "verify.stderr",
+  "--telemetry-file",
+  "verify.telemetry.json",
+  "--",
+  "/usr/bin/python3",
+  "-B",
+  "/home/ubuntu/d125-small-full-stream-root-replay-20260907/replay.py",
+  "verify"
+ ],
+ "utc": 1788741517.2188299
+}

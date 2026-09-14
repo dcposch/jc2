@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The delta review is done. The report is at `xmodel/d125-hybrid81-parent-gate-fable5-20260907.md` with its box at `box/d125-hybrid81-parent-gate-fable5-20260907/`. It opens UNSEALED and ends on a standalone BODY-END line, with no `charge_basis` line since no exit-price claim is made.
+
+**Verdicts per delta claim**
+
+- **Only delta is the new function plus one predicate: CONFIRMED.** The diff has exactly two hunks. Applying the charged patch to the frozen original reproduces `engine.py` byte for byte. The driver, checker and adapter carry their original pins, so the timer, limits, deadline, parser, verifier, hashes and exec are unchanged.
+- **29-element vector matches the registration: CONFIRMED.** My own split of the literal command line, a hand-written vector, and the helper function agree element for element for both operations, after dropping the four-token prlimit prefix. The operations differ in exactly five slots.
+- **Slots, order, raw bytes, one final NUL: CONFIRMED at mocked scope.** The only accepted byte string is the 29 elements each NUL-terminated. Missing or extra NULs, empty interior elements, padding, case, respelled numbers, reordering, duplication and a retained prlimit prefix all reject.
+- **check.py is self-contained and passes normally and with -O: CONFIRMED.** Both runs returned 0 with empty stderr under the prescribed caps. The stdout hash equals the producer replay. All 94 cases are attributed strictly to the new predicate, and no file contains an assert or a `__debug__` reference.
+- **Own controls added.** My harness ran 22 cases per mode. Eight new objects pass the old helper and fail the new one, including the other operation's full valid vector, a retained prlimit prefix, a case-changed flag, a padded cap value and a swapped child operation. The valid vector reached the deadline sentinel with the unchanged duration and no limit, write or exec effect.
+- **All actual-engine requirements: GAP.** Tiny syntax, seven I/T slots with I_SIZE 4 and direct lift, and the inherited alarm, marker and SIGALRM 14 behavior remain unobserved. No GREEN or production authority follows.
+
+**Observations outside the delta.** The generic driver's own parent check keeps the old membership style, which is unchanged scope rather than a defect. The live predicate assumes the pinned runner keeps its exec-time argv, and every failure mode observed fails closed.
+
+**Custody.** Frozen input pins are identical before and after, the input listing is unchanged, no child process remains, and all writers are terminal. One correction happened during drafting: I had hand-typed the driver.py hash with a one-character error, fixed it in place, and then verified all sixteen hashes in the report against the recorded pin files.
+DIVERT path=xmodel/d125-hybrid81-parent-gate-fable5-20260907.md status=CLEAN body_bytes=10463 body_sha256=8aea078b954667528f861b05d763c20ca31c43f2037dc7ce1a8ab025fd925883

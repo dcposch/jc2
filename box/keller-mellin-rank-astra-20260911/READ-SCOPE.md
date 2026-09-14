@@ -1,0 +1,11 @@
+# Read scope and execution boundary
+
+Actual first action 2026-09-11 22:01:47 UTC; original reserve22:20/HARD22:23 unchanged. New final report, manifest, PINS and custody destinations were absent; the ROOT-authored TASK was already present and remains unchanged.
+
+Local scientific input: TASK.md, SHA256 8360fc5e1e1c209dcace3662c6405fa8d3dc242dc391154768a2961bd6bfd16d, hash before fresh WHOLE read. Fresh WHOLE read repeated after context carry-forward at 22:05:32. No prior report reused. No current peer/ROOT report, historical ledger, coefficient/candidate body, protected repository or mirror read.
+
+Primary documentary reads occurred between the initial action and 22:09 UTC. S1 initially had a combined tool output clipped; that output is NOT counted as a complete read. It was recovered by separate, untruncated printed-page ranges 20–21, 48–50, 51–53, 63, then22. The entire Appendix B section is included; adjacent page text is incidental and unused. S2 was whole-PDF pinned before the selected two-page read. Some S2 mathematical displays are absent from OCR; the corrected theorem statement itself is legible, but no full-proof replay is claimed. Source pin and exact selected render hashes are in SOURCE-INDEX.
+
+Permitted operations only: date; file existence, text and hashes; primary documentary web/curl streams, pdftotext rendering, SHA256; apply_patch documentary authorship; ordinary artifact_finalize publication. No scientific code, interpreter experiment, import, AST, syntax/compile/test, CAS, dummy, worker, AWS/SSH/Git/process control, package installation, new agent, or shared edit. Administrative Python invocation is solely the existing artifact transaction. PDF rendering is documentary, not a mathematical subprocess.
+
+External PDF streams are pinned by full SHA and selected render SHA. They are not claimed as locally stored binary archives. Owned PRIMARY-TRANSCRIPTION freezes only the exact selected mathematical statements with explicit provenance. No optional source traversal beyond the cited LS correction. The final own report/document WHOLE reads and current local postpins are recorded in custody. All authored changes are confined to the owned box and normal leased report transaction; no ROOT TASK change.

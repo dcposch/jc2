@@ -1,0 +1,893 @@
+{
+  "status": "PASS",
+  "scope": "Exact symbolic coefficient audit over Z[all original and auxiliary variables]; no specialization or solver claim",
+  "stems": 11,
+  "source_orientation": "Q_x*P_y-Q_y*P_x-c*x^ell; same as native builder",
+  "native_orientation_source": "box/orderbasis-20260903/order_basis_full.py:637-646",
+  "circuit_emitter_sha256": "6a85762c21d6cde82c629cbed934c03402681bc02e1df1da4219ddc9e2d0b689",
+  "circuit_runner_sha256": "3ec3a7c1059f4311742fe9c3165abec391e2a92f66f76879ec804571381574be",
+  "emission_manifest_sha256": "5be015d21a2bb63bf3b66df9a0940fe596520447e4ce2c521a62226429d0ff21",
+  "audit_script_sha256": "490df204631d6f07eb39cc07caf332fefa4d4f39dae2c26d3bdda18dda0d9fca",
+  "elapsed_seconds": 12.194,
+  "proof": {
+    "graph_isomorphism": "At each stage every new aux u has one defining equation u-f with f in previously constructed ring; successive elimination is a polynomial-ring isomorphism and requires no localization/pivot branches.",
+    "Horner_recurrence": "P_0=Q_0=1; P_i=P_(i-1)*h+alpha_i, Q_i=Q_(i-1)*h+beta_i with beta_1=0. Full coefficient convolution has no degree clipping.",
+    "Jacobian": "Independent derivative-convolution reconstruction matches every final row exactly as a formal polynomial.",
+    "localization": "The graph map fixes c, so adjoining z*c-1 commutes with elimination.",
+    "msolve_map": "msolve_chart.py:162-195 is an injective token map fixing c and appending fresh z; :230-263 streams every row and does not deduplicate stage coordinate labels. circuit_run.py:16 supplies no row limit or selected-row restriction."
+  },
+  "results": [
+    {
+      "stem": "C_n16m12_M6_13_ell3_s3_V1_1",
+      "status": "PASS",
+      "intrinsic_unknowns": 487,
+      "auxiliary_unknowns": 1436,
+      "extended_unknowns": 1923,
+      "msolve_unknowns_with_z": 1924,
+      "defining_equations": 1436,
+      "jacobian_equations": 1511,
+      "total_row_equations": 2947,
+      "msolve_equations_with_localization": 2948,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "4d56eb35fc373739b281c837363d1c18ebf700cdee6b49a7933066a4c9f0cf2b",
+      "rows_sha256": "3818219a15e16d7e31eed58310e4b20c679fa07e24be0f0a5e9aadaa5167ae67",
+      "meta_sha256": "7b045e50cfa01c175b5d904e588ce544ba398e815a64ce7873e7045e513c8cb3",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 4,
+          "coefficients": 37,
+          "new_auxiliaries": 36
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 8,
+          "coefficients": 137,
+          "new_auxiliaries": 136
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 12,
+          "coefficients": 301,
+          "new_auxiliaries": 300
+        },
+        {
+          "family": "P",
+          "stage": 4,
+          "y_degree": 16,
+          "coefficients": 529,
+          "new_auxiliaries": 528
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 4,
+          "coefficients": 37,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 8,
+          "coefficients": 137,
+          "new_auxiliaries": 136
+        },
+        {
+          "family": "Q",
+          "stage": 3,
+          "y_degree": 12,
+          "coefficients": 301,
+          "new_auxiliaries": 300
+        }
+      ]
+    },
+    {
+      "stem": "C_n16m12_M6_13_ell3_s3_V1_3",
+      "status": "PASS",
+      "intrinsic_unknowns": 473,
+      "auxiliary_unknowns": 1193,
+      "extended_unknowns": 1666,
+      "msolve_unknowns_with_z": 1667,
+      "defining_equations": 1193,
+      "jacobian_equations": 1224,
+      "total_row_equations": 2417,
+      "msolve_equations_with_localization": 2418,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "bc965b612541bada39e8137cfeb50b05306019e2aa08390a1cc296c57b560fdd",
+      "rows_sha256": "9f22729e177f156226e4c7da71883dba0ea1910794d4b0f3f88fb1dcb538281e",
+      "meta_sha256": "9f7002173f906b27592621a27773bfe517c624fa77b2c9ccbef1bec05a0da2ae",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 4,
+          "coefficients": 32,
+          "new_auxiliaries": 31
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 8,
+          "coefficients": 115,
+          "new_auxiliaries": 114
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 12,
+          "coefficients": 250,
+          "new_auxiliaries": 249
+        },
+        {
+          "family": "P",
+          "stage": 4,
+          "y_degree": 16,
+          "coefficients": 437,
+          "new_auxiliaries": 436
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 4,
+          "coefficients": 32,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 8,
+          "coefficients": 115,
+          "new_auxiliaries": 114
+        },
+        {
+          "family": "Q",
+          "stage": 3,
+          "y_degree": 12,
+          "coefficients": 250,
+          "new_auxiliaries": 249
+        }
+      ]
+    },
+    {
+      "stem": "C_n16m12_M6_13_ell3_s3_V4_3",
+      "status": "PASS",
+      "intrinsic_unknowns": 455,
+      "auxiliary_unknowns": 808,
+      "extended_unknowns": 1263,
+      "msolve_unknowns_with_z": 1264,
+      "defining_equations": 808,
+      "jacobian_equations": 756,
+      "total_row_equations": 1564,
+      "msolve_equations_with_localization": 1565,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "c6d5c3c41bd29e2f2fa839fab9945d2e5d0d713e222923dd4a017a33b1105112",
+      "rows_sha256": "898f486548d93b6efed33f909d0f9a5a0d3edd2125ec6a69f6a285c78a9aa71c",
+      "meta_sha256": "d864bc3de54606435ae4d9148be162895e6b1fc976f80c4aafa54d3eef8d2b1d",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 4,
+          "coefficients": 25,
+          "new_auxiliaries": 24
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 8,
+          "coefficients": 81,
+          "new_auxiliaries": 80
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 12,
+          "coefficients": 169,
+          "new_auxiliaries": 168
+        },
+        {
+          "family": "P",
+          "stage": 4,
+          "y_degree": 16,
+          "coefficients": 289,
+          "new_auxiliaries": 288
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 4,
+          "coefficients": 25,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 8,
+          "coefficients": 81,
+          "new_auxiliaries": 80
+        },
+        {
+          "family": "Q",
+          "stage": 3,
+          "y_degree": 12,
+          "coefficients": 169,
+          "new_auxiliaries": 168
+        }
+      ]
+    },
+    {
+      "stem": "C_n18m12_M2_9_ell2_s3_V1_8",
+      "status": "PASS",
+      "intrinsic_unknowns": 136,
+      "auxiliary_unknowns": 302,
+      "extended_unknowns": 438,
+      "msolve_unknowns_with_z": 439,
+      "defining_equations": 302,
+      "jacobian_equations": 348,
+      "total_row_equations": 650,
+      "msolve_equations_with_localization": 651,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "121aac3dfe246e16aa6d64d9119a728fb39ed1ce9e6e13c5923765e24419579a",
+      "rows_sha256": "35ad3ecbf9f9ed5a341df81e8b7c76d763bcd3b2ad273cec775c6ef101488fee",
+      "meta_sha256": "8f04a52af0a0c8e5604c46e84140cf7492be38b4782ac597a9c08c595a93d644",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 20,
+          "new_auxiliaries": 19
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 70,
+          "new_auxiliaries": 68
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 18,
+          "coefficients": 148,
+          "new_auxiliaries": 147
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 20,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 70,
+          "new_auxiliaries": 68
+        }
+      ]
+    },
+    {
+      "stem": "C_n18m12_M2_9_ell2_s3_V3_8",
+      "status": "PASS",
+      "intrinsic_unknowns": 111,
+      "auxiliary_unknowns": 168,
+      "extended_unknowns": 279,
+      "msolve_unknowns_with_z": 280,
+      "defining_equations": 168,
+      "jacobian_equations": 167,
+      "total_row_equations": 335,
+      "msolve_equations_with_localization": 336,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "290ce3071e3d5e46f1c6c40083b48189246f183ca694fdd2fd73ff228d9a4d47",
+      "rows_sha256": "762c5f71378d9a48a4a9de83927c452014693640de44405574444242bca872bf",
+      "meta_sha256": "07f22f0706be1004905f24a8a77fa6a70add72aaeb853f0654e4150ba326fbd5",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 13,
+          "new_auxiliaries": 12
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 40,
+          "new_auxiliaries": 38
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 18,
+          "coefficients": 82,
+          "new_auxiliaries": 80
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 13,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 40,
+          "new_auxiliaries": 38
+        }
+      ]
+    },
+    {
+      "stem": "C_n24m16_M12_17_ell1_s3_V2_1",
+      "status": "PASS",
+      "intrinsic_unknowns": 218,
+      "auxiliary_unknowns": 591,
+      "extended_unknowns": 809,
+      "msolve_unknowns_with_z": 810,
+      "defining_equations": 591,
+      "jacobian_equations": 776,
+      "total_row_equations": 1367,
+      "msolve_equations_with_localization": 1368,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "b3e0227a3a4486393acf3dab57a81245f869af96d902621a05a063d045e7057f",
+      "rows_sha256": "b135043998b66edd544bb83e9016054a6ffb437407083b915e36a0a404b91c8e",
+      "meta_sha256": "94185f101175fdf1200e6c12b4f65eca8645bba6a190ca445d7789297a58f58e",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 8,
+          "coefficients": 35,
+          "new_auxiliaries": 34
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 16,
+          "coefficients": 133,
+          "new_auxiliaries": 130
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 24,
+          "coefficients": 299,
+          "new_auxiliaries": 297
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 8,
+          "coefficients": 35,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 16,
+          "coefficients": 133,
+          "new_auxiliaries": 130
+        }
+      ]
+    },
+    {
+      "stem": "C_n24m16_M12_17_ell1_s3_V1_2",
+      "status": "PASS",
+      "intrinsic_unknowns": 292,
+      "auxiliary_unknowns": 833,
+      "extended_unknowns": 1125,
+      "msolve_unknowns_with_z": 1126,
+      "defining_equations": 833,
+      "jacobian_equations": 1099,
+      "total_row_equations": 1932,
+      "msolve_equations_with_localization": 1933,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "811c39d7dc1f79054fd85a3b120957bf7dffac095518fc89ed93257f61e64144",
+      "rows_sha256": "ca1433dd0786ed4830db5437c397e3e7f2a96a32a63971838653cfb2b4b7fafa",
+      "meta_sha256": "e4adc54126ad06e7d55aa2c1bb055278fb1d2c21935f6e50249cf6a970b5e6a4",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 8,
+          "coefficients": 49,
+          "new_auxiliaries": 48
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 16,
+          "coefficients": 187,
+          "new_auxiliaries": 184
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 24,
+          "coefficients": 419,
+          "new_auxiliaries": 417
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 8,
+          "coefficients": 49,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 16,
+          "coefficients": 187,
+          "new_auxiliaries": 184
+        }
+      ]
+    },
+    {
+      "stem": "C_n24m16_M12_17_ell1_s3_V3_2",
+      "status": "PASS",
+      "intrinsic_unknowns": 185,
+      "auxiliary_unknowns": 395,
+      "extended_unknowns": 580,
+      "msolve_unknowns_with_z": 581,
+      "defining_equations": 395,
+      "jacobian_equations": 489,
+      "total_row_equations": 884,
+      "msolve_equations_with_localization": 885,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "ef73dba4eb01562467e9a6558f4a28958427278cea1194b1b9bed72c8bd113a4",
+      "rows_sha256": "dba59a23ab0aa6d0dcc00ffd010e19e3f791941fd23292f2edec8d216afe23f1",
+      "meta_sha256": "86cdd2f2859d6090589042311faa510a91fef38a5d5120a957714b8a390880bb",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 8,
+          "coefficients": 25,
+          "new_auxiliaries": 24
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 16,
+          "coefficients": 90,
+          "new_auxiliaries": 87
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 24,
+          "coefficients": 199,
+          "new_auxiliaries": 197
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 8,
+          "coefficients": 25,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 16,
+          "coefficients": 90,
+          "new_auxiliaries": 87
+        }
+      ]
+    },
+    {
+      "stem": "C_n24m18_M9_20_ell1_s3_V1_9",
+      "status": "PASS",
+      "intrinsic_unknowns": 376,
+      "auxiliary_unknowns": 1035,
+      "extended_unknowns": 1411,
+      "msolve_unknowns_with_z": 1412,
+      "defining_equations": 1035,
+      "jacobian_equations": 1057,
+      "total_row_equations": 2092,
+      "msolve_equations_with_localization": 2093,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "04680d3c228d64575e375dae863dee74ce2f64d84ca92af63317daf75b96be36",
+      "rows_sha256": "ed62d707b7515467bd755df09280d0493802975cd5fd1c39bf4a23b0688f35a7",
+      "meta_sha256": "5d8cbdc848408236fe7b0784978b7cbeafee76acdf5d4689ca462f905cfedbd9",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 28,
+          "new_auxiliaries": 27
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 100,
+          "new_auxiliaries": 99
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 18,
+          "coefficients": 217,
+          "new_auxiliaries": 216
+        },
+        {
+          "family": "P",
+          "stage": 4,
+          "y_degree": 24,
+          "coefficients": 379,
+          "new_auxiliaries": 378
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 28,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 100,
+          "new_auxiliaries": 99
+        },
+        {
+          "family": "Q",
+          "stage": 3,
+          "y_degree": 18,
+          "coefficients": 217,
+          "new_auxiliaries": 216
+        }
+      ]
+    },
+    {
+      "stem": "C_n24m18_M9_20_ell1_s3_V4_9",
+      "status": "PASS",
+      "intrinsic_unknowns": 343,
+      "auxiliary_unknowns": 649,
+      "extended_unknowns": 992,
+      "msolve_unknowns_with_z": 993,
+      "defining_equations": 649,
+      "jacobian_equations": 608,
+      "total_row_equations": 1257,
+      "msolve_equations_with_localization": 1258,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "9411550bb6d3906c47aa944214f3c7b14aa6129e9dd9a0421f5bd065282a43e8",
+      "rows_sha256": "16a969dfbcc78891aa2ff8e89ade1eb05a9a3a16483b06026dc3ef531e41284d",
+      "meta_sha256": "5e15a4514ffbed98a300f5aba35532656d9f480b2a2c75f27abc8c92375a8821",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 20,
+          "new_auxiliaries": 19
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 65,
+          "new_auxiliaries": 64
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 18,
+          "coefficients": 136,
+          "new_auxiliaries": 135
+        },
+        {
+          "family": "P",
+          "stage": 4,
+          "y_degree": 24,
+          "coefficients": 233,
+          "new_auxiliaries": 232
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 20,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 65,
+          "new_auxiliaries": 64
+        },
+        {
+          "family": "Q",
+          "stage": 3,
+          "y_degree": 18,
+          "coefficients": 136,
+          "new_auxiliaries": 135
+        }
+      ]
+    },
+    {
+      "stem": "C_n24m18_Mm15_14_ell1_s3_V1_9",
+      "status": "PASS",
+      "intrinsic_unknowns": 129,
+      "auxiliary_unknowns": 225,
+      "extended_unknowns": 354,
+      "msolve_unknowns_with_z": 355,
+      "defining_equations": 225,
+      "jacobian_equations": 177,
+      "total_row_equations": 402,
+      "msolve_equations_with_localization": 403,
+      "exact_symbolic_definition_rows_match": true,
+      "exact_symbolic_Jacobian_rows_match": true,
+      "auxiliary_pivots_all_plus_one": true,
+      "stage_support_uncapped_and_y_monic": true,
+      "variables_match_metadata": true,
+      "source_builder_sha256": "1e0ea3bdbcfe5c13399327571dedf086f48e1c7a97cb3e48c67082582458d06f",
+      "rows_sha256": "b79a4e89ef2f6fc808e27eafe241c32f2e178f525a70215c99c5f4dccaf20e96",
+      "meta_sha256": "32b3b199bec37e2784f01b3e4d1cc3f92ab44f1c42151bc222fec62801afd500",
+      "stages": [
+        {
+          "family": "P",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 9,
+          "new_auxiliaries": 8
+        },
+        {
+          "family": "P",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 25,
+          "new_auxiliaries": 23
+        },
+        {
+          "family": "P",
+          "stage": 3,
+          "y_degree": 18,
+          "coefficients": 50,
+          "new_auxiliaries": 46
+        },
+        {
+          "family": "P",
+          "stage": 4,
+          "y_degree": 24,
+          "coefficients": 82,
+          "new_auxiliaries": 79
+        },
+        {
+          "family": "Q",
+          "stage": 1,
+          "y_degree": 6,
+          "coefficients": 9,
+          "new_auxiliaries": 0
+        },
+        {
+          "family": "Q",
+          "stage": 2,
+          "y_degree": 12,
+          "coefficients": 25,
+          "new_auxiliaries": 23
+        },
+        {
+          "family": "Q",
+          "stage": 3,
+          "y_degree": 18,
+          "coefficients": 50,
+          "new_auxiliaries": 46
+        }
+      ]
+    }
+  ],
+  "msolve_input_audit": {
+    "status": "PASS",
+    "stems": 11,
+    "scope": "Every actual emitted modular input row inverse-mapped and compared symbolically modulo1073741827; includes c localization and all hash custody",
+    "results": [
+      {
+        "stem": "C_n16m12_M6_13_ell3_s3_V1_1_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 2947,
+        "total_generators": 2948,
+        "msolve_variables": 1924,
+        "input_sha256": "e97c330ca5b114078c31a1c1177259fdee30bd9ee93c4dcaa18439578f7bac63",
+        "manifest_sha256": "2580c93d62cc6980d38cf91b59b8fcb4d9c9def6c6e02f4a87f56b560100f000"
+      },
+      {
+        "stem": "C_n16m12_M6_13_ell3_s3_V4_3_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 1564,
+        "total_generators": 1565,
+        "msolve_variables": 1264,
+        "input_sha256": "79ff40391ced83fc013cea6b36977e8b124d37dc1fc53e03a020a6bcb93afdc2",
+        "manifest_sha256": "f4e7ccfb6f0a2cbd1acbc67316274ec18b1d590b07052a5c575b740df86b786f"
+      },
+      {
+        "stem": "C_n24m18_M9_20_ell1_s3_V1_9_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 2092,
+        "total_generators": 2093,
+        "msolve_variables": 1412,
+        "input_sha256": "4fd1f7a749b333373f37b8e50e6abcf22b5c55510cc5480c610d97c63cbf8785",
+        "manifest_sha256": "c043fb0898c79e119b26f05114600c52b4ab92c7ccab32c4c0684ec5311cd14a"
+      },
+      {
+        "stem": "C_n18m12_M2_9_ell2_s3_V3_8_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 335,
+        "total_generators": 336,
+        "msolve_variables": 280,
+        "input_sha256": "48987efea517a8b19f3c3bbf97b23c0fcd9b557621800c98b8d382e3e1ffc672",
+        "manifest_sha256": "b7408cd40396f8a20ab29c4834b670c57dd4b73db8bacdde74aaa5ae9e0f303f"
+      },
+      {
+        "stem": "C_n24m16_M12_17_ell1_s3_V2_1_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 1367,
+        "total_generators": 1368,
+        "msolve_variables": 810,
+        "input_sha256": "267e9b24278acc3f76b291bdc604335e874e66778ce34fa2f86a3467add93447",
+        "manifest_sha256": "d4b73985212001473bff0601cecb6070e4e75cdb32cb06299aa21a66aca2ab4d"
+      },
+      {
+        "stem": "C_n16m12_M6_13_ell3_s3_V1_3_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 2417,
+        "total_generators": 2418,
+        "msolve_variables": 1667,
+        "input_sha256": "ec8a66de98aadd9afd8044a80327720d379a419cc81caba331ab3c8bc7d15c6a",
+        "manifest_sha256": "f58ba01860564cf8894668484a74285ffffe9bec3cad4cadbb5b0182f9687a88"
+      },
+      {
+        "stem": "C_n24m16_M12_17_ell1_s3_V1_2_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 1932,
+        "total_generators": 1933,
+        "msolve_variables": 1126,
+        "input_sha256": "35cb051432784d28c65cf201a60649507958f06a22bbaf1287ad771c3e019d9e",
+        "manifest_sha256": "187ffd22de67f36775c278080b74bb8484c3957d822f6f8fbea21ffd6107fb5a"
+      },
+      {
+        "stem": "C_n24m18_M9_20_ell1_s3_V4_9_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 1257,
+        "total_generators": 1258,
+        "msolve_variables": 993,
+        "input_sha256": "e8f07dd667968d6c4a9a8a467955f6f9ba8a5d0893659072ff96f5f9397aa3d6",
+        "manifest_sha256": "c01b6f9cbbcc0b62e73132766b7369d4def9cea958ad203794f35d2215c153ab"
+      },
+      {
+        "stem": "C_n24m18_Mm15_14_ell1_s3_V1_9_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 402,
+        "total_generators": 403,
+        "msolve_variables": 355,
+        "input_sha256": "a5bfb12c73395d8804ef6858331bd8bf3ca9bcbb049760b57e423a162806068d",
+        "manifest_sha256": "5b98a2b83a501e4982660e42ce84241b21ab3e064a48c089eddc0315e6706f0c"
+      },
+      {
+        "stem": "C_n18m12_M2_9_ell2_s3_V1_8_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 650,
+        "total_generators": 651,
+        "msolve_variables": 439,
+        "input_sha256": "545b1521ae7374623c4960de7c08c16c247d6546c39d69792ac9416a82ab2f9e",
+        "manifest_sha256": "cd2513fc11d3b1abae31bd1bfd464c15df9e25b89feade2dc70b800c58890a00"
+      },
+      {
+        "stem": "C_n24m16_M12_17_ell1_s3_V3_2_circuit",
+        "status": "PASS",
+        "every_row_inverse_image_matches_mod_prime": true,
+        "all_source_hashes_match": true,
+        "all_rows_selected": true,
+        "bijective_variable_map_fixes_c": true,
+        "last_equation": "z*c-1",
+        "row_generators": 884,
+        "total_generators": 885,
+        "msolve_variables": 581,
+        "input_sha256": "0fe2dd221ebe2931ae86d648735a5fde5eda0816eba2c93a1acbc31285e261d4",
+        "manifest_sha256": "5a67520d452a7259c95c996c0293246244b645e7ede3ea2ad0c7db669b3fec94"
+      }
+    ]
+  }
+}

@@ -1,0 +1,119 @@
+========== 172.30.0.108 utc=2026-09-05T14:46:25Z ==========
+UTC=2026-09-05T14:46:26Z
+HOST=ip-172-30-0-108
+--- mem ---
+               total        used        free      shared  buff/cache   available
+Mem:           743Gi        88Gi       658Gi       3.4Mi       1.7Gi       655Gi
+--- dmesg OOM ---
+(dmesg empty or no match above)
+--- ps ---
+    PID    PPID     ELAPSED   RSS %CPU CMD
+   8654       1       35:13  3640  0.0 bash run_msolve_pipeline.sh m15
+   8656    8654       35:13  3632  0.0 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/m15/native_meta.json /home/ubuntu/moh-bigmem-20260905/targets/m15/native_rows.tsv 1073741827 10800 32 -l 44
+   8680    8656       35:10  2396  0.0 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/m15/native_meta.json /home/ubuntu/moh-bigmem-20260905/targets/m15/native_rows.tsv 1073741827 10800 32 -l 44
+   8681    8656       35:10  2196  0.0 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.out
+   8684    8681       35:10  1652  0.0 /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.out
+   8685    8684       35:10 85857584 734 /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.out
+  12733   12732       00:00  3596  0.0 bash -c echo UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) echo HOST=$(hostname) echo "--- mem ---" free -h | head -2 echo "--- dmesg OOM ---" (dmesg -T 2>/dev/null | grep -iE 'oom|killed process|Out of memory' | tail -8) || true echo "(dmesg empty or no match above)" echo "--- ps ---" ps -eo pid,ppid,etime,rss,pcpu,cmd | awk 'NR==1 || /msolve|Singular|run_msolve|run_guided|extract_native|run_v18/' echo "--- artifacts find ---" find $HOME/moh-bigmem-20260905 -maxdepth 5 \( -name '*.g2.rc' -o -name '*.status.json' -o -name 'guided_gb_result.json' -o -name '*.g2.out' -o -name '*.g2.stderr' -o -name '*.g2.meta' -o -name '*.rss.log' \) -printf '%s %TY-%Tm-%TdT%TH:%TM:%TS %p\n' 2>/dev/null echo "--- last F4 ---" for f in $HOME/moh-bigmem-20260905/targets/*/*/*.g2.stderr; do   [ -f "$f" ] || continue   echo FILE=$f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f")   echo "--- F4 header ---"   grep -E 'deg[[:space:]]+sel|current degree' "$f" | tail -2   echo "--- F4 last complete-ish ---"   grep -E '^[[:space:]]*[0-9]+[[:space:]]+[0-9]+[[:space:]]+[0-9]+' "$f" | tail -12   echo "--- F4 raw tail ---"   tail -c 800 "$f"; echo done echo "--- last GG ---" for f in $HOME/moh-bigmem-20260905/targets/*/guided/*.out; do   [ -f "$f" ] || continue   echo FILE=$f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f")   grep -E 'GG__|CONTROL_|MAIN_|GUIDED_|UNIT|NONUNIT|std|used time' "$f" | tail -30   echo "--- out tail ---"   tail -20 "$f" done echo "--- extract ---" ls -la $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/ 2>/dev/null || true ls -la $HOME/moh-bigmem-20260905/targets/v18/native_rows.tsv $HOME/moh-bigmem-20260905/targets/v18/classdir/rows/ 2>/dev/null || true echo "--- builder stdout ---" tail -30 $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/builder.stdout 2>/dev/null || true echo "--- builder stderr ---" tail -20 $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/builder.stderr 2>/dev/null || true echo "--- rss last ---" for f in $HOME/moh-bigmem-20260905/targets/*/*/*.rss.log; do   [ -f "$f" ] || continue   echo FILE=$f   tail -12 "$f" done echo "--- gnu time ---" grep -E 'Maximum resident|Elapsed \(wall|Exit status|Command exited|User time|System time' $HOME/moh-bigmem-20260905/targets/*/*/*.g2.stderr $HOME/moh-bigmem-20260905/targets/*/guided/*.err $HOME/*.time 2>/dev/null | tail -30 || true echo "--- home logs ---" ls -la $HOME/*.log 2>/dev/null echo "=== log tails ===" for f in $HOME/*.log; do   [ -f "$f" ] || continue   echo "==== TAIL $f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f") ===="   tail -40 "$f" done echo POLL_DONE
+  12743   12733       00:00  3924  0.0 awk NR==1 || /msolve|Singular|run_msolve|run_guided|extract_native|run_v18/
+--- artifacts find ---
+431 2026-09-05T14:11:15.9831963200 /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.meta
+0 2026-09-05T14:11:15.9901962990 /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.out
+12678 2026-09-05T14:46:19.1690540700 /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.rss.log
+5641 2026-09-05T14:43:37.6434609780 /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.stderr
+--- last F4 ---
+FILE=/home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.g2.stderr size=5641 mtime=2026-09-05 14:43:37.643460978 +0000
+--- F4 header ---
+deg       current degree of pairs selected in this round
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+--- F4 last complete-ish ---
+  4     910  199592    6629 x 9208        0.42%      212 new     698 zero         9.22 | 39.54        
+  4     153  195760    3971 x 6745        0.72%       42 new     111 zero         2.28 | 8.61         
+  4      27  195473     125 x 160         3.62%        4 new      23 zero         0.36 | 1.14         
+  5   10956  195527  150487 x 236067      0.05%     1835 new    9140 zero        99.85 | 370.52       
+  4     239  164341    5773 x 9843        0.55%      123 new     116 zero         6.26 | 23.81        
+  4     684  160017    7069 x 11037       0.48%      205 new     479 zero         9.37 | 37.79        
+  4     110  158379     788 x 1080        1.11%       10 new     100 zero         0.65 | 2.25         
+  5   17523  158266  232088 x 353777      0.04%     3315 new   14222 zero       197.63 | 773.33       
+  4     392  146039    4050 x 6145        0.77%       70 new     322 zero         8.06 | 18.21        
+  4      56  146994     271 x 455         1.33%        8 new      48 zero         0.52 | 1.79         
+  5   20676  147151  262638 x 382413      0.04%     5198 new   15507 zero       347.27 | 1356.01      
+  5   19298  220369  283478 x 426134      0.04%     3314 new   16013 zero
+--- F4 raw tail ---
+     
+  4     239  164341    5773 x 9843        0.55%      123 new     116 zero         6.26 | 23.81        
+  4     684  160017    7069 x 11037       0.48%      205 new     479 zero         9.37 | 37.79        
+  4     110  158379     788 x 1080        1.11%       10 new     100 zero         0.65 | 2.25         
+  5   17523  158266  232088 x 353777      0.04%     3315 new   14222 zero       197.63 | 773.33       
+  4     392  146039    4050 x 6145        0.77%       70 new     322 zero         8.06 | 18.21        
+  4      56  146994     271 x 455         1.33%        8 new      48 zero         0.52 | 1.79         
+  5   20676  147151  262638 x 382413      0.04%     5198 new   15507 zero       347.27 | 1356.01      
+  5   19298  220369  283478 x 426134      0.04%     3314 new   16013 zero
+--- last GG ---
+--- extract ---
+/home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/rows/:
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep  5 14:04 .
+drwxrwxr-x 4 ubuntu ubuntu 4096 Sep  5 14:04 ..
+--- builder stdout ---
+--- builder stderr ---
+--- rss last ---
+FILE=/home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.rss.log
+VmHWM:	83371992 kB
+VmRSS:	83371992 kB
+utc=2026-09-05T14:45:59Z msolve_pid=8685
+VmPeak:	109716192 kB
+VmSize:	109716192 kB
+VmHWM:	84145424 kB
+VmRSS:	84145424 kB
+utc=2026-09-05T14:46:19Z msolve_pid=8685
+VmPeak:	109716192 kB
+VmSize:	109716192 kB
+VmHWM:	85066752 kB
+VmRSS:	85066752 kB
+--- gnu time ---
+--- home logs ---
+-rw-rw-r-- 1 ubuntu ubuntu 13646 Sep  5 14:11 /home/ubuntu/m15.msolve.log
+=== log tails ===
+==== TAIL /home/ubuntu/m15.msolve.log size=13646 mtime=2026-09-05 14:11:15.927196492 +0000 ====
+    {
+      "original": "B3_0_1",
+      "safe": "v121"
+    },
+    {
+      "original": "B3_1_1",
+      "safe": "v122"
+    },
+    {
+      "original": "B3_2_1",
+      "safe": "v123"
+    },
+    {
+      "original": "B3_3_1",
+      "safe": "v124"
+    },
+    {
+      "original": "B3_1_0",
+      "safe": "v125"
+    },
+    {
+      "original": "B3_2_0",
+      "safe": "v126"
+    },
+    {
+      "original": "B3_3_0",
+      "safe": "v127"
+    },
+    {
+      "original": "B3_4_0",
+      "safe": "v128"
+    },
+    {
+      "original": "c",
+      "safe": "c"
+    }
+  ]
+}
+EMIT_RC=0 utc=2026-09-05T14:11:15Z
+input=c5d52ad31b03bcb756d12d570c2dc0a8b86d5447f252509c37b904992ec1631a  /home/ubuntu/moh-bigmem-20260905/targets/m15/msolve_native/msolve_native_p1073741827.ms bytes=4371904
+POLL_DONE

@@ -1,0 +1,288 @@
+{
+  "schema": "JC2_LINEAR_C_STRUCTURED_CUSTODY/v1",
+  "status": "TERMINAL_NO_CONSTRUCTION_WIN_PREFIX24",
+  "snapshot_utc": "2026-09-06T11:15:47.690Z",
+  "producer": "/root/nonemptiness_certificate",
+  "generation": 1,
+  "all_writers_done": true,
+  "instance": {
+    "id": "i-0da0cebfc97c9fd54",
+    "ip": "172.30.0.56",
+    "type": "r7i.8xlarge",
+    "owner": "/root",
+    "retained_running": true,
+    "launch_termination_or_retag": false
+  },
+  "writable_scope": "/home/ubuntu/linear-c-structured-pilot-20260906",
+  "prior_artifacts_edited": false,
+  "live_reports_or_blind_submissions_read": false,
+  "scientific_scope": {
+    "dependent_189_pivot_certificate": "PROVISIONAL",
+    "eliminated_C_coordinates": 24,
+    "C_degrees": [
+      35,
+      34,
+      33
+    ],
+    "lower_active_C_nodes_retained": 165,
+    "variables": 575,
+    "prefix_terms": 414,
+    "prefix_max_degree": 3,
+    "selected_J_rows_exactly_zero": true,
+    "J0_independent_linear_jets": "PASS",
+    "remaining_stream": "INCOMPLETE:829 complete generators,9967234 exact terms,last J_10_60; no terminal footer, zero malformed trailing bytes.",
+    "complete_smaller_ideal_claim": false,
+    "solver_launched": false,
+    "properness_or_counterexample_claim": false,
+    "analytic_shortcut": "Exact square completion and target shear/binomial coefficients pass, but actual-source highest rational truncation can be nonpolynomial; no formal-series source map used."
+  },
+  "no_live_edit_promise": "Producer will not modify listed artifacts after publication. Root may authorize a fresh-scratch read-only independent review. Never overwrite earlier pilot, linear-C certificate or reviewer scratch.",
+  "warnings": [
+    "Prefix reconstruction is complete; prefix_reduced_ideal.partial.jsonl is NOT complete and must not be charged as a full ideal.",
+    "Initial native-expression parser failed before arithmetic; its code bytes and child-exit1 telemetry are retained. The exact AST repair is not another mathematical generation.",
+    "Timing comparison uses the same worker but is not a repeated isolated benchmark; the increased actual largest-row count and degree are exact measurements."
+  ],
+  "jobs": [
+    {
+      "name": "analytic.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 8589934592,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 300
+      },
+      "pid": 43230,
+      "pgid": 43230,
+      "utc_start": "2026-09-06T11:07:45.520297Z",
+      "utc_end": "2026-09-06T11:07:45.878902Z",
+      "wall_elapsed_seconds": 0.3586085,
+      "max_observed_group_rss_bytes": 70189056,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "audit.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 8589934592,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 300
+      },
+      "pid": 50055,
+      "pgid": 50055,
+      "utc_start": "2026-09-06T11:12:16.968087Z",
+      "utc_end": "2026-09-06T11:13:34.239226Z",
+      "wall_elapsed_seconds": 77.271143788,
+      "max_observed_group_rss_bytes": 226955264,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "structured.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 8589934592,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 300
+      },
+      "pid": 40553,
+      "pgid": 40553,
+      "utc_start": "2026-09-06T11:04:46.232474Z",
+      "utc_end": "2026-09-06T11:04:46.415834Z",
+      "wall_elapsed_seconds": 0.18336281,
+      "max_observed_group_rss_bytes": 59936768,
+      "child_returncode": 1,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "structured_retry.telemetry.json",
+      "status": "WALL_TIMEOUT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 8589934592,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 300
+      },
+      "pid": 40765,
+      "pgid": 40765,
+      "utc_start": "2026-09-06T11:05:31.432132Z",
+      "utc_end": "2026-09-06T11:10:31.513250Z",
+      "wall_elapsed_seconds": 300.08112401,
+      "max_observed_group_rss_bytes": 2200305664,
+      "child_returncode": -15,
+      "termination": {
+        "cleanup_complete": true,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [
+          40765
+        ],
+        "kill_sent": false,
+        "leader_reaped": true,
+        "reason": "wall_timeout",
+        "term_sent": true
+      }
+    }
+  ],
+  "aggregate_supervisor_seconds": 377.894239108,
+  "artifacts": [
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/J0.json",
+      "bytes": 6993,
+      "sha256": "9285455a735f23b2e527e2e735e2c892196f7394db9ad1c936143b9a952c9dad"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/analytic.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/analytic.stdout",
+      "bytes": 574,
+      "sha256": "05389ffec5779ac099830b9f1ca4f85282cc26ea5061bf62f5947bc83e99afba"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/analytic.telemetry.json",
+      "bytes": 2090,
+      "sha256": "488489bc79f5396ac57d50a8accabf89fba9e5458b036d874eea2c04b33ca89a"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/analytic_controls.json",
+      "bytes": 626,
+      "sha256": "0c85b0239fa1ddc9d0d4d85957ee726a375e505c10bf6c3a3d5a4f41c964ffb7"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/analytic_controls.py",
+      "bytes": 3062,
+      "sha256": "60903a74440288303a56161ca66f4d9fbd4137d64fe4df573914ce68821dab23"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/audit.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/audit.stdout",
+      "bytes": 3741,
+      "sha256": "921dd59c5dd79e95f0cd893f877d26495cb1fc61a7bc6229ed7c2bd639077077"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/audit.telemetry.json",
+      "bytes": 2086,
+      "sha256": "9b2ae85f39cb69e02fcca3401f085299e73574face5030e3b2773b582e18d96b"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/audit_closed_stream.py",
+      "bytes": 4844,
+      "sha256": "8345597083c8f845857aee68f5e4956ce2a41af1bb943fa6c212bb1d42a6bfcd"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/closed_stream_audit.json",
+      "bytes": 5248,
+      "sha256": "1eedc8a038b0616a4727d2ed2f0036df9d1b409a87a33f72cc9b12bda8b7e61d"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/delta2_stage8.strongest.json",
+      "bytes": 416793,
+      "sha256": "778eda933ee9b2acbad20f6dc862c25db94776cb25ffd5782646427a3b63e1ea"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/filtered_basis_certificate.json",
+      "bytes": 1429336,
+      "sha256": "c2b5965278e0fa30f0490b7f5a019434abe5291e50b748d3a3c0795c8175f906"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/prefix_reconstruction.jsonl",
+      "bytes": 21911,
+      "sha256": "f405cc8d942d64cdf90e1f7d2b843c8435bc35f6305814c52d6a2af4174aff9b"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/prefix_reduced_ideal.partial.jsonl",
+      "bytes": 437891326,
+      "sha256": "d13810f3af8789b6b2c1bd0098d28a2bdd3b9a4949d7a5dad0b538680b0bcb5f"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/run_capped.py",
+      "bytes": 42671,
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/structured.stderr",
+      "bytes": 690,
+      "sha256": "7616e7b88d1baab5c73ed9b9af1231a64ef71ee653e44bd79643b631638c6010"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/structured.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/structured.telemetry.json",
+      "bytes": 2097,
+      "sha256": "4850d8240a3088c6027e041d30fc65d7725c5420140b00c6a6b666ae7025224d"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/structured_prefix.initial-parser-failure.py",
+      "bytes": 10614,
+      "sha256": "9e41f9d21f3d5552c4063ccbceaf40855125035d91980aca3fbbd93031e91acb"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/structured_prefix.py",
+      "bytes": 11622,
+      "sha256": "6aa2a1b0e54223af6044c0a40e7c821caf2b042e6b0d0c46657ab316ddb7f8d7"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/structured_retry.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/structured_retry.stdout",
+      "bytes": 3529,
+      "sha256": "fe9a3d6fde47f5e37f716aeba83e86b24227d38cbf1c6899de1d63aedd9e83a9"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-structured-pilot-20260906/structured_retry.telemetry.json",
+      "bytes": 2555,
+      "sha256": "d206e5405ec69d4c91ec7705ef8f50b48c4d3ed5c60b04ba0b87ecde53bf953c"
+    }
+  ]
+}

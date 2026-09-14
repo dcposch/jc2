@@ -1,0 +1,543 @@
+                                              COMPLEMENTS OF HYPERPLANE SUB-BUNDLES IN PROJECTIVE SPACE BUNDLES
+                                                                                                       OVER P1
+
+
+                                                                                                  ADRIEN DUBOULOZ
+
+
+                                                   Abstract. We establish that the isomorphy type as an abstract algebraic variety of the complement of an ample
+                                                   hyperplane sub-bundle H of a Pr−1 -bundle P(E) → P1 depends only on the the r-fold self-intersection (H r ) ∈ Z of H.
+                                                   In particular it depends neither on the ambient bundle P(E) nor on the choice of a particular ample sub-bundle with
+                                                   given r-fold self-intersection. Our proof exploits the unexpected property that every such complement comes equipped
+                                                   with the structure of a non trivial torsor under a vector bundle over the affine line with a double origin.
+arXiv:1108.6209v1 [math.AG] 31 Aug 2011
+
+
+
+
+                                                                                                    Introduction
+                                             The Danilov-Gizatullin Isomorphism Theorem [5, Theorem 5.8.1] (see also [2, 4] for short self-contained proofs) is a
+                                          surprising result which asserts that the isomorphy type as an abstract algebraic variety of the complement of an ample
+                                          section C of a P1 -bundle ν : P(E) → P1C over the complex projective line depends only on the self-intersection (C 2 ) ≥ 2
+                                          of C. In particular, it depends neither on the ambient bundle nor on the chosen ample section with ﬁxed self-intersection
+                                          d. For such a section, the locally trivial ﬁbration ν : P(E) \ C → P1 induced by the restriction of the structure morphism
+                                          ν is homeomorphic in the euclidean topology to the complex line bundle OP1 (−d) → P1 . However the non vanishing of
+                                          H 1 (P1 , OP1 (−d)) for d ≥ 2 implies that ν : P(E) \ C → P1 is in general a non trivial algebraic OP1 (−d)-torsor, and the
+                                          ampleness of C is in fact precisely equivalent to its non triviality. So the Danilov-Gizatullin Theorem can be rephrased
+                                          as the fact that the isomorphy type as an abstract algebraic variety of the total space of a non trivial OP1 (−d)-torsor is
+                                          uniquely determined by its underlying structure of topological complex line bundle over P1 .
+                                             More generally, given a vector bundle E → P1 of rank r ≥ 3 and a sub-vector bundle F ⊂ E of corank one with
+                                          quotient line bundle L, the complement in the projective bundle ν : P (E) → P1 of lines in E of the hyperplane sub-bundle
+                                          H = P (F ) inherits the structure of an F ⊗ L−1 -torsor ν : P (E) \ H → P1 . Similarly as above, the latter is homeomorphic
+                                          in the euclidean topology to the complex vector bundle F ⊗ L−1 → P1 . Furthermore, F ⊗ L−1 is homeomorphic as a
+                                          complex vector bundle to det(F ⊗ L−1 ) ⊕ Ar−2   P1
+                                                                                             ≃ OP1 (−(H r )) ⊕ Ar−2
+                                                                                                                 P1
+                                                                                                                    , where (H r ) ∈ Z denotes the r-fold intersection
+                                          product of H with itself. So one may ask by analogy with the one dimensional case if for an ample H, the integer
+                                          (H r ) ≥ r uniquely determines the isomorphy type of P (E) \ H as an algebraic variety. However, since the ampleness of
+                                          H is in general no longer equivalent to the non triviality of the torsor ν : P (E) \ H → P1 , the following problem seems
+                                          more natural:
+                                          Question. Is the isomorphy type as an abstract algebraic variety of the total space of a nontrivial torsor under an
+                                          algebraic vector bundle G → P1 uniquely determined by the isomorphy type of G as a topological complex vector bundle
+                                          over P1 , that is, by the rank and the degree of G ?
+                                              While our results imply in particular that non trivial torsors under homeomorphic complex vector bundles do in-
+                                          deed have isomorphic total spaces, the answer to this question is negative in general: there exists torsors under non
+                                          homeomorphic vector bundles or rank r ≥ 2 which have isomorphic total spaces as algebraic varieties. For instance, the
+                                          complement of the diagonal in P1 × P1 is an aﬃne surface S which inherits two structures of non trivial OP1 (−2)-torsor
+                                          via the ﬁrst and the second projections pri : S → P1 , i = 1, 2. The Picard group of S is isomorphic to Z and for every
+                                          k ∈ Z the line bundles pr∗1 OP1 (k) and pr∗2 OP1 (−k) are isomorphic. It follows that for every k ∈ Z, the total space of
+                                          pr∗1 OP1 (k) is simultaneously the total space of an OP1 (−2) ⊕ OP1 (k)-torsor and of an OP1 (−2) ⊕ OP1 (−k)-torsor over
+                                          P1 via the ﬁrst and the second projection respectively. In particular, for every k 6= 0, we obtain an aﬃne variety which
+                                          is simultaneously the total space of non trivial torsors under complex vector bundles over P1 with diﬀerent topological
+                                          types.
+                                              So the degree of the complex vector bundle G → P1 is not the appropriate numerical invariant to classify isomorphy
+                                          types of total spaces of non trivial algebraic G-torsors. In contrast, our main result can be summarized as follows:
+                                          Theorem. The total space of a torsor ν : V → P1 under a vector bundle G → P1 is an affine variety if and only if
+                                          ν : V → P1 is a non trivial torsor. If so, the isomorphy type of V as an abstract algebraic variety is uniquely determined
+                                          by the rank of G and the absolute value of deg G + 2.
+                                             The role of the integer |deg G + 2| may look surprising but the latter is intimately related to the subgroup of the Picard
+                                          group Pic (V ) ≃ Z of V generated by the canonical bundle KV = det(Ω1V ) of V . Indeed, for a G-torsor ν : V → P1 , the
+                                          relative cotangent bundle Ω1V /P1 is isomorphic to ν ∗ G∨ and so it follows from the relative cotangent exact sequence
+
+                                                                                      0 → ν ∗ Ω1P1 → Ω1V → Ω1V /P1 ≃ ν ∗ G∨ → 0
+                                          that KV ≃ ν ∗ (det G∨ ⊗ Ω1P1 ) whence that the subgroup of Pic(V ) generated by KV is isomorphic to |deg G + 2| Z ⊂ Z.
+
+                                             2000 Mathematics Subject Classification. 14L30, 14R05, 14R25 .
+                                             Key words and phrases. Hyperplane sub-bundles, affine-linear bundles, Danilov-Gizatullin Theorem.
+                                                                                                            1
+                   COMPLEMENTS OF HYPERPLANE SUB-BUNDLES IN PROJECTIVE SPACE BUNDLES OVER P1                                     2
+
+
+   In the particular case where ν : V → P1 is a torsor arising as the complement P (E) \ H of an ample hyperplane
+sub-bundle H, one has deg G = − (H r ) ≤ −r and so the above characterization specializes to the following generalization
+of the geometric form of the Danilov-Gizatullin Theorem:
+Corollary. The isomorphy type as an abstract algebraic variety of the complement of an ample hyperplane sub-bundle
+H of a Pr−1 -bundle ρ : P (E) → P1 depends only on the r-fold self-intersection (H r ) ≥ r of H.
+   The proof of the above results exploits a hidden and unexpected feature of total spaces of non trivial torsors ν : V → P1
+under a vector bundle G → P1 of rank r ≥ 1, namely the existence on every such V of the structure ρ : V → X of a
+non trivial torsor under a vector bundle G̃ → X of the same rank r, on a non separated scheme X, isomorphic to the
+aﬃne line with a double origin. The structure of these bundles G̃ → X is very similar to that of vector bundles on P1 : in
+particular the existence of a covering of X by two open subsets isomorphic to C and intersecting along C∗ implies that
+as a topological complex vector bundle, G̃ → X is uniquely determined by a homotopy class of maps S 1 → GLr (C),
+whence simply by the “degree” of its determinant. In this setting, we establish that the total space of a non trivial torsor
+ν : V → P1 under a vector bundle G → P1 of degree d carries the structure of a non trivial torsor ρ : V → X under a
+vector bundle G̃ → X of degree d + 2 uniquely determined by G. While there exists inﬁnite moduli for isomorphy type of
+total spaces of non trivial torsors under a line bundle on X, the Danilov-Gizatullin Theorem can be re-interpreted as the
+fact that the total spaces of non trivial torsors ν : V → P1 under G = OP1 (−d) are all isomorphic as torsors ρ : V → X
+under the corresponding line bundle G̃. For higher dimensional vector bundles G̃ → X, we establish in contrast that the
+isomorphy type as an abstract variety of the total space of a non trivial G̃-torsor ρ : V → X is uniquely determined by
+the absolute value of the degree of G̃.
+
+   The article is organized as follows: the ﬁrst section recalls basic properties of torsors under vector bundles. Then
+section two is devoted to the study of isomorphy types of total spaces of non trivial torsors under vector bundles on the
+aﬃne line with a double origin. These results are applied in the third section to the case of torsors under vector bundles
+on P1 .
+
+                                       1. Recollection on affine-linear bundles
+  Here, to ﬁx the notation and convention that will be used in the sequel, we brieﬂy recall classical facts about vector
+bundles, projective bundles and aﬃne-linear bundles.
+
+1.1. Vector bundles and projective bundles.
+1.1.1. A vector bundle of rank r ≥ 1 on a scheme X is the relative spectrum p : F = SpecX (Sym(F ∨ )) → X of
+the symmetric algebra of the dual of a locally free coherent OX -module F of rank r. The X-scheme F represents the
+contravariant functor from the category of schemes over X to the category of abelian groups which associates to an
+X-scheme f : Y → X the group Γ (Y, f ∗ F) of global sections of f ∗ F over Y . It follows in particular that p : F → X
+is a locally constant commutative aﬃne group scheme over X, with group law F ×X F → F induced by the diagonal
+homomorphism of OX -module F ∨ → F ∨ ⊕ F ∨ .
+1.1.2. Given a vector bundle p : E = SpecX (Sym(E ∨ )) → X, the projective bundle of lines in E is the relative
+proj ν : P (E) = Proj
+                    LX (Sym(E n )) ∨→ X of the symmetric algebra of E ∗ considered
+                               ∨                                         ∨
+                                                                                     as a graded quasi-quoherent OX -
+algebra Sym(E ∨ ) =   n≥0  Sym   (E  ). There is a canonical surjection ν  E ∨ → OP(E) (1) on P (E) which yields dually
+a closed embedding OP(E) (−1) ֒→ ν ∗ E of the tautogical line bundle as a line sub-bundle of ν ∗ E. More generally, if
+f : Y → X is a scheme over X then an X-morphism f˜ : Y → P (E) is uniquely determined by a sub-line bundle of f ∗ E,
+which then coincides with f ∗ OP(E) (−1). In other word, P (E) represents the functor which associates to an X-scheme
+f : Y → X the set of sub-line bundles of f ∗ E.LRecall that if L = SpecX (Sym(L∨ )) → X is a line bundle on X, then
+the canonical isomorphism Sym ((E ⊗ L)∨ ) ≃              n   ∨
+                                                  n≥0 Sym (E )⊗(L )
+                                                                    ∨ ⊗n
+                                                                          of graded OX -algebras yields an isomorphism
+          ∼
+ϕ : P (E) → P (E ⊗ L) of schemes over X with ϕ OP(E⊗L) (−1) ≃ OP(E) (−1) ⊗ ν ∗ L.
+                                                 ∗
+
+
+1.2. Torsors under vector bundles.
+1.2.1. Torsors under a vector bundle on a scheme are the analogues in a relative setting of aﬃne spaces attached to a
+vector space. Namely, given a vector bundle p : F = SpecX (Sym(F ∨ )) → X, a principal homogeneous F -bundle, or an
+F -torsor, is a scheme ν : V → X equipped with an action µ : F ×X V → V of the group scheme F for which there exists
+a covering of X by open subsets {Ui }i∈I such that for every i ∈ I, V |Ui = ν −1 (Ui ) is equivariantly isomorphic to F |Ui
+                                                                                                   ∼
+acting on itself by translations. Given a collection of equivariant trivializations τi : V |Ui → F |Ui , i ∈ I, it follows that
+for every i, j ∈ I, τi ◦ τj |Ui ∩Uj is an equivariant automorphism of F |Ui ∩Uj whence is a translation determined by a
+                             −1
+
+section gij ∈ Γ(Ui ∩ Uj , F ) = Γ(Ui ∩ Uj , F) of F |Ui ∩Uj . Clearly, gik |Ui ∩Uj ∩Uk = gij |Ui ∩Uj ∩Uk +gjk |Ui ∩Uj ∩Uk for every
+i, j, k ∈ I, that is, (gij )i,j∈I is a Čech 1-cocycle with value in the sheaf F for the open covering {Ui }i∈I . Changing the
+trivializations τi replaces (gij )i,j∈I by a cohomologous cocycle and the cohomology class is unaltered if V is replaced by
+an isomorphic torsor. Thus ν : V → X deﬁnes a class c(V ) ∈ Ȟ 1 ({Ui }i∈I , F ) = Ȟ 1 ({Ui }i∈I , F) and a standard argument
+eventually shows that there is a one-to-one correspondence between isomorphy classes of F -torsors and elements of the
+cohomology group Ȟ 1 (X, F ) ≃ H 1 (X, F ), with 0 ∈ H 1 (X, F ) corresponding the the trivial F -torsor p : F → X (see e.g.
+[7, 16.4.9]). This implies in particular that every F -torsor on an aﬃne scheme X is isomorphic to the trivial one.
+1.2.2. Recall that the relative cotangent bundle Ω1F /X of a vector bundle p : F → X is canonicaly isomorphic to p∗ F ∨
+[7, 16.5.15]. One checks using the above local description that this holds more generally for any F -torsor ν : V → X,
+providing a canonical short exact sequence 0 → ν ∗ Ω1X → Ω1V → Ω1V /X ≃ ν ∗ F ∨ → 0 of vector bundles on V . If X
+                     COMPLEMENTS OF HYPERPLANE SUB-BUNDLES IN PROJECTIVE SPACE BUNDLES OVER P1                                                  3
+
+
+                                                                       ∼
+is normal then the natural homomorphism ν ∗ : Pic (X) → Pic (V ) is an isomorphism; the relative canonical bundle
+KV /X = det(Ω1V /X ) and the canonical bundle KV = det(Ω1V ) of V then coincide respectively with the images by ν ∗ of
+the line bundles det(F ∨ ) and KX ⊗ det(F ∨ ) on X.
+1.2.3. Given a vector bundle p : F → X, every class c ∈ H 1 (X, F ) coincides via the canonical isomorphism H 1 (X, F ) ≃
+Ext1 A1X , F with the isomorphy class of an extension 0 → F → E → A1X → 0 of vector bundles on X, where
+A1X = X × A1 denotes the trivial line bundle on X. The inclusion F ֒→ E induces a closed immersion of P (F ) into
+ν : P (E) → X as the zero locus of the regular section of OP(E) (1) deduced from the composition OP(E) (−1) ֒→ ν ∗ E →
+ν ∗ A1X , and the complement P (E) \ P (F ) is then isomorphic as a scheme over X to the total space of an F -torsor
+ν : V → X with isomorphy class c. In particular, the trivial extension E = F ⊕ A1X corresponds to the canonical
+open immersion of F into P(F ⊕ A1X ). More generally, given a line bundle L → X on X and a short exact sequence
+of vector bundles 0 → F → E → L → 0, the complement of P (F ) ≃ P(F ⊗ L−1 ) in P (E) ≃ P(E ⊗ L−1 ) inherits the
+structure of an F ⊗ L−1 -torsor with isomorphy class in H 1 (X, F ⊗ L−1 ) ≃ Ext1 (L, F ) given by the class of the extension
+0 → F → E → L → 0.
+1.3. Affine-linear bundles.
+1.3.1. Aﬃne-linear bundles over a scheme X from a sub-class of the class of locally trivial An -bundle over X, namely,
+an affine-linear bundle of rank r ≥ 1 over X is an X-scheme ν : V → X for which there exists a open covering
+                                                                       ∼
+{Ui }i∈I of X and a collection of isomorphisms τi : V |Ui → ArUi of schemes over Ui such that for every i, j ∈ I,
+τij = τi ◦ τj |Ui ∩Uj is an aﬃne automorphism of AUi ∩Uj = SpecUi ∩Uj (OUi ∩Uj [x1 , . . . , xr ]). This means that there
+              −1                                               r
+
+exists (Aij , Tij ) ∈ Aff r (Ui ∩ Uj ) = GLr (Ui ∩ Uj ) ⋊ Gra (Ui ∩ Uj ) such that τij (x1 , . . . , xr ) = Aij (x1 , . . . , xr ) + Tij for every
+i, j ∈ I. It follows that isomorphy classes of aﬃne-linear bundles of rank r are in one-to-one correspondence with that of
+principal homogeneous bundles under the aﬃne group Aff r = GLr ⋊ Gra .
+1.3.2. Of course, every torsor under a vector bundle of rank r ≥ 1 is an aﬃne linear bundle of rank r. Conversely, let
+                                                                                 ∼
+ν : V → X be an aﬃne-linear bundle of rank r ≥ 1 with trivializations τi : V |Ui → ArUi . Then for every triple of indices
+i, j, k ∈ I, the identities                   (
+                                                Aik = Ajk Aij
+                                                t
+                                                  Tik = Ajk ·t Tij +t Tjk
+hold in GLr (Ui ∩ Uj ∩ Uk ) and Gra (Ui ∩ Uj ∩ Uk ) respectively.   If we
+                                                                         identify Aff r (Ui ∩ Uj ) with the sub-group of
+                                                              Aij t Tij
+                                                           
+GLr+1 (Ui ∩ Uj ) consisting of matrices of the form Ãij =                these relations say equivalently that (Ãij )i,j∈I
+                                                               0    1
+and (Aij )i,j∈I are Čech cocycles with value in GLr+1 and GLr respectively for the open covering {Ui }i∈I of X. These
+deﬁne respectively a vector bundle E → X of rank r + 1 and a sub-vector bundle F of E ﬁtting in a short exact sequence
+0 → F → E → A1X → 0 of vector bundles on X. By construction, ν : V → X is isomorphic as a scheme over X
+to the complement of P (F ) in ν : P (E) → X, whence can be equipped with the structure of an F -torsor. Changing
+the trivializations τi by means of aﬃne automorphisms changes the cocycle (Aij )i,j∈I for a cohomologous one and the
+cohomology class in H 1 (X, GLr ) is unaltered if we replace ν : V → X by an isomorphic aﬃne-linear bundle. Therefore,
+the vector bundle F for which an aﬃne-linear bundle can be equipped with the structure of an F -torsor is uniquely
+determined up to isomorphism. Similarly, the class in Ext1 (A1X , F ) deﬁned by (Ãij )i,j∈I is unaltered if we change the
+τi ’s or replace ν : V → X by an isomorphic aﬃne-linear bundle, and so the isomorphy class in H 1 (X, F ) ≃ Ext(A1X , F )
+of ν : V → X as an F -torsor is also uniquely determined.
+
+                            2. Affine-linear bundles over the affine with a double origin
+   The aﬃne line with a double origin is the scheme δ : X → A1 = Spec(C [x]) obtained by gluing two copies X± of
+the aﬃne line A1 = Spec(C [x]), with respective origins o± , by the identity along the open subsets X±
+                                                                                                     ∗
+                                                                                                       = X± \ {o± }.
+It comes equipped with a canonical covering U by the open subsets X+ and X− . The morphism δ is induced by the
+identity morphism on X± and restricts to an isomorphism X \ {o± } ≃ Spec C[x±1 ] .
+   Since every automorphism of X is induced by an automorphism of X+ ⊔ X− of the form X± ∋ x 7→ ax ∈ Xε·± , where
+a ∈ C∗ and ε = ±1, the automorphism group Aut (X) of X is isomorphic to Gm × Z2 . In what follows, we denote by
+θ = (1, −1) ∈ Gm × Z2 the automorphism which exchanges the open subsets X± of X.
+2.1. Vector bundles on the affine line with a double origin.
+2.1.1. Since every line bundle on X becomes trivial on the canonical covering U, the Picard group Pic(X) of X is
+isomorphic to Ȟ 1 (U, OX    ∗
+                               ) ≃ C[x±1 ]∗ /C∗ ≃ Z. In what follows we ﬁx as a generator for Pic (X) the class of the line
+                                                                                                              ∼
+bundle p : L → X with trivializations L |X± ≃ Spec (C [x] [u± ]) and transition isomorphism τ± : X+  ∗
+                                                                                                        × A1 −→ X− ∗
+                                                                                                                      × A1 ,
+(x, u+ ) 7→ (x, xu+ ). The pull-back of L by the automorphism θ of X which exchanges the two open subsets X± of X is
+isomorphic to the dual L−1 of L. A line bundle L → X isomorphic to Lk for some k ∈ Z is said to be of degree −k.
+    More generally, every vector bundle E → X of rank r ≥ 2 becomes trivial on the canonical             covering U of X,
+whence is determined up to isomorphism by the equivalence class of a matrix M ∈ GLr C[x±1 ] in the double quotient
+                                                                                                   
+
+Ȟ 1 (U, GLr ) ≃ GLr (C [x]) \GLr (C[x±1 ])/GLr (C [x]). Since for a suitable n ≥ 0, E ⊗ Ln is determined by a matrix
+M ∈ Mr (C [x]) ∩ GLr C[x±1 ] equivalent in the double quotient GLr (C [x]) \Mr (C [x]) /GLr (C [x]) to its Smith
+                                                                                                              Lr
+diagonal normal form, it follows that E splits into a direct sum of line bundles, i.e., is isomorphic to        i=1 L
+                                                                                                                      ki
+                                                                                                                         for
+suitable k1 , . . . , kr ∈ Z. The Grothendieck group K0 (X) of vector bundles on X is described as follows:
+Lemma 2.1. The map K0 (X) → Pic (X) ⊕ Z, [E] 7→ (det E, rk (E)) is an isomorphism of groups.
+                  COMPLEMENTS OF HYPERPLANE SUB-BUNDLES IN PROJECTIVE SPACE BUNDLES OVER P1                                 4
+
+
+Proof. The only non trivial part is to show that this map is injective, or equivalently, that if E → X is a vector bundle
+of rank r ≥ 2 then E and det (E) ⊕ Ar−1
+                                      X   have the same class in K0 (X). We proceed by induction on r ≥ 2. Since every
+vector bundle on X is decomposable, we may assume that E = Lm ⊕ E ′ where k ∈ Z and E ′ is a vector bundle of rank
+r − 1. By induction hypothesis, E ′ has the same class in K0 (X) as det (E ′ ) = Ln ⊕ Ar−2
+                                                                                         X   where n = deg (E ′ ), and so it
+is enough to check that for every m, n ∈ Z, L ⊕ L and L
+                                             m      n      m+n
+                                                                 ⊕ AX have the same class in K0 (X). If either m or n is
+                                                                    1
+
+equal to zero then we are done. Otherwise, up to changing Lm ⊕ Ln for its dual and exchanging the roles of m and n,
+we may assume that either 0 < m ≤ n or m < 0 < n. In the ﬁrst case, the matrix
+
+                           xm                                     xm+n
+                                                                                        
+                                 1                0    1                   0         1     0
+                                                                                                   ∈ GL2 C x±1
+                                                                                                              
+                 M=                      =
+                            0   xn               −1   xn−1          0      1        xm−1   1
+is equivalent in Ȟ 1 (U, GL2 ) to diag xm+n , 1 and deﬁnes an extension 0 → Lm → Lm+n ⊕ A1X → Ln → 0. Hence
+                                                
+
+Lm ⊕ Ln and Lm+n ⊕ A1X have the same class in K0 (X). The second case follows from the same argument using the
+fact that the matrix
+                                   xm
+                                                   m            −m      
+                              1                  1 0      x     0      x     1
+                                                                                 ∈ GL2 C x±1
+                                                                                            
+                     N=                   =
+                              0 xm+n            xn 1       0   xn       −1 0
+is equivalent in Ȟ 1 (U, GL2 ) to diag (xm , xn ) and deﬁnes an extension 0 → A1X → Lm ⊕ Ln → Lm+n → 0.                   
+
+2.2. Affine-linear bundles of rank one.
+Here we review the classiﬁcation of aﬃne-linear bundle of rank one over X following [1, 3].
+2.2.1. In view of the above description of Pic(X), every aﬃne-linear bundle ρ : S → X of rank
+                                                                                              one    over X is an Lk -torsor
+for a certain k ∈ Z. We deduce from the isomorphism H (X, L ) ≃ Ȟ (U, L ) ≃ C x
+                                                           1      k       1     k         ±1
+                                                                                              /hx C [x] + C [x]i that every
+                                                                                                  k
+
+nontrivial Lk -torsor ρ : S → X is isomorphic to a one obtain by gluing X+ × A1 and X− × A1 over X+ ∩ X− by an
+isomorphism of the form (x, u+ ) 7→ (x, xk u+ + g (x)) for a Laurent polynomial g (x) ∈ C x±1 with non zero residue
+class in C x±1 /hxk C [x] + C [x]i. This implies in turn that the total space of a nontrivial Lk -torsor is an aﬃne surface.
+               
+
+Indeed, writing g = x−l h (x) where h ∈ C [x] \ xC [x] and l > min (0, −k), the local regular functions
+                      ϕ+ = xk+l u+ + h (x) ∈ Γ(S |X+ , OS )          and        ϕ− = xl u− ∈ Γ(S |X− , OS )
+glue to a global one ϕ ∈ Γ(S, OS ) for which the morphism π = (δ ◦ ρ, ϕ) : S → A2 = Spec (C [x, y]) maps the ﬁbers
+ρ−1 (o± ) to the distinct points (0, h (0)) and (0, 0) respectively and restricts to an isomorphism S \ ρ−1 ({o± }) ≃
+Spec C x±1 , y . Since the inverse images by π of the principal aﬃne open subsets y 6= h (0) and y 6= 0 of A2 are
+principal open subsets of S \ ρ−1 (o+ ) ≃ A2 and S \ ρ−1 (o− ) ≃ A2 respectively, it follows that π : S → A2 is an aﬃne
+morphism whence that S is an aﬃne scheme. Note that conversely the total space of a trivial Lk -torsor cannot be aﬃne
+since it is not even separated.
+Example 2.2. For every d ∈ Z, we let ζd : S (d) → X be the nontrivial Ld -torsor with gluing isomorphism
+                                                                                                
+                                     ∼
+               X+ × A1 ⊃ X+ ∗
+                              × A1 → X−   ∗
+                                             × A1 ⊂ X− × A1 , (x, u+ ) 7→ x, xd u+ + xmin(−1,d−1) .
+
+One checks easily that ζ−d : S (−d) → X is isomorphic to the pull-back S (d)×X X of ζd : S (d) → X by the automorphism
+θ of X which exchanges the open subsets X± . Since Ω1X is trivial it follows that KS(d) ≃ Ω1S(d)/X ≃ ζd∗ L−d whence that
+Pic(S(d))/hKS(d) i ≃ Z/ |d| Z. Therefore, the surfaces S(d) are pairwise non isomorphic as schemes over X while S(d)
+and S(d′ ) are isomorphic as abstract schemes if and only if d = ±d′ . Note that since Pic (S(d)) ≃ Pic(S(d) ×X ArX ) for
+every r ≥ 1, the same argument shows more generally that S(d) ×X ArX is isomorphic to S(d′ ) ×X ArX as a scheme over
+X if and only if d = d′ , and as an abstract scheme if and only if d = ±d′ .
+   If d ≥ 0 then, letting ϕ ∈ Γ(S (d) , OS(d) ) be deﬁned locally by (ϕ+ , ϕ− ) = (xd+1 u+ + 1, xu− ) as in 2.2.1, one
+checks that the rational functions ψ = x−1 ϕ (ϕ − 1) and ξ = x−d ϕd ψ on S (d) are regular and that the morphism
+(δ ◦ ζd , ϕ, ψ, ξ) : S (d) → A4 = Spec (C [x, y, z, u]) is a closed embedding of S (d) as the surface deﬁned by the equations
+                                         xz = y (y − 1) , (y − 1)d u = z d+1 , xd u = y d z.
+   The following result shows that for a non trivial aﬃne-linear bundle of rank one ρ : S → X, the isomorphy type of S
+as an abstract scheme is essentially uniquely determined by its one as an aﬃne-linear bundle over X:
+Theorem 2.3. Two non trivial affine-linear bundles or rank one ρi : Si → X, i = 1, 2, have isomorphic total spaces if
+and only if their isomorphy classes in H 1 (X, Aff 1 ) belong to the same orbit of the action of Aut (X).
+
+Proof. The condition is clearly suﬃcient. Conversely, if either S1 or S2 admits a unique aﬃne-linear bundle structure
+over X up to composition by automorphisms of X then both admit a unique such structure and so every isomorphism
+         ∼
+Φ : S2 → S1 descends to an automorphism ϕ of X such that ρ1 ◦ Φ = ϕ ◦ ρ2 . This implies in turn that Φ factors through
+an isomorphism of aﬃne-linear bundles Φ′ : S2 → S1 ×X X whence that the isomorphy classes in H 1 (X, Aff 1 ) of the
+Aff 1 -bundles associated to S1 and S2 belong to a same orbit of Aut (X). Otherwise, if S1 and S2 both admit at least
+two aﬃne-linear bundle structures over X with distinct general ﬁbers then, by combining Theorem 3.11 and 5.3 in [1],
+we obtain the following : if the canonical bundles KS1 and KS2 are both trivial then ρi : Si → X, i = 1, 2, are both
+isomorphic to ζ0 : S (0) → X. Otherwise, for d = ord(Pic(S1 )/hKS1 i) = ord(Pic(S2 )/hKS2 i), ρi : Si → X is isomorphic
+as an aﬃne-linear bundle either to the one ζd : S (d) → X or to the one ζ−d : S (−d) → X. This completes the proof since
+the latters are obtained from each others via the base change by the automorphism θ of X (see Example 2.2 above). 
+                  COMPLEMENTS OF HYPERPLANE SUB-BUNDLES IN PROJECTIVE SPACE BUNDLES OVER P1                                     5
+
+
+2.3. Affine-linear bundles of higher ranks.
+In this subsection, we consider aﬃne-linear bundles ρ : V → X of rank r ≥ 2. Recall that to every such bundle is
+associated a vector bundle E → X unique up to isomorphism for which ρ : V → X inherits the structure of an E-torsor.
+In contrast with the case of aﬃne-linear bundles of rank one, we have the following characterization:
+Theorem 2.4. Let pi : Ei → X, i = 1, 2 be vector bundles of the same rank r ≥ 2 and let ρi : Vi → X be non trivial
+Ei -torsors, i = 1, 2. Then the following holds:
+    1) V1 and V2 are isomorphic as schemes over X if and only if deg(E1 ) = deg(E2 ),
+    2) V1 and V2 are isomorphic as abstract schemes if and only if deg(E1 ) = ± deg(E2 ).
+2.3.1. Theorem 2.4 is a consequence of Lemmas 2.5 and Proposition 2.6 below which, combined with Lemma 2.1, imply
+that the total space of non trivial E-torsor ρ : V → X or rank r ≥ 2 is isomorphic as a scheme over X to S (d) ×X Ar−1
+                                                                                                                   X ,
+where d = − deg (E) and where ζd : S(d) → X is the non trivial Ld -torsor deﬁned in Example 2.2 above.
+Lemma 2.5. The total spaces of all non trivial torsors under a fixed vector bundle p : E → X of rank r ≥ 2 are affine
+and isomorphic as schemes over X.
+                                                               Lr
+Proof. By virtue of 2.1.1 above, we may assume that E =          i=1 L , k1 , . . . , kr ∈ Z. Given a non trivial E-torsor
+                                                                      ki
+
+ρ : V → X there exists an index i such that the i-th component of the isomorphy class (v1 , . . . , vr ) of V in H 1 (X, E) ≃
+Lr
+       H 1 (X, Lki ) is not zero. Up to a permutation, we may assume from now on that v1 6= 0. The actions of Lk1 and
+   i=1 L
+E1 = ri=2 Lki ≃ E/Lk1 on V commute and we have a cartesian square
+                                                              π1
+                                                      V             / S1 = V /E1
+
+                                                                               ρ1
+                                                                          
+                                                    V /Lk1               /X
+
+where ρ1 : S1 → X is an Lk1 -torsor with isomorphy class v1 ∈ H 1 (X, Lk1 ) and where π1 : V → S1 = V /E1 is a
+ρ∗1 E1 -torsor. Since ρ1 : S1 → X is a non trivial torsor, S1 is an aﬃne scheme by virtue of 2.2.1 and so π1 : V → S1 is
+isomorphic as a scheme over X to the total space of the trivial ρ∗1 E1 -torsor p1 : S1 ×X E1 → S1 . In particular, V is an
+aﬃne scheme.
+    With the notation of Example 2.2 above, we claim that S1 ×X E1 is isomorphic as a scheme over X to the r-fold
+ﬁber product S(k1 ) ×X · · · ×X S(kr ). Indeed, since for every k ∈ Z, ζk : S (k) → X is an Lk -torsor, the ﬁber product
+S1 ×X S (k) is simultaneously the total space of a ρ∗1 Lk -torsor over S1 and of a ζk∗ Lk1 -torsor over S (k) via the ﬁrst and the
+second projection respectively. The fact that S1 and S (k) are both aﬃne implies that the latter are both trivial torsors,
+which yields isomorphisms S1 ×X Lk ≃ S1 ×X S (k) ≃ Lk1 ×X S (k) of schemes over X. The same argument applied
+to the non trivial Lk1 -torsor ζk1 : S(k1 ) →
+                                            LX  provides isomorphisms S(k1 ) ×X Lk ≃ S(k1 ) ×X S (k) ≃ Lk1 ×X S (k) of
+                                              r
+schemes over X. Letting E2 = E1 /L ≃ i=3 Lki , we ﬁnally obtain isomorphisms
+                                       k2
+
+
+                   S1 ×X E1 ≃ S(k1 ) ×X S(k2 ) ×X E2 ≃ S(k1 ) ×X S(k2 ) ×X (S(k3 ) ×X · · · ×X S(kr ))
+where the last isomorphism follows from the fact that the ﬁber product of the aﬃne scheme q : S(k1 ) ×X S(k2 ) → X with
+the E2 -torsor S(k3 )×X · · ·×X S(kr ) is isomorphic to the trivial q ∗ E2 -torsor S(k1 )×X S(k2 )×X E2 over S(k1 )×X S(k2 ). 
+
+Proposition 2.6. The isomorphy type of the total space of a non trivial affine-linear bundle ρ : V → X or rank r ≥ 2
+as a scheme over X depends only on the class in K0 (X) of its associated vector bundle.
+
+Proof. Given a vector bundle E → X of rank r ≥ 2, we will show more precisely that the total space of a non trivial
+E-torsor ρ : V → X is isomorphic as a scheme over X to S (d) ×X Ar−1
+                                                                   X , where d = − deg  (E). We proceed by induction
+on the rank of E. By combining 2.1.1 and Lemma 2.5 above, we may assume that E = ri=1 Lki , where k1 , . . . , kr ∈ Z
+                                                                                      L
+and −k1 − · · · − kr = −d and that V = S(k1 ) ×X · · · ×X S(kr ). Furthermore, since the induction hypothesis implies
+that S(k2 ) ×X · · · ×X S(kr ) ≃ S(d − k1 ) ×X Ar−1
+                                                X   as schemes over X, it is enough to show that for every m, n ∈ Z,
+S(m) ×X S(n) and S(m + n) ×X A1X are isomorphic as schemes over X. If m or n is equal to zero then we are done.
+Otherwise, up to taking the pull-back of S(m) ×X S(n) by the automorphism θ of X and exchanging the roles of m and
+n, we may assume similarly as in the proof of Lemma 2.1 above that either 0 < m ≤ n or m < 0 < n. In the ﬁrst case,
+letting E ≃ Lm+n ⊕ A1X be the vector bundle on X deﬁned by the matrix
+                                                m         
+                                                 x      1
+                                                             ∈ GL2 C x±1 ,
+                                                                         
+                                          M=             n
+                                                  0    x
+it follows from Lemma 2.5 that the total space of the non trivial E-torsor ρ : V → X with gluing isomorphism
+
+                                                             ∼
+                                 X+ × A2 ⊃ X+
+                                            ∗
+                                              × A2           →      ∗
+                                                                   X− × A2 ⊂ X− × A2 ,
+                                          (x, (v+ , u+ ))    7→    (x, (xm v+ + u+ , xn u+ + x−1 ))
+is isomorphic to S(m + n) ×X A1X . On the other hand, since E is an extension of Ln by Lm , V inherits a free action
+of Lm whose quotient V /Lm coincides with the total space of the Ln -torsor ζn : S(n) → X with gluing isomorphism
+(x, u+ ) 7→ (x, xn u+ + x−1 ). Furthermore, the quotient morphism V → V /Lm ≃ S(n) inherits the structure of a ζn∗ Lm -
+torsor whence is isomorphic to the trivial one S(n) ×X Lm as S(n) is aﬃne. Summing up, we obtain isomorphisms
+S(m + n) ×X A1X ≃ V ≃ S(n) ×X Lm ≃ S(n) ×X S (m) of schemes over X.
+                   COMPLEMENTS OF HYPERPLANE SUB-BUNDLES IN PROJECTIVE SPACE BUNDLES OVER P1                                           6
+
+
+  The case m < 0 < n follows from a similar argument starting from the vector bundle E ≃ Lm ⊕ Ln deﬁned by the
+matrix
+                                                 xm
+                                                      
+                                             1
+                                                         ∈ GL2 C x±1 ,
+                                                                      
+                                     N=          m+n
+                                             0 x
+and the non trivial E-torsor ρ : V → X with gluing isomorphism
+                                                      ∼
+                          X+ × A2 ⊃ X+
+                                     ∗
+                                       × A2           →     ∗
+                                                           X− × A2 ⊂ X− × A2
+                                    (x, (v+ , u+ ))   7→   (x, (v+ + xm u+ , xm+n u+ + xmin(−1,m+n−1) )).
+                                                                                                                                      
+
+                          3. Isomorphy types of complements of hyperplane sub-bundles
+   In this section, we consider total spaces of non trivial aﬃne-linear bundles ν : V → P1 over the projective line. We
+ﬁrst review the case of aﬃne-linear bundles of rank one: the crucial observation there is the fact that the total space
+of a non trivial OP1 (−d)-torsor ν : V → P1 , where d ≥ 2, is isomorphic to the aﬃne surface ζd−2 : S (d − 2) → X of
+Example 2.2, whence admits the structure of a non trivial Ld−2 -torsor over the aﬃne line with a double origin. This
+enables to consider total spaces of non trivial aﬃne-linear bundles ν : V → P1 of higher ranks as being simultaneously
+that of certain non trivial aﬃne-linear bundles over X, and to deduce the classiﬁcation of total spaces of such bundles
+as a particular case of the results established in the ﬁrst section.
+
+3.1. Affine linear bundles of rank one and the Danilov-Gizatullin Theorem.
+The Danilov-Gizatullin Theorem [5, Theorem 5.8.1 ] asserts that the isomorphy type of the complement of an ample
+section C in a Hirzebruch surface πn : Fn = P (OP1 ⊕ OP1 (n)) → P1 , n ≥ 0, depends only on the self-intersection (C 2 ) ≥ 2
+of C. Since there is a one-to-one correspondence between non trivial OP1 (−d)-torsors ν : V → P1 and complements of
+ample sections C with self-intersection (C 2 ) = d in Hirzebruch surfaces [5, Remark 4.8.6], the Danilov-Gizatullin Theorem
+can be rephrased as the fact that the isomorphy type of the total space of a non trivial OP1 (−d)-torsor ν : V → P1
+depends only on d and not on its isomorphy class as a torsor in H 1 (P1 , OP1 (−d)). We have the following more eﬀective
+result:
+Proposition 3.1. The total space of a non trivial OP1 (−d)-torsor ν : V → P1 , d ≥ 2, is isomorphic to the surface
+ζd−2 : S (d − 2) → X of Example 2.2. Furthermore the isomorphism V ≃ S(d − 2) can be chosen in such a way that
+               ∗
+ν ∗ OP1 (1) = ζd−2 L−1 in Pic (V ) ≃ Z.
+
+Proof. Recall that for every d ≥ 2, ζd−2 : S(d − 2) → X is isomorphic to the surface in A4 = Spec(C [x, y, z, u]) deﬁned
+by the equations
+                                 xz = y (y − 1) , (y − 1)d−2 u = z d−1 , xd−2 u = y d−2 z.
+Letting P1 = Proj(C[w0 , w1 ]), U0 = P1 \ {[1 : 0]} = Spec (C [w]) and U∞ = P1 \ {[0 : 1]} = Spec (C [w′ ]) where w = w0 /w1
+and w′ = w1 /w0 , one checks that the morphism νd−2 : S(d − 2) → P1 , (x, y, z, u) 7→ [x : y] = [y − 1 : z] deﬁnes an
+OP1 (−d)-torsor with local trivializations
+                                    −1        ∼                          −1        ∼
+                                                                             (U∞ ) → Spec C w′ [x]
+                                                                                             
+                              τ0 : νd−2 (U0 ) → Spec (C [w] [u]) , τ∞ : νd−2
+
+and transition isomorphism τ∞ ◦ τ0−1 |U0 ∩U∞ given by (w, u) 7→ (w′ , x) = w−1 , wd u + w . Furthermore, it follows
+                                                                                                   
+
+from the construction of ζd−2 : S (d − 2) → X and νd−2 : S(d − 2) → P1 that νd−2          −1              −1
+                                                                                             ([0 : 1]) = ζd−2 (o+ ). Since the
+classes of these divisors in Cl (S(d − 2)) ≃ Pic (S(d − 2)) coincide respectively with the line bundles νd−2    ∗
+                                                                                                                    OP1 (1) and
+ζd−2 L , the assertion follows from the “reﬁned” Danilov-Gizatullin Theorem [2, Theorem 3.1] which asserts that if
+  ∗      −1
+                                                                                                              ∼
+νi : Vi → P1 , i = 1, 2, are non trivial OP1 (−d)-torsors, then there exists an isomorphism f : V1 → V2 such that
+f ∗ (ν2∗ OP1 (1)) ≃ ν1∗ OP1 (1).                                                                                              
+
+3.2. Affine-linear bundles of arbitrary ranks.
+By combining our previous results, we obtain the following characterization:
+Theorem 3.2. Let pi : Ei → P1 , i = 1, 2 be vector bundles of the same rank r ≥ 1 and let νi : Vi → P1 be non trivial
+Ei -torsors, i = 1, 2. Then V1 and V2 are affine, and isomorphic as abstract varieties if and only if deg(det E1∨ ⊗ Ω1P1 ) =
+± deg(det E2∨ ⊗ Ω1P1 ).
+
+Proof. The argument is very similar to the one used inL          the proof of Lemma 2.5 above. Recall that every vector bundle
+                                                                   r
+E → P1 of rank r ≥ 2 splits into a direct sum E =                  i=1 OP1 (ki ), k1 , . . . , kr ∈ Z, of line bundles [6]. Therefore, if
+ν : V → P is a non trivial E-torsor, thenLthere exists an index i ∈ {1, . . . , r} such thatLthe i-th component of its
+              1
+
+isomorphy class (a1 , . . . , ar ) ∈ H 1 (P1 , E) ≃ ri=1 H 1 (P1 , OP1 (ki )) is non zero. Letting Ei = j6=i OP1 (kj ) ≃ E/OP1 (ki ),
+the quotient of V by the induced action of Ei inherits the structure of a non trivial OP1 (ki )-torsor νi : Si → P1 with
+isomorphy class ai ∈ H 1 (P1 , OP1 (ki )). Furthermore, the quotient morphism V → Si = V /Ei has the structure of a
+νi∗ Ei -torsor. Proposition 3.1 above implies that ki = −d for some d ≥ 2 and that Si is isomorphic to the surface
+ζd−2 : S(d − 2) → X. In particular, Si ≃ S(d − 2) is aﬃne and so V is isomorphic to the trivial νi∗ Ei -torsor Si ×P1 Ei .
+Moreover, by choosing the isomorphism Si ≃ S(d − 2) in such a way that νi∗ OP1 (1) ≃ ζd−2              ∗
+                                                                                                           L−1 , we obtain that Si ×P1 Ei
+is an aﬃne variety, isomorphic as a scheme over X to the total space of a non trivial torsor under the vector bundle
+Ẽ = Ld−2 ⊕ L−k2 ⊕ · · · ⊕ L−kr . Since deg Ẽ = − deg(det E ∨ ⊗ Ω1P1 ), the assertion follows from Theorem 2.4 above. 
+                   COMPLEMENTS OF HYPERPLANE SUB-BUNDLES IN PROJECTIVE SPACE BUNDLES OVER P1                                         7
+
+
+Example 3.3. Let us consider again the example given in the introduction of an aﬃne variety which is simultaneously the
+total space of non trivial torsors under complex vector bundles of diﬀerent topological types. The Euler exact sequence
+           j
+0 → Ω1P1 → OP1 (−1)⊕2 → OP1 → 0 on P1 deﬁnes a non trivial Ω1P1 -torsor v : V → P1 with total space isomorphic
+to the complement of the diagonal ∆ ≃ P(Ω1P1 ) in P(OP1 (−1) ⊕ OP1 (−1)) ≃ P1 × P1 . For every k ∈ Z, the variety
+Vk = V ×P1 OP1 (k) → P1 is then a torsor under the vector bundle Fk = Ω1P1 ⊕ OP1 (k). Since deg(det(F−k   ∨
+                                                                                                            ) ⊗ Ω1P1 ) =
+k = − deg(det(Fk ) ⊗ ΩP1 ), Theorem 3.2 implies that V−k and Vk are isomorphic aﬃne varieties. The exact sequence
+                 ∨      1
+
+                                                        j⊕id
+                             0 → Fk = Ω1P1 ⊕ OP1 (k) → Ek = OP1 (−1)⊕2 ⊕ OP1 (k) → OP1 → 0
+provides an open embedding of Vk ≃ V−k into P(Ek ) as the complement of the hyperplane sub-bundle Hk = P(Fk ). Note
+that if k = 0 then H0 is nef but not ample and that if k > 2 then H−k is ample whereas Hk has negative self-intersection
+(Hk3 ) = 2 − k.
+    More generally, for anyP  n ≥ 2, the complement V in Pn × Pn = Proj(C[x0 , . . . , xn ]) × Proj(C[y0 , . . . , yn ]) of the ample
+                               n
+divisor D with equation        i=0 xi yi = 0 inherits simultaneously via the ﬁrst and the second projection the structure
+of an ΩPn -torsor νi : V → Pn associated with the Euler exact sequence 0 → Ω1Pn → OPn (−1)⊕n+1 → OPn → 0 on
+         1
+
+each factor in Pn × Pn . Since D is of type (1, 1) in Pic (Pn × Pn ) ≃ p∗1 Pic(Pn ) ⊕ p∗2 Pic (Pn ), we have for every k ∈ Z,
+ν2∗ OPn (k) = ν1∗ OPn (−k) in Pic (V ) ≃ Z. Therefore, similarly as in the previous case, we may interpret V ×ν1 ,Pn OPn (−k) ≃
+V ×ν2 ,Pn OPn (k) as being simultaneously the total space of an Ω1Pn ⊕ OPn (−k)-torsor and of an Ω1Pn ⊕ OPn (k)-torsor over
+Pn via the ﬁrst and the second projection respectively.
+
+                                                            References
+1. A. Dubouloz, Danielewski-Fieseler Surfaces, Transformation Groups 10 (2005), no. 2, 139–162.
+2. A. Dubouloz and D. Finston, On exotic affine 3-spheres, Preprint arXiv:1106.2900v1 (2011).
+3. K.-H. Fieseler, On complex affine surfaces with C+ -action, Comment. Math. Helv. 69 (1994), no. 1, 5–27.
+4. H. Flenner, S. Kaliman, and M. Zaidenberg, On the Danilov-Gizatullin Isomorphism Theorem, L’Enseignement Mathḿatique 55 (2009),
+   no. 2, 1–9.
+5. M. H. Gizatullin and V. I. Danilov, Automorphisms of affine surfaces II, Izv. Akad. Nauk SSSR Ser. Mat. 41 (1977), no. 1, 54–103.
+6. A. Grothendieck, Sur la classification des fibrés holomorphes sur la sphère de Riemann, American Journal of Maths. 79 (1957), no. 1,
+   121–138.
+7. A. Grothendieck and J. Dieudonné, EGA IV. Étude locale des schémas et des morphismes de schémas, Publ. Math. IHES, vol. 20
+   (1964), 24 (1965), 28 (1966), 32 (1967).
+
+   CNRS, Institut de Mathématiques de Bourgogne, Université de Bourgogne, 9 avenue Alain Savary - BP 47870, 21078 Dijon
+cedex, France
+   E-mail address: adrien.dubouloz@u-bourgogne.fr
+

@@ -1,0 +1,18 @@
+{
+  "schema":"jc2.small-exact-controls/v1",
+  "script":"box/d125-small-receiver-polynomial-lift-contract-20260906/check.py",
+  "script_sha256":"77f8ee1b0eae54831bdf1e255685449e41f30feb2b9697c6808ef9110230f10d",
+  "normal_exit":0,
+  "optimized_exit":0,
+  "mutated_inverse_sign_normal_exit":1,
+  "mutated_inverse_sign_optimized_exit":1,
+  "mutated_pivot_sign_normal_exit":1,
+  "mutated_pivot_sign_optimized_exit":1,
+  "last_six_process_batch_wall_seconds":2.311,
+  "caps":{"wall_seconds":30,"CPU_seconds":25,"memory_MiB":512},
+  "negative_slots_each_polygon":{"P":30,"Q":75,"total":105},
+  "maximum_lambda_degrees":{"P":7,"Q":12},
+  "real_omission_control":{"A":"gamma","B":"gamma^2*pi+gamma^3","lambda2":0,"lambda3":0,"inverse_P":"v^-1","inverse_Q":"v^2*u","receiver_J":"gamma^2","inverse_J":1,"complete_rows_accept":false,"omitting_P_u0_vminus1_accept":true},
+  "positive_controls":["both coordinate inverse identities","forward/inverse Jacobian signs","polynomial cancellation to u and u^2","all negative support indices","degree and weight bounds","unique monic leaders","source/lambda scaling covariance","four selected Taylor rows","D0=162 and6rho^6","fixed coefficient-field inverse"],
+  "scope":"Only tiny fixtures and selected rows expanded; no full receiver/source polynomial or full ideal build. A pre-run syntax typo was corrected before the successful ordinary/optimized runs."
+}

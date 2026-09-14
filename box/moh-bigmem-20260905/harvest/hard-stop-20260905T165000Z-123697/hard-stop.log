@@ -1,0 +1,104 @@
+HARD_STOP_BEGIN utc=2026-09-05T16:50:00Z run_tag=20260905T165000Z-123697
+AWS_PRE_RC=0
+PAIR phase=pre id=i-0e95f8ff97f6462ce expected_ip=172.30.0.183 actual_ip=172.30.0.183 state=running
+PAIR phase=pre id=i-0ce9ea50559403c22 expected_ip=172.30.0.202 actual_ip=172.30.0.202 state=running
+PAIR phase=pre id=i-0193dc1295fc5234a expected_ip=172.30.0.108 actual_ip=172.30.0.108 state=running
+PAIR phase=pre id=i-0baedea1d34e4b978 expected_ip=172.30.0.190 actual_ip=172.30.0.190 state=running
+PAIR phase=pre id=i-0780c67ecdc79cb0a expected_ip=172.30.0.121 actual_ip=172.30.0.121 state=running
+PAIR phase=pre id=i-018484399fd100293 expected_ip=172.30.0.55 actual_ip=172.30.0.55 state=running
+PAIR phase=pre id=i-043f250f1956bd34b expected_ip=172.30.0.45 actual_ip=172.30.0.45 state=running
+PAIR phase=pre id=i-02efd7ecd26becc5a expected_ip=172.30.0.125 actual_ip=172.30.0.125 state=running
+PRE_SNAPSHOT_RC ip=172.30.0.183 rc=0
+PRE_SNAPSHOT_RC ip=172.30.0.202 rc=0
+PRE_SNAPSHOT_RC ip=172.30.0.108 rc=0
+PRE_SNAPSHOT_RC ip=172.30.0.190 rc=0
+PRE_SNAPSHOT_RC ip=172.30.0.121 rc=0
+PRE_SNAPSHOT_RC ip=172.30.0.55 rc=0
+PRE_SNAPSHOT_RC ip=172.30.0.45 rc=0
+PRE_SNAPSHOT_RC ip=172.30.0.125 rc=0
+AWS_PRESTOP_RC=0
+PAIR phase=prestop id=i-0e95f8ff97f6462ce expected_ip=172.30.0.183 actual_ip=172.30.0.183 state=running
+PAIR phase=prestop id=i-0ce9ea50559403c22 expected_ip=172.30.0.202 actual_ip=172.30.0.202 state=running
+PAIR phase=prestop id=i-0193dc1295fc5234a expected_ip=172.30.0.108 actual_ip=172.30.0.108 state=running
+PAIR phase=prestop id=i-0baedea1d34e4b978 expected_ip=172.30.0.190 actual_ip=172.30.0.190 state=running
+PAIR phase=prestop id=i-0780c67ecdc79cb0a expected_ip=172.30.0.121 actual_ip=172.30.0.121 state=running
+PAIR phase=prestop id=i-018484399fd100293 expected_ip=172.30.0.55 actual_ip=172.30.0.55 state=running
+PAIR phase=prestop id=i-043f250f1956bd34b expected_ip=172.30.0.45 actual_ip=172.30.0.45 state=running
+PAIR phase=prestop id=i-02efd7ecd26becc5a expected_ip=172.30.0.125 actual_ip=172.30.0.125 state=running
+STOP_RC ip=172.30.0.183 rc=0
+STOP_RC ip=172.30.0.202 rc=0
+STOP_RC ip=172.30.0.108 rc=0
+STOP_RC ip=172.30.0.190 rc=0
+STOP_RC ip=172.30.0.121 rc=0
+STOP_RC ip=172.30.0.55 rc=0
+STOP_RC ip=172.30.0.45 rc=0
+STOP_RC ip=172.30.0.125 rc=0
+AWS_POSTVALIDATE_RC=0
+PAIR phase=postvalidate id=i-0e95f8ff97f6462ce expected_ip=172.30.0.183 actual_ip=172.30.0.183 state=running
+PAIR phase=postvalidate id=i-0ce9ea50559403c22 expected_ip=172.30.0.202 actual_ip=172.30.0.202 state=running
+PAIR phase=postvalidate id=i-0193dc1295fc5234a expected_ip=172.30.0.108 actual_ip=172.30.0.108 state=running
+PAIR phase=postvalidate id=i-0baedea1d34e4b978 expected_ip=172.30.0.190 actual_ip=172.30.0.190 state=running
+PAIR phase=postvalidate id=i-0780c67ecdc79cb0a expected_ip=172.30.0.121 actual_ip=172.30.0.121 state=running
+PAIR phase=postvalidate id=i-018484399fd100293 expected_ip=172.30.0.55 actual_ip=172.30.0.55 state=running
+PAIR phase=postvalidate id=i-043f250f1956bd34b expected_ip=172.30.0.45 actual_ip=172.30.0.45 state=running
+PAIR phase=postvalidate id=i-02efd7ecd26becc5a expected_ip=172.30.0.125 actual_ip=172.30.0.125 state=running
+POSTSTOP ip=172.30.0.183 hash_rc=0 pull_rc=0 compare_rc=0
+POSTSTOP ip=172.30.0.202 hash_rc=0 pull_rc=0 compare_rc=0
+POSTSTOP ip=172.30.0.108 hash_rc=0 pull_rc=0 compare_rc=0
+POSTSTOP ip=172.30.0.190 hash_rc=0 pull_rc=0 compare_rc=0
+POSTSTOP ip=172.30.0.121 hash_rc=0 pull_rc=0 compare_rc=0
+POSTSTOP ip=172.30.0.55 hash_rc=0 pull_rc=0 compare_rc=0
+POSTSTOP ip=172.30.0.45 hash_rc=0 pull_rc=0 compare_rc=0
+POSTSTOP ip=172.30.0.125 hash_rc=0 pull_rc=0 compare_rc=0
+TERMINATE_BEGIN utc=2026-09-05T16:50:14Z
+TERM_ID=i-0e95f8ff97f6462ce
+i-0e95f8ff97f6462ce	shutting-down
+TERM_RC id=i-0e95f8ff97f6462ce rc=0
+TERM_ID=i-0ce9ea50559403c22
+i-0ce9ea50559403c22	shutting-down
+TERM_RC id=i-0ce9ea50559403c22 rc=0
+TERM_ID=i-0193dc1295fc5234a
+i-0193dc1295fc5234a	shutting-down
+TERM_RC id=i-0193dc1295fc5234a rc=0
+TERM_ID=i-0baedea1d34e4b978
+i-0baedea1d34e4b978	shutting-down
+TERM_RC id=i-0baedea1d34e4b978 rc=0
+TERM_ID=i-0780c67ecdc79cb0a
+i-0780c67ecdc79cb0a	shutting-down
+TERM_RC id=i-0780c67ecdc79cb0a rc=0
+TERM_ID=i-018484399fd100293
+i-018484399fd100293	shutting-down
+TERM_RC id=i-018484399fd100293 rc=0
+TERM_ID=i-043f250f1956bd34b
+i-043f250f1956bd34b	shutting-down
+TERM_RC id=i-043f250f1956bd34b rc=0
+TERM_ID=i-02efd7ecd26becc5a
+i-02efd7ecd26becc5a	shutting-down
+TERM_RC id=i-02efd7ecd26becc5a rc=0
+AWS_TERM_STATE attempt=1 id=i-0e95f8ff97f6462ce state=shutting-down
+AWS_TERM_STATE attempt=1 id=i-0ce9ea50559403c22 state=shutting-down
+AWS_TERM_STATE attempt=1 id=i-0193dc1295fc5234a state=shutting-down
+AWS_TERM_STATE attempt=1 id=i-0baedea1d34e4b978 state=shutting-down
+AWS_TERM_STATE attempt=1 id=i-0780c67ecdc79cb0a state=shutting-down
+AWS_TERM_STATE attempt=1 id=i-018484399fd100293 state=shutting-down
+AWS_TERM_STATE attempt=1 id=i-043f250f1956bd34b state=shutting-down
+AWS_TERM_STATE attempt=1 id=i-02efd7ecd26becc5a state=shutting-down
+AWS_TERM_VERIFY_OK exact_target_ids_terminal=8
+--------------------------------------------------------------------------------------------------------------------------------------
+|                                                          DescribeInstances                                                         |
++---------------------+----------------------------+-------------------------------------+---------------+----------+----------------+
+|         ID          |         Launched           |                Owner                |     Priv      |  State   |     Type       |
++---------------------+----------------------------+-------------------------------------+---------------+----------+----------------+
+|  i-054caf7aff0720142|  2026-09-05T05:13:18+00:00 |  None                               |  172.30.0.7   |  running |  c7i.8xlarge   |
+|  i-0cd415bd9d3abed39|  2026-09-05T14:18:59+00:00 |  None                               |  172.30.0.163 |  running |  r7i.8xlarge   |
+|  i-0694335e26273c31b|  2026-09-05T15:20:44+00:00 |  k4ray-strata-solve-opus5-20260905  |  172.30.0.60  |  running |  r7i.8xlarge   |
+|  i-02bd7df6effb9f09b|  2026-09-05T15:20:44+00:00 |  k4ray-strata-solve-opus5-20260905  |  172.30.0.246 |  running |  r7i.8xlarge   |
+|  i-03a314c29582206ae|  2026-09-05T15:20:44+00:00 |  k4ray-strata-solve-opus5-20260905  |  172.30.0.9   |  running |  r7i.8xlarge   |
+|  i-02aa55deef91520eb|  2026-09-05T15:20:44+00:00 |  k4ray-strata-solve-opus5-20260905  |  172.30.0.88  |  running |  r7i.8xlarge   |
+|  i-0e91c47db37aa6598|  2026-09-05T05:54:37+00:00 |  None                               |  172.30.0.28  |  running |  c7i.8xlarge   |
+|  i-04fcf19f9dfa5e32e|  2026-09-05T05:54:35+00:00 |  None                               |  172.30.0.18  |  running |  c7i.8xlarge   |
+|  i-0b29f3356aaf6ef81|  2026-09-05T16:41:38+00:00 |  gi70-longsolve-sol56-20260905      |  172.30.0.111 |  running |  r7i.16xlarge  |
++---------------------+----------------------------+-------------------------------------+---------------+----------+----------------+
+IPS_VERIFY_OK exact_target_ids_absent=8
+TERMINATE_END utc=2026-09-05T16:50:25Z term_failures=0 verify_failures=0
+HARD_STOP_END utc=2026-09-05T16:50:25Z errors=0 term_failures=0 verify_failures=0 run_dir=/home/ubuntu/jc2/box/moh-bigmem-20260905/harvest/hard-stop-20260905T165000Z-123697

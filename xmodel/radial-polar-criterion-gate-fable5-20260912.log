@@ -1,0 +1,13 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. The report is sealed and verified; nothing further is needed.
+
+**Outcome:** `xmodel/radial-polar-criterion-gate-fable5-20260912.md` is written and sealed (sha256 `d35e1a44c612de1ef33dae163fa81da366710a40a61fedd4115582b08d766085`, 6138 bytes, 1098 words by `wc -w` including six hex pins, unique standalone `<!-- BODY-END -->` as the last line). Post-pins of all three charged inputs equal the pre-pins. No `charge_basis` line, since no exit price is asserted.
+
+**Verdicts, all reconstructed by hand from ordinary algebra:**
+
+- **Generation lemma: CONFIRMED.** Inverse-Jacobian signs give D_f = g_y∂_x − g_x∂_y and D_g = −f_y∂_x + f_x∂_y with D_f f = D_g g = 1 and zero commutator. The radial identities D_f H = −E(g) and D_g H = E(f) − f check term by term, as do a, b, the basis expansion E = (f−b)D_f + aD_g, and E(H) = f·D_f H. E(J_s) ⊂ J_{s+1} holds including s = 0. The Lagrange product π_1 kills every homogeneous component but degree one, is degree D in E, and constant terms are irrelevant. Determinant J(0) = 1 recovers x, y in J_D. Count D(D+3)/2 and both controls confirmed.
+- **Two-polar criterion: CONFIRMED and self-contained.** 1⇒2, 2⇒3, 3⇒2 are direct. 2⇒1 uses only Ω_{R/A} = 0 from det M = 1, the principal height-one kernel in the UFD C[u,v,W], the conormal sequence giving Ω_{R/A} = R/(P_W(f,g,H)), constant units of C[x,y], and the W-degree argument. No Formanek, Wang, or normality import.
+- **Hypothesis audit: nothing REFUTED.** Characteristic zero, the whole polynomial ring, J = 1, and one fixed frame are all stated and load-bearing. A localized control (R' = C[x,1/x,y], h = 1/x, P_W = 2x a nonconstant unit, F non-injective) shows constant units cannot be dropped.
+
+**Scope note recorded in the report:** the 2⇒1 argument never uses the radial identity. It proves that a Keller pair with R = A[h] for any h ∈ R is an automorphism, so all H-specific content lives in the generation lemma. Finite A-algebra generation yields no integrality, properness, or source membership, as the CLAIM already states. The mixed-trace controls were verified as hand computations; the imported "accepted trace image" and the one-polar question were left unreviewed and unattempted per the brief.
+DIVERT path=xmodel/radial-polar-criterion-gate-fable5-20260912.md status=CLEAN body_bytes=6138 body_sha256=d35e1a44c612de1ef33dae163fa81da366710a40a61fedd4115582b08d766085

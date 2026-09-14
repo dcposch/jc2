@@ -1,0 +1,28 @@
+// Exact Q replay: D=108 delta=3 common-h3 incidence.
+ring R=0,(jet1,jet2,c,Zc),dp;
+poly minor_n6_pi0=-jet2^2;
+poly minor_n7_pi0=2*jet1^2*jet2;
+poly minor_n7_pi1=-2*jet2;
+poly minor_n8_pi0=-c - jet1^4 + 9*jet1*jet2^2;
+poly minor_n8_pi1=2*jet1^2;
+poly L=Zc*c-1;
+ideal Raw=minor_n6_pi0,minor_n7_pi0,minor_n7_pi1,minor_n8_pi0,minor_n8_pi1;
+ideal I=Raw,L;
+ideal S=std(I);
+print("MAIN_DIM"); dim(S);
+print("MAIN_SIZE"); size(S);
+print("MAIN_NF1"); reduce(1,S);
+matrix U=lift(I,ideal(1));
+print("MAIN_LIFT"); U;
+ideal SR=std(Raw);
+print("RAW_DIM"); dim(SR);
+print("RAW_NF1"); reduce(1,SR);
+ideal EmptyControl=c,Zc*c-1;
+ideal SE=std(EmptyControl);
+print("EMPTY_CONTROL_DIM"); dim(SE);
+print("EMPTY_CONTROL_NF1"); reduce(1,SE);
+ideal PointControl=c-1,Zc*c-1;
+ideal SP=std(PointControl);
+print("POINT_CONTROL_DIM"); dim(SP);
+print("POINT_CONTROL_NF1"); reduce(1,SP);
+quit;

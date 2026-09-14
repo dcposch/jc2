@@ -1,0 +1,22 @@
+UTC=2026-09-05T16:42:48Z
+               total        used        free      shared  buff/cache   available
+Mem:           743Gi       204Gi       542Gi       3.4Mi       1.8Gi       539Gi
+msolve=1
+Singular=0
+0
+    PID     ELAPSED   RSS %CPU CMD
+   3581    02:37:48  2092  0.0 bash -c cd $HOME/moh-bigmem-20260905 && setsid bash -c 'export ROOT=$HOME/moh-bigmem-20260905; cd $ROOT; stdbuf -oL bash run_msolve_pipeline.sh m12_union > $HOME/m12_union.msolve.log 2>&1' </dev/null >/dev/null 2>&1 & echo LAUNCHED m12_union.msolve.log pid=$!
+   3582    02:37:48  3552  0.0 bash -c export ROOT=$HOME/moh-bigmem-20260905; cd $ROOT; stdbuf -oL bash run_msolve_pipeline.sh m12_union > $HOME/m12_union.msolve.log 2>&1
+   3583    02:37:48  3592  0.0 bash run_msolve_pipeline.sh m12_union
+   3585    02:37:48  3672  0.0 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/m12_union/meta.json /home/ubuntu/moh-bigmem-20260905/targets/m12_union/rows.tsv 1073741827 10800 32 -l 44
+   3613    02:37:33  2448  0.0 bash /home/ubuntu/moh-bigmem-20260905/run_msolve_job.sh /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native /home/ubuntu/moh-bigmem-20260905/targets/m12_union/meta.json /home/ubuntu/moh-bigmem-20260905/targets/m12_union/rows.tsv 1073741827 10800 32 -l 44
+   3614    02:37:33  2192  0.0 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.g2.out
+   3617    02:37:33  1652  0.0 /usr/bin/time -v /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.g2.out
+   3620    02:37:33 206703308 1890 /home/ubuntu/moh-bigmem-20260905/bin/msolve -g 2 -t 32 -v 2 -l 44 -f /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.ms -o /home/ubuntu/moh-bigmem-20260905/targets/m12_union/msolve_native/msolve_native_p1073741827.g2.out
+  18386       00:00  3620  0.0 bash -c echo UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ); free -h | head -2; echo -n msolve=; pgrep -c -x msolve || echo 0; echo -n Singular=; pgrep -c Singular || echo 0; ps -eo pid,etime,rss,pcpu,cmd | awk 'NR==1||/msolve|Singular/' | head -20; echo '--- time ---'; grep -E 'Maximum resident|Elapsed \(wall|Exit status|Command exited' ~/moh-bigmem-20260905/targets/*/*/*.g2.stderr ~/moh-bigmem-20260905/targets/*/guided/*.err 2>/dev/null | tail -20; echo '--- last F4/GG ---'; tail -3 ~/moh-bigmem-20260905/targets/*/*/*.g2.stderr 2>/dev/null; tail -8 ~/moh-bigmem-20260905/targets/*/guided/*.out 2>/dev/null
+  18393       00:00  3904  0.0 awk NR==1||/msolve|Singular/
+--- time ---
+--- last F4/GG ---
+  6   22807  372241  629475 x 1406163     0.01%     4138 new   18688 zero       523.99 | 1732.88      
+  5     139  422479    3541 x 13988       0.49%       11 new     128 zero         2.36 | 4.05         
+  6    9391  422541

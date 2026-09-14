@@ -1,0 +1,105 @@
+{
+ "caps": "30wall25CPU512MiB",
+ "runs": [
+  {
+   "mutation": null,
+   "optimized": false,
+   "rc": 0,
+   "stderr": "",
+   "stdout_sha256": "52f39f9d1c6993c9a686eb6d37e71c59a7eff3bfb7fe21ff28e1b4944d318c4f"
+  },
+  {
+   "mutation": "--mutate-omit-moving-derivative",
+   "optimized": false,
+   "rc": 1,
+   "stderr": "FAIL: order-seven moving-reference bracket identity mod s^8",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-double-factor",
+   "optimized": false,
+   "rc": 1,
+   "stderr": "FAIL: order-seven moving-reference bracket identity mod s^8",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-drop-gamma6-R1",
+   "optimized": false,
+   "rc": 1,
+   "stderr": "FAIL: order-seven moving-reference bracket identity mod s^8",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-even-kernel",
+   "optimized": false,
+   "rc": 1,
+   "stderr": "FAIL: odd kernel with pole<=2 has no 1/R0^2 term",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-point-relation",
+   "optimized": false,
+   "rc": 1,
+   "stderr": "FAIL: point (0,a) lies on T=0",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-h-zero",
+   "optimized": false,
+   "rc": 1,
+   "stderr": "FAIL: e_1..e_5=0 force gamma_1..gamma_5=0 (needs h!=0)",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": null,
+   "optimized": true,
+   "rc": 0,
+   "stderr": "",
+   "stdout_sha256": "52f39f9d1c6993c9a686eb6d37e71c59a7eff3bfb7fe21ff28e1b4944d318c4f"
+  },
+  {
+   "mutation": "--mutate-omit-moving-derivative",
+   "optimized": true,
+   "rc": 1,
+   "stderr": "FAIL: order-seven moving-reference bracket identity mod s^8",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-double-factor",
+   "optimized": true,
+   "rc": 1,
+   "stderr": "FAIL: order-seven moving-reference bracket identity mod s^8",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-drop-gamma6-R1",
+   "optimized": true,
+   "rc": 1,
+   "stderr": "FAIL: order-seven moving-reference bracket identity mod s^8",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-even-kernel",
+   "optimized": true,
+   "rc": 1,
+   "stderr": "FAIL: odd kernel with pole<=2 has no 1/R0^2 term",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-point-relation",
+   "optimized": true,
+   "rc": 1,
+   "stderr": "FAIL: point (0,a) lies on T=0",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-h-zero",
+   "optimized": true,
+   "rc": 1,
+   "stderr": "FAIL: e_1..e_5=0 force gamma_1..gamma_5=0 (needs h!=0)",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "status": "PASS",
+ "wall_s": 1.313
+}

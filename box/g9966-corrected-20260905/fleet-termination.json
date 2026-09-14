@@ -1,0 +1,34 @@
+{
+  "instance_id": "i-0e0d5719a280cf30f",
+  "request_utc": "2026-09-05T20:39:16.998367+00:00",
+  "argv": [
+    "bash",
+    "ops/fleet/fleet.sh",
+    "term",
+    "i-0e0d5719a280cf30f"
+  ],
+  "stdout": "i-0e0d5719a280cf30f\tshutting-down\n",
+  "stderr": "",
+  "request_returncode": 0,
+  "status": "TERMINATED",
+  "state_check_utc": "2026-09-05T20:40:14.772997+00:00",
+  "state_response": [
+    {
+      "ID": "i-0e0d5719a280cf30f",
+      "State": "terminated"
+    }
+  ],
+  "state_check_argv": [
+    "aws",
+    "ec2",
+    "describe-instances",
+    "--instance-ids",
+    "i-0e0d5719a280cf30f",
+    "--region",
+    "us-east-1",
+    "--query",
+    "Reservations[].Instances[].{ID:InstanceId,State:State.Name}",
+    "--output",
+    "json"
+  ]
+}

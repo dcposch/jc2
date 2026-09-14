@@ -1,0 +1,50 @@
+{
+  "schema": "manual-research-terminal-custody/v1",
+  "task": "hypersurface-radial-pinching-control-astra-20260912",
+  "status": "COMPLETED_MANUAL_COUNTEREXAMPLE_AUTHOR_CHECKED_NOT_FIRST",
+  "verdict": "The explicit nonnormal affine A3 hypersurface satisfies the full relaxed package, including globally free dualizing module and a global Kahler lift of the specific radial form. No Keller pair or JC2 counterexample is supplied.",
+  "first_action_and_target_absence_utc": "2026-09-12T14:47:15+00:00",
+  "transaction_opened_utc": "2026-09-12T14:47:48+00:00",
+  "input_postpins_and_preseal_collision_check_utc": "2026-09-12T14:53:07+00:00",
+  "final_preseal_whole_readback_utc": "2026-09-12T14:53:28+00:00",
+  "closed_utc": "2026-09-12T14:53:49+00:00",
+  "finalized_utc": "2026-09-12T14:53:50+00:00",
+  "expected_verify_and_final_report_manifest_whole_readback_completed_by_utc": "2026-09-12T14:54:00+00:00",
+  "original_reserve_utc": "2026-09-12T15:00:00+00:00",
+  "original_hard_stop_utc": "2026-09-12T15:03:00+00:00",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "lease_id": "be4508118d881d9d59884db264550888",
+  "transaction": {
+    "expected_manifest_sha256": "61c102bf9630b7cf0e37d85eb4f30b4f6cd3795b6459d1d227bc26dd11dd7dc0",
+    "verification": "VERIFIED against exact expected basis and expected manifest SHA",
+    "body_bytes": 11704,
+    "body_sha256": "7addb22e10fece0cdccecb3766ccde1cba3a95f037f0f87bf96cd7e1b5082020"
+  },
+  "inputs_pre_and_post_unchanged": [
+    {"path": "/home/ubuntu/jc2/COORDINATION.md", "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597", "read_mode": "FRESH_WHOLE lines 1-806; combined-output clipping of 441-660 recovered by standalone full-range read"},
+    {"path": "/home/ubuntu/jc2/box/hypersurface-radial-pinching-control-astra-20260912/TASK.md", "sha256": "9e51181a574a4a5bf64eb88ffb660164827a1ea8c5689d2dae31ceb3eab0435b", "read_mode": "FRESH_WHOLE, then reread WHOLE after complete COORDINATION clipping recovery"}
+  ],
+  "owned_excluding_self": [
+    {"path": "/home/ubuntu/jc2/xmodel/hypersurface-radial-pinching-control-astra-20260912.md", "sha256": "08457a1dbf44378f9b4b066247d7f8c8311addced8ddeee430848b8c0aeb0a3d", "bytes": 12037, "read_mode": "WHOLE before marker and WHOLE after finalization"},
+    {"path": "/home/ubuntu/jc2/xmodel/hypersurface-radial-pinching-control-astra-20260912.md.artifact.json", "sha256": "61c102bf9630b7cf0e37d85eb4f30b4f6cd3795b6459d1d227bc26dd11dd7dc0", "read_mode": "WHOLE; exact expected VERIFY"},
+    {"path": "/home/ubuntu/jc2/box/hypersurface-radial-pinching-control-astra-20260912/PINS.json", "sha256": "ac4eb335f39463621b42ca8c753fd5e19e89fa3f00fcd08d96d063c435886220", "read_mode": "WHOLE"}
+  ],
+  "checks": [
+    "Finite B+Bz normalization and irreducible full hypersurface relation",
+    "Exact even-Laurent inverse-image ring and conductor cR at all points",
+    "Everywhere unramified, including explicit global differential spanning identity",
+    "Global conormal module argument and separate finite Kahler-lift expression",
+    "Free hypersurface dualizing generator, exact volume factor and opposite residues",
+    "Nonzero odd Euler residue proving failure of ring and conductor stability",
+    "Positive B=R control and nonunit J(U,V) negative Keller-reading control"
+  ],
+  "boundary": {
+    "other_scientific_inputs": 0,
+    "scientific_execution": "NONE",
+    "external_network_worker_agent_protected_or_shared_operations": "NONE",
+    "administrative_actions": "Inert UTC, text, hashes, absence and byte-count checks; own apply_patch edits; existing artifact_finalize transaction",
+    "promotion_or_runtime_authority": "NONE"
+  },
+  "remaining": "No gap in the checked explicit control. Separate different-model FIRST is required before promotion; no next task or execution authorized.",
+  "writers": "Report and PINS closed. Custody is the final authored file. Its whole readback and terminal hashes precede the final actual-UTC ALL WRITERS IDLE handoff; no later writes."
+}

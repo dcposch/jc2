@@ -1,0 +1,368 @@
+----- 2 --fibre 1/5 --point 3,0 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label AXIS b3=3
+=== rebuild t=2 fibre y=1/5 point {'b3': Fraction(3, 1), 'b4': Fraction(0, 1)} B0=0 AXIS b3=3
+normalizer: g1=7/5 g2=14/25 g=7/125 c=-y*g=-7/625
+b1=0 b2=0
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(7, 625), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+JSON_CONTROL band=0 json=-7/625 mine=-T_k=-7/625 OK
+JSON_CONTROL band=1 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=2 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=3 json=0 mine=-T_k=0 OK
+JSON_ROWS_MATCH=True
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): []
+pair built: deg Q=20 (expect 20) terms=26 ; deg P=28 (expect 28) terms=47
+J(Q,P) direct = (-7/625)*gamma^1*pi^0 + (7/625)*gamma^0*pi^1
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? YES (z-type pair)
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 2 ; J degree = 1
+----- 2 --fibre 1/5 --point -2/7,0 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label AXIS b3=-2/7
+usage: rebuild_pair.py [-h] [--fibre FIBRE] [--modp MODP] [--point POINT]
+                       [--seed SEED] [--B0 B0] [--json JSON] [--label LABEL]
+                       t
+rebuild_pair.py: error: argument --point: expected one argument
+----- 2 --fibre 1/5 --point 1,0 --B0 5/3 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label AXIS b3=1 gauge B0=5/3
+=== rebuild t=2 fibre y=1/5 point {'b3': Fraction(1, 1), 'b4': Fraction(0, 1)} B0=5/3 AXIS b3=1 gauge B0=5/3
+normalizer: g1=7/5 g2=14/25 g=7/125 c=-y*g=-7/625
+b1=0 b2=0
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(7, 625), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+JSON_CONTROL band=0 json=-7/625 mine=-T_k=-7/625 OK
+JSON_CONTROL band=1 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=2 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=3 json=0 mine=-T_k=0 OK
+JSON_ROWS_MATCH=True
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): []
+pair built: deg Q=20 (expect 20) terms=26 ; deg P=28 (expect 28) terms=73
+J(Q,P) direct = (-7/625)*gamma^1*pi^0 + (7/625)*gamma^0*pi^1
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? YES (z-type pair)
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 2 ; J degree = 1
+----- 2 --fibre 1/5 --point 2,3 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label generic
+=== rebuild t=2 fibre y=1/5 point {'b3': Fraction(2, 1), 'b4': Fraction(3, 1)} B0=0 generic
+normalizer: g1=7/5 g2=14/25 g=7/125 c=-y*g=-7/625
+b1=-10845/16 b2=53595/16
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(54124820743, 640000), Fraction(-1298004939, 25600), Fraction(-517671, 640), Fraction(1472121, 640)]
+T0 + c = tau_t(point) = 2164992543/25600   (tau=0 <=> T0 = -c)
+JSON_CONTROL band=0 json=-54124820743/640000 mine=-T_k=-54124820743/640000 OK
+JSON_CONTROL band=1 json=1298004939/25600 mine=-T_k=1298004939/25600 OK
+JSON_CONTROL band=2 json=517671/640 mine=-T_k=517671/640 OK
+JSON_CONTROL band=3 json=-1472121/640 mine=-T_k=-1472121/640 OK
+JSON_ROWS_MATCH=True
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): [Fraction(162746577, 12800), Fraction(-167644701, 25600), Fraction(-6365709, 320), Fraction(-1472121, 640)]
+pair built: deg Q=20 (expect 20) terms=68 ; deg P=28 (expect 28) terms=128
+J(Q,P) direct = (-1472121/640)*gamma^3*pi^10 + (4416363/640)*gamma^2*pi^11 + (-4416363/640)*gamma^1*pi^12 + (1472121/640)*gamma^0*pi^13 + (-9579091347/2048)*gamma^2*pi^10 + (9579091347/1024)*gamma^1*pi^11 + (-9579091347/2048)*gamma^0*pi^12 + (47338994997/2048)*gamma^2*pi^9 + ...[29 terms]
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? NO
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 29 ; J degree = 13
+----- 2 --fibre 1/5 --point -5/2,1/3 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label generic
+usage: rebuild_pair.py [-h] [--fibre FIBRE] [--modp MODP] [--point POINT]
+                       [--seed SEED] [--B0 B0] [--json JSON] [--label LABEL]
+                       t
+rebuild_pair.py: error: argument --point: expected one argument
+----- 2 --fibre 1/5 --point 0,1 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label b4-axis
+=== rebuild t=2 fibre y=1/5 point {'b3': Fraction(0, 1), 'b4': Fraction(1, 1)} B0=0 b4-axis
+normalizer: g1=7/5 g2=14/25 g=7/125 c=-y*g=-7/625
+b1=0 b2=225/16
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(2855293, 640000), Fraction(-8099, 1024), Fraction(-49, 128), Fraction(413, 128)]
+T0 + c = tau_t(point) = 4557/1024   (tau=0 <=> T0 = -c)
+JSON_CONTROL band=0 json=-2855293/640000 mine=-T_k=-2855293/640000 OK
+JSON_CONTROL band=1 json=8099/1024 mine=-T_k=8099/1024 OK
+JSON_CONTROL band=2 json=49/128 mine=-T_k=49/128 OK
+JSON_CONTROL band=3 json=-413/128 mine=-T_k=-413/128 OK
+JSON_ROWS_MATCH=True
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): [Fraction(315, 512), Fraction(-1029, 1024), Fraction(-595, 64), Fraction(-413, 128)]
+pair built: deg Q=20 (expect 20) terms=50 ; deg P=28 (expect 28) terms=100
+J(Q,P) direct = (-413/128)*gamma^3*pi^10 + (1239/128)*gamma^2*pi^11 + (-1239/128)*gamma^1*pi^12 + (413/128)*gamma^0*pi^13 + (278775/2048)*gamma^2*pi^9 + (-278775/1024)*gamma^1*pi^10 + (278775/2048)*gamma^0*pi^11 + (595/64)*gamma^2*pi^7 + ...[17 terms]
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? NO
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 17 ; J degree = 13
+----- 2 --fibre 2/5 --point 1,0 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label AXIS on y=2/5 (not a cone point)
+=== rebuild t=2 fibre y=2/5 point {'b3': Fraction(1, 1), 'b4': Fraction(0, 1)} B0=0 AXIS on y=2/5 (not a cone point)
+normalizer: g1=7/5 g2=21/25 g=21/125 c=-y*g=-42/625
+b1=0 b2=0
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(42, 625), Fraction(0, 1), Fraction(0, 1), Fraction(-28, 625)]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+JSON_CONTROL band=0 json=-42/625 mine=-T_k=-42/625 OK
+JSON_CONTROL band=1 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=2 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=3 json=28/625 mine=-T_k=28/625 OK
+JSON_ROWS_MATCH=True
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(28, 625)]
+pair built: deg Q=20 (expect 20) terms=26 ; deg P=28 (expect 28) terms=47
+J(Q,P) direct = (28/625)*gamma^3*pi^10 + (-84/625)*gamma^2*pi^11 + (84/625)*gamma^1*pi^12 + (-28/625)*gamma^0*pi^13 + (-84/625)*gamma^2*pi^8 + (168/625)*gamma^1*pi^9 + (-84/625)*gamma^0*pi^10 + (84/625)*gamma^1*pi^6 + ...[12 terms]
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? NO
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 12 ; J degree = 13
+----- 2 --fibre 2/5 --point 2,3 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label generic y=2/5
+=== rebuild t=2 fibre y=2/5 point {'b3': Fraction(2, 1), 'b4': Fraction(3, 1)} B0=0 generic y=2/5
+normalizer: g1=7/5 g2=21/25 g=21/125 c=-y*g=-42/625
+b1=791538/170723 b2=-138782430/4950967
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(94447983750648366, 75468208851875), Fraction(-40823972856538416, 75468208851875), Fraction(-4181125550166, 74352915125), Fraction(12022264820678, 371764575625)]
+T0 + c = tau_t(point) = 18888582457402704/15093641770375   (tau=0 <=> T0 = -c)
+JSON_CONTROL band=0 json=-94447983750648366/75468208851875 mine=-T_k=-94447983750648366/75468208851875 OK
+JSON_CONTROL band=1 json=40823972856538416/75468208851875 mine=-T_k=40823972856538416/75468208851875 OK
+JSON_CONTROL band=2 json=4181125550166/74352915125 mine=-T_k=4181125550166/74352915125 OK
+JSON_CONTROL band=3 json=-12022264820678/371764575625 mine=-T_k=-12022264820678/371764575625 OK
+JSON_ROWS_MATCH=True
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): [Fraction(65910940246404, 15093641770375), Fraction(392993974913238, 75468208851875), Fraction(-87294755635272, 371764575625), Fraction(-12022264820678, 371764575625)]
+pair built: deg Q=20 (expect 20) terms=68 ; deg P=28 (expect 28) terms=128
+J(Q,P) direct = (-12022264820678/371764575625)*gamma^3*pi^10 + (36066794462034/371764575625)*gamma^2*pi^11 + (-36066794462034/371764575625)*gamma^1*pi^12 + (12022264820678/371764575625)*gamma^0*pi^13 + (4078319764984209756/9066966234918125)*gamma^2*pi^10 + (-8156639529968419512/9066966234918125)*gamma^1*pi^11 + (4078319764984209756/9066966234918125)*gamma^0*pi^12 + (-143012496507189178932/52588404162525125)*gamma^2*pi^9 + ...[29 terms]
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? NO
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 29 ; J degree = 13
+----- 2 --fibre 2/5 --point 0,0 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label ORIGIN y=2/5
+=== rebuild t=2 fibre y=2/5 point {'b3': Fraction(0, 1), 'b4': Fraction(0, 1)} B0=0 ORIGIN y=2/5
+normalizer: g1=7/5 g2=21/25 g=21/125 c=-y*g=-42/625
+b1=0 b2=0
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(42, 625), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+JSON_CONTROL band=0 json=-42/625 mine=-T_k=-42/625 OK
+JSON_CONTROL band=1 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=2 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=3 json=0 mine=-T_k=0 OK
+JSON_ROWS_MATCH=True
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): []
+pair built: deg Q=20 (expect 20) terms=12 ; deg P=28 (expect 28) terms=20
+J(Q,P) direct = (-42/625)*gamma^1*pi^0 + (42/625)*gamma^0*pi^1
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? YES (z-type pair)
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 2 ; J degree = 1
+----- 2 --fibre 1/5 --point 0,0 --json /tmp/jc2-lane.9Mpgn1/inputs/terminal_laurent_t2.json --label ORIGIN y=1/5
+=== rebuild t=2 fibre y=1/5 point {'b3': Fraction(0, 1), 'b4': Fraction(0, 1)} B0=0 ORIGIN y=1/5
+normalizer: g1=7/5 g2=14/25 g=7/125 c=-y*g=-7/625
+b1=0 b2=0
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(7, 625), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+JSON_CONTROL band=0 json=-7/625 mine=-T_k=-7/625 OK
+JSON_CONTROL band=1 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=2 json=0 mine=-T_k=0 OK
+JSON_CONTROL band=3 json=0 mine=-T_k=0 OK
+JSON_ROWS_MATCH=True
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): []
+pair built: deg Q=20 (expect 20) terms=12 ; deg P=28 (expect 28) terms=20
+J(Q,P) direct = (-7/625)*gamma^1*pi^0 + (7/625)*gamma^0*pi^1
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? YES (z-type pair)
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 2 ; J degree = 1
+3 32003 [7608, 10680]
+4 32029 [25378, 31563]
+5 32009 [1821, 15639]
+6 32003 [27617, 31466]
+----- 3 --modp 32003 --fibre 7608 --seed 7 --label mod 32003 root 7608 random point
+=== rebuild t=3 fibre y=7608 mod 32003 point {'b3': 21, 'b4': 10, 'q2': 26} B0=0 mod 32003 root 7608 random point
+normalizer: g1=13717 g2=11522 g=24998 c=-y*g=9045
+b1=21886 b2=12050
+TERMINAL rows T_{t,k} (k=0..5): [29278, 16440, 19387, 15387, 16371, 6456]
+T0 + c = tau_t(point) = 6320   (tau=0 <=> T0 = -c)
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): [23088, 12590, 23423, 10442, 12862, 25547]
+pair built: deg Q=28 (expect 28) terms=123 ; deg P=40 (expect 40) terms=242
+J(Q,P) direct = (25547)*gamma^5*pi^16 + (277)*gamma^4*pi^17 + (31449)*gamma^3*pi^18 + (554)*gamma^2*pi^19 + (31726)*gamma^1*pi^20 + (6456)*gamma^0*pi^21 + (13855)*gamma^4*pi^16 + (8586)*gamma^3*pi^17 + ...[67 terms]
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? NO
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 67 ; J degree = 21
+----- 3 --modp 32003 --fibre 7608 --point 0,0,0 --label ORIGIN mod 32003
+=== rebuild t=3 fibre y=7608 mod 32003 point {'b3': 0, 'b4': 0, 'q2': 0} B0=0 ORIGIN mod 32003
+normalizer: g1=13717 g2=11522 g=24998 c=-y*g=9045
+b1=0 b2=0
+TERMINAL rows T_{t,k} (k=0..5): [22958, 0, 0, 0, 0, 0]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): []
+pair built: deg Q=28 (expect 28) terms=15 ; deg P=40 (expect 40) terms=26
+J(Q,P) direct = (9045)*gamma^1*pi^0 + (22958)*gamma^0*pi^1
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? YES (z-type pair)
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 2 ; J degree = 1
+----- 4 --modp 32029 --fibre 25378 --seed 7 --label mod 32029 root 25378 random point
+=== rebuild t=4 fibre y=25378 mod 32029 point {'b3': 21, 'b4': 10, 'q2': 26, 'q3': 42} B0=0 mod 32029 root 25378 random point
+normalizer: g1=7119 g2=24004 g=26280 c=-y*g=6027
+b1=24721 b2=28576
+TERMINAL rows T_{t,k} (k=0..7): [25499, 26310, 22662, 8751, 13342, 6593, 7034, 461]
+T0 + c = tau_t(point) = 31526   (tau=0 <=> T0 = -c)
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): [6995, 1854, 30702, 10506, 3484, 12543, 24754, 31568]
+pair built: deg Q=36 (expect 36) terms=194 ; deg P=52 (expect 52) terms=392
+J(Q,P) direct = (31568)*gamma^7*pi^22 + (3227)*gamma^6*pi^23 + (22348)*gamma^5*pi^24 + (16135)*gamma^4*pi^25 + (15894)*gamma^3*pi^26 + (9681)*gamma^2*pi^27 + (28802)*gamma^1*pi^28 + (461)*gamma^0*pi^29 + ...[121 terms]
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? NO
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 121 ; J degree = 29
+----- 4 --modp 32029 --fibre 25378 --point 0,0,0,0 --label ORIGIN mod 32029
+=== rebuild t=4 fibre y=25378 mod 32029 point {'b3': 0, 'b4': 0, 'q2': 0, 'q3': 0} B0=0 ORIGIN mod 32029
+normalizer: g1=7119 g2=24004 g=26280 c=-y*g=6027
+b1=0 b2=0
+TERMINAL rows T_{t,k} (k=0..7): [26002, 0, 0, 0, 0, 0, 0, 0]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): []
+pair built: deg Q=36 (expect 36) terms=18 ; deg P=52 (expect 52) terms=32
+J(Q,P) direct = (6027)*gamma^1*pi^0 + (26002)*gamma^0*pi^1
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? YES (z-type pair)
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 2 ; J degree = 1
+----- 5 --modp 32009 --fibre 1821 --seed 7 --label mod 32009 root 1821 random point
+=== rebuild t=5 fibre y=1821 mod 32009 point {'b3': 21, 'b4': 10, 'q2': 26, 'q3': 42, 'q4': 4} B0=0 mod 32009 root 1821 random point
+normalizer: g1=14551 g2=30690 g=31289 c=-y*g=30760
+b1=19024 b2=3655
+TERMINAL rows T_{t,k} (k=0..9): [23828, 21161, 497, 30314, 3439, 8105, 7094, 13824, 17497, 21628]
+T0 + c = tau_t(point) = 22579   (tau=0 <=> T0 = -c)
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): [15404, 22220, 3422, 17626, 7890, 9910, 14497, 11909, 20541, 10381]
+pair built: deg Q=44 (expect 44) terms=281 ; deg P=64 (expect 64) terms=578
+J(Q,P) direct = (10381)*gamma^9*pi^28 + (2598)*gamma^8*pi^29 + (21617)*gamma^7*pi^30 + (24248)*gamma^6*pi^31 + (27646)*gamma^5*pi^32 + (4363)*gamma^4*pi^33 + (7761)*gamma^3*pi^34 + (10392)*gamma^2*pi^35 + ...[191 terms]
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? NO
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 191 ; J degree = 37
+----- 5 --modp 32009 --fibre 1821 --point 0,0,0,0,0 --label ORIGIN mod 32009
+=== rebuild t=5 fibre y=1821 mod 32009 point {'b3': 0, 'b4': 0, 'q2': 0, 'q3': 0, 'q4': 0} B0=0 ORIGIN mod 32009
+normalizer: g1=14551 g2=30690 g=31289 c=-y*g=30760
+b1=0 b2=0
+TERMINAL rows T_{t,k} (k=0..9): [1249, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): []
+pair built: deg Q=44 (expect 44) terms=21 ; deg P=64 (expect 64) terms=38
+J(Q,P) direct = (30760)*gamma^1*pi^0 + (1249)*gamma^0*pi^1
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? YES (z-type pair)
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 2 ; J degree = 1
+----- 6 --modp 32003 --fibre 27617 --seed 7 --label mod 32003 root 27617 random point
+=== rebuild t=6 fibre y=27617 mod 32003 point {'b3': 21, 'b4': 10, 'q2': 26, 'q3': 42, 'q4': 4, 'q5': 5} B0=0 mod 32003 root 27617 random point
+normalizer: g1=4925 g2=29191 g=26568 c=-y*g=4325
+b1=3692 b2=752
+TERMINAL rows T_{t,k} (k=0..11): [17506, 14888, 21484, 10110, 25655, 11140, 21617, 17846, 24732, 10285, 6030, 1772]
+T0 + c = tau_t(point) = 21831   (tau=0 <=> T0 = -c)
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): [12914, 22980, 1099, 25702, 0, 18605, 461, 29247, 12660, 9687, 23071, 30231]
+pair built: deg Q=52 (expect 52) terms=384 ; deg P=76 (expect 76) terms=800
+J(Q,P) direct = (30231)*gamma^11*pi^34 + (19492)*gamma^10*pi^35 + (30552)*gamma^9*pi^36 + (4353)*gamma^8*pi^37 + (23297)*gamma^7*pi^38 + (18589)*gamma^6*pi^39 + (13414)*gamma^5*pi^40 + (8706)*gamma^4*pi^41 + ...[275 terms]
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? NO
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 275 ; J degree = 45
+----- 6 --modp 32003 --fibre 27617 --point 0,0,0,0,0,0 --label ORIGIN mod 32003
+=== rebuild t=6 fibre y=27617 mod 32003 point {'b3': 0, 'b4': 0, 'q2': 0, 'q3': 0, 'q4': 0, 'q5': 0} B0=0 ORIGIN mod 32003
+normalizer: g1=4925 g2=29191 g=26568 c=-y*g=4325
+b1=0 b2=0
+TERMINAL rows T_{t,k} (k=0..11): [27678, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+LAURENT_IDENTITY D0 == -c - E(h) : OK
+LAURENT_IDENTITY D1 == -c*b1 : OK
+LAURENT_IDENTITY D2 == -c*b2 : OK
+LAURENT_IDENTITY D3 == -c*b3 : OK
+LAURENT_IDENTITY D4 == c*L : OK
+D0 as poly in s (low->high): []
+pair built: deg Q=52 (expect 52) terms=24 ; deg P=76 (expect 76) terms=44
+J(Q,P) direct = (4325)*gamma^1*pi^0 + (27678)*gamma^0*pi^1
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? YES (z-type pair)
+J == c*gamma ? NO
+J == 0 ? NO
+J term count = 2 ; J degree = 1
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(7, 625), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+T0 + c = tau_t(point) = 0   (tau=0 <=> T0 = -c)
+JSON_ROWS_MATCH=True
+J(Q,P) direct = (-7/625)*gamma^1*pi^0 + (7/625)*gamma^0*pi^1
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK
+J == c*(gamma - pi) = -c*z ? YES (z-type pair)
+TERMINAL rows T_{t,k} (k=0..3): [Fraction(282181123, 4199040000), Fraction(-422387, 6718464), Fraction(-1561, 279936), Fraction(8729, 93312)]
+T0 + c = tau_t(point) = 376243/6718464   (tau=0 <=> T0 = -c)
+JSON_ROWS_MATCH=True
+J - (c*gamma + pi*E(h)) = 0  -> FORMULA_OK

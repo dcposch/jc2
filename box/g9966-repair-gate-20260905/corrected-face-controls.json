@@ -1,0 +1,57 @@
+{
+  "controls": {
+    "delta2": {
+      "h3_free": [
+        "Hc_10_1",
+        "Hc_11_0",
+        "Hc_7_4",
+        "Hc_8_3",
+        "jet0",
+        "rho",
+        "u"
+      ],
+      "inner_free": 106,
+      "k2_slots": 78,
+      "minor_control": {
+        "jet0": "free",
+        "minor_series": "y=jet0+u*t+zeta*t^2",
+        "target": "t^9*zeta^2*(zeta+3*rho)",
+        "verified": true
+      }
+    },
+    "delta52": {
+      "h3_free": [
+        "Hc_11_0",
+        "Hc_8_3",
+        "jet0",
+        "u",
+        "v",
+        "c"
+      ],
+      "inner_free": 105,
+      "k2_slots": 78,
+      "minor_control": {
+        "Hc_11_0": "free; no ODE compatibility imposed",
+        "jet0": "free",
+        "minor_series": "y=jet0+u*t+v*t^2+pi*t^(5/2)",
+        "target": "s^21*pi*(pi^2-c)",
+        "verified": true
+      }
+    }
+  },
+  "corrected_engine_sha256": "a8956254b4714d5e327998ad3222016f4280031f22345ccaef2b1824369890ca",
+  "custody": {
+    "all_hashes_match": true,
+    "count": 8,
+    "lane_inputs_dir": "/home/ubuntu/jc2/box/g9966-d2-precise-20260905/frozen",
+    "manifest_sha256": "dc6329ccc6dff3dbe1b85bc142f2e3a5540f8f02a98a59cafd687bb8faf161a0",
+    "receipt": "/home/ubuntu/jc2/box/g9966-d2-precise-20260905/receipt.run.v2"
+  },
+  "pristine_pin": {
+    "charged_driver_sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9",
+    "separate_original_controls_required": true
+  },
+  "scope": "DIAGNOSTIC corrected equality-face chart; delta2 at-level double-root shift not yet freed.",
+  "source_sha256": "76d8c7206f70ba190d1a21fff812c016cbde497cd64071c29c91cfe8089f3c06",
+  "status": "PASS"
+}

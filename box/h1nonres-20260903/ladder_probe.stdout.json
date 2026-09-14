@@ -1,0 +1,595 @@
+{
+  "D108_incidence": {
+    "Qstar_pivots": [
+      {
+        "coefficient": "-1",
+        "row": "minor_n1_pi0",
+        "variable": "Hc_1_7"
+      },
+      {
+        "coefficient": "1",
+        "row": "minor_n2_pi0",
+        "variable": "Hc_2_6"
+      },
+      {
+        "coefficient": "1",
+        "row": "minor_n3_pi0",
+        "variable": "Hc_3_6"
+      },
+      {
+        "coefficient": "-1",
+        "row": "minor_n4_pi0",
+        "variable": "Hc_4_5"
+      },
+      {
+        "coefficient": "1",
+        "row": "minor_n5_pi0",
+        "variable": "Hc_5_4"
+      },
+      {
+        "coefficient": "-1",
+        "row": "minor_n5_pi1",
+        "variable": "Hc_1_8"
+      },
+      {
+        "coefficient": "1",
+        "row": "minor_n6_pi1",
+        "variable": "Hc_2_7"
+      }
+    ],
+    "actual_raw_B1_Jacobian_i0": [
+      840,
+      816,
+      792,
+      768,
+      744,
+      720,
+      696
+    ],
+    "closed_form_reproduces_incidence_residues": false,
+    "prompt_Jacobian_formula_i0": [
+      1272,
+      1248,
+      1224,
+      1200,
+      1176,
+      1152,
+      1128
+    ],
+    "raw_labels": 13,
+    "residual": {
+      "minor_n6_pi0": "-jet2**2",
+      "minor_n7_pi0": "2*jet1**2*jet2",
+      "minor_n7_pi1": "-2*jet2",
+      "minor_n8_pi0": "-c - jet1**4 + 9*jet1*jet2**2",
+      "minor_n8_pi1": "2*jet1**2"
+    },
+    "same_family": false
+  },
+  "banked_9966": {
+    "delta=2": {
+      "Jacobian_pivots_checked": 31,
+      "all_match_9(99-3p-11i)": true,
+      "ledger_pivots": 35,
+      "minimum_abs_Jacobian_pivot": 18,
+      "non_Jacobian_pivots": [
+        {
+          "coefficient": "8",
+          "row": "stage1_G_local5_coord0"
+        },
+        {
+          "coefficient": "-8",
+          "row": "stage2_G_local6_coord0"
+        },
+        {
+          "coefficient": "8",
+          "row": "stage3_G_local7_coord0"
+        },
+        {
+          "coefficient": "8",
+          "row": "stage4_G_local8_coord0"
+        }
+      ]
+    },
+    "delta=5/2": {
+      "Jacobian_pivots_checked": 66,
+      "all_match_9(99-3p-11i)": true,
+      "ledger_pivots": 66,
+      "minimum_abs_Jacobian_pivot": 9,
+      "non_Jacobian_pivots": []
+    }
+  },
+  "cases": [
+    {
+      "A": 9,
+      "B": 24,
+      "K=d2": 33,
+      "NONRES": true,
+      "census_key": {
+        "M_2_to_M_s": [
+          77,
+          97
+        ],
+        "V_2_to_V_s": [
+          8,
+          8
+        ],
+        "m": 66,
+        "n": 99
+      },
+      "d_1_to_d_splus1": [
+        99,
+        33,
+        11,
+        1
+      ],
+      "d_s": 11,
+      "e=n/K": 3,
+      "f=m/K": 2,
+      "gcd(u_s,v_s)": 1,
+      "identity_needed_by_prompt": {
+        "n_equals_u_s_times_d2": true
+      },
+      "k0": 35,
+      "label": "(99,66)",
+      "ladder_only_ideal": {
+        "all_zero_common_point": true,
+        "normal_form_of_1": "1",
+        "ring": "Q[L1,...,L_v_s]",
+        "rows": [
+          "864*L1",
+          "837*L2",
+          "810*L3",
+          "783*L4",
+          "756*L5",
+          "729*L6",
+          "702*L7",
+          "675*L8"
+        ],
+        "unit_ideal": false
+      },
+      "raw_B1_k0_rows": [
+        {
+          "actual_abs_k0_coefficient": 864,
+          "corrected_formula_i0": 864,
+          "number_of_coordinates_checked": 33,
+          "p": 1,
+          "prompt_formula_i0": 864,
+          "prompt_matches": true,
+          "q_range_checked": [
+            0,
+            32
+          ],
+          "signed_coefficients": [
+            -864,
+            864
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 837,
+          "corrected_formula_i0": 837,
+          "number_of_coordinates_checked": 32,
+          "p": 2,
+          "prompt_formula_i0": 837,
+          "prompt_matches": true,
+          "q_range_checked": [
+            0,
+            31
+          ],
+          "signed_coefficients": [
+            -837,
+            837
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 810,
+          "corrected_formula_i0": 810,
+          "number_of_coordinates_checked": 31,
+          "p": 3,
+          "prompt_formula_i0": 810,
+          "prompt_matches": true,
+          "q_range_checked": [
+            0,
+            30
+          ],
+          "signed_coefficients": [
+            -810,
+            810
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 783,
+          "corrected_formula_i0": 783,
+          "number_of_coordinates_checked": 30,
+          "p": 4,
+          "prompt_formula_i0": 783,
+          "prompt_matches": true,
+          "q_range_checked": [
+            0,
+            29
+          ],
+          "signed_coefficients": [
+            -783,
+            783
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 756,
+          "corrected_formula_i0": 756,
+          "number_of_coordinates_checked": 29,
+          "p": 5,
+          "prompt_formula_i0": 756,
+          "prompt_matches": true,
+          "q_range_checked": [
+            0,
+            28
+          ],
+          "signed_coefficients": [
+            -756,
+            756
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 729,
+          "corrected_formula_i0": 729,
+          "number_of_coordinates_checked": 28,
+          "p": 6,
+          "prompt_formula_i0": 729,
+          "prompt_matches": true,
+          "q_range_checked": [
+            0,
+            27
+          ],
+          "signed_coefficients": [
+            -729,
+            729
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 702,
+          "corrected_formula_i0": 702,
+          "number_of_coordinates_checked": 27,
+          "p": 7,
+          "prompt_formula_i0": 702,
+          "prompt_matches": true,
+          "q_range_checked": [
+            0,
+            26
+          ],
+          "signed_coefficients": [
+            -702,
+            702
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 675,
+          "corrected_formula_i0": 675,
+          "number_of_coordinates_checked": 26,
+          "p": 8,
+          "prompt_formula_i0": 675,
+          "prompt_matches": true,
+          "q_range_checked": [
+            0,
+            25
+          ],
+          "signed_coefficients": [
+            -675,
+            675
+          ]
+        }
+      ],
+      "top_K2": "w^9(w-1)^24",
+      "u_s": 3,
+      "v_s": 8
+    },
+    {
+      "A": 8,
+      "B": 28,
+      "K=d2": 36,
+      "NONRES": true,
+      "census_key": {
+        "M_2_to_M_s": [
+          81,
+          106
+        ],
+        "V_2_to_V_s": [
+          7,
+          7
+        ],
+        "m": 72,
+        "n": 108
+      },
+      "d_1_to_d_splus1": [
+        108,
+        36,
+        9,
+        1
+      ],
+      "d_s": 9,
+      "e=n/K": 3,
+      "f=m/K": 2,
+      "gcd(u_s,v_s)": 1,
+      "identity_needed_by_prompt": {
+        "n_equals_u_s_times_d2": false
+      },
+      "k0": 31,
+      "label": "D=108",
+      "ladder_only_ideal": {
+        "all_zero_common_point": true,
+        "normal_form_of_1": "1",
+        "ring": "Q[L1,...,L_v_s]",
+        "rows": [
+          "840*L1",
+          "816*L2",
+          "792*L3",
+          "768*L4",
+          "744*L5",
+          "720*L6",
+          "696*L7"
+        ],
+        "unit_ideal": false
+      },
+      "raw_B1_k0_rows": [
+        {
+          "actual_abs_k0_coefficient": 840,
+          "corrected_formula_i0": 840,
+          "number_of_coordinates_checked": 36,
+          "p": 1,
+          "prompt_formula_i0": 1272,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            35
+          ],
+          "signed_coefficients": [
+            -840,
+            840
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 816,
+          "corrected_formula_i0": 816,
+          "number_of_coordinates_checked": 35,
+          "p": 2,
+          "prompt_formula_i0": 1248,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            34
+          ],
+          "signed_coefficients": [
+            -816,
+            816
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 792,
+          "corrected_formula_i0": 792,
+          "number_of_coordinates_checked": 34,
+          "p": 3,
+          "prompt_formula_i0": 1224,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            33
+          ],
+          "signed_coefficients": [
+            -792,
+            792
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 768,
+          "corrected_formula_i0": 768,
+          "number_of_coordinates_checked": 33,
+          "p": 4,
+          "prompt_formula_i0": 1200,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            32
+          ],
+          "signed_coefficients": [
+            -768,
+            768
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 744,
+          "corrected_formula_i0": 744,
+          "number_of_coordinates_checked": 32,
+          "p": 5,
+          "prompt_formula_i0": 1176,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            31
+          ],
+          "signed_coefficients": [
+            -744,
+            744
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 720,
+          "corrected_formula_i0": 720,
+          "number_of_coordinates_checked": 31,
+          "p": 6,
+          "prompt_formula_i0": 1152,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            30
+          ],
+          "signed_coefficients": [
+            -720,
+            720
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 696,
+          "corrected_formula_i0": 696,
+          "number_of_coordinates_checked": 30,
+          "p": 7,
+          "prompt_formula_i0": 1128,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            29
+          ],
+          "signed_coefficients": [
+            -696,
+            696
+          ]
+        }
+      ],
+      "top_K2": "w^8(w-1)^28",
+      "u_s": 2,
+      "v_s": 7
+    },
+    {
+      "A": 12,
+      "B": 30,
+      "K=d2": 42,
+      "NONRES": true,
+      "census_key": {
+        "M_2_to_M_s": [
+          -14,
+          63,
+          124
+        ],
+        "V_2_to_V_s": [
+          1,
+          10,
+          5
+        ],
+        "m": 84,
+        "n": 126
+      },
+      "d_1_to_d_splus1": [
+        126,
+        42,
+        14,
+        7,
+        1
+      ],
+      "d_s": 7,
+      "e=n/K": 3,
+      "f=m/K": 2,
+      "gcd(u_s,v_s)": 1,
+      "identity_needed_by_prompt": {
+        "n_equals_u_s_times_d2": false
+      },
+      "k0": 47,
+      "label": "D=126",
+      "ladder_only_ideal": {
+        "all_zero_common_point": true,
+        "normal_form_of_1": "1",
+        "ring": "Q[L1,...,L_v_s]",
+        "rows": [
+          "1476*L1",
+          "1440*L2",
+          "1404*L3",
+          "1368*L4",
+          "1332*L5"
+        ],
+        "unit_ideal": false
+      },
+      "raw_B1_k0_rows": [
+        {
+          "actual_abs_k0_coefficient": 1476,
+          "corrected_formula_i0": 1476,
+          "number_of_coordinates_checked": 42,
+          "p": 1,
+          "prompt_formula_i0": 2232,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            41
+          ],
+          "signed_coefficients": [
+            -1476,
+            1476
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 1440,
+          "corrected_formula_i0": 1440,
+          "number_of_coordinates_checked": 41,
+          "p": 2,
+          "prompt_formula_i0": 2196,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            40
+          ],
+          "signed_coefficients": [
+            -1440,
+            1440
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 1404,
+          "corrected_formula_i0": 1404,
+          "number_of_coordinates_checked": 40,
+          "p": 3,
+          "prompt_formula_i0": 2160,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            39
+          ],
+          "signed_coefficients": [
+            -1404,
+            1404
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 1368,
+          "corrected_formula_i0": 1368,
+          "number_of_coordinates_checked": 39,
+          "p": 4,
+          "prompt_formula_i0": 2124,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            38
+          ],
+          "signed_coefficients": [
+            -1368,
+            1368
+          ]
+        },
+        {
+          "actual_abs_k0_coefficient": 1332,
+          "corrected_formula_i0": 1332,
+          "number_of_coordinates_checked": 38,
+          "p": 5,
+          "prompt_formula_i0": 2088,
+          "prompt_matches": false,
+          "q_range_checked": [
+            0,
+            37
+          ],
+          "signed_coefficients": [
+            -1332,
+            1332
+          ]
+        }
+      ],
+      "top_K2": "w^12(w-1)^30",
+      "u_s": 2,
+      "v_s": 5
+    }
+  ],
+  "conclusion": {
+    "NONRES_congruence_survives_correction": true,
+    "correct_raw_k0_formula": "+/- (n/d_s)*u_s*(d2-p)",
+    "corrected_9966_fitted_extension": "+/- (n/d_s)*(u_s*(d2-p)-d_s*i)",
+    "nonzero_ladder_row_implies_unit_ideal": false,
+    "prompt_numeric_generalization": "false outside n=u_s*d2",
+    "reason": "d_s divides d2, so both candidate zero conditions imply d_s divides u_s*p"
+  },
+  "frozen_census": "/tmp/jc2-lane.7wKvYN/inputs/moh_skeleton_full.py",
+  "type": "H1-NONRES / EXACT RAW-LADDER AND D108-INCIDENCE PROBE"
+}

@@ -1,0 +1,20 @@
+{
+  "binaries": {
+    ".libs/msolve": "175575870bf76a3c3a21c1660e1f6c7b8604a256fc4123643ce9711589326434",
+    "msolve": "2a5e92cf85ecadbef3168b3e8205bf40680da414e5c38940427420e3c4c32053",
+    "src/msolve/.libs/libmsolve.so.3.0.7": "a569a80d81852f031be0d7c1950d68e5d35f04b1a4f85c57a353baf95829c47e",
+    "src/neogb/.libs/libneogb.so.3.0.7": "4fd482dc7964dfca213c521136fc445c2e16b9727036c6de6e509f69d7768079"
+  },
+  "commit": "185e7b92fa0687f4db68b0f2f453a835668ac132",
+  "compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "input": {
+    "edited_source": {
+      "src/msolve/checked-input-size.h": "f572dc876d5179520eac73c24f212558bca3bb9f2ee5cec6120ceb36634d6267",
+      "src/msolve/iofiles.c": "536ab7ab87ec175242d4f949db7e16a4ad999ae8d2a6979a867969cac173f7d7"
+    },
+    "msolve-0.10.1-checked-input-allocation.patch": "c4c22a5cdde1145de5b5eb79e524d570e2c34be5350a139d3679bc25db1589a6",
+    "msolve-0.10.1-heap-sort-permutation.patch": "c49a9fb322c3c6518ff2234a7e521de3aa6a372efbe27dc4c9aa9360db3b2242",
+    "msolve-0.10.1-int64-input-offset.patch": "4f2e723575ff2acbfcee4144d4c2e47cd314f6f25d1241bd1286c202c3863055"
+  },
+  "upstream_tests": "make check -j8 exited 0"
+}

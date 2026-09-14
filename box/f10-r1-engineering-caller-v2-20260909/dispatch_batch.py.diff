@@ -1,0 +1,89 @@
+--- frozen/dispatch_batch.py
++++ v2/dispatch_batch.py
+@@ -6,10 +6,10 @@
+ sys.dont_write_bytecode = True
+ import os, json, hashlib, socket, resource, subprocess, time, datetime
+ from pathlib import Path
+-ROOT = Path('/home/ubuntu/f10-r1-exact-artifact-validation-20260909')
++ROOT = Path('/home/ubuntu/f10-r1-exact-artifact-validation-v2-20260909')
+ INSTANCE = 'i-08d2a40f272ee9fa2'
+-JOB = 'f10-r1-exact-artifact-validation-20260909'
+-DEADLINE = datetime.datetime(2026,9,9,12,53,tzinfo=datetime.timezone.utc).timestamp()
++JOB = 'f10-r1-exact-artifact-validation-v2-20260909'
++DEADLINE = datetime.datetime(2026,9,9,13,35,tzinfo=datetime.timezone.utc).timestamp()
+ first_math = None
+ records = []
+ 
+@@ -38,11 +38,12 @@
+ 
+ def run(name, script, trailing, operation='check', wall=30, cpu=25, rss=2147483648, defect=None, mathematical=False):
+     global first_math
++    hard = None
+     if mathematical:
+         now=time.time()
+         if first_math is None: first_math=now
+         hard=min(DEADLINE, first_math+360)
+-        require(now+wall+2 < hard, 'insufficient remaining mathematical budget')
++        require(now+wall+15 < hard, 'insufficient remaining mathematical budget')
+     auth=ROOT/(name+'.authority.json')
+     child=['/usr/bin/python3','-I','-B',str(ROOT/script),str(auth),*map(str,trailing)]
+     caps={'wall_seconds':str(wall),'cpu_seconds':str(cpu),'rss_bytes':str(rss),
+@@ -76,6 +77,7 @@
+         require(os.readlink(f'/proc/{process.pid}/ns/pid')==namespace,'caller PID namespace mismatch')
+         caller_stat=Path(f'/proc/{process.pid}/stat').read_text()
+         rc=process.wait()
++        returned=time.time()
+     telemetry=json.loads((ROOT/(name+'.telemetry.json')).read_text())
+     require(not quiet(telemetry['pgid']), 'owned live PGID after CAPRUN')
+     for filename,want in files.items(): require(digest(filename)==want,'source/input changed')
+@@ -83,20 +85,37 @@
+             'ended_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'namespace':namespace,
+             'caller_pid':process.pid,'caller_stat':caller_stat,'authority_sha256':digest(auth),
+             'telemetry_sha256':digest(ROOT/(name+'.telemetry.json')),'mathematical':mathematical,
+-            'first_math_epoch':first_math,'remaining_group_live':[]}
++            'first_math_epoch':first_math,'hard_cutoff_epoch':hard,'returned_epoch':returned,
++            'admission_margin_seconds':15,'remaining_group_live':[]}
+     records.append(record); exclusive(ROOT/(name+'.dispatch.json'),record)
++    require(not mathematical or returned < hard, 'mathematical return at/after hard cutoff: NONDECISION')
+     if defect:
+         require(rc!=0 and telemetry['status']=='NORMAL_EXIT','gate refusal was not ordinary nonzero exit')
+         require(not Path(trailing[1]).exists(),'postauthorize sentinel written by rejected authority')
+     elif name=='dummy-descendant':
+-        require(rc==125 and telemetry['resource']=='rss','dummy did not exercise RSS cap')
++        require(rc==125 and telemetry['status']=='RESOURCE_CAP' and telemetry['resource']=='rss','dummy did not exercise RSS cap')
+         term=telemetry['termination']
+         require(term['term_sent'] and term['kill_sent'] and term['cleanup_complete'] and term['leader_reaped'], 'dummy cleanup failed')
+         require(telemetry['max_observed_group_rss_bytes']>rss,'descendant RSS not measured')
+         lines=[json.loads(x) for x in (ROOT/(name+'.stdout')).read_text().splitlines()]
+         require(len(lines)==2 and all(x['namespace']==namespace for x in lines),'dummy namespace/custody missing')
+         require(all(x['pgid']==telemetry['pgid'] for x in lines),'descendant escaped recorded PGID')
+-        require(all(x.get('result')=='MATCH' for x in telemetry['identity_checks']), 'TERM/KILL identity not matched')
++        expected_events = [
++            ('before-term', 'MATCH', None),
++            ('before-term-send', 'SENT', 15),
++            ('before-kill', 'MATCH', None),
++            ('before-kill-send', 'SENT', 9),
++        ]
++        events = telemetry['identity_checks']
++        observed_events = [(x.get('stage'), x.get('result'), x.get('signal')) for x in events]
++        require(observed_events == expected_events, 'unexpected dummy identity/signal sequence')
++        for event in events:
++            if event['result'] == 'MATCH':
++                require(event.get('observed_pid') == telemetry['pid'] == telemetry['pgid'] == event.get('observed_pgid')
++                        and event.get('observed_start_identity') == telemetry['start_identity'],
++                        'dummy MATCH identity inconsistent with registered leader')
++            else:
++                require(type(event.get('signal')) is int, 'dummy signal is not an exact integer')
+     else:
+         require(rc==0 and telemetry['status']=='NORMAL_EXIT','cap/failure: STOP, no retry')
+     return record
+@@ -112,6 +131,9 @@
+     require(digest(ROOT/'checker.py')=='e2970c71774607e211ecc7e0f001a0dc02d02410e303ca58cf7c17ab77b9f545','checker pin')
+     require(digest(ROOT/'execution_gate.py')=='cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6','gate pin')
+     require(digest(ROOT/'run_capped.py')=='4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2','CAPRUN pin')
++    require(digest(ROOT/'probe.py')=='02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7','probe pin')
++    require(digest(ROOT/'precision.py')=='56400dd32f4940a0e77b2da79e9b90792b51588d01f0f1a2fded30efebb0af90','corrected precision pin')
++    # Caller self-hash is verified by root's external preflight, not recursively embedded here.
+     for defect in ['disabled','wronghost','argv','cap','missing-input']:
+         run('gate-'+defect,'probe.py',[ROOT/'frontier.json',ROOT/('gate-'+defect+'.sentinel'),'plain'],wall=5,cpu=3,defect=defect)
+     run('gate-valid','probe.py',[ROOT/'frontier.json',ROOT/'gate-valid.sentinel','plain'],wall=5,cpu=3)

@@ -1,0 +1,341 @@
+{
+  "adapter_or_solver_used": false,
+  "command_count": 20,
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit-normal-final.json"
+      ],
+      "elapsed_seconds": 0.14602638001088053,
+      "expected": "zero",
+      "name": "independent-positive-normal",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"checks\": 265, \"elapsed_seconds\": 0.10260266403201967, \"maxrss_KiB\": 23108, \"status\": \"PASS\"}\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/jc2-lane.MAp4nm/inputs/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/producer-normal.json"
+      ],
+      "elapsed_seconds": 0.12895756401121616,
+      "expected": "zero",
+      "name": "producer-positive-normal",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"PASS\", \"checks\": 52, \"counts\": {\"unequal/rational\": {\"raw\": [83, 215], \"fixed\": [12, 19], \"free\": 267, \"variables\": 267, \"raw_pair_upper_bound\": 17845, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 698}, \"unequal/golden\": {\"raw\": [83, 215], \"fixed\": [12, 19], \"free\": 267, \"variables\": 267, \"raw_pair_upper_bound\": 17845, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 698}, \"common_3/rational\": {\"raw\": [94, 241], \"fixed\": [17, 27], \"free\": 291, \"variables\": 293, \"raw_pair_upper_bound\": 22654, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}, \"common_3/golden\": {\"raw\": [94, 241], \"fixed\": [17, 27], \"free\": 291, \"variables\": 293, \"raw_pair_upper_bound\": 22654, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}, \"common_4/rational\": {\"raw\": [115, 296], \"fixed\": [17, 27], \"free\": 367, \"variables\": 369, \"raw_pair_upper_bound\": 34040, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}, \"common_4/golden\": {\"raw\": [115, 296], \"fixed\": [17, 27], \"free\": 367, \"variables\": 369, \"raw_pair_upper_bound\": 34040, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}}, \"elapsed_seconds\": 0.0794484649086371, \"maxrss_KiB\": 21496}\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "target"
+      ],
+      "elapsed_seconds": 0.201557427062653,
+      "expected": "nonzero",
+      "name": "independent-target-normal",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 444, in <lambda>\n    'target': lambda: C.verify_toy_stream(\n                      ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "missing_row"
+      ],
+      "elapsed_seconds": 0.19858181499876082,
+      "expected": "nonzero",
+      "name": "independent-missing_row-normal",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 446, in <lambda>\n    'missing_row': lambda: C.verify_toy_stream(\n                           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "footer"
+      ],
+      "elapsed_seconds": 0.2026179030071944,
+      "expected": "nonzero",
+      "name": "independent-footer-normal",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 448, in <lambda>\n    'footer': lambda: C.verify_toy_stream(\n                      ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 279, in verify_toy_stream\n    raise ValueError('missing terminal footer')\nValueError: missing terminal footer\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "field"
+      ],
+      "elapsed_seconds": 0.2007557030301541,
+      "expected": "nonzero",
+      "name": "independent-field-normal",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 450, in <lambda>\n    'field': lambda: C.verify_toy_stream(\n                     ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "vertex"
+      ],
+      "elapsed_seconds": 0.1990771230775863,
+      "expected": "nonzero",
+      "name": "independent-vertex-normal",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 452, in <lambda>\n    'vertex': lambda: independent_validate(vertex),\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 305, in independent_validate\n    raise AuditError('independent contract mismatch')\nAuditError: independent contract mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "face"
+      ],
+      "elapsed_seconds": 0.20254928094800562,
+      "expected": "nonzero",
+      "name": "independent-face-normal",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 453, in <lambda>\n    'face': lambda: independent_validate(face),\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 305, in independent_validate\n    raise AuditError('independent contract mismatch')\nAuditError: independent contract mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/jc2-lane.MAp4nm/inputs/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/producer-target-normal-must-not-exist.json",
+        "--mutate",
+        "target"
+      ],
+      "elapsed_seconds": 0.1779345729155466,
+      "expected": "nonzero",
+      "name": "producer-target-normal",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/jc2-lane.MAp4nm/inputs/test_client.py\", line 184, in <module>\n    main()\n  File \"/tmp/jc2-lane.MAp4nm/inputs/test_client.py\", line 165, in main\n    C.verify_toy_stream(wrong, left, right, outputs, scalar, variables)\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/jc2-lane.MAp4nm/inputs/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/producer-face-normal-must-not-exist.json",
+        "--mutate",
+        "face"
+      ],
+      "elapsed_seconds": 0.1821297010174021,
+      "expected": "nonzero",
+      "name": "producer-face-normal",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/jc2-lane.MAp4nm/inputs/test_client.py\", line 184, in <module>\n    main()\n  File \"/tmp/jc2-lane.MAp4nm/inputs/test_client.py\", line 167, in main\n    C.validate_contract(bad_face)\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 211, in validate_contract\n    raise ValueError('contract differs from full fixed-face/source support specification')\nValueError: contract differs from full fixed-face/source support specification\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit-O-final.json"
+      ],
+      "elapsed_seconds": 0.3102769429096952,
+      "expected": "zero",
+      "name": "independent-positive-O",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"checks\": 265, \"elapsed_seconds\": 0.16012942197266966, \"maxrss_KiB\": 27264, \"status\": \"PASS\"}\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/tmp/jc2-lane.MAp4nm/inputs/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/producer-O.json"
+      ],
+      "elapsed_seconds": 0.29208904504776,
+      "expected": "zero",
+      "name": "producer-positive-O",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"PASS\", \"checks\": 52, \"counts\": {\"unequal/rational\": {\"raw\": [83, 215], \"fixed\": [12, 19], \"free\": 267, \"variables\": 267, \"raw_pair_upper_bound\": 17845, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 698}, \"unequal/golden\": {\"raw\": [83, 215], \"fixed\": [12, 19], \"free\": 267, \"variables\": 267, \"raw_pair_upper_bound\": 17845, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 698}, \"common_3/rational\": {\"raw\": [94, 241], \"fixed\": [17, 27], \"free\": 291, \"variables\": 293, \"raw_pair_upper_bound\": 22654, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}, \"common_3/golden\": {\"raw\": [94, 241], \"fixed\": [17, 27], \"free\": 291, \"variables\": 293, \"raw_pair_upper_bound\": 22654, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}, \"common_4/rational\": {\"raw\": [115, 296], \"fixed\": [17, 27], \"free\": 367, \"variables\": 369, \"raw_pair_upper_bound\": 34040, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}, \"common_4/golden\": {\"raw\": [115, 296], \"fixed\": [17, 27], \"free\": 367, \"variables\": 369, \"raw_pair_upper_bound\": 34040, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}}, \"elapsed_seconds\": 0.09427240397781134, \"maxrss_KiB\": 25424}\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "target"
+      ],
+      "elapsed_seconds": 0.6171399499289691,
+      "expected": "nonzero",
+      "name": "independent-target-O",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 444, in <lambda>\n    'target': lambda: C.verify_toy_stream(\n                      ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "missing_row"
+      ],
+      "elapsed_seconds": 0.6151075779926032,
+      "expected": "nonzero",
+      "name": "independent-missing_row-O",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 446, in <lambda>\n    'missing_row': lambda: C.verify_toy_stream(\n                           ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "footer"
+      ],
+      "elapsed_seconds": 0.613625060999766,
+      "expected": "nonzero",
+      "name": "independent-footer-O",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 448, in <lambda>\n    'footer': lambda: C.verify_toy_stream(\n                      ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 279, in verify_toy_stream\n    raise ValueError('missing terminal footer')\nValueError: missing terminal footer\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "field"
+      ],
+      "elapsed_seconds": 0.6168603709666058,
+      "expected": "nonzero",
+      "name": "independent-field-O",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 450, in <lambda>\n    'field': lambda: C.verify_toy_stream(\n                     ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "vertex"
+      ],
+      "elapsed_seconds": 0.61412491009105,
+      "expected": "nonzero",
+      "name": "independent-vertex-O",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 452, in <lambda>\n    'vertex': lambda: independent_validate(vertex),\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 305, in independent_validate\n    raise AuditError('independent contract mismatch')\nAuditError: independent contract mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py",
+        "--inject",
+        "face"
+      ],
+      "elapsed_seconds": 0.618712521973066,
+      "expected": "nonzero",
+      "name": "independent-face-O",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 668, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 630, in main\n    mutations[args.inject]()\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 453, in <lambda>\n    'face': lambda: independent_validate(face),\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/audit.py\", line 305, in independent_validate\n    raise AuditError('independent contract mismatch')\nAuditError: independent contract mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/tmp/jc2-lane.MAp4nm/inputs/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/producer-target-O-must-not-exist.json",
+        "--mutate",
+        "target"
+      ],
+      "elapsed_seconds": 0.5963439410552382,
+      "expected": "nonzero",
+      "name": "producer-target-O",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/jc2-lane.MAp4nm/inputs/test_client.py\", line 184, in <module>\n    main()\n  File \"/tmp/jc2-lane.MAp4nm/inputs/test_client.py\", line 165, in main\n    C.verify_toy_stream(wrong, left, right, outputs, scalar, variables)\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/tmp/jc2-lane.MAp4nm/inputs/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-preflight-gate-sol56-20260906/producer-face-O-must-not-exist.json",
+        "--mutate",
+        "face"
+      ],
+      "elapsed_seconds": 0.5968654160387814,
+      "expected": "nonzero",
+      "name": "producer-face-O",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/jc2-lane.MAp4nm/inputs/test_client.py\", line 184, in <module>\n    main()\n  File \"/tmp/jc2-lane.MAp4nm/inputs/test_client.py\", line 167, in main\n    C.validate_contract(bad_face)\n  File \"/tmp/jc2-lane.MAp4nm/inputs/client.py\", line 211, in validate_contract\n    raise ValueError('contract differs from full fixed-face/source support specification')\nValueError: contract differs from full fixed-face/source support specification\n",
+      "stdout": ""
+    }
+  ],
+  "limits_per_child": {
+    "AS_bytes": 536870912,
+    "cpu_seconds": 25,
+    "wall_seconds": 30
+  },
+  "negative_count": 16,
+  "positive_count": 4,
+  "producer_runner_used": false,
+  "product_sha256": {
+    "audit-O-final.json": "e09041f8e689ed5b846e79919890040b0ca3e6b98d79bb6c4ef732afc9cdc867",
+    "audit-normal-final.json": "c9c2f55adcc8089a8507cfe1b3a92f57d2d8f435f2a53f075f3b22d6f0666c07",
+    "producer-O.json": "2fbb5c916c3cf135b9dca17fd0f1ce5ada5a1f1c2cda77c6ab93cd0243b98136",
+    "producer-normal.json": "12304d159ee741c2592ab2b9aa291bb6ccfe1bc4655cc17e81236511c4bac01e"
+  },
+  "production_J_expanded": false,
+  "production_lift_expanded": false,
+  "status": "PASS"
+}

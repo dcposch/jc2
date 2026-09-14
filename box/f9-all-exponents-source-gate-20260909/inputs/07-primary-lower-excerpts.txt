@@ -1,0 +1,150 @@
+EXCERPTS ONLY. Original: box/d108-published-case-interface-20260906/ggv-lower-1605.09430v2.txt
+Original URL: https://arxiv.org/pdf/1605.09430v2
+Full original SHA256: 77ae98339d7a70c476d89c01a2d38ba3aa1af98fbb0ba9da32c1759fde87a221
+Intervals use literal sed newline counting, retaining PDF formfeeds. Omitted intervals are not charged.
+
+=== EXACT ORIGINAL LINES 160-303; BYTES [12390,22623) ===
+                                                        l
+
+Moreover, a direct computation shows that
+                          Dx (evη (P )) = evη (Dx (P )) + evη (Dy (P ))Dx (η).                                        (1.3)
+                                            R      (l)      (l)        R
+We also define continuous linear maps y on L̂− and L̂+ , and x on Im(Dx ), by
+                                1                                            1
+                Z                                         Z
+                     i                i                         i                  i
+                   x l y j :=       x l y j+1   and          x l y j :=          x l +1 y j .
+                 y            j + 1                        x             i/l + 1
+                              (l)
+Lemma 1.1. Let g, f ∈ L̂− . Assume that g ∈ Im(Dx ). If Dy (g) = Dx (f ), then the differential
+                                                   (l)
+form gdx + f dy is exact; i.e., there exists H ∈ L̂− such that Dy (H) = f and Dx (H) = g.
+Proof. Consider                               Z         Z             Z         
+                                      H :=         f+             g−       Dy (g) .
+                                               y            x          y
+A direct computation shows that Dy (H) = f and Dx (H) = g.                                                               
+                                                                                                1
+                                                                                                     − 1l
+Proposition 1.2. Let P ∈ L(l) and n := v0,1 (P ). There exist u ∈ K[x , x                       l           ], r ∈ N, and a
+family (ηi )1≤i≤n of elements of K((x−1/r )), such that
+                                                            n
+                                                            Y
+                                                  P =u          (y − ηi ).                                            (1.4)
+                                                            i=1
+
+Proof. See [6, Corollary 13.15, page 295].                                                                               
+4                           JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+Remark 1.3. The same result holds with each ηi in K((x1/r )) instead of K((x−1/r )).
+Proposition 1.4. Let P ∈ L(l) and (ρ, σ) ∈ Dir(P ). Assume ρ 6= 0 and let sgn(ρ) denote the
+                                            sgn(ρ)
+sign of ρ. There exists r ∈ N and η ∈ K((x− r )) of the form
+                                                 X
+                                   η = λxσ/ρ +     λt xt/r ,
+                                                        tρ<rσ
+
+with λ ∈ K × , such that evη (P ) = 0. Moreover y − λxσ/ρ divides ℓρ,σ (P ).
+Proof. We assume that ρ > 0 and leave the case ρ < 0, which is similar, to the reader. Let n, r,
+                                                         (r)
+u and ηi be as in Proposition 1.2. Set Pi := y − ηi ∈ L̂− . Since ℓρ,σ is multiplicative, from (1.4)
+we obtain
+                                                       n
+                                                       Y
+                                  ℓρ,σ (P ) = ℓρ,σ (u)   ℓρ,σ (Pi ).
+                                                          i=1
+
+Note that ℓρ,σ (u) is a monomial, because all the monomials in x±1/r have different (ρ, σ)-degrees.
+Since (ρ, σ) ∈ Dir(P ), there exists at least one i, say i0 , such that the factor ℓρ,σ (Pi0 ) has two
+terms, which necessarily are y and λxσ/ρ for some λ ∈ K × . The result follows immediately
+taking η = ηi0 .                                                                                     
+
+Theorem 1.5. Let P, Q ∈ L(l) . Set
+                                                                          Z
+                        J˜ = J(P,
+                             ˜ Q) := Coef x−1 y0 (QDx (P ))x−1 +               [P, Q],
+                                                                           y
+
+and write g := J˜ − QDx (P ). The following facts hold:
+    (1) Dy (g) = −Dx (QDy (P )),
+    (2) g ∈ Im(Dx ),
+                                                  ˜ = vρ,σ (x−1 ), then there is λ ∈ K × such that
+    (3) If (ρ, σ) ∈ Dir(P ) with ρ 6= 0 and vρ,σ (J)
+                         y − λxσ/ρ | ℓρ,σ (P )    and      evλxσ/ρ (ℓρ,σ (J˜)) = 0.
+                                                             ˜ = [P, Q]. From (1) it follows that
+Proof. Statement (1) follows directly from the fact that Dy (J)
+                          Z                Z            
+                             Dy (g) = Dx − QDy (P ) ∈ Im(Dx ).
+                             y                      y
+                                                                 R
+Therefore, in order to prove (2), it suffices to verify that g − y Dy (g) ∈ Im(Dx ). But this is true
+since g − y Dy (g) ∈ K[x1/l , x−1/l ] and
+         R
+                     Z                                                    Z        
+                                                   ˜
+      Coef x−1 y0 g − Dy (g) = Coef x−1 y0 J − QDx (P ) = Coef x−1 y0             [P, Q] = 0.
+                        y                                                                y
+
+Now we prove statement (3). It is convenient to consider separately the cases ρ > 0 and ρ < 0.
+We only deal with the case ρ > 0, since the other one is similar. By Lemma 1.1, statements (1)
+and (2) guarantee that the differential form
+                                  (J˜ − QDx (P ))dx − (QDy (P ))dy
+                                                                                         (l)
+is exact. So, J˜ − QDx (P ) = Dx (H) and −QDy (P ) = Dy (H) for some H ∈ L̂− . Let η and λ be
+as in Proposition 1.4, so that y − λxσ/ρ divides ℓρ,σ (P ). We will prove that evλxσ/ρ (ℓρ,σ (J˜)) = 0.
+A direct computation shows that
+                             evλxσ/ρ (ℓρ,σ (J˜)) = Coef x−1 y0 (evη (J˜))x−1 .
+                           THE TWO-DIMENSIONAL JACOBIAN CONJECTURE                                           5
+
+
+Now by equality (1.3),
+                Dx (evη (H)) = evη (Dx (H)) + evη (Dy (H))Dx (η)
+                             = evη (J˜) − evη (Q) evη (Dx (P )) + evη (Dy (P ))Dx (η)
+                                                                                     
+
+                               = evη (J˜) − evη (Q)Dx (evη (P )).
+                                                     ˜ and so Coef x−1 y0 (evη (J))
+Since evη (P ) = 0, we arrive at Dx (evη (H)) = evη (J),                        ˜ = 0.                       
+                                                        ×
+Corollary 1.6. If P, Q ∈ L and [P, Q] = µ ∈ K , then there is no edge of the Newton polygon
+of P with slope 1.
+Proof. Let J˜ be as in Theorem 1.5. Since P, Q ∈ L and [P, Q] = µ, we have J˜ = µy. Then,
+             evλx−1 (ℓ−1,1 (J˜)) = evλx−1 (ℓ1,−1 (J˜)) = λµx−1 6= 0 for each λ 6= 0.
+But, by Theorem 1.5(3), if there is an edge with slope one, then there exists λ 6= 0, such that
+                                          ˜ = evλx−1 (ℓ1,−1 (J˜)) = 0,
+                           evλx−1 (ℓ−1,1 (J))
+a contradiction.                                                                                             
+
+                                          2    Lower edges
+Assume that the Jacobian Conjecture is false. Let (P, Q), m and n be as in [7, Corollary 5.21].
+In particular, (P, Q) is a minimal pair and a standard (m, n)-pair in L (see the beginning of
+Section 4 of [7] and [7, Definition 4.3]). In that paper we study the possible edges of the convex
+hull of the support of P with a corner above the main diagonal. Here we begin the study of the
+lower part. In order to carry out this task, we proceed as follows: Consider (a, b) ∈ N0 × N0
+with a > b > 0 and suppose that there exists (ρ, σ) ∈ Dir(P )∩](0, −1), (1, 0)[ satisfying
+                                                 1
+                                        (a, b) =    enρ,σ (P ).
+                                                 m
+For such (a, b) we are going to prove that there exist (ρ, σ)-homogeneous elements G, R ∈ L such
+that R is not a monomial,
+                        (a, b) = enρ,σ (R)    and [G, R] = Ri        for some i ≥ 2.
+This allows to discard as possible (a, b) all the points for which such G, R do not exist.
+Proposition 2.1. Let (P, Q) be a Jacobian pair in L, (ρ, σ) ∈ Dir(P ) and (a′ , b′ ) := enρ,σ (P ).
+Assume that a′ > b′ > 0 and (0, −1) < (ρ, σ) < (1, 0). Then (ρ, σ) < (1, −1).
+Proof. By Corollary 1.6 we know that (ρ, σ) 6= (1, −1). Suppose that (ρ, σ) ∈ ](1, −1), (1, 0)[ ,
+which means that ρ > −σ > 0. Since
+         (ρ, σ) ∈ V>0     and vρ,σ (P ) ≥ vρ,σ (a′ , b′ ) = ρa′ + σb′ > (ρ + σ)b′ ≥ ρ + σ > 0,
+we can apply [7, Theorem 2.6]. Hence, there exists a (ρ, σ)-homogeneous polynomial F such that
+  (a′ , b′ ) ∼ enρ,σ (F ) or   enρ,σ (F ) = (1, 1),   vρ,σ (F ) = ρ + σ    and [F, ℓρ,σ (P )] = ℓρ,σ (P ).
+Moreover, by [7, Remark 2.5] we know that F is not a monomial. If (a′ , b′ ) ∼ enρ,σ (F ), then
+there exists λ > 0 such that enρ,σ (F ) = λ(a′ , b′ ). So
+                   ρ + σ = vρ,σ (F ) = ρλa′ + λσb′ > λb′ (ρ + σ) =⇒ 0 < λb′ < 1,
+which is impossible, since λb′ = v0,1 (enρ,σ (F )) ∈ Z. Consequently, enρ,σ (F ) = (1, 1), and thus,
+by [7, Remark 1.8], we have
+                                  v0,1 (stρ,σ (F )) < v0,1 (enρ,σ (F )) = 1.
+6                            JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+Therefore stρ,σ (F ) = (k, 0) for some k ∈ Z, and so ρ + σ = vρ,σ (stρ,σ (F )) = ρk which implies
+that k > 0. But this leads to the contradiction ρ + σ = ρk ≥ ρ > ρ + σ and finishes the proof. 
+

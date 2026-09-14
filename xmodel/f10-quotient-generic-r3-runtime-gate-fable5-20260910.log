@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+**Verdict: A, B, C, D, E all CONFIRMED. No REFUTED item.** The one finding is a documentary custody gap, labelled GAP-A1, that does not touch the runtime, custody or receipt chain.
+
+**What was written**, both finished at 02:30:48 UTC with the single completion marker in place, inside the 02:42:00 cap:
+- `xmodel/f10-quotient-generic-r3-runtime-gate-fable5-20260910.md` with sections 0 and A through F.
+- `box/f10-quotient-generic-r3-runtime-gate-fable5-20260910/` holding the 113-row hash recheck, sizes, and three stdlib-Node extraction scripts with their outputs.
+
+**What the evidence showed:**
+- **Registration.** The 31175-byte registration was mode 444 and hash-pinned locally at 02:13:30 and remotely at 02:16:01.167, before the 02:16:01.754 launch. Its 111 supplied pins plus itself give the 112 fixed pins. Before-launch and terminal rehashes match 112 of 112, and the 100 owned output files match the manifest, the pulled copies and my local inputs on both hash and size.
+- **Single launch.** One unit invocation with Main 1411. All eight CAPRUN leaders and their children were captured with start ticks equal to the dispatch and telemetry records, and every launched command line contains the exact prelaunch argv. The 42 observed PIDs fall into nine PGIDs. Transient sampler races are all in the caller's own group.
+- **Authorities and prelaunch.** All eight prelaunch maps equal the 112 originals, including missing-input. The deliberate mutations are exactly as coded, and the argv and cap mutations live only in the authority while the real command line stays correct. Every prelaunch stamp precedes its dispatch, and every return precedes the stored cutoff.
+- **Controls.** Five refusals exit 1 with the exact expected reason and no sentinel. Valid writes the exact sentinel. Dummy trips the 32 MiB RSS cap with the full MATCH, TERM, MATCH, KILL sequence and a same-PGID descendant. Normal-exit telemetry leaves cleanup fields unset, and I used the caller's own quiet scan and the terminal absence check as the independent evidence instead.
+- **Generic build.** One run, exit 0, receipt with the nine keys, eight positives and four negatives in plan order with the expected count dictionaries. All 20 sidecars bind by path and hash without being parsed. The engine dictionary equals the registration key by key, so the accepted 17zk GAP-D1 is observed resolved with no code change.
+- **Terminal.** The unit was dead with unset accounting before the rehash. All three instances stopped with volumes retained.
+
+**Smallest defect (GAP-A1).** The pre-start STOPPED-to-PENDING stamp and the backup-cancel stamp exist only in the root report narrative, not in any charged raw file. The raw files prove only the ordering timer-active, SSH preflight, launch, stop request, STOPPED.
+
+**Own correction disclosed in the report.** My first extraction pass compared two dictionaries as key-ordered strings and printed false. An order-independent pass shows both equal. Both passes are retained in the box.
+
+**Next** is ROOT's independent intake of this gate. No Seal or exit-price line was authored, and no file outside the two owned targets was written in the repo.
+DIVERT path=xmodel/f10-quotient-generic-r3-runtime-gate-fable5-20260910.md status=CLEAN body_bytes=14958 body_sha256=bb5f6fc08434c01ca3e23e56b00d593eb4c97272a9a680fdc56692d5a5586da4

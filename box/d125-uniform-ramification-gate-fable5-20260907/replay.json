@@ -1,0 +1,77 @@
+{
+ "caps": "30wall25CPU512MiB",
+ "runs": [
+  {
+   "first_failure": null,
+   "mutation": null,
+   "optimized": false,
+   "rc": 0,
+   "stdout_sha256": "6928878463a6e77756f9b123379059d9804afab32a8646c1c9560f83db24af9a"
+  },
+  {
+   "first_failure": "FAIL negative-R part of X^5 through s^7 equals (E) exactly, moving denominators included",
+   "mutation": "--mutate-moving-denominator",
+   "optimized": false,
+   "rc": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL mixed C^2D coefficient 3*C(5/3,3)=-5/27",
+   "mutation": "--mutate-double-factor",
+   "optimized": false,
+   "rc": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL lift kernel is exactly b(-1,1,1)",
+   "mutation": "--mutate-omit-low-lift",
+   "optimized": false,
+   "rc": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL localized kernel exponents exactly 1,3",
+   "mutation": "--mutate-origin-bound",
+   "optimized": false,
+   "rc": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": null,
+   "mutation": null,
+   "optimized": true,
+   "rc": 0,
+   "stdout_sha256": "6928878463a6e77756f9b123379059d9804afab32a8646c1c9560f83db24af9a"
+  },
+  {
+   "first_failure": "FAIL negative-R part of X^5 through s^7 equals (E) exactly, moving denominators included",
+   "mutation": "--mutate-moving-denominator",
+   "optimized": true,
+   "rc": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL mixed C^2D coefficient 3*C(5/3,3)=-5/27",
+   "mutation": "--mutate-double-factor",
+   "optimized": true,
+   "rc": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL lift kernel is exactly b(-1,1,1)",
+   "mutation": "--mutate-omit-low-lift",
+   "optimized": true,
+   "rc": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL localized kernel exponents exactly 1,3",
+   "mutation": "--mutate-origin-bound",
+   "optimized": true,
+   "rc": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "status": "PASS",
+ "writers_finished": true
+}

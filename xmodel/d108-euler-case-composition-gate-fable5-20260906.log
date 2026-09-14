@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Nothing further is needed; the deliverable is written, linted, and hashed, and the memory note is saved.
+
+**Written:** `xmodel/d108-euler-case-composition-gate-fable5-20260906.md` (SHA256 `db857b69…`, 16,496 bytes), finished at 14:30 UTC against the 14:52 deadline. Skeleton first, sections appended, standalone `<!-- BODY-END -->` last with nothing after, no seal footer, zero lines beginning with the forbidden token.
+
+**Verdicts**
+
+- **Euler envelope: CONFIRMED** (EXTERNAL-THEOREM GGV1 Thm 2.6(1),(2) + Remark 2.5). Every antecedent checks against the primary text: (0,1) and the max-ratio direction lie in V_{>0}; st is the max of i−j by Remark 1.8; polynomial E support is {(1,1),(1+σ,0)}; the monomial case dies by Remark 2.5, whose note [4] proof I verified. The polynomiality clause (1) is load-bearing and rests upstream on Joseph's Lemma 2.2.
+- **Common power normalization: CONFIRMED.** Prop 1.13 forces the weight-139 bracket part to vanish, so G shares the root s. The translation preserves total leaders, highest-A monomials, both complete (4,−1) faces, and B-degrees.
+- **Full case interface: CONFIRMED** at the published-statement interface. With (U), the predecessor lies in the open interval by [2] Prop 2.1 + Cor 1.6, Cor 7.4's antecedents are met, q=4 comes from Thm 7.6(3) for the type II corner, the range positivity goes through [2] Prop 2.2's 10.2.6 route, and d∈{0,1} in [6] Prop 2.5 follows from deg_x P = 84. Prop 8.2 and Cor 7.4 carry no minimality hypothesis.
+- **Conditional family retirement: CONFIRMED as conditional** on the named external theorems and the Helali/Suzuki exclusions at CROSSCHECK's audited scope. No degree ≥125 bound, unit certificate, source necessity, or cut map is implied.
+
+**Decision.** (U) was the last source-level arrow. What remains is proof-replay debt inside external results, itemised in §4.3 and §6 of the report.
+
+**Controls.** The supplied checker replayed normal and with -O: 12 PASS each, byte-identical output, under 0.1 s and 17 MB. My own changed-object script found that the vertical Euler ODE at (a,b)=(4,2) admits e=A²+A, p=A(A+1)³, a non-shifted-power solution, so the producer's b>a hypothesis is genuinely load-bearing; both source applications satisfy it.
+DIVERT path=xmodel/d108-euler-case-composition-gate-fable5-20260906.md status=CLEAN body_bytes=16496 body_sha256=db857b694a64f6cb3257935550ec996c5fc25a4452024b9c304be5c31ba977b5

@@ -1,0 +1,52 @@
+{
+  "schema":"caprun-admin-placement-repair-sol-custody/v1",
+  "status":"TERMINAL_INERT_SOURCE_REPAIR_PENDING_DIFFERENT_MODEL_FIRST",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc":"2026-09-12T07:01:31.010120164Z",
+  "terminal_utc":"2026-09-12T07:07:47.735203105Z",
+  "all_writers_idle":true,
+  "no_later_writes_planned":true,
+  "authority":"DISABLED_UNBOUND_UNREVIEWED_NOT_LAUNCH_AUTHORITY",
+  "report":{
+    "path":"xmodel/caprun-admin-placement-repair-sol-20260912.md",
+    "source_body_sha256":"a3fd0678690812bbe667c86089d497136a8da8eeec4a71f1dccb58b05c37aa70",
+    "artifact_sha256":"ae02a5b31cdf33c9681ebb50396a5d0dc841bece74b8da08957119398ded9d63",
+    "whole_read_after_finalize":true
+  },
+  "manifest":{
+    "path":"xmodel/caprun-admin-placement-repair-sol-20260912.md.artifact.json",
+    "sha256":"33a4097382f7ec94c74febcde89a2199cc9e1eafdbfd4e1e3d1fb0fe1a45ab9c",
+    "artifact_finalize_verify":"VERIFIED"
+  },
+  "pins":{
+    "path":"box/caprun-admin-placement-repair-sol-20260912/PINS.json",
+    "sha256":"de58218a89b7fae261aa4b61e274bf4d6a28a1c03ee961c2719ffb61841edf3e",
+    "input_postpins_equal_pre":true
+  },
+  "outputs":{
+    "box/caprun-admin-placement-repair-sol-20260912/setup-pre-admission.template.sh":"39c242aded4ac83448416ffc4f9b51e3420b042c2ed59be0946968d8a4141783",
+    "box/caprun-admin-placement-repair-sol-20260912/preholder-security.template.sh":"13e3653977688fc85a6825318358df74d54df2a534a524edccd1e1843605e63a",
+    "box/caprun-admin-placement-repair-sol-20260912/setup-pre-admission.template.sh.diff":"0ad94ab94256fb63cf636e9307aaeecf779349d5489e64c4045424290775f70a",
+    "box/caprun-admin-placement-repair-sol-20260912/preholder-security.template.sh.diff":"183c4a80df8adc8c02228425d1b1808cc4dedf5c9c2ef624c7935e272fca30a2",
+    "box/caprun-admin-placement-repair-sol-20260912/BINDING-AND-NEGATIVE-CONTROLS.md":"08bf4806bfb4829f8e86bdbcf2da7404079e2199a8022b7100124f039ce62aeb"
+  },
+  "whole_read_scope":{
+    "fresh_inputs":[
+      "box/caprun-lateflow-corrected-astra-20260912/outer-admission.template.sh",
+      "box/caprun-lateflow-corrected-astra-20260912/observe-and-leaves.template.sh",
+      "box/caprun-lateflow-corrected-astra-20260912/release-check.template.sh",
+      "box/caprun-lateflow-repair-root-20260912/receive.template.sh",
+      "box/caprun-lateflow-repair-root-20260912/fifo-write.template.sh",
+      "box/caprun-admin-placement-delta-sol-20260912/ROOT-INTAKE.md"
+    ],
+    "exact_current_reused":"the prior ten PINS whole-read scopes plus xmodel/caprun-admin-placement-delta-sol-20260912.md",
+    "own":[
+      "setup-pre-admission.template.sh",
+      "preholder-security.template.sh",
+      "both exact diff files",
+      "BINDING-AND-NEGATIVE-CONTROLS.md",
+      "final report"
+    ]
+  },
+  "execution":"NO_SOURCE_OR_HELPER_EXECUTION_NO_SYNTAX_TEST_NO_RUNTIME"
+}

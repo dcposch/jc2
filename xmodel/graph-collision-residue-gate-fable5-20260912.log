@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete and sealed at 11:19:53Z, ahead of the 11:33Z reserve. The report is `xmodel/graph-collision-residue-gate-fable5-20260912.md`, and nothing else was written.
+
+**Verdict: all five items CONFIRMED by independent hand reconstruction.**
+
+- **A (chart and correspondence).** I re-expanded P and Q in the chart x=1/t, y=s−t and got U=s²+st−Ws³, V=4s+2t−3Ws² exactly. The collision reduces to the cubic Ws³−2s²+Vs−2U, the a,b,C,δ parametrisation is reversible off δ=0 and b=0, and I re-expanded (z−z')/δ² and (z+z')/δ² to the producer's E and K term by term. No extraneous branch; s=y+1/x makes the two source points distinct.
+- **B (η and local structure).** η reproduced from the two x dy pullbacks, treated on E=0. At a=b=B with 8B²+8B+1=0, E is smooth, E_a+E_b=52B+9 has norm −49 so u=a−b is a parameter, d=(20B+9)/28, and the identity E=bK+(2b−1)u−(10b+1)u²−8b²u³ holds exactly. K has a simple zero, so δ²=2/K is a genuine quadratic extension ramified with index 2.
+- **C (residue).** All four simple contributions give (4B²−4B−1)/(24B²) = −(8B+5)/6, with d cancelling. Norm of 8B+5 is −7, so both conjugates are nonzero; the cover residue is −(8B+5)/3. Three exact controls are shown: a second expansion of the double pole, an exact differential dF with a double pole at the same place that correctly returns residue zero, and the wrong ramification sign that fails to cancel d.
+- **D (global necessity).** Polynomial Poincaré gives polynomial H, equal composites make η exact on the irreducible cover, poles of the source maps at the place do not matter, and a Keller pair yields the target form F dG/c. No injectivity, normality or finiteness is used.
+- **E (transport).** P, Q, R scale by λ², λ, λ⁻¹ under the weighted action, checked monomial by monomial. L_λ has determinant 1, pulls B₁ back to B_c, and the target rescaling is diagonal and invertible, so nonexistence of primitives and pairs transfers to every nonzero constant graph. The direction of the arrow is sound.
+
+**Surviving statement.** For the literal P,Q,R and every nonzero constant c, no polynomial one-form on A³ pulls back to a primitive of dx∧dy under (P,Q,R)|_{z=c}, hence no Keller pair exists in C[p_c,q_c,r_c] at any degree. Not claimed: c=0, nonconstant graphs, other subalgebras, or anything about JC2. The claim remains PROVISIONAL until ROOT records it. No OPEN raised, no charge_basis line.
+
+**Custody.** All three inputs matched their expected SHA-256 before reading and again at the 11:19:21Z postpin. Report sha256 fc28015bd9213a6c8bd33ff6678334458ca0471e1f7e2def763ac922f21c9d7b, 11955 bytes, single BODY-END marker as the last line. Tools were limited to hashing, date, reading, and heredoc appends.
+DIVERT path=xmodel/graph-collision-residue-gate-fable5-20260912.md status=CLEAN body_bytes=11955 body_sha256=fc28015bd9213a6c8bd33ff6678334458ca0471e1f7e2def763ac922f21c9d7b

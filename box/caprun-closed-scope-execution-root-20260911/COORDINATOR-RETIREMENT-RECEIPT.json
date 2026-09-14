@@ -1,0 +1,25 @@
+{
+  "schema": "jc2-coordinator-retirement-actual/v1",
+  "checked_utc": "2026-09-11T10:46:41+00:00",
+  "host_role": "COORDINATOR_USER_SYSTEMD",
+  "instance": "i-00653baa8e5c32c75",
+  "timer": "jc2-closedchild-preflight9-20260911a-worker-stop.timer",
+  "calendar": "2026-09-11 11:25:00 UTC",
+  "timer_active_state": "active",
+  "timer_sub_state": "waiting",
+  "service_main_pid": 0,
+  "exec_argv": [
+    "/usr/local/bin/aws",
+    "ec2",
+    "terminate-instances",
+    "--profile",
+    "personal",
+    "--region",
+    "us-east-1",
+    "--instance-ids",
+    "i-00653baa8e5c32c75"
+  ],
+  "timer_raw_sha256": "7bdda9143b8c87062ba4c3f3a61c9920b4d7e17441a5d4006ffcc65b07ba2190",
+  "service_raw_sha256": "b6273295ad5820ff6da64b02b18fbbe646c460eb31841ffd1b9c639decfd4f54",
+  "approval": "ROOT exact real coordinator timer checked immediately before admission; original deadline unchanged"
+}

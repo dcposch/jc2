@@ -1,0 +1,140 @@
+{
+  "utc": "2026-09-08T01:47:49.968480+00:00",
+  "status": "TEN_MODES_PASS",
+  "elapsed": 2.6201938749291003,
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.036788581986911595,
+      "stdout": "{\"formal_quintic_only\": true, \"full_source\": false, \"kernels\": [5, 10, 15, 20, 25], \"status\": \"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--omit-b4"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.10263463598676026,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 46, in <module>\n    need(der(fb,0)==add(mul(der(fa,0),q),mul(tau,r),delta),\"full polynomial derivative division\")\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 10, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: full polynomial derivative division\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--omit-b2"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.09617289900779724,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 46, in <module>\n    need(der(fb,0)==add(mul(der(fa,0),q),mul(tau,r),delta),\"full polynomial derivative division\")\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 10, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: full polynomial derivative division\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--partial-constant-shear"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.09862318204250187,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 55, in <module>\n    need(actual==expected,\"full constant-sensitive beta3 shear\")\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 10, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: full constant-sensitive beta3 shear\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--wrong-f"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.09716809098608792,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 71, in <module>\n    need(br==sc(add(mul(left,Z),right),F(5,9)),\"formal cubic quintic final rows\")\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 10, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: formal cubic quintic final rows\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.13458611106034368,
+      "stdout": "{\"formal_quintic_only\": true, \"full_source\": false, \"kernels\": [5, 10, 15, 20, 25], \"status\": \"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--omit-b4"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.5103201708989218,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 46, in <module>\n    need(der(fb,0)==add(mul(der(fa,0),q),mul(tau,r),delta),\"full polynomial derivative division\")\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 10, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: full polynomial derivative division\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--omit-b2"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.5166329159401357,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 46, in <module>\n    need(der(fb,0)==add(mul(der(fa,0),q),mul(tau,r),delta),\"full polynomial derivative division\")\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 10, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: full polynomial derivative division\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--partial-constant-shear"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.513800079934299,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 55, in <module>\n    need(actual==expected,\"full constant-sensitive beta3 shear\")\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 10, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: full constant-sensitive beta3 shear\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--wrong-f"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.5134068629704416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 71, in <module>\n    need(br==sc(add(mul(left,Z),right),F(5,9)),\"formal cubic quintic final rows\")\n  File \"/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py\", line 10, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: formal cubic quintic final rows\n"
+    }
+  ]
+}

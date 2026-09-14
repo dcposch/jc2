@@ -1,0 +1,28 @@
+{
+  "command": [
+    "timeout",
+    "300",
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "Singular",
+    "--cpus=1",
+    "--threads=1",
+    "--flint-threads=1",
+    "--no-rc",
+    "-q",
+    "/home/ubuntu/jc2/box/g9966n1b2-20260903/builders/S6_n9_m6_M5_V2_k8_part_1_full_builder.sing"
+  ],
+  "elapsed_seconds": 0.061815,
+  "native_done": true,
+  "returncode": 0,
+  "row_count": 102,
+  "rows_exists": true,
+  "rows_sha256": "dcd296744835f938fdf47c0067bc07cd59a853c6d4dd39c2fafe729a223a52cc",
+  "stderr": "box/g9966n1b2-20260903/builders/S6_n9_m6_M5_V2_k8_part_1_full_builder.sing.err",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "box/g9966n1b2-20260903/builders/S6_n9_m6_M5_V2_k8_part_1_full_builder.sing.out",
+  "stdout_sha256": "75ad3299a2ce282adba9f3e661604176c9ba8aac2b90fc492a6771df5d30b58b",
+  "target_gate": true,
+  "timed_out": false
+}

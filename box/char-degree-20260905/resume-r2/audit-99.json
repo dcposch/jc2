@@ -1,0 +1,2988 @@
+{
+  "audit_utc": "2026-09-05T23:23:47.210486+00:00",
+  "backend_controls": [
+    {
+      "case": "positive",
+      "controls": [
+        "0",
+        "1"
+      ],
+      "replay": {
+        "output": "ALL_ROWS_PARSED\n23\nBEGIN_GB\nEND_GB\nBEGIN_RESULT\n1\n0\n19\nEND_RESULT\nBEGIN_CONTROLS\n0\n1\nEND_CONTROLS\n",
+        "output_sha256": "fe1d0a25714d55d0d0bf314f3d61ce3d042aa5be1f0b1c043edfcf3c8f68d039",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "cb38e0883c431af48a9df07cf670a43c2205b5ea88d3fa55ec5252239bfb071a",
+        "wall_seconds": 0.0053
+      },
+      "result": [
+        "1",
+        "0",
+        "19"
+      ],
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/d108/circuit-control-positive-v2.sing",
+      "script_sha256": "cb38e0883c431af48a9df07cf670a43c2205b5ea88d3fa55ec5252239bfb071a"
+    },
+    {
+      "case": "negative",
+      "controls": [
+        "0",
+        "1"
+      ],
+      "replay": {
+        "output": "ALL_ROWS_PARSED\n24\nBEGIN_GB\nEND_GB\nBEGIN_RESULT\n0\n-1\n1\nEND_RESULT\nBEGIN_CONTROLS\n0\n1\nEND_CONTROLS\n",
+        "output_sha256": "8f1bb2e2069903ec4548695787a5fb0f476f340a216f00b70f26f23612396fae",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "c60ee2f96f81ddc582282f4b1a2b4c8ad78bc9dcf37a7c422886529c8f56c52c",
+        "wall_seconds": 0.0059
+      },
+      "result": [
+        "0",
+        "-1",
+        "1"
+      ],
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/d108/circuit-control-negative-v2.sing",
+      "script_sha256": "c60ee2f96f81ddc582282f4b1a2b4c8ad78bc9dcf37a7c422886529c8f56c52c"
+    }
+  ],
+  "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+  "proof_custody": [
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/acff3f559d66282f40a904b95c12d7fdc94b1ce0adc8a2e44ea60b69e4646d8c-front-band-lemma.md",
+      "sha256": "acff3f559d66282f40a904b95c12d7fdc94b1ce0adc8a2e44ea60b69e4646d8c"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/b4048ec314ba4fbdae5bca096824def645db8105959a954c77ad0b65e03a6a11-cubic-front-improvement.md",
+      "sha256": "b4048ec314ba4fbdae5bca096824def645db8105959a954c77ad0b65e03a6a11"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/6c49faeb73bf098e36d4dc5a091e1d6fad775111dcda1b8db4ec880c9542e6de-quartic-front-improvement.md",
+      "sha256": "6c49faeb73bf098e36d4dc5a091e1d6fad775111dcda1b8db4ec880c9542e6de"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/5c3108e67ac299c3ec9f4567dcb736c00880b0f3559aaf22a29e85ba5df8d016-quartic_front_control.json",
+      "sha256": "5c3108e67ac299c3ec9f4567dcb736c00880b0f3559aaf22a29e85ba5df8d016"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/368c2eae69051f394510f6458766fd6cbf9fc3cc6916f0a40f230d56e5348081-stage-specific-front-audit.md",
+      "sha256": "368c2eae69051f394510f6458766fd6cbf9fc3cc6916f0a40f230d56e5348081"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/99f7f342fd943bc70b9bde8ad798f8ec8fdef13c597758267216002e8aa1f276-stage-specific-front-audit.json",
+      "sha256": "99f7f342fd943bc70b9bde8ad798f8ec8fdef13c597758267216002e8aa1f276"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/fa760aa7b3654f2851e3257b1665cec76d3467da00c0f0e9341971c921221be4-translation-proof.md",
+      "sha256": "fa760aa7b3654f2851e3257b1665cec76d3467da00c0f0e9341971c921221be4"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/bb158d7ad5329dd2cc97f91051be8fe585356c65865e1ed54717b076c938f3f2-minor_gauge-final-audit.md",
+      "sha256": "bb158d7ad5329dd2cc97f91051be8fe585356c65865e1ed54717b076c938f3f2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/566753d44bf60825c01f5c0bd3c8b9988465892b943e5f37caf19d89153c77a3-translation-controls.json",
+      "sha256": "566753d44bf60825c01f5c0bd3c8b9988465892b943e5f37caf19d89153c77a3"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/proofs/44d45f8929406a3cec9ebd760987f1b8f7c0c3cf97aca83ea6d303e68d39b509-minor_gauge-transport-controls.json",
+      "sha256": "44d45f8929406a3cec9ebd760987f1b8f7c0c3cf97aca83ea6d303e68d39b509"
+    }
+  ],
+  "receipt_refresh_utc": "2026-09-05T23:33:25.911264+00:00",
+  "records": [
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 258,
+          "name": "input_lifts",
+          "seconds": 0.69,
+          "v": 218,
+          "variables": 636
+        },
+        {
+          "body_bytes": 2459612,
+          "counts": {
+            "H2_graph": 649,
+            "Q": 1389,
+            "R_high": 522,
+            "R_low_graph": 319,
+            "graph_h": 0,
+            "lift": 636,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 761
+          },
+          "name": "R_graph",
+          "positions": 319,
+          "seconds": 0.733
+        },
+        {
+          "HH": 649,
+          "body_bytes": 4426956,
+          "name": "product_graphs",
+          "seconds": 0.796,
+          "vU": 761,
+          "variables": 2365
+        },
+        {
+          "Q_positions": 1389,
+          "name": "RH2_collected",
+          "seconds": 0.878
+        },
+        {
+          "body_bytes": 11930626,
+          "counts": {
+            "H2_graph": 649,
+            "Q": 1389,
+            "R_high": 522,
+            "R_low_graph": 319,
+            "graph_h": 0,
+            "lift": 636,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 761
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.969
+        },
+        {
+          "bytes": 11961757,
+          "name": "script_complete",
+          "seconds": 0.989,
+          "variables": 2912
+        },
+        {
+          "name": "finished",
+          "seconds": 601.518,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta2",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 522,
+        "all_inclusive_Q_rows": 1389,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "5b049c51b46662c934603decbd4ac6357033c74a512abb014ae7608eafe363ca",
+      "counts": {
+        "H2_graph": 649,
+        "Q": 1389,
+        "R_high": 522,
+        "R_low_graph": 319,
+        "graph_h": 0,
+        "lift": 636,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 761
+      },
+      "driver_rc": 0,
+      "execution_sha256": "30e120eaa7c207971421cf054b0dcf013305a885ce2fbe22ff4524d5bab23380",
+      "gauge_sha256": "2d70f6d057f93d35297687de55a2081c05702b4bfffd2133e86dc155f1bb3be0",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage0.input.json",
+      "input_sha256": "24be252076b99323de06abf2cb04ec038059ce0ac5ae91e6946ff9844c1c7ad1",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zrho*rho-1"
+      ],
+      "metadata_sha256": "107c4f12e72e9e26c0e85483f771f72e1a6039191c88249907b6075ed334e565",
+      "ordered_generator_count": 2912,
+      "ordered_generator_sha256": "425c25567e42e47974a1a6a53574f14c70ed1f811a3b09b5dc8e55a26684466b",
+      "original_sha256": "03374b7b47c32a03fafa89613b56170008f8c26a22fc134bcac0dc86d410f426",
+      "output": "ALL_ROWS_PARSED\n4278\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "7d1ebe27d04a858d9263b3822b4d184d40ca2cdedd617b15667508497b4a0aac",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "360e6c6771cdc866e9b64d913bc7fd9c6851aa6d2bfc3ccf528923701f77a4e5",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage0/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage0/augmented.sing",
+      "script_sha256": "ef2337b855d1dafa1e06c8ee89aecb1b6196866fd8a55f73bf76ee2d41732c93",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 60,
+        "D_cut_inclusive": 29,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta2",
+        "circuit_ambient_generator_count": 547,
+        "coefficient_sites_checked": 636,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta2_stage0.json",
+        "coordinate_sha256": "5b049c51b46662c934603decbd4ac6357033c74a512abb014ae7608eafe363ca",
+        "full_source_generator_count": 546,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta2_stage0.input.json",
+        "input_sha256": "24be252076b99323de06abf2cb04ec038059ce0ac5ae91e6946ff9844c1c7ad1",
+        "rational_pivots": 63,
+        "residual_count": 0,
+        "stage": 0
+      },
+      "stage": 0,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "2b2e19553d0ec5b99d8fefc503a767fbe8a9243ea56692e30dc142cf35c94566",
+        "wall_seconds": 0.0246
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.59
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 258,
+          "name": "input_lifts",
+          "seconds": 0.387,
+          "v": 218,
+          "variables": 636
+        },
+        {
+          "body_bytes": 2301324,
+          "counts": {
+            "H2_graph": 649,
+            "Q": 1389,
+            "R_high": 522,
+            "R_low_graph": 319,
+            "graph_h": 0,
+            "lift": 636,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 761
+          },
+          "name": "R_graph",
+          "positions": 319,
+          "seconds": 0.43
+        },
+        {
+          "HH": 649,
+          "body_bytes": 4268668,
+          "name": "product_graphs",
+          "seconds": 0.493,
+          "vU": 761,
+          "variables": 2365
+        },
+        {
+          "Q_positions": 1389,
+          "name": "RH2_collected",
+          "seconds": 0.574
+        },
+        {
+          "body_bytes": 11772334,
+          "counts": {
+            "H2_graph": 649,
+            "Q": 1389,
+            "R_high": 522,
+            "R_low_graph": 319,
+            "graph_h": 0,
+            "lift": 636,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 761
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.663
+        },
+        {
+          "bytes": 11803439,
+          "name": "script_complete",
+          "seconds": 0.684,
+          "variables": 2910
+        },
+        {
+          "name": "finished",
+          "seconds": 601.164,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta52",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 522,
+        "all_inclusive_Q_rows": 1389,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "641fd8d031b01ec4f2fd55cea60799de28f018cbb95b98c82e44adc5653a7c95",
+      "counts": {
+        "H2_graph": 649,
+        "Q": 1389,
+        "R_high": 522,
+        "R_low_graph": 319,
+        "graph_h": 0,
+        "lift": 636,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 761
+      },
+      "driver_rc": 0,
+      "execution_sha256": "a48830e9fcbffc9f35b7e38af0c4836b50b98fda6692030df5fcdb62fe2ee563",
+      "gauge_sha256": "9941c819d3aecec17d4d1ebe65203b3f1d4d4a04418dc495f079d014ce4f9e95",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage0.input.json",
+      "input_sha256": "677f5992355af20b06d03fb0af2220cacd5cb40f06dd7c532f210e3df93114b8",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zc*c-1"
+      ],
+      "metadata_sha256": "a62e5e48a0c4145fa55c748e11f0bfd7e5a8f02de061b76ff0197edd53bd1b4d",
+      "ordered_generator_count": 2910,
+      "ordered_generator_sha256": "e6c512f0b2e99467b06e8f857eb1451d971469651bc8ec63ec85d503e3130d26",
+      "original_sha256": "38282894c3071c209d44fdbc794c516d3b97f1951e71f6b584e345bd62411388",
+      "output": "ALL_ROWS_PARSED\n4278\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "7d1ebe27d04a858d9263b3822b4d184d40ca2cdedd617b15667508497b4a0aac",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "51f86dd7620ec944bb6ea36f9bd4ae6e778f143401810b3c44bf4170777f802e",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage0/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage0/augmented.sing",
+      "script_sha256": "e604a23323954d880cfc263549953aa4f91ebe290cb15e3615d34f6451e182ec",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 60,
+        "D_cut_inclusive": 29,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta52",
+        "circuit_ambient_generator_count": 545,
+        "coefficient_sites_checked": 636,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta52_stage0.json",
+        "coordinate_sha256": "641fd8d031b01ec4f2fd55cea60799de28f018cbb95b98c82e44adc5653a7c95",
+        "full_source_generator_count": 544,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta52_stage0.input.json",
+        "input_sha256": "677f5992355af20b06d03fb0af2220cacd5cb40f06dd7c532f210e3df93114b8",
+        "rational_pivots": 63,
+        "residual_count": 0,
+        "stage": 0
+      },
+      "stage": 0,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "44f20057623e3bad6c88770b7a2326967550ec62b18099a25cc5248d491e0f76",
+        "wall_seconds": 0.0245
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.237
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 235,
+          "name": "input_lifts",
+          "seconds": 0.648,
+          "v": 202,
+          "variables": 597
+        },
+        {
+          "body_bytes": 2205318,
+          "counts": {
+            "H2_graph": 649,
+            "Q": 1374,
+            "R_high": 484,
+            "R_low_graph": 308,
+            "graph_h": 0,
+            "lift": 597,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 692
+          },
+          "name": "R_graph",
+          "positions": 308,
+          "seconds": 0.687
+        },
+        {
+          "HH": 649,
+          "body_bytes": 3972308,
+          "name": "product_graphs",
+          "seconds": 0.744,
+          "vU": 692,
+          "variables": 2246
+        },
+        {
+          "Q_positions": 1374,
+          "name": "RH2_collected",
+          "seconds": 0.823
+        },
+        {
+          "body_bytes": 10870968,
+          "counts": {
+            "H2_graph": 649,
+            "Q": 1374,
+            "R_high": 484,
+            "R_low_graph": 308,
+            "graph_h": 0,
+            "lift": 597,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 692
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.902
+        },
+        {
+          "bytes": 10900438,
+          "name": "script_complete",
+          "seconds": 0.92,
+          "variables": 2754
+        },
+        {
+          "name": "finished",
+          "seconds": 601.447,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta2",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 484,
+        "all_inclusive_Q_rows": 1374,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "8c01755844ef537e1542f302f67609634dd74162d760db435281dea8c3b23e14",
+      "counts": {
+        "H2_graph": 649,
+        "Q": 1374,
+        "R_high": 484,
+        "R_low_graph": 308,
+        "graph_h": 0,
+        "lift": 597,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 692
+      },
+      "driver_rc": 0,
+      "execution_sha256": "5dc7bf38c493229b7f36d9dc137d0735d04b9e1ee8355ac2ff292f4b6f20c640",
+      "gauge_sha256": "7dbd86bdffebf25c542789e05c773530cdf0e5df1d3d4a8fd3b84243410db254",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage1.input.json",
+      "input_sha256": "3e2b033493fabd37123144073a067d7956ac454e604c35072834a34e603eef7f",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zrho*rho-1"
+      ],
+      "metadata_sha256": "e234de03a09b19dafb0bb2e21c1364014de1052f79787c28c3aad1d75e504377",
+      "ordered_generator_count": 2754,
+      "ordered_generator_sha256": "4b4b75bc21f359ede8424e8bd3079d178fa648694522433be8e6557fb3c483f2",
+      "original_sha256": "a2000b4df24fa686e634dc291b03396caf7f792f7bfdb12e660b34d5087d5cf1",
+      "output": "ALL_ROWS_PARSED\n4106\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "2ad7124496d6e5f82e4e8a238cd2c277e611b16b4b409e9c846f9c4f59142faa",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "7e1d48179f14014a9871109df1586a00447a6d43261ee88797f40b764a588c76",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage1/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage1/augmented.sing",
+      "script_sha256": "db5fa32922cb02cb954ba4c9aefae1da1691e4e327869d5b6f3294bdf311618a",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta2",
+        "circuit_ambient_generator_count": 508,
+        "coefficient_sites_checked": 614,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta2_stage1.json",
+        "coordinate_sha256": "8c01755844ef537e1542f302f67609634dd74162d760db435281dea8c3b23e14",
+        "full_source_generator_count": 507,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta2_stage1.input.json",
+        "input_sha256": "3e2b033493fabd37123144073a067d7956ac454e604c35072834a34e603eef7f",
+        "rational_pivots": 80,
+        "residual_count": 0,
+        "stage": 1
+      },
+      "stage": 1,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "de83f98ce7267170e35cfdfdb54ceb24f385a535c4d54a7ec6c7ab25d222055a",
+        "wall_seconds": 0.0226
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.528
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 235,
+          "name": "input_lifts",
+          "seconds": 0.355,
+          "v": 202,
+          "variables": 597
+        },
+        {
+          "body_bytes": 2047030,
+          "counts": {
+            "H2_graph": 649,
+            "Q": 1374,
+            "R_high": 484,
+            "R_low_graph": 308,
+            "graph_h": 0,
+            "lift": 597,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 692
+          },
+          "name": "R_graph",
+          "positions": 308,
+          "seconds": 0.394
+        },
+        {
+          "HH": 649,
+          "body_bytes": 3814020,
+          "name": "product_graphs",
+          "seconds": 0.452,
+          "vU": 692,
+          "variables": 2246
+        },
+        {
+          "Q_positions": 1374,
+          "name": "RH2_collected",
+          "seconds": 0.532
+        },
+        {
+          "body_bytes": 10712676,
+          "counts": {
+            "H2_graph": 649,
+            "Q": 1374,
+            "R_high": 484,
+            "R_low_graph": 308,
+            "graph_h": 0,
+            "lift": 597,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 692
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.611
+        },
+        {
+          "bytes": 10742120,
+          "name": "script_complete",
+          "seconds": 0.63,
+          "variables": 2752
+        },
+        {
+          "name": "finished",
+          "seconds": 601.056,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta52",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 484,
+        "all_inclusive_Q_rows": 1374,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "514310c61888dff94fd48080f87c2c101e88fd2706093c974cbf8d55f0f879ab",
+      "counts": {
+        "H2_graph": 649,
+        "Q": 1374,
+        "R_high": 484,
+        "R_low_graph": 308,
+        "graph_h": 0,
+        "lift": 597,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 692
+      },
+      "driver_rc": 0,
+      "execution_sha256": "9413731bc4908fd5f8a9f72b499f7b34155ee6cc532687985ced93be700ba879",
+      "gauge_sha256": "dedddd92b83dc0293aaf4ccfd15dc853bc3c1140081d08a2b33f08f47ad5a771",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage1.input.json",
+      "input_sha256": "b71ecde493b68ad3a1649b8a4a93cde4c90603104609a7227c89efeb6b25a96b",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zc*c-1"
+      ],
+      "metadata_sha256": "84418eb720847f3459767278bc0fc6d303fb1a421f72975de04cb7a2d029e67c",
+      "ordered_generator_count": 2752,
+      "ordered_generator_sha256": "e4a36461badd38f03e863efde1b83610ad07c6e4b88069e38599c035f0ecd4a7",
+      "original_sha256": "9650319dbf8516fd8126b70d87225efdd3ed3c02dd778cf124b1159b17b5b132",
+      "output": "ALL_ROWS_PARSED\n4106\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "2ad7124496d6e5f82e4e8a238cd2c277e611b16b4b409e9c846f9c4f59142faa",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "b99a656e6ca0c75fc5cd2b4181a3781e961fd90da3e2fae193d762a3ceaa4253",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage1/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage1/augmented.sing",
+      "script_sha256": "c2277b78cf9abd63e73223a7e4b4c3ce28ace03ac50b0e30fb1cef7040e1f669",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta52",
+        "circuit_ambient_generator_count": 506,
+        "coefficient_sites_checked": 614,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta52_stage1.json",
+        "coordinate_sha256": "514310c61888dff94fd48080f87c2c101e88fd2706093c974cbf8d55f0f879ab",
+        "full_source_generator_count": 505,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta52_stage1.input.json",
+        "input_sha256": "b71ecde493b68ad3a1649b8a4a93cde4c90603104609a7227c89efeb6b25a96b",
+        "rational_pivots": 80,
+        "residual_count": 0,
+        "stage": 1
+      },
+      "stage": 1,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "ec2560732c20d511c511847a3f6e4540564f8fbe8ab229426c94be82e2bd9c65",
+        "wall_seconds": 0.0227
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.129
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 227,
+          "name": "input_lifts",
+          "seconds": 0.625,
+          "v": 194,
+          "variables": 581
+        },
+        {
+          "body_bytes": 2097973,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1341,
+            "R_high": 479,
+            "R_low_graph": 297,
+            "graph_h": 0,
+            "lift": 581,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 669
+          },
+          "name": "R_graph",
+          "positions": 297,
+          "seconds": 0.662
+        },
+        {
+          "HH": 645,
+          "body_bytes": 3789795,
+          "name": "product_graphs",
+          "seconds": 0.718,
+          "vU": 669,
+          "variables": 2192
+        },
+        {
+          "Q_positions": 1341,
+          "name": "RH2_collected",
+          "seconds": 0.796
+        },
+        {
+          "body_bytes": 10434004,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1341,
+            "R_high": 479,
+            "R_low_graph": 297,
+            "graph_h": 0,
+            "lift": 581,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 669
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.874
+        },
+        {
+          "bytes": 10462738,
+          "name": "script_complete",
+          "seconds": 0.892,
+          "variables": 2684
+        },
+        {
+          "name": "finished",
+          "seconds": 601.337,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta2",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 479,
+        "all_inclusive_Q_rows": 1341,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "f8332c70d19893ae9da85bd4109878ac762c09ed1caf67719df827bf403b4262",
+      "counts": {
+        "H2_graph": 645,
+        "Q": 1341,
+        "R_high": 479,
+        "R_low_graph": 297,
+        "graph_h": 0,
+        "lift": 581,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 669
+      },
+      "driver_rc": 0,
+      "execution_sha256": "5336a4d3708bfce24c5683e71781b52e7f9e17b793d3e8f1d27664bb71f79ec8",
+      "gauge_sha256": "f5b7f0e271913efbe152b98c325c13df1b28276c1b6e870b9612a3b52dd55a32",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage2.input.json",
+      "input_sha256": "41704f3eac4ca7e1f2b8ea524dcfde1e98deea8e245dbd1557e3a683458e367b",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zrho*rho-1"
+      ],
+      "metadata_sha256": "4c58c860036d5fa6d1bae970a7c290927a0e88607f433ab76a3c9f43452ae58c",
+      "ordered_generator_count": 2684,
+      "ordered_generator_sha256": "f270a2a2978f74170c187f9a945704d5b8070b1e179c75400770c9f9c90c378a",
+      "original_sha256": "eb0eba825a63b54548b8b7d69c85fc5a7ae4c924e7fad9e364bfc394d565becf",
+      "output": "ALL_ROWS_PARSED\n4014\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "73618a894fac0835fd63c6e792d12e841ddbc96eaa6ed91ec109172a2e8f8b91",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "8a5671d73733f43ec13259516f110bd04a39c22dc875457316c4ec34e51a0e00",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage2/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage2/augmented.sing",
+      "script_sha256": "5b29809878e2bae810fb25f74f08299f4cbe75c1bd0c2524ecb878df92501dc0",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta2",
+        "circuit_ambient_generator_count": 492,
+        "coefficient_sites_checked": 603,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta2_stage2.json",
+        "coordinate_sha256": "f8332c70d19893ae9da85bd4109878ac762c09ed1caf67719df827bf403b4262",
+        "full_source_generator_count": 491,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta2_stage2.input.json",
+        "input_sha256": "41704f3eac4ca7e1f2b8ea524dcfde1e98deea8e245dbd1557e3a683458e367b",
+        "rational_pivots": 75,
+        "residual_count": 0,
+        "stage": 2
+      },
+      "stage": 2,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "1cc64c34bbf2df77aef66c538fa1169da3349e29e2af0b36b1ccf068e7ca0cc3",
+        "wall_seconds": 0.0218
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.411
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 227,
+          "name": "input_lifts",
+          "seconds": 0.342,
+          "v": 194,
+          "variables": 581
+        },
+        {
+          "body_bytes": 1939685,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1341,
+            "R_high": 479,
+            "R_low_graph": 297,
+            "graph_h": 0,
+            "lift": 581,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 669
+          },
+          "name": "R_graph",
+          "positions": 297,
+          "seconds": 0.378
+        },
+        {
+          "HH": 645,
+          "body_bytes": 3631507,
+          "name": "product_graphs",
+          "seconds": 0.434,
+          "vU": 669,
+          "variables": 2192
+        },
+        {
+          "Q_positions": 1341,
+          "name": "RH2_collected",
+          "seconds": 0.511
+        },
+        {
+          "body_bytes": 10275712,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1341,
+            "R_high": 479,
+            "R_low_graph": 297,
+            "graph_h": 0,
+            "lift": 581,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 669
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.587
+        },
+        {
+          "bytes": 10304420,
+          "name": "script_complete",
+          "seconds": 0.605,
+          "variables": 2682
+        },
+        {
+          "name": "finished",
+          "seconds": 601.072,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta52",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 479,
+        "all_inclusive_Q_rows": 1341,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "f8c4a63d8de99d2a56c73baf39412b761857df666adacc36c79ef83267e9187e",
+      "counts": {
+        "H2_graph": 645,
+        "Q": 1341,
+        "R_high": 479,
+        "R_low_graph": 297,
+        "graph_h": 0,
+        "lift": 581,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 669
+      },
+      "driver_rc": 0,
+      "execution_sha256": "60a43bba4b2cbff63b54db22591ce5830be4abaaddb35455902f42d7bae4503b",
+      "gauge_sha256": "651f787409fea02c8144bfdab8d8b7abab78899bd40cf6f06d6d142e25ed630f",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage2.input.json",
+      "input_sha256": "9ea49a50a476d7d8518c637621a0654007e247fdfa1bcc52c5aabbdd202a8f6c",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zc*c-1"
+      ],
+      "metadata_sha256": "ab757ebcf8ee1999dfb203df7728bfe9d69295a75c4507b0d5a4fa11ca381770",
+      "ordered_generator_count": 2682,
+      "ordered_generator_sha256": "892547fa059007c5eef2a47c61e3647abb29346f205f026048f1a9652b22922c",
+      "original_sha256": "cf514c020e71e3702f8e5c9ca8c3f64e7cd8d94b84e692c215f53f0f26a2eeee",
+      "output": "ALL_ROWS_PARSED\n4014\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "73618a894fac0835fd63c6e792d12e841ddbc96eaa6ed91ec109172a2e8f8b91",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "7b11e08b8acb2ac9b720a62bf25bd72928045f8a2618a5396d070e73c6d08f8d",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage2/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage2/augmented.sing",
+      "script_sha256": "db662d78b774c2f9f58c42cca89d6bcbd7c50d193ea17bc233c65547e7c58d51",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta52",
+        "circuit_ambient_generator_count": 490,
+        "coefficient_sites_checked": 603,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta52_stage2.json",
+        "coordinate_sha256": "f8c4a63d8de99d2a56c73baf39412b761857df666adacc36c79ef83267e9187e",
+        "full_source_generator_count": 489,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta52_stage2.input.json",
+        "input_sha256": "9ea49a50a476d7d8518c637621a0654007e247fdfa1bcc52c5aabbdd202a8f6c",
+        "rational_pivots": 75,
+        "residual_count": 0,
+        "stage": 2
+      },
+      "stage": 2,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "2bfb0f340216821d79cb60bf4109419691353847e727970d1e9cb19b0b5bc919",
+        "wall_seconds": 0.0217
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.149
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 218,
+          "name": "input_lifts",
+          "seconds": 0.615,
+          "v": 194,
+          "variables": 572
+        },
+        {
+          "body_bytes": 2061638,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1327,
+            "R_high": 473,
+            "R_low_graph": 286,
+            "graph_h": 0,
+            "lift": 572,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 657
+          },
+          "name": "R_graph",
+          "positions": 286,
+          "seconds": 0.65
+        },
+        {
+          "HH": 645,
+          "body_bytes": 3716561,
+          "name": "product_graphs",
+          "seconds": 0.704,
+          "vU": 657,
+          "variables": 2160
+        },
+        {
+          "Q_positions": 1327,
+          "name": "RH2_collected",
+          "seconds": 0.78
+        },
+        {
+          "body_bytes": 10164913,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1327,
+            "R_high": 473,
+            "R_low_graph": 286,
+            "graph_h": 0,
+            "lift": 572,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 657
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.856
+        },
+        {
+          "bytes": 10193152,
+          "name": "script_complete",
+          "seconds": 0.874,
+          "variables": 2636
+        },
+        {
+          "name": "finished",
+          "seconds": 601.348,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta2",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 473,
+        "all_inclusive_Q_rows": 1327,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "22de91c00e2e7d6beb07b00ca2721e14d7179ad21bf21ebcb54fb0de274331cc",
+      "counts": {
+        "H2_graph": 645,
+        "Q": 1327,
+        "R_high": 473,
+        "R_low_graph": 286,
+        "graph_h": 0,
+        "lift": 572,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 657
+      },
+      "driver_rc": 0,
+      "execution_sha256": "578d6ccf9c4240a98ecd8389b6d489067ca6692f0dc12d7f58103c3370247d33",
+      "gauge_sha256": "f71bf9987fccedd6c6687cadbe46f4a10bbf277e1ff8786066e2837b281aadcd",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage3.input.json",
+      "input_sha256": "3622eb3b282113c517beeef8649533b37a1ce9a49a165d0b8f24a57fb3295d58",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zrho*rho-1"
+      ],
+      "metadata_sha256": "7f340daa5a581f82490b7a75868417a0dd3ee1377476e894f87ac2fa815e44b6",
+      "ordered_generator_count": 2636,
+      "ordered_generator_sha256": "26adf2781222d39c1473653f77e6623fb27e12df9022e87e5862c037ecd6ee82",
+      "original_sha256": "0e2fa5d5aafc041e8a22992df1aa688ef7e6518fda384eec14a49d20678dc416",
+      "output": "ALL_ROWS_PARSED\n3962\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "8369069ecf757f7df8679e53bb976379c1b19f386069e9758f89ffd46e1c2ca1",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "d4a3cdbc98e1f12126d20bf98068b323fb2bfd2640e26ff1bdc575dec518d268",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage3/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage3/augmented.sing",
+      "script_sha256": "c94729262abaae922279a066aaf177b55c8e04664a9a00201b49470fb6cfddbc",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta2",
+        "circuit_ambient_generator_count": 476,
+        "coefficient_sites_checked": 592,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta2_stage3.json",
+        "coordinate_sha256": "22de91c00e2e7d6beb07b00ca2721e14d7179ad21bf21ebcb54fb0de274331cc",
+        "full_source_generator_count": 475,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta2_stage3.input.json",
+        "input_sha256": "3622eb3b282113c517beeef8649533b37a1ce9a49a165d0b8f24a57fb3295d58",
+        "rational_pivots": 73,
+        "residual_count": 0,
+        "stage": 3
+      },
+      "stage": 3,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "c061cec3378720cd3fece31df4892d8e7d4c862defe5cac22362796215f3ea22",
+        "wall_seconds": 0.0213
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.422
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 218,
+          "name": "input_lifts",
+          "seconds": 0.336,
+          "v": 194,
+          "variables": 572
+        },
+        {
+          "body_bytes": 1903350,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1327,
+            "R_high": 473,
+            "R_low_graph": 286,
+            "graph_h": 0,
+            "lift": 572,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 657
+          },
+          "name": "R_graph",
+          "positions": 286,
+          "seconds": 0.371
+        },
+        {
+          "HH": 645,
+          "body_bytes": 3558273,
+          "name": "product_graphs",
+          "seconds": 0.426,
+          "vU": 657,
+          "variables": 2160
+        },
+        {
+          "Q_positions": 1327,
+          "name": "RH2_collected",
+          "seconds": 0.502
+        },
+        {
+          "body_bytes": 10006621,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1327,
+            "R_high": 473,
+            "R_low_graph": 286,
+            "graph_h": 0,
+            "lift": 572,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 657
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.576
+        },
+        {
+          "bytes": 10034834,
+          "name": "script_complete",
+          "seconds": 0.594,
+          "variables": 2634
+        },
+        {
+          "name": "finished",
+          "seconds": 601.07,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta52",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 473,
+        "all_inclusive_Q_rows": 1327,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "f91684803dae82571274c72e274ed404eab78e91f612b9554a201c6d4d3024d5",
+      "counts": {
+        "H2_graph": 645,
+        "Q": 1327,
+        "R_high": 473,
+        "R_low_graph": 286,
+        "graph_h": 0,
+        "lift": 572,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 657
+      },
+      "driver_rc": 0,
+      "execution_sha256": "fb785e9b3d0d316baf2051e46ad21db328257b7bf301d5aab3d5677c58dd2fb1",
+      "gauge_sha256": "1a7293a2cd979e8d138a4f89138a76a052b93a93d5b25a1267d4d379e7d2880e",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage3.input.json",
+      "input_sha256": "149b882c0d3a42154b8e7c8ca84eb7d303e059123e761ad56e0e938dbf9353fc",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zc*c-1"
+      ],
+      "metadata_sha256": "0c94b1dc72b36fe33e5aa5aac29749022394027eb86a990eaba7011f3654712c",
+      "ordered_generator_count": 2634,
+      "ordered_generator_sha256": "685369bc61aa035c39ad7b96fec61872452f7eeed899d5a94238ec4d3e85b5c5",
+      "original_sha256": "0b2f1a86147a6d90fe55af9d86ebe65aebafe4933980f4184f5348ed133071d1",
+      "output": "ALL_ROWS_PARSED\n3962\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "8369069ecf757f7df8679e53bb976379c1b19f386069e9758f89ffd46e1c2ca1",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "e3ac720f3837ff15610a11949f28cccb9bde71fbefc1184ddae29ecf21089f70",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage3/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage3/augmented.sing",
+      "script_sha256": "4ee2bf4df3029b9b1789d0ee75e91601c0cfd0976cd4fa96099f76d9cc5b12c8",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta52",
+        "circuit_ambient_generator_count": 474,
+        "coefficient_sites_checked": 592,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta52_stage3.json",
+        "coordinate_sha256": "f91684803dae82571274c72e274ed404eab78e91f612b9554a201c6d4d3024d5",
+        "full_source_generator_count": 473,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta52_stage3.input.json",
+        "input_sha256": "149b882c0d3a42154b8e7c8ca84eb7d303e059123e761ad56e0e938dbf9353fc",
+        "rational_pivots": 73,
+        "residual_count": 0,
+        "stage": 3
+      },
+      "stage": 3,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "54fe2ac9a6292ac9d16f37f60967d8351a295cbd1d7431c53b3eb1ed27bbbe58",
+        "wall_seconds": 0.0213
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.143
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 209,
+          "name": "input_lifts",
+          "seconds": 0.589,
+          "v": 194,
+          "variables": 563
+        },
+        {
+          "body_bytes": 2025482,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1313,
+            "R_high": 467,
+            "R_low_graph": 275,
+            "graph_h": 0,
+            "lift": 563,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 644
+          },
+          "name": "R_graph",
+          "positions": 275,
+          "seconds": 0.624
+        },
+        {
+          "HH": 645,
+          "body_bytes": 3642856,
+          "name": "product_graphs",
+          "seconds": 0.677,
+          "vU": 644,
+          "variables": 2127
+        },
+        {
+          "Q_positions": 1313,
+          "name": "RH2_collected",
+          "seconds": 0.749
+        },
+        {
+          "body_bytes": 9884636,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1313,
+            "R_high": 467,
+            "R_low_graph": 275,
+            "graph_h": 0,
+            "lift": 563,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 644
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.824
+        },
+        {
+          "bytes": 9912394,
+          "name": "script_complete",
+          "seconds": 0.841,
+          "variables": 2590
+        },
+        {
+          "name": "finished",
+          "seconds": 601.231,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta2",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 467,
+        "all_inclusive_Q_rows": 1313,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "8d33a4f744e340bb296b7c53333d4d2ea3089115799d20ee016f7d00d8560e18",
+      "counts": {
+        "H2_graph": 645,
+        "Q": 1313,
+        "R_high": 467,
+        "R_low_graph": 275,
+        "graph_h": 0,
+        "lift": 563,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 644
+      },
+      "driver_rc": 0,
+      "execution_sha256": "16afda6523152b907c88d317e9ee808a87766b24f271671c9d34c156cf0ec805",
+      "gauge_sha256": "bb60ad4887bd04d8f6ee966dc3a1e1588d5ec38238bcce07ae0df0f951195a21",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage4.input.json",
+      "input_sha256": "b6359bb31cf5b87f2acc7a23512d612ac3aefe0cb2ebac75725e9d3dad8fab35",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zrho*rho-1"
+      ],
+      "metadata_sha256": "c4b996f2f83e0059c3ebc994dc445347d99e945ab91dd33d3679889593883f07",
+      "ordered_generator_count": 2590,
+      "ordered_generator_sha256": "040cba2457d3e6c08aeaec9597ae5d789374d8edf0bd00d5154c9cb130b017a4",
+      "original_sha256": "fbc4668e290f49a129f30b83e3ff8ddcc6e4c4f81628cef30e03bed710967f61",
+      "output": "ALL_ROWS_PARSED\n3909\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "228ddd521614d8fe1a509682446eb5a728c88cdf39b90a6bb93bf94fb1607656",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "13a813427d6e9d89d9ec43bc1ba80c4aab6f960b2889eda818bc6ebeeae0a04b",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage4/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage4/augmented.sing",
+      "script_sha256": "a3be8ad496bc462f0f88c0462aa937c9fc6bf3b69f211e22cb1a6f8e2c2a3872",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta2",
+        "circuit_ambient_generator_count": 463,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta2_stage4.json",
+        "coordinate_sha256": "8d33a4f744e340bb296b7c53333d4d2ea3089115799d20ee016f7d00d8560e18",
+        "full_source_generator_count": 462,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta2_stage4.input.json",
+        "input_sha256": "b6359bb31cf5b87f2acc7a23512d612ac3aefe0cb2ebac75725e9d3dad8fab35",
+        "rational_pivots": 71,
+        "residual_count": 0,
+        "stage": 4
+      },
+      "stage": 4,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "281001e3fce435faddec250e953a1ef8e6954af9728b22d52d3efbfac4ae23d9",
+        "wall_seconds": 0.0207
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.304
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 209,
+          "name": "input_lifts",
+          "seconds": 0.327,
+          "v": 194,
+          "variables": 563
+        },
+        {
+          "body_bytes": 1867194,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1313,
+            "R_high": 467,
+            "R_low_graph": 275,
+            "graph_h": 0,
+            "lift": 563,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 644
+          },
+          "name": "R_graph",
+          "positions": 275,
+          "seconds": 0.361
+        },
+        {
+          "HH": 645,
+          "body_bytes": 3484568,
+          "name": "product_graphs",
+          "seconds": 0.415,
+          "vU": 644,
+          "variables": 2127
+        },
+        {
+          "Q_positions": 1313,
+          "name": "RH2_collected",
+          "seconds": 0.487
+        },
+        {
+          "body_bytes": 9726344,
+          "counts": {
+            "H2_graph": 645,
+            "Q": 1313,
+            "R_high": 467,
+            "R_low_graph": 275,
+            "graph_h": 0,
+            "lift": 563,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 644
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.558
+        },
+        {
+          "bytes": 9754076,
+          "name": "script_complete",
+          "seconds": 0.575,
+          "variables": 2588
+        },
+        {
+          "name": "finished",
+          "seconds": 600.974,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta52",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 467,
+        "all_inclusive_Q_rows": 1313,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "5aa986f2c68f68ecfc98926d7ca512d3b9f636fd58a9f5d3808cd1eb9fc9da52",
+      "counts": {
+        "H2_graph": 645,
+        "Q": 1313,
+        "R_high": 467,
+        "R_low_graph": 275,
+        "graph_h": 0,
+        "lift": 563,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 644
+      },
+      "driver_rc": 0,
+      "execution_sha256": "5e06ac48f59f77784ac145a6b99327e5ae8159aeeb9ba88fdbb657c85f126ed2",
+      "gauge_sha256": "a17115da07e0650b25cda90fbee70cccddeda71235568d86f517309e288e336f",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage4.input.json",
+      "input_sha256": "1c5fb2233a819a3d18dd54d9857f00f17471632fc017e813f5f8f8a01949d7e1",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zc*c-1"
+      ],
+      "metadata_sha256": "ed575f31acaf1a7f72b2164a19cd7d45d74553338983ae5639864a0427f771b8",
+      "ordered_generator_count": 2588,
+      "ordered_generator_sha256": "49c0cae7e4cb724cf05ea8e8073271a8f181378686de9d32851937942484a277",
+      "original_sha256": "66018d657e49a71137e33ddbba5d9865d9c3085cec5a35459a99dc78f0da2533",
+      "output": "ALL_ROWS_PARSED\n3909\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "228ddd521614d8fe1a509682446eb5a728c88cdf39b90a6bb93bf94fb1607656",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "1270770640fe19ae9101c465992090977441447fde265869b8219ee449e7a5c3",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage4/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage4/augmented.sing",
+      "script_sha256": "ac98993f49abd0650c729ea20c6833acc4b494a4a59536f21172c321a9e23594",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta52",
+        "circuit_ambient_generator_count": 461,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta52_stage4.json",
+        "coordinate_sha256": "5aa986f2c68f68ecfc98926d7ca512d3b9f636fd58a9f5d3808cd1eb9fc9da52",
+        "full_source_generator_count": 460,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta52_stage4.input.json",
+        "input_sha256": "1c5fb2233a819a3d18dd54d9857f00f17471632fc017e813f5f8f8a01949d7e1",
+        "rational_pivots": 71,
+        "residual_count": 0,
+        "stage": 4
+      },
+      "stage": 4,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "36a4914805906d242cb0fc7ecaafb19a33233388de744af45abe07af892b0f60",
+        "wall_seconds": 0.0207
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.047
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 201,
+          "name": "input_lifts",
+          "seconds": 0.58,
+          "v": 194,
+          "variables": 555
+        },
+        {
+          "body_bytes": 1993048,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "R_graph",
+          "positions": 264,
+          "seconds": 0.614
+        },
+        {
+          "HH": 640,
+          "body_bytes": 3575556,
+          "name": "product_graphs",
+          "seconds": 0.665,
+          "vU": 633,
+          "variables": 2092
+        },
+        {
+          "Q_positions": 1280,
+          "name": "RH2_collected",
+          "seconds": 0.734
+        },
+        {
+          "body_bytes": 9619189,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.804
+        },
+        {
+          "bytes": 9646487,
+          "name": "script_complete",
+          "seconds": 0.821,
+          "variables": 2546
+        },
+        {
+          "name": "finished",
+          "seconds": 601.283,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta2",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 462,
+        "all_inclusive_Q_rows": 1280,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "2a511bcdd89728a0dcaef95f6f5625dad63fd4e0be1823acfa32948f2e6e00fb",
+      "counts": {
+        "H2_graph": 640,
+        "Q": 1280,
+        "R_high": 462,
+        "R_low_graph": 264,
+        "graph_h": 0,
+        "lift": 555,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 633
+      },
+      "driver_rc": 0,
+      "execution_sha256": "08fd8a82b11299f119f3f56c5dc882c427752d2f6ac2b30b52cb5a311fd75c09",
+      "gauge_sha256": "8451c964260befc3347f8f34de85076223789744b3a7777a56fd84fe3b533523",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage5.input.json",
+      "input_sha256": "6b54992d477182804af22b1790e9d8dbfe6698fefbc7161a7a7445cf95aa0129",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zrho*rho-1"
+      ],
+      "metadata_sha256": "ea00d86487352990899d544a7ed15f15840b35e37a2f9f3c9124af7a57a2554b",
+      "ordered_generator_count": 2546,
+      "ordered_generator_sha256": "97273e038bf290806f6d8b574418f89e00212c868426f694e8a6b65e214ac0d8",
+      "original_sha256": "0e57c0b468ff2bebe395f8a56244413227d048c1d03257fdb3178a39ff1845f2",
+      "output": "ALL_ROWS_PARSED\n3836\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "836ec32fa9fe49f43708f6b51e61cec442e97712ad044a9caed8de9f108a59bc",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage5/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage5/augmented.sing",
+      "script_sha256": "aa2a446059805ce69a1770f6a029110dc91626449debc1f6454c3cea227a30e1",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta2",
+        "circuit_ambient_generator_count": 454,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta2_stage5.json",
+        "coordinate_sha256": "2a511bcdd89728a0dcaef95f6f5625dad63fd4e0be1823acfa32948f2e6e00fb",
+        "full_source_generator_count": 453,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta2_stage5.input.json",
+        "input_sha256": "6b54992d477182804af22b1790e9d8dbfe6698fefbc7161a7a7445cf95aa0129",
+        "rational_pivots": 70,
+        "residual_count": 0,
+        "stage": 5
+      },
+      "stage": 5,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "21263c01ccab5807adfee2b91f83f48c3193b33fa96a1cfea84fc23176ba9530",
+        "wall_seconds": 0.0203
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.356
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 201,
+          "name": "input_lifts",
+          "seconds": 0.321,
+          "v": 194,
+          "variables": 555
+        },
+        {
+          "body_bytes": 1834760,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "R_graph",
+          "positions": 264,
+          "seconds": 0.355
+        },
+        {
+          "HH": 640,
+          "body_bytes": 3417268,
+          "name": "product_graphs",
+          "seconds": 0.406,
+          "vU": 633,
+          "variables": 2092
+        },
+        {
+          "Q_positions": 1280,
+          "name": "RH2_collected",
+          "seconds": 0.475
+        },
+        {
+          "body_bytes": 9460897,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.544
+        },
+        {
+          "bytes": 9488169,
+          "name": "script_complete",
+          "seconds": 0.561,
+          "variables": 2544
+        },
+        {
+          "name": "finished",
+          "seconds": 601.02,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta52",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 462,
+        "all_inclusive_Q_rows": 1280,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "faf202b0c29a92dc7149a4c42c6785c114aff0220e097e6b1f1c08383f81909e",
+      "counts": {
+        "H2_graph": 640,
+        "Q": 1280,
+        "R_high": 462,
+        "R_low_graph": 264,
+        "graph_h": 0,
+        "lift": 555,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 633
+      },
+      "driver_rc": 0,
+      "execution_sha256": "98d870f3427356fa2478b9b5d1f5c2b68b8c9b3e0399cac2a69f4b0eb671b2e0",
+      "gauge_sha256": "cf5db342f63a99d42ff5fcc5a0ba04c3b7a24566afa0b947d8e5ed8cefda59de",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage5.input.json",
+      "input_sha256": "2ccbd0612283af2c6679cdedda5c63dc1d6d20c056e6de3c6190f33fface8dc4",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zc*c-1"
+      ],
+      "metadata_sha256": "340e3da8279d447a7f2dc85ad2dec61507842ed088c1c859dcd926d7aab9bc3a",
+      "ordered_generator_count": 2544,
+      "ordered_generator_sha256": "8fdd5f748202322334aee7d3abf07e2055b64a48e20514027850a412b91c9772",
+      "original_sha256": "45f05c6b6d621a87566b4d34b23beb3674b5badd730fa2f092ba74a7be577cc2",
+      "output": "ALL_ROWS_PARSED\n3836\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "507ff543c51aa6e77bab01acee7af40098555930dc265ef32f2ea3ec2e37ccd6",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage5/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": null,
+      "rss_note": "Peak RSS not measured by original schedule; unavailable for a process that ended before adoption.",
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage5/augmented.sing",
+      "script_sha256": "ae3687d417b12b5a015920ff7658e44cfb04100b5ddc3f37c9d8154d4804d52e",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta52",
+        "circuit_ambient_generator_count": 452,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta52_stage5.json",
+        "coordinate_sha256": "faf202b0c29a92dc7149a4c42c6785c114aff0220e097e6b1f1c08383f81909e",
+        "full_source_generator_count": 451,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta52_stage5.input.json",
+        "input_sha256": "2ccbd0612283af2c6679cdedda5c63dc1d6d20c056e6de3c6190f33fface8dc4",
+        "rational_pivots": 70,
+        "residual_count": 0,
+        "stage": 5
+      },
+      "stage": 5,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "cd67d4c72ae140e4e37ba0b0991fa01497c50ecdc2beae1ac376c706ebb61a2c",
+        "wall_seconds": 0.0202
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.093
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 201,
+          "name": "input_lifts",
+          "seconds": 0.575,
+          "v": 194,
+          "variables": 555
+        },
+        {
+          "body_bytes": 1993236,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "R_graph",
+          "positions": 264,
+          "seconds": 0.608
+        },
+        {
+          "HH": 640,
+          "body_bytes": 3575744,
+          "name": "product_graphs",
+          "seconds": 0.66,
+          "vU": 633,
+          "variables": 2092
+        },
+        {
+          "Q_positions": 1280,
+          "name": "RH2_collected",
+          "seconds": 0.728
+        },
+        {
+          "body_bytes": 9619377,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.8
+        },
+        {
+          "bytes": 9646616,
+          "name": "script_complete",
+          "seconds": 0.816,
+          "variables": 2540
+        },
+        {
+          "name": "finished",
+          "seconds": 601.257,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta2",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 462,
+        "all_inclusive_Q_rows": 1280,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "2810437ebc8eebb9cdc78766694321707fdb2fe5caadd1c8ac9329a1cf85b2e6",
+      "counts": {
+        "H2_graph": 640,
+        "Q": 1280,
+        "R_high": 462,
+        "R_low_graph": 264,
+        "graph_h": 0,
+        "lift": 555,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 633
+      },
+      "driver_rc": 0,
+      "execution_sha256": "b57fc944bf8698b35bc3bc45c191958d7d35f7f16ab1e369a8f21c7e803933fe",
+      "gauge_sha256": "89073f41e60e5990bb15f44905b6e794dee40848870d2fa691a7d7f032862c91",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage6.input.json",
+      "input_sha256": "bd227431c043f12ee4bd3ab778897511c6485b2660347ea416fac474bc2d6825",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zrho*rho-1"
+      ],
+      "metadata_sha256": "6ed85322308befc4340f5b5acce908baaeec4e4d1626ca75410bb9fc3579ea1b",
+      "ordered_generator_count": 2540,
+      "ordered_generator_sha256": "93a0180b538abf0710cf78060668b72e9ca7c8658ce6717a5688ed3e7d3237ad",
+      "original_sha256": "002be227298b46f2ddb74d6b6ec0f91c9f81c9cf22b6cccd09394031a3dd295b",
+      "output": "ALL_ROWS_PARSED\n3836\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "67f8d544e6ea3af3a7c31b76d863fbdd66af09b30a6e2acf9b46de4cfc37fd99",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage6/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": 11707360,
+      "rss_note": "Observed process VmHWM through last parent-monitor sample, a lower bound on eventual peak, not an exact final peak.",
+      "rss_observations": [
+        {
+          "args": "Singular -q /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage6/augmented.sing",
+          "cwd": "/home/ubuntu/jc2",
+          "first_observed_utc": "2026-09-05T23:17:38.603338+00:00",
+          "last_observed_utc": "2026-09-05T23:20:18.811654+00:00",
+          "last_status_kib": {
+            "VmHWM": 11707360,
+            "VmPeak": 11727168,
+            "VmRSS": 11707360,
+            "VmSize": 11727168
+          },
+          "max_observed_VmHWM_kib": 11707360,
+          "max_observed_VmPeak_kib": 11727168,
+          "max_observed_VmRSS_kib": 11707360,
+          "max_observed_VmSize_kib": 11727168,
+          "pid": 22967
+        }
+      ],
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage6/augmented.sing",
+      "script_sha256": "fe16480b7d1196683f5ff40102581b7513618d7b45e4dffb0b327f7308a5c117",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta2",
+        "circuit_ambient_generator_count": 448,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta2_stage6.json",
+        "coordinate_sha256": "2810437ebc8eebb9cdc78766694321707fdb2fe5caadd1c8ac9329a1cf85b2e6",
+        "full_source_generator_count": 447,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta2_stage6.input.json",
+        "input_sha256": "bd227431c043f12ee4bd3ab778897511c6485b2660347ea416fac474bc2d6825",
+        "rational_pivots": 70,
+        "residual_count": 0,
+        "stage": 6
+      },
+      "stage": 6,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "7e59152bbea7a66bfad4dc7cf9931b35e14ad9829b3952d5cb295d9af23210d0",
+        "wall_seconds": 0.0202
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.33
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 201,
+          "name": "input_lifts",
+          "seconds": 0.322,
+          "v": 194,
+          "variables": 555
+        },
+        {
+          "body_bytes": 1834948,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "R_graph",
+          "positions": 264,
+          "seconds": 0.355
+        },
+        {
+          "HH": 640,
+          "body_bytes": 3417456,
+          "name": "product_graphs",
+          "seconds": 0.407,
+          "vU": 633,
+          "variables": 2092
+        },
+        {
+          "Q_positions": 1280,
+          "name": "RH2_collected",
+          "seconds": 0.476
+        },
+        {
+          "body_bytes": 9461085,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.548
+        },
+        {
+          "bytes": 9488298,
+          "name": "script_complete",
+          "seconds": 0.565,
+          "variables": 2538
+        },
+        {
+          "name": "finished",
+          "seconds": 601.022,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta52",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 462,
+        "all_inclusive_Q_rows": 1280,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "12f75f3bb520f0ad91638c3a6ecbe704033570324db86159d94853545dbae5b2",
+      "counts": {
+        "H2_graph": 640,
+        "Q": 1280,
+        "R_high": 462,
+        "R_low_graph": 264,
+        "graph_h": 0,
+        "lift": 555,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 633
+      },
+      "driver_rc": 0,
+      "execution_sha256": "1a992b65095591e00bda5e673a6efdae4c77bd57acdb82b34e50edc2036b1a0d",
+      "gauge_sha256": "a90da1972406d75bd934d71ee205747d1b131d4a30538861718b0eab591af7de",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage6.input.json",
+      "input_sha256": "1074c4ceba81700b0801318364da18337ca0759ed32fe8d97d1e3340e2048e47",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zc*c-1"
+      ],
+      "metadata_sha256": "20f5fee0d3101820c3766442d6d101f366334abb2818063db4af045a17298470",
+      "ordered_generator_count": 2538,
+      "ordered_generator_sha256": "a12bb1a0a8b018f9d65d5f8ba5376c88fa9277f0f7877ccddeaf7172a53a4ccc",
+      "original_sha256": "bc850ac331776911d4e4fbfe95770214a8ba89979619f525b3990ff7c7a08696",
+      "output": "ALL_ROWS_PARSED\n3836\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "8222c86f261a93f15382cd932adcff5df14fdc1c4bf24264454e731a37299f15",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage6/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": 11633628,
+      "rss_note": "Observed process VmHWM through last parent-monitor sample, a lower bound on eventual peak, not an exact final peak.",
+      "rss_observations": [
+        {
+          "args": "Singular -q /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage6/augmented.sing",
+          "cwd": "/home/ubuntu/jc2",
+          "first_observed_utc": "2026-09-05T23:17:38.603338+00:00",
+          "last_observed_utc": "2026-09-05T23:20:18.811654+00:00",
+          "last_status_kib": {
+            "VmHWM": 11633628,
+            "VmPeak": 11653428,
+            "VmRSS": 11633628,
+            "VmSize": 11653428
+          },
+          "max_observed_VmHWM_kib": 11633628,
+          "max_observed_VmPeak_kib": 11653428,
+          "max_observed_VmRSS_kib": 11633628,
+          "max_observed_VmSize_kib": 11653428,
+          "pid": 22968
+        }
+      ],
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage6/augmented.sing",
+      "script_sha256": "39db6fbe13f4f969224e77becb33dbe161e1e4d2e32e3473f10e6512b44f32d9",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta52",
+        "circuit_ambient_generator_count": 446,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta52_stage6.json",
+        "coordinate_sha256": "12f75f3bb520f0ad91638c3a6ecbe704033570324db86159d94853545dbae5b2",
+        "full_source_generator_count": 445,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta52_stage6.input.json",
+        "input_sha256": "1074c4ceba81700b0801318364da18337ca0759ed32fe8d97d1e3340e2048e47",
+        "rational_pivots": 70,
+        "residual_count": 0,
+        "stage": 6
+      },
+      "stage": 6,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "3575e8a2fc80f59ad76b209f9a1a173ec9183dd6e5d9596a8b485984222abcb2",
+        "wall_seconds": 0.02
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.096
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 201,
+          "name": "input_lifts",
+          "seconds": 0.571,
+          "v": 194,
+          "variables": 555
+        },
+        {
+          "body_bytes": 1993472,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "R_graph",
+          "positions": 264,
+          "seconds": 0.604
+        },
+        {
+          "HH": 640,
+          "body_bytes": 3575980,
+          "name": "product_graphs",
+          "seconds": 0.656,
+          "vU": 633,
+          "variables": 2092
+        },
+        {
+          "Q_positions": 1280,
+          "name": "RH2_collected",
+          "seconds": 0.725
+        },
+        {
+          "body_bytes": 9619613,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.797
+        },
+        {
+          "bytes": 9646822,
+          "name": "script_complete",
+          "seconds": 0.814,
+          "variables": 2537
+        },
+        {
+          "name": "finished",
+          "seconds": 601.221,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta2",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 462,
+        "all_inclusive_Q_rows": 1280,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "647e8fd98705b84b4cf08ac8f1de79bfd0b99d7df9d81e23f2188c8ee32c6f7b",
+      "counts": {
+        "H2_graph": 640,
+        "Q": 1280,
+        "R_high": 462,
+        "R_low_graph": 264,
+        "graph_h": 0,
+        "lift": 555,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 633
+      },
+      "driver_rc": 0,
+      "execution_sha256": "df749ef14791bd61d8fa824d088cd6fca6951c5f87f14f8e18ce2b815e470c83",
+      "gauge_sha256": "4dcf1daea0d88db76303b335da29dc225739e63241b9a0b21ccfafb57fea1310",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage7.input.json",
+      "input_sha256": "631c0ff052968c40bd3dc57e1c00d46fe92c1e6d8703da36498d7f093fc79ba0",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zrho*rho-1"
+      ],
+      "metadata_sha256": "12f6d13ebf3ee6bb4118e38aad527073106948a864ff13278ed0509e298c734b",
+      "ordered_generator_count": 2537,
+      "ordered_generator_sha256": "997ed004f39a482c1803b023e46aea157a3e78c14b5e87d16eb156c2b54391af",
+      "original_sha256": "7d5391a840a0c849f60f7638f28fdeb25e486ce7d831f1e998f0a6cacae199a2",
+      "output": "ALL_ROWS_PARSED\n3836\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "81f69eaee07c2ea8f6443cfeac92afe3b5841f9e1a4ed1aa2c8ee61296641ace",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage7/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": 11709404,
+      "rss_note": "Observed process VmHWM through last parent-monitor sample, a lower bound on eventual peak, not an exact final peak.",
+      "rss_observations": [
+        {
+          "args": "Singular -q /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage7/augmented.sing",
+          "cwd": "/home/ubuntu/jc2",
+          "first_observed_utc": "2026-09-05T23:17:38.603338+00:00",
+          "last_observed_utc": "2026-09-05T23:20:18.811654+00:00",
+          "last_status_kib": {
+            "VmHWM": 11709404,
+            "VmPeak": 11729244,
+            "VmRSS": 11709404,
+            "VmSize": 11729244
+          },
+          "max_observed_VmHWM_kib": 11709404,
+          "max_observed_VmPeak_kib": 11729244,
+          "max_observed_VmRSS_kib": 11709404,
+          "max_observed_VmSize_kib": 11729244,
+          "pid": 22969
+        }
+      ],
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage7/augmented.sing",
+      "script_sha256": "fe95c97a6f0299c736e9eb9a2fc3faa7898d3917bdd8c3eb891b46ceb4b5c4f4",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta2",
+        "circuit_ambient_generator_count": 445,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta2_stage7.json",
+        "coordinate_sha256": "647e8fd98705b84b4cf08ac8f1de79bfd0b99d7df9d81e23f2188c8ee32c6f7b",
+        "full_source_generator_count": 444,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta2_stage7.input.json",
+        "input_sha256": "631c0ff052968c40bd3dc57e1c00d46fe92c1e6d8703da36498d7f093fc79ba0",
+        "rational_pivots": 70,
+        "residual_count": 0,
+        "stage": 7
+      },
+      "stage": 7,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "5e9b897902b7e1c1089e582355e4ec6a71233e8c3c53e93a4d095cc426e369bb",
+        "wall_seconds": 0.0202
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.293
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 201,
+          "name": "input_lifts",
+          "seconds": 0.316,
+          "v": 194,
+          "variables": 555
+        },
+        {
+          "body_bytes": 1835184,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "R_graph",
+          "positions": 264,
+          "seconds": 0.35
+        },
+        {
+          "HH": 640,
+          "body_bytes": 3417692,
+          "name": "product_graphs",
+          "seconds": 0.401,
+          "vU": 633,
+          "variables": 2092
+        },
+        {
+          "Q_positions": 1280,
+          "name": "RH2_collected",
+          "seconds": 0.469
+        },
+        {
+          "body_bytes": 9461321,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.538
+        },
+        {
+          "bytes": 9488504,
+          "name": "script_complete",
+          "seconds": 0.555,
+          "variables": 2535
+        },
+        {
+          "name": "finished",
+          "seconds": 600.929,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta52",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 462,
+        "all_inclusive_Q_rows": 1280,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "6602f6538909c08408dd5d3afa7ea6a18a1898a4087ef7a8099cc218b0019024",
+      "counts": {
+        "H2_graph": 640,
+        "Q": 1280,
+        "R_high": 462,
+        "R_low_graph": 264,
+        "graph_h": 0,
+        "lift": 555,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 633
+      },
+      "driver_rc": 0,
+      "execution_sha256": "1f36c6ab5a2bce6b3c7f95bc0395b5e7df8c9c9f1e9c1081374093d6d74a7f79",
+      "gauge_sha256": "7116a2a67d7dae914f2ac53c16a1bf0b181c46afedf34e19be1e7b6c11c05bc9",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage7.input.json",
+      "input_sha256": "e68c5535863f5c92aaf2e56ea3a2953c1b8706af452d58d2295013ae08b2ec26",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zc*c-1"
+      ],
+      "metadata_sha256": "eb209e15c5b2a1ae0729c1ef3d024d8aedc6e673056d8b72e4ec0c7bd062dfc3",
+      "ordered_generator_count": 2535,
+      "ordered_generator_sha256": "30ef4cb87f222e7e40386e8e28aee49fdb9f4e91bb1fbcec4153feaffb8a1e35",
+      "original_sha256": "77a95f3100630f5979f320459178f8a0eead9862605f9ac4f0c855a697ca37aa",
+      "output": "ALL_ROWS_PARSED\n3836\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "60464a16959c95b9f66fcdfcbee78452c28ef6ce17a1d8ac78d11f96800288f6",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage7/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": 11662348,
+      "rss_note": "Observed process VmHWM through last parent-monitor sample, a lower bound on eventual peak, not an exact final peak.",
+      "rss_observations": [
+        {
+          "args": "Singular -q /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage7/augmented.sing",
+          "cwd": "/home/ubuntu/jc2",
+          "first_observed_utc": "2026-09-05T23:20:23.818304+00:00",
+          "last_observed_utc": "2026-09-05T23:30:19.542359+00:00",
+          "last_status_kib": {
+            "VmHWM": 11662348,
+            "VmPeak": 11682160,
+            "VmRSS": 11662348,
+            "VmSize": 11682160
+          },
+          "max_observed_VmHWM_kib": 11662348,
+          "max_observed_VmPeak_kib": 11682160,
+          "max_observed_VmRSS_kib": 11662348,
+          "max_observed_VmSize_kib": 11682160,
+          "pid": 24541
+        }
+      ],
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage7/augmented.sing",
+      "script_sha256": "9f8b1aa94a5df231a4a47c89bd37a7408cc79a63e7c4a0699db26e751f6ce0b7",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta52",
+        "circuit_ambient_generator_count": 443,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta52_stage7.json",
+        "coordinate_sha256": "6602f6538909c08408dd5d3afa7ea6a18a1898a4087ef7a8099cc218b0019024",
+        "full_source_generator_count": 442,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta52_stage7.input.json",
+        "input_sha256": "e68c5535863f5c92aaf2e56ea3a2953c1b8706af452d58d2295013ae08b2ec26",
+        "rational_pivots": 70,
+        "residual_count": 0,
+        "stage": 7
+      },
+      "stage": 7,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "67cf7dd998d3682fc963f288e94569df10dedb2871a89639be6027718126a50c",
+        "wall_seconds": 0.0201
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.001
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 201,
+          "name": "input_lifts",
+          "seconds": 0.567,
+          "v": 194,
+          "variables": 555
+        },
+        {
+          "body_bytes": 1993472,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "R_graph",
+          "positions": 264,
+          "seconds": 0.601
+        },
+        {
+          "HH": 640,
+          "body_bytes": 3575980,
+          "name": "product_graphs",
+          "seconds": 0.652,
+          "vU": 633,
+          "variables": 2092
+        },
+        {
+          "Q_positions": 1280,
+          "name": "RH2_collected",
+          "seconds": 0.72
+        },
+        {
+          "body_bytes": 9619613,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.791
+        },
+        {
+          "bytes": 9646822,
+          "name": "script_complete",
+          "seconds": 0.807,
+          "variables": 2537
+        },
+        {
+          "name": "finished",
+          "seconds": 601.25,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta2",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 462,
+        "all_inclusive_Q_rows": 1280,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "9983d3cc13c82f734fc80314da5375b4060892700dd82221672d734d13e7fc6e",
+      "counts": {
+        "H2_graph": 640,
+        "Q": 1280,
+        "R_high": 462,
+        "R_low_graph": 264,
+        "graph_h": 0,
+        "lift": 555,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 633
+      },
+      "driver_rc": 0,
+      "execution_sha256": "d968176f76a27fcc13e283f86e1ea9581a821b1abab78e8b31040783f7d634e7",
+      "gauge_sha256": "b330d87e100e40026baf25c76795f95849e1ba7d6cba977b471018349081bb46",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage8.input.json",
+      "input_sha256": "e40b0961dc3b32b604a6f56617916b33b8a1ad05fecbc8724e7b8c86d05ae92a",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zrho*rho-1"
+      ],
+      "metadata_sha256": "18e3ae051fc7973c8d4141786da3cc73429ad2635c3c86a06a801fab36871c63",
+      "ordered_generator_count": 2537,
+      "ordered_generator_sha256": "997ed004f39a482c1803b023e46aea157a3e78c14b5e87d16eb156c2b54391af",
+      "original_sha256": "d8e7aa9db53767c4d1ac63e76493dc518ef997eacd1c2346b77a0fc609f2ad94",
+      "output": "ALL_ROWS_PARSED\n3836\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "81f69eaee07c2ea8f6443cfeac92afe3b5841f9e1a4ed1aa2c8ee61296641ace",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage8/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": 11764856,
+      "rss_note": "Observed process VmHWM through last parent-monitor sample, a lower bound on eventual peak, not an exact final peak.",
+      "rss_observations": [
+        {
+          "args": "Singular -q /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage8/augmented.sing",
+          "cwd": "/home/ubuntu/jc2",
+          "first_observed_utc": "2026-09-05T23:20:23.818304+00:00",
+          "last_observed_utc": "2026-09-05T23:30:19.542359+00:00",
+          "last_status_kib": {
+            "VmHWM": 11764856,
+            "VmPeak": 11784720,
+            "VmRSS": 11764856,
+            "VmSize": 11784720
+          },
+          "max_observed_VmHWM_kib": 11764856,
+          "max_observed_VmPeak_kib": 11784720,
+          "max_observed_VmRSS_kib": 11764856,
+          "max_observed_VmSize_kib": 11784720,
+          "pid": 24542
+        }
+      ],
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage8/augmented.sing",
+      "script_sha256": "fe95c97a6f0299c736e9eb9a2fc3faa7898d3917bdd8c3eb891b46ceb4b5c4f4",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta2",
+        "circuit_ambient_generator_count": 445,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta2_stage8.json",
+        "coordinate_sha256": "9983d3cc13c82f734fc80314da5375b4060892700dd82221672d734d13e7fc6e",
+        "full_source_generator_count": 444,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta2_stage8.input.json",
+        "input_sha256": "e40b0961dc3b32b604a6f56617916b33b8a1ad05fecbc8724e7b8c86d05ae92a",
+        "rational_pivots": 70,
+        "residual_count": 0,
+        "stage": 8
+      },
+      "stage": 8,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "5e9b897902b7e1c1089e582355e4ec6a71233e8c3c53e93a4d095cc426e369bb",
+        "wall_seconds": 0.0201
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.322
+    },
+    {
+      "acceptance": "COMPUTE-BOUND: no END_GB/END_RESULT, no unit or properness read",
+      "backend_phases": [
+        {
+          "H": 178,
+          "U": 201,
+          "name": "input_lifts",
+          "seconds": 0.318,
+          "v": 194,
+          "variables": 555
+        },
+        {
+          "body_bytes": 1835184,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "R_graph",
+          "positions": 264,
+          "seconds": 0.351
+        },
+        {
+          "HH": 640,
+          "body_bytes": 3417692,
+          "name": "product_graphs",
+          "seconds": 0.402,
+          "vU": 633,
+          "variables": 2092
+        },
+        {
+          "Q_positions": 1280,
+          "name": "RH2_collected",
+          "seconds": 0.471
+        },
+        {
+          "body_bytes": 9461321,
+          "counts": {
+            "H2_graph": 640,
+            "Q": 1280,
+            "R_high": 462,
+            "R_low_graph": 264,
+            "graph_h": 0,
+            "lift": 555,
+            "localizers": 2,
+            "source": 0,
+            "vU_graph": 633
+          },
+          "name": "full_rows_emitted",
+          "seconds": 0.541
+        },
+        {
+          "bytes": 9488504,
+          "name": "script_complete",
+          "seconds": 0.558,
+          "variables": 2535
+        },
+        {
+          "name": "finished",
+          "seconds": 600.999,
+          "status": "COMPUTE_BOUND_OPEN"
+        }
+      ],
+      "backend_sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+      "branch": "delta52",
+      "cas_rc": 1,
+      "cas_wall_limit_seconds": 600,
+      "characteristic_block": {
+        "all_high_R_rows": 462,
+        "all_inclusive_Q_rows": 1280,
+        "all_source_rows_transported": true,
+        "graph_projection": "acyclic monic graph isomorphism; no graph variable is localized",
+        "identity": "Q=(3R/4+p)H^2-vUH/8+vR-9U^2/64+pv+q, R=v^2-UH modulo every high-y remainder equation",
+        "normalizer": 196,
+        "status": "PASS",
+        "target_depth": 141,
+        "target_subtraction": "PASS: 16 binomial coefficients, then leader localizer; no other leader occurrence",
+        "whole_target": "leader55*z^40*(1+z)^15"
+      },
+      "coordinate_sha256": "8f6f83f8b540266675b5378d560d0d8f5d4550249c595c0a35c8dab7a31dec8d",
+      "counts": {
+        "H2_graph": 640,
+        "Q": 1280,
+        "R_high": 462,
+        "R_low_graph": 264,
+        "graph_h": 0,
+        "lift": 555,
+        "localizers": 2,
+        "source": 0,
+        "vU_graph": 633
+      },
+      "driver_rc": 0,
+      "execution_sha256": "e353e1b559b19401ab0862a3d09b00074581691b1e617cc2ff047245dbb86ff1",
+      "gauge_sha256": "9576a2300c5cf29d1400206669533ce0ba4bfa2fa8e891740b97da7c6d6a843a",
+      "in_run_controls": [],
+      "input": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage8.input.json",
+      "input_sha256": "6576a5e1022997c99dbc72f28f23a1308ee82b0111b4f192138e91da5283066a",
+      "localizers": [
+        "Z55*leader55-1",
+        "Zc*c-1"
+      ],
+      "metadata_sha256": "0241f67d06d6016232f16f6e6eaf0bb07d00c757507c7dbf5ec909a20bf36973",
+      "ordered_generator_count": 2535,
+      "ordered_generator_sha256": "30ef4cb87f222e7e40386e8e28aee49fdb9f4e91bb1fbcec4153feaffb8a1e35",
+      "original_sha256": "c94b442a1262b5d86f5620b64ee0e883296b221685b8b4146644c621d26d0641",
+      "output": "ALL_ROWS_PARSED\n3836\nBEGIN_GB\n\nhalt 1\n",
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "parser_status": "PASS",
+      "ring_declaration_sha256": "60464a16959c95b9f66fcdfcbee78452c28ef6ce17a1d8ac78d11f96800288f6",
+      "ring_field": "Q",
+      "ring_generators_retained_in": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage8/augmented.circuit.json",
+      "ring_order": "dp",
+      "rss_kib": 11656204,
+      "rss_note": "Observed process VmHWM through last parent-monitor sample, a lower bound on eventual peak, not an exact final peak.",
+      "rss_observations": [
+        {
+          "args": "Singular -q /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage8/augmented.sing",
+          "cwd": "/home/ubuntu/jc2",
+          "first_observed_utc": "2026-09-05T23:20:23.818304+00:00",
+          "last_observed_utc": "2026-09-05T23:30:19.542359+00:00",
+          "last_status_kib": {
+            "VmHWM": 11656204,
+            "VmPeak": 11676008,
+            "VmRSS": 11656204,
+            "VmSize": 11676008
+          },
+          "max_observed_VmHWM_kib": 11656204,
+          "max_observed_VmPeak_kib": 11676008,
+          "max_observed_VmRSS_kib": 11656204,
+          "max_observed_VmSize_kib": 11676008,
+          "pid": 24543
+        }
+      ],
+      "scope": "Full necessary chart modulo audited jet0=0 translation slice and radical front consequences; no source coordinate pin beyond this gauge.",
+      "script": "/home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage8/augmented.sing",
+      "script_sha256": "9f8b1aa94a5df231a4a47c89bd37a7408cc79a63e7c4a0699db26e751f6ce0b7",
+      "source_map_verification_hash_match": true,
+      "source_map_verification_record": {
+        "C_cut_inclusive": 62,
+        "D_cut_inclusive": 30,
+        "all_five_targets_and_source_coordinates_retained": true,
+        "all_gauge_and_graph_images_replayed": true,
+        "all_raw_rows_checked": true,
+        "branch": "delta52",
+        "circuit_ambient_generator_count": 443,
+        "coefficient_sites_checked": 581,
+        "coordinate_path": "box/char-degree-20260905/g9966/circuit-inputs/coordinates/delta52_stage8.json",
+        "coordinate_sha256": "8f6f83f8b540266675b5378d560d0d8f5d4550249c595c0a35c8dab7a31dec8d",
+        "full_source_generator_count": 442,
+        "input_path": "box/char-degree-20260905/g9966/circuit-inputs/delta52_stage8.input.json",
+        "input_sha256": "6576a5e1022997c99dbc72f28f23a1308ee82b0111b4f192138e91da5283066a",
+        "rational_pivots": 70,
+        "residual_count": 0,
+        "stage": 8
+      },
+      "stage": 8,
+      "standalone_ring_localizer_controls": {
+        "output": "0\n1\n0\n1\n",
+        "output_sha256": "e4749bc7f4f9360cf6a2e56321b815c8de72808a8ee756a48722cc9b287ddc24",
+        "parser_error": false,
+        "returncode": 0,
+        "script_sha256": "67cf7dd998d3682fc963f288e94569df10dedb2871a89639be6027718126a50c",
+        "wall_seconds": 0.0203
+      },
+      "status": "COMPUTE_BOUND_OPEN",
+      "total_wall_seconds": 601.069
+    }
+  ],
+  "refresh_note": "Static checks retained only after recomputing unchanged script, input and backend hash relationships.",
+  "resource_observations_sha256": "5a3e4aa76167e098b8ebbb63f40b1aa1077970e976d0bc370af4676d2bc3ff0d",
+  "resource_observations_updated_utc": "2026-09-05T23:33:24.714203+00:00",
+  "rss_note": "No historical peak RSS is inferred from AS=16GiB. Parent polling records live VmHWM separately.",
+  "scope": "Read-only worker harvest; no client Groebner computation restarted or stopped.",
+  "source_leading_pole_audit": "Stages0..8 are strictly below F/G leading poles (delta2 powers4..12 <54,81; delta52 powers8..16 <126,189). Their source pole target is zero. At-level forced faces remain coefficient-minus-target; no endpoint unit is read.",
+  "verification_sha256": "4ffeb29adf3e752b4cc877038a4328edbe9a13b92f30d1146e4cbc3383a80069"
+}

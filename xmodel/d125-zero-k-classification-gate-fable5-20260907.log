@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate delivered at 03:57 UTC, inside the 04:05 target.
+
+**Outcome.** All five items are CONFIRMED. The report is at `xmodel/d125-zero-k-classification-gate-fable5-20260907.md` (1696 words, single standalone BODY-END as the last line, no seal, sha256 `68e04e8c…`).
+
+**What was checked**
+- **GAP-POLYGON closed.** The A and B vertices were parsed from the frozen client's `VERTICES['unequal']` literal and the lattices recomputed with the client's own convention. A lattice is exactly {i+j≤15, 5i−7j≤3}, 83 points with 44 odd; B lattice is {i+j≤25, 5i−7j≤5}, 215 points with 112 odd. The (1/3)-polygon lattice has exactly three lower odd slots, p, p³ and gp², so the classification's support step fits the literal source.
+- **Classification.** Lemmas 4–5 and Corollary 1 were read whole from the primary text. Degree-1 exclusion, the root-free scalar r=g₅/f₃², the central-inversion oddness argument, the support-function identity with arbitrary weights, the full-row ordinariness argument and the two negative rows a=b+3, c=−b−3 all hold. The converse is verified without expanding any power.
+- **General jets.** The α≠0 branch (b(r)=0, a|b, B₁=qA₁+h, the second-order E, irreducibility of R−r by unique minimal valuation plus Gauss, quadratic splitting in the domain), the α=0/γ≠0 branch and the α=γ=0 whole-shear branch all check. The composition consumes the pure-power obstruction only after the polygon fit and compliant controls.
+
+**Disclosure.** The predecessor gate's checker (SHA `953455a9…`) builds R³ and R⁵ symbolically and brackets degree-15/25 jet pairs at lines 84 and 130–134, so its emitted `no_A15_B25_expansion=true` is false. It was neither executed nor reused. Its artifacts are preserved and the report names the lines. The classification's own `check.py` does not expand powers and its flag is accurate.
+
+**Own controls.** `box/d125-zero-k-classification-gate-fable5-20260907/gate_controls.py` (stdlib, zero Assert nodes, seven frozen pins) ran eight capped runs, normal and -O, with byte-identical witnesses. Three mutations fail with their intended messages: a common_3 vertex substituted for (2,1), the v⁻¹ negative row dropped, and the wrong normalization or bracket factor.
+
+| artifact | sha256 |
+|---|---|
+| gate_controls.py | `37e664c9…` |
+| witness.json = witness-O.json | `1461b907…` |
+| replay.json | `5fbe22ab…` |
+
+The frozen `check.py` was also run once read-only and reproduced the charged witness hash `fc345a15…`. No frozen file was modified; a stray log write into the read-only inputs directory failed and is recorded in `LOG.md`. Typed gaps left open are the predecessor checker flag, Lemma 4's external trust, and the transaction root being outside the frozen inputs.
+DIVERT path=xmodel/d125-zero-k-classification-gate-fable5-20260907.md status=CLEAN body_bytes=12047 body_sha256=68e04e8ce62585b824d73749b956f51ea58a46661375e4c810d747680be5370f

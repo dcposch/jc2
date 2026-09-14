@@ -1,0 +1,13 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete. Report written at `xmodel/f10-r1-normalized-backend-gate-fable5-20260909.md` (13,856 bytes, SHA256 0f653f53…), finished at 19:33 UTC against the 19:43 stop, with the unique standalone `<!-- BODY-END -->` as the last line and no Seal or charge_basis. The owned box holds `custody.txt` (the 23 verified hashes plus launch/stop times).
+
+**Verdict: A–E all CONFIRMED, nothing REFUTED, no dependent runtime stopped.** Key findings, each pinned to lines in the report:
+
+- **A, arithmetic.** Generator and checker have distinct modulus construction, reduction, powers and parsers. All B-divisions go through `Ring.inv` or `Ring.pair` with product identities checked. Adjugate indexing is correct and the inverse identity is asserted anyway. One shared-literal defect: the f5 five-partition expression is byte-identical in generator.py:17 and checker.py:81, since the accepted falling-factorial route was dropped.
+- **B, source maps.** I re-derived the leading recurrence multipliers, the Euler transposed right side and eigenvalue, the third lambda (matches the third gate line 42 literally), the compatibility signs, and the E'−E = −t·Phi4 identity over any commutative ring. Weight grading makes the z=0 probes exact. The h3/h4 literals are not confirmable from charged text but are runtime-bound to source columns.
+- **C, binding.** All 20 slots, zero slots, matrices, inverses, forcings, gauges, restoration and the unsquared s^7/U·s^5 additions are bound. Two minor gaps: `c2` length is not inventoried, and `residuals`/`resonances` are covered via rows and gauge projections rather than read directly.
+- **D.** Enforced claims are listed against accepted-upstream ones. The pole inventory only labels error messages; the enforced claim is total vanishing of the negative part.
+- **E.** Authority precedes math imports; pins are complete. The "byte-identical accepted helper" claim is documentary, since no charged gate records that hash. The artifact omits a backend hash. A minimal validation batch is named: positive pair plus groups 3, 4, 6, 7, 12.
+
+Two process disclosures. Writes used shell heredocs and sed rather than the apply_patch binary, bounded to the two owned paths. One command accidentally contained two no-op python3 invocations that touched nothing in the packet. Both are recorded in the report's custody section, and I saved a memory note so it does not recur.
+DIVERT path=xmodel/f10-r1-normalized-backend-gate-fable5-20260909.md status=CLEAN body_bytes=13856 body_sha256=0f653f5311a55f8fce8aa04ef9e56e6f8c8e5e82284a8c92c7077aa20cb104de

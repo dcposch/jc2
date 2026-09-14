@@ -1,0 +1,26 @@
+{
+  "schema":"jc2.terminal-custody/v1",
+  "task":"f10-mixed-import-qualification-gate-sol-20260912",
+  "status":"TERMINAL_CONDITIONAL_STATIC_CONFIRMED",
+  "first_action_utc":"2026-09-12T23:03:58Z",
+  "custody_authored_utc":"2026-09-12T23:06:27.545570703Z",
+  "all_writers":"IDLE after custody publication; no further authored-file changes",
+  "inputs_postpin_status":"MATCHED_ALL_FOUR",
+  "outputs":{
+    "pins":{"path":"box/f10-mixed-import-qualification-gate-sol-20260912/PINS.json","sha256":"7bf858f7c219b395700675c59920b704cb6be984204fe0d9bd3860c3f3397235"},
+    "report":{"path":"xmodel/f10-mixed-import-qualification-gate-sol-20260912.md","sha256":"f1ec260860c29e5c749784ec1197909f85a232207ad6a0c2722057597645a6cf"},
+    "manifest":{"path":"xmodel/f10-mixed-import-qualification-gate-sol-20260912.md.artifact.json","sha256":"d018495f5048d412e833e5d530fdf940006afd81af69cf795df890664bc88c02"}
+  },
+  "recovery":{
+    "reason":"First finalizer token output was lost; ROOT authorized preserving and moving the exact owned lease and partial before a fresh begin.",
+    "lease_sha256":"c22b8d55375b5e2b70068005c975e6e4af631a2a3737cd6655161423d8e00169",
+    "partial_sha256":"bc845386cd6a8c35a250c8c4f9bbb5bb78fd7ba3561c579398dbfd1caccc1b82",
+    "evidence_deleted":false
+  },
+  "verification":{
+    "expected_basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256":"d018495f5048d412e833e5d530fdf940006afd81af69cf795df890664bc88c02",
+    "artifact_finalize":"VERIFIED",
+    "report_manifest_pins_readback":"WHOLE"
+  }
+}

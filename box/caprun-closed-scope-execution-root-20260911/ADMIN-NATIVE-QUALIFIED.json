@@ -1,0 +1,221 @@
+{
+  "schema": "jc2-actual-admin-native-qualification/v1",
+  "instance": "i-00653baa8e5c32c75",
+  "boot": "d06102c6-210d-4161-9f85-a7327b96f44a",
+  "native_collection": {
+    "exit_code": 0,
+    "start": "2026-09-11T10:29:59.684430225Z",
+    "end": "2026-09-11T10:30:09.874420251Z",
+    "raw_sha256": "a98356496d586d33524e83875a78b6d719bc9fa87b585c9069c47fda40f5cbc1",
+    "files": 1226,
+    "directories": 91,
+    "aliases": 31
+  },
+  "helper_collection": {
+    "exit_code": 0,
+    "end": "2026-09-11T10:40:36.565363576Z",
+    "raw_sha256": "740479f7a60b3a6cc5cfb49e2cb65f1ce825de1e54a0ca59346267059b91f492",
+    "collector_sha256": "2c900e4c30b9597db9464a25318c8fd530c1579e5a47ee8a45eebebcd57b3719",
+    "files": 91,
+    "aliases": 47,
+    "protected_objects_and_ancestors": 1461,
+    "helpers": {
+      "jq": {
+        "invoked": "/usr/bin/jq",
+        "resolved": "/usr/bin/jq"
+      },
+      "bash": {
+        "invoked": "/usr/bin/bash",
+        "resolved": "/usr/bin/bash"
+      },
+      "env": {
+        "invoked": "/usr/bin/env",
+        "resolved": "/usr/bin/env"
+      },
+      "systemd-run": {
+        "invoked": "/usr/bin/systemd-run",
+        "resolved": "/usr/bin/systemd-run"
+      },
+      "systemctl": {
+        "invoked": "/usr/bin/systemctl",
+        "resolved": "/usr/bin/systemctl"
+      },
+      "timeout": {
+        "invoked": "/usr/bin/timeout",
+        "resolved": "/usr/bin/timeout"
+      },
+      "ps": {
+        "invoked": "/usr/bin/ps",
+        "resolved": "/usr/bin/ps"
+      },
+      "chrt": {
+        "invoked": "/usr/bin/chrt",
+        "resolved": "/usr/bin/chrt"
+      },
+      "setpriv": {
+        "invoked": "/usr/bin/setpriv",
+        "resolved": "/usr/bin/setpriv"
+      },
+      "test": {
+        "invoked": "/usr/bin/test",
+        "resolved": "/usr/bin/test"
+      },
+      "id": {
+        "invoked": "/usr/bin/id",
+        "resolved": "/usr/bin/id"
+      },
+      "uname": {
+        "invoked": "/usr/bin/uname",
+        "resolved": "/usr/bin/uname"
+      },
+      "tr": {
+        "invoked": "/usr/bin/tr",
+        "resolved": "/usr/bin/tr"
+      },
+      "hostname": {
+        "invoked": "/usr/bin/hostname",
+        "resolved": "/usr/bin/hostname"
+      },
+      "readlink": {
+        "invoked": "/usr/bin/readlink",
+        "resolved": "/usr/bin/readlink"
+      },
+      "date": {
+        "invoked": "/usr/bin/date",
+        "resolved": "/usr/bin/date"
+      },
+      "sed": {
+        "invoked": "/usr/bin/sed",
+        "resolved": "/usr/bin/sed"
+      },
+      "awk": {
+        "invoked": "/usr/bin/awk",
+        "resolved": "/usr/bin/gawk"
+      },
+      "find": {
+        "invoked": "/usr/bin/find",
+        "resolved": "/usr/bin/find"
+      },
+      "sort": {
+        "invoked": "/usr/bin/sort",
+        "resolved": "/usr/bin/sort"
+      },
+      "stat": {
+        "invoked": "/usr/bin/stat",
+        "resolved": "/usr/bin/stat"
+      },
+      "file": {
+        "invoked": "/usr/bin/file",
+        "resolved": "/usr/bin/file"
+      },
+      "ldd": {
+        "invoked": "/usr/bin/ldd",
+        "resolved": "/usr/bin/ldd"
+      },
+      "dpkg-query": {
+        "invoked": "/usr/bin/dpkg-query",
+        "resolved": "/usr/bin/dpkg-query"
+      },
+      "sha256sum": {
+        "invoked": "/usr/bin/sha256sum",
+        "resolved": "/usr/bin/sha256sum"
+      },
+      "cut": {
+        "invoked": "/usr/bin/cut",
+        "resolved": "/usr/bin/cut"
+      },
+      "head": {
+        "invoked": "/usr/bin/head",
+        "resolved": "/usr/bin/head"
+      },
+      "grep": {
+        "invoked": "/usr/bin/grep",
+        "resolved": "/usr/bin/grep"
+      },
+      "install": {
+        "invoked": "/usr/bin/install",
+        "resolved": "/usr/bin/install"
+      },
+      "mount": {
+        "invoked": "/usr/bin/mount",
+        "resolved": "/usr/bin/mount"
+      },
+      "findmnt": {
+        "invoked": "/usr/bin/findmnt",
+        "resolved": "/usr/bin/findmnt"
+      },
+      "mkfifo": {
+        "invoked": "/usr/bin/mkfifo",
+        "resolved": "/usr/bin/mkfifo"
+      },
+      "sync": {
+        "invoked": "/usr/bin/sync",
+        "resolved": "/usr/bin/sync"
+      },
+      "cmp": {
+        "invoked": "/usr/bin/cmp",
+        "resolved": "/usr/bin/cmp"
+      },
+      "od": {
+        "invoked": "/usr/bin/od",
+        "resolved": "/usr/bin/od"
+      },
+      "basename": {
+        "invoked": "/usr/bin/basename",
+        "resolved": "/usr/bin/basename"
+      },
+      "dirname": {
+        "invoked": "/usr/bin/dirname",
+        "resolved": "/usr/bin/dirname"
+      },
+      "cat": {
+        "invoked": "/usr/bin/cat",
+        "resolved": "/usr/bin/cat"
+      },
+      "sleep": {
+        "invoked": "/usr/bin/sleep",
+        "resolved": "/usr/bin/sleep"
+      },
+      "mkdir": {
+        "invoked": "/usr/bin/mkdir",
+        "resolved": "/usr/bin/mkdir"
+      }
+    },
+    "packages": {
+      "bash": "5.2.21-2ubuntu4",
+      "coreutils": "9.4-3ubuntu6.3",
+      "file": "1:5.45-3build1",
+      "findutils": "4.9.0-5build1",
+      "grep": "3.11-4build1",
+      "jq": "1.7.1-3ubuntu0.24.04.2",
+      "libc6": "2.39-0ubuntu8.8",
+      "libjq1": "1.7.1-3ubuntu0.24.04.2",
+      "mawk": "1.3.4.20240123-1build1",
+      "openssh-server": "1:9.6p1-3ubuntu13.19",
+      "procps": "2:4.0.4-4ubuntu3.3",
+      "sed": "4.9-2ubuntu0.24.04.1",
+      "systemd": "255.4-1ubuntu8.17",
+      "systemd-sysv": "255.4-1ubuntu8.17",
+      "util-linux": "2.39.3-9ubuntu6.6"
+    }
+  },
+  "source_selection": {
+    "report_sha256": "91198e02bf24fda29611428a9a979b621af63b042d23d72657c2a2d7797871bf",
+    "parent_first_sha256": "c8912f2e54cdd207268383abe384fca3e5806743cfd3d17ad0973705c2f9c72d",
+    "python_distribution_sha256": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223"
+  },
+  "root_adoption": "Actual distribution paths, package versions, ELF loader closures and root ownership/no group-or-other-write of all protected entries/ancestors accepted. Ordinary POSIX ACL mask semantics imply no effective nonroot write, not absence of ACLs. Kernel/distribution/namespace/exclusive ROOT trust remains external. Future installed/cgroup/FIFO objects must satisfy separate actual checks before release.",
+  "failures_preserved": [
+    "Initial native shell redirection denied before invocation; corrected root redirection retained original clocks.",
+    "First helper collector stopped at isolated libsystemd-core dependency context (raw320263e9bca61ecf898bcaa2231cfa6deb83b8df19c547bc611b8fd712697f80). Executable-context ldd resolved complete systemd dependencies; v2 inventories transitive resolved closure without treating each library as a standalone executable.",
+    "Administrative orchestration JS syntax error before any tool invocation; no source or clock effect.",
+    "Local helper parser initially excluded root path slash; corrected parsing, raw unchanged."
+  ],
+  "not_claimed": [
+    "Reproducible binary build",
+    "Absence of POSIX/default ACLs",
+    "Future exec formatting observed before execution",
+    "Hard realtime or overshoot bound",
+    "Successful scientific or preflight outcome"
+  ]
+}

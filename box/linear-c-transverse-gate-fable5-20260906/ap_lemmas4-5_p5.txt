@@ -1,0 +1,24 @@
+Lemma 4. Assume that char k = 0. Polynomials f, g ∈ k[x1 , . . . , xn ] \ k
+are algebraically dependent (over k) if and only if the rank of their Jacoby
+matrix                                             !
+                                    ∂f         ∂f
+                                    ∂x1  · · · ∂xn
+                       J(f, g) =    ∂g          ∂g
+                                    ∂x1 · · ·  ∂xn
+equals to 1, i.e.,
+                           ∂f    ∂f
+                           ∂xi   ∂xj
+                           ∂g    ∂g      = 0,   i, j = 1, . . . , n.
+                           ∂xi   ∂xj
+
+Proof. See [7, Ch. 3, Th. III] or [18, Cor. 2].                                         
+Lemma 5. Let k be a field. Polynomials f, g ∈ k[x1 , . . . , xn ] \ k are alge-
+braically dependent (over k) if and only if there exists a closed polynomial
+h ∈ k[x1 , . . . , xn ] such that f, g ∈ k[h].
+Proof. Assume that f, g are algebraically dependent. By the Noether Nor-
+malization Lemma, there exists an element r ∈ k[f, g] such that k[r] ⊂ k[f, g]
+is an integral extension. By Proposition 1, the integral closure of k[r] in
+k[x1 , . . . , xn ] has a form k[h] for some closed polynomial h.
+   Conversely, if f, g ∈ k[h] then these polynomials are obviously alge-
+braically dependent.                                                        
+

@@ -1,0 +1,178 @@
+{
+  "certificate": {
+    "accepted_run_count": 3,
+    "crt_rational_reconstruction": {
+      "available": true,
+      "items": {
+        "basis_size": {
+          "direct_singular_values": [
+            1,
+            1,
+            1
+          ],
+          "direct_values_agree": true,
+          "modulus": 32807947232729,
+          "rational_reconstruction": "1",
+          "residue": 1
+        },
+        "dimension": {
+          "direct_singular_values": [
+            -1,
+            -1,
+            -1
+          ],
+          "direct_values_agree": true,
+          "modulus": 32807947232729,
+          "rational_reconstruction": "-1",
+          "residue": 32807947232728
+        },
+        "lead_dim": {
+          "direct_singular_values": [
+            -1,
+            -1,
+            -1
+          ],
+          "direct_values_agree": true,
+          "modulus": 32807947232729,
+          "rational_reconstruction": "-1",
+          "residue": 32807947232728
+        }
+      },
+      "method": "CRT plus bounded rational reconstruction for scalar invariants"
+    },
+    "hilbert_hint": null,
+    "policy": {
+      "allow_modular_unit_promotion": false,
+      "note": "inhomogeneous sparse-alpha/rho localization",
+      "require_controls": true,
+      "scope": "EXACT_Q"
+    },
+    "promotion_note": "modular unit ideal was not promoted to characteristic zero",
+    "properness_scope": {
+      "positive_weights": [
+        [],
+        [],
+        []
+      ],
+      "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+      "systems_declared_homogeneous": false
+    },
+    "runs": [
+      {
+        "characteristic": 32003,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32003_p32003.sing"
+        ],
+        "elapsed_seconds": 8.030455,
+        "label": "K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32003",
+        "main": {
+          "accepted": true,
+          "basis_size": 1,
+          "dimension": -1,
+          "lead_dim": -1,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": true,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32003_p32003.sing",
+        "script_sha256": "31f536519c653737f5aa8d2a6524ff211673aee44a7f25b7dacf870e8dec6542",
+        "stderr": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32003_p32003.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32003_p32003.out",
+        "stdout_sha256": "2a0693126cdb54ac9f04a147afbef8b9db929d3407a306a79d7fcd0479c8e6d9",
+        "timed_out": false
+      },
+      {
+        "characteristic": 32009,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32009_p32009.sing"
+        ],
+        "elapsed_seconds": 7.979869,
+        "label": "K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32009",
+        "main": {
+          "accepted": true,
+          "basis_size": 1,
+          "dimension": -1,
+          "lead_dim": -1,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": true,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32009_p32009.sing",
+        "script_sha256": "c8350a6abb0344cdc61c267f04b82c7adefc6128429214e4710801be0191b568",
+        "stderr": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32009_p32009.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32009_p32009.out",
+        "stdout_sha256": "ff1e61d1d5a076de22b76d47332c778481a51775a57a520d33d8408bfc1d4e16",
+        "timed_out": false
+      },
+      {
+        "characteristic": 32027,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32027_p32027.sing"
+        ],
+        "elapsed_seconds": 7.980635,
+        "label": "K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32027",
+        "main": {
+          "accepted": true,
+          "basis_size": 1,
+          "dimension": -1,
+          "lead_dim": -1,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": true,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32027_p32027.sing",
+        "script_sha256": "ed42dad96e26e9e0b5b5afd338b9758689e671769d7d8c7a33744735aad53c25",
+        "stderr": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32027_p32027.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/confirm-modular/prefix14_t20_r13_RHO_POSITIVE_MATCH/K9_B_confirm_prefix14_t20_r13_RHO_POSITIVE_MATCH_p32027_p32027.out",
+        "stdout_sha256": "4554bd97e797cb342f791ddb56096f049e1cf1577ebc9391e2dd64eb95d877d9",
+        "timed_out": false
+      }
+    ]
+  },
+  "verdict": "MODULAR_ONLY"
+}

@@ -1,0 +1,29 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/split-window-gate-opus5-20260905.md` (22,920 B body, `72ea6d61…cce226`, verified PASS).
+
+## Verdicts
+
+| component | verdict |
+|---|---|
+| (1) window `1<ρ<v_s/u_s`, denominator `Q≤u_s` | **CONFIRMED** |
+| (2) (G) Galois covariance | **CONFIRMED** |
+| (3) (L) + the W-repair | **CONFIRMED-WITH-FIX** |
+| (4) 3 random rows by hand | **CONFIRMED** |
+
+**(1)** The denominator bound is genuinely a new lemma — Xu §8 asserts `den(δ) ≤ u_s = 3` as "our tool" with no all-degree proof. The report's proof holds: `ord(ω) = Q` exactly, nonzero centres have free `Q`-orbits, a genuine split has ≥1 nonzero centre, so `Q ≤ r ≤ u_s`. Not an lcm — there is one ramification index and one cyclic group. One load-bearing step the report never states: the minor cluster is Galois-stable *because* `u_s ≠ v_s`.
+
+**(2)** Necessary, not normalization-dependent: the origin is the Galois-fixed common truncation (forced, not chosen), monicity is scale-invariant on the vanishing pattern, and the choice of primitive root is immaterial. The conjugated element `γ_h(w)=ωw+(1−ω)β` re-derives correctly; closed count (2.6) matches enumeration for all `u=2..15`.
+
+**(3)** The W-dependence is real and correctly diagnosed — `tλ ∈ Z` is W-free but `kλ ≥ 0` needs `t ≤ W`. **The fix is to the stated blast radius**: §0's "29 otherwise missed leaves on 28 rows" counts *guard firings* (I reproduce 29/28 under the tool's own definition), but only **18 slots on 17 rows** actually change verdict — the rest die under both variants via the integrality gate. The W-independent screen can only under-kill, and on (99,66) it does neither: identical lists on all six `u_s≥2` rows.
+
+Decisive control: Xu's published witness (8.2) satisfies my independently reconstructed (F) identically, realizing exactly the predicted LOW (`ν=kλ=1`) / HIGH (`ν=Wλ+1=2`) pattern; three negative controls fail. My replay of all 6,209 census rows gave **0 mismatches** on survivor lists and every aggregate.
+
+## Crosswalk
+
+310 operative `u_s≥2` rows: **233** have no G+L survivor → descent D2 forced (142 by empty window; 6 already U-NEG dead → 227 live), **77** retain **113** typed ES leaves. All 1,110 operative `u_s=1` rows return NOSPLIT — the reason is the partition side (`genuine(1)` is empty), so the 174 live ones are untouched.
+
+Corrected residual at `n ≤ 200`: **174 + 227 + 77 = 478** live rows. The theorem kills no row outright — it converts 233 rows from two open branches to one, and types the other 77 to explicit finite leaves. `OPEN[CHILD-TOP-AT-US-GE-2]` now carries the widest block.
+
+I also corrected a stale memory that recorded the W-independence claim as unconditional.
+DIVERT path=xmodel/split-window-gate-opus5-20260905.md status=CLEAN_SEALED body_bytes=22920 body_sha256=72ea6d6155f400af53f2a30c9b61d16fd6fe911d6702e7ca7c6bb42105cce226
+hashed lane input changed during execution; result is quarantined

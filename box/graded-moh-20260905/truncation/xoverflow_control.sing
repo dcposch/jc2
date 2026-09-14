@@ -1,0 +1,17 @@
+// xcharges(u,v,w,z)=(1,0,2,1); yweights=(1,1,2,2); X=2,Y=4.
+ring R=0,(u,v,w,z),wp(1,1,2,2);
+ideal I=u*v-z,u*z-w*v;
+poly target=z^2-w*v^2;
+matrix cert[2][1]=-z,v;
+print("ORIGINAL_IDENTITY_OK="+string(matrix(I)*cert==matrix(ideal(target))));
+ideal overflow=u^3,u^2*z,u*z^2,z^3,u*w,z*w,w^2;
+attrib(overflow,"isSB",1);
+qring Q=overflow;
+ideal I=imap(R,I);poly target=imap(R,target);
+option(redSB);degBound=4;
+ideal G=std(I);
+print("TARGET_ZERO="+string(reduce(target,G)==0));
+print("NEGATIVE_W_ZERO="+string(reduce(w,G)==0));
+print("OVERFLOW_U3_ZERO="+string(reduce(u^3,G)==0));
+print("VALID_COMPONENT_U2_ZERO="+string(reduce(u^2,G)==0));
+quit;

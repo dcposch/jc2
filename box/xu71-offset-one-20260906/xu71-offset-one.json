@@ -1,0 +1,3142 @@
+{
+  "input_verification": {
+    "FALLACY-v2.md": {
+      "actual": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+      "expected": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+      "status": "PASS"
+    },
+    "moh1983_jram340_configurations_of_roots.pdf": {
+      "actual": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+      "expected": "6c8847a8d8374f7d7725c7e2ede2895a2c30034af6a7f28c511a471c41aa6a51",
+      "status": "PASS"
+    },
+    "roster.jsonl": {
+      "actual": "cb384ecdaf41cb96288ff12184a0c22ded49c276842f136919e675e8248534bf",
+      "expected": "cb384ecdaf41cb96288ff12184a0c22ded49c276842f136919e675e8248534bf",
+      "status": "PASS"
+    },
+    "split_window.py": {
+      "actual": "be99effafff67501f20c80d5e0366162091c3fe1c0fcd3b6672896cd3db9aedd",
+      "expected": "be99effafff67501f20c80d5e0366162091c3fe1c0fcd3b6672896cd3db9aedd",
+      "status": "PASS"
+    },
+    "xu2016_intersection_numbers_split_minor_roots_arxiv1604.07683v4.pdf": {
+      "actual": "00fecb1614c98b6e7496097ab2d6b7496c3027feca66a8c30642aa7f5812de21",
+      "expected": "00fecb1614c98b6e7496097ab2d6b7496c3027feca66a8c30642aa7f5812de21",
+      "status": "PASS"
+    },
+    "xu71-es-leaves-sol56-20260906.md": {
+      "actual": "c76be040e115dc3fab84098eef218d157948afe8717318fd2cc6f20e1aa576b9",
+      "expected": "c76be040e115dc3fab84098eef218d157948afe8717318fd2cc6f20e1aa576b9",
+      "status": "PASS"
+    }
+  },
+  "leaves": [
+    {
+      "E": 12,
+      "K": 60,
+      "W": 25,
+      "X": "-1",
+      "alpha": "-23",
+      "beta": "-12",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-60*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/60"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 51,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-37",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R012-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^12",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-60*p^37",
+        "C1_intrinsic": "-60*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-22)*R*(p^12)_pi+(-23)*q*S_pi-(-11)*q_pi*S-(-12)*R_pi*p^12+M-60*H=0",
+      "q": "5*p^23*Integral(p^2,dpi)+eta*p^23",
+      "raw_offset_one_t_power": "-35",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "3",
+      "roster_jsonl_line": 12,
+      "row_id": "R012",
+      "singular_printed_line": "R012-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -72,
+          81,
+          106
+        ],
+        "V": [
+          7,
+          7
+        ],
+        "d": [
+          108,
+          36,
+          9,
+          1
+        ],
+        "m": 72,
+        "mu_s": -227,
+        "n": 108,
+        "s": 3
+      },
+      "u": 2,
+      "v": 7
+    },
+    {
+      "E": 9,
+      "K": 45,
+      "W": 13,
+      "X": "-2",
+      "alpha": "-25",
+      "beta": "-18",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-45*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/45"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 40,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "double root 0, simple root c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2*(pi-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-44",
+      "homogeneous_face_eta_free": false,
+      "lambda": [
+        2,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R015-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-45*p^22",
+        "C1_intrinsic": "-45*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-24)*R*(p^9)_pi+(-25)*q*S_pi-(-17)*q_pi*S-(-18)*R_pi*p^9+M-45*H=0",
+      "q": "pi^25*(pi-c)^14*(pi+2/3*c)",
+      "raw_offset_one_t_power": "-43",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 15,
+      "row_id": "R015",
+      "singular_printed_line": "R015-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -66,
+          77,
+          97
+        ],
+        "V": [
+          8,
+          8
+        ],
+        "d": [
+          99,
+          33,
+          11,
+          1
+        ],
+        "m": 66,
+        "mu_s": -145,
+        "n": 99,
+        "s": 3
+      },
+      "u": 3,
+      "v": 8
+    },
+    {
+      "E": 9,
+      "K": 45,
+      "W": 13,
+      "X": "-1/2",
+      "alpha": "-5",
+      "beta": "-9/2",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-45*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/45"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 40,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "fixed zero plus Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^2-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-11",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R015-L02",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-45*p^22",
+        "C1_intrinsic": "-45*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-4)*R*(p^9)_pi+(-5)*q*S_pi-(-7/2)*q_pi*S-(-9/2)*R_pi*p^9+M-45*H=0",
+      "q": "10*p^10*Integral(p^3,dpi)+eta*p^10",
+      "raw_offset_one_t_power": "-19/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 15,
+      "row_id": "R015",
+      "singular_printed_line": "R015-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -66,
+          77,
+          97
+        ],
+        "V": [
+          8,
+          8
+        ],
+        "d": [
+          99,
+          33,
+          11,
+          1
+        ],
+        "m": 66,
+        "mu_s": -145,
+        "n": 99,
+        "s": 3
+      },
+      "u": 3,
+      "v": 8
+    },
+    {
+      "E": 24,
+      "K": 72,
+      "W": 99,
+      "X": "-1",
+      "alpha": "-98",
+      "beta": "-24",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-72*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/72"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 199,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-123",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R016-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^24",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-72*p^123",
+        "C1_intrinsic": "-72*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-97)*R*(p^24)_pi+(-98)*q*S_pi-(-23)*q_pi*S-(-24)*R_pi*p^24+M-72*H=0",
+      "q": "3*p^98*Integral(p^1,dpi)+eta*p^98",
+      "raw_offset_one_t_power": "-122",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 16,
+      "row_id": "R016",
+      "singular_printed_line": "R016-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -112,
+          133,
+          166
+        ],
+        "V": [
+          3,
+          5
+        ],
+        "d": [
+          168,
+          56,
+          7,
+          1
+        ],
+        "m": 112,
+        "mu_s": -695,
+        "n": 168,
+        "s": 3
+      },
+      "u": 2,
+      "v": 5
+    },
+    {
+      "E": 15,
+      "K": 105,
+      "W": 41,
+      "X": "-1",
+      "alpha": "-38",
+      "beta": "-15",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-105*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/105"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 83,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-56",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R023-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^15",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-105*p^56",
+        "C1_intrinsic": "-105*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-37)*R*(p^15)_pi+(-38)*q*S_pi-(-14)*q_pi*S-(-15)*R_pi*p^15+M-105*H=0",
+      "q": "7*p^38*Integral(p^3,dpi)+eta*p^38",
+      "raw_offset_one_t_power": "-53",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "4",
+      "roster_jsonl_line": 23,
+      "row_id": "R023",
+      "singular_printed_line": "R023-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -110,
+          121,
+          163
+        ],
+        "V": [
+          2,
+          9
+        ],
+        "d": [
+          165,
+          55,
+          11,
+          1
+        ],
+        "m": 110,
+        "mu_s": -453,
+        "n": 165,
+        "s": 3
+      },
+      "u": 2,
+      "v": 9
+    },
+    {
+      "E": 15,
+      "K": 105,
+      "W": 41,
+      "X": "-1",
+      "alpha": "-38",
+      "beta": "-15",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-105*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/105"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 83,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-56",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R024-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^15",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-105*p^56",
+        "C1_intrinsic": "-105*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-37)*R*(p^15)_pi+(-38)*q*S_pi-(-14)*q_pi*S-(-15)*R_pi*p^15+M-105*H=0",
+      "q": "7*p^38*Integral(p^3,dpi)+eta*p^38",
+      "raw_offset_one_t_power": "-53",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "4",
+      "roster_jsonl_line": 24,
+      "row_id": "R024",
+      "singular_printed_line": "R024-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -110,
+          121,
+          163
+        ],
+        "V": [
+          3,
+          9
+        ],
+        "d": [
+          165,
+          55,
+          11,
+          1
+        ],
+        "m": 110,
+        "mu_s": -453,
+        "n": 165,
+        "s": 3
+      },
+      "u": 2,
+      "v": 9
+    },
+    {
+      "E": 21,
+      "K": 42,
+      "W": 67,
+      "X": "-1/2",
+      "alpha": "-33",
+      "beta": "-21/2",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-42*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/42"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 202,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "fixed zero plus Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^2-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-44",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R029-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^21",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-42*p^88",
+        "C1_intrinsic": "-42*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-32)*R*(p^21)_pi+(-33)*q*S_pi-(-19/2)*q_pi*S-(-21/2)*R_pi*p^21+M-42*H=0",
+      "q": "4*p^66*Integral(p^1,dpi)+eta*p^66",
+      "raw_offset_one_t_power": "-87/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "3/2",
+      "roster_jsonl_line": 29,
+      "row_id": "R029",
+      "singular_printed_line": "R029-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -112,
+          144,
+          166
+        ],
+        "V": [
+          5,
+          5
+        ],
+        "d": [
+          168,
+          56,
+          8,
+          2
+        ],
+        "m": 112,
+        "mu_s": -538,
+        "n": 168,
+        "s": 3
+      },
+      "u": 3,
+      "v": 5
+    },
+    {
+      "E": 16,
+      "K": 80,
+      "W": 89,
+      "X": "-1",
+      "alpha": "-87",
+      "beta": "-16",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-80*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/80"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 179,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-105",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R035-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^16",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-80*p^105",
+        "C1_intrinsic": "-80*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-86)*R*(p^16)_pi+(-87)*q*S_pi-(-15)*q_pi*S-(-16)*R_pi*p^16+M-80*H=0",
+      "q": "5*p^87*Integral(p^2,dpi)+eta*p^87",
+      "raw_offset_one_t_power": "-103",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "3",
+      "roster_jsonl_line": 35,
+      "row_id": "R035",
+      "singular_printed_line": "R035-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -108,
+          117,
+          142
+        ],
+        "V": [
+          3,
+          7
+        ],
+        "d": [
+          144,
+          36,
+          9,
+          1
+        ],
+        "m": 108,
+        "mu_s": -803,
+        "n": 144,
+        "s": 3
+      },
+      "u": 2,
+      "v": 7
+    },
+    {
+      "E": 9,
+      "K": 63,
+      "W": 13,
+      "X": "-3",
+      "alpha": "-38",
+      "beta": "-27",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-63*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/63"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 53,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "triple root 0, simple root c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^3*(pi-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-66",
+      "homogeneous_face_eta_free": false,
+      "lambda": [
+        3,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R038-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-63*p^22",
+        "C1_intrinsic": "-63*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-37)*R*(p^9)_pi+(-38)*q*S_pi-(-26)*q_pi*S-(-27)*R_pi*p^9+M-63*H=0",
+      "q": "pi^38*(pi-c)^14*(pi+3/4*c)",
+      "raw_offset_one_t_power": "-65",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 38,
+      "row_id": "R038",
+      "singular_printed_line": "R038-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -90,
+          105,
+          133
+        ],
+        "V": [
+          8,
+          11
+        ],
+        "d": [
+          135,
+          45,
+          15,
+          1
+        ],
+        "m": 90,
+        "mu_s": -197,
+        "n": 135,
+        "s": 3
+      },
+      "u": 4,
+      "v": 11
+    },
+    {
+      "E": 9,
+      "K": 63,
+      "W": 13,
+      "X": "-1",
+      "alpha": "-23/2",
+      "beta": "-9",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-63*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/63"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 53,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "double Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "(pi^2-c)^2",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-22",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        2,
+        2
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R038-L02",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-63*p^22",
+        "C1_intrinsic": "-63*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-21/2)*R*(p^9)_pi+(-23/2)*q*S_pi-(-8)*q_pi*S-(-9)*R_pi*p^9+M-63*H=0",
+      "q": "7*(pi^2-c)^23*Integral((pi^2-c)^3,dpi)+eta*(pi^2-c)^23",
+      "raw_offset_one_t_power": "-41/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 38,
+      "row_id": "R038",
+      "singular_printed_line": "R038-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -90,
+          105,
+          133
+        ],
+        "V": [
+          8,
+          11
+        ],
+        "d": [
+          135,
+          45,
+          15,
+          1
+        ],
+        "m": 90,
+        "mu_s": -197,
+        "n": 135,
+        "s": 3
+      },
+      "u": 4,
+      "v": 11
+    },
+    {
+      "E": 9,
+      "K": 63,
+      "W": 13,
+      "X": "-1",
+      "alpha": "-23/2",
+      "beta": "-9",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-63*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/63"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 53,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "double zero plus Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2*(pi^2-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-22",
+      "homogeneous_face_eta_free": false,
+      "lambda": [
+        2,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R038-L03",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-63*p^22",
+        "C1_intrinsic": "-63*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-21/2)*R*(p^9)_pi+(-23/2)*q*S_pi-(-8)*q_pi*S-(-9)*R_pi*p^9+M-63*H=0",
+      "q": "pi^23*(pi^2-c)^14*(pi^2+2*c/5)",
+      "raw_offset_one_t_power": "-41/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 38,
+      "row_id": "R038",
+      "singular_printed_line": "R038-L03|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -90,
+          105,
+          133
+        ],
+        "V": [
+          8,
+          11
+        ],
+        "d": [
+          135,
+          45,
+          15,
+          1
+        ],
+        "m": 90,
+        "mu_s": -197,
+        "n": 135,
+        "s": 3
+      },
+      "u": 4,
+      "v": 11
+    },
+    {
+      "E": 9,
+      "K": 63,
+      "W": 13,
+      "X": "-1/3",
+      "alpha": "-8/3",
+      "beta": "-3",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-63*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/63"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 53,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "fixed zero plus Q=3 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^3-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-22/3",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R038-L04",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-63*p^22",
+        "C1_intrinsic": "-63*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-5/3)*R*(p^9)_pi+(-8/3)*q*S_pi-(-2)*q_pi*S-(-3)*R_pi*p^9+M-63*H=0",
+      "q": "21*p^8*Integral(p^5,dpi)+eta*p^8",
+      "raw_offset_one_t_power": "-17/3",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "8/3",
+      "roster_jsonl_line": 38,
+      "row_id": "R038",
+      "singular_printed_line": "R038-L04|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -90,
+          105,
+          133
+        ],
+        "V": [
+          8,
+          11
+        ],
+        "d": [
+          135,
+          45,
+          15,
+          1
+        ],
+        "m": 90,
+        "mu_s": -197,
+        "n": 135,
+        "s": 3
+      },
+      "u": 4,
+      "v": 11
+    },
+    {
+      "E": 12,
+      "K": 96,
+      "W": 25,
+      "X": "-2",
+      "alpha": "-48",
+      "beta": "-24",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-96*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/96"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 76,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "double root 0, simple root c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2*(pi-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-74",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        2,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R043-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^12",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-96*p^37",
+        "C1_intrinsic": "-96*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-47)*R*(p^12)_pi+(-48)*q*S_pi-(-23)*q_pi*S-(-24)*R_pi*p^12+M-96*H=0",
+      "q": "4*p^24*Integral(p^1,dpi)+eta*p^24",
+      "raw_offset_one_t_power": "-72",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "3",
+      "roster_jsonl_line": 43,
+      "row_id": "R043",
+      "singular_printed_line": "R043-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -112,
+          126,
+          166
+        ],
+        "V": [
+          7,
+          11
+        ],
+        "d": [
+          168,
+          56,
+          14,
+          2
+        ],
+        "m": 112,
+        "mu_s": -352,
+        "n": 168,
+        "s": 3
+      },
+      "u": 3,
+      "v": 11
+    },
+    {
+      "E": 12,
+      "K": 96,
+      "W": 25,
+      "X": "-2",
+      "alpha": "-48",
+      "beta": "-24",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-96*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/96"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 76,
+      "face_chart": {
+        "collision_ratio_chart": true,
+        "gauge": "ordered roots 0,1,r",
+        "generator_order": [
+          "r",
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi-1)*(pi-r)",
+        "presentation": "Q[r,c,Zc]/(c-r*(r-1),Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/(r*(r-1))",
+          "c": "r*(r-1)",
+          "pi": "pi",
+          "r": "r"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-74",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R043-L02",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^12",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-96*p^37",
+        "C1_intrinsic": "-96*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-47)*R*(p^12)_pi+(-48)*q*S_pi-(-23)*q_pi*S-(-24)*R_pi*p^12+M-96*H=0",
+      "q": "4*p^24*Integral(p^1,dpi)+eta*p^24",
+      "raw_offset_one_t_power": "-72",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "3",
+      "roster_jsonl_line": 43,
+      "row_id": "R043",
+      "singular_printed_line": "R043-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -112,
+          126,
+          166
+        ],
+        "V": [
+          7,
+          11
+        ],
+        "d": [
+          168,
+          56,
+          14,
+          2
+        ],
+        "m": 112,
+        "mu_s": -352,
+        "n": 168,
+        "s": 3
+      },
+      "u": 3,
+      "v": 11
+    },
+    {
+      "E": 12,
+      "K": 96,
+      "W": 25,
+      "X": "-1/2",
+      "alpha": "-10",
+      "beta": "-6",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-96*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/96"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 76,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "fixed zero plus Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^2-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-37/2",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R043-L03",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^12",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-96*p^37",
+        "C1_intrinsic": "-96*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-9)*R*(p^12)_pi+(-10)*q*S_pi-(-5)*q_pi*S-(-6)*R_pi*p^12+M-96*H=0",
+      "q": "16*p^20*Integral(p^5,dpi)+eta*p^20",
+      "raw_offset_one_t_power": "-16",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "7/2",
+      "roster_jsonl_line": 43,
+      "row_id": "R043",
+      "singular_printed_line": "R043-L03|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -112,
+          126,
+          166
+        ],
+        "V": [
+          7,
+          11
+        ],
+        "d": [
+          168,
+          56,
+          14,
+          2
+        ],
+        "m": 112,
+        "mu_s": -352,
+        "n": 168,
+        "s": 3
+      },
+      "u": 3,
+      "v": 11
+    },
+    {
+      "E": 21,
+      "K": 63,
+      "W": 49,
+      "X": "-1",
+      "alpha": "-48",
+      "beta": "-21",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-63*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/63"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 99,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-70",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R044-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^21",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-63*p^70",
+        "C1_intrinsic": "-63*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-47)*R*(p^21)_pi+(-48)*q*S_pi-(-20)*q_pi*S-(-21)*R_pi*p^21+M-63*H=0",
+      "q": "3*p^48*Integral(p^1,dpi)+eta*p^48",
+      "raw_offset_one_t_power": "-69",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 44,
+      "row_id": "R044",
+      "singular_printed_line": "R044-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -42,
+          133,
+          145
+        ],
+        "V": [
+          4,
+          5
+        ],
+        "d": [
+          147,
+          21,
+          7,
+          1
+        ],
+        "m": 42,
+        "mu_s": -345,
+        "n": 147,
+        "s": 3
+      },
+      "u": 2,
+      "v": 5
+    },
+    {
+      "E": 21,
+      "K": 63,
+      "W": 103,
+      "X": "-1",
+      "alpha": "-102",
+      "beta": "-21",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-63*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/63"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 207,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-124",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R045-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^21",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-63*p^124",
+        "C1_intrinsic": "-63*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-101)*R*(p^21)_pi+(-102)*q*S_pi-(-20)*q_pi*S-(-21)*R_pi*p^21+M-63*H=0",
+      "q": "3*p^102*Integral(p^1,dpi)+eta*p^102",
+      "raw_offset_one_t_power": "-123",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 45,
+      "row_id": "R045",
+      "singular_printed_line": "R045-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -63,
+          133,
+          145
+        ],
+        "V": [
+          5,
+          5
+        ],
+        "d": [
+          147,
+          21,
+          7,
+          1
+        ],
+        "m": 63,
+        "mu_s": -723,
+        "n": 147,
+        "s": 3
+      },
+      "u": 2,
+      "v": 5
+    },
+    {
+      "E": 21,
+      "K": 105,
+      "W": 67,
+      "X": "-1",
+      "alpha": "-65",
+      "beta": "-21",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-105*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/105"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 135,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-88",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R049-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^21",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-105*p^88",
+        "C1_intrinsic": "-105*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-64)*R*(p^21)_pi+(-65)*q*S_pi-(-20)*q_pi*S-(-21)*R_pi*p^21+M-105*H=0",
+      "q": "5*p^65*Integral(p^2,dpi)+eta*p^65",
+      "raw_offset_one_t_power": "-86",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "3",
+      "roster_jsonl_line": 49,
+      "row_id": "R049",
+      "singular_printed_line": "R049-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -126,
+          162,
+          187
+        ],
+        "V": [
+          5,
+          7
+        ],
+        "d": [
+          189,
+          63,
+          9,
+          1
+        ],
+        "m": 126,
+        "mu_s": -605,
+        "n": 189,
+        "s": 3
+      },
+      "u": 2,
+      "v": 7
+    },
+    {
+      "E": 20,
+      "K": 100,
+      "W": 185,
+      "X": "-1",
+      "alpha": "-183",
+      "beta": "-20",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-100*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/100"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 371,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-205",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R051-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^20",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-100*p^205",
+        "C1_intrinsic": "-100*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-182)*R*(p^20)_pi+(-183)*q*S_pi-(-19)*q_pi*S-(-20)*R_pi*p^20+M-100*H=0",
+      "q": "5*p^183*Integral(p^2,dpi)+eta*p^183",
+      "raw_offset_one_t_power": "-203",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "3",
+      "roster_jsonl_line": 51,
+      "row_id": "R051",
+      "singular_printed_line": "R051-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -144,
+          153,
+          178
+        ],
+        "V": [
+          5,
+          7
+        ],
+        "d": [
+          180,
+          36,
+          9,
+          1
+        ],
+        "m": 144,
+        "mu_s": -1667,
+        "n": 180,
+        "s": 3
+      },
+      "u": 2,
+      "v": 7
+    },
+    {
+      "E": 15,
+      "K": 75,
+      "W": 67,
+      "X": "-2",
+      "alpha": "-133",
+      "beta": "-30",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-75*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/75"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 202,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "double root 0, simple root c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2*(pi-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-164",
+      "homogeneous_face_eta_free": false,
+      "lambda": [
+        2,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R052-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^15",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-75*p^82",
+        "C1_intrinsic": "-75*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-132)*R*(p^15)_pi+(-133)*q*S_pi-(-29)*q_pi*S-(-30)*R_pi*p^15+M-75*H=0",
+      "q": "pi^133*(pi-c)^68*(pi+2/3*c)",
+      "raw_offset_one_t_power": "-163",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 52,
+      "row_id": "R052",
+      "singular_printed_line": "R052-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -99,
+          143,
+          163
+        ],
+        "V": [
+          7,
+          8
+        ],
+        "d": [
+          165,
+          33,
+          11,
+          1
+        ],
+        "m": 99,
+        "mu_s": -739,
+        "n": 165,
+        "s": 3
+      },
+      "u": 3,
+      "v": 8
+    },
+    {
+      "E": 15,
+      "K": 75,
+      "W": 67,
+      "X": "-1/2",
+      "alpha": "-32",
+      "beta": "-15/2",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-75*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/75"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 202,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "fixed zero plus Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^2-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-41",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R052-L02",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^15",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-75*p^82",
+        "C1_intrinsic": "-75*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-31)*R*(p^15)_pi+(-32)*q*S_pi-(-13/2)*q_pi*S-(-15/2)*R_pi*p^15+M-75*H=0",
+      "q": "10*p^64*Integral(p^3,dpi)+eta*p^64",
+      "raw_offset_one_t_power": "-79/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 52,
+      "row_id": "R052",
+      "singular_printed_line": "R052-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -99,
+          143,
+          163
+        ],
+        "V": [
+          7,
+          8
+        ],
+        "d": [
+          165,
+          33,
+          11,
+          1
+        ],
+        "m": 99,
+        "mu_s": -739,
+        "n": 165,
+        "s": 3
+      },
+      "u": 3,
+      "v": 8
+    },
+    {
+      "E": 20,
+      "K": 80,
+      "W": 137,
+      "X": "-1",
+      "alpha": "-136",
+      "beta": "-20",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-80*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/80"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 412,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "double root 0, simple root c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2*(pi-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-157",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        2,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R053-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^20",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-80*p^157",
+        "C1_intrinsic": "-80*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-135)*R*(p^20)_pi+(-136)*q*S_pi-(-19)*q_pi*S-(-20)*R_pi*p^20+M-80*H=0",
+      "q": "4*p^136*Integral(p^1,dpi)+eta*p^136",
+      "raw_offset_one_t_power": "-156",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 53,
+      "row_id": "R053",
+      "singular_printed_line": "R053-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -150,
+          170,
+          198
+        ],
+        "V": [
+          7,
+          7
+        ],
+        "d": [
+          200,
+          50,
+          10,
+          2
+        ],
+        "m": 150,
+        "mu_s": -1372,
+        "n": 200,
+        "s": 3
+      },
+      "u": 3,
+      "v": 7
+    },
+    {
+      "E": 20,
+      "K": 80,
+      "W": 137,
+      "X": "-1",
+      "alpha": "-136",
+      "beta": "-20",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-80*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/80"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 412,
+      "face_chart": {
+        "collision_ratio_chart": true,
+        "gauge": "ordered roots 0,1,r",
+        "generator_order": [
+          "r",
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi-1)*(pi-r)",
+        "presentation": "Q[r,c,Zc]/(c-r*(r-1),Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/(r*(r-1))",
+          "c": "r*(r-1)",
+          "pi": "pi",
+          "r": "r"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-157",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R053-L02",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^20",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-80*p^157",
+        "C1_intrinsic": "-80*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-135)*R*(p^20)_pi+(-136)*q*S_pi-(-19)*q_pi*S-(-20)*R_pi*p^20+M-80*H=0",
+      "q": "4*p^136*Integral(p^1,dpi)+eta*p^136",
+      "raw_offset_one_t_power": "-156",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 53,
+      "row_id": "R053",
+      "singular_printed_line": "R053-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -150,
+          170,
+          198
+        ],
+        "V": [
+          7,
+          7
+        ],
+        "d": [
+          200,
+          50,
+          10,
+          2
+        ],
+        "m": 150,
+        "mu_s": -1372,
+        "n": 200,
+        "s": 3
+      },
+      "u": 3,
+      "v": 7
+    },
+    {
+      "E": 25,
+      "K": 75,
+      "W": 83,
+      "X": "-1",
+      "alpha": "-82",
+      "beta": "-25",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-75*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/75"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 167,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-108",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R054-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^25",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-75*p^108",
+        "C1_intrinsic": "-75*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-81)*R*(p^25)_pi+(-82)*q*S_pi-(-24)*q_pi*S-(-25)*R_pi*p^25+M-75*H=0",
+      "q": "3*p^82*Integral(p^1,dpi)+eta*p^82",
+      "raw_offset_one_t_power": "-107",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 54,
+      "row_id": "R054",
+      "singular_printed_line": "R054-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -70,
+          161,
+          173
+        ],
+        "V": [
+          8,
+          5
+        ],
+        "d": [
+          175,
+          35,
+          7,
+          1
+        ],
+        "m": 70,
+        "mu_s": -583,
+        "n": 175,
+        "s": 3
+      },
+      "u": 2,
+      "v": 5
+    },
+    {
+      "E": 9,
+      "K": 81,
+      "W": 13,
+      "X": "-4",
+      "alpha": "-51",
+      "beta": "-36",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-81*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/81"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 66,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "quadruple root 0, simple root c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^4*(pi-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-88",
+      "homogeneous_face_eta_free": false,
+      "lambda": [
+        4,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R055-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-81*p^22",
+        "C1_intrinsic": "-81*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-50)*R*(p^9)_pi+(-51)*q*S_pi-(-35)*q_pi*S-(-36)*R_pi*p^9+M-81*H=0",
+      "q": "pi^51*(pi-c)^14*(pi+4/5*c)",
+      "raw_offset_one_t_power": "-87",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "singular_printed_line": "R055-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -114,
+          133,
+          169
+        ],
+        "V": [
+          8,
+          14
+        ],
+        "d": [
+          171,
+          57,
+          19,
+          1
+        ],
+        "m": 114,
+        "mu_s": -249,
+        "n": 171,
+        "s": 3
+      },
+      "u": 5,
+      "v": 14
+    },
+    {
+      "E": 9,
+      "K": 81,
+      "W": 13,
+      "X": "-3/2",
+      "alpha": "-18",
+      "beta": "-27/2",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-81*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/81"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 66,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "triple zero plus Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^3*(pi^2-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-33",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        3,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R055-L02",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-81*p^22",
+        "C1_intrinsic": "-81*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-17)*R*(p^9)_pi+(-18)*q*S_pi-(-25/2)*q_pi*S-(-27/2)*R_pi*p^9+M-81*H=0",
+      "q": "6*p^12*Integral(p^1,dpi)+eta*p^12",
+      "raw_offset_one_t_power": "-63/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "singular_printed_line": "R055-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -114,
+          133,
+          169
+        ],
+        "V": [
+          8,
+          14
+        ],
+        "d": [
+          171,
+          57,
+          19,
+          1
+        ],
+        "m": 114,
+        "mu_s": -249,
+        "n": 171,
+        "s": 3
+      },
+      "u": 5,
+      "v": 14
+    },
+    {
+      "E": 9,
+      "K": 81,
+      "W": 13,
+      "X": "-3/2",
+      "alpha": "-18",
+      "beta": "-27/2",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-81*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/81"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 66,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "simple zero plus double Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^2-c)^2",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-33",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        2,
+        2,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R055-L03",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-81*p^22",
+        "C1_intrinsic": "-81*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-17)*R*(p^9)_pi+(-18)*q*S_pi-(-25/2)*q_pi*S-(-27/2)*R_pi*p^9+M-81*H=0",
+      "q": "6*p^12*Integral(p^1,dpi)+eta*p^12",
+      "raw_offset_one_t_power": "-63/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "singular_printed_line": "R055-L03|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -114,
+          133,
+          169
+        ],
+        "V": [
+          8,
+          14
+        ],
+        "d": [
+          171,
+          57,
+          19,
+          1
+        ],
+        "m": 114,
+        "mu_s": -249,
+        "n": 171,
+        "s": 3
+      },
+      "u": 5,
+      "v": 14
+    },
+    {
+      "E": 9,
+      "K": 81,
+      "W": 13,
+      "X": "-3/2",
+      "alpha": "-18",
+      "beta": "-27/2",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-81*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/81"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 66,
+      "face_chart": {
+        "collision_ratio_chart": true,
+        "gauge": "fixed zero and two Q=2 orbits",
+        "generator_order": [
+          "r",
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^2-1)*(pi^2-r)",
+        "presentation": "Q[r,c,Zc]/(c-r*(r-1),Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/(r*(r-1))",
+          "c": "r*(r-1)",
+          "pi": "pi",
+          "r": "r"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-33",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R055-L04",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-81*p^22",
+        "C1_intrinsic": "-81*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-17)*R*(p^9)_pi+(-18)*q*S_pi-(-25/2)*q_pi*S-(-27/2)*R_pi*p^9+M-81*H=0",
+      "q": "6*p^12*Integral(p^1,dpi)+eta*p^12",
+      "raw_offset_one_t_power": "-63/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "singular_printed_line": "R055-L04|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -114,
+          133,
+          169
+        ],
+        "V": [
+          8,
+          14
+        ],
+        "d": [
+          171,
+          57,
+          19,
+          1
+        ],
+        "m": 114,
+        "mu_s": -249,
+        "n": 171,
+        "s": 3
+      },
+      "u": 5,
+      "v": 14
+    },
+    {
+      "E": 9,
+      "K": 81,
+      "W": 13,
+      "X": "-2/3",
+      "alpha": "-7",
+      "beta": "-6",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-81*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/81"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 66,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "double zero plus Q=3 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2*(pi^3-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-44/3",
+      "homogeneous_face_eta_free": false,
+      "lambda": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R055-L05",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-81*p^22",
+        "C1_intrinsic": "-81*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-6)*R*(p^9)_pi+(-7)*q*S_pi-(-5)*q_pi*S-(-6)*R_pi*p^9+M-81*H=0",
+      "q": "pi^21*(pi^3-c)^14*(pi^3+2*c/7)",
+      "raw_offset_one_t_power": "-13",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "8/3",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "singular_printed_line": "R055-L05|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -114,
+          133,
+          169
+        ],
+        "V": [
+          8,
+          14
+        ],
+        "d": [
+          171,
+          57,
+          19,
+          1
+        ],
+        "m": 114,
+        "mu_s": -249,
+        "n": 171,
+        "s": 3
+      },
+      "u": 5,
+      "v": 14
+    },
+    {
+      "E": 9,
+      "K": 81,
+      "W": 13,
+      "X": "-1/4",
+      "alpha": "-3/2",
+      "beta": "-9/4",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-81*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/81"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 66,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "fixed zero plus Q=4 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^4-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-11/2",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R055-L06",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^9",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-81*p^22",
+        "C1_intrinsic": "-81*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-1/2)*R*(p^9)_pi+(-3/2)*q*S_pi-(-5/4)*q_pi*S-(-9/4)*R_pi*p^9+M-81*H=0",
+      "q": "36*p^6*Integral(p^7,dpi)+eta*p^6",
+      "raw_offset_one_t_power": "-15/4",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "11/4",
+      "roster_jsonl_line": 55,
+      "row_id": "R055",
+      "singular_printed_line": "R055-L06|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -114,
+          133,
+          169
+        ],
+        "V": [
+          8,
+          14
+        ],
+        "d": [
+          171,
+          57,
+          19,
+          1
+        ],
+        "m": 114,
+        "mu_s": -249,
+        "n": 171,
+        "s": 3
+      },
+      "u": 5,
+      "v": 14
+    },
+    {
+      "E": 12,
+      "K": 84,
+      "W": 49,
+      "X": "-3",
+      "alpha": "-146",
+      "beta": "-36",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-84*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/84"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 197,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "triple root 0, simple root c",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^3*(pi-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-183",
+      "homogeneous_face_eta_free": false,
+      "lambda": [
+        3,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R062-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^12",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-84*p^61",
+        "C1_intrinsic": "-84*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-145)*R*(p^12)_pi+(-146)*q*S_pi-(-35)*q_pi*S-(-36)*R_pi*p^12+M-84*H=0",
+      "q": "pi^146*(pi-c)^50*(pi+3/4*c)",
+      "raw_offset_one_t_power": "-182",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "2",
+      "roster_jsonl_line": 62,
+      "row_id": "R062",
+      "singular_printed_line": "R062-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -135,
+          150,
+          178
+        ],
+        "V": [
+          11,
+          11
+        ],
+        "d": [
+          180,
+          45,
+          15,
+          1
+        ],
+        "m": 135,
+        "mu_s": -737,
+        "n": 180,
+        "s": 3
+      },
+      "u": 4,
+      "v": 11
+    },
+    {
+      "E": 12,
+      "K": 84,
+      "W": 49,
+      "X": "-1",
+      "alpha": "-95/2",
+      "beta": "-12",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-84*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/84"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 197,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "double Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "(pi^2-c)^2",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-61",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        2,
+        2
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R062-L02",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^12",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-84*p^61",
+        "C1_intrinsic": "-84*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-93/2)*R*(p^12)_pi+(-95/2)*q*S_pi-(-11)*q_pi*S-(-12)*R_pi*p^12+M-84*H=0",
+      "q": "7*(pi^2-c)^95*Integral((pi^2-c)^3,dpi)+eta*(pi^2-c)^95",
+      "raw_offset_one_t_power": "-119/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 62,
+      "row_id": "R062",
+      "singular_printed_line": "R062-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -135,
+          150,
+          178
+        ],
+        "V": [
+          11,
+          11
+        ],
+        "d": [
+          180,
+          45,
+          15,
+          1
+        ],
+        "m": 135,
+        "mu_s": -737,
+        "n": 180,
+        "s": 3
+      },
+      "u": 4,
+      "v": 11
+    },
+    {
+      "E": 12,
+      "K": 84,
+      "W": 49,
+      "X": "-1",
+      "alpha": "-95/2",
+      "beta": "-12",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-84*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/84"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 197,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "double zero plus Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2*(pi^2-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-61",
+      "homogeneous_face_eta_free": false,
+      "lambda": [
+        2,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R062-L03",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^12",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-84*p^61",
+        "C1_intrinsic": "-84*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-93/2)*R*(p^12)_pi+(-95/2)*q*S_pi-(-11)*q_pi*S-(-12)*R_pi*p^12+M-84*H=0",
+      "q": "pi^95*(pi^2-c)^50*(pi^2+2*c/5)",
+      "raw_offset_one_t_power": "-119/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 62,
+      "row_id": "R062",
+      "singular_printed_line": "R062-L03|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -135,
+          150,
+          178
+        ],
+        "V": [
+          11,
+          11
+        ],
+        "d": [
+          180,
+          45,
+          15,
+          1
+        ],
+        "m": 135,
+        "mu_s": -737,
+        "n": 180,
+        "s": 3
+      },
+      "u": 4,
+      "v": 11
+    },
+    {
+      "E": 12,
+      "K": 84,
+      "W": 49,
+      "X": "-1/3",
+      "alpha": "-44/3",
+      "beta": "-4",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-84*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/84"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 197,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "fixed zero plus Q=3 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^3-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-61/3",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R062-L04",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^12",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-84*p^61",
+        "C1_intrinsic": "-84*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-41/3)*R*(p^12)_pi+(-44/3)*q*S_pi-(-3)*q_pi*S-(-4)*R_pi*p^12+M-84*H=0",
+      "q": "21*p^44*Integral(p^5,dpi)+eta*p^44",
+      "raw_offset_one_t_power": "-56/3",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "8/3",
+      "roster_jsonl_line": 62,
+      "row_id": "R062",
+      "singular_printed_line": "R062-L04|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -135,
+          150,
+          178
+        ],
+        "V": [
+          11,
+          11
+        ],
+        "d": [
+          180,
+          45,
+          15,
+          1
+        ],
+        "m": 135,
+        "mu_s": -737,
+        "n": 180,
+        "s": 3
+      },
+      "u": 4,
+      "v": 11
+    },
+    {
+      "E": 15,
+      "K": 90,
+      "W": 29,
+      "X": "-3/2",
+      "alpha": "-42",
+      "beta": "-45/2",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-90*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/90"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 88,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "fixed zero plus Q=2 orbit",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi*(pi^2-c)",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-66",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R065-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^15",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-90*p^44",
+        "C1_intrinsic": "-90*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-41)*R*(p^15)_pi+(-42)*q*S_pi-(-43/2)*q_pi*S-(-45/2)*R_pi*p^15+M-90*H=0",
+      "q": "4*p^28*Integral(p^1,dpi)+eta*p^28",
+      "raw_offset_one_t_power": "-129/2",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "5/2",
+      "roster_jsonl_line": 65,
+      "row_id": "R065",
+      "singular_printed_line": "R065-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -120,
+          168,
+          178
+        ],
+        "V": [
+          11,
+          9
+        ],
+        "d": [
+          180,
+          60,
+          12,
+          2
+        ],
+        "m": 120,
+        "mu_s": -350,
+        "n": 180,
+        "s": 3
+      },
+      "u": 3,
+      "v": 9
+    },
+    {
+      "E": 18,
+      "K": 90,
+      "W": 53,
+      "X": "-1",
+      "alpha": "-51",
+      "beta": "-18",
+      "coefficient_block_map": {
+        "U_k_image": "[pi^k] of the endpoint terms plus the middle convolution M",
+        "block_ideal": "<face localizer relations, U_k-90*H_k>",
+        "domain": "Q[face moduli, coefficients of R,S,H and all 0<offset<1 series]",
+        "triangular_change": "H_k |-> H_k-U_k/90"
+      },
+      "decision": "SURVIVES[XU71_OFFSET_ONE_RESIDUAL]",
+      "degree_q": 107,
+      "face_chart": {
+        "collision_ratio_chart": false,
+        "gauge": "midpoint gauge",
+        "generator_order": [
+          "c",
+          "Zc",
+          "pi"
+        ],
+        "p": "pi^2-c",
+        "presentation": "Q[c,Zc]/(Zc*c-1)",
+        "quotient_images": {
+          "Zc": "1/c",
+          "c": "c",
+          "pi": "pi"
+        },
+        "scope": "chosen face chart; rho/lambda do not choose its modulus value"
+      },
+      "gamma": "-71",
+      "homogeneous_face_eta_free": true,
+      "lambda": [
+        1,
+        1
+      ],
+      "leading_face_check": "PASS_EXACT_Q",
+      "leaf_id": "R066-L01",
+      "normalized_series": {
+        "A0": "q",
+        "A1_intrinsic": "R(pi)",
+        "B0": "p^18",
+        "B1_intrinsic": "S(pi)",
+        "C0": "-90*p^71",
+        "C1_intrinsic": "-90*H(pi)",
+        "middle_offset_convolution": "M(pi)"
+      },
+      "not_attainment": true,
+      "formal_free_row_nonzero": true,
+      "offset_one_row_in_S_pi": "(-50)*R*(p^18)_pi+(-51)*q*S_pi-(-17)*q_pi*S-(-18)*R_pi*p^18+M-90*H=0",
+      "q": "5*p^51*Integral(p^2,dpi)+eta*p^51",
+      "raw_offset_one_t_power": "-69",
+      "realization_open": "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+      "rho": "3",
+      "roster_jsonl_line": 66,
+      "row_id": "R066",
+      "singular_printed_line": "R066-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "source_tower": {
+        "M": [
+          -108,
+          126,
+          153,
+          160
+        ],
+        "V": [
+          8,
+          8,
+          7
+        ],
+        "d": [
+          162,
+          54,
+          18,
+          9,
+          1
+        ],
+        "m": 108,
+        "mu_s": -479,
+        "n": 162,
+        "s": 4
+      },
+      "u": 2,
+      "v": 7
+    }
+  ],
+  "opens": [
+    "OPEN[XU71_OFFSET_ONE_REALIZATION_MAP_MISSING]",
+    "OPEN[XU71_OFFSET_ONE_RATIONAL_SUPPORT_UNSERIALIZED]"
+  ],
+  "ring_maps": {
+    "arc_jet": "pi->pi+z*t for scalar common-centre coefficient z; its offset contribution is z*F0_pi",
+    "coefficient_block": "U_k maps to coefficient pi^k of every offset-one term except -K*H",
+    "face_homogeneous_extension": "face_chart.presentation is the base P-modulus chart; when homogeneous_face_eta_free=true, extend it by an independent eta with eta->eta",
+    "normalization": "a_s->1,a_1->1,b->-E*(v-u),J->1",
+    "puiseux": "x->t^-1, y->sum_{j<rho}a_j*t^j+pi*t^rho"
+  },
+  "schema": "jc2.xu71-offset-one/v1",
+  "scope": "offset-one row ideal only; the missing realization ideal is not invented",
+  "singular": {
+    "coefficient_field": "Q",
+    "executable": "Singular -q",
+    "generator_order": [
+      "r",
+      "c",
+      "Zc",
+      "U",
+      "H",
+      "z",
+      "eta"
+    ],
+    "method": "one generic relaxed coefficient block per leaf; no cross-k, support, Galois, degree, or realization independence is asserted",
+    "printed_lines": [
+      "R012-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R015-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R015-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R016-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R023-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R024-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R029-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R035-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R038-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R038-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R038-L03|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R038-L04|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R043-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R043-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R043-L03|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R044-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R045-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R049-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R051-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R052-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R052-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R053-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R053-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R054-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R055-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R055-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R055-L03|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R055-L04|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R055-L05|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R055-L06|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R062-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R062-L02|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R062-L03|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R062-L04|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R065-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL",
+      "R066-L01|ROW_NONZERO=1|NF1=1|OFFSET_IDEAL_UNIT=0|TRIANGULAR_H_SOLVE=1|ARC_Z_FREE=1|C0_NEGCTRL_UNIT=1|STATUS=SURVIVES_RESIDUAL"
+    ]
+  },
+  "source_correction": {
+    "forced_repair": "use -mu_s-2, as in Proposition 7.3, Xu p.13, and exponent alignment in (7.1)",
+    "xu_p12_typo": "the displayed T_s exponent/deg(q) uses -mu_s+n-2"
+  },
+  "universal_rows": {
+    "full_h": "sum_{r+s=h}((alpha+r)A_r(B_s)_pi-(beta+s)(A_r)_pi B_s)+C_h=0",
+    "offset_one": "sum_{r+s=1}((alpha+r)A_r(B_s)_pi-(beta+s)(A_r)_pi B_s)+C_1=0",
+    "support_warning": "include all rational r,s in (0,1); M denotes that convolution"
+  },
+  "verdict": {
+    "actual_full_row_redundancy_decided": 0,
+    "actual_offset_status_open": 36,
+    "actual_realization_systems_formed": 0,
+    "dead": 0,
+    "family_C_rows": 20,
+    "formal_free_rows_nonzero": 36,
+    "relaxed_offset_blocks_proper": 36,
+    "survives_with_residual": 36,
+    "typed_ES_leaves": 36,
+    "vacuous_in_free_jet_model": 0
+  }
+}

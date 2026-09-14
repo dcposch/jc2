@@ -1,0 +1,41 @@
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  4       3     204       9 x 55         13.13%        3 new       0 zero         0.00 | 0.00         
+  5       5     257      49 x 162         3.40%        2 new       3 zero         0.00 | 0.02         
+  5       2     282      22 x 77          8.21%        1 new       1 zero         0.00 | 0.00         
+  6      15     283     213 x 1112        0.76%        9 new       6 zero         0.10 | 0.97         
+  6       3     377      31 x 391         4.03%        3 new       0 zero         0.00 | 0.04         
+  6       3     388      46 x 642         2.79%        3 new       0 zero         0.00 | 0.02         
+  7      54     411    1880 x 11844       0.10%       30 new      24 zero         0.13 | 1.21         
+  7      36     690    2052 x 15172       0.11%       24 new      12 zero         0.34 | 3.00         
+  7       4     807      78 x 2116        1.62%        4 new       0 zero         0.01 | 0.13         
+  7       4     826     120 x 3378        1.12%        4 new       0 zero         0.06 | 0.41         
+  8     259     868   24292 x 175996      0.01%      105 new     154 zero         0.91 | 3.39         
+  8     105    1424   27459 x 223457      0.01%       72 new      33 zero         0.94 | 1.91         
+  8      21    1847   10037 x 136892      0.02%       18 new       3 zero         0.51 | 0.88         
+  8       9    1990    6254 x 81212       0.07%        6 new       3 zero         0.36 | 1.13         
+  9    1000    2035  294585 x 2053382     0.00%      399 new     601 zero        15.10 | 30.73        
+  9     420    4701  333042 x 2613191     0.00%      254 new     166 zero        25.30 | 44.96        
+  9      74    9328   80356 x 791242      0.01%       66 new       8 zero         7.29 | 10.99        
+  9      55   11068    2215 x 121441      0.07%       54 new       1 zero         1.05 | 4.36         
+  9      54   12920    3370 x 171907      0.04%       53 new       1 zero         1.61 | 5.91         
+  9      56   15068    6137 x 276817      0.03%       55 new       1 zero         3.01 | 6.95         
+  9      64   17124    1670 x 524593      0.08%       64 new       0 zero         5.92 | 9.43         
+ 10    1000   18460  669131 x 3965566     0.00%      375 new     625 zero        41.88 | 80.07        
+ 10    1000   22637  839824 x 5654286     0.00%      397 new     603 zero        91.62 | 151.42       
+ 10    1000   26339 1288872 x 9137370     0.00%      365 new     635 zero       197.14 | 275.14       
+ 10    1000   29503

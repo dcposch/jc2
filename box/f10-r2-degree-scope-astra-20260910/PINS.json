@@ -1,0 +1,28 @@
+{
+  "purpose": "Exactly twelve immutable mathematical inputs; pre-body pins matched; all fresh WHOLE reads in this task",
+  "first_action_utc": "2026-09-10T18:39:21Z",
+  "hard_stop_utc": "2026-09-10T19:04:00Z",
+  "publication_reserve_utc": "2026-09-10T19:01:00Z",
+  "inputs": [
+    {"path":"xmodel/f10-r1-degree-scope-astra-20260910.md","sha256":"81ab7f3685e330ffac746fdcef5e911ea27d795c15265ceacc047be05b20be95","read":"WHOLE lines 1-92"},
+    {"path":"xmodel/f10-r1-degree-scope-gate-fable5-20260910.md","sha256":"bd2dfc3807db534e5deb02ef1a55af75466b9b6e96b9b91e7fe63fb600886160","read":"WHOLE lines 1-77"},
+    {"path":"xmodel/f10-all-r-scale-cover-astra-20260910.md","sha256":"b6c5e8946104e797e2ee61ae6693aaf1ef24f98444eb8c5b7a21383153a668e1","read":"WHOLE lines 1-123; additional fresh whole reread"},
+    {"path":"xmodel/f10-all-r-scale-cover-gate-fable5-20260910.md","sha256":"c9fcecfcae96fc5f4bc0b98478fcd18ba46df6e23aa6228487bf904fae61edac","read":"WHOLE lines 1-65; additional fresh whole reread"},
+    {"path":"xmodel/d28-uniform-actual-degree-selection-astra-20260909.md","sha256":"579199ec08218491bbfb0fc9e909237c47ade1fd2f6fb63b35b1c731baac169a","read":"WHOLE lines 1-166"},
+    {"path":"xmodel/d28-uniform-actual-degree-gate-fable5-20260909.md","sha256":"c5824c135ebb3014fa8f6639854e96b0ece13c143b52f526d4a1bbc4fa40e83c","read":"WHOLE lines 1-93"},
+    {"path":"xmodel/f10-source-polynomial-cubic-quintic-compression-astra-20260909.md","sha256":"9b77ece0a8076d0a8ef498f0a9c152e1de52e85c7ce3cd6b575d5475d0d3337c","read":"WHOLE lines 1-244"},
+    {"path":"xmodel/f10-source-polynomial-compression-gate-fable5-20260909.md","sha256":"651dafb531955d76a579d9aace450856132a9733d2a667a2d79222cd7c025bf9","read":"WHOLE lines 1-78"},
+    {"path":"xmodel/f10-whole-mate-euler-elimination-astra-20260909.md","sha256":"a5ab487c4619742b6252e2503488eea4d6e927b58fd2821207cc85bcba7cf8d5","read":"WHOLE lines 1-251"},
+    {"path":"xmodel/f10-euler-complete-presentation-gate-fable5-20260909.md","sha256":"77d59f7b54e545d6a05f61ab270739c1498f93eed5d155e40222cecdc96c0a8c","read":"WHOLE lines 1-89"},
+    {"path":"xmodel/f10-r2-full-source-transfer-astra-20260910.md","sha256":"9f1c44dfd44b48cc3b36d46d79ec407a88addab19e60af2a307f4a17bf82ec3b","read":"WHOLE lines 1-180,181-362; accepted late operator correction -6, not old display -18"},
+    {"path":"xmodel/f10-r2-full-source-gate-fable5-20260910.md","sha256":"e89e6fb1d107eda73a2a1f334e2bdc4161fb9a78511ff8061cf7fba05ae0b514","read":"WHOLE lines 1-70"}
+  ],
+  "lookup_only": [
+    {"path":"AUDIT.md","sha256_before_lookup":"0098f6c118b3e801c2065fd8ccce081a12c3f0fa858bfc05d8989affc8bb0e05","scope":"Bounded heading/name searches; lines 19823-19829 and 19180-19250 only. The latter display clipped unrelated 16o text. Used to locate names/pins and accepted qualifications only; NOT WHOLE or frozen mathematical input."},
+    {"path":"APPROACHES.md","sha256_before_lookup":"4ae3639abcd5b8568ba3e48160c40bcf61e1db7e066d8c22bfbe0410481009d8","scope":"Bounded heading regex lookup only; no matching body output; NOT WHOLE or frozen mathematical input."}
+  ],
+  "prior_turn_whole_reuse": "NONE",
+  "immutable_body_clipping": "NONE",
+  "scientific_subprocesses": 0,
+  "certificate_or_live_review_read": false
+}

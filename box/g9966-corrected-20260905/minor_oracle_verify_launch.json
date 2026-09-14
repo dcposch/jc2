@@ -1,0 +1,56 @@
+[
+  {
+    "branch": "delta2",
+    "argv": [
+      "python3",
+      "-u",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-verification-code-oracle-v1/minor_oracle_phase_verify.py",
+      "--prefix",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/authoritative-v6-delta2-verify.json",
+      "--prefix-input",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/authoritative-v4-delta2-input.json",
+      "--trusted-prefix-code",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-verification-code-v6",
+      "--oracle",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/minor-v4-firstband-delta2.json",
+      "--oracle-code",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-verification-code-v4",
+      "--oracle-driver",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/minor_v4_firstband.py",
+      "--phase",
+      "/home/ubuntu/g9966-corrected-jacobian-threaded/outputs/fullJ-threaded-delta2_phase0000.json",
+      "--source",
+      "/home/ubuntu/g9966-corrected-jacobian/run-code-source-full",
+      "--out",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/minor-oracle-delta2-verify.json"
+    ],
+    "pid": "23545"
+  },
+  {
+    "branch": "delta52",
+    "argv": [
+      "python3",
+      "-u",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-verification-code-oracle-v1/minor_oracle_phase_verify.py",
+      "--prefix",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/authoritative-v6-delta52-verify.json",
+      "--prefix-input",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/authoritative-v4-delta52-input.json",
+      "--trusted-prefix-code",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-verification-code-v6",
+      "--oracle",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/minor-v4-firstband-delta52.json",
+      "--oracle-code",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-verification-code-v4",
+      "--oracle-driver",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/minor_v4_firstband.py",
+      "--phase",
+      "/home/ubuntu/g9966-corrected-oracle-adjoin/outputs/oracle-ast-delta52-t90_phase0000.json",
+      "--source",
+      "/home/ubuntu/g9966-corrected-jacobian/run-code-source-full",
+      "--out",
+      "/home/ubuntu/g9966-corrected-jacobian-flint/minor-independent-controls/minor-oracle-delta52-verify.json"
+    ],
+    "pid": "23596"
+  }
+]

@@ -1,0 +1,65 @@
+option(redSB); short=0;
+// k4ray beta-stratum K=7 b=13 pin=q1 char=0 target=x^4 geom=98
+ring RR = 0,(x,y,h_0_0,h_1_0,h_2_0,h_3_0,h_4_0,h_5_0,h_6_0,h_0_1,h_1_1,h_2_1,h_3_1,h_4_1,h_5_1,h_0_2,h_1_2,h_2_2,h_3_2,h_4_2,h_0_3,h_1_3,h_2_3,h_3_3,h_0_4,h_1_4,h_2_4,h_0_5,h_1_5,B_0_0,B_1_0,B_2_0,B_3_0,B_4_0,B_5_0,B_6_0,B_7_0,B_8_0,B_9_0,B_10_0,B_11_0,B_12_0,B_0_1,B_1_1,B_2_1,B_3_1,B_4_1,B_5_1,B_6_1,B_7_1,B_8_1,B_9_1,B_10_1,B_11_1,B_0_2,B_1_2,B_2_2,B_3_2,B_4_2,B_5_2,B_6_2,B_7_2,B_8_2,B_9_2,B_10_2,B_0_3,B_1_3,B_2_3,B_3_3,B_4_3,B_5_3,B_6_3,B_7_3,B_8_3,B_9_3,B_0_4,B_1_4,B_2_4,B_3_4,B_4_4,B_5_4,B_6_4,B_7_4,B_8_4,B_0_5,B_1_5,B_2_5,B_3_5,B_4_5,B_5_5,B_6_5,B_7_5,B_0_6,B_1_6,B_2_6,B_3_6,B_4_6,B_5_6,B_6_6,q1,q1_inv),dp;
+proc quoy(poly p, poly hh, int K)
+{ poly q=0; poly ld; matrix cp; int d;
+  while(1){ if(p==0){break;} cp=coeffs(p,y); d=nrows(cp)-1; if(d<K){break;}
+    ld=cp[d+1,1]; q=q+ld*y^(d-K); p=p-ld*y^(d-K)*hh; } return(q); }
+poly h = y^6*(y-x) + h_0_0*x^0*y^0 + h_1_0*x^1*y^0 + h_2_0*x^2*y^0 + h_3_0*x^3*y^0 + h_4_0*x^4*y^0 + h_5_0*x^5*y^0 + h_6_0*x^6*y^0 + h_0_1*x^0*y^1 + h_1_1*x^1*y^1 + h_2_1*x^2*y^1 + h_3_1*x^3*y^1 + h_4_1*x^4*y^1 + h_5_1*x^5*y^1 + h_0_2*x^0*y^2 + h_1_2*x^1*y^2 + h_2_2*x^2*y^2 + h_3_2*x^3*y^2 + h_4_2*x^4*y^2 + h_0_3*x^0*y^3 + h_1_3*x^1*y^3 + h_2_3*x^2*y^3 + h_3_3*x^3*y^3 + h_0_4*x^0*y^4 + h_1_4*x^1*y^4 + h_2_4*x^2*y^4 + h_0_5*x^0*y^5 + h_1_5*x^1*y^5;
+poly Q = q1*x^7*y;
+poly Btop = 2*y^4*(y-x)*Q;
+poly B = Btop + B_0_0*x^0*y^0 + B_1_0*x^1*y^0 + B_2_0*x^2*y^0 + B_3_0*x^3*y^0 + B_4_0*x^4*y^0 + B_5_0*x^5*y^0 + B_6_0*x^6*y^0 + B_7_0*x^7*y^0 + B_8_0*x^8*y^0 + B_9_0*x^9*y^0 + B_10_0*x^10*y^0 + B_11_0*x^11*y^0 + B_12_0*x^12*y^0 + B_0_1*x^0*y^1 + B_1_1*x^1*y^1 + B_2_1*x^2*y^1 + B_3_1*x^3*y^1 + B_4_1*x^4*y^1 + B_5_1*x^5*y^1 + B_6_1*x^6*y^1 + B_7_1*x^7*y^1 + B_8_1*x^8*y^1 + B_9_1*x^9*y^1 + B_10_1*x^10*y^1 + B_11_1*x^11*y^1 + B_0_2*x^0*y^2 + B_1_2*x^1*y^2 + B_2_2*x^2*y^2 + B_3_2*x^3*y^2 + B_4_2*x^4*y^2 + B_5_2*x^5*y^2 + B_6_2*x^6*y^2 + B_7_2*x^7*y^2 + B_8_2*x^8*y^2 + B_9_2*x^9*y^2 + B_10_2*x^10*y^2 + B_0_3*x^0*y^3 + B_1_3*x^1*y^3 + B_2_3*x^2*y^3 + B_3_3*x^3*y^3 + B_4_3*x^4*y^3 + B_5_3*x^5*y^3 + B_6_3*x^6*y^3 + B_7_3*x^7*y^3 + B_8_3*x^8*y^3 + B_9_3*x^9*y^3 + B_0_4*x^0*y^4 + B_1_4*x^1*y^4 + B_2_4*x^2*y^4 + B_3_4*x^3*y^4 + B_4_4*x^4*y^4 + B_5_4*x^5*y^4 + B_6_4*x^6*y^4 + B_7_4*x^7*y^4 + B_8_4*x^8*y^4 + B_0_5*x^0*y^5 + B_1_5*x^1*y^5 + B_2_5*x^2*y^5 + B_3_5*x^3*y^5 + B_4_5*x^4*y^5 + B_5_5*x^5*y^5 + B_6_5*x^6*y^5 + B_7_5*x^7*y^5 + B_0_6*x^0*y^6 + B_1_6*x^1*y^6 + B_2_6*x^2*y^6 + B_3_6*x^3*y^6 + B_4_6*x^4*y^6 + B_5_6*x^5*y^6 + B_6_6*x^6*y^6;
+poly f = h^2 + B;
+poly Al = quoy(B^2, h, 7);
+poly Rh = B^2 - Al*h;
+print("PRE__SIZE_AL "+string(size(Al))+" SIZE_RH "+string(size(Rh)));
+print("PRE__PIN_BTOP_DEG "+string(deg(Btop))+" SIZE_BTOP "+string(size(Btop)));
+print("PRE__PIN_INDEX 1 NQ 2 D 8 SMIN 4");
+ideal I0; ideal JROWS; ideal EROWS; ideal RHOROWS; int ii; int dde;
+poly Rh_forced_top = (4/3)*y^0*(y-x)*Q^3;
+matrix CR = coef(Rh - Rh_forced_top, x*y);
+for (ii=1; ii<=ncols(CR); ii++)
+{
+  dde = deg(CR[1,ii]);
+  if (dde>25) { if (CR[2,ii] != 0) { RHOROWS=RHOROWS+ideal(CR[2,ii]); } }
+  if (dde==25) { if (CR[2,ii] != 0) { RHOROWS=RHOROWS+ideal(CR[2,ii]); } }
+}
+RHOROWS = simplify(RHOROWS,2);
+print("PRE__RHO_RDEG 25");
+print("PRE__RHOLEVEL4_ROWS "+string(size(RHOROWS)));
+I0 = I0 + RHOROWS;
+poly JJ = (3/8)*(diff(B,x)*diff(Al,y)-diff(B,y)*diff(Al,x)) - (3/4)*(diff(h,x)*diff(Rh,y)-diff(h,y)*diff(Rh,x));
+print("PRE__DEG_J "+string(deg(JJ)));
+print("PRE__SIZE_J "+string(size(JJ)));
+matrix CJ = coef(JJ, x*y);
+poly CST = 0; int TARGET_FOUND = 0;
+for (ii=1; ii<=ncols(CJ); ii++)
+{
+  if (CJ[1,ii]==x^4) { CST=CJ[2,ii]; TARGET_FOUND=1; }
+  else { if (CJ[2,ii] != 0) { JROWS=JROWS+ideal(CJ[2,ii]); } }
+}
+JROWS = simplify(JROWS,2);
+print("PRE__J_ROWS "+string(size(JROWS))+" TARGET_FOUND "+string(TARGET_FOUND));
+I0 = I0 + JROWS;
+print("PRE__THEOREM_SKIPPED disabled");
+I0 = simplify(I0,2);
+print("PRE__NROWS "+string(size(I0)));
+print("PRE__NPARAMS_GEOM 98");
+print("PRE__NPARAMS_GB 99");
+ring SS = 0,(h_0_0,h_1_0,h_2_0,h_3_0,h_4_0,h_5_0,h_6_0,h_0_1,h_1_1,h_2_1,h_3_1,h_4_1,h_5_1,h_0_2,h_1_2,h_2_2,h_3_2,h_4_2,h_0_3,h_1_3,h_2_3,h_3_3,h_0_4,h_1_4,h_2_4,h_0_5,h_1_5,B_0_0,B_1_0,B_2_0,B_3_0,B_4_0,B_5_0,B_6_0,B_7_0,B_8_0,B_9_0,B_10_0,B_11_0,B_12_0,B_0_1,B_1_1,B_2_1,B_3_1,B_4_1,B_5_1,B_6_1,B_7_1,B_8_1,B_9_1,B_10_1,B_11_1,B_0_2,B_1_2,B_2_2,B_3_2,B_4_2,B_5_2,B_6_2,B_7_2,B_8_2,B_9_2,B_10_2,B_0_3,B_1_3,B_2_3,B_3_3,B_4_3,B_5_3,B_6_3,B_7_3,B_8_3,B_9_3,B_0_4,B_1_4,B_2_4,B_3_4,B_4_4,B_5_4,B_6_4,B_7_4,B_8_4,B_0_5,B_1_5,B_2_5,B_3_5,B_4_5,B_5_5,B_6_5,B_7_5,B_0_6,B_1_6,B_2_6,B_3_6,B_4_6,B_5_6,B_6_6,q1,q1_inv),wp(7,6,5,4,3,2,1,6,5,4,3,2,1,5,4,3,2,1,4,3,2,1,3,2,1,2,1,14,13,12,11,10,9,8,7,6,5,4,3,2,13,12,11,10,9,8,7,6,5,4,3,2,12,11,10,9,8,7,6,5,4,3,2,11,10,9,8,7,6,5,4,3,2,10,9,8,7,6,5,4,3,2,9,8,7,6,5,4,3,2,8,7,6,5,4,3,2,1,1);
+ideal ROWS = imap(RR,I0); poly CSTP = imap(RR,CST);
+print("PRE__CST_ZERO "+string(CSTP==0));
+print("PRE__CST_WT "+string(deg(CSTP)));
+print("PRE__HOMOG_I "+string(homog(ROWS)));
+print("PRE__HOMOG_CST "+string(homog(CSTP)));
+print("PRE__LOCALIZER q1*q1_inv-1");
+print("PRE__PRELUDE_DONE 1");
+int i;
+ROWS = ROWS + ideal(CSTP-1);
+ROWS = ROWS + ideal(q1*q1_inv-1);
+ROWS = simplify(ROWS,2);
+print("DUMP__N "+string(size(ROWS)));
+print("DUMP__VARS "+string(nvars(basering)));
+for (i=1; i<=size(ROWS); i++) { print("DUMP__ROW "+string(cleardenom(ROWS[i]))); }
+print("DUMP__DONE 1");
+quit;

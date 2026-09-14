@@ -1,0 +1,47 @@
+delta2: loading complete checkpoint source-full-delta2_phase0117.json
+delta2 inner minor solved in 2.56s
+delta2 inner low-weight product: 25 slots, 4.40s
+delta2 inner incidence reduced: 14 pivots, 15.36s
+delta2 inner: 78 preincidence, 14 QQ* pivots, 0 residual, 17.84s
+delta2: extracting only D1 coefficient dependencies
+delta2: dependency positions h/C2/C3=9/8/9, outer=[21, 24, 10, 21]
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_faces.py", line 150, in <module>
+    add(rows,'corner_J',{'constant_polynomial':str(value),'actual_polynomial_jets':jets,
+                    ^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_faces.py", line 129, in main
+    def contributes(pos,threshold):
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/run-code-source-full/d1_jacobian_face.py", line 49, in d1_face_jacobian
+    face=sp.expand((-F_exp*P*sp.diff(Q,PI)+G_exp*sp.diff(P,PI)*Q)/cover)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/function.py", line 2816, in expand
+    return sympify(e).expand(deep=deep, modulus=modulus, **hints)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/expr.py", line 3682, in expand
+    expr, hit = Expr._expand_hint(expr, hint, deep=deep, **hints)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/expr.py", line 3615, in _expand_hint
+    arg, arghit = Expr._expand_hint(arg, hint, **hints)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/expr.py", line 3623, in _expand_hint
+    newexpr = getattr(expr, hint)(**hints)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/mul.py", line 950, in _eval_expand_mul
+    t = self.func(plain, term)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/operations.py", line 98, in __new__
+    c_part, nc_part, order_symbols = cls.flatten(args)
+                                     ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/mul.py", line 365, in flatten
+    coeff *= o
+  File "/usr/lib/python3/dist-packages/sympy/core/numbers.py", line 2205, in __mul__
+    def __mul__(self, other):
+
+KeyboardInterrupt

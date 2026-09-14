@@ -1,0 +1,90 @@
+{
+ "status": "PASS",
+ "assert_nodes": 0,
+ "runs": [
+  {
+   "optimized": false,
+   "mutation": null,
+   "rc": 0,
+   "first_fail": "",
+   "expected_ok": true,
+   "stdout_sha256": "3ede3e4e59d2803684a8fdaa73e01839bd5d6fd87a79b81a871ec575a8304d4a"
+  },
+  {
+   "optimized": false,
+   "mutation": "--mutate-cubic-factor",
+   "rc": 1,
+   "first_fail": "FAIL order-3 identity, cubic 5/27",
+   "expected_ok": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "optimized": false,
+   "mutation": "--mutate-omit-negative-row",
+   "rc": 1,
+   "first_fail": "FAIL phi(D) valuation >= -1 (phi(TD) ordinary)",
+   "expected_ok": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "optimized": false,
+   "mutation": "--mutate-independent-tangent",
+   "rc": 1,
+   "first_fail": "FAIL [p]U1=-c(t+3), [gp^2]U1=c(t+3), d-free",
+   "expected_ok": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "optimized": false,
+   "mutation": "--mutate-truncated-saturation",
+   "rc": 1,
+   "first_fail": "FAIL nilpotent k cannot be canceled",
+   "expected_ok": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "optimized": true,
+   "mutation": null,
+   "rc": 0,
+   "first_fail": "",
+   "expected_ok": true,
+   "stdout_sha256": "3ede3e4e59d2803684a8fdaa73e01839bd5d6fd87a79b81a871ec575a8304d4a"
+  },
+  {
+   "optimized": true,
+   "mutation": "--mutate-cubic-factor",
+   "rc": 1,
+   "first_fail": "FAIL order-3 identity, cubic 5/27",
+   "expected_ok": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "optimized": true,
+   "mutation": "--mutate-omit-negative-row",
+   "rc": 1,
+   "first_fail": "FAIL phi(D) valuation >= -1 (phi(TD) ordinary)",
+   "expected_ok": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "optimized": true,
+   "mutation": "--mutate-independent-tangent",
+   "rc": 1,
+   "first_fail": "FAIL [p]U1=-c(t+3), [gp^2]U1=c(t+3), d-free",
+   "expected_ok": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "optimized": true,
+   "mutation": "--mutate-truncated-saturation",
+   "rc": 1,
+   "first_fail": "FAIL nilpotent k cannot be canceled",
+   "expected_ok": true,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "witness_sha256": "3ede3e4e59d2803684a8fdaa73e01839bd5d6fd87a79b81a871ec575a8304d4a",
+ "wall_s": 0.75,
+ "caps": "30 wall / 25 CPU s / 512 MiB",
+ "controls_sha256": "973c1242acfca43c281b20adfeb0396f50ead82b3fa1adeff92f144e651bd297"
+}

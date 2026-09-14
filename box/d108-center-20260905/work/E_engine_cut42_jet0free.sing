@@ -1,0 +1,4 @@
+ring R=0,(Zc,c,jet0,jet1,jet2),dp;
+ideal I=-c - jet0^4*jet1^2 + 4*jet0^3*jet1*jet2 + 2*jet0^2*jet1^3 - 4*jet0^2*jet2^2 - 4*jet0*jet1^2*jet2 - jet1^4,-2*jet0^2*jet1 + 4*jet0*jet2 + 2*jet1^2,Zc*c-1;
+ideal G=std(I);
+"TAG E_engine_cut42_jet0free"; "DIM"; dim(G); "SIZE"; size(G); "NF1"; reduce(1,G);

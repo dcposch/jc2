@@ -1,0 +1,258 @@
+{
+  "schema": "jc2-root-operational-custody/v1",
+  "status": "CLOSED_STOP_NONDECISION_RETIRED",
+  "failure": {
+    "state": "STOP_NONDECISION_BEFORE_HOLDER",
+    "time": "2026-09-11T10:47:09+00:00",
+    "admission_exit": 1,
+    "stderr": "Failed to parse calendar event specification: Invalid argument\n",
+    "cause": "ROOT literal-binding error: Python ISO timestamp +00:00 passed to systemd OnCalendar; calendar rejected before holder creation or timers armed",
+    "no_retry": true,
+    "holder_launched": false,
+    "preflight_phases_run": 0,
+    "science_run": false,
+    "token_written": false
+  },
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "actual": {
+    "worker": "i-00653baa8e5c32c75",
+    "termination_requested_utc": "2026-09-11T10:49:00+00:00",
+    "independent_terminated_observation_utc": "2026-09-11T10:49:28+00:00",
+    "last_fleet_empty_utc": "2026-09-11T10:49:52+00:00",
+    "retained_volume": "vol-087e9c7fd21448b1a",
+    "volume_state": "available",
+    "retirement_timer": "not-found/inactive/dead after verified termination"
+  },
+  "report": {
+    "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/RESULT.md",
+    "sha256": "70a8709de3f15f33e8279fe67df5711454c2b97308fa74e4ad08400af6b0383c",
+    "expected_manifest_sha256": "cee26bd4a20df2173da78e8ded1eeda063a4a9d6d54b0c9f7e228b0b27882cef",
+    "transaction": "VERIFIED before WHOLE final body, unchanged posthash",
+    "bytes": 6777
+  },
+  "evidence_manifest": {
+    "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/EVIDENCE.sha256",
+    "sha256": "f9d8204f58e9e67c864160610aa9edc1567f43a017276a824e051d580176ace8",
+    "entries": 51,
+    "strict_postcheck": "PASS"
+  },
+  "archive": {
+    "bytes": 645418,
+    "remote_compare_exit": 0,
+    "remote_fsync": true,
+    "download_matching_hash": true,
+    "local_fsync_before_termination": true
+  },
+  "prelaunch_ready_inputs": {
+    "count": 44,
+    "prelaunch_and_postretirement_strict": "PASS"
+  },
+  "pins": [
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/ADMIN-NATIVE-QUALIFIED.json",
+      "sha256": "0fbbc64f7316f4d343658448fe7d053e2ffc1a997c83d6b85778e2da554637e8"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/AUTHORITIES.preholder.json",
+      "sha256": "17af0569e5cc8a1cc12cb1fd1a9828d7c489053760a2475fcf8daa64d554f0d9"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/COORDINATOR-RETIREMENT-RECEIPT.json",
+      "sha256": "0a9a13ac4c2f97d7fb60caf5800e3feee42220f42b77e5baf4fcfda3363a1c84"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/ORIGINAL-CLOCKS.json",
+      "sha256": "40bc08f2f6ca4c70e8b04b0940b91812512b44076bd466583a35a820230011a3"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/PHYSICAL-OBSERVED.json",
+      "sha256": "90b49449fbad93336421a7a2f2b50e59f040cfb17f327f21a55a02cb13086b84"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/PLAN.md",
+      "sha256": "eb3e9cd368b7c11237d5fad03a5164dd6f187d1d42dce789c02a636f77e9482b"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/PRE-ADMISSION-INSTALLED.sha256",
+      "sha256": "2430b36be4212a8ec605d970687987deeaa943491725e9a8e1eeb9bef1ac1e62"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/PRE-ADMISSION-STAGE.sha256",
+      "sha256": "3372218146cc991ff6e5debdfb82df9bc4e48c9de8271b9cda0d51ea5bd92978"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/ROOT-EXECUTION-CARD.preholder.md",
+      "sha256": "4f313fcf1777b5b1d192d013c4e9b96697ecc8d327ea32d59fd41a0e41a7a0a4"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/ROOT-READY-INPUTS.sha256",
+      "sha256": "7e749aa23a43a14bcf6af7b49d1d502a7e79fd0c55a8b3e710e3cbc26b432e7f"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/ROOT-REGISTRATION.preholder.json",
+      "sha256": "79720295194afbfaf1dd943ff5aa69b52016e1b5406b6d8bb354d7a23854e9fe"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/admin-helper-metadata-v2.sh",
+      "sha256": "2c900e4c30b9597db9464a25318c8fd530c1579e5a47ee8a45eebebcd57b3719"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/admin-helper-metadata.sh",
+      "sha256": "16dead15a44c09d191a2d795ffb474bdb8349fafafc35c089481708f070e3e17"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/admin-helper-v2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/admin-helper-v2.stdout",
+      "sha256": "740479f7a60b3a6cc5cfb49e2cb65f1ce825de1e54a0ca59346267059b91f492"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/admin-helper.sha256",
+      "sha256": "f756cb80ff7227b0339246cc8d7279653684608c395286e73f23e345c50b6e30"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/admin-helper.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/admin-helper.stdout",
+      "sha256": "320263e9bca61ecf898bcaa2231cfa6deb83b8df19c547bc611b8fd712697f80"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/admission.stderr",
+      "sha256": "9f1f41fb311130df1d0c576a4f6e5839a4acb8ed085fbd28d7f1886adfe5d89e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/admission.stdout",
+      "sha256": "9ccc546fc26b8c5c40f23e1d6fe06d1d5582eafdf92e83ffad009a3c659125a1"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/calendar-diagnostic.stderr",
+      "sha256": "aad8169e8ad6bc34e588481e6b74c069bbc1ad3fce1e491084d00d959c551da7"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/calendar-diagnostic.stdout",
+      "sha256": "3ec80986d4338152a4d65ca016317c396a74c4ef7b52908db5de017e972d0822"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/coordinator-retirement-service.stdout",
+      "sha256": "b6273295ad5820ff6da64b02b18fbbe646c460eb31841ffd1b9c639decfd4f54"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/coordinator-retirement-timer.stdout",
+      "sha256": "7bdda9143b8c87062ba4c3f3a61c9920b4d7e17441a5d4006ffcc65b07ba2190"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/dummy.policy.preholder.json",
+      "sha256": "ae6be750928b154195af1169c3c09a628000c42f914df3210dbbe1ee07c7a5c6"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/final-fleet.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/final-instance.json",
+      "sha256": "275528bd6c9fd9c5cb0d1f2b75cc1065a63c1f92e59ddcf222be02f343afb2a7"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/holder.py",
+      "sha256": "188223110628c3af953cc551920c31cbb9ccfd5a3842e707556f73640c56d010"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/launch-response.json",
+      "sha256": "cd28ce365619cfff2c91c271b2436e10f29a1b30a4741fc85f0f63849a9309e8"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/launch-worker.sh",
+      "sha256": "40b3aab6f4e73a8059e1e95b9abbbf6199ce65b3b31698b1a5888719ceab1e68"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/native-manifest.json",
+      "sha256": "60d301a358cb14553bb9a77d114fac356c3eac4bdaa2e27d9ca04ed525bda808"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/native-metadata.sh",
+      "sha256": "65fe106bfffcf1ca0c9b70b48da6767fa363aec7dedb4bb268b79cc25d8a48da"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/native.sha256",
+      "sha256": "94c31f95eaf02dec6a70fd085a2737516b9ca8d5774157cb66ebbb9899d2f257"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/native.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/native.stdout",
+      "sha256": "a98356496d586d33524e83875a78b6d719bc9fa87b585c9069c47fda40f5cbc1"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/outer-admission.sh",
+      "sha256": "40ea7273ae5bedf636535e99d1ba6d8c174cd690a6a8975d24893e5affc9a53a"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/physical-metadata.sh",
+      "sha256": "c60a919e4ade2becafdb2f9d47319e24940d7cd46370c1bc6d4fc4fa9a471d5d"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/pre-retirement-instance.json",
+      "sha256": "12e2373b42e347df75de0a3bb6f7ce903efd82259fabd46ad61987c044a9725c"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/preholder-security.sh",
+      "sha256": "bc1d5fa2a285349bc4899ff801075cb8ec060d13d7fb7b36a99200eb63c46cc3"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/preholder-security.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/preholder-security.stdout",
+      "sha256": "9a1f8a821564179f60ee410bb3c0e4c5e92b61c639b75ae3822ac87ed100afd0"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/retained-volume.json",
+      "sha256": "1b8dd57e10ae89fa7e9a1fd5868889b991803919e8b7c634a3821cc63dbacd48"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/retirement-timer-closed.stdout",
+      "sha256": "899a8a5a73232d4a07b56824413da1c88dc2dc685e89886ca2bc05f89923b9f6"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/setup-pre-admission.sh",
+      "sha256": "cfb1b75798cb1d82312060e2903d775f1ec22bf68e17f680097b65c8aba01b51"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/setup.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/setup.stdout",
+      "sha256": "09e0a656201c01293e11cfe1985b8df483a90d40e1cb196d1769c3169c8489f2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/source-native-manifest.json",
+      "sha256": "2666a1f146be1b7c88f72722fd577e9b39b7e7cbe1f2db1cff03c24615b16bb2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/terminal-observation.stdout",
+      "sha256": "ad31ebabaa7c67f8aa63ce4f6195c27157216ad8dee1214c8ca8e765d25d66f1"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/termination-response.json",
+      "sha256": "bdbc702a6bcc67e770c4dad2b0aa94377f088d3f2cd077d75dbaa6243610d650"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/valid.policy.preholder.json",
+      "sha256": "41757d91b43cade749c805126b8f68d9e11efe71d9970a8cd5643a0eb50f8850"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-execution-root-20260911/setup-only.tar.gz",
+      "sha256": "a85db9225c0dbb5c6331e0026e26bbd3f95a3ea566335c1f1af86c9d56cae3e7"
+    }
+  ],
+  "no_new_scientific_result": true,
+  "remaining": "Strict-nine runtime discriminator NOT OBSERVED. No automatic retry, new worker, source science or clock rebasing. Next strategy must consider integration cost; distinction between Python ISO timestamps and systemd calendar strings is a metadata correction, not a new algorithmic assurance project."
+}

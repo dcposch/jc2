@@ -1,0 +1,667 @@
+{
+  "schema": "F10-UNIVARIATE-RUNTIME-CUSTODY/v1",
+  "status": "TERMINAL-PRODUCER-ENGINEERING-PASS-NOT-IDEAL-DECISION",
+  "prepared_utc": "2026-09-09 21:09:36 UTC",
+  "first_action_utc": "2026-09-09T20:57:25+00:00",
+  "controlling_task_cap_utc": "2026-09-09T21:15:00+00:00",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report_sha256": "d1844ddaad655187f2120f56b40923e69cb883e91cd0ca24c75c2504e14be316",
+  "expected_transaction_sha256": "9fa50db01db0ede032ab492f41ea2038604c847927fc1d0a1d6784f5a44fa414",
+  "inputs": [
+    {
+      "path": "box/f10-r1-univariate-runtime-code-astra-20260909/adapter.py",
+      "sha256": "11ebf4307e7cff9b7909020dcdf69cda32f689236453763ce9433fff66fd7b67",
+      "read_scope": "WHOLE prior accepted same-byte read reused after current pin"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-code-astra-20260909/checker.py",
+      "sha256": "6547063b8cf2970ce0aa1e47e5a49db31c2fd4b1e97d87690c954487500a61f0",
+      "read_scope": "WHOLE prior accepted same-byte read reused after current pin"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-code-astra-20260909/input_evidence.py",
+      "sha256": "d262f3d498323b4606c51828a647b7334e8885095b099acbff41d17dd6db88b9",
+      "read_scope": "WHOLE prior accepted same-byte read reused after current pin"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-code-astra-20260909/algebra.py",
+      "sha256": "7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc",
+      "read_scope": "WHOLE prior accepted same-byte read reused after current pin"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-code-astra-20260909/execution_gate.py",
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6",
+      "read_scope": "WHOLE prior accepted same-byte read reused after current pin"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-code-astra-20260909/probe.py",
+      "sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7",
+      "read_scope": "WHOLE prior accepted same-byte read reused after current pin"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-code-astra-20260909/dispatch_batch.py",
+      "sha256": "9be0c70a3ab8342a79509e039860d31b6d46401ee3aeb211e24f913b3ef69558",
+      "read_scope": "WHOLE prior accepted same-byte read reused after current pin"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-code-astra-20260909/semantic_controls.py",
+      "sha256": "cc04757ed669dab0a506579079478bf71f41ba8debde0de83944ecdd7b416a90",
+      "read_scope": "WHOLE prior accepted same-byte read reused after current pin"
+    },
+    {
+      "path": "ops/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "read_scope": "HASH, unchanged accepted external instrument"
+    },
+    {
+      "path": "box/f10-r1-normalized-runtime-execution-20260909/remote/admissibility.md",
+      "sha256": "02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "box/f10-r1-normalized-runtime-execution-20260909/remote/frontier.json",
+      "sha256": "f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "box/f10-r1-normalized-runtime-execution-20260909/remote/normalized.json",
+      "sha256": "e62734b04ddc7ad55a64f5350639332f533aa94c3526cd5b2f53378e4d96b750",
+      "read_scope": "HASH ONLY, no coefficient body read"
+    },
+    {
+      "path": "box/f10-r1-normalized-runtime-execution-20260909/remote/full.receipt.json",
+      "sha256": "062cf0c0296f67154736de1cbf7c43378f649da49bbd89f141950f58272f3aab",
+      "read_scope": "HASH, incoming receipt bound by accepted evidence and remote verified_input"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/REGISTRATION.md",
+      "sha256": "d32b3a05a1aeec77ebbef63bb11b161d2c1fdf6dba2a6139f312fe25fe5312fe",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/dispatch.registration.json",
+      "sha256": "db06dab1f26d3d602bbc67bd7238f5c2902e6589452e41931ed7e0b6769ac774",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/staging.json",
+      "sha256": "1844c108949467a670a571c6dc883e48d1df052801756d2f3de9a6b557955b80",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "xmodel/f10-r1-univariate-runtime-code-astra-20260909.md",
+      "sha256": "1155363cbd3071900002aeac2f2d6d729ee05fa9de4af9ec04297d4f8de281e4",
+      "read_scope": "WHOLE same-session read reused after current hash"
+    },
+    {
+      "path": "xmodel/f10-r1-univariate-runtime-gate-fable5-20260909.md",
+      "sha256": "89f905c8fa9ce31aaae23d0c2da8d852756d099097f126d1ff27b2524e4893f5",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "xmodel/f10-r1-normalized-runtime-evidence-gate-fable5-20260909.md",
+      "sha256": "b925e315ef7bff1bb4158db3f91ed78027fe7bd4e9f2215c2540fa95bbc7bc8e",
+      "read_scope": "WHOLE; root qualifications retained"
+    },
+    {
+      "path": "box/f10-r1-normalized-runtime-execution-20260909/ROOT-ACCEPTANCE.json",
+      "sha256": "6451f6b42eb8867c0b46ec7aa6f55f2cd660305c5bfe1cad570a75b27fe3066f",
+      "read_scope": "WHOLE, immutable issued root authority"
+    },
+    {
+      "path": "ops/FLEET.md",
+      "sha256": "f2e27295711c9cec01d72874b5917a134d8a2f662774812212cdf7e6f3270cdc",
+      "read_scope": "WHOLE; historical examples not launch authority"
+    },
+    {
+      "path": "ops/fleet/fleet.sh",
+      "sha256": "a9da94d341a691942e9d6a6a6d90d97008b2d7baa1cadb2592481cf6b9c11c4c",
+      "read_scope": "WHOLE; only run/push/pull used"
+    }
+  ],
+  "remote_interpreter": {
+    "path": "/usr/bin/python3",
+    "sha256": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223",
+    "verified_on_exact_worker_before_dispatch": true
+  },
+  "owned": [
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/READ-SCOPE.md",
+      "sha256": "78eaeff6b5c9fda5f8e97a5c7caaa3159df0739e41329d2000ee38dccb08c04e"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/aws-before.json",
+      "sha256": "b093e282b50f3056d8a4fda0d68766334473974e9b9a42382ff0fdd300fd2011"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/aws-running.json",
+      "sha256": "a7141a5174f1b0b31cabac6ff0dc35637403ad2f41d2ca91ac9bd3d047e8b13f"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/aws-start.json",
+      "sha256": "4ffbf2e493b3dfcb8ab80f4eefad23ff87669c4b2df5075ecd5e4f4dfab7ac10"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/aws-stop.json",
+      "sha256": "e102cde0bd3457c78a7410ff9cefbcd3744033134d9115908361a29e2efed321"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/aws-stopped.json",
+      "sha256": "9dc06d204b8ec46edb5139f048637f9484c8142080c99cea8a416b57faee3b49"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/initial-live-tree.txt",
+      "sha256": "d6438d180e769c01089e45df06410dbf31f88d042fdcd021d66ed270c60962e9"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/input-pins.json",
+      "sha256": "96178e0705ebda209fa6d53bcd6820a5b2850b28546f3dcf096220a75b5de2de"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/inputs-after.sha256",
+      "sha256": "7a57244aff81a8d18bdf52c22724aecfcb5c4e87d550d8ddbf0653db0ffc6da5"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/launch.txt",
+      "sha256": "acc80d482505e4dea929c99fe63b0c56eb06ca297a6c733499cd63a6367e9dcd"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/metadata-reconciliation.json",
+      "sha256": "3dae04164d9e0459d5efb1d206fcfed5827cae062075b8c371b5478f9b9fabeb"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/physical-before.txt",
+      "sha256": "c6759f8b2a5c3b933a948d27d73847173694b8c3c68ad9963ba032c7611cf681"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/publication.json",
+      "sha256": "35bfe9ee276d7f825cafc1ab4c0bbb3d78800b79681ecf000675a2ed938fc37e"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/quota-before.json",
+      "sha256": "22eb5c08fe9aa9a1d91e6a2c71972f3dceaaa4e32e75e7953ac0723c6c4ac756"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote-preflight.txt",
+      "sha256": "ddca5e5024f31653612bd40d50b09c663a4e534ecd6916184d643ba15ef36de2"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote-terminal.sha256",
+      "sha256": "a4e55d474a67bb535e4d8e9abf3c60c9785aa5c1ddbf37e3e9967be20e402414"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/adapt.authority.json",
+      "sha256": "247b0585bd13beec9c0eca11263e96546cd948a6388a543dfa565b8bc5e34cf4"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/adapt.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/adapt.caller.stdout",
+      "sha256": "ab7ffc88ab658502ed2d29e8beee4199785a5996cec1b60265d8ccdc73881f08"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/adapt.dispatch.json",
+      "sha256": "dac61c2f3811bf258cc1fd15c85ec39a8b36db72c48b865c3840d6e9a006b29b"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/adapt.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/adapt.stdout",
+      "sha256": "90787bc3a2e88c38b70a77da165ceddd445a4acf47bd1ae3449c310269b98610"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/adapt.telemetry.json",
+      "sha256": "9e9f3a327f242d4e14396cdd3949c5d33ef81c7d5104a6dcbc1e2d92c1d984fe"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/adapter.py",
+      "sha256": "11ebf4307e7cff9b7909020dcdf69cda32f689236453763ce9433fff66fd7b67"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/admissibility.md",
+      "sha256": "02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/algebra.py",
+      "sha256": "7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/batch.PASS.json",
+      "sha256": "f7460450844e97aae3a87f657e3f169ba8d50d61306451d4a57ef74549caa353"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/checker.py",
+      "sha256": "6547063b8cf2970ce0aa1e47e5a49db31c2fd4b1e97d87690c954487500a61f0"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/controls.receipt.json",
+      "sha256": "c8f955d2255dc222af0e2e94813b202ef95d3a5adee70b3a3cfa1aee9a6256fa"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dispatch.registration.json",
+      "sha256": "db06dab1f26d3d602bbc67bd7238f5c2902e6589452e41931ed7e0b6769ac774"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dispatch_batch.py",
+      "sha256": "9be0c70a3ab8342a79509e039860d31b6d46401ee3aeb211e24f913b3ef69558"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dummy-descendant.authority.json",
+      "sha256": "81e18d35465347b7cc1d8f78251ac36fa5a8eb47e2709d7c6b1ed5b75d5e5916"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dummy-descendant.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dummy-descendant.caller.stdout",
+      "sha256": "e935800c20779f8f6289e20a0e8399d6b4ef6410467e957330665e4d1f2cca04"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dummy-descendant.dispatch.json",
+      "sha256": "701a1fb3b7e126dd315099a9f1450e90e7bed703738c3ad89315a18b4439a117"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dummy-descendant.sentinel",
+      "sha256": "6c6419e93c916a7be827f962250694e568c52e56906280c2982b1ad78ce87ea8"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dummy-descendant.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dummy-descendant.stdout",
+      "sha256": "3bf4831ece5adb77a3aca95823fb95df933b630d896b8eb7bb92ce6a0b7cf722"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/dummy-descendant.telemetry.json",
+      "sha256": "f8af1f00f9a87ab752c02a745b14f607ef57527d2102968a40fa2fefb674e77e"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/execution_gate.py",
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/fixture-Phi3-coefficient.json",
+      "sha256": "6fcaec0a19fd53872964e80bde30e81f84ed79c5391511a41e9d72202b22bbbe"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/fixture-affine-r-constant.json",
+      "sha256": "3940f45ced34f6608ee2ac4c70e9504d0fefbb89c49db535d355b92d31d23206"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/fixture-c-inverse.json",
+      "sha256": "0a7931739db8e7e7c1cee40d1a854a328c52909c1151d11afb00e218fd004c09"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/fixture-guard-q-coefficient.json",
+      "sha256": "87d9691bc48073d2bad2df8dc2ed0b8176a4ac8dcc61a3bf580141d11a7c9a65"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/fixture-indexed-row-coefficient.json",
+      "sha256": "0184dfad2501d02412eff4963856dd070969a1807292d424a1a78c8ee4747760"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/fixture-missing-guard-factor.json",
+      "sha256": "381fcfc0d380319dcb0e69b1356d631f882e932a5cbb9e2c96939cb7df146ab5"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/fixture-omitted-dense-slot.json",
+      "sha256": "01a7c4ca4d404ea7043a4cf1bc800fed24a3e2cf411085195d50717e5facd435"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/frontier.json",
+      "sha256": "f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/full-check.authority.json",
+      "sha256": "d971a3510f468be232d3d491257d7ff59e13b060d8c340504b0bd70517636e0c"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/full-check.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/full-check.caller.stdout",
+      "sha256": "39e16a04efd5603e6ff473904ba1683e330fbc82813fd5ad35fd5b49b926f491"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/full-check.dispatch.json",
+      "sha256": "d9b6a26728cbe87955f374cbe4294983d200afd6eb543d34f74a8f21545fd109"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/full-check.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/full-check.stdout",
+      "sha256": "4d4146520a94819a437023be855dfebc2be76e998e1528a94dd17a194cc86268"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/full-check.telemetry.json",
+      "sha256": "cce20c89044cb3b4b17ac5d0c7c4a5f262b8d3946dc09868266acde09df8f813"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-argv.authority.json",
+      "sha256": "4db3f7f826ec45735a100e7ee3f7c1f364ad9b58422a55e067bdb1052f732687"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-argv.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-argv.caller.stdout",
+      "sha256": "ecd8c7b102e55f5c7dafce4cf20b7531ef88223dd827dc76c8fe1e5066b28699"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-argv.dispatch.json",
+      "sha256": "b3f765310792bab239e20019a3ca5a573d6411ae810c860d5a085e9fa2059dae"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-argv.stderr",
+      "sha256": "e3bc147ff0ede232973b59c795386412e0cf1e9f7f1f564ce317957c0ab341ba"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-argv.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-argv.telemetry.json",
+      "sha256": "ccbf8a4ffe9ad3aabf5cf1f60a055db22c5aea06118c0151504da6148b4c97b4"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-cap.authority.json",
+      "sha256": "4b696fd9f00d2f795df91d28e908f04709b0c5373a7b51e130584606cbfd1e81"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-cap.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-cap.caller.stdout",
+      "sha256": "f5555356e9382ae000b8091fc441ecb86c59f41a1b9b4a90857d12d322700eb3"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-cap.dispatch.json",
+      "sha256": "3146cd57ca692bc4c790e5a7e0e170c373dd3e0929b3a2e3ccce12e55e5c54cb"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-cap.stderr",
+      "sha256": "9360be979adb1c25993a63046cdf4badc8690aafed2832b0603f6ad08d33adaf"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-cap.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-cap.telemetry.json",
+      "sha256": "66fedf2dba5c88733d0e90b96a96e75b9bd6c79a0097112d6ae0341833b66efe"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-disabled.authority.json",
+      "sha256": "675122d77a43f448bfa2ef772da7248c980c8127cd13c9eade73cd7568609ff0"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-disabled.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-disabled.caller.stdout",
+      "sha256": "0cec5a7eed2eb763a7b953bb1a3660f51db1cdba7646174f95f59034e4bd3719"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-disabled.dispatch.json",
+      "sha256": "095e1baa5e57b154b4446b65e71c3714c1943bd62df1448fb35f3c966838dc6f"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-disabled.stderr",
+      "sha256": "85df3a52df2e936f9c9088e0b8e7a0900e7753323baeecc72554c25a7715a870"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-disabled.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-disabled.telemetry.json",
+      "sha256": "2273b94fc8b7db742aa4f08c68cbec71e0b2bff3fe4399ef1142ecdc47cdbfdc"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-missing-input.authority.json",
+      "sha256": "1276c9d470069fbe3f0f2e79c225ceedb85fdfe4147fe431673c22718ace8f44"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-missing-input.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-missing-input.caller.stdout",
+      "sha256": "a66ddaa9bfdac09921d1a7b3a73e241d1be0112ef8b373d1dc805d03c2354fcb"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-missing-input.dispatch.json",
+      "sha256": "31b438fd4f3af9f7749cf772d1ee01315d5e20780fd88b4c981a03105e19bff6"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-missing-input.stderr",
+      "sha256": "a54b5adf6cd56fc7268ae5cee6b792a9ec4843f9a6b361441122019cf57437c6"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-missing-input.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-missing-input.telemetry.json",
+      "sha256": "eea658b1292b6839a11c7a9ce422fb417fb55e2e3fada490c48123fb8ad6933d"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-valid.authority.json",
+      "sha256": "5a21ebb1ae9d72db5f2a76e7264111df27d4232f07763ac3eedaebc2db856b30"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-valid.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-valid.caller.stdout",
+      "sha256": "6b69ac5bae453a1f652b84b54e17468971a918c05d33532147632a7d1aaf5add"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-valid.dispatch.json",
+      "sha256": "ac846dec4b7e27a80e092b67d070bb687b8243bc11634f30ec6940a57c808129"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-valid.sentinel",
+      "sha256": "6c6419e93c916a7be827f962250694e568c52e56906280c2982b1ad78ce87ea8"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-valid.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-valid.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-valid.telemetry.json",
+      "sha256": "23eed7dbbc366c9c67c8c054587eb810b65aad28ed89190c338c2000e1ffdf89"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-wronghost.authority.json",
+      "sha256": "b3019ae85ba3f2635e8c11559c9480a029224e05a697efdad6257c168aafe2c4"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-wronghost.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-wronghost.caller.stdout",
+      "sha256": "fc50f39f0b5f77b9ba06ac3168f76cd9cdb528351b5d66414a9d1fea43a11851"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-wronghost.dispatch.json",
+      "sha256": "3b05e3662d8bfff4c44c2a57bf198554bb3648933136cce57b6172d87410f010"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-wronghost.stderr",
+      "sha256": "2834c23efe615d6e71353dbde29693da50ea5765ee70b15c06f833eb563e52d4"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-wronghost.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/gate-wronghost.telemetry.json",
+      "sha256": "15c039b85e5a44692bd330825eb29e1f4159f6cb3b40bdf13095a5ef40a3d968"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/input_evidence.py",
+      "sha256": "d262f3d498323b4606c51828a647b7334e8885095b099acbff41d17dd6db88b9"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/normalized.full.receipt.json",
+      "sha256": "062cf0c0296f67154736de1cbf7c43378f649da49bbd89f141950f58272f3aab"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/normalized.json",
+      "sha256": "e62734b04ddc7ad55a64f5350639332f533aa94c3526cd5b2f53378e4d96b750"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/outer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/outer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/preflight.PASS.json",
+      "sha256": "43fe0c187ae704697c6a33b7d3da6257a45854845d030a7f75b22f35152685af"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/probe.py",
+      "sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/semantic-controls.authority.json",
+      "sha256": "add1facdae907081b8f51d2a22b6049ef18a5c47afdee8d57d6f8d8c619547cf"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/semantic-controls.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/semantic-controls.caller.stdout",
+      "sha256": "7385ebf4c4ccd1c7dca1455b4c74f4f58b0d485cefd76fa0f263f17a56430fe6"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/semantic-controls.dispatch.json",
+      "sha256": "e70734ea2ffd6de67ff6048e9a30c594cbde4742ecb11f43dda6e0cc1092dc8a"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/semantic-controls.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/semantic-controls.stdout",
+      "sha256": "14866828fabf5e200cf743b86deabf71e6c9666ac094cd8d322c5fdd8f4a7a7d"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/semantic-controls.telemetry.json",
+      "sha256": "55e42a58a27f52014a3421db21536743ade6df141007dd2c349745b880e5480b"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/semantic_controls.py",
+      "sha256": "cc04757ed669dab0a506579079478bf71f41ba8debde0de83944ecdd7b416a90"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/univariate.full.receipt.json",
+      "sha256": "0c22af83d8846a6dbf77b424a482a0963559c9c51151539605f1c9a4f5ad0714"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/remote/univariate.json",
+      "sha256": "3cfec9aaec77c3f1c15f0192aee0fa3fc2b958ca4a41261cb079ec87a71d769a"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/root-stop-release.txt",
+      "sha256": "beae211562afef62c9a45acb2602c8f96fbe0a621527e1171b2f8730317da8d9"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/source-pins-before.sha256",
+      "sha256": "be98b900cc04b0a29bece9f1174b79f88b2bf518dacd02a9aedcc976d830a59f"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/status-1.txt",
+      "sha256": "46140a398adcf5312136b5ec4cc5d41ab129772eed06e7128d063d90004ec918"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/timer-before.txt",
+      "sha256": "e8ed91dcc7c13fa73cd9b621210f9d8553feacb14681acf8e7d335edeb59e157"
+    },
+    {
+      "path": "box/f10-r1-univariate-runtime-execution-20260909/usage-before.json",
+      "sha256": "bfe3f3f4a642dd68dd6dda36f7a876a49818fb2c06d6762feefc82ef1f428201"
+    },
+    {
+      "path": "xmodel/f10-r1-univariate-runtime-execution-astra-20260909.md",
+      "sha256": "d1844ddaad655187f2120f56b40923e69cb883e91cd0ca24c75c2504e14be316"
+    },
+    {
+      "path": "xmodel/f10-r1-univariate-runtime-execution-astra-20260909.md.artifact.json",
+      "sha256": "9fa50db01db0ede032ab492f41ea2038604c847927fc1d0a1d6784f5a44fa414"
+    }
+  ],
+  "counts": {
+    "inputs": 22,
+    "owned_excluding_custody": 123,
+    "remote_retained": 100,
+    "root_frozen_files_excluded_from_owned": 3,
+    "preflight_children": 7,
+    "mathematical_children": 3,
+    "in_process_negatives": 7
+  },
+  "checks": {
+    "report_absence_first": true,
+    "root_three_files_hash_before_whole": true,
+    "root_three_files_unchanged": true,
+    "all_staging_pins_pre_and_post": true,
+    "remote_regular_files_and_interpreter": true,
+    "active_independent_stop_before_start": true,
+    "terminal_unit_caller_cgroup_before_payload": true,
+    "remote_hashes_before_payload": true,
+    "all_transferred_bytes_hash_verified": true,
+    "all_ten_authority_telemetry_metadata_links": true,
+    "seven_fixture_hashes_match": true,
+    "own_whole_before_marker": true,
+    "own_open_quantity_cheapest_test_check": true,
+    "expected_transaction_verified": true
+  },
+  "worker": {
+    "instance_id": "i-08d2a40f272ee9fa2",
+    "state": "STOPPED",
+    "lane_positive_confirmation_utc": "2026-09-09T21:01:40+00:00",
+    "root_positive_confirmation_utc": "2026-09-09T21:02:08+00:00",
+    "ebs_retained": "vol-0574e0fa5aed1f5e3",
+    "backup_cancelled_by_root": true,
+    "duty": "CLOSED"
+  },
+  "scope": {
+    "local_mathematical_processes": 0,
+    "remote_batch_count": 1,
+    "solver": false,
+    "retries": 0,
+    "source_edits": 0,
+    "downstream_acceptance_issued": false,
+    "coefficient_bitlength": "UNMEASURED",
+    "outer_cpu_peak": "UNMEASURED",
+    "independent_first_runtime_gate": "PENDING ROOT"
+  },
+  "notes": "Custody excludes itself. All source/report writers are IDLE; only final metadata freeze remains. Initial live-tree text is a documentary summary. One JSON key-order comparison was corrected as metadata, not a remote retry."
+}

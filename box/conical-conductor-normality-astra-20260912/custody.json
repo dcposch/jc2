@@ -1,0 +1,45 @@
+{
+  "schema": "jc2-manual-custody/v1",
+  "task": "conical-conductor-normality-astra-20260912",
+  "status": "COMPLETE_MANUAL_UNREVIEWED",
+  "first_action_utc": "2026-09-12T13:33:36Z",
+  "original_reserve_utc": "2026-09-12T13:45:00Z",
+  "original_hard_stop_utc": "2026-09-12T13:48:00Z",
+  "opened_utc": "2026-09-12T13:34:27Z",
+  "closed_utc": "2026-09-12T13:40:24Z",
+  "finalized_utc": "2026-09-12T13:40:24Z",
+  "report_manifest_whole_expected_verify_postpins_completed_by_utc": "2026-09-12T13:40:38Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "lease_id": "c37f8e60cd7da3f6bfb91f60361d7a8f",
+  "expected_manifest_sha256": "96b2c4d6f83dcec94e03596f312c5b4803084ddba55337d57167a22ab84744b6",
+  "expected_manifest_verification": "VERIFIED",
+  "body_bytes": 10005,
+  "body_sha256": "8fa0b29635d2d8c56f771bd1a6b48af4a4fbb09f12224a70446e02ae5d535f02",
+  "inputs_pre_and_post_identical": [
+    {"path": "/home/ubuntu/jc2/COORDINATION.md", "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597", "read_scope": "FRESH_WHOLE before TASK; 806 lines in 1-220, 221-440, 441-660, 661-806. Initial combined output clipped middle ranges; 221-440 and 441-660 were freshly reread in full before proceeding."},
+    {"path": "/home/ubuntu/jc2/box/conical-conductor-normality-astra-20260912/TASK.md", "sha256": "f8348ce59bc71ed49f2c48bdae266f0e841d62032cefa838213aa15819c989f1", "read_scope": "FRESH_WHOLE after coordination"}
+  ],
+  "owned_outputs_excluding_this_custody": [
+    {"path": "/home/ubuntu/jc2/xmodel/conical-conductor-normality-astra-20260912.md", "sha256": "a8867349922a7d9f53d39697e66b25976e9c12994bbdeea48ef45ebe7424ea62", "read_scope": "WHOLE completed private body before marker; WHOLE sealed final report"},
+    {"path": "/home/ubuntu/jc2/xmodel/conical-conductor-normality-astra-20260912.md.artifact.json", "sha256": "96b2c4d6f83dcec94e03596f312c5b4803084ddba55337d57167a22ab84744b6", "read_scope": "WHOLE and exact expected-basis/manifest verification"},
+    {"path": "/home/ubuntu/jc2/box/conical-conductor-normality-astra-20260912/PINS.json", "sha256": "f6a334e52a807084b9fbc284f52a421a15d10005636e470d8dba8e6b5dd4a209", "read_scope": "WHOLE owned readback"}
+  ],
+  "exact_result": "The conical reduced singular-preimage criterion holds for finite birational unramified A2 normalization of an integral affine hypersurface in A3. Includes finite analytic branch exhaustion, pure intersections, multiple-line contradiction, and single-line polynomial-Luroth generic-degree contradiction. Reduced support equals conductor support; conductor ideal invariance is not assumed.",
+  "controls": "Nodal surface normalization retains all hypotheses except conicality; cusp surface has conical support but fails unramifiedness; identity onto a plane has empty conductor.",
+  "remaining_scope_gap": "No actual Keller conicality, global graph action, conductor-ideal stability, JC2 or novelty claim. Same-model co-research only, not FIRST or promotion.",
+  "checks": {
+    "initial_owned_outputs_absent": true,
+    "preseal_final_manifest_custody_absent": true,
+    "own_whole_before_marker": true,
+    "unique_marker_appended_last": true,
+    "final_report_manifest_whole": true,
+    "all_input_postpins_match": true,
+    "quantity_cheapest_test_and_scope_explicit": true,
+    "canonical_open_or_charge_basis": false,
+    "scientific_execution": false,
+    "network_worker_agents_or_protected_access": false,
+    "shared_old_or_task_edits": false,
+    "administrative_finalizer_only_interpreter_use": true
+  },
+  "completion_handshake": "Final custody WHOLE/SHA, unchanged input/output vector and actual ALL WRITERS IDLE UTC are delivered in the terminal message. No further authored changes or follow-on authority."
+}

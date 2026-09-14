@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-small-polynomial-lift-gate-fable5-20260906/gate_controls.py", line 168, in <module>
+    req(polynomial_after(P0,{(0,-1)})==(not m('--mutate-omit')),"C5c omitting exactly that row makes the verifier accept a nonpolynomial P (real omission)")
+  File "/home/ubuntu/jc2/box/d125-small-polynomial-lift-gate-fable5-20260906/gate_controls.py", line 79, in req
+    if not ok: raise AssertionError("FAIL "+msg)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: FAIL C5c omitting exactly that row makes the verifier accept a nonpolynomial P (real omission)
+Command exited with non-zero status 1
+1.50 s 39452 KB

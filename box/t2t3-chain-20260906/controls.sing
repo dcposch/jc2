@@ -1,0 +1,57 @@
+// Exact-Q semantic controls for the attained T2/T3 chart.
+// This file contains no source, T3-production, or Jacobian equations in the
+// cone-vertex block: it tests the leader obstruction alone.
+ring C=0,(b,a,cq,d,L2,Z2,r,u,v,w),lp;
+ideal cone=
+  b+3*r,
+  a-2*u+3*w,
+  cq+r^3+r*u-3*r*w-2*v,
+  d-r^2*u-3*r*v-u^2+4*u*w-3*w^2,
+  -L2,
+  Z2*L2-1;
+ideal coneSB=std(cone);
+ideal conePositive=L2-1,Z2*L2-1;
+print("BEGIN_CONE_CONTROL");
+print(reduce(1,coneSB));
+print(reduce(1,std(conePositive)));
+// Explicit certificate: Z2*(-L2)+(Z2*L2-1)=-1.
+print(reduce(Z2*(-L2)+(Z2*L2-1)+1,coneSB));
+print("END_CONE_CONTROL");
+
+ring T=0,(z,L,Z),dp;
+poly p99=z^8*(1+z)^3;
+poly q99=L*p99^5;
+poly b2_99=3*p99^12;
+poly b3_99=3*q99^2*b2_99;
+poly expected_b3_99=9*L^2*p99^22;
+poly t2_99=L*z^40*(1+z)^15;
+poly t3_99=L*z^105*(1+z)^40;
+
+poly p108=z^7*(1+z)^2;
+poly q108=L*p108^7;
+poly b2_108=3*p108^16;
+poly b3_108=4*q108^3*b2_108;
+poly expected_b3_108=12*L^3*p108^37;
+poly t2_108=L*z^49*(1+z)^14;
+poly t3_108=L*z^176*(1+z)^51;
+
+if (b3_99-expected_b3_99!=0) { ERROR("99 derivative target mismatch"); }
+if (b3_108-expected_b3_108!=0) { ERROR("108 derivative target mismatch"); }
+if (size(t2_99)!=16) { ERROR("99 T2 nonzero target count mismatch"); }
+if (size(t3_99)!=41) { ERROR("99 T3 nonzero target count mismatch"); }
+if (size(t2_108)!=15) { ERROR("108 T2 nonzero target count mismatch"); }
+if (size(t3_108)!=52) { ERROR("108 T3 nonzero target count mismatch"); }
+intvec zWeight=1,0,0;
+if (deg(t2_99,zWeight)!=55 || deg(t3_99,zWeight)!=145) { ERROR("99 target degree mismatch"); }
+if (deg(t2_108,zWeight)!=63 || deg(t3_108,zWeight)!=227) { ERROR("108 target degree mismatch"); }
+
+print("BEGIN_LEADING_TARGET_CONTROL");
+print(b3_99-expected_b3_99);
+print(b3_108-expected_b3_108);
+print(size(t2_99));print(size(t3_99));
+print(size(t2_108));print(size(t3_108));
+// A one-slot perturbation must not compare equal.
+print((t3_99+z^104)-t3_99);
+print((t3_108+z^175)-t3_108);
+print("END_LEADING_TARGET_CONTROL");
+quit;

@@ -1,0 +1,69 @@
+{
+  "entries": [
+    {
+      "classification": "INVALID_CONSTRUCTION",
+      "exists": true,
+      "path": "box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN/INVALID_CONSTRUCTION.json",
+      "reason": "uncleared finite-field row denominators; ignored and replaced by V2",
+      "sha256": "df5a75cb19f71a8ecb47d15af6d880416693a60bda91d905b9a642bfa909f10a"
+    },
+    {
+      "classification": "OPEN_INVALID_EARLY_RUN",
+      "exists": true,
+      "path": "box/k4rayk89-20260903/explicit-runs/k8-rho-p32003/summary.json",
+      "reason": "early parser/construction run; superseded by k8-rho-3prime-exact",
+      "sha256": "5e2c883d6bac23cd97d6b64d3ef844413dd8e7f1a0c92dc62444465ba68718b2"
+    },
+    {
+      "classification": "NECESSARY_POSDIM_ONLY",
+      "exists": true,
+      "path": "box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/summary.json",
+      "reason": "18-variable recurrence screen; no counterexample inference",
+      "sha256": "788ebe2adedaa139b0098ec296c37015578a16780048fab1d4b7116475a2aeca"
+    },
+    {
+      "classification": "TIMEOUT_RAW_51_VARIABLE",
+      "exists": true,
+      "path": "box/k4rayk89-20260903/explicit-runs/k9A-rho-3prime-exact/modular/rho/p32003/guided_gb_result.json",
+      "reason": "raw unreduced K9 A rho chart timed out",
+      "sha256": "94e354877d8b9efbfa62626ba98ef58e9c1a30b4cb6bad48b2201b30c18e7bbc"
+    },
+    {
+      "classification": "TIMEOUT_RAW_STAGED",
+      "exists": true,
+      "path": "box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_RAW_K9A_HBLOCK_P32003_V1/K9_A/probe-progress.json",
+      "reason": "raw 51-variable staged diagnostic; workflow intentionally terminated",
+      "sha256": "a8a3ef897eb80d1e801bfa8ff776b2b8a7941a31316996a25db7b36bde8521d7"
+    },
+    {
+      "classification": "TIMEOUT_ALPHA_PREFIX",
+      "exists": true,
+      "path": "box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9A_ALPHA_PREFIX_V6/K9_A/probe-progress.json",
+      "reason": "terminal/alpha-only diagnostic; intentionally stopped after decisive full-chart screen",
+      "sha256": "693455452951d159cd3e767d25c0dfa3d40cb49f5a9ba2b1d511f29602bd9302"
+    },
+    {
+      "classification": "TERMINAL_ONLY",
+      "exists": true,
+      "path": "box/k4rayk89-20260903/explicit-runs/driver-audit-k9b-terminal-rref-v2/build/explicit-chart.json",
+      "reason": "necessary terminal checkpoint, not a row decision",
+      "sha256": "e98f7bb7c66bb74bfd6fa40f884e2ab7a2e213b42f54a62cb189778444369c8e"
+    },
+    {
+      "classification": "DEVELOPMENTAL_TIMEOUT_PATH",
+      "exists": true,
+      "path": "box/k4rayk89-20260903/hensel_reduced_sol56.py",
+      "reason": "generic symbolic reducer was too slow and was not used for promotion",
+      "sha256": "1d62ec697f7cb810b6a479f11b0759fb915e8feab169c9aec178cf18859c6f61"
+    },
+    {
+      "classification": "DEVELOPMENTAL_SCREEN_DRIVER",
+      "exists": true,
+      "path": "box/k4rayk89-20260903/quotient_recurrence_sol56.py",
+      "reason": "necessary-screen/RREF development driver, not authoritative proof output",
+      "sha256": "9c580c7e9e9d842947e45daf6aa7e35e18fc108cac9b7cec8c2a24dfaa6bf7b8"
+    }
+  ],
+  "excluded_from_authoritative_manifest": true,
+  "type": "K4RAY-K89-NONAUTHORITATIVE-DIAGNOSTIC-INVENTORY"
+}

@@ -1,0 +1,27 @@
+Note: switching to '185e7b92fa0687f4db68b0f2f453a835668ac132'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+./autogen.sh: 2: autoreconf: not found
+Traceback (most recent call last):
+  File "/home/ubuntu/full-j-solver-pilot-20260906/worker.py", line 170, in <module>
+    elif sys.argv[1] == 'build': build()
+                                 ^^^^^^^
+  File "/home/ubuntu/full-j-solver-pilot-20260906/worker.py", line 134, in build
+    subprocess.run(cmd,cwd=src,check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['./autogen.sh']' returned non-zero exit status 127.

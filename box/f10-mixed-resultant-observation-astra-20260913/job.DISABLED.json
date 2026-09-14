@@ -1,0 +1,16 @@
+{
+  "schema": "DISABLED-JC2-JOB-TEMPLATE/v1",
+  "enabled": false,
+  "instance": null,
+  "tag": null,
+  "wall_seconds": 840,
+  "memory_mib": 16384,
+  "cpu_percent": 200,
+  "tasks_max": 32,
+  "file_mib": 8,
+  "files": {"observer.py": null},
+  "phases": [
+    {"name": "smoke", "argv": ["/usr/bin/python3", "-I", "-u", "@payload/observer.py", "--instance", "UNBOUND", "--job-tag", "UNBOUND", "--mode", "smoke"], "expected_exit": 0},
+    {"name": "observe", "argv": ["/usr/bin/python3", "-I", "-u", "@payload/observer.py", "--instance", "UNBOUND", "--job-tag", "UNBOUND", "--mode", "observe"], "expected_exit": 0}
+  ]
+}

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/gi-only-20260905/activate_sparse_rows.py", line 472, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/ubuntu/jc2/box/gi-only-20260905/activate_sparse_rows.py", line 411, in main
+    "frozen_builder_fix": artifact(FROZEN_BUILDER_FIX),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/gi-only-20260905/activate_sparse_rows.py", line 73, in artifact
+    return {"path": rel(path), "bytes": path.stat().st_size, "sha256": sha256(path)}
+                    ^^^^^^^^^
+  File "/home/ubuntu/jc2/box/gi-only-20260905/activate_sparse_rows.py", line 69, in rel
+    return str(path.resolve().relative_to(ROOT))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/jc2-lane.ymMTCq/inputs/builder_fix.py' is not in the subpath of '/home/ubuntu/jc2'

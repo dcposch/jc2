@@ -1,0 +1,258 @@
+{
+  "tag": "joint_wz5_jet0pinned_stage0",
+  "radius": {
+    "z_s_order": 5,
+    "weight": "4*r+5*q",
+    "K3_face": 35,
+    "K2_face": 140,
+    "K2_D1_leading_e_exponent": 287,
+    "D1_line": "s=e^2, t=e^8, z=e^10*(1+Pi*e)"
+  },
+  "chart": {
+    "h3_cutoff": 35,
+    "jet0_free": false,
+    "h3_stage0_pivots": 12,
+    "h3_stage0_residual": 0,
+    "h3_free": [
+      "Hc_5_4",
+      "Hc_9_0"
+    ],
+    "minor_free": [
+      "jet1",
+      "jet2",
+      "c"
+    ]
+  },
+  "gauge_ledger": [
+    {
+      "normalization": "major_coordinate z = w-1 (D3 cluster leading coeff 1)",
+      "group_element": "y -> lambda*y",
+      "status": "SPENT"
+    },
+    {
+      "normalization": "top_K3 = z^7*(1+z)^2, second cluster at w=0",
+      "group_element": "y -> y + mu*x",
+      "status": "SPENT"
+    },
+    {
+      "normalization": "D2 centre a_1 = 0 (Lemma C: the sole centre exponent)",
+      "group_element": "y -> y + a_1",
+      "status": "SPENT (Repair R)"
+    },
+    {
+      "normalization": "minor constant jet0",
+      "group_element": "none left",
+      "status": "FREE (released by Repair R)"
+    },
+    {
+      "normalization": "p = pi^2 - c (no linear term in pi)",
+      "group_element": "child generic-point reparametrisation, not in the degree<=1 affine group",
+      "status": "SPENT; hostile-tested by the gate"
+    },
+    {
+      "normalization": "D1 centre pi = 1 (one of the A_2 = 4 conjugates)",
+      "group_element": "choice of Galois conjugate, no group parameter",
+      "status": "FREE CHOICE"
+    }
+  ],
+  "major": {
+    "K2c_count": 125,
+    "h2_D1_raw_rows": 9,
+    "h2_D1_weights": [
+      141,
+      142,
+      143
+    ],
+    "h2_D1_pivots": 9,
+    "h2_D1_residual": [],
+    "h2_D1_zero_rows": 0,
+    "h2_D1_pivot_vars": [
+      "K2c_14_17",
+      "K2c_19_13",
+      "K2c_24_9",
+      "K2c_29_5",
+      "K2c_34_1",
+      "K2c_13_18",
+      "K2c_18_14",
+      "K2c_23_10",
+      "K2c_12_19"
+    ],
+    "K2_D1_leading_e_exponent": 287
+  },
+  "K2_face_sites": {
+    "5_24": "-7",
+    "10_20": "21",
+    "15_16": "-35",
+    "20_12": "35",
+    "25_8": "-21",
+    "30_4": "7",
+    "35_0": "-1"
+  },
+  "outer": {
+    "specs": {
+      "A2": {
+        "degree": 71,
+        "W0": 276,
+        "threshold": 566
+      },
+      "A3": {
+        "degree": 107,
+        "W0": 416,
+        "threshold": 853
+      },
+      "B1": {
+        "degree": 35,
+        "W0": 136,
+        "threshold": 279
+      },
+      "B2": {
+        "degree": 71,
+        "W0": 276,
+        "threshold": 566
+      }
+    },
+    "weight": "W=4*r+5*q",
+    "D1_e_weight": "2*W+k",
+    "preblock": {
+      "imposed_D2_coordinate_rows": 6880,
+      "redundant_D1_labels_on_deleted_coordinates": 25565,
+      "kept_by_block": {
+        "A2": 252,
+        "A3": 288,
+        "B1": 176,
+        "B2": 252
+      }
+    },
+    "D1_offsets": [
+      {
+        "offset": 0,
+        "raw_rows": 56,
+        "Qstar_pivots": 34,
+        "dependent_zero": 22,
+        "by_block": {
+          "A2": {
+            "raw_rows": 14,
+            "positions": 9
+          },
+          "A3": {
+            "raw_rows": 21,
+            "positions": 9
+          },
+          "B1": {
+            "raw_rows": 7,
+            "positions": 7
+          },
+          "B2": {
+            "raw_rows": 14,
+            "positions": 9
+          }
+        },
+        "pivot_variables": [
+          "A2c_29_32",
+          "A2c_34_28",
+          "A2c_39_24",
+          "A2c_44_20",
+          "A2c_49_16",
+          "A2c_54_12",
+          "A2c_59_8",
+          "A2c_64_4",
+          "A2c_69_0",
+          "A3c_104_0",
+          "A3c_64_32",
+          "A3c_69_28",
+          "A3c_74_24",
+          "A3c_79_20",
+          "A3c_84_16",
+          "A3c_89_12",
+          "A3c_94_8",
+          "A3c_99_4",
+          "B1c_14_16",
+          "B1c_19_12",
+          "B1c_24_8",
+          "B1c_29_4",
+          "B1c_34_0",
+          "B1c_4_24",
+          "B1c_9_20",
+          "B2c_29_32",
+          "B2c_34_28",
+          "B2c_39_24",
+          "B2c_44_20",
+          "B2c_49_16",
+          "B2c_54_12",
+          "B2c_59_8",
+          "B2c_64_4",
+          "B2c_69_0"
+        ]
+      }
+    ],
+    "D1_cumulative_pivots": 34,
+    "outer_free_count": 934
+  },
+  "stage_spec": {
+    "stage": 0,
+    "D1_offset": 0,
+    "pole_local_power": 4,
+    "pole_exponents": {
+      "F": -104,
+      "G": -68
+    },
+    "jacobian": {
+      "t_power": 1,
+      "degree": 177,
+      "w_powers": [
+        25
+      ]
+    }
+  },
+  "max_t": 4,
+  "row_accounting": {
+    "prior": {
+      "F": 3,
+      "G": 3,
+      "J177": 10
+    },
+    "stages": [
+      {
+        "stage": 0,
+        "F": 1,
+        "G": 1,
+        "J": 1
+      }
+    ]
+  },
+  "raw_row_count": 19,
+  "rows_sha256": "80e055b98c79c882d8549009fa870ef3e73a2bba492f0751b3c8936b842ed35a",
+  "free_unknowns": 1052,
+  "Qstar_pivots": 0,
+  "dependent_zero_rows": 18,
+  "residual_row_count": 1,
+  "residual": {
+    "stage0_G_local4_coord0": "B1c_0_28*K2c_3_26 + 8*B1c_0_28*jet2 - B1c_0_29*K2c_3_26 - 8*B1c_0_29*jet2 + B1c_0_30*K2c_3_26 + 8*B1c_0_30*jet2 - B1c_0_31*K2c_3_26 - 8*B1c_0_31*jet2 + B1c_0_32*K2c_3_26 + 8*B1c_0_32*jet2 - B1c_0_33*K2c_3_26 - 8*B1c_0_33*jet2 + B1c_0_34*K2c_3_26 + 8*B1c_0_34*jet2 - B1c_0_35*K2c_3_26 - 8*B1c_0_35*jet2"
+  },
+  "residual_variables": [
+    "B1c_0_28",
+    "B1c_0_29",
+    "B1c_0_30",
+    "B1c_0_31",
+    "B1c_0_32",
+    "B1c_0_33",
+    "B1c_0_34",
+    "B1c_0_35",
+    "K2c_3_26",
+    "jet2"
+  ],
+  "singular": {
+    "unit_ideal": false,
+    "dimension": 10,
+    "active_variables": 11,
+    "reduce_1_in_std": "1",
+    "gb_size": 2,
+    "controls": {
+      "empty_c=0_must_be_unit": "0",
+      "point_c=1_must_be_nonunit": "1",
+      "raw_unlocalized": "1"
+    },
+    "wrapper": "Zc*c-1"
+  },
+  "wall_seconds": 33.6
+}

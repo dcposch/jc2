@@ -1,0 +1,76 @@
+{
+  "backend_metadata": {
+    "active_computation_generators": [
+      "w",
+      "a",
+      "b",
+      "delta",
+      "epsilon"
+    ],
+    "backend": "python-flint fmpq_mpoly",
+    "band_terms": 4119,
+    "coefficient_field": "Q",
+    "elapsed_seconds": 0.357108573000005,
+    "first_band": 0,
+    "full_chart_coordinates_removed": false,
+    "helper_sha256": "a1d353e86811915522a89417ae420e9373d06fbbbcdb3487ad9ab4ae1e686006",
+    "normal_form_rule": "retain the combined polynomial A+B*d; every reduction difference is a multiple of the monic q",
+    "quotient": {
+      "a": "-1",
+      "b": "-2",
+      "d": "delta",
+      "e": "epsilon",
+      "polynomial": "delta**2 + delta*epsilon**2 - 2*epsilon**4"
+    },
+    "t_cutoff": 8
+  },
+  "both_components_preserved": true,
+  "checks": [
+    {
+      "coefficient_slots": 0,
+      "t": 0
+    },
+    {
+      "coefficient_slots": 0,
+      "t": 1
+    },
+    {
+      "coefficient_slots": 3,
+      "t": 2
+    },
+    {
+      "coefficient_slots": 6,
+      "t": 3
+    },
+    {
+      "coefficient_slots": 10,
+      "t": 4
+    },
+    {
+      "coefficient_slots": 12,
+      "t": 5
+    },
+    {
+      "coefficient_slots": 11,
+      "t": 6
+    },
+    {
+      "coefficient_slots": 11,
+      "t": 7
+    },
+    {
+      "coefficient_slots": 10,
+      "t": 8
+    }
+  ],
+  "helper_sha256": "a1d353e86811915522a89417ae420e9373d06fbbbcdb3487ad9ab4ae1e686006",
+  "independent_monic_polynomial_remainder_match": true,
+  "linear_remainder_not_split": "delta - epsilon**2",
+  "negative_controls": [
+    "sqrt(2)",
+    "1/delta",
+    "sin(delta)"
+  ],
+  "oracle": "SymPy monic division in delta; exact evaluation at both delta=epsilon\u00b2 and delta=-2epsilon\u00b2",
+  "status": "PASS"
+}

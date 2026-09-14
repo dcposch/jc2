@@ -1,0 +1,58 @@
+{
+  "Qstar": {
+    "coefficient_field": "Q",
+    "ledger": [
+      {
+        "coefficient": "-98304",
+        "label": "T2_s56_pi0",
+        "rhs": "B1c_7_20 - B1c_7_21 + B1c_7_22 - B1c_7_23 + B1c_7_24 - B1c_7_25",
+        "variable": "B1c_7_19"
+      }
+    ],
+    "pivots": 1,
+    "residual_rows": 0
+  },
+  "arithmetic": {
+    "localized_terms": 12337,
+    "products_considered": 35053,
+    "products_retained": 2756
+  },
+  "custody": {
+    "all_match": true,
+    "count": 21
+  },
+  "dimension_proof": {
+    "c1_gauged_ambient": 906,
+    "c1_gauged_principal_cut": 905,
+    "localized_ambient_after_38_T_coefficients": 907,
+    "localized_principal_cut": 906,
+    "reason": "The stage7 quotient with the 38 inactive T variables is a localized polynomial domain; this row is nonzero and nonunit, so its principal ideal has height one."
+  },
+  "endpoint": {
+    "free": 869,
+    "joint_all_zero": true
+  },
+  "normalization": "U2=s^396*T2; all lower coefficients vanish",
+  "resources": {
+    "max_rss_kib": 209612,
+    "wall_seconds": 311.081
+  },
+  "row": {
+    "factorization": "-98304*(B1c_7_19 - B1c_7_20 + B1c_7_21 - B1c_7_22 + B1c_7_23 - B1c_7_24 + B1c_7_25)",
+    "free_symbol_count": 7,
+    "label": "T2_s56_pi0",
+    "nonzero_after_c1_gauge": true,
+    "nonzero_over_Q": true,
+    "sha256_srepr": "4726401ff9500a13ee18e5c3b31d1133d7a187fe62400f5903188d14aa599167",
+    "total_degree": 1,
+    "vanishes_at_stage7_point_c1_all_other_chart0": true
+  },
+  "singular": {
+    "active_variables": 8,
+    "inactive_variables": 899,
+    "path": "box/g9966d52bridge-20260903/t2-first-row-Q.sing",
+    "sha256": "711f40b248785f05ad063057eac156385346550b9863eb9c4d2af29bfc4dd87a"
+  },
+  "status": "COMPLETE[FIRST-ROW]",
+  "type": "EXACT-Q FIRST NONLINEAR T2 BRIDGE ROW"
+}

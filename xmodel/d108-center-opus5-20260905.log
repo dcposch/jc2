@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done — report sealed at `xmodel/d108-center-opus5-20260905.md` (body 21,665 B, `seal.py verify` PASS).
+
+## VERDICT: `D108-DELTA3-DEAD` **REFUTED** at stage 0
+
+**The commissioned repair (the centre) succeeds — but it isn't what breaks the kill.**
+
+**(1) Centre lemma, proved.** Moh p.201 (8) gives `L_2 = lcm{den δ_3} = 1`, so the D2 generic point's Def 5.1(4) centre exponents are *integers*; the only integer in `(0, 1+δ_2) = (0, 5/4)` is `j = 1`. So there is exactly **one** admissible centre coordinate, `a_1 t` in `z`, which is a **constant in `y`**.
+
+**(2) Gauge ledger.** `a_1 t ⟺ y ↦ y + a_1` (det 1, `J` unchanged). The gauge group is `(x,y) ↦ (x, λy+μx+s_0)`: `λ` is spent by `z = w−1`, `μ` by the face root at `w = 0`, and `s_0` is **already spent** — implicitly, by `minor_series w = jet1 t² + jet2 t³ + πt⁴` having no `t¹` term. So the repair must pay: free `jet0`.
+
+**(3) Repair measured — and it works.** With `jet0` free the ideal is *still* a unit, with an exact-Q `lift` cofactor identity (`CHECK = 1`) that specialises at `jet0 = 0` to the identity `17(ddddd)` published.
+
+**(4) The floor's slope is wrong.** Auditing the offset forced auditing `6` in `4r+6q`. Def 5.1(3) gives `δ₂ = 1/4` ⇒ `z`-radius `5/4` ⇒ `z = πs⁵`, weight `4r+5q`, face weight `35 = ord_s K3(σ_D2) = 4(9 + 7·¼ − 2)`. Four corroborations: the exact order; the sibling `(99,66)` engine passing the identical test three-for-three; the visible transplant (D=108 keeps the sibling's `e¹²/e¹³` while changing only `t=e⁹→e⁸` — correct values are `e¹⁰/e¹¹`); and `V₂ = 7` vs the engine's own face multiplicity 8.
+
+On the corrected chart all 12 nonzero rows become `Q*` pivots on 12 distinct coordinates, residual **empty**, with an explicit rational point (`jet1=jet2=c=1`) clearing `c ≠ 0`, `ord_s = 35`, `D₂`-minimality (`Hc_5_3 = 2 ≠ 0`), and the Galois shape `π³(π⁴+2)`. Every case was run in sympy over `QQ` *and* re-run in Singular; A/B/C reproduce the frozen baseline, the 42-control, and the `17(zzzzzz)` §2.2 probe exactly.
+
+**(99,66):** radius **SOUND** (`3r+4q` ↔ `δ₂ = 1/3`, face 32 = `ord_s K3`); centre **CONDITIONAL** on the same one-coordinate lemma plus one gauge payment — and on δ=5/2 the constant translation is spent *twice* (minor pin + `"b0":"fixed_zero"` = `Hc_11_0`).
+
+Refuting a kill is not a survival proof: the branch is now OPEN, not alive. D=108 is OPEN on both arms.
+DIVERT path=xmodel/d108-center-opus5-20260905.md status=CLEAN_SEALED body_bytes=21665 body_sha256=9c3b3615d8d18e9a694dd172db778c0a76bf7dd99589f10108515bd36276a2d3
+hashed lane input changed during execution; result is quarantined

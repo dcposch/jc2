@@ -1,0 +1,20 @@
+{
+  "binaries": {
+    ".libs/msolve": "175575870bf76a3c3a21c1660e1f6c7b8604a256fc4123643ce9711589326434",
+    "msolve": "2a5e92cf85ecadbef3168b3e8205bf40680da414e5c38940427420e3c4c32053",
+    "src/msolve/.libs/libmsolve.so.3.0.7": "a569a80d81852f031be0d7c1950d68e5d35f04b1a4f85c57a353baf95829c47e",
+    "src/neogb/.libs/libneogb.so.3.0.7": "12197d33ce3075fd41c9874cf1379c1937fc5666e25887ae1ec22a30b271edbb"
+  },
+  "commit": "185e7b92fa0687f4db68b0f2f453a835668ac132",
+  "input": {
+    "edited_source": {
+      "src/msolve/checked-input-size.h": "870592b22426f274a601e21620c45728d91e7c3127a5e75c31432fa2f9cd32b1",
+      "src/msolve/iofiles.c": "536ab7ab87ec175242d4f949db7e16a4ad999ae8d2a6979a867969cac173f7d7",
+      "src/neogb/io.c": "f901d3775c28a813f65527a2bbd65d927eafd9ef3335805a6562932415553a8d"
+    },
+    "msolve-0.10.1-checked-input-allocation-v2.patch": "452565bfc1f1a7450f08bfe71e8d130f7ea7e5cc27c3f8055f474c38df62117b",
+    "msolve-0.10.1-heap-sort-permutation.patch": "c49a9fb322c3c6518ff2234a7e521de3aa6a372efbe27dc4c9aa9360db3b2242",
+    "msolve-0.10.1-int64-input-offset.patch": "4f2e723575ff2acbfcee4144d4c2e47cd314f6f25d1241bd1286c202c3863055"
+  },
+  "upstream_tests": "make check -j8 exited 0"
+}

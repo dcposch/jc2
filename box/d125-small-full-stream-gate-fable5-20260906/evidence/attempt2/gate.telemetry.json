@@ -1,0 +1,63 @@
+{
+  "argv_count": 8,
+  "argv_sha256": "58ad2feae92387e051b01f29e678665272cf7e232484e1a1d3da67a81ba59dec",
+  "caps": {
+    "cpu_seconds": 599,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 8589934592,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 599.0
+  },
+  "child_exit_code": 1,
+  "child_returncode": 1,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2",
+  "max_observed_group_rss_bytes": 127758336,
+  "pgid": 8479,
+  "pid": 8479,
+  "resource": null,
+  "runner_exit_code": 1,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=69938ee6-48bb-4e45-bdf2-efb08c655368;start_ticks=184020",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/gate.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 294,
+    "path": "/home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/gate.stdout",
+    "sha256": "1d04bc8f14c034d9b4f0d747593c69409a4e840f97b876c4ea5d6d6fe54d5d66"
+  },
+  "telemetry_path": "/home/ubuntu/d125-small-full-stream-gate-fable5-20260906/attempt2/gate.telemetry.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-07T00:06:07.383201Z",
+  "utc_start": "2026-09-07T00:05:58.513138Z",
+  "wall_elapsed_seconds": 8.870070233
+}

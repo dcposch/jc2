@@ -1,0 +1,29 @@
+option(redSB); short=0;
+// source=/home/ubuntu/jc2/box/k7-strata-gate-20260905/chart-audit/emitted/K7_B12_Q1_p0.ms
+// source_sha256=875573726b784dc4700de3835f0130617279eb5bab451f712f77088c26cae4e2
+// original_indices=12,13,15,17,18,295
+ring R=0,(v6,v12,v17,v21,v24,v26,v38,v49,v59,v68,v76,v90,v91),dp;
+ideal I=
+37*v38*v90+21*v6*v90^2-37*v12*v90^2,
+v6^2*v90^2,
+33*v38^2+36*v6*v38*v90-7*v12*v38*v90-132*v6*v49*v90-43*v6*v12*v90^2+7*v12^2*v90^2+110*v6*v17*v90^2,
+147*v38*v49-59*v49^2-118*v38*v59+20*v17*v38*v90-78*v21*v38*v90-294*v12*v49*v90+236*v17*v49*v90-294*v6*v59*v90+236*v12*v59*v90+236*v6*v68*v90+274*v12*v17*v90^2-236*v17^2*v90^2+216*v6*v21*v90^2-158*v12*v21*v90^2-100*v6*v24*v90^2,
+70*v49^2+140*v38*v59-111*v49*v59-111*v38*v68+66*v21*v38*v90-124*v24*v38*v90-280*v17*v49*v90+222*v21*v49*v90-280*v12*v59*v90+222*v17*v59*v90-280*v6*v68*v90+222*v12*v68*v90+222*v6*v76*v90+280*v17^2*v90^2+214*v12*v21*v90^2-444*v17*v21*v90^2+156*v6*v24*v90^2-98*v12*v24*v90^2-40*v6*v26*v90^2-74*v90^3,
+v90*v91-1;
+print("CERT__NGEN "+string(size(I)));
+int t=timer;
+matrix T;
+ideal G=liftstd(I,T);
+print("CERT__SECONDS "+string(timer-t));
+print("CERT__GB_SIZE "+string(size(G)));
+int UNITCONST=(size(G)==1 && deg(G[1])==0);
+number UNITCOEF;
+if (UNITCONST) { UNITCOEF=leadcoef(G[1]); T=(1/UNITCOEF)*T; G=ideal(1); }
+print("CERT__UNIT_CONSTANT "+string(UNITCONST));
+print("CERT__UNIT "+string(size(G)==1 && G[1]==1));
+matrix CHECK=matrix(I)*T;
+print("CERT__DIRECT_CHECK "+string(CHECK[1,1]==1));
+print("CERT__COFACTORS_BEGIN");
+print(T);
+print("CERT__COFACTORS_END");
+quit;

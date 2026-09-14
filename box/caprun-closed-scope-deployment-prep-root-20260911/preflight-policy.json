@@ -1,0 +1,47 @@
+{
+  "schema": "f10-necessary-rows-preflight-policy/v1",
+  "source_files": {
+    "authority.py": "804c7aff56538fc332bf68638b03b7167eccdb49f73337f1a5f1823348b522a4",
+    "arithmetic.py": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+    "produce.py": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a",
+    "check_arithmetic.py": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e",
+    "check.py": "1d2d5b5408bfbf13b96f09453b1f14dfe884d261e702843bc31e5a043ffa53d1"
+  },
+  "entries": {
+    "refuse-status": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 369, in <module>\n    main()\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 343, in main\n    meta=authorize('produce')\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/authority.py\", line 82, in authorize\n    raise ValueError('no ROOT registration')\nValueError: no ROOT registration\n"
+    },
+    "refuse-caps": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 369, in <module>\n    main()\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 343, in main\n    meta=authorize('produce')\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/authority.py\", line 95, in authorize\n    raise ValueError('registered limits/source inventory')\nValueError: registered limits/source inventory\n"
+    },
+    "refuse-inventory": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 369, in <module>\n    main()\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 343, in main\n    meta=authorize('produce')\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/authority.py\", line 95, in authorize\n    raise ValueError('registered limits/source inventory')\nValueError: registered limits/source inventory\n"
+    },
+    "refuse-source": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 369, in <module>\n    main()\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 343, in main\n    meta=authorize('produce')\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/authority.py\", line 100, in authorize\n    raise ValueError('source pin: ' + name)\nValueError: source pin: produce.py\n"
+    },
+    "refuse-hash": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 369, in <module>\n    main()\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/produce.py\", line 343, in main\n    meta=authorize('produce')\n         ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/authority.py\", line 78, in authorize\n    meta = load_pinned(sys.argv[4], sys.argv[6])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/jc2-closedchild-preflight9-20260911a/science/authority.py\", line 74, in load_pinned\n    raise ValueError('authority/inventory byte pin')\nValueError: authority/inventory byte pin\n"
+    },
+    "startup-produce": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "REFUSED: registered CLI contract\n"
+    },
+    "startup-check": {
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "REFUSED: registered CLI contract\n"
+    }
+  }
+}

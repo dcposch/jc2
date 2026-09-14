@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "case": "positive",
+      "controls": [
+        "0",
+        "1"
+      ],
+      "input_sha256": "c3944666893466b6a537c5103fa1994f37ab831eafba9922ac9a246835b6c6b2",
+      "monic_graphs_eliminated": 10,
+      "output_sha256": "fe1d0a25714d55d0d0bf314f3d61ce3d042aa5be1f0b1c043edfcf3c8f68d039",
+      "projected_nonzero_rows": 13,
+      "result": [
+        "1",
+        "0",
+        "19"
+      ],
+      "same_as_direct_full_coefficient_rows": true,
+      "script_sha256": "cb38e0883c431af48a9df07cf670a43c2205b5ea88d3fa55ec5252239bfb071a"
+    },
+    {
+      "case": "negative",
+      "controls": [
+        "0",
+        "1"
+      ],
+      "input_sha256": "968af7e08f7d88005f6cb577a407d825931301d684eff891d5ef75148ba03b95",
+      "monic_graphs_eliminated": 10,
+      "output_sha256": "8f1bb2e2069903ec4548695787a5fb0f476f340a216f00b70f26f23612396fae",
+      "projected_nonzero_rows": 14,
+      "result": [
+        "0",
+        "-1",
+        "1"
+      ],
+      "same_as_direct_full_coefficient_rows": true,
+      "script_sha256": "c60ee2f96f81ddc582282f4b1a2b4c8ad78bc9dcf37a7c422886529c8f56c52c"
+    }
+  ],
+  "driver_sha256": "53a9d25466e15a7c274a29b1f91eb99d79e0dea75e97797d29045b6232b3d8b9",
+  "field": "Q",
+  "status": "PASS"
+}

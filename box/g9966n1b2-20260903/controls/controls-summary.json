@@ -1,0 +1,101 @@
+{
+  "assertions": {
+    "genuine_tame_automorphism_survives": true,
+    "genuine_tame_exact_inverse": true,
+    "hint_main_passes": true,
+    "perturbed_hint_fails": true,
+    "tame_form_exact_nonunit": true,
+    "tame_form_jacobian_marker": true
+  },
+  "frozen_guided_sha256": "501f3b1fed8ad0d26c7535a3c79d6ca74c448a4555f94570a4835d9f740781f3",
+  "genuine_tame_automorphism": {
+    "construction": {
+      "family": "(f,g)=(x^2+2*mu*y,x)",
+      "jacobian": "-2*mu",
+      "point": {
+        "mu": "-1/2",
+        "mu_inv": "-2"
+      },
+      "polynomial_inverse": "(u,v)->(v,v^2-u)",
+      "specialized_jacobian": "1",
+      "specialized_map": "(f,g)=(x^2-y,x)",
+      "tame_factorization": "(x,y)->(x,y-x^2)->(-y,x)"
+    },
+    "exact_map_markers": [
+      "PRE__TAME_F x^2+2*y*mu",
+      "PRE__TAME_G x",
+      "PRE__TAME_J -2*mu",
+      "PRE__TAME_INVERSE_AFTER_FORWARD_X 0",
+      "PRE__TAME_INVERSE_AFTER_FORWARD_Y 0",
+      "PRE__TAME_FORWARD_AFTER_INVERSE_X 0",
+      "PRE__TAME_FORWARD_AFTER_INVERSE_Y 0"
+    ],
+    "guided_gb": {
+      "accepted": true,
+      "basis_size": 2,
+      "dimension": 0,
+      "elapsed_seconds": 0.016092,
+      "nf_all_zero": true,
+      "returncode": 0,
+      "script": "/home/ubuntu/jc2/box/g9966n1b2-20260903/controls/runs/genuine-tame-automorphism/CTRL_GENUINE_TAME_AUTOMORPHISM_Q.sing",
+      "script_sha256": "18e6541f664f2126bd506567229002d0be10c62b8115fc96b0f84ac251aef02a",
+      "stderr": "/home/ubuntu/jc2/box/g9966n1b2-20260903/controls/runs/genuine-tame-automorphism/CTRL_GENUINE_TAME_AUTOMORPHISM_Q.err",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "/home/ubuntu/jc2/box/g9966n1b2-20260903/controls/runs/genuine-tame-automorphism/CTRL_GENUINE_TAME_AUTOMORPHISM_Q.out",
+      "stdout_sha256": "50bcf5ae36673635c06e1c66d643c7aa010bedc28c5c5bfc6820784d12bee43e",
+      "timed_out": false,
+      "unit": false,
+      "vdim": 1,
+      "verdict": "DIM0_CHAR0"
+    },
+    "status": "PASS",
+    "type": "GENUINE-TAME-AUTOMORPHISM-CONTROL"
+  },
+  "perturbed_hilbert": {
+    "accepted_run_count": 1,
+    "elapsed_seconds": 1.567447,
+    "main_accepted": true,
+    "main_lead_vdim": 3640,
+    "perturbed_accepted": false,
+    "perturbed_lead_vdim": 3640,
+    "predicted_length": 3640,
+    "tag": "CTRL_HINT_K4_B3",
+    "verdict": "DIM0_CHAR0"
+  },
+  "reuse_scope": "shared algorithmic controls attached to every exact-Q kill in this lane",
+  "schema": "jc2.g9966n1b2.controls/v1",
+  "sources": {
+    "genuine_tame_formula": "charged k4ray-K89 report, controls section",
+    "tame_form_and_hilbert": "box/k4raypinned-20260903/pinned_chart.py",
+    "tame_form_and_hilbert_sha256": "eed2cdf5cc5b85e3358013416bca7f6f6bd272138533ff0c065a86afb4c47e43"
+  },
+  "status": "PASS",
+  "tame_form": {
+    "counts": {
+      "markers": {
+        "PRE__CST_ZERO": "0",
+        "PRE__CTRL_J": "6*x*mu^2",
+        "PRE__NROWS": "0",
+        "PRE__PRELUDE_DONE": "1",
+        "PRE__ROWS_FINAL": "0"
+      },
+      "n": 0,
+      "returncode": 0,
+      "tag": "CTRL_TAME_K1_p0",
+      "timed_out": false,
+      "wall": 0.009
+    },
+    "promotion_note": "exact Q standard basis has dimension zero",
+    "runs": [
+      {
+        "dimension": 0,
+        "elapsed_seconds": 0.016294,
+        "timed_out": false,
+        "unit": false,
+        "vdim": 2
+      }
+    ],
+    "tag": "CTRL_TAME_K1",
+    "verdict": "DIM0_CHAR0"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "certificate": {
+    "accepted_run_count": 1,
+    "crt_rational_reconstruction": {
+      "available": false,
+      "items": {},
+      "method": "CRT plus bounded rational reconstruction for scalar invariants"
+    },
+    "hilbert_hint": null,
+    "policy": {
+      "allow_modular_unit_promotion": false,
+      "note": "hensel 1-scalar stratum; exact Q only",
+      "require_controls": true,
+      "scope": "EXACT_Q"
+    },
+    "promotion_note": "exact Q standard basis reduced 1 to 0",
+    "properness_scope": {
+      "positive_weights": [
+        []
+      ],
+      "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+      "systems_declared_homogeneous": false
+    },
+    "runs": [
+      {
+        "characteristic": 0,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=4",
+          "--threads=4",
+          "--flint-threads=4",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/k4ray-beta-strata-20260905/hensel-runs/HENSEL_K7_B6_Q1/HENSEL_K7_B6_Q1_p0_Q.sing"
+        ],
+        "elapsed_seconds": 0.032012,
+        "label": "HENSEL_K7_B6_Q1_p0",
+        "main": {
+          "accepted": true,
+          "basis_size": 1,
+          "dimension": -1,
+          "lead_dim": -1,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": true,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/k4ray-beta-strata-20260905/hensel-runs/HENSEL_K7_B6_Q1/HENSEL_K7_B6_Q1_p0_Q.sing",
+        "script_sha256": "82d4df3266b60ba7e3f11077c4d015abf23b874b9adb21a91b0ad953a16125d8",
+        "stderr": "/home/ubuntu/jc2/box/k4ray-beta-strata-20260905/hensel-runs/HENSEL_K7_B6_Q1/HENSEL_K7_B6_Q1_p0_Q.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/k4ray-beta-strata-20260905/hensel-runs/HENSEL_K7_B6_Q1/HENSEL_K7_B6_Q1_p0_Q.out",
+        "stdout_sha256": "9d1bddd1681c7da60ec7681cd0bbe095db328b0b13e1b6c0f2047abb939bb7c9",
+        "timed_out": false
+      }
+    ]
+  },
+  "verdict": "UNIT_IDEAL_CHAR0"
+}

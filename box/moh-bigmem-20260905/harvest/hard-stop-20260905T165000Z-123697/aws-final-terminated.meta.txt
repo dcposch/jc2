@@ -1,0 +1,5 @@
+observed_utc=2026-09-05T17:01:01Z
+command=aws ec2 describe-instances --region us-east-1 --instance-ids i-0baedea1d34e4b978 i-0193dc1295fc5234a i-0ce9ea50559403c22 i-0e95f8ff97f6462ce i-043f250f1956bd34b i-02efd7ecd26becc5a i-018484399fd100293 i-0780c67ecdc79cb0a --query sort_by(Reservations[].Instances[].{ID:InstanceId,IP:PrivateIpAddress,State:State.Name},&ID) --output json
+rc=0
+exact_target_count=8
+all_states=terminated

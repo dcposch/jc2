@@ -1,0 +1,249 @@
+{
+  "correction": "Fable prose scalar countercontrol needs x=3*s^3*sqrt(1-s^2/3+s^5/3); code correctly starts square root at3",
+  "math_adaptations": [
+    "only requested pure-p coefficient projections, not complete powers",
+    "formal moving R=g+s*p instead of random quadratic R"
+  ],
+  "parent_adaptation": "Only deleted frozen path replaced by12 byte-identical copies",
+  "pins": {
+    "box/d125-hybrid81-parent-gate-fable5-20260907/PINS-post.txt": "9e4caf0a6084318614ca9bd2b733afe2dd321ad02b8d84228c677ba2f5e8b57a",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/PINS-pre.txt": "9e4caf0a6084318614ca9bd2b733afe2dd321ad02b8d84228c677ba2f5e8b57a",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/RUNS.json": "414277ddc6dfc8e1ad139bf080d20571b797c79272407230df289c18701b9188",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/check-normal.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/check-normal.stdout": "9097ba47ce0ac17eba9e4a5a318210df029238394791aba94389005b5e92b470",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/check-optimized.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/check-optimized.stdout": "9097ba47ce0ac17eba9e4a5a318210df029238394791aba94389005b5e92b470",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/fable-normal.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/fable-normal.stdout": "2bda9bdd6c3ac8504ad0a6836057fd17bad635fa83b773b1784a4045d465a59a",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/fable-optimized.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/fable-optimized.stdout": "3ca24febc1abeaf926585e0cb89b86fee4e4b81d9a2cfc811a8b4a458978b543",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/fable_controls.py": "1c18e15daf1b94f66469b208614224844fbbbdf19572523378e406eb9b18b61c",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/inputs-listing-post.txt": "50aecf2f90e70dda216eb77b76915fedd99292d8487d2a76e01f8bb6a78e0d5a",
+    "box/d125-hybrid81-parent-gate-fable5-20260907/inputs-listing-pre.txt": "50aecf2f90e70dda216eb77b76915fedd99292d8487d2a76e01f8bb6a78e0d5a",
+    "box/d125-hybrid81-parent-repair-20260907/REGISTRATION.md": "364a5d8c57a967d6dc3467db13eb0b19ba6c7924a573dc5b3ea67da7eb6f1ee5",
+    "box/d125-hybrid81-parent-repair-20260907/check.py": "af50e7ff0ed1676a3f914bbdd46570444bc6109f5c9a39df31d5cf56eea1b76f",
+    "box/d125-hybrid81-parent-repair-20260907/custody.json": "de220779c1768efb376b5c51bdb6caf6afd62a96cda3d0f7e2acd767a04078d3",
+    "box/d125-hybrid81-parent-repair-20260907/driver.py": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+    "box/d125-hybrid81-parent-repair-20260907/engine.py": "8d8da939caf88c75ae167fa6cf862011c76a593c105c88970efcd9baf16c7cdf",
+    "box/d125-hybrid81-parent-repair-20260907/exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+    "box/d125-hybrid81-parent-repair-20260907/hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+    "box/d125-hybrid81-parent-repair-20260907/original_engine.py": "a87debfce5ca01817c03c2b180fd514d8e45269b1173c6f4a562255883188ae5",
+    "box/d125-hybrid81-parent-repair-20260907/parent-argv.patch": "9ecffb6966dd265ebca394763d4b886962f9f803a0aece70362077a02414c559",
+    "box/d125-hybrid81-parent-repair-20260907/replay.json": "e84d62d3c277913b2944d61604d9a3bbe6063cb802ce53ba0ff3164629b93ec9",
+    "box/d125-pure-uniform-discriminator-20260907/check.py": "2e8495443ade68f929577019b175470ed432fdb7c4632cd4221b1ed580bd5d46",
+    "box/d125-pure-uniform-discriminator-20260907/primary-note.md": "ec851a965e2d01427c2382341b74248017772703068671ea12e536ffe12e20e6",
+    "box/d125-pure-uniform-gate-fable5-20260907/controls.py": "3829c885b114aa96aadc491e486eaf3e79081044f608f2e92d68c6ca123047b2",
+    "box/d125-pure-uniform-gate-fable5-20260907/input-pins.sha256": "8392a7302d11e0a3ffd65d1f294434bcfb621a857043c38b52b1819bfd14049a",
+    "box/d125-pure-uniform-gate-fable5-20260907/replay.json": "c400667f6de94406c5458f8ac7059b90dc157a79fdcdec1abfc3ace58dd835d6",
+    "box/d125-pure-uniform-gate-fable5-20260907/stacks-tag-0366-snapshot.html": "86133e93da020b303503f6bd5ec185d5396731f1b8043f152e51e6811a773c34",
+    "box/d125-pure-uniform-gate-fable5-20260907/witness-O.json": "8d876a06d4518a353770973d5a4996f31a9da3ecf74610eb30aaae6ff78a88f6",
+    "box/d125-pure-uniform-gate-fable5-20260907/witness.json": "8d876a06d4518a353770973d5a4996f31a9da3ecf74610eb30aaae6ff78a88f6",
+    "xmodel/d125-exceptional-pure-discriminator-astra-20260907.md": "9b3538b8d7d65477f5fb273ce8abb4b9556c8529dc374dc9affb4266f2793fb8",
+    "xmodel/d125-exceptional-pure-gate-fable5-20260907.md": "334d4ac6cec7935575ace4952daff512af35b6187bc5aa1e08eb40a31d77ce8a",
+    "xmodel/d125-hybrid81-engine-gate-sol56-v2-20260907.md": "081d92293a62b0e5a9616e62b28d510468cfef4c6d6972d6926c66cca5c8e23d",
+    "xmodel/d125-hybrid81-parent-gate-fable5-20260907.md": "8aea078b954667528f861b05d763c20ca31c43f2037dc7ce1a8ab025fd925883",
+    "xmodel/d125-hybrid81-parent-repair-astra-20260907.md": "94f71c4f20136cd585eee40b488797f7eee0a04a7337c6ab34e47c387a1153b2",
+    "xmodel/d125-low-jet-saturation-discriminator-astra-20260907.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-pure-uniform-discriminator-astra-20260907.md": "1f71ea56f697fe48169cdd95cfe7e2417a98d37efa2f425a86661dfe5ff8e04d",
+    "xmodel/d125-pure-uniform-gate-fable5-20260907.md": "c1c26eb1f43408997ce8187a12830007103646ee4490bfc1d2f0251b62af4ff4",
+    "xmodel/d125-zero-k-boundary-classification-astra-20260907.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2"
+  },
+  "runs": [
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "8d876a06d4518a353770973d5a4996f31a9da3ecf74610eb30aaae6ff78a88f6"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-W-drop-L",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 134, in check\n    target=scale(mul(pw(s,6),mul(pw(Rf,9),add(mul(Rf,Wi),pw(Ci,3),scale(pw(Di,2),-9)))),Q(5,27))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-sixth-coefficient",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 134, in check\n    target=scale(mul(pw(s,6),mul(pw(Rf,9),add(mul(Rf,Wi),pw(Ci,3),scale(pw(Di,2),-9)))),Q(5,27))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-fourth-coefficient",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 134, in check\n    target=scale(mul(pw(s,6),mul(pw(Rf,9),add(mul(Rf,Wi),pw(Ci,3),scale(pw(Di,2),-9)))),Q(5,27))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-drop-D",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 134, in check\n    target=scale(mul(pw(s,6),mul(pw(Rf,9),add(mul(Rf,Wi),pw(Ci,3),scale(pw(Di,2),-9)))),Q(5,27))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-unit-object",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 227, in check\n    Up=add(scale(mul(a,Cs),2),bb,scale(mul(al,Ds),2)); Um=add(scale(mul(a,Cs),2),bb,scale(mul(al,Ds),-2))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: U*Uinv=1 modulo (V, om^2+om+1)\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-unit-scalar",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 227, in check\n    Up=add(scale(mul(a,Cs),2),bb,scale(mul(al,Ds),2)); Um=add(scale(mul(a,Cs),2),bb,scale(mul(al,Ds),-2))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: U*Uinv=1 modulo (V, om^2+om+1)\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-omit-alphaG",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 255, in check\n    y=[-c for c in ser_mul(ser_mul(h,h,n),h,n)]; at=ser_mul(alpha,t,n); y=[y[i]+at[i] for i in range(n)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-omit-deltaF",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 255, in check\n    y=[-c for c in ser_mul(ser_mul(h,h,n),h,n)]; at=ser_mul(alpha,t,n); y=[y[i]+at[i] for i in range(n)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-freeze-R",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 255, in check\n    y=[-c for c in ser_mul(ser_mul(h,h,n),h,n)]; at=ser_mul(alpha,t,n); y=[y[i]+at[i] for i in range(n)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-omit-FG",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 255, in check\n    y=[-c for c in ser_mul(ser_mul(h,h,n),h,n)]; at=ser_mul(alpha,t,n); y=[y[i]+at[i] for i in range(n)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-hybrid81-parent-gate-fable5-20260907/fable_controls.py",
+      "mode": "",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "2bda9bdd6c3ac8504ad0a6836057fd17bad635fa83b773b1784a4045d465a59a"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "8d876a06d4518a353770973d5a4996f31a9da3ecf74610eb30aaae6ff78a88f6"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-W-drop-L",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 134, in check\n    target=scale(mul(pw(s,6),mul(pw(Rf,9),add(mul(Rf,Wi),pw(Ci,3),scale(pw(Di,2),-9)))),Q(5,27))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-sixth-coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 134, in check\n    target=scale(mul(pw(s,6),mul(pw(Rf,9),add(mul(Rf,Wi),pw(Ci,3),scale(pw(Di,2),-9)))),Q(5,27))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-fourth-coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 134, in check\n    target=scale(mul(pw(s,6),mul(pw(Rf,9),add(mul(Rf,Wi),pw(Ci,3),scale(pw(Di,2),-9)))),Q(5,27))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-drop-D",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 134, in check\n    target=scale(mul(pw(s,6),mul(pw(Rf,9),add(mul(Rf,Wi),pw(Ci,3),scale(pw(Di,2),-9)))),Q(5,27))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-unit-object",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 227, in check\n    Up=add(scale(mul(a,Cs),2),bb,scale(mul(al,Ds),2)); Um=add(scale(mul(a,Cs),2),bb,scale(mul(al,Ds),-2))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: U*Uinv=1 modulo (V, om^2+om+1)\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-unit-scalar",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 227, in check\n    Up=add(scale(mul(a,Cs),2),bb,scale(mul(al,Ds),2)); Um=add(scale(mul(a,Cs),2),bb,scale(mul(al,Ds),-2))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: U*Uinv=1 modulo (V, om^2+om+1)\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-omit-alphaG",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 255, in check\n    y=[-c for c in ser_mul(ser_mul(h,h,n),h,n)]; at=ser_mul(alpha,t,n); y=[y[i]+at[i] for i in range(n)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-omit-deltaF",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 255, in check\n    y=[-c for c in ser_mul(ser_mul(h,h,n),h,n)]; at=ser_mul(alpha,t,n); y=[y[i]+at[i] for i in range(n)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-freeze-R",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 255, in check\n    y=[-c for c in ser_mul(ser_mul(h,h,n),h,n)]; at=ser_mul(alpha,t,n); y=[y[i]+at[i] for i in range(n)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-pure-uniform-gate-fable5-20260907/controls.py",
+      "mode": "--mutate-omit-FG",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 309, in <module>\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 255, in check\n    y=[-c for c in ser_mul(ser_mul(h,h,n),h,n)]; at=ser_mul(alpha,t,n); y=[y[i]+at[i] for i in range(n)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-gate-fable5-20260907/controls.py\", line 77, in need\n    f1=list(e); f1[OM]-=1; f2=list(e); f2[OM]-=2\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "checker": "box/d125-hybrid81-parent-gate-fable5-20260907/fable_controls.py",
+      "mode": "",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "3ca24febc1abeaf926585e0cb89b86fee4e4b81d9a2cfc811a8b4a458978b543"
+    }
+  ],
+  "scope": "Universal six-jet/cubic collision, unit parity/conditional Pell; NO uniform source theorem. Parent argv delta only; NO engine/source authority.",
+  "seconds": 7.873166989069432,
+  "status": "PASS_SCOPED"
+}

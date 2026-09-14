@@ -1,0 +1,63 @@
+{
+  "schema": "documentary-source-pins/v1",
+  "task": "caprun-closed-scope-admission-astra-20260911",
+  "inputs": [
+    {
+      "path": "xmodel/caprun-closed-scope-launch-order-astra-20260911.md",
+      "sha256": "d91e854348bac0836eea57feb67665b9ea06941eeb574c8ce286e5698d4cb20e",
+      "bytes": 14804,
+      "read_scope": "FRESH_HUMAN_WHOLE"
+    },
+    {
+      "path": "xmodel/caprun-closed-scope-launch-order-astra-20260911.md.artifact.json",
+      "sha256": "2e2ba20212cd71d4c949822b5092746632767aa47f53f5cf2028d2e6f5fbcefe",
+      "bytes": 707,
+      "read_scope": "FRESH_HUMAN_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-deployment-prep-root-20260911/outer-launch.template.sh",
+      "sha256": "2a4a7ff45c19f8bfa386da8caddd44e8cd80c44d54e04e043f7e3fb731cb478e",
+      "bytes": 4214,
+      "read_scope": "FRESH_HUMAN_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-registration-prep-root-20260911/ROOT-REGISTRATION.template.json",
+      "sha256": "db925cbf9dad59b39444ea4250b839584be68c3bc5353aee5af924d96034e8f4",
+      "bytes": 29126,
+      "read_scope": "FRESH_MACHINE_WHOLE_JSON plus human lines1-290 and complete selected outer/environment/guard fields"
+    },
+    {
+      "path": "box/caprun-closed-scope-implementation-astra-20260911/dispatch.py",
+      "sha256": "52b3d916f4fc3941bb98c8b4f7698ab940680d09ee4e065de1f167857e3fd436",
+      "bytes": 50258,
+      "read_scope": "FRESH_HUMAN_WHOLE; clipped511-780 recovered fresh511-640/641-EOF"
+    }
+  ],
+  "scope": "STATIC_UNEXECUTED_ADMINISTRATIVE_TEMPLATES",
+  "outer_argv": [
+    "/usr/bin/python3.12",
+    "-I",
+    "-S",
+    "-B",
+    "/opt/jc2-closedchild-preflight9-20260911a/wrapper/dispatch.py",
+    "--registration",
+    "/opt/jc2-closedchild-preflight9-20260911a/metadata/ROOT-REGISTRATION.json"
+  ],
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "TZ": "UTC"
+  },
+  "preserved": {
+    "execution_mode": "PREFLIGHT_ONLY_9",
+    "aggregate_cpu_start_usec": "0",
+    "enabled": false,
+    "exclusive_no_concurrent_writer": false,
+    "root_no_migration": false,
+    "outer_and_leaf_device_inode": null
+  },
+  "first_action_utc": "2026-09-11 09:19:53.809415048 UTC",
+  "reserve_utc": "2026-09-11 09:34:00 UTC",
+  "hard_utc": "2026-09-11 09:37:00 UTC"
+}

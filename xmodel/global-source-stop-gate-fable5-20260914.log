@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The report is complete and sealed at 06:23:31 UTC, nine minutes before the substantive deadline. Nothing further is needed from tools: the marker is the last line, the file was read back whole before sealing, and both input hashes matched before and after authoring.
+
+**Outcome.** Report written to `xmodel/global-source-stop-gate-fable5-20260914.md` (1991 words, single marker, sha256 `d0c1122a…440c`). Both charged inputs matched the expected hashes at start and at every recheck. Authoring used only `apply_patch`, with a marker-free skeleton followed by bounded section appends, exactly as contracted.
+
+**Findings.**
+
+- **Scope verdict: NO_SCOPE_ERROR.** Every stop in APPROACHES sections 5 to 9 names one exact missing premise, and in each case full-plane data alone do not supply it. I did not relabel the essential hypothesis about full-plane source origin as harmless.
+- **Selected attempt.** I took the residual degree N−1 cover `W = Spec (R ⊗_A B)'` and rederived it literally: the off-square is the complement of the reduced curve `p_2^{-1}(E)` inside a scheme finite over the full source plane, with `p_1` branched exactly along the pullback of the ramification of the finite normalization. I then attacked the recorded source-unit GAP under the changed hypothesis of finiteness plus UFD data. The norm bookkeeping constrains every unit's norm to `C^* × Z^s` and no further. The attempt stops at two exact sub-gaps: GAP-U1 (`O(W'_0)^× = O(W_0)^×`) and GAP-U2 (`O(W_0)^× = C^*`), with the `t² = x²+1` control showing GAP-U2 cannot follow from finiteness alone.
+- **One correction to my own draft during readback.** I had written that a torsion relation among the boundary classes in `Cl(Y)` could yield a unit. That is wrong: `R^× = C^*` forces those classes to be Z-independent. The report now states the correct localization sequences at both levels, and explains why the independence does not transfer to `W_0` because `p_2` is étale but not finite.
+- **Decisive test: NO_NEW_MECHANISM** for a runnable full-source test. Tests T1 and T2 are stated exactly so a future source `B` can be checked by hand, but no actual source supplies `B`. Success of both would exclude all regular pseudo-plane scalar pairs through the map's own attachment; neither outcome decides JC2.
+- **Reopening evidence.** Only a proof or counterexample to T1 on the abstract shape, an actual source, or a theorem giving `O(W'_0)^× = O(W_0)^×` for étale-over-`Y` covers finite over the plane.
+
+No successor, seal, manifest, or ledger edit was made; custody belongs to the external launcher.
+DIVERT path=xmodel/global-source-stop-gate-fable5-20260914.md status=CLEAN body_bytes=12183 body_sha256=d0c1122a9c9b3bac95047091c4aa34ff4706494aeda173adc148067ffaed440c

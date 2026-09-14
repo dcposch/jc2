@@ -1,0 +1,39 @@
+delta52 inner minor solved in 1.56s
+delta52 inner low-weight product: 25 slots, 1.98s
+delta52 inner incidence reduced: 14 pivots, 3.04s
+delta52 inner: 76 preincidence, 14 QQ* pivots, 0 residual, 3.33s
+delta52 inner minor solved in 1.50s
+delta52 inner low-weight product: 25 slots, 1.91s
+delta52 inner incidence reduced: 14 pivots, 2.99s
+delta52 inner: 76 preincidence, 14 QQ* pivots, 0 residual, 3.27s
+{"status": "MATERIALIZED", "branch": "delta52", "source_image_sha256": "2bbd64819b07cc772872d70d83a943297a85bc86e60b0cbe028413cba04055c3", "generator_count": 1063}
+delta52: generating exact w Jacobian bands t90..90
+FLINT rank-two quotient encoded 35 base generators plus retained Zface_H2_2; 3.96s
+FLINT quotient bands 90..90: 64955 terms; 683.72s
+delta52: Jacobian_t90 55 nonzero rows before QQ* reduction
+delta52: Jacobian_t90 6 residual, 45 free; exact Singular
+delta52: Jacobian_t90 dimension=43
+delta52: generating exact w Jacobian bands t91..91
+FLINT rank-two quotient encoded 36 base generators plus retained Zface_H2_2; 3.76s
+Traceback (most recent call last):
+  File "/home/ubuntu/g9966-corrected-jacobian-threaded/deep_threaded_runner.py", line 14, in <module>
+    runpy.run_path(str(args.driver),run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "deep_resume_jacobian_quotient_resume.py", line 247, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "deep_resume_jacobian_quotient_resume.py", line 227, in main
+    band_cache,backend_meta=flint_backend.jacobian_bands(hh,c2,c3,oo,high,S,first_band=tp,progress=log,quotient=quotient_cfg)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-threaded/deep_flint_jacobian_pair.py", line 91, in jacobian_bands
+    left=mul(add(scale(H2,source['outer_power_F']),A),add(mul(H,bracket(H,C,degree,dC)),bracket(H,D,degree,dD)))
+                                                                                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-threaded/deep_flint_jacobian_pair.py", line 80, in bracket
+    value=pa(ps(pm(left,db[s]),D-r),ps(pm(da[r],right),-(E-s)))
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-threaded/deep_flint_jacobian_pair.py", line 29, in ps
+    def ps(x,n):return (n*x[0],n*x[1])
+
+KeyboardInterrupt

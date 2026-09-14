@@ -1,0 +1,206 @@
+{
+  "elapsed_seconds": 2.6114699189784005,
+  "pins": {
+    "box/golden-resonant-source-consumer-20260908/check.py": "b47cffd1436080d8f32e925b94160361d6a781047d755b6ad2c387c47717a47b",
+    "box/golden-resonant-source-consumer-20260908/replay.py": "6ae350b8b1cd5d4ebf67de0b8816a87c36bca9ef30d6a8429c00bfe892384331",
+    "box/golden-two-regime-initial-discriminator-20260908/check.py": "e49907ee44870195b3d437ea7b095619ecd9f6bc315702dc6932cfe7937687f8",
+    "box/golden-two-regime-initial-discriminator-20260908/custody.json": "fcc12304ee659dc5b83eb8f5e323a8c38a7cf3616e6a4b2f4b53cd1ca438568d",
+    "box/golden-two-regime-initial-discriminator-20260908/input-pins.json": "0712f1f970cb1a06e4929863450f38f644f97177657c8e8c826af5d8d8bc2fc8",
+    "box/golden-two-regime-initial-discriminator-20260908/replay.json": "422c6258cbad8674d0138d360bfb82702a69939237c1d3cbe8f6e78369037c4f",
+    "xmodel/d125-golden-divisibility-control-astra-20260908.md": "54a499bb55d401e88716dde5762ca39341817adaa7ea1f41faf5865570ac4b0e",
+    "xmodel/d125-minimal-monomial-receiver-composition-astra-20260906.md": "7dec79af1aa62946b46ecb209a710dd95e1b226b6b78229a3f232160a5385413",
+    "xmodel/d125-nonodd-cone-discriminator-astra-20260908.md": "2b5a5013d4d7284957b0e69d108f4f1ac1a2b7e81648b1dd2f403223f4791732",
+    "xmodel/golden-two-regime-initial-discriminator-astra-20260908.md": "14c4cdeddf9b1166046759022378775fc7ebc147c7d939579cf93f6b78aa51c6",
+    "xmodel/golden-two-regime-initial-discriminator-astra-20260908.md.artifact.json": "a80659d8c6b38fd4800b7eb70b650af57a0065e0c67b077f2878c1c24377c8af"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "positive"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "{\"mode\": \"positive\", \"rows\": [{\"face_c_over_lambda3\": [\"-5/9\", \"5/9\"], \"resonant_c_over_lambda3\": [\"10/9\", \"-25/9\"], \"rho\": [\"0\", \"1\"], \"unit_discrepancy\": [\"0\", \"3\"]}, {\"face_c_over_lambda3\": [\"10/9\", \"-5/9\"], \"resonant_c_over_lambda3\": [\"-65/9\", \"25/9\"], \"rho\": [\"3\", \"-1\"], \"unit_discrepancy\": [\"9\", \"-3\"]}], \"scalar_only\": true, \"status\": \"PASS\"}\n",
+      "stdout_sha256": "2f8ff88f1fc182924ef222013d32779b3eafc4b6066d8ba8c062dd858d3ab677"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "wrong-quintic-factor"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 25, in <module>\n    need(6*q/2-10*Q(1,2) == 0, 'Y10 coefficient cancellation fixes quintic factor')\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 12, in need\n    raise ValueError(message)\nValueError: Y10 coefficient cancellation fixes quintic factor\n",
+      "stderr_sha256": "ed4d354062d57243661c10aa6012482fdab01ba4489a42f08f72a7e5cb2f1dd9",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "wrong-face-sign"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 44, in <module>\n    need(face==scale(mul(mul(t,mul(t,t)),rinv),Q(-5,9)), 'source c=-5lambda cubed*t/9')\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 12, in need\n    raise ValueError(message)\nValueError: source c=-5lambda cubed*t/9\n",
+      "stderr_sha256": "c97090ab5ec4d11758c8c6f925f9f0d74c7491911419bad9de6ed7dd6d2da70b",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "wrong-target-factor"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 48, in <module>\n    need(mul(resonant,a2)==scale(mul(mul(tm1,mul(tm1,tm1)),target_t2),Q(5,9)), 'Morse target denominator t squared*a')\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 12, in need\n    raise ValueError(message)\nValueError: Morse target denominator t squared*a\n",
+      "stderr_sha256": "fe0dabe4eb6daa8dcd928660b56ecdc35a097f384872531d52f540f0f32ed44d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "drop-resonant-target"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 33, in <module>\n    need(6*Q(12,5)+10*Q(12,5)-Q(12,5) == (0 if mode == 'drop-resonant-target' else 36), 'resonant initial bracket equals source target order36')\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 12, in need\n    raise ValueError(message)\nValueError: resonant initial bracket equals source target order36\n",
+      "stderr_sha256": "2653f13b7178f3141ff928c2c4543ff01fade909494d23597f64de011f5251fe",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "positive"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "{\"mode\": \"positive\", \"rows\": [{\"face_c_over_lambda3\": [\"-5/9\", \"5/9\"], \"resonant_c_over_lambda3\": [\"10/9\", \"-25/9\"], \"rho\": [\"0\", \"1\"], \"unit_discrepancy\": [\"0\", \"3\"]}, {\"face_c_over_lambda3\": [\"10/9\", \"-5/9\"], \"resonant_c_over_lambda3\": [\"-65/9\", \"25/9\"], \"rho\": [\"3\", \"-1\"], \"unit_discrepancy\": [\"9\", \"-3\"]}], \"scalar_only\": true, \"status\": \"PASS\"}\n",
+      "stdout_sha256": "2f8ff88f1fc182924ef222013d32779b3eafc4b6066d8ba8c062dd858d3ab677"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "wrong-quintic-factor"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 25, in <module>\n    need(6*q/2-10*Q(1,2) == 0, 'Y10 coefficient cancellation fixes quintic factor')\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 12, in need\n    raise ValueError(message)\nValueError: Y10 coefficient cancellation fixes quintic factor\n",
+      "stderr_sha256": "ed4d354062d57243661c10aa6012482fdab01ba4489a42f08f72a7e5cb2f1dd9",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "wrong-face-sign"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 44, in <module>\n    need(face==scale(mul(mul(t,mul(t,t)),rinv),Q(-5,9)), 'source c=-5lambda cubed*t/9')\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 12, in need\n    raise ValueError(message)\nValueError: source c=-5lambda cubed*t/9\n",
+      "stderr_sha256": "c97090ab5ec4d11758c8c6f925f9f0d74c7491911419bad9de6ed7dd6d2da70b",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "wrong-target-factor"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 48, in <module>\n    need(mul(resonant,a2)==scale(mul(mul(tm1,mul(tm1,tm1)),target_t2),Q(5,9)), 'Morse target denominator t squared*a')\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 12, in need\n    raise ValueError(message)\nValueError: Morse target denominator t squared*a\n",
+      "stderr_sha256": "fe0dabe4eb6daa8dcd928660b56ecdc35a097f384872531d52f540f0f32ed44d",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py",
+        "drop-resonant-target"
+      ],
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 33, in <module>\n    need(6*Q(12,5)+10*Q(12,5)-Q(12,5) == (0 if mode == 'drop-resonant-target' else 36), 'resonant initial bracket equals source target order36')\n  File \"/home/ubuntu/jc2/box/golden-resonant-source-consumer-20260908/check.py\", line 12, in need\n    raise ValueError(message)\nValueError: resonant initial bracket equals source target order36\n",
+      "stderr_sha256": "2653f13b7178f3141ff928c2c4543ff01fade909494d23597f64de011f5251fe",
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "three algebraic coefficient/sign mutations plus one false resonance-order inference, not full source verification",
+  "status": "PASS",
+  "utc": "2026-09-08T22:25:37.773671+00:00"
+}

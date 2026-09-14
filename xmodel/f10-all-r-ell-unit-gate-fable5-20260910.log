@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete and published before the reserve. Final state at 08:40:19 UTC:
+
+**Verdict: CONFIRMED on all five charged items (A–E). REFUTED: none. GAP: none inside the exact scope.** The root's theorem that the ell-coefficients of the two rows [S^(3r+1)]R1 and [S^(4r+1)]R0 generate the unit ideal of the leading algebra L holds for every r>=2, by my own hand reconstruction.
+
+What I verified by hand:
+- **A.** ell enters only through delta_2, delta_3, delta_4. Recomputed dotB2=S, dotB1=-u+S·Jd, the Euler equation (4) for G=dotB0 with vanishing resonant constant, deg G<=2r+1<n, exact affineness B=B^0+ell·dotB, both mate gauges and the guard ell-independent.
+- **B.** Recomputed g and Q, both residual derivatives, degree bounds 3r+1 and 4r+1, top coefficients L1, L0, and the full identity mCQ'−qC'Q=−θ⁴+L1θ+L0 with every vanished coefficient shown (θ⁴: 2m−3q=−1; θ³ and θ² zero).
+- **C.** Identity (9) gives g a unit in R with no dropped branch; formal integration gives t3(β)=t4(β)=0; both finite binomials rederived by partitions; their 24-scaled difference is exactly Dden(V), matched byte-for-byte to the 17zzd D(V) and reconstructed from e+(V−v*)J. Dden a unit of A_ν=B_ν forces R=0.
+- **D.** Determinant-one matrix, ell_star and Psi signs, two-sided quotient maps with every other row substituted. I also re-verified by hand that the top rows of R1 and R0 are the θ¹ and θ⁰ leading rows, so the L-action on the actual base is consistent there.
+- **E.** At r=2, (F,H,a)=(14,49,49) gives L1=L0=0, V=2/7, W=1/49, Dden=0; it is not a leading point because Dden is coprime to the septic S. Dropped-Psi and dropped-ell-mate controls both fail as the root states.
+
+Precision items, none affecting a verdict: the L-action on the coefficient base rests on the inherited critical-band import (five Euler-top rows not re-derived here); the r>=2 restriction comes only from the accepted Dden scope; the triangular-map remark is design guidance, not part of the proved statement.
+
+Custody and mechanism: all eight snapshots hashed before any body read and rehashed after publication, all MATCH; all eight read whole and attested in the report. Owned outputs are exactly `xmodel/f10-all-r-ell-unit-gate-fable5-20260910.md` (13778 bytes, standalone BODY-END marker last, unsealed, no charge_basis) and `box/f10-all-r-ell-unit-gate-fable5-20260910/input_custody.md`, both authored solely through apply_patch heredoc input. Zero scientific subprocesses ran; only date, ls, wc, cat, sha256sum, grep, sed, comm, tail were used.
+DIVERT path=xmodel/f10-all-r-ell-unit-gate-fable5-20260910.md status=CLEAN body_bytes=13778 body_sha256=dfc13df40c28d3fa85e2c3dcae3dbdfd40a23ba116042569c4f948e6b90f42dc

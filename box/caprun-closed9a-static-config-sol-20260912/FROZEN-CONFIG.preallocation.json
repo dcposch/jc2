@@ -1,0 +1,111 @@
+{
+  "schema": "caprun-lateflow-corrected-frozen/v1",
+  "armed": false,
+  "review_state": "UNREVIEWED_UNBOUND",
+  "entry_authorities": {
+    "ADMIT": "ROOT_EXPLICIT_SEPARATE_ADMIT",
+    "ATTEST": "ROOT_EXPLICIT_SEPARATE_ATTEST",
+    "INSTALL": "ROOT_EXPLICIT_SEPARATE_INSTALL",
+    "RELEASE": "ROOT_EXPLICIT_SEPARATE_RELEASE"
+  },
+  "context": "ROOT_ATTESTED_CANDIDATE",
+  "authority_disposition": "EXPECTED_RUNTIME_OUTPUTS_DO_NOT_PREINSTALL",
+  "worker": {
+    "host": "JC2_WORKER_HOST_PLACEHOLDER",
+    "instance_id": "JC2_INSTANCE_ID_PLACEHOLDER",
+    "hostname": "JC2_HOSTNAME_PLACEHOLDER",
+    "boot_id": "JC2_BOOT_ID_PLACEHOLDER",
+    "pid_namespace": "JC2_PID_NAMESPACE_PLACEHOLDER"
+  },
+  "transport": {
+    "remote_user": "ubuntu",
+    "identity_file": "/home/ubuntu/.ssh/jc2-fleet",
+    "known_hosts": "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/known_hosts"
+  },
+  "clocks": {
+    "original_admission_stop_ms": 1789203735000,
+    "original_holder_stop_ms": 1789203720000,
+    "original_worker_stop_ms": 1789204680000
+  },
+  "coordinator": {
+    "receipt": "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/COORDINATOR-RECEIPT.json",
+    "receipt_sha256": "JC2_RECEIPT_SHA256_PLACEHOLDER",
+    "native_list": "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/COORDINATOR-NATIVE.sha256",
+    "native_list_sha256": "JC2_NATIVE_LIST_SHA256_PLACEHOLDER",
+    "timer_unit": "JC2_RETIREMENT_TIMER_UNIT_PLACEHOLDER",
+    "timer_properties": {
+      "ActiveState": "active",
+      "LoadState": "loaded",
+      "Unit": "JC2_RETIREMENT_SERVICE_UNIT_PLACEHOLDER"
+    },
+    "service_unit": "JC2_RETIREMENT_SERVICE_UNIT_PLACEHOLDER",
+    "service_properties": {
+      "LoadState": "loaded",
+      "Type": "oneshot",
+      "ExecStart": "JC2_RETIREMENT_EXECSTART_PLACEHOLDER"
+    }
+  },
+  "local": {
+    "prepared_directory": "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/prepared",
+    "prepared_pins": "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/prepared/PREPARED-PINS.json",
+    "caller": "/home/ubuntu/jc2/box/caprun-candidate-caller-astra-20260911/caller.py",
+    "admission_record": "/home/ubuntu/jc2/box/caprun-records-20260912a.XlRmuz1I/ADMISSION.json",
+    "observation": "/home/ubuntu/jc2/box/caprun-records-20260912a.XlRmuz1I/OBSERVATION.json",
+    "decision": "/home/ubuntu/jc2/box/caprun-records-20260912a.XlRmuz1I/DECISION.json",
+    "preholder_local_manifest": "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/LOCAL-PREHOLDER.sha256",
+    "preholder_remote_manifest": "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/REMOTE-PREHOLDER.sha256",
+    "records_directory": "/home/ubuntu/jc2/box/caprun-records-20260912a.XlRmuz1I",
+    "records_identity": "66305:15466838:1000:1000:700",
+    "owner_uid": "1000",
+    "owner_gid": "1000",
+    "exclusive_no_concurrent_writer": false,
+    "install_commitment": "/home/ubuntu/jc2/box/caprun-records-20260912a.XlRmuz1I/INSTALL-COMMITMENT.json",
+    "install_receipt": "/home/ubuntu/jc2/box/caprun-records-20260912a.XlRmuz1I/INSTALL-RECEIPT.json",
+    "fixed_paths": [
+      "/home/ubuntu/jc2/box/caprun-lateflow-corrected-astra-20260912/ADMIT.functions.exec.js",
+      "/home/ubuntu/jc2/box/caprun-lateflow-corrected-astra-20260912/ATTEST.functions.exec.js",
+      "/home/ubuntu/jc2/box/caprun-lateflow-corrected-astra-20260912/INSTALL.functions.exec.js",
+      "/home/ubuntu/jc2/box/caprun-lateflow-corrected-astra-20260912/RELEASE.functions.exec.js",
+      "/home/ubuntu/jc2/box/caprun-lateflow-corrected-astra-20260912/FROZEN-CONFIG.json",
+      "/home/ubuntu/jc2/box/caprun-candidate-caller-astra-20260911/caller.py",
+      "/home/ubuntu/jc2/box/caprun-latebinder-code-astra-20260911/latebind.py",
+      "/home/ubuntu/jc2/box/caprun-candidate-stage-root-20260911/stage_patch.py",
+      "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/prepared/PREPARED-PINS.json",
+      "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/REMOTE-PREHOLDER.sha256",
+      "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/prepared/ROOT-REGISTRATION.preholder.json",
+      "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/prepared/AUTHORITIES.preholder.json",
+      "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/prepared/ROOT-EXECUTION-CARD.preholder.md",
+      "/home/ubuntu/jc2/box/caprun-closed-scope-a-execution-root-20260912/prepared/final-install.preholder.sh"
+    ]
+  },
+  "remote": {
+    "holder": "/opt/jc2-closedchild-preflight9-20260912a/admin/holder.py",
+    "base": "/opt/jc2-closedchild-preflight9-20260912a",
+    "unit": "jc2-closedchild-preflight9-20260912a.service",
+    "cgroup": "/sys/fs/cgroup/system.slice/jc2-closedchild-preflight9-20260912a.service",
+    "stage": "/opt/jc2-closedchild-preflight9-20260912a-final-stage",
+    "admission": "/opt/jc2-closedchild-preflight9-20260912a-admin/outer-admission.sh",
+    "observe": "/opt/jc2-closedchild-preflight9-20260912a-admin/observe-and-leaves.sh",
+    "receiver": "/opt/jc2-closedchild-preflight9-20260912a-admin/receive.sh",
+    "release_check": "/opt/jc2-closedchild-preflight9-20260912a-admin/release-check.sh",
+    "fifo_writer": "/opt/jc2-closedchild-preflight9-20260912a-admin/fifo-write.sh",
+    "native_manifest_sha256": "JC2_REMOTE_NATIVE_MANIFEST_SHA256_PLACEHOLDER",
+    "installed_manifest": "/home/ubuntu/jc2-closedchild-preflight9-20260912a/stage/PRE-ADMISSION-INSTALLED.sha256",
+    "native_list": "/home/ubuntu/jc2-closedchild-preflight9-20260912a/stage/native.sha256",
+    "fixed_paths": [
+      "/opt/jc2-closedchild-preflight9-20260912a-admin/outer-admission.sh",
+      "/opt/jc2-closedchild-preflight9-20260912a-admin/observe-and-leaves.sh",
+      "/opt/jc2-closedchild-preflight9-20260912a-admin/receive.sh",
+      "/opt/jc2-closedchild-preflight9-20260912a-admin/release-check.sh",
+      "/opt/jc2-closedchild-preflight9-20260912a-admin/fifo-write.sh",
+      "/opt/jc2-closedchild-preflight9-20260912a/admin/holder.py",
+      "/home/ubuntu/jc2-closedchild-preflight9-20260912a/stage/PRE-ADMISSION-INSTALLED.sha256",
+      "/home/ubuntu/jc2-closedchild-preflight9-20260912a/stage/native.sha256"
+    ]
+  },
+  "phrases": {
+    "attest": "ROOT_ATTEST_EXACT_FRESH_HOLDER_AND_NINE_EMPTY_LEAVES",
+    "install": "ROOT_INSTALL_EXACT_ATTESTED_PREFLIGHT9_CANDIDATE",
+    "release": "ROOT_RELEASE_EXACT_PREFLIGHT9_ONLY"
+  }
+}

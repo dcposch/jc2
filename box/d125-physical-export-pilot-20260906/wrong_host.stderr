@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-physical-export-pilot-20260906/payload.py", line 76, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/ubuntu/jc2/box/d125-physical-export-pilot-20260906/payload.py", line 41, in main
+    auth,ready,ident=identity()
+                     ^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/d125-physical-export-pilot-20260906/payload.py", line 17, in identity
+    need(platform.system()=='Linux' and platform.node()=='ip-172-30-0-56','wrong Linux hostname')
+  File "/home/ubuntu/jc2/box/d125-physical-export-pilot-20260906/payload.py", line 7, in need
+    if not ok: raise RuntimeError(text)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: wrong Linux hostname

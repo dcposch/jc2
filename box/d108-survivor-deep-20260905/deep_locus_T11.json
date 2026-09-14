@@ -1,0 +1,302 @@
+{
+  "tag": "deep_locus_T11",
+  "truncation_depth_T": 11,
+  "start_local_power": 8,
+  "locus_restriction": {
+    "generators": {
+      "u": "K2c_3_26 + 8*jet2",
+      "v": "K2c_4_25 - K2c_4_26 - 20*jet1**2"
+    },
+    "licence": "rad(I_sat_T8) = <u,v> exactly (u^2 in I; v^2 = (uL+v^2) - u*L in I; I contained in the prime <u,v>), so V(I_sat) = V(u,v) as a SET and no point is lost",
+    "imposed_as": "two extra ROWS consumed by Q* unit pivots on K2c_3_26 and K2c_4_25; no unknown dropped by a floor",
+    "active": true
+  },
+  "radius": {
+    "z_s_order": 5,
+    "weight": "4*r+5*q",
+    "K3_face": 35,
+    "K2_face": 140,
+    "K2_D1_leading_e_exponent": 287
+  },
+  "chart": {
+    "jet0_free": false
+  },
+  "gauge_ledger": [
+    {
+      "normalization": "major_coordinate z = w-1 (D3 cluster leading coeff 1)",
+      "group_element": "y -> lambda*y",
+      "status": "SPENT"
+    },
+    {
+      "normalization": "top_K3 = z^7*(1+z)^2, second cluster at w=0",
+      "group_element": "y -> y + mu*x",
+      "status": "SPENT"
+    },
+    {
+      "normalization": "D2 centre a_1 = 0 (Lemma C: the sole centre exponent)",
+      "group_element": "y -> y + a_1",
+      "status": "SPENT (Repair R)"
+    },
+    {
+      "normalization": "minor constant jet0",
+      "group_element": "none left",
+      "status": "FREE (released by Repair R)"
+    },
+    {
+      "normalization": "p = pi^2 - c (no linear term in pi)",
+      "group_element": "child generic-point reparametrisation, not in the degree<=1 affine group",
+      "status": "SPENT; hostile-tested by the gate"
+    },
+    {
+      "normalization": "D1 centre pi = 1 (one of the A_2 = 4 conjugates)",
+      "group_element": "choice of Galois conjugate, no group parameter",
+      "status": "FREE CHOICE"
+    }
+  ],
+  "outer": {
+    "specs": {
+      "A2": {
+        "degree": 71,
+        "W0": 276,
+        "threshold": 566
+      },
+      "A3": {
+        "degree": 107,
+        "W0": 416,
+        "threshold": 853
+      },
+      "B1": {
+        "degree": 35,
+        "W0": 136,
+        "threshold": 279
+      },
+      "B2": {
+        "degree": 71,
+        "W0": 276,
+        "threshold": 566
+      }
+    },
+    "weight": "W=4*r+5*q",
+    "D1_e_weight": "2*W+k",
+    "preblock": {
+      "imposed_D2_coordinate_rows": 6880,
+      "redundant_D1_labels_on_deleted_coordinates": 25565,
+      "kept_by_block": {
+        "A2": 252,
+        "A3": 288,
+        "B1": 176,
+        "B2": 252
+      }
+    },
+    "D1_cumulative_pivots": 189,
+    "outer_free_count": 779
+  },
+  "outer_D1_offset_pivots": [
+    34,
+    32,
+    30,
+    26,
+    21,
+    17,
+    13,
+    7,
+    5,
+    3,
+    1
+  ],
+  "k2meta": {
+    "K2c_count": 125,
+    "h2_D1_raw_rows": 9,
+    "h2_D1_weights": [
+      141,
+      142,
+      143
+    ],
+    "h2_D1_pivots": 9,
+    "h2_D1_residual": [],
+    "h2_D1_zero_rows": 0,
+    "h2_D1_pivot_vars": [
+      "K2c_14_17",
+      "K2c_19_13",
+      "K2c_24_9",
+      "K2c_29_5",
+      "K2c_34_1",
+      "K2c_13_18",
+      "K2c_18_14",
+      "K2c_23_10",
+      "K2c_12_19"
+    ],
+    "K2_D1_leading_e_exponent": 287,
+    "locus_substitution": {
+      "K2c_3_26": "-8*jet2",
+      "K2c_4_25": "K2c_4_26 + 20*jet1**2"
+    },
+    "locus_variables_removed": [
+      "K2c_3_26",
+      "K2c_4_25"
+    ]
+  },
+  "build_seconds": 155.1,
+  "stages": [
+    {
+      "stage_local_power": 8,
+      "raw_rows": 1420,
+      "row_counts": {
+        "F": 12,
+        "G": 12,
+        "J": 1396
+      },
+      "rows_sha256": "55e7fe0e95975f94c93c274b98c8491bd1b357c6e4ffc2d64a69593ea7db70a1",
+      "free_unknowns": 895,
+      "Qstar_pivots": 60,
+      "dependent_zero_rows": 1360,
+      "residual_row_count": 0,
+      "residual": {},
+      "residual_factored": {},
+      "residual_variables": [],
+      "singular": {
+        "unit_ideal": false,
+        "dimension": "FULL",
+        "note": "EMPTY RESIDUAL: every imposed row is consumed by a Q* unit pivot or is identically zero on the locus; the ideal is (0), i.e. the whole remaining free space survives -- this is the strongest possible SURVIVAL, not a kill",
+        "wrapper_control": "not_needed"
+      },
+      "sec6_point_survives_residual": true,
+      "sec6_point_failures": [],
+      "wall_seconds": 287.3
+    },
+    {
+      "stage_local_power": 9,
+      "raw_rows": 1596,
+      "row_counts": {
+        "F": 15,
+        "G": 15,
+        "J": 1566
+      },
+      "rows_sha256": "f0fa0c2fed4ea242c73bf76453333c283a61eab3e1e9be42c87fa4bef2692fd5",
+      "free_unknowns": 895,
+      "Qstar_pivots": 66,
+      "dependent_zero_rows": 1530,
+      "residual_row_count": 0,
+      "residual": {},
+      "residual_factored": {},
+      "residual_variables": [],
+      "singular": {
+        "unit_ideal": false,
+        "dimension": "FULL",
+        "note": "EMPTY RESIDUAL: every imposed row is consumed by a Q* unit pivot or is identically zero on the locus; the ideal is (0), i.e. the whole remaining free space survives -- this is the strongest possible SURVIVAL, not a kill",
+        "wrapper_control": "not_needed"
+      },
+      "sec6_point_survives_residual": true,
+      "sec6_point_failures": [],
+      "wall_seconds": 724.3
+    },
+    {
+      "stage_local_power": 10,
+      "raw_rows": 1771,
+      "row_counts": {
+        "F": 18,
+        "G": 18,
+        "J": 1735
+      },
+      "rows_sha256": "f2b55ba649faa98486c3fe48926d297c891d0d0e9d9db422a7f5b6564e18376e",
+      "free_unknowns": 895,
+      "Qstar_pivots": 72,
+      "dependent_zero_rows": 1698,
+      "residual_row_count": 1,
+      "residual": {
+        "G_local10_coord0": "3600*Hc_5_4**2 + 120*Hc_5_4*K2c_5_25 - 120*Hc_5_4*K2c_5_26 - 19200*Hc_5_4*jet1*jet2 + 840*Hc_5_4 + K2c_5_25**2 - 2*K2c_5_25*K2c_5_26 - 320*K2c_5_25*jet1*jet2 + 14*K2c_5_25 + K2c_5_26**2 + 320*K2c_5_26*jet1*jet2 - 14*K2c_5_26 + 25600*jet1**2*jet2**2 - 2240*jet1*jet2 + 49"
+      },
+      "residual_factored": {
+        "G_local10_coord0": "(60*Hc_5_4 + K2c_5_25 - K2c_5_26 - 160*jet1*jet2 + 7)**2"
+      },
+      "residual_variables": [
+        "Hc_5_4",
+        "K2c_5_25",
+        "K2c_5_26",
+        "jet1",
+        "jet2"
+      ],
+      "singular": {
+        "unit_ideal": false,
+        "dimension": 5,
+        "active_variables": 6,
+        "reduce_1_in_std": "1",
+        "gb_size": 2,
+        "controls": {
+          "empty_c=0_must_be_unit": "0",
+          "point_c=1_must_be_nonunit": "1",
+          "raw_unlocalized": "1"
+        },
+        "wrapper": "Zc*c-1"
+      },
+      "sec6_point_survives_residual": false,
+      "sec6_point_failures": [
+        [
+          "G_local10_coord0",
+          "23409"
+        ]
+      ],
+      "wall_seconds": 1373.8
+    },
+    {
+      "stage_local_power": 11,
+      "raw_rows": 1945,
+      "row_counts": {
+        "F": 21,
+        "G": 21,
+        "J": 1903
+      },
+      "rows_sha256": "bc8b00be05165ca75897db7f6e7dfe00e03e0b95ba9ebf9de86d7feeacf32908",
+      "free_unknowns": 895,
+      "Qstar_pivots": 78,
+      "dependent_zero_rows": 1865,
+      "residual_row_count": 2,
+      "residual": {
+        "G_local10_coord0": "3600*Hc_5_4**2 + 120*Hc_5_4*K2c_5_25 - 120*Hc_5_4*K2c_5_26 - 19200*Hc_5_4*jet1*jet2 + 840*Hc_5_4 + K2c_5_25**2 - 2*K2c_5_25*K2c_5_26 - 320*K2c_5_25*jet1*jet2 + 14*K2c_5_25 + K2c_5_26**2 + 320*K2c_5_26*jet1*jet2 - 14*K2c_5_26 + 25600*jet1**2*jet2**2 - 2240*jet1*jet2 + 49",
+        "G_local11_coord0": "120*Hc_5_4*K2c_4_26*jet1 - 120*Hc_5_4*K2c_6_24 + 120*Hc_5_4*K2c_6_25 - 120*Hc_5_4*K2c_6_26 - 36960*Hc_5_4*jet1**3 + 33600*Hc_5_4*jet2**2 + 2*K2c_4_26*K2c_5_25*jet1 - 2*K2c_4_26*K2c_5_26*jet1 - 320*K2c_4_26*jet1**2*jet2 + 14*K2c_4_26*jet1 - 2*K2c_5_25*K2c_6_24 + 2*K2c_5_25*K2c_6_25 - 2*K2c_5_25*K2c_6_26 - 616*K2c_5_25*jet1**3 + 560*K2c_5_25*jet2**2 + 2*K2c_5_26*K2c_6_24 - 2*K2c_5_26*K2c_6_25 + 2*K2c_5_26*K2c_6_26 + 616*K2c_5_26*jet1**3 - 560*K2c_5_26*jet2**2 + 320*K2c_6_24*jet1*jet2 - 14*K2c_6_24 - 320*K2c_6_25*jet1*jet2 + 14*K2c_6_25 + 320*K2c_6_26*jet1*jet2 - 14*K2c_6_26 + 98560*jet1**4*jet2 - 4312*jet1**3 - 89600*jet1*jet2**3 + 3920*jet2**2"
+      },
+      "residual_factored": {
+        "G_local10_coord0": "(60*Hc_5_4 + K2c_5_25 - K2c_5_26 - 160*jet1*jet2 + 7)**2",
+        "G_local11_coord0": "2*(60*Hc_5_4 + K2c_5_25 - K2c_5_26 - 160*jet1*jet2 + 7)*(K2c_4_26*jet1 - K2c_6_24 + K2c_6_25 - K2c_6_26 - 308*jet1**3 + 280*jet2**2)"
+      },
+      "residual_variables": [
+        "Hc_5_4",
+        "K2c_4_26",
+        "K2c_5_25",
+        "K2c_5_26",
+        "K2c_6_24",
+        "K2c_6_25",
+        "K2c_6_26",
+        "jet1",
+        "jet2"
+      ],
+      "singular": {
+        "unit_ideal": false,
+        "dimension": 9,
+        "active_variables": 10,
+        "reduce_1_in_std": "1",
+        "gb_size": 5,
+        "controls": {
+          "empty_c=0_must_be_unit": "0",
+          "point_c=1_must_be_nonunit": "1",
+          "raw_unlocalized": "1"
+        },
+        "wrapper": "Zc*c-1"
+      },
+      "sec6_point_survives_residual": false,
+      "sec6_point_failures": [
+        [
+          "G_local10_coord0",
+          "23409"
+        ],
+        [
+          "G_local11_coord0",
+          "8568"
+        ]
+      ],
+      "wall_seconds": 2271.9
+    }
+  ],
+  "final": true,
+  "wall_seconds": 4812.4
+}

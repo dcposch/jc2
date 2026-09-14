@@ -1,0 +1,22 @@
+UTC=2026-09-05T16:32:48Z
+               total        used        free      shared  buff/cache   available
+Mem:           999Gi        11Gi       992Gi       3.0Mi       1.7Gi       988Gi
+msolve=0
+0
+Singular=1
+    PID     ELAPSED   RSS %CPU CMD
+   3200    02:20:41  3584  0.0 bash -c while true; do echo utc=$(date -u +%Y-%m-%dT%H:%M:%SZ) >> /home/ubuntu/moh-bigmem-20260905/targets/v18/guided/v18_p1073741827.rss.log; pid=$(pgrep -n Singular || true); echo pid=$pid >> /home/ubuntu/moh-bigmem-20260905/targets/v18/guided/v18_p1073741827.rss.log; if [ -n "$pid" ] && [ -r /proc/$pid/status ]; then awk '/VmPeak|VmSize|VmHWM|VmRSS/' /proc/$pid/status >> /home/ubuntu/moh-bigmem-20260905/targets/v18/guided/v18_p1073741827.rss.log; fi; sleep 20; done
+   3201    02:20:41  2132  0.0 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v18/guided/v18_p1073741827.sing
+   3204    02:20:41  1652  0.0 /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v18/guided/v18_p1073741827.sing
+   3207    02:20:41 4455808 99.9 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v18/guided/v18_p1073741827.sing
+  16852       00:00  3600  0.0 bash -c echo UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ); free -h | head -2; echo -n msolve=; pgrep -c -x msolve || echo 0; echo -n Singular=; pgrep -c Singular || echo 0; ps -eo pid,etime,rss,pcpu,cmd | awk 'NR==1||/msolve|Singular/' | head -20; echo '--- time ---'; grep -E 'Maximum resident|Elapsed \(wall|Exit status|Command exited' ~/moh-bigmem-20260905/targets/*/*/*.g2.stderr ~/moh-bigmem-20260905/targets/*/guided/*.err 2>/dev/null | tail -20; echo '--- last F4/GG ---'; tail -3 ~/moh-bigmem-20260905/targets/*/*/*.g2.stderr 2>/dev/null; tail -8 ~/moh-bigmem-20260905/targets/*/guided/*.out 2>/dev/null
+  16859       00:00  3832  0.0 awk NR==1||/msolve|Singular/
+--- time ---
+--- last F4/GG ---
+CONTROL_RING_PASS R
+CONTROL_EMPTY_PASS
+CONTROL_NONEMPTY_PASS
+MAIN_START equations=650 unknowns=438 char=1073741827 algorithm=std
+GG__RUN main START
+GG__GENERATOR_COUNT main 651
+GG__STD_BEGIN main

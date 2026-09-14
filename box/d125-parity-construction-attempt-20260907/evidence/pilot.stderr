@@ -1,0 +1,27 @@
+{"status": "INCOMPLETE", "error": "polynomial term cap", "stats": {"operations": 4441, "max_terms": 82248, "max_degree": 12, "max_coefficient_bits": 118, "retained_terms": 502367}, "elapsed_seconds": 37.81295283499992}
+Traceback (most recent call last):
+  File "/home/ubuntu/d125-parity-compression-pilot-20260907/run_once.py", line 90, in <module>
+    main()
+  File "/home/ubuntu/d125-parity-compression-pilot-20260907/run_once.py", line 81, in main
+    result=pipeline(C,R,authority,authority_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d125-parity-compression-pilot-20260907/run_once.py", line 44, in pipeline
+    C.main()  # Authorization/limits precede every production allocation.
+    ^^^^^^^^
+  File "/home/ubuntu/d125-parity-compression-pilot-20260907/construct.py", line 374, in main
+    contract, names, original, a, b, maps, graph, selected = reconstruct(authority['mode'], ops)
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d125-parity-compression-pilot-20260907/construct.py", line 262, in reconstruct
+    forcing = [jrow(a, b, r, d+13-r, ops) for r in chosen]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d125-parity-compression-pilot-20260907/construct.py", line 152, in jrow
+    out = ops.add(out, ops.mul(av, b[k, l]), det)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d125-parity-compression-pilot-20260907/construct.py", line 74, in add
+    return self.check(Q.add(a, b, F(scale)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/d125-parity-compression-pilot-20260907/construct.py", line 61, in check
+    need(len(p) <= self.caps['polynomial_terms'], 'polynomial term cap')
+  File "/home/ubuntu/d125-parity-compression-pilot-20260907/construct.py", line 33, in need
+    raise ValueError(message)
+ValueError: polynomial term cap

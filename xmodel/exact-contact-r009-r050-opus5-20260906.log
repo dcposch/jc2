@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/exact-contact-r009-r050-opus5-20260906.md` (22,501 B, `<!-- BODY-END -->`).
+
+## What I found
+
+**Custody:** 7/7 charged-input hashes verified mechanically (awk manifest → `sha256sum -c`) before any mathematical read.
+
+**The instrument.** I built an exact packet calculus from printed lines only (Moh Prop 4.6(2),(3) for λ, Xu Lemma 4.4 for finality). Its two payoffs:
+
+1. **`I_M` is an integer.** Xu §2 *defines* `I(f,g) = deg_x Res_y(f,g)`; Thm 5.1 *equates* it with `I_M`. Xu never draws the corollary. This is the actual difference between Cor 5.3-as-a-floor and Thm 5.1-as-an-equality — it kills 924 of 1080 exact configurations that Cor 5.3 retains.
+2. **Contacts are forced, not guessed.** A sub-disc at multiplicity `r` is minor iff `r < lo_i = d_i/(n−M_i)`, with contact `δ = δ_i + (1−δ_i)lo_i/r`. So the "set-valued" part is the *pattern*, not the contact orders.
+
+Positive control: the calculus reproduces all four of Xu's printed worked cases (`I_M` and `I_m` both), and his final-major displays `π(π³−a)…`.
+
+**The two target rows.** Both have a **unique** necessary configuration, and on it Xu's equality is saturated: `I_M = I_m = 8` exactly, margin 0. Neither is dead — they are pinned, contact by contact: any further splitting of any minor packet pushes `I_m` above 8 and kills the row.
+
+**Beyond the ask.** Two lemmas I had to prove to close the sibling-tower branches (primitivity; cross-tower consistency `d_D | M`) yield six new row kills — R025–R028, R057, R058, exactly the six "two-major-tower" rows the structure report found from the *child* side. Typed `DEAD-mod-[depth ≤ 2]`, not promoted; residual 65 → 59 if the depth cap lifts.
+
+Three caveats I want to flag rather than bury:
+- The six kills carry a **search depth cap of 2**. That is a cap, not a proof.
+- The census's removal of R001 is reproducible **only with** cross-tower consistency; without it R001's `z=7` pattern survives with `I_M = 7`. The lemma was derived before R001 was tested, so this is a retrodiction — but it means the census's Xu screen was relying on something it did not record.
+- **grok46 and sol56's submissions are not charged inputs.** I reconciled against their one-line descriptions in the packet plus astra's printed text, and said so in the report rather than attributing claims to texts I could not open.
+DIVERT path=xmodel/exact-contact-r009-r050-opus5-20260906.md status=CLEAN body_bytes=22501 body_sha256=4bb981374dbfbc202ecdbf944c0791f325abaa1974cde694cffe2a6e3e56c105

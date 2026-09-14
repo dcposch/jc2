@@ -1,0 +1,65 @@
+{
+  "schema": "manual-research-terminal-custody/v1",
+  "task": "smooth-cubic-adjunction-astra-20260912",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "COMPLETED_UNREVIEWED_PROOF",
+  "first_action_utc": "2026-09-12T02:28:23Z",
+  "transaction_opened_utc": "2026-09-12T02:30:50Z",
+  "preseal_whole_readback_postpins_collision_check_completed_by_utc": "2026-09-12T02:37:20Z",
+  "closed_utc": "2026-09-12T02:37:30Z",
+  "finalized_utc": "2026-09-12T02:37:30Z",
+  "expected_verification_final_whole_readback_postpins_completed_by_utc": "2026-09-12T02:37:49Z",
+  "publication_reserve_utc": "2026-09-12T02:51:00Z",
+  "hard_stop_utc": "2026-09-12T02:54:00Z",
+  "input_census": {"initial": 1, "separately_authorized_delta": 1, "total": 2},
+  "inputs_pre_and_post": [
+    {
+      "path": "/home/ubuntu/jc2/box/smooth-cubic-adjunction-astra-20260912/TASK.md",
+      "pre_sha256": "a0ce883a9b9c26a711f6d357f6dfed8cfb708e2511df9192334d8566e4423196",
+      "post_sha256": "a0ce883a9b9c26a711f6d357f6dfed8cfb708e2511df9192334d8566e4423196",
+      "read": "FRESH_WHOLE, exact literal ranges in PINS.json"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/smooth-cubic-adjunction-astra-20260912/DELTA-root-valuations.md",
+      "pre_sha256": "b8c102d94004bf3668a7ed092ef56d1bf47efde1c93af9b2c49dc82d52b21d90",
+      "post_sha256": "b8c102d94004bf3668a7ed092ef56d1bf47efde1c93af9b2c49dc82d52b21d90",
+      "read": "FRESH_WHOLE after separate ROOT authorization; argument independently checked"
+    }
+  ],
+  "owned_published_files_excluding_this_custody": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/smooth-cubic-adjunction-astra-20260912.md",
+      "sha256": "b06de62a462a216d5e0e92ba347e24fe3c3f524944e95d8815b97de8482e57e3",
+      "bytes": 9516,
+      "readback": "WHOLE final sed -n '1,240p', EOF visible"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/smooth-cubic-adjunction-astra-20260912.md.artifact.json",
+      "sha256": "00cb5469e4ac2b73513998b15a7e2f8c10ea376afbe05c44aafc1866b628a608",
+      "bytes": 695,
+      "readback": "WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/smooth-cubic-adjunction-astra-20260912/PINS.json",
+      "sha256": "fc7a8fb289420f9a8d3ec27675ac2be6b509429ac0a0f8871d57b517c02c000f",
+      "bytes": 1950,
+      "readback": "WHOLE before report seal; final hash unchanged"
+    }
+  ],
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256": "00cb5469e4ac2b73513998b15a7e2f8c10ea376afbe05c44aafc1866b628a608",
+    "body_sha256": "80fe7b4d38f5a253f469f4102d6f8f3291d935e2d73e226c85b5c9ce69185577",
+    "body_bytes": 9184,
+    "verification_status": "VERIFIED",
+    "sequence": "begin; private unsealed skeleton; bounded apply_patch sections; WHOLE readback and OPEN/scope/collision/postpin audit; BODY-END last; close; finalize; expected-manifest verify; WHOLE final readback; custody last"
+  },
+  "result": "Proof of no dominant regular A2 map to the stated U for every target line when sectional genus is positive. Both local blowup and authorized valuation proofs establish log canonicity; full-boundary discrepancies and logarithmic pullback give the infinity contradiction.",
+  "mathematical_gap_in_claimed_scope": "NONE_IDENTIFIED; independent review still required",
+  "retained_standard_tools": "Surface Riemann-Roch/Serre duality, smooth finite flatness, surface resolution, SNC discrepancy criterion; precise local and pullback calculations provided in report.",
+  "excluded_conclusions": "No genus-zero classification, singular cubic normalization extension, arbitrary Keller intermediate assertion, or JC2 verdict.",
+  "scientific_execution": "NONE",
+  "external_or_peer_reads": "NONE",
+  "new_follow_on_authority": "NONE",
+  "handoff_state": "All writers IDLE after custody creation; only custody WHOLE readback, hash and terminal UTC remain. No source or report mutations pending."
+}

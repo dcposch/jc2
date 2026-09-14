@@ -1,0 +1,1687 @@
+{
+  "utc": "2026-09-05T15:11:47.480850+00:00",
+  "runs": [
+    {
+      "chart": "C_n18m12_M2_9_ell2_s3_V1_8",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 4615,
+      "state": "FINISHED",
+      "field": 1073741827,
+      "kind": "msolve",
+      "order": "dp",
+      "representation": "full_direct_c_equals_one",
+      "gauge": null,
+      "memory_gib": 180,
+      "timeout_seconds": 1800,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:23:32.274432+00:00",
+      "end_utc": "2026-09-05T14:53:34.806972+00:00",
+      "elapsed_seconds": 1802.4770772769998,
+      "command": [
+        "/home/ubuntu/jc2/box/graded-moh-20260905/ops/bin/msolve",
+        "-g",
+        "2",
+        "-t",
+        "16",
+        "-v",
+        "2",
+        "-l",
+        "44",
+        "-m",
+        "2000",
+        "-f",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n18m12_M2_9_ell2_s3_V1_8/slice_p1073741827.ms",
+        "-o",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n18m12_M2_9_ell2_s3_V1_8_r2_msolve_full/basis.out"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n18m12_M2_9_ell2_s3_V1_8/slice_p1073741827.ms",
+      "input_sha256": "f112c441f18648f553a3976fe1fd5eea3bb999d2ffd9c357eb661e11ed0b85d1",
+      "solver_sha256": "0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f",
+      "run": "C_n18m12_M2_9_ell2_s3_V1_8_r2_msolve_full",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "basis.out",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 887,
+          "sha256": "56f89d6d278e08ed1fc5e1e8157a021cd4cdcc3f56605e2d188d8cd9de36cd7c"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 14651,
+          "sha256": "049db180df59369a6f0fa7c4424bf8805fe00d107a62627f7df133d2e081aa39"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 1116,
+          "sha256": "23ff395e744fc99bb0653cbd0e5af24e17261222e99b475e668b84406ce9fd42"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 98170236,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n18m12_M2_9_ell2_s3_V1_8",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 4830,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "dp",
+      "representation": "full_direct_c_equals_one",
+      "gauge": null,
+      "memory_gib": 48,
+      "timeout_seconds": 1800,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:23:33.432714+00:00",
+      "end_utc": "2026-09-05T14:53:34.429903+00:00",
+      "elapsed_seconds": 1800.9884726619998,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n18m12_M2_9_ell2_s3_V1_8/slice.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n18m12_M2_9_ell2_s3_V1_8/slice.sing",
+      "input_sha256": "84feff7fa4733537fe2f11113ea2e7384d89c16fe57cd83d9ffc1696de945192",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n18m12_M2_9_ell2_s3_V1_8_r2_singular_full",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 683,
+          "sha256": "3b254cefec00ce6a882e305283c47ad2e6a2459747854cc4f54c260b119cbe49"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 50,
+          "sha256": "4e7d492f27783c3088ca2bb27437fb47e6dffb684296b4622d7e9018b6e88cef"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 973,
+          "sha256": "a0bc620c5ba3da28e2268480f9ce14d8587e27df62164eb88e5aae6b78572f89"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 6058032,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n18m12_M2_9_ell2_s3_V3_8",
+      "host": "ip-172-30-0-86",
+      "ip": "172.30.0.86",
+      "worker": "i-02aaa996f54d2c004",
+      "pid": 2137,
+      "state": "FINISHED",
+      "field": 1073741827,
+      "kind": "msolve",
+      "order": "dp",
+      "representation": "full_direct_c_equals_one",
+      "gauge": null,
+      "memory_gib": 420,
+      "timeout_seconds": 1200,
+      "returncode": 124,
+      "start_utc": "2026-09-05T13:59:34.149989+00:00",
+      "end_utc": "2026-09-05T14:19:35.062288+00:00",
+      "elapsed_seconds": 1200.861261403,
+      "command": [
+        "/home/ubuntu/jc2/box/graded-moh-20260905/ops/bin/msolve",
+        "-g",
+        "2",
+        "-t",
+        "16",
+        "-v",
+        "2",
+        "-l",
+        "44",
+        "-m",
+        "1000",
+        "-f",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n18m12_M2_9_ell2_s3_V3_8/slice_p1073741827.ms",
+        "-o",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n18m12_M2_9_ell2_s3_V3_8_msolve_full/basis.out"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n18m12_M2_9_ell2_s3_V3_8/slice_p1073741827.ms",
+      "input_sha256": "af1be1fb3e81d79464335e3e88cfd1475ea4227bb23011010aae2f020c479a96",
+      "solver_sha256": "0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f",
+      "run": "C_n18m12_M2_9_ell2_s3_V3_8_msolve_full",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "basis.out",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 881,
+          "sha256": "0c7a3b586c51a9a96856230feaae043a1af34cc353142fcc1a5c5be605ee25bd"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 24333,
+          "sha256": "a01cf3818590f09f71cd2ac1b01e46a2216b1e13af9a1e7e50fd93b42626b595"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 1112,
+          "sha256": "2c6f591d1c3c16d1a9ccd8ca7d2a51c0ac89b18542e7bb51d8d5b028f611515a"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 32639412,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n18m12_M2_9_ell2_s3_V3_8",
+      "host": "ip-172-30-0-86",
+      "ip": "172.30.0.86",
+      "worker": "i-02aaa996f54d2c004",
+      "pid": 10839,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular_slimgb",
+      "order": "dp",
+      "representation": "full_direct_c_equals_one",
+      "gauge": "full",
+      "memory_gib": 40,
+      "timeout_seconds": 1800,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:30:12.235352+00:00",
+      "end_utc": "2026-09-05T15:00:12.342327+00:00",
+      "elapsed_seconds": 1800.104815694,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n18m12_M2_9_ell2_s3_V3_8_r2_slimgb_full/input.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n18m12_M2_9_ell2_s3_V3_8_r2_slimgb_full/input.sing",
+      "input_sha256": "1a28ed77435f5f1d0a3378c3d9bfbc96c2be5651c654d8a8a594e015d1573063",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n18m12_M2_9_ell2_s3_V3_8_r2_slimgb_full",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "input.sing",
+          "valid": true,
+          "bytes": 1971447,
+          "sha256": "1a28ed77435f5f1d0a3378c3d9bfbc96c2be5651c654d8a8a594e015d1573063"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 971,
+          "sha256": "ee479a467f7b29213bb00430c678d9f6501ee0660a623945467090de84d00768"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 50,
+          "sha256": "bee50f6785f306aa01a82b201a27350ec13ec526ff6d717ae66cf6ba5f078421"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 983,
+          "sha256": "e06b3b56a8d63e3aa7b807f28dd0e18bddfa0248d108e8ee3fc5edb78ad7680f"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 1534884,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n18m12_M2_9_ell2_s3_V3_8",
+      "host": "ip-172-30-0-86",
+      "ip": "172.30.0.86",
+      "worker": "i-02aaa996f54d2c004",
+      "pid": 2206,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "dp",
+      "representation": "full_direct_c_equals_one",
+      "gauge": null,
+      "memory_gib": 48,
+      "timeout_seconds": 600,
+      "returncode": 124,
+      "start_utc": "2026-09-05T13:59:34.465995+00:00",
+      "end_utc": "2026-09-05T14:09:34.819726+00:00",
+      "elapsed_seconds": 600.35082759,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n18m12_M2_9_ell2_s3_V3_8/slice.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n18m12_M2_9_ell2_s3_V3_8/slice.sing",
+      "input_sha256": "cf7495ce8cb95018b8000035d86ee07c1c0a86346e30a5640bb68c32cfe4f6c8",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n18m12_M2_9_ell2_s3_V3_8_singular_full",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 679,
+          "sha256": "6570bcde5e75f9bc6d5c7c35cceae8e61e70244a7e0891fb9238ec1e3eede72e"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 50,
+          "sha256": "bee50f6785f306aa01a82b201a27350ec13ec526ff6d717ae66cf6ba5f078421"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 977,
+          "sha256": "a010f592044e83edebd02d38dd434f55a3d1a7b13bea101998f35501efb98189"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 5112204,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 3792,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "dp",
+      "representation": "full_direct_c1_second_torus_gauge",
+      "gauge": "A3_2_0",
+      "memory_gib": 16,
+      "timeout_seconds": 900,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:10:31.061389+00:00",
+      "end_utc": "2026-09-05T14:25:31.594920+00:00",
+      "elapsed_seconds": 900.5324379820001,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/proof/torus_branches/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/A3_2_0/branch.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/proof/torus_branches/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/A3_2_0/branch.sing",
+      "input_sha256": "e5dda093fabbee5ecd2bda5ffb09866d7bf359faa68e36b7b52181c141aff066",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_gauge_A3_2_0_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 774,
+          "sha256": "a0a4393a8cfc9832927af58eaa04e76af41cfa8267dd0120b56baecb8543c070"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 66,
+          "sha256": "521f5dd602e4eeb4bf99762c1aacf7cf826cae4a657bf6c9b760403a32fc15b2"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 996,
+          "sha256": "ecf29a05b58a2bd87927d4a2ced95079b44b9ad5c96e49f3dacc1a9c3c363e2b"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 3798132,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 3992,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "dp",
+      "representation": "full_direct_c1_second_torus_gauge",
+      "gauge": "B2_1_0",
+      "memory_gib": 16,
+      "timeout_seconds": 900,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:10:32.139631+00:00",
+      "end_utc": "2026-09-05T14:25:32.455109+00:00",
+      "elapsed_seconds": 900.3143453930002,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/proof/torus_branches/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/B2_1_0/branch.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/proof/torus_branches/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/B2_1_0/branch.sing",
+      "input_sha256": "4bfd796911223319c91b2ecdc25a8704b9780f2ffd780e39fbbbc94696c3e136",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_gauge_B2_1_0_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 774,
+          "sha256": "d5129afab24255e5cd7787db77073f7fdec3cbcd491d10993cdf5cf8d01fcb16"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 66,
+          "sha256": "92fd936c431546f74ba0ee14ee527c11654beacd7b39b8c7b743cbea6da8f07f"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 995,
+          "sha256": "4e3726b1d1d821ccff568523e0226412fd2e0226a96cd0d5a2d2031660c43ab1"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 2492284,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 4192,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "dp",
+      "representation": "full_direct_c1_second_torus_gauge",
+      "gauge": "B2_1_1",
+      "memory_gib": 16,
+      "timeout_seconds": 900,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:10:33.216394+00:00",
+      "end_utc": "2026-09-05T14:25:33.522128+00:00",
+      "elapsed_seconds": 900.304650264,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/proof/torus_branches/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/B2_1_1/branch.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/proof/torus_branches/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/B2_1_1/branch.sing",
+      "input_sha256": "97183fce990f8cca079053ec427058dca4a7edc2fe6aff5e3f80101b48ef4fae",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_gauge_B2_1_1_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 774,
+          "sha256": "6656bb8efa92a419e9ab7e8a1c0df77a2153955ca3ee1e38a3d04e8652357f3f"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 66,
+          "sha256": "dc90b32372ef6ff7908f350c263340a3082e21b7d07858ef8aaf4f34dc68ea4e"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 995,
+          "sha256": "44dc51b3dbeb65463af076f540d3d464ab724ce679cd71bb826c73a31bdfe628"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 2629996,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 3250,
+      "state": "FINISHED",
+      "field": 1073741827,
+      "kind": "msolve",
+      "order": "dp",
+      "representation": "full_direct_c_equals_one",
+      "gauge": null,
+      "memory_gib": 420,
+      "timeout_seconds": 1200,
+      "returncode": 124,
+      "start_utc": "2026-09-05T13:58:48.216630+00:00",
+      "end_utc": "2026-09-05T14:18:50.109319+00:00",
+      "elapsed_seconds": 1201.8422948779998,
+      "command": [
+        "/home/ubuntu/jc2/box/graded-moh-20260905/ops/bin/msolve",
+        "-g",
+        "2",
+        "-t",
+        "16",
+        "-v",
+        "2",
+        "-l",
+        "44",
+        "-m",
+        "1000",
+        "-f",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/slice_p1073741827.ms",
+        "-o",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_msolve_full/basis.out"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/slice_p1073741827.ms",
+      "input_sha256": "d685569899b98c84ecf43b183b84511798f96fee7046131f3fe5077b84b62fbc",
+      "solver_sha256": "0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f",
+      "run": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_msolve_full",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "basis.out",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 916,
+          "sha256": "c3c8d3fcd16d80b62ed11d66dfe1b66fafbc29189e1e10684ea1b6534c68d0f8"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 23460,
+          "sha256": "34c382bad5a7fbae49b4fb9091cffd980bc96fda982c81cee6a8786e94b862ba"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 1126,
+          "sha256": "fb42044d574b5df199730d82c7599957da50b4584953ee678de9eaa779833a45"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 71234288,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 5676,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular_slimgb",
+      "order": "dp",
+      "representation": "full_direct_c1_second_torus_gauge",
+      "gauge": "A3_2_0",
+      "memory_gib": 24,
+      "timeout_seconds": 1800,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:30:08.769017+00:00",
+      "end_utc": "2026-09-05T15:00:08.975235+00:00",
+      "elapsed_seconds": 1800.2051432520002,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_r2_slimgb_A3_2_0/input.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_r2_slimgb_A3_2_0/input.sing",
+      "input_sha256": "129b28189b311f709890357556fc7ca4820b669da2c1caebf10b7cdc28e06484",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_r2_slimgb_A3_2_0",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "input.sing",
+          "valid": true,
+          "bytes": 877866,
+          "sha256": "129b28189b311f709890357556fc7ca4820b669da2c1caebf10b7cdc28e06484"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 1041,
+          "sha256": "a1898bcf6314aaed02995ced9ee80cbb934a28ba536fefd0b2c4359696e5d3da"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 66,
+          "sha256": "521f5dd602e4eeb4bf99762c1aacf7cf826cae4a657bf6c9b760403a32fc15b2"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 992,
+          "sha256": "65d68c9186fb6536f29e1a7c8a8772e5aa0c704b71b6cce2debf7bfa8f3444b0"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 1650884,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 5886,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular_slimgb",
+      "order": "dp",
+      "representation": "full_direct_c1_second_torus_gauge",
+      "gauge": "B2_1_0",
+      "memory_gib": 24,
+      "timeout_seconds": 1800,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:30:10.073843+00:00",
+      "end_utc": "2026-09-05T15:00:10.221334+00:00",
+      "elapsed_seconds": 1800.1464195500002,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_r2_slimgb_B2_1_0/input.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_r2_slimgb_B2_1_0/input.sing",
+      "input_sha256": "83c8bf4219768860a721ca5accb08f71b5951005d27b12c2119881f19914a900",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_r2_slimgb_B2_1_0",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "input.sing",
+          "valid": true,
+          "bytes": 868486,
+          "sha256": "83c8bf4219768860a721ca5accb08f71b5951005d27b12c2119881f19914a900"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 1041,
+          "sha256": "22a415c4df816d698a7f21f6c7f70a9810161c852d9395980d70c15cbafc95f0"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 66,
+          "sha256": "92fd936c431546f74ba0ee14ee527c11654beacd7b39b8c7b743cbea6da8f07f"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 990,
+          "sha256": "ea614519ecec6d75200bbeac50414bb692f532a810815e23823014880530e013"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 1543800,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 6086,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular_slimgb",
+      "order": "dp",
+      "representation": "full_direct_c1_second_torus_gauge",
+      "gauge": "B2_1_1",
+      "memory_gib": 24,
+      "timeout_seconds": 1800,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:30:11.177063+00:00",
+      "end_utc": "2026-09-05T15:00:11.244134+00:00",
+      "elapsed_seconds": 1800.0659802699997,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_r2_slimgb_B2_1_1/input.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_r2_slimgb_B2_1_1/input.sing",
+      "input_sha256": "98a517309b82a13463a7c147cb2bce5ac461f492bb20ed00524857437997663e",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_r2_slimgb_B2_1_1",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "input.sing",
+          "valid": true,
+          "bytes": 868493,
+          "sha256": "98a517309b82a13463a7c147cb2bce5ac461f492bb20ed00524857437997663e"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 1041,
+          "sha256": "c648e92d113520cb2cff0d5fda42ca03a22b6cdbaa066015fd9a45e2c8e7a2af"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 66,
+          "sha256": "dc90b32372ef6ff7908f350c263340a3082e21b7d07858ef8aaf4f34dc68ea4e"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 990,
+          "sha256": "e92f8d5680475dba394eb49bb0eb32f58066cc0975d7795f0fd12e1943e75d58"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 1409840,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 3317,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "dp",
+      "representation": "full_direct_c_equals_one",
+      "gauge": null,
+      "memory_gib": 48,
+      "timeout_seconds": 600,
+      "returncode": 124,
+      "start_utc": "2026-09-05T13:58:48.494109+00:00",
+      "end_utc": "2026-09-05T14:08:48.781996+00:00",
+      "elapsed_seconds": 600.285805014,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/slice.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/slice.sing",
+      "input_sha256": "22c3d5fc515672745795290b49cf2ab8aa773d8db90a55dcf609b6d2a0918352",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_singular_full",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 707,
+          "sha256": "0d3af111576749b5d2c6f0602bd58385886b255de1b0253f62465b34f3f9af8b"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 49,
+          "sha256": "e6d71b3a87989ffb67cfe315f2eded990b3ee6f8a7634489ef04f6a28179c703"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 983,
+          "sha256": "2957de167f193efbc5fca64af36c9221cd9a41616a68a2336786694a1f40ccf8"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 3892976,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m18_Mm15_14_ell1_s3_V1_9",
+      "host": "ip-172-30-0-86",
+      "ip": "172.30.0.86",
+      "worker": "i-02aaa996f54d2c004",
+      "pid": 8863,
+      "state": "FINISHED",
+      "field": 1073741827,
+      "kind": "msolve",
+      "order": "dp",
+      "representation": "full_direct_c_equals_one",
+      "gauge": null,
+      "memory_gib": 180,
+      "timeout_seconds": 1800,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:23:30.025502+00:00",
+      "end_utc": "2026-09-05T14:53:30.679403+00:00",
+      "elapsed_seconds": 1800.5998084249998,
+      "command": [
+        "/home/ubuntu/jc2/box/graded-moh-20260905/ops/bin/msolve",
+        "-g",
+        "2",
+        "-t",
+        "16",
+        "-v",
+        "2",
+        "-l",
+        "44",
+        "-m",
+        "2000",
+        "-f",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n24m18_Mm15_14_ell1_s3_V1_9/slice_p1073741827.ms",
+        "-o",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/runs/C_n24m18_Mm15_14_ell1_s3_V1_9_r2_msolve_full/basis.out"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n24m18_Mm15_14_ell1_s3_V1_9/slice_p1073741827.ms",
+      "input_sha256": "a497272b19e7011b12523f5468934c8152b153d93e9be87bb70c2f67ad7a1575",
+      "solver_sha256": "0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f",
+      "run": "C_n24m18_Mm15_14_ell1_s3_V1_9_r2_msolve_full",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "basis.out",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 902,
+          "sha256": "d53bead5d8daaef1e3cea861779d00cff87c1d8352404ce4bb19237e1437b7c6"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 10737,
+          "sha256": "a6e224b12ecfeac2e6988bb670b33bffd3899c21462b349fd45f1df2d7af4dd3"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 1118,
+          "sha256": "3bcf5b4dbe22195c913237455e31434a3e7008c722acf94998543be627b3e73c"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 23260020,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m18_Mm15_14_ell1_s3_V1_9",
+      "host": "ip-172-30-0-86",
+      "ip": "172.30.0.86",
+      "worker": "i-02aaa996f54d2c004",
+      "pid": 9083,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "dp",
+      "representation": "full_direct_c_equals_one",
+      "gauge": null,
+      "memory_gib": 48,
+      "timeout_seconds": 1800,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:23:31.147180+00:00",
+      "end_utc": "2026-09-05T14:53:31.247046+00:00",
+      "elapsed_seconds": 1800.093167802,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n24m18_Mm15_14_ell1_s3_V1_9/slice.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/instrument/C_n24m18_Mm15_14_ell1_s3_V1_9/slice.sing",
+      "input_sha256": "46469669e27a4b556623fe946ec10ab93ef5fbf4cc3f9d85a2629a1d26d78f9d",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "C_n24m18_Mm15_14_ell1_s3_V1_9_r2_singular_full",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 695,
+          "sha256": "ec8e9a6a995f71f7b8b402c3bc5d84bf92792baa7f8e8d03757e1029c9959b62"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 50,
+          "sha256": "9bd6f4f5989d1fb97796a46bdc543148b0ae3a358b43b0fe4fa09747942195cf"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 976,
+          "sha256": "e7fe0f10faa8add124b8c05690ee0d72ed3ee62e0d1d2309213e426ac0ed414f"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 1005748,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n18m12_M2_9_ell2_s3_V1_8",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 12988,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "wp(1,60,119,178,61,120,179,62,121,63,122,64,65,124,60,119,178,61,120,179,62,121,63,122,64,65,124,66,125,184,243,67,126,185,244,68,127,186,245,69,128,187,70,129,188,247,71,130,189,248,72,131,190,249,308,367,73,132,191,250,309,368,74,133,192,251,310,75,134,193,252,311,370,76,135,194,253,312,371,77,136,195,254,313,372,66,125,184,243,67,126,185,244,68,127,186,245,69,128,187,70,129,188,247,71,130,189,248,206)",
+      "representation": "r2_necessary_monomial_curve_image_c2",
+      "gauge": null,
+      "memory_gib": 40,
+      "timeout_seconds": 600,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:46:23.048256+00:00",
+      "end_utc": "2026-09-05T14:56:23.078843+00:00",
+      "elapsed_seconds": 600.0274606180001,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/136/curve_n2/input.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/136/curve_n2/input.sing",
+      "input_sha256": "5608c7f0a2c0f08b86cad3fdad6f5b0ac30bdd6395a44d944283b1bc99c94c42",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "r2_136_curve_n2_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 1065,
+          "sha256": "21c6a200a8164251cc34653eb374ad819cdeb30a92b0f6025f0750c2a75cd736"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 8364,
+          "sha256": "532bd784614516b395b265adf2318138c3f90fe5250ebc4d94f8db2639fc0971"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 966,
+          "sha256": "840b61c9c61daf55a7aeb7b3e000b8cee0ced578acaf8ac7cfdc71c2ceb7fbed"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 168796,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n18m12_M2_9_ell2_s3_V1_8",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 5246,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "wp(1,1,1,1,2,2,2,2,3,3,3,4,4,4,5,5,6,6,6,1,1,1,1,2,2,2,2,3,3,3,4,4,4,5,5,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,10,11,11,11,11,12,12,12,12,13,13,13,13,14,14,14,14,15,15,15,15,16,16,16,16,17,17,17,17,18,18,18,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,10,11,11,11,11,12,12,12,29)",
+      "representation": "r2_exact_target_component_xcharge_quotient_N1",
+      "gauge": null,
+      "memory_gib": 64,
+      "timeout_seconds": 2400,
+      "returncode": 1,
+      "start_utc": "2026-09-05T14:25:32.236624+00:00",
+      "end_utc": "2026-09-05T14:40:16.233043+00:00",
+      "elapsed_seconds": 883.992831048,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/136/n1_direct_Q.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/136/n1_direct_Q.sing",
+      "input_sha256": "130e53b0f70d57e84bb78ac79541bb7c52d6f8b5f80166e415d623d5c82e8782",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "r2_136_direct_n1_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 931,
+          "sha256": "8991a24659330aaf30089af506a3cb078cc09c29202b21d9eb478ccbd64cd09a"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 13519,
+          "sha256": "569274780cf6a9832d21308cb171ddc99e0dd184f56c6610268bcb2b6890dfe0"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 960,
+          "sha256": "3a46a46bbd8c40b709d518492e9e7d0bdbcfd1ca68c7bbd1acee641ddb276a23"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 387468,
+      "disposition": "STOPPED_AFTER_CERTIFIED_N1_NONMEMBERSHIP",
+      "manual_stop": {
+        "utc": "2026-09-05T14:40:16.149938+00:00",
+        "solver_pid": 5249,
+        "signal": "SIGTERM",
+        "classification": "REDUNDANT_STOP_AFTER_CERTIFIED_NONMEMBERSHIP",
+        "reason": "Independent exact-Q projected bounded Buchberger replay proves c not in full136 ideal; root directed redundant N1 computations stop. This is neither timeout nor mathematical UNIT.",
+        "certificate": "resume-r2/triangular/136/projection-independent-replay.json"
+      }
+    },
+    {
+      "chart": "C_n18m12_M2_9_ell2_s3_V1_8",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 6568,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "wp(18,18,18,17,17,17,16,16,16,15,15,15,14,14,14,13,13,13,12,12,12,11,11,11,10,10,10,9,9,9,8,8,8,7,7,7,6,6,5,4,4,3,3,2,2,2,1,1,1,1,1,1,1,2,2,2,2,3,3,3,4,4,4,5,5,6,6,6,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,10,11,11,11,11,12,12,12,29)",
+      "representation": "r2_exact_target_component_pivot_priority_N1",
+      "gauge": null,
+      "memory_gib": 52,
+      "timeout_seconds": 2400,
+      "returncode": 1,
+      "start_utc": "2026-09-05T14:31:36.345513+00:00",
+      "end_utc": "2026-09-05T14:40:16.219305+00:00",
+      "elapsed_seconds": 519.870199209,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/136/n1_pivot_order_Q.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/136/n1_pivot_order_Q.sing",
+      "input_sha256": "dee92be1d9d1f91d8ceb86fc17937352bfc9d39e30a3c07fe582200140d77364",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "r2_136_pivot_order_n1_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "memory-amendment.json",
+          "valid": true,
+          "bytes": 340,
+          "sha256": "47e1bafd07b3bf2e39f5e68265774368ba0fa2d5e9dfae738323acb5874b9266"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 944,
+          "sha256": "e5916b8fb6b2055d215fada9177b260749b00fb6a1e1ec328222218e40040c82"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 8989,
+          "sha256": "e1d2948424414b2378d45dc4b3643e1cc9034ca94de59d50a0bda278285bd520"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 963,
+          "sha256": "a8de5e93d93a53474bae2f7ad19b128a3aec6bac5f2e811fb9ee27a5c53e214a"
+        }
+      ],
+      "completion_markers": [
+        "PIVOT_ORDER_CHECKS_FAILED=0"
+      ],
+      "singular_error_lines": [],
+      "peak_rss_kib": 315520,
+      "disposition": "STOPPED_AFTER_CERTIFIED_N1_NONMEMBERSHIP",
+      "manual_stop": {
+        "utc": "2026-09-05T14:40:16.409826+00:00",
+        "solver_pid": 6571,
+        "signal": "SIGTERM",
+        "classification": "REDUNDANT_STOP_AFTER_CERTIFIED_NONMEMBERSHIP",
+        "reason": "Independent exact-Q projected bounded Buchberger replay proves c not in full136 ideal; root directed redundant N1 computations stop. This is neither timeout nor mathematical UNIT.",
+        "certificate": "resume-r2/triangular/136/projection-independent-replay.json"
+      }
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 12784,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "wp(1,80,81,82,80,81,82,88,89,90,91,92,93,94,95,96,175,97,176,98,177,99,178,100,179,101,180,102,181,103,182,88,89,90,91,92,93,94,95,197)",
+      "representation": "r2_necessary_monomial_curve_image_c2",
+      "gauge": null,
+      "memory_gib": 40,
+      "timeout_seconds": 600,
+      "returncode": 0,
+      "start_utc": "2026-09-05T14:46:21.950058+00:00",
+      "end_utc": "2026-09-05T14:46:42.169734+00:00",
+      "elapsed_seconds": 20.219317130000036,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/77/curve_n2/input.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/77/curve_n2/input.sing",
+      "input_sha256": "160f7efc762c801031c6d27350b97bb60cb15c9f3eeef870ea2d224d3c4d69db",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "r2_77_curve_n2_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "basis.txt",
+          "valid": true,
+          "bytes": 573573,
+          "sha256": "2daf5cd6de1e8b9f79fba19485c56b90e192c21bb7177403da45ea4c147fa673"
+        },
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "nf.txt",
+          "valid": true,
+          "bytes": 2,
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 797,
+          "sha256": "54f4e0ff9d43c7ce2d1fd1c5237b3dd223780eb2348fd90f97a7adaa8f156284"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 18222,
+          "sha256": "61c6fa2236d1823139abdab4c5caf0c7457c9e11503dd9bf95ae22c6415d7bcb"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 918,
+          "sha256": "e426cd5ecac17ef9e436bb79e6cd3090cd0d34ed38fcc1bb3e7c8cab3390dd1a"
+        }
+      ],
+      "completion_markers": [
+        "CURVE_N2_DONE NF_ZERO=1 NF_TERMS=0 BASIS_SIZE=768"
+      ],
+      "singular_error_lines": [],
+      "peak_rss_kib": 15416,
+      "disposition": "PROJECTED_N2_ZERO_UNPROMOTED"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 5045,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "wp(1,1,2,2,3,3,4,5,6,7,8,1,1,2,2,3,3,4,5,6,7,8,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,17,18,18,18,19,19,19,20,20,20,21,21,21,22,22,22,23,23,23,24,24,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,39)",
+      "representation": "r2_exact_target_component_xcharge_quotient_N1",
+      "gauge": null,
+      "memory_gib": 64,
+      "timeout_seconds": 2400,
+      "returncode": 1,
+      "start_utc": "2026-09-05T14:25:31.097614+00:00",
+      "end_utc": "2026-09-05T14:45:20.124049+00:00",
+      "elapsed_seconds": 1189.025350426,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/77/n1_direct_Q.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/77/n1_direct_Q.sing",
+      "input_sha256": "89165955a37bd6509144f846a55b5c6decd5237cd2047fc210a9af1d36af6127",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "r2_77_direct_n1_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 875,
+          "sha256": "cdf334728398de53e5416faf243c456b09b7690542e0cf7828ac5ec2f3af1d43"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 23631,
+          "sha256": "4b73df8724e47b5b5a4ca8911d3d38f258e93f114d7c49594595bc489ec864da"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 961,
+          "sha256": "a9ec65c8b208e3aca3b3208727c35159ff0706cfb242f632681dcea723d583d1"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 515800,
+      "disposition": "STOPPED_AFTER_CERTIFIED_N1_NONMEMBERSHIP",
+      "manual_stop": {
+        "utc": "2026-09-05T14:45:20.055869+00:00",
+        "solver_pid": 5048,
+        "signal": "SIGTERM",
+        "classification": "REDUNDANT_STOP_AFTER_CERTIFIED_NONMEMBERSHIP",
+        "reason": "Independent exact-Q monomial-curve bounded Buchberger replay proves c not in full77 ideal; root directed redundant N1 computations stop. Neither timeout nor UNIT.",
+        "certificate": "resume-r2/triangular/77/curve/independent-replay.json"
+      }
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-86",
+      "ip": "172.30.0.86",
+      "worker": "i-02aaa996f54d2c004",
+      "pid": 12873,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular_weighted_std",
+      "order": "wp(w), reverse triangular pivots then source free variable order",
+      "representation": "FULL_original_direct_ideal_no_specialization_no_quotient",
+      "gauge": null,
+      "memory_gib": 128,
+      "timeout_seconds": 1200,
+      "returncode": 124,
+      "start_utc": "2026-09-05T14:50:36.322447+00:00",
+      "end_utc": "2026-09-05T15:10:36.353823+00:00",
+      "elapsed_seconds": 1200.0302733570002,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/runs/r2_77_full_n2_Q/input.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/runs/r2_77_full_n2_Q/input.sing",
+      "input_sha256": "1ac35bc8873d98add0763fd3a7734673c2df2c7dd3470ede6a162fa60fad9ef7",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "r2_77_full_n2_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "input.sing",
+          "valid": true,
+          "bytes": 879001,
+          "sha256": "1ac35bc8873d98add0763fd3a7734673c2df2c7dd3470ede6a162fa60fad9ef7"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 2881,
+          "sha256": "2f0ae9b8bab1921f20bfefbcaac7199ecf73d3c15ee75f6423879680dbb9c45d"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 95,
+          "sha256": "08693f7df711ebae68c48d4c0c2556b736060251aade076779d2d2d0ed1753b1"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 954,
+          "sha256": "3638118bbe2b328344a714143d0f482b465fda03807de429c3b17802f33aa0b3"
+        }
+      ],
+      "completion_markers": [],
+      "singular_error_lines": [],
+      "peak_rss_kib": 596524,
+      "disposition": "TIMEOUT_OPEN"
+    },
+    {
+      "chart": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+      "host": "ip-172-30-0-67",
+      "ip": "172.30.0.67",
+      "worker": "i-05bbedf0197e8eee3",
+      "pid": 12077,
+      "state": "FINISHED",
+      "field": 0,
+      "kind": "singular",
+      "order": "wp(24,24,23,23,22,22,21,21,20,20,19,19,18,18,17,17,16,15,14,13,12,11,10,9,3,2,1,1,1,2,2,3,3,4,5,6,7,8,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,9,9,10,10,11,11,12,12,13,13,14,14,15,15,16,39)",
+      "representation": "r2_exact_target_component_pivot_priority_N1",
+      "gauge": null,
+      "memory_gib": 26,
+      "timeout_seconds": 2400,
+      "returncode": 1,
+      "start_utc": "2026-09-05T14:33:33.757440+00:00",
+      "end_utc": "2026-09-05T14:45:20.072063+00:00",
+      "elapsed_seconds": 706.3135459250002,
+      "command": [
+        "/usr/bin/Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "-q",
+        "--no-rc",
+        "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/77/n1_pivot_order_Q.sing"
+      ],
+      "input": "/home/ubuntu/jc2/box/graded-moh-20260905/resume-r2/triangular/77/n1_pivot_order_Q.sing",
+      "input_sha256": "a7c2f1a6d11ff5c3b80f6466494587b666780e6773698a62c47dfc2fa8b0f716",
+      "solver_sha256": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+      "run": "r2_77_pivot_order_n1_Q",
+      "input_hash_valid": true,
+      "outputs_valid": true,
+      "output_checks": [
+        {
+          "file": "driver.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "spec.json",
+          "valid": true,
+          "bytes": 888,
+          "sha256": "e27b929ccca99296c6cbd23196674506912d32b2b3844189a4927cb6747ef293"
+        },
+        {
+          "file": "stderr.log",
+          "valid": true,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "stdout.log",
+          "valid": true,
+          "bytes": 17189,
+          "sha256": "f91a7d9e42b7ef76e0b6c39bdd1ab978994866217a10a05b5327b665e9ead536"
+        },
+        {
+          "file": "time.txt",
+          "valid": true,
+          "bytes": 964,
+          "sha256": "b1f7f1079c54420210dbff233ab169234f21c9feb078db8f01444f491256a543"
+        }
+      ],
+      "completion_markers": [
+        "PIVOT_ORDER_CHECKS_FAILED=0"
+      ],
+      "singular_error_lines": [],
+      "peak_rss_kib": 211560,
+      "disposition": "STOPPED_AFTER_CERTIFIED_N1_NONMEMBERSHIP",
+      "manual_stop": {
+        "utc": "2026-09-05T14:45:20.317146+00:00",
+        "solver_pid": 12080,
+        "signal": "SIGTERM",
+        "classification": "REDUNDANT_STOP_AFTER_CERTIFIED_NONMEMBERSHIP",
+        "reason": "Independent exact-Q monomial-curve bounded Buchberger replay proves c not in full77 ideal; root directed redundant N1 computations stop. Neither timeout nor UNIT.",
+        "certificate": "resume-r2/triangular/77/curve/independent-replay.json"
+      }
+    }
+  ]
+}

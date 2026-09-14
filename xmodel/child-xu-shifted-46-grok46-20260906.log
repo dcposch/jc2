@@ -1,0 +1,18 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes and reading the xu-ell-shift scripts plus the frozen reports so the replay uses the printed calculus, not a rewrite.Hash check is next: I'll build the receipt manifest with awk, run `sha256sum -c`, then read the xu-ell-shift scripts and frozen reports.The first awk pairing was wrong (basename before hash). I'll re-pair by index, then read printed-closure code, census outputs, and `descend_own`.Hashes are 6/6 OK. Next I’ll read printed-closure vs child-xu code and the earlier unshifted replay so the 46-row run matches those definitions.Hashes are 6/6. I’ll summarize the existing census, then write a thin driver that reuses the xu-ell-shift scripts instead of rewriting them.I'll write a thin driver that reuses the xu-ell-shift scripts, records every printed-closure completion (not just survivors), and compares shifted vs unshifted values.Data checks out. Next I’ll write the sealed 4–10KB report and the box manifests.Body is 8358 bytes (in range). I’ll expand the compressed `I'_M` lists so every row shows actual values, then re-stamp.Charged inputs verified **6/6 OK**. Sealed report: `xmodel/child-xu-shifted-46-grok46-20260906.md` (body 8605 B). Driver: `box/child-xu-shifted-20260906/`. This is a data replay; the R063 kill stays under gate.
+
+**Instrument (calculus not rewritten).** All 46 complete `u_s=1` rows, licensed child from `descend_own` (`ℓ=v_s−u_s−1`, 46/46 match, all `DETERMINED_PROP6.4` / `V'` DETERMINED). Shifted `I'_M` and `I'_m^ℓ` from the xu-ell-shift scripts; printed closure via `child_close.search` with actual-centre `L`. 140 flat configs (matches both charged 46-row counts); 86 printed-closure completions.
+
+**Controls.** R009 and R050: surviving closed `I'_M=8` (`I'_m^ℓ=8` and `13/2`). R063: unique pattern, flat `71/4`, closure `{33/2, 103/6}`, none integral, `I'_m^ℓ=2`.
+
+**Every child config has non-integer `I'_M` (candidates only, not kills):**
+- **Flat (7):** R025, R026, R027, R028, R057, R058, R063
+- **Printed closure:** only **R063** still has completions, and both are non-integral. The other six have **zero** printed completions. R001 is not in the list (`4<5`).
+
+**Shifted vs unshifted (all 46 have `ℓ≥1`):**
+- ell=0 tower vs Thm 5.1^ℓ: **46/46** `I'_M` sets differ (33/46 have no ell=0 pattern)
+- `I'_m^ℓ` vs unshifted `I_m=1+Σ(δ−1)`: **35/46** differ
+- printed-closure `I'_M` vs flat (earlier replay): **25/46** differ
+
+No ledger, no `jc2-lean`, no fleet. Report+JSON = 89 KB.
+DIVERT path=xmodel/child-xu-shifted-46-grok46-20260906.md status=CLEAN_SEALED body_bytes=8605 body_sha256=94abc585cb419156ba16e8dc1d930b04ca76d856806f715ba53f1d8609830d4a

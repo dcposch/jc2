@@ -1,0 +1,47 @@
+{
+  "schema": "jc2.hybrid81-disabled-readiness/v1",
+  "authorized": false,
+  "current_worker_readiness_observed": false,
+  "fresh_boot": null,
+  "adapter_gate": null,
+  "independent_hybrid_fixture": null,
+  "new_cwd": "/home/ubuntu/d125-hybrid81-exact-solver-20260907",
+  "instance": "i-0da0cebfc97c9fd54",
+  "owner": "coordinator-factored-jacobian-20260906",
+  "ebs": "vol-0eb6450d18ffa89f1",
+  "code": {
+    "driver.py": "faf7a1e08fa7fafac09160b57587eb325ef4542da30a7defbf5165bc329569d9",
+    "exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+    "hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+    "run_capped.py": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+  },
+  "registration": "38bc496f9f2eb7f7519c70bbabe0eab8586c56264b7e20c0078fc71cb818cd6d",
+  "construction": {
+    "path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/construction.jsonl",
+    "sha256": "4ea526b2680ef41154332be3059ae5543c2678fdf8fb6a95d02176e8eb929272"
+  },
+  "original_source": {
+    "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/client-unequal-rational.jsonl",
+    "sha256": "b8db27661d1bfd3dcc5dfe1d1271b78c3f6375e06201654977a51380cd6ebcac"
+  },
+  "expected_binaries_to_recheck_on_worker": {
+    "/usr/bin/Singular": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+    "/usr/bin/python3": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223",
+    "/usr/bin/prlimit": "17064f67e650d6152a6902b013aab496b54c87587c8eea6f5023aafee6154069"
+  },
+  "reusable_evidence_under": "box/d125-small-exact-solver-engineering-20260907/evidence/engineering/",
+  "reusable_pins": {
+    "stdout-limit.telemetry.json": "c0c2fde984bea0b50f21922947cfb7ba2bbce76854f780a63921097ef0c4064b",
+    "stderr-limit.telemetry.json": "157ed1001457a4f0d1e8e91c9bf4ac47a8a2d8cdeb0c0b5bd90ee5464bb80e65",
+    "rss.telemetry.json": "6f3c7a5eb78f97ac5db768b6604ed3d116219537af5aa4dbba207fef4f2617a5",
+    "long.stdout": "8dca03766fdfb658419caa9720a9a9c5361d6122c7adad1814114801f5241a78"
+  },
+  "prior_evidence_does_not_replace": [
+    "fresh exact current host/boot/Owner/EBS/process and output-absence checks",
+    "new actual tiny hybrid serializer/import/index interface control",
+    "separate explicit root engineering and solver authorizations"
+  ],
+  "new_code_created": false,
+  "local_arithmetic_or_tests_run": false,
+  "remote_access": false
+}

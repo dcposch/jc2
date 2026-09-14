@@ -1,0 +1,61 @@
+--- build_direct.py
++++ build_direct_whole.py
+@@ -558,30 +558,19 @@
+         HH = self.mul(H, H, self.qcap - min(r for r, _ in Rlow))
+         vU = self.mul(v, U, self.qcap - 1)
+         pp = d + b * c / 2 - (a + b * b / 4) ** 2 / 3
+-        support_RHH = self.support_mul(Rlow, HH, self.qcap)
+-        support_vUH = self.support_mul(vU, H, self.qcap - 1)
+-        support_vR = self.support_mul(v, Rlow, self.qcap - 1)
+-        support_UU = self.support_mul(U, U, self.qcap - 2)
+-        q_support = set(support_RHH)
+-        q_support |= self.shifted_support(support_vUH, 1, cap=self.qcap)
+-        q_support |= self.shifted_support(support_vR, 1, cap=self.qcap)
+-        q_support |= self.shifted_support(support_UU, 2, cap=self.qcap)
+-        q_support |= self.shifted_support(HH, 4 * self.k - 2, cap=self.qcap)
+-        q_support |= self.shifted_support(v, 4 * self.k - 1, cap=self.qcap)
+-        need = q_support | {(self.lead, z) for z in range(self.D2 + 1)}
++        Q = self.add(
++            (self.mul(Rlow, HH, self.qcap), self.C("3/4")),
++            (self.shift(self.mul(vU, H, self.qcap - 1), 1, scalar=self.C("-1/8")), 1),
++            (self.shift(self.mul(v, Rlow, self.qcap - 1), 1), 1),
++            (self.shift(self.mul(U, U, self.qcap - 2), 2, scalar=self.C("-9/64")), 1),
++            (self.shift(HH, 4 * self.k - 2, scalar=pp), 1),
++            (self.shift(v, 4 * self.k - 1, scalar=pp), 1),
++        )
++        Q = {pos: value for pos, value in Q.items() if pos[0] <= self.qcap}
++        need = set(Q) | {(self.lead, z) for z in range(self.D2 + 1)}
+         Qjet = {}
+         for r, z in sorted(need):
+-            value = self.zero
+-            if (r, z) in support_RHH:
+-                value += self.coefficient_mul(Rlow, HH, (r, z)) * self.C("3/4")
+-            if (r - 1, z) in support_vUH:
+-                value += self.coefficient_mul(vU, H, (r - 1, z)) * self.C("-1/8")
+-            if (r - 1, z) in support_vR:
+-                value += self.coefficient_mul(v, Rlow, (r - 1, z))
+-            if (r - 2, z) in support_UU:
+-                value += self.coefficient_mul(U, U, (r - 2, z)) * self.C("-9/64")
+-            value += HH.get((r - (4 * self.k - 2), z), self.zero) * pp
+-            value += v.get((r - (4 * self.k - 1), z), self.zero) * pp
++            value = Q.get((r, z), self.zero)
+             if r < self.lead:
+                 self.raw_row("T2_strict", f"T2_strict_{r}_{z}", value)
+                 continue
+@@ -598,6 +587,6 @@
+                 self.raw_row("T2_support", f"T2_support_{delta}_{z}", value)
+         print(
+-            f"BUILD_PROGRESS case={self.tag} phase=Q support={len(q_support)} jet={len(Qjet)} "
++            f"BUILD_PROGRESS case={self.tag} phase=Q support={len(Q)} jet={len(Qjet)} "
+             f"rows={self.row_count} terms={self.total_terms} "
+             f"rssKiB={resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}", flush=True,
+         )
+@@ -650,7 +639,7 @@
+             f"rows={self.row_count} terms={self.total_terms} "
+             f"rssKiB={resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}", flush=True,
+         )
+-        self.finish(h, D, C, q_support, Qjet, F, G, T3)
++        self.finish(h, D, C, Q, Qjet, F, G, T3)
+
+     def finish(self, h, D, C, Q, Qjet, F, G, T3):
+         actual_raw = {key: self.raw_counts[key] for key in self.spec["raw_counts"]}

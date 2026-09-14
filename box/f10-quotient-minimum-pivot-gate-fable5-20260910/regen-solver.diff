@@ -1,0 +1,13 @@
+--- oldsolver.py
++++ newsolver.py
+@@ -94,7 +94,9 @@
+         require(visits <= 13, 'rank-seven split termination bound')
+         a = Coefficients(pa)
+         local = [a.project(f) for f in fs]
+-        degree = max(len(f) - 1 for f in local)
++        # Choose the minimum NONZERO projected degree, constants included.
++        # Both split children rescan all nine; only the all-zero case is -1.
++        degree = min((len(f) - 1 for f in local if f), default=-1)
+         if degree < 0:
+             leaves.append({'a': a, 'fs': local, 'd': -1, 'pivot': None})
+             continue

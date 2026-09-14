@@ -1,0 +1,82 @@
+{
+  "caps": {
+    "cpu_seconds": 25,
+    "rss_bytes": 536870912,
+    "wall_seconds": 30
+  },
+  "elapsed_seconds": 2.580057,
+  "runs": [
+    {
+      "mode": "normal",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "dfb4996307ddc388c9db89667c188040e36361750bc5cc4915589767bb1f857d"
+    },
+    {
+      "mode": "wrong-middle",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 99, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 63, in run\n    need(F==sc(radical,lam),'normalized degree3 factor identity')\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: normalized degree3 factor identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "freeze-conjugate",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 99, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 63, in run\n    need(F==sc(radical,lam),'normalized degree3 factor identity')\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: normalized degree3 factor identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "wrong-motion-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 99, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 81, in run\n    need(not add(mul(line(Hg,simple),g1),p),'actual first moving-curve equation')\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual first moving-curve equation\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "wrong-c-normalization",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 99, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 89, in run\n    need(fs(fm(a,d),-1)==c,'actual c=-5/(9rho), not independent c=1')\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual c=-5/(9rho), not independent c=1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "normal",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "dfb4996307ddc388c9db89667c188040e36361750bc5cc4915589767bb1f857d"
+    },
+    {
+      "mode": "wrong-middle",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 99, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 63, in run\n    need(F==sc(radical,lam),'normalized degree3 factor identity')\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: normalized degree3 factor identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "freeze-conjugate",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 99, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 63, in run\n    need(F==sc(radical,lam),'normalized degree3 factor identity')\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: normalized degree3 factor identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "wrong-motion-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 99, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 81, in run\n    need(not add(mul(line(Hg,simple),g1),p),'actual first moving-curve equation')\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual first moving-curve equation\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "wrong-c-normalization",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 99, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 89, in run\n    need(fs(fm(a,d),-1)==c,'actual c=-5/(9rho), not independent c=1')\n  File \"/home/ubuntu/jc2/box/d125-golden-divisibility-control-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual c=-5/(9rho), not independent c=1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "zero_assert": true
+}

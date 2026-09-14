@@ -1,0 +1,63 @@
+{
+  "caps": "30wall/25CPU seconds,512MiB",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "24a90700ac30b9af4823891a246287abd9c7826485a7795c3d1dcacda3168de1"
+    },
+    {
+      "mutation": "--mutate-drop-mixed-orders",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "ffc9057b6ec83320d599a9e4b2ee849e5b3b2d7b2113d28df2640a809f85c661",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-full-arc-claim",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "a56098f77a895887ed19ef2d11ea29a05d2a10ea0163c68241a5879b65dfa823",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-guarded-s4-survivor",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "8d26bd370f1ec3a103b005b7e79bb6bf4a6c549bbd98cb392003681895bc06f5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "24a90700ac30b9af4823891a246287abd9c7826485a7795c3d1dcacda3168de1"
+    },
+    {
+      "mutation": "--mutate-drop-mixed-orders",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "ffc9057b6ec83320d599a9e4b2ee849e5b3b2d7b2113d28df2640a809f85c661",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-full-arc-claim",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "a56098f77a895887ed19ef2d11ea29a05d2a10ea0163c68241a5879b65dfa823",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-guarded-s4-survivor",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "8d26bd370f1ec3a103b005b7e79bb6bf4a6c549bbd98cb392003681895bc06f5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "writers_finished": true
+}

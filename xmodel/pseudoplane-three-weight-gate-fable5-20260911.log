@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. All writers idle as of 09:20:32 UTC, before the 09:30 reserve. The marker is the unique last line of the report and nothing was written after it.
+
+**Verdict on the Astra three-weight proof: A through F CONFIRMED, F exactly as the author scoped it.** Smallest correction is none mathematical, only wording notes. The theorem stands under this review: every H=Uf(t)+Z^d g(t)+q(t) with d≥1, f,g≠0 and arbitrary q has a critical point on U≠0, so it has no regular nonzero-scalar-bracket mate.
+
+What I recomputed by hand and how each gate held:
+
+- **A.** The two critical equations are exact in both directions where fh≠0. The eliminant E, the identity M'=f^(k−1)K and f^((k−1)N)E=D all check, using (k−1)(k+1)+1=k². The change v=uf is a genuine chart change on f≠0. Both lifts, including the sign v^k=−M'/q', the D≡0 case and q'≡0, land inside the accepted chart. D≡0 is genuinely possible in the family and is handled, not excluded.
+- **B.** The Wronskian abc lemma and its equal-degree refinement are complete inside the report with nothing imported.
+- **C.** The gcd support, the α*/β* orders, both degree formulas, the distinct-root union bound and both inequalities are right. N≥5 contradicts, and N=3 forces every stated equality including deg c<L0.
+- **D.** The most fragile gate held. The local leading ratios, the cancellation at infinity, the residue identity Σe_iρ_i=nρ_inf and the positive cube-root average all check. Attacks tried: the leading cancellation is load-bearing but is exactly what deg c<L0 supplies; a hand instance with B=t(t−1) only reproduces the handled D≡0 case; an alternative ending via B dividing q'−ρ_inf B' agrees.
+- **E.** Both controls behave as described. One wording note: g=0 with nonconstant f is not always submersive, so the control "includes" rather than "gives" the accepted U+q(AZ) family.
+- **F.** The biderivation argument excludes any regular mate for the whole family and nothing more. Root-lemma hypotheses extracted: M with at least two distinct roots, N≥3, characteristic zero. No rational or localized mate exclusion follows from a single critical point.
+
+Files owned and written, all via the nominated apply_patch:
+
+- `xmodel/pseudoplane-three-weight-gate-fable5-20260911.md`, 48 lines with the marker, final hash 867e1c3c…59dee.
+- `box/pseudoplane-three-weight-gate-fable5-20260911/input_custody.md`, hash 0ffdbaff…ac4f5, holding the three matching prepins and postpins, the pre-marker report pin and the readback record.
+
+One self-correction before the marker: my QUANTITY line first said each D-root off M yields N critical points; case (ii) yields exactly one, and the line now says so. The Astra manifest body hash also cross-checks against the first 11048 bytes of the report. No exit claim, so no charge_basis line was declared. Sealing and finalize are the adapter's.
+DIVERT path=xmodel/pseudoplane-three-weight-gate-fable5-20260911.md status=CLEAN body_bytes=11856 body_sha256=867e1c3cbfba6575dfe54727a7aab12a67ab47416d09c8676a72f5a8f6c59dee

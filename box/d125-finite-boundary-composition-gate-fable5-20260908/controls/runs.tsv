@@ -1,0 +1,13 @@
+optimized	mutation	rc	stdout_sha256	marker
+normal	positive	0	55f1812ce3e4989f12811b016e8a72134d34ae3f2f7da28599a72d49206da2e0	
+normal	--line	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: actual comaximality J+(k^N)=S needed for CRT (fails for the changed object H=w)
+normal	--omit-gamma	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: symbolic delta invariance under B->B-lambda*A (beta and gamma both transported)
+normal	--beta-zero	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: [p^15]B0=0 slice forces beta0=243 (not 0) at t0=-3
+normal	--rational-root	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: recursive unit root v^2=u with pivot 2*v0 (mod s^9)
+normal	--kill-eps	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: Q-algebra map kills every ideal generator (changed object with eps in the ideal fails)
+-O	positive	0	55f1812ce3e4989f12811b016e8a72134d34ae3f2f7da28599a72d49206da2e0	
+-O	--line	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: actual comaximality J+(k^N)=S needed for CRT (fails for the changed object H=w)
+-O	--omit-gamma	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: symbolic delta invariance under B->B-lambda*A (beta and gamma both transported)
+-O	--beta-zero	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: [p^15]B0=0 slice forces beta0=243 (not 0) at t0=-3
+-O	--rational-root	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: recursive unit root v^2=u with pivot 2*v0 (mod s^9)
+-O	--kill-eps	1	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	ValueError: Q-algebra map kills every ideal generator (changed object with eps in the ideal fails)

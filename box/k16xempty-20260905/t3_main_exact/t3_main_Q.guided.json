@@ -1,0 +1,46 @@
+{
+  "characteristic": 0,
+  "command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "Singular",
+    "--cpus=1",
+    "--threads=1",
+    "--flint-threads=1",
+    "--no-rc",
+    "-q",
+    "/home/ubuntu/jc2/box/k16xempty-20260905/t3_main_exact/t3_main_Q.sing"
+  ],
+  "elapsed_seconds": 180.032994,
+  "label": "t3_main",
+  "main": {
+    "accepted": false,
+    "basis_size": null,
+    "dimension": null,
+    "lead_dim": null,
+    "lead_vdim": null,
+    "missing_markers": [
+      "NF_ALL_ZERO",
+      "UNIT",
+      "DIM",
+      "BASIS_SIZE",
+      "LEAD_DIM",
+      "ACCEPT",
+      "NF_ZERO"
+    ],
+    "nf_all_zero": false,
+    "unit": false,
+    "vdim": null,
+    "vdim_matches_predicted": null
+  },
+  "perturbed": null,
+  "returncode": 1,
+  "script": "/home/ubuntu/jc2/box/k16xempty-20260905/t3_main_exact/t3_main_Q.sing",
+  "script_sha256": "ae923d39a3759349b28841ce36b2b816cce95f9d6193218ebccf9e2fad091622",
+  "stderr": "/home/ubuntu/jc2/box/k16xempty-20260905/t3_main_exact/t3_main_Q.err",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "/home/ubuntu/jc2/box/k16xempty-20260905/t3_main_exact/t3_main_Q.out",
+  "stdout_sha256": "533743761f7bd824479b760a87a0d5cc6d5f5da69c0ea0ae906090d29df33e65",
+  "timed_out": true
+}

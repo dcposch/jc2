@@ -1,0 +1,27 @@
+{
+  "schema":"jc2.source-delta-custody/v1",
+  "task":"f10-mixed-native-limits-padding-sol-20260913",
+  "status":"TERMINAL_SOURCE_DELTA_COMPLETE_UNEXECUTED_UNREVIEWED",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc":"2026-09-13T01:37:01.395186381Z",
+  "custody_authored_utc":"2026-09-13T01:38:47.648767608Z",
+  "input_postpins":[
+    ["box/f10-mixed-native-live-capture-sol-20260913/observe-native-live.template.sh","442567468f8452b090f0e481a2ab0bd408e95b1741968989fa19bd7a2114bf66"],
+    ["box/f10-mixed-native-live-capture-sol-20260913/ROOT-INTAKE.md","80af209cfb861697b3a6c0556c53828f4ef6e38f880330d29eaaef6613d274aa"],
+    ["box/f10-mixed-qualification-v4-root-20260913/RESULT.md","62b2c1c029ae4543514c8c001bc3979bbf31a34ce7cf70e411aaaa030f6e9d05"],
+    ["ops/artifact_finalize.py","0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"]
+  ],
+  "outputs":[
+    ["box/f10-mixed-native-limits-padding-sol-20260913/observe-native-live.template.sh","40bd1116e4cb1bfbfc684afe1d0b0a334af10ed0b719f528efa4ee4a41b483d9"],
+    ["box/f10-mixed-native-limits-padding-sol-20260913/PINS.json","6094e25a7740fd310c97edf2197d083ae364d49e5462e42a9a34ecd682bfe9fe"],
+    ["xmodel/f10-mixed-native-limits-padding-sol-20260913.md","51da7e9576c92e0a66cc3fbf4e60451954a1447c6eded9964ebd6e7921a00bd7"],
+    ["xmodel/f10-mixed-native-limits-padding-sol-20260913.md.artifact.json","79d18d057ac0e167792621ca0cfc73c1a5b0bd300b0b1b39def069d016224398"]
+  ],
+  "delta":"exactly two bytes$ suffixes replaced by bytes[[:blank:]]*$",
+  "fixtures":"two padded-valid rc0; wrong-soft, wrong-hard, wrong-unit, trailing-junk rc1",
+  "artifact_verify":"VERIFIED",
+  "whole_readbacks":true,
+  "all_input_postpins_match":true,
+  "all_writers_idle_after_custody":true,
+  "authority":"NONE; source delta only"
+}

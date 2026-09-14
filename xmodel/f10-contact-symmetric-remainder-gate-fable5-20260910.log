@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate published and verified. The report ends with exactly one standalone `<!-- BODY-END -->` line and nothing after it, written at 01:12:43 UTC, inside the reserve.
+
+**Outcome.** All five items are CONFIRMED by independent manual algebra; the producer's own GAP on whole-locus finiteness stands.
+
+- **A CONFIRMED.** I re-expanded 720A_X and 5040B_X from the accepted17w formulas. All eight nonleading coefficients match, and the four remainder equations follow from the monic reductions with no leading coefficient inverted.
+- **B CONFIRMED.** G equals (y−x)H, Delta equals (y−x)². The evaluation and difference identities give both ideal inclusions over any Q-algebra with nilpotents kept. The cover is free of rank two with unit derivative x−y, so it is etale and faithfully flat, and Cohen–Seidenberg transports total Krull dimension.
+- **C CONFIRMED.** The difference factorization at V=1/3 checks coefficient by coefficient, W=1/27 follows from the existing s−3 unit without inverting 1−27W, the common quartic has roots {1/3,2/3,4/3,5/3}, and every guard factor is nonzero at the three surviving unordered pairs. The ordered slice is Q⁶, the symmetric slice is its swap-invariant Q³, reduced. An independent cross-check: at that point c(t) is the perfect cube (1+t/3)³, which explains the roots directly.
+- **D CONFIRMED.** Predicate (7) is equivalent to the generic chart being zero or zero-dimensional, hence with the solved slice to whole-locus finiteness. One documentary imprecision: the producer's "x,y satisfy the quartic" step lives in the ordered cover and needs the isomorphism from section 3.
+- **E CONFIRMED as scoped.** Emptiness is refuted by six guarded points, none in 5/3<x<y<2. Finiteness is GAP with no curve. Dropping the s−3 or diagonal guard changes the object. I also verified the ROOT-CARD's correction that the accepted17w gate's e_y Cramer sign is positive.
+
+**Consumability verdict.** The four exact equations plus the full guard and the ring transport may be consumed by a separately registered elimination, provided it keeps G entire, handles the V=1/3 slice as the three recorded points or works in the saturation, and reports (7) as membership facts rather than a generic count.
+
+Files written, both via apply_patch only:
+
+| File | SHA256 |
+|---|---|
+| xmodel/f10-contact-symmetric-remainder-gate-fable5-20260910.md (70 lines, 11573 B) | f4f51690d293fff29b63a6a6e965b6168edecae70135dfeac8183bb9720e0093 |
+| box/f10-contact-symmetric-remainder-gate-fable5-20260910/READ-SCOPE.md | ee2ab96d132bb55a48cf775f2f80164b7ff131a3200fd26a63564e644208c52d |
+
+No Seal or charge_basis was authored, no subprocess or code ran, and no other file was read or touched.
+DIVERT path=xmodel/f10-contact-symmetric-remainder-gate-fable5-20260910.md status=CLEAN body_bytes=11573 body_sha256=f4f51690d293fff29b63a6a6e965b6168edecae70135dfeac8183bb9720e0093

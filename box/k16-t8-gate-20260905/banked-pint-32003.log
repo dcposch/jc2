@@ -1,0 +1,32 @@
+PINT t=8 p=32003 y=11288 (=11288 mod p)
+  H_t(y) mod P = 0   (must be 0)
+  fixed integer denominators: all i in [1,34] and odd i in [1,67]; p=32003 > 67 -> all units
+  yy = 11288
+  q      = 17 mod p = 17
+  2q^2   = 578 mod p = 578
+  6q^3   = 29478 mod p = 29478
+  2      = 2 mod p = 2
+  g1          = 25/17          -> 1884 mod P
+  g2          = 4797500/289    -> 30221 mod P
+  g           = 38378900/4913  -> 1643 mod P
+  c=-y*g      = -25483589600/289 -> 15556 mod P
+  b1coef=y*g  = 25483589600/289 -> 16447 mod P
+  PIVOT band=32  var=C1      exact=410263883000/204321          -> 19097 mod P
+  PIVOT band=31  var=C2      exact=373228862600/191139          -> 11155 mod P
+  PIVOT band=30  var=C3      exact=37546762400/19773            -> 2103 mod P
+  PIVOT band=29  var=C4      exact=936430400/507                -> 17277 mod P
+  PIVOT band=28  var=C5      exact=272485917800/151593          -> 5948 mod P
+  PIVOT band=27  var=C6      exact=26928775000/15379            -> 15406 mod P
+  PIVOT band=26  var=C7      exact=213959051600/125229          -> 5053 mod P
+  PIVOT band=25  var=q8_0    exact=-230269800/289               -> 2740 mod P
+  PIVOT band=24  var=q9_0    exact=-130034720/169               -> 11134 mod P
+  PIVOT band=23  var=q10_0   exact=-83280923600/112047          -> 28585 mod P
+  PIVOT band=22  var=q11_0   exact=-22719959000/31603           -> 10574 mod P
+  PIVOT band=21  var=q12_0   exact=-18037807000/25857           -> 18801 mod P
+  PIVOT band=20  var=q13_0   exact=-41141555600/60333           -> 2606 mod P
+  PIVOT band=19  var=q14_0   exact=-1949618720/2873             -> 22291 mod P
+  PIVOT band=18  var=q15_0   exact=-6140532200/8619             -> 21604 mod P
+  PIVOT band=17  var=q16_0   exact=-8673503000/8619             -> 6325 mod P
+  PIVOT band=16  var=b2      exact=326215700/3757               -> 30404 mod P
+  pivots parsed: 17 (expected 17)
+PINT_RESULT t=8 p=32003 y=11288 : PASS (all denominators are P-units)

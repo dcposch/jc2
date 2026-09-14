@@ -1,0 +1,125 @@
+{
+  "counts_type": "DETERMINED arithmetic on finite necessary sets; no attainment claim",
+  "ctop": {
+    "('DETERMINED_COMPLETE_US1', ())": 974,
+    "('DETERMINED_COMPLETE_US1', (True,))": 46,
+    "('NO_CHILD_PROP6.3_FINITE_POLE', ())": 90,
+    "('OPEN_CHILD_TERMINAL_IDENTIFICATION', ())": 290,
+    "('OPEN_CHILD_TERMINAL_IDENTIFICATION', (True,))": 20
+  },
+  "elapsed_seconds": 20.486,
+  "local_top_predicates": {
+    "(False, False, 'DETERMINED_V', (True,))": 302,
+    "(False, False, 'SET-VALUED_V', (True,))": 8,
+    "(True, False, 'DETERMINED_V', (True,))": 1007,
+    "(True, False, 'SET-VALUED_V', (True,))": 13,
+    "(True, True, 'DETERMINED_V', (True,))": 90
+  },
+  "old_to_new": {
+    "('ctop_killed', 'EMPTY_NECESSARY_DATA_US1')": 789,
+    "('ctop_killed', 'OWN_V_CANDIDATES_US1')": 7,
+    "('ctop_killed', 'PROP6.3_FINITE_POLE_US1')": 56,
+    "('ctop_killed', 'U_NEG_US1')": 84,
+    "('live_us1', 'EMPTY_NECESSARY_DATA_US1')": 101,
+    "('live_us1', 'OWN_V_CANDIDATES_US1')": 39,
+    "('live_us1', 'PROP6.3_FINITE_POLE_US1')": 34,
+    "('us_ge2', 'EMPTY_NECESSARY_DATA_US_GE2')": 284,
+    "('us_ge2', 'OWN_V_CANDIDATES_US_GE2')": 20,
+    "('us_ge2', 'U_NEG_US2_RADIUS_CONDITIONAL')": 6
+  },
+  "operative_rows": 1420,
+  "partition": {
+    "EMPTY_NECESSARY_DATA_US1": 890,
+    "EMPTY_NECESSARY_DATA_US_GE2": 284,
+    "OWN_V_CANDIDATES_US1": 46,
+    "OWN_V_CANDIDATES_US_GE2": 20,
+    "PROP6.3_FINITE_POLE_US1": 90,
+    "U_NEG_US1": 84,
+    "U_NEG_US2_RADIUS_CONDITIONAL": 6
+  },
+  "per_effective_level": {
+    "2": {
+      "DETERMINED_SAME": 66,
+      "SET-VALUED_EMPTY": 1354
+    },
+    "3": {
+      "DETERMINED_DIFFERENT": 8,
+      "DETERMINED_SAME": 15,
+      "SET-VALUED_EMPTY": 1330
+    },
+    "4": {
+      "DETERMINED_SAME": 1,
+      "SET-VALUED_EMPTY": 926
+    },
+    "5": {
+      "SET-VALUED_EMPTY": 136
+    }
+  },
+  "per_local_implication_level": {
+    "2": {
+      "DETERMINED_SAME": 1420
+    },
+    "3": {
+      "DETERMINED_DIFFERENT": 833,
+      "DETERMINED_SAME": 161,
+      "SET-VALUED_EMPTY": 360,
+      "SET-VALUED_MIXED": 23
+    },
+    "4": {
+      "DETERMINED_DIFFERENT": 889,
+      "DETERMINED_SAME": 54,
+      "SET-VALUED_EMPTY": 12,
+      "SET-VALUED_MIXED": 8
+    },
+    "5": {
+      "DETERMINED_DIFFERENT": 164,
+      "DETERMINED_SAME": 2
+    }
+  },
+  "per_raw_level": {
+    "2": {
+      "DETERMINED_SAME": 66,
+      "SET-VALUED_EMPTY": 1354
+    },
+    "3": {
+      "DETERMINED_DIFFERENT": 8,
+      "DETERMINED_SAME": 15,
+      "SET-VALUED_EMPTY": 1354
+    },
+    "4": {
+      "DETERMINED_SAME": 1,
+      "SET-VALUED_EMPTY": 962
+    },
+    "5": {
+      "SET-VALUED_EMPTY": 166
+    }
+  },
+  "stages": {
+    "('V_set_size', 0)": 1354,
+    "('V_set_size', 1)": 66,
+    "('drop', False)": 1330,
+    "('drop', True)": 90,
+    "('full_source_route_count', 0)": 1329,
+    "('full_source_route_count', 1)": 91,
+    "('outer_V_set_size', 0)": 1095,
+    "('outer_V_set_size', 1)": 323,
+    "('outer_V_set_size', 2)": 2,
+    "('route_state', 'EMPTY_NECESSARY_FIRST_SUPPORT')": 1051,
+    "('route_state', 'EMPTY_NECESSARY_WHOLE_SOURCE_TREE')": 213,
+    "('route_state', 'EMPTY_PROP6.3_FINITE_POLE')": 90,
+    "('route_state', 'NONEMPTY')": 66,
+    "('us', 1)": 1110,
+    "('us', 2)": 265,
+    "('us', 3)": 34,
+    "('us', 4)": 9,
+    "('us', 5)": 2
+  },
+  "verifications": {
+    "U2_identity_predicate_matches_legacy_arithmetic": true,
+    "characteristic_labels_match_every_row": true,
+    "fresh_enumerator_count": 24063,
+    "full_source_rows_match_gate": true,
+    "full_source_rows_match_inventory": true,
+    "hard_rows_multiset_match": true
+  }
+}

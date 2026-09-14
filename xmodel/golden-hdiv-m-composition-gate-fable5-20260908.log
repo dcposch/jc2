@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. The pgrep hit is only the wrapper shell matching its own command line; the control runs finished in well under a second and nothing is running in the background.
+
+**Outcome: six CONFIRMED verdicts, no GAP, no REFUTED.** Report written to `xmodel/golden-hdiv-m-composition-gate-fable5-20260908.md` (2323 words, standalone BODY-END as the final line with zero trailing bytes, no charge_basis line). Evidence sits in `box/golden-hdiv-m-composition-gate-fable5-20260908/`.
+
+**What I checked, from the frozen inputs only.** All ten pins agree: the source and audit hashes in the coalesced pin file match the frozen files, and each transaction's full hash matches its proof. I read both proofs, the whole source framework, the scope, and the 15m audit. Transactions and custody were treated as provenance only.
+
+**Findings per target, independently rederived:**
+- **Verdict 1, references.** Units t²=rho, 1/t=2−rho, t(t−1)=2rho−1 hold with nonzero norms for both embeddings. The degree-5 identity H(g0+w,p)=t(t−1)p³w²+rho p²w³ is exact. Leading coefficients: [s^j]c₂=C(g0,p) in the d=2 stratum; [s^j]c₃=lambda(t−1)p^(15/2−j)/a in the LM stratum with j≤6 forced by weight 7j−46≤2. Morse sign and embedding leave r and kappa unchanged.
+- **Verdict 2, coalesced.** The F initial is a nonzero polynomial of degree ≤d at 6r, the B initial is forced to 10r by the positive-order lemma and the lower-B leading-coefficient step (n=0 included), and the Y⁵/Y⁴ projections of W³ force W=Y²+b and hence U=0. Degree ≤3 is exactly what defeats the common-quadratic escape.
+- **Verdict 3, regrouping.** U_l, V_l converge because kappa≥1; ord U₁=j (d=2) and ord V₁=j (d=3) hold for the actual moving series. The pre-substitution sheets carry negative s-orders in the binomial tail; the proof only uses them after z=s^eta Z with eta>kappa, which is sound.
+- **Verdict 4, arrow.** kappa<2r gives ord(c_n)+n·kappa/2>3kappa for all n including infinite orders, then q0>3kappa, q1>2kappa finite, eta>kappa, eta<j, eta<5. Both cubics are depressed and monic; the correction tuple is globally nonzero while one sheet may vanish.
+- **Verdict 5, global G.** The coalesced lemma is correctly not imported. The global earliest G order equals the base-order minimum, the lower-B step kills any initial below 5eta using only q_n'=0 and Euler on Q, and the complete quintic retains both the linear ell and constant e from G. Z⁵ is the unique leader.
+- **Verdict 6, target and scope.** The (z,p) bracket has order exactly 36−kappa/2 with the derivative factor 1/(2zeta) accounted for; 7eta<36−kappa/2 in both strata; monic 3/5 Euler/UFD on each field sheet forces u=v=0. Both reports use the identical F, chart, c_n and r, so kappa≥2r and kappa<2r partition [1,∞]. The composition excludes only the union {M∤C}∪{LM|C}; M|C with L∤C stays outside.
+
+**Non-fatal hazards flagged in the report:** the separated proof reuses the symbol a_s for sqrt(−xi_s) while the source uses it for the Hessian half; the prime means ∂_p by context; the two bracket-order conventions differ by the s^r or s^eta factor and both are handled correctly.
+
+**Control:** one exact Q(rho) script expanding only degree-≤5 factors, 22 positive identities and 4 changed-object rejections, both normal and -O modes, rc=0, 0.02 s and 0.09 s under prlimit. Code, argv, outputs, and hashes are retained in the box and every 64-hex token in the report was cross-checked against sha256sum output.
+
+Nothing was committed, launched, or sent externally. Root decides promotion.
+DIVERT path=xmodel/golden-hdiv-m-composition-gate-fable5-20260908.md status=CLEAN body_bytes=15952 body_sha256=50045412e9b0d9cf3e640844e768e359bd7dd466e862316e9b4e9380d40c68cf

@@ -1,0 +1,64 @@
+========== 172.30.0.190 utc=2026-09-05T14:30:33Z ==========
+HOST=ip-172-30-0-190 DATE=2026-09-05T14:30:34Z UPTIME= 14:30:34 up 40 min,  2 users,  load average: 1.00, 1.00, 0.76
+--- mem ---
+               total        used        free      shared  buff/cache   available
+Mem:           743Gi       7.7Gi       739Gi       3.4Mi       1.7Gi       735Gi
+Swap:             0B          0B          0B
+--- dmesg OOM/kill ---
+--- pgrep msolve/Singular/python ---
+8726 Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+8724 timeout --signal=TERM --kill-after=30s 3600s /usr/bin/time -v Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+8725 /usr/bin/time -v Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+8718 bash run_v18_msolve.sh
+8720 bash /home/ubuntu/moh-bigmem-20260905/extract_native.sh /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing 3600
+10438 bash -s
+--- ps RSS ---
+    PID    PPID USER         ELAPSED   RSS    VSZ %CPU CMD
+   8726    8725 ubuntu         19:21 1266672 1288044 99.8 Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+   1673       1 root           40:03 22880 110032  0.0 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+   1585       1 root           40:04 20920  32540  0.0 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+   2122       1 root           38:26  8288  12028  0.0 sshd: /usr/sbin/sshd -D -o AuthorizedKeysCommand /usr/share/ec2-instance-connect/eic_run_authorized_keys %u %f -o AuthorizedKeysCommandUser ec2-instance-connect [listener] 0 of 10-100 startups
+  10454   10438 ubuntu         00:00  3872   9732  0.0 awk NR==1 || /msolve|Singular|python|time |run_/ {print}
+   8718       1 ubuntu         19:21  3572   7764  0.0 bash run_v18_msolve.sh
+   8724    8720 ubuntu         19:21  2184   6148  0.0 timeout --signal=TERM --kill-after=30s 3600s /usr/bin/time -v Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+   8725    8724 ubuntu         19:21  1648   2720  0.0 /usr/bin/time -v Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+--- logs in HOME ---
+-rw-rw-r-- 1 ubuntu ubuntu 432 Sep  5 14:11 /home/ubuntu/v18.msolve.log
+--- find outputs ---
+/home/ubuntu/moh-bigmem-20260905/targets/v38/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m15/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m15/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v18/graph_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/v18/native_meta.json
+/home/ubuntu/moh-bigmem-20260905/targets/m12_union/meta.json
+/home/ubuntu/moh-bigmem-20260905/launched-workers.json
+--- HOME logs tail ---
+==== TAIL /home/ubuntu/v18.msolve.log size=432 ====
+V18_EXTRACT_START utc=2026-09-05T14:11:13Z
+EXTRACT_START builder=/home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing cwd=/home/ubuntu/moh-bigmem-20260905/targets/v18/classdir utc=2026-09-05T14:11:13Z
+builder_sha=121aac3dfe246e16aa6d64d9119a728fb39ed1ce9e6e13c5923765e24419579a  /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+
+--- time files ---
+/home/ubuntu/jc2/box/k4ray-20260903/K5_B4_Q_rab.time
+/home/ubuntu/jc2/box/k4ray-20260903/K4_B7_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/K5_B4_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/k4ray_K4_tower_B7.time
+/home/ubuntu/jc2/box/k4ray-20260903/K4_B3_Q.time
+/home/ubuntu/jc2/box/k4ray-20260903/K6_B5_Q.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-D121-200.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-passport-D121-200.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-D48-120.time
+/home/ubuntu/jc2/box/mohprog-drivers-20260903/tree-independent-passport-D48-120.time
+--- /usr/bin/time leftover ---
+total 108
+drwxrwxrwt 13 root root 57344 Sep  5 14:18 .
+drwxr-xr-x 22 root root  4096 Sep  5 13:50 ..
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .ICE-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .X11-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .XIM-unix
+drwxrwxrwt  2 root root  4096 Sep  5 13:50 .font-unix
+drwx------  2 root root  4096 Sep  5 13:50 snap-private-tmp
+drwx------  3 root root  4096 Sep  5 13:50 systemd-private-20b94908392c4b0b87e2e8d6542923e0-ModemManager.service-I2uXxV
+drwx------  3 root root  4096 Sep  5 13:50 systemd-private-20b94908392c4b0b87e2e8d6542923e0-chrony.service-yXNiYn
+POLL_DONE

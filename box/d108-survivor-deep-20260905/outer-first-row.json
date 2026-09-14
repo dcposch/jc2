@@ -1,0 +1,31 @@
+{
+  "B2c_26_35": {
+    "enters": "KG",
+    "t_power": 27,
+    "z_poly": "z^35",
+    "lowest_w_power": 0,
+    "first_G_pole_local_power": 27
+  },
+  "A2c_26_35": {
+    "enters": "KF",
+    "t_power": 27,
+    "z_poly": "z^63*(1+z)^8",
+    "lowest_w_power": 8,
+    "first_F_pole_local_power": 43
+  },
+  "A3c_61_35": {
+    "enters": "KF",
+    "t_power": 62,
+    "z_poly": "z^35",
+    "lowest_w_power": 0,
+    "first_F_pole_local_power": 62
+  },
+  "B1c_0_35": {
+    "enters": "KG",
+    "t_power": 1,
+    "z_poly": "z^63*(1+z)^8",
+    "lowest_w_power": 8,
+    "first_G_pole_local_power": 17
+  },
+  "_note": "lowest_w_power is the w-order of the z-polynomial the coordinate multiplies after z = w-1; a pole row at minor local power n = r + 2a+3b+4k with a+b+k = w-power, so the earliest pole row carrying the coordinate is n = t_power + 2*(lowest w-power). Jacobian bands at t = t_power see it immediately, at w-powers >= lowest_w_power."
+}

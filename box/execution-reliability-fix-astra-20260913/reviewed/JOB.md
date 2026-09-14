@@ -1,0 +1,137 @@
+# Bounded worker jobs (opt-in pilot)
+
+`job.sh` is INTERNAL / UNREVIEWED and initially STATIC-REVIEWED ONLY. It is a
+small worker-side alternative to interactive, separately timed phase launch
+and observation. It does not migrate or qualify the frozen F10 scientific
+harness. A different-model review and the AWS regression below gate adoption.
+
+One manifest, one admission command, one systemd service/cgroup. The service
+runs a sequential list of argument arrays and stops on an unexpected exit.
+There is no shell interpolation, calendar binding, second admission slot,
+process-name kill, background SSH ownership, implicit retry, or EC2 API call.
+Phase commands can themselves invoke a shell if explicitly registered as argv.
+
+## Usage
+
+Prepare an explicitly registered bundle outside the baked campaign tree.
+`job.json` contains exactly these fields (hash below is illustrative):
+
+```json
+{
+  "schema": "JC2-JOB/v1",
+  "instance": "i-0123456789abcdef0",
+  "tag": "one-registered-test",
+  "wall_seconds": 60,
+  "memory_mib": 256,
+  "cpu_percent": 80,
+  "tasks_max": 32,
+  "file_mib": 8,
+  "files": {"probe.sh": "<actual SHA256 of probe.sh>"},
+  "phases": [
+    {"name": "probe", "argv": ["/usr/bin/bash", "@payload/probe.sh"], "expected_exit": 0}
+  ]
+}
+```
+
+Transfer the explicit bundle and script using SCP with strict host-key
+verification. On the exact worker, invoke once:
+
+```text
+sudo /usr/bin/bash /absolute/job.sh start INSTANCE TAG /absolute/bundle MANIFEST_SHA256
+/usr/bin/bash /absolute/job.sh status INSTANCE TAG
+sudo /usr/bin/bash /absolute/job.sh collect INSTANCE TAG
+```
+
+`start` detaches through systemd and returns after manager admission, not job
+completion. The payload cannot run on HQ: both Amazon DMI identity and exact
+instance ID are checked, with an explicit HQ deny. Copy/check all inputs before
+starting. A tag is never overwritten, even after setup failure. `status` and
+`collect` do not restart work. The existing `ubuntu` group can read logs,
+partial outputs, terminal receipts and archives without an extra privilege
+grant; `status` is read-only and does not require sudo. Collection still uses
+sudo for journal capture and exact terminal checks. A missing unit or terminal
+receipt is UNKNOWN, not success. `stop INSTANCE TAG` stops only that exact unit. It does not remove
+its failed state, files, volumes, or instance.
+
+The manifest pins every copied payload file. Commands execute in the output
+directory, with `JC2_JOB_PAYLOAD` and `JC2_JOB_OUTPUT` set. An argument beginning
+`@payload/` is substituted as one argument; all others are passed unchanged.
+No runtime, library, mathematical-input fidelity, or result correctness is
+implied by the payload hashes. Such dependencies remain task registrations.
+
+## Lifetime and evidence
+
+Systemd applies the nonroot credentials directly, removing the previous
+root/capability/setpriv transition. The controller records its actual PID,
+cgroup, kernel memory/CPU/task limits, capabilities, credentials, and rlimits
+before the first phase. It is the actual bounded process, not a later observer
+trying to catch a short-lived phase. The service owns every descendant,
+including new process groups. Runtime expiry sends TERM then KILL after five
+seconds; memory, zero swap, CPU rate, task count and per-file limits apply to
+the entire service as appropriate. Namespace creation and cgroup writes are
+disabled. This is a trusted-job isolation boundary, not a hostile-code sandbox.
+
+Everything is written directly to EBS under `/var/lib/jc2-jobs/TAG`:
+
+- Root-owned manifest, copied payload, runner hash, admission streams/status.
+- Controller streams, with failing phase stderr copied into the controller
+  error log for immediate visibility.
+- `output/phases/NAME/{command.json,start.utc,stdout,stderr,exit,end.utc}`.
+  A missing exit after a crash means INCOMPLETE, never exit zero.
+- An `ExecStopPost` receipt preserving systemd's actual service result and
+  exit classification even after the controller cannot execute a trap.
+- At terminal collection: manager state, full unit journal, UTC, archive/hash.
+
+Receipt writes and phase boundaries are flushed. SIGKILL/power loss can still
+lose the final not-yet-flushed payload writes; partial files are preserved,
+not silently upgraded to completed results. Reboot or a failed post-hook may
+leave no terminal receipt: collection retains what exists and reports missing
+evidence. Successful mathematical interpretation remains an external gate.
+
+`collect` requires the exact unit inactive/failed AND its independently named
+cgroup absent. It is idempotent after publication: repeat calls verify and
+return the same archive. A collector crash leaves a partial archive which the
+next call rebuilds. Copy the archive to HQ, check its SHA and byte equality,
+and flush it before retiring the exact instance. **ROOT owns a separately
+armed exact-instance retirement deadline and retained root EBS.** The runner
+never extends it or assumes authority over another worker.
+
+Limitations: `file_mib` is RLIMIT_FSIZE per file, not total disk quota; provision
+space and register a bounded-output payload. CPU is a rate cap, not aggregate
+CPU-time accounting. The five-second TERM/KILL grace and up to five seconds
+for the final receipt hook are additional to the registered active wall
+interval. Intermediate phases must not leave background
+writers; an extra cgroup member after phase exit fails the batch before the
+next phase. The cleanup guarantee is at whole-job termination. Shell
+payloads do not gain `set -e` unless they request it. Do not use `expected_exit`
+to turn a failed scientific check into success. Never use this pilot to bypass
+source/certificate qualification or change an already-frozen job contract.
+
+## Required bounded AWS regression
+
+On one disposable, exact-ID registered worker, with independently armed
+retirement and retained EBS, run `tests/job-regression.sh INSTANCE PREFIX
+/absolute/job.sh /absolute/job-probe.sh` inside an independently bounded root
+test service (RuntimeMaxSec=600, TimeoutStopSec=5, control-group kill). The
+driver runs Bash syntax checks on the worker, then eight declared tag suffixes:
+`success`, `failure`, `missing`, `timeout`, `killed`, `badpin`, `badpath`,
+`symlink`. The last four include refusal/admission-failure cases, not successful
+payload jobs. Each tag is a one-shot; a failed suite is retained, not retried.
+
+Coverage: normal two-phase success and literal argv; exit17 with stdout/stderr
+and partial output (second phase absent); first exec127; timeout with a
+TERM-ignoring new-session descendant; controller SIGKILL; bad-pin failure before
+service start; path/symlink and wrong-instance/HQ refusals; duplicate refusal;
+unprivileged diagnostic access; identical repeat collection; a real collector
+failure caused by an inherited small file-size limit followed by recovery.
+The driver checks raw systemd outcomes and exact cgroup absence. A missing
+phase exit/terminal receipt is explicitly not a pass.
+
+Total worker test budget10minutes; payload services <=30seconds active plus
+up to10seconds cleanup/receipt, memory256MiB, CPU80%, Tasks32, per-file8MiB.
+The root test service and each child job have independent finite bounds; the
+test service dying cannot remove child bounds. ROOT arms exact-instance
+retirement before testing, retains EBS, and collects the explicit test base
+plus only those eight job directories actually created. No CAS or mathematical
+source is involved. A real disconnect/reconnect check and power-loss durability
+test are not simulated by this driver and must not be claimed from its result.

@@ -1,0 +1,8 @@
+gate: furter-primary-gate-fable5-20260907
+reviewer: Claude Fable 5.1 (claude-fable-5-1)
+launched: 2026-09-07T22:03Z (frozen dir /tmp/jc2-lane.umhqEp/inputs, 11 files, all r-------- )
+controls: controls.py, python3 stdlib only (fractions), no Assert nodes (grep -c assert = 0)
+caps: ulimit -v 524288 (512 MiB), ulimit -t 25 (CPU s), timeout 30 (wall s)
+runs: normal exit=0; -O exit=0; outputs byte-identical (cmp)
+positive checks: 21 PASS; negative/changed-object controls: 14 PASS (all failed as expected)
+no CAS, no solver, no AWS/SSH, no external fetch, no new agents

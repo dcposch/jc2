@@ -1,0 +1,31 @@
+{
+  "scope": "monicity/order/centering countercontrols only; NOT a source Jacobian pair",
+  "old_cap_weight_controls": [
+    {
+      "delta1": "9/4",
+      "min_weight": "-15/4",
+      "B": "-15/4"
+    },
+    {
+      "delta1": "1/2",
+      "min_weight": "-11/2",
+      "B": "-11/2"
+    }
+  ],
+  "nonzero_center": {
+    "h": "-x**6*y + x**5 + 3*x**4*y**2 - 3*x**2*y**3 + y**4",
+    "substitution": "x=z^-4, y=z^4+pi*z^9",
+    "lowest_z_exponent": -15,
+    "leading_coefficient": "-pi",
+    "omitted_raw_term": "x^5",
+    "raw_weight": "-5",
+    "floor": "-15/4"
+  },
+  "trace_translation": {
+    "eta": "3*x**2/4",
+    "transformed_h": "-3*x**8/256 + x**6*y/8 + x**5 - 3*x**4*y**2/8 + y**4",
+    "max_outer_weight": 8,
+    "outer_d": 2,
+    "trace_coefficient_zero": true
+  }
+}

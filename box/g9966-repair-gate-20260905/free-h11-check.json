@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "engine_sha256": "76d8c7206f70ba190d1a21fff812c016cbde497cd64071c29c91cfe8089f3c06",
+  "field": "Q",
+  "branch": "delta52",
+  "endpoint_stage": 8,
+  "max_t": 8,
+  "max_t_formula": "max(J t-power 8, ceil(pole local power 16 / 2), 4)=8",
+  "only_map_release": "Hc_11_0=0 removed; Hc_11_0 adjoined freely",
+  "only_build_code_change": "count assertion 103 -> 104",
+  "h3_extra_term": "Hc_11_0*t^11",
+  "inner_dimensions": [
+    103,
+    104
+  ],
+  "K2_terms": 78,
+  "K2_identical_exactly": true,
+  "K2_hfree_hash": "6086121f4b95579596e6db796b57009bcaa36db88e3b2a5a972b8fd6abbf7aba",
+  "extra_ring_generators": [
+    "Hc_11_0"
+  ],
+  "h3_leader_control": {
+    "target": "s^21*pi*(pi^2-c)",
+    "verified": true,
+    "minor_series": "y=jet0+u*t+v*t^2+pi*t^(5/2)",
+    "jet0": "free"
+  },
+  "downstream_reason": "outer_state is independent of h3 map. build_FG and cumulative_rows receive identical K2 and outer polynomials, hence every endpoint raw row is unchanged. All Q* pivot candidates appearing in rows remain identical; H never appears. The original unit identity extends to the polynomial ring adjoining H.",
+  "unit_identity": "1=(1/64)*stage8_G_local16_coord0",
+  "scope": "Image equality in the declared engine only; source-support necessity audited separately."
+}

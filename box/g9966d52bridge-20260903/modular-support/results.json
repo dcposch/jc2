@@ -1,0 +1,61 @@
+{
+  "type": "THREE-PRIME FULL-BRIDGE COEFFICIENT-SUPPORT PROBE",
+  "status": "COMPLETE[SUPPORT-ONLY]",
+  "scope_warning": "Deterministic specialization proves sampled nonzero coefficient polynomials; it is not Qstar rank, a Groebner basis, a dimension, or a unit-ideal test.",
+  "normalization": {
+    "T2_residual": "[s^n pi^k](s^396*T2-s^391*p^5), n<=391",
+    "T3_residual": "[s^n pi^k](s^1188*T3-s^1178*p^10*q1), n<=1178",
+    "p": "pi*(pi^2-c)",
+    "q1": "-pi^10/5+3*c*pi^8/4-c^2*pi^6+c^3*pi^4/2",
+    "jacobian_convention": "literal normalized J=1",
+    "pi_cap": null,
+    "bookkeeping_quotient": "s^1179=0 with explicit normal form after products"
+  },
+  "common_support_bounds": {
+    "T2": {"s_min": 56, "s_max": 391, "pi_min": 0, "pi_max": 53},
+    "T3": {"s_min": 144, "s_max": 1178, "pi_min": 0, "pi_max": 168}
+  },
+  "runs": [
+    {
+      "prime": 32003,
+      "T2_sampled_nonzero_rows": 4617,
+      "T3_sampled_nonzero_rows": 43818,
+      "wall_seconds": 191.73,
+      "max_rss_kib": 113968,
+      "exit_status": 0,
+      "stdout_sha256": "2ca2612fdb565ef1528795c3bdba30f5ace922aef77b5b66b60f6cfe538f340c",
+      "stderr_sha256": "2058345a36218f834d6699b00e3e42443f05f3bdd4d2bb868da17918388f69c8"
+    },
+    {
+      "prime": 104729,
+      "T2_sampled_nonzero_rows": 4616,
+      "T3_sampled_nonzero_rows": 43819,
+      "wall_seconds": 194.09,
+      "max_rss_kib": 127616,
+      "exit_status": 0,
+      "stdout_sha256": "44d53cd010f43046b3864294a492fe005cb83d3381868ff70741d67843b47fe1",
+      "stderr_sha256": "741555384a5737ccc01b7612b6ffe065d322ba4ed3cf3df63672b42802b6ff6e"
+    },
+    {
+      "prime": 1299709,
+      "T2_sampled_nonzero_rows": 4617,
+      "T3_sampled_nonzero_rows": 43819,
+      "wall_seconds": 192.62,
+      "max_rss_kib": 117128,
+      "exit_status": 0,
+      "stdout_sha256": "a46541c484c2f7ae6741d564c70763cf4f464ea0c7fefe2fd6c9b571e51532b6",
+      "stderr_sha256": "9953207938cc6b0bc0ef963fdaa5be8d338528048747cce9191cf78827127540"
+    }
+  ],
+  "safe_conclusions": {
+    "T2_distinct_nonzero_Q_row_lower_bound": 4617,
+    "T3_distinct_nonzero_Q_row_lower_bound": 43819,
+    "reason": "A nonzero evaluation modulo a denominator-safe prime proves that coefficient row is not the zero polynomial over Q.",
+    "exact_total_row_count_known": false,
+    "dimension_or_consistency_known": false
+  },
+  "provenance": {
+    "driver_sha256": "0181e88232e8dd79276df3d15dd798f7093dab8216dd21bc57654660e51789ab",
+    "emission_manifest_sha256": "8847ad6f5f013a8c14e6ed6d94776f89cf6d0f0458124efc8bd2ee127fda7c17"
+  }
+}

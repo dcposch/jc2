@@ -1,0 +1,25 @@
+# ROOT task card — first nonlinear modified-kernel obstruction
+
+2026-09-10 22:17UTC. Own xmodel/f10-modified-axis-obstruction-astra-20260910.md plus transaction andbox/f10-modified-axis-obstruction-astra-20260910/. Originalpublication22:34UTC/HARD22:37UTC NEVERRESET. Exactlyfouracceptedreports listed below plusTHIScard=FIVE; matchallhashes BEFOREfreshWHOLE, recordfirstaction/absenttargets. Manualmathematics ONLY, no actualsourcecoefficients or subprocess.
+
+Independent derivation from ACCEPTED16r,17q,17v; do NOT read the liveall-rkernelpresentation, itsprovisionalreport or anyliveFIRST. No dependency on a newhighestregularityclaim or an unreviewedall-r rowcount. Goal is a bounded exact forcing obstruction from the accepted fullsource recurrence, not another homogeneouscolumnproof.
+
+ROOT proposed test, to verify not assume: r>=2,m=3r+1,n=5r+2,d=r+1. Work over the WHOLE leadingQalgebra with Cmoniccubic,Dmonicquintic,a,bunits,mCD'-nC'D=-theta7. Use the ACCEPTED modified gapd homogeneouskernel, rho=1,R=0, from17q: kappa=m+n-d=7r+2, G=(C/a)^(kappa/m), Tbase=trunc7G, p=7[Tbase]7/kappa, T=Tbase-2p theta7/7; constructU,V using its modifiednumerators T'+2p theta6. Then U2=p, V4=2p, and ordinaryu_src=-p. Do not assume punit. These are finite formalprescriptions, not coefficient payloads. Testscale rhoY multipliesU,V linearly.
+
+The first quadratic self-interaction is gap2d=2r+2, the firstlateband j=r-1. In normalizedfree-z highestweightsetting putz=0 and all other earlykernelcoordinateszero; BEFOREclaimingthis corresponds to anactualaxis, verify the acceptedweightedsource and earlier forcing justify vanishing interveninggaps andcriticalgap2d-1. No fullsourcepoint or s=1specialization follows. The scalar obstruction may be defined at formalbandtier even ifthat bridge needsqualification.
+
+Candidate self-forcing Wself=(m-d)U V'-(n-d)U'V. Preservefixedwholemate theta3 coefficientp^2 atgap2d andtarget -p^2 theta5. With beta=n-2d=3r, set Zfix=p^2 theta3 and F=mC Zfix'-beta C'Zfix+Wself+p^2theta5. ROOT handcheck: highesttheta5 contribution3p^2-4p^2+p^2=0; verify allsigns/sourcebindings independently. Now add varyingmateZ ofdegree<=2 and A-constantk, so literalband is mCZ'-beta C'Z+jkD'+F. Uppertheta4/3/2rationalpivots reconstructZ and leave forcedpair c1+g1k,c0+g0k. The determinant Delta_r=g1c0-g0c1 is well-defined without choosing anyentryinverse or globalBezoutcoefficients. Its vanishing is a necessary actualbandcompatibility. Keepingonlyoneentry or droppingp^2fixed/target would change the test.
+
+Primary deliverable: derive a finite factored expression for Delta_r in the wholeleadingring, independentofk andhomogeneousrho^2, with exactkernel normalization and reconstruction. Try a MANUAL reduction showing it is a unit by an alreadyaccepted first-contact/pairedcontactidentity, or finda symbolicfactor/countermodel demonstrating that such a shortcut fails. If no unit result, give exactmissingproperty andsmallest proposed finitecertificateinterface; do NOT expand viaCAS orlaunchcode. r2 actualhighest regularity is a known benchmark only, not an input theorem decidingallr. Fieldonly/nonzerofunction evidence mustnotbe claimedwhole-ringunit; include nilpotent/leadingcomponent caveats.
+
+Potential importance (NOTpremise): a future r+1variable highestblock withweights2r+1..3r+1 would restrict on its purelastkernelaxis to a singledegree2 equation atweight2d, since only2d is divisiblebyd inthatwindow. Delta_r could therefore be a cheap necessary uniformregularity discriminator. This task doesnotderive/use that unreviewedpresentation; focusonthe literal firstquadraticband fromacceptedsource. Avoidduplicating the other author's rowcount/homogeneity/coverwork.
+
+Accepted report scope corrections:17v uses operator-beta C'V withbeta=n-m+j, NOT-j or3beta. Its ideal equality is whole-base; do notassume its unitness fromoldprovisionalheaders.17q final nonemptiness attribution unused; actualearliermixedforcing mustnotbe replacedbyzeroexceptafterprovingthatparticularaxisrestriction. No source/F10/Keller/JC2claim, no rbound or actualcofactorpossession.
+
+ZERO scientificsubprocess/import/AST/syntax/compile/test/CAS ANYsize; no coefficient/candidate/baseline/fixtureBODY. No network/AWS/SSH/process/Git/agents/protected/shared/liveinputs/provenance/corpus. Ownapply_patchbytesONLY; documentaryartifact_finalize begin/close/finalize/expectedverify; separatewritesunder1500words, ownWHOLE/postpins/OPENcollision beforemarkerLAST; custodyFIRST/exactallinput+ownedpins/expectedmanifestSHA/allwritersIDLE byoriginalclock. No followon orpromoteauthority.
+
+a5ab487c4619742b6252e2503488eea4d6e927b58fd2821207cc85bcba7cf8d5  xmodel/f10-whole-mate-euler-elimination-astra-20260909.md
+85e7b800829b0af63b7217d7d9a3ac5e1190dc1128fb664b1500a4aa8b11369b  xmodel/f10-all-r-early-band-tower-astra-20260909.md
+7d87064e27a949b22da85afc47fdc658d57c5c24e25c70524867dd3da590b70b  xmodel/f10-all-r-late-contact-astra-20260909.md
+03b2fe315c048598e57c6409b26bb7a3d6e797ff0f1c2a2f2040ab5a2dbc69de  xmodel/f10-all-r-late-contact-gate-fable5-20260909.md
+

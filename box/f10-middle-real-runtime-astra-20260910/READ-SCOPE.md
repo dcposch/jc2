@@ -1,0 +1,7 @@
+# Documentary scope and original clock
+
+First action 2026-09-10 09:40:13 UTC; fixed earlier cap 10:02:13, reserve 09:59:13. Target absence verified 09:40:53 before begin. All original eight objects (card plus seven inputs) were hashed before bodies. The new accepted code gate was read WHOLE; five prior real-code inputs reuse exact same-byte prior-WHOLE reads after current pins. CAPRUN was read WHOLE as source only, including its allowed initial CLI excerpt and remaining lifecycle/telemetry interface; a clipped combined-output window was reread at lines710–815. No CAPRUN change or re-review claim is made. New ROOT startup delta was hashed and read WHOLE before its -S instruction was applied; it is the ninth pinned input. The referenced Python documentation URL was not followed.
+
+Three accepted science files are byte-identical copies made with apply_patch, never executed. New dispatch.py and probe.py were read WHOLE as text, with final small startup/custody corrections read as literal deltas. Contract, template, pins and own report were read WHOLE before seal. Only metadata publication/hash tooling ran. No syntax/import/AST/test/fixture/math/process/network/AWS/other-lane/corpus inspection occurred. Native metadata is a future ROOT input, not present or invented in this packet.
+
+Two task-local pending quantities and cheapest tests are stated in CONTRACT.md; no new canonical OPEN IDs. Own-only collision/numbered-OPEN/marker checks precede publication. No scientific authority or follow-on is delegated.

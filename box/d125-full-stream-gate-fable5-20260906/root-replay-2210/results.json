@@ -1,0 +1,233 @@
+{
+ "checker_sha256": "b175ccc7ed339e115c58e30a0893a0e6566a02152d837e4469d4b82d41ce673f",
+ "elapsed_seconds": 41.38955355600001,
+ "inputs": {
+  "/home/ubuntu/d125-physical-export-pilot-20260906/authority.json": {
+   "sha256": "9c326201e42fde2b4f4567994e809d3f69522ebba14b1c63b0b9eb737a73827a"
+  },
+  "/home/ubuntu/d125-physical-export-pilot-20260906/complete/import.sing": {
+   "bytes": 23373677,
+   "sha256": "9b6eb808aee27e08f0ee7b263755cefa7e9463c3d8ebd4b03b0664cb57563f4d"
+  },
+  "/home/ubuntu/d125-physical-export-pilot-20260906/complete/literal.jsonl": {
+   "bytes": 20560987,
+   "sha256": "8a059438a525a9cc53bb55163dfe74e4931c4dca10f111a2466672ae99fcaf52"
+  }
+ },
+ "json_controls": [
+  {
+   "control": "coefficient_sign_flip",
+   "reason": "coefficient/monomial mismatch in row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "determinant_plus_one",
+   "reason": "coefficient/monomial mismatch in row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "guard_row_removed",
+   "reason": "row type at original_degree_guard",
+   "result": "REJECTED"
+  },
+  {
+   "control": "guard_constant_removed",
+   "reason": "coefficient/monomial mismatch in row original_degree_guard",
+   "result": "REJECTED"
+  },
+  {
+   "control": "target_constant_removed",
+   "reason": "coefficient/monomial mismatch in row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "target_sign_flipped",
+   "reason": "coefficient/monomial mismatch in row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "pin_value_changed",
+   "reason": "coefficient/monomial mismatch in row pin_4_Q_ell25_t35",
+   "result": "REJECTED"
+  },
+  {
+   "control": "jet_binomial_changed",
+   "reason": "coefficient/monomial mismatch in row jet_P_ell1_order0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "variable_exponent_swapped",
+   "reason": "variable record drift at id 1",
+   "result": "REJECTED"
+  },
+  {
+   "control": "variable_name_changed",
+   "reason": "variable record drift at id 2",
+   "result": "REJECTED"
+  },
+  {
+   "control": "footer_complete_false",
+   "reason": "footer complete flag not true",
+   "result": "REJECTED"
+  },
+  {
+   "control": "footer_removed",
+   "reason": "stream truncated before footer",
+   "result": "REJECTED"
+  },
+  {
+   "control": "trailing_line_after_footer",
+   "reason": "trailing bytes after footer",
+   "result": "REJECTED"
+  },
+  {
+   "control": "trailing_partial_bytes",
+   "reason": "trailing bytes after footer",
+   "result": "REJECTED"
+  },
+  {
+   "control": "zero_row_omitted",
+   "reason": "row label mismatch: expected J_u0_v158, got J_u0_v159",
+   "result": "REJECTED"
+  },
+  {
+   "control": "last_physical_row_omitted",
+   "reason": "row label mismatch: expected J_u39_v159, got original_degree_guard",
+   "result": "REJECTED"
+  },
+  {
+   "control": "header_field_changed",
+   "reason": "header contract drift",
+   "result": "REJECTED"
+  }
+ ],
+ "max_rss_kib_self": 461052,
+ "schema": "d125-full-stream-gate-fable5/independent-check/v1",
+ "sing_controls": [
+  {
+   "control": "sing_sign_flip",
+   "reason": "Singular polynomial differs from JSON row J_u0_v1",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_guard_removed",
+   "reason": "row terminator at J_u39_v159",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_target_removed",
+   "reason": "Singular polynomial differs from JSON row J_u0_v0",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_ring_variable_renamed",
+   "reason": "ring variable list differs from JSON variable map (names/order/count)",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_ring_order_swapped",
+   "reason": "ring variable list differs from JSON variable map (names/order/count)",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_order_lp",
+   "reason": "ring line grammar",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_complete_marker_removed",
+   "reason": "COMPLETE marker/digest",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_hidden_command_before_quit",
+   "reason": "quit line",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_command_inside_polynomial",
+   "reason": "atom grammar violation at J_u0_v1: '(1/1)*P_u0_v1*Q_u1_v0;ideal J=std(I)'",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_trailing_text",
+   "reason": "bytes after quit",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_zero_row_omitted",
+   "reason": "Singular row label mismatch at row 352 (J_u0_v158)",
+   "result": "REJECTED"
+  },
+  {
+   "control": "sing_polynomial_line_split",
+   "reason": "row terminator at J_u0_v1",
+   "result": "REJECTED"
+  }
+ ],
+ "spec": "d125",
+ "stages": {
+  "expected": {
+   "authority_canonical_sha256": "42781305c771397aabead615c75b01b973e9a2d83430133b249cc140c82d853d",
+   "envelope": {
+    "I_max": 39,
+    "J_max": 159,
+    "degree_bound": 198,
+    "nonzero_slots": 3737,
+    "slots": 3792,
+    "weight_bound": 36
+   },
+   "expected_rows": 3987,
+   "seconds": 1.0818838350000988,
+   "source_counts": {
+    "P": 571,
+    "Q": 1551
+   },
+   "variable_count": 2123
+  },
+  "json_whole_row": {
+   "first_zero_physical_row": "J_u0_v158",
+   "lines": 6112,
+   "prefix_sha256": "da8f3cc8339b67566f3fe5a4e63038fafb5dbb2254202a12e68a7b5be00f4b80",
+   "row_counts": {
+    "degree_guard": 1,
+    "jet": 189,
+    "physical_J": 3792,
+    "pin": 5
+   },
+   "seconds": 3.947035233999941,
+   "term_counts": {
+    "degree_guard": 2,
+    "jet": 3266,
+    "physical_J": 875119,
+    "pin": 86
+   },
+   "term_order_identical": true,
+   "unused_variable_ids": [
+    378,
+    1601
+   ],
+   "unused_variable_names": [
+    "P_u0_v0",
+    "Q_u0_v0"
+   ],
+   "variable_count": 2123,
+   "verdict": "PASS",
+   "zero_row_counts": {
+    "degree_guard": 0,
+    "jet": 0,
+    "physical_J": 55,
+    "pin": 0
+   }
+  },
+  "singular_whole_row": {
+   "atoms": 878473,
+   "lines": 7980,
+   "rows": 3987,
+   "seconds": 6.451665155000228,
+   "verdict": "PASS"
+  }
+ },
+ "status": "PASS",
+ "survived_controls": []
+}

@@ -1,0 +1,17 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes against the receipt, then read the sealed Opus submission and the char-degree / graded-Macaulay artifacts.Hashes next: I'll build the receipt manifest with awk and run `sha256sum -c` against the frozen copies.Hashes match. Next I’ll read the charged inputs and locate the r2 ring/weight artifacts.Hashes are good. Next I’ll inspect the r2 ring/weight artifacts and how prior reports structured similar gates.I’ll inspect circuit JSON and ring generator lists for weights, then see whether the dilation grading is Artinian.`e0` looks like a free positive-weight coordinate, which would make the dilation quotient non-Artinian. I’ll confirm that on all three charts and pull the exact weights.The circuit drops `qq·t^{6k−2}` beyond the leader jet, so `target_e` is a free positive-weight direction. I’ll write the sealed report and compact JSON next.SOCLE-GATE does not fire. All three 17(uuuuuuuuu) cells stay compute-bound OPEN.
+
+The two gradings are different rings. The Moh completed-chart bidegree (17(ppppppp)) has `I_(B,Y)=0` iff `B=0` or `Y<λ(B)`; its charge-zero subring is a free polynomial algebra and has no finite top weight. That is not the residual dilation grading in which the attainment leader `λ` is homogeneous (weight 143 / 153).
+
+On the three augmented charts that dilation is positive after beta=1 (no free `t`-index-0 coordinate), but it is still not Artinian: circuit v2 merges `q=target_e+…` at shift `6k−2`, which lies beyond the leader jet (`196>141`, `214>151`), so `target_e` never enters `I_gr` and `k[target_e]` injects into the quotient at weights `198N` / `216N`.
+
+| Chart | Top weight vs 143/153 | Verdict |
+|---|---|---|
+| (99,66) δ=2 | ∞ (unused `e₀` at 198) | **not decidable this way** |
+| (99,66) δ=5/2 | ∞ (same) | **not decidable this way** |
+| D=108 repaired free-mean | ∞ (unused `e₀` at 216) | **not decidable this way** |
+
+Opus’s implication “top `< wt(λ)` ⇒ no unit” inverts the K16 socle law: above the socle, membership is forced. A Hilbert number is exact only in the declared grading; production rings are `dp`, not dilation `wp`. No `charge_basis=` line.
+
+Report: `xmodel/socle-gate-grok46-20260906.md` (8.0 KB body, sealed). JSON: `xmodel/socle-gate-grok46-20260906.json`.
+DIVERT path=xmodel/socle-gate-grok46-20260906.md status=CLEAN body_bytes=8220 body_sha256=292a01891de342b3f6b9fefe79abef63a9733d2582ea5a91e5a7632f6337567d

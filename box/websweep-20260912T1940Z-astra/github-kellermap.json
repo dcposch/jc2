@@ -1,0 +1,248 @@
+[
+  {
+    "sha": "908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+    "node_id": "C_kwDOTqSOWdoAKDkwOGI1NDAxZWE5NTM1YTQ0ZjhjMGEwZWM0NWY1ODY2ZjhhNGM5ZGE",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-12T18:31:21Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-12T18:31:21Z"
+      },
+      "message": "Separate equal factor values from a shared generator\n\nWork package 20 of milestone 0.7, the first high finding of the audit of\n0.7.0rc5. It stays under 0.7.0rc6, which the profiling commit already\nopened.\n\nCandidate inferred from two polynomials being equal that one coordinate\nwould serve both slots. Those are two different things, and the audit\nfound both directions of the conflation. The targeted search could not\nexpress a verified step with two distinct coordinates of one value: it\nreported its space exhausted after thirty maps although the target was\none step away. And it did build a shared one, which SEA-14 excludes,\nnaming two coordinates and consuming one without a word. Neither was a\nfalse certificate -- the step holds under BCW-12 -- and both were the\nsearch disagreeing with its own statement of where it looks.\n\nA shared field carries the decision now. enumerate_candidates never sets\nit, so equal values there are two coordinates and m = 2;\nuntargeted_candidates sets it, because UNT-1 wants BCW-12's saving where\nan anchor is a square. Both sites say so where they build.\n\nCandidate.factors refuses a surplus of names as well as a shortage. That\nis the invariant the audit asked for, and one caller relied on its\nabsence: scripts/untargeted_space.py handed two names over whatever the\ncandidate needed, and make measure failed the moment the guard went in.\nThat is the evidence the silence was worth ending rather than an\nargument against the guard, and the script asks for candidate.m now.\n\nFour tests: the m = 2 step being expressible and found, the shared one\nstaying outside the forward space and reported as a non-answer, the\nfield defaulting to off and to m = 2 on equal values, and the name\ninvariant in both directions.\n\nSEA-14 gains the paragraph saying equal values cost two coordinates\nhere, that sharing is asked for and not inferred, and what each\ndirection of the conflation did.",
+      "tree": {
+        "sha": "4a96be924f8471f84d50521172cbebe6678645c2",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/4a96be924f8471f84d50521172cbebe6678645c2"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqlmpQACgkQpYdnzilV\ndCV34Q/+NuLrNo0YnXR0sH5DQexTJZgZV5xUiBi/sYUW56RHZJkppPYbrP0ApuXI\ne9aboFbdZz/0jzL/uPCnA9ae8m6meZYCubcl+MOo4pAqu+10Vc8hjnrPDVPfPfLi\nDFRkCeCCvzs+3USVQ45zDPL+xIpa1UpHDw5OH1OVdHXjtL9gRlbOjvhIK2WBWA/e\nut+S7e1FHeJGVTecUPbMyqYs/QFvT8lgZI5hPvFNDjjeceDDQxX0769h3kAQnG/v\nQVxlbA1Attzpl2kRR3fm9j248KepnAqsOmDKYmF43+qp/wSh0m7q1XbQBlTIxCyO\nnmOqrw17dPp13WmwDsPE8FMuLy0uKdZjB4DI0+ajk4D1/Fwdo1mseSbC0w3Ti7ez\nQ2EtmcOHwDCOp6F/NMx0vQfoxC8DJDvINLaQv+f8xje1s1KbOxOwFgZYNPhD+JjQ\nFNEr581AcP3dBL8XRrnysyPmqdbbiaXM5rrR89Z/cfP1LofpqFJmMILgBDWjsFdf\nAstM5+BoUHhiTXCMguv8qtf89WZscBJR3bnSCaQTI6uqUInTl1dOSyTsnXC9371N\nEpg8oPO+I7coeRZE3kQF4qfei+doie3TaBQyhUADlkktbrL3NmWcjNYY1NogthUs\n8JU6QEBRd+cXo0yh/JIkmhqawrEjbXdf/Wj1z0uafdcPq3bwB7o=\n=NNzX\n-----END PGP SIGNATURE-----",
+        "payload": "tree 4a96be924f8471f84d50521172cbebe6678645c2\nparent 719105db03dc3192196125ac07882a89132bd620\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789237881 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789237881 +0200\n\nSeparate equal factor values from a shared generator\n\nWork package 20 of milestone 0.7, the first high finding of the audit of\n0.7.0rc5. It stays under 0.7.0rc6, which the profiling commit already\nopened.\n\nCandidate inferred from two polynomials being equal that one coordinate\nwould serve both slots. Those are two different things, and the audit\nfound both directions of the conflation. The targeted search could not\nexpress a verified step with two distinct coordinates of one value: it\nreported its space exhausted after thirty maps although the target was\none step away. And it did build a shared one, which SEA-14 excludes,\nnaming two coordinates and consuming one without a word. Neither was a\nfalse certificate -- the step holds under BCW-12 -- and both were the\nsearch disagreeing with its own statement of where it looks.\n\nA shared field carries the decision now. enumerate_candidates never sets\nit, so equal values there are two coordinates and m = 2;\nuntargeted_candidates sets it, because UNT-1 wants BCW-12's saving where\nan anchor is a square. Both sites say so where they build.\n\nCandidate.factors refuses a surplus of names as well as a shortage. That\nis the invariant the audit asked for, and one caller relied on its\nabsence: scripts/untargeted_space.py handed two names over whatever the\ncandidate needed, and make measure failed the moment the guard went in.\nThat is the evidence the silence was worth ending rather than an\nargument against the guard, and the script asks for candidate.m now.\n\nFour tests: the m = 2 step being expressible and found, the shared one\nstaying outside the forward space and reported as a non-answer, the\nfield defaulting to off and to m = 2 on equal values, and the name\ninvariant in both directions.\n\nSEA-14 gains the paragraph saying equal values cost two coordinates\nhere, that sharing is asked for and not inferred, and what each\ndirection of the conflation did.\n",
+        "verified_at": "2026-09-12T18:31:59Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/908b5401ea9535a44f8c0a0ec45f5866f8a4c9da/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "719105db03dc3192196125ac07882a89132bd620",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/719105db03dc3192196125ac07882a89132bd620",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/719105db03dc3192196125ac07882a89132bd620"
+      }
+    ]
+  },
+  {
+    "sha": "719105db03dc3192196125ac07882a89132bd620",
+    "node_id": "C_kwDOTqSOWdoAKDcxOTEwNWRiMDNkYzMxOTIxOTYxMjVhYzA3ODgyYTg5MTMyYmQ2MjA",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-12T17:49:39Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-12T17:49:39Z"
+      },
+      "message": "Profile the fast suite, and mark one test slow\n\nThe fast suite had grown to 139 seconds and the coverage run over it no\nlonger fitted the assistant's tool budget, so the last two deliveries\nargued coverage from a subset instead of running the gate. That is one\nstep from not running it, which is reason enough to profile rather than\nto keep arguing.\n\nOne test was a third of the suite. The unweighted control of SEA-14 took\n44 seconds, examining 3189 maps since 0.7.0rc5 widened the forward space\nby offering both forms of a co-factor. It is now a test of its own rather\nthan one case of a parametrization over three coefficients, so the two\nweighted cases keep their budget of 200 and stay fast, and the control\ncarries the marker. The suite is 84 seconds and the coverage run over it\n208, which fits.\n\nOnly one marking, and the profile says of every other candidate why it\nstays: the three multi-affine chains are the only check on figures that\nstand on three pages, the doctests of docs/api.md are the examples every\npublic feature is required to have, the hull and the lift of Thompson's\nmap check published forms, and the hash-seed test is what checks a\ndeterminism claim. Nothing below a second is worth moving, since some\n1900 tests share the remaining 30 seconds.\n\nThe rule that came out of it is in AGENTS.md beside the timings: a test\nearns the marker when the fast suite would otherwise lose more than it\nkeeps, and a marked test has to be worth running in pytest -m \"\" rather\nthan parked there. The control is the only one here on the wrong side of\nthat, and its docstring says what the marking costs a delivery. It is\nthe test that says the widening of 0.7.0rc5 added a step without\nremoving one, so any run touching the targeted enumerator wants it.",
+      "tree": {
+        "sha": "30b61e41fe19fa37b85c3dece13fc68a082c5d99",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/30b61e41fe19fa37b85c3dece13fc68a082c5d99"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/719105db03dc3192196125ac07882a89132bd620",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqlkOUACgkQpYdnzilV\ndCUTyA/9HBkRCzOfwZ6UCLHe0h2eZg8aGSAU0gMId+Zv83WcvzTowskZmvw8Xq0u\n5YhBEZjRaP+6rnFhF0Jbtij+ZFzpFZejCZMbV6znNIXm+zJ57nBzekhzAg9RuGJI\nEsGMDzaHgBkGHKkQELvDFe/WpD4Hd1g+sbwur5nAhXVrcN3my9eJzuqlEjy7pUim\nhrZl8bF5HdHw2v6u3U3JT1U6Bn2AzObBxAN7PdHpTzCqhPNkgNnBd4psgN9al1c3\nuDYcM0/m/CXD1Ty3ya+rR0qBJcTOTa+QEH+TB4MbmqjsTBEEJknypILmFJGobvMb\n5jXLijQ18tznGlSfL7QuBhyCm1rmL0GFA+oysTp8gpPJRRXt7HcJHUVT7ZZ3Ypu/\njruM9981R/fOYCmOh5mByHo9qdIFmaBDemLQ/aJkh4z255YclUVfEOSrhfm+STyY\nrCuNhSumi0uTees73m3LtKO7Yha0sVstHNOWQKYuH6AuhbIDm68iPGj0mflYq7eu\nSodY4JLaL+r3rxg4FswoTiAnUE86TcCapN9ihuU6ApqAD9Gy8SUBct0hxrvjyuge\n+EzEokvOGXUGyZLlvvVadOE7uNSbV4emvJFrZy/8UTN1M9lqXgPN7lRpb2cvOZe3\nHUjTjbLej/+WjXKm+/x8855UG+r2c4ckGJjMSN9tUT1vrntA8L8=\n=xMOI\n-----END PGP SIGNATURE-----",
+        "payload": "tree 30b61e41fe19fa37b85c3dece13fc68a082c5d99\nparent dca8f297546695ac86f20df96180dfd3ff43330f\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789235379 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789235379 +0200\n\nProfile the fast suite, and mark one test slow\n\nThe fast suite had grown to 139 seconds and the coverage run over it no\nlonger fitted the assistant's tool budget, so the last two deliveries\nargued coverage from a subset instead of running the gate. That is one\nstep from not running it, which is reason enough to profile rather than\nto keep arguing.\n\nOne test was a third of the suite. The unweighted control of SEA-14 took\n44 seconds, examining 3189 maps since 0.7.0rc5 widened the forward space\nby offering both forms of a co-factor. It is now a test of its own rather\nthan one case of a parametrization over three coefficients, so the two\nweighted cases keep their budget of 200 and stay fast, and the control\ncarries the marker. The suite is 84 seconds and the coverage run over it\n208, which fits.\n\nOnly one marking, and the profile says of every other candidate why it\nstays: the three multi-affine chains are the only check on figures that\nstand on three pages, the doctests of docs/api.md are the examples every\npublic feature is required to have, the hull and the lift of Thompson's\nmap check published forms, and the hash-seed test is what checks a\ndeterminism claim. Nothing below a second is worth moving, since some\n1900 tests share the remaining 30 seconds.\n\nThe rule that came out of it is in AGENTS.md beside the timings: a test\nearns the marker when the fast suite would otherwise lose more than it\nkeeps, and a marked test has to be worth running in pytest -m \"\" rather\nthan parked there. The control is the only one here on the wrong side of\nthat, and its docstring says what the marking costs a delivery. It is\nthe test that says the widening of 0.7.0rc5 added a step without\nremoving one, so any run touching the targeted enumerator wants it.\n",
+        "verified_at": "2026-09-12T17:50:39Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/719105db03dc3192196125ac07882a89132bd620",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/719105db03dc3192196125ac07882a89132bd620",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/719105db03dc3192196125ac07882a89132bd620/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "dca8f297546695ac86f20df96180dfd3ff43330f",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/dca8f297546695ac86f20df96180dfd3ff43330f",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/dca8f297546695ac86f20df96180dfd3ff43330f"
+      }
+    ]
+  },
+  {
+    "sha": "dca8f297546695ac86f20df96180dfd3ff43330f",
+    "node_id": "C_kwDOTqSOWdoAKGRjYThmMjk3NTQ2Njk1YWM4NmYyMGRmOTYxODBkZmQzZmY0MzMzMGY",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-12T14:34:17Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-12T14:34:17Z"
+      },
+      "message": "Normalize the Jacobian entries, and ask BCW-10 on the support\n\nWork package 19 of milestone 0.7, the second high finding of the audit of\n0.7.0rc5, and the version opens 0.7.0rc6. Two causes, one map.\n\nPolyElement.diff leaves a term with a zero coefficient in the sparse\ndictionary in positive characteristic: over GF(2) the derivative of\nx + x^2 is stored as 0*x + 1, which compares unequal to the ring's one.\nEverything downstream compares those entries, so four public operations\nbroke at once on (x + x^2, y + y^2, z + z^2), a map whose Jacobian is\nthe identity. carrier_indices was empty; determinant, search and\nBCWStep.verify let a raw ExactQuotientFailed out. The entries are\nnormalized where they are computed, once, and jacobian() was the control\nthat hid it: sp.Matrix normalizes on the way in, so the matrix was right\nwhile everything reading the entries was not.\n\ncarrier_indices_for_factors asked dF_j/dX_j == 1 and claimed that is\nBCW-10's \"F_j - X_j free of X_j\". It is, in characteristic zero. Over\nGF(2) that map has the identity for its Jacobian and no displacement\nfree of its own variable, so the block is the whole map and no\ncoordinate is a carried factor: the two notions are not the same\nquestion there and neither set contains the other, where I had written\nthat this one always contains the block. It is decided on the monomial\nsupport now, which is the clause word for word.\n\nThe wrong condition came out right by accident, and that is the part\nworth naming. The unnormalized derivative compared unequal to one, so\nthe property returned the empty tuple for a reason that had nothing to\ndo with the map. Correcting the storage without correcting the condition\nwould have made it offer three carriers BCW-10 refuses, and the two\nfindings had to be fixed together or not at all.\n\nI chose the derivative test in work package 16 for consistency with\ncarrier_indices, when the obligation I was implementing says something\nelse. Consistency with a neighbour is not a reason to implement a\ndifferent condition from the one cited.\n\ntests/test_positive_characteristic.py holds the audit's map against the\nJacobian, both carrier notions, the determinant, a search from the map\nto itself and a step that builds and verifies, with a control that\ncharacteristic zero is unchanged. The module says why the two notions\ncannot be one predicate, which is the thing the map demonstrates.",
+      "tree": {
+        "sha": "c2863d01d6905c7a29a08df65c7b616ca1d601b1",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/c2863d01d6905c7a29a08df65c7b616ca1d601b1"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/dca8f297546695ac86f20df96180dfd3ff43330f",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqlYxoACgkQpYdnzilV\ndCVbeA//S+iz2YtKv10A2sDIFy582E/qXsL5WVtogksyOrEq7q8FsWlcaLIxV9FL\nDMwF3ojuwEqBWsskxfyli5VWHWjGxbxhv/rjKarZFFlTZh2fR8sy612GdZmS8bPq\nzuJnb6DqJuURHTjfcEnG++cE5hnUe5iBsz2k6Li4yg3toINUhLm9y9Q0EsxIEQof\nc2DpAwyY8joXqoZ/LipcKiwX9X5qzBbn2uCztzKmCWATgbWRIEA2HcyXv/0fPuAb\nmp4by/83GNbi9//oIV9TZatnH1pazQWdG9bgY0mn1NzAuGVyhL3lEFzax/GAPuMu\nQZqyryi5UExGvJ8MqJXX3kvwXJ1PyYQzX6Cji3AHKTcy1juqJxjgKXtQ1ZwcECCh\nJArUdPApMy4x8f246qSZ9fjF5bsTaHIJQraciPmM2AzEDY1T3iLfC1Zk7lih7EUM\nITWg3YpRfiwdleL6P9m5eL91d9bzwvQTntdOHNC5WunekNbIFcIhTABVNb8+1dRC\ntDXC0iyYoYTP+CsraR7L7zNvxus/KbRKrcerZ8QFr+dqTWwlzHdN5hWxaqBPa+oc\nOSu/KlXUZTBGLUKB0cdimjcwCmHRKQ2iWykxqslNVYWZHsgNQ2NhjUpDTvCiSOJq\ngvDfEtlh/ze/Hof2A2tWChbbQvBDC1gTjnu++WYDMP14zrcdRFk=\n=qGP3\n-----END PGP SIGNATURE-----",
+        "payload": "tree c2863d01d6905c7a29a08df65c7b616ca1d601b1\nparent a049b35387f794b8ee08768959998f505086d02d\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789223657 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789223657 +0200\n\nNormalize the Jacobian entries, and ask BCW-10 on the support\n\nWork package 19 of milestone 0.7, the second high finding of the audit of\n0.7.0rc5, and the version opens 0.7.0rc6. Two causes, one map.\n\nPolyElement.diff leaves a term with a zero coefficient in the sparse\ndictionary in positive characteristic: over GF(2) the derivative of\nx + x^2 is stored as 0*x + 1, which compares unequal to the ring's one.\nEverything downstream compares those entries, so four public operations\nbroke at once on (x + x^2, y + y^2, z + z^2), a map whose Jacobian is\nthe identity. carrier_indices was empty; determinant, search and\nBCWStep.verify let a raw ExactQuotientFailed out. The entries are\nnormalized where they are computed, once, and jacobian() was the control\nthat hid it: sp.Matrix normalizes on the way in, so the matrix was right\nwhile everything reading the entries was not.\n\ncarrier_indices_for_factors asked dF_j/dX_j == 1 and claimed that is\nBCW-10's \"F_j - X_j free of X_j\". It is, in characteristic zero. Over\nGF(2) that map has the identity for its Jacobian and no displacement\nfree of its own variable, so the block is the whole map and no\ncoordinate is a carried factor: the two notions are not the same\nquestion there and neither set contains the other, where I had written\nthat this one always contains the block. It is decided on the monomial\nsupport now, which is the clause word for word.\n\nThe wrong condition came out right by accident, and that is the part\nworth naming. The unnormalized derivative compared unequal to one, so\nthe property returned the empty tuple for a reason that had nothing to\ndo with the map. Correcting the storage without correcting the condition\nwould have made it offer three carriers BCW-10 refuses, and the two\nfindings had to be fixed together or not at all.\n\nI chose the derivative test in work package 16 for consistency with\ncarrier_indices, when the obligation I was implementing says something\nelse. Consistency with a neighbour is not a reason to implement a\ndifferent condition from the one cited.\n\ntests/test_positive_characteristic.py holds the audit's map against the\nJacobian, both carrier notions, the determinant, a search from the map\nto itself and a step that builds and verifies, with a control that\ncharacteristic zero is unchanged. The module says why the two notions\ncannot be one predicate, which is the thing the map demonstrates.\n",
+        "verified_at": "2026-09-12T14:35:22Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/dca8f297546695ac86f20df96180dfd3ff43330f",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/dca8f297546695ac86f20df96180dfd3ff43330f",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/dca8f297546695ac86f20df96180dfd3ff43330f/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a049b35387f794b8ee08768959998f505086d02d",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/a049b35387f794b8ee08768959998f505086d02d",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/a049b35387f794b8ee08768959998f505086d02d"
+      }
+    ]
+  }
+]

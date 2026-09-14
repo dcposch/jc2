@@ -1,0 +1,4 @@
+ring R=0,(Zc,c),dp;
+ideal I=Zc*c-1;
+ideal G=std(I);
+"TAG H_moh_cut35_jet0free"; "DIM"; dim(G); "SIZE"; size(G); "NF1"; reduce(1,G);

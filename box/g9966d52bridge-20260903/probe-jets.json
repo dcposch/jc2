@@ -1,0 +1,175 @@
+{
+  "type": "COMPACT PRESERVED RESULT: delta52 stage7 minor-jet probe",
+  "status": "completed",
+  "scope": {
+    "F_normalized_n_window": [189, 233],
+    "G_normalized_n_window": [126, 170],
+    "normalization": "F actual s-order=n-198; G actual s-order=n-132",
+    "assembly": "F=K2^3+A2*K2+A3; G=K2^2+B1*K2+B2"
+  },
+  "custody": {
+    "receipt_charged_input_count": 21,
+    "band_engine_sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9",
+    "stage7_json_sha256": "a85d602dc4599c600c12b04e2c3140f00dafafbb5793b3b05039050cba6159b3",
+    "stage7_free_list_sha256": "30d4f3e027d4bb1db62dce3b7226e15f0ac8a74654724d0ede595cc0d10bbbe9",
+    "all_checked_hashes_match_receipt": true,
+    "current_probe_driver_sha256": "6abeb668c0ec35d53f52ca1c8de0d424a27c0dc1808a444bd3d6f145d38f61c5"
+  },
+  "stage7_reconstruction": {
+    "major_inner_free": 102,
+    "outer_free_after_D1_offset7": 826,
+    "outer_D1_cumulative_pivots": 176,
+    "ambient_before_joint_pivots": 928,
+    "serialized_joint_pivots": 59,
+    "joint_pivot_block": "B1",
+    "joint_resolved_rhs_all_zero": true,
+    "joint_rhs_ledger_sha256": "87fdf835f77ac5888f7104a851d3968a713d6eb3bfb15784860ff1d89ecb0378",
+    "free_after_joint_pivots": 869,
+    "free_names_sha256": "30d4f3e027d4bb1db62dce3b7226e15f0ac8a74654724d0ede595cc0d10bbbe9",
+    "matches_stage7_json_and_869_line_list": true
+  },
+  "exact_linear_component_metrics": {
+    "K2": {
+      "coefficient_count": 1657,
+      "n_min": 8,
+      "n_max": 231,
+      "pi_power_min": 0,
+      "pi_power_max": 33,
+      "free_variables_used": 102,
+      "free_variables_by_prefix": {"K2": 99, "centre": 3},
+      "symbolic_count_ops_sum": 563619,
+      "symbolic_count_ops_max": 2883,
+      "canonical_expression_sha256": "a4fd5e5c7a8603fe22c055e68a9f3cf0fd97f76e5a0f812336db16761b39ce37"
+    },
+    "A2": {
+      "coefficient_count": 1235,
+      "n_min": 44,
+      "retained_n_max": 225,
+      "pi_power_min": 0,
+      "pi_power_max": 25,
+      "free_variables_used": 222,
+      "free_variables_by_prefix": {"A2": 220, "centre": 2},
+      "symbolic_count_ops_sum": 3987890,
+      "symbolic_count_ops_max": 10693,
+      "canonical_expression_sha256": "595ea5e274d1149014d36de5a98f0112ad65341da98db25d5db85f32fa27361c"
+    },
+    "A3": {
+      "coefficient_count": 339,
+      "retained_n_min": 189,
+      "retained_n_max": 233,
+      "pi_power_min": 0,
+      "pi_power_max": 17,
+      "free_variables_used": 226,
+      "free_variables_by_prefix": {"A3": 224, "centre": 2},
+      "symbolic_count_ops_sum": 1211829,
+      "symbolic_count_ops_max": 10594,
+      "canonical_expression_sha256": "8219af09b2cacddd54a049a3d56f64312b002aebe5db85a976e4559e8bf9c3a0"
+    },
+    "B1": {
+      "coefficient_count": 814,
+      "n_min": 16,
+      "retained_n_max": 162,
+      "pi_power_min": 0,
+      "pi_power_max": 20,
+      "free_variables_used": 105,
+      "free_variables_by_prefix": {"B1": 103, "centre": 2},
+      "symbolic_count_ops_sum": 536471,
+      "symbolic_count_ops_max": 2649,
+      "canonical_expression_sha256": "f7936923d1983ccb45177f545d57eb5c9d9ac5824ace38c9aab9e95231e4a947"
+    },
+    "B2": {
+      "coefficient_count": 349,
+      "retained_n_min": 126,
+      "retained_n_max": 170,
+      "pi_power_min": 0,
+      "pi_power_max": 18,
+      "free_variables_used": 222,
+      "free_variables_by_prefix": {"B2": 220, "centre": 2},
+      "symbolic_count_ops_sum": 1322121,
+      "symbolic_count_ops_max": 10693,
+      "canonical_expression_sha256": "18235b5265ab6265dc95fb17234aea28407aea14a9db3ac2d3137774c7d7fa12"
+    }
+  },
+  "nonlinear_support_probe": {
+    "method": "exact component localization followed by complete truncated series assembly at three deterministic good-prime specializations",
+    "primes": [32003, 104729, 1299709],
+    "all_45_F_and_45_G_indices_assembled_each_prime": true,
+    "modular_multiply_adds_per_prime": {
+      "K2_square": 525202,
+      "K2_cube": 327401,
+      "A2_times_K2": 192763,
+      "B1_times_K2": 96327
+    },
+    "F_n189_observed_pi_support_all_three": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27],
+    "G_n126_observed_pi_support_all_three": [0, 2, 4, 6, 8, 10, 12, 14, 16, 18],
+    "caveat": "The assembled supports are three-prime generic evaluations, not a symbolic Groebner certificate. Exact symbolic expressions and hashes are retained for each linear component."
+  },
+  "leading_coefficient_test": {
+    "expected_F_n189": "(pi*(pi^2-c))^9",
+    "expected_G_n126": "(pi*(pi^2-c))^6",
+    "F_identity_mod_stage7": false,
+    "G_identity_mod_stage7": false,
+    "proof_type": "nonzero good-prime specializations of the reconstructed rational quotient",
+    "tests": [
+      {
+        "prime": 32003,
+        "centre": {"c": 2, "u": 5, "v": 11},
+        "F_first_difference_pi_power_and_value": [1, 1119],
+        "F_difference_coefficient_count": 13,
+        "G_first_difference_pi_power_and_value": [0, 9524],
+        "G_difference_coefficient_count": 9
+      },
+      {
+        "prime": 104729,
+        "centre": {"c": 3, "u": 6, "v": 12},
+        "F_first_difference_pi_power_and_value": [1, 90344],
+        "F_difference_coefficient_count": 13,
+        "G_first_difference_pi_power_and_value": [0, 11065],
+        "G_difference_coefficient_count": 9
+      },
+      {
+        "prime": 1299709,
+        "centre": {"c": 4, "u": 7, "v": 13},
+        "F_first_difference_pi_power_and_value": [1, 569314],
+        "F_difference_coefficient_count": 13,
+        "G_first_difference_pi_power_and_value": [0, 1258381],
+        "G_difference_coefficient_count": 9
+      }
+    ]
+  },
+  "endpoint_consequence": {
+    "exact_K2_minimum_normalized_n": 8,
+    "generic_F_minimum_normalized_n_from_K2_cube": 24,
+    "generic_G_minimum_normalized_n_from_K2_square": 16,
+    "required_F_face_n": 189,
+    "required_G_face_n": 126,
+    "conclusion": "The stage-7 quotient has not imposed the F/G minor pole orders on which the requested T2/T3 bridge indices rely. F_n189 and G_n126 are not p^9 and p^6 identities in this quotient. The intervening minor-support rows must be imposed (or included simultaneously and certified) before those coefficients can be treated as leaders."
+  },
+  "runtime": {
+    "command": "OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=NUMEXPR_NUM_THREADS=1 timeout 3000 python3 box/g9966d52bridge-20260903/probe_jets.py",
+    "exit_status": 0,
+    "wall_seconds_internal": 1628.464394,
+    "wall_seconds_external": 1640.83,
+    "user_seconds": 1600.97,
+    "system_seconds": 3.41,
+    "peak_rss_kib": 2243884,
+    "threads": 1,
+    "timing_seconds": {
+      "major_builder_done": 1.810996,
+      "outer_builder_done": 29.562816,
+      "joint_map_done": 31.0532,
+      "localizer_table_and_control_done": 115.636379,
+      "K2_localization_done": 229.677203,
+      "all_component_localization_done": 970.554784,
+      "structural_assembly_done": 985.983579,
+      "three_modular_assemblies_done": 1009.727896,
+      "final_summary_done": 1628.462523
+    }
+  },
+  "post_run_source_audit": {
+    "note": "The completed run's modular assemblies, exact component expressions, hashes, counts, minima, and leading tests are retained above. A post-run audit found that the separate structural dependency-mask summary did not reserve a presence bit for constants and used integer addition between summands; that optional bookkeeping was corrected in the current driver without rerunning, and its per-index dependency-mask counts from the completed stdout are intentionally excluded here.",
+    "modular_results_affected": false,
+    "exact_component_results_affected": false
+  },
+  "verdict": "PROBE-ONLY / STAGE7 FACE PRECONDITION FAILS"
+}

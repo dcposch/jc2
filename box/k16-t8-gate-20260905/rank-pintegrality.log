@@ -1,0 +1,370 @@
+{
+  "status": "PASS",
+  "exact_rows_file": "box/k16rank-20260903/terminal_t8_exact_none.out",
+  "exact_rows_sha256": "8f41559606bbf9f2c592f5569ee0feef596d7196d39d2290941bdf889990f767",
+  "row_stats": [
+    {
+      "band": 0,
+      "sha256": "d12bb0150bc0a3c5536309965df1c7fbfc6fcde5f15f8da354d10f956ea45b22",
+      "denominator_occurrences": 7162
+    },
+    {
+      "band": 1,
+      "sha256": "76d4da7a75e6b22c5be23ba6f55d5d114b06ac77b676c04987aba3cb02b9b7f2",
+      "denominator_occurrences": 6248
+    },
+    {
+      "band": 2,
+      "sha256": "218c89e53c3ea401a140f72a574f18628b97b38e57a1706dc6577ebf4feeb168",
+      "denominator_occurrences": 5400
+    },
+    {
+      "band": 3,
+      "sha256": "1644ed6d30b14f600c96a82a20ec7d33d77ae667999a9530ad42ace8e62926ee",
+      "denominator_occurrences": 4654
+    },
+    {
+      "band": 4,
+      "sha256": "842c22831ffd0c75d17ed6e4e5756109c7eb5195352a667e6d820c6a114c2fc6",
+      "denominator_occurrences": 3988
+    },
+    {
+      "band": 5,
+      "sha256": "c677aeacca139189d02fd4e8124ad2968480a6d267bf9a9cd325501bd408c6d9",
+      "denominator_occurrences": 3412
+    },
+    {
+      "band": 6,
+      "sha256": "86d184bc09933d016f2f083d3c538a3bf499f93c92a12eeba85f55de8b4a3838",
+      "denominator_occurrences": 2904
+    },
+    {
+      "band": 7,
+      "sha256": "735a3df7f7a628456e6052a84ee17116e8770d0486afe8ce3c1e37df15ef6b5c",
+      "denominator_occurrences": 2462
+    },
+    {
+      "band": 8,
+      "sha256": "89531c8b43263f2eb38c429a86fc10794602d73c9748d147a6c748134b95b918",
+      "denominator_occurrences": 2078
+    },
+    {
+      "band": 9,
+      "sha256": "7526d34a447fc2ca14e8f76ffbaedfb30eb129318768a308a4d1b9388284655c",
+      "denominator_occurrences": 1750
+    },
+    {
+      "band": 10,
+      "sha256": "458a6b11f7199ed8414522b2342ed8bc34086d9f840aa29d7a5b6e872faa7f74",
+      "denominator_occurrences": 1460
+    },
+    {
+      "band": 11,
+      "sha256": "c6f0a6961d70664aa0aea4bfde07383fdb9c5aa14857b22f8e90e15832643ce1",
+      "denominator_occurrences": 1218
+    },
+    {
+      "band": 12,
+      "sha256": "0497f7b1f7b7cb5627257a9a83b0e127a2c6dd60fe5187f7647d6ad6bdd30c6d",
+      "denominator_occurrences": 1008
+    },
+    {
+      "band": 13,
+      "sha256": "0ebdbc13f733c04bced249109496bc6a8cb1afbcd4be1a3bf1edad1e858f06d2",
+      "denominator_occurrences": 830
+    },
+    {
+      "band": 14,
+      "sha256": "8a9ca81e34337d8c45f41cd66c790e5b5028384ec2c246033f90a68b26c6869d",
+      "denominator_occurrences": 678
+    },
+    {
+      "band": 15,
+      "sha256": "e63743dfa1c5fea26e5a50ff7750318ede851676b366c3c3348458969913515a",
+      "denominator_occurrences": 554
+    }
+  ],
+  "all_row_denominator_occurrences": 45806,
+  "all_row_unique_denominators": 45290,
+  "top_row_denominator_occurrences": 9576,
+  "input_maps": [
+    {
+      "path": "box/k16rank-20260903/rank_t8_mod_p32003_b0_parti.sing",
+      "sha256": "342bd03571b575d8f0242811fb948a97c76eed5a657e9db2364027603058514d",
+      "top_rows_identical_to_exact_dump": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "path": "box/k16t8-20260905/affinewms2_t8_mod_p32003_b0.sing",
+      "sha256": "4c8684cda0e18f0fa8cf5e97af0b460fe443b265961092667de2bbe1307cacf3",
+      "top_rows_identical_to_exact_dump": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  ],
+  "primes": [
+    {
+      "p": 32003,
+      "yy": 11288,
+      "H_value": 0,
+      "H_derivative": 12394,
+      "H_discriminant_mod_p": 28839,
+      "fixed_integer_denominator_bound": 67,
+      "base_units": {
+        "yy": 11288,
+        "q": 17,
+        "2q^2": 578,
+        "6q^3": 29478,
+        "2": 2,
+        "g": 1643,
+        "y*g": 16447,
+        "q/y": 24918
+      },
+      "row_denominators_all_units": true,
+      "spine_pivots": [
+        {
+          "weight": 1,
+          "band": 32,
+          "variable": "C1",
+          "value": 19097
+        },
+        {
+          "weight": 2,
+          "band": 31,
+          "variable": "C2",
+          "value": 11155
+        },
+        {
+          "weight": 3,
+          "band": 30,
+          "variable": "C3",
+          "value": 2103
+        },
+        {
+          "weight": 4,
+          "band": 29,
+          "variable": "C4",
+          "value": 17277
+        },
+        {
+          "weight": 5,
+          "band": 28,
+          "variable": "C5",
+          "value": 5948
+        },
+        {
+          "weight": 6,
+          "band": 27,
+          "variable": "C6",
+          "value": 15406
+        },
+        {
+          "weight": 7,
+          "band": 26,
+          "variable": "C7",
+          "value": 5053
+        },
+        {
+          "weight": 8,
+          "band": 25,
+          "variable": "q8_0",
+          "value": 2740
+        },
+        {
+          "weight": 9,
+          "band": 24,
+          "variable": "q9_0",
+          "value": 11134
+        },
+        {
+          "weight": 10,
+          "band": 23,
+          "variable": "q10_0",
+          "value": 28585
+        },
+        {
+          "weight": 11,
+          "band": 22,
+          "variable": "q11_0",
+          "value": 10574
+        },
+        {
+          "weight": 12,
+          "band": 21,
+          "variable": "q12_0",
+          "value": 18801
+        },
+        {
+          "weight": 13,
+          "band": 20,
+          "variable": "q13_0",
+          "value": 2606
+        },
+        {
+          "weight": 14,
+          "band": 19,
+          "variable": "q14_0",
+          "value": 22291
+        },
+        {
+          "weight": 15,
+          "band": 18,
+          "variable": "q15_0",
+          "value": 21604
+        },
+        {
+          "weight": 16,
+          "band": 17,
+          "variable": "q16_0",
+          "value": 6325
+        },
+        {
+          "weight": 17,
+          "band": 16,
+          "variable": "b2",
+          "value": 30404
+        }
+      ],
+      "status": "PINT PASS"
+    },
+    {
+      "p": 32027,
+      "yy": 23825,
+      "H_value": 0,
+      "H_derivative": 21071,
+      "H_discriminant_mod_p": 28767,
+      "fixed_integer_denominator_bound": 67,
+      "base_units": {
+        "yy": 23825,
+        "q": 17,
+        "2q^2": 578,
+        "6q^3": 29478,
+        "2": 2,
+        "g": 14643,
+        "y*g": 31391,
+        "q/y": 21816
+      },
+      "row_denominators_all_units": true,
+      "spine_pivots": [
+        {
+          "weight": 1,
+          "band": 32,
+          "variable": "C1",
+          "value": 16870
+        },
+        {
+          "weight": 2,
+          "band": 31,
+          "variable": "C2",
+          "value": 31014
+        },
+        {
+          "weight": 3,
+          "band": 30,
+          "variable": "C3",
+          "value": 15113
+        },
+        {
+          "weight": 4,
+          "band": 29,
+          "variable": "C4",
+          "value": 6794
+        },
+        {
+          "weight": 5,
+          "band": 28,
+          "variable": "C5",
+          "value": 2465
+        },
+        {
+          "weight": 6,
+          "band": 27,
+          "variable": "C6",
+          "value": 3266
+        },
+        {
+          "weight": 7,
+          "band": 26,
+          "variable": "C7",
+          "value": 10817
+        },
+        {
+          "weight": 8,
+          "band": 25,
+          "variable": "q8_0",
+          "value": 16904
+        },
+        {
+          "weight": 9,
+          "band": 24,
+          "variable": "q9_0",
+          "value": 6126
+        },
+        {
+          "weight": 10,
+          "band": 23,
+          "variable": "q10_0",
+          "value": 8453
+        },
+        {
+          "weight": 11,
+          "band": 22,
+          "variable": "q11_0",
+          "value": 19387
+        },
+        {
+          "weight": 12,
+          "band": 21,
+          "variable": "q12_0",
+          "value": 12639
+        },
+        {
+          "weight": 13,
+          "band": 20,
+          "variable": "q13_0",
+          "value": 5080
+        },
+        {
+          "weight": 14,
+          "band": 19,
+          "variable": "q14_0",
+          "value": 14953
+        },
+        {
+          "weight": 15,
+          "band": 18,
+          "variable": "q15_0",
+          "value": 13068
+        },
+        {
+          "weight": 16,
+          "band": 17,
+          "variable": "q16_0",
+          "value": 24958
+        },
+        {
+          "weight": 17,
+          "band": 16,
+          "variable": "b2",
+          "value": 17165
+        }
+      ],
+      "status": "PINT PASS"
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+--- charged-band_engine.py
++++ precise-band_engine.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""Exact sparse continuation of the (99,66) joint two-point chart.
++"""Precise gauge-payment replay of the (99,66) joint two-point chart.
+ 
+ This driver reconstructs the charged common-h3/major-h2 state, imposes the
+ outer base-h2 D2 support preblock, and then uses the charged major weight
+@@ -14,7 +14,14 @@
+   stage n>=2: D1 offset n (while present), the next occupied pole exponent,
+               and the complete Jacobian degree 163-n.
+ 
+-The chart is represented in z=w-1 coordinates.  The 99 free C2/C3 directions
++The chart is represented in z=w-1 coordinates.  The sound D2 weight floor is
++retained verbatim.  The sole enlargement is the minor constant ``jet0``:
++``y=jet0+u*t+zeta*t**2`` on delta=2 and
++``y=jet0+u*t+v*t**2+pi*t**(5/2)`` on delta=5/2.  On delta=5/2 this releases
++the minor ``jet0=0`` pin and retains ``Hc_11_0=0``; those two pins spend the
++same constant-translation gauge and must not both be released.
++
++The 99 free C2/C3 directions
+ are replaced by the output coordinates of K2=t^33*h2; this is an invertible
+ unit-triangular coordinate change certified by the charged major-tower pivot
+ pattern.  The seven h2-D1 rows are imposed exactly in these coordinates.
+@@ -40,8 +47,9 @@
+ 
+ 
+ ROOT = Path(__file__).resolve().parents[2]
+-RECEIPT = ROOT / "xmodel/g9966-global-band-sol56-20260903.run.v2"
+-FROZEN = Path("/tmp/jc2-lane.cNPqDa/inputs")
++HERE = Path(__file__).resolve().parent
++RECEIPT = HERE / "receipt.run.v2"
++FROZEN = HERE / "frozen"
+ 
+ 
+ def sha256(path: Path) -> str:
+@@ -59,7 +67,6 @@
+             key, value = line.split("=", 1)
+             fields[key] = value
+     count = int(fields["charged_inputs"])
+-    assert Path(fields["lane_inputs_dir"]) == FROZEN
+     checked = []
+     for index in range(1, count + 1):
+         name = fields[f"charged_input_{index}_basename"]
+@@ -68,7 +75,7 @@
+         actual = sha256(FROZEN / name)
+         assert actual == expected, f"charged input mismatch: {name}"
+         checked.append((name, actual))
+-    assert count == 20
++    assert count == 8
+     return {
+         "receipt": str(RECEIPT),
+         "lane_inputs_dir": str(FROZEN),
+@@ -80,25 +87,15 @@
+     }
+ 
+ 
+-def reproduce_charged_endpoint() -> dict:
+-    """Replay the frozen self-contained 16-row endpoint driver."""
+-    driver = FROZEN / "first_global_band.py"
+-    expected_path = FROZEN / "results.json"
+-    replay = subprocess.run(
+-        ["python3", str(driver)], capture_output=True, check=True
+-    ).stdout
+-    expected = expected_path.read_bytes()
+-    assert replay == expected
+-    parsed = json.loads(replay)
+-    assert parsed["rank"]["plus_first_10_J_through_G65"] == 15
+-    assert parsed["residual_count"] == 0
++def charged_driver_control() -> dict:
++    """Pin the pristine engine; endpoint controls run separately before replay."""
++    charged = FROZEN / "band_engine.py"
++    actual = sha256(charged)
++    expected = "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9"
++    assert actual == expected
+     return {
+-        "byte_identical": True,
+-        "result_sha256": hashlib.sha256(replay).hexdigest(),
+-        "rank": 15,
+-        "residual_count": 0,
+-        "delta2_dimension": 6704 - 15,
+-        "delta52_dimension": 6702 - 15,
++        "charged_driver_sha256": actual,
++        "separate_original_controls_required": True,
+     }
+ 
+ 
+@@ -255,27 +252,50 @@
+ 
+ 
+ def h3_branch_map(branch: str) -> tuple[dict[sp.Symbol, sp.Expr], list[sp.Symbol], dict]:
+-    rho, u, v, c = map(symbol, ("rho", "u", "v", "c"))
++    jet0, rho, u, v, c = map(symbol, ("jet0", "rho", "u", "v", "c"))
+     names = {(r, d): symbol(f"Hc_{r}_{d}") for r in range(1, 12) for d in range(12-r)}
+     if branch == "delta2":
+         values = {
+-            (1,8):0,(1,9):0,(1,10):0,(2,7):0,(2,8):0,(2,9):3*u,
+-            (3,6):0,(3,7):0,(3,8):3*rho,(4,6):0,(4,7):3*u**2,
+-            (5,5):0,(5,6):6*rho*u,(6,4):-u**3,(6,5):u**3,
+-            (7,3):-3*rho*u**2,(8,3):0,(9,2):-u*(3*rho*u**2-symbol("Hc_7_4")),
++            (1,8):0,(1,9):0,(1,10):-3*jet0,(2,7):0,(2,8):-3*jet0**2,
++            (2,9):3*(jet0**2+u),(3,6):-jet0**3,
++            (3,7):2*jet0*(jet0**2+3*u),(3,8):-jet0**3-3*jet0*u+3*rho,
++            (4,6):-3*jet0**2*u,(4,7):3*(-jet0**2*u-2*jet0*rho+u**2),
++            (5,5):3*jet0*(-jet0**2*u-jet0*rho+u**2),
++            (5,6):3*(jet0**3*u+jet0**2*rho+jet0*u**2+2*rho*u),
++            (6,4):-u*(-6*jet0**2*u-6*jet0*rho+u**2),
++            (6,5):u**2*(-3*jet0**2+u),
++            (7,3):-3*u*(-jet0**3*u-2*jet0**2*rho+jet0*u**2+rho*u),
++            (8,3):jet0*(-symbol("Hc_7_4")-3*jet0**3*u**2
++                         -6*jet0**2*rho*u+6*jet0*u**3+9*rho*u**2),
++            (9,2):-u*(-symbol("Hc_7_4")-4*jet0**3*u**2
++                       -9*jet0**2*rho*u+3*jet0*u**3+3*rho*u**2),
+         }
+-        free = [symbol("Hc_7_4"), symbol("Hc_10_1"), symbol("Hc_11_0"), rho, u]
+-        centre = {"parameters":["rho","u"],"localization":"rho!=0"}
++        free = [symbol("Hc_7_4"), symbol("Hc_10_1"), symbol("Hc_11_0"),
++                jet0, rho, u]
++        centre = {"parameters":["jet0","rho","u"],"localization":"rho!=0",
++                  "minor_constant":"free","released_pin":"jet0=0"}
+     else:
+         values = {
+-            (1,8):0,(1,9):0,(1,10):0,(2,7):0,(2,8):0,(2,9):3*u,
+-            (3,6):0,(3,7):0,(3,8):-3*v,(4,6):0,(4,7):3*u**2,
+-            (5,5):0,(5,6):-6*u*v,(6,4):-u**3,(6,5):u**3+3*v**2,
+-            (7,3):3*u**2*v,(7,4):c-3*u**2*v,(8,3):3*u*v**2,
+-            (9,2):c*u-v**3,(10,1):-c*v,(11,0):0,
++            (1,8):0,(1,9):0,(1,10):-3*jet0,(2,7):0,(2,8):-3*jet0**2,
++            (2,9):3*(jet0**2+u),(3,6):-jet0**3,
++            (3,7):2*jet0*(jet0**2+3*u),(3,8):-jet0**3-3*jet0*u-3*v,
++            (4,6):-3*jet0**2*u,(4,7):3*(-jet0**2*u+2*jet0*v+u**2),
++            (5,5):3*jet0*(-jet0**2*u+jet0*v+u**2),
++            (5,6):3*(jet0**3*u-jet0**2*v+jet0*u**2-2*u*v),
++            (6,4):-u*(-6*jet0**2*u+6*jet0*v+u**2),
++            (6,5):-3*jet0**2*u**2+u**3+3*v**2,
++            (7,3):-3*(jet0*u-v)*(-jet0**2*u+jet0*v+u**2),
++            (7,4):c-3*jet0**3*u**2+6*jet0**2*u*v+3*jet0*u**3
++                  -3*jet0*v**2-3*u**2*v,
++            (8,3):-c*jet0+3*jet0**2*u**3-6*jet0*u**2*v+3*u*v**2,
++            (9,2):c*u+jet0**3*u**3-3*jet0**2*u**2*v
++                  +3*jet0*u*v**2-v**3,
++            (10,1):c*(jet0*u-v),(11,0):0,
+         }
+-        free = [u, v, c]
+-        centre = {"parameters":["u","v","c"],"localization":"c!=0","b0":"fixed_zero"}
++        free = [jet0, u, v, c]
++        centre = {"parameters":["jet0","u","v","c"],"localization":"c!=0",
++                  "minor_constant":"free","released_pin":"jet0=0",
++                  "b0":"fixed_zero","Hc_11_0":"fixed_zero_retained"}
+     substitutions = {names[key]: sp.expand(value) for key, value in values.items()}
+     return substitutions, free, centre
+ 
+@@ -293,7 +313,8 @@
+             want = expected.get(n, {})
+             assert set(got) == set(want)
+             assert all(sp.expand(got[k] - want[k]) == 0 for k in got)
+-        return {"target":"t^9*zeta^2*(zeta+3*rho)","verified":True}
++        return {"target":"t^9*zeta^2*(zeta+3*rho)","verified":True,
++                "minor_series":"y=jet0+u*t+zeta*t^2","jet0":"free"}
+     rows = local_rows(h3, "delta52", 21, exact_only=False)
+     expected = {21: {1: -c, 3: 1}}
+     for n in range(22):
+@@ -301,7 +322,9 @@
+         want = expected.get(n, {})
+         assert set(got) == set(want)
+         assert all(sp.expand(got[k] - want[k]) == 0 for k in got)
+-    return {"target":"s^21*pi*(pi^2-c)","verified":True,"ODE_compatibility":"Hc_11_0=0"}
++    return {"target":"s^21*pi*(pi^2-c)","verified":True,
++            "minor_series":"y=jet0+u*t+v*t^2+pi*t^(5/2)","jet0":"free",
++            "ODE_compatibility":"Hc_11_0=0 retained"}
+ 
+ 
+ def build_major_h2(branch: str, max_t: int) -> tuple[TZ, set[sp.Symbol], dict]:
+@@ -376,7 +399,7 @@
+             if value!=0:
+                 k2[(r,q)]=value
+     inner_free=set(hfree)|dfree
+-    expected=104 if branch=="delta2" else 102
++    expected=105 if branch=="delta2" else 103
+     assert len(inner_free)==expected
+     return k2,inner_free,{
+         "h3_control":control,"centre":centre,
+@@ -545,24 +568,33 @@
+ def local_rows(item: TZ,branch: str,max_power: int,exact_only: bool=True) -> dict[tuple[int,int],sp.Expr]:
+     wbands=all_w_bands(item)
+     out: dict[tuple[int,int],sp.Expr]=defaultdict(lambda:sp.Integer(0))
+-    u,v=map(symbol,("u","v"))
++    jet0,u,v=map(symbol,("jet0","u","v"))
+     if branch=="delta2":
+         for r,poly in wbands.items():
+             for j,coefficient in poly.items():
+-                for k in range(j+1):
+-                    n=r+2*j+k
+-                    if n<=max_power:
+-                        out[(n,k)]+=coefficient*comb(j,k)*u**(j-k)
++                if r+j>max_power:
++                    continue
++                for d in range(j+1):
++                    for k in range(j-d+1):
++                        a=j-d-k
++                        n=r+d+2*a+3*k
++                        if n<=max_power:
++                            multinomial=factorial(j)//(factorial(d)*factorial(a)*factorial(k))
++                            out[(n,k)]+=coefficient*multinomial*jet0**d*u**a
+     else:
+         for r,poly in wbands.items():
+             for j,coefficient in poly.items():
+-                for b in range(j+1):
+-                    for k in range(j-b+1):
+-                        a=j-b-k
+-                        n=2*r+4*j+2*b+3*k
+-                        if n<=max_power:
+-                            multinomial=factorial(j)//(factorial(a)*factorial(b)*factorial(k))
+-                            out[(n,k)]+=coefficient*multinomial*u**a*v**b
++                if 2*r+2*j>max_power:
++                    continue
++                for d in range(j+1):
++                    for b in range(j-d+1):
++                        for k in range(j-d-b+1):
++                            a=j-d-b-k
++                            n=2*r+2*d+4*a+6*b+7*k
++                            if n<=max_power:
++                                multinomial=(factorial(j)//(factorial(d)*factorial(a)
++                                             *factorial(b)*factorial(k)))
++                                out[(n,k)]+=coefficient*multinomial*jet0**d*u**a*v**b
+     return {tag:sp.expand(value) for tag,value in out.items() if value!=0}
+ 
+ 
+@@ -605,6 +637,76 @@
+     return hashlib.sha256(payload.encode()).hexdigest()
+ 
+ 
++def small_rational_point(
++    rows: list[tuple[str,sp.Expr]], residual: list[tuple[str,sp.Expr]],
++    linear_map: dict[sp.Symbol,sp.Expr], all_free: set[sp.Symbol],
++    localized: sp.Symbol,
++) -> dict:
++    """Try a bounded QQ section, then verify every cumulative row exactly."""
++    remaining=all_free-set(linear_map)
++    jet0=symbol("jet0")
++    trials=[sp.Rational(1),sp.Rational(-1),sp.Rational(2),sp.Rational(-2),
++            sp.Rational(1,2),sp.Rational(-1,2)]
++    settings=[]
++    if jet0 in remaining:
++        settings=[{jet0:value} for value in trials]
++    else:
++        dependencies=sorted(linear_map[jet0].free_symbols.intersection(remaining)
++                            -{localized},key=str)
++        for dependency in dependencies:
++            settings.extend({dependency:value} for value in trials)
++        if dependencies:
++            settings.append({dependency:sp.Integer(1) for dependency in dependencies})
++        else:
++            settings=[{}]
++    attempted=0
++    for local_value in trials:
++        for setting in settings:
++            attempted+=1
++            point={variable:sp.Integer(0) for variable in remaining}
++            point[localized]=local_value
++            point.update(setting)
++            if any(sp.expand(row.xreplace(point))!=0 for _label,row in residual):
++                continue
++            full=dict(point)
++            for variable,rhs in linear_map.items():
++                value=sp.cancel(rhs.xreplace(point))
++                if value.free_symbols or not value.is_Rational:
++                    break
++                full[variable]=value
++            else:
++                assert set(full)==all_free
++                assert full[localized]!=0
++                assert all(not value.free_symbols and value.is_Rational for value in full.values())
++                assert all(sp.expand(row.xreplace(full))==0 for _label,row in rows)
++                if full[jet0]==0:
++                    continue
++                payload="".join(f"{variable}={full[variable]}\n" for variable in sorted(full,key=str))
++                zero_payload="".join(f"{label}\t0\n" for label,_row in rows)
++                nonzero={str(variable):str(full[variable]) for variable in sorted(full,key=str)
++                         if full[variable]!=0}
++                return {
++                    "status":"FOUND","field":"Q","localized":str(localized),
++                    "localized_value":str(full[localized]),"jet0_value":str(full[jet0]),
++                    "jet0_nonzero":full[jet0]!=0,"all_free_count":len(all_free),
++                    "nonzero_assignment":nonzero,"omitted_all_free_default":"0",
++                    "full_assignment_sha256":hashlib.sha256(payload.encode()).hexdigest(),
++                    "resolved_Qstar_back_substitutions":len(linear_map),
++                    "raw_rows_verified_zero":len(rows),"residual_rows_verified_zero":len(residual),
++                    "raw_rows_hash":rows_hash(rows),
++                    "raw_zero_image_sha256":hashlib.sha256(zero_payload.encode()).hexdigest(),
++                    "localization_wrapper_value":str(1/full[localized]),
++                    "gauge_ledger":{"group_element":"(x,y)->(x,y+a1)",
++                                    "minor_jet0_pin_released":True,
++                                    "delta52_Hc_11_0_retained":localized==symbol("c")},
++                    "scope":"rational point of cumulative necessary chart; not a Keller pair",
++                    "attempts":attempted,
++                }
++    return {"status":"NOT_FOUND_BOUNDED_Q","attempts":attempted,
++            "trial_values":[str(value) for value in trials],
++            "scope":"failure of this bounded search is not nonexistence"}
++
++
+ def singular_dimension(
+     residual: list[tuple[str,sp.Expr]], branch: str, emit_path: Path | None=None
+ ) -> dict:
+@@ -726,7 +828,7 @@
+ def run(branch:str,stage:int,emit_singular:Path|None=None)->dict:
+     started=time.perf_counter()
+     custody=verify_inputs()
+-    endpoint=reproduce_charged_endpoint()
++    endpoint=charged_driver_control()
+     jac_control=jacobian_normalization_control()
+     raw_counts={
+         "delta2_F":sum(map(len,raw_minor_support("delta2","F").values())),
+@@ -752,7 +854,12 @@
+     assert localized in remaining
+     residual_symbols=set().union(*(row.free_symbols for _label,row in residual)) if residual else set()
+     assert residual_symbols.issubset(remaining)
++    rational_point=small_rational_point(rows,residual,linear_map,all_free,localized)
+     singular=singular_dimension(residual,branch,emit_singular)
++    if rational_point["status"]=="FOUND":
++        # An exact point in the localized chart and a unit Gröbner basis are
++        # mutually exclusive.  Fail closed if either certificate path drifts.
++        assert singular["unit_ideal"] is False
+     if singular["unit_ideal"]:
+         dimension=None
+         verdict="DEAD"
+@@ -771,6 +878,13 @@
+             "Jacobian":"named d162,k27; finish d162; then total degrees downward",
+             "warning":"synchronization is a driver convention, not a source theorem",
+         },
++        "precise_gauge_repair":{
++            "sound_D2_floor_retained":True,
++            "minor_constant":"jet0 free",
++            "released_gauge_pin":"minor jet0=0",
++            "delta52_Hc_11_0":"fixed_zero_retained",
++            "new_free_dimensions":1,
++        },
+         "custody":custody,"driver_sha256":sha256(Path(__file__)),
+         "charged_endpoint":endpoint,
+         "major":major,"outer_major":outer_meta,"row_accounting":accounting,
+@@ -794,6 +908,7 @@
+             "linear_free_before_residue":len(remaining),
+             "exact_Krull_dimension_localized":dimension,
+         },
++        "necessary_chart_rational_point":rational_point,
+         "verdict":verdict,"nonlinear_residue_appears":bool(residual),
+         "resources":{"wall_seconds":elapsed,"peak_rss_kib":rss,
+                      "self_peak_rss_kib":rss_self,"children_peak_rss_kib":rss_children,

@@ -1,0 +1,63 @@
+{
+  "argv_count": 8,
+  "argv_sha256": "1feb8e26b42af02a694c2321aa741aabb3e26cd86b41594f8e935ade892b1048",
+  "caps": {
+    "cpu_seconds": null,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 2000000000,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 120.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/factored-jacobian-pilot-20260906",
+  "enforcement": {
+    "cpu": "disabled",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "python3",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/factored-jacobian-pilot-20260906",
+  "max_observed_group_rss_bytes": 34402304,
+  "pgid": 2961,
+  "pid": 2961,
+  "resource": null,
+  "runner_exit_code": 0,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=33164",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_low.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 1022,
+    "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_low.stdout",
+    "sha256": "bb62807fa44e3f402fc4819964790c31861340842dd8effc3153572391e58935"
+  },
+  "telemetry_path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_low.telemetry.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-06T09:51:27.288866Z",
+  "utc_start": "2026-09-06T09:51:27.163519Z",
+  "wall_elapsed_seconds": 0.125350277
+}

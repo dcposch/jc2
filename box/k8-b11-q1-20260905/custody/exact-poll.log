@@ -1,0 +1,651 @@
+POLL_UTC=2026-09-05T22:05:42Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+    PID     ELAPSED %CPU %MEM   RSS    VSZ CMD
+  10060       11:06  604  2.6 13562216 19003764 /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 22:00:42 UTC  (301 s (5.0 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 112 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 111 completed + 1 in progress; sum of round wall time 358 s (6.0 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      104    5       15        85241        193 x 337           1.59%        3       12          0.09
+      105    5       16        85135        491 x 779           1.00%        3       13          0.10
+      106    5       15        85140        538 x 746           0.86%        2       13          0.08
+      107    5       14        85155        439 x 559           0.94%        1       13          0.06
+      108    6      380        85174      26701 x 47649         0.03%      107      273          4.04
+      109    6      127        87907      19576 x 37786         0.04%       53       74          2.74
+      110    6       84        89032      15268 x 25079         0.05%       28       56          1.85
+      111    6       64        90243      11296 x 17594         0.08%       25       39          1.57
+  largest matrix so far: 1101854 x 4224762 0.00% at deg 7 (round 59, 265 s (4.4 min))
+  live round: r112 deg 7, sel 22407 of 91642 pairs  [stage: selected]
+    nearest precedent (last completed deg-7 round r59): sel 15443 -> 1101854 x 4224762 0.00%, 265 s (4.4 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 85241 -> 90243 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 91642 (list still growing)
+      - degree plateau: max deg 7 unchanged for 53 rounds (334 s (5.6 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 148); first: line 20: 'Initial prime = 1266886877'
+  5      40   68227     874 x 1184        0.56%        6 new      34 zero         0.13 | 2.53         
+  6    1571   68318   40398 x 76228       0.02%      322 new    1249 zero         7.02 | 115.30       
+  6     928   75776   41015 x 79276       0.02%      260 new     668 zero         7.05 | 94.63        
+  5      15   85241     193 x 337         1.59%        3 new      12 zero         0.09 | 1.44         
+  5      16   85135     491 x 779         1.00%        3 new      13 zero         0.10 | 1.44         
+  5      15   85140     538 x 746         0.86%        2 new      13 zero         0.08 | 1.03         
+  5      14   85155     439 x 559         0.94%        1 new      13 zero         0.06 | 0.71         
+  6     380   85174   26701 x 47649       0.03%      107 new     273 zero         4.04 | 40.77        
+  6     127   87907   19576 x 37786       0.04%       53 new      74 zero         2.74 | 21.22        
+  6      84   89032   15268 x 25079       0.05%       28 new      56 zero         1.85 | 11.99        
+  6      64   90243   11296 x 17594       0.08%       25 new      39 zero         1.57 | 10.62        
+  7   22407   91642POLL_UTC=2026-09-05T22:16:02Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 22:16:03 up 59 min,  2 users,  load average: 1.71, 5.30, 4.95
+  10058   10036   10034       21:26  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034       21:26  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034       21:26  680  6.2 32482556 46372612 msolve     /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 22:14:36 UTC  (86.43 s since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 196 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 195 completed + 1 in progress; sum of round wall time 1193 s (19.9 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      188    6     1035       111545      87590 x 164801        0.01%      212      823         16.51
+      189    6      682       117987      82968 x 166763        0.01%      167      515         16.79
+      190    6      436       122449      70419 x 138856        0.02%      113      323         13.19
+      191    6      165       125900      46988 x 96841         0.02%       51      114         10.31
+      192    6      132       127171      47012 x 97615         0.03%       46       86          8.76
+      193    6      179       128135      71501 x 139766        0.02%       53      126         13.19
+      194    6       40       130273      11982 x 21066         0.07%       14       26          2.31
+      195    6       18       130703      11395 x 18495         0.07%        8       10          1.99
+  largest matrix so far: 1997480 x 5582521 0.00% at deg 7 (round 112, 589 s (9.8 min))
+  live round: r196 deg 7, sel 28232 of 130991 pairs  [stage: selected]
+    nearest precedent (last completed deg-7 round r112): sel 22407 -> 1997480 x 5582521 0.00%, 589 s (9.8 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 111545 -> 130703 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 130991 (list still growing)
+      - degree plateau: max deg 7 unchanged for 137 rounds (1168 s (19.5 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+  NOTE: 1 unrecognized line(s) (of 232); first: line 20: 'Initial prime = 1266886877'
+  6    1457  103669  109038 x 212931      0.01%      263 new    1194 zero        20.02 | 111.84       
+  5      47  111367    2989 x 4162        0.18%        8 new      39 zero         0.44 | 4.04         
+  5      16  111444    1573 x 2136        0.30%        4 new      12 zero         0.24 | 1.97         
+  6    1035  111545   87590 x 164801      0.01%      212 new     823 zero        16.51 | 90.39        
+  6     682  117987   82968 x 166763      0.01%      167 new     515 zero        16.79 | 76.18        
+  6     436  122449   70419 x 138856      0.02%      113 new     323 zero        13.19 | 53.60        
+  6     165  125900   46988 x 96841       0.02%       51 new     114 zero        10.31 | 28.89        
+  6     132  127171   47012 x 97615       0.03%       46 new      86 zero         8.76 | 25.54        
+  6     179  128135   71501 x 139766      0.02%       53 new     126 zero        13.19 | 32.69        
+  6      40  130273   11982 x 21066       0.07%       14 new      26 zero         2.31 | 7.89         
+  6      18  130703   11395 x 18495       0.07%        8 new      10 zero         1.99 | 5.52         
+  7   28232  130991POLL_UTC=2026-09-05T22:26:16Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 22:26:16 up  1:09,  2 users,  load average: 1.00, 1.55, 3.03
+  10058   10036   10034       31:39  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034       31:39  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034       31:39  492  6.3 33253772 48240388 msolve     /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 22:14:36 UTC  (700 s (11.7 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 196 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 195 completed + 1 in progress; sum of round wall time 1193 s (19.9 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      188    6     1035       111545      87590 x 164801        0.01%      212      823         16.51
+      189    6      682       117987      82968 x 166763        0.01%      167      515         16.79
+      190    6      436       122449      70419 x 138856        0.02%      113      323         13.19
+      191    6      165       125900      46988 x 96841         0.02%       51      114         10.31
+      192    6      132       127171      47012 x 97615         0.03%       46       86          8.76
+      193    6      179       128135      71501 x 139766        0.02%       53      126         13.19
+      194    6       40       130273      11982 x 21066         0.07%       14       26          2.31
+      195    6       18       130703      11395 x 18495         0.07%        8       10          1.99
+  largest matrix so far: 1997480 x 5582521 0.00% at deg 7 (round 112, 589 s (9.8 min))
+  live round: r196 deg 7, sel 28232 of 130991 pairs  [stage: selected]
+    nearest precedent (last completed deg-7 round r112): sel 22407 -> 1997480 x 5582521 0.00%, 589 s (9.8 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 111545 -> 130703 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 130991 (list still growing)
+      - degree plateau: max deg 7 unchanged for 137 rounds (1168 s (19.5 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+  NOTE: 1 unrecognized line(s) (of 232); first: line 20: 'Initial prime = 1266886877'
+  6    1457  103669  109038 x 212931      0.01%      263 new    1194 zero        20.02 | 111.84       
+  5      47  111367    2989 x 4162        0.18%        8 new      39 zero         0.44 | 4.04         
+  5      16  111444    1573 x 2136        0.30%        4 new      12 zero         0.24 | 1.97         
+  6    1035  111545   87590 x 164801      0.01%      212 new     823 zero        16.51 | 90.39        
+  6     682  117987   82968 x 166763      0.01%      167 new     515 zero        16.79 | 76.18        
+  6     436  122449   70419 x 138856      0.02%      113 new     323 zero        13.19 | 53.60        
+  6     165  125900   46988 x 96841       0.02%       51 new     114 zero        10.31 | 28.89        
+  6     132  127171   47012 x 97615       0.03%       46 new      86 zero         8.76 | 25.54        
+  6     179  128135   71501 x 139766      0.02%       53 new     126 zero        13.19 | 32.69        
+  6      40  130273   11982 x 21066       0.07%       14 new      26 zero         2.31 | 7.89         
+  6      18  130703   11395 x 18495       0.07%        8 new      10 zero         1.99 | 5.52         
+  7   28232  130991POLL_UTC=2026-09-05T22:36:30Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 22:36:30 up  1:19,  2 users,  load average: 1.00, 1.06, 2.02
+  10058   10036   10034       41:54  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034       41:54  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034       41:54  396  6.4 33599448 48240388 msolve     /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 22:14:36 UTC  (1314 s (21.9 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 196 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 195 completed + 1 in progress; sum of round wall time 1193 s (19.9 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      188    6     1035       111545      87590 x 164801        0.01%      212      823         16.51
+      189    6      682       117987      82968 x 166763        0.01%      167      515         16.79
+      190    6      436       122449      70419 x 138856        0.02%      113      323         13.19
+      191    6      165       125900      46988 x 96841         0.02%       51      114         10.31
+      192    6      132       127171      47012 x 97615         0.03%       46       86          8.76
+      193    6      179       128135      71501 x 139766        0.02%       53      126         13.19
+      194    6       40       130273      11982 x 21066         0.07%       14       26          2.31
+      195    6       18       130703      11395 x 18495         0.07%        8       10          1.99
+  largest matrix so far: 1997480 x 5582521 0.00% at deg 7 (round 112, 589 s (9.8 min))
+  live round: r196 deg 7, sel 28232 of 130991 pairs  [stage: selected]
+    nearest precedent (last completed deg-7 round r112): sel 22407 -> 1997480 x 5582521 0.00%, 589 s (9.8 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 111545 -> 130703 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 130991 (list still growing)
+      - degree plateau: max deg 7 unchanged for 137 rounds (1168 s (19.5 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+  NOTE: 1 unrecognized line(s) (of 232); first: line 20: 'Initial prime = 1266886877'
+  6    1457  103669  109038 x 212931      0.01%      263 new    1194 zero        20.02 | 111.84       
+  5      47  111367    2989 x 4162        0.18%        8 new      39 zero         0.44 | 4.04         
+  5      16  111444    1573 x 2136        0.30%        4 new      12 zero         0.24 | 1.97         
+  6    1035  111545   87590 x 164801      0.01%      212 new     823 zero        16.51 | 90.39        
+  6     682  117987   82968 x 166763      0.01%      167 new     515 zero        16.79 | 76.18        
+  6     436  122449   70419 x 138856      0.02%      113 new     323 zero        13.19 | 53.60        
+  6     165  125900   46988 x 96841       0.02%       51 new     114 zero        10.31 | 28.89        
+  6     132  127171   47012 x 97615       0.03%       46 new      86 zero         8.76 | 25.54        
+  6     179  128135   71501 x 139766      0.02%       53 new     126 zero        13.19 | 32.69        
+  6      40  130273   11982 x 21066       0.07%       14 new      26 zero         2.31 | 7.89         
+  6      18  130703   11395 x 18495       0.07%        8 new      10 zero         1.99 | 5.52         
+  7   28232  130991POLL_UTC=2026-09-05T22:46:34Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 22:46:35 up  1:29,  2 users,  load average: 12.89, 7.03, 4.57
+  10058   10036   10034       51:58  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034       51:58  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034       51:58  461 11.2 58259704 89088152 msolve     /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 22:44:20 UTC  (135 s (2.2 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 196 IN PROGRESS at deg 7 (linear algebra done; round timing pending)
+  rounds    : 195 completed + 1 in progress; sum of round wall time 1193 s (19.9 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      188    6     1035       111545      87590 x 164801        0.01%      212      823         16.51
+      189    6      682       117987      82968 x 166763        0.01%      167      515         16.79
+      190    6      436       122449      70419 x 138856        0.02%      113      323         13.19
+      191    6      165       125900      46988 x 96841         0.02%       51      114         10.31
+      192    6      132       127171      47012 x 97615         0.03%       46       86          8.76
+      193    6      179       128135      71501 x 139766        0.02%       53      126         13.19
+      194    6       40       130273      11982 x 21066         0.07%       14       26          2.31
+      195    6       18       130703      11395 x 18495         0.07%        8       10          1.99
+  largest matrix so far: 1997480 x 5582521 0.00% at deg 7 (round 112, 589 s (9.8 min))
+  live round: r196 deg 7, sel 28232 of 130991 pairs, matrix 4024993 x 10777112 0.00%  [stage: linalg]
+    nearest precedent (last completed deg-7 round r112): sel 22407 -> 1997480 x 5582521 0.00%, 589 s (9.8 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 111545 -> 130703 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 130991 (list still growing)
+      - degree plateau: max deg 7 unchanged for 137 rounds (1168 s (19.5 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+  NOTE: 1 unrecognized line(s) (of 232); first: line 20: 'Initial prime = 1266886877'
+  6    1457  103669  109038 x 212931      0.01%      263 new    1194 zero        20.02 | 111.84       
+  5      47  111367    2989 x 4162        0.18%        8 new      39 zero         0.44 | 4.04         
+  5      16  111444    1573 x 2136        0.30%        4 new      12 zero         0.24 | 1.97         
+  6    1035  111545   87590 x 164801      0.01%      212 new     823 zero        16.51 | 90.39        
+  6     682  117987   82968 x 166763      0.01%      167 new     515 zero        16.79 | 76.18        
+  6     436  122449   70419 x 138856      0.02%      113 new     323 zero        13.19 | 53.60        
+  6     165  125900   46988 x 96841       0.02%       51 new     114 zero        10.31 | 28.89        
+  6     132  127171   47012 x 97615       0.03%       46 new      86 zero         8.76 | 25.54        
+  6     179  128135   71501 x 139766      0.02%       53 new     126 zero        13.19 | 32.69        
+  6      40  130273   11982 x 21066       0.07%       14 new      26 zero         2.31 | 7.89         
+  6      18  130703   11395 x 18495       0.07%        8 new      10 zero         1.99 | 5.52         
+  7   28232  130991 4024993 x 10777112     0.00%     5199 new   23204 zeroPOLL_UTC=2026-09-05T22:56:36Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 22:56:37 up  1:39,  2 users,  load average: 8.05, 9.29, 6.93
+  10058   10036   10034    01:02:00  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034    01:02:00  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034    01:02:00  485 14.2 73965788 89046116 msolve     /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 22:56:37 UTC  (0.19 s since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 317 IN PROGRESS at deg 5 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 316 completed + 1 in progress; sum of round wall time 3713 s (61.9 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      309    4       43       124107        639 x 835           0.89%        3       40          0.30
+      310    4       43       123353       1166 x 1415          0.47%        5       38          0.44
+      311    4       23       123151       1165 x 1605          0.47%        3       20          0.33
+      312    4       20       122568       1037 x 1276          0.52%        4       16          0.36
+      313    5     1691       122505      30561 x 42649         0.03%      217     1477         13.24
+      314    5      972       125495      23158 x 33712         0.03%      140      832          9.26
+      315    5      612       126648      13224 x 18558         0.05%       92      520          6.00
+      316    5      478       127367      11353 x 16181         0.05%       54      424          3.93
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r317 deg 5, sel 313 of 128076 pairs  [stage: selected]
+    nearest precedent (last completed deg-5 round r316): sel 478 -> 11353 x 16181 0.05%, 3.93 s
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 124107 -> 127367 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 128076 (list still growing)
+      - degree plateau: max deg 7 unchanged for 258 rounds (3689 s (61.5 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 353); first: line 20: 'Initial prime = 1266886877'
+  5    1669  123164   33514 x 46535       0.02%      297 new    1374 zero        17.49 | 121.43       
+  4      72  125711    1549 x 2137        0.32%       12 new      60 zero         0.87 | 5.48         
+  4      49  124413     559 x 680         0.73%        8 new      41 zero         0.60 | 3.77         
+  4      43  124107     639 x 835         0.89%        3 new      40 zero         0.30 | 1.70         
+  4      43  123353    1166 x 1415        0.47%        5 new      38 zero         0.44 | 2.56         
+  4      23  123151    1165 x 1605        0.47%        3 new      20 zero         0.33 | 1.77         
+  4      20  122568    1037 x 1276        0.52%        4 new      16 zero         0.36 | 2.10         
+  5    1691  122505   30561 x 42649       0.03%      217 new    1477 zero        13.24 | 89.28        
+  5     972  125495   23158 x 33712       0.03%      140 new     832 zero         9.26 | 58.48        
+  5     612  126648   13224 x 18558       0.05%       92 new     520 zero         6.00 | 38.64        
+  5     478  127367   11353 x 16181       0.05%       54 new     424 zero         3.93 | 24.23        
+  5     313  128076POLL_UTC=2026-09-05T23:06:56Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 23:06:56 up  1:50,  2 users,  load average: 6.46, 4.88, 5.54
+  10058   10036   10034    01:12:19  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034    01:12:19  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034    01:12:19  478 18.5 96383012 148815028 msolve    /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:06:54 UTC  (1.87 s since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 408 IN PROGRESS at deg 5 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 407 completed + 1 in progress; sum of round wall time 4331 s (72.2 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      400    4       25       134636        503 x 675           1.61%        4       21          0.42
+      401    4       46       134397       1008 x 1366          0.63%        4       42          0.44
+      402    4       48       133752       1452 x 2265          0.47%        4       44          0.48
+      403    5      301       133514      21345 x 32955         0.04%       23      278          3.86
+      404    5       68       133553      13417 x 22543         0.07%       10       58          2.28
+      405    5       20       133550       3841 x 6383          0.21%        1       19          0.62
+      406    6    10573       133569     472399 x 838863        0.00%      890     9691        147.60
+      407    5      597       150133      26523 x 36195         0.03%      104      493          9.74
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r408 deg 5, sel 483 of 150744 pairs  [stage: selected]
+    nearest precedent (last completed deg-5 round r407): sel 597 -> 26523 x 36195 0.03%, 9.74 s
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 134636 -> 150133 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 150744 (list still growing)
+      - degree plateau: max deg 7 unchanged for 349 rounds (4307 s (71.8 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 444); first: line 20: 'Initial prime = 1266886877'
+  5      70  135398    4291 x 5738        0.17%       13 new      57 zero         1.35 | 6.40         
+  4      24  135262     352 x 399         1.32%        3 new      21 zero         0.31 | 1.73         
+  4      25  135228     316 x 379         1.15%        4 new      21 zero         0.40 | 2.18         
+  4      25  134636     503 x 675         1.61%        4 new      21 zero         0.42 | 2.20         
+  4      46  134397    1008 x 1366        0.63%        4 new      42 zero         0.44 | 2.21         
+  4      48  133752    1452 x 2265        0.47%        4 new      44 zero         0.48 | 2.28         
+  5     301  133514   21345 x 32955       0.04%       23 new     278 zero         3.86 | 12.94        
+  5      68  133553   13417 x 22543       0.07%       10 new      58 zero         2.28 | 6.60         
+  5      20  133550    3841 x 6383        0.21%        1 new      19 zero         0.62 | 1.47         
+  6   10573  133569  472399 x 838863      0.00%      890 new    9691 zero       147.60 | 524.35       
+  5     597  150133   26523 x 36195       0.03%      104 new     493 zero         9.74 | 47.69        
+  5     483  150744POLL_UTC=2026-09-05T23:17:22Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 23:17:23 up  2:00,  2 users,  load average: 2.99, 3.77, 4.70
+  10058   10036   10034    01:22:46  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034    01:22:46  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034    01:22:46  459 20.6 107256688 148814904 msolve   /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:16:56 UTC  (26.70 s since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 474 IN PROGRESS at deg 6 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 473 completed + 1 in progress; sum of round wall time 4933 s (82.2 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      466    5      286       189409      23857 x 34200         0.03%       51      235          7.41
+      467    5      207       189326      12820 x 18362         0.06%       36      171          4.87
+      468    5      133       188786       9530 x 14988         0.09%       23      110          3.35
+      469    5       67       188759       7196 x 9599          0.11%       12       55          2.09
+      470    5       65       188720       7346 x 10270         0.11%        8       57          1.80
+      471    5       22       188863        752 x 895           0.85%        3       19          0.43
+      472    5       22       188863       1657 x 3081          0.46%        3       19          0.66
+      473    5       21       188756       2271 x 4186          0.37%        2       19          0.60
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r474 deg 6, sel 4773 of 188823 pairs  [stage: selected]
+    nearest precedent (last completed deg-6 round r465): sel 4578 -> 398946 x 582407 0.00%, 125 s (2.1 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 189409 -> 188756 (only 1 consecutive drop(s) at tail)
+      - live round selected at pair-list size 188823 (list still growing)
+      - degree plateau: max deg 7 unchanged for 415 rounds (4908 s (81.8 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+  NOTE: 1 unrecognized line(s) (of 510); first: line 20: 'Initial prime = 1266886877'
+  5      24  177729     913 x 1527        0.35%        6 new      18 zero         0.75 | 3.36         
+  5      22  177621    1351 x 1739        0.44%        4 new      18 zero         0.54 | 2.39         
+  6    4578  177677  398946 x 582407      0.00%      598 new    3986 zero       125.17 | 363.19       
+  5     286  189409   23857 x 34200       0.03%       51 new     235 zero         7.41 | 27.24        
+  5     207  189326   12820 x 18362       0.06%       36 new     171 zero         4.87 | 18.81        
+  5     133  188786    9530 x 14988       0.09%       23 new     110 zero         3.35 | 12.60        
+  5      67  188759    7196 x 9599        0.11%       12 new      55 zero         2.09 | 7.09         
+  5      65  188720    7346 x 10270       0.11%        8 new      57 zero         1.80 | 5.32         
+  5      22  188863     752 x 895         0.85%        3 new      19 zero         0.43 | 1.85         
+  5      22  188863    1657 x 3081        0.46%        3 new      19 zero         0.66 | 2.15         
+  5      21  188756    2271 x 4186        0.37%        2 new      19 zero         0.60 | 1.78         
+  6    4773  188823POLL_UTC=2026-09-05T23:27:29Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 23:27:30 up  2:10,  2 users,  load average: 1.00, 1.35, 2.91
+  10058   10036   10034    01:32:53  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034    01:32:53  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034    01:32:53  439 22.1 115262456 148814912 msolve   /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:26:12 UTC  (77.98 s since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 537 IN PROGRESS at deg 6 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 536 completed + 1 in progress; sum of round wall time 5488 s (91.5 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      529    3       23       170398        266 x 307           1.19%        3       20          0.40
+      530    4      112       169988        887 x 1071          0.52%        7      105          0.77
+      531    4       42       169759        341 x 539           0.94%        0       42          0.13
+      532    5      223       169717       5946 x 12251         0.11%       15      209          2.60
+      533    5       91       169148       9232 x 15594         0.08%        5       86          2.07
+      534    6     4873       169318     400676 x 695919        0.00%      519     4360        142.77
+      535    5      110       179708      12435 x 18140         0.06%       15       95          2.98
+      536    5       38       179336       5363 x 6253          0.10%        4       34          0.91
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r537 deg 6, sel 2967 of 179219 pairs  [stage: selected]
+    nearest precedent (last completed deg-6 round r534): sel 4873 -> 400676 x 695919 0.00%, 143 s (2.4 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 170398 -> 179336 (only 1 consecutive drop(s) at tail)
+      - live round selected at pair-list size 179219 (list still growing)
+      - degree plateau: max deg 7 unchanged for 478 rounds (5464 s (91.1 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 573); first: line 20: 'Initial prime = 1266886877'
+  4      23  171765     303 x 682         1.58%        3 new      20 zero         0.43 | 1.87         
+  5     412  171719   18283 x 28615       0.04%       34 new     378 zero         5.34 | 18.66        
+  4      47  171136     845 x 1066        0.46%        5 new      42 zero         0.64 | 2.92         
+  3      23  170398     266 x 307         1.19%        3 new      20 zero         0.40 | 1.83         
+  4     112  169988     887 x 1071        0.52%        7 new     105 zero         0.77 | 3.75         
+  4      42  169759     341 x 539         0.94%        0 new      42 zero         0.13 | 0.46         
+  5     223  169717    5946 x 12251       0.11%       15 new     209 zero         2.60 | 8.95         
+  5      91  169148    9232 x 15594       0.08%        5 new      86 zero         2.07 | 4.95         
+  6    4873  169318  400676 x 695919      0.00%      519 new    4360 zero       142.77 | 355.81       
+  5     110  179708   12435 x 18140       0.06%       15 new      95 zero         2.98 | 9.13         
+  5      38  179336    5363 x 6253        0.10%        4 new      34 zero         0.91 | 2.73         
+  6    2967  179219POLL_UTC=2026-09-05T23:37:40Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 23:37:41 up  2:21,  2 users,  load average: 4.07, 2.67, 2.91
+  10058   10036   10034    01:43:04  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034    01:43:04  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034    01:43:04  423 23.7 123644068 148814976 msolve   /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:37:39 UTC  (1.88 s since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 607 IN PROGRESS at deg 5 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 606 completed + 1 in progress; sum of round wall time 6175 s (102.9 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      599    4       51       196663        523 x 642           0.82%        7       44          0.88
+      600    4       50       196436        313 x 611           1.41%        7       43          0.89
+      601    3       24       194840         88 x 83            2.46%        2       22          0.35
+      602    4       96       194572        494 x 639           0.55%        8       88          1.02
+      603    3       25       193172        101 x 104           2.36%        1       24          0.23
+      604    4       71       192779        881 x 1088          0.42%        4       67          0.58
+      605    4       22       192341        159 x 212           1.35%        1       21          0.21
+      606    5      409       192367      14332 x 23281         0.04%       46      365          6.52
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r607 deg 5, sel 216 of 188657 pairs  [stage: selected]
+    nearest precedent (last completed deg-5 round r606): sel 409 -> 14332 x 23281 0.04%, 6.52 s
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 196663 -> 192367 (only 0 consecutive drop(s) at tail)
+      - live round selected at pair-list size 188657 (list still growing)
+      - degree plateau: max deg 7 unchanged for 548 rounds (6151 s (102.5 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 643); first: line 20: 'Initial prime = 1266886877'
+  5     290  199248   13810 x 20759       0.06%       35 new     255 zero         5.24 | 19.32        
+  4      26  197876     148 x 210         1.72%        4 new      22 zero         0.61 | 2.53         
+  4      51  197338     671 x 1111        0.68%        6 new      45 zero         0.84 | 3.48         
+  4      51  196663     523 x 642         0.82%        7 new      44 zero         0.88 | 3.88         
+  4      50  196436     313 x 611         1.41%        7 new      43 zero         0.89 | 3.92         
+  3      24  194840      88 x 83          2.46%        2 new      22 zero         0.35 | 1.44         
+  4      96  194572     494 x 639         0.55%        8 new      88 zero         1.02 | 4.45         
+  3      25  193172     101 x 104         2.36%        1 new      24 zero         0.23 | 0.93         
+  4      71  192779     881 x 1088        0.42%        4 new      67 zero         0.58 | 2.48         
+  4      22  192341     159 x 212         1.35%        1 new      21 zero         0.21 | 0.91         
+  5     409  192367   14332 x 23281       0.04%       46 new     365 zero         6.52 | 24.67        
+  5     216  188657POLL_UTC=2026-09-05T23:45:02Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 23:45:03 up  2:28,  2 users,  load average: 1.00, 1.37, 2.17
+  10058   10036   10034    01:50:26  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034    01:50:26  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034    01:50:26  408 24.3 126502316 148814908 msolve   /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:44:33 UTC  (29.74 s since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 655 IN PROGRESS at deg 6 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 654 completed + 1 in progress; sum of round wall time 6589 s (109.8 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      647    6      570       191342     246340 x 348119        0.01%       77      493         49.88
+      648    6      427       193211     247171 x 347659        0.00%       53      374         48.42
+      649    5       24       194961       2896 x 3825          0.25%        4       20          0.77
+      650    5       49       194860       6089 x 8943          0.11%        9       40          1.85
+      651    5       48       194477       4619 x 6538          0.12%        7       41          1.29
+      652    5       24       194053       1698 x 2300          0.29%        4       20          0.67
+      653    5       44       193601      10496 x 14969         0.07%        6       38          1.88
+      654    5       22       193483       4271 x 5738          0.18%        3       19          0.80
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r655 deg 6, sel 633 of 193529 pairs  [stage: selected]
+    nearest precedent (last completed deg-6 round r648): sel 427 -> 247171 x 347659 0.00%, 48.42 s
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - live round selected at pair-list size 193529 (list still growing)
+      - degree plateau: max deg 7 unchanged for 596 rounds (6565 s (109.4 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+  NOTE: 1 unrecognized line(s) (of 691); first: line 20: 'Initial prime = 1266886877'
+  5      20  191151     222 x 207         1.19%        3 new      17 zero         0.43 | 1.87         
+  5      21  191226     644 x 651         0.72%        4 new      17 zero         0.56 | 2.37         
+  5      19  191308    1154 x 1487        0.38%        2 new      17 zero         0.40 | 1.51         
+  6     570  191342  246340 x 348119      0.01%       77 new     493 zero        49.88 | 83.27        
+  6     427  193211  247171 x 347659      0.00%       53 new     374 zero        48.42 | 72.57        
+  5      24  194961    2896 x 3825        0.25%        4 new      20 zero         0.77 | 2.70         
+  5      49  194860    6089 x 8943        0.11%        9 new      40 zero         1.85 | 5.77         
+  5      48  194477    4619 x 6538        0.12%        7 new      41 zero         1.29 | 4.46         
+  5      24  194053    1698 x 2300        0.29%        4 new      20 zero         0.67 | 2.61         
+  5      44  193601   10496 x 14969       0.07%        6 new      38 zero         1.88 | 4.83         
+  5      22  193483    4271 x 5738        0.18%        3 new      19 zero         0.80 | 2.41         
+  6     633  193529POLL_UTC=2026-09-05T23:55:28Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 23:55:28 up  2:38,  2 users,  load average: 1.00, 1.05, 1.60
+  10058   10036   10034    02:00:51  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034    02:00:51  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034    02:00:51  384 24.7 128564068 148984180 msolve   /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:49:25 UTC  (363 s (6.1 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 679 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 678 completed + 1 in progress; sum of round wall time 6882 s (114.7 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      671    4       20       193654        215 x 226           1.48%        2       18          0.36
+      672    5      121       193348       9549 x 12864         0.07%        5      116          1.57
+      673    5       19       192796        803 x 848           0.66%        1       18          0.25
+      674    6      447       192788     265196 x 380450        0.01%       71      376         54.20
+      675    5       47       193503      12670 x 16813         0.07%        7       40          2.22
+      676    6      412       192994     232304 x 332172        0.01%       38      374         44.99
+      677    5       19       193792       5222 x 7170          0.12%        0       19          0.64
+      678    6       63       193773     114041 x 174650        0.01%        8       55         22.03
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r679 deg 7, sel 42152 of 194322 pairs  [stage: selected]
+    nearest precedent (last completed deg-7 round r196): sel 28232 -> 4024993 x 10777112 0.00%, 1941 s (32.3 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 193654 -> 193773 (only 1 consecutive drop(s) at tail)
+      - live round selected at pair-list size 194322 (list still growing)
+      - degree plateau: max deg 7 unchanged for 620 rounds (6857 s (114.3 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 715); first: line 20: 'Initial prime = 1266886877'
+  4      20  195059      80 x 62          3.04%        2 new      18 zero         0.35 | 1.45         
+  4      21  194963      87 x 71          2.59%        3 new      18 zero         0.46 | 1.92         
+  4      22  194532     165 x 176         1.71%        4 new      18 zero         0.60 | 2.44         
+  4      20  193654     215 x 226         1.48%        2 new      18 zero         0.36 | 1.43         
+  5     121  193348    9549 x 12864       0.07%        5 new     116 zero         1.57 | 4.08         
+  5      19  192796     803 x 848         0.66%        1 new      18 zero         0.25 | 0.94         
+  6     447  192788  265196 x 380450      0.01%       71 new     376 zero        54.20 | 84.64        
+  5      47  193503   12670 x 16813       0.07%        7 new      40 zero         2.22 | 5.47         
+  6     412  192994  232304 x 332172      0.01%       38 new     374 zero        44.99 | 64.03        
+  5      19  193792    5222 x 7170        0.12%        0 new      19 zero         0.64 | 1.04         
+  6      63  193773  114041 x 174650      0.01%        8 new      55 zero        22.03 | 26.47        
+  7   42152  194322POLL_UTC=2026-09-06T00:05:43Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 00:05:43 up  2:49,  2 users,  load average: 1.00, 1.00, 1.29
+  10058   10036   10034    02:11:06  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034    02:11:06  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034    02:11:06  362 24.7 128755940 148984180 msolve   /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:49:25 UTC  (978 s (16.3 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 679 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 678 completed + 1 in progress; sum of round wall time 6882 s (114.7 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      671    4       20       193654        215 x 226           1.48%        2       18          0.36
+      672    5      121       193348       9549 x 12864         0.07%        5      116          1.57
+      673    5       19       192796        803 x 848           0.66%        1       18          0.25
+      674    6      447       192788     265196 x 380450        0.01%       71      376         54.20
+      675    5       47       193503      12670 x 16813         0.07%        7       40          2.22
+      676    6      412       192994     232304 x 332172        0.01%       38      374         44.99
+      677    5       19       193792       5222 x 7170          0.12%        0       19          0.64
+      678    6       63       193773     114041 x 174650        0.01%        8       55         22.03
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r679 deg 7, sel 42152 of 194322 pairs  [stage: selected]
+    nearest precedent (last completed deg-7 round r196): sel 28232 -> 4024993 x 10777112 0.00%, 1941 s (32.3 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 193654 -> 193773 (only 1 consecutive drop(s) at tail)
+      - live round selected at pair-list size 194322 (list still growing)
+      - degree plateau: max deg 7 unchanged for 620 rounds (6857 s (114.3 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 715); first: line 20: 'Initial prime = 1266886877'
+  4      20  195059      80 x 62          3.04%        2 new      18 zero         0.35 | 1.45         
+  4      21  194963      87 x 71          2.59%        3 new      18 zero         0.46 | 1.92         
+  4      22  194532     165 x 176         1.71%        4 new      18 zero         0.60 | 2.44         
+  4      20  193654     215 x 226         1.48%        2 new      18 zero         0.36 | 1.43         
+  5     121  193348    9549 x 12864       0.07%        5 new     116 zero         1.57 | 4.08         
+  5      19  192796     803 x 848         0.66%        1 new      18 zero         0.25 | 0.94         
+  6     447  192788  265196 x 380450      0.01%       71 new     376 zero        54.20 | 84.64        
+  5      47  193503   12670 x 16813       0.07%        7 new      40 zero         2.22 | 5.47         
+  6     412  192994  232304 x 332172      0.01%       38 new     374 zero        44.99 | 64.03        
+  5      19  193792    5222 x 7170        0.12%        0 new      19 zero         0.64 | 1.04         
+  6      63  193773  114041 x 174650      0.01%        8 new      55 zero        22.03 | 26.47        
+  7   42152  194322POLL_UTC=2026-09-06T00:15:36Z
+--- exact_q tail:
+VERDICT: RUNNING: 0
+STATE=RUNNING
+ 00:15:37 up  2:58,  2 users,  load average: 1.00, 1.00, 1.13
+  10058   10036   10034    02:21:00  0.0  0.0  1652   2720 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.time timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10059   10058   10034    02:21:00  0.0  0.0  2192   6148 timeout         timeout --signal=TERM --kill-after=30s 9000s stdbuf -oL -eL /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+  10060   10059   10034    02:21:00  343 24.7 128888980 148984180 msolve   /usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:49:25 UTC  (1572 s (26.2 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 679 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 678 completed + 1 in progress; sum of round wall time 6882 s (114.7 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      671    4       20       193654        215 x 226           1.48%        2       18          0.36
+      672    5      121       193348       9549 x 12864         0.07%        5      116          1.57
+      673    5       19       192796        803 x 848           0.66%        1       18          0.25
+      674    6      447       192788     265196 x 380450        0.01%       71      376         54.20
+      675    5       47       193503      12670 x 16813         0.07%        7       40          2.22
+      676    6      412       192994     232304 x 332172        0.01%       38      374         44.99
+      677    5       19       193792       5222 x 7170          0.12%        0       19          0.64
+      678    6       63       193773     114041 x 174650        0.01%        8       55         22.03
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r679 deg 7, sel 42152 of 194322 pairs  [stage: selected]
+    nearest precedent (last completed deg-7 round r196): sel 28232 -> 4024993 x 10777112 0.00%, 1941 s (32.3 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 193654 -> 193773 (only 1 consecutive drop(s) at tail)
+      - live round selected at pair-list size 194322 (list still growing)
+      - degree plateau: max deg 7 unchanged for 620 rounds (6857 s (114.3 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 715); first: line 20: 'Initial prime = 1266886877'
+  4      20  195059      80 x 62          3.04%        2 new      18 zero         0.35 | 1.45         
+  4      21  194963      87 x 71          2.59%        3 new      18 zero         0.46 | 1.92         
+  4      22  194532     165 x 176         1.71%        4 new      18 zero         0.60 | 2.44         
+  4      20  193654     215 x 226         1.48%        2 new      18 zero         0.36 | 1.43         
+  5     121  193348    9549 x 12864       0.07%        5 new     116 zero         1.57 | 4.08         
+  5      19  192796     803 x 848         0.66%        1 new      18 zero         0.25 | 0.94         
+  6     447  192788  265196 x 380450      0.01%       71 new     376 zero        54.20 | 84.64        
+  5      47  193503   12670 x 16813       0.07%        7 new      40 zero         2.22 | 5.47         
+  6     412  192994  232304 x 332172      0.01%       38 new     374 zero        44.99 | 64.03        
+  5      19  193792    5222 x 7170        0.12%        0 new      19 zero         0.64 | 1.04         
+  6      63  193773  114041 x 174650      0.01%        8 new      55 zero        22.03 | 26.47        
+  7   42152  194322POLL_UTC=2026-09-06T00:25:00Z
+--- exact_q tail:
+EXACT_Q_DONE rc=124
+VERDICT: RUNNING: 0
+STATE=DONE
+RC=124
+ 00:25:01 up  3:08,  1 user,  load average: 0.72, 0.93, 1.04
+LANE STATUS  /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.v2.log   [INTERNAL TOOLING, UNREVIEWED]
+  log mtime : 2026-09-05 23:49:25 UTC  (2135 s (35.6 min) since last telemetry write; trustworthy only on-box or after scp -p)
+  system    : 97 vars / 330 eqs, char 0, threads 64, order DRL
+  phase     : F4 round 679 IN PROGRESS at deg 7 (pairs selected; matrix dims not yet printed -> symbolic preprocessing / matrix construction)
+  rounds    : 678 completed + 1 in progress; sum of round wall time 6882 s (114.7 min) (time(rd) includes symbolic prep, so this approximates elapsed)
+  deg ladder: d3@r1 d4@r2 d5@r11 d6@r26 d7@r59   (first round reaching each new max degree)
+  trajectory (last 8 completed rounds):
+      rnd  deg      sel        pairs                 matrix    density      new     zero        t_real
+      671    4       20       193654        215 x 226           1.48%        2       18          0.36
+      672    5      121       193348       9549 x 12864         0.07%        5      116          1.57
+      673    5       19       192796        803 x 848           0.66%        1       18          0.25
+      674    6      447       192788     265196 x 380450        0.01%       71      376         54.20
+      675    5       47       193503      12670 x 16813         0.07%        7       40          2.22
+      676    6      412       192994     232304 x 332172        0.01%       38      374         44.99
+      677    5       19       193792       5222 x 7170          0.12%        0       19          0.64
+      678    6       63       193773     114041 x 174650        0.01%        8       55         22.03
+  largest matrix so far: 4024993 x 10777112 0.00% at deg 7 (round 196, 1941 s (32.3 min))
+  live round: r679 deg 7, sel 42152 of 194322 pairs  [stage: selected]
+    nearest precedent (last completed deg-7 round r196): sel 28232 -> 4024993 x 10777112 0.00%, 1941 s (32.3 min)
+  progress  : NO-ETA-POSSIBLE -- trajectory does not support extrapolation. Refusing to fabricate one.
+      - pair list not draining: last 8 completed rounds go 193654 -> 193773 (only 1 consecutive drop(s) at tail)
+      - live round selected at pair-list size 194322 (list still growing)
+      - degree plateau: max deg 7 unchanged for 620 rounds (6857 s (114.3 min) of round time) -- new-degree jumps remain possible; no monotone degree signal
+      - matrix sizes still trending up over the window
+  NOTE: 1 unrecognized line(s) (of 715); first: line 20: 'Initial prime = 1266886877'
+  4      20  195059      80 x 62          3.04%        2 new      18 zero         0.35 | 1.45         
+  4      21  194963      87 x 71          2.59%        3 new      18 zero         0.46 | 1.92         
+  4      22  194532     165 x 176         1.71%        4 new      18 zero         0.60 | 2.44         
+  4      20  193654     215 x 226         1.48%        2 new      18 zero         0.36 | 1.43         
+  5     121  193348    9549 x 12864       0.07%        5 new     116 zero         1.57 | 4.08         
+  5      19  192796     803 x 848         0.66%        1 new      18 zero         0.25 | 0.94         
+  6     447  192788  265196 x 380450      0.01%       71 new     376 zero        54.20 | 84.64        
+  5      47  193503   12670 x 16813       0.07%        7 new      40 zero         2.22 | 5.47         
+  6     412  192994  232304 x 332172      0.01%       38 new     374 zero        44.99 | 64.03        
+  5      19  193792    5222 x 7170        0.12%        0 new      19 zero         0.64 | 1.04         
+  6      63  193773  114041 x 174650      0.01%        8 new      55 zero        22.03 | 26.47        
+  7   42152  194322

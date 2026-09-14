@@ -1,0 +1,28 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done at 03:50:08 UTC, inside the reserve. Nothing further is needed.
+
+**Verdict: no blocking defect. Qualified GENERIC runtime acceptance of ROOT execution e5765acb is CONFIRMED, synthetic-only.**
+
+**What I did**
+
+- Hashed all 15 read-only snapshots before reading; every digest matched the task list. Both destinations were absent before I wrote.
+- Read whole: charged report, 17zp gate, ROOT registration, receipt, both telemetry files, reconciliation, preflight, batch, manifest, live principals, terminal record, stop record. Registration and caller were read at the interface level with stdlib JSON metadata and grep only. No code ran, no fixture body was opened.
+- Wrote the report at `xmodel/f10-minimum-pivot-generic-runtime-gate-fable5-20260910.md` with one standalone body-end marker, no Seal, no charge basis line. The box directory holds the generated pin file, a cross-check summary, and the hashes of my own outputs.
+
+**What reconciled**
+
+- All 20 sidecar hashes and sizes match the 100-path remote-owned manifest, and that manifest is byte-identical to the block inside the terminal record. The terminal record shows 112 OK rehash lines.
+- Receipt order, branches, counts, reasons, schema and engine/harness/solver/authority/host binding match the report and the manifest digests exactly. Receipt size is 6524 bytes.
+- All 18 principals, 9 groups, one PID namespace, literal argv caps, and start ticks (2330 at 19443, 2232 at 19385, descendant 2246 in group 2232) agree across live principals, batch records and telemetry.
+- Chronology is strictly increasing from launch through stop, with every record returning before its cutoff. The backup timer went inactive 8.7 ms after all three instances read stopped.
+- The final cgroup "No such device" race is directly attested in live principals and did not lose a principal.
+
+**Gaps, none blocking**
+
+- The AWS, SSH, prestage, rg exit-127, pull-match and stop-request timestamps are attested only by the report text. They are consistent with the registration and the charged stop record, but not among the 15 charged files.
+- The per-operation authority, prelaunch and dispatch files are hash-listed but uncharged. Their VERIFIED status is ROOT's reconciliation plus the accepted caller premise, not my re-read.
+
+**What follows**
+
+A fresh, separately ROOT-registered actual attempt with the actual caller ae3df9a9 is eligible for selection under new registration, paths and clocks with unchanged caps. That is not automatic execution or acceptance, and the synthetic pass does not discharge the actual 217/1638/source equations.
+DIVERT path=xmodel/f10-minimum-pivot-generic-runtime-gate-fable5-20260910.md status=CLEAN body_bytes=11323 body_sha256=c706c364fd9dee712be7e201e6a02f8ce9d19586ca517761b1d71d469cfedbbb

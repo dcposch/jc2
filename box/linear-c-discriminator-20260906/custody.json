@@ -1,0 +1,227 @@
+{
+  "schema": "JC2_LINEAR_C_FILTERED_CUSTODY/v1",
+  "status": "TERMINAL_ROOT_CUSTODY",
+  "snapshot_utc": "2026-09-06T10:47:00Z",
+  "instance": {
+    "id": "i-0da0cebfc97c9fd54",
+    "ip": "172.30.0.56",
+    "type": "r7i.8xlarge",
+    "owner": "/root",
+    "ownership_changed_by_this_task": false,
+    "retained_running": true
+  },
+  "task": {
+    "producer": "/root/nonemptiness_certificate",
+    "scratch": "/home/ubuntu/linear-c-discriminator-20260906",
+    "source_family": "(99,66),delta2",
+    "all_writers_done": true,
+    "solver_launched": false,
+    "dense_substitution_performed": false,
+    "blind_round_reports_read": false,
+    "live_Fable_gate_read": false
+  },
+  "results": {
+    "source_C_dimension": 192,
+    "universal_constant_pivots": 189,
+    "selected_minor_determinant": "1",
+    "remaining_C_degrees": [
+      22,
+      11,
+      0
+    ],
+    "unused_additive_constant_removed": true,
+    "nonconstant_C_parameters_after_this_reduction": 2,
+    "maximum_constant_pivot_rank_claim": false,
+    "highest_face_parametrization": "Field points and reduced locus only; dual-number counterexample excludes a scheme isomorphism.",
+    "properness_or_counterexample_claim": false
+  },
+  "no_live_edit_promise": "Producer will not modify any listed artifact after terminal publication. Root may authorize read-only independent review and a fresh-scratch replay; never overwrite original pilot or original C-reduction artifact paths.",
+  "machine_rules": "Do not terminate or retag the root-owned worker. This task did not touch other writers, Fable scratch, blind reports, active launchers, or shared ledgers.",
+  "review_caveat": "Two exact implementations are producer checks, not different-model promotion. Full reduced residual polynomials were NOT expanded; preserve every remaining J coefficient and inverse_J.",
+  "jobs": [
+    {
+      "name": "filtered_basis.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 34359738368,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 600
+      },
+      "pid": 37131,
+      "pgid": 37131,
+      "utc_start": "2026-09-06T10:36:10.627515Z",
+      "utc_end": "2026-09-06T10:36:11.044461Z",
+      "wall_elapsed_seconds": 0.4169531,
+      "max_observed_group_rss_bytes": 34500608,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "reconstruction.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 34359738368,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 600
+      },
+      "pid": 37594,
+      "pgid": 37594,
+      "utc_start": "2026-09-06T10:44:26.776352Z",
+      "utc_end": "2026-09-06T10:44:26.959710Z",
+      "wall_elapsed_seconds": 0.183362485,
+      "max_observed_group_rss_bytes": 36503552,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "verify_filtered.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 34359738368,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 600
+      },
+      "pid": 37372,
+      "pgid": 37372,
+      "utc_start": "2026-09-06T10:41:14.039198Z",
+      "utc_end": "2026-09-06T10:41:16.685458Z",
+      "wall_elapsed_seconds": 2.64626612,
+      "max_observed_group_rss_bytes": 114323456,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/delta2_stage8.strongest.json",
+      "bytes": 416793,
+      "sha256": "778eda933ee9b2acbad20f6dc862c25db94776cb25ffd5782646427a3b63e1ea"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/filtered_basis.py",
+      "bytes": 11426,
+      "sha256": "f3d702dc7b71f02e3fa235347a47e09b2602d5b2b13d561d7f30e1fc738c60dc"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/filtered_basis.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/filtered_basis.stdout",
+      "bytes": 3180,
+      "sha256": "60045b3d4f978a01d980ef7caae8897e5d8c85f9df1cf286b469101a3d4db177"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/filtered_basis.telemetry.json",
+      "bytes": 2095,
+      "sha256": "091aa089720409e27c514779e9d9e194e11db2ef4af8c4712a6cb7ce94bfb149"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/filtered_basis_certificate.json",
+      "bytes": 1429336,
+      "sha256": "c2b5965278e0fa30f0490b7f5a019434abe5291e50b748d3a3c0795c8175f906"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/filtered_basis_summary.json",
+      "bytes": 4476,
+      "sha256": "fa2cbbaf1018e6508ca41a69e2efbcf0e64bbce747e6559c7aec6d87c97bf6a1"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/reconstruction.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/reconstruction.stdout",
+      "bytes": 1149,
+      "sha256": "9252fa8762318ba3226db5b1fe5277f79eb06e2cf71fe1609892167a64b28939"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/reconstruction.telemetry.json",
+      "bytes": 2097,
+      "sha256": "834cf09229bf8247a10c36367d7b2a7d5de7b38e1dc50a36c6116cb1d0b63546"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/reconstruction_dag.py",
+      "bytes": 6203,
+      "sha256": "c82387f46627440f29bce89a86ff191dff1cbee601660075e02247296f2a33f1"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/reconstruction_graph.json",
+      "bytes": 1613277,
+      "sha256": "8fef3537678e8eeb549701fd994d76ba6c96a59b567ac1dc76a54701271384d6"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/reconstruction_summary.json",
+      "bytes": 1209,
+      "sha256": "e71f35b93050f0bdd461e290b611f2e9df6e4fc86528d5662682ca0836c97955"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/run_capped.py",
+      "bytes": 42671,
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/verify_filtered.py",
+      "bytes": 7528,
+      "sha256": "522349c50e2773f154699d7b976883644e119078a060a77ea42996765f087e9c"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/verify_filtered.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/verify_filtered.stdout",
+      "bytes": 1096,
+      "sha256": "df18ca251fa0e1e644cf6ae7195cfb73670a900644e0422291a9e96927e70fb9"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/verify_filtered.telemetry.json",
+      "bytes": 2100,
+      "sha256": "d8e5f0c887558d42dacc08e2eed5b8747baeb66b69359102b71091d2ce9bcddb"
+    },
+    {
+      "path": "/home/ubuntu/linear-c-discriminator-20260906/verify_filtered_summary.json",
+      "bytes": 1144,
+      "sha256": "36921b4b08a6de7648457bd2695f764c3b0f2c2f16c3d2180cacf9ecd158a511"
+    }
+  ]
+}

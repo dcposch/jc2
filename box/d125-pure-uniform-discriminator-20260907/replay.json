@@ -1,0 +1,77 @@
+{
+  "caps": "30wall25CPU512MiB each",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "face35182eb0e5570693e705289e57bd1a1a20a721808cfebe52850251ed00ad"
+    },
+    {
+      "mutation": "--mutate-remove-intermediate",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "37535a29208e47a82d03f14019ad4e30ef72efc3ae2d9c284a52ed437c6524c5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-sixth-factor",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "37535a29208e47a82d03f14019ad4e30ef72efc3ae2d9c284a52ed437c6524c5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-alphaG",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "825e22101d38cd65432cb51119d28e410cf9e4dc28a591bdb8366c5de73d7e78",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-unit-object",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "39fe4316aa38cef00e938375e4de55ddd9dd66cbbd2230f1228836841582b1a3",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "face35182eb0e5570693e705289e57bd1a1a20a721808cfebe52850251ed00ad"
+    },
+    {
+      "mutation": "--mutate-remove-intermediate",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "37535a29208e47a82d03f14019ad4e30ef72efc3ae2d9c284a52ed437c6524c5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-sixth-factor",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "37535a29208e47a82d03f14019ad4e30ef72efc3ae2d9c284a52ed437c6524c5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-alphaG",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "825e22101d38cd65432cb51119d28e410cf9e4dc28a591bdb8366c5de73d7e78",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-unit-object",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "39fe4316aa38cef00e938375e4de55ddd9dd66cbbd2230f1228836841582b1a3",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "writers_finished": true
+}

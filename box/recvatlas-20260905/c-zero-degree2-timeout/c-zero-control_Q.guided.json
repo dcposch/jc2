@@ -1,0 +1,46 @@
+{
+  "characteristic": 0,
+  "command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "Singular",
+    "--cpus=1",
+    "--threads=1",
+    "--flint-threads=1",
+    "--no-rc",
+    "-q",
+    "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.sing"
+  ],
+  "elapsed_seconds": 60.008662,
+  "label": "c-zero-control",
+  "main": {
+    "accepted": false,
+    "basis_size": null,
+    "dimension": null,
+    "lead_dim": null,
+    "lead_vdim": null,
+    "missing_markers": [
+      "NF_ALL_ZERO",
+      "UNIT",
+      "DIM",
+      "BASIS_SIZE",
+      "LEAD_DIM",
+      "ACCEPT",
+      "NF_ZERO"
+    ],
+    "nf_all_zero": false,
+    "unit": false,
+    "vdim": null,
+    "vdim_matches_predicted": null
+  },
+  "perturbed": null,
+  "returncode": 1,
+  "script": "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.sing",
+  "script_sha256": "6aba02e0cdf6fcd8a7cf43aaca5473d6395d4213618f27cdce72e5dc0a68d49c",
+  "stderr": "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.err",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "/home/ubuntu/jc2/box/recvatlas-20260905/c-zero-control/c-zero-control_Q.out",
+  "stdout_sha256": "cac579904d7ad1eca9f86459667fee1034cd3aaecbe8850083b58d83005c1c47",
+  "timed_out": true
+}

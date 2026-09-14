@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "field": "Q[beta,a,b,U1,U4,U7,U10,V0,V3,V6,V9]",
+  "h3_face": "a*pi**5 + b*pi**2 + pi**8",
+  "h2_face": "(-beta + pi**3)**8",
+  "C2_normalized_floor": 64,
+  "C2_face_q": [
+    1,
+    4,
+    7,
+    10
+  ],
+  "C3_normalized_floor": 96,
+  "C3_face_q": [
+    0,
+    3,
+    6,
+    9
+  ],
+  "pi21_row": "-3*a - 8*beta",
+  "forced_a": "-8*beta/3",
+  "old_face_negative_control": -8,
+  "correct_a_positive_control": 0,
+  "pi18_row_after_forced_a": "-U10 - 3*b + 20*beta**2/3",
+  "b_status": "free at this coefficient comparison",
+  "old_chart_t4_C2_quotient": "-8*z**10 + 24*z**9 - 48*z**8 + 80*z**7 - 120*z**6 + 168*z**5 - 224*z**4 + 288*z**3 - 360*z**2 + 440*z - 528",
+  "old_chart_t4_C3_remainder": "624*z**10 + 1144*z**9 + 528*z**8",
+  "quotient_weight_range": [
+    12,
+    52
+  ],
+  "interpretation": "Euclidean engine output chart is internally algebraic, but old h3 face requires a C2 t^4 term below its necessary weight64 floor."
+}

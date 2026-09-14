@@ -1,0 +1,10 @@
+# Fable gate replay commands (scratch subtree owned only by this reviewer)
+SCRATCH=/tmp/jc2-gate-fable5-scratch-1772257
+mkdir -p $SCRATCH/box/d125-pure-low-alpha-discriminator-20260907 $SCRATCH/box/d125-zero-k-deformation-discriminator-20260907
+cp /tmp/jc2-lane.TpVOVO/inputs/check.py $SCRATCH/box/d125-pure-low-alpha-discriminator-20260907/check.py
+cp /tmp/jc2-lane.TpVOVO/inputs/zero-k-factor-helper.py $SCRATCH/box/d125-zero-k-deformation-discriminator-20260907/check.py
+# each child: ( ulimit -t 25; ulimit -v 524288; timeout 30 /usr/bin/python3 -B [-O] box/d125-pure-low-alpha-discriminator-20260907/check.py [MUTATION] )
+# modes: '' --mutate-delta-sign --mutate-intermediate --mutate-omit-alphaG --mutate-drop-scalar-cubic --mutate-constant-C ; each normal and -O
+# then: /usr/bin/python3 -B .../check.py --record   (fresh scratch only; creates final-*.json there)
+# tiny control: ( ulimit -t 25; ulimit -v 524288; timeout 30 /usr/bin/python3 -B /home/ubuntu/jc2/box/d125-pure-low-alpha-gate-fable5-20260907/low-jet-control.py )
+# python: Python 3.12.3

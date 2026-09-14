@@ -1,0 +1,77 @@
+{
+ "caps": "30wall/25CPU/512MiB",
+ "runs": [
+  {
+   "first_failure": null,
+   "mutation": null,
+   "optimized": false,
+   "returncode": 0,
+   "stdout_sha256": "dc29df2cd4756f0fb9d8e71df24d91ae85e7aacf39201286c997bc1d428bdc68"
+  },
+  {
+   "first_failure": "FAIL phi(q) complete negative part = v^-1",
+   "mutation": "--mutate-q",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "99ac16d0ef551bdc27a0854058c7dd8603d568313aab43e7e2926f34b16fc665"
+  },
+  {
+   "first_failure": "FAIL U4 low jet == g^2 p exactly ([p]=[gp^2]=[p^3]=0)",
+   "mutation": "--mutate-U4",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "ec54251a3491f23e891228627e7db947a27ba3d7009b9a2d32e6b9501a987a02"
+  },
+  {
+   "first_failure": "FAIL displayed B table == (1+eps)^(5/3) through s^6 (R^5 eps^n bookkeeping: R^3C,R^2D,R^2U,RC^2,CD,CU,D^2/R,C^3/R)",
+   "mutation": "--mutate-CU",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "4f9d444f269cfae7c71152b7709f6b306ed17be2694491ab35b957984765c2e4"
+  },
+  {
+   "first_failure": "FAIL [gp]C=-b^2 and ([gp]C)^2=b^4=3",
+   "mutation": "--mutate-b4",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "a3e50936ae78b5cefafc145e5310db6b145d06a86c3312eb5e68686894640adf"
+  },
+  {
+   "first_failure": null,
+   "mutation": null,
+   "optimized": true,
+   "returncode": 0,
+   "stdout_sha256": "dc29df2cd4756f0fb9d8e71df24d91ae85e7aacf39201286c997bc1d428bdc68"
+  },
+  {
+   "first_failure": "FAIL phi(q) complete negative part = v^-1",
+   "mutation": "--mutate-q",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "99ac16d0ef551bdc27a0854058c7dd8603d568313aab43e7e2926f34b16fc665"
+  },
+  {
+   "first_failure": "FAIL U4 low jet == g^2 p exactly ([p]=[gp^2]=[p^3]=0)",
+   "mutation": "--mutate-U4",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "ec54251a3491f23e891228627e7db947a27ba3d7009b9a2d32e6b9501a987a02"
+  },
+  {
+   "first_failure": "FAIL displayed B table == (1+eps)^(5/3) through s^6 (R^5 eps^n bookkeeping: R^3C,R^2D,R^2U,RC^2,CD,CU,D^2/R,C^3/R)",
+   "mutation": "--mutate-CU",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "4f9d444f269cfae7c71152b7709f6b306ed17be2694491ab35b957984765c2e4"
+  },
+  {
+   "first_failure": "FAIL [gp]C=-b^2 and ([gp]C)^2=b^4=3",
+   "mutation": "--mutate-b4",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "a3e50936ae78b5cefafc145e5310db6b145d06a86c3312eb5e68686894640adf"
+  }
+ ],
+ "status": "PASS",
+ "wall_seconds": 1.2
+}

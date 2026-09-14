@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2-f10-quotient-generic-r3-20260910/probe.py", line 6, in <module>
+    authorize(sys.argv[1], __file__, "check")
+  File "/home/ubuntu/jc2-f10-quotient-generic-r3-20260910/execution_gate.py", line 43, in authorize
+    raise RuntimeError("full parent argv differs from registered capped runner")
+RuntimeError: full parent argv differs from registered capped runner

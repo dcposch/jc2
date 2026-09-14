@@ -1,0 +1,358 @@
+{
+  "bytecode_disabled": true,
+  "hybrid_pinned_alias": [
+    "/tmp/jc2-lane.pPWk5L/inputs/client.py",
+    "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/client.py"
+  ],
+  "m2_adapted_code_sha256": "bafe8825d24039f5a44f93b8f25c338a1480c81a71065d5f8416f56197e04c2f",
+  "m2_scope_replacements": [
+    [
+      "Rtoy=add(g,power(p,2),mul(g,p));",
+      "Rtoy=g;"
+    ],
+    [
+      "all(e[1]>=0 for e in subst(mul(R,Rt),phig,phip))",
+      "all(e[1]>=0 for e in subst(Rt,phig,phip))"
+    ]
+  ],
+  "pins": {
+    "FALLACY-v2.md": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5",
+    "box/d125-generic-ramification-discriminator-20260907/check.py": "77e94ad90b912b352e7a95feef7e99c21ec5f00156ecb948c4be01a01b1eb472",
+    "box/d125-generic-ramification-discriminator-20260907/registration.json": "72fb2648447d9d6cacdbeac080a0e06356fa7d9443692f6e8ebf0bef4f2fc40d",
+    "box/d125-generic-ramification-discriminator-20260907/replay.json": "ebdfa33fbe035d4045c15209684b456582b5c9af33e1b3dcf6e7f76f21c14f08",
+    "box/d125-generic-ramification-discriminator-20260907/seal_custody.py": "220c06ee12ddde599c9f4252cd3767711a28271207ee7424f487229f7c0a27cc",
+    "box/d125-generic-ramification-discriminator-20260907/witness-O.json": "24a90700ac30b9af4823891a246287abd9c7826485a7795c3d1dcacda3168de1",
+    "box/d125-generic-ramification-discriminator-20260907/witness.json": "24a90700ac30b9af4823891a246287abd9c7826485a7795c3d1dcacda3168de1",
+    "box/d125-minimal-receiver-client-preflight-20260906/client.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "box/d125-parity-hybrid-cost-design-20260907/check-results.json": "a6a0d9b6710eb4153d0467e2a8a408a4358890012df211b28dc8e71e8579d374",
+    "box/d125-parity-hybrid-cost-design-20260907/check.py": "f8416529e6f19ad471ab54ec774b9dcb8b6657cf2116d4ceac58c8f5be535ba6",
+    "box/d125-parity-hybrid-cost-gate-fable5-20260907/gate_controls.py": "9f7e007491bfbc4c14b485cc9c50a2a811dbc8c4dab1d5e78e21354989a5706f",
+    "box/d125-ramified-twojet-discriminator-20260907/check.py": "a150a2c59e4eb2c1a0498e576e42861e31c467bf14bdb6cf4476066e301d096e",
+    "box/d125-ramified-twojet-discriminator-20260907/witness.json": "37387ae526322c18c614502d78794a9b6be983b4afecf90ee3a58ffbb41618ec",
+    "box/d125-ramified-twojet-gate-fable5-20260907/gate_controls.py": "973c1242acfca43c281b20adfeb0396f50ead82b3fa1adeff92f144e651bd297",
+    "box/d125-zero-k-deformation-discriminator-20260907/check.py": "25be0862730df8b66076eb59a2d1d0909fbcf563ea73ce16924affdc7c70ad66",
+    "xmodel/d125-generic-ramification-discriminator-astra-20260907.md": "a7b37d6e5c1ce4f72bd3a4c2efa748f17d0ac11d141160b49da1754cc9e5e293",
+    "xmodel/d125-lift-hermite-gate-fable5-20260906.md": "7e2594d53150bf4346f4e4cc6e7f6ff05a021b045b640128de763cc653a8a8ca",
+    "xmodel/d125-lift-hermite-pivots-astra-20260906.md": "b6a81fc0c925d63f13f72d4b8ee1203adcecb8a6f4dc349f8c2a62d5805cf126",
+    "xmodel/d125-low-jet-saturation-discriminator-astra-20260907.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+    "xmodel/d125-low-jet-saturation-gate-fable5-20260907.md": "65bb46ee40c9dc7c873de732a333f000206c2efa4016be06e1f89b880effa583",
+    "xmodel/d125-minimal-receiver-client-preflight-astra-20260906.md": "e0debc7da22b8864ba43f0d29928e2104f2d8f161421ad26f29d8017f7b95e80",
+    "xmodel/d125-parity-construction-attempt-astra-20260907.md": "d4f0ccc486fcc2f69f1901d4050cc1756de7f39ba2ccd28ed96cc39bb6dca284",
+    "xmodel/d125-parity-hybrid-cost-design-astra-20260907.md": "b33d6944976ac934535bcc516bae82c738cd2e957665bfffb2325ec63170aa5a",
+    "xmodel/d125-parity-hybrid-cost-gate-fable5-20260907.md": "bff1b2073c3fb878458de346fa1b3c87ab378ce5b7a5320e3a634b7b7da0950c",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-parity-unit-normalization-gate-fable5-20260907.md": "53f78754d8e567e145db4038f6f5b39f2f9a56c462178f20b1e94a2f6f0e7e10",
+    "xmodel/d125-ramified-twojet-discriminator-astra-20260907.md": "1440132691e51058b51927ba40234d0441d787a167321aba0af2bd53e8b698d4",
+    "xmodel/d125-ramified-twojet-gate-fable5-20260907.md": "82ad1c16832a37f87c2c8e245fc0edd983bada9861479a153c20986d6042d974",
+    "xmodel/d125-small-receiver-polynomial-lift-contract-astra-20260906.md": "433cc2fe9f11ce1b2e1f1fc57aab24def921afb1f93154a2d631ddee0b88cdad",
+    "xmodel/d125-symmetry-discriminator-astra-20260907.md": "9bed554644b1bd3c881ba4e289ea0950601ed6141677a45152577442fd477b12",
+    "xmodel/d125-zero-k-boundary-classification-astra-20260907.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2",
+    "xmodel/d125-zero-k-classification-gate-fable5-20260907.md": "68e04e8ce62585b824d73749b956f51ea58a46661375e4c810d747680be5370f",
+    "xmodel/d125-zero-k-deformation-discriminator-astra-20260907.md": "99d251478969b569c5523349b71a58534fc1fc95c7125e2fcc7e706dda963f2c"
+  },
+  "runs": [
+    {
+      "failure_stdout": null,
+      "flags": [],
+      "label": "ramified_scope_repaired",
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "3ede3e4e59d2803684a8fdaa73e01839bd5d6fd87a79b81a871ec575a8304d4a"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [],
+      "label": "ramified_scope_repaired",
+      "mode": "--mutate-cubic-factor",
+      "returncode": 1,
+      "stderr": "FAIL order-3 identity, cubic 5/27\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [],
+      "label": "ramified_scope_repaired",
+      "mode": "--mutate-omit-negative-row",
+      "returncode": 1,
+      "stderr": "FAIL phi(D) valuation >= -1 (phi(TD) ordinary)\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [],
+      "label": "ramified_scope_repaired",
+      "mode": "--mutate-independent-tangent",
+      "returncode": 1,
+      "stderr": "FAIL [p]U1=-c(t+3), [gp^2]U1=c(t+3), d-free\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [],
+      "label": "ramified_scope_repaired",
+      "mode": "--mutate-truncated-saturation",
+      "returncode": 1,
+      "stderr": "FAIL nilpotent k cannot be canceled\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": null,
+      "flags": [
+        "-O"
+      ],
+      "label": "ramified_scope_repaired",
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "3ede3e4e59d2803684a8fdaa73e01839bd5d6fd87a79b81a871ec575a8304d4a"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [
+        "-O"
+      ],
+      "label": "ramified_scope_repaired",
+      "mode": "--mutate-cubic-factor",
+      "returncode": 1,
+      "stderr": "FAIL order-3 identity, cubic 5/27\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [
+        "-O"
+      ],
+      "label": "ramified_scope_repaired",
+      "mode": "--mutate-omit-negative-row",
+      "returncode": 1,
+      "stderr": "FAIL phi(D) valuation >= -1 (phi(TD) ordinary)\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [
+        "-O"
+      ],
+      "label": "ramified_scope_repaired",
+      "mode": "--mutate-independent-tangent",
+      "returncode": 1,
+      "stderr": "FAIL [p]U1=-c(t+3), [gp^2]U1=c(t+3), d-free\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [
+        "-O"
+      ],
+      "label": "ramified_scope_repaired",
+      "mode": "--mutate-truncated-saturation",
+      "returncode": 1,
+      "stderr": "FAIL nilpotent k cannot be canceled\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": null,
+      "flags": [],
+      "label": "hybrid_metadata_alias",
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "9469fc1cc8529efe315533596d7c474794092a72ab5f677462e07b80d915ccf0"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE sheared slot free but not a pivot\n",
+      "flags": [],
+      "label": "hybrid_metadata_alias",
+      "mode": "pivot",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "1f32a44b7d888fb8cfed48da4f88a73a60890d9b6fc8d044c4c57991d2a34dc6"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE B pivots free, off both faces\n",
+      "flags": [],
+      "label": "hybrid_metadata_alias",
+      "mode": "face",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "c50d7be2fcb783a63e0ba793f38cae14c7025834e5160908d4d2280dd9f4f88c"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE literal inverse equals own adjugate\n",
+      "flags": [],
+      "label": "hybrid_metadata_alias",
+      "mode": "inverse",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "e36aa8014170a6999040d9b6d01440a4656c8842ee2da1f859f0451f9c5909b4"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE J degree <= 3\n",
+      "flags": [],
+      "label": "hybrid_metadata_alias",
+      "mode": "mapdegree",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "11c471c655c9a978217f60433d34f04baabc29a3186820e9af8b635af731fe45"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE guard cofactor r=3\n",
+      "flags": [],
+      "label": "hybrid_metadata_alias",
+      "mode": "guard",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "24acde33d3adcdea01e34c7e4a40edc11f8e3cd19b9b6e13f8bdcdc8c5c9dd9c"
+    },
+    {
+      "failure_stdout": null,
+      "flags": [
+        "-O"
+      ],
+      "label": "hybrid_metadata_alias",
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "04c7c22b8a263eac02fb3aa2f169edc8fc41adb686fea4ddd18ded6633010fa1"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE sheared slot free but not a pivot\n",
+      "flags": [
+        "-O"
+      ],
+      "label": "hybrid_metadata_alias",
+      "mode": "pivot",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "1f32a44b7d888fb8cfed48da4f88a73a60890d9b6fc8d044c4c57991d2a34dc6"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE B pivots free, off both faces\n",
+      "flags": [
+        "-O"
+      ],
+      "label": "hybrid_metadata_alias",
+      "mode": "face",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "c50d7be2fcb783a63e0ba793f38cae14c7025834e5160908d4d2280dd9f4f88c"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE literal inverse equals own adjugate\n",
+      "flags": [
+        "-O"
+      ],
+      "label": "hybrid_metadata_alias",
+      "mode": "inverse",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "e36aa8014170a6999040d9b6d01440a4656c8842ee2da1f859f0451f9c5909b4"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE J degree <= 3\n",
+      "flags": [
+        "-O"
+      ],
+      "label": "hybrid_metadata_alias",
+      "mode": "mapdegree",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "11c471c655c9a978217f60433d34f04baabc29a3186820e9af8b635af731fe45"
+    },
+    {
+      "failure_stdout": "FIRST_FAILING_GATE guard cofactor r=3\n",
+      "flags": [
+        "-O"
+      ],
+      "label": "hybrid_metadata_alias",
+      "mode": "guard",
+      "returncode": 1,
+      "stderr": "",
+      "stdout_sha256": "24acde33d3adcdea01e34c7e4a40edc11f8e3cd19b9b6e13f8bdcdc8c5c9dd9c"
+    },
+    {
+      "failure_stdout": null,
+      "flags": [],
+      "label": "mixed_order_toy",
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "24a90700ac30b9af4823891a246287abd9c7826485a7795c3d1dcacda3168de1"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [],
+      "label": "mixed_order_toy",
+      "mode": "--mutate-drop-mixed-orders",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 114, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 38, in check\n    need({e:a for e,a in J.items() if e[2]<=6}=={},'mixed orders are required through order six')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: mixed orders are required through order six\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [],
+      "label": "mixed_order_toy",
+      "mode": "--mutate-full-arc-claim",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 114, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 40, in check\n    if mode=='--mutate-full-arc-claim': need(J=={},'finite toy is not a full commuting arc')\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: finite toy is not a full commuting arc\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [],
+      "label": "mixed_order_toy",
+      "mode": "--mutate-guarded-s4-survivor",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 114, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 74, in check\n    need(toy_x*toy_x==-3*h**3,'zero x cannot satisfy saturated k=s4 leading row')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: zero x cannot satisfy saturated k=s4 leading row\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": null,
+      "flags": [
+        "-O"
+      ],
+      "label": "mixed_order_toy",
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "24a90700ac30b9af4823891a246287abd9c7826485a7795c3d1dcacda3168de1"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [
+        "-O"
+      ],
+      "label": "mixed_order_toy",
+      "mode": "--mutate-drop-mixed-orders",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 114, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 38, in check\n    need({e:a for e,a in J.items() if e[2]<=6}=={},'mixed orders are required through order six')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: mixed orders are required through order six\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [
+        "-O"
+      ],
+      "label": "mixed_order_toy",
+      "mode": "--mutate-full-arc-claim",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 114, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 40, in check\n    if mode=='--mutate-full-arc-claim': need(J=={},'finite toy is not a full commuting arc')\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: finite toy is not a full commuting arc\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "failure_stdout": "",
+      "flags": [
+        "-O"
+      ],
+      "label": "mixed_order_toy",
+      "mode": "--mutate-guarded-s4-survivor",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 114, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-generic-ramification-discriminator-20260907/check.py\", line 74, in check\n    need(toy_x*toy_x==-3*h**3,'zero x cannot satisfy saturated k=s4 leading row')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: zero x cannot satisfy saturated k=s4 leading row\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "tiny metadata, degree-five generators, R=g toy, degree-three/five independent mixed toy; no actual full pair/source",
+  "status": "PASS",
+  "wall_seconds": 3.851504856022075
+}

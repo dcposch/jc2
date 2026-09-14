@@ -1,0 +1,16 @@
+{
+  "round": "20260906T1435Z",
+  "collection_clock_verified_utc": "2026-09-06T21:26:31Z",
+  "timestamp_correction": "Originally entered rounded 21:27 before checking clock; corrected before downstream charging. Manifest existed and was hashed before the first peer body read. Actual sequence, not that rounded timestamp, establishes the blind boundary.",
+  "status": "ALL_BLIND_TERMINAL_COLLECTION_LATE",
+  "body_read_before_collection": false,
+  "packet_sha256": "ca5a70c9d32d72bead8f71a63126ccdf9498231395da9d7ac0806804381f9d78",
+  "custody": "All three systemd handles absent at 21:24Z; terminal receipts read before bodies. All reports rehashed. All 22 charged input declarations agree. Current rehashes match 18 inputs, with expected mutable APPROACHES/AUDIT/PROGRESS/notes drift matching each receipt's REPO_DRIFT. Private snapshots have been removed by launcher; no independent present-day private rehash claimed.",
+  "delay": "All blind reports sealed by 15:02:41Z, but coordinator collection not resumed until 21:24Z. Original collection 15:25, cross 15:50, synthesis 16:10, close 16:35 missed. Last completed-full-round clock remains 12:39:13Z, not reset by this collection.",
+  "reports": [
+    {"path":"xmodel/ideation-20260906T1435Z-coordinator.md","sha256":"ded6160afd8c64c5b244d3ece91aadeb57e7fc11f8c507fe9c7867575730ba54","kind":"local_transaction_sealed_before_invitations"},
+    {"path":"xmodel/ideation-20260906T1435Z-astra.md","sha256":"8be796f182d65721e6d283c5c4c32111a7da6f5dcfc9c637be81508b3dce43df","receipt_sha256":"bfb4f0e51f3413184baf8e61f3a3b42b67b26766d567de9b7f262d0c52b6cbbc","end_utc":"2026-09-06T15:02:41Z","state":"DONE/BODY_SEALED/CLEAN/ABSENT/exit0"},
+    {"path":"xmodel/ideation-20260906T1435Z-fable5.md","sha256":"4c5953ae2af0f8525bef74e0e8dcb0331c4833915cbd2a9e2ce532e4c1e9d5ce","receipt_sha256":"f8309359fb57f5407c81428e154976bfe768a1bf79f7bc74eed1650f5e32ccb0","end_utc":"2026-09-06T14:52:30Z","state":"DONE/BODY_SEALED/CLEAN/ABSENT/exit0"},
+    {"path":"xmodel/ideation-20260906T1435Z-sol56.md","sha256":"348bb4bfc87ade06d76c5d55f5abe806851b0aadec13f8f6f08323d65b52d067","receipt_sha256":"fbd6e0ee49191bb85de3a7ba4b63e8c31bc0da3aeee8a2ede21ed55307b6e68e","end_utc":"2026-09-06T14:58:59Z","state":"DONE/BODY_SEALED/CLEAN/ABSENT/exit0"}
+  ]
+}

@@ -1,0 +1,18 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report complete and sealed-ready at 12:31:10 UTC, well inside the 12:40:43 reserve. Nothing further depends on a tool result, so here is the recap.
+
+**Verdict: A–F all CONFIRMED, REFUTED none, no new GAP.** Written to `xmodel/f10-middle-real-result-gate-fable5-20260910.md` with the standalone `<!-- BODY-END -->` as the literal last line, plus `box/f10-middle-real-result-gate-fable5-20260910/input_custody.md` holding the 22 live hashes. Both targets were absent at 12:25:43, all 22 input hashes matched the charged list before any body read, 21 objects were read whole, and the certificate stayed hash-only. All writes went through apply_patch.
+
+**What I checked, and how it held up:**
+
+- **A, positive result.** Receipt, telemetry and POSITIVE-CUSTODY bind the same candidate, the same three source pins, the check authority, exit 0 and empty stderr. The 814-entry witness is 37×22 at degree 36 with j=4. Reliance is stated plainly: correctness of the bytes rests on the reviewed checker having actually run under ROOT custody, not on the SHA.
+- **B, four controls.** The four stderr bodies are exactly the four intended checker branches, byte lengths agree with my own character count, exit 2, empty stdout, no receipts, fixture hashes consistent across mutator receipt, custody inventory and result block. The equal fixture size is expected and is not a no-op signal since the differential verdict proves the mutation applied. The 14 runs are 9 preflights plus mutate plus 4 checks.
+- **C, whole triangle.** The rectangle map covers every point with only t=1 excluded, the collapsed row forces strict positivity of G by partition of unity, R has constant sign but is not necessarily positive, and the denominator-free identity forbids common complex roots.
+- **D, uniform composition.** Every actual (r,h) lies in the triangle regardless of residue class, and the explicit inverses are Wcof/R for T, D·Wcof/R for Z, and the unit-prefactor formula for H7_h, all ring identities needing no irreducibility or reducedness.
+- **E, perimeter.** Only the division Y_h = −J_h/H7_h at the 17s interface is licensed. Sources, forcing, later rows, guards, r bound, map, counterexample and JC2 are untouched.
+- **F, custody.** Windows, file counts, run counts, terminal-before-custody order, unreset timers and every pin relation reconcile. No billing was inferred and no missing hardware evidence was invented.
+
+**Precisions recorded, none changing a verdict:** the 17zzl CPU-risk note is discharged by the observed 15.0 s producer wall, and one abbreviated token in section 0 is nine characters instead of eight.
+
+**Disclosure in the report:** the prior code, controls and mathematical gates were also Fable 5.1, so independence here is relative to the Astra producers and ROOT, and this is the first review of the runtime artifacts.
+DIVERT path=xmodel/f10-middle-real-result-gate-fable5-20260910.md status=CLEAN body_bytes=19895 body_sha256=f502501596b8aaccbce1b1f2e7ba3e4817094518f303281332227c1ef72cfc91

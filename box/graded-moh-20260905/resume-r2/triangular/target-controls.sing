@@ -1,0 +1,21 @@
+// Positive weighted truncation and negative adjacent-degree controls.
+ring R=0,(b,a),wp(2,1);
+ideal I=b^2-a^4,a*b;
+degBound=4;ideal G4=std(I);
+print("CONTROL_BOUND4_A5_NONZERO="+string(reduce(a^5,G4)!=0));
+degBound=5;ideal G5=std(I);
+print("CONTROL_BOUND5_A5_ZERO="+string(reduce(a^5,G5)==0));
+print("CONTROL_BOUND5_A4_NONZERO="+string(reduce(a^4,G5)!=0));
+print("CONTROL_EXACT_IDENTITY="+string(-a*I[1]+b*I[2]==a^5));
+// The xcharge quotient is safe only in the stated target component.
+ring S=0,(u,v,w),wp(1,1,2);
+ideal J=w-u*v,u^2;
+ideal M=u^3,u^2*v,u*v^2,v^3;
+attrib(M,"isSB",1);qring Q=M;
+ideal J=w-u*v,u^2;
+degBound=2;ideal H=std(J);
+print("CONTROL_Q_TARGET_MEMBERSHIP="+string(reduce(w-u*v,H)==0));
+print("CONTROL_Q_TARGET_NONMEMBERSHIP="+string(reduce(w,H)!=0));
+print("CONTROL_Q_OVERFLOW_V3_ZERO="+string(reduce(v^3,H)==0));
+print("CONTROL_Q_NO_FALSE_UNIT="+string(reduce(1,H)!=0));
+quit;

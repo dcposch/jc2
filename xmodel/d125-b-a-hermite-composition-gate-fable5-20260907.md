@@ -1,0 +1,47 @@
+# Gate: B reconstruction composed with the 27 A-only Hermite graphs (Fable 5.1, 2026-09-07)
+
+Bounded 15-minute desk gate of `xmodel/d125-b-a-hermite-composition-astra-20260907.md` (lane copy SHA-256 `769ffb37…`, read whole, matches the root transaction). All seven frozen inputs re-hashed and MATCH the charge list (`input_pins.txt`). Accepted without replay: the B-reconstruction gate `3f154e78…`, the Hermite-pivot gate `7e2594d5…`, and the v2 witness erratum `e4568309…`. No CAS, AWS, solver, live gate, ledger, adapter, source expansion or protected file was touched. Scope: the composition theorem only; nothing here is a properness, unit, point, dimension, cost or JC2 statement.
+
+## Verdict
+
+**CONFIRMED at exact desk scope, with one recorded scope correction** (producer's unselected-row counts 444/426/371 overcount identically-zero slots; corrected exact scope 339/321/266). The overcount hides no equation and no gap.
+
+| claim | verdict |
+|---|---|
+| 27 A-Hermite graphs fix `A15=H³`, whole faces, `A0=0`; `S/I_A=R` polynomial on 44/50/71 retained A plus parameters | CONFIRMED |
+| constant-unit B pivots give `S[free B]/I_piv≅S[β1..β4]`; base change along `S→R` (any quotient, nonreduced allowed) gives `R[free B]/I_piv≅R[β]` | CONFIRMED |
+| shear `B'=B−sA`, `s=β3`: `β1'=β1−s·a5`, `β2'=β2−s·a10`, `β3'=0`, `β4'=β4`; `a5,a10` are A-pivot graph values in `R` | CONFIRMED (own control) |
+| selected-row invariance plus uniqueness give the full reconstructed shear identity without high compatibility rows | CONFIRMED |
+| B-negative rows invariant only modulo `I_A`; control `P=t·v⁻¹, Q=0, s=1` | CONFIRMED (own control) |
+| complete quotient is `T[s]`, not `T`; nonemptiness equivalent, dimension +1 where defined | CONFIRMED |
+| 49/57/78 are coordinate counts; low J, unselected high J, 75 B-negative rows, guard all retained; no 70-pivot or λ savings | CONFIRMED |
+| retained unselected slots at degrees 14–37 are 444/426/371 | **OVERCOUNT of 105 explicit zeros**; exact 339/321/266 |
+
+## 1. Base ring and B graphs
+
+The A pivots are `c_{i,s−i}`, `i<⌈s/5⌉`, `s≤14`, so `A15=H³` is untouched, and the Hermite gate already placed every pivot strictly below the inner faces and off the origin. The three `s=15` rows are the zero element. Hence `I_A` is a graph ideal over `K[λ2,λ3,(c,z)]` and `R=S/I_A` is the polynomial ring on the retained A coordinates and parameters; the guard `zc−1` is not in `I_A`, so `R` is a domain here, though nothing below needs that.
+
+The selected B rows at layer `d+13` read `L_d·B_d + (bilinear in A_i, i<15, and B_j, j>d) + forcing(K_d)`, with `L_d` depending on `H³` alone. Because the selected `(q_d+1)`-minor is a unit of `K` and never involves a variable, inverting it gives `b−g` generators with `g` polynomial over `S`; that is a graph ideal, and `S[free B]/I_piv≅S[β1..β4]`. Tensoring a graph presentation with any `S`-algebra `R'` yields `R'[free B]/(I_piv R')≅R'[β]` because quotienting commutes with base change; no flatness, domain or generic-rank hypothesis enters, and `R'` may be nonreduced. Substituting the 27 A graph values into the forcing terms changes nothing in `L_d`. CONFIRMED.
+
+## 2. Shear identity
+
+`[π^{5r}]A` equals `a5, a10, 1, 0` for `r=1..4` (degree 15, monic top), giving exactly the four displayed formulas. Own control confirms `(0,5)` and `(0,10)` are among the 27 A pivots, so `a5,a10` are polynomials in retained A and λ, i.e. elements of `R`, and adding `s·a` back restores every `β` (mutation removing `s` from the inverse is rejected). The map `β↦(β1−β3g5, β2−β3g10, β3, β4)` is a unipotent `R`-automorphism of `R[β]`, so `R[β]=R[u1,u2,β4][s]` with `u1=β1−s·g5`, `u2=β2−s·g10`.
+
+Uniqueness step, own derivation: `B−sA` has the same fixed outer face, inner face and origin as `B` (A's polygon lies strictly below B's inner face, degree 15<25, `A0=0`, checked in the accepted gate), satisfies the same selected rows because `[A,B−sA]=[A,B]` is a polynomial identity in `K[A,B]`, and has kernel coordinates `β−s·a`. The triangular unit-pivot system has one solution over any commutative ring, so `G(A,β−s·a)=G(A,β)−sA` holds in `K[A,β]`, hence in `R[β]`. Therefore every Jacobian row substituted through `G` satisfies `E(β)=E(β')`, i.e. lies in `R[u1,u2,β4]`; no compatibility row is imposed to get this. CONFIRMED.
+
+## 3. Lift rows and the order of quotients
+
+`φ` is one ring homomorphism, so `Q_row(B)=Q_row(B')+s·P_row(A)` slot by slot, with the 30 P slots inside the 75 Q slots (`t≤⌊(s−1)/5⌋`, `s≤15` versus `s≤25`). This is invariance only modulo `I_A`. Own control with `P=t·v⁻¹`, `Q=0`, `s=1`: the negative ideal of `Q` is `(0)`, of `Q'=Q−P` is `(t)`; they agree only after the A-negative row `t=0` is imposed (mutation forcing agreement before `t=0` is rejected). The composition imposes `I_A` first by working over `R`, so every B-negative row is fixed by the shear in `R[β]`, and `zc−1`, the degree-2 target and all low rows are `β3`-free after substitution. Consequently the full ideal is generated by `s`-free elements of `R[u1,u2,β4]`, and the complete quotient is `T[s]`. `T[s]≠0⇔T≠0`, and for `T≠0` the Krull dimension rises by exactly one; the producer's "not T itself" is the right statement. CONFIRMED.
+
+## 4. Counts and the scope correction
+
+Coordinates of `T`: `(44,50,71)+3+2+(0,2,2)=49/57/78`; `T[s]` has one more. These are generator counts only; the 70 B-Hermite pivots and the two-λ graph are correctly not subtracted, since the 75 B-negative rows remain equations of `T`.
+
+Row scope. The universal triangle has 780 slots (105 at degrees 0–13, 636 at 14–37, 39 at 38). In all three polygons `deg_γ A=9` and `deg_γ B=15` (own half-plane census), so `deg_γ[A,B]≤23` and every slot with `I≥24` is the zero polynomial in every unknown: 105 such slots at degrees 14–37 and 15 at degree 38. That leaves the 660-envelope 105/531/24, and `531−192/210/265=339/321/266` retained unselected slots, exactly the root's figures; the producer's 444/426/371 exceed them by 105 in each case. Verdict: overcount of explicit zeros only. The ideal, the pivot set, the low rows and the degree-38 identity are unaffected, so no equation is hidden or lost. Refinement, not a repair: the per-pair Minkowski support is smaller still (mid-band upper bounds 388/420/531 by case, with common4's `I=23` slots cancelling by `[G³,G⁵]=0`), so even 339/321/266 is an upper bound on nonzero retained rows.
+
+## 5. Controls and custody
+
+Own `control.py` (SHA in `input_pins.txt`, standard library, `RuntimeError` only, no `assert`): polygon census, γ-degree cut, envelope recount, β-shear/inverse and lift control. Normal and `-O` exit 0 (0.04–0.10 s, ≤17 MB); mutations `gdeg`, `inverse`, `lift` exit 1 in both modes under `timeout 30`, `ulimit -v 524288 -t 25`. Artefacts only in `box/d125-b-a-hermite-composition-gate-fable5-20260907/` (`control.py`, `run*.out/.err`, `mut_*.out/.err`, `input_pins.txt`). No process is retained; baseline exact-solver sequence untouched.
+
+**Net:** composition theorem CONFIRMED; corrected exact retained-slot scope recorded as 339/321/266 (frozen text unchanged); the overcount is explicit zeros, not a gap.
+<!-- BODY-END -->

@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Work is complete and sealed at 14:15:30Z, before the 14:20Z reserve. The report is at `xmodel/canonical-conductor-source-gate-fable5-20260912.md` (SHA256 `7f569078…d49da2`), the only file written, entirely via apply_patch.
+
+**Custody.** All three input snapshots matched their expected pins before any body was read, and postpins at 14:15:13Z were unchanged. COORDINATION was read whole first, then the Astra and ROOT bodies whole. No interpreter, CAS, network, git or process inspection was used.
+
+**Verdicts (all four CONFIRMED, none REFUTED, no GAP beyond stated conditionality):**
+
+- **A, exact conductor.** I audited the hypersurface, CM/Gorenstein, maximal-CM and trace-identity hypotheses independently. The conclusion I=P_H(f,g,H)R as an ideal holds, conditional on the packet assumption that B=C[f,g,H] is finite in R with normalization R, which neither producer proves for any actual Keller pair. My own added check: the ramified cusp control (W²=U³) gives conductor t²R0 from the same duality formula, so A needs no unramifiedness and J=1 is exactly what makes c=P_W.
+- **B, paired Euler identity and exclusion.** Signs, branch factorization, the equal-normal-derivative step, the opposite-nonzero local control, the sum-of-orders reduction to a transverse double curve, and the exclusion of I=(h_d−a)R with d>0, a≠0 all reconstruct. Scope boundaries are recorded: a=0, non-reduced supports, r≥3 traces, conicality and normality are not touched.
+- **C, full-plane ring.** Both ring inclusions, the pinching description, finiteness, birationality, everywhere-unramifiedness, both conductor inclusions, x∉B, the β formula with its bracket identity, and both Euler failures were rederived by hand.
+- **D, hypersurface boundary.** The value-only gluing does give the normal-crossing node, the duality forces η=κ dx∧dy/u, and pulling both residues back through y↦−y gives the nonzero sum κ dt. My own cross-check: the residue condition gives ω_B=M·dx∧dy/u with M=Sx+Sy+uS, this satisfies Hom_B(R,ω_B)=ω_R so the two standard facts agree on this ring, and M is not free. D is kept separate from elementary C.
+
+**One blemish to flag for ROOT.** Two lines at the end of section B ("conductors with the same support … any claim that c is constant.") appear twice, because my second append hunk re-added its context lines. The duplicate is verbatim and changes no mathematics. I did not repair it, since the marker was already appended and the contract forbids writes after completion.
+DIVERT path=xmodel/canonical-conductor-source-gate-fable5-20260912.md status=CLEAN body_bytes=11343 body_sha256=7f569078a8995d7804a1d7927f6031c8860ed5f5f4ba80f6cc49400ed4d49da2

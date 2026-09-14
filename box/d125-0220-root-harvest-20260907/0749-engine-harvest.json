@@ -1,0 +1,37 @@
+{
+  "adaptation": "Only INPUTS path restored to11 byte-identical retained copies; no frozen edits",
+  "pins": {
+    "box/d125-hybrid81-caller-repair-20260907/driver.py": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+    "box/d125-hybrid81-caller-repair-20260907/exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+    "box/d125-hybrid81-caller-repair-20260907/hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+    "box/d125-hybrid81-engine-gate-sol56-v2-20260907/PINS.json": "7d3b96d016be81b45ef34a78e992e29b094cd37fad285c270dd3b2b2aa49c150",
+    "box/d125-hybrid81-engine-gate-sol56-v2-20260907/RUNS.json": "286ccb1c9cd8f802d3980d45f6c5b15e934cd2338e0634847406c28add691c2c",
+    "box/d125-hybrid81-engine-gate-sol56-v2-20260907/gate_checks.py": "2db05fe18541a749190e0536f6b4caa06ad8d1571a01a5120b63d0de6a49a90b",
+    "box/d125-hybrid81-engine-prep-20260907/ERRATUM.md": "bd312311284fc9617533f349f90306940b4bd105272434ef3627b00b4822a3c1",
+    "box/d125-hybrid81-engine-prep-20260907/REGISTRATION.md": "364a5d8c57a967d6dc3467db13eb0b19ba6c7924a573dc5b3ea67da7eb6f1ee5",
+    "box/d125-hybrid81-engine-prep-20260907/engine.py": "a87debfce5ca01817c03c2b180fd514d8e45269b1173c6f4a562255883188ae5",
+    "box/d125-hybrid81-engine-prep-20260907/test_engine.py": "6bbd6499957e05ad02d180b9e2d61d80bbfe2666a68582f857f7d8569781818f",
+    "box/d125-hybrid81-engine-review-prep-20260907/HARVEST.md": "84746860d736e7bf5fcfd1ad565a68be1aa49b3e85d1059065c95a08a0d898e4",
+    "box/d125-hybrid81-solver-gate-sol56-20260907/tiny-engine-fixture.jsonl": "d00df83bafddcd3436dad44034bdb1680d306f6d67f8bfa83d4b32de19961bbf",
+    "xmodel/d125-hybrid81-caller-repair-gate-sol56-20260907.md": "46a6304811af423042f29d9a8f4c3022189d648286e7770d02ae59d478615fac",
+    "xmodel/d125-hybrid81-engine-gate-sol56-v2-20260907.md": "081d92293a62b0e5a9616e62b28d510468cfef4c6d6972d6926c66cca5c8e23d",
+    "xmodel/d125-hybrid81-engine-prep-astra-20260907.md": "481ba6521e86e7a5786e71b9f8e1ac266c483d56bfe9eba164bd59f468812fbf"
+  },
+  "result": "Parent pathname membership is NOT exact parent argv; tiny verifier otherwise confirmed. No actual engine or source execution.",
+  "runs": [
+    {
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "test_all_frozen_pins_and_declared_sizes (__main__.GateChecks.test_all_frozen_pins_and_declared_sizes) ... ok\ntest_changed_stream_objects_reject (__main__.GateChecks.test_changed_stream_objects_reject) ... ok\ntest_counterexample_parent_path_token_is_not_exact_argv (__main__.GateChecks.test_counterexample_parent_path_token_is_not_exact_argv) ... ok\ntest_exact_engineering_binding (__main__.GateChecks.test_exact_engineering_binding) ... ok\ntest_exact_tiny_script_and_alarm_bytes (__main__.GateChecks.test_exact_tiny_script_and_alarm_bytes) ... ok\ntest_invalid_operation_stops_before_context_or_write (__main__.GateChecks.test_invalid_operation_stops_before_context_or_write) ... ok\ntest_parent_without_path_token_rejects (__main__.GateChecks.test_parent_without_path_token_rejects) ... ok\ntest_positive_full_slot_replay (__main__.GateChecks.test_positive_full_slot_replay) ... ok\ntest_static_no_new_lifecycle_and_deadline_order (__main__.GateChecks.test_static_no_new_lifecycle_and_deadline_order) ... ok\ntest_wrong_fixture_object_rejects (__main__.GateChecks.test_wrong_fixture_object_rejects) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.012s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "test_all_frozen_pins_and_declared_sizes (__main__.GateChecks.test_all_frozen_pins_and_declared_sizes) ... ok\ntest_changed_stream_objects_reject (__main__.GateChecks.test_changed_stream_objects_reject) ... ok\ntest_counterexample_parent_path_token_is_not_exact_argv (__main__.GateChecks.test_counterexample_parent_path_token_is_not_exact_argv) ... ok\ntest_exact_engineering_binding (__main__.GateChecks.test_exact_engineering_binding) ... ok\ntest_exact_tiny_script_and_alarm_bytes (__main__.GateChecks.test_exact_tiny_script_and_alarm_bytes) ... ok\ntest_invalid_operation_stops_before_context_or_write (__main__.GateChecks.test_invalid_operation_stops_before_context_or_write) ... ok\ntest_parent_without_path_token_rejects (__main__.GateChecks.test_parent_without_path_token_rejects) ... ok\ntest_positive_full_slot_replay (__main__.GateChecks.test_positive_full_slot_replay) ... ok\ntest_static_no_new_lifecycle_and_deadline_order (__main__.GateChecks.test_static_no_new_lifecycle_and_deadline_order) ... ok\ntest_wrong_fixture_object_rejects (__main__.GateChecks.test_wrong_fixture_object_rejects) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.012s\n\nOK\n",
+      "stdout": ""
+    }
+  ],
+  "seconds": 0.54058333998546,
+  "status": "PASS_SCOPED_REVIEW_REPLAY"
+}

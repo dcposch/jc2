@@ -1,0 +1,65 @@
+{
+  "schema": "jc2-primary-watch-custody/v1",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "COMPLETED_DOCUMENTARY_ONLY",
+  "mathematical_disposition": "NO_NEW_DECISIVE_MATHEMATICAL_CLIENT",
+  "root_collection": "CUSTODY_FIRST_AFTER_INDEPENDENT_TERMINAL_CONFIRMATION",
+  "first_action_utc": "2026-09-13 11:55:12.846228576 UTC",
+  "network_closed_utc": "2026-09-13 12:05:39.807095283 UTC",
+  "original_network_cutoff_utc": "2026-09-13 12:12:00 UTC",
+  "original_publication_reserve_utc": "2026-09-13 12:17:00 UTC",
+  "original_hard_end_utc": "2026-09-13 12:20:00 UTC",
+  "report_closed_and_finalized_utc": "2026-09-13T12:10:44Z",
+  "expected_verified_and_whole_final_readback_by_utc": "2026-09-13 12:10:58.266124607 UTC",
+  "all_payload_writers_idle_and_final_postpins_utc": "2026-09-13 12:11:27.473725353 UTC",
+  "last_writer_protocol": "This custody is the last authored file. After its WHOLE readback and hash, the terminal message records actual ALL WRITERS IDLE UTC; no later writes.",
+  "report": {
+    "path": "/home/ubuntu/jc2/xmodel/primary-global-watch-astra-20260913.md",
+    "sha256": "1d4c361608581f6d1316c1a5ccde46f80e85918c062e26ca3b1d2d0951735363",
+    "bytes": 8911,
+    "body_sha256": "c8b1dbaa94df525720ed5e97b5f743fea04167ca9370fd6219d45f7cd0f961eb",
+    "body_bytes": 8579,
+    "marker": "Unique BODY-END appended only after complete marker-free report readback, input postpins and own-only collision checks"
+  },
+  "expected_transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "manifest_path": "/home/ubuntu/jc2/xmodel/primary-global-watch-astra-20260913.md.artifact.json",
+    "manifest_sha256": "f7fa689528038585d70dc67d16b06073849591d18b962146452fdb67a7bcb3ed",
+    "status": "VERIFIED",
+    "lifecycle": "begin -> leased private partial -> close -> finalize -> expected-basis-and-manifest verify",
+    "whole_final_report_and_manifest_read": true
+  },
+  "local_base": "/home/ubuntu/jc2/box/primary-global-watch-astra-20260913",
+  "inputs_pre_and_post_unchanged": {
+    "TASK.md": "b286133cf8c47dae9def4120614aa2cd77adb17a4c8de7d2ba9b74a4a1780cae",
+    "APPROACHES.snapshot.md": "e1196dd8c4dec371412e961f15aaf236e9a56db0851eec0995814a1a5181e664",
+    "COORDINATION.snapshot.md": "a14b2ebcb3841f175b52ef0a96835a5724aee06a6008442eb3d25f98194a99bc",
+    "PREVIOUS-SWEEP.md": "4b672be1d530cf29a03637a3863a950ad5e2e48b107da621bf783495bf65ef26",
+    "PREVIOUS-INTAKE.md": "5deba41712fd1fcf45127c092c31e7f8e9e2fc7b98684ecd64d4aaa74f6aef22"
+  },
+  "input_read_mode": "All five FRESH_WHOLE; no prior-whole reuse, no linked local sources. Newer canonical APP not accessed.",
+  "administrative_instrument": {
+    "path": "/home/ubuntu/jc2/ops/artifact_finalize.py",
+    "sha256": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d",
+    "pre_post_unchanged": true,
+    "scope": "Unchanged administrative transaction only; targeted usage/source text read, no scientific interpreter"
+  },
+  "owned_metadata_whole_read_and_frozen": {
+    "PINS.json": "99e96116dcda5fb672d0455a186c583b281f617347cd1994a2eff1be76cd47eb",
+    "READ-SCOPE.md": "b5f992edccf935fc1154bf4a994461883d6f5e0cf11906073695e408b0ae9161",
+    "SOURCE-INDEX.md": "c42843d66ddc3aad706fb108293468c8ec3a139fe32ed4f9e78bf5923a6f9191"
+  },
+  "owned_raw_primary_pdfs_posthash_unchanged": {
+    "bgv-2609.05746v1.pdf": "814c3f2572f660a47778663384077d6357e9947f1585c1e16372f6cdbe138425",
+    "zhang-2609.10180v1.pdf": "210dd708c651358ccd5765332ab708d8581fb990a7596b4ec34587b449b46148",
+    "jelonek-2607.20597v1.pdf": "9e593e2c6e18503b9e25af01a508912b2798545525cdfe81f7c94206e74c275a",
+    "adamus-crespo-hajto-1901.01566v2.pdf": "883ca0b26a807cdd4b7c2933d7a55bbaa555a43aa70593a8745f1939461be3bc",
+    "adamus-crespo-hajto-1901.01566v3.pdf": "f85f22024df44e7948d57fe6fe640fc89f9b7c017d7c6acc38cb05c6c30b7711",
+    "sawahara-2107.08730v4.pdf": "09400e072388ee1df1673cdae8f40f70cd1035eb0e3b1f4855f7faba854323de"
+  },
+  "primary_read_scope": "Exact URLs/versions/pages and browser-only limitations in SOURCE-INDEX.md. Six raw PDFs preserved; only Jelonek v1 and Adamus-Crespo-Hajto v2 read WHOLE as entire PDFs. Other exact selected-page scopes are explicit; raw preservation is not WHOLE read evidence.",
+  "boundary": "Primary arXiv/publisher/named academic author pages only. No protected tree/mirror, stopped aggregate, repository, registry or social access. No boundary incident this tranche; prior incident and broad-sweep debt remain. Incidental excluded links not followed or used.",
+  "limitations": "Not exhaustive, not broad-sweep credit, not theorem promotion or full proof audit. Browser-only bytes lack SHA and exact request timestamps. No new decisive client or automatic successor. Parent parallel source checks not imported.",
+  "execution": "No scientific code/CAS/import/AST/syntax/test/dummy, worker/AWS/SSH, process/service or new agent. Only documentary download/extraction and administrative finalizer.",
+  "no_later_writes_after_handoff": true
+}

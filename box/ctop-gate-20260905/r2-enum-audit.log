@@ -1,0 +1,169 @@
+{"n": 20, "census": 0, "operative": 0, "seconds": 0.0}
+{"n": 40, "census": 4, "operative": 0, "seconds": 0.003}
+{"n": 60, "census": 44, "operative": 0, "seconds": 0.029}
+{"n": 80, "census": 178, "operative": 3, "seconds": 0.118}
+{"n": 100, "census": 658, "operative": 20, "seconds": 0.427}
+{"n": 120, "census": 1802, "operative": 74, "seconds": 1.243}
+{"n": 140, "census": 2585, "operative": 101, "seconds": 1.865}
+{"n": 160, "census": 6780, "operative": 344, "seconds": 5.33}
+{"n": 180, "census": 13628, "operative": 716, "seconds": 11.261}
+{"n": 200, "census": 24063, "operative": 1420, "seconds": 22.347}
+{
+  "census": {
+    "rows": 24063,
+    "by_us": {
+      "1": 17854,
+      "2": 4459,
+      "3": 1117,
+      "4": 312,
+      "5": 199,
+      "6": 37,
+      "7": 43,
+      "8": 17,
+      "9": 14,
+      "10": 3,
+      "11": 4,
+      "12": 3,
+      "13": 1
+    },
+    "raw_sp": {
+      "2": 2020,
+      "3": 10464,
+      "4": 9746,
+      "5": 1833
+    },
+    "effective_sp": {
+      "2": 3310,
+      "3": 11053,
+      "4": 8217,
+      "5": 1483
+    },
+    "drops": {
+      "0": 20544,
+      "1": 3519
+    },
+    "drops_by_us": {
+      "1": 3519
+    },
+    "us1": {
+      "rows": 17854,
+      "raw_fail": 15673,
+      "effective_fail": 14372,
+      "effective_live": 3482,
+      "fail_by_effective_sp": {
+        "2": 632,
+        "3": 6623,
+        "4": 5813,
+        "5": 1304
+      },
+      "live_by_effective_sp": {
+        "2": 1728,
+        "3": 1096,
+        "4": 479,
+        "5": 179
+      },
+      "live_by_raw_sp": {
+        "2": 710,
+        "3": 1856,
+        "4": 712,
+        "5": 204
+      },
+      "live_degree_pairs": 211,
+      "U_NEG": 2346,
+      "U_NEG_and_ctop_live": 0,
+      "rescued_by_drop": 1301
+    },
+    "us_ge2": {
+      "rows": 6209,
+      "raw_fail": 4845,
+      "effective_fail": 4845,
+      "U_NEG": 653
+    },
+    "U_NEG": 2999,
+    "drop_cross_tab": {
+      "(1, True, False)": 1301,
+      "(1, True, True)": 2218
+    }
+  },
+  "operative": {
+    "rows": 1420,
+    "by_us": {
+      "1": 1110,
+      "2": 265,
+      "3": 34,
+      "4": 9,
+      "5": 2
+    },
+    "raw_sp": {
+      "2": 43,
+      "3": 414,
+      "4": 797,
+      "5": 166
+    },
+    "effective_sp": {
+      "2": 67,
+      "3": 426,
+      "4": 791,
+      "5": 136
+    },
+    "drops": {
+      "0": 1330,
+      "1": 90
+    },
+    "drops_by_us": {
+      "1": 90
+    },
+    "us1": {
+      "rows": 1110,
+      "raw_fail": 970,
+      "effective_fail": 936,
+      "effective_live": 174,
+      "fail_by_effective_sp": {
+        "3": 244,
+        "4": 565,
+        "5": 127
+      },
+      "live_by_effective_sp": {
+        "2": 48,
+        "3": 86,
+        "4": 31,
+        "5": 9
+      },
+      "live_by_raw_sp": {
+        "2": 24,
+        "3": 100,
+        "4": 41,
+        "5": 9
+      },
+      "live_degree_pairs": 46,
+      "U_NEG": 84,
+      "U_NEG_and_ctop_live": 0,
+      "rescued_by_drop": 34
+    },
+    "us_ge2": {
+      "rows": 310,
+      "raw_fail": 225,
+      "effective_fail": 225,
+      "U_NEG": 6
+    },
+    "U_NEG": 90,
+    "drop_cross_tab": {
+      "(1, True, False)": 34,
+      "(1, True, True)": 56
+    }
+  }
+}
+{
+  "census_unique": true,
+  "parent_windows_and_full_ok": true,
+  "gcd_scaling": true,
+  "strict_gcd_drops": true,
+  "charged_replay_exact_row_match": true,
+  "charged_replay_exact_summary_match": true,
+  "moh5_us1_positive_controls": true,
+  "same_M_positive_and_negative_controls": true,
+  "drops_U_NEG_disjoint": true,
+  "dropped_effective_top_gcd_exceeds_one": true,
+  "labelled_root_count_identity": true
+}
+Exact charged replay comparison: PASS

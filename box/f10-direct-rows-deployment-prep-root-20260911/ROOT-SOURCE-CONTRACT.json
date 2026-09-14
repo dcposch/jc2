@@ -1,0 +1,68 @@
+{
+  "schema": "f10-direct-rows-root-source-contract/v1",
+  "job_tag": "f10-source-cone-r3-direct-rows-v1",
+  "status": "STATIC_SOURCE_FIRST_WITH_EXACT_PRESCRIBED_CORRECTION",
+  "scientific_execution": "NONE",
+  "accepted_specification": [
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/OPERATIONS.md",
+      "sha256": "3be532afc6e784842694cf02d4399573228362abb47ae36130ef97c4274faa59"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/ASSERTIONS.md",
+      "sha256": "61b9ce5e1f9b40a765dcb2a2ea5aa3a928197b61bc41cb5cf945632b99ad4de2"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/WIRE-AND-VALIDATION.md",
+      "sha256": "b9060f0bbc14e92464079b0daca12faa1ba2d367f9ecc7307ba301689de5b77d"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/ROOT-ADOPTED-CORRECTIONS.md",
+      "sha256": "39ed9b3910efee02dd2f17ced7951a8b83557e612d100d4ae34f76e0895b4002"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-wire-root-20260911.md",
+      "sha256": "90c940b021ba9f99f2298aaf394cb082793812ad4428e249b970ecf06baa6c47"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-wire-gate-fable5-20260911.md",
+      "sha256": "68488229c5ff839f8c155662f903ba174d59d4e96bb5e046a53967313d497f1b"
+    },
+    {
+      "path": "box/f10-direct-rows-wire-root-20260911/ROOT-ADOPTED-WIRE-PINS.md",
+      "sha256": "2b2770fe494098812a52c6829a4bd97803f44bb0474863b8008a69f3725956fd"
+    },
+    {
+      "path": "box/f10-direct-rows-parallel-prep-root-20260911/ROOT-AUTHOR-INTERFACE.md",
+      "sha256": "a0a40804071a6dac83eaf6acf38073229a6d15c8866af32e283015d65c1c74e7"
+    }
+  ],
+  "source_files": {
+    "authority.py": "5629db5df0a37fdaecaa66f5ad0cde47006cb0c3047b37243b045daedef2ac29",
+    "arithmetic.py": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+    "produce.py": "8a7bd82ea589744a9de22b54877156a329d724185948538958801475f983760e",
+    "check_arithmetic.py": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e",
+    "check.py": "5052884779d781e55693115c3065db1207667ce224a5914bbb95721d0abe9f7b"
+  },
+  "source_first": {
+    "path": "xmodel/f10-direct-rows-code-gate-fable5-20260911.md",
+    "sha256": "0d6cb121ebdd769fb909608043b38e6ef08923d6e6a0411ca5ec057325169784",
+    "adopted": "A-E static; F's exact prescribed polynomial-power correction applied"
+  },
+  "prescribed_correction": {
+    "source_path": "box/f10-direct-rows-powerfix-astra-20260911/arithmetic.py",
+    "source_sha256": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+    "old_source_sha256": "d196346966f09f1e9ef2a4f6e20df74f8d218c32e06d2f341ccf25fb4b39d90b",
+    "report_path": "xmodel/f10-direct-rows-powerfix-astra-20260911.md",
+    "report_sha256": "7ac88240f87e4cc79c67ce04f19bc6538b2cbcf23767aec99c7190ab8bf2010c",
+    "diff_sha256": "900bd5342ac30105bfaee3937c003bcc7b546febdcc0c05839c7d35c602e3706",
+    "root_check": "WHOLE source/report/documents, literal regenerated diff, expected transaction, current postpins; sole prescribed hunk"
+  },
+  "not_adopted": [
+    "review generic-support and cap-sufficiency estimates",
+    "measured speedup or runtime sufficiency",
+    "executed agreement or semantic-control success",
+    "source point, source exclusion, canonical rank, unsaturated ideal equality, all-r result or JC2 resolution"
+  ],
+  "remaining": "Actual independently checked evaluation and exact T control require separate runtime, seven refusal predicates, ROOT registration and bounded AWS observation."
+}

@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+FIRST review complete and published before the 18:48 reserve; all writers idle.
+
+**Verdict: all five claims CONFIRMED**, no contract break, zero canonical OPEN, no Seal or charge_basis. Delimitations recorded in the report.
+
+**What was done**
+- Verified all 23 frozen input hashes before reading, read every input whole, and re-verified all 23 after the run. Inputs unchanged, no original or linked path opened.
+- Authored `box/caprun-candidate-caller-first-fable5-20260911/review_controls.py` via apply_patch. It loads the supplied tests from the flat snapshot with location-only rebinding, runs the five in-process methods (5/5 ok), and adds independent static, positive, negative, separator and ASCII-directive controls. It launches no subprocess and writes nothing.
+- Result under ordinary `python3 -I -S -B`: exit 0, 170 expectations, 0 failed. Harness hash `1f74c77a…`, stdout hash `5f58337e…`.
+- Published `xmodel/caprun-candidate-caller-first-fable5-20260911.md` (1336 words, marker unique and last, hash `254bd290…`) and `input_custody.md` with all 23 postpins and owned hashes.
+
+**Key findings**
+- The caller's only file access is one bounded read-binary open; both helper hashes are checked before either import, and tampered or missing helpers refuse with no import attempt.
+- All fourteen historical hashes, the four final documents and the 78,889-byte total reproduce through LF readback; the em dash appears only as a JSON escape in the ASCII packet.
+- The eight separators are refused nonvacuously on both text carriers (card and installer): the accepted bind and make_patch pass with refreshed commitments, then the caller raises exactly the hygiene error with empty stdout. ASCII patch-directive text survives as prefixed data with exactly fourteen Add File lines.
+- Delimitations: the supplied missing-file test actually fires at the dependency read, not an input read (my harness covers both); ROOT_ATTESTED_CANDIDATE is transport acceptance only, with thirteen documents identical to the historical run; the 8 MiB packet envelope is unreachable under the parent bounds and therefore harmless.
+
+**Custody note**: the apply_patch tool unescaped a `\u2014` sequence in my first claim-3 wording, so I corrected that sentence once after the marker was appended, keeping the marker as the unique last line; the custody file records this and carries the final hashes. The producer's `test_real_standalone_cli` was not invoked, so ROOT's own replay remains the sole standalone evidence.
+DIVERT path=xmodel/caprun-candidate-caller-first-fable5-20260911.md status=CLEAN body_bytes=9717 body_sha256=254bd2905fbc670374ffe717724733720e86b963c0a86dba9d98f73925a0dfe6

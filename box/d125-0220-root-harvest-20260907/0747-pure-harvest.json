@@ -1,0 +1,94 @@
+{
+  "pins": {
+    "box/d125-pure-uniform-discriminator-20260907/check.py": "2e8495443ade68f929577019b175470ed432fdb7c4632cd4221b1ed580bd5d46",
+    "box/d125-pure-uniform-discriminator-20260907/custody.json": "fdaa7ccf901ff8027fd9dc6dc8a73c7ac3f2a375da1853f21fb699eb4855a383",
+    "box/d125-pure-uniform-discriminator-20260907/primary-note.md": "ec851a965e2d01427c2382341b74248017772703068671ea12e536ffe12e20e6",
+    "box/d125-pure-uniform-discriminator-20260907/registration.json": "acb97f559e120ec413d7c5726823c94d4e5a43670e047c3f6e10063f96d96991",
+    "box/d125-pure-uniform-discriminator-20260907/replay.json": "d5ccded7d6dafb70ae1fe1a42c646afaac1b2424bdc170584dd63321af0e73aa",
+    "box/d125-pure-uniform-discriminator-20260907/seal_custody.py": "30fad288e692cc0007f61b01d716ae68f76a5ce172a3c7c74b63b812d78f00b8",
+    "box/d125-pure-uniform-discriminator-20260907/witness-O.json": "face35182eb0e5570693e705289e57bd1a1a20a721808cfebe52850251ed00ad",
+    "box/d125-pure-uniform-discriminator-20260907/witness.json": "face35182eb0e5570693e705289e57bd1a1a20a721808cfebe52850251ed00ad",
+    "box/d125-zero-k-deformation-discriminator-20260907/check.py": "25be0862730df8b66076eb59a2d1d0909fbcf563ea73ce16924affdc7c70ad66",
+    "xmodel/d125-exceptional-pure-discriminator-astra-20260907.md": "9b3538b8d7d65477f5fb273ce8abb4b9556c8529dc374dc9affb4266f2793fb8",
+    "xmodel/d125-low-jet-saturation-discriminator-astra-20260907.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-pure-uniform-discriminator-astra-20260907.md": "1f71ea56f697fe48169cdd95cfe7e2417a98d37efa2f425a86661dfe5ff8e04d",
+    "xmodel/d125-pure-uniform-discriminator-astra-20260907.md.artifact.json": "abcccacdd177be265897deb28550d6d03fee54de1b45b4f36756a126fad225b8",
+    "xmodel/d125-zero-k-boundary-classification-astra-20260907.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2"
+  },
+  "runs": [
+    {
+      "mode": "",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "face35182eb0e5570693e705289e57bd1a1a20a721808cfebe52850251ed00ad"
+    },
+    {
+      "mode": "--mutate-remove-intermediate",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 107, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 45, in check\n    need({e:c for e,c in J.items() if e[2]<=6}=={},'actual formal collision through order six')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual formal collision through order six\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-sixth-factor",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 107, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 45, in check\n    need({e:c for e,c in J.items() if e[2]<=6}=={},'actual formal collision through order six')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual formal collision through order six\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-omit-alphaG",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 107, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 55, in check\n    need(bracket(At,Bt)==add(bracket(Rt,E),bracket(F,G)),'actual moving identity retains alphaG')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual moving identity retains alphaG\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-unit-object",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 107, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 73, in check\n    need(reduce_curve(mul(U,Uinv))==one,'actual nonconstant affine unit and inverse')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual nonconstant affine unit and inverse\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "face35182eb0e5570693e705289e57bd1a1a20a721808cfebe52850251ed00ad"
+    },
+    {
+      "mode": "--mutate-remove-intermediate",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 107, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 45, in check\n    need({e:c for e,c in J.items() if e[2]<=6}=={},'actual formal collision through order six')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual formal collision through order six\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-sixth-factor",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 107, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 45, in check\n    need({e:c for e,c in J.items() if e[2]<=6}=={},'actual formal collision through order six')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual formal collision through order six\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-omit-alphaG",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 107, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 55, in check\n    need(bracket(At,Bt)==add(bracket(Rt,E),bracket(F,G)),'actual moving identity retains alphaG')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual moving identity retains alphaG\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-unit-object",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 107, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-pure-uniform-discriminator-20260907/check.py\", line 73, in check\n    need(reduce_curve(mul(U,Uinv))==one,'actual nonconstant affine unit and inverse')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual nonconstant affine unit and inverse\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Actual degree<=5 generators and formal/circuit identities only. Uniform pure exclusion remains GAP; claims provisional pending different-model review.",
+  "seconds": 2.8034770359518006,
+  "status": "PASS_SCOPED"
+}

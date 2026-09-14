@@ -1,0 +1,62 @@
+{
+  "arbitrary_K2_output_floor_counterexample": {
+    "C2_normalized_weight_min": 15,
+    "C2_order5_quotient": "z**10 - 3*z**9 + 6*z**8 - 10*z**7 + 15*z**6 - 21*z**5 + 28*z**4 - 36*z**3 + 45*z**2 - 55*z + 66",
+    "C3_order5_remainder": "-78*z**10 - 143*z**9 - 66*z**8",
+    "K2_perturbation": "t^5*z^21",
+    "required_C2_floor": 64
+  },
+  "free_face_coordinates": [
+    "ell",
+    "U1"
+  ],
+  "full_face_residual": "0",
+  "old_face_negative_control": {
+    "coefficient": "-8*beta",
+    "pi_degree": 21
+  },
+  "pivots": [
+    {
+      "degree": 18,
+      "rhs": "20*beta**2/3 - 3*ell",
+      "scalar": "-1",
+      "variable": "U10"
+    },
+    {
+      "degree": 15,
+      "rhs": "-520*beta**3/27 + 8*beta*ell",
+      "scalar": "-1",
+      "variable": "U7"
+    },
+    {
+      "degree": 12,
+      "rhs": "1510*beta**4/81 - 20*beta**2*ell/3",
+      "scalar": "-1",
+      "variable": "U4"
+    },
+    {
+      "degree": 9,
+      "rhs": "-U1 - 1528*beta**5/243 + 40*beta**3*ell/27",
+      "scalar": "-1",
+      "variable": "V9"
+    },
+    {
+      "degree": 6,
+      "rhs": "8*U1*beta/3 + 28*beta**6 - 1510*beta**4*ell/81 + 20*beta**2*ell**2/3 - ell**3",
+      "scalar": "-1",
+      "variable": "V6"
+    },
+    {
+      "degree": 3,
+      "rhs": "-U1*ell - 8*beta**7",
+      "scalar": "-1",
+      "variable": "V3"
+    },
+    {
+      "degree": 0,
+      "rhs": "beta**8",
+      "scalar": "-1",
+      "variable": "V0"
+    }
+  ]
+}

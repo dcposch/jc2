@@ -1,0 +1,54 @@
+HASH_OK t_order_system.py e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28
+HASH_OK triangular_preprocess.py f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93
+HASH_OK t4_order_system.py db5e54450444f27c56f00bbec287aea284c8dc190e0e549c2fea51e0dbdd6cee
+BUILD_CHART t=6
+CHART t=6 tuple=(76,52;73,3) (e,q)=(19,13) unknowns=63 equations=93
+PHI radii=(-1,6/19) gauges=True build_s=16.654
+ACTUAL_PAIR J=gamma True; K16_TUPLE_FAIL True
+Q_PIVOTS t=6
+Q_PIVOTS count=22 expected=22 residual_rows=70 residual_unknowns=41 s=935.118
+Q_PIVOT_BANDS 25 .. 12 vars=['a7_1', 'a8_1', 'a9_1', 'a10_1', 'a11_1', 'a12_1', 'a13_2', 'a13_1', 'a14_2', 'a14_1', 'a15_2', 'a15_1', 'a16_2', 'a16_1', 'a17_2', 'a17_1', 'a18_2', 'a18_1', 'a19_2', 'a19_1', 'a19_0', 'a19_3']
+GRADING x=q7_1 wt=25 y=q13_1 wt=50 c wt=125 homogeneous_rows=70
+C_ROW source=2 band=0 image_ok
+H_ROW source=38 band=6 associate=19/2197
+H_t=2028*q13_1**2 - 1092*q13_1 + 140 primitive=507*q13_1**2 - 273*q13_1 + 35 disc=56784 irreducible=True content=4
+UNIT y res=140 inv=39/5 - 507*q13_1/35
+UNIT linear res=354900 inv=78*q13_1/175 - 1/5
+UNIT cbar res=8844500/4826809 inv=1113879*q13_1/3325 - 85683/665
+SLICE q_rows=57 auxiliaries=38 q_duplicates=12
+A_ELIM t=6 order=heuristic auxiliaries=38 rows=57
+A_PIVOT step=1 source=32 band=5 var=b4 rows=55 vars=37 terms=45855 res=12196919280
+A_PIVOT step=2 source=63 band=11 var=a1_0 rows=53 vars=36 terms=24641 res=-13141440
+A_PIVOT step=3 source=26 band=4 var=a2_0 rows=52 vars=35 terms=23227 res=38947767040/3
+A_PIVOT step=4 source=58 band=10 var=q2_0 rows=50 vars=34 terms=21424 res=-91774130448/89
+A_PIVOT step=5 source=20 band=3 var=a3_0 rows=49 vars=33 terms=18828 res=5324067840
+A_PIVOT step=6 source=53 band=9 var=q3_0 rows=47 vars=32 terms=14258 res=-277249299600/293
+A_PIVOT step=7 source=14 band=2 var=a4_0 rows=46 vars=31 terms=12529 res=283096632000
+A_PIVOT step=8 source=48 band=8 var=q4_0 rows=44 vars=30 terms=10231 res=-8628792540732/59
+A_PIVOT step=9 source=8 band=1 var=a5_0 rows=43 vars=29 terms=9058 res=144987060400/3
+A_PIVOT step=10 source=1 band=0 var=q13_0 rows=42 vars=28 terms=8367 res=86608376400
+A_PIVOT step=11 source=43 band=7 var=q5_0 rows=40 vars=27 terms=7233 res=-4933213119744/37
+A_PIVOT step=12 source=37 band=6 var=q6_0 rows=38 vars=26 terms=6641 res=-121251726960
+A_PIVOT step=13 source=31 band=5 var=b3 rows=36 vars=25 terms=6564 res=197743378912716
+A_PIVOT step=14 source=72 band=12 var=a7_0 rows=35 vars=24 terms=5869 res=-568414218084336/193
+A_PIVOT step=15 source=25 band=4 var=a8_0 rows=33 vars=23 terms=5404 res=1119296751512940
+A_PIVOT step=16 source=67 band=11 var=q8_0 rows=32 vars=22 terms=5569 res=-1861105954575920/3
+A_PIVOT step=17 source=19 band=3 var=a9_0 rows=30 vars=21 terms=5147 res=559591274606000
+A_PIVOT step=18 source=62 band=10 var=q9_0 rows=29 vars=20 terms=5173 res=-140954039840742336/245
+A_PIVOT step=19 source=42 band=6 var=a13_0 rows=28 vars=19 terms=5078 res=79377507935697666240
+A_PIVOT step=20 source=13 band=2 var=a10_0 rows=26 vars=18 terms=4685 res=39082882439191500
+A_PIVOT step=21 source=6 band=0 var=b1 rows=25 vars=17 terms=9001 res=7214730361884500
+A_PIVOT step=22 source=57 band=9 var=q10_0 rows=24 vars=16 terms=8565 res=-2321925212250206784/25
+A_PIVOT step=23 source=36 band=5 var=a14_0 rows=23 vars=15 terms=8440 res=55123269399790046000
+A_PIVOT step=24 source=7 band=1 var=a11_0 rows=21 vars=14 terms=6022 res=11116908782703360
+A_PIVOT step=25 source=52 band=8 var=q11_0 rows=20 vars=13 terms=5996 res=-97941289817138352
+A_PIVOT step=26 source=0 band=0 var=a12_0 rows=18 vars=12 terms=3869 res=159824863940219660
+A_PIVOT step=27 source=47 band=7 var=q12_0 rows=17 vars=11 terms=4193 res=-156235467753909747216/5
+A_PIVOT step=28 source=30 band=4 var=a15_0 rows=16 vars=10 terms=4059 res=35278892415865629440
+A_PIVOT step=29 source=71 band=12 var=b2 rows=15 vars=9 terms=3787 res=-5225526133536345
+A_PIVOT step=30 source=24 band=3 var=a16_0 rows=14 vars=8 terms=3632 res=19844376983924416560
+A_PIVOT step=31 source=18 band=2 var=a17_0 rows=13 vars=7 terms=3452 res=8819723103966407360
+A_PIVOT step=32 source=12 band=1 var=a18_0 rows=12 vars=6 terms=3245 res=2204930775991601840
+A_ELIM done pivots=32 residual_rows=12 residual_vars=['q7_0', 'q8_1', 'q9_1', 'q10_1', 'q11_1', 'q12_1'] unit=False s=168.906
+AUDIT t6_heuristic_audit.json sha256=2429f419697bb345a7941d6a5e5225abf026d5c3d2de70176464b850df6f590d
+SUMMARY {"H_irreducible": true, "a_pivots": 32, "audit": "t6_heuristic_audit.json", "audit_sha256": "2429f419697bb345a7941d6a5e5225abf026d5c3d2de70176464b850df6f590d", "bands": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "degrees": [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14], "elapsed": 3162.537621, "order": "heuristic", "pattern": {"all_tags_0_1": true, "bands": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "bands_match_in_order": true, "bands_sorted": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "degrees": [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14], "degrees_match_as_multiset": true, "degrees_match_in_order": true, "degrees_sorted_desc": [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14], "expected_bands_0_to_2t-1": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "expected_degrees_4t+1_down_to_2t+2": [25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14], "matches_2t_by_t": true, "terminal_rows": 12, "terminal_vars": 6}, "q_pivots": 22, "singular_units": [], "t": 6, "terminal_rows": 12, "terminal_unit": false, "terminal_vars": ["q7_0", "q8_1", "q9_1", "q10_1", "q11_1", "q12_1"]}

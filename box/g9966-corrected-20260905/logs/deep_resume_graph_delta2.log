@@ -1,0 +1,24 @@
+delta2: loading complete checkpoint source-full-delta2_phase0117.json
+delta2 inner minor solved in 1.85s
+delta2 inner low-weight product: 25 slots, 2.84s
+delta2 inner incidence reduced: 14 pivots, 8.92s
+delta2 inner: 78 preincidence, 14 QQ* pivots, 0 residual, 10.31s
+delta2: extracting only D1 coefficient dependencies
+delta2: dependency positions h/C2/C3=9/8/9, outer=[21, 24, 10, 21]
+delta2: D1_graph, 13 equations, operation counts [16, 125, 4, 8, 14, 6, 12, 261, 2, 8, 4, 8, 14]
+delta2: D1_graph complete, dimension=351, residual=0
+delta2: D1_J, 14 equations, operation counts [3, 20, 59, 75, 134, 140, 120, 85, 38, 27, 13, 5, 2, 2]
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_graph_faces.py", line 176, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_graph_faces.py", line 161, in main
+    if add(rows,'D1_J',fmeta):return
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_graph_faces.py", line 98, in add
+    sing=E.singular_dimension(residual,branch,args.output.with_name(args.output.stem+'_'+name+'.sing'))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/run-code-source-full/frozen/band_engine.py", line 647, in singular_dimension
+    dimension=int(section("DIM").splitlines()[-1])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '   ? error occurred in or before STDIN line 4: `print("BEGIN_DIM"); print(dim(S)); print("END_DIM");`'

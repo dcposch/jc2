@@ -1,0 +1,522 @@
+{
+  "corrections": [
+    "Arrow4 exact order a+v belongs to the isolated first summand, not necessarily the entire left side; the displayed bound follows by isolation.",
+    "Arrow5 middle equality to D(-5*kappa^3/(27p)) has a sign typo; the resulting primitive const-5*kappa^3/(27p) is correct.",
+    "ControlC represents infinity by finite sentinel10^9 in a bounded box; the universal infinity cases are proved in prose."
+  ],
+  "pins": {
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py": "8355069266b6c62ae9e10b48e069e2a62cb1f3042289979bfbf28d6b83b86b4f",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/controls.sha256": "d3ac5fb0282b709554f93a38720e24072cc437af95985d7b4dbc1237302cb387",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/outputs.sha256": "c895b8b24abc9027cbe228aca780119d4cddcc1076fcb243f7bde7513af50766",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/recursion_point_control.py": "723aac7a775e577041ee33ff8718ce487fab3d4beac183bd33794362a2cb3ef2",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/runs.tsv": "4ee2d1c4dc4535e880922bd4244ac5d2d585b1888c4de22b7b259b8e1e8b3b18",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/valuation_control.py": "38a136abe94e7f167eb7d930d50a0ea9e800132bd4f24a47c7de083f96b8fd3b",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/weight_lemma_control.py": "79cd996f8b23d33d97e170640b9780d4cf6835eab399eeb7f72b404b7c678ae8",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/input-pins-post.sha256": "580c6b5e640a706316dcd24769a549ca55810c57023c4f555dbf8ce3794f1ad7",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/input-pins-pre.sha256": "580c6b5e640a706316dcd24769a549ca55810c57023c4f555dbf8ce3794f1ad7",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/record.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/record.stdout": "1044b36f6657ec3a76fc360206150f1eb1368c14ab2e075695b1337cc06d12ae",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/replay-artifacts.sha256": "fc6afd01e564c18ab127526600adc00f261bb91a717a1498c918a3d7d3fdbab8",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run.stdout": "a21b8c2a35768ca144a69f336fec870105bfbbc2882a2d40fe90b30098597377",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O.stdout": "a21b8c2a35768ca144a69f336fec870105bfbbc2882a2d40fe90b30098597377",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_freeze-moving-reference.stderr": "f2fd9e9447207bc2b535ab8db2614e0ea97ebf4b2b9922bfb9dfd72c3ff94fa0",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_freeze-moving-reference.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_omit-cross-bracket.stderr": "4e3bb8458a8b3a85c3c90cb98ee5242e370b883c5ba495c9bb98dab71f1e135e",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_omit-cross-bracket.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_wrong-critical-factor.stderr": "c083d07b9fabf94c14b48befda2816343e095e80e14cf386f7928632f4caae93",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_wrong-critical-factor.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_wrong-filtered-input.stderr": "1637d050a273a36a466e451fb20416f1b03d18c3c63311bcec23e35db67db0e8",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_wrong-filtered-input.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_wrong-primitive-sign.stderr": "538e517c3dc78cd9d4f897a062e79090dfc8c1a87617ca6ed00da385ddaa3d33",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_wrong-primitive-sign.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_wrong-target-factor.stderr": "29c37d9ed02e296696278e0880e8adff2654254ead041ee19759b885caf014d3",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_O_wrong-target-factor.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_freeze-moving-reference.stderr": "f2fd9e9447207bc2b535ab8db2614e0ea97ebf4b2b9922bfb9dfd72c3ff94fa0",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_freeze-moving-reference.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_omit-cross-bracket.stderr": "4e3bb8458a8b3a85c3c90cb98ee5242e370b883c5ba495c9bb98dab71f1e135e",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_omit-cross-bracket.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_wrong-critical-factor.stderr": "c083d07b9fabf94c14b48befda2816343e095e80e14cf386f7928632f4caae93",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_wrong-critical-factor.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_wrong-filtered-input.stderr": "1637d050a273a36a466e451fb20416f1b03d18c3c63311bcec23e35db67db0e8",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_wrong-filtered-input.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_wrong-primitive-sign.stderr": "538e517c3dc78cd9d4f897a062e79090dfc8c1a87617ca6ed00da385ddaa3d33",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_wrong-primitive-sign.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_wrong-target-factor.stderr": "29c37d9ed02e296696278e0880e8adff2654254ead041ee19759b885caf014d3",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/run_wrong-target-factor.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/runs.tsv": "1e5af6c87e042c14b12b35ee7358c1b7457367956dfbe7f5dc503d4c1b0b7c83",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/scratch-copies-post.sha256": "54c651ccfe71a7cfb29a03abdf332d6dadb02555daa663f6438a199c23b5119e",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/scratch-copies.sha256": "54c651ccfe71a7cfb29a03abdf332d6dadb02555daa663f6438a199c23b5119e",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/scratch-final-replay.json": "2e071c935d6c30fa0c8fd967c3f9add4ac3984f7782309d33c3375e418105685",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/scratch-final-witness.json": "a21b8c2a35768ca144a69f336fec870105bfbbc2882a2d40fe90b30098597377",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/replay/scratch-root.txt": "e920acd3f632399f8c19d5768e2476a6316c80d68136e7b32f6754f015bee79e",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/gate-15b-fable.md": "76f2444d17b0f04d302c3f4f33b8611025c6c85b2436dd1f437f944585e50de8",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/input-pins.json": "b2117971e5946e00fe94c6d06b5cc31e9be5379af4f7d2ffc5cc1f9bb2f691b3",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/producer-critical-check.py": "994958d87f223c75b474d4839e4c946e2f655762075bba65ec2014d09ca7bdf0",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/producer-critical-remainder.md": "7d7993d2bca7cd84bd2c7c7f40b7567c1f5be9b69c119c18c98f6d2b97ca7c74",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/producer-custody.json": "c544c7ea7171517b60d7423a82f4affd7ec84baa9d45f6b67b552104c7685b60",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/producer-final-replay.json": "2e2f786bbcbab841b9b55fdc002a91d69ccac057e8a26f849c5d4002493741f0",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/producer-final-witness.json": "a21b8c2a35768ca144a69f336fec870105bfbbc2882a2d40fe90b30098597377",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/producer-polynomial-helper.py": "25be0862730df8b66076eb59a2d1d0909fbcf563ea73ce16924affdc7c70ad66",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/producer-transaction.json": "53f220fcf316fe3e1d30c77a4c42c6f1f4491417904a545bcb172494ecef8095",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/source-14c-normalization.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/source-14f-classification.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/source-14g-low-rows.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/source-14v-first-contact.md": "9b3538b8d7d65477f5fb273ce8abb4b9556c8529dc374dc9affb4266f2793fb8",
+    "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-prep-20260907/source-15b-low-alpha.md": "e5416761dc0447a8fef0c83d228d731fdbc524cb6a12d04c34b2e78f4608d657",
+    "/home/ubuntu/jc2/xmodel/d125-pure-critical-remainder-gate-fable5-20260907.md": "6f6fef2133d33482b0f45f2db86d78712976a3f984c848d68e4c388615227be8"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py"
+      ],
+      "name": "chain_rule_control",
+      "returncode": 0,
+      "seconds": 0.11124655697494745,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b1f49e37de7f6a50f99e23821a11e2486ce8bda63d9fa28393467cb498bd80fd"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py",
+        "--omit-cross"
+      ],
+      "name": "chain_rule_control_omit-cross",
+      "returncode": 1,
+      "seconds": 0.16917543893214315,
+      "stderr_sha256": "e46d410c17e8c6cfead6ac646da5993778871b0be2895c745f84541fc22858a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py",
+        "--fixed-g-derivative"
+      ],
+      "name": "chain_rule_control_fixed-g-derivative",
+      "returncode": 1,
+      "seconds": 0.18865034903865308,
+      "stderr_sha256": "e46d410c17e8c6cfead6ac646da5993778871b0be2895c745f84541fc22858a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py",
+        "--drop-jacobian-factor"
+      ],
+      "name": "chain_rule_control_drop-jacobian-factor",
+      "returncode": 1,
+      "seconds": 0.17366501595824957,
+      "stderr_sha256": "e46d410c17e8c6cfead6ac646da5993778871b0be2895c745f84541fc22858a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py",
+        "--wrong-critical-factor"
+      ],
+      "name": "chain_rule_control_wrong-critical-factor",
+      "returncode": 1,
+      "seconds": 0.1866865250049159,
+      "stderr_sha256": "0f2d95af43de9343158515d44330d3fc020bdb3e7f7bbc3e5df784cd04884c93",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/valuation_control.py"
+      ],
+      "name": "valuation_control",
+      "returncode": 0,
+      "seconds": 6.362502948963083,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3d7a34eaa5b7843d9441b28cf80d0c30ca9ef28215ad269aa0a278b7f852edb6"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/valuation_control.py",
+        "--allow-a-equal-j"
+      ],
+      "name": "valuation_control_allow-a-equal-j",
+      "returncode": 1,
+      "seconds": 7.326979456003755,
+      "stderr_sha256": "198ea4898781234ca7c52c6d15bcb0dc682c0ad44addf504e5f21c16b233b1d8",
+      "stdout_sha256": "dd9106266eb06ebc3d61eaaeccb931ccaed617b2a4a32b09271ae9fb79450797"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/recursion_point_control.py"
+      ],
+      "name": "recursion_point_control",
+      "returncode": 0,
+      "seconds": 0.08924195310100913,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6dbe57610c373ee98efaf4eaa8f78a19b5f859a27f7315ae23c34843c1ebc748"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/recursion_point_control.py",
+        "--skip-h-correction"
+      ],
+      "name": "recursion_point_control_skip-h-correction",
+      "returncode": 1,
+      "seconds": 0.16172290092799813,
+      "stderr_sha256": "353aa9fd7249de2a4b0a5004e25ad141fb89b4eaa81ba7890b964377bdaf65a6",
+      "stdout_sha256": "125337ea5861ece19bb1f3f7d0b381e749c66b6a0ab8021fc5f0ef7c5affe4c6"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/recursion_point_control.py",
+        "--weight15-input"
+      ],
+      "name": "recursion_point_control_weight15-input",
+      "returncode": 1,
+      "seconds": 0.1623287129914388,
+      "stderr_sha256": "2fb49d3d55d7adff54791ca50d1b72a125629561f9f30e567714b993f0d757a8",
+      "stdout_sha256": "c307a107379c1d8f6d3b38e8b10f89365560dd4eff5f425383697f517099b92f"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py"
+      ],
+      "name": "chain_rule_control_O",
+      "returncode": 0,
+      "seconds": 0.18014339997898787,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b1f49e37de7f6a50f99e23821a11e2486ce8bda63d9fa28393467cb498bd80fd"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py",
+        "--omit-cross"
+      ],
+      "name": "chain_rule_control_O_omit-cross",
+      "returncode": 1,
+      "seconds": 0.582612496917136,
+      "stderr_sha256": "e46d410c17e8c6cfead6ac646da5993778871b0be2895c745f84541fc22858a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py",
+        "--fixed-g-derivative"
+      ],
+      "name": "chain_rule_control_O_fixed-g-derivative",
+      "returncode": 1,
+      "seconds": 0.6130173950223252,
+      "stderr_sha256": "e46d410c17e8c6cfead6ac646da5993778871b0be2895c745f84541fc22858a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py",
+        "--drop-jacobian-factor"
+      ],
+      "name": "chain_rule_control_O_drop-jacobian-factor",
+      "returncode": 1,
+      "seconds": 0.5866684179054573,
+      "stderr_sha256": "e46d410c17e8c6cfead6ac646da5993778871b0be2895c745f84541fc22858a4",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/chain_rule_control.py",
+        "--wrong-critical-factor"
+      ],
+      "name": "chain_rule_control_O_wrong-critical-factor",
+      "returncode": 1,
+      "seconds": 0.5989401349797845,
+      "stderr_sha256": "0f2d95af43de9343158515d44330d3fc020bdb3e7f7bbc3e5df784cd04884c93",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/valuation_control.py"
+      ],
+      "name": "valuation_control_O",
+      "returncode": 0,
+      "seconds": 6.253719468018971,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3d7a34eaa5b7843d9441b28cf80d0c30ca9ef28215ad269aa0a278b7f852edb6"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/valuation_control.py",
+        "--allow-a-equal-j"
+      ],
+      "name": "valuation_control_O_allow-a-equal-j",
+      "returncode": 1,
+      "seconds": 7.712882273946889,
+      "stderr_sha256": "198ea4898781234ca7c52c6d15bcb0dc682c0ad44addf504e5f21c16b233b1d8",
+      "stdout_sha256": "dd9106266eb06ebc3d61eaaeccb931ccaed617b2a4a32b09271ae9fb79450797"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/recursion_point_control.py"
+      ],
+      "name": "recursion_point_control_O",
+      "returncode": 0,
+      "seconds": 0.155189745943062,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "6dbe57610c373ee98efaf4eaa8f78a19b5f859a27f7315ae23c34843c1ebc748"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/recursion_point_control.py",
+        "--skip-h-correction"
+      ],
+      "name": "recursion_point_control_O_skip-h-correction",
+      "returncode": 1,
+      "seconds": 0.5780032689217478,
+      "stderr_sha256": "353aa9fd7249de2a4b0a5004e25ad141fb89b4eaa81ba7890b964377bdaf65a6",
+      "stdout_sha256": "125337ea5861ece19bb1f3f7d0b381e749c66b6a0ab8021fc5f0ef7c5affe4c6"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/recursion_point_control.py",
+        "--weight15-input"
+      ],
+      "name": "recursion_point_control_O_weight15-input",
+      "returncode": 1,
+      "seconds": 0.5810894269961864,
+      "stderr_sha256": "2fb49d3d55d7adff54791ca50d1b72a125629561f9f30e567714b993f0d757a8",
+      "stdout_sha256": "c307a107379c1d8f6d3b38e8b10f89365560dd4eff5f425383697f517099b92f"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/weight_lemma_control.py"
+      ],
+      "name": "weight_lemma_control",
+      "returncode": 0,
+      "seconds": 0.02862197603099048,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a5078dd7afd2a7431c84c31e67eff8397e5bdad218f7564080d0ec0d9ac5569c"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/weight_lemma_control.py",
+        "--drop-weight"
+      ],
+      "name": "weight_lemma_control_drop-weight",
+      "returncode": 1,
+      "seconds": 0.10730686702299863,
+      "stderr_sha256": "1b92b7bccbe5fca67e91017031bed006487ec534553ac866fe309c85c2b9c5eb",
+      "stdout_sha256": "ec8ca902dbe50007cb98d0aa763e1b6a916fd052a4a3203e83ef3a4ce6173e27"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/weight_lemma_control.py",
+        "--weight-8"
+      ],
+      "name": "weight_lemma_control_weight-8",
+      "returncode": 1,
+      "seconds": 0.10222603299189359,
+      "stderr_sha256": "1b92b7bccbe5fca67e91017031bed006487ec534553ac866fe309c85c2b9c5eb",
+      "stdout_sha256": "648d47f668f5d98142d1bdbfc0236b72a2091bcbe9b11d1f3654abeb8594047d"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/weight_lemma_control.py"
+      ],
+      "name": "weight_lemma_control_O",
+      "returncode": 0,
+      "seconds": 0.09498698194511235,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a5078dd7afd2a7431c84c31e67eff8397e5bdad218f7564080d0ec0d9ac5569c"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/weight_lemma_control.py",
+        "--drop-weight"
+      ],
+      "name": "weight_lemma_control_O_drop-weight",
+      "returncode": 1,
+      "seconds": 0.523315608035773,
+      "stderr_sha256": "1b92b7bccbe5fca67e91017031bed006487ec534553ac866fe309c85c2b9c5eb",
+      "stdout_sha256": "ec8ca902dbe50007cb98d0aa763e1b6a916fd052a4a3203e83ef3a4ce6173e27"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-critical-remainder-gate-fable5-20260907/controls/weight_lemma_control.py",
+        "--weight-8"
+      ],
+      "name": "weight_lemma_control_O_weight-8",
+      "returncode": 1,
+      "seconds": 0.5249493090668693,
+      "stderr_sha256": "1b92b7bccbe5fca67e91017031bed006487ec534553ac866fe309c85c2b9c5eb",
+      "stdout_sha256": "648d47f668f5d98142d1bdbfc0236b72a2091bcbe9b11d1f3654abeb8594047d"
+    }
+  ],
+  "scope": "Reviewer finite coefficient-space controls and degree-five factors/formal moving toy only; no actual A15/B25 or high R powers/full source.",
+  "seconds": 9.560025385930203,
+  "utc": "2026-09-07T23:48:41.240950+00:00"
+}

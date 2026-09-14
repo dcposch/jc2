@@ -1,0 +1,55 @@
+{
+  "verdict": "EXACT_T5_MAIN_AND_BOUNDARY_UNIT_BY_REPLAYED_RANK_AND_DETERMINANT_CIRCUITS",
+  "field": "k=Q(d), d^2=2; integral generator e=3d, e^2=18",
+  "source_ring_generator_order": [
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "b"
+  ],
+  "basis": "linear_t5_rank_certificate.json:row_monomials (complete ordered weight42 basis)",
+  "selected_columns": "linear_t5_rank_certificate.json:selected_columns, in stored order",
+  "matrix_entry": "A[i,l]=coefficient_of_basis_monomial_i(scale_l * monomial(multiplier_l) * E_(source_row_l)); scaled coefficients lie in Z[e]",
+  "source_vector": "v[i]=coefficient_of_basis_monomial_i((Bsol*eta)^2)",
+  "delta": "det(A), a scalar in Z[e] with residue29155 at e=7868 mod32009, hence nonzero in k",
+  "cramer_h_l": "det(A with column l replaced by v), using the declared row/column order",
+  "cofactor_tilde_a_k": "sum_{l:source_row_l=k} h_l*scale_l*monomial(multiplier_l)",
+  "exact_source_identity": "sum_k tilde_a_k*E_k = delta*(Bsol*eta)^2, by A*h=det(A)*v",
+  "cofactor_degree_caps": [
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5
+  ],
+  "m": 7,
+  "r": 4,
+  "clear_operator": "C_e(f)=sum_{j=0}^e coefficient_b_j(f)*A_slice^j*Delta^(e-j)",
+  "main": {
+    "ring": "k[c1,c2,c3,c4,u]",
+    "Q_k": "Delta^(7-e_k-d_k)*C_(e_k)(tilde_a_k)",
+    "cleared_source_identity": "sum Q_k*F_k=delta*Delta^3*H^4",
+    "literal_unit": "1=sum_k (u^4*Delta*Q_k/delta)*F_k +(1+P+P^2+P^3)*(1-P), P=u*Delta*H"
+  },
+  "boundary": {
+    "ring": "k[c1,c2,c3,c4,b,s]",
+    "literal_unit": "1=sum_k (s^4*tilde_a_k/delta)*E_k-s^4*B^2*(eta+B)*A_slice+s^4*B^2*(eta+B)*b*Delta +(1+s*B+(s*B)^2+(s*B)^3)*(1-s*B)"
+  },
+  "scalar_division": "Only delta, a verified nonzero element of k, is inverted in certificate coefficients; no polynomial chart denominator is assumed invertible beyond the literal inverse generator.",
+  "verification": "Fresh coefficient model and independent NumPy determinant replay + fresh exact chart maps/generator images + universal polynomial circuit checks. Cramer identity is the standard polynomial determinant identity; huge minors need not be expanded.",
+  "hashes": {
+    "controls_t5_raw.sing": "78db3c9786c28e28cb64e7f63cf3df9d321f7cbb900fd78343a511ac035dfdd1",
+    "t5_chart_data.txt": "b6aa908a9cbf09aaadb16c476f8d78a807161ba3020dc2722575cf1550f8497f",
+    "t5_main_prelude.sing": "f0fb88cd56cc3d89f1fa3669518029aee5f68d918acbac6f1f9190708d2451bb",
+    "t5_boundary_prelude.sing": "c4a62b90decacd923d48c179d5839f2801ee85734f5f62f6ca34ed3a65a75073",
+    "linear_t5_rank_certificate.json": "0f91e54c40a1ca2189a8762f7d2524c08364e6b9b31f363c5d065c6a9090e7f6",
+    "t5_rank_independent_result.json": "e66ed22ff432ed1a74344c6312460b07b8934320d7f17504d73012a7744c8cf2",
+    "t5_rank_chart_maps.sing": "7656c7ac9d338e73370665b32866ea6363fb7806030ff58f4095084595e95d0a",
+    "t5_rank_chart_maps.log": "e3b6e132dd23a372326e6c495464a11e9d5d6d992d32848e8d5be56594eafcda"
+  }
+}

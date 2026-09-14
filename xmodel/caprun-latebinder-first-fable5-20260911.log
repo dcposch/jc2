@@ -1,0 +1,36 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Work is complete at 15:29 UTC, before the 15:37 reserve. All writers are idle (the only `pgrep` match was my own shell, not a harness process).
+
+**Verdict: ACCEPTABLE as a candidate-only offline preparation tool** under its explicit trust boundary. Batch b stays CLOSED. No retry, worker, installation, release, cap change, or 120-second claim follows.
+
+**Per-claim results**
+
+1. Pure-data bounded API: CONFIRMED. Imports are exactly copy/hashlib/json/re, all type checks use identity, every failure raises, and the contract disclaims caller authentication.
+2. Nine phases and the difference set: CONFIRMED. My leaf-level diff of preholder versus candidate gives exactly 67 registration changes (3 flags, 2 outer, 18 leaf fields, 44 argv slots) and 4 authority changes, none unclassified. The reverse-edit check is a consistency guard, but combined with whole-template equality it closes the set.
+3. Nine individual leaf pairs, placement, canonical authorities, eight hashes: CONFIRMED. Refuse-hash keeps its 64 zeros while its object digest is nonzero.
+4. Acyclic hash order: CONFIRMED with GAP-1. The native.sha256 digest is opaque and copied, but distinctness from the inventory digests is not enforced. Supplying the full-inventory digest as the list digest is accepted.
+5. Enumerated substitutions and decision gating: CONFIRMED with delimitation. The helper checks only three installer substrings and the card's worker line. The installer deadline, unit name, stage path, and any appended command pass unchecked and are caller duties. GAP-2: the placeholder regex is uppercase-only.
+6. Historical reproduction and future preparations: CONFIRMED with delimitation. No host identity or hex literal exists in the helper. The 13 candidate documents are byte-identical across HISTORICAL_TEST and ROOT_ATTESTED_CANDIDATE, so only SUMMARY.json marks context.
+
+**Evidence**
+
+- Replay of all 13 producer methods passed with `SOURCE` overridden in memory to the frozen inputs directory.
+- 52 own mutation controls behaved as expected, including 6 accepted-by-design rows documented as external duties.
+- All 13 inputs matched their pins before and after; the read-only lane directory was never modified.
+
+**Owned files**
+
+| File | SHA-256 |
+|---|---|
+| xmodel/caprun-latebinder-first-fable5-20260911.md | 3201abe5cae352f9e12ec6c842c6efe7ac463394b515cf2279d8266717296661 |
+| box/.../review_controls.py | 7b951a7dd5d8cfef0e20119f933f7dffa77fc0e1d8a4df16c6bcdd011e66b634 |
+| box/.../input_custody.md | f095699bb3f2e56df7d4a3b07dbe055b4e8dd51cfdf9492ef136cbfc3d4e18b3 |
+
+The report is 1362 words with a unique standalone BODY-END as its last line. Two pre-existing adapter files (`.log`, `.run.v2`) share the report name in xmodel; they were listed in the custody file and not touched. Replay command:
+
+```
+python3 -I -S -B box/caprun-latebinder-first-fable5-20260911/review_controls.py /tmp/jc2-lane.a27KVq/inputs
+```
+
+Unresolved duties remain external: ROOT authentication of prepared bytes and pins, observation capture, ACL and liveness checks, readback, installation, and token release. The runtime's acceptance of the emitted argv and authorities was not examined.
+DIVERT path=xmodel/caprun-latebinder-first-fable5-20260911.md status=CLEAN body_bytes=9956 body_sha256=3201abe5cae352f9e12ec6c842c6efe7ac463394b515cf2279d8266717296661

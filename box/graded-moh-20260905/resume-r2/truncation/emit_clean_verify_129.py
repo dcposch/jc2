@@ -1,0 +1,7 @@
+from pathlib import Path
+import json
+BASE=Path('/home/ubuntu/jc2/box/graded-moh-20260905');src=BASE/'resume-r2/truncation/C_n24m18_Mm15_14_ell1_s3_V1_9_N1/curve-fast';out=src.parent/'clean-verify';out.mkdir(exist_ok=True);c=json.loads((src/'custody.json').read_text())
+s='LIB "general.lib";\nring S=0,('+','.join(c['variables'])+'),wp('+','.join(map(str,c['weights']))+');\nintvec CW='+','.join(map(str,c['weights']))+';\nideal J='+',\n'.join(c['image_rows'][0])+';\nideal G='+(src/'basis-0.txt').read_text().strip()+';\nattrib(G,"isSB",1);\npoly expected='+(src/'normalform-0.txt').read_text().strip()+';\nint i,j;int good=1;int pairs=0;poly lc,sp;\n'
+s+='for(i=1;i<=size(J);i++){if(reduce(J[i],G)!=0){good=0;}}\nfor(i=1;i<=size(G);i++){for(j=i+1;j<=size(G);j++){lc=lcm(leadmonom(G[i]),leadmonom(G[j]));if(deg(lc,CW)<=125){pairs++;sp=(lc/leadmonom(G[i]))*G[i]/leadcoef(G[i])-(lc/leadmonom(G[j]))*G[j]/leadcoef(G[j]);if(reduce(sp,G)!=0){good=0;}}}}\n'
+s+='print("INPUT_AND_ALL_REQUIRED_SPAIRS_ZERO="+string(good));\nprint("CHECKED_PAIRS="+string(pairs));\nprint("NF_EXACT_MATCH="+string(reduce(c,G)==expected));\nprint("C_NONMEMBERSHIP="+string(expected!=0));\nprint("NEGATIVE_CORRUPTED_ROW_DETECTED="+string(reduce(J[1]+c,G)!=0));\nprint("DONE");quit;\n'
+(out/'verify.sing').write_text(s);spec=dict(ip='172.30.0.86',worker='i-02aaa996f54d2c004',work=str(out),input=str(out/'verify.sing'),command=['/usr/bin/Singular','-q',str(out/'verify.sing')],memory_gib=10,timeout_seconds=180);(out/'spec.json').write_text(json.dumps(spec,indent=2)+'\n')

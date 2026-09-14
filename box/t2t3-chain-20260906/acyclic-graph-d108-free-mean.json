@@ -1,0 +1,172 @@
+{
+  "T2_depths": {
+    "H_adic": 151,
+    "defect": 25,
+    "physical": 153
+  },
+  "T2_face": "leader63*z^49*(1+z)^14",
+  "T2_face_slots": 64,
+  "T2_face_vector_sha256": "17a759e831749505003b2d5d850a29fe7d2692e3f9438d1dc51f3f0e3c44c654",
+  "T3_equality_unit_row": "t3eq+leader63^4",
+  "T3_face": "lambda3*z^176*(1+z)^51",
+  "T3_face_slots": 228,
+  "T3_face_vector_sha256": "b2f336ed92c6f0174cf64931eae379c7290c3933577142af2058485626d25b18",
+  "T3_passive_free_extension_dimension": 13,
+  "T3_passive_standard_coefficients_omitted_as_free_extension": [
+    {
+      "monomial": "F^2",
+      "shift": 36
+    },
+    {
+      "monomial": "G^2*Q",
+      "shift": 45
+    },
+    {
+      "monomial": "G*Q^2",
+      "shift": 54
+    },
+    {
+      "monomial": "Q^3",
+      "shift": 63
+    },
+    {
+      "monomial": "F*G",
+      "shift": 72
+    },
+    {
+      "monomial": "F*Q",
+      "shift": 81
+    },
+    {
+      "monomial": "G^2",
+      "shift": 108
+    },
+    {
+      "monomial": "G*Q",
+      "shift": 117
+    },
+    {
+      "monomial": "Q^2",
+      "shift": 126
+    },
+    {
+      "monomial": "F",
+      "shift": 144
+    },
+    {
+      "monomial": "G",
+      "shift": 180
+    },
+    {
+      "monomial": "Q",
+      "shift": 189
+    },
+    {
+      "monomial": "1",
+      "shift": 252
+    }
+  ],
+  "T3_recurrence_active": "Q^4+t3eq*F*G^2+t^9*t3_fgq*F*G*Q+t^18*t3_fq2*F*Q^2",
+  "all_graph_roundtrip_count": 17308,
+  "all_graph_roundtrips_exact_zero": true,
+  "build_wall_seconds": 801.417,
+  "case": "108-free-mean",
+  "constraint_row_count": 7022,
+  "decision": "COMPUTE_BOUND_OPEN",
+  "decision_reason": "exact graph quotient remains above 100 generators; no exact-Q Groebner basis was launched",
+  "driver_sha256": "9d0a1e3b2ebf43467c6431ef4b5fe8a194dafa59d6172ed0f14bb75bc1dfdd5f",
+  "field": "Q",
+  "graph_dependencies_all_preceding": true,
+  "graph_generator_count": 17308,
+  "graph_ledger_sha256": "87932b848faa7250f9ec5f968b948f0980aa8ee86a5cce3b7a79c1e64869d370",
+  "graph_row_count": 17308,
+  "graph_rows_all_monic_rational_leader_plus_one": true,
+  "input": "box/char-degree-20260905/d108/selected/meanfree_stage8_slimgb/d108_meanfree_stage8_strongfront.input.json",
+  "input_sha256": "1c927d83aa4684ae91bfffc8d03500fbabb73a500faa222fa349a6d129a10814",
+  "localizers": [
+    "Z63*leader63-1",
+    "Z3*lambda3-1",
+    "Zc*c-1"
+  ],
+  "maximum_row_label": "def_F_25_74",
+  "maximum_row_terms": 1999,
+  "no_raw_Jacobian_rows": true,
+  "no_saturation": true,
+  "parsed_exact_term_count": 2457244,
+  "peak_RSS_KiB": 6549768,
+  "presentation_generator_count": 17815,
+  "presentation_generator_order_sha256": "2d9f1dc53d03fc1393fc11e723b2f76bdecef4fab359976af38068377f597de4",
+  "roundtrip_images_sha256": "60e93843cf252af92fc5284dc886bba5afe647d29046e0d2ef5e3cadc693e795",
+  "row_block_counts": {
+    "T2_face": 64,
+    "T2_strict": 1128,
+    "T2_upper": 461,
+    "T3_face": 228,
+    "T3_recurrence": 1,
+    "T3_strict": 5123,
+    "graph": 17308,
+    "inverse": 3,
+    "source_residual": 14
+  },
+  "row_expressions_sha256": "ad969715b8cc5e27b8daa224695c14def085bbbdd00db0ea68f97a9416a8d47c",
+  "row_labels_sha256": "5efb9b3f7aae72e75372e6f720d542ac0de3750d5b8834eac6c04b1a3988bbe9",
+  "semantic_quotient_generator_count_before_constraint_pivots": 507,
+  "source_free_generators": 502,
+  "source_input_images_exactly_parsed_in_coefficient_ring": true,
+  "source_input_to_presentation_map": "name-identity with the recorded order permutation",
+  "source_input_to_presentation_map_count": 502,
+  "source_input_to_presentation_map_sha256": "bcf272f065471478515e538e6486f82af9cd52deb8994fcccb3bf90eb2f2aa74",
+  "source_plus_added_inverse_generators": 502,
+  "source_residual_rows": 14,
+  "source_support": {
+    "attained_rows": [
+      {
+        "depth": 8,
+        "target": "-P"
+      },
+      {
+        "depth": 32,
+        "target": "P^4"
+      },
+      {
+        "depth": 96,
+        "object": "F",
+        "target": "P^12"
+      },
+      {
+        "depth": 64,
+        "object": "G",
+        "target": "P^8"
+      }
+    ],
+    "base": "(pi-minor_mean)^2-c",
+    "common_h_top": "z^28*(1+z)^8",
+    "common_h_top_exactly_checked": true,
+    "delta": "3",
+    "free_mean": true,
+    "frozen_map_support_counts": {
+      "C": 197,
+      "D": 191,
+      "h": 185
+    },
+    "frozen_residual_count": 14,
+    "frozen_residual_sha256": "d527f88903c747b1d888e71d5dfad8a62861082465499aaff94c2d08c4d3a4d9",
+    "inverse": "Zc*c-1",
+    "separation": "c",
+    "stage8_prefix_warning": "finite schedule reaches local powers only through 12; F/G power-96/64 target data are required source-support data, not claimed as rows newly imposed by this checker",
+    "strict_below_zero": true
+  },
+  "status": "EXACT_ACYCLIC_PRESENTATION_AUDITED_NO_GB_DECISION",
+  "supports": {
+    "C": 197,
+    "D": 191,
+    "F": 575,
+    "G": 367,
+    "Q_defect_jet": 409,
+    "Q_expression": 1489,
+    "R_high": 461,
+    "T3_expression": 5323,
+    "h": 185
+  },
+  "total_row_count": 24330
+}

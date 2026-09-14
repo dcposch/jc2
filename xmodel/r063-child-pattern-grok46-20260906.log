@@ -1,0 +1,21 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes and reading the charged sources plus the gate scripts, then enumerate child configurations without rewriting the calculus.Hash verification is next: I'll build the receipt manifest with awk and run `sha256sum -c`, then read the charged sources.The receipt lists basename before SHA, so I'll rebuild the awk manifest in that order and re-run `sha256sum -c`.Hashes matched (6/6). Next I’ll read the gate scripts, the prompt, and how the earlier replay and integrality table used them.Hashes are 6/6 OK. I'll inspect the integrality-table driver, the earlier child replay, and roster rows R063/R009/R050.I’ll inspect the child ℓ-shift in `child_xu.py` and pull R063/R009/R050 rows from the roster and integrality JSON.I have the calculus path: reuse `descend_own` and the gate scripts, then enumerate child trees under actual `L'` in both conventions. Writing the driver next.I'll patch the gate roster path on import, then write the child-enumeration driver.I'll write the driver to load the gate scripts with the frozen roster path, then enumerate both conventions.The run produced numbers; I’ll inspect configuration counts, `I_m` values, and why unshifted trees are empty.I'll add a compact summary with D1 residues, then re-run so the report can cite exact counts.I’ll write the sealed DATA report from the replay numbers, then stamp it.**DATA, not a theorem.** Charged inputs hashed **6/6 OK**. Under the printed fixed-list closure (actual centre stabilizer \(L'\), child’s own \(M'\)-list; calculus not rewritten), licensed own children of R063 / R009 / R050 behave as follows.
+
+**Unshifted** (Jacobian-\(1\) formulas on the child tower): **no admissible selected patterns** on any of the three rows. No \(I'_M\), no \(I'_m\), no \(71/4\), no match to 19 or 8.
+
+**\(\ell\)-shifted** (\(\ell=v_s-u_s-1=1\); Lemma 4.1 / Prop 4.6(3)\*):
+
+| row | patterns | printed-complete | complete \((I'_M,I'_m)\) | equals parent \(I_M\)? | \(71/4\)? |
+|---|---:|---:|---|---|---|
+| **R063** | 1 | **0** | — | no (not 19) | **ungated only** |
+| **R009** | 2 | **1** | \((8,7)\) | **yes** (\(8=8\)) | no |
+| **R050** | 2 | **1** | \((8,11/2)\) | **yes** (\(8=8\)) | no |
+
+R063’s unique shifted pattern has a legal selected arm, but the zero-centre sibling fails \(D_1\) residues (\(A=24\), \(\rho_f=10\)). The **ungated** sum is \(3\cdot 3+35/4=71/4\): that is the earlier exact-contact child value, **not** a printed-complete configuration.
+
+Parent control reproduces the frozen table: R063 printed-complete \(N=0\); R009/R050 unique \((8,8)\). The comparison target **19** is the earlier flat/coarse survivor, not a printed-complete parent tree.
+
+\(I'_m\) is Xu Cor 5.3’s expression on child packets (DATA). Child Thm 4.7 is still **OPEN** as a theorem. R009/R050 complete \(I'_m\) is \(7\) and \(11/2\), not the parent \(I_m=8\).
+
+Report: `xmodel/r063-child-pattern-grok46-20260906.md` (body 7410 B, seal PASS). Drivers: `box/r063-child-20260906/`. Replay: `python3 box/r063-child-20260906/r063_child.py`. No `charge_basis` line.
+DIVERT path=xmodel/r063-child-pattern-grok46-20260906.md status=CLEAN_SEALED body_bytes=7410 body_sha256=86d5cfb4759afcaa38993497223634bc9d3f46bcb82501277fa17e8cc1f38b17

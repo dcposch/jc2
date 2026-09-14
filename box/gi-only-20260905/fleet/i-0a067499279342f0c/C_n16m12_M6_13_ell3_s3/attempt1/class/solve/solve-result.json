@@ -1,0 +1,652 @@
+{
+  "builder_run": {
+    "command": [
+      "/home/ubuntu/jc2/box/gi-only-20260905/time_singular.sh",
+      "--cpus=1",
+      "--threads=1",
+      "--flint-threads=1",
+      "--no-rc",
+      "-q",
+      "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/builders/C_n16m12_M6_13_ell3_s3_G_builder.sing"
+    ],
+    "command_shell_quoted": "/home/ubuntu/jc2/box/gi-only-20260905/time_singular.sh --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/builders/C_n16m12_M6_13_ell3_s3_G_builder.sing",
+    "cwd": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3",
+    "elapsed_seconds": 1237.321293,
+    "finished_utc": "2026-09-05T15:51:06Z",
+    "gnu_time_elapsed": null,
+    "peak_rss_kib": 6069248,
+    "peak_rss_source": "sampled_process_group_100ms",
+    "returncode": -15,
+    "rss_sample_count": 11535,
+    "sampled_process_group_peak_rss_kib": 6069248,
+    "started_utc": "2026-09-05T15:30:29Z",
+    "stderr": {
+      "bytes": 0,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/solve/builder.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 35,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/solve/builder.stdout",
+      "sha256": "295a3fce39ddde7bf36b00e4910fe9b47ac0231b248b48dfbd402af6ec1d4f82"
+    },
+    "timed_out": false,
+    "watchdog_seconds": 3600
+  },
+  "canonical_stem": "C_n16m12_M6_13_ell3_s3_G",
+  "class_id": "C_n16m12_M6_13_ell3_s3",
+  "class_uniform_chart": true,
+  "finished_utc": "2026-09-05T15:51:06Z",
+  "inputs": {
+    "builder": {
+      "bytes": 24652,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/builders/C_n16m12_M6_13_ell3_s3_G_builder.sing",
+      "sha256": "8a71b2ba0080df32543fa443fc81415ade8ba5a1153e374cbafbc68bee3ed11c"
+    },
+    "class_json": {
+      "bytes": 16341,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/class.json",
+      "sha256": "42cc1c349d57fe993c088ee5fc07907089dd6383bb98e5239e1964e939690986"
+    },
+    "meta_prebuild": {
+      "bytes": 33705,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/meta/C_n16m12_M6_13_ell3_s3_G.json",
+      "sha256": "4202257823f7efd8c5d65df5d658bb307d3a2bf28a0e120aaa1ad0c885fbd495"
+    }
+  },
+  "modular_policy": "SCREEN_ONLY_NEVER_PROMOTED",
+  "one_chart_per_class_suffices": true,
+  "promotion_scope": "EXACT_Q_ONLY",
+  "schema": "moh-gi-only-exact-q-solve-v1",
+  "solver_variables_with_T": 456,
+  "started_utc": "2026-09-05T15:30:29Z",
+  "state": "FINISHED",
+  "unknowns_without_T": 455,
+  "verdict": "COMPUTE_BOUND",
+  "verdict_detail": "builder did not produce coefficient rows within its guarded run",
+  "verification": {
+    "class_result": {
+      "blockwise_subset_verified": true,
+      "canonical_stem": "C_n16m12_M6_13_ell3_s3_G",
+      "class_id": "C_n16m12_M6_13_ell3_s3",
+      "class_uniform_one_chart_suffices": true,
+      "fibres": [
+        {
+          "blockwise_subset_verified": true,
+          "chain_to_production": "frozen native S_i --zero D_i\\G_i--> native G_i companion --sign isomorphism--> literal J(P,Q) production G_i",
+          "commutation": "differentiation, coefficient extraction, and monic h-adic division commute with the zero-coordinate map",
+          "kept_parameter_count": 455,
+          "literal_PQ_S_to_production_G_executable_tail_byte_identical_after_setup": true,
+          "native_executable_tail_byte_identical_after_setup": true,
+          "native_orientation_verified": true,
+          "native_zero_specialization": {
+            "codomain": "G_i native companion: coeff(J(Q,P)-c_native*x^ell)+<T_native*c_native-1>",
+            "domain": "frozen emitted S_i native ideal: coeff(J(Q,P)-c_source*x^ell)+<T_source*c_source-1>",
+            "map": "G_i coordinates identity; c_source->c_native; T_source->T_native; every D_i\\G_i coordinate->0",
+            "verified": true
+          },
+          "no_coordinate_only_orientation_overclaim": true,
+          "production_coordinate_only_specialization": {
+            "codomain": "literal P-first production G_i chart",
+            "domain": "emitted source-complete S_i literal P-first presentation: coeff(J(P,Q)-c*x^ell)+<T*c-1>",
+            "map": "G_i coordinates,c,T identity; every D_i\\G_i coordinate->0",
+            "orientation_change": "none",
+            "verified": true
+          },
+          "production_coordinate_only_specialization_verified": true,
+          "production_orientation_verified": true,
+          "production_sign_isomorphism": {
+            "codomain": "G_i literal P-first production chart",
+            "domain": "G_i native Q-first companion",
+            "inverse_image": "T_literal*c_literal-1",
+            "map": "coefficient coordinates identity; c_native->-c_literal; T_native->-T_literal",
+            "target_image": "-(J(P,Q)-c_literal*x^ell)",
+            "verified": true
+          },
+          "production_sign_isomorphism_verified": true,
+          "set_to_zero_count": 32,
+          "specialization_verified": true,
+          "status": "PASS",
+          "stem": "C_n16m12_M6_13_ell3_s3_V1_1"
+        },
+        {
+          "blockwise_subset_verified": true,
+          "chain_to_production": "frozen native S_i --zero D_i\\G_i--> native G_i companion --sign isomorphism--> literal J(P,Q) production G_i",
+          "commutation": "differentiation, coefficient extraction, and monic h-adic division commute with the zero-coordinate map",
+          "kept_parameter_count": 455,
+          "literal_PQ_S_to_production_G_executable_tail_byte_identical_after_setup": true,
+          "native_executable_tail_byte_identical_after_setup": true,
+          "native_orientation_verified": true,
+          "native_zero_specialization": {
+            "codomain": "G_i native companion: coeff(J(Q,P)-c_native*x^ell)+<T_native*c_native-1>",
+            "domain": "frozen emitted S_i native ideal: coeff(J(Q,P)-c_source*x^ell)+<T_source*c_source-1>",
+            "map": "G_i coordinates identity; c_source->c_native; T_source->T_native; every D_i\\G_i coordinate->0",
+            "verified": true
+          },
+          "no_coordinate_only_orientation_overclaim": true,
+          "production_coordinate_only_specialization": {
+            "codomain": "literal P-first production G_i chart",
+            "domain": "emitted source-complete S_i literal P-first presentation: coeff(J(P,Q)-c*x^ell)+<T*c-1>",
+            "map": "G_i coordinates,c,T identity; every D_i\\G_i coordinate->0",
+            "orientation_change": "none",
+            "verified": true
+          },
+          "production_coordinate_only_specialization_verified": true,
+          "production_orientation_verified": true,
+          "production_sign_isomorphism": {
+            "codomain": "G_i literal P-first production chart",
+            "domain": "G_i native Q-first companion",
+            "inverse_image": "T_literal*c_literal-1",
+            "map": "coefficient coordinates identity; c_native->-c_literal; T_native->-T_literal",
+            "target_image": "-(J(P,Q)-c_literal*x^ell)",
+            "verified": true
+          },
+          "production_sign_isomorphism_verified": true,
+          "set_to_zero_count": 18,
+          "specialization_verified": true,
+          "status": "PASS",
+          "stem": "C_n16m12_M6_13_ell3_s3_V1_3"
+        },
+        {
+          "blockwise_subset_verified": true,
+          "chain_to_production": "frozen native S_i --zero D_i\\G_i--> native G_i companion --sign isomorphism--> literal J(P,Q) production G_i",
+          "commutation": "differentiation, coefficient extraction, and monic h-adic division commute with the zero-coordinate map",
+          "kept_parameter_count": 455,
+          "literal_PQ_S_to_production_G_executable_tail_byte_identical_after_setup": true,
+          "native_executable_tail_byte_identical_after_setup": true,
+          "native_orientation_verified": true,
+          "native_zero_specialization": {
+            "codomain": "G_i native companion: coeff(J(Q,P)-c_native*x^ell)+<T_native*c_native-1>",
+            "domain": "frozen emitted S_i native ideal: coeff(J(Q,P)-c_source*x^ell)+<T_source*c_source-1>",
+            "map": "G_i coordinates identity; c_source->c_native; T_source->T_native; every D_i\\G_i coordinate->0",
+            "verified": true
+          },
+          "no_coordinate_only_orientation_overclaim": true,
+          "production_coordinate_only_specialization": {
+            "codomain": "literal P-first production G_i chart",
+            "domain": "emitted source-complete S_i literal P-first presentation: coeff(J(P,Q)-c*x^ell)+<T*c-1>",
+            "map": "G_i coordinates,c,T identity; every D_i\\G_i coordinate->0",
+            "orientation_change": "none",
+            "verified": true
+          },
+          "production_coordinate_only_specialization_verified": true,
+          "production_orientation_verified": true,
+          "production_sign_isomorphism": {
+            "codomain": "G_i literal P-first production chart",
+            "domain": "G_i native Q-first companion",
+            "inverse_image": "T_literal*c_literal-1",
+            "map": "coefficient coordinates identity; c_native->-c_literal; T_native->-T_literal",
+            "target_image": "-(J(P,Q)-c_literal*x^ell)",
+            "verified": true
+          },
+          "production_sign_isomorphism_verified": true,
+          "set_to_zero_count": 0,
+          "specialization_verified": true,
+          "status": "PASS",
+          "stem": "C_n16m12_M6_13_ell3_s3_V4_3"
+        }
+      ],
+      "fresh_frozen_inventory_audits": [
+        {
+          "G_unknowns_with_T": 456,
+          "G_unknowns_without_T": 455,
+          "K": 4,
+          "blocks": [
+            {
+              "D_count": 31,
+              "D_minus_G_count": 12,
+              "G_count": 24,
+              "G_subset_S": true,
+              "S_count": 36,
+              "S_minus_G_count": 12,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "h",
+              "i": 1,
+              "specialize_to_zero": [
+                "h_3_3",
+                "h_4_3",
+                "h_5_3",
+                "h_6_3",
+                "h_7_3",
+                "h_8_3",
+                "h_9_3",
+                "h_10_3",
+                "h_5_2",
+                "h_6_2",
+                "h_7_2",
+                "h_8_2"
+              ]
+            },
+            {
+              "D_count": 31,
+              "D_minus_G_count": 12,
+              "G_count": 24,
+              "G_subset_S": true,
+              "S_count": 36,
+              "S_minus_G_count": 12,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_1",
+              "i": 1,
+              "specialize_to_zero": [
+                "A1_3_3",
+                "A1_4_3",
+                "A1_5_3",
+                "A1_6_3",
+                "A1_7_3",
+                "A1_8_3",
+                "A1_9_3",
+                "A1_10_3",
+                "A1_5_2",
+                "A1_6_2",
+                "A1_7_2",
+                "A1_8_2"
+              ]
+            },
+            {
+              "D_count": 46,
+              "D_minus_G_count": 4,
+              "G_count": 56,
+              "G_subset_S": true,
+              "S_count": 60,
+              "S_minus_G_count": 4,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_2",
+              "i": 2,
+              "specialize_to_zero": [
+                "A2_11_3",
+                "A2_12_3",
+                "A2_13_3",
+                "A2_14_3"
+              ]
+            },
+            {
+              "D_count": 61,
+              "D_minus_G_count": 0,
+              "G_count": 88,
+              "G_subset_S": true,
+              "S_count": 88,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_3",
+              "i": 3,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 75,
+              "D_minus_G_count": 0,
+              "G_count": 119,
+              "G_subset_S": true,
+              "S_count": 119,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_4",
+              "i": 4,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 46,
+              "D_minus_G_count": 4,
+              "G_count": 56,
+              "G_subset_S": true,
+              "S_count": 60,
+              "S_minus_G_count": 4,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "beta_2",
+              "i": 2,
+              "specialize_to_zero": [
+                "B2_11_3",
+                "B2_12_3",
+                "B2_13_3",
+                "B2_14_3"
+              ]
+            },
+            {
+              "D_count": 60,
+              "D_minus_G_count": 0,
+              "G_count": 87,
+              "G_subset_S": true,
+              "S_count": 87,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "beta_3",
+              "i": 3,
+              "specialize_to_zero": []
+            }
+          ],
+          "blockwise_subset_verified": true,
+          "class_id": "C_n16m12_M6_13_ell3_s3",
+          "d": "2",
+          "e": 4,
+          "ell": 3,
+          "q": 3,
+          "source_complete_unknowns_without_T": 487,
+          "source_meta": "box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/classes/C_n16m12_M6_13_ell3_s3/meta/C_n16m12_M6_13_ell3_s3_V1_1.json",
+          "source_minus_G_unknowns": 32,
+          "specialization_coordinate_count": 32,
+          "specialization_map": {
+            "T_native": "T_native",
+            "c_native": "c_native",
+            "codomain": "G_i-only native Q-first specialization companion",
+            "domain": "frozen native S_i=D_i union G_i chart (J(Q,P), post terminal-constant gauges)",
+            "kept_coordinates": "identity",
+            "set_to_zero": [
+              "h_3_3",
+              "h_4_3",
+              "h_5_3",
+              "h_6_3",
+              "h_7_3",
+              "h_8_3",
+              "h_9_3",
+              "h_10_3",
+              "h_5_2",
+              "h_6_2",
+              "h_7_2",
+              "h_8_2",
+              "A1_3_3",
+              "A1_4_3",
+              "A1_5_3",
+              "A1_6_3",
+              "A1_7_3",
+              "A1_8_3",
+              "A1_9_3",
+              "A1_10_3",
+              "A1_5_2",
+              "A1_6_2",
+              "A1_7_2",
+              "A1_8_2",
+              "A2_11_3",
+              "A2_12_3",
+              "A2_13_3",
+              "A2_14_3",
+              "B2_11_3",
+              "B2_12_3",
+              "B2_13_3",
+              "B2_14_3"
+            ],
+            "set_to_zero_is_exactly_D_minus_G": true
+          },
+          "status": "PASS",
+          "stem": "C_n16m12_M6_13_ell3_s3_V1_1"
+        },
+        {
+          "G_unknowns_with_T": 456,
+          "G_unknowns_without_T": 455,
+          "K": 4,
+          "blocks": [
+            {
+              "D_count": 28,
+              "D_minus_G_count": 7,
+              "G_count": 24,
+              "G_subset_S": true,
+              "S_count": 31,
+              "S_minus_G_count": 7,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "h",
+              "i": 1,
+              "specialize_to_zero": [
+                "h_3_3",
+                "h_4_3",
+                "h_5_3",
+                "h_6_3",
+                "h_7_3",
+                "h_5_2",
+                "h_6_2"
+              ]
+            },
+            {
+              "D_count": 28,
+              "D_minus_G_count": 7,
+              "G_count": 24,
+              "G_subset_S": true,
+              "S_count": 31,
+              "S_minus_G_count": 7,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_1",
+              "i": 1,
+              "specialize_to_zero": [
+                "A1_3_3",
+                "A1_4_3",
+                "A1_5_3",
+                "A1_6_3",
+                "A1_7_3",
+                "A1_5_2",
+                "A1_6_2"
+              ]
+            },
+            {
+              "D_count": 50,
+              "D_minus_G_count": 2,
+              "G_count": 56,
+              "G_subset_S": true,
+              "S_count": 58,
+              "S_minus_G_count": 2,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_2",
+              "i": 2,
+              "specialize_to_zero": [
+                "A2_11_3",
+                "A2_12_3"
+              ]
+            },
+            {
+              "D_count": 72,
+              "D_minus_G_count": 0,
+              "G_count": 88,
+              "G_subset_S": true,
+              "S_count": 88,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_3",
+              "i": 3,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 93,
+              "D_minus_G_count": 0,
+              "G_count": 119,
+              "G_subset_S": true,
+              "S_count": 119,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_4",
+              "i": 4,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 50,
+              "D_minus_G_count": 2,
+              "G_count": 56,
+              "G_subset_S": true,
+              "S_count": 58,
+              "S_minus_G_count": 2,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "beta_2",
+              "i": 2,
+              "specialize_to_zero": [
+                "B2_11_3",
+                "B2_12_3"
+              ]
+            },
+            {
+              "D_count": 71,
+              "D_minus_G_count": 0,
+              "G_count": 87,
+              "G_subset_S": true,
+              "S_count": 87,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "beta_3",
+              "i": 3,
+              "specialize_to_zero": []
+            }
+          ],
+          "blockwise_subset_verified": true,
+          "class_id": "C_n16m12_M6_13_ell3_s3",
+          "d": "2",
+          "e": 4,
+          "ell": 3,
+          "q": 3,
+          "source_complete_unknowns_without_T": 473,
+          "source_meta": "box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/classes/C_n16m12_M6_13_ell3_s3/meta/C_n16m12_M6_13_ell3_s3_V1_3.json",
+          "source_minus_G_unknowns": 18,
+          "specialization_coordinate_count": 18,
+          "specialization_map": {
+            "T_native": "T_native",
+            "c_native": "c_native",
+            "codomain": "G_i-only native Q-first specialization companion",
+            "domain": "frozen native S_i=D_i union G_i chart (J(Q,P), post terminal-constant gauges)",
+            "kept_coordinates": "identity",
+            "set_to_zero": [
+              "h_3_3",
+              "h_4_3",
+              "h_5_3",
+              "h_6_3",
+              "h_7_3",
+              "h_5_2",
+              "h_6_2",
+              "A1_3_3",
+              "A1_4_3",
+              "A1_5_3",
+              "A1_6_3",
+              "A1_7_3",
+              "A1_5_2",
+              "A1_6_2",
+              "A2_11_3",
+              "A2_12_3",
+              "B2_11_3",
+              "B2_12_3"
+            ],
+            "set_to_zero_is_exactly_D_minus_G": true
+          },
+          "status": "PASS",
+          "stem": "C_n16m12_M6_13_ell3_s3_V1_3"
+        },
+        {
+          "G_unknowns_with_T": 456,
+          "G_unknowns_without_T": 455,
+          "K": 4,
+          "blocks": [
+            {
+              "D_count": 9,
+              "D_minus_G_count": 0,
+              "G_count": 24,
+              "G_subset_S": true,
+              "S_count": 24,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "h",
+              "i": 1,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 9,
+              "D_minus_G_count": 0,
+              "G_count": 24,
+              "G_subset_S": true,
+              "S_count": 24,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_1",
+              "i": 1,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 20,
+              "D_minus_G_count": 0,
+              "G_count": 56,
+              "G_subset_S": true,
+              "S_count": 56,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_2",
+              "i": 2,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 31,
+              "D_minus_G_count": 0,
+              "G_count": 88,
+              "G_subset_S": true,
+              "S_count": 88,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_3",
+              "i": 3,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 40,
+              "D_minus_G_count": 0,
+              "G_count": 119,
+              "G_subset_S": true,
+              "S_count": 119,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "alpha_4",
+              "i": 4,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 20,
+              "D_minus_G_count": 0,
+              "G_count": 56,
+              "G_subset_S": true,
+              "S_count": 56,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "beta_2",
+              "i": 2,
+              "specialize_to_zero": []
+            },
+            {
+              "D_count": 30,
+              "D_minus_G_count": 0,
+              "G_count": 87,
+              "G_subset_S": true,
+              "S_count": 87,
+              "S_minus_G_count": 0,
+              "S_minus_G_equals_D_minus_G": true,
+              "block": "beta_3",
+              "i": 3,
+              "specialize_to_zero": []
+            }
+          ],
+          "blockwise_subset_verified": true,
+          "class_id": "C_n16m12_M6_13_ell3_s3",
+          "d": "2",
+          "e": 4,
+          "ell": 3,
+          "q": 3,
+          "source_complete_unknowns_without_T": 455,
+          "source_meta": "box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/classes/C_n16m12_M6_13_ell3_s3/meta/C_n16m12_M6_13_ell3_s3_V4_3.json",
+          "source_minus_G_unknowns": 0,
+          "specialization_coordinate_count": 0,
+          "specialization_map": {
+            "T_native": "T_native",
+            "c_native": "c_native",
+            "codomain": "G_i-only native Q-first specialization companion",
+            "domain": "frozen native S_i=D_i union G_i chart (J(Q,P), post terminal-constant gauges)",
+            "kept_coordinates": "identity",
+            "set_to_zero": [],
+            "set_to_zero_is_exactly_D_minus_G": true
+          },
+          "status": "PASS",
+          "stem": "C_n16m12_M6_13_ell3_s3_V4_3"
+        }
+      ],
+      "native_zero_specialization_verified": true,
+      "orientation_verified": true,
+      "production_coordinate_only_specialization_verified": true,
+      "production_sign_isomorphism_verified": true,
+      "specialization_verified": true,
+      "status": "PASS",
+      "unknowns_with_T": 456,
+      "unknowns_without_T": 455
+    },
+    "receipt": {
+      "bytes": 87638,
+      "path": "/home/ubuntu/jc2/box/gi-only-20260905/verification.json",
+      "sha256": "ca9a0a1217f6beee2b40c704d1e350e5d65fcddf74779067caa91412c0f6e676"
+    }
+  }
+}

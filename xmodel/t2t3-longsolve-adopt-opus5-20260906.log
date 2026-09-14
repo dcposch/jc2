@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+**LAUNCHED[(99,66) δ=2 long solve; harvest due ~+20 h]**
+
+## What I found and did
+
+**Adoption resolved the stated unknown.** Worker `i-07e1212591a6acae9` (172.30.0.63, r7i.16xlarge) was up. The predecessor **had** built patched msolve and **had** started the input regeneration (still running, 53.9 GB RSS), but **had not started either solve** — `runs/` held only build receipts.
+
+**Inputs.** I let the running build finish rather than restarting it (rc 0, 1,184.095 s / 89,535,620 KiB — an independent reproduction of the frozen 1,185.54 s / 89,535,404 KiB). Both required SHAs verify **exactly**:
+
+- `99-delta2.ms` → `7f593b87…b572` ✓ (271,944,646 B)
+- `99-delta2-slimgb.sing` → `354b9293…ab7c` ✓ (357,263,336 B), derived by rewriting the sole `ideal G=std(I);` at line 472 of the emitted `a604ed31…cbbc` base
+
+**Binary.** Did not rebuild — verified the existing `/tmp/msolve-patched/bin/msolve` (`da552c7c…530`) against the source tree directly: both patches present (4 int64 casts, 4 malloc/4 free, **0** residual VLAs).
+
+**Both solves running detached** since 08:25:46/08:25:49Z, 72,000 s wall, msolve `RLIMIT_AS` 400 GiB (verified in `/proc/self/limits`), Singular 200 GiB PGID RSS. msolve's F4 table reproduces the frozen run's matrix dimensions, densities, and new/zero counts exactly through round 7; Singular reached `BEGIN_STD`. Worker **not** terminated.
+
+Two things worth flagging:
+
+- **Co-run headroom is unmitigated.** Physical RAM is 495 GiB; the two caps sum to 600 GiB. At the predecessor's 9,000 s stop the pair held ~111 + ~130 GB. Over a cap eight times longer the OOM killer could fire before either configured cap. I left the caps as specified — the harvest must read `runner.rc`/`caprun.json` to tell a cap stop from an OOM kill.
+- msolve's `-v 2` stream goes to **stderr**, not stdout, so `solver.stdout` staying at 0 bytes is not a stall. Saved to memory.
+
+Report `xmodel/t2t3-longsolve-adopt-opus5-20260906.md` sealed (body 8,151 B, `db81480f…c0b6`, basis `911f852e`); host custody `box/t2t3-longsolve-20260906/custody.json` (7,133 B).
+DIVERT path=xmodel/t2t3-longsolve-adopt-opus5-20260906.md status=CLEAN_SEALED body_bytes=8151 body_sha256=db81480f272f58d14e8893058fcd7a67cda191910efdcc9a172852ee643dc0b6

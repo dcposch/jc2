@@ -1,0 +1,39 @@
+// (E2) divisibility identities, exact Q.  D_G(A) := J(A,G) = A_x G_y - A_y G_x.
+ring R=0,(x,y,g0,g1,g2,g3,g4,g5,h0,h1,h2,h3),dp;
+proc JJ(poly A, poly B){ return(diff(A,x)*diff(B,y)-diff(A,y)*diff(B,x)); }
+// generic G (symbolic coefficients) and generic H
+poly G = g0+g1*x+g2*y+g3*x2+g4*x*y+g5*y2;
+poly H = h0+h1*x+h2*y+h3*x*y;
+int k;
+"MARK --- identity  D_G^2(H^k) = k*H^(k-2)*[ (k-1)*(D_G H)^2 + H*D_G^2 H ] ---";
+for(k=2;k<=6;k++){
+  poly L = JJ(JJ(H^k,G),G);
+  poly Rr = k*H^(k-2)*((k-1)*JJ(H,G)^2 + H*JJ(JJ(H,G),G));
+  "MARK k="+string(k)+" residual="+string(L-Rr);
+}
+"MARK --- factor-multiplicity law:  Q = s^e*U  =>  s^(e-2) | D_G^2 Q ---";
+ring R2=0,(x,y,a0,a1,a2,b0,b1,b2,c0,c1,c2),dp;
+proc J2(poly A, poly B){ return(diff(A,x)*diff(B,y)-diff(A,y)*diff(B,x)); }
+poly G2 = c0+c1*x+c2*y+x2*y;
+poly s  = a0+a1*x+a2*y;
+poly U  = b0+b1*x+b2*y;
+int e;
+for(e=2;e<=5;e++){
+  poly Q = s^e*U;
+  poly W = J2(J2(Q,G2),G2);
+  poly q = W/s^(e-2);
+  "MARK e="+string(e)+"  s^(e-2) divides D_G^2(s^e*U) : "+string(q*s^(e-2)-W==0);
+}
+"MARK --- NEGATIVE CONTROL: s^(e-1) should NOT divide in general ---";
+for(e=3;e<=4;e++){
+  poly Q = s^e*U;
+  poly W = J2(J2(Q,G2),G2);
+  poly q = W/s^(e-1);
+  "MARK e="+string(e)+"  s^(e-1) divides? "+string(q*s^(e-1)-W==0)+"  (expect 0 = does not divide)";
+}
+"MARK --- F squarefree control:  D_G(s^e*U)=1 forces e<=1 ---";
+for(e=2;e<=3;e++){
+  poly Q = s^e*U;  poly W = J2(Q,G2);  poly q = W/s^(e-1);
+  "MARK e="+string(e)+"  s^(e-1) | D_G(s^e U) : "+string(q*s^(e-1)-W==0);
+}
+exit;

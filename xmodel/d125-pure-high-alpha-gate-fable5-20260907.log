@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete. STOP/IDLE.
+
+**Verdict: all six targets CONFIRMED at the charged scope; no GAP in the producer theorem.** The report is at `xmodel/d125-pure-high-alpha-gate-fable5-20260907.md`, ends with the standalone marker, has no Seal section and no exit-basis line. Evidence is under `box/d125-pure-high-alpha-gate-fable5-20260907/` with a generated `custody.json`.
+
+**What I verified independently**
+
+- Source scope. The moving reference is exactly the 14f family at t=−3 plus (t+3)S, and every hypothesis used is a 14v conclusion or a 14c parity/polygon bound. The three alpha regimes differ only in whether the scalar alpha_j vanishes. Low rows and [p]F=alpha·h are retained and never used as zero.
+- Finite division. The unit leading monomial and the replacement rule were rederived. Each step strictly lowers g-degree and never raises degree or weight. The injectivity lemma, q>j including q=∞, and the parity of P0,P1,P2 and Q0..Q4 all follow without ordinariness or monic-p division.
+- Newton regularity. Implicit corrections start strictly after each coefficient's own order, so they never reach an initial form. I computed the first-order implicit coefficients, and they do have poles at O, so the producer's refusal to assert their regularity is correct and harmless.
+- All B terms. Identity (4) was rederived symbolically from the 14v definitions. Below 5η only the scalar delta and the odd regular Q0 residue can appear. The Z⁵ term is exact, and no Z⁴ term exists.
+- Target and poles. The chain-rule identity is algebraic in L[[s,z]], the target initial is −5κ³/(27p²) at order exactly 3m, and all six order comparisons are retained. At O, ord(g)=1, ord(p)=3, D=(1−p²)/g²·d/dg, pole 2 versus pole 6.
+- Degree 3/5 elimination. All coefficient rows were rederived with d0 and f0 retained. f0 never enters. The shift v→v+3d0/5 gives system (6) exactly without parity. First integral and the quartic with leading coefficient 7/3 both check.
+
+**Replay.** Twelve capped runs plus the scratch `--record` run: positive stdout byte-identical to the charged witness, all five mutation markers fire with exit 1, return codes and stdout hashes match the charged replay record, and stderr hashes differ only through path-dependent tracebacks. Both copied scripts hashed identical before and after. Input pins are identical pre and post.
+
+**Evidence-description defect, scoped separately.** The checker's "Parity is indispensable" comment and its (g+p)³ toy are vacuous and mis-describe the lemma. The witness pole-order field is a recorded constant, not a computed check. Neither affects theorem validity.
+
+Root retains launch and promotion authority. Nothing was written after the report closed.
+DIVERT path=xmodel/d125-pure-high-alpha-gate-fable5-20260907.md status=CLEAN body_bytes=14547 body_sha256=8b05b9c82d2fb1ec170282b3d505269550bbbbf4852942c3030eed2b88c524d0

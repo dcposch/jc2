@@ -1,0 +1,298 @@
+{
+  "schema": "TERMINAL-METADATA-BINDING-CHECK/v1",
+  "scope": "metadata only; no verifier/math/fixture replay",
+  "records": [
+    {
+      "name": "gate-disabled",
+      "checks": {
+        "authority_pin": true,
+        "telemetry_pin": true,
+        "input_vector": true,
+        "full_child_argv": true,
+        "full_authority_parent_argv": true,
+        "telemetry_child_hash": true,
+        "before_stored_cutoff": true,
+        "margin15": true,
+        "stdout_pin": true,
+        "stderr_pin": true
+      },
+      "wall_elapsed_seconds": 0.127025306,
+      "sampled_peak_rss_bytes": 29790208,
+      "status": "NORMAL_EXIT",
+      "resource": null,
+      "child_pid_pgid": 7163,
+      "start_identity": "boot=5cfeaa6b-7b63-4476-aeb3-84dea2b6714e;start_ticks=16633",
+      "authority_sha256": "bcc2fb345c13ca3968b2022c1c92e4a74db2b4793ecc9818f12599ee1c71b974",
+      "telemetry_sha256": "b422b262b1f724460b71f6f37dedb3908d528ceba4de97191f3b6a8288c32f67"
+    },
+    {
+      "name": "gate-wronghost",
+      "checks": {
+        "authority_pin": true,
+        "telemetry_pin": true,
+        "input_vector": true,
+        "full_child_argv": true,
+        "full_authority_parent_argv": true,
+        "telemetry_child_hash": true,
+        "before_stored_cutoff": true,
+        "margin15": true,
+        "stdout_pin": true,
+        "stderr_pin": true
+      },
+      "wall_elapsed_seconds": 0.121034208,
+      "sampled_peak_rss_bytes": 30068736,
+      "status": "NORMAL_EXIT",
+      "resource": null,
+      "child_pid_pgid": 7168,
+      "start_identity": "boot=5cfeaa6b-7b63-4476-aeb3-84dea2b6714e;start_ticks=16655",
+      "authority_sha256": "a95d9e102926269dbd03ed7f0037fe81b662786a94499c05e8b95ebe0752a286",
+      "telemetry_sha256": "07e9a08fc0ef3621cb719016e36204dfcbdecfde89b702cc36c2ff4e4eaa01a2"
+    },
+    {
+      "name": "gate-argv",
+      "checks": {
+        "authority_pin": true,
+        "telemetry_pin": true,
+        "input_vector": true,
+        "full_child_argv": true,
+        "full_authority_parent_argv": true,
+        "telemetry_child_hash": true,
+        "before_stored_cutoff": true,
+        "margin15": true,
+        "stdout_pin": true,
+        "stderr_pin": true
+      },
+      "wall_elapsed_seconds": 0.122171066,
+      "sampled_peak_rss_bytes": 30121984,
+      "status": "NORMAL_EXIT",
+      "resource": null,
+      "child_pid_pgid": 7173,
+      "start_identity": "boot=5cfeaa6b-7b63-4476-aeb3-84dea2b6714e;start_ticks=16676",
+      "authority_sha256": "295ffce37f7e4371200cff8470c29df891cb8a3beb45a92c09bb9e3f78263807",
+      "telemetry_sha256": "638805ac8f1c6a1f43a1861193a42cd2aec62b752ad3c89f0184249e1cc621f0"
+    },
+    {
+      "name": "gate-cap",
+      "checks": {
+        "authority_pin": true,
+        "telemetry_pin": true,
+        "input_vector": true,
+        "full_child_argv": true,
+        "full_authority_parent_argv": true,
+        "telemetry_child_hash": true,
+        "before_stored_cutoff": true,
+        "margin15": true,
+        "stdout_pin": true,
+        "stderr_pin": true
+      },
+      "wall_elapsed_seconds": 0.121781541,
+      "sampled_peak_rss_bytes": 29974528,
+      "status": "NORMAL_EXIT",
+      "resource": null,
+      "child_pid_pgid": 7178,
+      "start_identity": "boot=5cfeaa6b-7b63-4476-aeb3-84dea2b6714e;start_ticks=16698",
+      "authority_sha256": "adb81f0f7dfa5b200eff7c0716bd852596c331a819ec70af557353eb85c2cff3",
+      "telemetry_sha256": "1293c4ff758b1e4fa8427480339ff7ac42e569ddca38f939462371f2209d1e1a"
+    },
+    {
+      "name": "gate-missing-input",
+      "checks": {
+        "authority_pin": true,
+        "telemetry_pin": true,
+        "input_vector": true,
+        "full_child_argv": true,
+        "full_authority_parent_argv": true,
+        "telemetry_child_hash": true,
+        "before_stored_cutoff": true,
+        "margin15": true,
+        "stdout_pin": true,
+        "stderr_pin": true
+      },
+      "wall_elapsed_seconds": 0.121806488,
+      "sampled_peak_rss_bytes": 30220288,
+      "status": "NORMAL_EXIT",
+      "resource": null,
+      "child_pid_pgid": 7183,
+      "start_identity": "boot=5cfeaa6b-7b63-4476-aeb3-84dea2b6714e;start_ticks=16719",
+      "authority_sha256": "4a543ea8c5ed8233bff845771d45c4412a61f67cbc19b8948d651b5872a286de",
+      "telemetry_sha256": "e9d35048c4e13171b73d71246377ee1ed2ac112ea3d3fe6eb9ddde551987da84"
+    },
+    {
+      "name": "gate-valid",
+      "checks": {
+        "authority_pin": true,
+        "telemetry_pin": true,
+        "input_vector": true,
+        "full_child_argv": true,
+        "full_authority_parent_argv": true,
+        "telemetry_child_hash": true,
+        "before_stored_cutoff": true,
+        "margin15": true,
+        "stdout_pin": true,
+        "stderr_pin": true
+      },
+      "wall_elapsed_seconds": 0.065099746,
+      "sampled_peak_rss_bytes": 9166848,
+      "status": "NORMAL_EXIT",
+      "resource": null,
+      "child_pid_pgid": 7188,
+      "start_identity": "boot=5cfeaa6b-7b63-4476-aeb3-84dea2b6714e;start_ticks=16741",
+      "authority_sha256": "23ac0014853d2598cdbfa39fd33cd72ecccccac50a40a0c5b210f44321e8625e",
+      "telemetry_sha256": "56758a756e1b518467dbe111f3f47ac6157845cc4c846730ea1be0effec76209"
+    },
+    {
+      "name": "dummy-descendant",
+      "checks": {
+        "authority_pin": true,
+        "telemetry_pin": true,
+        "input_vector": true,
+        "full_child_argv": true,
+        "full_authority_parent_argv": true,
+        "telemetry_child_hash": true,
+        "before_stored_cutoff": true,
+        "margin15": true,
+        "stdout_pin": true,
+        "stderr_pin": true
+      },
+      "wall_elapsed_seconds": 0.389771827,
+      "sampled_peak_rss_bytes": 80072704,
+      "status": "RESOURCE_CAP",
+      "resource": "rss",
+      "child_pid_pgid": 7192,
+      "start_identity": "boot=5cfeaa6b-7b63-4476-aeb3-84dea2b6714e;start_ticks=16756",
+      "authority_sha256": "0dddf03211e5f4c4cbd52ff27bf0f1a4a974c71cab4f73674ea95f6f27a7442d",
+      "telemetry_sha256": "1cf044a5a1dced23982de205e5213602196751f110ddb3ec6ed0e74fd60ad1ed"
+    },
+    {
+      "name": "compatibility",
+      "checks": {
+        "authority_pin": true,
+        "telemetry_pin": true,
+        "input_vector": true,
+        "full_child_argv": true,
+        "full_authority_parent_argv": true,
+        "telemetry_child_hash": true,
+        "before_stored_cutoff": true,
+        "margin15": true,
+        "stdout_pin": true,
+        "stderr_pin": true
+      },
+      "wall_elapsed_seconds": 3.100202855,
+      "sampled_peak_rss_bytes": 34848768,
+      "status": "NORMAL_EXIT",
+      "resource": null,
+      "child_pid_pgid": 7206,
+      "start_identity": "boot=5cfeaa6b-7b63-4476-aeb3-84dea2b6714e;start_ticks=16805",
+      "authority_sha256": "5df53d63e022caefeb065cc02f2406b770a7c301bb49b84579a39e2aac42dfd1",
+      "telemetry_sha256": "4a4113cdebd8ad166c7d03951c3a307ac325b008111cf101cac38f6fa4fcaa61"
+    }
+  ],
+  "fixture_receipt_bindings": [
+    {
+      "name": "unit-positive",
+      "sha256": "49dca8d8f1950a5b59e5f7f90bd4e93d3ce32f7cd9aa2336623f10fd799a61f6",
+      "bytes": 17737,
+      "status": "VERIFIED-GENERIC-ZERO-QUOTIENT",
+      "reason": null,
+      "pin_and_size_match": true
+    },
+    {
+      "name": "unit-negative",
+      "sha256": "2774c191187a679e9b2af4e2b46be3c6304303612d22cf093005141b30444a7e",
+      "bytes": 17737,
+      "status": "EXPECTED-REJECTION",
+      "reason": "full 217-coordinate sum h_i f_i equals q^5",
+      "pin_and_size_match": true
+    },
+    {
+      "name": "separator-zero-positive",
+      "sha256": "6d50c266b57897edaf4bd053d6772132a566cae36d1e7574037113524c97d9dd",
+      "bytes": 3517,
+      "status": "VERIFIED-GENERIC-NONZERO-QUOTIENT",
+      "reason": null,
+      "pin_and_size_match": true
+    },
+    {
+      "name": "separator-normalization-negative",
+      "sha256": "6aa306727ed2f4073a531619540a2446e53e435bc4244b290846296a0d138631",
+      "bytes": 3517,
+      "status": "EXPECTED-REJECTION",
+      "reason": "dual target normalization equals one",
+      "pin_and_size_match": true
+    },
+    {
+      "name": "separator-T-positive",
+      "sha256": "e5fc84cd607e3c96a453a3f4f462441511b6747694f7d44ac1fe62b3dc01e948",
+      "bytes": 3539,
+      "status": "VERIFIED-GENERIC-NONZERO-QUOTIENT",
+      "reason": null,
+      "pin_and_size_match": true
+    },
+    {
+      "name": "separator-column-negative",
+      "sha256": "4b4b6d20e33814097e7ed85f3861f066c83e4a3873d0045b330ad4dd763c526e",
+      "bytes": 3539,
+      "status": "EXPECTED-REJECTION",
+      "reason": "dual column annihilation i=0 j=0 ell=0",
+      "pin_and_size_match": true
+    },
+    {
+      "name": "precision-positive",
+      "sha256": "5abf9ae4e156aab4fd48e31b50ddb97a8477ee7d8645258993f94f79fe7260b2",
+      "bytes": 17772,
+      "status": "VERIFIED-GENERIC-ZERO-QUOTIENT",
+      "reason": null,
+      "pin_and_size_match": true
+    },
+    {
+      "name": "high-T30-negative",
+      "sha256": "6cb044221b9b7894e8b7904f7fc893ca173dd7473255ee2f0f3127d842be21c9",
+      "bytes": 17772,
+      "status": "EXPECTED-REJECTION",
+      "reason": "full 217-coordinate sum h_i f_i equals q^5",
+      "pin_and_size_match": true
+    },
+    {
+      "name": "rounded-canonical-string-negative",
+      "sha256": "6b83bddf7d1112c8905cc88b629198283b406808dd45c5f9a33e78b692ac394e",
+      "bytes": 17772,
+      "status": "EXPECTED-REJECTION",
+      "reason": "full 217-coordinate sum h_i f_i equals q^5",
+      "pin_and_size_match": true
+    },
+    {
+      "name": "float-type-negative",
+      "sha256": "f3c5d8dcd66adab6dfee8f51c090b5e82ede2eaf812d1858f8690944ca6242ce",
+      "bytes": 17772,
+      "status": "EXPECTED-REJECTION",
+      "reason": "canonical rational strings only",
+      "pin_and_size_match": true
+    },
+    {
+      "name": "zero-guard-positive",
+      "sha256": "a7bde5399390c024f9bc7ffa5d6d2451385be99e3db55b2d59f359bf468654b2",
+      "bytes": 17668,
+      "status": "VERIFIED-GENERIC-ZERO-QUOTIENT",
+      "reason": null,
+      "pin_and_size_match": true
+    },
+    {
+      "name": "zero-guard-false-separator",
+      "sha256": "6180d226339f33945ff3a0a58489e0b7b9ddcab548366e58dce9413057048315",
+      "bytes": 3463,
+      "status": "EXPECTED-REJECTION",
+      "reason": "dual target normalization equals one",
+      "pin_and_size_match": true
+    }
+  ],
+  "batch_receipt_pin": true,
+  "counts_from_genuine_receipt": {
+    "flint_fmpq_constructors": 23,
+    "flint_matrix_constructors": 2,
+    "flint_rref_calls": 2,
+    "negatives": 7,
+    "positives": 5,
+    "verifier_calls": 12
+  },
+  "source_acceptance_absent": true
+}

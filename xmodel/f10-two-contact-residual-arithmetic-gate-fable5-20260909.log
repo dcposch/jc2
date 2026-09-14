@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+All work is complete at 22:10 UTC, before the 22:18:00 stop. Nothing was written after the marker.
+
+**Verdict: CONFIRMED on all four items, accepted at the producer's exact strengthened partial scope.** Astra's new theorem (paired-contact integrality plus residue 2 exclusion) holds. The report is at `xmodel/f10-two-contact-residual-arithmetic-gate-fable5-20260909.md`, with the read-scope file in the owned box directory. Both were written via apply_patch only, skeleton first, single standalone marker last.
+
+What I verified by hand from the charged formulas:
+
+- **A.** The seven A_z and eight B_z coefficients rebuilt from the 16l partitions match the producer's display and 17w term for term. The divided difference (3) recomputed exactly, including the constants 9, 26, 24, 14, 71, 154 and the s,p reductions of the cubic and quartic divided differences. Its V³ coefficient is 1/6, W² is absent, and every coefficient is a polynomial in s,p over 7-unit denominators. The valuation of y minus x never enters because it cancels in the polynomial identity.
+- **B.** With a<0, W=0 is impossible, and both unique-minimum cases give 2b=h+3a with no sign assumed on b. Then V³/6 is uniquely least in Dxy, so a≥0. Then W²/2 is uniquely least in A_x if b<0, so b≥0. Zero and infinite valuations are covered.
+- **C.** B_z constant has valuation exactly -1 at residues 0,1,2 while all nonconstant terms are integral. The r/j tables are exact: x≡2 for all r≡0 mod 7 (h=v7(r) arbitrary, j any multiple of 7 allowed), new classes (4,4),(5,5),(6,6), undecided complement 0,1,2,3 / 0,2,4,6 / 0,2,4,5. Only accepted 17y's negative case is composed, at r≡2.
+- **D.** Zero algebra including nilpotents follows through a number-field quotient of the finite guarded 17w algebra. The j=0 diagonal and single contacts survive. The residues 3..6 barrier is stated correctly, and no residual point, lift, uniform closure, source elimination or JC2 claim appears. The OPEN entry is an unexecuted one-case test, not an authorization.
+
+Smallest defect found: none mathematical. Statement (I) in the producer's section 1 omits "z≠2", which section 3 needs for finite h. This is harmless in the prescribed range, and at z=2 exactly A_2 forces W=0 anyway.
+
+Documentary: all eight hashes matched in the charged order, the producer's first 15044 bytes hash to its sealed body value, and its marker is unique. No opens raised, collisions empty, no Seal and no charge_basis line. The `.log` and `.run.v2` files beside the report were created by the harness at launch, not by me.
+DIVERT path=xmodel/f10-two-contact-residual-arithmetic-gate-fable5-20260909.md status=CLEAN body_bytes=12288 body_sha256=8c574c306c1a577552e9774492e634403233548f9806679e0ff0ac28ceb74d33

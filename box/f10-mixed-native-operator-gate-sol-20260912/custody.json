@@ -1,0 +1,23 @@
+{
+  "schema": "jc2.terminal-custody/v1",
+  "task": "f10-mixed-native-operator-gate-sol-20260912",
+  "status": "TERMINAL_BLOCKER",
+  "first_action_utc": "2026-09-12T22:50:23.268363883Z",
+  "custody_authored_utc": "2026-09-12T22:52:36.019415435Z",
+  "all_writers": "IDLE after custody publication; no further authored-file changes",
+  "verdict": "BLOCKER: /usr/bin/cat is invoked by the corrected operator commands but absent from the retained and appended native collector roots.",
+  "inputs_postpin_status": "MATCHED_ALL_SEVEN",
+  "outputs": {
+    "pins": {"path":"box/f10-mixed-native-operator-gate-sol-20260912/PINS.json","sha256":"cad2fda8dbdf103bf29e5ffa78d61fb649492382dc513389b01875e8d009a97e"},
+    "report": {"path":"xmodel/f10-mixed-native-operator-gate-sol-20260912.md","sha256":"8be88893db78c8c670bd3a0bbf8cd5ccacdec6c01de3d5438608aa82aea526d8"},
+    "manifest": {"path":"xmodel/f10-mixed-native-operator-gate-sol-20260912.md.artifact.json","sha256":"832e29435864a54d34af70b6303d428b3cd75eaa02962f56bc7c1effdae891d5"}
+  },
+  "verification": {
+    "expected_basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256": "832e29435864a54d34af70b6303d428b3cd75eaa02962f56bc7c1effdae891d5",
+    "artifact_finalize": "VERIFIED",
+    "report_readback": "WHOLE",
+    "manifest_readback": "WHOLE",
+    "pins_readback": "WHOLE"
+  }
+}

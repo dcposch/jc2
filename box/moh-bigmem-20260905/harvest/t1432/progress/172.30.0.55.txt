@@ -1,0 +1,32 @@
+UTC=2026-09-05T14:32:07Z
+--- ps ---
+   3176       20:00 11082612 99.8 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+--- files ---
+total 8220
+-rw-rw-r-- 1 ubuntu ubuntu       0 Sep  5 14:12 v38_p1073741827.err
+-rw-rw-r-- 1 ubuntu ubuntu     218 Sep  5 14:12 v38_p1073741827.out
+-rw-rw-r-- 1 ubuntu ubuntu    6638 Sep  5 14:31 v38_p1073741827.rss.log
+-rw-rw-r-- 1 ubuntu ubuntu 8401657 Sep  5 14:12 v38_p1073741827.sing
+--- rss last ---
+VmHWM:	10822488 kB
+VmRSS:	10822488 kB
+utc=2026-09-05T14:31:48Z
+pid=3176
+VmPeak:	11231188 kB
+VmSize:	11231188 kB
+VmHWM:	10955620 kB
+VmRSS:	10955620 kB
+--- out ---
+CONTROL_RING_PASS R
+CONTROL_EMPTY_PASS
+CONTROL_NONEMPTY_PASS
+MAIN_START equations=174 unknowns=111 char=1073741827 algorithm=std
+GG__RUN main START
+GG__GENERATOR_COUNT main 175
+GG__STD_BEGIN main
+//used time: 0.93 sec
+--- err tail ---
+--- log ---
+GUIDED_PIPELINE_START target=v38 rows=/home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv utc=2026-09-05T14:12:07Z
+GUIDED_START name=v38 gens=174 nvars=112 rows_sha=2b59ba92f2b889b09d38570f6f03bec865ede4d509e85c687f66f3033369254b
+MODULAR_START p=1073741827 timeout=10800 utc=2026-09-05T14:12:07Z

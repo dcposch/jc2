@@ -1,0 +1,71 @@
+{
+  "operator_reason": "ROOT authorized METHOD_ONLY stop: actual degree99 externally closed; no named open client justifies remaining16h. Not a solver mathematical verdict.",
+  "signal": "SIGTERM",
+  "snapshot_sha256": "ceef58df7ef723bd65822b245d536bfe38bdcec9b666d8c26ce01b7802ae8018",
+  "targets": [
+    {
+      "argv": [
+        "/tmp/msolve-patched/bin/msolve",
+        "-m",
+        "5000",
+        "-g",
+        "2",
+        "-t",
+        "64",
+        "-v",
+        "2",
+        "--random-seed",
+        "0",
+        "-f",
+        "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.ms",
+        "-o",
+        "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/basis.ms"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/session-87.scope\n",
+      "exe": "/tmp/msolve-patched/bin/msolve",
+      "namespaces": {
+        "cgroup": "cgroup:[4026531835]",
+        "mnt": "mnt:[4026531832]",
+        "net": "net:[4026531833]",
+        "pid": "pid:[4026531836]",
+        "user": "user:[4026531837]"
+      },
+      "pgid": 20596,
+      "pid": 20597,
+      "ppid": 20596,
+      "start_ticks": 178713,
+      "stat": "20597 (msolve) R 20596 20596 20596 0 -1 4194304 63225210 68 0 0 2970315 9629 0 0 20 0 64 0 178713 282993524736 60030241 18446744073709551615 106999338176512 106999338402765 140730931041120 0 0 0 0 4 0 0 0 0 17 2 0 0 0 0 0 106999338440600 106999338442824 107000327966720 140730931047602 140730931047804 140730931047804 140730931048409 0\n",
+      "state": "R",
+      "status": "Name:\tmsolve\nUmask:\t0002\nState:\tR (running)\nTgid:\t20597\nNgid:\t0\nPid:\t20597\nPPid:\t20596\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t256\nGroups:\t4 24 27 30 105 1000 \nNStgid:\t20597\nNSpid:\t20597\nNSpgid:\t20596\nNSsid:\t20596\nKthread:\t0\nVmPeak:\t277736580 kB\nVmSize:\t276360864 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t240137952 kB\nVmRSS:\t240137952 kB\nRssAnon:\t240133620 kB\nRssFile:\t    4332 kB\nRssShmem:\t       0 kB\nVmData:\t275505556 kB\nVmStk:\t     132 kB\nVmExe:\t     224 kB\nVmLib:\t   11288 kB\nVmPTE:\t  470488 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t64\nSigQ:\t0/1897942\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000000000004\nSigCgt:\t0000000100000000\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffffffff,ffffffff\nCpus_allowed_list:\t0-63\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t1312\nnonvoluntary_ctxt_switches:\t21530\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/Singular",
+        "-q",
+        "--no-rc",
+        "--no-warn",
+        "--no-shell",
+        "--threads=1",
+        "--flint-threads=1",
+        "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2-slimgb.sing"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/session-87.scope\n",
+      "exe": "/usr/bin/Singular",
+      "namespaces": {
+        "cgroup": "cgroup:[4026531835]",
+        "mnt": "mnt:[4026531832]",
+        "net": "net:[4026531833]",
+        "pid": "pid:[4026531836]",
+        "user": "user:[4026531837]"
+      },
+      "pgid": 20636,
+      "pid": 20637,
+      "ppid": 20636,
+      "start_ticks": 179018,
+      "stat": "20637 (Singular) R 20636 20636 20636 0 -1 4194304 29186760 0 16 0 1479323 3468 0 0 20 0 1 0 179018 116485529600 28433279 18446744073709551615 101855878008832 101855878011801 140721299838416 0 0 0 0 4 87274 0 0 0 17 0 0 0 0 0 0 101855878020016 101855878021136 101856497045504 140721299844392 140721299844550 140721299844550 140721299845094 0\n",
+      "state": "R",
+      "status": "Name:\tSingular\nUmask:\t0002\nState:\tR (running)\nTgid:\t20637\nNgid:\t0\nPid:\t20637\nPPid:\t20636\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 24 27 30 105 1000 \nNStgid:\t20637\nNSpid:\t20637\nNSpgid:\t20636\nNSsid:\t20636\nKthread:\t0\nVmPeak:\t113757448 kB\nVmSize:\t113755400 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t113734476 kB\nVmRSS:\t113734304 kB\nRssAnon:\t113725124 kB\nRssFile:\t    9180 kB\nRssShmem:\t       0 kB\nVmData:\t113726912 kB\nVmStk:\t     132 kB\nVmExe:\t       4 kB\nVmLib:\t   21196 kB\nVmPTE:\t  222652 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t1\nSigQ:\t0/1897942\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000000000004\nSigCgt:\t00000000000154ea\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\t00000000,00000001\nCpus_allowed_list:\t0\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t17\nnonvoluntary_ctxt_switches:\t68038\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+    }
+  ],
+  "utc": "2026-09-06T12:33:03.175462+00:00"
+}

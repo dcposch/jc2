@@ -1,0 +1,632 @@
+{
+  "schema": "JC2_FACTORED_JACOBIAN_CUSTODY/v1",
+  "status": "TERMINAL_ROOT_CUSTODY",
+  "timestamp_utc": "2026-09-06T10:20:00Z",
+  "instance": {
+    "id": "i-0da0cebfc97c9fd54",
+    "private_ip": "172.30.0.56",
+    "hostname": "ip-172-30-0-56",
+    "type": "r7i.8xlarge",
+    "region": "us-east-1",
+    "state": "running",
+    "aws_owner_tag": "coordinator-factored-jacobian-20260906"
+  },
+  "ownership": {
+    "producer": "/root/nonemptiness_certificate",
+    "transferred_to": "/root",
+    "authorization": "Explicit root message authorizes retention after terminal publication, superseding original terminate-before-seal instruction.",
+    "all_writers_done": true,
+    "no_live_edit_promise": "Producer will not change any listed worker artifact after this custody publication. Root may grant a read-only independent gate in a fresh scratch subtree; no original artifact path may be used as an output.",
+    "review_scratch_suggestion": "/home/ubuntu/factored-jacobian-review-20260906",
+    "new_solve_authorized": false,
+    "termination_authority": "Root custody; do not terminate as a reviewer or producer."
+  },
+  "scope": {
+    "family": "(99,66), delta2, frozen physical-polynomial source family only",
+    "source_residual_rows": 0,
+    "field": "Q",
+    "order": "global dp",
+    "variables": 600,
+    "monic_h_definitions": 160,
+    "positive_jacobian_coefficients": 1468,
+    "inverse_row": "Zj*J0-1",
+    "generators": 1629,
+    "literal_terms": 11299180,
+    "maximum_semantic_degree": 12,
+    "maximum_positive_J_degree": 4,
+    "maximum_physical_J_degree": 99,
+    "solver_launched": false,
+    "properness_claim": false,
+    "source_coverage_claim": false,
+    "T2_T3_equivalence_claim": false
+  },
+  "charged": {
+    "literal_stream": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.generators.jsonl",
+    "checked_singular": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_checked.sing",
+    "J0": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.J0.json",
+    "metadata": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.json",
+    "serialization_check": "/home/ubuntu/factored-jacobian-pilot-20260906/serialization_check.json",
+    "parser_stdout": "/home/ubuntu/factored-jacobian-pilot-20260906/singular_parse.stdout",
+    "controls": "/home/ubuntu/factored-jacobian-pilot-20260906/controls.json",
+    "untrusted_for_launch": "complete_export.sing is retained original formatting only. Charge complete_checked.sing after exact all-row wrapping/reparse and independent Singular parse."
+  },
+  "warnings": [
+    "*.rows.tsv except scalar rows hash measurement term-count/degree strings, NOT polynomial text; the complete JSONL and its whole-file SHA carry literal polynomial evidence.",
+    "modular_full.rows.tsv is a terminated incomplete measurement, not a full ideal or certificate.",
+    "Stock msolve 0.10.1 signed-32-bit exponent-offset guard fails:11299180*600=6779508000>2147483647. No unreviewed msolve launch.",
+    "Singular parse-only success does not prove properness, unit ideal, equivalence to T2/T3, source necessity, or a counterexample."
+  ],
+  "tools": {
+    "python_flint": "0.9.0",
+    "Singular": "4.3.2 (4330), 64 bit",
+    "runner_sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+  },
+  "jobs": [
+    {
+      "name": "complete_export.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 64000000000,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 600
+      },
+      "pid": 21520,
+      "pgid": 21520,
+      "utc_start": "2026-09-06T10:03:22.650805Z",
+      "utc_end": "2026-09-06T10:05:39.976362Z",
+      "wall_elapsed_seconds": 137.325560722,
+      "max_observed_group_rss_bytes": 1834889216,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "controls.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 1073741824,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 30
+      },
+      "pid": 28292,
+      "pgid": 28292,
+      "utc_start": "2026-09-06T10:17:00.292713Z",
+      "utc_end": "2026-09-06T10:17:02.752470Z",
+      "wall_elapsed_seconds": 2.459761824,
+      "max_observed_group_rss_bytes": 22482944,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "dummy.telemetry.json",
+      "status": "WALL_TIMEOUT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 200000000,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 3
+      },
+      "pid": 2738,
+      "pgid": 2738,
+      "utc_start": "2026-09-06T09:51:05.458994Z",
+      "utc_end": "2026-09-06T09:51:08.480791Z",
+      "wall_elapsed_seconds": 3.021777507,
+      "max_observed_group_rss_bytes": 89559040,
+      "child_returncode": -15,
+      "termination": {
+        "cleanup_complete": true,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [
+          2738
+        ],
+        "kill_sent": false,
+        "leader_reaped": true,
+        "reason": "wall_timeout",
+        "term_sent": true
+      }
+    },
+    {
+      "name": "exact_lifted_full.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 64000000000,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 600
+      },
+      "pid": 10374,
+      "pgid": 10374,
+      "utc_start": "2026-09-06T09:55:27.892193Z",
+      "utc_end": "2026-09-06T09:57:13.246375Z",
+      "wall_elapsed_seconds": 105.354184513,
+      "max_observed_group_rss_bytes": 254808064,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "exact_low.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 96000000000,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 600
+      },
+      "pid": 3141,
+      "pgid": 3141,
+      "utc_start": "2026-09-06T09:52:01.717942Z",
+      "utc_end": "2026-09-06T09:57:36.023909Z",
+      "wall_elapsed_seconds": 334.305968724,
+      "max_observed_group_rss_bytes": 2381742080,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "modular_full.telemetry.json",
+      "status": "WALL_TIMEOUT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 96000000000,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 600
+      },
+      "pid": 3075,
+      "pgid": 3075,
+      "utc_start": "2026-09-06T09:52:00.749707Z",
+      "utc_end": "2026-09-06T10:02:00.943240Z",
+      "wall_elapsed_seconds": 600.193535519,
+      "max_observed_group_rss_bytes": 6591143936,
+      "child_returncode": -15,
+      "termination": {
+        "cleanup_complete": true,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [
+          3075
+        ],
+        "kill_sent": false,
+        "leader_reaped": true,
+        "reason": "wall_timeout",
+        "term_sent": true
+      }
+    },
+    {
+      "name": "scalar_full.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 2000000000,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 120
+      },
+      "pid": 2896,
+      "pgid": 2896,
+      "utc_start": "2026-09-06T09:51:25.994865Z",
+      "utc_end": "2026-09-06T09:51:26.866983Z",
+      "wall_elapsed_seconds": 0.872122674,
+      "max_observed_group_rss_bytes": 35643392,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "scalar_low.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 2000000000,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 120
+      },
+      "pid": 2961,
+      "pgid": 2961,
+      "utc_start": "2026-09-06T09:51:27.163519Z",
+      "utc_end": "2026-09-06T09:51:27.288866Z",
+      "wall_elapsed_seconds": 0.125350277,
+      "max_observed_group_rss_bytes": 34402304,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "serialization_check.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 64000000000,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 600
+      },
+      "pid": 24155,
+      "pgid": 24155,
+      "utc_start": "2026-09-06T10:08:41.378408Z",
+      "utc_end": "2026-09-06T10:11:14.604886Z",
+      "wall_elapsed_seconds": 153.22648106,
+      "max_observed_group_rss_bytes": 124440576,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    },
+    {
+      "name": "singular_parse.telemetry.json",
+      "status": "NORMAL_EXIT",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 51539607552,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 600
+      },
+      "pid": 27151,
+      "pgid": 27151,
+      "utc_start": "2026-09-06T10:16:00.851670Z",
+      "utc_end": "2026-09-06T10:17:38.236281Z",
+      "wall_elapsed_seconds": 97.384616004,
+      "max_observed_group_rss_bytes": 15588319232,
+      "child_returncode": 0,
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/check_serialization.py",
+      "bytes": 5854,
+      "sha256": "b0cc801ed1edd259574eb16a5273d28ddf5200397c598a2d3e0162ef8fe6292c"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_checked.sing",
+      "bytes": 436422501,
+      "sha256": "50792efed4a5ed47cf2da5bf1f0d3b65e4f68efcba8e528b7dc29a541b72e091"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.J0.json",
+      "bytes": 12592,
+      "sha256": "bc4dfd953d540a6edd27bdee78d8fb6d9af678ccd79e528a1bb557755e7e805e"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.generators.jsonl",
+      "bytes": 432003707,
+      "sha256": "39ea3365c8c83916c5f813be0b7719374dcad131cdd4b10ed24d25516bfae75f"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.json",
+      "bytes": 14248,
+      "sha256": "b91d706e79a1c72cc4b1993f858642f8a0bafc7e9fabe2601aa43dd8156b8a99"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.rows.tsv",
+      "bytes": 113627,
+      "sha256": "bab178fe0a450c841d24be5d97c4d264d3df767a19d168ec702ce22376be795d"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.sing",
+      "bytes": 431837919,
+      "sha256": "424cf0c1f3d7049e22f2e2d84ea1e8e73fc10ae41c163766d5585482806cdfd2"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.stdout",
+      "bytes": 3240,
+      "sha256": "958568f6c8aca0bb7c4710fc74d469b58e1b66d3e715c37c92d5a2d8958412ec"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/complete_export.telemetry.json",
+      "bytes": 2109,
+      "sha256": "1cf9d3961d7a23db4b8fc382d035267c7a220b37d41d77319af42979ad3d4712"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/controls.json",
+      "bytes": 463,
+      "sha256": "f900da88615afd7b7a9785f26578c041afc35396b59aa29c867bdb5526a54af0"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/controls.py",
+      "bytes": 3759,
+      "sha256": "6405a1e22c1b8642b3529334209dff00e90db9285ce84a9f6abbabfc120c817d"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/controls.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/controls.stdout",
+      "bytes": 397,
+      "sha256": "d3a689d9a41be9f68621b92d85f98f2aaad980aa2e24410d302cc009b04afee4"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/controls.telemetry.json",
+      "bytes": 2081,
+      "sha256": "336a5b6f803631e9aa623155a3966f3346c88e03e2ba3b8c31bd90ea083b82de"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/delta2_stage8.strongest.json",
+      "bytes": 416793,
+      "sha256": "778eda933ee9b2acbad20f6dc862c25db94776cb25ffd5782646427a3b63e1ea"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/dummy.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/dummy.stdout",
+      "bytes": 15,
+      "sha256": "62f92d07b697635ece6dea5f181569a5bfba2f2f19feeb6fc3396d5d75a872d7"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/dummy.telemetry.json",
+      "bytes": 2497,
+      "sha256": "6f42b5d6eb2adc20b2e7d2348bb5146e8c06c31c19b21d63150fc91b0ea8f1ec"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_lifted_full.json",
+      "bytes": 13680,
+      "sha256": "d67db549569897ddec72338c6d2d9fad8f283e50158e5833c6d34aa821b25e69"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_lifted_full.rows.tsv",
+      "bytes": 113627,
+      "sha256": "bab178fe0a450c841d24be5d97c4d264d3df767a19d168ec702ce22376be795d"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_lifted_full.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_lifted_full.stdout",
+      "bytes": 3233,
+      "sha256": "f56523b5f2de58613f5c77b74ee3e5e757fd4d5cd5b8b814a93ae678e72161dc"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_lifted_full.telemetry.json",
+      "bytes": 2113,
+      "sha256": "8b20f4d8a9112e938f729eedf792647bdc5a675d2c5b6917cd623d4b89a53582"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_low.json",
+      "bytes": 9416,
+      "sha256": "cffc296a7cb31ea64a82a37db6de11602f5326095615655edeab5d8e13ddd597"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_low.rows.tsv",
+      "bytes": 7895,
+      "sha256": "211ee1198cec9fa410423fc1c720802ae5a653f2362631eb9d6b1ae942be0ef2"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_low.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_low.stdout",
+      "bytes": 1516,
+      "sha256": "622c47106d8ff6e31513ef959846473457dde1edb285d6e4c85476dd0724adaa"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/exact_low.telemetry.json",
+      "bytes": 2088,
+      "sha256": "940d6e08ad6c713ae556650a2c9025813d8132cb40bd25d239d30119d5030cfe"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/export_complete.py",
+      "bytes": 18730,
+      "sha256": "90c70130f0b919cfaf467158ba038580acb4e8636af6414bc2fd33724932190d"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/modular_full.rows.tsv",
+      "bytes": 8218,
+      "sha256": "8d2042201203e3df18945ace8bf795f3cccc63b54bb5c5de8501e6176788868b"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/modular_full.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/modular_full.stdout",
+      "bytes": 1413,
+      "sha256": "c6adcb1af2e36c9600b75ebe7484dfcc3163a043d9a58c27c8e3d9e47f30b411"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/modular_full.telemetry.json",
+      "bytes": 2528,
+      "sha256": "c40516215862eabe084a5c716ae64484f673c343ebf21307316f1ea209d16e89"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/pilot.py",
+      "bytes": 12067,
+      "sha256": "2f02e83736650ca275d6198d359eff65931e1bf2020ae6fd4386b9f295447123"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/pilot_lifted.py",
+      "bytes": 13468,
+      "sha256": "f44fad869f685bfea4137e970e2f9bb0c0239fa3591c195b7d6febdb0325e08f"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/run_capped.py",
+      "bytes": 42671,
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_full.json",
+      "bytes": 10227,
+      "sha256": "d608ea23fbe487a6f383c58c2a40bb7230edcd7e130e2f45a64b20b759e6d2b8"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_full.rows.tsv",
+      "bytes": 109308,
+      "sha256": "e8d1ee709fdc51ef3a72fca193f736ac3c24b679b52c0722e2fa863e12560e98"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_full.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_full.stdout",
+      "bytes": 2340,
+      "sha256": "8c919ade69a7a2bbf5557da7ad0e1df1428d627b0919fa1f2c8b075adebd8c2e"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_full.telemetry.json",
+      "bytes": 2089,
+      "sha256": "dea846acbf89853ae3d6ad372cfc15150952570c9ef05d1f44241cbdc4433e3d"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_low.json",
+      "bytes": 9124,
+      "sha256": "e11132986b678ea3aab2451e3a651b644bc5ddd9d9e3f2882fe78e633a4f3a9a"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_low.rows.tsv",
+      "bytes": 7408,
+      "sha256": "fa1978c100071cd2097f4a0f31df72140d71007b7010457891dfc40cbdeb2b22"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_low.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_low.stdout",
+      "bytes": 1022,
+      "sha256": "bb62807fa44e3f402fc4819964790c31861340842dd8effc3153572391e58935"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/scalar_low.telemetry.json",
+      "bytes": 2086,
+      "sha256": "a120c2037d13ee21908ca6c091fd8d87b2cdd6cecc5791d2e3817b0fa5d54528"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/serialization_check.json",
+      "bytes": 527,
+      "sha256": "8cfffe239a07c965e2a907d4b6a42d1345cbddd41e9170fdc22176644642620f"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/serialization_check.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/serialization_check.stdout",
+      "bytes": 1130,
+      "sha256": "158723d880be1b015907045b8d8590525fdbe144018ac17cc7e4ea220836b92c"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/serialization_check.telemetry.json",
+      "bytes": 2119,
+      "sha256": "ac194e5ff60442690d81cbece64fba1ac395f56687f522666540af2936746940"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/singular_parse.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/singular_parse.stdout",
+      "bytes": 56,
+      "sha256": "d1d9649280f33d2bb11b34161268e0e4c80e99eedf926dc2ab495aef8fb75162"
+    },
+    {
+      "path": "/home/ubuntu/factored-jacobian-pilot-20260906/singular_parse.telemetry.json",
+      "bytes": 2114,
+      "sha256": "1b27138a03273f263b256110abc39c2a76e34317011f719c079eebe0fc133bf5"
+    }
+  ]
+}

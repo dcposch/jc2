@@ -1,0 +1,184 @@
+{
+ "board_asset_tag": "i-0252f535410c26ebc",
+ "boot_id": "eae69acb-04ae-4b12-8143-2eeeecf16270",
+ "checker_sha256": "f88d0665bbe7e4f0dd519167c1f99c4a519235c2c127b76c35273d4b533118c6",
+ "cpu_seconds": 11.599,
+ "cwd": "/home/ubuntu/jc2/box/d125-small-full-stream-gate-fable5-20260906",
+ "end_utc": "2026-09-07T00:18:26Z",
+ "failure": "a corruption control was NOT rejected: unequal-golden",
+ "max_rss_kib": 127616,
+ "pgid": 3128117,
+ "pid": 3128118,
+ "python": "3.12.3",
+ "results": [
+  {
+   "authority_sha256": null,
+   "branch": "golden",
+   "case": "unequal",
+   "control_seconds": 9.896,
+   "controls": [
+    {
+     "control": "missing_row",
+     "error": "record count 1371 != 1372",
+     "rejected": true
+    },
+    {
+     "control": "zero_row",
+     "error": "record 599 mismatch at row J/0/0",
+     "rejected": true
+    },
+    {
+     "control": "lambda_swap",
+     "error": "record 1363 mismatch at row LIFT/B/4/-1",
+     "rejected": true
+    },
+    {
+     "control": "lambda_exponent",
+     "error": "record 1363 mismatch at row LIFT/B/4/-1",
+     "rejected": true
+    },
+    {
+     "control": "lambda_sign",
+     "error": "record 1363 mismatch at row LIFT/B/4/-1",
+     "rejected": true
+    },
+    {
+     "control": "jacobian_sign",
+     "error": "record 599 mismatch at row J/0/0",
+     "rejected": true
+    },
+    {
+     "control": "field_split",
+     "error": "record count 1373 != 1372",
+     "rejected": true
+    },
+    {
+     "control": "minpoly",
+     "error": "minimal polynomial",
+     "rejected": true
+    },
+    {
+     "control": "minpoly_removed",
+     "error": "minimal polynomial",
+     "rejected": true
+    },
+    {
+     "control": "monicity",
+     "error": "record 285 mismatch at coefficient A_g0_p15",
+     "rejected": true
+    },
+    {
+     "control": "fixed_zero_face",
+     "error": "MUTATION NOT APPLIED: no fixed zero",
+     "rejected": false
+    },
+    {
+     "control": "vertex_guard",
+     "error": "record 1367 mismatch at row GUARD/B/0/25",
+     "rejected": true
+    },
+    {
+     "control": "c_target",
+     "error": "header mismatch",
+     "rejected": true
+    },
+    {
+     "control": "scalar_guard",
+     "error": "record 1370 mismatch at row GUARD/c",
+     "rejected": true
+    },
+    {
+     "control": "unknown_variable_id",
+     "error": "invalid variable id in J/0/0",
+     "rejected": true
+    },
+    {
+     "control": "unknown_variable_sing",
+     "error": "undeclared variable lambda9",
+     "rejected": true
+    },
+    {
+     "control": "sing_sign",
+     "error": "Singular polynomial != JSONL row J/0/1",
+     "rejected": true
+    },
+    {
+     "control": "sing_missing_row",
+     "error": "Singular row count 802 != JSONL 803",
+     "rejected": true
+    },
+    {
+     "control": "sing_zero_row",
+     "error": "Singular polynomial != JSONL row J/0/1",
+     "rejected": true
+    },
+    {
+     "control": "sing_variable_order",
+     "error": "declared variables/order differ from JSONL",
+     "rejected": true
+    },
+    {
+     "control": "trailing_command",
+     "error": "permitted trailer/commands only",
+     "rejected": true
+    },
+    {
+     "control": "inserted_command",
+     "error": "permitted trailer/commands only",
+     "rejected": true
+    },
+    {
+     "control": "duplicate_sing_row",
+     "error": "Singular row count 804 != JSONL 803",
+     "rejected": true
+    },
+    {
+     "control": "duplicate_json_key",
+     "error": null,
+     "rejected": false
+    },
+    {
+     "control": "trailing_json",
+     "error": "trailing data after complete footer",
+     "rejected": true
+    },
+    {
+     "control": "truncated_no_footer",
+     "error": "missing footer",
+     "rejected": true
+    }
+   ],
+   "controls_all_rejected": false,
+   "counts": {
+    "fixed_assignment": 31,
+    "fixed_unit_guard": 6,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "rows": 803,
+    "scalar_guard": 1,
+    "terms": 29462,
+    "zero_rows": 249
+   },
+   "jacobian_slots_outside_envelope_nonzero": 0,
+   "jsonl_bytes": 1284762,
+   "jsonl_sha256": "ad83add3ccdeb56914cf73ab06fe733f7b89aa984e586bb973dde04ca471613b",
+   "prefix_sha256": "61dbb78a84eb11fa58c1cd0db0aadfc65d58624700c1d46e6ff8f94da61cc560",
+   "reconstruct_seconds": 0.794,
+   "rows": 803,
+   "sing_bytes": 776459,
+   "sing_sha256": "77f127a903152cc52ebb2fd40d8e0d7ca76aeba2fe7306b4e87872189c9c28ec",
+   "singular_nonzero_generators": 554,
+   "singular_rows": 803,
+   "terms": 29462,
+   "variables": 269,
+   "verdict": "MATCH",
+   "verify_seconds": 1.639,
+   "zero_rows": 249
+  }
+ ],
+ "schema": "jc2.d125-small-full-stream-gate/v1",
+ "source_root": "/tmp/fable5-local-golden",
+ "start_ticks": "80802081",
+ "start_utc": "2026-09-07T00:18:14Z",
+ "status": "REFUTED_OR_CHECKER_FAILURE"
+}

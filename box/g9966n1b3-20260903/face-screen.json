@@ -1,0 +1,3281 @@
+{
+ "W_closed_form": "W=(3n-2*M2)/d_3=(297-2*M2)/11",
+ "charged_comparison": {
+  "S1": {
+   "charged_hardcoded": [
+    [
+     "4",
+     [
+      1,
+      1
+     ]
+    ]
+   ],
+   "identical": true,
+   "mechanical": [
+    [
+     "4",
+     [
+      1,
+      1
+     ]
+    ]
+   ]
+  },
+  "S2": {
+   "charged_hardcoded": [
+    [
+     "3/2",
+     [
+      2,
+      1,
+      1
+     ]
+    ],
+    [
+     "3/2",
+     [
+      2,
+      2
+     ]
+    ],
+    [
+     "5/3",
+     [
+      1,
+      1,
+      1,
+      1
+     ]
+    ]
+   ],
+   "identical": false,
+   "mechanical": [
+    [
+     "3/2",
+     [
+      2,
+      2
+     ]
+    ],
+    [
+     "5/3",
+     [
+      1,
+      1,
+      1,
+      1
+     ]
+    ]
+   ]
+  },
+  "S3": {
+   "charged_hardcoded": [
+    [
+     "3/2",
+     [
+      2,
+      1,
+      1
+     ]
+    ],
+    [
+     "3/2",
+     [
+      2,
+      2
+     ]
+    ],
+    [
+     "5/3",
+     [
+      1,
+      1,
+      1,
+      1
+     ]
+    ]
+   ],
+   "identical": false,
+   "mechanical": [
+    [
+     "3/2",
+     [
+      2,
+      2
+     ]
+    ],
+    [
+     "5/3",
+     [
+      1,
+      1,
+      1,
+      1
+     ]
+    ]
+   ]
+  },
+  "S4": {
+   "charged_hardcoded": [
+    [
+     "2",
+     [
+      2,
+      1
+     ]
+    ],
+    [
+     "5/2",
+     [
+      1,
+      1,
+      1
+     ]
+    ]
+   ],
+   "identical": false,
+   "mechanical": [
+    [
+     "5/2",
+     [
+      1,
+      1,
+      1
+     ]
+    ]
+   ]
+  },
+  "S7": {
+   "charged_hardcoded": [
+    [
+     "3/2",
+     [
+      2,
+      1,
+      1
+     ]
+    ],
+    [
+     "3/2",
+     [
+      2,
+      2
+     ]
+    ],
+    [
+     "5/3",
+     [
+      1,
+      1,
+      1,
+      1
+     ]
+    ]
+   ],
+   "identical": false,
+   "mechanical": [
+    [
+     "3/2",
+     [
+      2,
+      2
+     ]
+    ],
+    [
+     "5/3",
+     [
+      1,
+      1,
+      1,
+      1
+     ]
+    ]
+   ]
+  }
+ },
+ "face_identity": "a*q*p' - X*p*q' = (v-u)*p^(W+1); X=u*delta-v; a=W*X-1+delta",
+ "necessary_conditions": [
+  "G: zeta_Q-stable root multiset (Q=den(delta))",
+  "L: nu=k*lam or nu=lam*W+1 at each root, sum nu <= W*u+1"
+ ],
+ "rows": {
+  "S1": {
+   "W": 31,
+   "candidate_orders": [
+    "3/2",
+    "2",
+    "5/2",
+    "3",
+    "7/2",
+    "4"
+   ],
+   "ceiling": "9/2",
+   "charts": [
+    {
+     "Q": 2,
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "371/12",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/12",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 1,
+     "delta": "2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1,
+        1
+       ]
+      ],
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "154/5",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "delta": "5/2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "245/8",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "3/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 1,
+     "delta": "3",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1,
+        1
+       ]
+      ],
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "91/3",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "2/3",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "delta": "7/2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "119/4",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "5/4",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 1,
+     "deg_q": 63,
+     "delta": "4",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1,
+        1
+       ]
+      ],
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "28",
+     "local_assignments": [
+      {
+       "deg_q": 63,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        28,
+        28
+       ],
+       "sum_nu": 56
+      },
+      {
+       "deg_q": 63,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        28,
+        32
+       ],
+       "sum_nu": 60
+      },
+      {
+       "deg_q": 63,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        32,
+        28
+       ],
+       "sum_nu": 60
+      }
+     ],
+     "p": "(z - 2)*(z - 1)",
+     "partition": [
+      1,
+      1
+     ],
+     "q_shape": {
+      "A": 28,
+      "B": 3,
+      "c0": "7",
+      "w": "(z - 2)*(z - 1)"
+     },
+     "residual": "0",
+     "t": "3",
+     "verdict": "SOLVABLE"
+    }
+   ],
+   "survivors": [
+    {
+     "delta": "4",
+     "partition": [
+      1,
+      1
+     ]
+    }
+   ],
+   "u_s": 2,
+   "undecided": [],
+   "v_s": 9
+  },
+  "S2": {
+   "W": 23,
+   "candidate_orders": [
+    "5/4",
+    "4/3",
+    "3/2",
+    "5/3"
+   ],
+   "ceiling": "7/4",
+   "charts": [
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [],
+     "k": "183/8",
+     "local_assignments": [],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [],
+     "k": "183/8",
+     "local_assignments": [],
+     "partition": [
+      2,
+      2
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [],
+     "k": "183/8",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "183/8",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "114/5",
+     "local_assignments": [],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "114/5",
+     "local_assignments": [],
+     "partition": [
+      2,
+      2
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "114/5",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "114/5",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "delta": "3/2",
+     "galois_patterns": [],
+     "k": "45/2",
+     "local_assignments": [],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "deg_q": 93,
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        2
+       ]
+      ]
+     ],
+     "k": "45/2",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        45,
+        45
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        45,
+        47
+       ],
+       "sum_nu": 92
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        47,
+        45
+       ],
+       "sum_nu": 92
+      }
+     ],
+     "p": "(z - 1)**2*(z + 1)**2",
+     "partition": [
+      2,
+      2
+     ],
+     "q_shape": {
+      "A": 45,
+      "B": 1,
+      "c0": "3",
+      "w": "(z - 1)*(z + 1)"
+     },
+     "residual": "0",
+     "t": "1/2",
+     "verdict": "SOLVABLE"
+    },
+    {
+     "Q": 2,
+     "build": {
+      "note": "p is not a perfect 2-th power"
+     },
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       2,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "45/2",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        45,
+        24,
+        24
+       ],
+       "sum_nu": 93
+      }
+     ],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "G and L pass; no closed-form q built",
+     "t": "1/2",
+     "verdict": "OPEN_FACE"
+    },
+    {
+     "Q": 2,
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1,
+        1
+       ]
+      ]
+     ],
+     "k": "45/2",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "21",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        63,
+        21
+       ],
+       "sum_nu": 84
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        63,
+        24
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        70,
+        21
+       ],
+       "sum_nu": 91
+      }
+     ],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "21",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        42,
+        42
+       ],
+       "sum_nu": 84
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        42,
+        47
+       ],
+       "sum_nu": 89
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        47,
+        42
+       ],
+       "sum_nu": 89
+      }
+     ],
+     "partition": [
+      2,
+      2
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "21",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        42,
+        21,
+        21
+       ],
+       "sum_nu": 84
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        42,
+        21,
+        24
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        42,
+        24,
+        21
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        42,
+        24,
+        24
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        47,
+        21,
+        21
+       ],
+       "sum_nu": 89
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        47,
+        21,
+        24
+       ],
+       "sum_nu": 92
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        47,
+        24,
+        21
+       ],
+       "sum_nu": 92
+      }
+     ],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "deg_q": 93,
+     "delta": "5/3",
+     "galois_patterns": [
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "21",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        21,
+        21,
+        21,
+        21
+       ],
+       "sum_nu": 84
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        21,
+        21,
+        21,
+        24
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        21,
+        21,
+        24,
+        21
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        21,
+        21,
+        24,
+        24
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        21,
+        24,
+        21,
+        21
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        21,
+        24,
+        21,
+        24
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        21,
+        24,
+        24,
+        21
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        1,
+        1
+       ],
+       "nu": [
+        21,
+        24,
+        24,
+        24
+       ],
+       "sum_nu": 93
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        24,
+        21,
+        21,
+        21
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        24,
+        21,
+        21,
+        24
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        24,
+        21,
+        24,
+        21
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        24,
+        21,
+        24,
+        24
+       ],
+       "sum_nu": 93
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        24,
+        24,
+        21,
+        21
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        24,
+        24,
+        21,
+        24
+       ],
+       "sum_nu": 93
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        24,
+        24,
+        24,
+        21
+       ],
+       "sum_nu": 93
+      }
+     ],
+     "p": "z*(z - 1)*(z**2 + z + 1)",
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "q_shape": {
+      "A": 21,
+      "B": 2,
+      "c0": "9",
+      "w": "z*(z - 1)*(z**2 + z + 1)"
+     },
+     "residual": "0",
+     "t": "2",
+     "verdict": "SOLVABLE"
+    }
+   ],
+   "survivors": [
+    {
+     "delta": "3/2",
+     "partition": [
+      2,
+      2
+     ]
+    },
+    {
+     "delta": "5/3",
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "u_s": 4,
+   "undecided": [
+    {
+     "delta": "3/2",
+     "partition": [
+      2,
+      1,
+      1
+     ]
+    }
+   ],
+   "v_s": 7
+  },
+  "S3": {
+   "W": 23,
+   "candidate_orders": [
+    "5/4",
+    "4/3",
+    "3/2",
+    "5/3"
+   ],
+   "ceiling": "7/4",
+   "charts": [
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [],
+     "k": "183/8",
+     "local_assignments": [],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [],
+     "k": "183/8",
+     "local_assignments": [],
+     "partition": [
+      2,
+      2
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [],
+     "k": "183/8",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "183/8",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "114/5",
+     "local_assignments": [],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "114/5",
+     "local_assignments": [],
+     "partition": [
+      2,
+      2
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "114/5",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "114/5",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "delta": "3/2",
+     "galois_patterns": [],
+     "k": "45/2",
+     "local_assignments": [],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "deg_q": 93,
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        2
+       ]
+      ]
+     ],
+     "k": "45/2",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        45,
+        45
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        45,
+        47
+       ],
+       "sum_nu": 92
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        47,
+        45
+       ],
+       "sum_nu": 92
+      }
+     ],
+     "p": "(z - 1)**2*(z + 1)**2",
+     "partition": [
+      2,
+      2
+     ],
+     "q_shape": {
+      "A": 45,
+      "B": 1,
+      "c0": "3",
+      "w": "(z - 1)*(z + 1)"
+     },
+     "residual": "0",
+     "t": "1/2",
+     "verdict": "SOLVABLE"
+    },
+    {
+     "Q": 2,
+     "build": {
+      "note": "p is not a perfect 2-th power"
+     },
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       2,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "45/2",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        45,
+        24,
+        24
+       ],
+       "sum_nu": 93
+      }
+     ],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "G and L pass; no closed-form q built",
+     "t": "1/2",
+     "verdict": "OPEN_FACE"
+    },
+    {
+     "Q": 2,
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1,
+        1
+       ]
+      ]
+     ],
+     "k": "45/2",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "21",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        63,
+        21
+       ],
+       "sum_nu": 84
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        63,
+        24
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        70,
+        21
+       ],
+       "sum_nu": 91
+      }
+     ],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "21",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        42,
+        42
+       ],
+       "sum_nu": 84
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        42,
+        47
+       ],
+       "sum_nu": 89
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        47,
+        42
+       ],
+       "sum_nu": 89
+      }
+     ],
+     "partition": [
+      2,
+      2
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "21",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        42,
+        21,
+        21
+       ],
+       "sum_nu": 84
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        42,
+        21,
+        24
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        42,
+        24,
+        21
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        42,
+        24,
+        24
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        47,
+        21,
+        21
+       ],
+       "sum_nu": 89
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        47,
+        21,
+        24
+       ],
+       "sum_nu": 92
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        47,
+        24,
+        21
+       ],
+       "sum_nu": 92
+      }
+     ],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "deg_q": 93,
+     "delta": "5/3",
+     "galois_patterns": [
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "21",
+     "local_assignments": [
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        21,
+        21,
+        21,
+        21
+       ],
+       "sum_nu": 84
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        21,
+        21,
+        21,
+        24
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        21,
+        21,
+        24,
+        21
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        21,
+        21,
+        24,
+        24
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        21,
+        24,
+        21,
+        21
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        21,
+        24,
+        21,
+        24
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        21,
+        24,
+        24,
+        21
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        0,
+        1,
+        1,
+        1
+       ],
+       "nu": [
+        21,
+        24,
+        24,
+        24
+       ],
+       "sum_nu": 93
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        24,
+        21,
+        21,
+        21
+       ],
+       "sum_nu": 87
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        24,
+        21,
+        21,
+        24
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        24,
+        21,
+        24,
+        21
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        24,
+        21,
+        24,
+        24
+       ],
+       "sum_nu": 93
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        24,
+        24,
+        21,
+        21
+       ],
+       "sum_nu": 90
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        24,
+        24,
+        21,
+        24
+       ],
+       "sum_nu": 93
+      },
+      {
+       "deg_q": 93,
+       "mask": [
+        1,
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        24,
+        24,
+        24,
+        21
+       ],
+       "sum_nu": 93
+      }
+     ],
+     "p": "z*(z - 1)*(z**2 + z + 1)",
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "q_shape": {
+      "A": 21,
+      "B": 2,
+      "c0": "9",
+      "w": "z*(z - 1)*(z**2 + z + 1)"
+     },
+     "residual": "0",
+     "t": "2",
+     "verdict": "SOLVABLE"
+    }
+   ],
+   "survivors": [
+    {
+     "delta": "3/2",
+     "partition": [
+      2,
+      2
+     ]
+    },
+    {
+     "delta": "5/3",
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "u_s": 4,
+   "undecided": [
+    {
+     "delta": "3/2",
+     "partition": [
+      2,
+      1,
+      1
+     ]
+    }
+   ],
+   "v_s": 7
+  },
+  "S4": {
+   "W": 23,
+   "candidate_orders": [
+    "4/3",
+    "3/2",
+    "5/3",
+    "2",
+    "7/3",
+    "5/2"
+   ],
+   "ceiling": "8/3",
+   "charts": [
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "275/12",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/12",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "275/12",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/12",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "delta": "3/2",
+     "galois_patterns": [],
+     "k": "160/7",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/7",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "160/7",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/7",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "205/9",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2/9",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "205/9",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "2/9",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 1,
+     "build": {
+      "note": "p is not a perfect 2-th power"
+     },
+     "delta": "2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        2,
+        1
+       ]
+      ],
+      [
+       1,
+       [
+        2
+       ]
+      ],
+      [
+       2,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "45/2",
+     "local_assignments": [
+      {
+       "deg_q": 70,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        45,
+        24
+       ],
+       "sum_nu": 69
+      }
+     ],
+     "partition": [
+      2,
+      1
+     ],
+     "reason": "G and L pass; no closed-form q built",
+     "t": "1/2",
+     "verdict": "OPEN_FACE"
+    },
+    {
+     "Q": 1,
+     "delta": "2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1,
+        1,
+        1
+       ]
+      ],
+      [
+       1,
+       [
+        1,
+        1
+       ]
+      ]
+     ],
+     "k": "45/2",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "7/3",
+     "galois_patterns": [],
+     "k": "65/3",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "4/3",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "7/3",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "65/3",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "4/3",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "delta": "5/2",
+     "galois_patterns": [],
+     "k": "20",
+     "local_assignments": [
+      {
+       "deg_q": 70,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        40,
+        20
+       ],
+       "sum_nu": 60
+      },
+      {
+       "deg_q": 70,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        40,
+        24
+       ],
+       "sum_nu": 64
+      },
+      {
+       "deg_q": 70,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        47,
+        20
+       ],
+       "sum_nu": 67
+      }
+     ],
+     "partition": [
+      2,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "3",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "deg_q": 70,
+     "delta": "5/2",
+     "galois_patterns": [
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "20",
+     "local_assignments": [
+      {
+       "deg_q": 70,
+       "mask": [
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        20,
+        20,
+        20
+       ],
+       "sum_nu": 60
+      },
+      {
+       "deg_q": 70,
+       "mask": [
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        20,
+        20,
+        24
+       ],
+       "sum_nu": 64
+      },
+      {
+       "deg_q": 70,
+       "mask": [
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        20,
+        24,
+        20
+       ],
+       "sum_nu": 64
+      },
+      {
+       "deg_q": 70,
+       "mask": [
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        20,
+        24,
+        24
+       ],
+       "sum_nu": 68
+      },
+      {
+       "deg_q": 70,
+       "mask": [
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        24,
+        20,
+        20
+       ],
+       "sum_nu": 64
+      },
+      {
+       "deg_q": 70,
+       "mask": [
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        24,
+        20,
+        24
+       ],
+       "sum_nu": 68
+      },
+      {
+       "deg_q": 70,
+       "mask": [
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        24,
+        24,
+        20
+       ],
+       "sum_nu": 68
+      }
+     ],
+     "p": "z*(z - 1)*(z + 1)",
+     "partition": [
+      1,
+      1,
+      1
+     ],
+     "q_shape": {
+      "A": 20,
+      "B": 3,
+      "c0": "10",
+      "w": "z*(z - 1)*(z + 1)"
+     },
+     "residual": "0",
+     "t": "3",
+     "verdict": "SOLVABLE"
+    }
+   ],
+   "survivors": [
+    {
+     "delta": "5/2",
+     "partition": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "u_s": 3,
+   "undecided": [
+    {
+     "delta": "2",
+     "partition": [
+      2,
+      1
+     ]
+    }
+   ],
+   "v_s": 8
+  },
+  "S7": {
+   "W": 13,
+   "candidate_orders": [
+    "5/4",
+    "4/3",
+    "3/2",
+    "5/3"
+   ],
+   "ceiling": "7/4",
+   "charts": [
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [],
+     "k": "103/8",
+     "local_assignments": [],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [],
+     "k": "103/8",
+     "local_assignments": [],
+     "partition": [
+      2,
+      2
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [],
+     "k": "103/8",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 4,
+     "delta": "5/4",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "103/8",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/8",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "64/5",
+     "local_assignments": [],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "64/5",
+     "local_assignments": [],
+     "partition": [
+      2,
+      2
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [],
+     "k": "64/5",
+     "local_assignments": [],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "4/3",
+     "galois_patterns": [
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "64/5",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/5",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "delta": "3/2",
+     "galois_patterns": [],
+     "k": "25/2",
+     "local_assignments": [],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "1/2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 2,
+     "deg_q": 53,
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        2
+       ]
+      ]
+     ],
+     "k": "25/2",
+     "local_assignments": [
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        25,
+        25
+       ],
+       "sum_nu": 50
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        25,
+        27
+       ],
+       "sum_nu": 52
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        27,
+        25
+       ],
+       "sum_nu": 52
+      }
+     ],
+     "p": "(z - 1)**2*(z + 1)**2",
+     "partition": [
+      2,
+      2
+     ],
+     "q_shape": {
+      "A": 25,
+      "B": 1,
+      "c0": "3",
+      "w": "(z - 1)*(z + 1)"
+     },
+     "residual": "0",
+     "t": "1/2",
+     "verdict": "SOLVABLE"
+    },
+    {
+     "Q": 2,
+     "build": {
+      "note": "p is not a perfect 2-th power"
+     },
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       2,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "25/2",
+     "local_assignments": [
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        25,
+        14,
+        14
+       ],
+       "sum_nu": 53
+      }
+     ],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "G and L pass; no closed-form q built",
+     "t": "1/2",
+     "verdict": "OPEN_FACE"
+    },
+    {
+     "Q": 2,
+     "delta": "3/2",
+     "galois_patterns": [
+      [
+       null,
+       [
+        1,
+        1
+       ]
+      ]
+     ],
+     "k": "25/2",
+     "local_assignments": [],
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "reason": "local exponent count exceeds deg q (L)",
+     "t": "1/2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "11",
+     "local_assignments": [
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        33,
+        11
+       ],
+       "sum_nu": 44
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        33,
+        14
+       ],
+       "sum_nu": 47
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        40,
+        11
+       ],
+       "sum_nu": 51
+      }
+     ],
+     "partition": [
+      3,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "11",
+     "local_assignments": [
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        0
+       ],
+       "nu": [
+        22,
+        22
+       ],
+       "sum_nu": 44
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1
+       ],
+       "nu": [
+        22,
+        27
+       ],
+       "sum_nu": 49
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        0
+       ],
+       "nu": [
+        27,
+        22
+       ],
+       "sum_nu": 49
+      }
+     ],
+     "partition": [
+      2,
+      2
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "delta": "5/3",
+     "galois_patterns": [],
+     "k": "11",
+     "local_assignments": [
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        22,
+        11,
+        11
+       ],
+       "sum_nu": 44
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        22,
+        11,
+        14
+       ],
+       "sum_nu": 47
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        22,
+        14,
+        11
+       ],
+       "sum_nu": 47
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        22,
+        14,
+        14
+       ],
+       "sum_nu": 50
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        27,
+        11,
+        11
+       ],
+       "sum_nu": 49
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        27,
+        11,
+        14
+       ],
+       "sum_nu": 52
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        27,
+        14,
+        11
+       ],
+       "sum_nu": 52
+      }
+     ],
+     "partition": [
+      2,
+      1,
+      1
+     ],
+     "reason": "no zeta_Q-stable root multiset (G)",
+     "t": "2",
+     "verdict": "DEAD"
+    },
+    {
+     "Q": 3,
+     "deg_q": 53,
+     "delta": "5/3",
+     "galois_patterns": [
+      [
+       1,
+       [
+        1
+       ]
+      ]
+     ],
+     "k": "11",
+     "local_assignments": [
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        11,
+        11,
+        11,
+        11
+       ],
+       "sum_nu": 44
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        11,
+        11,
+        11,
+        14
+       ],
+       "sum_nu": 47
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        11,
+        11,
+        14,
+        11
+       ],
+       "sum_nu": 47
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        11,
+        11,
+        14,
+        14
+       ],
+       "sum_nu": 50
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        11,
+        14,
+        11,
+        11
+       ],
+       "sum_nu": 47
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        11,
+        14,
+        11,
+        14
+       ],
+       "sum_nu": 50
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        11,
+        14,
+        14,
+        11
+       ],
+       "sum_nu": 50
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        0,
+        1,
+        1,
+        1
+       ],
+       "nu": [
+        11,
+        14,
+        14,
+        14
+       ],
+       "sum_nu": 53
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        0,
+        0,
+        0
+       ],
+       "nu": [
+        14,
+        11,
+        11,
+        11
+       ],
+       "sum_nu": 47
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        0,
+        0,
+        1
+       ],
+       "nu": [
+        14,
+        11,
+        11,
+        14
+       ],
+       "sum_nu": 50
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        0,
+        1,
+        0
+       ],
+       "nu": [
+        14,
+        11,
+        14,
+        11
+       ],
+       "sum_nu": 50
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        0,
+        1,
+        1
+       ],
+       "nu": [
+        14,
+        11,
+        14,
+        14
+       ],
+       "sum_nu": 53
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        1,
+        0,
+        0
+       ],
+       "nu": [
+        14,
+        14,
+        11,
+        11
+       ],
+       "sum_nu": 50
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        1,
+        0,
+        1
+       ],
+       "nu": [
+        14,
+        14,
+        11,
+        14
+       ],
+       "sum_nu": 53
+      },
+      {
+       "deg_q": 53,
+       "mask": [
+        1,
+        1,
+        1,
+        0
+       ],
+       "nu": [
+        14,
+        14,
+        14,
+        11
+       ],
+       "sum_nu": 53
+      }
+     ],
+     "p": "z*(z - 1)*(z**2 + z + 1)",
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "q_shape": {
+      "A": 11,
+      "B": 2,
+      "c0": "9",
+      "w": "z*(z - 1)*(z**2 + z + 1)"
+     },
+     "residual": "0",
+     "t": "2",
+     "verdict": "SOLVABLE"
+    }
+   ],
+   "survivors": [
+    {
+     "delta": "3/2",
+     "partition": [
+      2,
+      2
+     ]
+    },
+    {
+     "delta": "5/3",
+     "partition": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "u_s": 4,
+   "undecided": [
+    {
+     "delta": "3/2",
+     "partition": [
+      2,
+      1,
+      1
+     ]
+    }
+   ],
+   "v_s": 7
+  }
+ },
+ "schema": "jc2.g9966n1b3.face-screen/v2"
+}

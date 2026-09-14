@@ -1,0 +1,47 @@
+delta52: loading complete checkpoint source-full-delta52_phase0239.json
+delta52 inner minor solved in 3.64s
+delta52 inner low-weight product: 25 slots, 4.67s
+delta52 inner incidence reduced: 14 pivots, 7.08s
+delta52 inner: 76 preincidence, 14 QQ* pivots, 0 residual, 7.78s
+delta52: extracting only D1 coefficient dependencies
+delta52: dependency positions h/C2/C3=9/8/8, outer=[19, 21, 9, 19]
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_faces.py", line 150, in <module>
+    add(rows,'corner_J',{'constant_polynomial':str(value),'actual_polynomial_jets':jets,
+                    ^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_faces.py", line 133, in main
+    log(f'{branch}: dependency positions h/C2/C3={len(hs)}/{len(cs2)}/{len(cs3)}, outer={[len(p) for p in os.values()]}')
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/polys/polytools.py", line 182, in __new__
+    return cls._from_expr(rep, opt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/polys/polytools.py", line 311, in _from_expr
+    rep, opt = _dict_from_expr(rep, opt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/polys/polyutils.py", line 368, in _dict_from_expr
+    rep, gens = _dict_from_expr_if_gens(expr, opt)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/polys/polyutils.py", line 307, in _dict_from_expr_if_gens
+    (poly,), gens = _parallel_dict_from_expr_if_gens((expr,), opt)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/polys/polyutils.py", line 222, in _parallel_dict_from_expr_if_gens
+    poly[monom] += Mul(*coeff)
+  File "/usr/lib/python3/dist-packages/sympy/core/decorators.py", line 236, in _func
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/decorators.py", line 106, in binary_op_wrapper
+    return func(self, other)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/expr.py", line 198, in __add__
+    return Add(self, other)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/operations.py", line 98, in __new__
+    c_part, nc_part, order_symbols = cls.flatten(args)
+                                     ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sympy/core/add.py", line 331, in flatten
+    cs = s._new_rawargs(*((c,) + s.args))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

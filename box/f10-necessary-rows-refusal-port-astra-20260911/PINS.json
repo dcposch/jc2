@@ -1,0 +1,91 @@
+{
+  "schema": "f10-necessary-rows-refusal-port-pins/v1",
+  "status": "STATIC_DISABLED_CONDITIONAL",
+  "first_action_utc": "2026-09-11T06:20:14+00:00",
+  "reserve_utc": "2026-09-11T06:31:00+00:00",
+  "hard_stop_utc": "2026-09-11T06:34:00+00:00",
+  "input_order": "All ten hashes matched before fresh body reads or explicit same-agent prior-WHOLE reuse.",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-producer-astra-20260911/authority.py",
+      "sha256": "804c7aff56538fc332bf68638b03b7167eccdb49f73337f1a5f1823348b522a4",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-producer-astra-20260911/produce.py",
+      "sha256": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-checker-astra-20260911/check.py",
+      "sha256": "1d2d5b5408bfbf13b96f09453b1f14dfe884d261e702843bc31e5a043ffa53d1",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/dispatch.py",
+      "sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24",
+      "read_mode": "REUSED_WHOLE_CURRENT_PIN"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-delta-gate-prep-root-20260911/ROOT-NECESSARY-ROWS-CANDIDATE.json",
+      "sha256": "7beffe39c68b19e2998edc02949f8d24b3fe55a925d53139dff1c27a6690a482",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/DERIVATION.md",
+      "sha256": "04f1533174916c73b67d852dbab05207539f4f104b79bc1255dee6fc8f6dc034",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/DISABLED-POLICY.template.json",
+      "sha256": "922666ebad231a2f61024ba2fbdbe1a2d8bc452919ddee9b4e3899d4c9811229",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-direct-rows-python-compat-astra-20260911.md",
+      "sha256": "cb6a98bc5d413fe9eb67c81479d8958ff95e90f34e89cc9b834348665668ffa3",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-powerfix-astra-20260911/arithmetic.py",
+      "sha256": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+      "read_mode": "HASH_ONLY"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-checker-astra-20260911/check_arithmetic.py",
+      "sha256": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e",
+      "read_mode": "HASH_ONLY"
+    }
+  ],
+  "read_scope": {
+    "fresh_whole": "Entire authority.py, produce.py, check.py and four documents, with all split ranges completed through EOF.",
+    "reused_whole": "Only current dispatcher; prior same-agent whole read completed in the terminal necessary-row runtime task. Current narrow label/schema/mutation text also inspected.",
+    "hash_only": "Both arithmetic modules; no bodies reopened.",
+    "provenance": "No paths merely referenced in documents were followed. No live combined FIRST or peer output was accessed.",
+    "scientific_execution": "NONE; no interpreter, import, AST, syntax, compile, test, dummy, coefficient or fixture work."
+  },
+  "administrative_science_dir": "/opt/jc2-r3-necessaryrows-20260911a/science",
+  "final_source_files_for_root_new_copy": {
+    "authority.py": "804c7aff56538fc332bf68638b03b7167eccdb49f73337f1a5f1823348b522a4",
+    "arithmetic.py": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+    "produce.py": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a",
+    "check_arithmetic.py": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e",
+    "check.py": "1d2d5b5408bfbf13b96f09453b1f14dfe884d261e702843bc31e5a043ffa53d1"
+  },
+  "template_disablement": "The exact three-key policy schema has no enabled field; arithmetic.py deliberately stays UNFORMED. Final source vector above is documentary only, not release.",
+  "interpreter_attachment": "Imported ordinary Ubuntu amd64 3.12.3-1ubuntu0.16 ASCII display compatibility, conditional on future physical/native/install facts; not future-host attestation.",
+  "source_locations": {
+    "producer_module_call": 369,
+    "producer_authorize_call": 343,
+    "checker_module_call": 514,
+    "checker_authorize_call": 496,
+    "authority_status_raise": 82,
+    "authority_limits_inventory_raise": 95,
+    "authority_source_raise": 100,
+    "authority_load_call": 78,
+    "authority_hash_raise": 74,
+    "authority_wrong_tag_raise": 29
+  },
+  "remaining_quantity": "One actual future-host/install/native binding and seven exact refusal comparisons; UNMEASURED, no run authorized.",
+  "runtime_authority": "NONE"
+}

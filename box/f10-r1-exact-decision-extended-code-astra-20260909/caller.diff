@@ -1,0 +1,24 @@
+diff --git a/box/f10-r1-exact-decision-code-20260909/caller.py b/box/f10-r1-exact-decision-extended-code-astra-20260909/caller.py
+index 606784fd..ddf41ebe 100644
+--- a/box/f10-r1-exact-decision-code-20260909/caller.py
++++ b/box/f10-r1-exact-decision-extended-code-astra-20260909/caller.py
+@@ -71,7 +71,7 @@ def main():
+         now=time.time(); hard=task_deadline
+         if mathematical:
+             if first_math is None: first_math=now
+-            hard=min(deadline,first_math+120,task_deadline)
++            hard=min(deadline,first_math+690,task_deadline)
+         require(now+wall+15<hard,'insufficient remaining registered budget')
+         require(sha(registration)==registered_hash,'root registration changed')
+         auth=root/(name+'.authority.json')
+@@ -146,8 +146,8 @@ def main():
+             run('semantics','semantic_tests.py',[root/'exact.json',root/'semantic-validation.json'],30,25,mathematical=True)
+             exclusive(root/'batch.FINAL.json',{'records':records,'status':'VALIDATION-ONLY-NO-DECISION'})
+             return
+-        run('engine','engine.py',[root/'exact.json',root/'engine.receipt.json'],60,50,mathematical=True)
+-        run('verify','certificate.py',[root/'exact.json',root/'engine.receipt.json',root/'decision.json'],30,25,mathematical=True)
++        run('engine','engine.py',[root/'exact.json',root/'engine.receipt.json'],600,550,mathematical=True)
++        run('verify','certificate.py',[root/'exact.json',root/'engine.receipt.json',root/'decision.json'],60,50,mathematical=True)
+         verdict=json.loads((root/'decision.json').read_text())['verdict']
+         require(verdict in ['VERIFIED-UNIT','VERIFIED-PROPER'],'unrecognized terminal decision')
+         exclusive(root/'batch.FINAL.json',{'records':records,'verdict':verdict,'root_registration_sha256':registered_hash})

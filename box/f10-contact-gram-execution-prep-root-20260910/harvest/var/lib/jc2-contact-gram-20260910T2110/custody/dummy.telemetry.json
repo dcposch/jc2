@@ -1,0 +1,94 @@
+{
+  "argv_count": 22,
+  "argv_sha256": "9e4a3a14865948b6959fd6bd8e1500b0519f793eef4e55d39222909d404987fc",
+  "caps": {
+    "cpu_seconds": 3,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 33554432,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 5.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/opt/jc2-contact-gram-20260910T2110/source",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/setpriv",
+  "identity_checks": [
+    {
+      "observed_pgid": 8561,
+      "observed_pid": 8561,
+      "observed_start_identity": "boot=efdbfc83-f361-4cdf-ac88-ab294e6c7d84;start_ticks=105972",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-09-10T21:28:18.599468Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-09-10T21:28:18.599511Z"
+    },
+    {
+      "observed_pgid": 8561,
+      "observed_pid": 8561,
+      "observed_start_identity": "boot=efdbfc83-f361-4cdf-ac88-ab294e6c7d84;start_ticks=105972",
+      "result": "MATCH",
+      "stage": "before-kill",
+      "utc": "2026-09-10T21:28:19.603698Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 9,
+      "stage": "before-kill-send",
+      "utc": "2026-09-10T21:28:19.603728Z"
+    }
+  ],
+  "invocation_cwd": "/opt/jc2-contact-gram-20260910T2110/source",
+  "max_observed_group_rss_bytes": 86937600,
+  "pgid": 8561,
+  "pid": 8561,
+  "resource": "rss",
+  "runner_exit_code": 125,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=efdbfc83-f361-4cdf-ac88-ab294e6c7d84;start_ticks=105972",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "RESOURCE_CAP",
+  "stderr": {
+    "bytes": 0,
+    "path": "/run/jc2-contact-gram-20260910T2110/dummy.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 0,
+    "path": "/run/jc2-contact-gram-20260910T2110/dummy.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "telemetry_path": "/run/jc2-contact-gram-20260910T2110/dummy.telemetry.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      8561
+    ],
+    "kill_sent": true,
+    "leader_reaped": true,
+    "reason": "rss_cap",
+    "term_sent": true
+  },
+  "utc_end": "2026-09-10T21:28:19.608995Z",
+  "utc_start": "2026-09-10T21:28:18.467885Z",
+  "wall_elapsed_seconds": 1.141107147
+}

@@ -1,0 +1,70 @@
+========== 172.30.0.55 utc=2026-09-05T14:46:25Z ==========
+UTC=2026-09-05T14:46:26Z
+HOST=ip-172-30-0-55
+--- mem ---
+               total        used        free      shared  buff/cache   available
+Mem:           999Gi        20Gi       983Gi       3.0Mi       1.7Gi       979Gi
+--- dmesg OOM ---
+(dmesg empty or no match above)
+--- ps ---
+    PID    PPID     ELAPSED   RSS %CPU CMD
+   3166       1       34:19  3636  0.0 bash run_guided_pipeline.sh v38
+   3168    3166       34:19 26784  0.0 python3 /home/ubuntu/moh-bigmem-20260905/run_guided_job.py --workdir /home/ubuntu/moh-bigmem-20260905/targets/v38/guided --meta /home/ubuntu/moh-bigmem-20260905/targets/v38/native_meta.json --rows /home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv --name v38 --primes 1073741827 --timeout 10800 --cpus 32
+   3169    3168       34:19  3616  0.0 bash -c while true; do echo utc=$(date -u +%Y-%m-%dT%H:%M:%SZ) >> /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log; pid=$(pgrep -n Singular || true); echo pid=$pid >> /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log; if [ -n "$pid" ] && [ -r /proc/$pid/status ]; then awk '/VmPeak|VmSize|VmHWM|VmRSS/' /proc/$pid/status >> /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log; fi; sleep 20; done
+   3170    3168       34:19  2128  0.0 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+   3173    3170       34:19  1652  0.0 /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+   3176    3173       34:19 13471476 99.9 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.sing
+  12266   12265       00:00  3556  0.0 bash -c echo UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) echo HOST=$(hostname) echo "--- mem ---" free -h | head -2 echo "--- dmesg OOM ---" (dmesg -T 2>/dev/null | grep -iE 'oom|killed process|Out of memory' | tail -8) || true echo "(dmesg empty or no match above)" echo "--- ps ---" ps -eo pid,ppid,etime,rss,pcpu,cmd | awk 'NR==1 || /msolve|Singular|run_msolve|run_guided|extract_native|run_v18/' echo "--- artifacts find ---" find $HOME/moh-bigmem-20260905 -maxdepth 5 \( -name '*.g2.rc' -o -name '*.status.json' -o -name 'guided_gb_result.json' -o -name '*.g2.out' -o -name '*.g2.stderr' -o -name '*.g2.meta' -o -name '*.rss.log' \) -printf '%s %TY-%Tm-%TdT%TH:%TM:%TS %p\n' 2>/dev/null echo "--- last F4 ---" for f in $HOME/moh-bigmem-20260905/targets/*/*/*.g2.stderr; do   [ -f "$f" ] || continue   echo FILE=$f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f")   echo "--- F4 header ---"   grep -E 'deg[[:space:]]+sel|current degree' "$f" | tail -2   echo "--- F4 last complete-ish ---"   grep -E '^[[:space:]]*[0-9]+[[:space:]]+[0-9]+[[:space:]]+[0-9]+' "$f" | tail -12   echo "--- F4 raw tail ---"   tail -c 800 "$f"; echo done echo "--- last GG ---" for f in $HOME/moh-bigmem-20260905/targets/*/guided/*.out; do   [ -f "$f" ] || continue   echo FILE=$f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f")   grep -E 'GG__|CONTROL_|MAIN_|GUIDED_|UNIT|NONUNIT|std|used time' "$f" | tail -30   echo "--- out tail ---"   tail -20 "$f" done echo "--- extract ---" ls -la $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/ 2>/dev/null || true ls -la $HOME/moh-bigmem-20260905/targets/v18/native_rows.tsv $HOME/moh-bigmem-20260905/targets/v18/classdir/rows/ 2>/dev/null || true echo "--- builder stdout ---" tail -30 $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/builder.stdout 2>/dev/null || true echo "--- builder stderr ---" tail -20 $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/builder.stderr 2>/dev/null || true echo "--- rss last ---" for f in $HOME/moh-bigmem-20260905/targets/*/*/*.rss.log; do   [ -f "$f" ] || continue   echo FILE=$f   tail -12 "$f" done echo "--- gnu time ---" grep -E 'Maximum resident|Elapsed \(wall|Exit status|Command exited|User time|System time' $HOME/moh-bigmem-20260905/targets/*/*/*.g2.stderr $HOME/moh-bigmem-20260905/targets/*/guided/*.err $HOME/*.time 2>/dev/null | tail -30 || true echo "--- home logs ---" ls -la $HOME/*.log 2>/dev/null echo "=== log tails ===" for f in $HOME/*.log; do   [ -f "$f" ] || continue   echo "==== TAIL $f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f") ===="   tail -40 "$f" done echo POLL_DONE
+  12276   12266       00:00  3864  0.0 awk NR==1 || /msolve|Singular|run_msolve|run_guided|extract_native|run_v18/
+--- artifacts find ---
+11454 2026-09-05T14:46:09.3760529230 /home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log
+--- last F4 ---
+--- last GG ---
+FILE=/home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.out size=218 mtime=2026-09-05 14:12:09.450095167 +0000
+CONTROL_RING_PASS R
+CONTROL_EMPTY_PASS
+CONTROL_NONEMPTY_PASS
+MAIN_START equations=174 unknowns=111 char=1073741827 algorithm=std
+GG__RUN main START
+GG__GENERATOR_COUNT main 175
+GG__STD_BEGIN main
+//used time: 0.93 sec
+--- out tail ---
+CONTROL_RING_PASS R
+CONTROL_EMPTY_PASS
+CONTROL_NONEMPTY_PASS
+MAIN_START equations=174 unknowns=111 char=1073741827 algorithm=std
+GG__RUN main START
+GG__GENERATOR_COUNT main 175
+GG__STD_BEGIN main
+//used time: 0.93 sec
+--- extract ---
+/home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/rows/:
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep  5 14:04 .
+drwxrwxr-x 4 ubuntu ubuntu 4096 Sep  5 14:04 ..
+--- builder stdout ---
+--- builder stderr ---
+--- rss last ---
+FILE=/home/ubuntu/moh-bigmem-20260905/targets/v38/guided/v38_p1073741827.rss.log
+utc=2026-09-05T14:45:49Z
+pid=3176
+VmPeak:	13533996 kB
+VmSize:	13533996 kB
+VmHWM:	13257796 kB
+VmRSS:	13257796 kB
+utc=2026-09-05T14:46:09Z
+pid=3176
+VmPeak:	13656896 kB
+VmSize:	13656896 kB
+VmHWM:	13381324 kB
+VmRSS:	13381324 kB
+--- gnu time ---
+--- home logs ---
+-rw-rw-r-- 1 ubuntu ubuntu 305 Sep  5 14:12 /home/ubuntu/v38.guided.log
+=== log tails ===
+==== TAIL /home/ubuntu/v38.guided.log size=305 mtime=2026-09-05 14:12:07.109143697 +0000 ====
+GUIDED_PIPELINE_START target=v38 rows=/home/ubuntu/moh-bigmem-20260905/targets/v38/native_rows.tsv utc=2026-09-05T14:12:07Z
+GUIDED_START name=v38 gens=174 nvars=112 rows_sha=2b59ba92f2b889b09d38570f6f03bec865ede4d509e85c687f66f3033369254b
+MODULAR_START p=1073741827 timeout=10800 utc=2026-09-05T14:12:07Z
+POLL_DONE

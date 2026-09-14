@@ -1,0 +1,128 @@
+{
+ "schema": "local-reconstruction-vs-custody-footer/v1",
+ "checker_sha256": "0c3e2d2d8734801f5bc215aa50e9d029110ee2a019675a46221ae71b356e601f",
+ "results": [
+  {
+   "case": "unequal",
+   "branch": "rational",
+   "footer_match": true,
+   "header_match": true,
+   "prefix_sha256": "4053faac6abd91ae41e85fd94fcc79e12202e9a44680b07ee4a00de9edf43cce",
+   "counts": {
+    "rows": 803,
+    "terms": 27577,
+    "zero_rows": 249,
+    "fixed_assignment": 31,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "fixed_unit_guard": 6,
+    "scalar_guard": 1
+   },
+   "variables": 269,
+   "manifest_jsonl_sha256": "b8db27661d1bfd3dcc5dfe1d1271b78c3f6375e06201654977a51380cd6ebcac",
+   "seconds": 0.77
+  },
+  {
+   "case": "unequal",
+   "branch": "golden",
+   "footer_match": true,
+   "header_match": true,
+   "prefix_sha256": "61dbb78a84eb11fa58c1cd0db0aadfc65d58624700c1d46e6ff8f94da61cc560",
+   "counts": {
+    "rows": 803,
+    "terms": 29462,
+    "zero_rows": 249,
+    "fixed_assignment": 31,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "fixed_unit_guard": 6,
+    "scalar_guard": 1
+   },
+   "variables": 269,
+   "manifest_jsonl_sha256": "ad83add3ccdeb56914cf73ab06fe733f7b89aa984e586bb973dde04ca471613b",
+   "seconds": 0.92
+  },
+  {
+   "case": "common_3",
+   "branch": "rational",
+   "footer_match": true,
+   "header_match": true,
+   "prefix_sha256": "26c726ce48a92a5d6e4b3ae31a0a3d2e1489f440b2ed64c708628bc69c809231",
+   "counts": {
+    "rows": 816,
+    "terms": 32699,
+    "zero_rows": 217,
+    "fixed_assignment": 44,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "fixed_unit_guard": 6,
+    "scalar_guard": 1
+   },
+   "variables": 295,
+   "manifest_jsonl_sha256": "cb6dd5a002db764412ed5f755d868ef11d91eaa20835a1d981e4fabe9d0eb177",
+   "seconds": 0.98
+  },
+  {
+   "case": "common_3",
+   "branch": "golden",
+   "footer_match": true,
+   "header_match": true,
+   "prefix_sha256": "646e71d601d24508db5cf310244df2f4a1cd4e3d5310a665fae8053a7e8778c8",
+   "counts": {
+    "rows": 816,
+    "terms": 34820,
+    "zero_rows": 217,
+    "fixed_assignment": 44,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "fixed_unit_guard": 6,
+    "scalar_guard": 1
+   },
+   "variables": 295,
+   "manifest_jsonl_sha256": "7fa9f5d1be4aca6745f67a1e4a3dcc495f10ec6612fa13c9d87b01890643bc2c",
+   "seconds": 1.1
+  },
+  {
+   "case": "common_4",
+   "branch": "rational",
+   "footer_match": true,
+   "header_match": true,
+   "prefix_sha256": "422a75b1e007d43fdc4048298b23e558c6c00be9c4cc9a97acd660601fac9d2f",
+   "counts": {
+    "rows": 816,
+    "terms": 44960,
+    "zero_rows": 97,
+    "fixed_assignment": 44,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "fixed_unit_guard": 6,
+    "scalar_guard": 1
+   },
+   "variables": 371,
+   "manifest_jsonl_sha256": "276ee6f4c23df9577cbeb832f06e84ae1c06dcf29b960e067d08083d3a0db13e",
+   "seconds": 1.37
+  },
+  {
+   "case": "common_4",
+   "branch": "golden",
+   "footer_match": true,
+   "header_match": true,
+   "prefix_sha256": "e4dab66378c6a608676b8656667c1b12bc9006d2ae06df6a23c6db9cb3fbdaf6",
+   "counts": {
+    "rows": 816,
+    "terms": 47621,
+    "zero_rows": 97,
+    "fixed_assignment": 44,
+    "jacobian": 660,
+    "polynomiality": 105,
+    "fixed_unit_guard": 6,
+    "scalar_guard": 1
+   },
+   "variables": 371,
+   "manifest_jsonl_sha256": "3e897ad6578a25aa0ce90e16ae8ab68c4ddf94f5bc2426045792982bf9ea892e",
+   "seconds": 1.6
+  }
+ ],
+ "max_rss_kib": 90260,
+ "cpu_seconds": 6.73
+}

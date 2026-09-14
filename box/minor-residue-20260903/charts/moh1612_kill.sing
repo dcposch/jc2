@@ -1,0 +1,42 @@
+// (16,12): Keller test on Moh's p.208 chart.  Localize at the nonzero Jacobian
+// constant with a Rabinowitsch variable; DIM -1 / GB 1 == chart empty.
+option(redSB); short=0;
+ring R = 0,(Z,b1,b2,b3,b4,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,x,y),dp;
+poly h  = y^3*(y-x) + b1*y^3 + b2*y^2 + b3*y + b4;
+poly AA = y^2*(y-x) + b1*y^2 + b2*y  + b3;
+poly BB = y*(y-x)   + b1*y  + b2;
+poly al2 = c1*AA + c2;         poly be2 = c3*AA + c4;
+poly al3 = c5*AA + c6*BB + c7; poly be3 = c8*AA + c9*BB + c10;
+poly al4 = c11*AA + c12*BB + c13*(y-x);
+poly f = h^3 + be2*h + be3;
+poly g = h^4 + al2*h^2 + al3*h + al4;
+poly J = diff(f,x)*diff(g,y) - diff(f,y)*diff(g,x);
+matrix C = coef(J, x*y);
+ideal I; poly cst; int i;
+for (i=1; i<=ncols(C); i++) { if (C[1,i]==1) { cst = C[2,i]; } else { I = I+ideal(C[2,i]); } }
+I = simplify(I,2);
+"MARK_NGENS"; size(I);
+"MARK_JCONST"; cst;
+
+// --- the k0 row predicted by the ladder law: p=5, x,y-degree 21, k0=14 ---
+"MARK_K0ROW";  coef(J, x*y)[1,1];   // placeholder to keep indices printed below
+poly r_k0 = 0;
+for (i=1; i<=ncols(C); i++) { if (C[1,i]==x^7*y^14) { r_k0 = C[2,i]; } }
+"MARK_ROW_x7y14"; r_k0;
+poly r_top = 0;
+for (i=1; i<=ncols(C); i++) { if (C[1,i]==x^7*y^14) { r_top=C[2,i]; } }
+
+ideal L = I, Z*cst-1;
+"MARK_STD_START";
+ideal S = std(L);
+"MARK_STD_DONE";
+"MARK_DIM"; dim(S);
+"MARK_SIZE"; size(S);
+"MARK_GB1"; S[1];
+"MARK_RED1"; reduce(1,S);
+// controls
+"MARK_CTRL_RAW_DIM"; dim(std(I));
+"MARK_CTRL_EMPTY"; dim(std(ideal(1)));
+"MARK_CTRL_POINT"; dim(std(ideal(Z,b1,b2,b3,b4,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,x,y)));
+"MARK_DONE";
+quit;

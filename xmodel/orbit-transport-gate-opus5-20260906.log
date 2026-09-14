@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete and sealed.
+
+## VERDICT: CONFIRMED-WITH-FIX
+
+**Report:** `xmodel/orbit-transport-gate-opus5-20260906.md` (body 20,462 B, sealed, `seal.py verify` PASS). Notes/JSON: `box/orbit-transport-gate-20260906/` (288 KB). Inputs 8/8 OK before any mathematical read.
+
+**(1) Print re-derivation.** The ring map is verbatim M p.197 (θ=y⁻¹, σ=Σa_jθ^j+πθ^{v/u}, γ=θ^{1/u}, z=y−bx−e), and the substitution's own Jacobian `−(u_s/b)γ^{v_s−u_s−1}` *is* the printed conclusion (3). One correction to the producer: the "corrected Jacobian monomial" corrects a **proof line**, not the theorem — and the p.198 display is corrupt twice (its `x_π` entry is also reciprocal, and its final line isn't even its own matrix's determinant). I re-derived δ′ = H+(u/ε)(δ−1) independently. Major-orbit completeness needs three printed ingredients, only one of which the producer cites: M p.194 (8)–(10) with a=0, X Def 4.3's principal-minor declaration (u_s<v_s ⟺ ℓ≥0), and Prop 5.6.
+
+**Two fixes.** The transportable invariant is the **product** N′ρ′ = εNρ, not the split pair (the pair fails at the producer's own R050 endpoint; `inverse_top` already emits the product). And N is the **actual** centre orbit size — zero-route levels contribute 1. My first driver got this wrong and failed on 7 rows; correcting it restored 46/46.
+
+**(2) Quantifier.** The cover proof is pair-only; the local rule is a *partial* map on necessary configurations (ε is undetermined on zero routes) landing in the child's constraint set only contingently. The gate's proposed consequence — "child integrality is not a new condition at u_s=1" — is **REFUTED**; the producer's own report already declines it.
+
+**(3) Numerics.** 46/46 complete u_s=1 rows: ratio exactly u_s, N′ρ′=εNρ exactly. 54/54 z=0 rows give an integral finite-line remainder; the 12 fractional ones are exactly the endpoint class. R001/R002 reproduce Xu's printed §6 numbers. The 20 u_s≥2 rows are **rule-internal only** — no licensed child Def 5.1 — so that part of the test is tautological and I say so.
+
+**(4) Prop 5.6 at the child:** not printed (p.189 needs a unit Jacobian); not needed — the theorem and `descend_own` use it at the parent only.
+
+**One finding beyond the charge:** with the roster charged, R063's row is *exactly* the producer's reconstruction, so no input was missing. Its "19" comes from Moh's coarse stabilizer (509 configs, one integral); the actual stabilizer leaves one config with 1035/59. Transport's εN ∈ Z prerequisite fails on the coarse ones. Raised as OPENs 3/4, not promoted — the census convention is another lane's call.
+DIVERT path=xmodel/orbit-transport-gate-opus5-20260906.md status=CLEAN_SEALED body_bytes=20462 body_sha256=d4071d60a4682921cb6d9d95e64446cc49761d47fec892936f0a935978f68a37

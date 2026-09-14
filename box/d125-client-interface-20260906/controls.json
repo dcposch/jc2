@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "20_basis_forward_inverse_and_band_controls": true,
+    "deleted_negative_tail_rejected": true,
+    "explicit_binomial_left_inverse_on_20_term_residual": true,
+    "modified_cover_Jacobian_and_target": true,
+    "monomial_J_alone_not_descent": true,
+    "physical_J_row_bound_4572": true,
+    "positive_polynomial_Keller_control": true,
+    "reversed_band_bracket_rejected": true,
+    "source_ranges_dimensions_and_degree_guard_indices": true,
+    "three_nontrivial_compressed_bracket_controls": true,
+    "wrong_Jacobian_sign_rejected": true,
+    "wrong_factor_5_rejected": true
+  },
+  "counts": {
+    "P": {
+      "bands": 91,
+      "dimension": 653,
+      "jet_rows": 53,
+      "source_coefficients": 706
+    },
+    "Q": {
+      "bands": 151,
+      "dimension": 1765,
+      "jet_rows": 136,
+      "source_coefficients": 1901
+    }
+  },
+  "physical_J_row_bound": 4572,
+  "scope": "tiny exact map controls and scalar support counts only; no full ideal or witness",
+  "status": "PASS"
+}

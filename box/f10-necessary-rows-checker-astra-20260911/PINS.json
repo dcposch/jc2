@@ -1,0 +1,47 @@
+{
+  "schema": "jc2-necessary-rows-checker-pins/v1",
+  "first_utc": "2026-09-11 05:53:59 UTC",
+  "reserve_utc": "2026-09-11 06:04:00 UTC",
+  "hard_utc": "2026-09-11 06:07:00 UTC",
+  "inputs": [
+    {
+      "path": "COORDINATION.md",
+      "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+      "scope": "REUSED_WHOLE, same agent prior inverse-redesign task 05:11-05:24, exact current pin; no new policy bytes"
+    },
+    {
+      "path": "box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md",
+      "sha256": "176363939a8aa6861995cd72a99c61f7d04bfeab5a9634f6d3143dcd3d3bd098",
+      "scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md.artifact.json",
+      "sha256": "09ebf0c2fa902aee6bd85507d5f3a4817a74e2e109f9e638031e5931e143703c",
+      "scope": "FRESH_WHOLE documentary transaction"
+    },
+    {
+      "path": "xmodel/f10-necessary-rows-design-gate-fable5-20260911.md",
+      "sha256": "8e07e419d321b09ecd13c61a1c5fdc3dbaf9a099c1a1ebedf9b9fe6ef280073b",
+      "scope": "FRESH_WHOLE, accepted source-exclusion/dependency scope; no foundation re-review"
+    },
+    {
+      "path": "box/f10-direct-rows-checker-astra-20260911/check.py",
+      "sha256": "5052884779d781e55693115c3065db1207667ce224a5914bbb95721d0abe9f7b",
+      "scope": "FRESH_WHOLE all529 lines; eligible prior-WHOLE reuse not needed"
+    }
+  ],
+  "hash_before_body": true,
+  "fresh_read_interval": "After first-action pins 05:53:59; all fresh inputs complete before 05:54:35 UTC",
+  "clipping": "NONE",
+  "owned_source": {
+    "path": "box/f10-necessary-rows-checker-astra-20260911/check.py",
+    "sha256": "1d2d5b5408bfbf13b96f09453b1f14dfe884d261e702843bc31e5a043ffa53d1"
+  },
+  "unchanged_arithmetic_installation_requirement": {
+    "path": "box/f10-direct-rows-checker-astra-20260911/check_arithmetic.py",
+    "sha256": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e",
+    "status": "Expected future installation pin supplied by ROOT; not copied, edited or freshly read this task"
+  },
+  "source_execution": "NONE",
+  "peer_source_reads": "NONE"
+}

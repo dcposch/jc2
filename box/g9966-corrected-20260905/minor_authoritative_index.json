@@ -1,0 +1,62 @@
+{
+  "delta2": {
+    "all_graphs_and_final_ideal_at_stopped_endpoint": {
+      "J_t": 70,
+      "dimension_on_gauge_slice": 213,
+      "path": "box/g9966-corrected-20260905/authoritative-final-delta2-graphs-verify.json",
+      "sha256": "1ae3f8752bddc7d1ed7843faed9536d92c82e5b3ab0dea4088fd9ce32954b0e5",
+      "status": "GRAPH_CHAIN_AND_FINAL_IDEAL_VERIFIED",
+      "unit_ideal": false
+    },
+    "complete_direct_FG_oracle_checkpoint": {
+      "J_t": 67,
+      "dimension_on_gauge_slice": 226,
+      "path": "box/g9966-corrected-20260905/minor-oracle-delta2-verify.json",
+      "sha256": "cfb3e21ca5c71400d4b8090000c042547f117d87e326e63c68d9661feffedc0c",
+      "status": "PASS",
+      "unit_ideal": false
+    },
+    "incomplete_latest_direct_regeneration_is_explicitly_bounded": true,
+    "stopped_computation": {
+      "J_t": 70,
+      "VERDICT": "COMPUTE-BOUND; further global Jacobian rows remain",
+      "dimension_on_gauge_slice": 213,
+      "sha256": "5d66ee0da3fc705c62ef60549ab471aaa2a0afbc5334aeb68b21cca960f6d672",
+      "state": "box/g9966-corrected-20260905/results-fullJ-batch/fullJ-batch-delta2.json"
+    }
+  },
+  "delta52": {
+    "all_graphs_and_final_ideal_at_stopped_endpoint": {
+      "J_t": 96,
+      "dimension_on_gauge_slice": 34,
+      "path": "box/g9966-corrected-20260905/authoritative-stopped-delta52-graphs-verify.json",
+      "sha256": "a3b4b15810a2306afcb0c365d55ae54334cb8b71664c08908906aa35850e7909",
+      "status": "GRAPH_CHAIN_AND_FINAL_IDEAL_VERIFIED",
+      "unit_ideal": false
+    },
+    "complete_direct_FG_terminal_checkpoint": {
+      "J_t": 93,
+      "dimension_on_gauge_slice": 39,
+      "path": "box/g9966-corrected-20260905/authoritative-final-delta52-verify.json",
+      "sha256": "0996879b15bb32baacf9db198005e19b5bfeac8087f4e80b0cfdeb8e5d22aeff",
+      "status": "PASS",
+      "unit_ideal": false
+    },
+    "incomplete_latest_direct_regeneration_is_explicitly_bounded": true,
+    "independent_direct_oracle_overlap": {
+      "J_t": 90,
+      "dimension_on_gauge_slice": 43,
+      "path": "box/g9966-corrected-20260905/minor-oracle-delta52-verify.json",
+      "sha256": "861b18aaff28e0f12adfa65b189ae5485762cb49db661f9b55982bebb3d3c05d",
+      "status": "PASS",
+      "unit_ideal": false
+    },
+    "stopped_computation": {
+      "J_t": 96,
+      "VERDICT": "COMPUTE-BOUND; further global Jacobian rows remain",
+      "dimension_on_gauge_slice": 34,
+      "sha256": "97d3a328f2fcb8832bf4ad4bb82831942a4d9731280c1d191548837a409767c8",
+      "state": "box/g9966-corrected-20260905/results-fullJ-batch/fullJ-batch-delta52.json"
+    }
+  }
+}

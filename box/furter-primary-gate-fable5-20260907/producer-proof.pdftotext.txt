@@ -1,0 +1,398 @@
+     Polynomial composition rigidity via critical values
+
+                                              liqsweep
+                                            X: @liqsweep
+
+                                            September 2026
+
+     Abstract. Let 𝑎, 𝑏 ∈ ℂ[𝑧] be polynomials with 𝑎 ∘ 𝑏(0) = 0 and (𝑎 ∘ 𝑏)′ (0) = 1. We
+     prove that either 𝑎 ∘ 𝑏 = 𝑧 or
+                              ord0 (𝑎 ∘ 𝑏 − 𝑧) ≤ deg 𝑎 + deg 𝑏 − 1.
+
+     The proof is dynamical: scalar multiplication splits a degenerate fixed point into
+     attracting fixed points without changing the number of distinct critical values, attracting
+     basins are separated by critical values, and critical values are subadditive under compo­
+     sition. The bound is sharp for every pair of degrees. It proves the rigidity conjecture
+     𝑅(𝑚, 𝑛) of Furter for all 𝑚, 𝑛 ≥ 1, previously known only for min(𝑚, 𝑛) ≤ 2. Conse­
+     quently the composition-coefficient map 𝔸𝑚+𝑛 → 𝔸𝑚+𝑛 is finite and flat of degree
+     ( 𝑚+𝑛                                                                        2
+        𝑚 ), the closure of every length-two multidegree stratum of Aut(𝔸ℂ ) is the one
+     predicted by Furter, and the Strong Factorial Conjecture of Edo and van den Essen holds
+     for all polynomials 𝑋1 ⋯𝑋𝑚 (𝜇1 𝑋1 + ⋯ + 𝜇𝑚 𝑋𝑚 ).
+
+
+1. Introduction
+For a nonzero convergent power series 𝑢 at the origin, ord0 𝑢 denotes the exponent of its lowest-
+order term. For a nonconstant polynomial 𝑓 ∈ ℂ[𝑧] let
+                               CV(𝑓) = {𝑓(𝜁) : 𝜁 ∈ ℂ, 𝑓 ′ (𝜁) = 0}
+
+be the set of distinct finite critical values of 𝑓; multiplicities are not counted, so # CV(𝑓) ≤
+deg 𝑓 − 1.
+  In [1] Furter introduced the following statement about polynomial composition.
+Conjecture 1.1 (𝑅(𝑚, 𝑛), Furter). Let 𝑚, 𝑛 ≥ 1 and let
+                                      𝑚                          𝑛
+                         𝑎(𝑧) = 𝑧 + ∑ 𝑎𝑖 𝑧𝑖+1 ,       𝑏(𝑧) = 𝑧 + ∑ 𝑏𝑗 𝑧𝑗+1
+                                      𝑖=1                       𝑗=1
+
+be polynomials with complex coefficients. If 𝑎 ∘ 𝑏(𝑧) = 𝑧 + 𝑂(𝑧𝑚+𝑛+2 ), then 𝑎 = 𝑏 = 𝑧.
+Furter proved 𝑅(𝑚, 𝑛) when 𝑚 ≤ 2 or 𝑛 ≤ 2 [1, Theorem A], verified it by Gröbner basis compu­
+tations for 𝑚 ≤ 8 and 𝑛 ≤ 5, and showed that 𝑅(𝑚, 𝑛) for 𝑑 = (𝑚 + 1, 𝑛 + 1) determines the
+Zariski closure of the set of plane polynomial automorphisms of multidegree 𝑑 [1, Theorem B]. Edo
+and van den Essen [2] showed that the family 𝑅(𝑚) of inverse-coefficient statements equivalent
+to the 𝑅(𝑚, 𝑛) is a special case of their Strong Factorial Conjecture. Lewis, Perry and Straub [3]
+proposed an algorithmic approach to the multidegree closure problem and recovered the known
+cases. The case 𝑅(3), equivalently 𝑅(3, 𝑛) for all 𝑛, remained open.
+   The main result of this paper is a contact bound for compositions from which 𝑅(𝑚, 𝑛) follows
+for all 𝑚, 𝑛.
+
+
+                                                  1
+Theorem 1.2 (Composition contact bound). Let 𝑓1 , …, 𝑓𝑠 ∈ ℂ[𝑧] be nonconstant polynomials and
+let 𝐹 = 𝑓𝑠 ∘ ⋯ ∘ 𝑓1 . Suppose 𝐹 (0) = 0, 𝐹 ′ (0) = 1 and 𝐹 ≠ 𝑧. Then
+                                                               𝑠
+                                  ord0 (𝐹 − 𝑧) ≤ 1 + ∑(deg 𝑓𝑖 − 1).                                  (1)
+                                                              𝑖=1
+
+In particular, for two factors,
+                                  ord0 (𝑎 ∘ 𝑏 − 𝑧) ≤ deg 𝑎 + deg 𝑏 − 1.                              (2)
+
+Only the normalization of 𝐹 is used; the factors need not fix the origin. If deg 𝐹 = 1 the normal­
+ization forces 𝐹 = 𝑧, so the hypothesis 𝐹 ≠ 𝑧 implies deg 𝐹 ≥ 2.
+Corollary 1.3. 𝑅(𝑚, 𝑛) holds for all 𝑚, 𝑛 ≥ 1.
+Proof. Let 𝑎, 𝑏 be as in Conjecture 1.1 with 𝑎 ∘ 𝑏(𝑧) = 𝑧 + 𝑂(𝑧 𝑚+𝑛+2 ). If 𝑎 ∘ 𝑏 ≠ 𝑧, then (2) gives
+   𝑚 + 𝑛 + 2 ≤ ord0 (𝑎 ∘ 𝑏 − 𝑧) ≤ deg 𝑎 + deg 𝑏 − 1 ≤ (𝑚 + 1) + (𝑛 + 1) − 1 = 𝑚 + 𝑛 + 1,
+
+a contradiction. Hence 𝑎 ∘ 𝑏 = 𝑧. Degrees multiply under composition, so deg 𝑎 = deg 𝑏 = 1; the
+normalizations then give 𝑎 = 𝑏 = 𝑧.                                                          □
+The bound (2) is attained for every pair of degrees (Corollary 6.2). Theorem 1.2 holds over every
+field of characteristic zero and fails in every positive characteristic (Remarks 4.2 and 4.3).
+   The proof of Theorem 1.2 occupies Sections 2 to 4. Let 𝐹 (𝑧) = 𝑧 + 𝑐𝑧 𝑘+1 + 𝑂(𝑧 𝑘+2 ) with 𝑐 ≠
+0. Multiplying 𝐹 by a scalar 1 + 𝛿 𝑘 with 𝛿 > 0 small splits the degenerate fixed point at the origin
+into 𝑘 distinct attracting fixed points and does not change the number of distinct critical values
+(Lemma 3.1). The basin of each attracting fixed point contains a critical point, and distinct basins
+are disjoint and fully invariant, so distinct attracting fixed points require distinct critical values
+(Lemma 2.1). Therefore 𝑘 ≤ # CV(𝐹 ). Finally # CV is subadditive under composition, which
+gives 𝑘 ≤ ∑(deg 𝑓𝑖 − 1).
+   Sections 5 to 8 record the consequences.
+• Corollary 5.1: the formal inverse of a polynomial 𝑎 = 𝑧 + 𝑂(𝑧2 ) of degree at most 𝑚 + 1 with
+  𝑎 ≠ 𝑧 has no block of 𝑚 consecutive vanishing coefficients. This is Furter’s statement 𝑅(𝑚).
+• Corollary 6.1: the polynomial map (𝑎1 , …, 𝑎𝑚 , 𝑏1 , …, 𝑏𝑛 ) ↦ (𝑐1 , …, 𝑐𝑚+𝑛 ) sending the coeffi­
+  cients of 𝑎, 𝑏 to those of 𝑎 ∘ 𝑏 is finite, flat and surjective of degree ( 𝑚+𝑛
+                                                                               𝑚 ).
+• Corollary 7.2: for all 𝑑1 , 𝑑2 ≥ 2 the closure of the set of plane polynomial automorphisms of
+  multidegree (𝑑1 , 𝑑2 ) is
+
+                        𝒢︀(𝑑1 ,𝑑2 ) = 𝒢︀∅ ∪        ⋃          𝒢︀(𝑠) ∪        ⋃           𝒢︀(𝑢,𝑣) .
+                                              2≤𝑠≤𝑑1 +𝑑2 −1             2≤𝑢≤𝑑1 ,2≤𝑣≤𝑑2
+
+  This is the Polydegree Conjecture of [3] in length two, in the form conjectured by Furter.
+• Corollary 8.2: the Strong Factorial Conjecture holds for every polynomial 𝑋1 ⋯𝑋𝑚 (𝜇1 𝑋1 +
+  ⋯ + 𝜇𝑚 𝑋𝑚 ).
+
+
+2. Attracting fixed points require distinct critical values
+The following is the polynomial case of a theorem of Fatou; see [4, Section 8] for rational maps.
+We include the short proof.
+
+
+
+
+                                                        2
+Lemma 2.1. Let 𝑃 ∈ ℂ[𝑧] have degree at least two. The number of distinct attracting fixed points of
+𝑃 is at most # CV(𝑃 ).
+Proof. Let 𝑝 be a fixed point with multiplier 𝜆 = 𝑃 ′ (𝑝), |𝜆| < 1. Its basin
+                                     𝐵𝑝 = {𝑧 ∈ ℂ : 𝑃 ∘𝑛 (𝑧) → 𝑝}
+
+is open, since it is the union of the preimages of a small disk around 𝑝 on which 𝑃 is a contraction,
+and bounded, since for an escape radius 𝑅 with |𝑃 (𝑧)| > 2|𝑧| whenever |𝑧| > 𝑅 every point
+outside the disk of radius 𝑅 escapes to infinity.
+   We claim that 𝐵𝑝 contains a critical point of 𝑃 . If 𝜆 = 0, then 𝑝 itself is critical. Assume 0 <
+|𝜆| < 1 and suppose that no critical point lies in 𝐵𝑝 .
+   Choose a disk 𝐷 = 𝐷(𝑝, 𝜌) ⊂ 𝐵𝑝 . Every point of 𝑃 −𝑛 (𝐷) lies in 𝐵𝑝 . The derivative of 𝑃 ∘𝑛 does
+not vanish on 𝑃 −𝑛 (𝐷): a zero would mean that some intermediate iterate 𝑃 ∘𝑖 (𝑧), 0 ≤ 𝑖 < 𝑛, is a
+critical point of 𝑃 whose orbit later enters 𝐷, hence lies in 𝐵𝑝 . Since a polynomial is proper, the
+restriction
+                                          𝑃 ∘𝑛 : 𝑃 −𝑛 (𝐷) → 𝐷
+
+is a proper unramified holomorphic map. On each connected component of 𝑃 −𝑛 (𝐷) its image
+is open and, by properness, closed in 𝐷, hence equal to 𝐷; a proper local biholomorphism onto
+the simply connected disk 𝐷 is a covering, hence a biholomorphism on each component. The
+component containing 𝑝 supplies an inverse branch
+
+                 𝑢𝑛 : 𝐷 → 𝐵𝑝 ,     𝑢𝑛 (𝑝) = 𝑝,    𝑃 ∘𝑛 ∘ 𝑢𝑛 = id𝐷 ,     (𝑢𝑛 )′ (𝑝) = 𝜆−𝑛 .
+
+All 𝑢𝑛 take values in 𝐵𝑝 ⊂ {|𝑧| ≤ 𝑅}. Cauchy’s estimate on the circle of radius 𝜌/2 about 𝑝 gives
+|(𝑢𝑛 )′ (𝑝)| ≤ 2𝑅/𝜌 for every 𝑛, contradicting |𝜆|−𝑛 → ∞.
+    Choose a critical point 𝜁𝑝 ∈ 𝐵𝑝 . Its image 𝑃 (𝜁𝑝 ) is a finite critical value lying in 𝐵𝑝 , because 𝐵𝑝
+is invariant under 𝑃 . The basins of distinct fixed points are disjoint, since an orbit cannot converge
+to two points. Thus distinct attracting fixed points give distinct critical values.                       □
+
+
+3. Splitting a degenerate fixed point
+Lemma 3.1 (Contact versus critical values). Let 𝑓 ∈ ℂ[𝑧] satisfy
+
+                           𝑓(𝑧) = 𝑧 + 𝑐𝑧𝑘+1 + 𝑧 𝑘+2 𝑟(𝑧),      𝑐 ≠ 0,    𝑘 ≥ 1,
+
+with 𝑟 a polynomial. Then
+                                             𝑘 ≤ # CV(𝑓).                                              (3)
+
+Proof. For a small real parameter 𝛿 > 0 put
+
+                                         𝑔𝛿 (𝑧) = (1 + 𝛿 𝑘 )𝑓(𝑧).
+
+Scalar multiplication does not change the critical points and multiplies every critical value by the
+same nonzero scalar, so
+
+                       CV(𝑔𝛿 ) = (1 + 𝛿 𝑘 ) CV(𝑓),       # CV(𝑔𝛿 ) = # CV(𝑓).                          (4)
+
+
+
+
+                                                    3
+We look for nonzero fixed points of 𝑔𝛿 of the form 𝑧 = 𝛿𝑤. The fixed-point equation 𝑔𝛿 (𝑧) = 𝑧
+reads 𝛿 𝑘 𝑧 + (1 + 𝛿 𝑘 )(𝑐𝑧𝑘+1 + 𝑧 𝑘+2 𝑟(𝑧)) = 0; substituting 𝑧 = 𝛿𝑤 and dividing by 𝛿 𝑘+1 𝑤 gives
+
+                     𝐻(𝛿, 𝑤) = 1 + (1 + 𝛿 𝑘 )𝑐𝑤𝑘 + 𝛿(1 + 𝛿 𝑘 )𝑤𝑘+1 𝑟(𝛿𝑤) = 0.                       (5)
+
+The function 𝐻 is holomorphic in (𝛿, 𝑤), including at 𝛿 = 0, where 𝐻(0, 𝑤) = 1 + 𝑐𝑤𝑘 has
+𝑘 distinct nonzero roots 𝛼1 , …, 𝛼𝑘 . Since 𝜕𝑤 𝐻(0, 𝛼𝑗 ) = 𝑘𝑐𝛼𝑘−1
+                                                              𝑗   ≠ 0, the holomorphic implicit
+function theorem gives distinct branches
+                       𝑤𝑗 (𝛿) = 𝛼𝑗 + 𝑂(𝛿),     𝑧𝑗 (𝛿) = 𝛿𝑤𝑗 (𝛿),   𝑗 = 1, …, 𝑘,
+
+and for small 𝛿 > 0 these are 𝑘 distinct nonzero fixed points of 𝑔𝛿 .
+   These fixed points are attracting. For 𝑧 ≠ 0 one has the exact identity
+                                                                             𝑔 (𝑧) − 𝑧
+              𝑔𝛿′ (𝑧) = 1 − 𝑘𝛿 𝑘 + (1 + 𝛿 𝑘 )𝑧 𝑘+1 (𝑟(𝑧) + 𝑧𝑟′ (𝑧)) + (𝑘 + 1) 𝛿        ,            (6)
+                                                                                 𝑧
+which follows by expanding (𝑘 + 1)(𝑔𝛿 (𝑧) − 𝑧)/𝑧 = (𝑘 + 1)𝛿 𝑘 + (1 + 𝛿 𝑘 )(𝑘 + 1)(𝑐𝑧𝑘 +
+𝑧𝑘+1 𝑟(𝑧)) and comparing with 𝑔𝛿′ (𝑧) = (1 + 𝛿 𝑘 )(1 + (𝑘 + 1)𝑐𝑧 𝑘 + (𝑘 + 2)𝑧 𝑘+1 𝑟(𝑧) +
+𝑧𝑘+2 𝑟′ (𝑧)). At 𝑧 = 𝑧𝑗 (𝛿) the last term of (6) vanishes, and since 𝑧𝑗 (𝛿) = 𝑂(𝛿),
+
+                                  𝑔𝛿′ (𝑧𝑗 (𝛿)) = 1 − 𝑘𝛿 𝑘 + 𝑂(𝛿 𝑘+1 ),                              (7)
+
+uniformly in 𝑗. Choose 𝐶 with |𝑔𝛿′ (𝑧𝑗 (𝛿)) − 1 + 𝑘𝛿 𝑘 | ≤ 𝐶𝛿 𝑘+1 for all 𝑗 and small 𝛿, and then 𝛿 so
+small that 𝑘𝛿 𝑘 < 1 and 𝐶𝛿 < 𝑘/2. Then
+                                                                 𝑘
+                         |𝑔𝛿′ (𝑧𝑗 (𝛿))| ≤ 1 − 𝑘𝛿 𝑘 + 𝐶𝛿 𝑘+1 < 1 − 𝛿 𝑘 < 1.
+                                                                 2
+Thus 𝑔𝛿 has at least 𝑘 distinct attracting fixed points, and deg 𝑔𝛿 = deg 𝑓 ≥ 𝑘 + 1 ≥ 2. Lemma 2.1
+and (4) give 𝑘 ≤ # CV(𝑔𝛿 ) = # CV(𝑓).                                                           □
+Remark 3.2. The origin itself becomes a repelling fixed point of 𝑔𝛿 , with multiplier 1 + 𝛿 𝑘 ; the
+𝑘 nonzero branches supply the attracting fixed points. The first-order term −𝑘𝛿 𝑘 in (7), with its
+sign, is what makes the argument work; nothing is inferred from a count of fixed points with
+multiplicity.
+Remark 3.3. Lemma 3.1 can also be read off from the theory of parabolic fixed points: the fixed
+point 0 of 𝑓 has exactly 𝑘 attracting petals, each parabolic basin contains a critical point [4, Section
+10], and since the multiplier is exactly 1 the 𝑘 basins are disjoint and 𝑓-invariant, so their critical
+values are distinct. The perturbation argument above uses only Lemma 2.1.
+
+
+4. Proof of the composition bound
+For nonconstant 𝑎, 𝑏 ∈ ℂ[𝑧] the chain rule gives
+                                  CV(𝑎 ∘ 𝑏) ⊆ CV(𝑎) ∪ 𝑎(CV(𝑏)).                                     (8)
+
+Indeed, if (𝑎 ∘ 𝑏)′ (𝑧) = 𝑎′ (𝑏(𝑧))𝑏′ (𝑧) = 0, then either 𝑏′ (𝑧) = 0, in which case 𝑎(𝑏(𝑧)) ∈
+𝑎(CV(𝑏)), or 𝑎′ (𝑏(𝑧)) = 0, in which case 𝑎(𝑏(𝑧)) ∈ CV(𝑎). Hence
+                # CV(𝑎 ∘ 𝑏) ≤ # CV(𝑎) + # CV(𝑏) ≤ (deg 𝑎 − 1) + (deg 𝑏 − 1).                        (9)
+
+
+
+
+                                                   4
+Proof. (of Theorem 1.2.) Write 𝐹 (𝑧) = 𝑧 + 𝑐𝑧𝑘+1 + 𝑂(𝑧 𝑘+2 ) with 𝑐 ≠ 0; here 𝑘 ≥ 1 because
+𝐹 (0) = 0, 𝐹 ′ (0) = 1 and 𝐹 ≠ 𝑧. Applying (8) repeatedly to 𝐹 = 𝑓𝑠 ∘ (𝑓𝑠−1 ∘ ⋯ ∘ 𝑓1 ) gives
+# CV(𝐹 ) ≤ ∑𝑖 # CV(𝑓𝑖 ). Lemma 3.1 then gives
+                                                         𝑠                𝑠
+             ord0 (𝐹 − 𝑧) − 1 = 𝑘 ≤ # CV(𝐹 ) ≤ ∑ # CV(𝑓𝑖 ) ≤ ∑(deg 𝑓𝑖 − 1).
+                                                        𝑖=1              𝑖=1
+
+Adding one proves (1), and (2) is the case 𝑠 = 2.                                                  □
+Remark 4.1 (Sharpness in equal degrees). For 𝑑 ≥ 2 let 𝑎(𝑧) = 𝑧 + 𝑧 𝑑 and 𝑏(𝑧) = 𝑧 − 𝑧𝑑 . Then
+
+                               𝑎 ∘ 𝑏(𝑧) − 𝑧 = −𝑑𝑧 2𝑑−1 + 𝑂(𝑧 3𝑑−2 ),
+
+so equality holds in (2). Corollary 6.2 gives sharpness for every pair of degrees.
+Remark 4.2 (Fields of characteristic zero). Theorem 1.2 and Corollary 1.3 hold over every field
+𝐾 of characteristic zero. The finitely many coefficients of a putative counterexample generate a
+finitely generated extension of ℚ, which embeds into ℂ, and the contact order and the degrees are
+preserved by the embedding.
+Remark 4.3 (Positive characteristic). In characteristic 𝑝 > 0 the bound fails: for 𝑎 = 𝑧 + 𝑧𝑝 and
+                                  2
+𝑏 = 𝑧 − 𝑧𝑝 one has 𝑎 ∘ 𝑏 = 𝑧 − 𝑧 𝑝 , of contact order 𝑝2 > 2𝑝 − 1. Accordingly 𝑅(𝑚, 𝑛) is a state­
+ment about characteristic zero.
+
+
+5. Formal inverses
+Furter’s original formulation is in terms of the formal inverse of a single polynomial [1, Section 1];
+see also [2, Section 2.2].
+Corollary 5.1 (𝑅(𝑚)). Let 𝑎(𝑧) = 𝑧 + ∑𝑚       𝑎 𝑧 𝑖+1 ∈ ℂ[𝑧] and let 𝑎−1 (𝑧) = 𝑧 + ∑𝑗≥1 𝛼𝑗 𝑧𝑗+1 be
+                                           𝑖=1 𝑖
+its formal compositional inverse. If 𝛼𝑛+1 = ⋯ = 𝛼𝑛+𝑚 = 0 for some 𝑛 ≥ 0, then 𝑎 = 𝑧.
+Proof. Let 𝑏(𝑧) = 𝑧 + ∑𝑛𝑗=1 𝛼𝑗 𝑧𝑗+1 . The vanishing block gives 𝑎−1 (𝑧) − 𝑏(𝑧) = 𝑂(𝑧𝑚+𝑛+2 ). Sub­
+stitution into the polynomial 𝑎 preserves this order, so 𝑎 ∘ 𝑏(𝑧) = 𝑎 ∘ 𝑎−1 (𝑧) + 𝑂(𝑧𝑚+𝑛+2 ) = 𝑧 +
+𝑂(𝑧𝑚+𝑛+2 ). If 𝑛 ≥ 1, Corollary 1.3 gives 𝑎 = 𝑧. If 𝑛 = 0, then 𝑏 = 𝑧 and 𝑎(𝑧) = 𝑧 + 𝑂(𝑧 𝑚+2 ); as
+deg 𝑎 ≤ 𝑚 + 1, again 𝑎 = 𝑧.                                                                      □
+Conversely 𝑅(𝑚) implies 𝑅(𝑚, 𝑛) for every 𝑛 [1, Lemma 2], so Corollaries 1.3 and 5.1 are equiv­
+alent statements.
+
+
+6. The composition-coefficient map
+Put 𝑀 = 𝑚 + 𝑛. For 𝑎, 𝑏 normalized as in Conjecture 1.1 write
+
+                                     𝑎 ∘ 𝑏(𝑧) = 𝑧 + ∑ 𝑐𝑗 𝑧 𝑗+1 .
+                                                        𝑗≥1
+
+Let 𝑆 = ℂ[𝑎1 , …, 𝑎𝑚 , 𝑏1 , …, 𝑏𝑛 ], graded by wt(𝑎𝑖 ) = 𝑖 and wt(𝑏𝑗 ) = 𝑗. Then 𝑐𝑗 ∈ 𝑆 is homoge­
+neous of weight 𝑗, and 𝑐𝑗 = 0 for 𝑗 > (𝑚 + 1)(𝑛 + 1) − 1. Consider the polynomial map
+
+                   𝐶𝑚,𝑛 : 𝔸𝑀    𝑀
+                           ℂ → 𝔸ℂ ,       (𝑎1 , …, 𝑎𝑚 , 𝑏1 , …, 𝑏𝑛 ) ↦ (𝑐1 , …, 𝑐𝑀 ).
+
+
+
+
+                                                    5
+Furter observed that 𝑅(𝑚, 𝑛) is equivalent to 𝑐1 , …, 𝑐𝑀 being a homogeneous system of parame­
+ters of 𝑆, and to 𝐶𝑚,𝑛 being quasi-finite [1, Introduction and Lemma 11]. Corollary 1.3 therefore
+yields the following.
+Corollary 6.1. The map 𝐶𝑚,𝑛 is finite, flat and surjective, of degree ( 𝑚+𝑛 𝑚 ). Every fiber has this
+                                                          𝑚+𝑛
+scheme-theoretic length, and a generic fiber consists of ( 𝑚 ) distinct points.
+Proof. By Corollary 1.3 the only common zero of 𝑐1 , …, 𝑐𝑀 in ℂ𝑀 is the origin, so
+                                          𝐵 = 𝑆/(𝑐1 , …, 𝑐𝑀 )
+
+is a finite-dimensional graded ℂ-algebra and 𝑐1 , …, 𝑐𝑀 is a homogeneous system of parameters
+of 𝑆 [5, Chapter I, Section 5]. Let 𝑇 = ℂ[𝑐1 , …, 𝑐𝑀 ] ⊂ 𝑆. Lifting a homogeneous ℂ-basis of 𝐵 to
+𝑆 and inducting on weighted degree shows that these lifts generate 𝑆 as a 𝑇 -module. Thus 𝑇 ⊂
+𝑆 is finite, dim 𝑇 = dim 𝑆 = 𝑀 , and since 𝑇 is generated by 𝑀 elements they are algebraically
+independent: 𝑇 is a polynomial ring with generators of weights 1, …, 𝑀 .
+    The polynomial ring 𝑆 is Cohen–Macaulay, so its homogeneous system of parameters 𝑐1 , …, 𝑐𝑀
+is a regular sequence [5, Chapter I, Section 5], [6, Section 2.1]. Hence the Hilbert series of 𝐵 is
+                                                   𝑀
+                                                 ∏𝑘=1 (1 − 𝑡𝑘 )
+                               𝐻𝐵 (𝑡) =                                    .                       (10)
+                                          ∏𝑚
+                                           𝑖=1
+                                               (1 − 𝑡𝑖 ) ∏𝑛𝑗=1 (1 − 𝑡𝑗 )
+
+The lifted basis of 𝐵 defines a surjection from a graded free 𝑇 -module Φ onto 𝑆, where Φ has one
+generator in each degree of the basis of 𝐵. By (10) the Hilbert series of Φ equals 𝐻𝐵 (𝑡)/ ∏𝑀
+                                                                                            𝑘=1
+                                                                                                 (1 −
+𝑡𝑘 ) = 𝐻𝑆 (𝑡), so the surjection is an isomorphism and 𝑆 is a finite free 𝑇 -module. Its rank is
+                                                       𝑀!       𝑚+𝑛
+                            dimℂ 𝐵 = lim 𝐻𝐵 (𝑡) =            =(     ).
+                                       𝑡→1             𝑚! 𝑛!     𝑚
+Freeness gives flatness and the constancy of the fiber length. A finite injective ring map is surjective
+on spectra, so 𝐶𝑚,𝑛 is surjective. Since the characteristic is zero the finite extension of function
+fields is separable, so 𝐶𝑚,𝑛 is generically étale and a generic fiber is reduced, hence consists of
+( 𝑚+𝑛
+   𝑚 ) distinct points.                                                                               □
+Corollary 6.2 (Sharpness for all degree pairs). For every 𝑚, 𝑛 ≥ 1 there exist 𝑎, 𝑏 ∈ ℂ[𝑧] with
+deg 𝑎 = 𝑚 + 1, deg 𝑏 = 𝑛 + 1, 𝑎(0) = 𝑏(0) = 0, 𝑎′ (0) = 𝑏′ (0) = 1 and ord0 (𝑎 ∘ 𝑏 − 𝑧) = 𝑚 +
+𝑛 + 1.
+Proof. By surjectivity in Corollary 6.1 there is a point (𝑎, 𝑏) with (𝑐1 , …, 𝑐𝑀 ) = (0, …, 0, 1),
+that is, 𝑎 ∘ 𝑏(𝑧) = 𝑧 + 𝑧𝑀+1 + 𝑂(𝑧 𝑀+2 ), of contact order 𝑀 + 1 = 𝑚 + 𝑛 + 1. Theorem 1.2
+forces deg 𝑎 + deg 𝑏 ≥ 𝑀 + 2 = (𝑚 + 1) + (𝑛 + 1). Since deg 𝑎 ≤ 𝑚 + 1 and deg 𝑏 ≤ 𝑛 + 1,
+both bounds are attained.                                                                      □
+
+
+7. Closures of multidegree strata
+Let 𝒢︀ = Aut(𝔸2ℂ ) be the group of polynomial automorphisms of the complex affine plane, let 𝒜︀ ⊂
+𝒢︀ be the affine subgroup and ℬ︀ ⊂ 𝒢︀ the triangular subgroup of automorphisms (𝑥, 𝑦) ↦ (𝛼𝑥 +
+𝑝(𝑦), 𝛽𝑦 + 𝛾) with 𝛼𝛽 ≠ 0. By the theorem of Jung and van der Kulk [7], [8], 𝒢︀ is the amalgamated
+product of 𝒜︀ and ℬ︀ over 𝒜︀ ∩ ℬ︀. Every 𝑔 ∈ 𝒢︀ ∖ 𝒜︀ can be written as 𝑔 = 𝑎0 ∘ 𝑏1 ∘ 𝑎1 ∘ ⋯ ∘ 𝑏𝑙 ∘ 𝑎𝑙
+with 𝑎𝑖 ∈ 𝒜︀ and 𝑏𝑗 ∈ ℬ︀ ∖ 𝒜︀, and the sequence (deg 𝑏1 , …, deg 𝑏𝑙 ) of integers ≥ 2 depends only
+on 𝑔. It is the multidegree of 𝑔 [1], [9], also called the polydegree [3]; affine automorphisms have
+multidegree ∅. For a multidegree 𝑑 let 𝒢︀𝑑 ⊂ 𝒢︀ be the set of automorphisms of multidegree 𝑑. The
+
+
+                                                   6
+group 𝒢︀ is an ind-variety, the union of the algebraic varieties 𝒢︀≤𝑁 of automorphisms of degree
+at most 𝑁 , and closures are taken in this topology; since 𝒢︀𝑑 consists of automorphisms of degree
+𝑑1 ⋯𝑑𝑙 , its closure is its closure in 𝒢︀≤𝑑1 ⋯𝑑𝑙 .
+   Furter defined the partial order ⪯ on multidegrees generated by the relations
+1. ∅ ⪯ 𝑑 for every 𝑑;
+2. (𝑑1 , …, 𝑑𝑘 ) ⪯ (𝑒1 , …, 𝑒𝑘 ) whenever 𝑑𝑗 ≤ 𝑒𝑗 for all 𝑗;
+3. (𝑑1 , …, 𝑑𝑗−1 , 𝑑𝑗 + 𝑑𝑗+1 − 1, 𝑑𝑗+2 , …, 𝑑𝑘 ) ⪯ (𝑑1 , …, 𝑑𝑘 ) for 1 ≤ 𝑗 ≤ 𝑘 − 1,
+and proved the following.
+Theorem 7.1 (Furter, [1, Theorem B]). Let 𝑚, 𝑛 ≥ 1 and 𝑑 = (𝑚 + 1, 𝑛 + 1). If 𝑅(𝑚, 𝑛) holds, then
+
+                                                 𝒢︀𝑑 = ⋃ 𝒢︀𝑒 .
+                                                           𝑒⪯𝑑
+
+Corollary 7.2. For all integers 𝑑1 , 𝑑2 ≥ 2,
+                                              𝑑1 +𝑑2 −1
+                        𝒢︀(𝑑1 ,𝑑2 ) = 𝒢︀∅ ∪     ⋃         𝒢︀(𝑠) ∪         ⋃           𝒢︀(𝑢,𝑣) .       (11)
+                                                𝑠=2                 2≤𝑢≤𝑑1 , 2≤𝑣≤𝑑2
+
+Proof. Corollary 1.3 supplies 𝑅(𝑑1 − 1, 𝑑2 − 1), so Theorem 7.1 applies with 𝑑 = (𝑑1 , 𝑑2 ). The
+multidegrees 𝑒 ⪯ (𝑑1 , 𝑑2 ) are exactly: ∅; the pairs (𝑢, 𝑣) with 2 ≤ 𝑢 ≤ 𝑑1 and 2 ≤ 𝑣 ≤ 𝑑2 , by
+relation 2; and the singletons (𝑠) with 2 ≤ 𝑠 ≤ 𝑑1 + 𝑑2 − 1, obtained from such a pair by relation
+3 followed by relation 2. No other multidegree is reachable: none of the relations increases the
+length, a multidegree of length two below (𝑑1 , 𝑑2 ) arises only through relation 2, and relations 2
+and 3 do not increase the sum of the entries minus the length, which for a singleton (𝑠) gives 𝑠 −
+1 ≤ 𝑑1 + 𝑑2 − 2. This gives (11).                                                                 □
+Corollary 7.2 is the length-two case of the equality 𝒢︀𝑑 = ⋃𝑒⪯𝑑 𝒢︀𝑒 , known in length one by [9] and
+previously in length two when 𝑑1 ≤ 3 or 𝑑2 ≤ 3 [1, Theorem C]. In length three the equality is
+false [10], so Corollary 7.2 completes the picture for the lengths in which the closure is described by
+⪯. As Furter remarked, the length-two equality implies by induction on the length that ⋃𝑒⪯𝑑 𝒢︀𝑒 ⊆
+𝒢︀𝑑 for every multidegree 𝑑. Corollary 7.2 also settles the Polydegree Conjecture of [3], which is
+(11) in their notation.
+
+
+8. The Strong Factorial Conjecture
+                                                                                  𝑙𝑚              𝑙
+Let ℂ[𝑚] = ℂ[𝑋1 , …, 𝑋𝑚 ] and let 𝐿 : ℂ[𝑚] → ℂ be the linear map with 𝐿(𝑋11 ⋯𝑋𝑚      ) = 𝑙1 !⋯𝑙𝑚 !.
+For a nonzero polynomial 𝑓 let 𝑁 (𝑓) be its number of monomials. The Factorial Conjecture asserts
+that 𝐿(𝑓 𝑘 ) = 0 for all 𝑘 ≥ 1 forces 𝑓 = 0. Edo and van den Essen [2] formulated the stronger
+statement below and connected it to Furter’s conjecture.
+Conjecture 8.1 (Strong Factorial Conjecture, [2]). Let 𝑓 ∈ ℂ[𝑚] be nonzero. For every 𝑛 ≥ 1 there
+is 𝑘 with 𝑛 ≤ 𝑘 ≤ 𝑛 + 𝑁 (𝑓) − 1 and 𝐿(𝑓 𝑘 ) ≠ 0.
+Let 𝐸 [𝑚] = {𝑋1 ⋯𝑋𝑚 (𝜇1 𝑋1 + ⋯ + 𝜇𝑚 𝑋𝑚 ) : 𝜇1 , …, 𝜇𝑚 ∈ ℂ}. Theorem 2.25(5) of [2] states that
+Conjecture 8.1 holds for every 𝑓 ∈ 𝐸 [𝑚] if and only if 𝑅(𝑚′ ) holds for all 𝑚′ ≤ 𝑚. Corollary 5.1
+therefore gives the following.
+Corollary 8.2. For every 𝑚 ≥ 1 the Strong Factorial Conjecture holds for every polynomial in 𝐸 [𝑚] :
+if 𝑓 = 𝑋1 ⋯𝑋𝑚 (𝜇1 𝑋1 + ⋯ + 𝜇𝑚 𝑋𝑚 ) is nonzero, then for every 𝑛 ≥ 1 there is 𝑘 with 𝑛 ≤ 𝑘 ≤ 𝑛 +
+𝑁 (𝑓) − 1 and 𝐿(𝑓 𝑘 ) ≠ 0.
+
+
+                                                           7
+Previously the windows 𝑛 = 1, 2, 3 were known, corresponding to 𝑅(1) and 𝑅(2), and with them
+the Factorial Conjecture on 𝐸 [𝑚] [2, Corollary 2.28]. Corollary 8.2 gives every window.
+
+   Acknowledgments. The exposition was prepared with the assistance of GPT-6 Astra. The
+small cases of Corollaries 1.3 and 6.1 with 𝑚 + 𝑛 ≤ 6 were verified by Gröbner basis computations
+in SymPy, in agreement with Furter’s computations.
+
+
+
+References
+[1]   J.-P. Furter, “Polynomial composition rigidity and plane polynomial automorphisms,” Journal
+      of the London Mathematical Society (2), vol. 91, pp. 180–202, 2015, doi: 10.1112/jlms/jdu064.
+[2]   E. Edo and A. van den Essen, “The Strong Factorial Conjecture,” Journal of Algebra, vol. 397,
+      pp. 443–456, 2014.
+[3]   D. Lewis, K. Perry, and A. Straub, “An algorithmic approach to the Polydegree Conjecture for
+      plane polynomial automorphisms,” Journal of Pure and Applied Algebra, vol. 223, pp. 5346–
+      5359, 2019.
+[4]   J. Milnor, Dynamics in One Complex Variable, 3rd ed. in Annals of Mathematics Studies, no.
+      160. Princeton University Press, 2006.
+[5]   R. P. Stanley, Combinatorics and Commutative Algebra, 2nd ed. in Progress in Mathematics,
+      no. 41. Birkhäuser, 1996.
+[6]   W. Bruns and J. Herzog, Cohen–Macaulay rings. in Cambridge Studies in Advanced Mathe­
+      matics, no. 39. Cambridge University Press, 1993.
+[7]   H. W. E. Jung, “Über ganze birationale Transformationen der Ebene,” Journal für die reine und
+      angewandte Mathematik, vol. 184, pp. 161–174, 1942.
+[8]   W. van der Kulk, “On polynomial rings in two variables,” Nieuw Archief voor Wiskunde (3),
+      vol. 1, pp. 33–41, 1953.
+[9]   J.-P. Furter, “On the variety of automorphisms of the affine plane,” Journal of Algebra, vol.
+      195, pp. 604–623, 1997.
+[10] E. Edo and J.-P. Furter, “Some families of polynomial automorphisms,” Journal of Pure and
+     Applied Algebra, vol. 194, pp. 263–271, 2004.
+
+
+
+
+                                                 8
+

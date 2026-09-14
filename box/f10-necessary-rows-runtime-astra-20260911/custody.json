@@ -1,0 +1,121 @@
+{
+  "schema": "f10-necessary-rows-runtime-custody/v1",
+  "task": "f10-necessary-rows-runtime-astra-20260911",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "COMPLETED_STATIC_UNEXECUTED",
+  "first_action_utc": "2026-09-11T05:54:47+00:00",
+  "publication_reserve_utc": "2026-09-11T06:07:00+00:00",
+  "hard_stop_utc": "2026-09-11T06:10:00+00:00",
+  "opened_utc": "2026-09-11T05:55:06+00:00",
+  "closed_and_finalized_utc": "2026-09-11T06:00:49+00:00",
+  "expected_verification_observed_by_utc": "2026-09-11T06:01:01+00:00",
+  "postpin_check_utc": "2026-09-11T06:01:31+00:00",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report": {
+    "path": "/home/ubuntu/jc2/xmodel/f10-necessary-rows-runtime-astra-20260911.md",
+    "sha256": "8f515e5fe32162d631ed2557acd1a15e05dcd8db30cc735e94deef980e32c747"
+  },
+  "expected_transaction": {
+    "path": "/home/ubuntu/jc2/xmodel/f10-necessary-rows-runtime-astra-20260911.md.artifact.json",
+    "sha256": "bc0a4ac02b704f93f3704b59d802b25e89164bcd59cbb57f7fa8ce32e5c98f5d"
+  },
+  "transaction_status": "VERIFIED",
+  "input_pins": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md",
+      "pre_sha256": "176363939a8aa6861995cd72a99c61f7d04bfeab5a9634f6d3143dcd3d3bd098",
+      "post_sha256": "176363939a8aa6861995cd72a99c61f7d04bfeab5a9634f6d3143dcd3d3bd098",
+      "read_mode": "FRESH_WHOLE",
+      "unchanged": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md.artifact.json",
+      "pre_sha256": "09ebf0c2fa902aee6bd85507d5f3a4817a74e2e109f9e638031e5931e143703c",
+      "post_sha256": "09ebf0c2fa902aee6bd85507d5f3a4817a74e2e109f9e638031e5931e143703c",
+      "read_mode": "FRESH_WHOLE",
+      "unchanged": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-necessary-rows-design-gate-fable5-20260911.md",
+      "pre_sha256": "8e07e419d321b09ecd13c61a1c5fdc3dbaf9a099c1a1ebedf9b9fe6ef280073b",
+      "post_sha256": "8e07e419d321b09ecd13c61a1c5fdc3dbaf9a099c1a1ebedf9b9fe6ef280073b",
+      "read_mode": "FRESH_WHOLE",
+      "unchanged": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-runtime-astra-20260911/dispatch.py",
+      "pre_sha256": "f5b6e6c43da4574c1dd9fc241d2f0596071ab505d561e67579eb28d382814480",
+      "post_sha256": "f5b6e6c43da4574c1dd9fc241d2f0596071ab505d561e67579eb28d382814480",
+      "read_mode": "REUSED_WHOLE_CURRENT_PIN",
+      "unchanged": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-runtime-astra-20260911/probe.py",
+      "pre_sha256": "09845fabff9a8b7f997e3b2d01160e5ff51d728124b9f5cd0b7176f8c19ea063",
+      "post_sha256": "09845fabff9a8b7f997e3b2d01160e5ff51d728124b9f5cd0b7176f8c19ea063",
+      "read_mode": "REUSED_WHOLE_CURRENT_PIN",
+      "unchanged": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-runtime-astra-20260911/mutate.py",
+      "pre_sha256": "cc0621aa44d17b1dac346e87d20a53f69ce950b343d68c8ed0d3791d42120af0",
+      "post_sha256": "cc0621aa44d17b1dac346e87d20a53f69ce950b343d68c8ed0d3791d42120af0",
+      "read_mode": "REUSED_WHOLE_CURRENT_PIN",
+      "unchanged": true
+    }
+  ],
+  "owned_pins_excluding_custody": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/dispatch.py",
+      "sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/probe.py",
+      "sha256": "5f1211e1a77b5ce2bb4cc496deabc533e3c41cdea88ea750149dac886cc09c69"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/mutate.py",
+      "sha256": "12eac7bbe5566ac0372c51b36617409e0501595024d948d6086a767f90d84eec"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/dispatch.py.diff",
+      "sha256": "f3c61b9a40d16e953950e3ff6a65401475a719fae6dbe3e1386cd05c49ef515f"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/probe.py.diff",
+      "sha256": "6fccfd82949cc678b4c423690e098e02f902e0a62f89d9efed5c2c6dee386432"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/mutate.py.diff",
+      "sha256": "f5e3967d1603fb3e02ed0cb4a21ab306c866227f4e892a2f5c79414f2e19ed73"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/PINS.json",
+      "sha256": "a7b9bb27af95d56279e709fd69f6b5369237c13712471bcf9d21b900e3682774"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-necessary-rows-runtime-astra-20260911.md",
+      "sha256": "8f515e5fe32162d631ed2557acd1a15e05dcd8db30cc735e94deef980e32c747"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-necessary-rows-runtime-astra-20260911.md.artifact.json",
+      "sha256": "bc0a4ac02b704f93f3704b59d802b25e89164bcd59cbb57f7fa8ce32e5c98f5d"
+    }
+  ],
+  "checks": {
+    "targets_absent_before_begin": true,
+    "all_input_pins_before_bodies_or_whole_reuse": true,
+    "new_sources_exact_literal_replacements_only": true,
+    "saved_diffs_equal_regenerated_literal_diffs": true,
+    "all_new_sources_diffs_pins_report_and_transaction_whole_read": true,
+    "own_open_quantity_and_cheapest_test_recorded": true,
+    "final_and_transaction_absent_before_marker": true,
+    "marker_added_last_after_own_whole_open_collision_and_postpins": true,
+    "frozen_originals_unchanged": true
+  },
+  "read_scope": "Exactly six charged inputs. Interface, its transaction and design FIRST fresh WHOLE; three same-agent old source WHOLE reads reused after current pins, with complete text additionally retrieved for literal copying. No live scientific source, provenance, coefficient body, fixture, network, worker or protected read.",
+  "execution_scope": "ZERO scientific subprocess, import, AST, syntax, compile, test or runtime control. Only source text replacement/read/diff/hash and authorized documentary publication.",
+  "runtime_authority": "NONE; combined source/runtime DELTA FIRST and fresh ROOT registration remain pending.",
+  "terminal_writer_contract": "After custody whole readback and hash, this owner makes no further writes and reports ALL WRITERS IDLE. No child or remote writer was started.",
+  "self_pin_rule": "This file deliberately excludes its own hash; the custody-first terminal handoff supplies it."
+}

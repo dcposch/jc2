@@ -1,0 +1,87 @@
+diff --git a/src/neogb/io.c b/src/neogb/io.c
+--- a/src/neogb/io.c
++++ b/src/neogb/io.c
+@@ -74,7 +74,11 @@ void sort_terms_ff_8(
+   cf8_t tmpcf = 0;
+ 
+   /* generate array of pointers to hm entries */
+-  hm_t *phm[len];
++  hm_t **phm = malloc((unsigned long)len * sizeof(*phm));
++  if (phm == NULL) {
++    fprintf(ERRSTREAM, "Could not allocate term-sort permutation.\n");
++    exit(1);
++  }
+   for (i = 0; i < len; ++i) {
+     phm[i]  = &hmo[i];
+   }
+@@ -99,6 +103,7 @@ void sort_terms_ff_8(
+       phm[k]  = &hmo[k];
+     }
+   }
++  free(phm);
+ 
+   *cfp  = cf;
+   *hmp  = hm;
+@@ -122,7 +127,11 @@ void sort_terms_ff_16(
+   cf16_t tmpcf  = 0;
+ 
+   /* generate array of pointers to hm entries */
+-  hm_t *phm[len];
++  hm_t **phm = malloc((unsigned long)len * sizeof(*phm));
++  if (phm == NULL) {
++    fprintf(ERRSTREAM, "Could not allocate term-sort permutation.\n");
++    exit(1);
++  }
+   for (i = 0; i < len; ++i) {
+     phm[i]  = &hmo[i];
+   }
+@@ -147,6 +156,7 @@ void sort_terms_ff_16(
+       phm[k]  = &hmo[k];
+     }
+   }
++  free(phm);
+ 
+   *cfp  = cf;
+   *hmp  = hm;
+@@ -170,7 +180,11 @@ void sort_terms_ff_32(
+   cf32_t tmpcf  = 0;
+ 
+   /* generate array of pointers to hm entries */
+-  hm_t *phm[len];
++  hm_t **phm = malloc((unsigned long)len * sizeof(*phm));
++  if (phm == NULL) {
++    fprintf(ERRSTREAM, "Could not allocate term-sort permutation.\n");
++    exit(1);
++  }
+   for (i = 0; i < len; ++i) {
+     phm[i]  = &hmo[i];
+   }
+@@ -195,6 +209,7 @@ void sort_terms_ff_32(
+       phm[k]  = &hmo[k];
+     }
+   }
++  free(phm);
+ 
+   *cfp  = cf;
+   *hmp  = hm;
+@@ -219,7 +234,11 @@ void sort_terms_qq(
+   mpz_init(tmpcf);
+ 
+   /* generate array of pointers to hm entries */
+-  hm_t *phm[len];
++  hm_t **phm = malloc((unsigned long)len * sizeof(*phm));
++  if (phm == NULL) {
++    fprintf(ERRSTREAM, "Could not allocate term-sort permutation.\n");
++    exit(1);
++  }
+   for (i = 0; i < len; ++i) {
+     phm[i]  = &hmo[i];
+   }
+@@ -244,6 +263,7 @@ void sort_terms_qq(
+       phm[k]  = &hmo[k];
+     }
+   }
++  free(phm);
+ 
+   *cfp  = cf;
+   *hmp  = hm;

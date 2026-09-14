@@ -1,0 +1,162 @@
+{
+  "observed_utc": "2026-09-11 06:30:15 UTC",
+  "scope": "READ_ONLY_PREALLOCATION_NO_PROTECTED_INSTANCE_ENUMERATION",
+  "observations": [
+    {
+      "kind": "quota",
+      "exit_code": 0,
+      "value": {
+        "Name": "Running On-Demand Standard (A, C, D, H, I, M, R, T, Z) instances",
+        "Value": 1920,
+        "Unit": "None"
+      }
+    },
+    {
+      "kind": "type",
+      "exit_code": 0,
+      "value": [
+        {
+          "Type": "c7i.2xlarge",
+          "VCPU": 8,
+          "MemoryMiB": 16384,
+          "Arch": [
+            "x86_64"
+          ],
+          "EBS": "default"
+        }
+      ]
+    },
+    {
+      "kind": "image",
+      "exit_code": 0,
+      "value": [
+        {
+          "Id": "ami-066263bf15bd856de",
+          "Name": "jc2-worker-base-20260905T033812Z",
+          "State": "available",
+          "Owner": "871305167944",
+          "Architecture": "x86_64",
+          "RootDeviceName": "/dev/sda1",
+          "Devices": [
+            {
+              "Ebs": {
+                "DeleteOnTermination": true,
+                "Iops": 3000,
+                "SnapshotId": "snap-0bf84cf821e71e45c",
+                "VolumeSize": 100,
+                "VolumeType": "gp3",
+                "Throughput": 125,
+                "Encrypted": false
+              },
+              "DeviceName": "/dev/sda1"
+            },
+            {
+              "DeviceName": "/dev/sdb",
+              "VirtualName": "ephemeral0"
+            },
+            {
+              "DeviceName": "/dev/sdc",
+              "VirtualName": "ephemeral1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "network",
+      "exit_code": 0,
+      "value": [
+        {
+          "ID": "subnet-948915c9",
+          "VPC": "vpc-0f261d77",
+          "State": "available",
+          "AZ": "us-east-1a",
+          "AvailableIP": 247
+        }
+      ]
+    },
+    {
+      "kind": "group",
+      "exit_code": 0,
+      "value": [
+        {
+          "ID": "sg-09ffa8932558f0a79",
+          "VPC": "vpc-0f261d77",
+          "Name": "claude-ssh",
+          "Ingress": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 22,
+              "ToPort": 22,
+              "UserIdGroupPairs": [],
+              "IpRanges": [
+                {
+                  "Description": "ssh-anywhere-keyauth",
+                  "CidrIp": "0.0.0.0/0"
+                },
+                {
+                  "CidrIp": "54.81.66.156/32"
+                }
+              ],
+              "Ipv6Ranges": [
+                {
+                  "Description": "ssh-anywhere-keyauth",
+                  "CidrIpv6": "::/0"
+                }
+              ],
+              "PrefixListIds": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "key",
+      "exit_code": 0,
+      "value": [
+        {
+          "Name": "jc2-fleet",
+          "ID": "key-07cbc061edc0d7487",
+          "Fingerprint": "N6Bkc35X4E2TLOpvUhFu8WfnVGfx0NSJhnXXym89lfc=",
+          "Type": "ed25519"
+        }
+      ]
+    },
+    {
+      "kind": "fleet",
+      "exit_code": 0,
+      "value": []
+    },
+    {
+      "kind": "usage",
+      "exit_code": 0,
+      "value": {
+        "Label": "ResourceCount",
+        "Datapoints": [
+          {
+            "Timestamp": "2026-09-11T06:10:00+00:00",
+            "Maximum": 84,
+            "Unit": "None"
+          },
+          {
+            "Timestamp": "2026-09-11T06:25:00+00:00",
+            "Maximum": 84,
+            "Unit": "None"
+          },
+          {
+            "Timestamp": "2026-09-11T06:20:00+00:00",
+            "Maximum": 84,
+            "Unit": "None"
+          },
+          {
+            "Timestamp": "2026-09-11T06:15:00+00:00",
+            "Maximum": 84,
+            "Unit": "None"
+          }
+        ]
+      }
+    }
+  ],
+  "usage_note": "Delayed account aggregate, not exact instantaneous usage or campaign count",
+  "worker_allocated": false
+}

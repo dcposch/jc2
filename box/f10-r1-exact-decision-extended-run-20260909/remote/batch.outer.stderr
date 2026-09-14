@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/f10-r1-exact-decision-extended-run-20260909/caller.py", line 158, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/home/ubuntu/f10-r1-exact-decision-extended-run-20260909/caller.py", line 149, in main
+    run('engine','engine.py',[root/'exact.json',root/'engine.receipt.json'],600,550,mathematical=True)
+  File "/home/ubuntu/f10-r1-exact-decision-extended-run-20260909/caller.py", line 136, in run
+    else: require(rc==0 and telemetry['status']=='NORMAL_EXIT','cap/failure: INCONCLUSIVE')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/f10-r1-exact-decision-extended-run-20260909/caller.py", line 16, in require
+    if not ok: raise RuntimeError(message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: cap/failure: INCONCLUSIVE

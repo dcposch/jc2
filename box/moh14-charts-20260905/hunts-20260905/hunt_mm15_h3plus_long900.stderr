@@ -1,0 +1,118 @@
+Initial seed for pseudo-random number generator is 1788609365
+
+--------------- INPUT DATA ---------------
+#variables                     124
+#equations                      55
+#invalid equations               0
+field characteristic    1073741827
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option           44
+initial hash table size     131072 (2^17)
+max pair selection            1000
+reduce gb                        1
+#threads                         8
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  2       4      60      14 x 22         12.01%        4 new       0 zero         0.00 | 0.01         
+  3      14      59      58 x 106         2.93%       13 new       1 zero         0.00 | 0.01         
+  3      28     106      98 x 147         1.97%       13 new      15 zero         0.00 | 0.01         
+  3      39     154     120 x 138         2.08%        8 new      31 zero         0.00 | 0.01         
+  4     130     183     883 x 1628        0.27%       39 new      91 zero         0.01 | 0.06         
+  3      11     336      97 x 271         1.98%       11 new       0 zero         0.00 | 0.02         
+  4     223     393    1713 x 3172        0.18%       72 new     151 zero         0.02 | 0.18         
+  4     137     810    1463 x 2990        0.24%       48 new      89 zero         0.02 | 0.15         
+  4      31    1183     648 x 1598        0.60%        8 new      23 zero         0.01 | 0.06         
+  5    1000    1246   13078 x 24778       0.05%      171 new     830 zero         0.26 | 1.16         
+  5     894    2167   23750 x 49555       0.04%      215 new     679 zero         0.42 | 1.81         
+  4      30    3816     798 x 2743        0.57%       30 new       0 zero         0.03 | 0.21         
+  4      96    3681    2248 x 5756        0.26%       60 new      36 zero         0.06 | 0.40         
+  5    1001    3289   20355 x 42553       0.06%      358 new     644 zero         0.72 | 3.95         
+  5    1000    6693   28393 x 67218       0.05%      360 new     640 zero         2.67 | 14.95        
+  5     415   11295   27704 x 70467       0.07%      110 new     305 zero         1.51 | 5.43         
+  5      20   12637   10609 x 29886       0.17%        7 new      13 zero         0.46 | 0.85         
+  6    1000   12728   53143 x 127329      0.04%      272 new     728 zero         4.23 | 15.50        
+  6    1000   15930   52894 x 132965      0.05%      288 new     712 zero         4.52 | 16.54        
+  6    1000   19411   70890 x 179914      0.04%      237 new     763 zero         4.06 | 12.50        
+  6    1000   22133   93843 x 216440      0.04%      240 new     761 zero         5.55 | 16.38        
+  6    1000   25019   87153 x 199347      0.04%      216 new     784 zero         5.58 | 16.22        
+  6    1000   27551  110204 x 246254      0.04%      116 new     884 zero         5.68 | 11.57        
+  6    1000   28516  126132 x 302371      0.03%      194 new     806 zero         7.94 | 19.39        
+  6    1000   30876  160832 x 377887      0.02%      197 new     803 zero        10.03 | 23.85        
+  6    1000   33278  130142 x 325077      0.04%      293 new     707 zero        11.07 | 29.47        
+  6    1000   37324  171418 x 436251      0.03%      231 new     769 zero        19.08 | 35.45        
+  6    1000   40246  169675 x 409063      0.03%      127 new     873 zero        16.90 | 26.15        
+  6    1000   41457  197684 x 485739      0.03%      235 new     765 zero        21.62 | 39.93        
+  6    1000   44414  217506 x 501350      0.03%      188 new     814 zero        17.57 | 33.69        
+  6    1000   46645  234257 x 535820      0.03%      181 new     820 zero        19.56 | 34.41        
+  6    1000   48761  272193 x 615177      0.02%      187 new     813 zero        22.09 | 37.61        
+  5      18   51092     717 x 7677        1.14%       18 new       0 zero         0.45 | 1.11         
+  5     204   50481   20442 x 65437       0.12%      115 new      89 zero         3.02 | 7.17         
+  5     141   47083   20809 x 67957       0.14%       85 new      56 zero         2.31 | 5.53         
+  6    1000   45509  117638 x 285331      0.04%      432 new     568 zero        13.41 | 36.12        
+  6    1001   49724  184930 x 444755      0.03%      386 new     615 zero        19.14 | 43.61        
+  6    1000   55588  191992 x 500597      0.04%      395 new     605 zero        24.99 | 58.50        
+  6    1000   61527  229744 x 567543      0.03%      308 new     692 zero        29.32 | 56.70        
+  6    1000   66102  303171 x 704732      0.02%      274 new     726 zero        33.66 | 63.20        
+  6    1000   70215  307815 x 745621      0.02%      275 new     725 zero        36.84 | 63.97        
+  6    1000   74204  287298 x 775012      0.03%      283 new     717 zero        42.68 | 66.26        
+  6    1000   78331  356007 x 833093      0.02%      228 new     772 zero        43.85 | 69.54        
+  6    1000   81416  387022 x 895419      0.02%      220 new     782 zero        49.93 | 76.89        
+  6    1000   84519  386582 x 864837      0.02%      264 new     736 zero        64.59 | 98.16        
+  6    1000   88270  326521 x 759417      0.03%      195 new     805 zero        45.32 | 66.90        
+  5      42   90835    4212 x 17045       0.35%       42 new       0 zero         1.65 | 3.97         
+  5     477   89175   33415 x 100176      0.08%      300 new     177 zero         7.42 | 18.46        
+  5     558   74400   34646 x 98248       0.09%      291 new     267 zero         7.06 | 17.89        
+  6    1000   65319   67236 x 209851      0.07%      493 new     507 zero        14.75 | 36.38        
+  6    1000   67219   80980 x 225080      0.07%      426 new     575 zero        16.16 | 37.69        
+  6    1000   72055  103574 x 294081      0.07%      370 new     630 zero        20.38 | 42.27        
+  6    1000   77075  131991 x 349073      0.06%      353 new     647 zero        21.75 | 45.46        
+  6    1000   82139  124641 x 345282      0.07%      209 new     791 zero        19.55 | 33.22        
+  6    1000   85097  180708 x 429309      0.05%      223 new     777 zero        23.21 | 38.93        
+  6    1000   88243  218825 x 551825      0.03%      301 new     699 zero        32.92 | 56.72        
+  6    1000   92566  174421 x 487440      0.06%      358 new     642 zero        35.86 | 68.12        
+  6    1000   98164  225265 x 543022      0.04%      315 new     685 zero        36.15 | 61.48        
+  6    1000  103093  223291 x 614332      0.05%      425 new     575 zero        46.79 | 90.82        
+  6    1000  109993Command exited with non-zero status 124
+	Command being timed: "timeout --signal=TERM --kill-after=20s 900s taskset -c 13-20 nice -n 10 /home/ubuntu/jc2/box/moh14-charts-20260905/tools/msolve-0.10.1-official-intel-avx512/msolve -g 2 -t 8 -v 2 -l 44 -m 1000 -f hunt_mm15_h3plus_p1073741827.ms -o hunt_mm15_h3plus_long900.g2.out"
+	User time (seconds): 1681.60
+	System time (seconds): 7.09
+	Percent of CPU this job got: 187%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:00.55
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13362508
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4372507
+	Voluntary context switches: 66334
+	Involuntary context switches: 16605
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 124

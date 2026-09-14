@@ -1,0 +1,13 @@
+{
+  "tag":"source-volume-residue-astra-20260911",
+  "first_action_utc":"2026-09-11T23:43:31Z",
+  "reserve_utc":"2026-09-12T00:00:00Z",
+  "hard_utc":"2026-09-12T00:03:00Z",
+  "read_scope":"Exactly TASK plus two reports, all current SHA256 matched before bodies; all three FRESH_WHOLE including report seals, no clipping or linked inputs. No prior WHOLE reuse claimed.",
+  "inputs":[
+    {"path":"box/source-volume-residue-astra-20260911/TASK.md","sha256":"14bafeaec48b120d77e48f7884609c985475e50469a40335b707c47c58a1e895","read":"FRESH_WHOLE"},
+    {"path":"xmodel/reduced-boundary-fibre-control-root-20260911.md","sha256":"fe5345acd67108c770f1d5eca0850739a1ab00dcdcb69148ba5306d8b5331551","read":"FRESH_WHOLE including seal"},
+    {"path":"xmodel/danielewski-primitive-boundary-astra-20260911.md","sha256":"f119d33d1c15bb0676cfc13c0e6290901ad3327680eb7eb4fb503e7d3c947608","read":"FRESH_WHOLE including seal"}
+  ],
+  "administrative_note":"One malformed apply_patch AddFile header was rejected before writing any bytes; corrected with this complete PINS creation. No mathematical process ran."
+}

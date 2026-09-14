@@ -1,0 +1,11 @@
+--- old_actual_dispatch_batch.py
++++ actual_dispatch_batch.py
+@@ -163,7 +163,7 @@
+         require(all(type(v) is int and v>0 for v in limits.values()),'explicit positive integer caps')
+     require(registration['profiles']['dummy']['rss_bytes']==33554432,'dummy must retain its reviewed RSS cap')
+     known={
+-      'solver.py':'58cdc4721143ec2be93cc720831c2235a9221b567f1903d2ffd6025b4f54b665',
++      'solver.py':'961e22e64ec768da6d78a886aa987f7ebaf0325b21b87c68e04db88e91778589',
+       'checker.py':'122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69',
+       'evidence.py':'cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767',
+       'algebra.py':'7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc',

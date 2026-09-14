@@ -1,0 +1,27 @@
+{
+ "schema": "local-duplicate-key-and-harness-controls/v1",
+ "controls": [
+  {
+   "control": "duplicate_json_key_line",
+   "rejected": true,
+   "error": "duplicate JSON key a"
+  },
+  {
+   "control": "noncanonical_line",
+   "rejected": true,
+   "error": "noncanonical JSONL line"
+  },
+  {
+   "control": "duplicate_json_key_in_header_of_unequal_golden_stream",
+   "rejected": true,
+   "error": "duplicate JSON key authority_sha256"
+  },
+  {
+   "control": "positive_unmutated_unequal_golden",
+   "rejected": false,
+   "error": null
+  }
+ ],
+ "max_rss_kib": 58952,
+ "cpu_seconds": 1.22
+}

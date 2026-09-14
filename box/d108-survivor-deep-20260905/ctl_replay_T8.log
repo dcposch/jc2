@@ -1,0 +1,28 @@
+  [t=0.2s] minor incidence: 13 rows, 12 pivots, residual 0
+  [t=0.3s] major h2: K2c=125 D1 rows=9 pivots=9 free=116
+  [t=7.1s] outer: offsets 0..7, pivots=180 free=788
+  [t=9.5s] KF/KG built (|KF|=190, |KG|=142)
+  [t=45.2s] minor local tables done
+    J band t=1: 147 nonzero w-slots (9.8s)
+    J band t=2: 146 nonzero w-slots (10.5s)
+    J band t=3: 146 nonzero w-slots (18.7s)
+    J band t=4: 152 nonzero w-slots (34.6s)
+    J band t=5: 151 nonzero w-slots (61.1s)
+    J band t=6: 151 nonzero w-slots (123.1s)
+    J band t=7: 157 nonzero w-slots (225.5s)
+    J band t=8: 156 nonzero w-slots (380.7s)
+{
+  "control": "max_t=T truncation identity",
+  "T": 8,
+  "rows": 1420,
+  "row_counts": {
+    "F": 12,
+    "G": 12,
+    "J": 1396
+  },
+  "rows_sha256": "68201f86f8103fad3ad5b8dbe5b36a8d35a4a81ce85338a6957beb1dc5bfcc6d",
+  "charged_rows_sha256": "68201f86f8103fad3ad5b8dbe5b36a8d35a4a81ce85338a6957beb1dc5bfcc6d",
+  "MATCH": true,
+  "build_seconds": 45.2,
+  "wall_seconds": 934.3
+}

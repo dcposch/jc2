@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-lift-hermite-gate-fable5-20260906/producer_check.py", line 121, in <module>
+    require(bool(bad), 'complete checker rejects changed coefficient; dropping actual row is unsound')
+  File "/home/ubuntu/jc2/box/d125-lift-hermite-gate-fable5-20260906/producer_check.py", line 12, in require
+    raise RuntimeError('FAIL ' + name)
+RuntimeError: FAIL complete checker rejects changed coefficient; dropping actual row is unsound
+Command exited with non-zero status 1
+	Command being timed: "timeout 30 bash -c ulimit -t 25 -v 524288; python3 producer_check.py --mutate-drop-row"
+	User time (seconds): 0.09
+	System time (seconds): 0.01
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31372
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4768
+	Voluntary context switches: 3
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

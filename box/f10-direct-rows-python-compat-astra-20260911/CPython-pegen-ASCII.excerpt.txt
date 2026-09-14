@@ -1,0 +1,16 @@
+// Calculate the extra amount of width space the given source
+// code segment might take if it were to be displayed on a fixed
+// width output device. Supports wide unicode characters and emojis.
+Py_ssize_t
+_PyPegen_calculate_display_width(PyObject *line, Py_ssize_t character_offset)
+{
+    PyObject *segment = PyUnicode_Substring(line, 0, character_offset);
+    if (!segment) {
+        return -1;
+    }
+
+    // Fast track for ascii strings
+    if (PyUnicode_IS_ASCII(segment)) {
+        Py_DECREF(segment);
+        return character_offset;
+    }

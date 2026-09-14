@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done — 30 minutes of the 150-minute budget. Report sealed at `xmodel/xu-ell-shift-opus5-20260906.md` (body 20,774 B, `verify PASS`).
+
+## What I found
+
+**Custody.** 6/6 input hashes verified mechanically via `awk` → `sha256sum -c` before any read.
+
+**(1) The derivation.** The entire ℓ-shift rides on one printed line — Moh p.164, Prop 4.1's proof, which writes `J_{t,π}(h(σ),g(σ)) = J_{f,g}(h,g) · J_{x,y}(f,g) · J_{t,π}(x,σ)` with the middle factor printed as `1`. Put `x^ℓ` there and every `−2+δ` becomes `−2+δ−ℓ`. Moh's p.171 Remark then says only *hypothesis* (3) of Prop 4.6 changes, so all five conclusions — and hence the whole pattern enumeration — are ℓ-invariant.
+
+Two places where "the whole calculus shifts 1 → 1+ℓ" is **wrong**, both new:
+
+- Xu's unproved side-condition `ord g_y(β) ≥ −δ_σ` (X:306) is **PROVED-HERE and ℓ-free**. Getting this right is what makes `I_m^ℓ = (1+ℓ) + Σ(δ_σ − 1 − ℓ)` come out clean — that closes the charged report's OPEN 2.
+- Xu's `I(f_y,g_y) = 0` is **false at ℓ > 0**. Replacement: `Res_y(f_y,g_y) = c'x^k` with `k ≥ 0` an integer, so Thm 4.7(i),(ii) keep direction but **(iii) does not survive**.
+
+One named gap, and it is inherited, not new: Lemma 2.1 at ℓ>0 reduces *exactly* to `λ < (−1−ℓ+δ)/(n−M₁)` — Moh's unprinted Prop 4.2/4.4 condition (3) shift, already typed `OPEN[PROP42-ELL-CONDITION3]`.
+
+**(2) R063: DEAD-by-child-integrality.** The shift does not restore integrality. The unique licensed child config gives `I'_M = 71/4` flat, but that flat termination itself violates the Galois law (`ρ=10 ≢ 0,1 mod 8`); the closure gives `{33/2, 103/6}` at every depth, and a maximal sweep (Lemmas A and B off, Galois law off, minimal unit, 8 orbits, depth 6) gives 6 values, none an integer. Depth cap vacuous. R009's child is margin 0 (`I'_M = I'_m = 8`), R050's is margin 3/2 against a parent margin of 0 — so the margin is *not* descent-invariant.
+
+**Controls.** ℓ=0 closure ≡ the charged driver; Xu's four printed §6 values reproduced; retrodiction 7/7 (the child instrument kills exactly the already-dead parents). The sharpest one: R001's child dies at `4 < 5` — Xu's own §6.2(i) numbers — via the new `Cor 5.3^ℓ`, closing a set-difference the charged replay could not reproduce.
+
+Residual 65 → 64. No `charge_basis=` line (validator: `ABSENT`) — this excludes a configuration, not a price.
+DIVERT path=xmodel/xu-ell-shift-opus5-20260906.md status=CLEAN_SEALED body_bytes=20774 body_sha256=9a49a93021a1f50975274ffa9ce03f89b52b9974970273515fd5d7437048ad3b

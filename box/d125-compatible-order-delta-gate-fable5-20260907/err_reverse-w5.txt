@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-compatible-order-delta-gate-fable5-20260907/gate_own.py", line 139, in <module>
+    n = decide(pk, mono)
+        ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/d125-compatible-order-delta-gate-fable5-20260907/gate_own.py", line 82, in decide
+    need(kb > ks, 'comparison direction')
+  File "/home/ubuntu/jc2/box/d125-compatible-order-delta-gate-fable5-20260907/gate_own.py", line 9, in need
+    raise RuntimeError('FAIL: ' + why)
+RuntimeError: FAIL: comparison direction
+Command exited with non-zero status 1
+0.11 s 31980 KB

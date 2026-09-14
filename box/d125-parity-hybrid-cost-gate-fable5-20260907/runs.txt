@@ -1,0 +1,58 @@
+== mut='' opt=''
+{"J_degree": 3, "J_universe": 1362, "det": "-1", "fixed": [12, 19], "free": [71, 196], "inverse": [["78", "12", "1"], ["168", "25", "2"], ["91", "13", "1"]], "lattice": [83, 215], "mutation": null, "odd_free": [33, 94], "optimized": false, "pivots": [13, 34], "plus_unit": 804, "positions": 803, "rows105": [8, 47, 50], "source_rows_evaluated": 0, "status": "GATE_CONTROLS_PASS", "variables": 81}
+wall=0.04 rss_kb=16324
+exit=0
+== mut='' opt='-O'
+{"J_degree": 3, "J_universe": 1362, "det": "-1", "fixed": [12, 19], "free": [71, 196], "inverse": [["78", "12", "1"], ["168", "25", "2"], ["91", "13", "1"]], "lattice": [83, 215], "mutation": null, "odd_free": [33, 94], "optimized": true, "pivots": [13, 34], "plus_unit": 804, "positions": 803, "rows105": [8, 47, 50], "source_rows_evaluated": 0, "status": "GATE_CONTROLS_PASS", "variables": 81}
+wall=0.14 rss_kb=19160
+exit=0
+== mut='pivot' opt=''
+FIRST_FAILING_GATE sheared slot free but not a pivot
+Command exited with non-zero status 1
+wall=0.04 rss_kb=15372
+exit=1
+== mut='pivot' opt='-O'
+FIRST_FAILING_GATE sheared slot free but not a pivot
+Command exited with non-zero status 1
+wall=0.14 rss_kb=18440
+exit=1
+== mut='face' opt=''
+FIRST_FAILING_GATE B pivots free, off both faces
+Command exited with non-zero status 1
+wall=0.04 rss_kb=15408
+exit=1
+== mut='face' opt='-O'
+FIRST_FAILING_GATE B pivots free, off both faces
+Command exited with non-zero status 1
+wall=0.14 rss_kb=18420
+exit=1
+== mut='inverse' opt=''
+FIRST_FAILING_GATE literal inverse equals own adjugate
+Command exited with non-zero status 1
+wall=0.04 rss_kb=15356
+exit=1
+== mut='inverse' opt='-O'
+FIRST_FAILING_GATE literal inverse equals own adjugate
+Command exited with non-zero status 1
+wall=0.14 rss_kb=18596
+exit=1
+== mut='mapdegree' opt=''
+FIRST_FAILING_GATE J degree <= 3
+Command exited with non-zero status 1
+wall=0.04 rss_kb=15424
+exit=1
+== mut='mapdegree' opt='-O'
+FIRST_FAILING_GATE J degree <= 3
+Command exited with non-zero status 1
+wall=0.14 rss_kb=18612
+exit=1
+== mut='guard' opt=''
+FIRST_FAILING_GATE guard cofactor r=3
+Command exited with non-zero status 1
+wall=0.04 rss_kb=15320
+exit=1
+== mut='guard' opt='-O'
+FIRST_FAILING_GATE guard cofactor r=3
+Command exited with non-zero status 1
+wall=0.14 rss_kb=18572
+exit=1

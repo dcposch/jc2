@@ -1,0 +1,32 @@
+UTC=2026-09-05T14:32:07Z
+--- ps ---
+   8388       20:00 7518928 99.8 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+--- files ---
+total 47372
+-rw-rw-r-- 1 ubuntu ubuntu        0 Sep  5 14:12 m12_union_p1073741827.err
+-rw-rw-r-- 1 ubuntu ubuntu      217 Sep  5 14:12 m12_union_p1073741827.out
+-rw-rw-r-- 1 ubuntu ubuntu     6638 Sep  5 14:31 m12_union_p1073741827.rss.log
+-rw-rw-r-- 1 ubuntu ubuntu 48494231 Sep  5 14:12 m12_union_p1073741827.sing
+--- rss last ---
+VmHWM:	 7342416 kB
+VmRSS:	 7342416 kB
+utc=2026-09-05T14:31:48Z
+pid=8388
+VmPeak:	 7695608 kB
+VmSize:	 7695608 kB
+VmHWM:	 7420252 kB
+VmRSS:	 7420252 kB
+--- out ---
+CONTROL_RING_PASS R
+CONTROL_EMPTY_PASS
+CONTROL_NONEMPTY_PASS
+MAIN_START equations=425 unknowns=77 char=1073741827 algorithm=std
+GG__RUN main START
+GG__GENERATOR_COUNT main 426
+GG__STD_BEGIN main
+//used time: 4.61 sec
+--- err tail ---
+--- log ---
+GUIDED_PIPELINE_START target=m12_union rows=/home/ubuntu/moh-bigmem-20260905/targets/m12_union/rows.tsv utc=2026-09-05T14:12:06Z
+GUIDED_START name=m12_union gens=425 nvars=78 rows_sha=af3cf058c7e949d7e9958b1c9120b9350436c6eca7a952afbc8ea32f9794ef58
+MODULAR_START p=1073741827 timeout=10800 utc=2026-09-05T14:12:07Z

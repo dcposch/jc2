@@ -1,0 +1,55 @@
+{
+  "field": "Q",
+  "result": "PASS",
+  "adapter_sha256": "6a35b6d19b1a0103bef46249d1f04860bbce44b6f47a5bbc6506e2c68e4df512",
+  "raw_incidence_mu0_recovers_all_frozen_rows": true,
+  "mu_not_in_initial_h3_elimination_set": true,
+  "whole_F_G_targets_checked": true,
+  "dilation_covariance": {
+    "jet0": "alpha^-1",
+    "u": "alpha^-2",
+    "v": "alpha^-3",
+    "mu": "alpha^-4",
+    "c": "alpha^-8",
+    "beta": "alpha^-5"
+  },
+  "inputs": [
+    {
+      "stage": 0,
+      "input_sha256": "d5158c9fae0d8ea45e89a4d20e32178e8d034d796e59ff7e8e160c6f453d6554",
+      "names": 611,
+      "minor_mean_occurrences_in_h": 43,
+      "source_residual_count": 0,
+      "mu_absent_from_pivots": true,
+      "all_pivot_leaders_nonzero_rational": true,
+      "strong_front": {
+        "D_cut_inclusive": 32,
+        "C_cut_inclusive": 66,
+        "type": "radical consequence over fields, no coordinate gauge",
+        "proofs": [
+          "../cubic-front-improvement.md",
+          "../d108-stage-front-audit.md"
+        ]
+      }
+    },
+    {
+      "stage": 1,
+      "input_sha256": "0b0d8e9177e7fca305c639d85e88b6acb9c0107821455bc9f86aab37545fdfa7",
+      "names": 577,
+      "minor_mean_occurrences_in_h": 43,
+      "source_residual_count": 0,
+      "mu_absent_from_pivots": true,
+      "all_pivot_leaders_nonzero_rational": true,
+      "strong_front": {
+        "D_cut_inclusive": 33,
+        "C_cut_inclusive": 68,
+        "type": "radical consequence over fields, no coordinate gauge",
+        "proofs": [
+          "../cubic-front-improvement.md",
+          "../d108-stage-front-audit.md"
+        ]
+      }
+    }
+  ],
+  "not_a_computational_chart_verdict": true
+}

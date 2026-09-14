@@ -1,0 +1,26 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and sealed by marker at 06:29:57 UTC, inside the original 06:39 reserve. All writers are idle.
+
+**Verdicts:** A CONFIRMED, B CONFIRMED, C CONFIRMED with release obligations pending, D CONFIRMED at the imported 23z/19z/28z scopes only, E READY at the static gate boundary. No REFUTED, no GAP, no source or runtime defect found in the delta.
+
+**What was independently verified**
+
+- All 26 pins matched the charged list before any body read at 06:20:55 UTC and again after all reads at 06:27:18 UTC.
+- My own `diff -u` of each of the six old/new pairs equals the retained diff hunk for hunk after the two header lines.
+- Producer: exactly old lines 265 to 277 deleted, only the two obsolete length conjuncts removed at old 332 with the scale_record check and raise kept, schema/job/success literals at the prescribed sites, and the internal `.direct-rows-` mkstemp prefix retained. Checker: exactly old 390 to 404 deleted including the comment and the two length equalities. Authority: only the TAG line. Arithmetic engines unchanged at their accepted pins.
+- Runtime: every hunk in the three files is a single-line literal substitution of direct-rows to necessary-rows or DIRECT_ROWS to NECESSARY_ROWS. Byte deltas are exactly three bytes per replacement. Counts of direct-source, CAPRUN and native-closure tokens are identical old and new. The T rejection remains the per-slot comparison in check.py with the exact stderr bytes, exit 2 and empty stdout.
+- The candidate JSON's five source, three runtime, six predecessor and six diff hashes all equal the charged bytes. Its schema and enabled=false mean the dispatcher, probe and mutator cannot accept it as a registration.
+
+**Pending ROOT obligations, not defects:** an enabled runtime registration with the new authority hash in both files and source_pins, a new contract digest, seven refusal triples re-derived against the new line numbers since produce.py frames shift by 13 and check.py frames by 15 after the deletions, native manifests, physical identities and command vectors.
+
+**One conformant oddity noted:** the check.py line-1 docstring still says "direct-rows", which the ROOT boundary explicitly leaves unedited.
+
+Owned file hashes:
+
+```
+06804680dbb19e08a2ef0ce44a2d97797df31ac8c8ca835741610cc5f9118a48  xmodel/f10-necessary-rows-delta-gate-fable5-20260911.md
+e8260dc5a981430f56f56871978bade6188c6c0793955296f8a8e40dd6eafc8d  box/f10-necessary-rows-delta-gate-fable5-20260911/input_custody.md
+```
+
+Next step is ROOT's: bind the seven text-derived refusal triples and the new registration, then one capped 13-phase AWS observation. No rank client before an independently checked graph plus the fresh exact T negative.
+DIVERT path=xmodel/f10-necessary-rows-delta-gate-fable5-20260911.md status=CLEAN body_bytes=16626 body_sha256=06804680dbb19e08a2ef0ce44a2d97797df31ac8c8ca835741610cc5f9118a48

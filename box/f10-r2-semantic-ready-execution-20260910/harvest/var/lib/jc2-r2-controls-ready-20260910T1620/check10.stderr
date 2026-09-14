@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/opt/jc2-r2-controls-ready-20260910T1620/science/check.py", line 416, in <module>
+    main()
+  File "/opt/jc2-r2-controls-ready-20260910T1620/science/check.py", line 412, in main
+    print(check_file(path))
+          ^^^^^^^^^^^^^^^^
+  File "/opt/jc2-r2-controls-ready-20260910T1620/science/check.py", line 376, in check_file
+    eq([poly(v) for v in array(doc['rows']['Psi'], 3)], psis, 'all three Psi slots')
+  File "/opt/jc2-r2-controls-ready-20260910T1620/science/check_arithmetic.py", line 208, in require
+    raise ValueError('CHECK FAILED: ' + label)
+ValueError: CHECK FAILED: all three Psi slots

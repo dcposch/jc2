@@ -1,0 +1,22 @@
+{
+  "schema":"jc2.source-packet-pins/v1",
+  "task":"f10-mixed-late-capture-sol-20260913",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc":"2026-09-13T00:20:20.394704716Z",
+  "inputs":[
+    {"path":"box/f10-mixed-dac-correction-root-20260913/CAPTURE-TASK.txt","sha256":"1672a2727a7067435a2a481b40e7bd52112ee805a74cb03365de3aa8ea256188","read":"WHOLE"},
+    {"path":"box/f10-mixed-operator-corrections-root-20260912/dispatch.py","sha256":"5cfff7e243482e2c5779b3d3af9ab716e4966adfadc70dcb988c079e208b52ed","read":"WHOLE"},
+    {"path":"box/f10-mixed-dac-correction-root-20260913/COMMANDS.md","sha256":"7809c8ae3733d5e765cec4d5018e57dc4b90d30422dbef66f1f89882fee8cd70","read":"WHOLE"},
+    {"path":"box/f10-mixed-dac-correction-root-20260913/REGISTRATION.disabled.json","sha256":"12ffb39e2ffea120ccb1f6c7827de0459614fbfcfcb9347c8ad4079a02d7bdce","read":"WHOLE"},
+    {"path":"box/f10-mixed-univariate-runtime-repair-sol-20260912/CONTRACT.md","sha256":"314d8a864a264c321728bbe3e4a8c8458eeba6d52a9d83372b3ed09ae3607628","read":"WHOLE"},
+    {"path":"box/f10-mixed-univariate-runtime-gate-astra-20260912/ROOT-INTAKE.md","sha256":"4dc398f29fc492b3bbe3fc87f0abb0b7219aaa651e98c90e385b1953528b6e49","read":"WHOLE"},
+    {"path":"box/f10-mixed-dac-gate-sol-20260913/ROOT-INTAKE.md","sha256":"060c9d4c323659b77674eaeab8ce341876b36541908c9d9b2d3c6731913ad644","read":"WHOLE"},
+    {"path":"COORDINATION.md","sha256":"33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597","read":"EXACT-PIN WHOLE REUSE"},
+    {"path":"ops/artifact_finalize.py","sha256":"0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d","read":"ADMINISTRATIVE FINALIZER; PRIOR WHOLE REUSE"}
+  ],
+  "outputs_preseal":[
+    {"path":"box/f10-mixed-late-capture-sol-20260913/dispatch.py","sha256":"079f9ad7b92e64af5c5fc6a5e17de14ffa5245627ee5c8a4ce0ef2a018a2fa5d"},
+    {"path":"box/f10-mixed-late-capture-sol-20260913/science-unit.template.sh","sha256":"3bee708f82e06e77426ddd7bca9953ef84858b058d88f78c5bf25672a6e579eb"},
+    {"path":"box/f10-mixed-late-capture-sol-20260913/DELTA.md","sha256":"d3c40887b9a216909ec0e8e2f93e424e9d4d0b0978d3872dbb9be5583b1b3bb3"}
+  ]
+}

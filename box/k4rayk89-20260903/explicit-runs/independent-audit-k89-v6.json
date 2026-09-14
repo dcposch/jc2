@@ -1,0 +1,144 @@
+{
+  "type": "K4RAY-K89-INDEPENDENT-AUDIT",
+  "created_utc": "2026-09-04T21:30:25Z",
+  "scope": "K8 exact terminal+rho kill; K9 split A/B sparse-alpha-rho kills; certificate and split-exhaustion audit",
+  "normalization": {
+    "CST": 1,
+    "mu": "variable",
+    "mu_localizer": "mu*mu_inv-1",
+    "mu_set_to_one": false,
+    "modular_promotion_forbidden": true
+  },
+  "K8": {
+    "verdict": "UNIT_IDEAL_CHAR0",
+    "promotion": "D=108 no-split DEAD; D=108 CLOSED at skeleton level",
+    "summary": "box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/summary.json",
+    "summary_sha256": "574c8b915fb43f9b86cfd22a9a9eb873a2c1f0bea4e24f230f5b26ebcd32fa31",
+    "chart_sha256": "18b8e06335228c359820f5dcc8afe07134c42b7cfd618df2d845460a0dae7de8",
+    "variables": 36,
+    "rows": {
+      "terminal": 10,
+      "actual_rho": 51,
+      "localizer": 1
+    },
+    "modular_units": [32003, 32009, 32027],
+    "exact_Q": {
+      "unit": true,
+      "basis_size": 1,
+      "nf_all_zero": true,
+      "script_sha256": "275c07e900f67e1b2630e72460843b3d8b0c6b7b7a2497a81132aba7646b9216",
+      "stdout_sha256": "790b8b2e4a429e4cca3aa2ad03a30fe447b1f5d614e85f408abb1818f3515b33"
+    },
+    "audit": "generator multiset, declarations, denominator clearing, terminal sign, Theta normalization, PIN12/H3 coverage, actual-rho necessity, markers and diagnostics passed"
+  },
+  "K9_A": {
+    "chart": "box/k4rayk89-20260903/topprobe-artifacts/sparse-rho/K9A_SPARSE_RHO_V6/K9_A/build/sparse-rho-chart.json",
+    "chart_file_sha256": "2f660fdaba37f3199b8bda06084c1d74cb20abfde1ef805c3ae6108988e7760b",
+    "chart_internal_sha256": "8f8288777cbba48957861ae6a0cfd20a608e284798839dfda9fc922a86b35e29",
+    "manifest_file_sha256": "b13367ee9a25d1760d9b0393adfa0fcc81865f72201c34ba991eef5385b48179",
+    "generator_union_checksum": "36d1faba5441c338b7abc8082b89eaebf6aa68218c4bc127bb9b9f643821c058",
+    "variables": 36,
+    "chart_rows": 96,
+    "global_generators": 1,
+    "row_families": {
+      "terminal_RREF": 26,
+      "alpha_divisibility": 26,
+      "rho_high_zero": 35,
+      "rho_positive_match": 9
+    },
+    "terminal_ranks": [6, 5, 4],
+    "alpha_ranks": [6, 5, 4, 3, 2, 1],
+    "formula_replay": {
+      "elapsed_seconds": 258.224,
+      "alpha_closed_compatibility_equals_full_exact_RREF_span": true,
+      "alpha_all_26_numerators_and_denominators_exact": true,
+      "rho_all_44_numerators_and_denominators_exact": true,
+      "rho_targets": ["n6..n10=0", "n11=q0/3", "n12=q1/3", "n13=q2/3"],
+      "internal_hash_files_union_declarations_slashes_localizer": "PASS"
+    },
+    "guided_summary": "box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9A_FULL96_3P_EXACTQ_V1/K9_A/summary.json",
+    "guided_summary_sha256": "4a16b3c021835271fa4350235d9516d1f50a16c71eaf479bcb1c4a3da4a07b62",
+    "modular_units": {
+      "32003_seconds": 5.72607,
+      "32009_seconds": 5.530639,
+      "32027_seconds": 5.625695
+    },
+    "exact_Q": {
+      "verdict": "UNIT_IDEAL_CHAR0",
+      "stored_elapsed_seconds": 11.087997,
+      "generator_count": 97,
+      "nf_count": 97,
+      "nf_all_zero": true,
+      "basis_size": 1,
+      "dimension": -1,
+      "script_sha256": "da62786bad020a1213cc68dfcf216ac35cb87dbfc14722b46f5e738dfeeaa203",
+      "stdout_sha256": "d44757667b97c7a5f06cde22aceb2bb5002cc42bf8558eafae442a9e323d4b0f",
+      "independent_replay": "exit 0; std 7 seconds; all 97 NF zero; unit=1; basis size 1"
+    }
+  },
+  "K9_B": {
+    "chart": "box/k4rayk89-20260903/topprobe-artifacts/sparse-rho/K9B_SPARSE_RHO_V6/K9_B/build/sparse-rho-chart.json",
+    "chart_file_sha256": "4312d20c5c7f986dd7ce81321d4afe12e49b6ff3da4dbeab702eb98b29b499b2",
+    "chart_internal_sha256": "b9ba580e7f81991a9dae0e08efe17271a68e884535b45e97c1bd9d96b236c1ff",
+    "manifest_file_sha256": "bc481516a62a23f2138d8dcecb8c0c0a9ca0e3cb1c27272e6d470d3cf1748cd6",
+    "generator_union_checksum": "75ee6f378fe22d1fe2ff8760724435f5af632a34e0ce83a172d18311fcfa5951",
+    "variables": 36,
+    "chart_rows": 98,
+    "global_generators": 1,
+    "row_families": {
+      "terminal_RREF": 27,
+      "alpha_divisibility": 27,
+      "rho_high_zero": 35,
+      "rho_positive_match": 9
+    },
+    "terminal_ranks": [6, 5, 4],
+    "alpha_ranks": [6, 5, 4, 3, 2, 1],
+    "mechanical_audit": "internal fingerprint, every band file and sidecar, union checksum, declarations, unique labels, positive weights, denominator clearing, sole mu localizer and n6..n13 coverage passed",
+    "guided_summary": "box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/DRIVER_AUDIT_K9B_FULL98_3P_EXACTQ_V1/K9_B/summary.json",
+    "guided_summary_sha256": "5d9f1b727c55157226bc04f3aaee5e32bdaaee17c65a349e6bea80d922d309fe",
+    "modular_units": {
+      "32003_seconds": 8.030455,
+      "32009_seconds": 7.979869,
+      "32027_seconds": 7.980635
+    },
+    "exact_Q": {
+      "verdict": "UNIT_IDEAL_CHAR0",
+      "stored_elapsed_seconds": 27.618173,
+      "generator_count": 99,
+      "nf_count": 99,
+      "nf_all_zero": true,
+      "basis_size": 1,
+      "dimension": -1,
+      "script_sha256": "6413899f4fcdbb121d59be9ff307f097f60e4c646a77b273b9f8ce7c8bcbc435",
+      "stdout_sha256": "2e7c766c37d4cc42d93d2d30ff8224e7235c2f4fcc74ff3d17d0fc86e547778e",
+      "independent_replay": "exit 0; std 10 seconds; all 99 NF zero; unit=1; basis size 1"
+    }
+  },
+  "K9_split_exhaustion": {
+    "citation": "box/k4rayk89-20260903/structure-note.md:257",
+    "relation": "y divides v*(L*v^2-12*mu*p2)",
+    "coverage": [
+      "A: v=y*w",
+      "B: L*v^2-12*mu*p2=y*zeta"
+    ],
+    "reason": "(y) is prime; the intersection is retained in both charts and neither y nor v is localized",
+    "conclusion": "both exact-Q unit ideals imply K=9 case (A) DEAD modulo N1",
+    "promotion": "(99,66) skeleton verdict COMPLETE for all three configurations modulo N1; NOTIFY-WORTHY",
+    "scope_caveat": "structure-note.md:350-355 retains the tower-shape induction obligation, so this is not an unconditional promotion beyond modulo N1"
+  },
+  "uniform_extension_audit": {
+    "K10": "after psi=y^3*phi, REC3 forces y|phi; phi=y*v then forces y|p2*v, exactly covered by y|v or y|p2",
+    "K11": "after psi=y^3*phi, REC3 forces y|phi; phi=y*v then forces y^2|v*W for W=L*v^2-18*v*tau-12*mu*p2, exactly covered by ord_y(v)>=2, ord_y(v)>=1 and ord_y(W)>=1, or ord_y(W)>=2",
+    "status": "algebra and valuation coverage confirmed; no K10/K11 CAS verdict claimed"
+  },
+  "fallacy_v2": {
+    "modular_units": "used only as screens; both promotions have exact-Q confirmation",
+    "positive_dimension": "none claimed as a point or counterexample",
+    "localization": "all decision ideals retain mu*mu_inv-1"
+  },
+  "completion": {
+    "audit_subprocesses_bounded": true,
+    "maximum_audit_timeout_seconds": 360,
+    "no_lane_process_left_running": true
+  }
+}

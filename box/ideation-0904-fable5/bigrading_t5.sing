@@ -1,0 +1,8 @@
+ring W=(0,yy),(b4,q2_0,q3_0,q4_0,b3),wp(1,2,3,4,6);
+minpoly=1452*yy^2-792*yy+102;
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/rows_t5_exact.sing"));
+int i; int j; intvec e;
+for (i=1;i<=size(TT);i++) {
+  for (j=1;j<=size(TT[i]);j++) { e=leadexp(TT[i][j]); print("ROW "+string(i)+" "+string(e)); }
+}
+quit;

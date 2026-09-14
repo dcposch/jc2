@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate report is finished and sealed with the marker at 20:53:52 UTC, ahead of the 21:05 hard stop. Nothing else is pending.
+
+**Outcome.** I wrote `xmodel/keller-trace-shortcuts-gate-fable5-20260911.md` and no other file. All three charged inputs matched their expected SHA256 at pre-pin and again at postpin, and each was read in full. The body is 1469 words including the marker, under the 1700 cap. No code, CAS, network, Git or live artifact was used.
+
+**Verdicts, all independently re-derived:**
+
+- **A. CONFIRMED.** The binomial expansion of h_m^k puts the first mixed term (m+2)/(uv) exactly at k=m+2, with both divisorial pole orders equal to one for every m. The K^N control pins rank plus pole orders (1,1); the Kummer control K(a), a^N=u, is irreducible by Eisenstein. The Newton/Cayley–Hamilton criterion survives only because a ring is required, and B fails multiplication closure.
+- **B. CONFIRMED.** Every power of v/u+u/v has exponent sum zero, so S[h] sits in B while S[1/(uv)] does not. Both Kummer trace formulas check. The base-changed trace on R⊗_A S is the restriction of the étale-algebra trace of L⊗_K Frac(S), so a finite sum of tensors traces into B with no global idempotent needed. I confirmed the caveat that the idempotent must lie in the ordinary tensor product, not merely in a generic, henselized or completed splitting.
+- **C. CONFIRMED.** R∩K=A uses only quasi-finiteness of an étale map plus a source divisor valuation. Hom_A(M,R)=0 follows from generic multiplication by r and accepted M_η=K, excluding every A-linear and W-linear section once D is nonempty, with no properness presumed. Splitting is therefore equivalent to properness, so any splitting premise is circular.
+- **D. CONFIRMED as conditional.** Under the stipulated IC/normalization comparison, H0(E)=H1(E)=0 and H2(E)≅H1(M)=C^c. I noted that the H1 count needs only connected normalizations, while accepted H2(M)=0 forces H1 of each normalization to vanish. The trace-of-primitive obstruction is the inverse connecting map, and the logarithmic residue classes form a basis because exact forms have zero residue. Nothing licenses H2(E)=0.
+- **E. CONFIRMED.** The open-immersion sequence cannot split because H_p is p-torsion and A[1/p] is a domain. Under the stipulated exact duality and self-dualities, the dual has p-torsion, so B0 is not self-dual despite an identity generic pairing. The control is correctly scoped to a non-A² source.
+
+**Gaps recorded.** No logical gap in the charged deductions. Two hypotheses remain unverified by this gate: the IC/normalization de Rham comparison in D and the regular-holonomic simplicity and self-duality inputs in E. No charge_basis line, no exit-price claim, no artifact_finalize; custody belongs to the launcher.
+DIVERT path=xmodel/keller-trace-shortcuts-gate-fable5-20260911.md status=CLEAN body_bytes=9183 body_sha256=78c8a8fbf6f0136f90bd99a75b62f3407f5cc91c6cf970d34d86a47e4008ffdb

@@ -1,0 +1,67 @@
+{
+  "schema": "jc2-pseudoplane-boundary-terminal-custody/v1",
+  "task": "pseudoplane-boundary-submersion-test-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED_BOUNDED_TASK_PARTIAL_MATHEMATICS_GENERAL_GAP",
+  "new_claims": "UNREVIEWED",
+  "first_utc": "2026-09-11 08:31:32 UTC",
+  "initial_targets": "ABSENT",
+  "reserve_utc": "2026-09-11 08:44:00 UTC",
+  "hard_utc": "2026-09-11 08:47:00 UTC",
+  "clock_reset": false,
+  "scientific_closeout_utc": "2026-09-11 08:40:15 UTC",
+  "finalized_utc": "2026-09-11 08:40:33 UTC",
+  "sealed_whole_expected_verify_postpins_completed_utc": "2026-09-11 08:40:45 UTC",
+  "custody_prepared_utc": "2026-09-11 08:40:45 UTC",
+  "inputs": [
+    {
+      "path": "xmodel/pseudoplane-homogeneous-hamiltonian-root-20260911.md",
+      "sha256": "9909649753927f2dbb19bf1701b7f9b0442e1fbcf1a934b3f9080c7f81e43a14",
+      "scope": "FRESH_WHOLE; exact ring/bracket, grading/cotangent/normal form and homogeneous no-mate accepted; theorem not re-proved; linked files not followed"
+    },
+    {
+      "path": "xmodel/pseudoplane-homogeneous-hamiltonian-root-20260911.md.artifact.json",
+      "sha256": "bdba5b1c0c5eddca59d05bbabe83f429bd730f5607e1f13523e4df1751a8abde",
+      "scope": "FRESH_WHOLE documentary manifest"
+    }
+  ],
+  "owned_excluding_custody": [
+    {
+      "path": "box/pseudoplane-boundary-submersion-test-astra-20260911/PINS.json",
+      "sha256": "10dbf57519d658f4cbb3e6993fc7cd16620e14cd26ee953864563023e0b5fdc2"
+    },
+    {
+      "path": "xmodel/pseudoplane-boundary-submersion-test-astra-20260911.md",
+      "sha256": "d9bb20f83678cde429f04a1f4a175b013d31be2b92ccdb87d6b98ad3edc24265"
+    },
+    {
+      "path": "xmodel/pseudoplane-boundary-submersion-test-astra-20260911.md.artifact.json",
+      "sha256": "41a6621fa7a94cad2e87e1706215b2468f459e989417c23d831b2ebc8b553132"
+    }
+  ],
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256": "41a6621fa7a94cad2e87e1706215b2468f459e989417c23d831b2ebc8b553132",
+    "status": "VERIFIED",
+    "body_sha256": "ad29886d121b5bc36d9c35b9c3e88bb6d2c13f2e5371269bbdd57216efe2162c",
+    "lease_id": "6b34a00d7a2ddb216c6c2ea867ea858a"
+  },
+  "readback": {
+    "inputs": "Exactly2 hashes before both FRESH_WHOLE bodies; no reuse/clipping/linked inputs",
+    "own": "Report and PINS WHOLE before marker; sealed report and manifest WHOLE after finalize; all2 input and3 owned postpins match",
+    "excluded": "No linear-U producer or live FIRST report read or used"
+  },
+  "findings": {
+    "two_weight": "Uf(AZ)+Z^d g(AZ), d>=1, f,g nonzero, has a critical point; hence constant plus at most2 homogeneous components submersive implies affine boundary",
+    "three_weight": "U+Z^d+q(AZ), d>=1, q arbitrary, has a critical point via exact univariate R and all exceptional-root lifting",
+    "control": "U+q(AZ) globally submersive for every polynomial q, with constant boundary",
+    "general_gap": "No general arbitrary-weight boundary-degree theorem and no nonlinear-boundary submersion counterexample obtained",
+    "scope": "H-only statements; no scalar mate assumption, finite degree farm, general R/source/Keller/JC2 result"
+  },
+  "open_quantity": "Independent validity of scoped partial theorems; arbitrary-weight boundary assertion remains unresolved",
+  "cheapest_test": "Focused manual different-model review,10 minutes UNMEASURED planning, not launched",
+  "collisions": "Own-only NONE; final report/manifest absent immediately before seal",
+  "root_hints": "Two-weight derivative-root argument independently checked; no message treated as accepted proof or new file input",
+  "no_actions": "No scientific execution/code/import/AST/syntax/test/CAS/dummy, payload, network/history/provenance/AWS/Git/process control/protected/shared access, agents or follow-on",
+  "writer_state": "This custody is the last authored file. No background writers or delegated work exist. Only read-only custody WHOLE/hash/time and terminal handoff follow. ALL WRITERS IDLE."
+}

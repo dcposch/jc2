@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete and sealed. **VERDICT: `CONFIRMED-WITH-FIX`.**
+
+## What I did
+
+Verified all six input hashes mechanically from the receipt (`sha256sum -c`, 6/6 OK), then re-derived every gate item independently — **without reading or executing any artifact in `box/joint-degenerate-20260905/`**, so agreement with Fable is reproduction, not transcription.
+
+**(1) The identity.** Exact, not a truncation artifact. Grouping `KJ = (KG)_z[n·KF − t(KF)_t] + (KF)_z[t(KG)_t − m·KG]` gives `n·KF − t(KF)_t = (3u²+bt^{2d})(du − tu_t)` and `t(KG)_t − m·KG = −(2u+dt^d)(du − tu_t)` — cancellation forced by `2n = 3m` **and** the block degrees. Confirmed mechanically with the engines' own `build_FG`/`jacobian_band` past all four constant sites, with two negative controls that both fire.
+
+**(2) Constants.** Entry powers reproduce exactly (104>96, 68>64, …). I also found something stronger than the report: the `D1` row count in each constant's band is `max(0, threshold − d1_mult·W)`, which is *negative in all eight cases* — the constants are free at **any** offset, not just the run depth.
+
+**(3) Consistency.** All three depth ledgers reproduce to the unit: 129/102/0 (D=108, plus a witness verified by direct substitution into raw rows), 105/76/0 (δ=2), 130/94/0 (δ=5/2). Localizers hold: `c=1`, `Hc_5_3=2`.
+
+**(4) History.** `a_4 = 8` and `a_8 = 8` on both old engines, nothing on the corrected one.
+
+**(5) The fix.** `raw_minor_support` includes the *leading* pole tag and the drivers emit it as `coefficient = 0` with no target subtraction. Reduced, that row is `1 = 0` — at D=108 the constant `a32_pi8 = 1`, at (99,66) δ=2 the residual is `27ρ³, 27ρ², 9ρ, 1`, exactly the ζ-coefficients of `(ζ²(ζ+3ρ))³`. So the chart *forces* Fable's target (a bonus confirmation), and an engine reaching stage 92/60/77/50 would report a spurious `UNIT` far below `T_0`. This doesn't refute the theorem — a row no point satisfies says nothing about Δ — but it bounds what "the engines can express" means.
+
+I also pushed the `h3`-on-`D1` probe past the record: pinned at full `h2`-only depth it gives residual 0 with an explicit witness on all 130 raw rows.
+
+Two caveats recorded rather than buried: the headline "Δ satisfies every row" is false for Δ itself (three `G` pole rows are nonzero at `T=8`); and a *joint* non-band row (resultant/coprimality) also separates Δ, so "only a single-polynomial kill remains" is an over-narrowing.
+
+Report: `xmodel/cone-vertex-gate-opus5-20260905.md` (body 22,161 B, seal PASS). Drivers/artifacts: `box/cone-vertex-gate-20260905/`. No ledger edits.
+DIVERT path=xmodel/cone-vertex-gate-opus5-20260905.md status=CLEAN_SEALED body_bytes=22161 body_sha256=555a2cb0e3d480f0378f5858b0adc6755a6c5fd9d67c7803e8355e7e1b464a88

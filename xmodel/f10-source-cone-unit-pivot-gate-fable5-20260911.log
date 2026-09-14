@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and delivered at 00:18:47Z, ahead of the 00:25:00Z reserve. Nothing further is needed from the user or from tools.
+
+**Verdict.** Sections A through E of the ROOT contract are CONFIRMED by independent manual recomputation. Section F finds no blocking ambiguity or missing hypothesis. No item is REFUTED. The only GAP is readiness, meaning the absent authenticated reconstruction, checker and fixtures, which this gate explicitly does not accept or review.
+
+**What was checked by hand**
+
+- **A.** The partition chains p_3 and p_4 up to weight 30 were recomputed from scratch. They give 297 rows and 364+515+571+3 = 1453 columns over 25 slots, with the dense counts 431541, 3020787 and 2079×10171 = 21145509 all confirmed as nominal counts. Solvability over B is exactly exponent-one membership of g in I_hom by homogeneous projection, and the rational expansion loses no factor because no quotient of B is taken.
+- **B.** The gcd unit test is complete over the principal ideal domain Q[Z]. An explicit induction shows earlier pivot columns stay zero, the final shape is unit-upper-triangular over an all-nonunit remainder, and zeroing the free unknowns plus zero remaining right-hand side gives a division-free backward solution of the original system.
+- **C.** The changed-base matrix over Q×Q squares to the identity and is solved by (e,f) although every entry is a nonunit, so INCONCLUSIVE is mandatory on refusal. The rank-seven lift with a coordinate idempotent behaves identically.
+- **D.** The literal full-polynomial identity against authenticated generators is the only evidence. The inverse+1 mutation and the monomial cofactor mutation on a nonzero row are guaranteed rejections. A zero target is legitimate only with authenticated provenance, and a zero-to-zero configuration proves nothing.
+- **E.** A verified identity gives E_3 = 0, hence by the accepted cone the complete normalized r=3 source is zero. REG, irreducibility, factor selection, reducedness, any negative verdict, any actual certificate and any runtime claim are all excluded.
+
+**Files written**, both via apply_patch only, no Seal or charge_basis authored:
+
+- `xmodel/f10-source-cone-unit-pivot-gate-fable5-20260911.md`, 1860 words, one standalone marker as the last line.
+- `box/f10-source-cone-unit-pivot-gate-fable5-20260911/input_custody.md`, with first action, pre-read and post-read pins, completion time and the report hash.
+
+All four input hashes matched before reading and again after the own whole read. All owned writers are idle. The adapter now seals.
+DIVERT path=xmodel/f10-source-cone-unit-pivot-gate-fable5-20260911.md status=CLEAN body_bytes=12530 body_sha256=d1e87f980894090ec6104db2c3ac4dc5726d269fb42240dc187734fe211c484f

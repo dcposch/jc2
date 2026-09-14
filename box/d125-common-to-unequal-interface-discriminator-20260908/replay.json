@@ -1,0 +1,63 @@
+{
+  "all_writers_idle": true,
+  "elapsed_seconds": 1.932892,
+  "runs": [
+    {
+      "mode": "normal",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "a6b97c690736fb47e519fa7b0f32f662c44ecbdf3ac4f145132eb07e984c08af"
+    },
+    {
+      "mode": "wrong-shift",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 37, in <module>\n    need({v:a for v,a in Rp.items() if v[0]==3} == {(3,2):1}, 'center exact g^3 face')\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 11, in need\n    raise ValueError(name)\nValueError: center exact g^3 face\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "omit-lower-slot",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 39, in <module>\n    need(max(5*i-7*j for i,j in Rp)==10, 'remaining forbidden weighted slot')\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 11, in need\n    raise ValueError(name)\nValueError: remaining forbidden weighted slot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "drop-mu",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 30, in <module>\n    need(mu != 0, 'literal common-face guard')\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 11, in need\n    raise ValueError(name)\nValueError: literal common-face guard\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "normal",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "a6b97c690736fb47e519fa7b0f32f662c44ecbdf3ac4f145132eb07e984c08af"
+    },
+    {
+      "mode": "wrong-shift",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 37, in <module>\n    need({v:a for v,a in Rp.items() if v[0]==3} == {(3,2):1}, 'center exact g^3 face')\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 11, in need\n    raise ValueError(name)\nValueError: center exact g^3 face\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "omit-lower-slot",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 39, in <module>\n    need(max(5*i-7*j for i,j in Rp)==10, 'remaining forbidden weighted slot')\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 11, in need\n    raise ValueError(name)\nValueError: remaining forbidden weighted slot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "drop-mu",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 30, in <module>\n    need(mu != 0, 'literal common-face guard')\n  File \"/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py\", line 11, in need\n    raise ValueError(name)\nValueError: literal common-face guard\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/descent-invariance-lemma-opus5-20260905.md`.
+
+## What the lemma proves
+
+**Input gate:** manifest built with `awk` from the receipt's paired `_basename=`/`_sha256=` lines, `sha256sum -c` → **6/6 OK**.
+
+Six identities, each derived from the print (not replayed):
+
+- **(I1) Lattice** — Prop 6.3(2)'s π-degrees `u_s(-μ_i)/d_s` plus the p.150 μ↔M recurrence and p.201(5) `d_s = gcd{n,M_1..M_{s-1}}` give `n',m',M'_i,d'_i,μ'_i = c ×` parent, `c = u_s/d_s`, hence `n'/d'_2 = n/d_2`.
+- **(I2) Radius** — a telescoping ratio identity in Def 5.1(3): the child's `F'_i = ρF_i` on the copied range, so `δ'_i` is affine in `δ_i` with fixed point `1 ↦ v_s−u_s`, and the slope is `u_s/δ_j`. When `j = s−1` the Möbius value at `i=j` is itself proved from `δ_{s−1} = (u_sX−d_s)/(v_sX−d_s)` — no recipe input.
+- **(I3)/(I4)/(I5)** — `V'_2 = V_2` ⟹ `N'=N, M'=M`; `A'_1 = den(L''(u_s/g)b_jδ_1)`, equal to `A_1` at `s=3, u_s=1` and dividing it at `u_s≥2`; `P'/Q' = P/Q` at every level, `P'=P, Q'=Q` on the copied range.
+- **(I6)** — `l'' = d_{s−1}/d_s − d_s` at `u_s=1`, and `δ'_{s'} = −1 ⟺ n−M_{s−1} = d_s(d_s−1)`. **Result stronger than the OPEN as posed:** the kill cell {`l''<0`, simple, minor, `δ'_{s'}=−1`} is *contradictory*, not merely census-empty — it pins `w = d_s−1`, forcing `lo' = 1 = P'/Q'`, and the A.3 identity `Ppq' − Qp'q = cp` gives `G(a)(P−Qv) = c ≠ 0`, so no multiplicity equals `P/Q`.
+
+**Print controls:** `(ell+1)×Def 5.1(3)` on the child data reproduces **all five** of Moh's printed p.207 child radii, and that same table *is* (I1) and (I3) (`M'_2 = cM_2`, `V'_2 = V_2`, 5/5). Verified by hand on the six p.207-type controls and on three seeded-random operative rows (indices 1202, 553, 171).
+
+## Two things I did not deliver as asked
+
+1. **`A'_1 = A_1^{act}` at `s ≥ 4` is not proved** — only `A'_1 | den(b_jδ_1)`. `A_1^{act}` is defined by `own_v_routes`, outside the charged inputs; my own check finds `A'_1 ∤ A_1^{moh}` on exactly R026/R028 and the `s=3` closed form failing on 4 more rows. Split off as `OPEN[DESCENT-INVARIANCE-ACT-STABILIZER-S>=4]` rather than asserted.
+2. **The body is 23,262 bytes, 4.7 KB over the 10–18 KB band.** Eight compression passes took it from 30.2 KB to 23.3 KB and then stalled — rephrasing removes wording, not claims. Getting under 18 KB would have meant deleting proof steps or one of the two verification sets, so I shipped complete and am flagging the overage. Also recorded a memory note to budget bytes per section before drafting.
+
+Also recorded: a print defect — p.198's proof display `−u_s/(bγ^{v_s−u_s−1})` and its matrix entry `−1/(bγ^{v_s})` are not mutually consistent; the self-consistent value is p.197 (3), which is what `ell = v_s−u_s−1 ≥ 0` uses.
+DIVERT path=xmodel/descent-invariance-lemma-opus5-20260905.md status=CLEAN_SEALED body_bytes=23262 body_sha256=416e2fd9b714739e2f9a580a76ece649393e01ac2e1acfa7c474dbf9775961be

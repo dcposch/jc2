@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete. Report sealed at `xmodel/first-separation-gate-opus5-20260905.md` (19,299 body bytes, `PASS`).
+
+## Verdicts
+
+**G1 — Lemma A [FIRST-SEPARATION]: CONFIRMED on every step.** Checked against rendered page images, not OCR:
+
+- **Radius `−1`**: Sol's Newton-polygon step needs `deg T_1^ψ = deg_y T_1^ψ`, which isn't in Lemma 5.3's hypothesis — but Moh asserts it on p.185. Independently, Prop 5.4's proof (p.183) computes `δ_i = −1/(n−M_i−1)` unconditionally, and p.174's Definition–Remark forces `M_i ≤ n−2`.
+- **Minimality**: used exactly where Moh uses his — Prop 5.4 is a bare disjunction; Sol kills disjunct 1 with non-coordinateness, disjunct 2 with no-simultaneous-drop, which is Moh's own search item (3). Char 0 + algebraically closed is all that's needed (itemised in the report).
+- **(FS)**: p.194 prints `[(y−ax)^{v_s}(y−bx)^{u_s}]^{n/d_s}`, `a≠b`, verbatim.
+- **"(1)–(13)"**: correction upheld with quotes. Item (1) literally reads `n ≤ 100`; item (6) literally reads `3 ≤ s ≤ 5`. The dependence is structural — `d_2 ≥ 2^s` and `d_2 ≤ n/2` gives `s ≤ 5` *from* the cap.
+
+**G2 — SOURCE-SUPPORT: CONFIRMED-WITH-FIX, and I found what the gate asked about.**
+
+The ultrametric mean, the division-preserves-weight lemma, and the negative control all check out (control reproduces `−15/4` and `−11/2` exactly). Two fixes: name `Q = T_1^ψ(P)` as a hypothesis (it's what puts Q's roots in `D_s`), and cite the `ℓ`-extension of Prop 5.1 as a re-run — Moh's p.171 remark licenses **Prop 4.6** only.
+
+**The total-degree bound the gate asked about does exist in print.** Moh's Appendix II coefficient counts (244, 373, 202 for the descendants) are exactly `C(n+2,2)+C(m+2,2)` — three exact hits, plus `(64,48)→3370` and `(84,56)→5308` at source. It's legitimate there because his printed `δ₂` column *is* `−d`, and `−(ℓ+1)/(n′−M_s′−1)` matches all four table entries exactly — a 4/4 independent validation of Astra's terminal equation.
+
+That sharpens (d) materially. Recomputing `d` and `|G₁|` from `(n′,m′,M_s′,ℓ)` alone reproduces Astra's `support-completion.json` on **12/12 fibres**. Testing `G₁ ⊆ {b+a≤K, b≤K−V₂}`: the old caps are *false* in **4 of 12** h-inventories (all three `(16,12; 6,13; ℓ=3)` where `d=2`, plus `9_20/V4_9` where `V₂=4` bites), and a sound-if-unproved over-approximation in the other 8. The caps are precisely the p.194 **source** root picture ("`V₂` roots of `ord≥0`, `K−V₂` of `ord≥−1`") transported onto descendants whose own outer radius is `−d ≠ −1`.
+
+Caveat I did not clear: the α/β blocks weren't tested, so the regression list is `h`-block only. Filed as `OPEN[OLD-CAP-REGRESSION-αβ]` alongside two new small OPENs.
+DIVERT path=xmodel/first-separation-gate-opus5-20260905.md status=CLEAN_SEALED body_bytes=19299 body_sha256=6144f7cc3688d1fe3a997d05f8b6046e91b4bb858be35d8a307d4182c106ddb3

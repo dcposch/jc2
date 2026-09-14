@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The lane is complete and sealed. Nothing remains to request.
+
+**Outcome.** No uniform-in-t statement follows from the theory of polynomial solutions of polynomial ODEs. The residual (R) stays open and theorem (T) is not promoted for any new index. The report is at `xmodel/abel-polysol-fable5-20260905.md` (24,971 bytes, sealed with `<!-- BODY-END -->`), drivers and outputs in `box/abel-polysol-20260905/`.
+
+**What was established, all verified by exact computation at t = 2, 3, 4:**
+- **(UF) is an Abel equation of the second kind in P**, canonical form P P' = f₂P² + f₁P + f₀ with f₂ = 3/(2x). It is first-kind only in z = 1/P, where a polynomial P is a rational solution, outside the scope of the counting theorems. Equivalent Euler form: (θ−3)(P²) + G·P = Rfree with θ = x d/dx.
+- **The counting theorems cannot apply.** Their mechanism, that polynomial solutions of a first-kind equation differ by constants, fails for the second kind. Worse, for fixed L and field factor the polynomial P is unique, because every pivot at infinity is the unit 2ω(2N+m+6d). Any bound on the number of solutions is therefore vacuous, and the real question is which L admit a P, over a parameter family that grows with t. Degree comparison gives deg P = 2·deg L exactly, with the top identity's discriminant 3N being the origin of the field Q(√(3(t+1))). Nothing conflicts with deg V = 2t−1.
+- **Homogeneity forces nothing beyond Astra's G_m quotient.** The monomial stratum c = 0 always has B = η = 0 and solves (UF) iff a closed-form residual e(N,d) vanishes, which for integer N ≥ 3 happens only at (N,d) = (3,−1): exactly the known exceptional t=2 family.
+- **New structure:** x = 0 is a Briot–Bouquet point of exponent 3 with t-independent pivots −(k−3)b²/2, giving a universal recursion Φ_k whose truncation conditions are the target. The resonance at infinity explains the free b-axis at t=2, d=−1 and is otherwise invisible to the polynomial problem.
+
+**Custody.** A row emitter built from P·Hdiff − Rfree alone reproduces Astra's frozen rows, B, η, target and pivots byte-for-byte at t = 3, 4, 5, and reproduces the t = 3, 4 conclusions (dim 0, lengths 66 and 338, T² ∈ J). The bottom-up instrument is unit at t = 3 and t = 4 modulo 31991 with passing negative controls, but it is more expensive than Theorem H's rows, which remain the best finite-t instrument. The exact t=3 bottom-up std did not finish and is recorded as inconclusive, not claimed.
+
+**Next.** The binding gap is unchanged: OPEN[K16-INTRINSIC-SLICE-UNIT]. One narrowly typed OPEN was raised for a family-level theorem on second-kind Abel equations with an unknown coefficient polynomial. Two tool traps were saved to memory: Singular parses `b^2/4` as `b^(2/4)`, and the collision scanner treats "OPENS RETAINED" bullets as raised entries.
+DIVERT path=xmodel/abel-polysol-fable5-20260905.md status=CLEAN body_bytes=24971 body_sha256=9516589ac6228b6a2cf9d9258f0d7e1160cfd7768dd4fee50c29e9db4005c3d0
+hashed lane input changed during execution; result is quarantined

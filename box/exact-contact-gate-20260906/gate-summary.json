@@ -1,0 +1,72 @@
+{
+  "schema": "jc2.exact-contact-hostile-gate/v1",
+  "report": "xmodel/exact-contact-gate-astra-20260906.md",
+  "body_bytes": 24596,
+  "body_sha256": "cd0880f0a7c4122118f59e330f60830f9b2d772762ec346a970138858a62cedf",
+  "input_sha256_check": "7/7 PASS; mechanically receipt-joined with awk before mathematical reads",
+  "raw_counts": {
+    "configurations": 1080,
+    "nonintegral": 995,
+    "below_unsplit_minor": 77,
+    "overlap": 71,
+    "integrality_only": 924,
+    "flat_inequality_pass": 1003,
+    "pass_both_flat": 79,
+    "flat_surviving_rows": 59,
+    "premature_upper_major_terminations_among_924": 19,
+    "complete_major_exclusions_among_924": 905
+  },
+  "verdicts": {
+    "integer_test": "CONFIRMED-WITH-FIX: complete major sums only",
+    "lemma_A": "REFUTED",
+    "lemma_B": "CONFIRMED-WITH-FIX: global eta-support/characteristic-list condition",
+    "R009_R050": "CONFIRMED-WITH-FIX: unique necessary contact/multiplicity pattern, I_M=I_m=8",
+    "six_row_kills": "REFUTED",
+    "R001_requires_B": "REFUTED",
+    "ell_sensitivity": "CONFIRMED",
+    "descent_noninvariance_inference": "REFUTED: invariance comparison OPEN",
+    "residual59_promotable": false
+  },
+  "six_numerical_survivors": {
+    "R025": [
+      "17",
+      "7"
+    ],
+    "R026": [
+      "17",
+      "7"
+    ],
+    "R027": [
+      "17",
+      "7"
+    ],
+    "R028": [
+      "22",
+      "6"
+    ],
+    "R057": [
+      "18",
+      "6"
+    ],
+    "R058": [
+      "18",
+      "6"
+    ]
+  },
+  "R028_flat_to_closed": {
+    "same_coarse_config_flat_I_M": "111/4",
+    "closed_I_M": "22",
+    "I_m_unsplit": "6",
+    "within_described_depth2_A_B": true
+  },
+  "checks": {
+    "ancestor_sample_rows": 20,
+    "ancestor_pairs_passed": 88,
+    "closure_exact_checks": 1294,
+    "local_upper_ODEs": 7,
+    "local_final_ODEs": 3
+  },
+  "scope": "Necessary numeric and local polynomial certificates; global polynomial gluing remains OPEN. No ledger edits.",
+  "started_utc": "2026-09-06 01:17:37",
+  "finished_utc": "2026-09-06 01:38:07 UTC"
+}

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "python3",
+    "-I",
+    "-B",
+    "ops/artifact_finalize.py",
+    "verify",
+    "--final",
+    "xmodel/f9-weighted-reference-source-astra-20260909.md",
+    "--expected-basis",
+    "0d39df3c9fd69c939a8420c54d03228b9077777d"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 19513, \"body_sha256\": \"b20ac98196bd5b7e523c6fe030244c159d4488bc9c9585ce1e23a4e759262e36\", \"file_bytes\": 19846, \"final_path\": \"/home/ubuntu/jc2/xmodel/f9-weighted-reference-source-astra-20260909.md\", \"full_sha256\": \"d7fb64afe6c02c50aa2756c1e2600c8b3f3f05077f200c522a794cc121590c32\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/f9-weighted-reference-source-astra-20260909.md.artifact.json\", \"manifest_sha256\": \"c56d203bae1c771dee24dffb4adf676af3c27616fb27ac757d171b9708af16a7\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+  "utc": "2026-09-09T06:22:15.909827+00:00"
+}

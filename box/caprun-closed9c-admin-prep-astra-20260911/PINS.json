@@ -1,0 +1,121 @@
+{
+  "schema": "documentary-literal-port/v1",
+  "first_action_utc": "2026-09-11T15:38:05.188947836Z",
+  "reserve_utc": "2026-09-11T15:47:00Z",
+  "hard_stop_utc": "2026-09-11T15:50:00Z",
+  "inputs": {
+    "box/caprun-closed9c-admin-prep-astra-20260911/TASK.md": "bd546749f4359a3e3fecf083e0decca9c4a62821d5eb939ddb18d1065d79e056",
+    "box/caprun-closed-scope-c-execution-root-20260911/PLAN.md": "8e8c62a57d8486e34cdb3da0d77a863db2ea3ff2c783ea71326a7f429ed33dce",
+    "box/caprun-closed-scope-c-execution-root-20260911/ORIGINAL-CLOCKS.json": "e09956c2de4e35cc55b65b1f5d1d0a871cfabcb66c81df4932d1ede6823ffd43",
+    "box/caprun-closed9b-admin-prep-astra-20260911/physical-metadata.template.sh": "5035df94e6d57c2a03780cedbc6d93eaf3b3e6be192b999b35d54fb01bbc9056",
+    "box/caprun-closed9b-admin-prep-astra-20260911/native-metadata.template.sh": "b386a6cd2d732e6618b994fdbdec67d8e2a59fc997206f296b4cf55513684ed0",
+    "box/caprun-closed9b-admin-prep-astra-20260911/setup-pre-admission.template.sh": "a7345d1e8ae97cc6211f9f463bc054039270ce153ae1273fb1aad5b24145893d",
+    "box/caprun-closed9b-admin-prep-astra-20260911/prepare-leaves.template.sh": "ee44978364d1e730be0c57037660ef97c6339ba6a6ba00e25451e475a474adc8",
+    "box/caprun-closed9b-admin-prep-astra-20260911/final-install.template.sh": "cb4b4762c1c3423030b66e0359dfbd73d62076aeacfe1a8e73e2d64a26c8d5fd",
+    "box/caprun-closed9b-admin-prep-astra-20260911/ROOT-EXECUTION-CARD.template.md": "47091e779d1ceb17263ef1363c566dd671f9071c6925e7ffbb093f447536ecc8",
+    "box/caprun-closed9b-admin-prep-astra-20260911/preflight-policy.json": "e3c5691f08d4d2302bccd4b5823fa0b16a50ed1a795cbe1db56dd2fa926c7845",
+    "box/caprun-closed9b-admin-prep-astra-20260911/admin-helper-metadata-v2.sh": "c66122967f2dcd0a0ec2ad628c649400b7114ea64d64d4f2b2c123525e902d6d",
+    "box/caprun-closed9b-admin-prep-astra-20260911/preholder-security.sh": "3f4858925e39ab6da1559bee0a840747a4e3bcaa1c419a7e50c4a6d6afde6f36"
+  },
+  "outputs": {
+    "box/caprun-closed9c-admin-prep-astra-20260911/physical-metadata.template.sh": "122333c771693215d29ad8e2a04589f11a63b356f9f2d76fad7b20d12f822fa5",
+    "box/caprun-closed9c-admin-prep-astra-20260911/native-metadata.template.sh": "b386a6cd2d732e6618b994fdbdec67d8e2a59fc997206f296b4cf55513684ed0",
+    "box/caprun-closed9c-admin-prep-astra-20260911/setup-pre-admission.template.sh": "9a0cc52cce6850a09ec3a9d91025c64bffd222dc45d8f8fc4897cd8ab1fa0f71",
+    "box/caprun-closed9c-admin-prep-astra-20260911/prepare-leaves.template.sh": "2f0e8e548ba00fd2abb66203a9b22736f8c2ccf707333ea1548f56e2a31f7c8b",
+    "box/caprun-closed9c-admin-prep-astra-20260911/final-install.template.sh": "78884d3638d7dca45f83f764c1cb7cbc05267f781e01cf00262f56e12c4447b5",
+    "box/caprun-closed9c-admin-prep-astra-20260911/ROOT-EXECUTION-CARD.template.md": "e7163b720ab434a42882fc6d9203791f3c2115dc64d31f63fb27114fe6b2808c",
+    "box/caprun-closed9c-admin-prep-astra-20260911/preflight-policy.json": "c9de56af37242e598c55530f4bd870f05c05a430057dd43979eb688a9af0d38f",
+    "box/caprun-closed9c-admin-prep-astra-20260911/admin-helper-metadata-v2.sh": "0f7c4239ec1ca97e172a0b3860cab25113faa5244cf69ef26103ba3bc748518d",
+    "box/caprun-closed9c-admin-prep-astra-20260911/preholder-security.sh": "9951822ea0912e5e3ecc3340fa300cc024a48e31104dcfa95886e4002752e75c"
+  },
+  "substitutions": [
+    [
+      "jc2-closedchild-preflight9-20260911b",
+      "jc2-closedchild-preflight9-20260911c"
+    ],
+    [
+      "caprun-closed-scope-b-execution-root-20260911",
+      "caprun-closed-scope-c-execution-root-20260911"
+    ],
+    [
+      "677bebd229e633950075a6ae54fa9d5b879253247dac68260465997c782055f1",
+      "e09956c2de4e35cc55b65b1f5d1d0a871cfabcb66c81df4932d1ede6823ffd43"
+    ]
+  ],
+  "checks": {
+    "physical-metadata.template.sh": {
+      "occurrences": [
+        8,
+        0,
+        0
+      ],
+      "whole_equal_to_literal_transform": true
+    },
+    "native-metadata.template.sh": {
+      "occurrences": [
+        0,
+        0,
+        0
+      ],
+      "whole_equal_to_literal_transform": true
+    },
+    "setup-pre-admission.template.sh": {
+      "occurrences": [
+        35,
+        0,
+        0
+      ],
+      "whole_equal_to_literal_transform": true
+    },
+    "prepare-leaves.template.sh": {
+      "occurrences": [
+        3,
+        0,
+        0
+      ],
+      "whole_equal_to_literal_transform": true
+    },
+    "final-install.template.sh": {
+      "occurrences": [
+        4,
+        0,
+        0
+      ],
+      "whole_equal_to_literal_transform": true
+    },
+    "ROOT-EXECUTION-CARD.template.md": {
+      "occurrences": [
+        0,
+        1,
+        1
+      ],
+      "whole_equal_to_literal_transform": true
+    },
+    "preflight-policy.json": {
+      "occurrences": [
+        16,
+        0,
+        0
+      ],
+      "whole_equal_to_literal_transform": true
+    },
+    "admin-helper-metadata-v2.sh": {
+      "occurrences": [
+        1,
+        0,
+        0
+      ],
+      "whole_equal_to_literal_transform": true
+    },
+    "preholder-security.sh": {
+      "occurrences": [
+        5,
+        0,
+        0
+      ],
+      "whole_equal_to_literal_transform": true
+    }
+  },
+  "remaining_binding": "Card retains old policy digest e3c5691f... under exact three-substitution rule; future ROOT must bind actual new policy c9de56af... separately. No fourth change made.",
+  "execution": "NONE"
+}

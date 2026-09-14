@@ -1,0 +1,14 @@
+{
+  "ssh_argv": [
+    "ssh",
+    "-i",
+    "/home/ubuntu/.ssh/jc2-fleet",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=12",
+    "ubuntu@172.30.0.56",
+    "cd /home/ubuntu/d125-physical-export-pilot-20260906 && exec /usr/bin/python3 controls.py remote"
+  ],
+  "timeout": 50
+}

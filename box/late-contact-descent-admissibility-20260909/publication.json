@@ -1,0 +1,52 @@
+{
+  "terminal_utc": "2026-09-09T03:00:20.864118+00:00",
+  "outcomes": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "close",
+        "--final",
+        "xmodel/late-contact-descent-admissibility-astra-20260909.md",
+        "--token",
+        "b46e0f962b5fbe74e2449a21eb8be770a43ca1bda7e563befc1bd138ded00edb"
+      ],
+      "returncode": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"final_path\": \"/home/ubuntu/jc2/xmodel/late-contact-descent-admissibility-astra-20260909.md\", \"idempotent\": false, \"partial_path\": \"/home/ubuntu/jc2/xmodel/.late-contact-descent-admissibility-astra-20260909.md.partial-9431f092ffa2b6d93ab230b8f573d44f\", \"source_bytes\": 14747, \"source_sha256\": \"1fe41dfc70def7c7de6820d5439b9cf37d4b00407d9cc2d13c31d1e54fe52b4d\", \"status\": \"CLOSED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "finalize",
+        "--final",
+        "xmodel/late-contact-descent-admissibility-astra-20260909.md",
+        "--token",
+        "b46e0f962b5fbe74e2449a21eb8be770a43ca1bda7e563befc1bd138ded00edb"
+      ],
+      "returncode": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 14747, \"body_sha256\": \"1fe41dfc70def7c7de6820d5439b9cf37d4b00407d9cc2d13c31d1e54fe52b4d\", \"file_bytes\": 15080, \"final_path\": \"/home/ubuntu/jc2/xmodel/late-contact-descent-admissibility-astra-20260909.md\", \"full_sha256\": \"aae419fdf0051b915a44f5fd517ce06b7d9bfcd55efbd16985710e04e63dc67a\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/late-contact-descent-admissibility-astra-20260909.md.artifact.json\", \"manifest_sha256\": \"e8f24752fa396f3c152ad22bf70acd0cd4384cec099ae26458cb99f40bebd72d\", \"recovered\": false, \"status\": \"FINAL\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/late-contact-descent-admissibility-astra-20260909.md"
+      ],
+      "returncode": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 14747, \"body_sha256\": \"1fe41dfc70def7c7de6820d5439b9cf37d4b00407d9cc2d13c31d1e54fe52b4d\", \"file_bytes\": 15080, \"final_path\": \"/home/ubuntu/jc2/xmodel/late-contact-descent-admissibility-astra-20260909.md\", \"full_sha256\": \"aae419fdf0051b915a44f5fd517ce06b7d9bfcd55efbd16985710e04e63dc67a\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/late-contact-descent-admissibility-astra-20260909.md.artifact.json\", \"manifest_sha256\": \"e8f24752fa396f3c152ad22bf70acd0cd4384cec099ae26458cb99f40bebd72d\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    }
+  ],
+  "post_inputs": "UNCHANGED"
+}

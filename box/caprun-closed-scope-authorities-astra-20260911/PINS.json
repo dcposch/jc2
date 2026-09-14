@@ -1,0 +1,104 @@
+{
+  "schema": "closed-scope-authority-template-input-pins-v1",
+  "inputs": [
+    {
+      "path": "box/caprun-closed-scope-registration-prep-root-20260911/ROOT-REGISTRATION.template.json",
+      "sha256": "db925cbf9dad59b39444ea4250b839584be68c3bc5353aee5af924d96034e8f4",
+      "bytes": 29126,
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-registration-prep-root-20260911/ROOT-SOURCE-CONTRACT.json",
+      "sha256": "57e10ec364c32acf08ee057d40af93d2df49b98b2c9863fb8d9dd7f5d2dd8e08",
+      "bytes": 10932,
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/caprun-closed-scope-implementation-astra-20260911/dispatch.py",
+      "sha256": "52b3d916f4fc3941bb98c8b4f7698ab940680d09ee4e065de1f167857e3fd436",
+      "bytes": 50258,
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-registration-prep-root-20260911/AUTHORITIES.template.json",
+      "sha256": "de6e1f9394a2942ce22fd32d593c8109bf096729a047cca3ef5fe1ff47eb3c9e",
+      "bytes": 43888,
+      "read_scope": "MACHINE_WHOLE_JSON_43888_BYTES plus targeted full key/status/mode/artifact/files/runtime/limits summaries and both policy objects"
+    },
+    {
+      "path": "box/f10-necessary-rows-registration-prep-root-20260911/valid.policy.json",
+      "sha256": "24029cb8f17d4159620a3e660b132fadad4d7fb6caa2988acf43abe150ac8591",
+      "bytes": 868,
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-necessary-rows-registration-prep-root-20260911/dummy.policy.json",
+      "sha256": "889e75f6e95f3b42048939f1d11230b56208f465672bb4e94cec00983b6ffaf7",
+      "bytes": 866,
+      "read_scope": "FRESH_WHOLE"
+    }
+  ],
+  "read_scope": "All six hashes matched before bodies. Registration808 lines, contract181, dispatch744 via disjoint complete ranges; old large authorities full JSON ingestion plus targeted metadata, not invented human WHOLE. Both old single-line policy bodies human WHOLE.",
+  "comparison": {
+    "nine_authority_full_field_equal": true,
+    "nine_full_vectors_equal": true,
+    "owned_json_readback": true,
+    "valid_dummy_readback": true
+  },
+  "phase_comparisons": [
+    {
+      "label": "refuse-status",
+      "authority_fields_equal": true,
+      "command_vector_equal": true,
+      "argc": 62
+    },
+    {
+      "label": "refuse-caps",
+      "authority_fields_equal": true,
+      "command_vector_equal": true,
+      "argc": 62
+    },
+    {
+      "label": "refuse-inventory",
+      "authority_fields_equal": true,
+      "command_vector_equal": true,
+      "argc": 62
+    },
+    {
+      "label": "refuse-source",
+      "authority_fields_equal": true,
+      "command_vector_equal": true,
+      "argc": 62
+    },
+    {
+      "label": "refuse-hash",
+      "authority_fields_equal": true,
+      "command_vector_equal": true,
+      "argc": 62
+    },
+    {
+      "label": "valid",
+      "authority_fields_equal": true,
+      "command_vector_equal": true,
+      "argc": 64
+    },
+    {
+      "label": "startup-produce",
+      "authority_fields_equal": true,
+      "command_vector_equal": true,
+      "argc": 62
+    },
+    {
+      "label": "startup-check",
+      "authority_fields_equal": true,
+      "command_vector_equal": true,
+      "argc": 62
+    },
+    {
+      "label": "dummy",
+      "authority_fields_equal": true,
+      "command_vector_equal": true,
+      "argc": 64
+    }
+  ]
+}

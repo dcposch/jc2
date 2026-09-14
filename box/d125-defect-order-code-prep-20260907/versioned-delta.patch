@@ -1,0 +1,217 @@
+--- a/exact.py
++++ b/exact.py
+@@ -4,6 +4,7 @@
+ import hashlib
+ import json
+ import re
++import defect_order as O
+ 
+ JSON_SHA = 'b8db27661d1bfd3dcc5dfe1d1271b78c3f6375e06201654977a51380cd6ebcac'
+ SING_SHA = 'c089c33301e3889e0c20527386719f411907cf2957ecfad3d93c65f7be24e718'
+@@ -125,9 +126,10 @@
+     return result
+ 
+ 
+-def key(m, nvars):
++def key(m, nvars, weights=()):
+     counts = Counter(m)
+-    return len(m), tuple(-counts[i] for i in range(nvars-1, -1, -1))
++    return tuple(sum(row[i] for i in m) for row in weights)+(len(m),
++           tuple(-counts[i] for i in range(nvars-1, -1, -1)))
+ 
+ 
+ def quotient(a, b):
+@@ -138,11 +140,11 @@
+     return tuple(i for i, c in sorted(counts.items()) for _ in range(c))
+ 
+ 
+-def normal_form(p, basis, nvars):
++def normal_form(p, basis, nvars, weights=()):
+     p, remainder = dict(p), {}
+-    divisors = [(g, max(g, key=lambda m: key(m, nvars))) for g in basis if g]
++    divisors = [(g, max(g, key=lambda m: key(m, nvars, weights))) for g in basis if g]
+     while p:
+-        m = max(p, key=lambda t: key(t, nvars))
++        m = max(p, key=lambda t: key(t, nvars, weights))
+         for g, lead in divisors:
+             q = quotient(m, lead)
+             if q is not None:
+@@ -153,20 +155,20 @@
+     return remainder
+ 
+ 
+-def proper_certificate(rows, basis, nvars):
++def proper_certificate(rows, basis, nvars, weights=()):
+     basis = [g for g in basis if g]
+     for i, a in enumerate(basis):
+-        am = max(a, key=lambda m: key(m, nvars))
++        am = max(a, key=lambda m: key(m, nvars, weights))
+         for b in basis[:i]:
+-            bm = max(b, key=lambda m: key(m, nvars))
++            bm = max(b, key=lambda m: key(m, nvars, weights))
+             common = Counter(am) | Counter(bm)
+             lcm = tuple(k for k, v in sorted(common.items()) for _ in range(v))
+             s = add(mul({quotient(lcm, am): 1/a[am]}, a),
+                     mul({quotient(lcm, bm): 1/b[bm]}, b), F(-1))
+-            need(not normal_form(s, basis, nvars), 'Buchberger failure')
+-    need(bool(normal_form(ONE, basis, nvars)), 'unit basis, not proper')
++            need(not normal_form(s, basis, nvars, weights), 'Buchberger failure')
++    need(bool(normal_form(ONE, basis, nvars, weights)), 'unit basis, not proper')
+     for index, row in enumerate(rows):
+-        need(not normal_form(row, basis, nvars), 'original equation missing '+str(index))
++        need(not normal_form(row, basis, nvars, weights), 'original equation missing '+str(index))
+     return 'EXACT_Q_PROPER_SUPERIDEAL_CERTIFICATE'
+ 
+ 
+@@ -198,14 +200,18 @@
+     return 'EXACT_Q_UNIT_COFACTOR_CERTIFICATE', mapping, lifted
+ 
+ 
+-def ring_id(variables):
++def ring_id(variables, order=None):
++    if order is not None:
++        O.validate(order)
++        need(order['variables'] == variables, 'result order variables')
++        return digest(canonical(order))
+     return digest(canonical({'field': 'Q', 'order': 'dp', 'variables': variables}))
+ 
+ 
+-def parse_result(stdout, stderr, variables, source_hash):
++def parse_result(stdout, stderr, variables, source_hash, order=None):
+     need(stderr == b'', 'nonempty stderr')
+     lines = stdout.decode('ascii').splitlines()
+-    need(lines and lines.pop(0) == 'JC2CERT 1 '+source_hash+' '+ring_id(variables),
++    need(lines and lines.pop(0) == 'JC2CERT 1 '+source_hash+' '+ring_id(variables, order),
+          'certificate source/ring header mismatch')
+     need(lines and re.fullmatch(r'I_SIZE [0-9]+', lines[0]) is not None, 'missing engine size')
+     engine_size = int(lines.pop(0).split()[1])
+--- a/driver.py
++++ b/driver.py
+@@ -14,13 +14,15 @@
+ import time
+ sys.path.insert(0, str(Path(__file__).resolve().parent))
+ import exact as E
++import defect_order as O
+ 
+ INSTANCE = 'i-0da0cebfc97c9fd54'
+-CWD = '/home/ubuntu/d125-small-exact-solver-20260907'
++CWD = '/home/ubuntu/d125-defect-order-solver-20260907'
+ SOURCE = Path('/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/client-unequal-rational')
+ RUNNER_SHA = '4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2'
+ BINARY_SHA = '90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4'
+-PLAN_SHA = 'fdcd592734d19bfdc33a206ccf7b21f3b146f73581af0bd3d7be202df81d878c'
++PLAN_SHA = '9b6f972b2513094fe5fe33cf41721eb971e494a6762915bfda5c31e8a4e77d9b'
++AUTHORITY_SCHEMA = 'jc2.d125-defect-order-solver-authority/v1'
+ CAPS = {'decision_seconds': 300, 'verify_seconds': 120, 'control_seconds': 10,
+         'total_seconds': 450, 'as_bytes': 16*1024**3, 'rss_bytes': 16*1024**3,
+         'stream_bytes': 64*1024**2}
+@@ -43,13 +45,16 @@
+ 
+ def pins():
+     return {'driver.py': file_sha(__file__), 'exact.py': file_sha(Path(__file__).with_name('exact.py')),
++            'defect_order.py': file_sha(Path(__file__).with_name('defect_order.py')),
++            'execution_order': O.ORDER_SHA,
+             'run_capped.py': RUNNER_SHA, 'Singular': BINARY_SHA,
+             'source.jsonl': E.JSON_SHA, 'source.sing': E.SING_SHA, 'registration': PLAN_SHA}
+ 
+ 
+ def authority_check(a, phase, observed, expected_pins):
+-    E.need(a.get('schema') == 'jc2.d125-exact-solver-authority/v1' and a.get('root_green') is True,
++    E.need(a.get('schema') == AUTHORITY_SCHEMA and a.get('root_green') is True,
+            'explicit root GREEN absent')
++    E.need(a.get('execution_order_sha256') == O.ORDER_SHA, 'execution order authority drift')
+     expected_mode = 'engineering_control' if phase == 'control' else 'solver'
+     E.need(phase in ('control', 'decision', 'verify') and a.get('mode') == expected_mode,
+            'engineering/solver authority separation')
+@@ -66,8 +71,10 @@
+            start.timestamp() <= observed['now'] < end.timestamp(), 'deadline/total budget')
+     if expected_mode == 'solver':
+         E.need(a.get('full_stream_gate_accepted') is True, 'full-stream gate not accepted')
++        E.need(a.get('order_gate_accepted') is True, 'defect-order gate not accepted')
+         for name in ('full_stream_gate_sha256', 'engine_index_control_sha256',
+-                     'output_limit_control_sha256', 'descendant_control_sha256'):
++                     'output_limit_control_sha256', 'descendant_control_sha256',
++                     'order_gate_sha256', 'order_engine_control_sha256'):
+             value = a.get(name, '')
+             E.need(isinstance(value, str) and len(value) == 64 and
+                    all(c in '0123456789abcdef' for c in value), 'missing accepted control '+name)
+@@ -92,9 +99,9 @@
+     return a, E.digest(raw), duration
+ 
+ 
+-def footer(variables, source_hash, control=False):
++def footer(variables, source_hash, control=False, order=None):
+     """Only control=True avoids slimgb; production caller chooses from checked phase."""
+-    header = 'JC2CERT 1 '+source_hash+' '+E.ring_id(variables)
++    header = 'JC2CERT 1 '+source_hash+' '+E.ring_id(variables, order)
+     lines = ['option(redSB); short=0;', 'int ci;', 'print("'+header+'");',
+              'print("I_SIZE "+string(size(I)));',
+              'print("I_BEGIN "+string(ncols(matrix(I))));',
+@@ -151,6 +158,7 @@
+     else:
+         variables, rows, labels, prefix = E.read_source(SOURCE.with_suffix('.jsonl').read_bytes(),
+                                   SOURCE.with_suffix('.sing').read_bytes(), production=True)
++        order = O.fixed(variables)
+         if phase == 'verify':
+             receipt = E.strict_json(Path('decision.result.json').read_bytes())
+             telemetry = E.strict_json(Path('decision.telemetry.json').read_bytes())
+@@ -169,17 +177,21 @@
+             for name in ('stdout', 'stderr', 'telemetry.json'):
+                 E.need(file_sha('decision.'+name) == receipt['outputs'][name], 'decision output drift')
+             engine, basis, cofactors = E.parse_result(Path('decision.stdout').read_bytes(),
+-                  Path('decision.stderr').read_bytes(), variables, E.JSON_SHA)
++                  Path('decision.stderr').read_bytes(), variables, E.JSON_SHA, order)
+             mapping = E.engine_map(rows, engine)
+             if cofactors is None:
+-                verdict = E.proper_certificate(rows, basis, len(variables))
++                verdict = E.proper_certificate(rows, basis, len(variables), order['weight_rows'])
+             else:
+                 verdict, mapping, unused = E.unit_certificate(rows, engine, cofactors)
+             print(json.dumps({'verdict': verdict, 'source_sha256': E.JSON_SHA,
+                   'source_rows': len(rows), 'variables': len(variables), 'engine_to_source': mapping,
+-                  'source_labels_sha256': E.digest(E.canonical(labels)), 'ring_sha256': E.ring_id(variables)}, sort_keys=True))
++                  'source_labels_sha256': E.digest(E.canonical(labels)),
++                  'source_ring_sha256': E.ring_id(variables),
++                  'execution_order_sha256': E.ring_id(variables, order)}, sort_keys=True))
+             return
+-        script = prefix+footer(variables, E.JSON_SHA)
++        executed_prefix = O.adapt_prefix(prefix, variables, order)
++        O.check_prefix(prefix, executed_prefix, variables, order)
++        script = executed_prefix+footer(variables, E.JSON_SHA, order=order)
+     E.need(len(script.encode()) <= 2*1024**2, 'input artifact ceiling')
+     write_new(phase+'.sing', script.encode('ascii'))
+     env = {**os.environ, 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1',
+--- a/test_exact.py
++++ b/test_exact.py
+@@ -154,15 +154,18 @@
+         observed = {'system': 'Linux', 'vendor': 'Amazon EC2', 'instance': D.INSTANCE,
+                     'cwd': D.CWD, 'boot': 'test-boot', 'now': 100.0}
+         expected = {'test': 'pin'}
+-        a = {'schema': 'jc2.d125-exact-solver-authority/v1', 'root_green': True,
++        a = {'schema': D.AUTHORITY_SCHEMA, 'root_green': True,
++             'execution_order_sha256': D.O.ORDER_SHA,
+              'mode': 'engineering_control', 'job_id': 'test', 'pins': expected, 'caps': D.CAPS,
+              'instance_id': D.INSTANCE, 'cwd': D.CWD, 'boot_id': 'test-boot',
+              'started_utc': '1970-01-01T00:01:30Z', 'deadline_utc': '1970-01-01T00:03:00Z'}
+         self.assertEqual(D.authority_check(a, 'control', observed, expected), 10)
+         with self.assertRaises(ValueError): D.authority_check(a, 'decision', observed, expected)
+         solver = {**a, 'mode': 'solver', 'full_stream_gate_accepted': True,
++                  'order_gate_accepted': True,
+                   **{k: 'c'*64 for k in ['full_stream_gate_sha256', 'engine_index_control_sha256',
+-                            'output_limit_control_sha256', 'descendant_control_sha256']}}
++                            'output_limit_control_sha256', 'descendant_control_sha256',
++                            'order_gate_sha256', 'order_engine_control_sha256']}}
+         self.assertEqual(D.authority_check(solver, 'decision', observed, expected), 80)
+         for field, value in [('root_green', False), ('mode', 'engineering_control'), ('full_stream_gate_accepted', False),
+                              ('engine_index_control_sha256', ''), ('pins', {}), ('boot_id', 'other'), ('caps', {})]:
+--- a/run_tests.py
++++ b/run_tests.py
+@@ -15,7 +15,7 @@
+ started = time.monotonic()
+ results = []
+ for mode in ([], ['-O']):
+-    completed = subprocess.run([sys.executable, '-B', *mode, '-m', 'unittest', '-v', 'test_exact'],
++    completed = subprocess.run([sys.executable, '-B', *mode, '-m', 'unittest', '-v', 'test_exact', 'test_order'],
+           cwd=Path(__file__).resolve().parent, capture_output=True, text=True,
+           env={**os.environ, 'PYTHONDONTWRITEBYTECODE': '1'}, timeout=max(1, 29-(time.monotonic()-started)))
+     results.append({'mode': mode or ['normal'], 'returncode': completed.returncode,

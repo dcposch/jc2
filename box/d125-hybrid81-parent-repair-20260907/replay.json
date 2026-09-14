@@ -1,0 +1,52 @@
+{
+  "all_children_terminal": true,
+  "output_bytes_identical": true,
+  "runs": [
+    {
+      "command": [
+        "timeout",
+        "30s",
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--fsize=67108864:67108864",
+        "--core=0:0",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-hybrid81-parent-repair-20260907/check.py"
+      ],
+      "mode": "normal",
+      "payload_cases": 94,
+      "returncode": 0,
+      "stderr_bytes": 0,
+      "stdout_sha256": "9097ba47ce0ac17eba9e4a5a318210df029238394791aba94389005b5e92b470",
+      "wall_seconds": 0.23162399092689157
+    },
+    {
+      "command": [
+        "timeout",
+        "30s",
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--fsize=67108864:67108864",
+        "--core=0:0",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-hybrid81-parent-repair-20260907/check.py"
+      ],
+      "mode": "optimized",
+      "payload_cases": 94,
+      "returncode": 0,
+      "stderr_bytes": 0,
+      "stdout_sha256": "9097ba47ce0ac17eba9e4a5a318210df029238394791aba94389005b5e92b470",
+      "wall_seconds": 0.5527801250573248
+    }
+  ],
+  "status": "PASS"
+}

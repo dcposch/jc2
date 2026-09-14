@@ -1,0 +1,5 @@
+;
+print("ALL_ROWS_PARSED"); print("GENERATORS="+string(size(I))); print("VARIABLES="+string(nvars(basering)));
+int k; poly p; poly q;
+for (k=1; k<=size(I); k++) { p=I[k]; q=p[size(p)]; print(string(k)+" "+string(size(p))+" "+string(deg(p))+" "+string(leadcoef(p))+" "+string(leadmonom(p))+" "+string(leadcoef(q))+" "+string(leadmonom(q))); }
+print("END_INVARIANTS"); quit;

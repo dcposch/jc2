@@ -1,0 +1,10 @@
+ring r=0,(x,y),wp(1,2);
+ideal I=x^2-y,x*y;
+poly target=y^2;
+matrix witness=lift(I,ideal(target));
+matrix inputmatrix[1][size(I)]=I;
+matrix checkmatrix=inputmatrix*witness;
+print("IDENTITY_MATRIX_POSITIVE="+string(checkmatrix[1,1]==target));
+print("IDENTITY_MATRIX_NEGATIVE="+string(checkmatrix[1,1]==target+1));
+print("IDENTITY_MATRIX_WITNESS="+string(witness));
+quit;

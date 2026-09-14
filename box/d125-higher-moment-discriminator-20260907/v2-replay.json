@@ -1,0 +1,49 @@
+{
+  "all_arithmetic_writers_idle": true,
+  "caps": {
+    "cpu_seconds": 25,
+    "memory_bytes": 536870912,
+    "wall_seconds": 30
+  },
+  "no_full_client_powers_or_sampling": true,
+  "runs": [
+    {
+      "exit_code": 0,
+      "label": "normal-normal",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "66c4b31c0471864c238e9a401755d43f70c133c00d553d0cdcf009321361e074"
+    },
+    {
+      "exit_code": 1,
+      "label": "normal-mutate-index",
+      "stderr_sha256": "0ed9763a758236f71585a8ea6afc1bf3133cd3161eb167060dc4ae710341d62f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "label": "normal-mutate-denominator",
+      "stderr_sha256": "0ed9763a758236f71585a8ea6afc1bf3133cd3161eb167060dc4ae710341d62f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "label": "optimized-normal",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "66c4b31c0471864c238e9a401755d43f70c133c00d553d0cdcf009321361e074"
+    },
+    {
+      "exit_code": 1,
+      "label": "optimized-mutate-index",
+      "stderr_sha256": "0ed9763a758236f71585a8ea6afc1bf3133cd3161eb167060dc4ae710341d62f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "label": "optimized-mutate-denominator",
+      "stderr_sha256": "0ed9763a758236f71585a8ea6afc1bf3133cd3161eb167060dc4ae710341d62f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "wall_seconds": 1.3935782039770856
+}

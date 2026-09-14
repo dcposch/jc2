@@ -1,0 +1,20 @@
+--- old/exact.py
++++ repaired/exact.py
+@@ -203,7 +203,7 @@
+ 
+ 
+ def parse_result(stdout, stderr, variables, source_hash):
+-    need(not stderr.strip(), 'nonempty stderr')
++    need(stderr == b'', 'nonempty stderr')
+     lines = stdout.decode('ascii').splitlines()
+     need(lines and lines.pop(0) == 'JC2CERT 1 '+source_hash+' '+ring_id(variables),
+          'certificate source/ring header mismatch')
+@@ -225,7 +225,7 @@
+         pos += 1
+         return out
+     engine, basis = block('I'), block('G')
+-    need(0 <= engine_size <= len(engine), 'engine size outside indexed columns')
++    need(engine_size == sum(bool(row) for row in engine), 'engine size/nonzero count mismatch')
+     cofactors = None
+     if pos < len(lines) and lines[pos].startswith('T_BEGIN '):
+         cofactors = block('T')

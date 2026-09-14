@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/opt/jc2-r3-directrows-20260911a/science/produce.py", line 382, in <module>
+    main()
+  File "/opt/jc2-r3-directrows-20260911a/science/produce.py", line 356, in main
+    meta=authorize('produce')
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jc2-r3-directrows-20260911a/science/authority.py", line 78, in authorize
+    meta = load_pinned(sys.argv[4], sys.argv[6])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jc2-r3-directrows-20260911a/science/authority.py", line 74, in load_pinned
+    raise ValueError('authority/inventory byte pin')
+ValueError: authority/inventory byte pin

@@ -1,0 +1,41 @@
+{
+  "schema": "manual-research-terminal-custody/v1",
+  "task": "gorenstein-radial-normality-discriminator-astra-20260912",
+  "status": "COMPLETED_SCOPED_GAP_NO_NEW_MECHANISM",
+  "scientific_verdict": "Neither B=R nor a counterexample satisfying the complete package established; cE descent is automatic and does not allow cancellation of c.",
+  "first_action_utc": "2026-09-12T14:28:14+00:00",
+  "targets_absent_and_transaction_opened_utc": "2026-09-12T14:29:56+00:00",
+  "preseal_whole_readback_postpins_and_collision_check_utc": "2026-09-12T14:37:22+00:00",
+  "closed_utc": "2026-09-12T14:37:42+00:00",
+  "finalized_utc": "2026-09-12T14:37:42+00:00",
+  "expected_verify_and_final_whole_readback_completed_by_utc": "2026-09-12T14:37:55+00:00",
+  "original_reserve_utc": "2026-09-12T14:40:00+00:00",
+  "original_hard_stop_utc": "2026-09-12T14:43:00+00:00",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "lease_id": "5afc64709a12b1ef2d65cb95eeca9f64",
+  "transaction": {
+    "expected_manifest_sha256": "a0b8ac5904858a3db65f345593fe75f0f6fd95d47995ce70aa021b4ca50e7bc5",
+    "verification": "VERIFIED with exact expected basis and expected manifest SHA",
+    "body_bytes": 9100,
+    "body_sha256": "2c299d14e09479e930b7c00c66eaa7ee76b7f78045b0c73699e918e93baba35b"
+  },
+  "inputs_pre_and_post_unchanged": [
+    {"path": "/home/ubuntu/jc2/COORDINATION.md", "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597", "read_mode": "FRESH_WHOLE; all 806 lines, four unclipped ranges, before TASK"},
+    {"path": "/home/ubuntu/jc2/box/gorenstein-radial-normality-discriminator-astra-20260912/TASK.md", "sha256": "b38728845f5b815ebf3f42d2eb6b4f79144a724acd7d1294aa8d03b10ede572f", "read_mode": "FRESH_WHOLE after COORDINATION"}
+  ],
+  "owned_excluding_self": [
+    {"path": "/home/ubuntu/jc2/xmodel/gorenstein-radial-normality-discriminator-astra-20260912.md", "sha256": "451eadbee104e4789362f910b00b53960d476c5f6c0f65dfcb81ee9dd135049e", "bytes": 9432, "read_mode": "WHOLE before marker and WHOLE after finalization"},
+    {"path": "/home/ubuntu/jc2/xmodel/gorenstein-radial-normality-discriminator-astra-20260912.md.artifact.json", "sha256": "a0b8ac5904858a3db65f345593fe75f0f6fd95d47995ce70aa021b4ca50e7bc5", "read_mode": "WHOLE and exact expected VERIFY"},
+    {"path": "/home/ubuntu/jc2/box/gorenstein-radial-normality-discriminator-astra-20260912/PINS.json", "sha256": "090c8f672f7529dcd6f90d21dfed9024634c8797ebada9a0804c317482c61cd9", "read_mode": "WHOLE"}
+  ],
+  "boundary": {
+    "other_scientific_inputs": 0,
+    "scientific_execution": "NONE",
+    "network_worker_agents_shared_protected_access": "NONE",
+    "administrative_execution": "UTC, inert text/hash/presence/byte-count checks, apply_patch and existing artifact_finalize only",
+    "authored_files": "Own report/PINS/custody only; manifest and transaction are existing finalizer outputs",
+    "new_theorem_counterexample_or_authority": "NONE"
+  },
+  "remaining_open_quantity": "One exact global theorem/counterexample; manual review planning 10 minutes UNMEASURED, not authorized",
+  "writers": "Report and PINS closed. This is the final authored custody file; after its readback and terminal hashes ALL WRITERS IDLE is asserted with actual UTC in final handoff. No later writes."
+}

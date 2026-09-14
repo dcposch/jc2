@@ -1,0 +1,223 @@
+{
+  "AWS_action": "NONE",
+  "CAS_engine_used": false,
+  "active_jobs": [],
+  "all_writers_done": true,
+  "composition": "Conditional on published Prop4.3 plus retained faithful external exclusions, this literal physical-Keller source family is excluded.",
+  "controls": {
+    "six_genuine_mutations_rejected": true,
+    "status": "D108_PUBLISHED_CASE_SMALL_CONTROLS_PASS",
+    "telemetry": {
+      "argv_count": 2,
+      "argv_sha256": "3d1ef4a68d9ac28d078ddb5cfefabc69e9fe230c5ec5b66c510624ad61c381a3",
+      "caps": {
+        "cpu_seconds": 30,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 536870912,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1,
+        "wall_seconds": 30
+      },
+      "child_exit_code": 0,
+      "child_returncode": 0,
+      "child_signal": null,
+      "cwd": "/home/ubuntu/jc2",
+      "enforcement": {
+        "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+        "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+        "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+      },
+      "error": null,
+      "executable": "python3",
+      "identity_checks": [],
+      "invocation_cwd": "/home/ubuntu/jc2",
+      "max_observed_group_rss_bytes": 9056256,
+      "pgid": 418103,
+      "pid": 418103,
+      "resource": null,
+      "runner_exit_code": 0,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "start_identity": "boot=eae69acb-04ae-4b12-8143-2eeeecf16270;start_ticks=76934669",
+      "start_identity_source": "linux-proc-stat-field22",
+      "status": "NORMAL_EXIT",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/jc2/box/d108-published-case-interface-20260906/controls.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdin": {
+        "mode": "devnull",
+        "path": null
+      },
+      "stdout": {
+        "bytes": 1804,
+        "path": "/home/ubuntu/jc2/box/d108-published-case-interface-20260906/controls.stdout",
+        "sha256": "d83cd4e3a38657d37e4148d24961ef5ed1115df0b1e4806ec7fb584b64412c71"
+      },
+      "telemetry_path": "/home/ubuntu/jc2/box/d108-published-case-interface-20260906/controls.telemetry.json",
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      },
+      "utc_end": "2026-09-06T13:33:40.464165Z",
+      "utc_start": "2026-09-06T13:33:40.395822Z",
+      "wall_elapsed_seconds": 0.068348407
+    }
+  },
+  "earlier_artifacts_unchanged": true,
+  "evidence_tier": "Exact small chain arithmetic plus EXTERNAL-THEOREM applicability; external exclusions not freshly replayed",
+  "files": [
+    {
+      "bytes": 7145,
+      "path": "box/d108-published-case-interface-20260906/controls.py",
+      "sha256": "a812475648e68dc11a371422a882523e4b25871e55cb9d00cfef50183842dbda"
+    },
+    {
+      "bytes": 0,
+      "path": "box/d108-published-case-interface-20260906/controls.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1804,
+      "path": "box/d108-published-case-interface-20260906/controls.stdout",
+      "sha256": "d83cd4e3a38657d37e4148d24961ef5ed1115df0b1e4806ec7fb584b64412c71"
+    },
+    {
+      "bytes": 2113,
+      "path": "box/d108-published-case-interface-20260906/controls.telemetry.json",
+      "sha256": "bfef831689725630b33d82fd5c1e2c1ea287d6f000273521b525e67d5236468c"
+    },
+    {
+      "bytes": 3742,
+      "path": "box/d108-published-case-interface-20260906/custody.py",
+      "sha256": "07574264bbccf1fbe981b01ea68a68c249868209f988d7f4718e17a83af07ed6"
+    },
+    {
+      "bytes": 282839,
+      "path": "box/d108-published-case-interface-20260906/ggv-lower-1605.09430v2.pdf",
+      "sha256": "c3828c7911619aff1c3ffa86bdb00f3822ab30c4f4af23f6abdb2baff6a4afab"
+    },
+    {
+      "bytes": 68872,
+      "path": "box/d108-published-case-interface-20260906/ggv-lower-1605.09430v2.txt",
+      "sha256": "77ae98339d7a70c476d89c01a2d38ba3aa1af98fbb0ba9da32c1759fde87a221"
+    },
+    {
+      "bytes": 404296,
+      "path": "box/d108-published-case-interface-20260906/ggvh-algorithms-1708.07936v1.pdf",
+      "sha256": "e04e3bfd88c62346c467ec7c32f5bb236cdcb2ee4796525408c0c8d68632fcdb"
+    },
+    {
+      "bytes": 107545,
+      "path": "box/d108-published-case-interface-20260906/ggvh-algorithms-1708.07936v1.txt",
+      "sha256": "49df06d11bbc4556a9b09771cdd60ca40a75b7542d327bbb622e09434e6a467e"
+    },
+    {
+      "bytes": 255988,
+      "path": "box/d108-published-case-interface-20260906/ggvh-roots-1708.09367v2.pdf",
+      "sha256": "331fe6361ed98ec31795cc5f42ffc0a7af6ae70510fcdf78cce9672cad08c3f1"
+    },
+    {
+      "bytes": 75580,
+      "path": "box/d108-published-case-interface-20260906/ggvh-roots-1708.09367v2.txt",
+      "sha256": "e9f84e0eeb542203b5e6926843fe4562f37b3c27575cfce98d9fee7936b91a6e"
+    },
+    {
+      "bytes": 518222,
+      "path": "box/d108-published-case-interface-20260906/ggvh-roots-published2019.pdf",
+      "sha256": "823ff05f02615fc3ebb9f9763819bbce592fb7b5e4b1063ac07c658be01812eb"
+    },
+    {
+      "bytes": 78318,
+      "path": "box/d108-published-case-interface-20260906/ggvh-roots-published2019.txt",
+      "sha256": "ca27cddafac8cfb40ae8f261378d7f449b81e06a55924d7d64a4daff805ec2d7"
+    },
+    {
+      "bytes": 3696,
+      "path": "box/d108-published-case-interface-20260906/helali-readme-snapshot.md",
+      "sha256": "125f186a7b66651a54dee670a8fdfdfc9b22be27fe27f477169a0d996a96673d"
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 65369,
+      "path": "box/char-degree-20260905/d108/selected/meanfree_stage8_slimgb/d108_meanfree_stage8_strongfront.input.json",
+      "sha256": "1c927d83aa4684ae91bfffc8d03500fbabb73a500faa222fa349a6d129a10814"
+    },
+    {
+      "bytes": 17711,
+      "path": "xmodel/d108-source-frontier-interface-astra-20260906.md",
+      "sha256": "39bbe041f6ad7ba704c58fe7dc442f46e91caa01fe2a34333c7250ac7a421ce7"
+    },
+    {
+      "bytes": 9441,
+      "path": "xmodel/d108-source-frontier-gate-fable5-20260906.md",
+      "sha256": "e5f09997493d1e71ce862a43e84d464ea9232cb8e10ccdbb32cc2761108857f5"
+    },
+    {
+      "bytes": 297336,
+      "path": "box/ideation-20260906T1210Z/ggvh-2204.14178v1.pdf",
+      "sha256": "ac18e80cc2391f204f73b908a6a6557eb1141d9fbb5ebdb9f6e0a22121db80bd"
+    },
+    {
+      "bytes": 82053,
+      "path": "box/ideation-20260906T1210Z/ggvh-2204.14178v1.txt",
+      "sha256": "f3eca2a560b98784ec787104c8b9049ca44bc3dde4bacb38f121376736d02368"
+    },
+    {
+      "bytes": 681109,
+      "path": "refs/guccione_valqui2017_ja471_shape_counterexamples.pdf",
+      "sha256": "8b4267512c438c7ceda7e30cb63c225a554cf0d2195dc6325e9d1e42ab520c60"
+    },
+    {
+      "bytes": 268331,
+      "path": "box/census-coverage-20260905/core-ggv-layout.txt",
+      "sha256": "e3694dde3f83c2ab6ed8d957fc6b53472e6a6dd55486af1dff345eade39e37b1"
+    },
+    {
+      "bytes": 15242,
+      "path": "jc72108/CROSSCHECK.md",
+      "sha256": "70bc10f8810e65400b40ddd88a5b575acd7dc43676432ec9a37d43e0a8ef40ba"
+    }
+  ],
+  "no_live_edit_promise": "This packet is immutable after custody publication; root may grant a fresh read-only independent gate.",
+  "no_live_peer_report_read": true,
+  "no_shared_ledger_edit": true,
+  "owner": "/root/nonemptiness_certificate",
+  "primary_urls": {
+    "ggv-lower-1605.09430v2.pdf": "https://arxiv.org/pdf/1605.09430v2",
+    "ggvh-algorithms-1708.07936v1.pdf": "https://arxiv.org/pdf/1708.07936v1",
+    "ggvh-roots-1708.09367v2.pdf": "https://arxiv.org/pdf/1708.09367v2",
+    "ggvh-roots-published2019.pdf": "https://revistas.pucp.edu.pe/index.php/promathematica/article/download/21094/20844",
+    "helali-readme-snapshot.md": "https://raw.githubusercontent.com/bilLkarkariy/jc2-72-108-exact-certificates/main/README.md"
+  },
+  "recipient": "/root",
+  "reports": [
+    {
+      "bytes": 22378,
+      "path": "xmodel/d108-published-case-interface-astra-20260906.md",
+      "sha256": "528d745faac9de5a7e80a57e534c1f36377eb99b8576c1cfa72894fa3b110a1e"
+    },
+    {
+      "bytes": 698,
+      "path": "xmodel/d108-published-case-interface-astra-20260906.md.artifact.json",
+      "sha256": "9e334f7b2fcc421405686d37b8ee86640301e6cb33945bc6bb8e13cc38009b0a"
+    }
+  ],
+  "schema": "D108_PUBLISHED_CASE_INTERFACE_CUSTODY/v1",
+  "separate_debt": "Cor7.4 lower target-direction positivity interval not independently replayed; no coefficientwise cut map or new unit certificate.",
+  "solver_launched": false,
+  "source_bytes_preserved": true,
+  "source_expansion": "Only fixed source face and degree-28 root control; no full source expansion",
+  "statement_interface": "Keller specialization of the literal D108 source implies the exact published (8,28),(11/4,7),(3,2) case; no global-minimality antecedent.",
+  "status": "TERMINAL_PRODUCER_CHECKED_STATEMENT_INTERFACE_DISCHARGED",
+  "utc": "2026-09-06T13:34:34.525523+00:00",
+  "whole_proofs_read_unread": "Exact inventory in report section7; not all papers/dependencies read."
+}

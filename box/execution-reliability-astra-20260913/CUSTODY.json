@@ -1,0 +1,38 @@
+{
+  "schema": "jc2.local-lane-custody/v1",
+  "tag": "execution-reliability-astra-20260913",
+  "owner": "/root/execution_reliability",
+  "collector": "ROOT",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "state": "ALL_WRITERS_IDLE_ON_AGENT_COMPLETION",
+  "terminal_rule": "ROOT must independently observe this agent completed before reading or charging the report; this file alone is not terminal evidence.",
+  "report_finalized_utc": "2026-09-13T04:43:19Z",
+  "postpin_and_whole_readback_utc": "2026-09-13T04:43:29.435778684Z",
+  "original_reserve_utc": "2026-09-13T04:55:00Z",
+  "original_hard_utc": "2026-09-13T05:00:00Z",
+  "report": {
+    "path": "xmodel/execution-reliability-astra-20260913.md",
+    "sha256": "4e20383fbe4cfae054c4e0df6286d1a1cf7c922a31d90fc6827b4cf62e8fd675",
+    "manifest_path": "xmodel/execution-reliability-astra-20260913.md.artifact.json",
+    "manifest_sha256": "019c901c4470d47fb2b7b7dc1ecdf18e292397100552fd07bad12fa54ab0f310",
+    "expected_basis_verify": "VERIFIED; then WHOLE final report and manifest read"
+  },
+  "pins_path": "box/execution-reliability-astra-20260913/PINS.sha256",
+  "pins_sha256": "e3269c9210d8ada9ca4d5ecbf5b53c3fc43a530f2843fc611dddf499e1c26adb",
+  "test_plan_path": "box/execution-reliability-astra-20260913/TEST-PLAN.md",
+  "test_plan_sha256": "729e6f691a183b33ecbbaa2c7d77379e5ae424c86292428ddc696664b57ae40f",
+  "policy_transition": {
+    "initial_snapshot_sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+    "current_sha256": "517fca6f67f3d705f9b4045e10f9039aaf11bf3280dfd27bb90bf003ee4a3ead",
+    "scope": "ROOT's allocation-only lines502-525 read and pinned; no execution safety change"
+  },
+  "inputs_postcheck": "All14 PINS.sha256 entries matched at postcheck. Policy transition above is intentional; other input bytes unchanged.",
+  "source_readback": "WHOLE final job.sh, JOB.md, job-probe.sh and job-regression.sh read manually",
+  "whitespace_check": "Explicit git diff --no-index --check /dev/null FILE on each new source/document produced no whitespace diagnostics; each returned1 for the new-file difference, not a runtime test.",
+  "runtime": "UNRUN: no AWS API/SSH, syntax/interpreter/import/CAS/dummy execution",
+  "active_processes_or_sessions": [],
+  "extra_agents_or_model_calls": 0,
+  "shared_or_existing_source_writes": "NONE; user-dirty fleet.sh and legacy dispatch.sh unchanged",
+  "implementation_status": "IMPLEMENTED; MANUAL-STATIC-READ; INTERNAL-UNREVIEWED; RUNTIME-UNTESTED",
+  "next_gate": "Different-model FIRST of frozen code and fixture plan; then ROOT decides one bounded AWS pilot. No automatic scientific migration."
+}

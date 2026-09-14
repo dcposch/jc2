@@ -1,0 +1,40 @@
+{
+  "schema": "caprun-admin-placement-delta-sol-custody/v1",
+  "status": "TERMINAL_SOURCE_STATIC_GAP",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-12T06:40:28.933997979Z",
+  "terminal_utc": "2026-09-12T06:43:58.753591085Z",
+  "all_writers_idle": true,
+  "no_later_writes_planned": true,
+  "authority": "UNREVIEWED_UNBOUND_NOT_LAUNCH_AUTHORITY",
+  "report": {
+    "path": "xmodel/caprun-admin-placement-delta-sol-20260912.md",
+    "source_body_sha256": "d4e7fb66c5e76813afe21941422f08b6fb5cd658e0c88dd943ec4611ecf529fc",
+    "artifact_sha256": "ae7a4bdca699d023e75ef5cc1a4940ec73a8c769f755ad5d37bad3d8a07bea1b",
+    "whole_read_after_finalize": true
+  },
+  "manifest": {
+    "path": "xmodel/caprun-admin-placement-delta-sol-20260912.md.artifact.json",
+    "sha256": "89f8f9e9e9a88a1bba8cfb25c225d348feb89b32c3964ad7c9ae19c4e37fbf96",
+    "artifact_finalize_verify": "VERIFIED"
+  },
+  "outputs": {
+    "box/caprun-admin-placement-delta-sol-20260912/PINS.json": "ce5a027eba2e5114575e46ebc1d1a9c36d6fd7e25d40a68b45ecbece8967c518"
+  },
+  "input_pins": "box/caprun-admin-placement-delta-sol-20260912/PINS.json",
+  "input_postpins_equal_pre": true,
+  "whole_read_scope": [
+    "box/caprun-closed9d-admin-prep-astra-20260911/setup-pre-admission.template.sh",
+    "box/caprun-closed9d-admin-prep-astra-20260911/preholder-security.sh",
+    "box/caprun-lateflow-corrected-astra-20260912/CONTRACT.md",
+    "box/caprun-lateflow-corrected-astra-20260912/FROZEN-CONFIG.template.json",
+    "box/caprun-lateflow-corrected-astra-20260912/FLOW.tail.template.js",
+    "box/caprun-lateflow-corrected-astra-20260912/LOCAL-PREHOLDER-MANIFEST.template.sha256",
+    "box/caprun-lateflow-corrected-astra-20260912/REMOTE-PREHOLDER-MANIFEST.template.sha256",
+    "xmodel/caprun-lateflow-corrected-gate-fable5-20260912.md (exact-current reused whole read)",
+    "box/caprun-lateflow-corrected-gate-fable5-20260912/INTAKE.md (exact-current reused whole read)",
+    "COORDINATION.md (exact-current reused whole read)",
+    "xmodel/caprun-admin-placement-delta-sol-20260912.md (post-finalize whole read)"
+  ],
+  "scope_note": "One inadvertent text-only rg lookup named three uncharged administrative sources; no whole read, execution, or dependent finding. Disclosed in report."
+}

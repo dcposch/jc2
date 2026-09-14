@@ -1,0 +1,39 @@
+{
+  "schema": "jc2-root-transcribed-physical-observations/v1",
+  "scope": "Actual physical-metadata.sh output; structured transcription, not a raw-byte receipt",
+  "worker": {
+    "instance": "i-00653baa8e5c32c75",
+    "private_ip": "172.30.0.120",
+    "public_ip": "52.91.139.208",
+    "volume": "vol-087e9c7fd21448b1a",
+    "type": "c7i.2xlarge",
+    "launch": "2026-09-11T10:26:55+00:00",
+    "retirement": "2026-09-11T11:25:00+00:00",
+    "timer": "jc2-closedchild-preflight9-20260911a-worker-stop.timer",
+    "active_use": "STRICT_NINE_PHASE_SETUP_NO_SCIENCE",
+    "hostname": "ip-172-30-0-120",
+    "boot": "d06102c6-210d-4161-9f85-a7327b96f44a",
+    "pid_namespace": "pid:[4026531836]",
+    "mnt_namespace": "mnt:[4026531832]",
+    "cgroup_namespace": "cgroup:[4026531835]",
+    "user_namespace": "user:[4026531837]",
+    "durable_device": 66305,
+    "durable_fstype": "ext4",
+    "python_sha": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223",
+    "setpriv_sha": "62ec0120791f3afcfb689fed52384ec2b0accc6e118a6b9a1d6fcfa7450aaf37",
+    "kernel": "7.0.0-1011-aws",
+    "systemd": "255.4-1ubuntu8.17",
+    "physical_start": "2026-09-11T10:29:01.091908363Z",
+    "physical_end": "2026-09-11T10:29:01.391163627Z"
+  },
+  "cgroup_mount": {
+    "target": "/sys/fs/cgroup",
+    "type": "cgroup2",
+    "fsroot": "/",
+    "options": "rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot"
+  },
+  "pid1_cgroup": "0::/init.scope",
+  "root_matches_pid1_namespaces": true,
+  "source_execution": false,
+  "holder_admitted": false
+}

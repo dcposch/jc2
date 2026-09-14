@@ -1,0 +1,287 @@
+--- accepted-dispatch_batch.py
++++ proposed-dispatch_batch.py
+@@ -1,4 +1,4 @@
+-"""One registered GENERIC compatibility batch. Existing supervisor unchanged.
++"""One registered quotient/remainder GENERIC batch. Existing supervisor unchanged.
+ RLIMIT_FSIZE is inherited BEFORE exec of the exact existing CAPRUN argv.
+ No new PGID is created by this caller; CAPRUN owns its recorded child PGID.
+ """
+@@ -14,6 +14,50 @@
+ fixed_files = {}
+ first_math = None
+ records = []
++armed = False
++plan = None
++
++REFUSALS = {
++    'disabled': 'no active registered authority',
++    'wronghost': 'not the registered AWS host',
++    'argv': 'full parent argv differs from registered capped runner',
++    'cap': 'registration is not the exact required CAPRUN argv',
++    'missing-input': 'checker input artifact must be explicitly hash-registered',
++}
++
++def absent(paths):
++    require(not any(os.path.lexists(p) for p in paths), 'output exists, including symlink')
++
++def fixed_barrier(auth=None, authority_sha=None):
++    for filename, want in fixed_files.items():
++        # Retain the registered interpreter spelling /usr/bin/python3, which
++        # may be an OS symlink. The registered content digest is authoritative.
++        require(Path(filename).is_file() and digest(filename) == want,
++                'original fixed input changed before/after dispatch')
++    if auth is not None:
++        require(auth.is_file() and not auth.is_symlink()
++                and auth.stat().st_mode & 0o777 == 0o444
++                and digest(auth) == authority_sha, 'frozen authority changed')
++
++def read_json(path):
++    def pairs(items):
++        result = {}
++        for key, value in items:
++            require(key not in result, 'duplicate metadata JSON key')
++            result[key] = value
++        return result
++    def forbidden(value):
++        raise RuntimeError('nonfinite metadata JSON')
++    return json.loads(Path(path).read_text(), object_pairs_hook=pairs, parse_constant=forbidden)
++
++def generic_outputs():
++    output = str(ROOT/'generic.receipt.json')
++    paths = [output]
++    for name, _ in plan['positive_cases']:
++        paths.extend((output+'.'+name+'.input.json', output+'.'+name+'.candidate.json'))
++    paths.extend(output+'.'+name+'.negative.json' for name, _ in plan['negative_cases'])
++    return paths
++
+ 
+ def digest(p):
+     return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+@@ -60,22 +104,17 @@
+             '--stdout-file',str(ROOT/(name+'.stdout')),'--stderr-file',str(ROOT/(name+'.stderr')),
+             '--telemetry-file',str(ROOT/(name+'.telemetry.json')),'--',*child]
+     files=dict(fixed_files)
+-    for path in trailing:
+-        candidate=Path(str(path))
+-        if candidate.is_file():
+-            filename=str(candidate.resolve())
+-            if filename in files:
+-                require(digest(candidate)==files[filename], 'fixed trailing input changed')
+-            else:
+-                files[filename]=digest(candidate)
+-    for suffix in ('.authority.json','.stdout','.stderr','.telemetry.json','.caller.stdout','.caller.stderr','.dispatch.json'):
+-        require(not (ROOT/(name+suffix)).exists(), 'operation output already exists')
++    suffixes=('.authority.json','.stdout','.stderr','.telemetry.json','.caller.stdout',
++              '.caller.stderr','.dispatch.json','.prelaunch.json','.sentinel')
++    absent([ROOT/(name+suffix) for suffix in suffixes])
++    if mathematical: absent(generic_outputs())
+     spec={'schema':'F10-R1-REGISTERED/v1','enabled':True,'job_tag':JOB,'operation':operation,
+           'instance_id':INSTANCE,'hostname':socket.gethostname(),'admissibility_sha256':digest(ROOT/'generic.plan.json'),
+           'runner_path':str(ROOT/'run_capped.py'),'cwd':str(ROOT),'caps':caps,
+           'stdout_file':str(ROOT/(name+'.stdout')),'stderr_file':str(ROOT/(name+'.stderr')),
+           'telemetry_file':str(ROOT/(name+'.telemetry.json')),'parent_argv':parent,'child_argv':child,'file_sha256':files,
+-          'generic_only':True,'generic_plan_sha256':digest(ROOT/'generic.plan.json'),
++          'generic_only':True,'univariate_acceptance':None,
++          'generic_plan_sha256':digest(ROOT/'generic.plan.json'),
+           'python_flint':registration['python_flint']}
+     if defect=='disabled': spec['enabled']=False
+     if defect=='wronghost': spec['hostname']='NOT-THE-REGISTERED-HOST'
+@@ -86,21 +125,38 @@
+     auth.chmod(0o444)  # cooperative frozen per-operation authority; no concurrent writer
+     authority_sha=digest(auth)
+     namespace=os.readlink('/proc/self/ns/pid')
+-    started=time.time()
++    fixed_barrier(auth, authority_sha)
++    prelaunch={'name':name,'authority_sha256':authority_sha,
++               'checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
++               'fixed_file_sha256':dict(fixed_files),'parent_argv':parent,'child_argv':child,
++               'hard_cutoff_epoch':hard,'first_math_epoch':first_math}
++    exclusive(ROOT/(name+'.prelaunch.json'),prelaunch)
++    (ROOT/(name+'.prelaunch.json')).chmod(0o444)
++    prelaunch_sha=digest(ROOT/(name+'.prelaunch.json'))
+     with (ROOT/(name+'.caller.stdout')).open('x') as out, (ROOT/(name+'.caller.stderr')).open('x') as err:
++        # The last prospective source check is ORIGINAL fixed_files, including
++        # the plan even for missing-input. No posthoc hash substitutes for it.
++        absent([ROOT/(name+s) for s in ('.stdout','.stderr','.telemetry.json','.sentinel')])
++        if mathematical: absent(generic_outputs())
++        fixed_barrier(auth, authority_sha)
++        require(time.time()+wall+15 < hard, 'budget consumed during prospective pin checks')
++        started=time.time()
+         process=subprocess.Popen(parent,stdin=subprocess.DEVNULL,stdout=out,stderr=err,cwd=ROOT,
+                                  preexec_fn=filelimit, start_new_session=False)
+         require(os.readlink(f'/proc/{process.pid}/ns/pid')==namespace,'caller PID namespace mismatch')
+         caller_stat=Path(f'/proc/{process.pid}/stat').read_text()
+         rc=process.wait()
+         returned=time.time()
+-    telemetry=json.loads((ROOT/(name+'.telemetry.json')).read_text())
++    telemetry=read_json(ROOT/(name+'.telemetry.json'))
+     require(not quiet(telemetry['pgid']), 'owned live PGID after CAPRUN')
+-    for filename,want in files.items(): require(digest(filename)==want,'source/input changed')
+-    require(digest(auth)==authority_sha, 'frozen authority changed')
++    fixed_barrier(auth, authority_sha)
++    require(digest(ROOT/(name+'.prelaunch.json'))==prelaunch_sha, 'prelaunch record changed')
+     record={'name':name,'returncode':rc,'started_utc':datetime.datetime.fromtimestamp(started,datetime.timezone.utc).isoformat(),
+             'ended_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'namespace':namespace,
+             'caller_pid':process.pid,'caller_stat':caller_stat,'authority_sha256':authority_sha,
++            'prelaunch_checked_utc':prelaunch['checked_utc'],
++            'prelaunch_sha256':prelaunch_sha,
++            'prospective_fixed_inputs':len(fixed_files),
+             'telemetry_sha256':digest(ROOT/(name+'.telemetry.json')),'mathematical':mathematical,
+             'first_math_epoch':first_math,'hard_cutoff_epoch':hard,'returned_epoch':returned,
+             'admission_margin_seconds':15,'remaining_group_live':[]}
+@@ -108,8 +164,11 @@
+     require(returned < hard, 'return at/after original stored hard cutoff: NONDECISION')
+     if defect:
+         require(rc!=0 and telemetry['status']=='NORMAL_EXIT','gate refusal was not ordinary nonzero exit')
+-        require(not Path(trailing[1]).exists(),'postauthorize sentinel written by rejected authority')
++        require(not os.path.lexists(trailing[1]),'postauthorize sentinel written by rejected authority')
++        require(REFUSALS[defect] in (ROOT/(name+'.stderr')).read_text(),
++                'gate refusal did not match its exact expected reason')
+     elif name=='dummy-descendant':
++        require(Path(trailing[1]).read_bytes()==b'POSTAUTHORIZE\n','dummy valid gate sentinel')
+         require(rc==125 and telemetry['status']=='RESOURCE_CAP' and telemetry['resource']=='rss','dummy did not exercise RSS cap')
+         term=telemetry['termination']
+         require(term['term_sent'] and term['kill_sent'] and term['cleanup_complete'] and term['leader_reaped'], 'dummy cleanup failed')
+@@ -138,9 +197,14 @@
+     return record
+ 
+ def main():
+-    global registration, INSTANCE, JOB, DEADLINE, AGGREGATE, fixed_files
+-    registration=json.loads(REGISTRATION.read_text())
+-    require(registration.get('schema')=='F10-GENERIC-COMPATIBILITY-DISPATCH/v1'
++    global registration, INSTANCE, JOB, DEADLINE, AGGREGATE, fixed_files, armed, plan
++    require(len(sys.argv)==2 and len(sys.argv[1])==64
++            and all(c in '0123456789abcdef' for c in sys.argv[1]),
++            'external ROOT registration SHA256 required')
++    require(REGISTRATION.is_file() and not REGISTRATION.is_symlink()
++            and digest(REGISTRATION)==sys.argv[1], 'externally pinned registration changed')
++    registration=read_json(REGISTRATION)
++    require(registration.get('schema')=='F10-QUOTIENT-GENERIC-DISPATCH/v1'
+             and registration.get('enabled') is True and registration.get('generic_only') is True,
+             'DISABLED: fresh ROOT generic-only registration required')
+     require('univariate_acceptance' not in registration and 'normalized_acceptance' not in registration,
+@@ -158,16 +222,21 @@
+     DEADLINE=min(datetime.datetime.fromisoformat(registration[key]).timestamp()
+                  for key in ('mathematical_deadline_utc','task_deadline_utc'))
+     AGGREGATE=registration['aggregate_wall_seconds']
+-    require(type(AGGREGATE) is int and AGGREGATE>0,'explicit aggregate cap required')
++    require(type(AGGREGATE) is int and AGGREGATE==240,'fixed aggregate cap required')
+     require(registration['file_size_limit_bytes']==16777216,'file cap changed')
+-    require(set(registration['profiles'])=={'probe','dummy','compatibility'},'exact finite generic profiles')
++    require(registration['profiles']=={
++        'probe':{'wall_seconds':5,'cpu_seconds':3,'rss_bytes':2147483648},
++        'dummy':{'wall_seconds':5,'cpu_seconds':3,'rss_bytes':33554432},
++        'generic':{'wall_seconds':180,'cpu_seconds':170,'rss_bytes':2147483648}},
++        'exact finite generic profiles')
+     for limits in registration['profiles'].values():
+         require(set(limits)=={'wall_seconds','cpu_seconds','rss_bytes'},'profile fields')
+         require(all(type(v) is int and v>0 for v in limits.values()),'explicit positive integer caps')
+     require(registration['profiles']['dummy']['rss_bytes']==33554432,'dummy must retain its reviewed RSS cap')
+     known={
+-      'compatibility.py':'aaec1e2c56d7d4e77f7cf040a86371b813744368c9272b4f5cbe629af18af38b',
+-      'generic.plan.json':'1fe704aaaa125dc8d40d5915ea74ae651277ba3f2336ab76579adc104fc305e5',
++      'generic_controls.py':'c369dc11b4e9562b050333225133aedf9cb63a04f3309424fdfab769465d363a',
++      'solver.py':'58cdc4721143ec2be93cc720831c2235a9221b567f1903d2ffd6025b4f54b665',
++      'generic.plan.json':'ce193898e3114f1db018b86e6ebe0b2ea4fdac5f65296dee76245f94da0b964a',
+       'checker.py':'122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69',
+       'evidence.py':'cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767',
+       'algebra.py':'7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc',
+@@ -190,34 +259,78 @@
+         require(supplied[path]==want,'installed package pin altered')
+     for filename,want in supplied.items():
+         require(isinstance(want,str) and len(want)==64 and digest(filename)==want,'runtime source/interpreter pin')
+-    fixed_files=dict(supplied); fixed_files[str(REGISTRATION)]=digest(REGISTRATION)
+-    for name in ('compatibility.receipt.json','preflight.PASS.json','batch.PASS.json','batch.STOP.json'):
+-        require(not (ROOT/name).exists(),'exclusive job output already exists')
++    fixed_files=dict(supplied); fixed_files[str(REGISTRATION)]=sys.argv[1]
++    fixed_barrier()
++    plan=read_json(ROOT/'generic.plan.json')  # Literal hash above is authoritative.
++    absent([ROOT/name for name in ('preflight.PASS.json','batch.PASS.json','batch.STOP.json')])
++    absent(generic_outputs())
++    armed=True
+     for defect in ['disabled','wronghost','argv','cap','missing-input']:
+         run('gate-'+defect,'probe.py',[ROOT/'generic.plan.json',ROOT/('gate-'+defect+'.sentinel'),'plain'],'probe',defect=defect)
+     run('gate-valid','probe.py',[ROOT/'generic.plan.json',ROOT/'gate-valid.sentinel','plain'],'probe')
+-    require((ROOT/'gate-valid.sentinel').read_text()=='POSTAUTHORIZE\n','valid gate failed')
++    require((ROOT/'gate-valid.sentinel').read_bytes()==b'POSTAUTHORIZE\n','valid gate failed')
+     run('dummy-descendant','probe.py',[ROOT/'generic.plan.json',ROOT/'dummy-descendant.sentinel','descendant'],'dummy')
+     exclusive(ROOT/'preflight.PASS.json',{'status':'PASS','records':records,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+-    run('compatibility','compatibility.py',[ROOT/'generic.plan.json',ROOT/'compatibility.receipt.json'],
+-        'compatibility',mathematical=True)
+-    receipt=json.loads((ROOT/'compatibility.receipt.json').read_text())
+-    require(receipt.get('status')=='GENERIC-COMPATIBILITY-PASS-NOT-ACTUAL-SOURCE'
+-            and receipt.get('generic_only') is True,'genuine generic receipt scope')
+-    require(receipt.get('generic_plan_sha256')==known['generic.plan.json']
+-            and receipt.get('harness_sha256')==known['compatibility.py']
+-            and receipt.get('checker_sha256')==known['checker.py'],'genuine generic receipt source binding')
+-    require(receipt.get('counts')=={'verifier_calls':12,'positives':5,'negatives':7,
+-            'flint_matrix_constructors':2,'flint_rref_calls':2,'flint_fmpq_constructors':23},
+-            'finite generic compatibility counts')
+-    exclusive(ROOT/'batch.PASS.json',{'status':'GENERIC-COMPATIBILITY-ENGINEERING-PASS-NOT-ACTUAL-SOURCE',
+-        'records':records,'generic_plan_sha256':known['generic.plan.json'],
+-        'receipt_sha256':digest(ROOT/'compatibility.receipt.json'),
++    generic=run('generic','generic_controls.py',[ROOT/'generic.receipt.json'],
++        'generic',operation='build',mathematical=True)
++    require((ROOT/'generic.receipt.json').is_file()
++            and not (ROOT/'generic.receipt.json').is_symlink(),'regular generic receipt required')
++    receipt_sha=digest(ROOT/'generic.receipt.json')
++    receipt=read_json(ROOT/'generic.receipt.json')
++    require(set(receipt)=={'schema','status','scope','execution','engine','harness_sha256',
++                         'solver_sha256','positives','negatives'}, 'complete generic summary fields')
++    require(receipt['schema']=='F10-GENERIC-CONTROLS/v1'
++            and receipt['status']=='ALL-12-GENERIC-CONTROLS-VERIFIED-NO-SOURCE-ACCEPTANCE'
++            and receipt['scope']=='synthetic rank-seven fixtures only; no actual-source decision or acceptance',
++            'genuine generic receipt scope')
++    require(receipt['execution']=={'job_tag':JOB,'hostname':registration['hostname'],
++             'instance_id':INSTANCE,'authority_sha256':generic['authority_sha256']}
++            and receipt['engine']==environment
++            and receipt['harness_sha256']==known['generic_controls.py']
++            and receipt['solver_sha256']==known['solver.py'], 'generic runtime/source binding')
++    positives,negatives=receipt['positives'],receipt['negatives']
++    require(type(positives) is list and len(positives)==8
++            and type(negatives) is list and len(negatives)==4,'complete ordered control inventory')
++    artifacts=[]
++    def bound_artifact(pin, expected):
++        require(type(pin) is dict and set(pin)=={'path','sha256'}
++                and pin['path']==str(expected), 'literal generic sidecar binding')
++        require(expected.is_file() and not expected.is_symlink(), 'regular generic sidecar required')
++        raw=expected.read_bytes()
++        require(hashlib.sha256(raw).hexdigest()==pin['sha256'],'generic sidecar hash mismatch')
++        # Harness embeds hashes, not sizes. Record observed byte counts, never
++        # pretend a missing embedded size was checked. No fixture JSON parsing.
++        artifacts.append(dict(pin, bytes=len(raw)))
++    for result,(name,branch) in zip(positives,plan['positive_cases']):
++        require(type(result) is dict and set(result)=={'id','status','input','certificate','check'}
++                and result['id']==name and result['status']=='VERIFIED-SYNTHETIC-ONLY',
++                'positive ordered name/status/fields')
++        expected=({'branch':'UNIT','checked_coordinates':217,'multipliers':9,'multiplier_degree_bound':25}
++                  if branch=='UNIT' else {'branch':'SEPARATOR','checked_columns':1638,'target_coordinates':217})
++        check=result['check']
++        require(type(check) is dict and check==expected
++                and all(type(check[k]) is int for k in expected if k!='branch'),
++                'complete independent verifier count/branch receipt')
++        bound_artifact(result['input'],ROOT/('generic.receipt.json.'+name+'.input.json'))
++        bound_artifact(result['certificate'],ROOT/('generic.receipt.json.'+name+'.candidate.json'))
++    for result,(name,reason) in zip(negatives,plan['negative_cases']):
++        require(type(result) is dict and set(result)=={'id','status','fixture','exception_class','reason'}
++                and result['id']==name and result['status']=='EXPECTED-REFUSAL'
++                and result['exception_class']=='ValueError' and result['reason']==reason,
++                'changed-object ordered name/exact predicate')
++        bound_artifact(result['fixture'],ROOT/('generic.receipt.json.'+name+'.negative.json'))
++    fixed_barrier(ROOT/'generic.authority.json',generic['authority_sha256'])
++    require(digest(ROOT/'generic.receipt.json')==receipt_sha,'generic receipt changed during readback')
++    require(time.time()<generic['hard_cutoff_epoch'],'generic validation after original hard cutoff')
++    exclusive(ROOT/'batch.PASS.json',{'status':'QUOTIENT-GENERIC-ENGINEERING-PASS-NOT-ACTUAL-SOURCE',
++        'records':records,'generic_plan_sha256':known['generic.plan.json'],'artifacts':artifacts,
++        'receipt_sha256':receipt_sha,'receipt_bytes':(ROOT/'generic.receipt.json').stat().st_size,
+         'first_math_epoch':first_math,'end_epoch':time.time(),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+ 
+ try:
+     main()
+ except BaseException as exc:
+-    exclusive(ROOT/'batch.STOP.json',{'status':'STOP-NONDECISION','error':type(exc).__name__+': '+str(exc),
+-        'records':records,'first_math_epoch':first_math,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
++    if armed:
++        exclusive(ROOT/'batch.STOP.json',{'status':'STOP-NONDECISION','error':type(exc).__name__+': '+str(exc),
++            'records':records,'first_math_epoch':first_math,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+     raise

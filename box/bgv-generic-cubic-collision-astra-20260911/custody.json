@@ -1,0 +1,56 @@
+{
+  "schema": "manual-terminal-custody/v1",
+  "tag": "bgv-generic-cubic-collision-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED",
+  "scientific_status": "MANUAL_UNREVIEWED_PROOF_OF_CONDITIONAL_GENERIC_CUBIC_WITNESS; OVERALL_FAILURE_KNOWN",
+  "first_action_utc": "2026-09-11 12:53:22 UTC",
+  "publication_reserve_utc": "2026-09-11 13:07:00 UTC",
+  "hard_stop_utc": "2026-09-11 13:10:00 UTC",
+  "clock_reset": false,
+  "own_targets_absent": true,
+  "root_task_preserved": true,
+  "closed_and_finalized_utc": "2026-09-11 13:02:00 UTC",
+  "expected_verify_sealed_whole_and_all_postpins_completed_by_utc": "2026-09-11 13:02:17 UTC",
+  "inputs": [
+    {
+      "path": "box/bgv-generic-cubic-collision-astra-20260911/TASK.md",
+      "sha256": "3f5d658e2dc5ce5f9ea464a9128a397336c9fff9e81e4e6ee5f1664ab88ad758",
+      "read_scope": "FRESH_WHOLE after hash; sole scientific input"
+    }
+  ],
+  "owned_excluding_custody": [
+    {
+      "path": "box/bgv-generic-cubic-collision-astra-20260911/PINS.json",
+      "sha256": "3afb93f5197129366cac424685510a4568dcd93ca46d81e7fb08c64d468afbd8",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "xmodel/bgv-generic-cubic-collision-astra-20260911.md",
+      "sha256": "e914d51f993afd7fdb93c64f8175569517bc21b7e3bf5032239f7e38fcb5daad",
+      "read_scope": "WHOLE private body before marker; WHOLE sealed final"
+    },
+    {
+      "path": "xmodel/bgv-generic-cubic-collision-astra-20260911.md.artifact.json",
+      "sha256": "e49574aeba16ea1ec5fba44d6be0f18b0b393853f529f52903b7da2d88b3d724",
+      "read_scope": "WHOLE"
+    }
+  ],
+  "expected_transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "manifest_sha256": "e49574aeba16ea1ec5fba44d6be0f18b0b393853f529f52903b7da2d88b3d724",
+    "status": "VERIFIED"
+  },
+  "coverage": {
+    "inputs": 1,
+    "fresh_whole": 1,
+    "reused_whole": 0,
+    "unrecovered_clipping": 0,
+    "extra_file_reads": false
+  },
+  "collision": "EMPTY own-only. Generic failure KNOWN by ROOT's BGV scope attestation, at most direct cubic witness new attachment. No canonical OPEN, novelty claim, gate or descendant requested.",
+  "result": "Nonempty open of primitive auxiliaries d>=3 for any stipulated actual Keller F of geometric degree N>=3; transverse two-sheet collision and smooth third sheet prove an individual source divisor is not F-saturated. Required degree1/N2/torus controls included. No actual F existence or JC2 exclusion.",
+  "writers_at_handoff": "ALL WRITERS IDLE after custody write/readback; no background writer or child",
+  "scope": "Manual math and static TASK only; ordinary metadata/hash/JSON/artifact transaction. No BGV theorem used in proof, scientific execution, code/payload, network/AWS, extra source, protected/shared write or agent.",
+  "self_hash_rule": "Excluded; final handshake returns custody SHA first."
+}

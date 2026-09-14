@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/f10-r1-exact-decision-validation-20260909/probe.py", line 6, in <module>
+    authorize(sys.argv[1], __file__, "check")
+  File "/home/ubuntu/f10-r1-exact-decision-validation-20260909/execution_gate.py", line 67, in authorize
+    raise RuntimeError("checker input artifact must be explicitly hash-registered")
+RuntimeError: checker input artifact must be explicitly hash-registered

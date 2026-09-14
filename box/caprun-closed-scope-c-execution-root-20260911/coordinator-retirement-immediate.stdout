@@ -1,0 +1,9 @@
+COORDINATOR_IMMEDIATE 2026-09-11 16:08:04.617421946 UTC
+TimersCalendar={ OnCalendar=2026-09-11 16:30:00 UTC ; next_elapse=Fri 2026-09-11 16:30:00 UTC }
+NextElapseUSecRealtime=Fri 2026-09-11 16:30:00 UTC
+Id=jc2-closedchild-preflight9-20260911c-worker-stop.timer
+Triggers=jc2-closedchild-preflight9-20260911c-worker-stop.service
+ActiveState=active
+MainPID=0
+ExecStart={ path=/usr/local/bin/aws ; argv[]=/usr/local/bin/aws ec2 terminate-instances --profile personal --region us-east-1 --instance-ids i-033947c617e8ad0e5 ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }
+Id=jc2-closedchild-preflight9-20260911c-worker-stop.service

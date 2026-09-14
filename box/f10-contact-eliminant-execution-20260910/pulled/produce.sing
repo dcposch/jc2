@@ -1,0 +1,98 @@
+// SOURCE ONLY: NOT EXECUTED OR SYNTAX-TESTED in this lane.
+// Future ROOT registration must supply a fresh isolated output directory,
+// pinned engine/source, external resource caps, and independent checking.
+// This source writes ONLY contact-eliminant.cert in that future directory.
+ring contact = 0,(z,V,W,X),dp;
+option(none);
+option(redSB);
+if (char(contact) != 0) { print("PRODUCER_FAIL characteristic"); quit; }
+
+poly a3 = 30*V-14;
+poly a2 = 71-270*V+180*V^2+120*W;
+poly a1 = -154+780*V-900*V^2+120*V^3-600*W+720*V*W;
+poly a0 = 120-720*V+1080*V^2-240*V^3+720*W-1440*V*W+360*W^2;
+poly c = 4-12*V;
+poly d = -48+234*V-240*V^2-90*W;
+poly e = 188-1194*V+2040*V^2-720*V^3+(870-1800*V)*W;
+poly f = -240+1800*V-3960*V^2+2280*V^3
+         +(-1800+6120*V-2520*V^2)*W-2160*W^2;
+poly g = d-c*a3;
+poly A = c^2*a2-c*e+d*g;
+poly B = c^2*a1-c*f+e*g;
+poly C = c^2*a0+f*g;
+ideal I = c*A*C-c*B^2+d*A*B-e*A^2,
+          d*A*C-c*B*C-f*A^2,
+          A*X^2+B*X+C,
+          z*c*A-1;
+
+print("PRODUCER_STAGE liftstd");
+matrix T;
+ideal G0 = liftstd(I,T);
+// Keep G0 and T together: matrix(G0)=matrix(I)*T.
+// Explicitly obtain the reduced GB required by finduni.
+ideal G = std(G0);
+poly F;
+if (reduce(1,G) == 0)
+{
+  F = 1;
+}
+else
+{
+  if (dim(G) != 0) { print("PRODUCER_FAIL dimension"); quit; }
+  print("PRODUCER_STAGE finduni");
+  ideal uni = finduni(G);
+  F = uni[4];
+}
+if (F == 0) { print("PRODUCER_FAIL zero_F"); quit; }
+if (subst(F,z,0,V,0,W,0) != F)
+{ print("PRODUCER_FAIL not_univariate_X"); quit; }
+
+print("PRODUCER_STAGE lift_membership");
+// Lift to the UNCHANGED G0, not to G while reusing the old T.
+matrix L = lift(G0,ideal(F));
+matrix H = T*L;
+if ((nrows(H) != 4) || (ncols(H) != 1))
+{ print("PRODUCER_FAIL cofactor_shape"); quit; }
+poly residual = F;
+int i;
+for (i=1; i<=4; i++) { residual = residual-H[i,1]*I[i]; }
+if (residual != 0) { print("PRODUCER_FAIL identity"); quit; }
+
+// ASCII write separates arguments by newlines. The checker consumes
+// whitespace-separated tokens; coefficient numerators/denominators never
+// pass through floats, machine integer coefficients, or expression eval.
+proc emitPolynomial(link destination, string label, poly value)
+{
+  write(destination,"poly",label);
+  number coefficient;
+  intvec exponent;
+  while (value != 0)
+  {
+    coefficient = leadcoef(value);
+    exponent = leadexp(value);
+    write(destination,"term",numerator(coefficient),denominator(coefficient),
+          exponent[1],exponent[2],exponent[3],exponent[4]);
+    value = value-lead(value);
+  }
+  write(destination,"endpoly");
+  return();
+}
+
+print("PRODUCER_STAGE serialize");
+link certificate = ":w contact-eliminant.cert";
+open(certificate);
+write(certificate,"JC2_CONTACT_CERT_V1");
+write(certificate,"interface","c1ec52ca1b71295b44c99fbcdaec5c05d3c47f24cd468f2669888ca96950fdd3");
+write(certificate,"gate","76d25dfe462a44b5c7df06245fb55486a8b80aa037e818bda38cdb893f1be047");
+write(certificate,"ring","Q","z","V","W","X","dp");
+write(certificate,"generators","I1","I2","I3","I4");
+emitPolynomial(certificate,"F",F);
+emitPolynomial(certificate,"H1",H[1,1]);
+emitPolynomial(certificate,"H2",H[2,1]);
+emitPolynomial(certificate,"H3",H[3,1]);
+emitPolynomial(certificate,"H4",H[4,1]);
+write(certificate,"endcert");
+close(certificate);
+print("PRODUCER_CANDIDATE_WRITTEN contact-eliminant.cert");
+// This marker and Singular's exit status are NOT an acceptance certificate.
+quit;

@@ -1,0 +1,5 @@
+**10. Worker termination, final custody, and seal.** The23:33:08 UTC poll found no remaining solver/schedule jobs. All final output hashes were harvested before termination. After rechecking the instance ID, IP and Owner, I executed `bash ops/fleet/fleet.sh term i-02703754668abed88` at23:34:31 UTC. It returned rc0 and `shutting-down`; AWS confirmed **terminated** at23:35:11 UTC, before this report was sealed. [termination.json](/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/termination.json) and the adjacent `termination-state.json` record both observations.
+
+Large scripts/outputs stayed on the worker; only their hashes and small custody records were retained locally. The final evidence manifest, `box/char-degree-20260905/resume-r2/evidence.sha256`, has SHA-256 **77a38f0bd31d41cab35f4b164419973094b342a83ae7e621a2ccdb545afbbcc9** and binds62 retained artifacts. Its entries were mechanically checked before sealing. The final finite outcome is OPEN; Theorems A/B and the exclusion of every zero-Jacobian point on the attained actual-face chart remain established.
+
+<!-- BODY-END -->

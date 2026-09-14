@@ -1,0 +1,85 @@
+{
+  "backend_metadata": {
+    "backend": "python-flint rank-two module",
+    "band_terms": 4119,
+    "base_generators": [
+      "w",
+      "a",
+      "b",
+      "epsilon"
+    ],
+    "basis": [
+      "1",
+      "delta"
+    ],
+    "basis_images": {
+      "delta": [
+        "0",
+        "1"
+      ]
+    },
+    "coefficient_field": "Q",
+    "elapsed_seconds": 0.3192200919993411,
+    "emitted_row": "ONE combined polynomial A+B*d; neither component separately",
+    "first_band": 0,
+    "helper_sha256": "8a676197ace5dd6e1e7ea1b25c0cf00c474ec52f5552564a6aec5e337c8ea430",
+    "quotient": {
+      "a": "-1",
+      "b": "-2",
+      "d": "delta",
+      "e": "epsilon",
+      "polynomial": "delta**2 + delta*epsilon**2 - 2*epsilon**4"
+    },
+    "retained_ring_variable": "delta",
+    "t_cutoff": 8
+  },
+  "both_components_preserved": true,
+  "checks": [
+    {
+      "coefficient_slots": 0,
+      "t": 0
+    },
+    {
+      "coefficient_slots": 0,
+      "t": 1
+    },
+    {
+      "coefficient_slots": 3,
+      "t": 2
+    },
+    {
+      "coefficient_slots": 6,
+      "t": 3
+    },
+    {
+      "coefficient_slots": 10,
+      "t": 4
+    },
+    {
+      "coefficient_slots": 12,
+      "t": 5
+    },
+    {
+      "coefficient_slots": 11,
+      "t": 6
+    },
+    {
+      "coefficient_slots": 11,
+      "t": 7
+    },
+    {
+      "coefficient_slots": 10,
+      "t": 8
+    }
+  ],
+  "helper_sha256": "8a676197ace5dd6e1e7ea1b25c0cf00c474ec52f5552564a6aec5e337c8ea430",
+  "independent_monic_polynomial_remainder_match": true,
+  "linear_remainder_not_split": "delta - epsilon**2",
+  "negative_controls": [
+    "sqrt(2)",
+    "1/delta",
+    "sin(delta)"
+  ],
+  "oracle": "SymPy monic division in delta; exact evaluation at both delta=epsilon\u00b2 and delta=-2epsilon\u00b2",
+  "status": "PASS"
+}

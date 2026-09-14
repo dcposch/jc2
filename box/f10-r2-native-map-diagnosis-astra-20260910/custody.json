@@ -1,0 +1,27 @@
+{
+  "schema":"jc2.scoped-terminal-custody/v1",
+  "status":"TERMINAL_ALL_WRITERS_IDLE",
+  "scope":"STATIC_DIAGNOSIS_ONLY",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_transaction_sha256":"dfc2279f51111780a426391302c1c69f16bbfbf46fb66c586deda1608fba4da6",
+  "inputs":{
+    "/home/ubuntu/jc2/box/f10-r2-semantic-runtime-astra-20260910/dispatch.py":"6c232bb0d1b4ee62fefb62970b1b5a06a092db735cbd6fb47907c54921169c0b",
+    "/home/ubuntu/jc2/box/f10-r2-semantic-execution-prep-20260910/native-manifest.json":"3fc4436696a3a72ea07063535045d13ca28c2c060fa33583e22fe4011b7a93bf",
+    "/home/ubuntu/jc2/box/f10-r2-semantic-execution-prep-20260910/ROOT-REGISTRATION.json":"57407d35be5f2913784ca44c304e0f9009e269e65c0f770c76a3753c678aaad9",
+    "/home/ubuntu/jc2/box/f10-r2-semantic-execution-prep-20260910/CUSTODY.json":"5eeb682bc91c860cc0b623f56875533cce7b150855826800f10f76a73ba12630",
+    "/home/ubuntu/jc2/ops/run_capped.py":"4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+  },
+  "owned":{
+    "/home/ubuntu/jc2/box/f10-r2-native-map-diagnosis-astra-20260910/PINS.json":{"bytes":927,"sha256":"656d86768cb19eaf13f9190b3bff955c461135528fdaa18a0ce6eaf3c646c5d0"},
+    "/home/ubuntu/jc2/box/f10-r2-native-map-diagnosis-astra-20260910/READ-SCOPE.md":{"bytes":1479,"sha256":"f245254a591a9005f88d06bb79b468c692e3f5330e179c71a13093969dc606bc"},
+    "/home/ubuntu/jc2/xmodel/f10-r2-native-map-diagnosis-astra-20260910.md":{"bytes":6797,"sha256":"7577c1d50b5350044f2d2e844980655effea7b49f21b05059e883682012d9be4"},
+    "/home/ubuntu/jc2/xmodel/f10-r2-native-map-diagnosis-astra-20260910.md.artifact.json":{"bytes":674,"sha256":"dfc2279f51111780a426391302c1c69f16bbfbf46fb66c586deda1608fba4da6"}
+  },
+  "publication_notes":[
+    "Initial apply_patch replacement rejected without writes; corrected with update operation.",
+    "First close refused plain BODY-END; no publication occurred. Corrected exact HTML marker, then close/finalize/expected verify passed.",
+    "Native manifest whole structured documentary read, not raw opaque-hash visual reread; qualification in READ-SCOPE."
+  ],
+  "lifecycle":"ROOT reports worker TERMINATED, volume AVAILABLE, timers closed; no author worker action.",
+  "custody_excludes_itself":true
+}

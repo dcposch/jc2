@@ -1,0 +1,33 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at `xmodel/d108-survivor-deep-opus5-20260905.md` (25,253 bytes, `<!-- BODY-END -->` in place).
+
+## Result
+
+**VERDICT: `COMPUTE-BOUND AT LOCAL POWER 11`** — no kill, survivor intact at every depth tested.
+
+**Custody.** Manifest built with `awk` from the `.run.v2` receipt, `sha256sum -c` → 6/6 `OK`. No fleet worker.
+
+**The licence (task item 4's FALLACY-v2 requirement).** `rad(I_sat_T8) = ⟨u,v⟩` *exactly* — verified in Singular in both directions, and `I ⊊ ⟨u,v⟩`, so the argument had to be set-theoretic. The survivor *set* is `V(u,v)`, so restricting loses no point and a unit would have been decisive.
+
+**Staged elimination on the locus** (exact `Q`, every row the chart expresses at each depth, complete outer D1 ladder throughout):
+
+| n | rows | Q\*piv | zero | resid | dim | UNIT | §6 point |
+|---|---|---|---|---|---|---|---|
+| 8 | 1420 | 60 | 1360 | 0 | `(0)` | False | holds |
+| 9 | 1596 | 66 | 1530 | 0 | `(0)` | False | holds |
+| 10 | 1771 | 72 | 1698 | 1 | 5 of 6 | False | **FAILS** |
+| 11 | 1945 | 78 | 1865 | 2 | 9 of 10 | False | **FAILS** |
+
+`n = 8` reproduces the charged run exactly (60 pivots; the 3 charged residual generators vanish on the locus). `n = 9` adds no condition at all.
+
+**Three findings that change the shape of the problem:**
+
+1. **Every constraint is a power of a hyperplane monic in a fresh `K2c` coordinate** — `⟨w²⟩` at depth 10, `⟨w², 2wx⟩` at 11, matching the charged `⟨u², uv, uL+v²⟩`. Codimension grows by ≤ 1 per depth and a unit is structurally unreachable. Observation over four depths, not a theorem.
+2. **The outer D1 ladder is finite and now exhausted** — offsets end at 10 (B1 at 3, A2/B2 at 6, A3 at 10); per-offset pivots `34,32,…,5,3,1`, cumulative 189, everything beyond empty. Obligation discharged in full.
+3. **`J = 1` is not deep, it is inaccessible** — the degree-0 normalization is the `t^178` band, behind the whole `A3` block (first visible at `t`-power 62). The degree-178 top band *is* discharged (identically zero on the corrected chart). Depth is not the obstruction.
+
+**Point control.** The charged §6 point is **refuted** at local power 10 (row value `23409`) and again at 11; replaced by `Hc_5_4 = 51/20`, `K2c_6_24 = −28`, `jet1 = jet2 = c = 1`, rest 0 — annihilates the residual, `c ≠ 0`, `Hc_5_3 = 2 ≠ 0`.
+
+**Left undone.** Pole rows 12–96, Jacobian band `t = 12` (only that one of the requested `t = 5..12` window is missing), and `A2`/`B2` at `t`-power 27 empirically — though §4 settles them structurally: each block contributes exactly one fresh `Q*`-pivotable coordinate at first visibility, so it adds freedom, not constraint. Two deeper one-shot systems (`T = 16`, `T = 22`) were still inside `qstar_reduce` at the deadline and were terminated; none of their output is used. `qstar_reduce` is the remaining wall — it is the one component still on sympy `Expr` rather than the sparse ring.
+DIVERT path=xmodel/d108-survivor-deep-opus5-20260905.md status=DIVERTED body_bytes=24973 body_sha256=388757c00f22d477dd350c21ced466ff39f22163c8440c348a7410de440e867c overflow=xmodel/d108-survivor-deep-opus5-20260905.overflow overflow_bytes=280 raw=xmodel/d108-survivor-deep-opus5-20260905.raw.md raw_sha256=ca752ac19977deee61ac2eecb059eb95f67549d3d53e86f3ed4574154eb8c6b8 overflow_sha256=96cf7938b781ba19e89df6d77a886607a52c61e1310a86072e18953288268cbf
+post-BODY-END overflow diverted; charged body preserved

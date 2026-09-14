@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-b-reconstruction-gate-fable5-20260906/gate_own.py", line 239, in <module>
+    bad=[O]*4; req(all(v==Z for v in [sum_(row,bad) for row in L_matrix(ppow(H['golden'],3),5,4)]),"injected false kernel")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/d125-b-reconstruction-gate-fable5-20260906/gate_own.py", line 8, in req
+    if not ok: raise ValueError("REJECT: "+msg)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: REJECT: injected false kernel
+Command exited with non-zero status 1
+wall=5.26 cpu=5.24+0.02 maxrss=39428KB

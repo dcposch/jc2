@@ -1,0 +1,70 @@
+delta2 inner minor solved in 0.95s
+delta2 inner low-weight product: 25 slots, 1.61s
+delta2 inner incidence reduced: 14 pivots, 5.99s
+delta2 inner: 78 preincidence, 14 QQ* pivots, 0 residual, 6.90s
+delta2 inner minor solved in 0.97s
+delta2 inner low-weight product: 25 slots, 1.64s
+delta2 inner incidence reduced: 14 pivots, 6.00s
+delta2 inner: 78 preincidence, 14 QQ* pivots, 0 residual, 6.92s
+{"status": "MATERIALIZED", "branch": "delta2", "source_image_sha256": "7d96ef8e5558650912af4229402d91d021728e6ca4a254a0310990d4bc144470", "generator_count": 1065}
+delta2: generating exact w Jacobian bands t59..62
+FLINT encoded 121 active coefficient variables; 0.42s
+FLINT exact products complete; bands 59..62 have 4474 terms; 249.22s
+delta2: Jacobian_t59 79 nonzero rows before QQ* reduction
+delta2: Jacobian_t59 5 residual, 250 free; exact Singular
+delta2: Jacobian_t59 dimension=245
+delta2: Jacobian_t60 78 nonzero rows before QQ* reduction
+delta2: Jacobian_t60 5 residual, 248 free; exact Singular
+delta2: Jacobian_t60 dimension=243
+delta2: Jacobian_t61 77 nonzero rows before QQ* reduction
+delta2: Jacobian_t61 5 residual, 246 free; exact Singular
+delta2: Jacobian_t61 dimension=241
+delta2: Jacobian_t62 76 nonzero rows before QQ* reduction
+delta2: Jacobian_t62 5 residual, 244 free; exact Singular
+delta2: Jacobian_t62 dimension=239
+delta2: generating exact w Jacobian bands t63..66
+FLINT encoded 133 active coefficient variables; 0.36s
+FLINT exact products complete; bands 63..66 have 2433 terms; 710.17s
+delta2: Jacobian_t63 75 nonzero rows before QQ* reduction
+delta2: Jacobian_t63 5 residual, 243 free; exact Singular
+delta2: Jacobian_t63 dimension=238
+delta2: Jacobian_t64 77 nonzero rows before QQ* reduction
+delta2: Jacobian_t64 5 residual, 241 free; exact Singular
+delta2: Jacobian_t64 dimension=236
+delta2: Jacobian_t65 76 nonzero rows before QQ* reduction
+delta2: Jacobian_t65 5 residual, 238 free; exact Singular
+delta2: Jacobian_t65 dimension=233
+delta2: Jacobian_t66 75 nonzero rows before QQ* reduction
+delta2: Jacobian_t66 5 residual, 235 free; exact Singular
+delta2: Jacobian_t66 dimension=230
+delta2: generating exact w Jacobian bands t67..70
+FLINT encoded 139 active coefficient variables; 0.38s
+FLINT exact products complete; bands 67..70 have 15439 terms; 1718.44s
+delta2: Jacobian_t67 75 nonzero rows before QQ* reduction
+delta2: Jacobian_t67 5 residual, 231 free; exact Singular
+delta2: Jacobian_t67 dimension=226
+delta2: Jacobian_t68 74 nonzero rows before QQ* reduction
+delta2: Jacobian_t68 5 residual, 227 free; exact Singular
+delta2: Jacobian_t68 dimension=222
+delta2: Jacobian_t69 73 nonzero rows before QQ* reduction
+delta2: Jacobian_t69 5 residual, 223 free; exact Singular
+delta2: Jacobian_t69 dimension=218
+delta2: Jacobian_t70 73 nonzero rows before QQ* reduction
+delta2: Jacobian_t70 5 residual, 218 free; exact Singular
+delta2: Jacobian_t70 dimension=213
+delta2: generating exact w Jacobian bands t71..74
+FLINT encoded 138 active coefficient variables; 0.68s
+Traceback (most recent call last):
+  File "/home/ubuntu/g9966-corrected-jacobian-batch/deep_resume_jacobian_batch.py", line 215, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-batch/deep_resume_jacobian_batch.py", line 196, in main
+    band_cache,backend_meta=flint_backend.jacobian_bands(hh,c2,c3,oo,high,S,first_band=tp,progress=log)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-batch/deep_flint_jacobian_batch.py", line 68, in jacobian_bands
+    left=mul(add(scale(H2,source['outer_power_F']),A),add(mul(H,bracket(H,C,degree,dC)),bracket(H,D,degree,dD)))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-batch/deep_flint_jacobian_batch.py", line 48, in mul
+    if r+s<=cutoff:out[r+s]=out.get(r+s,zero)+left*right
+                   ~~~^^^^^
+KeyboardInterrupt

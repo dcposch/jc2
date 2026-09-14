@@ -1,0 +1,15 @@
+{
+  "schema": "JC2-JOB/v1",
+  "instance": "i-009e908fdd42b3f81",
+  "tag": "mixres20260913b",
+  "wall_seconds": 840,
+  "memory_mib": 16384,
+  "cpu_percent": 200,
+  "tasks_max": 32,
+  "file_mib": 8,
+  "files": {"observer.py": "661b739ed3f86267e9875a83537bd1a75ef5699442c99eb182ec2800f3005858"},
+  "phases": [
+    {"name": "smoke", "argv": ["/usr/bin/python3", "-I", "-u", "@payload/observer.py", "--instance", "i-009e908fdd42b3f81", "--job-tag", "mixres20260913b", "--mode", "smoke"], "expected_exit": 0},
+    {"name": "observe", "argv": ["/usr/bin/python3", "-I", "-u", "@payload/observer.py", "--instance", "i-009e908fdd42b3f81", "--job-tag", "mixres20260913b", "--mode", "observe"], "expected_exit": 0}
+  ]
+}

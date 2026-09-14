@@ -1,0 +1,63 @@
+ring RDIV=0,(zz,tt,target_a,target_b),(lp(1),dp(3));
+option(redSB);print("BEGIN_BUILD_ACTIVE_RING");
+poly h=(1+zz)^2;poly D=tt^2*(1+zz);
+poly H=h-(1/6)*target_b*tt^2;
+poly vv=D+((1/3)*target_a+(1/18)*target_b^2)*tt^3;
+if(lead(H)!=zz^2){ERROR("H is not monic z-degree k");}
+print("BEGIN_DIVIDE_vv2");list L0=division(vv^2,ideal(H));matrix M0=L0[1];ideal N0=L0[2];poly UU=M0[1,1];poly RR=N0[1];
+if(vv^2-UU*H-RR!=0){ERROR("division0 identity failed");}print("END_DIVIDE_vv2");print(size(UU));print(size(RR));
+print("BEGIN_DIVIDE_vvU");list L1=division(vv*UU,ideal(H));matrix M1=L1[1];ideal N1=L1[2];poly PP=M1[1,1];poly RR1=N1[1];
+if(vv*UU-PP*H-RR1!=0){ERROR("division1 identity failed");}print("END_DIVIDE_vvU");print(size(PP));print(size(RR1));
+print("BEGIN_DIVIDE_vvR");list L2=division(vv*RR,ideal(H));matrix M2=L2[1];ideal N2=L2[2];poly Qpart=M2[1,1];poly RR2=N2[1];
+if(vv*RR-Qpart*H-RR2!=0){ERROR("division2 identity failed");}print("END_DIVIDE_vvR");print(size(Qpart));print(size(RR2));
+print("BEGIN_DIVIDE_U2");list L3=division(UU^2,ideal(H));matrix M3=L3[1];ideal N3=L3[2];poly WW=M3[1,1];poly RR3=N3[1];
+if(UU^2-WW*H-RR3!=0){ERROR("division3 identity failed");}print("END_DIVIDE_U2");print(size(WW));print(size(RR3));
+ideal activeGenerators=zz,tt,target_a,target_b;
+ring R=0,(zz,tt,Z3,Zc,c,leader3,target_a,target_b,target_c,target_d,target_e,unused),(lp(1),dp(11));
+option(redSB);print("BEGIN_EMBED_FULL_RING");
+ideal injectedGenerators=imap(RDIV,activeGenerators);
+if(injectedGenerators[1]-zz!=0){ERROR("generator image 0 failed");}
+if(injectedGenerators[2]-tt!=0){ERROR("generator image 1 failed");}
+if(injectedGenerators[3]-target_a!=0){ERROR("generator image 2 failed");}
+if(injectedGenerators[4]-target_b!=0){ERROR("generator image 3 failed");}
+poly h=imap(RDIV,h);
+poly D=imap(RDIV,D);
+poly H=imap(RDIV,H);
+poly vv=imap(RDIV,vv);
+poly UU=imap(RDIV,UU);
+poly RR=imap(RDIV,RR);
+poly PP=imap(RDIV,PP);
+poly RR1=imap(RDIV,RR1);
+poly Qpart=imap(RDIV,Qpart);
+poly RR2=imap(RDIV,RR2);
+poly WW=imap(RDIV,WW);
+poly RR3=imap(RDIV,RR3);
+poly sourceImageH=(1+zz)^2;poly sourceImageD=tt^2*(1+zz);
+if(h-sourceImageH!=0){ERROR("full h source image failed");}
+if(D-sourceImageD!=0){ERROR("full D source image failed");}
+kill sourceImageH,sourceImageD;
+if(H-h+(1/6)*target_b*tt^2!=0){ERROR("shifted H image failed");}
+if(vv-D-((1/3)*target_a+(1/18)*target_b^2)*tt^3!=0){ERROR("shifted v image failed");}
+print("END_EMBED_FULL_RING");kill RDIV;
+poly C=(3/8)*tt^5;
+poly aa=target_a+(1/4)*target_b^2;poly dd=target_d+(1/2)*target_b*target_c;
+poly pp=dd-(1/3)*aa^2;poly qq=target_e+(1/4)*target_c^2-(1/3)*aa*dd+(2/27)*aa^3;
+poly VV=C-(1/4)*target_b*tt^2*D+((1/12)*target_a*target_b+(1/54)*target_b^3-(1/2)*target_c)*tt^5;
+poly derivedV=VV-(3/8)*tt*UU;
+poly upper=(3/4)*RR+pp*tt^6-(1/8)*tt*PP;
+poly digit=Qpart-(1/8)*RR1-(9/64)*tt*WW;
+poly low=RR2-(9/64)*tt*RR3+pp*tt^6*vv+qq*tt^9;
+poly digitDifference=digit-leader3*tt^6*(1+zz);
+print("BEGIN_EXTRACT_CHARACTERISTIC");matrix cv=coef(derivedV,tt*zz);matrix cu=coef(upper,tt*zz);matrix ce=coef(digitDifference,tt*zz);matrix cl=coef(low,tt*zz);
+print("END_EXTRACT_CHARACTERISTIC");
+intvec wt=0,1,0,0,0,0,0,0,0,0,0,0;
+ideal I=target_a,target_b,target_c,target_d,target_e,c-1;
+int j;int charRows=0;
+for(j=1;j<=ncols(cv);j++){I[size(I)+1]=cv[2,j];charRows++;}for(j=1;j<=ncols(cu);j++){I[size(I)+1]=cu[2,j];charRows++;}
+for(j=1;j<=ncols(ce);j++){if(deg(ce[1,j],wt)<=6){I[size(I)+1]=ce[2,j];charRows++;}}
+for(j=1;j<=ncols(cl);j++){if(deg(cl[1,j],wt)<7){I[size(I)+1]=cl[2,j];charRows++;}}
+I[size(I)+1]=Z3*leader3-1;I[size(I)+1]=Zc*c-1;
+print("BEGIN_ROW_COUNTS");print(charRows+1);print(size(I));print("END_ROW_COUNTS");
+print("BEGIN_GB");ideal SB=std(I);print("END_GB");print("BEGIN_RESULT");print(reduce(1,SB));print(dim(SB));print(size(SB));print("END_RESULT");
+ideal neg=leader3,Z3*leader3-1;ideal pos=leader3-1,Z3*leader3-1;
+print("BEGIN_CONTROLS");print(reduce(1,std(neg)));print(reduce(1,std(pos)));print("END_CONTROLS");quit;

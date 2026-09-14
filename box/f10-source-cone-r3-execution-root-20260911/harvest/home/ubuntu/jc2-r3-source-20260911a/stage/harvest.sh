@@ -1,0 +1,37 @@
+#!/bin/bash
+# ROOT terminal metadata and byte custody only. No scientific code execution.
+set -euo pipefail
+test "$(id -u)" = 0
+test "$(tr -d '\n' < /sys/class/dmi/id/board_asset_tag)" = i-09bac011c7e8b9368
+test "$(sed -n '1p' /proc/sys/kernel/random/boot_id)" = 05a21dad-b317-4b61-aafe-c389462cec63
+test "$(systemctl show jc2-r3-source-20260911a.service -p MainPID --value)" = 0
+test "$(systemctl show jc2-r3-source-20260911a.service -p ControlPID --value)" = 0
+test "$(systemctl show jc2-r3-source-20260911a.service -p ActiveState --value)" = failed
+test ! -e /sys/fs/cgroup/system.slice/jc2-r3-source-20260911a.service
+for jc2_pid in 8390 8475 8476; do test ! -e /proc/"$jc2_pid"; done
+date -u '+ROOT_R3_TERMINAL_HARVEST_BEGIN %Y-%m-%d %H:%M:%S.%N UTC'
+cd /home/ubuntu/jc2-r3-source-20260911a/stage
+test ! -e terminal-pin-recheck.log
+sha256sum -c terminal.sha256 >terminal-pin-recheck.log
+test "$(wc -l < terminal-pin-recheck.log)" = 218
+sha256sum -c native.sha256 >native-postcheck.log
+test "$(sha256sum native-metadata.sh | cut -d ' ' -f1)" = 09104d050ea6179edd893b91911feb0287bf9c93d66995fb1d6290fd471c6ade
+bash native-metadata.sh >native-post.stdout 2>native-post.stderr
+test ! -s native-post.stderr
+diff -u <(sed '/^NATIVE_START /d; /^NATIVE_END /d' native.stdout) <(sed '/^NATIVE_START /d; /^NATIVE_END /d' native-post.stdout)
+systemctl show jc2-r3-source-20260911a.service >outer-terminal.show
+journalctl --no-pager -o json _SYSTEMD_INVOCATION_ID=5241243d3ebe48129cda4a0dd5d92f41 >outer-invocation.journal.jsonl
+journalctl --no-pager -o json -u jc2-r3-source-20260911a.service >outer-unit.journal.jsonl
+test "$(stat -c %d /var/lib/jc2-r3-source-20260911a/custody)" = 66305
+test ! -e /run/jc2-r3-source-20260911a/writer/baseline.json
+sync /var/lib/jc2-r3-source-20260911a/custody /var/lib/jc2-r3-source-20260911a
+systemctl stop jc2-r3-source-20260911a-term.timer jc2-r3-source-20260911a-kill.timer
+date -u '+ROOT_ORIGINAL_SYSTEM_TIMERS_CLOSED_AFTER_TERMINAL %Y-%m-%d %H:%M:%S.%N UTC'
+test -z "$(find /opt/jc2-r3-source-20260911a /run/jc2-r3-source-20260911a /var/lib/jc2-r3-source-20260911a /home/ubuntu/jc2-r3-source-20260911a/stage -type l -print -quit)"
+test ! -e /home/ubuntu/jc2-r3-source-20260911a/evidence.tar.gz
+tar -czf /home/ubuntu/jc2-r3-source-20260911a/evidence.tar.gz -C / opt/jc2-r3-source-20260911a run/jc2-r3-source-20260911a var/lib/jc2-r3-source-20260911a home/ubuntu/jc2-r3-source-20260911a/stage home/ubuntu/jc2-r3-source-20260911a/native.stdout home/ubuntu/jc2-r3-source-20260911a/native.stderr home/ubuntu/jc2-r3-source-20260911a/setup.stdout home/ubuntu/jc2-r3-source-20260911a/setup.stderr home/ubuntu/jc2-r3-source-20260911a/outer-launch.stdout home/ubuntu/jc2-r3-source-20260911a/outer-launch.stderr home/ubuntu/jc2-r3-source-20260911a-physical-metadata.sh home/ubuntu/jc2-r3-source-20260911a-physical.stdout home/ubuntu/jc2-r3-source-20260911a-native-metadata.sh
+tar -df /home/ubuntu/jc2-r3-source-20260911a/evidence.tar.gz -C /
+sync /home/ubuntu/jc2-r3-source-20260911a/evidence.tar.gz /home/ubuntu/jc2-r3-source-20260911a
+sha256sum /home/ubuntu/jc2-r3-source-20260911a/evidence.tar.gz /var/lib/jc2-r3-source-20260911a/custody/CUSTODY.json terminal-pin-recheck.log native-postcheck.log native-post.stdout native-post.stderr outer-terminal.show outer-invocation.journal.jsonl outer-unit.journal.jsonl
+stat -c '%n %s' /home/ubuntu/jc2-r3-source-20260911a/evidence.tar.gz
+date -u '+ROOT_R3_ARCHIVE_COMPARE_SYNC_DONE %Y-%m-%d %H:%M:%S.%N UTC'

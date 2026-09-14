@@ -1,0 +1,363 @@
+--- /home/ubuntu/jc2/box/f10-r2-runtime-astra-20260910/dispatch.py
++++ /home/ubuntu/jc2/box/f10-r2-semantic-runtime-astra-20260910/dispatch.py
+@@ -1,4 +1,4 @@
+-"""FIRST r2 runtime entry, STATIC/UNEXECUTED; disabled without fresh ROOT registration.
++"""r2 controls 6/10 runtime entry, STATIC/UNEXECUTED; fresh ROOT registration only.
+ 
+ Metadata-only caller. No science import, coefficient parse, solver, retry,
+ installation, worker control, or inner process group. CAPRUN is unchanged.
+@@ -20,6 +20,10 @@
+ import time
+ 
+ JOB = 'f10-r2-reconstruction-v1'
++CONTROL_JOB = 'f10-r2-semantic-controls6-10-v1'
++BASELINE_SHA = 'dac655a7ce75287b06010171bce66af1a644aff81de9620a452457a5f65a9587'
++BASELINE_BYTES = 1652675
++MUTATOR_SHA = 'a896a8094be9b38f7ffa3a82cab15d340add0d7ab5f513340b2b7f916e489540'
+ CAPRUN_SHA = '4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2'
+ SCIENCE = {
+     'authority.py': '2a274ac4cf866762bc1f2734b3af8d515ff7be93c0fe0d4500e56dbca2ef093b',
+@@ -30,9 +34,9 @@
+ LIMITS = {'wall_seconds': '600', 'cpu_seconds': '500', 'memory_bytes': '2147483648',
+           'aggregate_bytes': '16777216'}
+ PROFILES = {'control': [5, 3, 2147483648], 'dummy': [5, 3, 33554432],
+-            'produce': [300, 239, 2147483648], 'check': [210, 169, 2147483648]}
++            'mutate': [10, 9, 2147483648], 'check': [210, 169, 2147483648]}
+ LABELS = ('refuse-status', 'refuse-caps', 'refuse-inventory', 'refuse-source', 'refuse-hash',
+-          'valid', 'startup-produce', 'startup-check', 'dummy', 'produce', 'check')
++          'valid', 'startup-produce', 'startup-check', 'dummy', 'mutate', 'check6', 'check10')
+ ENV = {'PATH': '/usr/bin:/bin', 'LANG': 'C', 'LC_ALL': 'C', 'TZ': 'UTC'}
+ TOTAL, PACKET, META = 16777216, 15728640, 1048576
+ 
+@@ -152,8 +156,8 @@
+         self.path = immutable(name); self.root_sha = sha(self.path); self.r = load(self.path)
+         need(stat.S_IMODE(self.path.stat().st_mode) == 0o444, 'ROOT registration 0444')
+         r = self.r
+-        need(r.get('schema') == 'f10-r2-runtime/v1' and r.get('enabled') is True, 'disabled ROOT registration')
+-        need(r['jobtag'] == JOB and r['exclusive_no_concurrent_writer'] is True, 'job/exclusivity')
++        need(r.get('schema') == 'f10-r2-semantic-runtime/v1' and r.get('enabled') is True, 'disabled ROOT registration')
++        need(r['jobtag'] == CONTROL_JOB and r['exclusive_no_concurrent_writer'] is True, 'job/exclusivity')
+         need(r['limits'] == LIMITS and r['profiles'] == PROFILES, 'fixed cap profiles')
+         need(r['environment'] == ENV and dict(os.environ) == ENV, 'ROOT clear environment required')
+         need(type(r['uid']) is int and type(r['gid']) is int and r['uid'] > 0 and r['gid'] > 0, 'science UID/GID')
+@@ -169,7 +173,7 @@
+         need((self.cg / 'memory.max').read_text().strip() == LIMITS['memory_bytes'], 'outer cgroup memory cap')
+         self.cpu_start = self.cpu()
+         self.files = {k: immutable(v, k not in ('python', 'setpriv')) for k, v in r['files'].items()}
+-        need(set(self.files) == {'python', 'setpriv', 'caprun', 'dispatcher', 'probe'}, 'exact wrapper roles')
++        need(set(self.files) == {'python', 'setpriv', 'caprun', 'dispatcher', 'probe', 'mutator', 'baseline'}, 'exact wrapper roles')
+         need(str(self.files['python']) == os.path.realpath(sys.executable), 'interpreter')
+         need(self.files['dispatcher'] == pathlib.Path(__file__).resolve(), 'dispatcher identity')
+         self.source = directory(r['science_dir'], 0o755)
+@@ -177,12 +181,18 @@
+         need(self.source != self.wrapper and os.getcwd() == str(self.wrapper), 'separate wrapper cwd')
+         need(self.files['dispatcher'].parent == self.wrapper and self.files['probe'].parent == self.wrapper,
+              'exact wrapper siblings')
++        need(self.files['mutator'] == self.wrapper / 'mutate_controls.py', 'exact mutator role')
++        need(stat.S_IMODE(self.files['mutator'].stat().st_mode) == 0o444
++             and stat.S_IMODE(self.files['baseline'].stat().st_mode) == 0o444, 'mutator/baseline 0444')
+         outer = [str(self.files['python']), '-I', '-S', '-B', str(self.files['dispatcher']), '--registration', str(self.path)]
+         need(r['outer_argv'] == outer and identity(os.getpid())['argv'] == outer, 'literal ROOT argv')
+         self.pins = r['pins']
+         for p in self.files.values():
+             need(str(p) in self.pins, 'role path pin')
+         need(self.pins[str(self.files['caprun'])] == CAPRUN_SHA, 'unchanged CAPRUN')
++        need(self.pins[str(self.files['baseline'])] == BASELINE_SHA
++             and self.files['baseline'].stat().st_size == BASELINE_BYTES, 'exact baseline binding')
++        need(self.pins[str(self.files['mutator'])] == MUTATOR_SHA, 'ROOT final mutator pin required')
+         for name, h in SCIENCE.items():
+             need(self.pins.get(str(self.source / name)) == h, 'actual science role pin: ' + name)
+         self.native_path = immutable(r['native_manifest'])
+@@ -203,6 +213,10 @@
+         need(mount_type(self.mount) == (str(self.mount), 'tmpfs'), 'exact tmpfs')
+         self.mount_id = (self.mount.stat().st_dev, self.mount.stat().st_ino)
+         need(self.source != self.mount and self.mount not in self.source.parents and self.mount not in self.wrapper.parents, 'code outside outputs')
++        need(all(p != self.mount and self.mount not in p.parents for p in
++                 list(self.files.values()) + [self.path, self.native_path]), 'all code/baseline/native/registration outside tmpfs')
++        need(all(pathlib.Path(p) != self.mount and self.mount not in pathlib.Path(p).parents
++                 for p in self.native['files']), 'native files outside tmpfs')
+         for fd in (1, 2):
+             need(os.fstat(fd).st_dev == self.mount_id[0] and stat.S_ISREG(os.fstat(fd).st_mode), 'outer streams on working tmpfs')
+             stream = self.mount / ('outer.stdout' if fd == 1 else 'outer.stderr')
+@@ -214,8 +228,8 @@
+         self.end = self.deadline(r['mathematical_deadline_utc'])
+         self.task_end = self.deadline(r['task_deadline_utc'])
+         need(now() < self.end < self.task_end, 'original deadlines')
+-        need(set(r['commands']) == set(LABELS), 'exact eleven command registrations')
+-        self.runs = []; self.used_labels = set()
++        need(set(r['commands']) == set(LABELS), 'exact twelve command registrations')
++        self.runs = []; self.used_labels = set(); self.fixture_pins = {}
+         self.revalidate(); self.group_quiet()
+ 
+     def deadline(self, value):
+@@ -232,6 +246,15 @@
+ 
+     def revalidate(self):
+         need(sha(self.path) == self.root_sha, 'ROOT registration drift')
++        need(all(stat.S_IMODE(self.files[k].stat().st_mode) == 0o444 for k in ('mutator', 'baseline')),
++             'current mutator/baseline 0444')
++        for p, h in self.fixture_pins.items():
++            need(sha(immutable(p)) == h and stat.S_IMODE(pathlib.Path(p).stat().st_mode) == 0o444,
++                 'frozen fixture/receipt drift')
++        if self.fixture_pins:
++            directory(self.frozen, 0o555)
++            need(set(p.name for p in self.frozen.iterdir()) == {'mutated6.json', 'mutated10.json', 'mutate.receipt.json'},
++                 'exact frozen semantic inventory')
+         need(socket.gethostname() == self.r['hostname']
+              and pathlib.Path('/sys/class/dmi/id/board_asset_tag').read_text().strip() == self.r['instance_id']
+              and pathlib.Path('/proc/sys/kernel/random/boot_id').read_text().strip() == self.r['boot_id']
+@@ -239,7 +262,7 @@
+         need(pathlib.Path('/proc/self/cgroup').read_text().strip() == '0::' + str(self.cg)[len('/sys/fs/cgroup'):]
+              and (self.cg / 'memory.max').read_text().strip() == LIMITS['memory_bytes'], 'current cgroup/cap')
+         need(set(p.name for p in self.source.iterdir()) == set(SCIENCE), 'EXACT five-file science directory')
+-        need(set(p.name for p in self.wrapper.iterdir()) == {'dispatch.py', 'probe.py'}, 'EXACT two-file wrapper directory')
++        need(set(p.name for p in self.wrapper.iterdir()) == {'dispatch.py', 'probe.py', 'mutate_controls.py'}, 'EXACT three-file wrapper directory')
+         directory(self.source, 0o755); directory(self.wrapper, 0o755)
+         for p, h in list(self.pins.items()) + list(self.native['files'].items()):
+             need(re.fullmatch(r'[0-9a-f]{64}', h) and sha(immutable(p, p not in self.native['files'] and p not in (str(self.files['python']), str(self.files['setpriv'])))) == h, 'current pin')
+@@ -285,7 +308,8 @@
+ 
+     def size_budget(self):
+         metadata = 0
+-        packet_paths = {self.writer / 'produce.payload', self.frozen / 'artifact.json'}
++        packet_paths = {d / n for d in (self.writer, self.frozen) for n in ('mutated6.json', 'mutated10.json')}
++        packet_bytes = 0
+         for parent, dirs, names in os.walk(self.mount, followlinks=False):
+             need(all(not (pathlib.Path(parent) / d).is_symlink() for d in dirs), 'output directory symlink')
+             for name in names:
+@@ -294,9 +318,11 @@
+                 size = p.stat().st_size
+                 if p in packet_paths:
+                     need(size <= PACKET, '15MiB packet cap')
++                    packet_bytes += size
+                 else:
+                     metadata += size
+         need(metadata <= META, '1MiB metadata reserve exceeded')
++        need(packet_bytes <= TOTAL - META, 'combined fixture metadata reserve')
+ 
+     def authorize(self, label):
+         obj = {'job_tag': JOB, 'status': 'REGISTERED', 'authority': 'ROOT-CAPRUN',
+@@ -322,12 +348,23 @@
+         target = input_path if input_path is not None else payload
+         tail = ['--registered-job', tag, '--authorization', str(auth), '--authorization-sha256', supplied,
+                 '--input' if role == 'check' else '--output', str(target)]
+-        if role == 'probe':
++        if role == 'mutate':
++            need(input_path == self.files['baseline'], 'mutator baseline role')
++            script = [str(self.files['mutator']), '--registered-job', CONTROL_JOB,
++                      '--root-registration-sha256', self.root_sha,
++                      '--self-sha256', self.pins[str(self.files['mutator'])],
++                      '--checker', str(self.source / 'check.py'),
++                      '--checker-arithmetic', str(self.source / 'check_arithmetic.py'),
++                      '--input', str(input_path), '--output6', str(self.writer / 'mutated6.json'),
++                      '--output10', str(self.writer / 'mutated10.json'),
++                      '--receipt', str(self.writer / 'mutate.receipt.json')]
++            need(len(script) == 19, 'literal mutator sys.argv count')
++        elif role == 'probe':
+             script = [str(self.files['probe']), '--science-dir', str(self.source), '--mode',
+                       'dummy' if label == 'dummy' else 'authorize', '--'] + tail
+         else:
+             script = [str(self.source / ('produce.py' if role == 'produce' else 'check.py'))] + tail
+-        py = [str(self.files['python']), '-E', '-s', '-S', '-B'] + script
++        py = [str(self.files['python'])] + (['-I', '-S', '-B'] if role == 'mutate' else ['-E', '-s', '-S', '-B']) + script
+         child = [str(self.files['setpriv']), '--reuid', str(self.r['uid']), '--regid', str(self.r['gid']),
+                  '--clear-groups', '--no-new-privs', '--'] + py
+         out, err, tel = [self.mount / (label + suffix) for suffix in ('.stdout', '.stderr', '.telemetry.json')]
+@@ -336,7 +373,22 @@
+                    '--rss-sample-seconds', '0.05', '--term-grace-seconds', '1',
+                    '--stdout-file', str(out), '--stderr-file', str(err), '--telemetry-file', str(tel),
+                    '--cwd', str(self.source), '--'] + child
+-        need(command == self.r['commands'][label], 'literal ROOT CAPRUN argv mismatch')
++        registered = self.r['commands'][label]
++        need(type(registered) is list and all(type(x) is str for x in registered), 'registered command strings')
++        token = 'ROOT_REGISTRATION_SHA256'
++        if label == 'mutate':
++            # Exactly one typed self-hash hole avoids putting a file's final
++            # SHA inside that same hashed file. No shell/general expansion.
++            need(registered.count('--root-registration-sha256') == 1
++                 and registered.count(token) == 1, 'exact ROOT hash token count')
++            index = registered.index('--root-registration-sha256') + 1
++            need(index < len(registered) and registered[index] == token,
++                 'ROOT hash token only at typed mutator argument')
++            registered = list(registered)
++            registered[index] = self.root_sha
++        else:
++            need(token not in registered, 'ROOT hash token forbidden outside mutator')
++        need(command == registered, 'literal expanded ROOT CAPRUN argv mismatch')
+         input_hash = sha(immutable(input_path)) if input_path is not None else None
+         emit(self.mount / (label + '.pre.json'), {'utc': now().isoformat(), 'root_sha256': self.root_sha,
+              'authorization_sha256': digest, 'supplied_authorization_sha256': supplied,
+@@ -400,12 +452,106 @@
+                   'actual_python_live_observed': live is not None, 'runner_live_observed': runner is not None and runner['argv'] == command,
+                   'owned_group_quiet': True, 'status': t['status'], 'resource': t['resource'], 'input_sha256': input_hash}
+         emit(self.mount / (label + '.post.json'), record); self.runs.append(record)
+-        if label in ('produce', 'check'):
++        if label in ('mutate', 'check6', 'check10'):
+             need(live is not None and runner is not None and runner['argv'] == command, 'GAP: required live capture missed; no retry')
+         return t, out, err, payload
+ 
+     def normal(self, t, code):
+         need(t['status'] == 'NORMAL_EXIT' and t['resource'] is None and t['child_returncode'] == code, 'unexpected control/phase outcome')
++
++    def fixture_receipt(self):
++        # Metadata only: no fixture JSON or coefficient arithmetic is performed here.
++        path = self.writer / 'mutate.receipt.json'
++        need(path.is_file() and not path.is_symlink(), 'regular mutator receipt')
++        d = load(path, 32768)
++        need(type(d) is dict and set(d) == {'schema', 'status', 'science_outcome', 'job_tag',
++             'root_registration_sha256', 'sources', 'input', 'outputs', 'canonical_wire',
++             'inverse_edit_restores_whole_input_bytes', 'checker_run'}, 'exact receipt fields')
++        need(d['schema'] == 'f10-r2-controls6-10-fixtures/v1'
++             and d['status'] == 'TWO_FIXTURES_WRITTEN_UNCHECKED' and d['science_outcome'] == 'NONE'
++             and d['job_tag'] == CONTROL_JOB and d['root_registration_sha256'] == self.root_sha,
++             'receipt non-verdict/root binding')
++        need(d['canonical_wire'] is True and d['inverse_edit_restores_whole_input_bytes'] is True
++             and d['checker_run'] is False, 'literal unchecked restoration assertions')
++        need(d['sources'] == {str(self.files['mutator']): MUTATOR_SHA,
++             str(self.source / 'check.py'): SCIENCE['check.py'],
++             str(self.source / 'check_arithmetic.py'): SCIENCE['check_arithmetic.py']}, 'receipt source pins')
++        need(type(d['input']) is dict and d['input'] == {'path': str(self.files['baseline']),
++             'sha256': BASELINE_SHA, 'bytes': BASELINE_BYTES}
++             and type(d['input']['bytes']) is int, 'receipt original baseline')
++        outputs = d['outputs']
++        need(type(outputs) is list and len(outputs) == 2, 'exact two fixture records')
++        seen = {BASELINE_SHA}
++        for record, control in zip(outputs, (6, 10)):
++            extra = {'mutation', 'gap', 'old_subtree_sha256', 'old_terms'} if control == 6 else {'selection'}
++            need(type(record) is dict and set(record) == {'control', 'path', 'sha256', 'bytes'} | extra,
++                 'exact fixture record fields')
++            p = self.writer / ('mutated' + str(control) + '.json')
++            need(type(record['control']) is int and record['control'] == control and record['path'] == str(p),
++                 'ordered fixture/path binding')
++            need(type(record['bytes']) is int and 0 < record['bytes'] <= PACKET
++                 and type(record['sha256']) is str and re.fullmatch(r'[0-9a-f]{64}', record['sha256']), 'fixture hash/size types')
++            need(p.is_file() and not p.is_symlink() and p.stat().st_size == record['bytes']
++                 and sha(p) == record['sha256'] and record['sha256'] not in seen, 'actual changed fixture readback')
++            seen.add(record['sha256'])
++        r6, r10 = outputs
++        need(r6['mutation'] == 'bands[6].B_var := []' and r6['gap'] == '7'
++             and type(r6['old_terms']) is int and 1 <= r6['old_terms'] <= 4096
++             and type(r6['old_subtree_sha256']) is str and re.fullmatch(r'[0-9a-f]{64}', r6['old_subtree_sha256']),
++             'control6 literal changed subtree metadata')
++        sel = r10['selection']
++        need(type(sel) is dict and set(sel) == {'family', 'row', 'term', 'basis', 'exponents',
++             'old', 'new', 'fallback', 'term_deleted'}, 'exact selection fields')
++        need(type(sel['family']) is str and sel['family'] in ('Psi', 'K1', 'K0'), 'selection family')
++        for name, ceiling in (('row', {'Psi': 2, 'K1': 6, 'K0': 8}[sel['family']]), ('term', 4095), ('basis', 6)):
++            need(type(sel[name]) is int and 0 <= sel[name] <= ceiling, 'selection index bound')
++        need(type(sel['exponents']) is list and len(sel['exponents']) == 6
++             and all(type(x) is str and x in tuple(str(i) for i in range(17)) for x in sel['exponents']), 'selection exponents')
++        for name in ('old', 'new'):
++            value = sel[name]
++            need(type(value) is str and len(value) <= 8194
++                 and re.fullmatch(r'(?:0|-?[1-9][0-9]{0,4095})/[1-9][0-9]{0,4095}', value), 'bounded rational STRING metadata')
++        need(sel['old'] != sel['new'] and type(sel['term_deleted']) is bool, 'nonidentical coefficient metadata')
++        if sel['fallback'] is not None:
++            need(sel == {'family': 'Psi', 'row': 0, 'term': 0, 'basis': 0, 'exponents': ['0'] * 6,
++                 'old': '0/1', 'new': '1/1', 'fallback': 'insert constant term into empty first Psi',
++                 'term_deleted': False}, 'literal zero-row fallback')
++        elif sel['term_deleted']:
++            need(sel['old'] == '-1/1' and sel['new'] == '0/1', 'deleted term selection metadata')
++        need(set(p.name for p in self.writer.iterdir()) == {'valid.payload', 'dummy.payload',
++             'mutated6.json', 'mutated10.json', 'mutate.receipt.json'}, 'exact writer inventory after mutator')
++        self.size_budget()
++        return d
++
++    def traceback(self, path, control, family):
++        need(path.stat().st_size <= 8192, 'bounded semantic traceback')
++        text = path.read_bytes().decode('ascii')
++        lines = text.splitlines(keepends=True)
++        check, arithmetic = str(self.source / 'check.py'), str(self.source / 'check_arithmetic.py')
++        frames = [(check, 416, '<module>', 'main()'), (check, 412, 'main', 'print(check_file(path))')]
++        if control == 6:
++            frames += [(check, 329, 'check_file', 'col = residual_pair(sub(oper(h, avar, vvar), tvar))'),
++                       (check, 216, 'residual_pair', "raise ValueError('upper band residual')")]
++            final = 'ValueError: upper band residual\n'
++        else:
++            need(family in ('Psi', 'K1', 'K0'), 'traceback selected family')
++            if family == 'Psi':
++                frames += [(check, 376, 'check_file', "eq([poly(v) for v in array(doc['rows']['Psi'], 3)], psis, 'all three Psi slots')")]
++                final = 'ValueError: CHECK FAILED: all three Psi slots\n'
++            else:
++                frames += [(check, 383, 'check_file', "eq(actual, low[i], 'literal retained K coefficient')")]
++                final = 'ValueError: CHECK FAILED: literal retained K coefficient\n'
++            frames += [(arithmetic, 208, 'require', "raise ValueError('CHECK FAILED: ' + label)")]
++        need(lines and lines[0] == 'Traceback (most recent call last):\n', 'literal traceback header')
++        index = 1
++        for file, number, function, statement in frames:
++            wanted = ['  File "' + file + '", line ' + str(number) + ', in ' + function + '\n', '    ' + statement + '\n']
++            need(lines[index:index + 2] == wanted, 'exact ordered semantic traceback frame/source')
++            index += 2
++            if index < len(lines) and len(lines[index]) <= 512 and re.fullmatch(r' +[~^]*\^[~^]*\n', lines[index]):
++                index += 1
++        need(lines[index:] == [final], 'exact traceback final; no extra/chain/frame text')
++        return final.rstrip('\n')
+ 
+     def execute(self):
+         reasons = {'status': 'no registered ROOT CAPRUN contract', 'caps': 'registered limits/source inventory',
+@@ -439,23 +585,41 @@
+              and events[0]['identity']['pid'] == t['pid'] and events[1]['identity']['pid'] != t['pid'], 'dummy parent/descendant identity')
+         need(all(e['identity']['pgid'] == t['pgid'] and e['identity']['pid_namespace'] == self.r['pid_namespace'] for e in events)
+              and t['max_observed_group_rss_bytes'] > 33554432, 'dummy actual group RSS')
+-        t, out, err, packet = self.run('produce', 'produce', 'produce')
++        need(set(p.name for p in self.writer.iterdir()) == {'valid.payload', 'dummy.payload'}, 'fresh mutator outputs')
++        t, out, err, ignored = self.run('mutate', 'mutate', 'mutate', self.files['baseline'])
+         self.normal(t, 0)
+-        need(out.read_bytes() == b'FORMED_UNCHECKED_19_ROWS_NO_SOURCE_OUTCOME\n' and err.read_bytes() == b'', 'producer literal verdict')
+-        need(packet.is_file() and not packet.is_symlink() and 0 < packet.stat().st_size <= PACKET, 'formed packet size')
+-        digest = sha(packet); target = self.frozen / 'artifact.json'
+-        need(not target.exists(), 'fresh frozen target')
+-        os.rename(packet, target); os.chown(target, 0, 0); os.chmod(target, 0o444)
+-        syncdir(self.writer); syncdir(self.frozen); os.chmod(self.frozen, 0o555)
+-        need(sha(immutable(target)) == digest, 'move/freeze identity')
+-        t, out, err, ignored = self.run('check', 'check', 'check', target)
+-        self.normal(t, 0)
+-        need(out.read_bytes() == b'CHECKED_STATIC_CONTRACT_19_ROWS_32_RESIDUALS_80_SLOTS_NO_SOURCE_OUTCOME\n'
+-             and err.read_bytes() == b'', 'independent checker literal verdict')
+-        result = {'status': 'RECONSTRUCTION_CHECKED_NO_SOURCE_OUTCOME', 'input_sha256': digest,
+-                  'checker_stdout_sha256': sha(out), 'science_pins': SCIENCE, 'root_registration_sha256': self.root_sha,
++        need(out.read_bytes() == err.read_bytes() == b'', 'mutator silent unchecked exit')
++        receipt = self.fixture_receipt()
++        # Both independent fixtures and their metadata become root-owned and
++        # immutable BEFORE either checker. No coefficient payload is loaded.
++        for name in ('mutated6.json', 'mutated10.json', 'mutate.receipt.json'):
++            source, target = self.writer / name, self.frozen / name
++            need(not target.exists(), 'fresh frozen semantic target')
++            digest = sha(source)
++            os.rename(source, target); os.chown(target, 0, 0); os.chmod(target, 0o444)
++            with open(target, 'rb') as f:
++                os.fsync(f.fileno())
++            need(sha(immutable(target)) == digest, 'semantic move/freeze identity')
++            self.fixture_pins[str(target)] = digest
++        syncdir(self.writer); os.chmod(self.frozen, 0o555); syncdir(self.frozen); syncdir(self.mount)
++        self.revalidate()
++        outcomes = []
++        for control in (6, 10):
++            target = self.frozen / ('mutated' + str(control) + '.json')
++            t, out, err, ignored = self.run('check' + str(control), 'check', 'check', target)
++            self.normal(t, 1)
++            need(t['child_signal'] is None and t['child_exit_code'] == 1 and out.read_bytes() == b'', 'semantic normal exit1/empty stdout')
++            reason = self.traceback(err, control, receipt['outputs'][1]['selection']['family'])
++            outcomes.append({'control': control, 'input_sha256': sha(target), 'reason': reason,
++                             'stderr_sha256': sha(err), 'stdout_bytes': 0})
++        need(tuple(run['label'] for run in self.runs) == LABELS, 'exact completed twelve-child sequence')
++        result = {'status': 'TWO_SEMANTIC_REJECTIONS_CONFIRMED', 'science_outcome': 'NONE',
++                  'baseline_sha256': BASELINE_SHA, 'mutator_sha256': MUTATOR_SHA,
++                  'receipt_sha256': self.fixture_pins[str(self.frozen / 'mutate.receipt.json')],
++                  'outcomes': outcomes, 'other_thirteen_science_controls': 'NOT_RUN',
++                  'positive_producer_checker_rerun': False, 'science_pins': SCIENCE, 'root_registration_sha256': self.root_sha,
+                   'joint_wall_seconds': time.monotonic() - self.begin, 'joint_cgroup_cpu_seconds': self.cpu() - self.cpu_start}
+-        emit(self.mount / 'checker-binding.json', result)
++        emit(self.mount / 'semantic-binding.json', result)
+         return result
+ 
+     def durable_copy(self, result):
+@@ -502,7 +666,7 @@
+         return 2
+     # ROOT reads durable custody only after this writer is terminal. No output
+     # after successful copy; no deletion, unmount, retry or worker-stop here.
+-    return 0 if result['status'] == 'RECONSTRUCTION_CHECKED_NO_SOURCE_OUTCOME' else 2
++    return 0 if result['status'] == 'TWO_SEMANTIC_REJECTIONS_CONFIRMED' else 2
+ 
+ 
+ if __name__ == '__main__':

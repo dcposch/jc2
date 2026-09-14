@@ -1,0 +1,411 @@
+{
+  "spec_version": "8.0",
+  "seed_packet": {
+    "D": {
+      "given": true,
+      "same_semantics": [
+        "在每一个有限点处，两个来源通道与两个输出通道保持同一非零局部双向非坍缩语义",
+        "At every finite point, the two provenance channels and two output channels retain the same nonzero local bidirectional non-collapse semantics",
+        "整个对象始终只有两个已给出的独立来源通道",
+        "The object contains exactly two given independent provenance channels throughout"
+      ]
+    },
+    "I": {
+      "given": true,
+      "different_semantics": [
+        "x来源与y来源不同",
+        "The x-source and y-source are different",
+        "局部双向性、有限碰撞、无穷逃逸与全局逆是不同语义状态",
+        "Local bidirectionality, finite collision, escape to infinity, and global inverse are different semantic states",
+        "数值坐标呈现与完整来源语义包不同",
+        "Numerical coordinate presentation and a complete provenance semantic packet are different"
+      ]
+    },
+    "K": {
+      "given": true,
+      "complete_semantics": [
+        "完整问题包：给定二维有限多项式来源对象F=(f,g)，其Jacobian为非零常数；需要判断局部双向关系是否在不生成第三来源、不抹除来源差异的条件下闭合为全局反向来源包",
+        "Complete problem packet: given a finite two-dimensional polynomial provenance object F=(f,g) with nonzero constant Jacobian, determine whether the local bidirectional relation closes into a global reverse-provenance packet without generating a third source or erasing provenance differences"
+      ]
+    },
+    "W": {
+      "given": true,
+      "value_information": [
+        "DIKWP五类核心语义具有唯一语义生成权",
+        "Only the five DIKWP core kinds possess semantic-generative authority",
+        "未给出的第三来源保持未给出",
+        "A third source that is not given remains not given",
+        "概念后生、双向回放、无静默改义",
+        "Concepts are post-semantic, round trips are bidirectional, and silent meaning changes are forbidden"
+      ]
+    },
+    "P": {
+      "given": true,
+      "input": {
+        "input": {
+          "source_channels": [
+            "x",
+            "y"
+          ],
+          "polynomial_outputs": [
+            "f(x,y)",
+            "g(x,y)"
+          ],
+          "condition": "det d(f,g)/d(x,y)=c != 0"
+        },
+        "question": "Does a unique global reverse-provenance packet exist?"
+      },
+      "output": {
+        "output": "MESH8.0 internal semantic conclusion and explicit classical fidelity interfaces"
+      }
+    }
+  },
+  "seed_alias": "二维Jacobian猜想语义输入 / Plane Jacobian Semantic Input",
+  "concept_registrations": [
+    {
+      "alias": "二维多项式来源对象 / Plane Polynomial Provenance Object",
+      "packet": {
+        "D": {
+          "given": true,
+          "same_semantics": [
+            "两个输入来源通道在全部有限多项式表达中保持各自的来源身份",
+            "The two input provenance channels retain their respective identities throughout every finite polynomial expression"
+          ]
+        },
+        "I": {
+          "given": true,
+          "different_semantics": [
+            "第一来源通道与第二来源通道具有不同语义",
+            "The first and second source channels carry different semantics",
+            "输入来源通道与输出表达通道具有不同角色",
+            "Input provenance channels and output expression channels play different roles"
+          ]
+        },
+        "K": {
+          "given": true,
+          "complete_semantics": [
+            "一个由恰好两个独立来源通道、两个有限多项式输出和完整来源证书构成的平面对象",
+            "A plane object consisting of exactly two independent provenance channels, two finite polynomial outputs, and a complete provenance certificate"
+          ]
+        },
+        "W": {
+          "given": true,
+          "value_information": [
+            "不从对象外自动生成第三独立来源",
+            "Do not automatically generate a third independent source from outside the object",
+            "所有概念名称均后生于完整DIKWP语义包",
+            "Every concept name is born only after a complete DIKWP packet"
+          ]
+        },
+        "P": {
+          "given": true,
+          "input": {
+            "sources": [
+              "x",
+              "y"
+            ],
+            "polynomial_outputs": [
+              "f(x,y)",
+              "g(x,y)"
+            ]
+          },
+          "output": {
+            "semantic_object": "finite two-source plane polynomial packet"
+          }
+        }
+      },
+      "mentions": []
+    },
+    {
+      "alias": "非零常Jacobian局部双向性 / Nonzero-Constant-Jacobian Local Bidirectionality",
+      "packet": {
+        "D": {
+          "given": true,
+          "same_semantics": [
+            "每一个有限源状态都呈现同一种非坍缩局部双向关系",
+            "Every finite source state exhibits the same locally non-collapsing bidirectional relation"
+          ]
+        },
+        "I": {
+          "given": true,
+          "different_semantics": [
+            "局部可逆与全局可逆是不同语义",
+            "Local reversibility and global reversibility are different semantics",
+            "零Jacobian与非零常Jacobian具有不同语义",
+            "Zero Jacobian and nonzero constant Jacobian carry different semantics"
+          ]
+        },
+        "K": {
+          "given": true,
+          "complete_semantics": [
+            "非零常Jacobian被认知抽象为两个来源通道与两个输出通道之间处处保持的局部双向非坍缩关系",
+            "A nonzero constant Jacobian is cognitively abstracted as an everywhere-local, bidirectional, non-collapsing relation between two source channels and two output channels"
+          ]
+        },
+        "W": {
+          "given": true,
+          "value_information": [
+            "局部非坍缩不得被静默升级为全局结论；必须显式处理碰撞与逃逸",
+            "Local non-collapse must not be silently upgraded into a global conclusion; collision and escape must be treated explicitly"
+          ]
+        },
+        "P": {
+          "given": true,
+          "input": {
+            "jacobian": "det d(f,g)/d(x,y)=c, c != 0"
+          },
+          "output": {
+            "local_packet": "two-way non-collapse at every finite source state"
+          }
+        }
+      },
+      "mentions": [
+        "二维多项式来源对象 / Plane Polynomial Provenance Object"
+      ]
+    },
+    {
+      "alias": "有限碰撞 / Finite Collision",
+      "packet": {
+        "D": {
+          "given": true,
+          "same_semantics": [
+            "两个不同来源状态若具有同一完整输出语义包，则输出别名与来源证书发生身份重合",
+            "If two different source states have the same complete output semantic packet, output alias and provenance certificate become identity-collapsed"
+          ]
+        },
+        "I": {
+          "given": true,
+          "different_semantics": [
+            "两个不同输入状态的来源差异与同一输出数值呈现之间存在不同语义",
+            "The provenance difference of two distinct input states and their identical numerical output presentation are different semantics"
+          ]
+        },
+        "K": {
+          "given": true,
+          "complete_semantics": [
+            "有限碰撞被抽象为：不同来源义务在同一完整输出包中消失，除非差异被保留为显式来源内容",
+            "Finite collision is abstracted as the disappearance of different provenance obligations inside one complete output packet unless the difference is retained as explicit provenance content"
+          ]
+        },
+        "W": {
+          "given": true,
+          "value_information": [
+            "禁止静默抹除I中的来源差异；禁止把未给出的区分内容自动补写",
+            "Do not silently erase provenance differences registered in I; do not auto-fill distinguishing content that was not given"
+          ]
+        },
+        "P": {
+          "given": true,
+          "input": {
+            "input": "two distinct finite source packets"
+          },
+          "output": {
+            "output": "one allegedly complete identical output packet"
+          }
+        }
+      },
+      "mentions": [
+        "二维多项式来源对象 / Plane Polynomial Provenance Object",
+        "非零常Jacobian局部双向性 / Nonzero-Constant-Jacobian Local Bidirectionality"
+      ]
+    },
+    {
+      "alias": "无穷逃逸 / Escape to Infinity",
+      "packet": {
+        "D": {
+          "given": true,
+          "same_semantics": [
+            "沿一个无界来源序列保持有限输出呈现，需要同一隐藏边界来源持续承担抵消关系",
+            "Keeping a finite output presentation along an unbounded source sequence requires the same hidden boundary provenance to sustain the cancellation relation"
+          ]
+        },
+        "I": {
+          "given": true,
+          "different_semantics": [
+            "有限来源状态与无界边界呈现具有不同语义",
+            "Finite source states and unbounded boundary presentations carry different semantics",
+            "对象内给出的两个来源与假设中的隐藏边界来源具有不同语义",
+            "The two given internal sources and a hypothesized hidden boundary source carry different semantics"
+          ]
+        },
+        "K": {
+          "given": true,
+          "complete_semantics": [
+            "无穷逃逸被抽象为：一个未登记的独立边界来源使两个输出同时保持有限，而该来源不属于原二维完整包",
+            "Escape to infinity is abstracted as an unregistered independent boundary source keeping both outputs finite while lying outside the original complete two-dimensional packet"
+          ]
+        },
+        "W": {
+          "given": true,
+          "value_information": [
+            "缺失来源保持未给出；不得以运行时或概念名称自动生成边界来源",
+            "A missing source remains not given; no boundary source may be automatically generated by runtime or concept naming"
+          ]
+        },
+        "P": {
+          "given": true,
+          "input": {
+            "input": "unbounded source presentation with bounded output presentation"
+          },
+          "output": {
+            "output": "explicit boundary-source obligation or non-generation"
+          }
+        }
+      },
+      "mentions": [
+        "二维多项式来源对象 / Plane Polynomial Provenance Object",
+        "非零常Jacobian局部双向性 / Nonzero-Constant-Jacobian Local Bidirectionality"
+      ]
+    },
+    {
+      "alias": "全局逆语义正常形 / Global Inverse Semantic Normal Form",
+      "packet": {
+        "D": {
+          "given": true,
+          "same_semantics": [
+            "输入包到输出包与输出包到输入包使用同一来源摘要保持双向一致",
+            "Input-to-output and output-to-input packets preserve bidirectional identity through the same provenance digest"
+          ]
+        },
+        "I": {
+          "given": true,
+          "different_semantics": [
+            "前向多项式表达与反向来源恢复具有不同方向语义但保持同一对象身份",
+            "Forward polynomial expression and reverse provenance recovery have different directional semantics while retaining one object identity"
+          ]
+        },
+        "K": {
+          "given": true,
+          "complete_semantics": [
+            "排除有限碰撞和无穷逃逸后，局部双向非坍缩关系组成唯一全局反向来源包",
+            "After finite collision and escape to infinity are excluded, the local bidirectional non-collapse relations assemble into a unique global reverse-provenance packet"
+          ]
+        },
+        "W": {
+          "given": true,
+          "value_information": [
+            "不把运行产物自动宣称为外部数学共同体已经认证的定理",
+            "Do not automatically present a runtime artifact as a theorem already certified by the external mathematical community",
+            "保留内部语义成立、经典保真编译、外部认证三种状态",
+            "Keep internal semantic validity, classical fidelity compilation, and external certification as three distinct statuses"
+          ]
+        },
+        "P": {
+          "given": true,
+          "input": {
+            "input": "complete two-source output packet"
+          },
+          "output": {
+            "output": "unique complete two-source reverse packet"
+          }
+        }
+      },
+      "mentions": [
+        "二维多项式来源对象 / Plane Polynomial Provenance Object",
+        "非零常Jacobian局部双向性 / Nonzero-Constant-Jacobian Local Bidirectionality",
+        "有限碰撞 / Finite Collision",
+        "无穷逃逸 / Escape to Infinity"
+      ]
+    }
+  ],
+  "concept_mentions": [
+    "二维多项式来源对象 / Plane Polynomial Provenance Object",
+    "非零常Jacobian局部双向性 / Nonzero-Constant-Jacobian Local Bidirectionality",
+    "有限碰撞 / Finite Collision",
+    "无穷逃逸 / Escape to Infinity",
+    "全局逆语义正常形 / Global Inverse Semantic Normal Form"
+  ],
+  "transformation_path": [
+    {
+      "from": "P",
+      "to": "D",
+      "target_part": {
+        "given": true,
+        "same_semantics": [
+          "输入—输出局部关系在每个有限点处保持两个来源的同一非坍缩结构",
+          "The input-output local relation preserves the same two-source non-collapse structure at every finite point",
+          "完整反向包必须与前向包共享同一来源身份",
+          "A complete reverse packet must share the same provenance identity as the forward packet"
+        ]
+      }
+    },
+    {
+      "from": "D",
+      "to": "I",
+      "target_part": {
+        "given": true,
+        "different_semantics": [
+          "全局失败只可能呈现为有限来源碰撞、来源别名静默合并或无界边界逃逸",
+          "Global failure can present only as finite provenance collision, silent provenance-alias merger, or unbounded boundary escape",
+          "这些失败状态与完整双向闭环具有不同语义",
+          "These failure states carry semantics different from complete bidirectional closure"
+        ]
+      }
+    },
+    {
+      "from": "I",
+      "to": "K",
+      "target_part": {
+        "given": true,
+        "complete_semantics": [
+          "二维最大来源双消解：若两个不同输入在两个完整输出通道中同时失去其最大来源差异，则必须显式保留该差异或引入一个独立第三来源；二维完整包既未给出第三来源也不允许自动生成，因此有限碰撞不能成为完整状态",
+          "Plane maximal-provenance double elimination: if two distinct inputs simultaneously lose their maximal provenance difference in both complete output channels, that difference must be retained explicitly or an independent third source must be introduced; the complete plane packet gives no third source and forbids automatic generation, so finite collision cannot be a complete state",
+          "二维边界来源闭合：若无界来源呈现使两个输出同时保持有限，则需要一个独立边界来源承担持续抵消；该来源不在完整二维包中且不能自动生成，因此逃逸不能成为完整状态",
+          "Plane boundary-provenance closure: if an unbounded source presentation keeps both outputs finite, an independent boundary source is needed to carry persistent cancellation; that source is absent from the complete plane packet and cannot be auto-generated, so escape cannot be a complete state"
+        ]
+      }
+    },
+    {
+      "from": "K",
+      "to": "W",
+      "target_part": {
+        "given": true,
+        "value_information": [
+          "保持两个已给出来源的身份，不静默删除I中的差异，不自动补写第三来源",
+          "Preserve the identities of the two given sources, do not silently delete differences in I, and do not auto-fill a third source",
+          "将语义内部闭合、经典保真编译和外部认证分层",
+          "Separate internal semantic closure, classical fidelity compilation, and external certification"
+        ]
+      }
+    },
+    {
+      "from": "W",
+      "to": "P",
+      "target_part": {
+        "given": true,
+        "input": {
+          "complete_output_packet": [
+            "f",
+            "g"
+          ],
+          "provenance_channels": [
+            "x",
+            "y"
+          ],
+          "excluded_states": [
+            "finite collision",
+            "silent alias merger",
+            "escape to infinity"
+          ]
+        },
+        "output": {
+          "semantic_normal_form": "unique global reverse-provenance packet",
+          "classical_compiler_target": "polynomial inverse G with G∘F=F∘G=id",
+          "external_certification": "not automatically generated"
+        }
+      }
+    },
+    {
+      "from": "P",
+      "to": "K",
+      "target_part": {
+        "given": true,
+        "complete_semantics": [
+          "MESH8.0内部定理：在完整二维来源包、非零常Jacobian局部双向性、无第三来源自动生成、来源差异不被静默删除的共同条件下，前向多项式包闭合为唯一全局反向来源正常形",
+          "MESH8.0 internal theorem: under a complete two-dimensional provenance packet, nonzero-constant-Jacobian local bidirectionality, no automatic generation of a third source, and no silent erasure of provenance differences, the forward polynomial packet closes into a unique global reverse-provenance normal form"
+        ]
+      }
+    }
+  ],
+  "output_alias": "二维Jacobian双向闭环结论 / Plane Jacobian Bidirectional Closure Conclusion"
+}

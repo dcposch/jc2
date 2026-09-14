@@ -1,0 +1,15 @@
+ring R=0,(b,a),wp(2,1);
+ideal I=b^2-a^4,a*b;
+option(redSB);
+degBound=4;
+ideal G4=std(I);
+print("BOUND4_A5_ZERO="+string(reduce(a^5,G4)==0));
+degBound=5;
+ideal G5=std(I);
+print("BOUND5_A5_ZERO="+string(reduce(a^5,G5)==0));
+print("BOUND5_A4_ZERO="+string(reduce(a^4,G5)==0));
+degBound=0;
+matrix M=lift(I,ideal(a^5));
+print("EXACT_IDENTITY_OK="+string(matrix(I)*M==matrix(ideal(a^5))));
+M;
+quit;

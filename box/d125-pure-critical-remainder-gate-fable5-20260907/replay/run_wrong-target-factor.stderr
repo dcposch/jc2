@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/jc2-gate-fable5-crit-scratch-2755099/box/d125-pure-critical-remainder-20260907/check.py", line 91, in <module>
+    else: print(json.dumps(check(mode),sort_keys=True,indent=2))
+                           ^^^^^^^^^^^
+  File "/tmp/jc2-gate-fable5-crit-scratch-2755099/box/d125-pure-critical-remainder-20260907/check.py", line 59, in check
+    need(mul(scale(one,targetfactor),scale(power(g,2),3))==scale(power(g,2),Q(-5,9)),'target factor after Jacobian division')
+  File "/tmp/jc2-gate-fable5-crit-scratch-2755099/box/d125-zero-k-deformation-discriminator-20260907/check.py", line 15, in need
+    if not ok: raise ValueError(msg)
+               ^^^^^^^^^^^^^^^^^^^^^
+ValueError: target factor after Jacobian division

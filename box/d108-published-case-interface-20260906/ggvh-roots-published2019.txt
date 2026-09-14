@@ -1,0 +1,1809 @@
+             The Jacobian conjecture:
+     Approximate roots and intersection numbers
+
+
+    Jorge A. Guccione,1,2 , Juan José Guccione1,3 ,
+      Rodrigo Horruitiner4 , Christian Valqui4,5
+
+                          October, 2018
+
+
+
+                              Abstract
+We compute the intersection number of a Jacobian pair in two different
+ways following Yansong Xu, but using the language of [5]. We obtain
+nearly the same formulas, but with an inequality instead of an equality.
+
+
+
+
+MSC(2010): Primary 14R15, Secondary 13F20.
+
+
+Keywords: Jacobian conjecture, Newton-Puisseux method.
+
+
+
+
+1
+  Departamento de Matemática, Facultad de Ciencias Exactas y Naturales -
+UBA.
+2
+  Instituto de Investigaciones Matemáticas “Luis A. Santaló”.
+3
+  Instituto Argentino de Matemáticas - CONICET.
+4
+  Pontificia Universidad Católica del Perú, Sección Matemáticas.
+5
+  Instituto de Matemáticas y Ciencias Afines (IMCA).
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+1     Introduction
+The Jacobian Conjecture in dimension two stated by Keller in [10] claims
+that any pair of polynomials P, Q ∈ L = K[x, y], with [P, Q] = ∂x P ∂y Q−
+∂x Q∂y P ∈ K × , defines an invertible automorphism of L. If this conjec-
+ture is false, then we can find a counterexample such that the shape of
+the support of the components P = f (x), Q = f (y) is contained in rect-
+angles (0, 0), m(a, 0), m(a, b), m(0, b) and (0, 0), n(a, 0), n(a, b), n(0, b),
+where m(a, b) is in the support of P and n(a, b) is in the support of Q. In
+a recent paper [14], Yangsong Xu gives two formulas for the intersection
+number of possible counterexamples, which we call IM and Im . If these
+formulas were true, we would be able to discard several infinite families
+of possible counterexamples as described in [7].
+     When we translated the result and proofs of [14] into the language
+of [12], we obtained the same formula for IM (Theorem 6.2), but for Im
+we achieved only an inequality (Theorem 7.3). Consequently, we cannot
+discard the infinite families as desired.
+     Hence, the main result of the present article is the translation of
+the concept of approximate roots into our language (see [12], also [5]
+and [7]), which requires a dictionary from Moh’s language into our own.
+This is interesting by itself, and the modified formulas help understand
+some features of Moh’s methods.
+     Along this paper we freely use the notation of [12].
+
+
+2     General lower side corners
+For l ∈ N let (P, Q) ∈ L(l) be an (m, n)-pair (see [12, Definition 4.3]).
+In this section we take (ρ, σ) ∈](0, −1), (1, 1)] subject to
+
+         1             1
+           enρ,σ (P ) = enρ,σ (Q) = (a/l, b)      with a/l > b > 0
+         m             n
+(assuming that such a direction exists). Note that ρ > 0 is true by
+assumption. Suppose up = vρ,σ (P ) > 0. Then the points (a/l, b) and
+
+
+52               Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+            1
+(c/l, d) =     stρ,σ (P ) must satisfy certain conditions. The purpose of
+            m
+this section is to analyse them.
+
+Proposition 2.1. For P , Q and (ρ, σ) as described above we have
+[`ρ,σ (P ), `ρ,σ (Q)] = 0.
+
+Proof. By [12, Proposition 1.13] we need to prove vρ,σ (P )+vρ,σ (Q) > ρ+
+                                                            n
+σ. If ρ + σ ≤ 0, then this is true, since we have vρ,σ (Q) = vρ,σ (P ) > 0;
+                                                            m
+                                   a
+while for ρ + σ > 0, because of > b ≥ 1 and ρ > 0, we have
+                                   l
+                                   a       
+  vρ,σ (P ) + vρ,σ (Q) = (m + n) ρ + σb > (m + n)b(ρ + σ) > ρ + σ,
+                                      l
+as desired.
+
+Proposition 2.2. Under the above assumptions, if ρ + σ > 0, then ρ
+divides l and there exist λ, µ ∈ K × such that `ρ,σ (P ) = λxup /ρ (z − µ)mb ,
+here z = x−σ/ρ y.
+
+Proof. By [12, Theorem 2.6], there exists a (ρ, σ)-homogeneous element
+F ∈ L(l) such that
+
+   • vρ,σ (F ) = ρ + σ,
+
+   • [F, `ρ,σ (P )] = `ρ,σ (P ),
+
+   • stρ,σ (P ) ∼ stρ,σ (F ) or stρ,σ (F ) = (1, 1),
+
+   • enρ,σ (P ) ∼ enρ,σ (F ) or enρ,σ (F ) = (1, 1).
+
+If enρ,σ (P ) = m(a/l, b) ∼ enρ,σ (F ), then we can find λ > 0 such that
+enρ,σ (F ) = λ(a/l, b). Therefore
+                                      a
+                ρ + σ = vρ,σ (F ) = ρλ + λσb > λb(ρ + σ)
+                                      l
+implies 0 < λb < 1, which is impossible since λb = v0,1 (enρ,σ (F )) ∈ Z.
+Consequently we have enρ,σ (F ) = (1, 1), and hence stρ,σ (F ) = (1 +
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                     53
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+σ/ρ, 0) by [12, Proposition 2.11(2)]. Thus ρ divides l and we have
+stρ,σ (P ) ∼ stρ,σ (F ), which readily implies v0,1 (stρ,σ (P )) = 0. Write
+            u                                 c
+     F = x l y v f (z)   and `ρ,σ (P ) = x l y d p(z),   with p(0), f (0) 6= 0.
+
+Note that here v = d = 0, ρc/l = up , v0,1 (enρ,σ (P )) = mb and f (z) =
+λ1 (z − µ) for some λ1 , µ ∈ K × . By [12, Proposition 2.11(1)] we have
+then `ρ,σ (P ) = λxup /ρ (z − µ)mb for some λ ∈ K × , which concludes the
+proof.
+
+     By [12, Proposition 2.1(2)] (which applies thanks to Proposition 2.1)
+there exist λP , λQ ∈ K × and a (ρ, σ)-homogeneous element R ∈ L(l) such
+that
+                `ρ,σ (P ) = λP Rm       and       `ρ,σ (Q) = λQ Rn .
+
+Take λ ∈ K × and let R0 ∈ L(l) be a (ρ, σ)-homogeneous element such
+that `ρ,σ (P ) = λR0h with h maximal (consequently m divides h and we
+                      h/m
+can assume R = R0           and λP = λ). Arguing as in [5, Corollary 2.6]
+we obtain a certain i ≥ 0 and a (ρ, σ)-homogeneous element G ∈ L(l)
+subject to [G, R] = Ri .
+                              1
+     Let (a/l, b), (c/l, d) ∈ Z × Z be such that a/l > b > d ≥ 0 and
+                               l
+a > c > 0. Assume also b − d < a/l − c/l (we do not claim the existence
+of P and Q at this point). It is well known that for each (r/l, s) ∈
+1
+   Z × Z \ Z(1, 1) there exists a unique (%, ς) ∈ V>0 (see (3.2) at page
+ l
+29 of [12]), which we denote by dir(r/l, s), such that v%,ς (r/l, s) = 0.
+Set (ρ, σ) = − dir((a/l, b) − (c/l, d)) and note the inequality (0, −1) <
+(ρ, σ) < (1, −1). We will analyse the existence of i ∈ N and (ρ, σ)-ho-
+mogeneous elements R, G ∈ L(l) , such that
+
+vρ,σ (R) > 0, [G, R] = Ri , (a/l, b) = enρ,σ (R) and (c/l, d) = stρ,σ (R).
+                                                                       (2.1)
+      Let ` ∈ N be minimal with `vρ,σ (R) + ρ + σ > 0. By [5, Proposi-
+tion 3.12], if there exist i ∈ N and R, G ∈ L(l) satisfying (2.1), and such
+
+
+54                  Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+       The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+that
+          u
+  R 6= λx ρ hj (z) for all λ ∈ K × , j ∈ N and all linear polynomials h,
+                                                                     (2.2)
+           −σ                                  0
+where z = x y, then either there exist ϑ, t ∈ N subject to
+             ρ
+
+                                                     c            
+  ϑ ≤ N1 ,     t0 < `ϑ      and       (ρ, σ) = − dir t0 , d + ϑ(1, 1) ,
+                                                         l
+                                                                     (2.3)
+where N1 = gcd(a − c, b − d), or
+                                                        c            
+d > 0, ϑ divides N2 , t0 < `ϑ and (ρ, σ) = − dir t0 , d + ϑ(1, 1) ,
+                                                           l
+                                                                     (2.4)
+where N2 = gcd(c, d). By [5, Remark 3.13] we have then
+                            ϑ     ρa/l + σb
+                               =−           .
+                            t0      ρ+σ
+Therefore defining
+                                  ρa + σbl
+                      s=                          ϑ,
+                           gcd(ρl + σl, ρa + σbl)
+we can take (and we do take it) ϑ = s in (2.3) and (2.4).
+     We suspect that the existence of ϑ and t0 satisfying the conditions
+in (2.3) or in (2.4) is enough for the existence of i ∈ N and two (ρ, σ)-
+homogeneous elements R, G ∈ L(l) such that the conditions in (2.1)
+and (2.2) are fullfiled (with (c/l, d) = stρ,σ (R)), but at the moment we
+have no proof of this claim.
+Remark 2.3. Since N2 < b, if s = b, then necessarily b ≤ N1 . So, by [5,
+Proposition 3.12(2)], there exists a linear factor with multiplicity b. As
+this contradicts (2.2), we have consequently s < b.
+Remark 2.4. By [5, Theorem 3.4], in (2.1) we can assume that i is the
+minimal element subject to
+                       vρ,σ (R)(i − 1) + ρ + σ ≥ 0,
+                     l            m
+                             ρ+σ
+or, equivalently, i = 1 − vρ,σ (R) .
+
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                 55
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+     For the case b = 2, we can establish necessary and sufficient con-
+ditions on a, l for the existence of c ∈ N, d ∈ {0, 1} and two (ρ, σ)-
+homogeneous elements R, G ∈ L(l) satisfying the conditions of (2.1)
+as soon as we impose that R satisfies (2.2). This additional require-
+ment corresponds to the existence of split roots (see Definition 3.5).
+                                 note that (0, −1) < (ρ, σ) < (1, −1)
+Before we establishthe result we
+                      a−c
+and (ρ, σ) = − dir     l ,b − d    ∼ (lb − ld, c − a) imply c < a and
+b − d < a/l − c/l.
+
+Proposition 2.5. Let a, l ∈ N be such that a/l > 2. Set b = 2. Let
+(ρ, σ) ∈](0, −1), (1, −1)[ be a direction, and define the number
+
+                                   ρa + σbl
+                       ϑ=                          .
+                            gcd(ρl + σl, ρa + σbl)
+
+Then the following assertions are equivalent.
+
+ (1) There exist c ∈ N, d ∈ {0, 1} and two (ρ, σ)-homogeneous elements
+     R, G ∈ L(l) satisfying conditions (2.1) and (2.2).
+
+ (2) There exist c ∈ N and two (ρ, σ)-homogeneous elements R, G ∈
+     L(l) satisfying conditions (2.1) and (2.2) with d = 1.
+
+ (3) We have ϑ = 1, vρ,σ (a/l, 2) > 0 and there exist c ∈ N such that
+                       a − c             c             
+         (ρ, σ) = − dir        , 1 = − dir t0 , 1 + (1, 1) ,       (2.5)
+                           l                   l
+      for some 0 < t0 < `, here ` ∈ N is minimal with the property
+      `vρ,σ (a/l, 2) + ρ + σ > 0.
+
+ (4) There exists ∆ ∈ N with l < ∆ < a/2 such that a − 2∆ | ∆ − l.
+     Moreover, (ρ, σ) ∼ (l, −∆).
+
+Proof. We first prove that 1) implies 2). Suppose d = 0 and write
+                      u                                 σ
+              R = λx l (z − α1 )(z − α2 )   with z = x− ρ y.
+
+
+56              Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+Note that by (2.2) we have α1 6= α2 . Also ρu/l = 2σ + ρa/l implies
+u = (2lσ + ρa)/ρ. Moreover, since b − d = 2, we have
+                    a c        
+      (2l, c − a) ·    − , b − d = 2(a − c) − (c − a)(b − d) = 0,
+                     l  l
+and consequently (ρ, σ) ∼ (2l, c − a). Also, since d = 0, necessarily (2.3)
+is satisfied. We claim that 2 divides a − c. In fact, this follows from
+                             c            
+           0 = (2l, c − a) · t0 , 0 + ϑ(1, 1) = 2ct0 + (c − a)ϑ,
+                                l
+for otherwise 2 divides ϑ ≤ N1 = gcd(a − c, 2) = 1. Set ∆ = (a − c)/2
+and consider the automorphism ϕ of L(l) defined by ϕ(x1/l ) = x1/l and
+ϕ(y) = y + α1 x−∆/l . Using (ρ, σ) ∼ (l, −∆) it is easy to conclude
+                                  u
+                      ϕ(R) = λx l z(z − (α2 − α1 )).
+
+By [12, Proposition 3.10], we have [ϕ(G), ϕ(R)] = ϕ(R)i . An easy com-
+putation gives enρ,σ (ϕ(R)) = (a/l, b) and stρ,σ (ϕ(R)) = ((a − ∆)/l, 1).
+So, replacing R by ϕ(R) yields d = 1.
+    That 2) implies 1) is a trivial fact.
+    Now we prove that 2) implies 3). Since d = 1, we get N1 = N2 = 1.
+Hence we have ϑ = 1, and Equality (2.5) is satisfied for some 0 < t0 < `.
+Moreover, it is clear that
+                            a 
+                        vρ,σ , 2 = vρ,σ (R) > 0
+                             l
+is verified and we also have
+                                                   a − c 
+        (ρ, σ) = − dir enρ,σ (R) − enρ,σ (R) = − dir      ,1 .
+                                                       l
+
+
+    For 3) implies 4), since
+                                      a  c 
+                       (l, c − a) ·      − , 1 = 0,
+                                       l  l
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                  57
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+we have (ρ, σ) ∼ (l, −∆), with ∆ = a − c. Thus, by (2.5), we obtain
+                      a − ∆            
+      0 = (l, −∆) · t0        , 1 + (1, 1) = t0 a − 2t0 ∆ + l − ∆,
+                           l
+which implies a − 2∆|l − ∆, as desired.             But (ρ, σ) ∼ (l, −∆) and
+vρ,σ (a/l, 2) > 0 yield
+                                       a     l         a 
+               a − 2∆ = (l, −∆) ·         , 2 = (ρ, σ) ·    , 2 > 0,
+                                        l      ρ          l
+                                               l
+and so ∆ < a/2. Finally, the relation l − ∆ =    (ρ + σ) < 0 forces ∆ > l.
+                                               ρ
+     To show that 4) implies 2) we set c = a − ∆, z = x∆/l y and (ρ, σ) =
+− dir((a/l, 2) − (c/l, 1)). Since 0 < l < ∆, the inequalities (0, −1) <
+(ρ, σ) < (1, −1) hold. Let k1 ∈ N be such that k1 (a − 2∆) = ∆ − l
+and let g(z) be a polynomial with derivative g 0 (z) = z k1 (1 + z)k1 . A
+straightforward computation shows that
+               a−2∆                c                            l
+     R=x         l    z(1 + z) = x l y(1 + z)    and     G=          g(z),
+                                                              2∆ − a
+          a                 c 
+satisfy      , 2 = enρ,σ (R),    , 1 = stρ,σ (R), vρ,σ (R) > 0 and [G, R] =
+           l                   l
+  k1 +1
+R       , as desired.
+
+
+3     Approximate π-roots
+Recall that the intersection number of two bivariate polynomials P
+and Q is defined by I(P, Q) = degx (Resy (P, Q)), where Resy (P, Q) de-
+notes the resultant of P and Q as polynomials in y. In [14], the author
+defines for a Jacobian pair (P, Q) the polynomial Pξ = P (x, y)−ξ, where
+ξ is a generic element of the field K, and proposes two different formulas
+for I(Pξ , Q): one in terms of the major roots (see [14, Theorem 5.1]),
+and the other in terms of the minor roots (as in [14, Theorem 4.7]). We
+will prove the first formula using our language (see Theorem 6.2), how-
+ever, instead of equality in the formula for Im we recover an inequality
+
+
+58                    Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+in Theorem 7.3. In order to achieve these results, it will be convenient to
+provide a proof of the preparatory results of [14] in the language of [12].
+     We first define approximate roots, final major roots and final minor
+roots using our language.
+     In this section we consider a polynomial P ∈ L, monic in y. For
+l ∈ N we take the following algebras:
+                            1
+      L = K[x, y] ( K[x± l , y] ( K((x−1/l ))[y] ( K[π]((x−1/l ))[y],
+
+where π is a variable (a “symbol” in [14]). We also will use the subring
+  (l)
+Lπ = K[π][x±1/l , y] of K[π]((x−1/l ))[y]. Note that degx = v1,0 is well
+defined in K[π]((x−1/l ))[y].
+      Unless otherwise indicated, the elements P of the above mentioned
+algebras are polynomials in y with coefficients in one of the algebras
+               1
+K[x], K[x± l , y], K[π]((x−1/l )),. . . . Consequently, expressions like P (τ ),
+P (α),. . . , will mean P with y replaced by τ , by α, and so on.
+      By the Newton-Puiseux theorem (see [4, Corollary 13.15, page 295])
+there exist l ∈ N and αi , βi ∈ K((x−1/l )) such that
+
+                                      M
+                                      Y
+                                P =         (y − αi ).
+                                      i=1
+
+We set R(P ) = {αi : i = 1, . . . , M }. Let α ∈ R(P ) and write α =
+         j         1
+                     Z. The π-approximation of α up to xj0 is the
+P
+   j aj x with j ∈
+                   l
+element
+                                                 1
+                        X
+                   τ=     aj xj + πxj0 ∈ K[π, x± l ].
+                         j>j0
+
+Note the equality degx (τ − α) = j0 .
+                                        1
+    Let τ = j>j0 aj xj + πxj0 ∈ K[π, x± l ]. Set
+            P
+
+
+      DτP = {α ∈ R(P ) : τ is the π-approximation of α up to xj0 }.
+
+If α ∈ DτP , we say that τ approximates α up to xj0 .
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                       59
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+     Note that the element αi = j bj xj ∈ R(P ) belongs to DτP if and
+                                     P
+
+only if degx (α̂i ) ≤ j0 , where α̂i = αi − j>j0 aj xj , that is, if and only
+                                           P
+
+if we have aj = bj for all j > j0 .
+                                                        1
+     We say that τ = j>j0 aj xj + πxj0 ∈ K[π, x± l ] is a π-root of P
+                          P
+
+if there exists α ∈ R(P ) such that τ approximates α up to xj0 . In that
+case we say that j0 is the order of τ . When we want to underline the
+dependence of j0 on τ we will write δτ = j0 .
+
+Notation 3.1. Let τ = j>j0 aj xj + πxj0 be a π-root of P . In what
+                             P
+
+follows denote by ϕτ the automorphism of L(l) determined by ϕτ (x1/l ) =
+x1/l and ϕτ (y) = y + j>j0 aj xj .
+                          P
+
+Remark 3.2. Let α ∈ R(P ). Assume that τ approximates α up to j0
+and τ1 approximates α up to j1 . If j0 > j1 , then we have DτP1 ⊆ DτP .
+
+                                    1
+      In the sequel, for each j ∈     Z, we let dir(j) denote the unique
+                                    l
+                                         σ
+direction (ρ, σ) such that ρ > 0 and j = . Moreover, given a polynomial
+                                         ρ
+τ = i>j0 ai xi + πxj0 , we set z = x−σ/ρ y, where (ρ, σ) = dir(j0 ).
+    P
+
+     The following proposition shows that our definition of π-root coin-
+cides with that given in [11, Definition 1.3] with x−1 replaced by t.
+
+Proposition 3.3. Let τ = j>j0 aj xj + πxj0 and fP,τ (π) ∈ K[π] be the
+                            P
+
+polynomial determined by the equality
+
+            P (τ ) = fP,τ (π)xλτ + terms with lower order in x,        (3.1)
+
+                           1
+where λτ = degx (P (τ )) ∈ Z. Set ϕ = ϕτ and (ρ, σ) = dir(j0 ). Then
+                           l
+we have
+                |DτP | = deg(fP,τ ) = v0,1 (enρ,σ (ϕ(P )))      (3.2)
+
+and
+                         `ρ,σ (ϕ(P )) = xλτ fP,τ (z).                  (3.3)
+
+Consequently τ is a π-root of P if and only if we have deg(fP,τ ) > 0.
+
+
+60               Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+                          (l)          (l)
+Proof. Let evπxj0 : Lπ → Lπ be the evaluation of y at πxj0 . For ex-
+ample we have, evπxj0 (y) = πxj0 = πxσ/ρ and evπxj0 (x1/l ) = x1/l . Note
+the relation P (τ ) = evπxj0 (ϕ(P )). Since evπxj0 is (ρ, σ)-homogeneous,
+we get
+                `ρ,σ (evπxj0 (ϕ(P ))) = evπxj0 (`ρ,σ (ϕ(P ))).
+On the other hand, since ρ divides l, we get
+
+      `ρ,σ (ϕ(P )) = xr/l g(z)          for some r ∈ Z and g(z) ∈ K[z].                (3.4)
+
+Using evπxj0 (z) = π we obtain
+
+                          `ρ,σ (evπxj0 (ϕ(P ))) = xr/l g(π).
+
+Therefore we have
+
+    P (τ ) = evπxj0 (ϕ(P )) = xr/l g(π) + terms with lower order in x,
+
+because vρ,σ (xj ) = jρ < ρr/l = vρ,σ (xr/l ) if and only if j < r/l. So
+we have fP,τ (π) = g(π), λτ = r/l, and Equality (3.4) becomes Equal-
+ity (3.3). Since degz (`ρ,σ (ϕ(P ))) = degy (`ρ,σ (ϕ(P ))), we also have
+deg(fP,τ ) = v0,1 (enρ,σ (ϕ(P ))). Consequently, in order to conclude the
+proof, it suffices to prove |DτP | = v0,1 (enρ,σ (ϕ(P ))). In the chain of
+equalities
+                         M
+                         X                                     M
+                                                               X
+v0,1 (enρ,σ (ϕ(P ))) =          v0,1 (enρ,σ (ϕ(y − αi ))) =          v0,1 (enρ,σ (y − α̂i ))),
+                          i=1                                  i=1
+                                 j
+                     P
+where α̂i = αi −        j>j0 aj x , when we replace
+                                (
+                                    (0, 1)             if degx (α̂i ) ≤ σ/ρ = j0 ,
+          enρ,σ (y − α̂i )) =
+                                    (degx (α̂i ), 0)   if degx (α̂i ) > σ/ρ = j0 ,
+we finish up with
+   M
+   X
+          v0,1 (enρ,σ (y − α̂i ))) = #{αi ∈ R(P ) : degx (α̂i ) ≤ j0 } = |DτP |,
+    i=1
+
+as desired.
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                                     61
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+                                                      P
+Remark 3.4. Note that if |DτP | > 0, then |Dτ y | = |DτP | − 1 ≥ 0. In
+fact, we get ϕ(Py ) = (ϕ(P ))y , and it is straightforward to check that if
+ρ > 0 and v0,1 (enρ,σ (P )) > 0, then v0,1 (enρ,σ (Py )) = v0,1 (enρ,σ (P )) − 1.
+The assertion then follows from (3.2).
+
+Definition 3.5. We say that a π-root τ of P is a final π-root of P
+if fP,τ (π) has no multiple roots and degπ (fP,τ (π)) > 1, here fP,τ (π) is
+defined by Equality (3.1).
+
+Remark 3.6. Let τ be a final π-root of P . Since the support of fP,τ
+has more than one point, from Equality (3.3) we conclude (ρ, σ) ∈
+Dir(ϕτ (P )).
+
+Proposition 3.7. Let τ = j>j0 aj xj + πxj0 be a π-root of P and let
+                               P
+
+λ ∈ K. Consider the automorphism ϕ1 : L(l) → L(l) given by ϕ1 (x1/l ) =
+x1/l and ϕ1 (y) = y + j>j0 aj xj + λxj0 . Assume that ϕ1 (P ) is not a
+                        P
+
+monomial and set (ρ0 , σ 0 ) = Predϕ1 (P ) (ρ, σ) (see [12, Definition 3.4]),
+                                                     σ0                     1
+where (ρ, σ) = dir(j0 ). If ρ0 > 0, then set j1 = 0 , else take any j1 ∈ Z
+                                                     ρ                       l
+with j1 < j0 . In both cases set (ρ1 , σ1 ) = dir(j1 ). If π −λ has multiplicity
+r > 0 in fP,τ (π), then
+                               X
+                        τ1 =          aj xj + λxj0 + πxj1
+                               j>j0
+
+
+is a π-root of P and we get |DτP1 | = r (remember that j1 < j0 ). Moreover,
+we have
+                    (ρ1 , σ1 ) ∈ [Predϕ1 (P ) (ρ, σ), (ρ, σ)[.        (3.5)
+
+Proof. Write ϕ1 = ϕ◦ϕ,
+                   e   where ϕ is as in Proposition 3.3, ϕ(y)
+                                                          e   = y+λxj0 ,
+and ϕ(x)
+     e   = x. By Equality (3.3), the fact that ϕe is (ρ, σ)-homogeneous
+together with ϕ(z)
+              e    = z + λ lead us to
+
+              `ρ,σ (ϕ1 (P )) = ϕ(`              e λτ fP,τ (z))
+                               e ρ,σ (ϕ(P ))) = ϕ(x
+                            = xλτ ϕ(f
+                                  e P,τ (z)) = xλτ z r g1 (z),
+
+
+62                Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+for some g1 (z) ∈ K[z] with g1 (0) 6= 0. By construction we have then
+(ρ1 , σ1 ) ∈ [Predϕ1 (P ) (ρ, σ), (ρ, σ)[, and so, by Proposition 3.3, we get
+
+         r = v0,1 (stρ,σ (ϕ1 (P ))) = v0,1 (enρ1 ,σ1 (ϕ1 (P ))) = |DτP1 |,
+
+as desired.
+                                      j    j0
+                          P
+Corollary 3.8. Let τ =       j>j0 aj x + πx   be a π-root of P and let
+λ ∈ K. If π − λ does not divide fP,τ (π), then there exists no root
+α ∈ R(P ) such that degx (α − (λxj0 + j>j0 aj xj )) < j0 .
+                                        P
+
+                        Qk
+Proof. Let fP,τ (π) = i=1 (π − λi )mi . By Proposition 3.7, for each i
+there exist τ1 (i) and mi roots in DτP1 (i) ⊂ DτP , for which Coeff xj0 = λi .
+Since we have
+                                           k
+                                           X            k
+                                                        X
+               |DτP | = deg(fP,τ (π)) =          mi =         |DτP1 (i) |
+                                           i=1          i=1
+
+                                                                Sk
+and the sets DτP1 (i) are pairwise disjoint, we obtain DτP = i=1 DτP1 (i) .
+Consequently, the coefficient of xj0 in each element of DτP is a root of
+fP,τ . Since λ is not a root of fP,τ , this finishes the proof.
+
+Remark 3.9. The proof of the corollary shows that if the multiplicity
+of π − λ in fP,τ (π) is r, then any π-root τ2 of P which begins with
+λxj0 + j>j0 aj xj satisfies |DτP2 | ≤ r.
+       P
+
+                           P       j         −1/l          1
+Remark 3.10. Let α =         j aj x ∈ K((x        )), j0 ∈ Z, (ρ, σ) =
+                                                           l
+dir(j0 ) and τ = j>j0 aj xj + πxj0 . Define T = j≤j0 aj xj . Since
+                P                               P
+
+
+                           P (α) = evy=T (ϕτ (P )),
+
+we have `ρ,σ (P (α)) = `ρ,σ (evy=λxj0 (ϕτ (P ))) whenever the right hand
+side of the equality is nonzero.
+
+Proposition 3.11. Let α = j>j0 aj xj +λxj0 + j<j0 aj xj and set τ =
+                              P                   P
+            j    j0                        P
+P
+   j>j0 aj x +πx . If fP,τ (λ) 6= 0, then λτ = degx (P (τ )) = degx (P (α)).
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                       63
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+Proof. By Remark 3.10, Equality (3.3) and the fact that evy=λxj0 is
+(ρ, σ)-homogeneous we get
+                                                                     P
+`ρ,σ (P (α)) = `ρ,σ (evy=λxj0 (ϕ(P ))) = evy=λxj0 (`ρ,σ (ϕ(P ))) = xλτ fP,τ (λ).
+
+Thus, we achieve
+
+           degx (P (α) = degx (`ρ,σ (P (α))) = λP
+                                                τ = degx (P (τ )),
+
+as needed.
+
+
+4     Approximate roots for Jacobian pairs
+For the rest of the section (P0 , Q0 ) will be a Jacobian pair in L satisfying
+the conditions required in [12, Corollary 5.21]. This in particular means
+that (P0 , Q0 ) is a minimal pair and a standard (m, n)-pair for some
+coprime integers m, n > 1. By [12, Proposition 4.6(3)], there exist a < b
+in N such that en1,0 (P0 ) = m(a, b) and en1,0 (Q0 ) = n(a, b). So, by [12,
+Corollary 5.21(4)], we know that `1,1 (P0 ) = λxam y bm and `1,1 (Q0 ) =
+                                                             1
+λ0 xan y bn hold for some λ, λ0 ∈ K × . Replacing P0 by P0 and Q0 by
+                                                             λ
+ 1
+   Q0 , we can further assume λ = λ0 = 1. Let ψ be the automorphism
+λ0
+of L characterized by ψ(y) = y and ψ(x) = x + y. Set P = ψ(P0 ) and
+Q = ψ(Q0 ) (see Figure 1). Since ψ is (1, 1)-homogeneous we have
+
+ `1,1 (P ) = ψ(`1,1 (P0 )) = (x + y)ma y mb
+                                      and `1,1 (Q) = (x + y)na y nb .
+                                                               (4.1)
+Hence, P and Q are monic polynomials in y and, moreover, a straight-
+forward computation yields
+
+              en1,0 (P ) = m(a, b)   and      en1,0 (Q) = n(a, b).       (4.2)
+
+Remark 4.1. We will establish several results about P , but, since
+by [12, Proposition 4.6] we know that (Q, P ) is an (n, m)-pair, the same
+results remain valid, mutatis mutandis, for Q.
+
+
+64               Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+       The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+                y                                        y
+                                                                       (1, 1)
+
+ SuccP (1, 0)
+      0
+
+                               (1,0)
+                                            ψ                               (1,0)
+
+
+                                                             P
+
+
+
+                               x                                                x
+
+Figure 1: The shapes of P0 according to [12, Corollary 5.21(4)] and of
+P according to (4.1) and (4.2).
+
+
+Proposition 4.2. Let α ∈ R(P ) and let τ be the π-approximation of α
+up to xj0 . Assume λτ = degx (P (τ )) > 0, and take ϕ and (ρ, σ) as in
+Proposition 3.3. Then the following facts hold.
+
+ (1) If fP,τ has multiple roots, then [`ρ,σ (ϕ(P )), `ρ,σ (ϕ(Q))] = 0.
+
+  (2) If [`ρ,σ (ϕ(P )), `ρ,σ (ϕ(Q))] = 0, then there exists β ∈ R(Q) such
+      that degx (α − β) < j0 .
+
+Proof. Write τ = j>j0 aj xj + πxj0 . By Proposition 3.7 there exists
+                     P
+
+j1 < j0 such that
+                                X
+                         τ1 =      aj xj + λxj0 + πxj1
+                             j>j0
+
+is a π-root of P .
+      (1) Since we have `ρ,σ (ϕ(P )) = xλτ fP,τ (z) (see Equality (3.3)),
+by hypothesis there exist k > 1 and λ ∈ K such that (z − λ)k divides
+`ρ,σ (ϕ(P )). Consequently (z −λ)k−1 divides [`ρ,σ (ϕ(P )), `ρ,σ (ϕ(Q))]. As
+we have [`ρ,σ (ϕ(P )), `ρ,σ (ϕ(Q))] ∈ K, this yields [`ρ,σ (ϕ(P )), `ρ,σ (ϕ(Q))]
+= 0.
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                              65
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+      (2) Let (z − λ) be a linear factor of `ρ,σ (ϕ(P )). Since we have
+vρ,σ (P ) = ρλτ > 0, from [12, Proposition 2.1(2)b)] it follows that (z − λ)
+divides `ρ,σ (ϕ(Q)). Hence, by Proposition 3.3 we know that τ is a π-root
+of Q and so, by Proposition 3.7, there exists j2 < j0 such that
+                            X
+                       τ2 =     aj xj + λxj0 + πxj2
+                               j>j0
+
+is a π-root of Q. We conclude that for any α ∈ DτP1 and β ∈ DτQ2 the
+inequality degx (α − β) < j0 holds, as claimed.
+
+                            aj xj ∈ R(P ). Assume j0 > j1 and that τ
+                          P
+Remark 4.3. Let α =
+approximates α up to x and τ1 approximates α up to xj1 . Then we must
+                       j0
+
+have λτ > λτ1 . In fact, setting (ρ, σ) = dir(j0 ) and (ρ1 , σ1 ) = dir(j1 ),
+Equality (3.3) and [12, Proposition 3.9] show
+
+      vρ,σ (xλτ ) = vρ,σ (ϕ(P )) = vρ,σ (ϕ1 (P )) ≥ vρ,σ (enρ1 ,σ1 ϕ1 (P )),
+
+with ϕ = ϕτ and ϕ1 = ϕτ1 . A direct computation using (ρ, σ) > (ρ1 , σ1 ),
+vρ1 ,σ1 (ϕ1 (P )) = vρ1 ,σ1 (xλτ1 ) and v0,1 (enρ1 ,σ1 (ϕ1 (P ))) > v0,1 (xλτ1 ) de-
+rives in
+                      vρ,σ (enρ1 ,σ1 (ϕ1 (P ))) > vρ,σ (xλτ1 ).
+Since ρ > 0, the result follows.
+Proposition 4.4. Let α ∈ R(P ). Then there exists j0 such that λτ = 0
+for the π-approximation τ of α up to xj0 .
+Proof. Let ϕ0 ∈ Aut(K((x−1/l ))[y]) be given by ϕ0 (x1/l ) = x1/l and
+ϕ0 (y) = y + α. We will construct a direction (ρ0 , σ0 ) ∈](0, −1), (0, 1)[
+such that vρ0 ,σ0 (ϕ0 (P )) = 0. In order to achieve this, for each point of
+Supp(ϕ0 (P )) we consider the direction (ρ, σ) ∈](0, −1), (0, 1)[ orthogonal
+to the segment that joins that point to the origin. The minimum (ρ0 , σ0 )
+                                                              σ0
+of these directions satisfies vρ0 ,σ0 (ϕ0 (P )) = 0. Set j0 =    . We assert
+                                                              ρ0
+that the π-approximation
+                                  X
+                             τ=        aj xj + πtj0
+                                   j>j0
+
+
+66                Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+       The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+of α up to xj0 satisfies λτ = 0. In fact, we have
+         0 = vρ0 ,σ0 (ϕ0 (P )) = vρ0 ,σ0 (ϕτ (P )) = vρ0 ,σ0 (xλτ ) = ρ0 λτ ,
+where the second equality follows from [12, Proposition 3.9], and the
+third, from (3.3).
+
+Proposition 4.5. Let τ = j>j0 aj xj + πxj0 be a π-root of P , and let
+                            P
+
+(ρ, σ), λτ and ϕ be as in Proposition 3.3. If τ is also a π-root of Q and
+we have λτ ≥ 0, then we get
+                                n                           |DτQ |  n
+             enρ,σ (ϕ(Q)) =       enρ,σ (ϕ(P ))      and           = .
+                                m                           |DτP |  m
+Proof. Write Dir(ϕ(P )) ∩ [(ρ, σ), (1, 1)] = {(ρ, σ) = (ρ0 , σ0 ) < (ρ1 , σ1 ) <
+                                                                       σi
+· · · < (ρk , σk ) = (1, 1)}. Take α ∈ DτP and 0 ≤ i ≤ k. Let ji =          and
+                                                                       ρi
+let τi be the π-approximation of α up to xji . Set λτi = degx (P (τi )) and
+ϕi = ϕτi . Since we have
+                        [`ρi ,σi (ϕ(P )), `ρi ,σi (ϕ(Q))] ∈ K,
+if [`ρi ,σi (ϕ(P )), `ρi ,σi (ϕ(Q))] 6= 0, then v0,−1 ([`ρi ,σi (ϕ(P )), `ρi ,σi (ϕ(Q))]) =
+0, and next, by [12, Proposition 1.13], we obtain
+         0 =v0,−1 ([`ρi ,σi (ϕ(P )), `ρi ,σi (ϕ(Q))])
+           ≤v0,−1 (`ρi ,σi (ϕ(P ))) + v0,−1 (`ρi ,σi (ϕ(Q))) − (−1 + 0).
+This in turn implies
+               v0,−1 (stρi ,σi (ϕ(P )) + v0,−1 (stρi ,σi (ϕ(Q)) ≥ −1,
+or, equivalently,
+                  v0,1 (stρi ,σi (ϕ(P )) + v0,1 (stρi ,σi (ϕ(Q)) ≤ 1;
+hence in this case we obtain i = 0. The bottom line is that, if we want
+i > 0, we must have [`ρi ,σi (ϕ(P )), `ρi ,σi (ϕ(Q))] = 0, where we must take
+λτi > 0 by Remark 4.3. So we can conclude
+                   vρi ,σi (ϕ(P )) = vρi ,σi (ϕi (P )) = ρi λτi > 0;
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                               67
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+here the first equality follows from [12, Proposition 3.9] and the second
+from (3.3). Now, an inductive argument using (4.1), [12, Remark 3.1]
+and enρi ,σi (ϕ(P ))) = stρi+1 ,σi+1 (ϕ(P ))), for i = k, . . . , 1, proves
+                                            n
+vρi ,σi (ϕ(Q)) > 0 and stρi ,σi (ϕ(Q)) =      stρ ,σ (ϕ(P )), for i = k, . . . , 1.
+                                            m i i
+So we get
+
+                      n                          v0,1 (enρ0 ,σ0 (ϕ(Q)))   n
+  enρ0 ,σ0 (ϕ(Q)) =     enρ0 ,σ0 (ϕ(P ))   and                           = .
+                      m                          v0,1 (enρ0 ,σ0 (ϕ(P )))  m
+
+                                       |DτQ |   v0,1 (enρ,σ (ϕ(Q)))
+This finishes the proof, as we have           =                      , by Propo-
+                                       |DτP |   v0,1 (enρ,σ (ϕ(P )))
+sition 3.3.
+
+    In [14] the author chooses a generic element ξ ∈ K and analyses the
+roots of Pξ = P + ξ. Instead of speaking of a generic element ξ, we will
+assume (summing eventually to P an element ξ ∈ K) that any π-root τ
+of P with λτ = 0 is such that
+
+ (1) fP,τ has no multiple roots;
+
+ (2) fP,τ and fQ,τ have no common roots (thus are coprime).
+
+This is possible, since, by (3.3), in the case λτ = 0 adding ξ to P is the
+same as adding ξ to the univariate polynomial fP,τ (z). We also can, and
+will, assume (0, 0) ∈ Supp(P ) ∩ Supp(Q).
+
+Remark 4.6. Suppose that τ is a π-root of P with λτ < 0. Then, by
+Proposition 3.7, Remark 3.2 and Item (1) we have |DτP | = 1. Moreover,
+we also get |DτQ | = 0. In fact, take α ∈ DτP . By Proposition 4.4 there
+exists j1 and a π-approximation τ1 of α up to xj1 such that λτ1 = 0. By
+Remark 4.3 necessarily j1 > j0 , where j0 is the order of τ . Let λ be the
+coefficient of α at xj1 . Then π −λ divides fP,τ1 and so, by item (2), π −λ
+does not divide fQ,τ1 . If τ1 is not a π-root of Q, then clearly |DτQ | = 0.
+Otherwise, by Corollary 3.8 applied to τ1 and Q, we also reach |DτQ | = 0.
+
+
+68               Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+Remark 4.7. From the first assertion in the previous remark it follows
+that for any final π-root τ of P we must have λτ ≥ 0.
+
+Notation 4.8. Let α = j aj xj ∈ R(P ) and set
+                          P
+
+
+                  δα = min{degx (α − β) : β ∈ R(Q)}.
+
+Remark 4.9. Note that the π-approximation of α up to xδα is also a
+π-root of Q.
+
+Proposition 4.10. (Compare [14, Lemma 4.2]) Set τ = j>δ aj xj +
+                                                     P
+
+πxδα . Then τ is a final π-root of P .
+
+Proof. Since clearly τ is a π-root of P , we only need to prove that τ is
+a final π-root of P , i.e., that we have deg(fP,τ ) > 1 and that fP,τ has
+no multiple roots. By Remark 4.6 we know λτ ≥ 0. By Item (1) above,
+we also know that when λτ = 0, the polynomial fP,τ has no multiple
+roots. If λτ > 0, then fP,τ also does not have multiple roots: otherwise
+by Proposition 4.2 there exists β ∈ R(Q) such that degx (α − β) < δα ,
+contradicting the definition of δα . Finally, by Proposition 4.5 we know
+that m divides |DτP | = deg(fP,τ ), and so, we obtain deg(fP,τ ) > 1, which
+concludes the proof.
+
+
+5    Major and minor final π-roots
+A final π-root τ of P is called a minor final π-root of P if λτ = 0,
+and it is called a major final π-root of P if λτ > 0. The set of minor
+final π-roots of P is denoted by Pm , while the set of final major π-roots
+of P is denoted by PM .
+     Note that we have
+                                      [
+                          R(P ) =           DτP ,
+                                  τ ∈Pm ∪PM
+
+since, by Proposition 4.10, every root α ∈ R(P ) is associated with a final
+π-root of P (that we will call the final π-root of P associated with
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                  69
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+α), here λτ ≥ 0 by Remark 4.7. Note also that if τ 6= τ1 are final π-roots,
+then DτP ∩ DτP1 = ∅. In fact, assume by contradiction α ∈ DτP ∩ DτP1 , and
+take for example δτ < δτ1 , which means that τ is a better approximation
+of α than τ1 . Then, since the multiplicity of any factor of fP,τ1 is one,
+by Remark 3.9 we get |DτP | ≤ 1, which contradicts the fact that τ is a
+final π-root of P .
+Remark 5.1. Given a final π-root τ of P take α ∈ DτP . Then, by
+Proposition 4.10, the π-approximation of α up to xδα is a final π-root,
+and, since DτP ∩ DτP1 = ∅ for any other final π-root τ1 of P , necessarily
+τ is the π-approximation of α up to xδα . This is equivalent to δτ = δα .
+Proposition 5.2. Let τ be a final π-root of P , let ϕ = ϕτ and set
+λQ
+ τ = degx (Q(τ )). Then we have the following.
+
+ (1) If τ is a minor final π-root of P , then we have
+
+       a) λQ
+           τ = 0,
+        b) [`ρ,σ (ϕ(Q)), `ρ,σ (ϕ(P ))] = 0,
+        c) δτ < −1.
+
+ (2) If τ is a major final π-root of P , then we have
+
+       a) [`ρ,σ (ϕ(Q)), `ρ,σ (ϕ(P ))] 6= 0,
+       b) τ is a major final π root of Q,
+                 n
+       c) λQ
+           τ =     degx (P (τ )),
+                 m
+       d) δτ > −1.
+
+Proof. By Remarks 4.9 and 5.1, any final π-root τ of P is also a π-root
+of Q. We will use this fact for (1)a) and (2)b).
+    (1) By Proposition 4.5, since λτ ≥ 0, we have
+
+                      m enρ,σ (ϕ(Q)) = n enρ,σ (ϕ(P )),
+
+and so we obtain
+                                   n               n
+            ρλQ
+              τ = vρ,σ (ϕ(Q)) =      vρ,σ (ϕ(P )) = ρλP = 0,
+                                   m               m τ
+
+70               Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+where the first and third equality follow from (3.3). This implies λQ
+                                                                    τ =
+degx (Q(τ )) = 0, thus proving a). Moreover, by [12, Proposition 2.1(1)]
+we know that the vanishing of vρ,σ (ϕ(Q)) and vρ,σ (ϕ(P )) implies
+                       [`ρ,σ (ϕ(Q)), `ρ,σ (ϕ(P ))] = 0,
+                                                    σ
+this proves item b). Now assume by contradiction      = δτ ≥ −1, which
+                                                    ρ
+implies ρ + σ ≥ 0. Then, by [12, Proposition 1.13], we have
+0 = vρ,σ ([ϕ(P ), ϕ(Q)]) ≤ vρ,σ (ϕ(Q))+vρ,σ (ϕ(P ))−(ρ+σ) = −(ρ+σ) ≤ 0,
+so we have equality and, again by [12, Proposition 1.13], we also ob-
+tain [`ρ,σ (ϕ(Q)), `ρ,σ (ϕ(P ))] 6= 0. But this contradicts item b) and thus
+proves δτ < −1, that is, part c).
+     (2) By Remarks 4.9 and 5.1, we know that τ is a π-root of Q and,
+that for any α ∈ DτP , we have
+                   δτ = min{degx (α − β)|β ∈ R(Q)}.
+Hence, by Proposition 4.2(2), we obtain [`ρ,σ (ϕ(Q)), `ρ,σ (ϕ(P ))] 6= 0,
+which proves a). Moreover, by Proposition 4.2(1) with Q and P inter-
+changed, fQ,τ has no multiple roots. On the other hand, by Proposi-
+tion 4.5, we have
+                                     n
+                            |DτQ | = |DτP | > 1,
+                                     m
+and so τ is a final π-root of Q. Again Proposition 4.5 and Equality (3.3)
+yield
+                                                  n
+             ρ degx Q(τ ) =ρλQ τ = vρ,σ (ϕ(Q)) =    vρ,σ (ϕ(P ))
+                                                  m
+                             n           n
+                          = ρλP     = ρ degx (P (τ )),
+                            m τ         m
+                        n
+and so degx Q(τ ) =       degx P (τ )) > 0, which finishes the proof of b)
+                       m
+and c). It remains to check the condition δτ > −1. Assume by contra-
+        σ
+diction = δτ ≤ −1. Then ρ + σ ≤ 0, and so
+         ρ
+                                               n
+vρ,σ (ϕ(Q))+vρ,σ (ϕ(P ))−(ρ+σ) ≥ ρλP    τ   1 +    > 0 = vρ,σ [ϕ(P ), ϕ(Q)],
+                                                m
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                   71
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+which, by [12, Proposition 1.13], implies [`ρ,σ (ϕ(Q)), `ρ,σ (ϕ(P ))] = 0.
+This contradicts item a) and thus finishes the proof of part d).
+
+
+6    Intersection number and major roots
+In this section we first obtain in Theorem 6.2 the same formula for IM
+as in [14, Theorem 5.1]. Then we explain how to compute IM for the
+families found in [7].
+
+Lemma 6.1. For τ a final π-root of P , we have λQ
+                                                τ = degx (Q(τ )) =
+degx (Q(α)) whenever α ∈ DτP .
+
+Proof. We assert that fP,τ (z) and fQ,τ (z) have no common roots. In
+fact, assume on the contrary that z − s is a common factor. If τ is a
+major final root, then
+
+                                                                         ×
+     z − s | [λτ fP,τ (z), λQ
+                            τ fQ,τ (z)] = [`ρ,σ (ϕ(Q)), `ρ,σ (ϕ(P ))] ∈ K ,
+
+
+a contradiction. Whereas, if τ is a minor root, then the choice of ξ
+guarantees that fP,τ and fQ,τ have no common roots.
+    Note that if the coefficient of xj0 in α is s, then fP,τ (s) = 0, since
+otherwise π − s does not divide fP,τ (π) and Corollary 3.8 leads to a
+contradiction. Hence, by the assertion, we get fQ,τ (s) 6= 0, and from
+Proposition 3.11, we obtain degx (Q(τ )) = degx (Q(α)).
+                              P          Pξ Q
+Theorem 6.2. For IM =            τ ∈PM |Dτ |λτ we have IM = I(P, Q).
+                                                Q
+Proof. From the well know equality Resy (P, Q) = α∈R(P ) Q(α) we pass
+to
+                            Y               X
+          I(P, Q) = degx         Q(α) =         degx (Q(α))     (6.1)
+                              α∈R(P )           α∈R(P )
+                           X       X
+                     =                     degx (Q(α)).                   (6.2)
+                         τ ∈Pm ∪PM α∈DτP
+
+
+
+72               Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+Using Lemma 6.1 we arrive to
+                 X       X
+      I(P, Q) =              degx (Q(α))
+                   τ ∈Pm ∪PM α∈DτP
+                             P                     P                      P
+                   X                     X                     X
+               =           |Dτ ξ |λQ
+                                   τ +           |Dτ ξ |λQ
+                                                         τ =           |Dτ ξ |λQ
+                                                                               τ ,
+                   τ ∈PM                 τ ∈Pm                 τ ∈PM
+
+
+since λQ
+       τ = 0 if τ ∈ Pm .
+
+     A root α ∈ R(P ) is called a minor root if the associated final
+π-root τ is a minor final π-root; it is called a major root if τ is a major
+final π-root.
+
+Proposition 6.3. Let τ be an approximate π-root of P of order j0 ≤ 0,
+with λτ ≥ 0, and let (ρ, σ) = dir(j0 ). If v1,−1 (enρ,σ (ϕτ (P ))) > 0, then
+any root α ∈ DτP is a minor root.
+
+Proof. The hypotheses guarantee that (ϕτ (P ), ϕτ (Q)) and (ρ, σ) satisfy
+the hypotheses of Proposition 2.1 (for instance (ρ, σ) ∈ ](0, −1), (1, 0)],
+because of j0 ≤ 0). If vρ,σ (ϕτ (P )) = ρλτ = 0, then τ is a minor final
+π-root and the result is true. Else we have vρ,σ (ϕτ (P )) = ρλτ > 0,
+since λτ ≥ 0. Take α ∈ DτP . By Proposition 5.2 it suffices to prove
+δα < −1. By Propositions 2.1 and 4.2 we have δα < δτ = j0 , so the
+result is clear when δτ ≤ −1. Assume δτ > −1. In this case we have
+ρ + σ > 0. Using Proposition 2.2 and Equality (3.3) we obtain fP,τ (z) =
+                                             1                      |DτP |
+ς(z − µ)mb for some ς, µ ∈ K × , where b = v0,1 (enρ,σ (ϕτ (P ))) =
+                                            m                         m
+(see Proposition 3.3). Hence, by Proposition 3.7, there exists j1 < j0
+such that for the π-root
+                           X
+                      τ1 =      aj xj + µxj0 + πxj1
+                                 j>j0
+
+
+we have DτP1 = DτP . If j1 ≤ −1, then we finish the proof immediately
+after applying the above argument with τ replaced by τ1 since we must
+have λτ1 ≥ 0 (in fact, if λτ1 < 0, then, by Remark 4.6, we get |DτP1 | = 1,
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                               73
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+which is impossible because of bm = |DτP |). Assume now j1 > −1 and
+set (ρ1 , σ1 ) = dir(j1 ). By Proposition 2.2 ρ1 divides l, and so j1 ∈ 1l Z.
+Hence, if j0 = − kl for some 0 ≤ k ≤ l, then −j1 ∈ { k+1    k+2        l−1 l
+                                                        l , l , . . . , l , l },
+so, after repeating the same procedure a finite number of times, say t,
+we arrive at δα < jt ≤ −1, as desired.
+
+Proposition 6.4. Let a, b satisfy Equalities (4.1). There exist ma minor
+roots α of P with degx (α) = 1 and leading term −x, and mb roots β of
+P with degx (β) ≤ 0.
+
+Proof. Take τ0 = πx0 . Then we have j0 = 0, dir(j0 ) = (1, 0) and
+ϕτ0 = id. From the first equality in (4.2), we get
+
+                    enρ,σ (ϕτ0 (P )) = en1,0 (P ) = m(a, b),
+
+and by Proposition 3.3, we obtain |DτP0 | = mb. Since degx (β) ≤ j0 = 0
+for all β ∈ DτP0 , this yields mb roots with degx (β) ≤ 0. On the other
+hand, by Proposition 3.7, with τ = πx, λ = −1 and ϕ1 (y) = y − x, there
+exists j1 < 1 such that the π-root τ1 = −x + πxj1 satisfies |DτP1 | = ma
+since fP,τ (z) = (z + 1)ma z mb ; therefore the multiplicity of λ = −1 is ma.
+Moreover, by (3.5) and the first equality in (4.1), we have
+
+                 enρ1 ,σ1 (ϕ1 (P )) = st1,1 (ϕ1 (P )) = m(b, a),
+
+and so v1,−1 (enρ1 ,σ1 (ϕ1 (P ))) > 0. Then every root α ∈ DτP1 is a minor
+root.
+
+   Following [14], the minor roots in Proposition 6.4 are called top
+minor roots.
+
+Proposition 6.5. Let α ∈ R(P ) be a major     root, let τ be the associated
+                                                                         
+                                                1
+final π-root and let (ρ, σ) = dir(δα ). Then      enρ,σ (ϕτ (P )), (ρ, σ) is a
+                                               m
+regular corner of type I of (ϕτ (P ), ϕτ (Q)) (see [12, Definition 5.5] and
+the discussion above Remark 5.9 in [12] for the classification of regular
+corners).
+
+
+74                Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+Proof. Item (3) of [12, Definition 5.5] holds by hypothesis, Item (1) holds
+by the very definition of π-root, Proposition 6.3 and [12, Theorem 2.6(4)],
+and Item
+      (2) holds by Remark3.6. Moreover, Proposition 5.2(2)a) proves
+        1
+that      enρ,σ (ϕτ (P )), (ρ, σ) is of type I.
+       m
+                                          1
+Proposition 6.6. Let j0 < j1 < · · · < jk ∈  Z and let (ρ, σ) = dir(j0 ).
+                                           l
+Consider the automorphism ϕ of L(l) defined by
+                                                    k
+                                                    X
+              ϕ(x1/l ) = x1/l   and    ϕ(y) = y +          ai xji .
+                                                     i=1
+
+Let A = ((a/l, b), (ρ, σ)) be a regular corner of (ϕ(P ), ϕ(Q)). Then the
+following facts hold.
+          Pk
+  (1) τ = i=1 ai xji + πxj0 is a π-root of P and Q.
+
+ (2) If A is of type Ib, then τ is a final major π-root of P and Q, with
+
+                       |DτP | = mb    and       |DτQ | = nb;          (6.3)
+
+     moreover, if stρ,σ (ϕ(Q)) = (k/l, 0) for some 1 ≤ k < l − a/b, then
+          k
+     λQ
+      τ =   .
+          l
+Proof. (1) By Items (1) and (3) of [12, Definition 5.5], we have A =
+ 1
+   enρ,σ (ϕ(P )) and b ≥ 1. Hence, by Equalities (3.2) and (3.3) we
+m
+conclude deg(fP,τ ) > 0 and that τ is a π-root of P . Since by [12,
+                                                       1
+Corollary 5.7] and Remark 4.1 the equality A = enρ,σ (ϕ(Q)) holds
+                                                      n
+and (Q, P ) is an (n, m)-pair, we infer that τ is also a π-root of Q.
+     (2) The two expressions for A obtained in the proof of Item (1),
+combined with Equality (3.2) and the corresponding equality for Q yield
+the equalities in (6.3). Since A is of type Ib, we have
+
+                      [`ρ,σ (ϕ(P )), `ρ,σ (ϕ(Q))] 6= 0,
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                  75
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+and so, by Proposition 4.2(1), the polynomial fP,τ has no multiple
+root. Moreover, using again Equality (3.2) and Equality (6.3) we ob-
+tain deg(fP,τ ) = mb > 1. This proves that τ is a major final π-root
+of P , and then, by Proposition 5.2(2)b), also of Q. Finally, assuming
+stρ,σ (ϕ(Q)) = (k/l, 0), Equality (3.3) for Q implies ρλQ
+                                                        τ = vρ,σ (ϕ(Q)) =
+  k
+ρ , from which the last assertion follows, as ρ 6= 0.
+  l
+Example 6.7. Consider the family F1 of [7], corresponding to an (m, n)-
+pair (P0 , Q0 ) as in [12, Corollary 5.21]:
+
+A0 = (4, 12), A00 = (1, 0), A1 = (7/4, 3), k = 1, m = 2j + 3, n = 3j + 4.
+                                                                        (6.4)
+Then (P0 , Q0 ) has the shape given in Figure 2 and we get `−2,1 (P ) = R4m
+for a (−2, 1)-homogeneous element R = λ0 (λ1 y − xy 3 ) with λ0 , λ1 6= 0.
+
+                         y
+                                       A0 = (4, 12)
+
+
+
+
+                        A00 = (1, 0)    x
+
+                     Figure 2: The shape of (P0 , Q0 )
+
+    In fact, by (6.4), the edge from A0 to A00 is determined. So we only
+need to prove
+
+              (ρ, σ) = SuccP0 (1, 0) = SuccQ0 (1, 0) = (−2, 1)
+
+
+76               Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+        The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+      1
+and     en−2,1 (P ) = (0, 4). From [12, Corollary 5.21(4)] we obtain
+     m
+(−1, 1) < (ρ, σ) < (−1, 0). Moreover, by the second equality in [7,
+(2.13)] we have
+
+                           v4,−1 (4, 12)             4
+               q0 =                             =           = 4.
+                      gcd(v4,−1 (4, 12), 4 − 1)   gcd(4, 3)
+
+On the other hand, at the beginning of [5, Subsection 2.4] it is shown
+the equality
+                                 p0 1
+                   enρ,σ (F0 ) =      enρ0 ,σ0 (P0 ),
+                                 q0 m
+and therefore, by [12, Corollary 7.2], there exists a (ρ, σ)-homogeneous
+element R such that `ρ,σ (P ) = R4m . This is only possible if (ρ, σ) =
+(−k, 1) for some k ∈ N, with k ≥ 2. But k ≥ 3 leads to vρ,σ (P0 ) ≤ 0 and
+then to degy (P0 (0, y)) ≤ 0, which contradicts [13, Proposition 10.2.6].
+Therefore we have k = 2, R = λ0 (λ1 y − xy 3 ) and hence we get
+
+                      1
+                        en−2,1 (P ) = 4 en−2,1 (R) = (0, 4),
+                      m
+as desired. Since P = ψ(P0 ) and Q = ψ(Q0 ), where ψ(y) = y and
+ψ(x) = x + y (see the beginning of Section 4), the shape of P is as in
+Figure 3, and P is a monic polynomial in y of degree 16m.
+      Write `4,−1 (P ) = xm g(z)m , where z = x1/4 y. By [5, Theorem
+2.20(6)] and the condition v1,−1 (A00 ) > 0, we know that (A0 , (ρ, σ)) =
+((4, 12), (4, −1)) is a regular corner of type IIb) of (P, Q). Hence, by
+                                                      mλ
+item (8) of the same theorem, we get v0,1 (A1 ) =        , where mλ is the
+                                                      m
+multiplicity of z − λ in p0 (z) = g(z)m . Since we have v0,1 (A1 ) = 3, by [5,
+Remarks 3.8 and 3.9] we get
+
+                              g(z) = λ0 (z 4 − λ41 )3 ,
+
+for some λ0 , λ1 ∈ K × . We obtain then
+
+      `4,−1 (Pξ ) = λ0 xm (z − λ1 )3m (z − iλ1 )3m (z + λ1 )3m (z + iλ1 )3m ,
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                          77
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+                         y
+                              (0, 16m)
+
+
+
+                                         (4m, 12m)
+
+
+
+
+                             (m, 0)      x
+
+                        Figure 3: The shape of Pξ
+
+
+
+and so, we have four final major π-roots
+
+
+          τ0 = λ1 x1/4 + πxδ ,               τ1 = iλ1 x1/4 + πxδ ,
+          τ2 = −λ1 x1/4 + πxδ ,              τ3 = −iλ1 x1/4 + πxδ ,
+
+
+where δ = σ/ρ, with (ρ, σ) = dir m 74 , 3 − 34 , 1 . Here A1 = 74 , 3
+                                                                          
+
+is the same final corner (see [5, Definition 2.18]) for all major final roots,
+corresponding to the regular corner (A1 , (ρ, σ)) of type Ib) of each of
+the four (m, n)-pairs (ϕτj (P ), ϕτj (Q)). By the first equality in (6.3),
+there are 3m roots of P associated to each of these major roots, and by
+Proposition 6.4, the remaining 4m roots of P are minor roots. Now we
+
+
+78               Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+can compute
+                   X                    3
+                                        X
+            IM =           |DτP |λQ
+                                  τ =         |DτPj |λQ
+                                                      τj
+                   τ ∈PM                j=0
+                             k              1
+                = 4 · mb ·     = 4 · m · 3 · = 3m = 3(2j + 3).
+                             l              4
+
+7    Intersection number and minor roots
+In this section we obtain an inequality for Im in Theorem 7.3, as opposed
+to the equality in [14, Theorem 4.7], whose proof has a serious gap. We
+also show how to compute Im for the families of [7]. For the sake of
+brevity we write Px , Qx , Py and Qy instead of the partial derivatives
+∂x P , ∂x Q, ∂y P and ∂y Q.
+Lemma 7.1. Let (P, Q) be as above, (ρ, σ) be a direction, with ρ 6= 0,
+and α ∈ R(P ). Write `ρ,σ (P ) = xu g(z) with z = x−σ/ρ y. The following
+facts hold.
+ (1) If deg(g) > 0, then `ρ,σ (Py ) = xu−σ/ρ g 0 (z).
+
+ (2) α is a minor root if and only if degx (Q(α)) = 0.
+                                                                 P
+ (3) Let β ∈ R(Py ). There exists τ ∈ Pm such that β ∈ Dτ y if and
+     only if degx (P (β)) = 0.
+
+ (4) If α is a minor root, then degx (Py (α)) = −δα .
+
+ (5) Let τ ∈ Pm and assume that fPy ,τ and fQy ,τ are coprime. Then
+                                      P
+     degx (Qy (β)) = −δτ for all β ∈ Dτ y .
+
+ (6) Let τ ∈ Pm and assume that fPy ,τ and fQy ,τ are not coprime.
+                            P
+     Then there exists β ∈ Dτ y such that degx (Qy (β)) < −δτ .
+Proof. (1) This follows from the fact that the morphism ∂y satisfies
+∂y (xi y j ) = jxi y j−1 for j > 0: in fact we have
+
+                     vρ,σ (∂y (xi y j )) = vρ,σ (xi y j ) − σ.
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                79
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+Hence `ρ,σ (∂y P ) = ∂y `ρ,σ (P ) when ∂y `ρ,σ (P ) 6= 0, and so
+
+                   `ρ,σ (Py ) = ∂y (xu g(z)) = xu−σ/ρ g 0 (z),
+
+because of deg(g) > 0.
+    (2) By Items (1)a) and (2)c) of Proposition 5.2, we know that α is
+a minor root if and only if we have λQτ = 0 for the π-root τ associated
+to α. This proves (2), since we have λQ
+                                      τ = degx (Q(α)) by Lemma 6.1.
+      (3) If we define
+
+                    δβ = min{degx (α − β)|α ∈ R(P )},
+
+and                          X                       X
+                     β=             aj xj + λxδβ +          aj xj ,
+                             j>δβ                    j<δβ
+                         j          δβ
+            P
+then τ =     j>δβ aj x + πx     is a π-root of P . From Remark 3.4 we
+               Py
+obtain 0 < |Dτ | = |Dτ | − 1, and so, by Remark 4.6 we get λP
+                        P
+                                                                   τ ≥ 0.
+Take α ∈ DτP and let τ1 be the final π-root of P associated with α. We
+have δα ≤ δβ (since δβ < δα implies |DτP | = 1) and hence λτ1 ≤ λτ , so
+λP
+ τ = 0 if and only if τ = τ1 is a final minor π-root of P .
+    We claim the equality λP τ = degx (P (β)). In fact, we have fP,τ (λ) 6=
+0 since otherwise, by Proposition 3.7, there exists j1 < δβ such that
+the π-approximation of β up to j1 is a π-root of P , contradicting the
+minimality of δβ . Hence, by Proposition 3.11, we have degx (P (β)) =
+                                                       Py
+λP
+ τ ≥ 0. Therefore, if degx (P (β)) = 0, then β ∈ Dτ and τ ∈ Pm . On
+                          Py
+the other hand, if β ∈ Dτ2 for some τ2 ∈ Pm , then δβ ≤ δτ2 , hence
+0 ≤ λτ ≤ λτ2 = 0, and so 0 = λP τ = degx (P (β)), as desired.
+                             j       δα
+                   P
+     (4) Let τ =    j>δα aj x + πx      be the minor final π-root of P
+associated with α. Write
+                       X                    X
+                   α=       aj xj + λxδα +       a j xj .
+                             j>δα                    j<δα
+
+                                                             0
+Since fP,τ (λ) = 0, and fP,τ has no multiple roots, we have fP,τ (λ) 6= 0.
+                                     0
+But by Item (1) we have fPy ,τ = fP,τ , and, by Proposition 3.11, we
+
+
+80                Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+        P
+obtain λτ y = degx (Py (τ )) = degx (Py (α)). Using again Item (1) we get
+ P
+λτ y = λτ − σ/ρ, and the result follows immediately since λτ = 0.
+                                                      P
+     (5) Let τ = j>j0 aj xj + πxj0 and take β ∈ Dτ y . Set
+                 P
+
+                         X                        X
+                    β=           aj xj + λxj0 +          aj xj .
+                         j>j0                     j<j0
+
+
+By Corollary 3.8, we have fPy ,τ (λ) = 0. As fPy ,τ is coprime with
+                                                                        Q
+fQy ,τ , we get fQy ,τ (λ) 6= 0. By Proposition 3.11, we obtain λτ y =
+                                                             Q
+degx (Qy (τ )) = degx (Qy (β)) and by Item (1) we have λτ y = λQ    τ − σ/ρ.
+                                                       Q
+The result follows immediately from the equality λτ = 0.
+      (6) Write τ = j>j0 aj xj +πxj0 . Let λ ∈ K be such that fQy ,τ (λ) =
+                     P
+
+0 = fPy ,τ (λ). By Proposition 3.7, there exist j1 , j2 < j0 such that
+τ1 = j>j0 aj xj + λxj0 + πxj1 is a π-root of Py and τ2 = j>j0 aj xj +
+       P                                                       P
+
+λxj0 + πxj2 is a π-root of Qy . Take j3 = max{j1 , j2 }. Then τ3 =
+P           j     j0       j3                                    P
+   j>j0 aj x + λx + πx        is a π-root of Qy and Py . If β ∈ Dτ3y , then
+                         X                        X
+                    β=           aj xj + λxj0 +          aj xj .
+                         j>j0                     j<j0
+
+
+With T = λxj0 +                  j
+                  P
+                     j<j0 aj x       we have
+
+        Qy (β) = evy=T (ϕτ (Qy )) = evy=λxj0 (`ρ,σ (ϕτ (Qy ))) + R
+                    Qy
+               = xλτ fQy ,τ (λ) + R
+
+                                                         Q
+for some R with vρ,σ (R) < vρ,σ (ϕτ (Qy ))) = ρλτ y . Since fQy ,τ (λ) = 0,
+we obtain
+                ρ degx (Qy (β)) = vρ,σ (Qy (β)) < ρλQτ .
+                                                       y
+
+
+                                         Q
+However, from Item (1) we have λτ y = λQ                    Q
+                                        τ − σ/ρ, and since λτ = 0 we
+conclude
+                       degx (Qy (β)) < −σ/ρ,
+
+as desired.
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                   81
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+Lemma 7.2. For any α ∈ K((x−1/l )) we have
+
+                             d                d
+                   Qy (α)      P (α) − Py (α) Q(α) ∈ K × .
+                            dx               dx
+
+                                   d                      dα d
+Proof. This follows directly from    P (α) = Px (α)+Py (α) ,    Q(α) =
+                                  dx                      dx dx
+                dα
+Qx (α) + Qy (α)     and the Jacobian condition.
+                dx
+                                  P
+Theorem 7.3. For Im = 1 −            τ ∈Pm (δτ + 1) we get Im ≤ I(P, Q). We
+also have
+                                            X
+                 I(P, Py Q) = deg(P ) −             |DτP |(1 + δτ ).         (7.1)
+                                           τ ∈Pm
+
+
+Proof. It suffices to prove (7.1) and
+                                          X
+              I(P, Py ) ≤ deg(P ) − 1 −           (|DτP | − 1)(δτ + 1).      (7.2)
+                                          τ ∈Pm
+
+
+In fact, Equality (7.1) and Inequality (7.2) yield
+                                                          X
+          I(P, Q) = I(P, Py Q) − I(P, Py ) ≥ 1 −                 (δτ + 1),
+                                                         τ ∈Pm
+
+
+as desired.
+Proof of Equality (7.1). By Lemma 7.2, for each α ∈ R(P ) we have
+       d
+Py (α) Q(α) ∈ K × . Moreover, by Lemma 7.1(2), if α is a major root,
+      dx
+then degX (Q(α)) = λQ  τ > 0, and so degx (Py (α)Q(α)) = 1. On the other
+hand, if α is a minor root, then by Proposition 5.2(1)a), Lemma 6.1 and
+Lemma 7.1(4) we obtain
+
+              degx (Py (α)Q(α)) = degx (Py (α)) = −δα = −δτ ,
+
+where τ is the minor final π-root associated with α. Using these facts
+
+
+82                Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+we obtain
+
+
+                 X
+I(P, Py Q) =              degx (Py (α)Q(α))
+                α∈R(P )
+                X X                                         X X
+            =                 degx (Py (α)Q(α)) +                        degx (Py (α)Q(α))
+                τ ∈Pm α∈DτP                             τ ∈PM α∈DτP
+                X                        X                  X                  X
+            =           |DτP |(−δτ ) +           |DτP | +           |DτP | −           |DτP |
+                τ ∈Pm                    τ ∈PM              τ ∈Pm              τ ∈Pm
+                              X
+            = deg(P ) −             |DτP |(1 + δτ ),
+                            τ ∈Pm
+
+
+
+
+where the first equality is justified as in the proof of Theorem 6.2.
+
+
+Proof of Inequality (7.2). By Lemma 7.2, for each β ∈ R(Py ), we have
+       d
+Qy (β) P (β) ∈ K × . Define
+      dx
+
+
+ Py,m = {β ∈ R(Py ) : there is a minor final π-root τ with β ∈ DτPy }.
+
+
+
+Then, by Lemma 7.1(3), if β is not in Py,m , we have degx (Qy (β)P (β)) =
+1. On the other hand, if β is in Py,m , then by Items (3), (5) and (6) of
+Lemma 7.1 we obtain
+
+
+
+                  degx (P (β)Qy (β)) = degx (Qy (β)) ≤ −δτ ,
+
+
+
+where τ is the minor final π-root associated with β. Using these facts
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                                          83
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+we obtain
+                    X
+I(Py , P Qy ) =              degx (P (β)Qy (β))
+                  β∈R(Py )
+                  X        X                                   X
+              =                   degx (P (β)Qy (β)) +               degx (P (β)Qy (β))
+                  τ ∈Pm β∈D Py                             β ∈P
+                                                             / y,m
+                              τ
+                  X                                      X
+              ≤           |DτPy |(−δτ ) + deg(Py ) −             |DτPy |
+                  τ ∈Pm                                  τ ∈Pm
+                                     X
+              = deg(P ) − 1 −               |DτPy |(1 + δτ )
+                                    τ ∈Pm
+                                     X
+              = deg(P ) − 1 −               (|DτP | − 1)(1 + δτ ),
+                                    τ ∈Pm
+                                                                                      (7.3)
+where the last equality follows from Remark 3.4.
+    Since the Jacobian condition implies
+                                                                 Y
+Resy (Py , Qy ) Resy (Py , Px ) = Resy (Py , Qy Px ) =                     Qy (β)Px (β) = 1,
+                                                               β∈R(Py )
+
+we have I(Py , Qy ) = 0, and thus (7.3) yields Inequality (7.2).
+
+Example 6.7 (continuation). In the case of family F1 of [7] there is
+only one minor root τ corresponding to the remaining 4m roots of Pξ ,
+and δτ = −3. Hence we have Im = 1−(−3+1) = 3. Since IM = 3(2j+3),
+we have Im < IM (which is compatible with Theorem 7.3 and doesn’t
+allow us to disregard this family).
+     In fact, consider the diagram in Figure 4, where flip : K[x, y] →
+K[x, y] is given by flip(x) = y and flip(y) = −x, and the three morphisms
+        e : K[x, x−1 , y] → K[x, x−1 , y] are characterized by
+ϕ, ϕ1 , ϕ
+
+       ϕ(x) = x + y,              ϕ1 (x) = x,              ϕ(x)
+                                                           e    = x,
+       ϕ(y) = y,                  ϕ1 (y) = y − x,          ϕ(y)
+                                                           e    = y + λ1 x−2 .
+
+In order to define G set u = x + y + λ1 x−2 . The morphism G :
+K[y]((x−1 )) → K[y]((x−1 )) is given by G(x) = u and G(y) = y +
+
+
+84                 Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+y                      y                               y
+            −1
+     P =ϕ        (P0 )
+                                    ϕ1 (P )
+                                                                 ϕ(ϕ
+                                                                 e 1 (P ))
+                 ϕ1                                ϕ
+                                                   e
+
+
+
+
+            x                                      x                     x
+       ϕ
+y
+                                      ϕ                          G
+           P0
+                       y                               y
+
+                flip                               ϕ
+                                                   e
+                                        P1                        ϕ(P
+                                                                  e 1)
+
+
+
+            x                                  x                         x
+
+    Figure 4: Finding minor roots: `1,−3 (ϕ(ϕ
+                                          e 1 (P ))) = `1,−3 (ϕ(P
+                                                              e 1 ))
+
+
+λ1 (x−2 − u−2 ). Note that u is invertible in K[y]((x−1 )) with
+
+      u−1 = x−1 1 − x−1 (y + λ1 x−2 ) + x−2 (y + λ1 x−2 )2 − . . . .
+                                                                  
+
+
+We also have G ◦ ϕ e = ϕe ◦ ϕ and `1,−3 (G(S)) = `1,−3 (S) for all S ∈
+K[y]((x−1 )), which implies `1,−3 (ϕ(S))
+                                   e     = `1,−3 (ϕ(ϕ(S))).
+                                                  e
+    Now, the previous computations yield `1,−2 (P1 ) = R14m where
+
+                           R1 = flip(R) = λ0 x3 (y − λ1 x−2 ).
+
+Moreover, we also have `−1,4 (ϕ(P
+                              e 1 )) = `−1,4 (P1 ) and the element F
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                   85
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+of [12, Corollary 7.4] satisfies
+                                          3 1
+                 st−1,4 (F ) = (9, 3) =       st−1,4 (ϕ(P
+                                                      e 1 )),
+                                          4m
+and so we must have q = 4 in [12, Corollary 7.4]. Hence, if we assume by
+                                e 1 ) (1, −2) > (1, −3), from [12, Corollary
+contradiction (ρ1 , σ1 ) = Predϕ(P
+7.4] we obtain a (ρ1 , σ1 )-homogeneous element R2 ∈ K[x, x−1 , y] such
+              e 1 )) = R24m , which is impossible.
+that `ρ1 ,σ1 (ϕ(P
+     It follows that
+
+                  e 1 ) (1, −2) = (1, −3) = Predϕ(Q
+              Predϕ(P                           e 1 ) (1, −2)
+
+holds, as we also know that (0, 0) belongs to Supp(ϕ(P
+                                                    e 1 ))∩Supp(ϕ(Q
+                                                                 e 1 )).
+But we have `1,−3 (ϕ(P  e 1 )) = `1,−3 (ϕ(ϕ
+                                        e 1 (P ))) and so, from Proposi-
+tion 3.3 we know that τ = −x + λ1 x−2 + πx−3 is a π-root of P , since
+ϕτ = ϕ  e ◦ ϕ1 . Moreover we get λτ = 0; and fπ,P (z) = `1,−3 (ϕτ (P ))
+has no multiple roots (eventually replace P by P + ξ for an adequate
+constant ξ). Consequently τ is a final minor root of P and |DτP | =
+v0,1 (en1,−3 (ϕτ (P ))) = 4m, where 4m is the number of remaining minor
+roots of P . So we conclude that τ is the only minor root of P and we
+                    σ    −3
+also obtain δτ = =           = −3, as claimed.
+                    ρ     1
+
+References
+ [1] Abhyankar, S. S. (1977). Lectures on expansion techniques in al-
+     gebraic geometry. Tata Institute of Fundamental Research Lectures
+     on Mathematics and Physics, 57, Notes by Balwant Singh, Tata
+     Institute of Fundamental Research, Bombay.
+
+ [2] Cassou-Noguès, Pierrette (2011). Newton trees at infinity of
+     algebraic curves. CRM Proc. Lecture Notes, 1-19, 54, Amer. Math.
+     Soc., Providence, RI.
+
+ [3] Dixmier, Jacques (1968). Sur les algèbres de Weyl. Bull. Soc.
+     Math. France, 209-242, 96.
+
+
+86               Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+ [4] Eisenbud, David (1995). Commutative algebra, with a view toward
+     algebraic geometry. Springer-Verlag, New York.
+
+ [5] Guccione, Jorge Alberto, Guccione, Juan José, Valqui,
+     Christian. The Two-Dimensional Jacobian conjecture and the
+     Lower Side of the Newton Polygon. arXiv:1605.09430v2.
+
+ [6] Guccione, Jorge Alberto, Guccione, Juan José, Valqui,
+     Christian. A system of polynomial equations related to the Jaco-
+     bian conjecture. arXiv:1406.0886.
+
+ [7] Guccione, Jorge Alberto, Guccione, Juan José, Valqui,
+     Christian, Horruitiner, Rodrigo. Some algorithms related to
+     the Jacobian Conjecture. arXiv:1708.07936.
+
+ [8] Heitmann, R. (1990). On the Jacobian conjecture. Journal of Pure
+     and Applied Algebra, 35-72, 64.
+
+ [9] Joseph, A (1975). The Weyl algebra – semisimple and nilpotent
+     elements. American Journal of Mathematics, 597-615, 97.
+
+[10] Keller, Ott-Heinrich (1939). Ganze Cremona - Transformatio-
+     nen. Monatsh. Math. Phys., 299-306, 47, 1.
+
+[11] Moh, T. T. (1983). On the Jacobian conjecture and the configura-
+     tions of roots. J. Reine Angew. Math., 140-212, 340.
+
+[12] Valqui, Christian, Guccione, Jorge A., Guccione, Juan J.
+     (2017). On the shape of possible counterexamples to the Jacobian
+     conjecture. Journal of Algebra, 13-74, 471.
+
+[13] van den Essen, Arno (2000). Polynomial automorphisms and the
+     Jacobian conjecture. Progress in Mathematics, Birkhäuser Verlag,
+     190.
+
+[14] Xu,Yansong. Intersection Numbers and the Jacobian Conjecture.
+     arXiv:1604.07683v2.
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                87
+J. Guccione, J. Guccione, R. Horruitiner, C. Valqui
+
+
+Resumen
+
+En [14] Yansong Xu calcula el número de intersección de un par jaco-
+biano usandos dos igualdades diferentes. Probamos la primera de estas
+desigualdades usando el lenguaje de [12], pero en lugar de la segunda
+solamente obtenemos una desigualdad.
+Palabras clave: Conjetura del jacobiano, teorema de Newton-Puisseux
+
+
+Jorge A. Guccione
+Departamento de Matemática
+Facultad de Ciencias Exactas y Naturales-UBA
+Pabellón 1-Ciudad Universitaria
+Intendente Guiraldes 2160 (C1428EGA) Buenos Aires, Argentina.
+Instituto de Investigaciones Matemáticas “Luis A. Santaló”
+Facultad de Ciencias Exactas y Naturales-UBA
+Pabellón 1-Ciudad Universitaria
+Intendente Guiraldes 2160 (C1428EGA) Buenos Aires, Argentina.
+vander@dm.uba.ar
+
+Juan J. Guccione
+Departamento de Matemática
+Facultad de Ciencias Exactas y Naturales-UBA
+Pabellón 1-Ciudad Universitaria
+Intendente Guiraldes 2160 (C1428EGA) Buenos Aires, Argentina.
+Instituto Argentino de Matemática-CONICET
+Savedra 15 3er piso
+(C1083ACA) Buenos Aires, Argentina.
+jjgucci@dm.uba.ar
+
+Christian Valqui
+Pontificia Universidad Católica del Perú, Sección Matemáticas, PUCP
+Av. Universitaria 1801, San Miguel, Lima 32, Perú.
+Instituto de Matemática y Ciencias Afines (IMCA)
+
+
+88              Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430
+      The Jacobian Conjecture: Approximate roots and intersection numbers
+
+
+Calle Los Biólogos 245. Urb San César. La Molina, Lima 12, Perú.
+cvalqui@pucp.edu.pe
+
+Rodrigo Horruitiner
+Pontificia Universidad Católica del Perú, Sección Matemáticas, PUCP
+Av. Universitaria 1801, San Miguel, Lima 32, Perú.
+rhorruitiner@pucp.edu.pe
+
+
+
+
+Pro Mathematica, XXX, 60 (2019), 51-89, ISSN 2305-2430                89
+

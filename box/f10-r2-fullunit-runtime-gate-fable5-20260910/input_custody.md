@@ -1,0 +1,19 @@
+# Input custody: f10-r2-fullunit-runtime-gate-fable5-20260910
+
+Rows generated from sha256sum output over /tmp/jc2-lane.EiN8cu/inputs at 17:14:37Z, before any body read. All 13 equal the charged pins.
+
+```
+cb0da8dcfe19a033f9daad1de7de4e602a330f15a90c383824550522b8d847eb  CONTRACT.md
+ed63b649871853469e460ab7ef5fc8f9da259e5d096b3ad5a142c26acbfdb793  DISABLED-PLAN.json
+fe9ab1abe9a96fc43b889e1bcb598f8e8c65fd194732c48f3542e13c476e0345  arithmetic.py
+ccc3d2ddfca98f7faaed9df323fb90ec183b437b3c6b0bfcde0820186e667023  check.py
+b6998cae2d38e962777dc1064f39a841cfee3e5bb0fc3905599a5378aa78ff69  dispatch.py
+c49b7dfabe6dc8cc5b7aaea485171a6b709fc6158f180ae1157afd90b3cf4b1f  entry.py
+22fea3eeeea5a9877eb2749384294f070b174889b42a210804665a0fa617a918  f10-r2-fullunit-modular-code-gate-fable5-20260910.md
+c37f2aad93a224d0b2f51e7a465a790e574e36d9f49d294e443799e0aa710ac8  f10-r2-fullunit-runtime-astra-20260910.md
+8358693287a2874f05b431ab0081c98db9461bdc6eaf06be33f40a2f83c72ca8  f10-r2-highest-modular-runtime-gate-fable5-20260910.md
+85ce5e9ab2067ae07033fca52e0c4d0c8853032133f9799d388d8d0745c24698  f10-r2-highest-status-fix-gate-fable5-20260910.md
+4548656af387b7e08df5bd5c56504f97c2d11d2b5375cbfbadde5304465c4c97  mutate.py
+396dc3b42f082ffbc08516a3dd41528516e2e69e3994fc005b22b79b3a605927  previous-dispatch.py
+60a290aee2ed5def7ed4242743f187dea755659f287707fa79c6c1e05f2d1f10  produce.py
+```

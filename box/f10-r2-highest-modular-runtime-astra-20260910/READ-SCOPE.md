@@ -1,0 +1,9 @@
+# Read scope
+
+First action2026-09-10T15:37:20.195126591Z; hard15:59, reserve15:56. Targets absent before the artifact lease. All14 hashes matched before bodies. Input numbering in PINS.json is ordered as ROOT's invitation.
+
+Same-byte completed WHOLE reuse: inputs1–5(highest entry/producer/checker/contract/report),11(original authority),13–14(original arithmetic/check_arithmetic). Fresh WHOLE:6–10(accepted semantic dispatcher/probe/disabled registration/contract/gate),12(unchanged CAPRUN). This is eight reuse and six fresh, not a fresh-context claim. Aggregated output clipping affected the old dispatcher tail/gate middle; explicit rereads471–673 and gate48–75 recovered it. CAPRUN was read in three bounded whole-covering intervals1–420,421–840,841–1198. Highest entry/checker exact CLI/receipt/traceback intervals were reread during adaptation.
+
+Only documentary hashes, textual reads/string copying and apply_patch were used. No own Python source was imported, parsed by AST, syntax-checked, compiled or executed. No mathematical fixture/results were constructed locally; no baseline or certificate body was read, copied, hashed or parsed. The future baseline pin is literal only. No AWS/network/process/Git/corpus/provenance or live review file was accessed. Root's lifecycle notice did not expand the input set.
+
+Source copying used the exact old dispatcher text, followed by narrow replacement of the science phases, receipt handling and added highest sibling checks; the unchanged probe was copied byte-for-byte. The resulting full dispatcher was read back and text-compared to the authored text, not compiled. Manual review covers the new mutator, whole caller, CLI source pins, 13 labels, freeze transitions and exact negative traceback. Metadata-only publication tools are not mathematical execution.

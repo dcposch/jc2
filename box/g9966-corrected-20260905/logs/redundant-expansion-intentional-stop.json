@@ -1,0 +1,26 @@
+{
+  "utc": "2026-09-05T18:59:11.427920+00:00",
+  "reason": "Redundant free-centre and repeated implication expansions intentionally stopped after complete checkpoints; exact gauge coverage and graph-certificate resume retain the full locus. Not a unit or compute-bound verdict.",
+  "stopped_groups": [
+    {
+      "pid": 3785,
+      "pgid": 3784,
+      "cmd": "python3 deep_accelerated.py --branch delta2 --output results/accelerated-delta2.json --timeout-seconds 8800 "
+    },
+    {
+      "pid": 3837,
+      "pgid": 3836,
+      "cmd": "python3 deep_accelerated.py --branch delta52 --output results/accelerated-delta52.json --timeout-seconds 8800 "
+    },
+    {
+      "pid": 9453,
+      "pgid": 9452,
+      "cmd": "python3 deep_gauge_accelerated.py --branch delta2 --output results/source-full-delta2.json --timeout-seconds 7100 "
+    },
+    {
+      "pid": 9506,
+      "pgid": 9505,
+      "cmd": "python3 deep_gauge_accelerated.py --branch delta52 --output results/source-full-delta52.json --timeout-seconds 7100 "
+    }
+  ]
+}

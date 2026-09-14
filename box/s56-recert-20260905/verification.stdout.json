@@ -1,0 +1,261 @@
+{
+  "charts": [
+    {
+      "builder_sha256": "8c036a4f74b383fb4804ccfd8b10d8809009917f142ea1357567f786fb60286f",
+      "ell8_target_gate": true,
+      "legacy_zero_specialization": true,
+      "parameters_without_T": 116,
+      "partition": [
+        1,
+        1
+      ],
+      "partition_origin_affinely_canonical": true,
+      "row": "S5",
+      "rows": 261,
+      "rows_sha256": "6015360679702c45ac54242b040830c7feb2ec2ef33c15c6bd3a90d2d006565e",
+      "source_complete_support": true,
+      "status": "PASS",
+      "stem": "S5_n9_m6_M2_V1_k8_part_1_1_source_complete"
+    },
+    {
+      "builder_sha256": "9070f6d30ba2768954e8f27782fc56c1239d065d99a1ec863a728b938b6e36b9",
+      "ell8_target_gate": true,
+      "legacy_zero_specialization": true,
+      "parameters_without_T": 115,
+      "partition": [
+        2
+      ],
+      "partition_origin_affinely_canonical": true,
+      "row": "S5",
+      "rows": 261,
+      "rows_sha256": "e8063f9885defd9c21d0fe57ce84636a70db0593d8a4bc721e322609a0db1d3b",
+      "source_complete_support": true,
+      "status": "PASS",
+      "stem": "S5_n9_m6_M2_V1_k8_part_2_source_complete"
+    },
+    {
+      "builder_sha256": "71bea8e09453cffabb640fbaf40fa3cf884979d32f790b0a5c02cda8c717a9e7",
+      "ell8_target_gate": true,
+      "legacy_zero_specialization": true,
+      "parameters_without_T": 212,
+      "partition": [
+        1
+      ],
+      "partition_origin_affinely_canonical": true,
+      "row": "S6",
+      "rows": 315,
+      "rows_sha256": "d08c2e2ba52a507e88a1ab0de6270b85b47fef2a94e5c6c9e7e7b7fb0ecc41d0",
+      "source_complete_support": true,
+      "status": "PASS",
+      "stem": "S6_n9_m6_M5_V2_k8_part_1_source_complete"
+    }
+  ],
+  "clean_exact_q_units": 0,
+  "clean_modular_units": 0,
+  "frozen_inputs_ok": true,
+  "schema": "jc2.s56-recert.independent-verification/v1",
+  "script": "box/s56-recert-20260905/verify_recert.py",
+  "script_sha256": "fa1af4b292d962612cc479a5b62081d074931d59eb6860ac60c29b41287f70ea",
+  "solves": [
+    {
+      "basis_size": null,
+      "branch": "none",
+      "characteristic": 0,
+      "clean_unit": false,
+      "completed_accepted": false,
+      "dimension": null,
+      "elapsed_seconds": 1800.234362,
+      "exact_q_clean_unit": false,
+      "record": "box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/Q/solve-record.json",
+      "resource": {
+        "maximum_rss_kb": 4985792,
+        "process_group_monitor": {
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/timed_singular.sh",
+            "--cpus=1",
+            "--threads=1",
+            "--flint-threads=1",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/Q/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_Q.sing"
+          ],
+          "elapsed_seconds": 1800.234362,
+          "maximum_process_group_rss_kb": 4985792,
+          "process_group": 4161,
+          "returncode": -15,
+          "sample_period_seconds": 0.1,
+          "samples": 13587,
+          "schema": "jc2.s56-recert.process-group-resource/v1",
+          "timed_out": true
+        }
+      },
+      "returncode": -15,
+      "status": "PASS",
+      "timed_out": true
+    },
+    {
+      "basis_size": null,
+      "branch": "none",
+      "characteristic": 32003,
+      "clean_unit": false,
+      "completed_accepted": false,
+      "dimension": null,
+      "elapsed_seconds": 1800.433997,
+      "exact_q_clean_unit": false,
+      "record": "box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32003/solve-record.json",
+      "resource": {
+        "maximum_rss_kb": 10562168,
+        "process_group_monitor": {
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/timed_singular.sh",
+            "--cpus=1",
+            "--threads=1",
+            "--flint-threads=1",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32003/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_p32003.sing"
+          ],
+          "elapsed_seconds": 1800.433997,
+          "maximum_process_group_rss_kb": 10562168,
+          "process_group": 3224,
+          "returncode": -15,
+          "sample_period_seconds": 0.1,
+          "samples": 13973,
+          "schema": "jc2.s56-recert.process-group-resource/v1",
+          "timed_out": true
+        }
+      },
+      "returncode": -15,
+      "status": "PASS",
+      "timed_out": true
+    },
+    {
+      "basis_size": null,
+      "branch": "none",
+      "characteristic": 32009,
+      "clean_unit": false,
+      "completed_accepted": false,
+      "dimension": null,
+      "elapsed_seconds": 1800.472052,
+      "exact_q_clean_unit": false,
+      "record": "box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32009/solve-record.json",
+      "resource": {
+        "maximum_rss_kb": 10402448,
+        "process_group_monitor": {
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/timed_singular.sh",
+            "--cpus=1",
+            "--threads=1",
+            "--flint-threads=1",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32009/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_p32009.sing"
+          ],
+          "elapsed_seconds": 1800.472052,
+          "maximum_process_group_rss_kb": 10402448,
+          "process_group": 4046,
+          "returncode": -15,
+          "sample_period_seconds": 0.1,
+          "samples": 13766,
+          "schema": "jc2.s56-recert.process-group-resource/v1",
+          "timed_out": true
+        }
+      },
+      "returncode": -15,
+      "status": "PASS",
+      "timed_out": true
+    },
+    {
+      "basis_size": null,
+      "branch": "none",
+      "characteristic": 32027,
+      "clean_unit": false,
+      "completed_accepted": false,
+      "dimension": null,
+      "elapsed_seconds": 1800.491279,
+      "exact_q_clean_unit": false,
+      "record": "box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32027/solve-record.json",
+      "resource": {
+        "maximum_rss_kb": 10511660,
+        "process_group_monitor": {
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/timed_singular.sh",
+            "--cpus=1",
+            "--threads=1",
+            "--flint-threads=1",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32027/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_p32027.sing"
+          ],
+          "elapsed_seconds": 1800.491279,
+          "maximum_process_group_rss_kb": 10511660,
+          "process_group": 4097,
+          "returncode": -15,
+          "sample_period_seconds": 0.1,
+          "samples": 13794,
+          "schema": "jc2.s56-recert.process-group-resource/v1",
+          "timed_out": true
+        }
+      },
+      "returncode": -15,
+      "status": "PASS",
+      "timed_out": true
+    },
+    {
+      "basis_size": null,
+      "branch": "none",
+      "characteristic": 32003,
+      "clean_unit": false,
+      "completed_accepted": false,
+      "dimension": null,
+      "elapsed_seconds": 190.468289,
+      "exact_q_clean_unit": false,
+      "record": "box/s56-recert-20260905/solves/S6_n9_m6_M5_V2_k8_part_1_source_complete/none/p32003/solve-record.json",
+      "resource": {
+        "maximum_rss_kb": 2535728,
+        "process_group_monitor": {
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/timed_singular.sh",
+            "--cpus=1",
+            "--threads=1",
+            "--flint-threads=1",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/s56-recert-20260905/solves/S6_n9_m6_M5_V2_k8_part_1_source_complete/none/p32003/S6_n9_m6_M5_V2_k8_part_1_source_complete_coefficient_first_none_p32003.sing"
+          ],
+          "elapsed_seconds": 190.468289,
+          "last_observed_members": [
+            13071
+          ],
+          "maximum_process_group_rss_kb": 2535728,
+          "process_group": 13067,
+          "requested_cpu": null,
+          "returncode": -15,
+          "sample_period_seconds": 0.1,
+          "samples": 1408,
+          "schema": "jc2.s56-recert.process-group-resource/v1",
+          "timed_out": false
+        }
+      },
+      "returncode": -15,
+      "status": "PASS",
+      "timed_out": false
+    }
+  ],
+  "status": "PASS"
+}

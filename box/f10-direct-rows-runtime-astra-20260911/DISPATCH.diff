@@ -1,0 +1,306 @@
+--- accepted-source-runtime/dispatch.py
++++ direct-rows-runtime/dispatch.py
+@@ -1,4 +1,4 @@
+-"""Fixed-r3 reconstruction + one mixed-row runtime, STATIC/UNEXECUTED; disabled without fresh ROOT registration.
++"""Direct finite rows + one mixed-row runtime, STATIC/UNEXECUTED; disabled without fresh ROOT registration.
+ 
+ Metadata-only caller. No science import, coefficient parse, solver, retry,
+ installation, worker control, or inner process group. CAPRUN is unchanged.
+@@ -19,14 +19,9 @@
+ import sys
+ import time
+ 
+-JOB = 'f10-source-cone-r3-reconstruction-v1'
++JOB = 'f10-source-cone-r3-direct-rows-v1'
+ CAPRUN_SHA = '4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2'
+-SCIENCE = {
+-    'authority.py': '407c5784ba07abbf289e2ba4fd82f24fc661987eb55f378bf39cc954da1ee07b',
+-    'arithmetic.py': '40b18453b6127d1b8217a6d6e1d3eb3aff1e911c15243ed9c640277f24175431',
+-    'produce.py': '76ad6c85a6c5d4ccbd01c642c43ff7002cb7060a1367e11ee5927a272ce06a5a',
+-    'check_arithmetic.py': '10e57542f9aa06eb69fd9562b2aa0bb27567c6d14186ffa90d77d6e08e80ae2c',
+-    'check.py': 'b9176ee7f0b8f34506e0fce03c2aea548756d0d489a53b732401cc7dbaa8c87f'}
++SOURCE_NAMES = ('authority.py', 'arithmetic.py', 'produce.py', 'check_arithmetic.py', 'check.py')
+ LIMITS = {'wall_seconds': '900', 'cpu_seconds': '600', 'memory_bytes': '8589934592',
+           'aggregate_bytes': '134217728'}
+ BATCH_LIMITS = {'wall_seconds': '3000', 'cpu_seconds': '2100',
+@@ -156,8 +151,16 @@
+         self.path = immutable(name); self.root_sha = sha(self.path); self.r = load(self.path)
+         need(stat.S_IMODE(self.path.stat().st_mode) == 0o444, 'ROOT registration 0444')
+         r = self.r
+-        need(r.get('schema') == 'f10-source-cone-r3-runtime/v1' and r.get('enabled') is True, 'disabled ROOT registration')
++        need(r.get('schema') == 'f10-direct-rows-runtime/v1' and r.get('enabled') is True, 'disabled ROOT registration')
+         need(r['jobtag'] == JOB and r['exclusive_no_concurrent_writer'] is True, 'job/exclusivity')
++        self.science = r['source_files']
++        need(type(self.science) is dict and set(self.science) == set(SOURCE_NAMES)
++             and all(type(h) is str and re.fullmatch(r'[0-9a-f]{64}', h) for h in self.science.values()), 'ROOT final five source hashes')
++        review = r['review_clearance']
++        need(set(review) == {'status', 'source_first_sha256', 'runtime_first_sha256'}
++             and review['status'] == 'SOURCE_AND_RUNTIME_FIRST_CONFIRMED'
++             and all(type(review[k]) is str and re.fullmatch(r'[0-9a-f]{64}', review[k])
++                     for k in ('source_first_sha256', 'runtime_first_sha256')), 'both FIRSTs required by ROOT')
+         need(r['source_limits'] == LIMITS and r['limits'] == BATCH_LIMITS
+              and r['profiles'] == PROFILES, 'fixed cap profiles')
+         need(r['environment'] == ENV and dict(os.environ) == ENV, 'ROOT clear environment required')
+@@ -182,16 +185,43 @@
+         self.source = directory(r['science_dir'], 0o755)
+         self.wrapper = directory(r['wrapper_dir'], 0o755)
+         need(self.source != self.wrapper and os.getcwd() == str(self.wrapper), 'separate wrapper cwd')
++        self.source_pins = r['source_pins']
++        need(type(self.source_pins) is dict and 5 <= len(self.source_pins) <= 64, 'bounded fixed reference vector')
++        for path, digest in self.source_pins.items():
++            need(type(path) is str and pathlib.Path(path).is_absolute()
++                 and type(digest) is str and re.fullmatch(r'[0-9a-f]{64}', digest), 'literal source reference pin')
++        need(all(self.source_pins.get(str(self.source / name)) == h for name, h in self.science.items()), 'installed absolute source pins agree')
++        need(type(r['contract_sha256']) is str and re.fullmatch(r'[0-9a-f]{64}', r['contract_sha256']), 'ROOT contract manifest binding')
++        place = r['place']
++        need(type(place) is dict and set(place) == {'p', 'degree', 'phi', 'P7_mod_p'}
++             and all(type(place[k]) is str and re.fullmatch(r'0|[1-9][0-9]{0,9}', place[k]) for k in ('p', 'degree'))
++             and all(type(place[k]) is list and 2 <= len(place[k]) <= 8
++                     and all(type(x) is str and re.fullmatch(r'0|[1-9][0-9]{0,9}', x) for x in place[k])
++                     for k in ('phi', 'P7_mod_p')), 'ROOT place metadata shape only')
+         need(self.files['dispatcher'].parent == self.wrapper and self.files['probe'].parent == self.wrapper,
+              'exact wrapper siblings')
+         need(self.files['mutator'] == self.wrapper / 'mutate.py', 'literal mutator sibling')
+         outer = [str(self.files['python']), '-I', '-S', '-B', str(self.files['dispatcher']), '--registration', str(self.path)]
+         need(r['outer_argv'] == outer and identity(os.getpid())['argv'] == outer, 'literal ROOT argv')
+         self.pins = r['pins']
++        self.preflight_path = immutable(r['preflight_policy'])
++        need(self.pins.get(str(self.preflight_path)) == sha(self.preflight_path), 'reviewed preflight policy pin')
++        preflight = load(self.preflight_path)
++        need(set(preflight) == {'schema', 'source_files', 'entries'}
++             and preflight['schema'] == 'f10-direct-rows-preflight-policy/v1'
++             and preflight['source_files'] == self.science, 'preflight bound to final source')
++        self.refusals = preflight['entries']
++        need(type(self.refusals) is dict and set(self.refusals) == set(LABELS[:5]) | {'startup-produce', 'startup-check'}, 'seven exact refusal predicates')
++        for spec in self.refusals.values():
++            need(type(spec) is dict and set(spec) == {'exit_code', 'stdout', 'stderr'}
++                 and type(spec['exit_code']) is int and 1 <= spec['exit_code'] <= 125
++                 and spec['stdout'] == '' and type(spec['stderr']) is str
++                 and 0 < len(spec['stderr']) <= 8192 and spec['stderr'].isascii()
++                 and spec['stderr'].endswith('\n'), 'literal bounded source refusal, no wildcard interpretation')
+         for p in self.files.values():
+             need(str(p) in self.pins, 'role path pin')
+         need(self.pins[str(self.files['caprun'])] == CAPRUN_SHA, 'unchanged CAPRUN')
+-        for name, h in SCIENCE.items():
++        for name, h in self.science.items():
+             need(self.pins.get(str(self.source / name)) == h, 'actual science role pin: ' + name)
+         self.native_path = immutable(r['native_manifest'])
+         need(self.pins.get(str(self.native_path)) == sha(self.native_path), 'native manifest pin')
+@@ -220,7 +250,7 @@
+         self.mount_id = (self.mount.stat().st_dev, self.mount.stat().st_ino)
+         need(self.source != self.mount and self.mount not in self.source.parents and self.mount not in self.wrapper.parents, 'code outside outputs')
+         need(all(p != self.mount and self.mount not in p.parents for p in
+-                 list(self.files.values()) + [self.path, self.native_path, self.simple_path]), 'static inputs outside tmpfs')
++                 list(self.files.values()) + [self.path, self.native_path, self.simple_path, self.preflight_path]), 'static inputs outside tmpfs')
+         for fd in (1, 2):
+             need(os.fstat(fd).st_dev == self.mount_id[0] and stat.S_ISREG(os.fstat(fd).st_mode), 'outer streams on working tmpfs')
+             stream = self.mount / ('outer.stdout' if fd == 1 else 'outer.stderr')
+@@ -241,7 +271,7 @@
+              'mutate': {'flag': '--root-registration-sha256', 'token': 'ROOT_REGISTRATION_SHA256'}}, 'only approved typed slots')
+         need(r['phase_policy'] == {'baseline': str(self.frozen / 'artifact.json'),
+              'fixture': str(self.frozen / 'mixed-row.json'),
+-             'mutation': 'graph.slots[24] += X1^27', 'source_files': SCIENCE,
++             'mutation': 'graph.slots[24] += X1^27 over ROOT place', 'source_files': self.science,
+              'source_limits': LIMITS, 'positive_record': str(self.auth / 'positive.json')}, 'literal phase policy')
+         self.runs = []; self.used_labels = set(); self.frozen_pins = {}
+         self.revalidate(); self.group_quiet()
+@@ -266,7 +296,7 @@
+              and os.readlink('/proc/self/ns/pid') == self.r['pid_namespace'], 'current host/instance/boot/namespace')
+         need(pathlib.Path('/proc/self/cgroup').read_text().strip() == '0::' + str(self.cg)[len('/sys/fs/cgroup'):]
+              and (self.cg / 'memory.max').read_text().strip() == LIMITS['memory_bytes'], 'current cgroup/cap')
+-        need(set(p.name for p in self.source.iterdir()) == set(SCIENCE), 'EXACT five-file science directory')
++        need(set(p.name for p in self.source.iterdir()) == set(self.science), 'EXACT five-file science directory')
+         need(set(p.name for p in self.wrapper.iterdir()) == {'dispatch.py', 'probe.py', 'mutate.py'}, 'EXACT three-file wrapper directory')
+         for p in self.files.values():
+             if p.parent == self.wrapper:
+@@ -278,7 +308,7 @@
+         directory(self.source, 0o755); directory(self.wrapper, 0o755)
+         for p, h in list(self.pins.items()) + list(self.native['files'].items()):
+             need(re.fullmatch(r'[0-9a-f]{64}', h) and sha(immutable(p, p not in self.native['files'] and p not in (str(self.files['python']), str(self.files['setpriv'])))) == h, 'current pin')
+-        for name, h in SCIENCE.items():
++        for name, h in self.science.items():
+             p = immutable(self.source / name)
+             need(stat.S_IMODE(p.stat().st_mode) == 0o444 and sha(p) == h, 'science 0444 and literal SHA')
+         for d, entries in self.native['directories'].items():
+@@ -336,12 +366,21 @@
+         need(metadata <= META and packet_bytes <= PACKET, 'joint 120MiB packets / 8MiB metadata')
+ 
+     def authorize(self, label, mode, target, input_hash):
++        if label in ('valid', 'dummy', 'mutate'):
++            obj = {'schema': 'f10-direct-rows-root-policy/v1', 'root_registration_path': str(self.path),
++                   'job_tag': JOB, 'label': label, 'artifact': str(target), 'science_outcome': 'NONE',
++                   'source_files': self.science, 'limits': LIMITS, 'profile': PROFILES['dummy' if label == 'dummy' else 'control' if label == 'valid' else 'mutate']}
++            p = self.auth / (label + '.json')
++            digest = emit(p, obj); immutable(p)
++            return p, digest
+         obj = {'job_tag': JOB, 'status': 'REGISTERED', 'authority': 'ROOT-CAPRUN',
+                'mode': mode, 'artifact': {'path': str(target),
+                'sha256': (input_hash or '0' * 64) if mode == 'check' else 'UNFORMED'},
+-               'files': dict(SCIENCE), 'runtime': {'python_sha256': self.pins[str(self.files['python'])],
++               'files': dict(self.science), 'runtime': {'python_sha256': self.pins[str(self.files['python'])],
+                'native_inventory_path': str(self.simple_path),
+-               'native_inventory_sha256': sha(self.simple_path)}, 'limits': dict(LIMITS)}
++               'native_inventory_sha256': sha(self.simple_path)}, 'limits': dict(LIMITS),
++               'contract_sha256': self.r['contract_sha256'], 'source_pins': self.source_pins,
++               'place': self.r['place']}
+         if label == 'refuse-status': obj['status'] = 'DISABLED'
+         if label == 'refuse-caps': obj['limits']['cpu_seconds'] = '599'
+         if label == 'refuse-inventory': del obj['files']['check.py']
+@@ -369,8 +408,8 @@
+                       '--root-registration-sha256', self.root_sha,
+                       '--positive-record', str(self.auth / 'positive.json')]
+         elif role == 'probe':
+-            script = [str(self.files['probe']), '--science-dir', str(self.source), '--mode',
+-                      'dummy' if label == 'dummy' else 'authorize', '--'] + tail
++            script = [str(self.files['probe']), '--registration', str(self.path), '--policy', str(auth),
++                      '--policy-sha256', digest, '--mode', label, '--output', str(target)]
+         else:
+             script = [str(self.source / ('produce.py' if role == 'produce' else 'check.py'))] + tail
+         py = [str(self.files['python'])] + (['-I', '-S', '-B'] if role == 'mutate'
+@@ -401,7 +440,7 @@
+         need(command == registered, 'literal expanded ROOT CAPRUN argv mismatch')
+         emit(self.mount / (label + '.pre.json'), {'utc': now().isoformat(), 'root_sha256': self.root_sha,
+              'authorization_sha256': digest, 'supplied_authorization_sha256': supplied,
+-             'native_sha256': sha(self.native_path), 'source_pins': SCIENCE, 'input_sha256': input_hash,
++             'native_sha256': sha(self.native_path), 'source_pins': self.science, 'input_sha256': input_hash,
+              'argv': command, 'python_argv': py, 'parent': identity(os.getpid()), 'profile': PROFILES[profile]})
+         # Hash/native/host/authority barrier AFTER authority freeze and directly BEFORE Popen.
+         self.revalidate(); self.budget(wall + 15); self.size_budget()
+@@ -457,7 +496,7 @@
+         for key, path in (('stdout', out), ('stderr', err)):
+             need(t[key]['path'] == str(path) and t[key]['sha256'] == sha(path) and t[key]['bytes'] == path.stat().st_size, 'terminal stream binding')
+         record = {'label': label, 'utc': now().isoformat(), 'telemetry_sha256': sha(tel),
+-                  'authorization_sha256': digest, 'source_pins': SCIENCE, 'native_sha256': sha(self.native_path),
++                  'authorization_sha256': digest, 'source_pins': self.science, 'native_sha256': sha(self.native_path),
+                   'actual_python_live_observed': live is not None, 'runner_live_observed': runner is not None and runner['argv'] == command,
+                   'owned_group_quiet': True, 'status': t['status'], 'resource': t['resource'], 'input_sha256': input_hash}
+         emit(self.mount / (label + '.post.json'), record); self.runs.append(record)
+@@ -469,21 +508,23 @@
+         need(t['status'] == 'NORMAL_EXIT' and t['resource'] is None and t['child_returncode'] == code, 'unexpected control/phase outcome')
+ 
+     def execute(self):
+-        reasons = {'status': 'no ROOT registration', 'caps': 'registered limits/source inventory',
+-                   'inventory': 'registered limits/source inventory', 'source': 'source pin: produce.py', 'hash': 'authority/inventory byte pin'}
+-        for mutation, reason in reasons.items():
+-            t, out, err, payload = self.run('refuse-' + mutation, 'probe', 'control')
+-            self.normal(t, 1)
+-            need(not payload.exists() and out.read_bytes() == b'' and err.read_text() == 'ValueError: ' + reason + '\n', 'exact actual-authority ValueError')
++        for label in LABELS[:5]:
++            t, out, err, payload = self.run(label, 'produce', 'control')
++            spec = self.refusals[label]
++            self.normal(t, spec['exit_code'])
++            need(t['child_signal'] is None and not payload.exists() and out.read_bytes() == b''
++                 and err.read_bytes() == spec['stderr'].encode('ascii'), 'exact actual producer-entry refusal')
+         t, out, err, payload = self.run('valid', 'probe', 'control')
+         self.normal(t, 0)
+         event = load(payload)
+-        need(event['event'] == 'POST_AUTHORIZE' and event['identity']['uid'] == self.r['uid'] and event['identity']['gid'] == self.r['gid'], 'actual authorize sentinel')
++        need(event['event'] == 'ROOT_POLICY_ONLY_SENTINEL' and event['identity']['uid'] == self.r['uid'] and event['identity']['gid'] == self.r['gid'], 'ROOT policy sentinel, not science authorization')
+         need(out.read_bytes() == err.read_bytes() == b'', 'valid control streams')
+         for role in ('produce', 'check'):
+             t, out, err, payload = self.run('startup-' + role, role, 'control')
+-            self.normal(t, 1)
+-            need(not payload.exists() and out.read_bytes() == b'' and err.read_text() == 'REFUSED: registered CLI contract\n', 'actual entry startup refusal')
++            spec = self.refusals['startup-' + role]
++            self.normal(t, spec['exit_code'])
++            need(t['child_signal'] is None and not payload.exists() and out.read_bytes() == b''
++                 and err.read_bytes() == spec['stderr'].encode('ascii'), 'actual entry exact startup refusal')
+         t, out, err, payload = self.run('dummy', 'probe', 'dummy')
+         term = t['termination']
+         need(t['status'] == 'RESOURCE_CAP' and t['resource'] == 'rss' and term['term_sent'] is True and term['kill_sent'] is True
+@@ -502,17 +543,17 @@
+              and t['max_observed_group_rss_bytes'] > 33554432, 'dummy actual group RSS')
+         t, out, err, packet = self.run('produce', 'produce', 'produce')
+         self.normal(t, 0)
+-        need(out.read_bytes() == b'FORMED_UNCHECKED_R3_25_SLOTS_NO_SOURCE_OUTCOME\n' and err.read_bytes() == b'', 'producer literal verdict')
++        need(out.read_bytes() == b'FORMED_UNCHECKED_DIRECT_ROWS_25_NO_SOURCE_OUTCOME\n' and err.read_bytes() == b'', 'producer literal verdict')
+         need(packet.is_file() and not packet.is_symlink() and 0 < packet.stat().st_size <= PACKET, 'formed packet size')
+         target = self.freeze(packet, 'artifact.json')
+         digest = sha(target)
+         t, out, err, ignored = self.run('check-positive', 'check', 'check', target)
+         self.normal(t, 0)
+-        need(out.read_bytes() == b'CHECKED_R3_25_GRAPH_SLOTS_45_LOW_108_JACOBIAN_NO_SOURCE_OUTCOME\n'
++        need(out.read_bytes() == b'CHECKED_DIRECT_ROWS_25_NO_SOURCE_OUTCOME\n'
+              and err.read_bytes() == b'', 'independent checker literal verdict')
+-        phase = {'schema': 'f10-r3-positive-phase/v1', 'status': 'POSITIVE_CHECKED_NO_SOURCE_OUTCOME',
++        phase = {'schema': 'f10-direct-rows-positive-phase/v1', 'status': 'POSITIVE_CHECKED_NO_SOURCE_OUTCOME',
+                  'root_registration_sha256': self.root_sha, 'input': {'path': str(target),
+-                 'sha256': digest, 'bytes': target.stat().st_size}, 'source_files': SCIENCE,
++                 'sha256': digest, 'bytes': target.stat().st_size}, 'source_files': self.science,
+                  'authorization': {'path': str(self.auth / 'check-positive.json'),
+                  'sha256': sha(self.auth / 'check-positive.json')},
+                  'checker_stdout_sha256': sha(out), 'policy': self.r['phase_policy']}
+@@ -525,9 +566,9 @@
+         receipt = load(self.writer / 'mutation.json')
+         need(set(receipt) == {'schema', 'status', 'root_registration_sha256', 'input_sha256',
+              'output_sha256', 'output_bytes', 'mutation', 'inverse_restored_whole_bytes', 'checker_run'}
+-             and receipt['schema'] == 'f10-r3-mixed-row-mutation/v1'
++             and receipt['schema'] == 'f10-direct-rows-T-mutation/v1'
+              and receipt['status'] == 'FORMED_UNCHECKED' and receipt['root_registration_sha256'] == self.root_sha
+-             and receipt['input_sha256'] == digest and receipt['mutation'] == 'graph.slots[24] += X1^27'
++             and receipt['input_sha256'] == digest and receipt['mutation'] == 'graph.slots[24] += X1^27 over ROOT place'
+              and receipt['inverse_restored_whole_bytes'] is True and receipt['checker_run'] is False,
+              'exact unchecked mutation receipt')
+         need(fixture.is_file() and not fixture.is_symlink() and type(receipt['output_bytes']) is int
+@@ -539,13 +580,13 @@
+         self.freeze(self.writer / 'mutation.json', 'mutation.json')
+         os.chmod(self.frozen, 0o555); syncdir(self.frozen); syncdir(self.mount)
+         t, out, err, ignored = self.run('check-negative', 'check', 'check', fixture)
+-        self.normal(t, 1)
+-        need(t['child_signal'] is None and t['child_exit_code'] == 1 and out.read_bytes() == b'', 'normal semantic exit1')
+-        self.semantic_traceback(err)
++        self.normal(t, 2)
++        need(t['child_signal'] is None and t['child_exit_code'] == 2 and out.read_bytes() == b''
++             and err.read_bytes() == b'CHECK FAILED: direct-source graph slot T\n', 'exact normal semantic exit2, no traceback')
+         need(tuple(x['label'] for x in self.runs) == LABELS, 'exact thirteen completed commands')
+-        result = {'status': 'RECONSTRUCTION_AND_MIXED_ROW_REJECTION_CHECKED_NO_SOURCE_OUTCOME',
+-                  'baseline_sha256': digest, 'fixture_sha256': sha(fixture), 'source_files': SCIENCE,
+-                  'negative_predicate': 'all25 literal graph rows T', 'other_five_semantic_controls': 'NOT_RUN_SPEC',
++        result = {'status': 'DIRECT_ROWS_AND_T_REJECTION_CHECKED_NO_SOURCE_OUTCOME',
++                  'baseline_sha256': digest, 'fixture_sha256': sha(fixture), 'source_files': self.science,
++                  'negative_predicate': 'direct-source graph slot T', 'other_five_semantic_controls': 'NOT_RUN_SPEC',
+                   'root_registration_sha256': self.root_sha, 'joint_wall_seconds': time.monotonic() - self.begin,
+                   'joint_cgroup_cpu_seconds': self.cpu() - self.cpu_start, 'science_outcome': 'NONE'}
+         emit(self.mount / 'final-binding.json', result)
+@@ -565,23 +606,6 @@
+         self.frozen_pins[str(target)] = digest
+         return target
+ 
+-    def semantic_traceback(self, path):
+-        need(path.stat().st_size <= 8192, 'bounded semantic traceback')
+-        lines = path.read_bytes().decode('ascii').splitlines(keepends=True)
+-        check, arithmetic = str(self.source / 'check.py'), str(self.source / 'check_arithmetic.py')
+-        frames = [(check, 540, '<module>', 'main()'), (check, 536, 'main', 'print(check_file(path))'),
+-                  (check, 520, 'check_file', "eq(p, rawrow, 'all25 literal graph rows ' + label)"),
+-                  (arithmetic, 227, 'require', "raise ValueError('CHECK FAILED: ' + label)")]
+-        need(lines and lines[0] == 'Traceback (most recent call last):\n', 'exact traceback header')
+-        i = 1
+-        for file, number, function, statement in frames:
+-            wanted = ['  File "' + file + '", line ' + str(number) + ', in ' + function + '\n', '    ' + statement + '\n']
+-            need(lines[i:i + 2] == wanted, 'ordered exact mathematical traceback frame')
+-            i += 2
+-            if i < len(lines) and len(lines[i]) <= 512 and re.fullmatch(r' +[~^]*\^[~^]*\n', lines[i]):
+-                i += 1
+-        need(lines[i:] == ['ValueError: CHECK FAILED: all25 literal graph rows T\n'], 'exact final, no chain/extra traceback')
+-
+     def durable_copy(self, result):
+         self.group_quiet(); self.size_budget()
+         self.custody_budget()
+@@ -600,7 +624,7 @@
+                 need(sha(target) == sha(source), 'durable byte identity')
+                 records.append({'path': str(target.relative_to(self.durable)), 'bytes': target.stat().st_size, 'sha256': sha(target)})
+                 need(len(records) <= 200, 'bounded custody file inventory')
+-        emit(self.durable / 'CUSTODY.json', {'schema': 'f10-source-cone-r3-runtime-custody/v1', 'result': result,
++        emit(self.durable / 'CUSTODY.json', {'schema': 'f10-direct-rows-runtime-custody/v1', 'result': result,
+              'root_sha256': self.root_sha, 'runs': self.runs, 'files': records, 'science_outcome': 'NONE'})
+         for parent, dirs, names in os.walk(self.durable, topdown=False):
+             syncdir(parent)
+@@ -630,7 +654,7 @@
+         return 2
+     # ROOT reads durable custody only after this writer is terminal. No output
+     # after successful copy; no deletion, unmount, retry or worker-stop here.
+-    return 0 if result['status'] == 'RECONSTRUCTION_AND_MIXED_ROW_REJECTION_CHECKED_NO_SOURCE_OUTCOME' else 2
++    return 0 if result['status'] == 'DIRECT_ROWS_AND_T_REJECTION_CHECKED_NO_SOURCE_OUTCOME' else 2
+ 
+ 
+ if __name__ == '__main__':

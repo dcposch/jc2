@@ -1,0 +1,108 @@
+{
+  "branches": {
+    "delta2": {
+      "branch_map_specialized_images": 18,
+      "constant_row": {
+        "inverse": "1/6264",
+        "label": "stage4_J_d159_k35",
+        "value": "6264"
+      },
+      "extra_generators_exactly": [
+        "jet0"
+      ],
+      "new_json_sha256": "adfd00583ddb18a91051feb6b317e64fb6e5d943fdcdbc067ff3ccd8819cc2c8",
+      "old_json_sha256": "76c962a71ad088694d280bd5d398bdc8fa050ba81e8423e2260a92f1e99cc3f6",
+      "pivot_rhs_specialized_images": 35,
+      "residual_specialized_images": 118,
+      "row_accounting_identical": true,
+      "singular": {
+        "control": {
+          "basis": [
+            "1"
+          ],
+          "controls": [
+            0,
+            1,
+            0
+          ],
+          "output_sha256": "236517b4a8e5567c586d39194059d49207001416a1d922efaec1fc3d2b9c7b73",
+          "ring": "ring R=0,(rho,Zrho),dp;",
+          "script_sha256": "1657767c5c90ca5f05629c8872174ec93ea4828fb83174443ee159f00d2491e3"
+        },
+        "runs": {
+          "basis": [
+            "1"
+          ],
+          "controls": [
+            0,
+            1,
+            0
+          ],
+          "output_sha256": "236517b4a8e5567c586d39194059d49207001416a1d922efaec1fc3d2b9c7b73",
+          "ring": "ring R=0,(rho,Zrho),dp;",
+          "script_sha256": "1657767c5c90ca5f05629c8872174ec93ea4828fb83174443ee159f00d2491e3"
+        }
+      }
+    },
+    "delta52": {
+      "branch_map_specialized_images": 21,
+      "constant_row": {
+        "inverse": "1/64",
+        "label": "stage8_G_local16_coord0",
+        "value": "64"
+      },
+      "extra_generators_exactly": [
+        "jet0"
+      ],
+      "new_json_sha256": "77b41a93e4d6cb11e009ec389d270aeca409415a9273ae5d3a323f6cee9dc63f",
+      "old_json_sha256": "e32651392afe0cceb28668f0de2c84bd846bbdb29be4b1f1ec4d97f20e217495",
+      "pivot_rhs_specialized_images": 66,
+      "residual_specialized_images": 1,
+      "row_accounting_identical": true,
+      "singular": {
+        "control": {
+          "basis": [
+            "1"
+          ],
+          "controls": [
+            0,
+            1,
+            0
+          ],
+          "output_sha256": "236517b4a8e5567c586d39194059d49207001416a1d922efaec1fc3d2b9c7b73",
+          "ring": "ring R=0,(c,Zc),dp;",
+          "script_sha256": "36f7f21f9faa3f7fec6b1d9353a194c17c6aecb8d2a5c2e48096b680c6e77b2e"
+        },
+        "runs": {
+          "basis": [
+            "1"
+          ],
+          "controls": [
+            0,
+            1,
+            0
+          ],
+          "output_sha256": "236517b4a8e5567c586d39194059d49207001416a1d922efaec1fc3d2b9c7b73",
+          "ring": "ring R=0,(c,Zc),dp;",
+          "script_sha256": "36f7f21f9faa3f7fec6b1d9353a194c17c6aecb8d2a5c2e48096b680c6e77b2e"
+        }
+      }
+    }
+  },
+  "field": "Q",
+  "source_identical_functions": [
+    "h3_template",
+    "outer_state",
+    "raw_minor_support",
+    "stage_spec",
+    "qstar_reduce",
+    "cumulative_rows",
+    "build_FG",
+    "jacobian_band",
+    "outer_effective_tz",
+    "tz_mul",
+    "z_band_to_w"
+  ],
+  "status": "PASS",
+  "sympy": "1.12"
+}

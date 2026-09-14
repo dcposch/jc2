@@ -1,0 +1,104 @@
+{
+  "utc": "2026-09-09T00:20:42.140149+00:00",
+  "status": "PASS",
+  "pin_count": 16,
+  "pins": [
+    {
+      "path": "xmodel/golden-hdiv-m-composition-gate-fable5-20260908.md",
+      "sha256": "50045412e9b0d9cf3e640844e768e359bd7dd466e862316e9b4e9380d40c68cf"
+    },
+    {
+      "path": "xmodel/golden-hdiv-m-composition-gate-fable5-20260908.run.v2",
+      "sha256": "72863f6f94a02ebcc7c0818a68508d69c5551899608897078df41a847c18c579"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-fable5-20260908/scalar_control.py",
+      "sha256": "919003eefe8317f81d84f61be10d9a210270201df52a90d5d08620d5968a03af"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-fable5-20260908/argv.txt",
+      "sha256": "3a7f49a102b8e4b321e1e1d3408b38379d2ae8d2480e37edac90cd5c5a07bbfe"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-fable5-20260908/run_normal.stdout",
+      "sha256": "3259cb2f122067a78ccf50f7df8566a75f86c698612eb4db6e9668cd79df8bd8"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-fable5-20260908/run_optimized.stdout",
+      "sha256": "d496ba2a6f059929d71afcc6d1ec971755c7e27e7873a4094bbad6fdbb64f651"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/scope.md",
+      "sha256": "ee258be548eed733f000a1bcbacf8ec1217bf47e3a11f83d1933474d5aef6690"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/coalesced-proof.md",
+      "sha256": "fd04a5fd0bbbbbe89e10a50310d931bbf72d442512422912b1dd62cdcaa38654"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/coalesced-transaction.json",
+      "sha256": "2f36b75b2ea2857b2264df0e992019300bad76a50461a498c8b937a42eedd9fa"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/coalesced-custody.json",
+      "sha256": "63afa4581f3e9834e607a9932e569b0311ac5ff9323321c24925c9b970da2091"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/coalesced-input-pins.json",
+      "sha256": "180b2b64e2bea86b2f1890927297229716c65bc596efef24a3eaadc97d837cea"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/separated-proof.md",
+      "sha256": "e8ae9f1ab4c319f12af4514ad9cb70f3b3b48541e0bf82d9acd55cd81e67ca87"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/separated-transaction.json",
+      "sha256": "bed766fae3fdaeff28d6ca82bab381267fa7ed5fc7c5686d06958e0193c12174"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/source-framework.md",
+      "sha256": "14c4cdeddf9b1166046759022378775fc7ebc147c7d939579cf93f6b78aa51c6"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/source-transaction.json",
+      "sha256": "a80659d8c6b38fd4800b7eb70b650af57a0065e0c67b077f2878c1c24377c8af"
+    },
+    {
+      "path": "box/golden-hdiv-m-composition-gate-20260908/inputs/audit-15m.md",
+      "sha256": "b02ae267bb8cfef6956d6e0cec0b6188196b222d3d9d78e3d1582f4a5cc1a440"
+    }
+  ],
+  "seconds": 0.116301,
+  "results": [
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-hdiv-m-composition-gate-fable5-20260908/scalar_control.py"
+      ],
+      "rc": 0,
+      "stdout": "[normal] PASS unit-identity t^2=rho \n[normal] PASS unit-identity t*(2-rho)=1 \n[normal] PASS unit-identity t-1=-rho \n[normal] PASS unit-identity t(t-1)=2rho-1 \n[normal] PASS norm N(t) != 0 N=-1\n[normal] PASS norm N(t-1) != 0 N=1\n[normal] PASS norm N(t(t-1)) != 0 N=-1\n[normal] PASS norm N(rho) != 0 N=1\n[normal] PASS norm N(3rho) != 0 N=9\n[normal] PASS H(g0+w,p) == t(t-1)p^3w^2 + rho p^2 w^3, degree 5 \n[normal] PASS LM stratum: (LM)(g0)=0 \n[normal] PASS LM stratum: d/dg(LM)(g0) = (t-1)p \n[normal] PASS coalesced stratum1: 15r <= 135/4 < 36 for j=1..9 max=135/4\n[normal] PASS coalesced stratum2: 15r <= 30 < 36 for j=1..6 \n[normal] PASS LM stratum weight 7j-46<=2 exactly for j<=6, violated j=7..9 \n[normal] PASS separated stratum1: 7eta+kappa/2 < 15j/4 <= 135/4 < 36 \n[normal] PASS separated stratum2: 7j/2+9kappa/4 -> 5j <= 30 < 36 \n[normal] PASS coalesced lower-B: 25-nu-nh > 0 on sampled (j,nu) with n<=(nu-1)/r, nu<10r \n[normal] PASS separated lower-B stratum2: 20-4eta > 0 for eta<4 \n[normal] PASS two-sheet tuple (a+b,a-b) with a=b!=0 is (2a,0): one sheet zero, tuple nonzero \n[normal] PASS two-sheet tuple vanishes only at a=b=0 \n[normal] PASS W^3 projections: Y^5=3u, Y^4=3u^2+3v \n[normal] PASS REJECT expected: rho=2 breaks t^2=rho \n[normal] PASS REJECT expected: rho=2 breaks degree-5 H expansion \n[normal] PASS REJECT expected: identified signs (a+b,a+b) vanish at a=-b!=0 \n[normal] PASS REJECT expected: eta=kappa gives zero binomial shift \n[normal] SUMMARY 26/26 checks as expected\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-hdiv-m-composition-gate-fable5-20260908/scalar_control.py"
+      ],
+      "rc": 0,
+      "stdout": "[optimized] PASS unit-identity t^2=rho \n[optimized] PASS unit-identity t*(2-rho)=1 \n[optimized] PASS unit-identity t-1=-rho \n[optimized] PASS unit-identity t(t-1)=2rho-1 \n[optimized] PASS norm N(t) != 0 N=-1\n[optimized] PASS norm N(t-1) != 0 N=1\n[optimized] PASS norm N(t(t-1)) != 0 N=-1\n[optimized] PASS norm N(rho) != 0 N=1\n[optimized] PASS norm N(3rho) != 0 N=9\n[optimized] PASS H(g0+w,p) == t(t-1)p^3w^2 + rho p^2 w^3, degree 5 \n[optimized] PASS LM stratum: (LM)(g0)=0 \n[optimized] PASS LM stratum: d/dg(LM)(g0) = (t-1)p \n[optimized] PASS coalesced stratum1: 15r <= 135/4 < 36 for j=1..9 max=135/4\n[optimized] PASS coalesced stratum2: 15r <= 30 < 36 for j=1..6 \n[optimized] PASS LM stratum weight 7j-46<=2 exactly for j<=6, violated j=7..9 \n[optimized] PASS separated stratum1: 7eta+kappa/2 < 15j/4 <= 135/4 < 36 \n[optimized] PASS separated stratum2: 7j/2+9kappa/4 -> 5j <= 30 < 36 \n[optimized] PASS coalesced lower-B: 25-nu-nh > 0 on sampled (j,nu) with n<=(nu-1)/r, nu<10r \n[optimized] PASS separated lower-B stratum2: 20-4eta > 0 for eta<4 \n[optimized] PASS two-sheet tuple (a+b,a-b) with a=b!=0 is (2a,0): one sheet zero, tuple nonzero \n[optimized] PASS two-sheet tuple vanishes only at a=b=0 \n[optimized] PASS W^3 projections: Y^5=3u, Y^4=3u^2+3v \n[optimized] PASS REJECT expected: rho=2 breaks t^2=rho \n[optimized] PASS REJECT expected: rho=2 breaks degree-5 H expansion \n[optimized] PASS REJECT expected: identified signs (a+b,a+b) vanish at a=-b!=0 \n[optimized] PASS REJECT expected: eta=kappa gives zero binomial shift \n[optimized] SUMMARY 26/26 checks as expected\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "22 finite identities and four scope controls in both modes; two rho-change comparisons and two sign/balance controls. Prose supplies universal proof. No actual H/R high powers or source build."
+}

@@ -1,0 +1,140 @@
+{
+  "utc": "2026-09-09T01:04:17.642340+00:00",
+  "seconds": 0.4721375859808177,
+  "no_assert": true,
+  "check_sha256": "c631f29699589511ede22ca3ba7e11d5e4579ed13d99304060a1246bcb7c954d",
+  "runs": [
+    {
+      "argv": [
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+        "none"
+      ],
+      "rc": 0,
+      "stdout": "{\"mutation\": \"none\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": true, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": true, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+        "bad-slope"
+      ],
+      "rc": 2,
+      "stdout": "{\"mutation\": \"bad-slope\", \"claims\": {\"golden_minpoly\": false, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": true, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+        "wrong-map-sign"
+      ],
+      "rc": 2,
+      "stdout": "{\"mutation\": \"wrong-map-sign\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": false, \"squarefree_top_map\": true, \"swap_and_determinant\": false, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+        "wrong-swap"
+      ],
+      "rc": 2,
+      "stdout": "{\"mutation\": \"wrong-swap\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": false, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+        "none"
+      ],
+      "rc": 0,
+      "stdout": "{\"mutation\": \"none\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": true, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": true, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+        "bad-slope"
+      ],
+      "rc": 2,
+      "stdout": "{\"mutation\": \"bad-slope\", \"claims\": {\"golden_minpoly\": false, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": true, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+        "wrong-map-sign"
+      ],
+      "rc": 2,
+      "stdout": "{\"mutation\": \"wrong-map-sign\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": false, \"squarefree_top_map\": true, \"swap_and_determinant\": false, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+        "wrong-swap"
+      ],
+      "rc": 2,
+      "stdout": "{\"mutation\": \"wrong-swap\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": false, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+      "stderr": ""
+    }
+  ]
+}

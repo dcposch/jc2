@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report written to `xmodel/classical99-interface-opus5-20260906.md` (18 KB), at 12:06Z against the 12:22Z deadline. All 8 charged-input receipts verified.
+
+## Verdict: `APPLIES_AS_EXTERNAL_THEOREM`
+
+with one typed `OPEN[PRIMARY-TEXT-UNREAD]` I have to lead with: **I could not read arXiv:2204.14178.** The lane is desk-only with no network, `find / -iname "*2204.14178*"` is empty, and the local `ggv-p*.png` scans are arXiv:1401.1784v3 (a different paper — its own header says so). So I did not read Theorem 2.1, §4 Case (9,24), or the §5 discard of (66,99). Everything I used comes from the campaign's own pinned transcription: `ladder/REDUCTION.md:938`, `:1247` ("≥125 or (72,108)"), corroborated by `AUDIT.md:5413` (108 is the current floor, 125 is what killing (72,108) would buy).
+
+**No scope conflict.** (99,66) is not a Laurent/Newton label. Three charged reports independently give exact absolute total degrees with parameter-free top forms: `F_top = y²⁷(y−x)⁷²`, `G_top = y¹⁸(y−x)⁴⁸`. Minimal-counterexample normalization gives no escape either — on the weakest quantifier reading, a (99,66) counterexample forces the min-over-all `max(deg)` to be ≤ 99, contradicting the dichotomy, the same structure already recorded for GGV1's gcd bound.
+
+**No objection of ours bites.** Every recorded GGV22 objection targets Proposition 4.3 and the (72,108) branch — `AUDIT.md:10228, 10300, 10313, 10531`, `REDUCTION.md:504`. That is our debt for raising 108→125, not a defect in §2. The `(1,0)/(0,1)` slip at GGV22 line 1132 is a transcription typo. Table in the report maps all seven.
+
+**What changes:** the (99,66) full ideal is predicted `[1]` — conditionally on the external theorem, not internally certified. The registered long solve (harvest ≈ 09-07 04:26Z) is a consistency check, never a campaign kill. The necessity GAP cannot rescue the point: it is `chart ⊉ configuration`, while GGV22 attacks `chart → Keller`, and a subset of the empty set is empty. **D=108 is untouched** — it is the surviving alternative, sitting at the current classical floor.
+
+**Gate coverage gap** (identified, not edited): `frontier_gate.py` implements only `gcd ≥ 16` from GGV1. (99,66) gcd 33 → `NOT_CLOSED_BY_THIS_GATE`. Same for (66,44), (96,64), (120,80) and the rest of the sub-125 band.
+
+**Secondary — derived.** Positive-C rank 191 at every char-0 base point, conditional on §2 plus Abhyankar–Moh. The exact dependence matters: Jung–van der Kulk divisibility alone leaves `deg P ∈ {1,2,3,6,11,22,33}` and does **not** close it; the operative input is the coordinate top-form corollary (`c·ℓ^deg`, one place at infinity), and `G_top = y¹⁸(y−x)⁴⁸`'s two distinct factors is what kills it. No global `(C,a)` claim: at `D=b=0`, `J(h,h²)=0` sits in the `κ=0` kernel, which GGV22 does not touch.
+
+One flagged for follow-up: if §2's sub-125 exclusion rests on GGV5 Algorithm 8's bounded enumeration (`REDUCTION.md:937`), that is an unreplicated computer search in an unrefereed preprint. I could not check whether it does — that needs the §2 proof text, and I marked it as a place to look, not a defect found.
+DIVERT path=xmodel/classical99-interface-opus5-20260906.md status=CLEAN body_bytes=18263 body_sha256=cc2df678184cfa367af1d1ff3fbfc98f1cd8bbb616c6e759a9cf5c0be7933ead

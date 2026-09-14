@@ -1,0 +1,30 @@
+F is a monomial, then F = λxy with λ ∈ K × , and, either ρ + σ = 0 or P is also a monomial[4] .
+Theorem 2.6. Let P ∈ L(l) and let (ρ, σ) ∈ V>0 be such that vρ,σ (P ) > 0. If [P, Q] ∈ K × for
+some Q ∈ L(l) , then there exists G0 ∈ K[P, Q] \ {0} and a (ρ, σ)-homogeneous element F ∈ L(l)
+such that
+    vρ,σ (F ) = ρ + σ,   [F, ℓρ,σ (P )] = ℓρ,σ (P )    and       [ℓρ,σ (G0 ), ℓρ,σ (P )]F = ℓρ,σ (G0 )ℓρ,σ (P ). (2.7)
+Moreover, we have
+      (1) If P, Q ∈ L, then we can take F ∈ L.
+      (2) stρ,σ (P ) ∼ stρ,σ (F ) or stρ,σ (F ) = (1, 1).
+      (3) enρ,σ (P ) ∼ enρ,σ (F ) or enρ,σ (F ) = (1, 1).
+      (4) stρ,σ (P ) ≁ (1, 1) ≁ enρ,σ (P ).
+      (5) If we define recursively Gi := [Gi−1 , P ], then [ℓρ,σ (Gi ), ℓρ,σ (P )] = 0 for i ≥ 1.
+Proof. From Lemma 2.2 we obtain G0 such that the hypotheses of Lemma 2.2 of [8] are satisfied.
+Hence, by this lemma,
+                                            ℓρ,σ (G0 )ℓρ,σ (P )
+                                   F :=                           ∈ L(l)
+                                          [ℓρ,σ (G0 ), ℓρ,σ (P )]
+and if P and Q are in L, then F ∈ L. Hence statement (1) is true. Furthermore an easy compu-
+tation shows that statement (5) is also true and equalities (2.7) are satisfied[5] . Statements (2)
+and (3) follow from Proposition 2.4. For statement (4), assume that stρ,σ (P ) ∼ (1, 1). We claim
+that this implies that stρ,σ (F ) = (1, 1). Otherwise, by statement (2) we have
+                                        stρ,σ (F ) ∼ stρ,σ (P ) ∼ (1, 1),
+which implies stρ,σ (F ) ∼ (1, 1), since stρ,σ (F ) 6= (0, 0) 6= stρ,σ (P ). So there exists λ ∈ Q \ {1}
+such that stρ,σ (F ) = λ(1, 1). But this is impossible because vρ,σ (F ) = ρ + σ implies λ = 1.
+Hence the claim is true, and so
+                                  stρ,σ (P ) + stρ,σ (F ) − (1, 1) = stρ,σ (P ),
+which by Proposition 2.4(1) leads to the contradiction
+                                        stρ,σ (P ) ≁ stρ,σ (F ) = (1, 1).
+Similarly enρ,σ (P ) ≁ (1, 1).                                                                                     
+          ON THE SHAPE OF POSSIBLE COUNTEREXAMPLES TO THE JACOBIAN CONJECTURE                                   9
+

@@ -1,0 +1,115 @@
+{
+  "chart": "the full proved G_i chart; no specialization and no omitted coordinate",
+  "class_id": "C_n24m16_M12_17_ell1_s3",
+  "coefficient_generators": 247,
+  "elapsed_seconds": 19.020547,
+  "exactness": {
+    "auxiliary_variables": 0,
+    "beta_1_zero": true,
+    "coefficient_domain": "Z[all original G coordinates,c] inside the required Q polynomial ring",
+    "coordinate_specializations": 0,
+    "division": "top-down determinate Euclidean division by monic y^K + h_lower",
+    "jacobian_formula": "J(a*h^r,b*h^s)=h^(r+s)J(a,b)+h^(r+s-1)(s*b*J(a,h)+r*a*J(h,b))"
+  },
+  "frozen_builder_fix_sha256": "d6662abfec114a443712600f87e3e7b7064071f445d9b177d2f0ea13c9d3836b",
+  "generator_count_including_Tc_minus_1": 248,
+  "initial_formal_levels": {
+    "0": {
+      "parameter_terms": 24049,
+      "xy_coefficients": 202
+    },
+    "1": {
+      "parameter_terms": 11802,
+      "xy_coefficients": 143
+    },
+    "2": {
+      "parameter_terms": 1658,
+      "xy_coefficients": 75
+    },
+    "3": {
+      "parameter_terms": 203,
+      "xy_coefficients": 33
+    }
+  },
+  "inverse_generator": "T*c-1",
+  "max_parameter_degree": 16,
+  "native_comparison": {
+    "literal_row_dictionary_equality": null,
+    "reference": null,
+    "reference_rows": null,
+    "requested": false,
+    "status": "NOT_REQUESTED"
+  },
+  "normalized_levels": [
+    {
+      "h_power": 0,
+      "input_parameter_terms": 24049,
+      "input_xy_coefficients": 202,
+      "quotient_parameter_terms": 137999,
+      "quotient_xy_coefficients": 110,
+      "remainder_parameter_terms": 1521836,
+      "remainder_rows": 92
+    },
+    {
+      "h_power": 1,
+      "input_parameter_terms": 148682,
+      "input_xy_coefficients": 143,
+      "quotient_parameter_terms": 48149,
+      "quotient_xy_coefficients": 72,
+      "remainder_parameter_terms": 658687,
+      "remainder_rows": 71
+    },
+    {
+      "h_power": 2,
+      "input_parameter_terms": 49338,
+      "input_xy_coefficients": 75,
+      "quotient_parameter_terms": 1170,
+      "quotient_xy_coefficients": 26,
+      "remainder_parameter_terms": 58014,
+      "remainder_rows": 49
+    },
+    {
+      "h_power": 3,
+      "input_parameter_terms": 1373,
+      "input_xy_coefficients": 35,
+      "quotient_parameter_terms": 60,
+      "quotient_xy_coefficients": 7,
+      "remainder_parameter_terms": 2170,
+      "remainder_rows": 28
+    },
+    {
+      "h_power": 4,
+      "input_parameter_terms": 60,
+      "input_xy_coefficients": 7,
+      "quotient_parameter_terms": 0,
+      "quotient_xy_coefficients": 0,
+      "remainder_parameter_terms": 60,
+      "remainder_rows": 7
+    },
+    {
+      "h_power": 5,
+      "input_parameter_terms": 0,
+      "input_xy_coefficients": 0,
+      "quotient_parameter_terms": 0,
+      "quotient_xy_coefficients": 0,
+      "remainder_parameter_terms": 0,
+      "remainder_rows": 0
+    }
+  ],
+  "peak_rss_kib": 377868,
+  "production_orientation": "literal J(P,Q)-c*x^ell",
+  "receipt": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m16_M12_17_ell1_s3/C_n24m16_M12_17_ell1_s3_G_sparse_extraction.json",
+  "ring": "ring R=0,(y,x,h_0_7,h_0_6,h_0_5,h_1_5,h_0_4,h_1_4,h_0_3,h_1_3,h_0_2,h_1_2,h_2_2,h_0_1,h_1_1,h_2_1,h_0_0,h_1_0,h_2_0,A1_0_7,A1_0_6,A1_0_5,A1_1_5,A1_0_4,A1_1_4,A1_0_3,A1_1_3,A1_0_2,A1_1_2,A1_2_2,A1_0_1,A1_1_1,A1_2_1,A1_0_0,A1_1_0,A1_2_0,A2_0_7,A2_1_7,A2_2_7,A2_3_7,A2_0_6,A2_1_6,A2_2_6,A2_3_6,A2_0_5,A2_1_5,A2_2_5,A2_3_5,A2_0_4,A2_1_4,A2_2_4,A2_3_4,A2_4_4,A2_0_3,A2_1_3,A2_2_3,A2_3_3,A2_4_3,A2_0_2,A2_1_2,A2_2_2,A2_3_2,A2_4_2,A2_0_1,A2_1_1,A2_2_1,A2_3_1,A2_4_1,A2_5_1,A2_0_0,A2_1_0,A2_2_0,A2_3_0,A2_4_0,A2_5_0,A3_0_7,A3_1_7,A3_2_7,A3_3_7,A3_4_7,A3_5_7,A3_0_6,A3_1_6,A3_2_6,A3_3_6,A3_4_6,A3_5_6,A3_6_6,A3_0_5,A3_1_5,A3_2_5,A3_3_5,A3_4_5,A3_5_5,A3_6_5,A3_0_4,A3_1_4,A3_2_4,A3_3_4,A3_4_4,A3_5_4,A3_6_4,A3_0_3,A3_1_3,A3_2_3,A3_3_3,A3_4_3,A3_5_3,A3_6_3,A3_7_3,A3_0_2,A3_1_2,A3_2_2,A3_3_2,A3_4_2,A3_5_2,A3_6_2,A3_7_2,A3_0_1,A3_1_1,A3_2_1,A3_3_1,A3_4_1,A3_5_1,A3_6_1,A3_7_1,A3_1_0,A3_2_0,A3_3_0,A3_4_0,A3_5_0,A3_6_0,A3_7_0,A3_8_0,B2_0_7,B2_1_7,B2_2_7,B2_3_7,B2_0_6,B2_1_6,B2_2_6,B2_3_6,B2_0_5,B2_1_5,B2_2_5,B2_3_5,B2_0_4,B2_1_4,B2_2_4,B2_3_4,B2_4_4,B2_0_3,B2_1_3,B2_2_3,B2_3_3,B2_4_3,B2_0_2,B2_1_2,B2_2_2,B2_3_2,B2_4_2,B2_0_1,B2_1_1,B2_2_1,B2_3_1,B2_4_1,B2_5_1,B2_1_0,B2_2_0,B2_3_0,B2_4_0,B2_5_0,c),(lp(1),dp(172));",
+  "ring_from_frozen_builder_fix": true,
+  "rows": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m16_M12_17_ell1_s3/C_n24m16_M12_17_ell1_s3_G_sparse_rows.tsv",
+  "rows_bytes": 81839242,
+  "rows_sha256": "b44be95276563df8be50aec9592a88d345ef497247fc90776d3596817cc72ced",
+  "schema": "moh-gi-only-sparse-hadic-extraction-experiment-v1",
+  "source_fixed_builder": "box/gi-only-20260905/classes/C_n24m16_M12_17_ell1_s3/builders/C_n24m16_M12_17_ell1_s3_G_builder.sing",
+  "source_fixed_builder_sha256": "b0f2d5f7dd60bc10e109ee0da1e405899a39f5f6fb7793c528405d507ec263e8",
+  "status": "PASS",
+  "stem": "C_n24m16_M12_17_ell1_s3_G",
+  "total_expanded_parameter_terms": 2240767,
+  "unknowns_with_T": 172,
+  "unknowns_without_T": 171
+}

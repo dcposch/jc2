@@ -1,0 +1,49 @@
+// Positive control for the full bridge emitter's qring/coefficient/ring map.
+LIB "general.lib";
+ring P=0,(x,y,c,kappa,s,pi),dp;
+ideal Truncation=s^5;
+qring Q=std(Truncation);
+proc trunc(poly f) { return(reduce(f,std(0))); }
+
+poly E2=trunc((2*x+y)*s^2*pi+(y^2-c)*s^3);
+ideal Rows;
+matrix CS=coef(E2,s);
+matrix CP;
+int js,jp;
+poly rr;
+for(js=1;js<=ncols(CS);js++)
+{
+  CP=coef(CS[2,js],pi);
+  for(jp=1;jp<=ncols(CP);jp++)
+  {
+    rr=CP[2,jp];
+    if(rr!=0) { Rows[size(Rows)+1]=rr; }
+  }
+}
+if(size(Rows)!=2) { ERROR("double coefficient extraction failed"); }
+
+// coef() orders the s^3 row first; the second row has x=-y/2.
+poly rhs=-subst(Rows[2],x,0)/diff(Rows[2],x);
+if(rhs!=-y/2) { ERROR("affine pivot failed"); }
+Rows[1]=subst(Rows[1],x,rhs);
+ideal Residual=Rows[1];
+
+// Keep source bookkeeping names for imap and kill them explicitly.
+ring E=0,(x,y,c,kappa,s,pi,Zck),dp;
+ideal I=imap(Q,Residual);
+I[size(I)+1]=s;
+I[size(I)+1]=pi;
+I[size(I)+1]=Zck*c*kappa-1;
+ideal G=std(I);
+if(reduce(1,G)!=1) { ERROR("positive residual unexpectedly unit"); }
+if(dim(G)!=3) { ERROR("raw dimension mismatch"); }
+if(dim(G)-1!=2) { ERROR("pivot-corrected dimension mismatch"); }
+
+ideal Czero=c,Zck*c*kappa-1;
+ideal Kzero=kappa,Zck*c*kappa-1;
+ideal Cone=c-1,kappa-1,Zck*c*kappa-1;
+if(reduce(1,std(Czero))!=0) { ERROR("c=0 exclusion control failed"); }
+if(reduce(1,std(Kzero))!=0) { ERROR("kappa=0 exclusion control failed"); }
+if(reduce(1,std(Cone))!=1) { ERROR("localized point control failed"); }
+print("PASS qring coefficient split / imap / Q* dimension / localization controls");
+quit;

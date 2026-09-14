@@ -1,0 +1,15 @@
+# Equal0730 hostile cross contract
+
+Read ALL20 charged objects WHOLE, including all four submissions, both new proofs and transactions, all nine unchanged science/history snapshots, poststate, this contract and PINS. Original paths within snapshots are provenance, not permission to replace bytes. PINS indexes19 content objects; its own hash is independently held in outer custody to avoid self-reference.
+
+Combine and deduplicate ALL four submissions. Hostilely test the new root uniform mechanism and exact source interface, or identify the first precise gap. Agreement, including same-model agreement, is not promotion. Neither new proof nor their composition is accepted. Never read live proof gates or another current cross.
+
+Assess Sol's orthogonal marked unramified cubic-sheet pull-push idea against the BINDING boundary-class injection requirement and exact retained history. In particular, is g1^*U_D=div(p composed with F) already automatic because g1 misses R_D, and is the norm of the same function merely p^d1, reproducing d1(2R_D+U_D)? If individual irreducible source factors are used instead, identify the actual new constraint after ALL compactification boundary terms. These are questions, not newly accepted lemmas. Identify a genuinely new cross-connection, strongest proof route and genuine counterexample/falsification route, and one decisive mathematical discriminator; explicit NO_NEW_MECHANISM is acceptable. Preserve implications for the full46 vector with unchanged-default plus explicitly justified changes; do not repeat a fresh blind census.
+
+Select at most THREE cards total, each with exact source/field/ring scope, dependencies, prior overlap, proposed test, every outcome, stopping rule and continue/redesign/stop. Separately deduplicate systems proposals: at most ONE justified UPGRADE or NO_CHANGE. No proof farm, descendant or automatic compute recommendation without an exact new benefit/endpoint. No model-identity vote.
+
+ZERO mathematical subprocesses of ANY SIZE: no arithmetic/free-symbol/numerical toy, Python math, old-checker replay, CAS, source/H/R powers, coefficient emission, solver, AWS/SSH, new agents, public or shared/canonical writes, protected-project access. Metadata hashes and own transactional publication only. No live gate/peer report, log or receipt. No follow-on authority.
+
+Timing is exclusively the root's actual invitation. Prospective08:30UTC applies only if invited by08:18, at most15minutes; never reset the original soft08:27:37 target. If insufficient, give honest PARTIAL/LATE. Root blind was sealed before the blind invitations. Readiness here is not a new invitation.
+
+Write only the exact report and own box named by the seat prompt. Use local begin/close/finalize/verify or the unchanged external lane protocol. Read your complete own body and perform owned raised-OPEN/collision check before appending standalone <!-- BODY-END -->. Do not author a seal or charge_basis. Terminal metadata first; all writers IDLE. No new campaign IDs.

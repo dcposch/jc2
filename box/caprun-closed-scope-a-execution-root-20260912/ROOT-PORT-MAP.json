@@ -1,0 +1,179 @@
+{
+  "schema": "jc2-root-raw-port/v1",
+  "state": "DISABLED_UNBOUND_NO_RUNTIME_AUTHORITY",
+  "common_rules": [
+    [
+      "jc2-closedchild-preflight9-20260911d",
+      "jc2-closedchild-preflight9-20260912a"
+    ],
+    [
+      "caprun-closed-scope-d-execution-root-20260911",
+      "caprun-closed-scope-a-execution-root-20260912"
+    ],
+    [
+      "2026-09-11 18:56:26 UTC",
+      "2026-09-12 08:01:01 UTC"
+    ],
+    [
+      "72a9c4592d585b4b74e925949023bfd4da3c745a0e5d3b0b68d4c97345c77a18",
+      "e33bd43e1e2a0a1ad61a562f8052e4ce5d6f9c1e6f6892a5534db7656c57c6de"
+    ],
+    [
+      "a29151d0515b764130e741e5365f776d3e87a6a32e5a6096c32531e7858774a6",
+      "a4f5efc54cc629c657df64f54b2f2b2485e906c366acd37688cb494968ed035f"
+    ]
+  ],
+  "full_rules": [
+    [
+      "jc2-closedchild-preflight9-20260911d",
+      "jc2-closedchild-preflight9-20260912a"
+    ],
+    [
+      "caprun-closed-scope-d-execution-root-20260911",
+      "caprun-closed-scope-a-execution-root-20260912"
+    ],
+    [
+      "2026-09-11 18:56:26 UTC",
+      "2026-09-12 08:01:01 UTC"
+    ],
+    [
+      "72a9c4592d585b4b74e925949023bfd4da3c745a0e5d3b0b68d4c97345c77a18",
+      "e33bd43e1e2a0a1ad61a562f8052e4ce5d6f9c1e6f6892a5534db7656c57c6de"
+    ],
+    [
+      "a29151d0515b764130e741e5365f776d3e87a6a32e5a6096c32531e7858774a6",
+      "a4f5efc54cc629c657df64f54b2f2b2485e906c366acd37688cb494968ed035f"
+    ],
+    [
+      "d66b4f7fbc10cac580bf9b3ac2d56507e279e9106f91fb7c246ffe5f5afe65b6",
+      "2b713e37b54dad0ca59262b556b9358e0754fb7d3938a3b1edad593ac8c98f11"
+    ],
+    [
+      "1a632269b90c1288c981b14c9dacee7f296747517eb1754bbef6ed72d5a5f815",
+      "a2531b052eab61dde7517bee8417a20b2bfd4664b93bc1ba2732a879d20ced2e"
+    ],
+    [
+      "2026-09-11T19:32:15+00:00",
+      "2026-09-12T09:02:15+00:00"
+    ],
+    [
+      "2026-09-11T19:38:00+00:00",
+      "2026-09-12T09:08:00+00:00"
+    ],
+    [
+      "2026-09-11T19:43:00+00:00",
+      "2026-09-12T09:13:00+00:00"
+    ],
+    [
+      "2026-09-11T19:48:00+00:00",
+      "2026-09-12T09:18:00+00:00"
+    ]
+  ],
+  "launcher_rules": [
+    [
+      "jc2-closedchild-preflight9-20260911d",
+      "jc2-closedchild-preflight9-20260912a"
+    ],
+    [
+      "caprun-closed-scope-d-execution-root-20260911",
+      "caprun-closed-scope-a-execution-root-20260912"
+    ],
+    [
+      "2026-09-11T19:16:00+00:00",
+      "2026-09-12T08:40:00+00:00"
+    ],
+    [
+      "2026-09-11 19:48:00 UTC",
+      "2026-09-12 09:18:00 UTC"
+    ],
+    [
+      "root-closedchild-preflight9-20260911d",
+      "root-closedchild-preflight9-20260912a"
+    ]
+  ],
+  "files": [
+    {
+      "input": "box/caprun-closed-scope-d-execution-root-20260911/ROOT-SOURCE-CONTRACT.json",
+      "output": "box/caprun-closed-scope-a-execution-root-20260912/ROOT-SOURCE-CONTRACT.json",
+      "rules": "common_rules",
+      "counts": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "extra": "Append exactly parent_batch_d_contract and current_controller_source_static; original complete transformed bytes otherwise retained."
+    },
+    {
+      "input": "box/caprun-closed-scope-d-execution-root-20260911/preflight-policy.json",
+      "output": "box/caprun-closed-scope-a-execution-root-20260912/preflight-policy.json",
+      "rules": "common_rules",
+      "counts": [
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      "extra": "NONE"
+    },
+    {
+      "input": "box/caprun-closed-scope-d-execution-root-20260911/ROOT-REGISTRATION.preallocation.json",
+      "output": "box/caprun-closed-scope-a-execution-root-20260912/ROOT-REGISTRATION.preallocation.json",
+      "rules": "full_rules",
+      "counts": [
+        137,
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "extra": "NONE"
+    },
+    {
+      "input": "box/caprun-closed-scope-d-execution-root-20260911/AUTHORITIES.preallocation.json",
+      "output": "box/caprun-closed-scope-a-execution-root-20260912/AUTHORITIES.preallocation.json",
+      "rules": "full_rules",
+      "counts": [
+        62,
+        0,
+        0,
+        0,
+        0,
+        14,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "extra": "NONE"
+    },
+    {
+      "input": "box/caprun-closed-scope-d-execution-root-20260911/launch-worker.preallocation.sh",
+      "output": "box/caprun-closed-scope-a-execution-root-20260912/launch-worker.preallocation.sh",
+      "rules": "launcher_rules",
+      "counts": [
+        4,
+        6,
+        1,
+        1,
+        1
+      ],
+      "extra": "NONE"
+    }
+  ],
+  "limits": [
+    "Raw-byte text only; no scientific number parse or code evaluation.",
+    "Old1100Z strategy reference remains historical provenance; new PLAN owns selection.",
+    "Exact source-static port does not qualify current native facts, ACLs, stage, manifests, transport, timer, source outcomes or 120-second liveness.",
+    "Original metadata source-contract and policy whole previously read; registration selected1-220,725-808 and authorities selected1-95, supplemented by exact whole-byte transformation equality; not fresh whole semantic review."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema":"jc2.bounded-desk-custody/v1",
+  "task":"d125-small-receiver-polynomial-lift-contract-astra-20260906",
+  "owner":"nonemptiness_certificate",
+  "recipient":"root",
+  "status":"TERMINAL_PROVISIONAL_ACCEPTANCE_CONTRACT_FOR_GATE",
+  "terminal_utc":"2026-09-06T22:58:26Z",
+  "all_writers_done":true,
+  "background_jobs":[],
+  "workers":[],
+  "no_live_edit_promise":true,
+  "no_full_source_expansion_CAS_solver_AWS":true,
+  "pinned_input_checks":{"count":3,"mismatches":[]},
+  "report":{
+    "path":"xmodel/d125-small-receiver-polynomial-lift-contract-astra-20260906.md",
+    "bytes":15617,
+    "sha256":"433cc2fe9f11ce1b2e1f1fc57aab24def921afb1f93154a2d631ddee0b88cdad",
+    "body_sha256":"f4a2aab6fa5f2092312b19bd243b79afe6d35abe3090d0fc50958ddc8230b1fe",
+    "manifest_sha256":"7ff6b0ddfd2d30a4fb70f61050d75e4d18cd8a8eb1f29736e1af12191eefee74",
+    "transaction_verified":true
+  },
+  "owned_artifacts":{
+    "box/d125-small-receiver-polynomial-lift-contract-20260906/check.py":"77f8ee1b0eae54831bdf1e255685449e41f30feb2b9697c6808ef9110230f10d",
+    "box/d125-small-receiver-polynomial-lift-contract-20260906/inputs.json":"e8b927e5cc4bca4e830a70b84b38a6ec73adc980eca04603768491fd13f0f822",
+    "box/d125-small-receiver-polynomial-lift-contract-20260906/registration.json":"231a86e39a8be329cb2b906da4b4aeb60bacd3f1ab6593c9e20015e2a33d33ec",
+    "box/d125-small-receiver-polynomial-lift-contract-20260906/replay.json":"6c125e0383cc3c070beef4c75e501c0bb2876a5ea993be40bcbbb23196a93142"
+  },
+  "acceptance_boundary":"All full receiver J rows plus monicity, c unit and every one of105 explicit negative coefficient rows are sufficient for an actual polynomial Keller75/125 pair. No point, properness, full builder or speedup is claimed. Optional two constant graph pivots are proved but not substituted into the remaining equations.",
+  "necessity_boundary":"Standard-F2 coverage remains conditional on the incoming theorem; Roy/Moh/Strinz source equality is not claimed. Live T4 composition/engineering gates were not read.",
+  "perimeter":"Own terminal predecessor and already terminal incoming theorem only; no shared or immutable artifact edits, no protected project."
+}

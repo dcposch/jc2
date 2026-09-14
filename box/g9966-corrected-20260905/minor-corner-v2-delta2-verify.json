@@ -1,0 +1,152 @@
+{
+  "Singular": {
+    "QQstar_export_scalings": [
+      {
+        "QQstar_multiplier": "1153160265099383674418940922552320000",
+        "exact_identity_verified": true,
+        "primitive_integer_polynomial_sha256": "d0b9e71996238cdb8e8f9bbe04ae98f0cb3ef5149411d26f852f0c54d9100fb8",
+        "row": "D1_J_face_Pi3"
+      },
+      {
+        "QQstar_multiplier": "32954968709973241724363880960000",
+        "exact_identity_verified": true,
+        "primitive_integer_polynomial_sha256": "fe45cd6ccfa2ed37c51b5e2f95160982a76a0da19050cae25137242e9828c2ea",
+        "row": "D1_J_face_Pi6"
+      },
+      {
+        "QQstar_multiplier": "18082287358010009176605696000",
+        "exact_identity_verified": true,
+        "primitive_integer_polynomial_sha256": "b5db8ebf0bd57f3cc2ae390cf937008da9e5fe00b7e9c81e22c6e459e60e1bb8",
+        "row": "D1_J_face_Pi9"
+      },
+      {
+        "QQstar_multiplier": "15311256209258420275200",
+        "exact_identity_verified": true,
+        "primitive_integer_polynomial_sha256": "87a1ad28a3d5e6f45486cdf35672ff8dd3a91ac7ce00a4f3f0a2dcd0b3154127",
+        "row": "D1_J_face_Pi12"
+      },
+      {
+        "QQstar_multiplier": "20175691998178816767633790380975390720000",
+        "exact_identity_verified": true,
+        "primitive_integer_polynomial_sha256": "41101d08ddfb0793578a41f63d131ed6e6499a4da8e025fa3f063d664fd9e6bb",
+        "row": "gauge_J_nonzero_wrapper"
+      },
+      {
+        "QQstar_multiplier": "20415837456",
+        "exact_identity_verified": true,
+        "primitive_integer_polynomial_sha256": "094c8e6120a9af828017937adb5281a7324148a233fe99cd547137cd0726950d",
+        "row": "retained_monic_D1_relation"
+      },
+      {
+        "QQstar_multiplier": "303140087605401422786572370074961627565453708000000",
+        "exact_identity_verified": true,
+        "primitive_integer_polynomial_sha256": "767f5e3aa81b653b3c65a085e2abf93fed81a3851cebf4dd03ae3a001aa5310b",
+        "row": "gauge_early_J_constant"
+      }
+    ],
+    "active_dimension": 18,
+    "basis_sha256": "e67f07762ba70c4788b1e278276b9ec4d560c10a16551648e43fb99ad56228e5",
+    "empty_wrapper_reduces_one_to": "0",
+    "field": "Q",
+    "full_dimension": 229,
+    "generator_order": [
+      "A2c_65_0",
+      "A3c_97_0",
+      "A3c_97_1",
+      "B1c_32_0",
+      "B2c_64_0",
+      "B2c_64_1",
+      "C2c_21_1",
+      "C3c_22_9",
+      "C3c_26_6",
+      "C3c_26_7",
+      "C3c_30_2",
+      "C3c_32_1",
+      "C3c_33_0",
+      "Hc_10_1",
+      "Hc_7_4",
+      "ZJ",
+      "Zface_H2_2",
+      "Zface_H2_5",
+      "minor_a2",
+      "rho",
+      "u",
+      "Zrho"
+    ],
+    "generator_order_sha256": "fe7f54081109fe141fa6266bc3f4d4b78c27155a89ceb6831e41ec3174196d76",
+    "nonempty_wrapper_reduces_one_to": "1",
+    "rational_export": "each row scaled by a verified nonzero rational to a primitive integer polynomial before serialization",
+    "raw_ideal_reduces_one_to": "1",
+    "ring_characteristic_checked": 0,
+    "script_sha256": "19070fafd4fd2d6b37d5065b8c4e11086124742d96c33194df758f0ffb908b35",
+    "unit_ideal": false
+  },
+  "branch": "delta2",
+  "core_sha256_at_import": "ef4b02a7d92a1a5d70cba49868d15c7d1e2b11427923abcd17e4f3506f1b1f50",
+  "driver_sha256": "4b6092c395d97d293fb1e3fcedc1488ebd0c4dbe99fcfa6256a69cc16be1c93e",
+  "elapsed_seconds": 62.41625209300037,
+  "exact_map_free_residual_boundary_checked": true,
+  "gauge_coverage": "minor_gauge-final-audit.md",
+  "independent_corner_backend": {
+    "base_generator_images_checked": true,
+    "base_generator_order": [
+      "A2c_65_0",
+      "A3c_97_0",
+      "A3c_97_1",
+      "A3c_98_0",
+      "B1c_32_0",
+      "B2c_64_0",
+      "B2c_64_1",
+      "B2c_65_0",
+      "C2c_21_1",
+      "C3c_22_9",
+      "C3c_26_6",
+      "C3c_26_7",
+      "C3c_30_2",
+      "C3c_32_1",
+      "C3c_33_0",
+      "Hc_10_1",
+      "Hc_7_4",
+      "Zface_H2_5",
+      "minor_a2",
+      "rho",
+      "u"
+    ],
+    "combined_A_plus_B_d_row": true,
+    "elapsed_seconds": 22.115528987998914,
+    "helper_sha256_at_import": "3d1c269fe01ae290f5cea5b8f3275c919407ce8361ed73886fe2e9b0439ad273",
+    "method": "complete first Taylor F/G products followed by direct determinant in the proved monic coefficient quotient",
+    "no_conjugate_selected": true,
+    "python_flint_version": "0.9.0",
+    "quotient": "Zface_H2_2**2 - 283*Zface_H2_2*Zface_H2_5**2/3500658 + 37*Zface_H2_5**4/20415837456",
+    "retained_generator": "Zface_H2_2"
+  },
+  "independent_full_source_origin_J_minus_same_Jc_sha256": "6a9c505c639c04e92b2d80bece1beb5b74d64900630be7f3e9e031338b4f5a84",
+  "phase_sha256": "b183d11e64742736269fdf6f955f8f884b5d40fafbcabadbd331187e948f7520",
+  "prefix_input_sha256": "58f9ceff16056b1633df408494813a74fb402c7c2a23b27ee73230bde5332f39",
+  "prefix_receipt_sha256": "b865f51cb67506f4f9f46b512baf878e12f6001c53a4a2ca639a356464074d2a",
+  "quotient_multiplier_sha256": "9937a9eb6b34cd5953bb3d90a0353df5266b6568f4040558fb75e05b051f598c",
+  "raw_minus_regenerated_is_multiple_of_proved_monic_row": true,
+  "replay": {
+    "QQstar_pivots_verified": 0,
+    "map_images_verified": 848,
+    "phase": "late_actual_corner_J_quotient",
+    "radical_power_memberships_verified": 0,
+    "remaining_generators": 232,
+    "residual_rows_verified": 7
+  },
+  "source_code_sha256": {
+    "d1_jacobian_face.py": "6baa7f212866373c8a066ae8ce028df5ceaa6a77b58532660c6c6b1c6d5f1c76",
+    "deep_accelerated.py": "101f5f1a63d7dabf0e10981e867f2790bf4ada6dcec9b5327d8b2eb86724631a",
+    "deep_driver.py": "755b33047da1b6f7919cdde4a5f3ea1b56805ca6ab8b2e1c91a556d0be8cb8a0",
+    "deep_gauge_accelerated.py": "fa55ab7ced764012d192fffb5449a86e640fb84902e9a69ab50daab26a2ab966",
+    "deep_rows.py": "11daf8c3ab12556845276e6b35a4ac7abed25d24c228ce2b1ee32c0b0d314e96",
+    "engine.py": "0d99eacd5fe37bc2d3cd3d35b31778989ea58fcb3502bdba35aa14fd8e76ff42",
+    "minor_maps.py": "c329159e148411aa66032270f43a9afebfb797a4317e157fec994a1be869460c",
+    "source_data.py": "5de1e6622669b0a2fac5c9380318e22eecf8ee7f62da63763c1e1164963c0368",
+    "translation_controls.py": "fd17e252bfa0e58effe52549979d01b17787aeb453848f411dfb36757848eb01"
+  },
+  "status": "PASS",
+  "type": "INDEPENDENT PHYSICAL-ORIGIN JACOBIAN ROW ON VERIFIED SOURCE CHART",
+  "verifier_sha256_at_start": "ef2da6619d6ca1492c4337a685f4338fdd54c63a85604db3171e8712c929acc7"
+}

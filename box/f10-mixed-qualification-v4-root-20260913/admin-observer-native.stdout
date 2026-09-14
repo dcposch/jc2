@@ -1,0 +1,39 @@
+Sun Sep 13 01:26:58 UTC 2026
+pid:[4026531836]
+cgroup:[4026531835]
+/usr/bin/grep
+20a35a4c18f2fe9e6305c1cbf866b9c0fcc3f957132ae66028c99ec353bb0a80  /usr/bin/grep
+0 0 755 186824 /usr/bin/grep
+/usr/bin/id
+0e967a87e22a60b330c6dbdc7affe1dda41f342f14d20877725f0486d8777df2  /usr/bin/id
+0 0 755 39432 /usr/bin/id
+/usr/bin/sleep
+8ac215ec4c1ce4a9c23a10cd3e5898d60419bdfab1ac7444d6bdd1690701de24  /usr/bin/sleep
+0 0 755 35336 /usr/bin/sleep
+/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.11.2
+e00576d71d81d3ba0cfa4903c835a44a8723aac96f72f79ff75200b4cff9071b  /lib/x86_64-linux-gnu/libpcre2-8.so.0
+0 0 644 625344 /lib/x86_64-linux-gnu/libpcre2-8.so.0
+/usr/lib/x86_64-linux-gnu/libselinux.so.1
+0ec0843463f90e227b0e138e1f379774f50b5514bd7f5dbd4c8a87aca0aa6670  /lib/x86_64-linux-gnu/libselinux.so.1
+0 0 644 174472 /lib/x86_64-linux-gnu/libselinux.so.1
+/usr/lib/x86_64-linux-gnu/libc.so.6
+8db37cf3f2169f59a0f07ef1fea308c35656668c64c8ff294e1860f4121eb161  /lib/x86_64-linux-gnu/libc.so.6
+0 0 755 2125328 /lib/x86_64-linux-gnu/libc.so.6
+/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+cd4df4f3c7b83673d61189bf2eaebd33ca4f2853ab9772b8a25e025ef99b1e81  /lib64/ld-linux-x86-64.so.2
+0 0 755 236616 /lib64/ld-linux-x86-64.so.2
+/usr/bin/grep:
+	linux-vdso.so.1 (0x00007aa080ce0000)
+	libpcre2-8.so.0 => /lib/x86_64-linux-gnu/libpcre2-8.so.0 (0x00007aa080bf8000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007aa080800000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007aa080ce2000)
+/usr/bin/id:
+	linux-vdso.so.1 (0x0000717f79cda000)
+	libselinux.so.1 => /lib/x86_64-linux-gnu/libselinux.so.1 (0x0000717f79c93000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000717f79a00000)
+	libpcre2-8.so.0 => /lib/x86_64-linux-gnu/libpcre2-8.so.0 (0x0000717f79966000)
+	/lib64/ld-linux-x86-64.so.2 (0x0000717f79cdc000)
+/usr/bin/sleep:
+	linux-vdso.so.1 (0x00007a536298b000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007a5362600000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007a536298d000)

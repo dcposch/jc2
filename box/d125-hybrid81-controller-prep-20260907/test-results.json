@@ -1,0 +1,43 @@
+[
+  {
+    "argv": [
+      "timeout",
+      "30s",
+      "prlimit",
+      "--cpu=25:25",
+      "--as=536870912:536870912",
+      "--fsize=67108864:67108864",
+      "--core=0:0",
+      "--",
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "/home/ubuntu/jc2/box/d125-hybrid81-controller-prep-20260907/test_controller.py"
+    ],
+    "elapsed_seconds": 0.09081104898359627,
+    "rc": 0,
+    "stderr": "",
+    "stdout": "{\"status\": \"PREP_ONLY_MOCK_PASS\", \"operation_vectors\": 2, \"scalar_rejections\": 10, \"vector_mutations\": 58, \"wrong_cwd_before_effects\": true, \"normal_optimized_same_checks\": true}\n"
+  },
+  {
+    "argv": [
+      "timeout",
+      "30s",
+      "prlimit",
+      "--cpu=25:25",
+      "--as=536870912:536870912",
+      "--fsize=67108864:67108864",
+      "--core=0:0",
+      "--",
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "-O",
+      "/home/ubuntu/jc2/box/d125-hybrid81-controller-prep-20260907/test_controller.py"
+    ],
+    "elapsed_seconds": 0.4142516920110211,
+    "rc": 0,
+    "stderr": "",
+    "stdout": "{\"status\": \"PREP_ONLY_MOCK_PASS\", \"operation_vectors\": 2, \"scalar_rejections\": 10, \"vector_mutations\": 58, \"wrong_cwd_before_effects\": true, \"normal_optimized_same_checks\": true}\n"
+  }
+]

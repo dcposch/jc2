@@ -1,0 +1,21 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll verify the charged-input hashes first, then read the frozen residual65 drivers and run the named descent-invariance replay.I'll build the receipt manifest with awk and check hashes, then read the frozen drivers.The task hashes matched the frozen copies; the awk pairing was off because `_sha256` sits before the next file, not its basename. I'll pair by index and then read the drivers.Hashes match. Next I’ll extract the OPEN identities from the residual65 report and inspect how the existing controls replay is structured.I’ll inspect own-row data, how A₁^{act} is computed, and a sealed replay-report template so the driver matches the existing lane.Counts are in: I’ll write a live `descend_own` driver over the 1,420 operative rows, then run the census SD-window replay.Replay finished with a HOLD on every defined identity. I’ll write the sealed report and bank the driver hashes.**VERDICT: the invariance identities HOLD on all rows where defined.** This is replay evidence, not a proof; it is promotable as a lemma only after a printed derivation is written.
+
+Charged inputs: 6/6 SHA-256 OK. Live `descend_own` on the 1,420 operative rows took 0.72 s; the census SD window took 16.2 s (24,063 rows). Drivers are in `box/descent-invariance-20260905/`. Sealed report: `xmodel/descent-invariance-replay-grok46-20260905.md` (body 7,285 bytes).
+
+Empty own-V (1,354 rows, 0 set-valued) is **not a failure**. `N',M'` stay defined via the D1 identity; `A'_1` and `P',Q'` are undefined without own radii.
+
+| Identity | pass / fail / undefined (of 1,420) |
+|---|---|
+| `N'=N`, `M'=M` (`u_s=1`) | 1110 / 0 / 0 |
+| `A'_1 = A_1^{act}` (`u_s=1`) | 46 / 0 / 1064 |
+| `A'_1 \| A_1` (`u_s>=2`) | 20 / 0 / 290 |
+| `P'_j=P_j`, `Q'_j=Q_j` (copied-common) | 66 / 0 / 1354 |
+| `l'' = d_{s-1}/d_s - d_s` (licensed `u_s=1`) | 1020 / 0 / 400 |
+
+**OPEN-failing rows: none.** Cheap refutation (`A'_1 ∤ A_1^{act}` at `u_s=1`, or `A'_1 ∤ A_1` at `u_s>=2`): 0 rows.
+
+SD kill window `(delta'=-1) ∧ (l''<0) ∧ (simple-minor)`: **0 / 24,063**.
+
+Typed observations (not OPEN fails): 2 rows with `A'_1 = A_1^{act} ∤ A_1^{moh}` at `u_s=1` (the R026/R028 pair); 10 prefixes with `A'_1 | A_1^{act}` but not equality; 8 Wzero-image index overlaps with `P'_2 ≠ P_2` (copied-common still 66/66).
+DIVERT path=xmodel/descent-invariance-replay-grok46-20260905.md status=CLEAN_SEALED body_bytes=7285 body_sha256=f8e040c3cdd98dea71726f8a290a77f1a245f5292b33eab32cb03e81764cafa6

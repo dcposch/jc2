@@ -1,0 +1,34 @@
+2026-09-05T15:44:13Z
+LOG
+CURRENT_8_OF_8_OK
+LEGACY_20_OF_20_OK
+ORIGINAL_ENGINE_PIN_OK
+precise-delta2-stage0	0
+precise-delta2-stage1	0
+precise-delta2-stage2	0
+precise-delta2-stage3	0
+precise-delta2-stage4	0
+precise-delta52-stage0	0
+precise-delta52-stage1	0
+precise-delta52-stage2	0
+precise-delta52-stage3	0
+precise-delta52-stage4	0
+precise-delta52-stage5	0
+RC
+RUNNING
+PROCESSES
+  10054   10045       10:06     606 242924 267260 99.9 R   python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py --branch delta52 --stage 6 --emit-singular runs/delta52/stage6.sing
+  10058   10053       10:06     606 242504 266344 99.9 R   python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py --branch delta52 --stage 8 --emit-singular runs/delta52/stage8.sing
+  10057   10048       10:06     606 242364 266352 99.9 R   python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py --branch delta52 --stage 7 --emit-singular runs/delta52/stage7.sing
+   9933    9932       10:06     606  4184   8280  0.0 S    bash jobs/replays_fleet.sh
+   9962    9933       10:06     606  3640   7764  0.0 S    bash run_one.sh /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py delta52 7 runs/delta52 9000
+   9965    9933       10:06     606  3636   7764  0.0 S    bash run_one.sh /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py delta52 8 runs/delta52 9000
+   9959    9933       10:06     606  3616   7764  0.0 S    bash run_one.sh /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py delta52 6 runs/delta52 9000
+   9931       1       10:06     606  3564   7748  0.0 Ss   bash -c timeout --signal=TERM --kill-after=30s 9300 stdbuf -oL bash jobs/replays_fleet.sh > $HOME/replays.log 2>&1; printf "%s\n" $? > $HOME/replays.rc
+  10048   10033       10:06     606  2196   6148  0.0 S    timeout --signal=TERM --kill-after=30s 9000 python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py --branch delta52 --stage 7 --emit-singular runs/delta52/stage7.sing
+  10045   10031       10:06     606  2192   6148  0.0 S    timeout --signal=TERM --kill-after=30s 9000 python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py --branch delta52 --stage 6 --emit-singular runs/delta52/stage6.sing
+  10053   10041       10:06     606  2192   6148  0.0 S    timeout --signal=TERM --kill-after=30s 9000 python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py --branch delta52 --stage 8 --emit-singular runs/delta52/stage8.sing
+   9932    9931       10:06     606  2168   6128  0.0 S    timeout --signal=TERM --kill-after=30s 9300 stdbuf -oL bash jobs/replays_fleet.sh
+  10031    9959       10:06     606  1652   2720  0.0 S    /usr/bin/time -v -o runs/delta52/stage6.time timeout --signal=TERM --kill-after=30s 9000 python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py --branch delta52 --stage 6 --emit-singular runs/delta52/stage6.sing
+  10033    9962       10:06     606  1648   2720  0.0 S    /usr/bin/time -v -o runs/delta52/stage7.time timeout --signal=TERM --kill-after=30s 9000 python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py --branch delta52 --stage 7 --emit-singular runs/delta52/stage7.sing
+  10041    9965       10:06     606  1640   2720  0.0 S    /usr/bin/time -v -o runs/delta52/stage8.time timeout --signal=TERM --kill-after=30s 9000 python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/band_engine.py --branch delta52 --stage 8 --emit-singular runs/delta52/stage8.sing

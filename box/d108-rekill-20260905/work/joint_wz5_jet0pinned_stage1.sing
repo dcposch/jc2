@@ -1,0 +1,11 @@
+ring R=0,(B1c_1_27,B1c_1_28,B1c_1_29,B1c_1_30,B1c_1_31,B1c_1_32,B1c_1_33,B1c_1_34,K2c_3_26,c,jet2,Zc),dp;
+ideal I=-B1c_1_27*K2c_3_26 - 8*B1c_1_27*jet2 + B1c_1_28*K2c_3_26 + 8*B1c_1_28*jet2 - B1c_1_29*K2c_3_26 - 8*B1c_1_29*jet2 + B1c_1_30*K2c_3_26 + 8*B1c_1_30*jet2 - B1c_1_31*K2c_3_26 - 8*B1c_1_31*jet2 + B1c_1_32*K2c_3_26 + 8*B1c_1_32*jet2 - B1c_1_33*K2c_3_26 - 8*B1c_1_33*jet2 + B1c_1_34*K2c_3_26 + 8*B1c_1_34*jet2,Zc*c-1;
+ideal Sd=std(I);
+print("BEGIN_DIM");print(dim(Sd));print("END_DIM");
+print("BEGIN_NF");print(reduce(1,Sd));print("END_NF");
+print("BEGIN_SIZE");print(size(Sd));print("END_SIZE");
+ideal EmptyControl=c,Zc*c-1;
+ideal PointControl=c-1,Zc*c-1;
+ideal RawControl=-B1c_1_27*K2c_3_26 - 8*B1c_1_27*jet2 + B1c_1_28*K2c_3_26 + 8*B1c_1_28*jet2 - B1c_1_29*K2c_3_26 - 8*B1c_1_29*jet2 + B1c_1_30*K2c_3_26 + 8*B1c_1_30*jet2 - B1c_1_31*K2c_3_26 - 8*B1c_1_31*jet2 + B1c_1_32*K2c_3_26 + 8*B1c_1_32*jet2 - B1c_1_33*K2c_3_26 - 8*B1c_1_33*jet2 + B1c_1_34*K2c_3_26 + 8*B1c_1_34*jet2;
+print("BEGIN_CTL");print(reduce(1,std(EmptyControl)));print(reduce(1,std(PointControl)));print(reduce(1,std(RawControl)));print("END_CTL");
+quit;

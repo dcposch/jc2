@@ -1,0 +1,56 @@
+{
+  "utc": "2026-09-08T23:08:16.384754+00:00",
+  "status": "PASS",
+  "new_content_files": 8,
+  "reused_files": 1,
+  "math_replays": 0,
+  "launches": 0,
+  "transaction": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "close",
+        "--final",
+        "xmodel/ideation-20260908T2220Z-poststate-prep-astra.md",
+        "--token",
+        "48611217a317413894638ec0a403839820831daaa0aac8c2eb50242c04a7ed55"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"final_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-poststate-prep-astra.md\", \"idempotent\": false, \"partial_path\": \"/home/ubuntu/jc2/xmodel/.ideation-20260908T2220Z-poststate-prep-astra.md.partial-bccc7dd4f74c26242804fca5bb4fcd94\", \"source_bytes\": 5627, \"source_sha256\": \"f3c639329b579f409032e4a43d6fbda22955f897ccedf979d676f588b321c62e\", \"status\": \"CLOSED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "finalize",
+        "--final",
+        "xmodel/ideation-20260908T2220Z-poststate-prep-astra.md",
+        "--token",
+        "48611217a317413894638ec0a403839820831daaa0aac8c2eb50242c04a7ed55"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 5627, \"body_sha256\": \"f3c639329b579f409032e4a43d6fbda22955f897ccedf979d676f588b321c62e\", \"file_bytes\": 5959, \"final_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-poststate-prep-astra.md\", \"full_sha256\": \"acbefdc7a1c8e36750432a838e75f2242f8420c0ddfb205516c39b191b3d1d76\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-poststate-prep-astra.md.artifact.json\", \"manifest_sha256\": \"e50bf55e8b76c0e3e8f4284e587ce345cb308079f28cc7574e15df2656dcc58d\", \"recovered\": false, \"status\": \"FINAL\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/ideation-20260908T2220Z-poststate-prep-astra.md"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 5627, \"body_sha256\": \"f3c639329b579f409032e4a43d6fbda22955f897ccedf979d676f588b321c62e\", \"file_bytes\": 5959, \"final_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-poststate-prep-astra.md\", \"full_sha256\": \"acbefdc7a1c8e36750432a838e75f2242f8420c0ddfb205516c39b191b3d1d76\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-poststate-prep-astra.md.artifact.json\", \"manifest_sha256\": \"e50bf55e8b76c0e3e8f4284e587ce345cb308079f28cc7574e15df2656dcc58d\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    }
+  ]
+}

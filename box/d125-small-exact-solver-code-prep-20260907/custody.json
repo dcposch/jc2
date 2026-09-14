@@ -1,0 +1,21 @@
+{
+  "schema": "jc2.exact-solver-code-preparation/v1",
+  "status": "IMPLEMENTED_PREP_ONLY_PROVISIONAL",
+  "owner": "/root/model_productivity",
+  "source_client": "unequal/rational; full 803 rows,269 variables,actual degrees75/125",
+  "pins": {
+    "exact.py": "ca7630e39cb8c5b4aec671b2a83132502abd716c6826c30a4bbc03014ffdb6b3",
+    "driver.py": "7f081576ea72005c2509ef2d575aa63b9fd53416987f3535ed520fd79fdc130d",
+    "test_exact.py": "e1f0d6d0c0a930d8f1a2dc17709c98fd1bb37669564c1d09b2be6251a87dd588",
+    "run_tests.py": "90f3ae5e24c51a893af232b911d9baafb9b8f60ece1a5349807fa3332b94cd04",
+    "test-results-final.json": "3a8e9b3bb37d7d5f170859e6de8178f40226539078b16f0c87f406a2e60cdc2e"
+  },
+  "final_tests": {"methods_per_mode": 17, "modes": ["normal", "-O"], "both_returncodes": 0, "wall_seconds": 0.5108226001029834, "child_cpu_seconds": 0.512681, "max_rss_kib": 29456},
+  "executions": ["Tiny stdlib normal/-O tests only; no production source parsing or CAS"],
+  "remote_actions": [],
+  "live_peer_material_read": [],
+  "production_authority_file_created": false,
+  "pending": ["root code review", "independent full-stream gate acceptance", "AWS-only actual Singular zero/duplicate-index and print/lift controls", "AWS-only actual inherited FSIZE overflow controls", "fresh reviewed CAPRUN caller/descendant controls", "fresh exact host/boot/Owner/EBS/free-space and process-owner checks", "explicit separate root solver GREEN"],
+  "owned_remote_jobs": [],
+  "terminal_state": "All local test children exited; no task writer after report seal; IDLE"
+}

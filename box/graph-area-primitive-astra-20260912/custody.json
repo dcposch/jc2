@@ -1,0 +1,35 @@
+{
+  "schema":"jc2-manual-custody/v1",
+  "task":"graph-area-primitive-astra-20260912",
+  "status":"TERMINAL_MANUAL_GAP_NO_EXECUTION",
+  "first_action_utc":"2026-09-12T10:38:03Z",
+  "opened_utc":"2026-09-12T10:38:51Z",
+  "preseal_readback_postpins_collision_clock_utc":"2026-09-12T10:50:23Z",
+  "closed_utc":"2026-09-12T10:50:36Z",
+  "finalized_utc":"2026-09-12T10:50:36Z",
+  "final_whole_readback_verify_clock_utc":"2026-09-12T10:50:52Z",
+  "publication_reserve_utc":"2026-09-12T11:00:00Z",
+  "hard_stop_utc":"2026-09-12T11:03:00Z",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_manifest_sha256":"0e5b90bd6732d54415eacb69e602771bd2b2b0c6d110487fb71852b54a0b754b",
+  "expected_verify_status":"VERIFIED",
+  "verdict":"GAP on primitive existence; exact all-degree logarithmic-divergence equivalence and image-ideal specification, not a solution or obstruction for the actual graph.",
+  "input_count":3,
+  "instruction_count":1,
+  "pre_and_post_inputs":[
+    {"path":"/home/ubuntu/jc2/box/graph-area-primitive-astra-20260912/TASK.md","sha256":"d23b45c65cc4fe3bcf1f886637f2c9c6361a564af58407966febed9cdb3aa4a4","read":"FRESH_WHOLE_INSTRUCTION"},
+    {"path":"/home/ubuntu/jc2/COORDINATION.md","sha256":"33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597","read":"REUSED_WHOLE_EXACT_BYTES_2026-09-12_05:51_TO_05:53"},
+    {"path":"/home/ubuntu/jc2/xmodel/constant-graph-integrability-control-root-20260912.md","sha256":"c3c1e1db27d678dae48cf929e042dc857963ba915ab947df70e1e9e055ed54e8","read":"FRESH_WHOLE"},
+    {"path":"/home/ubuntu/jc2/xmodel/constant-graph-subalgebra-control-astra-20260912.md","sha256":"590609a7a6f52f72e940a01604c5e6f0c1444277c54bfbb9c69e0fa0c55fd679","read":"FRESH_WHOLE"}
+  ],
+  "owned_excluding_custody":[
+    {"path":"/home/ubuntu/jc2/xmodel/graph-area-primitive-astra-20260912.md","sha256":"e33dd5355ec447dbe854eb8b0c3c9f711946e5d521dd8508d24595b5bf905aaa","read":"WHOLE_FINAL"},
+    {"path":"/home/ubuntu/jc2/xmodel/graph-area-primitive-astra-20260912.md.artifact.json","sha256":"0e5b90bd6732d54415eacb69e602771bd2b2b0c6d110487fb71852b54a0b754b","read":"WHOLE_FINAL"},
+    {"path":"/home/ubuntu/jc2/box/graph-area-primitive-astra-20260912/PINS.json","sha256":"0efdccf1c10e9f3f22cf589c8b596369b6ff079f68a17d35758f25f04225e38f","read":"WHOLE_FINAL"},
+    {"path":"/home/ubuntu/jc2/box/graph-area-primitive-astra-20260912/READ-SCOPE.md","sha256":"670ad7ce22e7c5d57134efc41e76067ddcc09a2aa1a255d89774073696a94c2a","read":"WHOLE_FINAL"}
+  ],
+  "quantity":"Existence of a polynomial derivation tangent to the specified actual image hypersurface with divergence exactly one.",
+  "remaining_test":"An exact solution or an all-degree annihilating functional for that divergence image; cost UNMEASURED. No new task or execution is selected.",
+  "scope":"Manual co-research only, not promotion, graph exclusion, Keller pair, JC2 or runtime authority. No linked input, scientific process, code, network, worker, corpus/protected access, shared edit or agent.",
+  "closure":"Four input postpins matched and all final destinations were absent before marker. Complete own WHOLE readback and expected verification passed. No canonical OPEN or charge_basis. Custody is the last authored file, excludes itself, and receives its own WHOLE/hash and all-writers-idle UTC at terminal handoff."
+}

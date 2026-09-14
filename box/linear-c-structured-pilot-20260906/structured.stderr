@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/linear-c-structured-pilot-20260906/structured_prefix.py", line 71, in <module>
+    h3,c2,c3=load("h3",11),load("C2",22),load("C3",33)
+             ^^^^^^^^^^^^^
+  File "/home/ubuntu/linear-c-structured-pilot-20260906/structured_prefix.py", line 64, in load
+    v=parse(e)
+      ^^^^^^^^
+  File "/home/ubuntu/linear-c-structured-pilot-20260906/structured_prefix.py", line 38, in parse
+    if s not in cache:cache[s]=fmpq_mpoly(s,ctx=ctx)
+                               ^^^^^^^^^^^^^^^^^^^^^
+  File "flint/types/fmpq_mpoly.pyx", line 262, in flint.types.fmpq_mpoly.fmpq_mpoly.__init__
+ValueError: unable to parse fmpq_mpoly from string

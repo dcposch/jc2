@@ -1,0 +1,105 @@
+{
+  "caps": "30wall25CPU512MiB each",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a21b8c2a35768ca144a69f336fec870105bfbbc2882a2d40fe90b30098597377"
+    },
+    {
+      "mutation": "--freeze-moving-reference",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "7eb32b9398e46f78ef1febe9029ddb301915ef22c5ddeb11670ee8e51421267c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--wrong-filtered-input",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "709db235d053aff2a0453c7d4b2cbf8a93ad75ba4058d3d1a6e81c24dc7ceaec",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--omit-cross-bracket",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "b9f2729013f90c5791e37c72b8e6559b217b49613525e1af8c8053820ecbc243",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--wrong-critical-factor",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "33b0ff067d63b960efd7a661b97679fe476fb1d37d314cf4d2676688416e0c60",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--wrong-target-factor",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "f730c00823f5a7cffb29811c69d2e71160ab541089e54c9ede200e2b4125eea7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--wrong-primitive-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1c9c1ca37ce29a1bff60256ed0fbc25a14fda2a8780f83bd15ee44788de14965",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a21b8c2a35768ca144a69f336fec870105bfbbc2882a2d40fe90b30098597377"
+    },
+    {
+      "mutation": "--freeze-moving-reference",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "7eb32b9398e46f78ef1febe9029ddb301915ef22c5ddeb11670ee8e51421267c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--wrong-filtered-input",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "709db235d053aff2a0453c7d4b2cbf8a93ad75ba4058d3d1a6e81c24dc7ceaec",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--omit-cross-bracket",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "b9f2729013f90c5791e37c72b8e6559b217b49613525e1af8c8053820ecbc243",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--wrong-critical-factor",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "33b0ff067d63b960efd7a661b97679fe476fb1d37d314cf4d2676688416e0c60",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--wrong-target-factor",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "f730c00823f5a7cffb29811c69d2e71160ab541089e54c9ede200e2b4125eea7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--wrong-primitive-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1c9c1ca37ce29a1bff60256ed0fbc25a14fda2a8780f83bd15ee44788de14965",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "writers_finished": true
+}

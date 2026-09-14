@@ -1,0 +1,27 @@
+{
+  "chart_kind": "tame_J_const",
+  "class_id": "CTRL_GENUINE_TAME_AUTOMORPHISM",
+  "class_verdict": "SURVIVES",
+  "control": true,
+  "expected": "NON_EMPTY_DIM0",
+  "fallacy_v2": "A class kill needs the FULL necessary chart (h-support included; for u_s>=2 split rows the joint chart: order + minor-incidence + pole + Jacobian) AND every stem UNIT AND exact-Q confirm. Modular [1] is not a kill. A surviving point is not a counterexample unless J is a nonzero constant and the point lifts.",
+  "kind": "control",
+  "label": "genuine tame automorphism survives",
+  "n_unknowns": 2,
+  "note": "Negative control: a genuine automorphism is not a unit ideal.",
+  "schema": "census-sweep-class-certificate-v1",
+  "stems": [
+    {
+      "dimension": 0,
+      "guided_verdict": "DIM0_CHAR0",
+      "script": "/home/ubuntu/jc2/box/operative-sweep-20260905/controls/tame_automorphism/CTRL_GENUINE_TAME_AUTOMORPHISM_Q.sing",
+      "script_sha256": "18e6541f664f2126bd506567229002d0be10c62b8115fc96b0f84ac251aef02a",
+      "stdout": "/home/ubuntu/jc2/box/operative-sweep-20260905/controls/tame_automorphism/CTRL_GENUINE_TAME_AUTOMORPHISM_Q.out",
+      "stdout_sha256": "50bcf5ae36673635c06e1c66d643c7aa010bedc28c5c5bfc6820784d12bee43e",
+      "stem": "tame",
+      "unit": false,
+      "vdim": 1,
+      "verdict": "NON_EMPTY"
+    }
+  ]
+}

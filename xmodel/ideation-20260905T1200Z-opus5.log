@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed. Summary of the submission:
+
+**Delivered** — `xmodel/ideation-20260905T1200Z-opus5.md` (50 KB, sealed with `<!-- BODY-END -->`) plus the verbatim collision block in `…-opus5.collisions.md`. Input hashes verified mechanically (4/4 OK) before reading. Both gates pass: `open_collision.py` exit 0, `status: CANDIDATES`, 7 OPENs extracted; `validate_charge_basis.py` exit 0, `charge_basis=ABSENT` (no new exit-price assertion).
+
+**Two measured findings drive the answers.**
+
+*Q1 (K16) — the β-pencil collapse.* `wt(C_r) − wt(B_r) = t+1` independent of `r`, so `G_m` acts transitively on the nonzero-β slices and the ∀ over the `d_Γ(t)` points of Γ splits into two 0-dimensional clauses, one free given C-HSOP. Verified against the banked (V0) verdicts at t = 3, 4 (exact) and t = 5 (mod 32003); clause (α) also at t = 6 (mod 32027). `vdim(C) = C(3t+1,t−1) = 45, 286, 1820, 11628` and `vdim(B) = C(2t,t−1) = 15, 56, 210, 792` — exactly the two binomials of the banked EN degree formula, so `d_Γ(t) = [vdim(C) − vdim(B)]/(t+1)` and the LENGTH-SPLIT is the shadow of the group action.
+
+*Q2/Q4 (Moh ≤100) — the wall is partly instrument.* The 77-unknown chart is exactly weighted-homogeneous (1,155,984 homogeneity equations, rank 6, zero inconsistent rows; Singular independently reports `homog(I)=1`), and `T·c−1` is the only inhomogeneous element in the 425-generator system every run fed to `std`. One generator *is* a variable; another is a monomial giving a free three-way split. Graded, `dim = 0` is a complete kill certificate needing no saturation.
+
+**Honest limits, stated in the report.** The graded `std` and the t = 6 β-slice were still running at seal, so the *structure* is claimed and the *speedup* is not. My raw-pivot attempt failed outright (0 of 77 unknowns at a 1500-term cap) — I report it because it kills an obvious-looking cheap idea.
+
+**Two blindness disclosures.** One line of the same-round coordinator submission surfaced in a `grep -rn "Eagon"`; and at write-up time I read a memory file that turned out to have been written this round by the fable5 lane (Γ generically reduced / single Galois orbit). Neither fed my results — all §2 numbers predate the second — but both are flagged so the coordinator dedupes the cluster correctly rather than reading either as confirmation.
+DIVERT path=xmodel/ideation-20260905T1200Z-opus5.md status=CLEAN body_bytes=50494 body_sha256=1f557a3315abfa8c4d4f1c5a0a06fc95a61b38d59d0dcc384ee282437ff9a118

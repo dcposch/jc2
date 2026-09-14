@@ -1,0 +1,9 @@
+# Fresh whole-read scope
+
+Exactly ten charged inputs including ROOT-CARD; their current hashes were checked before body reads. All ten were freshly read WHOLE through EOF/Seal during this task, not reused from prior memory. Card first; then accepted direct theorem and FIRST, full300-line producer/arithmetic, full540-line checker, source producer/report FIRST, rank theorem and original cone proposal. Each output fit its explicit read budget; no unresolved clipping or provenance traversal.
+
+The original code authority module is NOT an input and was not read in this task. Existing artifact_finalize usage/help is a permitted documentary publication tool, not a scientific premise or execution. Source files were read as text only; no AST, import, syntax, compile, test, arithmetic subprocess or dummy. No coefficient/candidate/baseline/fixture body, live runtime, network/AWS/process/Git/protected/shared/other-lane access.
+
+ROOT qualifications control: monicity/free basis gives O0 injection; actual irreducibility gives fieldness. Necessary-row containment is only in the kernel of the map to the localized source, not unsaturated I or canonical matrix rank. Only the selected coordinate completion is used. Runtime estimates/proposed3600seconds from FIRST are not adopted. This contract notes the fixed108-minus45=63 upper slots rather than the FIRST's incidental81. No result from the concurrently running rational-source batch is known or consumed here.
+
+Own operation/assertion/wire documents and report are read WHOLE before publication; all current input/owned pins and expected transaction verification are recorded in custody.json. Its recursive self-hash is excluded and separately handed off. Original reserve02:19/HARD02:22UTC unchanged. Terminal all writers IDLE; no follow-on authority.

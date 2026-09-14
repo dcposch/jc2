@@ -1,0 +1,25 @@
+ring R=0,(a,b,c),dp;ideal J=a,b-c^2;
+int i,j,k,besti,bestj,bestsize,step;
+poly p,q,linear,v,value;
+besti=0;bestj=0;bestsize=2147483647;
+for(i=1;i<=size(J);i++)
+{
+ print("i="+string(i));
+ if(size(J[i])>=bestsize){continue;}
+ linear=jet(J[i],1)-jet(J[i],0);
+ print(linear);
+ for(j=1;j<=size(linear);j++)
+ {
+ print("j="+string(j));
+ v=leadmonom(linear[j]);q=J[i]/v;
+ print(q);
+ if(q!=0 && q==jet(q,0))
+ {
+ besti=i;bestsize=size(J[i]);
+ for(k=1;k<=nvars(R);k++){if(var(k)==v){bestj=k;break;}}
+ break;
+ }
+ }
+}
+print("loopend");
+quit;

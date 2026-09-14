@@ -1,0 +1,124 @@
+
+===== EXACT PRIMARY TEXT LINES 695-747 =====
+      (
+       ∞                             if the jacobian conjecture is true,
+ B :=                              
+       min gcd(v1,1 (P ), v1,1 (Q)) if JC is false, where (P, Q) runs on the counterexamples.
+   A minimal pair is a counterexample (P, Q) to JC such that B = gcd(v1,1 (P ), v1,1 (Q)).
+   An (m, n)-pair is a Jacobian pair (P, Q) with P, Q ∈ L(l) for some l, that satisfies certain
+conditions (see Definition 4.3).
+   In this section we prove that if B < ∞, then there exists a minimal pair that is also an (m, n)-
+pair for some m, n ∈ N. We could prove the result using only our previous results, but we prefer
+to use the well known fact that a counterexample to JC can be brought into a subrectangular
+shape, following an argument communicated by Leonid Makar-Limanov.
+        ON THE SHAPE OF POSSIBLE COUNTEREXAMPLES TO THE JACOBIAN CONJECTURE                              15
+
+
+Proposition 4.1. Let (ρ, σ) ∈ V be such that (1, 0) ≤ (ρ, σ) ≤ (0, 1). If (P, Q) is a counterex-
+ample to JC, then
+           vρ,σ (P ) > 0,      vρ,σ (Q) > 0      and         vρ,σ (P ) + vρ,σ (Q) − (ρ + σ) > 0.
+Proof. Note that if (1, 0) ≤ (ρ, σ) ≤ (1, 1), then ρ ≥ σ ≥ 0, while if (1, 1) ≤ (ρ, σ) ≤ (0, 1), then
+σ ≥ ρ ≥ 0. In the case ρ ≥ σ ≥ 0 it is enough to prove that vρ,σ (P ), vρ,σ (Q) > ρ. Assume for
+example that vρ,σ (P ) ≤ ρ, then
+                 (i, j) ∈ Supp(P ) =⇒ iρ + jσ ≤ ρ =⇒ i = 0, or i = 1 and j = 0,
+which means that P = µx + f (y) for some µ ∈ K and f ∈ K[y], and obviously (P, Q) can not
+be a counterexample to JC. The case σ ≥ ρ ≥ 0 is similar.                              
+Remark 4.2. If (P, Q) is a minimal pair, then neither v1,1 (P ) divides v1,1 (Q) nor v1,1 (Q) divides
+v1,1 (P ). This fact can be proven using a classical argument[12] given for example in the proof
+of [14, Theorem 10.2.23].
+Definition 4.3. Let m, n ∈ N be coprime with n, m > 1. A pair (P, Q) of elements P, Q ∈ L(l)
+(respectively P, Q ∈ L) is called an (m, n)-pair in L(l) (respectively in L), if
+                                  v1,1 (P )   v1,0 (P )   m
+              [P, Q] ∈ K × ,                =           =       and v1,−1 (en1,0 (P )) < 0.
+                                  v1,1 (Q)    v1,0 (Q)    n
+An (m, n)-pair (P, Q) is called a standard (m, n)-pair if P, Q ∈ L(1) and v1,−1 (st1,0 (P )) < 0.
+Lemma 4.4. Let (ρ, σ), (ρ′ , σ ′ ) ∈ V and A, B ∈ 1l Z × N0 such that
+                 vρ,σ (A)vρ′ ,σ′ (B) = vρ,σ (B)vρ′ ,σ′ (A)    and   (ρ, σ) × (ρ′ , σ ′ ) 6= 0.
+Then A ∼ B.
+Proof. Write A = (a1 , a2 ) and B = (b1 , b2 ). The Lemma follows immediately from the equality
+                                                                      
+                            ρ σ      a1 b 1          vρ,σ (A)    vρ,σ (B)
+                                                =                            ,
+                            ρ′ σ ′   a2 b 2         vρ′ ,σ′ (A) vρ′ ,σ′ (B)
+taking determinants.                                                                                     
+                            (l)
+Remark 4.5. Let P, Q ∈ L and (ρ, σ) ∈ V. Assume that vρ,σ (P ) 6= 0, stρ,σ (P ) ∼ stρ,σ (Q) and
+enρ,σ (P ) ∼ enρ,σ (Q). Then
+                                                                                           vρ,σ (Q)
+          enρ,σ (Q) = λ enρ,σ (P ) and        stρ,σ (Q) = λ stρ,σ (P ),    with     λ :=             .
+                                                                                           vρ,σ (P )
+    If (P, Q) is an (m, n)-pair, then (Q, P ) is an (n, m)-pair, as is shown by the following propo-
+sition.
+Proposition 4.6. Let (P, Q) be an (m, n)-pair. Then the following properties hold:
+   (1) v1,0 (P ), v1,0 (Q) > 0.
+                                               n
+   (2) en1,0 (Q) ∼ en1,0 (P ) and en1,0 (Q) = m   en1,0 (P ).
+
+===== EXACT PRIMARY TEXT LINES 1431-1461 =====
+
+
+Proposition 5.20. For each (m, n)-pair (P, Q) in L(1) , there exists an automorphism ϕ of L(1)
+such that (ϕ(P ), ϕ(Q)) is a standard (m, n)-pair with
+          v1,1 (ϕ(P )) = v1,1 (P ),   v1,1 (ϕ(Q)) = v1,1 (Q)      and   en1,0 (ϕ(P )) = en1,0 (P ).
+Moreover, if (−1, 1) < SuccP (1, 0), SuccQ (1, 0) < (−1, 0), then
+                          (−1, 1) < Succϕ(P ) (1, 0), Succϕ(Q) (1, 0) < (−1, 0).
+Furthermore, if P, Q ∈ L, then we can take ϕ ∈ Aut(L).
+                                                                                    1
+                                                                                                        
+Proof. If v1,−1 (st1,0 (P )) < 0, then we can take ϕ := id. Otherwise m               en1,0 (P ), (1, 0) is a
+                                            1
+regular corner[25]. Write (a, b) := m         en1,0 (P ). Case I is impossible because a, b > 0 and Propo-
+sition 5.13 gives 1 − a/b > 1, and the Case II.a) is discarded, because v1,−1 (st1,0 (P )) ≥ 0. By
+Propositions 5.16 and 5.18 in Case II.b) and by Proposition 5.17 in Case III, we can find a
+ϕ ∈ Aut(L(1) ) such that
+           1
+                                        
+       - m    st1,0 (ϕ(P )), (ρ′ , σ ′ ) is a regular corner, for some (ρ′ , σ ′ ),
+       - ℓ1,1 (ϕ(P )) = ℓ1,1 (P ), ℓ1,1 (ϕ(Q)) = ℓ1,1 (Q) and en1,0 (ϕ(P )) = en1,0 (P ),
+       - If SuccP (1, 0), SuccQ (1, 0) < (−1, 0), then
+                  Succϕ(P ) (1, 0) = SuccP (1, 0)      and         Succϕ(Q) (1, 0) = SuccQ (1, 0).
+      - ϕ(x) = x and ϕ(y) = y + λ, for some λ ∈ K × .
+The assertions in the statement follow immediately from these facts.                                      
+Corollary 5.21. If B < ∞ (i. e., if the Jacobian conjecture is false), then there exists a Jacobian
+pair (P, Q) and m, n ∈ N coprime with m, n > 1, such that
+    (1) (P, Q) is a standard (m, n)-pair in L,
+                                                                
+    (2) (P, Q) is a minimal pair (i. e., gcd v1,1 (P ), v1,1 (Q) = B),
+    (3) st1,1 (P ) = en1,0 (P ),
+    (4) (−1, 1) < SuccP (1, 0), SuccQ (1, 0) < (−1, 0).
+
+===== EXACT PRIMARY TEXT LINES 2259-2292 =====
+                              0 ≤ s′ < r′ = v1,0 (A′0 ) < v1,0 (2, 2) = 2.
+Hence necessarily A′0 = (1, 0). Therefore (ρ, σ) = (2, −1), and we are in the situation of state-
+ment (3) with ρ0 = ρ = 2. The contradiction 0 = γ(ρ0 − 2) > ρ0 concludes the proof.            
+
+   In the proof the next corollary, nearly all facts were more or less known, except statement (4) of
+Proposition 7.8, which is the missing piece of the puzzle. This statement relies on the impossibility
+of A′0 = (1, 0) and (ρ, σ) = (2, −1), which we prove via Proposition 7.8(3)[31] , but which can also
+be proven using Proposition 6.9, since in that case v2,−1 (A0 ) = v2,−1 (A′0 ) = 2, which is impossible
+by Proposition 6.9.
+                                                                            1
+Corollary 7.9. Let (P, Q) be a standard (m, n)-pair in L. Write (a, b) := m   en1,0 (P ). Then
+(a, b) ∈ N × N and gcd(a, b) > 2. Furthermore B 6= p and B 6= 2p for any prime p, where B is
+as at the beginning of Section 4.
+Proof. By Remark 5.12 we know that (a, b) is the first component of a regular corner of (P, Q).
+Hence, by Remark 5.8 we have (a, b) ∈ N × N and by Proposition 5.19 we know gcd(a, b) > 1.
+Next we discard gcd(a, b) = 2. Let k be the number of regular corners in A(P ). If k = 0, then
+gcd(a, b) = 2 contradicts Proposition 7.8(4). Assume k > 0. Then (a, b) = (ak , bk ) and the very
+definitions of qk and dk show that qk | gcd(a, b) and dk | gcd(a, b). Moreover, by Theorem 7.6(8)
+we have q0 |dk , q0 ∤ d0 and qk ∤ q0 . Hence gcd(a, b) is a composite number and so gcd(a, b) > 2.
+   Now assume that (P, Q) is as in Corollary 5.21. In particular,
+                                         1                        1              1
+        B = gcd(v1,1 (P ), v1,1 (Q)) =     v1,1 (P ) and (a, b) =   en1,0 (P ) =   st1,1 (P ),
+                                         m                        m              m
+and so a + b = B, which implies gcd(a, b) | B. Now, if B = p or B = 2p for some prime p, then
+gcd(a, b) ∈ {1, 2, p, 2p}. Since gcd(a, b) > 2 and gcd(a, b) = 2p is impossible, we have to discard
+only the case gcd(a, b) = p. But in that case a = b = p, which contradicts a < b and finishes the
+proof.                                                                                           
+
+   In the following proposition we give a condition under which the Newton polygon of P has no
+vertical edge at the right hand side.
+Corollary 7.10. Let (P, Q) be a standard (m, n)-pair and let (ρ, σ), A0 and F be as in the
+discussion above Proposition 6.4. By Proposition 6.4(4) there exist p, q ∈ N coprime, such that
+enρ,σ (F ) = pq A0 . Assume that A0 = m
+                                      1

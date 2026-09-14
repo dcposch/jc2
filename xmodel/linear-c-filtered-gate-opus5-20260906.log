@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Review complete and sealed at `xmodel/linear-c-filtered-gate-opus5-20260906.md` (body 23,861 B, SHA `257d8d47…`, one standalone body-end marker).
+
+## Verdicts
+
+**Claim 1 — CONFIRMED.** I rebuilt everything from the frozen source with my own parser, echelonization and Jacobian-coefficient derivation (a third index convention). The C map is linear with zero affine offset, 192 parameters at 201 positions, rank 192 (plus 192/192 exclusive coefficient-1 identity slots), disjoint from the base. The degree profile is byte-identical to the certificate: **189 active pivots, 3 free at degrees 22/11/0, degree 33 dim 9 rank 9**. I recomputed all **15,391 entries / 42,131 literal terms** in arbitrary lower `g_uv` — zero upper-triangle violations, every diagonal the constant 1, so the minor is identically 1, not sampled. The absent degree-33 kernel is licensed: slot (0,33) is absent from the source, and H³ needs W³³. Bonus: `top(h3)` is literally H with parameter-free coefficients, so `G_top = H^6` is *forced* at every base point, not assumed.
+
+**Claim 1b — REFUTED.** "247 other coordinates" is wrong: **245** syntactic names, of which **241** are physical `Xc_i_j` slots and 4 are gauge scalars. `target_a`/`target_b` are needed by F, G, K and appear in no count. Bookkeeping only — nothing mathematical moves.
+
+**Claim 2 — CONFIRMED**, both directions, with the polynomial-ring factor correctly qualified and 4,860/1,469/1,279 reproduced exactly. **2b is a GAP**: 250 inherits the bad 247, and 410/1440 are hardcoded literals resting on an unexplained "160" that matches nothing (h has 178 slots; h3+C2+C3 have 94 rows).
+
+**Claim 3 — CONFIRMED.** Ranks 8 and 7, degree-68 rank 69, the parametrization, and the nilpotent counterexample all hold. On the radical question I supply the exact argument the pilot omits: `√(I_face+I_lower) = √(√I_face+I_lower)`, so properness/nonemptiness *is* preserved; the pullback is legitimate at the reduced level because the source top map is a surjective linear (hence smooth) map, but the coupling caveat on lower D coefficients is load-bearing.
+
+**Claim 4 — scope statements CONFIRMED** (3.29e62 reproduced exactly as an uncollected path count). **4b REFUTED**: both the "mutated pivot" and "selected-only" controls are tautologies that never re-run any checking code. I replaced them — 10 certificate mutations fed end-to-end to the producer's own verifier, **all 10 rejected** with specific messages, and a real selected-only control at a random base point (189 selected rows vanish, exactly 1,279 retained rows nonzero).
+
+## Two things worth acting on
+
+- **Structural finding the pilot doesn't state:** every J row is affine-linear in C, so each `u_i = α + β·v22 + γ·v11` and **the whole residual is a linear system in two unknowns over A**. The v-degree is 1, not 35.
+- **Cheapest discriminator:** expand *only* the two v-columns (2 back-substitutions, 2 × 15,103 A-multiplications) and measure the collected size of β, γ. No dense substitution, no solve — I implemented neither.
+
+Guard adjustments are explicit and retained as a diff: four environment guards neutralized in a *copy*, the cert pin disjoined with a `MUTATE` flag, output renamed. This host lacks python-flint, so a 30-line pure-Python stand-in was supplied for the producer's script only — its determinant agrees with my independent elimination. Nothing on the root-owned worker was touched; 104 KB of evidence under `box/linear-c-filtered-gate-opus5-20260906/`. Terminal custody returned.
+DIVERT path=xmodel/linear-c-filtered-gate-opus5-20260906.md status=DIVERTED body_bytes=23861 body_sha256=257d8d47be0f6a5d30f1380d3c9335d9ed306bd5b3a4a84ffd0d6c82c4d898dc overflow=xmodel/linear-c-filtered-gate-opus5-20260906.overflow overflow_bytes=546 raw=xmodel/linear-c-filtered-gate-opus5-20260906.raw.md raw_sha256=9a699e2aa436283788b40355d7d2750eecb0bede1dfc0f3e671d077a299a0b21 overflow_sha256=4263411c69455c825200c817024fa7ea727eefd7cc52a22d01269dfb1bafa3ea
+post-BODY-END overflow diverted; charged body preserved

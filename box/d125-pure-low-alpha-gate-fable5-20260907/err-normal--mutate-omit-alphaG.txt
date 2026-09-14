@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/tmp/jc2-gate-fable5-scratch-1772257/box/d125-pure-low-alpha-discriminator-20260907/check.py", line 101, in <module>
+    else: print(json.dumps(check(mode),sort_keys=True,indent=2))
+                           ^^^^^^^^^^^
+  File "/tmp/jc2-gate-fable5-scratch-1772257/box/d125-pure-low-alpha-discriminator-20260907/check.py", line 61, in check
+    need(Hjet.get((0,1,0),0)==al*ee and Hjet.get((0,3,0),0)==3*h*h*ee+3*dd*h**3+Q(5,3)*al*al*h**3,'actual scalar-kernel jet identity')
+  File "/tmp/jc2-gate-fable5-scratch-1772257/box/d125-zero-k-deformation-discriminator-20260907/check.py", line 15, in need
+    if not ok: raise ValueError(msg)
+               ^^^^^^^^^^^^^^^^^^^^^
+ValueError: actual scalar-kernel jet identity

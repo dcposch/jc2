@@ -1,0 +1,79 @@
+{
+  "schema": "cross-terminal-custody/v1",
+  "status": "COMPLETE_STRATEGY_CROSS",
+  "first_action_utc": "2026-09-10T23:19:20.530486217Z",
+  "opened_utc": "2026-09-10T23:19:41Z",
+  "closed_utc": "2026-09-10T23:23:01Z",
+  "finalized_utc": "2026-09-10T23:23:07Z",
+  "verified_utc": "2026-09-10T23:23:18Z",
+  "custody_created_utc": "2026-09-10T23:23:51Z",
+  "reserve_utc": "2026-09-10T23:30:00Z",
+  "hard_utc": "2026-09-10T23:33:00Z",
+  "all_writers": "IDLE_AFTER_THIS_FINAL_METADATA_WRITE",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_transaction_sha256": "92da9de6805a6b85523601b9e7ba33bf7e8872ff1f9f085e36f879db5968f008",
+  "expected_verify": "VERIFIED",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260910T2300Z-cross-prep/ROOT-CROSS.md",
+      "sha256": "6a915d4046f8d7a9c30d45ada099a40bfee79a146aa9460ed54c5993215fda40",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/ideation-20260910T2300Z-coordinator.md",
+      "sha256": "c9da5199be69e33e79693d0c19d5ca5ea2bd86d84c89e138c2ed471adcb40314",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/ideation-20260910T2300Z-astra-source.md",
+      "sha256": "bd16da8c84ae3a8ad2d3bed3a654914fdb843ed0a2e4a1f9bfb6430adbd54986",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/ideation-20260910T2300Z-astra-geometry.md",
+      "sha256": "e6435445c141b7fe17ae353addb84ca15ddb94b3e7fa12ca61b04a9296b1a95c",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/ideation-20260910T2300Z-astra-construction.md",
+      "sha256": "3add44c6c10c6629d7034e982b0f5a55cd7f9fd2c7db6627c29a94f7859a2609",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/ideation-20260910T2300Z-fable5.md",
+      "sha256": "c14d89e94ad74807c5a21efc0e8de7169d760e8c5c3c903a00410cd8077d8cfd",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260910T2300Z-prep/inputs/allr-kernel-producer.md",
+      "sha256": "53e17b24e6a0c258e873bf2f1c84823b5367b269a7744a272bbe61ef9d0c7312",
+      "read_mode": "REUSED_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260910T2300Z-prep/inputs/allr-kernel-first.md",
+      "sha256": "097736365b7afcd0701c83063ee87a691532491124106d0346f9c2dfbb8b4617",
+      "read_mode": "REUSED_WHOLE"
+    }
+  ],
+  "inputs_pre_and_post_match": true,
+  "owned": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/ideation-20260910T2300Z-cross-astra-construction.md",
+      "sha256": "5e2a4a962cd1219192d6f02d193d76d8245c22c01e6ed48a5661005edfdaebb1"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/ideation-20260910T2300Z-cross-astra-construction.md.artifact.json",
+      "sha256": "92da9de6805a6b85523601b9e7ba33bf7e8872ff1f9f085e36f879db5968f008"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260910T2300Z-cross-astra-construction/PINS.json",
+      "sha256": "b51150e935d29b62c5555c6b3108ac9278117bfd33884477bace3205509396cf"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260910T2300Z-cross-astra-construction/READ-SCOPE.md",
+      "sha256": "ba8f2e6e6555e286897d30a5a47eb3166420d5439393245d9d11963b6aa6d31e"
+    }
+  ],
+  "self_excluded": true,
+  "scope": "Six fresh WHOLE objects and two explicitly reused same-agent current-pin WHOLE masters. Strategy only, not Fable FIRST promotion, coefficient computation, source result or execution authority. No peer-cross/live/excluded body read."
+}

@@ -1,0 +1,134 @@
+{
+  "helper_sha256": "047e0aefd3ab65444fbf5eef4d72d8513d1910ece4d130f22bc55b13fc4a5183",
+  "limitations": [
+    "No full source or 803-row construction/replay",
+    "Sol path-only restoration into disposable pinned snapshot",
+    "Fable frozen checker NOT run unmodified: root scope adaptation above",
+    "Readiness is mocked-host only; GAP-AUTH not resolved by tests"
+  ],
+  "pins": 31,
+  "runs": [
+    {
+      "adapted_code_sha256": "155473db7e7f0f20cfb9613df3e9f3ed710ffcff0c196f878989ced12a7c656d",
+      "label": "sol-code-gate-private-path-restoration",
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"baseline_make_contract_calls\": 0, \"frozen\": \"/tmp/jc2-root-hybrid-gate-nvgy1wck/inputs\", \"full_source_rows\": 0, \"optimized\": false, \"status\": \"PASS\", \"tests\": 20}\n",
+      "wall_seconds": 0.09520277695264667
+    },
+    {
+      "adapted_code_sha256": "155473db7e7f0f20cfb9613df3e9f3ed710ffcff0c196f878989ced12a7c656d",
+      "label": "sol-code-gate-private-path-restoration",
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"baseline_make_contract_calls\": 0, \"frozen\": \"/tmp/jc2-root-hybrid-gate-nvgy1wck/inputs\", \"full_source_rows\": 0, \"optimized\": true, \"status\": \"PASS\", \"tests\": 20}\n",
+      "wall_seconds": 0.24997705593705177
+    },
+    {
+      "adapted_code_sha256": "4bd8cf76e5bdb88c814239df17153e4e4c248fd5494657274ef92bd86768d67e",
+      "label": "fable-mixed-order-root-scope-adapted",
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n \"JRS_at_1_1_t0\": \"14\",\n \"factored_rows\": {\n  \"A\": [\n   [\n    3,\n    0,\n    0,\n    15,\n    3,\n    -3,\n    3\n   ],\n   [\n    1,\n    2,\n    2,\n    11,\n    -13,\n    -5,\n    3\n   ],\n   [\n    0,\n    3,\n    3,\n    9,\n    -21,\n    -6,\n    3\n   ]\n  ],\n  \"B\": [\n   [\n    5,\n    0,\n    0,\n    25,\n    5,\n    -5,\n    5\n   ],\n   [\n    3,\n    2,\n    2,\n    21,\n    -11,\n    -7,\n    5\n   ],\n   [\n    2,\n    3,\n    3,\n    19,\n    -19,\n    -8,\n    5\n   ],\n   [\n    1,\n    4,\n    4,\n    17,\n    -27,\n    -9,\n    5\n   ],\n   [\n    0,\n    5,\n    5,\n    15,\n    -35,\n    -10,\n    5\n   ]\n  ]\n },\n \"identities_random\": \"(1),(2) hold with 4-term random R,U,V,W\",\n \"mode\": \"positive\",\n \"root_scope\": \"actual generators/lifts and degree<=3 projected products; independent R=g,S=p toys\",\n \"status\": \"PASS\",\n \"toy_bracket\": [\n  [\n   [\n    0,\n    6,\n    7\n   ],\n   \"2835\"\n  ]\n ],\n \"x_gp2\": \"0 identically (p^3 | A); x2^2=-3h^3 fails for h!=0, vacuous at h=0\",\n \"y_series\": \"-h^3 - 9h s^2 - 9 s^3 ; at h=0 (t=-3): -9 s^3, y0=0 not a unit, cube root of 9 needed\"\n}\n",
+      "wall_seconds": 0.054625220014713705
+    },
+    {
+      "adapted_code_sha256": "4bd8cf76e5bdb88c814239df17153e4e4c248fd5494657274ef92bd86768d67e",
+      "label": "fable-mixed-order-root-scope-adapted",
+      "mutation": "--mutate-drop-mixed-orders",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 180, in <module>\n  File \"<string>\", line 83, in check\n  File \"<string>\", line 12, in need\nFail: bracket nonzero below order seven\n",
+      "stdout": "",
+      "wall_seconds": 0.11187260004226118
+    },
+    {
+      "adapted_code_sha256": "4bd8cf76e5bdb88c814239df17153e4e4c248fd5494657274ef92bd86768d67e",
+      "label": "fable-mixed-order-root-scope-adapted",
+      "mutation": "--mutate-full-arc-claim",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 180, in <module>\n  File \"<string>\", line 85, in check\n  File \"<string>\", line 12, in need\nFail: finite toy is not a full commuting arc\n",
+      "stdout": "",
+      "wall_seconds": 0.11063568410463631
+    },
+    {
+      "adapted_code_sha256": "4bd8cf76e5bdb88c814239df17153e4e4c248fd5494657274ef92bd86768d67e",
+      "label": "fable-mixed-order-root-scope-adapted",
+      "mutation": "--mutate-guarded-s4-survivor",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 180, in <module>\n  File \"<string>\", line 152, in check\n  File \"<string>\", line 12, in need\nFail: x=0 cannot meet x2^2=-3h^3 at h=3\n",
+      "stdout": "",
+      "wall_seconds": 0.11182867805473506
+    },
+    {
+      "adapted_code_sha256": "4bd8cf76e5bdb88c814239df17153e4e4c248fd5494657274ef92bd86768d67e",
+      "label": "fable-mixed-order-root-scope-adapted",
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n \"JRS_at_1_1_t0\": \"14\",\n \"factored_rows\": {\n  \"A\": [\n   [\n    3,\n    0,\n    0,\n    15,\n    3,\n    -3,\n    3\n   ],\n   [\n    1,\n    2,\n    2,\n    11,\n    -13,\n    -5,\n    3\n   ],\n   [\n    0,\n    3,\n    3,\n    9,\n    -21,\n    -6,\n    3\n   ]\n  ],\n  \"B\": [\n   [\n    5,\n    0,\n    0,\n    25,\n    5,\n    -5,\n    5\n   ],\n   [\n    3,\n    2,\n    2,\n    21,\n    -11,\n    -7,\n    5\n   ],\n   [\n    2,\n    3,\n    3,\n    19,\n    -19,\n    -8,\n    5\n   ],\n   [\n    1,\n    4,\n    4,\n    17,\n    -27,\n    -9,\n    5\n   ],\n   [\n    0,\n    5,\n    5,\n    15,\n    -35,\n    -10,\n    5\n   ]\n  ]\n },\n \"identities_random\": \"(1),(2) hold with 4-term random R,U,V,W\",\n \"mode\": \"positive\",\n \"root_scope\": \"actual generators/lifts and degree<=3 projected products; independent R=g,S=p toys\",\n \"status\": \"PASS\",\n \"toy_bracket\": [\n  [\n   [\n    0,\n    6,\n    7\n   ],\n   \"2835\"\n  ]\n ],\n \"x_gp2\": \"0 identically (p^3 | A); x2^2=-3h^3 fails for h!=0, vacuous at h=0\",\n \"y_series\": \"-h^3 - 9h s^2 - 9 s^3 ; at h=0 (t=-3): -9 s^3, y0=0 not a unit, cube root of 9 needed\"\n}\n",
+      "wall_seconds": 0.17716740304604173
+    },
+    {
+      "adapted_code_sha256": "4bd8cf76e5bdb88c814239df17153e4e4c248fd5494657274ef92bd86768d67e",
+      "label": "fable-mixed-order-root-scope-adapted",
+      "mutation": "--mutate-drop-mixed-orders",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 180, in <module>\n  File \"<string>\", line 83, in check\n  File \"<string>\", line 12, in need\nFail: bracket nonzero below order seven\n",
+      "stdout": "",
+      "wall_seconds": 0.5345756090246141
+    },
+    {
+      "adapted_code_sha256": "4bd8cf76e5bdb88c814239df17153e4e4c248fd5494657274ef92bd86768d67e",
+      "label": "fable-mixed-order-root-scope-adapted",
+      "mutation": "--mutate-full-arc-claim",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 180, in <module>\n  File \"<string>\", line 85, in check\n  File \"<string>\", line 12, in need\nFail: finite toy is not a full commuting arc\n",
+      "stdout": "",
+      "wall_seconds": 0.5348504059948027
+    },
+    {
+      "adapted_code_sha256": "4bd8cf76e5bdb88c814239df17153e4e4c248fd5494657274ef92bd86768d67e",
+      "label": "fable-mixed-order-root-scope-adapted",
+      "mutation": "--mutate-guarded-s4-survivor",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 180, in <module>\n  File \"<string>\", line 152, in check\n  File \"<string>\", line 12, in need\nFail: x=0 cannot meet x2^2=-3h^3 at h=3\n",
+      "stdout": "",
+      "wall_seconds": 0.5347595020430163
+    },
+    {
+      "adapted_code_sha256": null,
+      "label": "readiness-mocked-host",
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.013s\n\nOK\n",
+      "stdout": "",
+      "wall_seconds": 0.1086925610434264
+    },
+    {
+      "adapted_code_sha256": null,
+      "label": "readiness-mocked-host",
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.013s\n\nOK\n",
+      "stdout": "",
+      "wall_seconds": 0.4382499939529225
+    }
+  ],
+  "status": "PASS",
+  "wall_seconds": 3.0732531920075417
+}

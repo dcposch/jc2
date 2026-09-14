@@ -1,0 +1,169 @@
+{
+  "helper_sha256": "3fb0e04a949e618242c5900c7fa27aa9d5ae3cd735d09b2e5e2b54d645df7059",
+  "pins": 22,
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "rc": 0,
+      "script": "check.py",
+      "stderr_tail": "",
+      "stdout_sha256": "3cb4d2ec0d02c862ea9988379f0216f65895900d88c6717b542aebf3a16fde2d"
+    },
+    {
+      "mutation": "--mutate-C-basis",
+      "optimized": false,
+      "rc": 1,
+      "script": "check.py",
+      "stderr_tail": "(row,z))==0 for row in cs['matrix']) for z in vectors),'complete C ordinary basis')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: complete C ordinary basis\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-C-low-row",
+      "optimized": false,
+      "rc": 1,
+      "script": "check.py",
+      "stderr_tail": "line 87, in check\n    need(bad.get((0,2,0),0)==0,'C_v is a real low constraint')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: C_v is a real low constraint\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-linear-C-kernel",
+      "optimized": false,
+      "rc": 1,
+      "script": "check.py",
+      "stderr_tail": "need({e:a for e,a in J.items() if e[2]<=6}=={},'actual linear C kernel factor')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual linear C kernel factor\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-keep-kernel-despite-e4",
+      "optimized": false,
+      "rc": 1,
+      "script": "check.py",
+      "stderr_tail": "s gamma4')\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: e4 kills gamma4\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "rc": 0,
+      "script": "check.py",
+      "stderr_tail": "",
+      "stdout_sha256": "3cb4d2ec0d02c862ea9988379f0216f65895900d88c6717b542aebf3a16fde2d"
+    },
+    {
+      "mutation": "--mutate-C-basis",
+      "optimized": true,
+      "rc": 1,
+      "script": "check.py",
+      "stderr_tail": "(row,z))==0 for row in cs['matrix']) for z in vectors),'complete C ordinary basis')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: complete C ordinary basis\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-C-low-row",
+      "optimized": true,
+      "rc": 1,
+      "script": "check.py",
+      "stderr_tail": "line 87, in check\n    need(bad.get((0,2,0),0)==0,'C_v is a real low constraint')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: C_v is a real low constraint\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-linear-C-kernel",
+      "optimized": true,
+      "rc": 1,
+      "script": "check.py",
+      "stderr_tail": "need({e:a for e,a in J.items() if e[2]<=6}=={},'actual linear C kernel factor')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual linear C kernel factor\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-keep-kernel-despite-e4",
+      "optimized": true,
+      "rc": 1,
+      "script": "check.py",
+      "stderr_tail": "s gamma4')\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: e4 kills gamma4\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": false,
+      "rc": 0,
+      "script": "check_jet.py",
+      "stderr_tail": "",
+      "stdout_sha256": "a7e4e151552ea554e4fee4144627d5f0acf4ea6ed9101346ccbf7265506c0426"
+    },
+    {
+      "mutation": "--mutate-q-negative",
+      "optimized": false,
+      "rc": 1,
+      "script": "check_jet.py",
+      "stderr_tail": "{e:a for e,a in lifts['q'].items() if e[1]<0}=={(0,-1,0):Q(1)},'actual q negative row')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual q negative row\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-U4-low",
+      "optimized": false,
+      "rc": 1,
+      "script": "check_jet.py",
+      "stderr_tail": "heck\n    need(u4low==mul(power(g,2),p),'actual U4 low jet and moving face')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual U4 low jet and moving face\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-B6-cross",
+      "optimized": false,
+      "rc": 1,
+      "script": "check_jet.py",
+      "stderr_tail": ",a in bracket(aa,bb).items() if e[2]<=6}=={},'full six-jet cross coefficient')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: full six-jet cross coefficient\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-b4",
+      "optimized": false,
+      "rc": 1,
+      "script": "check_jet.py",
+      "stderr_tail": "scale(mul(kk,yy),-3)))=={},'actual saturated x square requires b4=3')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual saturated x square requires b4=3\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "rc": 0,
+      "script": "check_jet.py",
+      "stderr_tail": "",
+      "stdout_sha256": "a7e4e151552ea554e4fee4144627d5f0acf4ea6ed9101346ccbf7265506c0426"
+    },
+    {
+      "mutation": "--mutate-q-negative",
+      "optimized": true,
+      "rc": 1,
+      "script": "check_jet.py",
+      "stderr_tail": "{e:a for e,a in lifts['q'].items() if e[1]<0}=={(0,-1,0):Q(1)},'actual q negative row')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual q negative row\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-U4-low",
+      "optimized": true,
+      "rc": 1,
+      "script": "check_jet.py",
+      "stderr_tail": "heck\n    need(u4low==mul(power(g,2),p),'actual U4 low jet and moving face')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual U4 low jet and moving face\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-B6-cross",
+      "optimized": true,
+      "rc": 1,
+      "script": "check_jet.py",
+      "stderr_tail": ",a in bracket(aa,bb).items() if e[2]<=6}=={},'full six-jet cross coefficient')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: full six-jet cross coefficient\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-b4",
+      "optimized": true,
+      "rc": 1,
+      "script": "check_jet.py",
+      "stderr_tail": "scale(mul(kk,yy),-3)))=={},'actual saturated x square requires b4=3')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual saturated x square requires b4=3\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "producer literal small factors/linear spaces and R=g formal controls only, no full source expansion",
+  "status": "PASS",
+  "wall_seconds": 6.474654973950237
+}

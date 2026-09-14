@@ -1,0 +1,41 @@
+{
+  "K": 7,
+  "b": 8,
+  "range_logic": {
+    "b_min": 5,
+    "b_max": 13,
+    "floor_killed_positive": [1, 2, 3, 4],
+    "composite_scope": [0],
+    "banked_unit": [5],
+    "proposed_closed": [9, 10, 11, 12, 13],
+    "remaining_open": [6, 7, 8]
+  },
+  "q0": {
+    "fresh_input_sha256": "24507c39c2e3e6385e233fc79bb58dc586338de50c3c06851d96e2192b5f068b",
+    "nvars": 65,
+    "ngens": 221,
+    "bytes": 7580109,
+    "frozen_exact_q_verdict": "UNIT",
+    "frozen_basis": "[1]",
+    "frozen_msolve_wall_seconds": 1424.280,
+    "frozen_total_wall_seconds": 1463.834
+  },
+  "q1": {
+    "fresh_input_sha256": "062ccc0c7dc7e83aee99f2cf1a8d2a6b7c05c82e1a468e9d6a97557eae511f25",
+    "nvars": 64,
+    "ngens": 215,
+    "bytes": 6701623,
+    "fresh_engine": "msolve 0.10.1",
+    "fresh_engine_sha256": "0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f",
+    "fresh_hard_cap_seconds": 2400,
+    "fresh_returncode": 124,
+    "fresh_output_bytes": 0,
+    "fresh_verdict": "OPEN_EXACTQ_TIMEOUT",
+    "observed_rss_kib_at_37m45s": 37099468,
+    "frozen_returncode": -9,
+    "frozen_msolve_wall_seconds": 2454.917,
+    "frozen_output_bytes": 0,
+    "frozen_verdict": "OPEN_PREEMPTED"
+  },
+  "stratum_verdict": "OPEN_ONE_COVER_PARTIAL"
+}

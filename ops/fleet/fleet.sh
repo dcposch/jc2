@@ -33,9 +33,11 @@ case "$cmd" in
     # launch [COUNT] [TYPE] [spot|ondemand]   (default ondemand; spot ~58% cheaper, restartable batch)
     COUNT=${1:-1}; TYPE=${2:-$DEFAULT_TYPE}; MARKET=${3:-ondemand}; TS=$(date -u +%Y%m%dT%H%M%SZ)
     MOPT=""; [ "$MARKET" = spot ] && MOPT="--instance-market-options MarketType=spot"
+    # Workers must stay terminable: never enable DisableApiTermination (DC 2026-09-10).
     q run-instances --image-id $AMI --instance-type "$TYPE" --count "$COUNT" \
       --key-name $KEY --security-group-ids $SG --subnet-id $SUBNET $MOPT \
       --associate-public-ip-address --user-data "$(udata)" \
+      --enable-api-termination \
       --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=jc2-worker-$TS},{Key=jc2fleet,Value=1},{Key=market,Value=$MARKET},{Key=Owner,Value=${FLEET_OWNER:-${JC2_LANE:-manual}}}]" \
       --query 'Instances[].InstanceId' --output text ;;
   msolve)

@@ -1,0 +1,168 @@
+{
+  "check_count": 52,
+  "checks": [
+    "golden minimal polynomial exactly",
+    "golden inverse and both embeddings",
+    "conjugate retained",
+    "general field inverse",
+    "zero-field inverse rejected",
+    "wrong minimal polynomial changes object",
+    "unequal/rational closed lattice and full-face counts",
+    "unequal/rational all six guards",
+    "unequal/rational/15 entire outer face",
+    "unequal/rational/25 entire outer face",
+    "unequal/golden closed lattice and full-face counts",
+    "unequal/golden all six guards",
+    "unequal/golden/15 entire outer face",
+    "unequal/golden/25 entire outer face",
+    "common_3/rational closed lattice and full-face counts",
+    "common_3/rational all six guards",
+    "common_3/rational/15 entire outer face",
+    "common_3/rational/25 entire outer face",
+    "common_3/golden closed lattice and full-face counts",
+    "common_3/golden all six guards",
+    "common_3/golden/15 entire outer face",
+    "common_3/golden/25 entire outer face",
+    "common_4/rational closed lattice and full-face counts",
+    "common_4/rational all six guards",
+    "common_4/rational/15 entire outer face",
+    "common_4/rational/25 entire outer face",
+    "common_4/golden closed lattice and full-face counts",
+    "common_4/golden all six guards",
+    "common_4/golden/15 entire outer face",
+    "common_4/golden/25 entire outer face",
+    "complete a priori ordinary J envelope",
+    "prescribed zero face coefficient cannot become free",
+    "free lattice coefficient deletion rejected",
+    "zero nonorigin vertex rejected",
+    "unlicensed second c=1 gauge rejected",
+    "unequal exact one-scale normalization F(a=Fraction(1, 1), b=Fraction(0, 1))",
+    "literal unequal inner face J and sign F(a=Fraction(1, 1), b=Fraction(0, 1))",
+    "unequal exact one-scale normalization F(a=Fraction(0, 1), b=Fraction(1, 1))",
+    "literal unequal inner face J and sign F(a=Fraction(0, 1), b=Fraction(1, 1))",
+    "unequal exact one-scale normalization F(a=Fraction(3, 1), b=Fraction(-1, 1))",
+    "literal unequal inner face J and sign F(a=Fraction(3, 1), b=Fraction(-1, 1))",
+    "common mu normalization exponents",
+    "forced-index kernel versus independent tiny pair expansion",
+    "strict whole toy stream replay",
+    "zero rows retained in complete footer",
+    "unused constant not silently deleted",
+    "changed actual target sign rejected",
+    "missing footer rejected",
+    "missing target obligation rejected",
+    "production-sized kernel attempt rejected",
+    "production export unavailable",
+    "same-ring positive target control"
+  ],
+  "contract_sha256": [
+    "16bd45840ef9b8788b3040dcb368c9ec22c36f954c3dcd3a872d08c6f41d5b31",
+    "9276fe745d416dbb1409c7afbb603bd5f260670689eda681524bac29cbbb092b",
+    "a49fcb8bc563d6c250005918e1e29afc334aac0c058012abe8c55f20ed984977",
+    "be1c5b466b01d1f3b1765daacd30080a7db465bf8b6f689f92ce0fb075ad3066",
+    "df9569677ab63c02953c77e7a729aed04c2925c4c86fbc7b7f205a5a98e49782",
+    "9bc029ba4eeb8058ba651bcf3b25917ef45d246eac0ebdec129cf0407473e39e"
+  ],
+  "counts": {
+    "common_3/golden": {
+      "fixed": [
+        17,
+        27
+      ],
+      "free": 291,
+      "jacobian_envelope_rows": 660,
+      "planned_all_rows": 711,
+      "raw": [
+        94,
+        241
+      ],
+      "raw_pair_upper_bound": 22654,
+      "variables": 293
+    },
+    "common_3/rational": {
+      "fixed": [
+        17,
+        27
+      ],
+      "free": 291,
+      "jacobian_envelope_rows": 660,
+      "planned_all_rows": 711,
+      "raw": [
+        94,
+        241
+      ],
+      "raw_pair_upper_bound": 22654,
+      "variables": 293
+    },
+    "common_4/golden": {
+      "fixed": [
+        17,
+        27
+      ],
+      "free": 367,
+      "jacobian_envelope_rows": 660,
+      "planned_all_rows": 711,
+      "raw": [
+        115,
+        296
+      ],
+      "raw_pair_upper_bound": 34040,
+      "variables": 369
+    },
+    "common_4/rational": {
+      "fixed": [
+        17,
+        27
+      ],
+      "free": 367,
+      "jacobian_envelope_rows": 660,
+      "planned_all_rows": 711,
+      "raw": [
+        115,
+        296
+      ],
+      "raw_pair_upper_bound": 34040,
+      "variables": 369
+    },
+    "unequal/golden": {
+      "fixed": [
+        12,
+        19
+      ],
+      "free": 267,
+      "jacobian_envelope_rows": 660,
+      "planned_all_rows": 698,
+      "raw": [
+        83,
+        215
+      ],
+      "raw_pair_upper_bound": 17845,
+      "variables": 267
+    },
+    "unequal/rational": {
+      "fixed": [
+        12,
+        19
+      ],
+      "free": 267,
+      "jacobian_envelope_rows": 660,
+      "planned_all_rows": 698,
+      "raw": [
+        83,
+        215
+      ],
+      "raw_pair_upper_bound": 17845,
+      "variables": 267
+    }
+  },
+  "elapsed_seconds": 0.0794484649086371,
+  "limits": {
+    "AS_bytes": 536870912,
+    "cpu_seconds": 25,
+    "wall_seconds": 30
+  },
+  "maxrss_KiB": 21496,
+  "production_J_expanded": false,
+  "production_pair_census": false,
+  "status": "PASS",
+  "toy_stream_sha256": "140ff29a5ccc1d5a088df3877ab98c4870765df2b618e42ec46682881ebe820e"
+}

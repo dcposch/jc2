@@ -1,0 +1,159 @@
+{
+ "J0_lifted_text": "-1/2*B2c_64_0*target_b*Hfact_0_0*Hfact_0_1 + 1/2*B2c_64_1*target_b*Hfact_0_0 - 3/2*B2c_64_0*B2c_65_0*Hfact_0_1 - 1/2*B2c_64_0*target_a*Hfact_0_1 - 1/3*A3c_97_0*target_b*Hfact_0_1 + 2*A3c_97_0*Hfact_0_0*Hfact_0_1 - A3c_97_1*B2c_64_0 + A3c_97_0*B2c_64_1 + 3/2*B2c_64_1*B2c_65_0 + 1/2*B2c_64_1*target_a + 1/3*A3c_97_1*target_b - 2*A3c_97_1*Hfact_0_0",
+ "checks": {
+  "EXACT_IDENTITY_full_J": {
+   "J0_terms": 12,
+   "diff_terms": 12,
+   "ok": true
+  },
+  "FG_exact_degrees": {
+   "F_top": "W^72*(X+W)^27",
+   "G_top": "W^48*(X+W)^18",
+   "ok": true
+  },
+  "J0_json_texts": {
+   "lifted_sha": "275d955b760e52bcea6a28923bdc6bc5134bd1b855da9016e225fd004fb53743",
+   "ok": true,
+   "source_sha": "63b5edb9fadbf9dd1b530b51613e4732ab2f2c94e62b29f287d4d425cc079d30"
+  },
+  "J0_lift_compose_equals_source": {
+   "lifted_terms": 12,
+   "ok": true,
+   "source_degree": 8,
+   "source_terms": 45
+  },
+  "J_row_census": {
+   "max_phys_degree": 99,
+   "n_J": 1468,
+   "ok": true
+  },
+  "control_dropped_row_detected": {
+   "dropped_row_terms": 30,
+   "ok": true
+  },
+  "control_row_perturbation_detected": {
+   "ok": true
+  },
+  "control_sign_flip_detected": {
+   "ok": true
+  },
+  "footer_counts_and_hash": {
+   "generators": 1629,
+   "ok": true,
+   "stream_sha": "9fd637ac64193872a7354502e3dca590d43ad8eebd0ca4dbc9f8579af5fa77f0",
+   "terms": 11299180
+  },
+  "graph_rows_exact": {
+   "n_def": 160,
+   "ok": true
+  },
+  "h_top_form_fixed": {
+   "ok": true
+  },
+  "header_ring": {
+   "ok": true
+  },
+  "inverse_row_exact": {
+   "ok": true
+  },
+  "no_trailing_data": {
+   "ok": true
+  },
+  "normalization": {
+   "ok": true
+  },
+  "physical_degrees": {
+   "deg_C": 35,
+   "deg_C2": 14,
+   "deg_C3": 14,
+   "deg_D": 34,
+   "deg_h": 33,
+   "deg_h3": 11,
+   "max_semdeg_C": 1,
+   "max_semdeg_D": 1,
+   "max_semdeg_h_source": 12,
+   "ok": true,
+   "support_C": 201,
+   "support_D": 194,
+   "support_h": 178,
+   "terms_C": 228,
+   "terms_D": 223,
+   "terms_h_source": 9913
+  },
+  "residual_rows_empty": {
+   "ok": true
+  },
+  "sites_match_Hfact_list": {
+   "constants": {
+    "0_33": "1",
+    "1_0": "1",
+    "1_32": "9",
+    "2_3": "-8",
+    "2_31": "36",
+    "3_30": "84",
+    "3_6": "28",
+    "4_29": "126",
+    "4_9": "-56",
+    "5_12": "70",
+    "5_28": "126",
+    "6_15": "-56",
+    "6_27": "84",
+    "7_18": "28",
+    "7_26": "36",
+    "8_21": "-8",
+    "8_25": "9",
+    "9_24": "1"
+   },
+   "n_sites": 160,
+   "ok": true
+  },
+  "source_hash": {
+   "ok": true
+  },
+  "source_name_census": {
+   "ok": true,
+   "unused": [
+    "Z55",
+    "leader55",
+    "target_c",
+    "target_d",
+    "target_e"
+   ]
+  },
+  "source_zero_control_D_C_vanish_at_rho1": {
+   "note": "then J(F,G)=J(h^3,h^2)=0: all positive rows vanish, J0=0, inverse row = -1: correctly NOT a point",
+   "ok": true
+  },
+  "variable_order_literal": {
+   "n_hfact": 160,
+   "n_source": 439,
+   "ok": true
+  }
+ },
+ "controls_note": "sign flip, one-term perturbation of J_8_52 and dropping the first J row all break the identity",
+ "peak_rss_kib": 33109512,
+ "physical": {
+  "deg_C": 35,
+  "deg_C2": 14,
+  "deg_C3": 14,
+  "deg_D": 34,
+  "deg_h": 33,
+  "deg_h3": 11,
+  "max_semdeg_C": 1,
+  "max_semdeg_D": 1,
+  "max_semdeg_h_source": 12,
+  "support_C": 201,
+  "support_D": 194,
+  "support_h": 178,
+  "terms_C": 228,
+  "terms_D": 223,
+  "terms_h_source": 9913
+ },
+ "ring": {
+  "field": "Q",
+  "order": "degrevlex (flint) on names+[X,W]",
+  "variables": 602
+ },
+ "source_sha256": "778eda933ee9b2acbad20f6dc862c25db94776cb25ffd5782646427a3b63e1ea",
+ "wall_seconds": 117.50955349399919
+}

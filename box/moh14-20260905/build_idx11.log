@@ -1,0 +1,17 @@
+ROW  96,72|36,78,94|V=4,3,5  (n',m')=(16,12) K'=4 e'=4 q'=3 V2'=4 u'=0 l=3 B=-8/3 part=()
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/moh14-20260905/run_chart.py", line 95, in <module>
+    main()
+  File "/home/ubuntu/jc2/box/moh14-20260905/run_chart.py", line 67, in main
+    info = OB.write_native_builder(Row, part)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/orderbasis-20260903/order_basis_full.py", line 670, in write_native_builder
+    spec = build_full_spec(row, part)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/orderbasis-20260903/order_basis_full.py", line 440, in build_full_spec
+    face = top_face(row, part, x, y)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/orderbasis-20260903/order_basis_full.py", line 238, in top_face
+    for _ in range(part[0]):
+                   ~~~~^^^
+IndexError: tuple index out of range

@@ -1,0 +1,76 @@
+
+**Verdict: FALSE AS STATED.** For example,
+
+\[
+  (f,g)=(x,y+x^2)
+\]
+
+has Jacobian one and is not a linear coordinate pair, but is a triangular
+polynomial automorphism. Every subsequent theorem needs the exact
+hypothesis
+
+\[
+  J(f,g)=1\quad\text{and}\quad (f,g)\text{ is not a polynomial automorphism}.
+\]
+
+Equivalently, the campaign may begin with the conditional assumption “JC2
+is false” and choose a counterexample. Merely excluding linear equivalence is
+not enough.
+
+**Source.** Elementary; no external dependency.
+
+---
+
+### T2. Existence of a GGV-minimal standard pair
+
+**Statement.** Assume JC2 is false. Define
+
+\[
+B_{\mathrm{GGV}}=\min\{\gcd(\deg P,\deg Q):(P,Q)\text{ is a counterexample}\}.
+\]
+
+Then there exists a counterexample realizing \(B_{\mathrm{GGV}}\). After a polynomial-ring
+automorphism, one can choose coprime \(m,n>1\) so that the selected pair is a
+minimal standard \((m,n)\)-pair, with the subrectangular/standard support
+properties of GGV.
+
+**Exact hypotheses.** Over a characteristic-zero field \(K\), take
+\(P,Q\in K[x,y]\) with \([P,Q]\in K^*\). GGV Definition 4.3 requires
+coprime integers \(m,n>1\) and
+
+\[
+ \frac{v_{1,1}(P)}{v_{1,1}(Q)}
+ =\frac{v_{1,0}(P)}{v_{1,0}(Q)}=\frac mn,
+ \qquad
+ v_{1,-1}\!\left(\operatorname{en}_{1,0}(P)\right)<0.
+\]
+
+“Standard” adds
+\(v_{1,-1}(\operatorname{st}_{1,0}(P))<0\). “Minimal” here means the
+**global** condition
+
+\[
+ \gcd\bigl(v_{1,1}(P),v_{1,1}(Q)\bigr)=B_{\mathrm{GGV}},
+\]
+
+where the minimum is over all counterexamples, not merely the source/target
+equivalence class of a given pair. The subrectangular support properties are
+conclusions of the cited standardization results, not extra hidden
+hypotheses.
+
+**Source.** Guccione–Guccione–Valqui, *On the shape of possible
+counterexamples to the Jacobian Conjecture*, J. Algebra 471 (2017), §4,
+especially Definition 4.3, the proposition labelled `primera condicion
+estandar`, the standardization proposition labelled `todos son Smp`, and
+Corollary 5.21 (`B finito`) in the arXiv source. Repo map:
+[SECTION4-AUTOMATION.md](SECTION4-AUTOMATION.md) §§0–2.
+
+**Verdict: UNCONDITIONAL, but existential.** It proves
+
+\[
+  \text{a counterexample exists}\Longrightarrow
+  \text{a GGV-minimal standard counterexample exists}.
+\]
+
+It does **not** prove that every given counterexample is itself minimal or
+that it can be made minimal inside its source/target automorphism class. In

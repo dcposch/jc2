@@ -1,0 +1,54 @@
+{
+  "utc": "2026-09-09T00:23:26.896422+00:00",
+  "status": "PASS_METADATA_ONLY",
+  "mathematical_runs": 0,
+  "launches": 0,
+  "transaction": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "close",
+        "--final",
+        "xmodel/d125-weightfree-client-interface-astra-20260909.md",
+        "--token",
+        "a10b0355cfd0612918bd5ffbd37f8bd3ecf86510ceaf1796e1b6547e0f0f4697"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"final_path\": \"/home/ubuntu/jc2/xmodel/d125-weightfree-client-interface-astra-20260909.md\", \"idempotent\": false, \"partial_path\": \"/home/ubuntu/jc2/xmodel/.d125-weightfree-client-interface-astra-20260909.md.partial-ba399a635a83b4340eb1ba46ff6aee77\", \"source_bytes\": 12871, \"source_sha256\": \"5d9653bf24c9fbc39010e514aa538a80f048d6d7990daee658b7a42c7b66ba4e\", \"status\": \"CLOSED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "finalize",
+        "--final",
+        "xmodel/d125-weightfree-client-interface-astra-20260909.md",
+        "--token",
+        "a10b0355cfd0612918bd5ffbd37f8bd3ecf86510ceaf1796e1b6547e0f0f4697"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 12871, \"body_sha256\": \"5d9653bf24c9fbc39010e514aa538a80f048d6d7990daee658b7a42c7b66ba4e\", \"file_bytes\": 13204, \"final_path\": \"/home/ubuntu/jc2/xmodel/d125-weightfree-client-interface-astra-20260909.md\", \"full_sha256\": \"dcb3a30a48c5977005083a3ad7bbc5935e1f2f74ade6c3569a4b45751c213276\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/d125-weightfree-client-interface-astra-20260909.md.artifact.json\", \"manifest_sha256\": \"2b22ef07b5c1941136ee0a2080a302e23e0120768dc9b40d654dd076359dfea1\", \"recovered\": false, \"status\": \"FINAL\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/d125-weightfree-client-interface-astra-20260909.md"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 12871, \"body_sha256\": \"5d9653bf24c9fbc39010e514aa538a80f048d6d7990daee658b7a42c7b66ba4e\", \"file_bytes\": 13204, \"final_path\": \"/home/ubuntu/jc2/xmodel/d125-weightfree-client-interface-astra-20260909.md\", \"full_sha256\": \"dcb3a30a48c5977005083a3ad7bbc5935e1f2f74ade6c3569a4b45751c213276\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/d125-weightfree-client-interface-astra-20260909.md.artifact.json\", \"manifest_sha256\": \"2b22ef07b5c1941136ee0a2080a302e23e0120768dc9b40d654dd076359dfea1\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    }
+  ]
+}

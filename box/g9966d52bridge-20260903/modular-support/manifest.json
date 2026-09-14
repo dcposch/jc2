@@ -1,0 +1,117 @@
+{
+  "custody": {
+    "all_match": true,
+    "count": 21
+  },
+  "emitted": [
+    {
+      "all_specialized_values_nonzero": true,
+      "bytes": 22092,
+      "c": 19880,
+      "max_z_power": 33,
+      "path": "/home/ubuntu/jc2/box/g9966d52bridge-20260903/modular-support/t3-support-p32003.sing",
+      "prime": 32003,
+      "sha256": "86226e98d5d32d52cee6d758e28a184aa3a1d555c25914fdb5d1168e208ea06b",
+      "specialization_sha256": "ec7cee95d1309908dd795501ca0eda610d6798c7064f6f6f54854dabb39fed19",
+      "specialized_coordinate_count": 907,
+      "u": 11048,
+      "v": 12721
+    },
+    {
+      "all_specialized_values_nonzero": true,
+      "bytes": 22402,
+      "c": 91749,
+      "max_z_power": 33,
+      "path": "/home/ubuntu/jc2/box/g9966d52bridge-20260903/modular-support/t3-support-p104729.sing",
+      "prime": 104729,
+      "sha256": "2dd1970147e048c27278be4e84c59131fd9c2cb5abb3b2722f1b694db4c60934",
+      "specialization_sha256": "e423c0beadb26bd6f30bc26a6270545de03a5cf502a593fb0726b35c015e8f63",
+      "specialized_coordinate_count": 907,
+      "u": 72680,
+      "v": 88491
+    },
+    {
+      "all_specialized_values_nonzero": true,
+      "bytes": 23657,
+      "c": 915533,
+      "max_z_power": 33,
+      "path": "/home/ubuntu/jc2/box/g9966d52bridge-20260903/modular-support/t3-support-p1299709.sing",
+      "prime": 1299709,
+      "sha256": "985df1e21553e5d492c361386d475a7127778152a427c0f21dc1af664c7ca8b9",
+      "specialization_sha256": "6c5b058b0886858a1f306ff8243db6722a3831d13fa5338f100df9a3aac1949f",
+      "specialized_coordinate_count": 907,
+      "u": 578412,
+      "v": 1103188
+    }
+  ],
+  "endpoint": {
+    "charged_engine_sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9",
+    "free_count": 869,
+    "free_list_sha256": "30d4f3e027d4bb1db62dce3b7226e15f0ac8a74654724d0ede595cc0d10bbbe9",
+    "inner_free": 99,
+    "joint_all_zero": true,
+    "joint_pivots": 59,
+    "next_manifest_sha256": "a050af8c5d4bbb703babb2ce2ee57a70c411eb801226ac9f5cdcffbfa0bfa699",
+    "outer_D1_pivots": 176,
+    "outer_free_before_joint": 826,
+    "stage7_sha256": "a85d602dc4599c600c12b04e2c3140f00dafafbb5793b3b05039050cba6159b3"
+  },
+  "normalization": {
+    "KF": "t^99 F",
+    "KG": "t^66 G",
+    "T2_target": "s^391*p^5",
+    "T3_target": "s^1178*p^10*q1",
+    "jacobian_convention": "literal normalized J=1 (no kappa variable)",
+    "minor": "z=-1+u*s^4+v*s^6+pi*s^7",
+    "p": "pi*(pi^2-c)",
+    "pi_cap": null,
+    "q1": "-pi^10/5+3*c*pi^8/4-c^2*pi^6+c^3*pi^4/2",
+    "q1_constant": 0,
+    "quotient": "s^1179=0",
+    "t": "s^2"
+  },
+  "probe_kind": "support/nonzero-row only; never rank or chart Groebner basis",
+  "source_support": {
+    "A2": {
+      "q_max": 32,
+      "q_min": 0,
+      "r_max": 66,
+      "r_min": 22,
+      "tz_terms_retained": 242,
+      "tz_terms_total": 242
+    },
+    "A3": {
+      "q_max": 32,
+      "q_min": 0,
+      "r_max": 99,
+      "r_min": 55,
+      "tz_terms_retained": 242,
+      "tz_terms_total": 242
+    },
+    "B1": {
+      "q_max": 32,
+      "q_min": 0,
+      "r_max": 33,
+      "r_min": 1,
+      "tz_terms_retained": 169,
+      "tz_terms_total": 169
+    },
+    "B2": {
+      "q_max": 32,
+      "q_min": 0,
+      "r_max": 66,
+      "r_min": 22,
+      "tz_terms_retained": 242,
+      "tz_terms_total": 242
+    },
+    "H": {
+      "q_max": 33,
+      "q_min": 0,
+      "r_max": 33,
+      "r_min": 0,
+      "tz_terms_retained": 178,
+      "tz_terms_total": 178
+    }
+  },
+  "status": "COMPLETE[MODULAR-SUPPORT-SCRIPTS-EMITTED]"
+}

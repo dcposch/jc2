@@ -1,0 +1,78 @@
+EXPANDED 12 (6, 3) 1
+EXPANDED 13 (5, 3) 1
+EXPANDED 14 (4, 3) 2
+EXPANDED 15 (3, 3) 4
+EXPANDED 24 (6, 4) 5
+EXPANDED 25 (5, 4) 6
+EXPANDED 26 (4, 4) 8
+EXPANDED 27 (3, 4) 11
+EXPANDED 38 (6, 5) 17
+EXPANDED 39 (5, 5) 19
+EXPANDED 40 (4, 5) 23
+EXPANDED 41 (3, 5) 25
+EXPANDED 42 (2, 5) 22
+EXPANDED 53 (6, 6) 44
+EXPANDED 54 (5, 6) 48
+EXPANDED 55 (4, 6) 53
+EXPANDED 56 (3, 6) 52
+EXPANDED 68 (6, 7) 104
+EXPANDED 69 (5, 7) 107
+EXPANDED 83 (6, 8) 212
+EXPANDED 84 (5, 8) 217
+EXPANDED 98 (6, 9) 427
+EXPANDED 99 (5, 9) 411
+EXPANDED 112 (6, 10) 810
+EXPANDED 113 (5, 10) 747
+EXPANDED 114 (4, 10) 666
+EXPANDED 126 (6, 11) 1466
+EXPANDED 127 (5, 11) 1310
+EXPANDED 140 (6, 12) 2551
+EXPANDED 141 (5, 12) 2221
+RANK_PROGRESS 5 12 1000 1000 1000 0.02
+RANK_PROGRESS 5 12 2000 2000 2000 0.05
+RANK_PROGRESS 5 12 3000 2970 2970 0.46
+COMPONENT {"B": 5, "Y": 12, "reduced_columns": 7864, "reduced_rows": 3455, "nonzeros": 65497, "rank_Q": 3418, "rank_Fp": 3418, "prime": 1073741827, "hilbert_Q": 4446, "matrix_sha256": "fa932e8f6cfa64b34ea4e49904f16eaba99717eed2bf512f7770b0dd16ffc6a2", "exact_echelon_sha256": "495d5d4370a0465eb44f300d69e8a1b4c217b6679a95af401dea25fd4d8660c2", "rational_elimination_steps": 57455, "elapsed_seconds": 5.0700441600056365, "status": "EXACT_Q"}
+RANK_PROGRESS 6 12 1000 1000 1000 0.02
+RANK_PROGRESS 6 12 2000 2000 2000 0.03
+RANK_PROGRESS 6 12 3000 2815 2815 0.07
+RANK_PROGRESS 6 12 4000 3672 3672 0.16
+RANK_PROGRESS 6 12 5000 4519 4519 1.89
+COMPONENT {"B": 6, "Y": 12, "reduced_columns": 8765, "reduced_rows": 5554, "nonzeros": 101594, "rank_Q": 4945, "rank_Fp": 4945, "prime": 1073741827, "hilbert_Q": 3820, "matrix_sha256": "5e910bbf256ff2fb8f49345234e3c798dfac0c43602d6822546404af7f7ac23f", "exact_echelon_sha256": "703545cf2f524a930c16193b559dff3b3614d258cd5283e28a1867bc9405d946", "rational_elimination_steps": 150389, "elapsed_seconds": 13.539006427978165, "status": "EXACT_Q"}
+DONE
+{
+  "status": "EXACT_HOMOGENEOUS_UNIT_QUOTIENT_VERIFIED_AND_RANKS_REPLAYED",
+  "field": "Q",
+  "prime": 1073741827,
+  "prime_compatible_constant_pivots": true,
+  "original_source_sha256": "b1696972030f66aa7fc0dc14495d0cfc197271863808d073d98c693e99c45d13",
+  "input_path": "box/graded-macaulay-20260905/counts/reduced-hilbert/hilbert136.json",
+  "input_sha256": "cf2d29931f555871bd02c3027799d5d486f140f4495050bda025224e1b1e4640",
+  "mapping_path": "box/graded-macaulay-20260905/reduced/136/reduced-counts.json",
+  "mapping_sha256": "b7ecb997b625fb893088e3de909dacd43bd73f207350b0cd729baf7d7b85599f",
+  "source_variable_order_verified": true,
+  "all_original_terms_reverified": 371224,
+  "homogeneous_ordered_constant_pivots_verified": 71,
+  "pivot_subideal_contained_in_original_I": true,
+  "quotient_isomorphism": "R/I ~= Q[remaining]/phi(I), with bidegrees preserved",
+  "all_eligible_original_source_images_accounted_for": 69,
+  "exact_zero_images": 39,
+  "exact_nonzero_images": 30,
+  "all_reduced_images_and_matrix_ranks_replayed": true,
+  "independent_original_component_control": {
+    "B": 5,
+    "Y": 12,
+    "hilbert_Q": 4446
+  },
+  "final_component": {
+    "B": 6,
+    "Y": 12,
+    "original_columns": 80415,
+    "reduced_columns": 8765,
+    "reduced_rank_Q": 4945,
+    "original_hilbert_Q": 3820,
+    "original_rank_Q": 76595
+  },
+  "replay_path": "/home/ubuntu/jc2/box/graded-macaulay-20260905/hilbert/unit-map-replay/hilbert136.json",
+  "replay_sha256": "d5c0fce7b64cd2c2fa6ecf6b7a2fdff9316aa2ea31d1e9fea3230a2c0311b693",
+  "driver_sha256": "545f5d8779a8e7c8f0c37b3d96fb143d47fa17220b2954c068542c4286bff9ae"
+}

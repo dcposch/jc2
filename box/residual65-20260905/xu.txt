@@ -1,0 +1,706 @@
+                                                      INTERSECTION NUMBERS AND SPLIT OF MINOR ROOTS
+
+                                                                                               YANSONG XU
+
+
+                                                   Abstract. There are two main parts in this manuscript. First, for a Jacobian pair (f, g), with
+arXiv:1604.07683v4 [math.AG] 15 Feb 2022
+
+
+
+
+                                                   the concept of final major roots and final minor roots, we obtain equations and inequalities for the
+                                                   intersection numbers I(fξ , g) and I(fξ , fy ) respectively, here ξ is a generic element of the base field
+                                                   and fξ = f − ξ and discuss usage of them in some special cases. Second, we discuss all possibilities
+                                                   of the splits of principal minor roots for the case of degree (99, 66) with help of Abhyankar-Moh
+                                                   planar semigroup, find an unknown possible split and suggest case (99, 66) is open.
+
+
+
+
+                                                                                            1. Introduction
+                                              Through out this paper, K denotes an algebraically closed field of characteristic 0.
+                                              Let (f (x, y), g(x, y)) be a Jacobian pair. The Jacobian condition fx gy − fy gx = J is an expression
+                                           of two terms. We take a root of f (y)fy (y) in the Puiseux field K ≪ x−1 ≫ and plug in the
+                                           expression. The expression becomes one term, therefore the orders of the factors of the expression
+                                           are calculable in conditions.
+                                              Moh in [Moh83] first introduces the concepts of π-root, major root and minor root. He gets
+                                           plentiful results for major roots and a few for minor roots. For minor roots, Moh proves that any
+                                           minor roots are not split before order 1. We introduce the concept of final roots. We find some
+                                           relationship between intersection numbers and the split of final minor roots. On the other hand,
+                                           I(fξ , g) can be expressed by only final major roots while I(fξ , fy ) can also be expressed by total
+                                           split π-roots. These formulas and inequalities of final major roots and final minor roots provide
+                                           some constrains for possible counter examples for Jacobian Conjecture.
+                                              With the help of quasi-approximate roots and Abhyankar-Moh planar semi-group theory, we
+                                           show that for any case, the principal minor roots are not splitting at order 1 for all effective quasi-
+                                           approximate roots. This provide us a tool to further study the split possibilities for the principal
+                                           minor roots.
+                                              In the last section, we discuss the split possibilities for case (99, 66) that Moh does not discuss
+                                           in details and find an unknown possible split and suggest case (99, 66) is open.
+
+                                                                                            2. Preliminaries
+                                              For polynomials f (x, y), g(x, y) ∈ K[x, y], monic in y, we define intersection number of f with g
+                                           as I(f, g) = degx Resy (f, g). Let x = t−1 . We simply write f (t−1 , y) as f (y). f (y) can be factored
+                                           out completely over Puiseux field K ≪ t ≫.
+                                                                                                                        j     δσ as a π-root of f if
+                                                                                                             P
+                                              Let π be a symbol. Following [Moh83], we define σ =              j<δσ aj t + πt
+                                           f (σ) = fσ (π)tλσ + · · · and deg fσ (π) > 0. The multiplicity of σ is defined as degπ fσ (π) [Moh83].
+                                           We call σ is split if fσ (π) has more than one roots. We call δσ the split order of σ, or we say f
+                                           splits at order δσ . We call σ is final if fσ (π) has no multiple roots and degπ fσ (π) > 1. We also call
+                                           a final π-root as a final root for simplicity.
+
+                                             2010 Mathematics Subject Classification. Primary 14R15.
+                                             Key words and phrases. Jacobian conjecture; intersection number; minor root; major root; final root.
+                                                                                                       1
+              P j                                                                     P         j
+   Let α =       aj t ∈ K ≪ t ≫ and let δ be a real number, we denote α|<δ =            j<δ aj t . If
+β = α|<δ , then we say α is an extension of β. Let σ = j<δσ aj tj + πtδσ be a π-root, we denote
+                                                          P
+
+σ|π=b = j<δσ aj tj + btδσ .
+         P
+
+   Let f (x, y) and g(x, y) be polynomials in K[x, y], monic in y. We call (f, g) a Jacobian pair if
+fx gy − fy gx ∈ K∗ . Let ξ be a generic element in K and let fξ = f − ξ. The following proportional
+lemma is well-known.
+Lemma 2.1. Let (f, g) be a Jacobian pair. Let degy f = m and degy g = n. Let σ be a π-root and
+let
+                                                  f                                g
+                            fξ (σ) = fσ (π)tλ + · · · ,           g(σ) = gσ (π)tλ + · · · .
+Then we have
+    (i) If λf < 0 and degπ fσ (π) > 1, then λf : λg = m : n = degπ fσ (π) : degπ gσ (π).
+   (ii) If fσ (π) has multiple roots, then fσ (π)n /gσ (π)m ∈ K∗ .
+
+                                     3. Root Splitting and I(fξ , fy )
+  In this section, we do not need the Jacobian condition. The results can be applied to other
+topics.
+Lemma 3.1. Let p(π) be a polynomial in K[π] and p(π) have e different roots. Then the derivative
+p′ (π) has exactly e − 1 roots that are not roots of p(π).
+Proof. Let p(π) = a(π − a1 )n1 . . . (π − ae )ne . Then p′ (π) = p1 (π)(π − a1 )n1 −1 . . . (π − ae )ne −1 . It is
+easy to see that deg p1 (π) = e − 1 and that p1 (π) and p(π) have no common roots.                              
+Notation 3.2. Let p(π) be a polynomial in K[π]. Then e(p(π)) denotes the number of distinct
+roots of p(π).
+  The following proposition shows the structure of the roots of fy by split π-roots of fξ .
+Proposition 3.3. Let polynomial f (x, y) be monic in y and fξ have Puiseux expansion
+                                                                     m
+                                                                     Y
+                                       fξ (y) = fξ (t−1 , y) =         (y − αi )
+                                                                     i=1
+                                              j + πtδ be a π-root of f (y). Suppose
+                               P
+over K ≪ t ≫ and let σ =           j<δ aj t                           ξ
+
+                                     fξ (σ) = fσ (π)tλσ + higher terms in t
+and degπ fσ (π) ≥ 1. Then we have
+
+     (i) fy (σ) = fσ′ (π)tλσ −δ + higher terms in t.
+    (ii) If σ is a split π-root of fξ , then σ is also a π-root of fy (y).
+   (iii) If σ is a split π-root of fξ , then there are exactly e(fσ (π)) − 1 roots β1 , . . . , βe(fσ (π))−1 of fy
+         such that
+                               ord fξ (βi ) = λσ f or i = 1, . . . , e(fσ (π)) − 1.
+   (iv) For any root β of fy , there is a split π-root σβ of fξ , such that
+                                                      ord fξ (β) = λσβ .
+        σβ and β are said related each other.
+                                                              2
+   (v) Let B be the root set of fy . For any split π-root σ of fξ , let
+                                 Bσ = {β|β ∈ B and ord fξ (β) = λσ },
+        then                                                ]
+                                                     B=         Bσ
+                                                            σ
+        here σ runs through all split π-root of fξ .
+Proof. (i) Let degπ fσ (π) = s. Reorder index if necessary, we can suppose that
+                       σ − αi = (π − ci )tδ + higher terms in t             for i = 1, . . . , s
+and
+                       σ − αi = bi tli + higher terms in t for i = s + 1, . . . , m
+here li < δ for i = s + 1, . . . , m. Then we have
+
+                                          m
+                                          Y
+                                 fξ (σ) =   (σ − αi )
+                                             i=1
+                                            s
+                                            Y               m
+                                                            Y
+                                                         δ
+                                          =   ((π − ci )t )   bi tli + · · ·
+                                             i=1                 i=s+1
+                                                      λσ
+                                          = fσ (π)t        + ··· .
+  As                                                                   Qm
+                                      m Y            m
+                                                                         j=1 (y − αj )
+                                      X              X
+                             fy (y) =    (y − αj ) =
+                                                                          y − αi
+                                          i=1 j6=i               i=1
+  we have
+                                    m     Qm
+                                             j=1 (σ − αj )
+                                    X
+                         fy (σ) =
+                                          σ − αi
+                                    i=1
+                                     s  Qm
+                                         j=1 (σ − αj )
+                                    X
+                                =                   + ···
+                                        σ − αi
+                                    i=1
+                                      m
+                                               ! s Qs
+                                      Y         X j=1 (π − cj )
+                                =       bi tli                  t(s−1)δ + · · ·
+                                                      π − ci
+                                    i=s+1         i=1
+                                   ′      λσ −δ
+                                = fσ (π)t       + ··· .
+(ii) As degπ fσ (π) > 1, therefore degπ fσ′ (π) ≥ 1. By definition, σ is a π-root of fy (y).
+(iii) Let k = e(fσ (π)) and let fσ (π) = c(π − c1 )n1 · · · (π − ck )nk . By Lemma 3.1,
+
+                                   fσ′ (π) = f1 (π)(π − c1 )n1 −1 · · · (π − ck )nk −1
+with deg f1 (π) = k − 1 and also f1 (π) and fσ (π) have no common roots. Let f1 (π) = b(π −
+b1 ) · · · (π − bk−1 ). By (ii), σ is π-root of fy . By [Moh83] Proposition 1.2, there are exactly k − 1
+roots β1 , . . . , βk−1 of fy such that
+                           X
+                      βi =     aj tj + bi tδ + · · · , ord fξ (βi ) = λσ for i = 1, . . . , k − 1.
+                       j<δ
+
+(iv) As ξ is a generic element of the base field K, fξ (β) 6= 0. Let
+                                    δβ = max{ord(α − β)|fξ (α) = 0}
+                                                            3
+             P j                      P          j    δβ
+Write β =       bj t and let σβ =       j<δβ bj t + πt , then σβ is a π-root of fξ and ord fξ (σβ ) =
+ord fξ (β).
+(v) This is directly result of (iii) and (iv).                                                      
+  The intersection number I(fξ , fy ) can be expressed by all split π-roots.
+Theorem 3.4. Let f (x, y) be a polynomial in K[x, y], monic in y. Then
+                                               X
+                               I(fξ , fy ) = −   (e(fσ (π)) − 1)λσ
+                                                 σ
+
+here σ goes through all splitting π-roots of fξ and fξ (σ) = fσ (π)tλσ + · · · .
+                                                               U
+Proof. Let B = {β|fy (β) = 0}. By Proposition 3.3(v), B = σ Bσ . Therefore
+                            X                 X X                    X
+            I(fξ , fy ) = −    ord fξ (β) = −         ord fξ (β) = −    (e(fσ (π)) − 1)λσ .
+                          β∈B                 σ β∈Bσ                     σ
+
+                                                                                                      
+
+                        4. I(fξ , fy ) and I(fξ , g) and Final Minor Roots
+  The following lemma is simple but fundamental to our calculations.
+Lemma 4.1. Let f, g ∈ K[x, y]. Let fx gy − fy gx = J(x, y). And let α be an element of the Puiseux
+field K ≪ t ≫. Then we have
+                                   d              d
+(4.1)                       gy (α) f (α) − fy (α) g(α) = −J(t−1 , α)t−2 .
+                                  dt              dt
+Proof. By chain rule,
+                  d                 dx         dα    d                dx         dα
+(4.2)                f (α) = fx (α)    + fy (α) ,       g(α) = gx (α)    + gy (α) .
+                  dt                dt         dt    dt               dt         dt
+Substituting (4.2) into LHS of (4.1), simplifying and noting dx/dt = −t−2 we get RHS of (4.1). 
+  From now on, we suppose that (f, g) is a Jacobian pair.
+  We have the following lemma for final root.
+                      P j
+Lemma 4.2. Let α =       aj t be a root of fξ (y). Let
+                                  δ = max{ord(α − β) | g(β) = 0}.
+And let σ = j<δ aj tj + πtδ . Then σ is a final π-root. The final π-root σ and the root α are called
+             P
+related each other.
+Proof. Let
+                                          f                          g
+                          fξ (σ) = fσ (π)tλ + · · · , g(σ) = gσ (π)tλ + · · · .
+If σ is not final, then by the proportional lemma (Lemma 2.1), fσ (π)n /gσ (π)m ∈ K∗ . This is a
+contradiction to the definition of δ.
+                                                                                              
+Definition 4.3. Let α be a root of fξ (y). If ord g(α) < 0 then α is called a major root of fξ (y); if
+ord g(α) = 0 then α is called a minor root of fξ (y). When f (y) has two points at infinity with the
+leading form (y − a1 x)u (y − a2 x)v and u < v, all roots α = a1 t−1 + · · · of fξ (y) are minor and the
+total collection of them are called the principal minor roots of fξ (y).
+Lemma 4.4. Let α be a root of fξ (y). Let σ = j<δ aj tj + πtδ be the related final π-root. Then
+                                                    P
+we have
+    (i) If α is a major root, then δ < 1
+                                                     4
+   (ii) If α is a minor root, then δ > 1.
+Proof. Let
+                               f            f                                 g          g
+             fξ (σ) = fσ (π)tλ + f1 (π)tλ +ε + · · · ,        g(σ) = gσ (π)tλ + g1 (π)tλ +ε + · · ·
+here ε > 0.
+  (i) Since α is major, then λf < 0 and λg < 0. By [Moh83] Proposition 4.1,
+                                                    f     g              ∂(f (σ), g(σ))
+             (λf fσ (π)gσ′ (π) − λg fσ′ (π)gσ (π))tλ +λ −1 + · · · =                    = −Jtδ−2 .
+                                                                            ∂(t, π)
+Since σ is final, therefore λf fσ (π)gσ′ (π) − λg fσ′ (π)gσ (π) 6= 0. Hence λf + λg − 1 = δ − 2. Therefore
+δ < 1.
+  (ii) Now λf = 0 = λg . We have
+                                                                     ∂(f (σ), g(σ))
+                  (εf1 (π)gσ′ (π) − εfσ′ (π)g1 (π))tε−1 + · · · =                   = −Jtδ−2 .
+                                                                        ∂(t, π)
+Hence ε − 1 ≤ δ − 2. Therefore δ > 1.                                                                   
+   Now we can show the relationship between our minor roots and [Moh83] minor discs of a split
+π-root.
+Corollary 4.5. Let τ = j<δr aj tj +cr tδr be a minor disc center defined as in [Moh83] Proposition
+                      P
+6.1. Let
+                          Eτf = {α|fξ (α) = 0 and ord(τ − α) > δr )}.
+Then all elements in Eτf are minor roots.
+Proof. Let α ∈ Eτf , and let
+                 δ∗ = min{ord(α − β)|β is root of fξ (y)g(y) and ord(τ − β) > δr }.
+Then by [Moh83] Proposition 6.1, δ∗ ≥ 1. According to Lemma 4.4, α is a minor root.                
+Definition 4.6. Let σ = j<δσ aj tj + πtδσ be a final π-root of fξ . Let polynomial h(y) ∈ K[x, y].
+                           P
+We define set
+                             Dσh = {α | h(α) = 0 and ord(σ − α) = δσ }.
+If h(α) = 0 and α ∈ Dσh , we call α and σ are related each other. We denote |Dσh | be the cardinal of
+set Dσh . We define sets
+                              Pm = {σ | σ is final minor π -root of fξ },
+                              PM = {σ | σ is final major π -root of fξ }.
+  Intersection numbers I(fξ , g) and I(fξ , fy ) have relationships with final minor π-roots.
+Theorem 4.7. Let (f, g) be a Jacobian pair. Then we have
+   (i)
+                                                       f
+                                                  X
+                       I(fξ , fy ) ≤ degy f − 1 +   (|Dσξ | − 1)(δσ − 1)
+                                                          σ∈Pm
+   (ii)                                                       X
+                                        I(fξ , g) ≥ 1 +           (δσ − 1).
+                                                          σ∈Pm
+           If there are no final minor roots, then
+   (iii)
+                                            I(f, fy ) = degy f − 1
+                                                  I(f, g) = 1.
+                                                        5
+Proof. Let fξ (α) = 0. By Lemma 4.1,
+                              d               d              d
+                        −fy (α)  g(α) = gy (α) f (α) − fy (α) g(α) = −Jt−2 .
+                              dt              dt             dt
+If α is a major root, then ord g(α) < 0. Therefore
+                                                d
+                                          ord      g(α) = ord g(α) − 1.
+                                                dt
+Thus
+                                               ord fy (α)g(α) = −1.
+If α is a minor root, then ord g(α) = 0. Define
+                                        δ = max{ord(β − α)|g(β) = 0}.
+By Proportion 3.3, ord fy (α) = −δ. Therefore
+                                   ord fy (α)g(α) = −δ = −1 − (δ − 1).
+Thus
+
+                                              Y
+(4.3)            I(fξ , fy g) = − ord                  fy (α)g(α)
+                                        {α|fξ (α)=0}
+                                  X X                                     X          X
+                            =−                    ord fy (α)g(α) −                       ord fy (α)g(α)
+                                  σ∈Pm      f                            σ∈PM       f
+                                         α∈Dσξ                                   α∈Dσξ
+                                X         f                            X         f
+                            =          |Dσξ |(1 + (δσ − 1)) +                 |Dσξ |
+                                σ∈Pm                                σ∈PM
+                                                       f
+                                              X
+                            = degy f +               |Dσξ |(δσ − 1).
+                                              σ∈Pm
+                                                                          f
+Now let fy (β) = 0. Note that ord fξ (β) = 0 if and if β ∈ Dσy for some σ ∈ Pm and ord gy (β) ≥ −δσ .
+                       f           f
+By Proposition 3.3, |Dσy | = |Dσξ | − 1. With the similar reasons as above, we have
+                                                 Y
+(4.4)                    I(fy , fξ gy ) = − ord         fξ (β)gy (β)
+                                                     {β|fy (β)=0}
+                                                                    f
+                                                           X
+                                         ≤ degy fy +             |Dσy |(δσ − 1)
+                                                          σ∈Pm
+                                                                X         f
+                                         = degy f − 1 +                (|Dσξ | − 1)(δσ − 1).
+                                                                σ∈Pm
+
+As I(fy , fξ gy ) = I(fy , fξ ) + I(fy , gy ), and from the Jacobian condition, I(fy , gy ) = 0, (i) is proved.
+Note I(fξ , fy g) = I(fξ , fy ) + I(fξ , g) and subtract (4.4) from (4.3) , (ii) is proved. If there are no
+final minor roots, then all above inequalities become equal and (iii) follows.                               
+Corollary 4.8. Let (f, g) be a Jacobain pair. The following are equivalent.
+    (i) K(f, g) = K(x, y).
+   (ii) K[f, g] = K[x, y].
+  (iii) I(f, g) = 1.
+  (iv) f has no minor roots.
+   (v) I(f, fy ) = degy f − 1.
+                                                            6
+Proof. Let ξ and η be symbols, let fξ = f − ξ, gη = g − η. And let F (ξ, η, x) = Resy (fξ , gη ). Then
+F (ξ, η, x) is irreducible ([Moh83] page 150) and F (f (x, y), g(x, y), x) = 0. So F (f, g, X) is the define
+equation of x over K(f, g). Thus I(fξ , gµ ) is the degree of field extension [K(x, y) : K(f, g)], which
+is equal to 1 if and only if there is no minor root from above theorem. We also see from the proof
+of the last theorem, if there is no minor root, then the coefficient of the leading term of F (ξ, µ, x)
+in x is in K∗ . The corollary is thus proved.                                                             
+Corollary 4.9. ([Xu93]) Let f (x, y) be a polynomial, monic in y. If f is an embedded line, then
+I(f, fy ) = degy f − 1. In other words, the curve f has degy f − 1 vertical tangent lines.
+Proof. By Abhyankar-Moh’s Epimorphism Theorem ([AM75]), there exits polynomial g(x, y) such
+that Jacobian J(f, g) ∈ K∗ and K[x, y] = K[f, g]. By above corollary, I(f, fy ) = degy f − 1.
+                                                                                              
+
+                          5. I(fξ , g) Expressed by Final Major Roots
+  Now we express I(fξ , g) with final major π-roots. We define
+                                              X
+                            IM (f, g) = −             |Dσf |λgσ
+                                             σ∈PM
+                                              degy g      X
+                                      =                     |Dσf |(1 − δσ ).
+                                          degy f + degy g
+                                                                  σ∈PM
+
+Theorem 5.1. Let (f, g) be a Jacobian pair. Then we have
+                                              I(fξ , g) = IM (f, g)
+Proof. Let degy f = m and degy g = n. Let fξ (α) = 0. If α is a major root, then ord g(α) < 0. Let
+σ be its final π-root. And let
+                                             f                                 g
+                           f (σ) = fσ (π)tλσ + · · · ,         g(σ) = gσ (π)tλσ + · · · .
+By [Moh83] Proposition 4.6,
+                                                 1 − δσ    n
+                                  −λgσ = n              =     (1 − δσ ).
+                                                 n − M1   m+n
+If α is a minor root, then ord g(α) = 0. Therefore
+                                                  Y
+                        I(fξ , g) = − ord                  g(α)
+                                            {α|fξ (α)=0}
+                                       X X                            X X
+                                 =−                   ord g(α) −                    ord g(α)
+                                      σ∈PM α∈Dσ
+                                              f                      σ∈Pm      f
+                                                                            α∈Dσξ
+                                       X
+                                 =−           |Dσf |λgσ
+                                      σ∈PM
+                                      n  X
+                                 =         |Dσf |(1 − δσ ).
+                                     m+n
+                                             σ∈PM
+
+                                                                                                         
+  Zhang [Zha91] gives estimate for the degree of the field extension [ K(x, y) : K(f, g)] ≤ min(deg f, deg g).
+Using the theorem above, we can give a better estimate.
+                                                           7
+Corollary 5.2. Let (f, g) be a Jacobian pair. Let degy f > 1 and degy g > 1. Then the field
+                                         degy f degy g
+extension degree [ K(x, y) : K(f, g)] <                 .
+                                        degy f + degy g
+Proof. We only need note that in the proof of the last theorem, 0 < δσ < 1 ([Moh83] Proposition
+5.3) and                    X                      X
+                                 |Dσf |(1 − δσ ) <     |Dσf | ≤ degy f.
+                                    σ∈PM                           σ∈PM
+                                                                                                                       
+  We define                                                        X
+                                           Im (f, g) = 1 +                (δσ − 1).
+                                                                   σ∈Pm
+By combining Theorem 4.7 and Theorem 5.1, we have
+Corollary 5.3. Let (f, g) be a Jacobian pair. Then
+                                                 IM (f, g) ≥ Im (f, g).
+
+                                                  6. Applications
+  We apply Corollary 5.3 to special cases. We show that these formulas work in some cases but
+are not effect in other cases.
+6.1. Case (75, 50). We take case (75, 50) as an example. According to [Moh83], page 202, there
+are two sub cases [For (75, 50) second sub case, δ1 = 1/3 should be δ1 = 2/3]. We only show the
+second one here, as it provides more splitting possibilities, therefore more complicated. i.e. We
+have
+          n = 75,    m = 50,      M2 = 55,       M3 = 73,           V3 = 4,     V2 = 2,    δ2 = 1/5,     δ1 = 2/3.
+Let σ2 be the major π-root with the split order δ2 . There are two possibilities of splittings for σ2 .
+    (i)
+          f (σ2 ) = a((π 5 − c1 )(π 5 − c2 ))4 t−2 + · · · ,       g(σ2 ) = b((π 5 − c1 )(π 5 − c2 ))6 t−3 + · · · .
+          All these 10 roots of fσ2 (π) and gσ2 (π) are major. Each of them extends to final major
+          π-roots σ1i with split order δ1 :
+            f (σ1i ) = a0i π(π 3 − a1i )t−2/15 + · · · ,   g(σ1i ) = b0i (π 3 − b1i )(π 3 − b2i )t−1/5 + · · ·
+          for i = 1, . . . , 10. We have only one final minor π-root with split order V3 /U3 = 4. Therefore,
+          from final minor roots, we have Im (f, g) = 1 + (4 − 1) = 4, while final major roots give
+             IM (f, g) = 10 × 4 × 1/5 = 8.
+          They do not work in this case.
+   (ii)
+                              f (σ2 ) = a((π 5 − c1 )2 (π 5 − c2 )(π 5 − c3 ))2 t−2 + · · · ,
+                           g(σ2 ) = b((π 5 − c1 )2 (π 5 − c2 )(π 5 − c3 ))3 t−3 + · · · .
+          In this case, 5 roots from (π 5 − c1 ) are major and extend to final major π-roots σ1i with
+          split order δ1 :
+            f (σ1i ) = a0i π(π 3 − a1i )t−2/15 + · · · ,   g(σ1i ) = b0i (π 3 − b1i )(π 3 − b2i )t−1/5 + · · ·
+          for i = 1, . . . , 5; while 10 roots from (π 5 − c2 )(π 5 − c3 ) are minor and extend to final minor
+          π-roots with split order 6/5. So we have
+             Im (f, g) = 1 + (4 − 1) + 10 × (6/5 − 1) = 6 from final minor roots while
+                                                               8
+            IM (f, g) = 5 × 4 × 1/5 = 4.
+          This is a contradiction and we can rule out this case.
+6.2. Case (84, 56). From [Moh83] page 202, there are two cases.
+     (i)
+     n = 84,       m = 56,      M2 = 64,      M3 = 82,           V3 = 3,    V2 = 2,     δ2 = 2/7,      δ1 = 16/21.
+          Let σ2 be the major π-root with the split order δ2 .
+      f (σ2 ) = a((π 7 − c1 )2 (π 7 − c2 ))2 t−2 + · · · ,       g(σ2 ) = b((π 7 − c1 )2 (π 7 − c2 ))3 t−3 + · · · .
+          All that 7 roots of (π 7 − c1 ) are major, each of them extends to a final major π-root σ1i
+          with split order δ1 :
+           f (σ1i ) = a0i π(π 3 − a1i )t−2/21 + · · · ,   g(σ1i ) = b0i (π 3 − b1i )(π 3 − b2i )t−3/21 + · · ·
+          for i = 1, . . . , 7.
+          All that 7 roots of (π 7 − c2 ) are minor, each of them extends to a final minor π-root with
+          order 9/7. We also have one principal final minor π-root with split order V3 /U3 = 3.
+          Therefore, from final minor roots, we have Im (f, g) = 1 + 7 × (9/7 − 1) + (3 − 1) = 5, while
+          final major roots give IM (f, g) = 4 × 7 × 3/21 = 4, and that is a contradiction. So we can
+          rule out this case.
+   (ii)
+      n = 84,       m = 56,      M2 = 72,      M3 = 82,          V3 = 3,    V2 = 5,      δ2 = 1/4,     δ1 = 7/12.
+              f (σ2 ) = a((π 4 − c1 )5 π)2 t−14/4 + · · · , g(σ2 ) = b((π 4 − c1 )5 π)3 t−21/4 + · · · .
+          In this case, 4 roots from (π 4 − c1 ) are major and extend to final major π-roots σ1i with
+          split order δ1 :
+                          f (σ1i ) = a0i π(π 3 − a1i )(π 3 − a2i )(π 3 − a3i )t−2/12 + · · · ,
+                 g(σ1i ) = b0i (π 3 − b1i )(π 3 − b2i )(π 3 − b3i )(π 3 − b4i )(π 3 − b5i )t−3/12 + · · ·
+          for i = 1, . . . , 4; while 1 root from (π − 0) is minor and extend to final minor π-root with
+          split order 2. So we have Im (f, g) = 1 + (2 − 1) + (3 − 1) = 4 from final minor roots while
+          IM (f, g) = 4 × 10 × 3/12 = 10. We can not rule out this case.
+
+                              7. Splitting of the Principal Minor Roots
+   In this section we will show that the principal minor roots are not splitting at order 1 for all
+effective quasi-approximate roots. We need a few preliminaries first.
+7.1. Planar semigroups. For Abhyankar-Moh planar semigroup theory and characteristic δ-
+sequence, we refer [AM75], [SS94] and [Xu14]. We recall definitions of q-sequence and M -sequence
+                                                      M1 = −δ1
+                                                 di−1
+                                     qi = δi−1        − δi ,      Mi = Mi−1 + qi
+                                                  di
+for i = 2, . . . , h.
+   For an integer subset A, Γ(A) denotes the semigroup generated by all elements in A.
+Lemma 7.1. Let δ = (δ0 , . . . , δh ) (h ≥ 2) be a characteristic δ-sequence and k be an integer with
+2 ≤ k ≤ h. Then we have
+    (i) δk + Mk ∈ Γ(δ1 , . . . , δk−1 ),
+   (ii) δk + Mk − δ0 ∈
+                     / Γ(δ0 , . . . , δk−1 ).
+                                                             9
+Proof. δ1 + M1 = 0. As
+                                   dk−1                    dk−1
+                  δk + Mk = δk−1        − qk + Mk = δk−1 (      − 1) + δk−1 + Mk−1
+                                    dk                      dk
+by induction, we have
+                                                   dk−1                    d1
+                             δk + Mk = δk−1 (           − 1) + · · · + δ1 ( − 1)
+                                                    dk                     d2
+(i) is proved. Now
+                                           dk−1                    d1
+                        δk + Mk − δ0 = δk−1 (   − 1) + · · · + δ1 ( − 1) − δ0
+                                            dk                     d2
+is a standard expansion by the δ-sequence, by [Xu14] Lemma 2.3, (ii) is proved.                            
+7.2. One kind of special ordinary differential equations of polynomials. After analyzing
+the proof of the second part of [Moh83] Proposition A.2, we have
+Lemma 7.2. Let deg p(π) = m and deg q(π) = (l−1)m+1. Suppose p(π), q(π) satisfy the following
+equation
+                               D(m, m(l − 1), p(π), q(π)) = cp(π)l
+                           c
+where c ∈ K∗ . Then q(π) = m (π − a)p(π)l−1 for some a ∈ K.
+7.3. Quasi-approximate roots of a polynomial curve. Let (f, g) be a Jacobian pair, monic in
+y and f has two points at infinity. Let deg f = m and deg g = n. Consider y as a parameter, (f, g)
+defines a polynomial curve. From [Moh83], there are effective index s > 2 and quasi-approximate
+roots Ti (f, g) ∈ K[f, g] with T0 = g, T1 = f and deg Ti = −µi for i = 0, . . . , s.
+   Let di = gcd(−µ0 , . . . , −µi−1 ) for i = 1, . . . , s + 1. Then (−µ0 /ds+1 , . . . , −µs /ds+1 ) is a δ-
+sequence. Let the multiplicity of the principal minor roots of f is m udss , here us < vs = ds − us .
+Then the multiplicities of the principal minor roots of T0 , . . . , Ts−1 , Ts are
+                                      us              us            us
+                                −µ0 , . . . , −µs−1 , (−µs − 2) + 1
+                                      ds              ds             ds
+respectively.
+Proposition 7.3. Let σ1 be the π-root of order 1 for the principal minor roots of f . Let
+
+                                                             vs −us
+                                                                    µ0
+                                    T0 (σ1 ) = T0,σ1 (π)t      ds        + ···
+                                            ..
+                                             .
+                                                                vs −us
+                                                                       µs−1
+                                 Ts−1 (σ1 ) = Ts−1,σ1 (π)t        ds          + ···
+                                                             vs −us
+                                                                    (µs +2)
+                                    Ts (σ1 ) = Ts,σ1 (π)t      ds             + ···
+Then T0,σ1 (π), . . . , Ts,σ1 (π) are powers of a common linear polynomial.
+Proof. Using the proof of [Moh83] Proposition 4.6 verbatim, we get
+                                             −µ0                                      −µs−1
+                        T0,σ1 (π) = C0 p(π) ds , . . . , Ts−1,σ1 (π) = Cs−1 p(π)        ds
+
+
+where deg p(π) = us .
+  Finally by Lemma 7.2, we have
+                                                              −µs −2
+                                     Ts,σ1 (π) = Cs p(π)       ds      (π − a)
+where a ∈ K, Ci ∈ K∗ for i = 0, . . . , s.
+                                                        10
+   We claim p(π) = (π − a)us . If not, let π = b be a root of p(π) and b 6= a. We extend σ1 |π=b to a
+final minor π-root σ0 with split order δ0 .
+   First we point out that for any 1 < δ < δ0 and π-root σ = σ0 |<δ + πtδ we have that for some
+λ < 0,
+                                        ord T0 (σ) = (−µ0 )λ
+                                                  ..
+                                                   .
+                                     ord Ts−1 (σ) = (−µs−1 )λ
+                                        ord Ts (σ) = (−µs − 2)λ
+Using the proof of [Moh83] Proposition 4.2 verbatim, we conclude that σ is a distribution detector
+for T0 (y), . . . , Ts (y).
+   Hence we have
+
+
+                                      T0 (σ0 ) = T0,σ0 (π)t0 + · · ·
+                                              ..
+                                               .
+                                   Ts−1 (σ0 ) = Ts−1,σ0 (π)t0 + · · ·
+                                      Ts (σ0 ) = Ts,σ0 (π)t0 + · · ·
+where
+                                                          −µ0
+                                       deg T0,σ0 (π) =        r
+                                                           ds
+                                                     ..
+                                                      .
+                                                       −µs−1
+                                     deg Ts−1,σ0 (π) =       r
+                                                        ds
+                                                       −µs − 2
+                                           deg Ts,σ0 =         r
+                                                         ds
+for some positive integer r and r satisfies 1 ≤ r ≤ us .
+   We consider polynomial curve (fσ0 (π), gσ0 (π)) with π as the parameter. Then {Ti,σ0 (π)}0≤i≤s−1
+are quasi-approximate roots of the curve.
+                         Ts,σ0 (π) = Ts (fσ0 (π), gσ0 (π)) ∈ K[fσ0 (π), gσ0 (π)]
+                      −µs−1
+As gcd( −µ
+         ds r, . . . , ds r) = r and r divides deg Ts,σ0 (π) =
+           0                                                   −µs −2
+                                                                ds r, we conclude that
+                                                                                       −µs −2
+                                                                                        ds r is in
+                      −µ0     −µs−1
+the semigroup Γ( ds r, . . . , ds r).
+  On the other hand,
+                          −µs − 2 = −µs + Ms − n ∈
+                                                 / Γ(−µ0 , . . . , −µs−1 )
+by Lemma 7.1. This is a contradiction.                                                             
+Remark 7.4. By [ML14] the coefficient of t in any root α of f (y) is zero. We do not find this
+information can simplify the proof that Ts is not split at order 1.
+Corollary 7.5. Suppose us > 1 and let σ be a π−root of f for the principle minor roots. If order
+     vs + 1
+δσ <        then σ can not split to us different roots.
+     us + 1
+                                                   11
+Proof. Suppose σ split to us different roots. For simplify we denote δσ = δ. First from last
+Proposition we know δ > 1. We can write
+                                                            m       m
+                                 f (σ) = a0 p(π)m/ds t−vs ds +us ds δ + · · ·
+here
+                                      p(π) = (π − c1 ) · · · (π − cus )
+with
+                                              ci 6= cj if i 6= j
+From above Proposition, we know that δ > 1 and we can write
+                                                            n       n
+                                 g(σ) = a1 p(π)n/ds t−vs ds +us ds δ + · · ·
+                                                            −µs +n−2
+                                                                     +us −µsd+n−2 δ
+                     (Ts )f (σ) = bp(π)(−µs +n−2)/ds t−vs      ds            s        + ···
+                                             −vs −µsd+n−2 −1+(us −µsd+n−2 +1)δ
+                         Ts (σ) = as q(π)t           s               s           + ···
+here deg q(π) = us −µsd+n−2
+                        s
+                            + 1. By [Moh83] [Proposition 4.1], we have
+                                  ∂(Ts (σ), g(σ))
+(7.1)                                             = −J·(Ts )f (σ)t−2+δ
+                                     ∂(t, π)
+With the above information, and note that
+                −µs + n − 2           −µs + n − 2
+           −vs              − 1 + (us             + 1)δ < −vs − 1 + (us + 1)δ < 0,
+                     ds                   ds
+so every root of p(π) is a root of q(π) and p(π) has no multi roots, we have q(π) = p(π)q1 (π). We
+can use same reason to q1 (π) and on. Finally we have
+                                                      −µs +n−2
+                                       q(π) = p(π)       ds      (π − c)
+for some c. the above equation 7.1 can be simplified to
+                         ∂
+                               (p(π)t−vs +us , (π − c)t−1+δ ) = Cp(π)t−vs +us −2+δ .
+                       ∂(t, π)
+But this equation can not hold and it is a contradiction.                                              
+
+                    8. Case (99, 66) and split of principal minor roots
+  Moh writes in [Moh83] page 209 on the principal minor roots, “Namely, there is an [sic] unique
+π-root σ of g(y) of the following form
+                                      σ = a−1 t−1 + a0 + a1 t + πt2
+with
+                        g(σ) = gπ (σ)t−18 + · · ·     [sic, gπ (σ) should be gσ (π)]
+The polynomial gσ (π) is either a power of a linear polynomial or the 9-th power of a cubic polynomial
+with precisely two roots.”
+  For a long time, we try to give judgement for this statement. To do so, there are three claims
+have to be proven.
+     (i) The principal minor roots do not split except at π-root order δ = 2.
+    (ii) gσ (π) can not have three roots when δ = 2.
+   (iii) Let δ = 2 and let gσ (π) = c(π − b1 )18 (π − b2 )9 . Roots in the disc with the center σ|π=b1 do
+         not split before final.
+                                                      12
+We can not find materials to support these claims in his paper. We sent Moh an email to point
+out the possible gaps. He replied with, “I will make an investigation of the issue and reply to your
+e-mail as soon as possible.” on Jan. 06, 2016.
+  We show that (ii) and (iii) are true, but there is one exception case for (i) open.
+  Our tools are two constrains: one is that the denominator of order δ ≤ us = 3; another is
+equation 7.1.
+  From [Moh83] page 202, we have data
+(8.1)    n = 99,    m = 66,     M2 = 77,     M3 = 97,      V3 = 8,       V2 = 8,   δ2 = 1/3,   δ1 = 4/9.
+Let σ be π-root of the principal minor roots. From data 8.1 we get that −µ2 = 55 and −µ3 = 145.
+We have
+                                    f (σ) = p(π)6 t6(−8+3δ) + · · ·
+                                       g(σ) = p(π)9 t9(−8+3δ) + · · ·
+                                      T2 (σ) = p(π)5 t5(−8+3δ) + · · ·
+                                   (T3 )f (σ) = p(π)22 t22(−8+3δ) + · · ·
+                                 T3 (σ) = q(π)t13(−8+3δ)−1+δ + · · ·
+here deg p(π) = u3 = 3 and deg q(π) = 13 ∗ 3 + 1.
+  (i) By the constrain of the denominator of δ, if δ splits, it must split to 2 or 3 roots.
+  When δ 6= 2 and δ 6= 25 . From equation 7.1, we can step by step deduce
+                                           q(π) = p(π)13 (π − c)
+and the equation 7.1 can not hold for it.
+   When δ = 2. As there is equation
+                  ∂
+(8.2)                   (π(π + 3a)2 (π − 2a)t−1 , π 2 (π + 3a)t−2 ) = 5π 4 (π + 3a)2 t−4 ,
+                ∂(t, π)
+The equation 7.1 produces Moh’s 2 roots split case.
+  When δ = 52 . From equation 7.1, we can deduce
+                                           q(π) = p(π)10 q1 (π)
+here deg q1 (π) = 3 ∗ 3 + 1. The equation 7.1 gives us
+                                  ∂                     1               3
+                                        (q1 (π), p(π)t− 2 ) = −p(π)4 t− 2 .
+                                ∂(t, π)
+But this can hold for any p(π) and q1 (π) = −2 p(π)3 dx. So there is possible p(π) = π(π 2 − c).
+                                                     R
+
+Thus this case is open and it suggests case (99, 66) is open.
+  (ii) This case is proved by Corollary 7.5.
+  (iii) After π-root extends to δ > 2 and δ < 3 along σ|π=b1 , we have
+                                      f (σ) = p(π)6 t12(−3+δ) + · · ·
+                                       g(σ) = p(π)9 t18(−3+δ) + · · ·
+                                      T2 (σ) = p(π)5 t10(−3+δ) + · · ·
+                                      T3 (σ) = q(π)t25(−3+δ) + · · ·
+                                           ∂
+here deg p(π) = 2, deg q(π) = 25 and            (q(π)t25(−3+δ) , p(π)9 t18(−3+δ) ) = 0.
+                                        ∂(t, π)
+   As gcd(12, 18, 10, 25) = 1, p(π) and q(π) are powers of a common linear factor (π − c), i.e. π-root
+is not split at this order δ. The claim is proved.
+                                                     13
+                                              Acknowlegement
+   The author thanks Professor Mattias Josson and Professor Christian Valqui for pointing out
+errors in previous version.
+
+                                                  References
+ [AM75] S.S. Abhyankar and T.T. Moh, Embeddings of the line in a plane, J. Reine Angew. Math. 276 (1975),
+          148–166. ↑4, 7.1
+ [ML14] L. Makar-Limanov, On the Newton polygon of a Jacobian mate, Automorphisms in birational and affine
+          geometry, 469476, Springer Proc. Math. Stat., 79, Springer, Cham, (2014). ↑7.4
+[Moh83] T.T. Moh, On the Jacobian conjecture and configurations of roots, J. Reine Angew. Math. 340 (1983),
+          140–212. MR691964 (84m:14018) ↑1, 2, 3, 4, 4.5, 4, 4, 5, 5, 6.1, 6.2, 7.2, 7.3, 7.3, 7.3, 8, 8
+   [SS94] A. Sathaye and J. Stenerson, Plane Polynomial Curves, Algebraic Geometry and its Applications (C.L
+          Bajaj, ed), Springer-Verlag, New York-Berlin-Heidelberg (1994), 121–142. ↑7.1
+  [Xu93] Yansong Xu, On the Jacobian conjecture and affine lines, 1993. Purdue University, Ph.D thesis. ↑4.9
+  [Xu14]          , A strong Abhyankar-Moh theorem and criterion of embedded line, J. of Algebra 409 (2014), 382–386.
+          ↑7.1, 7.1
+ [Zha91] Yitang Zhang, The Jacobian conjecture and the degree of field extension, 1991. Purdue University, Ph.D
+          thesis. ↑5
+
+
+  Email address: yansong xu@yahoo.com
+
+
+
+
+                                                         14
+

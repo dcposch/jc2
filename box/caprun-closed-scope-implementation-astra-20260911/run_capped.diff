@@ -1,0 +1,436 @@
+--- /home/ubuntu/jc2/ops/run_capped.py	2026-09-03 09:42:16.103339078 +0000
++++ /home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/run_capped.py	2026-09-11 07:41:02.072706242 +0000
+@@ -4,10 +4,11 @@
+ The runner is intentionally opt-in.  It does not invoke a shell, inspect
+ process names, or migrate any existing supervisor.  Child stdin is DEVNULL
+ unless ``--stdin-file`` names a regular file.  Output and telemetry paths are
+-regular files opened without following symlinks.  A run is complete only
+-when its exact process group has no live member; the registered leader is
+-then reaped once for the authoritative child status.  This prevents a leader
+-that exits before one of its same-group descendants from orphaning work.
++regular files opened without following symlinks. This guarded Linux snapshot
++REQUIRES a ROOT-registered closed cgroup-v2 child leaf. Kernel populated=0,
++after positive trusted pre-exec placement, is necessary for completion.
++Process scans measure RSS; their apparent emptiness is not completion proof.
++The old unguarded snapshot is historical and is not silently migrated.
+ 
+ CPU enforcement is an inherited per-process RLIMIT_CPU.  A CPU-cap outcome is
+ reported only when the registered child is observed to die from SIGXCPU.
+@@ -46,6 +47,7 @@
+ DEFAULT_LIFECYCLE_SAMPLE_SECONDS = 1.0
+ POST_KILL_OBSERVE_SECONDS = 1.0
+ SIGXCPU = getattr(signal, "SIGXCPU", None)
++_CLOSED_SCOPE = None  # One CLI invocation, single-threaded; never a fallback.
+ 
+ 
+ class RunnerError(RuntimeError):
+@@ -100,10 +102,11 @@
+     kill_sent: bool
+     final_sample: GroupSample
+     leader_reaped: bool
++    kernel_quiet: bool = False
+ 
+     @property
+     def complete(self) -> bool:
+-        return self.leader_reaped and not self.final_sample.live_pids
++        return self.leader_reaped and self.kernel_quiet and not self.final_sample.live_pids
+ 
+ 
+ @dataclass
+@@ -142,6 +145,12 @@
+ 
+ def parser() -> argparse.ArgumentParser:
+     result = argparse.ArgumentParser(description=__doc__)
++    for name in ("child", "outer"):
++        result.add_argument("--closed-" + name + "-cgroup", required=True)
++        result.add_argument("--closed-" + name + "-device", required=True, type=positive_int)
++        result.add_argument("--closed-" + name + "-inode", required=True, type=positive_int)
++    result.add_argument("--closed-boot-id", required=True)
++    result.add_argument("--closed-pid-namespace", required=True)
+     result.add_argument("--wall-seconds", required=True, type=positive_float)
+     result.add_argument("--cpu-seconds", type=positive_int)
+     result.add_argument("--rss-bytes", type=positive_int)
+@@ -188,6 +197,163 @@
+     return hashlib.sha256(payload).hexdigest()
+ 
+ 
++class ClosedChildScope:
++    """ROOT-exclusive immutable leaf; no root concurrency, migration or delegation.
++
++    Only the trusted preexec closure writes cgroup.procs, before executing
++    setpriv/workload. The attestation pipe is closed before exec. No cgroup
++    descriptor reaches the workload. All resource enforcement remains outer.
++    """
++
++    def __init__(self, args):
++        if sys.platform != "linux" or os.geteuid() != 0:
++            raise RunnerError("closed child scope requires ROOT Linux")
++        if len(os.listdir('/proc/self/task')) != 1:
++            raise RunnerError("closed preexec requires one thread")
++        self.child = Path(args.closed_child_cgroup)
++        self.outer = Path(args.closed_outer_cgroup)
++        self.child_id = (args.closed_child_device, args.closed_child_inode)
++        self.outer_id = (args.closed_outer_device, args.closed_outer_inode)
++        self.boot = args.closed_boot_id
++        self.namespace = args.closed_pid_namespace
++        self.placed = False
++        self.attestation = None
++        self.last_observation = None
++        self.empty_ps_while_populated = 0
++        self.validate()
++        if self.membership() != self.relative(self.outer):
++            raise RunnerError("CAPRUN must remain in registered outer cgroup")
++        if self.population() != 0:
++            raise RunnerError("closed child scope not initially empty")
++
++    @staticmethod
++    def relative(p):
++        return '0::' + str(p)[len('/sys/fs/cgroup'):]
++
++    @staticmethod
++    def membership():
++        return Path('/proc/self/cgroup').read_text(encoding='ascii').strip()
++
++    def validate(self):
++        if self.child.parent != self.outer or not str(self.outer).startswith('/sys/fs/cgroup/'):
++            raise RunnerError("closed scope must be direct child of owned outer")
++        mounts = Path('/proc/self/mountinfo').read_text(encoding='ascii').splitlines()
++        if not any(line.split(' - ', 1)[0].split()[4] == '/sys/fs/cgroup'
++                   and line.split(' - ', 1)[1].split()[0] == 'cgroup2' for line in mounts):
++            raise RunnerError("canonical cgroup2 mount required")
++        if Path('/proc/sys/kernel/random/boot_id').read_text().strip() != self.boot or os.readlink('/proc/self/ns/pid') != self.namespace:
++            raise RunnerError("closed scope boot/namespace changed")
++        for p, expected in ((self.outer, self.outer_id), (self.child, self.child_id)):
++            if not p.is_absolute() or p.resolve() != p or p.is_symlink():
++                raise RunnerError("closed scope canonical path")
++            st = p.stat()
++            if (st.st_dev, st.st_ino) != expected or st.st_uid != 0 or st.st_mode & 0o022 or not stat.S_ISDIR(st.st_mode):
++                raise RunnerError("closed scope identity/owner changed")
++            if (p / 'cgroup.type').read_text().strip() != 'domain' or (p / 'cgroup.subtree_control').read_text().strip():
++                raise RunnerError("closed scope requires domain with no child controllers")
++            for name in ('cgroup.procs', 'cgroup.threads', 'cgroup.subtree_control', 'cgroup.events'):
++                f = p / name
++                st = f.lstat()
++                if not stat.S_ISREG(st.st_mode) or st.st_uid != 0 or st.st_mode & 0o022:
++                    raise RunnerError("closed scope writable/delegated interface")
++        if any(p.is_dir() for p in self.child.iterdir()):
++            raise RunnerError("registered child must remain a leaf")
++
++    def population(self):
++        self.validate()
++        raw = (self.child / 'cgroup.events').read_text(encoding='ascii')
++        if len(raw) > 4096:
++            raise RunnerError("closed scope event byte cap")
++        fields = {}
++        for line in raw.splitlines():
++            parts = line.split()
++            if len(parts) != 2 or parts[0] in fields:
++                raise RunnerError("malformed closed scope events")
++            fields[parts[0]] = parts[1]
++        if fields.get('populated') not in ('0', '1'):
++            raise RunnerError("missing closed scope population")
++        value = int(fields['populated'])
++        self.last_observation = {'utc': utc_now(), 'monotonic': time.monotonic(), 'populated': value}
++        return value
++
++    def quiet(self, require_placement=True):
++        if require_placement and not self.placed:
++            raise RunnerError("closed scope placement not attested")
++        return self.population() == 0
++
++    def preexec(self, cpu_limit, reader, writer):
++        def attach():
++            os.close(reader)
++            self.validate()
++            if self.membership() != self.relative(self.outer) or self.population() != 0:
++                raise RunnerError("closed preexec origin/empty scope mismatch")
++            fd = os.open(self.child / 'cgroup.procs', os.O_WRONLY | os.O_CLOEXEC | os.O_NOFOLLOW)
++            try:
++                raw = str(os.getpid()).encode('ascii')
++                if os.write(fd, raw) != len(raw):
++                    raise RunnerError("closed preexec short placement write")
++            finally:
++                os.close(fd)
++            if self.membership() != self.relative(self.child) or self.population() != 1:
++                raise RunnerError("closed preexec membership not established")
++            ident = linux_identity(os.getpid())
++            if ident is None or ident.pgid != ident.pid:
++                raise RunnerError("closed preexec session identity")
++            if cpu_limit is not None:
++                cpu_limit()
++            record = {'pid': ident.pid, 'pgid': ident.pgid, 'start_identity': ident.start_identity,
++                      'cgroup': self.relative(self.child), 'boot_id': self.boot,
++                      'pid_namespace': self.namespace, 'device': self.child_id[0], 'inode': self.child_id[1]}
++            raw = json.dumps(record, sort_keys=True, separators=(',', ':')).encode('ascii')
++            if len(raw) > 2048 or os.write(writer, raw) != len(raw):
++                raise RunnerError("closed placement attestation write")
++            os.close(writer)
++        return attach
++
++    def attest(self, reader, process):
++        os.set_blocking(reader, False)
++        raw = os.read(reader, 2049)
++        if not raw or len(raw) > 2048:
++            raise RunnerError("missing/bounded closed placement attestation")
++        obj = json.loads(raw)
++        ident = linux_identity(process.pid)
++        expected = None if ident is None else {
++            'pid': ident.pid, 'pgid': ident.pgid, 'start_identity': ident.start_identity,
++            'cgroup': self.relative(self.child), 'boot_id': self.boot,
++            'pid_namespace': self.namespace, 'device': self.child_id[0], 'inode': self.child_id[1]}
++        if obj != expected or obj['pid'] != process.pid or obj['pgid'] != process.pid:
++            raise RunnerError("closed placement identity mismatch")
++        if (Path('/proc') / str(process.pid) / 'cgroup').read_text().strip() != self.relative(self.child):
++            raise RunnerError("closed leader migrated")
++        self.attestation = obj
++        self.placed = True
++
++    def record(self):
++        return {'schema': 'CAPRUN-closed-child/v1', 'path': str(self.child),
++                'device': self.child_id[0], 'inode': self.child_id[1],
++                'outer_path': str(self.outer), 'outer_device': self.outer_id[0],
++                'outer_inode': self.outer_id[1], 'placement_attested': self.placed,
++                'attestation': self.attestation, 'last_observation': self.last_observation,
++                'empty_ps_while_populated': self.empty_ps_while_populated}
++
++
++def scope_quiet(require_placement=False):
++    if _CLOSED_SCOPE is None:
++        raise RunnerError("required closed scope missing")
++    return _CLOSED_SCOPE.quiet(require_placement)
++
++
++def reap_if_closed(process):
++    # Never discard the unreaped leader anchor while a live descendant remains.
++    if not scope_quiet():
++        return False
++    try:
++        process.wait(timeout=POST_KILL_OBSERVE_SECONDS)
++        return True
++    except subprocess.TimeoutExpired:
++        return False
++
++
+ def _safe_flags(base: int) -> int:
+     flags = base
+     if hasattr(os, "O_CLOEXEC"):
+@@ -464,7 +630,7 @@
+     while True:
+         sample = sample_group(pgid)
+         maximum_rss[0] = max(maximum_rss[0], sample.rss_bytes)
+-        if not sample.live_pids:
++        if scope_quiet():
+             return sample
+         remaining = deadline - time.monotonic()
+         if remaining <= 0.0:
+@@ -486,7 +652,7 @@
+     kill_sent = False
+     final_before_reap = initial
+ 
+-    if initial.live_pids:
++    if not scope_quiet():
+         term_sent = send_group_signal(
+             expected, signal.SIGTERM, "before-term", checks
+         )
+@@ -494,7 +660,7 @@
+             expected.pgid, grace_seconds, sample_seconds, maximum_rss
+         )
+ 
+-    if final_before_reap.live_pids:
++    if not scope_quiet():
+         kill_sent = send_group_signal(
+             expected, signal.SIGKILL, "before-kill", checks
+         )
+@@ -508,13 +674,10 @@
+     # No wait/poll has competed with this point.  Bound even the authoritative
+     # reap: SIGKILL cannot wake an uninterruptible D-state process, so an
+     # unbounded wait here would violate every advertised cap.
+-    try:
+-        process.wait(timeout=POST_KILL_OBSERVE_SECONDS)
+-        leader_reaped = True
+-    except subprocess.TimeoutExpired:
+-        leader_reaped = False
++    leader_reaped = reap_if_closed(process)
+     return CleanupResult(
+-        term_sent, kill_sent, final_before_reap, leader_reaped
++        term_sent, kill_sent, final_before_reap, leader_reaped,
++        scope_quiet() and _CLOSED_SCOPE.placed
+     )
+ 
+ 
+@@ -538,21 +701,18 @@
+     try:
+         pgid = os.getpgid(pid)
+     except ProcessLookupError:
+-        try:
+-            process.wait(timeout=POST_KILL_OBSERVE_SECONDS)
+-            leader_reaped = True
+-        except subprocess.TimeoutExpired:
+-            leader_reaped = False
++        leader_reaped = reap_if_closed(process)
+         checks.append(
+             {
+                 "stage": "bootstrap-cleanup",
+                 "utc": utc_now(),
+-                "result": "LEADER_GONE_REAPED",
++                "result": "LEADER_GONE_CLOSED_SCOPE_CHECKED",
+                 "observed_pid": pid,
+             }
+         )
+         return CleanupResult(
+-            False, False, GroupSample((), (), 0), leader_reaped
++            False, False, GroupSample((), (), 0), leader_reaped,
++            scope_quiet() and _CLOSED_SCOPE.placed
+         )
+ 
+     if pgid != pid:
+@@ -569,16 +729,15 @@
+             }
+         )
+         try:
+-            process.kill()
++            # Popen.kill/send_signal may poll/reap internally. Keep the held
++            # PID anchor until the closed leaf is kernel-quiet instead.
++            os.kill(pid, signal.SIGKILL)
+         except ProcessLookupError:
+             pass
+-        try:
+-            process.wait(timeout=POST_KILL_OBSERVE_SECONDS)
+-            leader_reaped = True
+-        except subprocess.TimeoutExpired:
+-            leader_reaped = False
++        leader_reaped = reap_if_closed(process)
+         return CleanupResult(
+-            False, False, GroupSample((), (), 0), leader_reaped
++            False, False, GroupSample((), (), 0), leader_reaped,
++            scope_quiet() and _CLOSED_SCOPE.placed
+         )
+ 
+     checks.append(
+@@ -595,7 +754,7 @@
+     term_sent = False
+     kill_sent = False
+     final_before_reap = initial
+-    if initial.live_pids:
++    if not scope_quiet():
+         try:
+             os.killpg(pgid, signal.SIGTERM)
+             term_sent = True
+@@ -604,7 +763,7 @@
+         final_before_reap = wait_for_group_quiet(
+             pgid, grace_seconds, sample_seconds, maximum_rss
+         )
+-    if final_before_reap.live_pids:
++    if not scope_quiet():
+         try:
+             os.killpg(pgid, signal.SIGKILL)
+             kill_sent = True
+@@ -613,13 +772,10 @@
+         final_before_reap = wait_for_group_quiet(
+             pgid, POST_KILL_OBSERVE_SECONDS, sample_seconds, maximum_rss
+         )
+-    try:
+-        process.wait(timeout=POST_KILL_OBSERVE_SECONDS)
+-        leader_reaped = True
+-    except subprocess.TimeoutExpired:
+-        leader_reaped = False
++    leader_reaped = reap_if_closed(process)
+     return CleanupResult(
+-        term_sent, kill_sent, final_before_reap, leader_reaped
++        term_sent, kill_sent, final_before_reap, leader_reaped,
++        scope_quiet() and _CLOSED_SCOPE.placed
+     )
+ 
+ 
+@@ -630,6 +786,7 @@
+             "kill_sent": result.kill_sent,
+             "leader_reaped": result.leader_reaped,
+             "cleanup_complete": result.complete,
++            "kernel_quiet": result.kernel_quiet,
+             "group_live_before_reap": list(result.final_sample.live_pids),
+             "group_zombies_before_reap": list(result.final_sample.zombie_pids),
+         }
+@@ -694,6 +851,8 @@
+ 
+ 
+ def execute(args: argparse.Namespace, command: Sequence[str]) -> int:
++    global _CLOSED_SCOPE
++    _CLOSED_SCOPE = None
+     invocation_cwd = Path.cwd()
+     child_cwd = absolute_path(args.cwd)
+     if not child_cwd.is_dir():
+@@ -791,6 +950,8 @@
+     signal_latch: Optional[SignalLatch] = None
+     previous_sigchld: Any = None
+     custody_validated = False
++    placement_reader = None
++    placement_writer = None
+ 
+     try:
+         # Open the input before any overwrite destination, and do not truncate
+@@ -809,6 +970,8 @@
+         prepare_regular_output(telemetry_opened)
+         prepare_regular_output(stdout_opened)
+         prepare_regular_output(stderr_opened)
++        _CLOSED_SCOPE = ClosedChildScope(args)
++        placement_reader, placement_writer = os.pipe2(os.O_CLOEXEC)
+ 
+         # An inherited SIGCHLD=SIG_IGN/SA_NOCLDWAIT would auto-reap the
+         # registered leader and destroy the zombie identity anchor while a
+@@ -826,8 +989,14 @@
+             shell=False,
+             start_new_session=True,
+             close_fds=True,
+-            preexec_fn=cpu_preexec(args.cpu_seconds),
++            pass_fds=(placement_reader, placement_writer),
++            preexec_fn=_CLOSED_SCOPE.preexec(cpu_preexec(args.cpu_seconds), placement_reader, placement_writer),
+         )
++        os.close(placement_writer)
++        placement_writer = None
++        _CLOSED_SCOPE.attest(placement_reader, process)
++        os.close(placement_reader)
++        placement_reader = None
+         # A handled signal delivered inside Popen is latched rather than
+         # raised before STORE_FAST assigns the process handle.  From this
+         # bytecode boundary onward cleanup can always address that handle.
+@@ -860,7 +1029,7 @@
+         while True:
+             sample = sample_group(identity.pgid)
+             maximum_rss[0] = max(maximum_rss[0], sample.rss_bytes)
+-            if not sample.live_pids:
++            if scope_quiet(require_placement=True):
+                 try:
+                     process.wait(timeout=POST_KILL_OBSERVE_SECONDS)
+                     reaped = True
+@@ -869,6 +1038,8 @@
+                         "group was quiet but leader was not reapable"
+                     ) from error
+                 break
++            if not sample.live_pids:
++                _CLOSED_SCOPE.empty_ps_while_populated += 1
+             if (
+                 args.rss_bytes is not None
+                 and sample.rss_bytes > args.rss_bytes
+@@ -1118,6 +1289,22 @@
+         close_file(stdin_opened)
+         close_file(stdout_opened)
+         close_file(stderr_opened)
++        for fd in (placement_reader, placement_writer):
++            if fd is not None:
++                os.close(fd)
++
++    # Every outcome, including bootstrap/Popen/preexec errors, records the
++    # kernel barrier. A never-attested launch cannot become successful cleanup.
++    try:
++        quiet = scope_quiet()
++        if not quiet or not _CLOSED_SCOPE.placed:
++            raise RunnerError("closed scope not quiet and placement-attested at completion")
++        telemetry['closed_scope'] = _CLOSED_SCOPE.record()
++    except BaseException as guard_error:
++        telemetry['closed_scope'] = None if _CLOSED_SCOPE is None else _CLOSED_SCOPE.record()
++        telemetry['status'] = 'RUNNER_FAILURE'
++        telemetry['runner_exit_code'] = RUNNER_FAILURE_EXIT
++        telemetry['error'] = ((telemetry['error'] + '; ') if telemetry['error'] else '') + str(guard_error)
+ 
+     telemetry["max_observed_group_rss_bytes"] = maximum_rss[0]
+     telemetry["utc_end"] = utc_now()

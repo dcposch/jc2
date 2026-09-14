@@ -1,0 +1,644 @@
+                                                    CLOSED AND IRREDUCIBLE POLYNOMIALS IN
+                                                              SEVERAL VARIABLES
+
+                                                        IVAN V. ARZHANTSEV∗ AND ANATOLIY P. PETRAVCHUK
+arXiv:math/0608157v2 [math.AC] 20 May 2007
+
+
+
+
+                                                     Abstract. New and old results on closed polynomials, i.e., such poly-
+                                                     nomials f ∈ k[x1 , . . . , xn ] \ k that the subalgebra k[f ] is integrally closed
+                                                     in k[x1 , . . . , xn ], are collected in the paper. Using some properties of
+                                                     closed polynomials we prove the following factorization theorem: Let
+                                                     f ∈ k[x1 , . . . , xn ] \ k, where k is algebraically closed. Then for all but
+                                                     finite number µ ∈ k the polynomial f + µ can be decomposed into a
+                                                     product f + µ = α · f1µ · f2µ · · · fkµ , α ∈ k× , k ⩾ 1, of irreducible poly-
+                                                     nomials fiµ of the same degree d not depending on µ and such that
+                                                     fiµ − fjµ ∈ k, i, j = 1, . . . , k. An algorithm for finding of a generative
+                                                     polynomial of a given polynomial f , which is a closed polynomial h with
+                                                     f = F (h) for some F (t) ∈ k[t], is given. Some types of saturated subal-
+                                                     gebras A ⊂ k[x1 , . . . , xn ] are considered, i.e., such that for any f ∈ A \ k
+                                                     a generative polynomial of f is contained in A.
+
+
+
+
+                                                                                 1. Introduction
+                                                Recall that a polynomial f ∈ k[x1 , . . . , xn ]\k is called closed if the subalge-
+                                             bra k[f ] is integrally closed in k[x1 , . . . , xn ]. It turns out that a polynomial
+                                             f is closed if and only if f is non-composite, i.e., cannot be presented in
+                                             the form f = F (g) for some g ∈ k[x1 , . . . , xn ] and F (t) ∈ k[t], deg(F ) > 1.
+                                             Because any polynomial in n variables can be obtained from a closed polyno-
+                                             mial by taking a polynomial in one variable from it, the problem of studying
+                                             closed polynomials is of interest. Besides, closed polynomials in two vari-
+                                             ables appear in a natural way as generators of rings of constants of non-zero
+                                             derivations.
+                                                In this paper we present some characterizations and properties of closed
+                                             polynomials. They allow us to obtain a ”generic decomposition” of a poly-
+                                             nomial f ∈ k[x1 , . . . , xn ] over an algebraically closed field k (Theorem 3),
+                                             which may be considered as an analogue of the Fundamental Theorem of
+                                             Algebra for polynomials in many variables.
+                                                Let us go briefly through the content of the paper. In Section 2 we collect
+                                             numerous characterizations of closed polynomials (Theorem 1). A major
+                                             part of these characterizations is contained in the union of [1], [12], [14],
+                                             [15], [16], etc, but some results seem to be new. In particular, implication
+                                             (i) ⇒ (iv) in Theorem 1 over any perfect field and Proposition 2 solve a
+                                             problem stated in [1, Sec. 8]. For all implications in Theorem 1 we give
+                                             complete and elementary proofs.
+
+                                               Date: May 18, 2007.
+                                               2000 Mathematics Subject Classification. Primary 11C08; Secondary 12Y05, 13N15.
+                                               Key words and phrases. Polynomials, Integrally Closed Subalgebras, Derivations.
+                                               ∗ Supported by GK 02.445.11.7407 (Russia).
+                                                                                             1
+2                    I. V. ARZHANTSEV AND A. P. PETRAVCHUK
+
+
+   Define a generative polynomial h of a polynomial f ∈ k[x1 , . . . , xn ] \ k
+as a closed polynomial such that f = F (h) for some F ∈ k[t]. Clearly, a
+generative polynomial exists for any f . Theorem 1 implies that a generative
+polynomial is unique up to affine transformations.
+   The above-mentioned results allow us to prove that over an algebraically
+closed field k for any f ∈ k[x1 , . . . , xn ] \ k and for all but finite number
+µ ∈ k the polynomial f + µ can be decomposed into a product f + µ =
+α · f1µ · f2µ · · · fkµ , α ∈ k× , k ⩾ 1, of irreducible polynomials fiµ of the same
+degree d not depending on µ and such that fiµ − fjµ ∈ k, i, j = 1, . . . , k.
+Moreover, Stein-Lorenzini-Najib’s Inequality (Theorem 2) implies that the
+number of ”exceptional” values of µ is less then deg(f ). The same inequality
+gives an estimate of the number of irreducible factors in f +µ for exceptional
+µ, see Theorem 3.
+   Section 4 is devoted to saturated subalgebras A ⊂ k[x1 , . . . , xn ], i.e., such
+that for any f ∈ A\k a generative polynomial of f is contained in A. Clearly,
+any subalgebra that is integrally closed in k[x1 , . . . , xn ] is saturated. On the
+other hand, it is known that for monomial subalgebras these two conditions
+are equivalent. In Theorem 4 we characterize subalgebras of invariants A =
+k[x1 , . . . , xn ]G , where G is a finite group acting linearly on k[x1 , . . . , xn ],
+with A being saturated. This result provides many examples of saturated
+homogeneous subalgebras that are not integrally closed in k[x1 , . . . , xn ].
+   In the last section we give an algorithm for finding a generative polynomial
+of a given polynomial f . In particular, this provides a test to determine
+whether a given polynomial is closed.
+
+             2. Characterizations of closed polynomials
+    Let k be a field.
+Definition 1. A polynomial f (x1 , . . . , xn ) ∈ k[x1 , . . . , xn ]\k is called closed
+if the subalgebra k[f ] is integrally closed in k[x1 , . . . , xn ].
+Definition 2. A polynomial f (x1 , . . . , xn ) ∈ k[x1 , . . . , xn ] \ k is said to be
+non-composite if the condition
+   (*) there exist F (t) ∈ k[t] and g(x1 , . . . , xn ) ∈ k[x1 , . . . , xn ] such that
+         f (x1 , . . . , xn ) = F (g(x1 , . . . , xn ))
+implies deg(F ) = 1.
+   Without loss of generality, we assume below that the leading coefficient
+of f (say, with respect to the lexicographic order, x1 > · · · > xn ) equals 1.
+   Let M be the set of all subalgebras k[f ], f ∈ k[x1 , . . . , xn ] \ k, partially
+ordered by inclusion.
+Theorem 1. The following conditions on a polynomial f ∈ k[x1 , . . . , xn ] \ k
+are equivalent:
+     (i) f is non-composite;
+    (ii) k[f ] is a maximal element of M;
+   (iii) f is closed;
+   (iv) (k is a perfect field) f + λ is irreducible over k for all but finitely
+         many λ ∈ k;
+       CLOSED AND IRREDUCIBLE POLYNOMIALS IN SEVERAL VARIABLES                          3
+
+
+    (v) (k is a perfect field) there exists λ ∈ k such that f + λ is irreducible
+        over k;
+   (vi) (char k = 0) there exists a (finite) family of derivations {Di } of the
+        algebra k[x1 , . . . , xn ] such that k[f ] = ∩i Ker Di .
+Proof. Implications (iii) ⇒ (ii) ⇒ (i) are obvious.
+   (i) ⇒ (iii). It is sufficient to prove the following
+Proposition 1. For any f ∈ k[x1 , . . . , xn ] \ k, the integral closure A of k[f ]
+in k[x1 , . . . , xn ] has the form A = k[h] for some h ∈ k[x1 , . . . , xn ].
+Proof. Here we follow [5] and [21]. Since any non-zero prime ideal of k[f ] is
+maximal, this also holds for A.
+Lemma 1. The k-algebra A may be realized as a k-subalgebra of a polyno-
+mial algebra in one variable.
+Proof. By definition, A ⊂ k[x1 , . . . , xn ]. If n = 1, then we are done. If
+n > 1, take r ≫ 0 such that there exists a ∈ A with a + λ ∈               / I := (xn +
+xr1 ) ⊳ k[x1 , . . . , xn ] for any λ ∈ k. Here I is a prime ideal of k[x1 , . . . , xn ],
+I ∩ A is a prime ideal of A, and since the image of A in k[x1 , . . . , xn ]/I ∼       =
+k[cx1 , . . . , x[
+                 n−1 ] is not a field, the ideal I ∩ A is zero. This shows that A is
+embedded into k[c        x1 , . . . , x[
+                                       n−1 ], and we may proceed by induction on n. 
+
+   Note that since k[x1 , . . . , xn ] is integrally closed, the subalgebra A is in-
+tegrally closed too.
+Lemma 2. Let A be an integrally closed subalgebra of k[y]. Then A = k[u]
+for some u ∈ k[y].
+Proof. Let us assume that A 6= k. Let K be the quotient field of A. The
+algebra k[y] is integral over A and K ∩ k[y] = A. Consider an element
+u = u(y) ∈ A of the smallest possible positive degree m = deg u(y). Take a
+variable t over K and consider a polynomial F (y, t) = u(t) − u(y) ∈ K[t]. If
+F (y, t) = p(y, t)q(y, t), then we may assume that the highest coefficients of
+p(y, t) and q(y, t) are in k. Moreover, p(y, t) and q(y, t) are in k[y, t], because
+one may consider F = pq as a decomposition in k(y)[t]. This shows that the
+coefficients of p and q are in A.
+   Fix the lexicographic monomial order with y > t. Then the leading
+term of F (y, t) does not depend on t. So this is the case for p and q.
+By minimality of deg u(y), either p or q is a constant. This proves that
+F (y, t) is irreducible in K[t], and [k(y) : k(u)] = m. On the other hand,
+if [k(y) : K] = d, then a linear combination of y d , . . . , y, 1 is contained in
+K ∩ k[y] = A, so d ≥ m. Hence K = k(u) and k[u] ⊆ A ⊂ k(u). If
+F1 (u)
+F2 (u) ∈ A with coprime polynomials F1 , F2 , then there exist polynomials
+F3 , F4 such that F1 F3 + F2 F4 = 1, and F3 FF21 + F4 = F12 ∈ A. But A contains
+no non-constant invertible elements. This proves that A = k[u].              
+
+                                                                                       
+
+   (iv) ⇒ (v) is obvious, since k is infinite.
+4                      I. V. ARZHANTSEV AND A. P. PETRAVCHUK
+
+
+   (v) ⇒ (i). If f = F (h) and F (t)+λ = (t−α1 ) . . . (t−αk ) with α1 , . . . , αk ∈
+k, then f + λ = (h − α1 ) . . . (h − αk ).
+  (i) ⇒ (iv). Let us assume that k = k. Consider a morphism φ : kn → k1 ,
+φ(x1 , . . . , xn ) = f (x1 , . . . , xn ). We are going to prove that all fibers of this
+morphism except for finitely many are irreducible. It follows from the next
+theorem (see, for example, [17, p. 139]).
+   The first Bertini theorem. Let X and Y be irreducible algebraic
+varieties and φ : X → Y be a dominant morphism. Suppose that the subfield
+φ∗ (k(Y )) is algebraically closed in k(X). Then there exists a non-empty open
+subset U ⊂ Y such that all fibers φ−1 (y) over y ∈ U are irreducible.
+    So we need only to prove the following lemma.
+Lemma 3. Let f ∈ k[x1 , . . . , xn ]\k. The subfield k(f ) is algebraically closed
+in k(x1 , . . . , xn ) if and only if f is a closed polynomial.
+Proof. If f = F (h), then h is in the algebraic closure of k(f ). Conversely,
+suppose that for an element g ∈ k(x1 , . . . , xn ) one has an equation
+                             b0 gm + b1 gm−1 + · · · + bm = 0
+with bi ∈ k[f ]. Then b0 g is integral over k[f ], and, since f is closed, one has
+b0 g ∈ k[f ]. This shows that g ∈ k(f ).                                        
+  Finally, if k is a non-closed perfect field, the next proposition shows that
+f ∈ k[x1 , . . . , xn ] is closed over k implies that f is closed over k.
+Proposition 2. Let f ∈ k[x1 , . . . , xn ]\k and k ⊂ L be a separable extension
+of fields. Then f is closed over k if and only if f is closed over L.
+Proof. If f = F (h) over k, then the same decomposition holds over L.
+   Now assume that f is closed over k. Consider an element g ∈ L[x1 , . . . , xn ]
+integral over L[f ]. We shall prove that g ∈ L[f ]. Since the number of non-
+zero coefficients of g is finite, we may assume that L is a finitely generated
+extension of k. Then there exists a finite separable transcendence basis of L
+over k, i.e., a finite set {ξ1 , . . . , ξm } of elements in L that are algebraically
+independent over k and L is a finite separable algebraic extension of L1 =
+k(ξ1 , . . . ξm ).
+   Let us show that f is closed over L1 . The subalgebra k[f ][ξ1 , . . . , ξm ]
+is integrally closed in k[x1 , . . . , xn ][ξ1 , . . . , ξm ] [3, Ch. V.1, Prop. 12]. Let
+T be the set of all non-zero elements of k[ξ1 , . . . , ξm ]. Then the localiza-
+tion T −1 k[f ][ξ1 , . . . , ξm ] is integrally closed in T −1 k[x1 , . . . , xn ][ξ1 , . . . ξm ]
+[3, Ch. V.1, Prop. 16]. This proves that L1 [f ] is integrally closed in
+L1 [x1 , . . . , xn ].
+   Fix a basis {ω1 , . . . , ωk } of L over L1 . With any element l ∈ L one may
+associate a L1 -linear operator M (l) : L → L, M (l)(ω) = lω. Let tr(l) be the
+trace of this operator. It is known that there exists a basis {ω1⋆ , . . . P          , ωk⋆ } of
+                                    ⋆
+L over L1 such that tr(ωi ωj ) = δij [3, Ch. V.1.6]. Assume that g = i ωi ai
+with ai ∈ L1 [x1 , . . . , xn ]. Any ωj⋆ is integral over L1 and thus over L1 [f ].
+This shows that gωj⋆ is integral over L1 [f ]. Set K = L1 (x1 , . . . , xn ). The
+element gωj⋆ determines a K-linear map L ⊗K K → L ⊗K K, b → gωj⋆ b.
+Since gωj⋆ is integral over L1 [f ], the trace of this K-linear operator is also
+       CLOSED AND IRREDUCIBLE POLYNOMIALS IN SEVERAL VARIABLES                           5
+                                                            P
+integral over L1 [f ] [3, Ch. V.1.6]. Note that tr(gωj⋆ ) = i ai tr(ωi ωj⋆ ). On
+the other hand, the elements {ω1 ⊗ 1, . . . , ωk ⊗ 1} form a basis of L ⊗K K
+over K. Hence tr(ωi ωj⋆ ) = δij and tr(gωj⋆ ) = aj is integral over L1 [f ]. This
+shows that aj ∈ L1 [f ] for any j and thus g ∈ L[f ].                          
+Example 1. If the field k is not perfect, then we can not guarantee that
+a polynomial f which closed over k, will be closed over k as well. Indeed,
+                    / k, η p ∈ k. The polynomial f (x1 , x2 ) = xp1 + η p xp2 is
+let F = k(η) with η ∈
+closed over k. However, one has a decomposition f = (x1 + ηx2 )p over F .
+The same example works for (i) 6⇒ (iv) in this case.
+
+  (vi) ⇒ (iii). It is easy to check that for any derivation D : k[x1 , . . . , xn ] →
+k[x1 , . . . , xn ] the kernel Ker D is integrally closed in k[x1 , . . . , xn ], and so is
+the intersection of kernels.
+   (i) ⇒ (vi). For any 1 ≤ i < j ≤ n consider a derivation
+                                       ∂f ∂      ∂f ∂
+                             Dij =             −         .
+                                       ∂xi ∂xj   ∂xj ∂xi
+Clearly, f ∈ Ker(Dij ). The following Lemmas show that for a closed f one
+has k[f ] = ∩1≤i<j≤nDij .
+Lemma 4. Assume that char k = 0. Polynomials f, g ∈ k[x1 , . . . , xn ] \ k
+are algebraically dependent (over k) if and only if the rank of their Jacoby
+matrix                                             !
+                                    ∂f         ∂f
+                                    ∂x1  · · · ∂xn
+                       J(f, g) =    ∂g          ∂g
+                                    ∂x1 · · ·  ∂xn
+equals to 1, i.e.,
+                           ∂f    ∂f
+                           ∂xi   ∂xj
+                           ∂g    ∂g      = 0,   i, j = 1, . . . , n.
+                           ∂xi   ∂xj
+
+Proof. See [7, Ch. 3, Th. III] or [18, Cor. 2].                                         
+Lemma 5. Let k be a field. Polynomials f, g ∈ k[x1 , . . . , xn ] \ k are alge-
+braically dependent (over k) if and only if there exists a closed polynomial
+h ∈ k[x1 , . . . , xn ] such that f, g ∈ k[h].
+Proof. Assume that f, g are algebraically dependent. By the Noether Nor-
+malization Lemma, there exists an element r ∈ k[f, g] such that k[r] ⊂ k[f, g]
+is an integral extension. By Proposition 1, the integral closure of k[r] in
+k[x1 , . . . , xn ] has a form k[h] for some closed polynomial h.
+   Conversely, if f, g ∈ k[h] then these polynomials are obviously alge-
+braically dependent.                                                        
+
+   This completes the proof of Theorem 1.                                               
+Remark 1. Condition (vi) may be strengthened. It is proved in [13] (see
+also [2]) that in characteristic zero for any family of k-derivations {Di }
+of a finitely generated k-algebra A without zero divisors there exists a k-
+derivation D of A with Ker D = ∩i Ker Di .
+6                      I. V. ARZHANTSEV AND A. P. PETRAVCHUK
+
+
+Definition 3. Let f ∈ k[x1 , . . . , xn ] \ k. A closed polynomial h ∈
+k[x1 , . . . , xn ] is called a generative polynomial of f , if there exists F ∈ k[t]
+such that f = F (h).
+Corollary 1. Let f ∈ k[x1 , . . . , xn ]\k. The integral closure of the subalgebra
+k[f ] in k[x1 , . . . , xn ] coincides with k[h], where h is a generative polynomial
+of f . In particular, a generative polynomial of f exists and is unique up to
+affine transformations.
+Remark 2. If one assumes that a generative polynomial h of f satisfies
+h(0, . . . , 0) = 0 and the leading coefficient of h equals 1, then such a gen-
+erative polynomial exists and is unique. Below we shall consider generative
+polynomials under these assumptions.
+  We refer to [1] for numerous examples and interesting classes of closed
+polynomials.
+Remark 3.        (1) Let B be an affine k-algebra and again M(B) be the
+       set of all subalgebras k[b], b ∈ B \ k, partially ordered by inclusion.
+       It follows from the proof above that if B is integrally closed and
+       there exists an embedding of B into a polynomial algebra, then any
+       element b ∈ B \ k is contained in a unique maximal element of
+       M(B). For example, consider B = k[x, y]/(y 2 − x3 − x − 1). Here
+       y 2 ∈ k[x] ∩ k[y], thus B can not be embedded into a polynomial
+       algebra.
+   (2) Let us recall that a subalgebra B in A is called algebraically closed
+       if any element of A that is algebraic over B is contained in B. It
+       follows from Lemma 5 that a subalgebra k[f ] ⊂ k[x1 , . . . , xn ] is alge-
+       braically closed if and only if it is integrally closed. For an arbitrary
+       subalgebra this is no longer true (take k[x, xy] ⊂ k[x, y]).
+   (3) If a subalgebra B ⊂ k[x1 , . . . , xn ] is 2-generated, then one can
+       not bound the number of generators of its integral closure A
+       in k[x1 , . . . , xn ].       For example, it is easy to check that for
+       B = k[x1 , x1 xm        2  ]  the  minimal number of generators of A =
+       k[x1 , x1 x2 , . . . , x1 xm2 ] is m + 1.
+   Finally, let us give one more observation following from Theorem 1. De-
+note by P the set of all irreducible polynomials from k[x1 , . . . , xn ] and con-
+sider the binary relation on this set: f ≃ g ⇐⇒ ∃c1 ∈ k× , c2 ∈ k : f =
+c1 g+c2 . It is easy to see that ≃ is an equivalence relation. Choose arbitrarily
+a polynomial from each equivalence class and denote by π the set of such
+polynomials.
+Corollary 2. There is a decomposition k[x1 , . . . , xn ] = ∪p∈π k[p], where
+k[pi ] ∩ k[pj ] = k for all pi , pj ∈ π, pi 6= pj .
+  The set of nonconstant polynomials in one variable k[t] \ k forms a
+semigroup relatively to composition of polynomials (f ◦ g)(t) = f (g(t)).
+This semigroup acts naturally on the set of nonconstant polynomials
+k[x1 , . . . , xn ]\k by the rule f (h) = f (h(x1 , . . . , xn )) for any h ∈ k[x1 , . . . , xn ].
+Corollary 2 shows that the set k[x1 , . . . , xn ]\k can be partitioned into disjoint
+union of ”orbits” relatively to this action and each orbit contains at least
+one initial element (such that every element of the orbit is its image but this
+       CLOSED AND IRREDUCIBLE POLYNOMIALS IN SEVERAL VARIABLES                       7
+
+
+element has no preimages of smaller degree). Besides, this initial element is
+determined up to affine transformations and can be chosen irreducible.
+
+                          3. A factorization theorem
+   Let us assume in this section that our ground field k is algebraically
+closed. Theorem 1 states that for a closed polynomial h ∈ k[x1 , . . . , xn ] the
+polynomial h + λ may be reducible only for finitely many λ ∈ k. Denote by
+E(h) the set of λ ∈ k such that h + λ is reducible and by e(h) the cardinality
+of this set. Stein’s inequality claims that
+                                   e(h) < deg f.
+Now for any λ ∈ k consider a decomposition
+                                          n(λ,h)
+                                           Y          d
+                                                     λ,i
+                                h+λ =              hλ,i
+                                           i=1
+with hλ,i being irreducible. A more precise version of Stein’s inequality is
+given in the next theorem.
+Theorem 2 (Stein-Lorenzini-Najib’s Inequality). Let h ∈ k[x1 , . . . , xn ] be
+a closed polynomial. Then
+                  X                       X
+                      (n(λ, h) − 1) < min(  deg(hλ,i )).
+                                              λ
+                      λ                               i
+
+   This inequality has rather long history. Stein [19] proved his inequality
+in characteristic zero for n = 2. For any n over k = C this inequality was
+proved in [4]. In 1993, Lorenzini [10] obtained the inequality as in Theorem 2
+in any characteristic, but only for n = 2 (see also [8] and [20]). Finally, in [11]
+the proof for an arbitrary n was reduced to the case n = 2.
+   Now take any f ∈ k[x1 , . . . , xn ] \ k, µ ∈ k and consider a decomposition
+                                            n(µ,f )
+                                              Y           d
+                              f +µ=α·                 fµ,iµ,i
+                                              i=1
+
+with α ∈ k× and f    µ,i being irreducible.
+
+  Let us state the main result of this section.
+Theorem 3. Let f ∈ k[x1 , . . . , xn ] \ k. There exists a finite subset E(f ) =
+{µ1 , . . . , µe(f ) | µi ∈ k} with e(f ) < deg f such that
+    (1) for any µ ∈ / E(f ) one has f + µ = α · fµ,1 · fµ,2 · · · fµ,k , where all fµ,i
+        are irreducible and fµ,i − fµ,j ∈ k;
+    (2) fµ,i − fν,j ∈ k× for any µ, ν ∈ / E(f ) with ν 6= µ; in particular, the
+        degree d = deg(fµ,i ) does not depend on i and µ;
+    (3) deg(fµ,i ) ≤ d for any µ ∈ k;
+    (4)
+                                               n(µ,f )
+                 X             deg(f )          X
+                   (n(µ, f ) −         ) < min(        deg(fµ,i )).
+                 µ
+                                 d          µ
+                                                          i=1
+8                    I. V. ARZHANTSEV AND A. P. PETRAVCHUK
+
+
+Proof. Let h be the generative polynomial of f and f = F (h). Then
+                     F (h) + µ = α · (h + λµ,1 ) · · · (h + λµ,k )
+for some λµ,1 , . . . , λµ,k ∈ k. Hence for any µ with λµ,1 , . . . , λµ,k ∈
+                                                                           / E(h) we
+have a decomposition of f + µ as in (1). Note that λµ,i 6= λν,j for µ 6= ν.
+This proves (2) with d = deg(h) and gives the inequalities
+                            e(f ) ≤ e(h) < deg(h) ≤ deg(f ).
+    Any fµ,i is a divisor of some h + λ. This implies (3).
+    Finally, (4) may be obtained as:
+                  X               deg(f )     X
+                      (n(µ, f ) −         )≤     (n(λ, h) − 1) <
+                   µ
+                                    d
+                                              λ
+                          X                      X
+                   < min(      deg(hλ,i )) ≤ min(    deg(fµ,j )).
+                        λ                        µ
+                               i                      j
+                                                                                       
+Remark 4. It follows from the proof of Theorem 3 that
+    • E(f ) = {−F (−λ) | λ ∈ E(h)};
+    • if f is not closed, then e(f ) < 12 deg(f ).
+Example 2. Take f (x1 , x2 ) = x21 x42 − 2x21 x32 + x21 x22 + 2x1 x32 − 2x1 x22 + x22 + 1.
+  Here h = x1 x2 (x2 − 1) + x2 and F (t) = t2 + 1. It is easy to check that
+E(h) = {0, −1}, thus E(f ) = {−1, −2}. We have decompositions:
+    µ = −1 : f − 1 = x22 (x1 x2 − x1 + 1)2 ;
+    µ = −2 : f − 2 = (x2 − 1)(x1 x2 + 1)(x1 x2 (x2 − 1) + x2 + 1);
+    µ 6= −1, −2 : f + µ = (x1 x2 (x2 − 1) + x2 + λ)(x1 x2 (x2 − 1) + x2 − λ),
+                   λ2 = −1 − µ.
+                                    P
+    In this case deg(f ) = 6, d = 3, µ (n(µ, f ) − 2) = 1 and
+                          X
+                     min(     deg(fµ,i )) = min{3, 6, 6} = 3.
+                        µ
+                               i
+
+     4. Saturated subalgebras and invariants of finite groups
+    Let k be a field.
+Definition 4. A subalgebra A ⊆ k[x1 , . . . , xn ] is said to be saturated if for
+any f ∈ A \ k the generative polynomial of f is contained in A.
+    Clearly, the intersection of a family of saturated subalgebras in
+k[x1 , . . . , xn ] is again a saturated subalgebra. So we may define the satura-
+tion S(A) of a subalgebra A as the minimal saturated subalgebra containing
+A.
+    If A is integrally closed in k[x1 , . . . , xn ], then A is saturated. By The-
+orem 1, if A = k[f ], then the converse is true. Moreover, the converse
+is true if A is a monomial subalgebra. In order to prove it, consider a
+submonoid P (A) in Zn≥0 consisting of multidegrees of all monomials in A.
+Then monomials corresponding to elements of the ”saturated” semigroup
+P ′ (A) = (Q≥0 P (A)) ∩ Zn≥0 are generative elements of A. On the other
+        CLOSED AND IRREDUCIBLE POLYNOMIALS IN SEVERAL VARIABLES                                      9
+
+
+hand, it is a basic fact of toric geometry that the monomial subalgebra cor-
+responding to P ′ (A) is integrally closed in k[x1 , . . . , xn ], see for example [6,
+Sec. 2.1].
+   Now we come from monomial to homogeneous saturated subalgebras.
+The degree of monomials deg(αxi11 . . . xinn ) = i1 + . . . in defines a Z≥0 -
+grading on the polynomial algebra k[x1 , . . . , xn ]. Recall that a subalgebra
+A ⊂ k[x1 , . . . , xn ] is called homogeneous if for any element a ∈ A all its
+homogeneous components belong to A.
+   Consider a subgroup G ⊂ GLn (k). The linear action G : k[x1 , . . . , xn ]
+determines the homogeneous subalgebra k[x1 , . . . , xn ]G of G-invariant poly-
+nomials.
+Theorem 4. Let G ⊆ GLn (k) be a finite subgroup. Then the subalgebra
+A = k[x1 , . . . , xn ]G is saturated in k[x1 , . . . , xn ] if and only if G admits no
+non-trivial homomorphisms G → k× .
+Proof. Assume that there is a non-trivial homomorphism φ : G → k× . Let
+Gφ be the kernel of φ and Gφ = G/Gφ . Then Gφ is a finite cyclic group of
+some order k and it may be identified with a subgroup of k× .
+Lemma 6. Let H be a cyclic subgroup of order k in k× . Then any fi-
+nite dimensional (over k) H-module W is a direct sum of one-dimensional
+submodules.
+Proof. The polynomial X k − 1 annihilates the linear operator P in GL(W)
+corresponding to a generator of H. By assumption, X k − 1 is a product of
+k non-proportional linear factors in k[X]. This shows that the operator P
+is diagonalizable.                                                      
+Lemma 7. Let H ⊂ G be a proper subgroup. Then k[x1 , . . . , xn ]H 6=
+k[x1 , . . . , xn ]G .
+Proof. Let K be a field and G a finite group of its automorphisms. By
+Artin’s Theorem [9, Ch.VI, Th.1.8], K G ⊂ K is a Galois extension and
+[K : K G ] = |G|. This implies k(x1 , . . . , xn )H 6= k(x1 , . . . , xn )G . The impli-
+cation
+                                     Q
+        f                       G
+                                   f g∈G,g6=e g · f
+           ∈ k(x1 , . . . , xn ) =⇒ Q                    ∈ k(x1 , . . . , xn )G
+        h                          h g∈G,g6=e g · f
+shows that k(x1 , . . . , xn )G (resp. k(x1 , . . . , xn )H ) is the quotient field of
+k[x1 , . . . , xn ]G (resp. k[x1 , . . . , xn ]H ), thus k[x1 , . . . , xn ]H 6= k[x1 , . . . , xn ]G .
+                                                                                                    
+    Now we may take a finite-dimensional G-submodule W ⊂ k[x1 , . . . , xn ]Gφ
+which is not contained in k[x1 , . . . , xn ]G . Then W is a Gφ -module. By
+Lemma 6, one may find a Gφ -eigenvector h ∈ W , h ∈           / k[x1 , . . . , xn ]G . Then
+  k                    G                       G
+h ∈ k[x1 , . . . , xn ] and k[x1 , . . . , xn ] is not saturated.
+    Conversely, assume that any homomorphism χ : G → k is trivial. If h
+is a generative element of a polynomial f ∈ k[x1 , . . . , xn ]G , then for any
+g ∈ G the element g · h is also a generative element of f . By Corollary 1,
+the generative element is unique up to affine transformation. Without loss
+of generality we can assume that the constant term of h is zero. Then
+10                   I. V. ARZHANTSEV AND A. P. PETRAVCHUK
+
+
+the element g · h has obviously zero constant term and by Corollary 1 this
+element is proportional to h for any g ∈ G. Thus G acts on the line hhi via
+some character. But any character of G is trivial, so h ∈ k[x1 , . . . , xn ]G , and
+k[x1 , . . . , xn ]G is saturated.                                                 
+Remark 5. Since all coefficients of the polynomial
+                                     Y
+                          Ff (T ) =     (T − g · f )
+                                         g∈G
+
+are in k[x1 , . . . , xn ]G , any element f ∈ k[x1 , . . . , xn ] is integral over
+k[x1 , . . . , xn ]G . Thus Theorem 4 provides many saturated homogeneous sub-
+algebras that are not integrally closed in k[x1 , . . . , xn ].
+Corollary 3. Assume that k is algebraically closed and char k = 0.
+  (1) The subalgebra k[x1 , . . . , xn ]G is saturated in k[x1 , . . . , xn ] if and only
+      if G coincides with its commutant.
+  (2) The saturation of k[x1 , . . . , xn ]G is k[x1 . . . , xn ] if and only if G is
+      solvable.
+Example 3. In general, the saturation S(A) is not generated by generative
+elements of elements of A. Indeed, take any field k that contains a primitive
+root of unit of degree six. Let G = S3 be the permutation group acting
+naturally on k[x1 , x2 , x3 ] and A3 ⊂ S3 be the alternating subgroup. The
+proof of Theorem 4 shows that any generative element of an S3 -invariant is
+an S3 -semiinvariant and thus belongs to k[x1 , x2 , x3 ]A3 . On the other hand,
+S(k[x1 , x2 , x3 ]S3 ) = k[x1 , x2 , x3 ].
+Example 4. It follows from Theorem 4 that the property of a subalgebra to
+be saturated is not preserved under field extensions. Let us give an explicit
+example of this effect.
+   Let k = R and G be the cyclic group of order three acting on R2 by
+rotations. We begin with calculation of generators of the algebra of invari-
+ants R[x, y]G . Consider the complex polynomial algebra C[x, y] = R[x, y] ⊕
+iR[x, y] with the natural G-action. Then C[x, y]G = R[x, y]G ⊕ iR[x, y]G .
+Put z = x + iy, z = x − iy. Clearly, C[x, y] = C[z, z], and G acts on z, z
+as z → ǫz, z → ǫz, where ǫ3 = 1. This implies C[z, z]G = C[f1 , f2 , f3 ] with
+f1 = z 3 , f2 = z 3 and f3 = zz. Finally, R[x, y]G = R[Re(fi ), Im(fi ); i =
+1, 2, 3] = R[x3 − 3xy 2 , y 3 − 3x2 y, x2 + y 2 ].
+   By Theorem 4, the subalgebra R[x, y]G is saturated in R[x, y]. On the
+other hand, the subalgebra C[x3 − 3xy 2 , y 3 − 3x2 y, x2 + y 2 ] contains x3 −
+3xy 2 + i(y 3 − 3x2 y) = (x − iy)3 .
+
+         5. An algorithmic approach to closed polynomials
+   Let us assume in this section that char k = 0. Fix a homogeneous mono-
+mial order ≻ on the set M (n) of monomials in x1 , . . . , xn , i.e., a total order
+satisfying the following conditions:
+     (i) m ≻ 1 for any m ∈ M (n) \ {1};
+    (ii) m1 ≻ m2 implies mm1 ≻ mm2 for all m, m1 , m2 ∈ M (n);
+   (iii) if deg m1 > deg m2 , then m1 ≻ m2 .
+       CLOSED AND IRREDUCIBLE POLYNOMIALS IN SEVERAL VARIABLES                    11
+
+
+   Take a polynomial f ∈ k[x1 , . . . , xn ] \ k] such that the leading coefficient
+of f (with respect to ≻) is 1 and f (0, . . . , 0) = 0. Let h be the generative
+polynomial of f satisfying the same assumptions. One has f = F (h) with
+F having the highest coefficient equals 1 and F (0) = 0.
+   Define the multiplicity of a monomial m = xi11 . . . xnin as d(m) =
+GCD(i1 , . . . , in ). If f = F (g), deg(F ) = k, and f is the leading mono-
+mial of f , then d(f ) is divisible by k. In particular, if d(f ) = 1, then f is
+closed.
+   Below we give an algorithm computing the generative polynomial of a
+given polynomial f (x1 , . . . , xn ).
+   Step 1. Find a sequence D(f ) = (d1 > · · · > ds ) of all divisors of d(f )
+greater than 1. Put j = 1.
+                                                     i′     i′               i
+    Step 2. Take the divisor k = dj . Put m1 = x11 . . . xnn , where i′p = kp . Let
+m1 ≻ m2 ≻ · · · ≻ mN ≻ 1 be the set of all monomials that do not exceed m1 .
+Consider h = m1 + α2 m2 + · · · + αN mN with indeterminate coefficients αj .
+Let us find αj inductively. Suppose that the coefficient in f of the monomial
+                                                                    b −K
+m1k−1 mj equals bj . Then α2 = bk2 and, for j = 3, . . . , N , αj = j k j , where
+Kj is the coefficient of m1k−1 mj in (m1 + α2 m2 + · · · + αj−1 mj−1 )k .
+    Step 3. Put F (t) = tk +β1 tk−1 +· · ·+βk−1 t with indeterminate coefficients
+βl . Assuming that f = F (h) with h found at Step 2, one may calculate βl
+inductively (from l = 1 to k − 1) looking at the coefficient of m1k−l .
+    Step 4. Check the equality f = F (h) with h and F found at Steps 2 and
+3 respectively. If the equality holds, then h is the generative polynomial for
+f . (Indeed, if h = F1 (h1 ) with deg F1 > 1, then f = F (F1 (h1 )) and this
+expression corresponds to the divisor deg F (F1 (t)) > k of d(f ), a contradic-
+tion.) If the equality does not hold and j < s, then put j := j + 1 and go to
+Step 2. If the equality does not hold and j = s, then h = f is the generative
+polynomial of f .
+Example 5. Consider the case n = 2 and take the homogeneous lexico-
+graphic order with x1 ≻ x2 . For f (x1 , x2 ) = x41 + 2x21 x2 + x22 one has f = x41 ,
+d(m) = 4 and D(f ) = (4, 2).
+  1) k = d1 = 4. Here m1 = x1 , m2 = x2 and N = 2. One easily find that
+α2 = 0, hence h = x1 . Moreover, F (t) = t4 + β1 t3 + β2 t2 + β3 t. Fulfilling
+Step 3, we get β1 = β2 = β3 = 0. So, the equality f = F (h) = x41 does not
+hold.
+  2) k = d2 = 2. Here m1 = x21 and
+                   h = x21 + α2 x1 x2 + α3 x22 + α4 x1 + α5 x2 .
+Using Step 2, we get α2 = α3 = α4 = 0 and α2 = 1. Put F (t) = t2 + β1 t, we
+find β1 = 0 and the equality f = F (h) = (x21 + x2 )2 holds. So the generative
+polynomial for f is h = x21 + x2 .
+Remark 6. If char k = p and GCD(p, d(f )) = 1, then our algorithm also
+works.
+   Finally, let us present some observations that may speed up the above
+algorithm. With any term αxi11 . . . xinn , α 6= 0, of the polynomial f one may
+12                       I. V. ARZHANTSEV AND A. P. PETRAVCHUK
+
+
+associate an integral point (i1 , . . . , in ) in the real vector space Rn . Let N (f )
+be the Newton polytope of f , i.e., the convex hull of all (i1 , . . . , in ). Consider
+the set V of all vertices of N (f ). Let
+     V0 = {(i1 , . . . , in ) ∈ V | ∀ (j1 , . . . , jn ) 6= (i1 , . . . , in ) ∈ V ∃ s : is > js }.
+Lemma 8. The elements of V0 parametrize terms of f that are the leading
+terms with respect to some monomial order on M (n).
+Proof. If js ≥ is for any s, then xj11 . . . xjnn ≻ xi11 . . . xinn for any monomial
+order ≻. Conversely, if (i1 , . . . , in ) ∈ V0 , then N (f ) − (i1 , . . . , in ) intersects
+the positive octant of Rn only at zero. Hence there is a linear function
+l(z) = ω1 z1 + · · · + ωn zn such that the hyperplane l(z) = 0 separates the
+positive octant and N (f ) − (i1 , . . . , in ), and all ωi are positive. (Here zi
+are coordinates in Rn .) Moreover, one may assume that ωi are linearly
+independent over Q.
+   With any sequence Ω = (ω1 , . . . , ωn ) of positive real numbers that are lin-
+early independent over Q one may associate a monomial (non-homogeneous)
+order ≻Ω defined as
+        xi11 . . . xinn ≻Ω xj11 . . . xnjn ⇔ ω1 i1 + · · · + ωn in > ω1 j1 + · · · + ωn jn .
+  Clearly, (i1 , . . . , in ) represents the leading term with respect to ≻Ω defined
+by the coefficients of l(z).                                                      
+   Now for any v ∈ V0 , let mv be the leading monomial of f with respect to
+the corresponding order, and d1 (f ) = GCD(d(mv ) | v ∈ V0 ). Considering
+the leading terms of F (h) with respect to all possible monomial orders, one
+shows that the sequence D(f ) at Step 1 may be replaced by the sequence
+D1 (f ) = (d˜1 > · · · > d˜p ) of all divisors of d1 (f ) greater than 1.
+   Let us return to Example 5. Here V = V0 = {(4, 0), (0, 2)} and D1 (f ) =
+(2). Hence the case k = 4 may be excluded.
+
+                                           References
+ [1] M. Ayad, Sur les polynômes f (X, Y ) tels que K[f ] est intégralement fermé dans
+     K[X, Y ], Acta Arithmetica 105.1 (2002), 9–28.
+ [2] Ph. Bonnet, Families of k-derivations of k-algebras, J. Pure Appl. Algebra 199 (2005),
+     11–26.
+ [3] N. Bourbaki, Elements of Mathematics, Commutative Algebra, Chapters 1-7,
+     Springer-Verlag, Berlin, 1989.
+ [4] E. Cygan, Factorization of polynomials, Bull. Polish. Acad. Sci. Math. 40 (1992),
+     45–52.
+ [5] P. Eakin, A note on finite dimensional subrings of polynomial rings, Proc. Amer.
+     Math. Soc. 31 (1972), 75–80.
+ [6] W. Fulton, Introduction to toric varieties, Ann. Math. Studies 131, Princeton, New
+     Jersey, 1993.
+ [7] W. V. D. Hodge and D. Pedoe, Methods of algebraic geometry. Vol. I. Reprint of
+     the 1947 original. Cambridge Mathematical Library. Cambridge University Press,
+     Cambridge, 1994.
+ [8] S. Kaliman, Two remarks on polynomials in two variables, Pacific J. Math. 154
+     (1992), 285–295.
+ [9] S. Lang, Algebra, Revised Third Edition, GTM 211, Springer, 2002.
+[10] D. Lorenzini, Reducibility of polynomials in two variables, J. Algebra 156 (1993),
+     65–75.
+        CLOSED AND IRREDUCIBLE POLYNOMIALS IN SEVERAL VARIABLES                              13
+
+
+[11] S. Najib, Une généralisation de l’inégalité de Stein-Lorenzini, J. Algebra 292 (2005),
+     566–573.
+[12] A. Nowicki, On the jacobian equation J(f, g) = 0 for polynomials in k[x, y], Nagoya
+     Math. J. 109 (1988), 151–157.
+[13] A. Nowicki, Rings and fields of constans for derivations in characteristic zero, J. Pure
+     Appl. Algebra 96(1) (1994), 47–55.
+[14] A. Nowicki and M. Nagata, Rings of constants for k-derivations in k[x1 , . . . , xn ], J.
+     Math. Kyoto Univ. 28 (1988), 111–118.
+[15] A. P. Petravchuk and O. G. Iena, On centralizers of elements in the Lie algebra of
+     the special Cremona group SA2 (k), J. Lie Theory 16 (2006), 561-567.
+[16] A. Schinzel, Polynomials with Special Regard to Reducibility, Cambridge Univ. Press,
+     2000.
+[17] I. R. Shafarevich, Basic Algebraic Geometry I, Second Edition, Springer-Verlag,
+     Berlin, 1994.
+[18] I. P. Shestakov and U. U. Umirbaev, Poisson brackets and two-generated subalgebras
+     of rings of polynomials, J. Amer. Math. Soc. 17 (2004), 181–196.
+[19] Y. Stein, The total reducibility order of a polynomial in two variables, Israel J. Math.
+     68 (1989), 109–122.
+[20] A. Vistoli, The number of reducible hypersurfaces in a pencil, Invent. Math. 112
+     (1993), 247–262.
+[21] A. Zaks, Dedekind subrings of k[x1 , . . . , xn ] are rings of polynomials, Israel J. Math.
+     9 (1971), 285-289.
+
+  Department of Higher Algebra, Faculty of Mechanics and Mathematics,
+Moscow State University, Leninskie Gory, GSP-2, Moscow, 119992, Russia
+  E-mail address: arjantse@mccme.ru
+  URL: http://mech.math.msu.su/department/algebra/staff/arzhan.htm
+
+  Algebra Department, Faculty of Mechanics and Mathematics, Kyiv Taras
+Shevchenko University, Volodymyrskaia street, 01033 Kyiv, Ukraine
+  E-mail address: aptr@univ.kiev.ua
+

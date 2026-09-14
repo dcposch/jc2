@@ -1,0 +1,60 @@
+{
+  "schema": "blind-input-custody/v1",
+  "tag": "ideation-20260912T2150Z-astra",
+  "first_action_utc": "2026-09-12T21:53:16.830099433Z",
+  "reserve_utc": "2026-09-12T22:06:00Z",
+  "hard_utc": "2026-09-12T22:09:00Z",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260912T2150Z-prep/APPROACHES.snapshot.md",
+      "sha256": "09ab37e5ad257473cffcabd3ddd828214e62f5bf3464af35cfcb017382e72f56",
+      "read_scope": "FRESH_WHOLE; recovered ranges 1-70,71-140,141-197"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260912T2150Z-prep/COORDINATION.snapshot.md",
+      "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+      "read_scope": "REUSED_WHOLE; same agent completed 20:05-20:14 UTC review, exact same-byte COORDINATION original, after current snapshot pin"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260912T2150Z-prep/MASTER46.history.md",
+      "sha256": "b36a98fb4e968243c11461fbe8b32ef2cc2e68760f276c68d2f41b63a2411adb",
+      "read_scope": "FRESH_EXCERPT_ONLY lines257-310; recovered257-283,284-310; whole file HASH_ONLY otherwise"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260912T2150Z-prep/PREVIOUS-SYNTHESIS.md",
+      "sha256": "0db7232b2f4187b20375004f57acc9c1c3a642a3ffa70926a81ef4ff1c3f1a49",
+      "read_scope": "FRESH_WHOLE; recovered1-170,171-303"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260912T2150Z-prep/QUALIFICATION-CLOSEOUT.md",
+      "sha256": "e77524d702f919e1fbadf39e97be0d2344ad6c94bcab8383fbb4e7acbc518ee4",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260912T2150Z-prep/EXTERNAL-INTAKE.md",
+      "sha256": "5deba41712fd1fcf45127c092c31e7f8e9e2fc7b98684ecd64d4aaa74f6aef22",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260912T2150Z-prep/COMMON.md",
+      "sha256": "77a4cb12f9672d05d0f0791dd0cbcbf9472e826b752a3e78eb59af4df8e76519",
+      "read_scope": "FRESH_WHOLE before prescribed scientific bodies"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/ideation-20260912T2150Z-prep/INPUTS.sha256",
+      "sha256": "b9056f8b380bab15eab954c47bad0e604f83c6cd60eae9e8a158adb37bdede8c",
+      "read_scope": "FRESH_WHOLE first pinned input"
+    }
+  ],
+  "input_check": "All seven entries sha256sum --check --strict PASS before bodies and 21:57:42 UTC; shared INPUTS manifest hash also matches",
+  "instrument": {
+    "path": "/home/ubuntu/jc2/ops/artifact_finalize.py",
+    "sha256": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d",
+    "scope": "Unchanged administrative finalizer only; not a ninth scientific input"
+  },
+  "blind": true,
+  "current_blind_read": false,
+  "current_peer_read": false,
+  "scientific_execution": false,
+  "network": false
+}

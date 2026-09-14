@@ -1,0 +1,49 @@
+< "/home/ubuntu/jc2/box/k16sq-20260905/t5p_rows.sing";
+option(redSB);
+int t=5; int q=11;
+intvec wv=1,2,3,4,6;
+number y=(d+6)/22; number g=80*(3*d+12)/7986;
+proc ishomog(poly f, int w) { return(f==jet(f,w,wv)-jet(f,w-1,wv)); }
+proc hist(ideal KB) { int i; int w; int mx=0; for(i=1;i<=size(KB);i++){ if(deg(KB[i])>mx){mx=deg(KB[i]);} } intvec h; h[mx+1]=0; for(i=1;i<=size(KB);i++){ w=deg(KB[i]); h[w+1]=h[w+1]+1; } string s=""; for(w=0;w<=mx;w++){ s=s+string(h[w+1])+","; } print("HF_BY_WEIGHT "+s); print("SOCLE_WEIGHT "+string(mx)); }
+int k;
+print("ROW 0 wdeg "+string(deg(T0))+" homog "+string(ishomog(T0,21))+" nterms "+string(size(T0)));
+print("ROW 1 wdeg "+string(deg(T1))+" homog "+string(ishomog(T1,20))+" nterms "+string(size(T1)));
+print("ROW 2 wdeg "+string(deg(T2))+" homog "+string(ishomog(T2,19))+" nterms "+string(size(T2)));
+print("ROW 3 wdeg "+string(deg(T3))+" homog "+string(ishomog(T3,18))+" nterms "+string(size(T3)));
+print("ROW 4 wdeg "+string(deg(T4))+" homog "+string(ishomog(T4,17))+" nterms "+string(size(T4)));
+print("ROW 5 wdeg "+string(deg(T5))+" homog "+string(ishomog(T5,16))+" nterms "+string(size(T5)));
+print("ROW 6 wdeg "+string(deg(T6))+" homog "+string(ishomog(T6,15))+" nterms "+string(size(T6)));
+print("ROW 7 wdeg "+string(deg(T7))+" homog "+string(ishomog(T7,14))+" nterms "+string(size(T7)));
+print("ROW 8 wdeg "+string(deg(T8))+" homog "+string(ishomog(T8,13))+" nterms "+string(size(T8)));
+print("ROW 9 wdeg "+string(deg(T9))+" homog "+string(ishomog(T9,12))+" nterms "+string(size(T9)));
+print("TAU wdeg "+string(deg(tau))+" homog "+string(ishomog(tau,21))+" T0-tau-const "+string(T0-tau));
+poly b2=spineB2; poly R=rootR; poly b1=spineB1;
+print("B1_IDENTITY "+string(y*b1+b3*R==0));
+poly acc=tau+g*b2*R;
+acc=acc+b4^1*T1;
+acc=acc+b4^2*T2;
+acc=acc+b4^3*T3;
+acc=acc+b4^4*T4;
+acc=acc+b4^5*T5;
+acc=acc+b4^6*T6;
+acc=acc+b4^7*T7;
+acc=acc+b4^8*T8;
+acc=acc+b4^9*T9;
+print("B2_IDENTITY "+string(acc==0));
+ideal Iplus=T1,T2,T3,T4,T5,T6,T7,T8,T9;
+int tt=timer; ideal GI=std(Iplus); print("STD_TIME_S "+string(timer-tt)+" ms"); print("STD_SIZE "+string(size(GI)));
+print("IPLUS_DIM "+string(dim(GI))); print("IPLUS_VDIM "+string(vdim(GI)));
+if(dim(GI)==0){ ideal KB=kbase(GI); hist(KB); }
+int N; for(N=1;N<=3;N++){ print("TAU_POWER "+string(N)+" ZERO "+string(reduce(tau^N,GI)==0)); }
+list nat=list("b2",b2,"R",R,"b1",b1,"b2R",b2*R,"b2R2",b2*R^2,"b22R",b2^2*R,"b22R2",b2^2*R^2,"b1b2",b1*b2,"b1R",b1*R,"b1sq",b1^2,"b1b2R",b1*b2*R,"b2sq",b2^2,"Rsq",R^2,"b3tau",b3*tau,"b4tau",b4*tau,"Rtau",R*tau,"b2tau",b2*tau,"b1tau",b1*tau,"b3b2",b3*b2,"b3R",b3*R,"b3b1",b3*b1);
+int i; for(i=1;i<=size(nat);i=i+2){ print("NAT "+string(nat[i])+" wdeg "+string(deg(nat[i+1]))+" IN_IPLUS "+string(reduce(nat[i+1],GI)==0)); }
+ideal Gs=std(Iplus+ideal(b4)); print("SLICE b4 tau_in "+string(reduce(tau,Gs)==0)+" tau2_in "+string(reduce(tau^2,Gs)==0));
+ideal Gs=std(Iplus+ideal(u2)); print("SLICE u2 tau_in "+string(reduce(tau,Gs)==0)+" tau2_in "+string(reduce(tau^2,Gs)==0));
+ideal Gs=std(Iplus+ideal(u3)); print("SLICE u3 tau_in "+string(reduce(tau,Gs)==0)+" tau2_in "+string(reduce(tau^2,Gs)==0));
+ideal Gs=std(Iplus+ideal(u4)); print("SLICE u4 tau_in "+string(reduce(tau,Gs)==0)+" tau2_in "+string(reduce(tau^2,Gs)==0));
+ideal Gs=std(Iplus+ideal(b3)); print("SLICE b3 tau_in "+string(reduce(tau,Gs)==0)+" tau2_in "+string(reduce(tau^2,Gs)==0));
+tt=timer; matrix M=lift(Iplus,ideal(tau^2)); print("LIFT_TIME_S "+string(timer-tt)+" ms");
+poly chk=0; for(k=1;k<=ncols(Iplus);k++){ chk=chk+Iplus[k]*M[k,1]; } print("LIFT_VERIFIED "+string(chk==tau^2));
+string sup=""; for(k=1;k<=ncols(Iplus);k++){ if(M[k,1]!=0){ sup=sup+string(k)+"(w"+string(deg(M[k,1]))+",h"+string(ishomog(M[k,1],4*t+1+k))+",n"+string(size(M[k,1]))+",b3deg"+string(deg(M[k,1],intvec(0:(t-1),1)))+") "; } } print("LIFT_SUPPORT "+sup);
+write("/home/ubuntu/jc2/box/k16sq-20260905/t5p_lift.txt",string(M));
+print("MAIN_COMPLETE"); quit;

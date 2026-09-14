@@ -1,0 +1,751 @@
+{
+  "utc": "2026-09-09T13:31:38.187953+00:00",
+  "scope": "Read-only documentary hashing and custody; no builder/checker/math replay",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-caller-v2-gate-fable5-20260909.md",
+      "sha256": "0fa06c13eb330aef8e8ad489cb451922ad34f03708e2df82413b870a031b0c5d",
+      "bytes": 13143
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-caller-v2-20260909/dispatch_batch.py",
+      "sha256": "aaafa62a7aa96ab7823e889c7d8800add04b9699a9e736ccdeb883557e812640",
+      "bytes": 10430
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-caller-v2-20260909/precision.py",
+      "sha256": "56400dd32f4940a0e77b2da79e9b90792b51588d01f0f1a2fded30efebb0af90",
+      "bytes": 2051
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-execution-20260909/probe.py",
+      "sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7",
+      "bytes": 910
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-complete-builder-20260909/builder.py",
+      "sha256": "2dcba70d4f14080535c4a58f06bfd50ba4949148e819a6827ab9326828d314b8",
+      "bytes": 6241
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-complete-builder-20260909/checker.py",
+      "sha256": "e2970c71774607e211ecc7e0f001a0dc02d02410e303ca58cf7c17ab77b9f545",
+      "bytes": 14649
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-complete-builder-20260909/execution_gate.py",
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6",
+      "bytes": 3933
+    },
+    {
+      "path": "/home/ubuntu/jc2/ops/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "bytes": 42671
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-classical-admissibility-astra-20260909.md",
+      "sha256": "02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a",
+      "bytes": 9817
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-artifact-validation-20260909/frontier.json",
+      "sha256": "f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34",
+      "bytes": 1877
+    },
+    {
+      "path": "/home/ubuntu/jc2/ops/fleet/fleet.sh",
+      "sha256": "a9da94d341a691942e9d6a6a6d90d97008b2d7baa1cadb2592481cf6b9c11c4c",
+      "bytes": 5139
+    },
+    {
+      "path": "/home/ubuntu/jc2/ops/artifact_finalize.py",
+      "sha256": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d",
+      "bytes": 48435
+    },
+    {
+      "path": "/usr/bin/python3",
+      "sha256": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223",
+      "bytes": 8025024
+    }
+  ],
+  "remote_files": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/REGISTRATION.md",
+      "sha256": "636f043f76fca1a2feb6e666fd7bc3e2b59c5b643b97aef8fc36ce4751028be6",
+      "bytes": 2653
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/admissibility.md",
+      "sha256": "02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a",
+      "bytes": 9817
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/batch.PASS.json",
+      "sha256": "cb811b3463b412a04d8d32c6a475499940c5fd9f531ebeec9035c7b8ca0ddd47",
+      "bytes": 15403
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/build.authority.json",
+      "sha256": "c9c8f7a6eb30f8776db23e091d49ab0fcae0a14b3b3dffa040efa9b6423e801f",
+      "bytes": 3666
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/build.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/build.caller.stdout",
+      "sha256": "c09123ff648874b37800b8654d705403c192bff34db05c53c87bfc3f759437f0",
+      "bytes": 118
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/build.dispatch.json",
+      "sha256": "065c65ee603e261a86e96ff016dd95131ba6515ea8a2055256695f6d52fd2aae",
+      "bytes": 882
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/build.stdout",
+      "sha256": "3c4fcf849b2e5c25e49b8a1595a8dca67ebacafaf97c8d24d59335bb406cd0b1",
+      "bytes": 46
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/build.telemetry.json",
+      "sha256": "d93ceb0a32dc5db287f8be9139f099aac0d58f2a594635ae31b98ff6c2c1f74f",
+      "bytes": 2183
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/builder.py",
+      "sha256": "2dcba70d4f14080535c4a58f06bfd50ba4949148e819a6827ab9326828d314b8",
+      "bytes": 6241
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-dropped-constant.authority.json",
+      "sha256": "e749b22bc01991fa567015b1943ee4eb50082fe844fe8fed5b67eb679354c34e",
+      "bytes": 4196
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-dropped-constant.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-dropped-constant.caller.stdout",
+      "sha256": "2f11d294b31d2c8550b24e6c12f40af8032a47e3100247324c1e90827f47d14a",
+      "bytes": 135
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-dropped-constant.dispatch.json",
+      "sha256": "31efd986bd679884b9007f5ea32c7622a9bd91a1a850c778f0478561ed37c97b",
+      "bytes": 899
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-dropped-constant.receipt.json",
+      "sha256": "b7f599affb4b03869c24833503719b1396ce993c0788de2944b1b0e869f93300",
+      "bytes": 814
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-dropped-constant.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-dropped-constant.stdout",
+      "sha256": "ab0654f9f7d92f1d7b355d30223836701d8c604aa73a442e2964bd02221e3c73",
+      "bytes": 39
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-dropped-constant.telemetry.json",
+      "sha256": "c90fc69f5b916aca9d04d2aaba34ec40aa6520ce125669a857ce9d8557bde1ea",
+      "bytes": 2234
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-full.authority.json",
+      "sha256": "05ef28cf2e819c661f185ebc3735c6c4b3f9cca22b973b9c8e30490e1fb2abf4",
+      "bytes": 4052
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-full.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-full.caller.stdout",
+      "sha256": "e90f9ce18cc9a7f86de79acffdd382583c693c1c2710577038daa2e55824a3d2",
+      "bytes": 123
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-full.dispatch.json",
+      "sha256": "f0a35eba1099180c036f0d204cab3a7d22e4cd213cbea70c85ad8a652fe6c13e",
+      "bytes": 887
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-full.receipt.json",
+      "sha256": "1b7502d6fda3bcd2c8b3f89b6adcdcae90f4d07f7403da5362438e9b143bf152",
+      "bytes": 704
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-full.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-full.stdout",
+      "sha256": "ab0654f9f7d92f1d7b355d30223836701d8c604aa73a442e2964bd02221e3c73",
+      "bytes": 39
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-full.telemetry.json",
+      "sha256": "fa22dbaee4079e3d85ff55fe7452de8fb82c05455a3e3a832bc5f6518b0b4d01",
+      "bytes": 2197
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-guard.authority.json",
+      "sha256": "ec11e502cf924857f43ab992d2ece54e6c4f770ca464522ec060a71367f72947",
+      "bytes": 4064
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-guard.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-guard.caller.stdout",
+      "sha256": "4a03fcfd6dd44aff69d1325be60acac598f22f78ac7dd69ce1a0cf8c86a314bc",
+      "bytes": 124
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-guard.dispatch.json",
+      "sha256": "0bdc5730e0a7044365566e7f6fb58e421328513bf1e6bffc269bf13959be3b71",
+      "bytes": 888
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-guard.receipt.json",
+      "sha256": "322e4bde2def4de5f1310230acb4cc0c979863233da357ae47d64cad1b5dfb17",
+      "bytes": 766
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-guard.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-guard.stdout",
+      "sha256": "ab0654f9f7d92f1d7b355d30223836701d8c604aa73a442e2964bd02221e3c73",
+      "bytes": 39
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-guard.telemetry.json",
+      "sha256": "a785855587b208f1fc240d95899b4de4d79477fd0185fe6081e5cb7901f4ad78",
+      "bytes": 2201
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-leading-top.authority.json",
+      "sha256": "b5fb024c32dc5eaa5663575cb8adb8ffbccc16240c86899e12e4cd74c5ad5dba",
+      "bytes": 4136
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-leading-top.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-leading-top.caller.stdout",
+      "sha256": "c984ae7e73ec207e9ee610a4c6502b48cccb26fcb5117393bcd326afa5dae3a7",
+      "bytes": 130
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-leading-top.dispatch.json",
+      "sha256": "080ed0d61fc6679e8a2b380cb52e140b484ef234f8207a910b62b874ffc4d8f8",
+      "bytes": 892
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-leading-top.receipt.json",
+      "sha256": "963888cb8de22c75dea7d3463595ba45402f6ca0e5ef28157ecba00965c0b4cf",
+      "bytes": 792
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-leading-top.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-leading-top.stdout",
+      "sha256": "ab0654f9f7d92f1d7b355d30223836701d8c604aa73a442e2964bd02221e3c73",
+      "bytes": 39
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-leading-top.telemetry.json",
+      "sha256": "2d69bb615ef006b2f014c9da5048150f5e6e1a21f99f133c44bc3c00d1a0101d",
+      "bytes": 2219
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero-dropped-constant.authority.json",
+      "sha256": "3bdc4ef0b99c8b15d9f3b2033cad9fc895d44dbf38fd0e3450c979a2a976dc32",
+      "bytes": 4280
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero-dropped-constant.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero-dropped-constant.caller.stdout",
+      "sha256": "c3209364b048a7bcbd3fa1bba74044e3ea6af5f1cf70957f468fa2dee5755d2e",
+      "bytes": 142
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero-dropped-constant.dispatch.json",
+      "sha256": "80e70cf0ee3647877ceac4753b0bbe46d9d06183b60445f097f8e0503e070e65",
+      "bytes": 905
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero-dropped-constant.receipt.json",
+      "sha256": "e8e3915d17d111bcb852da6576dce081f285e5efc86c0205767bc346f9baf290",
+      "bytes": 817
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero-dropped-constant.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero-dropped-constant.stdout",
+      "sha256": "ab0654f9f7d92f1d7b355d30223836701d8c604aa73a442e2964bd02221e3c73",
+      "bytes": 39
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero-dropped-constant.telemetry.json",
+      "sha256": "bf397e5c8115e7aac21decf9b42a6497c7315bf394caec99fa8d00dfb6421baf",
+      "bytes": 2255
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero.authority.json",
+      "sha256": "4736ed862f3eb5808f6532f99ae3625c20d4b3126d01fac70bdfde4e7021756b",
+      "bytes": 4076
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero.caller.stdout",
+      "sha256": "b96ba92565197af12b0791bd223dcaf8f67446516a41a427eb3ef5f1b394d160",
+      "bytes": 125
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero.dispatch.json",
+      "sha256": "5ea023343beb427bf7e4641a020b0185880aa67bf56832efa6bb3be1f58910b1",
+      "bytes": 888
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero.receipt.json",
+      "sha256": "0d6795cba18a81982a911575b04a3d78bba081fbafce1365c90b7b7004a5037e",
+      "bytes": 702
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero.stdout",
+      "sha256": "ab0654f9f7d92f1d7b355d30223836701d8c604aa73a442e2964bd02221e3c73",
+      "bytes": 39
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-u-zero.telemetry.json",
+      "sha256": "25aa7bfc996fd603d8a1b848e7518fc0a6648cc29068e4d8eae88a297b123600",
+      "bytes": 2204
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-upper-coefficient.authority.json",
+      "sha256": "b39a0691872023facf9d543cecbeec72583c301b5f6e791687e0175eace9efe2",
+      "bytes": 4208
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-upper-coefficient.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-upper-coefficient.caller.stdout",
+      "sha256": "697253f0c474d26c86528a368cf46620e035ab7084f7cd6fc0e343262fb4d926",
+      "bytes": 136
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-upper-coefficient.dispatch.json",
+      "sha256": "079b8930b1ed9d2e4e802d47da88e8a012a012368b9b792c2ea5e4c3a7479ad6",
+      "bytes": 898
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-upper-coefficient.receipt.json",
+      "sha256": "850ec7264536ce055bf5114653d5b8b3e2387969153d7b51f0622479ca08557a",
+      "bytes": 790
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-upper-coefficient.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-upper-coefficient.stdout",
+      "sha256": "ab0654f9f7d92f1d7b355d30223836701d8c604aa73a442e2964bd02221e3c73",
+      "bytes": 39
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/check-upper-coefficient.telemetry.json",
+      "sha256": "293f0de1955998ccde40711e4c49044d01bd9a38da8dd61d284cb4a9d752aefd",
+      "bytes": 2237
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/checker.py",
+      "sha256": "e2970c71774607e211ecc7e0f001a0dc02d02410e303ca58cf7c17ab77b9f545",
+      "bytes": 14649
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/dispatch_batch.py",
+      "sha256": "aaafa62a7aa96ab7823e889c7d8800add04b9699a9e736ccdeb883557e812640",
+      "bytes": 10430
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/dummy-descendant.authority.json",
+      "sha256": "2c4c78051c8845837ea6f92d6977dc51ed30209455de1a06b57a710aa8f80efc",
+      "bytes": 3966
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/dummy-descendant.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/dummy-descendant.caller.stdout",
+      "sha256": "7c736049842da72602e89fd22f2abd9f5498c760c77d26493b54c8543282f8fb",
+      "bytes": 130
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/dummy-descendant.dispatch.json",
+      "sha256": "4f39fa6e86c8ab66c5314434242a450c45e35c11d43414290e143c376dab2646",
+      "bytes": 875
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/dummy-descendant.sentinel",
+      "sha256": "6c6419e93c916a7be827f962250694e568c52e56906280c2982b1ad78ce87ea8",
+      "bytes": 14
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/dummy-descendant.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/dummy-descendant.stdout",
+      "sha256": "6c61d78cf0a455a684cd1ddf5180af4bb8adfa0c74fb28421f36af813228434a",
+      "bytes": 446
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/dummy-descendant.telemetry.json",
+      "sha256": "cda439a5e0bfc5c007c29c7340a81469aab7387df234ade28c112cdb210759da",
+      "bytes": 3034
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/exact.json",
+      "sha256": "168bdfd3a791f24a6631de66ae4e71c3f209ee9eb0d21fc466f9aa802f5ad576",
+      "bytes": 88634
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/execution_gate.py",
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6",
+      "bytes": 3933
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/frontier.json",
+      "sha256": "f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34",
+      "bytes": 1877
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-argv.authority.json",
+      "sha256": "005fc41b20725eab6375f3775bed90c4c00e4a582e6b63c55744bd16beeb7e19",
+      "bytes": 3903
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-argv.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-argv.caller.stdout",
+      "sha256": "a8e8bfe235c4b97399b7cd872efcd53751b4ccf790b4201f251873f477eee7b7",
+      "bytes": 122
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-argv.dispatch.json",
+      "sha256": "0d7d8de92a08df5f124526c8470ea342fa7978409e5c9a08472284e9c44a04fa",
+      "bytes": 863
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-argv.stderr",
+      "sha256": "767e5f59f189c351ccbd641fb361d619ae78b67fdd1d02edd9d0c22642dae84a",
+      "bytes": 436
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-argv.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-argv.telemetry.json",
+      "sha256": "d1cf448c2e186a596f9e7bb4cf2963012a3a180227598173f8cc72093d969bbe",
+      "bytes": 2194
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-cap.authority.json",
+      "sha256": "34eef84913d79344aede05df92e4c91d7855842937ae07e37b55c9dff0dea41e",
+      "bytes": 3871
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-cap.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-cap.caller.stdout",
+      "sha256": "e76426c25d1205b3a740d9b65dccabf4dfbbe6427bb492944bae36e85ebfdcff",
+      "bytes": 121
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-cap.dispatch.json",
+      "sha256": "36bb9ca2bd79ba2cc74ff34fe58ebe4f8d456e0e4477728a4879bdb56d2c6d2c",
+      "bytes": 864
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-cap.stderr",
+      "sha256": "656df7d2305ae27c97b98b33038bee61c342cc4c0570e0ff6ad75f09c551ee26",
+      "bytes": 428
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-cap.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-cap.telemetry.json",
+      "sha256": "4b9582e2ed7cf065c9fb18c843985f6656191504e82c572f752d7c19fdefacc9",
+      "bytes": 2191
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-disabled.authority.json",
+      "sha256": "60ac616fbd8b4243df9bf95a2e74ef1d86b8ecee4555641808dfa24680619151",
+      "bytes": 3931
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-disabled.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-disabled.caller.stdout",
+      "sha256": "fae00d0e32b001513f0e6d7a166543a772f0a86f7509f86e56c0be900f7e661e",
+      "bytes": 126
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-disabled.dispatch.json",
+      "sha256": "eb04cf24671b68ad522b46b294fa2308b569ed8073aed988d98c20ced2580794",
+      "bytes": 869
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-disabled.stderr",
+      "sha256": "76c0c49bb56f9929a2e0456bbb9df930c71b700ca3b71aa52e5daef59c992542",
+      "bytes": 388
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-disabled.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-disabled.telemetry.json",
+      "sha256": "b67a87e3adf7abbd7a7cbb0da972164648cce1297c51011da8140f2739df647a",
+      "bytes": 2206
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-missing-input.authority.json",
+      "sha256": "bb7a544241614ffb9bd6b21934e65153a252969a2db4e2b1e1dafd9fc64c88c7",
+      "bytes": 3833
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-missing-input.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-missing-input.caller.stdout",
+      "sha256": "748d1acb0a21691ac50f31073d7f01a96639324cc88401124b0a77043fcefd9b",
+      "bytes": 131
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-missing-input.dispatch.json",
+      "sha256": "d11f70b92596ec034c24f7391421a4222de1b3edd8d713f3ed78dab67a79488b",
+      "bytes": 872
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-missing-input.stderr",
+      "sha256": "8e1b524a8df414fd90b4c271fd48f9a1d60dfdb076db5150f61c94060f311383",
+      "bytes": 442
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-missing-input.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-missing-input.telemetry.json",
+      "sha256": "7037152770f41b773d17c9a2c0b93fe7af1087fbb30ce0ef89b40f15634cd670",
+      "bytes": 2220
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-valid.authority.json",
+      "sha256": "1682a23d90b3c128bcdaf4e2505af8a286a68c0c325331c39fe2f9eef4610509",
+      "bytes": 3900
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-valid.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-valid.caller.stdout",
+      "sha256": "6487509755b93ecea39f928c446baacb76131ff00728bc01a64cb3eb6bd0d692",
+      "bytes": 123
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-valid.dispatch.json",
+      "sha256": "e3e9b6ce5611a119fed3a672603dbe70dd1ba0430539d5dd52c272762d5e5dda",
+      "bytes": 867
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-valid.sentinel",
+      "sha256": "6c6419e93c916a7be827f962250694e568c52e56906280c2982b1ad78ce87ea8",
+      "bytes": 14
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-valid.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-valid.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-valid.telemetry.json",
+      "sha256": "f7072df8b70d4843d4ecb8b99dd1adfee095c14b66ee35ba57870ff8d6ec495a",
+      "bytes": 2194
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-wronghost.authority.json",
+      "sha256": "6a24599f339710926f4652d011f716a1a8370610ce7fd3e3ab5cc8675da1fedb",
+      "bytes": 3949
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-wronghost.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-wronghost.caller.stdout",
+      "sha256": "d6678bef09b47a22efb770e075185420c2fc3f08b1f170d87305d118c693ae4a",
+      "bytes": 127
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-wronghost.dispatch.json",
+      "sha256": "1b99b71960392187d0382b8847b0b92613ee6ac313f40dcc7a0b5832e22e33e4",
+      "bytes": 870
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-wronghost.stderr",
+      "sha256": "ed6b169234638894595a2eacf93175077f210417b9a93ce67cefdf79466a1182",
+      "bytes": 382
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-wronghost.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/gate-wronghost.telemetry.json",
+      "sha256": "d05a3c44967210376cfde7e254f6fcb9756f3d239f1d072c6ffc8c005a75da9e",
+      "bytes": 2209
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/precision.authority.json",
+      "sha256": "8280815d4da23e98360a3b6107111b50f01030d956cc7c41897fda8926606a23",
+      "bytes": 4022
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/precision.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/precision.caller.stdout",
+      "sha256": "f755be99c84d47aded0d3bf73deb3d9ed3c9a240549c52e4a91ea707c3e13719",
+      "bytes": 122
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/precision.dispatch.json",
+      "sha256": "032e2d75f2e9cc409479e38fe9fe047f4215e9d6e9802d3390c7cd31f2277653",
+      "bytes": 885
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/precision.py",
+      "sha256": "56400dd32f4940a0e77b2da79e9b90792b51588d01f0f1a2fded30efebb0af90",
+      "bytes": 2051
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/precision.receipt.json",
+      "sha256": "68ebfaceca487cf2b2f21df230e7eecd96543c3a273b470165be203ac010f953",
+      "bytes": 728
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/precision.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/precision.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/precision.telemetry.json",
+      "sha256": "94521699bdf8597d0848b0e504bcdeebf1847e1d92aa881314cb47265bfc3d2a",
+      "bytes": 2194
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/preflight.PASS.json",
+      "sha256": "0dbaf6396999f8608e2c05392296b7e1e1f45f155439f93b663f60dc0140c0fb",
+      "bytes": 6650
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/probe.py",
+      "sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7",
+      "bytes": 910
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "bytes": 42671
+    }
+  ],
+  "dispatch_records": 16,
+  "current_hash_mismatches": [],
+  "largest_remote_file_bytes": 88634
+}

@@ -1,0 +1,27 @@
+{
+  "first_action_utc": "2026-09-10T01:20:59Z",
+  "task_deadline_utc": "2026-09-10T01:36:00Z",
+  "publication_reserve_utc": "2026-09-10T01:33:00Z",
+  "mathematical_deadline_utc": "2026-09-10T01:30:00Z",
+  "first_math_utc": null,
+  "math_invocations": 0,
+  "registered_probe_invocations": 1,
+  "generic_invocations": 0,
+  "stop_request_completed_by_utc": "2026-09-10T01:27:19Z",
+  "stop_request": {
+    "chunk_id": "6dd90e",
+    "wall_time_seconds": 1.084099215,
+    "exit_code": 0,
+    "original_token_count": 81,
+    "output": "{\n    \"StoppingInstances\": [\n        {\n            \"InstanceId\": \"i-08d2a40f272ee9fa2\",\n            \"CurrentState\": {\n                \"Code\": 64,\n                \"Name\": \"stopping\"\n            },\n            \"PreviousState\": {\n                \"Code\": 16,\n                \"Name\": \"running\"\n            }\n        }\n    ]\n}\n"
+  },
+  "stopped_confirmed_by_utc": "2026-09-10T01:28:06Z",
+  "stopped_confirmation": {
+    "chunk_id": "05473a",
+    "wall_time_seconds": 0.705637602,
+    "exit_code": 0,
+    "original_token_count": 115,
+    "output": "{\n    \"State\": \"stopped\",\n    \"IP\": \"172.30.0.72\",\n    \"Owner\": \"f10-r1-exact-artifact-validation-20260909\",\n    \"Volumes\": [\n        {\n            \"DeviceName\": \"/dev/sda1\",\n            \"Ebs\": {\n                \"AttachTime\": \"2026-09-09T12:37:43+00:00\",\n                \"DeleteOnTermination\": true,\n                \"Status\": \"attached\",\n                \"VolumeId\": \"vol-0574e0fa5aed1f5e3\",\n                \"EbsCardIndex\": 0\n            }\n        }\n    ]\n}\n"
+  },
+  "no_further_authority": true
+}

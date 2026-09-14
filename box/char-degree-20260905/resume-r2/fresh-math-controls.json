@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "name": "source-audit-controls",
+      "original_source": "/home/ubuntu/jc2/box/char-degree-20260905/source-audit-controls.py",
+      "original_sha256": "29faa3562dc011bce0eb12a8cab3c515641797d5b8313c1f3a8a24481b541168",
+      "executed_source": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/source-audit-controls.executed.py",
+      "executed_sha256": "56b587dca607faad9bacd99d55abca3b91027e4c96b914768abb847bc046f0ca",
+      "output_redirection_only": true,
+      "replacement_from": "OUT = Path(__file__).with_suffix('.json')",
+      "replacement_to": "OUT = Path('/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/source-audit-controls.fresh.json')",
+      "original___file___preserved": "/home/ubuntu/jc2/box/char-degree-20260905/source-audit-controls.py",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 0.415,
+      "log": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/source-audit-controls.fresh.log",
+      "log_sha256": "579f6a5326c91749fa6b1ccb9537725c4aedb33cddb071158499b53faec7ce6c",
+      "output": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/source-audit-controls.fresh.json",
+      "output_sha256": "3180da44b188733fff5516c76dc5d4519e88429bd53066444602c55216a5177c",
+      "status": "PASS",
+      "inherited_output_sha256": "3180da44b188733fff5516c76dc5d4519e88429bd53066444602c55216a5177c",
+      "fresh_json_equals_inherited": true
+    },
+    {
+      "name": "nondegeneracy-controls",
+      "original_source": "/home/ubuntu/jc2/box/char-degree-20260905/nondegeneracy-controls.py",
+      "original_sha256": "ee39e73ff9f746b8d9884cc5395254ba75d537e76807365451b83b2a27ee0a2e",
+      "executed_source": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/nondegeneracy-controls.executed.py",
+      "executed_sha256": "3090d14669edd8038a0df92c2a7612282688e2450b4bc1b415b43eaeebe7435f",
+      "output_redirection_only": true,
+      "replacement_from": "Path(__file__).with_suffix('.json').write_text",
+      "replacement_to": "Path('/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/nondegeneracy-controls.fresh.json').write_text",
+      "original___file___preserved": "/home/ubuntu/jc2/box/char-degree-20260905/nondegeneracy-controls.py",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 0.365,
+      "log": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/nondegeneracy-controls.fresh.log",
+      "log_sha256": "70c1198e05c2b192b86b9bb6ccd26ad2a666b57f1dcb612d42b6790465940eb1",
+      "output": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/nondegeneracy-controls.fresh.json",
+      "output_sha256": "a79fff99d3214aa6e0c180b8dfc636e91bc2bca4ad0fb4186b3fa8e0282e19e4",
+      "status": "PASS",
+      "inherited_output_sha256": "a79fff99d3214aa6e0c180b8dfc636e91bc2bca4ad0fb4186b3fa8e0282e19e4",
+      "fresh_json_equals_inherited": true
+    },
+    {
+      "name": "coefficient-circuit-support-control",
+      "original_source": "/home/ubuntu/jc2/box/char-degree-20260905/coefficient-circuit-support-control.py",
+      "original_sha256": "a47ec1863d80439240fbb3fc8fd18b7a094261c9deafef46bc36e70c671e0506",
+      "executed_source": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/coefficient-circuit-support-control.executed.py",
+      "executed_sha256": "eab4da10b32a3feff59648fbeb2a106731c8a9e3c9f111a8eae90c08248eeede",
+      "output_redirection_only": true,
+      "replacement_from": "Path(__file__).with_suffix('.json').write_text",
+      "replacement_to": "Path('/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/coefficient-circuit-support-control.fresh.json').write_text",
+      "original___file___preserved": "/home/ubuntu/jc2/box/char-degree-20260905/coefficient-circuit-support-control.py",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 0.365,
+      "log": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/coefficient-circuit-support-control.fresh.log",
+      "log_sha256": "4cf4a61345f122051beacad434318317b7287464b3f2b9f312e55c75f61c5da4",
+      "output": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/coefficient-circuit-support-control.fresh.json",
+      "output_sha256": "f2a33d1986fe192a5641d3880611ea0ae311376e0f1dc154a421e5807aceec13",
+      "status": "PASS",
+      "inherited_output_sha256": "f2a33d1986fe192a5641d3880611ea0ae311376e0f1dc154a421e5807aceec13",
+      "fresh_json_equals_inherited": true
+    },
+    {
+      "name": "remainder-independent-review",
+      "original_source": "/home/ubuntu/jc2/box/char-degree-20260905/remainder-independent-review.py",
+      "original_sha256": "0104c47148c4d6dd58011889e35721b08647fa520725c6b3d94d573747aee935",
+      "executed_source": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/remainder-independent-review.executed.py",
+      "executed_sha256": "bcbeb0fe523ac0f0ba0ba6aaeb385e264bf87839eccb3983f2d715d63885693d",
+      "output_redirection_only": true,
+      "replacement_from": "(HERE/'remainder-independent-review.json').write_text",
+      "replacement_to": "Path('/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/remainder-independent-review.fresh.json').write_text",
+      "original___file___preserved": "/home/ubuntu/jc2/box/char-degree-20260905/remainder-independent-review.py",
+      "environment_override": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "returncode": 0,
+      "timeout": false,
+      "elapsed_seconds": 1.716,
+      "log": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/remainder-independent-review.fresh.log",
+      "log_sha256": "e7dd0292edb4cbe7ebe727d53e3b3d3503204ef8e959837e15a801e6c0b39f9e",
+      "output": "/home/ubuntu/jc2/box/char-degree-20260905/resume-r2/remainder-independent-review.fresh.json",
+      "output_sha256": "e7dd0292edb4cbe7ebe727d53e3b3d3503204ef8e959837e15a801e6c0b39f9e",
+      "status": "PASS",
+      "inherited_output_sha256": "e7dd0292edb4cbe7ebe727d53e3b3d3503204ef8e959837e15a801e6c0b39f9e",
+      "fresh_json_equals_inherited": true
+    }
+  ]
+}

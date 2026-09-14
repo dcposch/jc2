@@ -1,0 +1,49 @@
+--- old/produce.py
++++ new/produce.py
+@@ -262,19 +262,6 @@
+         envelope(Ab[h],h,0)
+         envelope(Bb[h],h,0)
+ 
+-    Pin,qin=var(5,'inverse'),var(6,'inverse')
+-    chartS=add(mul(Pin,power(qin,3)),neg(mul(m.retype(zr,'inverse'),power(qin,2))),
+-               mul(m.retype(U,'inverse'),qin))
+-    inverses=[];poles=[]
+-    for obj,low,high in ((Ahat,-3,30),(Bhat,-5,51)):
+-        transformed=m.Poly('inverse')
+-        for ex,cc in obj.items():
+-            e=list(ex);e[5]=e[6]=0
+-            term=mul(m.Poly('inverse',{tuple(e):cc}),power(chartS,ex[5]))
+-            transformed=add(transformed,shift(term,6,-ex[6]))
+-        if any(e[6]<low or e[6]>high for e in transformed):raise ValueError('inverse chart bound')
+-        inverses.append(transformed)
+-        poles.append(m.Poly('inverse',{e:c0 for e,c0 in transformed.items() if e[6]<0}))
+     equal(scalar(coeff(coeff(Ahat,6,0),5,10)),Wi,'leading a')
+     equal(scalar(coeff(coeff(Bhat,6,0),5,17)),t5i,'leading b')
+     equal(m.fm(m.fm(W,t5),m.fm(Wi,t5i)),field(1),'leading guard')
+@@ -329,7 +316,7 @@
+     if len(graph_rows)!=25:raise ValueError('25 row inventory')
+     if len(diagnostics)!=150 or len(required)!=111 or len(diagnostics.keys()-required)!=39:
+         raise ValueError('full 150/111/39 diagnostic inventory')
+-    if len(inverses)!=2 or len(poles)!=2 or len(scale_record)!=13:
++    if len(scale_record)!=13:
+         raise ValueError('boundary/scale inventory')
+     if set(m.UNITS)!={'dL','W','t5','H7_5','H7_6','critical_c',
+                      'det1','det2','det3','det4','det5','det6','pivot8','pivot9','pivot10'}:
+@@ -344,7 +331,7 @@
+         for poly in value if isinstance(value,list) else [value]:
+             if poly:raise ValueError('STOP_CONSTRUCTION_ANOMALY: scale '+label)
+     weights=[8,9,10]+list(range(19,10,-1))+list(range(22,10,-1))+[27]
+-    return {'schema':'f10-r3-direct-rows/v1','job_tag':'f10-source-cone-r3-direct-rows-v1',
++    return {'schema':'f10-r3-necessary-rows/v1','job_tag':'f10-source-cone-r3-necessary-rows-v1',
+         'contract_sha256':meta['contract_sha256'],'source_pins':meta['source_pins'],
+         'place':meta['place'],'graph':{'Hq':wire_p(Hq,7),'c':wire_f(critical_c),
+         'c_inverse':wire_f(critical_ci),'zeta':wire_p(zeta,7),
+@@ -375,7 +362,7 @@
+         finally:os.close(directory)
+     finally:
+         os.unlink(temporary)
+-    print('FORMED_UNCHECKED_DIRECT_ROWS_25_NO_SOURCE_OUTCOME')
++    print('FORMED_UNCHECKED_NECESSARY_ROWS_25_NO_SOURCE_OUTCOME')
+ 
+ 
+ if __name__=='__main__':

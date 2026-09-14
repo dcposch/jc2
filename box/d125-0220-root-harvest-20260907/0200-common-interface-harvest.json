@@ -1,0 +1,143 @@
+{
+  "pins": {
+    "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py": "12d43c5d91a2756ec27e3931d4ac1bdc984f8bca14ca30906e7e0f71148bb0a6",
+    "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/custody.py": "ea2c0636221954308343c3c851b538cb12ce644501b14515da67ca3bd62b03f4",
+    "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/replay.json": "a39c2dd78a3bea5e5e2d154b19c990c7e6c1ced8c996bcb609b09f281baad0eb",
+    "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/replay.py": "9726d70960f8165d6538158f5c349edd070bf04c78f928c516e3df62e7f929e3",
+    "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/witness.json": "a6b97c690736fb47e519fa7b0f32f662c44ecbdf3ac4f145132eb07e984c08af",
+    "/home/ubuntu/jc2/xmodel/d125-common-to-unequal-interface-discriminator-astra-20260908.md": "4af46f416d1b489a4792a0af017b028327c1b4d0b8778242d76d5e7590c54219",
+    "/home/ubuntu/jc2/xmodel/d125-minimal-monomial-receiver-composition-astra-20260906.md": "7dec79af1aa62946b46ecb209a710dd95e1b226b6b78229a3f232160a5385413",
+    "box/d125-common-to-unequal-interface-discriminator-20260908/custody.json": "7983ce2139dd1570b2585adf20cc42f39b4c7527a0bd292bea41105cb5300c96",
+    "xmodel/d125-common-to-unequal-interface-discriminator-astra-20260908.md.artifact.json": "04b4b620323a577da99140f531ef773d6a9ff40119f11a13377bdc2ebf9bc780"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py",
+        "normal"
+      ],
+      "rc": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a6b97c690736fb47e519fa7b0f32f662c44ecbdf3ac4f145132eb07e984c08af"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py",
+        "wrong-shift"
+      ],
+      "rc": 1,
+      "stderr_sha256": "efa4269120a528dd2ad77ac5decad1ca8c5ed30be665a22b39c8078b549d0db0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py",
+        "omit-lower-slot"
+      ],
+      "rc": 1,
+      "stderr_sha256": "03942d562fad613073b10b03a54ee3e89ba0bdf07a59a5acb936f8360669db4c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py",
+        "drop-mu"
+      ],
+      "rc": 1,
+      "stderr_sha256": "d3b7c532738d6c8ad989814162761252ae444482bd256f1858989a4bf7f0a832",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py",
+        "normal"
+      ],
+      "rc": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a6b97c690736fb47e519fa7b0f32f662c44ecbdf3ac4f145132eb07e984c08af"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py",
+        "wrong-shift"
+      ],
+      "rc": 1,
+      "stderr_sha256": "efa4269120a528dd2ad77ac5decad1ca8c5ed30be665a22b39c8078b549d0db0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py",
+        "omit-lower-slot"
+      ],
+      "rc": 1,
+      "stderr_sha256": "03942d562fad613073b10b03a54ee3e89ba0bdf07a59a5acb936f8360669db4c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-common-to-unequal-interface-discriminator-20260908/check.py",
+        "drop-mu"
+      ],
+      "rc": 1,
+      "stderr_sha256": "d3b7c532738d6c8ad989814162761252ae444482bd256f1858989a4bf7f0a832",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Root whole terminal report/checker/replay read after transaction/current pins. Common3 natural map obstruction and common4 face-centering GAP only; commuting degree-five control is not nonzero-J source. No actual high powers/CAS/source stream.",
+  "seconds": 1.910316607914865,
+  "status": "PASS",
+  "utc": "2026-09-08T02:00:43.441306+00:00"
+}

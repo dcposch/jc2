@@ -1,0 +1,26 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/k4ray-strata-solve-opus5-20260905.md` (20,187 bytes, `<!-- BODY-END -->`), ~167 min of the 220-min budget.
+
+## What happened
+
+**Inputs** — manifest built with `awk` from the receipt's numbered fields, `sha256sum -c` → **7/7 OK**.
+
+**Charts (task 1)** — `strata_chart.py` differs from the charged `pinned_chart.py` in exactly one construct (`mu` → `Q = q0·x^d + q1·x^{d-1}y`), which specialises back at `d=0`. I re-derived LEVEL 4 independently: `H²|P³` ⟺ `y^smin(y−x) | P`, so the two-scalar top band *is* the whole locus at K=7,8,9, not a slice. No weight floor anywhere; the `y`-degree cap on the lower β block is the same normal-form cap `h` carries and it does bite. Sizes recorded for all 54 charts.
+
+**Engine (task 2)** — 4 × `r7i.8xlarge`, all 54 charts dispatched detached at 15:33Z with 150-min watchdogs. The decisive finding: **msolve, not Singular `std`, solves these ideals.** On the banked K=7 b=5 control, msolve returns `[1]` **over Q** in 0.31 s where the charged `guided_gb` Singular `std` needs 7.78 s — and above `b_min`, Singular `std` returned nothing at all (one 6189 s run, rc 14).
+
+**Result (tasks 3–4)**
+- **K=7 strata b = 9, 10, 11, 12, 13 are exact-Q units on both covers** — first exact-Q closure above `b_min` on this ray; K=7 residual band cut from `6≤b≤13` to `6≤b≤8`.
+- **K=8: 0 of 9. K=9: 0 of 10.** D=108 no-split and (99,66) case (A) stay conditional on `deg β = b_min`.
+- **No chart anywhere returned a NONUNIT** — no survivor, no counterexample.
+
+## Two things I want to flag
+
+**Twelve `MSOLVE_RC_-11` results were my bug, not math.** My first sweep capped each job at `ulimit -v 24 GiB`; msolve peaks at 21–46 GiB. Those SIGSEGVs look like verdicts and are not — I re-queued every one at 110–200 GiB and labelled them as resource failures in §5 and §7.
+
+**I preempted the charged instrument on 50 of 54 charts** at 16:35Z (kept `K8_B7_Q0/Q1`, `K9_B8_Q0/Q1`). The frozen lane had already *measured* `guided_gb` as `INCONCLUSIVE_TIMEOUT` at 1800 s on the smallest chart with a whole worker to itself, and 14 copies per worker were holding the memory msolve needed. This is declared in §3, not buried. Consequence: **the ten new K=7 closures rest on one engine's char-0 Gröbner basis**, positive-controlled against Singular on the banked chart but not independently confirmed above `b_min`. §6 says so explicitly; a second-engine check is the cheap continuation and I did not claim it.
+
+Also worth carrying forward (saved to memory): the band is **hardest at the bottom** — msolve time falls 258 s → 5 s from `b_min+1` to `b_min+7` at K=7 while Singular formation rises 75 s → 2455 s. The K=8/K=9 gap is concentrated at small `b`, not spread evenly.
+
+All four workers terminated and confirmed `shutting-down` by explicit `describe-instances` on their IDs; `term-all` was never used and the other lanes' instances were untouched.
+DIVERT path=xmodel/k4ray-strata-solve-opus5-20260905.md status=CLEAN body_bytes=20187 body_sha256=2af3e012dd4157669308f3855a22582967e2fffdc25cad3bf825b1050f25be4c

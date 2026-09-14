@@ -1,0 +1,63 @@
+{
+  "argv_count": 3,
+  "argv_sha256": "f4278258f7fcb1b07b605e192b56a8e6468820be4f84b562cb93828d07ba0fa4",
+  "caps": {
+    "cpu_seconds": null,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 51539607552,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 600.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/factored-jacobian-pilot-20260906",
+  "enforcement": {
+    "cpu": "disabled",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/Singular",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/factored-jacobian-pilot-20260906",
+  "max_observed_group_rss_bytes": 15588319232,
+  "pgid": 27151,
+  "pid": 27151,
+  "resource": null,
+  "runner_exit_code": 0,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=180532",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/factored-jacobian-pilot-20260906/singular_parse.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 56,
+    "path": "/home/ubuntu/factored-jacobian-pilot-20260906/singular_parse.stdout",
+    "sha256": "d1d9649280f33d2bb11b34161268e0e4c80e99eedf926dc2ab495aef8fb75162"
+  },
+  "telemetry_path": "/home/ubuntu/factored-jacobian-pilot-20260906/singular_parse.telemetry.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-06T10:17:38.236281Z",
+  "utc_start": "2026-09-06T10:16:00.851670Z",
+  "wall_elapsed_seconds": 97.384616004
+}

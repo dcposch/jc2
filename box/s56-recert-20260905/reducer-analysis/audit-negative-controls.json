@@ -1,0 +1,48 @@
+{
+  "custody": {
+    "audit_script": "box/s56-recert-20260905/reducer-analysis/audit_triangular_quotient.py",
+    "audit_script_sha256": "bc7de98a7bf58d991fc37664b916c9bdfda942b33b536f4c4cefbc240b959fc1",
+    "dump_sha256": "b069714bf78d115a59ffcf0a8922f8fa3fc95d3bbaa1c2da9637023894601d5e",
+    "meta_sha256": "2ff27194699d5e3ccc1ca8e1ce1134c9cb68c4060bc692c9c0c69d57539d8395",
+    "plan_sha256": "7719255b43893452c2655fffd676da6091c5c78ad1f979cdbe7e331df22eebcc",
+    "script_sha256": "774a45b1a47cd6475b785a2f3de4c2ba58305236ed3b08664c00b7bd6376a419"
+  },
+  "negative_controls": [
+    {
+      "label": "wrong_characteristic",
+      "observed_failure": "requested characteristic differs from script",
+      "status": "PASS"
+    },
+    {
+      "label": "unexplained_unknown_drop",
+      "observed_failure": "Reduced ring variables differ from exactly active(plan)+T",
+      "status": "PASS"
+    },
+    {
+      "label": "changed_nonpivot_row_inventory",
+      "observed_failure": "JOld is not exactly every non-pivot row + branch + Rabinowitsch",
+      "status": "PASS"
+    },
+    {
+      "label": "corrupt_pivot_replacement",
+      "observed_failure": "missing/ambiguous pivot proof instruction at step 0",
+      "status": "PASS"
+    },
+    {
+      "label": "truncated_dump",
+      "observed_failure": "dump lacks a unique SCRIPT_DONE marker",
+      "status": "PASS"
+    },
+    {
+      "label": "reordered_runtime_pivots",
+      "observed_failure": "runtime PIVOT_OK sequence differs from audited plan",
+      "status": "PASS"
+    }
+  ],
+  "positive_controls": {
+    "runtime_dump": "PASS",
+    "static": "PASS"
+  },
+  "schema": "jc2.s56-recert.independent-triangular-audit-controls/v1",
+  "status": "PASS"
+}

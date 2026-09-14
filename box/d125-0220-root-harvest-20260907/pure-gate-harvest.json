@@ -1,0 +1,82 @@
+{
+  "adaptations": [
+    "no bad\u00b2, random R*C or actual RZ/RZ\u00b2 expansions; selected coefficients and generator lift/factor reasoning instead"
+  ],
+  "evidence_correction": "producer weight/face mutations are predicate flips, not changed objects; only three genuine producer mutations claimed",
+  "pins": {
+    "box/d125-exceptional-pure-discriminator-20260907/check.py": "138d63606e1cfe17b7b4167e2dc4c03905b647fd4e6d3b68fc191c2278ea9b1b",
+    "box/d125-exceptional-pure-discriminator-20260907/replay.json": "b08234ebd0b287866a6e82a90ad2c9c8cb019aa9801437fbfc307c9fbbb8b792",
+    "box/d125-exceptional-pure-gate-fable5-20260907/controls.py": "b1c5c50aa912c5dd6cbda299fc1fddc63f7e0bd325bb78f9ce9e199db998b2df",
+    "box/d125-exceptional-pure-gate-fable5-20260907/input-pins.sha256": "0c6a3311261982f29988b2dba5788dfac7a61f34fbdc32b00889d1cde95130d6",
+    "box/d125-exceptional-pure-gate-fable5-20260907/replay.json": "ad57e34f10cfb10012c24372ee9bb0fe6ecde7bb8e46c69b050ba1ca21737283",
+    "box/d125-exceptional-pure-gate-fable5-20260907/witness-O.json": "0b4ed21e2755ca86398ef551fc6f6b484255a9fca23803a9b809419f990dea3a",
+    "box/d125-exceptional-pure-gate-fable5-20260907/witness.json": "0b4ed21e2755ca86398ef551fc6f6b484255a9fca23803a9b809419f990dea3a",
+    "xmodel/d125-exceptional-center-discriminator-astra-20260907.md": "3c9aee528612bd75fb2f77200565a874b9f16baf1a142302df4392c5e94c46d7",
+    "xmodel/d125-exceptional-pure-discriminator-astra-20260907.md": "9b3538b8d7d65477f5fb273ce8abb4b9556c8529dc374dc9affb4266f2793fb8",
+    "xmodel/d125-exceptional-pure-gate-fable5-20260907.md": "334d4ac6cec7935575ace4952daff512af35b6187bc5aa1e08eb40a31d77ce8a",
+    "xmodel/d125-low-jet-saturation-discriminator-astra-20260907.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-zero-k-boundary-classification-astra-20260907.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2"
+  },
+  "runs": [
+    {
+      "mode": "positive",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "b1d4a4f461787ad484e14ca7c661ffaf4f744bac48fd011cf54a1637c8b4db10"
+    },
+    {
+      "mode": "--mutate-drop-vm1-row",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 153, in <module>\n    need((HERE/'witness.json').read_bytes()==(HERE/'witness-O.json').read_bytes(),'normal/-O witness equality')\n                       ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 84, in check\n    need(Usol==Sp,'both lift rows force U = u3*S')\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 52, in need\n    if not ok: raise RuntimeError('FAIL: '+msg)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: both lift rows force U = u3*S\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-identity-delta-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 153, in <module>\n    need((HERE/'witness.json').read_bytes()==(HERE/'witness-O.json').read_bytes(),'normal/-O witness equality')\n                       ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 118, in check\n    need(br(A,B)==add(br(Rr,E),br(Fr,Gr)),'identity (I) at random moving instance %d'%trial)\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 52, in need\n    if not ok: raise RuntimeError('FAIL: '+msg)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: identity (I) at random moving instance 0\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-jet-coefficient",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 153, in <module>\n    need((HERE/'witness.json').read_bytes()==(HERE/'witness-O.json').read_bytes(),'normal/-O witness equality')\n                       ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 123, in check\n    need(coef(RC,0,3)==-3*coef(C,0,0) and coef(RC,0,13)==coef(C,0,8),'[p3]RC=-3C(0), [p13]RC=[p8]C')\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 52, in need\n    if not ok: raise RuntimeError('FAIL: '+msg)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: formal chain-rule bracket is exactly (5/9) eps^3 R Z^2 [R,Z]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "positive",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "b1d4a4f461787ad484e14ca7c661ffaf4f744bac48fd011cf54a1637c8b4db10"
+    },
+    {
+      "mode": "--mutate-drop-vm1-row",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 153, in <module>\n    need((HERE/'witness.json').read_bytes()==(HERE/'witness-O.json').read_bytes(),'normal/-O witness equality')\n                       ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 84, in check\n    need(Usol==Sp,'both lift rows force U = u3*S')\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 52, in need\n    if not ok: raise RuntimeError('FAIL: '+msg)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: both lift rows force U = u3*S\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-identity-delta-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 153, in <module>\n    need((HERE/'witness.json').read_bytes()==(HERE/'witness-O.json').read_bytes(),'normal/-O witness equality')\n                       ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 118, in check\n    need(br(A,B)==add(br(Rr,E),br(Fr,Gr)),'identity (I) at random moving instance %d'%trial)\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 52, in need\n    if not ok: raise RuntimeError('FAIL: '+msg)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: identity (I) at random moving instance 0\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "--mutate-jet-coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 153, in <module>\n    need((HERE/'witness.json').read_bytes()==(HERE/'witness-O.json').read_bytes(),'normal/-O witness equality')\n                       ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 123, in check\n    need(coef(RC,0,3)==-3*coef(C,0,0) and coef(RC,0,13)==coef(C,0,8),'[p3]RC=-3C(0), [p13]RC=[p8]C')\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-exceptional-pure-gate-fable5-20260907/controls.py\", line 52, in need\n    if not ok: raise RuntimeError('FAIL: '+msg)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: FAIL: formal chain-rule bracket is exactly (5/9) eps^3 R Z^2 [R,Z]\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "pure necessary first contact only; uniform exclusion unresolved",
+  "seconds": 2.195732088992372,
+  "status": "PASS_SCOPED"
+}

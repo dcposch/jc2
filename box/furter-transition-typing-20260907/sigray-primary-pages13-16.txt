@@ -1,0 +1,219 @@
+   Remark: Actually F 0 and F ∗ c also depends on κ, but for simplicity
+we don’t denote this dependence by the more correct but more complicated
+F ∗κ c or Fκ0 .
+
+Statement 3.5. Set κ ∈ N∗ , F ∈ Ta and c ∈ C. Assume that F ∗ c exists.
+Then (F ∗ c)0 = F.
+
+Statement 3.6. Let κ ∈ N∗ be suitable, F ∈ Ta with κπ(F) ∈ N∗ . Then
+there exists c ∈ C such that F = F 0 ∗ c.
+
+Notation 3.9. Let F ∈ Ty,a and h(x, y) be a polynomial. Assume that
+F = IP (u) for some P ∈ Ra \ Ra and u ∈ Q and Ω(F) is j∈Q cj x− j.
+                                          +
+                                                        P
+Define                               X
+                   ηF := xπ(F ) (y −      cj x−j ).
+                                           j∈Q, j<π(F )
+
+Define the expression hF (x, η) by h(x, y) = hF (x, ηF ). The same way can be
+defined the expression hF (η, y) in the case F ∈ Tx,a , κπ(F) ∈ N.
+
+Statement 3.7. Let κ ∈ N∗ be suitable, h(x, y) be a polynomial, F ∈ Ty,a .
+Then                              ∞
+                                 X
+                       F
+                      h (x, η) =       xj/κ pj (η),                  (5)
+                                         j=−∞
+
+where pj is always a polynomial, and except of finitely many j, pj ≡ 0.
+   Set F ∈ Tx,a with κπ(F) ∈ N. Then
+                                          ∞
+                                          X
+                              F
+                            h (η, y) =          y j/κ pj (η),                       (6)
+                                         j=−∞
+
+
+where pj is always a polynomial, and except of finitely many j, pj ≡ 0.
+
+Notation 3.10. Set F ∈ Ty,a with π(F) ∈ Q+ . Assume hF (x, η) has the
+form (5). Then define h+      F (ξ, η) := ξ
+                                            j/κ
+                                                pj (η), where j is the largest index for
+which pj 6≡ 0.
+    Set F ∈ Tx,a with π(F) ∈ Q+ . Assume hF (η, y) has the form (6). Then
+define h+F (ξ, η) := ξ
+                       j/κ
+                           pj (η), where j is the largest index for which pj 6≡ 0.
+    In both cases define dh,F := κj and ph,F := pj .
+
+Notation 3.11. Set F ∈ Va , F = IP (u). Let v ∈ Q+ be the maximal
+element of IP ([0, u]) ∩ V1,a . Assume IP (v) = IQ (v) for some Q ∈ Ra \ Ra
+such that the Puiseux characteristics of Q is (κ, β1 , . . . , βm ), and v = αj for
+some 0 ≤ j ≤ m.
+
+
+                                          13
+   Let h(x, y) be a polynomial. Define
+
+                               Dh,F := κF dh,F .
+
+Define DF := Df,F .
+
+Statement 3.8. For any polynomial h(x, y), and for any F ∈ Va , one has
+Dh,F ∈ Z.
+                             Qs              αj
+Notation 3.12. Set p(z) =       j=1 (z − zj ) , zj ∈ C are pairwise different,
+αj ∈ N. Set z ∈ C. Define
+                                 
+                                    αj     if z = zj
+                   mult(p, z) =
+                                    0      otherwise.
+
+Proposition 3.1. Let h(x, y) be a squarefree polynomial. Let Rh be the
+finite set of Riemann surfaces of the fiber h(x, y) = 0. Let Rh∗ be the smooth
+compactification of Rh . By natural restriction we can define the meromorphic
+functions x and y.
+    Assume that κ ∈ N∗ is a multiple of any order of x-pole.
+    Let c0 , c1 . . . be a sequence of complex numbers. Define the sequence of
+expressions ηn by the following way
+                                                 n−1
+                                                 X
+                          ηn := x   n/κ
+                                          (y −         cj x−j ).
+                                                 j=0
+
+
+Define hn by hPn (x, ηn ) := h(x, y). Then, as we saw by the propoerties of
+h , hn (x, η) = dj=m xj/κ pj (η), for some polynomials pj , where pm 6= 0 and
+ F
+
+pd 6= 0.
+
+ (∗) deg(pd ) is the number of the Puiseux series of the fiber h(x, y) = 0 in
+     the form
+                              Xn−1            ∞
+                                              X
+                          y=       cj x−j/κ +   dj x−j/κ .
+                                j=0                    j=n
+
+
+ (∗∗) mult(pd , cn ) is the number of the Puiseux series of the fiber h(x, y) = 0
+      in the form
+                                Xn             ∞
+                                               X
+                                        −j/κ
+                            y=     cj x      +     dj x−j/κ .
+                               j=0                 j=n+1
+
+
+A similar statement is true for the Puiseux series of the fiber h(x, y) = 0 in
+the form (4).
+
+                                           14
+    Proof. Let R∗ be the smooth closure of the finite set of Riemann surfaces
+of the fiber h(tκ , y) = 0. Then x, y and ηn can be considered as meromorphic
+functions on R∗ . Moreover, there is a one-to-one correspondence between
+the set of Puiseux series in the form (4) and the set {P ∈ R∗ : x(P ) =
+∞ and y(P ) ∈ C.
+
+             deg(pd ) = #{P ∈ R∗ : x(P ) = ∞ and ηn (P ) ∈ C},
+
+which implies (∗).
+
+          mult(pd , cn ) = #{P ∈ R∗ : x(P ) = ∞ and ηn (P ) = cn },
+
+which implies (∗∗).                                                                     
+
+Statement 3.9. Let h(x, y) be a polynomial. Assume κ ∈ N∗ is suitable and
+has the property of Proposition 3.1. Then for any F ∈ Ta with κπ(F) ∈ N,
+and for any c ∈ C such that F ∗ c is defined, we have
+
+ (i) mult(ph,F , c) = deg(ph,F ∗c ).
+                                              Pm                 j
+                                                                                Pl       j
+ (ii) If l = deg(ph,F ∗c ) and ph,F (η) =          j=l aj (η − c) and pF ∗c =    j=0 bj η ,
+       then al = bl .
+
+ (iii) dh,F ∗c = dh,F − mult(ph,F , c)/κ.
+
+   Proof. Set h := h1 . . . hk , where h1 , . . . hk are squarefree polynomials.
+Since h+
+       F = (h1 )F . . . (hk )F , it is enough to prove our statement for squarefree
+polynomials.
+   Property (i) follows from Proposition3.1. Let us prove (ii) and (iii). As-
+sume F ∈ Ty,a . Set G := F ∗ c,
+                                             n
+                                             X
+                              F
+                             h (x, η) =            xj/κ pj (η),
+                                             j=k
+
+
+where dF = nκ , pn = ph,F . Since ηG = x1/κ (ηF − c), we obtain
+                                       l
+                                       X
+                         hG (x, η) =         xj/κ pj (x−κ η + c).
+                                       j=k
+
+
+The expression above contains the term al x(n−l)κ η l , moreover, for any other
+term axs η l one has s < n−l
+                          κ
+                             = d − κl . Since al 6= 0, by (i) we obtain (ii) and
+(iii).                                                                         
+
+
+                                             15
+Statement 3.10. Set P ∈ Ra \Ra . Define the functions ω, ω ∗ : Q∩[0, ∞] →
+Q by ω(u) := dh,I(u) and ω ∗ (u) := deg(ph,I(u) ). Then we have the following
+properties for ω and ω ∗ .
+
+ (i) ω and ω ∗ are monotone decreasing.
+
+ (ii) ω(u) is continuous.
+
+ (iii) Except of finitely many rational points, the graph of ω(u) is locally on
+       a line with slope −ω ∗ (u).
+
+   This has the following corollary
+
+Statement 3.11. Let h(x, y) be a polynomial, F = F 0 ∗ c ∈ Ta . Then
+
+ (i) mult(ph,F 0 , c) ≥ deg(ph,F ).
+
+ (ii) dh,F − mult(ph,F 0 , c)/κ ≤ dh,F ≤ dh,F 0 − deg(ph,F )/κ.
+
+Moreover, if in one of the above inequalities equality holds, then each inequal-
+ity is actually an equality.
+
+Notation 3.13. Set F ∈ Ta with π(F) ∈ Q define pF := pf,F and dF := df,F .
+
+Statement 3.12. Let h(x, y) be a polynomial. Then h+                     +
+                                                              (0,y) = h(0,1) and
+h+         +
+ (0,y) = h(0,1) . As consequence we obtain dh,(0,y) ≥ deg(ph,(0,x) ) and dh,(0,x) ≥
+deg(ph,(0,y) ).
+
+Statement 3.13. For any P ∈ Ra \ Ra there exists a unique u ∈ Q such
+dI(u) = 0.
+
+Notation 3.14. Define
+Ta+ := {F ∈ Ta : π(F) ∈ Q and dF > 0} ,
+Ta0 := {F ∈ Ta : π(F) ∈ Q and dF = 0}
+Ta− := {F ∈ Ta : π(F) ∈ Q and dF < 0}.
+
+Statement 3.14. For any a, b ∈ C there exists an isomorphism
+Ma,b : (Ta+ ∪ Ta0 ) → (Tb+ ∪ Tb0 ) with the following properties:
+
+ (i) For any F ∈ Ta+ ∪ Ta0 one has π(Ma,b (F)) = π(F).
+                                     +
+ (ii) For any F ∈ Ta+ ∪ Ta0 one has fM a,b (F )
+                                                = fF+ .
+
+
+
+
+                                        16
+

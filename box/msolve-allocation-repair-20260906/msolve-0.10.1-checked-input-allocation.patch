@@ -1,0 +1,219 @@
+--- a/src/msolve/iofiles.c
++++ b/src/msolve/iofiles.c
+@@ -21,6 +21,7 @@
+ #include "getdelim.h"
+ 
+ #include "streams.h"
++#include "checked-input-size.h"
+ 
+ static inline void store_exponent(const char *term, data_gens_ff_t *gens, int64_t pos)
+ {
+@@ -393,6 +394,8 @@
+         line2 = strchr(line, ',');
+         while (line2 != NULL)
+         {
++            if (nvars == INT32_MAX)
++                msolve_input_fail("too many variables");
+             nvars++;
+             // line points to a comma, which must be followed by one or more characters
+             // --> line+1 is valid
+@@ -444,6 +447,8 @@
+             }
+             trim_polynomial(line);
+             if (strcmp(line, "0") != 0) {
++                if (ngens == INT32_MAX)
++                    msolve_input_fail("too many generators");
+                 ngens++;
+             }
+         }
+@@ -509,7 +514,7 @@
+   char *tmp = NULL;
+   nelts_t nterms  = 1;
+   /** remove useless whitespaces at the beginning */
+-  int i = 0;
++  size_t i = 0;
+   while (strncmp(&whitespace_splicer, line+i, 1) == 0)
+     i++;
+   /** check if first non-whitespace char is "-", set term counter -1 in this case */
+@@ -518,11 +523,15 @@
+   /** now count terms */
+   tmp = strchr(line, add_splicer);
+   while (tmp != NULL) {
++    if (nterms == INT32_MAX)
++      msolve_input_fail("too many terms in one polynomial");
+     nterms++;
+     tmp = strchr(tmp+1, add_splicer);
+   }
+   tmp = strchr(line, minus_splicer);
+   while (tmp != NULL) {
++    if (nterms == INT32_MAX)
++      msolve_input_fail("too many terms in one polynomial");
+     nterms++;
+     tmp = strchr(tmp+1, minus_splicer);
+   }
+@@ -648,8 +657,12 @@
+             continue;
+         }
+         *nterms  = get_number_of_terms(line);
++        uint32_t total;
++        if (!msolve_input_terms_add(*all_nterms, *nterms,
++                                   gens->field_char == 0, &total))
++            msolve_input_fail("term count exceeds parser int32_t positions");
+         gens->lens[i] = *nterms;
+-        *all_nterms += *nterms;
++        *all_nterms = total;
+     }
+     free(line);
+     gens->nterms = *all_nterms;
+@@ -910,8 +923,11 @@
+     if(getline(&line, &size, fh) !=-1){
+     }
+ 
+-    gens->cfs = (int32_t *)(malloc(sizeof(int32_t) * all_nterms));
+-    gens->exps = (int32_t *)calloc(all_nterms * gens->nvars, sizeof(int32_t));
++    const size_t exponent_count = msolve_input_exponent_count(all_nterms, gens->nvars);
++    gens->cfs = (int32_t *)msolve_input_array((size_t)all_nterms,
++                                            sizeof(int32_t), 0);
++    gens->exps = (int32_t *)msolve_input_array(
++        exponent_count, sizeof(int32_t), 1);
+     for (int32_t i = 0; i < *nr_gens; i++) {
+         do {
+             len = getdelim(&line, &size, ',', fh);
+@@ -950,15 +966,19 @@
+     if(getline(&line, &size, fh) !=-1){
+     }
+ 
+-    gens->cfs = (int32_t*)(malloc(sizeof(int32_t) * all_nterms));
+-
+-    gens->mpz_cfs = (mpz_t **)(malloc(sizeof(mpz_t *) * 2 * all_nterms));
+-    for(long i = 0; i < 2 * all_nterms; i++){
+-      gens->mpz_cfs[i]  = (mpz_t *)malloc(sizeof(mpz_t));
++    const size_t exponent_count = msolve_input_exponent_count(all_nterms, gens->nvars);
++    gens->cfs = (int32_t *)msolve_input_array((size_t)all_nterms,
++                                            sizeof(int32_t), 0);
++
++    const size_t q_count = msolve_input_product(2, (size_t)all_nterms);
++    gens->mpz_cfs = (mpz_t **)msolve_input_array(q_count, sizeof(mpz_t *), 0);
++    for(size_t i = 0; i < q_count; i++){
++      gens->mpz_cfs[i]  = (mpz_t *)msolve_input_array(1, sizeof(mpz_t), 0);
+       mpz_init(*(gens->mpz_cfs[i]));
+     }
+ 
+-    gens->exps = (int32_t *)calloc(all_nterms * gens->nvars, sizeof(int32_t));
++    gens->exps = (int32_t *)msolve_input_array(
++        exponent_count, sizeof(int32_t), 1);
+     for (int32_t i = 0; i < *nr_gens; i++) {
+         do {
+             len = getdelim(&line, &size, ',', fh);
+@@ -993,7 +1013,9 @@
+   gens->change_var_order  = -1;
+   gens->linear_form_base_coef = 0;
+   gens->rand_linear = 0;
+-  gens->lens = (int32_t *)malloc(sizeof(int32_t) * ngens);
++  if (nvars <= 0 || ngens < 0)
++    msolve_input_fail("invalid input dimensions");
++  gens->lens = (int32_t *)msolve_input_array((size_t)ngens, sizeof(int32_t), 0);
+ }
+ 
+ static int duplicate_vnames(char **vnames, int32_t nvars) {
+@@ -1016,20 +1038,20 @@
+                                       int32_t *field_char,
+                                       int32_t *nr_gens, data_gens_ff_t *gens){
+   *nr_vars = get_nvars(fn);
+-  if (*nr_vars == -1)
+-    fprintf(ERRSTREAM,"Bad file format (first line).\n");
++  if (*nr_vars <= 0)
++    msolve_input_fail("invalid first line");
+ 
+   *nr_gens = get_ngenerators(fn);
+-  if (*nr_gens == -1)
+-    fprintf(ERRSTREAM,"Bad file format (generators).\n");
++  if (*nr_gens < 0)
++    msolve_input_fail("invalid generator count");
+ 
+   const int max_line_size  = 1073741824;
+-  char *line  = (char *)malloc((nelts_t)max_line_size * sizeof(char));
++  char *line = (char *)msolve_input_array((size_t)max_line_size, sizeof(char), 0);
+ 
+   FILE *fh  = fopen(fn,"r");
+ 
+   /** allocate memory for storing variable names */
+-  char **vnames = (char **)malloc((*nr_vars) * sizeof(char *));
++  char **vnames = (char **)msolve_input_array((size_t)*nr_vars, sizeof(char *), 0);
+   get_variables(fh, line, max_line_size, nr_vars, gens, vnames);
+   if (duplicate_vnames(vnames, *nr_vars) == 1) {
+       for(int32_t i = 0; i < *nr_vars; i++){
+--- /dev/null
++++ b/src/msolve/checked-input-size.h
+@@ -0,0 +1,71 @@
++/* Checked file-input dimensions; no change to msolve's int32_t interfaces. */
++#ifndef MSOLVE_CHECKED_INPUT_SIZE_H
++#define MSOLVE_CHECKED_INPUT_SIZE_H
++#include <stdint.h>
++#include <stddef.h>
++#include <stdio.h>
++#include <stdlib.h>
++
++static inline void msolve_input_fail(const char *what)
++{
++    fprintf(stderr, "msolve input size/allocation error: %s\n", what);
++    exit(EXIT_FAILURE);
++}
++
++/* The predicate does not allocate and leaves *out unchanged on failure. */
++static inline int msolve_input_size_mul(size_t a, size_t b, size_t *out)
++{
++    if (a != 0 && b > SIZE_MAX / a)
++        return 0;
++    *out = a * b;
++    return 1;
++}
++
++static inline size_t msolve_input_product(size_t a, size_t b)
++{
++    size_t result;
++    if (!msolve_input_size_mul(a, b, &result))
++        msolve_input_fail("size_t product overflow");
++    return result;
++}
++
++static inline size_t msolve_input_array_bytes(size_t count, size_t width)
++{
++    size_t bytes = msolve_input_product(count, width);
++    /* Keep pointer differences and the historical int64_t offsets valid. */
++    if (bytes > PTRDIFF_MAX)
++        msolve_input_fail("array exceeds PTRDIFF_MAX bytes");
++    return bytes;
++}
++
++static inline size_t msolve_input_exponent_count(uint32_t terms, int32_t vars)
++{
++    if (vars <= 0)
++        msolve_input_fail("nonpositive exponent dimension");
++    size_t count = msolve_input_product((size_t)terms, (size_t)vars);
++    (void)msolve_input_array_bytes(count, sizeof(int32_t));
++    return count;
++}
++
++static inline void *msolve_input_array(size_t count, size_t width, int clear)
++{
++    size_t bytes = msolve_input_array_bytes(count, width);
++    /* The zero ideal may have zero entries; do not depend on malloc(0). */
++    void *p = clear ? calloc(bytes ? count : 1, bytes ? width : 1)
++                    : malloc(bytes ? bytes : 1);
++    if (p == NULL)
++        msolve_input_fail("allocator returned NULL");
++    return p;
++}
++
++/* Q uses doubled signed-int32 coefficient positions; Fp uses single ones. */
++static inline int msolve_input_terms_add(uint32_t a, uint32_t b,
++                                        int rational, uint32_t *out)
++{
++    const uint32_t limit = rational ? INT32_MAX / 2 : INT32_MAX;
++    if (a > limit || b > limit - a)
++        return 0;
++    *out = a + b;
++    return 1;
++}
++#endif

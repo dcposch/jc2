@@ -1,0 +1,670 @@
+{
+  "contactGateDisabledLaunchFirst": {
+    "chunk_id": "354dc8",
+    "wall_time_seconds": 1.001264889,
+    "session_id": 67376,
+    "original_token_count": 555,
+    "output": "PRELAUNCH 2026-09-10 05:34:21.866237301 UTC\nFIXED_128_MATCH AUTHORITY e1f7880bf586bfaf209041ae0ac000eefe0844e31067122ec9d8ba643323553a\nRunning as unit: jc2-contact-gate-disabled-20260910.service\nPROCESS 2026-09-10 05:34:21.896366895 UTC\nPID 3283 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.stdout --stderr-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.stderr --telemetry-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.sentinel plain \n   3283       1    3283    3283 Rs   12800\n3283 (python3) R 1 3283 3283 0 -1 4194560 2311 0 0 0 2 0 0 0 20 0 1 0 32801 22126592 3262 18446744073709551615 4325376 7353021 140735419451648 0 0 0 0 16781312 2 0 0 0 17 9 0 0 0 0 0 10657224 12220544 833441792 140735419456248 140735419457143 140735419457143 140735419457511 0\npid:[4026531836]\nPROCESS 2026-09-10 05:34:21.945096904 UTC\nPID 3302 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.sentinel plain \n   3302    3283    3302    3302 Rs   10216\n3302 (python3) R 3283 3302 3302 0 -1 4194304 1353 0 0 0 1 0 0 0 20 0 1 0 32807 18927616 2625 18446744073709551615 4325376 7353021 140732631150608 0 0 0 0 16781312 2 0 0 0 17 13 0 0 0 0 0 10657224 12220544 236462080 140732631153960 140732631154295 140732631154295 140732631154663 0\npid:[4026531836]\n"
+  },
+  "contactGateDisabledLaunchTail": {
+    "chunk_id": "332d25",
+    "wall_time_seconds": 0.000002125,
+    "exit_code": 0,
+    "original_token_count": 50,
+    "output": "MainPID=0\nExecMainStatus=1\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=182220000\nActiveState=failed\nInvocationID=e2a6bdd28d6641f08a554b04a2b924ca\nTERMINAL_CHECK 2026-09-10 05:34:23.016969174 UTC\n"
+  },
+  "contactRefusalPostPins": {
+    "chunk_id": "7679cc",
+    "wall_time_seconds": 0.249741977,
+    "exit_code": 0,
+    "original_token_count": 582,
+    "output": "ALL_REFUSALS_TERMINAL 2026-09-10 05:35:21.233423690 UTC\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-disabled.stdout\ne7e2c24931b935e9bab438f772eafe6d9e8809b011dfff47b0dbed2afcc0b30d  gate-disabled.stderr\nd8b992d95d4efc9ba910828ac8217cb993b8931cb66281999ad3af2383777b29  gate-disabled.telemetry.json\ne7619e7240019e00be707baf32ba0fd8aa488c405eb3282c62c814c75e16d9ec  gate-disabled.caprun.stdout\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-disabled.caprun.stderr\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-wronghost.stdout\n5587d8ccc0b0d1a217cd9489354ca37ccc7853dda157f535aaf10c37f60825c7  gate-wronghost.stderr\n90b8171bd127af63d04c650745ee71f06bc5174b386228a146f0011e6e580487  gate-wronghost.telemetry.json\nf1f90e3fca2967dc606b5e1e68d0e799a8a76784788a92010f5bbf5aea1a3974  gate-wronghost.caprun.stdout\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-wronghost.caprun.stderr\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-argv.stdout\n9b2be141ccc6425564674a8ddd94067154c5a2353102a0a797c0cf7fb607cf0d  gate-argv.stderr\n8b7f00ebeae338c314e6a4921d8d8baa79c700ea25019ee81a969e499bc19a86  gate-argv.telemetry.json\nf0c074b1aa7c23170616bc44470ff03a225a73de911a05452567c47b413810c9  gate-argv.caprun.stdout\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-argv.caprun.stderr\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-cap.stdout\n479259970554c60b951e8bc0523ae9c0c0b6f8bdeaeb945ef37d9d497a004f77  gate-cap.stderr\na74333d278aa0ec0ece1e55e41c812596cdb9d678616e0f52ad8272c21faeebf  gate-cap.telemetry.json\n9bec554af3676dbf2189d740c86d2768cc45aa7b220c304bac951b4fac54fd9b  gate-cap.caprun.stdout\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-cap.caprun.stderr\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-missing-input.stdout\nc4602b0afd87fedb5ede955dafb7680f64aa7ab2cd4142052b2d622cdd9f22b1  gate-missing-input.stderr\n6579b3cb2c82b720251b6d0d080e0ae4fc20ae5279f57ec96a13b4b5fad2ca80  gate-missing-input.telemetry.json\n380ef513b64efd9774c1a1eda70371d93039807c0a8774163a0ec581ec6f8c57  gate-missing-input.caprun.stdout\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-missing-input.caprun.stderr\n"
+  },
+  "contactRefusalChecks": {
+    "gate-disabled": {
+      "metadata": {
+        "argv_count": 8,
+        "argv_sha256": "c1a32d06455db1e5b0ef1ab14ddaf89891e5d8bb25746043554dbfb33d43944d",
+        "caps": {
+          "cpu_seconds": 3,
+          "lifecycle_initial_seconds": 0.05,
+          "lifecycle_sample_seconds": 1,
+          "rss_bytes": 2147483648,
+          "rss_sample_seconds": 0.05,
+          "term_grace_seconds": 0.25,
+          "wall_seconds": 5
+        },
+        "child_exit_code": 1,
+        "child_returncode": 1,
+        "child_signal": null,
+        "cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "enforcement": {
+          "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+          "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+          "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+        },
+        "error": null,
+        "executable": "/usr/bin/python3",
+        "identity_checks": [],
+        "invocation_cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "max_observed_group_rss_bytes": 28762112,
+        "pgid": 3302,
+        "pid": 3302,
+        "resource": null,
+        "runner_exit_code": 1,
+        "runner_signal": null,
+        "schema": "CAPRUN/v1",
+        "start_identity": "boot=369f9722-20ab-475b-a94e-0e4a8de56042;start_ticks=32807",
+        "start_identity_source": "linux-proc-stat-field22",
+        "status": "NORMAL_EXIT",
+        "stderr": {
+          "bytes": 388,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.stderr",
+          "sha256": "e7e2c24931b935e9bab438f772eafe6d9e8809b011dfff47b0dbed2afcc0b30d"
+        },
+        "stdin": {
+          "mode": "devnull",
+          "path": null
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "telemetry_path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-disabled.telemetry.json",
+        "termination": {
+          "cleanup_complete": null,
+          "group_live_before_reap": [],
+          "group_zombies_before_reap": [],
+          "kill_sent": false,
+          "leader_reaped": false,
+          "reason": null,
+          "term_sent": false
+        },
+        "utc_end": "2026-09-10T05:34:22.063744Z",
+        "utc_start": "2026-09-10T05:34:21.937541Z",
+        "wall_elapsed_seconds": 0.126211069
+      },
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py\", line 6, in <module>\n    authorize(sys.argv[1], __file__, \"check\")\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/execution_gate.py\", line 20, in authorize\n    raise RuntimeError(\"no active registered authority\")\nRuntimeError: no active registered authority\n",
+      "reason": "no active registered authority"
+    },
+    "gate-wronghost": {
+      "metadata": {
+        "argv_count": 8,
+        "argv_sha256": "83b67f358d7309227591dc67f67fd0f2b78619d58b333b3888ba01eabfbb5f2e",
+        "caps": {
+          "cpu_seconds": 3,
+          "lifecycle_initial_seconds": 0.05,
+          "lifecycle_sample_seconds": 1,
+          "rss_bytes": 2147483648,
+          "rss_sample_seconds": 0.05,
+          "term_grace_seconds": 0.25,
+          "wall_seconds": 5
+        },
+        "child_exit_code": 1,
+        "child_returncode": 1,
+        "child_signal": null,
+        "cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "enforcement": {
+          "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+          "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+          "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+        },
+        "error": null,
+        "executable": "/usr/bin/python3",
+        "identity_checks": [],
+        "invocation_cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "max_observed_group_rss_bytes": 28033024,
+        "pgid": 3858,
+        "pid": 3858,
+        "resource": null,
+        "runner_exit_code": 1,
+        "runner_signal": null,
+        "schema": "CAPRUN/v1",
+        "start_identity": "boot=369f9722-20ab-475b-a94e-0e4a8de56042;start_ticks=36333",
+        "start_identity_source": "linux-proc-stat-field22",
+        "status": "NORMAL_EXIT",
+        "stderr": {
+          "bytes": 382,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.stderr",
+          "sha256": "5587d8ccc0b0d1a217cd9489354ca37ccc7853dda157f535aaf10c37f60825c7"
+        },
+        "stdin": {
+          "mode": "devnull",
+          "path": null
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "telemetry_path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.telemetry.json",
+        "termination": {
+          "cleanup_complete": null,
+          "group_live_before_reap": [],
+          "group_zombies_before_reap": [],
+          "kill_sent": false,
+          "leader_reaped": false,
+          "reason": null,
+          "term_sent": false
+        },
+        "utc_end": "2026-09-10T05:34:57.324405Z",
+        "utc_start": "2026-09-10T05:34:57.198710Z",
+        "wall_elapsed_seconds": 0.125708083
+      },
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py\", line 6, in <module>\n    authorize(sys.argv[1], __file__, \"check\")\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/execution_gate.py\", line 30, in authorize\n    raise RuntimeError(\"not the registered AWS host\")\nRuntimeError: not the registered AWS host\n",
+      "reason": "not the registered AWS host"
+    },
+    "gate-argv": {
+      "metadata": {
+        "argv_count": 8,
+        "argv_sha256": "2b747fee724364a1008e26cdf4f7395fa9ce4e3a44a172d511f43dc3af51def7",
+        "caps": {
+          "cpu_seconds": 3,
+          "lifecycle_initial_seconds": 0.05,
+          "lifecycle_sample_seconds": 1,
+          "rss_bytes": 2147483648,
+          "rss_sample_seconds": 0.05,
+          "term_grace_seconds": 0.25,
+          "wall_seconds": 5
+        },
+        "child_exit_code": 1,
+        "child_returncode": 1,
+        "child_signal": null,
+        "cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "enforcement": {
+          "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+          "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+          "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+        },
+        "error": null,
+        "executable": "/usr/bin/python3",
+        "identity_checks": [],
+        "invocation_cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "max_observed_group_rss_bytes": 27586560,
+        "pgid": 3890,
+        "pid": 3890,
+        "resource": null,
+        "runner_exit_code": 1,
+        "runner_signal": null,
+        "schema": "CAPRUN/v1",
+        "start_identity": "boot=369f9722-20ab-475b-a94e-0e4a8de56042;start_ticks=36336",
+        "start_identity_source": "linux-proc-stat-field22",
+        "status": "NORMAL_EXIT",
+        "stderr": {
+          "bytes": 436,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.stderr",
+          "sha256": "9b2be141ccc6425564674a8ddd94067154c5a2353102a0a797c0cf7fb607cf0d"
+        },
+        "stdin": {
+          "mode": "devnull",
+          "path": null
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "telemetry_path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.telemetry.json",
+        "termination": {
+          "cleanup_complete": null,
+          "group_live_before_reap": [],
+          "group_zombies_before_reap": [],
+          "kill_sent": false,
+          "leader_reaped": false,
+          "reason": null,
+          "term_sent": false
+        },
+        "utc_end": "2026-09-10T05:34:57.348505Z",
+        "utc_start": "2026-09-10T05:34:57.223261Z",
+        "wall_elapsed_seconds": 0.12525304
+      },
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py\", line 6, in <module>\n    authorize(sys.argv[1], __file__, \"check\")\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/execution_gate.py\", line 43, in authorize\n    raise RuntimeError(\"full parent argv differs from registered capped runner\")\nRuntimeError: full parent argv differs from registered capped runner\n",
+      "reason": "full parent argv differs from registered capped runner"
+    },
+    "gate-cap": {
+      "metadata": {
+        "argv_count": 8,
+        "argv_sha256": "061355698da9e0ac2cada0abbe56f51d4e0d52f5f14c1d5c076226265de5aff5",
+        "caps": {
+          "cpu_seconds": 3,
+          "lifecycle_initial_seconds": 0.05,
+          "lifecycle_sample_seconds": 1,
+          "rss_bytes": 2147483648,
+          "rss_sample_seconds": 0.05,
+          "term_grace_seconds": 0.25,
+          "wall_seconds": 5
+        },
+        "child_exit_code": 1,
+        "child_returncode": 1,
+        "child_signal": null,
+        "cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "enforcement": {
+          "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+          "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+          "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+        },
+        "error": null,
+        "executable": "/usr/bin/python3",
+        "identity_checks": [],
+        "invocation_cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "max_observed_group_rss_bytes": 28164096,
+        "pgid": 3957,
+        "pid": 3957,
+        "resource": null,
+        "runner_exit_code": 1,
+        "runner_signal": null,
+        "schema": "CAPRUN/v1",
+        "start_identity": "boot=369f9722-20ab-475b-a94e-0e4a8de56042;start_ticks=36339",
+        "start_identity_source": "linux-proc-stat-field22",
+        "status": "NORMAL_EXIT",
+        "stderr": {
+          "bytes": 428,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.stderr",
+          "sha256": "479259970554c60b951e8bc0523ae9c0c0b6f8bdeaeb945ef37d9d497a004f77"
+        },
+        "stdin": {
+          "mode": "devnull",
+          "path": null
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "telemetry_path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.telemetry.json",
+        "termination": {
+          "cleanup_complete": null,
+          "group_live_before_reap": [],
+          "group_zombies_before_reap": [],
+          "kill_sent": false,
+          "leader_reaped": false,
+          "reason": null,
+          "term_sent": false
+        },
+        "utc_end": "2026-09-10T05:34:57.388753Z",
+        "utc_start": "2026-09-10T05:34:57.262164Z",
+        "wall_elapsed_seconds": 0.12659789
+      },
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py\", line 6, in <module>\n    authorize(sys.argv[1], __file__, \"check\")\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/execution_gate.py\", line 57, in authorize\n    raise RuntimeError(\"registration is not the exact required CAPRUN argv\")\nRuntimeError: registration is not the exact required CAPRUN argv\n",
+      "reason": "registration is not the exact required CAPRUN argv"
+    },
+    "gate-missing-input": {
+      "metadata": {
+        "argv_count": 8,
+        "argv_sha256": "213960a7864f4ba55abd5a3768bf0830113873aba858fd95c821ce7f4bcf49ee",
+        "caps": {
+          "cpu_seconds": 3,
+          "lifecycle_initial_seconds": 0.05,
+          "lifecycle_sample_seconds": 1,
+          "rss_bytes": 2147483648,
+          "rss_sample_seconds": 0.05,
+          "term_grace_seconds": 0.25,
+          "wall_seconds": 5
+        },
+        "child_exit_code": 1,
+        "child_returncode": 1,
+        "child_signal": null,
+        "cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "enforcement": {
+          "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+          "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+          "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+        },
+        "error": null,
+        "executable": "/usr/bin/python3",
+        "identity_checks": [],
+        "invocation_cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+        "max_observed_group_rss_bytes": 27938816,
+        "pgid": 4112,
+        "pid": 4112,
+        "resource": null,
+        "runner_exit_code": 1,
+        "runner_signal": null,
+        "schema": "CAPRUN/v1",
+        "start_identity": "boot=369f9722-20ab-475b-a94e-0e4a8de56042;start_ticks=36347",
+        "start_identity_source": "linux-proc-stat-field22",
+        "status": "NORMAL_EXIT",
+        "stderr": {
+          "bytes": 442,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.stderr",
+          "sha256": "c4602b0afd87fedb5ede955dafb7680f64aa7ab2cd4142052b2d622cdd9f22b1"
+        },
+        "stdin": {
+          "mode": "devnull",
+          "path": null
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "telemetry_path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.telemetry.json",
+        "termination": {
+          "cleanup_complete": null,
+          "group_live_before_reap": [],
+          "group_zombies_before_reap": [],
+          "kill_sent": false,
+          "leader_reaped": false,
+          "reason": null,
+          "term_sent": false
+        },
+        "utc_end": "2026-09-10T05:34:57.463946Z",
+        "utc_start": "2026-09-10T05:34:57.337856Z",
+        "wall_elapsed_seconds": 0.126098113
+      },
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py\", line 6, in <module>\n    authorize(sys.argv[1], __file__, \"check\")\n  File \"/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/execution_gate.py\", line 67, in authorize\n    raise RuntimeError(\"checker input artifact must be explicitly hash-registered\")\nRuntimeError: checker input artifact must be explicitly hash-registered\n",
+      "reason": "checker input artifact must be explicitly hash-registered"
+    }
+  },
+  "contactValidDummyPostPins": {
+    "chunk_id": "ad8455",
+    "wall_time_seconds": 0.195549007,
+    "exit_code": 0,
+    "original_token_count": 190,
+    "output": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-valid.stdout\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  gate-valid.stderr\nbaec76bd999df5272944620088c202e3a545b70c22e1581bb864725b9e7a88f2  gate-valid.telemetry.json\n6c6419e93c916a7be827f962250694e568c52e56906280c2982b1ad78ce87ea8  gate-valid.sentinel\n5fe52a367bc873f78f37e08666c67afbd059be292c2339207dd7fb63c3ffd7e8  dummy-descendant.stdout\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  dummy-descendant.stderr\n3d45642b120579818154679b2dc876f418844898074f6675510a41a9968b994e  dummy-descendant.telemetry.json\n6c6419e93c916a7be827f962250694e568c52e56906280c2982b1ad78ce87ea8  dummy-descendant.sentinel\nTERMINAL 2026-09-10 05:36:40.121315944 UTC\n"
+  },
+  "contactControlCheck_gate-valid": {
+    "metadata": {
+      "argv_count": 8,
+      "argv_sha256": "3c8cc0cce8aa63a79e3fc46af2626005a700b67c80582710d8819dd39c26976e",
+      "caps": {
+        "cpu_seconds": 3,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 2147483648,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 0.25,
+        "wall_seconds": 5
+      },
+      "child_exit_code": 0,
+      "child_returncode": 0,
+      "child_signal": null,
+      "cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+      "enforcement": {
+        "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+        "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+        "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+      },
+      "error": null,
+      "executable": "/usr/bin/python3",
+      "identity_checks": [],
+      "invocation_cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+      "max_observed_group_rss_bytes": 28205056,
+      "pgid": 5673,
+      "pid": 5673,
+      "resource": null,
+      "runner_exit_code": 0,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "start_identity": "boot=369f9722-20ab-475b-a94e-0e4a8de56042;start_ticks=42738",
+      "start_identity_source": "linux-proc-stat-field22",
+      "status": "NORMAL_EXIT",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdin": {
+        "mode": "devnull",
+        "path": null
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "telemetry_path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.telemetry.json",
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      },
+      "utc_end": "2026-09-10T05:36:01.432047Z",
+      "utc_start": "2026-09-10T05:36:01.248587Z",
+      "wall_elapsed_seconds": 0.183469518
+    },
+    "output": "POSTAUTHORIZE"
+  },
+  "contactControlCheck_dummy-descendant": {
+    "metadata": {
+      "argv_count": 8,
+      "argv_sha256": "29ed2f7ef73322bb086e3e64836663ca606e2f12fd93a7f4cf7594a02ec5651d",
+      "caps": {
+        "cpu_seconds": 3,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1,
+        "rss_bytes": 33554432,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 0.25,
+        "wall_seconds": 5
+      },
+      "child_exit_code": 0,
+      "child_returncode": 0,
+      "child_signal": null,
+      "cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+      "enforcement": {
+        "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+        "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+        "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+      },
+      "error": null,
+      "executable": "/usr/bin/python3",
+      "identity_checks": [
+        {
+          "observed_pgid": 6015,
+          "observed_pid": 6015,
+          "observed_start_identity": "boot=369f9722-20ab-475b-a94e-0e4a8de56042;start_ticks=42861",
+          "result": "MATCH",
+          "stage": "before-term",
+          "utc": "2026-09-10T05:36:02.672426Z"
+        },
+        {
+          "result": "SENT",
+          "signal": 15,
+          "stage": "before-term-send",
+          "utc": "2026-09-10T05:36:02.672506Z"
+        },
+        {
+          "observed_pgid": 6015,
+          "observed_pid": 6015,
+          "observed_start_identity": "boot=369f9722-20ab-475b-a94e-0e4a8de56042;start_ticks=42861",
+          "result": "MATCH",
+          "stage": "before-kill",
+          "utc": "2026-09-10T05:36:02.930368Z"
+        },
+        {
+          "result": "SENT",
+          "signal": 9,
+          "stage": "before-kill-send",
+          "utc": "2026-09-10T05:36:02.930403Z"
+        }
+      ],
+      "invocation_cwd": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910",
+      "max_observed_group_rss_bytes": 89292800,
+      "pgid": 6015,
+      "pid": 6015,
+      "resource": "rss",
+      "runner_exit_code": 125,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "start_identity": "boot=369f9722-20ab-475b-a94e-0e4a8de56042;start_ticks=42861",
+      "start_identity_source": "linux-proc-stat-field22",
+      "status": "RESOURCE_CAP",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdin": {
+        "mode": "devnull",
+        "path": null
+      },
+      "stdout": {
+        "bytes": 447,
+        "path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.stdout",
+        "sha256": "5fe52a367bc873f78f37e08666c67afbd059be292c2339207dd7fb63c3ffd7e8"
+      },
+      "telemetry_path": "/home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.telemetry.json",
+      "termination": {
+        "cleanup_complete": true,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [
+          6015
+        ],
+        "kill_sent": true,
+        "leader_reaped": true,
+        "reason": "rss_cap",
+        "term_sent": true
+      },
+      "utc_end": "2026-09-10T05:36:02.938222Z",
+      "utc_start": "2026-09-10T05:36:02.480443Z",
+      "wall_elapsed_seconds": 0.457780703
+    },
+    "output": "{\"leader_pid\": 6015, \"child_pid\": 6101, \"pgid\": 6015, \"namespace\": \"pid:[4026531836]\"}\n{\"child_pid\": 6101, \"pgid\": 6015, \"namespace\": \"pid:[4026531836]\", \"stat\": \"6101 (python3) R 1 6015 6015 0 -1 4194368 16673 0 0 0 0 2 0 0 20 0 1 0 42874 104697856 21724 18446744073709551615 4325376 7353021 140725408843088 0 0 0 0 16797696 2 0 0 0 17 3 0 0 0 0 0 10657224 12220544 485560320 140725408845082 140725408845428 140725408845428 140725408845799 0\\n\"}\nPOSTAUTHORIZE"
+  },
+  "contactProduceLaunch": {
+    "chunk_id": "dbad57",
+    "wall_time_seconds": 1.001124121,
+    "session_id": 11058,
+    "original_token_count": 663,
+    "output": "MATHEMATICAL_PRELAUNCH 2026-09-10 05:38:20.679923545 UTC\nFIXED_128_MATCH AUTHORITY bf118a245bb76bd406a3478da7c914b70ff7f8ac458b0cd22e80be386a6ef8fc HARD_CUTOFF 2026-09-10T05:52:00Z\nRunning as unit: jc2-contact-produce-20260910.service\nPROCESS 2026-09-10 05:38:20.710943013 UTC\nPID 6793 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/run_capped.py --wall-seconds 600 --cpu-seconds 550 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/produce.stdout --stderr-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/produce.stderr --telemetry-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/produce.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/payload_exec.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/produce.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/produce.sing produce \n   6793       1    6793    6793 Rs   12380\n6793 (python3) R 1 6793 6793 0 -1 4194560 2243 0 0 0 1 0 0 0 20 0 1 0 56683 21831680 3168 18446744073709551615 4325376 7353021 140731168404864 0 0 0 0 16781312 2 0 0 0 17 9 0 0 0 0 0 10657224 12220544 455323648 140731168410458 140731168411261 140731168411261 140731168411623 0\npid:[4026531836]\nPROCESS 2026-09-10 05:38:20.763070853 UTC\nPID 6816 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/payload_exec.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/produce.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/produce.sing produce \n   6816    6793    6816    6816 Rs   15008\n6816 (python3) R 6793 6816 6816 0 -1 4194304 1695 0 0 0 1 0 0 0 20 0 1 0 56688 26034176 3785 18446744073709551615 4325376 7353021 140733993473200 0 0 0 0 16781312 2 0 0 0 17 6 0 0 0 0 0 10657224 12220544 427458560 140733993475452 140733993475709 140733993475709 140733993476071 0\npid:[4026531836]\nPROCESS 2026-09-10 05:38:20.898793875 UTC\nPID 6816 ARGV /usr/bin/Singular -q --no-rc --no-stdlib --no-tty --random=0 /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/produce.sing \n   6816    6793    6816    6816 Ds    9596\n6816 (Singular) D 6793 6816 6816 0 -1 4194304 9861 0 0 0 9 4 0 0 20 0 1 0 56688 32808960 2515 18446744073709551615 96440083152896 96440083155865 140734387643856 0 0 0 0 16777216 87274 1 0 0 17 6 0 0 0 0 0 96440083164080 96440083165200 96440156680192 140734387650040 140734387650172 140734387650172 140734387650534 0\npid:[4026531836]\n"
+  },
+  "contactProduceLaunchTail": {
+    "chunk_id": "9e4944",
+    "wall_time_seconds": 0.000002273,
+    "exit_code": 0,
+    "original_token_count": 79,
+    "output": "bash: line 24: /proc/7389/cmdline: No such file or directory\nMainPID=6793\nExecMainStatus=0\nControlGroup=/system.slice/jc2-contact-produce-20260910.service\nMemoryPeak=63447040\nCPUUsageNSec=2575545000\nActiveState=active\nInvocationID=8e8d1fd3eb724e9b86d34336e9324f6e\nTERMINAL_CHECK 2026-09-10 05:38:23.016818190 UTC\n"
+  },
+  "contactProduceTerminalFirst": {
+    "chunk_id": "bd13f1",
+    "wall_time_seconds": 0.368092735,
+    "exit_code": 0,
+    "original_token_count": 62,
+    "output": "2026-09-10 05:47:57.706481363 UTC\nMainPID=0\nExecMainStatus=125\nControlGroup=\nMemoryPeak=1576419328\nCPUUsageNSec=620277506000\nActiveState=failed\nInvocationID=8e8d1fd3eb724e9b86d34336e9324f6e\n    PID    PPID    PGID STAT     ELAPSED     TIME   RSS\n"
+  },
+  "contactExecStart": {
+    "chunk_id": "5fa8a0",
+    "wall_time_seconds": 1.662246699,
+    "exit_code": 1,
+    "original_token_count": 152,
+    "output": "Running timer as unit: jc2-contact-eliminant-worker-stop-20260910.timer\nWill run service as unit: jc2-contact-eliminant-worker-stop-20260910.service\n2026-09-10 05:28:48.576709178 UTC\n{\n    \"StartingInstances\": [\n        {\n            \"InstanceId\": \"i-08d2a40f272ee9fa2\",\n            \"CurrentState\": {\n                \"Code\": 0,\n                \"Name\": \"pending\"\n            },\n            \"PreviousState\": {\n                \"Code\": 80,\n                \"Name\": \"stopped\"\n            }\n        }\n    ]\n}\n2026-09-10 05:28:50.366123166 UTC\nMainPID=0\nActiveState=inactive\n    PID    PPID    PGID STAT     ELAPSED\n"
+  },
+  "contactExecSSH": {
+    "chunk_id": "0d6942",
+    "wall_time_seconds": 0.84703475,
+    "exit_code": 0,
+    "original_token_count": 198,
+    "output": "2026-09-10 05:30:05.835205651 UTC\nip-172-30-0-72\n369f9722-20ab-475b-a94e-0e4a8de56042\npid:[4026531836]\n/usr/bin/python3.12\n/usr/bin/Singular\na92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223  /usr/bin/python3\na92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223  /usr/bin/python3.12\n90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4  /usr/bin/Singular\n\tlinux-vdso.so.1 (0x000073667b035000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000073667af3c000)\n\tlibz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x000073667af20000)\n\tlibexpat.so.1 => /lib/x86_64-linux-gnu/libexpat.so.1 (0x000073667aef4000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000073667ac00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000073667b037000)\n2026-09-10 05:30:05.880922186 UTC\n"
+  },
+  "contactExecStageCopy": {
+    "chunk_id": "6eeabc",
+    "wall_time_seconds": 0.374629813,
+    "exit_code": 0,
+    "original_token_count": 9,
+    "output": "2026-09-10 05:33:07.846376791 UTC\n"
+  },
+  "contactExecNativeInventory": {
+    "chunk_id": "883a54",
+    "wall_time_seconds": 0.000002103,
+    "exit_code": 0,
+    "original_token_count": 3346,
+    "output": "00f593fe192f2851b8ce23b25cec2488d769beb5a8f63e8c9e563071e1075153  /lib/x86_64-linux-gnu/libffi.so.8\n00f593fe192f2851b8ce23b25cec2488d769beb5a8f63e8c9e563071e1075153  /usr/lib/x86_64-linux-gnu/libffi.so.8.1.4\n02ec7651723193fb9c42dd3ea03a27e36132e45402418cb159950c5db8235296  /usr/lib/python3.12/lib-dynload/ossaudiodev.cpython-312-x86_64-linux-gnu.so\n0813bb994645693895b8f67d282a87eb5ce31471a7b161fe720c0436cf99dfd4  /usr/lib/python3.12/lib-dynload/termios.cpython-312-x86_64-linux-gnu.so\n096179c85d0f869c79b4e5504396ad1a4c9bdd952ddce9266118bc5aabf03978  /usr/lib/python3.12/lib-dynload/_testbuffer.cpython-312-x86_64-linux-gnu.so\n09a2029f622c0acd5c196085697b2d45d62678d5b9a44250cee6d5079e34092a  /usr/lib/python3.12/lib-dynload/xxlimited.cpython-312-x86_64-linux-gnu.so\n0a079f958147699f7bb5bf228406a5d878dc2387fe9cdc5cce6f3e35e20380fc  /lib/x86_64-linux-gnu/libreadline.so.8\n0a079f958147699f7bb5bf228406a5d878dc2387fe9cdc5cce6f3e35e20380fc  /usr/lib/x86_64-linux-gnu/libreadline.so.8.2\n0b1b472d37c6ab330af230b478a8fb47080792b06c71f255736a87cd91f708a2  /lib/x86_64-linux-gnu/libntl.so.44\n0b1b472d37c6ab330af230b478a8fb47080792b06c71f255736a87cd91f708a2  /usr/lib/x86_64-linux-gnu/libntl.so.44.0.1\n0ccdfb6d6f5c039465f6d002cf7e4c072d48ac6a2cffc8dd6c748dec31592804  /lib/x86_64-linux-gnu/libgmp.so.10\n0ccdfb6d6f5c039465f6d002cf7e4c072d48ac6a2cffc8dd6c748dec31592804  /usr/lib/x86_64-linux-gnu/libgmp.so.10.5.0\n139dab24b8422031930836fd0bb71783e4d208b8c18cb1dcc87c1c0c4d2f3151  /usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so\n1502636e3be8232c9cf801dfb533694aea985d449904f3e1295db26d7b348946  /lib/x86_64-linux-gnu/libcrypt.so.1\n1502636e3be8232c9cf801dfb533694aea985d449904f3e1295db26d7b348946  /usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0\n172eaf141123172bfe864cd4000313988b051b3691d6ccb415145f72cf21f3e6  /usr/lib/python3.12/lib-dynload/_bz2.cpython-312-x86_64-linux-gnu.so\n1812047c39ea3c26ee5b2b585abbafc18cd158dfcd84e5368c998cc6178e815b  /lib/x86_64-linux-gnu/libdb-5.3.so\n1812047c39ea3c26ee5b2b585abbafc18cd158dfcd84e5368c998cc6178e815b  /usr/lib/x86_64-linux-gnu/libdb-5.3.so\n1df9b3b9c6863dc725423ecc1528975dbf81eed50e556d445223c283c353bcb5  /usr/lib/python3.12/lib-dynload/_lsprof.cpython-312-x86_64-linux-gnu.so\n1eb99cf0190e43f1749bff184fb2abff9dda0cd1c4b6f693c3c624077bb60f75  /usr/lib/python3.12/lib-dynload/_queue.cpython-312-x86_64-linux-gnu.so\n1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11  /lib/x86_64-linux-gnu/libstdc++.so.6\n1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33\n2026-09-10 05:31:13.733506661 UTC\n2026-09-10 05:31:14.849917762 UTC\n2156351fa3dedd04a7381c6ac7a8a26efa2d6fb08b80f8a2d644ccdd653710ae  /lib/x86_64-linux-gnu/libmpfr.so.6\n2156351fa3dedd04a7381c6ac7a8a26efa2d6fb08b80f8a2d644ccdd653710ae  /usr/lib/x86_64-linux-gnu/libmpfr.so.6.2.1\n2161b06867a20f5c4a06b6558d0ae4ab386f82035c1b083cb88f1bba1c882007  /usr/lib/python3.12/lib-dynload/_multibytecodec.cpython-312-x86_64-linux-gnu.so\n2246e434554a60f5c9f04cde4aa397737539de8b19938ffa37f73bcbdc3f85d3  /usr/lib/python3.12/lib-dynload/audioop.cpython-312-x86_64-linux-gnu.so\n22473b44f3011da478c447c01f9dae7ec214dd837a91bcb81316b16d1e3f8959  /usr/lib/python3.12/lib-dynload/_xxinterpchannels.cpython-312-x86_64-linux-gnu.so\n2e4f154a64a7ce9efa5c7a21e3acea9a51d7cf9ca8736d3f211dc094c347320e  /usr/lib/python3.12/lib-dynload/_codecs_iso2022.cpython-312-x86_64-linux-gnu.so\n31415a1f5538b4de8ce89b3b13f6c7d8a34baf1e6084cc5c1c3028bbbfc8ff7c  /usr/lib/python3.12/lib-dynload/_codecs_hk.cpython-312-x86_64-linux-gnu.so\n36ba202bc454e258c5828a6a057e2ea337b5b34ffbd413dcdada6594b5f947f8  /lib/x86_64-linux-gnu/libgf2x.so.3\n36ba202bc454e258c5828a6a057e2ea337b5b34ffbd413dcdada6594b5f947f8  /usr/lib/x86_64-linux-gnu/libgf2x.so.3.0.0\n3965dcf761777d6b0f35238349c8ee524be3ee8ef71dbedfff0754a6de0f7066  /usr/lib/python3.12/lib-dynload/_zoneinfo.cpython-312-x86_64-linux-gnu.so\n3cf5e04be073168467610a6a8169f43ad00025432c22c828045f06c1b45cefa2  /usr/lib/python3.12/lib-dynload/_codecs_tw.cpython-312-x86_64-linux-gnu.so\n3f858cbc1b1f3e1df9f071e9cfeccca58a5a48f3d605d025516fa688928e9bd5  /usr/lib/python3.12/lib-dynload/_codecs_jp.cpython-312-x86_64-linux-gnu.so\n448cabadd0395f01f81fcd358b3b7c4e705eebd44348f460579925d2c67ca386  /usr/lib/python3.12/lib-dynload/_lzma.cpython-312-x86_64-linux-gnu.so\n47b9e7f71c6a82c2d1931622557414f9080e19efd74aa77bbb059a604ed473fb  /usr/lib/python3.12/lib-dynload/_codecs_cn.cpython-312-x86_64-linux-gnu.so\n5518f1a13823d3276ed98eba6b18bcc36c9f6bff9bad3d0dd288cf01a5d9b4de  /usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so\n5b55ffdf80ae03fcbcd76071c3b56e4d2d560dec8e6fdabe4b9e096a6ff63c2a  /usr/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-x86_64-linux-gnu.so\n62673ef0fa9bea28ac58d140b6b3b9c6994d06117038302f1ab02300c4e42585  /usr/lib/python3.12/lib-dynload/_ctypes.cpython-312-x86_64-linux-gnu.so\n64ecf3de9a6515fb266a469d58cb120915e17ad569479289276fab041d262c15  /usr/lib/python3.12/lib-dynload/_testinternalcapi.cpython-312-x86_64-linux-gnu.so\n687aa6cca05ad875ebf6bc693b315adb7d3b05f4dbcb5ff49ec85cd0262cd9b7  /usr/lib/python3.12/lib-dynload/_decimal.cpython-312-x86_64-linux-gnu.so\n696e868dd0700a19a6d65fc01608ec2d70d3cb91f65710e89180cd2e688f30cb  /lib/x86_64-linux-gnu/liblzma.so.5\n696e868dd0700a19a6d65fc01608ec2d70d3cb91f65710e89180cd2e688f30cb  /usr/lib/x86_64-linux-gnu/liblzma.so.5.4.5\n6a66c3ba6b3749aacc9497973fff00f6ba61c703ba7015d0d7ab3fd9510974b6  /lib/x86_64-linux-gnu/libcrypto.so.3\n6a66c3ba6b3749aacc9497973fff00f6ba61c703ba7015d0d7ab3fd9510974b6  /usr/lib/x86_64-linux-gnu/libcrypto.so.3\n7242f41e5a0f3719289812039d1e17489faa348d93b68526e9a322cc0d0cffb6  /lib/x86_64-linux-gnu/libsingular-omalloc-4.3.2+0.9.6.so\n7242f41e5a0f3719289812039d1e17489faa348d93b68526e9a322cc0d0cffb6  /usr/lib/x86_64-linux-gnu/libsingular-omalloc-4.3.2+0.9.6.so\n7e66f71d11a89f28e78fc1825c1e92d67881093955ff00a07fe920959e194ca2  /lib/x86_64-linux-gnu/libsingular-resources-4.3.2.so\n7e66f71d11a89f28e78fc1825c1e92d67881093955ff00a07fe920959e194ca2  /usr/lib/x86_64-linux-gnu/libsingular-resources-4.3.2.so\n801672dc444cb6091ad3e1e2c42d0d9cf5893ab0bbb42408e0cbf663c31c507e  /usr/lib/python3.12/lib-dynload/_dbm.cpython-312-x86_64-linux-gnu.so\n80839609e047626817651f789387d1a076ce6f3a13832337f131749eadd7a6e5  /usr/lib/python3.12/lib-dynload/xxsubtype.cpython-312-x86_64-linux-gnu.so\n81f79d18f1c68ea1e4543a5c7c04cc549e32e2c36ab3f0e215ee5cbb34429222  /usr/lib/python3.12/lib-dynload/_testmultiphase.cpython-312-x86_64-linux-gnu.so\n823a0a324c82edad0dc6679de8c2c404422b5bc04a04bca323332e5a35366eb8  /lib/x86_64-linux-gnu/libsingular-polys-4.3.2.so\n823a0a324c82edad0dc6679de8c2c404422b5bc04a04bca323332e5a35366eb8  /usr/lib/x86_64-linux-gnu/libsingular-polys-4.3.2.so\n86200da370f20476a2507e9097a789b5ef97269b4ca8d5e164ad82dab9d99892  /lib/x86_64-linux-gnu/libz.so.1\n86200da370f20476a2507e9097a789b5ef97269b4ca8d5e164ad82dab9d99892  /usr/lib/x86_64-linux-gnu/libz.so.1.3\n897bde2a98c20f16f873f503b3375c754dcba54a60f121e9fb284a92b98a76b9  /lib/x86_64-linux-gnu/libflint.so.18\n897bde2a98c20f16f873f503b3375c754dcba54a60f121e9fb284a92b98a76b9  /usr/lib/x86_64-linux-gnu/libflint.so.18.0.1\n8be2497930bca6bad6dc1610c1ff12ee499766d5ffb324e842b36b98ca873595  /usr/lib/python3.12/lib-dynload/_xxsubinterpreters.cpython-312-x86_64-linux-gnu.so\n8db37cf3f2169f59a0f07ef1fea308c35656668c64c8ff294e1860f4121eb161  /lib/x86_64-linux-gnu/libc.so.6\n8db37cf3f2169f59a0f07ef1fea308c35656668c64c8ff294e1860f4121eb161  /usr/lib/x86_64-linux-gnu/libc.so.6\n8e49cebd373d90b55f3626da71dd97fe8e95c68dc4c064d8962b27907690736e  /lib/x86_64-linux-gnu/libssl.so.3\n8e49cebd373d90b55f3626da71dd97fe8e95c68dc4c064d8962b27907690736e  /usr/lib/x86_64-linux-gnu/libssl.so.3\n8eccca53962e74575da4b649dbafdfd24a450bafdc73d871bc5346824a1e7abd  /lib/x86_64-linux-gnu/libpanelw.so.6\n8eccca53962e74575da4b649dbafdfd24a450bafdc73d871bc5346824a1e7abd  /usr/lib/x86_64-linux-gnu/libpanelw.so.6.4\n90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4  /usr/bin/Singular\n93bb4a654f9478ab556b15f89249e25065c81ec2d442e8d7316f5d934e10573a  /lib/x86_64-linux-gnu/libsingular-factory-4.3.2.so\n93bb4a654f9478ab556b15f89249e25065c81ec2d442e8d7316f5d934e10573a  /usr/lib/x86_64-linux-gnu/libsingular-factory-4.3.2.so\n96a7d0c5c484d04f1e536ed0e0a25d39d242830d4893ff907b16a5403e2cbec9  /usr/lib/python3.12/lib-dynload/mmap.cpython-312-x86_64-linux-gnu.so\n96fd3ea2d885a19bdf3af9a54d65b9c529a47827e27375ff181c090f1d954ddf  /usr/lib/python3.12/lib-dynload/_sqlite3.cpython-312-x86_64-linux-gnu.so\n9881b7f5de41d1f2f8d30064b518d9f8e6f478da9023fe12910bbe283fbd4d84  /usr/lib/python3.12/lib-dynload/_testclinic.cpython-312-x86_64-linux-gnu.so\n9a694e30a4846580647f767008bf473b1d263e4e848d19c6c106c5cf6c322ea5  /usr/lib/python3.12/lib-dynload/_codecs_kr.cpython-312-x86_64-linux-gnu.so\n9d4eee22c3cdfc96d92d1dd56e09114c74203a6208b98ebd724b434047e4e070  /lib/x86_64-linux-gnu/libgdbm.so.6\n9d4eee22c3cdfc96d92d1dd56e09114c74203a6208b98ebd724b434047e4e070  /usr/lib/x86_64-linux-gnu/libgdbm.so.6.0.0\na325fc3edd46ded51bba49e3ac34b4f6c3212a6af9c756a0f52385bb82db40c9  /usr/lib/python3.12/lib-dynload/_testimportmultiple.cpython-312-x86_64-linux-gnu.so\na39f83efcd98d6eafbcc794a48345c47364f258aef2efda42625cafb5e3b08bb  /usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so\na50f34e95eec5b4c8c1f56bbf7b5a6716eecf71459d5fada5c426d72d06e00df  /usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so\na92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223  /usr/bin/python3\na92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223  /usr/bin/python3.12\nac414ae501466fa99218c3319657c5dbe26a97c8caa325585ef041ba6b3282e2  /usr/lib/python3.12/lib-dynload/_curses_panel.cpython-312-x86_64-linux-gnu.so\nb552c698f9f5c7ff8a6f7c11d8595a0d3e6dc3eaf483843895ec76f418080dfb  /lib/x86_64-linux-gnu/libncursesw.so.6\nb552c698f9f5c7ff8a6f7c11d8595a0d3e6dc3eaf483843895ec76f418080dfb  /usr/lib/x86_64-linux-gnu/libncursesw.so.6.4\nbad4246b6dcd82ac587fe7bd851b9fa99505267f1cb55b507fcc6151354086e8  /usr/lib/python3.12/lib-dynload/_posixshmem.cpython-312-x86_64-linux-gnu.so\nc03858e7293218a55a60d5e7a36f221e6ed84adcf3eb2731f9af9726b729e4da  /usr/lib/python3.12/lib-dynload/_testcapi.cpython-312-x86_64-linux-gnu.so\nc1094f3681bf922e2cd740d591db5662764cd72de44c03e3f041c288c34aab90  /usr/lib/python3.12/lib-dynload/_curses.cpython-312-x86_64-linux-gnu.so\nc42ff317838b4b4639e2ea801905f0317177c6df7e31b2f0d0240e3c3ac0cfde  /lib/x86_64-linux-gnu/libexpat.so.1\nc42ff317838b4b4639e2ea801905f0317177c6df7e31b2f0d0240e3c3ac0cfde  /usr/lib/x86_64-linux-gnu/libexpat.so.1.9.1\ncc08c9f50a8009ffd6391e0116a100369b11ca9238fa52392c019e6645b122a1  /lib/x86_64-linux-gnu/libbz2.so.1.0\ncc08c9f50a8009ffd6391e0116a100369b11ca9238fa52392c019e6645b122a1  /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4\ncca240af6c60ea5e6c3d424046db71389b2c40ef9c8d8179aeef76233b970250  /usr/lib/python3.12/lib-dynload/readline.cpython-312-x86_64-linux-gnu.so\ncd4df4f3c7b83673d61189bf2eaebd33ca4f2853ab9772b8a25e025ef99b1e81  /lib64/ld-linux-x86-64.so.2\ncd4df4f3c7b83673d61189bf2eaebd33ca4f2853ab9772b8a25e025ef99b1e81  /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\ncf47ca460cce0ea84f529e9e25c32d1c125f35c712a84856484a498cc906eb7d  /usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so\nd0131b82d05b6416b99519ab026f1f1a7e9fc5fe9a3b6ad497cd0dfecf1237dd  /usr/lib/python3.12/lib-dynload/resource.cpython-312-x86_64-linux-gnu.so\nd201497fb07102cf6548a2d6811ad5519bcf3d65530a23ce3f05fe9584f4e7f1  /usr/lib/python3.12/lib-dynload/_crypt.cpython-312-x86_64-linux-gnu.so\nd93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb  /lib/x86_64-linux-gnu/libgcc_s.so.1\nd93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb  /usr/lib/x86_64-linux-gnu/libgcc_s.so.1\ne064f9ca451499660bf084a9ebbbd4d4877769b7ef99a877721dc7cfcb786a6b  /lib/x86_64-linux-gnu/libsingular-Singular-4.3.2.so\ne064f9ca451499660bf084a9ebbbd4d4877769b7ef99a877721dc7cfcb786a6b  /usr/lib/x86_64-linux-gnu/libsingular-Singular-4.3.2.so\ne1eed07a71732657bcf9b83d1bf7c3fc682aa29e1d9eaa818927318cbfc9b7be  /usr/lib/python3.12/lib-dynload/_xxtestfuzz.cpython-312-x86_64-linux-gnu.so\ne51caa986d1d2b3c19423949d5c8bf8efc73089024374c2b7d38c88bdc39f58c  /usr/lib/python3.12/lib-dynload/_testsinglephase.cpython-312-x86_64-linux-gnu.so\ne6089d7bb95eee5b545f3770dd69095b0bca47d26701cad145af429561d16306  /lib/x86_64-linux-gnu/libtinfo.so.6\ne6089d7bb95eee5b545f3770dd69095b0bca47d26701cad145af429561d16306  /usr/lib/x86_64-linux-gnu/libtinfo.so.6.4\ne86e11fcddd09866072c6e5de3e8d921c7b40d841feb4eda3be0da5d3d9fa1cd  /usr/lib/python3.12/lib-dynload/xxlimited_35.cpython-312-x86_64-linux-gnu.so\ne9c4b28d340e415b8137480ec442662f981e1399386c5931dae0e886e3639e91  /lib/x86_64-linux-gnu/libm.so.6\ne9c4b28d340e415b8137480ec442662f981e1399386c5931dae0e886e3639e91  /usr/lib/x86_64-linux-gnu/libm.so.6\nf2cd05de8b6f71ea9d0495a6f9ff9cae844b15d9c45b7ef49ee0af0f81658cc7  /lib/x86_64-linux-gnu/libsqlite3.so.0\nf2cd05de8b6f71ea9d0495a6f9ff9cae844b15d9c45b7ef49ee0af0f81658cc7  /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6\nf52dead216e2c2237e507fa582c8ce5a5f3f0689ab7557d7a81a699663d43762  /usr/lib/python3.12/lib-dynload/_ctypes_test.cpython-312-x86_64-linux-gnu.so\nfd4cfafba8307a1dabd0543400d94c875e08e7d2a4b795620ae86c6f041c7d28  /usr/lib/python3.12/lib-dynload/_gdbm.cpython-312-x86_64-linux-gnu.so\n"
+  },
+  "contactExecStopped": {
+    "chunk_id": "a4f19f",
+    "wall_time_seconds": 0.645226634,
+    "exit_code": 0,
+    "original_token_count": 81,
+    "output": "[\n    {\n        \"Id\": \"i-07e1212591a6acae9\",\n        \"State\": \"stopped\"\n    },\n    {\n        \"Id\": \"i-0da0cebfc97c9fd54\",\n        \"State\": \"stopped\"\n    },\n    {\n        \"Id\": \"i-08d2a40f272ee9fa2\",\n        \"State\": \"stopped\"\n    }\n]\nSTOPPED_CONFIRMED 2026-09-10 05:55:59.619257718 UTC\nActiveState=inactive\nSubState=dead\n"
+  },
+  "contactControlLaunch_gate-wronghost": {
+    "chunk_id": "373237",
+    "wall_time_seconds": 1.000906075,
+    "session_id": 65773,
+    "original_token_count": 556,
+    "output": "PRELAUNCH 2026-09-10 05:34:57.126547147 UTC\nFIXED_128_MATCH AUTHORITY 04b2c96ce1d85d05220d147df7b6462fa1dc13780c2feccede1441bf04b5d57f\nRunning as unit: jc2-contact-gate-wronghost-20260910.service\nPROCESS 2026-09-10 05:34:57.154267578 UTC\nPID 3796 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.stdout --stderr-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.stderr --telemetry-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.sentinel plain \n   3796       1    3796    3796 Rs    9956\n3796 (python3) R 1 3796 3796 0 -1 4194560 1573 0 0 0 0 0 0 0 20 0 1 0 36327 18808832 2498 18446744073709551615 4325376 7353021 140721964259168 0 0 0 0 16781312 2 0 0 0 17 3 0 0 0 0 0 10657224 12220544 325697536 140721964264178 140721964265078 140721964265078 140721964265447 0\npid:[4026531836]\nPROCESS 2026-09-10 05:34:57.209597629 UTC\nPID 3858 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-wronghost.sentinel plain \n   3858    3796    3858    3858 Rs   10964\n3858 (python3) R 3796 3858 3858 0 -1 4194304 1537 0 0 0 1 0 0 0 20 0 1 0 36333 20287488 2856 18446744073709551615 4325376 7353021 140736571331264 0 0 0 0 16781312 2 0 0 0 17 9 0 0 0 0 0 10657224 12220544 968622080 140736571338021 140736571338358 140736571338358 140736571338727 0\npid:[4026531836]\n"
+  },
+  "contactControlTail_gate-wronghost": {
+    "chunk_id": "3746fd",
+    "wall_time_seconds": 0.000001897,
+    "exit_code": 0,
+    "original_token_count": 50,
+    "output": "MainPID=0\nExecMainStatus=1\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=186213000\nActiveState=failed\nInvocationID=e9bc0a7a82444fc58a95595a1a03581a\nTERMINAL_CHECK 2026-09-10 05:34:59.023151125 UTC\n"
+  },
+  "contactControlLaunch_gate-argv": {
+    "chunk_id": "4a059e",
+    "wall_time_seconds": 1.001219711,
+    "session_id": 59550,
+    "original_token_count": 546,
+    "output": "PRELAUNCH 2026-09-10 05:34:57.159150949 UTC\nFIXED_128_MATCH AUTHORITY 31d89cad5779005f14992efcb68f4c6fd9f127b3503c785bd601cf95e2cfc65a\nRunning as unit: jc2-contact-gate-argv-20260910.service\nPROCESS 2026-09-10 05:34:57.182024817 UTC\nPID 3817 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.stdout --stderr-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.stderr --telemetry-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.sentinel plain \n   3817       1    3817    3817 Rs   11612\n3817 (python3) R 1 3817 3817 0 -1 4194560 2112 0 0 0 1 0 0 0 20 0 1 0 36330 21323776 3050 18446744073709551615 4325376 7353021 140724124489504 0 0 0 0 16781312 2 0 0 0 17 4 0 0 0 0 0 10657224 12220544 446529536 140724124490512 140724124491387 140724124491387 140724124491751 0\npid:[4026531836]\nPROCESS 2026-09-10 05:34:57.230476726 UTC\nPID 3890 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-argv.sentinel plain \n   3890    3817    3890    3890 Rs   10068\n3890 (python3) R 3817 3890 3890 0 -1 4194304 1280 0 0 0 0 0 0 0 20 0 1 0 36336 18927616 2559 18446744073709551615 4325376 7353021 140724113102992 0 0 0 0 16781312 2 0 0 0 17 7 0 0 0 0 0 10657224 12220544 909524992 140724113108276 140724113108603 140724113108603 140724113108967 0\npid:[4026531836]\n"
+  },
+  "contactControlTail_gate-argv": {
+    "chunk_id": "604abd",
+    "wall_time_seconds": 0.000002543,
+    "exit_code": 0,
+    "original_token_count": 50,
+    "output": "MainPID=0\nExecMainStatus=1\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=193062000\nActiveState=failed\nInvocationID=a38044b68a9d4275aac60b42d85a6745\nTERMINAL_CHECK 2026-09-10 05:34:59.022434780 UTC\n"
+  },
+  "contactControlLaunch_gate-cap": {
+    "chunk_id": "c535e7",
+    "wall_time_seconds": 1.001003987,
+    "session_id": 73076,
+    "original_token_count": 545,
+    "output": "PRELAUNCH 2026-09-10 05:34:57.188258603 UTC\nFIXED_128_MATCH AUTHORITY 38d868752f8995d5e82c793185d7dc7952fe0b9b186bc10148000bda1639df5b\nRunning as unit: jc2-contact-gate-cap-20260910.service\nPROCESS 2026-09-10 05:34:57.215026322 UTC\nPID 3855 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.stdout --stderr-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.stderr --telemetry-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.sentinel plain \n   3855       1    3855    3855 Rs    9928\n3855 (python3) R 1 3855 3855 0 -1 4194560 1573 0 0 0 1 0 0 0 20 0 1 0 36333 18808832 2491 18446744073709551615 4325376 7353021 140726775995600 0 0 0 0 16781312 2 0 0 0 17 3 0 0 0 0 0 10657224 12220544 960614400 140726776003350 140726776004220 140726776004220 140726776004583 0\npid:[4026531836]\nPROCESS 2026-09-10 05:34:57.269136303 UTC\nPID 3957 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-cap.sentinel plain \n   3957    3855    3957    3957 Rs   10120\n3957 (python3) R 3855 3957 3957 0 -1 4194304 1310 0 0 0 1 0 0 0 20 0 1 0 36339 18927616 2593 18446744073709551615 4325376 7353021 140727831870352 0 0 0 0 16781312 2 0 0 0 17 13 0 0 0 0 0 10657224 12220544 440295424 140727831878967 140727831879292 140727831879292 140727831879655 0\npid:[4026531836]\n"
+  },
+  "contactControlTail_gate-cap": {
+    "chunk_id": "e67e89",
+    "wall_time_seconds": 6.48e-7,
+    "exit_code": 0,
+    "original_token_count": 50,
+    "output": "MainPID=0\nExecMainStatus=1\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=189926000\nActiveState=failed\nInvocationID=aa1eca2527a34978af69fe5eb2a0230d\nTERMINAL_CHECK 2026-09-10 05:34:59.022460933 UTC\n"
+  },
+  "contactControlLaunch_gate-missing-input": {
+    "chunk_id": "719ae4",
+    "wall_time_seconds": 1.001534015,
+    "session_id": 86397,
+    "original_token_count": 565,
+    "output": "PRELAUNCH 2026-09-10 05:34:57.259576378 UTC\nFIXED_128_MATCH AUTHORITY e70b9d69e9f95897f14105ba4820db4f0ccfe75e27959744ea406493a08d2577\nRunning as unit: jc2-contact-gate-missing-input-20260910.service\nPROCESS 2026-09-10 05:34:57.286677069 UTC\nPID 3982 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.stdout --stderr-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.stderr --telemetry-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.sentinel plain \n   3982       1    3982    3982 Rs    8940\n3982 (python3) R 1 3982 3982 0 -1 4194560 1377 0 0 0 0 0 0 0 20 0 1 0 36340 18657280 2314 18446744073709551615 4325376 7353021 140723889513904 0 0 0 0 16781312 2 0 0 0 17 3 0 0 0 0 0 10657224 12220544 1022488576 140723889515226 140723889516146 140723889516146 140723889516519 0\npid:[4026531836]\nPROCESS 2026-09-10 05:34:57.348780604 UTC\nPID 4112 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-missing-input.sentinel plain \n   4112    3982    4112    4112 Rs   10880\n4112 (python3) R 3982 4112 4112 0 -1 4194304 1480 0 0 0 1 0 0 0 20 0 1 0 36347 20217856 2750 18446744073709551615 4325376 7353021 140724204938512 0 0 0 0 16781312 2 0 0 0 17 8 0 0 0 0 0 10657224 12220544 1019891712 140724204944665 140724204945010 140724204945010 140724204945383 0\npid:[4026531836]\n"
+  },
+  "contactControlTail_gate-missing-input": {
+    "chunk_id": "0c368a",
+    "wall_time_seconds": 7.74e-7,
+    "exit_code": 0,
+    "original_token_count": 50,
+    "output": "MainPID=0\nExecMainStatus=1\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=190923000\nActiveState=failed\nInvocationID=7e2bb4a19a61403892d6b9e8ceb14787\nTERMINAL_CHECK 2026-09-10 05:34:59.023601172 UTC\n"
+  },
+  "contactControlLaunch_gate-valid": {
+    "chunk_id": "735974",
+    "wall_time_seconds": 1.000983982,
+    "session_id": 47493,
+    "original_token_count": 549,
+    "output": "PRELAUNCH 2026-09-10 05:36:01.178392025 UTC\nFIXED_128_MATCH AUTHORITY bbab9a67f7c41ca0bebae22057ec8a1902b3ff2ec5472c45a5b0aa64fde67c4e\nRunning as unit: jc2-contact-gate-valid-20260910.service\nPROCESS 2026-09-10 05:36:01.206831613 UTC\nPID 5651 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.stdout --stderr-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.stderr --telemetry-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.sentinel plain \n   5651       1    5651    5651 Rs   10184\n5651 (python3) R 1 5651 5651 0 -1 4194560 1736 0 0 0 1 0 0 0 20 0 1 0 42732 19226624 2686 18446744073709551615 4325376 7353021 140726840101824 0 0 0 0 16781312 2 0 0 0 17 10 0 0 0 0 0 10657224 12220544 782127104 140726840105738 140726840106618 140726840106618 140726840106983 0\npid:[4026531836]\nPROCESS 2026-09-10 05:36:01.258714176 UTC\nPID 5673 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/gate-valid.sentinel plain \n   5673    5651    5673    5673 Rs   10780\n5673 (python3) R 5651 5673 5673 0 -1 4194304 1429 0 0 0 1 0 0 0 20 0 1 0 42738 20107264 2682 18446744073709551615 4325376 7353021 140725638616320 0 0 0 0 16781312 2 0 0 0 17 0 0 0 0 0 0 10657224 12220544 1061502976 140725638618417 140725638618746 140725638618746 140725638619111 0\npid:[4026531836]\n"
+  },
+  "contactControlTail_gate-valid": {
+    "chunk_id": "5eea6a",
+    "wall_time_seconds": 0.000002603,
+    "exit_code": 0,
+    "original_token_count": 43,
+    "output": "MainPID=0\nExecMainStatus=0\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=[not set]\nActiveState=inactive\nInvocationID=\nTERMINAL_CHECK 2026-09-10 05:36:03.015375834 UTC\n"
+  },
+  "contactControlLaunch_dummy-descendant": {
+    "chunk_id": "25cb60",
+    "wall_time_seconds": 1.001146072,
+    "session_id": 7673,
+    "original_token_count": 748,
+    "output": "PRELAUNCH 2026-09-10 05:36:02.407251165 UTC\nFIXED_128_MATCH AUTHORITY bc60e3ffdaa96b17c3391016f70f66c99146c2855f919d9a233e1c89b5ec4c57\nRunning as unit: jc2-contact-dummy-descendant-20260910.service\nPROCESS 2026-09-10 05:36:02.436433019 UTC\nPID 5984 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 33554432 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.stdout --stderr-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.stderr --telemetry-file /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.sentinel descendant \n   5984       1    5984    5984 Rs   10260\n5984 (python3) R 1 5984 5984 0 -1 4194560 1856 0 0 0 1 0 0 0 20 0 1 0 42855 19652608 2787 18446744073709551615 4325376 7353021 140726898905696 0 0 0 0 16781312 2 0 0 0 17 2 0 0 0 0 0 10657224 12220544 263962624 140726898911971 140726898912884 140726898912884 140726898913255 0\npid:[4026531836]\nPROCESS 2026-09-10 05:36:02.490725838 UTC\nPID 6015 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.sentinel descendant \n   6015    5984    6015    6015 Rs   10688\n6015 (python3) R 5984 6015 6015 0 -1 4194304 1429 0 0 0 1 0 0 0 20 0 1 0 42861 20107264 2685 18446744073709551615 4325376 7353021 140725408843088 0 0 0 0 16781312 2 0 0 0 17 0 0 0 0 0 0 10657224 12220544 485560320 140725408845082 140725408845428 140725408845428 140725408845799 0\npid:[4026531836]\nPROCESS 2026-09-10 05:36:02.622395939 UTC\nPID 6101 ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/probe.py /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.authority.json /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/ROOT-CARD.md /home/ubuntu/jc2-f10-contact-eliminant-execution-20260910/dummy-descendant.sentinel descendant \n   6101       1    6015    6015 R    64664\n6101 (python3) R 1 6015 6015 0 -1 4194368 12086 0 0 0 0 2 0 0 20 0 1 0 42874 104697856 17076 18446744073709551615 4325376 7353021 140725408843088 0 0 0 0 16797696 2 0 0 0 17 3 0 0 0 0 0 10657224 12220544 485560320 140725408845082 140725408845428 140725408845428 140725408845799 0\npid:[4026531836]\n"
+  },
+  "contactControlTail_dummy-descendant": {
+    "chunk_id": "84e216",
+    "wall_time_seconds": 0.000001659,
+    "exit_code": 0,
+    "original_token_count": 51,
+    "output": "MainPID=0\nExecMainStatus=125\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=311122000\nActiveState=failed\nInvocationID=ee51450507764e028b6544c2d6298c3d\nTERMINAL_CHECK 2026-09-10 05:36:04.018834514 UTC\n"
+  }
+}

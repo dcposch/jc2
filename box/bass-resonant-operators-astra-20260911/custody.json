@@ -1,0 +1,77 @@
+{
+  "tag": "bass-resonant-operators-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED_MANUAL_THEOREM_CANDIDATE",
+  "first_action_utc": "2026-09-11 21:04:12 UTC",
+  "publication_reserve_utc": "2026-09-11 21:25:00 UTC",
+  "hard_stop_utc": "2026-09-11 21:28:00 UTC",
+  "clock_reset": false,
+  "publication": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "lease_id": "3e7c2378d4b2a450ec2a9f144621ccef",
+    "opened_utc": "2026-09-11T21:04:28Z",
+    "closed_utc": "2026-09-11T21:14:06Z",
+    "finalized_utc": "2026-09-11T21:14:06Z",
+    "expected_manifest_sha256": "cea2c7b21290fde5cd608c10a1878546d69f18351c7d39817ccb0c57583b8d0b",
+    "verification": "VERIFIED with exact expected basis and manifest; sealed WHOLE report and manifest plus all input/owned pins checked in administrative call ending 2026-09-11 21:14:20 UTC",
+    "body_sha256": "382e24769ffbafd09e7f9b76a49c2d77ef0f494b96dc1d8e671e49366f11ab3d",
+    "body_bytes": 8853,
+    "file_bytes": 9185,
+    "preseal_word_count": 1255
+  },
+  "inputs": [
+    {
+      "path": "box/bass-resonant-operators-astra-20260911/TASK.md",
+      "sha256": "4be3cda6237909fa00f6b7b1e30b6cd062dcfe6e797019f74137d0c9b7fd4d41",
+      "read": "FRESH_WHOLE after current pin at first action; preseal and postpublication pins MATCHED"
+    },
+    {
+      "path": "box/bass-resonant-operators-root-20260911/bass-1989.pdf",
+      "sha256": "86f642941d2cea0f1d438996d8e81833ac53b6039c4c81e1564adc411f614b1e",
+      "read": "Full PDF hash before extraction; assigned printed pages 39--49 / PDF pages 2--12 read WHOLE without clipping before transaction begin. No claim to read other PDF pages or linked references. Preseal and postpublication full-file pins MATCHED."
+    },
+    {
+      "path": "box/bass-resonant-operators-astra-20260911/ADDENDUM.md",
+      "sha256": "024255c63968270edb3f45f0e96674753d3640d5ecae38723f141787b5ece161",
+      "read": "Authorized additional input 3; current pin before FRESH_WHOLE read at 21:09:47 UTC; preseal and postpublication pins MATCHED"
+    }
+  ],
+  "owned_pins_excluding_custody": [
+    {
+      "path": "box/bass-resonant-operators-astra-20260911/PINS.json",
+      "sha256": "b24343d2302eec02c2771521526be713ae70e41cbf48d453223eaa24ab018fc7",
+      "read": "OWN_WHOLE before marker; unchanged current pin"
+    },
+    {
+      "path": "xmodel/bass-resonant-operators-astra-20260911.md",
+      "sha256": "c179106b8dabb3eeb20a0757e75faf952d0d6f42511fc90f2450126b11ef58b7",
+      "read": "OWN_WHOLE final private partial before unique marker; OWN_WHOLE sealed report after expected verification"
+    },
+    {
+      "path": "xmodel/bass-resonant-operators-astra-20260911.md.artifact.json",
+      "sha256": "cea2c7b21290fde5cd608c10a1878546d69f18351c7d39817ccb0c57583b8d0b",
+      "read": "OWN_WHOLE; exact expected transaction VERIFIED"
+    }
+  ],
+  "amendment": "Original TASK and deadlines preserved. ROOT separately authorized and pinned only ADDENDUM's endpoint e_p-r+delta g(e), r>=0. It was derived independently in section 3; its history motivation is not a proof premise.",
+  "mathematical_scope": {
+    "positive_parameters": "For coprime integers a,b>0, integer c, and nonconstant complex polynomial g, every algebraic formal solution of (a e_p-b e_q-c+delta g(e))f=0 is polynomial.",
+    "endpoint": "The same conclusion is separately proved for e_p-r+delta g(e), every integer r>=0, including r=0 and finitely many zeros of g(r+n).",
+    "proof": "Exact degree-dependent shear; bounded-below weighted initial polynomial relation; algebraicity of the coefficient series via legitimate specialization; convergent q=0 restriction forces superexponential coefficient decay, hence an entire algebraic series is polynomial.",
+    "control": "Constant-g rational nonpolynomial formal solutions demonstrate that the nonconstant hypothesis is essential; they are not globally regular Keller elements by assertion.",
+    "limits": "Manual unreviewed candidate, no arbitrary U-annihilator reduction, actual-source projection/trace section, JC2 or novelty claim, promotion, computation, new OPEN or successor. ROOT handles any independent review."
+  },
+  "checks": {
+    "clipping": "NONE",
+    "reuse": "NONE",
+    "additional_sources": "NONE beyond the three pinned inputs; no live ROOT report, literature search or linked references",
+    "collision": "Owned report/manifest/PINS/custody absent initially; final report/manifest/custody absent before publication. ROOT TASK and ADDENDUM untouched; no shared or other-lane writes.",
+    "quantity_cheapest_test": "Both exact all-degree algebraic-formal kernel exclusions. Scientific runtime UNMEASURED; no coefficient scan.",
+    "execution": "Manual mathematics and administrative date/hash/text/PDF text reading, apply_patch and existing artifact-finalize publication only. No scientific subprocess, code/import/AST/syntax/test/CAS/dummy, payload, network/AWS/SSH/Git/protected/shared access or other agent."
+  },
+  "terminal": {
+    "custody": "Last authored object; its digest is returned externally and excluded from its own pin vector.",
+    "writers": "No writer remains after custody creation. Only read-only custody WHOLE/hash/clock checks follow; filesystem mtime records final authored write, and the terminal handoff records observed ALL WRITERS IDLE time.",
+    "handoff": "Custody digest FIRST, independent COMPLETED/ALL WRITERS IDLE plus report and exact expected-manifest pins. ROOT performs independent intake."
+  }
+}

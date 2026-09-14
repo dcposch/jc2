@@ -1,0 +1,18 @@
+# Semantic controls complete; worker terminated
+
+At2026-09-10 16:34:59UTC, i-0f5058733b2e2b130 was independently confirmed TERMINATED and its100GiB gp3 root vol-01cfedb237b01edbb AVAILABLE without attachments. This is the thirteenth documented ephemeral-worker retirement. No EBS disk was deleted. The16:34 tagged jc2fleet=1 nonterminal query returned an empty list. Coordinator and separate protected infrastructure were untouched.
+
+The c7i.xlarge (4vCPU,8GiB) launched16:16:18 for one registered semantic6/10 batch, after worker-independent preparation. Fresh physical/native metadata and ROOT registration completed before fixed16:35 setup admission. SYSTEM task launched16:23:22.801583870 with MainPID/PGID8424, invocation4587f7163efc4a2f9faa032c3cc24083; actual original process and group absence verified16:25:14.523881515 before custody intake and again16:26:51.674211191 before harvest. Exact result TWO_SEMANTIC_REJECTIONS_CONFIRMED/scienceNONE; joint24.337646631999974wall and25.085507cgroupCPU seconds. Both corruptions were rejected at their designated mathematical branches. This is producer-checked evidence, not an independent result gate or packet promotion.
+
+## Preserved evidence
+
+- Local evidence.tar.gz: SHA256 5f07c98c7333e04e7ebd9ff627ab4687238ebddf9f51301f008437d79eefec3b,5105554bytes. Downloaded, hash checked, safely extracted into harvest/, all274 working/durable/source pin rows verified locally, and archive fsynced before termination. local-extracted-files.sha256 and local-extracted-files-recheck.log give exact mapping and replay.
+- CUSTODY.json: da4d484397e3896c74a073a8ab4f2317513ea11fca5ac374a89a2324ba004fee,28308bytes,128 files and12 calls. Initially clipped output was recovered by direct copy plus fresh hash and complete metadata intake; no partial read claimed WHOLE.
+- ROOT-REGISTRATION.json:0d0b00638cb42de7b7a59e1661ff0ae21668ff9ce0175e50a8b575d1d4ee3605. Fresh native-manifest.json:acbf656e441249cacab8b0a002c39b048f4755004e35e70b112f2e704086c722.
+- Remote257 working/durable/custody pins,17 installed pins and1226 native files passed postchecks. A fresh whole native inventory matched all files, aliases, directories, stats and counts; only collector timestamps changed. Archive tar comparison and remote sync completed16:27:00.534674982.
+- Retained EBS contains /home/ubuntu/jc2-r2-controls-ready-20260910T1620/evidence.tar.gz and stage/, /opt/jc2-r2-controls-ready-20260910T1620 and /var/lib/jc2-r2-controls-ready-20260910T1620. The former /run tmpfs is preserved inside the archive.
+- termination-request.json, termination-confirmed.json and retained-volume-confirmed.json retain exact API responses. DeleteOnTermination=false and API protection=false verified immediately before one-ID termination16:34:14UTC. Confirmed state preceded closure of original USER16:53 timer at16:35:15.069293272. SYSTEM16:46:15/20 timers were already inactive at remote harvest16:26:59. No clocks reset and no restart duty remains.
+
+Fresh physical host ip-172-30-0-53, boot17eb5153-cb6f-49c5-ab7b-a65e183f0293, namespace pid:[4026531836], durabledevice66305. One initial SSH timeout was followed by exactly one required SG update (SG current), then successful retry. No later timeout.
+
+The instance is unrecoverable as an instance; its disk and complete archived evidence remain recoverable. The baseline and altered coefficient files were copied/hashed only locally, not parsed or executed. Other13 scientific corruption controls and any highest/unit test were not run. No source-emptiness, point, basis, rank, degree-frontier or JC2 result is claimed. Independent actual-result review remains the next mathematical gate; it does not require retaining an idle worker.

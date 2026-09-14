@@ -1,0 +1,15 @@
+# Read scope and custody notes
+
+First action2026-09-10T20:20:34.706868764Z. Original reserve20:43 UTC, hard20:46 UTC, unchanged. Targets absent before transaction begin.
+
+PINS.json records exactly13 originals with their full paths and SHA256. All13 current hashes matched before scientific source bodies. Inputs1–12 were freshly read WHOLE. Old dispatcher/probe/contract combined tool output was clipped; dispatcher was reread in complete1–235 and236–500 ranges, and probe/contract retained full source strings. CAPRUN4435279d is an explicit same-byte WHOLE reuse from this agent's previously completed accepted runtime authoring; no different CAPRUN bytes or provenance was consulted. No payload/coefficient/candidate/baseline/fixture body has been opened, hashed or parsed locally.
+
+The contact source was PROVISIONAL at task start. ROOT's20:30 lifecycle message reports a terminal FIRST source gate with no blocking corrections and A–F confirmation. That notice is recorded only as lifecycle scope; the optional new gate was NOT read or added. The exact13-input vector remains frozen. This new runtime/mutator is UNREVIEWED and unexecuted.
+
+The old accepted middle-real runtime/gate supply scoped infrastructure premises. No re-review of mathematical foundations, report/provenance lookup, worker/process/network/Git/protected/shared access, source execution/import/AST/syntax/compile/test or mathematical subprocess occurred. All code was written as text, including source-string transformations in the documentary tool orchestrator; no Python source was executed.
+
+Owned source readback is WHOLE before seal: dispatch split1–240,241–430,431–end, then corrected tail readback; mutate1–185 and probe1–64. Manual readback caught and repaired an apply_patch append-context placement error before publication. It also caught a path-root slip: dispatch/probe were initially placed under /home/ubuntu/box/f10-contact-gram-runtime-astra-20260910, then moved by apply_patch to the intended /home/ubuntu/jc2/box path; only the agent-created empty temporary directory was removed. No preexisting file was touched and final owned files are all within the authorized repository target. This is disclosed operational error, not a successful test.
+
+Source differences: job/schema/science/code/installed-role pins; corrected interpreter/fullargv/science-path fields; new fixed profiles; complete producer normal2 and checked-inconclusive branches; receipt-only dispatcher validation; two-output mutator and fresh negative authorities; exact semantic rejection gates; root0444 freeze/readback/directoryfsync; terminal contact-only status. Original no-math probe is byte-identical. Scientific producer/checker/authority and CAPRUN are not copied or modified.
+
+No new canonical OPEN ID, mathematical theorem, runtime registration, worker allocation or follow-on is created. Remaining review/observation question: does this exact frozen runtime package pass its first independent static interface review and, if separately registered later, produce the exact scoped lifecycle? Cheapest next check is that separate static review; runtime cost/coefficients remain unknown.

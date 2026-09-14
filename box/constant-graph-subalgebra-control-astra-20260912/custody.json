@@ -1,0 +1,69 @@
+{
+  "schema": "jc2-documentary-terminal-custody/v1",
+  "task": "constant-graph-subalgebra-control-astra-20260912",
+  "scope": "COMPLETE_MANUAL_TARGET_MODULE_CERTIFICATE_UNREVIEWED",
+  "first_action_utc": "2026-09-12T01:36:36Z",
+  "reserve_utc": "2026-09-12T01:48:00Z",
+  "hard_utc": "2026-09-12T01:51:00Z",
+  "preseal_whole_postpins_collision_completed_utc": "2026-09-12T01:44:51Z",
+  "finalized_utc": "2026-09-12T01:45:12Z",
+  "expected_verify_final_whole_completed_utc": "2026-09-12T01:45:13Z",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/constant-graph-subalgebra-control-astra-20260912/TASK.md",
+      "sha256": "ab30ae3216a6ec494ec6bfceee37fa0f883c90fc90bde0ed2ece9c2868fe4c39",
+      "role": "ORIGINAL_INPUT",
+      "read_mode": "FRESH_WHOLE",
+      "pre_post_match": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/constant-graph-subalgebra-control-astra-20260912/DELTA-root-euler.md",
+      "sha256": "cba255f67d50fe19064e683dbaa7b43ed615ac465314a1b2fce5420b591254a9",
+      "role": "ADDITIONAL_ROOT_AUTHORIZED_INPUT_AFTER_LAUNCH",
+      "read_mode": "FRESH_WHOLE",
+      "pre_post_match": true
+    }
+  ],
+  "owned": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/constant-graph-subalgebra-control-astra-20260912.md",
+      "sha256": "590609a7a6f52f72e940a01604c5e6f0c1444277c54bfbb9c69e0fa0c55fd679",
+      "bytes": 4917,
+      "read_mode": "WHOLE_FINAL"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/constant-graph-subalgebra-control-astra-20260912.md.artifact.json",
+      "sha256": "118c4c4b5329a091c701f0a28576661e5fe5da4c18670d9d546ebd41cc9a910d",
+      "bytes": 705,
+      "read_mode": "WHOLE_FINAL"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/constant-graph-subalgebra-control-astra-20260912/PINS.json",
+      "sha256": "bd4b0e27c39619f5befdfd128ae5209d51c6d6a71178d414dfc378d4ec31fe0f",
+      "bytes": 1548,
+      "read_mode": "WHOLE_FINAL"
+    }
+  ],
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "status": "FINAL",
+    "expected_manifest_sha256": "118c4c4b5329a091c701f0a28576661e5fe5da4c18670d9d546ebd41cc9a910d",
+    "expected_verify": "PASS",
+    "body_sha256": "a62dd12439ad05995a80251f1f5f0d50954faab7c5a22d2140c97e14c33259c3",
+    "body_bytes": 4585
+  },
+  "result": "YES, 1=(r/4)J(p,q)+(q/4)J(p,r)-(p/2)J(q,r), with literal B coefficients. ROOT candidate independently checked using explicit polynomial lifts, full chart substitution, determinant and weighted contraction. No f,g pair produced.",
+  "checks": {
+    "all_pins_before_whole": true,
+    "additional_input_census_explicit": true,
+    "own_whole_read": true,
+    "scope_quantity_cheapest_test_checked": true,
+    "no_new_open": true,
+    "collision_check": true,
+    "marker_last": true,
+    "scientific_execution": false,
+    "external_or_peer_reads": false,
+    "new_authority": false
+  },
+  "terminal_note": "All substantive/report/transaction writers closed. Custody excludes its own hash, supplied separately. After creation only custody WHOLE read/hash and ALL WRITERS IDLE handoff remain; no follow-on or edits authorized."
+}

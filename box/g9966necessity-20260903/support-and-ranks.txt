@@ -1,0 +1,42 @@
+=== A. chart dimension count (Prop 1.2) ===
+   blocks [66, 187, 308, 1650, 2739, 561, 1650]  total 7161
+   before fixing the tops [77, 198, 319, 1683, 2772, 594, 1683] total 7326 = 5049 + 2277 ; removed 165 = 99+66
+
+=== B. leading forms, multiplicities (Moh p.194, Prop 6.2) ===
+   in h3       = P^1  deg  11 ; mult y=0 :  3 ; mult y=x :  8
+   in h2       = P^3  deg  33 ; mult y=0 :  9 ; mult y=x : 24
+   in F=g_Moh  = P^9  deg  99 ; mult y=0 : 27 ; mult y=x : 72
+   in G=f_Moh  = P^6  deg  66 ; mult y=0 : 18 ; mult y=x : 48
+   Xu 7.3 minor multiplicities  T0:27 T1:18 T2:15 T3:40
+
+=== C. split-order arithmetic (Xu Prop 7.3, Cor 7.5, sec 8) ===
+   ord g(sigma) = (n/d_s)(u_s delta - v_s) < 0  <=>  delta < v_s/u_s = 8/3
+   candidates 1 < delta < 8/3 with den <= 3 : ['4/3', '3/2', '5/3', '2', '7/3', '5/2']
+   Cor 7.5 threshold (v_s+1)/(u_s+1) = 9/4
+      delta=4/3  ord F = -36    ord G = -24     parts allowed: 2 (Cor 7.5)
+      delta=3/2  ord F = -63/2  ord G = -21     parts allowed: 2 (Cor 7.5)
+      delta=5/3  ord F = -27    ord G = -18     parts allowed: 2 (Cor 7.5)
+      delta=2    ord F = -18    ord G = -12     parts allowed: 2 (Cor 7.5)
+      delta=7/3  ord F = -9     ord G = -6      parts allowed: 2 or 3
+      delta=5/2  ord F = -9/2   ord G = -3      parts allowed: 2 or 3
+   deg q = 13 u_s + 1 = 40 = (-mu_3-2)u_s/d_s + 1 = 40
+
+=== D. inner major support blocks (sec 3.5) ===
+   h3  ambient  66 ; boundary 32 : below  43 ; face 2 [(4, 5), (8, 2)] ; strict  21
+   h2  ambient 561 ; boundary 96 : below 384 ; face 8 [(4, 21), (8, 18), (12, 15), (16, 12), (20, 9), (24, 6), (28, 3), (32, 0)] ; strict 169
+   free h3 coordinates (r,d), v_r = max(0,ceil((33-3r)/4)) <= d <= 11-r : 21
+
+=== E. outer D_2 thresholds and support (sec 3.2) ===
+   A2  D=65 ord>=-2    W0=189 : ambient 1650 deleted 1386 remaining  264 min r 21
+   A3  D=98 ord>=-3    W0=285 : ambient 2739 deleted 2442 remaining  297 min r 53
+   B1  D=32 ord>=-1    W0= 93 : ambient  561 deleted  384 remaining  177 min r 0
+   B2  D=65 ord>=-2    W0=189 : ambient 1650 deleted 1386 remaining  264 min r 21
+   TOTAL ambient 6600 deleted 5598 remaining 1002
+
+=== F. outer D_1 rows and exact Q-ranks (sec 3.3) ===
+   A2  D_1 threshold 583  raw rows  51 exact rank  44 window [567,582]
+   A3  D_1 threshold 879  raw rows 108 exact rank  73 window [855,878]
+   B1  D_1 threshold 287  raw rows  15 exact rank  15 window [279,286]
+   B2  D_1 threshold 583  raw rows  51 exact rank  44 window [567,582]
+   TOTAL raw 225 rank 176 ; retained 1002 - 176 = 826
+   h2 D_1 threshold 296 : raw rows 7 at e-powers {291: 1, 292: 1, 293: 1, 294: 2, 295: 2} ; exact rank 7

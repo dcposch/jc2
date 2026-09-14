@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report published and verified. Terminal status follows.
+
+**Outcome:** the gate report is written at `xmodel/d28-uniform-actual-degree-gate-fable5-20260909.md`, finished 09:42:53 UTC, inside the 09:57 UTC bound. The file ends with the single standalone `<!-- BODY-END -->` line and carries no seal or exit price, as instructed.
+
+**Custody.** All 11 lane copies matched their PINS hashes and byte counts before any body was read. PINS itself hashes to 1fae41fc… at 7307 bytes. No source path, live gate, peer report, pending F2/F10 result, or F10 map was opened. Zero mathematical subprocesses were run; only date, ls, cat, sha256sum, and the one report write.
+
+**Verdicts, all six groups CONFIRMED, plus separate source-selection CONFIRMED and 16h-composition CONFIRMED.** Key hand derivations in the report:
+
+- **Group 1.** Nondividing degrees for every q from gcd(m0, 2m0−1)=1. The accepted 15x Section 3 is stated for arbitrary coprime m,n and D, so instantiating (q+2, 2q+3, 28) adds no q-dependent step. The identity 28 = Ma+Nb is derived, not assumed.
+- **Group 2.** Corner sums of all 24 rows retabulated; exactly F1–F11, F18, F19 have a+b ≤ 28. Divisibility kills the (5,20), (6,15), (6,18) rows from the exact identity. Every retained family formula was rederived from literal Definition 3.3.
+- **Group 3.** Endpoints 1/2 < r(q) ≤ 2/3 proved; F1 exceeds 2/3 by 1/(3(3j+4)); F11 sits below 1/2; F9 gives j=q; swapped F10 gives (q−1)(j+1)=1 with only q=2, j=0.
+- **Group 4.** M+3N=4 forces M=N=1. Type II.b, l1=7, t=0, starting triple ((7,21),(1,0),(7,−2)) identified from items (6)–(8),(13). The swap-standardness bracket sign is correct. I supplied one omitted step: the (7,−2)-face commutation Qt^m = c·Pt^n shows the F9/F10 dichotomy is intrinsic under output swap, which the proof asserts via the multiplicities 21 and 12 without displaying. Exposition gap, closed from charged material, not a genuine GAP.
+- **Group 5.** Every 16h antecedent discharged for the F9 branch at every q; the A1=(13/7,3) alternative forces q=2 and the printed F10(0) row. No row-to-realization arrow used.
+- **Group 6.** Controls include two new ratio survivors killed only by the inverse identity: F3 at j=0 matches q=0 and F5 at j=0 matches q=3. Also F1's positive inverse solutions, the omitted-swap failure, a changed F10 endpoint, and the Laurent-support failure.
+
+**Non-load-bearing observation recorded.** The printed F6 row has k/e_k = 2, contradicting the paper's "except F4" sentence, and its formula lists non-coprime pairs at even j. F6 is dead by 5 ∤ 28 regardless, so the column is unaffected.
+
+**First genuine GAP:** none found. No next task promoted or launched; review stopped here.
+DIVERT path=xmodel/d28-uniform-actual-degree-gate-fable5-20260909.md status=CLEAN body_bytes=18168 body_sha256=c5824c135ebb3014fa8f6639854e96b0ece13c143b52f526d4a1bbc4fa40e83c

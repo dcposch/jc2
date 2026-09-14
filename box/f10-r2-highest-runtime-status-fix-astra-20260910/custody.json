@@ -1,0 +1,102 @@
+{
+  "schema": "source-only-terminal-custody/v1",
+  "owner": "model_productivity",
+  "first_action_utc": "2026-09-10T16:18:32.870761185Z",
+  "hard_stop_utc": "2026-09-10T16:30:00Z",
+  "reserve_utc": "2026-09-10T16:27:00Z",
+  "verified_utc": "2026-09-10T16:21:52.030073967Z",
+  "status": "FINAL_SOURCE_ONLY_UNEXECUTED",
+  "all_writers": "IDLE_AFTER_CUSTODY_FREEZE",
+  "all_six_inputs_prepost_matched": true,
+  "inputs": [
+    {
+      "path": "box/f10-r2-highest-modular-runtime-astra-20260910/dispatch.py",
+      "sha256": "00b12b15cf97f860b963e3fe91d947771722392b96fc8efdb3de168e75e89328",
+      "bytes": 44378
+    },
+    {
+      "path": "box/f10-r2-highest-modular-runtime-astra-20260910/mutate.py",
+      "sha256": "3d68ec187f77dc1906f177d8f487f1d037dd0a1aa4b46329632ee6f27f315225",
+      "bytes": 12268
+    },
+    {
+      "path": "box/f10-r2-highest-modular-runtime-astra-20260910/probe.py",
+      "sha256": "1e3bea3ad995ca64780f77b33792ed09c9843fb3925aae5f64c7a2abcaa0ecde",
+      "bytes": 2532
+    },
+    {
+      "path": "box/f10-r2-highest-modular-runtime-astra-20260910/CONTRACT.md",
+      "sha256": "e79249f9620eb6b4bf519b826a4f12e5f82440cfbc76a0dffb5769d1c4ce4e90",
+      "bytes": 7390
+    },
+    {
+      "path": "box/f10-r2-highest-modular-code-astra-20260910/produce.py",
+      "sha256": "6f094c4b468afe7e9f09d8b0d4ee4f33faa3017afb9809eaa312ff2f70904913",
+      "bytes": 7572
+    },
+    {
+      "path": "xmodel/f10-r2-highest-modular-runtime-gate-fable5-20260910.md",
+      "sha256": "8358693287a2874f05b431ab0081c98db9461bdc6eaf06be33f40a2f83c72ca8",
+      "bytes": 21375
+    }
+  ],
+  "owned": [
+    {
+      "path": "box/f10-r2-highest-runtime-status-fix-astra-20260910/dispatch.py",
+      "sha256": "396dc3b42f082ffbc08516a3dd41528516e2e69e3994fc005b22b79b3a605927",
+      "bytes": 44384
+    },
+    {
+      "path": "box/f10-r2-highest-runtime-status-fix-astra-20260910/mutate.py",
+      "sha256": "3d68ec187f77dc1906f177d8f487f1d037dd0a1aa4b46329632ee6f27f315225",
+      "bytes": 12268
+    },
+    {
+      "path": "box/f10-r2-highest-runtime-status-fix-astra-20260910/probe.py",
+      "sha256": "1e3bea3ad995ca64780f77b33792ed09c9843fb3925aae5f64c7a2abcaa0ecde",
+      "bytes": 2532
+    },
+    {
+      "path": "box/f10-r2-highest-runtime-status-fix-astra-20260910/CONTRACT.md",
+      "sha256": "f0bfb025d5445f5cb16b48c29ff0d9aef909616216482c52973bd5c8f37f4318",
+      "bytes": 7393
+    },
+    {
+      "path": "box/f10-r2-highest-runtime-status-fix-astra-20260910/STATUS-DELTA.diff",
+      "sha256": "cd498fec4577f7234c2ce413dbf0b4b035821f1fa6759f9acc2f080ee1081eb5",
+      "bytes": 2372
+    },
+    {
+      "path": "box/f10-r2-highest-runtime-status-fix-astra-20260910/READ-SCOPE.md",
+      "sha256": "f466a5b459037905b252120d33990792594e4f2971752710e623f9e72eec1d4a",
+      "bytes": 1700
+    },
+    {
+      "path": "box/f10-r2-highest-runtime-status-fix-astra-20260910/PINS.json",
+      "sha256": "88423c62a1ac9ce3942f38e9a8c3be77d9c85c49666a61f3fab5cab9dec75e9c",
+      "bytes": 1247
+    },
+    {
+      "path": "xmodel/f10-r2-highest-runtime-status-fix-astra-20260910.md",
+      "sha256": "3d282cbed69ee9ca919f4f9e9151ad65a0cc624886ddf707f1c04240b0254a62",
+      "bytes": 3759
+    },
+    {
+      "path": "xmodel/f10-r2-highest-runtime-status-fix-astra-20260910.md.artifact.json",
+      "sha256": "86c126f276ef739d234a262e470140f42865b6d26b4f8fac7ac156e41b5e734c",
+      "bytes": 693
+    }
+  ],
+  "report_sha256": "3d282cbed69ee9ca919f4f9e9151ad65a0cc624886ddf707f1c04240b0254a62",
+  "expected_transaction_sha256": "86c126f276ef739d234a262e470140f42865b6d26b4f8fac7ac156e41b5e734c",
+  "expected_transaction_verified": true,
+  "exact_code_changes": "two status literal substitutions only",
+  "exact_contract_changes": "one corresponding status literal substitution",
+  "mutator_and_probe_unchanged": true,
+  "own_whole_open_collision_checks": true,
+  "raised_canonical_open_count": 0,
+  "mathematical_execution": false,
+  "baseline_access": false,
+  "network_or_worker_actions": false,
+  "custody_excludes_itself": true
+}

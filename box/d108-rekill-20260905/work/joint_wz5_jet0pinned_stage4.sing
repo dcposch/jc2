@@ -1,0 +1,11 @@
+ring R=0,(B1c_4_25,B1c_4_26,B1c_4_27,B1c_4_28,B1c_4_29,B1c_4_30,B1c_4_31,Hc_5_4,K2c_3_26,K2c_4_25,K2c_4_26,K2c_5_25,K2c_5_26,c,jet1,jet2,Zc),dp;
+ideal I=K2c_3_26^2 + 16*K2c_3_26*jet2 + 64*jet2^2,-2*K2c_3_26*K2c_4_25 + 2*K2c_3_26*K2c_4_26 + 40*K2c_3_26*jet1^2 - 16*K2c_4_25*jet2 + 16*K2c_4_26*jet2 + 320*jet1^2*jet2,-B1c_4_25*K2c_3_26 - 8*B1c_4_25*jet2 + B1c_4_26*K2c_3_26 + 8*B1c_4_26*jet2 - B1c_4_27*K2c_3_26 - 8*B1c_4_27*jet2 + B1c_4_28*K2c_3_26 + 8*B1c_4_28*jet2 - B1c_4_29*K2c_3_26 - 8*B1c_4_29*jet2 + B1c_4_30*K2c_3_26 + 8*B1c_4_30*jet2 - B1c_4_31*K2c_3_26 - 8*B1c_4_31*jet2 - 120*Hc_5_4*K2c_3_26 - 960*Hc_5_4*jet2 - 52*K2c_3_26^2*jet1 - 2*K2c_3_26*K2c_5_25 + 2*K2c_3_26*K2c_5_26 - 512*K2c_3_26*jet1*jet2 - 14*K2c_3_26 + K2c_4_25^2 - 2*K2c_4_25*K2c_4_26 - 40*K2c_4_25*jet1^2 + K2c_4_26^2 + 40*K2c_4_26*jet1^2 - 16*K2c_5_25*jet2 + 16*K2c_5_26*jet2 + 400*jet1^4 - 768*jet1*jet2^2 - 112*jet2,Zc*c-1;
+ideal Sd=std(I);
+print("BEGIN_DIM");print(dim(Sd));print("END_DIM");
+print("BEGIN_NF");print(reduce(1,Sd));print("END_NF");
+print("BEGIN_SIZE");print(size(Sd));print("END_SIZE");
+ideal EmptyControl=c,Zc*c-1;
+ideal PointControl=c-1,Zc*c-1;
+ideal RawControl=K2c_3_26^2 + 16*K2c_3_26*jet2 + 64*jet2^2,-2*K2c_3_26*K2c_4_25 + 2*K2c_3_26*K2c_4_26 + 40*K2c_3_26*jet1^2 - 16*K2c_4_25*jet2 + 16*K2c_4_26*jet2 + 320*jet1^2*jet2,-B1c_4_25*K2c_3_26 - 8*B1c_4_25*jet2 + B1c_4_26*K2c_3_26 + 8*B1c_4_26*jet2 - B1c_4_27*K2c_3_26 - 8*B1c_4_27*jet2 + B1c_4_28*K2c_3_26 + 8*B1c_4_28*jet2 - B1c_4_29*K2c_3_26 - 8*B1c_4_29*jet2 + B1c_4_30*K2c_3_26 + 8*B1c_4_30*jet2 - B1c_4_31*K2c_3_26 - 8*B1c_4_31*jet2 - 120*Hc_5_4*K2c_3_26 - 960*Hc_5_4*jet2 - 52*K2c_3_26^2*jet1 - 2*K2c_3_26*K2c_5_25 + 2*K2c_3_26*K2c_5_26 - 512*K2c_3_26*jet1*jet2 - 14*K2c_3_26 + K2c_4_25^2 - 2*K2c_4_25*K2c_4_26 - 40*K2c_4_25*jet1^2 + K2c_4_26^2 + 40*K2c_4_26*jet1^2 - 16*K2c_5_25*jet2 + 16*K2c_5_26*jet2 + 400*jet1^4 - 768*jet1*jet2^2 - 112*jet2;
+print("BEGIN_CTL");print(reduce(1,std(EmptyControl)));print(reduce(1,std(PointControl)));print(reduce(1,std(RawControl)));print("END_CTL");
+quit;

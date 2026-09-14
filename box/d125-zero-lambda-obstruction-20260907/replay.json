@@ -1,0 +1,19 @@
+{
+  "schema": "jc2.bounded-replay/v1",
+  "script": "box/d125-zero-lambda-obstruction-20260907/check.py",
+  "sha256": "f0c9acb295d0ff8c1c2dcf8818c705174a04eb3e6d0386c93f2d7675c3c5f425",
+  "normal_exit": 0,
+  "optimized_exit": 0,
+  "monomial_jet_controls": 36,
+  "max_receiver_monomial_total_degree": 7,
+  "ordinary_generator_fixtures": 2,
+  "laurent_fixture": "P=v^-1,Q=v^2*u,J=1; rejected for its actual single negative coefficient",
+  "mutations": {
+    "--mutate-map": {"normal_exit":1,"optimized_exit":1,"failure":"V-linear jet escaped the lambda ideal"},
+    "--mutate-drop-negative": {"normal_exit":1,"optimized_exit":1,"failure":"ordinaryness verifier must reject the Laurent toy"}
+  },
+  "last_six_process_batch_wall_seconds": 1.315441225,
+  "explicit_exit_codes_rechecked": true,
+  "full_client_expanded": false,
+  "all_writers_done": true
+}

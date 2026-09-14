@@ -1,0 +1,51 @@
+// CONJECTURE 1, on-ray reading, from the FROZEN exact bases (read-only).
+// Is J_t = (E_2,...,E_{2t}) contained in the principal ideal (T_2) of S_t ?
+int t = TTT; int N = t+1;
+string VX = "VXX";           // "x,c1,c2,b"
+string VS = "VSS";           // "c1,c2,b"
+string WG = "WGT";           // "1,2,4"
+string base = "/home/ubuntu/jc2/box/k16xempty-20260905/controls_t"+string(t);
+execute("ring rW = (0,d),("+VX+"),dp;");
+execute("minpoly = 3*d^2 - "+string(N)+";");
+execute("poly W = "+read(base+"_W.txt")+";");
+proc xc(poly f,int k){matrix m=coef(f,var(1));int i;
+  for(i=1;i<=ncols(m);i++){if(deg(m[1,i])==k){return(m[2,i]);}} return(poly(0));}
+poly Bv  = -xc(W,0);
+poly eta =  xc(W,1);
+poly w2  =  xc(W,2);
+poly w3  =  xc(W,3);
+number y = (d+N)/(2*(2*N-1));
+execute("poly l2 = c"+string(t-1)+"/("+string(y)+");");
+poly T2  = 3*(b^2)*w3 + 18*Bv*w2 - 10*(eta^2);
+poly Lp  = 4*eta + 3*b*l2;
+print("built W: terms="+string(size(W))+"  T2 terms="+string(size(T2)));
+execute("ring rS = (0,d),("+VS+"),wp("+WG+");");
+execute("minpoly = 3*d^2 - "+string(N)+";");
+execute("map id = rW, 0,"+VS+";");
+poly T2m=id(T2); poly Lpm=id(Lp); poly Bm=id(Bv); poly etam=id(eta);
+poly w2m=id(w2); poly w3m=id(w3);
+string f = read(base+"_raw.sing");
+f = f[find(f,"ideal rows=")..size(f)];
+execute(f);                      // defines rows, Bsol, eta, target in rS
+print("CUSTODY_B_diff   = "+string(Bm-Bsol));
+print("CUSTODY_eta_diff = "+string(etam-eta));
+print("CUSTODY_T_diff   = "+string(Bm*etam-target));
+print("CTRL_Thm5.1i  Lp^2+4*T2+24*E_2 = "+string(Lpm^2+4*T2m+24*rows[1]));
+print("wt(T2)="+string(deg(T2m))+" (4t="+string(4*t)+")   wt(Lpivot)="+string(deg(Lpm))
+      +" (2t="+string(2*t)+")   wt(B*eta)="+string(deg(Bm*etam))+" (4t+1="+string(4*t+1)+")");
+ideal gT2 = std(ideal(T2m));
+int k; int allin=1;
+for(k=1;k<=size(rows);k++){
+  if(reduce(rows[k],gT2)!=0){ allin=0; }
+  print("E_"+string(k+1)+": wt="+string(deg(rows[k]))+" (exp "+string(4*t+2-(k+1))
+        +")  in_(T2)="+string(reduce(rows[k],gT2)==0)+"  nterms="+string(size(rows[k])));
+}
+print("J_t SUBSET (T_2) ? "+string(allin));
+ideal gJ = std(rows);
+print("T2  in J_t ? "+string(reduce(T2m,gJ)==0));
+print("T2^2 in J_t ? "+string(reduce(T2m^2,gJ)==0));
+print("B*eta in J_t ? "+string(reduce(Bm*etam,gJ)==0));
+print("(B*eta)^2 in J_t ? "+string(reduce((Bm*etam)^2,gJ)==0));
+print("dim J_t = "+string(dim(gJ))+"  vdim = "+string(vdim(gJ)));
+print("DONE_ONRAY_t"+string(t));
+quit;

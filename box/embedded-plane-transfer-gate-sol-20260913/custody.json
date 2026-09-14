@@ -1,0 +1,15 @@
+{
+  "task": "embedded-plane-transfer-gate-sol-20260913",
+  "status": "TERMINAL",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-13T06:19:30.089950746Z",
+  "custody_prewrite_utc": "2026-09-13T06:23:26.289224643Z",
+  "all_writers_idle": true,
+  "verdict": "CONFIRMED_WITH_EXPLICIT_SOURCE_DATA_CONDITIONALITY",
+  "report": {"path":"xmodel/embedded-plane-transfer-gate-sol-20260913.md","sha256":"12799476c027a8b8d96c6e153c62471e5579d6303da6c1b90f09fda431838b29","readback":"WHOLE"},
+  "manifest": {"path":"xmodel/embedded-plane-transfer-gate-sol-20260913.md.artifact.json","sha256":"3b0e40f89af146eb51edeeedebda11e250a681fdc834cfa91795ae315415688c","readback":"WHOLE","expected_verify":"VERIFIED"},
+  "pins": {"path":"box/embedded-plane-transfer-gate-sol-20260913/PINS.json","sha256":"02d2ed75a02b9f86d6de8e642aa547bd704ac6893f3f5b056fa9b72c6be81b2a","readback":"WHOLE"},
+  "input_postpins": "all six local charged inputs matched their exact pre-read SHA256 values",
+  "read_scope": "TASK, APP snapshot, COORD snapshot, producer report and manifest WHOLE; targeted primary HTML scope exactly recorded in PINS.json",
+  "scope": "manual different-model FIRST only; no source execution, AWS, mutation, promotion, or successor"
+}

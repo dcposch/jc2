@@ -1,0 +1,401 @@
+# APPROACHES.md — current research strategy
+
+Current navigation updated September13, 2026 with the [FULL0925 synthesis](xmodel/ideation-20260913T0925Z-synthesis.md), sealed and verified10:11 UTC. Blind and mathematical cross coverage completed, with the synthesis's procedural qualifications retained. All46 mathematical dispositions remain unchanged; scalar/preflight and r3 rank work are parked this cycle. The older synthesis's remaining-block lower endpoint d2>=3 is superseded: the cubic-block closure was lost from its summary, not reopened mathematically. This is not a proof, promotion record or execution queue. [AUDIT.md](AUDIT.md) owns accepted statements, external imports and corrections; the newest LIVE STATE in [notes.md](notes.md) owns actual jobs, completion times and clocks. JC2 remains unresolved. The [pre-update copy](history/APPROACHES-before-20260913T1017-full0925.md) preserves the prior navigation byte-for-byte.
+
+The [exact pre-cleanup archive](history/APPROACHES-before-20260911T2252-cleanup.md) preserves the complete pre-cleanup development narrative and historical source trail, byte-for-byte. All **46 avenue numbers** remain those of the [master inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table). Its scores and launch recommendations are historical, not current priorities. The latest completed synthesis is linked below; no live preliminary report is incorporated here.
+
+## Priority rule: global gap first
+
+Protect at least half of strongest frontier-research time for all-degree
+proofs or new counterexample mechanisms. Before a task, check prior work and
+name the missing implication plus its cheapest decisive test. Incremental
+lemmas earn no automatic follow-up when the closing gap stays unchanged;
+accepted bounds are not reverified without a concrete load-bearing doubt.
+The [operating guard](COORDINATION.md#global-gap-first-guard-september13-user-directed)
+sets the bounded-tranche/pivot rule without adding another queue.
+
+## 1. Global coverage and closed scopes
+
+The reviewed coverage theorem gives necessary data for normalized minimal counterexamples at arbitrary degree. The enumerated window is only n<=200: 24,063 census rows -> 90 actual-stabilizer rows -> 64 residual necessary configurations, comprising 44 with u_s=1 and 20 with u_s>=2. They are not polynomial pairs. See AUDIT's census/coverage entries and the archived original.
+
+| Object | Recorded closure; boundary of the claim |
+|---|---|
+| Actual mapping/topological degree <=5 | Already closed by the accepted external Zoladek Theorem6.12; see [T5 and its source tier](ladder/REDUCTION.md#t5-a-counterexample-has-topological-degree-at-least-six) and [low-sheet checksum](ladder/SHEET6.md#canonical-checksum-2026-08-24). This is generic fibre cardinality, NOT polynomial total degree or the degree of a proper intermediate leg. Six is the first unexcluded mapping degree; no low-sheet reproof or search is selected. |
+| Actual 99/66 | External GGHV degree-99 applicability stops new frontier work. Internal computations remain undecided; no internal certificate is claimed. |
+| Actual 72/108 | Accepted 16e composition excludes all such sources and gives counterexample max degree>=125, conditional on named published reductions and retained external certificates. Not an unconditional internally proved bound. |
+| Actual 75/125 | [15x/15y composition](xmodel/f2-fixed-degree-composition-coordinator-20260909.md) and [gate](xmodel/f2-fixed-degree-composition-gate-fable5-20260909.md) exclude every ordinary characteristic-zero pair at the stated primary-import tier. Not a blanket max-degree-125 theorem. |
+| F2 and F9 | 16i/j and 16g/h exclude their ENTIRE ordinary rectangular ACTUAL standard strata for every q>=0. Not every bare Laurent standard pair or every same-numerical-degree pair. F9 includes the separate actual 84/140 closure 16f; not max140. |
+| F10 r1 | Complete normalized ring zero (17zze), followed by separate source composition 17zzt: every actual 112/196 pair is excluded under the named imports. Together with 16m this closes the exact column 28(q+2),28(2q+3), all q>=0, and its swap. Not arbitrary gcd28 or max196. |
+| F10 r2 | Complete guarded source zero (17zzzzzzzzz), followed by separate degree-scope composition: actual 196/336 pairs, either order, are excluded over characteristic-zero fields at the recorded tiers. The ratio-selection statement identifies 28(3r+1),28(5r+2) with F10(r-1), apart from the already-closed r1 alternative. It does NOT close r>=3, all gcd28, or max336. |
+| K16 | Theorem (T) is promoted only for t<=8. Even the entire K16 ray, or all F10, would not alone resolve JC2. |
+
+All six named standard-F2 15/25 receivers, both field/top patterns and unequal/common3/common4 polygons, are retired by 15q. The exact Moh parent M=(-75,105,123), d=(125,25,5,1), (V2,V3)=(2,4) is retired through 15s–15v, not every Moh125 label. The constant-J closed-common-H coprime nondividing-degree source program is retired by its stated classical normalization/GGV interface. No revived receiver solve or duplicate transfer is warranted.
+
+A numerical match never substitutes for a source map. The general proof still needs every covered datum, with no unproved degree, support, depth or height cap, and an explicit unassigned branch wherever landing is unproved.
+
+## 2. Complete F10 source: the remaining r>=3 problem
+
+The accepted source interface 16o/p/q/r retains R=p*z^3-z^2+u*z+v, BOTH ordinary inverse-pole conditions, the complete Euler mate, every coefficient of both residuals and the nonzero leading-product guard. The compressed Jacobian is c*Delta, not constant. A point of the COMPLETE guarded source reconstructs a Keller pair of degrees 28(3r+1),28(5r+2) under the named imports. A leading ODE solution is not such a point: 16l supplies ODE solutions for every parameter, and 16n closes only the separated complement.
+
+Accepted early, middle, critical, late and ell-column maps retain actual mixed forcing, gauges, all remaining rows and guards. Middle H7-unitness is proved for EVERY integer r>=2 and r+2<=h<=2r by 17zzu; late paired-contact exclusion and its whole-ring column composition are also accepted, including nilpotents and the reciprocal chart. Old residue-class farms are CLOSED, not residual source cases. [Contact result review](xmodel/f10-contact-gram-execution-relative-gate-fable5-20260910.md) and [late composition](xmodel/f10-all-r-late-unit-composition-gate-fable5-20260910.md) do not imply complete source emptiness.
+
+The uneliminated scale interface 17zzm gives faithful rank-(2r+1)/rank-3 covers and a zero-ring question with 6r+2 variables, 13r+3 relations and L0 inverted. The [kernel presentation](xmodel/f10-all-r-kernel-highest-interface-astra-20260910.md) has r+1 kernel variables; its finite-length formula requires unproved highest-form regularity. The later [complete homogeneous-source interface](xmodel/ideation-20260910T2300Z-cross-fable5.md) instead retains 8r+1 slots and guard g=Hq*ell; localized source zero is equivalent to complete normalized source zero WITHOUT REG. These are faithful source interfaces, not s=1 specializations or parameter bounds.
+
+The highest homogeneous quotient, filtered inhomogeneous quotient and homogeneous source cone are different rings. REG/Artinian information alone does not imply source zero. Preserve the full map degree 15r+6 as distinct from the leading Belyi cover or parameter-cover degree; equality of numbers does not identify covers.
+
+The r1 and r2 computation/review queues are CLOSED. r1's literal full checker and eight corruption tests support its conditional composition. r2's reconstruction controls 6/10, full-special highest certificate and full-unit certificate have separate accepted reviews; same-place integrality, finite-local-model/Nakayama and covers supply source zero, not the machine's science_outcome field. See [r1 evidence](xmodel/f10-integer-wire-actual-execution-root-20260910.md), [r2 reconstruction review](xmodel/f10-r2-semantic-ready-result-gate-fable5-20260910.md) and [r2 result/composition review](xmodel/f10-r2-fullunit-ready-result-gate-fable5-20260910.md). No repeat basis, rational cofactor, prime or control farm is selected.
+
+## 3. r3 positive test and implementation boundary
+
+September13 02:50UTC: [Fifth-power clearance](xmodel/f10-mixed-resultant-sizing-root-20260913.md)
+and [Sol FIRST](xmodel/f10-mixed-resultant-sizing-gate-sol-20260913.md)
+give PROMOTED/MANUAL F10-MIXED-EXCEPTION-SIZE-1: the SAME scalar's possible
+actual integer-r failures number at most151. Their VALUES are unknown;
+this does not mean r<=151. Clearing U^5 yields a resultant of degree<=185
+with exact cube factor(3t-5)^34. No code rewrite or speedup was measured.
+The [seven-adic two-family theorem](box/f10-mixed-sevenadic-gate-fable5-20260913/INTAKE.md)
+and [third-family FIRST](box/f10-mixed-rthree-gate-fable5-20260913/INTAKE.md)
+are PROMOTED/MANUAL: the SAME scalar is a unit on every component for every
+actual r=1,2,3mod7. In the third family v7(B)=2*v7(2r+1)-15/7 for EVERY
+valuation order; exact monic deflation preserves denominator/weight bounds
+and retains the factorial7 carries. Possible exceptions remain unidentified
+in0,4,5,6mod7 before the following update. [Five-subclass FIRST intake](box/f10-mixed-five49-gate-fable5-20260913/INTAKE.md)
+now promotes v7(B)=0 for every r=19,26,33,40,47mod49, on every root.
+The subsequent [paired FIRST](box/f10-mixed-paired-local-gate-fable5-20260913/INTAKE.md)
+promotes r12mod49 at EVERY valuation order and the six subclasses
+r6,13,20,27,34,41mod49. Accepted possible exceptions are now confined
+to0,4mod7 and5,48mod49. The r48 six-root cluster is only a residual
+obstruction, not a scalar-zero lift. No cutoff, proportional cardinality
+reduction or full-source conclusion. This completes review of already-sealed
+claims; no further residue-class research is selected under the new guard.
+The older reviewer's bare quotient-integrality suggestion is
+still not a premise; the new independent divided-coefficient proof is.
+Separately, [integrated ambient-capability FIRST](box/f10-mixed-ambient-credential-sol-20260913/ROOT-INTAKE.md)
+accepts two inert source derivatives conditionally, including normal UID
+fixup; no fresh worker, runtime qualification or scalar computation follows.
+
+New mathematical delta, September13 02:28UTC: [F10-MIXED-CUBE-1](box/f10-mixed-cube-asymptotic-gate-fable5-20260913/INTAKE.md)
+is PROMOTED/MANUAL after different-model Fable FIRST. For delta=t-5/3,
+the SAME scalar has B=-2delta^2/279006525+O(delta^(15/7)) on ALL seven
+leading branches. It is a unit for all sufficiently large integer r;
+generic coprimality is now proved. Possible actual-r exceptions are FINITE
+BUT UNIDENTIFIED, with no effective cutoff or all-r certificate. The whole
+critical-coefficient attachment consumes this scalar, but complete comparison,
+REG and source zero still do not follow. The selected exact test now targets
+exception exclusion, not an unknown generic gcd. No parameter farm or new
+worker is selected; the later operational snapshots retain their dated scope.
+
+At r3 the complete cone has 25 slots and a weight-30 guard. Exponent-one membership has nominal dimensions 297x1453 over rank-seven B. Actual r3 B is a FIELD by accepted 17zzf; no new irreducibility proof is needed. A verified positive identity excludes the complete source; negative membership does not prove localized properness or produce a point. The conditional twelve-coefficient support diagnostic survives only for inspection in required source output, not a new pre-baseline producer; actual characteristic-zero vanishing and rank remain unknown.
+
+The [whole-B unit-pivot contract](xmodel/f10-source-cone-unit-pivot-contract-root-20260911.md) is ordinary complete Gaussian elimination at this field client if exact arithmetic finishes; retain explicit inverse and full-polynomial checks. Its general product-ring version may be inconclusive even for a solvable system. No accepted exact solver implementation or completed rational coefficient packet exists.
+
+The accepted CONDITIONAL [one-place full-rank contract](xmodel/f10-source-cone-fullrank-place-astra-20260911.md) is the prospective cheaper positive test: an authenticated nonzero 297-minor at one genuine finite place proves generic surjectivity and guard membership without REG or exact cofactor discovery. Actual rank, place admissibility and feasibility remain unknown; rank failure is nondecision. Static finder/checker acceptance retains all rows/columns and 88,209 inverse products. Its rational-baseline runtime candidate is parked UNREVIEWED, not a launch instruction.
+
+Accepted direct-place attachment permits alternative scalar completions: all 25 alternative rows vanish in the canonical localized source and the guard maps to a unit. This is not canonical matrix rank or unsaturated ideal equality; modular equality alone is insufficient. The new necessary-row instrument (28z/29z) deletes only the unused alternative Laurent-q inverse/pole branch, retaining the SAME 25 rows/guard, remaining diagnostics and full canonical-source exclusion implication. It does not certify the omitted inverse coefficients or a source point.
+
+No completed r3 baseline, minor, identity or source outcome exists. The rational producer hit its 900-second wall cap; the direct producer later hit its 100,000-term guard in transformed-polynomial addition, not CPU/RSS exhaustion. The necessary-row attempt stopped at descendant cleanup before mathematics. These are distinct NONDECISIONS, not source failures. Complete streaming remains UNREVIEWED; p523/V0 now has the scoped scalar and literal-modulus acceptance below, not whole-program qualification. Neither evaluator may trust a supplied modulus or hardcode a place. No measured speedup or automatic retry/cap increase follows.
+
+The [producer support bound](xmodel/f10-necessary-rows-producer-support-root-20260912.md) and [independent checker analysis](xmodel/f10-necessary-rows-checker-support-astra-20260912.md) passed [Fable FIRST](xmodel/f10-necessary-rows-support-gate-fable5-20260912.md): F10-RETAINED-SUPPORT-1 is accepted at manual static-proof tier. Every retained producer polynomial/transient has fewer than72002 keys; every reconstructed checker polynomial/transient fewer than21000, below the unchanged100000 cap. Each graph polynomial has at most412 terms, all30 positions at most12360, and legitimate complete output is below4MiB. Positive weighted support and fixed SCALE reindexing prove these bounds before cancellation. The [intake](box/f10-necessary-rows-support-gate-fable5-20260912/INTAKE.md) retains the original conservative bounds, not the review's unsupported final tightening or unnecessary universal3x JSON claim. No CPU/RSS/wall, aggregate-memory, good-place, rank, source-exclusion or deployment result follows. The old inverse-block method is acknowledged; its retained SCALE/graph application is the narrow new contribution.
+
+The [p523 late-node calculation](xmodel/f10-p523-late-inverse-root-20260912.md) and completed [six-matrix extension](xmodel/f10-p523-early-inverses-astra-20260912.md) now have independent review of ALL15 named scalar attachments. [Fable FIRST](xmodel/f10-p523-scalar-gate-fable5-20260912.md) confirms the leading root/fixed denominators and TEN nodes; its summary's "11" remains corrected in the [initial intake](box/f10-p523-scalar-gate-fable5-20260912/INTAKE.md). [Sol DELTA FIRST](xmodel/f10-p523-missing-matrices-gate-sol-20260912.md) reconstructs the missing source columns, attaches det2..det6=345,211,155,93,68 and verifies the h5/h6 inverse-entry identities. [Completion intake](box/f10-p523-missing-matrices-gate-sol-20260912/ROOT-INTAKE.md) closes this five-node debt at manual-proof tier. The separate [literal-septic FIRST](xmodel/f10-p523-septic-gate-fable5-20260912.md) now confirms ALL eight coefficients [0,17,249,53,102,191,291,1], the exact mathematical initialization predicates and P7'(0)=17; [intake](box/f10-p523-septic-gate-fable5-20260912/INTAKE.md) records the coefficient-mutation control. Canonical anomalies, complete rows and rank remain separate. No hardcoding, worker launch or prime farm follows.
+
+The [canonical-identity proof](xmodel/f10-canonical-identities-astra-20260912.md) is now PROMOTED/MANUAL at p523,V0 after [Fable FIRST](xmodel/f10-canonical-identities-gate-fable5-20260912.md): all111 required diagnostics and49 SCALE comparisons vanish in the free parameter polynomial/Laurent rings, without imposing source equations. The independent derivation covers the h4-dependent h7 cancellation, Lambda=(68,351), Euler's resonant gap7 gauge and the exact SCALE ring map. The39 nonmandatory diagnostics are not asserted zero; Psi7=Hq+36z is a nonzero ambient polynomial even though its low-band comparison vanishes. [FIRST intake](box/f10-canonical-identities-gate-fable5-20260912/INTAKE.md) closes the named identity-review debt. Combined with the SAME-point scalar/septic lemmas, the named anomaly predicates cannot fail for algebraic reasons under exact evaluation; complete source rows and actual297rank remain UNRUN. No generic characteristic-zero identity, whole-program success or runtime guarantee follows.
+
+The uniform cone identity attempt returned NO_IDENTITY. Double-h remainder relaxation is legitimate but its [manual test](xmodel/f10-double-h-discriminator-astra-20260910.md) found NO_CLOSING_DISCRIMINATOR; derivatives precede division, h's unit leading coefficient and u=0 remain. The terminal affine packet has no proved obstruction unit in the actual earlier quotient. The mixed-scalar [review](xmodel/f10-mixed-scalar-unit-gate-fable5-20260911.md) leaves final factor unitness open. The [complete forcing attachment](xmodel/f10-mixed-forcing-attachment-root-20260912.md) has [Fable FIRST acceptance](box/f10-mixed-forcing-attachment-gate-fable5-20260912/INTAKE.md), PROMOTED/MANUAL/STIPULATED ALGEBRA. The new [actual critical-coefficient attachment](xmodel/f10-mixed-critical-source-coefficient-root-20260912.md) now has [different-model FIRST acceptance](box/f10-mixed-critical-source-gate-fable5-20260912/INTAKE.md), PROMOTED/MANUAL: Psi_q=c_z(z+Gamma(W_q)) and, on the fixed last-two kernel slice, H_q=c_z*21lambda^14*B_r*xi*eta, all r>=2. It retains the critical U*d0 term and intermediate particular bands. This supplies the explicit actual-coefficient map for the KNOWN necessary scalar test under graded B-coordinate and weight-preserving row comparison. It does not decide B_r unitness, identify complete arrays, establish the comparison or prove REG. The review's unused stronger monomial inventory is qualified in the intake; no source repair is selected.
+
+The initial multivariable source packet has a [blocking executable-certificate defect](box/f10-mixed-elimination-gate-astra-20260912/ROOT-INTAKE.md) and remains UNEXECUTED. The [recovered septic interface](xmodel/f10-mixed-univariate-reduction-root-20260912.md) now has [Fable actual-code/map FIRST acceptance](box/f10-mixed-univariate-code-gate-fable5-20260912/INTAKE.md) at MANUAL/CONDITIONAL STATIC tier: old tau=2-nu and the whole P0/U/V map instantiate ALREADY accepted17zzd. Complete exact integer-r exception exclusion remains unresolved. A resultant with independently checked DATA can decide it without first constructing the older Q(nu)[X] Bezout cofactors. No duplicate foundation review, generic-unit shortcut, parameter farm or executed certificate. Scalar unitness, even if proved, would not imply REG, model comparison, source zero or allF10.
+
+The [univariate source package](box/f10-mixed-univariate-source-astra-20260912/ROOT-INTAKE.md) has the scoped FIRST above, still UNEXECUTED/DISABLED. The [minimal runtime derivative](box/f10-mixed-univariate-runtime-repair-sol-20260912/ROOT-INTAKE.md) has [conditional STATIC FIRST acceptance](box/f10-mixed-univariate-runtime-gate-astra-20260912/ROOT-INTAKE.md), still UNEXECUTED/UNREGISTERED, with the prior provenance erratum preserved. It composes unchanged CAPRUN into six phases with exact negative-control branches and a frozen data candidate. Inherited per-process CPU caps cannot be summed into a descendant-batch guarantee. Whole-cgroup accounting, bounded output, native/import/ancestry, original clocks and cleanup remain actual qualification obligations.
+
+The later [reciprocal-cubic trace](xmodel/f10-mixed-reciprocal-trace-root-20260912.md) and [explicit three-coordinate formula](xmodel/f10-mixed-residue-shortcut-astra-20260912.md), with [ROOT intake and correction](box/f10-mixed-residue-shortcut-astra-20260912/ROOT-INTAKE.md), are MANUAL/UNPROMOTED alternatives for forming the SAME scalar. Only six top coefficients and a fixed 3-by-3 matrix are needed in the latter formula; its determinant is corrected to -Y*Delta^2, not the producer's -Y^3*Delta^2. The former turns the special truncations into two monic polynomial-division quotients. No smaller septic gcd, measured speedup, source-code change or unit certificate follows. ROOT's proposed universal B=lambda(t)*Delta*J shortcut is rejected by two exact leading points at the same OUTSIDE-ACTUAL parameter t=-1; the unequal ratios do not decide any actual r. A nonsingular pairing still does not make the one required mixed value a unit. No new implementation/review farm or global rerank is selected.
+
+**Execution boundary.** The source-attached all-r Bezout calculation is still
+UNRUN. Its science/map and runtime packages have conditional static FIRSTs,
+not an executed certificate. The [V6 closeout](box/f10-mixed-qualification-v6-root-20260913/RESULT.md)
+records a successful live native observer and all four metadata stages, then
+a missed ROOT dummy admission. Neither dummy nor science launched; the
+ambient-credential correction remains runtime-unqualified. The worker is
+TERMINATED, its archive whole-byte verified, and its100GiB evidence EBS retained.
+No unchanged interactive-admission retry, new allocation, cap rise or controller
+project is selected. Mathematical evidence is independent of this failure.
+
+The [exact pre-condensation strategy archive](history/APPROACHES-before-20260913T0400-cleanup.md#3-r3-positive-test-and-implementation-boundary)
+preserves every earlier metadata, observer, credential and deployment review
+and all six allocation outcomes. Those dated artifacts are provenance, not
+live launch instructions. Actual owners, original deadlines and next actions
+belong exclusively to the newest LIVE STATE in notes.md; the
+[registered operator procedure](box/f10-mixed-v3-ready-root-20260913/OPERATOR-PROCEDURE.md)
+and its cited superseding reviews retain their exact execution boundaries.
+
+## 4. Other unbounded proof and construction fronts
+
+- **Receivers:** licensed Moh descent must use the child's own characteristic data and full support. Uniform exclusion or a strictly improving invariant is missing; the 44 u_s=1 rows are only finite-window clients.
+- **Split/source landing:** corrected two-point systems and scoped compression still need uniform source-to-chart implications and exclusion of the necessary systems. Class-C's 20 rows are not an all-degree classification; numerical floors do not supply actual-root radius hypotheses.
+- **Block descent:** [BD-GAL](xmodel/block-descent-galois-coordinator-integration-sol56-20260830.md) excludes proper Galois target blocks and d2=[K:C(f,g)]=2. The [strict cubic-block closure](xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-coordinator-integration-sol56-20260830.md), with its [binding Fable addendum](xmodel/block-descent-a1-cubic-acyclic-branch-monodromy-coordinator-addendum-sol56-20260830.md), ALREADY excludes d2=3, including singular normalizations and arbitrary first-leg degree>=2. The separate canonical theorem covers total geometric degree3. [Scope recovery](xmodel/cubic-block-priority-recovery-root-20260912.md) records the historical pins, successful body/basis seals and old-file publication-mode qualification. Do not revive BD-D2 or D3 proof lanes. The DISTINCT d1=[C(x,y):K]=2, non-Galois d2>=4 and primitive/no-block cases remain unresolved. No block-existence theorem follows.
+- **K16:** for every actual m>=4 and every factor of Q[d]/(3d^2-m), the sufficient open target is no point of V(K_m) with **b*B_m*eta_m!=0**, plus the independent **b=0** boundary. B=0 parity families need not be excluded for this target. [Whole-polynomial interface](xmodel/k16-ueta-classification-astra-20260906.md), [earlier product target](xmodel/k16-f3abel-astra-20260905.md) and [boundary review](xmodel/k16-boundary-product-gate-fable5-20260906.md) do not prove all-m exclusion. THICK forbids a fixed nilpotence exponent, not a proved growing one. Local arbitrary-multiplicity and low-degree norm/reflection attempts supply no global polynomiality; [the latest attempt](xmodel/k16-full-boundary-proof-attempt-astra-20260911.md) is NO_NEW_MECHANISM. Return only with a global compatibility argument, not a finite-m farm.
+- **Complete-ideal construction:** properness of a COMPLETE unretired source ideal, or an all-row point in a nonzero finite Q-algebra, remains a sufficient endpoint. [Full-ideal gate](xmodel/full-ideal-counterexample-gate-fable5-20260906.md) does not require explicit coordinates once exact properness is proved. NO properness is known. Historical 99/108 charts are retired; subsets, modular points, truncated survivors and growing-support formal lifts are not source points. Their old builder assertion bug and the gate's invalid t3eq deletion remain historical qualifications, not a live solve. The recovered all-degree characteristic-tower interface retains its exact AUDIT hypotheses; it proves neither existence nor exclusion, and its suggested T3 replacement is not automatically equivalent on every D108 T2 chart.
+- **R050:** [parent-residue pilot](xmodel/r050-parent-residue-pilot-astra-20260906.md) remains UNPROMOTED despite scoped independent confirmation; ROOT's larger replay is pending, not scheduled. Its four residues are independent of three faces but implied by full Jacobian rows. No exclusion or global mate follows; reactivation needs an unretired client and actual pruning test.
+
+## 5. TRACE: accepted image, no manufactured splitting
+
+[TRACE-IC-1 proof](xmodel/keller-trace-image-root-20260911.md) and [FIRST](xmodel/keller-trace-image-gate-fable5-20260911.md) identify the trace image of ANY actual complex plane Keller map, with its ACTUAL reduced nonproperness divisor D, as the inverse image of the boundary's minimal IC module. Named Yekutieli/standard inputs and the source-scope correction remain part of the theorem tier. No zero-defect, degree or dicritical-count hypothesis is imposed.
+
+At an ordinary node, ordinary flat tensor base change gives B=S[1/u]+S[1/v], not full mixed localization or adic completion of a nonfinite source. A trace n/(u^a v^b) requires n in (u^a,v^b). B is additive, not an algebra or fractional ideal. No actual source-derived violating trace exists yet; historical branch-cluster disjointness is not new.
+
+The [radial derivative attachment](xmodel/canonical-polar-trace-discriminator-root-20260912.md) now has [different-model Fable FIRST](box/radial-polar-criterion-gate-fable5-20260912/INTAKE.md), PROMOTED/MANUAL: for an actual polynomial radial frame and D=max(deg f,deg g), the positive-order target derivatives of H through orderD generate R over A. Euler spectral projection recovers x,y, but finite algebra generation is not finite-module generation or integrality. The same FIRST confirms the [two-polar criterion](box/radial-polar-criterion-root-20260912/CLAIM.md): F is an automorphism iff A[H]=R iff BOTH H_f,H_g belong to A[H]. It proves neither membership for an arbitrary source. The self-contained monogenic differential-module argument requires the whole polynomial ring's constant units; no graph-finiteness premise is needed for this criterion. The derivative-product test detects one old relaxed control; separated localized branches still pass and no actual node/forbidden trace is forced. General TRACE-HAM already existed in August24. No generic derivative/control successor is selected.
+
+The separate [one-polar co-research](box/radial-one-polar-source-discriminator-astra-20260912/ROOT-INTAKE.md) is MANUAL/UNPROMOTED GAP: in a separately assumed finite canonical graph, H_f in A[H] gives vertical conductor support, not uniform multiplicities across all components of a supported g-fibre. That stronger condition would close its conditional argument, but no actual source supplies it. Generic monogenic etale curves need not be finite or have only base-field units. Changing to a finite radial frame does not preserve the original membership automatically. No one-polar theorem, actual membership, normality or JC2 conclusion; no automatic multiplicity/control farm.
+
+The [completed cross-frame discriminator](xmodel/radial-cross-frame-discriminator-astra-20260913.md)
+is MANUAL/UNPROMOTED NO_NEW_CONSTRAINT: parameter differentiation only
+supplies conductor-multiplied membership, while the paired-Euler cross term
+cancels by antisymmetry once the changing frame is retained. The missing
+division is exactly a class in R/B. Stop those specific comparisons, not
+every possible family invariant; no new normality or JC2 result follows.
+
+[TRACE-CUTOFF/SPLIT review](xmodel/keller-trace-shortcuts-gate-fable5-20260911.md) stops rank-only B scans: fixed pole orders permit arbitrarily late failure, and one element's every power can pass while its full algebra fails. Preserve the TRUE first-N Newton criterion for traces in the polynomial ring. For an actual nonproper source, Hom_A(Tr(R),R)=0; an A-linear trace section already implies properness. Conditional IC/de Rham comparison gives H2(ker Tr)=C^components, not its vanishing. Stop assumed splitting/semisimplicity, not all kernel methods. ROOT's iteration/derivative-gcd test stays MANUAL/UNREVIEWED and supplies no node-formation contradiction.
+
+## 6. BASS: tested operators versus source selection
+
+The [growing-shear](xmodel/bass-resonant-operators-astra-20260911.md), [affine-angular](xmodel/bass-affine-angular-root-20260911.md) and [general polynomial-G](xmodel/bass-general-delta1-astra-20260911.md) results passed their separate FIRST gates (BASS-SHEAR/AFFINE/DELTA1-1). With ep=p*partial_p, eq=q*partial_q and delta=p*partial_q on the LEFT, every ep-r+delta*G(ep,eq), r a nonnegative integer and G in C[X,Y], is injective on the actual source quotient in NORMALIZED target coordinates, conditional on Bass 1.4 and named analytic inputs. The all-algebraic-germ statement excludes constants and accessible vertical factors; exceptional nonpolynomial germs are not Keller sources. Positive-a,b actual-Keller shear consequences already have van den Essen antecedents; no novelty claim.
+
+[BASS-SELECTION-1](xmodel/bass-mellin-selection-gate-fable5-20260911.md) gives Mellin rank 1-chi(p=0)-chi(q=0)+#F^-1(0), conditional on corrected Loeser–Sabbah, direct-image and de Rham premises; it does NOT prove rank zero. Abstract rank-two and rank-one controls defeat first-order selection and polynomial-G/resonant normalization, respectively, but are not full Weyl/Keller modules. All quotient U-relations lift by finite homogeneous-prefix subtraction; that is no longer a gap.
+
+The separate MANUAL/UNREVIEWED [Kummer control](xmodel/kummer-weyl-selection-astra-20260912.md) strengthens the fixed-coordinate no-line example to full Weyl action, finite algebraic monodromy, regular holonomicity and de Rham acyclicity, with explicit Mellin rank2. It is not an actual source: ROOT's independent [coordinate boundary](xmodel/kummer-coordinate-boundary-root-20260912.md) makes its entire shifted Euler localization vanish after q'=q-1, contradicting Bass torsion-freeness for a Keller source centered on Q=1. No all-coordinate selection theorem follows. No promotion or automatic countermodel-hardening successor is selected; restoring full Weyl structure alone does not fill the source gap.
+
+Two bounded September13 all-degree tests ended MANUAL/UNPROMOTED with
+NO_NEW_SOURCE_CONSTRAINT. [Horizontal transfer](xmodel/coordinate-uniform-bass-discriminator-astra-20260913.md)
+is identically zero on the split trace-zero connection because the source
+field's embedding action is transitive; every permitted coordinate frame
+has the same obstruction. [Boundary localization](xmodel/bass-boundary-localization-root-20260913.md)
+retains the exact quotient Q=R_g/(R+A_g): acyclicity of N=R/A gives
+H_DR(N_g)=H_DR(Q), not localized acyclicity. No control of Q was obtained.
+Stop those two shortcuts, not all coordinate-uniform or boundary arguments;
+no new operator/control family or automatic successor is selected.
+
+The missing arrow is actual-source **first-order selection AND the tested normalization**, not further enlargement of G. [Actual-source attempt](xmodel/keller-source-selection-astra-20260911.md) remains MANUAL/UNREVIEWED, NO_NEW_SOURCE_MECHANISM: the tested operations preserve cyclic delta-degree; the p-commutator needs an unproved same-kernel premise. R/A is not an R-algebra. Stop unchanged slice descent and family expansion; no arbitrary-annihilator or JC2 theorem follows.
+
+The [2240 synthesis](xmodel/ideation-20260911T2240Z-synthesis.md) couples trace and Mellin structure through 0->kerTr->R/A->M/A->0. At the named conditional tiers, a nontrivial source has positive kernel rank. This gives no rank-zero contradiction: actual quotient-line existence, solvability of its additive difference-lifting equation and tested normalization remain separate gaps. K0=0 already forces the trivial source. ROOT's local traceless-pairing card is a duplicate; no echo gate or broader operator-family lane is selected.
+
+## 7. S/T construction and algebraization
+
+Over C, for T={t^2-1=x^2 Z} and S={U^2=A+A^2 Z}, [DS-INV-1](xmodel/danielewski-invariantization-root-20260911.md) and [FIRST](xmodel/danielewski-invariantization-gate-fable5-20260911.md) equate NONEMPTINESS of unrestricted-T, invariant-T and quotient-S scalar pairs, even at each prescribed Laurent support. The known map E=(2xt,2t^2-1,Z), followed by rescaling the second coordinate by 1/2, preserves every weight, including negative blocks. Function spaces, ordinary-degree bounds and target orbits are NOT identified.
+
+A regular scalar pair on T would yield a polynomial JC2 counterexample on an A2 chart; no pair exists in the record and no necessity for arbitrary JC2 is proved. Merge invariant/unrestricted existence searches. The quotient embedding deletes {Z=0,t=-1}, not the A2 chart's {x=0,t=-1}; the primitive boundary and omitted doubled-class line must not be conflated. [Boundary test](xmodel/danielewski-primitive-boundary-astra-20260911.md) supplies no separate properness/class-injectivity shortcut.
+
+On S, accepted PP-HOM/PP-LIN-U/PP-SEP-WT/PP-3WT exclude homogeneous or target-equivalent homogeneous coordinates and the specified arbitrary-degree sparse families from regular scalar pairs. In particular H=P(Z)+UQ(Z) has no arbitrary regular mate; for d>=1 and nonzero f,g, Uf(AZ)+Z^d g(AZ)+q(AZ) always has a critical point. Arbitrary H remains open: U+A refutes a stronger classification and U+q(AZ) is a submersion control. See [homogeneous proof](xmodel/pseudoplane-homogeneous-hamiltonian-root-20260911.md) and the original archive for exact family tiers. Classical injective-line results already cover the homogeneous/one-sided endpoints; no new sparse-family chase is selected.
+
+The full Laurent-block extension/bracket identity, not finite jets, is the construction endpoint. [Two-chart discriminator](xmodel/danielewski-two-chart-discriminator-astra-20260911.md) matches arbitrary boundary jets without an exact mate. [Mixed-moment control](xmodel/danielewski-moment-extrema-discriminator-root-20260911.md) passes moments/extremal/zero-weight tests but fails a nonzero-weight row. These are MANUAL/UNREVIEWED, not scalar pairs. The unreviewed [Newton reduction](xmodel/danielewski-newton-descent-reduction-root-20260911.md) improves full-pair integral-ratio descent, but the nonintegral-ratio gap remains; DS-INV-1 did not review it. [First-contact attachment](xmodel/danielewski-first-contact-interface-astra-20260911.md) is SOURCE-GAP: reduced branches miss a nonzero normal class and wrong Jacobian order. Stop unchanged simple-branch cone transfer, not all first-contact methods.
+
+**Formal surface algebraization:** the recorded formal colliding pseudo-plane boundary pair does not supply a regular polynomial pair. Global algebraization is still missing; no applicable theorem for every smooth S-to-A1 map was found in the bounded check. The [original record](history/APPROACHES-before-20260911T2252-cleanup.md#what-the-campaign-has-established) supplies this scope, not a new existence claim. Numerical double-cover/Euler/Riemann–Hurwitz data cancel or admit curve controls with asymmetric deletions: [cover discriminator](xmodel/pseudoplane-cover-discriminator-root-20260911.md) and [curve calculation](xmodel/pseudoplane-cover-pair-astra-20260911.md) need a genuinely global regularity constraint.
+
+**Separate AS109 integral-lift frontier:** an exact integral polynomial lift P=x-x^109+109A, Q=y+109B would be noninjective under the reviewed 109-ball Hensel theorem. The accepted theorem-interface composition forces max(deg_y A,deg_y B)>=12 (AUDIT, August26 23:01Z). This is coordinate-specific and conditional on such a lift: no polynomial lift, support bound, ordinary-total-degree bound or degree-exactly-twelve routing follows. Witt/formal compatibility is not bounded-support polynomiality; do not identify this problem with the preceding surface boundary pair. See [accepted scope](AUDIT.md).
+
+The [September13 construction reset](xmodel/global-construction-reset-astra-20260913.md)
+is MANUAL/UNPROMOTED NO_NEW_MECHANISM. Rational source regularization of the
+exact cotangent lift fails: polynomial g(h), g=z-z^109, forces rational h
+to be polynomial by integrality, leaving nonunit g'(h) in its Jacobian.
+This does not exclude nonrational completed gauges or arbitrary polynomial
+lifts. Stop this proposal; no degree/prime/carry/gauge successor is selected.
+
+The MANUAL/UNREVIEWED [fixed-target attachment](xmodel/pseudoplane-fixed-target-astra-20260912.md) shows that a COMPLETE pair F:S->A2 would produce F_k=F E^k pi with geometric degree2^(k+1)deg(F), yet the same entire nonproper target S_F union F(C union L) for every k>=1. The escaping-sequence proof includes exceptional points and needs no properness or surjectivity of F. No uniform degree bound from that fixed set is supplied; normalization ramification indices remain uncontrolled. This is a conditional consequence, not a pair or contradiction. No degree-bound chase without a genuinely new applicable premise.
+
+## 8. Global geometry and external interfaces
+
+Priority warning: arXiv:2407.13795v1's prime-degree proof was ALREADY
+rejected by the August24 dual source audit in AUDIT.md. Its rare-monomial
+property does not imply degree two. The September13 [Sol check](xmodel/prime-rare-property-gate-sol-20260913.md)
+rediscovered that same flaw and is DUPLICATE, not a new prime-degree client
+or new progress. The Keller-specific headline itself is not disproved.
+
+Detailed proofs, controls, review chains and qualifications for this section are preserved in the [exact September12 pre-condensation archive](history/APPROACHES-before-20260912T0959-cleanup.md#8-global-geometry-and-external-interfaces). The following is a strategy map, not a replacement evidence ledger.
+
+**Actual-source genus restriction.** [GENUS-ZERO/ONE-BLOCK-LANDING-1](box/genus-one-block-landing-gate-fable5-20260912/INTAKE.md) and [FULL-NORMALIZATION-GENUS-SCOPE-1](box/full-normalization-genus-scope-gate-fable5-20260912/INTAKE.md) are PROMOTED/MANUAL: every actual proper intermediate, and separately the full-field finite normal projective normalization, has sectional genus>=2 for the actual line polarization. The full-source extension uses its literal open immersion, not an assumed proper block. The line net and complete series have equal GENERIC genus, not equal members; no special-direction/fiber bound follows. The proper-block proofs retain trace/Leray H1 without rational singularities, normal CM adjunction, reflexive extension, and the structure-map identification of the globally FREE relative dual. There is no genus ceiling, block-existence theorem, primitive exclusion or decisive finite-search client.
+
+The [primary-text priority check](box/generic-pencil-genus-priority-astra-20260912/ROOT-INTAKE.md) identifies the full-source generic genus-zero endpoint as KNOWN/DUPLICATE by [Chau0804.3172v3 Theorem2](https://arxiv.org/pdf/0804.3172v3), after choosing two independent rational generic directions; this does not duplicate the proper-block attachment. [Chau1005.3866v2 Theorem3](https://arxiv.org/pdf/1005.3866v2) requires ALL fibers irreducible and of equal genus, not just generic constancy. Exact generic-genus-one priority remains unresolved in the two substantive texts read. No exhaustive novelty claim, opposite bound or automatic genus ladder follows.
+
+**Log geometry and finite donors.** [CUBIC-SCROLL-DONOR-1 FIRST](xmodel/cubic-scroll-donor-gate-fable5-20260912.md) and the separate [SMOOTH-CUBIC-DONOR-1 proof/review](xmodel/smooth-cubic-donor-gate-fable5-20260912.md) exclude dominant regular A2 first legs of arbitrary degree into the etale donors of, respectively, every finite degree3 F1->P2 and every finite degree3 smooth rational Y->P2, for EVERY target line. The former retains special nets/lines and the unramified part of E. These are standalone non-domination theorems; their Keller applications are already covered by the old cubic-block/canonical closures. They do not classify all compactifications. No new cubic first-leg, singular-cone or positive-genus cubic-normalization program is selected.
+
+The [full-normalization ruling discriminator](xmodel/full-normalization-ruling-astra-20260913.md)
+is MANUAL/UNPROMOTED, ACTUAL-SOURCE GAP. The smooth surface ab=z(z-1)(z-2)
+has an explicit A2 open chart, a finite full-normalization presentation and
+affine-base A1 rulings, yet NO extending polynomial coordinate in that marked
+chart: every nonconstant extending polynomial's top form is divisible by uv.
+Its induced plane map has Jacobian3(uv)^2-6uv+2, NOT Keller. Thus those
+geometric properties alone do not give a coordinate-pulling ruling; the
+actual etale-source implication is still missing. No donor/control successor.
+
+[SCROLL-FIBER-ONE-DONOR-1 FIRST](box/scroll-fiber-one-donor-gate-fable5-20260912/INTAKE.md) is PROMOTED/MANUAL: the same all-line, arbitrary-first-leg exclusion holds for every finite Phi:F_e->P2 with Phi^*O(1).f=1. It attaches ruling-base collisions to the OLD all-contact log theorem, including tangencies; the one-collision A2 control remains. An actual block's qualitative A1 ruling supplies neither this compactification nor L.f=1. Covered degree-four members are not all quartic covers, general d2>=4, d1=2 or primitive sources. No new general log mechanism or literature-novelty claim.
+
+The [0920 postblind checksum](xmodel/ideation-20260912T0920Z-postblind-root.md) finds the smooth adjoint/log implication already degree-independent. [NORMAL-NUMERICAL-LOG-1](box/normal-log-numerical-gate-astra-20260912/ROOT-INTAKE.md) is now PROMOTED/MANUAL, CONDITIONAL after Fable production/Astra FIRST: Mumford pullback extends it to normal surfaces, with normalized valuation identities and a finite test on a GENUINE SNC resolution. No initial Q-Gorenstein hypothesis or finiteness of the resolution is needed. Generic inertia<=3 does not imply the all-valuation inequality, as the checked finite cusp shows. Adjoint existence attaches to an actual hypothetical source, but numerical LC does not. The [0920 synthesis](xmodel/ideation-20260912T0920Z-synthesis.md) separately gives the MANUAL/UNPROMOTED source-line bound r_L>=2d+deg h and A_Y^num(L)<=d-deg h-2 for a genuine adjoint h dx wedge dy. It locates the required LC failure; no opposite bound or attached candidate contraction matrix is supplied. No td6 tree farm, duplicate implication proof or higher-degree ladder is selected.
+
+The [finite rank-one history check](xmodel/finite-rankone-priority-root-20260912.md) is MANUAL, not a new promotion: old BD-GAL requires an infinite-order ramification class on an actual proper intermediate affine normalization. Finite normal projective compactifications with Weil Cl tensor Q of dimension1 yield torsion affine Cl after removing the target line. Hence the proposed P2 quadratic-net degree4 client is KNOWN/DUPLICATE. Singular Picard rank1 is not the stated Weil-class hypothesis. No arbitrary quartic, d2>=4, d1=2 or primitive closure, and no automatic rank-two successor.
+
+**Boundary monodromy and trace transport.** The [global-boundary discriminator/intake](box/pseudoplane-global-boundary-astra-20260912/ROOT-INTAKE.md) is MANUAL/UNPROMOTED, general-H GAP. The full boundary-puncture permutation local system is an equivariant quotient of plane-fiber H1; CritVal(H|L) must lie in the pullback's infinity bifurcation set, with disconnected fibers and marked-pair exceptions retained. This is necessary only. H=Z has infinity monodromy; ROOT's nonsingular PLANE control y+q(xy), q'(0)=0, realizes every polynomial puncture permutation system up to translation. It is not H on S or a scalar mate. Submersivity alone therefore supplies no generic-monodromy obstruction; no automatic monodromy/sparse-family successor.
+
+The MANUAL/UNREVIEWED [one-dicritical test](xmodel/one-dicritical-defect-connectivity-astra-20260911.md) is SOURCE-GAP: normal index2/tangential degree1 and stipulated zero-defect-node transport do not fix support labels or prove N<=2+sum K. Global transport generation/charging and universal node hypotheses remain missing. The separate [trace-place application](xmodel/trace-place-one-dicritical-astra-20260911.md) is closed as KNOWN/WEAKER, not a closed transport gap: rho(kerTr)=nu-1-K_torus follows from the repaired meridian floor for generic axes and charged LOC-MULT for arbitrary axes. Its nu=1 exception is absent only at the stated imported smooth/case-(A) tier.
+
+**Graph and residue constructions.** [GRAPH-WEDGE-1 FIRST](xmodel/graph-wedge-gate-fable5-20260912.md) excludes EVERY polynomial output pair from the explicit triple on EVERY graph z=y^2 K(xy,y), without a degree bound. This complements the old all-H/linear-output theorem, not an all-graph or embedded-plane exclusion; plane x=0 gives an automorphism. No ambient-map validation or arbitrary-source implication follows. The MANUAL/UNPROMOTED [constant-graph control](xmodel/constant-graph-integrability-control-root-20260912.md), with [Astra co-research](xmodel/constant-graph-subalgebra-control-astra-20260912.md), gives1 in the target Jacobian module for H=c+y^2h(xy), c!=0. Its displayed ambient two-form is nonclosed, but this computation alone does not exclude another form with the same pullback. The distinct necessary condition is a TARGET-POLYNOMIAL one-form whose derivative pulls back to dx wedge dy; even that would not automatically be f dg for a Keller pair. The module computation alone proves neither pair existence nor nonexistence and licenses no automatic degree search; the following residue theorems are separate obstructions.
+
+[EMBEDDED-PLANE-TRANSFER-1](xmodel/embedded-plane-transfer-gate-sol-20260913.md)
+is PROMOTED/MANUAL: the explicit 3D core has <=3 points in EVERY fiber,
+also after identity stabilization and source/target automorphisms. Thus an
+injective polynomial source-plane map with FULL factorization Phi j=i h
+cannot yield a Keller counterexample, by the accepted mapping-degree<=3
+theorem. Long's 4D attachment retains its explicit-source-data conditionality.
+That single-step result does not cover arbitrary projections, noninjective
+sources or iterates; the following field-tower composition enlarges its scope.
+
+[LOW-FIBER-TOWER-TRANSFER-1](xmodel/low-fiber-tower-transfer-gate-sol-20260913.md)
+is now PROMOTED/MANUAL, conditional on the accepted mapping-degree<=3 and
+strict SECOND-leg-degree2/3 Keller exclusions. It covers ALL finite
+iterations/compositions of the core, stabilizations and intervening polynomial
+automorphisms under FULL factorization phi_m...phi_1 j=i h, with source j
+generically of degree<=3 onto its two-dimensional image and arbitrary i.
+The image fields give a tower with EACH degree<=3 and bottom contained in
+K=C(h); composita with K preserve the degree inequality, and the last strict
+drop contradicts the accepted exclusions. No iterate-count or ordinary-degree
+cap. Long retains the same explicit-source-data qualification. Arbitrary
+output projections, unrestricted high-degree j and steps>=4 remain outside
+the claim; numerical degree factorization alone supplies no field tower.
+This closes the named full-factorization iteration escape, not JC2, and
+licenses no automatic iterate/projection/control-family successor.
+
+[LOW-FIBER-KELLER-FACTOR-INVARIANCE-1](xmodel/low-fiber-keller-factor-invariance-gate-fable5-20260913.md)
+now removes the initial-degree bound for a DIFFERENT conclusion: the same
+chains preserve exactly the polynomial Keller RIGHT factors of j. They
+cannot create a factor absent from the initial parametrization. This is
+PROMOTED/MANUAL under the same accepted premises, with the FIRST's authoring
+qualifications retained in AUDIT. Finite j, or an initial field C(j)
+containing a polynomial source coordinate, excludes a nonautomorphic factor
+without a degree bound. For another j, test its factors before constructing
+the chain; no factor-finding speedup is claimed. Arbitrary-j automorphy,
+projections and actual restricted steps>=4 remain open. This supersedes
+only the preceding high-degree-source limitation, not the global gaps or
+the stop on automatic construction-family successors.
+
+**Unbounded tangent-sweep coordinate descent.** [TANGENT-COORDINATE-DESCENT-1](box/tangent-coordinate-descent-gate-fable5-20260913/INTAKE.md)
+is PROMOTED/MANUAL after Astra/ROOT research and Fable FIRST. For the literal
+WHOLE polynomial tangent-sweep triple in the [producer](xmodel/tangent-coordinate-descent-astra-20260913.md),
+degp>=5, p'(0)!=0 and gcd(p/w,q/w^2)=1 exclude EVERY polynomial target
+coordinate whose pullback is a source coordinate, with no degree or
+homogeneity bound on that coordinate. An explicit admissible subfamily has
+unbounded mapping degree. Actual generic-cut nonproperness forces an A1
+fibration of the sweep normalization; its critical hyperbolas and complete
+Euler count give the contradiction. The p'(0)=0/common-factor strata,
+arbitrary projections and other embeddings remain outside the claim.
+This is not the full-field normalization of an arbitrary plane Keller map
+and does not fill the general normality/ruling gaps. No residual-stratum or
+degree/control successor is selected. ROOT's broader simple-component lemma
+remains unpromoted beyond the basic identities charged by this review.
+
+The [primitive reformulation](box/graph-area-primitive-astra-20260912/ROOT-INTAKE.md) ended MANUAL/UNPROMOTED GAP; it did not decide existence. The distinct [collision-residue producer](xmodel/graph-collision-residue-astra-20260912.md) has passed [Fable FIRST](box/graph-collision-residue-gate-fable5-20260912/INTAKE.md): GRAPH-COLLISION-RESIDUE-1 is PROMOTED/MANUAL. Actual equal-target source maps for H=1 have primitive-difference residue -(8B+5)/6, 8B^2+8B+1=0, doubled nontrivially on the normalized cover; polynomial target primitives would force this difference exact rational. This excludes ALL polynomial Keller pairs in the subalgebra, not just linear outputs or a degree ansatz. The independently checked weighted scaling extends to EVERY NONZERO CONSTANT graph z=c. The old displayed nonclosed beta remains insufficient; the new argument is a separate all-correction obstruction. The reviewer's authoring-method violation is recorded in its intake, not hidden as a clean procedural pass. This proof alone supplies no nonconstant-graph theorem or arbitrary-source JC2 implication; the following independently reviewed theorem covers additional graphs.
+
+The [single-curve asymptotic producer](xmodel/graph-asymptotic-residue-root-20260912.md) has passed [Fable FIRST](box/graph-asymptotic-residue-gate-fable5-20260912/INTAKE.md): GRAPH-ASYMPTOTIC-RESIDUE-1 is PROMOTED/MANUAL. For H=c+y^2h(xy), c!=0,h!=0, set f(v)=2-3v-v^2h(v), m=deg f. The ACTUAL r_H=0 curve t^2 f(v)=c has finite target at infinity for m>=2; every target-polynomial one-form is regular there. Its source primitive has residue -e*f_{m-1}/(2f_m), obstructing ALL polynomial pairs when nonzero. This excludes EVERY c+k*y^2,c*k!=0; for nonconstant h of degree d a pair would require h_{d-1}=0. Both parities and a globally split curve passed independent controls. The [Astra quadratic collision proof](box/quadratic-graph-residue-astra-20260912/ROOT-INTAKE.md) remains an unreviewed alternative; its conclusion is accepted via the broader proof, with no duplicate gate. The h=k*v^d,d>=1 control has zero residue, and a GLOBAL source exact adjustment removes the remaining local principal part; no target primitive or pair follows. No automatic same-place higher-order/r-level/degree farm, claim covering the zero-coefficient stratum, arbitrary graph or JC2 source.
+
+The [source-volume discriminator](xmodel/source-volume-residue-integration-root-20260911.md) is CLOSED/DUPLICATE: the marked unequal-depth surface is exactly Wright m=3,alpha1=-1,alpha2=0. Higher-order zero-residue transitions have global primitives, not Keller pairs or S/T closure. The [reduced-boundary control](xmodel/reduced-boundary-fibre-control-root-20260911.md) refutes reduced support => reduced scheme-fiber/bundle for its projections only; it is not a finite Keller normalization and has canonical class0, not E. Rodriguez-v2 remains unverified and the cyclic-endpoint smoothness argument externally conditional. [Quadratic-deck exactness](xmodel/quadratic-deck-exactness-discriminator-root-20260911.md) does not make an intermediate quadratic extension fully Galois, remove affine poles or close d1=2.
+
+**BGV and iteration interfaces.** BGV arXiv2609.05746v1 supplies the conditional weak-type<=1 criterion, not automatic applicability: the full inverse-image condition over the graph hypersurface's singular locus is missing. A primitive-element/birational graph does not supply it; accepted17zd preserves bad divisors under base-affine changes. The unreviewed [generic cubic witness](xmodel/bgv-generic-cubic-collision-astra-20260911.md) gives no source distinction. Stop generic projection farms, not all source-attached graph arguments. The MANUAL/UNPROMOTED [cubic thickening check](xmodel/cubic-thickening-source-check-root-20260912.md) shows length3 rather than2 for the abstract doubled A1 over a cusp; multiplying by2 requires base compatibility. It does not refute BGV or reopen Orevkov's known actual geometric-degree3 closure.
+
+The [Liouville primitive-element proof](xmodel/liouville-primitive-element-astra-20260912.md) has passed [Fable FIRST with a binding scope qualification](box/liouville-generator-gate-fable5-20260912/INTAKE.md): LIOUVILLE-PRIMITIVE-ELEMENT-1 is PROMOTED/MANUAL. For EVERY full-plane polynomial Keller pair J(f,g)=1, its polynomial dS=xdy-fdg satisfies C(f,g,S)=C(x,y). The source attachment is this SPECIFIC potential, not automatic exactness or existence of a generic primitive. Euler x-weight descent and the global x=0 polynomial-Luroth argument recover the full field, not the coordinate ring. The independent [canonical-potential saturation control](xmodel/liouville-saturation-control-root-20260912.md) also passed this FIRST: an explicit punctured-plane finite etale degree3 map has J=1, a polynomial canonical S and field generation, yet its finite birational graph has nonsaturated singular divisors. A matched positive control gives a smooth embedded graph. Both controls drop full-plane polynomiality; neither refutes full-plane saturation or supplies a Keller counterexample. The review's added simple-connectedness => finite j isomorphism inference is NOT accepted: j maps to a potentially nonnormal graph, while finiteness of the Keller map F itself is a separate, sufficient hypothesis. The separate radial finite-graph construction below has now passed its own FIRST; its finiteness still does not give normality or saturation. No generic-potential/parameter/jet farm or stronger conclusion is selected.
+
+The separate [radial-action finite-graph proof](xmodel/radial-action-finite-graph-astra-20260912.md) has passed [Fable FIRST](box/radial-action-finite-graph-gate-fable5-20260912/INTAKE.md): RADIAL-CANONICAL-FINITE-GRAPH-1 is PROMOTED/MANUAL. For alpha=(xdy-ydx)/2 and dT=alpha-fdg, total-degree Euler projection recovers x,y from the independent linear pieces of f,g. With f_m(0,1)!=0, N>max(deg T,2), H=T+x^N, an explicit filtered induction makes (f,H) finite; the shear X=x,Y=y+2N/(N-2)*x^(N-1) keeps H radial-canonical. Thus j_H is finite birational surjective and unramified with normalization A2. This is NOT finiteness of F, and the construction depends on a chosen polynomial frame. Its graph normality is equivalent to invertibility: if B is normal, B=R, and the relative one-generator differential presentation forces its defining polynomial to be linear in H. The normality premise remains unproved; an abstract nodal normalization prevents the general finite-unramified/smooth-source inference. The extra feature is canonical-potential compatibility, not a new generic finite-graph theorem or JC2 solution.
+
+The separate [radial Euler control](xmodel/radial-euler-descent-control-root-20260912.md) has passed [Fable FIRST](box/radial-euler-descent-gate-fable5-20260912/INTAKE.md): RADIAL-EULER-DESCENT-CONTROL-1 is PROMOTED/MANUAL. On x!=0, p=x^3, q=y/(3x^2)+(4/3)x+(10/9)x^2 and the exact radial potential give a finite birational unramified graph with primitive fraction field, but E preserves neither its ring nor its exact conductor (x^2+x+1)R. The matched positive control gives the smooth graph R. q has a genuine pole, and E does not preserve the target ring either; full-plane polynomiality and any added target-ring stability are untouched. This rejects an automatic field-to-ring/conductor shortcut on the open plane, not a full-plane theorem. The [conical singular-preimage criterion](box/conical-conductor-normality-astra-20260912/ROOT-INTAKE.md) is now collected, MANUAL/PRODUCER-CHECKED and UNPROMOTED: conical support would force a finite unramified A2 hypersurface normalization to be an isomorphism. Actual Keller conicality remains missing. ROOT's unreviewed generic-basepoint observation suggests a simpler chosen-graph endpoint under the same missing invariance; the general criterion receives no FIRST without a concrete source client. No automatic degree/gauge/jet/control-family or conditional-endpoint expansion.
+
+The [canonical conductor source proof](xmodel/canonical-conductor-euler-residue-astra-20260912.md) and independent [full-plane control](xmodel/full-plane-radial-descent-control-root-20260912.md) have passed [Fable FIRST with binding scope qualifications](box/canonical-conductor-source-gate-fable5-20260912/INTAKE.md): CANONICAL-CONDUCTOR-EULER-1 and FULL-PLANE-RADIAL-DESCENT-CONTROL-1 are PROMOTED/MANUAL. Standard finite duality in fixed rational forms gives exact conductor I=P_H(f,g,H)R. The canonical one-form gives opposite E(c) values on a generic double pair, not individual vanishing. Actual valuation1 forces one transverse companion; this excludes exact I=(h_d-a)R for homogeneous h_d,d>0,a!=0. The already-promoted finite-graph theorem supplies the hypotheses in a suitable chosen polynomial frame, but no source is known to have that excluded shape. The control has finite unramified full-A2 normalization and a descended radial form but no Euler stability; its nontrivial dualizing line keeps it outside the hypersurface Keller-graph setting. The later control below now retains that extra hypersurface structure too. No normality, general invariance, unit conductor or JC2 conclusion, and no automatic conductor-shape/control farm.
+
+The [global Gorenstein/radial attempt](box/gorenstein-radial-normality-discriminator-astra-20260912/ROOT-INTAKE.md) ended MANUAL/UNPROMOTED GAP: contraction gives only cE, whose descent is automatic from the conductor. ROOT's independent [contact calculation](xmodel/canonical-contact-globality-discriminator-root-20260912.md), also UNPROMOTED, finds the same missing division and gives explicit local analytic radial charts on a node; local normalization is not global polynomial descent. The [hypersurface pinching control](xmodel/hypersurface-radial-pinching-control-astra-20260912.md) has now passed [Fable FIRST and ROOT intake](box/hypersurface-radial-pinching-gate-fable5-20260912/INTAKE.md): HYPERSURFACE-RADIAL-PINCHING-CONTROL-1 is PROMOTED/MANUAL. For z=x-1, c=yz^2+3z-1, B=C[z^2,zc,(1+3z)y+9], its full irreducible relation is V^2=U(UW-3V-1)^2. It has full-A2 finite birational everywhere-unramified normalization, exact conductor cR, globally free hypersurface dualizing module, and an explicit finite global Kahler lift of radial alpha despite nonnormality and failed Euler stability. The fragile conormal module step and every coefficient of beta were independently reconstructed. The relaxed normality/Euler criterion is therefore REFUTED even with the hypersurface hypothesis. No Keller pair with a compatible single dH+f dg presentation is supplied or excluded; this is not a JC2 counterexample. The actual constant-Jacobian source interface cannot be replaced by bare form descent. Stop that shortcut; no automatic degree/control farm or descendant, global ranking unchanged. The [contact-lift product check](xmodel/contact-lift-product-scope-root-20260912.md), MANUAL/DOCUMENTARY and UNPROMOTED, identifies Phi=(f,g,z+H) up to polynomial source change with F times identity. A finite canonical section therefore establishes no finiteness of Phi; the cited contact-group classification already assumes automorphisms. No lift/classification successor is selected.
+
+The changed [full-collision discriminator](xmodel/collision-lagrangian-global-control-root-20260912.md) is MANUAL/PRODUCER-CHECKED, UNPROMOTED: the closed surface u=-x,x^2(y+v)=2 is exact Lagrangian, swap-free and etale under both projections, with primitive3/x equal to the difference of the GLOBAL polynomial(3/2)xy. It is the off square of a rational punctured-plane Keller map whose canonical potential still has a genuine pole. Thus abstract collision geometry, even with that polynomial-difference property, does not recover full-plane source origin. No duplicate secant, naive projective-connectedness or QCS event-rank claim. The completed [Astra source-unit discriminator](box/collision-surface-units-astra-20260912/ROOT-INTAKE.md) is MANUAL/UNPROMOTED GAP: arbitrary connected off-component units are not proved constant. Norms retain uncontrolled missing-branch valuations, and even constant norms have a nontrivial kernel in the localized control. The narrower standard attachment proves only that FULL fibre-square units satisfying the FULL triple descent cocycle are1, using Pic(F(A2))=0 and constant source units. An arbitrary off-component unit does not automatically satisfy that identity. No source-unit theorem, collision emptiness, JC2 conclusion, generic Lagrangian/control farm or FIRST selected without a concrete client.
+
+The MANUAL/UNPROMOTED [collision priority identification](xmodel/collision-pseudoplane-priority-root-20260912.md) recognizes that SAME closed L as the off square of the existing surjective etale pseudo-plane chart pi=(x^2,x^3y-x,x^2y^2-2y):A2->S, after a sign change. Thus it is KNOWN/DUPLICATE, not a new control family. Even a WHOLE-plane polynomial source with smooth affine target admits this collision/unit geometry; the target here is S, NOT A2. A hypothetical regular S scalar pair would retain L as a component of its polynomial Keller pullback's off square, so an actual-source unit theorem would exclude all such pairs. That theorem remains GAP; no new source obstruction, scalar pair, FIRST or automatic unit/control successor follows.
+
+The bounded [ML/equivariance primary-scope check](xmodel/pseudoplane-ml-equivariance-scope-root-20260912.md) is DOCUMENTARY/MANUAL, UNPROMOTED and SCOPE-CONFLICT. S is the known S(2,2,1); the cited unique-fibration result places it outside the ML0 hypothesis of the reviewed pseudo-plane exclusion statement. Uniqueness supplies no functoriality for arbitrary etale maps. The collision involution has a genuine pole, whereas the separate equivariant theorem requires a regular whole-plane finite-group action and equivariance. Neither arrow is supplied; no pair, source-unit theorem, global rerank or new FIRST follows. This is not a whole-paper audit or a completed broad sweep.
+
+The [involution-extension primary check](xmodel/involution-extension-scope-root-20260912.md), DOCUMENTARY/MANUAL and UNPROMOTED, rejects importing Moskowicz1410.7705v1's unrestricted conjugacy lemma: central inversion has determinant1 while coordinate exchange and all its polynomial conjugates have determinant-1. This is a narrow manual source warning, not a refutation of every theorem or the exchange-specific result. Its Section3 requires whole-ring polynomial extension and swaps the two target generators, unlike a deck involution fixing both. The old rational/exact pseudo-plane control survives; no d1=2 closure, action-linearization successor, global rerank or full-sweep credit.
+
+The MANUAL/UNPROMOTED [iterated-image check](xmodel/iterated-image-source-discriminator-root-20260912.md) identifies BGV's Keller specialization with PNCG2006's JC2-equivalent stable-cofinite-open injectivity criterion. A quasi-finite plane control stabilizes at its second iterate; missing points need not stay missing. The known surjective nonfinite etale degree2 self-map of S has stable images, but S is not a cofinite plane open. The controls are not Keller counterexamples and their hypotheses cannot be combined; no stabilization/Chebyshev lane.
+
+**Adjoint derivatives and external watch.** The MANUAL/UNPROMOTED [adjoint-derivation discriminator/intake](box/adjoint-derivation-discriminator-astra-20260912/ROOT-INTAKE.md) stops its specific filtration shortcut: global generation attains valuation1-e at a missed affine ramification divisor, while a transverse inverse-Jacobian derivative has valuation1-2e and escapes EVERY adjoint stage without cancellation. Twisting infinity does not relax this affine bound; the union is a canonical lattice, not all source polynomials. Actual global attainment is the limited new attachment, not a general ban on derivations or a selected D-module successor.
+
+A bounded DOCUMENTARY check of [Gurjar--Masuda--Miyanishi, arXiv1211.0744v1](https://arxiv.org/pdf/1211.0744v1), Theorem2.3/proof, Corollary2.4 and Remark2.5 (printed15--16), confirms the known surjective-Jacobian-derivation reformulation is JC2-equivalent. A slice does not supply surjectivity. This is an identified missing hypothesis, not a newly imported closing theorem, new avenue or full web sweep; the PDF pin/read scope is in the September12 11:53 LIVE record.
+
+The September13 bounded flow check is likewise DOCUMENTARY/UNPROMOTED:
+[Regeta1311.0232v1](https://arxiv.org/pdf/1311.0232v1), opening propositions,
+explicitly makes affine-Lie-algebra algebraicity/local finiteness a JC2
+equivalent condition. Semicomplete-flow classification assumes single-valued
+solutions; it does not supply that property for Keller flows. No whole-paper
+audit, new criterion or classification successor; scope is in LIVE STATE.
+
+The [post-FULL0925 global-shortcut check](xmodel/global-classification-shortcuts-root-20260913.md)
+is DOCUMENTARY/MANUAL, UNPROMOTED. Brieskorn finite generation is the old
+August24 gap; the zero-thinness dynamical criterion was already checked
+September13 06:06. The checked Lins Neto classification requires homogeneous
+fields or a common LINEAR grading field. The actual Keller frame's polynomial
+Euler-like field does not supply polynomial linearization, and ordinary
+leading fields lose independence even on automorphism controls. No closing
+import, classification lane or automatic successor follows from these checks.
+
+The [September12 bounded external sweep](box/websweep-20260912T1940Z-astra/ROOT-INTAKE.md) is PARTIAL / BOUNDARY INCIDENT. Two additional KellerMap fixes distinguish coordinate identity from equal values and monomial support from positive-characteristic derivatives; neither is a new characteristic-zero result or audited package adoption. Roy's plane programme moved to an explicitly unfinished archive; BGV/Zhang PDF bytes remain unchanged. Three raw social feeds were retained before filtering, are excluded from evidence, and their channel is STOPPED. The prior sweep's proof-claim objections and Palomar incident remain recorded; social/global-registry/access holes are not discharged. No verified plane resolution or global rerank; clocks and follow-up ownership belong to LIVE STATE.
+
+## 9. Stops, verification and allocation discipline
+
+Retain these scoped stops; none forbids an entire mathematical vocabulary:
+
+- Repeating descent-invariant arithmetic adds no condition; child-specific integrality/radius must be proved. R063 is excluded, the six disputed family-B rows survive the printed test, and class-C numerical floors do not license radius descent.
+- Truncated split bands preserve J=0 cone vertices; attainment leaders on unsaturated receivers meet the x-charge obstruction. Retain nonzero Jacobian and all source rows.
+- Golden repeated branches invalidate unchanged squarefree/reduced-product and dual-number field arguments. Primitive-root replacement changes exponents and adds a derivative remainder. Uniform cone 15j has no additional unretired attached client.
+- Axis Bezout/mixed moments may already follow from Jacobian rows. Boundary radical containment is not full-ideal membership; formal fibre exactness is not a global polynomial mate. The tested positive-k grading fails a mandatory row, not every grading.
+- Marked torsor/chart hypotheses, Furter's actual composition stratum and Roy/Strinz coefficient maps are not supplied by numerical labels. The tested common-polygon transfers failed; all six retired clients need no replacement transfer.
+- K16 fixed-exponent, leading-balance/free-jet and repeated-cover rewrites do not give an all-degree obstruction. F10 fixed-A, ODE-only, unsigned cubic norm and unchanged capped eliminant shortcuts remain stopped; signed boundary terms cannot be omitted.
+
+A future computation needs an unretired object, exact source/acceptance map and a discriminating result. Variable reduction is not a measured speedup; assess term/matrix growth and certificate cost. Timeouts, internal guards and deployment refusals are NONDECISIONS; a subset unit can exclude its full chart, but a modular survivor or formal lift cannot prove source nonemptiness.
+
+**Retired execution machinery.** The
+[exact September13 pre-condensation archive](history/APPROACHES-before-20260913T0400-cleanup.md#9-stops-verification-and-allocation-discipline)
+retains the complete controller, native-assembly, binding and launcher history,
+including earlier exact archives. Those administrative batches are CLOSED;
+static coherence, disabled templates and clock-data witnesses prove no runtime
+qualification or science. A composer with existing targets must not be rerun.
+
+Separately, the [corrected opt-in runner pilot](box/execution-reliability-pilot-root-20260913/RESULT.md)
+PASSED its nine no-CAS regression groups after different-model static review.
+Its engineering tranche is closed with evidence retained and worker retired;
+scientific clients and native dependencies are not qualified by that test.
+
+The new [single-resultant observer](xmodel/f10-mixed-resultant-observation-astra-20260913.md)
+has [different-model Sol FIRST](xmodel/f10-mixed-resultant-observation-gate-sol-20260913.md),
+CONDITIONAL STATIC CONFIRMED for ONE exploratory observation. It retains exact
+R/Q before factorization, factors before product validation, partials and causal
+error logs. The [first worker attempt](box/f10-mixed-resultant-run-root-20260913/RESULT.md)
+stopped in ROOT's preflight: a platform crash hook repeated the CORRECT HQ
+refusal, violating an unnecessary exact-once diagnostic check. The worker is
+terminated with evidence retained; this is not an observer/formula failure.
+The [corrected second attempt](box/f10-mixed-resultant-run-b-root-20260913/RESULT.md)
+passed all three causal guard controls, then rejected a loaded module path.
+Read-only inspection identifies a legitimate pinned /etc sitecustomize target
+excluded by ROOT's system-prefix rule; the preflight also lost partial metadata.
+Both workers are terminated with evidence retained. Complete library/native
+qualification and the840-second science service remain UNRUN; runtime fit
+and independent mathematical verification remain separate.
+The [final preflight diagnostic repair](xmodel/f10-mixed-preflight-order-sol-20260913.md)
+has ROOT different-model static delta acceptance: early durable metadata and
+path events, exact pinned exception, and path admission before content reads.
+It is UNEXECUTED; the bounded software slice is closed without a third worker.
+This is a new opt-in payload, not migration or
+restart of the frozen v1-v6 harness. No resultant or exception list exists yet,
+and no measured speedup or scientific conclusion follows from static acceptance.
+
+Keep the binding distinctions: authority files are expected OUTPUTS, not
+preinstalled facts; phase admission is required before every phase; cooperative
+exclusive writing is not O_EXCL; interruption requires collecting the known
+handle then STOP, not resuming. Full-byte equality is not a prefix/line check,
+metadata is not native-completeness or a scientific-prefix test, and a recorded
+cap is not observed whole-descendant enforcement. Physical identities,
+traversable consumed manifests, actual kernel controls, original clocks,
+durable evidence and exact retirement remain governed by COORDINATION.md,
+ops/FLEET.md and the particular registered source/procedure. Nothing in this
+summary weakens them or authorizes a retry, new framework or larger cap.
+
+The [September13 FULL0925 synthesis](xmodel/ideation-20260913T0925Z-synthesis.md) leaves all46 global mathematical dispositions unchanged and selects NO_NEW_MECHANISM / NO_TEST from this round. Lower1's scalar/engineering allocation; park scalar and r3 rank this cycle, with no third worker. Keep16/29 operator/control and34/35 direct tangent-coordinate/full-output descendants off the immediate queue. The proposed invariant-ring enlargement and minimal-pole involution experiment recover the SAME S model; the higher-pole family is already in August30 history. Neither closes arbitrary S/T scalar pairs or d1=2. The marked collision-action identity also passes the old pseudo-plane control, and the characteristic-p small-degree bridge is explicitly open in the checked primary source. No new family, parameter farm or automatic successor is commissioned. Future research must supply a fresh history-checked global closing test, not merely rename an endpoint. Keep Astra primary, Fable5.1 independent and Sol fallback, without occupancy lanes. Exact selected work, coverage qualifications and clocks belong only to LIVE STATE. Neither a scoped restriction nor all-F10 would resolve JC2.

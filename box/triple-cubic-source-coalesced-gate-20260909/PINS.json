@@ -1,0 +1,104 @@
+{
+  "status": "FROZEN_PREP_ONLY",
+  "entries": [
+    {
+      "original": "xmodel/triple-cubic-source-coalesced-astra-20260909.md",
+      "snapshot": "box/triple-cubic-source-coalesced-gate-20260909/inputs/cubic-source-proof.md",
+      "original_sha256": "1620f9ef6b2edc598d35cab274cdfcc24d71353d18132d3a35ffb59fd2c46099",
+      "snapshot_sha256": "1620f9ef6b2edc598d35cab274cdfcc24d71353d18132d3a35ffb59fd2c46099",
+      "bytes": 14721
+    },
+    {
+      "original": "xmodel/triple-cubic-source-coalesced-astra-20260909.md.artifact.json",
+      "snapshot": "box/triple-cubic-source-coalesced-gate-20260909/inputs/cubic-source-transaction.json",
+      "original_sha256": "13d831c43e025fd0af23f1e22c53a2fa816db227568d2f29c120e03e6eff97bf",
+      "snapshot_sha256": "13d831c43e025fd0af23f1e22c53a2fa816db227568d2f29c120e03e6eff97bf",
+      "bytes": 704
+    },
+    {
+      "original": "box/triple-cubic-source-coalesced-20260909/custody.json",
+      "snapshot": "box/triple-cubic-source-coalesced-gate-20260909/inputs/cubic-source-custody.json",
+      "original_sha256": "b231cb0cf21f53e4f870b474cf444bd8574299e53730a9d66ff9232998417f3c",
+      "snapshot_sha256": "b231cb0cf21f53e4f870b474cf444bd8574299e53730a9d66ff9232998417f3c",
+      "bytes": 2515
+    },
+    {
+      "original": "box/triple-cubic-source-coalesced-20260909/input-pins.json",
+      "snapshot": "box/triple-cubic-source-coalesced-gate-20260909/inputs/cubic-source-input-pins.json",
+      "original_sha256": "2c1187fbf37d4a870863656eb395af6b558c20f062874890dc31bbf783b82660",
+      "snapshot_sha256": "2c1187fbf37d4a870863656eb395af6b558c20f062874890dc31bbf783b82660",
+      "bytes": 942
+    },
+    {
+      "original": "xmodel/positive-face-actual-receiver-discriminator-astra-20260906.md",
+      "snapshot": "box/triple-cubic-source-coalesced-gate-20260909/inputs/moh-actual-source.md",
+      "original_sha256": "07e53340002c48b29a97d567ceb9eb867a292e9cbdd932ce7f508e0694875c46",
+      "snapshot_sha256": "07e53340002c48b29a97d567ceb9eb867a292e9cbdd932ce7f508e0694875c46",
+      "bytes": 13229
+    },
+    {
+      "original": "xmodel/positive-face-actual-receiver-gate-fable5-20260906.md",
+      "snapshot": "box/triple-cubic-source-coalesced-gate-20260909/inputs/moh-actual-source-gate.md",
+      "original_sha256": "eade8ec8b9b9162bf3a6a9e60408094185b63b633e6343cce11b7e233e904284",
+      "snapshot_sha256": "eade8ec8b9b9162bf3a6a9e60408094185b63b633e6343cce11b7e233e904284",
+      "bytes": 14160
+    },
+    {
+      "original": "box/triple-cubic-source-coalesced-gate-20260909/scope.md",
+      "snapshot": "box/triple-cubic-source-coalesced-gate-20260909/scope.md",
+      "original_sha256": "07b80f46fdab92f47a385f480855dae626ed59c265be8c0561302b78ab675a6a",
+      "snapshot_sha256": "07b80f46fdab92f47a385f480855dae626ed59c265be8c0561302b78ab675a6a",
+      "bytes": 3323
+    }
+  ],
+  "producer_owned_source_checks": [
+    {
+      "path": "box/triple-cubic-source-coalesced-20260909/finalize.py",
+      "sha256": "d3a84fe5250ab8d621aea6695b893ce41801147da616a99dd4ad67f6525670a0",
+      "bytes": 2442
+    },
+    {
+      "path": "box/triple-cubic-source-coalesced-20260909/input-pins.json",
+      "sha256": "2c1187fbf37d4a870863656eb395af6b558c20f062874890dc31bbf783b82660",
+      "bytes": 942
+    },
+    {
+      "path": "box/triple-cubic-source-coalesced-20260909/prepare.py",
+      "sha256": "4c2f35ff08682a3d4f97b6e18d9614d2ec1ff11cace49c2dcb46ff1a71e6325a",
+      "bytes": 1653
+    },
+    {
+      "path": "box/triple-cubic-source-coalesced-20260909/publication.json",
+      "sha256": "daa311117a64cb1ec7b77894315c4602e26d5f0b9a2475ce4dbdd55947c5d9b1",
+      "bytes": 1929
+    },
+    {
+      "path": "xmodel/triple-cubic-source-coalesced-astra-20260909.md",
+      "sha256": "1620f9ef6b2edc598d35cab274cdfcc24d71353d18132d3a35ffb59fd2c46099",
+      "bytes": 14721
+    },
+    {
+      "path": "xmodel/triple-cubic-source-coalesced-astra-20260909.md.artifact.json",
+      "sha256": "13d831c43e025fd0af23f1e22c53a2fa816db227568d2f29c120e03e6eff97bf",
+      "bytes": 704
+    },
+    {
+      "path": "xmodel/positive-face-actual-receiver-discriminator-astra-20260906.md",
+      "sha256": "07e53340002c48b29a97d567ceb9eb867a292e9cbdd932ce7f508e0694875c46",
+      "bytes": 13229,
+      "read_scope": "whole report; local-consumer proof pattern only, not a triple premise"
+    },
+    {
+      "path": "xmodel/positive-face-actual-receiver-gate-fable5-20260906.md",
+      "sha256": "eade8ec8b9b9162bf3a6a9e60408094185b63b633e6343cce11b7e233e904284",
+      "bytes": 14160,
+      "read_scope": "whole report; local-consumer proof pattern only, not a triple premise"
+    },
+    {
+      "path": "xmodel/d125-weightfree-local-consumer-coordinator-20260909.md",
+      "sha256": "d4fd2a0e6549edbf9e65f8aa59e2fc2a1d6bbbc0299188fdd6adf96f340c8f51",
+      "bytes": 20724,
+      "read_scope": "whole report; local-consumer proof pattern only, not a triple premise"
+    }
+  ]
+}

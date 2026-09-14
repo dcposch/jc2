@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+All three tests decided, in order, inside budget. Report sealed at `xmodel/child-data-tests-opus5-20260905.md` (20,472 B); drivers and artifacts in `box/child-data-20260905/`.
+
+**Frozen-input gate:** manifest built with `awk` from the `.run.v2` receipt, `sha256sum -c` → **8/8 OK**.
+
+**TEST 1 — OPEN[UNEG-SHAPE-LICENCE]: LICENCE PROVED, but the charged mechanism is refuted.**
+Moh Def 5.1(1), p.179 (read from a 300 dpi render): *"In the disc `D_i` the polynomials `g(y)` have precisely `(n/d_{i+1}) V_{i+1}` roots."* So `V'_2` counts roots of **`g'`**, not branches of `h'`. Prop 6.3(2) p.197 gives `g'` exactly `n' = u_s n/d_s` roots, so `(n'/d'_2)V'_2 ≤ n'` ⇒ `V'_2 ≤ K'` ⇒ `u' ≥ 0` — one line, no induction, no top convention. At the concrete row `(108,72) M=(-72,-18,60,106) V=(11,15,5)`, `δ'_2 ≠ −1`: the `D_1` cluster carries 33 roots while the whole descended curve has 18. The h-support theorem does **not** settle it — `⌊d(K'−a)⌋ ≥ 0` always, so it actually voids `shape.py`'s own kill mechanism (the old cap `deg_x h = u'`); Thm 1.2 is ruled out by the charged gate's own line 13. Controls: 0 violations on the 1,330 non-U-NEG rows, 5/5 on Moh's printed descended rows.
+
+**TEST 2 — OPEN[CHILD-TOP-CONVENTION]: PROVED at `u_s=1`, unproved at `u_s≥2`.**
+p.174 Definition–Remark: *"The last effective characteristic pair is denoted by `M_s` in this article."* p.150: `M_{h+1}=∞`, so the chain closes at the first `h` with `d_{h+1}=1`. Closed form `d'_{s'+1} = gcd(n',M'_1..M'_{s'}) = u_s`, checked 1420/1420. For the named instance `(96,72)`: `d' = (16,4,2,1)`, `d'_4 = 1` ⇒ **the tower closes at 13**, not at `n'−2 = 14`. Moh's p.207: the five rows he descends all have `u_s=1` and all close; the one he skips, `(99,66)`, has `u_s=3` and does not. Corrected partition: (C-TOP) is licensed on the 1,110 `u_s=1` rows and kills 936 (p.174-effective), leaving 174 + the 310 unlicensed `u_s≥2` rows = 484 operative residual.
+
+**TEST 3 — OPEN[UNEG-192-144-SPLIT-3/2]: EXCLUDED, all four rows.** `(u_s,v_s)=(2,4)`, `t=1/2`, `k=W−1/2`; the only partition `[1,1]` fails the low branch, forcing `Σν = 2W+2 > deg q = 2W+1`. Killed by (L). Screen functions imported from the banked `face_screen.py`; CONTROL A replays the `(99,66)` verdicts, CONTROL C confirms non-vacuity, CONTROL W confirms `W`-independence at this `(u,v)`.
+
+Net: family (a) of the scope-leaks report is closed 90/90. Two caveats I want flagged rather than buried — the residual hypothesis has moved, not vanished (`OPEN[CHILD-LEVEL2-IDENTIFICATION]`: `V'_2 = V_2` is printed only on `u_s=1` rows), and the (C-TOP) promotion is a consequence I derived but did not enter in any ledger, per the charge.
+DIVERT path=xmodel/child-data-tests-opus5-20260905.md status=CLEAN body_bytes=20472 body_sha256=219faa47b435222511168ffaa1cc4f0c33be7744209a29626999f464d66c9cff

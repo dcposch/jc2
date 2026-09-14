@@ -1,0 +1,94 @@
+{
+  "argv_count": 27,
+  "argv_sha256": "e2ac668ffc60eb88d3e0319721ce5de1c22c36d0d9f8c960a76951c43c50f726",
+  "caps": {
+    "cpu_seconds": 3,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 33554432,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 5.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/opt/jc2-r2-highest-ready-20260910T1720/science",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/setpriv",
+  "identity_checks": [
+    {
+      "observed_pgid": 9580,
+      "observed_pid": 9580,
+      "observed_start_identity": "boot=6e13db88-d1a2-45cd-aa1b-028d8e070589;start_ticks=46372",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-09-10T17:25:08.249144Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-09-10T17:25:08.249180Z"
+    },
+    {
+      "observed_pgid": 9580,
+      "observed_pid": 9580,
+      "observed_start_identity": "boot=6e13db88-d1a2-45cd-aa1b-028d8e070589;start_ticks=46372",
+      "result": "MATCH",
+      "stage": "before-kill",
+      "utc": "2026-09-10T17:25:09.255266Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 9,
+      "stage": "before-kill-send",
+      "utc": "2026-09-10T17:25:09.255295Z"
+    }
+  ],
+  "invocation_cwd": "/opt/jc2-r2-highest-ready-20260910T1720/wrapper",
+  "max_observed_group_rss_bytes": 77524992,
+  "pgid": 9580,
+  "pid": 9580,
+  "resource": "rss",
+  "runner_exit_code": 125,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=6e13db88-d1a2-45cd-aa1b-028d8e070589;start_ticks=46372",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "RESOURCE_CAP",
+  "stderr": {
+    "bytes": 0,
+    "path": "/run/jc2-r2-highest-ready-20260910T1720/dummy.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 0,
+    "path": "/run/jc2-r2-highest-ready-20260910T1720/dummy.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "telemetry_path": "/run/jc2-r2-highest-ready-20260910T1720/dummy.telemetry.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      9580
+    ],
+    "kill_sent": true,
+    "leader_reaped": true,
+    "reason": "rss_cap",
+    "term_sent": true
+  },
+  "utc_end": "2026-09-10T17:25:09.315949Z",
+  "utc_start": "2026-09-10T17:25:08.180731Z",
+  "wall_elapsed_seconds": 1.135222747
+}

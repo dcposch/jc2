@@ -1,0 +1,62 @@
+{
+  "elapsed_seconds": 1.968479,
+  "runs": [
+    {
+      "mode": "normal",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "c5c6f488ad71bfe35e73d1a9329952c0769496151ebbe34f46eb1e0df81d9550"
+    },
+    {
+      "mode": "change-alpha-cross",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 14, in <module>\n    need((3*r*r+alpha)*q-derivative==-delta-Q(10,3)*r*f,'actual dR wedge dF including alpha')\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 7, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: actual dR wedge dF including alpha\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "add-even-kernel",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 17, in <module>\n    need(sorted(kernels)==[(10,3),(20,1)],'whole odd scalar kernel list rejects actual R^4 addition')\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 7, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: whole odd scalar kernel list rejects actual R^4 addition\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-G1",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 21, in <module>\n    need(3*mu==Q(5,3),'order24 actual changed coefficient of G1=L*mu')\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 7, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: order24 actual changed coefficient of G1=L*mu\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "normal",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "c5c6f488ad71bfe35e73d1a9329952c0769496151ebbe34f46eb1e0df81d9550"
+    },
+    {
+      "mode": "change-alpha-cross",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 14, in <module>\n    need((3*r*r+alpha)*q-derivative==-delta-Q(10,3)*r*f,'actual dR wedge dF including alpha')\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 7, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: actual dR wedge dF including alpha\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "add-even-kernel",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 17, in <module>\n    need(sorted(kernels)==[(10,3),(20,1)],'whole odd scalar kernel list rejects actual R^4 addition')\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 7, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: whole odd scalar kernel list rejects actual R^4 addition\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-G1",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 21, in <module>\n    need(3*mu==Q(5,3),'order24 actual changed coefficient of G1=L*mu')\n  File \"/home/ubuntu/jc2/box/d125-golden-j12-attachment-gate-20260908/check.py\", line 7, in need\n    if not x:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: order24 actual changed coefficient of G1=L*mu\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS"
+}

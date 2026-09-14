@@ -1,0 +1,114 @@
+{
+  "schema": "jc2-documentary-priority-pins/v1",
+  "task": "generic-pencil-genus-priority-astra-20260912",
+  "first_action_utc": "2026-09-12T07:33:10Z",
+  "publication_reserve_utc": "2026-09-12T07:49:00Z",
+  "hard_stop_utc": "2026-09-12T07:52:00Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "local_inputs": [
+    {
+      "path": "/home/ubuntu/jc2/COORDINATION.md",
+      "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+      "read_mode": "REUSED_WHOLE after fresh matching pin",
+      "prior_scope": "806 lines; 2026-09-12 05:51-05:53 UTC; ranges 1-220, 221-440, 441-660, 661-806"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/full-normalization-genus-scope-astra-20260912.md",
+      "sha256": "5f9be737ef4a37be884be4655b9d19de9284f1abdd16bdbe5d08454dd40b35d9",
+      "read_mode": "REUSED_WHOLE after fresh matching pin",
+      "prior_scope": "Own complete report readback 2026-09-12 07:07:30 UTC",
+      "current_repeat": "Final 18 lines reread only to confirm administrative BODY-END/seal formatting; no new scientific import"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/full-normalization-genus-scope-gate-fable5-20260912.md",
+      "sha256": "8211cdb2acc8fe20f492fbe703938335c62f42e8119aa6bf2f93b0bef482ac5c",
+      "read_mode": "FRESH_WHOLE after matching pin",
+      "scope": "Complete terminal gate through its final marker; current task"
+    }
+  ],
+  "public_read_interval_utc": ["2026-09-12T07:33:10Z", "2026-09-12T07:38:22Z"],
+  "public_timing_qualification": "Bounding interval, not separately observed per-source seconds",
+  "selected_candidate_limit": 6,
+  "substantive_text_limit": 2,
+  "selected_primary_candidates": [
+    {
+      "id": "R1",
+      "title": "Plane Jacobian Conjecture for rational polynomials",
+      "author": "Nguyen Van Chau",
+      "version": "arXiv:0804.3172v3, 2010-05-23",
+      "urls": ["https://arxiv.org/abs/0804.3172", "https://arxiv.org/pdf/0804.3172v3"],
+      "sha256": null,
+      "scope": "WHOLE PDF extracted text, all 350 lines and six printed pages including references; clipped ranges recovered; abstract metadata also read",
+      "byte_custody": "Tool-delivered web text only; no stable downloaded PDF bytes or checksum claimed",
+      "substantive": true,
+      "charged_results": "Theorem 2 page 1; Lemma 1 page 3; distinction in final remark page 5; remaining text contextual whole read"
+    },
+    {
+      "id": "R2",
+      "title": "A note on the plane Jacobian conjecture",
+      "author": "Nguyen Van Chau",
+      "version": "arXiv:1005.3866v2, 2010-06-03",
+      "urls": ["https://arxiv.org/abs/1005.3866", "https://arxiv.org/pdf/1005.3866v2"],
+      "sha256": null,
+      "scope": "WHOLE PDF extracted text, all 300 lines and six printed pages including references; clipped ranges recovered; no visual audit of diagram",
+      "byte_custody": "Tool-delivered web text only; no stable downloaded PDF bytes or checksum claimed",
+      "substantive": true,
+      "charged_results": "Theorem 3 page 1 and its all-fiber hypotheses; proof pages 2-4; references are not independent imports"
+    },
+    {
+      "id": "R3",
+      "title": "Pencil of irreducible rational curves and Plane Jacobian conjecture",
+      "author": "Nguyen Van Chau",
+      "version": "arXiv:0905.3939v3 metadata, 2010-03-17",
+      "urls": ["https://arxiv.org/abs/0905.3939"],
+      "sha256": null,
+      "scope": "Primary arXiv abstract and metadata only; no PDF or proof",
+      "substantive": false
+    },
+    {
+      "id": "R4",
+      "title": "Plane Jacobian problem for rational polynomials",
+      "author": "Nguyen Van Chau",
+      "version": "arXiv:0801.4138v2, withdrawn 2008-04-17",
+      "urls": ["https://arxiv.org/abs/0801.4138"],
+      "sha256": null,
+      "scope": "Primary withdrawal notice and metadata only; no earlier-version text",
+      "substantive": false,
+      "mathematical_import": "NONE"
+    },
+    {
+      "id": "R5",
+      "title": "On the Jacobian conjecture",
+      "author": "R. Heitmann",
+      "doi": "10.1016/0022-4049(90)90005-3",
+      "urls": ["https://www.sciencedirect.com/science/article/pii/0022404990900053"],
+      "sha256": null,
+      "scope": "Primary publisher request returned 403; no substantive body or corrigendum read; search snippet not imported",
+      "substantive": false,
+      "mathematical_import": "NONE"
+    },
+    {
+      "id": "R6",
+      "title": "Monodromy, differential equations and the Jacobian conjecture",
+      "author": "Shmuel Friedland",
+      "doi": "10.4064/ap-72-3-219-249",
+      "urls": [
+        "https://www.impan.pl/en/publishing-house/journals-and-series/annales-polonici-mathematici/all/72/3/110857/monodromy-differential-equations-and-the-jacobian-conjecture",
+        "https://www.impan.pl/en/publishing-house/journals-and-series/annales-polonici-mathematici/all/en/publishing-house/journals-and-series/annales-polonici-mathematici/all/72/3/110857/monodromy-differential-equations-and-the-jacobian-conjecture"
+      ],
+      "sha256": null,
+      "scope": "First URL returned tool InternalError; exact search-returned second URL yielded publisher landing metadata and broad abstract; no PDF download or theorem text",
+      "substantive": false,
+      "mathematical_import": "NONE"
+    }
+  ],
+  "discovery_boundary": {
+    "status": "PARTIAL_BOUNDARY_INCIDENT",
+    "description": "Initial ordinary query automatically returned an excluded mirror hit; result metadata was encountered, but no deliberate open, follow, quotation, use, or owned raw dump. Protected identifiers and content omitted. ROOT notified.",
+    "subsequent_scope": "Primary paper hosts only: arxiv.org, impan.pl, ems.press, sciencedirect.com, link.springer.com",
+    "unfiltered_owned_download": "NONE",
+    "exhaustive_coverage_claim": false
+  },
+  "execution": "NONE; manual reasoning, authorized public primary reads, inert documentary reads/hash/edit/publication only",
+  "future_work_authorized": false
+}

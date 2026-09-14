@@ -1,0 +1,15 @@
+LIB "presolve.lib";
+<"box/graded-moh-20260905/truncation/C_n24m18_Mm15_14_ell1_s3_V1_9_N1/input.sing";
+print("INPUT_ROWS="+string(size(I))+" INPUT_VARS="+string(nvars(R)));
+list L=elimpart(I);
+map phi=R,L[5];
+ideal J=L[1];
+poly target=phi(c^1);
+write(":w box/graded-moh-20260905/truncation/C_n24m18_Mm15_14_ell1_s3_V1_9_N1/residual-rows.txt",string(J));
+write(":w box/graded-moh-20260905/truncation/C_n24m18_Mm15_14_ell1_s3_V1_9_N1/residual-variables.txt",string(simplify(L[4],2)));
+write(":w box/graded-moh-20260905/truncation/C_n24m18_Mm15_14_ell1_s3_V1_9_N1/target.txt",string(target));
+write(":w box/graded-moh-20260905/truncation/C_n24m18_Mm15_14_ell1_s3_V1_9_N1/substitutions.txt",string(L[3]));
+write(":w box/graded-moh-20260905/truncation/C_n24m18_Mm15_14_ell1_s3_V1_9_N1/map.txt",string(L[5]));
+print("ELIMINATED="+string(size(L[2]))+" RESIDUAL_ROWS="+string(size(J))+" TARGET_ZERO="+string(target==0));
+print("MAP_ORIGINAL_EQUALS_RESIDUAL="+string(phi(I)==J));
+quit;

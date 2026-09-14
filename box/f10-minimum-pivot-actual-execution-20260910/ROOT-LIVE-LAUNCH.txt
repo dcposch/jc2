@@ -1,0 +1,116 @@
+2026-09-10T04:06:27.405166585UTC
+Running as unit: jc2-f10-minimum-pivot-actual-20260910.service; invocation ID: d862dcc1867744e888d67bd5c549b9af
+MainPID=2120
+ExecMainStartTimestamp=Thu 2026-09-10 04:06:27 UTC
+ExecMainStatus=0
+ControlGroup=/system.slice/jc2-f10-minimum-pivot-actual-20260910.service
+ActiveState=active
+InvocationID=d862dcc1867744e888d67bd5c549b9af
+PRINCIPAL_PID 2120
+2026-09-10T04:06:27.461649722UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dispatch_batch.py 
+   2120       1    2120    2120 Rs         00:00 00:00:00 25584
+2120 (python3) R 1 2120 2120 0 -1 4194560 4589 0 1 0 3 0 0 0 20 0 1 0 58823 36253696 6357 18446744073709551615 4325376 7353021 140729433627632 0 0 0 0 16781312 2 0 0 0 17 13 0 0 0 0 0 10657224 12220544 742162432 140729433636295 140729433636387 140729433636387 140729433636839 0
+pid:[4026531836]
+PRINCIPAL_PID 2133
+2026-09-10T04:06:27.521364520UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-disabled.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-disabled.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-disabled.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-disabled.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-disabled.sentinel plain 
+   2133    2120    2120    2120 R          00:00 00:00:00 13392
+2133 (python3) R 2120 2120 2120 0 -1 4194304 2054 0 0 0 1 0 0 0 20 0 1 0 58832 22122496 3328 18446744073709551615 4325376 7353021 140720764319488 0 0 0 0 16781312 2 0 0 0 17 11 0 0 0 0 0 10657224 12220544 827412480 140720764324578 140720764325411 140720764325411 140720764325863 0
+pid:[4026531836]
+PRINCIPAL_PID 2143
+2026-09-10T04:06:27.577301919UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-disabled.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-disabled.sentinel plain 
+   2143    2133    2143    2143 Rs         00:00 00:00:00 16644
+2143 (python3) R 2133 2143 2143 0 -1 4194304 2082 0 0 0 2 0 0 0 20 0 1 0 58837 27422720 4176 18446744073709551615 4325376 7353021 140737289606400 0 0 0 0 16781312 2 0 0 0 17 7 0 0 0 0 0 10657224 12220544 460947456 140737289612527 140737289612835 140737289612835 140737289613287 0
+pid:[4026531836]
+PRINCIPAL_PID 2173
+2026-09-10T04:06:27.767750146UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-wronghost.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-wronghost.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-wronghost.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-wronghost.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-wronghost.sentinel plain 
+   2173    2120    2120    2120 R          00:00 00:00:00 19996
+2173 (python3) R 2120 2120 2120 0 -1 4194304 3021 0 0 0 3 0 0 0 20 0 1 0 58855 30707712 5091 18446744073709551615 4325376 7353021 140725504067536 0 0 0 0 16781312 2 0 0 0 17 7 0 0 0 0 0 10657224 12220544 844849152 140725504076509 140725504077347 140725504077347 140725504077799 0
+pid:[4026531836]
+PRINCIPAL_PID 2183
+2026-09-10T04:06:27.824401071UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-wronghost.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-wronghost.sentinel plain 
+   2183    2173    2183    2183 Rs         00:00 00:00:00 20384
+2183 (python3) R 2173 2183 2183 0 -1 4194304 2974 0 0 0 4 0 0 0 20 0 1 0 58860 30875648 5134 18446744073709551615 4325376 7353021 140722251236352 0 0 0 0 16781312 2 0 0 0 17 9 0 0 0 0 0 10657224 12220544 148434944 140722251238637 140722251238947 140722251238947 140722251239399 0
+pid:[4026531836]
+PRINCIPAL_PID 2206
+2026-09-10T04:06:27.967576389UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-argv.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-argv.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-argv.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-argv.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-argv.sentinel plain 
+   2206    2120    2120    2120 R          00:00 00:00:00 10076
+2206 (python3) R 2120 2120 2120 0 -1 4194304 1271 0 0 0 0 0 0 0 20 0 1 0 58878 18808832 2528 18446744073709551615 4325376 7353021 140731783138112 0 0 0 0 16781312 2 0 0 0 17 12 0 0 0 0 0 10657224 12220544 551706624 140731783146230 140731783147043 140731783147043 140731783147495 0
+pid:[4026531836]
+PRINCIPAL_PID 2216
+2026-09-10T04:06:28.023625788UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-argv.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-argv.sentinel plain 
+   2216    2206    2216    2216 Rs         00:00 00:00:00 11676
+2216 (python3) R 2206 2216 2216 0 -1 4194304 1568 0 0 0 1 0 0 0 20 0 1 0 58883 20287488 2908 18446744073709551615 4325376 7353021 140731068886192 0 0 0 0 16781312 2 0 0 0 17 7 0 0 0 0 0 10657224 12220544 490504192 140731068890359 140731068890659 140731068890659 140731068891111 0
+pid:[4026531836]
+PRINCIPAL_PID 2246
+2026-09-10T04:06:28.214341126UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-cap.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-cap.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-cap.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-cap.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-cap.sentinel plain 
+   2246    2120    2120    2120 R          00:00 00:00:00 18168
+2246 (python3) R 2120 2120 2120 0 -1 4194304 2452 0 0 0 2 0 0 0 20 0 1 0 58901 28979200 4589 18446744073709551615 4325376 7353021 140730738386432 0 0 0 0 16781312 2 0 0 0 17 7 0 0 0 0 0 10657224 12220544 1057366016 140730738391803 140730738392611 140730738392611 140730738393063 0
+pid:[4026531836]
+PRINCIPAL_PID 2256
+2026-09-10T04:06:28.271318210UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-cap.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-cap.sentinel plain 
+   2256    2246    2256    2256 Rs         00:00 00:00:00 18508
+2256 (python3) R 2246 2256 2256 0 -1 4194304 2536 0 0 0 3 0 0 0 20 0 1 0 58905 29036544 4594 18446744073709551615 4325376 7353021 140735675456144 0 0 0 0 16781312 2 0 0 0 17 9 0 0 0 0 0 10657224 12220544 285151232 140735675456761 140735675457059 140735675457059 140735675457511 0
+pid:[4026531836]
+PRINCIPAL_PID 2286
+2026-09-10T04:06:28.462404355UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-missing-input.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-missing-input.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-missing-input.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-missing-input.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-missing-input.sentinel plain 
+   2286    2120    2120    2120 R          00:00 00:00:00 21304
+2286 (python3) S 2120 2120 2120 0 -1 4194304 3665 0 0 0 4 0 0 0 20 0 1 0 58923 31244288 5323 18446744073709551615 4325376 7353021 140727969190656 0 0 0 0 16781312 16387 1 0 0 17 7 0 0 0 0 0 10657224 12220544 232443904 140727969196745 140727969197603 140727969197603 140727969198055 0
+pid:[4026531836]
+PRINCIPAL_PID 2293
+2026-09-10T04:06:28.519131234UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-missing-input.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-missing-input.sentinel plain 
+   2293    2286    2293    2293 Rs         00:00 00:00:00 25888
+2293 (python3) R 2286 2293 2293 0 -1 4194304 3558 0 0 0 4 1 0 0 20 0 1 0 58928 42270720 6678 18446744073709551615 4325376 7353021 140734794318320 0 0 0 0 16781312 2 0 0 0 17 9 0 0 0 0 0 10657224 12220544 491278336 140734794321125 140734794321443 140734794321443 140734794321895 0
+pid:[4026531836]
+PRINCIPAL_PID 2319
+2026-09-10T04:06:28.664547905UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-valid.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-valid.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-valid.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-valid.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-valid.sentinel plain 
+   2319    2120    2120    2120 R          00:00 00:00:00 14472
+2319 (python3) R 2120 2120 2120 0 -1 4194304 2228 0 0 0 2 0 0 0 20 0 1 0 58946 27643904 4283 18446744073709551615 4325376 7353021 140736900924752 0 0 0 0 16781312 2 0 0 0 17 7 0 0 0 0 0 10657224 12220544 691687424 140736900926193 140736900927011 140736900927011 140736900927463 0
+pid:[4026531836]
+PRINCIPAL_PID 2329
+2026-09-10T04:06:28.721155901UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-valid.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/gate-valid.sentinel plain 
+   2329    2319    2329    2329 Rs         00:00 00:00:00 24372
+2329 (python3) R 2319 2329 2329 0 -1 4194304 3929 0 0 0 2 1 0 0 20 0 1 0 58951 34258944 6042 18446744073709551615 4325376 7353021 140737185088528 0 0 0 0 16781312 2 0 0 0 17 12 0 0 0 0 0 10657224 12220544 1040990208 140737185094901 140737185095203 140737185095203 140737185095655 0
+pid:[4026531836]
+PRINCIPAL_PID 2357
+2026-09-10T04:06:28.910936544UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 33554432 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dummy-descendant.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dummy-descendant.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dummy-descendant.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dummy-descendant.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dummy-descendant.sentinel descendant 
+   2357    2120    2120    2120 R          00:00 00:00:00 20544
+2357 (python3) R 2120 2120 2120 0 -1 4194304 3076 0 0 0 4 0 0 0 20 0 1 0 58969 30863360 5125 18446744073709551615 4325376 7353021 140727539097984 0 0 0 0 16781312 2 0 0 0 17 7 0 0 0 0 0 10657224 12220544 317472768 140727539100368 140727539101219 140727539101219 140727539101671 0
+pid:[4026531836]
+PRINCIPAL_PID 2367
+2026-09-10T04:06:28.967075528UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dummy-descendant.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dummy-descendant.sentinel descendant 
+   2367    2357    2367    2367 Rs         00:00 00:00:00 22616
+2367 (python3) R 2357 2367 2367 0 -1 4194304 6136 0 0 0 3 1 0 0 20 0 1 0 58974 42905600 6278 18446744073709551615 4325376 7353021 140721705352144 0 0 0 0 16781312 2 0 0 0 17 9 0 0 0 0 0 10657224 12220544 237539328 140721705360612 140721705360931 140721705360931 140721705361383 0
+pid:[4026531836]
+PRINCIPAL_PID 2381
+2026-09-10T04:06:29.024767720UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dummy-descendant.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/frontier.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/dummy-descendant.sentinel descendant 
+   2381       1    2367    2367 S          00:00 00:00:00 78192
+2381 (python3) S 1 2367 2367 0 -1 4194368 16720 0 0 0 0 2 0 0 20 0 1 0 58980 95469568 19515 18446744073709551615 4325376 7353021 140721705352144 0 0 0 0 16797696 2 1 0 0 17 11 0 0 0 0 0 10657224 12220544 237539328 140721705360612 140721705360931 140721705360931 140721705361383 0
+pid:[4026531836]
+PRINCIPAL_PID 2447
+2026-09-10T04:06:29.406445628UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/run_capped.py --wall-seconds 600 --cpu-seconds 550 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solve.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solve.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solve.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solver.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solve.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/univariate.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/univariate.full.receipt.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/ROOT-UNIVARIATE-ACCEPTANCE.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/candidate.json 
+   2447    2120    2120    2120 R          00:00 00:00:00 19644
+2447 (python3) R 2120 2120 2120 0 -1 4194304 2843 0 0 0 3 0 0 0 20 0 1 0 59019 30568448 4933 18446744073709551615 4325376 7353021 140727035544832 0 0 0 0 16781312 2 0 0 0 17 14 0 0 0 0 0 10657224 12220544 602644480 140727035550310 140727035551267 140727035551267 140727035551719 0
+pid:[4026531836]
+PRINCIPAL_PID 2457
+2026-09-10T04:06:29.463545050UTC
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solver.py /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/solve.authority.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/univariate.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/univariate.full.receipt.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/ROOT-UNIVARIATE-ACCEPTANCE.json /home/ubuntu/jc2-f10-minimum-pivot-actual-20260910/candidate.json 
+   2457    2447    2457    2457 Rs         00:00 00:00:00 19612
+2457 (python3) R 2447 2457 2457 0 -1 4194304 4716 0 0 0 3 0 0 0 20 0 1 0 59024 29368320 4850 18446744073709551615 4325376 7353021 140724243532944 0 0 0 0 16781312 2 0 0 0 17 7 0 0 0 0 0 10657224 12220544 286146560 140724243536991 140724243537443 140724243537443 140724243537895 0
+pid:[4026531836]

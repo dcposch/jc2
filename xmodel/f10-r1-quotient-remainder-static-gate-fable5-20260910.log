@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and published at 00:53:15 UTC, inside the 00:57 content freeze and the 01:00:00 hard stop. All writers are idle.
+
+**What was done**
+
+- Verified all fifteen ordered input hashes in the lane inputs directory before any body access. All matched.
+- Wrote the skeleton first via apply_patch, then read all fifteen inputs whole. One combined read was clipped by the harness display, so those three reports were re-read separately and whole. No span is unread.
+- Wrote the report at `xmodel/f10-r1-quotient-remainder-static-gate-fable5-20260910.md` and a read log in the owned box directory. Every write went through apply_patch. No mathematical subprocess, no code changes, no network or process inspection.
+
+**Verdicts, all by static reading with hand traces**
+
+- **A CONFIRMED.** Validation, the exact squarefree refusal string, projected maximal-degree pivot, both children rescanned, the 6/13 bounds, and the leaf-sum and leaf-product checks are all present in the solver. No unlicensed coefficient division exists.
+- **B CONFIRMED.** Monic-only remainder division, complete eight-generator columns including zero columns, one direct-sum RREF of at most 35 by 316 with identity tracking, and a pivot-form check that makes the separator functional valid without trusting reduced form.
+- **C CONFIRMED.** Raw pivot as (N/fhat)/lc with exact divisibility, degree bound tied to the q^5 target, CRT idempotents checked on every leaf, full 1638 padding and full 217 pullback. The lost-component fixture traces by hand to a valid separator.
+- **D CONFIRMED with one GAP.** The literal source parser and the unchanged checker/evidence/authority binding still bind the new solver through the ordinary flat pin. The claim that the main tail is text-identical to the old solver is unverifiable here because the old solver is not an input.
+- **E CONFIRMED.** The dense Fraction verifier uses only the fixture modulus and its own arithmetic, visits all 217 or 1638 items before deciding. All eight expectations and four negatives trace to the expected branch or exact ValueError string.
+- **F CONFIRMED.** Import order, no source acceptance, exclusive frozen sidecars, all twenty sidecars plus summary, final rehashes, no fallback or retry.
+
+**Decision.** The packet may proceed to one future finite generic validation, subject to ROOT registration. It has not passed anything. Nothing was refuted. The GAP register lists the absent syntax check, the assumed python-flint API semantics, the unverifiable main-tail identity, and the accepted-premise status of the 1638-column annihilation argument. The only non-blocking note is that the construction trace omits the Bezout and idempotent data the design called auditable, which the interface made optional.
+DIVERT path=xmodel/f10-r1-quotient-remainder-static-gate-fable5-20260910.md status=CLEAN body_bytes=16864 body_sha256=a797cbed9ad4483ec453599fc8154e4d5ce2dd64b06d0796a79a0ad69655cbef

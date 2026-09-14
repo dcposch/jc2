@@ -1,0 +1,59 @@
+// Desk CAS for ideation-20260905T1200Z-grok46
+// Pencil resultant of (C-λB) at t=3, plus I+ controls.
+// Concatenated after banked t3_rows.sing (ring rres already set).
+option(redSB);
+print("LOADED t3_rows");
+print("A0-pre: will split T3,T4,T5");
+intvec b3wt=0,0,1;
+poly T3r=T3; poly T4r=T4; poly T5r=T5;
+poly cc0=subst(T5,b3,0);
+poly bb0=subst(diff(T5,b3),b3,0);
+poly aa0=subst(diff(diff(T5,b3),b3),b3,0)/2;
+if (T5-(aa0*b3^2+bb0*b3+cc0)!=0) { print("FAIL b3-split r=0"); } else { print("SPLIT r=0 OK"); }
+poly cc1=subst(T4,b3,0);
+poly bb1=subst(diff(T4,b3),b3,0);
+poly aa1=subst(diff(diff(T4,b3),b3),b3,0)/2;
+if (T4-(aa1*b3^2+bb1*b3+cc1)!=0) { print("FAIL b3-split r=1"); } else { print("SPLIT r=1 OK"); }
+poly cc2=subst(T3,b3,0);
+poly bb2=subst(diff(T3,b3),b3,0);
+poly aa2=subst(diff(diff(T3,b3),b3),b3,0)/2;
+if (T3-(aa2*b3^2+bb2*b3+cc2)!=0) { print("FAIL b3-split r=2"); } else { print("SPLIT r=2 OK"); }
+print("A0VALUE: "+string(aa0));
+print("A0SIZE: "+string(size(aa0))+" deg="+string(deg(aa0)));
+poly B1=aa0*bb1-aa1*bb0; poly C1=aa0*cc1-aa1*cc0; poly G1=B1*b3+C1;
+poly B2=aa0*bb2-aa2*bb0; poly C2=aa0*cc2-aa2*cc0; poly G2=B2*b3+C2;
+if (G1-(aa0*T4-aa1*T5)!=0) { print("FAIL G1"); } else { print("G1 OK"); }
+if (G2-(aa0*T3-aa2*T5)!=0) { print("FAIL G2"); } else { print("G2 OK"); }
+// Skip Iplus std (banked: dim 0, length 66, N_3=2). Pencil is the new object.
+print("SKIP Iplus std (banked)");
+// P_t
+ring P=(0,d),(b4,u2),wp(1,2);
+minpoly=3*d^2-4;
+poly B1=imap(rres,B1); poly B2=imap(rres,B2);
+poly C1=imap(rres,C1); poly C2=imap(rres,C2);
+poly a0=imap(rres,aa0);
+matrix N[2][2]=C1,B1,C2,B2;
+ideal I2=minor(N,2);
+ideal gI2=std(I2);
+print("CURVE I2: dim="+string(dim(gI2))+" ngens="+string(size(I2))+" gbsize="+string(size(gI2))+" size(minor)="+string(size(I2[1])));
+ideal gB=std(ideal(B1,B2));
+ideal gC=std(ideal(C1,C2));
+print("PARTI B: dim="+string(dim(gB))+" vdim="+string(vdim(gB)));
+print("PARTI C: dim="+string(dim(gC))+" vdim="+string(vdim(gC)));
+ideal gBC=std(ideal(B1,B2,C1,C2));
+print("PARTI BC: dim="+string(dim(gBC))+" vdim="+string(vdim(gBC)));
+// Pencil C-λB in two vars: resultant via elim after adding λ
+ring PL=(0,d),(b4,u2,la),wp(1,2,0);
+minpoly=3*d^2-4;
+poly B1=imap(P,B1); poly B2=imap(P,B2);
+poly C1=imap(P,C1); poly C2=imap(P,C2);
+poly P1=C1-la*B1; poly P2=C2-la*B2;
+ideal J=P1,P2;
+int tm2=timer;
+ideal gJ=std(J);
+print("PENCIL std dim="+string(dim(gJ))+" vdim_if0="+string(vdim(gJ))+" gbsize="+string(size(gJ))+" time="+string(timer-tm2));
+ideal Elim=eliminate(gJ,b4*u2);
+print("PENCIL elim in la: size="+string(size(Elim))+" gens:");
+print(Elim);
+print("DONE_PENCIL");
+quit;

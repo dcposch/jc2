@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Lane complete and sealed at 40 minutes of the 220-minute budget.
+
+## What I found
+
+**(1) (E1)/(E2) — verified, with one correction and one extension.**
+
+The identity is one line of chain rule: `J(Φ(F,G),G) = Φ_u(F,G)·J(F,G)`. Verified symbolically on random dense pairs with symbolic `a,b,c,d,e₀`.
+
+- **The submission's biconditional is false as written.** `J(J(Q,G),G) = −2j² + Φ_u·J(j,G)`, so `j = J(F,G) = −1` also yields `−2`. Explicit counterexample: `F = −x`, `G = y+x²`. The correct exact equivalence requires `F` to be *defined* by (E1), giving `J(F_def,G) = −(1/2)·J(J(Q,G),G)` unconditionally. This repairs the direction; it does not damage the proposal.
+- **The `m₁ ≥ 3` exclusion is unnecessary.** The Prop 3.1 weight inequality forces `i ≤ m₁−1`, so the iterated Jacobian gives `J^{(k)}(Q,G) = ∂_u^k Φ(F,G)` and hence a *linear* recovery `F = [(m₁−1)!·C(G) − J^{(m₁−1)}(Q,G)]/m₁!` with Keller ⟺ `J^{(m₁)}(Q,G) = −m₁!`. Verified at `m₁ = 2,3,4`. Scope goes from 44/66 to **66/66** (roster `m₁` census confirms `{2:44, 3:14, 4:5, 5:2, 7:1}`).
+- The elimination does not carry `Q = Φ(F,G)`: only `Q − Φ(F,G) ∈ ker J(−,G)`. The chart is a relaxation — safe for a kill, weak for a survivor.
+
+**(2) Chart built and counted.** `Q`-block/`F`-block = **0.3160** at (99,66) (matching the submission's 0.316), 0.3470 at D=108. Unknowns 7335→3881, rows 23971→15720. A ~2× cut. One correction: (E2) is one *polynomial* identity but expands to the same 13530 coefficient rows as the Jacobian block — the saving is elsewhere.
+
+**(3) Decision.** The degree/attainment block is **PROPER**, decided without a Gröbner: the cone family satisfies bands 1..19 (so no unit there), band 20 excludes it (the demanded control, passing), and an explicit exact rational witness satisfies all 20 bands. New structural fact: the band obstruction is exactly divisibility by `Q_top/(λ·y·(y−x))`. Independently, (E2) alone forces every irreducible factor of `Q` to have multiplicity ≤ 2 — a second, attainment-free cone exclusion — and kills the homogeneous-`Q` stratum outright.
+
+The full chart is **compute-bound at weight ω = 0**, far short of Astra's ω = 70. I did not build the δ=2 source faces; I state them as consumed, not re-derived. D=108 is built and counted but **not decided** — I say so explicitly in the report.
+
+Report: `xmodel/cq-elim-opus5-20260906.md`, body 24924 bytes, sealed and verified. Host disk fell from 2.8 GB to 0.5 MB mid-run from other lanes; this lane retained 76 KB.
+DIVERT path=xmodel/cq-elim-opus5-20260906.md status=CLEAN_SEALED body_bytes=24924 body_sha256=aef9102a2ae18870ec2903655eda5d3b10086b01ae8ac6a3d897bce4ac9ea7c0

@@ -1,0 +1,33 @@
+# Candidate-only fixed-schema late binder
+
+Status: authored and locally tested on documentary metadata only; FIRST independent review and all operational authentication remain outstanding. This does not reopen batch b or authorize a later batch.
+
+## API and trust boundary
+
+`latebind.bind(bundle, prepared_pins, observation_json, decision_json)` returns a mapping of fourteen candidate names to bytes. The helper imports only copy/hashlib/json/re; it has no CLI, filesystem reader/writer, clock, subprocess, network, observation or installation function. The test harness alone reads the eight TASK-pinned historical documents and imports this helper.
+
+`bundle` and `prepared_pins` have exactly these four keys: ROOT-REGISTRATION.preholder.json, AUTHORITIES.preholder.json, ROOT-EXECUTION-CARD.preholder.md, final-install.preholder.sh. Values are bytes and lowercase SHA256 strings respectively. ROOT must independently authenticate prepared bytes and pins. Future prepared worker/path/clock bindings are supported within the fixed closed-nine schema; historical test pins are not an operational allowlist. All non-late registration values are preserved as parsed values; all non-replacement card/installer bytes are preserved.
+
+Observation is strict JSON with exactly schema, context, instance_id, hostname, boot_id, pid_namespace, cgroup_path, holder_pid, start_ticks, invocation_id, outer_device, outer_inode, leaves, coordinator_receipt_sha256, native_manifest_sha256, native_list_sha256. Schema is caprun-late-observation/v1; context is HISTORICAL_TEST or ROOT_ATTESTED_CANDIDATE. Identity/path strings must equal prepared values. Holder PID/start and all device/inodes are positive bounded integers, not booleans; invocation is32 lowercase hex. Leaves are exactly nine distinct named/path-bound records with individual device/inode pairs, also distinct from outer. No single-device extrapolation occurs.
+
+Decision is strict JSON with exactly schema, context, prepared_pins, observation_sha256, enabled, exclusive_no_concurrent_writer, root_no_migration, freeze_token. Schema is ROOT_METADATA_BINDING_ONLY_NOT_RELEASE; context/pins/observation digest must match. The three booleans must be literally true; token is ROOT_FREEZE_EXACT_PREFLIGHT9_REGISTRATION_ONLY. These are supplied ROOT attestations, not mechanically established live facts or a cryptographic signature. A caller that invents observations or approvals violates the trust boundary. The helper cannot validate liveness, ACLs, ownership, no-migration, namespace freshness, current clocks or actual timer retirement.
+
+## Exact candidate changes
+
+The implementation reconstructs all nine complete prepared argv and authority objects from the fixed metadata schema; validates exact phase order, CPU origin0, fixed caps/profiles, paths, environment and disabled initial flags. No produce/check-positive/mutator phase is admitted; dormant profile declarations are merely preserved.
+
+Allowed edits are the three existing registration flags; outer and nine individual leaf device/inode guard fields; corresponding four identity slots in each CAPRUN argv; valid/dummy policy device/inode fields; and eight command digests. Refuse-hash deliberately retains its zero command digest despite the emitted object's actual digest. Reversing these edits must reproduce the entire original parsed registration and authority collection. Seven non-probe objects retain sorted compact ASCII JSON plus newline byte-for-byte.
+
+Card substitutions are exactly the three holder fields, retirement receipt digest, registration digest, and the three literal historical state-text replacements. Installer substitutions are exactly three holder fields, registration digest twice, card digest, final manifest digest and the freeze-only token. Counts are checked; unknown remaining JC2_*_PLACEHOLDER tokens reject. ROOT authenticates the fixed text structure and any future preholder preparation before calling this helper; this is not a general shell validator or arbitrary template engine. Returned shell bytes are never executed here.
+
+The acyclic order is canonical policies/authorities, registration, card, final three-entry manifest, installer. The manifest contains registration, card and the opaque native.sha256 list digest, never the installer. Three native roles remain distinct: full native-manifest.json inventory digest, source-native-manifest.json inventory digest, and supplied native.sha256 list digest. The first is matched against prepared registration; the second is retained in source authority metadata; the third is only copied into the final manifest. No native body is opened or verified.
+
+Fourteen outputs comprise nine authority/*.json bytes, registration, card, manifest, installer and SUMMARY.json. The summary binds inputs/observation/decision, complete argv changes and hashes/sizes of the thirteen non-summary outputs; it avoids self-hashing and says CANDIDATE_NOT_INSTALLED_NOT_RELEASED with installation_or_release_authorized=false. Embedded enabled flags represent the explicit candidate metadata decision only; ROOT must not install or execute these bytes without separate approval.
+
+## Bounds, controls and operational limit
+
+Each input and output is capped at131072 bytes; the four prepared inputs and all outputs each have aggregate cap524288 bytes. JSON rejects duplicate keys, floats/nonfinite numbers, overlong integers, excessive decoded depth/nodes/key/string sizes. Parser failures, including excessively nested input rejected by the JSON parser itself, are failures, never partial success. Unknown types/keys, duplicate leaves, wrong paths/order/pins/decisions/placeholders and cap changes fail closed. All candidate outputs remain in memory.
+
+The authorized stdlib command is `python3 -I -S -B box/caprun-latebinder-code-astra-20260911/test_latebind.py`. Thirteen test methods pass, including exact historical four-document byte reproduction, non-probe preservation, changed prepared future worker/base/clock bindings, independent leaf devices and negative controls. Test observations remain HISTORICAL_TEST; synthetic identifiers are not host facts. No input shell/native/scientific code or candidate document was executed. Local0.059second unittest duration is not operational wall qualification or evidence that the120second admission ceiling is sufficient.
+
+ROOT retains fresh physical/native/clock/source authentication, observation capture, final complete readback, bounded installation, liveness, token release, timers and all original caps. FIRST review precedes any operational use. No worker or retry is authorized.

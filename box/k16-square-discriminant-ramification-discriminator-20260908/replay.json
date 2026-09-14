@@ -1,0 +1,86 @@
+{
+  "utc": "2026-09-08T00:31:45.475008+00:00",
+  "status": "ALL_6_DECLARED_MODES_PASS",
+  "elapsed": 1.384693171014078,
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/k16-square-discriminant-ramification-discriminator-20260908/check.py"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.033904020907357335,
+      "stdout": "{\"actual_source_constructed\": false, \"generic_degree_max\": 3, \"identities\": 4, \"status\": \"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/k16-square-discriminant-ramification-discriminator-20260908/check.py",
+        "--omit-W"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.0964075680822134,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/k16-square-discriminant-ramification-discriminator-20260908/check.py\", line 58, in <module>\n    need(Delta == scale(E,F(-16,3)), \"changed discriminant identity\")\n  File \"/home/ubuntu/jc2/box/k16-square-discriminant-ramification-discriminator-20260908/check.py\", line 15, in need\n    raise ValueError(message)\nValueError: changed discriminant identity\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/k16-square-discriminant-ramification-discriminator-20260908/check.py",
+        "--wrong-x"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.09643092902842909,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/k16-square-discriminant-ramification-discriminator-20260908/check.py\", line 58, in <module>\n    need(Delta == scale(E,F(-16,3)), \"changed discriminant identity\")\n  File \"/home/ubuntu/jc2/box/k16-square-discriminant-ramification-discriminator-20260908/check.py\", line 15, in need\n    raise ValueError(message)\nValueError: changed discriminant identity\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/k16-square-discriminant-ramification-discriminator-20260908/check.py"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.13248073100112379,
+      "stdout": "{\"actual_source_constructed\": false, \"generic_degree_max\": 3, \"identities\": 4, \"status\": \"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/k16-square-discriminant-ramification-discriminator-20260908/check.py",
+        "--omit-W"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.5110097760334611,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/k16-square-discriminant-ramification-discriminator-20260908/check.py\", line 58, in <module>\n    need(Delta == scale(E,F(-16,3)), \"changed discriminant identity\")\n  File \"/home/ubuntu/jc2/box/k16-square-discriminant-ramification-discriminator-20260908/check.py\", line 15, in need\n    raise ValueError(message)\nValueError: changed discriminant identity\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/k16-square-discriminant-ramification-discriminator-20260908/check.py",
+        "--wrong-x"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.5144116930896416,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/k16-square-discriminant-ramification-discriminator-20260908/check.py\", line 58, in <module>\n    need(Delta == scale(E,F(-16,3)), \"changed discriminant identity\")\n  File \"/home/ubuntu/jc2/box/k16-square-discriminant-ramification-discriminator-20260908/check.py\", line 15, in need\n    raise ValueError(message)\nValueError: changed discriminant identity\n"
+    }
+  ]
+}

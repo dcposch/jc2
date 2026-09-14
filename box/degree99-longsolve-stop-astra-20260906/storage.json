@@ -1,0 +1,84 @@
+{
+  "actions": "read-only describes; no stop/termination/retag",
+  "instance": {
+    "BlockDeviceMappings": [
+      {
+        "DeviceName": "/dev/sda1",
+        "Ebs": {
+          "AttachTime": "2026-09-06T07:55:52+00:00",
+          "DeleteOnTermination": true,
+          "EbsCardIndex": 0,
+          "Status": "attached",
+          "VolumeId": "vol-09c6e3133f3442e56"
+        }
+      }
+    ],
+    "InstanceId": "i-07e1212591a6acae9",
+    "InstanceType": "r7i.16xlarge",
+    "Placement": {
+      "AvailabilityZone": "us-east-1a",
+      "AvailabilityZoneId": "use1-az6",
+      "GroupName": "",
+      "Tenancy": "default"
+    },
+    "PrivateIpAddress": "172.30.0.63",
+    "RootDeviceName": "/dev/sda1",
+    "RootDeviceType": "ebs",
+    "State": {
+      "Code": 16,
+      "Name": "running"
+    },
+    "Tags": [
+      {
+        "Key": "Name",
+        "Value": "jc2-worker-20260906T075549Z"
+      },
+      {
+        "Key": "market",
+        "Value": "ondemand"
+      },
+      {
+        "Key": "jc2fleet",
+        "Value": "1"
+      },
+      {
+        "Key": "Owner",
+        "Value": "t2t3-longsolve-sol56-20260906"
+      }
+    ]
+  },
+  "utc": "2026-09-06T12:33:31.872043+00:00",
+  "volumes": {
+    "Volumes": [
+      {
+        "Attachments": [
+          {
+            "AttachTime": "2026-09-06T07:55:52+00:00",
+            "DeleteOnTermination": true,
+            "Device": "/dev/sda1",
+            "EbsCardIndex": 0,
+            "InstanceId": "i-07e1212591a6acae9",
+            "State": "attached",
+            "VolumeId": "vol-09c6e3133f3442e56"
+          }
+        ],
+        "AvailabilityZone": "us-east-1a",
+        "AvailabilityZoneId": "use1-az6",
+        "CreateTime": "2026-09-06T07:55:52.381000+00:00",
+        "Encrypted": false,
+        "Iops": 3000,
+        "MultiAttachEnabled": false,
+        "Operator": {
+          "HiddenByDefault": false,
+          "Managed": false
+        },
+        "Size": 100,
+        "SnapshotId": "snap-0bf84cf821e71e45c",
+        "State": "in-use",
+        "Throughput": 125,
+        "VolumeId": "vol-09c6e3133f3442e56",
+        "VolumeType": "gp3"
+      }
+    ]
+  }
+}

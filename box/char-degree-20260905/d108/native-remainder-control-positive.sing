@@ -1,0 +1,19 @@
+ring R=0,(Z3,Zc,c,leader3,target_a,target_b,target_c,target_d,target_e),dp;
+ideal I=
+(target_a),
+(target_b),
+(target_c),
+(target_d),
+(target_e),
+(c-1),
+((2/3)*target_b),
+((-2/9)*target_a*target_b+(-4/81)*target_b^3+(4/3)*target_c);
+print("R_ROWS_PARSED");
+ideal Qrows=
+((1/2)*target_a),
+((-1/4)*target_a^2+(-1/9)*target_a*target_b^2+(-1/81)*target_b^4+(1/3)*target_b*target_c+(5/24)*target_b+(1)*target_d),
+((-1)*leader3+(-1/6)*target_a*target_b+(-1/648)*target_b^3+(1/6)*target_c+(-1/8));
+I=I,Qrows;kill Qrows;
+I=I,Z3*leader3-1,Zc*c-1;
+print("BEGIN_GB");ideal SB=std(I);print("END_GB");print("BEGIN_RESULT");print(reduce(1,SB));print(dim(SB));print(size(SB));print("END_RESULT");
+ideal neg=leader3,Z3*leader3-1;ideal pos=leader3-1,Z3*leader3-1;print("BEGIN_CONTROLS");print(reduce(1,std(neg)));print(reduce(1,std(pos)));print("END_CONTROLS");quit;

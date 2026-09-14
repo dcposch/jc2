@@ -1,0 +1,169 @@
+{
+  "UBSan": true,
+  "boundary": {
+    "exponent-overflow": {
+      "returncode": 1,
+      "stderr": "msolve input size/allocation error: size_t product overflow\n",
+      "stdout": ""
+    },
+    "negative-dimension": {
+      "returncode": 1,
+      "stderr": "msolve input size/allocation error: nonpositive exponent dimension\n",
+      "stdout": ""
+    },
+    "negative-index": {
+      "returncode": 1,
+      "stderr": "msolve input size/allocation error: invalid import exponent index/dimension\n",
+      "stdout": ""
+    },
+    "null-calloc": {
+      "returncode": 1,
+      "stderr": "msolve input size/allocation error: allocator returned NULL\n",
+      "stdout": ""
+    },
+    "null-malloc": {
+      "returncode": 1,
+      "stderr": "msolve input size/allocation error: allocator returned NULL\n",
+      "stdout": ""
+    },
+    "overflow": {
+      "returncode": 1,
+      "stderr": "msolve input size/allocation error: size_t product overflow\n",
+      "stdout": ""
+    },
+    "positive": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "BOUNDARY_CONTROLS_PASS no allocation over 24 bytes\n"
+    },
+    "ptrdiff": {
+      "returncode": 1,
+      "stderr": "msolve input size/allocation error: array exceeds PTRDIFF_MAX bytes\n",
+      "stdout": ""
+    }
+  },
+  "boundary_binary_sha256": "35dcc21d389c4262c011a3fcb9a4e32460ebbd315231986d520411e4575f9f3d",
+  "giant_input_or_solve": false,
+  "tiny_engine": {
+    "retry-proper-p0": {
+      "argv": [
+        "/home/ubuntu/msolve-allocation-repair-20260906/msolve-source/msolve",
+        "-g",
+        "2",
+        "-t",
+        "1",
+        "-v",
+        "2",
+        "--random-seed",
+        "0",
+        "-f",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-proper-p0.ms",
+        "-o",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-proper-p0.basis"
+      ],
+      "input_sha256": "409fb8770f6a46b8f19982183c8864fcf1208885e7369d2ab34ad4ac04053866",
+      "output_sha256": "05774a6762b5c8aaa9429a105cdd99e6a8be58146183906ca13f6b695bab03ae",
+      "polynomials": [
+        "y^2-x",
+        "x*y-1",
+        "x^2-y"
+      ],
+      "returncode": 0
+    },
+    "retry-proper-p1073741827": {
+      "argv": [
+        "/home/ubuntu/msolve-allocation-repair-20260906/msolve-source/msolve",
+        "-g",
+        "2",
+        "-t",
+        "1",
+        "-v",
+        "2",
+        "--random-seed",
+        "0",
+        "-f",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-proper-p1073741827.ms",
+        "-o",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-proper-p1073741827.basis"
+      ],
+      "input_sha256": "b549a914b03f88db39f34799a1ca7b66955c6016c3ac9afa4edf8662c569e45f",
+      "output_sha256": "133c054ef96e59be430f58039e28ce44bf771bbb1db5158a4a4119e87655171a",
+      "polynomials": [
+        "1*y^2+1073741826*x^1",
+        "1*x^1*y^1+1073741826",
+        "1*x^2+1073741826*y^1"
+      ],
+      "returncode": 0
+    },
+    "retry-rational-p0": {
+      "argv": [
+        "/home/ubuntu/msolve-allocation-repair-20260906/msolve-source/msolve",
+        "-g",
+        "2",
+        "-t",
+        "1",
+        "-v",
+        "2",
+        "--random-seed",
+        "0",
+        "-f",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-rational-p0.ms",
+        "-o",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-rational-p0.basis"
+      ],
+      "input_sha256": "929aed13a8eed9240afcaf140bc913b14f2f1b02296c6898d41cf2abc19ae4cf",
+      "output_sha256": "c4871f7ba928ba61b16f51905a7dcb7eed8fb35de976ff55938513e748e6ccb9",
+      "polynomials": [
+        "y",
+        "x"
+      ],
+      "returncode": 0
+    },
+    "retry-unit-p0": {
+      "argv": [
+        "/home/ubuntu/msolve-allocation-repair-20260906/msolve-source/msolve",
+        "-g",
+        "2",
+        "-t",
+        "1",
+        "-v",
+        "2",
+        "--random-seed",
+        "0",
+        "-f",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-unit-p0.ms",
+        "-o",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-unit-p0.basis"
+      ],
+      "input_sha256": "fa967c25848873fc1bd23a28009caa0ae61951039ab942b1c167259a4a6cd563",
+      "output_sha256": "c8cd1899e5f7accca3669c5368300a5a1264bf83f0801d0fccb33143644d810e",
+      "polynomials": [
+        "1"
+      ],
+      "returncode": 0
+    },
+    "retry-unit-p1073741827": {
+      "argv": [
+        "/home/ubuntu/msolve-allocation-repair-20260906/msolve-source/msolve",
+        "-g",
+        "2",
+        "-t",
+        "1",
+        "-v",
+        "2",
+        "--random-seed",
+        "0",
+        "-f",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-unit-p1073741827.ms",
+        "-o",
+        "/home/ubuntu/msolve-allocation-repair-20260906/retry-unit-p1073741827.basis"
+      ],
+      "input_sha256": "b6ffba03ef1210473fef21e4a2896ccb062d511d9b1ea829b7142f9e3cb7e8ba",
+      "output_sha256": "b16007534af8dffa960a1c86946e619afee64814972c413795c3384ae350fcac",
+      "polynomials": [
+        "1"
+      ],
+      "returncode": 0
+    }
+  }
+}

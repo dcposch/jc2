@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-09T06:29:10.999763+00:00",
+  "charged": 9,
+  "snapshots": 8,
+  "charged_bytes": 73351,
+  "literal_ops_sed_vector": [
+    "box/f9-weighted-reference-gate-20260909/PINS.json",
+    "box/f9-weighted-reference-gate-20260909/inputs/accepted-16ab-excerpt.md",
+    "box/f9-weighted-reference-gate-20260909/inputs/accepted-f9-joint-gate.md",
+    "box/f9-weighted-reference-gate-20260909/inputs/new-reference-proof.md",
+    "box/f9-weighted-reference-gate-20260909/inputs/new-reference-transaction.json",
+    "box/f9-weighted-reference-gate-20260909/inputs/source-custody.json",
+    "box/f9-weighted-reference-gate-20260909/inputs/source-input-pins.json",
+    "box/f9-weighted-reference-gate-20260909/inputs/template-late-reference-sections3-4.md",
+    "box/f9-weighted-reference-gate-20260909/inputs/template-weightfree-reference-sections2-4.md"
+  ],
+  "unique_basenames": true,
+  "all_snapshot_originals_current": true,
+  "target_absent": true,
+  "excerpt_checks": [
+    {
+      "snapshot": "template-late-reference-sections3-4.md",
+      "bytes_half_open": [
+        4807,
+        9398
+      ],
+      "lines_inclusive": [
+        64,
+        145
+      ],
+      "exact": true
+    },
+    {
+      "snapshot": "template-weightfree-reference-sections2-4.md",
+      "bytes_half_open": [
+        1772,
+        8579
+      ],
+      "lines_inclusive": [
+        26,
+        129
+      ],
+      "exact": true
+    },
+    {
+      "snapshot": "accepted-16ab-excerpt.md",
+      "bytes_half_open": [
+        1849383,
+        1857913
+      ],
+      "lines_inclusive": null,
+      "exact": true
+    }
+  ],
+  "mathematical_subprocesses": 0,
+  "prompt_sha256": "5594369c0cfcd6748007c71b28fd547c9433962088038a5c44e211ed76e799cb",
+  "pins_sha256": "1568402db20e831597f3294c0704e0df26cc20bf13d5675bc3ffb68cb24840b8"
+}

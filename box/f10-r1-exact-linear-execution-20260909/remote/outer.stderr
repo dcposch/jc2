@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909/dispatch_batch.py", line 227, in <module>
+    main()
+  File "/home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909/dispatch_batch.py", line 211, in main
+    run('solve','solver.py',inputs+[ROOT/'candidate.json'],'solve',operation='build',mathematical=True)
+  File "/home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909/dispatch_batch.py", line 137, in run
+    require(rc==0 and telemetry['status']=='NORMAL_EXIT','cap/failure: STOP, no retry')
+  File "/home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909/dispatch_batch.py", line 26, in require
+    if not ok: raise RuntimeError(reason)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: cap/failure: STOP, no retry

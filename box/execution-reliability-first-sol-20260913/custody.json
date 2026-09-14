@@ -1,0 +1,26 @@
+{
+  "task": "execution-reliability-first-sol-20260913",
+  "status": "TERMINAL",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-13T04:46:32.203038883Z",
+  "custody_prewrite_utc": "2026-09-13T04:52:27.901053740Z",
+  "all_writers_idle": true,
+  "verdict": "REFUTED_AS_READY_FOR_AWS_REGRESSION",
+  "decisive_blocker": "untracked asynchronous admission tee writers are outside the job cgroup and collection lock",
+  "report": {"path":"xmodel/execution-reliability-first-sol-20260913.md","sha256":"e9d078786c5bfe513dea86ab23942a638629ca8053d9d4ed4650e33594e31bc1","readback":"WHOLE"},
+  "manifest": {"path":"xmodel/execution-reliability-first-sol-20260913.md.artifact.json","sha256":"1a94dcb38806e7453c1e6f8230b4a92c04379c8a791a97aeb4d75398120be36a","readback":"WHOLE","expected_verify":"VERIFIED"},
+  "pins": {"path":"box/execution-reliability-first-sol-20260913/PINS.json","sha256":"d838549716a25f05adc18dd30474d63f43231f0384e0bdb3c70909302a0265b1","readback":"WHOLE"},
+  "input_postpins": [
+    {"path":"xmodel/execution-reliability-astra-20260913.md","sha256":"4e20383fbe4cfae054c4e0df6286d1a1cf7c922a31d90fc6827b4cf62e8fd675"},
+    {"path":"box/execution-reliability-astra-20260913/PINS.sha256","sha256":"e3269c9210d8ada9ca4d5ecbf5b53c3fc43a530f2843fc611dddf499e1c26adb"},
+    {"path":"box/execution-reliability-astra-20260913/TEST-PLAN.md","sha256":"729e6f691a183b33ecbbaa2c7d77379e5ae424c86292428ddc696664b57ae40f"},
+    {"path":"ops/fleet/job.sh","sha256":"8a45be2542d9ac9b71322b8cd12cbc3c8a6b931d9c071fc6f5bb2cf0514d8586"},
+    {"path":"ops/fleet/JOB.md","sha256":"db0216985af8c9f0577d9c09331476deb746b58de9edf1de0e9dbbf5bfc1a5e5"},
+    {"path":"ops/fleet/tests/job-regression.sh","sha256":"4ecc8ec0462ac54d67114bfc23875f2275a0eccafcc78ef4afe1fcecdd51c487"},
+    {"path":"ops/fleet/tests/job-probe.sh","sha256":"4c8f88cc987e5a4ca07d5ce38d3a6ed4b7d412ed7b74ede731b6df002b9d64b8"},
+    {"path":"COORDINATION.md","sha256":"517fca6f67f3d705f9b4045e10f9039aaf11bf3280dfd27bb90bf003ee4a3ead"},
+    {"path":"ops/FLEET.md","sha256":"f0330ebc4129ec917ec7d293003f78a0d447686f313910bb23c5d0da19f5e16c"},
+    {"path":"ops/artifact_finalize.py","sha256":"0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"}
+  ],
+  "scope": "manual static FIRST only; sources unchanged; runtime unrun; no worker or migration authority"
+}

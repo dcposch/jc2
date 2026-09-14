@@ -1,0 +1,28 @@
+ring R=0,(Z3,Zc,c,leader3,target_a,target_b,target_c,target_d,target_e,cxH_2_0,cxv_3_0,cxU_3_1,cxU_4_0,cxR_5_1,cxR_6_0,cxHH_0_4,cxHH_2_2,cxvU_5_2,cxvU_6_1),dp;
+ideal I=
+(target_a),
+(target_b),
+(target_c),
+(target_d),
+(target_e),
+(c-1),
+(cxH_2_0-((-1/6)*target_b)),
+(cxv_3_0-((1/3)*target_a+(1/18)*target_b^2)),
+(cxU_3_1-((-2/3)*target_b)),
+(cxU_4_0-((2/9)*target_a*target_b+(4/81)*target_b^3+(-4/3)*target_c+(1))),
+(((1))*((1))-((cxU_4_0)*((1)))),
+(0-((cxU_3_1)*((1)))),
+(cxR_5_1-(((1))*(cxv_3_0)+(cxv_3_0)*((1))-((cxU_3_1)*(cxH_2_0)))),
+(cxR_6_0-((cxv_3_0)*(cxv_3_0)-((cxU_4_0)*(cxH_2_0)))),
+(cxHH_0_4-(((1))*((1)))),
+(cxHH_2_2-(((1))*(cxH_2_0)+(cxH_2_0)*((1)))),
+(cxvU_5_2-(((1))*(cxU_3_1))),
+(cxvU_6_1-(((1))*(cxU_4_0)+(cxv_3_0)*(cxU_3_1))),
+((3/4)*((cxR_5_1)*(cxHH_0_4))),
+((3/4)*((cxR_6_0)*(cxHH_0_4))+(-1/8)*((cxvU_5_2)*((1)))+(1)*(((-1/3)*target_a^2+(-1/6)*target_a*target_b^2+(-1/48)*target_b^4+(1/2)*target_b*target_c+(1)*target_d)*(cxHH_0_4))),
+((-1)*((1)*leader3)),
+((3/4)*((cxR_5_1)*(cxHH_2_2))+(-1/8)*((cxvU_6_1)*((1)))+(-1)*((1)*leader3)),
+(Z3*leader3-1),
+(Zc*c-1);
+print("ALL_ROWS_PARSED");print(size(I));print("BEGIN_GB");ideal SB=slimgb(I);print("END_GB");print("BEGIN_RESULT");print(reduce(1,SB));print(dim(SB));print(size(SB));print("END_RESULT");
+ideal neg=leader3,Z3*leader3-1;ideal pos=leader3-1,Z3*leader3-1;print("BEGIN_CONTROLS");print(reduce(1,std(neg)));print(reduce(1,std(pos)));print("END_CONTROLS");quit;

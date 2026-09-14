@@ -1,0 +1,1501 @@
+                                           GENERALIZATIONS OF THE IMAGE CONJECTURE
+                                                AND THE MATHIEU CONJECTURE
+arXiv:0902.0212v3 [math.CV] 23 Oct 2009
+
+
+
+
+                                                                          WENHUA ZHAO
+
+                                                 Abstract. We first propose a generalization of the image conjec-
+                                                 ture [Z3] for the commuting differential operators related with clas-
+                                                 sical orthogonal polynomials. We then show that the non-trivial
+                                                 case of this generalized image conjecture is equivalent to a variation
+                                                 of the Mathieu conjecture [Ma] from integrals of G-finite functions
+                                                 over reductive Lie groups G to integrals of polynomials over open
+                                                 subsets of Rn with any positive measures. Via this equivalence,
+                                                 the generalized image conjecture can also be viewed as a natural
+                                                 variation of Duistermaat and van der Kallen’s theorem [DK] on
+                                                 Laurent polynomials with no constant terms. To put all the con-
+                                                 jectures above in a common setting, we introduce what we call the
+                                                 Mathieu subspaces of associative algebras. We also discuss some
+                                                 examples of Mathieu subspaces from other sources and derive some
+                                                 general results on this newly-introduced notion.
+
+
+
+
+                                                                         1. Introduction
+                                          1.1. Background and Motivation. The main motivations and con-
+                                          tents of this paper are as follows.
+                                             First, in [Z3] a so-called image conjecture (IC) on images of com-
+                                          muting differential operators of polynomial algebras of order one with
+                                          constant leading coefficients has been proposed. It has also been shown
+                                          there that the well-known Jacobian conjecture proposed by O. H. Keller
+                                          [Ke] (See also [BCW] and [E]) and, more generally, the vanishing con-
+                                          jecture [Z1], [Z2] on differential operators (of any order) with constant
+                                          coefficients, are actually equivalent to some special cases of the IC.
+                                             Second, as pointed out in [Z2], all classical orthogonal polynomi-
+                                          als in one or more variables can be obtained from some commuting
+                                          differential operators of order one with constant leading coefficients.
+
+                                             Date: October 22, 2018.
+                                             2000 Mathematics Subject Classification. 33C45, 32W99, 14R15.
+                                             Key words and phrases. Orthogonal polynomials, commuting differential oper-
+                                          ators of order one with constant leading coefficients, the image conjecture, the
+                                          Mathieu conjecture, Mathieu subspaces, the polynomial moment problem.
+                                             The author has been partially supported by NSA Grant R1-07-0053.
+                                                                                   1
+2                            WENHUA ZHAO
+
+Unfortunately, most of these differential operators are not differential
+operators of polynomial algebras. Instead, they are differential op-
+erators of some localizations of polynomial algebras such as Laurent
+polynomial algebras, etc.
+   Note that, due to their applications in many different areas of mathe-
+matics such as in ODE, PDE, the eigenfunction problems and represen-
+tation theory, orthogonal polynomials have been under intense study
+by mathematicians in the last two centuries. For example, in [SHW]
+published in 1940, about 2000 published articles on orthogonal poly-
+nomials mostly in one variable had been included. Therefore it will
+also be interesting to consider the IC for the commuting differential
+operators related with classical orthogonal polynomials.
+   Unfortunately, the straightforward generalization of the IC from
+polynomial algebras to their localizations does not hold in general. In
+this paper, we propose another generalization of the IC (See Conjec-
+ture 3.1) for the commuting differential operators related with classical
+orthogonal polynomials.
+   We will also show that, under certain conditions, the new generaliza-
+tion is actually equivalent to a conjecture (See Conjecture 3.2) on inte-
+grals of polynomials over open subsets of B ⊂ Rn with any (positive)
+measures. The latter conjecture turns out to be a natural variation of
+the Mathieu conjecture [Ma] (See Conjecture 1.2) from G-finite func-
+tions on reductive Lie groups G to polynomial functions over the open
+subsets B ⊂ Rn above. It also can be viewed as a natural variation of
+Duistermaat and van der Kallen’s theorem [DK] (See Theorem 1.3) on
+Laurent polynomials with no constant terms.
+   To be more precise, let us first introduce the following notion which
+will provide a common ground for all the results and conjectures to be
+discussed in this paper.
+
+Definition 1.1. Let R be any commutative ring and A a commutative
+R-algebra. We say that a R-subspace M of A is a Mathieu subspace of
+A if the following property holds: for any a, b ∈ A with am ∈ M for
+any m ≥ 1, we have am b ∈ M when m >> 0, i.e. there exists N ≥ 1
+(depending on a and b) such that am b ∈ M for any m ≥ N.
+
+  Note that, any ideal of A is automatically a Mathieu subspace of
+A. But conversely, not all Mathieu subspaces are ideals. Actually,
+many Mathieu subspaces are not even closed under the product of the
+ambient algebra A. So the new notion can be viewed as a generalization
+of the notion of ideals. For more examples and general results on
+Mathieu subspaces, see Section 4.
+       THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                     3
+
+   The notion is named after Olivier Mathieu due to his following con-
+jecture proposed in [Ma], 1995.
+Conjecture 1.2. (The Mathieu Conjecture) Let G be a compact
+connected real Lie group with the Haar measure
+                                          R        σ. Let f a complex-
+valued G-finite function over G such that R G f m dσ = 0 for any m ≥ 1.
+Then, for any G-finite function g over G, G f m g dσ = 0 when m >> 0.
+   Note that, in terms of the newly introduced notion of Mathieu sub-
+spaces, the Mathieu conjecture just claims   R that the C-subspace of
+complex-valued G-finite functions f with G f dσ = 0 is a Mathieu
+subspace of the C-algebra A of complex-valued G-finite functions over
+G.
+   One of the motivations of the Mathieu conjecture is its connection
+with the Jacobian conjecture (See [BCW] and [E]). Actually, Mathieu
+also showed in [Ma] that his conjecture implies the Jacobian conjecture.
+   For later purposes, here we also point out that J. Duistermaat and
+W. van der Kallen [DK] in 1998 had proved the Mathieu conjecture for
+the case of tori, which now can be re-stated as follows.
+Theorem 1.3. (Duistermaat and van der Kallen) Let z = (z1 , z2 ,
+..., zn ) be n commutative free variables and M the subspace of the Lau-
+rent polynomial algebra C[z −1 , z] consisting of the Laurent polynomials
+with no constant terms. Then M is a Mathieu subspace of C[z −1 , z].
+   Another main motivation behind the new notion of Mathieu sub-
+spaces is the following so-called image conjecture (IC) proposed re-
+cently by the author in [Z3] on the images of commuting differential
+operators of polynomial algebras of order one with constant leading
+coefficients.
+   Let z = (z1 , z2 , ..., zn ) be n commutative free variables and C[z] the
+algebra of polynomials in z over C. For any 1 ≤ i ≤ n, set ∂i := ∂/∂zi .
+We say a differential operator ΦPof C[z] is of order one with constant
+leading coefficients if Φ = h(z)+ ni=1 ci ∂i for some h(z) ∈ C[z] and ci ∈
+C. We denote by D[z] the subspace of all differential operators of order
+one with constant leading coefficients. For any subsetP      C = {Φi | i ∈ I}
+of differential operators of C[z], we set Im C := i∈I (Φi C[z]) and call
+it the image of C. We say C is commuting if, for any i, j ∈ I, Φi and
+Φj commute with each other.
+   With the notation fixed above, the IC can be re-stated as follows.
+Conjecture 1.4. (The Image Conjecture) For any commuting sub-
+set C ⊂ D[z], Im C is a Mathieu subspace of C[z].
+  Note that the IC, the Mathieu conjecture and also Conjectures 3.1–
+3.2 mentioned at the beginning of this subsection are all problems on
+4                            WENHUA ZHAO
+
+whether or not certain subspaces are Mathieu subspaces. It is also
+the case for the Jacobian conjecture and, more generally, the vanish-
+ing conjecture [Z1], [Z2] on differential operators (of any order) with
+constant coefficients via their connections with the IC (See [Z3]). Fur-
+thermore, we can also include the well-known Dixmier conjecture [D]
+in the list since it has been shown, first by Y. Tsuchimoto [T] in 2005
+and later by A. Belov and M. Kontsevich [BK] and P. K. Adjamagbo
+and A. van den Essen [AE] in 2007, that the Dixmier conjecture is
+actually equivalent to the Jacobian conjecture. The implication of the
+Jacobian conjecture from the Dixmier conjecture was actually proved
+much earlier by V. Kac (unpublished but see [BCW]) in 1982.
+   Therefore, it is interesting and important to study Mathieu subspaces
+separately in a general and abstract setting. So we will also discuss
+more examples of Mathieu subspaces from other sources and derive
+some general results on this newly introduced notion (See Section 4).
+
+1.2. Arrangement. In Subsection 2.1, we first recall some classical
+orthogonal polynomials and their related commuting differential op-
+erators (See Examples 2.2 and 2.4). We also fix some notations and
+summarize some facts that will be needed for the rest of this paper.
+   In Subsection 2.2, we consider the straightforward generalization of
+the IC for the commuting differential operators related with some
+multi-variable Jacobi orthogonal polynomials but without the con-
+straints on the parameters required by the Jacobi polynomials. We
+will show in Proposition 2.6 that the straightforward generalization of
+the IC does not hold for these differential operators. But, if we gener-
+alize the IC in a different way, we will have a positive answer for these
+differential operators under the constraints on the parameters required
+by the Jacobi polynomials (See Corollary 2.10).
+   Another purpose of this subsection is to explain in a concrete setting
+the main ideas behind the generalization of the IC that will be formu-
+lated and discussed in Section 3. Some of the results of this subsection
+will also be needed later in Subsection 3.2.
+   In Subsection 3.1, we first formulate a generalization (See Conjecture
+3.1) of the IC for the differential operators related with orthogonal
+polynomials, and also a conjecture (See Conjecture 3.2) on integrals
+of polynomials over open subsets B ⊂ Rn with any positive measures.
+We show in Proposition 3.3 that the non-trivial case of Conjecture
+3.1 is actually equivalent to some special cases of Conjecture 3.2. We
+also point out that Conjecture 3.2 in some sense can be viewed as a
+natural variation of the Mathieu conjecture (See Conjecture 1.2) and
+Duistermaat and van der Kallen’s theorem (See Theorem 1.3).
+       THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                    5
+
+   In Subsection 3.2, we prove some cases of Conjectures 3.1 and 3.2.
+We also discuss a connection of Conjecture 3.2 with the polynomial mo-
+ment problem which was first proposed by M. Briskin, J.-P. Francoise
+and Y. Yomdin in the series paper [BFY1]-[BFY5] and recently was
+solved by F. Pakovich and M. Muzychuk [PM].
+   In Section 4, we discuss Mathieu subspaces in the most general set-
+ting. Some examples of Mathieu subspaces from other sources will be
+given and some general results on this newly introduced notion will
+also be derived.
+
+   Acknowledgment The author greatly thanks Harm Derksen, Jean-
+Philippe Furter, Jeffrey C. Lagarias, Leonid Makar-Limanov, Lucy
+Moser-Jauslin for communications and suggestions on a connection of
+Conjecture 3.2 with the polynomial moment problem. The author is
+also very grateful to Mitya Boyarchenko for sending the author a sketch
+of his brilliant but unpublished proof of Theorem 3.13 and to Arno van
+den Essen for pointing out some errors and misprints of an earlier ver-
+sion of this paper. At last but certainly not the least, great thanks also
+go to Fedor Pakovich for communications on his joint work [PM] with
+Mikhail Muzychuk.
+
+2. Differential Operators Related with Classical Orthogonal
+                          Polynomials
+   In this section, we first recall in Subsection 2.1 some classical orthog-
+onal polynomials in one or more variables and their related differential
+operators. We also summarize in Lemma 2.5 some facts that will be
+needed in later sections.
+   The classical reference for one-variable orthogonal polynomials is [Sz]
+(see also [AS], [C], [Si]). For multi-variable orthogonal polynomials, see
+[DX], [Ko] and references therein. But here we will essentially follow the
+presentations given in [Z2] in terms of differential operators of certain
+localizations of polynomial algebras, and emphasize that the related
+differential operators are all commuting differential operators of order
+one with constant leading coefficients. The presentation in [Z2] for
+multi-variable orthogonal polynomials will also be simplified here.
+   In Subsection 2.2, we consider the straightforward generalization of
+the image conjecture (IC) for some commuting differential operators
+of the Laurent polynomials. Up to changes of variables, these differen-
+tial operators are related with some multi-variable Jacobi orthogonal
+polynomials (See Example 2.4). We show in Proposition 2.6 that the
+IC does not hold for these differential operators. But it does hold for
+6                                 WENHUA ZHAO
+
+the same differential operators if we generalize the IC in a different
+way (See Corollary 2.10).
+
+2.1. Differential Operators Related with Classical Orthogo-
+nal Polynomials. First, let us recall the definition of classical or-
+thogonal polynomials. In order to be consistent with the traditional
+notations of orthogonal polynomials, in this subsection we will use
+x = (x1 , x2 , . . . , xn ) instead of z = (z1 , z2 , . . . , zn ) to denote free com-
+mutative variables.
+Definition 2.1. Let B be a non-empty open subset of Rn and w(x) a
+          R function defined over B such that w(x)
+real valued                                       R ≥ 0 for any x ∈ B
+and 0 < B w(x)dx < ∞. Assume further that B f (x)w(x)dx is finite
+for any f (x) ∈ C[x]. A sequence of polynomials {uα (x) | α ∈ Nn } is
+said to be orthogonal over B if
+                         P
+    (a) deg uα = |α| := ni=1 ki for any α = (k1 , k2 , ..., kn ) ∈ Nn .
+    (b) the sequence {uα (x) | α ∈ Nn } forms an orthogonal basis of C[x]
+        with respect to the Hermitian form defined by
+                                    Z
+(2.1)                     (f, g) :=   f ḡw(x) dx
+                                         B
+
+         for any f, g ∈ C[x], where ḡ denotes the complex conjugate of
+         the polynomial g ∈ C[x].
+   The function w(x) is called the weight function. For all classical
+orthogonal polynomials, w(x) is smooth over B but might have some
+singular points over the boundary of B (See Examples 2.2 and 2.4
+below). When the open set B ⊂ Rn and w(x) are clear in the context,
+we simply call the polynomials uα (x) (α ∈ Nn ) in the definition above
+orthogonal polynomials.
+            R             If the orthogonal polynomials uα (x) (α ∈ Nn )
+also satisfy B |uα| w(x)dx = 1 for any α ∈ Nn , we call uα (x) (α ∈ Nn )
+                    2
+
+orthonormal polynomials.
+   Note that, if uα (x) (α ∈ Nn ) are orthogonal polynomials, say, as in
+Definition 2.1, then, for any cα ∈ C× (α ∈ Nn ), cα uα (α ∈ Nn ) are also
+orthogonal polynomials over B with the same weight function w(x).
+   An obvious way to construct orthogonal polynomials is to apply the
+Gram-Schmidt process. But, surprisingly, most of classical orthogonal
+polynomials can also be obtained by the following so-called Rodrigues’
+formulas which, in terms of the notation as in Definition 2.1, can be
+stated as follows.
+
+  Rodrigues’ Formula: There exist some non-zero constants cα ∈ R
+(α ∈ Nn ) and an n-tuple g(x) = (g1 (x), g2 (x), ..., gn (x)) of polynomials
+        THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                     7
+
+in x such that
+                                        ∂ |α|
+(2.2)              uα (x) = cα w(x)−1         (w(x)g α (x)).
+                                        dxα
+
+   Note that, not all orthogonal polynomials defined in Definition 2.1
+can be obtained by Rodrigues’ formulas. For example, the weight func-
+tion w(x) of some orthogonal polynomials may not even be differen-
+tiable.
+   Now, for any 1 ≤ i ≤ n, let
+                              
+                      −1    d            d           dw(x)
+(2.3)      Λi := w(x)            w(x) =     + w(x)−1       .
+                           dxi          dxi           dxi
+and set Λ := (Λ1 , Λ2, ..., Λn ). Then, by Rodrigues’ formula above, we
+see that the orthogonal polynomials {uα (x) | α ∈ Nn } have the form
+(2.4)                      uα (x) = cα Λα (g α(x))
+for any α ∈ Nn .
+   Note also that the differential operator Λi in Eq. (2.3) is a differential
+operator of order one with constant leading coefficients. Furthermore,
+in the multi-variable case, the differential operators Λi (1 ≤ i ≤ n)
+commute with one another since they are the conjugations of the com-
+muting differential operators ∂i (1 ≤ i ≤ n) by the multiplication
+operator by w −1 (z).
+   Let us look at the following classical orthogonal polynomials.
+Example 2.2.
+    (1) Hermite Polynomials:
+                                                        2
+         (a) B = R and the weight function w(x) = e−x .
+         (b) the differential operator Λ and the polynomial g(x):
+                          (
+                                      d
+                            Λ      = dx − 2x,
+(2.5)
+                            g(x) = 1,
+          (c) the Hermite polynomials in terms of Λ and g(x):
+                       Hm (x) = (−1)m Λm (g m (x)).
+    (2) Laguerre Polynomials:
+          (a) B = R+ and w(x) = xα e−x (α > −1).
+          (b) the differential operator Λ and the polynomial g(x):
+                       (
+                                   d
+                         Λ      = dx + (αx−1 − 1),
+(2.6)
+                         g(x) = x,
+8                             WENHUA ZHAO
+
+          (c) the Laguerre polynomials in terms of Λ and g(x):
+                                   1 m m
+                         Lm (x) =     Λ (g (x)).
+                                   m!
+    (3) Jacobi Polynomials:
+          (a) B = (−1, 1) and w(x) = (1 − x)α (1 + x)β with α, β > −1.
+          (b) the differential operator Λ and the polynomial g(x):
+               (
+                            d
+                 Λ       = dx − α(1 − x)−1 + β(1 + x)−1 ,
+(2.7)
+                 g(x) = 1 − x2 .
+          (c) the Jacobi polynomials in terms of Λ and g(x):
+                              (−1)m m m
+(2.8)                 Pmα,β (x) =      Λ g (x).
+                               2m m!
+    (4) Classical Orthogonal Polynomials over Unit Balls:
+          (a) B = Bn = {x ∈ Rn | ||x|| < 1} and the weight function
+                        wµ (x) = (1 − ||x||2)µ−1/2 ,
+        where || · || denotes the usual Euclidean normal of Rn and µ >
+        1/2.
+          (b) the differential operators Λ and the polynomials g(x):
+                         (
+                           Λi =       ∂
+                                     ∂xi
+                                         − (2µ−1)x
+                                            1−||x||2
+                                                    i
+                                                      ,
+                           gi (x) = 1 − ||x||2 .
+        for any 1 ≤ i ≤ n.
+          (c) the classical orthogonal polynomials {Uα | α ∈ Nn } over
+        the unite ball Bn in terms of Λ and g(x): ,
+                              (−1)|α| (2µ)|α|
+                Uα (x) =                         Λα (g α (x)),
+                           2|α| |α|!(µ + 1/2)|α|
+        where, for any c ∈ R and k ∈ N, (c)k = c(c + 1) · · · (c + k − 1).
+    (5) Classical Orthogonal Polynomials
+                                  Pn          over Simplices:
+                     n         n
+          (a) B = T = {x ∈ R | i=1 xi < 1; x1 , ..., xn > 0} and the
+        weight function
+(2.9)               wκ (x) = xκ1 1 · · · xκnn (1 − |x|1 )κn+1 ,
+                                                             P
+        where κi > −1 (1 ≤ i ≤ n + 1) and |x|1 = ni=1 xi .
+          (b) the differential operators Λ and the polynomials g(x):
+                       (
+                                                     κn+1
+                        Λi       = ∂x∂ i + xκii − 1−|x|  1
+                                                           ,
+                        gi (x) = xi (1 − |x|1 )
+        for any 1 ≤ i ≤ n.
+         THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                           9
+
+           (c) the classical orthogonal polynomials {Uα | α ∈ Nn } over
+         the simplex T n in terms of Λ and g(x):
+(2.10)                        Uα (x) = Λα (g α(x)).
+Remark 2.3. (a) A very important special family of Jacobi polynomials
+are the Gegenbauer polynomials which are obtained by setting α = β =
+λ − 1/2 for some λ > −1/2. The Gegenbauer polynomials are also
+called the ultraspherical polynomials in the literature.
+   (b) For the special cases with λ = 0, 1, 1/2, the Gegenbauer Polyno-
+mials are called the Chebyshev polynomial of the first kind, the second
+kind and the Legendre polynomials, respectively.
+   (c) When n = 2, up to some non-zero constants the orthogonal poly-
+nomials Uα (x) (α ∈ N2 ) in Eq. (2.10) are also called Appell polynomi-
+als.
+  Note that, one important way to construct multi-variable orthogonal
+polynomials is to take cartesian products of orthogonal polynomials in
+one variable.
+  More precisely, let x = (x1 , x2 , ..., xn ) and {ui,m(xi ) | m ≥ 0} (1 ≤
+i ≤ n) be orthogonal polynomials over a subset Bi ⊂ R with weight
+function wi (xi ) over Bi . Let
+(2.11)                  B = B1 × B2 × · · · × Bn ,
+(2.12)              w(x) = w1 (x1 )w2 (x2 ) · · · wn (xn ),
+(2.13)             uα (x) = u1,k1 (x1 )u2,k2 (x2 ) · · · un,kn (xn )
+for any α = (k1 , k2 , ..., kn ) ∈ Nn .
+    Then it is easy to see that {uα(x) | α ∈ N} are orthogonal polynomi-
+als over B ⊂ Rn with respect to the weight function w(x).
+    Furthermore, if, for any 1 ≤ i ≤ n and m ≥ 0, the orthogonal
+polynomial ui,m (xi ) = ci,m Λm         m
+                                    i (gi (xi )) for some nonzero ci,m ∈ R,
+gi (x) ∈ C[xi ] and a differential operator Λi of a localization of C[xi ].
+Set Λ = (Λ1 , Λ2 , ..., Λn ) and g(x) = (g1 (x1 ), g2 (x2 ), ..., gn (xn )). Then, it
+is easy to see that Λ is a commuting subset of differential operators of
+a localization of C[x], and the orthogonal polynomials uα (x) (α ∈ Nn )
+over B are given by
+(2.14)                       uα (x) = cα Λα (g α (x)),
+              Qn                                                  n
+where cα =       i=1 ci,αi for any α = (α1 , α2 , ..., αn ) ∈ N       .
+
+  For later purposes, let us consider the multi-variable Jacobi orthog-
+onal polynomials which, by Remark 2.3, also cover the multi-variable
+Gegenbauer, Chebyshev and Legendre orthogonal polynomials.
+10                             WENHUA ZHAO
+
+Example 2.4. Let B = (−1, 1)×n ⊂ Rn and α, β ∈ Rn with all the
+components αi , βi > −1 (1 ≤ i ≤ n). For any 1 ≤ i ≤ n, set
+                          d
+(2.15)           Λi : =      − αi (1 − xi )−1 + βi (1 + xi )−1 ,
+                         dxi
+(2.16)         gi (x) := 1 − x2i .
+Furthermore, set
+                             n
+                             Y
+(2.17)              w(x) : =   (1 − xi )αi (1 + xi )βi ,
+                               i=1
+(2.18)               Λα,β : = (Λ1 , Λ2 , ..., Λn ),
+(2.19)               g(x) : = (g1 (x), g2 (x), ..., gn (x)).
+  For any 1 ≤ i ≤ n and m ≥ 0, let Pmαi ,βi (x) be the mth one-variable
+Jacobi polynomial in xi (See Example 2.2, (3)) with α = αi and β = βi .
+For any m = (m1 , m2 , ..., mn ) ∈ Nn , set
+                                        n
+                                        Y
+                           α,β
+(2.20)                    Pm   (x) :=         Pmαii,βi (xi ).
+                                        i=1
+                                        >−1 ×n              α,β
+   Then, for any fixed α, β ∈ (R ) , the sequence {Pm           (x) | m ∈
+  n
+N } forms a sequence of orthogonal polynomials over B with the weight
+function given by Eq. (2.17). From Eq. (2.8), it is easy to see that the
+              α,β
+relation of {Pm   (x) | m ∈ Nn } with the commuting differential oper-
+ators Λ in Eq. (2.18) and the polynomial g(x) in Eq. (2.19) is given
+by
+                       α,β       (−1)|m| m m
+(2.21)                Pm   (x) =         Λ g (x).
+                                  2|m| m! α,β
+  Finally, let us summarize the relations of orthogonal polynomials
+with commuting differential operators of order one with constant lead-
+ing coefficients in the following lemma.
+Lemma 2.5. (a) Up to some nonzero multiplicative scalars, all classi-
+cal orthogonal polynomials {uα (x) | α ∈ Nn } above including those ob-
+tained by Cartesian products of classical orthogonal polynomials have
+the form in Eq. (2.4) for some g(x) = (g1 (x1 ), g2 (x2 ), ..., gn (xn )) ∈
+C[x]n and differential operators Λ = (Λ1 , Λ2 , ..., Λn ) of some localiza-
+tions B of C[x].
+   (b) The set Λ is a commuting subset of differential operators of B of
+order one with constant leading coefficients.
+   (c) For any nonzero
+                P         α ∈ Nn , the orthogonal polynomials uα (x) ∈
+Im ′ Λ := C[x] ∩ ni=1 (Λi C[x]).
+       THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                     11
+
+  Note that (a) and (b) follow immediately from the discussion in this
+subsection. (c) follows from the fact that Λα (gi (x)g α ) for any 1 ≤ i ≤ n
+and α ∈ Nn , which can also be easily checked directly.
+
+2.2. The Image Conjecture for the Differential Operators Re-
+lated with the Multi-Variable Jacobi Orthogonal Polynomials.
+Considering the important roles of orthogonal polynomials played in so
+many different areas, it will be interesting to see if the image conjec-
+ture (IC), Conjecture 1.4, also holds for the commuting differential
+operators related with orthogonal polynomials.
+   In this subsection, we consider the straightforward generalization
+of the IC for the following family of commuting differential opera-
+tors of Laurent polynomial algebras in a slightly more general setting,
+namely, with the base field C replaced by integral domains over C. As
+we will see that the straightforward generalization of the IC is false
+for these differential operators (See Propositions 2.6 and 2.9). But an-
+other generalization of the IC for these differential operators under
+the constraints from the multi-variable Jacobi orthogonal polynomials
+actually holds (See Corollary 2.10).
+   Let A be any integral domain over C and A[z −1 , z] the algebra of Lau-
+rent polynomials with coefficients in A. For any λ = (λ1 , λ2 , ..., λn ) ∈
+Cn , we set Φλi := ∂i + λi zi−1 (1 ≤ i ≤ n) and Φλ := (Φλ1 , Φλ2 , ..., Φλn ).
+We will also view Φλ as a commuting subset (instead of just an n-tuple)
+of differential operators of A[z −1 , z] of order one with constant leading
+coefficients.
+   Note that, the differential operators Φλ are essentially the differential
+operators related with the multi-variable Jacobi orthogonal polynomi-
+      α,β
+als Pm    (x) (m ∈ Nn ) in Eq. (2.20) with α = 0 or β = 0. For example,
+by setting α = 0 and β = λ, and changing the variables xi → zi − 1
+(1 ≤ i ≤ n), from Eqs. (2.15) and (2.18) we see that the differen-
+tial operators Λα,β related with the Jacobi polynomials will coincide
+with the differential operators Φλ . Similarly, this is also the case when
+β = 0 if we set α = λ and apply the changing of variables xi → zi + 1
+(1 ≤ i ≤ n).
+   But we emphasize that, unlike for the parameters α and β of the
+Jacobi polynomials, here we do not require λi > −1 (1 ≤ i ≤ n) nor
+even λ ∈ Rn unless stated otherwise.
+                           n
+   Now we fix any Pλn ∈ C and−1the differential operators Φλ as above,
+and set Im Φλ := i=1 (Φλi A[z , z]). We also fix the following notation
+that will be used throughout the rest of this paper.
+   For any γ ∈ Zn and g(z) ∈ A[z −1 , z], we denote by [z γ ]g(z) the
+coefficient of the monomial z γ in g(z). For convenience, we also allow
+12                             WENHUA ZHAO
+
+γ in the notation above to be any element of Cn , i.e. we set [z γ ]g(z) = 0
+for any g(z) ∈ A[z −1 , z] and γ ∈ Cn \Zn . In the case that [z γ ]g(z) = 0,
+we also say that g(z) has no z γ term.
+   With all the notations fixed above, we have the following proposition.
+Proposition 2.6. For any λ ∈ Cn , denote by the abusing notation
+−λ − 1 the n-tuple −λ − (1, 1, ..., 1). Then, we have
+  (a) Im Φλ is the A-subspace of A[z −1 , z] consisting of the Laurent
+polynomials g(z) ∈ A[z −1 , z] with [z −λ−1 ]g(z) = 0. In particular,
+Im Φλ = A[z −1 , z] if λ 6∈ Zn .
+  (b) Im Φλ is a Mathieu subspace of A[z −1 , z] iff λ 6∈ Zn or λ =
+(−1, −1, ..., −1).
+  Proof: We first prove the proposition for the case n = 1, i.e. for the
+one-variable case.
+  For any g(z) ∈ A[z −1 , z], consider the ordinary differential equation
+with the unknown function f (z) ∈ A[z −1 , z]:
+(2.22)                    Φλ f = f ′ + λz −1 f = g.
+   The equation above can be solved by the following standard trick in
+ODE. First, we view the equation as a differential equation for elements
+of A[z ±λ , z ±1 ], and set f˜(z) := z λ f (z) ∈ A[z ±λ , z ±1 ]. Then f (z) =
+z −λ f˜(z). Plug this expression of f (z) in Eq. (2.22), it is easy to check
+that f˜(z) satisfies the following equation:
+                              z −λ f˜′ = g.
+                              R
+  Therefore, we have f˜(z) = z λ g(z) dz and
+                                     Z
+                                 −λ
+(2.23)                 f (z) = z        z λ g(z) dz.
+
+  From the arguments, we see that any solution f ∈ A[z −1 , z] of
+Eq. (2.22) must be given by Eq. (2.23) up to an z −λ term. But, con-
+versely, the RHS of Eq. (2.23) does not necessarily produce an ele-
+ment of A[z −1 , z] unless z λ g(z) has no z −1 term, i.e. the residue
+Res z λ g(z) = 0.
+  Therefore, the differential equation Eq. (2.22) has a Laurent polyno-
+mial solution f (z) ∈ A[z −1 , z] iff Res z λ g(z) = 0 iff [z −λ−1 ]g(z) = 0.
+Hence, we have (a) of the proposition for the case n = 1.
+  To show (b) for the case n = 1, let us look at all the values of λ ∈ C
+such that Im Φλ is a Mathieu subspace of A[z −1 , z].
+  First, if λ 6∈ Z, by (a) Im Φλ = A[z −1 , z] which is obviously a Mathieu
+subspace of A[z −1 , z].
+         THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                 13
+
+  Consider the case λ ∈ Z. If −λ − 1 6= 0, i.e. λ 6= −1. Then, by state-
+ment (a) for the case n = 1, we have, 1 ∈ Im Φλ and Im Φλ 6= A[z −1 , z].
+By the general property of Mathieu subspaces given in Lemma 4.5 in
+Section 4, Im Φλ is not a Mathieu subspace of A[z −1 , z].
+  A more convincing counter-example for this case can be constructed
+as follows. Set
+(2.24)              v(z) : = z −λ−1
+                             (
+                                1 + z −λ        if λ < −1;
+(2.25)              u(z) : =
+                                1 + z −λ−2      if λ > −1.
+ Then, it is easy to check that, for any m ≥ 1, we have [z −λ−1 ]um = 0
+and [z −λ−1 ](um v) = z −λ−1 . By statement (a) for the case n = 1, we
+have that, for any m ≥ 1, um ∈ Im Φλ but um v 6∈ Im Φλ .
+   Next, consider the case λ = −1. By (a), we know that Im Φλ=−1
+is the A-subspace of A[z −1 , z] consisting of Laurent polynomials with
+no constant terms. In the case that A = C, (b) follows directly from
+Duistermaat and van der Kallen’s theorem, Theorem 1.3.
+   In the case that A 6= C, (b) also follows from Theorem 1.3 via Lef-
+schetz’s principle since, whenever we fix a(z), b(z) ∈ A[z −1 , z] with
+am (z) has no constant term for any m ≥ 1, to show that am b has no
+constant term when m >> 0, we may replace A by the field K gener-
+ated by the (finitely many) coefficients of a(z) and b(z) over Q, which
+can be embedded in C as a subfield.
+   Therefore, we have proved the proposition for the case n = 1. Now
+we assume n ≥ 2.
+   For convenience, throughout the rest of the proof, we denote by U the
+subalgebra of A[z −1 , z] of Laurent polynomials in zi (2 ≤ i ≤ n) with
+coefficients in A. Note that A[z −1 , z] may be viewed as the Laurent
+polynomial algebra in z1 over U, i.e. we have A[z −1 , z] = U[z1−1 , z1 ].
+   First, assume that λ 6∈ Zn . Then there exists 1 ≤ i ≤ n such
+that λi 6∈ Z. Without losing any generality, we assume λ1 6∈ Z. By
+statement (a) for the one-variable case with A replaced by U and λ by
+λ1 , we have
+                Φλ1 (U[z1−1 , z1 ]) = U[z1−1 , z1 ] = A[z −1 , z].
+  Since Φλ1 (U[z1−1 , z1 ]) = Φλ1 (A[z −1 , z]) ⊂ Im Φλ , from the equation
+above, we have Im Φλ = A[z −1 , z].
+  Now assume λ ∈ Zn . We first show that z β ∈ Im Φλ for any β ∈ Zn
+with β 6= −λ − 1.
+  Pick up any β 6= −λ−1 ∈ Zn , there exists 1 ≤ i ≤ n such that the ith
+component βi of β is different from −λi − 1. We assume β1 6= −λ1 − 1
+14                                WENHUA ZHAO
+
+(the proof for other cases is similar). Then, by statement (a) for the
+one-variable case with A replaced by U and λ by λ1 , we have
+ z β = (z2β2 z3β3 · · · znβn )z1β1 ∈ Φλ1 (U[z1−1 , z1 ]) = Φλ1 (A[z −1 , z]) ⊂ Im Φλ .
+   Consequently, we see that any g(z) ∈ A[z −1 , z] with [z −λ−1 ]g(z) = 0
+lies in Im Φλ . Conversely, for any g(z) ∈ Im Φλ , we write g(z) as
+                                        n
+                                        X
+(2.26)                         g(z) =         Φλi fi (z)
+                                        i=1
+
+for some fi (z) ∈ A[z −1 , z] (1 ≤ i ≤ n).
+   By statement (a) for the one-variable case with A replaced by U
+and λ by λ1 , we see that Φλ1 f1 (z) in Eq. (2.26) has no z γ term for any
+γ ∈ Zn with the first component γ1 = −λ1 − 1. Hence, for the similar
+reason, for any 2 ≤ i ≤ n, Φλi fi (z) in Eq. (2.26) can not have the z γ
+term for any γ ∈ Zn with the ith component γi = −λi − 1. Therefore,
+by Eq. (2.26) we see that g(z) can not have any z −λ−1 term.
+   Combining the results in the last two paragraphs, we have statement
+(a) of the proposition.
+   Next we show statement (b). First, if λ 6∈ Zn , by (a) we have Im Φλ =
+A[z −1 , z] which is obviously a Mathieu subspace of A[z −1 , z].
+   Assume that λ ∈ Zn but λ 6= (−1, −1, ..., −1). Since −λ − 1 6= 0 ∈
+N , by statement (a), we have, 1 ∈ Im Φλ and Im Φλ 6= A[z −1 , z]. By
+  n
+
+Lemma 4.5 in Section 4, Im Φλ is not a Mathieu subspace of A[z −1 , z].
+   Finally, consider the case λ = (−1, −1, ..., −1). Similarly as for the
+one variable case, by Duistermaat and van der Kallen’s theorem, The-
+orem 1.3, and Lefschetz’s principle, it is easy to see that Im Φλ is a
+Mathieu subspace of A[z −1 , z] in this case. ✷
+
+Remark 2.7. From Proposition 2.6, we see that (the straightforward
+generalization of) the IC for the Laurent polynomial algebras does not
+always hold.
+  But, on the other hand, it is still interesting to see, for which com-
+muting differential operators of C[z −1 , z] or any localization of C[z],
+the IC does hold. For example, for the differential operators Φλ with
+λ = (−1, −1, ..., −1), the IC is actually equivalent to Duistermaat
+and van der Kallen’s theorem, Theorem 1.3. Even more mysteriously,
+among all the cases that Im Φλ 6= A[z −1 , z], this is the only case that
+the IC holds.
+   Next let us consider the IC for the polynomial algebra A[z] (instead
+of A[z −1 , z]) and the differential operators Φλ (even though A[z] is not
+         THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                         15
+
+closed under the action of Φλ ). But, first, we need prove the following
+lemma.
+
+Lemma 2.8. Let A, Φλ (λ ∈ Cn ) and Im Φλ as P     in Proposition 2.6.
+Then, for any g(z) ∈ A[z], g(z) ∈ Im Φλ iff g(z) ∈ ni=1 (Φλi A[z]).
+
+   Proof: Note that the (⇐) part of the lemma is trivial. We use
+induction on n ≥ 1 to show the other part.
+   First, assume n = 1 and g(z) ∈ Im Φλ . Then, by Proposition 2.6,
+(a), we have [z −λ−1 ]g(z) = 0. By writing g(z) as a linear combination
+of monomials z k (k ∈ N) over A, it is easy to check that Eq. (2.23) has
+a polynomial solution f (z) ∈ A[z]. Since Φλ f (z) = g(z) as shown in
+the proof of Proposition 2.6, the lemma holds in this case.
+   Next assume the lemma holds for the n − 1 case and consider the
+n-variable case.
+   Note first that, for any λ ∈ Cn and g(z) ∈ A[z], there exist u(z) ∈
+A[z2 , z3 , ..., zn ] and v(z) ∈ A[z] such that [z γ ]v(z) = 0 for any γ ∈ Nn
+with the first component γ1 = −λ1 − 1 and
+
+(2.27)                    g(z) = z1−λ1 −1 u(z) + v(z).
+
+     Now further assume g(z) ∈ Im Φλ . Then, by Proposition 2.6, (a),
+we have [z −λ−1 ]g(z) = 0. We P      show below that both terms on the right
+hand side of Eq. (2.27) lie in ni=1 (Φλi A[z]).
+     First, if −λ1 − 1 6∈ N, we have u(z) = 0. Otherwise, set A′ := A[z1 ]
+and z ′′ := (z2 , ..., zn ). We view u(z) and also z1−λ1 −1 u(z) as polyno-
+mials in z ′′ over the integral domain A′ . Note that, the coefficient of
+the monomial z2−λ2 −1 · · · zn−λn −1 in u(z) ∈ A′ [z ′′ ] is same as [z −λ−1 ]g(z)
+which is equal to zero. Hence the coefficient of z2−λ2 −1 · · · zn−λn −1 in
+z1−λ1 −1 u(z) ∈ A′ [z ′′ ] is also equal to zero.
+     Apply Proposition 2.6, (a) to z1−λP     1 −1
+                                                   u(z) ∈ A′ [z ′′ ] with A replaced
+                               −λ −1             n
+by A′ , we know that z1 1 u(z) ∈ i=2 (Φλi A′ [z2± , ..., zn± ]). Then, by
+applying the induction assumption P         to z1−λ1 −1 u(z) withPn A replaced by
+   ′             −λ1 −1              n         ′
+A , we have, z1           u(z) ∈ i=2 (Φλi A [z2 , ..., zn ]) = i=2 (Φλi A[z]).
+                     ′′
+     Second, set A := A[z2 , ..., zn ]. Then, viewing v(z) as a polyno-
+mial in z1 over the integral domain A′′ , we have [z1−λ1 −1 ]v(z) = 0. By
+Proposition 2.6, (a) with A replaced by A′′ , v(z) ∈ Φλ1 (A′′ [z1−1 , z1 ]).
+Applying the lemma for the case n = 1 to v(z) with A replaced by A′′ ,
+we havePv(z) ∈ Φλ1 (A′′ [z1 ]) = Φλ1 (A[z]). Then, by Eq. (2.27), we have
+g(z) ∈ ni=1 (Φλi A[z]), and the lemma follows. ✷
+16                            WENHUA ZHAO
+
+Proposition 2.9. Let A and Φλ (λ ∈ Cn ) as in Proposition 2.6. Set
+                                       n
+                                       X
+                         ′
+(2.28)               Im Φλ := A[z] ∩          (Φλi A[z]).
+                                        i=1
+
+Then, (a) Im ′ Φλ = A[z] iff λ 6∈ (Z<0 )n , where Z<0 denotes the set of
+all negative integers.
+   (b) Im ′ Φλ is a Mathieu subspace of A[z] iff λ 6∈ (Z<0 )n or λ =
+(−1, −1, ..., −1).
+  Proof: Note first that, by Eq. (2.28) and Lemma 2.8, it is easy to
+see that
+(2.29)                   Im ′ Φλ = A[z] ∩ Im Φλ .
+   If λ 6∈ Zn , by Proposition 2.6, (a) and the equation above, we have
+that Im ′ Φλ = A[z].
+   Assume λ ∈ Zn and set α := −λ−(1, 1, ..., 1). By Proposition 2.6, (a)
+and Eq. (2.29), we know that Im ′ Φλ is the A-subspace of polynomials
+with no z α term.
+   If λ 6∈ (Z<0 )n , i.e. λi ≥ 0 for some 1 ≤ i ≤ n, then we have α 6∈ Nn
+and hence Im ′ Φλ = A[z].
+   Now assume λ ∈ (Z<0 )n but λ 6= (−1, −1, ..., −1). Then there exists
+1 ≤ j ≤ n such that λj ≤ −2. Note that, in this case α ∈ Nn but
+α 6= 0. Consequently, we have, 1 ∈ Im ′ Φλ and Im ′ Φλ 6= A[z]. Then,
+by Lemma 4.5 in Section 4, Im ′ Φλ is not a Mathieu subspace of A[z].
+   Finally, if λ = (−1, −1, ..., −1), then α = 0 and Im ′ Φλ is the ideal of
+all polynomials with no constant terms. So in this case Im ′ Φλ 6= A[z]
+but is the ideal of A[z] generated by zi (1 ≤ i ≤ n). Hence it is a
+Mathieu subspace of A[z].
+   So we have exhausted all possible choices of λ ∈ Cn . Combining
+all the results above, it is easy to see that both (a) and (b) of the
+proposition hold. ✷
+
+   As pointed out at the beginning of this subsection, up to some
+changes of variables, the differential operators Φλ are same as the dif-
+ferential operators Λα,β in Eq. (2.18) related with the multi-variable
+                                  α,β
+Jacobi orthogonal polynomials Pm      (m ∈ Nn ) in Eq. (2.20) with α = λ
+and β = 0 or α = 0 and β = λ.
+   Note that, the constraints on the parameters α and β of the Jacobi
+polynomials are α, β ∈ Rn and the components αi , βi > −1 (1 ≤ i ≤ n).
+Now, if we put the same constraints on λ, then, by Proposition 2.9, it
+is easy to see that we have the following corollary.
+        THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                     17
+
+Corollary 2.10. Let A and Φλ as in Proposition 2.6. Assume further
+that λ ∈ Rn and λi > −1 for any 1 ≤ i ≤ n. Then, Im ′ Φλ = A[z] and
+hence is a Mathieu subspace of A[z].
+               3. Generalizations of the Image Conjecture
+   Motivated by the discussions in Subsection 2.2, we first formulate in
+Subsection 3.1 a generalization (See Conjecture 3.1) of the IC for the
+commuting differential operators related with orthogonal polynomials.
+We also show that, beside a trivial case, Conjecture 3.1 is actually
+equivalent to a special case of another conjecture, Conjecture 3.2, on
+integrals of polynomials over open subsets of Rn with any positive mea-
+sures. As we will see that Conjecture 3.2 can also be viewed as a natural
+variation of the Mathieu conjecture, Conjecture 1.2, and Duistermaat
+and van der Kallen’s theorem, Theorem 1.3.
+   In Subsection 3.2, we will prove some cases of Conjectures 3.1 and
+3.2. We will also discuss a connection of Conjecture 3.2 with the so-
+called polynomial moment problem.
+3.1. The Generalized Image Conjecture. First, we propose the
+following generalization of the IC for the commuting differential oper-
+ators related with classical orthogonal polynomials.
+Conjecture 3.1. Let B ⊂ Rn , w(z) and {uα | α ∈ Nn } as in Defi-
+nition 2.1 with x replaced by z. Assume further that the orthogonal
+polynomials {uα | α ∈ Nn } can be obtained via Eq. (2.4) for some com-
+muting differential operators Λ = (Λ1 , Λ2 , ..., Λn ) of a localization of the
+polynomial algebra C[z]. Set
+                                    \X  n
+(3.1)                Im ′ Λ := C[z]         (Λi C[z]).
+                                          i=1
+           ′
+Then, Im Λ is a Mathieu subspace of C[z].
+   Note first that, when Λ are differential operators of C[z] (instead of
+a localization of C[z]), we have, Im ′ Λ = Im Λ. Therefore, the conjec-
+ture above can be viewed as a generalization of the image conjecture,
+Conjecture 1.4, to the differential operators related with classical or-
+thogonal polynomials.
+   Note also that, by Lemma 2.5, (c), Im ′ Λ has co-dimension in C[z]
+zero or one depending on whether u0(z) lies in Im ′ Λ or not. Since u0 (z)
+is a nonzero constant, we have Im ′ Λ = C[z] iff 1 ∈ Im′ Λ.
+   Therefore, if 1 ∈ Im′ Λ, we have Im ′ Λ = C[z], and hence Conjecture
+3.1 holds trivially in this case. If 1 6∈ Im ′ Λ, we have
+(3.2)                  Im′ Λ = SpanC {uα(z) | α 6= 0}.
+18                            WENHUA ZHAO
+
+  In this case, Conjecture 3.1 turns out to be equivalent to a special
+case of the following conjecture.
+                                                               n
+Conjecture 3.2. Let B be any    R non-empty open subset of R and σ
+any positive measure such that B g(z) dσ is finite for any g(z) ∈ C[z].
+RLet MB (σ) be the subspace of all polynomials f (x) ∈ C[z] such that
+  B
+    f (x) dσ = 0. Then MB (σ) is a Mathieu subspace of C[z].
+Proposition 3.3. Let B ⊂ Rn , w(z) and Λ be as in Conjecture 3.1.
+Let σ be the measure on B such that dσ = w(z)dz. Assume further
+that 1 6∈ Im ′ Λ. Then, we have
+  (a) Im ′ Λ = MB (σ).
+  (b) Conjecture 3.1 for the differential operators Λ is equivalent to
+Conjecture 3.2 for the open subset B ⊂ Rn with the measure σ.
+   Proof: First it is easy to see that (b) follows directly from (a).
+P show (a), choose any f (z) ∈ C[z] and write it (uniquely) as f (z) =
+   To
+   α∈Nn cα uα (z) with cα ∈ C. Then, by Eq. (3.2) and the assumption
+that 1 6∈ Im ′ Λ, we have that, f (z) ∈ Im ′ Λ iff c0 = 0.
+   On the other hand, since {uα | α ∈ Nn } is an orthogonal basis of C[z]
+with respect to the Hermitian form defined in Definition 2.1, for any
+α 6= 0, we have
+              Z                       Z
+                                   −1
+(3.3)             uα (z)w(z)dz = ū0     uα (z)ū0 w(z)dz = 0.
+                B                     B
+Therefore, we have
+  Z              Z                  Z                     Z
+      f (z) dσ =    f (z)w(z)dz = c0 u0 (z)w(z)dz = c0 u0    w(z) dz.
+    B             B                                        B
+                  R
+   Since u0 and w(z) dz are nonzero constants, we have that, f (z) ∈
+MB (σ) iff c0 = 0.
+   Combining the results above, we have Im ′ Λ = MB (σ) which is (a)
+of the proposition. ✷
+
+Remark 3.4. For the special case that 1 ∈ Im ′ Λ, as pointed out above
+Conjecture 3.1 holds trivially. But in this case, Conjecture 3.2, even
+for the measures dσ = w(z)dz given by the weight functions w(z) of
+classical orthogonal polynomials, can still be highly non-trivial. See
+Subsection 3.2 for more discussions.
+     Several more remarks on Conjecture 3.2 are as follows.
+  First, Conjecture 3.2 can be viewed as a variation of the Mathieu
+conjecture, Conjecture 1.2, with the reductive Lie group G replaced by
+an open subset B ⊂ Rn ; the Haar measure by any positive measure σ;
+        THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                        19
+
+and G-finite functions by polynomials. Furthermore, by Eq. (3.2) and
+Proposition 3.3, (a), we see that Conjecture 3.2 with dσ = w(z)dz
+can also be viewed as a natural variation of Duistermaat and van
+der Kallen’s theorem, Theorem 1.3, with the basis of C[z] formed by
+monomials z α (α ∈ Nn ) replaced by the basis formed by the orthogo-
+nal polynomials uα (z) (α ∈ Nn ). More precisely, Conjecture 3.2 with
+dσ = w(z)dz can be re-stated as follows.
+Conjecture 3.5. Let {uα | α ∈ Nn } be a sequence of orthogonal poly-
+nomials over B ⊂ Rn with the weight function w(z). Let M be the
+subspace of f (z) ∈ C[z] whose constant term (the coefficient of u0 ) in
+the unique expansion of f (z) in terms of uα (z)’s is equal to zero. Then
+M is a Mathieu subspace of the polynomial algebra C[z].
+   Of course, a shorter way to state the conjecture above is that the
+subspace M spanned by the orthogonal polynomials uα (z) (α 6= 0) over
+C is a Mathieu subspace of the polynomial algebra C[z].
+   The second remark is that Conjecture 3.2 in general does not hold
+for analytic functions.
+                                                                           √
+Example 3.6. Let B = (0, 1) ⊂ R and dσ = dz. Let f (x) = e2π −1 z
+and g(z) = z. Then, for any m ≥ 1, we have
+                Z 1            Z 1     √
+                     m
+                    f (x) dσ =     e2mπ −1 z dz = 0.
+                        0                  0
+But
+  Z 1                            Z 1   √
+         m
+        f (z)g(z) dσ =    ze2mπ −1 z dz
+    0                   0
+                                       √
+                                                  Z 1     √
+                                                                   
+                           1         2mπ −1 z
+                                              1
+                                                       2mπ −1 z
+                    =      √      ze            −     e         dz
+                       2mπ −1                 0    0
+                           1
+                    =      √    6= 0.
+                       2mπ −1
+  The third remark is that Conjecture 3.2 does not hold without the
+positivity assumption on the measure σ.
+Example 3.7. Let B = (−1, 1) ⊂ R and dσ = zdz. Let f (z) = z 2 and
+g(z) = z. Then, for any m ≥ 1, we have
+                  Z 1            Z 1
+                       m
+                      f (z) dσ =     z 2m+1 dz = 0
+                            −1                 −1
+But
+             Z 1                       Z 1
+                    m                                          2
+                   f (z)g(z) dσ =              z 2m+2 dz =          6= 0
+              −1                        −1                   2m + 3
+20                             WENHUA ZHAO
+
+   Finally, one interesting observation about the example above is as
+follows. Even though Conjecture 3.2 fails for this example, if we con-
+sider the differential operator Λ related with the “weight” function
+w(z) = z as in Eq. (2.3), namely,
+                       d            dw(z)   d
+                  Λ=      + w −1(z)       =    + z −1 ,
+                       dz            dz     dz
+then, by Corollary 2.10, we see that Conjecture 3.1 (formally) for the
+differential operator Λ above still holds.
+
+3.2. Some Cases of Conjectures 3.1 and 3.2. Despite the simple
+appearances of Conjectures 3.1 and 3.2, there are only few cases that
+are known for these two conjectures.
+  First, for the differential operators related with the multi-variable Ja-
+cobi orthogonal polynomials (See Example 2.4), we have the following
+proposition.
+Proposition 3.8. Let Λα,β be the commuting differential operators de-
+fined in Eq. (2.18) (with x replaced by z) related with the Jacobi orthog-
+onal polynomials. Assume further that there exists 1 ≤ i ≤ n such that
+αi = 0 or βi = 0. Then Im ′ Λα,β = C[z], and hence Conjecture 3.1
+holds for Λα,β .
+  Proof: Without losing any generality, we may assume that α1 = 0
+or β1 = 0. Here we only prove the case that β1 = 0. The proof of the
+case that α1 = 0 is similar.
+  Under the assumption above, the first component Λ1 of Λα,β in
+Eq. (2.18) is the differential operator Λ1 = ∂1 − α1 (1 − z1 )−1 . Now
+we apply the change of variables z1 → z1 + 1 and zi → zi for any
+2 ≤ i ≤ n, then Λ1 becomes the differential operator Φα1 = ∂1 + α1 z1−1 .
+  Let A := C[z2 , z3 , ..., zn ] and view Φα1 as a differential operator of
+A[z1−1 , z1 ]. Since α1 > −1, by applying Corollary 2.10 to Φα1 , we have
+                       A[z1 ] ∩ Φα1 (A[z1 ]) = A[z1 ].
+Since A[z1 ] = C[z], we have
+                   Im ′ Φα1 = C[z] ∩ Φα1 (C[z]) = C[z].
+
+  Hence we also have Im ′ Λ1 = C[z]. Since Im ′ Λ1 ⊂ Im ′ Λα,β , we have
+Im ′ Λα,β = C[z]. ✷
+
+   Next let us consider the differential operators Λα (α ∈ (R>−1 )×n )
+related with the multi-variable Laguerre orthogonal polynomials. Note
+        THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                          21
+
+that, by Eq. (2.6) and a similar construction for the multi-variable Ja-
+cobi polynomials in Example 2.4, we know that Λα is given by
+(3.4)                      Λα = (Λα1 , Λα2 , ..., Λαn ),
+where, for any 1 ≤ i ≤ n,
+(3.5)                       Λαi = ∂i + αi zi−1 − 1.
+Proposition 3.9. Let Λα (α ∈ (R>−1 )×n ) be the commuting differen-
+tial operators defined above. Then, Im ′ Λα = C[z] iff αi = 0 for some
+1 ≤ i ≤ n. Hence, Conjectures 3.1 holds for Λα under this condition.
+  Proof: (⇐) Without losing any generality, we may assume that α1 =
+0. Then, by Eq. (2.6), we have Λα1 =0 = ∂1 − 1. Since Λα1 =0 (−1) = 1,
+we have 1 ∈ Im ′ (Λα1 =0 ) ⊂ Im ′ Λα . Then, by Lemma 2.5, (c), we have
+Im ′ Λα = C[z].
+  This result can also be proved by the following more straightforward
+argument (without using Lemma 2.5). Note that Λα1 =0 = dzd1 − 1 is
+invertible as a linear operator of C[z]. Its inverse operator is given by
+                                                           +∞
+                                                           X
+                                      −1
+                    Λ−1
+                     α1 =0 = (∂1 − 1)    = −1 −                  ∂1k .
+                                                           k=1
+Note that the infinity sum on the right hand side of the equation above
+is a well-defined linear map of C[z].
+   Since Λα1 =0 is invertible, we have Im ′ Λα1 =0 = C[z]. Hence we also
+have Im ′ Λα = C[z].
+   (⇒) Assume that Im ′ Λα = C[z] but αi 6= 0 for any 1 ≤ i ≤ n. In
+particular, we have 1 ∈ Im ′ Λα . So there exist hi (z) ∈ C[z] (1 ≤ i ≤ n)
+such that
+                   Xn               n
+                                    X
+(3.6)         1=       Λαi hi (z) =   (∂i + αi zi−1 − 1)hi (z).
+                   i=1                      i=1
+
+   Now we view the RHS of Eq. (3.6) above as a Laurent polynomial in
+z1 with coefficients in C[z2± , ..., zn± ]. Then the coefficient of z1−1 of the
+RHS is given by α1 h1 (z)|z1 =0 which, by Eq. (3.6), must be zero. Hence
+we also have h1 (z)|z1 =0 = 0 since α1 6= 0. Therefore, h1 (z) = z1 h̃1 (z)
+for some h̃1 (z) ∈ C[z]. Apply similar arguments to hi (z) for 2 ≤ i ≤ n,
+we see that, for any 1 ≤ i ≤ n, there exists h̃i (z) ∈ C[z] such that
+(3.7)                             hi (z) = zi h̃i (z).
+  Next, for any fixed 1 ≤ i ≤ n and f (z) ∈ C[z], it is easy to check
+that
+                                 Pn                                Pn
+(3.8)          ∂i (z α f (z)e−    i=1 zi   ) = z α (Λαi f (z))e−    i=1 zi   .
+22                                         WENHUA ZHAO
+
+Consequently, by Eq. (3.7) we have
+        Z +∞                              Z +∞
+                        α − n
+                                                            Pn
+                                 zi
+                                               ∂i (z α hi e− i=1 zi ) dzi
+                           P
+(3.9)         (Λαi hi )z e   i=1    dzi =
+                0                                          0
+                                  Pn                                       Pn
+                    α
+               = (z hi (z)e   −       i=1 zi   ) |zi =0 = (z α zi h̃i (z)e− i=1 zi ) |zzii =+∞
+                                                  zi =+∞
+                                                                                           =0
+               = 0,
+where the last equality above follows from the fact that αi +1 > 0 since
+αi > −1.
+  Combining Eqs. (3.6)–(3.9), we have
+         Z                         Xn Z
+                   α − n
+                       P                                      Pn
+                           z
+(3.10)            z e i=1 i dz =               (Λαi hi )z α e− i=1 zi dz
+               (R≥0 )×n                               i=1   (R≥0 )×n
+         n Z
+         X                    Z +∞                          Pn
+                                                                             
+     =                                    (Λαi hi )z e α −       i=1 zi                 ci · · · dzn
+                                                                          dzi dz1 · · · dz
+         i=1   (R≥0 )×(n−1)       0
+
+     = 0.
+                                                            Pn
+  But this is a contradiction since z α e−                   i=1 zi   is continuous and positive
+everywhere over (R>0 )×n . ✷
+
+  Next, motivated by the differential operators related with the multi-
+variable Hermite polynomials and also the differential operators Φλ
+(λ ∈ Cn ) in Subsection 2.2, we consider the following family of com-
+muting differential operators.
+  For any α = (α1 , α2 , ..., αn ) ∈ Cn , we set
+(3.11)                                   Ψαi := ∂i + αi zi .
+and
+(3.12)                            Ψα := (Ψα1 , Ψα2 , ..., Ψαn ).
+  Note that, when αi = −2 for any 1 ≤ i ≤ n, the differential operators
+Ψα becomes the differential operators related with the multi-variable
+Hermite polynomials. This can be seen from Eq. (2.5) and a similar
+construction in Example 2.4 for the multi-variable Jacobi polynomials.
+  Note also that the differential operators Ψα (α ∈ Cn ) are actually
+the differential operators of the polynomial algebra C[z] itself. So in
+this case, we have Im ′ Ψα = Im Ψα for any α ∈ Cn .
+Proposition 3.10. Let Ψα (α ∈ Cn ) be defined above. Then, Im Ψα =
+C[z] iff αi = 0 for some 1 ≤ i ≤ n. Hence Conjectures 1.4 and 3.1
+hold under this condition.
+  Proof: (⇐) Assume that αi = 0 for some 1 ≤ i ≤ n. Then, by
+Eq. (3.11), we have Λαi =0 = ∂i which is obviously a surjective linear
+         THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                                23
+
+map from C[z] to C[z]. Hence we have Im Ψαi =0 = C[z] and Im Ψα =
+C[z].
+  (⇒) Assume that Im Ψα = C[z] but αi 6= 0 for any 1 ≤ i ≤ n. We
+derive a contradiction as follows.                      p
+  First, by applying the change of variables zi → −2/α      pi zi (1 ≤ i ≤
+n), the differential operators Ψαi in Eq. (3.11) becomes −αi /2 (∂i −
+2zi ). Set Λi := ∂i − 2zi and Λ = (Λ1 , Λ2 , ..., Λn ). From the argument
+above, it is easy see that Im Λ = Im Ψα = C[z].
+  Let hi (z) ∈ C[z] (1 ≤ i ≤ n) such that
+                                   Xn
+(3.13)                        1=      Λi hi .
+                                                i=1
+  Note that, for any fixed 1 ≤ i ≤ n, it is easy to check that
+                                  Pn     2
+                                                                Pn     2
+(3.14)                ∂i (hi e−     i=1 zi     ) = (Λi hi )e−     i=1 zi   .
+Consequently, we have
+            Z                           Z
+                        − n
+                                                   Pn
+                              zi2                        2
+                         P
+(3.15)         (Λi hi )e  i=1     dzi =   ∂i (hi e− i=1 zi ) dzi
+                  R                                     R
+                             Pn        2       zi =+∞
+              = (hi (z)e−         i=1 zi   )            = 0.
+                                               zi =−∞
+
+  Then, by using Eqs. (3.13)–(3.15) and applying a similar argument
+as in Eq.(3.10), we have
+           Z                X n Z
+                 − n    2
+                                              Pn    2
+                      z
+                                    (Λi hi )e− i=1 zi dz = 0,
+                  P
+               e i=1 i dz =
+             Rn                        i=1       Rn
+                                                Pn     2
+which is a contradiction since e−                 i=1 zi    is continuous and positive ev-
+erywhere on Rn . ✷
+
+  Now let us consider some cases of Conjecture 3.2.
+Proposition 3.11. Conjecture 3.2 holds for any open B ⊂ Rn with
+any atomic measure σ which is supported at finitely many points of B.
+  Proof: Let S = {u1 , u2 , ..., uk } ⊂ B be the support of σ, i.e. σ(ui ) >
+0 (1 ≤ i ≤ k) and, for any measurable subset U ⊂ B, we have
+                                       X
+                          σ(U) =           σ(u).
+                                                u∈S∩U
+
+  Note first that, for any f (z) ∈ C[z], f (z) ∈ MB (σ) iff
+                    Z             Xk
+(3.16)                 f (z) dσ =     f (ui )σ(ui ) = 0.
+                        B                      i=1
+24                            WENHUA ZHAO
+
+  Therefore, for any f (z) ∈ C[z] with f m (z) ∈ MB (σ) for any m ≥ 1,
+we have
+                  Z              Xk
+(3.17)              f m (z) dσ =     f m (ui )σ(ui ) = 0
+                     B             i=1
+for any m ≥ 1
+   If f (ui ) = 0 for all 1 ≤ i ≤ k, then, for any g(z) ∈ C[z] and m ≥ 1,
+we also have (f m g)(ui ) = 0 for any 1 ≤ i ≤ k. Hence, for any m ≥ 1,
+f m g also satisfies Eq. (3.16) and lies in MB (σ). Therefore, Conjecture
+3.2 holds for f (z).
+   Assume f (ui ) (1 ≤ i ≤ k) are not all zero. Let {c1 , c2 , ..., cs } be
+the set of all distinct nonzero values of f (z) attained over S. For any
+1 ≤ j ≤ s, let Sj be the subset of elements of u ∈ S such that f (u) = cj
+and kj the cardinal number of Sj . Then, Eq. (3.17) can be re-written
+as
+                       X k                  s
+                                            X     X
+                             m
+(3.18)             0=       f (ui )σ(ui ) =    cm
+                                                j     σ(u),
+                      i=1                j=1    u∈Sj
+
+Since the equation above holds for any m ≥ 1, by using the invertibility
+of the Vandermonde matrices, it is easy to check that
+                                 X
+(3.19)                      0=       σ(uj ).
+                                  u∈Sj
+
+for any 1 ≤ j ≤ s.
+   But this is a contradiction since σ(ui ) > 0 for any 1 ≤ i ≤ k.    ✷
+
+  Next, let us consider Conjecture 3.2 for the Jacobi orthogonal poly-
+nomials. Contrast to Conjecture 3.1 for the Jacobi polynomials (See
+Proposition 3.8), the only case of Conjecture 3.2 that we know is the
+case of the one-variable Jacobi polynomials with α = β = 0. In this
+case the weight function w(z) ≡ 1. Note that, by Remark 2.3, (b), the
+Jacobi polynomials in this case are actually the Legendre polynomials.
+Proposition 3.12. Let a, b ∈ R with a > b and dσ = dz. Then
+Conjecture 3.2 holds for open interval B := (a, b) ⊂ R with the Lebesgue
+measure σ.
+     The proposition above follows directly from the following theorem.
+Theorem 3.13. Let a < b ∈ R and f (z) ∈ C[z]. Assume that, there
+                      Rb
+exists N > 0 such that a f m (z) dz = 0 for any m ≥ N. Then f (z) = 0.
+  It seems that the theorem above is known but we failed to find any
+published proof in the literature. We did notice that Madhav V. Nori
+      THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                   25
+
+[N] has studied the problem above in a much more general setting. It is
+very possible that Theorem 3.13 will follow from some results obtained
+in [N].
+   Jean-Philippe Furter [FZ] informed the author that he and his col-
+league Changgui Zhang have got an analytic proof for Theorem 3.13,
+which is under preparation. Mitya Boyarchenko [B] also sent the au-
+thor a sketch of his brilliant but unpublished proof. Surprisingly, Bo-
+yarchenko’s proof is purely algebraic and uses only some results from
+algebraic number theory such as Dirichlet’s theorem on arithmetic pro-
+gressions, etc.
+   Next, we end this section with a connection of the one-variable case of
+Conjecture 3.2 with the so-called polynomial moment problem proposed
+by M. Briskin, J.-P. Francoise and Y. Yomdin in the series of papers
+[BFY1]-[BFY5]. The polynomial moment problem is mainly motivated
+by the center problem for the complex Abel equation. The problem
+was recently solved by F. Pakovich and M. Muzychuk [PM] (See the
+theorem below). For more details on the polynomial moment problem,
+see the references quoted above and also citations therein. The au-
+thor is very grateful to Harm Derksen, Jean-Philippe Furter, Jeffrey C.
+Lagarias, Leonid Makar-Limanov, Lucy Moser-Jauslin for communica-
+tions and suggestions on this connection, and also to Fedor Pakovich
+for communications on his joint work [PM] with Mikhail Muzychuk.
+   Recall that the polynomial moment problem is the following problem:
+given any polynomial f (z) ∈ C[z] and a 6= b ∈ C, find all polynomials
+q(z) ∈ C[z] such that, for any m ≥ 0,
+                           Z b
+(3.20)                         f m (z)q(z)dz = 0.
+                           a
+
+  The problem above was solved recently by the following theorem
+obtained by F. Pakovich and M. Muzychuk [PM].
+Theorem 3.14. (Pakovich and Muzychuk) Let a 6= b ∈ C and
+f (z) ∈ C[z]. A non-zero polynomial q(z) ∈ C[z] satisfies Eq. (3.20) for
+any m ≥ 0 iff there exist some polynomials Qj (z), fj (z) and Wj (z)
+(j ∈ J) such that
+   (1) Wj (a) =PWj (b) for any j ∈ J;
+   (2) q(z) = j∈J Q′j (Wj (z)) Wj′ (z);
+   (3) f (z) = fj (Wj (z)) for any j ∈ J.
+  Note that, with the same notation as in Pakovich and Muzychuk’s
+theorem above, if we choose a < b, B = (a, b) ⊂ R and the measure
+dσ = q(z)dz (ignoring the positivity requirement on the measure σ for
+26                           WENHUA ZHAO
+
+a moment), then Pakovich and Muzychuk’s
+                                      R          theorem above gives all
+polynomials f (z) ∈ C[z] such that B f m (z) dσ = 0 for any m ≥ 0.
+   But, unfortunately, Pakovich and Muzychuk’s    R theoremR requires the
+integral in Eq. (3.20) vanish when m = 0, i.e. B dσ = B q(z)dz = 0.
+From this requirement, it is easy to see that dσ = q(z)dz can not be a
+positive measure on the interval B = (a, b). For example, q(z) can not
+be any nonzero polynomial with real coefficients such that q(c) ≥ 0 for
+any c ∈ B. Therefore, Pakovich and Muzychuk’s theorem can not be
+applied directly to approach Conjecture 3.2.
+   Nevertheless, it is still very interesting to see if some of the tech-
+niques (instead of the main theorem) in [PM] can somehow be applied
+to study Conjecture 3.2 for the cases when q(z) are polynomials or an-
+alytic functions in one variable which are non-negative over some open
+intervals of the real line.
+   On the other hand, we see that Conjecture 3.2 also raises a new ques-
+tion on the polynomial moment problem, namely, what is the solution
+of the polynomial moment problem with the (slightly weaker) condition
+that the integrals in Eq. (3.20) vanish for any m ≥ 1 but not neces-
+sarily for m = 0? We believe this question is also very interesting to
+investigate.
+
+       4. Some General Results on Mathieu Subspaces
+  Note that the Mathieu conjecture (Conjecture 1.2), the IC (Conjec-
+ture 1.4) and its generalizations (Conjectures 3.1 and 3.2) discussed in
+the previous sections are all about whether or not certain subspaces
+are Mathieu subspaces of their ambient commutative algebras. Fur-
+thermore, this is also the case for the well-known Jacobian conjecture
+and the Dixmier conjecture through their equivalences (See [Z3] for
+the discussions on these equivalences) to some special cases of the IC.
+Therefore, it is necessary and important to study Mathieu subspaces
+separately in a more general setting.
+  In this section, we give some examples of Mathieu subspaces from
+other sources and derive some general results on this newly introduced
+notion.
+  First, let us generalize the notion of Mathieu subspaces defined in
+Definition 1.1 to associative but not necessarily commutative algebras.
+Definition 4.1. Let A be an associative algebra over a commutative
+ring R and M a R-subspace of A. We say that M is a left Mathieu
+subspace of A if the following property holds: for any a, b ∈ A with
+am ∈ M for any m ≥ 1, there exists N ≥ 1 (depending on a and b)
+such that bam ∈ M for any m ≥ N.
+        THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                   27
+
+  We define right Mathieu subspaces and also (two-sided) Mathieu sub-
+spaces in the obvious ways.
+  It is easy to see that any left ideal is automatically a left Mathieu
+subspace. Similarly, this is also the case for right and two-sided ideals.
+Therefore, the notion of Mathieu subspaces can be viewed as a gen-
+eralization of the notion of ideals even for noncommutative algebras.
+But, as we will see from examples to be discussed in this section, many
+Mathieu subspaces are not ideals. Actually they are not even closed
+under the product of the ambient algebras.
+  We start with the following noncommutative examples of Mathieu
+subspaces.
+Example 4.2. For any n ≥ 1 and integral domain R of characteristic
+zero, let A = Mn×n (R) be the algebra of n × n matrices with entries in
+R and M the subspace of trace-zero matrices.
+  Note that, for any A ∈ A, Am ∈ M for any m ≥ 1 iff A is nilpotent.
+Then, for any B ∈ A, we have BAm = Am B = 0 ∈ M for any m ≥ n.
+Therefore, M is a two-sided Mathieu subspace of A but certainly can
+not be an ideal of A unless n = 1.
+  Next, from additive valuations on polynomial algebras, we can get
+the following family of Mathieu subspaces of polynomial algebras.
+Example 4.3. For any n ≥ 1 and any integral domain R, let A =
+R[z] be the polynomial algebra over R in n variables z. For any linear
+functional ν : Rn → R, we define an additive valuation ordν : A →
+R ∪ {+∞} by setting, ordν (0) := +∞ and, for any 0 6= f (z) ∈ A,
+(4.1) ordν (f ) := min{ν(α) | the coefficient of z α in f (z) is not zero}.
+For any c ∈ R, let Mc be the subspace of polynomials f ∈ A such that
+ordν (f ) ≥ c.
+   Then it is easy to check that, for any c > 0, Mc is a Mathieu subspace
+of A but not necessarily an ideal of A if ordν (f ) < 0 for some f ∈ A.
+ More generally, we have the following family of examples from com-
+mutative rings (viewed as Z-algebras) with valuations.
+Example 4.4. Let A be any commutative ring and ν a real-valued
+(additive) valuation ([AM], [Mat]) of A, i.e. µ : A → R ∪ {+∞} such
+that, for any x, y ∈ A, we have
+(4.2)                      ν(x) = +∞ iff x = 0,
+(4.3)                     ν(xy) = ν(x) + ν(y),
+(4.4)                  ν(x + y) ≥ min{ν(x), ν(y)}.
+28                             WENHUA ZHAO
+
+  For any c ∈ R, let Mc be the subspace of elements x of A with
+ν(x) ≥ c. Then it is easy to check that, for any c > 0, Mc is a Mathieu
+subspace of A but not necessarily an ideal of A.
+
+  Similar as for ideals, we say a Mathieu subspace M of an algebra
+A is proper if M 6= 0 and M 6= A. From the example above, we see
+that some fields may actually have some proper Mathieu subspaces.
+Also, unlike proper ideals, proper Mathieu subspaces may contain some
+invertible elements. But, as we will see below, proper left or right
+Mathieu subspaces can not contain the identity element of the ambient
+algebras.
+
+Lemma 4.5. Let A be any algebra and M a proper left or right Mathieu
+subspace of A. Then, 1 6∈ M.
+
+  Proof: Assume otherwise. Then, for any m ≥ 1, 1m = 1 ∈ M.
+Then, for any b ∈ A, b = 1m b = b1m ∈ M when m >> 0. Hence, we
+have M = A which is a contradiction. ✷
+
+  The next proposition will give us more examples of Mathieu sub-
+spaces of polynomial algebras, which are not necessarily ideals.
+
+Proposition 4.6. Let K be a field of any characteristic. For any finite
+subset S = {u1, u2 , ..., uk } ⊂ K n and σ = {a1 , a2 , ..., ak } ⊂ K × , denote
+by M(σ) the subspace of polynomials f (z) ∈ K[z] such that
+                               k
+                               X
+(4.5)                                ai f (ui ) = 0.
+                               i=1
+
+  Then, M(σ) is a Mathieu subspace of K[z] iff, for any non-empty
+subset S ′ ⊂ S,
+                           X
+(4.6)                         u 6= 0.
+                                  u∈S ′
+
+   Proof: First, the (⇐) part of the proposition can be proved by sim-
+ilar arguments as in the proof of Proposition 3.11. So we skip it here.
+   To show the (⇒) part, assume that there exists a non-empty S ′ ⊂ S
+such that Eq. (4.6) holds.
+   Let f (z) ∈ K[z] such that
+                                  (
+                                   1 if ui ∈ S ′
+(4.7)                   f (ui ) =
+                                   0 if ui 6∈ S ′ .
+       THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                              29
+
+  Note that, such a polynomial f (z) always exists. For example, when
+n = 1 (the idea for n > 1 is similar), we may choose
+                                  Q
+                              X c∈S;c6=u(z − c)
+                      f (z) =     Q
+                                ′   c∈S;c6=u (u − c)
+                                        u∈S
+  For any m ≥ 1, we have
+                           k
+                           X                       X
+                                  ai f m (ui ) =           ai = 0.
+                            i=1                    i∈S ′
+
+Therefore, we have that f m (z) ∈ M(σ) for any m ≥ 1.
+   Now fix an uj ∈ S ′ and g(z) ∈ K[z] such that g(uj ) = 1 and g(ui) = 0
+for any 1 ≤ i 6= j ≤ k. Then, for any m ≥ 1, we have
+       k
+       X                          k
+                                  X
+              ai (f m g)(ui ) =         ai f m (ui )g(ui ) = aj g(uj ) = aj 6= 0.
+        i=1                       i=1
+                  m
+  Therefore, f g 6∈ M(σ) for any m ≥ 1. Hence M(σ) is not a Mathieu
+subspace of K[z]. ✷
+
+Remark 4.7. Note that, when k = 1, M(σ) in Proposition 3.11 is
+always an ideal of C[z]. But if k > 1, M(σ) in general is not an ideal.
+For example, for any k ≥ 2, choose K = C, ai = 1 and any distinct
+ui ∈ C (1 ≤ i ≤ k).
+   For Laurent polynomial algebras C[z −1 , z], by Duistermaat and van
+der Kallen’s theorem, Theorem 1.3, we see that the subspace of Laurent
+polynomials with no constant terms is a Mathieu subspace of C[z −1 , z].
+Another example of Mathieu subspaces of C[z −1 , z] is given by the
+following theorem which was first conjectured in [Z2] and later was
+proved in [EWZ].
+Theorem 4.8. Let M be the subspace of C[z −1 , z] of Laurent polyno-
+mials f (z) with no holomorphic part, i.e. [z α ]f (z) = 0 for any α ∈ Nn .
+Then, M is a Mathieu subspace of C[z −1 , z].
+   Next we show that some properties of ideals are also shared by Math-
+ieu subspaces.
+Proposition 4.9. Let A and B be any algebras over a commutative
+ring R, and ϕ : A → B an R-algebra homomorphism. Then,
+   (a) for any left Mathieu subspaces Mi (1 ≤ i ≤ m) of A, ∩1≤i≤m Mi
+is also a left Mathieu subspace of A.
+   (b) for any left Mathieu subspace N of B, ϕ−1 (N) is also a left Math-
+ieu subspace of A.
+30                           WENHUA ZHAO
+
+   Proof: (a) Set M := ∩1≤i≤m Mi . It is easy to see that M is also a
+R-subspace of A.
+   Let a, b ∈ A with am ∈ M for any m ≥ 1. For any 1 ≤ i ≤ m, let
+Ni ∈ N such that bam ∈ Mi for any m ≥ Ni . Let N := max{Ni | 1 ≤
+i ≤ m}. Then, for any m ≥ N, we have bam ∈ Mi for any 1 ≤ i ≤ m.
+Hence bam ∈ M for any m ≥ N.
+   (b) Again, it is easy to see that ϕ−1 (N) is a R-subspace of A since ϕ
+is an R-algebra homomorphism.
+   Let a, b ∈ A with am ∈ ϕ−1 (N) for any m ≥ 1. Set x := ϕ(a) and
+y := ϕ(b). Then, for any m ≥ 1, we have xm = ϕm (a) = ϕ(am ) ∈ N.
+Since N is a left Mathieu subspace of B, there exists N ∈ N such that
+yxm ∈ N for any m ≥ N. But yxm = ϕ(b)ϕm (a) = ϕ(bam ), so we have
+bam ∈ ϕ−1 (N) for any m ≥ N. Therefore, ϕ−1 (N) is a left Mathieu
+subspace of A. ✷
+
+Remark 4.10. From the proof above, it is easy to see that Proposition
+4.9 also holds for right or two-sided Mathieu subspaces.
+Proposition 4.11. Let K be any field with uncountably many ele-
+ments and A a commutative K-algebra. Let z = (z1 , z2 , ..., zn ) be n
+free commutative variables. Then, for any Mathieu subspace M of A,
+M[z] ⊂ A[z] is a Mathieu subspace of A[z].
+    Proof: Note first that, by using induction on the number of free
+variables z, it will be enough to show the proposition for the one-
+variable case. So we assume n = 1.
+    We use the contradiction method. Assume the proposition is false.
+Then there exist f (z), g(z) ∈ K[z] with f m ∈ M[z] for any m ≥ 1 but
+f k (z)g(z) 6∈ M[z] for infinitely many positive integers k. Let {mi ∈ N}
+be a strictly increasing sequence of positive integers such that f mi g 6∈
+M[z] for any i ≥ 1.
+    Note that, for any h(z) ∈ A[z] of degree d := deg h(z) ≥ 0 and
+h(z) 6∈ M[z], by using the invertibility of the Vandermonde matrices,
+it is easy to check that there are at most d distinct elements c ∈ K ×
+such that h(c) ∈ M. Otherwise, all the coefficients of h(z) would be in
+M and h(z) ∈ M[z].
+    Therefore, for each fixed mi , there are only finitely many c ∈ K
+such that f mi (c)g(c) ∈ M. Since K has uncountably many distinct
+elements, there exists b ∈ K such that f mi (b)g(b) 6∈ M for all i ≥ 1.
+    But, on the other hand, since f m (z) ∈ M[z] for any m ≥ 1, all the
+coefficients of f m (z) are in M. Since M is a K-subspace of A, we have
+f m (b) ∈ M for any m ≥ 1. Furthermore, since M is a Mathieu subspace
+of A and f (b)m = f m (b) ∈ M for any m ≥ 1, we have f m (b)g(b) ∈ M
+       THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                          31
+
+when m >> 0. In particular, f mi (b)g(b) ∈ M when i >> 0. Hence we
+get a contradiction. ✷
+
+  Finally, one remark on the sums of Mathieu subspaces is as follows.
+  Note that, by Proposition 4.9, (a), the intersection of any finitely
+many Mathieu subspaces is always a Mathieu subspace. Naturally, one
+may wonder if the sum of any finitely many Mathieu subspaces is also
+a Mathieu subspace. But this is not true in general.
+
+Example 4.12. Let A = C[z] in one variable z. Let M1 and M2 be
+the one-dimensional subspace spaces of C[z] spanned by 1 + z and 1 −z,
+respectively. Then, it is easy to check that both M1 and M2 are Mathieu
+subspaces of C[z] and M := M1 + M2 = C · 1 + C · z. But, since 1 ∈ M
+and M 6= C[z], by Lemma 4.5 M is not a Mathieu subspace of C[z].
+
+
+                                 References
+[AS]   Handbook of mathematical functions with formulas, graphs, and mathemat-
+       ical tables. Edited by Milton Abramowitz and Irene A. Stegun. Reprint of
+       the 1972 edition. Dover Publications, Inc., New York, 1992. [MR0757537].
+[AE]   P. K. Adjamagbo and A. van den Essen, A proof of the equivalence of
+       the Dixmier, Jacobian and Poisson conjectures. Acta Math. Vietnam. 32
+       (2007), no. 2-3, 205–214. [MR2368008].
+[AM]   M. F. Atiyah and I. G. Macdonald, Introduction to commutative algebra.
+       Addison-Wesley Publishing Co., 1969. [MR0242802].
+[BCW] H. Bass, E. Connell, D. Wright, The Jacobian conjecture, reduction of
+       degree and formal expansion of the inverse. Bull. Amer. Math. Soc. 7,
+       (1982), 287–330. [MR 83k:14028]. Zbl.539.13012.
+[BK]   A. Belov-Kanel and M. Kontsevich, The Jacobian conjecture is stably equiv-
+       alent to the Dixmier conjecture. (English, Russian summary) Mosc. Math.
+       J. 7 (2007), no. 2, 209–218, 349. [MR2337879].
+[B]    M. Boyarchenko, Personal communications.
+[BFY1] M. Briskin, J.-P. Francoise, Y. Yomdin, Une approche au probleme du
+       centre-foyer de Poincare. C. R. Acad. Sci., Paris, Ser. I, Math. 326 (1998),
+       No.11, 1295-1298. [MR1649140].
+[BFY2] M. Briskin, J.-P. Francoise, Y. Yomdin, Center conditions, compositions of
+       polynomials and moments on algebraic curve. Ergodic Theory Dyn. Syst.
+       19 (1999), no 5, 1201–1220. [MR1721616].
+[BFY3] M. Briskin, J.-P. Francoise, Y. Yomdin, Center condition II: Parametric
+       and model center problems. Isr. J. Math. 118 (2000), 61–82. [MR1776076].
+[BFY4] M. Briskin, J.-P. Francoise, Y. Yomdin, Center condition III: Parametric
+       and model center problems. Isr. J. Math. 118 (2000), 83–108. [MR1776077].
+[BFY5] M. Briskin, J.-P. Francoise, Y. Yomdin, Generalized moments, center-focus
+       conditions and compositions of polynomials. Operator theory, system the-
+       ory and related topics (Beer-Sheva/Rehovot, 1997), 161–185, Oper. Theory
+       Adv. Appl., 123 (2001). [MR1821911].
+32                             WENHUA ZHAO
+
+[C]   T. S. Chihara, An introduction to orthogonal polynomials. Mathematics
+      and its Applications, Vol. 13. Gordon and Breach Science Publishers, New
+      York-London-Paris, 1978. [MR0481884].
+[D]   J. Dixmier, Sur les algèbres de Weyl. Bull. Soc. Math. France, 96 (1968),
+      209–242. [MR0242897].
+[DK]  J. J. Duistermaat and W. van der Kallen, Constant terms in powers
+      of a Laurent polynomial. Indag. Math. (N.S.) 9 (1998), no. 2, 221–231.
+      [MR1691479].
+[DX]  C. Dunkl and Y. Xu, Orthogonal polynomials of several variables. Ency-
+      clopedia of Mathematics and its Applications, 81. Cambridge University
+      Press, Cambridge, 2001. [MR1827871].
+[E]   A. van den Essen, P olynomial automorphisms and the Jacobian con-
+      jecture. Progress in Mathematics, 190. Birkhäuser Verlag, Basel, 2000.
+      [MR1790619].
+[EWZ] A. van den Essen, R. Willems and W. Zhao, Some results on the
+      vanishing conjecture of differential operators with constant coefficients.
+      arXiv:0903.1478[math.AC]. Submitted.
+[FZ]  J.-P. Furter and C. Zhang, Personal communications.
+[Ke]  O. H. Keller, Ganze Gremona-Transformationen, Monats. Math. Physik
+      47 (1939), no. 1, 299-306. [MR1550818].
+[Ko]  T. H. Koornwinder, Two-variable analogues of the classical orthogonal
+      polynomials. Theory and application of special functions (Proc. Advanced
+      Sem., Math. Res. Center, Univ. Wisconsin, Madison, Wis., 1975), pp. 435–
+      495. Math. Res. Center, Univ. Wisconsin, Publ. No. 35, Academic Press,
+      New York, 1975. [MR0402146].
+[Ma]  O. Mathieu, Some conjectures about invariant theory and their applica-
+      tions. Algèbre non commutative, groupes quantiques et invariants (Reims,
+      1995), 263–279, Sémin. Congr., 2, Soc. Math. France, Paris, 1997.
+      [MR1601155].
+[Mat] H. Matsumura, Commutative ring theory. 2nd edition. Cambridge Univer-
+      sity Press, 1989. [MR1011461].
+[N]   M. V. Nori, The integral of powers of a function. Symposium in Honor of
+      C. H. Clemens (Salt Lake City, UT, 2000), 163–175, Contemp. Math., 312
+      (2002). [MR1941581].
+[PM]  F. Pakovich and M. Muzychuk, Solution of the polynomial moment prob-
+      lem. To appear in Proc. Lond. Math. Soc.. See also arXiv:0710.4085v2
+      [math.CV].
+[SHW] J. A. Shohat; E. Hille and J. L. Walsh, A Bibliography on Orthogonal
+      Polynomials. Bull. Nat. Research Council, no. 103. National Research
+      Council of the National Academy of Sciences, Washington, D. C., 1940.
+      [MR0003302].
+[Si]  B. Simon, Orthogonal polynomials on the unit circle. Part 1. Classical
+      theory. American Mathematical Society Colloquium Publications, 54, Part
+      1. American Mathematical Society, Providence, RI, 2005. [MR2105088].
+[Sz]  G. Szegö, Orthogonal Polynomials. 4th edition. American Mathematical
+      Society, Colloquium Publications, Vol. XXIII. American Mathematical So-
+      ciety, Providence, R.I., 1975. [MR0372517].
+       THE IMAGE CONJECTURE AND THE MATHIEU CONJECTURE                       33
+
+[T]    Y. Tsuchimoto, Endomorphisms of Weyl algebra and p-curvatures. Osaka
+       J. Math. 42 (2005), no. 2, 435–452. [MR2147727].
+[Z1]   W. Zhao, Hessian Nilpotent Polynomials and the Jacobian Conjec-
+       ture, Trans. Amer. Math. Soc. 359 (2007), no. 1, 249–274 (electronic).
+       [MR2247890]. See also math.CV/0409534.
+[Z2]   W. Zhao, A Vanishing Conjecture on Differential Operators with Constant
+       Coefficients, Acta Mathematica Vietnamica, vol 32 (2007), no. 3, 107–134.
+       [MR2368014]. See also arXiv:0704.1691v2 [math.CV].
+[Z3]   W. Zhao, Images of commuting Differential Operators of Order One with
+       Constant Leading Coefficients. arXiv:0902.0210 [math.CV]. Submitted.
+  Department of Mathematics, Illinois State University, Nor-
+mal, IL 61790-4520.
+  E-mail: wzhao@ilstu.edu.
+

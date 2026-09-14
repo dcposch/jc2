@@ -1,0 +1,29 @@
+--- /home/ubuntu/jc2/box/f10-direct-rows-runtime-astra-20260911/probe.py	2026-09-11 03:28:18.925945293 +0000
++++ /home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/probe.py	2026-09-11 05:55:47.054665026 +0000
+@@ -9,7 +9,7 @@
+ import stat
+ import sys
+ 
+-JOB = 'f10-source-cone-r3-direct-rows-v1'
++JOB = 'f10-source-cone-r3-necessary-rows-v1'
+ SOURCE_NAMES = ('authority.py', 'arithmetic.py', 'produce.py', 'check_arithmetic.py', 'check.py')
+ LIMITS = {'wall_seconds': '900', 'cpu_seconds': '600', 'memory_bytes': '8589934592', 'aggregate_bytes': '134217728'}
+ ENV = {'PATH': '/usr/bin:/bin', 'LANG': 'C', 'LC_ALL': 'C', 'TZ': 'UTC'}
+@@ -65,7 +65,7 @@
+ def root_policy(root_name, role, label, actual):
+     # ROOT0444/no-concurrent-writer trust; command contains no recursive ROOT hash.
+     root = file(root_name); r = load(root); root_hash = sha(root)
+-    need(r.get('schema') == 'f10-direct-rows-runtime/v1' and r.get('enabled') is True
++    need(r.get('schema') == 'f10-necessary-rows-runtime/v1' and r.get('enabled') is True
+          and r.get('jobtag') == JOB and r.get('exclusive_no_concurrent_writer') is True, 'enabled ROOT policy')
+     need(r['review_clearance']['status'] == 'SOURCE_AND_RUNTIME_FIRST_CONFIRMED', 'ROOT FIRST clearance')
+     stops = [datetime.datetime.fromisoformat(r[k]) for k in ('admission_deadline_utc', 'mathematical_deadline_utc', 'task_deadline_utc', 'worker_deadline_utc')]
+@@ -148,7 +148,7 @@
+          and str(auth) == str(pathlib.Path(r['authority_dir']) / (mode + '.json')), 'actual ROOT policy bytes')
+     output = pathlib.Path(sys.argv[10])
+     need(str(output) == str(pathlib.Path(r['writer_dir']) / (mode + '.payload')) and not output.exists(), 'fresh exact sentinel target')
+-    expected = {'schema': 'f10-direct-rows-root-policy/v1', 'root_registration_path': str(pathlib.Path(sys.argv[2])),
++    expected = {'schema': 'f10-necessary-rows-root-policy/v1', 'root_registration_path': str(pathlib.Path(sys.argv[2])),
+                 'job_tag': JOB, 'label': mode, 'artifact': str(output), 'science_outcome': 'NONE',
+                 'source_files': r['source_files'], 'limits': LIMITS, 'profile': r['profiles']['dummy' if mode == 'dummy' else 'control']}
+     need(load(auth) == expected, 'ROOT derivative policy exact fields')

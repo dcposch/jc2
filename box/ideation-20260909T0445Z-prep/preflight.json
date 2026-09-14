@@ -1,0 +1,46 @@
+{
+  "utc": "2026-09-09T04:47:46.040797+00:00",
+  "status": "PREP_CONTENT_PASS_INVITATION_BLOCKED",
+  "root_blind_read": false,
+  "root_blind_seal_available": false,
+  "launch_authorized": false,
+  "source_snapshot_count": 26,
+  "charged_count": 27,
+  "charged_bytes": 341613,
+  "pins_sha256": "da1a6aceef3ed7ca693e671f5319284e6dc58fc147acdaf35a8fdeb044222f35",
+  "prompts": [
+    {
+      "seat": "coordinator",
+      "prompt": "box/ideation-20260909T0445Z-prep/coordinator.prompt.md",
+      "sha256": "ed9f3a5b73b6787707f877a377a4acc379081970053f6d59f5920bf97fec6b3f",
+      "literal_sed_count": 27,
+      "target": "xmodel/ideation-20260909T0445Z-coordinator.md",
+      "target_absent": true
+    },
+    {
+      "seat": "astra",
+      "prompt": "box/ideation-20260909T0445Z-prep/astra.prompt.md",
+      "sha256": "3376a1d6852fde10e9a4170e653dc9fcd2244da15d2b7b213ef80b9cd72c0535",
+      "literal_sed_count": 27,
+      "target": "xmodel/ideation-20260909T0445Z-astra.md",
+      "target_absent": true
+    },
+    {
+      "seat": "fable5",
+      "prompt": "box/ideation-20260909T0445Z-prep/fable5.prompt.md",
+      "sha256": "4e6f9cd40d701bb28868618f30222eb731ad8f83d9696072ccdaf44286eab27f",
+      "literal_sed_count": 27,
+      "target": "xmodel/ideation-20260909T0445Z-fable5.md",
+      "target_absent": true
+    },
+    {
+      "seat": "sol",
+      "prompt": "box/ideation-20260909T0445Z-prep/sol.prompt.md",
+      "sha256": "c94837bf48ed6832b6a50f9137460db673cb3a17092c192095043a8f376c9e04",
+      "literal_sed_count": 27,
+      "target": "xmodel/ideation-20260909T0445Z-sol.md",
+      "target_absent": true
+    }
+  ],
+  "notes": "Exact actual sed parser used. Original mutable canonical drift is preserved by dated snapshots, not rewritten. No mathematical subprocess or live file access."
+}

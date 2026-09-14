@@ -1,0 +1,48 @@
+Sat Sep 12 23:12:42 UTC 2026
+TimeoutStopUSec=5s
+RuntimeMaxUSec=9min 55s
+MainPID=1580
+ControlGroup=/system.slice/jc2-mixed-v2-native-20260912.service
+CPUQuotaPerSecUSec=800ms
+CPUQuotaPeriodUSec=100ms
+MemoryMax=1073741824
+MemorySwapMax=0
+TasksMax=64
+LimitFSIZE=4194304
+LimitAS=1073741824
+Id=jc2-mixed-v2-native-20260912.service
+ActiveState=active
+ActiveEnterTimestamp=Sat 2026-09-12 23:12:14 UTC
+InvocationID=65f6476f23b64450a68573e7481a1362
+    PID    PPID    PGID STAT COMMAND
+   1580       1    1580 Ss   /usr/bin/bash /opt/jc2-mixed-20260912/meta/native-metadata.actual.sh
+pid:[4026531836]
+cgroup:[4026531835]
+Limit                     Soft Limit           Hard Limit           Units     
+Max cpu time              unlimited            unlimited            seconds   
+Max file size             4194304              4194304              bytes     
+Max data size             unlimited            unlimited            bytes     
+Max stack size            8388608              unlimited            bytes     
+Max core file size        0                    unlimited            bytes     
+Max resident set          unlimited            unlimited            bytes     
+Max processes             234295               234295               processes 
+Max open files            1024                 524288               files     
+Max locked memory         8388608              8388608              bytes     
+Max address space         1073741824           1073741824           bytes     
+Max file locks            unlimited            unlimited            locks     
+Max pending signals       234295               234295               signals   
+Max msgqueue size         819200               819200               bytes     
+Max nice priority         0                    0                    
+Max realtime priority     0                    0                    
+Max realtime timeout      unlimited            unlimited            us        
+==> /sys/fs/cgroup/system.slice/jc2-mixed-v2-native-20260912.service/cpu.max <==
+80000 100000
+
+==> /sys/fs/cgroup/system.slice/jc2-mixed-v2-native-20260912.service/cpu.max.burst <==
+0
+
+==> /sys/fs/cgroup/system.slice/jc2-mixed-v2-native-20260912.service/memory.max <==
+1073741824
+
+==> /sys/fs/cgroup/system.slice/jc2-mixed-v2-native-20260912.service/memory.swap.max <==
+0

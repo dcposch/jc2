@@ -1,0 +1,114 @@
+{
+  "chart": "the full proved G_i chart; no specialization and no omitted coordinate",
+  "class_id": "C_n18m12_M2_9_ell2_s3",
+  "coefficient_generators": 150,
+  "elapsed_seconds": 3.234083,
+  "exactness": {
+    "auxiliary_variables": 0,
+    "beta_1_zero": true,
+    "coefficient_domain": "Z[all original G coordinates,c] inside the required Q polynomial ring",
+    "coordinate_specializations": 0,
+    "division": "top-down determinate Euclidean division by monic y^K + h_lower",
+    "jacobian_formula": "J(a*h^r,b*h^s)=h^(r+s)J(a,b)+h^(r+s-1)(s*b*J(a,h)+r*a*J(h,b))"
+  },
+  "frozen_builder_fix_sha256": "d6662abfec114a443712600f87e3e7b7064071f445d9b177d2f0ea13c9d3836b",
+  "generator_count_including_Tc_minus_1": 151,
+  "initial_formal_levels": {
+    "0": {
+      "parameter_terms": 6311,
+      "xy_coefficients": 121
+    },
+    "1": {
+      "parameter_terms": 3290,
+      "xy_coefficients": 85
+    },
+    "2": {
+      "parameter_terms": 641,
+      "xy_coefficients": 44
+    },
+    "3": {
+      "parameter_terms": 73,
+      "xy_coefficients": 18
+    }
+  },
+  "inverse_generator": "T*c-1",
+  "max_parameter_degree": 12,
+  "native_comparison": {
+    "literal_row_dictionary_equality": true,
+    "reference": "box/gi-only-20260905/classes/C_n18m12_M2_9_ell2_s3/rows/C_n18m12_M2_9_ell2_s3_G_rows.tsv",
+    "reference_rows": 150,
+    "requested": true,
+    "status": "PASS"
+  },
+  "normalized_levels": [
+    {
+      "h_power": 0,
+      "input_parameter_terms": 6311,
+      "input_xy_coefficients": 121,
+      "quotient_parameter_terms": 12677,
+      "quotient_xy_coefficients": 64,
+      "remainder_parameter_terms": 94983,
+      "remainder_rows": 57
+    },
+    {
+      "h_power": 1,
+      "input_parameter_terms": 15543,
+      "input_xy_coefficients": 85,
+      "quotient_parameter_terms": 4901,
+      "quotient_xy_coefficients": 42,
+      "remainder_parameter_terms": 47729,
+      "remainder_rows": 43
+    },
+    {
+      "h_power": 2,
+      "input_parameter_terms": 5366,
+      "input_xy_coefficients": 45,
+      "quotient_parameter_terms": 237,
+      "quotient_xy_coefficients": 15,
+      "remainder_parameter_terms": 6483,
+      "remainder_rows": 30
+    },
+    {
+      "h_power": 3,
+      "input_parameter_terms": 310,
+      "input_xy_coefficients": 20,
+      "quotient_parameter_terms": 11,
+      "quotient_xy_coefficients": 3,
+      "remainder_parameter_terms": 391,
+      "remainder_rows": 17
+    },
+    {
+      "h_power": 4,
+      "input_parameter_terms": 11,
+      "input_xy_coefficients": 3,
+      "quotient_parameter_terms": 0,
+      "quotient_xy_coefficients": 0,
+      "remainder_parameter_terms": 11,
+      "remainder_rows": 3
+    },
+    {
+      "h_power": 5,
+      "input_parameter_terms": 0,
+      "input_xy_coefficients": 0,
+      "quotient_parameter_terms": 0,
+      "quotient_xy_coefficients": 0,
+      "remainder_parameter_terms": 0,
+      "remainder_rows": 0
+    }
+  ],
+  "peak_rss_kib": 61020,
+  "production_orientation": "literal J(P,Q)-c*x^ell",
+  "ring": "ring R=0,(y,x,h_0_5,h_0_4,h_0_3,h_1_3,h_0_2,h_1_2,h_0_1,h_1_1,h_0_0,h_1_0,h_2_0,A1_0_5,A1_0_4,A1_0_3,A1_1_3,A1_0_2,A1_1_2,A1_0_1,A1_1_1,A1_0_0,A1_1_0,A1_2_0,A2_0_5,A2_1_5,A2_2_5,A2_0_4,A2_1_4,A2_2_4,A2_3_4,A2_0_3,A2_1_3,A2_2_3,A2_3_3,A2_0_2,A2_1_2,A2_2_2,A2_3_2,A2_0_1,A2_1_1,A2_2_1,A2_3_1,A2_4_1,A2_0_0,A2_1_0,A2_2_0,A2_3_0,A2_4_0,A3_0_5,A3_1_5,A3_2_5,A3_3_5,A3_4_5,A3_0_4,A3_1_4,A3_2_4,A3_3_4,A3_4_4,A3_5_4,A3_0_3,A3_1_3,A3_2_3,A3_3_3,A3_4_3,A3_5_3,A3_0_2,A3_1_2,A3_2_2,A3_3_2,A3_4_2,A3_5_2,A3_6_2,A3_0_1,A3_1_1,A3_2_1,A3_3_1,A3_4_1,A3_5_1,A3_6_1,A3_1_0,A3_2_0,A3_3_0,A3_4_0,A3_5_0,A3_6_0,B2_0_5,B2_1_5,B2_2_5,B2_0_4,B2_1_4,B2_2_4,B2_3_4,B2_0_3,B2_1_3,B2_2_3,B2_3_3,B2_0_2,B2_1_2,B2_2_2,B2_3_2,B2_0_1,B2_1_1,B2_2_1,B2_3_1,B2_4_1,B2_1_0,B2_2_0,B2_3_0,B2_4_0,c),(lp(1),dp(110));",
+  "ring_from_frozen_builder_fix": true,
+  "rows": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n18m12_M2_9_ell2_s3/C_n18m12_M2_9_ell2_s3_G_sparse_rows.tsv",
+  "rows_bytes": 4746199,
+  "rows_sha256": "e8835c8a34886c6b252591204a29416b44042b32f867e6f31f379cab6b6491ec",
+  "schema": "moh-gi-only-sparse-hadic-extraction-experiment-v1",
+  "source_fixed_builder": "box/gi-only-20260905/classes/C_n18m12_M2_9_ell2_s3/builders/C_n18m12_M2_9_ell2_s3_G_builder.sing",
+  "source_fixed_builder_sha256": "535ed0dbf7ae89f5f1768b10c0c26b6be99ed78f680540c8ad3fcf085d0b41da",
+  "status": "PASS",
+  "stem": "C_n18m12_M2_9_ell2_s3_G",
+  "total_expanded_parameter_terms": 149597,
+  "unknowns_with_T": 110,
+  "unknowns_without_T": 109
+}

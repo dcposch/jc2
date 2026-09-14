@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and on time. The final report hash was recorded at 11:11:19 UTC, before the 11:22 UTC hard stop.
+
+**Deliverables**
+- `xmodel/f10-compact-contract-module-gate-fable5-20260909.md` (19,396 bytes, single standalone `<!-- BODY-END -->`, no seal, no charge_basis line).
+- `box/f10-compact-contract-module-gate-fable5-20260909/` with input-pins.sha256 (six hashes, invitation order, all matched before whole reads), timing.txt, report.sha256, NOTES.txt.
+
+```
+1bf4c20c37a0d45874e110a3d991a481fe88165156c0f6fcb41f180c8514705b  xmodel/f10-compact-contract-module-gate-fable5-20260909.md
+```
+
+**Verdicts: A–H all CONFIRMED** (H confirmed as stated). Zero mathematical subprocesses; every identity was rederived by hand in factored prose.
+
+- **A.** The contract's factored source polynomial is exact, sign by sign. Only V is ever inverted and it cancels identically. Degree 28 with top U⁷V²¹ comes from the single term −UW³, independent of u and ell. t = −V/W has rational degree −8 with leading rational function U⁻²V⁻⁶.
+- **B.** The two-ring intersection, the three Jacobian determinants (+1, −z, g) and Delta = −gt give ordinary P, Q with [P,Q] = c. The unique monic R^e term forces degrees 28m, 28n and the stated tops. Since 5m − 3n = −1, neither degree divides the other, so the Jung–van der Kulk corollary gives a Keller non-automorphism, embeddable into C. This is sufficient with no backward F10 chain.
+- **C.** Independently rederived 21r+28 variables and at most 28r+35 rows (49/63 at r=1). I wrote out all ten inverse rows explicitly: three scalar A rows and seven B rows, with p-degree 1 only at z⁻¹ and z⁻². The v0 translation, residue-field-first endpoint and necessity at the accepted scope all hold.
+- **D–E.** The rank-3 module theorem, presentation, whole intersection via comaximal powers of y and y+1, chart gluing, the nonreduced special fibre, the mod-3 filtration, and all cubic and quintic exact divisions and controls check.
+- **F–G.** Bounds (13)–(14) are necessary and sufficient. [x,p] = 2p − t is confirmed and shows T is not a Poisson subalgebra. The module's leading shapes are forced for every contract point by the pole rows plus the t⁷ bracket row. The ten pole rows are triangular in ten pivots, so the root count of 21r+18 variables and at most 28r+25 rows (39/53 at r=1) is a sound reparametrization of the same quotient algebra. A useful cross-check: the two independently authored boundary descriptions coincide row for row.
+- **H.** Remaining obligation: either a field point of J_r for one r (or 1 ∉ J_r), or 1 ∈ J_r for every r with a uniform-in-r argument. Neither is supplied, and neither I_r nor J_r is claimed proper or unit.
+
+No OPEN was raised and the own-only collision check is empty. No other file was touched and nothing was committed.
+DIVERT path=xmodel/f10-compact-contract-module-gate-fable5-20260909.md status=CLEAN body_bytes=19396 body_sha256=1bf4c20c37a0d45874e110a3d991a481fe88165156c0f6fcb41f180c8514705b

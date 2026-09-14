@@ -1,0 +1,63 @@
+{
+  "argv_count": 14,
+  "argv_sha256": "907c95e3013bc16026b39fd5d604234c6549078ddd60e976edc86154b9f4ae8a",
+  "caps": {
+    "cpu_seconds": null,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 8589934592,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 600.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/d125-full-stream-gate-fable5-20260906",
+  "enforcement": {
+    "cpu": "disabled",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/d125-full-stream-gate-fable5-20260906",
+  "max_observed_group_rss_bytes": 463618048,
+  "pgid": 3079,
+  "pid": 3079,
+  "resource": null,
+  "runner_exit_code": 0,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=235391e8-e646-4ac8-b319-8e609c031bf4;start_ticks=153555",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/d125-full-stream-gate-fable5-20260906/gate.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 67,
+    "path": "/home/ubuntu/d125-full-stream-gate-fable5-20260906/gate.stdout",
+    "sha256": "e5d13a2d40ae46cf16fba376c04f88fd3b09998f794b81f07be876d176af3d8a"
+  },
+  "telemetry_path": "/home/ubuntu/d125-full-stream-gate-fable5-20260906/gate.telemetry.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-06T22:00:35.573656Z",
+  "utc_start": "2026-09-06T21:59:53.914186Z",
+  "wall_elapsed_seconds": 41.659476096
+}

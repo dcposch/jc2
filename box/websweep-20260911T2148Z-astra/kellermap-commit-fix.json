@@ -1,0 +1,221 @@
+{
+  "sha": "d09d2fe9c5b825c9cf808305655c343793c10f79",
+  "node_id": "C_kwDOTqSOWdoAKGQwOWQyZmU5YzViODI1YzljZjgwODMwNTY1NWMzNDM3OTNjMTBmNzk",
+  "commit": {
+    "author": {
+      "name": "Raphael Kruse",
+      "email": "raphael.kruse@mathematik.uni-halle.de",
+      "date": "2026-09-11T14:54:35Z"
+    },
+    "committer": {
+      "name": "Raphael Kruse",
+      "email": "raphael.kruse@mathematik.uni-halle.de",
+      "date": "2026-09-11T14:54:35Z"
+    },
+    "message": "Ask BCW-10 for a carried factor everywhere it is safe to\n\nWork package 16 of milestone 0.7, the high finding of the audit of\n0.7.0rc3, and the version opens 0.7.0rc4. Two of the three sites are\ncorrected, the third is measured and left, and no figure moves.\n\nPolynomialMap.carrier_indices_for_factors is the shared predicate the\naudit asked for: dF_j/dX_j == 1, which is BCW-10's third clause and the\nwhole of what a step asks of a carried slot. It always contains\ncarrier_indices, which asks for more because it picks out a unipotent\nblock: it drops every coordinate on a dependency cycle and its docstring\nsays it is not maximal. That is the right question for the block and the\nwrong one for a factor.\n\nuntargeted._carried_values asks it now. On\n(x + y^2, y + x + z, z + 2x + y^2, w + y^4) reduce_to_degree3 bought a\ncoordinate where one step using the first coordinate twice drops the\ndegree from four to three and buys nothing; it takes that step now.\n\npeeling._stranded asks it now, and this is the release blocker rather\nthan a lost dimension. The rule prunes a branch standing one coordinate\nabove the source when the source has no carrier, since a further step\ncould then only buy. carrier_indices is empty on a linear map whose\ncoordinates depend on each other in a cycle although every one of them\nsatisfies BCW-10, so the premise was false: the audit found peel\nreporting an exhausted space with a verified two-step chain inside its\nbounds, and an exhausted space is a claim. Both maps are regression\ntests.\n\nsearch.anchors and enumerate_candidates still ask the narrower question,\nand that is a measurement and not an oversight. Swapping the predicate in\nthere does not widen the space. _partner lets a carrier take a slot a\npool name would otherwise fill and found.setdefault keeps whichever came\nfirst, so a chain the search used to find drops out: the unweighted\ncontrol of SEA-14 exhausts at 2667 states with nothing, at every budget\ntried. Offering both forms is the correction, it is the same one work\npackage 10 made for the multi-affine walk, and it moves SEA figures, so\nit is its own package. The reason sits in the code beside the line that\nwas not changed.\n\nI deferred this fix twice before, in work packages 10 and 13, to keep\n0.6's figures still. The price I was avoiding is zero and was measured\nbefore this change: reduce_to_degree3 reaches the same thirteen from the\nnormalized Alpoege map in the same seven steps and the same map, and the\nmulti-affine walk reaches the same 19, 23 and 24. Deferring it let the\nsame conceptual error reach a place where it produced a false report.\n\nUNT-9, UNT-12 and REV-7 say which predicate they mean. REV-7's paragraph\nsays why the pruning is where the narrower set stopped being a narrower\ndecision and became a wrong answer.",
+    "tree": {
+      "sha": "c5adf3e3ce90048d9c763b560bd29dfea6427b34",
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/c5adf3e3ce90048d9c763b560bd29dfea6427b34"
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/d09d2fe9c5b825c9cf808305655c343793c10f79",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqkFkAACgkQpYdnzilV\ndCV23Q/9EiOb5AlcPtsUvKdcA3q2vOV7s9aVw++8CmmYikzHLL4kxSrKaH3/kE5q\nK4BB+GmipNF5Z1lv2g4Z01Bl/TXx5cMK6lKdjPVY6rpHjsJJ9Z5gRUSkrzj/WBjb\nGWd4H0WHCyicpVMHg7c+QG9GFBVF4sGgaIepwtvrRri073VluhqmUDaJ9B+yLOsl\nyeEn7jPhbZRjnxNQeyzde1okBUcxwDyrzltnVfGgBeimUF4R2LdG2wYS2PMRoZaE\n442NB75gRKp+lO0XNQeGpla6BDGldh2dp1V2zJOi2taqe6B/PM5WhDeU4sks4+Mz\nlnN1k5TFshAHSrd6+ufZkXnVaMOUF3ApiNBTfGc3jDkHBP/y7a2vW4Bavv8+zs+R\nthIkG2ZmGY3YM+ghPlkVakz00GNmWJoQjGgjmj6CSjKZ3Sro9v2Z1QbI9P3cCs3W\nwKom0ZAf/L6uyJQS7UqHHXqZ2lqs+bWjDjJN47r2AH1QlAF/wz7jYVVEFU3GN6r1\nPR9SlkSiqMCBmKrmXQbnykCAXdL229CYpORSgvl+eN3cmSWgVpKBgvIMqDk5aUNe\nx+P+wUi3s3rRHH/qgWXfQVuK2RzUeBbCsySzf4srBdJcjNUDsvCymrNPUz5gDTgs\n6PQ1m3bGrKkF5Qw5Sa6depfc0G/MZlmp/3w4afQNb7VPz8CBXJc=\n=zua5\n-----END PGP SIGNATURE-----",
+      "payload": "tree c5adf3e3ce90048d9c763b560bd29dfea6427b34\nparent 26b6862568693cb88b9cd7a9aa89f3453f546c2d\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789138475 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789138475 +0200\n\nAsk BCW-10 for a carried factor everywhere it is safe to\n\nWork package 16 of milestone 0.7, the high finding of the audit of\n0.7.0rc3, and the version opens 0.7.0rc4. Two of the three sites are\ncorrected, the third is measured and left, and no figure moves.\n\nPolynomialMap.carrier_indices_for_factors is the shared predicate the\naudit asked for: dF_j/dX_j == 1, which is BCW-10's third clause and the\nwhole of what a step asks of a carried slot. It always contains\ncarrier_indices, which asks for more because it picks out a unipotent\nblock: it drops every coordinate on a dependency cycle and its docstring\nsays it is not maximal. That is the right question for the block and the\nwrong one for a factor.\n\nuntargeted._carried_values asks it now. On\n(x + y^2, y + x + z, z + 2x + y^2, w + y^4) reduce_to_degree3 bought a\ncoordinate where one step using the first coordinate twice drops the\ndegree from four to three and buys nothing; it takes that step now.\n\npeeling._stranded asks it now, and this is the release blocker rather\nthan a lost dimension. The rule prunes a branch standing one coordinate\nabove the source when the source has no carrier, since a further step\ncould then only buy. carrier_indices is empty on a linear map whose\ncoordinates depend on each other in a cycle although every one of them\nsatisfies BCW-10, so the premise was false: the audit found peel\nreporting an exhausted space with a verified two-step chain inside its\nbounds, and an exhausted space is a claim. Both maps are regression\ntests.\n\nsearch.anchors and enumerate_candidates still ask the narrower question,\nand that is a measurement and not an oversight. Swapping the predicate in\nthere does not widen the space. _partner lets a carrier take a slot a\npool name would otherwise fill and found.setdefault keeps whichever came\nfirst, so a chain the search used to find drops out: the unweighted\ncontrol of SEA-14 exhausts at 2667 states with nothing, at every budget\ntried. Offering both forms is the correction, it is the same one work\npackage 10 made for the multi-affine walk, and it moves SEA figures, so\nit is its own package. The reason sits in the code beside the line that\nwas not changed.\n\nI deferred this fix twice before, in work packages 10 and 13, to keep\n0.6's figures still. The price I was avoiding is zero and was measured\nbefore this change: reduce_to_degree3 reaches the same thirteen from the\nnormalized Alpoege map in the same seven steps and the same map, and the\nmulti-affine walk reaches the same 19, 23 and 24. Deferring it let the\nsame conceptual error reach a place where it produced a false report.\n\nUNT-9, UNT-12 and REV-7 say which predicate they mean. REV-7's paragraph\nsays why the pruning is where the narrower set stopped being a narrower\ndecision and became a wrong answer.\n",
+      "verified_at": "2026-09-11T14:55:09Z"
+    }
+  },
+  "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/d09d2fe9c5b825c9cf808305655c343793c10f79",
+  "html_url": "https://github.com/rk-mlu/kellermap/commit/d09d2fe9c5b825c9cf808305655c343793c10f79",
+  "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/d09d2fe9c5b825c9cf808305655c343793c10f79/comments",
+  "author": {
+    "login": "rk-mlu",
+    "id": 65403623,
+    "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rk-mlu",
+    "html_url": "https://github.com/rk-mlu",
+    "followers_url": "https://api.github.com/users/rk-mlu/followers",
+    "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+    "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+    "repos_url": "https://api.github.com/users/rk-mlu/repos",
+    "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "rk-mlu",
+    "id": 65403623,
+    "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rk-mlu",
+    "html_url": "https://github.com/rk-mlu",
+    "followers_url": "https://api.github.com/users/rk-mlu/followers",
+    "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+    "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+    "repos_url": "https://api.github.com/users/rk-mlu/repos",
+    "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "26b6862568693cb88b9cd7a9aa89f3453f546c2d",
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/26b6862568693cb88b9cd7a9aa89f3453f546c2d",
+      "html_url": "https://github.com/rk-mlu/kellermap/commit/26b6862568693cb88b9cd7a9aa89f3453f546c2d"
+    }
+  ],
+  "stats": {
+    "total": 209,
+    "additions": 196,
+    "deletions": 13
+  },
+  "files": [
+    {
+      "sha": "a13c57e3d316fb289dac05762465129c6ce9a360",
+      "filename": "CHANGELOG.md",
+      "status": "modified",
+      "additions": 27,
+      "deletions": 0,
+      "changes": 27,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/CHANGELOG.md",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/CHANGELOG.md",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/CHANGELOG.md?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -4,6 +4,33 @@ Notable changes per release. The milestone plan and its reasoning live in\n `docs/roadmap.md`, the binding obligations of the verification surface in\n `docs/contracts.md`.\n \n+## 0.7.0rc4\n+\n+`PolynomialMap.carrier_indices_for_factors` is what a carried factor is asked\n+for now: BCW-10's own condition, `dF_j/dX_j == 1`, and not the unipotent block\n+of `carrier_indices`, which drops every coordinate on a dependency cycle and\n+says of itself that it is not maximal. The untargeted enumerator and the\n+pruning rule of `peel` ask it.\n+\n+The pruning rule is why this is a release blocker rather than a lost dimension.\n+It prunes a branch standing one coordinate above the source when the source has\n+no carrier, and `carrier_indices` is empty on a linear map whose coordinates\n+depend on each other in a cycle although every one of them satisfies BCW-10. A\n+peel on such a source reported an exhausted space with a verified two-step\n+chain inside its bounds. An exhausted space is a claim.\n+\n+The figures do not move. `reduce_to_degree3` reaches the same thirteen from\n+Alpoege's map in the same seven steps and the same map, and the multi-affine\n+walk reaches the same 19, 23 and 24.\n+\n+The targeted search still asks the narrower question, and that is measured\n+rather than left. Swapping the condition in there does not widen the space:\n+a carrier takes a slot a pool name would otherwise fill, and the first\n+candidate to reach the deduplication wins, so a chain the search used to find\n+drops out -- the unweighted control of SEA-14 then exhausts at 2667 states with\n+nothing. Offering both forms is the correction, and it is the same one the\n+multi-affine walk needed; it is its own package.\n+\n ## 0.7.0rc3\n \n UNT-12 says one candidate per factorization *and* slot assignment. It said per"
+    },
+    {
+      "sha": "42e7450fda4eb4045d747c6851b4bf99cd81f28a",
+      "filename": "CITATION.cff",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/CITATION.cff",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/CITATION.cff",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/CITATION.cff?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -13,7 +13,7 @@ authors:\n     country: DE\n license: MIT\n repository-code: \"https://github.com/rk-mlu/kellermap\"\n-version: 0.7.0rc3\n+version: 0.7.0rc4\n # The DOI of 0.6.0. A release candidate is not deposited and has no DOI of its\n # own, so this stands beside a version that has moved past it until one for\n # 0.7.0 is reserved. The README says the same in prose."
+    },
+    {
+      "sha": "d4dd14de5c0837d4ad4b1a2914fcceaf53fd3637",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/README.md",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/README.md",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/README.md?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -36,7 +36,7 @@ machine-checkable certificate.\n \n ## Project Status\n \n-Current version: **0.7.0rc3**\n+Current version: **0.7.0rc4**\n \n DOI: [10.5281/zenodo.22299353](https://doi.org/10.5281/zenodo.22299353). That\n is not the DOI of the version above: a release candidate is not deposited and"
+    },
+    {
+      "sha": "756d9ee9dfb805a66ea1130ba6d4af4d09ef98ad",
+      "filename": "docs/contracts.md",
+      "status": "modified",
+      "additions": 20,
+      "deletions": 2,
+      "changes": 22,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/docs%2Fcontracts.md",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/docs%2Fcontracts.md",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/docs%2Fcontracts.md?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -2818,6 +2818,16 @@ where to look and not a fact about Keller maps, so a chain outside it is\n unreachable rather than absent -- the same reading \"No completeness of the\n enumerator either\" already asks for.\n \n+That reading makes the pruning a place to be careful, because a wrong premise\n+there does not narrow a decision, it falsifies a report. The rule that prunes a\n+branch standing one coordinate above the source does so when the source has no\n+carrier, since a further step could then only buy. A carrier there is\n+`carrier_indices_for_factors` since `0.7.0rc4`. It was `carrier_indices`, which\n+is a unipotent block and is empty on a linear map whose coordinates depend on\n+each other in a cycle, although every one of them satisfies BCW-10. An audit of\n+`0.7.0rc3` found the peel reporting an exhausted space on such a source with a\n+verified two-step chain inside its bounds.\n+\n ### Which of these can fail on supplied data\n \n REV-3, whose second half is a real check on the map being peeled, and REV-5,\n@@ -3048,6 +3058,14 @@ it, buying two coordinates for the first three steps and one for each of the\n last four. The search finds that pattern without being told that carriers\n exist.\n \n+A carrier here is `carrier_indices_for_factors`, BCW-10's own condition. Until\n+`0.7.0rc4` this enumerator asked `carrier_indices`, which is a unipotent block\n+and drops every coordinate on a dependency cycle, so a coordinate a step can\n+use was passed over: on `(x + y^2, y + x + z, z + 2x + y^2, w + y^4)` it bought\n+a coordinate where one step drops the degree to three and buys nothing. The\n+figures above are unchanged by the correction, which was measured before it was\n+made.\n+\n **UNT-10 — The steps are ordered, by what one removes and then by what it\n buys.** `ordered_steps` returns them sorted: first by how much of `Phi`\n the step removes, largest first, and among equals by how many coordinates it\n@@ -3177,8 +3195,8 @@ one. A coordinate that already holds a factor supplies it and costs nothing,\n UNT-9; a coordinate that would break one of the three conditions is passed\n over and the factor is bought.\n \n-Holding a factor is BCW-10's third clause and nothing stronger: `j` holds\n-`components[j] - X_j` when that displacement is free of `X_j`. It is not\n+Holding a factor is BCW-10's third clause and nothing stronger, which is what\n+`PolynomialMap.carrier_indices_for_factors` returns. It is not\n `carrier_indices`, which asks for more. That set is a set of coordinates whose\n dependencies are acyclic, which is what makes the block it picks out unipotent,\n and its docstring says it is deliberately not maximal. That is the right"
+    },
+    {
+      "sha": "e969b59b0b8d69bbd9953956612a089270ce08ac",
+      "filename": "pyproject.toml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/pyproject.toml",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/pyproject.toml",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/pyproject.toml?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -1,6 +1,6 @@\n [project]\n name = \"kellermap\"\n-version = \"0.7.0rc3\"\n+version = \"0.7.0rc4\"\n description = \"Polynomial Keller maps and certified transformations of them, carrying out the Bass–Connell–Wright reduction and the constructions that follow it.\"\n readme = \"README.md\"\n requires-python = \">=3.10\""
+    },
+    {
+      "sha": "db4cae179779ae7bb74cc5494669b0bf3d1db7e5",
+      "filename": "src/kellermap/peeling.py",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 1,
+      "changes": 13,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/src%2Fkellermap%2Fpeeling.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/src%2Fkellermap%2Fpeeling.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/src%2Fkellermap%2Fpeeling.py?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -643,8 +643,19 @@ def _stranded(source: PolynomialMap, reached: PolynomialMap) -> bool:\n     Alpoege's map has no carriers, so this prunes every branch that spends its\n     last removal on a single coordinate. It is a statement about the source\n     that was handed in, not a rule about Keller maps.\n+\n+    Which carriers matters here more than anywhere else, because the rule turns\n+    the answer into a claim. ``carrier_indices`` is a unipotent block and is\n+    empty on a linear map whose coordinates depend on each other in a cycle,\n+    although every one of them satisfies BCW-10 and a step using it builds. An\n+    audit of ``0.7.0rc3`` found ``peel`` reporting an exhausted space on such a\n+    source with a verified two-step chain inside its bounds. The condition is\n+    BCW-10's own now.\n     \"\"\"\n-    return reached.dimension == source.dimension + 1 and not source.carrier_indices\n+    return (\n+        reached.dimension == source.dimension + 1\n+        and not source.carrier_indices_for_factors\n+    )\n \n \n def _rebuild("
+    },
+    {
+      "sha": "a50d7bf6af4832d6e86378e19dfbb803f82f9ba4",
+      "filename": "src/kellermap/polynomial_map.py",
+      "status": "modified",
+      "additions": 34,
+      "deletions": 0,
+      "changes": 34,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/src%2Fkellermap%2Fpolynomial_map.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/src%2Fkellermap%2Fpolynomial_map.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/src%2Fkellermap%2Fpolynomial_map.py?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -545,6 +545,40 @@ def carrier_indices(self) -> tuple[int, ...]:\n \n         return tuple(sorted(candidates))\n \n+    @property\n+    def carrier_indices_for_factors(self) -> tuple[int, ...]:\n+        \"\"\"Return every coordinate BCW-10 admits as a carried factor.\n+\n+        An index ``j`` qualifies when ``dF_j/dX_j == 1``, which is to say that\n+        ``F_j - X_j`` is free of ``X_j``. That is the third clause of BCW-10\n+        and the whole of what a step asks of a carried slot.\n+\n+        A coordinate whose displacement is zero qualifies, as it does for\n+        ``carrier_indices``, and this property is that one without the\n+        acyclicity: it always contains it. A caller that needs a factor of\n+        positive order filters for one, which is where that belongs.\n+\n+        Not ``carrier_indices``, which asks for more. That property picks out a\n+        unipotent block, so it drops every coordinate on a dependency cycle and\n+        says of itself that it is not maximal. A step does not need the block.\n+        On ``(x + y^2, y + x + z, z + 2x + y^2, w + y^4)`` all four coordinates\n+        qualify here and two of them there; on a linear Keller map whose\n+        coordinates depend on each other in a cycle, all of them qualify here\n+        and none there.\n+\n+        Audits of ``0.7.0rc2`` and ``0.7.0rc3`` found four places asking the\n+        stronger question: the untargeted enumerator, the targeted one, the\n+        multi-affine walk and one pruning rule in ``peel``. The last turned it\n+        into a wrong claim rather than a missed step, reporting an exhausted\n+        space where a verified chain existed.\n+        \"\"\"\n+        rows = self._jacobian_polynomials\n+        one = self._ring.one\n+\n+        return tuple(\n+            index for index in range(self.dimension) if rows[index][index] == one\n+        )\n+\n     def _dependency_graph(self, indices: Iterable[int]) -> dict[int, set[int]]:\n         \"\"\"Return, for each of ``indices``, the others it differentiates against.\"\"\"\n         rows = self._jacobian_polynomials"
+    },
+    {
+      "sha": "cd46e7a34ec5a748582a61154782149892370aa5",
+      "filename": "src/kellermap/search.py",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 0,
+      "changes": 6,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/src%2Fkellermap%2Fsearch.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/src%2Fkellermap%2Fsearch.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/src%2Fkellermap%2Fsearch.py?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -290,6 +290,12 @@ def anchors(source: PolynomialMap, pool: Iterable[sp.Expr]) -> tuple[Slot, ...]:\n         and converted\n         and _order(converted) >= 1\n     ]\n+    # Not ``carrier_indices_for_factors``. Swapping it in here does not widen\n+    # the space: ``_partner`` lets a carrier take a slot a pool name would\n+    # otherwise fill, and ``found.setdefault`` keeps whichever came first, so a\n+    # chain the search used to find drops out. Measured at ``0.7.0rc4``: the\n+    # unweighted control of SEA-14 exhausts at 2667 states with nothing.\n+    # Offering both forms is the correction and it is its own package.\n     available.extend(Carried(index) for index in source.carrier_indices)\n \n     return tuple(available)"
+    },
+    {
+      "sha": "b634d909d1b84f62e9cda26813572877034cfbb3",
+      "filename": "src/kellermap/untargeted.py",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 5,
+      "changes": 18,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/src%2Fkellermap%2Funtargeted.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/src%2Fkellermap%2Funtargeted.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/src%2Fkellermap%2Funtargeted.py?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -382,11 +382,19 @@ def _cofactor_sum(\n \n \n def _carried_values(source: PolynomialMap) -> dict[sp.Expr, int]:\n-    \"\"\"Return the value each carrier coordinate holds, by value.\"\"\"\n+    \"\"\"Return the value each coordinate BCW-10 admits as a factor holds.\n+\n+    ``carrier_indices_for_factors`` and not ``carrier_indices``. An audit of\n+    ``0.7.0rc3`` found this enumerator asking for the unipotent block where the\n+    third clause of BCW-10 is what a step needs, so a coordinate on a\n+    dependency cycle was passed over although a step using it builds and\n+    verifies.\n+    \"\"\"\n     held: dict[sp.Expr, int] = {}\n-    for index in source.carrier_indices:\n+    for index in source.carrier_indices_for_factors:\n         value = sp.expand(source.components[index] - source.variables[index])\n-        held.setdefault(value, index)\n+        if value != 0:\n+            held.setdefault(value, index)\n \n     return held\n \n@@ -745,9 +753,9 @@ def _multi_affine_holders(source: PolynomialMap) -> dict[sp.Expr, tuple[int, ...\n     that ``docs/roadmap.md`` claims for that map.\n     \"\"\"\n     holders: dict[sp.Expr, list[int]] = {}\n-    for index in range(source.dimension):\n+    for index in source.carrier_indices_for_factors:\n         value = sp.expand(source.components[index] - source.variables[index])\n-        if value != 0 and not value.has(source.variables[index]):\n+        if value != 0:\n             holders.setdefault(value, []).append(index)\n \n     return {value: tuple(indices) for value, indices in holders.items()}"
+    },
+    {
+      "sha": "721f86b56725f089589970146a98ae82fa47fc19",
+      "filename": "tests/test_multi_affine.py",
+      "status": "modified",
+      "additions": 80,
+      "deletions": 1,
+      "changes": 81,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/tests%2Ftest_multi_affine.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/tests%2Ftest_multi_affine.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/tests%2Ftest_multi_affine.py?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -20,15 +20,18 @@\n from kellermap import (\n     LinearStep,\n     PolynomialMap,\n+    Reduction,\n     examples,\n     over_field,\n+    peel,\n+    reduce_to_degree3,\n     reduce_to_multi_affine,\n     remaining_excess,\n )\n from kellermap.bcw import BCWStep\n from kellermap.bcw.grading import squared_terms\n from kellermap.bcw.homogenization import HomogenizationStep\n-from kellermap.bcw.step import Fresh\n+from kellermap.bcw.step import Carried, Fresh\n from kellermap.bcw.unipotent import UnipotentStep\n from kellermap.context import ReductionContext\n from kellermap.untargeted import EXCESS_BASE, multi_affine_steps\n@@ -240,6 +243,82 @@ def test_one_factorization_can_yield_two_candidates() -> None:\n         assert remaining_excess(step.target) < remaining_excess(source)\n \n \n+def test_the_untargeted_walk_sees_a_carrier_on_a_cycle() -> None:\n+    \"\"\"``reduce_to_degree3`` asked for the unipotent block until ``0.7.0rc4``.\n+\n+    On this map all four coordinates satisfy BCW-10 and two of them lie on a\n+    dependency cycle, so ``carrier_indices`` holds two. A single step using the\n+    first coordinate twice drops the degree from four to three without buying\n+    anything; the walk bought a coordinate instead. An audit of ``0.7.0rc3``\n+    found it.\n+    \"\"\"\n+    source = over_field(\n+        PolynomialMap(\n+            (x, y, z, w),\n+            (x + y**2, y + x + z, z + 2 * x + y**2, w + y**4),\n+        )\n+    )\n+\n+    assert source.carrier_indices == (2, 3)\n+    assert source.carrier_indices_for_factors == (0, 1, 2, 3)\n+\n+    outcome = reduce_to_degree3(source)\n+    assert outcome.reduction is not None\n+    outcome.reduction.verify()\n+\n+    assert outcome.reduction.target.dimension == source.dimension\n+    assert outcome.reduction.target.degree() == 3\n+\n+\n+def test_a_peel_does_not_call_a_space_exhausted_over_a_cycle() -> None:\n+    \"\"\"The pruning rule of ``peel`` turned the narrower set into a wrong claim.\n+\n+    ``_stranded`` prunes a branch that stands one coordinate above the source\n+    when the source has no carrier, because a further step could then only buy.\n+    On a linear map whose coordinates depend on each other in a cycle,\n+    ``carrier_indices`` is empty and every coordinate satisfies BCW-10, so the\n+    premise was false and the peel reported an exhausted space with a verified\n+    chain inside its bounds. An audit of ``0.7.0rc3`` found it.\n+    \"\"\"\n+    generators = sp.symbols(\"x0:4\")\n+    source = over_field(\n+        PolynomialMap(\n+            generators,\n+            (\n+                generators[0] - 2 * generators[1] - generators[3],\n+                generators[0] + generators[1] - generators[2] + generators[3],\n+                -2 * generators[0] + generators[2] - 2 * generators[3],\n+                -2 * generators[0] + 2 * generators[1] + generators[2] + generators[3],\n+            ),\n+        )\n+    )\n+\n+    assert source.determinant() == 1\n+    assert source.carrier_indices == ()\n+    assert source.carrier_indices_for_factors == (0, 1, 2, 3)\n+\n+    first = BCWStep.build(\n+        source,\n+        0,\n+        Carried(1),\n+        Fresh(generators[2] * generators[3], sp.Symbol(\"u\")),\n+        filtration_level=0,\n+    )\n+    second = BCWStep.build(\n+        first.target,\n+        1,\n+        Carried(2),\n+        Fresh(generators[0] * generators[1], sp.Symbol(\"v\")),\n+        filtration_level=0,\n+    )\n+    Reduction((first, second)).verify()\n+\n+    outcome = peel(source, second.target, budget=1000, rising=2, pairs=0)\n+\n+    assert outcome.reduction is not None\n+    assert outcome.exhausted is False\n+\n+\n def test_a_carrier_on_a_dependency_cycle_is_offered() -> None:\n     \"\"\"BCW-10 is the condition, and ``carrier_indices`` asks for more.\n "
+    },
+    {
+      "sha": "98192d8ebc9a5eef41664314883cee850f71ddd0",
+      "filename": "uv.lock",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/d09d2fe9c5b825c9cf808305655c343793c10f79/uv.lock",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/d09d2fe9c5b825c9cf808305655c343793c10f79/uv.lock",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/uv.lock?ref=d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "patch": "@@ -502,7 +502,7 @@ wheels = [\n \n [[package]]\n name = \"kellermap\"\n-version = \"0.7.0rc3\"\n+version = \"0.7.0rc4\"\n source = { editable = \".\" }\n dependencies = [\n     { name = \"sympy\" },"
+    }
+  ]
+}

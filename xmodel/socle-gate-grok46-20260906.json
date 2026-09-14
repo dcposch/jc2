@@ -1,0 +1,106 @@
+{
+  "tag": "socle-gate-grok46-20260906",
+  "adapter": "grok",
+  "utc": "2026-09-06T00:41:03Z",
+  "hash_check": {
+    "method": "awk -F= pairing charged_input_<i>_sha256 and _basename from xmodel/socle-gate-grok46-20260906.run.v2; sha256sum -c",
+    "exit": 0,
+    "results": [
+      {"basename": "ideation-20260906T0000Z-opus5.md", "sha256": "a7ee66808eb8688a568d9da98ec5840e9bb55fe0c76af21e6ac9852fb5cad89f", "status": "OK"},
+      {"basename": "char-degree-instrument-astra-r2-20260905.md", "sha256": "d9b95ce9c4588104c9f306d987f91957988611b80d2025a05f14c40568e33b45", "status": "OK"},
+      {"basename": "graded-macaulay-astra-20260905.md", "sha256": "5587ef5551fa6aaf49d9652bdddcdc31a2caa020a578bf31736d6becb87ee01f", "status": "OK"},
+      {"basename": "graded-moh-astra-r2-20260905.md", "sha256": "31b1a6a8a94a61968d88f4b92713b6a5eb15d6da1df041f37d055e933ba1deb6", "status": "OK"},
+      {"basename": "FALLACY-v2.md", "sha256": "e47fd16cfcc91bc7bfdac4ba1b5f46152db8235e6609dca6e29a5966549c38f5", "status": "OK"}
+    ]
+  },
+  "gradings": {
+    "moh_completed_bidegree": {
+      "applies_to": "four completed Moh fibres 77/111/129/136, not the three char-degree charts",
+      "support_theorem": "I_(B,Y)=0 iff B=0 or Y<lambda(B)",
+      "lambda_B": {"77": "B", "111": "2B", "129": "ceil(13B/3)", "136": "ceil(B/3)"},
+      "charge_zero_Artinian": false,
+      "H_0_D": [6734854, 411455, 11406589, 411455],
+      "c_weight_D": [39, 29, 41, 29],
+      "finite_top_weight": false
+    },
+    "char_degree_dilation": {
+      "action": "F_alpha=alpha^{-n} F(alpha x, alpha y); K(t,z)->K(t/alpha,z)",
+      "weight_of_t_r_coefficient": "r",
+      "beta1_spent": true,
+      "t_index_0_free_coordinates": 0,
+      "positive_grading_after_beta1": true,
+      "finite_top_weight": false,
+      "reason": "k[target_e] injects into R/I_gr; wt(target_e)=198/216"
+    }
+  },
+  "weights": {
+    "lambda_physical": {"99_66": 143, "D108": 153},
+    "lambda_circuit_6k_minus_2": {"99_66": 141, "D108": 151},
+    "target_e_physical": {"99_66": 198, "D108": 216},
+    "target_e_circuit": {"99_66": 196, "D108": 214},
+    "jacobian_constant_n_plus_m_minus_2": {"99_66": 163, "D108": 178},
+    "target_scalars_99_66": {"a": 66, "b": 33, "c": 99, "d": 132, "e0": 198}
+  },
+  "charts": [
+    {
+      "id": "g9966-delta2",
+      "ring_stage0": 2912,
+      "Q_rows_stage0": 1389,
+      "localizers": ["Z55*leader55-1", "Zrho*rho-1"],
+      "source_residual": 0,
+      "special_first_t": {"u": 2, "rho": 3, "minor_a2": 3, "E82": 8},
+      "target_e_in_I_gr": false,
+      "finite_top_weight": false,
+      "verdict": "not decidable this way"
+    },
+    {
+      "id": "g9966-delta52",
+      "ring_stage0": 2910,
+      "Q_rows_stage0": 1389,
+      "localizers": ["Z55*leader55-1", "Zc*c-1"],
+      "source_residual": 0,
+      "special_first_t": {"u": 2, "v": 3, "c": 7, "E82": 8},
+      "target_e_in_I_gr": false,
+      "finite_top_weight": false,
+      "verdict": "not decidable this way"
+    },
+    {
+      "id": "d108-repaired-free-mean",
+      "ring_stage0": 2931,
+      "Q_rows_stage0": 1256,
+      "localizers": ["Z63*leader63-1", "Zc*c-1"],
+      "source_residual": 0,
+      "special_first_t": {"jet0": 1, "jet1": 2, "jet2": 3, "minor_mean": 4, "c": 8},
+      "target_e_in_I_gr": false,
+      "finite_top_weight": false,
+      "verdict": "not decidable this way"
+    }
+  ],
+  "emitter": {
+    "file": "box/char-degree-20260905/d108/coefficient_circuit_backend_v2.py",
+    "sha256": "17a825098e24dcbeb973d7fe6f254c6f5884f2aad9bed196e12166db0520ce35",
+    "q_merge_shift": "6*k-2",
+    "depth": "6*k-2-D2",
+    "q_reaches_band": false
+  },
+  "singular_toys": {
+    "version": "4.3.2",
+    "artinian": {"ring": "32003,(x,y),wp(1,1)", "I": "(x2,xy,y2)", "dim": 0, "vdim": 3, "kbase": ["1", "x", "y"], "max_weight": 1, "reduce_y2": 0, "note": "wt 2 > socle 1 forces membership"},
+    "free_e0": {"ring": "32003,(lam,e0),wp(3,5)", "I": "(0)", "dim": 2, "vdim": -1, "finite_top_weight": false}
+  },
+  "fallacy_v2": {
+    "hilbert_bound_exact_only_for_declared_grading": true,
+    "production_order_is_dp_not_dilation_wp": true,
+    "opus_inverted_k16_socle_implication": true,
+    "correct_artinian_reading_if_top_lt_wt_lambda": "UNIT at N=1, not no-unit",
+    "target_e_zero_is_specialization_not_isomorphism": true
+  },
+  "uuuuuuuuu": {
+    "delta2": "compute-bound OPEN",
+    "delta52": "compute-bound OPEN",
+    "d108_free_mean": "compute-bound OPEN",
+    "converted_to_no_unit_at_any_truncation": false
+  },
+  "charge_basis": null,
+  "new_exit_price_assertion": false
+}

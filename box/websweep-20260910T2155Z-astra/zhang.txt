@@ -1,0 +1,1187 @@
+KELLER MAPS AND HOLONOMIC D-MODULES
+
+arXiv:2609.10180v1 [math.AC] 9 Sep 2026
+
+WENLIANG ZHANG
+
+A BSTRACT. Let k be a field of characteristic p and R = k[x1 , . . . , xn ]. Let D denote the ring of
+k-linear differential operators on R. Let ϕ : R → R be a k-algebra endomorphism whose Jacobian
+is a unit in R. We show that there is a unique k-algebra endomorphism Φ : D → D such that
+Φ|R = ϕ and that the restriction of scalar via Φ preserves holonomicity. We also construct an
+example of a k-algebra endomorphism of D that does not preserve holonomicity.
+
+1. I NTRODUCTION
+Let k be a field of characteristic 0 and R = k[x1 , . . . , xn ] be a polynomial ring in n variables.
+Let ϕ : R → R be a k-algebra endomorphism. ϕ is called Keller (or Jacobian by some authors)
+if det(Jϕ ) ∈ k× where Jϕ denotes the Jacobian matrix of ϕ. The Jacobian conjecture ([Kel39])
+asserts that every Keller endomorphism on R is an automorphism. This conjecture has been
+investigated from a viewpoint of D-modules (cf. [Dix68, BCW82, Bas89, Bav05, BKK07]),
+where D stands for the ring of k-linear differential operators on R (more details on D can be
+found in §2). Let ϕ̃ denote a k-algebra endomorphism on D such that ϕ̃ |R = ϕ (the existence
+of ϕ̃ is discussed in detail in §2). Let ϕ̃ R denote the D-module that agrees with R as an abelian
+group with the (left) D-structure given by θ · r := ϕ̃(θ )r for each θ ∈ D. If ϕ̃ R remains a simple
+D-module, then the Jacobian conjecture holds true (Remark 2.4). The recent counterexample
+to the Jacobian conjecture ([Alp26]) implies that ϕ̃ R may not be a simple D-module. From the
+D-module theoretic viewpoint, ϕ̃ R being a finite-length D-module is the best one can hope for.
+Indeed, a remarkable result of Bavula ([Bav01, Theorem 1.3]) shows that if M is a holonomic Dmodule then so is ϕ̃ M; in particular ϕ̃ R has finite length as a D-module. (The notion of holonomic
+D-modules is discussed in detail in §3.)
+Recently there have been considerable developments and interest in D-modules in prime characteristic p, including the notion of holonomic D-modules. It is natural to ask whether [Bav01,
+Theorem 1.3] can be extended to prime characteristic p, which is the motivation behind this article. The ring of differential operators behaves vastly differently in characteristic p from characteristic 0: in characteristic 0, D is has finitely many k-algebra generators {x1 , . . . , xn , ∂x1 , . . . , ∂xn }
+and consequently an extension of a Keller map in Endk (D) is determined by its image on these
+finitely many generators.However, in characteristic p, the ring D is no longer finitely generated
+t
+[t]
+[pe ]
+as a k-algebra. Set ∂i := t!1 ∂∂xt . Then {∂i | e ≥ 1} is an algebraically independent set over
+i
+k. Thus an extension of a Keller map in Endk (D) can no longer be determined by finitely many
+elements. Consequently new approaches are necessary for extending [Bav01, Theorem 1.3] to
+prime characteristic p.
+Our first main result, proved in §2, is the following:
+Theorem 1.1 (=Theorem 2.11). Assume char(k) = p > 0 and R = k[x1 , . . . , xn ]. Let ϕ ∈ Endk (R)
+be a Keller map. Then there is a unique Φ ∈ Endk (D) such that Φ|R = ϕ.
+1
+
+This is surprising and drastically different from characteristic 0. In characteristic 0, a Keller
+map may admit infinitely many extensions in Endk (D) (Example 2.6). Moreover, in characteristic p, if ϕ is not Keller (e.g. the Frobenius endomorphism on R), then it may also admit infinitely
+many extensions in Endk (D) (cf. Example 2.12).
+To finish our extension of [Bav01, Theorem 1.3], we prove in §3 that:
+Theorem 1.2 (=Theorem 3.8). Assume char(k) = p > 0 and R = k[x1 , . . . , xn ]. Let ϕ ∈ Endk (R)
+be a Keller map and let Φ be its unique extension in Endk (D). Then the restriction of scalar via
+Φ preserves holonomicity; that is, if M is a holonomic D-module, then so is Φ M.
+If ϕ ∈ Endk (R) is not Keller (e.g. the Frobenius endomorphism), then ϕ may admit an extension in Endk (D) that does not preserve holonomicity. In §4, we construct such an example
+(Example 4.1). Hence in characteristic p:
+(1) if ϕ ∈ Endk (R) is Keller, then it admits a unique extension Φ ∈ Endk (D) and the restriction of scalar via Φ preserves holonomicity, or
+(2) if ϕ ∈ Endk (R) is not Keller, then it may admit an extension ϕ̃ ∈ Endk (D) such that the
+restriction of scalar via ϕ̃ does not preserve holonomicity.
+Nonetheless, combining Theorem 1.1, Theorem 1.2 and [Bav01, Theorem 1.3] produces the
+following characteristic-free statement:
+Theorem 1.3. Let k be an arbitrary field and R = k[x1 , . . . , xn ]. Assume that ϕ ∈ Endk (R) is
+Keller and let ϕ̃ be any extension of ϕ in Endk (D). Then the restriction of scalar via ϕ̃ preserves
+holonomicity; that is, if M is a holonomic D-module, then so is ϕ̃ M. In particular, ϕ̃ R has finite
+length in the category of D-modules.
+2. K ELLER MAPS AND THEIR EXTENSIONS
+Let R = k[x1 , . . . , xn ] where k is a field. We will denote the ring of k-algebra endomorphisms
+on R (respectively D) by Endk (R) (respectively Endk (D)). Let ϕ ∈ End(R)
+ bea k-algebra en∂ϕ
+domorphism of R. Set ϕi = ϕ(xi ). Let Jϕ denote the Jacobian matrix ∂ x ji . A k-algebra
+endomorphism ϕ : R → R is called Keller if det(Jϕ ) ∈ k× .
+We will denote by DR/ k (or D in short whenever R and k are clear from the context) the ring
+of k-linear differential operators on R (in the sense of [Gro67, §16]). More specifically, since R
+is a polynomial ring over k, the ring D can be described explicitly as follows:
+[t]
+
+D = R⟨∂i | t ≥ 1, i = 1, . . . , n⟩
+
+t
+[t]
+where ∂i := t!1 ∂∂xt : R → R is the k[x1 , . . . , xi−1 , xi+1 , . . . , xn ]-linear map that sends xis to st xis−t .
+i
+It is clear that every Keller map on R is étale. We will recall properties of étale maps related
+to differential operators as follows:
+Remark 2.1. Let f : A → B be an étale map of k-algebras of finite type. Let DA/ k (respectively
+DB/ k ) denote the ring of k-linear differential operators on A (respectively on B). Then it follows
+from [Más91, Theorem 2.2.5] that f induces a unique k-algebra homomorphism f˜ : DA/ k →
+DB/ k such that f˜(θ ) is the unique element in DB/ k that satisfies
+f˜(θ )( f (a)) = f (θ (a)) ∀a ∈ A.
+2
+
+Put it differently, f induces a unique k-algebra homomorphism f˜ : DA/ k → DB/ k such that the
+following diagram commutes for every θ ∈ DA/ k
+A
+
+θ
+
+/A
+
+f˜(θ )
+
+
+
+f
+
+
+
+B
+
+f
+
+/B
+
+Moreover, the order of differential operators does not increase under this specific f˜; that is, if
+the order of θ is ≤ t then so is the order of f˜(θ ).
+Furthermore, if f : A → B is an étale map of k-algebras of finite type, according to [Más91,
+Theorem 2.2.10], f induces an isomorphism
+b⊗δ 7→b f˜(δ )
+
+B ⊗A DA/ k −−−−−−−→ DB/ k .
+∼
+
+Remark 2.1 prompts the following definition.
+Definition 2.2. Let R = k[x1 , . . . , xn ] where k is a field and ϕ : R → R be an endomorphism. Set
+D = DR/ k .
+(1) ϕ̃ ∈ Endk (D) is called an extension of ϕ if ϕ̃(r) = ϕ(r) for every r ∈ R.
+(2) An extension ϕ̃ ∈ Endk (D) of ϕ is called functorial if the following diagram commutes
+for every θ ∈ D:
+R
+
+
+θ
+
+/R
+
+ϕ̃(θ )
+
+
+
+ϕ
+
+R
+
+ϕ
+
+/R
+
+that is,
+ϕ̃(θ )(ϕ(r)) = ϕ(θ (r)) ∀r ∈ R.
+(3) An extension ϕ̃ : D ∈ Endk (D) of ϕ ∈ Endk (R) is called strict if it does not increase the
+order of differential operators; that is, if θ ∈ D has order ≤ t, then ϕ̃(θ ) has order ≤ t
+for every θ ∈ D.
+Since Keller maps are étale, the following is an immediate consequence of Remark 2.1:
+Proposition 2.3. Let R = k[x1 , . . . , xn ] where k is an arbitrary field. Let ϕ : R → R be a Keller
+map.
+(1) ϕ admits a unique functorial extension Φ in Endk (D).
+(2) This unique functorial extension Φ is strict.
+[b ]
+[b ]
+(3) {Φ(∂1 1 ) · · · Φ(∂n n )) | b1 , . . . , bn ≥ 0} is an R-basis of D; that is,
+D=
+
+M
+
+[b ]
+
+[b ]
+
+RΦ(∂1 1 ) · · · Φ(∂n n ).
+
+b1 ,...,bn ≥0
+
+Remark 2.4. Assume char(k) = 0. The functorial extensions of Keller maps are closely related
+to the Jacobian conjecture. Let ϕ : R → R be a Keller map. Let ϕ̃ be the functorial extension
+of ϕ to Endk (D). We claim that, if ϕ̃ R is a simple D-module, then ϕ must be an automorphism
+(hence the Jacobian conjecture holds true). To see this, we consider the image of ϕ. Since
+ϕ̃(θ )(r) = ϕ(θ (r)) by functoriality, the image ϕ(R) is naturally a D-submodule of ϕ̃ R. If ϕ̃ R is
+a simple D-module, then ϕ(R) = R. Since R is noetherian, surjectivity of ϕ forces injectivity;
+this shows that ϕ is an automorphism.
+3
+
+However, the recent counterexample to the Jacobian conjecture implies that ϕ̃ R may not be a
+simple D-module. Hence, in terms of D-modules, the finite length property of ϕ̃ R is the best one
+can hope for.
+Functorial extensions may not be strict as shown in the following example.
+Example 2.5. Let R = F p [x]. Let F : R → R denote the Frobenius endomorphism. Define
+F̃ : D → D via F̃(r) = F(r) = r p for r ∈ R and F̃(∂ [t] ) = ∂ [pt] for t ≥ 1. Then one can check
+that F̃ is a functorial extension, but not a strict extension as it increases the order of differential
+operators.
+Strict extensions may not be functorial as shown in the following example.
+Example 2.6. Assume char(k) = 0 and let R = k[x]. Consider identity map idR on R. For each
+f ∈ R, define φ f : D → D via φ f (r) = r and φ f (∂ ) = ∂ + f (x). Then one can check that:
+(1) Each φ f is a strict extension of idR in Endk (D) (hence idR admits infinitely many extensions in Endk (D)), and that
+(2) φ f is functorial if and only if f = 0. The unique functorial extension of idR in Endk (D)
+is indeed idD .
+Remark 2.7 (Nousiainen’s Theorem). Assume now that char(k) = p > 0. Let ϕ be a Keller map.
+Then it follows from Nousiainen’s Theorem ([Nou82]) that {ϕ1 . . . , ϕn } is a p-basis for R over
+R(1) := k[R p ] = k[x1p , . . . , xnp ]; that is,
+M
+
+R=
+
+R(1) ϕaa1 · · · ϕnan .
+
+0≤a1 ,...,an ≤p−1
+pe
+
+e
+
+e
+
+If we set R(e) := k[R p ] = k[x1 , . . . , xnp ] for each e ≥ 1, then
+R(e) =
+
+e
+
+M
+
+e
+
+R(e+1) ϕaa1 p · · · ϕnan p and R =
+
+M
+
+R(e) ϕaa1 · · · ϕnan .
+
+0≤a1 ,...,an ≤pe −1
+
+0≤a1 ,...,an ≤p−1
+
+Let ϕ be a k-algebra endomorphism on R that admits an extension ϕ̃ ∈ Endk (D). Since ϕ̃ is
+a ring map, the following hold:
+[ϕ̃i (∂i ), ϕ j ] = ϕ̃([xi , ∂ j ]) = ϕ̃(δi j ) = δi j
+[pe ]
+
+e
+
+), ϕ jp ] = δi j
+( 
+m
+m−t
+[t]
+t ϕi
+ϕ̃(∂i )(ϕim ) =
+0
+
+[ϕ̃i (∂i
+(2.0.1)
+
+[t]
+
+m≥t
+m<t
+
+[t]
+
+[ϕ̃(∂i ), ϕ̃(∂ j )] = 0
+Lemma 2.8. Let R = k[x1 , . . . , xn ] where k is an arbitrary field. Let ϕ ∈ Endk (R) be a Keller
+map and set ϕi := ϕ(xi ). Then
+R = {θ ∈ D|[θ , ϕi ] = 0, for i = 1, . . . , n}.
+Proof. Let Φ denote the unique functorial extension of ϕ (Proposition 2.3). By Proposition
+2.3(3), θ can be written as
+θ=
+
+∑
+
+[b ]
+
+[b ]
+
+rb1 ,...,bn Φ(∂1 1 ) · · · Φ(∂n n ).
+
+b1 ,...,bn ≥0
+4
+
+The commutator [θ , ϕ1 ] = 0 together with [Φ(∂i ), ϕ j ] = δi j implies that rb1 ,...,bn = 0 whenever
+b1 ≥ 1. Continuing this process, one can see that the only potentially nonzero coefficient is
+r0,...,0 and hence θ ∈ R. This shows one inclusion ⊇. The other inclusion ⊆ is clear.
+□
+Remark 2.9. Assume that char(k) = p > 0 and R = k[x1 , . . . , xn ]. Then, for each i, the divided
+[pe ]
+power differential operators {∂i | e ≥ 0} is algebraically independent. On the other hand, if
+m = ∑ti=0 mi pi with 0 ≤ mi ≤ p − 1, then. one can check
+[m]
+
+∂i
+
+t
+
+i
+
+= ∏(∂ [p ] )mi .
+i=0
+[m]
+
+Consequently, if m is not a power of p, then ∂i
+orders.
+
+is determined by differential operators of lower
+
+The following lemma is stated in the form that is most convenient to this article.
+Lemma 2.10. Let A = k[y1 , . . . , yn ] and let M be an A-module. Set A(1) := k[y1p , . . . , ynp ]. Assume
+that there is an R(1) -module morphism φ : M → M and an element a ∈ A such that φ p = 0 and
+φ · a − a · φ = idM , then
+p−1 i
+a ker(φ )
+M = ⊕i=0
+in the category of A(1) -modules.
+Proof. Set M j := ker(φ j+1 ) for j ≥ 0. Note that M = Mp−1 by the hypothesis. First we show
+p−1 i
+a (ker(φ )). Let z be an element of M and we wish to show that z can be written as
+that M = ∑i=0
+p−1 i
+z = ∑i=0 a zi for some zi ∈ ker(φ ). Since M = Mp−1 , there is 0 ≤ j ≤ p − 1 such that z ∈ M j . We
+will induct on j. If j = 0 (that is, z ∈ M0 = ker(φ )), then we can set z0 = z and zi = 0 for i ≥ 1.
+Assume that j ≥ 1 and that we have proved the decomposition for nonnegative integers < j. Set
+z′ := 1j! φ j (z) (since j < p, j! ̸= 0). It follows that z′ ∈ ker(φ ) since φ (z′ ) = φ j+1 (z) = 0. And,
+applying φ · a − a · φ = idM and φ (z′ ) = 0, one can check:
+φ j (a j z′ ) = j!z′ = φ j (z).
+Consequently φ j (z − a j z′ ) = φ j (z) − φ j (a j z′ ) = 0 which implies that z − a j z′ ∈ M j−1 . By inducp−1 i
+a zi with zi ∈ ker(φ ) which provides the desired decomposition of z. This
+tion, z − a j z′ = ∑i=0
+p−1 i
+finishes the proof of M = ∑i=0
+a ker(φ ).
+To finish the proof of the desired direct sum decomposition of M, we will prove that if
+p−1
+∑i=0 ai zi = 0 with zi ∈ ker(φ ) then z0 = · · · = z p−1 = 0. Note that (by applying φ · a − a · φ = idM
+and φ (zi ) = 0)
+(
+0
+i < p−1
+p−1 i
+φ
+(a zi ) =
+.
+(p − 1)!z p−1 i = p − 1
+p−1 i
+Hence applying φ p−1 to ∑i=0
+a zi = 0 produces (p − 1)!z p−1 = 0 and hence z p−1 = 0. One
+can then follows this process to conclude z0 = · · · = z p−1 = 0. This finishes the proof of our
+theorem.
+□
+[t]
+
+We are now in position to prove our first main result. As a reminder, one key feature of ∂i in
+[t]
+characteristic p is that (∂i ) p = 0 for each i = 1, . . . , n and each t ≥ 1.
+Theorem 2.11. Let R = k[x1 , . . . , xn ]. Assume char(k) = p > 0 and ϕ : R → R is a Keller map.
+Then ϕ admits a unique extension in Endk (D). In particular, the functorial extension Φ is the
+unique extension of ϕ in Endk (D).
+5
+
+Proof. Let ϕ̃ : D → D be an endomorphism such that ϕ̃|R = ϕ. It suffices to show that
+[pe ]
+
+ϕ̃(∂i
+
+[pe ]
+
+) = Φ(∂i
+
+), ∀e ≥ 0, i = 1, . . . , n.
+
+To this end, we will induct on e.
+We start with the case when e = 0; that is, we wish to show that ϕ̃(∂i ) = Φ(∂i ) for i = 1, . . . , n.
+It follows from (2.0.1) that [(Φ − ϕ̃)(∂i ), ϕ j ] = 0 for i, j = 1, . . . , n. It follows from Lemma 2.8
+that (Φ − ϕ̃)(∂i ) ∈ R. Set ri = (Φ − ϕ̃)(∂i ) ∈ R. That is ϕ̃(∂i ) = Φ(∂i ) + ri . In this notation, ri
+stands for multiplication by ri on R. Since the order of Φ(∂i ) is at most the order of ∂i , it follows
+that Φ(∂i ) commutes with elements in R(1) . Hence Φ(∂i ) + ri commutes with elements in R(1) ,
+and so does ϕ̃(∂ ). Hence ϕ̃(∂i ) ∈ EndR(1) (R) for each i = 1, . . . , n. In particular, ker(ϕ̃(∂1 )) is
+an R(1) -submodule of R. Since ∂1p = 0, we have ϕ̃(∂1 ) p = 0. Since x∂1 x1 − x1 ∂1 = 1, we have
+ϕ̃(∂1 )ϕ1 − ϕ1 ϕ̃(∂1 ) = 1. That is, ϕ̃(∂1 ) and ϕ1 satisfy the assumptions in Lemma 2.10. It now
+follows from Lemma 2.10 that
+ϕ1a1 ker(ϕ̃(∂1 )).
+
+M
+
+R=
+
+0≤a1 ≤p−1
+
+Since ϕ̃(∂i ) commutes with ϕ̃(∂ j ) for all i, j, it follows that ϕ̃(∂2 ) ∈ EndR1 (ker(ϕ̃(∂1 ))). Applying Lemma 2.10 to the case when M = ker(ϕ̃(∂1 )) and φ = ϕ̃(∂2 ) produces
+ϕ1a1 ϕ2a2 (ker(ϕ̃(∂1 )) ∩ ker(ϕ̃(∂2 ))) .
+
+M
+
+R=
+
+0≤a1 ,a2 ≤p−1
+
+Continuing this process, we have
+ϕ1a1 · · · ϕnan (ker(ϕ̃(∂1 )) ∩ · · · ∩ ker(ϕ̃(∂n ))) .
+
+M
+
+R=
+
+0≤a1 ,...,an ≤p−1
+
+Set K := ker(ϕ̃(∂1 )) ∩ · · · ∩ ker(ϕ̃(∂n )). Then K is a direct summand of R as an R(1) -module.
+Hence K is a projective R(1) -module. By counting the number of summands, K has rank 1 over
+R(1) . Since R(1) is a polynomial ring in the variables x1p , . . . , xnp , it follows that K ∼
+= R(1) . Let z be
+∼
+a generator of K, then R(1) = K = R(1) z. Consequently
+ϕ1a1 · · · ϕnan K
+
+M
+
+R=
+
+0≤a1 ,...,an ≤p−1
+
+ϕ1a1 · · · ϕnan R(1) z
+
+M
+
+=
+
+0≤a1 ,...,an ≤p−1
+
+ϕ1a1 · · · ϕnan R(1) )z
+
+M
+
+=(
+
+0≤a1 ,...,an ≤p−1
+
+= Rz
+where the last isomorphism holds since R = 0≤a1 ,...,an ≤p−1 ϕ1a1 · · · ϕnan R(1) . That is, we have
+proved R = Rz. It follows that z ∈ R× = k× . Since both ϕ̃(∂i ) and Φ(∂i ) are k-linear differential
+operators,
+0 = ϕ̃(∂i )(z) = (Φ(∂i ) + ri )(z) = 0 + ri z
+L
+
+which implies that ri = 0 for each i = 1, . . . , n. This shows that ϕ̃(∂i ) = Φ(∂i ) for each i = 1, . . . , n.
+This completes the proof of the base case when e = 0 for our induction.
+[p0 ]
+[p0 ]
+[pe ]
+[pe ]
+Assume that we have proved ϕ̃(∂i ) = Φ(∂i ), . . . , ϕ̃(∂i ) = Φ(∂i ) for each i = 1, . . . , n.
+[pe+1 ]
+
+We wish to show that ϕ̃(∂i
+
+[pe+1 ]
+
+) = Φ(∂i
+
+) for each i = 1, . . . , n.
+6
+
+[p0 ]
+
+[p0 ]
+
+[pe ]
+
+One immediate consequence of our hypothesis ϕ̃(∂i ) = Φ(∂i ), . . . , ϕ̃(∂i
+and Remark 2.9 is that
+[t]
+[t]
+ϕ̃(∂i ) = Φ(∂i ) for 0 ≤ t ≤ pe+1 − 1.
+[pe+1 ]
+
+Consider Φ(∂i
+
+[pe+1 ]
+
+) − ϕ̃(∂i
+
+[pe+1 ]
+
+). Since [∂i
+
+[pe+1 ]
+
+, x j ] = 0 for i ̸= j and [∂i
+
+[pe+1 ]
+[pe+1 ]
+have [ϕ̃(∂i
+), ϕ j ] = 0 = [∂i
+, x j ] for i ̸= j and
+[pe+1 ]
+
+[ϕ̃(∂i
+
+[pe+1 −1]
+
+), ϕi ] = ϕ̃(∂i
+
+[pe+1 ]
+
+[pe+1 −1]
+
+) = Φ(∂i
+
+[pe+1 ]
+
+) = [Φ(∂i
+
+[pe ]
+
+) = Φ(∂i
+
+[pe+1 −1]
+
+, x i ] = ∂i
+
+)
+
+, we
+
+), ϕi ].
+
+[pe+1 ]
+
+) − ϕ̃(∂i
+)), ϕ j ] = 0 for all i, j = 1, . . . , n. Repeating the previous
+[pe+1 ]
+[pe+1 ]
+argument, we have ϕ̃(∂i
+) − Φ(∂i
+) = ai ∈ R for each i = 1, . . . , n. Also, by the previous
+Consequently [(Φ(∂i
+
+argument in the case when the underlying ring is R(e+1) , we have that
+
+
+M
+e+1
+e+1
+[pe+1 ]
+[pe+1 ]
+R(e+1) =
+ϕ1a1 p · · · ϕnan p
+ker(ϕ̃(∂1
+)) ∩ · · · ∩ ker(ϕ̃(∂n
+)) .
+0≤a1 ,...,an ≤p−1
+[pe+1 ]
+
+[pe+1 ]
+
+Set K := ker(ϕ̃(∂1
+)) ∩ · · · ∩ ker(ϕ̃(∂n
+)). Then it follows that K is a rank-1 projective
+R(e+2) -module and hence R(e+2) ∼
+= K = R(e+2) g for a generator of g of K. Then one can follow
+the same argument as before to show that g ∈ k× and that ai = 0 for each i = 1, . . . , n. This shows
+[pe+1 ]
+[pe+1 ]
+that Φ(∂i
+) = ϕ̃(∂i
+) for each i = 1, . . . , n and completes the proof of our theorem.
+□
+If ϕ is not Keller, then its extensions in Endk (D) may no longer be unique. This phenomenon
+is already noted in [Bav11] for the Frobenius endomorphism1.
+We consider the following specific example due to its relevance to Example 4.1.
+Example 2.12. Consider the case when R = F p [x] and ϕ = F is the Frobenius endomorphism.
+It admits a natural extension F̃ defined via
+F̃(x) = x p
+
+F̃(∂ [t] ) = ∂ [pt]
+
+for all t ≥ 1. We will modify F̃ to produce infinitely many different extensions of F in EndF p (D).
+Consider the projection
+j
+p
+p
+π0 : R = ⊕ p−1
+j=0 x F p [x ] → F p [x ]
+(
+xm p|m
+p−1
+(−1)i xi ∂ [i] ∈ D. Note
+. It turns out that π0 agrees with ∑i=0
+such that π0 (xm ) =
+0
+otherwise
+that π0 xπ0 (r) = 0 for every r ∈ R and hence π0 xπ0 = 0 ∈ D. Set π = xπ0 . Then π 2 = 0 ∈ D.
+For each e ≥ 1, set
+ae := pe+1 + p4e+2 and we := xae π.
+Then one can check that w2e = 0 in D since xae π = πxae and π 2 = 0. Now define αe : D → D by
+αe (θ ) = (1 + we )θ (1 − we ) ∀ θ ∈ D.
+One can check αe is a F p -algebra endomorphism on D since (1 + we )(1 − we ) = 1. Finally we
+define
+F̃e := αe ◦ F̃
+Then one can check that F̃e (r) = F(r) = r p for each r ∈ R and that
+(
+∂ [pt]
+t < pe
+(2.0.2)
+F̃e (∂ [t] ) = αe (∂ [pt] ) =
+e+1
+4e+2
+∂ [p ] − x p π t = pe
+1We thank Vladimir V. Bavula for pointing this out to us.
+7
+
+which shows that F̃e are different for different e.
+3. H OLONOMIC D- MODULES
+3.1. Holonomic D-modules. We follow closely the characteristic-free approach to holonomic
+D-modules developed in [Lyu11] which was inspired by the notion of holonomicity introduced
+in [Bav09].
+Let k be a field and R = k[x1 , . . . , xn ]. Let D denote the ring of k-linear differential operators
+on R. Recall that:
+[t]
+D = R⟨∂i | t ≥ 1 i = 1, . . . , n⟩
+
+t
+[t]
+where ∂i := t!1 ∂∂xt : R → R is the k[x1 , . . . , xi−1 , xi+1 , . . . , xn ]-linear map that sends xis to st xis−t .
+i
+
+[b ]
+
+[b ]
+
+For each integer i ≥ 0, set Fi to be the k-span of the set {x1a1 · · · xnan ∂1 1 · · · ∂n n | a1 + · · · +
+an + b1 + · · · + bn ≤ i} with the convention
+F0 = k. Then {Fi } is an ascending chain of finite
+S
+dimensional k-subspaces of D such that i Fi = D and that Fi F j ⊆ Fi+ j . This filtration {Fi }
+is called the canonical filtration2 of D in [Bav09].
+In this article, we will focus on left D-modules.
+Definition 3.1. Let M be a D-module. A k-filtrationSon M is an ascending chain of finite dimensional k-subspaces of M: M0 ⊆ M1 ⊆ · · · such that i Mi = M and Fi M j ⊆ Mi+ j .
+A D-module M is called holonomic if it admits a k-filtration {Mi } and a constant c such that
+dimk (Mi ) ≤ cin for all i ≥ 0 (as a reminder, n = dim(R) and c is independent of i).
+Remark 3.2. The notion of holonomic D-modules in [Bav09, p.198] is introduced for finitely
+generated D-modules in prime characteristic p. In this article, we follow the characteristic-free
+approach in [Lyu11, Definition 3.4] which does assume M to be finitely generated. Even though
+M is not assumed to be a finitely generated D-module in Definition 3.1 (or [Lyu11, Definition
+3.4]), it is proved in [Lyu11, Theorem 3.5] that a holonomic D-module have finite length in the
+category of D-modules (cf. [Bav09, Theorem 9.6]), a fortiori, finitely generated.
+Remark 3.3. If a D-module M has finite length, then it is cyclic. In particular, every holonomic
+D-module is cyclic.
+This is well-known in characteristic 0 and proved in [Bav09, Theorem 9.7] in prime characteristic p.
+The next result (Lemma 3.4) is developed in [LZ26], a collaboration with Gennady Lyubeznik.
+We thank him for allowing it to be included here.
+Lemma 3.4. Let M be a cyclic D-module with a generator z. Set M̃i := Fi · z for each i ≥ 0. If
+M is holonomic, then there is a constant C such that dimk (M̃i ) ≤ Cin for all i ≤ 0.
+Proof. As M is holonomic, it admits a k-filtration M0 ⊂ M1 ⊂ . . . such that dimk Mi ≤ cin for
+a constant c and for all i. Let t be an integer such that z ∈ Mt (such an t exists as {Mi } is
+exhaustive). Then M̃i ⊂ Mi+t for all i, hence dimk M̃i ≤ dimk Mi+t ≤ c(i +t)n ≤ c(1 +t)n in for all
+i ≥ 0.
+□
+Definition 3.5. Let M be a D-module and let φ ∈ Endk (D) be a k-algebra endomorphism of
+D. Then we define φ M to be the D-module whose underlying abelian is the same as M with
+D-structure defined via:
+θ · m := φ (θ ) · m
+for all θ ∈ D and m ∈ M.
+2It is called the Bernstein filtration in [Lyu11]
+8
+
+The following is an immediate consequence of Remark 3.3 and Lemma 3.4.
+Proposition 3.6. Let φ ∈ Endk (D) be a endomorphism of D. Assume there is a constant C such
+that φ (Fi ) ⊆ FCi for all i ≥ 0, then the restriction of scalar via φ preserves holonomicity; that
+is: if M is holonomic. then φ M is also holonomic.
+3.2. Hasse-Schmidt derivations. We recall the notion of Hasse-Schmidt derivations and we
+follow [Mat89, §27] closely. Let k be a field and A, B be k-algebras. A Hasse-Schmidt derivation
+of length m from A to B is a sequence {d0 , d1 , . . . , dm } of k-linear maps A → B such that
+(1) d0 : A → B is a k-algebra morphism; and
+(2) for 1 ≤ i ≤ m and all x, y ∈ A,
+di (xy) =
+
+∑ da (x)db (y).
+a,b≥0
+a+b=i
+
+Equivalently, a sequence {d0 , d1 , . . . , dm } of k-linear maps A → B is a Hasse-Schmidt derivation
+i
+if the map hm : A → Bm := B[[y]]/(ym+1 ) defined by hm (a) = ∑m
+i=0 di (a)y is a k-algebra morphism
+and d0 : A → B is a k-algebra morphism. If {d0 , d1 , . . . } is a sequence of k-linear maps A → B
+such that {d0 , d1 , . . . , dm } is a Hasse-Schmidt derivation of length m for every positive integer m,
+i
+then the map h : A → B[[y]] defined by h(a) = ∑∞
+i=0 di (a)y is a ring morphism.
+If A = B, then {d0 , d1 , . . . , dm } is called a Hasse-Schmidt derivation of length m on A.
+[i]
+
+Remark 3.7. Let k be a field and R = k[x1 , . . . , xn ]. Fix 1 ≤ j ≤ n and set di := ∂ j for i ≥ 1.
+Then one can check the sequence {idR , d1 , . . . , dm } is a Hasse-Schmidt derivation of length
+m on R for each positive integer m. Let ϕ ∈ Endk (R) be a Keller map. Since ϕ is étale,
+[2]
+[m]
+it follows from [Mat89, Theorem 27.2] that {idR , ∂ j , ∂ j , . . . , ∂ j } admits a unique extension
+{idR , d1′ , . . . , dm′ } on R such that {idR , d1′ , . . . , dm′ } is a Hasse-Schmidt derivation of length m on
+R and di′ (ϕ(r)) = ϕ(di (r)). If we denote the unique extension of ϕ in Endk (D) by Φ, then
+di′ = Φ(di ) (by uniqueness). That is, for each j, the sequence
+[2]
+
+[m]
+
+{idR , Φ(∂ j ), Φ(∂ j ), . . . , Φ(∂ j )}
+[m]
+
+is a Hasse-Schmidt derivation of length m on R. In particular, Φ(∂ j ) satisfies (m ≥ 1)
+[m]
+
+Φ(∂ j )(r1 r2 ) =
+
+[a]
+
+[b]
+
+∑ Φ(∂ j )(r1 )Φ(∂ j )(r2 )
+a,b≥0
+a+b=m
+
+for all r1 , r2 ∈ R. Consequently h : R → R[[y]] defined via
+∞
+
+[t]
+
+h(r) = ∑ Φ(∂ j )(r)yt
+t=0
+
+is a ring morphism for each j = 1, . . . , n.
+Theorem 3.8. Let R = k[x1 , . . . , xn ] with char(k) = p > 0 and let ϕ ∈ End(R) be a Keller map.
+Let Φ denote its unique extension to End(D). If M is a holonomic D-module, then so is Φ M.
+In particular, Φ R is holonomic and hence has finite length in the category of D-modules.
+Proof. Let d := max{deg(ϕ1 ), . . . , deg(ϕn )}. We claim that Φ(Fi ) ⊆ F(2nd+1)i for all i ≥ 1.
+Then our theorem will follow from Proposition 3.6.
+[b]
+We will start by analyzing Φ(∂i ) for all b ≥ 1 and each i = 1, . . . , n. (This is one of the
+major differences between characteristic 0 and characteristic p: in characteristic 0, it suffices to
+9
+
+[pe ]
+
+consider Φ(∂i ) for i = 1, . . . , n; while in characteristic p, one must consider all Φ(∂i ) for e ≥ 0
+[pe ]
+as ∂i (e ≥ 0) are algebraically independent.)
+[b]
+Since Φ(∂i ) (assuming b ≥ 1) still has order (as a differential operator) ≤ b, we can write
+[b]
+
+Φ(∂i ) =
+
+(3.2.1)
+
+[b ]
+
+[b ]
+
+rb1 ,...,bn ∂1 1 · · · ∂n n
+
+∑
+
+b1 ,...,bn ≥0
+b1 +···+bn ≤b
+[b ]
+
+[b ]
+
+for some rb1 ,...,bn ∈ R. As ∂1 1 · · · ∂n n ∈ F∑i bi ⊆ Fb , it is crucial to bound the degree of rb1 ,...,bn .
+One observation is that
+r0,...,0 = 0
+[b]
+
+e
+
+e
+
+since Φ(∂i )(ϕip ) = 0 for e ≫ 0 and hence r0,...,0 ϕip = 0.
+To bound the degree of coefficients rb1 ,...,bn , we would like to have a more explicit description
+[b]
+[b]
+of them. To ease notation, we fix i (the argument for Φ(∂i ) works identically for all Φ(∂ j ))
+and set
+[b]
+[b]
+∂b := ∂i
+and ∂˜b := Φ(∂i ) ∀ b ≥ 1.
+Since {idR , ∂˜ , ∂˜ 2 , . . . } is a Hasse-Schmidt derivation (Remark 3.7), the map h : R → R[[y]]
+∞ ˜
+defined by h(r) = ∑t=0
+∂ t (r)yt is a k-algebra morphism. For each x j , we have
+h(x j ) = x j + ∂˜ (x j )y + ∂˜ 2 (x j )y2 + · · · .
+∞ ˜
+Set z j (y) := ∑t=1
+∂ [ t(x j )yt ∈ R[[y]]. Then h(x j ) = x j + z j (y). Since h is a k-algebra morphism,
+for each f ∈ R, we have
+
+h( f ) = f (h(x1 ), . . . , h(xn )) = f (x1 + z1 (y), . . . , xn + zn (y)).
+Now consider the multi-variable Hasse-Taylor expansion of f :
+f (x1 + z1 (y), . . . , xn + zn (y)) =
+
+∑
+
+[b ]
+
+[b ]
+
+(∂1 1 · · · ∂n n )( f )z1 (y)b1 · · · zn (y)bn
+
+b1 ,...,bn ≥0
+
+For each formal power series g(y) ∈ R[[y]], we will denote by cyb (g) the coefficient of yb in g.
+Then it follows that for every f ∈ R
+∂˜ b ( f ) =
+
+[b ]
+
+[b ]
+
+[b ]
+
+[b ]
+
+∑
+
+cyb (z1 (y)b1 · · · zn (y)bn )(∂1 1 · · · ∂n n )( f );
+
+∑
+
+cyb (z1 (y)b1 · · · zn (y)bn )∂1 1 · · · ∂n n .
+
+b1 ,...,bn ≥0
+b1 +···+bn ≤b
+
+that is
+(3.2.2)
+
+∂˜ b =
+
+b1 ,...,bn ≥0
+b1 +···+bn ≤b
+
+Put it differently, the coefficient rb1 ,...,bn in (3.2.1) is precisely cyb (z1 (y)b1 · · · zn (y)bn ): the coefficient of yb in z1 (y)b1 · · · zn (y)bn . (To clarify, the coefficient cyb (z1 (y)b1 · · · zn (y)bn ) is a polynomial
+in R. By deg(cyb (z1 (y)b1 · · · zn (y)bn )) we mean the degree as defined in R. )
+Claim. deg(cyb (z1 (y)b1 · · · zn (y)bn )) ≤ (2nd)b − n(d − 1) for each b ≥ 1.
+We will prove this claim by induction on b. We start with the case when b = 1. In this case,
+the coefficients cy (z1 (y)b1 · · · zn (y)bn ) (with ∑i bi ≤ b = 1) can be derived explicitly from Jacobian
+10
+
+matrix Jϕ . It follows from Φ(∂i )(ϕ j ) = δi j that
+
+
+ ∂ 
+Φ( ∂∂x1 )
+∂ x1
+ .. 
+−1  .. 
+(3.2.3)
+ .  = Jϕ  . 
+∂
+∂ xn
+
+Φ( ∂∂xn )
+
+where Jϕ−1 can be computed as its adjoint matrix divided by det(Jϕ ). Since each entry in Jϕ ash
+degree ≤ d − 1, the entries in the adjoint matrix have degree ≤ (n − 1)(d − 1). Consequently
+(with ∑i bi ≤ b = 1)
+deg(cy (z1 (y)b1 · · · zn (y)bn )) ≤ (n − 1)(d − 1) ≤ 2nd − n(d − 1).
+This proves the claim when b = 1.
+Assume that we have proved our Claim for all b ≤ m for an integer m ≥ 1 and we wish to our
+claim for m + 1.
+If m + 1 is not a power of p, write m + 1 = ∑tj=0 m j p j with 0 ≤ m j ≤ p − 1. Since m + 1 is not
+a power of p, it follows that p j < m + 1 for each j in this expansion. Hence
+t
+
+t
+
+j=0
+
+j=0
+
+mj
+∂˜ m+1 = Φ( ∏ (∂ p j )m j ) = ∏ ∂˜ p j .
+
+Thus the coefficients in ∂˜ m+1 ) is a k-linear combination of the products of coefficients in ∂˜ p j ).
+Since p j < m + 1, by induction the coefficients in ∂˜ p j satisfy the degree bound as in our Claim.
+Then one can check that each coefficient in ∂˜ m+1 satisfies the degree bound as in our Claim.
+Now we consider the case when m+1 = pe for some e ≥ 1. To this end, we split the right-hand
+side of (3.2.2) (when b = pe ) into three pieces according to the order of differential operators:
+(1) the differential operators with the highest order pe :
+H :=
+
+∑
+
+[b ]
+
+[b ]
+
+cy pe (z1 (y)b1 · · · zn (y)bn )∂1 1 · · · ∂n n
+
+b1 ,...,bn ≥0
+b1 +···+bn =pe
+
+(2) the differential operators of order between 2 and pe − 1:
+G :=
+
+∑
+
+[b ]
+
+[b ]
+
+cy pe (z1 (y)b1 · · · zn (y)bn )∂1 1 · · · ∂n n
+
+b1 ,...,bn ≥0
+2≤b1 +···+bn ≤pe −1
+
+(3) the differential operators with the lowest order 1:
+L :=
+
+∑
+
+[b ]
+
+[b ]
+
+cy pe (z1 (y)b1 · · · zn (y)bn )∂1 1 · · · ∂n n
+
+b1 ,...,bn ≥0
+b1 +···+bn =1
+
+It is clear that ∂˜ pe = H + G + L. Our approaches to H, G and L will be different.
+We will start with H. Recall that
+zi (y) = ∂˜ 1 (xi )y + ∂˜ 2 (xi )y2 + · · · + ∂˜ j (xi )y j + · · · = y(∂˜ 1 (xi ) + ∂˜ 2 (xi )y + · · · )
+e
+Hence the coefficient of y p in z1 (y)b1 · · · zn (y)bn with ∑i bi = pe is precisely ∂˜ 1 (x1 )b1 · · · ∂˜ 1 (xn )bn .
+It follows from the explicit description of ∂˜ 1 = Φ(∂ ) in (3.2.3) that deg(∂˜ 1 (xi )) ≤ (n − 1)(d − 1)
+
+11
+
+for each i. Consequently (with ∑i bi = pe )
+deg(c pe (z1 (y)b1 · · · zn (y)bn )) = deg(d˜1 (x1 )b1 · · · d˜1 (xn )bn )
+≤ ∑(n − 1)(d − 1)bi = (n − 1)(d − 1)pe ≤ 2nd pe − n(d − 1)
+i
+
+This proves the degree bound on H.
+Next we treat G. Since
+z1 (y)b1 · · · zn (y)bn = y∑i bi (∂˜ 1 (x1 ) + ∂˜ 2 (x1 )y + · · · )b1 · · · (∂˜ 1 (xn ) + ∂˜ 2 (xn )y + · · · )bn
+e
+
+the coefficient of y p in the expansion of z1 (y)b1 · · · zn (y)bn is a k-linear combination of products
+of the form
+∂˜ 1 (x1 )a11 · · · ∂˜ ℓ1 (x1 )a1ℓn · · · ∂˜ 1 (xn )an1 · · · ∂˜ ℓn (xn )anℓn
+i
+with ∑ni=1 ∑ℓj=1
+ai j j = pe . Since 2 ≤ ∑i bi ≤ pe − 1, the indices ℓ j satisfies ℓ j < pe . By induction
+the degree of the coefficient of ∂˜ j is ≤ 2nd j − (n − 1)(d − 1) for all j < pe . Hence
+
+deg(∂˜ i (x j )) ≤ 2ndi − (n − 1)(d − 1)
+for each 1 ≤ i ≤ ℓi and i = 1, . . . , n. Consequently
+n
+
+ℓi
+
+deg(∂˜ 1 (x1 )a11 · · · ∂˜ ℓ1 (x1 )a1ℓ1 · · · ∂˜ 1 (xn )an1 · · · ∂˜ ℓn (xn )anℓn ) ≤ 2nd(∑ bi ) − n(d − 1)( ∑ ∑ ai j )
+i
+e
+
+i=1 j=1
+
+≤ 2nd p − n(d − 1).
+This proves that for all indices (b1 , . . . , bn ) with 2 ≤ ∑i bi ≤ pe − 1
+deg(c pe (z1 (y)b1 · · · zn (y)bn )) ≤ 2nd pe − n(d − 1)
+which completes our argument for G.
+Finally, we consider L. Since L corresponds to the multi-induces (b1 , . . . , bn ) with ∑i bi = 1,
+it follows that
+∂˜ pe (x j ) = (L + G + H)(x j ) = L(x j )
+since each differential operator in G and H has order ≥ 2. Hence
+L = ∂˜ pe (x1 )∂1 + · · · + ∂˜ pe (xn )∂n .
+It remains to prove the bound of degree of ∂˜ pe (x j ) as in our Claim.
+[pe ]
+[pe ]
+Since ∂i (x j ) = 0 for all i, j = 1, . . . , n, we have Φ(∂i )(ϕ(x j )) = 0 for all i, j = 1, . . . , n.
+[pe ]
+We specialize this to ∂˜ pe = Φ(∂i ) to get (L + G + H)(ϕ j ) = 0 for each j = 1, . . . , n. That is,
+L(ϕ j ) = −(G + H)(ϕ j ) for each j = 1, . . . , n. Or equivalently, in terms of the Jacobian matrix
+Jϕ ,
+
+
+
+
+∂˜ pe (x1 )
+(G + H)ϕ1
+
+
+
+
+..
+Jϕ  ...  = − 
+
+.
+˜∂ pe (xn )
+(G + H)ϕn
+Thus,
+
+
+
+∂˜ pe (x1 )
+(G + H)ϕ1
+ .. 
+
+..
+−1 
+ .  = −Jϕ 
+
+.
+˜∂ pe (xn )
+(G + H)ϕn
+
+
+12
+
+[b ]
+
+[b ]
+
+Recall that d = max{deg(ϕ1 ), . . . , deg(ϕn )}. Then ∂1 1 · · · ∂n n (ϕ j ) = 0 whenever ∑i bi > d. It
+follows that
+!
+(G + H)(ϕ j ) =
+
+[b ]
+
+[b ]
+
+cy pe (z1 (y)b1 · · · zn (y)bn )∂1 1 · · · ∂n n
+
+∑
+
+(ϕ j )
+
+2≤b1 +···+bn ≤d
+
+Recall that each entry in Jϕ−1 has degree at most (n − 1)(d − 1). Hence it follows from the
+argument as for degree bounds on coefficients in G and H that
+deg(∂˜ pe (x j )) ≤ (n − 1)(d − 1) + 2nd pe − 2n(d − 1) + (d − ∑ bi ).
+i
+
+Here is why −2n(d − 1) appears: if there is a bi such that bi = b ≥ 2, then deg(∂˜ pe (x j )) ≤
+(n − 1)(d − 1) + 2nd pe − bi n(d − 1) + (d − ∑i bi ); otherwise, there will be at least two positive
+bi ’s, then each of zi (y)bi contributes −n(d − 1) to the degree bound. Therefore
+deg(∂˜ pe (x j )) ≤ 2nd pe − n(d − 1).
+This completes the proof of our claim.
+Now we will prove that Φ(Fb ) ⊆ F(2nd+1)b for all b ≥ 1 using our Claim.
+Observe that since
+Φ(x1a1 · · · xnan ) = ϕ(x1 )a1 · · · ϕ(xn )an = ∏ ϕiai ,
+i
+
+it follows that Φ(x1a1 · · · xnan ) ∈ Fd ∑i ai ⊆ F(2nd+1) ∑i ai for all ai ≥ 0 and i = 1, . . . , n. Hence, to
+[b]
+show that Φ(Fb ) ⊆ F(2nd+1)b , it suffices to show Φ(∂i ) ∈ F(2nd+1)b for each 1 ≤ i ≤ n and all
+b ≥ 1 (recall that Φ is a k-algebra endomorphism).
+It follows from (3.2.2) that
+[b]
+
+Φ(∂i ) ∈ F(2ndb−n(d−1))+b ⊆ F(2nd+1)b .
+□
+
+This finishes the proof of our theorem.
+4. A N EXTENSION OF F ROBENIUS THAT DOES NOT PRESERVE HOLONOMICITY
+
+In characteristic 0, Bavula’s celebrated theorem ([Bav01, Theorem 1.3]) asserts that every
+k-algebra endomorphism of D preserves holonomicity. It is natural ask whether the same conclusion holds in characteristic p. In this section, we present an example of an extension of the
+Frobenius F : k[x] → k[x] which does not preserve holonomicity. Hence in characteristic p:
+(1) if ϕ ∈ Endk (R) is Keller, then it admits a unique extension Φ ∈ Endk (D) and the restriction of scalar via Φ preserves holonomicity, or
+(2) if ϕ ∈ Endk (R) is not Keller, then it may admit an extension ϕ̃ ∈ Endk (D) such that the
+restriction of scalar via ϕ̃ does not preserve holonomicity.
+Our example is based on Example 2.12 and inspired by the construction of examples in
+[KLM12].
+Example 4.1. Let R = F p [x]. For each integer e ≥ 1, let F̃ and αe : D → D be defined as in
+Example 2.12. Define Φ : D → D as
+Ψ := ( ∏ αe ) ◦ F̃.
+e≥0
+13
+
+0
+αe )◦ F̃(θ ). Hence
+As shown in (2.0.2) that for each θ ∈ D there exists e0 such that Ψ(θ ) = (∏ee=0
+Ψ(θ ) is well-defined for each θ ∈ D and one can check that Ψ is a F p -algebra endomorphism
+on D.
+Claim. Ψ R is not holonomic.
+
+Proof. Assume otherwise and we will deduce a contradiction. Since Ψ R is assumed to be holonomic, it must be cyclic (Remark 3.3). Let g ∈ R be a generator. It follows from Lemma 3.4
+that
+dimF p (Fi · g)
+dimF p (Ψ(Fi )(g))
+lim sup
+= lim sup
+< ∞.
+i
+i
+i→∞
+i→∞
+Our goal is to show that there is an infinite sequence of integers {ie } such that
+lim sup
+ie →∞
+
+dimF p (Fie · g)
+ie
+
+is unbounded and hence provide the desired contradiction.
+Since g is a generator, there exists a θ ∈ D such that Ψ(θ )(g) = 1. Fix an integer ℓ such that
+θ ∈ Fℓ . We claim that we can take the sequence {ie := 2pe + ℓ}.
+To this end, for each t ≤ e, we consider Ψ(F2pt )(1) ⊆ Ψ(F2pt +ℓ )(g) since 1 ∈ Ψ(Fℓ )(g).
+t
+t
+For each 0 ≤ s ≤ pt , it is clear that xs ∂ [p ] ∈ F2pt ⊆ F2pe . One can check that Ψ(xs ∂ [p ] )(1) is a
+t
+polynomial with degree p4t+2 + s + 1. Thus, {Ψ(xs ∂ [p ] )(1) | 0 ≤ s ≤ pt } is a set of polynomials
+with distinct degrees; consequently it is an F p -linearly independent set for each t ≤ e. Moreover,
+t
+if t1 < t2 , then p4t1 +2 + pt1 + 1 < p4t2 +2 . Hence the degrees of polynomials in {Ψ(xs ∂ [p1 ] )(1) |
+t
+0 ≤ s ≤ pt1 } are strictly less than the degrees of those in {Ψ(xs ∂ [p 2 ] )(1) | 0 ≤ s ≤ pt2 }. Therefore,
+t
+
+{Ψ(xs ∂ [p ] )(1) | 0 ≤ s ≤ pt , t ≤ e}
+is an F p -linearly independent set of polynomials. One can check that
+t
+
+dimF p ({Ψ(xs ∂ [p ] )(1) | 0 ≤ s ≤ pt , t ≤ e}) ∼ O(epe )
+Therefore,
+t
+
+dimF p ({Ψ(xs ∂ [p ] )(1) | 0 ≤ s ≤ pt , t ≤ e})
+lim sup
+2pe
+e→∞
+is unbounded. Consequence
+t
+
+dimF p ({Ψ(xs ∂ [p ] )(1) | 0 ≤ s ≤ pt , t ≤ e})
+dimF p (Ψ(F2pe +ℓ ))
+≥
+lim
+sup
+lim sup
+2pe + ℓ
+2pe + ℓ
+e→∞
+e→∞
+is unbounded (note that ℓ is a fixed constant and independent of e). This completes the proof of
+our Claim.
+□
+ACKNOWLEDGEMENTS
+The author is grateful to Gennady Lyubeznik for discussions on D-modules and for his support
+over the years. The author thanks Vladimir V. Bavula for his valuable comments on a preliminary
+version of this article which improved the exposition.
+14
+
+R EFERENCES
+[Alp26] L. Alpöge, Announcement of a three-dimensional counterexample to the Jacobian Conjecture. X (formerly
+Twitter), 07-19-2026.
+[Bas89] H. Bass, Conjecture jacobienne et opérateurs différentiels. Colloque en l’honneur de Pierre Samuel (Orsay,
+1987). Mém. Soc. Math. France (N.S.) No. 38 (1989), 39-50. MR 1044345
+[BCW82] H. Bass, E. Connell, and D. Wright, The Jacobian conjecture: reduction of degree and formal expansion
+of the inverse. Bull. Amer. Math. Soc. (N.S.) 7 (1982), no. 2, 287-330. MR 0663785
+[Bav01] V. V. Bavula, A question of Rentschler and the Dixmier problem. Ann. of Math. (2) 154 (2001), no. 3,
+683-702. MR 1884619
+[Bav05] V. V. Bavula, The Jacobian Conjecture 2n implies the Dixmier Problem n . arXiv:math/0512250.
+[Bav09] V. V. Bavula, Dimension, multiplicity, holonomic modules, and an analogue of the inequality of Bernstein
+for rings of differential operators in prime characteristic. Represent. Theory 13 (2009), 182-227. MR 2506264
+[Bav11] V. V. Bavula, Extensions of the Frobenius to the ring of differential operators on a polynomial algebra in
+prime characteristic. Trans. Amer. Math. Soc. 363 (2011), no. 1, 417-437. MR 2719688
+[BKK07] A. Belov-Kanel and M. Kontsevich, The Jacobian conjecture is stably equivalent to the Dixmier conjecture. Mosc. Math. J. 7 (2007), no. 2, 209-218, 349. MR 2337879
+[Dix68] J. Dixmier, les algèbres de Weyl. (French) Bull. Soc. Math. France 96 (1968), 209-242. MR 0242897
+[Gro67] A. Grothendieck, Éléments de géométrie algébrique. IV. Étude locale des schémas et des morphismes de
+schémas IV. Inst. Hautes Études Sci. Publ. Math. No. 32 (1967), 361 pp. MR 0238860
+[KLM12] M. Katzman, G. Lyubeznik, and W. Zhang, Two interesting examples of D-modules in characteristic p > 0.
+Bull. Lond. Math. Soc. 44 (2012), no. 6, 1116-1122. MR 3007644
+[Kel39] O. Keller, Ganze Cremona-Transformationen. Monatsh. Math. Phys. 47 (1939), no. 1, 299-306.
+MR 1550818
+[Lyu11] G. Lyubeznik, A characteristic-free proof of a basic result on D-modules. J. Pure Appl. Algebra 215 (2011),
+no. 8, 2019-2023. MR 2776441
+[LZ26] G. Lyubeznik and W. Zhang A unified approach to D-modules I: inverse image functor, direct image functor
+and holonomicity (working title), in preparation.
+[Más91] G. Másson, Rings of differential operators and étale homomorphisms. Thesis (Ph.D.)–Massachusetts Institute of Technology. 1991.
+[Mat89] H. Matsumura, Commutative ring theory. Translated from the Japanese by M. Reid. Second edition. Cambridge Studies in Advanced Mathematics, 8. Cambridge University Press, Cambridge, 1989. MR 1011461
+[Nou82] P. Nousiainen, ON THE JACOBIAN PROBLEM. Thesis (Ph.D.)-The Pennsylvania State University. 1982.
+MR 2631981
+D EPARTMENT OF M ATHEMATICS , S TATISTICS , AND C OMPUTER S CIENCE , U NIVERSITY OF I LLINOIS AT
+C HICAGO , 851 S. M ORGAN S TREET, C HICAGO , IL 60607-7045
+Email address: wlzhang@uic.edu
+
+15
+
+

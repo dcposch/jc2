@@ -1,0 +1,34 @@
+{
+  "K": 9,
+  "census_row": "(99,66) case (A): (27,18;21;8;4), b=7",
+  "decision": "DEAD",
+  "fallacy_v2": {
+    "modular_runs": "supporting F_p screens only",
+    "posdim": "not invoked",
+    "promotion_basis": "clean exact-Q UNIT_IDEAL for both exhaustive internal splits"
+  },
+  "implication_chain": [
+    "any full K=9 census-case-(A) point satisfies the pinned recurrence and actual positive rho-band identities",
+    "the recurrence forces internal y-factor split A or internal y-factor split B",
+    "terminal constant-matrix RREF and alpha-band RREF are equivalences in the mu*mu_inv-1 localization",
+    "each internal reduced necessary ideal is the unit ideal over Q",
+    "therefore the original localized census row is empty"
+  ],
+  "internal_split_cover": {
+    "A": {
+      "sha256": "71eb68e0338a24144a5ac2698210fb99022bdb99491c6c5a8f75340e458fb5c0",
+      "summary": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/AUTHORITATIVE_K9A_FULL_3P_EXACTQ_V1/summary.json",
+      "verdict": "UNIT_IDEAL_CHAR0"
+    },
+    "B": {
+      "sha256": "6550cfa5b3e1f1ada1a30446734cc386cdaa1bcfe7c139b60ddbfed9f902b08f",
+      "summary": "/home/ubuntu/jc2/box/k4rayk89-20260903/driver-audit-artifacts/sparse-rho-guided/AUTHORITATIVE_K9B_FULL_3P_EXACTQ_V1/summary.json",
+      "verdict": "UNIT_IDEAL_CHAR0"
+    },
+    "reason": "y is prime, so y divides v*((y-x)*v^2-12*mu*p2) iff internal split A or B holds; their intersection is retained"
+  },
+  "notify_worthy": true,
+  "promotion": "K=9 census case (A) DEAD; (99,66) SKELETON verdict COMPLETE for all three configurations modulo N1",
+  "type": "K4RAY-K9-CENSUS-CASE-A-INTERNAL-SPLITS-COMPLETE",
+  "verdict": "UNIT_IDEAL_CHAR0"
+}

@@ -1,0 +1,26 @@
+chain_rule_control	opt=none	mode=positive	rc=0	stdout=b1f49e37de7f6a50	msg=
+chain_rule_control_omit-cross	opt=none	mode=--omit-cross	rc=1	stdout=e3b0c44298fc1c14	msg=ValueError: [A,B]hat = Rt_g hat * (D Hhat + Fhat_z DGhat - DFhat Ghat_z) mod h^4
+chain_rule_control_fixed-g-derivative	opt=none	mode=--fixed-g-derivative	rc=1	stdout=e3b0c44298fc1c14	msg=ValueError: [A,B]hat = Rt_g hat * (D Hhat + Fhat_z DGhat - DFhat Ghat_z) mod h^4
+chain_rule_control_drop-jacobian-factor	opt=none	mode=--drop-jacobian-factor	rc=1	stdout=e3b0c44298fc1c14	msg=ValueError: [A,B]hat = Rt_g hat * (D Hhat + Fhat_z DGhat - DFhat Ghat_z) mod h^4
+chain_rule_control_wrong-critical-factor	opt=none	mode=--wrong-critical-factor	rc=1	stdout=e3b0c44298fc1c14	msg=ValueError: critical-root non-cross part -de DU-(10/3) r U DU
+valuation_control	opt=none	mode=positive	rc=0	stdout=3d7a34eaa5b7843d	msg=
+valuation_control_allow-a-equal-j	opt=none	mode=--allow-a-equal-j	rc=1	stdout=dd9106266eb06ebc	msg=ValueError: N > min(M,3m) fails somewhere in the box
+recursion_point_control	opt=none	mode=positive	rc=0	stdout=6dbe57610c373ee9	msg=
+recursion_point_control_skip-h-correction	opt=none	mode=--skip-h-correction	rc=1	stdout=125337ea5861ece1	msg=ValueError: q=4 with vanishing s^2,s^3 Hensel coefficients
+recursion_point_control_weight15-input	opt=none	mode=--weight15-input	rc=1	stdout=c307a107379c1d8f	msg=ValueError: weight-15 input: recursion blocked at s^1 (V divides but R does not); Hensel leader at s^2 is h1*(1/p0-g0-p0) = True
+chain_rule_control_O	opt=-O	mode=positive	rc=0	stdout=b1f49e37de7f6a50	msg=
+chain_rule_control_O_omit-cross	opt=-O	mode=--omit-cross	rc=1	stdout=e3b0c44298fc1c14	msg=ValueError: [A,B]hat = Rt_g hat * (D Hhat + Fhat_z DGhat - DFhat Ghat_z) mod h^4
+chain_rule_control_O_fixed-g-derivative	opt=-O	mode=--fixed-g-derivative	rc=1	stdout=e3b0c44298fc1c14	msg=ValueError: [A,B]hat = Rt_g hat * (D Hhat + Fhat_z DGhat - DFhat Ghat_z) mod h^4
+chain_rule_control_O_drop-jacobian-factor	opt=-O	mode=--drop-jacobian-factor	rc=1	stdout=e3b0c44298fc1c14	msg=ValueError: [A,B]hat = Rt_g hat * (D Hhat + Fhat_z DGhat - DFhat Ghat_z) mod h^4
+chain_rule_control_O_wrong-critical-factor	opt=-O	mode=--wrong-critical-factor	rc=1	stdout=e3b0c44298fc1c14	msg=ValueError: critical-root non-cross part -de DU-(10/3) r U DU
+valuation_control_O	opt=-O	mode=positive	rc=0	stdout=3d7a34eaa5b7843d	msg=
+valuation_control_O_allow-a-equal-j	opt=-O	mode=--allow-a-equal-j	rc=1	stdout=dd9106266eb06ebc	msg=ValueError: N > min(M,3m) fails somewhere in the box
+recursion_point_control_O	opt=-O	mode=positive	rc=0	stdout=6dbe57610c373ee9	msg=
+recursion_point_control_O_skip-h-correction	opt=-O	mode=--skip-h-correction	rc=1	stdout=125337ea5861ece1	msg=ValueError: q=4 with vanishing s^2,s^3 Hensel coefficients
+recursion_point_control_O_weight15-input	opt=-O	mode=--weight15-input	rc=1	stdout=c307a107379c1d8f	msg=ValueError: weight-15 input: recursion blocked at s^1 (V divides but R does not); Hensel leader at s^2 is h1*(1/p0-g0-p0) = True
+weight_lemma_control	opt=none	mode=positive	rc=0	stdout=a5078dd7afd2a743	msg=
+weight_lemma_control_drop-weight	opt=none	mode=--drop-weight	rc=1	stdout=ec8ca902dbe50007	msg=ValueError: weight lemma refuted at this bound: a kernel element is not divisible by p^2 V
+weight_lemma_control_weight-8	opt=none	mode=--weight-8	rc=1	stdout=648d47f668f5d981	msg=ValueError: weight lemma refuted at this bound: a kernel element is not divisible by p^2 V
+weight_lemma_control_O	opt=-O	mode=positive	rc=0	stdout=a5078dd7afd2a743	msg=
+weight_lemma_control_O_drop-weight	opt=-O	mode=--drop-weight	rc=1	stdout=ec8ca902dbe50007	msg=ValueError: weight lemma refuted at this bound: a kernel element is not divisible by p^2 V
+weight_lemma_control_O_weight-8	opt=-O	mode=--weight-8	rc=1	stdout=648d47f668f5d981	msg=ValueError: weight lemma refuted at this bound: a kernel element is not divisible by p^2 V

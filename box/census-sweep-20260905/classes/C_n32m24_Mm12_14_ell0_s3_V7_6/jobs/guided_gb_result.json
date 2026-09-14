@@ -1,0 +1,74 @@
+{
+  "certificate": {
+    "accepted_run_count": 0,
+    "crt_rational_reconstruction": {
+      "available": false,
+      "items": {},
+      "method": "CRT plus bounded rational reconstruction for scalar invariants"
+    },
+    "hilbert_hint": null,
+    "policy": {
+      "allow_modular_unit_promotion": false,
+      "note": "census_sweep: modular units are not promoted",
+      "require_controls": true,
+      "scope": "EXACT_Q"
+    },
+    "promotion_note": "no accepted result before timeout",
+    "properness_scope": {
+      "positive_weights": [
+        []
+      ],
+      "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+      "systems_declared_homogeneous": false
+    },
+    "runs": [
+      {
+        "characteristic": 0,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/census-sweep-20260905/classes/C_n32m24_Mm12_14_ell0_s3_V7_6/jobs/C_n32m24_Mm12_14_ell0_s3_V7_6_union_p0_Q.sing"
+        ],
+        "elapsed_seconds": 180.0647,
+        "label": "C_n32m24_Mm12_14_ell0_s3_V7_6_union_p0",
+        "main": {
+          "accepted": false,
+          "basis_size": null,
+          "dimension": null,
+          "lead_dim": null,
+          "lead_vdim": null,
+          "missing_markers": [
+            "NF_ALL_ZERO",
+            "UNIT",
+            "DIM",
+            "BASIS_SIZE",
+            "LEAD_DIM",
+            "ACCEPT",
+            "NF_ZERO"
+          ],
+          "nf_all_zero": false,
+          "unit": false,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 1,
+        "script": "/home/ubuntu/jc2/box/census-sweep-20260905/classes/C_n32m24_Mm12_14_ell0_s3_V7_6/jobs/C_n32m24_Mm12_14_ell0_s3_V7_6_union_p0_Q.sing",
+        "script_sha256": "8275e5aee4feb440fa91b9968f811714f6f7000f58e8046fa9de4b4548af02d6",
+        "stderr": "/home/ubuntu/jc2/box/census-sweep-20260905/classes/C_n32m24_Mm12_14_ell0_s3_V7_6/jobs/C_n32m24_Mm12_14_ell0_s3_V7_6_union_p0_Q.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/census-sweep-20260905/classes/C_n32m24_Mm12_14_ell0_s3_V7_6/jobs/C_n32m24_Mm12_14_ell0_s3_V7_6_union_p0_Q.out",
+        "stdout_sha256": "0111c396dd8d3a1bdf9e240cf01cb1f94b31d1c4fe62afbb0ef8a0b22fbc7e31",
+        "timed_out": true
+      }
+    ]
+  },
+  "verdict": "INCONCLUSIVE_TIMEOUT"
+}

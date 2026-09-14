@@ -1,0 +1,36 @@
+# ROOT finalization checklist — disabled, no execution authority
+
+This is offline deployment metadata for the accepted status-corrected highest runtime, not a new scientific instrument or registration. All execution remains unrun. The templates contain no chosen worker identity, native digest, allocation, or future UTC deadline. ROOT alone resolves those fields and authenticates the resulting package. The baseline path/pin is a literal future installation role, never an input read in this preparation.
+
+## Files and invariants
+
+DISABLED-REGISTRATION.template.json is enabled=false and contains exactly13 full vectors. The first nine are the old five refusals, valid authorization, two startup refusals and samePGID dummy. The final four are highest-produce, highest-positive, mutate, highest-negative. The first nine vectors differ from the semantic template only by the batch directory/unit prefix. New scientific entries have17 argv entries; mutation has19. Each last-four vector contains exactly one ROOT_REGISTRATION_SHA256 value after its unique typed flag; the first nine contain none. This token is NOT a JC2 placeholder and must remain literal in the finalized registration. The accepted dispatcher alone expands it after authenticating the immutable registration hash.
+
+INSTALL-INPUTS.template.json lists21 unique staged basenames: five original science files, three highest siblings, three wrapper files and ten metadata roles. Highest sources use stage names highest-entry.py/highest-produce.py/highest-check.py to prevent collision with the original produce.py/check.py; installed highest basenames are entry.py/produce.py/check.py. No scientific source is copied into this prep. ROOT must transfer exact bytes from the listed sources without editing them. The native raw output/hashlist are retained outside tmpfs as metadata, alongside the normalized native manifest.
+
+setup.template.sh is a complete one-shot TEMPLATE: it refuses unresolved JC2 placeholders before deployment, verifies physical identity/admission/absent targets, checks all stage pins and native bytes/aliases/directories, installs root0444 files, verifies installed pins/readability/exact5+3+3 listings, creates16MiB tmpfs, arms both outer TERM/KILL timers before launching the accepted dispatcher, and captures the actual main process from the same call. It is not executed here. native-metadata.template.sh is byte-identical to the charged cache-inclusive collector; it already includes /etc/ld.so.cache and does not run Python/science. Actual native metadata may still fail assumptions; there is no guessed hash, map exemption or retry branch.
+
+## Resolve all literal fields
+
+ROOT resolves these24 distinct JC2 fields, consistently across files:
+
+- JC2_BATCH_SUFFIX_PLACEHOLDER: a fresh safe path/unit suffix, no reuse of retired output directories.
+- JC2_INSTANCE_ID_PLACEHOLDER, JC2_HOSTNAME_PLACEHOLDER, JC2_BOOT_ID_PLACEHOLDER, JC2_PID_NAMESPACE_PLACEHOLDER: actual physical observations, not values inferred from a previous boot.
+- JC2_CURRENT_PREP_PLACEHOLDER: ROOT's finalized metadata source directory.
+- JC2_DURABLE_DEVICE_PLACEHOLDER: actual /var/lib device, inserted as a JSON integer in registration (not a quoted decimal string); shell uses its decimal spelling.
+- JC2_PYTHON_SHA_PLACEHOLDER, JC2_SETPRIV_SHA_PLACEHOLDER: exact selected native bytes. The inherited path expectation is python3.12, not an observed worker claim.
+- JC2_NATIVE_RAW_SHA_PLACEHOLDER, JC2_NATIVE_HASHLIST_SHA_PLACEHOLDER, JC2_NATIVE_MANIFEST_SHA_PLACEHOLDER: authenticated actual collector evidence and strict SIXFIELD closure. Include every observed file/directory/alias/absent/path entry and actual loaded paths; no cache exception.
+- JC2_AUTH_STATUS_SHA_PLACEHOLDER, JC2_AUTH_CAPS_SHA_PLACEHOLDER, JC2_AUTH_INVENTORY_SHA_PLACEHOLDER, JC2_AUTH_SOURCE_SHA_PLACEHOLDER, JC2_AUTH_VALID_SHA_PLACEHOLDER: canonical byte digests of the accepted caller's five distinct authority records using the freshly frozen Python/native pins. The refuse-hash vector deliberately retains64 zeros; valid/startup/dummy reuse the valid-record digest. Do not substitute a registration hash for an authority digest.
+- JC2_ROOT_CARD_SHA_PLACEHOLDER and JC2_ROOT_REGISTRATION_SHA_PLACEHOLDER: independently authenticated finalized objects. See ordering below.
+- JC2_SETUP_ADMISSION_PLACEHOLDER, JC2_MATH_UTC_PLACEHOLDER, JC2_TASK_UTC_PLACEHOLDER, JC2_SYSTEM_TERM_PLACEHOLDER, JC2_SYSTEM_KILL_PLACEHOLDER: prospective absolute clocks chosen only by ROOT. Registration deadlines must be timezone-aware strings ending+00:00 and preserve mathematical<task; setup admission precedes launch. Do not reset them after delays.
+
+No unresolved JC2 placeholder may remain in any final execution input. The copied shell's initial check is not a replacement for ROOT's full JSON/vector/placeholder review. ROOT changes enabled to the boolean true only in the final authenticated registration; this prep remains false forever.
+
+## Acyclic finalization and controls
+
+1. Freeze the unchanged source pins, actual native evidence and ROOT execution card. The card can specify names/scopes/caps without containing its own SHA or the SHA of a later file which contains the card SHA. External ROOT authentication binds the final collection; do not introduce a self-hash cycle.
+2. Form the five canonical authority digests from accepted authorize()/emit() byte semantics; fill all physical/path/cap/native/clock values. Compare every finalized full command to the accepted dispatcher's literal construction. Confirm thirteen labels in order, no extra vector,17/19-entry source vectors and four correctly placed ROOT tokens. No runtime helper or scientific import is needed for documentary finalization.
+3. Freeze enabled ROOT-REGISTRATION.json with those four tokens still literal and compute its external SHA. Substitute that SHA only into setup/install metadata's JC2_ROOT_REGISTRATION_SHA_PLACEHOLDER, never into the registration itself. ROOT's final external manifest authenticates registration, setup, native and sources. Freeze/read all final bytes before allocation/launch decisions; any unavailable physical value remains a blocking field rather than an invented value.
+4. Keep joint600wall/500CPU/2GiB/16MiB; control5/3, dummy5/3/32MiB, highest120/99, mutation30/24. Outer RuntimeMaxSec660, TimeoutStopSec5, KillModecontrol-group, TasksMax32 and MemoryMax2GiB remain literal. No prime farm, baseline positive rerun, cap raise or automatic fallback.
+5. Respect outcomes: producer normal2 is INCONCLUSIVE_NO_CERTIFICATE, ten calls with no candidate and no later phases; it does not diagnose a bad prime because wire/shape/place ValueErrors share that branch. Success requires all13 calls, exact positive receipt, one changed cofactor, normal1/empty stdout/no negative receipt and the accepted exact three-frame semantic traceback. All results retain scienceNONE.
+6. ROOT owns worker stop/all-original-PID and cgroup quiet, receipt-first current-pin intake, durable archive verification after the dispatcher writer exits, and independent result review. Missing live captures/limits/native mismatch or metadata failure stops without retry. This prep does not consume any pending semantic6/10 result or grant a highest execution.

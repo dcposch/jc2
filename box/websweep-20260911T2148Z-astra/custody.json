@@ -1,0 +1,633 @@
+{
+  "schema": "jc2-documentary-sweep-custody/v1",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "PARTIAL_BOUNDARY_INCIDENT",
+  "created_utc": "2026-09-11 22:03:33 UTC",
+  "first_action_utc": "2026-09-11T21:48:32Z",
+  "broad_query_completion_upper_bound_utc": "2026-09-11T21:53:20.326987046Z",
+  "last_successful_raw_retrieval_utc": "2026-09-11T21:53:56.454480381Z",
+  "last_filtered_capture_utc": "2026-09-11T21:53:56.520844211Z",
+  "network_all_terminal_utc": "2026-09-11T21:53:56.598798932Z",
+  "broad_backstop_utc": "2026-09-11T22:01:02.811468974Z",
+  "reserve_utc": "2026-09-11T22:09:00Z",
+  "hard_utc": "2026-09-11T22:12:00Z",
+  "report_finalized_utc": "2026-09-11T22:02:10Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report": "/home/ubuntu/jc2/xmodel/websweep-20260911T2148Z-astra.md",
+  "report_sha256": "807118f76508ff61ede6686f0f00108c9a88756eb48a762b49592c899809ab5b",
+  "expected_manifest_sha256": "0fef024304a86f3ee227f965dab4f46185abc6f6dc57f01c9299ba8f6573dd2f",
+  "expected_manifest_verified": true,
+  "local_context_inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/TASK.md",
+      "sha256": "7f32ca710bc7fe74e08a3f280e2078fc9afe8321e0812a84e2b638ed07e05d72",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/websweep-20260910T2155Z-astra.md",
+      "sha256": "0643cf030d64989b0ab20893cb5208669f2c56b469c396485d6ea9c37c35a2f8",
+      "read_mode": "FRESH_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260910T2155Z-astra/SOURCE-INDEX.md",
+      "sha256": "4e4f587e041668256b5990a0b069fa4378af8f1a011762e6713dcb682a54785e",
+      "read_mode": "FRESH_WHOLE"
+    }
+  ],
+  "owned_files": [
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/alec-commits-filtered.json",
+      "sha256": "a0b41c2621a302ada993aafc923288dce080a041c9cfdc5e02b384416c653e77",
+      "bytes": 11958
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/alec-commits-filtered.json.headers",
+      "sha256": "544f1ffc362b5f27bfe2ac69bc96b7cf4cd80f561005b125efac060d70525ea9",
+      "bytes": 1507
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/alpoge-status.html",
+      "sha256": "488e92a204887042b7427de01343b138b7da9d63456934ba2305e81dc63a4248",
+      "bytes": 220630
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/alpoge-status.html.headers",
+      "sha256": "7a7e8178e9953ea3c461591a3e5d7ec50934ec58c5d83542bf1468ebdf253eb0",
+      "bytes": 4329
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-AC.html",
+      "sha256": "c797140ad17ccca432524038a8fb98cf50d80b792a7ac6ad96de7cf6def454fc",
+      "bytes": 38171
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-AC.html.headers",
+      "sha256": "04469714d6b45b22dd56b2b56db8ea60d1d963519b3270d98bfced5e0645608c",
+      "bytes": 551
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-AG.html",
+      "sha256": "50d4fce6c48a1922db4ea5fb93e965f82b9264e64bcb902fbb6ff25bfa6e9d9c",
+      "bytes": 110515
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-AG.html.headers",
+      "sha256": "daa1524c33481860ba761e3fac0beb357cd024ecd8d9458621750f7ddbe2c6a9",
+      "bytes": 550
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-CV.html",
+      "sha256": "3c35f343eb5361602f38200b5fd07c45e4c11bf50ad56a526e063fa3f605a667",
+      "bytes": 36258
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-CV.html.headers",
+      "sha256": "5fe3d1764c06cb6a4a858ec3924eadcf3559c29e65293fa89e14958667aafca3",
+      "bytes": 550
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-jc.xml",
+      "sha256": "817c309eb39631da269b4f7c85a39a40c71068fdc0cec0f843a0701e3579712d",
+      "bytes": 49717
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-jc.xml.headers",
+      "sha256": "64297d5cdce1390be512ec1f55c9a519042eb5dd9baaa1dace727c8049af8154",
+      "bytes": 523
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-related.xml",
+      "sha256": "da3d32ec80e55a123d40f68c72fd67d580f2d03b9846aa5c50dc4810d2373d70",
+      "bytes": 49280
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/arxiv-related.xml.headers",
+      "sha256": "42546322286c0acba9be7d364946dea5a753fb7ca53a5141c2d765393a424213",
+      "bytes": 523
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/bgv-abs.html",
+      "sha256": "7f35eda4c0fd57c8e760852e75a3d6437d8529657c87099abaa867d28fbf2764",
+      "bytes": 43349
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/bgv-abs.html.headers",
+      "sha256": "b025f063dce7c0107879d100f18fc4a7d9dd9c0871ad918c4b649fd436394e3d",
+      "bytes": 602
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/bgv-v1.pdf",
+      "sha256": "814c3f2572f660a47778663384077d6357e9947f1585c1e16372f6cdbe138425",
+      "bytes": 1659604
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/bgv-v1.pdf.headers",
+      "sha256": "33d4c31082a9d9220f26818c9de7c2623d979d5de89ddd21e8cf1c02ca8d8ebd",
+      "bytes": 719
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/bluesky.json",
+      "sha256": "8609fbf6d25103698c09480062dd212a9f8e8acbc3d320f599bd871cef1a7048",
+      "bytes": 2334
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/bluesky.json.headers",
+      "sha256": "45e916fd867a6d8f3959f6ae875ec0fd28aa5316a564b4e904fe14e3cc7371b0",
+      "bytes": 296
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/datacite.json",
+      "sha256": "6b5857eb71657a9a5f2de5105581247250a9708b30621debb43cdc65963b1b4c",
+      "bytes": 142632
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/datacite.json.headers",
+      "sha256": "13b6d3fc05bf372144459c8f5686f208373a968f4e6c243671618f289bad4134",
+      "bytes": 1065
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/ggv-author-catalog.html",
+      "sha256": "23dbe5adad78da8d5dc8ad7c18f824ff81f371ffac5c942fac8c4f4ed2aaaa79",
+      "bytes": 37380
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/ggv-author-catalog.html.headers",
+      "sha256": "9569bf92cd96e77eaea94ee3d5ccca033423715a6a3ccbee6b8fc0ecd5d15c4a",
+      "bytes": 1985
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/ggv-publisher.html",
+      "sha256": "e04e0267a2ce57d25892381547b8dbf901b7de0646ea4ac13a6ca29812c1afd3",
+      "bytes": 5545
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/ggv-publisher.html.headers",
+      "sha256": "9fe6a93a80e3a62b6aeb6b4cd8958206f941af62f516918dc4de661bbfd89e38",
+      "bytes": 2655
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-alok.json",
+      "sha256": "52f0bfc2fadbceb6793097f76fe5e7b1ff17d219850f2d13885260003c80ac06",
+      "bytes": 11411
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-alok.json.headers",
+      "sha256": "7ff9cd5cd7df00861c500b20f5828a9f35f62708c583a2e7cac1f63f05400160",
+      "bytes": 1502
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-blueberryvertigo.json",
+      "sha256": "708eb2a74dfe8d200316be2e12832b72731e5e825ea7b41a201fb520d91067e4",
+      "bytes": 8688
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-blueberryvertigo.json.headers",
+      "sha256": "f4b2b54c6a3dba81bedc9f4b70e094ec00cfd31baae87f6ef747f0e97d888ba6",
+      "bytes": 1320
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-discovery-filtered.json",
+      "sha256": "464465d8bf326f2b2fd732d4443ecadb02c97c9f198d039106b07da42bcb479a",
+      "bytes": 541894
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-discovery-filtered.json.headers",
+      "sha256": "b344b7f345f57e87ab4f4433077654187f6362f4091a662d37343a585b16f848",
+      "bytes": 1155
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-jtpmath.json",
+      "sha256": "cc48a213074cde91cf5f1d20d48874e6957dc9229c15d83f297c6bc2507d3add",
+      "bytes": 15651
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-jtpmath.json.headers",
+      "sha256": "1fc95da59e87463de62010ac6c20f14ad2b6d650de3625f72ab3a400340c74b2",
+      "bytes": 1505
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-Kakarottoooo.json",
+      "sha256": "d688b784e8681fc31458376a76996867ab3d60a77119e0f0305dab99d50817db",
+      "bytes": 10079
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-Kakarottoooo.json.headers",
+      "sha256": "0471f6bc8e67eabbac6755275bdbf36ccf7fbe2a7f167cb9bf13392825d6dcc3",
+      "bytes": 1504
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-nasqret.json",
+      "sha256": "ce99ce528dcbe1d714cb1979464db4e44e1bfeaa8decae6e19433f8c60641fc3",
+      "bytes": 11940
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-nasqret.json.headers",
+      "sha256": "d6042f7dbfc48e6ea087b76d15dd806ba6d563a9eae9c00a7c8ba7c19bb1cf33",
+      "bytes": 1503
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-rk-mlu.json",
+      "sha256": "f47b5933de37de52c6c44a4124f2dff268c8e6b72415a3265b6fee24a8d6ba1c",
+      "bytes": 28777
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-rk-mlu.json.headers",
+      "sha256": "2269c35c43b131420ffe917440bf75433a118935eb3e36b425e091a55b13548c",
+      "bytes": 1481
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-royvanrijn.json",
+      "sha256": "354440d3cd5cef558433bf428ad51a189b64ddde85d5c34a4effe3ead54e2c60",
+      "bytes": 12158
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-royvanrijn.json.headers",
+      "sha256": "c4175122e24122b8c8c3de75c51b3e286ce170e453db9c814fdb080462c3830d",
+      "bytes": 1505
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-SuperMindAI.json",
+      "sha256": "d83d41fa90e3fb7ac230a30b84e373b5aa29b477e2cd0d7534e0614e5d0078e1",
+      "bytes": 11929
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-SuperMindAI.json.headers",
+      "sha256": "b15386d8b45fadf509e6b0920c85f7ae660ee030d61bb2d0237da6585599251f",
+      "bytes": 1504
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-wstrinz-72-108.json",
+      "sha256": "1a9f325e74dd9853e33674e75d9b9ad2bbaa7e7a0e5cd7ad7ee28a1df5e8e97e",
+      "bytes": 11859
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-wstrinz-72-108.json.headers",
+      "sha256": "ec354c490e3e9ae58f21cb5e99b24fb668b29ccbc84d9e42664e85178dd12f1e",
+      "bytes": 1505
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-wstrinz-75-125.json",
+      "sha256": "0ed8a8a7ba8d6379c0f4d696874e877a4932bc60cbf2d43abf34dd3978d1cb67",
+      "bytes": 11866
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-wstrinz-75-125.json.headers",
+      "sha256": "ca46ad5fa6e855ea6dd43969b5bc96bc71f97b456a3fde1bb658caedf024461b",
+      "bytes": 1504
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-wstrinz.json",
+      "sha256": "0ed8a8a7ba8d6379c0f4d696874e877a4932bc60cbf2d43abf34dd3978d1cb67",
+      "bytes": 11866
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-wstrinz.json.headers",
+      "sha256": "fefcd245cc9b39821739baba83d7683f68af4c4811e35db6057597f8ebbe22a3",
+      "bytes": 3008
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-YucongDuan.json",
+      "sha256": "465e7938c4724c139dfb061b9c6950df846d41bab288ab093d25be6c31c4aa2e",
+      "bytes": 15118
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/github-YucongDuan.json.headers",
+      "sha256": "b0a996236ea67ce709cfb3086e40370e9ee22f2ecb8d9822c4d2f7e19041120c",
+      "bytes": 1503
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/kellermap-commit-fix.json",
+      "sha256": "3069a9e2fddd9759989ac454929b8a70e6372f75ea07a1768fdb62dce56bc94d",
+      "bytes": 32399
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/kellermap-commit-fix.json.headers",
+      "sha256": "6d82746e71245c8f1eeacf29abe1392c04c338f4d9134924597d6588cd6b5c0b",
+      "bytes": 1299
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/kellermap-references.md",
+      "sha256": "a7fae179e5e8601e5db5728b24f3860fe2dd20fcbfe8168c721441a63ca3ae30",
+      "bytes": 59516
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/kellermap-references.md.headers",
+      "sha256": "329332948ba1f740c5b54d13244b59555435fd9358c40d95a9b40824e0b4688c",
+      "bytes": 898
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathandai.html",
+      "sha256": "6313b7450981961ac0fdf2a4be3728b7f17a9fa8af798beb09a52d1e292b85e2",
+      "bytes": 5233
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathandai.html.headers",
+      "sha256": "570daf640dd103289b0b922a2cc3ee0d663ea0ed6691162ce0a0684cd8c51f5e",
+      "bytes": 2144
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathse.json",
+      "sha256": "9d981f2cc934d43a7699d8f1484170f7046fd22557e28a0332a2684bfb2c1abe",
+      "bytes": 115032
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathse.json.headers",
+      "sha256": "5cf494dcc30e74842fbba291a1cf81d000215874aa273006ba6141204c64e7c8",
+      "bytes": 1468
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathstodon-jctag.json",
+      "sha256": "ea2350b26b74b93cf3380a9edf0cf5630725b30efc599f15703e8d0e6273f7b8",
+      "bytes": 32567
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathstodon-jctag.json.headers",
+      "sha256": "c0b4f34ad0a456d6b94715bdca42a1d073e1f80c8415f75f5edd501bd23048c1",
+      "bytes": 1001
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathstodon-tag.json",
+      "sha256": "fbbfcf630b8a427ed886e8d1e64503efc9210bcbc54742f7e22fe67dbceb2de5",
+      "bytes": 64431
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathstodon-tag.json.headers",
+      "sha256": "8ee56f1483b12d9aa5bf50f95edb9f3bb5af195bbf293b40b54b35d51c1d837c",
+      "bytes": 981
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathstodon-tao.json",
+      "sha256": "3b2841c8f5cbeff8b3e4adc74b2e327593dbc37119fa9cd2496aaf44c5c31b7d",
+      "bytes": 193169
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mathstodon-tao.json.headers",
+      "sha256": "1822855bd06a30adfba0ecd31ea667bc8832887caf65965e39a0de5678f99fe9",
+      "bytes": 1013
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mo.json",
+      "sha256": "8ec5b9ccc2e20a3d487eaf5ba978e5acdaa5720d30db614386bdd3f57136c4d8",
+      "bytes": 116503
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/mo.json.headers",
+      "sha256": "aa3113dc6b0dea6d4e4141d6fbe06f5864acd2bcb221ca8c16583d353cdea6af",
+      "bytes": 1468
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/palomar-recent-filtered.json",
+      "sha256": "f8c7e7c7316f6ba7e25b0fba897c36675b38b01a6e71352e9643f6d1e079091e",
+      "bytes": 533361
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/palomar-recent-filtered.json.headers",
+      "sha256": "384c14a295ef032308424499df74ae6c696eb646a1c399f8d4d079f182625bbe",
+      "bytes": 722
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/palomar-subject-filtered.json",
+      "sha256": "61aaf53e71a8346db9f60aa9cecca607cc9971c6826b4169f43c1d9e4f321908",
+      "bytes": 1997
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/palomar-subject.json.headers",
+      "sha256": "eddb1c10454a50a0fdda83a5c658d6c15485890c565efbe71267ff3cecefc686",
+      "bytes": 718
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/palomar-year.json",
+      "sha256": "4d3eda4fd95e79d58d63f8a50f857b2c501386a87a80a9d6450d8ec63aec1e66",
+      "bytes": 865
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/palomar-year.json.headers",
+      "sha256": "dbe72ad467ca3f87bc02f56c011f654c5a454fdb64a09c5bb6df17d9fb14476e",
+      "bytes": 725
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/READ-SCOPE.md",
+      "sha256": "32a0fcd2328181f4d7365e27e845ec3720a7fe7dfbbded406155acc3dc58f58d",
+      "bytes": 4972
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/reddit-bgv.json",
+      "sha256": "dc131f91303300301ab1b23a7e3b0a084b9e325b318b2722d00fc637247b8b7a",
+      "bytes": 190240
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/reddit-bgv.json.headers",
+      "sha256": "45e0014d7a7225e8c38463597128b2aae88456852f73631596b1d14613e05c17",
+      "bytes": 1109
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/reuellee-plane-commits.json",
+      "sha256": "2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d",
+      "bytes": 5
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/reuellee-plane-commits.json.headers",
+      "sha256": "62ad50eabe273f029c1ae86732fc6e3336e89b711919ab05ac43e8064f016806",
+      "bytes": 1270
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/roy-plane-commits.json",
+      "sha256": "2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d",
+      "bytes": 5
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/roy-plane-commits.json.headers",
+      "sha256": "6bcf12a8b66105ea370f40757a9752880aa8976789871f274eace5f1af8c6494",
+      "bytes": 1270
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/roy-root-plane-commits.json",
+      "sha256": "2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d",
+      "bytes": 5
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/roy-root-plane-commits.json.headers",
+      "sha256": "b3d30f8eb780f829ac5aa32b310ab70155711dedd9401c881c0d6bb3cf342dcb",
+      "bytes": 1270
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/SOURCE-INDEX.md",
+      "sha256": "333e9eb8d33780a9ec5794c134c3555736ce20ec146833b953b1d4e85b2284c9",
+      "bytes": 13308
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/transductive.pdf",
+      "sha256": "c24b83aee034dcdb9cb7bfa60df0779b840f46792a13ba9688daa616a8392cb0",
+      "bytes": 236986
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/transductive.pdf.headers",
+      "sha256": "ca6783c13a3d6d8d5479cbdd2e5bd947a61fc9c94ea5774bc37f4c074be11d27",
+      "bytes": 1169
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/transductive.txt",
+      "sha256": "7a1ebbf541380965759f8e6fbb6202e4bbe898372ed280a799c5969a0a2029c7",
+      "bytes": 32125
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/transductive4d.pdf",
+      "sha256": "3d7236b9040d548887a97e46f886628ae15b99a4db4ce482e17d034182980ca8",
+      "bytes": 156806
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/transductive4d.pdf.headers",
+      "sha256": "171b79af24260da2ed19a6c67a5405825d4fd74d577e3ed2acf1951584068a52",
+      "bytes": 1142
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/transductive4d.txt",
+      "sha256": "522bec14478f2e3e3434731a4d51c6519bba8c284693d55cc3582ae9edb6c74a",
+      "bytes": 16536
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/x.html",
+      "sha256": "59e1423bade05eb55907bb597163c347145b4a12d30e8113aa06777180879f8f",
+      "bytes": 295734
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/x.html.headers",
+      "sha256": "3b11a6432b0ec3879190a021c5dd07c4730698d785a47ceac2dc28ac0ec70742",
+      "bytes": 12015
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo-atwell.json",
+      "sha256": "54381a240b9f0a5b1d39ab30855d17d371d2980bd28462a25e01af294a44ad52",
+      "bytes": 7635
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo-atwell.json.headers",
+      "sha256": "9ad9451803e1a8b6d92b7e84e47f8775e64e30da7741240a6d83f7aa769eab89",
+      "bytes": 1039
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo-rank.json",
+      "sha256": "7b455c543a4de696d7e2775b07e06ea1808e9326ae9edb08341dae79ca57bf25",
+      "bytes": 7613
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo-rank.json.headers",
+      "sha256": "926a9d5a845f2a47d7c35967b6c6f900b27a672e1c0812a60d3c7de4ceb9c704",
+      "bytes": 1039
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo-transductive-earlier.json",
+      "sha256": "28c6293314aac0f9b884a3672fd42bef89eadc8171da73c417543cd886c7e618",
+      "bytes": 7480
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo-transductive-earlier.json.headers",
+      "sha256": "22bf3e70355bc87a21d23d794331dc25cd380d277056ae7f2df11b21a4c51b45",
+      "bytes": 1039
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo-transductive.json",
+      "sha256": "1ebf5a60ff7b111585403fc76f36191e078bdc36a48590d0ecde520158147a91",
+      "bytes": 8329
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo-transductive.json.headers",
+      "sha256": "297cb2a95948d121acd75ea3edbd8a1017d724870f30ee5f4a438ba6ac3798de",
+      "bytes": 1039
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo.json",
+      "sha256": "90ee7649edb22fe58ce7e167ff389b5fe59372eec50b5e8855a9ab7f72c19887",
+      "bytes": 236663
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zenodo.json.headers",
+      "sha256": "311d7cf60b87b874459fa795a80736080b3c79978c78d916d1c14ae0f428c5ef",
+      "bytes": 929
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zhang-abs.html",
+      "sha256": "ad28f3e2eabae1c675e55f8dc8bee130c69b1a18d5a592c23553a9d352272409",
+      "bytes": 38244
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zhang-abs.html.headers",
+      "sha256": "6858ab9cf04df4f273cf98976d544fc0b156e341f0f965494b5b6ced2ec6050b",
+      "bytes": 603
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zhang-v1.pdf",
+      "sha256": "210dd708c651358ccd5765332ab708d8581fb990a7596b4ec34587b449b46148",
+      "bytes": 201899
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zhang-v1.pdf.headers",
+      "sha256": "fee982ff7c2dfa4c69c066ffb0a4926311ff8f3300bbc9552fa17699f4cb2826",
+      "bytes": 661
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zulip-public.html",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "bytes": 9379
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zulip-public.html.headers",
+      "sha256": "5c62f33309e044df8ea137d7e2c1aab4e044ca3abac74ab1b7762207613f78da",
+      "bytes": 711
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zulip.json",
+      "sha256": "d294481a810578d332726043f5a1ea21c41f54db37b0ebc28eb7bba6562c523f",
+      "bytes": 108
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/zulip.json.headers",
+      "sha256": "534e0e32c92d5f75ea65dd713bd162deba5919dd445dcfd6694e1c97cd741d78",
+      "bytes": 592
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/PINS.json",
+      "sha256": "8c32e8cc88ef06d945e65c6302dcb970eb9d6797dc3117cca5a4d1ead2290275",
+      "bytes": 24583
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/websweep-20260911T2148Z-astra.md",
+      "sha256": "807118f76508ff61ede6686f0f00108c9a88756eb48a762b49592c899809ab5b",
+      "bytes": 9145
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/websweep-20260911T2148Z-astra.md.artifact.json",
+      "sha256": "0fef024304a86f3ee227f965dab4f46185abc6f6dc57f01c9299ba8f6573dd2f",
+      "bytes": 686
+    }
+  ],
+  "owned_count_excluding_custody": 113,
+  "postpin_check_utc": "2026-09-11T22:02:51Z",
+  "postpin_result": "ALL_110_PREPINNED_OWNED_AND_ALL_3_LOCAL_INPUTS_MATCH; report/PINS/manifest separately hashed",
+  "own_whole_readback": "Report before marker and after finalization; artifact manifest; SOURCE-INDEX; READ-SCOPE; PINS. PINS clipped aggregate output recovered by separate1–190 read.",
+  "marker_collision_check": "Final target/custody absent before publication; single report BODY-END appended only after own readback and input postpins; no authored Seal.",
+  "raised_mathematical_open_count": 0,
+  "follow_on_authority": false,
+  "scientific_execution": false,
+  "network_calls_outstanding": 0,
+  "boundary_incident": {
+    "status": "DISCLOSED_TO_ROOT_AND_EXCLUDED_FROM_EVIDENCE",
+    "channel": "Palomar subject/year",
+    "exact_removed_owned_path": "/home/ubuntu/jc2/box/websweep-20260911T2148Z-astra/palomar-subject.json",
+    "http_status": 200,
+    "bytes": 7108,
+    "raw_body_sha256": null,
+    "retrieval_completed_utc": "2026-09-11T21:50:13.499411376Z",
+    "disposition": "Mistaken unfiltered display; generated filtered snapshot then removed exact owned raw file via apply_patch. No raw local copy retained; not re-fetched. Conversational exposure cannot be undone.",
+    "protected_entry_followed": false,
+    "protected_tree_accessed": false,
+    "protected_content_reproduced_in_authored_outputs": false,
+    "retained_evidence": "Non-sensitive status/size metadata, response headers and generated filtered snapshot only; affected channel not used for conclusions."
+  },
+  "ambiguous_capture": {
+    "path": "github-wstrinz.json",
+    "disposition": "NOT_USED; concurrent filename collision. Exact distinct replacement captures retained, no scientific retry."
+  },
+  "custody_self_hash": "Excluded from own list; supplied separately in terminal handoff",
+  "terminal_contract": "Custody is last authored object; all research/download/extraction and report writers closed; only read/hash after this write. ALL WRITERS IDLE at terminal handoff."
+}

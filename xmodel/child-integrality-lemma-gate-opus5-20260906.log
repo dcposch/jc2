@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The report is sealed at 15,989 bytes, within budget and inside the time limit (~35 min).
+
+## Result
+
+**VERDICT: PROMOTABLE** — `xmodel/child-integrality-lemma-gate-opus5-20260906.md`
+
+Hashes verified mechanically first: **9/9 OK**.
+
+**(1) Print check — CONFIRMED-WITH-FIX.** Every hypothesis and cited result checks against the printed pages (rendered as images; the OCR layer drops every display). Prop 6.3's radius hypothesis, `k[γ,π]` polynomiality, the `n',m'` degrees, and the **positive** power in p.197(3) are verbatim. I re-derived the map from p.198's own substitution + eq. (10) and got the report's `Φ*` character for character, with `J_{X,Y}(P',Q') = cX^ℓ`. The "printing error" claim is confirmed but the report *understates* it: the p.198 display is corrupt twice, and the printed matrix does not even equal p.198's own printed answer — so it is the substitution, not the displayed derivatives, that resolves it. The ℓ-shift is Moh's print (p.171 Remark's `(3)*`), and Xu §2 / Lemma 4.1 / Thm 5.1 all transfer as claimed; the `Q'−η` device, the "complete sum" rule, and "certified empty ⇒ dead" are all sound.
+
+**(2) R063 = 71/4 — CONFIRMED**, recomputed end to end from the printed formulas: the singleton own family `V'=(3,7)`, the forced `p'_2 = π⁵(π³−c)³`, the packet counts `(10,6,6,6)/(15,9,9,9)`, and both final radii — which I also verified are *algebraically identical* to Moh's printed Prop 5.3 closed form as a rational function of the free multiplicity.
+
+**The load-bearing thing the frozen report does not flag:** the whole kill rests on step 3's forbidden-average-multiplicity exclusion. Drop it and `z=2` survives with sum exactly `9 ∈ ℤ`. I re-derived that exclusion from Moh's p.169/p.171 equation and it holds (doubly — the same multiplicity also degenerates the successor radius to exactly `H`).
+
+**(3)** The five-artefact certificate for `C(A)` is stated; the six-rows fixed list is *not* consumed as exhaustion and does not need to be, since SURVIVES is the existential direction. **(4)** At `u_s ≥ 2` the lemma gives nothing, and a radius proof alone would still not suffice — the child *top* is open too.
+
+No memory written: both my substantive findings (the `P ≠ Q·a` rule at every level, and the `9`-sensitivity of the R063 kill) turned out to be already recorded from a parallel lane, which I noted in the report as corroboration rather than novelty.
+DIVERT path=xmodel/child-integrality-lemma-gate-opus5-20260906.md status=CLEAN body_bytes=15989 body_sha256=ef6739224bf3d9c6601451f6f8181c93d24679ad1fce35026be958f6fcac9fb4

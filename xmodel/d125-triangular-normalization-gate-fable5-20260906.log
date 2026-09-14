@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is written and complete at `xmodel/d125-triangular-normalization-gate-fable5-20260906.md` (16,708 bytes, SHA-256 `b4501117…`), published as skeleton first, then sections, then the standalone `<!-- BODY-END -->` as the last line, with no seal footer and no basis-declaration line. Finished at 14:59 UTC, ahead of the 15:20 deadline.
+
+**Verdict: every load-bearing step CONFIRMED; no missing arrow for the stated claim.**
+
+- **Steps 1–3.** The forced top slices, the quadratic Euler element at (1,1) with `120Aα=0` and `45Bα=α`, the eigenvalues `(75−2k)/45` with unique fixed point k=15, and the common shear from the vanishing top bracket `75(25−k)αc_k` all recompute exactly. GGV Theorem 2.6 antecedents were checked against the primary text, including the char-0 field hypothesis and polynomial clause (1).
+- **Steps 4–6.** The envelope lemma applies freshly after the shear (unique leaders, a,b>0), the vertical ODE forces `e=(u+r)/45` and shared translation, and the parameter readings `P_9_14/(15α)`, `P_10_14/(15α)` are exact. The (14,60) coefficient is shear-invariant because the only other contributor (15,59) is outside the weight box.
+- **Step 7 (entire chart).** The lift `D=(X⁻⁴∂_X+X⁻⁶∂_Y)/5`, source-image-only nilpotence, finite exponentials, and drops 25/13 and 42/30/30/18 are verified. Since every jet row is a weight-above-halfspace coefficient and all five pins sit on the top faces, the whole contract is preserved. An elementary direct-substitution argument agrees.
+- **Steps 8–9.** The nonemptiness and Q-properness equivalence holds as a point-set statement. Counts recount exactly.
+
+**Hidden hypotheses flagged for downstream use:** characteristic zero only (no mod-p transfer), the complete ideal only (not truncated, staged or projected ideals), fixed Φ with root 1 and the five pins, and no invariance claim for optional carrier/pivot/root gauges.
+
+**Controls.** Root's script replays 153/153 in normal and `-O`, and its `--mutate` mode fails as recorded in `replay.json` (stdout digests match). The producer's `check.py` passes 12/12 under wrapper caps in both modes. My own script `/tmp/fable5-norm-gate/changed_object.py` (31 checks, 5 s) adds a genuine changed object: the wrong-direction shear `v→v−u/3` breaks both the terminal halfspace and the source weight box on the root fixture, while the u-shift preserves everything, so the u-triangular direction is load-bearing. It also verifies the literal exponential-lift identities on a random 64-term box polynomial with sign and dropped-term mutations rejected.
+
+Nothing else was touched: no ledgers, tools, launcher, validator, adapters or FALLACY file, and no live submissions read.
+DIVERT path=xmodel/d125-triangular-normalization-gate-fable5-20260906.md status=CLEAN body_bytes=16708 body_sha256=b45011178fb282fe4f9093ac34cec2bbece6c66248f1121c067622228c75cb71

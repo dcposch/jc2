@@ -1,0 +1,136 @@
+Initial seed for pseudo-random number generator is 1788613447
+
+--------------- INPUT DATA ---------------
+#variables                     112
+#equations                     175
+#invalid equations               0
+field characteristic    1073741827
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option           44
+initial hash table size     131072 (2^17)
+max pair selection            1000
+reduce gb                        1
+#threads                        12
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  2       1     272       2 x 1         100.00%        0 new       1 zero         0.00 | 0.00         
+  3       4     271      13 x 16         13.94%        3 new       1 zero         0.00 | 0.00         
+  3       5     278      18 x 20          9.44%        3 new       2 zero         0.00 | 0.01         
+  3       3     282       8 x 5          25.00%        0 new       3 zero         0.00 | 0.00         
+  4      11     279      79 x 126         2.34%        6 new       5 zero         0.00 | 0.01         
+  3      12     289      43 x 84          3.60%       11 new       1 zero         0.00 | 0.01         
+  3      30     325     109 x 152         1.79%       11 new      19 zero         0.01 | 0.07         
+  3      39     385     126 x 190         1.59%        8 new      31 zero         0.00 | 0.01         
+  3       9     418      54 x 119         3.38%        4 new       5 zero         0.00 | 0.01         
+  4     139     437     980 x 1606        0.26%       29 new     110 zero         0.01 | 0.07         
+  3       8     508      29 x 45          5.90%        3 new       5 zero         0.00 | 0.01         
+  3      15     491      58 x 100         3.78%        1 new      14 zero         0.00 | 0.00         
+  4      90     486     790 x 1530        0.36%       27 new      63 zero         0.01 | 0.08         
+  3      10     631      36 x 70          5.40%        1 new       9 zero         0.00 | 0.00         
+  4     116     634    1185 x 2345        0.25%       27 new      89 zero         0.01 | 0.11         
+  4      62     796     743 x 1576        0.38%       12 new      50 zero         0.00 | 0.06         
+  5     525     880    8239 x 17150       0.05%       95 new     430 zero         0.06 | 0.51         
+  3      23    1464     151 x 590         1.02%       22 new       1 zero         0.01 | 0.10         
+  4     272    1714    3244 x 8801        0.08%      130 new     142 zero         0.07 | 0.75         
+  3      39    2384     133 x 185         2.13%        6 new      33 zero         0.00 | 0.05         
+  4     389    2457    3915 x 8303        0.10%      114 new     275 zero         0.08 | 0.85         
+  4     334    3392    3460 x 7215        0.14%       57 new     277 zero         0.06 | 0.53         
+  4      77    3790    1116 x 3416        0.29%       14 new      63 zero         0.02 | 0.17         
+  4      17    3924     375 x 1290        0.75%        4 new      13 zero         0.01 | 0.08         
+  5    1000    3976   16519 x 38545       0.03%      187 new     816 zero         0.30 | 2.24         
+  4      15    6114     314 x 1269        1.24%        4 new      11 zero         0.01 | 0.10         
+  5    1000    6034   26705 x 65490       0.02%      231 new     769 zero         0.52 | 3.64         
+  5    1000    8878   34783 x 83990       0.02%      194 new     806 zero         0.66 | 4.13         
+  4      15   10354     731 x 2296        0.55%        9 new       6 zero         0.03 | 0.24         
+  5    1000   10252   43150 x 102502      0.02%      265 new     735 zero         1.04 | 6.76         
+  5    1000   13700   56258 x 136054      0.01%      275 new     725 zero         1.45 | 8.92         
+  4      88   15986    2306 x 6144        0.24%       33 new      55 zero         0.11 | 1.02         
+  4      37   14753     712 x 2701        0.69%        8 new      29 zero         0.04 | 0.30         
+  5    1000   14555   28746 x 79903       0.03%      282 new     718 zero         1.28 | 9.38         
+  5    1000   17329   53721 x 130418      0.02%      265 new     736 zero         1.85 | 11.42        
+  5    1000   20644   69415 x 182087      0.02%      330 new     670 zero         2.76 | 16.59        
+  5     491   24906   49608 x 145873      0.02%      229 new     262 zero         2.31 | 12.57        
+  5     301   28163   38810 x 109523      0.04%      132 new     169 zero         1.75 | 8.33         
+  5      70   30318   22227 x 75463       0.07%       26 new      44 zero         0.95 | 2.26         
+  6    1000   30780   70044 x 183635      0.02%      247 new     753 zero         3.39 | 16.15        
+  6    1000   34714  113761 x 312373      0.01%      258 new     744 zero         5.23 | 20.24        
+  6    1000   38928  153535 x 417102      0.01%      245 new     755 zero         7.31 | 23.27        
+  6    1000   42932  194915 x 545462      0.01%      316 new     684 zero        10.11 | 31.08        
+  6    1000   47789  217849 x 565832      0.01%      315 new     686 zero        11.81 | 36.38        
+  6    1000   52692  121011 x 342222      0.02%      216 new     784 zero         7.19 | 20.27        
+  6    1000   56294  155010 x 399024      0.02%      249 new     753 zero         9.09 | 27.18        
+  6    1000   59953  194268 x 566575      0.01%      235 new     766 zero        11.99 | 27.24        
+  6    1000   63739  200441 x 549458      0.01%      194 new     806 zero        12.04 | 26.25        
+  6    1000   66859  248835 x 661118      0.01%      177 new     823 zero        14.88 | 29.02        
+  6    1000   69507  265488 x 688862      0.01%      128 new     872 zero        15.51 | 27.10        
+  6    1000   71084  239860 x 598874      0.01%      197 new     804 zero        16.43 | 39.13        
+  6    1001   73899  271536 x 664356      0.01%      201 new     800 zero        17.78 | 39.07        
+  6    1000   77011  246864 x 645609      0.01%      229 new     772 zero        16.96 | 35.20        
+  6    1000   80292  309404 x 921893      0.01%      410 new     591 zero        26.20 | 61.09        
+  4      16   87234      56 x 209         3.32%        5 new      11 zero         0.15 | 0.42         
+  4      37   87151     281 x 738         1.15%       10 new      27 zero         0.18 | 0.68         
+  4      16   87092     125 x 614         1.90%        1 new      15 zero         0.10 | 0.20         
+  5     303   87056    5716 x 24252       0.19%       63 new     240 zero         1.08 | 4.10         
+  5     237   85029   16642 x 62853       0.08%       55 new     182 zero         1.60 | 4.27         
+  5      40   85162    2474 x 12771       0.31%        4 new      36 zero         0.29 | 0.56         
+  6    1001   85218   90037 x 343995      0.02%      163 new     838 zero         9.00 | 17.31        
+  6    1000   87885  152070 x 464030      0.02%       99 new     901 zero        11.00 | 16.93        
+  6    1000   88942  316976 x 928371      0.01%      244 new     757 zero        26.75 | 49.33        
+  6    1000   93342  342673 x 931044      0.01%      345 new     656 zero        32.77 | 72.09        
+  6    1000   99171  298787 x 926966      0.01%      443 new     557 zero        32.54 | 72.65        
+  3      13  104806      56 x 132         3.50%       13 new       0 zero         0.34 | 1.08         
+  3      12   98878      31 x 44          6.23%        1 new      11 zero         0.10 | 0.20         
+  4     239   98938    2325 x 7162        0.29%      110 new     132 zero         1.66 | 7.09         
+  4     570   94930    6205 x 13957       0.11%      162 new     408 zero         2.35 | 10.07        
+  4     299   90386    3589 x 8873        0.13%       64 new     235 zero         0.93 | 3.95         
+  4      16   90844      41 x 56          4.97%        1 new      15 zero         0.10 | 0.20         
+  5    1000   90878   15124 x 43512       0.05%      298 new     702 zero         4.56 | 18.64        
+  5    1000   88147   20427 x 56284       0.05%      231 new     770 zero         3.96 | 14.97        
+  5    1000   88325   24961 x 63427       0.05%      216 new     786 zero         4.11 | 14.92        
+  5    1000   87646   38891 x 104413      0.03%      266 new     734 zero         5.73 | 19.54        
+  5    1000   88763   35357 x 106578      0.04%      192 new     808 zeroEnlarging exponent vector for hash table failed
+for esz = 67108864, segmentation fault will follow.
+Command terminated by signal 11
+	Command being timed: "msolve -g 2 -t 12 -v 2 -l 44 -m 1000 -f /home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/fleet/172.30.0.18/C_n18m12_M2_9_ell2_s3_V3_8_native/C_n18m12_M2_9_ell2_s3_V3_8_full_p1073741827.ms -o /home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/fleet/172.30.0.18/C_n18m12_M2_9_ell2_s3_V3_8_native/C_n18m12_M2_9_ell2_s3_V3_8_full_p1073741827.g2.out"
+	User time (seconds): 886.00
+	System time (seconds): 4.82
+	Percent of CPU this job got: 256%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:47.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10330380
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3032374
+	Voluntary context switches: 72091
+	Involuntary context switches: 1851
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 104
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

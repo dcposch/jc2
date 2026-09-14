@@ -1,0 +1,48 @@
+{
+  "verdict": "INDEPENDENT_T5_RANK_MODEL_AND_DETERMINANT_PASS",
+  "t": 5,
+  "field": "Q(d), d^2=2",
+  "integral_model": "Z[e], e=3d, e^2=18",
+  "p": 32009,
+  "d_image": 23962,
+  "e_image": 7868,
+  "basis_weights": [
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "target_weight": 42,
+  "basis_size": 1792,
+  "full_macaulay_columns": 3504,
+  "selected_minor_shape": [
+    1792,
+    1792
+  ],
+  "selected_source_counts": {
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 43,
+    "6": 188,
+    "7": 234,
+    "8": 313,
+    "9": 420,
+    "10": 594
+  },
+  "determinant_mod_p": 29155,
+  "raw_denominators_prime_units": true,
+  "scaled_selected_coefficients_integral_in_e": true,
+  "independent_determinant_method": "NumPy integer Gaussian elimination with row pivoting modulo 32009 (independent of producer FLINT)",
+  "char0_implication": "The integral determinant has nonzero residue, hence is nonzero in Q(d). The selected exact matrix is invertible and every weight-42 polynomial belongs to J, including (B eta)^2.",
+  "hashes": {
+    "controls_t5_raw.sing": "78db3c9786c28e28cb64e7f63cf3df9d321f7cbb900fd78343a511ac035dfdd1",
+    "linear_t5_rank_certificate.json": "0f91e54c40a1ca2189a8762f7d2524c08364e6b9b31f363c5d065c6a9090e7f6",
+    "t5_rank_independent_export.sing": "d0be6062cf020231aa51dc1b705387522625d0779c4289dc038ea25fc59ab339",
+    "t5_rank_independent_terms.txt": "d902dfe939c81cdfc7747f2342206f8dc8281bad10baea65e96cce623b918c7f",
+    "t5_rank_independent_matrix.bin": "f4f0cc39a81c327484c72f2b3b43fcb2d3ca530ffa5f6c16c499d500342f6de1",
+    "rank_det_mod.py": "558190c48318249d4e3fc0df95b36a2b4c1ff304ac49ec4f19d3f17e4a400934",
+    "t5_rank_independent_det.log": "011221cde36bf41998f762978b4e06b8988b31c754bfcc9a9cf31e5fbf361daa"
+  }
+}

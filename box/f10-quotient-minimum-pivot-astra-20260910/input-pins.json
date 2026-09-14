@@ -1,0 +1,64 @@
+{
+  "schema": "F10-MINIMUM-PIVOT-INPUTS/v1",
+  "first_action_utc": "2026-09-10T03:08:04.045058959Z",
+  "controlling_stop_utc": "2026-09-10T03:24:00Z",
+  "charged_count": 8,
+  "inputs": [
+    {
+      "id": "ROOT-CARD.md",
+      "path": "box/f10-quotient-minimum-pivot-prep-20260910/ROOT-CARD.md",
+      "sha256": "d3c2d52d2de9ff7f385ac0bf13ede294babd0e4579bcadb00628c5708a232478",
+      "bytes": 3589,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance"
+    },
+    {
+      "id": "design",
+      "path": "xmodel/f10-r1-quotient-remainder-design-astra-20260909.md",
+      "sha256": "6135ca133c9132171d90536761471af8a2eefaf664831ab7b322120fc4c5ce2a",
+      "bytes": 19333,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance"
+    },
+    {
+      "id": "design-gate",
+      "path": "xmodel/f10-r1-quotient-remainder-design-gate-fable5-20260910.md",
+      "sha256": "718df083267ec3c7fc5ac9e0c493a33ccc41f4c8b92a82eed5b2dbbb3570746d",
+      "bytes": 15828,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance"
+    },
+    {
+      "id": "linear-gate",
+      "path": "xmodel/f10-univariate-linear-decision-gate-fable5-20260909.md",
+      "sha256": "6646c2f6f9c48ddb510fc75095ef48dc6bb8d6a2e96c56c388928bcb5872f3f6",
+      "bytes": 13589,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance"
+    },
+    {
+      "id": "old-solver",
+      "path": "box/f10-r1-quotient-remainder-code-astra-20260910/solver.py",
+      "sha256": "58cdc4721143ec2be93cc720831c2235a9221b567f1903d2ffd6025b4f54b665",
+      "bytes": 15928,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance"
+    },
+    {
+      "id": "old-generic-caller",
+      "path": "box/f10-r1-quotient-generic-caller-astra-20260910/dispatch_batch.py",
+      "sha256": "54c55be3db27207a2c22072699a19d80c2be6a882e5de7e237fd2bd6f57f1ed0",
+      "bytes": 21533,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance"
+    },
+    {
+      "id": "old-actual-caller",
+      "path": "box/f10-quotient-actual-caller-migration-prep-20260910/dispatch_batch.py",
+      "sha256": "a7c0cf17379b624358e8cc010226c7b179a0218330191540918e15e9ee4303d2",
+      "bytes": 15704,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance"
+    },
+    {
+      "id": "observed-execution",
+      "path": "xmodel/f10-quotient-actual-execution-coordinator-20260910.md",
+      "sha256": "4bd18a01f09ece2065c934704851d635b33bf9e367d24bba633fa5a03348c6b9",
+      "bytes": 9621,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance"
+    }
+  ]
+}

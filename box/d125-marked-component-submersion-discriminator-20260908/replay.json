@@ -1,0 +1,68 @@
+{
+  "caps": {
+    "cpu_seconds": 25,
+    "rss_bytes": 536870912,
+    "wall_seconds": 30
+  },
+  "elapsed_seconds": 1.969519,
+  "runs": [
+    {
+      "mode": "normal",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "02560701f12f5fc325697cb2f2c001d8927445d4753750613391ecc2e63c7654"
+    },
+    {
+      "mode": "bad-M",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 120, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 74, in run\n    need(curve(M)=={(0,-3):F(1)},'prescribed cofactor restriction')\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: prescribed cofactor restriction\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "bad-Q-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 120, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 80, in run\n    need(curve(bracket(P,Q))==scale(one,F(-5,9)),'marked Jacobian compatibility sign')\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: marked Jacobian compatibility sign\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "bad-critical",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 120, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 106, in run\n    need(eval_even(diff(P,0),uc)==0,'actual P_u critical control')\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: actual P_u critical control\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "normal",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "02560701f12f5fc325697cb2f2c001d8927445d4753750613391ecc2e63c7654"
+    },
+    {
+      "mode": "bad-M",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 120, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 74, in run\n    need(curve(M)=={(0,-3):F(1)},'prescribed cofactor restriction')\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: prescribed cofactor restriction\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "bad-Q-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 120, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 80, in run\n    need(curve(bracket(P,Q))==scale(one,F(-5,9)),'marked Jacobian compatibility sign')\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: marked Jacobian compatibility sign\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "bad-critical",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 120, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 106, in run\n    need(eval_even(diff(P,0),uc)==0,'actual P_u critical control')\n  File \"/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: actual P_u critical control\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "zero_assert": true
+}

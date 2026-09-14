@@ -1,0 +1,66 @@
+{
+  "certificate": {
+    "accepted_run_count": 1,
+    "crt_rational_reconstruction": {
+      "available": false,
+      "items": {},
+      "method": "CRT plus bounded rational reconstruction for scalar invariants"
+    },
+    "hilbert_hint": null,
+    "policy": {
+      "allow_modular_unit_promotion": false,
+      "note": "genuine tame J=1 automorphism must remain nonunit",
+      "require_controls": true,
+      "scope": "EXACT_Q"
+    },
+    "promotion_note": "exact Q standard basis has dimension zero",
+    "properness_scope": {
+      "positive_weights": [
+        []
+      ],
+      "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+      "systems_declared_homogeneous": false
+    },
+    "runs": [
+      {
+        "characteristic": 0,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/operative-sweep-20260905/controls/tame_automorphism/CTRL_GENUINE_TAME_AUTOMORPHISM_Q.sing"
+        ],
+        "elapsed_seconds": 0.008225,
+        "label": "CTRL_GENUINE_TAME_AUTOMORPHISM",
+        "main": {
+          "accepted": true,
+          "basis_size": 2,
+          "dimension": 0,
+          "lead_dim": 0,
+          "lead_vdim": 1,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": false,
+          "vdim": 1,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/operative-sweep-20260905/controls/tame_automorphism/CTRL_GENUINE_TAME_AUTOMORPHISM_Q.sing",
+        "script_sha256": "18e6541f664f2126bd506567229002d0be10c62b8115fc96b0f84ac251aef02a",
+        "stderr": "/home/ubuntu/jc2/box/operative-sweep-20260905/controls/tame_automorphism/CTRL_GENUINE_TAME_AUTOMORPHISM_Q.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/operative-sweep-20260905/controls/tame_automorphism/CTRL_GENUINE_TAME_AUTOMORPHISM_Q.out",
+        "stdout_sha256": "50bcf5ae36673635c06e1c66d643c7aa010bedc28c5c5bfc6820784d12bee43e",
+        "timed_out": false
+      }
+    ]
+  },
+  "verdict": "DIM0_CHAR0"
+}

@@ -1,0 +1,31 @@
+{
+  "owner": "/root",
+  "status": "COMPLETED_ROOT_INTERFACE_ONLY",
+  "scientific_status": "MANUAL_UNREVIEWED_KNOWN_SUFFICIENT_ENDPOINT_AND_EXACT_CONTROLS; NO_PAIR_OR_EXCLUSION",
+  "research_first_utc": "2026-09-11 13:08:56 UTC",
+  "publication_opened_utc": "2026-09-11 13:22:31 UTC",
+  "reserve_utc": "2026-09-11 13:34:00 UTC",
+  "hard_utc": "2026-09-11 13:42:00 UTC",
+  "clock_reset": false,
+  "expected_verified_and_sealed_whole_read_by_utc": "2026-09-11 13:29:43 UTC",
+  "expected_transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "manifest_sha256": "9435c6fdc73494de9011e177c2c26f77737e6d3c02f4c808691de618dee60aaa",
+    "status": "VERIFIED"
+  },
+  "owned_excluding_custody": [
+    {"path": "xmodel/danielewski-two-chart-interface-root-20260911.md", "sha256": "9107e171cb1db948eabae96cad8961fbc3c1ceb6b8d8ddbe442c2381caed0033", "read_scope": "WHOLE partial and sealed final"},
+    {"path": "xmodel/danielewski-two-chart-interface-root-20260911.md.artifact.json", "sha256": "9435c6fdc73494de9011e177c2c26f77737e6d3c02f4c808691de618dee60aaa", "read_scope": "expected verifier"},
+    {"path": "box/danielewski-two-chart-interface-root-20260911/PINS.json", "sha256": "4534eeff67c84a62c264382f17dae1fb3439b061d7f1f344523f7c4e30a69f1e", "read_scope": "WHOLE"},
+    {"path": "box/danielewski-two-chart-interface-root-20260911/SOURCES.md", "sha256": "ae771c07a1b72b146390820a0545824f1b8f903f06017150de659f1265b0f52a", "read_scope": "WHOLE"}
+  ],
+  "primary_pins": [
+    {"path": "box/danielewski-two-chart-interface-root-20260911/basel-2009.pdf", "sha256": "b97a28d832703e66ce874b83de2cf07254ecc28078ffc45b128e05b6f36c47f7", "read_scope": "WHOLE two pages"},
+    {"path": "box/danielewski-two-chart-interface-root-20260911/bracket-width-2021.pdf", "sha256": "5275f17154e83821076d8e851fb8cde99a3da1e4346517f07f774d721848710a", "read_scope": "SELECTED PDF20-24"}
+  ],
+  "agent_report_consumption": "NONE; separate live task not a premise",
+  "postpins": "Primary PDFs unchanged; final transaction expected verified; own metadata read WHOLE",
+  "execution": "Documentary primary retrieval/extraction/hashing and publication only; NO scientific execution, AWS or Fable",
+  "writers": "ROOT interface report and source/metadata writers finished before this custody; separate Astra task remains independently owned",
+  "self_hash": "Excluded; reported externally"
+}

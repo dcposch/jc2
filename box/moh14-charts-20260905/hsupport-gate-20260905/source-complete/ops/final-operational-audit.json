@@ -1,0 +1,65 @@
+{
+  "cutoff_utc": "2026-09-05T13:40:51Z",
+  "local_lane_drivers_or_collectors": [],
+  "surviving_worker_checks": [
+    {
+      "host": "172.30.0.7",
+      "ssh_returncode": 0,
+      "stdout": "{\"utc\": \"2026-09-05T13:40:49Z\", \"lane_CAS_processes\": []}",
+      "stderr": ""
+    },
+    {
+      "host": "172.30.0.18",
+      "ssh_returncode": 0,
+      "stdout": "{\"utc\": \"2026-09-05T13:40:49Z\", \"lane_CAS_processes\": []}",
+      "stderr": ""
+    },
+    {
+      "host": "172.30.0.28",
+      "ssh_returncode": 0,
+      "stdout": "{\"utc\": \"2026-09-05T13:40:50Z\", \"lane_CAS_processes\": []}",
+      "stderr": ""
+    }
+  ],
+  "fleet_ec2_state": [
+    {
+      "ID": "i-054caf7aff0720142",
+      "Priv": "172.30.0.7",
+      "State": "running",
+      "Reason": "",
+      "Type": "c7i.8xlarge"
+    },
+    {
+      "ID": "i-0e91c47db37aa6598",
+      "Priv": "172.30.0.28",
+      "State": "running",
+      "Reason": "",
+      "Type": "c7i.8xlarge"
+    },
+    {
+      "ID": "i-04fcf19f9dfa5e32e",
+      "Priv": "172.30.0.18",
+      "State": "running",
+      "Reason": "",
+      "Type": "c7i.8xlarge"
+    },
+    {
+      "ID": "i-0045de5d555238fa6",
+      "Priv": null,
+      "State": "terminated",
+      "Reason": "User initiated (2026-09-05 13:15:32 GMT)",
+      "Type": "r7i.8xlarge"
+    },
+    {
+      "ID": "i-09ae1c450d382e265",
+      "Priv": null,
+      "State": "terminated",
+      "Reason": "User initiated (2026-09-05 13:15:32 GMT)",
+      "Type": "r7i.8xlarge"
+    }
+  ],
+  "no_instances_created_or_terminated_by_this_lane": true,
+  "solver_UNIT_signals": 0,
+  "exact_Q_production_certificates": 0,
+  "zero_dangling_lane_processes": true
+}

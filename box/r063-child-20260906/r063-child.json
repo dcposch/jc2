@@ -1,0 +1,1847 @@
+{
+  "calculus": {
+    "actual_L_walker": "box/exact-contact-gate-20260906/census_replay.py:configs",
+    "descend_own": "box/lib/descend_own.py",
+    "node": "EllClosure = closure_fixed.Closure.node with 1->1+ell",
+    "patterns": "box/exact-contact-gate-20260906/closure_fixed.py:patterns",
+    "shift": "Xu Lemma 4.1 -c t^{-ell-2}; Moh Prop 4.6(3)*; ell=v_s-u_s-1"
+  },
+  "parent_I_M_targets": {
+    "R009": "8",
+    "R050": "8",
+    "R063": "19"
+  },
+  "rows": {
+    "R009": {
+      "child": {
+        "M": {
+          "1": -32,
+          "2": 37
+        },
+        "V": [
+          2
+        ],
+        "V_type": "DETERMINED",
+        "d": {
+          "1": 48,
+          "2": 16,
+          "3": 1
+        },
+        "delta_shifted": {
+          "1": "4/3",
+          "2": "-1/5"
+        },
+        "delta_unshifted": {
+          "1": "2/3",
+          "2": "-1/10"
+        },
+        "dropped": false,
+        "ell": 1,
+        "license": "DETERMINED_PROP6.4",
+        "m": 32,
+        "n": 48,
+        "radii_agree": true,
+        "route_state": "NONEMPTY",
+        "s": 2,
+        "top_license": "DETERMINED_COMPLETE_US1",
+        "u_s_shifted": 14,
+        "u_s_unshifted": 14,
+        "us_parent": 1,
+        "vs_parent": 3
+      },
+      "conventions": {
+        "shifted": {
+          "any_complete_equals_parent": true,
+          "any_complete_is_71_4": false,
+          "any_ungated_equals_parent": true,
+          "any_ungated_is_71_4": false,
+          "census_replay_actual_L_n": 2,
+          "census_replay_actual_L_patterns": [
+            [
+              [
+                2,
+                1,
+                [
+                  1,
+                  2
+                ],
+                "nonzero",
+                5,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                6,
+                [
+                  2
+                ],
+                "nonzero",
+                5,
+                1
+              ]
+            ]
+          ],
+          "complete_I_M": [
+            "8"
+          ],
+          "complete_pairs": [
+            {
+              "I_M": "8",
+              "I_M_integral": true,
+              "I_m": "7",
+              "I_m_packets": "6",
+              "equals_parent_I_M": true,
+              "is_71_4": false
+            }
+          ],
+          "configs": [
+            {
+              "complete": true,
+              "node": {
+                "sub": {
+                  "A": 3,
+                  "L": 5,
+                  "delta": "4/3",
+                  "final_J": "8/5",
+                  "galois_ok": true,
+                  "i": 1,
+                  "remf": 1,
+                  "remg": 0,
+                  "rho_f": 4,
+                  "rho_g": "6"
+                },
+                "this": {
+                  "A": 5,
+                  "L": 1,
+                  "P": 16,
+                  "Q": 11,
+                  "delta": "-1/5",
+                  "factors": [
+                    {
+                      "count": 1,
+                      "delta": "3",
+                      "kappa": "-2",
+                      "kind": "zero",
+                      "r": 1,
+                      "rho": 2,
+                      "selected": false,
+                      "type": "minor"
+                    },
+                    {
+                      "count": 5,
+                      "delta": "3",
+                      "kappa": "-2",
+                      "kind": "orbit",
+                      "r": 1,
+                      "rho": 2,
+                      "selected": false,
+                      "type": "minor"
+                    },
+                    {
+                      "L": 5,
+                      "count": 5,
+                      "i": 1,
+                      "kappa": "12/5",
+                      "kind": "orbit",
+                      "n_sub": 1,
+                      "r": 2,
+                      "rho": 4,
+                      "selected": true,
+                      "type": "major"
+                    }
+                  ],
+                  "i": 2,
+                  "orbits": [
+                    1,
+                    2
+                  ],
+                  "sel_used": true,
+                  "sibling_dead": false,
+                  "threshold": "16/11",
+                  "z": 1
+                }
+              },
+              "pairs": [
+                {
+                  "I_M": "8",
+                  "I_M_ge_I_m": true,
+                  "I_M_integral": true,
+                  "I_m": "7",
+                  "I_m_packets": "6"
+                }
+              ],
+              "patterns": [
+                {
+                  "level": 2,
+                  "orbits": [
+                    1,
+                    2
+                  ],
+                  "selected_kind": "orbit",
+                  "selected_r": 2,
+                  "z": 1
+                }
+              ],
+              "ungated_complete_as_numerical": true,
+              "ungated_pairs": [
+                {
+                  "I_M": "8",
+                  "I_M_ge_I_m": true,
+                  "I_M_integral": true,
+                  "I_m": "7",
+                  "I_m_packets": "6"
+                }
+              ]
+            },
+            {
+              "complete": false,
+              "node": {
+                "A": 5,
+                "L": 1,
+                "P": 16,
+                "Q": 11,
+                "delta": "-1/5",
+                "factors": [
+                  {
+                    "L": 1,
+                    "count": 1,
+                    "i": 1,
+                    "kappa": "20",
+                    "kind": "zero",
+                    "outcomes": 0,
+                    "r": 6,
+                    "rho": 12,
+                    "selected": false,
+                    "type": "major"
+                  }
+                ],
+                "i": 2,
+                "orbits": [
+                  2
+                ],
+                "sel_used": false,
+                "sibling_dead": true,
+                "threshold": "16/11",
+                "z": 6
+              },
+              "pairs": [],
+              "patterns": [
+                {
+                  "level": 2,
+                  "orbits": [
+                    2
+                  ],
+                  "selected_kind": "DEAD",
+                  "selected_r": null,
+                  "z": 6
+                }
+              ]
+            },
+            {
+              "complete": false,
+              "node": {
+                "sub": {
+                  "A": 3,
+                  "L": 5,
+                  "delta": "4/3",
+                  "final_J": "8/5",
+                  "galois_ok": true,
+                  "i": 1,
+                  "remf": 1,
+                  "remg": 0,
+                  "rho_f": 4,
+                  "rho_g": "6"
+                },
+                "this": {
+                  "A": 5,
+                  "L": 1,
+                  "P": 16,
+                  "Q": 11,
+                  "delta": "-1/5",
+                  "factors": [
+                    {
+                      "L": 1,
+                      "count": 1,
+                      "i": 1,
+                      "kappa": "20",
+                      "kind": "zero",
+                      "outcomes": 1,
+                      "r": 6,
+                      "rho": 12,
+                      "selected": false,
+                      "type": "major"
+                    },
+                    {
+                      "L": 5,
+                      "count": 5,
+                      "i": 1,
+                      "kappa": "12/5",
+                      "kind": "orbit",
+                      "n_sub": 1,
+                      "r": 2,
+                      "rho": 4,
+                      "selected": true,
+                      "type": "major"
+                    }
+                  ],
+                  "i": 2,
+                  "orbits": [
+                    2
+                  ],
+                  "sel_used": true,
+                  "sibling_dead": false,
+                  "threshold": "16/11",
+                  "z": 6
+                }
+              },
+              "pairs": [],
+              "patterns": [
+                {
+                  "level": 2,
+                  "orbits": [
+                    2
+                  ],
+                  "selected_kind": "orbit",
+                  "selected_r": 2,
+                  "z": 6
+                }
+              ],
+              "ungated_complete_as_numerical": true,
+              "ungated_pairs": [
+                {
+                  "I_M": "592/29",
+                  "I_M_ge_I_m": true,
+                  "I_M_integral": false,
+                  "I_m": "1",
+                  "I_m_packets": "0"
+                }
+              ]
+            }
+          ],
+          "convention": "shifted",
+          "d1_gated": [
+            {
+              "A": 29,
+              "J": "360/29",
+              "L": 1,
+              "delta": "8/29",
+              "galois_ok": false,
+              "remf": 12,
+              "remg": 18,
+              "rho_f": 12,
+              "rho_g": "18",
+              "selected_path": false
+            },
+            {
+              "A": 3,
+              "J": "8/5",
+              "L": 5,
+              "delta": "4/3",
+              "galois_ok": true,
+              "remf": 1,
+              "remg": 0,
+              "rho_f": 4,
+              "rho_g": "6",
+              "selected_path": true
+            }
+          ],
+          "d1_ungated": [
+            {
+              "A": 29,
+              "J": "360/29",
+              "L": 1,
+              "delta": "8/29",
+              "galois_ok": false,
+              "remf": 12,
+              "remg": 18,
+              "rho_f": 12,
+              "rho_g": "18",
+              "selected_path": false
+            },
+            {
+              "A": 3,
+              "J": "8/5",
+              "L": 5,
+              "delta": "4/3",
+              "galois_ok": true,
+              "remf": 1,
+              "remg": 0,
+              "rho_f": 4,
+              "rho_g": "6",
+              "selected_path": true
+            }
+          ],
+          "ell": 1,
+          "n_cf_selected_patterns": 2,
+          "n_complete_pairs": 1,
+          "n_selected_pattern_paths": 2,
+          "n_ungated_pairs": 2,
+          "top": {
+            "L0": 1,
+            "W_s": 11,
+            "delta_s": "-1/5",
+            "kappa": "64",
+            "one": "2",
+            "rho": 32
+          },
+          "ungated_I_M": [
+            "8",
+            "592/29"
+          ],
+          "ungated_pairs": [
+            {
+              "I_M": "8",
+              "I_M_integral": true,
+              "I_m": "7",
+              "I_m_packets": "6",
+              "equals_parent_I_M": true,
+              "is_71_4": false
+            },
+            {
+              "I_M": "592/29",
+              "I_M_integral": false,
+              "I_m": "1",
+              "I_m_packets": "0",
+              "equals_parent_I_M": false,
+              "is_71_4": false
+            }
+          ]
+        },
+        "unshifted": {
+          "any_complete_equals_parent": false,
+          "any_complete_is_71_4": false,
+          "any_ungated_equals_parent": false,
+          "any_ungated_is_71_4": false,
+          "census_replay_actual_L_n": 0,
+          "census_replay_actual_L_patterns": [],
+          "complete_I_M": [],
+          "complete_pairs": [],
+          "configs": [
+            {
+              "complete": false,
+              "node": {
+                "A": 10,
+                "L": 1,
+                "P": 16,
+                "Q": 11,
+                "delta": "-1/10",
+                "failure": "no_selected_pattern",
+                "i": 2,
+                "n_patterns": 0,
+                "rho_f": 32,
+                "threshold": "16/11"
+              },
+              "pairs": [],
+              "patterns": [],
+              "ungated_complete_as_numerical": false,
+              "ungated_pairs": []
+            }
+          ],
+          "convention": "unshifted",
+          "d1_gated": [],
+          "d1_ungated": [],
+          "ell": 0,
+          "n_cf_selected_patterns": 1,
+          "n_complete_pairs": 0,
+          "n_selected_pattern_paths": 1,
+          "n_ungated_pairs": 0,
+          "top": {
+            "L0": 1,
+            "W_s": 11,
+            "delta_s": "-1/10",
+            "kappa": "32",
+            "one": "1",
+            "rho": 32
+          },
+          "ungated_I_M": [],
+          "ungated_pairs": []
+        }
+      },
+      "parent": {
+        "M": [
+          -128,
+          148,
+          190
+        ],
+        "V": [
+          2,
+          3
+        ],
+        "d": [
+          192,
+          64,
+          4,
+          2
+        ],
+        "delta": [
+          "19/24",
+          "5/16",
+          -1
+        ],
+        "m": 128,
+        "n": 192,
+        "printed_closure": {
+          "full_outcomes": [
+            [
+              "8",
+              "8"
+            ]
+          ],
+          "n_full": 1,
+          "n_survivors": 1,
+          "survivors": [
+            [
+              "8",
+              "8"
+            ]
+          ]
+        },
+        "s": 3,
+        "target_I_M": "8",
+        "u_s": 1,
+        "v_s": 3
+      },
+      "row_id": "R009"
+    },
+    "R050": {
+      "child": {
+        "M": {
+          "1": -14,
+          "2": 46
+        },
+        "V": [
+          4
+        ],
+        "V_type": "DETERMINED",
+        "d": {
+          "1": 49,
+          "2": 7,
+          "3": 1
+        },
+        "delta_shifted": {
+          "1": "5/7",
+          "2": "-1"
+        },
+        "delta_unshifted": {
+          "1": "5/14",
+          "2": "-1/2"
+        },
+        "dropped": false,
+        "ell": 1,
+        "license": "DETERMINED_PROP6.4",
+        "m": 14,
+        "n": 49,
+        "radii_agree": true,
+        "route_state": "NONEMPTY",
+        "s": 2,
+        "top_license": "DETERMINED_COMPLETE_US1",
+        "u_s_shifted": 3,
+        "u_s_unshifted": 3,
+        "us_parent": 1,
+        "vs_parent": 3
+      },
+      "conventions": {
+        "shifted": {
+          "any_complete_equals_parent": true,
+          "any_complete_is_71_4": false,
+          "any_ungated_equals_parent": true,
+          "any_ungated_is_71_4": false,
+          "census_replay_actual_L_n": 7,
+          "census_replay_actual_L_patterns": [
+            [
+              [
+                2,
+                0,
+                [
+                  1,
+                  2,
+                  4
+                ],
+                "nonzero",
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                0,
+                [
+                  3,
+                  4
+                ],
+                "nonzero",
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                1,
+                [
+                  2,
+                  4
+                ],
+                "nonzero",
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                2,
+                [
+                  1,
+                  4
+                ],
+                "nonzero",
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                3,
+                [
+                  4
+                ],
+                "nonzero",
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                4,
+                [
+                  1,
+                  2
+                ],
+                "zero",
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                4,
+                [
+                  3
+                ],
+                "zero",
+                1,
+                1
+              ]
+            ]
+          ],
+          "complete_I_M": [
+            "8"
+          ],
+          "complete_pairs": [
+            {
+              "I_M": "8",
+              "I_M_integral": true,
+              "I_m": "11/2",
+              "I_m_packets": "9/2",
+              "equals_parent_I_M": true,
+              "is_71_4": false
+            }
+          ],
+          "configs": [
+            {
+              "complete": true,
+              "node": {
+                "sub": {
+                  "A": 7,
+                  "L": 1,
+                  "delta": "5/7",
+                  "final_J": "8",
+                  "galois_ok": true,
+                  "i": 1,
+                  "remf": 1,
+                  "remg": 0,
+                  "rho_f": 8,
+                  "rho_g": "28"
+                },
+                "this": {
+                  "A": 1,
+                  "L": 1,
+                  "P": 7,
+                  "Q": 3,
+                  "delta": "-1",
+                  "factors": [
+                    {
+                      "count": 1,
+                      "delta": "6",
+                      "kappa": "-8",
+                      "kind": "orbit",
+                      "r": 1,
+                      "rho": 2,
+                      "selected": false,
+                      "type": "minor"
+                    },
+                    {
+                      "count": 1,
+                      "delta": "5/2",
+                      "kappa": "-2",
+                      "kind": "orbit",
+                      "r": 2,
+                      "rho": 4,
+                      "selected": false,
+                      "type": "minor"
+                    },
+                    {
+                      "L": 1,
+                      "count": 1,
+                      "i": 1,
+                      "kappa": "10",
+                      "kind": "orbit",
+                      "n_sub": 1,
+                      "r": 4,
+                      "rho": 8,
+                      "selected": true,
+                      "type": "major"
+                    }
+                  ],
+                  "i": 2,
+                  "orbits": [
+                    1,
+                    2,
+                    4
+                  ],
+                  "sel_used": true,
+                  "sibling_dead": false,
+                  "threshold": "7/3",
+                  "z": 0
+                }
+              },
+              "pairs": [
+                {
+                  "I_M": "8",
+                  "I_M_ge_I_m": true,
+                  "I_M_integral": true,
+                  "I_m": "11/2",
+                  "I_m_packets": "9/2"
+                }
+              ],
+              "patterns": [
+                {
+                  "level": 2,
+                  "orbits": [
+                    1,
+                    2,
+                    4
+                  ],
+                  "selected_kind": "orbit",
+                  "selected_r": 4,
+                  "z": 0
+                }
+              ],
+              "ungated_complete_as_numerical": true,
+              "ungated_pairs": [
+                {
+                  "I_M": "8",
+                  "I_M_ge_I_m": true,
+                  "I_M_integral": true,
+                  "I_m": "11/2",
+                  "I_m_packets": "9/2"
+                }
+              ]
+            },
+            {
+              "complete": false,
+              "node": {
+                "A": 1,
+                "L": 1,
+                "P": 7,
+                "Q": 3,
+                "delta": "-1",
+                "factors": [
+                  {
+                    "L": 1,
+                    "count": 1,
+                    "i": 1,
+                    "kappa": "4",
+                    "kind": "orbit",
+                    "outcomes": 0,
+                    "r": 3,
+                    "rho": 6,
+                    "selected": false,
+                    "type": "major"
+                  }
+                ],
+                "i": 2,
+                "orbits": [
+                  3,
+                  4
+                ],
+                "sel_used": false,
+                "sibling_dead": true,
+                "threshold": "7/3",
+                "z": 0
+              },
+              "pairs": [],
+              "patterns": [
+                {
+                  "level": 2,
+                  "orbits": [
+                    3,
+                    4
+                  ],
+                  "selected_kind": "DEAD",
+                  "selected_r": null,
+                  "z": 0
+                }
+              ]
+            },
+            {
+              "complete": false,
+              "node": {
+                "sub": {
+                  "A": 7,
+                  "L": 1,
+                  "delta": "5/7",
+                  "final_J": "8",
+                  "galois_ok": true,
+                  "i": 1,
+                  "remf": 1,
+                  "remg": 0,
+                  "rho_f": 8,
+                  "rho_g": "28"
+                },
+                "this": {
+                  "A": 1,
+                  "L": 1,
+                  "P": 7,
+                  "Q": 3,
+                  "delta": "-1",
+                  "factors": [
+                    {
+                      "L": 1,
+                      "count": 1,
+                      "i": 1,
+                      "kappa": "4",
+                      "kind": "orbit",
+                      "outcomes": 1,
+                      "r": 3,
+                      "rho": 6,
+                      "selected": false,
+                      "type": "major"
+                    },
+                    {
+                      "L": 1,
+                      "count": 1,
+                      "i": 1,
+                      "kappa": "10",
+                      "kind": "orbit",
+                      "n_sub": 1,
+                      "r": 4,
+                      "rho": 8,
+                      "selected": true,
+                      "type": "major"
+                    }
+                  ],
+                  "i": 2,
+                  "orbits": [
+                    3,
+                    4
+                  ],
+                  "sel_used": true,
+                  "sibling_dead": false,
+                  "threshold": "7/3",
+                  "z": 0
+                }
+              },
+              "pairs": [],
+              "patterns": [
+                {
+                  "level": 2,
+                  "orbits": [
+                    3,
+                    4
+                  ],
+                  "selected_kind": "orbit",
+                  "selected_r": 4,
+                  "z": 0
+                }
+              ],
+              "ungated_complete_as_numerical": true,
+              "ungated_pairs": [
+                {
+                  "I_M": "146/13",
+                  "I_M_ge_I_m": true,
+                  "I_M_integral": false,
+                  "I_m": "1",
+                  "I_m_packets": "0"
+                }
+              ]
+            }
+          ],
+          "convention": "shifted",
+          "d1_gated": [
+            {
+              "A": 13,
+              "J": "42/13",
+              "L": 1,
+              "delta": "17/13",
+              "galois_ok": false,
+              "remf": 6,
+              "remg": 8,
+              "rho_f": 6,
+              "rho_g": "21",
+              "selected_path": false
+            },
+            {
+              "A": 7,
+              "J": "8",
+              "L": 1,
+              "delta": "5/7",
+              "galois_ok": true,
+              "remf": 1,
+              "remg": 0,
+              "rho_f": 8,
+              "rho_g": "28",
+              "selected_path": true
+            }
+          ],
+          "d1_ungated": [
+            {
+              "A": 13,
+              "J": "42/13",
+              "L": 1,
+              "delta": "17/13",
+              "galois_ok": false,
+              "remf": 6,
+              "remg": 8,
+              "rho_f": 6,
+              "rho_g": "21",
+              "selected_path": false
+            },
+            {
+              "A": 7,
+              "J": "8",
+              "L": 1,
+              "delta": "5/7",
+              "galois_ok": true,
+              "remf": 1,
+              "remg": 0,
+              "rho_f": 8,
+              "rho_g": "28",
+              "selected_path": true
+            }
+          ],
+          "ell": 1,
+          "n_cf_selected_patterns": 2,
+          "n_complete_pairs": 1,
+          "n_selected_pattern_paths": 2,
+          "n_ungated_pairs": 2,
+          "top": {
+            "L0": 1,
+            "W_s": 3,
+            "delta_s": "-1",
+            "kappa": "28",
+            "one": "2",
+            "rho": 14
+          },
+          "ungated_I_M": [
+            "8",
+            "146/13"
+          ],
+          "ungated_pairs": [
+            {
+              "I_M": "8",
+              "I_M_integral": true,
+              "I_m": "11/2",
+              "I_m_packets": "9/2",
+              "equals_parent_I_M": true,
+              "is_71_4": false
+            },
+            {
+              "I_M": "146/13",
+              "I_M_integral": false,
+              "I_m": "1",
+              "I_m_packets": "0",
+              "equals_parent_I_M": false,
+              "is_71_4": false
+            }
+          ]
+        },
+        "unshifted": {
+          "any_complete_equals_parent": false,
+          "any_complete_is_71_4": false,
+          "any_ungated_equals_parent": false,
+          "any_ungated_is_71_4": false,
+          "census_replay_actual_L_n": 0,
+          "census_replay_actual_L_patterns": [],
+          "complete_I_M": [],
+          "complete_pairs": [],
+          "configs": [
+            {
+              "complete": false,
+              "node": {
+                "A": 2,
+                "L": 1,
+                "P": 7,
+                "Q": 3,
+                "delta": "-1/2",
+                "failure": "no_selected_pattern",
+                "i": 2,
+                "n_patterns": 0,
+                "rho_f": 14,
+                "threshold": "7/3"
+              },
+              "pairs": [],
+              "patterns": [],
+              "ungated_complete_as_numerical": false,
+              "ungated_pairs": []
+            }
+          ],
+          "convention": "unshifted",
+          "d1_gated": [],
+          "d1_ungated": [],
+          "ell": 0,
+          "n_cf_selected_patterns": 1,
+          "n_complete_pairs": 0,
+          "n_selected_pattern_paths": 1,
+          "n_ungated_pairs": 0,
+          "top": {
+            "L0": 1,
+            "W_s": 3,
+            "delta_s": "-1/2",
+            "kappa": "14",
+            "one": "1",
+            "rho": 14
+          },
+          "ungated_I_M": [],
+          "ungated_pairs": []
+        }
+      },
+      "parent": {
+        "M": [
+          -56,
+          184,
+          194
+        ],
+        "V": [
+          4,
+          3
+        ],
+        "d": [
+          196,
+          28,
+          4,
+          2
+        ],
+        "delta": [
+          "19/28",
+          "1/4",
+          -1
+        ],
+        "m": 56,
+        "n": 196,
+        "printed_closure": {
+          "full_outcomes": [
+            [
+              "8",
+              "8"
+            ]
+          ],
+          "n_full": 1,
+          "n_survivors": 1,
+          "survivors": [
+            [
+              "8",
+              "8"
+            ]
+          ]
+        },
+        "s": 3,
+        "target_I_M": "8",
+        "u_s": 1,
+        "v_s": 3
+      },
+      "row_id": "R050"
+    },
+    "R063": {
+      "child": {
+        "M": {
+          "1": -28,
+          "2": 35,
+          "3": 40
+        },
+        "V": [
+          3,
+          7
+        ],
+        "V_type": "DETERMINED",
+        "d": {
+          "1": 42,
+          "2": 14,
+          "3": 7,
+          "4": 1
+        },
+        "delta_shifted": {
+          "1": "7/6",
+          "2": "-1/3",
+          "3": "-2"
+        },
+        "delta_unshifted": {
+          "1": "7/12",
+          "2": "-1/6",
+          "3": "-1"
+        },
+        "dropped": false,
+        "ell": 1,
+        "license": "DETERMINED_PROP6.4",
+        "m": 28,
+        "n": 42,
+        "radii_agree": true,
+        "route_state": "NONEMPTY",
+        "s": 3,
+        "top_license": "DETERMINED_COMPLETE_US1",
+        "u_s_shifted": 0,
+        "u_s_unshifted": 0,
+        "us_parent": 1,
+        "vs_parent": 3
+      },
+      "conventions": {
+        "shifted": {
+          "any_complete_equals_parent": false,
+          "any_complete_is_71_4": false,
+          "any_ungated_equals_parent": false,
+          "any_ungated_is_71_4": true,
+          "census_replay_actual_L_n": 2,
+          "census_replay_actual_L_patterns": [
+            [
+              [
+                2,
+                5,
+                [
+                  3
+                ],
+                "nonzero",
+                3,
+                1
+              ],
+              [
+                3,
+                0,
+                [
+                  7
+                ],
+                "nonzero",
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                5,
+                [
+                  3
+                ],
+                "nonzero",
+                3,
+                1
+              ],
+              [
+                3,
+                7,
+                [],
+                "zero",
+                1,
+                1
+              ]
+            ]
+          ],
+          "complete_I_M": [],
+          "complete_pairs": [],
+          "configs": [
+            {
+              "complete": false,
+              "node": {
+                "sub": {
+                  "A": 3,
+                  "L": 1,
+                  "P": 14,
+                  "Q": 7,
+                  "delta": "-1/3",
+                  "factors": [
+                    {
+                      "L": 1,
+                      "count": 1,
+                      "i": 1,
+                      "kappa": "14",
+                      "kind": "zero",
+                      "outcomes": 0,
+                      "r": 5,
+                      "rho": 10,
+                      "selected": false,
+                      "type": "major"
+                    }
+                  ],
+                  "i": 2,
+                  "orbits": [
+                    3
+                  ],
+                  "sel_used": false,
+                  "sibling_dead": true,
+                  "threshold": "2",
+                  "z": 5
+                },
+                "this": {
+                  "A": 1,
+                  "L": 1,
+                  "P": 7,
+                  "Q": 2,
+                  "delta": "-2",
+                  "factors": [
+                    {
+                      "L": 1,
+                      "count": 1,
+                      "i": 2,
+                      "kappa": "56",
+                      "kind": "orbit",
+                      "n_sub": 1,
+                      "r": 7,
+                      "rho": 28,
+                      "selected": true,
+                      "type": "major"
+                    }
+                  ],
+                  "i": 3,
+                  "orbits": [
+                    7
+                  ],
+                  "sel_used": true,
+                  "sibling_dead": false,
+                  "threshold": "7/2",
+                  "z": 0
+                }
+              },
+              "pairs": [],
+              "patterns": [
+                {
+                  "level": 3,
+                  "orbits": [
+                    7
+                  ],
+                  "selected_kind": "orbit",
+                  "selected_r": 7,
+                  "z": 0
+                },
+                {
+                  "level": 2,
+                  "orbits": [
+                    3
+                  ],
+                  "selected_kind": "DEAD",
+                  "selected_r": null,
+                  "z": 5
+                }
+              ]
+            },
+            {
+              "complete": false,
+              "node": {
+                "sub": {
+                  "sub": {
+                    "A": 2,
+                    "L": 3,
+                    "delta": "7/6",
+                    "final_J": "3",
+                    "galois_ok": true,
+                    "i": 1,
+                    "remf": 0,
+                    "remg": 1,
+                    "rho_f": 6,
+                    "rho_g": "9"
+                  },
+                  "this": {
+                    "A": 3,
+                    "L": 1,
+                    "P": 14,
+                    "Q": 7,
+                    "delta": "-1/3",
+                    "factors": [
+                      {
+                        "L": 1,
+                        "count": 1,
+                        "i": 1,
+                        "kappa": "14",
+                        "kind": "zero",
+                        "outcomes": 1,
+                        "r": 5,
+                        "rho": 10,
+                        "selected": false,
+                        "type": "major"
+                      },
+                      {
+                        "L": 3,
+                        "count": 3,
+                        "i": 1,
+                        "kappa": "14/3",
+                        "kind": "orbit",
+                        "n_sub": 1,
+                        "r": 3,
+                        "rho": 6,
+                        "selected": true,
+                        "type": "major"
+                      }
+                    ],
+                    "i": 2,
+                    "orbits": [
+                      3
+                    ],
+                    "sel_used": true,
+                    "sibling_dead": false,
+                    "threshold": "2",
+                    "z": 5
+                  }
+                },
+                "this": {
+                  "A": 1,
+                  "L": 1,
+                  "P": 7,
+                  "Q": 2,
+                  "delta": "-2",
+                  "factors": [
+                    {
+                      "L": 1,
+                      "count": 1,
+                      "i": 2,
+                      "kappa": "56",
+                      "kind": "orbit",
+                      "n_sub": 1,
+                      "r": 7,
+                      "rho": 28,
+                      "selected": true,
+                      "type": "major"
+                    }
+                  ],
+                  "i": 3,
+                  "orbits": [
+                    7
+                  ],
+                  "sel_used": true,
+                  "sibling_dead": false,
+                  "threshold": "7/2",
+                  "z": 0
+                }
+              },
+              "pairs": [],
+              "patterns": [
+                {
+                  "level": 3,
+                  "orbits": [
+                    7
+                  ],
+                  "selected_kind": "orbit",
+                  "selected_r": 7,
+                  "z": 0
+                },
+                {
+                  "level": 2,
+                  "orbits": [
+                    3
+                  ],
+                  "selected_kind": "orbit",
+                  "selected_r": 3,
+                  "z": 5
+                }
+              ],
+              "ungated_complete_as_numerical": true,
+              "ungated_pairs": [
+                {
+                  "I_M": "71/4",
+                  "I_M_ge_I_m": true,
+                  "I_M_integral": false,
+                  "I_m": "1",
+                  "I_m_packets": "0"
+                }
+              ]
+            }
+          ],
+          "convention": "shifted",
+          "d1_gated": [
+            {
+              "A": 24,
+              "J": "35/4",
+              "L": 1,
+              "delta": "13/24",
+              "galois_ok": false,
+              "remf": 10,
+              "remg": 15,
+              "rho_f": 10,
+              "rho_g": "15",
+              "selected_path": false
+            }
+          ],
+          "d1_ungated": [
+            {
+              "A": 24,
+              "J": "35/4",
+              "L": 1,
+              "delta": "13/24",
+              "galois_ok": false,
+              "remf": 10,
+              "remg": 15,
+              "rho_f": 10,
+              "rho_g": "15",
+              "selected_path": false
+            },
+            {
+              "A": 2,
+              "J": "3",
+              "L": 3,
+              "delta": "7/6",
+              "galois_ok": true,
+              "remf": 0,
+              "remg": 1,
+              "rho_f": 6,
+              "rho_g": "9",
+              "selected_path": true
+            }
+          ],
+          "ell": 1,
+          "n_cf_selected_patterns": 1,
+          "n_complete_pairs": 0,
+          "n_selected_pattern_paths": 1,
+          "n_ungated_pairs": 1,
+          "top": {
+            "L0": 1,
+            "W_s": 2,
+            "delta_s": "-2",
+            "kappa": "56",
+            "one": "2",
+            "rho": 28
+          },
+          "ungated_I_M": [
+            "71/4"
+          ],
+          "ungated_pairs": [
+            {
+              "I_M": "71/4",
+              "I_M_integral": false,
+              "I_m": "1",
+              "I_m_packets": "0",
+              "equals_parent_I_M": false,
+              "is_71_4": true
+            }
+          ]
+        },
+        "unshifted": {
+          "any_complete_equals_parent": false,
+          "any_complete_is_71_4": false,
+          "any_ungated_equals_parent": false,
+          "any_ungated_is_71_4": false,
+          "census_replay_actual_L_n": 0,
+          "census_replay_actual_L_patterns": [],
+          "complete_I_M": [],
+          "complete_pairs": [],
+          "configs": [
+            {
+              "complete": false,
+              "node": {
+                "sub": {
+                  "A": 6,
+                  "L": 1,
+                  "P": 14,
+                  "Q": 7,
+                  "delta": "-1/6",
+                  "failure": "no_selected_pattern",
+                  "i": 2,
+                  "n_patterns": 0,
+                  "rho_f": 28,
+                  "threshold": "2"
+                },
+                "this": {
+                  "A": 1,
+                  "L": 1,
+                  "P": 7,
+                  "Q": 2,
+                  "delta": "-1",
+                  "factors": [
+                    {
+                      "L": 1,
+                      "count": 1,
+                      "i": 2,
+                      "kappa": "28",
+                      "kind": "orbit",
+                      "n_sub": 1,
+                      "r": 7,
+                      "rho": 28,
+                      "selected": true,
+                      "type": "major"
+                    }
+                  ],
+                  "i": 3,
+                  "orbits": [
+                    7
+                  ],
+                  "sel_used": true,
+                  "sibling_dead": false,
+                  "threshold": "7/2",
+                  "z": 0
+                }
+              },
+              "pairs": [],
+              "patterns": [
+                {
+                  "level": 3,
+                  "orbits": [
+                    7
+                  ],
+                  "selected_kind": "orbit",
+                  "selected_r": 7,
+                  "z": 0
+                }
+              ],
+              "ungated_complete_as_numerical": false,
+              "ungated_pairs": []
+            }
+          ],
+          "convention": "unshifted",
+          "d1_gated": [],
+          "d1_ungated": [],
+          "ell": 0,
+          "n_cf_selected_patterns": 1,
+          "n_complete_pairs": 0,
+          "n_selected_pattern_paths": 1,
+          "n_ungated_pairs": 0,
+          "top": {
+            "L0": 1,
+            "W_s": 2,
+            "delta_s": "-1",
+            "kappa": "28",
+            "one": "1",
+            "rho": 28
+          },
+          "ungated_I_M": [],
+          "ungated_pairs": []
+        }
+      },
+      "parent": {
+        "M": [
+          -112,
+          140,
+          160,
+          166
+        ],
+        "V": [
+          3,
+          21,
+          3
+        ],
+        "d": [
+          168,
+          56,
+          28,
+          4,
+          2
+        ],
+        "delta": [
+          "3/4",
+          "3/10",
+          "1/5",
+          -1
+        ],
+        "m": 112,
+        "n": 168,
+        "printed_closure": {
+          "full_outcomes": [],
+          "n_full": 0,
+          "n_survivors": 0,
+          "survivors": []
+        },
+        "s": 4,
+        "target_I_M": "19",
+        "u_s": 1,
+        "v_s": 3
+      },
+      "row_id": "R063"
+    }
+  },
+  "schema": "jc2.r063-child-printed-closure/v1",
+  "summary": {
+    "R009": {
+      "child_n_m_s_ell_V": [
+        48,
+        32,
+        2,
+        1,
+        [
+          2
+        ]
+      ],
+      "parent_printed_complete_N": 1,
+      "parent_printed_survivors": [
+        [
+          "8",
+          "8"
+        ]
+      ],
+      "parent_target_I_M": "8",
+      "shifted": {
+        "complete_I_M": [
+          "8"
+        ],
+        "complete_pairs": [
+          {
+            "I_M": "8",
+            "I_M_integral": true,
+            "I_m": "7",
+            "I_m_packets": "6",
+            "equals_parent_I_M": true,
+            "is_71_4": false
+          }
+        ],
+        "d1_ungated": [
+          {
+            "A": 29,
+            "J": "360/29",
+            "L": 1,
+            "delta": "8/29",
+            "galois_ok": false,
+            "remf": 12,
+            "remg": 18,
+            "rho_f": 12,
+            "rho_g": "18",
+            "selected_path": false
+          },
+          {
+            "A": 3,
+            "J": "8/5",
+            "L": 5,
+            "delta": "4/3",
+            "galois_ok": true,
+            "remf": 1,
+            "remg": 0,
+            "rho_f": 4,
+            "rho_g": "6",
+            "selected_path": true
+          }
+        ],
+        "equals_parent_complete": true,
+        "equals_parent_ungated": true,
+        "has_71_4_complete": false,
+        "has_71_4_ungated": false,
+        "n_selected_paths": 2,
+        "ungated_I_M": [
+          "8",
+          "592/29"
+        ],
+        "ungated_pairs": [
+          {
+            "I_M": "8",
+            "I_M_integral": true,
+            "I_m": "7",
+            "I_m_packets": "6",
+            "equals_parent_I_M": true,
+            "is_71_4": false
+          },
+          {
+            "I_M": "592/29",
+            "I_M_integral": false,
+            "I_m": "1",
+            "I_m_packets": "0",
+            "equals_parent_I_M": false,
+            "is_71_4": false
+          }
+        ]
+      },
+      "unshifted": {
+        "complete_I_M": [],
+        "complete_pairs": [],
+        "equals_parent_complete": false,
+        "equals_parent_ungated": false,
+        "has_71_4_complete": false,
+        "has_71_4_ungated": false,
+        "n_selected_paths": 1,
+        "ungated_I_M": [],
+        "ungated_pairs": []
+      }
+    },
+    "R050": {
+      "child_n_m_s_ell_V": [
+        49,
+        14,
+        2,
+        1,
+        [
+          4
+        ]
+      ],
+      "parent_printed_complete_N": 1,
+      "parent_printed_survivors": [
+        [
+          "8",
+          "8"
+        ]
+      ],
+      "parent_target_I_M": "8",
+      "shifted": {
+        "complete_I_M": [
+          "8"
+        ],
+        "complete_pairs": [
+          {
+            "I_M": "8",
+            "I_M_integral": true,
+            "I_m": "11/2",
+            "I_m_packets": "9/2",
+            "equals_parent_I_M": true,
+            "is_71_4": false
+          }
+        ],
+        "d1_ungated": [
+          {
+            "A": 13,
+            "J": "42/13",
+            "L": 1,
+            "delta": "17/13",
+            "galois_ok": false,
+            "remf": 6,
+            "remg": 8,
+            "rho_f": 6,
+            "rho_g": "21",
+            "selected_path": false
+          },
+          {
+            "A": 7,
+            "J": "8",
+            "L": 1,
+            "delta": "5/7",
+            "galois_ok": true,
+            "remf": 1,
+            "remg": 0,
+            "rho_f": 8,
+            "rho_g": "28",
+            "selected_path": true
+          }
+        ],
+        "equals_parent_complete": true,
+        "equals_parent_ungated": true,
+        "has_71_4_complete": false,
+        "has_71_4_ungated": false,
+        "n_selected_paths": 2,
+        "ungated_I_M": [
+          "8",
+          "146/13"
+        ],
+        "ungated_pairs": [
+          {
+            "I_M": "8",
+            "I_M_integral": true,
+            "I_m": "11/2",
+            "I_m_packets": "9/2",
+            "equals_parent_I_M": true,
+            "is_71_4": false
+          },
+          {
+            "I_M": "146/13",
+            "I_M_integral": false,
+            "I_m": "1",
+            "I_m_packets": "0",
+            "equals_parent_I_M": false,
+            "is_71_4": false
+          }
+        ]
+      },
+      "unshifted": {
+        "complete_I_M": [],
+        "complete_pairs": [],
+        "equals_parent_complete": false,
+        "equals_parent_ungated": false,
+        "has_71_4_complete": false,
+        "has_71_4_ungated": false,
+        "n_selected_paths": 1,
+        "ungated_I_M": [],
+        "ungated_pairs": []
+      }
+    },
+    "R063": {
+      "child_n_m_s_ell_V": [
+        42,
+        28,
+        3,
+        1,
+        [
+          3,
+          7
+        ]
+      ],
+      "parent_printed_complete_N": 0,
+      "parent_printed_survivors": [],
+      "parent_target_I_M": "19",
+      "shifted": {
+        "complete_I_M": [],
+        "complete_pairs": [],
+        "d1_ungated": [
+          {
+            "A": 24,
+            "J": "35/4",
+            "L": 1,
+            "delta": "13/24",
+            "galois_ok": false,
+            "remf": 10,
+            "remg": 15,
+            "rho_f": 10,
+            "rho_g": "15",
+            "selected_path": false
+          },
+          {
+            "A": 2,
+            "J": "3",
+            "L": 3,
+            "delta": "7/6",
+            "galois_ok": true,
+            "remf": 0,
+            "remg": 1,
+            "rho_f": 6,
+            "rho_g": "9",
+            "selected_path": true
+          }
+        ],
+        "equals_parent_complete": false,
+        "equals_parent_ungated": false,
+        "has_71_4_complete": false,
+        "has_71_4_ungated": true,
+        "n_selected_paths": 1,
+        "ungated_I_M": [
+          "71/4"
+        ],
+        "ungated_pairs": [
+          {
+            "I_M": "71/4",
+            "I_M_integral": false,
+            "I_m": "1",
+            "I_m_packets": "0",
+            "equals_parent_I_M": false,
+            "is_71_4": true
+          }
+        ]
+      },
+      "unshifted": {
+        "complete_I_M": [],
+        "complete_pairs": [],
+        "equals_parent_complete": false,
+        "equals_parent_ungated": false,
+        "has_71_4_complete": false,
+        "has_71_4_ungated": false,
+        "n_selected_paths": 1,
+        "ungated_I_M": [],
+        "ungated_pairs": []
+      }
+    }
+  },
+  "type": "DATA"
+}

@@ -1,0 +1,1 @@
+./run_msolve.sh: line 33: 24863 Killed                  timeout --signal=TERM --kill-after=30s "${limit}s" /usr/bin/time -v msolve -g 2 -t "$threads" -v 2 "$@" -f "$input" -o "$out" > "${base}.g2.stdout" 2> "$err"

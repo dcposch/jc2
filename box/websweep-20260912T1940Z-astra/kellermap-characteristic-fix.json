@@ -1,0 +1,185 @@
+{
+  "sha": "dca8f297546695ac86f20df96180dfd3ff43330f",
+  "node_id": "C_kwDOTqSOWdoAKGRjYThmMjk3NTQ2Njk1YWM4NmYyMGRmOTYxODBkZmQzZmY0MzMzMGY",
+  "commit": {
+    "author": {
+      "name": "Raphael Kruse",
+      "email": "raphael.kruse@mathematik.uni-halle.de",
+      "date": "2026-09-12T14:34:17Z"
+    },
+    "committer": {
+      "name": "Raphael Kruse",
+      "email": "raphael.kruse@mathematik.uni-halle.de",
+      "date": "2026-09-12T14:34:17Z"
+    },
+    "message": "Normalize the Jacobian entries, and ask BCW-10 on the support\n\nWork package 19 of milestone 0.7, the second high finding of the audit of\n0.7.0rc5, and the version opens 0.7.0rc6. Two causes, one map.\n\nPolyElement.diff leaves a term with a zero coefficient in the sparse\ndictionary in positive characteristic: over GF(2) the derivative of\nx + x^2 is stored as 0*x + 1, which compares unequal to the ring's one.\nEverything downstream compares those entries, so four public operations\nbroke at once on (x + x^2, y + y^2, z + z^2), a map whose Jacobian is\nthe identity. carrier_indices was empty; determinant, search and\nBCWStep.verify let a raw ExactQuotientFailed out. The entries are\nnormalized where they are computed, once, and jacobian() was the control\nthat hid it: sp.Matrix normalizes on the way in, so the matrix was right\nwhile everything reading the entries was not.\n\ncarrier_indices_for_factors asked dF_j/dX_j == 1 and claimed that is\nBCW-10's \"F_j - X_j free of X_j\". It is, in characteristic zero. Over\nGF(2) that map has the identity for its Jacobian and no displacement\nfree of its own variable, so the block is the whole map and no\ncoordinate is a carried factor: the two notions are not the same\nquestion there and neither set contains the other, where I had written\nthat this one always contains the block. It is decided on the monomial\nsupport now, which is the clause word for word.\n\nThe wrong condition came out right by accident, and that is the part\nworth naming. The unnormalized derivative compared unequal to one, so\nthe property returned the empty tuple for a reason that had nothing to\ndo with the map. Correcting the storage without correcting the condition\nwould have made it offer three carriers BCW-10 refuses, and the two\nfindings had to be fixed together or not at all.\n\nI chose the derivative test in work package 16 for consistency with\ncarrier_indices, when the obligation I was implementing says something\nelse. Consistency with a neighbour is not a reason to implement a\ndifferent condition from the one cited.\n\ntests/test_positive_characteristic.py holds the audit's map against the\nJacobian, both carrier notions, the determinant, a search from the map\nto itself and a step that builds and verifies, with a control that\ncharacteristic zero is unchanged. The module says why the two notions\ncannot be one predicate, which is the thing the map demonstrates.",
+    "tree": {
+      "sha": "c2863d01d6905c7a29a08df65c7b616ca1d601b1",
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/c2863d01d6905c7a29a08df65c7b616ca1d601b1"
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/dca8f297546695ac86f20df96180dfd3ff43330f",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqlYxoACgkQpYdnzilV\ndCVbeA//S+iz2YtKv10A2sDIFy582E/qXsL5WVtogksyOrEq7q8FsWlcaLIxV9FL\nDMwF3ojuwEqBWsskxfyli5VWHWjGxbxhv/rjKarZFFlTZh2fR8sy612GdZmS8bPq\nzuJnb6DqJuURHTjfcEnG++cE5hnUe5iBsz2k6Li4yg3toINUhLm9y9Q0EsxIEQof\nc2DpAwyY8joXqoZ/LipcKiwX9X5qzBbn2uCztzKmCWATgbWRIEA2HcyXv/0fPuAb\nmp4by/83GNbi9//oIV9TZatnH1pazQWdG9bgY0mn1NzAuGVyhL3lEFzax/GAPuMu\nQZqyryi5UExGvJ8MqJXX3kvwXJ1PyYQzX6Cji3AHKTcy1juqJxjgKXtQ1ZwcECCh\nJArUdPApMy4x8f246qSZ9fjF5bsTaHIJQraciPmM2AzEDY1T3iLfC1Zk7lih7EUM\nITWg3YpRfiwdleL6P9m5eL91d9bzwvQTntdOHNC5WunekNbIFcIhTABVNb8+1dRC\ntDXC0iyYoYTP+CsraR7L7zNvxus/KbRKrcerZ8QFr+dqTWwlzHdN5hWxaqBPa+oc\nOSu/KlXUZTBGLUKB0cdimjcwCmHRKQ2iWykxqslNVYWZHsgNQ2NhjUpDTvCiSOJq\ngvDfEtlh/ze/Hof2A2tWChbbQvBDC1gTjnu++WYDMP14zrcdRFk=\n=qGP3\n-----END PGP SIGNATURE-----",
+      "payload": "tree c2863d01d6905c7a29a08df65c7b616ca1d601b1\nparent a049b35387f794b8ee08768959998f505086d02d\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789223657 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789223657 +0200\n\nNormalize the Jacobian entries, and ask BCW-10 on the support\n\nWork package 19 of milestone 0.7, the second high finding of the audit of\n0.7.0rc5, and the version opens 0.7.0rc6. Two causes, one map.\n\nPolyElement.diff leaves a term with a zero coefficient in the sparse\ndictionary in positive characteristic: over GF(2) the derivative of\nx + x^2 is stored as 0*x + 1, which compares unequal to the ring's one.\nEverything downstream compares those entries, so four public operations\nbroke at once on (x + x^2, y + y^2, z + z^2), a map whose Jacobian is\nthe identity. carrier_indices was empty; determinant, search and\nBCWStep.verify let a raw ExactQuotientFailed out. The entries are\nnormalized where they are computed, once, and jacobian() was the control\nthat hid it: sp.Matrix normalizes on the way in, so the matrix was right\nwhile everything reading the entries was not.\n\ncarrier_indices_for_factors asked dF_j/dX_j == 1 and claimed that is\nBCW-10's \"F_j - X_j free of X_j\". It is, in characteristic zero. Over\nGF(2) that map has the identity for its Jacobian and no displacement\nfree of its own variable, so the block is the whole map and no\ncoordinate is a carried factor: the two notions are not the same\nquestion there and neither set contains the other, where I had written\nthat this one always contains the block. It is decided on the monomial\nsupport now, which is the clause word for word.\n\nThe wrong condition came out right by accident, and that is the part\nworth naming. The unnormalized derivative compared unequal to one, so\nthe property returned the empty tuple for a reason that had nothing to\ndo with the map. Correcting the storage without correcting the condition\nwould have made it offer three carriers BCW-10 refuses, and the two\nfindings had to be fixed together or not at all.\n\nI chose the derivative test in work package 16 for consistency with\ncarrier_indices, when the obligation I was implementing says something\nelse. Consistency with a neighbour is not a reason to implement a\ndifferent condition from the one cited.\n\ntests/test_positive_characteristic.py holds the audit's map against the\nJacobian, both carrier notions, the determinant, a search from the map\nto itself and a step that builds and verifies, with a control that\ncharacteristic zero is unchanged. The module says why the two notions\ncannot be one predicate, which is the thing the map demonstrates.\n",
+      "verified_at": "2026-09-12T14:35:22Z"
+    }
+  },
+  "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/dca8f297546695ac86f20df96180dfd3ff43330f",
+  "html_url": "https://github.com/rk-mlu/kellermap/commit/dca8f297546695ac86f20df96180dfd3ff43330f",
+  "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/dca8f297546695ac86f20df96180dfd3ff43330f/comments",
+  "author": {
+    "login": "rk-mlu",
+    "id": 65403623,
+    "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rk-mlu",
+    "html_url": "https://github.com/rk-mlu",
+    "followers_url": "https://api.github.com/users/rk-mlu/followers",
+    "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+    "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+    "repos_url": "https://api.github.com/users/rk-mlu/repos",
+    "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "rk-mlu",
+    "id": 65403623,
+    "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+    "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/rk-mlu",
+    "html_url": "https://github.com/rk-mlu",
+    "followers_url": "https://api.github.com/users/rk-mlu/followers",
+    "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+    "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+    "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+    "repos_url": "https://api.github.com/users/rk-mlu/repos",
+    "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "a049b35387f794b8ee08768959998f505086d02d",
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/a049b35387f794b8ee08768959998f505086d02d",
+      "html_url": "https://github.com/rk-mlu/kellermap/commit/a049b35387f794b8ee08768959998f505086d02d"
+    }
+  ],
+  "stats": {
+    "total": 202,
+    "additions": 186,
+    "deletions": 16
+  },
+  "files": [
+    {
+      "sha": "4a387e678c5ec0cc76136b0816da5aa538570425",
+      "filename": "CHANGELOG.md",
+      "status": "modified",
+      "additions": 26,
+      "deletions": 0,
+      "changes": 26,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/dca8f297546695ac86f20df96180dfd3ff43330f/CHANGELOG.md",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/dca8f297546695ac86f20df96180dfd3ff43330f/CHANGELOG.md",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/CHANGELOG.md?ref=dca8f297546695ac86f20df96180dfd3ff43330f",
+      "patch": "@@ -4,6 +4,32 @@ Notable changes per release. The milestone plan and its reasoning live in\n `docs/roadmap.md`, the binding obligations of the verification surface in\n `docs/contracts.md`.\n \n+## 0.7.0rc6\n+\n+A Keller map over `GF(2)` broke four public operations at once, and all four\n+had one cause. `PolyElement.diff` leaves a term with a zero coefficient in the\n+sparse dictionary in positive characteristic, and such a polynomial compares\n+unequal to the same polynomial without it, so the Jacobian entries this library\n+stores were not in the ring's normal form. `carrier_indices` was empty on a map\n+whose Jacobian is the identity, and `determinant`, `search` and\n+`BCWStep.verify` let a raw `ExactQuotientFailed` out. The entries are\n+normalized where they are computed.\n+\n+`carrier_indices_for_factors` asks BCW-10's condition on the monomial support\n+of `F_j - X_j` and not on `dF_j/dX_j`. The two are the same question in\n+characteristic zero only, and the property claimed they were the same: over\n+`GF(2)` the map `(x + x^2, y + y^2, z + z^2)` has the identity for its Jacobian\n+and no displacement free of its own variable, so the block is the whole map and\n+no coordinate is a carried factor. Neither set contains the other there, where\n+one contained the other before. The old test came out right by accident,\n+because the unnormalized derivative compared unequal to one, so correcting the\n+storage would have made the wrong condition bite.\n+\n+`tests/test_positive_characteristic.py` holds the audit's map against the\n+Jacobian, both carrier notions, the determinant, a search from the map to\n+itself and a step that builds and verifies, with a control that characteristic\n+zero is unchanged.\n+\n ## 0.7.0rc5\n \n The targeted enumerator asks BCW-10's condition for a carried factor, like the"
+    },
+    {
+      "sha": "4fd71a1dd63934a33484ecdd6750363f875f515e",
+      "filename": "CITATION.cff",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/dca8f297546695ac86f20df96180dfd3ff43330f/CITATION.cff",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/dca8f297546695ac86f20df96180dfd3ff43330f/CITATION.cff",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/CITATION.cff?ref=dca8f297546695ac86f20df96180dfd3ff43330f",
+      "patch": "@@ -13,7 +13,7 @@ authors:\n     country: DE\n license: MIT\n repository-code: \"https://github.com/rk-mlu/kellermap\"\n-version: 0.7.0rc5\n+version: 0.7.0rc6\n # The DOI of 0.6.0. A release candidate is not deposited and has no DOI of its\n # own, so this stands beside a version that has moved past it until one for\n # 0.7.0 is reserved. The README says the same in prose."
+    },
+    {
+      "sha": "ac7354d153a63c3b50b46f30dd33e3d36a1cb206",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/dca8f297546695ac86f20df96180dfd3ff43330f/README.md",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/dca8f297546695ac86f20df96180dfd3ff43330f/README.md",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/README.md?ref=dca8f297546695ac86f20df96180dfd3ff43330f",
+      "patch": "@@ -36,7 +36,7 @@ machine-checkable certificate.\n \n ## Project Status\n \n-Current version: **0.7.0rc5**\n+Current version: **0.7.0rc6**\n \n DOI: [10.5281/zenodo.22299353](https://doi.org/10.5281/zenodo.22299353). That\n is not the DOI of the version above: a release candidate is not deposited and"
+    },
+    {
+      "sha": "3a119e5ef07ce851f9cd7a97e4ea070b50c415cf",
+      "filename": "docs/contracts.md",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 2,
+      "changes": 9,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/dca8f297546695ac86f20df96180dfd3ff43330f/docs%2Fcontracts.md",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/dca8f297546695ac86f20df96180dfd3ff43330f/docs%2Fcontracts.md",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/docs%2Fcontracts.md?ref=dca8f297546695ac86f20df96180dfd3ff43330f",
+      "patch": "@@ -3219,8 +3219,13 @@ UNT-9; a coordinate that would break one of the three conditions is passed\n over and the factor is bought.\n \n Holding a factor is BCW-10's third clause and nothing stronger, which is what\n-`PolynomialMap.carrier_indices_for_factors` returns. It is not\n-`carrier_indices`, which asks for more. That set is a set of coordinates whose\n+`PolynomialMap.carrier_indices_for_factors` returns: `F_j - X_j` free of `X_j`,\n+decided on the monomial support. It is not `carrier_indices`, which asks a\n+different question and not merely more of the same. The two agree in\n+characteristic zero up to the acyclicity; over `GF(2)` the map\n+`(x + x^2, y + y^2, z + z^2)` has the identity for its Jacobian and no\n+displacement free of its own variable, so the block is the whole map and no\n+coordinate is a carried factor. Neither set contains the other there. That set is a set of coordinates whose\n dependencies are acyclic, which is what makes the block it picks out unipotent,\n and its docstring says it is deliberately not maximal. That is the right\n question for the block and the wrong one for a factor. Until `0.7.0rc3` this"
+    },
+    {
+      "sha": "4926f72f1fe936208111b70cdf8badf41d1653dd",
+      "filename": "pyproject.toml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/dca8f297546695ac86f20df96180dfd3ff43330f/pyproject.toml",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/dca8f297546695ac86f20df96180dfd3ff43330f/pyproject.toml",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/pyproject.toml?ref=dca8f297546695ac86f20df96180dfd3ff43330f",
+      "patch": "@@ -1,6 +1,6 @@\n [project]\n name = \"kellermap\"\n-version = \"0.7.0rc5\"\n+version = \"0.7.0rc6\"\n description = \"Polynomial Keller maps and certified transformations of them, carrying out the Bass–Connell–Wright reduction and the constructions that follow it.\"\n readme = \"README.md\"\n requires-python = \">=3.10\""
+    },
+    {
+      "sha": "051db873d7ae782646198b480a354b5cdcd510e6",
+      "filename": "src/kellermap/polynomial_map.py",
+      "status": "modified",
+      "additions": 54,
+      "deletions": 10,
+      "changes": 64,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/dca8f297546695ac86f20df96180dfd3ff43330f/src%2Fkellermap%2Fpolynomial_map.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/dca8f297546695ac86f20df96180dfd3ff43330f/src%2Fkellermap%2Fpolynomial_map.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/src%2Fkellermap%2Fpolynomial_map.py?ref=dca8f297546695ac86f20df96180dfd3ff43330f",
+      "patch": "@@ -233,6 +233,21 @@ def clone_domain(domain: Any) -> Any:\n     return clone_domain(domain.dom).poly_ring(*domain.symbols, order=sparse_ring.order)\n \n \n+def _normalized(element: PolyElement) -> PolyElement:\n+    \"\"\"Return ``element`` with any zero-coefficient term dropped.\n+\n+    ``PolyElement.diff`` leaves them behind in positive characteristic, and a\n+    sparse polynomial carrying one compares unequal to the same polynomial\n+    without it. ``strip_zero`` mutates in place, so this copies first: the\n+    argument may be a component of a map and those are not the caller's to\n+    change.\n+    \"\"\"\n+    stripped = element.copy()\n+    stripped.strip_zero()\n+\n+    return stripped\n+\n+\n def clone_ring(\n     polynomial_ring: PolyRing, symbols: tuple[sp.Symbol, ...] | None = None\n ) -> PolyRing:\n@@ -494,8 +509,20 @@ def matrix(self) -> sp.ImmutableMatrix:\n \n     @cached_property\n     def _jacobian_polynomials(self) -> tuple[tuple[PolyElement, ...], ...]:\n+        \"\"\"Return the Jacobian entries, each in the ring's normal form.\n+\n+        ``PolyElement.diff`` can leave a term with a zero coefficient in the\n+        sparse dictionary, and in positive characteristic it does: over\n+        ``GF(2)`` the derivative of ``x + x**2`` is stored as ``0*x + 1`` and\n+        compares unequal to the ring's one. An audit of ``0.7.0rc5`` found the\n+        consequences reaching four public operations -- ``carrier_indices``\n+        empty on a map whose Jacobian is the identity, and a raw\n+        ``ExactQuotientFailed`` out of ``determinant``, ``search`` and\n+        ``BCWStep.verify``. Everything downstream compares these entries, so\n+        they are normalized here and once.\n+        \"\"\"\n         return tuple(\n-            tuple(component.diff(variable) for variable in self._ring.gens)\n+            tuple(_normalized(component.diff(variable)) for variable in self._ring.gens)\n             for component in self._poly_components\n         )\n \n@@ -549,14 +576,25 @@ def carrier_indices(self) -> tuple[int, ...]:\n     def carrier_indices_for_factors(self) -> tuple[int, ...]:\n         \"\"\"Return every coordinate BCW-10 admits as a carried factor.\n \n-        An index ``j`` qualifies when ``dF_j/dX_j == 1``, which is to say that\n-        ``F_j - X_j`` is free of ``X_j``. That is the third clause of BCW-10\n-        and the whole of what a step asks of a carried slot.\n+        An index ``j`` qualifies when ``F_j - X_j`` is free of ``X_j``. That is\n+        the third clause of BCW-10, word for word, and the whole of what a step\n+        asks of a carried slot. It is decided on the monomial support of the\n+        displacement and not on ``dF_j/dX_j``.\n+\n+        The two are the same question in characteristic zero and not otherwise,\n+        and this property claimed they were the same until ``0.7.0rc6``. Over\n+        ``GF(2)`` the map ``(x + x^2, y + y^2, z + z^2)`` has the identity for\n+        its Jacobian, so every diagonal entry is one, while no displacement is\n+        free of its own variable: the block is the whole map and no coordinate\n+        is a carried factor. An audit of ``0.7.0rc5`` found the claim, and\n+        found that it came out right only because the unnormalized derivative\n+        compared unequal to one.\n \n         A coordinate whose displacement is zero qualifies, as it does for\n-        ``carrier_indices``, and this property is that one without the\n-        acyclicity: it always contains it. A caller that needs a factor of\n-        positive order filters for one, which is where that belongs.\n+        ``carrier_indices``. A caller that needs a factor of positive order\n+        filters for one, which is where that belongs. This property no longer\n+        contains ``carrier_indices`` in general: in positive characteristic\n+        neither contains the other.\n \n         Not ``carrier_indices``, which asks for more. That property picks out a\n         unipotent block, so it drops every coordinate on a dependency cycle and\n@@ -572,11 +610,17 @@ def carrier_indices_for_factors(self) -> tuple[int, ...]:\n         into a wrong claim rather than a missed step, reporting an exhausted\n         space where a verified chain existed.\n         \"\"\"\n-        rows = self._jacobian_polynomials\n-        one = self._ring.one\n+        generators = self._ring.gens\n \n         return tuple(\n-            index for index in range(self.dimension) if rows[index][index] == one\n+            index\n+            for index in range(self.dimension)\n+            if not any(\n+                exponents[index]\n+                for exponents in (\n+                    self._poly_components[index] - generators[index]\n+                ).itermonoms()\n+            )\n         )\n \n     def _dependency_graph(self, indices: Iterable[int]) -> dict[int, set[int]]:"
+    },
+    {
+      "sha": "4faac65d38a1797470fc9262d73326f670a596f0",
+      "filename": "tests/test_positive_characteristic.py",
+      "status": "added",
+      "additions": 95,
+      "deletions": 0,
+      "changes": 95,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/dca8f297546695ac86f20df96180dfd3ff43330f/tests%2Ftest_positive_characteristic.py",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/dca8f297546695ac86f20df96180dfd3ff43330f/tests%2Ftest_positive_characteristic.py",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/tests%2Ftest_positive_characteristic.py?ref=dca8f297546695ac86f20df96180dfd3ff43330f",
+      "patch": "@@ -0,0 +1,95 @@\n+\"\"\"Keller maps over a field of positive characteristic.\n+\n+The core API has no characteristic-zero bound, and BCW state their section for\n+a commutative ring, so a map over ``GF(2)`` is inside what this library claims.\n+An audit of ``0.7.0rc5`` found one over ``GF(2)`` breaking four public\n+operations at once, all from the same cause: ``PolyElement.diff`` leaves a term\n+with a zero coefficient in the sparse dictionary there, and such a polynomial\n+compares unequal to the same polynomial without it.\n+\n+The map below is the audit's. Its Jacobian is the identity, so it is a Keller\n+map, and every component displaces its variable by that variable squared, so\n+BCW-10 admits none of them as a carried factor. Those two facts pull the two\n+carrier notions apart, which is why they cannot be one predicate.\n+\"\"\"\n+\n+import sympy as sp\n+\n+from kellermap import PolynomialMap, search\n+from kellermap.bcw.step import BCWStep, Fresh\n+\n+\n+def squares() -> PolynomialMap:\n+    \"\"\"``(x + x^2, y + y^2, z + z^2)`` over ``GF(2)``.\"\"\"\n+    ring, x, y, z = sp.ring(\"x,y,z\", sp.GF(2))\n+\n+    return PolynomialMap.from_ring(ring, (x + x**2, y + y**2, z + z**2))\n+\n+\n+def test_the_jacobian_is_the_identity() -> None:\n+    \"\"\"A zero-coefficient term in an entry would not show here.\n+\n+    ``sp.Matrix`` normalizes on the way in, so this passed while everything\n+    reading the entries directly did not. It is the control that says the\n+    derivatives themselves are right and their storage was not.\n+    \"\"\"\n+    assert squares().jacobian() == sp.eye(3)\n+\n+\n+def test_the_unipotent_block_is_every_coordinate() -> None:\n+    \"\"\"The diagonal of that Jacobian is one, so the block is the whole map.\n+\n+    It was empty, because the entry compared unequal to the ring's one.\n+    \"\"\"\n+    assert squares().carrier_indices == (0, 1, 2)\n+\n+\n+def test_no_coordinate_is_a_carried_factor() -> None:\n+    \"\"\"BCW-10 asks that ``F_j - X_j`` be free of ``X_j``, and ``X_j^2`` is not.\n+\n+    This is where the two notions part, and it cannot be decided by the\n+    derivative: over ``GF(2)`` the derivative of ``X_j^2`` is zero, so the\n+    diagonal entry is one and the displacement still depends on the variable.\n+    The equivalence the property used to claim holds in characteristic zero\n+    only, and it was a claim this test would have caught.\n+    \"\"\"\n+    assert squares().carrier_indices_for_factors == ()\n+\n+\n+def test_the_determinant_is_one() -> None:\n+    \"\"\"It raised ``ExactQuotientFailed`` from inside the Schur complement.\"\"\"\n+    assert squares().determinant() == 1\n+\n+\n+def test_a_search_from_the_map_to_itself_reports_a_non_answer() -> None:\n+    \"\"\"Equal endpoints are a non-answer and not an error, REV-11's shape.\n+\n+    It raised the same ``ExactQuotientFailed``, through the determinant.\n+    \"\"\"\n+    outcome = search(squares(), squares(), {})\n+\n+    assert outcome.reduction is None\n+    assert outcome.exhausted is True\n+\n+\n+def test_a_step_over_the_field_builds_and_verifies() -> None:\n+    \"\"\"``BCWStep.verify`` reaches the determinant too.\"\"\"\n+    source = squares()\n+    first, second = sp.symbols(\"u v\")\n+    step = BCWStep.build(\n+        source, 0, Fresh(sp.Symbol(\"x\"), first), Fresh(sp.Symbol(\"x\"), second), 0\n+    )\n+    step.verify()\n+\n+    assert step.m == 2\n+    assert step.target.dimension == 5\n+\n+\n+def test_characteristic_zero_is_unchanged() -> None:\n+    \"\"\"The normalization is a no-op where the derivative was already sparse.\"\"\"\n+    x, y = sp.symbols(\"x y\")\n+    source = PolynomialMap((x, y), (x + y**2, y))\n+\n+    assert source.carrier_indices == (0, 1)\n+    assert source.carrier_indices_for_factors == (0, 1)\n+    assert source.determinant() == 1"
+    },
+    {
+      "sha": "b288fff329c6bf547361ef9573f054af5b67ff93",
+      "filename": "uv.lock",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/rk-mlu/kellermap/blob/dca8f297546695ac86f20df96180dfd3ff43330f/uv.lock",
+      "raw_url": "https://github.com/rk-mlu/kellermap/raw/dca8f297546695ac86f20df96180dfd3ff43330f/uv.lock",
+      "contents_url": "https://api.github.com/repos/rk-mlu/kellermap/contents/uv.lock?ref=dca8f297546695ac86f20df96180dfd3ff43330f",
+      "patch": "@@ -502,7 +502,7 @@ wheels = [\n \n [[package]]\n name = \"kellermap\"\n-version = \"0.7.0rc5\"\n+version = \"0.7.0rc6\"\n source = { editable = \".\" }\n dependencies = [\n     { name = \"sympy\" },"
+    }
+  ]
+}

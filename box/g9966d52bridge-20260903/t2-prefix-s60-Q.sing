@@ -1,0 +1,20 @@
+// Exact Q* low-prefix check reconstructed from the pivot ledger.
+// cap=60 ambient=907 active_ambient=23 inactive=884
+ring R=0,(B1c_7_19,B1c_7_20,B1c_7_21,B1c_7_22,B1c_7_23,B1c_7_24,B1c_7_25,B1c_8_18,B1c_8_19,B1c_8_20,B1c_8_21,B1c_8_22,B1c_8_23,B1c_8_24,B1c_9_17,B1c_9_18,B1c_9_19,B1c_9_20,B1c_9_21,B1c_9_22,B1c_9_23,c,u,Zc),dp;
+ideal I=B1c_7_19 - B1c_7_20 + B1c_7_21 - B1c_7_22 + B1c_7_23 - B1c_7_24 + B1c_7_25,B1c_8_18 - B1c_8_19 + B1c_8_20 - B1c_8_21 + B1c_8_22 - B1c_8_23 + B1c_8_24,B1c_7_20*u - 2*B1c_7_21*u + 3*B1c_7_22*u - 4*B1c_7_23*u + 5*B1c_7_24*u - 6*B1c_7_25*u + B1c_9_17 - B1c_9_18 + B1c_9_19 - B1c_9_20 + B1c_9_21 - B1c_9_22 + B1c_9_23,Zc*c-1;
+ideal G=std(I);
+print("BEGIN_RESULT");
+print("unit_remainder="+string(reduce(1,G)));
+print("active_localized_dimension="+string(dim(G)));
+print("full_localized_dimension="+string(dim(G)+884));
+ideal I1=I,c-1;
+ideal G1=std(I1);
+print("c1_full_dimension="+string(dim(G1)+884));
+print("END_RESULT");
+ideal Czero=c,Zc*c-1;
+ideal Cone=c-1,Zc*c-1;
+print("BEGIN_CONTROLS");
+print(reduce(1,std(Czero)));
+print(reduce(1,std(Cone)));
+print("END_CONTROLS");
+quit;

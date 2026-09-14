@@ -1,0 +1,52 @@
+{
+  "binaries": {
+    "/usr/bin/Singular": "90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4",
+    "/usr/bin/prlimit": "17064f67e650d6152a6902b013aab496b54c87587c8eea6f5023aafee6154069",
+    "/usr/bin/python3": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223"
+  },
+  "code": {
+    "driver.py": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+    "engine.py": "8d8da939caf88c75ae167fa6cf862011c76a593c105c88970efcd9baf16c7cdf",
+    "engineering/REGISTRATION.md": "364a5d8c57a967d6dc3467db13eb0b19ba6c7924a573dc5b3ea67da7eb6f1ee5",
+    "engineering/tiny-engine-fixture.jsonl": "d00df83bafddcd3436dad44034bdb1680d306f6d67f8bfa83d4b32de19961bbf",
+    "exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+    "hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+    "run_capped.py": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+  },
+  "controller": {
+    "argv": [
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "controller.py",
+      "alarm",
+      "--boot",
+      "886172be-22d4-42e8-939c-0fc0475346fa",
+      "--green-sha256",
+      "225f87df5b354b87d647aefe3449fe4f2d2051e1bd2fecf52fe46ef9dae44f58",
+      "--controller-sha256",
+      "9b857c30b60dfbdd92c2b3bd027f90cb10c9a83f816486d33e42cf16bdc3834f",
+      "--dispatch-before",
+      "1788819025",
+      "--accepted-hybrid-receipt",
+      "7cfd083c18f2fd705886c5a83c394ee830cc451e44373e1492927c61dc11f899"
+    ],
+    "boot": "886172be-22d4-42e8-939c-0fc0475346fa",
+    "cgroup": "0::/user.slice/user-1000.slice/session-17.scope\n",
+    "namespace": "pid:[4026531836]",
+    "pgid": 2244,
+    "pid": 2245,
+    "start_ticks": "38111"
+  },
+  "green": "225f87df5b354b87d647aefe3449fe4f2d2051e1bd2fecf52fe46ef9dae44f58",
+  "host": {
+    "boot": "886172be-22d4-42e8-939c-0fc0475346fa",
+    "cwd": "/home/ubuntu/d125-hybrid81-exact-solver-20260907",
+    "hostname": "ip-172-30-0-56",
+    "instance": "i-0da0cebfc97c9fd54",
+    "now": 1788818987.248786,
+    "system": "Linux",
+    "vendor": "Amazon EC2"
+  },
+  "source_access": false
+}

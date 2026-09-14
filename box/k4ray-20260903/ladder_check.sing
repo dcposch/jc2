@@ -1,0 +1,52 @@
+option(redSB); short=0;
+// K-UNIFORM LADDER:  writing h=sum c_i y^i (c_K=1), rho=sum r_j y^j (j<K),
+// beta=sum b_j y^j (j<K), alpha=sum a_i y^i (i<=K-2), with beta^2 = alpha*h + rho,
+// the y^l coefficient of J(f,g) is
+//   J_l = 3 * sum_{i+j=l+1} [ (i*a_i*b_j' - j*a_i'*b_j) + (i*c_i*r_j' - j*c_i'*r_j) ]
+ring R = 0,(x,y),dp;
+proc quoy(poly p, poly hh, int K)
+{ poly q=0; poly ld; matrix cp; int d;
+  while(1){ if(p==0){break;} cp=coeffs(p,y); d=nrows(cp)-1; if(d<K){break;}
+    ld=cp[d+1,1]; q=q+ld*y^(d-K); p=p-ld*y^(d-K)*hh; } return(q); }
+proc Jac(poly u,poly v){ return(diff(u,x)*diff(v,y)-diff(u,y)*diff(v,x)); }
+proc cy(poly p,int j){ matrix m=coeffs(p,y); if(nrows(m)<j+1){return(poly(0));} return(m[j+1,1]); }
+
+proc ladder(poly h, poly be, int K)
+{ poly al = quoy(be^2,h,K); poly rho = be^2 - al*h;
+  poly f = h^2+2*be; poly g = h^3+3*be*h+(3/2)*al;
+  poly J = Jac(f,g);
+  int l,i,j; poly row, resid; int bad = 0;
+  for (l=0; l<=2*K-2; l++) {
+    row = 0;
+    for (i=0; i<=K; i++) { j = l+1-i; if (j>=0 && j<=K-1) {
+        row = row + 3*( i*cy(al,i)*diff(cy(be,j),x) - j*diff(cy(al,i),x)*cy(be,j)
+                      + i*cy(h,i)*diff(cy(rho,j),x) - j*diff(cy(h,i),x)*cy(rho,j) ); } }
+    resid = cy(J,l) - row;
+    if (resid != 0) { bad = bad + 1; "  LADDER_FAIL at l=",l; }
+  }
+  return(bad);
+}
+int K; poly h,be; int bad;
+K=4; h=y^3*(y-x)-4*y^2+x*y+9; be=x^2*y^3+5*x^4*y-2*x^5+y^3-3*x*y+1;
+"MARK_LADDER_K4_BADROWS"; ladder(h,be,K);
+K=5; h=y^4*(y-x)+3*y^3-2*x*y^2+7*x^3-y+5; be=2*x^2*y^4-3*x^3*y^3+x^5*y+7*x^6+5*y^3*x-y^2+2;
+"MARK_LADDER_K5_BADROWS"; ladder(h,be,K);
+K=7; h=y^6*(y-x)+x^4*y^2-2*y^5+3; be=x^3*y^6-y^4+x^8+2*x*y;
+"MARK_LADDER_K7_BADROWS"; ladder(h,be,K);
+K=9; h=y^8*(y-x)+x^5*y^3-y^7+2*x*y+11; be=x^2*y^8-3*y^5+x^7*y^2-x^9+4;
+"MARK_LADDER_K9_BADROWS"; ladder(h,be,K);
+
+// --- the two TOP ladder rows in closed form:  L1 = 3K*r'_{K-1},
+//     L2 = 3[ K*r'_{K-2} + (K-1)*c_{K-1}*r'_{K-1} - (K-1)*c'_{K-1}*r_{K-1} ]
+proc toprows(poly h, poly be, int K)
+{ poly al=quoy(be^2,h,K); poly rho=be^2-al*h; poly f=h^2+2*be; poly g=h^3+3*be*h+(3/2)*al;
+  poly J=Jac(f,g);
+  poly L1 = 3*K*diff(cy(rho,K-1),x);
+  poly L2 = 3*( K*diff(cy(rho,K-2),x) + (K-1)*cy(h,K-1)*diff(cy(rho,K-1),x)
+                                      - (K-1)*diff(cy(h,K-1),x)*cy(rho,K-1) );
+  "   L1resid:", cy(J,2*K-2)-L1, "  L2resid:", cy(J,2*K-3)-L2;
+  return(0); }
+"MARK_TOPROWS_K4"; toprows(y^3*(y-x)-4*y^2+x*y+9, x^2*y^3+5*x^4*y-2*x^5+y^3-3*x*y+1, 4);
+"MARK_TOPROWS_K6"; toprows(y^5*(y-x)+x^3*y^2-y^4+7, x^4*y^5-2*y^3+x^6*y-5, 6);
+"MARK_TOPROWS_K9"; toprows(y^8*(y-x)+x^5*y^3-y^7+2*x*y+11, x^2*y^8-3*y^5+x^7*y^2-x^9+4, 9);
+"MARK_DONE"; quit;

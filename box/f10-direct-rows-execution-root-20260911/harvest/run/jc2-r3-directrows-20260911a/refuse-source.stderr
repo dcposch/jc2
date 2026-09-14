@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/opt/jc2-r3-directrows-20260911a/science/produce.py", line 382, in <module>
+    main()
+  File "/opt/jc2-r3-directrows-20260911a/science/produce.py", line 356, in main
+    meta=authorize('produce')
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jc2-r3-directrows-20260911a/science/authority.py", line 100, in authorize
+    raise ValueError('source pin: ' + name)
+ValueError: source pin: produce.py

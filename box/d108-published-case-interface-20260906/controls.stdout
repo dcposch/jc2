@@ -1,0 +1,93 @@
+{
+  "claims_not_tested": [
+    "published theorem proofs",
+    "case-table enumeration",
+    "source properness",
+    "Keller point existence",
+    "coefficientwise full transport",
+    "external exclusion certificates"
+  ],
+  "genuine_mutations_rejected": [
+    "source highest-face coefficient 1 -> 2",
+    "root power 7 -> 6",
+    "root equation lambda^4=1 -> lambda^4=2",
+    "ramification denominator 4 -> 3",
+    "successor 11/4 -> 7/4",
+    "incorrectly permit split direction (1,-2)"
+  ],
+  "non_Keller_control": {
+    "Jacobian": "0 by chain rule",
+    "P": "[y(y*x^4-1)^7]^3+1",
+    "Q": "[y(y*x^4-1)^7]^2+1",
+    "predecessor": [
+      2,
+      -7
+    ],
+    "purpose": "Numerical/fixed-edge data alone do not extend the positivity interval.",
+    "valuation": 0
+  },
+  "positivity_cone_corner_values": [
+    60,
+    12
+  ],
+  "positivity_proved_cone": [
+    [
+      1,
+      -1
+    ],
+    [
+      -1,
+      4
+    ]
+  ],
+  "root_control": {
+    "V7_coefficient": "16384*lambda",
+    "V_order": 7,
+    "expanded_quotient_ring_terms": 22,
+    "gcd_identity": "(z/4)*(4*z^3)-(z^4-1)=1",
+    "relation": "lambda^4=1",
+    "shifted_power": 7
+  },
+  "single_root_sigma_allowed": [
+    -3,
+    -2
+  ],
+  "source_sha256": "1c927d83aa4684ae91bfffc8d03500fbabb73a500faa222fa349a6d129a10814",
+  "source_slots": {
+    "C": 197,
+    "D": 191,
+    "h": 185
+  },
+  "split_delta_allowed": [
+    3
+  ],
+  "standard_pair_requires_actual_Keller_equation": true,
+  "starting_chain": {
+    "A0": [
+      "8",
+      "28"
+    ],
+    "A0_prime": [
+      "1",
+      "0"
+    ],
+    "A1": [
+      "11/4",
+      "7"
+    ],
+    "degrees": [
+      108,
+      72
+    ],
+    "direction": [
+      4,
+      -1
+    ],
+    "l1": 4,
+    "m_n": [
+      3,
+      2
+    ]
+  },
+  "status": "D108_PUBLISHED_CASE_SMALL_CONTROLS_PASS"
+}

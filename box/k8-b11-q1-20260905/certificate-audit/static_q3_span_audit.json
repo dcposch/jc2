@@ -1,0 +1,133 @@
+{
+  "base_row_count": 328,
+  "candidate_column_count": 5853,
+  "candidate_initial_nnz": 198105,
+  "candidate_row_counts_by_weight": {
+    "11": 5,
+    "12": 18,
+    "13": 22,
+    "14": 22,
+    "15": 22
+  },
+  "characteristic": 0,
+  "generator_count": 330,
+  "interpretation": "Four-prime screen finds q1^3 outside the minimal-weight span; this is not a proof of non-membership over Q.",
+  "metadata": "/home/ubuntu/jc2/box/k8-b11-q1-20260905/custody/round2-K8_B11_Q1.json",
+  "modular_results": [
+    {
+      "prime": 31991,
+      "rank": 2418,
+      "remainder_lead": [
+        [
+          62,
+          1
+        ],
+        [
+          63,
+          1
+        ]
+      ],
+      "remainder_nnz": 688,
+      "target_in_span": false
+    },
+    {
+      "prime": 32003,
+      "rank": 2418,
+      "remainder_lead": [
+        [
+          62,
+          1
+        ],
+        [
+          63,
+          1
+        ]
+      ],
+      "remainder_nnz": 688,
+      "target_in_span": false
+    },
+    {
+      "prime": 65521,
+      "rank": 2418,
+      "remainder_lead": [
+        [
+          62,
+          1
+        ],
+        [
+          63,
+          1
+        ]
+      ],
+      "remainder_nnz": 688,
+      "target_in_span": false
+    },
+    {
+      "prime": 1000003,
+      "rank": 2418,
+      "remainder_lead": [
+        [
+          62,
+          1
+        ],
+        [
+          63,
+          1
+        ]
+      ],
+      "remainder_nnz": 688,
+      "target_in_span": false
+    }
+  ],
+  "multiplier_counts_by_weight": {
+    "0": 1,
+    "1": 7,
+    "2": 35,
+    "3": 139,
+    "4": 481
+  },
+  "pivot_orientation": "lexicographically maximal exponent tuple",
+  "q": "v95",
+  "q_inverse": "v96",
+  "rows_with_pure_q1_cubed_term": [
+    {
+      "coefficient": 4,
+      "generator": 32
+    },
+    {
+      "coefficient": -4,
+      "generator": 33
+    },
+    {
+      "coefficient": -116,
+      "generator": 86
+    },
+    {
+      "coefficient": 244,
+      "generator": 87
+    },
+    {
+      "coefficient": -128,
+      "generator": 88
+    }
+  ],
+  "source": "/home/ubuntu/jc2/box/k8-b11-q1-20260905/input/K8_B11_Q1_p0.ms",
+  "source_sha256": "66bb78cfec123e11c5b9c780056b5949aa1c5c198caeb3c668aab1973d6697eb",
+  "target": "v95^3",
+  "target_weight": 15,
+  "variable_count": 97,
+  "verified_integer_identities": [
+    "g2 = g3 + g1",
+    "g36 = 99*g3 + 227*g1",
+    "g37 = 211*g3 + 120*g1",
+    "g38 = v7*g1",
+    "g39 = 3*v7*g3 + (3*v7-v14)*g1",
+    "g40 = 5*g4 + (7*v7-3*v14)*g3 - (3*v14+v20)*g1",
+    "A = q*g4 + 4*v55*g1 - 4*v20*q*g1 = q*v45^2",
+    "B = A - (v45+v14*q)*g3 = v14^2*q^3",
+    "v7 localized identity",
+    "v45^2 localized identity",
+    "v14^2 localized identity"
+  ],
+  "weight_source": "metadata.weights"
+}

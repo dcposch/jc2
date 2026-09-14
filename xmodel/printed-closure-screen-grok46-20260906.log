@@ -1,0 +1,29 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes and reading the frozen table plus gate scripts so the full 1,420-row enumeration matches the printed-closure method.Hashes next: I'll build the receipt manifest with awk and check it with `sha256sum -c`, then load the frozen table and gate scripts.Hashes match. Next I’ll read the frozen integrality driver, gate scripts, own-data partition, and the 1,420-row source so the enumeration can reuse them unchanged.I need the exact source-row construction (`d`, `delta`, `u_s`, `v_s`) used by the frozen table, then I’ll parametrize only that input.I’ll confirm source construction against the 66-row roster, then probe runtime on the full 1,420 before writing the driver.Source construction matches the 66-row roster. Next I’ll time CountingClosure on high-`s` rows, then write the parametrized driver.Gate scripts hard-code an old lane path; I’ll load them with the same path-redirect as the R063 child driver, then time the enumeration.The 66-row control already matches and the closure is fast enough to run on all 1,420. I’ll add a parametrized driver and execute the full screen.Control matched. I’ll pull the 25 empty-own rows with N>0 and slim the JSON, then write the report.I’ll slim the JSON (drop the duplicated N=0 blobs) and keep full records only for the interesting rows.JSON is 501 KB and the 66-row control matches. Next I’ll write the sealed report to the 5–12 KB window.The printed-closure screen is done on all **1,420** operative rows. Charged-input hashes were **5/5 OK**. The 66 roster rows reproduce the frozen table exactly.
+
+**Counts (same `CountingClosure`, identities not rewritten)**
+
+| | rows | complete `N` | integral | `I_M ≥ I_m` | survivors |
+|---|---:|---:|---:|---:|---:|
+| all 1,420 | 1,420 | 153 | 153 | 142 | 142 |
+| roster 66 (control) | 66 | 109 | 109 | 102 | 102 |
+
+Every complete configuration is integral. **1,330** rows have `N = 0`; **1,332** have 0 survivors.
+
+**`N = 0` (empty complete tree)**  
+R063, plus **1,329** already-empty own-data rows (every empty-own `E####` except the 25 below). Full id list: JSON `N0_row_ids`.
+
+**0 survivors with `N > 0`**  
+R001 `(4,5)` and E0939 `(9,10)` — Cor. 5.3 fail, same type as the frozen R001 line.
+
+**Cross-tab vs own-data (1,354 empty / 66 singleton)**
+
+- **1 of 66** singletons has `N = 0`: **R063**.
+- **25 of 1,354** already-empty rows have `N > 0`. All 25 are `PROP6.3_FINITE_POLE_US1` (`u_s=1`, `n ∈ [108,200]`).
+
+The two necessary-tree notions differ. Own-data is a *child* first-support / descent tree; printed `N` is a *source-tower* Galois product. R063 has an own child and an empty source tree. The 25 finite-pole rows have no licensed child and a nonempty source tree. The other 1,329 empties are `N = 0` under both.
+
+These are **DATA**: `DEAD-mod-[printed fixed-list + D₁ residues]`, **not promoted**. `N = 0` is a kill only if the printed closure is a proved necessity — that is left to the gate.
+
+Report: `xmodel/printed-closure-screen-grok46-20260906.md` (body 8,246 bytes, sealed). Drivers: `box/printed-closure-screen-20260906/`. JSON 501 KB.
+DIVERT path=xmodel/printed-closure-screen-grok46-20260906.md status=CLEAN_SEALED body_bytes=8246 body_sha256=3f916fca253f2b58049d92cfffc5d28a96a4316fc3e062daf13e6b5bfc60cd4a

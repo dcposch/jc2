@@ -1,0 +1,27 @@
+[optimized] PASS unit-identity t^2=rho 
+[optimized] PASS unit-identity t*(2-rho)=1 
+[optimized] PASS unit-identity t-1=-rho 
+[optimized] PASS unit-identity t(t-1)=2rho-1 
+[optimized] PASS norm N(t) != 0 N=-1
+[optimized] PASS norm N(t-1) != 0 N=1
+[optimized] PASS norm N(t(t-1)) != 0 N=-1
+[optimized] PASS norm N(rho) != 0 N=1
+[optimized] PASS norm N(3rho) != 0 N=9
+[optimized] PASS H(g0+w,p) == t(t-1)p^3w^2 + rho p^2 w^3, degree 5 
+[optimized] PASS LM stratum: (LM)(g0)=0 
+[optimized] PASS LM stratum: d/dg(LM)(g0) = (t-1)p 
+[optimized] PASS coalesced stratum1: 15r <= 135/4 < 36 for j=1..9 max=135/4
+[optimized] PASS coalesced stratum2: 15r <= 30 < 36 for j=1..6 
+[optimized] PASS LM stratum weight 7j-46<=2 exactly for j<=6, violated j=7..9 
+[optimized] PASS separated stratum1: 7eta+kappa/2 < 15j/4 <= 135/4 < 36 
+[optimized] PASS separated stratum2: 7j/2+9kappa/4 -> 5j <= 30 < 36 
+[optimized] PASS coalesced lower-B: 25-nu-nh > 0 on sampled (j,nu) with n<=(nu-1)/r, nu<10r 
+[optimized] PASS separated lower-B stratum2: 20-4eta > 0 for eta<4 
+[optimized] PASS two-sheet tuple (a+b,a-b) with a=b!=0 is (2a,0): one sheet zero, tuple nonzero 
+[optimized] PASS two-sheet tuple vanishes only at a=b=0 
+[optimized] PASS W^3 projections: Y^5=3u, Y^4=3u^2+3v 
+[optimized] PASS REJECT expected: rho=2 breaks t^2=rho 
+[optimized] PASS REJECT expected: rho=2 breaks degree-5 H expansion 
+[optimized] PASS REJECT expected: identified signs (a+b,a+b) vanish at a=-b!=0 
+[optimized] PASS REJECT expected: eta=kappa gives zero binomial shift 
+[optimized] SUMMARY 26/26 checks as expected

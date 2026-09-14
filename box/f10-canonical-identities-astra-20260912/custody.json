@@ -1,0 +1,39 @@
+{
+  "schema": "jc2.manual-custody/v1",
+  "task": "f10-canonical-identities-astra-20260912",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "COMPLETED_INTERNAL_UNREVIEWED_MANUAL_PROOF",
+  "first_action_utc": "2026-09-12T04:58:13Z",
+  "reserve_utc": "2026-09-12T05:22:00Z",
+  "hard_stop_utc": "2026-09-12T05:25:00Z",
+  "opened_utc": "2026-09-12T04:59:18Z",
+  "closed_utc": "2026-09-12T05:07:53Z",
+  "finalized_utc": "2026-09-12T05:07:53Z",
+  "own_whole_and_postpins_utc": "2026-09-12T05:07:25Z",
+  "final_whole_and_expected_verify_utc": "2026-09-12T05:08:06Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_transaction_sha256": "b5c28feb5da10243e669759cea67fbe5cbc8ca58687eb75aca29aa9a1f0a1177",
+  "expected_transaction_result": "VERIFIED",
+  "body_sha256": "2fc267a60eb405d042da0c9f8e9deec05160514ee4125b09421595f985b5c016",
+  "input_pre_post_match": true,
+  "all_input_read_mode": "FRESH_WHOLE; exact intervals in PINS and report",
+  "inputs": [
+    {"path": "/home/ubuntu/jc2/box/f10-necessary-rows-producer-astra-20260911/produce.py", "sha256": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a"},
+    {"path": "/home/ubuntu/jc2/box/f10-direct-rows-powerfix-astra-20260911/arithmetic.py", "sha256": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73"},
+    {"path": "/home/ubuntu/jc2/xmodel/f10-p523-scalar-gate-fable5-20260912.md", "sha256": "f4b7fdab548eb4b7f9cc3ec03972939fab3f22c914133937c251614ea3136585"},
+    {"path": "/home/ubuntu/jc2/xmodel/f10-p523-missing-matrices-gate-sol-20260912.md", "sha256": "35be725b4a820ac41ff8f2b10fa6713e463c794424792d220950748d08d529e1"},
+    {"path": "/home/ubuntu/jc2/xmodel/f10-source-cone-direct-place-astra-20260911.md", "sha256": "e6df0a6458c682128c841a054e4cfb0be00cb2efde0325743f197cdcb0564725"},
+    {"path": "/home/ubuntu/jc2/box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md", "sha256": "176363939a8aa6861995cd72a99c61f7d04bfeab5a9634f6d3143dcd3d3bd098"},
+    {"path": "/home/ubuntu/jc2/COORDINATION.md", "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597"}
+  ],
+  "owned_excluding_this_custody": [
+    {"path": "/home/ubuntu/jc2/xmodel/f10-canonical-identities-astra-20260912.md", "sha256": "4c38ed3b0764989f8c6a0104dd0ced4b3d2b9dc411f1abf571c215eab3beb7a5", "bytes": 19040},
+    {"path": "/home/ubuntu/jc2/xmodel/f10-canonical-identities-astra-20260912.md.artifact.json", "sha256": "b5c28feb5da10243e669759cea67fbe5cbc8ca58687eb75aca29aa9a1f0a1177", "bytes": 708},
+    {"path": "/home/ubuntu/jc2/box/f10-canonical-identities-astra-20260912/PINS.json", "sha256": "2acacfe864b44a6c38b02df0f7006d17db0c8423834cc44ba7b7790ea2cbee87", "bytes": 2110}
+  ],
+  "result_scope": "All111 mandatory diagnostic polynomials and49 individual SCALE comparisons are identically zero in the free parameter ring at523/V0; manual proof awaiting independent review",
+  "excluded_claims": "No scientific execution, fullP7vector check, runtime/cap guarantee, rank, source exclusion, source point, all-r orJC2 result",
+  "collision": "OWN_TARGETS_ABSENT; no named OPEN raised; no shared edits",
+  "scientific_execution": "NONE",
+  "writer_protocol": "All report/PINS/transaction writes closed; this custody is the last authored object; ALL_WRITERS_IDLE after its final readback/hash"
+}

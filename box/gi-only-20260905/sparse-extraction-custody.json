@@ -1,0 +1,318 @@
+{
+  "activated_utc": "2026-09-05T16:01:03Z",
+  "all_native_exact_controls_passed": true,
+  "classes": [
+    {
+      "activation": {
+        "action": "ALREADY_IDENTICAL",
+        "canonical_rows": {
+          "bytes": 81839242,
+          "path": "box/gi-only-20260905/classes/C_n24m16_M12_17_ell1_s3/rows/C_n24m16_M12_17_ell1_s3_G_rows.tsv",
+          "sha256": "b44be95276563df8be50aec9592a88d345ef497247fc90776d3596817cc72ced"
+        },
+        "previous": {
+          "bytes": 81839242,
+          "path": "box/gi-only-20260905/classes/C_n24m16_M12_17_ell1_s3/rows/C_n24m16_M12_17_ell1_s3_G_rows.tsv",
+          "sha256": "b44be95276563df8be50aec9592a88d345ef497247fc90776d3596817cc72ced"
+        }
+      },
+      "all_G_coordinates_retained": true,
+      "auxiliary_variables": 0,
+      "c_target_occurrence": [
+        {
+          "coefficient": -1,
+          "factors": [
+            [
+              "c",
+              1
+            ]
+          ],
+          "row": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "candidate_receipt": {
+        "bytes": 4879,
+        "path": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m16_M12_17_ell1_s3/C_n24m16_M12_17_ell1_s3_G_sparse_extraction.json",
+        "sha256": "d6b8061de6b8b9cab6904dab750755cf6e20b563245e104ab2ed75d92032c863"
+      },
+      "candidate_rows": {
+        "bytes": 81839242,
+        "path": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m16_M12_17_ell1_s3/C_n24m16_M12_17_ell1_s3_G_sparse_rows.tsv",
+        "sha256": "b44be95276563df8be50aec9592a88d345ef497247fc90776d3596817cc72ced"
+      },
+      "canonical_builder": {
+        "bytes": 15793,
+        "path": "box/gi-only-20260905/classes/C_n24m16_M12_17_ell1_s3/builders/C_n24m16_M12_17_ell1_s3_G_builder.sing",
+        "sha256": "b0f2d5f7dd60bc10e109ee0da1e405899a39f5f6fb7793c528405d507ec263e8"
+      },
+      "class_id": "C_n24m16_M12_17_ell1_s3",
+      "coefficient_generators": 247,
+      "coordinate_specializations": 0,
+      "exact_numeric_controls": [
+        {
+          "Tc_minus_1_at_T_equals_1_over_c": true,
+          "c": 3,
+          "coefficient_assignment": "deterministic exact integers",
+          "literal_J_PQ_minus_cxell_equality": true,
+          "plus_one_negative": true,
+          "recomposed_xy_terms": 247,
+          "reversed_J_QP_minus_cxell_negative": true,
+          "seed": 11,
+          "status": "PASS"
+        },
+        {
+          "Tc_minus_1_at_T_equals_1_over_c": true,
+          "c": 6,
+          "coefficient_assignment": "deterministic exact integers",
+          "literal_J_PQ_minus_cxell_equality": true,
+          "plus_one_negative": true,
+          "recomposed_xy_terms": 247,
+          "reversed_J_QP_minus_cxell_negative": true,
+          "seed": 29,
+          "status": "PASS"
+        }
+      ],
+      "generators_including_Tc_minus_1": 248,
+      "inverse_generator": "T*c-1",
+      "literal_orientation": "J(P,Q)-c*x^ell",
+      "ring": "ring R=0,(y,x,h_0_7,h_0_6,h_0_5,h_1_5,h_0_4,h_1_4,h_0_3,h_1_3,h_0_2,h_1_2,h_2_2,h_0_1,h_1_1,h_2_1,h_0_0,h_1_0,h_2_0,A1_0_7,A1_0_6,A1_0_5,A1_1_5,A1_0_4,A1_1_4,A1_0_3,A1_1_3,A1_0_2,A1_1_2,A1_2_2,A1_0_1,A1_1_1,A1_2_1,A1_0_0,A1_1_0,A1_2_0,A2_0_7,A2_1_7,A2_2_7,A2_3_7,A2_0_6,A2_1_6,A2_2_6,A2_3_6,A2_0_5,A2_1_5,A2_2_5,A2_3_5,A2_0_4,A2_1_4,A2_2_4,A2_3_4,A2_4_4,A2_0_3,A2_1_3,A2_2_3,A2_3_3,A2_4_3,A2_0_2,A2_1_2,A2_2_2,A2_3_2,A2_4_2,A2_0_1,A2_1_1,A2_2_1,A2_3_1,A2_4_1,A2_5_1,A2_0_0,A2_1_0,A2_2_0,A2_3_0,A2_4_0,A2_5_0,A3_0_7,A3_1_7,A3_2_7,A3_3_7,A3_4_7,A3_5_7,A3_0_6,A3_1_6,A3_2_6,A3_3_6,A3_4_6,A3_5_6,A3_6_6,A3_0_5,A3_1_5,A3_2_5,A3_3_5,A3_4_5,A3_5_5,A3_6_5,A3_0_4,A3_1_4,A3_2_4,A3_3_4,A3_4_4,A3_5_4,A3_6_4,A3_0_3,A3_1_3,A3_2_3,A3_3_3,A3_4_3,A3_5_3,A3_6_3,A3_7_3,A3_0_2,A3_1_2,A3_2_2,A3_3_2,A3_4_2,A3_5_2,A3_6_2,A3_7_2,A3_0_1,A3_1_1,A3_2_1,A3_3_1,A3_4_1,A3_5_1,A3_6_1,A3_7_1,A3_1_0,A3_2_0,A3_3_0,A3_4_0,A3_5_0,A3_6_0,A3_7_0,A3_8_0,B2_0_7,B2_1_7,B2_2_7,B2_3_7,B2_0_6,B2_1_6,B2_2_6,B2_3_6,B2_0_5,B2_1_5,B2_2_5,B2_3_5,B2_0_4,B2_1_4,B2_2_4,B2_3_4,B2_4_4,B2_0_3,B2_1_3,B2_2_3,B2_3_3,B2_4_3,B2_0_2,B2_1_2,B2_2_2,B2_3_2,B2_4_2,B2_0_1,B2_1_1,B2_2_1,B2_3_1,B2_4_1,B2_5_1,B2_1_0,B2_2_0,B2_3_0,B2_4_0,B2_5_0,c),(lp(1),dp(172));",
+      "status": "PASS",
+      "stem": "C_n24m16_M12_17_ell1_s3_G",
+      "unknowns_without_T": 171
+    },
+    {
+      "activation": {
+        "action": "ALREADY_IDENTICAL",
+        "canonical_rows": {
+          "bytes": 366812253,
+          "path": "box/gi-only-20260905/classes/C_n24m18_M9_20_ell1_s3/rows/C_n24m18_M9_20_ell1_s3_G_rows.tsv",
+          "sha256": "65889833e333f548aab81c25ed3e3ff15cc553b08d15742a614b9258df0a978b"
+        },
+        "previous": {
+          "bytes": 366812253,
+          "path": "box/gi-only-20260905/classes/C_n24m18_M9_20_ell1_s3/rows/C_n24m18_M9_20_ell1_s3_G_rows.tsv",
+          "sha256": "65889833e333f548aab81c25ed3e3ff15cc553b08d15742a614b9258df0a978b"
+        }
+      },
+      "all_G_coordinates_retained": true,
+      "auxiliary_variables": 0,
+      "c_target_occurrence": [
+        {
+          "coefficient": -1,
+          "factors": [
+            [
+              "c",
+              1
+            ]
+          ],
+          "row": [
+            0,
+            1,
+            0
+          ]
+        }
+      ],
+      "candidate_receipt": {
+        "bytes": 6789,
+        "path": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m18_M9_20_ell1_s3/C_n24m18_M9_20_ell1_s3_G_sparse_extraction.json",
+        "sha256": "a54b8a6204a78c4d46521a885d3241403c39aa6714773957e1c27dbbbedce969"
+      },
+      "candidate_rows": {
+        "bytes": 366812253,
+        "path": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m18_M9_20_ell1_s3/C_n24m18_M9_20_ell1_s3_G_sparse_rows.tsv",
+        "sha256": "65889833e333f548aab81c25ed3e3ff15cc553b08d15742a614b9258df0a978b"
+      },
+      "canonical_builder": {
+        "bytes": 22018,
+        "path": "box/gi-only-20260905/classes/C_n24m18_M9_20_ell1_s3/builders/C_n24m18_M9_20_ell1_s3_G_builder.sing",
+        "sha256": "8dd3b7800cdc2fc3519da5b99100ee7919860a13790f531e4ee5387dc0ddb698"
+      },
+      "class_id": "C_n24m18_M9_20_ell1_s3",
+      "coefficient_generators": 560,
+      "coordinate_specializations": 0,
+      "exact_numeric_controls": [
+        {
+          "Tc_minus_1_at_T_equals_1_over_c": true,
+          "c": 3,
+          "coefficient_assignment": "deterministic exact integers",
+          "literal_J_PQ_minus_cxell_equality": true,
+          "plus_one_negative": true,
+          "recomposed_xy_terms": 560,
+          "reversed_J_QP_minus_cxell_negative": true,
+          "seed": 11,
+          "status": "PASS"
+        },
+        {
+          "Tc_minus_1_at_T_equals_1_over_c": true,
+          "c": 6,
+          "coefficient_assignment": "deterministic exact integers",
+          "literal_J_PQ_minus_cxell_equality": true,
+          "plus_one_negative": true,
+          "recomposed_xy_terms": 560,
+          "reversed_J_QP_minus_cxell_negative": true,
+          "seed": 29,
+          "status": "PASS"
+        }
+      ],
+      "generators_including_Tc_minus_1": 561,
+      "inverse_generator": "T*c-1",
+      "literal_orientation": "J(P,Q)-c*x^ell",
+      "ring": "ring R=0,(y,x,h_0_5,h_0_4,h_1_4,h_0_3,h_1_3,h_2_3,h_0_2,h_1_2,h_2_2,h_0_1,h_1_1,h_2_1,h_3_1,h_0_0,h_1_0,h_2_0,h_3_0,h_4_0,A1_0_5,A1_0_4,A1_1_4,A1_0_3,A1_1_3,A1_2_3,A1_0_2,A1_1_2,A1_2_2,A1_0_1,A1_1_1,A1_2_1,A1_3_1,A1_0_0,A1_1_0,A1_2_0,A1_3_0,A1_4_0,A2_0_5,A2_1_5,A2_2_5,A2_3_5,A2_4_5,A2_0_4,A2_1_4,A2_2_4,A2_3_4,A2_4_4,A2_5_4,A2_0_3,A2_1_3,A2_2_3,A2_3_3,A2_4_3,A2_5_3,A2_6_3,A2_0_2,A2_1_2,A2_2_2,A2_3_2,A2_4_2,A2_5_2,A2_6_2,A2_0_1,A2_1_1,A2_2_1,A2_3_1,A2_4_1,A2_5_1,A2_6_1,A2_7_1,A2_0_0,A2_1_0,A2_2_0,A2_3_0,A2_4_0,A2_5_0,A2_6_0,A2_7_0,A2_8_0,A3_0_5,A3_1_5,A3_2_5,A3_3_5,A3_4_5,A3_5_5,A3_6_5,A3_7_5,A3_8_5,A3_0_4,A3_1_4,A3_2_4,A3_3_4,A3_4_4,A3_5_4,A3_6_4,A3_7_4,A3_8_4,A3_9_4,A3_0_3,A3_1_3,A3_2_3,A3_3_3,A3_4_3,A3_5_3,A3_6_3,A3_7_3,A3_8_3,A3_9_3,A3_10_3,A3_0_2,A3_1_2,A3_2_2,A3_3_2,A3_4_2,A3_5_2,A3_6_2,A3_7_2,A3_8_2,A3_9_2,A3_10_2,A3_0_1,A3_1_1,A3_2_1,A3_3_1,A3_4_1,A3_5_1,A3_6_1,A3_7_1,A3_8_1,A3_9_1,A3_10_1,A3_11_1,A3_0_0,A3_1_0,A3_2_0,A3_3_0,A3_4_0,A3_5_0,A3_6_0,A3_7_0,A3_8_0,A3_9_0,A3_10_0,A3_11_0,A3_12_0,A4_0_5,A4_1_5,A4_2_5,A4_3_5,A4_4_5,A4_5_5,A4_6_5,A4_7_5,A4_8_5,A4_9_5,A4_10_5,A4_11_5,A4_12_5,A4_0_4,A4_1_4,A4_2_4,A4_3_4,A4_4_4,A4_5_4,A4_6_4,A4_7_4,A4_8_4,A4_9_4,A4_10_4,A4_11_4,A4_12_4,A4_13_4,A4_0_3,A4_1_3,A4_2_3,A4_3_3,A4_4_3,A4_5_3,A4_6_3,A4_7_3,A4_8_3,A4_9_3,A4_10_3,A4_11_3,A4_12_3,A4_13_3,A4_14_3,A4_0_2,A4_1_2,A4_2_2,A4_3_2,A4_4_2,A4_5_2,A4_6_2,A4_7_2,A4_8_2,A4_9_2,A4_10_2,A4_11_2,A4_12_2,A4_13_2,A4_14_2,A4_0_1,A4_1_1,A4_2_1,A4_3_1,A4_4_1,A4_5_1,A4_6_1,A4_7_1,A4_8_1,A4_9_1,A4_10_1,A4_11_1,A4_12_1,A4_13_1,A4_14_1,A4_15_1,A4_1_0,A4_2_0,A4_3_0,A4_4_0,A4_5_0,A4_6_0,A4_7_0,A4_8_0,A4_9_0,A4_10_0,A4_11_0,A4_12_0,A4_13_0,A4_14_0,A4_15_0,A4_16_0,B2_0_5,B2_1_5,B2_2_5,B2_3_5,B2_4_5,B2_0_4,B2_1_4,B2_2_4,B2_3_4,B2_4_4,B2_5_4,B2_0_3,B2_1_3,B2_2_3,B2_3_3,B2_4_3,B2_5_3,B2_6_3,B2_0_2,B2_1_2,B2_2_2,B2_3_2,B2_4_2,B2_5_2,B2_6_2,B2_0_1,B2_1_1,B2_2_1,B2_3_1,B2_4_1,B2_5_1,B2_6_1,B2_7_1,B2_0_0,B2_1_0,B2_2_0,B2_3_0,B2_4_0,B2_5_0,B2_6_0,B2_7_0,B2_8_0,B3_0_5,B3_1_5,B3_2_5,B3_3_5,B3_4_5,B3_5_5,B3_6_5,B3_7_5,B3_8_5,B3_0_4,B3_1_4,B3_2_4,B3_3_4,B3_4_4,B3_5_4,B3_6_4,B3_7_4,B3_8_4,B3_9_4,B3_0_3,B3_1_3,B3_2_3,B3_3_3,B3_4_3,B3_5_3,B3_6_3,B3_7_3,B3_8_3,B3_9_3,B3_10_3,B3_0_2,B3_1_2,B3_2_2,B3_3_2,B3_4_2,B3_5_2,B3_6_2,B3_7_2,B3_8_2,B3_9_2,B3_10_2,B3_0_1,B3_1_1,B3_2_1,B3_3_1,B3_4_1,B3_5_1,B3_6_1,B3_7_1,B3_8_1,B3_9_1,B3_10_1,B3_11_1,B3_1_0,B3_2_0,B3_3_0,B3_4_0,B3_5_0,B3_6_0,B3_7_0,B3_8_0,B3_9_0,B3_10_0,B3_11_0,B3_12_0,c),(lp(1),dp(342));",
+      "status": "PASS",
+      "stem": "C_n24m18_M9_20_ell1_s3_G",
+      "unknowns_without_T": 341
+    },
+    {
+      "activation": {
+        "action": "ALREADY_IDENTICAL",
+        "canonical_rows": {
+          "bytes": 792053508,
+          "path": "box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/rows/C_n16m12_M6_13_ell3_s3_G_rows.tsv",
+          "sha256": "bd90a5200981e5035566011dd65e7139efca2e93be102894f8dfb1176529ba29"
+        },
+        "previous": {
+          "bytes": 792053508,
+          "path": "box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/rows/C_n16m12_M6_13_ell3_s3_G_rows.tsv",
+          "sha256": "bd90a5200981e5035566011dd65e7139efca2e93be102894f8dfb1176529ba29"
+        }
+      },
+      "all_G_coordinates_retained": true,
+      "auxiliary_variables": 0,
+      "c_target_occurrence": [
+        {
+          "coefficient": -1,
+          "factors": [
+            [
+              "c",
+              1
+            ]
+          ],
+          "row": [
+            0,
+            3,
+            0
+          ]
+        }
+      ],
+      "candidate_receipt": {
+        "bytes": 7756,
+        "path": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n16m12_M6_13_ell3_s3/C_n16m12_M6_13_ell3_s3_G_sparse_extraction.json",
+        "sha256": "7d8900fa6ee172514dc62f2fc576f2d2c82a90373205df47d297dbbe28c08164"
+      },
+      "candidate_rows": {
+        "bytes": 792053508,
+        "path": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n16m12_M6_13_ell3_s3/C_n16m12_M6_13_ell3_s3_G_sparse_rows.tsv",
+        "sha256": "bd90a5200981e5035566011dd65e7139efca2e93be102894f8dfb1176529ba29"
+      },
+      "canonical_builder": {
+        "bytes": 24652,
+        "path": "box/gi-only-20260905/classes/C_n16m12_M6_13_ell3_s3/builders/C_n16m12_M6_13_ell3_s3_G_builder.sing",
+        "sha256": "8a71b2ba0080df32543fa443fc81415ade8ba5a1153e374cbafbc68bee3ed11c"
+      },
+      "class_id": "C_n16m12_M6_13_ell3_s3",
+      "coefficient_generators": 756,
+      "coordinate_specializations": 0,
+      "exact_numeric_controls": [
+        {
+          "Tc_minus_1_at_T_equals_1_over_c": true,
+          "c": 3,
+          "coefficient_assignment": "deterministic exact integers",
+          "literal_J_PQ_minus_cxell_equality": true,
+          "plus_one_negative": true,
+          "recomposed_xy_terms": 756,
+          "reversed_J_QP_minus_cxell_negative": true,
+          "seed": 11,
+          "status": "PASS"
+        },
+        {
+          "Tc_minus_1_at_T_equals_1_over_c": true,
+          "c": 6,
+          "coefficient_assignment": "deterministic exact integers",
+          "literal_J_PQ_minus_cxell_equality": true,
+          "plus_one_negative": true,
+          "recomposed_xy_terms": 756,
+          "reversed_J_QP_minus_cxell_negative": true,
+          "seed": 29,
+          "status": "PASS"
+        }
+      ],
+      "generators_including_Tc_minus_1": 757,
+      "inverse_generator": "T*c-1",
+      "literal_orientation": "J(P,Q)-c*x^ell",
+      "ring": "ring R=0,(y,x,h_0_3,h_1_3,h_2_3,h_0_2,h_1_2,h_2_2,h_3_2,h_4_2,h_0_1,h_1_1,h_2_1,h_3_1,h_4_1,h_5_1,h_6_1,h_0_0,h_1_0,h_2_0,h_3_0,h_4_0,h_5_0,h_6_0,h_7_0,h_8_0,A1_0_3,A1_1_3,A1_2_3,A1_0_2,A1_1_2,A1_2_2,A1_3_2,A1_4_2,A1_0_1,A1_1_1,A1_2_1,A1_3_1,A1_4_1,A1_5_1,A1_6_1,A1_0_0,A1_1_0,A1_2_0,A1_3_0,A1_4_0,A1_5_0,A1_6_0,A1_7_0,A1_8_0,A2_0_3,A2_1_3,A2_2_3,A2_3_3,A2_4_3,A2_5_3,A2_6_3,A2_7_3,A2_8_3,A2_9_3,A2_10_3,A2_0_2,A2_1_2,A2_2_2,A2_3_2,A2_4_2,A2_5_2,A2_6_2,A2_7_2,A2_8_2,A2_9_2,A2_10_2,A2_11_2,A2_12_2,A2_0_1,A2_1_1,A2_2_1,A2_3_1,A2_4_1,A2_5_1,A2_6_1,A2_7_1,A2_8_1,A2_9_1,A2_10_1,A2_11_1,A2_12_1,A2_13_1,A2_14_1,A2_0_0,A2_1_0,A2_2_0,A2_3_0,A2_4_0,A2_5_0,A2_6_0,A2_7_0,A2_8_0,A2_9_0,A2_10_0,A2_11_0,A2_12_0,A2_13_0,A2_14_0,A2_15_0,A2_16_0,A3_0_3,A3_1_3,A3_2_3,A3_3_3,A3_4_3,A3_5_3,A3_6_3,A3_7_3,A3_8_3,A3_9_3,A3_10_3,A3_11_3,A3_12_3,A3_13_3,A3_14_3,A3_15_3,A3_16_3,A3_17_3,A3_18_3,A3_0_2,A3_1_2,A3_2_2,A3_3_2,A3_4_2,A3_5_2,A3_6_2,A3_7_2,A3_8_2,A3_9_2,A3_10_2,A3_11_2,A3_12_2,A3_13_2,A3_14_2,A3_15_2,A3_16_2,A3_17_2,A3_18_2,A3_19_2,A3_20_2,A3_0_1,A3_1_1,A3_2_1,A3_3_1,A3_4_1,A3_5_1,A3_6_1,A3_7_1,A3_8_1,A3_9_1,A3_10_1,A3_11_1,A3_12_1,A3_13_1,A3_14_1,A3_15_1,A3_16_1,A3_17_1,A3_18_1,A3_19_1,A3_20_1,A3_21_1,A3_22_1,A3_0_0,A3_1_0,A3_2_0,A3_3_0,A3_4_0,A3_5_0,A3_6_0,A3_7_0,A3_8_0,A3_9_0,A3_10_0,A3_11_0,A3_12_0,A3_13_0,A3_14_0,A3_15_0,A3_16_0,A3_17_0,A3_18_0,A3_19_0,A3_20_0,A3_21_0,A3_22_0,A3_23_0,A3_24_0,A4_0_3,A4_1_3,A4_2_3,A4_3_3,A4_4_3,A4_5_3,A4_6_3,A4_7_3,A4_8_3,A4_9_3,A4_10_3,A4_11_3,A4_12_3,A4_13_3,A4_14_3,A4_15_3,A4_16_3,A4_17_3,A4_18_3,A4_19_3,A4_20_3,A4_21_3,A4_22_3,A4_23_3,A4_24_3,A4_25_3,A4_26_3,A4_0_2,A4_1_2,A4_2_2,A4_3_2,A4_4_2,A4_5_2,A4_6_2,A4_7_2,A4_8_2,A4_9_2,A4_10_2,A4_11_2,A4_12_2,A4_13_2,A4_14_2,A4_15_2,A4_16_2,A4_17_2,A4_18_2,A4_19_2,A4_20_2,A4_21_2,A4_22_2,A4_23_2,A4_24_2,A4_25_2,A4_26_2,A4_27_2,A4_28_2,A4_0_1,A4_1_1,A4_2_1,A4_3_1,A4_4_1,A4_5_1,A4_6_1,A4_7_1,A4_8_1,A4_9_1,A4_10_1,A4_11_1,A4_12_1,A4_13_1,A4_14_1,A4_15_1,A4_16_1,A4_17_1,A4_18_1,A4_19_1,A4_20_1,A4_21_1,A4_22_1,A4_23_1,A4_24_1,A4_25_1,A4_26_1,A4_27_1,A4_28_1,A4_29_1,A4_30_1,A4_1_0,A4_2_0,A4_3_0,A4_4_0,A4_5_0,A4_6_0,A4_7_0,A4_8_0,A4_9_0,A4_10_0,A4_11_0,A4_12_0,A4_13_0,A4_14_0,A4_15_0,A4_16_0,A4_17_0,A4_18_0,A4_19_0,A4_20_0,A4_21_0,A4_22_0,A4_23_0,A4_24_0,A4_25_0,A4_26_0,A4_27_0,A4_28_0,A4_29_0,A4_30_0,A4_31_0,A4_32_0,B2_0_3,B2_1_3,B2_2_3,B2_3_3,B2_4_3,B2_5_3,B2_6_3,B2_7_3,B2_8_3,B2_9_3,B2_10_3,B2_0_2,B2_1_2,B2_2_2,B2_3_2,B2_4_2,B2_5_2,B2_6_2,B2_7_2,B2_8_2,B2_9_2,B2_10_2,B2_11_2,B2_12_2,B2_0_1,B2_1_1,B2_2_1,B2_3_1,B2_4_1,B2_5_1,B2_6_1,B2_7_1,B2_8_1,B2_9_1,B2_10_1,B2_11_1,B2_12_1,B2_13_1,B2_14_1,B2_0_0,B2_1_0,B2_2_0,B2_3_0,B2_4_0,B2_5_0,B2_6_0,B2_7_0,B2_8_0,B2_9_0,B2_10_0,B2_11_0,B2_12_0,B2_13_0,B2_14_0,B2_15_0,B2_16_0,B3_0_3,B3_1_3,B3_2_3,B3_3_3,B3_4_3,B3_5_3,B3_6_3,B3_7_3,B3_8_3,B3_9_3,B3_10_3,B3_11_3,B3_12_3,B3_13_3,B3_14_3,B3_15_3,B3_16_3,B3_17_3,B3_18_3,B3_0_2,B3_1_2,B3_2_2,B3_3_2,B3_4_2,B3_5_2,B3_6_2,B3_7_2,B3_8_2,B3_9_2,B3_10_2,B3_11_2,B3_12_2,B3_13_2,B3_14_2,B3_15_2,B3_16_2,B3_17_2,B3_18_2,B3_19_2,B3_20_2,B3_0_1,B3_1_1,B3_2_1,B3_3_1,B3_4_1,B3_5_1,B3_6_1,B3_7_1,B3_8_1,B3_9_1,B3_10_1,B3_11_1,B3_12_1,B3_13_1,B3_14_1,B3_15_1,B3_16_1,B3_17_1,B3_18_1,B3_19_1,B3_20_1,B3_21_1,B3_22_1,B3_1_0,B3_2_0,B3_3_0,B3_4_0,B3_5_0,B3_6_0,B3_7_0,B3_8_0,B3_9_0,B3_10_0,B3_11_0,B3_12_0,B3_13_0,B3_14_0,B3_15_0,B3_16_0,B3_17_0,B3_18_0,B3_19_0,B3_20_0,B3_21_0,B3_22_0,B3_23_0,B3_24_0,c),(lp(1),dp(456));",
+      "status": "PASS",
+      "stem": "C_n16m12_M6_13_ell3_s3_G",
+      "unknowns_without_T": 455
+    }
+  ],
+  "frozen_builder_fix": {
+    "bytes": 8543,
+    "path": "/tmp/jc2-lane.ymMTCq/inputs/builder_fix.py",
+    "sha256": "d6662abfec114a443712600f87e3e7b7064071f445d9b177d2f0ea13c9d3836b"
+  },
+  "native_exact_controls": [
+    {
+      "class_id": "C_n24m16_Mm12_m2_5_ell1_s4",
+      "literal_expanded_row_dictionary_equality": true,
+      "native": {
+        "bytes": 2233756,
+        "path": "box/gi-only-20260905/classes/C_n24m16_Mm12_m2_5_ell1_s4/rows/C_n24m16_Mm12_m2_5_ell1_s4_G_rows.tsv",
+        "sha256": "a5e22fbb9c7f16858a9ce342b9ee325b73f5ea2c60ad93ce7675424b3ecb702c"
+      },
+      "rows": 66,
+      "sparse": {
+        "bytes": 2233756,
+        "path": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m16_Mm12_m2_5_ell1_s4/C_n24m16_Mm12_m2_5_ell1_s4_G_sparse_rows.tsv",
+        "sha256": "417da59ad587604f60bba2ebd0112b31e50e6b36e749b41ae37ce8074bf33bfc"
+      },
+      "status": "PASS",
+      "unknowns_without_T": 70
+    },
+    {
+      "class_id": "C_n18m12_M2_9_ell2_s3",
+      "literal_expanded_row_dictionary_equality": true,
+      "native": {
+        "bytes": 4746199,
+        "path": "box/gi-only-20260905/classes/C_n18m12_M2_9_ell2_s3/rows/C_n18m12_M2_9_ell2_s3_G_rows.tsv",
+        "sha256": "71ead8a87e096749fb6874fc201d40f4c6ea4734824df33595404a140a80617d"
+      },
+      "rows": 150,
+      "sparse": {
+        "bytes": 4746199,
+        "path": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n18m12_M2_9_ell2_s3/C_n18m12_M2_9_ell2_s3_G_sparse_rows.tsv",
+        "sha256": "e8835c8a34886c6b252591204a29416b44042b32f867e6f31f379cab6b6491ec"
+      },
+      "status": "PASS",
+      "unknowns_without_T": 109
+    },
+    {
+      "class_id": "C_n24m18_Mm15_14_ell1_s3",
+      "literal_expanded_row_dictionary_equality": true,
+      "native": {
+        "bytes": 6438204,
+        "path": "box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/rows/C_n24m18_Mm15_14_ell1_s3_G_rows.tsv",
+        "sha256": "8807a9fcc841d6c5fdd6e678f42757e1f8b7265a19fac2932114a42da6ba8f3c"
+      },
+      "rows": 173,
+      "sparse": {
+        "bytes": 6438252,
+        "path": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m18_Mm15_14_ell1_s3/C_n24m18_Mm15_14_ell1_s3_G_sparse_rows.tsv",
+        "sha256": "0f24b06a2f2c00f3d3133290f89f96d6545d6617f8810a790747586dfcf04b11"
+      },
+      "status": "PASS",
+      "unknowns_without_T": 127
+    }
+  ],
+  "schema": "moh-gi-only-sparse-extraction-activation-custody-v1",
+  "scope": "exact full G_i production coefficient rows; no chart specialization",
+  "sparse_extractor": {
+    "bytes": 19363,
+    "path": "box/gi-only-20260905/experiments/fast-extract/sparse_hadic_extract.py",
+    "sha256": "a1c24fc7b7b4732ec3a78efe968763abe9846418bab80fff8e7128a224386516"
+  },
+  "status": "PASS"
+}

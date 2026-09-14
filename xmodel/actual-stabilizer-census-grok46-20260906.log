@@ -1,0 +1,29 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes, then read the charged sources so the stabilizer convention and census screen are grounded in the actual code.Hashes next: I'll build the receipt manifest with awk and check it against the frozen copies.The first awk join was ordered wrong, so I’ll rebuild the manifest by index and re-run the checksum.Hashes match. Next I’ll read the skeleton, descent, and screen code to see how they compute the stabilizer.I’ll pull the probe, closure_fixed, and OwnVRouteTree implementations next so the two stabilizer conventions can be compared line-by-line.I’ll inspect related drivers and how the residual 64 and εN screen were defined, then implement the actual-stabilizer re-run.I have the two L conventions. Next I’ll write a driver that replays the 24,063-row screen under the actual-centre stabilizer and checks εN ∈ Z.R063 is already a control: coarse-operative, not actual-operative. Waiting on the full 24,063-row replay.The replay finished in 24s. I’ll read the counts, delta list, and εN screen before writing the report.The actual-operative count is 90 against 1,420, matching printed-closure’s N>0. I’ll confirm the sets and slim the JSON.The 90-row set matches printed-closure N>0 exactly. I’ll compact the JSON and write the sealed report.I’ll patch the driver so a replay writes the same compact JSON the report cites, not the bulky intermediate dump.**DATA.** Under the actual-centre stabilizer the operative count is **90**, not 1,420. Residual **64 is unaffected**.
+
+Frozen inputs **7/7 SHA-256 OK**. Sealed report: `xmodel/actual-stabilizer-census-grok46-20260906.md` (body 6,159 bytes). Driver/JSON: `box/actual-stabilizer-census-20260906/`.
+
+### Stabilizer (cited)
+
+Census and `C_FULL_TREE_POLYNOMIAL_ODE` both use **coarse** Moh (8): `L_j = lcm(den δ_{j+1..s})`, `A_j = den(L_j δ_j)` — `moh_skeleton_full.py` 98–107, 185–213; `opus5_probe.Tree.node` 70–81. **Actual** L (zero keeps L; nonzero `lcm(L, den δ)`): `descend_own.py:151–152`, `closure_fixed.py:75,89`.
+
+### Replay (24,063 rows, flags unchanged)
+
+| | count | s=3 | s=4 | s=5 | s=6 | n≤100 |
+|---|---:|---:|---:|---:|---:|---:|
+| coarse operative | **1,420** | 43 | 414 | 797 | 166 | 20 |
+| actual operative | **90** | 43 | 45 | 2 | 0 | 6 |
+| lost / gained | **1,330 / 0** | | | | | |
+
+The 90 equal printed-closure `N>0` (65 roster + 25 finite-pole). The 1,330 equal printed `N=0`. Lists: JSON `actual_rows`, `lost_ids`.
+
+**Roster 66:** only **R063** drops (`E0393`; coarse `εN = 3/5`). **Residual 64: 64/64 still actual-operative — confirmed** (own-data already used actual L).
+
+### Extra screen `εN ∈ Z` on zero routes
+
+- **44** of 1,420 fail with coarse `N` (descend_own prefix; R063-type).
+- **0** of 90 fail with actual `N`.
+- 2 of 90 still have coarse `εN ∉ Z` (`R066`, `E0608`) and stay actual-operative.
+
+A convention change is not a kill. Do not promote the 1,330 or `εN` as a gate.
+DIVERT path=xmodel/actual-stabilizer-census-grok46-20260906.md status=CLEAN_SEALED body_bytes=6159 body_sha256=3167a61ae19ae4e39208eedf762934846460e7375c8270e44a08032c858ef818

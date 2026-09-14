@@ -1,0 +1,25 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete at 15:02:18 UTC, ahead of the 15:06:49 deadline. All work is finished and verified; nothing further is needed.
+
+**Outcome: A, B, C, D all CONFIRMED. No blocking runtime mismatch found.**
+
+The report is at `xmodel/f10-r1-exact-decision-validation-gate-fable5-20260909.md`, ending with a single standalone BODY-END line and no authored Seal. All working files are in `box/f10-r1-exact-decision-validation-gate-fable5-20260909/`.
+
+**What was verified**
+
+- All nine input pins match the ordered list. The archive had no symlinks, absolute paths, or traversal, and was unpacked only inside my box.
+- The remote TERMINAL manifest hashes to the root's pin, and all 76 entries verified OK before any output was consumed.
+- The corrected engine differs from the charged original by exactly one deleted line, the option statement. The installed-version hypothesis rests on the actual stdout capture showing both options unknown on Singular 4.3.2.
+- One bounded metadata replay (stdlib only, no charged imports) ran 194 checks over all eight authority, dispatch, and telemetry records: every dispatch and stream digest, every child argv digest in CAPRUN's compact-JSON-plus-newline form, all caps, defects, source pins, and both deadline families. All passed.
+- The dummy control shows measured CAPRUN group RSS above the 32 MiB cap, the exact MATCH/SENT 15/MATCH/SENT 9 identity sequence, and true TERM/KILL cleanup flags. The systemd journal's memory peak is an outer cgroup figure and is not used as cap evidence.
+- The semantic receipt lists exactly the 19 designed outcomes in source order, and its pins satisfy the caller's decide-mode preconditions.
+
+**Limitations stated in the report**
+
+- The engine has zero executions; conversion, exporter, and quiet framing remain untested.
+- Python 3.12.3 leaves the 4300-digit limit live and unhardened, so a huge cofactor would fail closed.
+- Seven authorities and five telemetries were consumed field-by-field by the replay parser rather than read visually line by line.
+- CAPRUN was read only at its argv-digest lines; the reference manual only at four section pointers.
+
+**Next step for the decide lane** is registration pinning only: point the new registration at this semantic receipt and its hash, keep the corrected engine and unchanged checker and tests, and set fresh clocks. No source change is required.
+DIVERT path=xmodel/f10-r1-exact-decision-validation-gate-fable5-20260909.md status=CLEAN body_bytes=11756 body_sha256=4a6c986430e17d47ffe5fe70b371f7eeec830ca10a6b2d6bb61f5fc7d8a45b9a

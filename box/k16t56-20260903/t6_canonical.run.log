@@ -1,0 +1,20 @@
+START t=6 18:40:20
+HASH_OK t_order_system.py e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28
+HASH_OK triangular_preprocess.py f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93
+HASH_OK t4_order_system.py db5e54450444f27c56f00bbec287aea284c8dc190e0e549c2fea51e0dbdd6cee
+BUILD_CHART t=6
+CHART t=6 tuple=(76,52;73,3) (e,q)=(19,13) unknowns=63 equations=93
+PHI radii=(-1,6/19) gauges=True build_s=16.207
+ACTUAL_PAIR J=gamma True; K16_TUPLE_FAIL True
+Q_PIVOTS t=6
+Q_PIVOTS count=22 expected=22 residual_rows=70 residual_unknowns=41 s=832.412
+Q_PIVOT_BANDS 25 .. 12 vars=['a7_1', 'a8_1', 'a9_1', 'a10_1', 'a11_1', 'a12_1', 'a13_2', 'a13_1', 'a14_2', 'a14_1', 'a15_2', 'a15_1', 'a16_2', 'a16_1', 'a17_2', 'a17_1', 'a18_2', 'a18_1', 'a19_2', 'a19_1', 'a19_0', 'a19_3']
+GRADING x=q7_1 wt=25 y=q13_1 wt=50 c wt=125 homogeneous_rows=70
+C_ROW source=2 band=0 image_ok
+H_ROW source=38 band=6 associate=19/2197
+H_t=2028*q13_1**2 - 1092*q13_1 + 140 primitive=507*q13_1**2 - 273*q13_1 + 35 disc=56784 irreducible=True content=4
+UNIT y res=140 inv=39/5 - 507*q13_1/35
+UNIT linear res=354900 inv=78*q13_1/175 - 1/5
+UNIT cbar res=8844500/4826809 inv=1113879*q13_1/3325 - 85683/665
+END t=6 exit=143 19:08:29
+END t=6 exit=143 19:08:30

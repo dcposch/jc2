@@ -1,0 +1,7 @@
+The two Singular negative-control jobs (*_pivot.sing, 181 MB and 58 MB) were deleted after their runs.
+Regenerate each from the emitted corrected system:
+  S=/home/ubuntu/jc2/box/orderbasis-20260903/systems
+  sed '/^ideal G=slimgb(I);/,$d' $S/<system>.sing > <system>_pivot.sing && cat pivot_tail.sing >> <system>_pivot.sing
+  timeout 540 Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc <system>_pivot.sing
+Both hit the 540 s cap (exit 124) without printing PIVOTS=; see *_pivot.out / *_pivot.err.
+raw_pivot_census.py runs on the emitter's rows TSVs in 1-2 min and is the informative measurement.

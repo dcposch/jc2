@@ -1,0 +1,61 @@
+// t=2, d=-1, y=1/5: exceptional family L = 5x^3 - b, P = -L^2/4, B = eta = 0 (charged Astra section 5 / 7.1).
+// (i) Q_P(x,Y), the cubic C = Q_P/((3/16)(Y-L)), its factorisation over Q(b)(x); (ii) tau-cubic and delta-cubic;
+// (iii) D = d_Y Q_P(x,L) = (15/2) L^2 x^3, j0 = 3; (iv) the second branch Ltilde as a series to order 40: NOT a polynomial;
+// (v) the branch at infinity with lc -1/y: Ltilde_inf = -L - b + O(x^{-4}) (N=3: 2-2N = -4), via Newton in u=1/x.
+ring r=(0,b),(x,Y,T),dp;
+poly L=5*x^3-b; poly P=-(L^2)/4; number B=0; number eta=0;
+poly RY=(3/16)*Y^2*(Y*(Y+2*b)-4*B*x)-eta*x^2*(b*Y/2+B*x);
+poly GY=(3/2)*Y*(Y+b)-B*x;
+poly thP2=x*diff(P^2,x)-3*P^2;
+poly QP=RY-GY*P-thP2;
+print("Q_P(x,L)=0: "+string(subst(QP,Y,L)==0));
+poly Cc=QP/((3/16)*(Y-L)); print("division exact: "+string(QP-(3/16)*(Y-L)*Cc==0));
+print("factorize C over Q(b)[x,Y]:"); list fc=factorize(Cc); print(fc);
+// tau-cubic: substitute Y = T - L - b
+poly Ctau=subst(Cc,Y,T-L-b); print("C_tau (should be T^3-(2L+b)T^2+(2L^2+2bL-b^2-8P-4Bx)T+b(b^2+4Bx-8eta/3 x^2)):");
+poly Ctau_pred=T^3-(2*L+b)*T^2+(2*L^2+2*b*L-b^2-8*P-4*B*x)*T+b*(b^2+4*B*x-(8/3)*eta*x^2);
+print("C_tau identity: "+string(Ctau-Ctau_pred==0));
+// D = d_Y Q_P at Y=L
+poly D=subst(diff(QP,Y),Y,L); print("D = "+string(D)); print("D == (15/2) L^2 x^3: "+string(D-(15/2)*L^2*x^3==0));
+// delta-cubic
+poly A=2*L+b; poly D1=(3/2)*(A^2-b^2)-8*P-4*B*x; poly D0=A*((A^2-3*b^2)/2-8*P-4*B*x)+b*(b^2+4*B*x-(8/3)*eta*x^2);
+print("D0 == (16/3) D: "+string(D0-(16/3)*D==0));
+poly Cdelta=subst(Cc,Y,L+T); print("C_delta identity: "+string(Cdelta-(T^3+2*A*T^2+D1*T+D0)==0));
+// (iv) Ltilde by Newton on the delta-cubic in Q(b)[[x]] (D1(0)=2b^2 is a unit): delta_{n+1} = delta_n - Cd(delta_n)/Cd'(delta_n), truncated
+int ORD=40;
+proc inv_series(poly f,int n){ // inverse of a series with unit constant term, mod x^{n+1}
+  number c0=number(subst(f,x,0)); poly g=1/c0; poly h=f/c0; poly e=jet(1-h,n); poly res=1; poly term=1; int i;
+  for(i=1;i<=n;i++){ term=jet(term*e,n); res=res+term; }
+  return(jet(res*g,n));
+}
+poly Cd=T^3+2*A*T^2+D1*T+D0; poly Cdp=diff(Cd,T);
+poly dl=0; int it;
+for(it=1;it<=7;it++){ dl=jet(dl-jet(subst(Cd,T,dl),ORD)*inv_series(jet(subst(Cdp,T,dl),ORD),ORD),ORD); }
+print("residual of delta-cubic at Newton iterate, mod x^41: "+string(jet(subst(Cd,T,dl),ORD)==0));
+poly Lt=L+dl; print("Ltilde = "+string(jet(Lt,12))+" + ...");
+print("ord_0(delta) = j0: "+string(ord(dl)));
+matrix cf=coef(dl,x); print("nonzero coefficients of delta at x-degrees: "); int i; string sdeg="";
+for(i=1;i<=ncols(cf);i++){ sdeg=sdeg+string(deg(cf[1,i]))+" "; } print(sdeg);
+print("Ltilde polynomial of degree <= 3? (all coefficients of x^4..x^40 zero): "+string(jet(Lt,ORD)-jet(Lt,3)==0));
+// tau*Psi + b q == 0 check for the series
+poly tau=L+Lt+b; poly Psi=L^2+Lt^2+b*(L+Lt)-8*P-b^2-4*B*x; poly q=b^2+4*B*x-(8/3)*eta*x^2;
+print("tau*Psi+bq = 0 mod x^41: "+string(jet(tau*Psi+b*q,ORD)==0));
+// (v) branch at infinity with lc -1/y = -5: put Y = -L - b + e, e small; solve C_tau(tau=e) for e in Q(b)[[1/x]]
+// C_tau: e^3 - (2L+b) e^2 + (2L^2+2bL-b^2-8P) e + b^3 = 0.  Leading: (2L^2+2bL-b^2-8P) ~ (2*25 - 8*(-25/4)) x^6 = 100 x^6 => e ~ -b^3/(100 x^6)
+// N=3, eta=0, B!=0? here B=eta=0 so q=b^2 and tau ~ -b^3/(100 x^6) = O(x^{-6}) (finer than the generic O(x^{2-2N}) since eta=0)
+ring ru=(0,b),(u,T),dp; // u = 1/x
+poly Lu=5-b*u^3; // x^3 L(1/u) = 5 - b u^3   (L = Lu/u^3)
+poly Pu=-(Lu^2)/4; // x^6 P = Pu
+// C_tau with tau = e: multiply through: e^3 - (2L+b)e^2 + (2L^2+2bL-b^2-8P)e + b^3 = 0; set e = u^6 * E(u):
+// u^18 E^3 - (2Lu u^{-3} + b) u^12 E^2 + (2Lu^2 u^{-6} + 2b Lu u^{-3} - b^2 - 8 Pu u^{-6}) u^6 E + b^3 = 0
+// multiply by u^0: u^18 E^3 - (2 Lu u^9 + b u^12) E^2 + (2 Lu^2 + 2 b Lu u^3 - b^2 u^6 - 8 Pu) E + b^3 = 0
+poly CE=u^18*T^3-(2*Lu*u^9+b*u^12)*T^2+(2*Lu^2+2*b*Lu*u^3-b^2*u^6-8*Pu)*T+b^3;
+poly c1=2*Lu^2+2*b*Lu*u^3-b^2*u^6-8*Pu; print("coefficient of E at u=0 (must be unit 100): "+string(subst(c1,u,0)));
+int ORDU=30;
+proc inv_series_u(poly f,int n){ number c0=number(subst(f,u,0)); poly g=1/c0; poly h=f/c0; poly e=jet(1-h,n); poly res=1; poly term=1; int i;
+  for(i=1;i<=n;i++){ term=jet(term*e,n); res=res+term; } return(jet(res*g,n)); }
+poly CEp=diff(CE,T); poly E=0;
+for(it=1;it<=7;it++){ E=jet(E-jet(subst(CE,T,E),ORDU)*inv_series_u(jet(subst(CEp,T,E),ORDU),ORDU),ORDU); }
+print("residual at infinity branch mod u^31: "+string(jet(subst(CE,T,E),ORDU)==0));
+print("tau_inf = u^6 * ("+string(jet(E,8))+" + ...)   [so L~_inf = -L - b + O(x^-6)]");
+quit;

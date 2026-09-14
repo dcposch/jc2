@@ -1,0 +1,921 @@
+                                            THE TWO-DIMENSIONAL JACOBIAN CONJECTURE AND THE LOWER
+                                                         SIDE OF THE NEWTON POLYGON
+
+                                                      JORGE A. GUCCIONE1, 2 , JUAN J. GUCCIONE1, 3 , AND CHRISTIAN VALQUI4,5
+
+
+                                                   Abstract. We prove that if the Jacobian Conjecture in two variables is false and (P, Q) is a
+                                                   standard minimal pair, then the Newton polygon H(P ) of P must satisfy several restrictions
+arXiv:1605.09430v2 [math.AC] 29 Aug 2017
+
+
+
+
+                                                   that had not been found previously. This allows us to discard some of the corners found in [7,
+                                                   Remark 7.9] for H(P ), together with some of the infinite families found in [10, Theorem 2.25].
+
+
+
+
+                                                                                        Introduction
+                                           Let K be a characteristic zero field and let L := K[x, y] be the polynomial algebra in two
+                                           indeterminates. The Jacobian Conjecture in dimension two, stated by Keller in [13], says that any
+                                           pair of polynomials P, Q ∈ L with [P, Q] := ∂x P ∂y Q − ∂x Q∂y P ∈ K × defines an automorphism
+                                           of L. If this conjecture is false, then the degrees of the components P := f (x), Q := f (y) of
+                                           the hypothetical counterexample f satisfy certain restrictions, found by various authors. In [15]
+                                           the author finds that the only possible pairs (deg(P ), deg(Q)) with both entries lower than
+                                           100 are (64, 48), (50, 75), (56, 84) and (66, 99). Then he discards these four cases by hand.
+                                           In [10, Theorem 2.25] Heitmann determines for possible pairs (deg(P ), deg(Q)) various families
+                                           of the form (a + bj, c + dj) with a, b, c, d ∈ N and j running on N, and confirms the four pairs
+                                           found by Moh. For example, the family 16(1 + 2j, 1 + 3j) yields for j = 1 the first case found by
+                                           Moh.
+                                              But Heitmann determines not only the degrees, he also says something about the shape of the
+                                           support of P and Q in a hypothetical counterexample. He associates to each counterexample a
+                                           corner and gives a list of small possible corners in [10, Theorem 2.24]. For example, the corner
+                                           (4, 12) together with the family (1 + 2j, 1 + 3j) yields the family of degrees mentioned above. The
+                                           same possible corners of [10] were confirmed in [7, Remark 7.9], using more elementary methods
+                                           and discrete geometry on the plane. The shape of the support of P was described in more
+                                           detail, finding an edge with starting point A′ below the main diagonal and end point A above
+
+                                              1 Universidad de Buenos Aires. Facultad de Ciencias Exactas y Naturales. Departamento de
+
+                                           Matemática. Buenos Aires. Argentina
+                                              2 CONICET-Universidad de Buenos Aires. Instituto de Investigaciones Matemáticas “Luis A. san-
+
+                                           taló” (IMAS). Buenos Aires. Argentina
+                                              3 CONICET. Instituto Argentino de Matemática (IAM). Buenos Aires. Argentina
+                                              4 Pontificia Universidad Católica del Perú, Sección Matemáticas, PUCP, Av. Universitaria 1801,
+
+                                           San Miguel, Lima 32, Perú.
+                                              5 Instituto de Matemática y Ciencias Afines (IMCA) Calle Los Biólogos 245. Urb San César. La
+
+                                           Molina, Lima 12, Perú.
+                                              E-mail addresses: vander@dm.uba.ar, jjgucci@dm.uba.ar, cvalqui@pucp.edu.pe.
+                                              2010 Mathematics Subject Classification. Primary 14R15; Secondary 13F20.
+                                              Key words and phrases. Jacobian Conjecture.
+                                              Jorge A. Guccione and Juan J. Guccione were supported by UBACyT 20020150100153BA (UBA) and PIP
+                                           11220110100800CO (CONICET).
+                                              Christian Valqui was supported by PUCP-DGI-CAP-2015-185.
+                                                                                                 1
+2                            JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+the diagonal (See for example the beginning of section 6 in [7]). Various restriction were found
+           1
+for A0 := m  A where m := deg(P )/ gcd(deg(P ), deg(Q)), leading to the list of [7, Remark 7.9],
+which contains the list of [10, Theorem 2.24].
+                                                                1 ′
+   In the present paper we focus on restrictions for A′0 := m    A , which allows us to discard
+some of the corners found in [7, Remark 7.9], together with some of the infinite families found
+in [10, Theorem 2.25]. We will see in Theorem 3.6 that for such an A′0 there must exist a direction
+(ρ, σ) and (ρ, σ)-homogeneous elements G, R ∈ L such that
+                                  A′0 = enρ,σ (R) and [G, R] = R2 .                              (0.1)
+Here we adopt notations and definitions from [7, Section 1]. The condition (0.1) is the main
+restriction that allows to discard as possible A′0 all the points for which such (ρ, σ), G and R do
+not exist. Our findings can be resumed in the following three useful results:
+      - We cannot discard any point below the line 2y = x as possible A′0 (Proposition 2.8).
+      - If (a′ , b′ ) is a possible A′0 , then b′ ≤ (a′ − b′ − 1)2 (Proposition 3.26).
+      - No possible A′0 can be of the form ℘(n′ + 1, n′ ) for ℘, n′ ∈ N (Proposition 3.29).
+In order to obtain the last two conditions we use our main technical result, Proposition 3.12,
+which yields restrictions on the directions (ρ, σ) that can occur for an R as above if you fix the
+starting point. This result also allows to write an algorithm to determine all possible A′0 with
+v1,−1 (A′0 ) < N for some fixed N (by Corollary 3.26 there are only finitely many), which we will
+do in a future article.
+   A straightforward computation shows that for any (a, b) with a > b, the (1, −1)-homogeneous
+                                            1
+elements R := xa−b (1 + xy)b and G := − a−b   xyR satisfy
+
+                                 (a, b) = en1,−1 (R) and [G, R] = R2 .
+Hence, in order to obtain the restrictions for A′0 we need the following result of [4]: The support
+of a component of a Jacobian pair cannot have an edge with slope 1. In the first section we
+generalize this result, using the more elementary proof of Makar Limanov in [14]. In the second
+section, assuming that the Jacobian conjecture is false, we take a Jacobian pair (P, Q) that is a
+minimal pair and a standard (m, n)-pair with P (0, 0)Q(0, 0) 6= 0 and we study the lower part of
+ 1
+m H(P ), where H(P ) is the Newton polygon of P . In the third section we introduce the notion
+                                                                                            1
+of admissible chain, which encodes in an abstract way the properties of the lower part of m   H(P ).
+
+
+                             1     Generalizing Cassier-Nouges
+Throughout this paper l denotes a fixed natural number. Let K be characteristic zero field. Given
+a K-algebra A and η ∈ A, we let evη : A[y] → A denote the evaluation map evη (P ) := P (η).
+                                               1       (l)                           (l)
+For the sake of brevity, we set L(l) := K[x± l , y], L̂− := K((x−1/l ))[y] and L̂+ := K((x1/l ))[y].
+                 i         (l)   (l)                                    i
+Let P = a i ,j x l y j ∈ L̂+ ∪ L̂− . By definition the coefficient at x l y j of P and the support of P
+         P
+             l
+are                                                         n                     o
+                    Coef il j := a il ,j   and   Supp(P ) := (i/l, j) : a il ,j 6= 0 ,
+                         x y
+
+respectively. We call a pair (ρ, σ) ∈ Z2 a direction if gcd(ρ, σ) = 1. We will denote by V the set
+                                         (l)    (l)
+of directions. For (ρ, σ) ∈ V and P ∈ L̂− ∪ L̂+ , we define the (ρ, σ)-degree of P as
+                                    ni                            o
+                    vρ,σ (P ) := sup ρ + jσ : (i/l, j) ∈ Supp(P ) ∈ R ∪ {∞}.
+                                     l
+                           THE TWO-DIMENSIONAL JACOBIAN CONJECTURE                                                        3
+
+                                                                             (l)
+Note that if ρ > 0, then vρ,σ (P ) < ∞ if and only if P ∈ L̂− , while if ρ < 0, then vρ,σ (P ) < ∞ if
+                  (l)
+and only if P ∈ L̂+ . For P satisfying vρ,σ (P ) < ∞, we define the (ρ, σ)-leading term of P as
+                                                                   i
+                                                 X
+                                ℓρ,σ (P ) :=              a i ,j x l y j .
+                                                                             l
+                                                   {ρ il +σj=vρ,σ (P )}
+
+We define the set of directions associated with P as
+                  Dir(P ) := {(ρ, σ) ∈ V : vρ,σ (P ) < ∞ and # Supp(ℓρ,σ (P )) > 1}.
+                                    (l)                                             (l)
+Let η ∈ K((x−1/l )) and P ∈ L̂− or η ∈ K((x1/l )) and P ∈ L̂+ . A straightforward computation
+shows that if vρ,σ (η) = vρ,σ (y) = σ and vρ,σ (P ) < ∞, then
+                                     evℓρ,σ (η) (ℓρ,σ (P )) = ℓρ,σ (evη (P )),                                        (1.2)
+                                                        (l)       (l)
+whenever the left hand side is nonzero. The algebras L̂− and L̂+ are topological algebras in a
+                                       (l)
+natural way. A local base at zero of L̂− is the family (Vu )u∈Z , where
+                              n                                            o
+                                     (l)
+                         Vu := P ∈ L̂− : if (i/l, j) ∈ Supp(P ), then i ≤ u ,
+                                    (l)
+while a local base at zero of L̂+ is the family (Vu )u∈Z , where
+                            n                                           o
+                                     (l)
+                      Vu := P ∈ L̂+ : if (i/l, j) ∈ Supp(P ), then i ≥ u .
+                                                                                   (l)    (l)
+There is a unique isomorphism of topological algebras ϕ : L̂+ → L̂− such that ϕ(x1/l ) = x−1/l
+                                                                    (l)     (l)
+and ϕ(y) = y. We define two continuous derivations Dx and Dy on L̂− and L̂+ , by
+                      1 1 −1
+         Dx (x1/l ) :=  xl ,              Dx (y) := 0,            Dy (x1/l ) := 0         and       Dy (y) := 1.
+                      l
+It is easy to check that
+                                  n    X          i
+                                                                             o
+                         Im(Dx ) = P =   a i ,j x l y j : a−1,j = 0 for all j .
+                                                        l
+
+Moreover, a direct computation shows that
+                          Dx (evη (P )) = evη (Dx (P )) + evη (Dy (P ))Dx (η).                                        (1.3)
+                                            R      (l)      (l)        R
+We also define continuous linear maps y on L̂− and L̂+ , and x on Im(Dx ), by
+                                1                                            1
+                Z                                         Z
+                     i                i                         i                  i
+                   x l y j :=       x l y j+1   and          x l y j :=          x l +1 y j .
+                 y            j + 1                        x             i/l + 1
+                              (l)
+Lemma 1.1. Let g, f ∈ L̂− . Assume that g ∈ Im(Dx ). If Dy (g) = Dx (f ), then the differential
+                                                   (l)
+form gdx + f dy is exact; i.e., there exists H ∈ L̂− such that Dy (H) = f and Dx (H) = g.
+Proof. Consider                               Z         Z             Z         
+                                      H :=         f+             g−       Dy (g) .
+                                               y            x          y
+A direct computation shows that Dy (H) = f and Dx (H) = g.                                                               
+                                                                                                1
+                                                                                                     − 1l
+Proposition 1.2. Let P ∈ L(l) and n := v0,1 (P ). There exist u ∈ K[x , x                       l           ], r ∈ N, and a
+family (ηi )1≤i≤n of elements of K((x−1/r )), such that
+                                                            n
+                                                            Y
+                                                  P =u          (y − ηi ).                                            (1.4)
+                                                            i=1
+
+Proof. See [6, Corollary 13.15, page 295].                                                                               
+4                           JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+Remark 1.3. The same result holds with each ηi in K((x1/r )) instead of K((x−1/r )).
+Proposition 1.4. Let P ∈ L(l) and (ρ, σ) ∈ Dir(P ). Assume ρ 6= 0 and let sgn(ρ) denote the
+                                            sgn(ρ)
+sign of ρ. There exists r ∈ N and η ∈ K((x− r )) of the form
+                                                 X
+                                   η = λxσ/ρ +     λt xt/r ,
+                                                        tρ<rσ
+
+with λ ∈ K × , such that evη (P ) = 0. Moreover y − λxσ/ρ divides ℓρ,σ (P ).
+Proof. We assume that ρ > 0 and leave the case ρ < 0, which is similar, to the reader. Let n, r,
+                                                         (r)
+u and ηi be as in Proposition 1.2. Set Pi := y − ηi ∈ L̂− . Since ℓρ,σ is multiplicative, from (1.4)
+we obtain
+                                                       n
+                                                       Y
+                                  ℓρ,σ (P ) = ℓρ,σ (u)   ℓρ,σ (Pi ).
+                                                          i=1
+
+Note that ℓρ,σ (u) is a monomial, because all the monomials in x±1/r have different (ρ, σ)-degrees.
+Since (ρ, σ) ∈ Dir(P ), there exists at least one i, say i0 , such that the factor ℓρ,σ (Pi0 ) has two
+terms, which necessarily are y and λxσ/ρ for some λ ∈ K × . The result follows immediately
+taking η = ηi0 .                                                                                     
+
+Theorem 1.5. Let P, Q ∈ L(l) . Set
+                                                                          Z
+                        J˜ = J(P,
+                             ˜ Q) := Coef x−1 y0 (QDx (P ))x−1 +               [P, Q],
+                                                                           y
+
+and write g := J˜ − QDx (P ). The following facts hold:
+    (1) Dy (g) = −Dx (QDy (P )),
+    (2) g ∈ Im(Dx ),
+                                                  ˜ = vρ,σ (x−1 ), then there is λ ∈ K × such that
+    (3) If (ρ, σ) ∈ Dir(P ) with ρ 6= 0 and vρ,σ (J)
+                         y − λxσ/ρ | ℓρ,σ (P )    and      evλxσ/ρ (ℓρ,σ (J˜)) = 0.
+                                                             ˜ = [P, Q]. From (1) it follows that
+Proof. Statement (1) follows directly from the fact that Dy (J)
+                          Z                Z            
+                             Dy (g) = Dx − QDy (P ) ∈ Im(Dx ).
+                             y                      y
+                                                                 R
+Therefore, in order to prove (2), it suffices to verify that g − y Dy (g) ∈ Im(Dx ). But this is true
+since g − y Dy (g) ∈ K[x1/l , x−1/l ] and
+         R
+                     Z                                                    Z        
+                                                   ˜
+      Coef x−1 y0 g − Dy (g) = Coef x−1 y0 J − QDx (P ) = Coef x−1 y0             [P, Q] = 0.
+                        y                                                                y
+
+Now we prove statement (3). It is convenient to consider separately the cases ρ > 0 and ρ < 0.
+We only deal with the case ρ > 0, since the other one is similar. By Lemma 1.1, statements (1)
+and (2) guarantee that the differential form
+                                  (J˜ − QDx (P ))dx − (QDy (P ))dy
+                                                                                         (l)
+is exact. So, J˜ − QDx (P ) = Dx (H) and −QDy (P ) = Dy (H) for some H ∈ L̂− . Let η and λ be
+as in Proposition 1.4, so that y − λxσ/ρ divides ℓρ,σ (P ). We will prove that evλxσ/ρ (ℓρ,σ (J˜)) = 0.
+A direct computation shows that
+                             evλxσ/ρ (ℓρ,σ (J˜)) = Coef x−1 y0 (evη (J˜))x−1 .
+                           THE TWO-DIMENSIONAL JACOBIAN CONJECTURE                                           5
+
+
+Now by equality (1.3),
+                Dx (evη (H)) = evη (Dx (H)) + evη (Dy (H))Dx (η)
+                             = evη (J˜) − evη (Q) evη (Dx (P )) + evη (Dy (P ))Dx (η)
+                                                                                     
+
+                               = evη (J˜) − evη (Q)Dx (evη (P )).
+                                                     ˜ and so Coef x−1 y0 (evη (J))
+Since evη (P ) = 0, we arrive at Dx (evη (H)) = evη (J),                        ˜ = 0.                       
+                                                        ×
+Corollary 1.6. If P, Q ∈ L and [P, Q] = µ ∈ K , then there is no edge of the Newton polygon
+of P with slope 1.
+Proof. Let J˜ be as in Theorem 1.5. Since P, Q ∈ L and [P, Q] = µ, we have J˜ = µy. Then,
+             evλx−1 (ℓ−1,1 (J˜)) = evλx−1 (ℓ1,−1 (J˜)) = λµx−1 6= 0 for each λ 6= 0.
+But, by Theorem 1.5(3), if there is an edge with slope one, then there exists λ 6= 0, such that
+                                          ˜ = evλx−1 (ℓ1,−1 (J˜)) = 0,
+                           evλx−1 (ℓ−1,1 (J))
+a contradiction.                                                                                             
+
+                                          2    Lower edges
+Assume that the Jacobian Conjecture is false. Let (P, Q), m and n be as in [7, Corollary 5.21].
+In particular, (P, Q) is a minimal pair and a standard (m, n)-pair in L (see the beginning of
+Section 4 of [7] and [7, Definition 4.3]). In that paper we study the possible edges of the convex
+hull of the support of P with a corner above the main diagonal. Here we begin the study of the
+lower part. In order to carry out this task, we proceed as follows: Consider (a, b) ∈ N0 × N0
+with a > b > 0 and suppose that there exists (ρ, σ) ∈ Dir(P )∩](0, −1), (1, 0)[ satisfying
+                                                 1
+                                        (a, b) =    enρ,σ (P ).
+                                                 m
+For such (a, b) we are going to prove that there exist (ρ, σ)-homogeneous elements G, R ∈ L such
+that R is not a monomial,
+                        (a, b) = enρ,σ (R)    and [G, R] = Ri        for some i ≥ 2.
+This allows to discard as possible (a, b) all the points for which such G, R do not exist.
+Proposition 2.1. Let (P, Q) be a Jacobian pair in L, (ρ, σ) ∈ Dir(P ) and (a′ , b′ ) := enρ,σ (P ).
+Assume that a′ > b′ > 0 and (0, −1) < (ρ, σ) < (1, 0). Then (ρ, σ) < (1, −1).
+Proof. By Corollary 1.6 we know that (ρ, σ) 6= (1, −1). Suppose that (ρ, σ) ∈ ](1, −1), (1, 0)[ ,
+which means that ρ > −σ > 0. Since
+         (ρ, σ) ∈ V>0     and vρ,σ (P ) ≥ vρ,σ (a′ , b′ ) = ρa′ + σb′ > (ρ + σ)b′ ≥ ρ + σ > 0,
+we can apply [7, Theorem 2.6]. Hence, there exists a (ρ, σ)-homogeneous polynomial F such that
+  (a′ , b′ ) ∼ enρ,σ (F ) or   enρ,σ (F ) = (1, 1),   vρ,σ (F ) = ρ + σ    and [F, ℓρ,σ (P )] = ℓρ,σ (P ).
+Moreover, by [7, Remark 2.5] we know that F is not a monomial. If (a′ , b′ ) ∼ enρ,σ (F ), then
+there exists λ > 0 such that enρ,σ (F ) = λ(a′ , b′ ). So
+                   ρ + σ = vρ,σ (F ) = ρλa′ + λσb′ > λb′ (ρ + σ) =⇒ 0 < λb′ < 1,
+which is impossible, since λb′ = v0,1 (enρ,σ (F )) ∈ Z. Consequently, enρ,σ (F ) = (1, 1), and thus,
+by [7, Remark 1.8], we have
+                                  v0,1 (stρ,σ (F )) < v0,1 (enρ,σ (F )) = 1.
+6                            JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+Therefore stρ,σ (F ) = (k, 0) for some k ∈ Z, and so ρ + σ = vρ,σ (stρ,σ (F )) = ρk which implies
+that k > 0. But this leads to the contradiction ρ + σ = ρk ≥ ρ > ρ + σ and finishes the proof. 
+
+   In the rest of this section we assume that (P, Q) is an (m, n)-pair in L and we fix a direction
+                                                               1
+(ρ, σ) ∈ ](0, −1), (1, −1)[ of P such that the point (a, b) := m enρ,σ (P ) satisfies the inequalities
+a > b > 0.
+Proposition 2.2. The valuations vρ,σ (P ) and vρ,σ (Q) are greater than zero, and there exist a
+(ρ, σ)-homogeneous polynomial R and λP , λQ ∈ K × such that
+                              ℓρ,σ (P ) = λP Rm       and    ℓρ,σ (Q) = λQ Rn .                                    (2.1)
+Proof. Let tx (P ) := max{0, degx (P (0, x))}, where by definition degx (0) = −∞. By [16, Theo-
+rem 10.2.6], we know that tx (P ) > 0. Therefore vρ,σ (P ) ≥ ρtx (P ) > 0 and similarly vρ,σ (Q) > 0.
+Hence,
+                                 vρ,σ (P ) + vρ,σ (Q) − (ρ + σ) > 0
+since ρ + σ < 0, and so, by [7, Proposition 1.13] we obtain that [ℓρ,σ (P ), ℓρ,σ (Q)] = 0. Moreover,
+by [16, Theorem 10.2.1], we have
+                                         vρ,σ (P )   v1,1 (P )  m
+                                                   =           = .
+                                         vρ,σ (Q)    v1,1 (Q)   n
+Applying now [7, Proposition 2.1(2b)], we finish the proof.                                                           
+
+Remark 2.3. From the first equality in (2.1) it follows immediately that R is not a monomial
+and enρ,σ (R) = (a, b) .
+Corollary 2.4. There exist λ ∈ K × and a (ρ, σ)-homogeneous R0 ∈ L such that ℓρ,σ (P ) = λR0k
+                                                           k/m
+with k maximum (hence m | k and we can assume that R = R0 ).
+Proposition 2.5. There exist G0 ∈ L, s ∈ N and µ ∈ K × such that
+                                        [ℓρ,σ (G0 ), ℓρ,σ (P )] = µR0s ,
+where R0 is as in Corollary 2.4.
+Proof. By [7, Lemma 2.2] we know that there exists G0 ∈ L, such that
+                 [ℓρ,σ (G0 ), ℓρ,σ (P )] 6= 0   and [[ℓρ,σ (G0 ), ℓρ,σ (P )], ℓρ,σ (P )] = 0.
+                                                                  m2                 vρ,σ [ℓρ,σ (G0 ),ℓρ,σ (P )]
+Hence, by [7, Proposition 2.1(2b)], given m1 , m2 ∈ Z such that m  1
+                                                                     =                        vρ,σ (P )             and
+gcd(m1 , m2 ) = 1, there exist R1 ∈ L and λ1 , λ2 ∈ K × such that
+                      ℓρ,σ (P ) = λ1 R1m1       and [ℓρ,σ (G0 ), ℓρ,σ (P )] = λ2 R1m2 .
+                                                                                          k/m1
+Let k be as in Corollary 2.4. Clearly m1 | k and we can assume that R1 = R0                      . Therefore
+                                                                  m k/m1
+                                   [ℓρ,σ (G0 ), ℓρ,σ (P )] = λ2 R0 2       .
+So, the result is true with s = m2 k/m1 and µ = λ2 .                                                                  
+
+Corollary 2.6. There exists a (ρ, σ)-homogeneous polynomial G1 such that
+                                     [G1 , R] = Ri      for some i ≥ 0,                                            (2.2)
+where R is as in Corollary 2.4.
+                         THE TWO-DIMENSIONAL JACOBIAN CONJECTURE                                    7
+
+
+Proof. Let G0 be as in Proposition 2.5. By Propositions 2.2 and 2.5, we have
+                                                                     µ s
+                        mRm−1 [ℓρ,σ (G0 ), R] = [ℓρ,σ (G0 ), Rm ] =   R ,
+                                                                    λP 0
+where s, λP and µ are as in Propositions 2.2 and 2.5. Let k be as in Corollary 2.4. Since m > 1
+                                k
+we can choose j ∈ N such that j m (m − 1) ≥ s. Set
+                                    G1 := λP µ−1 mℓρ,σ (G0 )R0t ,
+             k
+where t := j m (m − 1) − s. Clearly,
+                         λP t 2 m−1                              j k (m−1)
+      mRm−1 [G1 , R] =      R0 m R  [ℓρ,σ (G0 ), R] = mR0t+s = mR0 m       = mRj(m−1) .
+                          µ
+So, the equality in (2.2) is true with i = (j − 1)(m − 1).                                         
+Proposition 2.7. Let R be as in Corollary 2.4. The point (a, b) satisfies
+                                                        1
+                          vρ,σ (1, 0) ≤ vρ,σ (a, b) =     vρ,σ (P ) = vρ,σ (R).
+                                                        m
+Proof. Let t be maximum such that (t, 0) ∈ Supp(P ). By [16, Proposition 10.2.6] we know that t
+exists and that t > 0. By [16, Theorem 10.2.1] we also know that m | t, so that
+                               1            1
+                                 vρ,σ (P ) ≥ vρ,σ (t, 0) ≥ vρ,σ (1, 0),
+                               m            m
+as desired.                                                                                        
+   From Proposition 2.7 it follows that (a, b) can be not of the form (b + 1, b) with b > 0. In fact,
+the inequality
+                                    vρ,σ (1, 0) ≤ vρ,σ (b + 1, b)
+implies that b(ρ + σ) = vρ,σ (b, b) ≥ 0, which is impossible if b > 0, since ρ + σ < 0. On the other
+hand, we have the following result:
+Proposition 2.8. Let (a0 , b0 ) ∈ N0 × N0 . If (a0 , b0 ) = (k, 0) + j(2, 1) with k > 0 and j > 0,
+then there exist (1, −2)-homogeneous polynomials R and G such that
+                     st1,−2 (R) = (k, 0),    en1,−2 (R) = (a0 , b0 ),   [G, R] = R2
+and R is not a monomial.
+                                            1
+Proof. Take R := xk (1 + x2 y)j and G := − j+k xk−1 (1 + x2 y)j+1 .                                
+
+Remark 2.9. Let (a0 , b0 ) ∈ N0 × N0 with a0 > b0 > 0. If v1,−2 (a0 , b0 ) > 0, then we can apply
+Proposition 2.8 with j := b0 and k := a0 − 2b0 . So (a0 , b0 ) is a possible last lower corner (see
+Definition 3.17).
+
+
+                                   3        Admissible chains
+In this section we introduce the notion of admissible chain, which encodes some of the properties
+                      1
+of the lower part of m  H(P ) (see Remark 3.20). Here P is the first component of an (m, n)-pair
+(P, Q) in L. The main results are Theorem 3.6, which shows we can assume i = 2 in Corollary 2.6,
+and our main technical result, Proposition 3.12, which yields restrictions on the directions (ρ, σ)
+that can occur for an R as in Corollary 2.6 if you fix the starting point.
+   We begin by establishing some results that are useful for our purposes.
+   In the sequel (ρ, σ) ∈ V∩](0, −1), (1, −1)[.
+8                              JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+Remark 3.1. Assume l | l1 , B ∈ L(l1 ) \ L(l) and A ∈ L(l) \ {0}. Then AB ∈ L(l1 ) \ L(l) .
+Consequently, if AB ∈ L(l) , A ∈ L(l) \ {0} and B ∈ L(l1 ) , then B ∈ L(l) .
+Lemma 3.2. Let (ρ, σ) ∈ V∩](0, −1), (1, −1)[ and let R, G1 ∈ L(l) \ {0} be (ρ, σ)-homogeneous
+elements such that [R, G1 ] = Ri for an i ∈ N0 . Write R = xu/ρ r(z) and G1 = xv/ρ g(z), where
+z := x−σ/ρ y, r and g are univariate polynomials, u := vρ,σ (R) and v := vρ,σ (G1 ). The following
+facts hold:
+    (1) We have
+                                                 ρri = ug ′ r − vr′ g.                             (3.3)
+    (2) Let h be a linear factor of r and let s and t be the multiplicities of h in r and g respectively.
+        Write r = hs r̃ and g = ht g̃. Then
+                         ρhsi r̃i = ht+s−1 (ut − vs)h′ g̃r̃ + h(ug̃ ′ r̃ − vr̃′ g̃) .
+                                                                                   
+                                                                                                    (3.4)
+    (3) If i = 2, deg(g) ≤ deg(r) + 1 and # factors(r) > 1, then there exists a linear factor h
+        of r such that ut − vs = 0.
+Proof. (1) Write
+                                           ng                            nr
+                                           X                             X
+                                 g(z) =          bk z k   and r(z) =           ak z k .
+                                           k=0                           k=0
+By [7, Proposition 1.13],
+           iu = vρ,σ (Ri ) = vρ,σ ([R, G1 ]) = vρ,σ (R) + vρ,σ (G1 ) − ρ − σ = u + v − ρ − σ.
+Hence,
+                                                ak bl (u+v−ρ−σ)/ρ k+l−1
+                    [xu/ρ ak z k , xv/ρ bl z l ] =   x                z      (lu − kv)
+                                                  ρ
+                                                1
+                                               = xiu/ρ [ulbl z l−1 ak z k − vkak z k−1 bl z l ].
+                                                ρ
+Using this we obtain that
+                                              1 iu/ρ
+                               [R, G1 ] =       x    (ug ′ (z)r(z) − vr′ (z)g(z)),
+                                              ρ
+which implies that ρri = ug ′ r − vr′ g, as we want, because Ri = [R, G1 ].
+(2) Since
+                       r′ = shs−1 h′ r̃ + hs r̃′ and g ′ = tht−1 h′ g̃ + ht g̃ ′ ,
+by statement (1) we have
+                       ρhsi r̃i = ht+s−1 (ut − vs)h′ g̃r̃ + h(ug̃ ′ r̃ − vr̃′ g̃) ,
+                                                                                 
+
+as we want.
+(3) By statement (2), if i = 2 and ut − vs 6= 0 then t = s + 1. If this is true for all factors, then
+                              deg(g) ≥ deg(r) + # factors(r) > deg(r) + 1,
+a contradiction that concludes the proof.                                                              
+Remark 3.3. Let (ρ, σ) ∈ V∩](0, −1), (1, −1)[ and let (a, b) ∈ N0 × N0 with a > b > 0. If a ≤ 2b
+and vρ,σ (a, b) ≥ ρ, then
+                                        vρ,σ (a, b) > −ρ − σ.
+In fact,
+              (2ρ + σ)(a − b) = (ρ + σ)(a − 2b) + vρ,σ (a, b) ≥ (ρ + σ)(a − 2b) + ρ > 0
+                          THE TWO-DIMENSIONAL JACOBIAN CONJECTURE                                  9
+
+
+because ρ + σ < 0 and ρ > 0. So, 2ρ + σ > 0 since a > b, and hence,
+                            vρ,σ (a, b) ≥ ρ = 2ρ + σ − (ρ + σ) > −ρ − σ,
+as we want. So, the condition (n − 1)vρ,σ (a, b) + ρ + σ ≥ 0 in Theorem 3.4 is satisfied with n = 2.
+Theorem 3.4. Let (ρ, σ) ∈ V∩](0, −1), (1, −1)[, let i, n ∈ N0 with n ≥ 2 and let R, G1 ∈ L(l) be
+(ρ, σ)-homogeneous elements. If [R, G1 ] = Ri and (n − 1)vρ,σ (R) + ρ + σ ≥ 0, then there exists
+a (ρ, σ)-homogeneous element G2 ∈ L(l) such that [R, G2 ] = Rn . Moreover, if R, G1 ∈ L, then
+G2 ∈ L.
+Proof. If i ∈ {0, . . . , n}, then G2 := G1 Rn−i works. Else take G2 := RGi−n
+                                                                           1
+                                                                              (in the field 1 Q of
+               (l1 )                                                n
+quotients of L ), where l1 := lcm(ρ, l). Since clearly [R, G1 ] = R (the Jacobian operator can
+be extended in a natural way to 1 Q), we only must check that G2 ∈ L(l) . By Remark 3.1 with
+A = Ri−n and B = G2 , in order to carry out this task it suffices to prove that G2 ∈ L(l1 ) . Set
+u := vρ,σ (R) and v := vρ,σ (G1 ). By [7, Proposition 1.13] we have
+                                        u + v − (ρ + σ) = iu.                                  (3.5)
+Therefore
+                                   v = (i − n)u + ((n − 1)u + ρ + σ).                         (3.6)
+Since ρ + σ < 0 and, by hypothesis, (n − 1)u + ρ + σ ≥ 0, it follows that necessarily u > 0. Hence
+equality (3.6) implies that v > 0, because i − n > 0 and (n − 1)u + ρ + σ ≥ 0. Since R and
+G1 are (ρ, σ)-homogeneous there exist univariate polynomials r and g such that R = xu/ρ r(z)
+and G1 = xv/ρ g(z), where z := x−σ/ρ y. Let h be a linear factor of r and let s and t be the
+multiplicities of h in r and g respectively.
+   We claim that t ≥ s(i − n). Write r = hs r̃ and g = ht g̃. By Lemma 3.2(2) we know that
+                          ρhsi r̃i = ht+s−1 (ut − vs)h′ g̃r̃ + h(ug̃ ′ r̃ − vr̃′ g̃) .
+                                                                                    
+                                                                                              (3.7)
+If ut − vs = 0, then by equality (3.5),
+                      vs   s                               ρ + σ
+                  t=     =    (i − 1)u + ρ + σ = s i − 1 +           ≥ s(i − n),
+                      u    u                                   u
+because ρ+σu ≥ 1 − n by hypothesis, and the claim is true. On the other hand, if ut − vs 6= 0,
+then comparing the multiplicities of h in (3.7) we obtain that si = t + s − 1. But then
+                                     t = s(i − 1) + 1 ≥ s(i − n),
+which proves that the claim is also true in this case.
+  By the claim there exists f (z) ∈ K[z] such that g(z) = r(z)i−n f (z), which implies that
+                             G1      xv/ρ g(z)
+                     G2 =        =                = x(v−(i−n)u)/ρ f (z) ∈ L(l1 ) ,
+                            Ri−n   (xu/ρ r(z))i−n
+as desired.
+   Assume now that R, G1 ∈ L. It remains to check that v−1,0 (G2 ) ≤ 0. For this we compute
+               v − (i − n)u = (i − 1)u + ρ + σ − (i − n)u = (n − 1)u + ρ + σ ≥ 0,
+which yields v−1,0 (G2 ) = v−1,0 (xv−(i−n)u)/ρ f (z)) ≤ 0, since v−1,0 (z) < 0.                   
+Remark 3.5. Let (ρ, σ) ∈ V∩](0, −1), (1, −1)[ and let (a, b) ∈ N0 × N0 with a > b > 0. By
+Proposition 2.8, if a > 2b, then there exist (ρ, σ)-homogeneous polynomials R and G such that
+R is not a monomial and
+                               (a, b) = enρ,σ (R) and [G, R] = R2 .
+  Next we prove that the previous result holds under a different condition
+10                          JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+Theorem 3.6. Let (ρ, σ) ∈ V∩](0, −1), (1, −1)[ and let (a, b) ∈ N0 × N0 with a > b > 0. If
+vρ,σ (a, b) ≥ ρ and there exist (ρ, σ)-homogeneous elements R, G1 ∈ L(l) \ {0} such that
+                      (a, b) = enρ,σ (R)   and      [G1 , R] = Ri    for some i ≥ 0,
+then there exists a (ρ, σ)-homogeneous polynomial G such that [G, R] = R2 .
+Proof. By Remark 3.3 we have vρ,σ (a, b) + ρ + σ ≥ 0. So, the hypothesis of Theorem 3.4 are
+fulfilled for n = 2, and applying it we obtain a (ρ, σ)-homogeneous polynomial G such that
+[G, R] = R2 , as we want.                                                                
+Lemma 3.7. Let (ρ, σ) ∈ V∩](0, −1), (1, −1)[ and let R, G ∈ L(l) be (ρ, σ)-homogeneous ele-
+ments such that [G, R] = Ri with i ∈ N and vρ,σ (R) > 0. Then
+                             v0,1 (enρ,σ (G)) ≤ (i − 1)v0,1 (enρ,σ (R)) + 1.                      (3.8)
+Proof. By [7, Proposition 2.4], either enρ,σ (G) = (i − 1) enρ,σ (R) + (1, 1) or enρ,σ (G) ∼ enρ,σ (R).
+In the first case, clearly
+                             v0,1 (enρ,σ (G)) = (i − 1)v0,1 (enρ,σ (R)) + 1.
+Assume that enρ,σ (G) ∼ enρ,σ (R) and set u := vρ,σ (R) and v := vρ,σ (G). By [7, Proposition 1.13]
+we have v = u(i − 1) + ρ + σ. So
+                                  v                                ρ+σ
+                    enρ,σ (G) = enρ,σ (R) = (i − 1) enρ,σ (R) +           enρ,σ (R).
+                                  u                                  u
+Consequently
+                                                                ρ+σ
+                   v0,1 (enρ,σ (G)) = (i − 1)v0,1 (enρ,σ (R)) +     v0,1 (enρ,σ (R)).
+                                                                 u
+Since ρ+σ
+        u v0,1 (enρ,σ (R)) ≤ 0 because u > 0, ρ + σ < 0 and v0,1 (enρ,σ (R)) ≥ 0, the the inequal-
+ity (3.8) also holds in this case.                                                               
+Remark 3.8. Let f, f ∈ K[x] be polynomials. If f (x) = f (xn ), then λ is a root of f if and only
+if λn is a root of f . Moreover, if λ 6= 0, then the multiplicity mλ of λ in f is the same as the
+multiplicity mλn of λn in f .
+Remark 3.9. Let a, b, l ∈ N. Set
+                                                          
+                                                  bl a                                 ρ
+               d := gcd(a, bl),   (ρ, σ) :=         ,−         and   gap(ρ, l) :=             .
+                                                  d    d                            gcd(ρ, l)
+Note that, since gcd(a, b) = gcd(b, d), we have
+                                          bl           b           b
+                          gap(ρ, l) =             =           =           .                       (3.9)
+                                      gcd(bl, dl)   gcd(b, d)   gcd(a, b)
+Assume now that R ∈ L(l) is a (ρ, σ)-homogeneous element which is not a monomial, write
+                                                             X
+          R = xu/l y v f (z), where z := x−σ/ρ y and f (z) =   ai z i with a0 6= 0,
+and set (a/l, b) := enρ,σ (R) − stρ,σ (R). Then ai 6= 0 implies gap(ρ, l) | i. In fact, in that case we
+have (u/l, v) + i(−σ/ρ, 1) ∈ 1l Z × N0 , which implies −i σρ ∈ 1l Z. Hence ρ | il, and so gap(ρ, l) | i.
+
+Notation 3.10. Let (ρ, σ) ∈ V∩](0, −1), (1,−1)[ and let R ∈ L(l) be a (ρ, σ)-homogeneous
+element which is not a monomial. Let υl1 , ν1 := enρ,σ (R) − stρ,σ (R) and υl2 , ν2 := stρ,σ (R).
+                                                                                   
+
+In the sequel we set
+                                   ν1
+                 N1 = N1 (R) :=              and    N2 = N2 (R) := gcd(υ2 , ν2 ).
+                                gap(ρ, l)
+Note that by Remark 3.9 we have N1 = gcd(v1 , ν1 ).
+                          THE TWO-DIMENSIONAL JACOBIAN CONJECTURE                                   11
+
+
+Notation 3.11. For each l ∈ N and each (r/l, s) ∈ 1l Z × Z \ Z(1, 1), we let dir(r/l, s) denote
+the unique (ρ, σ) ∈ V>0 such that vρ,σ (r/l, s) = 0 (see the discussion below [7, Remark 3.1]).
+Proposition 3.12. Let (ρ, σ) ∈ V∩](0, −1), (1, −1)[ and let R, G ∈ L(l) be (ρ, σ)-homogeneous
+elements such that R is not a monomial and [G, R] = Ri , where i ∈ N, and let N1 and N2 be as
+in Notation 3.10. Write u := vρ,σ (R) and v := vρ,σ (G). Assume that there exists ℓ > 0 such that
+ℓu + ρ + σ > 0 (or, equivalently, that u > 0). Write R = xu/ρ r(z) and G = xv/ρ g(z), where r
+and g are univariate polynomials and z := x−σ/ρ y. Then one of the following three cases occurs:
+     (1) ρ | l and r = ξhj for some ξ ∈ K × , some linear polynomial h 6= z and some j ∈ N.
+     (2) There exist ϑ, t′ ∈ N such that
+                   ϑ ≤ N1 ,   0 < t′ < ℓϑ   and   (ρ, σ) = − dir (t′ stρ,σ (R) + ϑ(1, 1)) .
+         In this case there exists a linear factor of r(z) with multiplicity ϑ.
+     (3) There exist ϑ, t′ ∈ N such that
+                   ϑ | N2 ,   0 < t′ < ℓϑ   and   (ρ, σ) = − dir (t′ stρ,σ (R) + ϑ(1, 1)) .
+       In this case ν2 > 0.
+Moreover if l = 1 and item (1) occurs, then v1,−2 (enρ,σ (R)) > 0.
+Proof. First note that
+                                         stρ,σ (R) ∈
+                                                   / N0 (1, 1),                                (3.10)
+since stρ,σ (R) = (n, n) implies 0 < u = vρ,σ (stρ,σ (R)) = (ρ + σ)n ≤ 0, which is impossible. For
+each linear factor h of r, we let s and t denote the multiplicities of h in r and g, respectively. By
+equality (3.4) we know that
+                                   t = s(i − 1) + 1 or ut = vs,                                (3.11)
+while by Lemma 3.7 we know that
+                                     deg(g) ≤ (i − 1) deg(r) + 1.
+Therefore, if for all linear factors of r the first equality in (3.11) is satisfied, then there can be
+only one linear factor h in r. Since h is not a monomial (since R is not), this implies that
+                                                                   1
+                           (u/ρ, 0), (u/ρ − σ/ρ, 1) ∈ Supp(R) ⊆ Z × N0 ,
+                                                                   l
+which yields ρ | l, since gcd(ρ, σ) = 1. So, we are in case (1).
+   Else there exists a factor h = z − λ for which ut = vs. Now we will prove that if λ 6= 0, then
+we are in case (2). We set t′ := s(i − 1) − t. Since [G, R] = Ri , by [7, Proposition 1.13] we have
+                                        v = u(i − 1) + ρ + σ.                                  (3.12)
+So
+                                                v     ρ+σ             ρ+σ
+                          t′ = s(i − 1) − t = s   −s        − t = −s      .              (3.13)
+                                                u        u             u
+Let ℓ be as in the statement. Since ℓ > − ρ+σ   u > 0 and s > 0, from equality (3.13) we obtain
+that 0 < t′ < ℓs. Moreover,
+                                  t′ stρ,σ (R) + s(1, 1) ∈
+                                                         / N0 (1, 1),                    (3.14)
+since otherwise stρ,σ (R) = (n, n) for some n ∈ N, and so
+                                 (ρ + σ)(ℓn + 1) = ℓu + ρ + σ > 0,
+which is impossible because ρ + σ < 0. Combining (3.14) with the fact that, by equality (3.12),
+                                                                   ′                   
+                                      s(i − 1) − t                 t
+         0 = u(i − 1) − v + ρ + σ = u              + ρ + σ = vρ,σ     stρ,σ (R) + (1, 1) ,
+                                           s                       s
+12                           JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+we conclude that
+                                  (ρ, σ) = − dir (t′ stρ,σ (R) + s(1, 1)) .
+It remains to check that s ≤ N1 . Remember that (υ2 , ν2 ) := stρ,σ (R) and let r1 be an univariate
+polynomial such that r(z) = z ν2 r1 (z). By Remark 3.9, since R ∈ L(l) and
+
+            R = xu/ρ r(z) = xu/ρ z ν2 r1 (z) = xυ2 +σν2 /ρ x−ν2 σ/ρ y ν2 r1 (z) = xυ2 y ν2 r1 (z),
+there exists an univariate polynomial r̂1 such that r1 (z) = r̂1 (z gap(ρ,l) ). It follows that
+                                                                       deg(r1 )       ν1
+         s = multr1 (z) (λ) = multr̂1 (z) (λgap(ρ,l) ) ≤ deg(r̂1 ) =             =           = N1 ,
+                                                                       gap(ρ, l)   gap(ρ, l)
+where the second equality holds by Remark 3.8. Setting in this case ϑ := s, we are in case (2).
+  Now assume that there exists a factor h = z − λ for which ut = vs and that λ = 0. Since
+equality (3.12) is also true in this case, from the fact that ρ + σ < 0, it follows that
+                                    v = (i − 1)u + ρ + σ < (i − 1)u.                                  (3.15)
+We assert that stρ,σ (G) ∼ stρ,σ (R). In fact, otherwise by [7, Proposition 2.4(1)],
+                                  stρ,σ (G) = (i − 1) stρ,σ (R) + (1, 1),
+and so
+                   t = v0,1 (stρ,σ (G)) = (i − 1)v0,1 (stρ,σ (R)) + 1 = s(i − 1) + 1,
+which, combined with the fact that u > 0 by hypothesis, implies that
+                                        ut             u
+                                  v=       = u(i − 1) + > u(i − 1),
+                                        s              s
+contradicting (3.15). Write stρ,σ (G) = µϑ1 stρ,σ (R) for some coprime
+                                                                     natural numbers µ1 and ϑ.
+Recall from Notation 3.10 that N2 = gcd(υ2 , ν2 ), where υl2 , ν2 = stρ,σ (R). It is clear that
+ϑ | N2 . Set t′ := ϑ(i − 1) − µ1 , and from v = µϑ1 u and (3.12) we obtain t′ = − ρ+σ     u ϑ. Since
+ℓ > − ρ+σ
+        u  >  0  and ϑ >  0, we have  0 <  t ′
+                                               < ℓϑ.  Moreover, again  from   v =  µ1
+                                                                                    ϑ u and  (3.12) it
+follows that
+                                                                     ′                    
+                                      ϑ(i − 1) − µ1                   t
+        0 = u(i − 1) − v + ρ + σ = u                 + ρ + σ = vρ,σ      stρ,σ (R) + (1, 1) ,
+                                             ϑ                        ϑ
+which implies that (ρ, σ) = − dir (t′ stρ,σ (R) + ϑ(1, 1)), since t′ stρ,σ (R)+ ϑ(1, 1) ∈
+                                                                                        / N0 (1, 1). This
+shows that we are in the case (3). Note that in this case ν2 = s > 0.
+   Finally if l = 1 and statement (1) is satisfied, then enρ,σ (R) = (u − jσ, j), and so
+                         v1,−2 (enρ,σ (R)) = u − jσ − 2j = u − j(σ + 2) > 0,
+since σ ≤ −2.                                                                                             
+
+Remark 3.13. Note that the from the equality − dir (t′ stρ,σ (R) + ϑ(1, 1)) in items (2) and (3) of
+                                           ρ+σ
+Proposition 3.12 it follows that t′ = −ϑ vρ,σ (R) .
+
+Example 3.14. A straightforward computation shows that for each i, j, u ∈ N and each λ ∈ K × ,
+the polynomials R := xu (x−σ y−λ)j and G := ̟−1 xv (x−σ y−λ)j(i−1)+1 , where v := u(i−1)+σ+1
+and ̟ := j((j − 1)u(i − 1) − j(σ + 1)) > 0, are in case (1) of Proposition 3.12. In Remark 3.28
+we will give a family of examples which are all in case (2). Finally, an example in case (3), with
+i = 2, is given by R := 9x14 y 8 (1 + x8 y 5 ) and G := −x7 y 4 (1 + x8 y 5 )2 .
+                               THE TWO-DIMENSIONAL JACOBIAN CONJECTURE                                13
+
+
+3.1      Admissible chains
+An (m, n)-pair (P, Q) in L determines a chain of homogeneous polynomials Rj together with a
+                                         1
+chain of segments (the lower part of m     H(P ), where H(P ) is the Newton polygon of P ). The
+last point of this chain is called the last lower corner of (P, Q) (see Definition 3.21). Motivated
+by these facts, in this section we introduce the notion of admissible chain, consisting basically of
+a family of homogeneous polynomials and segments as above. This notion does not depend on
+the existence of a counterexample. The final point of a such chain is named a possible last lower
+corner (see Definition 3.17).
+   Suppose that the Jacobian conjecture is false and let
+       (
+         ∞                              if the Jacobian conjecture is true,
+  B :=                               
+         min gcd(v1,1 (P ), v1,1 (Q)) if JC is false, where (P, Q) runs on the counterexamples.
+The Jacobian conjecture is false if and only if the set of last lower corner’s is not empty.
+  In this section we prove that some points in N0 × N0 are possible last lower corner’s and that
+some other points are not.
+Definition 3.15. An admissible chain of length k ∈ N0 is a triple of families
+                                                                                  
+                   C = (Cj )j∈{0,...,k} , (Rj )j∈{1,...,k} , (ρj , σj )j∈{1,...,k} ,
+with Cj ∈ N0 × N0 , Rj ∈ L and (ρj , σj ) ∈ V∩](0, −1), (1, −1)[, such that
+      (1) C0 = (l, 0) for some l ∈ N,
+      (2) (ρj , σj ) > (ρj−1 , σj−1 ), for j ∈ {2, . . . , k},
+and the following facts hold for j ∈ {1, . . . , k}:
+      (3) Rj is (ρj , σj )-homogeneous and is not a monomial,
+      (4) Cj−1 = stρj ,σj (Rj ),
+      (5) Cj = enρj ,σj (Rj ),
+      (6) v1,−1 (Cj ) > 0,
+      (7) vρj ,σj (Cj ) ≥ ρj ,
+                                                                                            i
+      (8) there exist a (ρj , σj )-homogeneous Gj ∈ L and ij ∈ N such that [Gj , Rj ] = Rjj .
+The point Ck is called the end point of C and denoted Cfin (C) or simply Cfin .
+Remark 3.16. For 0 ≤ j ≤ k write (aj , bj ) := Cj . Since (ρj , σj ) ∈](0, −1), (1, −1)[, from items (4)
+and (5) it follows that (ai )0≤i≤k , (bi )0≤i≤k and (ai − bi )0≤i≤k are increasing sequences. So, by
+item (1), we conclude that aj , bj , aj − bj ∈ N for all 1 ≤ j ≤ k.
+Definition 3.17. A point (a, b) ∈ N0 × N0 is called a possible last lower corner if there exists
+an admissible chain such that Cfin = (a, b).
+Remark 3.18. Note that for every t ∈ N, the point (t, 0) is a possible last lower corner, corre-
+sponding to a chain of length 0.
+Remark 3.19. Let (a, b) ∈ N0 × N0 with a > b > 0. If a − 2b > 0, then by Remark 2.9 there
+exist k > 0 and j > 0 such that (a, b) = (k, 0) + j(2, 1), which, by Proposition 2.8, implies that
+there exist a (1, −2)-homogeneous polynomials R such that
+                                                               
+                                     (k, 0), (a, b) , R, (1, −2) ,
+is an admissible chain of length 1. So, (a, b) is a possible last lower corner.
+14                             JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+Remark 3.20. Let (P, Q) be an (m, n)-pair in L. By [16, Proposition 10.2.6] there exists
+(t, 0) ∈ Supp(P ) with t ∈ N. Assume that t is maximum satisfying this condition. If we run
+counterclockwise along several edges of the Newton polygon H(P ) of P , beginning in (t, 0) and
+stopping at a corner below the main diagonal of the plane, and we apply the homothety of center
+             1
+0 and ratio m   to each edge and each corner, then we obtain the families of edges and vertices of
+an admissible chain. In fact, by Proposition 2.2 each corner of H(P ) belongs to mN0 × mN0 ;
+by [7, Definition 4.3] and Proposition 2.1 the directions of the edges belong to ](0, −1), (1, −1)[;
+by [16, Proposition 10.2.6] condition (1) of Definition 3.15 is fulfilled; conditions (2) and (6)
+are clear; the existence of Rj ’s and Gj ’s satisfying conditions (3), (4), (5) and (8) follows from
+Proposition 2.2, Remark 2.3 and Corollary 2.6; and condition (7) holds by Proposition 2.7.
+Definition 3.21. A point (a, b) ∈ N0 × N0 is called a last lower corner if there exists an
+admissible chain, obtained as in Remark 3.20 from a standard (m, n)-pair (P, Q) in L, such that
+Cfin = (a, b) and m(a, b) is the last corner of H(P ) below the main diagonal of the plane. In this
+case we also will say that (a, b) is the last lower corner of (P, Q).
+Remark 3.22. Let (P, Q) be a standard (m, n)-pair in L and let (ρ, σ) ∈ ](0, −1), (1, −1)[∩ Dir(P )
+                    1
+such that (a, b) := m  enρ,σ (P ) satisfies a > b > 0. Then, by Remark 3.20 we know that (a, b) is
+a possible last lower corner.
+Remark 3.23. Let (P, Q) be a standard (m, n)-pair in L and let (A0 , A′0 , (ρ, σ)) be the starting
+triple of (P, Q) (see [7, Definition 6.2]). By [7, Remark 6.3] we know that A′0 is a last lower
+corner.
+Remark 3.24. Let (ρ, σ) ∈ ](0, −1), (1, −1)[ be a direction and let R and G be (ρ, σ)-homoge-
+neous polynomials such that R is not a monomial and [G, R] = Ri , with i ∈ N. Arguing as in
+Remark 3.3 we see that if vρ,σ (R) ≥ ρ and v1,−2 (enρ,σ (R)) ≤ 0, then
+                                            vρ,σ (R) + ρ + σ > 0.
+Since, moreover, it is clear that vρ,σ (R) > 0 and v1,−1 (stρ,σ (R)) 6= 0, the hypothesis of Proposi-
+tion 3.12 are fulfilled with ℓ = 1.
+Lemma 3.25. Let (ρ, σ) ∈ ](0, −1), (1, −1)[ be a direction and let R and G be (ρ, σ)-homoge-
+neous polynomials such that R is not a monomial and [G, R] = Ri , where i ∈ N. Assume that
+vρ,σ (R) ≥ ρ and v1,−2 (enρ,σ (R)) ≤ 0, and write (α, β) := stρ,σ (R) and (α′ , β ′ ) := enρ,σ (R). If
+β < α and β ≤ (α − β − 1)2 , then β ′ < α′ and β ′ ≤ (α′ − β ′ − 1)2 .
+Proof. First note that α − β < α′ − β ′ and β ′ < α′ , because (ρ, σ) ∈ ](0, −1), (1, −1)[ and β < α.
+By Remark 3.24 the hypothesis of Proposition 3.12 are fulfilled with ℓ = 1. We will use freely
+its notations. Since v1,−2 (α′ , β ′ ) ≤ 0, necessarily statements (2) or (3) of that proposition hold.
+In both cases we will use that,
+                    2(α − β)(α − β − 1) = 2(α − β − 1)2 + 2(α − β − 1) ≥ 2β > β,                (3.16)
+since β < α and β ≤ (α − β − 1)2 .
+     In the first case there exist t′ , ϑ ∈ N and ζ ∈ Q>0 such that
+                                                                  ϑ       
+                                 (α′ , β ′ ) = (α, β) + ζ (α, β) + ′ (1, 1) .                   (3.17)
+                                                                  t
+Moreover, 0 < t′ < ϑ ≤ N1 , where N1 := gcd(α′ − α, β ′ − β), and so
+                     ϑ
+                        ≤ N1 | v1,−1 (α′ − α, β ′ − β) = ζ(α − β) ≤ (α − β)ζ(α − β),
+                     t′
+                         THE TWO-DIMENSIONAL JACOBIAN CONJECTURE                                    15
+
+
+which combined with (3.16) yields
+                               ϑ
+                            β+     ≤ (α − β)(ζ(α − β) + 2(α − β − 1)).
+                               t′
+Multiplying this inequality by ζ and adding the inequality β ≤ (α − β − 1)2 , we obtain that
+                                         
+                                        ϑ
+                           β + ζ β + ′ ≤ (ζ(α − β) + α − β − 1)2 .
+                                        t
+Combining this with (3.17) we obtain β ′ ≤ (α′ − β ′ − 1)2 , as desired.
+  In the second case there exist t′ , ϑ ∈ N and ζ ∈ Q>0 such that
+                                                             ϑ       
+                            (α′ , β ′ ) = (α, β) + ζ (α, β) + ′ (1, 1) ,
+                                                             t
+Moreover ζ(α − β) = α′ − β ′ + β − α ∈ N and 0 < t′ < ϑ | N2 , where N2 := gcd(α, β). So
+                          ϑ
+                             ≤ ϑ ≤ N2 ≤ α − β ≤ (α − β)ζ(α − β),
+                          t′
+which combined with (3.16) yields
+                             ϑ
+                            β+  ≤ (α − β)(ζ(α − β) + 2(α − β − 1)).
+                             t′
+Hence, arguing as above we obtain that β ′ ≤ (α′ − β ′ − 1)2 , concluding the proof.                
+Proposition 3.26. If A := (a, b) is a possible last lower corner, then b < a and b ≤ (a − b − 1)2.
+Proof. If A = Cfin (C) for an admissible chain C of length 0, then A = (t, 0) for some t ∈ N and
+the result is obviously true. Assume that it is true for end points of admissible chains of length k
+and that A = Cfin (C) for an admissible chain C of length k + 1. If v1,−2 (a, b) > 0, then b < a − b,
+so that b ≤ a− b − 1, and hence b ≤ (a− b − 1)2 . On the other hand, if v1,−2 (a, b) ≤ 0, then by the
+inductive hypothesis and Lemma 3.25, we also have b < a and b ≤ (a − b − 1)2 , as desired. 
+Corollary 3.27. For a fixed g > 0 there are only finitely many points A ∈ N0 × N0 such that A
+is a possible last lower corner with v1,−1 (A) = g.
+   In the following remark we show that if (a, b) ∈ N0 ×N0 satisfies 0 < b < a and b = (a−b−1)2 ,
+then (a, b) is a possible last lower corner.
+Remark 3.28. Let n ∈ N. The following example attains the equality in the second bound in
+Proposition 3.26. Let R = x(w + 1)n , where w = xn+1 y n . The triple
+                           ((1, 0), (n2 + n + 1, n2 )), (R), (n, −n − 1)
+                                                                        
+
+is an admissible chain of length 1. In fact it is easy to check that (n, −n − 1) ∈ ](0, −1), (1, −1)[
+and that conditions (1) and (3)–(7) of Definition 3.15 are fulfilled, condition (2) is empty, and
+                                                  −1 2
+condition (8) holds since the polynomial G := n+1    x y(w + 1)n−1 (w + n + 1) satisfies [G, R] = R2 .
+Hence (a, b) := (n + n + 1, n ) is a possible last lower corner that satisfies b = (a − b − 1)2 . This
+                   2          2
+
+example also shows that for any fixed λ < 1, there is (a, b), which is a possible last lower corner
+that satisfies b > λa.
+   In the proof of the following proposition we will use the concept of cross product introduced
+below [7, Notation 1.6] and we will use the property (3.1) established at the beginning of Section 3
+of [7].
+Proposition 3.29. For each ℘, n′ ∈ N with n′ ≥ 2, the point ℘(n′ , n′ − 1) is not a possible last
+lower corner.
+16                            JORGE A. GUCCIONE AND JUAN J. GUCCIONE
+
+
+Proof. Assume by contradiction that there exists an admissible chain
+                                                                                           
+                             (Cj )j∈{0,...,k} , (Rj )j∈{1,...,k} , (ρj , σj )j∈{1,...,k}
+with Ck = ℘(n′ , n′ −1) and let Gk be as in Definition 3.15(8). By the conditions of that definition,
+the fact that v1,−2 (Ck ) = ℘n′ − 2℘(n′ − 1) < 0 and Remark 3.24, the (ρk , σk )-homogeneous
+polynomials Rk and Gk satisfy the hypothesis of Proposition 3.12 with ℓ = 1. Moreover ρk > 1,
+because otherwise vρk ,σk (Rk ) = ℘(n′ + (n′ − 1)σk ) ≤ 0. Hence case (1) of that proposition can
+not occur. Now set (ρ̃, σ̃) := (n′ − 1, −n′ ) and write (ak−1 , bk−1 ) := Ck−1 . From
+                          1
+                     0 < vρk ,σk (Ck ) = ρk n′ + σk (n′ − 1) = (ρ̃, σ̃) × (ρk , σk ),
+                          ℘
+we obtain that (ρ̃, σ̃) < (ρk , σk ) < (−ρ̃, −σ̃). Hence, by [7, Remark 1.8],
+                    vρ̃,σ̃ (ak−1 , bk−1 ) = vρ̃,σ̃ (stρk ,σk (Rk )) > vρ̃,σ̃ (enρk ,σk (R)) = 0.
+Consequently, we have
+                                     N1 , N2 ≤ vρ̃,σ̃ (ak−1 , bk−1 ),                             (3.18)
+where N1 and N2 are as in Notation 3.10. In fact, N2 divides every integer combination of ak−1
+and bk−1 , and, in particular, it divides vρ̃,σ̃ (ak−1 , bk−1 ) > 0. Similarly, N1 divides every integer
+combination of ℘n′ − ak−1 and ℘(n′ − 1) − bk−1 , and, in particular, it divides
+                     vρ̃,σ̃ (ak−1 − ℘n′ , bk−1 − ℘(n′ − 1)) = vρ̃,σ̃ (ak−1 , bk−1 ) > 0.
+Suppose that we are in case (2) of Proposition 3.12. So there exist ϑ, t′ ∈ N and λ ∈ Q such that
+                                                                 ϑ
+                    0 < t′ < ϑ ≤ N 1      and (ak−1 , bk−1 ) +      (1, 1) = λ(−σk , ρk ).             (3.19)
+                                                                 t′
+Moreover, λ > 0 since 0 < v1,−1 (ak−1 , bk−1 ) = −λ(ρk + σk ) and ρk + σk < 0. On one hand,
+by (3.18) and the inequalities in (3.19), we have
+                               
+                        ϑ                                  ϑ
+vρ̃,σ̃ (ak−1 , bk−1 ) + ′ (1, 1) = vρ̃,σ̃ (ak−1 , bk−1 ) + ′ (n′ − 1 − n′ ) ≥ vρ̃,σ̃ (ak−1 , bk−1 ) − N1 ≥ 0,
+                       t                                  t
+and, on the other hand, by equality in (3.19) and the fact that λ > 0, we have
+                                        
+                                 ϑ
+         vρ̃,σ̃ (ak−1 , bk−1 ) + ′ (1, 1) = vρ̃,σ̃ (λ(−σk , ρk )) = λvρk ,σk (σ̃, −ρ̃)
+                                t
+                                               λ                                λ
+                                           = − vρk ,σk (℘(n′ , n′ − 1)) = − vρk ,σk (Ck ) < 0,
+                                               ℘                                ℘
+which yields a contradiction. If we are in case (3) of Proposition 3.12, then replacing N1 by N2 ,
+the same argument works, finishing the proof.                                                  
+Remark 3.30. Propositions 3.26 and 3.29 give nice conditions for possible last lower corners, which
+are easy to understand. These conditions follow directly from Proposition 3.12. Consequently,
+when we write an algorithm in order to compute the possible last lower corners, it suffices
+to consider the conditions of Proposition 3.12, since then the conditions of Propositions 3.26
+and 3.29 are automatically satisfied.
+Remark 3.31. Let A0 be as in the introduction. Clearly Proposition 3.29 shows that (2, 1),
+(3, 2), (6, 3) and (8, 4) are not possible last lower corner’s. Now we state without a formal proof,
+that for A0 = (10, 25) we necessarily have A′0 = (2, 1) and for A0 = (14, 35) we necessarily
+have A′0 ∈ {(6, 3), (3, 2)}. This allows to discard directly these corners A0 of the list found
+in [10, Theorem 2.24], which is included in those given in [7, Remark 7.9]. The corners found in
+the two mentioned lists were also given without any proof, and were found by a computer search,
+but the algorithm was not given explicitly. The same algorithm justifies the assertions above.
+                            THE TWO-DIMENSIONAL JACOBIAN CONJECTURE                                           17
+
+
+Moreover, a straightforward argument shows that if the corner (8, 32) realizes an A0 , then we
+would obtain, after a transformation via an automorphism, the corner A′0 = (8, 4), which also is
+impossible. So our results permit to discard three of the corners of [10, Theorem 2.24]. We also
+can discard two of the infinite families of [10, Theorem 2.25]. In fact, the families (5k + 3, 3k + 2)
+and (4k + 3, k + 1), corresponding to A0 = (7, 21), come from A′0 = (2, 1), which is impossible.
+This is the first time since Heitmann found the corners, that one of the infinite families can be
+discarded.
+   Furthermore, we can also discard some of the corners found in [7, Remark 7.9], which were
+not found by Heitmann. Let B0 and B1 be as in that remark. The cases with B0 = (6, 15) and
+B1 = (6, 18 + 6k) where 18 + 6k is not a multiple of 30, would lead to an A′0 = (6, 3) and can be
+discarded. Similarly B0 = (8, 28) and B1 = (8, 40) lead to A′0 = (8, 4), which is impossible; and
+B0 = (9, 21) and B1 = (9, 27) lead to an A′0 = (9, 6), which also is impossible.
+
+Outlook A more computational paper is in preparation, where we will make explicit the al-
+gorithms that yields the corners of both lists (in fact the list of Heitmann is contained in the
+list of [7]), and we will explain the construction of the infinite families. We also will give an
+algorithm to determine all possible last lower corner with v1,−1 (A′0 ) < N for some fixed N .
+
+                                               References
+ [1] S. S. Abhyankar, Lectures on expansion techniques in algebraic geometry, Tata Institute of Fundamental
+     Research Lectures on Mathematics and Physics, vol. 57, Tata Institute of Fundamental Research, Bombay,
+     1977. Notes by Balwant Singh. MR542446 (80m:14016)
+ [2]         , Some thoughts on the Jacobian Conjecture, Part II, Journal of Algebra 319 (2008), 1154-1248.
+ [3]         , Some thoughts on the Jacobian Conjecture. III., Journal of Algebra 320 (2008), 2720-2826.
+ [4] Pierrette Cassou-Noguès, Newton trees at infinity of algebraic curves, Affine algebraic geometry, CRM Proc.
+     Lecture Notes, vol. 54, Amer. Math. Soc., Providence, RI, 2011, pp. 1–19. MR2768630 (2012i:14034)
+ [5] Jacques Dixmier, Sur les algèbres de Weyl, Bull. Soc. Math. France 96 (1968), 209–242 (French). MR0242897
+     (39 #4224)
+ [6] David Eisenbud, Commutative algebra, Graduate Texts in Mathematics, vol. 150, Springer-Verlag, New York,
+     1995. With a view toward algebraic geometry. MR1322960 (97a:13001)
+ [7] Christian Valqui, Jorge A. Guccione, and Juan J. Guccione, On the shape of possible counterexamples to the
+     Jacobian Conjecture, J. Algebra 471 (2017), 13–74, DOI 10.1016/j.jalgebra.2016.08.039. MR3569178
+ [8] Jorge Alberto Guccione, Juan José Guccione, and Christian Valqui, A differential equation for polynomials
+     related to the Jacobian conjecture, PRO-Mathematica 27 (2013), 83–98.
+ [9] Jorge A. Guccione, Juan J. Guccione, and Christian Valqui, The Dixmier conjecture and the shape of possible
+     counterexamples, J. Algebra 399 (2014), 581–633, DOI 10.1016/j.jalgebra.2013.10.011. MR3144604
+[10] R Heitmann, On the Jacobian conjecture, Journal of Pure and Applied Algebra 64 (1990), 35–72. MR1055020
+     (91c :14018)
+[11] A Joseph, The Weyl algebra – semisimple and nilpotent elements, American Journal of Mathematics 97
+     (1975), 597–615. MR0379615 (52 :520)
+[12] Heinrich W. E. Jung, Über ganze birationale Transformationen der Ebene, J. Reine Angew. Math. 184
+     (1942), 161–174 (German). MR0008915 (5,74f)
+[13] Ott-Heinrich Keller, Ganze Cremona-Transformationen, Monatsh. Math. Phys. 47 (1939), no. 1, 299–306,
+     DOI 10.1007/BF01695502 (German). MR1550818
+[14] Leonid Makar-Limanov, On the Newton polygon of a Jacobian mate. In Automorphisms in Birational and
+     Affine Geometry. Springer Proceedings in Mathematics & Statistics VIII (2014), 469-476.
+[15] T. T. Moh, On the Jacobian conjecture and the configurations of roots, J. Reine Angew. Math. 340 (1983),
+     140–212. MR691964 (84m:14018)
+[16] Arno van den Essen, Polynomial automorphisms and the Jacobian conjecture, Progress in Mathematics,
+     vol. 190, Birkhäuser Verlag, Basel, 2000. MR1790619 (2001j:14082)
+

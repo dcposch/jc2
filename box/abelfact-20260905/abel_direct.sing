@@ -1,0 +1,33 @@
+// DIRECT (F3') chart over F_p, dehomogenised at b=1:
+//   Phi*Lam - Gee = 0,  Lam = 2x Phi' - 3 Phi + 3 K M/(2y^2) - B x
+//   Phi = -1/4 - B x + eta x^2 + f(3) x^3 + ... + f(2t+1) x^(2t+1) + om x^(2t+2)
+//   K = x^2 C - y,  M = x^2 C,  C monic deg t-1
+int q = 2*TT+1;  int N = 4*TT+4;  int i,j,n;
+int target = (3*(TT+1)) % PP;  int W = -1;
+for(i=1;i<PP;i++){ if(((i*i) % PP)==target){W=i; break;} }
+if(W<0){ "NO SQRT"; quit; }
+if(FIB==1){ W = PP-W; }
+ring R = (PP),(x,B,eta,f(3..(2*TT+1)),c(0..(TT-2)),zz),dp;
+number w = number(W);
+number y  = (w + 3*(TT+1))/number(6*q);
+number iy = 1/y;
+number dd = w/number(3);                       // d,  3 d^2 = t+1
+number om = (3*(2*dd-1))*iy^2/number(4*(4*TT+1));
+poly C = x^(TT-1); for(i=0;i<=TT-2;i++){ C = C + c(i)*x^i; }
+poly K = x^2*C - y;  poly M = x^2*C;
+poly Phi = number(-1)/number(4) - B*x + eta*x^2 + om*x^(2*TT+2);
+for(i=3;i<=2*TT+1;i++){ Phi = Phi + f(i)*x^i; }
+poly Lam = 2*x*diff(Phi,x) - 3*Phi + (number(3)/2)*iy^2*K*M - B*x;
+poly Gee = (number(3)/16)*iy^4*K^3*(K+2*y) - (number(3)/4)*iy^2*B*x*K^2
+           - (number(1)/2)*iy*eta*x^2*K - B*eta*x^3;
+poly E = Phi*Lam - Gee;
+matrix em = coeffs(E,x);
+ideal I; int cnt=0;
+for(n=0;n<=N;n++){ if(n+1<=nrows(em)){ if(em[n+1,1]!=0){ cnt++; I[cnt]=em[n+1,1]; } } }
+"t="+string(TT)+" p="+string(PP)+" fib="+string(FIB)+"  eqs="+string(cnt)+"  vars="+string(3*TT);
+int tm=timer; ideal g2=std(I);
+"  RAW: dim="+string(dim(g2))+"  size="+string(size(g2))+"  ms="+string(timer-tm);
+ideal J=I; J[cnt+1]=1-zz*B*eta;
+tm=timer; ideal g=std(J);
+"  RABINOWITSCH(B*eta): unit="+string(size(g)==1 && g[1]==1)+"  ms="+string(timer-tm);
+quit;

@@ -1,0 +1,120 @@
+{
+  "schema": "jc2-static-source-pins/v1",
+  "task": "caprun-closed-scope-implementation-astra-20260911",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-11T07:31:32Z",
+  "reserve_utc": "2026-09-11T07:55:00Z",
+  "hard_utc": "2026-09-11T08:00:00Z",
+  "input_census": {
+    "initial_sources": 3,
+    "explicit_fourth_source_delta": 1,
+    "diagnosis_and_metadata": 3,
+    "total_local": 7
+  },
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/ops/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "charge": "INITIAL_SOURCE",
+      "read_mode": "FRESH_WHOLE after matching prehash; initial clipped displays recovered by bounded text reads"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/dispatch.py",
+      "sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24",
+      "charge": "INITIAL_SOURCE",
+      "read_mode": "FRESH_WHOLE after matching prehash; initial clipped displays recovered by bounded text reads"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/probe.py",
+      "sha256": "5f1211e1a77b5ce2bb4cc496deabc533e3c41cdea88ea750149dac886cc09c69",
+      "charge": "INITIAL_SOURCE",
+      "read_mode": "FRESH_WHOLE after matching prehash; initial clipped displays recovered by bounded text reads"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/mutate.py",
+      "sha256": "12eac7bbe5566ac0372c51b36617409e0501595024d948d6086a767f90d84eec",
+      "charge": "EXPLICIT_FOURTH_SOURCE_DELTA",
+      "read_mode": "FRESH_WHOLE after matching prehash; initial clipped displays recovered by bounded text reads"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/caprun-false-quiet-diagnosis-astra-20260911.md",
+      "sha256": "dee6b9472b5e2151963569342d2d9ad905524894e63f3a91c537d2589fbf69c5",
+      "charge": "TERMINAL_DIAGNOSIS",
+      "read_mode": "FRESH_WHOLE after matching prehash; initial clipped displays recovered by bounded text reads"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/caprun-false-quiet-diagnosis-astra-20260911.md.artifact.json",
+      "sha256": "0e2e5bfe478eab0954a5d3ef005360c79b64d650070c33ad1e8d411a0ad4c72f",
+      "charge": "TERMINAL_METADATA",
+      "read_mode": "FRESH_WHOLE after matching prehash; initial clipped displays recovered by bounded text reads"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-false-quiet-diagnosis-astra-20260911/custody.json",
+      "sha256": "c818c6f19bc508884e5183c818ddc88abbc7b027358dbcc92475c8d2398c894c",
+      "charge": "TERMINAL_METADATA",
+      "read_mode": "FRESH_WHOLE after matching prehash; initial clipped displays recovered by bounded text reads"
+    }
+  ],
+  "owned_source_contract_diff": [
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/run_capped.py",
+      "sha256": "d78d45ef671c706706a12f4179abbc777684da13673263e54461c74351d453a3",
+      "read_mode": "OWN_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/dispatch.py",
+      "sha256": "52b3d916f4fc3941bb98c8b4f7698ab940680d09ee4e065de1f167857e3fd436",
+      "read_mode": "OWN_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/probe.py",
+      "sha256": "e4ca3c4bec335373d8fff34da8d0dac697bd89065c1c6805befa6a437e6dc91e",
+      "read_mode": "OWN_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/mutate.py",
+      "sha256": "b8c1cfefd98a2c771fbc64ecdaac2603eafb91893b158bb00dd34ea6d4916b4d",
+      "read_mode": "OWN_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/run_capped.diff",
+      "sha256": "0e62e3fcaa0f3a299c2618206d33a38a98bdb9029f6f2e73af67f56f2efab1f8",
+      "read_mode": "OWN_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/dispatch.diff",
+      "sha256": "4ff4bfc5a6d110c14dc27c2e69ac80fe936d7090724c475d71bd699b03ccd1e2",
+      "read_mode": "OWN_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/probe.diff",
+      "sha256": "cfc4f8de83fa917bb56bfbac5ca883952aa7a685959ea5c13c96242b68b513aa",
+      "read_mode": "OWN_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/mutate.diff",
+      "sha256": "1b26121339970b90e23830e61cd56a49bd2a1ffb72bfcf15d6553989998397b8",
+      "read_mode": "OWN_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/CONTRACT.md",
+      "sha256": "af7a2fab4aa6317f7386e438f2f03acc6daffdd04c3deee6a6554b675089ee81",
+      "read_mode": "OWN_WHOLE"
+    }
+  ],
+  "documentary_web_reads": [
+    {
+      "url": "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+      "read_scope": "Sections Processes, [Un]populated Notification, No Internal Process Constraint, introductory Delegation; web lines77–98,134–140,165–179 (surrounding displayed context incidental).",
+      "mode": "TARGETED_PRIMARY_SECTIONS",
+      "raw_page_hash": null
+    },
+    {
+      "url": "https://docs.python.org/3/library/subprocess.html",
+      "read_scope": "Served Python3.14.7; preexec_fn/threads warning, close_fds/pass_fds/start_new_session, web lines258–290.",
+      "mode": "TARGETED_PRIMARY_SECTIONS",
+      "raw_page_hash": null
+    }
+  ],
+  "scope": "Source text/manual reasoning only. ZERO code execution/import/AST/syntax/compile/test/dummy/science. No worker or enabled registration. Old files unchanged; no provenance followed."
+}

@@ -1,0 +1,89 @@
+{
+  "builder_sha256": "a8092908c9f4916306e24fdeca622426f8e6be09ab4f3d0d19e7488e05eca2f9",
+  "coefficient_field": "Q",
+  "constants_policy": "both source additive constants retained",
+  "global_order": "dp",
+  "normalized_equivalence_status": "PROVISIONAL_UNLICENSED",
+  "production_authority_canonical_sha256": "42781305c771397aabead615c75b01b973e9a2d83430133b249cc140c82d853d",
+  "schema": "jc2.d125-physical-literal/v1",
+  "semantics": "ALL ordinary coefficients of J(P,Q)-1/5 plus every jet, pin, guard; no solve",
+  "source_counts": {
+    "P": 571,
+    "Q": 1551
+  },
+  "source_hashes": {
+    "d125-client-interface-astra-20260906.md": "0c5270a432a6336c17c4693034e36cb496f139c3267843e3ac06628ec8c4b255",
+    "d125-source-contract-gate-fable5-20260906.md": "a802587179b6f105bb47555ceb0e6a1d20c94c68a76c6ac4a26bbea1fce7b4e4",
+    "d125-triangular-source-normalization-astra-20260906.md": "8ea55aaf26acbd4992aee9d14cce8712fda1c7590cd876ee974194c76bb3ad9e"
+  },
+  "spec": {
+    "mode": "normalized",
+    "name": "D125",
+    "pins": [
+      [
+        "P",
+        3,
+        4,
+        "1",
+        "1"
+      ],
+      [
+        "P",
+        15,
+        21,
+        "1",
+        "1"
+      ],
+      [
+        "Q",
+        1,
+        1,
+        "-1",
+        "1"
+      ],
+      [
+        "Q",
+        13,
+        18,
+        "-3",
+        "1"
+      ],
+      [
+        "Q",
+        25,
+        35,
+        "-9",
+        "5"
+      ]
+    ],
+    "sides": {
+      "P": {
+        "degree": 75,
+        "guard": [
+          15,
+          60
+        ],
+        "terminal_h": 3,
+        "vertical_cap": 60,
+        "weight_cap": 15
+      },
+      "Q": {
+        "degree": 125,
+        "guard": [
+          25,
+          100
+        ],
+        "terminal_h": 5,
+        "vertical_cap": 100,
+        "weight_cap": 25
+      }
+    },
+    "target": [
+      "1",
+      "5"
+    ]
+  },
+  "type": "header",
+  "variable_count": 2123,
+  "zero_policy": "all envelope and original linear rows retained"
+}

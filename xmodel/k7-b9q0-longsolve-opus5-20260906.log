@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+**LAUNCHED[b9 q0 long solve; harvest due ~+20 h]**
+
+What happened:
+
+1. **Inputs.** `awk` built the manifest mechanically from the receipt's numbered `_basename`/`_sha256` fields; `sha256sum -c` → 7 OK, no mismatch.
+
+2. **Worker.** The literal `fleet.sh launch r7i.8xlarge` again failed AWS parameter validation (the frozen driver reads the first positional as COUNT), so the explicit-count form created `i-0e5c65e66b8dc4dfc` (172.30.0.73, r7i.8xlarge, 32 vCPU / 247 GiB, Owner `k7-b9q0-longsolve-20260906`). Singular binary SHA matches the r3b custody value. **Not terminated** — left for the harvest lane.
+
+3. **Chart.** Regenerated from the recorded producer (`msolve_export.py` + `strata_chart.py` + the producer-pinned `guided_gb.py` `501f3b1f…`, not the host's newer copy). Result: 12,675,213 B, 72 vars / 241 gens, SHA-256 `15b4b715767a72e152f340dda11354af380897f6670d6370f0542841cdb4c275` — **exactly** the frozen r3b §2 value. The 72-weight `wp` vector matches `r3-custody.json` elementwise; the header is literally `v0..v71`, characteristic `0`, row 241 literally `v69*v71-1`.
+
+4. **Three jobs**, started 08:30:00Z, detached with `setsid nohup`, each `timeout 72000` + a 15-s-poll descendant-tree RSS watchdog at 70 GiB writing `caprun.json`:
+   - `a_slimgb_dp` — exact-Q `slimgb`, `dp`, `redSB`
+   - `b_std_wp` — exact-Q `std` under the frozen chart bigrading `wp`
+   - `c_tri_qv69_slimgb` — exact-Q(v69) triangular pre-reduction (rows 1,2,3,4,8,9,10,11 → `v6,v12,v35,v43,v5,v11,v16,v20`, per r3b §5) then `slimgb`
+   
+   Parse-only smoke tests passed all three first (job c's pivots 1–2 reported every exactness check `1`). At 08:33:27Z all three were running, peak RSS 0.74 / 2.64 / 2.98 GiB, no kills. Expected end 2026-09-07T04:30Z.
+
+5. **Custody** `box/k7-b9q0-longsolve-20260906/custody.json` (10,468 B) records instance, IPs, caps, chart/binary/script SHAs, exact commands, harvest paths, acceptance rule and resource semantics. Host writes: custody + report, ~18 KB total; `/` unchanged at 12 GiB free.
+
+Report sealed: `xmodel/k7-b9q0-longsolve-opus5-20260906.md`, body 7,531 B, SHA-256 `7b883610a24281654337b5e6ab41076fde126ad514aef9630301429821c82b94`, verify PASS. No mathematical verdict — b9 q0 remains `STILL_SIGNAL_ONLY`. One flag for the harvest lane, recorded in both artifacts: job (c) computes in `Q(v69)`, so a unit there needs the r2 §3 denominator-clearing step before it is an exact-Q certificate in the source ring.
+DIVERT path=xmodel/k7-b9q0-longsolve-opus5-20260906.md status=CLEAN_SEALED body_bytes=7531 body_sha256=7b883610a24281654337b5e6ab41076fde126ad514aef9630301429821c82b94

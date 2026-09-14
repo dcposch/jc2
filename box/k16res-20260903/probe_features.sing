@@ -1,0 +1,22 @@
+ring W=(0,yy),(q2_0,q3_0),dp;
+minpoly=972*yy^2-540*yy+70;
+option(redSB);
+ideal J=q2_0^3-yy*q3_0^2-1, q3_0^2*q2_0-2;
+ideal G=std(J);
+print("dim="+string(dim(G))+" vdim="+string(vdim(G)));
+ideal K=kbase(G);
+poly g=q2_0+yy*q3_0;
+ideal Img; int i;
+for (i=1;i<=size(K);i++){ Img[i]=reduce(g*K[i],G); }
+matrix M=coeffs(Img,K);
+print("M dims "+string(nrows(M))+"x"+string(ncols(M)));
+poly dt=det(M);
+print("det deg="+string(deg(dt))+" val="+string(dt));
+ring W2=(0,yy),(v),dp;
+minpoly=972*yy^2-540*yy+70;
+poly f1=v^3-yy*v+2; poly f2=v^2+yy;
+poly r12=resultant(f1,f2,v);
+poly F1=subst(f1,v,v^2); poly F2=subst(f2,v,v^2);
+poly R12=resultant(F1,F2,v);
+print("res="+string(r12)+"  pullback res="+string(R12)+"  square="+string(r12^2)+"  diff="+string(R12-r12^2)+"  sum="+string(R12+r12^2));
+quit;

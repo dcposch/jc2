@@ -1,0 +1,18 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate delivered at 02:50 UTC, ahead of the 02:57 target.
+
+**Verdict: CONFIRMED with two GAP notes, nothing REFUTED.** The report is at `xmodel/d125-symmetry-delta-gate-fable5-20260907.md` (1,121 words, unique standalone BODY-END, no seal, no charge_basis).
+
+**What I independently verified** on the frozen inputs, with my own polygon census and Laurent arithmetic rather than the producer's code:
+
+- The μ12 action is exact. I evaluated the literal lift at a random full point and confirmed the source form with λ weights −3/−2, giving row character 5t−e−D. All thirteen nonzero fixed slots have character 0 mod 12.
+- μ3 and μ4 fixed loci die at the origin under the full system. Only μ2 survives.
+- Counts reproduce exactly: free 71/196, odd 33/94, raw 128, Hermite pivots 13/34 with unimodular blocks, standalone 81, surviving negative rows 16/39 with the eight top rows vanishing by the H³/H⁵ multiplicity at p=−1.
+- Both graphs are equivariant. The B matrices rebuilt by real differentiation give columns 94, rank 92, kernels exactly H and H³ at degrees 5 and 15, with degrees 10 and 20 vanishing by odd character.
+- The whole shear on a random μ2 point preserves the Jacobian, every fixed B slot, polygon and parity, sends [p¹⁵] to zero and [p⁵] to β₁−s·a₅, and inverts exactly. s is invariant, so the fixed locus is X₀×A¹ and T₂ sits on 22 coordinates.
+- Conjugating exchange and central inversion by a concrete polynomial automorphism gave determinants −1 and +1, so the elementary distinction against Moskowicz's lemma holds. Central inversion is exactly this μ2 source action.
+
+**Two GAP notes recorded:** the generic g-degree of J(A,B) is 22, not 23, because the parallel vertices (9,6) and (15,10) bracket to zero, so 660 is safe but not minimal. And the μ3 origin kill needs the imposed negative rows, since cross terms at k≡1 mod 3 are character-allowed without them. The producer's wording already covered this.
+
+**Own controls** live only in `box/d125-symmetry-delta-gate-fable5-20260907/`: the checker, byte-identical normal/−O witnesses, and a replay of eight capped runs. Three real mutations (λ₂ weight, source exponent, shear sign) fail in both modes on their intended checks. No AWS, CAS, solver, live state, or paper reads were used. No construction authority follows from this gate.
+DIVERT path=xmodel/d125-symmetry-delta-gate-fable5-20260907.md status=CLEAN body_bytes=7638 body_sha256=3940ba00aca8033bd8206250dc007881b9b50113061dc85588e06d1ccbe7c47d

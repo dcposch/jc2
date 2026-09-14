@@ -1,0 +1,32 @@
+
+K=7 b=6   q0=MS-TO      q1=Q-UNIT     partial (one cover exact-Q) msolve wall cap (longest 5100s)
+K=7 b=7   q0=Q-UNIT     q1=MS-TO      partial (one cover exact-Q) msolve wall cap (longest 5100s)
+K=7 b=8   q0=Q-UNIT     q1=MS-RC      partial (one cover exact-Q) msolve rc 137 (resource)
+
+K=8 b=7   q0=MS-TO      q1=MS-TO      UNDECIDED                   msolve wall cap (longest 5100s); msolve wall cap (longest 5100s)
+K=8 b=8   q0=MS-TO      q1=MS-TO      UNDECIDED                   msolve wall cap (longest 5100s); msolve wall cap (longest 5100s)
+K=8 b=9   q0=MS-TO      q1=MS-TO      UNDECIDED                   msolve wall cap (longest 3844s); msolve wall cap (longest 5100s)
+K=8 b=10  q0=MS-TO      q1=MS-TO      UNDECIDED                   msolve wall cap (longest 2700s); msolve wall cap (longest 2700s)
+K=8 b=11  q0=Q-UNIT     q1=MS-TO      partial (one cover exact-Q) msolve wall cap (longest 2700s)
+K=8 b=12  q0=FORM-TO    q1=MS-TO      UNDECIDED                   Singular formation timeout at 8000.179s; msolve wall cap (longest 1200s)
+K=8 b=13  q0=FORM-TO    q1=FORM-TO    UNDECIDED                   Singular formation timeout at 8000.216s; Singular formation timeout at 8000.216s
+K=8 b=14  q0=IN-FLIGHT  q1=IN-FLIGHT  UNDECIDED                   no payload at seal; no payload at seal
+K=8 b=15  q0=IN-FLIGHT  q1=IN-FLIGHT  UNDECIDED                   no payload at seal; no payload at seal
+
+K=9 b=8   q0=MS-TO      q1=MS-TO      UNDECIDED                   msolve wall cap (longest 3900s); msolve wall cap (longest 3900s)
+K=9 b=9   q0=MS-TO      q1=MS-TO      UNDECIDED                   msolve wall cap (longest 2700s); msolve wall cap (longest 4300s)
+K=9 b=10  q0=FORM-TO    q1=MS-TO      UNDECIDED                   Singular formation timeout at 5100.168s; msolve wall cap (longest 2700s)
+K=9 b=11  q0=FORM-TO    q1=FORM-TO    UNDECIDED                   Singular formation timeout at 8000.215s; Singular formation timeout at 8000.207s
+K=9 b=12  q0=IN-FLIGHT  q1=IN-FLIGHT  UNDECIDED                   no payload at seal; no payload at seal
+K=9 b=13  q0=IN-FLIGHT  q1=IN-FLIGHT  UNDECIDED                   no payload at seal; no payload at seal
+K=9 b=14  q0=IN-FLIGHT  q1=IN-FLIGHT  UNDECIDED                   no payload at seal; no payload at seal
+K=9 b=15  q0=IN-FLIGHT  q1=IN-FLIGHT  UNDECIDED                   no payload at seal; no payload at seal
+K=9 b=16  q0=IN-FLIGHT  q1=IN-FLIGHT  UNDECIDED                   no payload at seal; no payload at seal
+K=9 b=17  q0=IN-FLIGHT  q1=IN-FLIGHT  UNDECIDED                   no payload at seal; no payload at seal
+
+K=7 scope [6, 7, 8]:
+   DEAD-over-Q [] | partial [6, 7, 8] | undecided [] | SURVIVORS []  (round 1 exact-Q DEAD: [9, 10, 11, 12, 13])
+K=8 scope [7, 8, 9, 10, 11, 12, 13, 14, 15]:
+   DEAD-over-Q [] | partial [11] | undecided [7, 8, 9, 10, 12, 13, 14, 15] | SURVIVORS []
+K=9 scope [8, 9, 10, 11, 12, 13, 14, 15, 16, 17]:
+   DEAD-over-Q [] | partial [] | undecided [8, 9, 10, 11, 12, 13, 14, 15, 16, 17] | SURVIVORS []

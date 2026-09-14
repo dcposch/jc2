@@ -1,0 +1,25 @@
+ring R=0,(x),dp;
+ideal I=0,x,0,x,1-x,0;
+option(redSB); short=0;
+int ci;
+print("JC2CERT 1 25374a2f9088c757fcf20c1ea4c8bb5bc73edd6e4c77ec7453c37f3ba704fec1 1b496496ced5c672dcc0408591aa969083309e3a1de5af3074058f84d9a025f7");
+print("I_SIZE "+string(size(I)));
+print("I_BEGIN "+string(ncols(matrix(I))));
+for(ci=1;ci<=ncols(matrix(I));ci++){print("I "+string(ci)+" "+string(I[ci]));}
+print("I_END");
+ideal G=ideal(1);
+print("G_BEGIN "+string(ncols(matrix(G))));
+for(ci=1;ci<=ncols(matrix(G));ci++){print("G "+string(ci)+" "+string(G[ci]));}
+print("G_END");
+int hasunit=0;
+for(ci=1;ci<=ncols(matrix(G));ci++){if(G[ci]!=0 && deg(G[ci])==0){hasunit=1;}}
+if(hasunit){
+matrix T=lift(I,ideal(1));
+matrix CHECK=matrix(I)*T;
+print("T_BEGIN "+string(nrows(T)));
+for(ci=1;ci<=nrows(T);ci++){print("T "+string(ci)+" "+string(T[ci,1]));}
+print("T_END");
+if(nrows(CHECK)==1 && ncols(CHECK)==1 && ncols(T)==1){print("CHECK "+string(CHECK[1,1]));}
+print("END UNIT");
+}else{print("END NONUNIT");}
+quit;

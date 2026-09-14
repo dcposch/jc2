@@ -1,0 +1,80 @@
+--- box/d125-small-exact-solver-strict-repair-20260907/driver.py	2026-09-07 00:52:45.591455221 +0000
++++ box/d125-hybrid81-solver-prep-20260907/driver.py	2026-09-07 06:09:29.548374193 +0000
+@@ -14,13 +14,14 @@
+ import time
+ sys.path.insert(0, str(Path(__file__).resolve().parent))
+ import exact as E
++import hybrid as H
+ 
+ INSTANCE = 'i-0da0cebfc97c9fd54'
+-CWD = '/home/ubuntu/d125-small-exact-solver-20260907'
+-SOURCE = Path('/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/client-unequal-rational')
++CWD = '/home/ubuntu/d125-hybrid81-exact-solver-20260907'
++SOURCE = Path('/home/ubuntu/d125-hybrid-affine-pilot-20260907/construction.jsonl')
+ RUNNER_SHA = '4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2'
+ BINARY_SHA = '90ab699b7a28486944a167e797d7c8dd38f8f949960b93ee7a6d08ff1c7c46f4'
+-PLAN_SHA = 'fdcd592734d19bfdc33a206ccf7b21f3b146f73581af0bd3d7be202df81d878c'
++PLAN_SHA = '38bc496f9f2eb7f7519c70bbabe0eab8586c56264b7e20c0078fc71cb818cd6d'
+ CAPS = {'decision_seconds': 300, 'verify_seconds': 120, 'control_seconds': 10,
+         'total_seconds': 450, 'as_bytes': 16*1024**3, 'rss_bytes': 16*1024**3,
+         'stream_bytes': 64*1024**2}
+@@ -44,11 +45,12 @@
+ def pins():
+     return {'driver.py': file_sha(__file__), 'exact.py': file_sha(Path(__file__).with_name('exact.py')),
+             'run_capped.py': RUNNER_SHA, 'Singular': BINARY_SHA,
+-            'source.jsonl': E.JSON_SHA, 'source.sing': E.SING_SHA, 'registration': PLAN_SHA}
++            'hybrid.py': file_sha(Path(__file__).with_name('hybrid.py')),
++            'source.jsonl': H.CONSTRUCTION_SHA, 'original_source': H.ORIGINAL_SHA, 'registration': PLAN_SHA}
+ 
+ 
+ def authority_check(a, phase, observed, expected_pins):
+-    E.need(a.get('schema') == 'jc2.d125-exact-solver-authority/v1' and a.get('root_green') is True,
++    E.need(a.get('schema') == 'jc2.d125-hybrid81-solver-authority/v1' and a.get('root_green') is True,
+            'explicit root GREEN absent')
+     expected_mode = 'engineering_control' if phase == 'control' else 'solver'
+     E.need(phase in ('control', 'decision', 'verify') and a.get('mode') == expected_mode,
+@@ -149,8 +151,7 @@
+     if phase == 'control':
+         script = control_input()
+     else:
+-        variables, rows, labels, prefix = E.read_source(SOURCE.with_suffix('.jsonl').read_bytes(),
+-                                  SOURCE.with_suffix('.sing').read_bytes(), production=True)
++        variables, rows, labels, prefix = H.read_hybrid(SOURCE.read_bytes(), production=True)
+         if phase == 'verify':
+             receipt = E.strict_json(Path('decision.result.json').read_bytes())
+             telemetry = E.strict_json(Path('decision.telemetry.json').read_bytes())
+@@ -169,17 +170,17 @@
+             for name in ('stdout', 'stderr', 'telemetry.json'):
+                 E.need(file_sha('decision.'+name) == receipt['outputs'][name], 'decision output drift')
+             engine, basis, cofactors = E.parse_result(Path('decision.stdout').read_bytes(),
+-                  Path('decision.stderr').read_bytes(), variables, E.JSON_SHA)
++                  Path('decision.stderr').read_bytes(), variables, H.CONSTRUCTION_SHA)
+             mapping = E.engine_map(rows, engine)
+             if cofactors is None:
+                 verdict = E.proper_certificate(rows, basis, len(variables))
+             else:
+                 verdict, mapping, unused = E.unit_certificate(rows, engine, cofactors)
+-            print(json.dumps({'verdict': verdict, 'source_sha256': E.JSON_SHA,
++            print(json.dumps({'verdict': verdict, 'source_sha256': H.CONSTRUCTION_SHA,
+                   'source_rows': len(rows), 'variables': len(variables), 'engine_to_source': mapping,
+                   'source_labels_sha256': E.digest(E.canonical(labels)), 'ring_sha256': E.ring_id(variables)}, sort_keys=True))
+             return
+-        script = prefix+footer(variables, E.JSON_SHA)
++        script = prefix+footer(variables, H.CONSTRUCTION_SHA)
+     E.need(len(script.encode()) <= 2*1024**2, 'input artifact ceiling')
+     write_new(phase+'.sing', script.encode('ascii'))
+     env = {**os.environ, 'OMP_NUM_THREADS': '1', 'OPENBLAS_NUM_THREADS': '1',
+@@ -206,13 +207,12 @@
+                if Path(phase+'.'+name).is_file()}
+     artifacts = {name: file_sha(phase+'.'+name) for name in ('sing', 'identity.json')
+                  if Path(phase+'.'+name).is_file()}
+-    after = {} if phase == 'control' else {name: file_sha(SOURCE.with_suffix('.'+name))
+-                                          for name in ('jsonl', 'sing')}
++    after = {} if phase == 'control' else {'jsonl': file_sha(SOURCE)}
+     write_new(phase+'.result.json', E.canonical({'authority_sha256': authority_sha,
+               'runner_rc': result.returncode, 'outputs': outputs, 'artifacts': artifacts,
+               'source_pins_after': after, 'phase': phase}))
+     if after:
+-        E.need(after == {'jsonl': E.JSON_SHA, 'sing': E.SING_SHA}, 'post-run frozen source drift')
++        E.need(after == {'jsonl': H.CONSTRUCTION_SHA}, 'post-run frozen source drift')
+     return result.returncode

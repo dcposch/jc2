@@ -1,0 +1,23 @@
+delta52: loading complete checkpoint source-full-delta52_phase0239.json
+delta52 inner minor solved in 3.68s
+delta52 inner low-weight product: 25 slots, 4.70s
+delta52 inner incidence reduced: 14 pivots, 7.05s
+delta52 inner: 76 preincidence, 14 QQ* pivots, 0 residual, 7.72s
+delta52: extracting only D1 coefficient dependencies
+delta52: dependency positions h/C2/C3=9/8/8, outer=[19, 21, 9, 19]
+delta52: D1_graph, 13 equations, operation counts [6, 65, 2, 8, 12, 4, 10, 890, 2, 7, 2, 8, 12]
+delta52: D1_graph complete, dimension=105, residual=0
+delta52: D1_J, 14 equations, operation counts [3, 20, 59, 75, 134, 140, 120, 85, 38, 27, 13, 5, 2, 2]
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_graph_faces.py", line 176, in <module>
+    add(rows,'corner_J',{'constant_polynomial':str(value),'actual_polynomial_jets':jets,
+                    ^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_graph_faces.py", line 161, in main
+    fmeta.update({'compression_helper':str(compression_path),'compression_helper_sha256':hashlib.sha256(compression_path.read_bytes()).hexdigest(),
+       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_resume_graph_faces.py", line 98, in add
+    pending=residual+roots
+  File "/home/ubuntu/jc2/box/g9966-corrected-20260905/run-code-source-full/frozen/band_engine.py", line 647, in singular_dimension
+    dimension=int(section("DIM").splitlines()[-1])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '   ? error occurred in or before STDIN line 4: `print("BEGIN_DIM"); print(dim(S)); print("END_DIM");`'

@@ -1,0 +1,56 @@
+PREHOLDER_SECURITY_START 2026-09-11 16:04:20.463209229 UTC
+PROTECTED_ACTUAL 66305 2 0 0 755 /
+PROTECTED_ACTUAL 66305 1690 0 0 755 /opt
+PROTECTED_ACTUAL 29 1 0 0 755 /run
+PROTECTED_ACTUAL 66305 81121 0 0 755 /var
+PROTECTED_ACTUAL 66305 81122 0 0 755 /var/lib
+PROTECTED_ACTUAL 66305 3078 0 0 755 /var/lib/jc2-closedchild-preflight9-20260911c
+PROTECTED_ACTUAL 26 1 0 0 555 /sys
+PROTECTED_ACTUAL 26 2 0 0 755 /sys/fs
+PROTECTED_ACTUAL 31 1 0 0 555 /sys/fs/cgroup
+PROTECTED_ACTUAL 31 75 0 0 755 /sys/fs/cgroup/system.slice
+PROTECTED_ACTUAL 31 2 0 0 644 /sys/fs/cgroup/cgroup.procs
+PROTECTED_ACTUAL 31 3 0 0 644 /sys/fs/cgroup/cgroup.threads
+PROTECTED_ACTUAL 31 5 0 0 644 /sys/fs/cgroup/cgroup.subtree_control
+PROTECTED_ACTUAL 31 77 0 0 644 /sys/fs/cgroup/system.slice/cgroup.procs
+PROTECTED_ACTUAL 31 78 0 0 644 /sys/fs/cgroup/system.slice/cgroup.threads
+PROTECTED_ACTUAL 31 80 0 0 644 /sys/fs/cgroup/system.slice/cgroup.subtree_control
+PROTECTED_ACTUAL 66305 2518 0 0 755 /opt/jc2-closedchild-preflight9-20260911c
+PROTECTED_ACTUAL 43 1 0 0 755 /run/jc2-closedchild-preflight9-20260911c
+PROTECTED_ACTUAL 43 2 0 0 755 /run/jc2-closedchild-preflight9-20260911c/authority
+PROTECTED_ACTUAL 43 3 0 0 755 /run/jc2-closedchild-preflight9-20260911c/frozen
+PROTECTED_ACTUAL 29 1348 0 0 700 /run/jc2-closedchild-preflight9-20260911c-admission
+PROTECTED_ACTUAL 29 1349 0 0 600 /run/jc2-closedchild-preflight9-20260911c-admission/release.fifo
+INSTALLED_DIRECTORY 66305 2518 0 0 755 /opt/jc2-closedchild-preflight9-20260911c
+INSTALLED_DIRECTORY 66305 2968 0 0 755 /opt/jc2-closedchild-preflight9-20260911c/metadata
+INSTALLED_DIRECTORY 66305 2888 0 0 755 /opt/jc2-closedchild-preflight9-20260911c/science
+INSTALLED_DIRECTORY 66305 2893 0 0 755 /opt/jc2-closedchild-preflight9-20260911c/wrapper
+INSTALLED_DIRECTORY 66305 3006 0 0 755 /opt/jc2-closedchild-preflight9-20260911c/admin
+INSTALLED_DIRECTORY 66305 2954 0 0 755 /opt/jc2-closedchild-preflight9-20260911c/runtime
+INSTALLED_FILE 66305 3054 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/metadata/native-manifest.json
+INSTALLED_FILE 66305 3055 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/metadata/source-native-manifest.json
+INSTALLED_FILE 66305 3056 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/metadata/native.stdout
+INSTALLED_FILE 66305 3057 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/metadata/native.sha256
+INSTALLED_FILE 66305 3059 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/metadata/ROOT-SOURCE-CONTRACT.json
+INSTALLED_FILE 66305 3061 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/metadata/preflight-policy.json
+INSTALLED_FILE 66305 3023 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/science/check.py
+INSTALLED_FILE 66305 3021 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/science/check_arithmetic.py
+INSTALLED_FILE 66305 3010 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/science/arithmetic.py
+INSTALLED_FILE 66305 3011 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/science/produce.py
+INSTALLED_FILE 66305 3007 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/science/authority.py
+INSTALLED_FILE 66305 3052 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/wrapper/mutate.py
+INSTALLED_FILE 66305 3051 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/wrapper/probe.py
+INSTALLED_FILE 66305 3044 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/wrapper/dispatch.py
+INSTALLED_FILE 66305 3074 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/admin/holder.py
+INSTALLED_FILE 66305 3053 0 0 444 /opt/jc2-closedchild-preflight9-20260911c/runtime/run_capped.py
+/run/jc2-closedchild-preflight9-20260911c tmpfs / rw,nosuid,nodev,relatime,size=131072k,mode=755,inode64
+/sys/fs/cgroup cgroup2 / rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot
+ROOT_PID1_NAMESPACE pid pid:[4026531836]
+ROOT_PID1_NAMESPACE mnt mnt:[4026531832]
+ROOT_PID1_NAMESPACE cgroup cgroup:[4026531835]
+ROOT_PID1_NAMESPACE user user:[4026531837]
+ADMIN_EXTRA_PACKAGE diffutils 1:3.10-1ubuntu0.1
+ADMIN_EXTRA_PACKAGE gawk 1:5.2.1-2ubuntu0.1
+ADMIN_EXTRA_PACKAGE libc-bin 2.39-0ubuntu8.8
+ADMIN_EXTRA_PACKAGE libmagic1t64 1:5.45-3build1
+PREHOLDER_SECURITY_END 2026-09-11 16:04:20.623178333 UTC

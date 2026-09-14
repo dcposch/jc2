@@ -1,0 +1,56 @@
+{
+  "schema": "d28-column-input-pins-v1",
+  "verified_utc": "2026-09-09T09:15:41.181415+00:00",
+  "pre_read": "four report/primary files hash checked before WHOLE/selected reads; AUDIT first used only as named locator, then freshly hashed and exact accepted entries frozen before WHOLE snapshot reads",
+  "post_read": "all six immutable inputs current PASS",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f2-fixed-degree-composition-coordinator-20260909.md",
+      "sha256": "aeeddd6a501d59529120a49377ecf42aa22314d880c4304f65cc6dd56091d318",
+      "bytes": 20625,
+      "read_scope": "WHOLE; GENERAL Section3 premise; other conclusions context"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f2-fixed-degree-composition-gate-fable5-20260909.md",
+      "sha256": "2d6f386942d1f55ad5292e0ae4122549cd43e8804cc2d9664953b81db0d554d4",
+      "bytes": 25439,
+      "read_scope": "WHOLE; accepted normalization interface/imports"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f2-fixed-degree-standardization-gate-20260909/ggv-1401.1784v3.txt",
+      "sha256": "e3694dde3f83c2ab6ed8d957fc6b53472e6a6dd55486af1dff345eade39e37b1",
+      "bytes": 268331,
+      "read_scope": "718-790;1431-1461; whole Def4.3 and Prop5.20; Prop4.6 partial context"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f2-fixed-degree-standardization-gate-20260909/gghv-1708.07936v1.txt",
+      "sha256": "49df06d11bbc4556a9b09771cdd60ca40a75b7542d327bbb622e09434e6a467e",
+      "bytes": 107545,
+      "read_scope": "640-820;910-979;1180-1255;1350-1425; whole2.20, admissibility, parameterization, BOTH complete Section5 tables"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/d28-uniform-actual-degree-selection-20260909/audit15x-general-normalizer-EXCERPT.md",
+      "sha256": "152fa422a84c8e50ca3823d7913f5d2039ef7d8140cd43999fdfd0ea4b73868d",
+      "bytes": 6164,
+      "read_scope": "WHOLE frozen accepted entry, exact source19053-19062"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/d28-uniform-actual-degree-selection-20260909/audit16h-accepted-f9-EXCERPT.md",
+      "sha256": "a7aeb12443849198abce0f926fc41e446970eac5b25e2a733b14e09d782256ea",
+      "bytes": 4604,
+      "read_scope": "WHOLE frozen accepted entry, exact source19145-19152"
+    }
+  ],
+  "audit_extraction": {
+    "source": "/home/ubuntu/jc2/AUDIT.md",
+    "source_sha256": "93a56860e2af5b985ddfdc7722bcd7ae4a3743e5900485e0fe64dd082dcbeb84",
+    "source_bytes": 1891564,
+    "intervals": [
+      "19053-19062",
+      "19145-19152"
+    ],
+    "literal_byte_match": "PASS; complete entries, only separator blank omitted",
+    "mutable_source_status": "provenance only, not a future current-input pin"
+  },
+  "mathematical_subprocesses": 0
+}

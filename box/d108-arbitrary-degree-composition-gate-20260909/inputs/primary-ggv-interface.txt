@@ -1,0 +1,49 @@
+DOCUMENTARY EXCERPTS; one-indexed inclusive source lines. Source: box/f2-fixed-degree-standardization-gate-20260909/ggv-1401.1784v3.txt
+Ranges: 224,239; 1431,1457
+
+=== SOURCE LINES 224,239 ===
+of the support.
+Proposition 2.1. Let (ρ, σ) ∈ V and let P, Q ∈ L(l) \ {0} be two (ρ, σ)-homogeneous elements.
+Set τ := vρ,σ (P ) and µ := vρ,σ (Q).
+    (1) If τ = µ = 0, then [P, Q] = 0.
+    (2) Assume that [P, Q] = 0 and (µ, τ ) 6= (0, 0). Let m, n ∈ Z with gcd(m, n) = 1 and nτ = mµ.
+        Then
+          a) There exists α ∈ K × such that P n = αQm .
+           b) There exist R ∈ L(l) and λP , λQ ∈ K × , such that
+                                     P = λP Rm      and   Q = λQ Rn .                           (2.1)
+              Moreover
+                 - if µτ < 0, then P, Q ∈ K[x1/l , x−1/l ],
+                 - if µτ ≥ 0, then we can choose m, n ∈ N0 ,
+                 - if P, Q ∈ L, then R ∈ L.
+Proof. (1) If ρ = 0, then P, Q ∈ K[x1/l , x−1/l ] and if ρ 6= 0, then P, Q ∈ K[z] where z := x−σ/ρ y.
+In both cases, [P, Q] = 0 follows easily.
+(2a) This is [8, Proposition 2.1(2)].
+
+=== SOURCE LINES 1431,1457 ===
+
+
+Proposition 5.20. For each (m, n)-pair (P, Q) in L(1) , there exists an automorphism ϕ of L(1)
+such that (ϕ(P ), ϕ(Q)) is a standard (m, n)-pair with
+          v1,1 (ϕ(P )) = v1,1 (P ),   v1,1 (ϕ(Q)) = v1,1 (Q)      and   en1,0 (ϕ(P )) = en1,0 (P ).
+Moreover, if (−1, 1) < SuccP (1, 0), SuccQ (1, 0) < (−1, 0), then
+                          (−1, 1) < Succϕ(P ) (1, 0), Succϕ(Q) (1, 0) < (−1, 0).
+Furthermore, if P, Q ∈ L, then we can take ϕ ∈ Aut(L).
+                                                                                    1
+                                                                                                        
+Proof. If v1,−1 (st1,0 (P )) < 0, then we can take ϕ := id. Otherwise m               en1,0 (P ), (1, 0) is a
+                                            1
+regular corner[25]. Write (a, b) := m         en1,0 (P ). Case I is impossible because a, b > 0 and Propo-
+sition 5.13 gives 1 − a/b > 1, and the Case II.a) is discarded, because v1,−1 (st1,0 (P )) ≥ 0. By
+Propositions 5.16 and 5.18 in Case II.b) and by Proposition 5.17 in Case III, we can find a
+ϕ ∈ Aut(L(1) ) such that
+           1
+                                        
+       - m    st1,0 (ϕ(P )), (ρ′ , σ ′ ) is a regular corner, for some (ρ′ , σ ′ ),
+       - ℓ1,1 (ϕ(P )) = ℓ1,1 (P ), ℓ1,1 (ϕ(Q)) = ℓ1,1 (Q) and en1,0 (ϕ(P )) = en1,0 (P ),
+       - If SuccP (1, 0), SuccQ (1, 0) < (−1, 0), then
+                  Succϕ(P ) (1, 0) = SuccP (1, 0)      and         Succϕ(Q) (1, 0) = SuccQ (1, 0).
+      - ϕ(x) = x and ϕ(y) = y + λ, for some λ ∈ K × .
+The assertions in the statement follow immediately from these facts.                                      
+Corollary 5.21. If B < ∞ (i. e., if the Jacobian conjecture is false), then there exists a Jacobian
+pair (P, Q) and m, n ∈ N coprime with m, n > 1, such that
+    (1) (P, Q) is a standard (m, n)-pair in L,

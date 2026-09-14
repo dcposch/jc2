@@ -1,0 +1,153 @@
+{
+  "K10": {
+    "after_phi_equals_yv": "polynomial h3 iff y divides p2*v",
+    "counts": {
+      "after_PIN12": 75,
+      "after_REC3_including_q3": 67,
+      "predicted_after_full_rank_h4_through_h8_including_q4": 43,
+      "predicted_solver_ring_with_mu_inv": 44,
+      "raw_geometric": 91,
+      "split_chart_count": 2,
+      "terminal_recurrence_indices": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "exact_cover": [
+      "A10: v=y*w",
+      "B10: p2=y*zeta"
+    ],
+    "h3": "(L*v^3+36*chi*v*y^3+24*mu^2*p3*y^2-12*mu*(p2*v/y)-18*v^2*tau-8*q3*y^6)/(16*mu^3)",
+    "overlap": "retained; no localization of v or p2",
+    "q_schedule": "q0..q3=3*rho4..rho1; q4=3*rho0+lambda; q5..q7=0; N8=Theta10",
+    "r": 4,
+    "theta": {
+      "factor": "y^10*(y-x)^2/5236",
+      "rational_coefficients": [
+        "1/44",
+        "5/187",
+        "25/748",
+        "125/2618",
+        "625/5236"
+      ],
+      "x4_through_y4_numerators": [
+        119,
+        140,
+        175,
+        250,
+        625
+      ]
+    }
+  },
+  "K11": {
+    "after_phi_equals_yv": "polynomial h3 iff y^2 divides v*W, W=(y-x)*v^2-18*v*tau-12*mu*p2",
+    "counts": {
+      "after_PIN12": 95,
+      "after_REC3_including_q3": 86,
+      "predicted_after_full_rank_h4_through_h10_including_q4_q5": 54,
+      "predicted_solver_ring_with_mu_inv": 55,
+      "raw_geometric": 111,
+      "split_chart_count": 3,
+      "terminal_recurrence_indices": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "exact_cover": [
+      "A11: v=y^2*w",
+      "B11: v=y*v1 and W=y*zeta",
+      "C11: W=y^2*zeta"
+    ],
+    "h3": "(omega+36*chi*v*y^2+24*mu^2*p3*y^2-8*q3*y^6)/(16*mu^3), omega=v*W/y^2",
+    "overlap": "retained; valuation cases ord_y(v)>=2, ord_y(v)=1, ord_y(v)=0 are covered without localization",
+    "q_schedule": "q0..q4=3*rho5..rho1; q5=3*rho0+lambda; q6..q9=0; N10=Theta11",
+    "r": 5,
+    "theta": {
+      "factor": "y^11*(y-x)^2/167580",
+      "rational_coefficients": [
+        "1/49",
+        "22/931",
+        "242/8379",
+        "1331/33516",
+        "14641/167580"
+      ],
+      "x4_through_y4_numerators": [
+        3420,
+        3960,
+        4840,
+        6655,
+        14641
+      ]
+    }
+  },
+  "common_pin": {
+    "deg_chi": "K-8",
+    "deg_phi": "K-4-s",
+    "deg_tau": "K-7",
+    "monic_relation": "coeff_y^(deg phi)(phi)=2*coeff_y^(K-7)(tau)",
+    "psi": "y^s*phi",
+    "q0": "mu^3*y^(K-7)*(y-x)",
+    "q1": "3*mu^2*tau",
+    "q2": "3*mu*chi",
+    "s": "ceil((K-5)/2)"
+  },
+  "decision": {
+    "full_chart_built": false,
+    "groebner_run": false,
+    "next_builder_target": "implement branch-aware constant-Q RREF for N4..N_(2r), then sparse alpha/remainder matching through rho degree 1 before any modular screen",
+    "reason": "not a cheap reuse: PIN exponent changes at K=10; K10 needs two new charts and five terminal bands, K11 needs three valuation charts and seven terminal bands; K9 one-core exact construction already cost 205s/368s for only three terminal bands"
+  },
+  "rec3_identity_checks": {
+    "8": {
+      "K": 8,
+      "common_factor": "(y-x)^2*y^6/8",
+      "e": 1,
+      "equation_left": "L*phi^3 + 36*chi*phi*y^5 - 16*h3*mu^3*y^2 + 24*mu^2*p3*y^4 - 12*mu*p2*phi*y - 18*phi^2*tau*y^2",
+      "equation_right": "8*q3*y^8",
+      "factor_identity": "PASS",
+      "q3_degree": -1,
+      "s": 2
+    },
+    "9": {
+      "K": 9,
+      "common_factor": "(y-x)^2*y^6/8",
+      "e": 0,
+      "equation_left": "L*phi^3 + 36*chi*phi*y^6 - 16*h3*mu^3*y^4 + 24*mu^2*p3*y^6 - 12*mu*p2*phi*y^2 - 18*phi^2*tau*y^2",
+      "equation_right": "8*q3*y^10",
+      "factor_identity": "PASS",
+      "q3_degree": 0,
+      "s": 2
+    },
+    "10": {
+      "K": 10,
+      "common_factor": "(y-x)^2*y^9/8",
+      "e": 1,
+      "equation_left": "L*phi^3 + 36*chi*phi*y^5 - 16*h3*mu^3*y^3 + 24*mu^2*p3*y^5 - 12*mu*p2*phi*y - 18*phi^2*tau*y",
+      "equation_right": "8*q3*y^9",
+      "factor_identity": "PASS",
+      "q3_degree": 1,
+      "s": 3
+    },
+    "11": {
+      "K": 11,
+      "common_factor": "(y-x)^2*y^9/8",
+      "e": 0,
+      "equation_left": "L*phi^3 + 36*chi*phi*y^6 - 16*h3*mu^3*y^5 + 24*mu^2*p3*y^7 - 12*mu*p2*phi*y^2 - 18*phi^2*tau*y",
+      "equation_right": "8*q3*y^11",
+      "factor_identity": "PASS",
+      "q3_degree": 2,
+      "s": 3
+    }
+  },
+  "script_sha256": "ea0a5f859c0a0263367876de475d346591dc9affd8523f59dd7e2ee535d945b9",
+  "status": "EXACT_IDENTITIES_PASS_NO_GROEBNER_RUN",
+  "type": "K4RAY-KUNIFORM-REC3-EXACT-Q-AUDIT"
+}

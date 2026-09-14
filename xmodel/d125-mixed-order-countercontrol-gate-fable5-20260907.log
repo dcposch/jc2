@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate delivered at 04:59 UTC, before the 05:05 deadline.
+
+**Report:** `xmodel/d125-mixed-order-countercontrol-gate-fable5-20260907.md`, 959 words, one standalone `<!-- BODY-END -->`, no seal and no charge_basis line. Producer report hash matched the given digest, and the producer's witness digest matched its quoted value.
+
+**Verdicts, all four claims CONFIRMED with scope:**
+- **Claim 1.** Both bracket identities hold on random polynomials, including the corrected second one. The toy at j=2 shows U mod R is 9sS³, so U² lies in (R,s²) while U does not. The centralizer lifting stays the external trust already charged upstream.
+- **Claim 2.** Independent computation gives exactly 2835·s⁷·S⁶ and nothing below order 7. Deleting the s³ and s⁵ terms breaks the bracket below order 7.
+- **Claim 3.** With the actual degree-5 and degree-3 generators, factored degree and weight bounds keep every correction strictly inside both fixed faces, odd, origin-free, p³/p⁵-divisible, and ordinarily lifting. This was checked against the row inventory in the charged classification gate, never by expanding R³ or R⁵. The jet exists at t=−3, but the unit y₀ and the recentering are generic-only.
+- **Claim 4.** F₂ = 9RS² − (9/h)R²S formally, and on the actual generators it is nonzero, kills the p, p³ and gp² slots, and is not of the form cR + dR²S. x = [gp²]A is identically zero, so the k=s⁴ survivor mutation fails. The order-7 obstruction is nonzero since [R_t,S] is nonzero with value 14 at g=p=1, t=0.
+
+**Controls:** own `gate_controls.py` in the box, stdlib only, zero Assert nodes, capped subprocesses. Eight runs pass, normal and −O witnesses byte-identical, and each of the three mutations fails at its intended first gate. No frozen file was touched and the producer's helper-dependent checker was not run.
+
+**Typed gaps:** GAP-CENTRALIZER (inherited external trust), GAP-ROWLIST (client row file absent from frozen inputs), GAP-T=-3 (recentering generic-only). Stopped after the gate.
+DIVERT path=xmodel/d125-mixed-order-countercontrol-gate-fable5-20260907.md status=CLEAN body_bytes=7071 body_sha256=ad1a4ddb11b9f0041042ce81e4e24a3242cc51af46b74b0a8eb5bfef962396a9

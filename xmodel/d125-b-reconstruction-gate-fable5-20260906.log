@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and published at `xmodel/d125-b-reconstruction-gate-fable5-20260906.md` (1881 words, finished 23:36 UTC, single standalone BODY-END with nothing after it, no seal, no forbidden lines). Owned artifacts are only in `box/d125-b-reconstruction-gate-fable5-20260906/`. No process is retained.
+
+**Verdicts, one line each**
+
+- **Kernel theorem: CONFIRMED.** My own derivation of `[H,C]=γ^(d+3)(5hc'−dh'c)` and the simple root `−1` (`h'(−1)=3` and `ρ²`) gives `5|d` and `C=λH^(d/5)`. Exact nullspaces of the unrestricted homogeneous matrices at every degree 1 to 25, both fields, agree.
+- **Free columns, faces, K_d, H^r: CONFIRMED.** Half-plane lattices reproduce 71/196, 77/214, 98/269 and the three `q_d` formulas. The K_d slots are exactly the inner B points below degree 25 and the coefficients match the preflight face polynomials. Every H^r sits in the free columns strictly below the faces.
+- **Matrices and pivots: CONFIRMED.** Entry formula checked against a direct bracket, at most 38×15. Gaussian minors equal `(−15)^q q!·S_d` for all 120 non-kernel witnesses, all units. Ranks 192/210/265 by regular-representation rank over Q, identical in the conjugate embedding.
+- **Witness artifact: REFUTED in part.** The frozen JSON is a re-serialisation, not the checker's output. 57 of 144 minors are stored as floats and none rounds back to the exact integer. All Schur values, rows and ranks are exact, and the checker recomputes without reading the file, so PASS is unaffected. The fix is to re-emit the file from the checker.
+- **Descent and residuals: CONFIRMED.** Pivots consume 192/210/265 of the 636 rows in degrees 14 to 37. All 105 rows in degrees 0 to 13, the degree-2 target, the c guard, and the 39 identically zero degree-38 rows remain. The graph-quotient argument needs no localisation.
+- **Gauge and lift: CONFIRMED.** A random full-support fixture keeps the bracket, faces, origin and monicity, changes the degree-5 coefficient, and shows deleting `sH³` alone breaks the bracket. The 30 P slots sit inside the 75 Q slots, so the row operation is invertible. Counts 74/82/103 and 76/84/105 with both lambdas hold.
+- **Controls: CONFIRMED.** Producer checker passes normal and `-O`, both mutations reject in both modes. My verifier passes in both modes and rejects four mutations, all under the caps.
+- **Root transaction and manifest: GAP.** The manifest and owned-box pins are not among the frozen inputs, so they stay unverified.
+
+**Next step for the producer:** regenerate `exact-witnesses.json` directly from `check.py` output and re-pin it, so the 57 float minors become exact.
+DIVERT path=xmodel/d125-b-reconstruction-gate-fable5-20260906.md status=CLEAN body_bytes=12727 body_sha256=3f154e7816deb5de39e727f99cafac3328592c703af246614d4f1e9fe2ccf1ea

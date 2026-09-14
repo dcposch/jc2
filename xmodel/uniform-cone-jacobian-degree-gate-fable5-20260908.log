@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete. Report written to `xmodel/uniform-cone-jacobian-degree-gate-fable5-20260908.md`, ending at the standalone BODY-END line with no Seal section and no charge_basis. Evidence is in `box/uniform-cone-jacobian-degree-gate-fable5-20260908/`. All writers are terminal.
+
+**Verdict: all six targets CONFIRMED** at the exact stated scope. I re-derived every universal step myself and found no missing arrow. Two steps the producer states tersely I supplied explicitly: uniqueness of the R_s-normal block representation, which is what makes the order-j piece of P1 equal C, and the accounting that each z inside an implicit correction carries one Z at order η, which is what makes the Z^5 coefficient at 5η exactly 1.
+
+**The named scrutiny point closes.** Below 5η only the Q0 block can appear. If its order ν0 is below 5η, the global minimum is exactly ν0, attained on a component where the raw restriction is nonzero by the product injection. That initial is Z-free with positive p-degree, and the bracket's leading coefficient at order 2η+ν0 is P_Z·e′, whose Z² coefficient is 3e′. Since 2η+ν0 lies strictly below M, e′ and then e vanish on every component, a contradiction. Only after this does disregarding later Q0 corrections at 5η become legitimate.
+
+**Replay.** Twelve runs via direct prlimit and subprocess with a 30 s timeout, in 3.28 s. Return codes, positive stdout bytes and error messages all match the producer's record and root's stdout hashes. The three omit/sign modes are real algebraic mutations; the h=0 and gcd-one modes are false-inference countercontrols, and the omit modes stop before the bracket identity is reached.
+
+**Independent attack.** The normal polynomial p^(a−1)·V vanishes on every V component and has weight exactly 1+t, so the strict hypothesis 5b>4a+1 is precisely the injectivity condition at weight 5 for every boundary row, not just a=b=1. A constant Q0 initial would not be excluded by the bracket step, so the positive degree 5D−ν0 is load-bearing. A depressed cubic with u≠0 admits no commuting monic quintic of the relevant shape, consistent with the Euler lemma.
+
+**Retained exceptions.** The theorem is a floor for nonzero J only, commuting pairs exist, degree D+2 itself is not excluded, and no JC2 receiver, unit, or attachment claim is made or verified.
+
+STOP/IDLE.
+DIVERT path=xmodel/uniform-cone-jacobian-degree-gate-fable5-20260908.md status=CLEAN body_bytes=17541 body_sha256=2c2a7f7b4b0552bf5eaccdb5bb6ab7b563cd7fd514aee63c4adbe01f15f4eae9

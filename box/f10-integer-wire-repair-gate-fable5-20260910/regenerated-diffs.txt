@@ -1,0 +1,79 @@
+===== diff -u oldsolver.py solver.py
+--- oldsolver.py	2026-09-10 04:40:45.786234139 +0000
++++ solver.py	2026-09-10 04:40:45.974534986 +0000
+@@ -12,6 +12,8 @@
+ def generic_candidate(p, fs, q, flint):
+     # Internal mathematical API: call only inside a separately authorized
+     # child. main() authorizes before reaching any mathematical import.
++    # Interpreter-local decimal policy; registered CPU/RSS/file caps remain.
++    sys.set_int_max_str_digits(0)
+     from algebra import Q, trim, da, ds, dm, dd, dxg, require
+     require(type(p) is list and len(p) == 8
+             and all(type(c) is Q for c in p) and p[-1] == Q(1),
+@@ -324,6 +326,8 @@
+     require(str(getattr(flint, '__version__', '')) == environment['version']
+             and str(Path(flint.__file__).resolve()) == environment['module_file']
+             and sha(flint.__file__) == environment['module_sha256'], 'installed FLINT binding differs')
++    # All authority/input/native checks precede source-wire decimal parsing.
++    sys.set_int_max_str_digits(0)
+     certificate = candidate(data, flint)
+     certificate.update({'binding': binding, 'execution': custody,
+                         'solver_sha256': sha(__file__), 'engine': environment})
+===== diff -u oldchecker.py checker.py
+--- oldchecker.py	2026-09-10 04:40:45.822921963 +0000
++++ checker.py	2026-09-10 04:40:46.012857535 +0000
+@@ -9,8 +9,10 @@
+ from execution_gate import authorize
+ 
+ def verify(data, certificate):
+-    # This pure function may only be called inside a separately authorized
++    # This function may only be called inside a separately authorized
+     # child (main below, or a future explicitly registered test harness).
++    # Fresh checker/control children need their own decimal policy.
++    sys.set_int_max_str_digits(0)
+     from fractions import Fraction
+     from math import gcd
+     def need(ok, why):
+===== diff -u old_generic_controls.py generic_controls.py
+--- old_generic_controls.py	2026-09-10 04:40:45.859231544 +0000
++++ generic_controls.py	2026-09-10 04:40:46.051657028 +0000
+@@ -16,7 +16,7 @@
+     'execution_gate.py': 'cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6',
+     'evidence.py': 'cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767',
+     'algebra.py': '7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc',
+-    'checker.py': '122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69',
++    'checker.py': 'bb4263e1149eb1ba03d2dc47f5db339df6b05829280730ccf6c8420e0bc07045',
+ }
+ CASES = (
+     'allzero-q0', 'allzero-q1', 'constant-degree25', 'raw-two-T',
+===== diff -u old_generic_dispatch_batch.py generic_dispatch_batch.py
+--- old_generic_dispatch_batch.py	2026-09-10 04:40:45.897067620 +0000
++++ generic_dispatch_batch.py	2026-09-10 04:40:46.089743295 +0000
+@@ -234,10 +234,10 @@
+         require(all(type(v) is int and v>0 for v in limits.values()),'explicit positive integer caps')
+     require(registration['profiles']['dummy']['rss_bytes']==33554432,'dummy must retain its reviewed RSS cap')
+     known={
+-      'generic_controls.py':'c369dc11b4e9562b050333225133aedf9cb63a04f3309424fdfab769465d363a',
+-      'solver.py':'961e22e64ec768da6d78a886aa987f7ebaf0325b21b87c68e04db88e91778589',
++      'generic_controls.py':'259990f7f226e0509a18f8a230f9bbc66b1241c2ab09f511fa4134110f6a1717',
++      'solver.py':'4e9bb9d28c60360b39629d059b42778744c7d43c5677b52fb8351e3405e4d3f4',
+       'generic.plan.json':'ce193898e3114f1db018b86e6ebe0b2ea4fdac5f65296dee76245f94da0b964a',
+-      'checker.py':'122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69',
++      'checker.py':'bb4263e1149eb1ba03d2dc47f5db339df6b05829280730ccf6c8420e0bc07045',
+       'evidence.py':'cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767',
+       'algebra.py':'7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc',
+       'execution_gate.py':'cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6',
+===== diff -u old_actual_dispatch_batch.py actual_dispatch_batch.py
+--- old_actual_dispatch_batch.py	2026-09-10 04:40:45.936015740 +0000
++++ actual_dispatch_batch.py	2026-09-10 04:40:46.127678815 +0000
+@@ -163,8 +163,8 @@
+         require(all(type(v) is int and v>0 for v in limits.values()),'explicit positive integer caps')
+     require(registration['profiles']['dummy']['rss_bytes']==33554432,'dummy must retain its reviewed RSS cap')
+     known={
+-      'solver.py':'961e22e64ec768da6d78a886aa987f7ebaf0325b21b87c68e04db88e91778589',
+-      'checker.py':'122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69',
++      'solver.py':'4e9bb9d28c60360b39629d059b42778744c7d43c5677b52fb8351e3405e4d3f4',
++      'checker.py':'bb4263e1149eb1ba03d2dc47f5db339df6b05829280730ccf6c8420e0bc07045',
+       'evidence.py':'cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767',
+       'algebra.py':'7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc',
+       'execution_gate.py':'cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6',

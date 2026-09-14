@@ -1,0 +1,40 @@
+Running timer as unit: jc2-r3-directrows-20260911a-worker-stop.timer
+Will run service as unit: jc2-r3-directrows-20260911a-worker-stop.service
+active
+ORIGINAL_WORKER_TERMINATION_ARMED 2026-09-11 04:48:34.095547621 UTC
+[
+    {
+        "ID": "i-031b57c489417e1d1",
+        "State": "pending",
+        "PrivateIP": "172.30.0.218",
+        "Type": "c7i.2xlarge",
+        "Launched": "2026-09-11T04:48:33+00:00",
+        "Devices": []
+    }
+]
+{
+    "DisableApiTermination": {
+        "Value": false
+    },
+    "InstanceId": "i-031b57c489417e1d1"
+}
+[
+    {
+        "ID": "i-031b57c489417e1d1",
+        "State": "pending",
+        "Private": "172.30.0.218",
+        "Public": "54.224.118.205",
+        "Devices": [
+            {
+                "DeviceName": "/dev/sda1",
+                "Ebs": {
+                    "AttachTime": "2026-09-11T04:48:34+00:00",
+                    "DeleteOnTermination": false,
+                    "Status": "attaching",
+                    "VolumeId": "vol-0d500f329b88c6152",
+                    "EbsCardIndex": 0
+                }
+            }
+        ]
+    }
+]

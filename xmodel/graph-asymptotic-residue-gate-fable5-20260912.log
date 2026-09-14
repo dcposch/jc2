@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The `box/` entry was created by the launcher at 11:32:40Z, before my first action, and contains only its own prompt file. I wrote nothing there.
+
+**Outcome.** The FIRST review is sealed at `xmodel/graph-asymptotic-residue-gate-fable5-20260912.md` (11:40:56Z, before the 11:50Z reserve). All five parts are CONFIRMED on independent manual reconstruction, with no remaining GAP.
+
+**What was checked, by hand**
+
+- **A.** Substituting x=1/t, y=tv gives r_H = f(v)/t − c/t³, so the source curve is t²f(v)=c. Replacing c by t²f in p_H and q_H makes every h-term cancel and leaves p_H = t²(v+1)(v+2), q_H = t(4v+6). Two numeric spot checks agree.
+- **B.** Places over v=∞ exist on every component, since v is nonconstant there. Even m gives two smooth branches with e=1, including the globally split case (h = −9/8 makes f a perfect square). Odd m gives one ramified place with e=2. All three target coordinates have order ≥ 0 for m ≥ 2, so the map extends to a finite point, with exact orders listed.
+- **C.** x dy restricts to dv − (v/2)(f′/f)dv and descends to the v-line. The residue at the selected place is −e·f_{m−1}/(2f_m). The sign was cross-checked by the residue theorem on P¹, and the m=2 value −3/(2k) and the nonconstant-h mapping to −e·h_{d−1}/(2h_d) both hold.
+- **D.** A target-polynomial primitive differs from x dy by dF with F polynomial. Both the pulled-back target form and dF have zero residue at the place, contradicting C. The argument uses one place of one curve component only; no image normality, second branch, or target smoothness is needed. A pair in B_H with constant Jacobian yields such a primitive, so none exists at any degree.
+- **E.** For h = k·v^d the coefficient A vanishes, and x dy − (1−m/2)d(xy) is regular at all selected places for both parities. This retires only the local residue test and produces no pair.
+
+**Own controls added** beyond ROOT's: the residue-theorem sign check, the explicit split case with residue 4/3, and compatibility with the Astra module certificate (its 2-form β has dβ = 2dp∧dq∧dr ≠ 0, so it is not exact and yields no primitive).
+
+**Consequence for ROOT.** The quadratic conclusion for H = c + ky² with ck ≠ 0 is accepted via this shorter proof. Nothing is claimed for h=0, c=0, the f_{m−1}=0 stratum, general H, or JC2.
+
+**Custody.** All three prepins and postpins matched the expected SHA256 values. Writes used apply_patch only, in four bounded appends. No other file was created, no charge_basis line, no artifact_finalize, and no edits after the marker. ROOT owns caps and intake from here.
+DIVERT path=xmodel/graph-asymptotic-residue-gate-fable5-20260912.md status=CLEAN body_bytes=12557 body_sha256=cb4010f8c23a322890d87d9930c32efb9c56fdab1c7a0627ea13300aa2dc4fb2

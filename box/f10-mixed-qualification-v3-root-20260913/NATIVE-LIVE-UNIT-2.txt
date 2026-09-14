@@ -1,0 +1,20 @@
+Restart=no
+TimeoutStopUSec=5s
+RuntimeMaxUSec=9min 55s
+MainPID=1617
+ExecStart={ path=/usr/bin/bash ; argv[]=/usr/bin/bash /opt/jc2-mixed-20260912/meta/native-metadata.actual.sh ; ignore_errors=no ; start_time=[Sun 2026-09-13 00:59:59 UTC] ; stop_time=[n/a] ; pid=1617 ; code=(null) ; status=0/0 }
+ControlGroup=/system.slice/jc2-mixed-v3-native-20260913.service
+CPUQuotaPerSecUSec=800ms
+CPUQuotaPeriodUSec=100ms
+MemoryMax=1073741824
+MemorySwapMax=0
+TasksMax=64
+LimitFSIZE=4194304
+LimitAS=1073741824
+KillMode=control-group
+Id=jc2-mixed-v3-native-20260913.service
+LoadState=loaded
+ActiveState=active
+ActiveEnterTimestamp=Sun 2026-09-13 00:59:59 UTC
+InvocationID=ecf705731fbf43dba081890fa0eff338
+Sun Sep 13 01:00:13 UTC 2026

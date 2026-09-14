@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and published. Nothing further is needed from tools.
+
+**Verdict: CONFIRMED, with two hypothesis repairs made explicit.** The report is sealed at `xmodel/full-characteristic-uniform-gate-fable5-20260906.md` (body 14,218 bytes, seal verified against the receipt basis, `charge_basis=ABSENT` as intended), with compact notes and an evidence manifest in `box/full-characteristic-uniform-gate-20260906/`. Total host writes were about 28 KB.
+
+**What the audit found**
+
+- **Algebraic reverse theorem holds for every tower length and every n.** The composed U-derivative has exact total degree D_i+M_i, a nonzero Jacobian has degree at most n−M_s−2, and the endpoint M_s=n−2 forces a constant. The proof is Moh's Prop 3.2(3) (p159, proof p160–161) moved from y-degree to total degree, so it is not new but it is correct, and it needs no Keller or realizability assumption at chart points.
+- **Two hypotheses the appendix left implicit are load-bearing.** The exponents n_i must be declared as d_i/d_{i+1}; then the gcd identity is a consequence, not an extra assumption. Attainment must be in total degree: with y-degree rows and scalar leaders alone, the same proof gives only J∈k[x], which is exactly where Moh's J=x^l family lives.
+- **gcd arithmetic re-derived.** gcd(n,D_1,…,D_s)=d_{s+1}=gcd(d_s,2), so the final gcd is 1 or 2 depending on the parity of d_s. Even example: n=20, M=(−12,18) gives D=(12,30) and gcd 2. The unequal two-line top excludes J=0 via Arzhantsev–Petravchuk Lemmas 4–5; Lemma 4 is only cited there, Lemma 5 is proved.
+- **Printed necessity confirmed at its Keller-assumed, all-degree scope.** Props 2.2, 3.1, 3.2, 4.3, 4.5 and Lemma 2.1 were read as page images. Total degree equals y-degree for all T_i^ψ with i≤r comes from the p172 proof of Prop 4.5 (δ=−1), not from any statement. No finite census enters either direction.
+- **Controls pass.** Both clients reproduce degrees (66,55,145) and (72,63,227) with bounds (163,20,0) and (178,25,0). The dropped-endpoint example has J(F,G)=−6x²y of degree 3, saturating the bound, but lies outside Moh's setup since y∉k(x,F,G). The (xy)², xy control confirms the equal-multiplicity gap.
+
+**Cheapest usable consequence.** On the T_2 chart with placed tops, last-level attainment is exactly equivalent to the roughly 230/350 low-degree quadratic Jacobian rows plus J_0≠0, so a compiler should never build the T_3 block. The T_2 block's only free gift is the vanishing of Jacobian coefficients above degree 20/25. For D108, sibling towers of length 4 exist, so its equivalence is per row only.
+DIVERT path=xmodel/full-characteristic-uniform-gate-fable5-20260906.md status=CLEAN_SEALED body_bytes=14218 body_sha256=650ec46c880f4b1eafa55fa274361ce5cdb0a921c1428d5a1cbde2221772551c

@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. The blind report is sealed and I am idle; no further edits will be made.
+
+**Terminal custody SHA (whole file):** `2c9497c4cb96916a54c429fa4541664bc0b4273f33523cabe3b4fb928a168fa0`
+**ALL WRITERS IDLE:** 2026-09-12T09:39:29Z (reserve 10:05, hard 10:08, both met)
+
+**Custody facts**
+
+- All eleven snapshots were hashed at 09:30:35Z before any body read. Every value matched the invitation's expected pins. Post-pin re-hash after the whole readback was unchanged.
+- PINS and the common contract were read whole first. The other nine snapshots were read whole in fourteen bounded chunks, each closed on an end marker.
+- The only write is `xmodel/ideation-20260912T0920Z-fable5.md`. No box write, no artifact_finalize, no charge_basis line (no new exit price is asserted). The standalone `<!-- BODY-END -->` is the last line and appears exactly once.
+- The body is under the 2500-word cap excluding custody. It carries all required sections: ALL46 dispositions, proof and disproof rerank, one mechanism, one cross-avenue connection, two cards with quantity, cheapest test, outcomes and stop rule, a software proposal, a separate systems UPGRADE card, and continue/redesign/stop calls.
+
+**One procedural disclosure, also recorded in the report.** At 09:37Z a scratch write failed because the lane directory is read-only, and the same command contained an accidental empty `python3 -` invocation with no script, output, import or computation. It is disclosed in Section 0 for the launcher to judge.
+
+Per the contract, the report's ideas stay undisclosed here until all blind authors terminate.
+DIVERT path=xmodel/ideation-20260912T0920Z-fable5.md status=CLEAN body_bytes=14695 body_sha256=2c9497c4cb96916a54c429fa4541664bc0b4273f33523cabe3b4fb928a168fa0

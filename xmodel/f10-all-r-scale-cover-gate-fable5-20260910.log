@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Review complete and published at 09:35:46 UTC, well inside the 09:40:00 reserve. Nothing further is needed from the environment.
+
+**Verdict: all six charged items CONFIRMED; REFUTED none; GAP none.** The producer's uniform scale cover, A_r = 0 iff C_r = 0 for every r ≥ 2 over every B_nu-algebra, is proved from the accepted 16r/17zz/17zzd inputs.
+
+What I rederived by hand:
+
+- **A.** The weight-(1,r) top pieces satisfy mCD' − nC'D = −θ⁷ exactly, the five pivots mj − 3n are −(3r+2), −(6r+3), −(9r+4), −(12r+5), −(15r+6), and the two top slots [S^(6r+2)]E1_res, [S^(7r+2)]E0_res involve only leading coefficients. The quotient with ab inverted is 17zz's L, with the lower generators free over it. No component selection.
+- **B.** Substitution and chain rule give (2) with the s⁷ and U s⁵ targets exactly. All seven Ahat/Pihat terms have weight m; the hatted upper targets are s^(5−j)δ_(j+2), homogeneous of weight n − rj. The kernel compatibilities are s²[S¹]Q₃ and s⁵[S⁰]Q₀, zero by 16r, and z ↦ s² is injective on monomials, so they vanish in free z. Counts 6r+2, 13r+2, 13r+4 verified; the two top slots are the L rows and no slot lies above the 16r bounds.
+- **C.** Both low rows become w^(14r+4)(L0 − w³) and w^(12r+4)(L1 − U0w³) because 7q − (14r+4) = 3 and 5q + 2(r+1) − (12r+4) = 3, r-independent.
+- **D.** Inverting w is inverting L0 once w³ = L0, so the cover equals C_r[w]/(w³ − L0); both bases, both maps, ω = W t5 w^(8q), and nonreduced base change all check.
+- **E.** L1 − U0L0 is the z = 1 slice of zK1_0 − UK0_0, weight 8r+3; envelopes 7r+2 and 7r+3 with unique former z exponent.
+- **F.** All three controls are correct as stated. One wording imprecision: the dropped-row control calls L1 − U0L0 "independent", which no charged input proves (the 16r family only shows the E0 constant slot non-automatic). The row is retained, so no verdict changes. Minimal repair: "retained residual, redundancy unproved".
+
+Custody: all 10 inputs hashed at 09:26:06 before any body read, all matched, all read whole in single untruncated reads. The producer's seal recomputed exactly (8698 bytes, beab00a9…). Both owned paths were absent beforehand. Written via apply_patch only: the report at `xmodel/f10-all-r-scale-cover-gate-fable5-20260910.md` (unsealed, no Seal, no charge_basis, standalone marker last) and the custody table in the owned box directory. Every hex token in both files equals a pin. Zero scientific subprocesses ran; no OPEN raised; collisions EMPTY.
+DIVERT path=xmodel/f10-all-r-scale-cover-gate-fable5-20260910.md status=CLEAN body_bytes=11515 body_sha256=c9fcecfcae96fc5f4bc0b98478fcd18ba46df6e23aa6228487bf904fae61edac

@@ -1,0 +1,10 @@
+ring R=0,(c,Zc),dp;
+ideal I=64,Zc*c-1;
+ideal S=std(I);
+print("BEGIN_DIM"); print(dim(S)); print("END_DIM");
+print("BEGIN_GB"); print(S); print("END_GB");
+ideal EmptyControl=c,Zc*c-1;
+ideal PointControl=c-1,Zc*c-1;
+ideal RawControl=64;
+print("BEGIN_CONTROLS"); print(reduce(1,std(EmptyControl))); print(reduce(1,std(PointControl))); print(reduce(1,std(RawControl))); print("END_CONTROLS");
+quit;

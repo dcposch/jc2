@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/opt/jc2-r2-controls-ready-20260910T1620/science/check.py", line 416, in <module>
+    main()
+  File "/opt/jc2-r2-controls-ready-20260910T1620/science/check.py", line 412, in main
+    print(check_file(path))
+          ^^^^^^^^^^^^^^^^
+  File "/opt/jc2-r2-controls-ready-20260910T1620/science/check.py", line 329, in check_file
+    col = residual_pair(sub(oper(h, avar, vvar), tvar))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jc2-r2-controls-ready-20260910T1620/science/check.py", line 216, in residual_pair
+    raise ValueError('upper band residual')
+ValueError: upper band residual

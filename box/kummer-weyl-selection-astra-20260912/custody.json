@@ -1,0 +1,51 @@
+{
+  "task": "kummer-weyl-selection-astra-20260912",
+  "status": "COMPLETED / MANUAL UNREVIEWED",
+  "first_action_utc": "2026-09-12 02:00:03 UTC",
+  "publication_reserve_utc": "2026-09-12 02:18:00 UTC",
+  "hard_stop_utc": "2026-09-12 02:21:00 UTC",
+  "clock_reset": false,
+  "report_opened_utc": "2026-09-12 02:00:21 UTC",
+  "report_closed_utc": "2026-09-12 02:07:25 UTC",
+  "report_finalized_utc": "2026-09-12 02:07:25 UTC",
+  "verification_and_postpin_observation_utc": "2026-09-12 02:07:41 UTC",
+  "input_pins": {
+    "box/kummer-weyl-selection-astra-20260912/TASK.md": "c3a7b2bda57e8d47f544c81179e0a3aa152353c6f63854a59ed3d5f1ae81f4d7"
+  },
+  "owned_pins_excluding_this_custody": {
+    "box/kummer-weyl-selection-astra-20260912/PINS.json": "020ea040ed63892a5548fc8960a0488a266ff68e0a32049f63430b375efc5f13",
+    "xmodel/kummer-weyl-selection-astra-20260912.md": "a773517be4434f0a18e8fc80b35ac7cd739190fc98ff717a9557959a38557998",
+    "xmodel/kummer-weyl-selection-astra-20260912.md.artifact.json": "a04bb1e1205c05c2354bb710c6d9d760e5376af8b16822f98cb9998d6e3a6d91"
+  },
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "owner": "astra-geometry",
+    "lease_id": "c4f1939b155733b2f27cb41cad9b4d73",
+    "workflow": "begin, unsealed skeleton, bounded sections, WHOLE/postpins/collision/OPEN checks, marker LAST, close, finalize, expected verify",
+    "expected_manifest_sha256": "a04bb1e1205c05c2354bb710c6d9d760e5376af8b16822f98cb9998d6e3a6d91",
+    "verification": "VERIFIED with exact basis and expected manifest SHA",
+    "body_bytes": 8959,
+    "body_sha256": "eaa63ea184b52e06d00eb6bdeea5ee7ccf29354a915b8152169c443ed750ca69",
+    "file_bytes": 9291
+  },
+  "read_scope": {
+    "input": "Exactly one; matching hash BEFORE FRESH_WHOLE",
+    "partial": "WHOLE before sole final marker; no Pending sections",
+    "sealed_report": "WHOLE including Seal after expected verification",
+    "manifest": "WHOLE after expected verification",
+    "PINS": "WHOLE before seal; unchanged postpin",
+    "clipping": "NONE",
+    "prior_whole_reuse": "NONE"
+  },
+  "collisions": "Report, manifest, PINS and custody initially absent; report/manifest/custody absence reconfirmed 02:06:58 UTC before seal; no collision or shared edit",
+  "result_scope": "Explicit full-Weyl algebraic finite-monodromy module is B-torsion-free, Mellin rank2, has no delta-stable E-line and is de Rham acyclic. All specified first-delta-order operators are injective. No actual Keller source quotient is constructed or excluded abstractly; literal radical square relation is incompatible with polynomial Keller divisors.",
+  "standard_imports": "Regular-singular middle extensions are regular holonomic; exterior products preserve regular holonomicity. These terminology claims are labeled, and not used in the elementary no-line/rank proof.",
+  "control": "One-root first factor gives rank1 and a delta-line while retaining the other structural properties",
+  "OPEN": "None in the stated deductions subject to independent review and labeled standard regularity facts; no canonical OPEN created",
+  "quantity_cheapest_test": "Exact local-exponent, cyclicity and rational-line audit; manual planning15 minutes; computational/numerical wall UNMEASURED",
+  "scientific_execution": "NONE, including code/import/AST/syntax/test/CAS/dummy of any size",
+  "other_inputs_network_AWS_agents_protected_shared_access": "NONE",
+  "administrative_tools": "Scoped date/text/hash/absence checks, apply_patch and existing artifact transaction only",
+  "writers": "Report and PINS writers IDLE; this custody is the last authored object, followed only by readback/hash and terminal handoff",
+  "promotion_or_follow_on_authority": "NONE"
+}

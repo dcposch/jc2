@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete and published at 22:52 UTC, ahead of the 23:10 deadline. The report is at `xmodel/d125-minimal-receiver-gate-fable5-20260906.md` (1796 words, single standalone BODY-END as the last line, nothing after it, no seal, no charge_basis line).
+
+**Verdicts**
+
+- **Claim 1 (maps, counts): CONFIRMED.** S is a lattice bijection from the old (30,50) polygons onto the new (15,25) ones with literal coefficient carry. Jac S = 1/γ, Jac T4 = −γ², T4 = S∘T5, all checked symbolically and on random Laurent pairs. Six counts reproduced by explicit half-planes and Pick.
+- **Claim 2 (full-row transport): CONFIRMED.** I−J ≥ 1 for every nonzero row is an elementary identity, and a symbolic check shows the new rows are the old row polynomials renamed by (I,J)→(I−J−1,J), so the guarded ideals are equal.
+- **Claim 3 (faces): CONFIRMED.** H = π²S3 with κ = h(1) ∈ {1, ρ} for both conjugates, the unequal face bracket and its signs are exact, the (5,−7) weight of the face bracket equals the target weight so the three equations are necessary and complete, and the common faces are forced with scalars κ³, κ⁵ with nothing added.
+- **Claim 4 (normalizations): CONFIRMED.** c → c₀/(λPλQ), then τ^−36 under dilation with H fixed, μ → μ/τ², μ/τ, and c = 1 only over the algebraic closure.
+- **Root candidate: CONFIRMED as a necessary client with exact K̄-nonemptiness equivalence per case and κ-branch.** After a = 1 the unequal constants are exactly the root's values, c = −5/(9κ) is automatically nonzero, and imposing c = 1 as well would falsely empty the system. In the common cases μ = 1 leaves no dilation to normalize c, so the z·c−1 guard is required.
+- **GAPs:** reverse polynomial lift and Roy/Strinz attachment remain out of scope, as the producer declared. The κ constraint is imported from the source Euler ODE, and the equivalence is of K̄-points only. A same-field symmetry B → B + λA exists but is optional.
+
+**Controls.** The producer's script passes in normal and -O modes and both mutations fail in both modes, all well under caps. My own 40-check sympy script passes, including six negative controls. One sub-assertion of my own first run was wrong (I applied 1/κ = 3−κ at κ = 1); the check was corrected and the correction is recorded in the report and in the box custody file. Everything is retained under `box/d125-minimal-receiver-gate-fable5-20260906/`.
+DIVERT path=xmodel/d125-minimal-receiver-gate-fable5-20260906.md status=CLEAN body_bytes=12371 body_sha256=cd69c23885de119e4bd910992dad5ef695e7b12013168ec1c401546d8aa6ed8d

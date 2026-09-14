@@ -1,0 +1,45 @@
+{
+  "schema": "jc2-manual-custody/v1",
+  "task": "canonical-conductor-euler-residue-astra-20260912",
+  "status": "COMPLETE_MANUAL_UNREVIEWED",
+  "first_action_utc": "2026-09-12T13:56:07Z",
+  "original_reserve_utc": "2026-09-12T14:07:00Z",
+  "original_hard_stop_utc": "2026-09-12T14:10:00Z",
+  "opened_utc": "2026-09-12T13:57:24Z",
+  "closed_utc": "2026-09-12T14:02:49Z",
+  "finalized_utc": "2026-09-12T14:02:49Z",
+  "report_manifest_whole_expected_verify_postpins_completed_by_utc": "2026-09-12T14:03:06Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "lease_id": "ae05647150aa2f4cc839f65efc2634e2",
+  "expected_manifest_sha256": "c5e662487eda0a3d0c36eb7cb3c90d16c62455f87552916bc24613828da85e35",
+  "expected_manifest_verification": "VERIFIED",
+  "body_bytes": 9904,
+  "body_sha256": "3f7c5fc3a2e12b4ff8d77a14f384f6591aa7663ee4647736f9e631759058b8dd",
+  "inputs_pre_and_post_identical": [
+    {"path": "/home/ubuntu/jc2/COORDINATION.md", "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597", "read_scope": "FRESH_WHOLE before TASK; 806 lines in 1-220, 221-440, 441-660, 661-806"},
+    {"path": "/home/ubuntu/jc2/box/canonical-conductor-euler-residue-astra-20260912/TASK.md", "sha256": "07bf035a9135784fe42cbfa3f3c806c45104bee9c8f84a4474f65c0ace359c05", "read_scope": "FRESH_WHOLE after coordination; its optional open-plane calculation was read as task text but not adopted or verified"}
+  ],
+  "owned_outputs_excluding_this_custody": [
+    {"path": "/home/ubuntu/jc2/xmodel/canonical-conductor-euler-residue-astra-20260912.md", "sha256": "0b5aba8a38c17b17669c3c7f057b0d6c1457333c6d6923a65502a5371ffb5a66", "read_scope": "WHOLE completed private body before marker; WHOLE sealed report"},
+    {"path": "/home/ubuntu/jc2/xmodel/canonical-conductor-euler-residue-astra-20260912.md.artifact.json", "sha256": "c5e662487eda0a3d0c36eb7cb3c90d16c62455f87552916bc24613828da85e35", "read_scope": "WHOLE and exact expected-basis/manifest verification"},
+    {"path": "/home/ubuntu/jc2/box/canonical-conductor-euler-residue-astra-20260912/PINS.json", "sha256": "2164ac0bf7828cee24f57f846bb26745ecb93afca69d165b0a1df48181cdf85a", "read_scope": "WHOLE owned readback"}
+  ],
+  "exact_result": "I=P_W(f,g,H)R under the stated finite canonical Keller hypotheses, using explicitly stated finite canonical-module duality with its generic rational trace identification. At ordinary paired double points, the two E(c) values sum to zero. The exact conductor ideal cannot be (h_d-a)R with h_d nonconstant homogeneous of positive degree and a nonzero. Reduced-conductor valuation reduction is proved by the local derivative product formula.",
+  "controls": "Nodal normalization verifies the nonunit volume factor; local two-branch differential example has opposite nonzero values; identity Keller graph has unit conductor.",
+  "remaining_scope_gap": "No unit-conductor theorem, normality, conicality, arbitrary reduced-conductor or support-only exclusion, arbitrary multiple-branch trace, JC2 or novelty claim. Standard duality is an explicitly imported mathematical fact, not freshly proved or primary-audited. Same-model co-research, not FIRST.",
+  "checks": {
+    "initial_owned_outputs_absent": true,
+    "preseal_final_manifest_custody_absent": true,
+    "own_whole_before_marker": true,
+    "unique_marker_appended_last": true,
+    "final_report_manifest_whole": true,
+    "all_input_postpins_match": true,
+    "quantity_cheapest_test_and_scope_explicit": true,
+    "canonical_open_or_charge_basis": false,
+    "scientific_execution": false,
+    "network_worker_agents_or_protected_access": false,
+    "shared_old_or_task_edits": false,
+    "administrative_finalizer_only_interpreter_use": true
+  },
+  "completion_handshake": "Custody WHOLE/SHA, unchanged input/output vector and actual ALL WRITERS IDLE UTC follow in the terminal message. No further authored changes, promotion or follow-on authority."
+}

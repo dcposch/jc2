@@ -1,0 +1,11 @@
+run_log 2026-09-07T06:58:46Z (final, cleaned script)
+mode=normal mut=none rc=0 gate=
+mode=normal mut=--omit-243 rc=1 gate=GATE FAIL: D = 81*(gamma - beta*alpha + 5 alpha^2/9) exactly as polynomials
+mode=normal mut=--gamma-sign rc=1 gate=GATE FAIL: w=B_p3=-3*gamma at t=-3
+mode=normal mut=--claim-global-h rc=1 gate=GATE FAIL: boundary equation h cannot be added to the k-nonzero solver input
+mode=normal mut=--drop-tp3 rc=1 gate=GATE FAIL: [p^13]R_t^3 == 3t exactly, so H=A_p13/3+3=t+3
+mode=optimized mut=none rc=0 gate=
+mode=optimized mut=--omit-243 rc=1 gate=GATE FAIL: D = 81*(gamma - beta*alpha + 5 alpha^2/9) exactly as polynomials
+mode=optimized mut=--gamma-sign rc=1 gate=GATE FAIL: w=B_p3=-3*gamma at t=-3
+mode=optimized mut=--claim-global-h rc=1 gate=GATE FAIL: boundary equation h cannot be added to the k-nonzero solver input
+mode=optimized mut=--drop-tp3 rc=1 gate=GATE FAIL: [p^13]R_t^3 == 3t exactly, so H=A_p13/3+3=t+3

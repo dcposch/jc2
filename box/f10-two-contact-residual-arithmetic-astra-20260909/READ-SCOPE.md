@@ -1,0 +1,5 @@
+# Read scope
+
+First action2026-09-09T21:46:24.678762771UTC; controlling cap22:01:24.678762771UTC, first+15minutes earlier than22:03. Both targets absent before begin. ALL4 current science hashes matched before reads. New17y producer and gate read WHOLE; unchanged17w/16l prior WHOLE reads explicitly reused. No provenance, primary link, corpus, ledger, peer/current review, earlier unreviewed comparison or other scientific object read.
+
+Manual proof only: two integral exponents force normalized coefficients integral by a literal divided difference; B excludes residues0/1/2. Accepted17y negative-exponent result composed at exact scope. No mathematical subprocess, coefficient sample or emitted coefficient-code/data, arithmetic/CAS/import/compile/test, network/AWS/SSH/proc/agent or shared/frozen/protected write. Own documentary metadata and apply_patch, plus existing artifact_finalize publication. Remaining residue table explicit, no point/lift or uniform-source claim and no follow-on authority.

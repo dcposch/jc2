@@ -1,0 +1,34 @@
+{
+  "schema":"jc2-manual-custody/v1",
+  "task":"graph-collision-residue-astra-20260912",
+  "status":"TERMINAL_MANUAL_NONZERO_UNREVIEWED",
+  "first_action_utc":"2026-09-12T10:59:42Z",
+  "opened_utc":"2026-09-12T10:59:54Z",
+  "preseal_whole_postpins_collision_clock_utc":"2026-09-12T11:06:39Z",
+  "closed_utc":"2026-09-12T11:07:12Z",
+  "finalized_utc":"2026-09-12T11:07:12Z",
+  "final_whole_verify_clock_utc":"2026-09-12T11:07:27Z",
+  "publication_reserve_utc":"2026-09-12T11:20:00Z",
+  "hard_stop_utc":"2026-09-12T11:23:00Z",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_manifest_sha256":"4a9e3e1e0af3a5a5ea005f194f6292cf76f6b593153a63ff9baa1d84326b5a7a",
+  "expected_verify_status":"VERIFIED",
+  "result":"For Q(B)=8B^2+8B+1, full base residue is -(8B+5)/6; actual quadratic-cover residue is -(8B+5)/3. Both are nonzero. Actual collision maps and all-degree exactness obstruction derived manually. Fixed H=1 target subalgebra only; independent FIRST required before promotion.",
+  "input_count":3,
+  "instruction_count":1,
+  "pre_and_post_inputs":[
+    {"path":"/home/ubuntu/jc2/box/graph-collision-residue-astra-20260912/TASK.md","sha256":"c68c14d6bcc00b7dc8bbc8b10e784e5fc1b33d79a3cb2b4fecce035b8aa37407","read":"FRESH_WHOLE_INSTRUCTION"},
+    {"path":"/home/ubuntu/jc2/COORDINATION.md","sha256":"33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597","read":"REUSED_WHOLE_EXACT_BYTES_2026-09-12_05:51_TO_05:53"},
+    {"path":"/home/ubuntu/jc2/xmodel/constant-graph-subalgebra-control-astra-20260912.md","sha256":"590609a7a6f52f72e940a01604c5e6f0c1444277c54bfbb9c69e0fa0c55fd679","read":"REUSED_WHOLE_EXACT_BYTES_2026-09-12_10:38"},
+    {"path":"/home/ubuntu/jc2/box/graph-collision-residue-astra-20260912/ROOT-CANDIDATE.md","sha256":"1718d430826d3425f9e0acbf02e9c6f1d9b9658c62bf72253c780ea33779173d","read":"FRESH_WHOLE_UNREVIEWED_CANDIDATE"}
+  ],
+  "owned_excluding_custody":[
+    {"path":"/home/ubuntu/jc2/xmodel/graph-collision-residue-astra-20260912.md","sha256":"ac8456a4358484631ececeb4480684adf8e017d48f9713260e703844d7458e9d","read":"WHOLE_FINAL"},
+    {"path":"/home/ubuntu/jc2/xmodel/graph-collision-residue-astra-20260912.md.artifact.json","sha256":"4a9e3e1e0af3a5a5ea005f194f6292cf76f6b593153a63ff9baa1d84326b5a7a","read":"WHOLE_FINAL"},
+    {"path":"/home/ubuntu/jc2/box/graph-collision-residue-astra-20260912/PINS.json","sha256":"4794271e1f9c20a2214ee918444c3bd488bf0389c7eb3c6c053b352e72f007ee","read":"WHOLE_FINAL"},
+    {"path":"/home/ubuntu/jc2/box/graph-collision-residue-astra-20260912/READ-SCOPE.md","sha256":"809b22a7cf15bf386ab32c055c16c97390ff6072a2d2cda15d42676d9c696a84","read":"WHOLE_FINAL"}
+  ],
+  "quantity_and_controls":"One specified quadratic pole pair, treated together. Full K expansion and all simple-pole contributions retained; explicit dlog contribution alone is not the answer. Nonzero quadratic norms and ramification index2 checked. No other poles, families or degree tests.",
+  "scope":"Manual producer-level all-degree obstruction for the fixed H=1 subalgebra. No global JC2, general H, actual counterexample, runtime, scientific execution, code, extra source, network/worker, protected/corpus/shared edit or agent.",
+  "closure":"Complete own WHOLE and four unchanged postpins, quantity/scope/collision check before marker LAST; final WHOLE and expected verification passed. No canonical OPEN or successor. Custody is last authored file and excludes itself; its WHOLE/hash and actual all-writers-idle UTC are supplied at terminal handoff."
+}

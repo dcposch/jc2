@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/opt/jc2-r3-necessaryrows-20260911a/science/produce.py", line 369, in <module>
+    main()
+  File "/opt/jc2-r3-necessaryrows-20260911a/science/produce.py", line 343, in main
+    meta=authorize('produce')
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jc2-r3-necessaryrows-20260911a/science/authority.py", line 95, in authorize
+    raise ValueError('registered limits/source inventory')
+ValueError: registered limits/source inventory

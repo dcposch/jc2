@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report complete at 08:17 UTC, inside the 08:30 hard stop. All writers are IDLE; nothing follows the BODY-END line, and no Seal or charge_basis line was authored.
+
+**Report path:** `xmodel/f9-all-exponents-local-gate-fable5-20260909.md` (SHA-256 f3168571…7798da), with own box `box/f9-all-exponents-local-gate-fable5-20260909/` holding the charged-input hash manifest and a one-line summary.
+
+**Custody checks.** Both charged objects were read whole from the lane inputs. The report file hash matched the charged producer SHA and the artifact JSON matched the charged transaction hash. Only cat, ls and sha256sum were used on inputs. No CAS, Python, enumeration, checker, AWS, agent, blind, peer report or external source was touched.
+
+**Scoped verdicts, each with my own factored derivation and a recorded strongest attempted failure:**
+
+- **A CONFIRMED.** The order-1..7 complement construction is well defined because multiplication by mK^(m−1) is injective and its image is exactly the K^(m−1)-divisible subspace. The order-7 scalar R_0 plays the role of the missing T^(m−1) term. Orders above 7 fail K^(m−1)-divisibility by degree, and scalar K-powers occur only at orders 7(m−i), removed in increasing order. The m=2 case and the F=0 contradiction (f_1'(R_1) of degree 7(m−1) dividing 2ca³) both check.
+- **B CONFIRMED.** Only minimality of δ is used. Integer δ gives j ≤ 7L−1 via the scalar-power exclusion; half-integer δ gives 3(t+1)+2(2t+1) = 7δ+3/2. Margins (7) and (8) rederived uniformly; the tightest instance I found is m=2, n=3, δ=0 with margin 3/4, still strict.
+- **C CONFIRMED.** Sign of the target, unit R_y at every simple line, the Morse coordinate at the double lines with quadratic coefficient −2εX^5 recomputed, both Euler lemmas rederived including t=0, the e=1 and e=2 UFD conclusions, and the coefficient-of-Y^(2m−2) reason the e=2 lemma needs deg U ≤ 2m−3.
+- **D CONFIRMED.** Anchor at f_d, η bounds, whole-B coefficient orders ≥ 1 giving tη ≤ ν−1, the positive Euler factor, the chain-rule target at N+η, and monicity at nη.
+- **E CONFIRMED.** Equality κ=2r enters only through b_0 ≠ 0, which the e=2 lemma allows; ξ=0 is the b_0=0 case; (13) follows from (7).
+- **F CONFIRMED.** Convergence of every regrouped sum, anchors for even and odd d, inequality (15) rederived, η > κ with attained minimum, η ≤ j/L, η < 7, η < j via L ≥ 3/2, the two-sheet tuple, and monicity of both P_±.
+- **G CONFIRMED.** Global-minimum argument excludes returning shifts without any per-shift coefficient bound; y_z has exact order −κ/2 so the target sits at N−κ/2+η; margin (20) is strict through κ < j/L; the e=1 lemma on both sheets kills U_+ and U_−. No ordG ≥ 2j theorem is used.
+- **H CONFIRMED** as a formal-field theorem. The weighted corollary follows by the injective substitution g=a², p=b with bracket 2a·cg = 2ca³. All five controls verified by hand. Scope stated: nothing about nonreduced rings, positive characteristic, noncoprime exponents, other K, actual Keller sources or global JC2, and no source bridge is supplied.
+
+**Overall:** the theorem is fully proved as written, modulo standard formal facts (formal inverse function theorem, one-variable Morse coordinate, Puiseux extensions, formal chain rule, UFD property of E[Z]), each checked to apply. No failed implication was found, so no countercontrol or repair hypothesis is owed. One presentational note only: the remark that the constants of E are k is never needed.
+
+No downstream task or acceptance is authorized by this verdict alone.
+DIVERT path=xmodel/f9-all-exponents-local-gate-fable5-20260909.md status=CLEAN body_bytes=16360 body_sha256=f31685717a21b5740582a9446f246a066d609f450867c2ed7dd5d27b1c7798da

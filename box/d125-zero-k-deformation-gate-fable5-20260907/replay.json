@@ -1,0 +1,76 @@
+{
+ "caps": "30wall/25CPU,512MiB",
+ "runs": [
+  {
+   "mutation": null,
+   "optimized": false,
+   "returncode": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "62d91f5ad2e8c1aa497cbc6fc08d5601ff54bb9ad5ed70345f401f3b0224e903"
+  },
+  {
+   "mutation": "--mutate-R-coefficient",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "eed\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: phi(R) has a negative v power\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-second-factor",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "se ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: order-two coefficient equals [R,E] with factor -1/3\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-face",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "t ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: A max-weight slots are exactly (2,1),(9,6)\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-shear",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": " need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: s_t = [p^15]R^5 closed form\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": null,
+   "optimized": true,
+   "returncode": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "62d91f5ad2e8c1aa497cbc6fc08d5601ff54bb9ad5ed70345f401f3b0224e903"
+  },
+  {
+   "mutation": "--mutate-R-coefficient",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "eed\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: phi(R) has a negative v power\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-second-factor",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "se ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: order-two coefficient equals [R,E] with factor -1/3\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-face",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "t ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: A max-weight slots are exactly (2,1),(9,6)\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-shear",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": " need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: s_t = [p^15]R^5 closed form\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "status": "PASS"
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "f10-retained-runtime-input-pins/v1",
+  "status": "postterminal-current",
+  "inputs": [
+    {
+      "sha256": "f8a34d1c96be944fa28f8d5c5b7d60ee9ad093d7a81634c34b404524b7949435",
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-retained-runtime-gate-fable5-20260909.md"
+    },
+    {
+      "sha256": "3ebc924b86a9763a36e69485717403a3fd1108210880351f1245c0afe01d64c6",
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-retained-runtime-code-astra-20260909.md"
+    },
+    {
+      "sha256": "0e99afc1371b822fd96ddc84183fc83a958a1c6d60a7b6432b1c7a5e1a2283b7",
+      "path": "/home/ubuntu/jc2/box/f10-r1-retained-runtime-code-astra-20260909/VALIDATION.md"
+    },
+    {
+      "sha256": "2116bd168cca7bdf902b692471a2005e444f111dcddbe593a5d30480aaaadf70",
+      "path": "/home/ubuntu/jc2/box/f10-r1-retained-runtime-code-astra-20260909/dispatch_batch.py"
+    },
+    {
+      "sha256": "3876ff5a6fd2935211fcafadf2c0fb9877ff0d7f3667338bb7f50cd8836d7316",
+      "path": "/home/ubuntu/jc2/box/f10-r1-retained-runtime-code-astra-20260909/semantic_controls.py"
+    },
+    {
+      "sha256": "ff5d08c8b8f0ec30b071893cc9cf99db3a3a56a30bb54d653a19c0a8dd5df869",
+      "path": "/home/ubuntu/jc2/box/f10-r1-retained-runtime-code-astra-20260909/transformer.py"
+    },
+    {
+      "sha256": "7d80b261df626fa84ab72d7ff06e3c37e1ba6f6e98e40d6e7d2142d2397aacda",
+      "path": "/home/ubuntu/jc2/box/f10-r1-retained-runtime-code-astra-20260909/checker.py"
+    },
+    {
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6",
+      "path": "/home/ubuntu/jc2/box/f10-r1-retained-runtime-code-astra-20260909/execution_gate.py"
+    },
+    {
+      "sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7",
+      "path": "/home/ubuntu/jc2/box/f10-r1-retained-runtime-code-astra-20260909/probe.py"
+    },
+    {
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "path": "/home/ubuntu/jc2/ops/run_capped.py"
+    },
+    {
+      "sha256": "168bdfd3a791f24a6631de66ae4e71c3f209ee9eb0d21fc466f9aa802f5ad576",
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/exact.json"
+    },
+    {
+      "sha256": "02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a",
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/admissibility.md"
+    },
+    {
+      "sha256": "f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34",
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/frontier.json"
+    },
+    {
+      "sha256": "f2e27295711c9cec01d72874b5917a134d8a2f662774812212cdf7e6f3270cdc",
+      "path": "/home/ubuntu/jc2/ops/FLEET.md"
+    },
+    {
+      "sha256": "a9da94d341a691942e9d6a6a6d90d97008b2d7baa1cadb2592481cf6b9c11c4c",
+      "path": "/home/ubuntu/jc2/ops/fleet/fleet.sh"
+    }
+  ],
+  "read_scope": {
+    "fresh_whole": [
+      "accepted17g runtime gate",
+      "ops/FLEET.md",
+      "ops/fleet/fleet.sh"
+    ],
+    "verified_byte_identical_whole_reuse": [
+      "owned runtime preparation report",
+      "VALIDATION.md",
+      "six frozen runtime source files"
+    ],
+    "instrument": "CAPRUN reused unchanged; canonical argv hash definition lines179-188 read locally at documentary scope",
+    "data": "exact.json mathematical body processed only on authorized worker; locally hashed/transferred, not replayed; no whole local coefficient-body read claim",
+    "other": "admissibility/frontier pinned and staged unchanged; no new applicability theorem/import"
+  }
+}

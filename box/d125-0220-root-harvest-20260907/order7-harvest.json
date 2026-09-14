@@ -1,0 +1,79 @@
+{
+  "helper_sha256": "30808df1d839ef051a455dfc948c4791034e536d5cf5b646a8abb21aea3b5704",
+  "pins": 14,
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "rc": 0,
+      "stderr_tail": "",
+      "stdout_sha256": "d1cb0a54485d376a554885f8ed34ddcc735c37e2147d59b74a01ee227ef4b486"
+    },
+    {
+      "mutation": "--mutate-omit-moving-derivative",
+      "optimized": false,
+      "rc": 1,
+      "stderr_tail": "racket(A,B))=={},'actual moving-reference order-seven identity')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual moving-reference order-seven identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-double-factor",
+      "optimized": false,
+      "rc": 1,
+      "stderr_tail": "racket(A,B))=={},'actual moving-reference order-seven identity')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual moving-reference order-seven identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-even-kernel",
+      "optimized": false,
+      "rc": 1,
+      "stderr_tail": "((i+j)%2==1 for i,j,k in kernel),'even double-pole kernel is forbidden')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: even double-pole kernel is forbidden\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-point-relation",
+      "optimized": false,
+      "rc": 1,
+      "stderr_tail": "ne 69, in check\n    need(reduce_point(Tat)=={},'point must lie on literal T=0')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: point must lie on literal T=0\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "rc": 0,
+      "stderr_tail": "",
+      "stdout_sha256": "d1cb0a54485d376a554885f8ed34ddcc735c37e2147d59b74a01ee227ef4b486"
+    },
+    {
+      "mutation": "--mutate-omit-moving-derivative",
+      "optimized": true,
+      "rc": 1,
+      "stderr_tail": "racket(A,B))=={},'actual moving-reference order-seven identity')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual moving-reference order-seven identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-double-factor",
+      "optimized": true,
+      "rc": 1,
+      "stderr_tail": "racket(A,B))=={},'actual moving-reference order-seven identity')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual moving-reference order-seven identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-even-kernel",
+      "optimized": true,
+      "rc": 1,
+      "stderr_tail": "((i+j)%2==1 for i,j,k in kernel),'even double-pole kernel is forbidden')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: even double-pole kernel is forbidden\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-point-relation",
+      "optimized": true,
+      "rc": 1,
+      "stderr_tail": "ne 69, in check\n    need(reduce_point(Tat)=={},'point must lie on literal T=0')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: point must lie on literal T=0\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "small formal moving-reference identities and finite unit certificate; not whole source or general theorem verification",
+  "status": "PASS",
+  "wall_seconds": 2.768686619005166
+}

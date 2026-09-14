@@ -1,0 +1,234 @@
+{
+  "branch": "delta2",
+  "counts": {
+    "inner_free": 530,
+    "outer_free": 961,
+    "prefix_rows": 18
+  },
+  "custody": {
+    "all_hashes_match": true,
+    "count": 8,
+    "frozen_dir": "/home/ubuntu/jc2/box/g9966-d2-replay-20260905/frozen",
+    "lane_inputs_dir_on_receipt": "/tmp/jc2-lane.PYs9rw/inputs",
+    "manifest_sha256": "3feb42c6d7f0657e5fd8f85864bd570cf5ad27a5f023b96aee5613b38f9d3e90",
+    "original_engine_sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9",
+    "receipt": "/home/ubuntu/jc2/box/g9966-d2-replay-20260905/receipt.run.v2",
+    "replay_engine_sha256": "b276610d3d7ac98d103c27308f8ff06691df8048bb0fa32cd9f21a35c11dd1e1"
+  },
+  "major": {
+    "centre": {
+      "localization": "rho!=0",
+      "parameters": [
+        "rho",
+        "u"
+      ]
+    },
+    "coordinate_change": "K2c low-q coordinates have unit leading C3/C2 columns; q<=21 is the chart, not a D2 floor",
+    "d2_floor_freed_K2c_count": 381,
+    "equality_face_kept": true,
+    "h2_D1_extended_below_W97": false,
+    "h2_D1_scope": "original W=97,98 rows only; newly freed W<97 coordinates remain unknowns",
+    "h3_control": {
+      "target": "t^9*zeta^2*(zeta+3*rho)",
+      "verified": true
+    },
+    "h3_face": {
+      "face_row_count": 18,
+      "max_power": 9,
+      "note": "face equations on the enlarged h3; original 21 still match after extras=0",
+      "target": "t^9*zeta^2*(zeta+3*rho)"
+    },
+    "h3_floor_freed": [
+      "Hc_1_0",
+      "Hc_1_1",
+      "Hc_1_2",
+      "Hc_1_3",
+      "Hc_1_4",
+      "Hc_1_5",
+      "Hc_1_6",
+      "Hc_1_7",
+      "Hc_2_0",
+      "Hc_2_1",
+      "Hc_2_2",
+      "Hc_2_3",
+      "Hc_2_4",
+      "Hc_2_5",
+      "Hc_2_6",
+      "Hc_3_0",
+      "Hc_3_1",
+      "Hc_3_2",
+      "Hc_3_3",
+      "Hc_3_4",
+      "Hc_3_5",
+      "Hc_4_0",
+      "Hc_4_1",
+      "Hc_4_2",
+      "Hc_4_3",
+      "Hc_4_4",
+      "Hc_4_5",
+      "Hc_5_0",
+      "Hc_5_1",
+      "Hc_5_2",
+      "Hc_5_3",
+      "Hc_5_4",
+      "Hc_6_0",
+      "Hc_6_1",
+      "Hc_6_2",
+      "Hc_6_3",
+      "Hc_7_0",
+      "Hc_7_1",
+      "Hc_7_2",
+      "Hc_8_0",
+      "Hc_8_1",
+      "Hc_8_2",
+      "Hc_9_0",
+      "Hc_9_1",
+      "Hc_10_0"
+    ],
+    "h3_free": [
+      "Hc_10_1",
+      "Hc_11_0",
+      "Hc_7_4",
+      "rho",
+      "u"
+    ],
+    "h3_template": {
+      "cap": "11-r (G_1 at d=1, SOUND)",
+      "face": "z^8 w^3",
+      "floor_freed_count": 45,
+      "h3_template_variables": 66,
+      "old_vmin_formula": "ceil((33-3r)/4)",
+      "surviving_original_count": 21
+    },
+    "inner_dimension_including_centres": 530,
+    "major_h2_D1_pivots": [
+      [
+        "h2_D1_W97_k0",
+        "K2c_11_16",
+        "1"
+      ],
+      [
+        "h2_D1_W97_k1",
+        "K2c_15_13",
+        "-3"
+      ],
+      [
+        "h2_D1_W97_k2",
+        "K2c_19_10",
+        "9"
+      ],
+      [
+        "h2_D1_W97_k3",
+        "K2c_23_7",
+        "-27"
+      ],
+      [
+        "h2_D1_W97_k4",
+        "K2c_27_4",
+        "81"
+      ],
+      [
+        "h2_D1_W98_k0",
+        "K2c_10_17",
+        "1"
+      ],
+      [
+        "h2_D1_W98_k1",
+        "K2c_14_14",
+        "-3"
+      ]
+    ],
+    "major_output_coordinate_count_before_D1": 487,
+    "major_output_free_count": 480,
+    "original_major_output_coordinate_count_before_D1": 106
+  },
+  "outer_D1_offsets_pivot_counts": [
+    41
+  ],
+  "outer_major": {
+    "D1_cumulative_pivots": 41,
+    "D1_offsets_match_original": true,
+    "basis": "K_Q=t^D Q(t^-1,w/t)=sum c_(r,q)t^r(w-1)^q",
+    "outer_ambient": 6600,
+    "outer_free_count": 961,
+    "preblock": {
+      "Qstar_pivots": 0,
+      "below_W0_D1_Qstar_pivots": 5598,
+      "below_W0_by_block": [
+        {
+          "Qstar_pivots": 1386,
+          "W0": 189,
+          "block": "A2",
+          "raw_rows": 3934
+        },
+        {
+          "Qstar_pivots": 2442,
+          "W0": 285,
+          "block": "A3",
+          "raw_rows": 7034
+        },
+        {
+          "Qstar_pivots": 384,
+          "W0": 93,
+          "block": "B1",
+          "raw_rows": 1032
+        },
+        {
+          "Qstar_pivots": 1386,
+          "W0": 189,
+          "block": "B2",
+          "raw_rows": 3934
+        }
+      ],
+      "imposed_D2_coordinate_rows": 0,
+      "original_D2_unit_rows": 5598,
+      "redundant_D1_labels_on_deleted_coordinates": 0,
+      "repair": "D2 unit rows dropped; SOUND D1 imposed on the previously deleted slots instead",
+      "slots_a_center_admits": 0,
+      "surviving_coordinates": 6600
+    },
+    "weight": "W=3*r+4*q"
+  },
+  "prefix_row_labels": [
+    "h3_face_local1_coord0",
+    "h3_face_local2_coord0",
+    "h3_face_local3_coord0",
+    "h3_face_local4_coord0",
+    "h3_face_local4_coord1",
+    "h3_face_local5_coord0",
+    "h3_face_local5_coord1",
+    "h3_face_local6_coord0",
+    "h3_face_local6_coord1",
+    "h3_face_local7_coord0",
+    "h3_face_local7_coord1",
+    "h3_face_local7_coord2",
+    "h3_face_local8_coord0",
+    "h3_face_local8_coord1",
+    "h3_face_local8_coord2",
+    "h3_face_local9_coord0",
+    "h3_face_local9_coord1",
+    "h3_face_local9_coord2"
+  ],
+  "resources": {
+    "peak_rss_kib": 158740,
+    "wall_seconds": 201.62185596697964
+  },
+  "stage_spec": {
+    "D1_offset": 0,
+    "jacobian": {
+      "degree": 162,
+      "t_power": 1,
+      "w_powers": [
+        27
+      ]
+    },
+    "pole_exponents": {
+      "F": -77,
+      "G": -50
+    },
+    "pole_local_power": 4,
+    "stage": 0
+  },
+  "type": "INVENTORY-ONLY D2-FLOOR REPLAY / FALLACY-v2",
+  "verdict": "INVENTORY"
+}

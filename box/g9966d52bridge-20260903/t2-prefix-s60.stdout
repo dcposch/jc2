@@ -1,0 +1,54 @@
+{
+  "arithmetic": {
+    "localized_terms": 15121,
+    "products_considered": 50020,
+    "products_retained": 3958
+  },
+  "counting": {
+    "ambient_stage7_plus_38": 907,
+    "c1_slice_upper_bound_before_J_localization": 903,
+    "dimension_upper_bound_before_J_localization": 904,
+    "warning": "A necessary-prefix bound only; localization may empty the locus and cannot increase dimension."
+  },
+  "custody": {
+    "all_match": true,
+    "count": 21
+  },
+  "endpoint": {
+    "joint_all_zero": true,
+    "stage7_free": 869
+  },
+  "pivots": {
+    "all_coefficients_Qstar": true,
+    "ledger": "box/g9966d52bridge-20260903/t2-prefix-s60-pivots.jsonl",
+    "ledger_sha256": "5246462418efd48405b2a00885a78effc9f88dfefea9930b145db2492685dd87",
+    "localized_variable_excluded": "c",
+    "variables": [
+      "B1c_7_19",
+      "B1c_8_18",
+      "B1c_9_17"
+    ]
+  },
+  "resources": {
+    "max_rss_kib": 326220,
+    "wall_seconds": 608.826
+  },
+  "rows": {
+    "Qstar_pivots": 3,
+    "first": "T2_s56_pi0",
+    "input_count": 3,
+    "input_sha256": "8433f7eb9d7ed5727c00e4318fcbdcc43cbf11155e7eb66ba8605a8dad91081b",
+    "last": "T2_s60_pi0",
+    "residual_count": 0,
+    "residual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "zero_or_dependent": 0
+  },
+  "scope": {
+    "Tschirnhausen_columns_present": false,
+    "cap": 60,
+    "logical_strength": "necessary prefix only",
+    "normalized_expression": "s^396*T2"
+  },
+  "status": "COMPLETE[LOW-PREFIX-QSTAR]",
+  "type": "EXACT-Q LOW T2 PREFIX / QSTAR ONLY"
+}

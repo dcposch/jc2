@@ -1,0 +1,20 @@
+< "/home/ubuntu/jc2/box/k16astra-20260905/t2m_rows.sing";
+option(redSB);
+proc must(int ok,string label) { if(!ok) { print("FAIL "+label); quit; } }
+ideal Iplus=T1,T2,T3;
+ideal Jtail=T2,T3;
+ideal GI=std(Iplus);
+must(size(reduce(Iplus,GI))==0,"PLUS_GENERATORS");
+print("IPLUS_DIM "+string(dim(GI))); print("IPLUS_LENGTH "+string(vdim(GI)));
+poly remtau=reduce(tau,GI);
+print("TAU_NF_TERMS "+string(size(remtau))); print("TAU_NF "+string(remtau));
+print("FULL_T0_NONZERO "+string(reduce(T0,GI)!=0));
+int i; for(i=1;i<=4;i++) {print("TAU_POWER "+string(i)+" ZERO "+string(reduce(tau^i,GI)==0));}
+poly probe; for(i=1;i<=nvars(basering);i++) { probe=reduce(tau*var(i),GI); print("TAU_TIMES "+string(var(i))+" ZERO "+string(probe==0)); }
+write("/home/ubuntu/jc2/box/k16astra-20260905/t2m_plus_basis.txt",string(GI));
+print("IPLUS_COMPLETE");
+ideal GJ=std(Jtail);
+must(size(reduce(Jtail,GJ))==0,"TAIL_GENERATORS");
+print("TAIL_DIM "+string(dim(GJ))); print("TAIL_LENGTH "+string(vdim(GJ)));
+for(i=1;i<=4;i++) {print("TAIL_TAU_POWER "+string(i)+" ZERO "+string(reduce(tau^i,GJ)==0));}
+print("TAIL_COMPLETE"); print("CHECKS_COMPLETE"); quit;

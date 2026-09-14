@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 10:50 UTC, sixteen minutes before the hard stop. All five input pins matched in the stated order before any read.
+
+**Verdicts: A, B, C, D, E, F all CONFIRMED.** No failed implication was found, and every parent conclusion is applied to the identical object it was proved for.
+
+What I rederived by hand for each target:
+
+- **A.** The 16k composite with κμ=λ gives u=κ³μ(g³p+g²)−r0, so U=g²(1+gp), V=g⁻¹, inverse g=V⁻¹, p=V³U−V, determinant +g, same extension k(μ). Under the homogeneous inverse the source coordinates become U/s⁷ and s²V, and the identity sits in k[U,V^±,s] ∩ k[U,V,s^±]=k[U,V,s], so no degree bound on P is assumed.
+- **B.** The V-adic expansion of p·z_s³, −s³z_s², us⁵z_s gives V⁻² terms that cancel exactly and a total pole −(u+h)s⁵/V, with no other source of negative V powers. The s⁵ residue −m(u+h)(−U)^{m−1} of A_s must vanish by A, since remainder (order ≥9) and scalar corrections (≥14) cannot reach s⁵ and substitution never lowers s-order. Hence u=−h and the entire R reverses to a polynomial.
+- **C.** From r(3i−j)+i≤3r+1 and ≤5r+2 the t-degrees are 3 and 5 with unique slots (1,0),(2,1), leaders C0(R−v0), D0(R−v0)², C0D0=c from the ODE at T=0. The linear term of Δ·Π/t cancels, so U is polynomial, and the prime-t argument gives k[R,t,Δ⁻¹]∩k[R,t,t⁻¹]=k[R,t] along the whole divisor.
+- **D.** Determinants +1 and −z give [Â,B̂]=+cΔ. The independent t⁷ coefficient 5C0D0S²−6C0D0S²=−cS² matches. Weights (1,r) give deg A_k≤m−rk, deg B_k≤n−rk, the monomial map (i,j)↦(i,3i−j) is injective, leading forms Rt³C(R^r/t), R²t⁵D(R^r/t), monic R^m, R^n, ordinary degrees m,n.
+- **E.** Both inclusions of k[g,p]∩k[U,V]=k[p,z]∩k[R,t] hold without the degree bounds. The reverse uses t=−V/(1−VE) with denominator 1 mod V. Source bracket recovery and the absence of automorphism or nilpotent claims are as stated.
+- **F.** No special value of u, ℓ, v0 or R=v0 is divided by anywhere. The z, p, t and constant-target controls all behave as claimed. The outstanding obligation is retained, not new: (18) negative-z vanishing, support and both faces, canonical coalesced contact compatibility, and the 16k source hypotheses.
+
+Written: `xmodel/f10-source-polynomial-compression-gate-fable5-20260909.md` (15236 bytes, ends with the standalone BODY-END marker, no authored seal, no exit-price line) and the box directory with PINS.sha256, OWN_REPORT.sha256 and a README. Only hashing, listing, cat, sed, grep and printf were run. Nothing was committed and no other file was touched.
+DIVERT path=xmodel/f10-source-polynomial-compression-gate-fable5-20260909.md status=CLEAN body_bytes=15236 body_sha256=651dafb531955d76a579d9aace450856132a9733d2a667a2d79222cd7c025bf9

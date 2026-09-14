@@ -1,0 +1,15 @@
+< "/home/ubuntu/jc2/box/k16astra-20260905/t8p_rows.sing";
+ideal src=T8,T9,T10,T11,T12,T13,T14,T15;
+ring rcone=32003,(b3,b4,u2,u3,u4,u5,u6,u7),wp(9,1,2,3,4,5,6,7);
+ideal I=imap(rres,src);
+int i; for(i=1;i<=size(I);i++) { if(!homog(I[i])) { print("FAIL HOMOG"); quit; } }
+print("CONE_START");
+intvec HH=1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-1,-1,-1,-1,-1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,1,1,2,2,3,3,4,3,3,2,2,1,1,0,0,0,0,0,0,0,-1,-1,-2,-3,-4,-5,-6,-6,-6,-6,-5,-4,-3,-2,-1,-1,0,0,0,0,0,1,1,2,3,5,5,7,7,8,7,7,5,5,3,2,1,1,0,0,0,0,0,-1,-1,-2,-3,-4,-5,-6,-6,-6,-6,-5,-4,-3,-2,-1,-1,0,0,0,0,0,0,0,1,1,2,2,3,3,4,3,3,2,2,1,1,0,0,0,0,0,0,0,0,0,0,0,-1,-1,-1,-1,-1,-1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1;
+intvec ww=9,1,2,3,4,5,6,7;
+ideal G=std(I,HH,ww);
+print("GB_DONE"); print("CONE_DIM "+string(dim(G))); print("CONE_VDIM "+string(vdim(G)));
+print("INPUT_NF_ZERO "+string(size(reduce(I,G))==0));
+print("BASIS_SIZE "+string(size(G)));
+ideal LM=lead(G); print("LEAD_DIM "+string(dim(std(LM))));
+write("/home/ubuntu/jc2/box/k16astra-20260905/t8p_tailhint_leaders.txt",string(LM));
+print("CONE_COMPLETE");quit;

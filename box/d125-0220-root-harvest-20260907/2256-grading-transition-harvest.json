@@ -1,0 +1,298 @@
+{
+  "adaptation": "Replace cdir full high-degree monomial images with scalar +/-1 coefficient counting; remaining full images have j<=5. Two frozen-input paths restored. Frozen bytes unchanged.",
+  "corrections": [
+    "Include i>=0 in polygon halfplanes",
+    "fixed total face has10 odd lattice slots; with inner(2,1), fixed odd11. Reviewer prose says9 on total face incorrectly; independent witness is correct",
+    "No abstract quotient-grading no-go follows",
+    "Mutation stderr hashes are path-dependent"
+  ],
+  "pins": {
+    "box/d125-minimal-receiver-client-preflight-20260906/client.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "box/d125-nonnegative-grading-discriminator-20260907/check.py": "7ff4ca5dd3e38bdf8ef6623624774223f9f8594324d97c34db381e16492671de",
+    "box/d125-nonnegative-grading-discriminator-20260907/custody.json": "6682fc5b0587cb407102480e41e855f37a8ea62fcd83bbefd515c25e80abf639",
+    "box/d125-nonnegative-grading-discriminator-20260907/replay.json": "c454d950b7f7e81440c2999328840f38ad3e54df32b82acb1791e863f892ea6d",
+    "box/d125-nonnegative-grading-discriminator-20260907/witness.json": "e6efd2c671f9c4ef8a1588d8a27b81b9fbaf993e5a7cc52a34af6357d50d2e2d",
+    "box/d125-nonnegative-grading-gate-fable5-20260907/literals.out": "4837b72aba632d6a132b587dc24251b33a8a50b7184904308b826d07931607ab",
+    "box/d125-nonnegative-grading-gate-fable5-20260907/literals.py": "678ad23cfbd07c5b01263c7aded8daa79a88ca9e52af3a24ebfc667622817079",
+    "box/d125-nonnegative-grading-gate-fable5-20260907/reconstruct.out": "835e1764b92bf0b900bf98fb178d8dccf6c02efe049bd92310c470f83f5e5d0d",
+    "box/d125-nonnegative-grading-gate-fable5-20260907/reconstruct.py": "592d53465f30002a9ca389ca26a43c4a25b1d56f4f8ebaf263ef1580a6014f2b",
+    "box/d125-nonnegative-grading-gate-fable5-20260907/replay-runs.tsv": "8d1320bda841d352af2aa5b8d723966798b25c227bcb8fc4780be792e455c03d",
+    "box/d125-nonnegative-grading-gate-fable5-20260907/report.sha256": "08632fe6b66b226d48f665ea5511c3dddca174892007e137cfbb4f9a558ff9b2",
+    "box/d125-nonnegative-grading-gate-fable5-20260907/scratch-copies.sha256": "d1d1f5ad23db295169f65b69bac770c5a6c3b11ca77aac6319b3b201457dae73",
+    "box/d125-nonnegative-grading-gate-fable5-20260907/witness-replay-O.json": "e6efd2c671f9c4ef8a1588d8a27b81b9fbaf993e5a7cc52a34af6357d50d2e2d",
+    "box/d125-nonnegative-grading-gate-fable5-20260907/witness-replay.json": "e6efd2c671f9c4ef8a1588d8a27b81b9fbaf993e5a7cc52a34af6357d50d2e2d",
+    "box/furter-primary-gate-prep-20260907/producer-rigidity.typ": "8a6e152c797c227529e88572db140fcfb5b6c3ad61650c2a94fc6304cb334af6",
+    "box/furter-transition-typing-20260907/read-scope.md": "75af35b4ee7bfc86f66a2b8bdb49d242e8c5d869ab968ca3334b31c746642084",
+    "box/furter-transition-typing-20260907/sigray-primary-pages13-16.txt": "ec12cbd228bdc2431d73a8c4e35580ee136d8cde81ad4a417e8cd960d3d94d74",
+    "box/ideation-20260907T2200Z/snapshots/REDUCTION.md": "7f901db6c8e6fbc80c85581a331c247d5c219e23bf286136f77fbc0182ebbe1b",
+    "ladder/SHEET6-2POLE.md": "c66ff941d3954143b51f4dc2ac0dd77d6e1d5be81c0d6cdca3e1bd2a058b9a64",
+    "ladder/SHEET6-L1.md": "69e6e4c1c359381c01941f641c5c7f364f95342411c8e90ed7d4aa27965f38fc",
+    "ladder/SIGRAY-AUDIT.md": "ded3051d1a2009498f49bed20e5168d34b823518ab1b94ed340b380b37da6d15",
+    "refs/sigray_full.pdf": "9bf9f0320497dd8d5da6d7fe68ec900c1879663e6f11c121853482ca7e1623ae",
+    "xmodel/d125-arc-closure-interface-astra-20260907.md": "6f9e63a8162af7c6d212363b62c368f9029b282fa8acbb65bcdc5d9cf81b72d3",
+    "xmodel/d125-nonnegative-grading-discriminator-astra-20260907.md": "13e19b39ccc70cea0dd5fb71b307292f0469937b62b4b1a75bdf6d119c194b0f",
+    "xmodel/d125-nonnegative-grading-discriminator-astra-20260907.md.artifact.json": "1fe149db1b5e8fd74598c948c681885451d8e86ce89d29964517da76c3df833b",
+    "xmodel/d125-nonnegative-grading-gate-fable5-20260907.md": "f4f356c510f1e6bf55e07be7c6d044ef0b698db850bfecc21de8f12367d3e282",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-symmetry-discriminator-astra-20260907.md": "9bed554644b1bd3c881ba4e289ea0950601ed6141677a45152577442fd477b12",
+    "xmodel/ideation-20260907T2200Z-sol56.md": "dfa0006905ceb40c54652c53b7178b55902b44b4e41263984770c591e7fd2ff8",
+    "xmodel/sigray-residue-a-subst-transport-gpt56-20260828.md": "87cfc52baa3e4b06f2c3a841ad6017c062ded45456586cb1854120f35f4304f6"
+  },
+  "runs": [
+    {
+      "optimized": false,
+      "returncode": 0,
+      "stdout_sha256": "835e1764b92bf0b900bf98fb178d8dccf6c02efe049bd92310c470f83f5e5d0d",
+      "witness": {
+        "(2,1)_on_inner_face": true,
+        "(9,6)_on_both_faces": true,
+        "H_u0": {
+          "-1": -9,
+          "-3": -3,
+          "1": -10,
+          "3": -5,
+          "5": -1
+        },
+        "certificate": {
+          "conclusion": "wt(k)=0 for ANY integer weights (sign-free)",
+          "constant_nonzero": true,
+          "k_nonzero": true
+        },
+        "check_py_assert_nodes": 0,
+        "check_py_sha256": "7ff4ca5dd3e38bdf8ef6623624774223f9f8594324d97c34db381e16492671de",
+        "constant_route_A": -2484,
+        "constant_route_B": -2484,
+        "ell_control": {
+          "const_ell_power": 6,
+          "ellpow_formula_ok": true,
+          "k_ell_power": 0,
+          "pin_ell_minus_1_homogeneous": false,
+          "row_degrees": [
+            6
+          ]
+        },
+        "fixed_odd_slots": [
+          [
+            0,
+            15
+          ],
+          [
+            1,
+            14
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "free_contributing": 32,
+        "free_equals_witness": true,
+        "free_slots": 33,
+        "hull_eq_4halfplanes_box": true,
+        "inner_top": 3,
+        "k_coefficient": -1,
+        "odd_slots": 44,
+        "phi_g2p": {
+          "u0v-1": -1,
+          "u0v-3": -1,
+          "u1v2": 1
+        },
+        "route1_eq_route2_all_odd_slots": true,
+        "row_equals_witness_literal_row": true,
+        "row_terms": 34,
+        "three_halfplane_gap_point": [
+          [
+            -1,
+            1
+          ],
+          true,
+          false
+        ],
+        "top_contributions_sorted_by_i": [
+          -5005,
+          2772,
+          -252,
+          1
+        ],
+        "triple_classes": {
+          "(-1,-1,-1)": -729,
+          "(-3,-1,1)x6": -1620,
+          "(-3,-3,3)x3": -135
+        },
+        "unspecialized": {
+          "a_2_1": -1,
+          "a_9_6": 1,
+          "chain": "a96-1 => wt(a96)=0; row => wt(a21)=wt(a96)=0; a21-k => wt(k)=0",
+          "terms": 43
+        },
+        "zero_free_slots": [
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "optimized": true,
+      "returncode": 0,
+      "stdout_sha256": "835e1764b92bf0b900bf98fb178d8dccf6c02efe049bd92310c470f83f5e5d0d",
+      "witness": {
+        "(2,1)_on_inner_face": true,
+        "(9,6)_on_both_faces": true,
+        "H_u0": {
+          "-1": -9,
+          "-3": -3,
+          "1": -10,
+          "3": -5,
+          "5": -1
+        },
+        "certificate": {
+          "conclusion": "wt(k)=0 for ANY integer weights (sign-free)",
+          "constant_nonzero": true,
+          "k_nonzero": true
+        },
+        "check_py_assert_nodes": 0,
+        "check_py_sha256": "7ff4ca5dd3e38bdf8ef6623624774223f9f8594324d97c34db381e16492671de",
+        "constant_route_A": -2484,
+        "constant_route_B": -2484,
+        "ell_control": {
+          "const_ell_power": 6,
+          "ellpow_formula_ok": true,
+          "k_ell_power": 0,
+          "pin_ell_minus_1_homogeneous": false,
+          "row_degrees": [
+            6
+          ]
+        },
+        "fixed_odd_slots": [
+          [
+            0,
+            15
+          ],
+          [
+            1,
+            14
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "free_contributing": 32,
+        "free_equals_witness": true,
+        "free_slots": 33,
+        "hull_eq_4halfplanes_box": true,
+        "inner_top": 3,
+        "k_coefficient": -1,
+        "odd_slots": 44,
+        "phi_g2p": {
+          "u0v-1": -1,
+          "u0v-3": -1,
+          "u1v2": 1
+        },
+        "route1_eq_route2_all_odd_slots": true,
+        "row_equals_witness_literal_row": true,
+        "row_terms": 34,
+        "three_halfplane_gap_point": [
+          [
+            -1,
+            1
+          ],
+          true,
+          false
+        ],
+        "top_contributions_sorted_by_i": [
+          -5005,
+          2772,
+          -252,
+          1
+        ],
+        "triple_classes": {
+          "(-1,-1,-1)": -729,
+          "(-3,-1,1)x6": -1620,
+          "(-3,-3,3)x3": -135
+        },
+        "unspecialized": {
+          "a_2_1": -1,
+          "a_9_6": 1,
+          "chain": "a96-1 => wt(a96)=0; row => wt(a21)=wt(a96)=0; a21-k => wt(k)=0",
+          "terms": 43
+        },
+        "zero_free_slots": [
+          [
+            0,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "scope": "One-row grading proof only; transition source-only NOT PROMOTED.",
+  "seconds": 0.15323995298240334,
+  "utc": "2026-09-07T22:55:47.349197+00:00"
+}

@@ -1,0 +1,87 @@
+{
+  "actual_backend_controls": [
+    {
+      "passed": true,
+      "reduce_one": "1",
+      "script_sha256": "abc9db5078b86784df172dd8cde1e33f325cdc901b7263b4dab6d5bd9137c909",
+      "tag": "attained_face",
+      "unit": false
+    },
+    {
+      "passed": true,
+      "reduce_one": "0",
+      "script_sha256": "45f6d6e33f564d7efeb0b97e9ae393583509a26027936ba2df6a848b0c9c78ef",
+      "tag": "wrong_face",
+      "unit": true
+    },
+    {
+      "passed": true,
+      "reduce_one": "0",
+      "script_sha256": "2d2d855c85e66b07fd7f0bbefce62119aed48be1e01a2f4291ff5268fabd47a4",
+      "tag": "low_at_target_must_vanish",
+      "unit": true
+    },
+    {
+      "passed": true,
+      "reduce_one": "1",
+      "script_sha256": "7c1d271dd3cdfed407429f4dc0eaf02401c5f081531c6fc28d36867c9eb993a2",
+      "tag": "low_below_target_may_survive",
+      "unit": false
+    }
+  ],
+  "backend_sha256": "455bb2a99a3fbc51a547a920ae77081488321a8b76f7605f53c82537b4d5af73",
+  "cases": [
+    {
+      "digit_face": "z**16*(z + 1)**6",
+      "digit_face_depth": 140,
+      "filtered_monic_face_division": true,
+      "k": 33,
+      "low_vanish_strict_t_bound": 141,
+      "normalizers": {
+        "H": 33,
+        "P": 129,
+        "Q": 162,
+        "R": 130,
+        "R1": 162,
+        "R2": 195,
+        "R3": 194,
+        "U": 97,
+        "V": 98,
+        "W": 161,
+        "digit": 162,
+        "low": 195,
+        "upper": 130,
+        "v": 65
+      },
+      "target": 55
+    },
+    {
+      "digit_face": "z**21*(z + 1)**6",
+      "digit_face_depth": 150,
+      "filtered_monic_face_division": true,
+      "k": 36,
+      "low_vanish_strict_t_bound": 151,
+      "normalizers": {
+        "H": 36,
+        "P": 141,
+        "Q": 177,
+        "R": 142,
+        "R1": 177,
+        "R2": 213,
+        "R3": 212,
+        "U": 106,
+        "V": 107,
+        "W": 176,
+        "digit": 177,
+        "low": 213,
+        "upper": 142,
+        "v": 71
+      },
+      "target": 63
+    }
+  ],
+  "dense_control_k": 3,
+  "field": "Q",
+  "physical_y_to_normalized_z_four_divisions": true,
+  "self_sha256": "66bb64339455b093d6a0a27d435cdd1412550e479075a59ccf5cb86d92df4a10"
+}

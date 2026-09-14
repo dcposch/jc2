@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Everything is sealed and nothing is left running.
+
+**Outcome.** No uniform-in-t theorem was obtained. (R) is not proved and (T) is not promoted for any new index. The report `xmodel/k16-universal-series-fable5-20260905.md` (29.9 KB, standalone `<!-- BODY-END -->` marker, inputs re-verified 4/4 at sealing) delivers the structure that any uniform proof must respect, the exact obstruction restated, and the verification against the frozen t=3,4,5 certificates.
+
+**What was established (proved with written arguments and machine-checked to k=12 with generic jets):**
+- The universal x=0 recursion is quadratic in the P-coefficients (a convolution), not linear; denominators have b-power exactly 2(k−3). The k=3 resonance is a vacuous identity in which Bη enters twice and cancels; it is not the boundary identity yη/3, which is the source of the jet linkage that makes row 3 vacuous.
+- New: the L-jets l_k, l_{k−1} cancel in row k, and row k is linear in l_{k−2} with the k-independent pivot −(b/4)(4η+3b·l₂). This gives a dual, resonance-free recursion computing L from P.
+- The residue theorem for P'/P yields exactly the top identity (UT) and nothing else. Briot–Bouquet exponents are 3 at x=0 and 4N+6d at x=∞ (irrational off the split indices, so the ∞-germ is unique and convergent). The connection problem is Theorem H's system.
+- L is never differentiated: (UF) says a quartic in L attached to P has a polynomial root. It has a tacnode at (0,−b) whose non-degeneracy is exactly the new pivot; a second Hensel branch gives a formal solution with the same P. P = −L²/4 forces t = 2, which is the exceptional family, and there the tacnode is degenerate.
+
+**Verification.** Frozen rows, B, η, target reproduced exactly at t=3,4,5. Bottom-up numerators lie in J with b-power 0 at t=3,4 (exact) and t=5 (modular), but I flagged that only the k=4 membership is non-vacuous: socle degrees 14, 21, 30 force every higher membership by weight. The dual chart is unit at t=3 mod p with a non-unit negative control, but it is slower than the existing instruments (t=4 timed out at 40 min vs 27 s).
+
+**OPEN raised:** `OPEN[K16-UF-DEGENERATE-TACNODE]` (every known solution has 4η+3b·l₂ ∈ rad J; strictly weaker than (V0); collision scan NONE). Best fixed-t instrument unchanged. No exit claim, so no `charge_basis` line.
+
+**Housekeeping.** All drivers and transcripts are in `box/k16-universal-20260905/` with `artifacts.sha256` (59 files). Two exact runs (t=5 exact std, t=3 exact dual chart) were stopped at seal without result and are recorded as such. One shell was lost to a self-matching `pkill -f`; three misplaced driver copies were moved from the repository root into the box. I saved a memory note on checking the socle degree before citing an ideal membership.
+DIVERT path=xmodel/k16-universal-series-fable5-20260905.md status=CLEAN body_bytes=29875 body_sha256=5ac0ff1ddcfc766dd1d5050c73e08203795f1ecc56be954b388ef0c1eaeb41bb

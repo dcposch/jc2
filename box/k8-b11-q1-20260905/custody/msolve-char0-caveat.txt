@@ -1,0 +1,95 @@
+26940fc8079763c6ff21476a6a8b5f17f4f3b752e965526a3e10c10d54b1182b  COORDINATION.md
+ff9223148aadb1777a1c974963338875db90ce5b7148ec00f95ae29e766a4448  AUDIT.md
+a38253d594b15151e20de8f1c53b0de0c0644794afd92eba042da1e6595e6073  xmodel/grok-msolve-erratum.md
+   509	- msolve 0.10.1 characteristic-zero `-g` may return a first-machine-prime
+   510	  unit basis before rational reconstruction while printing a characteristic-0
+   511	  header. A char-0-header `[1]` is only first-prime trace evidence unless an
+   512	  independently checked exact rational certificate is present. See `AUDIT.md`.
+ 10111	## Claim 6 — What the archived msolve `[1]` output actually certifies
+ 10112	
+ 10113	**Correct algebraic criterion.** If a rational Gröbner basis calculation or
+ 10114	an independently verified identity really establishes `1 ∈ I ⊂ Q[vars]`,
+ 10115	then `1 = Σ h_i f_i` for rational cofactors and the stratum has no point over
+ 10116	any characteristic-zero field.  The localization equations in these systems
+ 10117	make ordinary ideal membership the right criterion.
+ 10118	
+ 10119	**The archived output does not establish that premise.** In msolve 0.10.1,
+ 10120	the characteristic-zero `-g` path starts at a machine prime.  If that modular
+ 10121	basis is `[1]`, the unit-basis branch can return before multimodular
+ 10122	reconstruction; the printer nevertheless repeats the input characteristic as
+ 10123	zero.  Thus a complete header followed by `[1]:` authenticates a completed
+ 10124	first-prime calculation, not a basis over Q.  This warning is specific to the
+ 10125	unit short circuit: a successful non-unit characteristic-zero run continues
+ 10126	through CRT/rational reconstruction, and its printed non-unit basis remains a
+ 10127	Q-level result within the ordinary trust placed in the engine.
+     1	# Hostile review: msolve 0.10.1 char-0 `-g` `[1]` erratum
+     2	
+     3	Reviewer: Grok 4.6 (adversarial verifier). Date: 2026-08-23.
+     4	Engine: box01 `msolve` 0.10.1 (`/usr/local/bin/msolve`; source `/home/ubuntu/msolve` @ `1e3af01`). Local msolve not used.
+     5	Target: uncommitted `AUDIT.md` superseding erratum (char-0 `-g` `[1]` = first machine prime; cCa2/cCa6 archives demoted; chartG untouched).
+     6	
+     7	**VERDICT: CONFIRMED.** The erratum stands for the campaign's archived char-0 `[1]` outputs. msolve 0.10.1 `-g 2` on characteristic-0 input returns after the first modular F4 when that modular reduced GB is `{1}`, with no second prime, no CRT, no rational reconstruction, and no cofactor. The printer then hardcodes `#field characteristic: 0`. A proper Q-ideal can hit this path: the lucky-prime filter inspects input coefficients only, so a determinant/resultant unlucky prime is not skipped. The naive coefficient-planted trap (coordinator) is the one case the filter *does* catch; it does not refute the bug.
+     8	
+     9	Scoped non-claim: `-g 2` on a *non-unit* first modular GB *does* enter the apply/CRT/ratrecon loop (dummy `[x-1,y-1]`; the same trap at a different seed). Help text / `CERT-UPGRADE.md` "always first prime" is true for `-g 1` (leading monomials) and for the unit-ideal `-g 2` short-circuit, and overstates the non-unit `-g 2` path. Campaign invocations are `-g 2`; the dangerous path is exactly `is_empty`.
+    10	
+    11	Bug vs evidence-tier: this is an msolve soundness bug *and* a certificate-philosophy gap. Even a multi-prime `[1]` without a reconstructed `1 = Σ h_i f_i` is not a Q-membership certificate (`CERT-UPGRADE.md` bounds). Here the engine does not even reach a second prime.
+    12	
+    47	### (b) Unit-ideal handling: first-prime exit, no second prime, no cofactor
+    48	
+    49	Learning-phase F4 at `lp->p[0]`. `is_empty` is set when the modular reduced GB has one element and that element has all exponents 0 (`lifting-gb.c:775-788`):
+    50	
+    51	```c
+    52	int is_empty = 0;
+    53	if(bs->lml == 1){
+    54	    if(info_level){
+    55	        fprintf(VERBSTREAM, "Grobner basis has a single element\n");
+    56	    }
+    57	    is_empty = 1;
+    58	    for(int i = 0; i < bht->nv; i++){
+    59	        if(bexp_lm[i]!=0){
+    60	            is_empty = 0;
+    61	        }
+    62	    }
+    63	    if(is_empty){
+    64	        free_basis_without_hash_table(&(bs));
+    65	        return is_empty;
+    66	    }
+    67	}
+    68	```
+    69	
+    70	Immediate return of that modular basis, **before** the apply/CRT loop (`lifting-gb.c:1363-1370`):
+    71	
+    72	```c
+    73	if(is_empty == 1 || print_gb == 1 || (*modgbsp)->ld == 0){
+    74	  ...
+    75	  return modgbsp;
+    76	}
+    77	```
+    78	
+    79	Three first-prime exits:
+    80	
+    81	| condition | campaign relevance |
+    82	|---|---|
+    83	| `is_empty == 1` (modular GB = `{1}`) | **yes** (`-g 2`) |
+    84	| `print_gb == 1` (leading monomials only) | no (campaign is `-g 2`) |
+    85	| `(*modgbsp)->ld == 0` | empty export |
+    86	
+    87	No second-prime check. No cofactor lift. `msolve --help` documents no membership-certificate flag (`CERT-UPGRADE.md` §1). If `is_empty == 0` and `print_gb == 2`, control continues to `New prime = ...` / `#primes` / CRT / ratrecon (verified below).
+    88	
+    89	### (c) Char-0 header is hardcoded, not a record of the computation
+    90	
+    91	`print_msolve_gbtrace_qq` (`lifting-gb.c:1852-1853`):
+    92	
+    93	```c
+    94	fprintf(ofile, "#---\n");
+    95	fprintf(ofile, "#field characteristic: 0\n");
+    96	```
+    97	
+    98	Always `0` on this path, including after the `is_empty` return. Help text (`main.c:104-105`): "Prints reduced Groebner bases of input system for first prime characteristic". The 8-line `#Reduced Groebner basis data` / `length of basis: 1 element` / `[1]:` surface is therefore compatible with a completed first-prime modular calculation and does not attest reconstruction over Q.
+   152	## 4. What this does and does not certify
+   153	
+   154	- Archived char-0 `[1]` under `-g 2` certifies: *the reduced GB modulo the first selected machine prime was `{1}`*. It does not certify `1 ∈ I ⊂ Q[vars]`.
+   155	- That first prime is random in `(2^30, 1.30e9]` subject only to "divides no input coefficient". A hidden unlucky prime (denominator of the Q-GB, vanishing of an intermediate LC, inconsistent linear image, …) is in scope.
+   156	- Independently of the bug: `n` modular `[1]`s without a rational cofactor or a proved bound with `Σ log p_i > H1` are corroboration, not a Q-certificate (`CERT-UPGRADE.md` §3; the `(p1 p2 p3 x - 1)` example in the erratum). The cCa2/cCa6 banked primes sit far below that bound. The bug means the char-0 lane is not even a second independent modular sample: it *is* the first machine prime.
+   157	
+   158	Campaign implication (agreeing with the uncommitted erratum): internal three-stratum char-0 proof of (72,108) subcase (2) is incomplete at cCa2/cCa6. chartG holds. External Helali/Suzuki exact artifacts in `archive/crosscheck.tgz` / `jc72108/CROSSCHECK.md` are a separate route and were not re-audited here.

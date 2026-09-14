@@ -1,0 +1,38 @@
+{
+  "class_id": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+  "kind": "unsplit",
+  "chart_kind": "order_source_complete",
+  "n_unknowns": 77,
+  "class_verdict": "TIMEOUT",
+  "stems": [],
+  "union": null,
+  "extract_union": {
+    "ok": false,
+    "stem": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_union",
+    "timed_out": true,
+    "returncode": 1,
+    "declared_equations": null,
+    "rows": 0,
+    "wall_seconds": 300.367,
+    "log": "/home/ubuntu/jc2/box/operative-sweep-20260905/classes/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/jobs/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6_union_extract.log",
+    "lead_h_gate": true,
+    "log_tail": "NATIVE_GATE lead_h_is_yK=1\n\nhalt 1\n"
+  },
+  "msolve_screen": null,
+  "fibre_size": 1,
+  "exact_q": false,
+  "wall_seconds": 300.367,
+  "note": "NON_EMPTY is not a counterexample unless a point with J=const lifts. TIMEOUT at this size is the compute-bound threshold. msolve modular [1] is a screen only.",
+  "tier": "ctop_killed",
+  "nunk_sort": 77,
+  "engine": "order_source_complete",
+  "split_survivor_count": 0,
+  "split_leaves": [],
+  "window": [
+    "2"
+  ],
+  "schema": "census-sweep-class-certificate-v1",
+  "fallacy_v2": "A class kill needs the FULL necessary chart (h-support included; for u_s>=2 split rows the joint chart: order + minor-incidence + pole + Jacobian) AND every stem UNIT AND exact-Q confirm. Modular [1] is not a kill. A surviving point is not a counterexample unless J is a nonzero constant and the point lifts.",
+  "certificate_path": "/home/ubuntu/jc2/box/operative-sweep-20260905/classes/C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6/certificate.json",
+  "certificate_sha256": "58e5fcd1e3fd58a3e31e2215b59b43c0f26e1c0465750a3c85f1b64f6b45fd4e"
+}

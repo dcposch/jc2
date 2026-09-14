@@ -1,0 +1,24 @@
+{
+  "task": "f10-mixed-ambient-credential-sol-20260913",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-13T02:35:00.049867981Z",
+  "inputs": [
+    {"path":"xmodel/f10-mixed-setresuid-diagnosis-sol-20260913.md","sha256":"6e8b216a4e877f24e56bbc7f115ff3e9ded6334d34b1eb2888bb8827c2ec184a","read":"WHOLE"},
+    {"path":"box/f10-mixed-dac-correction-root-20260913/COMMANDS.md","sha256":"7809c8ae3733d5e765cec4d5018e57dc4b90d30422dbef66f1f89882fee8cd70","read":"WHOLE"},
+    {"path":"box/f10-mixed-v3-ready-root-20260913/science-unit.template.sh","sha256":"338e45cef2e50e5bdedf25618bcd4ede02bba0f1c26f9faea8b0762ef064b788","read":"WHOLE"},
+    {"path":"box/f10-mixed-qualification-v5-root-20260913/stage/dispatch.py","sha256":"079f9ad7b92e64af5c5fc6a5e17de14ffa5245627ee5c8a4ce0ef2a018a2fa5d","read":"WHOLE"},
+    {"path":"COORDINATION.md","sha256":"33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597","read":"prior exact-pin WHOLE reuse"},
+    {"path":"ops/artifact_finalize.py","sha256":"0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d","read":"administrative tool"}
+  ],
+  "primary_sources": [
+    {"url":"https://raw.githubusercontent.com/util-linux/util-linux/v2.39.3/sys-utils/setpriv.c","scope":"WHOLE; credential/capability sequence especially lines 426-438 and 946-1006 in rendered source"},
+    {"url":"https://man7.org/linux/man-pages/man7/capabilities.7.html","scope":"ambient capability, exec transformation, UID-transition and KEEP_CAPS sections"},
+    {"url":"https://raw.githubusercontent.com/systemd/systemd/v255/man/systemd.exec.xml","scope":"AmbientCapabilities= and CapabilityBoundingSet= entries"},
+    {"url":"https://raw.githubusercontent.com/torvalds/linux/v7.0/security/commoncap.c","scope":"capability credential transitions and exec credential calculation"}
+  ],
+  "outputs": [
+    {"path":"box/f10-mixed-ambient-credential-sol-20260913/COMMANDS.md","sha256":"98260cfd0ce468aca393128a2deb86cb162bc1c1cbe75591bdebb17c4669dbea"},
+    {"path":"box/f10-mixed-ambient-credential-sol-20260913/science-unit.template.sh","sha256":"783a33f13d0286165c7279c6556a1a1681bab9a9dc4dbcbc9093710050d841c0"}
+  ],
+  "status": "UNEXECUTED_UNREVIEWED_DISABLED"
+}

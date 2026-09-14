@@ -1,0 +1,48 @@
+{
+  "schema": "manual-research-terminal-custody/v1",
+  "task": "collision-surface-units-astra-20260912",
+  "status": "COMPLETED_SCOPED_GAP_NOT_FIRST",
+  "source_unit_verdict": "GAP: arbitrary connected off-component units are not proved constant; no actual full-plane Keller counterexample supplied",
+  "proved_attachment": "Every unit on the full fibre square satisfying the full multiplicative triple-product descent identity is 1; standard fppf descent applied at the exact source hypotheses, not a new general unit theorem",
+  "first_action_and_target_absence_utc": "2026-09-12T15:24:01+00:00",
+  "transaction_opened_utc": "2026-09-12T15:24:18+00:00",
+  "preseal_report_and_pins_whole_readback_utc": "2026-09-12T15:29:55+00:00",
+  "preseal_input_postpins_and_collision_check_utc": "2026-09-12T15:30:33+00:00",
+  "closed_utc": "2026-09-12T15:30:33+00:00",
+  "finalized_utc": "2026-09-12T15:30:33+00:00",
+  "expected_verify_and_final_report_manifest_whole_readback_completed_by_utc": "2026-09-12T15:30:49+00:00",
+  "original_reserve_utc": "2026-09-12T15:35:00+00:00",
+  "original_hard_stop_utc": "2026-09-12T15:38:00+00:00",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "lease_id": "844998fc6c1fdc7b8aec7babeb89be58",
+  "transaction": {
+    "expected_manifest_sha256": "f32a625c5b4188488e21efd3db2d53c7c29e81a77c9b0f04b06f5d8ed3f4f758",
+    "verification": "VERIFIED against exact expected basis and expected manifest SHA",
+    "body_bytes": 10855,
+    "body_sha256": "8d05e75546be5ad81de3db4b6c0ca2d213f1f05fc8384ae84ef7cab32748636a"
+  },
+  "inputs_pre_and_post_unchanged": [
+    {"path": "/home/ubuntu/jc2/COORDINATION.md", "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597", "read_mode": "FRESH_WHOLE, all 806 lines in four unclipped ranges before TASK"},
+    {"path": "/home/ubuntu/jc2/box/collision-surface-units-astra-20260912/TASK.md", "sha256": "6cae485e5d1d1f17201b5e780a2612cfe004209573e743c8414365b86f1d34c9", "read_mode": "FRESH_WHOLE after COORDINATION"}
+  ],
+  "owned_excluding_self": [
+    {"path": "/home/ubuntu/jc2/xmodel/collision-surface-units-astra-20260912.md", "sha256": "7c429429e78c1fa8108abb39c31ea9cee142043334320139cb33cf7000a01346", "bytes": 11188, "read_mode": "WHOLE before marker and WHOLE after finalization"},
+    {"path": "/home/ubuntu/jc2/xmodel/collision-surface-units-astra-20260912.md.artifact.json", "sha256": "f32a625c5b4188488e21efd3db2d53c7c29e81a77c9b0f04b06f5d8ed3f4f758", "read_mode": "WHOLE and exact expected VERIFY"},
+    {"path": "/home/ubuntu/jc2/box/collision-surface-units-astra-20260912/PINS.json", "sha256": "104b2d29ec730fd44f39e068611e543a04dc3dda56da8d1e10693b3a9b02d016", "read_mode": "WHOLE"}
+  ],
+  "controls": [
+    "Punctured rational Keller source: nonempty off graph and nonconstant units, explicitly not full-plane polynomial",
+    "One additional localized etale norm control: N(t)=1 and N(t-1)=2-X0 expose norm kernel and missing boundary separately",
+    "Whole-plane automorphism has empty off locus: vacuous only"
+  ],
+  "remaining_quantity": "Arbitrary off-component unit group; no source-specific boundary/cocycle bridge established",
+  "cheapest_test": "One concrete proposed bridge audited manually; 10 minutes UNMEASURED planning only, no follow-on authorization",
+  "boundary": {
+    "other_scientific_inputs": 0,
+    "scientific_execution": "NONE",
+    "network_aws_process_agents_protected_shared_operations": "NONE",
+    "administrative_actions": "Inert UTC/text/hash/presence and byte count, own apply_patch edits, existing artifact_finalize transaction only",
+    "promotion_source_outcome_or_runtime_authority": "NONE"
+  },
+  "writers": "Report and PINS closed. Custody is the last authored file. Its whole readback and final hashes precede the actual-UTC ALL WRITERS IDLE handoff; no later writes."
+}

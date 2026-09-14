@@ -1,0 +1,33 @@
+{
+  "elapsed_seconds": 0.518638234003447,
+  "pins": {
+    "host_control.py": "f91a2c250689330a6d8155a5704ca1b703179cb342df686d683442c858798860",
+    "run_tests.py": "d2ba0372fea912501e8d8bd31eb6831382cd343380907d07b363bd50aab04947",
+    "test_host_control.py": "e090c6007ec8e40177bc7c414c10dfaadb40f4b2062b6bf57e17b2c3f422f6d0"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/d125-parity-pilot-readiness-20260907/test_host_control.py",
+        "-v"
+      ],
+      "rc": 0,
+      "stderr": "test_actual_changed_authority_fields (__main__.Tiny.test_actual_changed_authority_fields) ... ok\ntest_calls_real_authorize_only (__main__.Tiny.test_calls_real_authorize_only) ... ok\ntest_changed_caps_and_code (__main__.Tiny.test_changed_caps_and_code) ... ok\ntest_exact_gate_positive (__main__.Tiny.test_exact_gate_positive) ... ok\ntest_missing_authority_and_wrong_host (__main__.Tiny.test_missing_authority_and_wrong_host) ... ok\ntest_no_assert_or_production_call (__main__.Tiny.test_no_assert_or_production_call) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.005s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-parity-pilot-readiness-20260907/test_host_control.py",
+        "-v"
+      ],
+      "rc": 0,
+      "stderr": "test_actual_changed_authority_fields (__main__.Tiny.test_actual_changed_authority_fields) ... ok\ntest_calls_real_authorize_only (__main__.Tiny.test_calls_real_authorize_only) ... ok\ntest_changed_caps_and_code (__main__.Tiny.test_changed_caps_and_code) ... ok\ntest_exact_gate_positive (__main__.Tiny.test_exact_gate_positive) ... ok\ntest_missing_authority_and_wrong_host (__main__.Tiny.test_missing_authority_and_wrong_host) ... ok\ntest_no_assert_or_production_call (__main__.Tiny.test_no_assert_or_production_call) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.006s\n\nOK\n",
+      "stdout": ""
+    }
+  ],
+  "scope": "LOCAL_MOCK_AND_TINY_ONLY_NO_PRODUCTION_NO_HOST_ACCESS",
+  "status": "PASS"
+}

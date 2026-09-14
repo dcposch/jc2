@@ -1,0 +1,13 @@
+host=ip-172-30-0-97
+nproc=64
+input=/home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms
+input_sha256=66bb78cfec123e11c5b9c780056b5949aa1c5c198caeb3c668aab1973d6697eb
+input_bytes=65003245
+variables=97
+generators=330
+characteristic=0
+msolve_path=/usr/local/bin/msolve
+msolve_sha256=0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f
+msolve_version=0.10.1
+command=/usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout
+watchdog_seconds=9000

@@ -1,0 +1,16 @@
+{
+  "schema": "jc2-primary-document-snapshot/v1",
+  "url": "https://raw.githubusercontent.com/python/cpython/v3.12.3/Modules/_posixsubprocess.c",
+  "fetched_utc_before": "2026-09-11T07:34:45Z",
+  "path": "cpython-v3.12.3-posixsubprocess.c",
+  "sha256": "eb1074585ce62af638d15680bd13ba99aab25c9b6cbed7ac88ae21b60f060f3b",
+  "source_identity": "upstream v3.12.3 implementation; not an Ubuntu patch-source audit or proof of future installed binary identity",
+  "copy_check": "complete downloaded text equals complete local text",
+  "root_human_read_lines": [
+    "560-850",
+    "895-914"
+  ],
+  "root_additional_read": "text search for preexec_fn/close_fds/PyObject_Call/reached_preexec",
+  "scope": "Placement/preexec/close-fds ordering and preexec-thread hazard only; no Python execution, compile, import or AST scan",
+  "source_role": "Optional bounded primary evidence for upcoming focused code gate; no standalone approval"
+}

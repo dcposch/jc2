@@ -1,0 +1,76 @@
+{
+ "caps": "30 wall/25 CPU s, 512 MiB",
+ "runs": [
+  {
+   "mutation": null,
+   "optimized": false,
+   "returncode": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "0dc1e2b824aafb88e0736d30351bbc5b33678d68b59050205bb386d31573d63e"
+  },
+  {
+   "mutation": "--mutate-unchanged-face",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "ValueError: moved faces k,5k/3,5k^2/9 (unchanged-face normalization is NOT the transport)",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-c-power",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "ValueError: c target power: c0*ell^-18 must equal declared c0*k^3",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-omit-guard",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "ValueError: k=0 must fail the inverse guard (parameter contract, not a full point)",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-parity",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "ValueError: parity violation: even slot (4, 4) carries a nonzero coefficient",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": null,
+   "optimized": true,
+   "returncode": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "0dc1e2b824aafb88e0736d30351bbc5b33678d68b59050205bb386d31573d63e"
+  },
+  {
+   "mutation": "--mutate-unchanged-face",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "ValueError: moved faces k,5k/3,5k^2/9 (unchanged-face normalization is NOT the transport)",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-c-power",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "ValueError: c target power: c0*ell^-18 must equal declared c0*k^3",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-omit-guard",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "ValueError: k=0 must fail the inverse guard (parameter contract, not a full point)",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-parity",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "ValueError: parity violation: even slot (4, 4) carries a nonzero coefficient",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "status": "PASS"
+}

@@ -1,0 +1,17 @@
+ALL9_MATCH_TARGETS_ABSENT 2026-09-10T05:58:39.549Z
+Running timer as unit: jc2-middle-resonance-unit-term-20260910.timer
+Will run service as unit: jc2-middle-resonance-unit-term-20260910.service
+Running timer as unit: jc2-middle-resonance-unit-kill-20260910.timer
+Will run service as unit: jc2-middle-resonance-unit-kill-20260910.service
+active
+active
+Running as unit: jc2-lane-f10-middle-resonance-unit-gate-fable5-20260910.service; invocation ID: f1b3a9a94bc84fa8af5233a7adc514ac
+MainPID=968566
+ExecMainStartTimestamp=Thu 2026-09-10 05:58:39 UTC
+ActiveState=active
+InvocationID=f1b3a9a94bc84fa8af5233a7adc514ac
+    PID    PPID    PGID                  STARTED COMMAND
+ 968566  639212  968566 Thu Sep 10 05:58:38 2026 /bin/sh /home/ubuntu/jc2/ops/lane.sh claude f10-middle-resonance-unit-gate-fable5-20260910 /home/ubuntu/jc2/box/f10-middle-resonance-unit-gate-prep-20260910/root-invite.prompt.md
+ 968874  968566  968566 Thu Sep 10 05:58:39 2026 /usr/bin/bwrap --dev-bind / / --ro-bind /tmp/jc2-lane.urhRCl/empty /home/ubuntu/jc2/jc2-lean --ro-bind /tmp/jc2-lane.urhRCl /tmp/jc2-lane.urhRCl --ro-bind /home/ubuntu/jc2/xmodel/f10-middle-resonance-unit-gate-fable5-20260910.run.v2 /home/ubuntu/jc2/xmodel/f10-middle-resonance-unit-gate-fable5-20260910.run.v2 -- sh /home/ubuntu/jc2/ops/adapters/claude.sh /tmp/jc2-lane.urhRCl/model-prompt.txt
+ 968875  968874  968566 Thu Sep 10 05:58:39 2026 claude -p --model fable --effort max --dangerously-skip-permissions --no-session-persistence --tools Read Grep Glob Write Edit Bash
+SAME_LAUNCH_CAPTURE 2026-09-10 05:58:40.060117499 UTC

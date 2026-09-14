@@ -1,0 +1,15 @@
+UTC=2026-09-05T15:02:49Z
+               total        used        free      shared  buff/cache   available
+Mem:           743Gi       8.4Gi       738Gi       3.4Mi       1.7Gi       735Gi
+msolve=0
+0
+Singular=1
+    PID     ELAPSED   RSS %CPU CMD
+   8718       51:36  3572  0.0 bash run_v18_msolve.sh
+   8724       51:36  2184  0.0 timeout --signal=TERM --kill-after=30s 3600s /usr/bin/time -v Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+   8725       51:36  1648  0.0 /usr/bin/time -v Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+   8726       51:36 2004668 99.9 Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+  13436       00:00  3564  0.0 bash -c echo UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ); free -h | head -2; echo -n msolve=; pgrep -c -x msolve || echo 0; echo -n Singular=; pgrep -c Singular || echo 0; ps -eo pid,etime,rss,pcpu,cmd | awk 'NR==1||/msolve|Singular/' | head -20; echo '--- time ---'; grep -E 'Maximum resident|Elapsed \(wall|Exit status|Command exited' ~/moh-bigmem-20260905/targets/*/*/*.g2.stderr ~/moh-bigmem-20260905/targets/*/guided/*.err 2>/dev/null | tail -20; echo '--- last F4/GG ---'; tail -3 ~/moh-bigmem-20260905/targets/*/*/*.g2.stderr 2>/dev/null; tail -8 ~/moh-bigmem-20260905/targets/*/guided/*.out 2>/dev/null
+  13443       00:00  3952  0.0 awk NR==1||/msolve|Singular/
+--- time ---
+--- last F4/GG ---

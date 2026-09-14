@@ -1,0 +1,45 @@
+{
+  "schema": "jc2-manual-custody/v1",
+  "task": "radial-action-finite-graph-astra-20260912",
+  "status": "COMPLETE_MANUAL_UNREVIEWED",
+  "first_action_utc": "2026-09-12T12:50:09Z",
+  "original_reserve_utc": "2026-09-12T13:02:00Z",
+  "original_hard_stop_utc": "2026-09-12T13:05:00Z",
+  "opened_utc": "2026-09-12T12:51:02Z",
+  "closed_utc": "2026-09-12T12:55:37Z",
+  "finalized_utc": "2026-09-12T12:55:37Z",
+  "report_manifest_whole_and_expected_verify_completed_by_utc": "2026-09-12T12:55:53Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "lease_id": "2015d579c217511d69b0c0b212c03eeb",
+  "expected_manifest_sha256": "22b0393cf3600518d1d1304a987f75f75e340d916446eb880dac4a5a60153d9e",
+  "expected_manifest_verification": "VERIFIED",
+  "body_bytes": 9755,
+  "body_sha256": "fb7ecaa28b33e30fd424d8b80c158e954f31d7b30982b3d6a1e2188c4ca7794d",
+  "inputs_pre_and_post_identical": [
+    {"path": "/home/ubuntu/jc2/COORDINATION.md", "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597", "read_scope": "FRESH_WHOLE before TASK; 806 lines in 1-220, 221-440, 441-660, 661-806"},
+    {"path": "/home/ubuntu/jc2/box/radial-action-finite-graph-astra-20260912/TASK.md", "sha256": "183b51a39dde161bf172c6baea55f3ed48abafb1f73ea1a9007f8d685ab6e4e4", "read_scope": "FRESH_WHOLE after coordination"}
+  ],
+  "owned_outputs_excluding_this_custody": [
+    {"path": "/home/ubuntu/jc2/xmodel/radial-action-finite-graph-astra-20260912.md", "sha256": "77669329f1c41ad39522bdf7a6484c59f63e45fd20eace77857845ed93115298", "read_scope": "WHOLE private body before marker and WHOLE final sealed report"},
+    {"path": "/home/ubuntu/jc2/xmodel/radial-action-finite-graph-astra-20260912.md.artifact.json", "sha256": "22b0393cf3600518d1d1304a987f75f75e340d916446eb880dac4a5a60153d9e", "read_scope": "WHOLE and exact expected verification"},
+    {"path": "/home/ubuntu/jc2/box/radial-action-finite-graph-astra-20260912/PINS.json", "sha256": "a31d838d89fd5dc29f80f1be89b2269a0b7bf76fe7197b5736a081ed75dd0012", "read_scope": "WHOLE owned readback"}
+  ],
+  "exact_result": "Radial canonical field generation; algebraic finite-module construction; symplectic shear preserving canonical potential; finite birational surjective graph with normalization A2. The graph is unramified. Its normality is not proved; a direct conditional differential argument identifies normality with Keller invertibility for the constructed graph.",
+  "controls": "Translated identity pair; rational punctured-plane degree-two failure, not a polynomial Keller counterexample; abstract finite birational unramified nodal normalization with smooth simply connected A2 source, not an actual Keller graph.",
+  "input_census": "Exactly two frozen text inputs, no prior theorem or linked body. TASK proposals reconstructed independently.",
+  "checks": {
+    "initial_owned_outputs_absent": true,
+    "preseal_final_manifest_custody_absent": true,
+    "own_whole_before_marker": true,
+    "marker_appended_last": true,
+    "final_report_manifest_whole": true,
+    "all_input_postpins_match": true,
+    "quantity_cheapest_test_and_scope_explicit": true,
+    "canonical_open_or_charge_basis": false,
+    "scientific_execution": false,
+    "network_worker_agents_or_protected_access": false,
+    "shared_or_old_artifact_edits": false,
+    "administrative_finalizer_only_interpreter_use": true
+  },
+  "completion_handshake": "Custody WHOLE/SHA, final unchanged vector and actual ALL WRITERS IDLE UTC follow in the terminal message. No further authored writes, promotion, runtime or follow-on authority."
+}

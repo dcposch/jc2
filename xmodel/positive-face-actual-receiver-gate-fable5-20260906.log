@@ -1,0 +1,27 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report published and verified; wrapping up with the recap.
+
+**Gate written:** `xmodel/positive-face-actual-receiver-gate-fable5-20260906.md` (2173 words, unique standalone `<!-- BODY-END -->` last line, nothing after, no seal, no `charge_basis` line). Published 22:33 UTC, ahead of the 22:50 deadline. Charged report and checker hashes matched the task's pins.
+
+**Verdicts**
+
+| Item | Verdict |
+|---|---|
+| Source centering (polynomial Q-mean, shear, constant b0) | CONFIRMED, conditional on the named child-data transport (25,15; M2′=21, V2′=2; radii −1, 7/5) |
+| Entire zero-slope packet = D1′ packet, 10 P + 6 Q roots, contacts ≥ 7/5 | CONFIRMED from Def 5.1(1) counts and Prop 5.3's minimal-disc definition; monomial-J use of Prop 5.3 named as Moh's own p.207 practice, not re-proved |
+| Face exhaustion: degrees 25/15, γ-degrees ≤ 15/9, endpoints (15,10)/(9,6), only (1,1) nonmonomial | CONFIRMED, own box enumeration plus the report's inequality |
+| Equation (E), π \| E, root divisibility | CONFIRMED bivariately in (γ,π) |
+| [2,1]: a²−a−1=0, a=3 excluded | CONFIRMED; eliminated row is 2(a²−a−1)/(5a(3−a)); a=3 linear system inconsistent |
+| [1,1,1]: S=π³−γ³ | CONFIRMED both components |
+| Q scaling (5/3)E, monomial endpoints | CONFIRMED; unscaled E fails for H³, so the factor is load-bearing |
+| Field-point vs scheme | CONFIRMED as stated: K-point conditions only |
+| Independence from Moh Prop 4.6 boundary ODE | GAP: deg e ≤ 4 = n′−M2′ with root divisibility has exactly the shape of Prop 4.6's q(π), so this is plausibly a recovery of the known ODE |
+
+**Licensing assessment.** The two slope equations are sound only as radical point conditions on a chart whose slope parameter is the actual normalized slope. They do not license folding a golden-ratio value into a Q-chart's coefficient ring, deleting any monomial, or excluding any partition. Count alone is no gain, as the producer said.
+
+**Source facts checked on the page images.** Prop 6.3(3) states J = −(u_s/b)γ^{v_s−u_s−1}, exponent 2 here. The printed determinant on p.198 has a typo in the ∂x/∂π entry and the final exponent sign; the explicit substitution x=(y−e−σ)/b gives the statement's value. Saved this to memory.
+
+**Controls retained** in `box/positive-face-actual-receiver-gate-fable5-20260906/`: supplied `check.py` 15 PASS normal and `-O`; own `own_check.py` 28 PASS normal and `-O` (0.03 s, 17 MiB), plus outputs and the three page renders. One own-control failure was my wrong guess at the eliminated constant, corrected and noted in the report.
+
+**Next:** independent review of the Prop 4.6 ODE redundancy question before anyone consumes the slope equations as a chart point condition.
+DIVERT path=xmodel/positive-face-actual-receiver-gate-fable5-20260906.md status=CLEAN body_bytes=14160 body_sha256=eade8ec8b9b9162bf3a6a9e60408094185b63b633e6343cce11b7e233e904284

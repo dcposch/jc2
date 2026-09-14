@@ -1,0 +1,44 @@
+{
+  "schema": "jc2-manual-support-terminal-custody/v1",
+  "task": "f10-necessary-rows-checker-support-astra-20260912",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "COMPLETED_STATIC_UNREVIEWED",
+  "first_action_utc": "2026-09-12T03:09:52Z",
+  "opened_utc": "2026-09-12T03:10:32Z",
+  "preseal_whole_readback_open_scope_collision_and_postpins_by_utc": "2026-09-12T03:20:17Z",
+  "closed_utc": "2026-09-12T03:20:40Z",
+  "finalized_utc": "2026-09-12T03:20:40Z",
+  "expected_verify_and_final_whole_readback_by_utc": "2026-09-12T03:20:41Z",
+  "reserve_utc": "2026-09-12T03:26:00Z",
+  "hard_stop_utc": "2026-09-12T03:29:00Z",
+  "inputs_pre_post_same": [
+    {"path": "/home/ubuntu/jc2/box/f10-necessary-rows-checker-astra-20260911/PINS.json", "sha256": "463903ddf62f70a1838fd02d886863611ef5e11ca603efefcd284ad01b4a3aab"},
+    {"path": "/home/ubuntu/jc2/box/f10-necessary-rows-checker-astra-20260911/check.py", "sha256": "1d2d5b5408bfbf13b96f09453b1f14dfe884d261e702843bc31e5a043ffa53d1"},
+    {"path": "/home/ubuntu/jc2/box/f10-direct-rows-checker-astra-20260911/check_arithmetic.py", "sha256": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e"},
+    {"path": "/home/ubuntu/jc2/box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md", "sha256": "176363939a8aa6861995cd72a99c61f7d04bfeab5a9634f6d3143dcd3d3bd098"},
+    {"path": "/home/ubuntu/jc2/box/f10-necessary-rows-producer-astra-20260911/authority.py", "sha256": "804c7aff56538fc332bf68638b03b7167eccdb49f73337f1a5f1823348b522a4", "authority": "separately authorized fifth input; metadata-size hint independently checked from WHOLE text"}
+  ],
+  "read_scope": "All five inputs FRESH_WHOLE after current pins; exact ranges, recovered clipping and absent targeted metadata lookup disclosed in owned PINS.json. No historical linked bodies or live ROOT producer report.",
+  "owned_files_excluding_custody": [
+    {"path": "/home/ubuntu/jc2/xmodel/f10-necessary-rows-checker-support-astra-20260912.md", "sha256": "a719fdee06e5635a9a886f3d3beb65c8faf3e4a2ec730fc6fb0151763e2c4025", "bytes": 12691, "readback": "WHOLE final sed1-300, seal/EOF visible"},
+    {"path": "/home/ubuntu/jc2/xmodel/f10-necessary-rows-checker-support-astra-20260912.md.artifact.json", "sha256": "c157424a421f2a11691af680cd2c6e90b5a3b09c6f342433f8fafbc632d86735", "bytes": 709, "readback": "WHOLE"},
+    {"path": "/home/ubuntu/jc2/box/f10-necessary-rows-checker-support-astra-20260912/PINS.json", "sha256": "b0a284c01ebb6c0f3b299e48f2d472d268a6f13545aba03031dba076a67a506f", "bytes": 2585, "readback": "WHOLE before seal; posthash unchanged"}
+  ],
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256": "c157424a421f2a11691af680cd2c6e90b5a3b09c6f342433f8fafbc632d86735",
+    "body_sha256": "7b40c1806d0cb0c71988869719a33eeb7e0f3babfb25394fa17e70f73729ce9d",
+    "body_bytes": 12358,
+    "status": "VERIFIED",
+    "sequence": "begin; unsealed skeleton; bounded apply_patch sections; own WHOLE, OPEN/scope/collision and input postpins; marker LAST; close; finalize; exact expected-manifest verify; WHOLE final; custody last"
+  },
+  "result": "Manual support bounds: every retained checker sparse intermediate and accumulator has fewer than21000 possible terms; each graph polynomial at most412, aggregate at most12360; graph payload below1450000 bytes; authority-bound complete canonical artifact below4MiB. All existing guards unchanged.",
+  "unmeasured": "CPU/RSS/wall completion, simultaneous-object memory, runtime native/cgroup/output aggregation, actual coefficients and place success.",
+  "open_quantity": "No support/wire gap identified within this retained checker; independent review required. Runtime feasibility remains UNMEASURED.",
+  "scientific_execution": "NONE",
+  "code_edits": "NONE",
+  "payload_access": "NONE",
+  "external_or_peer_report_reads": "NONE",
+  "promotion_or_execution_authority": "NONE",
+  "terminal_state": "All writers IDLE after this custody creation; only custody readback, documentary hashes and terminal clock remain."
+}

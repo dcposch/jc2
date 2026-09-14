@@ -1,0 +1,98 @@
+{
+  "schema": "documentary-terminal-custody-v1",
+  "task": "ideation-20260910T2300Z-cross-astra-geometry",
+  "status": "FINAL_EXPECTED_VERIFIED_ADVERSARIAL_CROSS_NOT_FIRST",
+  "first_action_utc": "2026-09-10 23:19:07 UTC",
+  "custody_recorded_utc": "2026-09-10 23:23:59 UTC",
+  "original_reserve_utc": "2026-09-10 23:30:00 UTC",
+  "original_hard_stop_utc": "2026-09-10 23:33:00 UTC",
+  "full_round_backstop_utc": "2026-09-10 23:56:56.721223873 UTC",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report_sha256": "bce09fd190000e6f7cbcf256f60c27574b5267d434cb8400df1a850a7d3d2f64",
+  "expected_transaction_sha256": "0586826254a56c11763d595b4040816ec10f89d83207d714e416224f47e7a8e1",
+  "expected_verification": "PASS",
+  "input_count": 8,
+  "owned_count_excluding_custody": 5,
+  "read_scope": "Fresh WHOLE card and all five blinds; accepted kernel producer/FIRST REUSED_WHOLE after current pins from actual same-agent preceding blind. Redundant clipped reread not counted as fresh WHOLE. READ-SCOPE records exact spans.",
+  "pre_body_barrier": "ALL8_PASS (card pin before necessary manifest read; all7 report pins before report bodies)",
+  "post_body_barrier": "ALL8_PASS",
+  "own_checks": "Complete 995-word substantive report WHOLE; zero premature markers; zero raised canonical OPEN IDs; exact quantity/cheapest test and collision qualified; one selected immediate task; single last BODY-END then transaction seal.",
+  "science_executed": false,
+  "network_jobs": 0,
+  "agents": 0,
+  "shared_edits": 0,
+  "peer_cross_reads": 0,
+  "postcutoff_science_reads": 0,
+  "authority": "Strategy only; not designated FIRST, promotion, source outcome or execution permission.",
+  "writers": "Report lease CLOSED; no background writers. Sole custody writer exits at publication; ALL WRITERS IDLE before handoff.",
+  "custody_self_excluded": true,
+  "inputs": [
+    {
+      "path": "box/ideation-20260910T2300Z-cross-prep/ROOT-CROSS.md",
+      "sha256": "6a915d4046f8d7a9c30d45ada099a40bfee79a146aa9460ed54c5993215fda40",
+      "bytes": 8879
+    },
+    {
+      "path": "xmodel/ideation-20260910T2300Z-coordinator.md",
+      "sha256": "c9da5199be69e33e79693d0c19d5ca5ea2bd86d84c89e138c2ed471adcb40314",
+      "bytes": 12981
+    },
+    {
+      "path": "xmodel/ideation-20260910T2300Z-astra-source.md",
+      "sha256": "bd16da8c84ae3a8ad2d3bed3a654914fdb843ed0a2e4a1f9bfb6430adbd54986",
+      "bytes": 15951
+    },
+    {
+      "path": "xmodel/ideation-20260910T2300Z-astra-geometry.md",
+      "sha256": "e6435445c141b7fe17ae353addb84ca15ddb94b3e7fa12ca61b04a9296b1a95c",
+      "bytes": 16469
+    },
+    {
+      "path": "xmodel/ideation-20260910T2300Z-astra-construction.md",
+      "sha256": "3add44c6c10c6629d7034e982b0f5a55cd7f9fd2c7db6627c29a94f7859a2609",
+      "bytes": 15275
+    },
+    {
+      "path": "xmodel/ideation-20260910T2300Z-fable5.md",
+      "sha256": "c14d89e94ad74807c5a21efc0e8de7169d760e8c5c3c903a00410cd8077d8cfd",
+      "bytes": 10306
+    },
+    {
+      "path": "box/ideation-20260910T2300Z-prep/inputs/allr-kernel-producer.md",
+      "sha256": "53e17b24e6a0c258e873bf2f1c84823b5367b269a7744a272bbe61ef9d0c7312",
+      "bytes": 22094
+    },
+    {
+      "path": "box/ideation-20260910T2300Z-prep/inputs/allr-kernel-first.md",
+      "sha256": "097736365b7afcd0701c83063ee87a691532491124106d0346f9c2dfbb8b4617",
+      "bytes": 25152
+    }
+  ],
+  "owned": [
+    {
+      "path": "box/ideation-20260910T2300Z-cross-astra-geometry/READ-SCOPE.md",
+      "sha256": "4a820cf623c4e53338e275f138b8193c153b0335d281a3a27d220c51e3cb1a3f",
+      "bytes": 1715
+    },
+    {
+      "path": "box/ideation-20260910T2300Z-cross-astra-geometry/PINS.json",
+      "sha256": "659c031d6a6add5e6026a04f0ad7618c0ca1ba66e4c6f4dc358ed1ad3c5b94ce",
+      "bytes": 1715
+    },
+    {
+      "path": "box/ideation-20260910T2300Z-cross-astra-geometry/CHECKS.md",
+      "sha256": "e976f475105827435b6f3d8fbb24d2360167c069faa9e88c2d53ae7dc5e142d2",
+      "bytes": 1316
+    },
+    {
+      "path": "xmodel/ideation-20260910T2300Z-cross-astra-geometry.md",
+      "sha256": "bce09fd190000e6f7cbcf256f60c27574b5267d434cb8400df1a850a7d3d2f64",
+      "bytes": 7454
+    },
+    {
+      "path": "xmodel/ideation-20260910T2300Z-cross-astra-geometry.md.artifact.json",
+      "sha256": "0586826254a56c11763d595b4040816ec10f89d83207d714e416224f47e7a8e1",
+      "bytes": 689
+    }
+  ]
+}

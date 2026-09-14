@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Sealed at 19:38:35 UTC, ahead of the 19:46 reserve and 19:50 HARD stop. No further writes.
+
+**Deliverable:** `xmodel/f10-mixed-univariate-code-gate-fable5-20260912.md`, written only via apply_patch in four bounded writes, 1707 words including custody, exactly one standalone `<!-- BODY-END -->` as the last line, no exit-price declaration, no OPEN raised. Post-seal SHA256 is 95b45dae20c9cdb7ffdbf951e657aba69565f28723c500bc898134b0a2db5a1f.
+
+**Custody:** all thirteen input snapshots hashed at 19:29:33 UTC before any body read, every digest matched the charged pin; all thirteen postpins at 19:38:04 UTC matched again; COORDINATION was read first and every file read whole. Nothing else was read, no code executed, no interpreter or CAS used.
+
+**Verdicts, all from hand recomputation of the actual sources:**
+- Issue 1 CONFIRMED. D=4U, Kold=−840V, Sold=470400·P0, tau=2−t and leading coefficient 9(t−2) all verified by explicit coefficient comparison against the 17zzd literals. The linear elimination d7−(t−2)d6 = c3(UY−V) was recomputed termwise from the accepted cubics, and the old ideal (E,Q) equals (d6,d7) so the ring map is sound at 17zzd's imported scope.
+- Issue 2 CONFIRMED. The producer's power and inverse recurrences and the checker's falling-factorial and log sums both compute [u^14](φ'/φ)T_{2t−1}T_{4−t}; index 14−i−j is right in both; F=U^7·B(V/U) has X-degree ≤21; no parameter factor or component is dropped.
+- Issue 3 CONFIRMED. Bezout orientation is verified at run time rather than trusted; N is the LCM of every cofactor denominator; the full identity is checked in Q[t,X] by the checker; the integer-r census from N's rational roots is exact, treats q=5/3 correctly, and turns a genuine exception into INCONCLUSIVE with exit 2 and no positive output.
+- Issue 4 CONFIRMED at source scope. The JSON parser is strictly canonical, numeric-literal-free, regex-gated, and builds only from Python integers; no eval, include or exec path exists, so the old Singular sourced-certificate defect has no analogue.
+- Issue 5 CONFIRMED by manual trace. The A1+1 control reaches the identity failure line; the (7t−12) control yields exceptional r=2 and exit 2. Caveat recorded: identity failure and parse failure share exit code 1, so controls must capture stderr text.
+- Issue 6 CONFIRMED narrowly. Authorization precedes CAS import, the typed slot-6 authority digest avoids a self-hash cycle, outputs are O_EXCL plus fsync plus readback. Installed Sympy and Python APIs, runtime fit, stale `__pycache__` loading under `-B`, library-directory closure and whole-batch cleanup are explicit external GAPs, not source defects.
+
+**REFUTED: none.** The only source-level tightening suggested is pinning `orig_argv[5:]==sys.argv` so flags after position four are excluded; it is not blocking. The mixed scalar unit remains undecided until an actual conforming certificate passes the checker under ROOT's separate registration.
+DIVERT path=xmodel/f10-mixed-univariate-code-gate-fable5-20260912.md status=CLEAN body_bytes=12356 body_sha256=95b45dae20c9cdb7ffdbf951e657aba69565f28723c500bc898134b0a2db5a1f

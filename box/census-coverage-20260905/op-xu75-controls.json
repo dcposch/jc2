@@ -1,0 +1,79 @@
+[
+  {
+    "part": [
+      1,
+      1,
+      1
+    ],
+    "rho": "2",
+    "expected": true,
+    "actual": {
+      "name": "XU75",
+      "excludes": true,
+      "scope": "only the full u_s-distinct split",
+      "cutoff": "9/4",
+      "strict_side": "2 < 9/4"
+    }
+  },
+  {
+    "part": [
+      1,
+      1,
+      1
+    ],
+    "rho": "9/4",
+    "expected": false,
+    "actual": {
+      "name": "XU75",
+      "excludes": false,
+      "scope": "only the full u_s-distinct split",
+      "cutoff": "9/4",
+      "strict_side": "9/4 < 9/4"
+    }
+  },
+  {
+    "part": [
+      1,
+      1,
+      1
+    ],
+    "rho": "5/2",
+    "expected": false,
+    "actual": {
+      "name": "XU75",
+      "excludes": false,
+      "scope": "only the full u_s-distinct split",
+      "cutoff": "9/4",
+      "strict_side": "5/2 < 9/4"
+    }
+  },
+  {
+    "part": [
+      2,
+      1
+    ],
+    "rho": "2",
+    "expected": false,
+    "actual": {
+      "name": "XU75",
+      "excludes": false,
+      "scope": "only the full u_s-distinct split",
+      "cutoff": "9/4",
+      "strict_side": "2 < 9/4"
+    }
+  },
+  {
+    "part": [
+      3
+    ],
+    "rho": "2",
+    "expected": false,
+    "actual": {
+      "name": "XU75",
+      "excludes": false,
+      "scope": "only the full u_s-distinct split",
+      "cutoff": "9/4",
+      "strict_side": "2 < 9/4"
+    }
+  }
+]

@@ -1,0 +1,89 @@
+// Separate exact checker.  It rebuilds d5,d6,d7,B from the stipulated formula.
+// Run in the output directory containing certificate.sing.
+< "certificate.sing";
+
+proc c_pow7(number s)
+{
+  list a; a[1]=1; int k,j; poly t,pj;
+  for (k=1; k<=7; k++)
+  {
+    t=0;
+    for (j=1; j<=3; j++) if (j<=k)
+    {
+      if (j==1) { pj=1; } if (j==2) { pj=X; } if (j==3) { pj=Y; }
+      t=t+((s+1)*j-k)*pj*a[k-j+1];
+    }
+    a[k+1]=t/k;
+  }
+  return(a);
+}
+proc c_B()
+{
+  list A=c_pow7(2*nu-1); list C=c_pow7(4-nu); list q; q[1]=1;
+  int k,j,i; poly t,pj,L,out; out=0;
+  for (k=1; k<=14; k++)
+  {
+    t=0;
+    for (j=1; j<=3; j++) if (j<=k)
+    {
+      if (j==1) { pj=1; } if (j==2) { pj=X; } if (j==3) { pj=Y; }
+      t=t+pj*q[k-j+1];
+    }
+    q[k+1]=-t;
+  }
+  for (i=0; i<=7; i++) for (j=0; j<=7; j++)
+  {
+    k=14-i-j;
+    if (k>=0)
+    {
+      L=q[k+1]; if (k>=1) { L=L+2*X*q[k]; }
+      if (k>=2) { L=L+3*Y*q[k-1]; }
+      out=out+A[i+1]*C[j+1]*L;
+    }
+  }
+  return(out);
+}
+list DD=c_pow7(nu);
+poly d5=DD[6]; poly d6=DD[7]; poly d7=DD[8]; poly B=c_B();
+if (N==0) { "CHECK_FAIL: N=0"; exit(10); }
+proc denominator_free(poly f)
+{
+  while (f!=0)
+  {
+    if (denominator(leadcoef(f))!=1) { return(0); }
+    f=f-lead(f);
+  }
+  return(1);
+}
+if (denominator(N)!=1 || !denominator_free(A1) || !denominator_free(A2)
+    || !denominator_free(A3) || !denominator_free(A4))
+{ "CHECK_FAIL: certificate not cleared over Q[nu,X,Y,z]"; exit(13); }
+if (A1*d6+A2*d7+A3*B+A4*(z*Y*d5-1)!=N)
+{ "CHECK_FAIL: polynomial identity"; exit(11); }
+string Ns=string(N);
+
+// Move the denominator to Q[nu], factor exactly, and decide the discrete
+// actual set nu=(5r+2)/(3r+1), r integer >=2.  Irreducible factors of degree
+// >1 have no rational root; each linear root is tested by the inverse formula
+// r=(2-nu)/(3nu-5).  nu=5/3 is separately excluded (no finite r).
+ring U=0,(nu),dp;
+execute("poly NP="+Ns+";");
+list FF=factorize(NP); ideal F=FF[1]; intvec E=FF[2];
+int i; int bad=0; number q,rr; string census="";
+for (i=1; i<=size(F); i++)
+{
+  census=census+"factor="+string(F[i])+" exponent="+string(E[i])+"\n";
+  if (deg(F[i])==1)
+  {
+    q=-subst(F[i],nu,0)/leadcoef(F[i]);
+    if (3*q-5!=0)
+    {
+      rr=(2-q)/(3*q-5);
+      if ((denominator(rr)==1) && (rr>=2)) { bad=1; }
+    }
+  }
+}
+write("DENOMINATOR-FACTORS.txt",census);
+if (bad) { "CHECK_FAIL: denominator vanishes at an actual integer r>=2"; exit(12); }
+"CHECK_PASS: exact identity and all actual integer-r denominator exceptions excluded";
+exit(0);

@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 20:31:27Z, seven minutes before the 20:38:30Z stop. All writers are idle and nothing follows the marker.
+
+**Outcome: A, B, C, D all CONFIRMED.** No REFUTED item and no GAP in the covered interval r+2 ≤ h ≤ 2r.
+
+**What was verified by hand**
+
+- **A.** The A band at weight m−h has no t² monomial (S exponent r+1−h < 0), its t coefficient sits at S exponent 2r+1−h ∈ [1, r−1] and equals v_(2r−h) − u·d_(2r+1−h), so the constant 1 is absent and the shift is by earlier consumed data. B4(0)=0 from the exact 16r formula kills the θ⁴ slot at h=r+2. The band weight 7r+2−h fills exactly [5r+2, 6r], strictly between the target weights 6r+1 and 5r+1. Four actual pivots are fixed nonzero rationals, and the two slots are the stated E1/E0 coefficients.
+- **B.** The recurrence has the +CR sign, both θ⁷ divisibilities hold, (17) and (18) close with the positive determinant, and 7m−3κ=δ₄ gives U2=(δ₄/κ)T7. The quotient (22) is an affine automorphism of A_prev³ followed by the U2=0 quotient, so it is an exact ring isomorphism with no H7 division.
+- **C.** The (1,3) adjugate entry has sign (−1)⁴=+1 and equals the U2 coordinate of Φ_h(0,0,1), giving det M_act = det N_h · (δ₄/κ) · H7_h. Rank statements are field-level only, and the nonunit case keeps the relation.
+- **D.** The fourth root at ν follows from (D/G_ν)′ = −θ⁷/(mCG_ν) and deg D=5 with b a unit. The four prefactors at α are nonzero rationals, so (H7_h)=(S_r(α)). All six controls are genuine, with the dropped-H7 control's changed forcing noted as its limit.
+
+**Smallest real defect** is a precision point, not an error. The unit discriminator and the producer's OPEN are stated over L, while the retained row lives over A_prev. L-nonunitness of S_r(α) bounds but does not equal the number of gaps where Y_h stays free, since the H7=0 stratum also needs J_h=0 and may be emptied by earlier rows. The producer's section 6 already contains that logic, so the repair is one cross-referencing clause.
+
+**Files written**
+
+- `xmodel/f10-all-r-middle-band-gate-fable5-20260909.md` via apply_patch only, skeleton first, marker last, no Seal and no charge_basis.
+- `box/f10-all-r-middle-band-gate-fable5-20260909/input_custody.md` with the five verified hashes.
+
+All 64-hex tokens in both files match the live sha256sum output. No OPEN raised, collisions EMPTY, zero mathematical subprocesses.
+DIVERT path=xmodel/f10-all-r-middle-band-gate-fable5-20260909.md status=CLEAN body_bytes=15449 body_sha256=3d3f0490d81b3c5b9969c9bae83020c33f85740167697c40fe88de1f7a7823e2

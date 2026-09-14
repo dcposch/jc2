@@ -1,0 +1,73 @@
+{
+  "checked_utc": {
+    "current_time": "2026-09-11 19:03:43 UTC"
+  },
+  "commands": [
+    "aws --profile personal --region us-east-1 ec2 describe-instances --filters Name=tag:jc2fleet,Values=1 Name=instance-state-name,Values=pending,running,stopping,stopped,shutting-down --query 'Reservations[].Instances[].{ID:InstanceId,State:State.Name,Tags:Tags}' --output json --no-cli-pager",
+    "aws --profile personal --region us-east-1 ec2 describe-instances --filters 'Name=tag:Name,Values=jc2-worker-*' Name=instance-state-name,Values=pending,running,stopping,stopped,shutting-down --query 'Reservations[].Instances[].{ID:InstanceId,State:State.Name,Tags:Tags}' --output json --no-cli-pager",
+    "aws --profile personal --region us-east-1 service-quotas get-service-quota --service-code ec2 --quota-code L-1216C47A --query 'Quota.{Name:QuotaName,Value:Value,Code:QuotaCode}' --output json --no-cli-pager",
+    "aws --profile personal --region us-east-1 ec2 describe-images --image-ids ami-066263bf15bd856de --query 'Images[].{ID:ImageId,State:State,Arch:Architecture,RootDevice:RootDeviceName,Devices:BlockDeviceMappings}' --output json --no-cli-pager",
+    "aws --profile personal --region us-east-1 ec2 describe-subnets --subnet-ids subnet-948915c9 --query 'Subnets[].{ID:SubnetId,VPC:VpcId,AZ:AvailabilityZone,State:State,Available:AvailableIpAddressCount}' --output json --no-cli-pager",
+    "aws --profile personal --region us-east-1 ec2 describe-security-groups --group-ids sg-09ffa8932558f0a79 --query 'SecurityGroups[].{ID:GroupId,VPC:VpcId,Name:GroupName}' --output json --no-cli-pager",
+    "aws --profile personal --region us-east-1 ec2 describe-key-pairs --key-names jc2-fleet --query 'KeyPairs[].{Name:KeyName,ID:KeyPairId}' --output json --no-cli-pager",
+    "aws --profile personal --region us-east-1 cloudwatch get-metric-statistics --namespace AWS/Usage --metric-name ResourceCount --dimensions Name=Service,Value=EC2 Name=Type,Value=Resource Name=Resource,Value=vCPU Name=Class,Value=Standard/OnDemand --start-time 2026-09-11T18:45:00Z --end-time 2026-09-11T19:04:00Z --period 300 --statistics Maximum --output json --no-cli-pager"
+  ],
+  "results": [
+    {
+      "chunk_id": "c11ce8",
+      "wall_time_seconds": 0.309381695,
+      "exit_code": 0,
+      "original_token_count": 1,
+      "output": "[]\n"
+    },
+    {
+      "chunk_id": "52af2b",
+      "wall_time_seconds": 0.510346541,
+      "exit_code": 0,
+      "original_token_count": 1,
+      "output": "[]\n"
+    },
+    {
+      "chunk_id": "c9437a",
+      "wall_time_seconds": 0.134967053,
+      "exit_code": 0,
+      "original_token_count": 33,
+      "output": "{\n    \"Name\": \"Running On-Demand Standard (A, C, D, H, I, M, R, T, Z) instances\",\n    \"Value\": 1920.0,\n    \"Code\": \"L-1216C47A\"\n}\n"
+    },
+    {
+      "chunk_id": "2edf3d",
+      "wall_time_seconds": 0.562606886,
+      "exit_code": 0,
+      "original_token_count": 206,
+      "output": "[\n    {\n        \"ID\": \"ami-066263bf15bd856de\",\n        \"State\": \"available\",\n        \"Arch\": \"x86_64\",\n        \"RootDevice\": \"/dev/sda1\",\n        \"Devices\": [\n            {\n                \"Ebs\": {\n                    \"DeleteOnTermination\": true,\n                    \"Iops\": 3000,\n                    \"SnapshotId\": \"snap-0bf84cf821e71e45c\",\n                    \"VolumeSize\": 100,\n                    \"VolumeType\": \"gp3\",\n                    \"Throughput\": 125,\n                    \"Encrypted\": false\n                },\n                \"DeviceName\": \"/dev/sda1\"\n            },\n            {\n                \"DeviceName\": \"/dev/sdb\",\n                \"VirtualName\": \"ephemeral0\"\n            },\n            {\n                \"DeviceName\": \"/dev/sdc\",\n                \"VirtualName\": \"ephemeral1\"\n            }\n        ]\n    }\n]\n"
+    },
+    {
+      "chunk_id": "300e48",
+      "wall_time_seconds": 0.704303447,
+      "exit_code": 0,
+      "original_token_count": 41,
+      "output": "[\n    {\n        \"ID\": \"subnet-948915c9\",\n        \"VPC\": \"vpc-0f261d77\",\n        \"AZ\": \"us-east-1a\",\n        \"State\": \"available\",\n        \"Available\": 247\n    }\n]\n"
+    },
+    {
+      "chunk_id": "96072f",
+      "wall_time_seconds": 0.582799309,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "[\n    {\n        \"ID\": \"sg-09ffa8932558f0a79\",\n        \"VPC\": \"vpc-0f261d77\",\n        \"Name\": \"claude-ssh\"\n    }\n]\n"
+    },
+    {
+      "chunk_id": "f2f57b",
+      "wall_time_seconds": 0.592386268,
+      "exit_code": 0,
+      "original_token_count": 21,
+      "output": "[\n    {\n        \"Name\": \"jc2-fleet\",\n        \"ID\": \"key-07cbc061edc0d7487\"\n    }\n]\n"
+    },
+    {
+      "chunk_id": "3de873",
+      "wall_time_seconds": 0.475069421,
+      "exit_code": 0,
+      "original_token_count": 146,
+      "output": "{\n    \"Label\": \"ResourceCount\",\n    \"Datapoints\": [\n        {\n            \"Timestamp\": \"2026-09-11T18:55:00+00:00\",\n            \"Maximum\": 84.0,\n            \"Unit\": \"None\"\n        },\n        {\n            \"Timestamp\": \"2026-09-11T18:50:00+00:00\",\n            \"Maximum\": 84.0,\n            \"Unit\": \"None\"\n        },\n        {\n            \"Timestamp\": \"2026-09-11T18:45:00+00:00\",\n            \"Maximum\": 84.0,\n            \"Unit\": \"None\"\n        },\n        {\n            \"Timestamp\": \"2026-09-11T19:00:00+00:00\",\n            \"Maximum\": 84.0,\n            \"Unit\": \"None\"\n        }\n    ]\n}\n"
+    }
+  ]
+}

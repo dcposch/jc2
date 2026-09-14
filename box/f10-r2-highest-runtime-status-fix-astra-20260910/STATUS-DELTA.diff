@@ -1,0 +1,25 @@
+--- old/dispatch.py
++++ new/dispatch.py
+@@ -597,9 +597,9 @@
+         if t['status']=='NORMAL_EXIT' and t['child_returncode']==2 and t['resource'] is None:
+             self.normal(t,2)
+             need(not (self.writer/'candidate.json').exists(), 'inconclusive has no candidate')
+-            self.highest_receipt('highest-produce','produce','INCONCLUSIVE_FIXED_PLACE',None)
++            self.highest_receipt('highest-produce','produce','INCONCLUSIVE_NO_CERTIFICATE',None)
+             self.freeze(('highest-produce.receipt.json',))
+-            return {'status':'INCONCLUSIVE_FIXED_PLACE','science_outcome':'NONE','calls':10,
++            return {'status':'INCONCLUSIVE_NO_CERTIFICATE','science_outcome':'NONE','calls':10,
+                     'root_registration_sha256':self.root_sha}
+         self.normal(t,0)
+         candidate=self.writer/'candidate.json'
+--- old/CONTRACT.md
++++ new/CONTRACT.md
+@@ -28,7 +28,7 @@
+ 
+ ## Acceptance and custody
+ 
+-Producer INCONCLUSIVE_FIXED_PLACE/normal2 with no candidate ends the batch after10 calls. Otherwise it must return normal0, empty streams and exact CANDIDATE_UNCHECKED receipt. Candidate and receipt are moved on the same filesystem, chowned ROOT,0444, fsynced/read back, and the frozen directory becomes0555. Positive checker must return normal0/empty streams and exact HIGHEST_SPECIAL_PROJECTIVE_CHECKED_NO_SOURCE_OUTCOME receipt; freeze it before mutation. Freeze changed fixture and mutation receipt before negative checking.
++Producer INCONCLUSIVE_NO_CERTIFICATE/normal2 with no candidate ends the batch after10 calls. Otherwise it must return normal0, empty streams and exact CANDIDATE_UNCHECKED receipt. Candidate and receipt are moved on the same filesystem, chowned ROOT,0444, fsynced/read back, and the frozen directory becomes0555. Positive checker must return normal0/empty streams and exact HIGHEST_SPECIAL_PROJECTIVE_CHECKED_NO_SOURCE_OUTCOME receipt; freeze it before mutation. Freeze changed fixture and mutation receipt before negative checking.
+ 
+ Changing c adds nonzeroF to the identity; changing d adds nonzeroG. Thus at least one of the eleven identity positions fails, even when the changed constant wraps88to0 or its array becomes empty. Parsing, degree bounds, baseline, place and all other fields remain unchanged. This is the single meaningful negative control; it is not an executed result.
+ 

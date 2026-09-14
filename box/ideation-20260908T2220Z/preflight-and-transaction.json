@@ -1,0 +1,77 @@
+{
+  "utc": "2026-09-08T22:28:24.633238+00:00",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/ideation-20260908T2220Z/preflight.py"
+      ],
+      "rc": 0,
+      "stdout": "{\"status\": \"PASS\", \"charged_inputs\": 19, \"all46\": true, \"equal_contracts\": true, \"indexed_keys_rejected\": true, \"root_blind_verified\": false, \"launch_performed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/ideation-20260908T2220Z/preflight.py",
+        "--invitation-ready"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "REFUSE: root blind absent; invitations forbidden\n"
+    }
+  ],
+  "transaction": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "close",
+        "--final",
+        "xmodel/ideation-20260908T2220Z-prep-astra.md",
+        "--token",
+        "a55f176d5f8e015c81aa166c0431cee5daa2f11dd49e98e384b6d88c5fa8eb46"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"final_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-prep-astra.md\", \"idempotent\": false, \"partial_path\": \"/home/ubuntu/jc2/xmodel/.ideation-20260908T2220Z-prep-astra.md.partial-c5164f9388f64da90a816ab48ca8353d\", \"source_bytes\": 5259, \"source_sha256\": \"302522808c5142ccf855e7c6dbc3967d1a3d847f1048aa3415ee49717a4d49e8\", \"status\": \"CLOSED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "finalize",
+        "--final",
+        "xmodel/ideation-20260908T2220Z-prep-astra.md",
+        "--token",
+        "a55f176d5f8e015c81aa166c0431cee5daa2f11dd49e98e384b6d88c5fa8eb46"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 5259, \"body_sha256\": \"302522808c5142ccf855e7c6dbc3967d1a3d847f1048aa3415ee49717a4d49e8\", \"file_bytes\": 5591, \"final_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-prep-astra.md\", \"full_sha256\": \"53d9276673682c598353c17013aa2a172af22c77d111dbba1ca7ea29ea867603\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-prep-astra.md.artifact.json\", \"manifest_sha256\": \"97373ee46d5e99d4bacea4734af948e2a93257634799733f29abfee2011ab068\", \"recovered\": false, \"status\": \"FINAL\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/ideation-20260908T2220Z-prep-astra.md"
+      ],
+      "rc": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 5259, \"body_sha256\": \"302522808c5142ccf855e7c6dbc3967d1a3d847f1048aa3415ee49717a4d49e8\", \"file_bytes\": 5591, \"final_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-prep-astra.md\", \"full_sha256\": \"53d9276673682c598353c17013aa2a172af22c77d111dbba1ca7ea29ea867603\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260908T2220Z-prep-astra.md.artifact.json\", \"manifest_sha256\": \"97373ee46d5e99d4bacea4734af948e2a93257634799733f29abfee2011ab068\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    }
+  ],
+  "launch_performed": false
+}

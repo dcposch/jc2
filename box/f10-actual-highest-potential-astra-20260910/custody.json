@@ -1,0 +1,59 @@
+{
+  "task": "f10-actual-highest-potential-astra-20260910",
+  "owner": "/root/contact_collision_geometry",
+  "status": "FINAL_NO_CLOSING_IDENTITY",
+  "first_action_utc": "2026-09-10 22:39:09 UTC",
+  "first_target_absence": "Exact owned report, manifest and box were absent; ACK sent to ROOT.",
+  "publication_reserve_utc": "2026-09-10 22:59:00 UTC",
+  "hard_stop_utc": "2026-09-10 23:02:00 UTC",
+  "clock_reset": false,
+  "custody_preparation_clock_utc": "2026-09-10 22:55:10 UTC",
+  "publication": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "opened_utc": "2026-09-10 22:39:41 UTC",
+    "closed_utc": "2026-09-10 22:52:50 UTC",
+    "finalized_utc": "2026-09-10 22:52:50 UTC",
+    "expected_manifest_sha256": "0de5b2584a7342ddc75f8086b1fd6b403ddc9fcfe884c7a254c1daa62c9cdc35",
+    "expected_verification": "VERIFIED using existing artifact_finalize.py verify with exact basis and expected manifest SHA256",
+    "body_sha256": "f34dabc94bb589a470d4c119e0c84b5896263129a726e710706ad577d25e34af",
+    "body_bytes": 17629,
+    "report_bytes": 17962,
+    "private_draft_and_lease": "Both absent at 22:53:06 UTC; no frozen edits after finalization."
+  },
+  "inputs": [
+    {"path": "box/f10-actual-highest-potential-prep-20260910/ROOT-CARD.md", "sha256": "32a2f296baecf34f2941a15d7adc9aa727ca576ed389b5960df828f621032d48", "bytes": 5245, "read": "Fresh WHOLE lines 1-33; card pin before card body; six-input vector before report bodies."},
+    {"path": "xmodel/f10-all-r-kernel-highest-interface-astra-20260910.md", "sha256": "53e17b24e6a0c258e873bf2f1c84823b5367b269a7744a272bbe61ef9d0c7312", "bytes": 22094, "read": "Fresh WHOLE lines 1-211 after pin."},
+    {"path": "xmodel/f10-whole-mate-euler-elimination-astra-20260909.md", "sha256": "a5ab487c4619742b6252e2503488eea4d6e927b58fd2821207cc85bcba7cf8d5", "bytes": 19277, "read": "Fresh WHOLE lines 1-251 after pin."},
+    {"path": "xmodel/f10-all-r-early-band-tower-astra-20260909.md", "sha256": "85e7b800829b0af63b7217d7d9a3ac5e1190dc1128fb664b1500a4aa8b11369b", "bytes": 23327, "read": "Fresh WHOLE lines 1-322 after pin."},
+    {"path": "xmodel/f10-all-r-middle-band-astra-20260909.md", "sha256": "5282cf73f7be20ecdf0bef9613764a78fd4ec030b01dc78257a4b1c1d86dee8c", "bytes": 21448, "read": "Fresh WHOLE lines 1-282 after pin."},
+    {"path": "xmodel/f10-all-r-critical-band-astra-20260909.md", "sha256": "b5de468d2283b732cde7cfde02eb4457a70713743682870ed1e7940129cef3a2", "bytes": 18877, "read": "Fresh WHOLE lines 1-260 after pin."}
+  ],
+  "owned_pins_excluding_this_custody": [
+    {"path": "xmodel/f10-actual-highest-potential-astra-20260910.md", "sha256": "0fd8ff010a62ccb1fb9756bd3928d492c0cc1ccce896b2b2313635773125404e"},
+    {"path": "xmodel/f10-actual-highest-potential-astra-20260910.md.artifact.json", "sha256": "0de5b2584a7342ddc75f8086b1fd6b403ddc9fcfe884c7a254c1daa62c9cdc35"},
+    {"path": "box/f10-actual-highest-potential-astra-20260910/PINS.json", "sha256": "6e04c2a1d25767d3020e84c79d2520e6f9ed123ba3bb145924ea906054cff87f"}
+  ],
+  "checks": {
+    "own_unsealed_whole_review_utc": "2026-09-10 22:52:17 UTC",
+    "own_final_whole_review_completed_by_utc": "2026-09-10 22:53:06 UTC",
+    "open_collision_postpin_check_utc": "2026-09-10 22:51:37 UTC",
+    "terminal_pins": "All six input and three owned hashes rechecked after finalization and again after the 22:55:10 UTC custody-preparation clock; all matched.",
+    "custody_target": "Exact custody.json target absent before this final authored write.",
+    "clipping": "NONE",
+    "prior_whole_reuse": "NONE",
+    "collisions": "NONE within authorized owned-only check; unrelated files not inspected.",
+    "marker": "Single BODY-END added last after own WHOLE/postpins/OPEN-collision review, then close/finalize/expected verify.",
+    "open_math": "Actual potential/graded model equivalence and REG remain unproved. Gamma(Wmix) whole-B unitness is only a necessary discriminator for the specified graded-equivalence class, not for REG."
+  },
+  "results": {
+    "full_critical_identity": "gamma*Psi_q = z + Gamma(W_q), with gamma a whole-B unit, complete earlier forcing, actual critical y=z-U*d0, and target term retained.",
+    "mixed_plane_identity": "gamma*a_mix = Gamma(Wmix); a_mix being a whole-B unit is necessary for the specified graded model equivalence. No value or unitness is claimed.",
+    "controls": "A weighted regular changed system with a_mix=0 separates the model-equivalence obstruction from REG; target variation and critical theta5 cancellation are explicit.",
+    "verdict": "NO_CLOSING_IDENTITY: no actual potential, graded conjugacy, REG, source-zero, or global JC2 conclusion."
+  },
+  "lifecycle": "Master was the sole provisional generation at invitation. ROOT attested its FIRST A-G acceptance at 22:42; no new review/receipt body was read. No descendants, review or promotion launched by this task.",
+  "execution": "Manual mathematics and documentary text/hash/metadata plus existing artifact_finalize publication only. ZERO scientific subprocess of any size, code, coefficient artifact, CAS, import, AST, syntax, test, network, AWS, SSH, process, Git, corpus, protected/shared work, or agents.",
+  "writes": "All authored bytes via apply_patch; ordinary existing artifact transaction only; custody is the final authored file.",
+  "writers": "ALL WRITERS IDLE upon completion of this custody write; no active worker or scientific process was launched. Only read-only terminal hash/WHOLE/time confirmation follows.",
+  "follow_on_authority": "NONE; ROOT owns independent custody-first intake and any FIRST review."
+}

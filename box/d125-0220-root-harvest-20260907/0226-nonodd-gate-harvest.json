@@ -1,0 +1,157 @@
+{
+  "corrections": [
+    "Reviewer C3_construction_c_d and C4_euler_reduction are True/prose placeholders, not executable checks; C4 loop does nothing. Their mathematical proofs are explicit in prose; producer free-symbol checker verifies Euler. Root adds an actual h=0 countercontrol above.",
+    "C5 has90 finite (j,q0) cases, not9x14=126. q0>=14 gives eta=j/2 for every j<=9, so no larger q0 introduces a new eta regime; universal inequalities remain the proof.",
+    "C6 finite monomial table is a control, not a proof for unrestricted degree; the elementary normality/weight argument supplies the bound.",
+    "Rejected reviewer C7 draft is retained but not executed or treated as evidence. Root avoids the inner timeout process group.",
+    "No finite quotient or nonreduced/unit-ideal descent is promoted in this gate. Source implications are field-point statements, sufficient for their exclusion purpose."
+  ],
+  "pins": {
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/custody.json": "4983eb6988e763197c98638c540f987ed96ba7105be79e5a54cea75149e4dc2a",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/fable5-controls-O.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/fable5-controls-O.out": "ee1e50117832e08df86e4b873bc4aee68794ffc6d350638397f00200ec09166c",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/fable5-controls.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/fable5-controls.out": "ee1e50117832e08df86e4b873bc4aee68794ffc6d350638397f00200ec09166c",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/fable5-replay.json": "4242dce345baeb1b4907bbbbcc1454c2714b927df3e3d00736fee1b256e5b749",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/fable5_controls.py": "dbdee6e49b4932b1268fe665b69bd13400086b5460101dfe569899d6d9a1996c",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/fable5_controls.v1-rejected.py": "11f522779d6c2e4c318892ad40879f13ee62806c33a1c967f7e63fa1f47b34e9",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/fable5_replay.py": "2daaa9adc7190931b9c37fb439edab48b30d0883b12b49f96c0ff1c4c9be5eb8",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/inputs-sha256.txt": "36a4078edcc4dc74b62f5f782baffd85ff7d4a7c871be9ded5197dd06dd76db2",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/scratch/nonodd-check.py": "9fac34837695f549a64746bdbf2daae661f1ab09a6971937e82e3644a77a650a",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-fable5-20260908/sha256-box.txt": "53f372525e80a8020e05b9e22a643467fdd6f2cbfd46d3f810d60ed3d131e4ea",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/PINS.json": "b1a4bd92a2b1aab217de669ce149dc10fb06a8eff2d1daeb3a9d86ab735ca9b1",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/accepted-minimal-receiver.md": "7dec79af1aa62946b46ecb209a710dd95e1b226b6b78229a3f232160a5385413",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/accepted-odd-gate.md": "1312312448a744d5531becef99e6839dd811e1ffe51a763c554df3a13d8373cc",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/accepted-odd-gate.run.v2": "e3d1f5b8c87e819ec1d6291b8a4000d1d75e79c05d0d6938b00e6a2974bc4d60",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/accepted-source-centralizer.md": "bf1dfa72a6a3dc8210ed8fd8354bb0d8bcda6dfcc447a1e9ba386048e177955f",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/frozen-scope-poststate.md": "0155e12846276f769f6dfa48943047dbcdabe42fcf18ba350c2e3cefae2acd62",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/nonodd-check.py": "9fac34837695f549a64746bdbf2daae661f1ab09a6971937e82e3644a77a650a",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/nonodd-custody.json": "53e6d8bc7ca9006be56a8f19bd123039eb6d0f176a426be902899d0b911d8837",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/nonodd-input-pins.json": "a19cae50acbf2d515ef2f8276b14e53a71e72e60f6ed327580e63d374ece6d4e",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/nonodd-producer.md": "2b5a5013d4d7284957b0e69d108f4f1ac1a2b7e81648b1dd2f403223f4791732",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/nonodd-replay.json": "a29be3b3840fe26738b7f3b34509ff5608c0c665e5a7f7ff9a860550d6ff95ae",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/nonodd-transaction.json": "b4940fc835ac1b411f423a0cd7a4a50dde557cd50651b1ed9a2220732daab1b6",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/root-nonodd-receipt.json": "6515f5b82cc8897de24b4d2a7af21bbc4a409bc0184908fb66a375ab1ca77cad",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-gate-prep-20260908/inputs/root-odd-gate-receipt.json": "78bdb91c77360eab63c76416b10912da32e90aa57596b2c903767588f65851b5",
+    "/home/ubuntu/jc2/xmodel/d125-nonodd-cone-gate-fable5-20260908.md": "4505f131c63e4b755f35432e71e9e46728140ad797fc243b479e56747af2a542",
+    "/home/ubuntu/jc2/xmodel/d125-nonodd-cone-gate-fable5-20260908.run.v2": "26c82aef4449cfc3ca2727af360c87aee29b72b1af6eb9b43a328ed3f9180b68"
+  },
+  "root_h0_control": "import json\ndef need(x,m):\n if not x: raise ValueError(m)\n# P=Z^3+Z, Q=Z^5+Z. Both p-derivatives vanish exactly.\nP={3:1,1:1}; Q={5:1,1:1}\ndef euler_residual(poly,degree,h): return {i:(i-degree)*h*a for i,a in poly.items() if (i-degree)*h*a}\nneed(P!={3:1} and Q!={5:1},\"nontrivial constant coefficients\")\nneed(not euler_residual(P,3,0) and not euler_residual(Q,5,0),\"h=0 permits both monic homogeneous commuting polynomials\")\nneed(euler_residual(P,3,1)=={1:-2} and euler_residual(Q,5,1)=={1:-4},\"same changed object fails positive homogeneous degree\")\nprint(json.dumps({\"status\":\"PASS\",\"h0_countercontrol\":\"monic depressed P=Z^3+Z,Q=Z^5+Z commute; positive-h homogeneity fails\"},sort_keys=True))\n",
+  "runs": [
+    {
+      "kind": "producer",
+      "mode": "positive",
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3293e05df1ae58dc9ac39a54096a4bb03ca13a4ba27e494b6128766eff9d0c91"
+    },
+    {
+      "kind": "producer",
+      "mode": "--omit-b4",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1046fc85e5a72b945a08cc18154da93046cf1bb795e51cfe20c39c14c1f9cbaf",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "kind": "producer",
+      "mode": "--omit-b2",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1046fc85e5a72b945a08cc18154da93046cf1bb795e51cfe20c39c14c1f9cbaf",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "kind": "producer",
+      "mode": "--partial-constant-shear",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1799b1e32b31bb5ee69fec4a017819897d65a1759e8d4a5b2562e340db2e244c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "kind": "producer",
+      "mode": "--wrong-f",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "01541a0184b37ab491316e5bc8b035f6f54ed43f798925afea4c890473405536",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "kind": "producer",
+      "mode": "positive",
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3293e05df1ae58dc9ac39a54096a4bb03ca13a4ba27e494b6128766eff9d0c91"
+    },
+    {
+      "kind": "producer",
+      "mode": "--omit-b4",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1046fc85e5a72b945a08cc18154da93046cf1bb795e51cfe20c39c14c1f9cbaf",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "kind": "producer",
+      "mode": "--omit-b2",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1046fc85e5a72b945a08cc18154da93046cf1bb795e51cfe20c39c14c1f9cbaf",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "kind": "producer",
+      "mode": "--partial-constant-shear",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1799b1e32b31bb5ee69fec4a017819897d65a1759e8d4a5b2562e340db2e244c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "kind": "producer",
+      "mode": "--wrong-f",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "01541a0184b37ab491316e5bc8b035f6f54ed43f798925afea4c890473405536",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "kind": "reviewer",
+      "mode": "positive with internal changed objects",
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ee1e50117832e08df86e4b873bc4aee68794ffc6d350638397f00200ec09166c"
+    },
+    {
+      "kind": "reviewer",
+      "mode": "positive with internal changed objects",
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ee1e50117832e08df86e4b873bc4aee68794ffc6d350638397f00200ec09166c"
+    },
+    {
+      "kind": "root-h0",
+      "mode": "positive with internal changed objects",
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b9b5482ca4afdd435ffd9850a137fe98944f8b0a802f77cc8a96ffaa84f7150f"
+    },
+    {
+      "kind": "root-h0",
+      "mode": "positive with internal changed objects",
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b9b5482ca4afdd435ffd9850a137fe98944f8b0a802f77cc8a96ffaa84f7150f"
+    }
+  ],
+  "scope": "All six nonodd proof arrows checked after terminal original unit/model absent, receipt/current14 inputs/report, whole proof/checkers. Exact unequal/squarefree-Q field-point exclusion only. No actual high source/H/R powers or CAS.",
+  "seconds": 0.7769366500433534,
+  "utc": "2026-09-08T02:25:34.216817+00:00"
+}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/opt/jc2-r3-directrows-20260911a/science/produce.py", line 382, in <module>
+    main()
+  File "/opt/jc2-r3-directrows-20260911a/science/produce.py", line 361, in main
+    payload=build(meta)
+            ^^^^^^^^^^^
+  File "/opt/jc2-r3-directrows-20260911a/science/produce.py", line 274, in build
+    transformed=add(transformed,shift(term,6,-ex[6]))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/jc2-r3-directrows-20260911a/science/arithmetic.py", line 204, in add
+    bounded(r)
+  File "/opt/jc2-r3-directrows-20260911a/science/arithmetic.py", line 169, in bounded
+    raise ValueError('STOP_INTERNAL_TERM_CAP')
+ValueError: STOP_INTERNAL_TERM_CAP

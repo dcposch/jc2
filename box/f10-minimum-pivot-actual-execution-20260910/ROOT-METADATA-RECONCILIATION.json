@@ -1,0 +1,91 @@
+{
+  "schema": "ROOT-METADATA-RECONCILIATION/v1",
+  "scope": "metadata only; no mathematical coefficient body parsed, no arithmetic replay",
+  "generated_utc": "2026-09-10T04:17:48.165Z",
+  "status": "PASS",
+  "fixed_files": 116,
+  "records": [
+    {
+      "name": "gate-disabled",
+      "caller_pid": 2133,
+      "child_pid": 2143,
+      "pgid": 2143,
+      "status": "NORMAL_EXIT",
+      "child_returncode": 1,
+      "wall_elapsed_seconds": 0.125739676,
+      "sampled_rss": 28778496
+    },
+    {
+      "name": "gate-wronghost",
+      "caller_pid": 2173,
+      "child_pid": 2183,
+      "pgid": 2183,
+      "status": "NORMAL_EXIT",
+      "child_returncode": 1,
+      "wall_elapsed_seconds": 0.124210972,
+      "sampled_rss": 28524544
+    },
+    {
+      "name": "gate-argv",
+      "caller_pid": 2206,
+      "child_pid": 2216,
+      "pgid": 2216,
+      "status": "NORMAL_EXIT",
+      "child_returncode": 1,
+      "wall_elapsed_seconds": 0.124744971,
+      "sampled_rss": 28749824
+    },
+    {
+      "name": "gate-cap",
+      "caller_pid": 2246,
+      "child_pid": 2256,
+      "pgid": 2256,
+      "status": "NORMAL_EXIT",
+      "child_returncode": 1,
+      "wall_elapsed_seconds": 0.123800702,
+      "sampled_rss": 28672000
+    },
+    {
+      "name": "gate-missing-input",
+      "caller_pid": 2286,
+      "child_pid": 2293,
+      "pgid": 2293,
+      "status": "NORMAL_EXIT",
+      "child_returncode": 1,
+      "wall_elapsed_seconds": 0.123743354,
+      "sampled_rss": 28504064
+    },
+    {
+      "name": "gate-valid",
+      "caller_pid": 2319,
+      "child_pid": 2329,
+      "pgid": 2329,
+      "status": "NORMAL_EXIT",
+      "child_returncode": 0,
+      "wall_elapsed_seconds": 0.124412745,
+      "sampled_rss": 18989056
+    },
+    {
+      "name": "dummy-descendant",
+      "caller_pid": 2357,
+      "child_pid": 2367,
+      "pgid": 2367,
+      "status": "RESOURCE_CAP",
+      "child_returncode": 0,
+      "wall_elapsed_seconds": 0.395842128,
+      "sampled_rss": 80068608
+    },
+    {
+      "name": "solve",
+      "caller_pid": 2447,
+      "child_pid": 2457,
+      "pgid": 2457,
+      "status": "NORMAL_EXIT",
+      "child_returncode": 1,
+      "wall_elapsed_seconds": 25.908244593,
+      "sampled_rss": 271491072
+    }
+  ],
+  "mathematical_status": "NONDECISION; integer conversion ValueError; no candidate",
+  "custody_qualification": "premature stop during first pull; collection-only reboot; all116fixed/75owned revalidated before complete pull and payload"
+}

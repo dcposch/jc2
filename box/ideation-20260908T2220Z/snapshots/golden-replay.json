@@ -1,0 +1,183 @@
+{
+  "utc": "2026-09-08T03:00:57.961035+00:00",
+  "status": "PASS",
+  "code_sha256": "e49907ee44870195b3d437ea7b095619ecd9f6bc315702dc6932cfe7937687f8",
+  "elapsed_seconds": 2.6748821099754423,
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "positive"
+      ],
+      "seconds": 0.037705881986767054,
+      "rc": 0,
+      "stdout": "{\"both_conjugates\": [{\"critical_unit\": [\"-1\", \"2\"], \"rho\": [\"0\", \"1\"]}, {\"critical_unit\": [\"5\", \"-2\"], \"rho\": [\"3\", \"-1\"]}], \"j12_order\": \"36\", \"max_actual_degree\": 5, \"source_A_B_built\": false, \"status\": \"PASS\"}\n",
+      "stderr": "",
+      "expected_result": true
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "--wrong-critical-shift"
+      ],
+      "seconds": 0.10238700406625867,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 49, in <module>\n    need(H(add(gc,s),p,t)=={},'moving critical point of H(g+s,p)')\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 6, in need\n    if not v:raise ValueError(msg)\n             ^^^^^^^^^^^^^^^^^^^^^\nValueError: moving critical point of H(g+s,p)\n",
+      "expected_result": true
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "--drop-constant"
+      ],
+      "seconds": 0.10065836401190609,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 54, in <module>\n    need(p0==expected,'earlier moving constant at j10 has q11')\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 6, in need\n    if not v:raise ValueError(msg)\n             ^^^^^^^^^^^^^^^^^^^^^\nValueError: earlier moving constant at j10 has q11\n",
+      "expected_result": true
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "--drop-half-loss"
+      ],
+      "seconds": 0.10147381201386452,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 59, in <module>\n    need(actual_order==36,'j12 ramified equality is not commutation')\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 6, in need\n    if not v:raise ValueError(msg)\n             ^^^^^^^^^^^^^^^^^^^^^\nValueError: j12 ramified equality is not commutation\n",
+      "expected_result": true
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "--drop-split-sign"
+      ],
+      "seconds": 0.10000263794790953,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 67, in <module>\n    need(values==[0,-2] and any(values),'global separated-sheet minimum')\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 6, in need\n    if not v:raise ValueError(msg)\n             ^^^^^^^^^^^^^^^^^^^^^\nValueError: global separated-sheet minimum\n",
+      "expected_result": true
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "positive"
+      ],
+      "seconds": 0.13653327897191048,
+      "rc": 0,
+      "stdout": "{\"both_conjugates\": [{\"critical_unit\": [\"-1\", \"2\"], \"rho\": [\"0\", \"1\"]}, {\"critical_unit\": [\"5\", \"-2\"], \"rho\": [\"3\", \"-1\"]}], \"j12_order\": \"36\", \"max_actual_degree\": 5, \"source_A_B_built\": false, \"status\": \"PASS\"}\n",
+      "stderr": "",
+      "expected_result": true
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "--wrong-critical-shift"
+      ],
+      "seconds": 0.5260057019768283,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 49, in <module>\n    need(H(add(gc,s),p,t)=={},'moving critical point of H(g+s,p)')\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 6, in need\n    if not v:raise ValueError(msg)\n             ^^^^^^^^^^^^^^^^^^^^^\nValueError: moving critical point of H(g+s,p)\n",
+      "expected_result": true
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "--drop-constant"
+      ],
+      "seconds": 0.5260289190337062,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 54, in <module>\n    need(p0==expected,'earlier moving constant at j10 has q11')\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 6, in need\n    if not v:raise ValueError(msg)\n             ^^^^^^^^^^^^^^^^^^^^^\nValueError: earlier moving constant at j10 has q11\n",
+      "expected_result": true
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "--drop-half-loss"
+      ],
+      "seconds": 0.5247196250129491,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 59, in <module>\n    need(actual_order==36,'j12 ramified equality is not commutation')\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 6, in need\n    if not v:raise ValueError(msg)\n             ^^^^^^^^^^^^^^^^^^^^^\nValueError: j12 ramified equality is not commutation\n",
+      "expected_result": true
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py",
+        "--drop-split-sign"
+      ],
+      "seconds": 0.5192395489430055,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 67, in <module>\n    need(values==[0,-2] and any(values),'global separated-sheet minimum')\n  File \"/home/ubuntu/jc2/box/golden-two-regime-initial-discriminator-20260908/check.py\", line 6, in need\n    if not v:raise ValueError(msg)\n             ^^^^^^^^^^^^^^^^^^^^^\nValueError: global separated-sheet minimum\n",
+      "expected_result": true
+    }
+  ]
+}

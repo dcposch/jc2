@@ -1,0 +1,22 @@
+MainPID=0
+Result=success
+LoadState=not-found
+ActiveState=inactive
+SubState=dead
+Sep 09 14:49:55 ip-172-30-0-72 systemd[880]: Started jc2-f10-r1-exact-decision-validation-20260909.service - /usr/bin/python3 -I -B /home/ubuntu/f10-r1-exact-decision-validation-20260909/caller.py /home/ubuntu/f10-r1-exact-decision-validation-20260909/ROOT-REGISTRATION.json.
+Sep 09 14:49:57 ip-172-30-0-72 systemd[880]: jc2-f10-r1-exact-decision-validation-20260909.service: Consumed 1.217s CPU time, 2.2M memory peak, 0B memory swap peak.
+ROOT-REGISTRATION.json: OK
+caller.py: OK
+engine.py: OK
+certificate.py: OK
+semantic_tests.py: OK
+execution_gate.py: OK
+probe.py: OK
+run_capped.py: OK
+exact.json: OK
+admissibility.md: OK
+frontier.json: OK
+REGISTRATION.md: OK
+3ca47331a86068f167cc73777d8fee349c99b7a5f23b4486cf980d1d60e4aefd  TERMINAL.sha256
+2026-09-09T14:50:57Z
+TERMINAL: original caller PID absent; exact service cgroup absent; all source pins unchanged

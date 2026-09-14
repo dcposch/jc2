@@ -1,0 +1,10 @@
+normal exit=0 3.66 s 20324 KB :: 
+normal_O exit=0 3.84 s 25616 KB :: 
+no-w4 exit=1 0.11 s 31748 KB :: RuntimeError: FAIL: comparison direction
+no-w4_O exit=1 0.54 s 39688 KB :: RuntimeError: FAIL: comparison direction
+reverse-w5 exit=1 0.11 s 31980 KB :: RuntimeError: FAIL: comparison direction
+reverse-w5_O exit=1 0.54 s 40172 KB :: RuntimeError: FAIL: comparison direction
+bad-matrix exit=1 0.14 s 32060 KB :: RuntimeError: FAIL: unit Hermite minor at s=6
+bad-matrix_O exit=1 0.58 s 40328 KB :: RuntimeError: FAIL: unit Hermite minor at s=6
+w1-zero-lambda exit=1 0.11 s 31844 KB :: RuntimeError: FAIL: W1 > 0 on all 269 names (global), post-mutation
+w1-zero-lambda_O exit=1 0.54 s 40384 KB :: RuntimeError: FAIL: W1 > 0 on all 269 names (global), post-mutation

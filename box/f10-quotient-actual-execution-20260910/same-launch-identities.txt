@@ -1,0 +1,82 @@
+2026-09-10T02:51:42,215767963+00:00
+Running as unit: jc2-f10-quotient-actual-execution-20260910.service; invocation ID: 6be0073ff4f048208f20e1e92f567337
+MainPID=1422
+ControlGroup=/system.slice/jc2-f10-quotient-actual-execution-20260910.service
+ActiveState=active
+SubState=running
+InvocationID=6be0073ff4f048208f20e1e92f567337
+2026-09-10T02:51:42,262406665+00:00
+OWNED_PID=1422
+1422 (python3) R 1 1422 1422 0 -1 4194560 1472 0 0 0 0 0 0 0 20 0 1 0 11033 18788352 2399 18446744073709551615 4325376 7353021 140728098512544 0 0 0 0 16781312 2 0 0 0 17 13 0 0 0 0 0 10657224 12220544 715317248 140728098516401 140728098516498 140728098516498 140728098516967 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/dispatch_batch.py 
+2026-09-10T02:51:42,370961391+00:00
+OWNED_PID=1430
+1430 (python3) R 1422 1422 1422 0 -1 4194304 3112 0 0 0 3 0 0 0 20 0 1 0 11041 30871552 5149 18446744073709551615 4325376 7353021 140721195326288 0 0 0 0 16781312 2 0 0 0 17 15 0 0 0 0 0 10657224 12220544 649682944 140721195330212 140721195331090 140721195331090 140721195331559 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-quotient-actual-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-disabled.stdout --stderr-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-disabled.stderr --telemetry-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-disabled.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-disabled.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-disabled.sentinel plain 
+2026-09-10T02:51:42,426614963+00:00
+OWNED_PID=1436
+1436 (python3) R 1430 1436 1436 0 -1 4194304 3217 0 0 0 4 0 0 0 20 0 1 0 11046 32989184 5441 18446744073709551615 4325376 7353021 140727817369248 0 0 0 0 16781312 2 0 0 0 17 12 0 0 0 0 0 10657224 12220544 286511104 140727817374922 140727817375250 140727817375250 140727817375719 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-disabled.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-disabled.sentinel plain 
+2026-09-10T02:51:42,584909044+00:00
+OWNED_PID=1447
+1447 (python3) R 1422 1422 1422 0 -1 4194304 2403 0 0 0 2 0 0 0 20 0 1 0 11064 28835840 4501 18446744073709551615 4325376 7353021 140727116030128 0 0 0 0 16781312 2 0 0 0 17 9 0 0 0 0 0 10657224 12220544 53252096 140727116032671 140727116033554 140727116033554 140727116034023 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-quotient-actual-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-wronghost.stdout --stderr-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-wronghost.stderr --telemetry-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-wronghost.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-wronghost.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-wronghost.sentinel plain 
+2026-09-10T02:51:42,640979720+00:00
+OWNED_PID=1453
+1453 (python3) R 1447 1453 1453 0 -1 4194304 2532 0 0 0 3 0 0 0 20 0 1 0 11069 29032448 4596 18446744073709551615 4325376 7353021 140737167318608 0 0 0 0 16781312 2 0 0 0 17 10 0 0 0 0 0 10657224 12220544 734969856 140737167322312 140737167322642 140737167322642 140737167323111 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-wronghost.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-wronghost.sentinel plain 
+2026-09-10T02:51:42,799808440+00:00
+OWNED_PID=1464
+1464 (python3) R 1422 1422 1422 0 -1 4194304 2034 0 0 0 1 0 0 0 20 0 1 0 11086 22126592 3297 18446744073709551615 4325376 7353021 140735822972320 0 0 0 0 16781312 2 0 0 0 17 9 0 0 0 0 0 10657224 12220544 335187968 140735822977720 140735822978578 140735822978578 140735822979047 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-quotient-actual-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-argv.stdout --stderr-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-argv.stderr --telemetry-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-argv.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-argv.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-argv.sentinel plain 
+2026-09-10T02:51:42,855602418+00:00
+OWNED_PID=1470
+1470 (python3) R 1464 1470 1470 0 -1 4194304 2046 0 0 0 2 0 0 0 20 0 1 0 11091 27283456 4165 18446744073709551615 4325376 7353021 140730038526960 0 0 0 0 16781312 2 0 0 0 17 10 0 0 0 0 0 10657224 12220544 560857088 140730038529234 140730038529554 140730038529554 140730038530023 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-argv.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-argv.sentinel plain 
+2026-09-10T02:51:43,013945457+00:00
+OWNED_PID=1481
+1481 (python3) R 1422 1422 1422 0 -1 4194304 1252 0 0 0 0 0 0 0 20 0 1 0 11109 18808832 2538 18446744073709551615 4325376 7353021 140725941611312 0 0 0 0 16781312 2 0 0 0 17 15 0 0 0 0 0 10657224 12220544 609849344 140725941615293 140725941616146 140725941616146 140725941616615 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-quotient-actual-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-cap.stdout --stderr-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-cap.stderr --telemetry-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-cap.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-cap.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-cap.sentinel plain 
+2026-09-10T02:51:43,069748039+00:00
+OWNED_PID=1487
+1487 (python3) R 1481 1487 1487 0 -1 4194304 1582 0 0 0 1 0 0 0 20 0 1 0 11114 20287488 2950 18446744073709551615 4325376 7353021 140730137576528 0 0 0 0 16781312 2 0 0 0 17 3 0 0 0 0 0 10657224 12220544 741756928 140730137578708 140730137579026 140730137579026 140730137579495 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-cap.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-cap.sentinel plain 
+2026-09-10T02:51:43,227953666+00:00
+OWNED_PID=1498
+1498 (python3) R 1422 1422 1422 0 -1 4194304 643 0 0 0 0 0 0 0 20 0 1 0 11131 17059840 1499 18446744073709551615 4325376 7353021 140736031337936 0 0 0 0 0 0 0 0 0 17 15 0 0 0 0 0 10657224 12220544 739434496 140736031341195 140736031342098 140736031342098 140736031342567 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-quotient-actual-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-missing-input.stdout --stderr-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-missing-input.stderr --telemetry-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-missing-input.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-missing-input.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-missing-input.sentinel plain 
+2026-09-10T02:51:43,284236365+00:00
+OWNED_PID=1504
+1504 (python3) R 1498 1504 1504 0 -1 4194304 1250 0 0 0 0 0 0 0 20 0 1 0 11136 18792448 2523 18446744073709551615 4325376 7353021 140727635917696 0 0 0 0 16781312 2 0 0 0 17 10 0 0 0 0 0 10657224 12220544 828354560 140727635926208 140727635926546 140727635926546 140727635927015 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-missing-input.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-missing-input.sentinel plain 
+2026-09-10T02:51:43,392252560+00:00
+OWNED_PID=1513
+1513 (ps) R 1498 1422 1422 0 -1 4194304 366 0 0 0 0 0 0 0 20 0 1 0 11147 11505664 1016 18446744073709551615 102306589409280 102306589474305 140732200052704 0 0 0 0 0 1938947833 0 0 0 17 10 0 0 0 0 0 102306589500016 102306589516424 102306916724736 140732200054263 140732200054299 140732200054299 140732200054768 0
+pid:[4026531836]
+
+2026-09-10T02:51:43,500050013+00:00
+OWNED_PID=1520
+1520 (python3) S 1422 1422 1422 0 -1 4194304 3657 0 0 0 4 0 0 0 20 0 1 0 11153 31244288 5344 18446744073709551615 4325376 7353021 140722697639168 0 0 0 0 16781312 16387 1 0 0 17 1 0 0 0 0 0 10657224 12220544 261558272 140722697640627 140722697641490 140722697641490 140722697641959 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-quotient-actual-execution-20260910 --stdout-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-valid.stdout --stderr-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-valid.stderr --telemetry-file /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-valid.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-valid.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-valid.sentinel plain 
+2026-09-10T02:51:43,504816140+00:00
+OWNED_PID=1521
+1521 (python3) R 1520 1521 1521 0 -1 4194304 1071 0 0 0 0 0 0 0 20 0 1 0 11158 18640896 2339 18446744073709551615 4325376 7353021 140731314203360 0 0 0 0 16781312 2 0 0 0 17 10 0 0 0 0 0 10657224 12220544 278872064 140731314212048 140731314212370 140731314212370 140731314212839 0
+pid:[4026531836]
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/probe.py /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-valid.authority.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/frontier.json /home/ubuntu/jc2-f10-quotient-actual-execution-20260910/gate-valid.sentinel plain 
+2026-09-10T02:51:43,508960163+00:00
+OWNED_PID=1522
+2026-09-10T02:51:43,562483044+00:00
+OWNED_PID=1534
+head: cannot open '/proc/1534/stat' for reading: No such file or directory

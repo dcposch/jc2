@@ -1,0 +1,86 @@
+{
+  "schema": "cross-terminal-custody/v1",
+  "tag": "ideation-20260911T1100Z-cross-astra-geometry",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED",
+  "first_action_utc": "2026-09-11 11:23:16 UTC",
+  "first_targets_absent": true,
+  "publication_reserve_utc": "2026-09-11 11:32:00 UTC",
+  "hard_stop_utc": "2026-09-11 11:35:00 UTC",
+  "full_round_backstop_utc": "2026-09-11 11:43:52.231949225 UTC",
+  "clock_reset": false,
+  "closed_and_finalized_utc": "2026-09-11 11:28:07 UTC",
+  "expected_verify_sealed_whole_and_postpins_completed_by_utc": "2026-09-11 11:28:24 UTC",
+  "inputs": [
+    {
+      "path": "box/ideation-20260911T1100Z-cross-prep/ROOT-CROSS.md",
+      "sha256": "7b13a6f78128e86d4998dd700066ced66611a37ab67c87199f7a293b473f6ec7",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "xmodel/ideation-20260911T1100Z-coordinator.md",
+      "sha256": "3c45826741e8bdc7222a78b5d20c118515b0d5d61d8188f02bebf65beed38e58",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "xmodel/ideation-20260911T1100Z-astra-geometry.md",
+      "sha256": "43eae05446b8aeaaa15844880ea37466759342833bebca9ef00146794a1b6e32",
+      "read_scope": "REUSED_WHOLE exact-pin same-agent sealed read 2026-09-11 11:14:41 UTC"
+    },
+    {
+      "path": "xmodel/ideation-20260911T1100Z-astra-source.md",
+      "sha256": "72e901ea33e07a5f6ad2f918da4c7674dc6f84e6f366f6b03d3a974d8bd4df8e",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "xmodel/ideation-20260911T1100Z-fable5.md",
+      "sha256": "a1f2c500c2274da314ff5f7db06252bd76bac18abbca90cb74bd88a653e5cf1d",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260910T2300Z-prep/inputs/allr-kernel-producer.md",
+      "sha256": "53e17b24e6a0c258e873bf2f1c84823b5367b269a7744a272bbe61ef9d0c7312",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/previous-synthesis.md",
+      "sha256": "9dad11eba0d7174a39c398b640a6cd42dd47c18f030cf296ceedc90c238f5792",
+      "read_scope": "REUSED_WHOLE exact-pin same-agent full text read 2026-09-11 11:08:36 UTC"
+    }
+  ],
+  "owned_excluding_custody": [
+    {
+      "path": "xmodel/ideation-20260911T1100Z-cross-astra-geometry.md",
+      "sha256": "ed3a8352514c249dbf9874daa632125fef6d66e20c79e0f6bf0e1eee56ad2766",
+      "read_scope": "WHOLE before marker and WHOLE sealed final"
+    },
+    {
+      "path": "xmodel/ideation-20260911T1100Z-cross-astra-geometry.md.artifact.json",
+      "sha256": "97d7239bdf943dd1517259635be045a04e800c33c94e971b15eea13e4017e6c0",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-cross-astra-geometry/PINS.json",
+      "sha256": "030b7c764ac81b95588d5d849386c8562147e7ae87a4df34060ac10a8c053457",
+      "read_scope": "WHOLE"
+    }
+  ],
+  "expected_transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "manifest_sha256": "97d7239bdf943dd1517259635be045a04e800c33c94e971b15eea13e4017e6c0",
+    "status": "VERIFIED"
+  },
+  "coverage": {
+    "fresh_whole": 5,
+    "reused_whole": 2,
+    "unrecovered_clipping": 0,
+    "bootstrap": "ROOT-CROSS hash-before-WHOLE to identify six texts; all seven pinned before those bodies.",
+    "questions": "A-E all addressed",
+    "forbidden_inputs_or_peer_cross": false
+  },
+  "collision": "EMPTY own-only; no canonical OPEN. Quantity, cheapest test, numeric UNMEASURED wall and stops included.",
+  "scientific_status": "CROSS_STRATEGY_ONLY; REG shortcut refuted, support census and 296 repair conditional, actual support GAP, pseudoplane construction endpoint corrected, formal recurrence formal-only. No promotion or execution.",
+  "writers_at_handoff": "ALL WRITERS IDLE after this custody write/readback; no background writer or child",
+  "permissions": "Manual reasoning, inert text/hash/JSON and ordinary artifact transaction only; no scientific subprocess, code/payload, network/AWS/SSH/Git/process controls, shared/protected edits or follow-on.",
+  "self_hash": "Excluded here; terminal handshake reports custody SHA first."
+}

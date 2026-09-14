@@ -1,0 +1,147 @@
+{
+  "input": "native-remainder-control-negative.input.json",
+  "input_sha256": "968af7e08f7d88005f6cb577a407d825931301d684eff891d5ef75148ba03b95",
+  "coefficient_field": "QQ",
+  "ring_generator_order": [
+    "zz",
+    "tt",
+    "Z3",
+    "Zc",
+    "c",
+    "leader3",
+    "target_a",
+    "target_b",
+    "target_c",
+    "target_d",
+    "target_e"
+  ],
+  "status": "UNIT",
+  "phases": [
+    {
+      "name": "inputs",
+      "elapsed_seconds": 0.0,
+      "h_terms": 2,
+      "v_terms": 3,
+      "U_terms": 5,
+      "parameters": 9
+    },
+    {
+      "name": "Rraw",
+      "elapsed_seconds": 0.001,
+      "terms": 10
+    },
+    {
+      "name": "Rlow",
+      "elapsed_seconds": 0.001,
+      "terms": 6
+    },
+    {
+      "name": "R_rows_emitted",
+      "elapsed_seconds": 0.002,
+      "counts": {
+        "source": 6,
+        "R_high": 2,
+        "Q": 4
+      },
+      "script_bytes": 256
+    },
+    {
+      "name": "H2",
+      "elapsed_seconds": 0.004,
+      "terms": 3
+    },
+    {
+      "name": "RH2_begin",
+      "elapsed_seconds": 0.005,
+      "left_terms": 6,
+      "right_terms": 3
+    },
+    {
+      "name": "RH2_end",
+      "elapsed_seconds": 0.007,
+      "terms": 7
+    },
+    {
+      "name": "vU_begin",
+      "elapsed_seconds": 0.008,
+      "left_terms": 3,
+      "right_terms": 5
+    },
+    {
+      "name": "vU_end",
+      "elapsed_seconds": 0.01,
+      "terms": 11
+    },
+    {
+      "name": "vUH_begin",
+      "elapsed_seconds": 0.011,
+      "left_terms": 11,
+      "right_terms": 2
+    },
+    {
+      "name": "vUH_end",
+      "elapsed_seconds": 0.012,
+      "terms": 11
+    },
+    {
+      "name": "vR_begin",
+      "elapsed_seconds": 0.014,
+      "left_terms": 3,
+      "right_terms": 6
+    },
+    {
+      "name": "vR_end",
+      "elapsed_seconds": 0.015,
+      "terms": 1
+    },
+    {
+      "name": "U2_begin",
+      "elapsed_seconds": 0.017,
+      "left_terms": 5,
+      "right_terms": 5
+    },
+    {
+      "name": "U2_end",
+      "elapsed_seconds": 0.018,
+      "terms": 5
+    },
+    {
+      "name": "Q_complete",
+      "elapsed_seconds": 0.02,
+      "terms": 13
+    },
+    {
+      "name": "full_rows_emitted",
+      "elapsed_seconds": 0.021,
+      "counts": {
+        "source": 6,
+        "R_high": 2,
+        "Q": 4
+      },
+      "script_bytes": 865
+    },
+    {
+      "name": "finished",
+      "elapsed_seconds": 0.031,
+      "status": "UNIT"
+    }
+  ],
+  "depth": 7,
+  "normalizer_degree": 10,
+  "counts": {
+    "source": 6,
+    "R_high": 2,
+    "Q": 4
+  },
+  "script_sha256": "d3ab369843374bdd4f70a0f2276e0a120ac83c0aa7d3ccf4f010adbfcfde6897",
+  "cas": {
+    "returncode": 0,
+    "errors": [],
+    "log_sha256": "e64448459797b8ec044c5dc4723ac66bcc2aba80bee7423b20cf9b4e67116bbd",
+    "result": [
+      "0",
+      "-1",
+      "1"
+    ]
+  }
+}

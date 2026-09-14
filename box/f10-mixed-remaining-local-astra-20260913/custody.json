@@ -1,0 +1,101 @@
+{
+  "schema": "jc2.manual-research-custody/v1",
+  "task": "f10-mixed-remaining-local-astra-20260913",
+  "owner": "/root/nonemptiness_certificate",
+  "workflow_status": "COMPLETED; final authored object; no later writes",
+  "mathematical_status": "MANUAL_UNREVIEWED_PARTIAL; B-unit for r=19,26,33,40,47 modulo49; exact first-deflated cancellation at r=0, v(X)=-1/3; remaining set explicit",
+  "first_action_utc": "2026-09-13T03:20:36.391550873Z",
+  "original_reserve_utc": "2026-09-13T03:37:00Z",
+  "original_hard_utc": "2026-09-13T03:40:00Z",
+  "sealed_utc": "2026-09-13T03:32:14Z",
+  "postpins_and_collision_check_utc": "2026-09-13T03:31:54.386800215Z",
+  "final_report_manifest_whole_and_expected_verify_utc": "2026-09-13T03:32:24.787826810Z",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-mixed-sevenadic-discriminator-astra-20260913.md",
+      "sha256": "c3f87e0fb4982f3bd0bad4b8a355041cc58cb9623fb5240d5c343b26f7b96d40",
+      "read_scope": "REUSED_WHOLE; same-agent current-byte WHOLE read in completed September13 03:02-03:12UTC task; fresh pin",
+      "prepin": "MATCH",
+      "postpin": "MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-mixed-univariate-reduction-root-20260912.md",
+      "sha256": "7b8545a623a771ebd423b441c4c1567389d0ca837d4e5b80c8990bc52b1075f8",
+      "read_scope": "REUSED_WHOLE; same-agent current-byte WHOLE read in completed September13 03:02-03:12UTC task; fresh pin",
+      "prepin": "MATCH",
+      "postpin": "MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-mixed-scalar-unit-gate-fable5-20260911.md",
+      "sha256": "aa8b0148f8bfb63ef072b23106f92bafa703a6b83033984e17a62f49eb70230f",
+      "read_scope": "REUSED_WHOLE; same-agent current-byte WHOLE read in completed September13 03:02-03:12UTC task; fresh pin",
+      "prepin": "MATCH",
+      "postpin": "MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-middle-rzero-unit-astra-20260910.md",
+      "sha256": "f6419218e5073c13c8f315210ae84410a10cc47af8ce382025e4d1a7dfc6bcd9",
+      "read_scope": "FRESH_WHOLE after matching pin",
+      "prepin": "MATCH",
+      "postpin": "MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-middle-final-residues-astra-20260910.md",
+      "sha256": "ab2fcd97d3662d04a49ab0e9d169e1a18ca6f5df30e273041673d2f578beb24b",
+      "read_scope": "FRESH_WHOLE after matching pin",
+      "prepin": "MATCH",
+      "postpin": "MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/COORDINATION.md",
+      "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+      "read_scope": "REUSED_WHOLE; same-agent completed September12 20:05-20:14UTC review; fresh pin",
+      "prepin": "MATCH",
+      "postpin": "MATCH"
+    }
+  ],
+  "not_read": "Optional resonance report, own r3 report, live r3 gate, linked/peer/ROOT parallel files",
+  "instrument": {
+    "path": "/home/ubuntu/jc2/ops/artifact_finalize.py",
+    "sha256": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d",
+    "prepin": "MATCH",
+    "postpin": "MATCH"
+  },
+  "owned": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-mixed-remaining-local-astra-20260913.md",
+      "sha256": "cec05bddcbed1a0a9fc9e4ef9922f4b6eed3ca08684b52cec69bf1a9406bfd42",
+      "read_scope": "WHOLE before marker and WHOLE finalized"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-mixed-remaining-local-astra-20260913.md.artifact.json",
+      "sha256": "f902c547cf80aa47add6e86c5e6b7a0f030e68cba54762415cc06e36f3806dce",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-mixed-remaining-local-astra-20260913/PINS.json",
+      "sha256": "9d90513ab17a4d4d2ffe32dda72aeb52a0af649b800b52122cc82c2fb323a797",
+      "read_scope": "WHOLE"
+    }
+  ],
+  "transaction": {
+    "status": "VERIFIED",
+    "expected_basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256": "f902c547cf80aa47add6e86c5e6b7a0f030e68cba54762415cc06e36f3806dce",
+    "body_sha256": "12c52e95c6aca84efa276fe7591d2c28f6610ad4d0ccfe6073dbba2d3ec14b67",
+    "body_bytes": 10337,
+    "report_bytes": 10670
+  },
+  "checks": {
+    "initial_targets_absent": true,
+    "preseal_collision_absence": true,
+    "own_whole_readbacks": true,
+    "input_postpins_unchanged": true,
+    "marker_last": true,
+    "report_word_limit_2500_met": true,
+    "scientific_execution": false,
+    "network_worker_or_agents": false,
+    "shared_source_or_ledger_edits": false
+  },
+  "final_idle_utc": "Actual all-writers-IDLE UTC and elapsed reported in terminal message after custody WHOLE/hash readback."
+}

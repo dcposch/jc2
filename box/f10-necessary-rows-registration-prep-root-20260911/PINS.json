@@ -1,0 +1,223 @@
+{
+  "schema": "jc2-necessary-rows-offline-registration-preparation/v1",
+  "state": "DISABLED_STATIC_UNEXECUTED",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "clocks": {
+    "first_action_utc": "2026-09-11T06:20:09Z",
+    "clock_declaration_utc": "2026-09-11T06:22:03Z",
+    "reserve_utc": "2026-09-11T06:30:00Z",
+    "hard_stop_utc": "2026-09-11T06:33:00Z",
+    "disclosure": "Clocks explicitly declared after reference inspection; first action retained, not reset.",
+    "prep": "box/f10-necessary-rows-registration-prep-root-20260911"
+  },
+  "inputs": [
+    {
+      "path": "box/f10-direct-rows-registration-prep-root-20260911/ROOT-REGISTRATION.template.json",
+      "sha256": "03049bb1cd83854122e0fe8cec652dbd7dbf2344a270c5f5662ae6d391ea0f12"
+    },
+    {
+      "path": "box/f10-direct-rows-registration-prep-root-20260911/AUTHORITIES.template.json",
+      "sha256": "00d3a5e6b1a9ed079f8ef69b38c583fed2718bcb5657d6a12c0e6b6e7ef1a28b"
+    },
+    {
+      "path": "box/f10-direct-rows-registration-prep-root-20260911/valid.policy.json",
+      "sha256": "2552b6a534c60e688f185cde367a7efcee504dc45f3d5de43cf60d22048ac279"
+    },
+    {
+      "path": "box/f10-direct-rows-registration-prep-root-20260911/dummy.policy.json",
+      "sha256": "7324f69d4e5e83b8f31d49dfa55ea2b543b2339ae2dfdc347b4340d82e118f04"
+    },
+    {
+      "path": "box/f10-direct-rows-registration-prep-root-20260911/mutate.policy.json",
+      "sha256": "6e7f6a4782dfaf29a6d2bbdb2386a3ccd49c99829248392bb2b25debbe87af35"
+    },
+    {
+      "path": "box/f10-direct-rows-release-prep-root-20260911/ROOT-EXECUTION-CARD.template.md",
+      "sha256": "13204b6798bd15d1d486afcb0c68e5e7ac0ec4ebfc142a0266dc5ba44a399af4"
+    },
+    {
+      "path": "box/f10-direct-rows-release-prep-root-20260911/ROOT-ORIGINAL-CLOCKS.template.md",
+      "sha256": "7468d4006285a1cbf73afae59bd09e758a4bce4651bfad78243ad75c74637b29"
+    },
+    {
+      "path": "box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md",
+      "sha256": "176363939a8aa6861995cd72a99c61f7d04bfeab5a9634f6d3143dcd3d3bd098"
+    },
+    {
+      "path": "xmodel/f10-necessary-rows-design-gate-fable5-20260911.md",
+      "sha256": "8e07e419d321b09ecd13c61a1c5fdc3dbaf9a099c1a1ebedf9b9fe6ef280073b"
+    },
+    {
+      "path": "box/f10-necessary-rows-delta-gate-prep-root-20260911/ROOT-NECESSARY-ROWS-CANDIDATE.json",
+      "sha256": "7beffe39c68b19e2998edc02949f8d24b3fe55a925d53139dff1c27a6690a482"
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/produce.py",
+      "sha256": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a"
+    },
+    {
+      "path": "box/f10-necessary-rows-producer-astra-20260911/authority.py",
+      "sha256": "804c7aff56538fc332bf68638b03b7167eccdb49f73337f1a5f1823348b522a4"
+    },
+    {
+      "path": "box/f10-necessary-rows-checker-astra-20260911/check.py",
+      "sha256": "1d2d5b5408bfbf13b96f09453b1f14dfe884d261e702843bc31e5a043ffa53d1"
+    },
+    {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/dispatch.py",
+      "sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24"
+    },
+    {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/probe.py",
+      "sha256": "5f1211e1a77b5ce2bb4cc496deabc533e3c41cdea88ea750149dac886cc09c69"
+    },
+    {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/mutate.py",
+      "sha256": "12eac7bbe5566ac0372c51b36617409e0501595024d948d6086a767f90d84eec"
+    },
+    {
+      "path": "box/f10-direct-rows-powerfix-astra-20260911/arithmetic.py",
+      "sha256": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73"
+    },
+    {
+      "path": "box/f10-direct-rows-checker-astra-20260911/check_arithmetic.py",
+      "sha256": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e"
+    },
+    {
+      "path": "ops/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-python-compat-astra-20260911.md",
+      "sha256": "cb6a98bc5d413fe9eb67c81479d8958ff95e90f34e89cc9b834348665668ffa3"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/OPERATIONS.md",
+      "sha256": "3be532afc6e784842694cf02d4399573228362abb47ae36130ef97c4274faa59"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/ASSERTIONS.md",
+      "sha256": "61b9ce5e1f9b40a765dcb2a2ea5aa3a928197b61bc41cb5cf945632b99ad4de2"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/WIRE-AND-VALIDATION.md",
+      "sha256": "b9060f0bbc14e92464079b0daca12faa1ba2d367f9ecc7307ba301689de5b77d"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/ROOT-ADOPTED-CORRECTIONS.md",
+      "sha256": "39ed9b3910efee02dd2f17ced7951a8b83557e612d100d4ae34f76e0895b4002"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-wire-root-20260911.md",
+      "sha256": "90c940b021ba9f99f2298aaf394cb082793812ad4428e249b970ecf06baa6c47"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-wire-gate-fable5-20260911.md",
+      "sha256": "68488229c5ff839f8c155662f903ba174d59d4e96bb5e046a53967313d497f1b"
+    },
+    {
+      "path": "box/f10-direct-rows-wire-root-20260911/ROOT-ADOPTED-WIRE-PINS.md",
+      "sha256": "2b2770fe494098812a52c6829a4bd97803f44bb0474863b8008a69f3725956fd"
+    },
+    {
+      "path": "box/f10-direct-rows-parallel-prep-root-20260911/ROOT-AUTHOR-INTERFACE.md",
+      "sha256": "a0a40804071a6dac83eaf6acf38073229a6d15c8866af32e283015d65c1c74e7"
+    }
+  ],
+  "owned": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-registration-prep-root-20260911/ROOT-REGISTRATION.template.json",
+      "sha256": "7b7ad9a9ce2379a8347a9f9f382c152656367b3caea102963704f57b41987e84"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-registration-prep-root-20260911/AUTHORITIES.template.json",
+      "sha256": "de6e1f9394a2942ce22fd32d593c8109bf096729a047cca3ef5fe1ff47eb3c9e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-registration-prep-root-20260911/valid.policy.json",
+      "sha256": "24029cb8f17d4159620a3e660b132fadad4d7fb6caa2988acf43abe150ac8591"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-registration-prep-root-20260911/dummy.policy.json",
+      "sha256": "889e75f6e95f3b42048939f1d11230b56208f465672bb4e94cec00983b6ffaf7"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-registration-prep-root-20260911/mutate.policy.json",
+      "sha256": "2222e4b9ea6bb23f0ba7f009f3ba750872f9f33a7195e7d8198b874313460d6f"
+    },
+    {
+      "path": "box/f10-necessary-rows-registration-prep-root-20260911/ROOT-EXECUTION-CARD.template.md",
+      "sha256": "ed27f896895292930a55e8a55ea29c184e8cdc0ccac07baf7c660410901f3afb"
+    },
+    {
+      "path": "box/f10-necessary-rows-registration-prep-root-20260911/ROOT-ORIGINAL-CLOCKS.template.md",
+      "sha256": "db9d9a6d8f22ab46b282546c98ced89d247ae63afc6ef93c7600e9df85ac7128"
+    },
+    {
+      "path": "box/f10-necessary-rows-registration-prep-root-20260911/README.md",
+      "sha256": "64d03fe17c435fc52d7e5eb1c2d42a74e29171961e0d496e5bcf97f337ad2c9e"
+    }
+  ],
+  "metadata_only_checks": [
+    "disabled",
+    "exclusive remains disabled",
+    "new five-source vector",
+    "phase source vector",
+    "source_pins authority.py",
+    "pins authority.py",
+    "source_pins arithmetic.py",
+    "pins arithmetic.py",
+    "source_pins produce.py",
+    "pins produce.py",
+    "source_pins check_arithmetic.py",
+    "pins check_arithmetic.py",
+    "source_pins check.py",
+    "pins check.py",
+    "13 command order",
+    "13 authority order",
+    "refuse-status exact authority/policy",
+    "refuse-status exact command",
+    "refuse-caps exact authority/policy",
+    "refuse-caps exact command",
+    "refuse-inventory exact authority/policy",
+    "refuse-inventory exact command",
+    "refuse-source exact authority/policy",
+    "refuse-source exact command",
+    "refuse-hash exact authority/policy",
+    "refuse-hash exact command",
+    "valid exact authority/policy",
+    "valid standalone policy",
+    "valid exact command",
+    "startup-produce exact authority/policy",
+    "startup-produce exact command",
+    "startup-check exact authority/policy",
+    "startup-check exact command",
+    "dummy exact authority/policy",
+    "dummy standalone policy",
+    "dummy exact command",
+    "produce exact authority/policy",
+    "produce exact command",
+    "check-positive exact authority/policy",
+    "check-positive exact command",
+    "mutate exact authority/policy",
+    "mutate standalone policy",
+    "mutate exact command",
+    "check-negative exact authority/policy",
+    "check-negative exact command",
+    "untrusted place strings unchanged",
+    "actual ROOT-REGISTRATION.template.json",
+    "actual AUTHORITIES.template.json",
+    "actual valid.policy.json",
+    "actual dummy.policy.json",
+    "actual mutate.policy.json"
+  ],
+  "source_reference_count": "17",
+  "read_scope": "As README: complete programmatic metadata/text checks plus prior WHOLE/current pins and declared fresh contexts; no new human-WHOLE assertion for the two large JSONs.",
+  "root_ready_file": "ABSENT",
+  "worker_allocated": false,
+  "science_executed": false,
+  "review_clearance": "UNFORMED",
+  "contract_digest": "UNFORMED",
+  "refusal_policy": "NOT_COLLECTED_NOT_INSTALLED",
+  "closed_before_reserve": true
+}

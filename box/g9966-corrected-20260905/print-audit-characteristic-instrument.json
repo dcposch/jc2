@@ -1,0 +1,95 @@
+{
+  "Keller_e": 98,
+  "characteristic_q": {
+    "1": -66,
+    "2": 143,
+    "3": 20
+  },
+  "lambda2": -1815,
+  "mu2": "-55",
+  "nonzero_attainment": "[y^55]Q=lambda constant; Zlambda*lambda-1=0",
+  "printed_sources": [
+    "Moh p150 characteristic auxiliary numbers",
+    "Moh p151 Lemma2.1",
+    "Moh p152 Prop2.2(1),(2)",
+    "Moh p157 Prop3.1(1),(2)"
+  ],
+  "pure_power_restricted_control": {
+    "F": "H^3",
+    "G": "H^2",
+    "H_y_degree": 33,
+    "localized_leader_residue": "-1",
+    "pivots": [
+      {
+        "H_power": 5,
+        "coefficient": "1",
+        "variable": "target_1_1",
+        "y_leading_degree": 165
+      },
+      {
+        "H_power": 4,
+        "coefficient": "1",
+        "variable": "target_0_2",
+        "y_leading_degree": 132
+      },
+      {
+        "H_power": 3,
+        "coefficient": "1",
+        "variable": "target_1_0",
+        "y_leading_degree": 99
+      },
+      {
+        "H_power": 2,
+        "coefficient": "1",
+        "variable": "target_0_1",
+        "y_leading_degree": 66
+      }
+    ],
+    "remaining_polynomial": "target_0_0",
+    "y55_coefficient_after_higher_rows": "0"
+  },
+  "scope": "Derived future characteristic instrument; pure-power control only, not a unit on the full branch chart",
+  "strict_M2_less_e": true,
+  "target_coefficients_free": [
+    "target_0_0",
+    "target_1_0",
+    "target_0_1",
+    "target_1_1",
+    "target_0_2"
+  ],
+  "target_exponent_positions": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "target_polynomial_family": "-F**2 + F*G*target_1_1 + F*target_1_0 + G**3 + G**2*target_0_2 + G*target_0_1 + target_0_0",
+  "target_y_degree": 55,
+  "total_degree_bound": 198,
+  "unique_top_cancellation": [
+    [
+      2,
+      0
+    ]
+  ]
+}

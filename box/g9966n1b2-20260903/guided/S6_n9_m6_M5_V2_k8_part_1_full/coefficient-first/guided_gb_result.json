@@ -1,0 +1,66 @@
+{
+  "certificate": {
+    "accepted_run_count": 1,
+    "crt_rational_reconstruction": {
+      "available": false,
+      "items": {},
+      "method": "CRT plus bounded rational reconstruction for scalar invariants"
+    },
+    "hilbert_hint": null,
+    "policy": {
+      "allow_modular_unit_promotion": false,
+      "note": "inhomogeneous localized chart; exact Q required",
+      "require_controls": true,
+      "scope": "EXACT_Q"
+    },
+    "promotion_note": "modular unit ideal was not promoted to characteristic zero",
+    "properness_scope": {
+      "positive_weights": [
+        []
+      ],
+      "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+      "systems_declared_homogeneous": false
+    },
+    "runs": [
+      {
+        "characteristic": 32027,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/g9966n1b2-20260903/guided/S6_n9_m6_M5_V2_k8_part_1_full/coefficient-first/S6_n9_m6_M5_V2_k8_part_1_full_coefficient-first_p32027.sing"
+        ],
+        "elapsed_seconds": 0.465389,
+        "label": "S6_n9_m6_M5_V2_k8_part_1_full_coefficient-first",
+        "main": {
+          "accepted": true,
+          "basis_size": 1,
+          "dimension": -1,
+          "lead_dim": -1,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": true,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/g9966n1b2-20260903/guided/S6_n9_m6_M5_V2_k8_part_1_full/coefficient-first/S6_n9_m6_M5_V2_k8_part_1_full_coefficient-first_p32027.sing",
+        "script_sha256": "b4ff1662ad7e060ccc401635ac23ddfded809ff745a3d10080233f7cd9b2b2ac",
+        "stderr": "/home/ubuntu/jc2/box/g9966n1b2-20260903/guided/S6_n9_m6_M5_V2_k8_part_1_full/coefficient-first/S6_n9_m6_M5_V2_k8_part_1_full_coefficient-first_p32027.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/g9966n1b2-20260903/guided/S6_n9_m6_M5_V2_k8_part_1_full/coefficient-first/S6_n9_m6_M5_V2_k8_part_1_full_coefficient-first_p32027.out",
+        "stdout_sha256": "d121c02259540f40428b2c5f3fbc0e9d885ab856a6b7b3a7250a98eaebe28cac",
+        "timed_out": false
+      }
+    ]
+  },
+  "verdict": "MODULAR_ONLY"
+}

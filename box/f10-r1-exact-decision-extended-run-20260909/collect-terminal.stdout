@@ -1,0 +1,28 @@
+MainPID=0
+Result=exit-code
+ExecMainStartTimestamp=Wed 2026-09-09 15:42:04 UTC
+ExecMainExitTimestamp=Wed 2026-09-09 15:51:17 UTC
+ExecMainStatus=1
+LoadState=loaded
+ActiveState=failed
+SubState=failed
+Sep 09 15:42:04 ip-172-30-0-72 systemd[916]: Started jc2-f10-r1-exact-decision-extended-run-20260909.service - /usr/bin/python3 -I -B /home/ubuntu/f10-r1-exact-decision-extended-run-20260909/caller.py /home/ubuntu/f10-r1-exact-decision-extended-run-20260909/ROOT-REGISTRATION.json.
+Sep 09 15:51:17 ip-172-30-0-72 systemd[916]: jc2-f10-r1-exact-decision-extended-run-20260909.service: Main process exited, code=exited, status=1/FAILURE
+Sep 09 15:51:17 ip-172-30-0-72 systemd[916]: jc2-f10-r1-exact-decision-extended-run-20260909.service: Failed with result 'exit-code'.
+Sep 09 15:51:17 ip-172-30-0-72 systemd[916]: jc2-f10-r1-exact-decision-extended-run-20260909.service: Consumed 10min 12.221s CPU time, 249.5M memory peak, 0B memory swap peak.
+ROOT-REGISTRATION.json: OK
+caller.py: OK
+engine.py: OK
+certificate.py: OK
+semantic_tests.py: OK
+execution_gate.py: OK
+probe.py: OK
+run_capped.py: OK
+exact.json: OK
+admissibility.md: OK
+frontier.json: OK
+REGISTRATION.md: OK
+semantic-validation.json: OK
+a193ebd9f51b9b526549b3d2d3877f1e92db78a2837bcb614e5058afc71c120a  TERMINAL.sha256
+2026-09-09T15:51:47Z
+TERMINAL: all original caller/runner/engine/Singular PIDs absent; exact cgroup absent; source pins unchanged

@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete. Report written to `xmodel/factored-jacobian-gate-fable5-20260906.md` (14.8 KB, ends with the unique standalone `<!-- BODY-END -->`, no charge_basis line needed), reviewer notes and 300 KB of compact evidence under `box/factored-jacobian-gate-20260906/`.
+
+**Verdicts**
+
+| Claim | Verdict |
+|---|---|
+| 1. Source maps, polynomiality, F/G reconstruction, bracket identity, degrees 99/66 | CONFIRMED |
+| 2. Monic graph, complete positive-J set, J0 and localizer, quotient equivalence to the physical full-J locus | CONFIRMED, with one free cylinder variable noted (A3c_98_0, the constant of C, occurs in no generator) |
+| 3. Closed literal stream, serialization repair, Singular driver | CONFIRMED by an exact sparse identity; the in-script exact mutation controls did not execute at the 48 GiB cap and were replaced by direct-route controls |
+| 4. Point ⇒ Keller non-automorphism; proper over Q ⇒ Qbar counterexample | CONFIRMED one way; source-to-chart necessity remains a typed GAP |
+| 5. Cost comparison and next experiment | Measured only; no solver win claimed |
+
+**What carried the verdicts.** I rebuilt the whole Jacobian as one 602-variable flint polynomial (a different organization from the producer's coefficient tables) and showed it equals the tagged sum of all 1,468 literal rows plus the independently computed linear-jet J0, exactly. That single identity certifies every row, completeness of the support, that out-of-support slots vanish identically, and that the localizer row is Zj·J0−1 for the true constant term. Singular 4.3.2 parsed the charged file and its per-row size, degree, leading and trailing terms match flint on all 1,629 rows. A direct unfactored Jacobian at a specialization point agrees on every row, and all four negative controls (orientation, sign of a, W-sign convention, perturbed row) fire. The serialization repair is semantically a no-op in Singular (int/int is a number in a char-0 ring), while the real hazard pattern is provably absent.
+
+**Custody.** Worker i-0da0cebfc97c9fd54 (.56) identity confirmed via IMDSv2, no producer or solver process alive, all 54 artifacts re-hashed before and after my work equal custody.json, latest producer mtime 10:20:24Z. The worker is left running under root custody. One observation for root: two foreign scratch directories (linear-c-discriminator and linear-c-root-replay) were created on this worker during the gate window by another authorized activity. I did not touch them.
+
+**Suggested next step, not launched.** A band-wise exact std from the top of the physical grid: first the 51 rows of degree 98 and 99, which contain no Hfact variable, then the 256 rows of degree ≥ 90, each under 600 s and 48 GiB. A unit there would exclude only this gauged locus.
+DIVERT path=xmodel/factored-jacobian-gate-fable5-20260906.md status=CLEAN body_bytes=14836 body_sha256=c01996800fbb4084a640770f1edd21092fe2b23ae1e3b50281477767e5488535

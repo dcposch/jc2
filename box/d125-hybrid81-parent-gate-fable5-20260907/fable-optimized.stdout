@@ -1,0 +1,206 @@
+{
+ "assert_nodes": {
+  "check.py": 0,
+  "driver.py": 0,
+  "engine.py": 0,
+  "exact.py": 0,
+  "hybrid.py": 0,
+  "original_engine.py": 0
+ },
+ "both_reject": [
+  "child-tail-alone",
+  "empty-cmdline"
+ ],
+ "cases": [
+  {
+   "new": "ACCEPT",
+   "object": "registered-exact",
+   "old": "ACCEPT",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "cross-operation-vector",
+   "old": "ACCEPT",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "prlimit-prefix-retained",
+   "old": "ACCEPT",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "flag-case-changed",
+   "old": "ACCEPT",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "padded-cap-value",
+   "old": "ACCEPT",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "child-operation-swapped-only",
+   "old": "ACCEPT",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "child-interpreter-variant",
+   "old": "ACCEPT",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "runner-token-alone",
+   "old": "ACCEPT",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "child-tail-alone",
+   "old": "REJECT:CAPRUN parent",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "empty-cmdline",
+   "old": "REJECT:CAPRUN parent",
+   "operation": "hybrid"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "duplicated-vector",
+   "old": "ACCEPT",
+   "operation": "hybrid"
+  },
+  {
+   "new": "ACCEPT",
+   "object": "registered-exact",
+   "old": "ACCEPT",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "cross-operation-vector",
+   "old": "ACCEPT",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "prlimit-prefix-retained",
+   "old": "ACCEPT",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "flag-case-changed",
+   "old": "ACCEPT",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "padded-cap-value",
+   "old": "ACCEPT",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "child-operation-swapped-only",
+   "old": "ACCEPT",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "child-interpreter-variant",
+   "old": "ACCEPT",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "runner-token-alone",
+   "old": "ACCEPT",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "child-tail-alone",
+   "old": "REJECT:CAPRUN parent",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "empty-cmdline",
+   "old": "REJECT:CAPRUN parent",
+   "operation": "alarm"
+  },
+  {
+   "new": "REJECT:exact registered CAPRUN parent argv",
+   "object": "duplicated-vector",
+   "old": "ACCEPT",
+   "operation": "alarm"
+  }
+ ],
+ "old_pass_new_fail": [
+  "child-interpreter-variant",
+  "child-operation-swapped-only",
+  "cross-operation-vector",
+  "duplicated-vector",
+  "flag-case-changed",
+  "padded-cap-value",
+  "prlimit-prefix-retained",
+  "runner-token-alone"
+ ],
+ "optimize": 1,
+ "python": "3.12.3",
+ "slots": [
+  "parent interpreter=/usr/bin/python3",
+  "parent -I=-I",
+  "parent -B=-B",
+  "runner path=/home/ubuntu/d125-hybrid81-exact-solver-20260907/run_capped.py",
+  "--wall-seconds=--wall-seconds",
+  "wall value=10",
+  "--cpu-seconds=--cpu-seconds",
+  "cpu value=10",
+  "--rss-bytes=--rss-bytes",
+  "rss value=536870912",
+  "--rss-sample-seconds=--rss-sample-seconds",
+  "sample value=0.05",
+  "--term-grace-seconds=--term-grace-seconds",
+  "grace value=0.25",
+  "--cwd=--cwd",
+  "cwd value=/home/ubuntu/d125-hybrid81-exact-solver-20260907",
+  "--stdout-file=--stdout-file",
+  "stdout path=/home/ubuntu/d125-hybrid81-exact-solver-20260907/engineering/hybrid.stdout",
+  "--stderr-file=--stderr-file",
+  "stderr path=/home/ubuntu/d125-hybrid81-exact-solver-20260907/engineering/hybrid.stderr",
+  "--telemetry-file=--telemetry-file",
+  "telemetry path=/home/ubuntu/d125-hybrid81-exact-solver-20260907/engineering/hybrid.telemetry.json",
+  "separator --=--",
+  "child interpreter=/usr/bin/python3",
+  "child -I=-I",
+  "child -B=-B",
+  "child engine.py=/home/ubuntu/d125-hybrid81-exact-solver-20260907/engine.py",
+  "operation=hybrid",
+  "authority path=/home/ubuntu/d125-hybrid81-exact-solver-20260907/engineering/hybrid.authority.json"
+ ],
+ "status": "PASS",
+ "vectors": {
+  "alarm": {
+   "elements": 29,
+   "nul_count": 29,
+   "raw_bytes": 698,
+   "sha256_raw": "f4b32b5d9a21b4ae7d40a289160a7e643b29e1a07b7facc7af68180cc8712573"
+  },
+  "hybrid": {
+   "elements": 29,
+   "nul_count": 29,
+   "raw_bytes": 703,
+   "sha256_raw": "c5c16e3dc52dfbd8b80a68969caef4051ef51f134c05460acb20b21185b82608"
+  }
+ }
+}

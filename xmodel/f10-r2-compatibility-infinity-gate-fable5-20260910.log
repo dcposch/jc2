@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Nothing further is needed. The final rehash shows all 11 inputs unchanged, the report has its 10 sections, no Seal and no charge_basis line, and the marker is last. One note: a `git status` I chained into that last command ran from the inputs directory and failed with "not a git repository", so no repository was touched. Per the lane rules it should not have been attempted at all, and it was not retried.
+
+**Outcome.** The gate report is written and marked at `xmodel/f10-r2-compatibility-infinity-gate-fable5-20260910.md`, with input custody in the owned box directory. All writes went through apply_patch. Everything was hand arithmetic mod 89. No item is REFUTED.
+
+**Verdicts by item.**
+
+- **A, integral model at (89,Z): CONFIRMED with one replay GAP.** I re-derived every leading residue from scratch: tau=13, dL=16, KL=26, gammaL=70, W=74 with 1/W=-6, the c^(12/7) tuple giving t5=77 and D exactly as displayed, the full c^(15/7) tuple ending in H7bar=84, the three Sept terms 17+42+30=0 and the closed form 2·13·89/49, and the leading ODE with every non-leading coefficient an integer multiple of 89. The residue-map logic is sound: P7 is monic and 89-integral, (89,Z) is a maximal ideal of the order with residue field F89, and a nonzero residue proves a unit of the field B and of all seven geometric components. Only the two early residual determinants 73 and 76 were not recomputed; they are exactly what licenses integrality of the char-0 gap-2 and gap-3 solutions.
+- **B, bands and alpha, beta, gamma: CONFIRMED for everything replayed, GAP on five displayed inputs.** I fully replayed both early band identities L2(A2,V2)=0 and L3(A3,V3)=-30qT^6 with their normalizations, U=-15q, y=38pq, U^2=47, the theta5 row forcing W6_5=79, the middle 2x2 determinant 19 and its solution l=32, k=52, and the final products giving 20, 62, 42. The forcings W4 to W6, the gap-4 band, the critical N, the three particular pairs and the two columns were not recomputed under the cap.
+- **C, chart X1=1: CONFIRMED.** Degrees, exact degree 5 of F with unit leading coefficient alpha²·beta, the Q-saturation criterion, the unique exceptional fibre and both retained quadratics all check.
+- **D, conditional length 35: CONFIRMED as conditional.** Hilbert length 35, socle weight 12, the leading-ideal equality via z being a nonzerodivisor, the nilpotent-safe L0^35 criterion, and the w^0-coefficient descent to the 19-row source.
+- **E, properness remark and controls: CONFIRMED.** The special-fibre route needs 89-integrality of all three forms and both charts; the X1=0 half is already supplied by the residue table.
+
+**Surviving theorem.** If the five displayed band inputs are the reductions of the char-0 objects, then alpha, beta, gamma are B-units and the closed divisor X1=0 carries no geometric point on any component. Every point lies in the chart X1=1 and is detected by the Q-saturated gcd of F and G plus the fibre (8). Nothing about origin-only, length 35, C=0 or the source follows.
+
+**Smallest correction.** None in the text. The report should display the two early residual determinants and the five upper solves so a reader can replay them.
+
+**Cheapest remaining test.** Recompute the gap-2 and gap-3 residual matrices mod 89, then run the X1=1 chart mod 89: the gcd of the reduced quintics and the fibre Q=0 over F89, which decides the whole special fibre with no B arithmetic once the X1=1 denominators are checked at 89.
+DIVERT path=xmodel/f10-r2-compatibility-infinity-gate-fable5-20260910.md status=CLEAN body_bytes=13007 body_sha256=c05f70b1789dc1476614af190cbb8ff9dd7885cf95002330518b495d56926341

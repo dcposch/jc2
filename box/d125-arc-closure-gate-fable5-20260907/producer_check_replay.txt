@@ -1,0 +1,9 @@
+producer_check_replay 2026-09-07T07:00:38Z
+opt=normal mut=none rc=0 :: "status": "PASS"
+opt=normal mut=--omit-243 rc=1 :: RuntimeError: exact boundary D equals 81 delta
+opt=normal mut=--gamma-sign rc=1 :: RuntimeError: exact boundary D equals 81 delta
+opt=normal mut=--claim-global-h rc=1 :: RuntimeError: boundary h cannot be imposed globally
+opt=-O mut=none rc=0 :: "status": "PASS"
+opt=-O mut=--omit-243 rc=1 :: RuntimeError: exact boundary D equals 81 delta
+opt=-O mut=--gamma-sign rc=1 :: RuntimeError: exact boundary D equals 81 delta
+opt=-O mut=--claim-global-h rc=1 :: RuntimeError: boundary h cannot be imposed globally

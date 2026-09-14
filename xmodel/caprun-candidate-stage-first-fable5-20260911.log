@@ -1,0 +1,32 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done at 18:03:14 UTC, before the 18:12 reserve. The report hash is unchanged after the custody write, and no writer process remains.
+
+**Verdict:** acceptable as an offline candidate-transport boundary under its stated trust assumptions. Claims 1, 3, 4 and 5 are CONFIRMED. Claim 2 is CONFIRMED for LF line semantics with one delimited GAP. No installation, release, worker, retry or timing claim is authorized.
+
+**What I did**
+
+- Verified all 22 input hashes before reading, read every input whole, and re-verified 22/22 after all controls.
+- Authored three files via apply_patch only: the report, the custody file, and an in-memory harness. The harness replays the nine producer tests with location-only overrides pointing at the frozen inputs and runs 26 additional controls. Result was 35/35 with deterministic stdout.
+- Reconstructed all 14 expected hashes, the 78889-byte total and the SUMMARY hash from the frozen fixtures, and replayed the adapter's main function in memory to produce the identical packet. Every candidate stayed as bytes; nothing was applied or executed.
+
+**The one finding (GAP-1)**
+
+The transport rejects only CR and NUL, so the eight universal-newline characters (VT, FF, FS, GS, RS, NEL, LS, PS) pass inside a content line. An LF-only parser sees 14 paths, but a Python `splitlines()` parser sees 15. The producer's own independent test parser has this blind spot. The real apply_patch tool's line semantics were not examined. None of the 22 inputs contains those bytes, so the historical exercise is unaffected. The cheap fix is to reject those eight characters in `make_patch`; I did not apply it.
+
+**Pins**
+
+| Item | SHA-256 |
+|---|---|
+| report | d96d979c950bf51faea0ad430af4f2eed1366d8f7b3e952e27d048ca2dff2273 |
+| review_controls.py | b28501f3738c19cbdc6c13fd41f46610d08184d5b2012acd323f5f7967ff9a13 |
+| harness stdout | d3269b5a916a312b098aa32b2016e1285863da5090f461890ae0e56a47929306 |
+| input_custody.md | acc26c1f2c20329b657e04f2e8f0d976dd4717336cb19df4ef641df401125a0c |
+
+Replay command:
+
+```
+python3 -I -S -B box/caprun-candidate-stage-first-fable5-20260911/review_controls.py /tmp/jc2-lane.TOa5oq/inputs
+```
+
+Two same-stem `.log` and `.run.v2` files in xmodel predate my first write and belong to the external adapter. No Seal or charge_basis was authored, no canonical OPEN was raised, and the receipt is the adapter's to issue.
+DIVERT path=xmodel/caprun-candidate-stage-first-fable5-20260911.md status=CLEAN body_bytes=9330 body_sha256=d96d979c950bf51faea0ad430af4f2eed1366d8f7b3e952e27d048ca2dff2273

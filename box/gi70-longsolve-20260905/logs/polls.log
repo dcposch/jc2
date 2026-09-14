@@ -1,0 +1,269 @@
+POLL_UTC=2026-09-05T17:02:19Z
+--- gi70_a_exact_std tail:
+GI70_A_CTRL_UNIT 1
+GI70_A_CTRL_NONUNIT 1
+GI70_A_STD_BEGIN
+VERDICT: RUNNING: 3
+--- gi70_b_guided_hilbert tail:
+GI70_JOB_START b utc=2026-09-05T17:01:46Z host=ip-172-30-0-111
+VERDICT: RUNNING: 3
+--- gi70_c_c1_msolve tail:
+  5     113   29470    5479 x 5747        0.16%        7 new     106 zero         0.08 | 1.12         
+  6    2000   29521   43474 x 46179       0.04%      237 new    1763 zero         1.37 | 31.42        
+  6    2000   32610VERDICT: RUNNING: 3
+--- gi70_d_c1_slimgb tail:
+GI70_D_CTRL_UNIT 1
+GI70_D_CTRL_NONUNIT 1
+GI70_D_SLIMGB_BEGIN
+VERDICT: RUNNING: 3
+               total        used        free      shared  buff/cache   available
+Mem:     532326555648 12981248000 521839206400     3416064  1346326528 519345307648
+Swap:              0           0           0
+    PID    PPID    PGID ELAPSED   RSS    VSZ %MEM COMMAND         COMMAND
+   3822    3815    3822      88  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3826    3822    3822      88  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3830    3826    3822      87 3138024 3158512  0.6 Singular     Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3957    3950    3957      33  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3961    3957    3957      33  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3962    3961    3957      33 19944  29176  0.0 python3         python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3966    3962    3957      33 3543148 3564204  0.6 Singular     Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/b_hilbert_seed_p32003.sing
+   4016       1    4015      28  2100   7748  0.0 bash            bash -c cd /home/ubuntu/jc2/box/moh14-charts-20260905 && setsid bash -c 'timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1' </dev/null >/dev/null 2>&1 & echo LAUNCHED gi70_c_c1_msolve pid=$!
+   4017    4016    4017      28  3544   7748  0.0 bash            bash -c timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1
+   4018    4017    4018      28  2164   6128  0.0 timeout         timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4019    4018    4018      28  3612   7896  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4030    4019    4018      28  2256   7764  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4033    4019    4033      28  2188   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4035    4033    4018      28  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stdout.log
+   4036    4033    4018      28  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stderr.log
+   4037    4033    4033      28  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4040    4037    4033      28 1371156 3957968  0.2 msolve       msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4132    4125    4132      23  2192   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4136    4132    4132      23  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4137    4136    4132      23 127888 147896  0.0 Singular       Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4400    4399    4400       0  3580   7748  0.0 bash            bash -c free -b; ps -eo pid,ppid,pgid,etimes,rss,vsz,%mem,comm,args | awk 'NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/'; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "RCFILE $f=$(cat "$f")"; done
+   4403    4400    4400       0  3884   9728  0.0 awk             awk NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/
+POLL_UTC=2026-09-05T17:17:33Z
+--- gi70_a_exact_std tail:
+GI70_A_CTRL_UNIT 1
+GI70_A_CTRL_NONUNIT 1
+GI70_A_STD_BEGIN
+VERDICT: RUNNING: 3
+--- gi70_b_guided_hilbert tail:
+GI70_JOB_START b utc=2026-09-05T17:01:46Z host=ip-172-30-0-111
+VERDICT: RUNNING: 3
+--- gi70_c_c1_msolve tail:
+  7    2000  161450  942383 x 1003888     0.01%      240 new    1760 zero        33.30 | 80.64        
+  7    2000  164254  926420 x 978000      0.01%      206 new    1794 zero        29.91 | 78.67        
+  7    2000  165858VERDICT: RUNNING: 3
+--- gi70_d_c1_slimgb tail:
+GI70_D_CTRL_UNIT 1
+GI70_D_CTRL_NONUNIT 1
+GI70_D_SLIMGB_BEGIN
+VERDICT: RUNNING: 3
+               total        used        free      shared  buff/cache   available
+Mem:     532326555648 53988364288 480380461056     3440640  1840095232 478338191360
+Swap:              0           0           0
+    PID    PPID    PGID ELAPSED   RSS    VSZ %MEM COMMAND         COMMAND
+   3822    3815    3822    1002  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3826    3822    3822    1002  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3830    3826    3822    1002 6182216 6203596  1.1 Singular     Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3957    3950    3957     947  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3961    3957    3957     947  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3962    3961    3957     947 19944  29176  0.0 python3         python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3966    3962    3957     947 25631336 25651940  4.9 Singular   Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/b_hilbert_seed_p32003.sing
+   4016       1    4015     942  2100   7748  0.0 bash            bash -c cd /home/ubuntu/jc2/box/moh14-charts-20260905 && setsid bash -c 'timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1' </dev/null >/dev/null 2>&1 & echo LAUNCHED gi70_c_c1_msolve pid=$!
+   4017    4016    4017     942  3544   7748  0.0 bash            bash -c timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1
+   4018    4017    4018     942  2164   6128  0.0 timeout         timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4019    4018    4018     942  3612   7896  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4030    4019    4018     942  2256   7764  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4033    4019    4033     942  2188   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4035    4033    4018     942  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stdout.log
+   4036    4033    4018     942  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stderr.log
+   4037    4033    4033     942  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4040    4037    4033     942 15288264 26061964  2.9 msolve     msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4132    4125    4132     937  2192   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4136    4132    4132     937  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4137    4136    4132     937 684372 704332  0.1 Singular       Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4519    4518    4519     826  3588   7832  0.0 bash            bash -c while true; do date -u +TICK=%Y-%m-%dT%H:%M:%SZ; ps -C Singular -C msolve -C python3 -o pid=,etimes=,rss=,comm=,args= | grep -E "a_exact_std|b_hilbert|c_c1|d_c1|run_guided" || true; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "DONE $f $(cat "$f")"; done; pgrep -f "[g]i70_(a_exact_std|b_guided_hilbert|c_c1_msolve|d_c1_slimgb)_fleet.sh" >/dev/null || break; sleep 55; done
+  10231   10230   10231       0  3596   7748  0.0 bash            bash -c free -b; ps -eo pid,ppid,pgid,etimes,rss,vsz,%mem,comm,args | awk 'NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/'; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "RCFILE $f=$(cat "$f")"; done
+  10234   10231   10231       0  3924   9728  0.0 awk             awk NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/
+POLL_UTC=2026-09-05T17:30:53Z
+--- gi70_a_exact_std tail:
+GI70_A_CTRL_UNIT 1
+GI70_A_CTRL_NONUNIT 1
+GI70_A_STD_BEGIN
+VERDICT: RUNNING: 3
+--- gi70_b_guided_hilbert tail:
+GI70_JOB_START b utc=2026-09-05T17:01:46Z host=ip-172-30-0-111
+VERDICT: RUNNING: 3
+--- gi70_c_c1_msolve tail:
+  7    2000  181722 1469349 x 1602078     0.01%      391 new    1609 zero        66.56 | 184.76       
+  7    2000  186426 1582681 x 1739668     0.01%      461 new    1539 zero        77.62 | 187.47       
+  7    2000  192452VERDICT: RUNNING: 3
+--- gi70_d_c1_slimgb tail:
+GI70_D_CTRL_UNIT 1
+GI70_D_CTRL_NONUNIT 1
+GI70_D_SLIMGB_BEGIN
+VERDICT: RUNNING: 3
+               total        used        free      shared  buff/cache   available
+Mem:     532326555648 69435543552 464932651008     3436544  1840730112 462891012096
+Swap:              0           0           0
+    PID    PPID    PGID ELAPSED   RSS    VSZ %MEM COMMAND         COMMAND
+   3822    3815    3822    1802  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3826    3822    3822    1802  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3830    3826    3822    1802 7262776 7283196  1.3 Singular     Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3957    3950    3957    1748  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3961    3957    3957    1748  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3962    3961    3957    1748 19944  29176  0.0 python3         python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3966    3962    3957    1748 35390916 35411476  6.8 Singular   Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/b_hilbert_seed_p32003.sing
+   4016       1    4015    1743  2100   7748  0.0 bash            bash -c cd /home/ubuntu/jc2/box/moh14-charts-20260905 && setsid bash -c 'timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1' </dev/null >/dev/null 2>&1 & echo LAUNCHED gi70_c_c1_msolve pid=$!
+   4017    4016    4017    1743  3544   7748  0.0 bash            bash -c timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1
+   4018    4017    4018    1743  2164   6128  0.0 timeout         timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4019    4018    4018    1743  3612   7896  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4030    4019    4018    1743  2256   7764  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4033    4019    4033    1743  2188   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4035    4033    4018    1743  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stdout.log
+   4036    4033    4018    1743  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stderr.log
+   4037    4033    4033    1743  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4040    4037    4033    1743 19098132 26456740  3.6 msolve     msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4132    4125    4132    1738  2192   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4136    4132    4132    1738  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4137    4136    4132    1738 1204316 1224276  0.2 Singular     Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4519    4518    4519    1626  3588   7832  0.0 bash            bash -c while true; do date -u +TICK=%Y-%m-%dT%H:%M:%SZ; ps -C Singular -C msolve -C python3 -o pid=,etimes=,rss=,comm=,args= | grep -E "a_exact_std|b_hilbert|c_c1|d_c1|run_guided" || true; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "DONE $f $(cat "$f")"; done; pgrep -f "[g]i70_(a_exact_std|b_guided_hilbert|c_c1_msolve|d_c1_slimgb)_fleet.sh" >/dev/null || break; sleep 55; done
+  10673   10672   10673       0  3560   7748  0.0 bash            bash -c free -b; ps -eo pid,ppid,pgid,etimes,rss,vsz,%mem,comm,args | awk 'NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/'; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "RCFILE $f=$(cat "$f")"; done
+  10676   10673   10673       0  3908   9728  0.0 awk             awk NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/
+POLL_UTC=2026-09-05T18:02:38Z
+--- gi70_a_exact_std tail:
+GI70_A_CTRL_UNIT 1
+GI70_A_CTRL_NONUNIT 1
+GI70_A_STD_BEGIN
+VERDICT: RUNNING: 3
+--- gi70_b_guided_hilbert tail:
+GI70_JOB_START b utc=2026-09-05T17:01:46Z host=ip-172-30-0-111
+VERDICT: RUNNING: 3
+--- gi70_c_c1_msolve tail:
+  7    2000  204520 2368941 x 2532255     0.00%      132 new    1868 zero        97.83 | 146.24       
+  7    2000  205495 2505033 x 2732059     0.00%      254 new    1746 zero       121.78 | 225.70       
+  7    2000  209337VERDICT: RUNNING: 3
+--- gi70_d_c1_slimgb tail:
+GI70_D_CTRL_UNIT 1
+GI70_D_CTRL_NONUNIT 1
+GI70_D_SLIMGB_BEGIN
+VERDICT: RUNNING: 3
+               total        used        free      shared  buff/cache   available
+Mem:     532326555648 92393775104 441973538816     3436544  1841647616 439932780544
+Swap:              0           0           0
+    PID    PPID    PGID ELAPSED   RSS    VSZ %MEM COMMAND         COMMAND
+   3822    3815    3822    3707  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3826    3822    3822    3707  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3830    3826    3822    3707 7915932 7936312  1.5 Singular     Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3957    3950    3957    3652  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3961    3957    3957    3652  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3962    3961    3957    3652 19944  29176  0.0 python3         python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3966    3962    3957    3652 51781060 51802996  9.9 Singular   Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/b_hilbert_seed_p32003.sing
+   4016       1    4015    3647  2100   7748  0.0 bash            bash -c cd /home/ubuntu/jc2/box/moh14-charts-20260905 && setsid bash -c 'timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1' </dev/null >/dev/null 2>&1 & echo LAUNCHED gi70_c_c1_msolve pid=$!
+   4017    4016    4017    3647  3544   7748  0.0 bash            bash -c timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1
+   4018    4017    4018    3647  2164   6128  0.0 timeout         timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4019    4018    4018    3647  3612   7896  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4030    4019    4018    3647  2260   7764  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4033    4019    4033    3647  2188   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4035    4033    4018    3647  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stdout.log
+   4036    4033    4018    3647  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stderr.log
+   4037    4033    4033    3647  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4040    4037    4033    3647 24208572 28399224  4.6 msolve     msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4132    4125    4132    3642  2192   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4136    4132    4132    3642  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4137    4136    4132    3642 1321092 1341048  0.2 Singular     Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4519    4518    4519    3531  3588   7832  0.0 bash            bash -c while true; do date -u +TICK=%Y-%m-%dT%H:%M:%SZ; ps -C Singular -C msolve -C python3 -o pid=,etimes=,rss=,comm=,args= | grep -E "a_exact_std|b_hilbert|c_c1|d_c1|run_guided" || true; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "DONE $f $(cat "$f")"; done; pgrep -f "[g]i70_(a_exact_std|b_guided_hilbert|c_c1_msolve|d_c1_slimgb)_fleet.sh" >/dev/null || break; sleep 55; done
+  11379   11378   11379       0  3600   7748  0.0 bash            bash -c free -b; ps -eo pid,ppid,pgid,etimes,rss,vsz,%mem,comm,args | awk 'NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/'; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "RCFILE $f=$(cat "$f")"; done
+  11382   11379   11379       0  3964   9728  0.0 awk             awk NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/
+POLL_UTC=2026-09-05T18:33:29Z
+--- gi70_a_exact_std tail:
+GI70_A_CTRL_UNIT 1
+GI70_A_CTRL_NONUNIT 1
+GI70_A_STD_BEGIN
+VERDICT: RUNNING: 3
+--- gi70_b_guided_hilbert tail:
+GI70_JOB_START b utc=2026-09-05T17:01:46Z host=ip-172-30-0-111
+VERDICT: RUNNING: 3
+--- gi70_c_c1_msolve tail:
+  8    2001  240795 1856910 x 1973002     0.01%       22 new    1980 zero        85.85 | 103.45       
+  8    2000  239314 2039858 x 2194125     0.01%       73 new    1947 zero       106.88 | 149.28       
+  8    2000  238994VERDICT: RUNNING: 3
+--- gi70_d_c1_slimgb tail:
+GI70_D_CTRL_UNIT 1
+GI70_D_CTRL_NONUNIT 1
+GI70_D_SLIMGB_BEGIN
+VERDICT: RUNNING: 3
+               total        used        free      shared  buff/cache   available
+Mem:     532326555648 117217767424 417148350464     3432448  1842925568 415108788224
+Swap:              0           0           0
+    PID    PPID    PGID ELAPSED   RSS    VSZ %MEM COMMAND         COMMAND
+   3822    3815    3822    5559  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3826    3822    3822    5559  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3830    3826    3822    5558 10510492 10530920  2.0 Singular   Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3957    3950    3957    5504  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3961    3957    3957    5504  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3962    3961    3957    5504 19944  29176  0.0 python3         python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3966    3962    3957    5504 63430220 63450852 12.2 Singular   Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/b_hilbert_seed_p32003.sing
+   4016       1    4015    5499  2100   7748  0.0 bash            bash -c cd /home/ubuntu/jc2/box/moh14-charts-20260905 && setsid bash -c 'timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1' </dev/null >/dev/null 2>&1 & echo LAUNCHED gi70_c_c1_msolve pid=$!
+   4017    4016    4017    5499  3544   7748  0.0 bash            bash -c timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1
+   4018    4017    4018    5499  2164   6128  0.0 timeout         timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4019    4018    4018    5499  3612   7896  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4030    4019    4018    5499  2260   7764  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4033    4019    4033    5499  2188   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4035    4033    4018    5499  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stdout.log
+   4036    4033    4018    5499  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stderr.log
+   4037    4033    4033    5499  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4040    4037    4033    5499 34069552 50624084  6.5 msolve     msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4132    4125    4132    5494  2192   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4136    4132    4132    5494  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4137    4136    4132    5494 1512712 1532640  0.2 Singular     Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4519    4518    4519    5382  3588   7832  0.0 bash            bash -c while true; do date -u +TICK=%Y-%m-%dT%H:%M:%SZ; ps -C Singular -C msolve -C python3 -o pid=,etimes=,rss=,comm=,args= | grep -E "a_exact_std|b_hilbert|c_c1|d_c1|run_guided" || true; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "DONE $f $(cat "$f")"; done; pgrep -f "[g]i70_(a_exact_std|b_guided_hilbert|c_c1_msolve|d_c1_slimgb)_fleet.sh" >/dev/null || break; sleep 55; done
+  11974   11973   11974       0  3604   7748  0.0 bash            bash -c free -b; ps -eo pid,ppid,pgid,etimes,rss,vsz,%mem,comm,args | awk 'NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/'; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "RCFILE $f=$(cat "$f")"; done
+  11977   11974   11974       0  3936   9728  0.0 awk             awk NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/
+POLL_UTC=2026-09-05T19:31:53Z
+--- gi70_a_exact_std tail:
+GI70_A_CTRL_UNIT 1
+GI70_A_CTRL_NONUNIT 1
+GI70_A_STD_BEGIN
+VERDICT: RUNNING: 3
+--- gi70_b_guided_hilbert tail:
+GI70_JOB_START b utc=2026-09-05T17:01:46Z host=ip-172-30-0-111
+VERDICT: RUNNING: 3
+--- gi70_c_c1_msolve tail:
+  8    2000  267843 2975695 x 3095677     0.00%      148 new    1857 zero       146.04 | 218.49       
+  8    2000  268520 3747245 x 3902845     0.00%      188 new    1834 zero       176.64 | 289.68       
+  8    2000  269752VERDICT: RUNNING: 3
+--- gi70_d_c1_slimgb tail:
+GI70_D_CTRL_UNIT 1
+GI70_D_CTRL_NONUNIT 1
+GI70_D_SLIMGB_BEGIN
+VERDICT: RUNNING: 3
+               total        used        free      shared  buff/cache   available
+Mem:     532326555648 150911524864 383453777920     3436544  1843798016 381415030784
+Swap:              0           0           0
+    PID    PPID    PGID ELAPSED   RSS    VSZ %MEM COMMAND         COMMAND
+   3822    3815    3822    9062  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3826    3822    3822    9062  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/a_exact_std/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3830    3826    3822    9062 11389616 11409932  2.1 Singular   Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/a_exact_std.sing
+   3957    3950    3957    9008  2196   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3961    3957    3957    9008  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/b_guided_hilbert/time-v.txt stdbuf -oL python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3962    3961    3957    9008 19944  29176  0.0 python3         python3 /home/ubuntu/jc2/box/gi70-longsolve-20260905/run_guided.py
+   3966    3962    3957    9008 87788048 87809476 16.8 Singular   Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/b_hilbert_seed_p32003.sing
+   4016       1    4015    9003  2100   7748  0.0 bash            bash -c cd /home/ubuntu/jc2/box/moh14-charts-20260905 && setsid bash -c 'timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1' </dev/null >/dev/null 2>&1 & echo LAUNCHED gi70_c_c1_msolve pid=$!
+   4017    4016    4017    9003  3544   7748  0.0 bash            bash -c timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1
+   4018    4017    4018    9003  2164   6128  0.0 timeout         timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4019    4018    4018    9003  3612   7896  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4030    4019    4018    9003  2260   7764  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+   4033    4019    4033    9003  2188   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4035    4033    4018    9003  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stdout.log
+   4036    4033    4018    9003  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stderr.log
+   4037    4033    4033    9003  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4040    4037    4033    9003 40926352 52218436  7.8 msolve     msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+   4132    4125    4132    8998  2192   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4136    4132    4132    8998  1648   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/d_c1_slimgb/time-v.txt stdbuf -oL Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4137    4136    4132    8998 2263128 2283056  0.4 Singular     Singular --no-rc -q /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/d_c1_slimgb.sing
+   4519    4518    4519    8886  3588   7832  0.0 bash            bash -c while true; do date -u +TICK=%Y-%m-%dT%H:%M:%SZ; ps -C Singular -C msolve -C python3 -o pid=,etimes=,rss=,comm=,args= | grep -E "a_exact_std|b_hilbert|c_c1|d_c1|run_guided" || true; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "DONE $f $(cat "$f")"; done; pgrep -f "[g]i70_(a_exact_std|b_guided_hilbert|c_c1_msolve|d_c1_slimgb)_fleet.sh" >/dev/null || break; sleep 55; done
+  12825   12824   12825       0  3584   7748  0.0 bash            bash -c free -b; ps -eo pid,ppid,pgid,etimes,rss,vsz,%mem,comm,args | awk 'NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/'; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "RCFILE $f=$(cat "$f")"; done
+  12828   12825   12825       0  3928   9728  0.0 awk             awk NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/

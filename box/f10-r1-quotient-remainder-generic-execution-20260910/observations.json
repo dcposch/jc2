@@ -1,0 +1,83 @@
+{
+  "status": "STOPPED-BEFORE-REMOTE-PREFLIGHT-NO-ENGINEERING-EVIDENCE",
+  "first_action_utc": "2026-09-10T01:03:35.773979633Z",
+  "owned_targets_absent_at_first_action": true,
+  "task_cap_utc": "2026-09-10T01:27:00Z",
+  "math_absolute_end_utc": "2026-09-10T01:20:00Z",
+  "first_math_utc": null,
+  "preflight_controls_run": 0,
+  "generic_invocations": 0,
+  "derivative_authorities_created": 0,
+  "system_units_launched": 0,
+  "remote_files_created": 0,
+  "ssh": {
+    "argv": [
+      "ssh",
+      "-i",
+      "/home/ubuntu/.ssh/jc2-fleet",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ConnectTimeout=10",
+      "ubuntu@107.21.89.35",
+      "date -u +%Y-%m-%dT%H:%M:%S.%NZ; hostname; cat /sys/devices/virtual/dmi/id/sys_vendor /sys/devices/virtual/dmi/id/board_asset_tag /proc/sys/kernel/random/boot_id; readlink /proc/self/ns/pid; /usr/bin/python3 --version; test ! -e /home/ubuntu/jc2-f10-r1-quotient-remainder-generic-20260910 && test ! -L /home/ubuntu/jc2-f10-r1-quotient-remainder-generic-20260910 && echo EXACT_CWD_ABSENT; free -b; ps -eo pid,ppid,pgid,stat,args --no-headers"
+    ],
+    "exit_code": 255,
+    "stderr": "Host key verification failed.\r\n",
+    "remote_stdout": "",
+    "failure_utc_exact": null,
+    "failure_utc_bracket": [
+      "2026-09-10T01:07:15.521796372Z",
+      "2026-09-10T01:08:17.593750289Z"
+    ],
+    "clock_caveat": "Specific call emitted no local timestamp; remote date did not execute. Bracket is not an exact event time.",
+    "retried": false,
+    "hostkey_override": false,
+    "remote_preflight_cwd_absence": "UNVERIFIED",
+    "remote_native_pins": "UNVERIFIED",
+    "tool_chunk_id": "b7330c"
+  },
+  "stop": {
+    "request_local_utc": "2026-09-10T01:08:17.593750289Z",
+    "argv": [
+      "aws",
+      "ec2",
+      "stop-instances",
+      "--instance-ids",
+      "i-08d2a40f272ee9fa2",
+      "--output",
+      "json"
+    ],
+    "exit_code": 0,
+    "response": {
+      "StoppingInstances": [
+        {
+          "InstanceId": "i-08d2a40f272ee9fa2",
+          "CurrentState": {
+            "Code": 64,
+            "Name": "stopping"
+          },
+          "PreviousState": {
+            "Code": 16,
+            "Name": "running"
+          }
+        }
+      ]
+    },
+    "confirmed_local_utc": "2026-09-10T01:08:43.156988318Z",
+    "confirmation": {
+      "State": "stopped",
+      "PrivateIp": "172.30.0.72",
+      "Volumes": [
+        "vol-0574e0fa5aed1f5e3"
+      ]
+    },
+    "request_tool_chunk_id": "f95224",
+    "confirmation_tool_chunk_id": "a2f446"
+  },
+  "root_advisory": {
+    "source": "Root message during this task; not executor observation or a charged scientific premise",
+    "observation": "Root independently performed a private-IP metadata SSH about01:07 with StrictHostKeyChecking=no, reported expected hostname/instance, boot29faf30e-c4aa-451b-943c-b95925f24fdc and generic/gate-valid SYSTEM units notfound.",
+    "effect": "Reconciliation only; no retry authority. Executor did not use that override or remote metadata as own verified preflight."
+  }
+}

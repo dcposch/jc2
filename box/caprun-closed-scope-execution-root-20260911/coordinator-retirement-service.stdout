@@ -1,0 +1,4 @@
+MainPID=0
+ExecStart={ path=/usr/local/bin/aws ; argv[]=/usr/local/bin/aws ec2 terminate-instances --profile personal --region us-east-1 --instance-ids i-00653baa8e5c32c75 ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }
+LoadState=loaded
+ActiveState=inactive

@@ -1,0 +1,223 @@
+{
+  "caps": "30wall25CPU512MiB each",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": [],
+      "stdout_sha256": "8d876a06d4518a353770973d5a4996f31a9da3ecf74610eb30aaae6ff78a88f6"
+    },
+    {
+      "mutation": "--mutate-W-drop-L",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1a2e8591760c0e24aff19db42c0ad2d79c12810b44c808ddabbc7658842c6468",
+      "stderr_tail": [
+        "RuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-sixth-coefficient",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1a2e8591760c0e24aff19db42c0ad2d79c12810b44c808ddabbc7658842c6468",
+      "stderr_tail": [
+        "RuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-fourth-coefficient",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1a2e8591760c0e24aff19db42c0ad2d79c12810b44c808ddabbc7658842c6468",
+      "stderr_tail": [
+        "RuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-drop-D",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "1a2e8591760c0e24aff19db42c0ad2d79c12810b44c808ddabbc7658842c6468",
+      "stderr_tail": [
+        "RuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-unit-object",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "2834c94a692d0e368c269a290b50e30be7e1beaceb48d6517e65b5664e7986e4",
+      "stderr_tail": [
+        "RuntimeError: FAIL: U*Uinv=1 modulo (V, om^2+om+1)"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-unit-scalar",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "2834c94a692d0e368c269a290b50e30be7e1beaceb48d6517e65b5664e7986e4",
+      "stderr_tail": [
+        "RuntimeError: FAIL: U*Uinv=1 modulo (V, om^2+om+1)"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-alphaG",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "6c347e8d32ba3d9e2bec3155fcf16c1b3b9c57387377ebea7638fe7fa6d3278f",
+      "stderr_tail": [
+        "RuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-deltaF",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "6c347e8d32ba3d9e2bec3155fcf16c1b3b9c57387377ebea7638fe7fa6d3278f",
+      "stderr_tail": [
+        "RuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-freeze-R",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "6c347e8d32ba3d9e2bec3155fcf16c1b3b9c57387377ebea7638fe7fa6d3278f",
+      "stderr_tail": [
+        "RuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-FG",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "6c347e8d32ba3d9e2bec3155fcf16c1b3b9c57387377ebea7638fe7fa6d3278f",
+      "stderr_tail": [
+        "RuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_tail": [],
+      "stdout_sha256": "8d876a06d4518a353770973d5a4996f31a9da3ecf74610eb30aaae6ff78a88f6"
+    },
+    {
+      "mutation": "--mutate-W-drop-L",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1a2e8591760c0e24aff19db42c0ad2d79c12810b44c808ddabbc7658842c6468",
+      "stderr_tail": [
+        "RuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-sixth-coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1a2e8591760c0e24aff19db42c0ad2d79c12810b44c808ddabbc7658842c6468",
+      "stderr_tail": [
+        "RuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-fourth-coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1a2e8591760c0e24aff19db42c0ad2d79c12810b44c808ddabbc7658842c6468",
+      "stderr_tail": [
+        "RuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-drop-D",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "1a2e8591760c0e24aff19db42c0ad2d79c12810b44c808ddabbc7658842c6468",
+      "stderr_tail": [
+        "RuntimeError: FAIL: universal collision: all three (R,r,L) minors vanish through s^6"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-unit-object",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "2834c94a692d0e368c269a290b50e30be7e1beaceb48d6517e65b5664e7986e4",
+      "stderr_tail": [
+        "RuntimeError: FAIL: U*Uinv=1 modulo (V, om^2+om+1)"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-unit-scalar",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "2834c94a692d0e368c269a290b50e30be7e1beaceb48d6517e65b5664e7986e4",
+      "stderr_tail": [
+        "RuntimeError: FAIL: U*Uinv=1 modulo (V, om^2+om+1)"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-alphaG",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "6c347e8d32ba3d9e2bec3155fcf16c1b3b9c57387377ebea7638fe7fa6d3278f",
+      "stderr_tail": [
+        "RuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-deltaF",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "6c347e8d32ba3d9e2bec3155fcf16c1b3b9c57387377ebea7638fe7fa6d3278f",
+      "stderr_tail": [
+        "RuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-freeze-R",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "6c347e8d32ba3d9e2bec3155fcf16c1b3b9c57387377ebea7638fe7fa6d3278f",
+      "stderr_tail": [
+        "RuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-omit-FG",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "6c347e8d32ba3d9e2bec3155fcf16c1b3b9c57387377ebea7638fe7fa6d3278f",
+      "stderr_tail": [
+        "RuntimeError: FAIL: exact moving identity [A,B]=[R_s,aG-deltaF-(5/3)R_sF^2]+[F,G]"
+      ],
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "writers_finished": true
+}

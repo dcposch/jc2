@@ -1,0 +1,193 @@
+{
+  "schema": "f10-contact-gram-install-references/v1",
+  "enabled": false,
+  "references_only": true,
+  "batch_suffix": "JC2_BATCH_SUFFIX_PLACEHOLDER",
+  "stage_directory": "/JC2_STAGE_DIRECTORY_PLACEHOLDER",
+  "source_directory": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/source",
+  "metadata_directory": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/metadata",
+  "entries": [
+    {
+      "role": "caprun",
+      "source_reference": "/home/ubuntu/jc2/ops/run_capped.py",
+      "source_read_mode": "REFERENCE_ONLY_NO_FRESH_ACCESS",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "staged_basename": "run_capped.py",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/source/run_capped.py",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "producer",
+      "source_reference": "/home/ubuntu/jc2/box/f10-contact-gram-code-astra-20260910/producer.py",
+      "source_read_mode": "REFERENCE_ONLY_NO_FRESH_ACCESS",
+      "sha256": "afc617ae797661df8cbb1ca1d8a00825a6c607e1fb854754c0230376965f74ee",
+      "staged_basename": "producer.py",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/source/producer.py",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "checker",
+      "source_reference": "/home/ubuntu/jc2/box/f10-contact-gram-code-astra-20260910/checker.py",
+      "source_read_mode": "REFERENCE_ONLY_NO_FRESH_ACCESS",
+      "sha256": "ceca0a07f1b2f6433de87bb7327280cb1165703ea9196f6d7e37b953a8631b06",
+      "staged_basename": "checker.py",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/source/checker.py",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "authority",
+      "source_reference": "/home/ubuntu/jc2/box/f10-contact-gram-startup-fix-astra-20260910/authority.py",
+      "source_read_mode": "REFERENCE_ONLY_NO_FRESH_ACCESS",
+      "sha256": "96ca421fe8d82f7035161d35c325db2e1433346db0101ab6bfffe9da6984a141",
+      "staged_basename": "authority.py",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/source/authority.py",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "probe",
+      "source_reference": "/home/ubuntu/jc2/box/f10-contact-gram-runtime-astra-20260910/probe.py",
+      "source_read_mode": "REFERENCE_ONLY_NO_FRESH_ACCESS",
+      "sha256": "d0df7ba6d9e0e082bed92321dd390fe91bc4bf8f32ce68cdf9c8a9180b4e39f4",
+      "staged_basename": "probe.py",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/source/probe.py",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "mutator",
+      "source_reference": "/home/ubuntu/jc2/box/f10-contact-gram-runtime-astra-20260910/mutate.py",
+      "source_read_mode": "REFERENCE_ONLY_NO_FRESH_ACCESS",
+      "sha256": "70857a11be5e21d63d8bb476663dd3587332d1968f5f26912e6851aa51d5d77c",
+      "staged_basename": "mutate.py",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/source/mutate.py",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "dispatcher",
+      "source_reference": "/home/ubuntu/jc2/box/f10-contact-gram-runtime-astra-20260910/dispatch.py",
+      "source_read_mode": "CHARGED_CURRENT_HASH_THEN_FRESH_WHOLE_TEXT",
+      "sha256": "61f21a2c5912cd53a46f8881783994e104a511cee1261713df53936aced9c126",
+      "staged_basename": "dispatch.py",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/source/dispatch.py",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "science_statement",
+      "source_reference": "/home/ubuntu/jc2/xmodel/f10-contact-real-window-astra-20260910.md",
+      "source_read_mode": "REFERENCE_ONLY_NO_FRESH_ACCESS",
+      "sha256": "f87a2189ceacbca0d58e84aa5e32838b89c47ff249ea9acb5d757ae184e6a2d2",
+      "staged_basename": "f10-contact-real-window-astra-20260910.md",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/metadata/f10-contact-real-window-astra-20260910.md",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "science_statement",
+      "source_reference": "/home/ubuntu/jc2/xmodel/f10-contact-quartic-gram-gate-fable5-20260910.md",
+      "source_read_mode": "REFERENCE_ONLY_NO_FRESH_ACCESS",
+      "sha256": "ce14c6a789086419f88a601faf10bfd388639697cd693a1deb12160c955f5068",
+      "staged_basename": "f10-contact-quartic-gram-gate-fable5-20260910.md",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/metadata/f10-contact-quartic-gram-gate-fable5-20260910.md",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "science_statement",
+      "source_reference": "/home/ubuntu/jc2/xmodel/f10-contact-symmetric-remainder-astra-20260910.md",
+      "source_read_mode": "REFERENCE_ONLY_NO_FRESH_ACCESS",
+      "sha256": "96deb541bd4d39373bda331885f8b4fbffd224304a2c3533983946ef3b395c13",
+      "staged_basename": "f10-contact-symmetric-remainder-astra-20260910.md",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/metadata/f10-contact-symmetric-remainder-astra-20260910.md",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "files_only_native_manifest",
+      "source_reference": "/JC2_STAGE_DIRECTORY_PLACEHOLDER/native-manifest.json",
+      "source_read_mode": "FUTURE_ROOT_METADATA_NOT_PRESENT",
+      "sha256": "JC2_NATIVE_MANIFEST_SHA256_PLACEHOLDER",
+      "staged_basename": "native-manifest.json",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/metadata/native-manifest.json",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "retained_native_observations",
+      "source_reference": "/JC2_STAGE_DIRECTORY_PLACEHOLDER/native.stdout",
+      "source_read_mode": "FUTURE_ROOT_METADATA_NOT_PRESENT",
+      "sha256": "JC2_NATIVE_STDOUT_SHA256_PLACEHOLDER",
+      "staged_basename": "native.stdout",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/metadata/native.stdout",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "retained_native_file_pins",
+      "source_reference": "/JC2_STAGE_DIRECTORY_PLACEHOLDER/native.sha256",
+      "source_read_mode": "FUTURE_ROOT_METADATA_NOT_PRESENT",
+      "sha256": "JC2_NATIVE_SHA256_SHA256_PLACEHOLDER",
+      "staged_basename": "native.sha256",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/metadata/native.sha256",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "future_root_registration",
+      "source_reference": "/JC2_STAGE_DIRECTORY_PLACEHOLDER/ROOT-REGISTRATION.json",
+      "source_read_mode": "FUTURE_ROOT_METADATA_NOT_PRESENT",
+      "sha256": "JC2_ROOT_REGISTRATION_JSON_SHA256_PLACEHOLDER",
+      "staged_basename": "ROOT-REGISTRATION.json",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/metadata/ROOT-REGISTRATION.json",
+      "mode": "0444",
+      "owner": "root:root"
+    },
+    {
+      "role": "future_root_authority",
+      "source_reference": "/JC2_STAGE_DIRECTORY_PLACEHOLDER/ROOT-EXECUTION-CARD.md",
+      "source_read_mode": "FUTURE_ROOT_METADATA_NOT_PRESENT",
+      "sha256": "JC2_ROOT_EXECUTION_CARD_MD_SHA256_PLACEHOLDER",
+      "staged_basename": "ROOT-EXECUTION-CARD.md",
+      "installed_path": "/opt/jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER/metadata/ROOT-EXECUTION-CARD.md",
+      "mode": "0444",
+      "owner": "root:root"
+    }
+  ],
+  "external_existing_executables": [
+    {
+      "role": "python",
+      "path": "/JC2_PYTHON_CANONICAL_PATH_PLACEHOLDER",
+      "sha256": "JC2_PYTHON_SHA256_PLACEHOLDER"
+    },
+    {
+      "role": "setpriv",
+      "path": "/JC2_SETPRIV_CANONICAL_PATH_PLACEHOLDER",
+      "sha256": "JC2_SETPRIV_SHA256_PLACEHOLDER"
+    }
+  ],
+  "external_full_cgroup_supervisor": {
+    "status": "UNRESOLVED_BLOCKER_NO_ALLOCATION",
+    "scope": "dispatcher and all descendants, including unreaped/unaccounted descendants",
+    "wall_seconds": 600,
+    "cpu_seconds": 550,
+    "memory_max_bytes": 2147483648,
+    "start_boundary": "JC2_WHOLE_CGROUP_BUDGET_START_BOUNDARY_PLACEHOLDER",
+    "enforcement_reference": "JC2_REVIEWED_EXTERNAL_SUPERVISOR_REFERENCE_PLACEHOLDER",
+    "enforcement_sha256": "JC2_EXTERNAL_SUPERVISOR_SHA256_PLACEHOLDER",
+    "terminal_cleanup_custody_margin": "JC2_EXTERNAL_CLEANUP_CUSTODY_PLAN_PLACEHOLDER"
+  },
+  "lifecycle": {
+    "runtime_review": "ROOT_LIFECYCLE_NOTICE_FIRST_ACCEPTED_20_55_NO_NEW_BODY_READ",
+    "main_unit": "jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER.service",
+    "term_timer": "jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER-term.timer",
+    "kill_timer": "jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER-kill.timer",
+    "worker_stop_timer": "jc2-contact-gram-JC2_BATCH_SUFFIX_PLACEHOLDER-worker-stop.timer",
+    "harvest_reference": "JC2_BATCH_SUFFIX_PLACEHOLDER",
+    "cancellation_reference": "JC2_BATCH_SUFFIX_PLACEHOLDER"
+  }
+}

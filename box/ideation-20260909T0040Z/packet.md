@@ -1,0 +1,21 @@
+# 0040 critical round: frozen state and trust perimeter
+
+This is PREPARATION ONLY. The tag is an identifier, not an invitation time or deadline. The manifest records the actual freeze. Root must first write and transactionally seal its SAME-INPUT blind; only a later explicit invitation sets a fresh, common future blind deadline. No invitation, model launch, arithmetic or solver authority is created here.
+
+## Binding current state
+
+JC2 remains unresolved. Accepted15i excludes the entire weighted unequal/Q receiver; accepted15p composes15m,15n and the complementary M gate to exclude the entire weighted unequal/golden field-point receiver, both embeddings and no parity. The four common3/common4 coefficient-field clients remain open. Chronological older paragraphs in APPROACHES and the previous synthesis do not override the frozen15p audit entry. The common4/Q coefficient h is now typed by15o, but its full-source nonvanishing/nonredundancy and prospective localization properness are unknown. No new solve is selected by this packet.
+
+The weight-free reference framework and conditional client interface are TERMINAL BUT UNREVIEWED. The candidate is: over any characteristic-zero field, no degree15/25 polynomial pair with tops H^3/H^5 and [A,B]=c*g^2, c nonzero, for either of the two stated H patterns, even WITHOUT weight, support, parity or lower-face bounds. The framework is not the missing local proof. The conditional interface is not a proof of the candidate. Root's still-leased local proof, any unfinished review, and future conclusions are excluded from the blind evidence. IF the candidate and interface pass review, they would retire all six named clients and the conditional standard-F2 source class, not arbitrary75/125, global125, allD125 or JC2. Do not bank that conditional consequence as established.
+
+The full46 master table remains a historical inventory. BINDING OVERRIDE ROW26: the proper Galois second-leg quotient, including d2=[K:C(f,g)]=2, was CLOSED August30 by BD-GAL. Its old BD-D2 successor is not open. d1=[C(x,y):K]=2 is a different first-leg question; non-Galois d2>=3 and primitive maps are not excluded, but renaming them is not a new discriminator or source attachment. Read the whole short binding integration before disposition26. No blind consensus overrides it.
+
+All-degree source coverage remains separate from every finite receiver closure. The n<=200 population is not an all-degree list; necessary receivers are not automatically actual polynomial Keller pairs. G2-PSC and G2-BD remain distinct source/global arrows. K16 still needs its all-m nonzero-product obstruction and independent b=0 boundary. An applicable complete characteristic-zero proper ideal suffices for an algebraic-closure point; no extra explicit point is logically needed after that proof. A receiver-only or modular point, timeout or growing formal series does not suffice.
+
+## Clocks, custody and omitted context
+
+Last completed full round:2220 synthesis, September8 23:26:00UTC; next12h backstop September9 11:26:00. This critical preparation does not reset it. Last broad sweep: September8 cutoff22:24:26.958594UTC, PARTIAL/NO ACTION; next24h backstop September9 same time. Global social coverage holes since September3 10:17 remain. No new broad sweep is implied by this packet.
+
+Whole COORDINATION, current APPROACHES, newest LIVE through snapshot cutoff, audit guide and15m–p, all46 table, binding BD-GAL history, last synthesis/sweep, literal receiver, accepted golden framework/M gate, and the two terminal unreviewed reports are charged once each. Transactions and custody are pinned provenance in the manifest/metadata, not duplicate proof-reading farms. The huge whole AUDIT and old checker suites are not forced inputs. Named terminal history remains available with precise read-scope/hash disclosure. No current-round root/peer blind or live report was read in preparation.
+
+No substantive post-cutoff update may silently change this packet. Queue such facts separately for post-collection comparison; if a load-bearing premise is invalidated, root applies COORDINATION's abort/reseal rule. Mathematical rankings, queue changes and launches belong to the later synthesis, not this preparer.

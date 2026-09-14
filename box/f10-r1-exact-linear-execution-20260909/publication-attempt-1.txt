@@ -1,0 +1,6 @@
+At23:23 UTC the first close refused the authored plain BODY-END line:
+artifact-finalize: INVALID: partial report is not closable: expected exactly one standalone BODY-END marker, found 0
+The following finalize had no close record and also refused. No final report
+or manifest was published. The required standalone HTML marker was then
+checked in ops/seal.py and corrected in the still-private partial only.
+No substantive body, frozen source, remote evidence or mathematical run changed.

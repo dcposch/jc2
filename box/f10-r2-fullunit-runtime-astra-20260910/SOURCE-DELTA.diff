@@ -1,0 +1,509 @@
+--- accepted-status-fixed/dispatch.py
++++ owned-fullunit/dispatch.py
+@@ -1,4 +1,4 @@
+-"""fixed89/0 highest runtime entry, STATIC/UNEXECUTED; fresh ROOT registration only.
++"""fixed89/0 fullunit runtime entry, STATIC/UNEXECUTED; fresh ROOT registration only.
+ 
+ Metadata-only caller. No science import, coefficient parse, solver, retry,
+ installation, worker control, or inner process group. CAPRUN is unchanged.
+@@ -20,15 +20,15 @@
+ import time
+ 
+ JOB = 'f10-r2-reconstruction-v1'
+-CONTROL_JOB = 'f10-r2-highest-modular-runtime-v1'
+-MUTATION_JOB = 'f10-r2-highest-modular-mutation-v1'
+-HIGH_JOB = 'f10-r2-highest-modular89-v1'
+-HIGH = {'entry.py': '8afc9b158483183e1afefef65c5aad54a8a46615b0f3b3d4682812c8dd8d74b2',
+-        'produce.py': '6f094c4b468afe7e9f09d8b0d4ee4f33faa3017afb9809eaa312ff2f70904913',
+-        'check.py': '1e685c413484f90d68db77bba844cb220f0d1b86c33c1d82ac9f587ad76c15f5'}
++CONTROL_JOB = 'f10-r2-fullunit-modular-runtime-v1'
++MUTATION_JOB = 'f10-r2-fullunit-modular-mutation-v1'
++FULL_JOB = 'f10-r2-fullunit-modular89-v1'
++FULL = {'entry.py': 'c49b7dfabe6dc8cc5b7aaea485171a6b709fc6158f180ae1157afd90b3cf4b1f',
++        'produce.py': '60a290aee2ed5def7ed4242743f187dea755659f287707fa79c6c1e05f2d1f10',
++        'check.py': 'ccc3d2ddfca98f7faaed9df323fb90ec183b437b3c6b0bfcde0820186e667023'}
+ BASELINE_SHA = 'dac655a7ce75287b06010171bce66af1a644aff81de9620a452457a5f65a9587'
+ BASELINE_BYTES = 1652675
+-MUTATOR_SHA = '3d68ec187f77dc1906f177d8f487f1d037dd0a1aa4b46329632ee6f27f315225'
++MUTATOR_SHA = '4548656af387b7e08df5bd5c56504f97c2d11d2b5375cbfbadde5304465c4c97'
+ CAPRUN_SHA = '4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2'
+ SCIENCE = {
+     'authority.py': '2a274ac4cf866762bc1f2734b3af8d515ff7be93c0fe0d4500e56dbca2ef093b',
+@@ -39,9 +39,9 @@
+ LIMITS = {'wall_seconds': '600', 'cpu_seconds': '500', 'memory_bytes': '2147483648',
+           'aggregate_bytes': '16777216'}
+ PROFILES = {'control': [5, 3, 2147483648], 'dummy': [5, 3, 33554432],
+-            'mutate': [30, 24, 2147483648], 'highest': [120, 99, 2147483648]}
++            'mutate': [30, 24, 2147483648], 'fullunit': [120, 99, 2147483648]}
+ LABELS = ('refuse-status', 'refuse-caps', 'refuse-inventory', 'refuse-source', 'refuse-hash',
+-          'valid', 'startup-produce', 'startup-check', 'dummy', 'highest-produce', 'highest-positive', 'mutate', 'highest-negative')
++          'valid', 'startup-produce', 'startup-check', 'dummy', 'fullunit-produce', 'fullunit-positive', 'mutate', 'fullunit-negative')
+ ENV = {'PATH': '/usr/bin:/bin', 'LANG': 'C', 'LC_ALL': 'C', 'TZ': 'UTC'}
+ TOTAL, PACKET, META = 16777216, 15728640, 1048576
+ 
+@@ -161,7 +161,7 @@
+         self.path = immutable(name); self.root_sha = sha(self.path); self.r = load(self.path)
+         need(stat.S_IMODE(self.path.stat().st_mode) == 0o444, 'ROOT registration 0444')
+         r = self.r
+-        need(r.get('schema') == 'f10-r2-highest-modular-runtime/v1' and r.get('enabled') is True, 'disabled ROOT registration')
++        need(r.get('schema') == 'f10-r2-fullunit-modular-runtime/v1' and r.get('enabled') is True, 'disabled ROOT registration')
+         need(r['jobtag'] == CONTROL_JOB and r['exclusive_no_concurrent_writer'] is True, 'job/exclusivity')
+         need(r['limits'] == LIMITS and r['profiles'] == PROFILES, 'fixed cap profiles')
+         need(r['environment'] == ENV and dict(os.environ) == ENV, 'ROOT clear environment required')
+@@ -183,8 +183,8 @@
+         need(self.files['dispatcher'] == pathlib.Path(__file__).resolve(), 'dispatcher identity')
+         self.source = directory(r['science_dir'], 0o755)
+         self.wrapper = directory(r['wrapper_dir'], 0o755)
+-        self.highest = directory(r['highest_dir'], 0o755)
+-        need(len({self.source, self.wrapper, self.highest}) == 3, 'three disjoint source directories')
++        self.fullunit = directory(r['fullunit_dir'], 0o755)
++        need(len({self.source, self.wrapper, self.fullunit}) == 3, 'three disjoint source directories')
+         need(self.source != self.wrapper and os.getcwd() == str(self.wrapper), 'separate wrapper cwd')
+         need(self.files['dispatcher'].parent == self.wrapper and self.files['probe'].parent == self.wrapper,
+              'exact wrapper siblings')
+@@ -202,8 +202,8 @@
+         need(self.pins[str(self.files['mutator'])] == MUTATOR_SHA, 'ROOT final mutator pin required')
+         for name, h in SCIENCE.items():
+             need(self.pins.get(str(self.source / name)) == h, 'actual science role pin: ' + name)
+-        for name, h in HIGH.items():
+-            need(self.pins.get(str(self.highest / name)) == h, 'highest source pin')
++        for name, h in FULL.items():
++            need(self.pins.get(str(self.fullunit / name)) == h, 'fullunit source pin')
+         self.native_path = immutable(r['native_manifest'])
+         need(self.pins.get(str(self.native_path)) == sha(self.native_path), 'native manifest pin')
+         self.native = load(self.native_path, 1048576)
+@@ -221,7 +221,7 @@
+         need(all(not list(p.iterdir()) for p in (self.auth, self.frozen, self.writer)), 'fresh output children')
+         need(mount_type(self.mount) == (str(self.mount), 'tmpfs'), 'exact tmpfs')
+         self.mount_id = (self.mount.stat().st_dev, self.mount.stat().st_ino)
+-        need(self.source != self.mount and self.mount not in self.source.parents and self.mount not in self.wrapper.parents and self.highest != self.mount and self.mount not in self.highest.parents, 'code outside outputs')
++        need(self.source != self.mount and self.mount not in self.source.parents and self.mount not in self.wrapper.parents and self.fullunit != self.mount and self.mount not in self.fullunit.parents, 'code outside outputs')
+         need(all(p != self.mount and self.mount not in p.parents for p in
+                  list(self.files.values()) + [self.path, self.native_path]), 'all code/baseline/native/registration outside tmpfs')
+         need(all(pathlib.Path(p) != self.mount and self.mount not in pathlib.Path(p).parents
+@@ -263,7 +263,7 @@
+         if self.fixture_pins:
+             directory(self.frozen, 0o555)
+             need(set(p.name for p in self.frozen.iterdir()) == {pathlib.Path(p).name for p in self.fixture_pins},
+-                 'exact frozen highest inventory')
++                 'exact frozen fullunit inventory')
+         need(socket.gethostname() == self.r['hostname']
+              and pathlib.Path('/sys/class/dmi/id/board_asset_tag').read_text().strip() == self.r['instance_id']
+              and pathlib.Path('/proc/sys/kernel/random/boot_id').read_text().strip() == self.r['boot_id']
+@@ -272,11 +272,11 @@
+              and (self.cg / 'memory.max').read_text().strip() == LIMITS['memory_bytes'], 'current cgroup/cap')
+         need(set(p.name for p in self.source.iterdir()) == set(SCIENCE), 'EXACT five-file science directory')
+         need(set(p.name for p in self.wrapper.iterdir()) == {'dispatch.py', 'probe.py', 'mutate.py'}, 'EXACT three-file wrapper directory')
+-        directory(self.source, 0o755); directory(self.wrapper, 0o755); directory(self.highest, 0o755)
+-        need(set(p.name for p in self.highest.iterdir()) == set(HIGH), 'EXACT three highest siblings')
+-        for name, h in HIGH.items():
+-            p = immutable(self.highest / name)
+-            need(stat.S_IMODE(p.stat().st_mode) == 0o444 and sha(p) == h, 'highest current source barrier')
++        directory(self.source, 0o755); directory(self.wrapper, 0o755); directory(self.fullunit, 0o755)
++        need(set(p.name for p in self.fullunit.iterdir()) == set(FULL), 'EXACT three fullunit siblings')
++        for name, h in FULL.items():
++            p = immutable(self.fullunit / name)
++            need(stat.S_IMODE(p.stat().st_mode) == 0o444 and sha(p) == h, 'fullunit current source barrier')
+         for p, h in list(self.pins.items()) + list(self.native['files'].items()):
+             need(re.fullmatch(r'[0-9a-f]{64}', h) and sha(immutable(p, p not in self.native['files'] and p not in (str(self.files['python']), str(self.files['setpriv'])))) == h, 'current pin')
+         for name, h in SCIENCE.items():
+@@ -361,24 +361,24 @@
+         target = input_path if input_path is not None else payload
+         tail = ['--registered-job', tag, '--authorization', str(auth), '--authorization-sha256', supplied,
+                 '--input' if role == 'check' else '--output', str(target)]
+-        if role in ('highest-produce', 'highest-check'):
+-            mode = 'produce' if role == 'highest-produce' else 'check'
++        if role in ('fullunit-produce', 'fullunit-check'):
++            mode = 'produce' if role == 'fullunit-produce' else 'check'
+             cert = self.writer / 'candidate.json' if mode == 'produce' else input_path
+-            need(cert is not None, 'highest certificate role')
++            need(cert is not None, 'fullunit certificate role')
+             arith = 'arithmetic.py' if mode == 'produce' else 'check_arithmetic.py'
+-            script = [str(self.highest / (mode + '.py')), '--registered-job', HIGH_JOB,
+-                      '--root-registration-sha256', self.root_sha, '--self-sha256', HIGH[mode + '.py'],
+-                      '--entry-sha256', HIGH['entry.py'], '--arithmetic', str(self.source / arith),
++            script = [str(self.fullunit / (mode + '.py')), '--registered-job', FULL_JOB,
++                      '--root-registration-sha256', self.root_sha, '--self-sha256', FULL[mode + '.py'],
++                      '--entry-sha256', FULL['entry.py'], '--arithmetic', str(self.source / arith),
+                       '--baseline', str(self.files['baseline']), '--certificate', str(cert),
+                       '--receipt', str(self.writer / (label + '.receipt.json'))]
+-            need(len(script) == 17, 'literal highest sys.argv count')
++            need(len(script) == 17, 'literal fullunit sys.argv count')
+         elif role == 'mutate':
+             need(input_path == self.frozen / 'candidate.json', 'mutator frozen candidate')
+             script = [str(self.files['mutator']), '--registered-job', MUTATION_JOB,
+                       '--root-registration-sha256', self.root_sha, '--self-sha256', MUTATOR_SHA,
+                       '--arithmetic', str(self.source / 'arithmetic.py'),
+                       '--baseline', str(self.files['baseline']), '--certificate', str(input_path),
+-                      '--positive-receipt', str(self.frozen / 'highest-positive.receipt.json'),
++                      '--positive-receipt', str(self.frozen / 'fullunit-positive.receipt.json'),
+                       '--output', str(self.writer / 'changed.json'),
+                       '--receipt', str(self.writer / 'mutate.receipt.json')]
+             need(len(script) == 19, 'literal mutation vector')
+@@ -496,20 +496,20 @@
+         syncdir(self.writer); os.chmod(self.frozen, 0o555); syncdir(self.frozen); syncdir(self.mount)
+         self.revalidate()
+ 
+-    def highest_receipt(self, label, mode, status, digest):
++    def fullunit_receipt(self, label, mode, status, digest):
+         path = self.writer / (label + '.receipt.json')
+-        need(path.is_file() and not path.is_symlink(), 'highest receipt regularity')
++        need(path.is_file() and not path.is_symlink(), 'fullunit receipt regularity')
+         d = load(path, 32768)
+         arith = 'arithmetic.py' if mode == 'produce' else 'check_arithmetic.py'
+-        expected = {'schema':'f10-r2-highest-modular89-receipt/v1', 'status':status,
++        expected = {'schema':'f10-r2-fullunit-modular89-receipt/v1', 'status':status,
+                     'science_outcome':'NONE', 'mode':mode, 'prime':'89', 'root':'0',
+                     'root_registration_sha256':self.root_sha,
+-                    'sources':{str(self.highest/(mode+'.py')):HIGH[mode+'.py'],
+-                               str(self.highest/'entry.py'):HIGH['entry.py'],
++                    'sources':{str(self.fullunit/(mode+'.py')):FULL[mode+'.py'],
++                               str(self.fullunit/'entry.py'):FULL['entry.py'],
+                                str(self.source/arith):SCIENCE[arith]},
+                     'baseline_sha256':BASELINE_SHA, 'baseline_bytes':str(BASELINE_BYTES),
+                     'certificate_sha256':digest}
+-        need(d == expected, 'exact highest bound metadata')
++        need(d == expected, 'exact fullunit bound metadata')
+         return d
+ 
+     def fixture_receipt(self):
+@@ -518,7 +518,7 @@
+                 'baseline_sha256','baseline_bytes','input','output','selection',
+                 'inverse_edit_restores_whole_input_bytes','checker_run'}
+         need(type(d) is dict and set(d)==keys, 'exact mutation receipt keys')
+-        need(d['schema']=='f10-r2-highest-modular-mutation/v1'
++        need(d['schema']=='f10-r2-fullunit-modular-mutation/v1'
+              and d['status']=='ONE_COFACTOR_MUTATED_UNCHECKED' and d['science_outcome']=='NONE'
+              and d['job_tag']==MUTATION_JOB and d['root_registration_sha256']==self.root_sha,
+              'mutation receipt scope')
+@@ -533,21 +533,31 @@
+                  'mutation actual byte readback')
+         need(d['input']['sha256'] != d['output']['sha256'], 'actual changed digest')
+         sel=d['selection']
+-        need(type(sel) is dict and set(sel)=={'side','index','old','new','old_length','new_length'}
+-             and sel['side'] in ('c','d') and sel['index']=='0', 'selection fields')
+-        need(all(type(sel[k]) is str and sel[k] in [str(i) for i in range(89)] for k in ('old','new'))
+-             and sel['old']!=sel['new'], 'canonical distinct residue metadata')
+-        need(all(type(sel[k]) is str and sel[k] in [str(i) for i in range(7)]
+-                 for k in ('old_length','new_length')), 'bounded array lengths')
++        labels=['Psi5','Psi6','Psi7']+['K1_'+str(i) for i in range(1,7)]+['K0_'+str(i) for i in range(1,9)]+['K1_0-U*K0_0']
++        need(type(sel) is dict and set(sel)=={'slot','generator','index','exponents','old','new',
++             'term_deleted','old_length','new_length'}, 'selection fields')
++        need(type(sel['slot']) is str and sel['slot'] in [str(i) for i in range(18)]
++             and sel['generator']==labels[int(sel['slot'])] and sel['index']=='0', 'indexed existing cofactor')
++        need(type(sel['exponents']) is list and len(sel['exponents'])==3
++             and all(type(x) is str and x in [str(i) for i in range(31)] for x in sel['exponents']),
++             'bounded exponent metadata')
++        need(type(sel['old']) is str and sel['old'] in [str(i) for i in range(1,89)]
++             and type(sel['new']) is str and sel['new'] in [str(i) for i in range(89)]
++             and sel['old']!=sel['new'], 'distinct canonical residue metadata')
++        need(type(sel['term_deleted']) is bool and sel['term_deleted']==(sel['new']=='0'),
++             'deletion metadata')
++        need(type(sel['old_length']) is str and sel['old_length'] in [str(i) for i in range(1,755)]
++             and type(sel['new_length']) is str and sel['new_length'] in [str(i) for i in range(755)],
++             'bounded sparse lengths')
+         return d
+ 
+     def traceback(self, path):
+         need(path.stat().st_size <= 8192, 'bounded semantic traceback')
+         lines = path.read_bytes().decode('ascii').splitlines(keepends=True)
+-        check = str(self.highest / 'check.py')
+-        frames = [(check,168,'<module>','main()'),(check,158,'main','verify(ctx,raw)'),
+-                  (check,151,'verify',"raise ValueError('CHECK FAILED: fixed-place full modular Bezout identity')")]
+-        final = 'ValueError: CHECK FAILED: fixed-place full modular Bezout identity\n'
++        check = str(self.fullunit / 'check.py')
++        frames = [(check,198,'<module>','main()'),(check,188,'main','verify(ctx,raw)'),
++                  (check,181,'verify',"raise ValueError('CHECK FAILED: fixed-place literal full-source unit identity')")]
++        final = 'ValueError: CHECK FAILED: fixed-place literal full-source unit identity\n'
+         need(lines and lines[0] == 'Traceback (most recent call last):\n', 'literal traceback header')
+         index = 1
+         for file, number, function, statement in frames:
+@@ -592,47 +602,47 @@
+         need(all(e['identity']['pgid'] == t['pgid'] and e['identity']['pid_namespace'] == self.r['pid_namespace'] for e in events)
+              and t['max_observed_group_rss_bytes'] > 33554432, 'dummy actual group RSS')
+         need(set(p.name for p in self.writer.iterdir()) == {'valid.payload', 'dummy.payload'}, 'fresh mutator outputs')
+-        t,out,err,ignored=self.run('highest-produce','highest-produce','highest',self.files['baseline'])
+-        need(out.read_bytes()==err.read_bytes()==b'', 'highest producer streams')
++        t,out,err,ignored=self.run('fullunit-produce','fullunit-produce','fullunit',self.files['baseline'])
++        need(out.read_bytes()==err.read_bytes()==b'', 'fullunit producer streams')
+         if t['status']=='NORMAL_EXIT' and t['child_returncode']==2 and t['resource'] is None:
+             self.normal(t,2)
+             need(not (self.writer/'candidate.json').exists(), 'inconclusive has no candidate')
+-            self.highest_receipt('highest-produce','produce','INCONCLUSIVE_NO_CERTIFICATE',None)
+-            self.freeze(('highest-produce.receipt.json',))
++            self.fullunit_receipt('fullunit-produce','produce','INCONCLUSIVE_NO_CERTIFICATE',None)
++            self.freeze(('fullunit-produce.receipt.json',))
+             return {'status':'INCONCLUSIVE_NO_CERTIFICATE','science_outcome':'NONE','calls':10,
+                     'root_registration_sha256':self.root_sha}
+         self.normal(t,0)
+         candidate=self.writer/'candidate.json'
+         need(candidate.is_file() and not candidate.is_symlink() and 0<candidate.stat().st_size<=2097152,
+              'candidate bounded regular file')
+-        self.highest_receipt('highest-produce','produce','CANDIDATE_UNCHECKED',sha(candidate))
+-        self.freeze(('candidate.json','highest-produce.receipt.json'))
++        self.fullunit_receipt('fullunit-produce','produce','CANDIDATE_UNCHECKED',sha(candidate))
++        self.freeze(('candidate.json','fullunit-produce.receipt.json'))
+         candidate=self.frozen/'candidate.json'
+-        t,out,err,ignored=self.run('highest-positive','highest-check','highest',candidate)
++        t,out,err,ignored=self.run('fullunit-positive','fullunit-check','fullunit',candidate)
+         self.normal(t,0); need(out.read_bytes()==err.read_bytes()==b'', 'positive streams')
+-        self.highest_receipt('highest-positive','check',
+-             'HIGHEST_SPECIAL_PROJECTIVE_CHECKED_NO_SOURCE_OUTCOME',sha(candidate))
+-        self.freeze(('highest-positive.receipt.json',))
++        self.fullunit_receipt('fullunit-positive','check',
++             'FULL_SPECIAL_UNIT_CHECKED_NO_SOURCE_OUTCOME',sha(candidate))
++        self.freeze(('fullunit-positive.receipt.json',))
+         t,out,err,ignored=self.run('mutate','mutate','mutate',candidate)
+         self.normal(t,0); need(out.read_bytes()==err.read_bytes()==b'', 'mutation streams')
+         receipt=self.fixture_receipt()
+         self.freeze(('changed.json','mutate.receipt.json'))
+         changed=self.frozen/'changed.json'
+-        t,out,err,ignored=self.run('highest-negative','highest-check','highest',changed)
++        t,out,err,ignored=self.run('fullunit-negative','fullunit-check','fullunit',changed)
+         self.normal(t,1)
+         need(t['child_signal'] is None and t['child_exit_code']==1 and out.read_bytes()==b''
+-             and not (self.writer/'highest-negative.receipt.json').exists(), 'exact negative terminal shape')
++             and not (self.writer/'fullunit-negative.receipt.json').exists(), 'exact negative terminal shape')
+         reason=self.traceback(err)
+         need(tuple(run['label'] for run in self.runs)==LABELS, 'exact thirteen calls')
+         need(set(p.name for p in self.writer.iterdir())=={'valid.payload','dummy.payload'}, 'no extra writer outputs')
+-        result={'status':'HIGHEST_CHECKED_NEGATIVE_CONFIRMED','science_outcome':'NONE',
++        result={'status':'FULLUNIT_CHECKED_NEGATIVE_CONFIRMED','science_outcome':'NONE',
+                 'baseline_sha256':BASELINE_SHA,'root_registration_sha256':self.root_sha,
+                 'candidate_sha256':sha(candidate),'changed_sha256':sha(changed),
+                 'negative_reason':reason,'selection':receipt['selection'],
+-                'positive_producer_checker_baseline_rerun':False,'highest_source_pins':HIGH,
++                'positive_producer_checker_baseline_rerun':False,'fullunit_source_pins':FULL,
+                 'joint_wall_seconds':time.monotonic()-self.begin,
+                 'joint_cgroup_cpu_seconds':self.cpu()-self.cpu_start}
+-        emit(self.mount/'highest-binding.json',result)
++        emit(self.mount/'fullunit-binding.json',result)
+         return result
+ 
+     def durable_copy(self, result):
+@@ -679,7 +689,7 @@
+         return 2
+     # ROOT reads durable custody only after this writer is terminal. No output
+     # after successful copy; no deletion, unmount, retry or worker-stop here.
+-    return 0 if result['status'] == 'HIGHEST_CHECKED_NEGATIVE_CONFIRMED' else 2
++    return 0 if result['status'] == 'FULLUNIT_CHECKED_NEGATIVE_CONFIRMED' else 2
+ 
+ 
+ if __name__ == '__main__':
+--- accepted-highest/mutate.py
++++ owned-fullunit/mutate.py
+@@ -2,7 +2,7 @@
+ import os
+ import sys
+ 
+-JOB = 'f10-r2-highest-modular-mutation-v1'
++JOB = 'f10-r2-fullunit-modular-mutation-v1'
+ BASE = 'dac655a7ce75287b06010171bce66af1a644aff81de9620a452457a5f65a9587'
+ ARITH = 'fe9ab1abe9a96fc43b889e1bcb598f8e8c65fd194732c48f3542e13c476e0345'
+ 
+@@ -71,14 +71,14 @@
+     need(dump(positive)==positive_raw and type(positive) is dict and set(positive)==
+          {'schema','status','science_outcome','mode','prime','root','root_registration_sha256',
+           'sources','baseline_sha256','baseline_bytes','certificate_sha256'}, 'positive receipt shape')
+-    need(positive['schema']=='f10-r2-highest-modular89-receipt/v1'
+-         and positive['status']=='HIGHEST_SPECIAL_PROJECTIVE_CHECKED_NO_SOURCE_OUTCOME'
++    need(positive['schema']=='f10-r2-fullunit-modular89-receipt/v1'
++         and positive['status']=='FULL_SPECIAL_UNIT_CHECKED_NO_SOURCE_OUTCOME'
+          and positive['science_outcome']=='NONE' and positive['mode']=='check'
+          and positive['prime']=='89' and positive['root']=='0'
+          and positive['root_registration_sha256']==args['--root-registration-sha256']
+          and positive['baseline_sha256']==BASE and positive['baseline_bytes']=='1652675', 'positive receipt bindings')
+-    expected={'1e685c413484f90d68db77bba844cb220f0d1b86c33c1d82ac9f587ad76c15f5',
+-              '8afc9b158483183e1afefef65c5aad54a8a46615b0f3b3d4682812c8dd8d74b2',
++    expected={'ccc3d2ddfca98f7faaed9df323fb90ec183b437b3c6b0bfcde0820186e667023',
++              'c49b7dfabe6dc8cc5b7aaea485171a6b709fc6158f180ae1157afd90b3cf4b1f',
+               'e5dd4bcb6114df2bdd79c8336583942c18d698d99fffd6f4b171e46a5d503d6e'}
+     need(type(positive['sources']) is dict and len(positive['sources'])==3
+          and set(positive['sources'].values())==expected,'positive source set')
+@@ -121,64 +121,106 @@
+     need(type(doc['field']['P7']) is list and len(doc['field']['P7'])==8,'modulus shape')
+     actual=[rat(s) for s in doc['field']['P7']]; need(actual==modulus,'literal modulus equality')
+     residues=[mod(q) for q in actual]; need(residues[0]==0 and residues[1]!=0,'simple fixed root')
+-    rows=doc['rows']['Psi']; need(type(rows) is list and len(rows)==3,'three rows')
+-    forms=[]
+-    for h,row in zip((5,6,7),rows):
+-        need(type(row) is list and len(row)<=4096,'row bound')
+-        table={}; previous=None
+-        for term in row:
+-            need(type(term) is list and len(term)==2,'sparse pair')
+-            ex,wire=term
+-            need(type(ex) is list and len(ex)==6 and all(type(s) is str and s in [str(i) for i in range(17)] for s in ex),'exponents')
+-            need(type(wire) is list and len(wire)==7,'full basis')
+-            e=tuple(int(s) for s in ex); coefficients=[rat(s) for s in wire]
+-            need(any(coefficients) and (previous is None or previous<e),'nonzero/sorted sparse'); previous=e
+-            need(e[4]==e[5]==0 and e[0]+2*e[1]+3*e[2]+5*e[3]==h,'whole support')
+-            rr=[mod(q) for q in coefficients]  # Positive-z and all seven coordinates too.
+-            if e[3]==0: table[(e[1],e[2])]=(table.get((e[1],e[2]),0)+rr[0])%89
+-        forms.append(table)
+-    need(forms[0].get((1,1),0) and forms[1].get((3,0),0) and forms[1].get((0,2),0),'same boundary')
+-    def trim(a):
+-        a=list(a)
+-        while a and a[-1]==0: a.pop()
+-        return a
+-    def add(a,b):
+-        return trim([((a[i] if i<len(a) else 0)+(b[i] if i<len(b) else 0))%89 for i in range(max(len(a),len(b)))])
+-    def mul(a,b):
+-        out=[0]*(len(a)+len(b))
+-        for i,x in enumerate(a):
+-            for j,y in enumerate(b): out[i+j]=(out[i+j]+x*y)%89
+-        return trim(out)
+-    def neg(a): return [(-x)%89 for x in a]
+-    shapes=({0:2,1:1},{0:3,1:1,2:0},{0:3,1:2,2:0})
+-    for table,shape in zip(forms,shapes):
+-        need(all(v in shape and u<=shape[v] for (u,v),value in table.items() if value),'chart shape')
+-    def line(table,v,d): return trim([table.get((u,v),0) for u in range(d+1)])
+-    p,q=line(forms[0],0,2),line(forms[0],1,1)
+-    b3,b1,b0=line(forms[1],0,3),line(forms[1],1,1),line(forms[1],2,0)
+-    c3,c2,c1=line(forms[2],0,3),line(forms[2],1,2),line(forms[2],2,0)
+-    f=add(add(mul(mul(q,q),b3),neg(mul(mul(p,q),b1))),mul(b0,mul(p,p)))
+-    g=add(add(mul(mul(q,q),c3),neg(mul(mul(p,q),c2))),mul(c1,mul(p,p)))
+-    need(len(f)<=6 and len(g)<=6,'eliminant degree')
+-    cert=load(cert_raw); need(dump(cert)==cert_raw,'canonical certificate')
+-    need(type(cert) is dict and set(cert)=={'schema','baseline_sha256','prime','root','chart','modulus','c','d'},'certificate fields')
+-    need(cert['schema']=='f10-r2-highest-modular89/v1' and cert['baseline_sha256']==BASE
+-         and cert['prime']=='89' and cert['root']=='0' and cert['chart']=='z=0;X1=1;u=X2;v=X3'
+-         and cert['modulus']==doc['field']['P7'],'certificate binding')
+-    def residue_list(a):
+-        need(type(a) is list and len(a)<=6 and all(type(s) is str and s in [str(i) for i in range(89)] for s in a),'residue array')
+-        need(not a or a[-1]!='0','canonical trimming')
+-        return [int(s) for s in a]
+-    ca,da=residue_list(cert['c']),residue_list(cert['d'])
+-    identity=add(mul(ca,f),mul(da,g))
+-    need(all((identity[i] if i<len(identity) else 0)==(1 if i==0 else 0) for i in range(11)), 'input full identity')
+-    side='c' if f else 'd'; need(f or g,'nonzero selected factor')
+-    old=list(cert[side]); old0=int(old[0]) if old else 0
+-    edited=[int(s) for s in old] or [0]; edited[0]=(old0+1)%89
+-    cert[side]=[str(i) for i in trim(edited)]
+-    changed=dump(cert); need(changed!=cert_raw and len(changed)<=2097152,'changed bounded certificate')
+-    restored=load(changed); restored[side]=old
+-    need(dump(restored)==cert_raw,'inverse restores whole certificate bytes')
++
++    labels=['Psi5','Psi6','Psi7']+['K1_'+str(i) for i in range(1,7)]+['K0_'+str(i) for i in range(1,9)]+['K1_0-U*K0_0']
++    weights=[5,6,7,13,12,11,10,9,8,15,14,13,12,11,10,9,8,19]
++    caps=[25,24,23]+[12]*15
++    need(face['scale']=='z=s^2; s invertible' and face['guard']=='omega=W*t5*s^8'
++         and face['targets']==['K1_0-U*s^5','K0_0-s^7']
++         and face['rows']==labels[:-1]+['K1_0-U*s^5','K0_0-s^7'],'full source cover')
++    rows=doc['rows']
++    need(type(rows) is dict and set(rows)=={'Psi','K1','K0'},'row keys')
++    need(all(type(rows[k]) is list and len(rows[k])==length
++             for k,length in (('Psi',3),('K1',7),('K0',9))),'all source slots')
++    total_terms=0
++    def source(row,h):
++        nonlocal total_terms
++        need(type(row) is list and len(row)<=4096,'source row cap')
++        total_terms+=len(row); need(total_terms<=50000,'source aggregate cap')
++        out={}; previous=None
++        for pair in row:
++            need(type(pair) is list and len(pair)==2,'source pair')
++            ex,dense=pair
++            need(type(ex) is list and len(ex)==6
++                 and all(type(s) is str and s in [str(i) for i in range(17)] for s in ex),'source exponents')
++            need(type(dense) is list and len(dense)==7,'source dense seven')
++            e=tuple(int(s) for s in ex); values=[rat(s) for s in dense]
++            need(any(values) and (previous is None or previous<e),'source canonical sparse')
++            previous=e
++            need(e[4]==e[5]==0 and e[0]+2*e[1]+3*e[2]+5*e[3]==h,'whole weight/support')
++            # Test EVERY denominator before the fixed root and z=1 projection.
++            residues=[mod(q) for q in values]
++            key=(e[0],e[1],e[2])
++            out[key]=(out.get(key,0)+residues[0])%89
++        return {e:c for e,c in out.items() if c}
++    psis=[source(row,h) for row,h in zip(rows['Psi'],(5,6,7))]
++    k1=[source(row,14-i) for i,row in enumerate(rows['K1'])]
++    k0=[source(row,16-i) for i,row in enumerate(rows['K0'])]
++    u=source(doc['source']['U'],3)
++    mixed=dict(k1[0])
++    for e,c in u.items():
++        for f,d in k0[0].items():
++            key=(e[0]+f[0],e[1]+f[1],e[2]+f[2])
++            mixed[key]=(mixed.get(key,0)-c*d)%89
++    mixed={e:c for e,c in mixed.items() if c}
++    generators=psis+k1[1:]+k0[1:]+[mixed]
++    need(len(generators)==18,'all eighteen generators')
++    def weight(e): return e[0]+2*e[1]+3*e[2]
++    for gen,h in zip(generators,weights):
++        need(all(weight(e)<=h and (weight(e)-h)%5==0 for e in gen),'full generator degree/class')
++    cert=load(cert_raw)
++    need(dump(cert)==cert_raw and type(cert) is dict and set(cert)==
++         {'schema','baseline_sha256','prime','root','specialization','variables','weights','cut','modulus','cofactors'},
++         'full certificate canonical keys')
++    need(cert['schema']=='f10-r2-fullunit-modular89/v1' and cert['baseline_sha256']==BASE
++         and cert['prime']=='89' and cert['root']=='0' and cert['specialization']=='z=1'
++         and cert['variables']==['Y1','Y2','Y3'] and cert['weights']==['1','2','3']
++         and cert['cut']=='30' and cert['modulus']==doc['field']['P7'],'full certificate binding')
++    cof=cert['cofactors']
++    need(type(cof) is list and len(cof)==18,'all cofactor slots')
++    decoded=[]; count=0
++    for slot,obj in enumerate(cof):
++        need(type(obj) is dict and set(obj)=={'generator','terms'} and obj['generator']==labels[slot],
++             'cofactor indexed label')
++        terms=obj['terms']
++        need(type(terms) is list and len(terms)<=754,'cofactor bound')
++        count+=len(terms); need(count<=754,'total cofactor bound')
++        out=[]; previous=None
++        for pair in terms:
++            need(type(pair) is list and len(pair)==2,'cofactor pair')
++            ex,c=pair
++            need(type(ex) is list and len(ex)==3
++                 and all(type(s) is str and s in [str(i) for i in range(31)] for s in ex),'cofactor exponents')
++            e=tuple(int(s) for s in ex)
++            need(previous is None or previous<e,'cofactor order')
++            previous=e
++            need(type(c) is str and c in [str(i) for i in range(1,89)],'nonzero canonical residue')
++            need(weight(e)<=caps[slot] and (weight(e)+weights[slot])%5==0,'cofactor degree/class')
++            out.append((e,int(c)))
++        decoded.append(out)
++    identity={}
++    for terms,gen in zip(decoded,generators):
++        for e,c in terms:
++            for f,d in gen.items():
++                key=(e[0]+f[0],e[1]+f[1],e[2]+f[2])
++                need(weight(key)<=30 and weight(key)%5==0,'whole input product bound')
++                identity[key]=(identity.get(key,0)+c*d)%89
++    need({e:c for e,c in identity.items() if c}=={(0,0,0):1},'input full polynomial identity')
++    slot=next((i for i in range(18) if generators[i] and decoded[i]),None)
++    need(slot is not None,'nonzero generator/cofactor pair')
++    index=0  # EXISTING first term, never insertion of a constant.
++    original=load(cert_raw)
++    old_terms=original['cofactors'][slot]['terms']
++    ex,old_string=cof[slot]['terms'][index]
++    old_value=int(old_string); new_value=(old_value+1)%89
++    if new_value:
++        cof[slot]['terms'][index]=[list(ex),str(new_value)]
++    else:
++        del cof[slot]['terms'][index]
++    changed=dump(cert)
++    need(changed!=cert_raw and len(changed)<=2097152,'changed bounded bytes')
++    restored=load(changed); restored['cofactors'][slot]['terms']=old_terms
++    need(dump(restored)==cert_raw,'inverse restores WHOLE input bytes')
+     def write(path,data,cap):
+         need(len(data)<=cap,'output bound')
+         fd=os.open(path,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o444)
+@@ -192,14 +234,18 @@
+     pins()
+     need(read(args['--baseline'],15728640)==raw and read(args['--certificate'],2097152)==cert_raw
+          and read(args['--positive-receipt'],32768)==positive_raw,'payload postpins')
++    for path,digest in positive['sources'].items():
++        need(sha(read(path,1048576))==digest,'positive source postpin')
+     write(args['--output'],changed,2097152)
+-    receipt={'schema':'f10-r2-highest-modular-mutation/v1','status':'ONE_COFACTOR_MUTATED_UNCHECKED',
++    receipt={'schema':'f10-r2-fullunit-modular-mutation/v1','status':'ONE_COFACTOR_MUTATED_UNCHECKED',
+              'science_outcome':'NONE','job_tag':JOB,'root_registration_sha256':args['--root-registration-sha256'],
+              'sources':sources,'baseline_sha256':BASE,'baseline_bytes':'1652675',
+              'input':{'path':args['--certificate'],'sha256':sha(cert_raw),'bytes':str(len(cert_raw))},
+              'output':{'path':args['--output'],'sha256':sha(changed),'bytes':str(len(changed))},
+-             'selection':{'side':side,'index':'0','old':str(old0),'new':str((old0+1)%89),
+-                          'old_length':str(len(old)),'new_length':str(len(cert[side]))},
++             'selection':{'slot':str(slot),'generator':labels[slot],'index':str(index),
++                          'exponents':list(ex),'old':old_string,'new':str(new_value),
++                          'term_deleted':new_value==0,'old_length':str(len(old_terms)),
++                          'new_length':str(len(cof[slot]['terms']))},
+              'inverse_edit_restores_whole_input_bytes':True,'checker_run':False}
+     write(args['--receipt'],dump(receipt),32768)
+ 

@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The report is sealed with the marker as the last line, well before the 01:45 reserve. Nothing further is needed.
+
+**Verdict: GRAPH-WEDGE-1 CONFIRMED on all five steps, no GAP.** The report is at `xmodel/graph-wedge-gate-fable5-20260912.md`, sealed at 01:36 UTC with `<!-- BODY-END -->` as the last line.
+
+**Custody.** Both inputs were hashed before the whole reads and again after the readback. All four hashes equal the expected values.
+
+**What I checked by hand.**
+- **A.** The wedge condition j−i≥2 is exactly the class where T=t⁻²H(t⁻¹,tw) is a polynomial, so the chart's scope and the claim's scope coincide. The identities p=t²a, q=tb, r=t⁻¹k, the identity b=4w+6−3(1+w)²k, the origin jets, dx∧dy=−t⁻¹dt∧dw, and every bracket and sign in ROOT's display (4) recompute correctly.
+- **B.** The Rouché proof is complete: k−k0 is t times a polynomial, so convergence is uniform on any small circle, and Rouché preserves the multiplicity count for repeated roots and degree drops alike. Along the resulting actual graph points the target tends to the origin, two minors tend to zero, and the third to −(4α+6)k0'(α). The coefficients are fixed polynomials in the target, so they approach their origin values regardless of relations in B. The identity is global on C² and no source point is deleted.
+- **C.** Equation (5) is a product, so a repeated root or 4α+6=0 gives 0=2 directly. D≥1 follows from k0'(0)=−3 for every h. Divisibility, degree D, leading coefficient 4D, and −20=8D all check with no generic-root or nonzero-b assumption.
+- **D.** Astra's grading argument is correct but is only the K(w,0) slice. General wedge H is not weight-homogeneous, so it cannot cover ROOT's theorem. I audited ROOT's limit route independently.
+- **E.** Both controls, the x=0 plane, the y²,y,x sanity check, the automorphism transport J(ψ)ψ*M, and the old-linear versus new-wedge scope separation are all correct. The only cosmetic item is ROOT's "Jacobian-1", which reads as −1 with a formatting-lost sign.
+
+The report is 1327 words. No charge_basis line, no artifact_finalize, and no edits after the marker.
+DIVERT path=xmodel/graph-wedge-gate-fable5-20260912.md status=CLEAN body_bytes=9120 body_sha256=009c611bd8c3acf41aa9545a6fdfbe27a5b1cf88bcf1ef6e603067d1299a4dfd

@@ -1,0 +1,1525 @@
+{
+  "audit_utc": "2026-09-05T23:23:08.115004+00:00",
+  "scope": "Independent read-only acceptance parsing of actual worker output bytes; no solver rerun and no source-chart adequacy inference. Missing completion, parser/CAS/termination errors, rc!=0, or missing custody cannot become unit/proper.",
+  "worker": "172.30.0.40",
+  "counts": {
+    "records": 39,
+    "complete_clean_candidates": 0
+  },
+  "records": [
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta2_stage0/augmented.circuit.json",
+      "metadata_sha256": "107c4f12e72e9e26c0e85483f771f72e1a6039191c88249907b6075ed334e565",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta2_stage0/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "7d1ebe27d04a858d9263b3822b4d184d40ca2cdedd617b15667508497b4a0aac",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "ef2337b855d1dafa1e06c8ee89aecb1b6196866fd8a55f73bf76ee2d41732c93",
+      "script_matches_receipt": true,
+      "expected_rows": 4278,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "7d1ebe27d04a858d9263b3822b4d184d40ca2cdedd617b15667508497b4a0aac"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta2_stage1/augmented.circuit.json",
+      "metadata_sha256": "e234de03a09b19dafb0bb2e21c1364014de1052f79787c28c3aad1d75e504377",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta2_stage1/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "2ad7124496d6e5f82e4e8a238cd2c277e611b16b4b409e9c846f9c4f59142faa",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "db5fa32922cb02cb954ba4c9aefae1da1691e4e327869d5b6f3294bdf311618a",
+      "script_matches_receipt": true,
+      "expected_rows": 4106,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "2ad7124496d6e5f82e4e8a238cd2c277e611b16b4b409e9c846f9c4f59142faa"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta2_stage2/augmented.circuit.json",
+      "metadata_sha256": "4c58c860036d5fa6d1bae970a7c290927a0e88607f433ab76a3c9f43452ae58c",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta2_stage2/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "73618a894fac0835fd63c6e792d12e841ddbc96eaa6ed91ec109172a2e8f8b91",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "5b29809878e2bae810fb25f74f08299f4cbe75c1bd0c2524ecb878df92501dc0",
+      "script_matches_receipt": true,
+      "expected_rows": 4014,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "73618a894fac0835fd63c6e792d12e841ddbc96eaa6ed91ec109172a2e8f8b91"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta2_stage3/augmented.circuit.json",
+      "metadata_sha256": "7f340daa5a581f82490b7a75868417a0dd3ee1377476e894f87ac2fa815e44b6",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta2_stage3/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "8369069ecf757f7df8679e53bb976379c1b19f386069e9758f89ffd46e1c2ca1",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "c94729262abaae922279a066aaf177b55c8e04664a9a00201b49470fb6cfddbc",
+      "script_matches_receipt": true,
+      "expected_rows": 3962,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "8369069ecf757f7df8679e53bb976379c1b19f386069e9758f89ffd46e1c2ca1"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta2_stage4/augmented.circuit.json",
+      "metadata_sha256": "c4b996f2f83e0059c3ebc994dc445347d99e945ab91dd33d3679889593883f07",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta2_stage4/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "228ddd521614d8fe1a509682446eb5a728c88cdf39b90a6bb93bf94fb1607656",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "a3be8ad496bc462f0f88c0462aa937c9fc6bf3b69f211e22cb1a6f8e2c2a3872",
+      "script_matches_receipt": true,
+      "expected_rows": 3909,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "228ddd521614d8fe1a509682446eb5a728c88cdf39b90a6bb93bf94fb1607656"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta2_stage5/augmented.circuit.json",
+      "metadata_sha256": "ea00d86487352990899d544a7ed15f15840b35e37a2f9f3c9124af7a57a2554b",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta2_stage5/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "aa2a446059805ce69a1770f6a029110dc91626449debc1f6454c3cea227a30e1",
+      "script_matches_receipt": true,
+      "expected_rows": 3836,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta2_stage6/augmented.circuit.json",
+      "metadata_sha256": "6ed85322308befc4340f5b5acce908baaeec4e4d1626ca75410bb9fc3579ea1b",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta2_stage6/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "fe16480b7d1196683f5ff40102581b7513618d7b45e4dffb0b327f7308a5c117",
+      "script_matches_receipt": true,
+      "expected_rows": 3836,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta2_stage7/augmented.circuit.json",
+      "metadata_sha256": "12f6d13ebf3ee6bb4118e38aad527073106948a864ff13278ed0509e298c734b",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta2_stage7/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "fe95c97a6f0299c736e9eb9a2fc3faa7898d3917bdd8c3eb891b46ceb4b5c4f4",
+      "script_matches_receipt": true,
+      "expected_rows": 3836,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta2_stage8/augmented.circuit.json",
+      "metadata_sha256": "027a4ea7bb282648a117b8bf3fbd8e28b0ce96e5d593bad4b38cefed5089f724",
+      "raw_status": "EMITTED_NOT_DECIDED",
+      "output": "g9966/circuit-runs/delta2_stage8/augmented.circuit.out",
+      "output_bytes": 30,
+      "output_sha256": "b537827a9087e42d5ab102e47fe292ab07fdf8726cf6764c1fb7c30b6e48f7af",
+      "output_matches_receipt": false,
+      "output_stable_during_read": true,
+      "script_sha256": "fe95c97a6f0299c736e9eb9a2fc3faa7898d3917bdd8c3eb891b46ceb4b5c4f4",
+      "script_matches_receipt": true,
+      "expected_rows": 3836,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": null,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "script_or_output_not_hash_bound",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "b537827a9087e42d5ab102e47fe292ab07fdf8726cf6764c1fb7c30b6e48f7af"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta52_stage0/augmented.circuit.json",
+      "metadata_sha256": "a62e5e48a0c4145fa55c748e11f0bfd7e5a8f02de061b76ff0197edd53bd1b4d",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta52_stage0/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "7d1ebe27d04a858d9263b3822b4d184d40ca2cdedd617b15667508497b4a0aac",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "e604a23323954d880cfc263549953aa4f91ebe290cb15e3615d34f6451e182ec",
+      "script_matches_receipt": true,
+      "expected_rows": 4278,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "7d1ebe27d04a858d9263b3822b4d184d40ca2cdedd617b15667508497b4a0aac"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta52_stage1/augmented.circuit.json",
+      "metadata_sha256": "84418eb720847f3459767278bc0fc6d303fb1a421f72975de04cb7a2d029e67c",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta52_stage1/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "2ad7124496d6e5f82e4e8a238cd2c277e611b16b4b409e9c846f9c4f59142faa",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "c2277b78cf9abd63e73223a7e4b4c3ce28ace03ac50b0e30fb1cef7040e1f669",
+      "script_matches_receipt": true,
+      "expected_rows": 4106,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "2ad7124496d6e5f82e4e8a238cd2c277e611b16b4b409e9c846f9c4f59142faa"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta52_stage2/augmented.circuit.json",
+      "metadata_sha256": "ab757ebcf8ee1999dfb203df7728bfe9d69295a75c4507b0d5a4fa11ca381770",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta52_stage2/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "73618a894fac0835fd63c6e792d12e841ddbc96eaa6ed91ec109172a2e8f8b91",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "db662d78b774c2f9f58c42cca89d6bcbd7c50d193ea17bc233c65547e7c58d51",
+      "script_matches_receipt": true,
+      "expected_rows": 4014,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "73618a894fac0835fd63c6e792d12e841ddbc96eaa6ed91ec109172a2e8f8b91"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta52_stage3/augmented.circuit.json",
+      "metadata_sha256": "0c94b1dc72b36fe33e5aa5aac29749022394027eb86a990eaba7011f3654712c",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta52_stage3/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "8369069ecf757f7df8679e53bb976379c1b19f386069e9758f89ffd46e1c2ca1",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "4ee2bf4df3029b9b1789d0ee75e91601c0cfd0976cd4fa96099f76d9cc5b12c8",
+      "script_matches_receipt": true,
+      "expected_rows": 3962,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "8369069ecf757f7df8679e53bb976379c1b19f386069e9758f89ffd46e1c2ca1"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta52_stage4/augmented.circuit.json",
+      "metadata_sha256": "ed575f31acaf1a7f72b2164a19cd7d45d74553338983ae5639864a0427f771b8",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta52_stage4/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "228ddd521614d8fe1a509682446eb5a728c88cdf39b90a6bb93bf94fb1607656",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "ac98993f49abd0650c729ea20c6833acc4b494a4a59536f21172c321a9e23594",
+      "script_matches_receipt": true,
+      "expected_rows": 3909,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "228ddd521614d8fe1a509682446eb5a728c88cdf39b90a6bb93bf94fb1607656"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta52_stage5/augmented.circuit.json",
+      "metadata_sha256": "340e3da8279d447a7f2dc85ad2dec61507842ed088c1c859dcd926d7aab9bc3a",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta52_stage5/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "ae3687d417b12b5a015920ff7658e44cfb04100b5ddc3f37c9d8154d4804d52e",
+      "script_matches_receipt": true,
+      "expected_rows": 3836,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta52_stage6/augmented.circuit.json",
+      "metadata_sha256": "20f5fee0d3101820c3766442d6d101f366334abb2818063db4af045a17298470",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "g9966/circuit-runs/delta52_stage6/augmented.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "39db6fbe13f4f969224e77becb33dbe161e1e4d2e32e3473f10e6512b44f32d9",
+      "script_matches_receipt": true,
+      "expected_rows": 3836,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta52_stage7/augmented.circuit.json",
+      "metadata_sha256": "9f7facd1b5ccd85b33e4f5d89e711c07c59f930c68d6d213b9a4bdc54aede9f4",
+      "raw_status": "EMITTED_NOT_DECIDED",
+      "output": "g9966/circuit-runs/delta52_stage7/augmented.circuit.out",
+      "output_bytes": 30,
+      "output_sha256": "b537827a9087e42d5ab102e47fe292ab07fdf8726cf6764c1fb7c30b6e48f7af",
+      "output_matches_receipt": false,
+      "output_stable_during_read": true,
+      "script_sha256": "9f8b1aa94a5df231a4a47c89bd37a7408cc79a63e7c4a0699db26e751f6ce0b7",
+      "script_matches_receipt": true,
+      "expected_rows": 3836,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": null,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "script_or_output_not_hash_bound",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "b537827a9087e42d5ab102e47fe292ab07fdf8726cf6764c1fb7c30b6e48f7af"
+      }
+    },
+    {
+      "category": "99 schedule",
+      "metadata": "g9966/circuit-runs/delta52_stage8/augmented.circuit.json",
+      "metadata_sha256": "70c0665caab4ef5b721c261e05ccac29883d8e0a56b836b86d94a8982970d494",
+      "raw_status": "EMITTED_NOT_DECIDED",
+      "output": "g9966/circuit-runs/delta52_stage8/augmented.circuit.out",
+      "output_bytes": 30,
+      "output_sha256": "b537827a9087e42d5ab102e47fe292ab07fdf8726cf6764c1fb7c30b6e48f7af",
+      "output_matches_receipt": false,
+      "output_stable_during_read": true,
+      "script_sha256": "9f8b1aa94a5df231a4a47c89bd37a7408cc79a63e7c4a0699db26e751f6ce0b7",
+      "script_matches_receipt": true,
+      "expected_rows": 3836,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": null,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "script_or_output_not_hash_bound",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "b537827a9087e42d5ab102e47fe292ab07fdf8726cf6764c1fb7c30b6e48f7af"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_circuit_stage0_translated_strongfront.circuit.json",
+      "metadata_sha256": "4bad465b2c47df61bde5c014ba3615a0f787b5f5a9f8340dad914dedb05e2899",
+      "raw_status": "MEMORY_BOUND_OPEN",
+      "output": "d108/d108_circuit_stage0_translated_strongfront.circuit.out",
+      "output_bytes": 217,
+      "output_sha256": "37ea6786564ea9954fe424c9bf83ee644f41f7c50887fbc06a4493f0fc0cb6e2",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "763d0f94f5801e60ae1a270edc82d169b973e4e43dd458a19c6879dde4d70e54",
+      "script_matches_receipt": true,
+      "expected_rows": 4081,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 14,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "Singular error: no more memory",
+          "halt 14"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "37ea6786564ea9954fe424c9bf83ee644f41f7c50887fbc06a4493f0fc0cb6e2"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_circuit_stage1_translated_strongfront.circuit.json",
+      "metadata_sha256": "1a62663ab386a9d29cf44c71d4ead0e7ae7622fdcf19c76e20bb7c29820321fe",
+      "raw_status": "MEMORY_BOUND_OPEN",
+      "output": "d108/d108_circuit_stage1_translated_strongfront.circuit.out",
+      "output_bytes": 217,
+      "output_sha256": "b9065a52f0b69a98476e31adcd0ec0dd481bbcb9db87b1819a704e3061feeaef",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "8c06848762e11dcf056cebeb37cdf6b6d2ee1bcead11fba37c3a020265b9d839",
+      "script_matches_receipt": true,
+      "expected_rows": 3933,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 14,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "Singular error: no more memory",
+          "halt 14"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "b9065a52f0b69a98476e31adcd0ec0dd481bbcb9db87b1819a704e3061feeaef"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_circuit_stage2_translated_strongfront.circuit.json",
+      "metadata_sha256": "ae118b265954082d4bc88fb7c0bc9a54f935e7a7f388333e5ae856185e1cc402",
+      "raw_status": "MEMORY_BOUND_OPEN",
+      "output": "d108/d108_circuit_stage2_translated_strongfront.circuit.out",
+      "output_bytes": 213,
+      "output_sha256": "aa0c5475b64846cc501cb45aed1928b18f353dfdcfa4e2649851f0599ab2177f",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "fbebfb27a43ede9223ddff4f56909d1f06a83d6ed187b3a13fd2dceafe3fb12a",
+      "script_matches_receipt": true,
+      "expected_rows": 3876,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 14,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "Singular error: no more memory",
+          "halt 14"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "aa0c5475b64846cc501cb45aed1928b18f353dfdcfa4e2649851f0599ab2177f"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_circuit_stage3_translated_strongfront.circuit.json",
+      "metadata_sha256": "51204395eacc6e8df487735660ca9b4591fdb3166a5cf0b65b5eba19e047211a",
+      "raw_status": "MEMORY_BOUND_OPEN",
+      "output": "d108/d108_circuit_stage3_translated_strongfront.circuit.out",
+      "output_bytes": 214,
+      "output_sha256": "b1e03db6c3b60ee154fd7fc5be297e5d469d4da49a2b4d83f16487c30a22d903",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "2d2dd0edfea550c8dd00c17fa426e4b1e6f7167010da839436a7d2a255506702",
+      "script_matches_receipt": true,
+      "expected_rows": 3797,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 14,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "Singular error: no more memory",
+          "halt 14"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "b1e03db6c3b60ee154fd7fc5be297e5d469d4da49a2b4d83f16487c30a22d903"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_circuit_stage4_translated_strongfront.circuit.json",
+      "metadata_sha256": "5068931bb445c67f72577ffd5ef48b0d4238ad649ee0a04ef2872746bc3a7c8b",
+      "raw_status": "MEMORY_BOUND_OPEN",
+      "output": "d108/d108_circuit_stage4_translated_strongfront.circuit.out",
+      "output_bytes": 214,
+      "output_sha256": "6d56907dcda7de1ffe31a5b2934427764667c4836ac70c9c88437e5bab69af8d",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "af9e9d8c450210d3745a16441b01608137806f9a0d4c170d2018bf32e6afb162",
+      "script_matches_receipt": true,
+      "expected_rows": 3754,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 14,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "Singular error: no more memory",
+          "halt 14"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "6d56907dcda7de1ffe31a5b2934427764667c4836ac70c9c88437e5bab69af8d"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_circuit_stage5_translated_strongfront.circuit.json",
+      "metadata_sha256": "a4a11483db2fe922173b40c34a940434eaa6642df4604073ee113e8314b1d105",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_circuit_stage5_translated_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "0f9c823cf3d5b852958123f1fc8444f989677af89752095c88f481ac7fc03c90",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "5e8f58ec13c83d5d9de3620c47d3ede3f8a8502e7b2a1c5f3fa4c6a56ddf2f2c",
+      "script_matches_receipt": true,
+      "expected_rows": 3711,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "0f9c823cf3d5b852958123f1fc8444f989677af89752095c88f481ac7fc03c90"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_circuit_stage6_translated_strongfront.circuit.json",
+      "metadata_sha256": "f136f84aae23b03de5d8ee3df279de7fbce04de1d8adf378fbc1f0f73e3fc9c1",
+      "raw_status": "EMITTED_NOT_DECIDED",
+      "output": "d108/d108_circuit_stage6_translated_strongfront.circuit.out",
+      "output_bytes": 30,
+      "output_sha256": "0c3405ea63c5826d74fa63b6484a3ac4a00f9df547cd96e775f79f538234191e",
+      "output_matches_receipt": false,
+      "output_stable_during_read": true,
+      "script_sha256": "820d490f85380eb2ed7a05961f1def8347380319eb4c46eb3d7d1a18bf682430",
+      "script_matches_receipt": true,
+      "expected_rows": 3673,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": null,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "script_or_output_not_hash_bound",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "0c3405ea63c5826d74fa63b6484a3ac4a00f9df547cd96e775f79f538234191e"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_circuit_stage7_translated_strongfront.circuit.json",
+      "metadata_sha256": "6868d6b6a6dca12f12d6a61ea2dcf9a0be76d8acec59d2d79fad383e6e65dc47",
+      "raw_status": "EMITTED_NOT_DECIDED",
+      "output": "d108/d108_circuit_stage7_translated_strongfront.circuit.out",
+      "output_bytes": 30,
+      "output_sha256": "6b990e639f16b46402bcad3e8909763fe472e60c83785a5322c7778884612a26",
+      "output_matches_receipt": false,
+      "output_stable_during_read": true,
+      "script_sha256": "3a331756872fd616c75f1a6165e8d70b6265d52d43818ce1aa1f88b932d7d8e4",
+      "script_matches_receipt": true,
+      "expected_rows": 3612,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": null,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "script_or_output_not_hash_bound",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "6b990e639f16b46402bcad3e8909763fe472e60c83785a5322c7778884612a26"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_circuit_stage8_translated_strongfront.circuit.json",
+      "metadata_sha256": "0c839d31b4d12a59ed7dc7f82e6c6770190dc782284d987bb4c7af251dc39062",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_circuit_stage8_translated_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "d394590a3fc11f7d5b0f28519a275a6d971a07a573bf8eb7d6e2170b51670a03",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "2b96cafe8fab0701460e51065ed7662fdf63be5b65c7d8aabafe6ef02572eb9f",
+      "script_matches_receipt": true,
+      "expected_rows": 3615,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "d394590a3fc11f7d5b0f28519a275a6d971a07a573bf8eb7d6e2170b51670a03"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_meanfree_circuit_stage0_strongfront.circuit.json",
+      "metadata_sha256": "ffe261186bc9e4ecf5640ba5f25799e98776ebe2a0fb03ecb9779b36d1e35440",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_meanfree_circuit_stage0_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "eafa8492634e656c95bd84783c2113ed2f079139d197f2c4dd059d1bd29b5261",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "34e5dd0316bf8d2d7a4b2cb3c55d69d57ac036c96d4c5ab700013ea9bac8d66d",
+      "script_matches_receipt": true,
+      "expected_rows": 4105,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "eafa8492634e656c95bd84783c2113ed2f079139d197f2c4dd059d1bd29b5261"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_meanfree_circuit_stage1_strongfront.circuit.json",
+      "metadata_sha256": "7dd42cf69da1b558301e35b66cfcc0df1dd8b76ee8374411889c8f3494647b58",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_meanfree_circuit_stage1_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "1c9a0e96acdeb5c22dc0737c2d8ace0de2d7d1ff053ee87880064fc565e6a695",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "8b0c6f027708bba281901cc859ac87db70788010a0271e631a62ae62573ee453",
+      "script_matches_receipt": true,
+      "expected_rows": 3957,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "1c9a0e96acdeb5c22dc0737c2d8ace0de2d7d1ff053ee87880064fc565e6a695"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_meanfree_circuit_stage2_strongfront.circuit.json",
+      "metadata_sha256": "97873bebb051e733064cbfc462bb50239e50de85dced8d4c5e47dcb1ac18fb81",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_meanfree_circuit_stage2_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "06b5e7cc1c2dcc43c126f75eeab0452c2546726d04955513b4a6c7505b97e445",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "b24bf734def270d9e51fcd84f087d8ed9ab9ba8d635c5feaaa8258c1a43e19dd",
+      "script_matches_receipt": true,
+      "expected_rows": 3900,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "06b5e7cc1c2dcc43c126f75eeab0452c2546726d04955513b4a6c7505b97e445"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_meanfree_circuit_stage3_strongfront.circuit.json",
+      "metadata_sha256": "5d8e378dae12df9f16ba1dc5df2650e376b86e8a545eeeb9ae752d135182c0ba",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_meanfree_circuit_stage3_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "8d424446fd05a4436f2f936135ec5504265e3d783de3f00d32a0fce5866c295b",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "9ce5fabf94c4da19713b5b6406b0c2016663b27e56abe20415884a419a02ffe5",
+      "script_matches_receipt": true,
+      "expected_rows": 3821,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "8d424446fd05a4436f2f936135ec5504265e3d783de3f00d32a0fce5866c295b"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_meanfree_circuit_stage4_strongfront.circuit.json",
+      "metadata_sha256": "6d61051d328649f8c473c8fcf5ab4833a6de5365b20856dcd0d18dc2b58d0cae",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_meanfree_circuit_stage4_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "8ecdf4c1f22f7b5ebcd582da2dc2b705b710538afd5c549ced3b3653dafd72bf",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "e0ec478c14811d8d7e29411d83458405430f4d840fac066201b7e7012a3c7f70",
+      "script_matches_receipt": true,
+      "expected_rows": 3778,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "8ecdf4c1f22f7b5ebcd582da2dc2b705b710538afd5c549ced3b3653dafd72bf"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_meanfree_circuit_stage5_strongfront.circuit.json",
+      "metadata_sha256": "22df259c098b8e75f3896919e67d8be27a2a3b28b56847beaf13e317dca8371b",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_meanfree_circuit_stage5_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "c211b4c3dd8ca98d713a19f4e23becdf0986eff532f41b0f4ad55ef677c2d43c",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "5afa95e29d070912ca09fd5dd93d92f74b619557133957065b53fe208009f2ab",
+      "script_matches_receipt": true,
+      "expected_rows": 3735,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "c211b4c3dd8ca98d713a19f4e23becdf0986eff532f41b0f4ad55ef677c2d43c"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_meanfree_circuit_stage6_strongfront.circuit.json",
+      "metadata_sha256": "3e03c96985a8b6997ce5d018b5fb752c3b9f6b1704764eff4e34891540d2599d",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_meanfree_circuit_stage6_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "f51dc4752d30cb08dbb451a0f45c7ecb1db6e5068658ca3ad78bb4ee5fcebd16",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "f9dc628afe22af635f240914d3b3da9f40e900d4b0ae9570a771a826d622cdfa",
+      "script_matches_receipt": true,
+      "expected_rows": 3697,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "f51dc4752d30cb08dbb451a0f45c7ecb1db6e5068658ca3ad78bb4ee5fcebd16"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_meanfree_circuit_stage7_strongfront.circuit.json",
+      "metadata_sha256": "3e9d3a33298e67a5d3cf4467f18fa58066e1456ec5f6e1ef2534f70f85b73d80",
+      "raw_status": "COMPUTE_BOUND_OPEN",
+      "output": "d108/d108_meanfree_circuit_stage7_strongfront.circuit.out",
+      "output_bytes": 38,
+      "output_sha256": "064030cc18edefbb33d33e2ad134dbe3a9b52aeb1bf0ca1fcddbf34d7c00077e",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "c41962b35d81dc930e9a05b6ee8ada0e4168114ed409fc58a8f06ee03888d177",
+      "script_matches_receipt": true,
+      "expected_rows": 3636,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "064030cc18edefbb33d33e2ad134dbe3a9b52aeb1bf0ca1fcddbf34d7c00077e"
+      }
+    },
+    {
+      "category": "D108 schedule",
+      "metadata": "d108/d108_meanfree_circuit_stage8_strongfront.circuit.json",
+      "metadata_sha256": "50a5ecd8f5b4b45fa6ef7525d926f8dc68012813148d7238d843334798edb146",
+      "raw_status": "EMITTED_NOT_DECIDED",
+      "output": "d108/d108_meanfree_circuit_stage8_strongfront.circuit.out",
+      "output_bytes": 30,
+      "output_sha256": "d5ec3c94ff019097cfeeac0aedf344011b708e9cdb5b58d9a92aefde57e84eae",
+      "output_matches_receipt": false,
+      "output_stable_during_read": true,
+      "script_sha256": "365073fc7c231acd7b0d514262bac42dcb9df4d2b5a804d899d20b3894226cb7",
+      "script_matches_receipt": true,
+      "expected_rows": 3639,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": null,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "script_or_output_not_hash_bound",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "d5ec3c94ff019097cfeeac0aedf344011b708e9cdb5b58d9a92aefde57e84eae"
+      }
+    },
+    {
+      "category": "99 selected",
+      "metadata": "g9966/circuit-selected/delta2_stage8_slimgb/result.json",
+      "metadata_sha256": "7ad31e958d35460f6acef3b681d1142f6a13b173a31d366f3d3c3c17728d07ca",
+      "raw_status": "COMPUTE-BOUND-OPEN",
+      "output": "g9966/circuit-selected/delta2_stage8_slimgb/singular.out",
+      "output_bytes": 38,
+      "output_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "e4859926c2604e3a07496a299c99b9a95392bf58e09bc13859407662de4032d3",
+      "script_matches_receipt": true,
+      "expected_rows": 3836,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "08de9fb578ca91af33ce9473639e1942511dc493eaa0e7e8c05c320754fe5541"
+      }
+    },
+    {
+      "category": "D108 selected",
+      "metadata": "d108/selected/meanfree_jet0_stage8_slimgb/result.json",
+      "metadata_sha256": "80d0b6320a93ca452c6f2d9dd5ded00b3aa03d60a68bdf30f54bdb19966b2c1d",
+      "raw_status": "RUNNING",
+      "output": "d108/selected/meanfree_jet0_stage8_slimgb/singular.out",
+      "output_bytes": 30,
+      "output_sha256": "6d31fdb1ef75325c11f8ed2d2a56bb8e57b9eaef22abba109986fe8459991595",
+      "output_matches_receipt": false,
+      "output_stable_during_read": true,
+      "script_sha256": "4b7226eeee09784c55829bf5215fc5a976d128d2db40053d0b0d6ddd59ca7844",
+      "script_matches_receipt": true,
+      "expected_rows": 3615,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": null,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "script_or_output_not_hash_bound",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "6d31fdb1ef75325c11f8ed2d2a56bb8e57b9eaef22abba109986fe8459991595"
+      }
+    },
+    {
+      "category": "D108 selected",
+      "metadata": "d108/selected/meanfree_stage8_slimgb/result.json",
+      "metadata_sha256": "0845921f7d294845fee592b09f646b177e5613a83bedee982016f65b96a46090",
+      "raw_status": "COMPUTE-BOUND-OPEN",
+      "output": "d108/selected/meanfree_stage8_slimgb/singular.out",
+      "output_bytes": 38,
+      "output_sha256": "138729d2afbecf43f540514fb9b3571e7b99b5bdb0928c417e09a06817bf09ad",
+      "output_matches_receipt": true,
+      "output_stable_during_read": true,
+      "script_sha256": "9cd5c3a44e01606b77c9a19c799d3edea3d8b53214e40df0b3315b7a1da6bb2e",
+      "script_matches_receipt": true,
+      "expected_rows": 3639,
+      "acceptance": {
+        "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+        "returncode": 1,
+        "markers": {
+          "ALL_ROWS_PARSED": 1,
+          "BEGIN_GB": 1,
+          "END_GB": 0,
+          "BEGIN_RESULT": 0,
+          "END_RESULT": 0,
+          "BEGIN_CONTROLS": 0,
+          "END_CONTROLS": 0
+        },
+        "parser_cas_or_termination_diagnostics": [
+          "halt 1"
+        ],
+        "result": [],
+        "controls": [],
+        "parsed_row_count": null,
+        "reasons": [
+          "returncode_not_zero_or_unrecorded",
+          "parser_cas_or_termination_diagnostic",
+          "required_unique_marker_missing_or_duplicate"
+        ],
+        "log_sha256": "138729d2afbecf43f540514fb9b3571e7b99b5bdb0928c417e09a06817bf09ad"
+      }
+    }
+  ],
+  "reader_source_sha256": "2447027dc9ebe976d99841cc3113c78d656ba6d357ca075d01f5787e364a0340",
+  "remote_executed_source_sha256": "017140e53842f393079ab918a95a2090364ded5bb23869aff5e355fce34d1efb"
+}

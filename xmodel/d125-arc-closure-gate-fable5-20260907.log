@@ -1,0 +1,18 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete and sealed at 07:00:40 UTC, inside the 15-minute bound. Nothing further is needed. STOP/IDLE.
+
+**Verdict: CONFIRMED at the stated PROVISIONAL scope.** The Astra composition correctly derives that H = A_(0,13)/3 + 3 and D = 5y² + 27(v+243)y − 27w lie in the radical of J + (k), and nowhere overreaches.
+
+**What was checked**
+- Custody: all eleven frozen inputs hashed; checker, report, body (6623 bytes, `141f39e8…`) and both Stacks snapshots match replay.json.
+- Ring and order: J = I : k^∞ is the kernel of S → (S/I)[1/k], so k is a nonzerodivisor on S/J and D(k) is dense in X. Schematic-closure identification is exact.
+- Arc existence: Stacks 32.15.1, read whole with its proof, applies to the open immersion U → X (finite type since X is Noetherian). Any point of X ∩ V(k) gets a DVR arc with k in the maximal ideal and nonzero. No properness or compactification is used.
+- Completion: Stacks 10.160.10(1), read whole including the sentence clipped by the HTML, gives L[[s]] with Q ⊆ L.
+- Parameter change to k = τ^m: m-th root of u₀ by finite extension, unit-series root with pivot m·v₀^(m−1) ≠ 0, invertible τ = s·v(s). This is exactly what the earlier 14p gate note said was needed, and it is correctly declared as extension plus reparametrization.
+- Coefficients: own exact symbolic control reproduces [p¹³]R_t³ = 3t, y = −3α, w = −3γ, v = −243 + β, D = 81Δ₀ as a polynomial identity, and the v = 0 gauge form with 6561.
+- Negative controls: kw = 1 shows arc exclusion yields only J + (k) = S, never J = S; h = k shows boundary equations cannot enter the solver. Both over-reaches are REFUTED as the producer states.
+
+**Artifacts** in `box/d125-arc-closure-gate-fable5-20260907/`: capped stdlib script (zero asserts, -B, 25 CPU s / 512 MiB), byte-identical normal and -O witnesses, four mutations failing at named gates, producer checker replayed from the frozen copy, input pins, run log.
+
+**Uncharged notes and gaps**: two tautological gates in the producer's check.py; GAP-TRANSACTION since the manifest is not in the frozen set; the tuned and pure strata stay open, so y, w are not in the boundary radical. The remaining global gap is unchanged: nothing forces a guarded point to admit a finite-center arc, so this constrains the closure boundary only, not emptiness of U.
+DIVERT path=xmodel/d125-arc-closure-gate-fable5-20260907.md status=CLEAN_SEALED body_bytes=10495 body_sha256=869fc4c4553021847c207bca360142d0b97a6ea5d0d7405e4775381cd5e621dd

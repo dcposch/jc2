@@ -1,0 +1,42 @@
+{
+  "schema":"caprun-closed9a-admin-prep-sol-custody/v1",
+  "status":"TERMINAL_EXACT_13_FILE_PORT_DISABLED_UNBOUND",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc":"2026-09-12T08:03:39.307279366Z",
+  "terminal_utc":"2026-09-12T08:08:41.861832125Z",
+  "all_writers_idle":true,
+  "no_later_writes_planned":true,
+  "authority":"SOURCE_STATIC_NOT_WORKER_INSTALLATION_BINDING_OR_RUNTIME_AUTHORITY",
+  "report":{
+    "path":"xmodel/caprun-closed9a-admin-prep-sol-20260912.md",
+    "source_body_sha256":"4a480ad34a1201816568ed76d642018a1940ac62ece5dc9d35f31ada86b9d9f7",
+    "artifact_sha256":"d1d869e56c6dbdfe56b603cf6acd9368a89afc7708c2d044561b5245a18453ad",
+    "whole_read_after_finalize":true
+  },
+  "expected_manifest":{
+    "path":"xmodel/caprun-closed9a-admin-prep-sol-20260912.md.artifact.json",
+    "sha256":"66b71ed0abf589ab6e1857792430a95e5a6dcfd29b0084787614bbd9902d5504",
+    "artifact_finalize_verify":"VERIFIED",
+    "basis_verified":true
+  },
+  "pins":{
+    "path":"box/caprun-closed9a-admin-prep-sol-20260912/PINS.json",
+    "sha256":"a7ecff2549bb543400bd673e490802ac9c34cd156ca621e6e55d2f1a223c34e9",
+    "all_17_input_postpins_equal_pre":true
+  },
+  "port_map":{
+    "path":"box/caprun-closed9a-admin-prep-sol-20260912/PORT-MAP.json",
+    "sha256":"1781f249051d218a00b7d427ab288efb1d926b2e9ecd83f00315b357639883da",
+    "derivative_count":13,
+    "aggregate_substitution_counts":[16,0,0,1,1,15],
+    "all_transformed_byte_equalities_verified":true
+  },
+  "read_scope":{
+    "path":"box/caprun-closed9a-admin-prep-sol-20260912/READ-SCOPE.md",
+    "sha256":"9ae9f95460bd0da1b3ff880d54471ff92891a8474d56df58cd69b52d17db8e7d",
+    "task_metadata_sources_and_owned_outputs_whole_read":true,
+    "embedded_paths_not_followed":true
+  },
+  "output_census":"TASK.md plus 13 derivatives, PINS.json, READ-SCOPE.md, PORT-MAP.json, custody.json; report and expected artifact manifest are in xmodel",
+  "execution":"NO_SOURCE_SCIENCE_SYNTAX_AST_IMPORT_COMPILE_TEST_MOCK_FIXTURE_PROCESS_NETWORK_SSH_AWS_OR_PROTECTED_TREE_ACTION"
+}

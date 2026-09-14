@@ -1,0 +1,175 @@
+{
+  "schema": "F10-MINIMUM-PIVOT-CUSTODY/v1",
+  "status": "TERMINAL-STATIC-UNREVIEWED",
+  "first_action_utc": "2026-09-10T03:08:04.045058959Z",
+  "controlling_stop_utc": "2026-09-10T03:24:00Z",
+  "publication_reserve_from_utc": "2026-09-10T03:22:00Z",
+  "sealed_utc": "2026-09-10T03:17:42.157753064Z",
+  "owner": "/root/model_productivity",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report_sha256": "e72bc42e2708369a07bd22853262c7f996d72a682253afa1573cd80160c62330",
+  "expected_transaction_sha256": "3ea7bfaecf193c77f5d274030d761deea8c63c0fe93d2b5e0732440fff2d52c1",
+  "transaction_verification": "VERIFIED against exact expected basis and manifest",
+  "owned_count": 13,
+  "owned": [
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/oldsolver.py",
+      "sha256": "58cdc4721143ec2be93cc720831c2235a9221b567f1903d2ffd6025b4f54b665",
+      "bytes": 15928
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/old_generic_dispatch_batch.py",
+      "sha256": "54c55be3db27207a2c22072699a19d80c2be6a882e5de7e237fd2bd6f57f1ed0",
+      "bytes": 21533
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/old_actual_dispatch_batch.py",
+      "sha256": "a7c0cf17379b624358e8cc010226c7b179a0218330191540918e15e9ee4303d2",
+      "bytes": 15704
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/newsolver.py",
+      "sha256": "961e22e64ec768da6d78a886aa987f7ebaf0325b21b87c68e04db88e91778589",
+      "bytes": 16099
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/generic_dispatch_batch.py",
+      "sha256": "e62e5dc4376e83c8dbd8be0146eee13d36fd8ad34fe46dc7b84ab3ff64ac15f3",
+      "bytes": 21533
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/actual_dispatch_batch.py",
+      "sha256": "ae3df9a9320e1341b94108e1f8b2349e50dd39b8c77d0384309e2d04c8634def",
+      "bytes": 15704
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/solver.diff",
+      "sha256": "ca811d651ebd8cafc77df2bbcfb35567a5e3ed5a78e5c302e0437586df03fc6c",
+      "bytes": 586
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/generic-caller.diff",
+      "sha256": "b4110b123dd431a9b45c3ac1afdeb89eae5cc1e760ef222c1bb2f203b9a4f072",
+      "bytes": 752
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/actual-caller.diff",
+      "sha256": "511e95f54f9eba95708796e5f769afe28dc009401f412974791658c343b125cb",
+      "bytes": 750
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/input-pins.json",
+      "sha256": "5e7fb6cfc02896ffecc0112d943d424f65172690aedc8642afb2b4bd0d7aed31",
+      "bytes": 2701
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/READ-SCOPE.md",
+      "sha256": "9d1e68bc2ecf3d5034297b6ba6c6d47c60496267180c1be56b4053882ba631d4",
+      "bytes": 2465
+    },
+    {
+      "path": "xmodel/f10-quotient-minimum-pivot-astra-20260910.md",
+      "sha256": "e72bc42e2708369a07bd22853262c7f996d72a682253afa1573cd80160c62330",
+      "bytes": 14954
+    },
+    {
+      "path": "xmodel/f10-quotient-minimum-pivot-astra-20260910.md.artifact.json",
+      "sha256": "3ea7bfaecf193c77f5d274030d761deea8c63c0fe93d2b5e0732440fff2d52c1",
+      "bytes": 695
+    }
+  ],
+  "current_input_count": 8,
+  "current_inputs": [
+    {
+      "id": "ROOT-CARD.md",
+      "path": "box/f10-quotient-minimum-pivot-prep-20260910/ROOT-CARD.md",
+      "sha256": "d3c2d52d2de9ff7f385ac0bf13ede294babd0e4579bcadb00628c5708a232478",
+      "bytes": 3589,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance",
+      "post_match": true
+    },
+    {
+      "id": "design",
+      "path": "xmodel/f10-r1-quotient-remainder-design-astra-20260909.md",
+      "sha256": "6135ca133c9132171d90536761471af8a2eefaf664831ab7b322120fc4c5ce2a",
+      "bytes": 19333,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance",
+      "post_match": true
+    },
+    {
+      "id": "design-gate",
+      "path": "xmodel/f10-r1-quotient-remainder-design-gate-fable5-20260910.md",
+      "sha256": "718df083267ec3c7fc5ac9e0c493a33ccc41f4c8b92a82eed5b2dbbb3570746d",
+      "bytes": 15828,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance",
+      "post_match": true
+    },
+    {
+      "id": "linear-gate",
+      "path": "xmodel/f10-univariate-linear-decision-gate-fable5-20260909.md",
+      "sha256": "6646c2f6f9c48ddb510fc75095ef48dc6bb8d6a2e96c56c388928bcb5872f3f6",
+      "bytes": 13589,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance",
+      "post_match": true
+    },
+    {
+      "id": "old-solver",
+      "path": "box/f10-r1-quotient-remainder-code-astra-20260910/solver.py",
+      "sha256": "58cdc4721143ec2be93cc720831c2235a9221b567f1903d2ffd6025b4f54b665",
+      "bytes": 15928,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance",
+      "post_match": true
+    },
+    {
+      "id": "old-generic-caller",
+      "path": "box/f10-r1-quotient-generic-caller-astra-20260910/dispatch_batch.py",
+      "sha256": "54c55be3db27207a2c22072699a19d80c2be6a882e5de7e237fd2bd6f57f1ed0",
+      "bytes": 21533,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance",
+      "post_match": true
+    },
+    {
+      "id": "old-actual-caller",
+      "path": "box/f10-quotient-actual-caller-migration-prep-20260910/dispatch_batch.py",
+      "sha256": "a7c0cf17379b624358e8cc010226c7b179a0218330191540918e15e9ee4303d2",
+      "bytes": 15704,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance",
+      "post_match": true
+    },
+    {
+      "id": "observed-execution",
+      "path": "xmodel/f10-quotient-actual-execution-coordinator-20260910.md",
+      "sha256": "4bd18a01f09ece2065c934704851d635b33bf9e367d24bba633fa5a03348c6b9",
+      "bytes": 9621,
+      "read_scope": "WHOLE, current pin verified before body; no followed provenance",
+      "post_match": true
+    }
+  ],
+  "diff_checks": [
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/solver.diff",
+      "status": "literal regeneration equals frozen bytes",
+      "diff_exit": 1
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/generic-caller.diff",
+      "status": "literal regeneration equals frozen bytes",
+      "diff_exit": 1
+    },
+    {
+      "path": "box/f10-quotient-minimum-pivot-astra-20260910/actual-caller.diff",
+      "status": "literal regeneration equals frozen bytes",
+      "diff_exit": 1
+    }
+  ],
+  "own_report_read": "WHOLE before unique completion marker; appended transaction footer verified",
+  "raised_canonical_open_count": 0,
+  "collision_check": "new report and box absent at first action; final path absent before publication",
+  "mathematical_executions": 0,
+  "syntax_ast_compile_import_checks": 0,
+  "fixtures_generated": 0,
+  "runtime_authorities_issued": 0,
+  "worker_network_actions": 0,
+  "all_task_writers": "IDLE after this custody publication",
+  "custody_self_excluded": true
+}

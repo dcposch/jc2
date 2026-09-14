@@ -1,0 +1,27 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Sweep complete and published.
+
+## `xmodel/websweep-20260906T0912Z-opus5.md` (20,260 B) · `box/websweep-20260906T0912Z/` (30 KB)
+
+Frozen inputs verified against the receipt manifest before use (all three SHA-256 matched). Window `2026-09-03T10:17Z → 2026-09-06T09:23Z`.
+
+**Status: PARTIAL — no external char-0 plane-JC resolution.**
+
+Renewed in full: arXiv (date + lastUpdated + 8 phrase queries + AG/AC/CV listings + 15 watched authors), 8 watched repos, broad GitHub (61 repos), Zenodo, Palomar + PalomarArchive (100 repos), MO/MSE, Mathstodon, Wikipedia.
+
+Three things worth your attention:
+
+1. **The arXiv "gap" is not a hole.** The index stops dead at Thu 09-03 ~18:00Z across all three categories. That's the Sun–Thu announcement schedule — the newest announcement is Friday 4 Sep, and today is Sunday before the 20:00 ET run. The interval contains zero announced papers *by construction*. Monday 09-07 is the next sweep's first mandatory item.
+
+2. **Two primaries the last sweep missed**, both found by undated broad discovery, both pre-window:
+   - **arXiv:2608.14217v1** (Ni, 08-14) claims a proof of the **quartic** case of HC4 — and *neither* ipitchford nor Roy cites it, though ipitchford's README still names that exact statement as its target. Quartic case only, so no `HC4 ⇒ JC2` antecedent. Abstract only; I did not open the PDF.
+   - **Zenodo 22168498** (Atwell, 08-30): `rho_rel ≤ 1 ⇒ automorphy`, hence `rho_rel = 2` for any planar counterexample. I flagged this as likely **vacuous** on your 64 configurations — in the plane the only alternatives are the affine case and rank 1 — rather than presenting it as a new filter.
+
+3. **Roy withdrew an HC4 inference and re-proved it.** His audit says the master reduction's final Jordan block "was closed using an unjustified differential equation" and that `d(pq)=0` in the affine-plane bridge §4 "does not follow"; `HC4MRA2` claims the repair. Zero JC(2) proof assertions in his 1345-row STATUS.md (all 24 "prove JC(2)" hits are negative scope clauses). Actionable only as a dependency check.
+
+**Coverage holes, stated rather than papered over:** X/Twitter returned a JS shell with zero content tokens and Bluesky returned 403 — the prior sweep *did* read X, so this is a regression, not a standing limit. Zulip was not attempted. Those three clocks are **not** reset. Nothing was executed or replayed; Ni and Atwell are located claims, not verified ones.
+
+Also noted: `ratto3423` resumed browsing (`09-05T13:09Z`) but still has exactly one post and no write-up. Both spot-checks I could confirm cheaply held — the AEjonanonymous "main theorem" concludes only `coeff 0 (jacobian P Q) ≠ 0`, and 1605.09430 is `[v1] 30 May 2016`.
+
+Campaign baseline is untouched by everything found. No exit claim is made, so no `charge_basis` line. All 57 fetched artifacts are hashed in `receipts-sha256.txt` / `source-index.tsv`, with the large downloads reduced to `extracts/`.
+DIVERT path=xmodel/websweep-20260906T0912Z-opus5.md status=CLEAN body_bytes=20260 body_sha256=c98fe644413ee8caa719a1c59ef0f538dabdae957225251ab27d1663c5ab6b7b

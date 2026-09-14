@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Sealed at 19:01Z, ~202 min into a 220-min budget.
+
+## Verdict: **PROVED-HERE — theorem (T) holds at t = 8**
+
+Not by the route the charged report laid out. Its §10 steps (2)–(3) turned out to be **impossible at this prime**, not merely slow.
+
+**What happened, in order.**
+
+1. **The FGLM landed** (15:56Z, 7739.98 s elapsed / 104020.95 s cpu). Eliminating polynomial of degree 52138 = n — and the separating element is `b3` itself, not a random linear form.
+2. **It has no root in F_32003.** Brute force found none; `gcd(x^p − x, w) = 1` proves it exactly. So `Y_8 ⊗ F_32003` has **no F_p-rational point at all** — `msolve_point.py` → `verifypoint` had no input. (Bonus: `w` is squarefree, so the mod-p chart is *reduced*, 52138 distinct points — the charged report had explicitly declined to claim that.)
+3. So I ran **Proposition 7.1** instead, which needs no point and no orbit count. Its boundary half was already charged; its affine half — `V(I₂+(W)) ∩ {b4=1} = ∅` — was the one item the charged lane couldn't finish. msolve `-g 2`, 30 threads on the idle worker .18, 8520 s: **`length of basis: 1 element`, `[1]:`, "No solution"**. With the boundary half and G_m-homogeneity that gives `V(I₂+(W)) = {0}`, hence clause (ii)₈, hence with the banked (i)₈: **(T) at t = 8**.
+
+**On step (iv)(a), k₈ = 1 — the answer is negative, not pending.** I wrote out the criterion (it needs Lemma 7.A, derived here, to transport Cor. 3.6 from `q₂` to `b3`), then ran it: the Frobenius cycle type at p = 32003 contains **7, 17, 20** (each factor verified irreducible, dividing w, pairwise coprime; `RABIN_FULL` False). Cor. 3.6 cannot conclude here; a second good prime would be needed.
+
+**Two things I want to flag rather than bury:**
+
+- **§8 rests on one engine.** The Singular replication on .28 timed out at 11000 s without printing — the third watchdog kill of that ideal. What backs the verdict instead is the §5 control pair (the same pipeline returns a 455-element GB where it must be non-empty, `[1]` where it must be empty) plus a t=8-specific non-triviality argument. A second msolve at a different prime is the obvious follow-up.
+- **The report is 24.2 KB against the 10–20 KB target.** I trimmed ~2.5 KB and stopped; the rest is evidence I didn't want to drop.
+
+I launched no instance and terminated none — .18 was already running and idle, and a c7i.4xlarge would have been too small anyway (the F4 peaked above 36 GiB). No ledger edits. NOTIFY is warranted: (V0)₈ is a new index.
+DIVERT path=xmodel/k16-t8-fglm-harvest-opus5-20260905.md status=CLEAN_SEALED body_bytes=24207 body_sha256=4bd7f800e807af81db775ae239f58685ea501e93a80c79f29fe49066be91c5a3

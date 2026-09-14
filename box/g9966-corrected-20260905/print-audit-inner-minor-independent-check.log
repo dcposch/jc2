@@ -1,0 +1,52 @@
+delta2 inner minor solved in 1.34s
+delta2 inner low-weight product: 25 slots, 2.31s
+delta2 inner incidence reduced: 14 pivots, 8.07s
+delta2 inner: 78 preincidence, 14 QQ* pivots, 0 residual, 9.34s
+delta52 inner minor solved in 2.08s
+delta52 inner low-weight product: 25 slots, 2.66s
+delta52 inner incidence reduced: 14 pivots, 4.07s
+delta52 inner: 76 preincidence, 14 QQ* pivots, 0 residual, 4.47s
+{
+  "delta2": {
+    "C2_strict_minor_rows_all_zero": true,
+    "C3_strict_minor_rows_all_zero": true,
+    "full_K2_local_identity": true,
+    "full_numeric_K2_coefficients": 178,
+    "local_floor": 27,
+    "negative_control_added_C3_monomial": [
+      20,
+      9
+    ],
+    "negative_first_difference": [
+      [
+        20,
+        0
+      ],
+      "-1"
+    ],
+    "negative_nonzero_rows": 15,
+    "point_artifact_sha256": "3a88b4cb9c97a638ebb48a5d39f60fec7407007d920fd11aec66a52f36a196a2",
+    "target_face": "zeta**9 + 9*zeta**8 + 27*zeta**7 + 27*zeta**6"
+  },
+  "delta52": {
+    "C2_strict_minor_rows_all_zero": true,
+    "C3_strict_minor_rows_all_zero": true,
+    "full_K2_local_identity": true,
+    "full_numeric_K2_coefficients": 179,
+    "local_floor": 63,
+    "negative_control_added_C3_monomial": [
+      20,
+      9
+    ],
+    "negative_first_difference": [
+      [
+        40,
+        0
+      ],
+      "-1"
+    ],
+    "negative_nonzero_rows": 26,
+    "point_artifact_sha256": "186a35b2b70a0395bfcf940e6e5767a331866e31095bcf7fdec5bf068dbf18d9",
+    "target_face": "zeta**9 - 3*zeta**7 + 3*zeta**5 - zeta**3"
+  }
+}

@@ -1,0 +1,13 @@
+--- dispatch_batch.py.frozen
++++ dispatch_batch.py.proposed-NOT-APPLIED
+@@
+-        require(all(x.get('result')=='MATCH' for x in telemetry['identity_checks']), 'TERM/KILL identity not matched')
++        expected_events = [
++            ('before-term', 'MATCH', None),
++            ('before-term-send', 'SENT', 15),
++            ('before-kill', 'MATCH', None),
++            ('before-kill-send', 'SENT', 9),
++        ]
++        observed_events = [(x.get('stage'), x.get('result'), x.get('signal'))
++                           for x in telemetry['identity_checks']]
++        require(observed_events == expected_events, 'unexpected dummy identity/signal sequence')

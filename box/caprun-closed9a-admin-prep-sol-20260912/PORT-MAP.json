@@ -1,0 +1,424 @@
+{
+  "schema": "caprun-closed9a-exact-port-map/v1",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "state": "DISABLED_UNBOUND_SOURCE_STATIC",
+  "substitutions_in_order": [
+    {
+      "ordinal": 1,
+      "from": "jc2-closedchild-preflight9-20260911d",
+      "to": "jc2-closedchild-preflight9-20260912a"
+    },
+    {
+      "ordinal": 2,
+      "from": "caprun-closed-scope-d-execution-root-20260911",
+      "to": "caprun-closed-scope-a-execution-root-20260912"
+    },
+    {
+      "ordinal": 3,
+      "from": "72a9c4592d585b4b74e925949023bfd4da3c745a0e5d3b0b68d4c97345c77a18",
+      "to": "e33bd43e1e2a0a1ad61a562f8052e4ce5d6f9c1e6f6892a5534db7656c57c6de"
+    },
+    {
+      "ordinal": 4,
+      "from": "2026-09-11T19:32:00+00:00",
+      "to": "2026-09-12T09:02:00+00:00"
+    },
+    {
+      "ordinal": 5,
+      "from": "2026-09-11T19:32:15+00:00",
+      "to": "2026-09-12T09:02:15+00:00"
+    },
+    {
+      "ordinal": 6,
+      "from": "JC2_BATCH_PLACEHOLDER",
+      "to": "jc2-closedchild-preflight9-20260912a"
+    }
+  ],
+  "files": [
+    {
+      "basename": "physical-metadata.template.sh",
+      "source": "box/caprun-closed9d-admin-prep-astra-20260911/physical-metadata.template.sh",
+      "source_sha256": "1c982432351919afe80247e7ecf477e9baefe86e0596ef82a7d8117ad0d2a361",
+      "output_sha256": "09e0f240885e38f9f3d0a50373918000475647802c784811b0d37d0bd25ee946",
+      "source_bytes": 2454,
+      "output_bytes": 2454,
+      "substitution_counts": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_INSTANCE_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "native-metadata.template.sh",
+      "source": "box/caprun-closed9d-admin-prep-astra-20260911/native-metadata.template.sh",
+      "source_sha256": "b386a6cd2d732e6618b994fdbdec67d8e2a59fc997206f296b4cf55513684ed0",
+      "output_sha256": "b386a6cd2d732e6618b994fdbdec67d8e2a59fc997206f296b4cf55513684ed0",
+      "source_bytes": 3245,
+      "output_bytes": 3245,
+      "substitution_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_INSTANCE_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "admin-helper-metadata-v2.sh",
+      "source": "box/caprun-closed9d-admin-prep-astra-20260911/admin-helper-metadata-v2.sh",
+      "source_sha256": "132ce2f074b3cbf064d09d420c0e8f13779c9ee23c7416fa08c47e8cf217e570",
+      "output_sha256": "da0aff1d0a9d9d57a15857226ec72a5726dbd06896a8d7e9c92061f8038c1e5d",
+      "source_bytes": 5197,
+      "output_bytes": 5197,
+      "substitution_counts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_INSTANCE_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "final-install.template.sh",
+      "source": "box/caprun-closed9d-admin-prep-astra-20260911/final-install.template.sh",
+      "source_sha256": "b0aac1034ba6985dac9c23e75b4f258336ea238449088880f7ed1b632152ad99",
+      "output_sha256": "7ed42c0425bdbb6ac65df08fe2b481caa526c18e94cd219558db80b01a4b42a9",
+      "source_bytes": 6365,
+      "output_bytes": 6365,
+      "substitution_counts": [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_BOOT_ID_PLACEHOLDER": 2,
+        "JC2_CAPTURED_HOLDER_PID_PLACEHOLDER": 1,
+        "JC2_CAPTURED_HOLDER_START_TICKS_PLACEHOLDER": 1,
+        "JC2_CAPTURED_INVOCATION_ID_PLACEHOLDER": 1,
+        "JC2_FINAL_CARD_SHA_PLACEHOLDER": 1,
+        "JC2_FINAL_INSTALL_MANIFEST_SHA_PLACEHOLDER": 1,
+        "JC2_FINAL_INSTALL_RELEASE_PLACEHOLDER": 1,
+        "JC2_FINAL_REGISTRATION_SHA_PLACEHOLDER": 2,
+        "JC2_HOLDER_CUTOFF_UTC_PLACEHOLDER": 3,
+        "JC2_INSTANCE_PLACEHOLDER": 2
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "setup-pre-admission.template.sh",
+      "source": "box/caprun-admin-placement-repair-sol-20260912/setup-pre-admission.template.sh",
+      "source_sha256": "39c242aded4ac83448416ffc4f9b51e3420b042c2ed59be0946968d8a4141783",
+      "output_sha256": "39c242aded4ac83448416ffc4f9b51e3420b042c2ed59be0946968d8a4141783",
+      "source_bytes": 8801,
+      "output_bytes": 8801,
+      "substitution_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_ADMIN_INSTALLED_MANIFEST_SHA_PLACEHOLDER": 1,
+        "JC2_ADMIN_STAGE_MANIFEST_SHA_PLACEHOLDER": 1,
+        "JC2_ADMIN_TREE_PATH_PLACEHOLDER": 6,
+        "JC2_ADMISSION_BOUND_SHA_PLACEHOLDER": 2,
+        "JC2_BOOT_ID_PLACEHOLDER": 1,
+        "JC2_CHANNEL_PATH_PLACEHOLDER": 1,
+        "JC2_DURABLE_DEVICE_PLACEHOLDER": 1,
+        "JC2_DURABLE_FSTYPE_PLACEHOLDER": 1,
+        "JC2_DURABLE_PARENT_PATH_PLACEHOLDER": 1,
+        "JC2_FIFO_WRITER_BOUND_SHA_PLACEHOLDER": 2,
+        "JC2_FINAL_HOLDER_SHA_PLACEHOLDER": 1,
+        "JC2_HOSTNAME_PLACEHOLDER": 1,
+        "JC2_INSTALLED_MANIFEST_SHA_PLACEHOLDER": 1,
+        "JC2_INSTANCE_PLACEHOLDER": 1,
+        "JC2_OBSERVER_BOUND_SHA_PLACEHOLDER": 2,
+        "JC2_PID_NAMESPACE_PLACEHOLDER": 1,
+        "JC2_PYTHON_PATH_PLACEHOLDER": 2,
+        "JC2_PYTHON_SHA_PLACEHOLDER": 1,
+        "JC2_RECEIVER_BOUND_SHA_PLACEHOLDER": 2,
+        "JC2_RELEASE_CHECK_BOUND_SHA_PLACEHOLDER": 2,
+        "JC2_RUNTIME_MOUNT_PATH_PLACEHOLDER": 1,
+        "JC2_SCIENCE_BASE_PATH_PLACEHOLDER": 1,
+        "JC2_SETPRIV_PATH_PLACEHOLDER": 2,
+        "JC2_SETPRIV_SHA_PLACEHOLDER": 1,
+        "JC2_SETUP_DEADLINE_UTC_PLACEHOLDER": 1,
+        "JC2_SETUP_RELEASE_PLACEHOLDER": 1,
+        "JC2_STAGE_MANIFEST_SHA_PLACEHOLDER": 1,
+        "JC2_STAGE_PATH_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "preholder-security.template.sh",
+      "source": "box/caprun-admin-placement-repair-sol-20260912/preholder-security.template.sh",
+      "source_sha256": "13e3653977688fc85a6825318358df74d54df2a534a524edccd1e1843605e63a",
+      "output_sha256": "13e3653977688fc85a6825318358df74d54df2a534a524edccd1e1843605e63a",
+      "source_bytes": 4437,
+      "output_bytes": 4437,
+      "substitution_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_ADMIN_TREE_PATH_PLACEHOLDER": 1,
+        "JC2_ADMISSION_BOUND_SHA_PLACEHOLDER": 1,
+        "JC2_CHANNEL_PATH_PLACEHOLDER": 1,
+        "JC2_DURABLE_PARENT_PATH_PLACEHOLDER": 1,
+        "JC2_FIFO_DEVICE_PLACEHOLDER": 1,
+        "JC2_FIFO_INODE_PLACEHOLDER": 1,
+        "JC2_FIFO_WRITER_BOUND_SHA_PLACEHOLDER": 1,
+        "JC2_INSTANCE_PLACEHOLDER": 1,
+        "JC2_OBSERVER_BOUND_SHA_PLACEHOLDER": 1,
+        "JC2_RECEIVER_BOUND_SHA_PLACEHOLDER": 1,
+        "JC2_RELEASE_CHECK_BOUND_SHA_PLACEHOLDER": 1,
+        "JC2_RUNTIME_MOUNT_PATH_PLACEHOLDER": 1,
+        "JC2_SCIENCE_BASE_PATH_PLACEHOLDER": 1,
+        "JC2_SECURITY_RELEASE_PLACEHOLDER": 1,
+        "JC2_WORKER_CGROUP_PATH_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "outer-admission.template.sh",
+      "source": "box/caprun-lateflow-corrected-astra-20260912/outer-admission.template.sh",
+      "source_sha256": "a12510e389d64670042fee141adee51e7229cb911c85d12fac2de02368d22792",
+      "output_sha256": "9c7c779a7a9d579531b7d70ddfcba349d05347bf5676afa453b0b158895b2b12",
+      "source_bytes": 6021,
+      "output_bytes": 6246,
+      "substitution_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        15
+      ],
+      "remaining_placeholders": {
+        "JC2_ADMIT_CUTOFF_UTC_PLACEHOLDER": 1,
+        "JC2_BOOT_ID_PLACEHOLDER": 1,
+        "JC2_FINAL_HOLDER_SHA_PLACEHOLDER": 1,
+        "JC2_INSTANCE_PLACEHOLDER": 1,
+        "JC2_KILL_DEADLINE_UTC_PLACEHOLDER": 1,
+        "JC2_OUTER_RELEASE_PLACEHOLDER": 1,
+        "JC2_PID_NAMESPACE_PLACEHOLDER": 1,
+        "JC2_TERM_DEADLINE_UTC_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "observe-and-leaves.template.sh",
+      "source": "box/caprun-lateflow-corrected-astra-20260912/observe-and-leaves.template.sh",
+      "source_sha256": "7664250112846df5b2584634a3f082981de859d806b7dfeb91c1be8278881a19",
+      "output_sha256": "7664250112846df5b2584634a3f082981de859d806b7dfeb91c1be8278881a19",
+      "source_bytes": 5729,
+      "output_bytes": 5729,
+      "substitution_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_BOOT_ID_PLACEHOLDER": 2,
+        "JC2_EARLIEST_ORIGINAL_STOP_EPOCH_PLACEHOLDER": 1,
+        "JC2_HOSTNAME_PLACEHOLDER": 2,
+        "JC2_INSTANCE_ID_PLACEHOLDER": 2,
+        "JC2_NATIVE_LIST_SHA256_PLACEHOLDER": 1,
+        "JC2_PID_NAMESPACE_PLACEHOLDER": 2,
+        "JC2_RECEIPT_SHA256_PLACEHOLDER": 1,
+        "JC2_REMOTE_AUTHORITY_DIR_PLACEHOLDER": 1,
+        "JC2_REMOTE_BASE_PLACEHOLDER": 1,
+        "JC2_REMOTE_CGROUP_PLACEHOLDER": 1,
+        "JC2_REMOTE_FIFO_PLACEHOLDER": 1,
+        "JC2_REMOTE_FROZEN_DIR_PLACEHOLDER": 1,
+        "JC2_REMOTE_HOLDER_PATH_PLACEHOLDER": 1,
+        "JC2_REMOTE_NATIVE_MANIFEST_SHA256_PLACEHOLDER": 1,
+        "JC2_REMOTE_UNIT_PLACEHOLDER": 1,
+        "JC2_REMOTE_WRITER_DIR_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "release-check.template.sh",
+      "source": "box/caprun-lateflow-corrected-astra-20260912/release-check.template.sh",
+      "source_sha256": "3ec257815c056b998e342c5660a50a663a5230f7b0af020bd8036354ab33eea1",
+      "output_sha256": "3ec257815c056b998e342c5660a50a663a5230f7b0af020bd8036354ab33eea1",
+      "source_bytes": 6186,
+      "output_bytes": 6186,
+      "substitution_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_BOOT_ID_PLACEHOLDER": 1,
+        "JC2_EARLIEST_ORIGINAL_STOP_EPOCH_PLACEHOLDER": 1,
+        "JC2_HOSTNAME_PLACEHOLDER": 1,
+        "JC2_INSTANCE_ID_PLACEHOLDER": 1,
+        "JC2_PID_NAMESPACE_PLACEHOLDER": 1,
+        "JC2_REMOTE_AUTHORITY_DIR_PLACEHOLDER": 1,
+        "JC2_REMOTE_BASE_PLACEHOLDER": 1,
+        "JC2_REMOTE_CGROUP_PLACEHOLDER": 1,
+        "JC2_REMOTE_FIFO_PLACEHOLDER": 1,
+        "JC2_REMOTE_FIFO_WRITER_PATH_PLACEHOLDER": 1,
+        "JC2_REMOTE_FROZEN_DIR_PLACEHOLDER": 1,
+        "JC2_REMOTE_HOLDER_PATH_PLACEHOLDER": 1,
+        "JC2_REMOTE_STAGE_PLACEHOLDER": 1,
+        "JC2_REMOTE_UNIT_PLACEHOLDER": 1,
+        "JC2_REMOTE_WRITER_DIR_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "receive.template.sh",
+      "source": "box/caprun-lateflow-repair-root-20260912/receive.template.sh",
+      "source_sha256": "117efca4a4d1dbfa4d1fa3b264d917770307b8ef39e99bb9c2e676f941bcb84d",
+      "output_sha256": "117efca4a4d1dbfa4d1fa3b264d917770307b8ef39e99bb9c2e676f941bcb84d",
+      "source_bytes": 1386,
+      "output_bytes": 1386,
+      "substitution_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_ORIGINAL_ADMISSION_STOP_EPOCH_PLACEHOLDER": 1,
+        "JC2_REMOTE_STAGE_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "fifo-write.template.sh",
+      "source": "box/caprun-lateflow-repair-root-20260912/fifo-write.template.sh",
+      "source_sha256": "1d279f870241a59e90ac65730f8bf61d5c1a796310734e4962e277a6b826d074",
+      "output_sha256": "1d279f870241a59e90ac65730f8bf61d5c1a796310734e4962e277a6b826d074",
+      "source_bytes": 1054,
+      "output_bytes": 1054,
+      "substitution_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_EARLIEST_ORIGINAL_STOP_EPOCH_PLACEHOLDER": 1,
+        "JC2_PREHOLDER_RELEASE_TOKEN_PLACEHOLDER": 1,
+        "JC2_REMOTE_FIFO_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "holder.preallocation.py",
+      "source": "box/caprun-closed-scope-d-execution-root-20260911/holder.preallocation.py",
+      "source_sha256": "e588621eda23ceb9b4b120afdf97473d5576d6250830221763fe88d6af9340c6",
+      "output_sha256": "77d1b704221aef47a666f92e48b735f4afe371fd352fb704d485c8e90066047e",
+      "source_bytes": 6736,
+      "output_bytes": 6736,
+      "substitution_counts": [
+        3,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_BOOT_ID_PLACEHOLDER": 1,
+        "JC2_HOLDER_RELEASE_PLACEHOLDER": 1,
+        "JC2_INSTANCE_PLACEHOLDER": 1,
+        "JC2_ONE_TIME_TOKEN_PLACEHOLDER": 1,
+        "JC2_PID_NAMESPACE_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    },
+    {
+      "basename": "ROOT-EXECUTION-CARD.template.md",
+      "source": "box/caprun-prepared-card-root-20260912/ROOT-EXECUTION-CARD.template.md",
+      "source_sha256": "002d145f40ff6e91ce1b544d54bc969124cfdfc6771aa19d40a9659b20e3a2ff",
+      "output_sha256": "002d145f40ff6e91ce1b544d54bc969124cfdfc6771aa19d40a9659b20e3a2ff",
+      "source_bytes": 5620,
+      "output_bytes": 5620,
+      "substitution_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "remaining_placeholders": {
+        "JC2_ADMIN_NATIVE_APPROVAL_SHA_PLACEHOLDER": 1,
+        "JC2_ADMISSION_FIRST_SHA_PLACEHOLDER": 1,
+        "JC2_BOOT_ID_PLACEHOLDER": 1,
+        "JC2_CAPTURED_HOLDER_PID_PLACEHOLDER": 1,
+        "JC2_CAPTURED_HOLDER_START_TICKS_PLACEHOLDER": 1,
+        "JC2_CAPTURED_INVOCATION_ID_PLACEHOLDER": 1,
+        "JC2_COORDINATOR_RETIREMENT_TIMER_RECEIPT_SHA_PLACEHOLDER": 1,
+        "JC2_FINAL_ADMISSION_SHA_PLACEHOLDER": 1,
+        "JC2_FINAL_HOLDER_SHA_PLACEHOLDER": 1,
+        "JC2_FINAL_REGISTRATION_SHA_PLACEHOLDER": 1,
+        "JC2_HOSTNAME_PLACEHOLDER": 1,
+        "JC2_INSTANCE_PLACEHOLDER": 1,
+        "JC2_NATIVE_MANIFEST_SHA_PLACEHOLDER": 1,
+        "JC2_NATIVE_RAW_SHA_PLACEHOLDER": 1,
+        "JC2_ORIGINAL_CLOCKS_PATH_PLACEHOLDER": 1,
+        "JC2_ORIGINAL_CLOCKS_SHA_PLACEHOLDER": 1,
+        "JC2_PHYSICAL_SHA_PLACEHOLDER": 1,
+        "JC2_PREFLIGHT_POLICY_SHA_PLACEHOLDER": 1,
+        "JC2_ROOT_VOLUME_PLACEHOLDER": 1,
+        "JC2_SOURCE_CONTRACT_SHA_PLACEHOLDER": 1,
+        "JC2_SOURCE_NATIVE_MANIFEST_SHA_PLACEHOLDER": 1
+      },
+      "transformed_byte_equality_verified": true
+    }
+  ],
+  "remaining_old_reference_scan": {
+    "patterns": [
+      "20260911",
+      "2026-09-11",
+      "closed-scope-d",
+      "72a9c459",
+      "19:32"
+    ],
+    "matches": 0,
+    "classification": "NONE_AFTER_AUTHORIZED_GLOBAL_SUBSTITUTIONS"
+  },
+  "method": "output SHA-256 equals fresh six-stage sed transform stream SHA-256 for every file; no source execution"
+}

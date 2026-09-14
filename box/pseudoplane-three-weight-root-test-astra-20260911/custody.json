@@ -1,0 +1,72 @@
+{
+  "schema": "jc2-three-weight-root-terminal-custody/v1",
+  "task": "pseudoplane-three-weight-root-test-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED_MANUAL_THEOREM_UNREVIEWED",
+  "first_utc": "2026-09-11 08:58:33 UTC",
+  "initial_targets": "ABSENT",
+  "reserve_utc": "2026-09-11 09:11:00 UTC",
+  "hard_utc": "2026-09-11 09:14:00 UTC",
+  "clock_reset": false,
+  "scientific_closeout_utc": "2026-09-11 09:07:35 UTC",
+  "finalized_utc": "2026-09-11 09:07:57 UTC",
+  "sealed_whole_expected_verify_postpins_completed_utc": "2026-09-11 09:08:09 UTC",
+  "custody_prepared_utc": "2026-09-11 09:08:09 UTC",
+  "inputs": [
+    {
+      "path": "xmodel/pseudoplane-boundary-submersion-test-astra-20260911.md",
+      "sha256": "d9bb20f83678cde429f04a1f4a175b013d31be2b92ccdb87d6b98ad3edc24265",
+      "scope": "FRESH_WHOLE; accepted exact ring/chart and B/D/C/E only; old lifecycle wording not current status"
+    },
+    {
+      "path": "xmodel/pseudoplane-boundary-submersion-test-astra-20260911.md.artifact.json",
+      "sha256": "41a6621fa7a94cad2e87e1706215b2468f459e989417c23d831b2ebc8b553132",
+      "scope": "FRESH_WHOLE documentary manifest"
+    },
+    {
+      "path": "xmodel/pseudoplane-boundary-gate-fable5-20260911.md",
+      "sha256": "a191ff3adbf4fc3144d43effd576f185c1c529c009265636bd9bdbb7e0275f72",
+      "scope": "FRESH_WHOLE; accepted FIRST scopes; proposed general eliminant treated as unproved question"
+    }
+  ],
+  "owned_excluding_custody": [
+    {
+      "path": "box/pseudoplane-three-weight-root-test-astra-20260911/PINS.json",
+      "sha256": "64c0fb86796185dc36465d16f2507ce25e953e30520f75c6cd68c6d165ef0e92"
+    },
+    {
+      "path": "xmodel/pseudoplane-three-weight-root-test-astra-20260911.md",
+      "sha256": "d5e0f0560312c82de349984672dad3498db42e970555538c17948f53ccdf5c2c"
+    },
+    {
+      "path": "xmodel/pseudoplane-three-weight-root-test-astra-20260911.md.artifact.json",
+      "sha256": "fdeac52c7802ce9b1af6fb1263e59e6eb2053d8a82e39f967dd04043a6e8b165"
+    }
+  ],
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256": "fdeac52c7802ce9b1af6fb1263e59e6eb2053d8a82e39f967dd04043a6e8b165",
+    "status": "VERIFIED",
+    "body_sha256": "63b9cfae708dc93681bd4443ad9996659f440c914e5d5fc4b0ea6f9eff8e90b9",
+    "lease_id": "11bbea701df61dbfe2e5539f2901cbfc"
+  },
+  "reads": {
+    "inputs": "Exactly3 fresh WHOLE after all3 pins; no reuse/clipping/linked sources",
+    "owned": "Report and PINS WHOLE before marker; sealed report and manifest WHOLE after finalize",
+    "postpins": "All3 inputs and3 owned hashes match"
+  },
+  "result": {
+    "theorem": "Every Uf(AZ)+Z^d g(AZ)+q(AZ), d>=1, nonzero f,g and arbitrary q over C, has a critical point on U!=0; no degree cap",
+    "root_location": "Normalized D=M'^N+k^k M^k(q')^N cannot avoid all roots off M; internally proved polynomial abc excludes N>=5, cubic equality excluded by residue/cube-root positive average",
+    "exceptions": "D identically zero, q' identically zero, simultaneous q'/M' zero, all multiplicity resonances and leading cancellation handled",
+    "consequence": "No nonzero scalar bracket with any regular mate for this exact family",
+    "limits": "No general arbitrary-H/boundary theorem, localized mate claim, all-source or JC2 conclusion; no novelty assertion"
+  },
+  "control": "M=t on auxiliary cylinder defeats omission of two-distinct-root hypothesis; accepted g=0 surface family is submersive",
+  "quantity": "Independent verification of universal three-weight root proof, especially N=3 equality/residue step",
+  "cheapest_test": "12-minute UNMEASURED focused manual FIRST proposal; not launched",
+  "collisions": "Own-only NONE; final report/manifest absent before finalize",
+  "science_execution": "NONE; only documentary transaction, hashes, static reads/apply_patch",
+  "other_access": "No code/payload/import/AST/syntax/test/CAS/dummy, network/history/provenance/AWS/SSH/Git/process control, protected/shared access or agents",
+  "writer_state": "This custody is the last authored file. No background writers or delegated work exist. Only read-only custody WHOLE/hash/time and final handoff follow. ALL WRITERS IDLE."
+}

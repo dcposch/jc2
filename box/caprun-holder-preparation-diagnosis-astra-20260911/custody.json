@@ -1,0 +1,64 @@
+{
+  "schema": "documentary-custody/v1",
+  "task": "caprun-holder-preparation-diagnosis-astra-20260911",
+  "status": "COMPLETE_READ_ONLY_DIAGNOSIS",
+  "verdict": "NEW_TOOL_REQUIRED",
+  "qualification": "Mechanical post-holder document binder missing from charged objects; manual120s completion not disproved; uncharged reviewed binder availability unknown.",
+  "first_action_utc": "2026-09-11T14:39:32.832783151Z",
+  "finalized_utc": "2026-09-11T14:45:00Z",
+  "expected_verify_sealed_whole_utc": "2026-09-11T14:45:13.912154284Z",
+  "original_reserve_utc": "2026-09-11T14:53:00Z",
+  "original_hard_stop_utc": "2026-09-11T14:56:00Z",
+  "owner": "/root/model_productivity",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "inputs_current": [
+    {
+      "path": "box/caprun-holder-preparation-diagnosis-astra-20260911/TASK.md",
+      "sha256": "1a97a1c83e18a80eed94232b89ce3632a048800f1d241d3c0059cff40a004a16"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/RESULT.md",
+      "sha256": "edb3fb57825ca5a79a3a49704cbdfeeb1061aaaa8614e7a1646c7f598c93355f"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/ROOT-EXECUTION-CARD.md",
+      "sha256": "a92cf2680c8d6aff6044f5376fb1dcfeed87a29c527d55c953d940e39a99f281"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/holder.py",
+      "sha256": "eeb9c16cec1b628555ac282a20e264b62c1b4eecc077732260a267c19a900749"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/final-install.sh",
+      "sha256": "abff072f218cbecaa6f47278891a62b36463a70e34ae4be546e44a5f3c3cd208"
+    },
+    {
+      "path": "box/caprun-closed-scope-b-execution-root-20260911/ROOT-REGISTRATION.json",
+      "sha256": "4d0d8475ed7d4aac1e42b70b1c7b4ee0198270ead0c3bb46adb78d7a91153ba3"
+    }
+  ],
+  "read_scope": "All6 FRESH_WHOLE after prehash; registration three untruncated ranges; no linked bodies or prior reuse",
+  "postpins": "ALL6_MATCH",
+  "owned": [
+    {
+      "path": "box/caprun-holder-preparation-diagnosis-astra-20260911/PINS.json",
+      "sha256": "0e62352b34ac95eec2ca733ab76850f5e746325afccf3c7f4948cfd126d0285d"
+    },
+    {
+      "path": "xmodel/caprun-holder-preparation-diagnosis-astra-20260911.md",
+      "sha256": "99383d8dbe03055a09066b958c6151807f57d13600dcf0cfcae60d0b5aa225b5"
+    },
+    {
+      "path": "xmodel/caprun-holder-preparation-diagnosis-astra-20260911.md.artifact.json",
+      "sha256": "e66213519c5f3490632cf32070bdc92de46adf083874e3a5432ba5ad740e3103"
+    }
+  ],
+  "expected_manifest_sha256": "e66213519c5f3490632cf32070bdc92de46adf083874e3a5432ba5ad740e3103",
+  "verification": "VERIFIED",
+  "own_whole": "PINS + report beforemarker and sealed report + manifest",
+  "own_collision": "Targets absent beforelease; ROOT TASK preserved; no new canonicalOPEN",
+  "code_execution": "NONE; documentary artifact_finalize only",
+  "worker_or_release_authority": false,
+  "self_hash_excluded": true,
+  "all_writers_at_handoff": "IDLE"
+}

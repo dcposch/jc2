@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py",
+        "normal"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"mode\": \"normal\", \"jacobian\": [{\"exponent\": [2, 0], \"coefficient\": \"3\"}], \"admissible_two-root_D\": [1, 2, 3], \"source_claim\": \"NO actual receiver or Keller point tested\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py",
+        "changed-map"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py\", line 25, in <module>\n    if bracket(a,b)!={(2,0):F(3)}:raise ValueError('changed map fails exact monomial-J projection')\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: changed map fails exact monomial-J projection\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py",
+        "changed-top"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py\", line 33, in <module>\n    if h!=expected:raise ValueError('changed top is not literal (2,3) profile')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: changed top is not literal (2,3) profile\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py",
+        "normal"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"mode\": \"normal\", \"jacobian\": [{\"exponent\": [2, 0], \"coefficient\": \"3\"}], \"admissible_two-root_D\": [1, 2, 3], \"source_claim\": \"NO actual receiver or Keller point tested\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py",
+        "changed-map"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py\", line 25, in <module>\n    if bracket(a,b)!={(2,0):F(3)}:raise ValueError('changed map fails exact monomial-J projection')\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: changed map fails exact monomial-J projection\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py",
+        "changed-top"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/source-multiplicity-admissibility-20260909/controls.py\", line 33, in <module>\n    if h!=expected:raise ValueError('changed top is not literal (2,3) profile')\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: changed top is not literal (2,3) profile\n"
+    }
+  ],
+  "scope": "tiny elementary changed-object controls only; no theorem proof replay"
+}

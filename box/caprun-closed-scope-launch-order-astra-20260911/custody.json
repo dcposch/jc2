@@ -1,0 +1,88 @@
+{
+  "schema": "jc2-design-custody/v1",
+  "task": "caprun-closed-scope-launch-order-astra-20260911",
+  "status": "COMPLETED_DESIGN_ONLY",
+  "owner": "/root/nonemptiness_certificate",
+  "first_action_utc": "2026-09-11T09:06:01Z",
+  "reserve_utc": "2026-09-11T09:17:00Z",
+  "hard_utc": "2026-09-11T09:20:00Z",
+  "opened_utc": "2026-09-11T09:07:20Z",
+  "closed_utc": "2026-09-11T09:11:18Z",
+  "finalized_utc": "2026-09-11T09:11:27Z",
+  "postpins_verified_utc": "2026-09-11T09:12:00Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report_sha256": "d91e854348bac0836eea57feb67665b9ea06941eeb574c8ce286e5698d4cb20e",
+  "expected_manifest_sha256": "2e2ba20212cd71d4c949822b5092746632767aa47f53f5cf2028d2e6f5fbcefe",
+  "expected_verification": "VERIFIED",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/CONTRACT.md",
+      "sha256": "af7a2fab4aa6317f7386e438f2f03acc6daffdd04c3deee6a6554b675089ee81",
+      "read_mode": "FRESH_WHOLE after all-five prehash match",
+      "scope": "Text1–EOF, no linked source/provenance",
+      "pre_sha256": "af7a2fab4aa6317f7386e438f2f03acc6daffdd04c3deee6a6554b675089ee81",
+      "post_sha256": "af7a2fab4aa6317f7386e438f2f03acc6daffdd04c3deee6a6554b675089ee81"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-registration-prep-root-20260911/ROOT-REGISTRATION.template.json",
+      "sha256": "db925cbf9dad59b39444ea4250b839584be68c3bc5353aee5af924d96034e8f4",
+      "read_mode": "FRESH_WHOLE after all-five prehash match",
+      "scope": "Text ranges1–320,321–700,701–EOF; metadata wire, no linked payload or provenance",
+      "pre_sha256": "db925cbf9dad59b39444ea4250b839584be68c3bc5353aee5af924d96034e8f4",
+      "post_sha256": "db925cbf9dad59b39444ea4250b839584be68c3bc5353aee5af924d96034e8f4"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-deployment-prep-root-20260911/outer-launch.template.sh",
+      "sha256": "2a4a7ff45c19f8bfa386da8caddd44e8cd80c44d54e04e043f7e3fb731cb478e",
+      "read_mode": "FRESH_WHOLE after all-five prehash match",
+      "scope": "Text1–EOF, no linked source/provenance",
+      "pre_sha256": "2a4a7ff45c19f8bfa386da8caddd44e8cd80c44d54e04e043f7e3fb731cb478e",
+      "post_sha256": "2a4a7ff45c19f8bfa386da8caddd44e8cd80c44d54e04e043f7e3fb731cb478e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-deployment-prep-root-20260911/setup.template.sh",
+      "sha256": "5bab950d9efcacf658c95b732713bdcdfb16576d557fa67215dd64dd50dae493",
+      "read_mode": "FRESH_WHOLE after all-five prehash match",
+      "scope": "Text1–EOF, no linked source/provenance",
+      "pre_sha256": "5bab950d9efcacf658c95b732713bdcdfb16576d557fa67215dd64dd50dae493",
+      "post_sha256": "5bab950d9efcacf658c95b732713bdcdfb16576d557fa67215dd64dd50dae493"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-necessary-rows-deployment-prep-root-20260911/physical-metadata.template.sh",
+      "sha256": "9280e0ec6cc406eafdca606171349ce1757ea105b9f7943183ec7fd479ca1b5c",
+      "read_mode": "FRESH_WHOLE after all-five prehash match",
+      "scope": "Text1–EOF, no linked source/provenance",
+      "pre_sha256": "9280e0ec6cc406eafdca606171349ce1757ea105b9f7943183ec7fd479ca1b5c",
+      "post_sha256": "9280e0ec6cc406eafdca606171349ce1757ea105b9f7943183ec7fd479ca1b5c"
+    }
+  ],
+  "owned_excluding_this_custody": [
+    {
+      "path": "/home/ubuntu/jc2/box/caprun-closed-scope-launch-order-astra-20260911/PINS.json",
+      "sha256": "d31b953e36e121e54ebac6d9c40f2e4f6d8f52b042b8091174ed29ef68ab9e2f",
+      "read_mode": "OWN_WHOLE"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/caprun-closed-scope-launch-order-astra-20260911.md",
+      "sha256": "d91e854348bac0836eea57feb67665b9ea06941eeb574c8ce286e5698d4cb20e",
+      "read_mode": "OWN_WHOLE_FINAL"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/caprun-closed-scope-launch-order-astra-20260911.md.artifact.json",
+      "sha256": "2e2ba20212cd71d4c949822b5092746632767aa47f53f5cf2028d2e6f5fbcefe",
+      "read_mode": "OWN_WHOLE_EXPECTED_VERIFIED"
+    }
+  ],
+  "checks": {
+    "all_inputs": "Exactly five fresh WHOLE after all five prehashes; no clipping or linked-source traversal",
+    "own_whole": "Final report, manifest and PINS read WHOLE",
+    "body_marker": "Unique BODY-END LAST after own private whole/OPEN/collision/postpin checks; seal outside body",
+    "collision": "Owned targets absent first action; final absent before close; package only PINS before custody",
+    "open_quantity": "One bounded administrative holder materialization, two admission barriers, one actual ROOT qualification/freeze then separately authorized nine-only discriminator. Prospective120s admission ceiling UNMEASURED, inside original bounds.",
+    "scope": "No source/script/command implementation or execution, native discovery, AWS/network/worker/process control, enabled registration or scientific input. Administrative date/hash/text/artifact tooling only.",
+    "unchanged": "All five frozen input hashes unchanged; no source/runtime edits or stale-positive predicate change."
+  },
+  "outcome": "Prospective one-unit admission holder -> actual empty nine-leaf identities -> final registration freeze -> same-PID exec. CPU origin0 and original absolute/unit clocks retained; no restart, migration, retry or FULL_13.",
+  "pending": "Exact administrative launcher and actual installed namespace/native/topology qualification remain unimplemented/unobserved. No runtime authorization or new foundation acceptance.",
+  "writers": "ALL WRITERS IDLE after custody WHOLE/hash; no follow-on authority"
+}

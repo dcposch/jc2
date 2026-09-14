@@ -1,0 +1,21 @@
+{
+ "lane": "cross-fable5",
+ "round": "ideation-20260908T0200Z",
+ "model_start_utc": "2026-09-08T02:41:33Z",
+ "completed_utc": "2026-09-08T02:47:13.992339+00:00",
+ "report": "xmodel/ideation-20260908T0200Z-cross-fable5.md",
+ "report_bytes": 12158,
+ "report_sha256": "fda1ba7d6a1fa6e5cd4abdb4ea9f3629afd233969ccb3ce9abefa1c6fefdf701",
+ "body_end_count": 1,
+ "wc_w_including_equations_and_hashes": 1851,
+ "inputs": "box/ideation-20260908T0200Z-cross-fable5/input-hashes.txt",
+ "controls": {
+  "thickened_controls.py": "ab362387ae6ecc64dd1e360ca2c9c680f5af6c1e15dcff9f8a823de2583790f4",
+  "thickened_controls.out": "647faefd1b42986361bf55233731eef3eebf7428ce80e0d2222bfdb9cb91955b",
+  "thickened_controls-O.out": "647faefd1b42986361bf55233731eef3eebf7428ce80e0d2222bfdb9cb91955b",
+  "thickened_controls.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+ },
+ "control_caps": "timeout 30 / prlimit --cpu=25 --as=512MiB / python3 -I -B, normal and -O, rc=0 both",
+ "mutations": "5/3->4/3 dual-number coefficient must not commute; reduced eps->1 pair must not commute (both asserted inside the script)",
+ "scope": "free-symbol 3/5 identities only; no source objects, H/R powers, CAS, AWS, peers, agents; no snapshot/shared/protected writes; no promotion; no charge_basis"
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "jc2.native-blind-custody/v1",
+  "task": "ideation-20260913T0925Z-astra",
+  "owner": "/root/execution_reliability",
+  "collector": "/root",
+  "actual_first_utc": "2026-09-13T09:34:31Z",
+  "original_reserve_utc": "2026-09-13T09:55:00Z",
+  "original_hard_utc": "2026-09-13T09:58:00Z",
+  "report_writers_idle_utc": "2026-09-13T09:51:01Z",
+  "final_whole_readback_and_postpins_completed_utc": "2026-09-13T09:53:08Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report": {
+    "path": "xmodel/ideation-20260913T0925Z-astra.md",
+    "sha256": "277f687d0f433a592391033e78c25c2e1d99a4a573a29d5c9eebe4359dad0538",
+    "body_sha256": "34ed766b793cdf7de9db17c41a43fa0c3e2a18b3402dd55b5062a502d41f249e",
+    "manifest_path": "xmodel/ideation-20260913T0925Z-astra.md.artifact.json",
+    "manifest_sha256": "ee948a1aa34a0bac0cd1f55d2f444577d6112863c8a944e3df416231df033605",
+    "expected_basis_and_manifest_verification": "VERIFIED",
+    "final_report_and_manifest_readback": "WHOLE without clipping",
+    "body_end": "unique, appended last before close/finalize"
+  },
+  "pins": {
+    "path": "box/ideation-20260913T0925Z-astra/PINS.sha256",
+    "sha256": "abb0a047fbb58bbc9243b217fb555bbab83596108f11a4891938302f7613e672",
+    "pre_read_authentication": "all seven inputs and input manifest matched",
+    "post_report_readback": "all nine registered paths matched",
+    "coordination_read": "exact-byte personal prior WHOLE read of 77ec0b282f4813ee9a2b71ebced492cc6f0b9262acf90a28f444ed9a507190bd expressly reused",
+    "other_read_scope": "COMMON, APPROACHES all379lines, MASTER46, PREVIOUS-SYNTHESIS, TANGENT-FIRST, STATE-DELTA WHOLE; no clipped read left unrecovered"
+  },
+  "scope": {
+    "current_peer_or_root_blind_read": false,
+    "network_or_aws": false,
+    "scientific_execution": false,
+    "new_agents": false,
+    "shared_edits": false,
+    "protected_tree_or_mirrors_inspected": false,
+    "administrative_execution": "unchanged pinned artifact_finalize only; inert text/hash/date and metadata operations",
+    "verdict": "MANUAL UNPROMOTED; NO_NEW_MECHANISM at global closing-arrow level; no operational successor commissioned"
+  },
+  "terminal_protocol": "This custody file is the last authored metadata. After readonly mode, whole custody read, hash and final postpins, the terminal message supplies the actual ALL WRITERS IDLE UTC and this file hash. No active child or external writer exists."
+}

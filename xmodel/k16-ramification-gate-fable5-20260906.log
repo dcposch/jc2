@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate written at `xmodel/k16-ramification-gate-fable5-20260906.md` (12,928 bytes, delivered 14:00 UTC, before the 14:10 deadline). It ends with a single standalone `<!-- BODY-END -->` line, has no seal footer, and contains no `charge_basis` line.
+
+**Verdict: the delimited NO-GAIN statement is CONFIRMED.** No REFUTED item. No GAP that changes a conclusion. The polynomial `B*eta≠0` target stays OPEN.
+
+**Custody and replay.** Seal, artifact manifest, source manifest, and checker hash all agree. The checker gives 11 PASS in both normal and `-O` modes, and the mutation fails under both. The AST has zero Assert nodes, so optimized-mode verification is genuine, unlike the earlier boundary-product checker.
+
+**Independent review of the four items, all CONFIRMED.**
+- The finite-algebra map is a genuine algebra isomorphism, re-derived from scratch. `R(f(t)) = −Q(t)Q(1−t)` is the norm under the deck involution, so multiplicities transfer at every place including `t=1/2`.
+- The budget is Mason–Stothers for `S−Q=1`. The complementary term `r(J)−h` cannot be dropped, since (GAP) only demands one J-root outside W. One scope note: at `r=n, δ=0` the budget equals the trivial `deg C` bound, which strengthens the no-gain reading.
+- The critical-divisor formula, the contact relation, and the all-orders recurrence hold uniformly. `Q'(t)=3(t−1)R'(α)` is a polynomial identity in `D'` at every root, so nothing is cancelled at the fixed place. A fixed-place R-root is always simple.
+- The shape-only controls are correctly bounded. I added one more marking they lack: a true solution has `W''(0)/2=1/3`.
+
+**Normalization.** `B=η=1` is licensed with `lc A` free. The leading-ratio quadratic has exactly the two roots `1/(4(2d+1))` for `d=±√(m/3)`, both retained.
+
+**Changed-object checks.** My own exact checker (107 PASS, 0.08 s) covers five rational instances including a repeated root at `−3/4`, a `Q(√−6)` instance realising the fixed place, the second `D0` root, and mutants for a flipped sign, a dropped `(t−1)` factor, the conjugate preimage, and unmerged fixed-place counting. A separate `Q(√10)` script confirms the fixed-place W-recursion pivots (19 PASS).
+
+**Follow-up.** One candidate only: the W-only discriminant-square condition `Δ=P²` on the x-line, tested by a minutes-scale jet check at `m=4`. If it reproduces the budget, it should be closed as the same no-gain.
+DIVERT path=xmodel/k16-ramification-gate-fable5-20260906.md status=CLEAN body_bytes=12928 body_sha256=25188ae20389305a1eb0b51c8348566edc00096f78e694ff6e85180f2df702a4

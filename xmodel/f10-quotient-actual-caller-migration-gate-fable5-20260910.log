@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 02:33:12 UTC, ahead of the 02:36:30 stop. Verdict: A CONFIRMED, B CONFIRMED under the accepted premises, C CONFIRMED, no REFUTED, no blocking GAP, no new OPEN.
+
+**Written**
+- `xmodel/f10-quotient-actual-caller-migration-gate-fable5-20260910.md`, 60 lines, ending in one standalone body-end marker.
+- `box/f10-quotient-actual-caller-migration-gate-fable5-20260910/expected-sha256.txt`, pasted from my own sha256sum output and re-verified 6 of 6 against the inputs.
+
+**A, the literal diff.** I regenerated the diff of the two caller snapshots with text tools only. It has exactly one hunk with one removed and one added line, at line 166 of the `known` dict, and its body is byte-identical to the supplied caller.diff. Both files are 231 lines and 15704 bytes, and every differing byte sits inside that single 64-hex solver value. The old snapshot hash is the caller 17z accepted. Docstring, dynamic registration-supplied self-pin, frozen 0444 per-child authority, exact parent and child argv, trailing-input pinning, acceptance binding, checker and controls dispatch and the STOP path are all untouched. The generic-caller hash appears in none of the six inputs, and the delta adds no line that could carry its barrier.
+
+**B, one hash selects the kernel.** The changed value is consumed only by the unchanged pin checks, which require the registration vector and the on-disk solver to match it and then copy it into every child authority. The 17zh gate records that evidence and checker compare the certificate's solver hash against that same flat pin, so no new key or schema is involved. Trailing argv counts for solve, check and controls are unchanged. The four sibling pins in the caller equal the rows both accepted gates list. The new solver's argv expectation rests on ROOT's documented identical main-to-EOF tail comparison, which closes 17zh GAP-D1; I did not read either solver, by mandate, and say so in the report.
+
+**C, scope.** The caller keeps its cooperative authority and its startup and post-run source checks, along with the old limitations: the PGID sweep is a /proc snapshot after wait, and the host and stat checks are metadata reads. The generic R3 runtime gate was not inspected. The packet contains no registration file, so nothing is executable; ROOT's later registration must carry the new caller and solver hashes to pass the self-pin checks.
+
+**Defects.** None blocking. Two documentary notes: the caller.diff headers name the files differently from the charged snapshot, and the caller retains three literal pins that 17z never charged. Both are unchanged by this delta.
+
+No Seal, charge_basis or closing hash was authored, and no math subprocess, Python, Git or network access was used.
+DIVERT path=xmodel/f10-quotient-actual-caller-migration-gate-fable5-20260910.md status=CLEAN body_bytes=9096 body_sha256=b510d565315784a2a66755ea98dc213442421feddccd6d8aa3e92ce66de5ebb4

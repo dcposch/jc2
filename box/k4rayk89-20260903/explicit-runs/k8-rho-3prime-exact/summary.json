@@ -1,0 +1,125 @@
+{
+  "K": 8,
+  "branch": "single",
+  "chart_sha256": "18b8e06335228c359820f5dcc8afe07134c42b7cfd618df2d845460a0dae7de8",
+  "elapsed_seconds": 0.470753,
+  "exact_result": {
+    "accepted_run_count": 1,
+    "promotion_note": "exact Q standard basis reduced 1 to 0",
+    "runs": [
+      {
+        "accepted": true,
+        "basis_size": 1,
+        "characteristic": 0,
+        "dimension": -1,
+        "elapsed_seconds": 0.115332,
+        "missing_markers": [],
+        "nf_all_zero": true,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/exact/rho/K8_single_rho_p0_Q.sing",
+        "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/exact/rho/K8_single_rho_p0_Q.out",
+        "timed_out": false,
+        "unit": true,
+        "vdim": null
+      }
+    ],
+    "stage": "rho",
+    "verdict": "UNIT_IDEAL_CHAR0"
+  },
+  "first_all_prime_unit": {
+    "primes": [
+      32003,
+      32009,
+      32027
+    ],
+    "stage": "rho",
+    "status": "UNIT_IN_EVERY_REQUESTED_FIBRE__FP_ONLY"
+  },
+  "no_modular_promotion": true,
+  "per_call_timeout_seconds": 180,
+  "primes": [
+    32003,
+    32009,
+    32027
+  ],
+  "stage_summaries": [
+    {
+      "all_requested_primes_unit": true,
+      "cumulative_row_count": 61,
+      "modular_scope": "F_p-only",
+      "prime_results": [
+        {
+          "accepted_run_count": 1,
+          "promotion_note": "modular unit ideal was not promoted to characteristic zero",
+          "runs": [
+            {
+              "accepted": true,
+              "basis_size": 1,
+              "characteristic": 32003,
+              "dimension": -1,
+              "elapsed_seconds": 0.114422,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "returncode": 0,
+              "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32003/K8_single_rho_p32003_p32003.sing",
+              "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32003/K8_single_rho_p32003_p32003.out",
+              "timed_out": false,
+              "unit": true,
+              "vdim": null
+            }
+          ],
+          "verdict": "MODULAR_ONLY"
+        },
+        {
+          "accepted_run_count": 1,
+          "promotion_note": "modular unit ideal was not promoted to characteristic zero",
+          "runs": [
+            {
+              "accepted": true,
+              "basis_size": 1,
+              "characteristic": 32009,
+              "dimension": -1,
+              "elapsed_seconds": 0.114102,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "returncode": 0,
+              "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32009/K8_single_rho_p32009_p32009.sing",
+              "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32009/K8_single_rho_p32009_p32009.out",
+              "timed_out": false,
+              "unit": true,
+              "vdim": null
+            }
+          ],
+          "verdict": "MODULAR_ONLY"
+        },
+        {
+          "accepted_run_count": 1,
+          "promotion_note": "modular unit ideal was not promoted to characteristic zero",
+          "runs": [
+            {
+              "accepted": true,
+              "basis_size": 1,
+              "characteristic": 32027,
+              "dimension": -1,
+              "elapsed_seconds": 0.114111,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "returncode": 0,
+              "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32027/K8_single_rho_p32027_p32027.sing",
+              "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32027/K8_single_rho_p32027_p32027.out",
+              "timed_out": false,
+              "unit": true,
+              "vdim": null
+            }
+          ],
+          "verdict": "MODULAR_ONLY"
+        }
+      ],
+      "stage": "rho"
+    }
+  ],
+  "tag": "k8-rho-3prime-exact",
+  "total_cores": 1,
+  "type": "K4RAY-EXPLICIT-STAGED-GUIDED-GB",
+  "verdict": "UNIT_IDEAL_CHAR0"
+}

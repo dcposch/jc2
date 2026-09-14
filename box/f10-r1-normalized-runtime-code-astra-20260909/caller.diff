@@ -1,0 +1,60 @@
+--- box/f10-r1-retained-runtime-code-astra-20260909/dispatch_batch.py	2026-09-09 17:26:00.007788993 +0000
++++ box/f10-r1-normalized-runtime-code-astra-20260909/dispatch_batch.py	2026-09-09 19:42:33.235339664 +0000
+@@ -138,7 +138,7 @@
+ def main():
+     global registration, INSTANCE, JOB, DEADLINE, AGGREGATE, fixed_files
+     registration=json.loads(REGISTRATION.read_text())
+-    require(registration.get('schema')=='F10-RETAINED-DISPATCH/v1' and registration.get('enabled') is True,
++    require(registration.get('schema')=='F10-NORMALIZED-DISPATCH/v1' and registration.get('enabled') is True,
+             'DISABLED: fresh root registration required')
+     require(sys.flags.isolated and sys.flags.dont_write_bytecode, 'require caller Python -I -B')
+     require(Path.cwd()==ROOT and str(ROOT)==registration['cwd'], 'wrong remote cwd')
+@@ -155,14 +155,15 @@
+     AGGREGATE=registration['aggregate_wall_seconds']
+     require(type(AGGREGATE) is int and AGGREGATE>0,'explicit aggregate cap required')
+     require(registration['file_size_limit_bytes']==16777216,'file cap changed')
+-    require(set(registration['profiles'])=={'probe','dummy','transform','check','controls'},'exact finite profiles')
++    require(set(registration['profiles'])=={'probe','dummy','generate','check','controls'},'exact finite profiles')
+     for limits in registration['profiles'].values():
+         require(set(limits)=={'wall_seconds','cpu_seconds','rss_bytes'},'profile fields')
+         require(all(type(v) is int and v>0 for v in limits.values()),'explicit positive integer caps')
+     require(registration['profiles']['dummy']['rss_bytes']==33554432,'dummy must retain its reviewed RSS cap')
+     known={
+-      'transformer.py':'ff5d08c8b8f0ec30b071893cc9cf99db3a3a56a30bb54d653a19c0a8dd5df869',
+-      'checker.py':'7d80b261df626fa84ab72d7ff06e3c37e1ba6f6e98e40d6e7d2142d2397aacda',
++      'generator.py':'d444d022593c99a8d5a22d9cd9cbcac2bea9c88ef1a305d3c1c8ddf1635a6d8e',
++      'checker.py':'091bbf35693c52833f2de936eeecd2e734f8404f26e9c68039bb8ab6aaecb551',
++      'algebra.py':'7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc',
+       'execution_gate.py':'cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6',
+       'run_capped.py':'4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2',
+       'probe.py':'02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7',
+@@ -177,7 +178,7 @@
+     for filename,want in supplied.items():
+         require(isinstance(want,str) and len(want)==64 and digest(filename)==want,'runtime source/interpreter pin')
+     fixed_files=dict(supplied); fixed_files[str(REGISTRATION)]=digest(REGISTRATION)
+-    for name in ('retained.json','full.receipt.json','controls.receipt.json','preflight.PASS.json','batch.PASS.json','batch.STOP.json'):
++    for name in ('normalized.json','full.receipt.json','controls.receipt.json','preflight.PASS.json','batch.PASS.json','batch.STOP.json'):
+         require(not (ROOT/name).exists(),'exclusive job output already exists')
+     for defect in ['disabled','wronghost','argv','cap','missing-input']:
+         run('gate-'+defect,'probe.py',[ROOT/'frontier.json',ROOT/('gate-'+defect+'.sentinel'),'plain'],'probe',defect=defect)
+@@ -185,12 +186,16 @@
+     require((ROOT/'gate-valid.sentinel').read_text()=='POSTAUTHORIZE\n','valid gate failed')
+     run('dummy-descendant','probe.py',[ROOT/'frontier.json',ROOT/'dummy-descendant.sentinel','descendant'],'dummy')
+     exclusive(ROOT/'preflight.PASS.json',{'status':'PASS','records':records,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+-    run('transform','transformer.py',[ROOT/'exact.json',ROOT/'retained.json'],'transform',operation='build',mathematical=True)
+-    run('full-check','checker.py',[ROOT/'exact.json',ROOT/'retained.json',ROOT/'full.receipt.json'],'check',mathematical=True)
++    run('generate','generator.py',[ROOT/'exact.json',ROOT/'normalized.json'],'generate',operation='build',mathematical=True)
++    run('full-check','checker.py',[ROOT/'exact.json',ROOT/'normalized.json',ROOT/'full.receipt.json'],'check',mathematical=True)
+     accepted=json.loads((ROOT/'full.receipt.json').read_text())
+-    require(accepted['verdict']=='PASS-REPRESENTATION-NOT-IDEAL-DECISION','genuine checker receipt verdict')
+-    run('semantic-controls','semantic_controls.py',[ROOT/'exact.json',ROOT/'retained.json',ROOT/'full.receipt.json',ROOT/'controls.receipt.json'],'controls',mathematical=True)
++    require(accepted['status']=='PASS-NORMALIZED-REPRESENTATION-NOT-IDEAL-DECISION','genuine checker receipt status')
++    require(accepted['source_sha256']==known['exact.json'] and accepted['artifact_sha256']==digest(ROOT/'normalized.json'),
++            'genuine normalized receipt source/artifact binding')
++    run('semantic-controls','semantic_controls.py',[ROOT/'exact.json',ROOT/'normalized.json',ROOT/'full.receipt.json',ROOT/'controls.receipt.json'],'controls',mathematical=True)
+     exclusive(ROOT/'batch.PASS.json',{'status':'ENGINEERING-PASS-NOT-IDEAL-DECISION','records':records,
++              'normalized_sha256':digest(ROOT/'normalized.json'),'full_receipt_sha256':digest(ROOT/'full.receipt.json'),
++              'generator_sha256':known['generator.py'],'checker_sha256':known['checker.py'],'backend_sha256':known['algebra.py'],
+               'first_math_epoch':first_math,'end_epoch':time.time(),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+ 
+ try:

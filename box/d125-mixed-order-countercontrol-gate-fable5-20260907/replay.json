@@ -1,0 +1,62 @@
+{
+ "caps": "30 wall/25 CPU s, 512 MiB",
+ "runs": [
+  {
+   "mutation": null,
+   "optimized": false,
+   "rc": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "fb60a47b7fc2ebb04c442b41066627330e4868f548348d06c0bbf5c21bf933d7"
+  },
+  {
+   "mutation": "--mutate-drop-mixed-orders",
+   "optimized": false,
+   "rc": 1,
+   "stderr_tail": "s.py\", line 11, in need\n    if not c: raise Fail(m)\n              ^^^^^^^^^^^^^\nFail: bracket nonzero below order seven\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-full-arc-claim",
+   "optimized": false,
+   "rc": 1,
+   "stderr_tail": ", line 11, in need\n    if not c: raise Fail(m)\n              ^^^^^^^^^^^^^\nFail: finite toy is not a full commuting arc\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-guarded-s4-survivor",
+   "optimized": false,
+   "rc": 1,
+   "stderr_tail": "s.py\", line 11, in need\n    if not c: raise Fail(m)\n              ^^^^^^^^^^^^^\nFail: x=0 cannot meet x2^2=-3h^3 at h=3\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": null,
+   "optimized": true,
+   "rc": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "fb60a47b7fc2ebb04c442b41066627330e4868f548348d06c0bbf5c21bf933d7"
+  },
+  {
+   "mutation": "--mutate-drop-mixed-orders",
+   "optimized": true,
+   "rc": 1,
+   "stderr_tail": "s.py\", line 11, in need\n    if not c: raise Fail(m)\n              ^^^^^^^^^^^^^\nFail: bracket nonzero below order seven\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-full-arc-claim",
+   "optimized": true,
+   "rc": 1,
+   "stderr_tail": ", line 11, in need\n    if not c: raise Fail(m)\n              ^^^^^^^^^^^^^\nFail: finite toy is not a full commuting arc\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-guarded-s4-survivor",
+   "optimized": true,
+   "rc": 1,
+   "stderr_tail": "s.py\", line 11, in need\n    if not c: raise Fail(m)\n              ^^^^^^^^^^^^^\nFail: x=0 cannot meet x2^2=-3h^3 at h=3\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "status": "PASS"
+}

@@ -1,0 +1,277 @@
+{
+  "chars": [
+    32003,
+    32009,
+    32027,
+    0
+  ],
+  "meta": "box/g9966n1-20260903/orderbasis/meta/n1_S6_9_6_5_2_k2_part_1_full.json",
+  "row_count_without_localizer": 54,
+  "runs": [
+    {
+      "certificate": {
+        "accepted_run_count": 1,
+        "crt_rational_reconstruction": {
+          "available": false,
+          "items": {},
+          "method": "CRT plus bounded rational reconstruction for scalar invariants"
+        },
+        "hilbert_hint": null,
+        "policy": {
+          "allow_modular_unit_promotion": false,
+          "note": "N1 order-basis exact guided replay",
+          "require_controls": true,
+          "scope": "EXACT_Q"
+        },
+        "promotion_note": "modular unit ideal was not promoted to characteristic zero",
+        "properness_scope": {
+          "positive_weights": [
+            []
+          ],
+          "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+          "systems_declared_homogeneous": false
+        },
+        "runs": [
+          {
+            "characteristic": 32003,
+            "command": [
+              "stdbuf",
+              "-oL",
+              "-eL",
+              "Singular",
+              "--cpus=1",
+              "--threads=1",
+              "--flint-threads=1",
+              "--no-rc",
+              "-q",
+              "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32003/n1_S6_9_6_5_2_k2_part_1_full_p32003_p32003.sing"
+            ],
+            "elapsed_seconds": 0.068865,
+            "label": "n1_S6_9_6_5_2_k2_part_1_full_p32003",
+            "main": {
+              "accepted": true,
+              "basis_size": 1,
+              "dimension": -1,
+              "lead_dim": -1,
+              "lead_vdim": null,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": true,
+              "vdim": null,
+              "vdim_matches_predicted": null
+            },
+            "perturbed": null,
+            "returncode": 0,
+            "script": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32003/n1_S6_9_6_5_2_k2_part_1_full_p32003_p32003.sing",
+            "script_sha256": "30da6fa36d6a407d50d992ee2525e68cd4b598f1df8e40ddd18775a0fc912c6d",
+            "stderr": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32003/n1_S6_9_6_5_2_k2_part_1_full_p32003_p32003.err",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32003/n1_S6_9_6_5_2_k2_part_1_full_p32003_p32003.out",
+            "stdout_sha256": "702cc21d5c1c1b68f1c1d0920066f3fd8ba8e816de67c2d34118601d42c2f689",
+            "timed_out": false
+          }
+        ]
+      },
+      "verdict": "MODULAR_ONLY"
+    },
+    {
+      "certificate": {
+        "accepted_run_count": 1,
+        "crt_rational_reconstruction": {
+          "available": false,
+          "items": {},
+          "method": "CRT plus bounded rational reconstruction for scalar invariants"
+        },
+        "hilbert_hint": null,
+        "policy": {
+          "allow_modular_unit_promotion": false,
+          "note": "N1 order-basis exact guided replay",
+          "require_controls": true,
+          "scope": "EXACT_Q"
+        },
+        "promotion_note": "modular unit ideal was not promoted to characteristic zero",
+        "properness_scope": {
+          "positive_weights": [
+            []
+          ],
+          "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+          "systems_declared_homogeneous": false
+        },
+        "runs": [
+          {
+            "characteristic": 32009,
+            "command": [
+              "stdbuf",
+              "-oL",
+              "-eL",
+              "Singular",
+              "--cpus=1",
+              "--threads=1",
+              "--flint-threads=1",
+              "--no-rc",
+              "-q",
+              "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32009/n1_S6_9_6_5_2_k2_part_1_full_p32009_p32009.sing"
+            ],
+            "elapsed_seconds": 0.037868,
+            "label": "n1_S6_9_6_5_2_k2_part_1_full_p32009",
+            "main": {
+              "accepted": true,
+              "basis_size": 1,
+              "dimension": -1,
+              "lead_dim": -1,
+              "lead_vdim": null,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": true,
+              "vdim": null,
+              "vdim_matches_predicted": null
+            },
+            "perturbed": null,
+            "returncode": 0,
+            "script": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32009/n1_S6_9_6_5_2_k2_part_1_full_p32009_p32009.sing",
+            "script_sha256": "f9cefab67e3294a9bf275c0e8cb764618ea5efb117bdc474673eefd60e82602c",
+            "stderr": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32009/n1_S6_9_6_5_2_k2_part_1_full_p32009_p32009.err",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32009/n1_S6_9_6_5_2_k2_part_1_full_p32009_p32009.out",
+            "stdout_sha256": "702cc21d5c1c1b68f1c1d0920066f3fd8ba8e816de67c2d34118601d42c2f689",
+            "timed_out": false
+          }
+        ]
+      },
+      "verdict": "MODULAR_ONLY"
+    },
+    {
+      "certificate": {
+        "accepted_run_count": 1,
+        "crt_rational_reconstruction": {
+          "available": false,
+          "items": {},
+          "method": "CRT plus bounded rational reconstruction for scalar invariants"
+        },
+        "hilbert_hint": null,
+        "policy": {
+          "allow_modular_unit_promotion": false,
+          "note": "N1 order-basis exact guided replay",
+          "require_controls": true,
+          "scope": "EXACT_Q"
+        },
+        "promotion_note": "modular unit ideal was not promoted to characteristic zero",
+        "properness_scope": {
+          "positive_weights": [
+            []
+          ],
+          "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+          "systems_declared_homogeneous": false
+        },
+        "runs": [
+          {
+            "characteristic": 32027,
+            "command": [
+              "stdbuf",
+              "-oL",
+              "-eL",
+              "Singular",
+              "--cpus=1",
+              "--threads=1",
+              "--flint-threads=1",
+              "--no-rc",
+              "-q",
+              "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32027/n1_S6_9_6_5_2_k2_part_1_full_p32027_p32027.sing"
+            ],
+            "elapsed_seconds": 0.023568,
+            "label": "n1_S6_9_6_5_2_k2_part_1_full_p32027",
+            "main": {
+              "accepted": true,
+              "basis_size": 1,
+              "dimension": -1,
+              "lead_dim": -1,
+              "lead_vdim": null,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": true,
+              "vdim": null,
+              "vdim_matches_predicted": null
+            },
+            "perturbed": null,
+            "returncode": 0,
+            "script": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32027/n1_S6_9_6_5_2_k2_part_1_full_p32027_p32027.sing",
+            "script_sha256": "6656bea2db7eb9896682ee4b5fdbb5f83eba2fa5c99316d805268aae9fa84993",
+            "stderr": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32027/n1_S6_9_6_5_2_k2_part_1_full_p32027_p32027.err",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/p32027/n1_S6_9_6_5_2_k2_part_1_full_p32027_p32027.out",
+            "stdout_sha256": "702cc21d5c1c1b68f1c1d0920066f3fd8ba8e816de67c2d34118601d42c2f689",
+            "timed_out": false
+          }
+        ]
+      },
+      "verdict": "MODULAR_ONLY"
+    },
+    {
+      "certificate": {
+        "accepted_run_count": 1,
+        "crt_rational_reconstruction": {
+          "available": false,
+          "items": {},
+          "method": "CRT plus bounded rational reconstruction for scalar invariants"
+        },
+        "hilbert_hint": null,
+        "policy": {
+          "allow_modular_unit_promotion": false,
+          "note": "N1 order-basis exact guided replay",
+          "require_controls": true,
+          "scope": "EXACT_Q"
+        },
+        "promotion_note": "exact Q standard basis reduced 1 to 0",
+        "properness_scope": {
+          "positive_weights": [
+            []
+          ],
+          "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+          "systems_declared_homogeneous": false
+        },
+        "runs": [
+          {
+            "characteristic": 0,
+            "command": [
+              "stdbuf",
+              "-oL",
+              "-eL",
+              "Singular",
+              "--cpus=1",
+              "--threads=1",
+              "--flint-threads=1",
+              "--no-rc",
+              "-q",
+              "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/Q/n1_S6_9_6_5_2_k2_part_1_full_Q_Q.sing"
+            ],
+            "elapsed_seconds": 0.035824,
+            "label": "n1_S6_9_6_5_2_k2_part_1_full_Q",
+            "main": {
+              "accepted": true,
+              "basis_size": 1,
+              "dimension": -1,
+              "lead_dim": -1,
+              "lead_vdim": null,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": true,
+              "vdim": null,
+              "vdim_matches_predicted": null
+            },
+            "perturbed": null,
+            "returncode": 0,
+            "script": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/Q/n1_S6_9_6_5_2_k2_part_1_full_Q_Q.sing",
+            "script_sha256": "50e10684a706fcda2bdee70ac0bdb1b1ad7469ec79633b0868cd284ab3820ad3",
+            "stderr": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/Q/n1_S6_9_6_5_2_k2_part_1_full_Q_Q.err",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S6_part1/Q/n1_S6_9_6_5_2_k2_part_1_full_Q_Q.out",
+            "stdout_sha256": "702cc21d5c1c1b68f1c1d0920066f3fd8ba8e816de67c2d34118601d42c2f689",
+            "timed_out": false
+          }
+        ]
+      },
+      "verdict": "UNIT_IDEAL_CHAR0"
+    }
+  ],
+  "timeout_seconds": 120
+}

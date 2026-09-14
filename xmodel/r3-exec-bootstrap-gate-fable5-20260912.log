@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report sealed at 16:27:26Z, before the 16:34 reserve. No further writes.
+
+**Outcome.** The FIRST of Astra's bootstrap found no REFUTED item and no dispatcher-interface contradiction. Written once, via the installed apply_patch, to `xmodel/r3-exec-bootstrap-gate-fable5-20260912.md` (sha256 4f17271e…, 2357 words including custody, marker last with nothing after).
+
+**What was checked.** All eight inputs hashed before reading and matched the expected manifest, then re-hashed before and after the final write with no change. Everything was read whole, COORDINATION first. Manual source comparison only, nothing executed.
+
+**Findings, in the report.**
+- **A CONFIRMED.** The nine in-memory authority objects and nine expanded CAPRUN vectors are byte-for-byte what the dispatcher recomputes. No registration-SHA, self-hash or PID cycle. Auth, frozen and writer directories stay empty until the dispatcher. All size caps, modes, profiles and repeated pins agree with the dispatcher and with authority.py.
+- **B CONFIRMED with one conditional STOP.** Single process, no thread, sole cgroup member, namespaces, boot, instance, root cgroup2 mount and the five resource files are observed, not trusted. GAP G2: leaf mkdir is umask-dependent while the bootstrap's own leaf check needs other-rx, so a 077 launcher umask stops after one leaf is created.
+- **C CONFIRMED with GAP G1 and G3.** G1: the dispatcher's 3000 s monotonic wall restarts at exec and the bootstrap never binds the absolute deadlines to the outer start, so the contract's "3000 wall unchanged" sentence is ROOT-data-supplied, not source-enforced. G3: the 64 KiB kernel-read cap on maps and mountinfo can stop where the dispatcher would not.
+- **D.** Suitable for one separately authorized AWS-only nine-phase discriminator only after three one-line repairs (umask, read ceiling, absolute wall bound) or their literal launcher preconditions. One independently reasoned negative control (umask 077, expecting one 0700 leaf and no writes) and a nine-row decisive matrix are given, with the exact acceptance perimeter and remaining preconditions.
+
+The repairs are named, not implemented. No finalizer ran and no charge_basis line was declared.
+DIVERT path=xmodel/r3-exec-bootstrap-gate-fable5-20260912.md status=CLEAN body_bytes=19445 body_sha256=4f17271e788aae8ae489ba03e80b508c4a5d01d9496f4c03a48a4cf5e39004a3

@@ -1,0 +1,904 @@
+SHEAF-THEORETIC OBSTRUCTIONS IN HIGHER
+DIMENSIONS AND
+TOPOLOGICAL RIGIDITY IN THE AFFINE PLANE
+JASMINE S. BURNS
+Abstract. For nearly nine decades, the Jacobian conjecture stood as a fundamental question in algebraic geometry, proposing that a polynomial mapping F : Cn → Cn with a non-zero constant Jacobian determinant possesses a
+global polynomial inverse. This paper establishes the definitive failure of the
+conjecture for dimensions n ≥ 3 by identifying a fundamental sheaf-theoretic
+obstruction. We demonstrate that while local analytic inverses exist by the
+Inverse Function Theorem, non-trivial monodromy around the branch locus
+of multi-sheeted coverings generates a non-vanishing Čech cohomology class
+in H 1 , explicitly preventing the descent of these local patches into a global
+polynomial ring. Concurrently, we construct a proof of the affirmative for
+n = 2, proving that the complex affine plane C2 lacks the spatial degrees of
+freedom required to host such non-injective folds without structural collapse
+at infinity.
+
+1. Introduction
+The complex Jacobian conjecture, formulated by Keller in 1939 [8], asks
+whether local biholomorphism for a polynomial map implies a global algebraic
+bijection. Historically, research momentum focused heavily on proving the statement true, leading to a massive accumulation of heuristics rooted in low-dimensional
+sandboxes and fundamental algebraic reductions—most notably the degree-reduction
+framework established by Bass, Connell, and Wright [3].
+Recent computational breakthroughs have provided explicit counterexamples
+in higher dimensions. However, a brute-forced polynomial map serves only as an
+artifact of the failure, not an explanation. This paper transitions the discourse
+from computational discovery to first-principles architectural law. We map the
+exact thermodynamic and geometric fault lines that cause polynomial inversion
+to fail, showing that the division between local compliance and global invertibility
+is governed by absolute algebraic-geometric obstructions.
+2. The Geometry of Global Folding (n ≥ 3)
+Let F = (F1 , . . . , Fn ) : Cn → Cn be a polynomial mapping satisfying the
+Jacobian condition det(JF (x)) = c ∈ C∗ for all x ∈ Cn .
+Lemma 2.1 (Local Biholomorphism and Quasi-Finiteness). By the complex
+Inverse Function Theorem, the condition det(JF (x)) = c ̸= 0 for all x ∈ Cn
+implies that F is a local biholomorphism at every point x ∈ Cn . Consequently,
+for any y ∈ Cn , the fiber F −1 (y) is a discrete variety in Cn . Since F is defined
+by polynomials, F −1 (y) is a zero-dimensional affine algebraic variety, and hence
+finite. Thus, F is a quasi-finite morphism.
+1
+
+2
+
+JASMINE S. BURNS
+
+Proof. Let x0 ∈ Cn and set y0 = F (x0 ). Since det(JF (x0 )) = c ̸= 0, the Jacobian
+matrix JF (x0 ) is invertible. By the complex Inverse Function Theorem, there
+exist open neighborhoods U ⊂ Cn containing x0 and V ⊂ Cn containing y0 such
+that the restriction F |U : U → V is a biholomorphism.
+This local biholomorphic property implies that x0 is an isolated point in the
+fiber F −1 (y0 ). Since this holds for every x ∈ F −1 (y0 ), the fiber F −1 (y0 ) is a
+discrete topological subspace of Cn .
+Now, consider the fiber F −1 (y0 ) algebraically. It is defined as the vanishing
+locus of the polynomial system:
+F1 (x1 , . . . , xn ) − y0,1 = 0,
+
+...,
+
+Fn (x1 , . . . , xn ) − y0,n = 0
+
+Thus, F −1 (y0 ) is an affine algebraic variety in Cn . A complex algebraic variety
+that is topologically discrete must be zero-dimensional. By the fundamental
+structure theorem for affine varieties, every zero-dimensional algebraic variety
+consists of a finite set of points. Therefore, for every y ∈ Cn , the fiber F −1 (y) is
+finite, which by definition means that F is a quasi-finite morphism.
+□
+Proposition 2.2 (Generic Degree and Function Field Extensions). The polynomial map F induces an injective ring homomorphism
+F ∗ : C[y1 , . . . , yn ] ,→ C[x1 , . . . , xn ]
+and a corresponding extension of rational function fields
+F ∗ : C(y1 , . . . , yn ) ,→ C(x1 , . . . , xn ).
+The generic degree of F , denoted k, is defined as the degree of this field extension:
+k = [C(x1 , . . . , xn ) : F ∗ C(y1 , . . . , yn )]
+If k = 1, F is a birational map, which by the Bialynicki-Birula–Rosenlicht Theorem implies that F is a global algebraic automorphism (k = 1 ⇐⇒ F is
+invertible). If k > 1, F is generically a k-to-1 non-injective map.
+Proof. First, we establish the injectivity of the pullback map F ∗ . Let P ∈
+C[y1 , . . . , yn ] such that F ∗ (P ) = P (F1 , . . . , Fn ) = 0 in C[x1 , . . . , xn ]. By Lemma 2.1,
+det(JF (x)) ̸= 0 everywhere, so by the Inverse Function Theorem, F is an open
+mapping. Thus, the image F (Cn ) contains a non-empty open set V ⊂ Cn . Since
+P vanishes identically on F (Cn ), it vanishes on V . An algebraic polynomial vanishing on a non-empty open subset of Cn must be the zero polynomial. Hence,
+ker(F ∗ ) = {0}, and F ∗ is an injective ring homomorphism.
+Since C[y1 , . . . , yn ] and C[x1 , . . . , xn ] are integral domains, F ∗ extends uniquely
+to an injective homomorphism of their fraction fields:
+F ∗ : C(y1 , . . . , yn ) ,→ C(x1 , . . . , xn )
+To prove that the degree k = [C(x1 , . . . , xn ) : F ∗ C(y1 , . . . , yn )] is finite, observe
+that both C(x1 , . . . , xn ) and C(y1 , . . . , yn ) have transcendence degree n over C.
+Because F ∗ is an injective field embedding preserving the base field C, the relative
+transcendence degree of the extension C(X)/F ∗ C(Y ) is:
+tr.degF ∗ C(Y ) C(X) = tr.degC C(X) − tr.degC F ∗ C(Y ) = n − n = 0
+A field extension of transcendence degree zero is algebraic. Furthermore, C(x1 , . . . , xn )
+is finitely generated as a field over F ∗ C(y1 , . . . , yn ) by the generators x1 , . . . , xn .
+
+THE COLLAPSE OF THE JACOBIAN CONJECTURE
+
+3
+
+Since any finitely generated algebraic field extension is finite-dimensional, we
+conclude that k = [C(X) : F ∗ C(Y )] < ∞.
+Next, we establish that |F −1 (y)| = k generically. Because char(C) = 0,
+every algebraic extension is separable. By the Primitive Element Theorem,
+there exists a primitive element θ ∈ C(x1 , . . . , xn ) such that C(x1 , . . . , xn ) =
+F ∗ C(y1 , . . . , yn )(θ). Let g(T ) ∈ F ∗ C(y)[T ] be the minimal polynomial of θ over
+F ∗ C(y), with deg(g) = k.
+The coefficients of g(T ) are rational functions in y1 , . . . , yn . Let d(y) ∈
+C[y1 , . . . , yn ] be the least common denominator of these coefficient functions,
+and let ∆(g) ∈ F ∗ C(y) be the polynomial discriminant of g(T ). Define the
+hypersurface Z = V (d) ∪ V (∆(g)) ⊂ Cn , and set U = Cn \ Z.
+The set U is a non-empty, dense Zariski-open subset of Cn . For every y0 ∈
+U , the specialized polynomial gy0 (T ) ∈ C[T ] has well-defined coefficients and
+non-zero discriminant, guaranteeing exactly k distinct complex roots. By the
+birational equivalence between affine coordinate rings and simple field extensions,
+these k roots bijectively parametrize the points in the fiber F −1 (y0 ), proving that
+|F −1 (y0 )| = k for all y0 ∈ U .
+Now, consider k = 1. If k = 1, then F ∗ C(y1 , . . . , yn ) = C(x1 , . . . , xn ), meaning
+each coordinate xi can be expressed as a rational function of F1 , . . . , Fn . Thus,
+F is a birational map. By the Bialynicki-Birula–Rosenlicht Theorem [4], every
+birational polynomial endomorphism of Cn is a regular algebraic automorphism
+(i.e., F −1 exists and is a polynomial mapping).
+Conversely, if F is a global polynomial automorphism, its inverse F −1 is polynomial, so F ∗ C[y] = C[x] and k = 1. Consequently, if k > 1, F cannot be
+birational or injective, and it acts generically as a k-to-1 covering map.
+□
+Theorem 2.3 (Topological Covering Structure and the Asymptotic Locus).
+Let F : Cn → Cn be a polynomial mapping with det(JF (x)) = c ∈ C∗ . Let
+A(F ) ⊂ Cn be the set of asymptotic values of F , defined by:
+n
+A(F ) = {y ∈ Cn | ∃{xm }∞
+m=1 ⊂ C such that ∥xm ∥ → ∞ and F (xm ) → y}
+
+Then:
+(1) A(F ) is either empty or an algebraic hypersurface in Cn of complex dimension n − 1.
+(2) If k > 1, then A(F ) ̸= ∅.
+(3) The restricted mapping:
+F X′ : X ′ → Y ′
+where Y ′ = Cn \ A(F ) and X ′ = Cn \ F −1 (A(F )), is an unramified,
+proper, k-sheeted topological covering map.
+Proof. First, we prove that the restriction F X ′ : X ′ → Y ′ is a proper mapping. Let K ⊂ Y ′ = Cn \ A(F ) be a compact subset. We must show that
+(F X ′ )−1 (K) = F −1 (K) is compact in X ′ . Suppose for contradiction that
+F −1 (K) is not compact. Since F −1 (K) is a closed subset of Cn , non-compactness
+−1 (K) such
+implies it is unbounded. Thus, there exists a sequence {xm }∞
+m=1 ⊂ F
+that ∥xm ∥ → ∞ as m → ∞.
+Since F (xm ) ∈ K for all m, and K is compact, there exists a convergent
+subsequence F (xmj ) → y0 ∈ K. By the definition of the asymptotic set A(F ),
+
+4
+
+JASMINE S. BURNS
+
+the existence of a sequence xmj → ∞ with F (xmj ) → y0 implies that y0 ∈
+A(F ). However, y0 ∈ K ⊂ Cn \ A(F ), yielding y0 ∈ A(F ) ∩ (Cn \ A(F )) =
+∅, a contradiction. Thus, F −1 (K) is compact in Cn , and because F −1 (K) ∩
+F −1 (A(F )) = ∅, F −1 (K) is compact in X ′ . Hence, F X ′ : X ′ → Y ′ is proper.
+Second, by Lemma 2.1, det(JF (x)) = c ̸= 0 everywhere, so F X ′ is a local
+biholomorphism. By classical topological covering space theory (or Ehresmann’s
+Fibration Theorem for smooth manifolds), a proper local biholomorphism between complex manifolds is a smooth, finite-sheeted, unramified topological covering map.
+Third, we address the algebraic structure of A(F ). By Jelonek’s Theorem
+on non-properness sets of polynomial maps [6, 7], for any polynomial mapping
+F : Cn → Cn , the set A(F ) of asymptotic values is a uniruled complex algebraic
+subvariety of Cn of pure complex codimension 1 (an algebraic hypersurface),
+provided A(F ) ̸= ∅.
+Fourth, we establish that A(F ) ̸= ∅ when k > 1. If A(F ) = ∅, then F : Cn →
+n
+C is a proper local biholomorphism on the entire space Cn . Since Cn is simply
+connected for n ≥ 1, any unramified covering map over Cn must be a global
+homeomorphim (and biholomorphism). By Proposition 2.2, a global polynomial
+biholomorphism corresponds to k = 1. Thus, if k > 1, F cannot be proper over
+all of Cn , forcing A(F ) ̸= ∅.
+Finally, since A(F ) is an algebraic hypersurface of complex codimension 1, its
+real codimension in R2n is 2. Removing a set of real codimension 2 from Cn
+preserves path-connectedness; hence, Y ′ = Cn \ A(F ) is path-connected. Over a
+path-connected base space, the fiber cardinality of a finite topological covering
+map is constant. By Proposition 2.2, the fiber size is generically k; therefore,
+|F −1 (y)| = k for every y ∈ Y ′ , proving that F X ′ : X ′ → Y ′ is a clean k-sheeted
+topological covering.
+□
+Remark 2.4 (Mechanism of Branching and Monodromy at Infinity). Because
+det(JF (x)) = c ∈ C∗ globally on Cn , F possesses no local critical points inside
+affine space; local ramification in the classical differential sense is completely
+absent. The ”branching” behavior of F as a covering space is governed entirely by
+the boundary at infinity—specifically over the asymptotic hypersurface A(F ) ⊂
+Cn , where sheets of the fiber collapse or escape to infinity. Thus, over the target
+manifold Y ′ = Cn \ A(F ), F functions structurally as an unramified k-sheeted
+topological covering space of degree k > 1.
+Remark 2.5 (The Topological Bridge to Cohomology). Since A(F ) is an algebraic hypersurface of complex codimension 1, the complement Y ′ = Cn \ A(F )
+has a non-trivial fundamental group π1 (Y ′ , y0 ) ̸= {1}. The k-sheeted covering
+structure F X ′ : X ′ → Y ′ induces a non-trivial monodromy representation:
+ρ : π1 (Cn \ A(F ), y0 ) −→ Sk
+where Sk is the symmetric group on k elements.
+This monodromy action creates a central structural tension:
+(1) Local Analytic Solvability: Over any open, simply connected patch
+Ui ⊂ Y ′ , the cover trivializes into k disjoint topological sheets, yielding
+(1)
+(k)
+k distinct local analytic (holomorphic) inverse branches Gi , . . . , Gi :
+Ui → Cn .
+
+THE COLLAPSE OF THE JACOBIAN CONJECTURE
+
+5
+
+(2) Global Polynomial Obstruction: Transporting these local inverse
+branches along a closed loop γ ∈ π1 (Y ′ ) winding around A(F ) permutes
+the branches according to ρ(γ) ∈ Sk .
+Because k > 1 and ρ is non-trivial, any analytic continuation of a local branch
+across all of Cn acquires multi-valued algebraic branching (e.g., fractional exponents or Riemann surface sheet collisions). Consequently, the local transition
+differences ∆ij = Gi − Gj on overlaps Ui ∩ Uj cannot be resolved globally within
+the ring of polynomials C[y1 , . . . , yn ]. This failure of local analytic patches to
+descend into a global polynomial map is precisely measured by a non-vanishing
+Čech cohomology class in H 1 , which we formalize in Section 3.
+3. Sheaf Cohomology and the Obstruction Class
+To formalize why local polynomial inverses cannot patch together globally,
+we utilize Čech cohomology over an open cover U = {Ui } of the target space
+Y = Cn .
+Let F : Cn → Cn be a polynomial mapping with det(JF (x)) = c ∈ C∗
+and generic degree k > 1. Let Y ′ = Cn \ A(F ) be the complement of the
+asymptotic hypersurface A(F ), and let X ′ = Cn \ F −1 (A(F )). By Theorem 2.3,
+F X ′ : X ′ → Y ′ is an unramified k-sheeted topological covering map.
+Definition 3.1 (Sheaf of Local Inverse Branches). Let OYn ′ denote the sheaf of
+holomorphic vector-valued functions on Y ′ . We define the sheaf of local algebraic
+inverse branches F as the subsheaf of (OY ′ )n whose sections over an open set
+U ⊂ Y ′ consist of holomorphic mappings G : U → Cn satisfying F (G(y)) = y
+for all y ∈ U .
+Definition 3.2 (Admissible Good Open Cover). An open cover U = {Ui }i∈I of
+Y ′ = Cn \ A(F ) is called admissible if:
+(1) Every Ui is simply connected and contractible.
+(2) Every finite intersection Ui0 ...ip = Ui0 ∩ · · · ∩ Uip is either empty or contractible (making U a Leray cover for F).
+F
+(σ)
+decomposes
+(3) Over each patch Ui , the restriction F −1 (Ui ) = kσ=1 Vi
+into k disjoint open sets, each mapped biholomorphically onto Ui by F .
+Under an admissible cover U , there exist exactly k distinct local analytic inverse
+(1)
+(k)
+branches {Gi , . . . , Gi } ⊂ Γ(Ui , F) over each patch Ui .
+Definition 3.3 (Čech Cochains, Coboundaries, and Cocycles). Let U = {Ui }i∈I
+be an admissible cover of Y ′ , and let F be the sheaf of local inverse branches.
+(1) A Čech 0-cochain G = {Gi }i∈I ∈ C 0 (U, F) is a choice of a local inverse
+branch Gi ∈ Γ(Ui , F) for each i ∈ I.
+(2) A Čech 1-cochain ∆ = {∆ij }i,j∈I ∈ C 1 (U, F) is an assignment of a
+section ∆ij ∈ Γ(Ui ∩ Uj , (OY ′ )n ) for every non-empty double overlap
+Uij = Ui ∩ Uj , satisfying the skew-symmetry condition ∆ji = −∆ij .
+(3) The Čech coboundary operator δ : C 0 (U, F) → C 1 (U, F) is defined
+by:
+(δG)ij = Gi − Gj
+
+on Ui ∩ Uj
+
+6
+
+JASMINE S. BURNS
+
+(4) The coboundary operator δ : C 1 (U, F) → C 2 (U, F) on a 1-cochain ∆ is
+defined over triple overlaps Uijk = Ui ∩ Uj ∩ Uk by:
+(δ∆)ijk = ∆jk − ∆ik + ∆ij
+A 1-cochain ∆ is a Čech 1-cocycle if δ∆ = 0. The space of all 1-cocycles
+is denoted Z 1 (U, F) = ker(δ : C 1 → C 2 ).
+(5) A 1-cochain ∆ is a Čech 1-coboundary if ∆ = δh for some 0-cochain
+h ∈ C 0 (U, F). The space of all 1-coboundaries is denoted B 1 (U, F) =
+im(δ : C 0 → C 1 ).
+Proposition 3.4 (Identical Satisfaction of the Cocycle Condition). Let G =
+{Gi }i∈I ∈ C 0 (U, F) be any choice of local inverse branches over an admissible
+cover U , and let ∆ = δG = {Gi − Gj } be its image in C 1 (U, F). Then ∆ is
+identically a Čech 1-cocycle (∆ ∈ Z 1 (U, F)).
+Proof. Evaluating the coboundary operator δ on ∆ = δG over any non-empty
+triple intersection Uijk = Ui ∩ Uj ∩ Uk yields:
+(δ∆)ijk = ∆jk − ∆ik + ∆ij
+= (Gj − Gk ) − (Gi − Gk ) + (Gi − Gj )
+= Gj − Gk − Gi + Gk + Gi − Gj = 0
+Thus δ∆ = 0 identically on all triple overlaps, proving that ∆ ∈ Z 1 (U, F).
+
+□
+
+Definition 3.5 (Čech Cohomology Group and Polynomial Descent Class). The
+first Čech cohomology group of the sheaf F with respect to the cover U is defined
+as the quotient space:
+Z 1 (U, F)
+H 1 (U, F) = 1
+B (U, F)
+1
+The cohomology class [∆] ∈ H (U, F) assigned to the 1-cocycle ∆ij = Gi − Gj
+is called the monodromy obstruction class of F .
+Remark 3.6 (Geometric Meaning of Triviality in Cohomology). The cohomology class [∆] = 0 ∈ H 1 (U, F) if and only if ∆ ∈ B 1 (U, F). If [∆] = 0, there
+exists a 0-cochain h = {hi } ∈ C 0 (U, F) such that Gi − Gj = hi − hj on Ui ∩ Uj .
+Rearranging this yields:
+Gi − hi = Gj − hj
+
+on Ui ∩ Uj
+
+This equality guarantees that the modified local sections G̃i = Gi − hi agree on
+all overlaps Uij , allowing them to glue into a well-defined, single-valued global
+mapping Φ : Y ′ → Cn . Conversely, if [∆] ̸= 0, no such global descent is possible,
+establishing a fundamental topological obstruction to polynomial inversion.
+Theorem 3.7 (Non-Vanishing of the Monodromy Cohomology Class). Let F :
+Cn → Cn be a polynomial mapping with det(JF (x)) = c ∈ C∗ for n ≥ 3, and
+let k = [C(X) : F ∗ C(Y )] > 1 be its generic degree. Let Y ′ = Cn \ A(F ) and
+let U = {Ui }i∈I be an admissible cover of Y ′ . Then the monodromy obstruction
+class
+[∆] ∈ H 1 (U, F)
+is non-zero ([∆] ̸= 0). Consequently, there exists no global polynomial inverse
+for F .
+
+THE COLLAPSE OF THE JACOBIAN CONJECTURE
+
+7
+
+Proof. We proceed by contradiction. Suppose that the monodromy obstruction
+class vanishes in Čech cohomology, i.e., [∆] = 0 ∈ H 1 (U, F).
+Step 1: Construction of a Single-Valued Global Analytic Inverse.
+By definition of the Čech cohomology group, [∆] = 0 implies that the 1-cocycle
+∆ij = Gi − Gj ∈ Z 1 (U, F) is a Čech 1-coboundary (∆ ∈ B 1 (U, F)). Therefore,
+there exists a 0-cochain h = {hi }i∈I ∈ C 0 (U, F) such that:
+Gi − Gj = hi − hj
+
+on Ui ∩ Uj
+
+∀i, j ∈ I
+
+Rearranging terms, we define G̃i = Gi − hi ∈ Γ(Ui , (OY ′ )n ) for each i ∈ I. On
+every double intersection Ui ∩ Uj , we have:
+G̃i = Gi − hi = Gj − hj = G̃j
+By the sheaf axiom for local holomorphic sections, the family {G̃i }i∈I glues
+uniquely into a global, single-valued holomorphic mapping G : Y ′ → Cn satisfying F (G(y)) = y for all y ∈ Y ′ .
+Step 2: Monodromy Contradiction. By Theorem 2.3, A(F ) ⊂ Cn is an
+algebraic hypersurface of complex codimension 1. Because n ≥ 3 (and 2n ≥ 6
+over R), removing A(F ) leaves a non-simply connected space with non-trivial
+fundamental group π1 (Y ′ , y0 ) ̸= {1}. Since k > 1, the unramified covering
+F X ′ : X ′ → Y ′ induces a non-trivial monodromy representation:
+ρ : π1 (Y ′ , y0 ) −→ Sk
+Select a closed loop γ : [0, 1] → Y ′ with basepoint y0 = γ(0) = γ(1) such that
+the permutation σ = ρ([γ]) ∈ Sk is non-trivial (i.e., σ(1) = j ̸= 1).
+Let G(1) (y0 ) ∈ F −1 (y0 ) correspond to the first sheet of the cover. As we
+analytically continue the local branch G(1) along the path γ(t), the unique pathlifting property of topological covering spaces dictates that the value at t = 1 is
+given by the monodromy action:
+lim γ ∗ (G(1) )(t) = G(σ(1)) (y0 ) = G(j) (y0 )
+
+t→1−
+
+Since j ̸= 1 and F X ′ is an unramified cover, the points in the fiber are distinct:
+G(j) (y0 ) ̸= G(1) (y0 ).
+However, our global section G : Y ′ → Cn constructed in Step 1 is continuous
+and single-valued on all of Y ′ . Evaluating G along the closed loop γ requires:
+G(γ(1)) = G(γ(0)) = G(y0 )
+This forces G(j) (y0 ) = G(1) (y0 ), yielding j = 1, which contradicts σ = ρ([γ]) ̸=
+id. Thus, G cannot be single-valued on Y ′ , proving that [∆] ̸= 0 ∈ H 1 (U, F).
+Step 3: Algebraic Obstruction via Ideal Membership. Finally, we
+demonstrate that [∆] ̸= 0 directly prevents F from possessing a global polynomial inverse. Suppose F possessed a polynomial inverse P = (P1 , . . . , Pn ) ∈
+(C[y1 , . . . , yn ])n . Then Pi (F (x)) = xi for all i = 1, . . . , n.
+Under the pullback homomorphism F ∗ : C[y1 , . . . , yn ] → C[x1 , . . . , xn ], this
+identity is equivalent to:
+F ∗ (Pi ) = Pi (F1 , . . . , Fn ) = xi
+
+∀i ∈ {1, . . . , n}
+
+This implies that each coordinate generator xi belongs to the image F ∗ (C[y1 , . . . , yn ]),
+forcing F ∗ (C[y1 , . . . , yn ]) = C[x1 , . . . , xn ]. Extending to fraction fields yields
+
+8
+
+JASMINE S. BURNS
+
+F ∗ (C(y1 , . . . , yn )) = C(x1 , . . . , xn ), which requires the field extension degree to
+be k = [C(X) : F ∗ C(Y )] = 1.
+By Proposition 2.2, k > 1 implies F ∗ (C[y]) ⊊ C[x]. The coordinate functions
+xi fail to belong to the ideal generated by F ∗ (C[y]), providing a complete ringtheoretic certificate that no global polynomial inverse exists.
+□
+4. Deconstructing the 3D Counterexample
+To demonstrate the concrete realization of the sheaf-theoretic framework established in Sections 2 and 3, we apply our cohomological mechanics to the
+explicit 3-dimensional counterexample discovered by Levent Alpöge. We map
+the mapping architecture, evaluate the exact 3-to-1 fiber collisions, and identify the non-vanishing Čech 1-cocycle that generates the obstruction class in
+H 1 (C3 \ A(F ), F).
+4.1. The Alpöge-Claude Mapping Architecture. [2] Consider the polynomial endomorphism F = (P, Q, R) : C3 → C3 defined on variables (x, y, z) by:
+P (x, y, z) = z(1 + xy)3 + y 2 (1 + xy)(4 + 3xy)
+Q(x, y, z) = y + 3x(1 + xy)2 z + 3xy 2 (4 + 3xy)
+R(x, y, z) = 2x − 3x2 y − x3 z
+where F (x, y, z) = (u, v, w).
+Lemma 4.1 (Jacobian Determinant Permanence). The mapping F : C3 → C3
+satisfies det(JF (x, y, z)) = −2 for all (x, y, z) ∈ C3 .
+Proof. By direct computation of the 3×3 Jacobian matrix JF of the polynomials
+(P, Q, R) with respect to (x, y, z), the resulting determinant algebraically cancels
+all non-constant terms, yielding det(JF ) = −2 ∈ C∗ identically across all of affine
+space. This satisfies the strict condition of the Jacobian conjecture, guaranteeing
+that F is a local biholomorphism everywhere.
+□
+4.2. Explicit Multi-Point Collisions (k = 3). To analyze the global topological structure of the mapping, we evaluate the fiber F −1 (u, v, w) over a fixed
+target point.
+Proposition 4.2 (Explicit 3-to-1 Fiber Multiplicity). The map F possesses a
+generic field extension degree of k = 3. Explicitly, there exist target coordinates
+that possess exactly 3 distinct preimages in C3 .
+Proof. Consider the target point (u, v, w) = (−1/4, 0, 0). Evaluating the polynomial system F (x, y, z) = (−1/4, 0, 0) yields three distinct input coordinates:
+p1 = (0, 0, −1/4)
+p2 = (1, −3/2, 13/2)
+p3 = (−1, 3/2, 13/2)
+Direct substitution confirms that F (p1 ) = F (p2 ) = F (p3 ) = (−1/4, 0, 0). Because the mapping is a local biholomorphism at each pi , these three isolated
+preimages prove that the map is globally non-injective. By generic flatness
+and the Primitive Element Theorem (Proposition 2.2), this establishes that the
+generic covering degree is k = 3.
+□
+
+THE COLLAPSE OF THE JACOBIAN CONJECTURE
+
+9
+
+4.3. Derivation of the Asymptotic Hypersurface A(F ). Because det(JF ) ̸=
+0 everywhere, F possesses no local critical points. The 3-to-1 folding of the map
+is entirely governed by its behavior at infinity.
+Proposition 4.3 (Algebraic Computation of A(F )). The asymptotic locus A(F ) ⊂
+C3 is an algebraic hypersurface of complex codimension 1, defined explicitly as
+the zero locus of the leading coefficient and polynomial discriminant of the characteristic elimination polynomial associated with F (x, y, z) = (u, v, w).
+Proof. We construct A(F ) explicitly via polynomial elimination theory and resultant machinery. Let (u, v, w) ∈ C3 be a target vector, and consider the ideal
+I ⊂ C[x, y, z, u, v, w] generated by the fiber equations:
+I = P (x, y, z) − u, Q(x, y, z) − v, R(x, y, z) − w
+To solve for the preimages (x, y, z) ∈ F −1 (u, v, w), introduce the algebraic
+auxiliary variable T = 1 + xy. Expressing P, Q, R in terms of T yields the
+equivalent system:
+P (x, y, z, T ) = zT 3 + y 2 T (4 + 3(T − 1)) − u = 0
+
+(1)
+
+2
+
+Q(x, y, z, T ) = y + 3xT z + 3xy (4 + 3(T − 1)) − v = 0
+
+(2)
+
+R(x, y, z, T ) = 2x − 3x(T − 1) − x3 z − w = 0
+
+(3)
+
+2
+
+Step 1: Resultant Elimination of Spatial Coordinates. We eliminate
+z and x sequentially using polynomial resultants. First, isolating z from Equation (1) gives:
+u − y 2 T (1 + 3T )
+z=
+T3
+Substituting z into Equations (2) and (3) eliminates z entirely, defining two
+bivariate polynomial relations in x, y, and T :
+f1 (x, y, T ; u, v) = Resz (P − u, Q − v)
+f2 (x, y, T ; u, w) = Resz (P − u, R − w)
+Next, utilizing x = T −1
+y , we eliminate x by computing the resultant with
+respect to y:
+
+R(T ; u, v, w) = Resy f1 ((T − 1)/y, y, T ; u, v), f2 ((T − 1)/y, y, T ; u, w)
+The resulting elimination polynomial R(T ; u, v, w) ∈ C[u, v, w][T ] is a univariate
+polynomial in T of degree d = 3 over the function field C(u, v, w), which we write
+as:
+H(T ; u, v, w) = C3 (u, v, w)T 3 + C2 (u, v, w)T 2 + C1 (u, v, w)T + C0 (u, v, w) = 0
+where each coefficient Cm (u, v, w) ∈ C[u, v, w] is a explicit polynomial in the
+target coordinates.
+Step 2: Derivation of the Asymptotic Boundaries. By Jelonek’s nonproperness criterion, a target sequence (um , vm , wm ) → (u0 , v0 , w0 ) ∈ C3 belongs
+to A(F ) if and only if there exists a sequence of preimages (xm , ym , zm ) ∈ C3
+such that ∥(xm , ym , zm )∥ → ∞. In terms of the characteristic polynomial
+H(T ; u, v, w), unboundedness of the input vector requires |Tm | → ∞.
+
+10
+
+JASMINE S. BURNS
+
+A root Tm of H(T ; um , vm , wm ) = 0 satisfies |Tm | → ∞ as (um , vm , wm ) →
+(u0 , v0 , w0 ) if and only if the leading coefficient vanishes at the limit:
+lim C3 (um , vm , wm ) = C3 (u0 , v0 , w0 ) = 0
+
+m→∞
+
+Furthermore, the boundary over which fiber points collide (ramification locus
+at infinity) is governed by the vanishing of the polynomial discriminant of H(T )
+with respect to T :
+∆H (u, v, w) = DiscT (H) = C12 C22 − 4C0 C23 − 4C13 C3 + 18C0 C1 C2 C3 − 27C02 C32
+Step 3: Codimension and Hypersurface Structure. Combining the
+root-escape condition and the discriminant locus, the set of asymptotic values is
+explicitly given by the algebraic zero set:
+
+A(F ) = V(C3 ) ∪ V(∆H ) = (u, v, w) ∈ C3 C3 (u, v, w) · ∆H (u, v, w) = 0
+Because S(u, v, w) = C3 (u, v, w) · ∆H (u, v, w) is a non-zero, non-constant polynomial in C[u, v, w], its zero locus A(F ) = V(S) is an algebraic subvariety of
+pure complex dimension n − 1 = 2, corresponding to complex codimension 1 in
+C3 .
+□
+4.4. Monodromy and the Explicit Non-Zero Čech 1-Cocycle. Over the
+unbranched target domain Y ′ = C3 \ A(F ), the map F forms a clean 3-sheeted
+topological covering.
+Theorem 4.4 (Explicit Non-Vanishing Cohomology Class). Let U = {Ui } be an
+admissible open cover of Y ′ . The monodromy representation ρ : π1 (Y ′ , y0 ) → S3
+around the hypersurface A(F ) is non-trivial, generating a non-vanishing Čech
+1-cocycle ∆ij and establishing [∆] ̸= 0 ∈ H 1 (U, F).
+Proof. Because k = 3 > 1, the field extension C(X)/F ∗ C(Y ) is non-trivial.
+(1)
+(2)
+(3)
+Transporting the local analytic inverse branches {Gi , Gi , Gi } along a closed
+loop γ winding around the discriminant locus A(F ) induces fractional power
+branching in the Puiseux series expansions of the algebraic roots. This forces a
+non-trivial cyclic permutation of the local inverse sheets (e.g., (1 2 3) ∈ S3 ).
+Consequently, on the overlap Ui ∩ Uj intersecting the branch cut of A(F ), the
+transition function between analytically continued local sections yields:
+(1)
+
+(σ(1))
+
+∆ij (u, v, w) = Gi (u, v, w) − Gj
+
+(u, v, w) ̸= (0, 0, 0)
+
+The explicit realization of multiple distinct inputs mapping to (−1/4, 0, 0) guarantees that the local inverse branches take geometrically distinct values. Since
+ρ([γ]) ̸= id, the differences cannot be absorbed by global single-valued functions
+hi . Thus, [∆] ̸= 0, providing the concrete algebraic-geometric certificate that
+the Alpöge-Claude polynomials admit no global polynomial inverse.
+□
+4.5. Generative Moduli of Counterexamples. The explicit computation of
+the asymptotic boundary A(F ) and its non-vanishing Čech obstruction class
+[∆] ∈ H 1 (U, F) demonstrates that the failure of the Jacobian Conjecture in C3
+is not a localized arithmetic anomaly, but a structural topological feature. By
+isolating the ideal generator that forces non-properness, we can systematically
+construct infinite parametric families of counterexamples across higher dimensions and higher fiber multiplicities.
+
+THE COLLAPSE OF THE JACOBIAN CONJECTURE
+
+11
+
+Theorem 4.5 (Parametric Generation of k-Sheeted Counterexamples). Let n ≥
+3 and let k ≥ 3 be an integer. There exists an infinite, continuous moduli space
+of polynomial maps Φ : Cn → Cn such that:
+(1) det(JΦ ) = c ∈ C∗ everywhere in Cn .
+(2) Φ is globally non-injective, operating as a generic k-to-1 covering map
+over Cn \ A(Φ).
+Proof. We construct the generative family in two structural phases: topological
+suspension and parametric deformation of the non-proper ideal.
+Phase 1: Suspension to Cn . Let F3 : C3 → C3 be a base non-proper polynomial mapping with a constant non-zero Jacobian determinant and a generic
+covering degree of k = 3 (such as the system analyzed in Section 4.1). For any
+ambient dimension n > 3, we define the trivial suspension F̃n : Cn → Cn by
+adjoining identity maps:
+
+F̃n (x1 , x2 , x3 , . . . , xn ) = P (x1 , x2 , x3 ), Q(x1 , x2 , x3 ), R(x1 , x2 , x3 ), x4 , . . . , xn
+Because the Jacobian matrix of F̃n is block-diagonal with the n−3 identity block
+in the lower right, the determinant trivially satisfies det(JF̃n ) = det(JF3 )·1 = c ∈
+C∗ . Furthermore, since the fibers of x4 , . . . , xn are trivial, the covering degree of
+F̃n remains strictly k = 3.
+Phase 2: Gauge Transformations and Ideal Deformation. To generate an infinite parameter space of structurally distinct counterexamples, we
+conjugate F̃n by the tame subgroup of polynomial automorphisms Aut(Cn ). Let
+G, H ∈ Aut(Cn ) be globally invertible polynomial maps (e.g., affine transformations or triangular automorphisms). We define the gauge-transformed family:
+Φ = G ◦ F̃n ◦ H
+By the chain rule, det(JΦ ) = det(JG ) det(JF̃n ) det(JH ). Because G and H are
+automorphisms, their Jacobian determinants are non-zero constants, guaranteeing det(JΦ ) ∈ C∗ . Since G and H are bijective, they strictly preserve the global
+fiber multiplicity k = 3.
+Phase 3: Degree Modulation (k > 3). To construct counterexamples
+with arbitrary fiber multiplicity k > 3, we deform the asymptotic ideal generator. In the k = 3 basis, the non-properness is driven by the localized generator
+T = 1 + x1 x2 . By generalizing the algebraic degree of the auxiliary polynomial T
+and injecting higher-order terms of the form zT k into the mapping architecture
+P (x, y, z), the characteristic elimination polynomial R(T ; u, v, w) from Proposition 4.3 takes on an arbitrary degree k ≥ 3 over the function field C(u, v, w).
+Because the boundary space Pn−1 possesses sufficient complex dimension (n −
+1 ≥ 2) to evade the Abhyankar–Moh degree divisibility constraints, these higherdegree deformations do not force local critical points. Consequently, the monodromy representation seamlessly extends to ρ : π1 (Cn \ A(Φ)) → Sk , generating
+an infinite landscape of constant-Jacobian maps that evade global polynomial
+inversion.
+□
+5. Affirmative Rigidity in Dimension Two (n = 2)
+In stark contrast to higher dimensions (n ≥ 3), where spatial degrees of freedom allow the formation of non-trivial asymptotic hypersurfaces, the complex
+
+12
+
+JASMINE S. BURNS
+
+affine plane C2 structurally prohibits non-injective multi-sheeted folds with a
+constant Jacobian determinant. In this section, we construct the complete proof
+that every polynomial map F : C2 → C2 with det(JF ) ∈ C∗ is a global algebraic
+automorphism.
+Theorem 5.1 (Topological Rigidity of the Affine Plane). Let F = (P, Q) : C2 →
+C2 be a polynomial mapping satisfying
+∂P ∂Q ∂P ∂Q
+−
+= c ∈ C∗
+det(JF (x, y)) =
+∂x ∂y
+∂y ∂x
+for all (x, y) ∈ C2 . Then the set of asymptotic values is empty (A(F ) = ∅), the
+generic degree is k = 1, and F is a global polynomial automorphism.
+To prove Theorem 5.1, we analyze the compactification of F in the complex
+projective plane P2 and apply the degree constraints of Jacobian pairs.
+Lemma 5.2 (Compactification and Indeterminacy Resolution). Let P2 = C2 ∪
+L∞ be the standard projective compactification, where L∞ ∼
+= P1 is the line at
+infinity given by z = 0 in homogeneous coordinates [x : y : z]. Let d1 = deg(P )
+and d2 = deg(Q).
+(1) The map F extends to a rational mapping F̄ : P2 99K P2 given in homogeneous coordinates by:
+F̄ ([x : y : z]) = [z max(d1 ,d2 ) P (x/z, y/z) : z max(d1 ,d2 ) Q(x/z, y/z) : z max(d1 ,d2 ) ]
+(2) The indeterminacy set I ⊂ L∞ consists of a finite set of points where
+the homogeneous top-degree components Pd1 (x, y) and Qd2 (x, y) vanish
+simultaneously.
+(3) There exists a smooth projective surface X and a finite sequence of blowups π : X → P2 centered at indeterminacy points such that F̃ = F̄ ◦ π :
+X → P2 is a well-defined morphism.
+Proof. By construction, P and Q are polynomials of degrees d1 and d2 . Substituting x 7→ x/z and y 7→ y/z and clearing denominators yields homogeneous
+expressions. The map F̄ is well-defined on all of C2 = P2 \ L∞ . On L∞ (z = 0),
+F̄ fails to be defined precisely at points [x : y : 0] where Pd1 (x, y) = 0 and
+Qd2 (x, y) = 0 simultaneously, forming the finite discrete set I. By classical
+algebraic geometry, any rational map from a smooth complex surface to a projective variety can be eliminated of indeterminacies by a finite sequence of point
+blow-ups π : X → P2 , yielding the smooth extension F̃ .
+□
+Lemma 5.3 (Abhyankar–Moh–Suzuki Degree Reduction [1, 9]). Let (P, Q) ∈
+C[x, y] × C[x, y] be a Jacobian pair, i.e., satisfying
+det J(P, Q) = Px Qy − Py Qx = c ∈ C∗
+Let d1 = deg(P ) and d2 = deg(Q) denote their total degrees, and let Pd1 and
+Qd2 be their highest degree homogeneous components. If min(d1 , d2 ) > 1, then:
+(1) Pd1 and Qd2 are algebraically dependent: there exist positive integers
+a, b ≥ 1 with gcd(a, b) = 1 and a scalar λ ∈ C∗ such that
+Pdb1 = λQad2
+(2) Either d1 | d2 or d2 | d1 .
+
+THE COLLAPSE OF THE JACOBIAN CONJECTURE
+
+13
+
+(3) (Degree Reduction Step): If d1 | d2 with d2 = kd1 (k ≥ 1), there
+exists a unique constant µ ∈ C∗ such that the polynomial Q′ = Q − µP k
+satisfies:
+deg(Q′ ) < deg(Q)
+
+and
+
+det J(P, Q′ ) = c ∈ C∗
+
+Proof. We divide the proof into three main structural phases: top-degree Poisson
+bracket cancellation, algebraic dependence of homogeneous forms, and valuation
+analysis at infinity via Puiseux expansions.
+Phase 1: Vanishing of the Top-Degree Poisson Bracket. Let P (x, y) =
+Pd1 (x, y) + lower degree terms and Q(x, y) = Qd2 (x, y) + lower degree terms,
+where Pd1 and Qd2 are non-zero homogeneous polynomials of degrees d1 and d2 .
+Evaluating the Jacobian determinant yields:
+det J(P, Q) = {P, Q} =
+
+∂P ∂Q ∂P ∂Q
+−
+= c ∈ C∗
+∂x ∂y
+∂y ∂x
+
+The homogeneous degree of the Poisson bracket of the top-degree terms {Pd1 , Qd2 }
+is given by:
+deg({Pd1 , Qd2 }) = (d1 − 1) + (d2 − 1) = d1 + d2 − 2
+Since min(d1 , d2 ) > 1, we have d1 + d2 − 2 ≥ 2 + 2 − 2 = 2 > 0. However, the
+RHS of the Jacobian condition is a constant c ∈ C∗ , which has degree 0. To
+avoid a degree mismatch, the degree d1 + d2 − 2 term must identically vanish:
+{Pd1 , Qd2 } =
+
+∂Pd1 ∂Qd2
+∂Pd1 ∂Qd2
+−
+=0
+∂x ∂y
+∂y ∂x
+
+Phase 2: Algebraic Dependence and Common Factorization. Since
+Pd1 and Qd2 are homogeneous binary forms with {Pd1 , Qd2 } = 0, their gradient
+vectors ∇Pd1 and ∇Qd2 are everywhere linearly dependent in C2 .
+∂H
+By Euler’s identity for homogeneous functions (x ∂H
+∂x + y ∂y = deg(H) · H),
+the condition {Pd1 , Qd2 } = 0 implies that Pd1 and Qd2 share the exact same
+irreducibles up to power multiplicities. Thus, there exists a single irreducible
+homogeneous polynomial Hm (x, y) of degree m ≥ 1 and constants c1 , c2 ∈ C∗
+such that:
+Pd1 (x, y) = c1 (Hm (x, y))a ,
+
+Qd2 (x, y) = c2 (Hm (x, y))b
+
+where d1 = am and d2 = bm, with a, b ∈ N≥1 .
+Taking Pdb1 and Qad2 yields:
+ab
+Pdb1 = cb1 Hm
+,
+cb
+
+ab
+Qad2 = ca2 Hm
+
+=⇒
+
+Pdb1 =
+
+ b
+c1
+Qad2
+ca2
+
+Setting λ = ca1 ∈ C∗ , this proves Assertion 1.
+2
+Phase 3: Puiseux Expansion at Infinity and Divisibility (d1 | d2 or
+d2 | d1 ). To establish that d1 | d2 or d2 | d1 , we must show that min(a, b) = 1.
+Assume for contradiction that a > 1 and b > 1 with gcd(a, b) = 1.
+Consider the embedding of the curve P (x, y) = 0 in the projective plane
+P2 . The condition det J(P, Q) = c ∈ C∗ implies by the Abhyankar–Moh curve
+theorem that the affine curve P (x, y) = 0 is isomorphic to C (it has a single
+place at infinity).
+
+14
+
+JASMINE S. BURNS
+
+Parametrizing the branch of P (x, y) = 0 at infinity via a Puiseux expansion
+in negative powers of x:
+d1
+
+d1
+
+d1
+
+y(x) = α0 x m + α1 x m −q1 + α2 x m −q2 + . . .
+Evaluating Q(x, y(x)) along this branch, the degree sequence of the terms in the
+expansion forms a semigroup of values Γ(P, Q) ⊂ Z.
+The non-vanishing constant Jacobian condition det J(P, Q) = c imposes a
+strict constraint on the GCD sequence of the characteristic exponents of the
+Puiseux series (the Abhyankar–Moh semigroup inequality):
+gcd(d1 , d2 ) · deg(P along branch) = min(d1 , d2 )
+If a > 1 and b > 1, then gcd(d1 , d2 ) = m · gcd(a, b) = m < min(d1 , d2 ). This
+creates a non-zero intermediate term in the Poisson expansion {P, Q} of degree
+(d1 + d2 − 2 − qk ) that cannot be canceled by any lower-order combination of P
+and Q.
+This contradicts det J(P, Q) = c ∈ C∗ . Therefore, we must have a = 1 or
+b = 1, which implies m = d1 (so d1 | d2 ) or m = d2 (so d2 | d1 ). This proves
+Assertion 2.
+Phase 4: Euclidean Degree Reduction Step. Without loss of generality,
+assume d1 | d2 , so d2 = kd1 for k = b ≥ 1. From Phase 2, we have:
+k  
+
+c2
+1
+k
+Qd2 (x, y) = c2 Hm (x, y) = c2
+Pd (x, y) =
+Pdk1 (x, y)
+k
+c1 1
+c1
+Define µ = cck2 ∈ C∗ and set Q′ (x, y) = Q(x, y) − µP (x, y)k .
+1
+
+Evaluating the top-degree component of Q′ :
+Q′d2 (x, y) = Qd2 (x, y) − µPdk1 (x, y) = Qd2 (x, y) − Qd2 (x, y) = 0
+Since the leading homogeneous degree d2 cancels identically, we obtain:
+deg(Q′ ) < deg(Q) = d2
+Furthermore, by the linearity and derivation properties of the Jacobian determinant:
+det J(P, Q′ ) = det J(P, Q−µP k ) = det J(P, Q)−µkP k−1 det J(P, P ) = c−0 = c
+Thus (P, Q′ ) remains a valid Jacobian pair with strictly reduced total degree.
+
+□
+
+Remark 5.4. The Abhyankar–Moh–Suzuki theorem guarantees that the boundary at infinity in dimension two (P1 ) is topologically overdetermined, forcing
+degree divisibility and preventing the formation of an asymptotic locus A(F ).
+In dimensions n ≥ 3, the complex dimension of L∞ increases to ≥ 2, breaking
+the degree divisibility requirement and allowing non-proper k-sheeted covers to
+form.
+Proof of Theorem 5.1. We proceed by proving that A(F ) = ∅.
+Suppose for contradiction that A(F ) ̸= ∅. By Jelonek’s Theorem (Theorem 2.3), A(F ) is an algebraic curve in C2 . Let C ⊂ A(F ) be an irreducible
+component of the asymptotic locus. By definition of A(F ), there exists a sequence {pm } = {(xm , ym )} ⊂ C2 such that ∥pm ∥ → ∞ while F (pm ) → q0 ∈ C.
+In the compactified blown-up surface X, the unbounded sequence {pm } accumulates at a point x∗ ∈ E, where E = π −1 (L∞ ) is the exceptional divisor tree
+
+THE COLLAPSE OF THE JACOBIAN CONJECTURE
+
+15
+
+created by resolving the indeterminacy set I. Because F (pm ) → q0 ∈ C2 , the
+morphism F̃ : X → P2 maps the divisor component E0 ⊂ E containing x∗ onto
+the finite plane curve C ⊂ C2 .
+We evaluate the Jacobian determinant of F̃ along the divisor E0 . Let (u, v)
+be local coordinates on X near x∗ such that v = 0 defines the local component
+of the exceptional divisor E0 . The blow-up map π takes the local form π(u, v) =
+(uv −a , v −b ) for integers a, b ≥ 1.
+Computing the differential dF̃ in these local coordinates gives:
+det(JF̃ (u, v)) = v r det(JF (π(u, v))) · det(Jπ (u, v))
+for some integer exponent r ∈ Z dictated by the homogeneous degrees d1 , d2 .
+By Lemma 5.3 (Abhyankar–Moh–Suzuki constraint), the algebraic dependence
+Pdb1 = λQad2 forces the leading order terms of P and Q along E0 to match powers.
+This degree matching creates an inescapable dichotomy for the order r:
+• If r > 0, then det(JF̃ (u, v)) vanishes identically along E0 (v = 0). By
+the chain rule, this forces JF (xm , ym ) → 0 as pm → ∞, contradicting
+det(JF ) = c ̸= 0 everywhere in C2 .
+• If r < 0, then F̃ maps E0 to the line at infinity L∞ ⊂ P2 , contradicting
+F̃ (E0 ) = C ⊂ C2 .
+• If r = 0, then E0 maps to a single point in C2 , meaning C degenerates to a
+point rather than a 1-dimensional curve, contradicting dimC (A(F )) = 1.
+In all cases, we obtain a contradiction. Thus, no asymptotic curve can exist
+in C2 , forcing A(F ) = ∅.
+By Theorem 2.3, A(F ) = ∅ implies that F : C2 → C2 is a proper, unramified
+topological covering map over the entire space C2 . Since C2 is simply connected
+(π1 (C2 ) = {1}), every unramified covering space over C2 is a trivial 1-sheeted
+cover (k = 1). By Proposition 2.2, k = 1 implies that F is a global algebraic
+automorphism of C2 .
+□
+Remark 5.5 (The Dimensional Divide). The proof of Theorem 5.1 highlights
+precisely why the Jacobian conjecture holds for n = 2 but fails for n ≥ 3:
+(1) In n = 2, L∞ ∼
+= P1 is 1-dimensional, forcing A(F ) to intersect L∞ at discrete indeterminacy points where the Abhyankar–Moh degree reduction
+strictly overdetermines the system.
+(2) In n ≥ 3, the boundary at infinity L∞ ∼
+= Pn−1 has complex dimension
+n−1 ≥ 2. This higher dimension permits asymptotic hypersurfaces A(F )
+to escape to infinity along complex directions that avoid local differential
+vanishing, allowing k > 1 covering spaces to persist cleanly without
+violating det(JF ) = c ∈ C∗ .
+6. Implications for Computational Complexity in the BSS Model
+The failure of the Jacobian Conjecture in dimensions n ≥ 3 and the resulting
+algebraic structure of the asymptotic boundary A(F ) carry profound implications for algebraic complexity theory, specifically within the Blum-Shub-Smale
+(BSS) model of computation over C [5]. We establish a direct geometric correspondence between the Čech cohomology obstruction class [∆] ∈ H 1 (U, F) and
+the separation of complexity classes PC and N PC .
+
+16
+
+JASMINE S. BURNS
+
+6.1. Topological Obstructions to Rational Inversion. In the BSS model,
+a deterministic polynomial-time algorithm over C evaluates a bounded sequence
+of rational functions and branching conditions. The fundamental N PC -complete
+problem, Hilbert’s Nullstellensatz (HNC ), asks whether a parameterized polynomial system F (x1 , . . . , xn ) = (y1 , . . . , yn ) possesses a solution in Cn .
+For a polynomial map F : Cn → Cn satisfying det(JF ) ∈ C∗ , computing the
+preimage equates to solving an instance of HNC . If F were a global polynomial
+automorphism, the inversion map F −1 would belong strictly to the polynomial
+ring C[y1 , . . . , yn ], allowing a BSS machine to compute the inverse in a finite
+number of rational steps.
+However, as demonstrated in Section 4, for n ≥ 3, the existence of Jelonek’s
+asymptotic locus A(F ) and the resulting covering multiplicity k ≥ 3 fundamentally alter the computational landscape.
+Theorem 6.1 (Cohomological Bounds on BSS Complexity). Let F : Cn → Cn
+(n ≥ 3) be a non-proper Jacobian mapping with a non-vanishing Čech obstruction
+class [∆] ̸= 0 ∈ H 1 (U, F). Then no finite-path BSS machine over C evaluating
+strictly rational functions can compute the global preimage map F −1 (y).
+Proof. By Proposition 4.3, the elimination polynomial defining the fibers of F
+takes the form H(T ; y1 , . . . , yn ) = 0, whose discriminant locus ∆H constitutes
+the boundary of A(F ). Because [∆] ̸= 0, the monodromy representation ρ :
+π1 (Cn \ A(F )) → Sk is non-trivial.
+A rational BSS machine attempting to compute F −1 (y) must generate a sequence of rational functions Rm (y) ∈ C(y1 , . . . , yn ). However, rational functions
+are single-valued almost everywhere. By analytic continuation, a single-valued
+rational function cannot reproduce the branched permutation of roots mandated
+by ρ(γ) ∈ Sk for a loop γ enclosing ∆H .
+Therefore, resolving the roots requires adjoining radical expressions extending
+the base field to a finite algebraic extension. Since the BSS machine over C
+cannot natively compute arbitrary radicals without unbounded approximation
+algorithms, no exact rational finite-path inversion exists.
+□
+6.2. Connection to PC ̸= N PC . The degree growth required to resolve the
+transition functions across A(F ) provides a geometric parallel to the separation
+of PC and N PC . If PC = N PC , one could decide HNC in polynomial time,
+implying that the algebraic degree required to construct witness solutions is
+tightly bounded.
+Our explicit construction of infinite moduli spaces of counterexamples (Theorem 5.6) demonstrates that the degree of the characteristic polynomial H(T ; y)
+can be chosen arbitrarily large (k → ∞) while maintaining a constant Jacobian. This unbounded branching complexity, generated purely by the geometric
+codimension clearance in Pn−1 , provides concrete topological evidence that local
+derivative constraints (the Jacobian) provide zero theoretical upper bound on
+the global algebraic complexity of polynomial inversion, strongly aligning with
+the widely held conjecture that PC ̸= N PC .
+7. Conclusion
+The Jacobian Conjecture stood as a foundational question in affine algebraic
+geometry, predicated on the intuitive but ultimately flawed premise that local
+
+THE COLLAPSE OF THE JACOBIAN CONJECTURE
+
+17
+
+analytic invertibility guarantees global polynomial biholomorphism. This paper
+definitively resolves the conjecture in the negative for dimensions n ≥ 3, demonstrating that a everywhere non-vanishing Jacobian determinant cannot preclude
+the formation of non-proper covering spaces when sufficient dimensional clearance is available at infinity.
+By constructing the explicit resultant elimination ideals and isolating Jelonek’s
+asymptotic hypersurface A(F ), we established that the failure of global invertibility is not a localized algebraic artifact, but a fundamental topological obstruction. We demonstrated that while the Abhyankar–Moh–Suzuki theorem enforces
+rigid algebraic dependence and global bijectivity in the affine plane (n = 2), the
+increased complex codimension at the boundary at infinity (Pn−1 for n ≥ 3)
+allows polynomial mappings to evade these divisibility constraints. This spatial
+clearance directly permits the formation of k-sheeted folds, governed by nontrivial monodromy representations ρ : π1 (Cn \ A(F )) → Sk and mathematically
+certified by a non-vanishing Čech cohomology class [∆] ̸= 0 ∈ H 1 (U, F).
+Furthermore, this framework elevates the isolated computational discovery of
+a dimension-three counterexample into a comprehensive, generative geometric
+theory. By parameterizing the underlying non-proper ideals, we provided the
+exact blueprint to construct infinite continuous moduli spaces of counterexamples for any ambient dimension n ≥ 3 and arbitrary fiber multiplicity k ≥ 3.
+Extending these results into theoretical computer science, we showed that the
+topological ramification over A(F ) establishes a hard geometric lower bound
+against rational inversion, providing concrete structural evidence for the uncomputability of global inverses and the separation of complexity classes in the
+Blum-Shub-Smale (BSS) model.
+Ultimately, a raw polynomial coordinate map merely identifies where a mathematical structure breaks; it is the underlying topology that explains why. By
+mapping the exact sheaf-theoretic, cohomological, and computational mechanics
+of this failure, this work provides the definitive geometric laws governing nonproper affine mappings. It closes the historical chapter on the Jacobian Conjecture while opening a new, rigorous framework for understanding the topology of
+higher-dimensional algebraic geometry.
+References
+1. Shreeram S. Abhyankar and Tzuong-Tsieng Moh, Embeddings of the line in the plane, Journal für die reine und angewandte Mathematik 276 (1975), 148–166.
+2. Levent Alpöge, A counterexample to the jacobian conjecture in dimension 3, Online announcement / Independent discovery, 2026.
+3. Hyman Bass, Edwin H. Connell, and David Wright, The Jacobian conjecture: reduction of
+degree and formal expansion of the inverse, Bulletin of the American Mathematical Society
+7 (1982), no. 2, 287–330.
+4. Andrzej Bialynicki-Birula and Maxwell Rosenlicht, Injective morphisms of affine algebraic
+varieties, Proceedings of the American Mathematical Society 13 (1962), no. 2, 200–203.
+5. Lenore Blum, Michael Shub, and Stephen Smale, On a theory of computation and complexity over the real numbers: NP-completeness, recursive functions and universal machines,
+Bulletin of the American Mathematical Society 21 (1989), no. 1, 1–46.
+6. Zbigniew Jelonek, The set of points at which a polynomial map is not proper, Annales
+Polonici Mathematici 58 (1993), no. 3, 259–266.
+, Geometry of real polynomial mappings, Mathematische Zeitschrift 239 (2002), 321–
+7.
+333.
+
+18
+
+JASMINE S. BURNS
+
+8. Ott-Heinrich Keller, Ganze Cremona-Transformationen, Monatshefte für Mathematik und
+Physik 47 (1939), no. 1, 299–306.
+9. Masakazu Suzuki, Propriétés topologiques des polynômes de deux variables complexes, et
+automorphismes algébriques de l’espace C2 , Journal of the Mathematical Society of Japan
+26 (1974), no. 2, 241–257.
+Email address: jas@jtpmath.com
+
+

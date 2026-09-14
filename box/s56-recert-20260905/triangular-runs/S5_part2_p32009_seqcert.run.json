@@ -1,0 +1,44 @@
+{
+  "clean_unit": false,
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/ubuntu/jc2/box/s56-recert-20260905/triangular-runs/S5_part2_p32009_seqcert.time",
+    "Singular",
+    "--cpus=1",
+    "--threads=1",
+    "--flint-threads=1",
+    "--no-rc",
+    "-q",
+    "/home/ubuntu/jc2/box/s56-recert-20260905/reducer-analysis/S5_part2_p32009_sequential_cert.sing"
+  ],
+  "elapsed_seconds": 1800.040346,
+  "finished_utc": "2026-09-05T15:33:44.686884Z",
+  "host": "ip-172-30-0-62",
+  "last_observed_process_group": [
+    12497,
+    12500
+  ],
+  "markers": {
+    "TRIANGULAR_MAX_DEG": "10",
+    "TRIANGULAR_OK": "pivots=68 source_rows=261  residual_rows=163 active_including_T=48",
+    "pivot_ok_count": 68,
+    "substitution_ok_count": 68
+  },
+  "maximum_process_group_rss_kb": 22518892,
+  "requested_cpu": 18,
+  "returncode": -15,
+  "sample_count": 13389,
+  "schema": "jc2.s56-recert.triangular-run/v1",
+  "script": "/home/ubuntu/jc2/box/s56-recert-20260905/reducer-analysis/S5_part2_p32009_sequential_cert.sing",
+  "script_sha256": "057f3359344a7e8dd517d122296e7f1c80662b2ecf09894818debc80edb59786",
+  "started_utc": "2026-09-05T15:03:44.646281Z",
+  "stderr": "/home/ubuntu/jc2/box/s56-recert-20260905/triangular-runs/S5_part2_p32009_seqcert.err",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "/home/ubuntu/jc2/box/s56-recert-20260905/triangular-runs/S5_part2_p32009_seqcert.out",
+  "stdout_sha256": "91a3a02569fb1710a4073264758cc9d303e9083b267ab5c0a8b91afc9fac8052",
+  "time": "/home/ubuntu/jc2/box/s56-recert-20260905/triangular-runs/S5_part2_p32009_seqcert.time",
+  "time_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "timed_out": true
+}

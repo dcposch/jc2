@@ -1,0 +1,51 @@
+{
+  "schema": "jc2.native-research-custody/v1",
+  "task": "full-scalar-pair-global-test-astra-20260913",
+  "owner": "/root/execution_reliability",
+  "collector": "/root",
+  "actual_first_utc": "2026-09-13T11:35:55Z",
+  "original_reserve_utc": "2026-09-13T11:52:00Z",
+  "original_hard_utc": "2026-09-13T11:55:00Z",
+  "report_writers_idle_utc": "2026-09-13T11:48:01Z",
+  "actual_substantive_end_utc": "2026-09-13T11:48:15Z",
+  "all_writers_idle_checkpoint_utc": "2026-09-13T11:48:15Z",
+  "idle_scope": "All report/research writers and the finalizer were idle at this checkpoint; this custody is the sole final synchronous metadata write. The terminal message will give the actual all-writers-idle clock after custody is readonly and wholly read back.",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report": {
+    "path": "xmodel/full-scalar-pair-global-test-astra-20260913.md",
+    "sha256": "f0a19d61ed83178e884a44641cf68ebe10eb83c19c2c1ad9785bc214c583eb28",
+    "body_sha256": "9a02852662cd1af4ff078c90239204ad91337dc8fb76e35cb4b9453a86418cbd",
+    "manifest_path": "xmodel/full-scalar-pair-global-test-astra-20260913.md.artifact.json",
+    "manifest_sha256": "1608db384c4bd78263328ea0966022cb3f62c033a442182fe4b960a97a3063f1",
+    "expected_verification": "VERIFIED with expected basis and manifest hash",
+    "draft_protocol": "Complete final marker-free draft read WHOLE and five input/administrative pins reproduced before BODY-END LAST",
+    "final_readback": "Final report and manifest read WHOLE, no clipping, followed by fresh matching postpins"
+  },
+  "input_sha256": {
+    "box/full-scalar-pair-global-test-astra-20260913/TASK.md": "534e2dc69af859ad657200b7642c66a562a5c336c2d1c9d73e2f16c47631a08e",
+    "box/full-scalar-pair-global-test-astra-20260913/COORDINATION.snapshot.md": "a14b2ebcb3841f175b52ef0a96835a5724aee06a6008442eb3d25f98194a99bc",
+    "box/full-scalar-pair-global-test-astra-20260913/INVARIANTIZATION-FIRST.md": "688ce2cafce3ef85593468f517de850098ee801ee9a82dbcf762dc6b5a6fdae5",
+    "box/full-scalar-pair-global-test-astra-20260913/LOCALLY-FINITE-FIRST.md": "d154a30379335970719b1ea2f2f942118e995ac643feec4aebc9461e1d1ee7fb",
+    "ops/artifact_finalize.py": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"
+  },
+  "read_scope": {
+    "fresh_whole": "TASK, INVARIANTIZATION-FIRST, LOCALLY-FINITE-FIRST, with hashes before each read and no clipping",
+    "coordination": "Exact personal old77ec0b282f4813ee9a2b71ebced492cc6f0b9262acf90a28f444ed9a507190bd WHOLE read reused; six-line authoring-tool launch delta read from current frozen snapshot",
+    "additional_administrative_read": "Current COORDINATION.md was hashed and text-searched before the frozen delta read; matched snapshot a14b2ebc",
+    "parent_message": "ROOT supplied the stronger-old-scope injective-line identification during the tranche; report attributes it; no referenced old files were read"
+  },
+  "scope": {
+    "tier": "MANUAL UNPROMOTED; primary co-research, not FIRST",
+    "verdict": "NO_CLOSING_TEST",
+    "mathematical_result": "Ruling-projectable Hamiltonian slice exclusion recovered, then classified KNOWN/WEAKER than old injective-line scope. Algebraic formal translation does not provide global regular action.",
+    "exact_pair": false,
+    "new_global_exclusion": false,
+    "successor_selected": false,
+    "science_or_test_execution": false,
+    "network_or_aws": false,
+    "shared_edits_or_protected_access": false,
+    "agents_or_process_control": false,
+    "execution": "Inert text/hash/date, apply_patch, unchanged administrative finalizer only",
+    "deviations": "No scientific or ownership deviation. Actual terminal metadata-idle clock is returned in the final message, distinguishing it from the report-idle checkpoint contained here."
+  }
+}

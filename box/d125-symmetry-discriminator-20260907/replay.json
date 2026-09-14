@@ -1,0 +1,61 @@
+{
+  "all_writers_finished": true,
+  "arithmetic_caps": {
+    "each_AS_MiB": 512,
+    "each_CPU_seconds": 25,
+    "each_wall_seconds": 30
+  },
+  "no_assert_nodes": true,
+  "raw_stdout_export": "bytes -> exclusive file, no JS numeric roundtrip",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9c3708294dc3c0df25cb256598436db5736a9737a2504dada04d0777171c2e4a",
+      "wall_seconds": 0.092573
+    },
+    {
+      "mutation": "--mutate-parity",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "3d411869d0f2efe963177ee5e39dbe27a1a596205cebc860690162f3e7fcac56",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.107622
+    },
+    {
+      "mutation": "--mutate-lambda-weight",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "13f6e9fed8b97f7dd5348c950b4ddc07271ebb069cb33ce20af32c174e4dc716",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.10819
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9c3708294dc3c0df25cb256598436db5736a9737a2504dada04d0777171c2e4a",
+      "wall_seconds": 0.229597
+    },
+    {
+      "mutation": "--mutate-parity",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "3d411869d0f2efe963177ee5e39dbe27a1a596205cebc860690162f3e7fcac56",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.522873
+    },
+    {
+      "mutation": "--mutate-lambda-weight",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "13f6e9fed8b97f7dd5348c950b4ddc07271ebb069cb33ce20af32c174e4dc716",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "wall_seconds": 0.526091
+    }
+  ],
+  "status": "PASS"
+}

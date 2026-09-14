@@ -1,0 +1,97 @@
+{
+  "actions": [
+    {
+      "identity": {
+        "argv": [
+          "bash",
+          "-c",
+          "cd /home/ubuntu/t2t3-longsolve/runs; until [ -s d2-z55-msolve/solver.stdout ] && grep -q \"BEGIN_STD\" d2-z55-singular/solver.stdout 2>/dev/null; do sleep 15; done; date -u +\"FIRSTLINES_AT %H:%M:%SZ\"; echo \"=== MSOLVE ===\"; head -25 d2-z55-msolve/solver.stdout; echo \"=== SINGULAR ===\"; head -8 d2-z55-singular/solver.stdout"
+        ],
+        "cgroup": "0::/user.slice/user-1000.slice/session-91.scope\n",
+        "namespaces": {
+          "cgroup": "cgroup:[4026531835]",
+          "mnt": "mnt:[4026531832]",
+          "net": "net:[4026531833]",
+          "pid": "pid:[4026531836]",
+          "user": "user:[4026531837]"
+        },
+        "pgid": 24286,
+        "pid": 24286,
+        "ppid": 1,
+        "start_ticks": 197859,
+        "state": "S"
+      },
+      "mechanism": "pidfd_send_signal",
+      "signal": "SIGTERM",
+      "utc": "2026-09-06T12:44:25.271498+00:00"
+    },
+    {
+      "identity": {
+        "argv": [
+          "sleep",
+          "15"
+        ],
+        "cgroup": "0::/user.slice/user-1000.slice/session-91.scope\n",
+        "namespaces": {
+          "cgroup": "cgroup:[4026531835]",
+          "mnt": "mnt:[4026531832]",
+          "net": "net:[4026531833]",
+          "pid": "pid:[4026531836]",
+          "user": "user:[4026531837]"
+        },
+        "pgid": 24286,
+        "pid": 289098,
+        "ppid": 24286,
+        "start_ticks": 1729491,
+        "state": "S"
+      },
+      "mechanism": "pidfd_send_signal",
+      "signal": "SIGTERM",
+      "utc": "2026-09-06T12:44:25.271659+00:00"
+    }
+  ],
+  "after": [],
+  "authorization": "ROOT explicit stale monitor PID/PGID24286 cleanup, start_ticks197859; no other process scope",
+  "before": [
+    {
+      "argv": [
+        "bash",
+        "-c",
+        "cd /home/ubuntu/t2t3-longsolve/runs; until [ -s d2-z55-msolve/solver.stdout ] && grep -q \"BEGIN_STD\" d2-z55-singular/solver.stdout 2>/dev/null; do sleep 15; done; date -u +\"FIRSTLINES_AT %H:%M:%SZ\"; echo \"=== MSOLVE ===\"; head -25 d2-z55-msolve/solver.stdout; echo \"=== SINGULAR ===\"; head -8 d2-z55-singular/solver.stdout"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/session-91.scope\n",
+      "namespaces": {
+        "cgroup": "cgroup:[4026531835]",
+        "mnt": "mnt:[4026531832]",
+        "net": "net:[4026531833]",
+        "pid": "pid:[4026531836]",
+        "user": "user:[4026531837]"
+      },
+      "pgid": 24286,
+      "pid": 24286,
+      "ppid": 1,
+      "start_ticks": 197859,
+      "state": "S"
+    },
+    {
+      "argv": [
+        "sleep",
+        "15"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/session-91.scope\n",
+      "namespaces": {
+        "cgroup": "cgroup:[4026531835]",
+        "mnt": "mnt:[4026531832]",
+        "net": "net:[4026531833]",
+        "pid": "pid:[4026531836]",
+        "user": "user:[4026531837]"
+      },
+      "pgid": 24286,
+      "pid": 289098,
+      "ppid": 24286,
+      "start_ticks": 1729491,
+      "state": "S"
+    }
+  ],
+  "utc": "2026-09-06T12:44:25.282039+00:00"
+}

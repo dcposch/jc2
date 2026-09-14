@@ -1,0 +1,210 @@
+// Generated Laurent/Euler terminal recurrence.
+// t=4 mode=exact branch=None charts=none
+ring R=(0,yy),(h,s,b1,b2,b3,b4,B0,C1,C2,C3,q2_0,q3_0,q4_0,q5_0,q6_0,q7_0,q8_0),dp;
+minpoly=972*yy^2 - 540*yy + 70;
+option(redSB);
+proc hcoef(poly f, int k)
+{
+  matrix M=coef(f,h);
+  int ii;
+  for (ii=1; ii<=ncols(M); ii++)
+  { if (M[1,ii]==h^k) { return(M[2,ii]); } }
+  return(0);
+}
+proc eulerInverse(poly f)
+{
+  matrix M=coef(f,s);
+  poly answer=0; int ii; int mm;
+  for (ii=1; ii<=ncols(M); ii++)
+  { mm=deg(M[1,ii]); answer=answer+M[2,ii]*M[1,ii]/((2*mm+1)*yy); }
+  return(answer);
+}
+number g1=13/9;
+number g2=(13/9)*yy+(52/162);
+number g3=(52/81)*yy-(260/4374);
+number cc=-yy*g3;
+poly Uh=h^9+q2_0*h^7+q3_0*h^6+q4_0*h^5+q5_0*h^4+q6_0*h^3+q7_0*h^2+q8_0*h^1;
+poly Ch=h^3+C1*h^2+C2*h^1+C3*h^0;
+poly U=subst(Uh,h,s+b4);
+poly Cp=subst(Ch,h,s+b4);
+poly A=s*Cp;
+poly Bprime=g3*(5*Cp+3*s*diff(Cp,s))/(2*yy);
+matrix MB=coef(Bprime,s);
+poly B=B0; int ii; int mm;
+for (ii=1; ii<=ncols(MB); ii++)
+{ mm=deg(MB[1,ii]); B=B+MB[2,ii]*s*MB[1,ii]/(mm+1); }
+if (diff(B,s)-Bprime!=0) { print("FAIL B derivative"); exit(2); }
+poly rhsD=3*g3*diff(U,s)+A*B-s*A*diff(B,s)+2*s*diff(A,s)*B
+          +g3*b3*(A/s+(5/2)*diff(A,s));
+poly D=eulerInverse(rhsD);
+if (yy*(D+2*s*diff(D,s))-rhsD!=0) { print("FAIL Euler inverse"); exit(2); }
+poly Q1=s*A-yy*b3;
+poly Y=s*D-b3*B-g3*b2;
+poly Z=s*B-g3*b3;
+poly numD1=yy*g3*b1-Q1*diff(Y,s)+diff(Q1,s)*Y+2*diff(U,s)*Z;
+poly constantS=subst(numD1,s,0);
+poly pb1=diff(constantS,b1);
+poly b1rhs=-subst(constantS,b1,0)/pb1;
+numD1=subst(numD1,b1,b1rhs);
+if (subst(numD1,s,0)!=0) { print("FAIL b1 divisibility"); exit(2); }
+poly Xprime=numD1/(2*yy*s);
+poly gauge=hcoef(subst(Xprime,s,h-b4),8);
+poly pB0=diff(gauge,B0);
+poly B0rhs=-subst(gauge,B0,0)/pB0;
+B=subst(B,B0,B0rhs);
+D=subst(D,B0,B0rhs);
+Y=subst(Y,B0,B0rhs);
+Z=subst(Z,B0,B0rhs);
+Xprime=subst(Xprime,B0,B0rhs);
+b1rhs=subst(b1rhs,B0,B0rhs);
+if (subst(gauge,B0,B0rhs)!=0) { print("FAIL B0 gauge"); exit(2); }
+// RR is -E.  The requested terminal row is T[k]=-hcoef(RR,h,k).
+poly RR=Q1*Xprime-diff(U,s)*Y-yy*g3;
+poly Rh=subst(RR,s,h-b4);
+poly W1=hcoef(Rh,16);
+poly p1=diff(W1,C1);
+poly v1rhs=-subst(W1,C1,0)/p1;
+if (subst(W1,C1,v1rhs)!=0) { print("FAIL pivot 1"); exit(2); }
+Rh=subst(Rh,C1,v1rhs);
+print("PIVOT weight=1 band=16 variable=C1"); p1;
+poly W2=hcoef(Rh,15);
+poly p2=diff(W2,C2);
+poly v2rhs=-subst(W2,C2,0)/p2;
+if (subst(W2,C2,v2rhs)!=0) { print("FAIL pivot 2"); exit(2); }
+Rh=subst(Rh,C2,v2rhs);
+print("PIVOT weight=2 band=15 variable=C2"); p2;
+poly W3=hcoef(Rh,14);
+poly p3=diff(W3,C3);
+poly v3rhs=-subst(W3,C3,0)/p3;
+if (subst(W3,C3,v3rhs)!=0) { print("FAIL pivot 3"); exit(2); }
+Rh=subst(Rh,C3,v3rhs);
+print("PIVOT weight=3 band=14 variable=C3"); p3;
+poly W4=hcoef(Rh,13);
+poly p4=diff(W4,q4_0);
+poly v4rhs=-subst(W4,q4_0,0)/p4;
+if (subst(W4,q4_0,v4rhs)!=0) { print("FAIL pivot 4"); exit(2); }
+Rh=subst(Rh,q4_0,v4rhs);
+print("PIVOT weight=4 band=13 variable=q4_0"); p4;
+poly W5=hcoef(Rh,12);
+poly p5=diff(W5,q5_0);
+poly v5rhs=-subst(W5,q5_0,0)/p5;
+if (subst(W5,q5_0,v5rhs)!=0) { print("FAIL pivot 5"); exit(2); }
+Rh=subst(Rh,q5_0,v5rhs);
+print("PIVOT weight=5 band=12 variable=q5_0"); p5;
+poly W6=hcoef(Rh,11);
+poly p6=diff(W6,q6_0);
+poly v6rhs=-subst(W6,q6_0,0)/p6;
+if (subst(W6,q6_0,v6rhs)!=0) { print("FAIL pivot 6"); exit(2); }
+Rh=subst(Rh,q6_0,v6rhs);
+print("PIVOT weight=6 band=11 variable=q6_0"); p6;
+poly W7=hcoef(Rh,10);
+poly p7=diff(W7,q7_0);
+poly v7rhs=-subst(W7,q7_0,0)/p7;
+if (subst(W7,q7_0,v7rhs)!=0) { print("FAIL pivot 7"); exit(2); }
+Rh=subst(Rh,q7_0,v7rhs);
+print("PIVOT weight=7 band=10 variable=q7_0"); p7;
+poly W8=hcoef(Rh,9);
+poly p8=diff(W8,q8_0);
+poly v8rhs=-subst(W8,q8_0,0)/p8;
+if (subst(W8,q8_0,v8rhs)!=0) { print("FAIL pivot 8"); exit(2); }
+Rh=subst(Rh,q8_0,v8rhs);
+print("PIVOT weight=8 band=9 variable=q8_0"); p8;
+poly W9=hcoef(Rh,8);
+poly p9=diff(W9,b2);
+poly v9rhs=-subst(W9,b2,0)/p9;
+if (subst(W9,b2,v9rhs)!=0) { print("FAIL pivot 9"); exit(2); }
+Rh=subst(Rh,b2,v9rhs);
+print("PIVOT weight=9 band=8 variable=b2"); p9;
+if (hcoef(Rh,8)!=0) { print("FAIL high band 8"); exit(2); }
+if (hcoef(Rh,9)!=0) { print("FAIL high band 9"); exit(2); }
+if (hcoef(Rh,10)!=0) { print("FAIL high band 10"); exit(2); }
+if (hcoef(Rh,11)!=0) { print("FAIL high band 11"); exit(2); }
+if (hcoef(Rh,12)!=0) { print("FAIL high band 12"); exit(2); }
+if (hcoef(Rh,13)!=0) { print("FAIL high band 13"); exit(2); }
+if (hcoef(Rh,14)!=0) { print("FAIL high band 14"); exit(2); }
+if (hcoef(Rh,15)!=0) { print("FAIL high band 15"); exit(2); }
+if (hcoef(Rh,16)!=0) { print("FAIL high band 16"); exit(2); }
+if (hcoef(Rh,17)!=0) { print("FAIL high band 17"); exit(2); }
+poly T0=-hcoef(Rh,0);
+print("TERMINAL band=0"); deg(T0); size(T0);
+poly T1=-hcoef(Rh,1);
+print("TERMINAL band=1"); deg(T1); size(T1);
+poly T2=-hcoef(Rh,2);
+print("TERMINAL band=2"); deg(T2); size(T2);
+poly T3=-hcoef(Rh,3);
+print("TERMINAL band=3"); deg(T3); size(T3);
+poly T4=-hcoef(Rh,4);
+print("TERMINAL band=4"); deg(T4); size(T4);
+poly T5=-hcoef(Rh,5);
+print("TERMINAL band=5"); deg(T5); size(T5);
+poly T6=-hcoef(Rh,6);
+print("TERMINAL band=6"); deg(T6); size(T6);
+poly T7=-hcoef(Rh,7);
+print("TERMINAL band=7"); deg(T7); size(T7);
+print("RECURRENCE_PASS t=4 rows=8");
+print("BRCR_BEGIN t=4");
+poly aa0=subst(diff(diff(T7,b3),b3),b3,0)/2;
+poly bb0=subst(diff(T7,b3),b3,0);
+poly cc0=subst(T7,b3,0);
+print("BRCR_ROW r=0 k=7"); T7;
+print("BRCR_A r=0 size="+string(size(aa0))); aa0;
+print("BRCR_b r=0 size="+string(size(bb0))); bb0;
+print("BRCR_c r=0 size="+string(size(cc0))); cc0;
+if (T7-aa0*b3^2-bb0*b3-cc0!=0) { print("FAIL BRCR split r=0"); exit(2); }
+poly aa1=subst(diff(diff(T6,b3),b3),b3,0)/2;
+poly bb1=subst(diff(T6,b3),b3,0);
+poly cc1=subst(T6,b3,0);
+print("BRCR_ROW r=1 k=6"); T6;
+print("BRCR_A r=1 size="+string(size(aa1))); aa1;
+print("BRCR_b r=1 size="+string(size(bb1))); bb1;
+print("BRCR_c r=1 size="+string(size(cc1))); cc1;
+if (T6-aa1*b3^2-bb1*b3-cc1!=0) { print("FAIL BRCR split r=1"); exit(2); }
+poly aa2=subst(diff(diff(T5,b3),b3),b3,0)/2;
+poly bb2=subst(diff(T5,b3),b3,0);
+poly cc2=subst(T5,b3,0);
+print("BRCR_ROW r=2 k=5"); T5;
+print("BRCR_A r=2 size="+string(size(aa2))); aa2;
+print("BRCR_b r=2 size="+string(size(bb2))); bb2;
+print("BRCR_c r=2 size="+string(size(cc2))); cc2;
+if (T5-aa2*b3^2-bb2*b3-cc2!=0) { print("FAIL BRCR split r=2"); exit(2); }
+poly aa3=subst(diff(diff(T4,b3),b3),b3,0)/2;
+poly bb3=subst(diff(T4,b3),b3,0);
+poly cc3=subst(T4,b3,0);
+print("BRCR_ROW r=3 k=4"); T4;
+print("BRCR_A r=3 size="+string(size(aa3))); aa3;
+print("BRCR_b r=3 size="+string(size(bb3))); bb3;
+print("BRCR_c r=3 size="+string(size(cc3))); cc3;
+if (T4-aa3*b3^2-bb3*b3-cc3!=0) { print("FAIL BRCR split r=3"); exit(2); }
+poly BB1=aa0*bb1-aa1*bb0;
+poly CC1=aa0*cc1-aa1*cc0;
+poly GG1=BB1*b3+CC1;
+poly WW1=aa0*CC1^2-bb0*BB1*CC1+cc0*BB1^2;
+if (GG1-(aa0*T6-aa1*T7)!=0) { print("FAIL BRCR G r=1"); exit(2); }
+print("BRCR_B r=1 size="+string(size(BB1))); BB1;
+print("BRCR_C r=1 size="+string(size(CC1))); CC1;
+print("BRCR_W r=1 size="+string(size(WW1))); WW1;
+print("BRCR_B4AXIS name=BB1"); subst(subst(BB1,q2_0,0),q3_0,0);
+print("BRCR_B4AXIS name=CC1"); subst(subst(CC1,q2_0,0),q3_0,0);
+poly BB2=aa0*bb2-aa2*bb0;
+poly CC2=aa0*cc2-aa2*cc0;
+poly GG2=BB2*b3+CC2;
+poly WW2=aa0*CC2^2-bb0*BB2*CC2+cc0*BB2^2;
+if (GG2-(aa0*T5-aa2*T7)!=0) { print("FAIL BRCR G r=2"); exit(2); }
+print("BRCR_B r=2 size="+string(size(BB2))); BB2;
+print("BRCR_C r=2 size="+string(size(CC2))); CC2;
+print("BRCR_W r=2 size="+string(size(WW2))); WW2;
+print("BRCR_B4AXIS name=BB2"); subst(subst(BB2,q2_0,0),q3_0,0);
+print("BRCR_B4AXIS name=CC2"); subst(subst(CC2,q2_0,0),q3_0,0);
+poly BB3=aa0*bb3-aa3*bb0;
+poly CC3=aa0*cc3-aa3*cc0;
+poly GG3=BB3*b3+CC3;
+poly WW3=aa0*CC3^2-bb0*BB3*CC3+cc0*BB3^2;
+if (GG3-(aa0*T4-aa3*T7)!=0) { print("FAIL BRCR G r=3"); exit(2); }
+print("BRCR_B r=3 size="+string(size(BB3))); BB3;
+print("BRCR_C r=3 size="+string(size(CC3))); CC3;
+print("BRCR_W r=3 size="+string(size(WW3))); WW3;
+print("BRCR_B4AXIS name=BB3"); subst(subst(BB3,q2_0,0),q3_0,0);
+print("BRCR_B4AXIS name=CC3"); subst(subst(CC3,q2_0,0),q3_0,0);
+print("BRCR_DONE");
+print("DRIVER_DONE");
+quit;

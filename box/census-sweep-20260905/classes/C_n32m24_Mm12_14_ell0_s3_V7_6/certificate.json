@@ -1,0 +1,25 @@
+{
+  "chart_kind": "order_source_complete",
+  "class_id": "C_n32m24_Mm12_14_ell0_s3_V7_6",
+  "class_verdict": "TIMEOUT",
+  "exact_q": false,
+  "extract_union": {
+    "declared_equations": 61,
+    "lead_h_gate": true,
+    "log": "/home/ubuntu/jc2/box/census-sweep-20260905/classes/C_n32m24_Mm12_14_ell0_s3_V7_6/jobs/C_n32m24_Mm12_14_ell0_s3_V7_6_union_extract.log",
+    "log_tail": "NATIVE_GATE lead_h_is_yK=1\nNATIVE_GATE level0_deg_x_before_minus_c=1\nNATIVE_GATE target_xk_level0_nonzero=1\nNATIVE_DONE equations=61\nNATIVE_DONE max_nf_deg_x_after_minus_c=1\n",
+    "ok": true,
+    "returncode": 0,
+    "rows": 61,
+    "stem": "C_n32m24_Mm12_14_ell0_s3_V7_6_union",
+    "timed_out": false,
+    "wall_seconds": 10.886
+  },
+  "fallacy_v2": "A class kill needs the FULL necessary chart (h-support included; for u_s>=2 split rows the joint chart: order + minor-incidence + pole + Jacobian) AND every stem UNIT AND exact-Q confirm. Modular [1] is not a kill. A surviving point is not a counterexample unless J is a nonzero constant and the point lifts.",
+  "kind": "unsplit",
+  "n_unknowns": 79,
+  "note": "same size band as C_n32m24_Mm12_14_ell0_s3_V1_6 (79 unk, 61 eqs, 180s std timeout); extract only, solve not retried",
+  "schema": "census-sweep-class-certificate-v1",
+  "solve_skipped_compute_bound": true,
+  "stems": []
+}

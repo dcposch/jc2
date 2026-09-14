@@ -1,0 +1,77 @@
+{
+  "field": "Q",
+  "scope": "necessary existential T2+T3 recurrence enlargement",
+  "canonical_triangular_map_status": "OPEN_NOT_SUPPLIED",
+  "sub_100_active_variable_gate_met": false,
+  "no_raw_jacobian_tail": true,
+  "cases": {
+    "99-delta2": {
+      "source_input_sha256": "778eda933ee9b2acbad20f6dc862c25db94776cb25ffd5782646427a3b63e1ea",
+      "source_support": {
+        "base": "P=zeta^2*(zeta+3*rho)",
+        "strict_below_target": "0",
+        "attained": ["K3:P@9", "K2:P^3@27", "F:P^9@81", "G:P^6@54"],
+        "localizer": "Zrho*rho-1"
+      },
+      "T2_face": "leader55*z^40*(1+z)^15",
+      "T2_face_slots": 56,
+      "T2_face_vector_sha256": "031a1cb74948da83995f6d0d9d561c00fda5e7295e21dbaf88cf0e7d21c9a280",
+      "T3_face": "lambda3*z^105*(1+z)^40",
+      "T3_face_slots": 146,
+      "T3_face_vector_sha256": "2ce824418b57ab57d41704d3f53f45583ca049455040ada2dc588866e2dcbe84",
+      "unit_leader_rows": ["Z55*leader55-1", "t3eq+leader55^3", "Z3*lambda3-1"],
+      "row_blocks": {"graph": 7136, "T2_upper": 462, "T2_strict": 1263, "T2_face": 56, "T3_recurrence": 1, "T3_strict": 2539, "T3_face": 146, "inverse": 3},
+      "semantic_variables_before_constraint_pivots": 449,
+      "passive_affine_extension_dimension": 7,
+      "full_unknowns_after_unit_equality_pivot": 455,
+      "presentation_variables": 7585,
+      "total_rows": 11606
+    },
+    "99-delta52": {
+      "source_input_sha256": "3f81dc99770d235099249a818a55b19f0c828d36109e30aa738995177f97dc46",
+      "source_support": {
+        "base": "P=pi*(pi^2-c)",
+        "strict_below_target": "0",
+        "attained": ["K3:P@21", "K2:P^3@63", "F:P^9@189", "G:P^6@126"],
+        "localizer": "Zc*c-1"
+      },
+      "T2_face": "leader55*z^40*(1+z)^15",
+      "T2_face_slots": 56,
+      "T2_face_vector_sha256": "031a1cb74948da83995f6d0d9d561c00fda5e7295e21dbaf88cf0e7d21c9a280",
+      "T3_face": "lambda3*z^105*(1+z)^40",
+      "T3_face_slots": 146,
+      "T3_face_vector_sha256": "2ce824418b57ab57d41704d3f53f45583ca049455040ada2dc588866e2dcbe84",
+      "unit_leader_rows": ["Z55*leader55-1", "t3eq+leader55^3", "Z3*lambda3-1"],
+      "row_blocks": {"graph": 7136, "T2_upper": 462, "T2_strict": 1263, "T2_face": 56, "T3_recurrence": 1, "T3_strict": 2539, "T3_face": 146, "inverse": 3},
+      "semantic_variables_before_constraint_pivots": 447,
+      "passive_affine_extension_dimension": 7,
+      "full_unknowns_after_unit_equality_pivot": 453,
+      "presentation_variables": 7583,
+      "total_rows": 11606
+    },
+    "108-free-mean": {
+      "source_input_sha256": "1c927d83aa4684ae91bfffc8d03500fbabb73a500faa222fa349a6d129a10814",
+      "source_support": {
+        "base": "P=(pi-minor_mean)^2-c",
+        "free_mean_retained": true,
+        "strict_below_target": "0",
+        "attained": ["K3:-P@8", "K2:P^4@32", "F:P^12@96", "G:P^8@64"],
+        "stage8_prefix_warning": "F/G powers 96/64 are required source-support data, not newly imposed stage8 rows",
+        "localizer": "Zc*c-1"
+      },
+      "T2_face": "leader63*z^49*(1+z)^14",
+      "T2_face_slots": 64,
+      "T2_face_vector_sha256": "17a759e831749505003b2d5d850a29fe7d2692e3f9438d1dc51f3f0e3c44c654",
+      "T3_face": "lambda3*z^176*(1+z)^51",
+      "T3_face_slots": 228,
+      "T3_face_vector_sha256": "b2f336ed92c6f0174cf64931eae379c7290c3933577142af2058485626d25b18",
+      "unit_leader_rows": ["Z63*leader63-1", "t3eq+leader63^4", "Z3*lambda3-1"],
+      "row_blocks": {"graph": 17308, "source_residual": 14, "T2_upper": 461, "T2_strict": 1128, "T2_face": 64, "T3_recurrence": 1, "T3_strict": 5123, "T3_face": 228, "inverse": 3},
+      "semantic_variables_before_constraint_pivots": 507,
+      "passive_affine_extension_dimension": 13,
+      "full_unknowns_after_unit_equality_pivot": 519,
+      "presentation_variables": 17815,
+      "total_rows": 24330
+    }
+  }
+}

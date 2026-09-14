@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/t3-residue-closure-opus5-20260906.md` (14,954 B; `<!-- BODY-END -->`); drivers + JSON in `box/t3-residue-20260906/` (152 KB). Inputs: 6/6 SHA-256 OK via awk-built manifest → `sha256sum -c`.
+
+**The depth bound (task item 1).** It is not Def 5.1(2)'s window or the p.174 truncation — it's the gcd lattice. Moh Prop 4.6(1) gives `f_σ = c·p^{m/d_i}` with the *same* `p` as `g`, so every sub-packet of `D_i` has `ρ_f ∈ (m/d_i)Z` (integral: `M_1 = −m` and `d_i | m` for `i≥2`, verified on all 66 rows). A split has ≥2 parts, so `r = ρ_f d_i/m` strictly drops: depth `≤ r−1`, and that is exhaustive. All runs used `maxdepth=None` and no orbit cap.
+
+**Verdicts (2,3).** All four T3 rows are **ALIVE via named towers**: R039 `I_M=16, I_m=3`; R040 same ledger with tower/sibling exchanged (they are one configuration); R048 `I_M=22, I_m=5`; R063 `I_M=I_m=10`, **margin 0** — the only genuinely deep tower (`ρ_f=8` splits at `W=112` into `(4,2,2)`), but 84 of 509 configurations survive, so it is not pinned.
+
+**The six (4).** Confirmed DEAD, and the cap was **vacuous** — bound `r−1` is 0 for R026/R028/R058 (multiplicity-1 sibling roots cannot split at all), ≤3 elsewhere, search closed at depth ≤1. But the layer audit retypes them: Lemmas A and B are not used by any of the six; **R058 is DEAD on printed constraints alone**, and R025–R028, R057 are `DEAD-mod-[GO split-shape law]`. Residual 65 → 59 on that hypothesis.
+
+Two things you should weigh:
+
+- **I found and corrected an error of my own mid-run.** My first pass used Xu Lemma 2.1(ii)'s `unit = m/gcd(n,m)` and revived all six rows at depth 1 — an apparent refutation. Replaying the prior lane's own driver reproduced its depth-2 DEADs exactly, and the bisect showed the difference was the unit, not the depth. Prop 4.6(1)'s `m/d_i` is strictly stronger and correct. §2 of the report states this rather than burying it.
+- **EC §1's "any minor split strictly raises `I_m`" is false as stated** — at `Q = 3` an equal 2-split leaves it unchanged (strict only for `Q ≥ 4`). Harmless here because I wired minor leaves through the closure as an explicit control and the verdicts held, but the lemma needs restating (Open 4).
+DIVERT path=xmodel/t3-residue-closure-opus5-20260906.md status=CLEAN body_bytes=14954 body_sha256=646302aac0d4efc2d63df5d555d4384fb02f7ad70ee3a31ad32ed9c66961f47c

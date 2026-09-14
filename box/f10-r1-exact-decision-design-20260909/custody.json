@@ -1,0 +1,86 @@
+{
+  "utc": "2026-09-09T13:45:15.666768+00:00",
+  "status": "TERMINAL-DESIGN-ONLY-NO-CODE-NO-EXECUTION",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/exact.json",
+      "sha256": "168bdfd3a791f24a6631de66ae4e71c3f209ee9eb0d21fc466f9aa802f5ad576",
+      "expected_sha256": "168bdfd3a791f24a6631de66ae4e71c3f209ee9eb0d21fc466f9aa802f5ad576",
+      "bytes": 88634,
+      "read_scope": "Literal schema/row-ID/variable/gauge metadata; full raw-byte hash only, no new coefficient evaluation"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-engineering-v2-execution-astra-20260909.md",
+      "sha256": "de36618ca8b68857f6a2b80e62604f0bd9245d9bfbd4a3aa66eebf06f3713ebd",
+      "expected_sha256": "de36618ca8b68857f6a2b80e62604f0bd9245d9bfbd4a3aa66eebf06f3713ebd",
+      "bytes": 9043,
+      "read_scope": "WHOLE; provisional producer evidence, not live gate"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-complete-builder-20260909/checker.py",
+      "sha256": "e2970c71774607e211ecc7e0f001a0dc02d02410e303ca58cf7c17ab77b9f545",
+      "expected_sha256": "e2970c71774607e211ecc7e0f001a0dc02d02410e303ca58cf7c17ab77b9f545",
+      "bytes": 14649,
+      "read_scope": "WHOLE STATIC; never imported or run"
+    },
+    {
+      "path": "/home/ubuntu/jc2/ops/aws_doubleb_lift_std_run.sh",
+      "sha256": "a9dbcb96b8732410dd3c176ae62b078323e806df102f437f30ba993223a02966",
+      "expected_sha256": "a9dbcb96b8732410dd3c176ae62b078323e806df102f437f30ba993223a02966",
+      "bytes": 2539,
+      "read_scope": "WHOLE STATIC historical instrument only"
+    },
+    {
+      "path": "/home/ubuntu/jc2/ops/aws_doubleb_lift_run.sh",
+      "sha256": "196038170dd6983a240f59b174adc9cbf81582c754b349f36e9ff4afcacacd77",
+      "expected_sha256": "196038170dd6983a240f59b174adc9cbf81582c754b349f36e9ff4afcacacd77",
+      "bytes": 2370,
+      "read_scope": "WHOLE STATIC historical instrument only"
+    },
+    {
+      "path": "/home/ubuntu/jc2/cases/max12_912_order3_double_b_p_membership_20260824/generate_lift.py",
+      "sha256": "403883070c06d3d489bd0408a85f913338b9c4b1fdff1dad852f16efc6520e31",
+      "expected_sha256": "403883070c06d3d489bd0408a85f913338b9c4b1fdff1dad852f16efc6520e31",
+      "bytes": 2246,
+      "read_scope": "WHOLE STATIC; provenance not followed"
+    },
+    {
+      "path": "/home/ubuntu/jc2/cases/max12_912_order3_double_b_p_membership_20260824/generate_lift_std.py",
+      "sha256": "c63dcd96a1323587f233e885698b1f1c07d6062971ea8399541fe2f51311f7ef",
+      "expected_sha256": "c63dcd96a1323587f233e885698b1f1c07d6062971ea8399541fe2f51311f7ef",
+      "bytes": 898,
+      "read_scope": "WHOLE STATIC; never executed"
+    }
+  ],
+  "owned": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-decision-design-20260909/READ-SCOPE.md",
+      "sha256": "ba69e24582be1977a11aa199dbc0795d175a88ee0a003ccffeaa46ffee030ce4",
+      "bytes": 2111
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-decision-design-20260909/input-pins.json",
+      "sha256": "ef80f5a322fc4494b55b1fcc70dedcb728de54d1b299dcdbb0ef94caf275d99b",
+      "bytes": 2667
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-decision-design-20260909/publication.json",
+      "sha256": "0c7d843d35cd3cc5cd54e21a26fe621599e6ec86244a6cb78c033302ab3028e1",
+      "bytes": 586
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-exact-decision-design-astra-20260909.md",
+      "sha256": "eee5cec3d2d819ae1bed721f1910c63384235cf1ee09f854b03f7435f0adf542",
+      "bytes": 11029
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-exact-decision-design-astra-20260909.md.artifact.json",
+      "sha256": "f510b1e215579380589d4abab7aefca73d4c8a6b24a041c4ef35dfe6eaff04a3",
+      "bytes": 697
+    }
+  ],
+  "mismatches": [],
+  "all_writers": "IDLE after custody publication",
+  "transaction_sha256": "f510b1e215579380589d4abab7aefca73d4c8a6b24a041c4ef35dfe6eaff04a3",
+  "report_sha256": "eee5cec3d2d819ae1bed721f1910c63384235cf1ee09f854b03f7435f0adf542"
+}

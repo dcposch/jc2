@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The cross report is written and verified: `xmodel/ideation-20260906T1210Z-cross-fable5.md`, sealed 12:31Z, before the 12:35Z deadline.
+
+| check | result |
+|---|---|
+| word count (wc -w) | 1093 |
+| standalone BODY-END | unique, final line |
+| exit-price line | none |
+| body SHA-256 | 1ae8efa8fc847bc8a75baef7c34d7b5f0103afcf3a521cfd2a3cafc1f31dd0e1 |
+
+**Endpoint verdict: mistaken endpoint, not a missing reduction.** GGV's primary definition ([1] arXiv:1401.1784, Notation 1.6) runs st→en counterclockwise along the polygon boundary, with Remark 1.7's test `(ρ,σ)×(en−st)>0`. The charged text pins the same orientation on its own: Thm 5.1(2) states the (1,0)-edge runs from (6,16) up to (6,18). Under that convention, case (1)'s (−1,1)-edge starts at (6,18) and ends at (0,12), so all three Prop 4.2 cases satisfy Thm 5.1. Only Prop 4.1's (0,18) shape fails, which is exactly why Cor 5.7 needs the shear. An exact check on all eight polygons confirms this. What survives of Opus's point is a one-line expository omission, not a gap.
+
+**Other verdicts in the report.** Only the robust max ≥ 108 reading of Theorem 2.1 is consumed; Sol's literal all-pairs reading is scoped by the (P+Q,Q) example. Fable's blind bin for 108 to 124 and its .73 reclassification are dropped as overreaches. The five D108 proposals collapse to one card: a declared ring map to GGHV's (8,28) row, tested by one invariant plus a mutated control, stopping at the first unmapped arrow. Software gets one bounded four-control test on the existing frontier gate, no new ledger. Systems is NO_UPGRADE.
+
+**Housekeeping.** I saved the orientation finding as a memory and corrected the older dichotomy memory, which had recorded the refuted "case (1) fails" reading. No ledger, worker, or git state was touched.
+DIVERT path=xmodel/ideation-20260906T1210Z-cross-fable5.md status=CLEAN body_bytes=7342 body_sha256=1ae8efa8fc847bc8a75baef7c34d7b5f0103afcf3a521cfd2a3cafc1f31dd0e1

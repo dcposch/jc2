@@ -1,0 +1,17 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes from the lane receipt, then read the sealed packet before any banked reports.I'll generate the hash manifest from the lane receipt and check it, then open the sealed packet.Hashes match. Next I’ll read the sealed packet in full, then the other charged inputs.Hashes are good. I’ll pull the newest live state, the fresh AUDIT deltas, and running-lane receipts next.Both running lanes are still `RUNNING`, so I’ll leave their reports unread and load the newest AUDIT deltas plus the named banked reports.I’ll load the named banked reports and last-round Grok format next, still skipping the two live lanes.I’ll take running-lane prompts and receipts only, then pull the 14-row data from banked enumerators—not from live reports.The 14-row lane is using s'=2 order charts; I’ll enumerate those rows from banked code and check τ² membership plus descent height.I’ll filter those enumerations through the promoted POLY+ODE screen so the 14 excess rows are exact.Classification replayed: all 14 excess rows have `s_eff ≥ 3`. I’ll write the report skeleton next, then fill it in bounded sections.The collision scan shows the 14-row lane sealed after packet freeze. I’ll verify the receipt, then harvest that event without treating it as a packet mutation.Both lanes sealed after the packet freeze and confirm the height diagnosis. I’ll harvest that, retarget Card I to a pin rather than a fleet rerun, then append collisions and seal.Sealed report: `xmodel/ideation-20260905T0200Z-grok46.md` (49KB; `<!-- BODY-END -->` terminal). Charged-input hashes 4/4 OK. No other `ideation-20260905T0200Z-*` submission was opened. Replay: `box/ideation-20260905T0200Z-grok46/moh100_14_phi_eff.py` (ASSERTS_OK, 0.58s).
+
+**Headline.** Degree-wide (99,66) is closed, as the packet says. The ≤100 residual is the 14 rows, and they are not an `s'=2` order-chart job.
+
+**Q1.** The Abel form is the right geometry for (8.1). The cheapest algebra is `τ² ∈ I_{t,+}` (index ≤ 2), not a solution-count. Jets of (F3): `[x^0]=[x^1]=0`; first constraint at `[x^2]`. t=11 is not an `a₀=0` fibre.
+
+**Q2.** POLY_ODE at `n≤100` is 20 rows / 7 classes (6 printed + 14 excess). All 14 have `u_s=1` and, after Φ_eff, `s_eff ∈ {3,4}` — **zero at 2**. Five coarse descended classes; smallest is (18,12; k=2)×4. Post-cutoff 17(jjjjjj) agrees in type (7 classes / 89 instances, 0/14 killed, 78–335 unknowns).
+
+**Q3–Q4.** The missing case is height `s_eff≥3`, not first-separation. Binding map: receiver coverage of (T) at the actual `s_eff`. Next object: an `s'≥3` **pin**, not a fleet of the unreduced 89 charts.
+
+**Lanes (receipts; both sealed after freeze).** `moh100-14rows-opus5`: HARVEST then REDESIGN onto a pin. `k16-f3abel-astra`: HARVEST; do not relaunch Abel-classification as flagship.
+
+**First lane.** `moh100-s3-pin` on the (18,12; k=2) quartet.
+
+**Systems.** `ops/descent_height_gate.py`: refuse order-chart emission unless `s_eff=2`.
+DIVERT path=xmodel/ideation-20260905T0200Z-grok46.md status=CLEAN body_bytes=49021 body_sha256=e768544aa8f0a01dfaf8bfffaebbc9e9d4e698ff1590ec8ca8ddec43ad9567fb

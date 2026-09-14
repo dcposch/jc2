@@ -1,0 +1,26 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The deliverable is complete and verified, so nothing further is needed: the report ends with exactly one standalone marker, no placeholder, no Seal, no charge_basis, and both owned writers are idle at 02:00 UTC, before the 02:09 stop.
+
+**Outcome: A, B, C, D, E all CONFIRMED at the static delta tier. No REFUTED item.** The new caller remains unexecuted and gains no runtime authority from this review.
+
+**What was checked**
+- All thirteen input hashes matched in the assignment order before any body read, and every file was read whole with no clipping.
+- The charged caller.diff is byte-identical to a fresh `diff -u` of the accepted old caller against the new one, apart from its two label lines.
+- All nine hash literals in the new caller are accounted for by charged inputs or ROOT-CARD rows. The plan's eight positive and four negative names, branches, and refusal reasons match the frozen harness in order. All five refusal substrings match the execution gate literally, and the nine receipt keys, status, scope, and count dictionaries match the harness's producing code.
+
+**Findings worth reading**
+- GAP-D1, fail-closed: the caller requires the receipt's `engine` dict to equal the registration's `python_flint` dict, but the harness fills it from `producer_environment` in evidence.py, which is not a charged input. A derived extra field would STOP the batch as a false negative, never a false PASS. Repair, only if it ever fires: compare the three keys individually.
+- Documentary nit: `job_tag` truthiness is not checked at startup. An empty tag makes every probe fail with a non-matching reason and STOP.
+- Inherited, not new: a failed namespace or stat read right after Popen leaves CAPRUN unwaited, custody is cooperative against same-user writers, and there is no independent live-child capture. All are localized, none blocks preparation.
+- By design, any failure before the caller is armed leaves no STOP file, only a nonzero exit and traceback.
+
+**Written**
+| file | sha256 |
+|---|---|
+| xmodel/f10-r1-quotient-generic-caller-gate-fable5-20260910.md | d2dd5cc2169eed0e14efbc9dd975958c1df0c7461bc601b6eb702a7f565a352f |
+| box/f10-r1-quotient-generic-caller-gate-fable5-20260910/input-pins.sha256 | 9c736f2d40153ddc6b07504b311cecaf56fa75f0868ea1b8a6d5a5645e442924 |
+
+Every write went through the designated apply_patch binary. No Python, compile, import, AST, test, CAS, network, or process inspection was used.
+
+**Next**: one fresh finite generic batch may be prepared on this exact packet, but only after ROOT's own registration with real host, cwd, clocks, and native closure, plus the separate SYSTEM unit, stop timer, and same-launch live capture. The resulting receipt still needs an independent intake before any actual-source use.
+DIVERT path=xmodel/f10-r1-quotient-generic-caller-gate-fable5-20260910.md status=CLEAN body_bytes=23028 body_sha256=d2dd5cc2169eed0e14efbc9dd975958c1df0c7461bc601b6eb702a7f565a352f

@@ -1,0 +1,37 @@
+{
+  "schema": "jc2.manual-terminal-custody/v1",
+  "owner": "/root/contact_collision_geometry",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-10T10:41:53Z",
+  "fixed_cap_utc": "2026-09-10T11:01:00Z",
+  "publication_reserve_utc": "2026-09-10T10:58:00Z",
+  "payload_writers_idle_utc": "2026-09-10T10:58:40Z",
+  "status": "TERMINAL_PROVISIONAL_ADVANCE_WITH_EXPLICIT_GAP",
+  "scientific_execution": "NONE; manual text arithmetic only",
+  "prior_parent_status": "compatibility-infinity parent PROVISIONAL; quarantine child if parent arithmetic fails",
+  "scope": "exact ROOT card plus nine parents; no additional scientific inputs",
+  "whole_reads": "ROOT card WHOLE; all nine exact-current-byte parent WHOLE reads expressly reused; own full sealed report, transaction and READSCOPE read WHOLE",
+  "transaction_status": "VERIFIED against expected basis and exact expected manifest hash",
+  "report": "xmodel/f10-r2-infinity-remainder-astra-20260910.md",
+  "report_sha256": "d727717f3f709d565ce018849bc81800b21cfe181f42e6b575486ffebb4843b3",
+  "expected_transaction": "xmodel/f10-r2-infinity-remainder-astra-20260910.md.artifact.json",
+  "expected_transaction_sha256": "3d2bca2a07ddc8b94b63765da900872f7a874e1d01ec45e4c2bdd82c872ed1d8",
+  "input_sha256": {
+    "box/f10-r2-infinity-remainder-prep-20260910/ROOT-CARD.md": "ad770c44f3912a7ac3a70d5077893a3b01283d73d08ffbafed3d1b8b6d26e600",
+    "xmodel/f10-r2-compatibility-infinity-astra-20260910.md": "8738d3ed1e458f00f0d454a464c909e86134b87e44815e007cd3c5c8db1a5ed3",
+    "xmodel/f10-r2-full-source-transfer-astra-20260910.md": "9f1c44dfd44b48cc3b36d46d79ec407a88addab19e60af2a307f4a17bf82ec3b",
+    "xmodel/f10-r2-full-source-gate-fable5-20260910.md": "e89e6fb1d107eda73a2a1f334e2bdc4161fb9a78511ff8061cf7fba05ae0b514",
+    "xmodel/f10-r2-scale-cover-astra-20260910.md": "bc344b791b993819030f342c0dff1714b0c91867ae50212e47bc278c46b13496",
+    "xmodel/f10-r2-scale-cover-gate-fable5-20260910.md": "77c865e927726ae3932d3cd054d86d9935d56bb57337300ac59e2f5a4866cc09",
+    "xmodel/f10-r2-reconstruction-code-astra-20260910.md": "947bb434fd80ce8cbe2df01c8f877715aa3e8e82afbf90aa0e1212f5ac73f9e7",
+    "xmodel/f10-r2-reconstruction-code-gate-fable5-20260910.md": "3e9a06cf3aced19aa6a8ab5c742c57ffc1d1da21bb8a0270030a83285720502b",
+    "box/f10-r2-reconstruction-code-astra-20260910/produce.py": "eeb3fe3bbbe232ffe080a2a0a5db2c1f3ac60b83b61dd7798ff56e2f97977b10",
+    "box/f10-r2-reconstruction-code-astra-20260910/arithmetic.py": "fe9ab1abe9a96fc43b889e1bcb598f8e8c65fd194732c48f3542e13c476e0345"
+  },
+  "owned_sha256_excluding_this_custody": {
+    "xmodel/f10-r2-infinity-remainder-astra-20260910.md": "d727717f3f709d565ce018849bc81800b21cfe181f42e6b575486ffebb4843b3",
+    "xmodel/f10-r2-infinity-remainder-astra-20260910.md.artifact.json": "3d2bca2a07ddc8b94b63765da900872f7a874e1d01ec45e4c2bdd82c872ed1d8",
+    "box/f10-r2-infinity-remainder-astra-20260910/READSCOPE.md": "776ad1a4e201644806f2181ca4350f39c57db633b57ed48bab2ef057a126b929"
+  },
+  "terminal_handshake": "This custody is the final authored write; after its pin, all owned writers IDLE. ROOT intake must begin with this custody pin, then all pins, expected transaction verify, and WHOLE report. No automatic review, promotion, execution or follow-on authority."
+}

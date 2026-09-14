@@ -1,0 +1,133 @@
+{
+  "all_children_terminal": true,
+  "cas_sympy_aws_network": false,
+  "elapsed_seconds": 5.045289855101146,
+  "limits_per_command": {
+    "address_space_bytes": 536870912,
+    "cpu_seconds": 25,
+    "wall_seconds": 30
+  },
+  "pins": {
+    "baseline.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "exporter.py": "9fd003e420f3ee069f1ed1c06a365e5b4500d361bc3951f2f8f17ef733ab3703",
+    "test_exporter.py": "331e97c84f22592a1a28842df7c11e84e4f72355a906c156403eb5eaca490b2b"
+  },
+  "positive_checks_each_mode": 53,
+  "production_rows_generated": 0,
+  "repaired_footer_mutations_each_mode": 6,
+  "runs": [
+    {
+      "check_count": 53,
+      "expected_returncode": 0,
+      "intended_rejection": false,
+      "label": "normal-pass",
+      "returncode": 0,
+      "wall_seconds": 0.11711679503787309
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "normal-missing_low",
+      "returncode": 1,
+      "wall_seconds": 0.16654132294934243
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "normal-field_split",
+      "returncode": 1,
+      "wall_seconds": 0.1714831959689036
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "normal-target",
+      "returncode": 1,
+      "wall_seconds": 0.16947188402991742
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "normal-fixed_zero",
+      "returncode": 1,
+      "wall_seconds": 0.17027862998656929
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "normal-guard",
+      "returncode": 1,
+      "wall_seconds": 0.1700499519938603
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "normal-resynced",
+      "returncode": 1,
+      "wall_seconds": 0.1723816730082035
+    },
+    {
+      "check_count": 53,
+      "expected_returncode": 0,
+      "intended_rejection": false,
+      "label": "optimized-pass",
+      "returncode": 0,
+      "wall_seconds": 0.31596271391026676
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "optimized-missing_low",
+      "returncode": 1,
+      "wall_seconds": 0.5998210939578712
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "optimized-field_split",
+      "returncode": 1,
+      "wall_seconds": 0.5922554229618981
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "optimized-target",
+      "returncode": 1,
+      "wall_seconds": 0.5997675970429555
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "optimized-fixed_zero",
+      "returncode": 1,
+      "wall_seconds": 0.602009047055617
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "optimized-guard",
+      "returncode": 1,
+      "wall_seconds": 0.5956873849499971
+    },
+    {
+      "check_count": null,
+      "expected_returncode": 1,
+      "intended_rejection": true,
+      "label": "optimized-resynced",
+      "returncode": 1,
+      "wall_seconds": 0.6000295020639896
+    }
+  ],
+  "status": "PASS"
+}

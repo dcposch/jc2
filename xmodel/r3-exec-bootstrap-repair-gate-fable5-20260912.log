@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Both extra entries were created at 16:41:46Z, seven seconds before my first action, so they are launcher sidecars and not my writes. The lane is complete and sealed with no further action needed.
+
+**Outcome.** The focused DELTA FIRST is written and sealed at `xmodel/r3-exec-bootstrap-repair-gate-fable5-20260912.md` (sha256 `5c3dea2e…ed827`, 210 lines, marker last), finished at 16:46:40Z against the 16:50Z reserve. No source-visible blocker was found.
+
+**Findings, briefly.**
+- **Delta CONFIRMED as exactly four insertions.** A read-only diff of the parent alias against the repaired file shows only added hunks, nine lines, no deletion or edit, so every interface element (nine authority objects and argv, imports, pins, registration schema, exclusive writes, fd 1/2 bounds, fd≥3 closure, same-process exec, zero CPU origin, 64 KiB read cap) is unchanged by construction.
+- **Each insertion is correctly placed and typed.** The absolute deadline bound sits in `__init__` before the first clock check, uses aware datetimes on the task deadline index, and makes every later clock check absolute. The registration-parent exclusion runs before any creation and repeats at both post-stage audits. The stdin check is the first statement of `outputs()` and runs at all three call sites. The umask is set before the first mkdir, and the pre-exec 077 mask is unchanged.
+- **No contradiction.** The full constraint set is satisfiable by a concrete example; the only caveat is feasibility of the now-absolute 120 s window, which the contract already labels a host qualification matter.
+- **Negative cases N1–N4 reject before any write** by source trace, including the case ROOT asked about where the math deadline is acceptable but task/custody exceeds outer+3000. N5 (umask 077) no longer stops at source; the kernel's actual leaf mode remains a host observation.
+- **One minor GAP recorded.** The stdin check binds fd 0 to whatever node `/dev/null` currently names and does not compare rdev to (1,3); this sits inside the asserted ROOT host trust and needs no repair for this delta.
+- **Decision.** The four changes discharge the parent's G1/G2/G4/G5 at the source level; G3 (64 KiB cap) is deliberately untouched per intake. The dispatcher's monotonic counter still restarts at exec, so the end-to-end bound depends on a genuine `outer_started_utc` and the independently armed external supervisor, which remain the exact external preconditions listed in the report.
+
+**Custody.** All six inputs matched the expected hashes before reading and again after each write, including after the seal. Only the one report file was written, in four bounded apply_patch writes, with no interpreter, finalizer, charge_basis line, or executed program.
+DIVERT path=xmodel/r3-exec-bootstrap-repair-gate-fable5-20260912.md status=CLEAN body_bytes=15740 body_sha256=5c3dea2ec5d7d77c8fd963210badabfd069b781aac325c6898eeb759ee8ed827

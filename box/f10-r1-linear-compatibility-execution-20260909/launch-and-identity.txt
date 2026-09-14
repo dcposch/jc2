@@ -1,0 +1,21 @@
+Running as unit: jc2-f10-linear-compat-runtime-20260909.service; invocation ID: 2896d5f8ed454902a04791a8396db5db
+TimeoutStopUSec=5s
+RuntimeMaxUSec=5min
+MainPID=7155
+ExecMainStartTimestamp=Wed 2026-09-09 22:39:21 UTC
+ExecMainStartTimestampMonotonic=166083087
+ExecStart={ path=/usr/bin/python3 ; argv[]=/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-r1-linear-compatibility-20260909/dispatch_batch.py ; ignore_errors=no ; start_time=[Wed 2026-09-09 22:39:21 UTC] ; stop_time=[n/a] ; pid=7155 ; code=(null) ; status=0/0 }
+ControlGroup=/system.slice/jc2-f10-linear-compat-runtime-20260909.service
+MemoryMax=3221225472
+TasksMax=64
+Environment=LD_LIBRARY_PATH= LD_PRELOAD= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+LimitFSIZE=16777216
+User=ubuntu
+KillMode=control-group
+ActiveState=active
+SubState=running
+InvocationID=2896d5f8ed454902a04791a8396db5db
+7155 (python3) R 1 7155 7155 0 -1 4194560 1964 0 0 0 1 0 0 0 20 0 1 0 16607 21020672 2915 18446744073709551615 4325376 7353021 140725719998096 0 0 0 0 16781312 2 0 0 0 17 15 0 0 0 0 0 10657224 12220544 484802560 140725720006094 140725720006189 140725720006189 140725720006631 0
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-r1-linear-compatibility-20260909/dispatch_batch.py 
+pid:[4026531836]
+0::/system.slice/jc2-f10-linear-compat-runtime-20260909.service

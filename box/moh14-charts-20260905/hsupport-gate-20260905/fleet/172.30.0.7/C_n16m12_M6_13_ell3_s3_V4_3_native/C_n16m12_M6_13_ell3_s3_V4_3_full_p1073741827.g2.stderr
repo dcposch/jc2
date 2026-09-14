@@ -1,0 +1,121 @@
+Initial seed for pseudo-random number generator is 1788612678
+
+--------------- INPUT DATA ---------------
+#variables                     161
+#equations                     244
+#invalid equations               0
+field characteristic    1073741827
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option           44
+initial hash table size     131072 (2^17)
+max pair selection            1000
+reduce gb                        1
+#threads                         8
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  2       3    1348       8 x 17         16.18%        3 new       0 zero         0.00 | 0.01         
+  2       2    1373       8 x 13         21.15%        2 new       0 zero         0.00 | 0.01         
+  3      22    1157     176 x 321         1.02%       17 new       5 zero         0.00 | 0.03         
+  3      25    1293     135 x 375         1.10%       24 new       1 zero         0.01 | 0.05         
+  3      13    1607      74 x 205         2.31%       11 new       2 zero         0.00 | 0.02         
+  4     270    1723    2281 x 5900        0.09%      150 new     120 zero         0.06 | 0.45         
+  3      18    4009     130 x 563         1.28%       18 new       0 zero         0.01 | 0.07         
+  4     588    4388    5221 x 14943       0.06%      300 new     288 zero         0.22 | 1.49         
+  4     612    8592    6428 x 20022       0.07%      377 new     235 zero         0.49 | 3.23         
+  3      10   14752      41 x 178         6.77%       10 new       0 zero         0.02 | 0.14         
+  4     723   14822    6446 x 19030       0.11%      460 new     266 zero         0.89 | 6.07         
+  4     552   22046    4899 x 14321       0.19%      348 new     204 zero         0.94 | 6.40         
+  4     434   28004    2546 x 4593        0.43%      136 new     298 zero         0.44 | 3.04         
+  4     148   29948    1411 x 2174        0.59%       35 new     115 zero         0.14 | 0.86         
+  4      16   30514     714 x 1162        1.06%        8 new       8 zero         0.05 | 0.24         
+  5    1000   30652    3738 x 4752        0.19%      139 new     861 zero         0.47 | 3.28         
+  5    1000   32642    6155 x 9522        0.15%      154 new     846 zero         0.70 | 4.08         
+  5    1000   35179    8010 x 13277       0.11%      192 new     810 zero         0.91 | 5.37         
+  5    1000   38652   10191 x 15835       0.12%      170 new     832 zero         0.97 | 5.38         
+  5    1000   41607   14053 x 25880       0.08%      230 new     771 zero         1.59 | 8.04         
+  5    1000   46060   16857 x 34370       0.07%      318 new     682 zero         2.51 | 11.83        
+  4      28   51857     125 x 191         5.26%        5 new      23 zero         0.06 | 0.24         
+  5    1002   51942   17886 x 37978       0.08%      270 new     732 zero         2.77 | 10.71        
+  5    1000   57535   19611 x 38069       0.07%      269 new     732 zero         2.92 | 10.79        
+  5    1000   62799   24129 x 52662       0.06%      396 new     605 zero         4.76 | 16.45        
+  5    1001   71174   20517 x 36475       0.09%      210 new     791 zero         2.97 | 9.43         
+  5    1000   74837   24189 x 48417       0.08%      182 new     818 zero         3.58 | 9.19         
+  5    1001   77729   27178 x 55506       0.08%      200 new     801 zero         4.22 | 10.42        
+  5    1000   81517   32297 x 68718       0.06%      233 new     767 zero         5.52 | 12.74        
+  5    1001   86247   36866 x 77206       0.06%      355 new     646 zero         7.77 | 18.77        
+  5    1000   93188   35891 x 72714       0.07%      254 new     746 zero         6.83 | 14.89        
+  5    1000   98413   36496 x 77074       0.07%      239 new     761 zero         7.34 | 14.81        
+  5    1000  102229   40730 x 87835       0.07%      267 new     734 zero         8.54 | 16.95        
+  4      30  105849     305 x 635         2.63%       13 new      17 zero         0.27 | 0.76         
+  5    1000  105381   37922 x 78839       0.08%      294 new     707 zero         8.98 | 18.73        
+  5    1000  107519   27690 x 51265       0.11%      280 new     720 zero         7.18 | 16.50        
+  5    1000  113429   47478 x 94003       0.06%      244 new     756 zero        10.01 | 18.06        
+  5    1000  117836   49150 x 96495       0.06%      186 new     816 zero        10.04 | 16.45        
+  5    1000  120754   48706 x 100237      0.07%      213 new     788 zero        11.03 | 17.96        
+  4      25  123263    1849 x 9231        1.20%       21 new       4 zero         1.00 | 1.70         
+  5    1000  122979   50988 x 102742      0.07%      272 new     729 zero        12.69 | 21.61        
+  5    1000  126580   55567 x 118602      0.06%      268 new     732 zero        15.07 | 24.41        
+  5    1000  131288   44911 x 86382       0.08%      124 new     876 zero        10.77 | 15.03        
+  5    1001  133432   55443 x 104914      0.07%       59 new     944 zero        11.34 | 13.44        
+  5    1000  134141   62876 x 134044      0.06%      150 new     851 zero        16.94 | 22.09        
+  5    1001  136824   75247 x 169996      0.04%      344 new     658 zero        22.60 | 34.04        
+  4      28  143245     417 x 1332        1.39%       18 new      10 zero         0.55 | 1.29         
+  4     112  139250    2906 x 9206        0.70%       51 new      61 zero         1.68 | 3.64         
+  5    1000  135348   23770 x 52816       0.14%      291 new     709 zero        10.16 | 20.19        
+  5    1000  140093   48711 x 104424      0.08%      318 new     682 zero        17.72 | 29.89        
+  5    1000  145892   57958 x 128035      0.06%      392 new     608 zero        24.58 | 39.93        
+  4      32  152172     311 x 685         3.38%       16 new      16 zero         0.58 | 1.42         
+  5    1001  151408   12201 x 20985       0.16%      183 new     818 zero         6.22 | 14.18        
+  4      30  153495     302 x 572         3.17%        7 new      23 zero         0.34 | 0.71         
+  5    1000  153123   24240 x 40687       0.14%      194 new     806 zero         8.79 | 16.55        
+  5    1000  156163   35666 x 62551       0.11%      316 new     684 zero        15.43 | 28.25        
+  5    1001  163155   76024 x 156409      0.05%      286 new     715 zero        31.37 | 42.90        
+  4      31  168288     256 x 514         3.78%        8 new      23 zero         0.40 | 0.88         
+  5    1000  167933   78111 x 167423      0.05%      368 new     632 zero        34.37 | 49.15        
+  5    1001  174318   76033 x 148475      0.06%      286 new     716 zero        29.37 | 40.93        
+  5    1000  180283   84948 x 191929      0.05%      287 new     713 zeroEnlarging exponent vector for hash table failed
+for esz = 67108864, segmentation fault will follow.
+Command terminated by signal 11
+	Command being timed: "msolve -g 2 -t 8 -v 2 -l 44 -m 1000 -f /home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/fleet/172.30.0.7/C_n16m12_M6_13_ell3_s3_V4_3_native/C_n16m12_M6_13_ell3_s3_V4_3_full_p1073741827.ms -o /home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/fleet/172.30.0.7/C_n16m12_M6_13_ell3_s3_V4_3_native/C_n16m12_M6_13_ell3_s3_V4_3_full_p1073741827.g2.out"
+	User time (seconds): 751.85
+	System time (seconds): 4.90
+	Percent of CPU this job got: 177%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:06.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13136756
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3351867
+	Voluntary context switches: 61849
+	Involuntary context switches: 1535
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,101 @@
+{
+ "point_free_nonzero": {
+  "jet1": 1,
+  "jet2": 1,
+  "c": 1,
+  "K2c_3_26": -8,
+  "K2c_4_25": 20
+ },
+ "Hc_at_point": {
+  "Hc_5_4": "0",
+  "Hc_9_0": "0",
+  "Hc_1_7": "0",
+  "Hc_2_6": "0",
+  "Hc_3_5": "0",
+  "Hc_4_4": "-1",
+  "Hc_5_3": "2",
+  "Hc_1_8": "0",
+  "Hc_6_3": "-1",
+  "Hc_2_7": "2",
+  "Hc_7_2": "4",
+  "Hc_3_6": "-2",
+  "Hc_8_1": "-2",
+  "Hc_4_5": "-1"
+ },
+ "K2c_nonzero_at_point": {
+  "K2c_3_26": "-8",
+  "K2c_4_25": "20"
+ },
+ "Delta_T8_residual": {
+  "G_local6_coord0": "(K2c_3_26 + 8*jet2)**2",
+  "G_local7_coord0": "-2*(K2c_3_26 + 8*jet2)*(K2c_4_25 - K2c_4_26 - 20*jet1**2)",
+  "G_local8_coord0": "-120*Hc_5_4*K2c_3_26 - 960*Hc_5_4*jet2 - 52*K2c_3_26**2*jet1 - 2*K2c_3_26*K2c_5_25 + 2*K2c_3_26*K2c_5_26 - 512*K2c_3_26*jet1*jet2 - 14*K2c_3_26 + K2c_4_25**2 - 2*K2c_4_25*K2c_4_26 - 40*K2c_4_25*jet1**2 + K2c_4_26**2 + 40*K2c_4_26*jet1**2 - 16*K2c_5_25*jet2 + 16*K2c_5_26*jet2 + 400*jet1**4 - 768*jet1*jet2**2 - 112*jet2"
+ },
+ "saturated_T8_row_counts_outer_zero": {
+  "F": 12,
+  "G": 12,
+  "J": 1396
+ },
+ "saturated_T8_nonzero_rows": [],
+ "h3": "-x**7*y**2 + 7*x**6*y**3 + 2*x**6*y - 21*x**5*y**4 - 12*x**5*y**2 + 2*x**5*y - x**5 + 35*x**4*y**5 + 30*x**4*y**3 - 10*x**4*y**2 + 3*x**4*y - 2*x**4 - 35*x**3*y**6 - 40*x**3*y**4 + 20*x**3*y**3 - 2*x**3*y**2 + 6*x**3*y + x**3 + 21*x**2*y**7 + 30*x**2*y**5 - 20*x**2*y**4 - 2*x**2*y**3 - 6*x**2*y**2 - 3*x**2*y + 4*x**2 - 7*x*y**8 - 12*x*y**6 + 10*x*y**5 + 3*x*y**4 + 2*x*y**3 + 3*x*y**2 - 8*x*y + 2*x + y**9 + 2*y**7 - 2*y**6 - y**5 - y**3 + 4*y**2 - 2*y",
+ "h3_factors": "(-1, [(x - y, 1), (x**2*y - 2*x*y**2 - x + y**3 + y - 1, 1), (x**4*y - 4*x**3*y**2 - x**3 + 6*x**2*y**3 + 3*x**2*y - x**2 - 4*x*y**4 - 3*x*y**2 + 2*x*y + 2*x + y**5 + y**3 - y**2 - 2*y + 2, 1)])",
+ "h2_factor_degrees": [
+  [
+   36,
+   1
+  ]
+ ],
+ "tower": {
+  "h3^4_coeff": "1",
+  "C1_h3^3_coeff": "0",
+  "deg_C2": 14,
+  "deg_C3": 23,
+  "deg_C4": 32
+ },
+ "F_is_h2_cubed": true,
+ "G_is_h2_squared": true,
+ "J_identically_zero": true,
+ "J0_row_value": "0",
+ "F2_minus_G3_zero": true,
+ "ord_t_K2_sigma": 5,
+ "a_p": {
+  "5": "153",
+  "6": "56 - 28*jet1",
+  "7": "-4008*jet1 - 28*jet2 - 112"
+ },
+ "first_failing_G_pole_row_local_power": 10,
+ "first_failing_stage": 6,
+ "K3_sigma": {
+  "4": "-jet1**2 + 2*jet1 - 1",
+  "5": "-2*jet1*jet2 + 2*jet1 + 2*jet2 - 2",
+  "6": "7*jet1**3 - 12*jet1**2 - 2*jet1*pi + 3*jet1 - jet2**2 + 2*jet2 + 2*pi + 1",
+  "7": "21*jet1**2*jet2 - 10*jet1**2 - 24*jet1*jet2 + 6*jet1 - 2*jet2*pi + 3*jet2 + 2*pi + 4",
+  "8": "-21*jet1**4 + 30*jet1**3 + 21*jet1**2*pi - 2*jet1**2 + 21*jet1*jet2**2 - 20*jet1*jet2 - 24*jet1*pi - 3*jet1 - 12*jet2**2 + 6*jet2 - pi**2 + 3*pi + 2",
+  "9": "-84*jet1**3*jet2 + 20*jet1**3 + 90*jet1**2*jet2 - 6*jet1**2 + 42*jet1*jet2*pi - 4*jet1*jet2 - 20*jet1*pi - 8*jet1 + 7*jet2**3 - 10*jet2**2 - 24*jet2*pi - 3*jet2 + 6*pi",
+  "10": "35*jet1**5 - 40*jet1**4 - 84*jet1**3*pi - 2*jet1**3 - 126*jet1**2*jet2**2 + 60*jet1**2*jet2 + 90*jet1**2*pi + 3*jet1**2 + 90*jet1*jet2**2 - 12*jet1*jet2 + 21*jet1*pi**2 - 4*jet1*pi - 2*jet1 + 21*jet2**2*pi - 2*jet2**2 - 20*jet2*pi - 8*jet2 - 12*pi**2 - 3*pi",
+  "11": "175*jet1**4*jet2 - 20*jet1**4 - 160*jet1**3*jet2 + 2*jet1**3 - 252*jet1**2*jet2*pi - 6*jet1**2*jet2 + 60*jet1**2*pi + 4*jet1**2 - 84*jet1*jet2**3 + 60*jet1*jet2**2 + 180*jet1*jet2*pi + 6*jet1*jet2 - 12*jet1*pi + 30*jet2**3 - 6*jet2**2 + 21*jet2*pi**2 - 4*jet2*pi - 2*jet2 - 10*pi**2 - 8*pi",
+  "12": "-35*jet1**6 + 30*jet1**5 + 175*jet1**4*pi + 3*jet1**4 + 350*jet1**3*jet2**2 - 80*jet1**3*jet2 - 160*jet1**3*pi - jet1**3 - 240*jet1**2*jet2**2 + 6*jet1**2*jet2 - 126*jet1**2*pi**2 - 6*jet1**2*pi - 252*jet1*jet2**2*pi - 6*jet1*jet2**2 + 120*jet1*jet2*pi + 8*jet1*jet2 + 90*jet1*pi**2 + 6*jet1*pi - 21*jet2**4 + 20*jet2**3 + 90*jet2**2*pi + 3*jet2**2 - 12*jet2*pi + 7*pi**3 - 2*pi**2 - 2*pi"
+ },
+ "K3_D2_face": "pi**3*(pi**4 + 2)",
+ "K2_D2_face": "(pi - 1)**7*(pi + 1)**7*(pi**2 + 1)**7",
+ "outer_inhomogeneous": [],
+ "outer_constant_slots": {
+  "A2": [
+   71,
+   true
+  ],
+  "A3": [
+   107,
+   true
+  ],
+  "B1": [
+   35,
+   true
+  ],
+  "B2": [
+   71,
+   true
+  ]
+ },
+ "wall_seconds": 186.2
+}

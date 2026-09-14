@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate written and delivered at 04:34 UTC, nine minutes before the deadline. All five items are CONFIRMED with typed, uncharged gaps only.
+
+**Deliverables**
+
+- `xmodel/d125-ramified-twojet-gate-fable5-20260907.md`, 1437 words, verdict table plus five sections, one standalone `<!-- BODY-END -->` line at the end, no seal after it.
+- `box/d125-ramified-twojet-gate-fable5-20260907/` holds my own stdlib controls, a runner, the byte-identical normal/−O witness, `replay.json`, and `input_pins.txt` with the frozen-input hashes. Frozen inputs were not written to, no bytecode was emitted, and the producer's checker was never run.
+
+**What I verified by hand and by control**
+
+- Order-one normalization: the centralizer element F(R) is divisible by R² and bounded by degree 33, so f(R)=aR+bR³ is exact and an R⁵ term is excluded by degree. My toy control caught my own dropped factor of 5 in V₁ before confirming the E₂ identity with the f′ term.
+- Order three: I replayed the bracket expansion by hand. The R³[C,U₂] terms cancel, the R²C[R,U₂] terms combine to −10/3, and [RC,RC²]=RC²[R,C] yields the 5/27 coefficient. A 5/9 mutation fails at that gate.
+- T irreducibility, the three D slots, the negative-row matrix [[0,1,−1],[1,4,−3]], kernel (−1,1,1), φ(R)(u,0)=3u, φ(T) leader −3uv, and T·D=R·R_t′ all replay independently. Only ord φ(D) ≥ −1 is actually forced, and it still kills both rows because no v⁻¹ or v⁻³ row exists.
+- Contradiction: truncated degree-3 products give x₀=0, y₀=−(t+3)³, and [p]U₁=−c(t+3), so a01=0 forces c=0, x₁=0, against x₁²=−3(t+3)³.
+
+**Scope notes in the report**
+
+- The truncation convention is pinned. The proof consumes the s³ Jacobian coefficient, so it kills explicitly saturated three-jets over K[s]/(s⁴) but not K[s]/(s³), and says nothing about raw nilpotent jets, where k²=s⁴ makes the raw low rows vacuous.
+- The statement is K[[s]]-only with k=s² literally. Extending to an arbitrary DVR would need completion, a coefficient field and a unit-square adjustment, none of which the producer claims.
+- The optional [p¹⁵]B gauge slice moves under the whole shear, but the proof never uses it.
+
+**Uncharged gaps**: GAP-TRANSACTION (root and report hashes not in the frozen set), GAP-HISTORY (novelty check unverifiable), GAP-HELPER (producer checker depends on an unavailable helper path, replaced by own controls). No charge basis line, as instructed.
+DIVERT path=xmodel/d125-ramified-twojet-gate-fable5-20260907.md status=CLEAN body_bytes=10104 body_sha256=82ad1c16832a37f87c2c8e245fc0edd983bada9861479a153c20986d6042d974

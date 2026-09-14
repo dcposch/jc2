@@ -1,0 +1,22 @@
+{
+  "gate": "triple-cubic-source-coalesced-gate-fable5-20260909",
+  "model": "claude-fable-5-1",
+  "lane": "/tmp/jc2-lane.LphDUQ",
+  "frozen_basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "invited_utc": "2026-09-09T02:03:00Z",
+  "absolute_deadline_utc": "2026-09-09T02:24:00Z",
+  "charged_inputs_read_whole": [
+    {"lane_name": "cubic-source-proof.md", "sha256": "1620f9ef6b2edc598d35cab274cdfcc24d71353d18132d3a35ffb59fd2c46099", "bytes": 14721, "pinned_as": "xmodel/triple-cubic-source-coalesced-astra-20260909.md", "body_bytes_14388_sha256": "60cf87eb93271fc3011ff16fea8873559f5477b4af8e72a0e311942b45a43b53"},
+    {"lane_name": "cubic-source-transaction.json", "sha256": "13d831c43e025fd0af23f1e22c53a2fa816db227568d2f29c120e03e6eff97bf", "bytes": 704, "pinned_as": "xmodel/triple-cubic-source-coalesced-astra-20260909.md.artifact.json"},
+    {"lane_name": "cubic-source-custody.json", "sha256": "b231cb0cf21f53e4f870b474cf444bd8574299e53730a9d66ff9232998417f3c", "bytes": 2515, "pinned_as": "producer custody (self, not self-listed)"},
+    {"lane_name": "cubic-source-input-pins.json", "sha256": "2c1187fbf37d4a870863656eb395af6b558c20f062874890dc31bbf783b82660", "bytes": 942, "pinned_as": "box/triple-cubic-source-coalesced-20260909/input-pins.json"},
+    {"lane_name": "moh-actual-source.md", "sha256": "07e53340002c48b29a97d567ceb9eb867a292e9cbdd932ce7f508e0694875c46", "bytes": 13229, "pinned_as": "xmodel/positive-face-actual-receiver-discriminator-astra-20260906.md"},
+    {"lane_name": "moh-actual-source-gate.md", "sha256": "eade8ec8b9b9162bf3a6a9e60408094185b63b633e6343cce11b7e233e904284", "bytes": 14160, "pinned_as": "xmodel/positive-face-actual-receiver-gate-fable5-20260906.md"},
+    {"lane_name": "scope.md", "sha256": "07b80f46fdab92f47a385f480855dae626ed59c265be8c0561302b78ab675a6a", "bytes": 3323, "pinned_as": "box/triple-cubic-source-coalesced-gate-20260909/scope.md"}
+  ],
+  "omitted_by_scope": [{"path": "xmodel/d125-weightfree-local-consumer-coordinator-20260909.md", "sha256": "d4fd2a0e6549edbf9e65f8aa59e2fc2a1d6bbbc0299188fdd6adf96f340c8f51", "note": "proof-pattern context only; not read in this gate"}],
+  "mathematical_subprocesses": 0,
+  "aws_ssh_web_newagents": false,
+  "jc2_lean_access": false,
+  "repo_side_check": "sha256 of pinned paths only, no body read; see report"
+}

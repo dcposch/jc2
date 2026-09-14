@@ -1,0 +1,128 @@
+{
+  "K": 8,
+  "branch": "single",
+  "chart_sha256": "3e568adc18bc674cbf37d2cbf9ee4504273d6408483d7747c30508becaeb332a",
+  "elapsed_seconds": 0.038202,
+  "exact": null,
+  "interpretation": {
+    "modular_unit": "F_p-only until exact-Q confirmation",
+    "posdim": "necessary subsystem only; not a full-chart point or counterexample",
+    "unit_exact_q": "kills this branch and hence the full chart"
+  },
+  "modular_kill": null,
+  "necessary_subsystem": true,
+  "per_call_timeout_seconds": 60,
+  "primes": [
+    32003,
+    32009,
+    32027
+  ],
+  "progress": [
+    {
+      "accepted_run_count": 3,
+      "crt_rational_reconstruction": {
+        "available": true,
+        "items": {
+          "basis_size": {
+            "direct_singular_values": [
+              5,
+              5,
+              5
+            ],
+            "direct_values_agree": true,
+            "modulus": 32807947232729,
+            "rational_reconstruction": "5",
+            "residue": 5
+          },
+          "dimension": {
+            "direct_singular_values": [
+              14,
+              14,
+              14
+            ],
+            "direct_values_agree": true,
+            "modulus": 32807947232729,
+            "rational_reconstruction": "14",
+            "residue": 14
+          },
+          "lead_dim": {
+            "direct_singular_values": [
+              14,
+              14,
+              14
+            ],
+            "direct_values_agree": true,
+            "modulus": 32807947232729,
+            "rational_reconstruction": "14",
+            "residue": 14
+          }
+        },
+        "method": "CRT plus bounded rational reconstruction for scalar invariants"
+      },
+      "cumulative_row_count": 5,
+      "last_band": "n04",
+      "promotion_note": "",
+      "runs": [
+        {
+          "basis_size": 5,
+          "characteristic": 32003,
+          "dimension": 14,
+          "elapsed_seconds": 0.034005,
+          "label": "QREC_K8_single_stage00_n04_weight-desc_p32003",
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32003_p32003.sing",
+          "script_sha256": "0fc5008f31bc86f9e2e662e7109ffa0c40d09d0ba8f3ec14f8ac37251fdcd4e1",
+          "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32003_p32003.out",
+          "stdout_sha256": "f4fe0449b953f9a06e14e107fba751ebd39358b8960faacb5cdc5e6728335c2a",
+          "timed_out": false,
+          "unit": false,
+          "vdim": null
+        },
+        {
+          "basis_size": 5,
+          "characteristic": 32009,
+          "dimension": 14,
+          "elapsed_seconds": 0.034264,
+          "label": "QREC_K8_single_stage00_n04_weight-desc_p32009",
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32009_p32009.sing",
+          "script_sha256": "654c2d12e49979cb139f60c4ea68fc795a1fe7601bb66b7248dc9143817967f6",
+          "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32009_p32009.out",
+          "stdout_sha256": "f4fe0449b953f9a06e14e107fba751ebd39358b8960faacb5cdc5e6728335c2a",
+          "timed_out": false,
+          "unit": false,
+          "vdim": null
+        },
+        {
+          "basis_size": 5,
+          "characteristic": 32027,
+          "dimension": 14,
+          "elapsed_seconds": 0.032934,
+          "label": "QREC_K8_single_stage00_n04_weight-desc_p32027",
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32027_p32027.sing",
+          "script_sha256": "b563e9d4c31a013fbd94bba0491b42599b00f2012cdcfda63d487af109d71b3b",
+          "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32027_p32027.out",
+          "stdout_sha256": "f4fe0449b953f9a06e14e107fba751ebd39358b8960faacb5cdc5e6728335c2a",
+          "timed_out": false,
+          "unit": false,
+          "vdim": null
+        }
+      ],
+      "stage": "stage00_n04",
+      "stage_index": 0,
+      "verdict": "MODULAR_ONLY"
+    }
+  ],
+  "tag": "QREC_K8_SCREEN_V2",
+  "tie_order": "weight-desc",
+  "total_cores": 3,
+  "type": "K4RAY-QUOTIENT-RECURRENCE-STAGED-RUN",
+  "verdict": "OPEN"
+}

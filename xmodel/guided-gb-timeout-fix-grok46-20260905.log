@@ -1,0 +1,20 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll verify the frozen input hashes first, then inspect the timeout path in `guided_gb.py` and the charged reports so the fix stays byte-identical on existing controls.Hashes are next: I'll build the receipt manifest with awk and run `sha256sum -c` before reading the charged files.Hashes match. Next I’ll read the timeout path in `guided_gb.py` and the charged reports that describe the failure.The charged report points at a 9,900 s internal timeout and a bare driver-error exit; I’ll locate that logic and how the Hilbert seed is supposed to sit under the outer watchdog.The 9,900 s abort is a subprocess timeout in the Hilbert-seed driver, not a solver verdict. I’ll inspect existing tests and how census-sweep calls `guided_gb` so the patch stays compatible.I’ll reproduce the unpatched timeout first, then apply a minimal per-stage timeout contract so an outer watchdog no longer yields a bare driver error.Reproduction matches the report: a 1s `subprocess.run` raises `TimeoutExpired` (the bare driver-error path), and `guided_gb` returns an unstaged `INCONCLUSIVE_TIMEOUT`. I’ll patch the timeout contract next.Control and promotion bodies are unchanged. Next I’ll add the unit test and run it with the census-sweep control replay.The internal timeout that aborted gi70 job (b) is patched. An outer watchdog no longer loses the Hilbert-seed path to a bare driver error.
+
+Frozen inputs verified 4/4 via awk manifest + `sha256sum -c`. Report: `xmodel/guided-gb-timeout-fix-grok46-20260905.md` (sealed 6684 body bytes). Commit `f71721d0`.
+
+**What was wrong.** Frozen `guided_gb.py` had one wait cap: `RunConfig.timeout_seconds = 1800` on the whole std script. It had no Hilbert-seed stage. gi70 therefore used `subprocess.run(..., timeout=9900)` inside a 10200 s GNU timeout; that raised uncaught `TimeoutExpired` → wrapper rc 1, with no Hilbert vector, guided run, or CRT.
+
+**Reproduction** (synthetic ideal, 1 s cap, `system("sh","sleep 3")`): uncaught `TimeoutExpired` at 1.003 s; unpatched `guided_groebner` returned `INCONCLUSIVE_TIMEOUT` with no stage name.
+
+**Fix** in `box/lib/guided_gb.py` (898 → 1129 lines; SHA `95d12f5b…`):
+
+- Per-stage caps: `hilbert_seed_timeout_seconds`, `std_timeout_seconds` (CLI `--hilbert-timeout`, `--std-timeout`).
+- `outer_watchdog_seconds` (`--outer-watchdog`) suppresses the inherited 1800 s std cap.
+- Expiry returns `INCONCLUSIVE_TIMEOUT` with `timeout_stage` in `{hilbert_seed, std}`. `TimeoutExpired` never escapes.
+- `PromotionPolicy.exact_q` and the modular-unit-not-promoted note are unchanged. `emit_guided_script` / control parsers / CRT helpers are byte-identical.
+
+**Tests:** 12/12 PASS. Census-sweep controls replayed identically: D108, (99,66) stage-4, K=8, K=9 all DEAD/UNIT; tame SURVIVES (`DIM0_CHAR0`, dim 0, non-unit). No verdict changed.
+
+Drivers: `box/guided-gb-fix-20260905/`. No fleet, no ledger, no `jc2-lean`, no `ideation-*`. No `charge_basis` (no new exit price).
+DIVERT path=xmodel/guided-gb-timeout-fix-grok46-20260905.md status=CLEAN_SEALED body_bytes=6684 body_sha256=cac9aaa7d758ce3a128dd1ad45f4727d07d111fe89db0041433e0e51e3f2dea6

@@ -1,0 +1,18 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and closed inside both clocks. Nothing further is needed from tools.
+
+**Outcome: all seven items CONFIRMED, no GAP, no REFUTED.** The charged proof is a correct local nonexistence theorem under its explicit hypotheses. I reconstructed every step manually with no subprocess of any kind.
+
+**What I verified by hand**
+- **A.** Homogenization gives N=5(m+n)−4. The finite reference puts the first surviving F_j in a complement of multiplication by H^(m−1) and strips scalar H-powers, so (3) holds. F≠0 because f₁'(R₁) has degree 5(m−1)>2 and cannot divide cg². Budget (4) follows from S+2D₂=5, giving Δ=3/2 for (S) and 1/2 for (G).
+- **B.** Both local inverses have nonnegative integer s-orders before any Puiseux step. Both Euler lemmas and the commuting lemma are field arguments as stated. The chain rule keeps X-dependence and its cross terms cancel exactly.
+- **C.** The whole-B arguments use only s | (B_s − R_sⁿ). No B-reference or ordG premise is needed. The separated case is tight: η>κ is what makes every binomial shift later than its own base.
+- **D.** (9) gives E0>1/2 for integer δ and E0>3/2 for (S) half-integer δ, so (S) is closed for every coprime 2≤m<n. For (G), n≥2m−1 gives E0≥0 with the unique equality datum (10) and F_j=λp(p+g)(p+tg).
+- **E.** gcd(j,n)=1 from 2j=5n−1; κ≥5 forces b0=0; the constant term is later since j+r is nonintegral; the B initial support is exactly {0,n,2n}. The m=2 case specializes cleanly with the quadratic-lemma bound exactly tight.
+- **F.** My independent expansion reproduces all three coefficients in (18) and C_n=n(n−1)/(n+1)². Both chart tables were rederived from the raw H, giving c=−C_nλ³t and c=C_nλ³t(t−1)², incompatible since (t−1)²+1=3ρ≠0 for both roots.
+- **G.** Scope is exactly as stated: a local theorem, no source, full-ideal, F2 or JC2 content.
+
+**Hostile notes recorded in the report.** The nonzero target coefficient silently uses that g is not a factor of H, which both patterns satisfy. The H-preserving map swapping the two double lines does not preserve the Jacobian line, so the two chart relations are genuinely independent. As a sharpness control, the same argument would fail at t=1±i, confirming the golden value is load-bearing.
+
+**Custody.** Read scope was the two charged inputs only, hashes matched before reading. Start 08:45:06Z, body closed 08:59:45Z, one standalone BODY-END, no Seal or charge line, no box directory, no background writers, all-writers-IDLE. Output file: xmodel/f2-uniform-local-gate-fable5-20260909.md, 13937 bytes, sha256 7a163b20…3173e1. No new OPEN raised. The one recommended different-model gate is to rederive section 6 and the two chart tables independently, since those are where a silent orientation slip would hide.
+DIVERT path=xmodel/f2-uniform-local-gate-fable5-20260909.md status=CLEAN body_bytes=13937 body_sha256=7a163b20f2c6a13b2d1af0e75ec5256ae9478ea10bd0218deb62999c553173e1

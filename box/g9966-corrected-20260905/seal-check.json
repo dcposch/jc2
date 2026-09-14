@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "sealed_and_verified_utc": "2026-09-05T20:42:28.066770+00:00",
+  "elapsed_lane_seconds": 11640.06677,
+  "elapsed_lane_minutes": 194.00111283333334,
+  "report_bytes": 29900,
+  "report_sha256": "085bc31ee45d799cf5e44811d9d832eae7d75fac932c49b5a77526c609757218",
+  "frozen_basis": "ec612a7dda0fa3eedea1324560dafaf127b6af96",
+  "fleet_terminated_before_seal": true,
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "ops/seal.py",
+        "stamp",
+        "xmodel/g9966-corrected-engine-astra-20260905.md",
+        "--basis",
+        "ec612a7dda0fa3eedea1324560dafaf127b6af96"
+      ],
+      "stdout": "STAMPED path=xmodel/g9966-corrected-engine-astra-20260905.md body_bytes=29567 body_sha256=5487f32a463f62954ba5a8c58f63b1ceb22c1e8561cd652c2d3706ef4246b6e3 basis=ec612a7dda0fa3eedea1324560dafaf127b6af96\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "ops/seal.py",
+        "verify",
+        "--expected-basis",
+        "ec612a7dda0fa3eedea1324560dafaf127b6af96",
+        "xmodel/g9966-corrected-engine-astra-20260905.md"
+      ],
+      "stdout": "PASS path=xmodel/g9966-corrected-engine-astra-20260905.md body_bytes=29567 body_sha256=5487f32a463f62954ba5a8c58f63b1ceb22c1e8561cd652c2d3706ef4246b6e3 basis=ec612a7dda0fa3eedea1324560dafaf127b6af96\n",
+      "stderr": ""
+    }
+  ]
+}

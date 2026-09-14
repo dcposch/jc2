@@ -1,0 +1,221 @@
+{
+  "9966": {
+    "engine": "box/g9966-corrected-20260905/engine.py",
+    "engine_sha256": "440a70b7224dc892ac177778b3406506117388c058bb63cc4fefe56d1f5e6f20",
+    "source_qcap": 32,
+    "D_floor": 189,
+    "C_floor": 285,
+    "D_ambient_min_r": 21,
+    "C_ambient_min_r": 53,
+    "source_stage0_mapped_min_r": {
+      "A3": 53,
+      "B2": 21
+    },
+    "all_D2_equality_images_zero": true,
+    "front_rows": [
+      {
+        "r": 21,
+        "D_allowed_q": [
+          32
+        ],
+        "C_index": 43,
+        "C_allowed_q": [],
+        "quotient_degree_bound": 31,
+        "bD_start": 54,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 22,
+        "D_allowed_q": [
+          31,
+          32
+        ],
+        "C_index": 45,
+        "C_allowed_q": [],
+        "quotient_degree_bound": 31,
+        "bD_start": 55,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 23,
+        "D_allowed_q": [
+          30,
+          31,
+          32
+        ],
+        "C_index": 47,
+        "C_allowed_q": [],
+        "quotient_degree_bound": 31,
+        "bD_start": 56,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 24,
+        "D_allowed_q": [
+          30,
+          31,
+          32
+        ],
+        "C_index": 49,
+        "C_allowed_q": [],
+        "quotient_degree_bound": 31,
+        "bD_start": 57,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 25,
+        "D_allowed_q": [
+          29,
+          30,
+          31,
+          32
+        ],
+        "C_index": 51,
+        "C_allowed_q": [],
+        "quotient_degree_bound": 31,
+        "bD_start": 58,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 26,
+        "D_allowed_q": [
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "C_index": 53,
+        "C_allowed_q": [
+          32
+        ],
+        "quotient_degree_bound": 31,
+        "bD_start": 59,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 27,
+        "D_allowed_q": [
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "C_index": 55,
+        "C_allowed_q": [
+          30,
+          31,
+          32
+        ],
+        "quotient_degree_bound": 31,
+        "bD_start": 60,
+        "bD_strictly_later": true
+      }
+    ],
+    "proved_D_cutoff": 27,
+    "proved_C_cutoff": 56,
+    "quotient_front_after_cutoff": 57,
+    "negative_control": {
+      "omitting_corner_would_allow_front": "tau*z**27*(z + 1)**5",
+      "corner_coefficient": "tau",
+      "exact_quotient": "tau**2*z**31 + tau**2*z**30",
+      "exact_remainder": "0",
+      "quotient_fits_C55_floor": true
+    }
+  },
+  "10872": {
+    "engine": "box/d108-rekill-20260905/work/rekill_engine.py",
+    "engine_sha256": "8f6c34f6dbc4407e0deb599fe2061a1a23f93f16dcda2d7dbe30184e1cd82ee1",
+    "source_qcap": 35,
+    "D_floor": 276,
+    "C_floor": 416,
+    "D_ambient_min_r": 26,
+    "C_ambient_min_r": 61,
+    "source_stage0_mapped_min_r": {
+      "A3": 61,
+      "B2": 26
+    },
+    "all_D2_equality_images_zero": true,
+    "front_rows": [
+      {
+        "r": 26,
+        "D_allowed_q": [
+          35
+        ],
+        "C_index": 53,
+        "C_allowed_q": [],
+        "quotient_degree_bound": 34,
+        "bD_start": 62,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 27,
+        "D_allowed_q": [
+          34,
+          35
+        ],
+        "C_index": 55,
+        "C_allowed_q": [],
+        "quotient_degree_bound": 34,
+        "bD_start": 63,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 28,
+        "D_allowed_q": [
+          33,
+          34,
+          35
+        ],
+        "C_index": 57,
+        "C_allowed_q": [],
+        "quotient_degree_bound": 34,
+        "bD_start": 64,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 29,
+        "D_allowed_q": [
+          32,
+          33,
+          34,
+          35
+        ],
+        "C_index": 59,
+        "C_allowed_q": [],
+        "quotient_degree_bound": 34,
+        "bD_start": 65,
+        "bD_strictly_later": true
+      },
+      {
+        "r": 30,
+        "D_allowed_q": [
+          32,
+          33,
+          34,
+          35
+        ],
+        "C_index": 61,
+        "C_allowed_q": [
+          35
+        ],
+        "quotient_degree_bound": 34,
+        "bD_start": 66,
+        "bD_strictly_later": true
+      }
+    ],
+    "proved_D_cutoff": 30,
+    "proved_C_cutoff": 62,
+    "quotient_front_after_cutoff": 63,
+    "negative_control": {
+      "r31_must_not_be_blanket_zero": "tau*z**31*(z + 1)**4",
+      "exact_quotient": "tau**2*z**34",
+      "exact_remainder": "0",
+      "C63_nonzero_image": "A3c_63_34",
+      "source_floor_of_C63_z34": 422,
+      "fits_source_floor": true
+    }
+  }
+}

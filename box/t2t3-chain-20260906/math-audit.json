@@ -1,0 +1,231 @@
+{
+  "T3_standard_support_by_shift": {
+    "108": [
+      [
+        "F*G^2",
+        0
+      ],
+      [
+        "F*G*T2",
+        9
+      ],
+      [
+        "F*T2^2",
+        18
+      ],
+      [
+        "F^2",
+        36
+      ],
+      [
+        "G^2*T2",
+        45
+      ],
+      [
+        "G*T2^2",
+        54
+      ],
+      [
+        "T2^3",
+        63
+      ],
+      [
+        "F*G",
+        72
+      ],
+      [
+        "F*T2",
+        81
+      ],
+      [
+        "G^2",
+        108
+      ],
+      [
+        "G*T2",
+        117
+      ],
+      [
+        "T2^2",
+        126
+      ],
+      [
+        "F",
+        144
+      ],
+      [
+        "G",
+        180
+      ],
+      [
+        "T2",
+        189
+      ],
+      [
+        "1",
+        252
+      ]
+    ],
+    "99": [
+      [
+        "F*G",
+        0
+      ],
+      [
+        "F*T2",
+        11
+      ],
+      [
+        "G^2",
+        33
+      ],
+      [
+        "G*T2",
+        44
+      ],
+      [
+        "T2^2",
+        55
+      ],
+      [
+        "F",
+        66
+      ],
+      [
+        "G",
+        99
+      ],
+      [
+        "T2",
+        110
+      ],
+      [
+        "1",
+        165
+      ]
+    ]
+  },
+  "cases": {
+    "108": {
+      "B2_y_degree": 144,
+      "B3_y_degree": 333,
+      "D": [
+        72,
+        63,
+        227
+      ],
+      "J_F_T2_upper_degree": 169,
+      "J_F_T3_upper_degree": 333,
+      "Lambda": [
+        -7776,
+        -2268,
+        -2043
+      ],
+      "M": [
+        -72,
+        81,
+        106
+      ],
+      "T2_physical_depth": 153,
+      "d": [
+        108,
+        36,
+        9,
+        1
+      ],
+      "j_defect_after_T2": 25,
+      "j_degree_after_T3_if_nonzero": 0,
+      "m": 72,
+      "n": 108,
+      "n_i": [
+        3,
+        4,
+        9
+      ],
+      "q": [
+        -72,
+        153,
+        25
+      ],
+      "raw_J_depth": 178,
+      "recursive_T3_defect": 25
+    },
+    "99": {
+      "B2_y_degree": 132,
+      "B3_y_degree": 242,
+      "D": [
+        66,
+        55,
+        145
+      ],
+      "J_F_T2_upper_degree": 152,
+      "J_F_T3_upper_degree": 242,
+      "Lambda": [
+        -6534,
+        -1815,
+        -1595
+      ],
+      "M": [
+        -66,
+        77,
+        97
+      ],
+      "T2_physical_depth": 143,
+      "d": [
+        99,
+        33,
+        11,
+        1
+      ],
+      "j_defect_after_T2": 20,
+      "j_degree_after_T3_if_nonzero": 0,
+      "m": 66,
+      "n": 99,
+      "n_i": [
+        3,
+        3,
+        11
+      ],
+      "q": [
+        -66,
+        143,
+        20
+      ],
+      "raw_J_depth": 163,
+      "recursive_T3_defect": 20
+    }
+  },
+  "derivative_leaders": {
+    "108": "12*lambda2^3*(y^2*(y-x)^7)^37; total degree 333",
+    "99": "9*lambda2^2*(y^3*(y-x)^8)^22; total degree 242"
+  },
+  "family_C_conditional_identity": {
+    "conclusion": "w_d(j)=0",
+    "license_condition": "d*(n-M-1)=ell+1",
+    "status_without_child_attainment_and_lift": "OPEN",
+    "weight_formula": "w_d(j)=n-M-1-(ell+1)/d"
+  },
+  "field": "Q",
+  "target_vectors": {
+    "108_T2": {
+      "nonzero": 15,
+      "sha256": "17a759e831749505003b2d5d850a29fe7d2692e3f9438d1dc51f3f0e3c44c654",
+      "slots": 64
+    },
+    "108_T3": {
+      "nonzero": 52,
+      "sha256": "b2f336ed92c6f0174cf64931eae379c7290c3933577142af2058485626d25b18",
+      "slots": 228
+    },
+    "99_T2": {
+      "nonzero": 16,
+      "sha256": "031a1cb74948da83995f6d0d9d561c00fda5e7295e21dbaf88cf0e7d21c9a280",
+      "slots": 56
+    },
+    "99_T3": {
+      "nonzero": 41,
+      "sha256": "2ce824418b57ab57d41704d3f53f45583ca049455040ada2dc588866e2dcbe84",
+      "slots": 146
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "bytecode_writes_disabled": true,
+  "pins": {
+    "box/char-degree-20260905/arzhantsev-petravchuk-closed-polynomials.pdf": "70429c3820eede008640a0d462d67ddb1f32c1f6e37f6b35f3589a0be2081e28",
+    "box/d125-ramified-twojet-discriminator-20260907/check.py": "a150a2c59e4eb2c1a0498e576e42861e31c467bf14bdb6cf4476066e301d096e",
+    "box/d125-ramified-twojet-discriminator-20260907/post-cutoff-note.md": "3926d104df129e13f3631c3b0595ea78607b6e2e9ec6704ed1a7bdbd08c4fcf6",
+    "box/d125-ramified-twojet-discriminator-20260907/registration.json": "78b0b04344fd4b4a7a780d5d28b99149ca417efe291dfc43661eafb1e6b167d1",
+    "box/d125-ramified-twojet-discriminator-20260907/replay.json": "15a67b6e88f6e9322213ed15d2856f02f870c8779bebe9a0874e177a854acfb5",
+    "box/d125-ramified-twojet-discriminator-20260907/seal_custody.py": "17e1a83aae5d2426d1ea27ee9601d590000a8cfa845a3bd1f8cf02357adaab40",
+    "box/d125-ramified-twojet-discriminator-20260907/witness-O.json": "37387ae526322c18c614502d78794a9b6be983b4afecf90ee3a58ffbb41618ec",
+    "box/d125-ramified-twojet-discriminator-20260907/witness.json": "37387ae526322c18c614502d78794a9b6be983b4afecf90ee3a58ffbb41618ec",
+    "box/d125-zero-k-deformation-discriminator-20260907/check.py": "25be0862730df8b66076eb59a2d1d0909fbcf563ea73ce16924affdc7c70ad66",
+    "xmodel/d125-low-jet-saturation-discriminator-astra-20260907.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-ramified-twojet-discriminator-astra-20260907.md": "1440132691e51058b51927ba40234d0441d787a167321aba0af2bd53e8b698d4",
+    "xmodel/d125-zero-k-boundary-classification-astra-20260907.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2",
+    "xmodel/d125-zero-k-deformation-discriminator-astra-20260907.md": "99d251478969b569c5523349b71a58534fc1fc95c7125e2fcc7e706dda963f2c"
+  },
+  "runs": [
+    {
+      "flags": [],
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "37387ae526322c18c614502d78794a9b6be983b4afecf90ee3a58ffbb41618ec"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-cubic-factor",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 111, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 38, in check\n    need(actual==bracket(R,E3),'third-order cubic coefficient')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: third-order cubic coefficient\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-omit-negative-row",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 111, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 62, in check\n    need(all(e[1]>=0 for e in candidate),'omitted v^-2 row admits a pole')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: omitted v^-2 row admits a pole\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-independent-tangent",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 111, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 71, in check\n    need(coeffgp2=={z:-a for z,a in coeffp.items()},'tangent p/gp2 compatibility')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: tangent p/gp2 compatibility\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-truncated-saturation",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 111, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 79, in check\n    need({e:a for e,a in derivative(aa_poly,1).items() if e[2]<5}=={},'nilpotent k cannot be canceled')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: nilpotent k cannot be canceled\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "",
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "37387ae526322c18c614502d78794a9b6be983b4afecf90ee3a58ffbb41618ec"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-cubic-factor",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 111, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 38, in check\n    need(actual==bracket(R,E3),'third-order cubic coefficient')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: third-order cubic coefficient\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-omit-negative-row",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 111, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 62, in check\n    need(all(e[1]>=0 for e in candidate),'omitted v^-2 row admits a pole')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: omitted v^-2 row admits a pole\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-independent-tangent",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 111, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 71, in check\n    need(coeffgp2=={z:-a for z,a in coeffp.items()},'tangent p/gp2 compatibility')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: tangent p/gp2 compatibility\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-truncated-saturation",
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 111, in <module>\n    else: print(json.dumps(check(mode),sort_keys=True,indent=2))\n                           ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-ramified-twojet-discriminator-20260907/check.py\", line 79, in check\n    need({e:a for e,a in derivative(aa_poly,1).items() if e[2]<5}=={},'nilpotent k cannot be canceled')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-deformation-discriminator-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: nilpotent k cannot be canceled\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "degree-five lifts/degree-four kernel/R=g brackets only; no full source",
+  "status": "PASS",
+  "wall_seconds": 2.767927416949533
+}

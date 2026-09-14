@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report at `xmodel/us2-descent-licence-opus5-20260906.md` (16.5 KB, sealed), notes in `box/us2-descent-licence-20260906/`.
+
+## Results
+
+**Custody.** Manifest built with `awk` from the receipt, `sha256sum -c`: **8/8 OK** before any mathematical read.
+
+**(1) RADIUS — OPEN, with the obstruction localized to one printed line.** I reconstructed Prop 6.4 (p.199) step by step. `u_s = 1` enters **exactly once**, at the gcd step: `gcd(n/d_s, −μ₁/d_s, …) = 1` ⟹ `deg p | u_s` ⟹ *p* linear ⟹ the minor cluster does not separate, contradicting p.191's definition of `δ*_{s−1}` as `min ord(τᵢ−τⱼ)`. Steps (P1)–(P5) are `u_s`-free — Moh even prints the order formula in its general `u_s` form before specializing. At `u_s ≥ 2` the same computation gives only `deg p | u_s`, and `deg p = u_s ≥ 2` is consistent. Each alternative the task named was checked and none supplies it; notably Prop 6.1 is *structurally* capped at `δ* ≥ 1` (its proof verifies Prop 4.4's condition (7), and p.193 shows (7) ⟺ `δ* < 1`), and Lemma 6.2 *consumes* the radius rather than producing it (p.198 line 1).
+
+**Numeric check.** No row fails and no row passes: by p.191 `δ*_{s−1}` is a contact order of actual roots, not a function of a configuration row. What is computable — `v_s/u_s > 1` strictly on 20/20, so the printed floor never reaches. My independent window recomputation reproduces the frozen `split_window.orders` on 20/20 rows, and the print-derived branch shape (λ ⊢ `u_s`, ≥2 parts) checks against all **36** ES leaves with **0 violations** — so the screen is print-faithful and Prop 6.4's mechanism yields **no new cut**. All 20 rows NOT-LICENSED.
+
+**(2) TERMINAL — PROVED FINITE.** Three printed conditions (p.150 gcd rule, p.174 Definition–Remark, Def 5.1(2)) bound the child's terminal part to at most `Ω(u_s) ≤ 2` extra levels and to an explicit list: **138 completions over the 20 rows, ≤22 per row, and exactly one on R066 (DETERMINED)**. Def 5.1(2) alone kills every `n′−1` tail, independently reproducing p.174. Seven rows admit a child that is itself a campaign-normalised source.
+
+**(3)/(4).** Zero rows become unconditionally testable, since the radius is refused everywhere. Under a supplied radius all 20 become finite-branch tests and R066 is single-branch — the cheapest target. Sums not computed (not cheap: 138 branches each need their own Def 5.1 radii and the final-major gate).
+
+One scoping note: `SURVIVES` verdicts don't need the terminal at all (they transport the parent's major list), so the finite family is only useful on the kill side — I've said that explicitly in the report rather than letting the finiteness read as more progress than it is.
+DIVERT path=xmodel/us2-descent-licence-opus5-20260906.md status=CLEAN body_bytes=16554 body_sha256=ab2e2820f3837602187cfe4fdd4210b148b37c049fa8fd713792c1dec4681878

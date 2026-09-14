@@ -1,0 +1,5 @@
+# Read scope
+
+First action2026-09-09T21:22:42.218945832UTC; controlling stop21:37:42.218945832UTC, first+15minutes earlier than21:39. Both targets absent before begin. All3 science pins in PINS.json matched before reading. Unchanged accepted17w and16l WHOLE reads reused explicitly; new accepted17w gate read WHOLE. Its supplemental Cramer e_y sign is corrected to plus as instructed in the root brief; that expression is not used in the new proof. No other science or provenance read.
+
+Manual-only attempted uniform obstruction. Exact quadratic comparison derived from two whole truncated-power ODEs; top obstruction checked and found automatic. V=1/3 excluded with a nilpotent-safe ideal argument, but already from single contact, so no two-contact exclusion claimed. No mathematical subprocess, data/code artifact, sample, web/network/AWS/SSH/proc/agents or shared/frozen/protected edits. Own documentary metadata/apply_patch and existing publication tools only. No new canonical OPEN ID, review or execution launched.

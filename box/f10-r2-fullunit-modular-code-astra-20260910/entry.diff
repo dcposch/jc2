@@ -1,0 +1,29 @@
+--- frozen-highest/entry.py
++++ owned-fullunit/entry.py
+@@ -2,7 +2,7 @@
+ import os
+ import sys
+ 
+-TAG = 'f10-r2-highest-modular89-v1'
++TAG = 'f10-r2-fullunit-modular89-v1'
+ BASE_SHA = 'dac655a7ce75287b06010171bce66af1a644aff81de9620a452457a5f65a9587'
+ BASE_BYTES = 1652675
+ ARITH = {'produce': 'fe9ab1abe9a96fc43b889e1bcb598f8e8c65fd194732c48f3542e13c476e0345',
+@@ -36,7 +36,7 @@
+     flags = ('--registered-job', '--root-registration-sha256', '--self-sha256',
+              '--entry-sha256', '--arithmetic', '--baseline', '--certificate', '--receipt')
+     if len(sys.argv) != 17 or tuple(sys.argv[1::2]) != flags or sys.argv[2] != TAG:
+-        raise SystemExit('REFUSED: exact registered modular-highest vector required')
++        raise SystemExit('REFUSED: exact registered modular-fullunit vector required')
+     ctx = dict(zip(flags, sys.argv[2::2]))
+     for k in ('--root-registration-sha256', '--self-sha256', '--entry-sha256'):
+         p = ctx[k]
+@@ -134,7 +134,7 @@
+ 
+ def receipt(ctx, status, certificate_sha=None):
+     ctx['recheck']()
+-    data = {'schema': 'f10-r2-highest-modular89-receipt/v1', 'status': status,
++    data = {'schema': 'f10-r2-fullunit-modular89-receipt/v1', 'status': status,
+             'science_outcome': 'NONE', 'mode': ctx['mode'], 'prime': '89', 'root': '0',
+             'root_registration_sha256': ctx['--root-registration-sha256'],
+             'sources': ctx['sources'], 'baseline_sha256': BASE_SHA,

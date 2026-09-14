@@ -1,0 +1,12 @@
+{
+  "banked_utc": "2026-09-06T13:16Z",
+  "mode": "NORMAL_ONLY",
+  "evidence": "Root read full reviewer code; booleans and structured values inspected. B2c_70_1_in_res=false is the expected nonoccurrence.",
+  "result": {
+    "chunk_id": "aa85c5",
+    "wall_time_seconds": 1.07984121,
+    "exit_code": 0,
+    "original_token_count": 435,
+    "output": "{\n \"h_maxX\": 8,\n \"h_maxwt\": 4,\n \"h_maxdeg\": 36,\n \"h_maxW\": 36,\n \"D_maxX\": 8,\n \"D_maxwt\": 4,\n \"D_maxdeg\": 37,\n \"D_maxW\": 35,\n \"C_maxX\": 8,\n \"C_maxwt\": 4,\n \"C_maxdeg\": 38,\n \"C_maxW\": 35,\n \"h_face_eq_X(XW4-1)^7\": true,\n \"h_face_rows_constant\": true,\n \"h_X8_slots\": [\n  [\n   8,\n   28,\n   \"1\"\n  ]\n ],\n \"D_face_wt4_terms\": 8,\n \"C_face_wt4_terms\": 8,\n \"lines\": {\n  \"h\": \"K2c_36_0 - X\",\n  \"D\": \"B2c_70_0*X + B2c_71_0\",\n  \"C\": \"A3c_107_0 + 3*A3c_86_16*X/35 + 8*A3c_91_12*X/35 + 2*A3c_96_8*X/7\"\n },\n \"G_line\": \"B2c_70_0*X + B2c_71_0 + K2c_36_0**2 - 2*K2c_36_0*X - K2c_36_0*target_b/3 + X**2 + X*target_b/3\",\n \"G_line_monic_quad\": true,\n \"C_W36_slots\": [],\n \"C_deg36_Wexps\": [\n  28,\n  29,\n  30,\n  31,\n  32,\n  33,\n  34,\n  35\n ],\n \"n_residuals\": 14,\n \"C_params\": 192,\n \"res_C_overlap\": [],\n \"res_B2_overlap\": [],\n \"res_names_count\": 30,\n \"gamma_only_slot\": [\n  [\n   0,\n   0\n  ]\n ],\n \"h_A0_degree\": 33,\n \"L\": \"-K2c_3_26 + 8*jet0*jet1 - 8*jet2\",\n \"res0_eq_L2\": true,\n \"J(E,H)=H\": true,\n \"J(E/3,H^3)=H^3\": true,\n \"mut_E_fails\": true,\n \"mut_H_alpha2_fails\": true,\n \"ctrl_j\": \"1\",\n \"ctrl_J(P,Q)=x2\": true,\n \"composition_matches_T\": true,\n \"poly_small_P\": [\n  [\n   0,\n   0\n  ],\n  [\n   1,\n   0\n  ],\n  [\n   8,\n   14\n  ],\n  [\n   8,\n   16\n  ]\n ],\n \"poly_small_Q\": [\n  [\n   0,\n   0\n  ],\n  [\n   2,\n   1\n  ],\n  [\n   12,\n   21\n  ],\n  [\n   12,\n   24\n  ]\n ],\n \"poly_extra\": [\n  [\n   0,\n   8\n  ],\n  [\n   0,\n   12\n  ]\n ],\n \"F_edge_swapped_endpoints\": [\n  [\n   84,\n   24\n  ],\n  [\n   0,\n   3\n  ]\n ],\n \"after_cut_edge_F\": [\n  [\n   84,\n   24\n  ],\n  [\n   72,\n   21\n  ]\n ],\n \"x_star\": \"-B2c_70_0/2 + K2c_36_0 - target_b/6\",\n \"Delta_matches_producer\": true,\n \"Delta_monic_B2c_70_1\": true,\n \"B2c_70_1_in_res\": false,\n \"seconds\": 0.9489177280338481\n}\nelapsed=1.22 peak_kib=55684\n"
+  }
+}

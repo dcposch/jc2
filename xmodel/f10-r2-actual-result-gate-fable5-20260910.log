@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done at 13:03:12Z, inside the reserve. Both owned targets are written and verified; the lane file ends with the single standalone marker and no section exceeds 1500 words.
+
+**Verdicts on A–D**
+
+- **A, packet binding: CONFIRMED.** All 16 snapshots hash to the charged list. The five source pins, native manifest digest and registration digest are identical across the ROOT report, checker binding, both pre/post records and all eleven CUSTODY runs. Producer and checker are NORMAL_EXIT/0 with empty stderr, the checker stdout is the 72-byte CHECKED string and its digest matches telemetry and binding, and the artifact digest is identical pre-check, post-check, in the binding, in CUSTODY and locally. Two items are ROOT attestation only: the 0444/0555 modes appear in no charged JSON, and the arithmetic.py and check_arithmetic.py pins have no charged digest outside the ROOT report.
+- **B, runtime scope: CONFIRMED.** Eleven runs in the accepted order, each label once, every runner and Python child observed live, dummy is RESOURCE_CAP/rss. The refusal stderr byte counts match the authority.py strings quoted in the runtime gate exactly. The literal child exit 1 for refusals is implied by the dispatcher contract plus the terminal result rather than present as a byte, since the refusal telemetries are not charged.
+- **C, perimeter: CONFIRMED.** The artifact supplies checked coefficients only. It is usable as a byte-identified input for the next tier, and nothing more, until a semantic rejection of a changed object has been observed.
+- **D, control set:** two controls. Control 6 (zero the gap-7 mate) is unconditional without parsing the artifact and must be encoded as an empty term list, never a '0/1' term. Control 10 (largest retained coefficient +1, with its all-zero fallback) covers the one named risk 6 does not, a vacuous zero-row accept at the deliverable layer. Control 8 is dropped as redundant. If the mutation designer must keep the artifact HASHONLY, control 6 alone suffices for the current tier.
+
+**Files written, apply_patch only**
+
+- `xmodel/f10-r2-actual-result-gate-fable5-20260910.md` (unsealed, adapter seals)
+- `box/f10-r2-actual-result-gate-fable5-20260910/input_custody.md` (rows generated from sha256sum output)
+
+**Disclosures.** The two imported gates were authored by this same model in earlier sessions and are consumed, not re-derived. One dry construction of the custody patch text was discarded to /dev/null before the real pipe into apply_patch; that is recorded in the attestation. One digest-tail typo in section 0 was corrected at 13:03Z.
+
+**Next.** The two designed controls need separate ROOT authority as check-role runs of the unchanged five pins with the mutated input digest bound pre and post. No producer rerun, no review farm, and no run of the remaining thirteen controls is licensed by this report.
+DIVERT path=xmodel/f10-r2-actual-result-gate-fable5-20260910.md status=CLEAN body_bytes=20041 body_sha256=3bce51215a7c746acb4bd5bc833f2644e5f2b1ac89e8681cdea2c65dfba00b0c

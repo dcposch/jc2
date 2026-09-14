@@ -1,0 +1,39 @@
+# rules to patch the unpacked files in the source directory
+# ---------------------------------------------------------------------------
+# various rules to unpack addons and (un)apply patches.
+# 	- patch / apply-patches
+#	- unpatch / reverse-patches
+
+patchdir	= debian/patches
+
+patch: stamps/stamp-patch
+stamps/stamp-patch:
+	dh_testdir
+	uname -a
+	@echo USER=$$USER, LOGNAME=$$LOGNAME
+	@grep ^Mem /proc/meminfo
+	@echo "DEB_BUILD_OPTIONS: $$DEB_BUILD_OPTIONS"
+
+	rm -rf autom4te.cache configure
+	autoconf
+	mkdir -p stamps
+	echo ""; echo "Patches applied in this version:" > stamps/pxx
+	for i in $$(cat $(patchdir)/series); do \
+	  case "$$i" in \#*) continue; esac; \
+	  echo ""; echo "$$i:"; \
+	  sed -n 's/^# *DP: */  /p' $(patchdir)/$$i; \
+	done >> stamps/pxx
+
+	touch Parser/parser.c Parser/token.c
+	touch Objects/obmalloc.c Python/dynamic_annotations.c \
+	  Python/mysnprintf.c Python/pyctype.c
+
+	ln -sf site-packages Lib/dist-packages
+
+	touch Lib/test/certdata/nullcert.pem
+	touch Lib/test/libregrtest/__init__.py
+	touch Lib/test/tokenizedata/__init__.py
+
+	mv stamps/pxx $@
+
+reverse-patches: unpatch

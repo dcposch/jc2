@@ -1,0 +1,24 @@
+{
+  "status": "PASS_PRODUCER_TINY_CONTROLS",
+  "observed_utc": "2026-09-07T06:52:41Z",
+  "code_sha256": "0861f4dc725ea8e60b78ff16299f3835f75996053fce2fd43def65993db0bf2f",
+  "report_sha256": "6f9e63a8162af7c6d212363b62c368f9029b282fa8acbb65bcdc5d9cf81b72d3",
+  "manifest_sha256": "f989207d872b8c3176878b904e3137ac21f3d233daaeb61e607d95673f3fe121",
+  "caps_each": "30 wall seconds / 25 CPU seconds / 512 MiB AS",
+  "runs": [
+    {"mode":"normal","mutation":null,"rc":0},
+    {"mode":"normal","mutation":"--omit-243","rc":1,"gate":"exact boundary D equals 81 delta"},
+    {"mode":"normal","mutation":"--gamma-sign","rc":1,"gate":"exact boundary D equals 81 delta"},
+    {"mode":"normal","mutation":"--claim-global-h","rc":1,"gate":"boundary h cannot be imposed globally"},
+    {"mode":"optimized","mutation":null,"rc":0},
+    {"mode":"optimized","mutation":"--omit-243","rc":1,"gate":"exact boundary D equals 81 delta"},
+    {"mode":"optimized","mutation":"--gamma-sign","rc":1,"gate":"exact boundary D equals 81 delta"},
+    {"mode":"optimized","mutation":"--claim-global-h","rc":1,"gate":"boundary h cannot be imposed globally"}
+  ],
+  "primary_snapshots": {
+    "stacks-0CM1.html":"b819193679a3772dd4e9024d1955957d5fb837ad77c7a0046b2255814f28c1bc",
+    "stacks-0C0S.html":"d9968d0ab1375d148b4d9ce9798ee7464852085dcc1ffe56ea4ed51b60adc1eb"
+  },
+  "source_computation": "scalar multinomial projections and toy varieties only; no actual full source powers",
+  "independent_review": "PENDING"
+}

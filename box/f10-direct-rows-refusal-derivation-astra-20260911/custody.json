@@ -1,0 +1,187 @@
+{
+  "schema": "jc2.owned-static-custody/v1",
+  "tag": "f10-direct-rows-refusal-derivation-astra-20260911",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "COMPLETED_STATIC_CONDITIONAL_DERIVATION_DISABLED",
+  "writers": "ALL_WRITERS_IDLE_AFTER_THIS_EXCLUSIVE_CUSTODY_WRITE",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "times": {
+    "first_action_utc": "2026-09-11T04:04:49Z",
+    "opened_utc": "2026-09-11T04:05:10Z",
+    "reserve_utc": "2026-09-11T04:19:00Z",
+    "hard_stop_utc": "2026-09-11T04:22:00Z",
+    "whole_own_review_and_local_postpins_by_utc": "2026-09-11T04:11:46Z",
+    "literal_primary_extractions_compared_utc": "2026-09-11T04:12:12Z",
+    "closed_utc": "2026-09-11T04:12:55Z",
+    "finalized_utc": "2026-09-11T04:12:55Z",
+    "expected_verify_whole_sealed_read_and_current_hashes_by_utc": "2026-09-11T04:13:27Z"
+  },
+  "report": {
+    "path": "/home/ubuntu/jc2/xmodel/f10-direct-rows-refusal-derivation-astra-20260911.md",
+    "sha256": "194fd547c1667897ff87fefb3376c63fd92524a3bf309b967927ab00dcc1570c",
+    "body_sha256": "aa99202224325f5922c5f95161347c5fba5570075e1a172ff550fd79cd126ec7"
+  },
+  "transaction": {
+    "path": "/home/ubuntu/jc2/xmodel/f10-direct-rows-refusal-derivation-astra-20260911.md.artifact.json",
+    "expected_sha256": "ca5d590e683c5d1e5eb98de0578b3534a052513057abb6a4322295e7a02aca19",
+    "status": "VERIFIED_WITH_EXPECTED_BASIS_AND_MANIFEST_SHA256"
+  },
+  "local_inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-producer-astra-20260911/authority.py",
+      "pre_sha256": "5629db5df0a37fdaecaa66f5ad0cde47006cb0c3047b37243b045daedef2ac29",
+      "post_sha256": "5629db5df0a37fdaecaa66f5ad0cde47006cb0c3047b37243b045daedef2ac29",
+      "read_mode": "FRESH_WHOLE",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-producer-astra-20260911/produce.py",
+      "pre_sha256": "8a7bd82ea589744a9de22b54877156a329d724185948538958801475f983760e",
+      "post_sha256": "8a7bd82ea589744a9de22b54877156a329d724185948538958801475f983760e",
+      "read_mode": "FRESH_WHOLE",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-checker-astra-20260911/check.py",
+      "pre_sha256": "5052884779d781e55693115c3065db1207667ce224a5914bbb95721d0abe9f7b",
+      "post_sha256": "5052884779d781e55693115c3065db1207667ce224a5914bbb95721d0abe9f7b",
+      "read_mode": "FRESH_WHOLE",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-direct-rows-code-gate-fable5-20260911.md",
+      "pre_sha256": "0d6cb121ebdd769fb909608043b38e6ef08923d6e6a0411ca5ec057325169784",
+      "post_sha256": "0d6cb121ebdd769fb909608043b38e6ef08923d6e6a0411ca5ec057325169784",
+      "read_mode": "FRESH_WHOLE",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-direct-rows-runtime-gate-fable5-20260911.md",
+      "pre_sha256": "a02f120acda2439197a9fc173ec068ec0a5a208ec8d15f6b96cc9dfe65ee6ff9",
+      "post_sha256": "a02f120acda2439197a9fc173ec068ec0a5a208ec8d15f6b96cc9dfe65ee6ff9",
+      "read_mode": "FRESH_WHOLE",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-runtime-astra-20260911/dispatch.py",
+      "pre_sha256": "f5b6e6c43da4574c1dd9fc241d2f0596071ab505d561e67579eb28d382814480",
+      "post_sha256": "f5b6e6c43da4574c1dd9fc241d2f0596071ab505d561e67579eb28d382814480",
+      "read_mode": "REUSED_WHOLE_AFTER_CURRENT_PIN; fresh selected lines365-420,506-530,205-221",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-runtime-astra-20260911/CONTRACT.md",
+      "pre_sha256": "e2ce5a5f91a61a253e0d355fbb3c982b0968bd2e4bd05a7fcb9eeab95fe402a1",
+      "post_sha256": "e2ce5a5f91a61a253e0d355fbb3c982b0968bd2e4bd05a7fcb9eeab95fe402a1",
+      "read_mode": "REUSED_WHOLE_AFTER_CURRENT_PIN",
+      "status": "CURRENT_MATCH"
+    }
+  ],
+  "primary_documents": [
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.12.0/Python/traceback.c",
+      "upstream_tag": "v3.12.0",
+      "full_source_sha256": "a90e75e45e59a5c04460f6d4173dae44dbf9146c4641aa3c6775ef3998735eb7",
+      "raw_sed_expression": "468,574p;597,913p",
+      "excerpt": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/CPython-traceback.excerpt.txt",
+      "excerpt_sha256": "b338f6eefa80a7401e5a4a5129222dc360a6347359b4ed6fab8bc022a6d22a9c",
+      "read_mode": "EXACT_SELECTED_RAW_SOURCE_EXCERPTS_WHOLE; NOT_WHOLE_UPSTREAM_FILE",
+      "use": "Conditional traceback formatting only; not installed native evidence",
+      "literal_sed_comparison": "PASS",
+      "snapshot_current_hash": "MATCH",
+      "physical_interpreter_evidence": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.12.0/Python/pythonrun.c",
+      "upstream_tag": "v3.12.0",
+      "full_source_sha256": "b77ba8f23f12672bb4a1e670b09bfed812e56ecd17b05d9513c9496eab9dd6a8",
+      "raw_sed_expression": "688,833p;887,916p;1495,1570p",
+      "excerpt": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/CPython-pythonrun.excerpt.txt",
+      "excerpt_sha256": "f2ef8cd4527b4e581a8a1c6cf05ea9a70f0d7892fd51ec0f679c3fb6cd99bd2d",
+      "read_mode": "EXACT_SELECTED_RAW_SOURCE_EXCERPTS_WHOLE; NOT_WHOLE_UPSTREAM_FILE",
+      "use": "Conditional traceback formatting only; not installed native evidence",
+      "literal_sed_comparison": "PASS",
+      "snapshot_current_hash": "MATCH",
+      "physical_interpreter_evidence": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.12.0/Python/compile.c",
+      "upstream_tag": "v3.12.0",
+      "full_source_sha256": "bfaf597c06ab4dfd6f026c094fcf6f1cd80565a0bf2ffc6f990da7557b57765a",
+      "raw_sed_expression": "3948,3972p;4911,4930p;5070,5117p",
+      "excerpt": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/CPython-compile.excerpt.txt",
+      "excerpt_sha256": "f9f84ac315baceacf2fdfd9841e90526bffd1a51e05d1dc63974898ebb9acea3",
+      "read_mode": "EXACT_SELECTED_RAW_SOURCE_EXCERPTS_WHOLE; NOT_WHOLE_UPSTREAM_FILE",
+      "use": "Conditional traceback formatting only; not installed native evidence",
+      "literal_sed_comparison": "PASS",
+      "snapshot_current_hash": "MATCH",
+      "physical_interpreter_evidence": false
+    }
+  ],
+  "owned_excluding_custody": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/DERIVATION.md",
+      "sha256": "04f1533174916c73b67d852dbab05207539f4f104b79bc1255dee6fc8f6dc034",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/DISABLED-POLICY.template.json",
+      "sha256": "922666ebad231a2f61024ba2fbdbe1a2d8bc452919ddee9b4e3899d4c9811229",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/PINS.json",
+      "sha256": "cf0bddb8fe09f3f03e324e3c60b16501f7c82ed7c16fb5371cdb12c0a5b1f7a6",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/READ-SCOPE.md",
+      "sha256": "6afc1048ddbf9a984f4b26508290f1f8116b99f583bba534be5dbe87931eee43",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/CPython-traceback.excerpt.txt",
+      "sha256": "b338f6eefa80a7401e5a4a5129222dc360a6347359b4ed6fab8bc022a6d22a9c",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/CPython-pythonrun.excerpt.txt",
+      "sha256": "f2ef8cd4527b4e581a8a1c6cf05ea9a70f0d7892fd51ec0f679c3fb6cd99bd2d",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-direct-rows-refusal-derivation-astra-20260911/CPython-compile.excerpt.txt",
+      "sha256": "f9f84ac315baceacf2fdfd9841e90526bffd1a51e05d1dc63974898ebb9acea3",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-direct-rows-refusal-derivation-astra-20260911.md",
+      "sha256": "194fd547c1667897ff87fefb3376c63fd92524a3bf309b967927ab00dcc1570c",
+      "status": "CURRENT_MATCH"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-direct-rows-refusal-derivation-astra-20260911.md.artifact.json",
+      "sha256": "ca5d590e683c5d1e5eb98de0578b3534a052513057abb6a4322295e7a02aca19",
+      "status": "CURRENT_MATCH"
+    }
+  ],
+  "root_administrative_pins_only": {
+    "arithmetic.py": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+    "check_arithmetic.py": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e"
+  },
+  "disabled_reason": "Policy arithmetic.py stays UNFORMED and cannot match final source_files; conditional upstream CPython3.12.0 display derivation only. No selected physical build, native closure, registration or worker.",
+  "result": "Seven complete conditional triples; five ValueError tracebacks, two identical SystemExit lines. All code remains untouched and unexecuted; actual byte-match applicability is ROOT's future documentary build/install obligation.",
+  "controls": {
+    "scientific_execution": 0,
+    "imports_ast_compile_syntax_tests": 0,
+    "fixtures_or_coefficients": 0,
+    "aws_ssh_worker": 0,
+    "agents": 0,
+    "shared_edits": 0,
+    "source_edits": 0,
+    "network": "Only explicitly allowed official CPython source lookup; no external writes",
+    "python_processes": "Only explicitly allowed artifact_finalize metadata transaction"
+  },
+  "review": "WHOLE own text/primary excerpts/disabled JSON and final report/transaction; OPEN quantity and cheapest next documentary check retained; collision EMPTY; unique marker LAST before seal.",
+  "self_hash_policy": "This file excluded from recursive own hash vector; its whole-read SHA is delivered separately FIRST. No further writes after terminal handoff."
+}

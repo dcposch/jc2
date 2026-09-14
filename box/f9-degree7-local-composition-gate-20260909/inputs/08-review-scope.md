@@ -1,0 +1,11 @@
+# Frozen review scope — 2026-09-09
+
+PREPARATION ONLY. No invitation or running review clock is created by this packet. Root alone launches Sol. A 07:30 UTC target is proposed ONLY if root invites by07:05; otherwise root must set an honest future absolute target, at most25minutes after invitation. Do not retrospectively reset a launched deadline.
+
+The new degree-seven local proof is UNREVIEWED. Its weighted-reference parent is accepted16d after the terminal Sol gate: root terminal/current nine pins checked06:50:13 BEFORE WHOLE access; gate b6f75081feb3c8d6f6884659e7f002564daa0f08819c6149a58ec79cacee188d; receipt47fbbbf44beb0ab9722eac661fa1a0fcaf031179024577d05a42b8dd048909c0. Accepted16a/b and16c remain at their literal imported-primary and field scopes. The root proof transaction verifies its completed, immutable body; it is not mathematical review.
+
+Review the NEW local consumers and exact composition. Do not rename the old degree-five theorem, assume source coverage from matching numbers, or claim all maximum140 cases. The root proof includes its own new degree-seven calculations and exact all-scalar reference assumptions. The accepted joint gate supplies the incoming actual84/140 interface. The accepted reverse proof/gate supplies only the exact complete guarded ideal and reverse-sufficiency boundary, not a premise needed by the local exclusion.
+
+Explicitly excluded: the auxiliary reference-reverse-compatibility report, same-model supporting separated report, old20KB degree-five local proof, live D108 material, current peer reports/gates, canonical ledgers, and source originals outside the charged copies. None is a proof premise. No primary reclassification is requested. The mentioned126/128/132/135 configurations are only a warning against a blanket maximum140 conclusion; do not newly classify them.
+
+ZERO mathematical subprocesses of ANY size. Pure prose review; no scalar scripts, toys, source powers, coefficient emissions, CAS, solver, AWS/SSH, agents, primary-web excursion, protected-project access, shared or public writes. Metadata hashing and the standard lane publication lifecycle only. No old checker farm. No authored charge_basis or Seal. Body marker only at substantive completion.

@@ -1,0 +1,113 @@
+{
+  "utc": "2026-09-08T01:15:36.935616+00:00",
+  "status": "EIGHT_MODES_PASS",
+  "elapsed": 2.001739765983075,
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-cone-first-contact-source-20260908/check.py"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.03573316801339388,
+      "stdout": "{\"actual_source_expanded\": false, \"component_nonvanishing_not_assumed\": true, \"formal_wedge_rows\": 3, \"kernels\": [10, 20], \"status\": \"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-cone-first-contact-source-20260908/check.py",
+        "--omit-alpha-cross"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.10479192400816828,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 62, in <module>\n    need(wedge(A,B,i,j)==rhs,\"exact moving-reference bracket identity\")\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 15, in need\n    raise ValueError(label)\nValueError: exact moving-reference bracket identity\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-cone-first-contact-source-20260908/check.py",
+        "--omit-gamma"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.0969531120499596,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 62, in <module>\n    need(wedge(A,B,i,j)==rhs,\"exact moving-reference bracket identity\")\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 15, in need\n    raise ValueError(label)\nValueError: exact moving-reference bracket identity\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-cone-first-contact-source-20260908/check.py",
+        "--partial-shear"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.0980902808951214,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 66, in <module>\n    need(actual_shear==expected_shear,\"whole beta A shear\")\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 15, in need\n    raise ValueError(label)\nValueError: whole beta A shear\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-cone-first-contact-source-20260908/check.py"
+      ],
+      "rc": 0,
+      "wall_seconds": 0.13309308607131243,
+      "stdout": "{\"actual_source_expanded\": false, \"component_nonvanishing_not_assumed\": true, \"formal_wedge_rows\": 3, \"kernels\": [10, 20], \"status\": \"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-cone-first-contact-source-20260908/check.py",
+        "--omit-alpha-cross"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.5133959110826254,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 62, in <module>\n    need(wedge(A,B,i,j)==rhs,\"exact moving-reference bracket identity\")\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 15, in need\n    raise ValueError(label)\nValueError: exact moving-reference bracket identity\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-cone-first-contact-source-20260908/check.py",
+        "--omit-gamma"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.5113004880258814,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 62, in <module>\n    need(wedge(A,B,i,j)==rhs,\"exact moving-reference bracket identity\")\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 15, in need\n    raise ValueError(label)\nValueError: exact moving-reference bracket identity\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-cone-first-contact-source-20260908/check.py",
+        "--partial-shear"
+      ],
+      "rc": 1,
+      "wall_seconds": 0.5083275829674676,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 66, in <module>\n    need(actual_shear==expected_shear,\"whole beta A shear\")\n  File \"/home/ubuntu/jc2/box/d125-cone-first-contact-source-20260908/check.py\", line 15, in need\n    raise ValueError(label)\nValueError: whole beta A shear\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+< "/home/ubuntu/jc2/box/k16sq-20260905/t2m_rows.sing";
+option(redSB);
+print("factor tau: "); print(factorize(tau));
+print("factor T2: "); print(factorize(T2));
+print("factor T3: "); print(factorize(T3));
+print("factor T1: "); print(factorize(T1));
+ideal tail=T2,T3; ideal Gt=std(tail);
+print("tau in tail: "+string(reduce(tau,Gt)==0));
+matrix M=lift(tail,ideal(tau)); print("tail lift cofactors (c2,c3):"); print(M);
+print("verify: "+string(T2*M[1,1]+T3*M[2,1]==tau));
+ideal Q=tail/b4^3; print("tail/b4^3 = "); print(Q); ideal GQ=std(Q); print("dim "+string(dim(GQ))+" vdim "+string(vdim(GQ))); print(kbase(GQ));
+quit;

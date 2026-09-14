@@ -1,0 +1,145 @@
+{
+  "local_utc": "20260905T232308Z",
+  "returncode": 0,
+  "stderr": "",
+  "worker": {
+    "utc": "2026-09-05T23:23:08.285877+00:00",
+    "jobs": [
+      {
+        "pid": 18955,
+        "cwd": "/home/ubuntu/jc2",
+        "args": "python3 -u box/char-degree-20260905/g9966/run_circuit_schedule.py",
+        "status": [
+          "VmHWM:\t   18480 kB",
+          "VmRSS:\t   18480 kB"
+        ]
+      },
+      {
+        "pid": 22592,
+        "cwd": "/home/ubuntu/jc2/box/char-degree-20260905/d108",
+        "args": "Singular -q selected/meanfree_jet0_stage8_slimgb/augmented.sing",
+        "status": [
+          "VmHWM:\t15448692 kB",
+          "VmRSS:\t15446292 kB"
+        ]
+      },
+      {
+        "pid": 22832,
+        "cwd": "/home/ubuntu/jc2/box/char-degree-20260905/d108",
+        "args": "python3 coefficient_circuit_backend.py --input d108_remainder_stage6_translated_strongfront.input.json --out d108_circuit_stage6_translated_strongfront.sing --timeout 900",
+        "status": [
+          "VmHWM:\t   91724 kB",
+          "VmRSS:\t   83568 kB"
+        ]
+      },
+      {
+        "pid": 22833,
+        "cwd": "/home/ubuntu/jc2/box/char-degree-20260905/d108",
+        "args": "Singular -q d108_circuit_stage6_translated_strongfront.sing",
+        "status": [
+          "VmHWM:\t15743360 kB",
+          "VmRSS:\t15620500 kB"
+        ]
+      },
+      {
+        "pid": 22960,
+        "cwd": "/home/ubuntu/jc2/box/char-degree-20260905/d108",
+        "args": "python3 coefficient_circuit_backend.py --input d108_remainder_stage7_translated_strongfront.input.json --out d108_circuit_stage7_translated_strongfront.sing --timeout 900",
+        "status": [
+          "VmHWM:\t   90164 kB",
+          "VmRSS:\t   82124 kB"
+        ]
+      },
+      {
+        "pid": 22961,
+        "cwd": "/home/ubuntu/jc2/box/char-degree-20260905/d108",
+        "args": "Singular -q d108_circuit_stage7_translated_strongfront.sing",
+        "status": [
+          "VmHWM:\t15492684 kB",
+          "VmRSS:\t15374240 kB"
+        ]
+      },
+      {
+        "pid": 24433,
+        "cwd": "/home/ubuntu/jc2/box/char-degree-20260905/d108",
+        "args": "python3 coefficient_circuit_backend_v2.py --input d108_meanfree_stage8_strongfront.input.json --out d108_meanfree_circuit_stage8_strongfront.sing --timeout 600",
+        "status": [
+          "VmHWM:\t   55704 kB",
+          "VmRSS:\t   47548 kB"
+        ]
+      },
+      {
+        "pid": 24434,
+        "cwd": "/home/ubuntu/jc2/box/char-degree-20260905/d108",
+        "args": "Singular -q d108_meanfree_circuit_stage8_strongfront.sing",
+        "status": [
+          "VmHWM:\t 9263636 kB",
+          "VmRSS:\t 9263636 kB"
+        ]
+      },
+      {
+        "pid": 24538,
+        "cwd": "/home/ubuntu/jc2",
+        "args": "python3 -u /home/ubuntu/jc2/box/char-degree-20260905/d108/coefficient_circuit_backend_v2.py --input /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage7.input.json --out /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage7/augmented.sing --timeout 600",
+        "status": [
+          "VmHWM:\t   65564 kB",
+          "VmRSS:\t   56580 kB"
+        ]
+      },
+      {
+        "pid": 24539,
+        "cwd": "/home/ubuntu/jc2",
+        "args": "python3 -u /home/ubuntu/jc2/box/char-degree-20260905/d108/coefficient_circuit_backend_v2.py --input /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta2_stage8.input.json --out /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage8/augmented.sing --timeout 600",
+        "status": [
+          "VmHWM:\t   70828 kB",
+          "VmRSS:\t   61888 kB"
+        ]
+      },
+      {
+        "pid": 24540,
+        "cwd": "/home/ubuntu/jc2",
+        "args": "python3 -u /home/ubuntu/jc2/box/char-degree-20260905/d108/coefficient_circuit_backend_v2.py --input /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-inputs/delta52_stage8.input.json --out /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage8/augmented.sing --timeout 600",
+        "status": [
+          "VmHWM:\t   65680 kB",
+          "VmRSS:\t   56644 kB"
+        ]
+      },
+      {
+        "pid": 24541,
+        "cwd": "/home/ubuntu/jc2",
+        "args": "Singular -q /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage7/augmented.sing",
+        "status": [
+          "VmHWM:\t 9750296 kB",
+          "VmRSS:\t 9750296 kB"
+        ]
+      },
+      {
+        "pid": 24542,
+        "cwd": "/home/ubuntu/jc2",
+        "args": "Singular -q /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta2_stage8/augmented.sing",
+        "status": [
+          "VmHWM:\t 9847560 kB",
+          "VmRSS:\t 9847560 kB"
+        ]
+      },
+      {
+        "pid": 24543,
+        "cwd": "/home/ubuntu/jc2",
+        "args": "Singular -q /home/ubuntu/jc2/box/char-degree-20260905/g9966/circuit-runs/delta52_stage8/augmented.sing",
+        "status": [
+          "VmHWM:\t 9744456 kB",
+          "VmRSS:\t 9744456 kB"
+        ]
+      },
+      {
+        "pid": 24854,
+        "cwd": "/home/ubuntu",
+        "args": "python3 -c import datetime,json,os\nfrom pathlib import Path\njobs=[]\nfor p in Path('/proc').iterdir():\n if not p.name.isdigit(): continue\n try:\n  a=(p/'cmdline').read_bytes().replace(b'\\0',b' ').decode(errors='replace').strip()\n  cwd=os.readlink(p/'cwd')\n  if ('Singular -q '==a[:12] or ('python3' in a[:10] and ('run_circuit_schedule.py' in a or 'coefficient_circuit_backend' in a))) and ('char-degree-20260905' in cwd or 'char-degree-20260905' in a):\n   jobs.append(dict(pid=int(p.name),cwd=cwd,args=a,status=[l for l in (p/'status').read_text().splitlines() if l.startswith(('VmRSS:','VmHWM:'))]))\n except OSError: pass\nprint(json.dumps(dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),jobs=jobs)))",
+        "status": [
+          "VmHWM:\t   12200 kB",
+          "VmRSS:\t   12200 kB"
+        ]
+      }
+    ]
+  }
+}

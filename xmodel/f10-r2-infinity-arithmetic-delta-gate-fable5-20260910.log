@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Own WHOLE read done at 11:02:12Z: the custody rows match live sha256sum 8 of 8, the marker is the sole standalone marker and the last line, and no charge_basis or Seal was authored. All writers are idle before the 11:04:18Z reserve. Nothing further to write.
+
+**Outcome.** The delta gate is published, unsealed, at `xmodel/f10-r2-infinity-arithmetic-delta-gate-fable5-20260910.md` with its custody file in the matching box directory. Both were written only by apply_patch after confirming absence at 10:52:18Z.
+
+**What was replayed by hand mod 89 and passed:**
+- Item 1: all six upper solves behind the gap-2 and gap-3 3x3 matrices, every column entry equal to the producer's triples. Full determinants are 11 and 78, both units. The producer's 73/76 are the (k,l) residual 2x2 blocks up to column-order sign, and 73/6 are the Schur complements, with det M equal to their product in both gaps. Cramer regularity in the localized integral order follows, which closes the previous gate's determinant GAP. Back-solving reproduces A2, V2, A3, V3, U and d0.
+- Item 2: W4, both basis columns, the particular base (-4,30), the 2x2 determinant 19, A4=(52,32), V4=(55,35,2,32) with vanishing T^4, and the middle shift with d1=0.
+- Item 3: the critical column (36,77), the y-term 38pq as a product, N, the particular V (31,3,83), the pair (88,80), and alpha=20. The resonant T^5 row independently confirms W5_5=76.
+
+**What remains unreplayed, listed exactly in the report:**
+- Item 3: the five low W5 entries (23,51,62,27,47), the only open input to alpha.
+- Item 4: both W6 forcings, the late column (62,23), the variation (7,0,68), the pairs (47,17) and (70,41), hence beta and gamma. This is a cap GAP, not a refutation. Denominator scope was confirmed.
+
+**Theorem stated** conditionally in section E, with the two ROOT corrections recorded and not consumed. Nothing was refuted. No OPEN raised, collisions EMPTY.
+DIVERT path=xmodel/f10-r2-infinity-arithmetic-delta-gate-fable5-20260910.md status=CLEAN body_bytes=9432 body_sha256=590c46fb03a5e2f54645f6a2a699f99e62fa75c6fdaee5db6a4cc31f90f78de8

@@ -1,0 +1,62 @@
+{
+  "caps": "30wall25CPU512MiB each",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "0b4ed21e2755ca86398ef551fc6f6b484255a9fca23803a9b809419f990dea3a"
+    },
+    {
+      "mutation": "--mutate-drop-vm1-row",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "cca9bd80fc85dc5cf9fd16ac5181fe891f398c35ec3b30ea14bce98ab44dec3c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-identity-delta-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "27162d4466b3e4745903c1a5dae5fcd98a5f4b746093d485bf1afa73b7418c02",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-jet-coefficient",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "584854f3232fd4b512227d56b863e656f304db796eb0fdf89ef2a875e9e9abd1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "0b4ed21e2755ca86398ef551fc6f6b484255a9fca23803a9b809419f990dea3a"
+    },
+    {
+      "mutation": "--mutate-drop-vm1-row",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "cca9bd80fc85dc5cf9fd16ac5181fe891f398c35ec3b30ea14bce98ab44dec3c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-identity-delta-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "27162d4466b3e4745903c1a5dae5fcd98a5f4b746093d485bf1afa73b7418c02",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-jet-coefficient",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "584854f3232fd4b512227d56b863e656f304db796eb0fdf89ef2a875e9e9abd1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS"
+}

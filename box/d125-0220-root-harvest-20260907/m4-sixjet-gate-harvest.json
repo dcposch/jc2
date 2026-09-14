@@ -1,0 +1,85 @@
+{
+  "adapted_code_sha256": "a7f170910a2c74ebd9503806999530a704066915da47439614915e995b388ee0",
+  "corrections": [
+    "Unmodified frozen checker NOT executed: literal H3/H5 expansion replaced by binomial slot count",
+    "Reviewer O(s8) equality must read O(s7); only coefficients through6 checked",
+    "DIVERTED overflow is the read seal/artifact listing only, no extra mathematical claim",
+    "General residue necessity and linear-space census not promoted by this gate"
+  ],
+  "helper_sha256": "665cfcc214c74a0c39ab4637ffd6a939482644e7db0d03daf3e87fc12d0475b8",
+  "pins": 11,
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "dc29df2cd4756f0fb9d8e71df24d91ae85e7aacf39201286c997bc1d428bdc68"
+    },
+    {
+      "mutation": "--mutate-q",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "FAIL phi(q) complete negative part = v^-1\n",
+      "stdout_sha256": "99ac16d0ef551bdc27a0854058c7dd8603d568313aab43e7e2926f34b16fc665"
+    },
+    {
+      "mutation": "--mutate-U4",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "FAIL U4 low jet == g^2 p exactly ([p]=[gp^2]=[p^3]=0)\n",
+      "stdout_sha256": "ec54251a3491f23e891228627e7db947a27ba3d7009b9a2d32e6b9501a987a02"
+    },
+    {
+      "mutation": "--mutate-CU",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "FAIL displayed B table == (1+eps)^(5/3) through s^6 (R^5 eps^n bookkeeping: R^3C,R^2D,R^2U,RC^2,CD,CU,D^2/R,C^3/R)\n",
+      "stdout_sha256": "4f9d444f269cfae7c71152b7709f6b306ed17be2694491ab35b957984765c2e4"
+    },
+    {
+      "mutation": "--mutate-b4",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "FAIL [gp]C=-b^2 and ([gp]C)^2=b^4=3\n",
+      "stdout_sha256": "a3e50936ae78b5cefafc145e5310db6b145d06a86c3312eb5e68686894640adf"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "dc29df2cd4756f0fb9d8e71df24d91ae85e7aacf39201286c997bc1d428bdc68"
+    },
+    {
+      "mutation": "--mutate-q",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "FAIL phi(q) complete negative part = v^-1\n",
+      "stdout_sha256": "99ac16d0ef551bdc27a0854058c7dd8603d568313aab43e7e2926f34b16fc665"
+    },
+    {
+      "mutation": "--mutate-U4",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "FAIL U4 low jet == g^2 p exactly ([p]=[gp^2]=[p^3]=0)\n",
+      "stdout_sha256": "ec54251a3491f23e891228627e7db947a27ba3d7009b9a2d32e6b9501a987a02"
+    },
+    {
+      "mutation": "--mutate-CU",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "FAIL displayed B table == (1+eps)^(5/3) through s^6 (R^5 eps^n bookkeeping: R^3C,R^2D,R^2U,RC^2,CD,CU,D^2/R,C^3/R)\n",
+      "stdout_sha256": "4f9d444f269cfae7c71152b7709f6b306ed17be2694491ab35b957984765c2e4"
+    },
+    {
+      "mutation": "--mutate-b4",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "FAIL [gp]C=-b^2 and ([gp]C)^2=b^4=3\n",
+      "stdout_sha256": "a3e50936ae78b5cefafc145e5310db6b145d06a86c3312eb5e68686894640adf"
+    }
+  ],
+  "status": "PASS_SCOPED_FINITE_SIXJET",
+  "wall_seconds": 1.193352372967638
+}

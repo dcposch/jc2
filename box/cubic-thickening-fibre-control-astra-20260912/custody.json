@@ -1,0 +1,60 @@
+{
+  "schema": "jc2-documentary-terminal-custody/v1",
+  "task": "cubic-thickening-fibre-control-astra-20260912",
+  "scope": "COMPLETE_MANUAL_COUNTERCONTROL_UNREVIEWED_NOT_EXTERNAL_THEOREM_VERDICT",
+  "first_action_utc": "2026-09-12T00:36:14Z",
+  "reserve_utc": "2026-09-12T00:50:00Z",
+  "hard_utc": "2026-09-12T00:53:00Z",
+  "preseal_whole_postpin_collision_completed_utc": "2026-09-12T00:39:55Z",
+  "finalized_utc": "2026-09-12T00:40:24Z",
+  "expected_verify_final_whole_completed_utc": "2026-09-12T00:40:24Z",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/cubic-thickening-fibre-control-astra-20260912/TASK.md",
+      "sha256": "7c07931efd8b348c04b405c7deb30d43bdf88f5402fe260946c8553ac3cfa236",
+      "read_mode": "FRESH_WHOLE",
+      "pre_post_match": true
+    }
+  ],
+  "owned": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/cubic-thickening-fibre-control-astra-20260912.md",
+      "sha256": "d22214f0b9378b178c1901203c86cf6424846eba558674d5fabc628ddcf2dfb2",
+      "bytes": 6235,
+      "read_mode": "WHOLE_FINAL"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/cubic-thickening-fibre-control-astra-20260912.md.artifact.json",
+      "sha256": "87c51ff3c2a0001d158aa43047a31f2a5358cd2ec663b7f429f9980e73b370e9",
+      "bytes": 702,
+      "read_mode": "WHOLE_FINAL"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/cubic-thickening-fibre-control-astra-20260912/PINS.json",
+      "sha256": "d961f97f3dfa7e352f168654ab72c6f29cdc1d62b0b9377fa1945b86cc8e367d",
+      "bytes": 1121,
+      "read_mode": "WHOLE_FINAL"
+    }
+  ],
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "status": "FINAL",
+    "expected_manifest_sha256": "87c51ff3c2a0001d158aa43047a31f2a5358cd2ec663b7f429f9980e73b370e9",
+    "expected_verify": "PASS",
+    "body_sha256": "52acbcb3a5a82b0ed892b88168f99ece0cbe4cb628735e130c4e5d77deddba32",
+    "body_bytes": 5903
+  },
+  "result": "All explicit assertions verified manually: reduced/doubled/full fibres have lengths2/3/3. Abstract product is not Z-linear; exact Tor loss and sufficient compatible finite-flat factorization identified. Any embedded origin fibre in the fixed cover has length at most3. Etale donor unit excludes an actual A2 first leg.",
+  "checks": {
+    "sole_input_pin_before_whole": true,
+    "own_whole_read": true,
+    "scope_quantity_cheapest_test_checked": true,
+    "no_new_open": true,
+    "collision_check": true,
+    "marker_last": true,
+    "scientific_execution": false,
+    "external_or_peer_reads": false,
+    "new_authority": false
+  },
+  "terminal_note": "Report and substantive/transaction writers closed. Custody excludes its own hash, supplied separately. After creation only custody WHOLE read/hash and terminal ALL WRITERS IDLE handoff remain; no further authored change or follow-on."
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "F10-QUOTIENT-GENERIC-PLAN/v1",
+  "status": "STATIC-UNEXECUTED-NOT-AUTHORITY",
+  "generic_only": true,
+  "actual_source_inputs": [],
+  "univariate_acceptance": null,
+  "child_cli": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "generic_controls.py",
+    "AUTHORITY",
+    "OUTPUT"
+  ],
+  "operation": "build",
+  "positive_cases": [
+    [
+      "allzero-q0",
+      "UNIT"
+    ],
+    [
+      "allzero-q1",
+      "SEPARATOR"
+    ],
+    [
+      "constant-degree25",
+      "UNIT"
+    ],
+    [
+      "raw-two-T",
+      "UNIT"
+    ],
+    [
+      "nonreduced-remainder",
+      "UNIT"
+    ],
+    [
+      "lost-component",
+      "SEPARATOR"
+    ],
+    [
+      "varying-pivot",
+      "UNIT"
+    ],
+    [
+      "all-generators",
+      "UNIT"
+    ]
+  ],
+  "negative_cases": [
+    [
+      "scaled-separator",
+      "dual target normalization equals one"
+    ],
+    [
+      "raw-unit-plus-one",
+      "full 217-coordinate sum h_i f_i equals q^5"
+    ],
+    [
+      "short-witness",
+      "complete rational witness dimension"
+    ],
+    [
+      "nonreduced-coefficient-modulus",
+      "generic modulus must be squarefree"
+    ]
+  ],
+  "source_sha256": {
+    "generic_controls.py": "c369dc11b4e9562b050333225133aedf9cb63a04f3309424fdfab769465d363a",
+    "solver.py": "58cdc4721143ec2be93cc720831c2235a9221b567f1903d2ffd6025b4f54b665"
+  },
+  "proposed_profiles": {
+    "probe": {
+      "wall_seconds": 5,
+      "cpu_seconds": 3,
+      "rss_bytes": 2147483648
+    },
+    "dummy": {
+      "wall_seconds": 5,
+      "cpu_seconds": 3,
+      "rss_bytes": 33554432
+    },
+    "generic": {
+      "wall_seconds": 180,
+      "cpu_seconds": 170,
+      "rss_bytes": 2147483648
+    }
+  },
+  "proposed_aggregate_wall_seconds": 240,
+  "file_size_limit_bytes": 16777216
+}

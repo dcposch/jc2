@@ -1,0 +1,153 @@
+{
+  "best_completed": {
+    "delta2": {
+      "Jacobian_t": 70,
+      "dimension": 213,
+      "full_J_terminal_t": 163,
+      "next_unfinished_t": 71,
+      "verdict": "COMPUTE_BOUND"
+    },
+    "delta52": {
+      "Jacobian_t": 96,
+      "dimension": 34,
+      "full_J_terminal_t": 163,
+      "next_unfinished_t": 97,
+      "verdict": "COMPUTE_BOUND"
+    }
+  },
+  "captured_utc": "2026-09-05T20:31:45.525916+00:00",
+  "control_refs": [
+    {
+      "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-oracle-adjoin/oracle-ast-delta52-t90_phase0000.json",
+      "sha256": "4a892744bd3d15298e6cb60cc2caa4055b8006f40eda55c961c1e3de66e414f6"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-oracle-adjoin/oracle-delta52-t90_phase0000.json",
+      "sha256": "4a892744bd3d15298e6cb60cc2caa4055b8006f40eda55c961c1e3de66e414f6"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/deep_oracle_ast_control.json",
+      "sha256": "a3d9c940a734789124f9d32bfca9a529f49ad05be25f7a859c797e8d29d0f638"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-fullJ-threaded/threaded-arithmetic-control.json",
+      "sha256": "c24e36533f6803706ae9ad063c3ee04a7a70e1e00dd568e32998e345fc9ea695"
+    }
+  ],
+  "fleet_instance_termination": "PARENT_OWNS_TERMINATION_BEFORE_REPORT_SEAL",
+  "necessary_chart_scope": "Both best prefixes retain nonzero D1 face and full original five-row residual; no rational point or full-chart survivor is claimed. Independent verifier controls final promotion.",
+  "overlap_controls": {
+    "independent_full_FG_oracle_delta52_J90_dimension": 43,
+    "ordinary_SymPy_parse_and_exact_AST_parse_entire_phase_sha_equal": true,
+    "ordinary_and_threaded_quotient_batch_entire_delta52_J90_phase_sha_equal": true,
+    "threaded_quotient_delta2_J67_dimension_matches_unreduced_native": 226
+  },
+  "owned_process_status_after_GNU_timeout": {
+    "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-oracle-adjoin/fleet-owned-after-timeout.json",
+    "sha256": "eaed89cc49e44aefceb937b76dc2f2499f9f19f4b83693d1d63ec2e287b15465"
+  },
+  "owned_process_status_before_GNU_timeout": {
+    "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-oracle-adjoin/fleet-owned-immediately-before-timeout.json",
+    "sha256": "431dd56f810dc905c399d942af013747a5d511e977b2b13d0031414cba624b0f"
+  },
+  "runs": {
+    "batch-delta2": {
+      "dimension": 213,
+      "final_phase": {
+        "path": "/home/ubuntu/g9966-corrected-jacobian-batch/outputs/fullJ-batch-delta2_phase0011.json",
+        "sha256": "a0f3a2047a81aa55208a798cb92569e049fbbd27314c70b61153d1a0671c5e6c"
+      },
+      "last_completed_J_t": 70,
+      "log": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/logs-fullJ-batch/fullJ-batch-delta2.log",
+        "sha256": "b990e66d292aa0ed07d6c18164ffafebce6f7873acc6d30c089e81423565d91d"
+      },
+      "state": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-fullJ-batch/fullJ-batch-delta2.json",
+        "sha256": "5d66ee0da3fc705c62ef60549ab471aaa2a0afbc5334aeb68b21cca960f6d672"
+      }
+    },
+    "batch-delta52": {
+      "dimension": 34,
+      "final_phase": {
+        "path": "/home/ubuntu/g9966-corrected-jacobian-batch/outputs/fullJ-batch-delta52_phase0022.json",
+        "sha256": "14f7f2af1ef274ea5527463f4bb30702f30d71a3ec7df1b00a2edd02ea962b7f"
+      },
+      "last_completed_J_t": 96,
+      "log": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/logs-fullJ-batch/fullJ-batch-delta52.log",
+        "sha256": "0a885cfba5bc03da1a2704fda225f0b2c79f2449e9afdb6158cb4064fb901940"
+      },
+      "state": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-fullJ-batch/fullJ-batch-delta52.json",
+        "sha256": "97d3a328f2fcb8832bf4ad4bb82831942a4d9731280c1d191548837a409767c8"
+      }
+    },
+    "quotient-delta2": {
+      "dimension": 230,
+      "final_phase": {
+        "path": "/home/ubuntu/g9966-corrected-jacobian-quotient/outputs/fullJ-quotient-delta2_phase0000.json",
+        "sha256": "829f1bd8803fc00ac976fbeca226bd387fd3b0df4a1d3db67bce2ba4bdf5a6a3"
+      },
+      "last_completed_J_t": 66,
+      "log": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/logs-fullJ-quotient/fullJ-quotient-delta2.log",
+        "sha256": "8e79822ae98ed9e04306a0eda6680f1d481ae0e3f1f47fd72d5054b7def5b7e3"
+      },
+      "state": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-fullJ-quotient/fullJ-quotient-delta2.json",
+        "sha256": "58f9ceff16056b1633df408494813a74fb402c7c2a23b27ee73230bde5332f39"
+      }
+    },
+    "quotient-delta52": {
+      "dimension": 43,
+      "final_phase": {
+        "path": "/home/ubuntu/g9966-corrected-jacobian-quotient/outputs/fullJ-quotient-delta52_phase0001.json",
+        "sha256": "ba7ef0283aa3a5bee1b20504dbeaf83bc220d6a7c35a30047341ad6448b3c264"
+      },
+      "last_completed_J_t": 90,
+      "log": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/logs-fullJ-quotient/fullJ-quotient-delta52.log",
+        "sha256": "a5bc003a40d26445c51aedea047fe28568e4151e11f88f0c472e08c0844910c8"
+      },
+      "state": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-fullJ-quotient/fullJ-quotient-delta52.json",
+        "sha256": "d49b9749701168b502a7d96a04dbdb6fb698f39fd54bdbb7011d16bb5bdffc29"
+      }
+    },
+    "threaded-delta2": {
+      "dimension": 226,
+      "final_phase": {
+        "path": "/home/ubuntu/g9966-corrected-jacobian-threaded/outputs/fullJ-threaded-delta2_phase0000.json",
+        "sha256": "c74663aec90b8b2d1865d7305c5ebb24b4c725477ae6c15b08779431d2ab82c4"
+      },
+      "last_completed_J_t": 67,
+      "log": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/logs-fullJ-threaded/fullJ-threaded-delta2.log",
+        "sha256": "a9c8eaf548b2b8345817afe75dfe250a7fd22d9c31473b79469ac96f06436a8a"
+      },
+      "state": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-fullJ-threaded/fullJ-threaded-delta2.json",
+        "sha256": "5bcba73d15d871f0e878b3d308d3b38b1347110aca38d5599a30c87025962fbd"
+      }
+    },
+    "threaded-delta52": {
+      "dimension": 43,
+      "final_phase": {
+        "path": "/home/ubuntu/g9966-corrected-jacobian-threaded/outputs/fullJ-threaded-delta52_phase0000.json",
+        "sha256": "ba7ef0283aa3a5bee1b20504dbeaf83bc220d6a7c35a30047341ad6448b3c264"
+      },
+      "last_completed_J_t": 90,
+      "log": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/logs-fullJ-threaded/fullJ-threaded-delta52.log",
+        "sha256": "aebb41814152e859167f7e0e08f798472e6ce2baceec98e9e430ab5bd11901fb"
+      },
+      "state": {
+        "path": "/home/ubuntu/jc2/box/g9966-corrected-20260905/results-fullJ-threaded/fullJ-threaded-delta52.json",
+        "sha256": "14b4208c360f1aed0f4d0df93e339165552be21c10d4a5f33aea60ed0d396f1c"
+      }
+    }
+  },
+  "status": "ALL_OWNED_COMPUTATIONS_STOPPED_AND_ARTIFACTS_PULLED",
+  "timing_note": "Commands used GNU timeout, not GNU time. Read-only /proc and ps snapshots record observed runtime; no guessed process exit codes."
+}

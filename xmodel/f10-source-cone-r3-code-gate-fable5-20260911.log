@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Both WHOLE reads are complete and clean at 00:52:14 UTC, before the 00:59 reserve. All writers are now idle; nothing further will be written.
+
+**Outcome: FIRST static review complete, all eight verdicts CONFIRMED, no blocking correction.**
+
+Report: `xmodel/f10-source-cone-r3-code-gate-fable5-20260911.md` (2267 words, one standalone BODY-END as the last line, no placeholders, no hex tokens in the body). Custody: `box/f10-source-cone-r3-code-gate-fable5-20260911/input_custody.md` with all 21 pin rows verified by `sha256sum -c` (21 OK) against the frozen inputs, which is also the postpin verification.
+
+What I found, in brief:
+
+- **A–D CONFIRMED.** Whole rank-7 base rebuilt literally from the univariate and full-boundary coefficient lists (I re-derived every rational factor from u=2−tau). All inverses are Euclid against the whole monic septic with gcd required to be 1, so no field, factor, or nonzero-as-unit assumption. Adjugate is transposed correctly and both matrix products are checked in both programs. Gaps 1–10, homogeneous rho with particular subtraction, middle H7 ratio 2/11 and 1/3, critical Lambda, gap-8 fixed U² and target −U², late pivots, ell column, 108/45 slots, both inverse charts, the Laurent back-map, and the 25 graph rows with T formed before substitution all match the parent reports.
+- **E CONFIRMED with one non-blocking fragility.** The checker is genuinely independent (different reduction, series recurrence, Horner substitution, strict wire validation). Lines 371–382 of check.py demand the emitted Bezout pairs equal the checker's canonical Euclid output, which can only produce false negatives.
+- **F, G CONFIRMED.** Authority rejects host and tag before any mathematical import. Each of the six CONTROLS.md mutations reaches exactly its named mathematical predicate; I traced the checker's evaluation order for each.
+- **H CONFIRMED as static.** No line must change. My unmeasured estimate is that the proposed 600 CPU s cap is likely to refuse a valid run (pure-Python Fraction arithmetic in rank-7 B suggests tens of minutes to hours per process), recorded as the OPEN numeric wall estimate for ROOT's runtime packet.
+
+One process note: I typed the custody hash rows from memory, and a programmatic cross-check caught a single transposed digit before finalization. It was corrected via apply_patch and re-verified.
+DIVERT path=xmodel/f10-source-cone-r3-code-gate-fable5-20260911.md status=CLEAN body_bytes=15960 body_sha256=712ac6023b6799c079e5b950822d07c20295d46788f38d64a433af7f45cd3103

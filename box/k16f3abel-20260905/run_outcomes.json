@@ -1,0 +1,222 @@
+{
+  "lane": "k16-f3abel-astra-20260905",
+  "verdict": "PARTIAL",
+  "all_t_atom": "OPEN[K16-8.1-RADICAL]",
+  "whole_ray_theorem_promoted": false,
+  "full_cone_exact_controls": [
+    {
+      "t": 2,
+      "d": -1,
+      "dimension": 1,
+      "length": null,
+      "product_in_ideal": true
+    },
+    {
+      "t": 2,
+      "d": 1,
+      "dimension": 0,
+      "length": 12,
+      "product_in_ideal": true
+    },
+    {
+      "t": 3,
+      "field": "Q[d]/(3d^2-4)",
+      "dimension": 0,
+      "length": 66,
+      "product_in_ideal": false,
+      "product_square_in_ideal": true
+    },
+    {
+      "t": 4,
+      "field": "Q[d]/(3d^2-5)",
+      "dimension": 0,
+      "length": 338,
+      "product_in_ideal": false,
+      "product_square_in_ideal": true
+    }
+  ],
+  "coincident_root_exact_slices": {
+    "indices": [
+      11,
+      26,
+      47
+    ],
+    "both_split_factors": true,
+    "all_b": true
+  },
+  "t2_negative_control_correction": "B*eta is forced zero; V0 fails on the free b-axis.",
+  "t8_full": {
+    "certificate": {
+      "accepted_run_count": 0,
+      "crt_rational_reconstruction": {
+        "available": false,
+        "items": {},
+        "method": "CRT plus bounded rational reconstruction for scalar invariants"
+      },
+      "hilbert_hint": null,
+      "policy": {
+        "allow_modular_unit_promotion": false,
+        "note": "Only homogeneous dimension-zero may promote; localized modular units are never used.",
+        "require_controls": true,
+        "scope": "HOMOGENEOUS_POSITIVE_WEIGHTS_PROPERNESS"
+      },
+      "promotion_note": "no accepted result before timeout",
+      "properness_scope": {
+        "positive_weights": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ]
+        ],
+        "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+        "systems_declared_homogeneous": true
+      },
+      "runs": [
+        {
+          "characteristic": 32003,
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "Singular",
+            "--cpus=1",
+            "--threads=1",
+            "--flint-threads=1",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t8_guided/controls_t8_direct_f3_p32003.sing"
+          ],
+          "elapsed_seconds": 1800.070965,
+          "label": "controls_t8_direct_f3",
+          "main": {
+            "accepted": false,
+            "basis_size": null,
+            "dimension": null,
+            "lead_dim": null,
+            "lead_vdim": null,
+            "missing_markers": [
+              "NF_ALL_ZERO",
+              "UNIT",
+              "DIM",
+              "BASIS_SIZE",
+              "LEAD_DIM",
+              "ACCEPT",
+              "NF_ZERO"
+            ],
+            "nf_all_zero": false,
+            "unit": false,
+            "vdim": null,
+            "vdim_matches_predicted": null
+          },
+          "perturbed": null,
+          "returncode": 1,
+          "script": "/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t8_guided/controls_t8_direct_f3_p32003.sing",
+          "script_sha256": "949ea1fb53b93d6a10ddfede57be4d898fcb18d49595b5ac8861c19856405db1",
+          "stderr": "/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t8_guided/controls_t8_direct_f3_p32003.err",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout": "/home/ubuntu/jc2/box/k16f3abel-20260905/controls_t8_guided/controls_t8_direct_f3_p32003.out",
+          "stdout_sha256": "639a5f1d514b4979552c45656b8d0098feb7dffeabc0c767536ff8b5798c3e82",
+          "timed_out": true
+        }
+      ]
+    },
+    "verdict": "INCONCLUSIVE_TIMEOUT"
+  },
+  "t8_bzero": {
+    "certificate": {
+      "accepted_run_count": 0,
+      "crt_rational_reconstruction": {
+        "available": false,
+        "items": {},
+        "method": "CRT plus bounded rational reconstruction for scalar invariants"
+      },
+      "hilbert_hint": null,
+      "policy": {
+        "allow_modular_unit_promotion": false,
+        "note": "Only the homogeneous b=0 slice dimension may promote, never modular length.",
+        "require_controls": true,
+        "scope": "HOMOGENEOUS_POSITIVE_WEIGHTS_PROPERNESS"
+      },
+      "promotion_note": "no accepted result before timeout",
+      "properness_scope": {
+        "positive_weights": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ]
+        ],
+        "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+        "systems_declared_homogeneous": true
+      },
+      "runs": [
+        {
+          "characteristic": 32003,
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "Singular",
+            "--cpus=1",
+            "--threads=1",
+            "--flint-threads=1",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/k16f3abel-20260905/slice_t8_guided/slice_t8_bzero_p32003.sing"
+          ],
+          "elapsed_seconds": 900.068241,
+          "label": "slice_t8_bzero",
+          "main": {
+            "accepted": false,
+            "basis_size": null,
+            "dimension": null,
+            "lead_dim": null,
+            "lead_vdim": null,
+            "missing_markers": [
+              "NF_ALL_ZERO",
+              "UNIT",
+              "DIM",
+              "BASIS_SIZE",
+              "LEAD_DIM",
+              "ACCEPT",
+              "NF_ZERO"
+            ],
+            "nf_all_zero": false,
+            "unit": false,
+            "vdim": null,
+            "vdim_matches_predicted": null
+          },
+          "perturbed": null,
+          "returncode": 1,
+          "script": "/home/ubuntu/jc2/box/k16f3abel-20260905/slice_t8_guided/slice_t8_bzero_p32003.sing",
+          "script_sha256": "d3b3f648fe3554ca84919e42a4578b03d899bcc5c9e8a0c206ce590c9f409a96",
+          "stderr": "/home/ubuntu/jc2/box/k16f3abel-20260905/slice_t8_guided/slice_t8_bzero_p32003.err",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout": "/home/ubuntu/jc2/box/k16f3abel-20260905/slice_t8_guided/slice_t8_bzero_p32003.out",
+          "stdout_sha256": "bc4ecb5b53be9d1c424bbf4fd62d07e4ff91c79ba0440025055af86d30af2fad",
+          "timed_out": true
+        }
+      ]
+    },
+    "verdict": "INCONCLUSIVE_TIMEOUT"
+  },
+  "all_lane_jobs_finished": true,
+  "final_audit_pass": true,
+  "mathematical_reviews_passed": true,
+  "core_limit": 5,
+  "cas_cores_per_job": 1,
+  "start_utc": "2026-09-05T01:36:04Z",
+  "completion_utc": "2026-09-05T02:15:51.586568+00:00",
+  "elapsed_seconds": 2387.587
+}

@@ -1,0 +1,762 @@
+       Provided for non-commercial research and educational use.
+          Not for reproduction, distribution or commercial use.
+
+
+
+                                                    Serdica
+                            Mathematical Journal
+                                                    Сердика
+           Математическо списание
+
+
+     The attached copy is furnished for non-commercial research and education use only.
+     Authors are permitted to post this version of the article to their personal websites or
+institutional repositories and to share with other researchers in the form of electronic reprints.
+                Other uses, including reproduction and distribution, or selling or
+               licensing copies, or posting to third party websites are prohibited.
+
+                                   For further information on
+                                 Serdica Mathematical Journal
+                                   which is the new series of
+                       Serdica Bulgaricae Mathematicae Publicationes
+                  visit the website of the journal http://serdica.math.bas.bg
+                                   or contact: Editorial Office
+                                 Serdica Mathematical Journal
+                           Institute of Mathematics and Informatics
+                                Bulgarian Academy of Sciences
+                                 Telephone: (+359-2)9792818
+                                  e-mail: serdica@math.bas.bg
+ Serdica Math. J. 51 (2025), 299–314                                                  Serdica
+                                                                        Mathematical Journal
+                                                                   Bulgarian Academy of Sciences
+                                                        Institute of Mathematics and Informatics
+
+
+
+
+     ON THE SHAPE OF A COUNTEREXAMPLE TO THE
+      TWO-DIMENSIONAL JACOBIAN CONJECTURE∗
+
+                                Leonid Makar-Limanov
+
+                           Communicated by A. Giambruno
+
+
+                         To Vesselin Drensky with best wishes
+
+
+      Abstract. Polynomials f, g ∈ C[x, y] is a Jacobian pair if the Jacobian
+      J(f, g) = 1. The Jacobian conjecture (JC) formulated by O. H. Keller states
+      that then C[f, g] = C[x, y]. In this paper further information on the shape
+      of the Newton polygon of f if the pair f, g is a counterexample to JC is
+      obtained.
+
+        Introduction.
+        What is the Jacobian Conjecture
+        Take f, g ∈ C[x, y] where C is the field of complex numbers which satisfy
+           ∂f ∂g    ∂f ∂g
+J(f, g) =         −        = 1. Is it true that x, y ∈ C[f, g]? This is a natural
+           ∂x ∂y    ∂y ∂x
+question because if x, y ∈ C[f, g] then J(f, g) is a non-zero constant by the chain
+rule of calculus. Geometric reformulation of this question also seems reasonable:
+    https://doi.org/10.55630/serdica.2025.51.299-314
+   2020 Mathematics Subject Classification: Primary 14R15, 14M25.
+   Key words: Jacobian conjecture, Newton polygon, leading forms.
+    ∗
+      The author is grateful to the Korea Institute for Advanced Study, where he worked on this
+project.
+300                              L. Makar-Limanov
+
+
+is it true that a polynomial mapping of C2 to itself is globally invertible if it is
+locally invertible?
+        History
+        This question makes sense for polynomials with any number of variables
+and it was asked in 1939 by O. H. Keller (see [14]) though for polynomials with
+integer coefficients. He checked it for a birational map.
+        The case n = 1 is trivial, the first published proof for the case n = 2
+appeared in 1955 (see [9]), and several other proofs, even for arbitrary n were
+published a bit later ([24, 25, 26, 10]).
+        The question still commanded some attention apparently because it has
+a very simple algebraic formulation and some subtlety: it is certainly wrong if
+the polynomials are replaced by rational or analytic functions but an answered
+question is not as attractive as an open problem.
+        Then all the proofs with exception of Engel’s became wrong and at least
+for n > 2 the problem became open.
+        Finally it was Engel’s turn. Apparently Abhyankar knew about mistakes,
+but it seems that only after Vitushkin’s talk (see [29]) it became official.
+        Say, L. A. Campbell, who was first to show the if C(x)/C(f ) is Galois
+extension then it is birational, (see [6]) wrote the paper assuming that Engel’s
+paper has no mistakes and added in proofs a remark with attribution to Vitushkin
+that it has (at least) two.
+        The paper [5] of Bass, Connell, and Wright which appeared in 1982 in
+the Bulletin(New Series) of the American Mathematical Society about ten years
+after JC became a problem again, contains a snapshot of what was known about
+JC including interesting historical remarks.
+        Thanks to this paper JC became very popular and now-days even has
+its own code 14R15 in MSC2020. Also Smale (see [27]) included it in his list of
+problems for the 21st century.
+        Usually there are proofs of JC on the arXiv which are never published.
+The last published wrong proof appeared in 2022 (see [4]).
+       Why JC is difficult
+                                                                    1
+        As these examples f = ex , g = ye−x ; f = x2 , g = x−1 y show JC
+                                                                    2
+is not true for analytic or rational functions, so polynomiality is very essential
+and nobody figured out yet how to use it. If the mapping φ : (x, y) → (f, g)
+given by a Jacobian pair f, g is proper, everything is easy. It is possible though
+for a mapping given by polynomials to have an infinite algebraic curve as the
+preimage of a finite arc of an algebraic curve: point at infinity can be mapped on
+                    On the shape of a counterexample . . .                       301
+
+
+a finite point. Because of that, say, x as an algebraic function of f, g can have
+singular points and so the polynomial and the rational functions cases are not
+very different.
+         It is also hard to construct a counterexample. Several authors (see [12,
+16, 30]) showed that if a counterexample exists the total degree of f or g must
+exceed 100.
+         What is done in this paper
+         There are different restrictions on potential counterexamples to JC (see
+[1, 2, 3, 7, 12, 13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 28]). Among them are
+restrictions on the shape of the Newton polygons of potential counterexamples
+and the quasi-homogeneous forms which are supported by their edges. Here a new
+restriction on these forms is obtained. This gives some information on Newton
+polygons of potential counterexamples.
+         The Newton polygon of a polynomial in two variables is the convex hull
+of degree vectors of all monomials which appear in this polynomial, i.e. if xi y j is
+a monomial of a polynomial in question, the point with coordinates (i, j) belongs
+to its Newton polygon.
+
+         Weight degree functions and lemma on independence. De-
+fine a weight degree function on C[x, y] as follows. First, take weights w(x) =
+α, w(y) = β where α, β ∈ Z, gcd(α, β) = 1 and put w(xi y j ) = iα + jβ. For a
+p ∈ C[x, y] denote by supp(p) the support of p, i.e. the collection of all mono-
+                                                  X define w(p) = max(w(a)|a ∈
+mials appearing in p with non-zero coefficients, and
+supp(p)). A polynomial p can be written as p =       pi where pi are forms homo-
+geneous relative to w and the form pw of the maximal weight of this presentation
+is called the leading form of p.
+       Lemma on independence. Let p, q ∈ C[x, y] be a pair of algebraically
+independent polynomials and w be a non-zero weight degree function for which
+pw 6∈ C. Then there exists an r ∈ C[p, q] such that rw and pw are algebraically
+independent.
+         We will deduce this lemma from the
+         Lemma on the leading monomial. Consider subalgebra C[p, q] of
+C[x, y] where p, q ∈ C[x, y] and the semigroup Π = C[p, q] of all leading monomi-
+als of elements of C[p, q] in w-lexicographic order: for r ∈ C[x, y] take rw and then
+take the maximal monomial of rw in lexicographic order x >> y. If p, q ∈ C[x, y]
+are algebraically independent then Π contains algebraically independent monomi-
+als.
+302                                    L. Makar-Limanov
+
+
+           P r o o f.     Proof is based on the notion of Gelfand-Kirillov dimension
+(see [11]). Consider all polynomials F (x, y) ∈ C[x, y] with the total degree not
+exceeding N. Denote        by VN the linear space of polynomials F (p, q). Dimension
+                  N +2
+dim(VN ) =                   since the polynomials {pi q j , i + j ≤ N } form a basis of this
+                      2
+space. Assume now that all monomials in Π are algebraically dependent. Two
+monomials xi1 y j1 , xi2 y j2 are algebraically dependent only if the degree vectors
+hi1 , j1 i and hi2 , j2 i are collinear. Denote by π the monomial which corresponds to
+the shortest non-zero vector with non-negative integral coordinates proportional
+to the degree vectors of monomials from Π. Then Π ⊆ Span(π).
+           If a ∈ C[x, y] denote by a its leading monomial. Clearly ab = ab. Because
+of that pi q j = π is+jt where p = π s , q = π t . Hence there is a basis in VN consisting
+of some ofpolynomials          with the leading
+                                                monomials        {π d , 0 ≤ d < N (s + t)}.
+                                                                N2         N2
+                                                       
+                 N +2                            N +2
+Therefore                   ≤ N (s + t). But                 >        and      > N (s + t) if
+                    2                              2             2          2
+N > 2(s + t). 2
+           Now we prove Lemma on independence.
+           If the leading forms of elements in C[p, q] are algebraically dependent with
+pw then the leading monomials in w-lexicographic order are also algebraically de-
+pendent with the leading monomial of pw which is not possible. 2
+
+
+      Remark 1. If the leading forms of two polynomials are algebraically
+dependent then the leading monomials of these forms are also algebraically de-
+pendent.
+
+         Dixmier formulae and the shape of supp(f ). Consider now a
+Jacobian pair f, g. Polynomials f, g are algebraically independent. Indeed, if
+f = f0 + f1,0 x + f0,1 y + . . . , g = g0 + g1,0 x + g0,1 y + . . . then f1,0 g0,1 − f0,1 g1,0 = 1
+and their linear forms are algebraically independent. Hence f − f0 , g − g0 are
+algebraically independent and f, g are algebraically independent.
+        Now take a weight defined by α > 0, β > 0 for which w(f ) > 0 and fw is
+not a monomial. If this is impossible then supp(f ) contains a monomial xdx y dy
+where dx = degx (f ), dy = degy (f ).
+        Suppose that we found such a weight and h = p(f, g) such that hw =
+x y and fw = xi2 y j2 are algebraically independent.
+ i1 j1
+
+        From J(xi1 y j1 , xi2 y j2 ) = (i1 j2 − i2 j1 )xi1 +i2 −1 y j1 +j2 −1 we see that two
+monomials are algebraically dependent only if their Jacobian is zero. It is also
+clear from this computation that J(p, q) = J(p, q) if J(p, q) 6= 0. Therefore hw
+                     On the shape of a counterexample . . .                            303
+
+
+and fw are also algebraically independent.
+         Denote J(f, a) by ∂(a) for a ∈ C[x, y]. Since by the rules of calculus
+                                 ∂p
+J(f, g ) = ig i−1 , ∂(p(f, g)) =
+      i
+                                    and ∂ d (h) = 0 for a sufficiently large d. Again
+                                 ∂g
+by the rules of calculus J(a, b)w = J(aw , bw ) if J(aw , bw ) 6= 0. This is because
+w(J(a, b)) = w(a) + w(b) − w(xy) if J(aw , bw ) 6= 0. Thus if ∂w (a) = J(fw , a) then
+ d
+∂w (hw ) = 0.
+
+
+         Remark 2. We checked that for any weight w derivative dw : dw (p) =
+J(fw , pw ) is locally nilpotent on the algebra C[f, g]w of the w leading forms of
+polynomials from C[f, g], i.e. that any form from this algebra is annihilated, i.e.
+becomes zero, after we apply ∂w to it sufficiently many times.
+             Suppose that φ is w homogeneous and J(fw , φ) = 0. If we look at the
+leading monomials fw = xi1 y j1 and φ = xi2 y j2 they are algebraically dependent.
+Therefore z2 hi2 , j2 i = z1 hi1 , j1 i for some positive integers z1 , z2 since vectors
+hi1 , j1 i and hi2 , j2 i are proportional. Hence φz2 and fwz1 have the same leading
+monomial and we can find c ∈ C such that the leading monomial of ψ = φz2 −cfwz1
+                        z1
+is smaller than fw . But then ψ = 0 because J(fw , ψ) = 0 and there is only one
+monomial “proportional” to fw with weight equal to the weight of φz2 since
+w(f ) > 0.
+             Hence h1 = J(fw , hw ) 6= 0 because the leading monomials of fw and hw
+                                                                    d
+are algebraically independent. Since we know that hd = ∂w             (hw ) = 0 we can find
+          i
+hi = ∂w (hw ) for which hi+1 6= 0 but hi+2 = 0.
+             Therefore hzi+1
+                           3
+                              = c1 fwz4 , c1 ∈ C∗ , z3 , z4 ∈ Z+ . We can assume that
+gcd(z3 , z4 ) = 1 and find z5 , z6 for which z3 z5 + z4 z6 = 1. To make formulae look
+better denote fw by ω, hi by χ and hi+1 by ψ. Then ψ z3 = c1 ω z4 and for a rational
+function ρ = ψ z6 ω z5 its powers ρz4 = ψ z4 z6 ω z4 z5 = ψ z4 z6 (c−1
+                                                                    1 ψ )
+                                                                         z3 z5
+                                                                               = c−z 5
+                                                                                  1 ψ and
+            z
+ρz3 = c16 ω. Since z3 > 0 we see that ρ is a polynomial.
+             We can assume without loss of generality that ω = ρz3 , ψ = ρz4 and that
+J(ρz3 , χ) = ρz4 . Since J(ρz3 , χ) = z3 ρz3 −1 J(ρ, χ) we have J(ρ, χ) = c2 ρz4 −z3 +1
+and J(ρ, c3 χρz3 −z4 −1 ) = 1. Hence we found a rational function σ = c3 χρz3 −z4 −1
+such that J(ρ, σ) = 1. For formulae we are going to obtain it is more convenient
+to take τ = ρσ with property J(ρ, τ ) = ρ.
+             Polynomial ρ and a rational function τ are α, β homogeneous and we can
+                                                                                  −β
+write ρ = xr p(z), τ = xt q(z) where r, t are rational numbers, z = x α y, and
+p ∈ C[z], q ∈ C(z).
+             If α = 0 then z = x, ρ = y r p(x), τ = y t q(x). We needn’t consider this
+304                                L. Makar-Limanov
+
+
+case separately because we can make a substitution x → −y, y → x.
+
+  J(ρ, τ )
+              β    β                β               β                   β  β
+= (rxr−1 p(z)− xr− α −1 yp0 (z))xt− α q 0 (z)−xr− α p0 (z)(txt−1 q(z)− xt− α −1 yq 0 (z))
+              α                                                         α
+                                            β              β
+                              r−1        t− α  0        r− α  0
+                       = rx p(z)x             q (z) − x      p (z)tx q(z) = xr p(z).
+                                                                    t−1
+
+
+                    β
+        Since t −     − 1 = 0 because w(τ ) = αt = w(x) + w(y) = α + β
+                    α
+(1)                                rpq 0 − tp0 q = p,
+
+where w(ρ) = αr and we have
+
+(2)                           w(ρ)pq 0 − w(τ )p0 q = αp.
+
+             q0        p0   α                        α
+Hence w(ρ)      − w(τ ) = and ln(q w(ρ) p−w(τ ) )0 = . Therefore
+             q         p     q                       q
+                                              Z     
+                            w(τ )    w(ρ)         α
+(3)                       p       =q      exp    − dz .
+                                                  q
+
+Since w(τ ) > 0 and w(ρ) > 0 a pole of q induces a pole of p in the same
+    Z Hence q ∈ C[z] and τ ∈ C[x, y]. All roots of q are simple
+point.                                                                 because
+           dz                                                      α X di
+exp                 is not an algebraic function if d > 1. If − =
+        (z − λ)d                                                   q    z − λi
+         Y                                                           i
+then p =    (z − λi )w(ρ)+di , i.e. all roots of p are roots of q.
+                                                                    −β
+         Thus if q = q1 z + q0 , q1 , q0 ∈ C∗ then τ = xt (q1 x α y + q0 ) ∈ C[x, y].
+                               β
+This is possible only if t,      ∈ Z. In this case fw = cxaf (y + q0 xbf )df or fw =
+                               α
+cy af (x + q0 y bf )df if α = 0 and q has one root. In both cases we can make an
+automorphism of C[x, y] which will make fw a monomial. X
+         Assume now that q has at least two roots. Then          di = 0 and p has a
+                                                                i
+root with multiplicity larger than w(ρ).
+       If α ≥ 0 and β ≥ 0 then there are four options for τ because w(τ ) = w(xy).
+They are
+1) τ = cxy; 2) τ = cx(y + c1 xl ), l ≥ 0; 3) τ = c(x + c1 y l )y, l ≥ 0;
+4) τ = c(x + c1 y)(y + c2 x).
+The corresponding fw are
+                    On the shape of a counterexample . . .                         305
+
+
+1) fw = cxi y j ; 2) fw = cxi (y + c1 xl )j ; 3) fw = c(x + c1 y l )i y j ;
+4) fw = c(x + c1 y)i (y + c2 x)j and i 6= j because J(fw , τ ) = 0 if i = j.
+        In the last three case we can make automorphisms of C[x, y] which will
+replace τ with cxy and fw with cxi y j .
+        Automorphisms in the case 2) and 3) decrees degx (f ) + degy (f ) if l > 0,
+so after several automorphisms changing the α, β leading forms we will get fk
+for which all α, β leading forms with α > 0, β > 0 are monomials, the case
+we mentioned in the beginning of this section. Once again, supp(fk ) contains a
+monomial xdx y dy , dx 6= dy where dx = degx (fk ), dy = degy (fk ).
+        From now on we will be looking at counterexamples where supp(f ) has
+such a monomial. Since we can make an automorphism x → y, y → −x we
+will also assume that dx = m < dy = n. Additionally, if w1,0 (f ) = xm p(y) we
+can make a substitution y → y − c such that the order of polynomial p(y − c)
+is larger than m because p(y) has a root with multiplicity larger than m, as was
+just mentioned above. Let us call such an f reduced.
+
+        Divisibility Lemma. The pairs of homogeneous polynomials ρ, τ
+which satisfy relation J(ρ, τ ) = ρ played very important role in our consider-
+ations. Pairs like this were researched by Dixmier (see [8]) in his seminal paper
+devoted to the first Weyl algebra. In this section we will find a restriction on
+such pairs.
+
+       Lemma on divisibility. If J(ρ, τ ) = ρ where ρ, τ are w homogeneous,
+w(ρ) > 0, w(τ ) > 0 and ρ is not a monomial then w(ρ) doesn’t divide w(τ ).
+        P r o o f. Since ρ is not monomial, τ is also not monomial (recall that if τ is
+a monomial then ρ is also a monomial). Because of that τ and ρ are algebraically
+                 w(τ )
+dependent. If          = k ∈ Z then we can find c ∈ C for which τ − cρk < τ . Since
+                 w(ρ)
+J(ρ, τ − cρk ) = ρ these implies that τ − cρk and ρ are algebraically dependent.
+But this is impossible since w(ρ) > 0. 2
+        Lemma on dependence. The leading 1, 1 forms of f and g are alge-
+braically dependent if f, g is a counterexample to JC. Indeed, if J(fw , gw ) 6= 0
+then J(fw , gw ) = 1. If J(fw , gw ) = 1 then supports of these forms contain x and
+y, say, supp(fw ) 3 x, supp(gw ) 3 y.
+         Since these forms are 1, 1 homogeneous fw = c1 x + c3 y, gw = c2 y + c4 x
+and f = c1 x + c3 y + c5 , g = c2 y + c4 x + c6 , certainly not a counterexample to JC
+and not a reduced f . But for other weights dependence is also true.
+306                               L. Makar-Limanov
+
+
+        Lemma on dependence. The leading α, β; α + β > 0 forms of f and
+g are algebraically dependent if a pair f, g is a counterexample to JC.
+
+          P r o o f. If these forms are independent then J(fw , gw ) = 1. Hence the
+supports of these forms must contain x and y, e.g. supp(fw ) 3 x, supp(gw ) 3 y.
+Since α > 0 or β > 0 this means that either degx (f (x, 0)) = 1 or degy (g(0, y)) = 1.
+          For the argument sake, assume that α > 0 and then f (x, 0) = f0 +
+f1,0 x. The form fw has the maximal weight in w decomposition of f . If β >
+0 then f = f (0, y) + f1,0 x and we do not have a counterexample because we
+can make an automorphism after which f will become f1,0 x. If β = 0 then
+f = f0 (y) + xf1 (y), g = g0 (y) and f1 (y)g0 (y)0 = 1 since J(f, g) = 1. Hence
+f1 (y) ∈ C∗ , degy (g) = 1, no counterexample again. So, β < 0 is the remaining
+case.
+          We have αi1 + βj1 = α, αi2 + βj2 = β if xi1 y j1 , xi2 y j2 are the leading
+monomials of fw and gw and i1 j2 − j1 i2 = 0 if supp(fw ) or supp(gw ) has more
+than one monomial. Since α(i1 − 1) + βj1 = 0, αi2 + β(j2 − 1) = 0 we have
+(i1 − 1)(j2 − 1) − j1 i2 = 0. Therefore 1 − i1 − j2 = 0 and either i1 = 1, j2 = 0 or
+i1 = 0, j2 = 1 and j1 i2 = 0.
+          If i1 = 1, j2 = 0 then i2 = 0 because otherwise αi2 > β and gw = g0,1 y
+since β < 0 and w(1) = 0. Also j1 = 0 since J(xy j1 , y) = y j1 and fw = f1,0 x.
+          If i1 = 0, j2 = 1 then j1 = 0 because otherwise βj1 < α and fw = f1,0 x
+since α > 0 and w(1) = 0. Also i2 = 0 since J(x, xi2 y) = xi2 and gw = g0,1 y.
+          Thus for an α, β weight where α > 0 > β we have fw = f1,0 x and
+gw = g0,1 y.
+          If f = f (0, y)+f1,0 x we don’t have a counterexample. So supp(f ) contains
+monomials xi y j , i > 0, j > 0. Among these monomials we can choose a monomial
+                                i1 − 1
+xi1 y j1 for which the ratio           is minimal. Then if we take α = j1 , β = 1 − i1
+                                  j1
+the leading form of f will contain monomials x and xi1 y j1 .
+          Since α > 0 > β the supp(g) doesn’t contain monomials xi , xi y with
+i > 0. Hence if supp(g) doesn’t contain monomials xi y j , i > 0, j > 1 then
+g = g(0, y) and we don’t have a counterexample because then fx gy = 1 and
+g = g0 +g0,1 y. We can choose in the supp(g) a monomial xi2 y j2 with i2 > 0, j2 > 1
+                         i2
+and minimal ratio             . Then if we take α = j2 − 1, β = −i2 the leading form
+                       j2 − 1
+of g will contain monomials y and xi2 y j2 .
+          Therefore for the weight which corresponds to the smaller ratio supp(f ) 3
+x, supp(g) 3 y and at least one of these supports contains another monomial.
+Since this is impossible, Lemma is proved. 2
+                      On the shape of a counterexample . . .                              307
+
+
+        Remark 3. We can see from this Lemma that g is reduced if f is reduced.
+        Remark 4. The proof of Lemma shows that degx (f (x, 0)) > 1. Indeed,
+assume that degx (f (x, 0)) = 1. Then we can find a polynomial p(t) ∈ C[t]
+such that g̃(x, 0) = 0 for g̃ = g − p(f ). Of course, J(f, g̃) = 1. We can write
+f = f0 + f1,0 x + f1 (x)y + . . . , g̃ = g̃1 (x)y + g̃2 (x)y 2 + . . . . Then 1 = f1,0 g̃10 and
+       −1
+g̃1 = f1,0 y. After that we can find two forms fw and g̃w such that supp(fw ) 3
+x, supp(g̃) 3 y and at least one of these supports contains another monomial.
+
+         Right edges and the left leading edge. Since f is reduced, i.e.
+for any α > 0, β > 0 leading form of f is xn y m , points of the Newton polygon
+N (f ) of f belong to the rectangle with vertices (0, 0), (m, 0), (m, n), (0, n).
+         There are two edges e0 and e1 with the vertex (m, n) not necessarily par-
+allel to the coordinate axes, extension of e0 intersects the y axis and extension of
+e1 intersects the x axis. We will call them left and right leading edges accordingly.
+         If w(f ) > 0 for a weight α, β > 0, α + β > 0, then we can use Dixmier
+formulae to find α, β homogeneous polynomial τ .
+         If e0 is horizontal and α = 0, β = 1 then fw = y n p(x), τ = yq(x) and
+fw = J(fw , τ ) = y n (p0 q − npq 0 ). That is p0 q − npq 0 = p. If p = p0 xm + · · · + pm
+and q = q0 xdq + · · · + qdq then the coefficient of p0 q − npq 0 with xm+dq −1 is
+p0 q0 (m − ndq ) 6= 0 since m < n. Hence m + dq − 1 = m and dq = 1. Thus q =
+                                                               nq0 + 1
+q0 x+q1 and (q0 x+q1 )p0 −nq0 p = p. Therefore ln(p)0 =                (x+q0−1 q1 )−1 , p =
+                                                                 q0
+                 nq0 +1
+                            nq0 + 1
+p0 (x + q0−1 q1 ) q0 , and             = m. After a substitution x → x − q0−1 q1 , y → y
+                               q0
+the polynomial p will become a monomial and e0 will collapse to a vertex.
+         So, the new left edge will be slanted and we will get new forms fw =
+                               −α
+y p(z), τ = y t q(z), z = xy β for the weights α < 0, β > 0, α + β > 0.
+ r
+
+         Here is equation (2) for these forms:
+                           (αm + βn)pq 0 − (α + β)p0 q = βp.
+The coefficient with z m+dq −1 is
+(αm + βn)dq − (α + β)m > (αm + βm)dq − (α + β)m = (α + β)m(dq − 1) > 0
+                                                                         −α
+if dq > 1. So, as above, dq = 1, q = q0 z + q1 and τ = y t (q0 xy β + q1 ) ∈ C[x, y].
+Since the leading monomial of fw is xm y n , the leading monomial of τ is xy, also
+                                                 −α                 −α
+q1 = 0 because otherwise t ∈ Z but since t +         = 1 and 0 <         < 1 this is
+                                                  β                  β
+impossible.
+        We can conclude that fw = xm y n . Therefore the left edge is not a vertex
+only if α + β ≤ 0. We cannot get rid of the case α + β = 0 using Dixmier formulae
+308                                  L. Makar-Limanov
+
+
+because J(y i p(xy), xy) = −iy i p(xy) and it will take us too far a field to prove
+that this edge also collapses to a vertex, so we just assume that e0 has slope
+larger than one. Interested reader can look this up at [7] or [17].
+        If w(f ) > 0 and α + β < 0 then τ is a rational function rather than a
+polynomial and it is not clear how to collapse e0 .
+
+           Newton polygons of f and g. The right leading edge e1 may end
+at the x axis and then there are no more right edges. If it doesn’t, there is the
+next right edge e2 and so on, until the edge ek which has a vertex on the x axis.
+From Remark 4 this vertex cannot be (1, 0).
+           The boundary of the Newton polygon N (f ) of f consists of right edges
+e1 , e2 , . . . , ek and left edges e0 , e−1 , . . . , e−l . Each of these edges contains the
+support of the leading form of f for the corresponding weight. Denote the weight
+which corresponds to ei by wi and fwi by fi .
+           The Newton polygon of g belongs to the rectangle similar to the rectangle
+                                                                 N
+containing N (f ) with the vertex (M, N ). If λ =                   we can assume that λ is
+                                                                 n
+neither integer nor the reciprocal of an integer: in the first case we can replace g
+by a polynomial with smaller total degree, in the second case we can replace f
+by a polynomial with smaller total degree.
+           Denote by E1 , . . . the right edges of N (g), and by E0 , . . . the left edges
+of N (g).
+        Lemma on similarity. If we add to Newton polygons of f and g the
+origin then the Newton polygon of g is homothetic to the Newton polygon of f
+with the coefficient λ.
+           P r o o f. Denote by gi the leading forms gwi . By Lemma on dependence
+J(fi , gi ) = 0. Denote by ξi the polynomial of minimal degree power of which is
+fi . Let us call ξi the maximal root of fi . The same considerations as in Dixmier
+formulae and the shape of supp(f ) show that fi = ξiai , gi = ci ξibi . It remains to
+                bi
+check that          = λ.
+                ai
+           It is clear for i = 0 and i = 1 because xM y N = (xm y n )λ and these are
+leading monomials of the corresponding forms. But then the smallest monomials
+of these forms satisfy the same relation and they are leading monomials for the
+forms supported by the next edges. Then we can apply this consideration to the
+next edges, etc. 2
+       We will be interested in the right edges which have at least one vertex
+above the bisectrix of the first quadrant. We will call this edges admissible.
+                      On the shape of a counterexample . . .                               309
+
+
+         Lemmas on leading forms.
+         Lemma on forms. For any p ∈ C[f, g] the form pi ∈ C[ξi , ξi−1 , τi ] if
+i > 0.
+       P r o o f. We will prove Lemma using induction on degree of ∂i = J(fi , −)
+which annihilates pi .
+       Base: We know that if ∂i (pi ) = 0 then ξi and pi are algebraically depen-
+                    d
+dent. Hence pi = cξi p because ξi is the maximal root of fi .
+                                     X j                   X 1 j−a
+       Step. By induction ∂i (pi ) =    ξi τik ; take qi =       ξ i τik+1 . Then
+                                                            k+1 i
+                                           j,k                      j,k
+∂i (pi − qi ) = 0 because fi = J(fi , τi ) = J(ξiai , τi ) = ξiai , and pi = qi + ci ξil where
+lwi (ξi ) = wi (p), provided l is an integer. 2
+       For p ∈ C[x, y] denote by p the smallest monomial of p in the w lexico-
+graphic order.
+       Lemma on dependence for admissible edges. If ei is an admissible
+edge and pi is dependent with fi then J(fj , pj ) = 0 for 0 < j < i.
+                                                          −1
+         P r o o f.      We know that pi−1 ∈ C[ξi−1 , ξi−1   , τi−1 ]. Hence (f d p)i−1 ∈
+C[ξi−1 , τi−1 ] if d is sufficiently large. Since ei is admissible, the degree vector of
+ξi−1 is above the bisectrix.
+         Next,
+                                                                  j
+                                              X
+                    (f d p)i−1 =                                 ξi−1  k
+                                                                      τi−1
+                               jwi−1 (ξi−1 )+kwi−1 (τi−1 )=wi−1 (f d p)
+
+                  j
+and (f d p)i−1 = ξi−1  k
+                      τi−1 for the summand with maximal k because τi−1 = xy and
+the degree vector of ξi−1 is above the bisectrix. Now, pi−1 = pi is dependent with
+                                                    µ        wi−1 (f d p)
+fi . Hence the maximal k is zero, (f d p)i−1 = cξi−1   , µ=               and pi−1 =
+                                                             wi−1 (ξi−1 )
+   µ−da                        ai−1
+cξi−1 i−1 because fi−1 = ξi−1       . After that we can apply this considerations to
+ei−2 and so on until e1 . 2
+                                     ν                             wi (p)
+         Remark 5. The form pi−1 = cfi−1 where ν =                         . Just like in Lemma
+                                                                   wi (f )
+on similarity pj = cfjν for all 0 < j < i.
+       By Lemma on independence we can find p for which pi is algebraically
+independent with fi . We can assume that pi = τi ξidi , because we can decrease
+degree of τi by taking Jacobians with f if necessary.
+310                                  L. Makar-Limanov
+
+
+         Monomials τi ξidi and fi are algebraically dependent. Hence by Lemma on
+dependence for admissible edges, pj and fj are algebraically dependent if j < i.
+                  wi (p)
+         If µi =          then pj = ci fjµi if j < i and fjµi is a polynomial. We want
+                 wi (f )
+                                                     wi (τi )
+to show that fjλi is a polynomial where λi =                  .
+                                                     wi (f )
+                                di +ai           νi                           wi (ξidi +ai )
+         Since J(f, pi )i = ξi         the form fj is a polynomial for νi =                  .
+                                                                               wi (ξiai )
+                            di
+                di          a
+Because νi =       + 1, fj i is also a polynomial if j ≤ i.
+                ai
+                      wi (τi ξidi )         di
+         Since µi =                 = λi +     we can conclude that fjλi is a polynomial
+                        wi (f )             ai
+if j < i.
+         Remark 6. By Lemma on divisibility fiλi is not a polynomial. Hence
+fiµi is not a polynomial though pj = ci fjµi for 0 < j < i.
+
+        Left leading edge e0 . Consider now the edge e0 , the corresponding
+weight w0 , and the leading form f0 . Recall that α < 0, β > 0, α + β < 0.
+By Lemma on independence there are polynomials in C[f, g] with the leading
+w0 form algebraically independent with f0 . We can choose among these forms
+a form χ such that J(f0 , χ) = f0a where a is minimal possible. For the admis-
+                         χi
+sible right edges τi = ai is a polynomial. This is not the case for the left
+                         fi
+edges. If the
+            Z corresponding
+                            q would be a polynomial then the rational function
+                α                                          α    X di
+q w(ρ) exp     − dz (see (3)) will have a root because − =                 and
+                 q                                         q        z − νi
+X                                                                 i
+     di = 0. But then p would have a pole in this point.
+ i
+        Nevertheless we can define the leading monomial of τ as the ratio of
+leading monomials of its numerator and denominator and the support of τ which
+may be infinite by presenting τ as a series: τ = τ s(z) where z = x−β y α .
+        Lemma on left edge. The leading monomials of f0 and τ are alge-
+braically independent.
+       P r o o f. The leading monomial of f0 is xm y n . Assume that τ = xi y j is
+algebraically dependent with xm y n . Then xi y j = (xm y n )µ where µ < 0 because
+αm + βn > 0 while αi + βj = α + β < 0, and supp(τ ) belongs to the ray
+µ(m, n) + t(−β, α), t ∈ R, t ≥ 0. But then J(f0 , τ ) < xm y n . 2
+                      On the shape of a counterexample . . .                              311
+
+
+       Remark 7. We can conclude that τ = xy. Therefore the same proof
+as in Lemma on dependence for admissible edges shows that if p0 and f0 are
+algebraically dependent then p0 and f0 are algebraically dependent. Hence f0λi is
+a polynomial for all λi corresponding to the admissible edges including e1 .
+
+         Conclusion. For a monomial µ denote by |µ| its degree vector and by
+v0 the vertex of N (f ) corresponding to f .
+         To finish we prove two Theorems.
+
+         Theorem 1. For a reduced f there are no counterexamples with degy (f ) =
+2 degx (f ) and vertical edge v1 .
+
+         P r o o f.  Suppose |f1 | = kh1, 2i. Since edges supporting f1 and τ1 are
+                                     1
+parallel |τ1 | = h1, 2i and λ1 = . Hence f0 = ξ0k and ξ0 = (xy 2 + cy i )k where
+                                     k
+i = 0 because i < 2 and i 6= 1, as we mentioned above. Hence i = 0. But then
+                                                                                0
+f (0, y) = c1 . If f = c1 + xf(1) (y) + . . . , g = g(1) (y) + . . . then f(1) g(1) = 1, g(1) =
+g0,0 + g0,1 y which is impossible (see Remark 4). 2
+
+                                                           k
+                                                                     !
+                                                           Y
+         Theorem 2. If f is reduced and v0 =                 pδi i
+                                                       (a, b) where all pi are
+                                                        X  i=1
+prime numbers and gcd(a, b) = 1 then N (f ) has at most      δi − 1 admissible
+                                                                         i
+edges.
+
+         P r o o f. Recall that fi = ξiai where ξi is the maximal root of fi . For
+                                                       b (h)
+some polynomials in C[f, g] the form hi = ch,i ξi i , ch,i ∈ C. We can write
+            bi (h)
+              a                               bi (h)
+hi = ch,i fi i and choose among fractions            one with the largest denominator
+                                                ai
+di after these fractions are written in the reduced form. It is a nice exercise to show
+        bi (h)                                                bi (H)
+that di          ∈ Z. If we take a polynomial H for which            has denominator
+          ai                                                     ai
+                                        bi (H)
+                                          ai
+di then by Remark 5 Hj = cH,i fj       for j, i ≥ j > 0. Therefore di−1 ≥ di .
+                                                          di−1
+Actually, it follows from Remark 6 that di−1 > di . Also,      ∈Z
+                                                           di
+       Now we can finish the proof. For the last admissible edge ds is at least
+                       degy (g)
+the denominator of λ =           which is a fraction. So ds is at least one of the
+                       degy (f )
+312                              L. Makar-Limanov
+
+
+pi ’s. Since d1 obtained from ds by multiplying it by s − 1Xfactors it has at least
+s factors and by Lemma on divisibility d1 has at most         δi − 1 factors, thus
+      X                                                    i
+s≤        δi − 1. 2
+      i
+
+
+
+
+                               REFERENCES
+
+ [1] S. S. Abhyankar. Lectures on expansion techniques in algebraic geometry.
+     Tata Inst. Fund. Res. Lectures on Math. and Phys., vol. 57. Bombay, Tata
+     Institute of Fundamental Research, 1977.
+
+ [2] S. S. Abhyankar. Some remarks on the Jacobian question. With notes
+     by Marius van der Put and William Heinzer. Updated by Avinash Sathaye.
+     Proc. Indian Acad. Sci. Math. Sci. 104, 3 (1994), 515–542.
+
+ [3] H. Appelgate, H. Onishi. The Jacobian conjecture in two variables. J.
+     Pure Appl. Algebra 37, 3 (1985), 215–227.
+
+ [4] W. Bartenwerfer. The Cremona problem in dimension 2. Arch. Math.
+     (Basel) 119, 1 (2022), 53–62.
+
+ [5] H. Bass, E. Connell, D. Wright. The Jacobian conjecture: reduction of
+     degree and formal expansion of the inverse. Bull. Amer. Math. Soc. (N.S.)
+     7, 2 (1982), 287–330.
+
+ [6] L. A. Campbell. A condition for a polynomial map to be invertible. Math.
+     Ann. 205 (1973), 243–248.
+
+ [7] P. Cassou-Noguès. Newton trees at infinity of algebraic curves. Affine al-
+     gebraic geometry. CRM Proc. Lecture Notes, vol. 54. Providence, RI, Amer.
+     Math. Soc., 2011, .1–19.
+
+ [8] J. Dixmier. Sur les algèbres de Weyl. Bull. Soc. Math. France 96 (1968),
+     209–242.
+
+ [9] W. Engel. Ein Satz über ganze Cremona-Transformationen der Ebene.
+     Math. Ann. 130 (1955), 11–19.
+
+[10] W. Gröbner. Sopra un teorema di B. Segre. Atti Accad. Naz. Lincei Rend.
+     Cl. Sci. Fis. Mat. Nat. (8) 31 (1961), 118–122.
+                   On the shape of a counterexample . . .                      313
+
+
+[11] I. M. Gelfand, A. A. Kirillov. Sur les corps liés aux algèbres envelop-
+     pantes des algebres de Lie. Inst. Hautes Études Sci. Publ. Math. No. 31
+     (1966), 5–19 (in French).
+[12] R. Heitmann. On the Jacobian conjecture. J. Pure Appl. Algebra 64, 1
+     (1990), 35–72.
+[13] A. Joseph. The Weyl algebra—semisimple and nilpotent elements. Amer.
+     J. Math. 97, 3 (1975), 597–615.
+[14] O.-H. Keller. Ganze Cremona-Transformationen. Monatsh. Math. Phys.
+     47, 1 (1939) 299–306.
+[15] J. Lang. Jacobian pairs. II. J. Pure Appl. Algebra 74, 1 (1991), 61–71.
+[16] T. Moh. On the Jacobian conjecture and the configuration of roots. J. Reine
+     Angew. Math. 340 (1983), 140–212.
+[17] L. Makar-Limanov. On the Newton polygon of a Jacobian mate. Auto-
+     morphisms in birational and affine geometry. Springer Proc. Math. Stat.,
+     vol. 79. Cham, Springer, 2014, 469–476.
+[18] J. H. McKay, S. Wang. A note on the Jacobian condition and two points
+     at infinity. Proc. Amer. Math. Soc. 111, 1 (1991), 35–43.
+[19] M. Nagata. Two-dimensional Jacobian conjecture. Algebra and topology
+     1988 (Taejǒn, 1988). Taejǒn, Korea Institute of Technology, Mathematics
+     Research Center, 1988, 77–98.
+[20] M. Nagata. Some remarks on the two-dimensional Jacobian conjecture.
+     Chinese J. Math. 17, 1 (1989), 1–7.
+[21] A. Nowicki, Y. Nakai. On Appelgate-Onishi’s lemmas. J. Pure Appl.
+     Algebra 51, 3 (1988), 305–310.
+[22] A. Nowicki, Y. Nakai. Correction to: “On Appelgate-Onishi’s lemmas”.
+     J. Pure Appl. Algebra 58, 1 (1989), 101.
+[23] M. Oka. On the boundary obstructions to the Jacobian problem. Kodai
+     Math. J. 6, 3 (1983), 419–433.
+[24] B. Segre. Corrispondenze di Möbius e trasformazioni cremoniane intere.
+     Atti Accad. Sci. Torino Cl. Sci. Fis. Mat. Natur. 91 (1956/57), 3–19 (in
+     Italian).
+314                             L. Makar-Limanov
+
+
+[25] B. Segre. Forme differenziali e loro integrali. Vol. II. Omologia, coomolo-
+     gia, corrispondenze ed integrali sulle varieta. Rome, Edizioni Universitarie
+     “Docet”, 1957 (in Italian).
+
+[26] B. Segre. Variazione continua ed omotopia in geometria algebrica. Ann.
+     Math. Pura Appl. (4) 50 (1960), 149–186 (in Italian).
+
+[27] S. Smale. Mathematical problems for the next century. Math. Intelligencer
+     20, 2 (1998), 7–15.
+
+[28] C. Valqui, J. Guccione, J. Guccione. On the shape of possible coun-
+     terexamples to the Jacobian conjecture. J. Algebra 471 (2017), 13–74.
+
+[29] A. Vitushkin. On polynomial transformation of C n . Manifolds—Tokyo,
+     1973 (Proceedings of the International Conference on Manifolds and Re-
+     lated Topics in Topology), Published for the Mathematical Society of Japan,
+     Tokyo, 1975, 415–417.
+
+[30] L.-C. Wang. On the Jacobian conjecture. Taiwanese J. Math. 9, 3 (2005),
+     421–431.
+
+
+Department of Mathematics
+Wayne State University
+Detroit, MI 48202, USA
+and
+Department of Mathematics & Computer Science
+the Weizmann Institute of Science
+Rehovot 76100, Israel
+e-mail: lml@wayne.edu
+
+
+                                                    Received August 12, 2025
+                                                    Accepted November 6, 2025
+

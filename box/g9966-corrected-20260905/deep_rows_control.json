@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "field": "Q",
+  "frozen_source_sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9",
+  "factored_vs_frozen_J": [
+    {
+      "t_power": 0,
+      "nonzero_rows": 0,
+      "all_match": true
+    },
+    {
+      "t_power": 1,
+      "nonzero_rows": 11,
+      "all_match": true
+    },
+    {
+      "t_power": 2,
+      "nonzero_rows": 10,
+      "all_match": true
+    },
+    {
+      "t_power": 3,
+      "nonzero_rows": 12,
+      "all_match": true
+    },
+    {
+      "t_power": 4,
+      "nonzero_rows": 10,
+      "all_match": true
+    },
+    {
+      "t_power": 5,
+      "nonzero_rows": 9,
+      "all_match": true
+    }
+  ],
+  "factored_vs_frozen_local": [
+    {
+      "branch": "delta2",
+      "polynomial": "F",
+      "all_match": true,
+      "rows": 6
+    },
+    {
+      "branch": "delta2",
+      "polynomial": "G",
+      "all_match": true,
+      "rows": 6
+    },
+    {
+      "branch": "delta52",
+      "polynomial": "F",
+      "all_match": true,
+      "rows": 1
+    },
+    {
+      "branch": "delta52",
+      "polynomial": "G",
+      "all_match": true,
+      "rows": 1
+    }
+  ],
+  "pure_power_J_zero": true,
+  "radical_root_certificates": [
+    {
+      "source_row": "square",
+      "new_row": "radical_of_square",
+      "factor": "x + y",
+      "power": 2,
+      "rational_unit": "3",
+      "identity_verified": true
+    },
+    {
+      "source_row": "cubic",
+      "new_row": "radical_of_cubic",
+      "factor": "x - y",
+      "power": 3,
+      "rational_unit": "2/3",
+      "identity_verified": true
+    }
+  ],
+  "distinct_factor_product_was_not_restricted": true
+}

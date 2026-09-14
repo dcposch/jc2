@@ -1,0 +1,610 @@
+{
+  "caller_scope": "two named repairs, generic Linux/Python only",
+  "corrections": [
+    "RUNS digest in sealed Sol prose/PINS has62hex; actual64hex explicitly charged",
+    "patch EOF two blank context lines omitted; exact source diff matches",
+    "helper alarm program102bytes, sealed producer prose107 is corrected by frozen sidecar"
+  ],
+  "helper_scope": "PREPARATION, six tiny tests only; different-model helper review and actual engine still required",
+  "pins": {
+    "box/d125-hybrid81-caller-repair-20260907/alarm-semantics.md": "a11183911c23292165732b7db2afb17919fb22505db55f8aea238616f0d761eb",
+    "box/d125-hybrid81-caller-repair-20260907/driver-two-bugs.patch": "5daab0735fd9fceb83acf6886a4364c3f533c7fb67dc88baea7885526a7ce2df",
+    "box/d125-hybrid81-caller-repair-20260907/driver.py": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+    "box/d125-hybrid81-caller-repair-20260907/exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+    "box/d125-hybrid81-caller-repair-20260907/hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+    "box/d125-hybrid81-caller-repair-20260907/test_caller.py": "53471683826c4fbc2e35440a08f9b062791c0eee2e8facb721e68bc3c2fad1f1",
+    "box/d125-hybrid81-caller-repair-20260907/timed_probe.py": "9c7508c39d3e56690e4398a0247adb48983fbe94165ad27ebbba3c30a7f8b635",
+    "box/d125-hybrid81-caller-repair-gate-sol56-20260907/PINS.json": "a0f457d3569d16393e2a410083f368901f67b9ea181654b8834bf997aae2067b",
+    "box/d125-hybrid81-caller-repair-gate-sol56-20260907/RUNS.json": "0a42d8b7a459cdcdcd78b744fc9708b1fa5b32ab6d0e62d26201fc90bcbeebfc",
+    "box/d125-hybrid81-caller-repair-gate-sol56-20260907/gate_checks.py": "6006db6bea500abc12182b33db07dd9e1ba6767f4f0bb6a8645ddb9c8799c816",
+    "box/d125-hybrid81-engine-prep-20260907/ERRATUM.md": "bd312311284fc9617533f349f90306940b4bd105272434ef3627b00b4822a3c1",
+    "box/d125-hybrid81-engine-prep-20260907/REGISTRATION.md": "364a5d8c57a967d6dc3467db13eb0b19ba6c7924a573dc5b3ea67da7eb6f1ee5",
+    "box/d125-hybrid81-engine-prep-20260907/custody.json": "d4d57ce782a4c4873a03fa97f8467f94468943700c6c0f2a6fd802fcedec017c",
+    "box/d125-hybrid81-engine-prep-20260907/engine.py": "a87debfce5ca01817c03c2b180fd514d8e45269b1173c6f4a562255883188ae5",
+    "box/d125-hybrid81-engine-prep-20260907/test-results.json": "3e89d4a8e43624c60ab810946fba110b9fd657dc91feacff13f0acf71885ab9c",
+    "box/d125-hybrid81-engine-prep-20260907/test_engine.py": "6bbd6499957e05ad02d180b9e2d61d80bbfe2666a68582f857f7d8569781818f",
+    "box/d125-hybrid81-engine-review-prep-20260907/HARVEST.md": "84746860d736e7bf5fcfd1ad565a68be1aa49b3e85d1059065c95a08a0d898e4",
+    "box/d125-hybrid81-engine-review-prep-20260907/PINS.json": "266758af5308b13f848578722bb5f87f4101813771c8ef514342f56c2b9b718e",
+    "box/d125-hybrid81-engine-review-prep-20260907/freeze.py": "119441ca0a4b1d84fa7d4b1a023544c7f2dbeb46b5da11e4e87005f848b73476",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/alarm-semantics.md": "a11183911c23292165732b7db2afb17919fb22505db55f8aea238616f0d761eb",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/d125-hybrid81-caller-repair-astra-20260907.md": "feb918be39485ad3bd2377397122787ea149c402333d9f477367e577bfeff256",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/d125-hybrid81-solver-gate-sol56-20260907.md": "b4198c3689e0d713eca6a1a7dfe95854f88bb48f45217b737adb29e03c4fcc46",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/driver-two-bugs.patch": "5daab0735fd9fceb83acf6886a4364c3f533c7fb67dc88baea7885526a7ce2df",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/driver.py": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/test_caller.py": "53471683826c4fbc2e35440a08f9b062791c0eee2e8facb721e68bc3c2fad1f1",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/timed_probe.py": "9c7508c39d3e56690e4398a0247adb48983fbe94165ad27ebbba3c30a7f8b635",
+    "box/d125-hybrid81-engine-review-prep-20260907/inputs/tiny-engine-fixture.jsonl": "d00df83bafddcd3436dad44034bdb1680d306f6d67f8bfa83d4b32de19961bbf",
+    "box/d125-hybrid81-engine-review-prep-20260907/normal.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "box/d125-hybrid81-engine-review-prep-20260907/normal.stdout": "b0d7267cec44d0978982112d381f1c4dca99ea80b3705b151245919a8d2acb7b",
+    "box/d125-hybrid81-engine-review-prep-20260907/optimized.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "box/d125-hybrid81-engine-review-prep-20260907/optimized.stdout": "59209eb03eef7f6e94ec7ab07fc71a95b5818c52accc3c3251fd8124ab0d3366",
+    "box/d125-hybrid81-engine-review-prep-20260907/prompt.txt": "e1f089be7279a7c2d9512e1843dfe54e685a03d4f8741ddc93502d6270da14ba",
+    "box/d125-hybrid81-engine-review-prep-20260907/replay-results.json": "cc3806e297c07e4bead652f225a17dda891e238a2802418e1d5614c9fce2c0fa",
+    "box/d125-hybrid81-engine-review-prep-20260907/replay_gate.py": "08edd3130f26da5da5d83459e4f338c6ea600bec7b87a4cc3c798a6e48ff0734",
+    "box/d125-hybrid81-engine-review-prep-20260907/run_replay.py": "489937873b7e76db64f7c7c57d756b69d4f0225e17164cd6b26a3072255291ee",
+    "box/d125-hybrid81-solver-gate-sol56-20260907/tiny-engine-fixture.jsonl": "d00df83bafddcd3436dad44034bdb1680d306f6d67f8bfa83d4b32de19961bbf",
+    "xmodel/d125-hybrid81-caller-repair-astra-20260907.md": "feb918be39485ad3bd2377397122787ea149c402333d9f477367e577bfeff256",
+    "xmodel/d125-hybrid81-caller-repair-gate-sol56-20260907.md": "46a6304811af423042f29d9a8f4c3022189d648286e7770d02ae59d478615fac",
+    "xmodel/d125-hybrid81-caller-repair-gate-sol56-20260907.run.v2": "ae5c9958d9ab02c1719bab24d762b46c89a003a6b1314f150aa5fbb7ea31c10b",
+    "xmodel/d125-hybrid81-engine-prep-astra-20260907.md": "481ba6521e86e7a5786e71b9f8e1ac266c483d56bfe9eba164bd59f468812fbf",
+    "xmodel/d125-hybrid81-solver-gate-sol56-20260907.md": "b4198c3689e0d713eca6a1a7dfe95854f88bb48f45217b737adb29e03c4fcc46"
+  },
+  "runs": [
+    {
+      "details": {
+        "bounds": {
+          "as_bytes": 536870912,
+          "cpu_seconds": 25,
+          "wall_seconds": 30
+        },
+        "derived_control": {
+          "bytes": 1072,
+          "engine_executed": false,
+          "rows": 7,
+          "sha256": "59295067207d4f17eb2acdbd4eac9d4755d16c94bfc36884e2f14d2731b9ad11",
+          "variables": 4
+        },
+        "engine_executed": false,
+        "frozen_sha256": {
+          "alarm-semantics.md": "a11183911c23292165732b7db2afb17919fb22505db55f8aea238616f0d761eb",
+          "d125-hybrid81-caller-repair-astra-20260907.md": "feb918be39485ad3bd2377397122787ea149c402333d9f477367e577bfeff256",
+          "d125-hybrid81-solver-gate-sol56-20260907.md": "b4198c3689e0d713eca6a1a7dfe95854f88bb48f45217b737adb29e03c4fcc46",
+          "driver-two-bugs.patch": "5daab0735fd9fceb83acf6886a4364c3f533c7fb67dc88baea7885526a7ce2df",
+          "driver.py": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+          "exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+          "hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+          "test_caller.py": "53471683826c4fbc2e35440a08f9b062791c0eee2e8facb721e68bc3c2fad1f1",
+          "timed_probe.py": "9c7508c39d3e56690e4398a0247adb48983fbe94165ad27ebbba3c30a7f8b635",
+          "tiny-engine-fixture.jsonl": "d00df83bafddcd3436dad44034bdb1680d306f6d67f8bfa83d4b32de19961bbf"
+        },
+        "metrics": {
+          "child_cpu_seconds": 0.431769,
+          "child_maxrss_kib": 27168,
+          "self_cpu_seconds": 0.05526500000000001,
+          "self_maxrss_kib": 27168,
+          "wall_seconds": 5.041506042005494
+        },
+        "outcome_count": 33,
+        "outcomes": [
+          "all_10_frozen_pins_match",
+          "new_driver_hash",
+          "reconstructed_old_driver_hash",
+          "whole_delta_matches_patch_edits_with_two_blank_eof_context_lines_restored",
+          "implementation_and_gate_have_no_ast_assert",
+          "arm_immediate_and_one_setitimer",
+          "old_mismatch_publishes_result",
+          "new_mismatch_has_no_result",
+          "new_match_publishes_exact_phase_and_postpin",
+          "old_accepts_phase_control",
+          "new_rejects_phase_control",
+          "old_accepts_phase_verify",
+          "new_rejects_phase_verify",
+          "old_accepts_phase_missing",
+          "new_rejects_phase_missing",
+          "old_accepts_postpin_wrong",
+          "new_rejects_postpin_wrong",
+          "old_accepts_postpin_empty",
+          "new_rejects_postpin_empty",
+          "old_accepts_postpin_extra",
+          "new_rejects_postpin_extra",
+          "old_accepts_postpin_missing",
+          "new_rejects_postpin_missing",
+          "new_accepts_exact_decision_phase_and_postpin",
+          "arm_sets_default_unblocks_and_uses_fresh_absolute_minimum",
+          "arm_preserves_smaller_phase_duration",
+          "expired_arm_rejects_without_zero_setitimer",
+          "old_parse_actual_timed_python_path",
+          "new_parse_actual_timed_python_path",
+          "old_exec_actual_timed_python_path",
+          "new_exec_actual_timed_python_path",
+          "tiny_control_footer_derived_in_memory_not_executed",
+          "all_frozen_pins_unchanged_after_controls"
+        ],
+        "patch_eof_context_completion_lines": 2,
+        "probes": [
+          {
+            "deadline_return_lag_seconds": 1.1810736656188965,
+            "events": [
+              {
+                "case": "parse",
+                "deadline": 1788765738.9133298,
+                "marker": "START",
+                "pgid": 784280,
+                "pid": 784280,
+                "utc": 1788765738.1633298,
+                "version": "old"
+              },
+              {
+                "marker": "PARSE_ENTER",
+                "timer": [
+                  0.0,
+                  0.0
+                ],
+                "utc": 1788765738.3671362
+              },
+              {
+                "marker": "PARSE_DONE",
+                "utc": 1788765739.2672505
+              },
+              {
+                "blocked": true,
+                "default": false,
+                "marker": "EXEC_ALIVE",
+                "pid": 784280,
+                "timer": [
+                  0.0,
+                  0.0
+                ],
+                "utc": 1788765739.290337
+              }
+            ],
+            "mode": "parse",
+            "returncode": 0,
+            "stderr": "",
+            "survived": true,
+            "version": "old"
+          },
+          {
+            "deadline_return_lag_seconds": 0.0016982555389404297,
+            "events": [
+              {
+                "case": "parse",
+                "deadline": 1788765740.9366395,
+                "marker": "START",
+                "pgid": 784317,
+                "pid": 784317,
+                "utc": 1788765740.1866395,
+                "version": "new"
+              },
+              {
+                "marker": "PARSE_ENTER",
+                "timer": [
+                  0.545969,
+                  0.0
+                ],
+                "utc": 1788765740.3906796
+              }
+            ],
+            "mode": "parse",
+            "returncode": -14,
+            "stderr": "",
+            "survived": false,
+            "version": "new"
+          },
+          {
+            "deadline_return_lag_seconds": 0.3808162212371826,
+            "events": [
+              {
+                "case": "exec",
+                "deadline": 1788765741.7799833,
+                "marker": "START",
+                "pgid": 784318,
+                "pid": 784318,
+                "utc": 1788765741.0299833,
+                "version": "old"
+              },
+              {
+                "marker": "PARSE_ENTER",
+                "timer": [
+                  0.0,
+                  0.0
+                ],
+                "utc": 1788765741.2338905
+              },
+              {
+                "marker": "PARSE_DONE",
+                "utc": 1788765741.3339937
+              },
+              {
+                "blocked": true,
+                "default": false,
+                "marker": "EXEC_ALIVE",
+                "pid": 784318,
+                "timer": [
+                  0.0,
+                  0.0
+                ],
+                "utc": 1788765741.3567715
+              }
+            ],
+            "mode": "exec",
+            "returncode": 0,
+            "stderr": "",
+            "survived": true,
+            "version": "old"
+          },
+          {
+            "deadline_return_lag_seconds": 0.0007464885711669922,
+            "events": [
+              {
+                "case": "exec",
+                "deadline": 1788765742.9995148,
+                "marker": "START",
+                "pgid": 784323,
+                "pid": 784323,
+                "utc": 1788765742.2495148,
+                "version": "new"
+              },
+              {
+                "marker": "PARSE_ENTER",
+                "timer": [
+                  0.546107,
+                  0.0
+                ],
+                "utc": 1788765742.4534163
+              },
+              {
+                "marker": "PARSE_DONE",
+                "utc": 1788765742.5535188
+              },
+              {
+                "blocked": false,
+                "default": true,
+                "marker": "EXEC_ALIVE",
+                "pid": 784323,
+                "timer": [
+                  0.42364,
+                  0.0
+                ],
+                "utc": 1788765742.575884
+              }
+            ],
+            "mode": "exec",
+            "returncode": -14,
+            "stderr": "",
+            "survived": false,
+            "version": "new"
+          }
+        ],
+        "python_optimize": 0,
+        "schema": "jc2.caller-repair-delta-gate-controls/v1",
+        "sections": [
+          {
+            "name": "frozen_and_delta",
+            "status": "PASS",
+            "wall_seconds": 0.020078675937838852
+          },
+          {
+            "name": "publication_order",
+            "status": "PASS",
+            "wall_seconds": 0.019859562045894563
+          },
+          {
+            "name": "receipt_binding",
+            "status": "PASS",
+            "wall_seconds": 0.0724724909523502
+          },
+          {
+            "name": "arm_unit_path",
+            "status": "PASS",
+            "wall_seconds": 0.001673555001616478
+          },
+          {
+            "name": "real_timer_paths",
+            "status": "PASS",
+            "wall_seconds": 4.926595451077446
+          },
+          {
+            "name": "control_derivation_without_engine",
+            "status": "PASS",
+            "wall_seconds": 0.0005096460226923227
+          }
+        ],
+        "status": "PASS"
+      },
+      "name": "caller",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "b9d00e86223e79b1f7757b547563eac2d77ae986efbddebf846d9739ec53b0c6"
+    },
+    {
+      "details": null,
+      "name": "helper",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "test_alarm_script_is_small_distinct_and_unexecuted (test_engine.EngineeringTests.test_alarm_script_is_small_distinct_and_unexecuted) ... ok\ntest_complete_indexed_replay_and_corruptions (test_engine.EngineeringTests.test_complete_indexed_replay_and_corruptions) ... ok\ntest_exact_fixture_control_footer (test_engine.EngineeringTests.test_exact_fixture_control_footer) ... ok\ntest_no_production_read_or_new_lifecycle (test_engine.EngineeringTests.test_no_production_read_or_new_lifecycle) ... ok\ntest_only_fixed_control_binding (test_engine.EngineeringTests.test_only_fixed_control_binding) ... ok\ntest_real_local_entry_rejects_before_write (test_engine.EngineeringTests.test_real_local_entry_rejects_before_write) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.007s\n\nOK\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "details": {
+        "bounds": {
+          "as_bytes": 536870912,
+          "cpu_seconds": 25,
+          "wall_seconds": 30
+        },
+        "derived_control": {
+          "bytes": 1072,
+          "engine_executed": false,
+          "rows": 7,
+          "sha256": "59295067207d4f17eb2acdbd4eac9d4755d16c94bfc36884e2f14d2731b9ad11",
+          "variables": 4
+        },
+        "engine_executed": false,
+        "frozen_sha256": {
+          "alarm-semantics.md": "a11183911c23292165732b7db2afb17919fb22505db55f8aea238616f0d761eb",
+          "d125-hybrid81-caller-repair-astra-20260907.md": "feb918be39485ad3bd2377397122787ea149c402333d9f477367e577bfeff256",
+          "d125-hybrid81-solver-gate-sol56-20260907.md": "b4198c3689e0d713eca6a1a7dfe95854f88bb48f45217b737adb29e03c4fcc46",
+          "driver-two-bugs.patch": "5daab0735fd9fceb83acf6886a4364c3f533c7fb67dc88baea7885526a7ce2df",
+          "driver.py": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+          "exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+          "hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+          "test_caller.py": "53471683826c4fbc2e35440a08f9b062791c0eee2e8facb721e68bc3c2fad1f1",
+          "timed_probe.py": "9c7508c39d3e56690e4398a0247adb48983fbe94165ad27ebbba3c30a7f8b635",
+          "tiny-engine-fixture.jsonl": "d00df83bafddcd3436dad44034bdb1680d306f6d67f8bfa83d4b32de19961bbf"
+        },
+        "metrics": {
+          "child_cpu_seconds": 1.946631,
+          "child_maxrss_kib": 30220,
+          "self_cpu_seconds": 0.055369999999999975,
+          "self_maxrss_kib": 30220,
+          "wall_seconds": 6.4905975490109995
+        },
+        "outcome_count": 33,
+        "outcomes": [
+          "all_10_frozen_pins_match",
+          "new_driver_hash",
+          "reconstructed_old_driver_hash",
+          "whole_delta_matches_patch_edits_with_two_blank_eof_context_lines_restored",
+          "implementation_and_gate_have_no_ast_assert",
+          "arm_immediate_and_one_setitimer",
+          "old_mismatch_publishes_result",
+          "new_mismatch_has_no_result",
+          "new_match_publishes_exact_phase_and_postpin",
+          "old_accepts_phase_control",
+          "new_rejects_phase_control",
+          "old_accepts_phase_verify",
+          "new_rejects_phase_verify",
+          "old_accepts_phase_missing",
+          "new_rejects_phase_missing",
+          "old_accepts_postpin_wrong",
+          "new_rejects_postpin_wrong",
+          "old_accepts_postpin_empty",
+          "new_rejects_postpin_empty",
+          "old_accepts_postpin_extra",
+          "new_rejects_postpin_extra",
+          "old_accepts_postpin_missing",
+          "new_rejects_postpin_missing",
+          "new_accepts_exact_decision_phase_and_postpin",
+          "arm_sets_default_unblocks_and_uses_fresh_absolute_minimum",
+          "arm_preserves_smaller_phase_duration",
+          "expired_arm_rejects_without_zero_setitimer",
+          "old_parse_actual_timed_python_path",
+          "new_parse_actual_timed_python_path",
+          "old_exec_actual_timed_python_path",
+          "new_exec_actual_timed_python_path",
+          "tiny_control_footer_derived_in_memory_not_executed",
+          "all_frozen_pins_unchanged_after_controls"
+        ],
+        "patch_eof_context_completion_lines": 2,
+        "probes": [
+          {
+            "deadline_return_lag_seconds": 1.2452480792999268,
+            "events": [
+              {
+                "case": "parse",
+                "deadline": 1788765744.8259509,
+                "marker": "START",
+                "pgid": 784328,
+                "pid": 784328,
+                "utc": 1788765744.0759509,
+                "version": "old"
+              },
+              {
+                "marker": "PARSE_ENTER",
+                "timer": [
+                  0.0,
+                  0.0
+                ],
+                "utc": 1788765744.2798066
+              },
+              {
+                "marker": "PARSE_DONE",
+                "utc": 1788765745.1799295
+              },
+              {
+                "blocked": true,
+                "default": false,
+                "marker": "EXEC_ALIVE",
+                "pid": 784328,
+                "timer": [
+                  0.0,
+                  0.0
+                ],
+                "utc": 1788765745.2663734
+              }
+            ],
+            "mode": "parse",
+            "returncode": 0,
+            "stderr": "",
+            "survived": true,
+            "version": "old"
+          },
+          {
+            "deadline_return_lag_seconds": 0.0016736984252929688,
+            "events": [
+              {
+                "case": "parse",
+                "deadline": 1788765747.2409477,
+                "marker": "START",
+                "pgid": 784331,
+                "pid": 784331,
+                "utc": 1788765746.4909477,
+                "version": "new"
+              },
+              {
+                "marker": "PARSE_ENTER",
+                "timer": [
+                  0.54609,
+                  0.0
+                ],
+                "utc": 1788765746.6948638
+              }
+            ],
+            "mode": "parse",
+            "returncode": -14,
+            "stderr": "",
+            "survived": false,
+            "version": "new"
+          },
+          {
+            "deadline_return_lag_seconds": 0.4436461925506592,
+            "events": [
+              {
+                "case": "exec",
+                "deadline": 1788765748.4147112,
+                "marker": "START",
+                "pgid": 784334,
+                "pid": 784334,
+                "utc": 1788765747.6647112,
+                "version": "old"
+              },
+              {
+                "marker": "PARSE_ENTER",
+                "timer": [
+                  0.0,
+                  0.0
+                ],
+                "utc": 1788765747.868614
+              },
+              {
+                "marker": "PARSE_DONE",
+                "utc": 1788765747.9687166
+              },
+              {
+                "blocked": true,
+                "default": false,
+                "marker": "EXEC_ALIVE",
+                "pid": 784334,
+                "timer": [
+                  0.0,
+                  0.0
+                ],
+                "utc": 1788765748.0536218
+              }
+            ],
+            "mode": "exec",
+            "returncode": 0,
+            "stderr": "",
+            "survived": true,
+            "version": "old"
+          },
+          {
+            "deadline_return_lag_seconds": 0.0009613037109375,
+            "events": [
+              {
+                "case": "exec",
+                "deadline": 1788765750.0302246,
+                "marker": "START",
+                "pgid": 784352,
+                "pid": 784352,
+                "utc": 1788765749.2802246,
+                "version": "new"
+              },
+              {
+                "marker": "PARSE_ENTER",
+                "timer": [
+                  0.546029,
+                  0.0
+                ],
+                "utc": 1788765749.4842017
+              },
+              {
+                "marker": "PARSE_DONE",
+                "utc": 1788765749.5843318
+              },
+              {
+                "blocked": false,
+                "default": true,
+                "marker": "EXEC_ALIVE",
+                "pid": 784352,
+                "timer": [
+                  0.360551,
+                  0.0
+                ],
+                "utc": 1788765749.6696804
+              }
+            ],
+            "mode": "exec",
+            "returncode": -14,
+            "stderr": "",
+            "survived": false,
+            "version": "new"
+          }
+        ],
+        "python_optimize": 1,
+        "schema": "jc2.caller-repair-delta-gate-controls/v1",
+        "sections": [
+          {
+            "name": "frozen_and_delta",
+            "status": "PASS",
+            "wall_seconds": 0.019998350995592773
+          },
+          {
+            "name": "publication_order",
+            "status": "PASS",
+            "wall_seconds": 0.017895804019644856
+          },
+          {
+            "name": "receipt_binding",
+            "status": "PASS",
+            "wall_seconds": 0.07138287194538862
+          },
+          {
+            "name": "arm_unit_path",
+            "status": "PASS",
+            "wall_seconds": 0.0016918800538405776
+          },
+          {
+            "name": "real_timer_paths",
+            "status": "PASS",
+            "wall_seconds": 6.3788146449951455
+          },
+          {
+            "name": "control_derivation_without_engine",
+            "status": "PASS",
+            "wall_seconds": 0.0005142079899087548
+          }
+        ],
+        "status": "PASS"
+      },
+      "name": "caller",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "3b3e3af1adb3a813fd069f054fa0e0a17488dab5ee071d32a2d25da3c6f82b88"
+    },
+    {
+      "details": null,
+      "name": "helper",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "test_alarm_script_is_small_distinct_and_unexecuted (test_engine.EngineeringTests.test_alarm_script_is_small_distinct_and_unexecuted) ... ok\ntest_complete_indexed_replay_and_corruptions (test_engine.EngineeringTests.test_complete_indexed_replay_and_corruptions) ... ok\ntest_exact_fixture_control_footer (test_engine.EngineeringTests.test_exact_fixture_control_footer) ... ok\ntest_no_production_read_or_new_lifecycle (test_engine.EngineeringTests.test_no_production_read_or_new_lifecycle) ... ok\ntest_only_fixed_control_binding (test_engine.EngineeringTests.test_only_fixed_control_binding) ... ok\ntest_real_local_entry_rejects_before_write (test_engine.EngineeringTests.test_real_local_entry_rejects_before_write) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.007s\n\nOK\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "seconds": 12.610550730954856,
+  "status": "PASS_SCOPED"
+}

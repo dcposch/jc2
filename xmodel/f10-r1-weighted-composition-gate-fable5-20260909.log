@@ -1,0 +1,12 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete. The report is at `xmodel/f10-r1-weighted-composition-gate-fable5-20260909.md`, finished at 18:37 UTC, eight minutes before the 18:45:00 UTC stop, with the unique standalone marker as the last line and nothing after it. No Seal or charge_basis line was authored. The owned box directory exists and is empty. The `.log` and `.run.v2` siblings are harness files, not mine.
+
+**Verdicts: A, B, C, D all CONFIRMED.** Every check was done by hand with no CAS or script.
+
+- **A.** The 17-slot inventory reduces to 11 exactly as stated. I re-derived the corrected third-band rule from the (1,7) pair and found the theta^6 row is the Euler determination of the constant term of B_4, so it forces V4=0. Both two-row transformations have unit determinant (+1 and −1), and c3 is free of ell and k1 for structural reasons. No circularity.
+- **B.** The scaled boundary formula, the s^7 determinant factor and every term of the target were recomputed. Both read-backs are constant coefficients, so the s^8 factors for x and y are right. Both compatibilities carry exactly s^10, matching the fourth producer's stated s-powers of Acol and Bcol. The monomial map into the Laurent ring is injective, so the resonance identities transfer.
+- **C.** All removed rows are identities or unit multiples of the retained compatibilities. The s-elimination is a ring isomorphism over any algebra with z a unit, with only z and H0 inverted.
+- **D.** Both cubic-cover directions and the reciprocal check verify exactly, including the unsquared target. The report correctly distinguishes algebraically closed equivalence from same-field bijection.
+
+**Remaining doubts are wording only.** Line 22 could say the theta^6 row forces V4=0, and section 5 could note that H1 = U s^5 is also inhomogeneous. The left inverses and unit determinants of the four bands were consumed as accepted gate premises, not re-derived. No OPENs were raised and the collision check is empty.
+DIVERT path=xmodel/f10-r1-weighted-composition-gate-fable5-20260909.md status=CLEAN body_bytes=13353 body_sha256=dc4f601ea661c73a23b5f138afbde11f71525dac0ad555e3160e6aea7c439d68

@@ -1,0 +1,166 @@
+{
+  "K": 8,
+  "census_row": "D=108 no-split (24,16;18;7;4), b=6",
+  "chart": {
+    "band_count": 11,
+    "denominator_lcm": 424320,
+    "file_sha256": "ed2460cd79403c52561a8a2844dc184e4f5ff299e5ffffc28ea343c01821c1d5",
+    "formula_controls": {
+      "K8_H3_REC3": "PASS_MOD_mu*mu_inv-1",
+      "PIN12_monic_relation_built_in": true,
+      "QUOY_IDENTITY": "PASS_BY_EXACT_DICTIONARY_DIVISION",
+      "REC1": "PASS_MOD_mu*mu_inv-1",
+      "REC2": "PASS_MOD_mu*mu_inv-1",
+      "RHO_Y_DEGREE_LT_K": 7,
+      "beta_scale_not_B_scale": true,
+      "mu_not_fixed": true,
+      "rho_degree_bound": 2,
+      "rho_matches_added_through_degree": 1,
+      "source_note": "/home/ubuntu/jc2/box/k4rayk89-20260903/structure-note.md"
+    },
+    "generator_union_checksum": "c6d13680a2e9b07335a713d899ca5e55705dc77cc0e63eeddae6507df6db348f",
+    "internal_chart_sha256": "18b8e06335228c359820f5dcc8afe07134c42b7cfd618df2d845460a0dae7de8",
+    "manifest": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/emitted_Q/bands-manifest.json",
+    "manifest_sha256": "0c98a9cc4f7c1a4770c8c7c695d529a7f49ee94372bded62f4eb00b5b0deab38",
+    "normalization": {
+      "CST": 1,
+      "mu_localizer": "mu*mu_inv-1",
+      "mu_set_to_one": false,
+      "top_beta": "mu*y^(K-3)*(y-x)"
+    },
+    "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/emitted_Q/explicit-chart.json",
+    "row_count": 61,
+    "stage_row_counts": {
+      "jacobian": 0,
+      "rho": 51,
+      "terminal": 10
+    },
+    "variable_count": 36
+  },
+  "controls": {
+    "all_runs_clean_unit": true,
+    "all_script_stdout_stderr_hashes_recomputed": true,
+    "exact_q_confirmation_present": true,
+    "modular_promotion_forbidden": true,
+    "staged_hash_row_union_checks_replayed": true
+  },
+  "decision": "DEAD",
+  "exact_q": {
+    "basis_size": 1,
+    "characteristic": 0,
+    "dimension": -1,
+    "elapsed_seconds": 0.115332,
+    "files": {
+      "script": {
+        "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/exact/rho/K8_single_rho_p0_Q.sing",
+        "sha256": "275c07e900f67e1b2630e72460843b3d8b0c6b7b7a2497a81132aba7646b9216"
+      },
+      "stderr": {
+        "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/exact/rho/K8_single_rho_p0_Q.err",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/exact/rho/K8_single_rho_p0_Q.out",
+        "sha256": "790b8b2e4a429e4cca3aa2ad03a30fe447b1f5d614e85f408abb1818f3515b33"
+      }
+    },
+    "guided_result": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/exact/rho/guided_gb_result.json",
+    "guided_result_sha256": "5214b8c67312aa05aa21024ea7b4cd77a5380d52951e28001ebfdcc7ed36186e",
+    "nf_all_zero": true,
+    "per_run_certificate": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/exact/rho/K8_single_rho_p0_Q.guided.json",
+    "per_run_certificate_sha256": "791cfe4e9095d40bbe760aefac0d01d17e8ada0c5730a6ff9153d56b9366360d",
+    "verdict": "UNIT_IDEAL_CHAR0"
+  },
+  "fallacy_v2": {
+    "modular_unit": "F_p-only; the promotion uses the exact-Q unit",
+    "posdim": "not invoked"
+  },
+  "implication": "a unit necessary subsystem is empty, hence the full localized chart is empty",
+  "modular_chain": [
+    {
+      "basis_size": 1,
+      "characteristic": 32003,
+      "dimension": -1,
+      "elapsed_seconds": 0.114422,
+      "files": {
+        "script": {
+          "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32003/K8_single_rho_p32003_p32003.sing",
+          "sha256": "002dff18e856413c49d48546a207acc9540ab308055c5b0466f370918d084f0f"
+        },
+        "stderr": {
+          "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32003/K8_single_rho_p32003_p32003.err",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32003/K8_single_rho_p32003_p32003.out",
+          "sha256": "790b8b2e4a429e4cca3aa2ad03a30fe447b1f5d614e85f408abb1818f3515b33"
+        }
+      },
+      "guided_result": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32003/guided_gb_result.json",
+      "guided_result_sha256": "195b68fc8ee992bdb122fdd35654e1b8028d402725cca4056856ef66a316f93d",
+      "nf_all_zero": true,
+      "per_run_certificate": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32003/K8_single_rho_p32003_p32003.guided.json",
+      "per_run_certificate_sha256": "3133adbe2623a14ac2de6670243b75b36d4b9be254694a7bb10bbc6d241cdb64",
+      "verdict": "MODULAR_ONLY"
+    },
+    {
+      "basis_size": 1,
+      "characteristic": 32009,
+      "dimension": -1,
+      "elapsed_seconds": 0.114102,
+      "files": {
+        "script": {
+          "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32009/K8_single_rho_p32009_p32009.sing",
+          "sha256": "90d1da72731c63787c6c5542e4784385cec11632aea9a13be1d7f24684f1c07d"
+        },
+        "stderr": {
+          "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32009/K8_single_rho_p32009_p32009.err",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32009/K8_single_rho_p32009_p32009.out",
+          "sha256": "790b8b2e4a429e4cca3aa2ad03a30fe447b1f5d614e85f408abb1818f3515b33"
+        }
+      },
+      "guided_result": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32009/guided_gb_result.json",
+      "guided_result_sha256": "f1dc364a6e84b3a1ace56fe647180aba12b52cea1aed8437cc46df1dbc02e144",
+      "nf_all_zero": true,
+      "per_run_certificate": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32009/K8_single_rho_p32009_p32009.guided.json",
+      "per_run_certificate_sha256": "4b7bb0ab312e6314eb87310cb0175b4ae983c0581e55a234ee04dcfc982876aa",
+      "verdict": "MODULAR_ONLY"
+    },
+    {
+      "basis_size": 1,
+      "characteristic": 32027,
+      "dimension": -1,
+      "elapsed_seconds": 0.114111,
+      "files": {
+        "script": {
+          "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32027/K8_single_rho_p32027_p32027.sing",
+          "sha256": "47026ea4672d722e54910dcb1c4703e837079ee5c5b3ba7b98127e829e16ce03"
+        },
+        "stderr": {
+          "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32027/K8_single_rho_p32027_p32027.err",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "path": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32027/K8_single_rho_p32027_p32027.out",
+          "sha256": "790b8b2e4a429e4cca3aa2ad03a30fe447b1f5d614e85f408abb1818f3515b33"
+        }
+      },
+      "guided_result": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32027/guided_gb_result.json",
+      "guided_result_sha256": "91d7032f3ae99c2bad6cef2c32c53aef86b3985230fe39d0b08c2d864432517b",
+      "nf_all_zero": true,
+      "per_run_certificate": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/modular/rho/p32027/K8_single_rho_p32027_p32027.guided.json",
+      "per_run_certificate_sha256": "a4b5c93504428eeb1de43e7584689a6b8c6bed65253c25f08f0001a65ccba3c8",
+      "verdict": "MODULAR_ONLY"
+    }
+  ],
+  "notify_worthy": false,
+  "promotion": "K=8 D=108 no-split DEAD; D=108 CLOSED at skeleton level",
+  "scope": "terminal recurrence plus exact actual-rho positive-band necessary subsystem",
+  "source_summary": "/home/ubuntu/jc2/box/k4rayk89-20260903/explicit-runs/k8-rho-3prime-exact/summary.json",
+  "source_summary_sha256": "574c8b915fb43f9b86cfd22a9a9eb873a2c1f0bea4e24f230f5b26ebcd32fa31",
+  "type": "K4RAY-K8-D108-NOSPLIT-AUTHORITATIVE",
+  "verdict": "UNIT_IDEAL_CHAR0"
+}

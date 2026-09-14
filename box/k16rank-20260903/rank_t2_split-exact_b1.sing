@@ -1,0 +1,88 @@
+print("RANKDRIVER t=2 mode=split-exact prime=None branch=1");
+print("RING S_t: vars b4,b3 weights 1,3");
+ring S=0,(b4,b3),wp(1,3);
+number yy=2/5;
+option(redSB);
+poly T3=675939222/14870583025*b4^6-34944/3048625*b3*b4^3-28/625*b3^2;
+poly T2=-76780386/2974116605*b4^7+115776/17682025*b3*b4^4-252/3625*b3^2*b4;
+int r; intvec b3wt=0,1;
+poly c0=subst(T3,b3,0);
+poly b0=subst(diff(T3,b3),b3,0);
+poly a0=subst(diff(diff(T3,b3),b3),b3,0)/2;
+if (T3-(a0*b3^2+b0*b3+c0)!=0) { print("FAIL b3-split r=0"); }
+print("STRUCT r=0 k=3: wt(T)="+string(deg(T3))+" homog="+string(homog(T3))+" deg_b3="+string(deg(T3,b3wt)));
+print("  a0: wt="+string(deg(a0))+" size="+string(size(a0))+" homog="+string(homog(a0)));
+print("  b0: wt="+string(deg(b0))+" size="+string(size(b0))+" homog="+string(homog(b0)));
+print("  c0: wt="+string(deg(c0))+" size="+string(size(c0))+" homog="+string(homog(c0)));
+poly c1=subst(T2,b3,0);
+poly b1=subst(diff(T2,b3),b3,0);
+poly a1=subst(diff(diff(T2,b3),b3),b3,0)/2;
+if (T2-(a1*b3^2+b1*b3+c1)!=0) { print("FAIL b3-split r=1"); }
+print("STRUCT r=1 k=2: wt(T)="+string(deg(T2))+" homog="+string(homog(T2))+" deg_b3="+string(deg(T2,b3wt)));
+print("  a1: wt="+string(deg(a1))+" size="+string(size(a1))+" homog="+string(homog(a1)));
+print("  b1: wt="+string(deg(b1))+" size="+string(size(b1))+" homog="+string(homog(b1)));
+print("  c1: wt="+string(deg(c1))+" size="+string(size(c1))+" homog="+string(homog(c1)));
+print("A0VALUE: "+string(a0));
+if (a0==0) { print("A0_ZERO: split unavailable (a0=0)"); }
+poly B1=a0*b1-a1*b0;
+poly C1=a0*c1-a1*c0;
+poly G1=B1*b3+C1;
+if (G1-(a0*T2-a1*T3)!=0) { print("FAIL G-identity r=1"); }
+poly W1=a0*C1^2-b0*B1*C1+c0*B1^2;
+if (W1-(B1^2*T3-G1*(a0*G1-2*a0*C1+b0*B1))!=0) { print("FAIL eliminant certificate r=1"); }
+print("SPLIT r=1: B1 wt="+string(deg(B1))+" size="+string(size(B1))+" homog="+string(homog(B1))+" lead="+string(leadmonom(B1))+" | C1 wt="+string(deg(C1))+" size="+string(size(C1))+" homog="+string(homog(C1))+" lead="+string(leadmonom(C1))+" | W1 wt="+string(deg(W1))+" size="+string(size(W1))+" homog="+string(homog(W1)));
+print("AXIS b0 on b4-axis: "+string(subst(b0,b3,0)));
+print("AXIS c0 on b4-axis: "+string(subst(c0,b3,0)));
+print("AXIS b1 on b4-axis: "+string(subst(b1,b3,0)));
+print("AXIS c1 on b4-axis: "+string(subst(c1,b3,0)));
+print("AXIS B1 on b4-axis: "+string(subst(B1,b3,0)));
+print("AXIS C1 on b4-axis: "+string(subst(C1,b3,0)));
+print("RING P_t: vars b4 weights 1");
+ring P=0,(b4),wp(1);
+number yy=2/5;
+option(redSB);
+poly B1=imap(S,B1);
+poly C1=imap(S,C1);
+poly W1=imap(S,W1);
+poly a0=imap(S,a0); poly b0=imap(S,b0); poly c0=imap(S,c0);
+ideal Bs=B1;
+ideal Cs=C1;
+ideal Ws=W1;
+ideal BC=Bs+Cs;
+int tm=timer;
+ideal gBC=std(BC);
+print("PARTI (B,C): dim="+string(dim(gBC))+" vdim="+string(vdim(gBC))+" gbsize="+string(size(gBC))+" time="+string(timer-tm));
+ideal gB=std(Bs);
+print("PARTI (B) alone: dim="+string(dim(gB))+" vdim="+string(vdim(gB)));
+ideal gC=std(Cs);
+print("PARTI (C) alone: dim="+string(dim(gC))+" vdim="+string(vdim(gC)));
+int iv; poly lm; ideal LBC=lead(gBC);
+for (iv=1; iv<=nvars(P); iv++) { int e; int found=0; for (e=1; e<=200; e++) { if (reduce(var(iv)^e,gBC)==0) { found=e; break; } } print("PARTI purepower "+string(var(iv))+"^"+string(found)+" in (B,C)"); kill e; kill found; }
+matrix N[1][2]=C1,B1;
+ideal I2=minor(N,2);
+int tm2=timer;
+ideal gI2=std(I2);
+print("CURVE I2=minors(N,2): ngens="+string(size(I2))+" dim="+string(dim(gI2))+" mult="+string(mult(gI2))+" gbsize="+string(size(gI2))+" time="+string(timer-tm2));
+ideal gI2W=std(I2+Ws);
+print("CURVE I2+(W): dim="+string(dim(gI2W))+" vdim="+string(vdim(gI2W)));
+ideal Xs=0;
+ideal Fitt=I2+Ws+Xs;
+ideal gF=std(Fitt);
+print("CURVE Fitting F=I2+(W)+(X): dim="+string(dim(gF))+" vdim="+string(vdim(gF))+" gbsize="+string(size(gF)));
+ideal gW=std(Ws);
+print("CURVE (W) alone: dim="+string(dim(gW))+" vdim="+string(vdim(gW)));
+intvec wv=1;
+print("CURVE hilb(P/I2) weighted numerator:"); hilb(gI2,1,wv);
+print("CURVE hilb(P/(B,C)) weighted numerator:"); if (defined(gBC)) { hilb(gBC,1,wv); }
+setring S;
+ideal Jt=T2,T3;
+int tm3=timer; ideal gJ=std(Jt);
+print("JTAIL: dim="+string(dim(gJ))+" vdim="+string(vdim(gJ))+" time="+string(timer-tm3));
+setring P;
+print("DUMP B1 = "+string(B1));
+print("DUMP C1 = "+string(C1));
+print("DUMP a0 = "+string(a0));
+print("DUMP b0 = "+string(b0));
+print("DUMP c0 = "+string(c0));
+print("RANKDRIVER_DONE");
+quit;

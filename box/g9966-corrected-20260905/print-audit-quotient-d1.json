@@ -1,0 +1,263 @@
+{
+  "actual_both_conjugate_controls": true,
+  "audit_sha256": "35529880c0c4c740a6a54dd2594639239e74c1f4ccaad82e229fcfaaf42ead87",
+  "negative_coefficient_splitting": {
+    "combined_ideal_nonunit": true,
+    "combined_row": "d-1",
+    "other_conjugate_dminus1_e1_row": -2,
+    "point_d1_e1_satisfies": true,
+    "q": "d^2-e",
+    "split_coefficients_ideal_unit": true
+  },
+  "normal_form": "sum c_n*d^n -> combined A+B*d in Q[other_coordinates,e][d]/(q); never emit module coefficients as separate equations",
+  "normal_form_proof": "Monic Euclidean division uses no parameter inversion. Each row-minus-normalform is a multiple of retained q, so adjoining either row gives the identical ideal with q. Derivatives in t,w commute since q has coefficients only in parameter coordinates.",
+  "q_discriminant": "-1/1400846643",
+  "records": [
+    {
+      "active_ring_dimension_after": 2,
+      "active_ring_dimension_before": 2,
+      "branch": "delta2",
+      "custody": {
+        "deep_quotient_seed_control_delta2.json": "ce7408e6741463725566716dacdc308a6fac867069829b22afc66199c1455e1b",
+        "deep_resume_graph_safe_delta2_D1_J.sing.out": "f4b79e9aa40753cd3fbe1ee8087abcc27e29e47711f93cf309c99340eea4188f",
+        "deep_resume_graph_safe_delta2_D1_J_phase.json": "f36e8b96cb8e94d02055226e351d534fa42c58a505c6e8391be897f2196de244",
+        "print-audit-quotient-d1-delta2.sing": "aff56e7dfbddaafee17c3e96fb00b269c779f725641e0ce4d8941b14645bcbca"
+      },
+      "derived_graph_map": {
+        "Zface_B2_1": "1489*Zface_H2_2**2*Zface_H2_5/32148900 - 37*Zface_H2_2*Zface_H2_5**3/46873096200 - Zface_H2_5**5/39051985291200",
+        "Zface_B2_4": "Zface_H2_2**2/6 + 5*Zface_H2_2*Zface_H2_5**2/61236 - Zface_H2_5**4/357128352",
+        "Zface_B2_7": "40*Zface_H2_2*Zface_H2_5/49 - Zface_H2_5**3/35721"
+      },
+      "field": "Q",
+      "independent_graph_pivots": [
+        {
+          "GB_index": 4,
+          "equation_after_prior_graph": "35721*Zface_B2_7 - 29160*Zface_H2_2*Zface_H2_5 + Zface_H2_5**3",
+          "rational_leader": "35721",
+          "rhs": "40*Zface_H2_2*Zface_H2_5/49 - Zface_H2_5**3/35721",
+          "variable": "Zface_B2_7"
+        },
+        {
+          "GB_index": 1,
+          "equation_after_prior_graph": "-69984*Zface_B2_4 + 11664*Zface_H2_2**2 + 40*Zface_H2_2*Zface_H2_5**2/7 - Zface_H2_5**4/5103",
+          "rational_leader": "-69984",
+          "rhs": "Zface_H2_2**2/6 + 5*Zface_H2_2*Zface_H2_5**2/61236 - Zface_H2_5**4/357128352",
+          "variable": "Zface_B2_4"
+        },
+        {
+          "GB_index": 2,
+          "equation_after_prior_graph": "-109350*Zface_B2_1 + 1489*Zface_H2_2**2*Zface_H2_5/294 - 37*Zface_H2_2*Zface_H2_5**3/428652 - Zface_H2_5**5/357128352",
+          "rational_leader": "-109350",
+          "rhs": "1489*Zface_H2_2**2*Zface_H2_5/32148900 - 37*Zface_H2_2*Zface_H2_5**3/46873096200 - Zface_H2_5**5/39051985291200",
+          "variable": "Zface_B2_1"
+        }
+      ],
+      "localized_wrapper": "Zrho*rho - 1",
+      "model_generators": [
+        "Zface_B2_7 - 40*Zface_H2_2*Zface_H2_5/49 + Zface_H2_5**3/35721",
+        "Zface_B2_4 - Zface_H2_2**2/6 - 5*Zface_H2_2*Zface_H2_5**2/61236 + Zface_H2_5**4/357128352",
+        "Zface_B2_1 - 1489*Zface_H2_2**2*Zface_H2_5/32148900 + 37*Zface_H2_2*Zface_H2_5**3/46873096200 + Zface_H2_5**5/39051985291200",
+        "Zface_H2_2**2 - 283*Zface_H2_2*Zface_H2_5**2/3500658 + 37*Zface_H2_5**4/20415837456",
+        "-9707329957*ZJ*Zface_H2_2*Zface_H2_5**11/2217760128800376206943373535070592611361344 + 899024633*ZJ*Zface_H2_5**13/19400965606745691058340631684797544164189037312 - 1",
+        "Zrho*rho - 1"
+      ],
+      "original_D1_rows": [
+        [
+          "D1_J_face_Pi3",
+          "-Zface_B2_1**2*Zface_H2_2/2 + Zface_B2_1*Zface_B2_4*Zface_B2_7/8748 + Zface_B2_1*Zface_B2_7**2*Zface_H2_5/344373768 + Zface_B2_1*Zface_B2_7*Zface_H2_2**2/6561 + Zface_B2_4**3/13122 - Zface_B2_4**2*Zface_B2_7*Zface_H2_5/43046721 + Zface_B2_4**2*Zface_H2_2**2/13122 - Zface_B2_4*Zface_B2_7**2*Zface_H2_2/86093442 + Zface_B2_4*Zface_B2_7**2*Zface_H2_5**2/564859072962 - Zface_B2_4*Zface_B2_7*Zface_H2_2**2*Zface_H2_5/43046721 - Zface_B2_7**2*Zface_H2_2**3/86093442 + Zface_B2_7**2*Zface_H2_2**2*Zface_H2_5**2/564859072962"
+        ],
+        [
+          "D1_J_face_Pi6",
+          "-3*Zface_B2_1**2*Zface_H2_5/2 - Zface_B2_1*Zface_B2_4*Zface_H2_2/2 + 11*Zface_B2_1*Zface_B2_7**2/52488 + 7*Zface_B2_1*Zface_B2_7*Zface_H2_2*Zface_H2_5/13122 + 11*Zface_B2_4**2*Zface_B2_7/52488 + 7*Zface_B2_4**2*Zface_H2_2*Zface_H2_5/26244 - 2*Zface_B2_4*Zface_B2_7**2*Zface_H2_5/43046721 + Zface_B2_4*Zface_B2_7*Zface_H2_2**2/13122 - 7*Zface_B2_4*Zface_B2_7*Zface_H2_2*Zface_H2_5**2/86093442 - 7*Zface_B2_7**3*Zface_H2_2/344373768 + 7*Zface_B2_7**3*Zface_H2_5**2/2259436291848 - 2*Zface_B2_7**2*Zface_H2_2**2*Zface_H2_5/43046721 + 7*Zface_B2_7**2*Zface_H2_2*Zface_H2_5**3/1129718145924"
+        ],
+        [
+          "D1_J_face_Pi9",
+          "-32805*Zface_B2_1**2/2 - 5*Zface_B2_1*Zface_B2_4*Zface_H2_5/2 + 5*Zface_B2_1*Zface_B2_7*Zface_H2_2 + 5*Zface_B2_1*Zface_B2_7*Zface_H2_5**2/13122 + 5*Zface_B2_4**2*Zface_H2_2/2 + 5*Zface_B2_4**2*Zface_H2_5**2/26244 + 5*Zface_B2_4*Zface_B2_7**2/26244 - 5*Zface_B2_4*Zface_B2_7*Zface_H2_2*Zface_H2_5/13122 - 5*Zface_B2_4*Zface_B2_7*Zface_H2_5**3/86093442 - 5*Zface_B2_7**3*Zface_H2_5/344373768 - 5*Zface_B2_7**2*Zface_H2_2**2/13122 + 5*Zface_B2_7**2*Zface_H2_5**4/1129718145924"
+        ],
+        [
+          "D1_J_face_Pi12",
+          "-59049*Zface_B2_1*Zface_B2_4/2 + 9*Zface_B2_1*Zface_B2_7*Zface_H2_5/2 + 9*Zface_B2_4**2*Zface_H2_5/4 + 9*Zface_B2_4*Zface_B2_7*Zface_H2_2/2 - Zface_B2_4*Zface_B2_7*Zface_H2_5**2/1458 + Zface_B2_7**3/17496 - Zface_B2_7**2*Zface_H2_2*Zface_H2_5/1458 + Zface_B2_7**2*Zface_H2_5**3/19131876"
+        ],
+        [
+          "gauge_J_nonzero_wrapper",
+          "ZJ*Zface_B2_1**2*Zface_B2_7/26244 + ZJ*Zface_B2_1*Zface_B2_4**2/52488 - ZJ*Zface_B2_1*Zface_B2_4*Zface_B2_7*Zface_H2_5/172186884 - ZJ*Zface_B2_1*Zface_B2_7**2*Zface_H2_2/344373768 + ZJ*Zface_B2_1*Zface_B2_7**2*Zface_H2_5**2/2259436291848 - 1"
+        ]
+      ],
+      "original_ideal_equals_graph_quadratic_inverse_model_both_inclusions": true,
+      "original_ideal_equals_stored_GB_both_inclusions": true,
+      "quadratic_monic_leader_divisor": "-9501786",
+      "quadratic_source_GB_index": 5,
+      "quadratic_source_after_graph": "-9501786*Zface_H2_2**2 + 5377*Zface_H2_2*Zface_H2_5**2/7 - 703*Zface_H2_5**4/40824",
+      "quotient": {
+        "a": "283/3500658",
+        "b": "37/20415837456",
+        "d": "Zface_H2_2",
+        "e": "Zface_H2_5",
+        "polynomial": "Zface_H2_2**2 - 283*Zface_H2_2*Zface_H2_5**2/3500658 + 37*Zface_H2_5**4/20415837456"
+      },
+      "remaining_combined_nonzero_J_relation": "-9707329957*ZJ*Zface_H2_2*Zface_H2_5**11/2217760128800376206943373535070592611361344 + 899024633*ZJ*Zface_H2_5**13/19400965606745691058340631684797544164189037312 - 1",
+      "ring_generator_order": [
+        "ZJ",
+        "Zface_B2_1",
+        "Zface_B2_4",
+        "Zface_B2_7",
+        "Zface_H2_2",
+        "Zface_H2_5",
+        "Zrho",
+        "rho"
+      ],
+      "same_as_production_adjoin_seed": true
+    },
+    {
+      "active_ring_dimension_after": 2,
+      "active_ring_dimension_before": 2,
+      "branch": "delta52",
+      "custody": {
+        "deep_quotient_seed_control_delta52.json": "887192bf4571375267152740b3e47a6d98f578ac79d8e1d8ee4b5ea5ca14627b",
+        "deep_resume_graph_safe_delta52_D1_J.sing.out": "e5ccb741d7aaea1e45bdb4ca4213c9bdf633d15ff73ec70b4965cbdccaf65984",
+        "deep_resume_graph_safe_delta52_D1_J_phase.json": "2e771bbc09030afd091905587c53aea900416691509e8dc9a7612eb6fce3d276",
+        "print-audit-quotient-d1-delta52.sing": "ad9b93d2e410f0160060a75d54e516ce5990bed5dde0a17a5575dd433061b4c9"
+      },
+      "derived_graph_map": {
+        "Zface_B2_1": "1489*Zface_H2_2**2*Zface_H2_5/32148900 - 37*Zface_H2_2*Zface_H2_5**3/46873096200 - Zface_H2_5**5/39051985291200",
+        "Zface_B2_4": "Zface_H2_2**2/6 + 5*Zface_H2_2*Zface_H2_5**2/61236 - Zface_H2_5**4/357128352",
+        "Zface_B2_7": "40*Zface_H2_2*Zface_H2_5/49 - Zface_H2_5**3/35721"
+      },
+      "field": "Q",
+      "independent_graph_pivots": [
+        {
+          "GB_index": 4,
+          "equation_after_prior_graph": "35721*Zface_B2_7 - 29160*Zface_H2_2*Zface_H2_5 + Zface_H2_5**3",
+          "rational_leader": "35721",
+          "rhs": "40*Zface_H2_2*Zface_H2_5/49 - Zface_H2_5**3/35721",
+          "variable": "Zface_B2_7"
+        },
+        {
+          "GB_index": 1,
+          "equation_after_prior_graph": "-69984*Zface_B2_4 + 11664*Zface_H2_2**2 + 40*Zface_H2_2*Zface_H2_5**2/7 - Zface_H2_5**4/5103",
+          "rational_leader": "-69984",
+          "rhs": "Zface_H2_2**2/6 + 5*Zface_H2_2*Zface_H2_5**2/61236 - Zface_H2_5**4/357128352",
+          "variable": "Zface_B2_4"
+        },
+        {
+          "GB_index": 2,
+          "equation_after_prior_graph": "-109350*Zface_B2_1 + 1489*Zface_H2_2**2*Zface_H2_5/294 - 37*Zface_H2_2*Zface_H2_5**3/428652 - Zface_H2_5**5/357128352",
+          "rational_leader": "-109350",
+          "rhs": "1489*Zface_H2_2**2*Zface_H2_5/32148900 - 37*Zface_H2_2*Zface_H2_5**3/46873096200 - Zface_H2_5**5/39051985291200",
+          "variable": "Zface_B2_1"
+        }
+      ],
+      "localized_wrapper": "Zc*c - 1",
+      "model_generators": [
+        "Zface_B2_7 - 40*Zface_H2_2*Zface_H2_5/49 + Zface_H2_5**3/35721",
+        "Zface_B2_4 - Zface_H2_2**2/6 - 5*Zface_H2_2*Zface_H2_5**2/61236 + Zface_H2_5**4/357128352",
+        "Zface_B2_1 - 1489*Zface_H2_2**2*Zface_H2_5/32148900 + 37*Zface_H2_2*Zface_H2_5**3/46873096200 + Zface_H2_5**5/39051985291200",
+        "Zface_H2_2**2 - 283*Zface_H2_2*Zface_H2_5**2/3500658 + 37*Zface_H2_5**4/20415837456",
+        "-9707329957*ZJ*Zface_H2_2*Zface_H2_5**11/2217760128800376206943373535070592611361344 + 899024633*ZJ*Zface_H2_5**13/19400965606745691058340631684797544164189037312 - 1",
+        "Zc*c - 1"
+      ],
+      "original_D1_rows": [
+        [
+          "D1_J_face_Pi3",
+          "-Zface_B2_1**2*Zface_H2_2/2 + Zface_B2_1*Zface_B2_4*Zface_B2_7/8748 + Zface_B2_1*Zface_B2_7**2*Zface_H2_5/344373768 + Zface_B2_1*Zface_B2_7*Zface_H2_2**2/6561 + Zface_B2_4**3/13122 - Zface_B2_4**2*Zface_B2_7*Zface_H2_5/43046721 + Zface_B2_4**2*Zface_H2_2**2/13122 - Zface_B2_4*Zface_B2_7**2*Zface_H2_2/86093442 + Zface_B2_4*Zface_B2_7**2*Zface_H2_5**2/564859072962 - Zface_B2_4*Zface_B2_7*Zface_H2_2**2*Zface_H2_5/43046721 - Zface_B2_7**2*Zface_H2_2**3/86093442 + Zface_B2_7**2*Zface_H2_2**2*Zface_H2_5**2/564859072962"
+        ],
+        [
+          "D1_J_face_Pi6",
+          "-3*Zface_B2_1**2*Zface_H2_5/2 - Zface_B2_1*Zface_B2_4*Zface_H2_2/2 + 11*Zface_B2_1*Zface_B2_7**2/52488 + 7*Zface_B2_1*Zface_B2_7*Zface_H2_2*Zface_H2_5/13122 + 11*Zface_B2_4**2*Zface_B2_7/52488 + 7*Zface_B2_4**2*Zface_H2_2*Zface_H2_5/26244 - 2*Zface_B2_4*Zface_B2_7**2*Zface_H2_5/43046721 + Zface_B2_4*Zface_B2_7*Zface_H2_2**2/13122 - 7*Zface_B2_4*Zface_B2_7*Zface_H2_2*Zface_H2_5**2/86093442 - 7*Zface_B2_7**3*Zface_H2_2/344373768 + 7*Zface_B2_7**3*Zface_H2_5**2/2259436291848 - 2*Zface_B2_7**2*Zface_H2_2**2*Zface_H2_5/43046721 + 7*Zface_B2_7**2*Zface_H2_2*Zface_H2_5**3/1129718145924"
+        ],
+        [
+          "D1_J_face_Pi9",
+          "-32805*Zface_B2_1**2/2 - 5*Zface_B2_1*Zface_B2_4*Zface_H2_5/2 + 5*Zface_B2_1*Zface_B2_7*Zface_H2_2 + 5*Zface_B2_1*Zface_B2_7*Zface_H2_5**2/13122 + 5*Zface_B2_4**2*Zface_H2_2/2 + 5*Zface_B2_4**2*Zface_H2_5**2/26244 + 5*Zface_B2_4*Zface_B2_7**2/26244 - 5*Zface_B2_4*Zface_B2_7*Zface_H2_2*Zface_H2_5/13122 - 5*Zface_B2_4*Zface_B2_7*Zface_H2_5**3/86093442 - 5*Zface_B2_7**3*Zface_H2_5/344373768 - 5*Zface_B2_7**2*Zface_H2_2**2/13122 + 5*Zface_B2_7**2*Zface_H2_5**4/1129718145924"
+        ],
+        [
+          "D1_J_face_Pi12",
+          "-59049*Zface_B2_1*Zface_B2_4/2 + 9*Zface_B2_1*Zface_B2_7*Zface_H2_5/2 + 9*Zface_B2_4**2*Zface_H2_5/4 + 9*Zface_B2_4*Zface_B2_7*Zface_H2_2/2 - Zface_B2_4*Zface_B2_7*Zface_H2_5**2/1458 + Zface_B2_7**3/17496 - Zface_B2_7**2*Zface_H2_2*Zface_H2_5/1458 + Zface_B2_7**2*Zface_H2_5**3/19131876"
+        ],
+        [
+          "gauge_J_nonzero_wrapper",
+          "ZJ*Zface_B2_1**2*Zface_B2_7/26244 + ZJ*Zface_B2_1*Zface_B2_4**2/52488 - ZJ*Zface_B2_1*Zface_B2_4*Zface_B2_7*Zface_H2_5/172186884 - ZJ*Zface_B2_1*Zface_B2_7**2*Zface_H2_2/344373768 + ZJ*Zface_B2_1*Zface_B2_7**2*Zface_H2_5**2/2259436291848 - 1"
+        ]
+      ],
+      "original_ideal_equals_graph_quadratic_inverse_model_both_inclusions": true,
+      "original_ideal_equals_stored_GB_both_inclusions": true,
+      "quadratic_monic_leader_divisor": "-9501786",
+      "quadratic_source_GB_index": 5,
+      "quadratic_source_after_graph": "-9501786*Zface_H2_2**2 + 5377*Zface_H2_2*Zface_H2_5**2/7 - 703*Zface_H2_5**4/40824",
+      "quotient": {
+        "a": "283/3500658",
+        "b": "37/20415837456",
+        "d": "Zface_H2_2",
+        "e": "Zface_H2_5",
+        "polynomial": "Zface_H2_2**2 - 283*Zface_H2_2*Zface_H2_5**2/3500658 + 37*Zface_H2_5**4/20415837456"
+      },
+      "remaining_combined_nonzero_J_relation": "-9707329957*ZJ*Zface_H2_2*Zface_H2_5**11/2217760128800376206943373535070592611361344 + 899024633*ZJ*Zface_H2_5**13/19400965606745691058340631684797544164189037312 - 1",
+      "ring_generator_order": [
+        "ZJ",
+        "Zc",
+        "Zface_B2_1",
+        "Zface_B2_4",
+        "Zface_B2_7",
+        "Zface_H2_2",
+        "Zface_H2_5",
+        "c"
+      ],
+      "same_as_production_adjoin_seed": true
+    }
+  ],
+  "recurrence": {
+    "checked_powers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "image_n": "A_n*d*e^(2n-2)+B_n*e^(2n)",
+    "initial_0": [
+      "0",
+      "1"
+    ],
+    "initial_1": [
+      "1",
+      "0"
+    ],
+    "step": "A_(n+1)=a*A_n+B_n; B_(n+1)=-b*A_n"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,12 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate report is written and closed before the reserve: `xmodel/f10-mixed-paired-local-gate-fable5-20260913.md` (260 lines, 2141 words, standalone `<!-- BODY-END -->` last, no exit-price line). All six charged inputs matched their pins before the whole reads and again at postpin, unchanged.
+
+**Verdicts**
+
+- **Claim A main (r=12 mod 49): CONFIRMED** as inverse existence, no Bezout DATA certificate. I re-derived B=−eG with G=7J in Z_(7)[e,X,Y], both factorial carries (7R_b ≡ u^7, T_s ≡ T_5+2e·u^7), the coefficientwise residue 3c8(5)+2e, and the exact weight-3 support bound at e=0, which excludes X^2 as well as lower terms for every n.
+- **Claim A auxiliary: CONFIRMED.** P0 at e=0 is 3X^6(3X−5). a0 is exactly e^2 times a unit, a1 is divisible by e^2 with valuation at least 2n+1, a2 has valuation exactly n, and a6, a7 are units. The lower polygon has vertices (0,2n),(2,n),(6,0),(7,0), so roots split 2, 4, 1 with Y valuation n/2 in both clusters. Initial forms give G residues 4 (unit root), 6xy (four-root, with y=x^2) and 5y^2 (two-root, with x=3y and E=−3y^2, the carry 2E retained), so B valuations are n, 7n/4, 2n.
+- **Claim B main (r=6,13,20,27,34,41 mod 49): CONFIRMED** as inverse existence. I re-derived B=(2t−3)J, 7·binom'(2,7)=1/15≡1, the Wilson second-digit carry residue(T_h)=trunc(phi^h0)+h1·u^7, the multinomial expansions of F, C and b5, the complete Y-coefficient cancellation, and 1−2C−3Yb5=4(X−2)^4, hence residue(7J)=3(X−2)^4. Any residue-extension zero forces (X,Y,e)=(2,0,3); the r-to-e map gives e≡1−2n, so e=3 only at r=48 mod 49.
+- **Claim B auxiliary (r=48 cluster): CONFIRMED as a residual obstruction only.** At t0=3/2 the specialisations U=3a^2, V=a^3, K=a^2(a−3/2) and P=9a^7−(3/2)a^6 with a=X−1/4 check exactly, giving residue(P)=2(X−2)^6(X−1). The X=1 root has Y=2 and nonzero (X−2)^4, with v(B)=v(2t−3)−1 ≥ 1. One labelling note: input 2 calls this quantity P0 while inputs 1 and 4 use P0=(t−2)P, harmless since t−2 is a unit.
+
+**Noted, not repeated:** input 3's display "e(−36)/720=e/20" is a sign typo for −e/20, which is e mod 7 as input 3 correctly uses. No cutoff, largest-r, REG, source comparison, source zero, all-F10 or JC2 conclusion follows. Custody and finalization remain with ROOT via external ops/lane.sh.
+DIVERT path=xmodel/f10-mixed-paired-local-gate-fable5-20260913.md status=CLEAN body_bytes=15531 body_sha256=9de2261ab1b568f4bc15bf9e5ff7135f1ee41cb36b0b8034cd8523ae46372dfe

@@ -1,0 +1,163 @@
+{
+  "9966": {
+    "n": 99,
+    "m": 66,
+    "M": [
+      -66,
+      77,
+      97
+    ],
+    "d": [
+      99,
+      33,
+      11,
+      1
+    ],
+    "q": [
+      -66,
+      143,
+      20
+    ],
+    "lambda": [
+      -6534,
+      -1815,
+      -1595
+    ],
+    "actual_characteristic_degrees": [
+      66,
+      55,
+      145
+    ],
+    "T2_degree": 55,
+    "h2_degree": 33,
+    "T2_attainment_t_power": 143,
+    "Jacobian_constant_t_power": 163,
+    "allowed_Fj_T1a": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "coefficient_recovery_y_degrees": [
+      165,
+      132,
+      99,
+      66
+    ],
+    "effective_indices_strictly_below_e": true
+  },
+  "10872": {
+    "n": 108,
+    "m": 72,
+    "M": [
+      -72,
+      81,
+      106
+    ],
+    "d": [
+      108,
+      36,
+      9,
+      1
+    ],
+    "q": [
+      -72,
+      153,
+      25
+    ],
+    "lambda": [
+      -7776,
+      -2268,
+      -2043
+    ],
+    "actual_characteristic_degrees": [
+      72,
+      63,
+      227
+    ],
+    "T2_degree": 63,
+    "h2_degree": 36,
+    "T2_attainment_t_power": 153,
+    "Jacobian_constant_t_power": 178,
+    "allowed_Fj_T1a": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "coefficient_recovery_y_degrees": [
+      180,
+      144,
+      108,
+      72
+    ],
+    "effective_indices_strictly_below_e": true
+  },
+  "Delta": {
+    "polynomial_in_H": "-C**2 + C*E*b + C*c + E**3 + E**2*a + E*d + H**5*(3*D + b) + H**4*(-2*B + 3*D**2 + D*b + 3*E + a) + H**3*(B*b - 2*C + D**3 + 6*D*E + 2*D*a + E*b + c) + H**2*(-B**2 + B*D*b + C*b + 3*D**2*E + D**2*a + 3*E**2 + 2*E*a + d) + H*(-2*B*C + B*E*b + B*c + C*D*b + 3*D*E**2 + 2*D*E*a + D*d) + e",
+    "high_H_rows_force": {
+      "b": "-3*D",
+      "a": "2*B - 3*E",
+      "c": "-B*D + 2*C - D**3 + 3*D*E",
+      "d": "B**2 + B*D**2 - 4*B*E + 3*C*D + 3*E**2"
+    },
+    "residual_constant": "B**2*E - B*C*D + B*D**2*E - 2*B*E**2 + C**2 - C*D**3 + 3*C*D*E + E**3 + e",
+    "degree_multiple_obstruction_9966": true,
+    "degree_multiple_obstruction_10872": true,
+    "upper_rows_leave_constant": true,
+    "zero_leader_then_localizer_minus_one": true
+  },
+  "negative_controls": {
+    "raw_Delta_y55_coefficient": "2",
+    "raw_Delta_degree": "66",
+    "dropping_attainment_retains_Delta": true,
+    "terminal_e_not_scalar_unit": {
+      "model": "f_e(x)=x",
+      "degree_x": 1
+    }
+  },
+  "depressed_identity": {
+    "exact_difference": "0",
+    "verified": true
+  }
+}

@@ -1,0 +1,18 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 22:49 UTC, inside the 12-minute window. Report written to `xmodel/d125-nonnegative-grading-gate-fable5-20260907.md` (915 words, ends with exactly one standalone BODY-END, no seal). Evidence is in `box/d125-nonnegative-grading-gate-fable5-20260907/`. STOP/IDLE.
+
+**Verdict: every exact producer claim CONFIRMED. No failed line.**
+
+- **Row and ring are literal.** client.py fixes the outer face i+j=15 with zeros, the inner face 5i−7j=3, and the constant. The v-exponent −3 row is a required negative row of the unguarded, ℓ=1, A_(2,1)=k ring.
+- **Polygon and slots.** 44 odd slots, 11 fixed, 33 free, (2,1) excluded on the inner face. My free list equals the witness list.
+- **Coefficients.** The binomial closed form agrees with a direct trinomial expansion on all 44 odd slots. Only (0,1) vanishes, so 32 of 33 contribute and the row has 34 terms, byte-equal to the witness row.
+- **Constant and k term.** −2484 by both the top-face binomial route and the cubed H|_{u=0} route. φ(g²p) gives −k.
+- **Infeasibility.** Any integer grading with Q in degree 0 forces wt(k)=0 from this one generator. The three-row unspecialized version also holds, with a_(9,6) coefficient 1 and a_(2,1) coefficient −1.
+- **Abstract bridge.** Valid as a conditional. Its hypothesis S/J≠0 is exactly the open nonemptiness question, so it converts a k≠0 point into a boundary point and never creates one.
+- **ℓ control.** Row degree 6 under wt(ℓ)=1, wt(k)=6, wt(a_ij)=(15−i−j)/2. The pin ℓ−1 is what breaks it.
+- **Controls.** Ten capped runs in a byte-identical scratch repo layout reproduce all return codes, stdout hashes, and both witnesses. The flat charged path fails with FileNotFoundError as predicted.
+
+**Two corrections, frozen files untouched.** The producer's "equivalently" three half-planes omit i≥0, harmless for exponents. The mutation stderr hashes in replay.json embed the absolute script path and are not portable custody values. I saved that second point as a memory note.
+
+**Unreviewed scope.** The Sol Card1 ideation file was not in my inputs, so the exact wording of the refuted proposal and the history search are GAP. The 14c, 14t, and symmetry proofs were consumed as accepted. No B rows, Jacobian rows, or other negative rows were examined, and whether I admits some other homogeneous generating set stays open.
+DIVERT path=xmodel/d125-nonnegative-grading-gate-fable5-20260907.md status=CLEAN body_bytes=7721 body_sha256=f4f356c510f1e6bf55e07be7c6d044ef0b698db850bfecc21de8f12367d3e282

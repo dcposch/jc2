@@ -1,0 +1,99 @@
+{
+ "D1_face_allowed_pi_powers_deg_le_8": [
+  1,
+  8
+ ],
+ "Juv_u0_coefficient": "-A*g1_0 - A*g1_1*v - A*g1_2*v**2 - A*g1_3*v**3 - A*g1_4*v**4 - A*g1_5*v**5 - A*g1_6*v**6 - A*g1_7*v**7 + b*k1 + 2*b*k2*v + 3*b*k3*v**2 + 4*b*k4*v**3 + 5*b*k5*v**4 + 6*b*k6*v**5 + 7*b*k7*v**6 + 8*b*k8*v**7 + g1*h0 + g1*h1*v + g1*h2*v**2 + g1*h3*v**3 + g1*h4*v**4 + 2*g2*h0*v + 2*g2*h1*v**2 + 2*g2*h2*v**3 + 2*g2*h3*v**4 + 2*g2*h4*v**5 + 3*g3*h0*v**2 + 3*g3*h1*v**3 + 3*g3*h2*v**4 + 3*g3*h3*v**5 + 3*g3*h4*v**6",
+ "R050_arith": {
+  "IM": "8",
+  "a": "7/2",
+  "delta1": "19/28",
+  "lam_f": "-1/14",
+  "lam_g": "-1/4",
+  "one_plus_lf_plus_lg": "19/28",
+  "ord_t_fy_at_simple_root": "-3/4",
+  "rho": "8"
+ },
+ "f_allowed_v_degrees_by_u_power": {
+  "-1": [],
+  "-2": [],
+  "0": [
+   0,
+   1
+  ],
+  "1": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "2": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ },
+ "family_A": "-4*kappa*(a - 1)**2",
+ "family_C": "65536*(a - 1)**2",
+ "family_H0": "-4*kappa*v*(a - 1)**2",
+ "family_H1": "4*eps*v*(a - 1)**2",
+ "family_floor_equality_monomials": [
+  [
+   -22,
+   8
+  ],
+  [
+   -3,
+   1
+  ]
+ ],
+ "family_floor_violations": [],
+ "family_residue": "eps/(kappa**2*(a - 1)**2)",
+ "family_terms_in_x_y": 329,
+ "family_terms_in_y_w": 19,
+ "family_total_degree": 56,
+ "floor_equality_monomials": [
+  [
+   -3,
+   1
+  ],
+  [
+   -22,
+   8
+  ]
+ ],
+ "g_allowed_v_degrees_by_u_power": {
+  "-1": [
+   0
+  ],
+  "-2": [],
+  "0": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "1": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ "minor_place_residue": "ord_u omega = e(delta-1)-1 >= 0 for all e>=1, delta>1 with e*delta in Z",
+ "negative_control_deg6_solutions_force_j0": true,
+ "residue_formula": "4*(A**3*h1 - 2*A**2*B*h2 + 2*A**2*T*h2 + 3*A*B**2*h3 - 6*A*B*T*h3 + 3*A*T**2*h3 - 4*B**3*h4 + 12*B**2*T*h4 - 12*B*T**2*h4 + 4*T**3*h4)/A**5",
+ "status": "ALL_INDEPENDENT_ASSERTS_PASS",
+ "twisted_example": "printed P=gamma^(l+1)/(l+1) gives J=gamma^(l+1); repaired P=gamma^l/l gives J=gamma^l (l=1..6)"
+}

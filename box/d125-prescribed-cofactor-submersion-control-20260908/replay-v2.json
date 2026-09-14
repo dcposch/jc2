@@ -1,0 +1,68 @@
+{
+  "caps": {
+    "cpu_seconds": 25,
+    "rss_bytes": 536870912,
+    "wall_seconds": 30
+  },
+  "elapsed_seconds": 1.966175,
+  "runs": [
+    {
+      "mode": "normal",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "89400c05fecd371ca2abcfa00ed8ebe6e113aab481be111f2ae91a110e9ca152"
+    },
+    {
+      "mode": "changed-L-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 110, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 71, in run\n    need(M==add(M0,mul(N,H)),'exact prescribed-cofactor extension H')\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: exact prescribed-cofactor extension H\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "changed-derivative-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 110, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 86, in run\n    need(add(mul(powp(v,5),Pv),scale(mul(Nv,Pu),-1))==expected_cross,\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: fixed-N derivative chain identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "omit-a",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 110, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 95, in run\n    need(at(Pu,F(1),F(1))!=0 or at(Pv,F(1),F(1))!=0,\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: actual changed candidate critical at u=v=1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "normal",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "89400c05fecd371ca2abcfa00ed8ebe6e113aab481be111f2ae91a110e9ca152"
+    },
+    {
+      "mode": "changed-L-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 110, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 71, in run\n    need(M==add(M0,mul(N,H)),'exact prescribed-cofactor extension H')\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: exact prescribed-cofactor extension H\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "changed-derivative-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 110, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 86, in run\n    need(add(mul(powp(v,5),Pv),scale(mul(Nv,Pu),-1))==expected_cross,\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: fixed-N derivative chain identity\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "omit-a",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 110, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 95, in run\n    need(at(Pu,F(1),F(1))!=0 or at(Pv,F(1),F(1))!=0,\n  File \"/home/ubuntu/jc2/box/d125-prescribed-cofactor-submersion-control-20260908/check.py\", line 9, in need\n    raise ValueError(message)\nValueError: actual changed candidate critical at u=v=1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "zero_assert": true
+}

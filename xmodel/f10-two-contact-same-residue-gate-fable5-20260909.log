@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 23:18:29 UTC, well inside the 23:25 own stop and the 23:27 ROOT TERM. Nothing further is needed.
+
+**Outcome: all four items CONFIRMED.** The producer's same-residue paired-contact exclusion holds at its stated scope, and no mathematical defect was found.
+
+- **A, B divided difference.** I recomputed the identity B_y − B_x = (y − x)·D_B by hand from the charged parent's B_z. The z-independent W² and V²W terms cancel, the shifts are s − 7 and s² − p − 12s + 47, F = z⁴ − 18z³ + 119z² − 342z + 360, and Q = s³ − 2ps − 18(s² − p) + 119s − 342. Spot checks at (3,4) and (0,1) agree. No division modulo 7 by y − x is used.
+- **B, unit derivatives and pole.** Q ≡ F′(k) mod 7 without inverting y − x. F′(3), F′(4), F′(5), F′(6) equal −6, 2, −2, 6, all units, so the constant of D_B has valuation exactly −1 while every other term is integral by the accepted paired-A integrality. The scaled quartic G = 5040·B_z is monic integral and reduces to F, with coefficients 2520, 210, 840, 420, 42 all divisible by 7. No lift is claimed.
+- **C, parameter mapping.** r ≡ 2 mod 7 goes to the accepted negative case. Otherwise x ≡ y mod 7 iff 7 | j, and the x residues at r ≡ 4, 5, 6 are 6, 3, 5. The residual nine classes r4 j1,2,3 / r5 j2,4,6 / r6 j2,4,5 are infinite congruence classes, none asserted nonempty.
+- **D, honest stops.** The exact diagonal supplies no equation. Distinct residues make Q ≡ 0 mod 7, so this pole proof stops there with no existence or lift claim. Zero-algebra passes through a number-field quotient with no valuations on nilpotents.
+
+**Smallest actual defect, recorded under A.** The section 1 headline states the 7 | j exclusion for every r ≥ 2, but the new mechanism is used only at common residue k in {3,4,5,6}. At r ≡ 3 mod 7 the common residue is 1 and F′(1) = −154 is not a unit, so that class rests entirely on the accepted parent's direct pole. The producer's "combining with the accepted exclusions" wording already covers this, so it is presentational, not mathematical.
+
+Files written, via apply_patch only:
+
+| Path | Bytes | SHA256 |
+|---|---|---|
+| xmodel/f10-two-contact-same-residue-gate-fable5-20260909.md | 9513 | 93669cc2…29d3b |
+| box/f10-two-contact-same-residue-gate-fable5-20260909/READ-SCOPE.md | 1312 | a3f26659…608e3 |
+
+The report has one standalone `<!-- BODY-END -->` as its final line, no Seal and no charge_basis declaration. All four input hashes were verified before reading and re-verified unchanged after the writes. Zero mathematical subprocesses were run.
+DIVERT path=xmodel/f10-two-contact-same-residue-gate-fable5-20260909.md status=CLEAN body_bytes=9513 body_sha256=93669cc20ce10cd5b4c9a0646087f92e15aa470ecd3aeb6db313d3dce6d29d3b

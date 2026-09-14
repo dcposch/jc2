@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The report is sealed. The final patch corrected the one overreaching sentence in section E, appended the closing custody block, and placed the standalone `<!-- BODY-END -->` line last with nothing after it. I made no edits after that seal.
+
+**Outcome.** All five parts are CONFIRMED by independent manual reconstruction. No REFUTED item and no GAP inside the charged scope.
+
+- **A (full-plane generator):** I rederived the inverse-Jacobian derivations, the values of S_f and S_g, and E(f), E(g), E(S). Descent of E to K holds by uniqueness of separable derivation extension, and also by my own second route, the expansion E = (f+S_g)∂_f − S_f∂_g, which reproduces E(S) = f·S_f as a consistency check. Weight interpolation is a polynomial in E with constant coefficients, so no group action is needed.
+- **B (axis and polynomial Lüroth):** the axis equation, genus zero by Riemann–Hurwitz, the single pole with single preimage, the unit derivative forcing a degree-one generator, both constant cases, and recovery of x by field division all check. The identity pair and the degree-2 punctured control were recomputed and kept distinct from ROOT's degree-3 cover.
+- **C (ROOT's control):** J = 1 and the exact potential recomputed. The ring map R = A[X]/(X³ − p) is finite free of rank 3 and étale, with injectivity argued through irreducibility over C(p,q). The identity x(T+p²) = p(T+1) and the cubic W as the exact kernel both hold, and the localization p ≠ 0 was tracked.
+- **D (divisor and positive control):** singular locus is exactly the two lines over p = 1 and p = −1, an ordinary node with nonzero slope gap, and F⁻¹(F(D)) is three lines for D = {x = ω}. The matched-term removal gives the smooth embedded graph T₀³ = p⁴ while the cover stays degree 3. Own check added: the p = −1 fibre with its smooth sheet x = −1.
+- **E (scope):** the canonical potential gives only a distinguished birational graph. Full-plane saturation is untested by both reports and stays open. Neither open-plane map is a counterexample; my added scope remark is that the source C* × A¹ has fundamental group Z, which is exactly the property the full-plane hypothesis removes.
+
+**Custody.** All three inputs matched the expected SHA-256 values before reading and again after the body. COORDINATION was read whole first in four chunks, then each report whole. All writes went through the installed apply_patch to the single destination file; no other file was touched, no charge_basis or OPEN was declared, and no interpreter or CAS was used.
+
+Sealed at 12:30:31 UTC, before the 12:40 reserve. Final file hash:
+
+```
+1e4effbba5fc43656c0890cac6f7f0839fb8213e0728e5f2a3510d34145e4d0e  xmodel/liouville-generator-gate-fable5-20260912.md
+```
+
+ROOT owns intake, receipt-first verification, and timer cleanup from here.
+DIVERT path=xmodel/liouville-generator-gate-fable5-20260912.md status=CLEAN body_bytes=16984 body_sha256=1e4effbba5fc43656c0890cac6f7f0839fb8213e0728e5f2a3510d34145e4d0e

@@ -1,0 +1,10 @@
+FIRST runtime-evidence gate (Fable 5.1) 2026-09-10 — reproducible cross-check outcomes, stdlib JSON metadata only
+input hashes: 15/15 match task list (see input-pins.sha256)
+remote-owned.sha256 lines: 100; terminal-before-payload OK lines: 112; manifest block inside terminal record diff vs remote-owned.sha256: identical
+batch.PASS artifacts vs manifest: 20/20 sha+path match; receipt 20 refs all in batch and manifest
+batch records: 8; preflight records 7 == batch[:7]; authority/prelaunch/telemetry digests match manifest for 8/8; remaining_group_live empty 8/8
+reconciliation vs batch: authority/prelaunch/caller_pid/returncode equal 8/8; input counts 112 x7, 111 on gate-missing-input
+receipt binding: engine == registration.python_flint; harness == manifest generic_controls.py; solver == manifest solver.py; authority == manifest generic.authority.json
+registration file_sha256 entries: 111 (10 task + /usr/bin/python3 + 100 native); profiles/deadlines/aggregate/file cap literal as caller requires
+live-principals: 18 PRINCIPAL_PID lines, 18 pid:[4026531836] lines; 2330 ticks 19443, 2232 ticks 19385, 2246 ppid 1 pgid 2232; cgroup 'No such device' race present, final Main0 03:38:20.593455379
+epochs: 1789012020.0 = 03:47:00; generic first_math 1789011499.436 = 03:38:19.436; generic cutoff 1789011739.436 = 03:42:19.436

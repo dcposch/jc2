@@ -1,0 +1,148 @@
+{
+  "schema": "jc2-documentary-python-compat-v1",
+  "status": "STATIC_SELECTED_PATH_COMPATIBLE_CONDITIONALLY",
+  "first_utc": "2026-09-11 04:20:57 UTC",
+  "reserve_utc": "2026-09-11 04:38:00 UTC",
+  "hard_utc": "2026-09-11 04:41:00 UTC",
+  "no_execution": "No CPython binary, interpreter test, AST, syntax check, compilation, scientific or dummy source was executed. Only pre-existing documentary artifact_finalize.py was run.",
+  "local_inputs": [
+    {
+      "path": "box/f10-direct-rows-refusal-derivation-astra-20260911/DERIVATION.md",
+      "sha256": "04f1533174916c73b67d852dbab05207539f4f104b79bc1255dee6fc8f6dc034",
+      "read": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/f10-direct-rows-refusal-derivation-astra-20260911/PINS.json",
+      "sha256": "cf0bddb8fe09f3f03e324e3c60b16501f7c82ed7c16fb5371cdb12c0a5b1f7a6",
+      "read": "FRESH_WHOLE; no linked source/runtime entries followed"
+    },
+    {
+      "path": "box/f10-direct-rows-refusal-derivation-astra-20260911/CPython-traceback.excerpt.txt",
+      "sha256": "b338f6eefa80a7401e5a4a5129222dc360a6347359b4ed6fab8bc022a6d22a9c",
+      "read": "FRESH_WHOLE selected saved excerpt, not whole upstream"
+    },
+    {
+      "path": "box/f10-direct-rows-refusal-derivation-astra-20260911/CPython-pythonrun.excerpt.txt",
+      "sha256": "f2ef8cd4527b4e581a8a1c6cf05ea9a70f0d7892fd51ec0f679c3fb6cd99bd2d",
+      "read": "FRESH_WHOLE selected saved excerpt; repeated after combined display clipping"
+    },
+    {
+      "path": "box/f10-direct-rows-refusal-derivation-astra-20260911/CPython-compile.excerpt.txt",
+      "sha256": "f9f84ac315baceacf2fdfd9841e90526bffd1a51e05d1dc63974898ebb9acea3",
+      "read": "FRESH_WHOLE selected saved excerpt; repeated after combined display clipping"
+    },
+    {
+      "path": "box/f10-source-cone-r3-execution-root-20260911/native.stdout",
+      "sha256": "16c01dee753d6cae153b91145abd81be68770ce8228c4cae1362c5817b86b197",
+      "read": "Entire-file HASHONLY; body ONLY lines 1-15; PRIOR worker"
+    }
+  ],
+  "ubuntu_archives": [
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/p/python3.12/python3.12_3.12.3-1ubuntu0.16.dsc",
+      "sha256": "97697b5278bbcfdfb908ddb5204f783a5a6718f12772d4ceaee4471de549c2f5",
+      "read": "WHOLE source descriptor; embedded PGP signature NOT independently verified",
+      "saved": "Ubuntu-source.dsc"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/p/python3.12/python3.12_3.12.3.orig.tar.xz",
+      "sha256": "56bfef1fdfc1221ce6720e43a661e3eb41785dd914ce99698d8c7896af4bdaa1",
+      "bytes": 20625068,
+      "read": "HASHONLY archive; four selected source members streamed for hashes; no wholesale unpack"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/p/python3.12/python3.12_3.12.3-1ubuntu0.16.debian.tar.xz",
+      "sha256": "05e7c65e7a286a3bd0f1c117f31c39a3085462d42db062741629050981df5d60",
+      "bytes": 300364,
+      "read": "HASHONLY archive; series WHOLE; all patch member contents bounded path/symbol searches; rules selected text and matching lines only"
+    },
+    {
+      "url": "https://archive.ubuntu.com/ubuntu/pool/main/p/python3.12/python3.12-minimal_3.12.3-1ubuntu0.16_amd64.deb",
+      "sha256": "3535ddab53a2f39f8cda32250bbf5bb066616f5902b642d15ef56047f83911d3",
+      "read": "HASHONLY package; four metadata fields; executable member streamed directly to SHA256, never saved/installed/executed",
+      "metadata": {
+        "Package": "python3.12-minimal",
+        "Version": "3.12.3-1ubuntu0.16",
+        "Source": "python3.12",
+        "Architecture": "amd64"
+      },
+      "member": "./usr/bin/python3.12",
+      "member_sha256": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223",
+      "hash_pipeline_statuses": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "metadata_pipeline_statuses": [
+        0,
+        0
+      ],
+      "metadata_note": "Initial control-only consumer closed the curl pipe early (curl23); repeated with drain and both stages0. Whole package hash and binary hash used complete successful streams."
+    }
+  ],
+  "source_files": [
+    {
+      "path": "Python/compile.c",
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.12.3/Python/compile.c",
+      "sha256": "4bc90a6e31378b7e6309decb0938e559ee109fa84264c50f3e8190af544047f5",
+      "ubuntu_orig_same": true,
+      "read": "Full-file HASHONLY; selected body 3948-3972,4911-4930,5070-5117",
+      "saved": "CPython-compile-3.12.3.excerpt.txt",
+      "selected_sha256": "f9f84ac315baceacf2fdfd9841e90526bffd1a51e05d1dc63974898ebb9acea3",
+      "comparison": "Byte-identical to charged v3.12.0 selected excerpt"
+    },
+    {
+      "path": "Python/pythonrun.c",
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.12.3/Python/pythonrun.c",
+      "sha256": "21140526bfc41c216390e493c0a93f1e3689ac15fb4cc041e400973fc57c6a5c",
+      "ubuntu_orig_same": true,
+      "read": "Full-file HASHONLY; selected body688-833,887-916,1524-1600 (saved through1599); line-name searches",
+      "saved": "CPython-pythonrun-3.12.3.excerpt.txt",
+      "selected_sha256": "f2ef8cd4527b4e581a8a1c6cf05ea9a70f0d7892fd51ec0f679c3fb6cd99bd2d",
+      "comparison": "Saved selected bytes equal old688-833,887-916,1495-1570"
+    },
+    {
+      "path": "Python/traceback.c",
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.12.3/Python/traceback.c",
+      "sha256": "634c4bed979848ad6ddf24a6b22dec9a87c442ddfca998ccfbb5228e49233625",
+      "ubuntu_orig_same": true,
+      "read": "Full-file HASHONLY; selected body430-615,619-974 in overlapping reads; symbol searches",
+      "comparison_regions": "490-596;619-966",
+      "comparison_selected_sha256": "3497c67a8c18458f3b353c5fe71730a131ceac2722c48cd337172e2ab5bb809f",
+      "saved": "CPython-traceback-selected.diff",
+      "comparison": "Only selected difference is ASCII-inert display-width conversion; diff is not a whole-file diff"
+    },
+    {
+      "path": "Parser/pegen.c",
+      "url": "https://raw.githubusercontent.com/python/cpython/v3.12.3/Parser/pegen.c",
+      "sha256": "e8f716673fc601ad9ca9a9dee5f7f33bebc3d451c0edfc3046dc6eb01a1ed270",
+      "ubuntu_orig_same": true,
+      "read": "Full-file HASHONLY; selected body36-86; saved ASCII fast path37-52",
+      "saved": "CPython-pegen-ASCII.excerpt.txt"
+    }
+  ],
+  "patch_audit": {
+    "scope": "All debian/patches/* member contents searched as text, no patch execution or whole human review",
+    "negative_pattern": "Python/(compile|traceback|pythonrun)\\.c|Parser/pegen\\.c|calculate_display_width|RAISE_VARARGS|extract_anchors|HandleSystemExit|debug_ranges",
+    "matches": 0,
+    "pipeline_statuses": [
+      0,
+      0,
+      1
+    ],
+    "positive_pattern": "^\\+\\+\\+ b/Lib/compileall.py",
+    "positive_match": "11992:+++ b/Lib/compileall.py",
+    "positive_pipeline_statuses": [
+      0,
+      0,
+      0
+    ],
+    "series_saved": "Ubuntu-patch-series.txt",
+    "rules_saved": "Ubuntu-build-rules.excerpt.txt",
+    "rules_regions": "1563-1601; also search matches concerning patch/sed/compile/traceback/pythonrun/optimization/build flags; no rules execution"
+  },
+  "trust": "HTTPS publisher and normal Ubuntu source-to-binary build/toolchain trust; not independent PGP verification or reproducibility build; prior binary identity is not future worker/native-closure identity",
+  "remaining_gap": "Future independently selected worker/native/source/invocation identification, not selected source-path compatibility",
+  "no_authority": "No registration, launch, source/math acceptance, cap or calibration authority"
+}

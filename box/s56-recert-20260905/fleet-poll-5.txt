@@ -1,0 +1,43 @@
+   4951   9       04:26 124424 Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q box/s56-recert-20260905/reducer-analysis/S5_part2_p32003_triangular_std.sing
+   5218  10       02:44 540388 Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q box/s56-recert-20260905/reducer-analysis/S6_part1_p32003_triangular_std.sing
+  10700  11       01:18 148724 Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q box/s56-recert-20260905/reducer-analysis/S5_part1_1_q2_p32003_triangular_std.sing
+FILE:/home/ubuntu/jc2/box/s56-recert-20260905/reducer-analysis/S5_part1_1_q2_p32003_triangular_std.out
+PIVOT_OK step=63 variable=A3_12_0
+PIVOT_OK step=64 variable=A3_8_0
+PIVOT_OK step=65 variable=A3_11_0
+PIVOT_OK step=66 variable=A3_9_0
+PIVOT_OK step=67 variable=A3_10_0
+JOLD_OK rows=195
+MAP_DECLARED_OK
+FILE:/home/ubuntu/jc2/box/s56-recert-20260905/reducer-analysis/S5_part2_p32003_triangular_std.out
+PIVOT_OK step=61 variable=A3_7_0
+PIVOT_OK step=62 variable=A3_13_0
+PIVOT_OK step=63 variable=A3_8_0
+PIVOT_OK step=64 variable=A3_12_0
+PIVOT_OK step=65 variable=A3_11_0
+PIVOT_OK step=66 variable=A3_9_0
+PIVOT_OK step=67 variable=A3_10_0
+FILE:/home/ubuntu/jc2/box/s56-recert-20260905/reducer-analysis/S6_part1_p32003_triangular_std.out
+PIVOT_OK step=130 variable=A3_16_0
+PIVOT_OK step=131 variable=A3_12_0
+PIVOT_OK step=132 variable=A3_15_0
+PIVOT_OK step=133 variable=A3_13_0
+PIVOT_OK step=134 variable=A3_14_0
+JOLD_OK rows=181
+MAP_DECLARED_OK
+    PID PSR     ELAPSED   RSS COMMAND
+   3228   0       17:09 7334728 /usr/bin/Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32003/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_p32003.sing
+   3395   1       16:12 6953144 /usr/bin/Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/s56-recert-20260905/solves/S6_n9_m6_M5_V2_k8_part_1_source_complete/none/p32003/S6_n9_m6_M5_V2_k8_part_1_source_complete_coefficient_first_none_p32003.sing
+   4101   3       12:43 6135768 /usr/bin/Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32027/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_p32027.sing
+   4050   2       12:43 6082248 /usr/bin/Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32009/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_p32009.sing
+   4165   4       12:42 3752908 /usr/bin/Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/Q/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_Q.sing
+   5218  10       02:44 540388 Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q box/s56-recert-20260905/reducer-analysis/S6_part1_p32003_triangular_std.sing
+   3341  20       16:12 193060 python3 box/s56-recert-20260905/s56_emitter.py solve --meta box/s56-recert-20260905/source-complete/meta/S6_n9_m6_M5_V2_k8_part_1_source_complete.json --char 32003 --timeout 1800 --branch none
+  10700  11       01:18 148728 Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q box/s56-recert-20260905/reducer-analysis/S5_part1_1_q2_p32003_triangular_std.sing
+   4951   9       04:26 124424 Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q box/s56-recert-20260905/reducer-analysis/S5_part2_p32003_triangular_std.sing
+   3222  24       17:09 99920 python3 box/s56-recert-20260905/s56_emitter.py solve --meta box/s56-recert-20260905/source-complete/meta/S5_n9_m6_M2_V1_k8_part_2_source_complete.json --char 32003 --timeout 1800 --branch none
+   3988  28       12:43 99824 python3 box/s56-recert-20260905/s56_emitter.py solve --meta box/s56-recert-20260905/source-complete/meta/S5_n9_m6_M2_V1_k8_part_2_source_complete.json --char 32009 --timeout 1800 --branch none
+   4043  18       12:43 99804 python3 box/s56-recert-20260905/s56_emitter.py solve --meta box/s56-recert-20260905/source-complete/meta/S5_n9_m6_M2_V1_k8_part_2_source_complete.json --char 32027 --timeout 1800 --branch none
+               total        used        free      shared  buff/cache   available
+Mem:           247Gi        32Gi       215Gi       3.1Mi       1.7Gi       215Gi
+Swap:             0B          0B          0B

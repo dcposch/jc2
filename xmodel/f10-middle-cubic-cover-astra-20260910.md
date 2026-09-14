@@ -1,0 +1,290 @@
+# Middle cubic principal-open cover and exact local tower reduction
+
+2026-09-10. NEW MANUAL COMPOSITION, UNREVIEWED. This report proves a
+generic local cover from the accepted17o/17s interfaces. It does not prove
+any localized full-source quotient zero, any global H7 unit assertion,
+a source point, or an F10/JC2 exclusion. First action05:05:59 UTC; controlling
+cap05:17:59 and final-two-minute reserve05:15:59, never reset.
+
+## 1. Same-ring attachment
+
+Fix an integer r>=1, m=3r+1, n=5r+2, nu=n/m. Let L=L_r be the WHOLE
+universal guarded commutative Q-algebra with
+
+    C(theta)=theta^3+F theta^2+H theta+a,
+    D(theta)=sum_(i=0)^5 D_i theta^i, D5=1, D0=b,
+    m C D'-n C' D=-theta^7,             ab invertible.       (1)
+
+It can also mean any algebra over that universal algebra. In particular,
+a and b are units separately. Both accepted producers use precisely(1),
+the same theta=t/S^r, the same F=d_r,H=v_(2r),a=k_m, the same D5=1 and
+b=D0, and the same target sign. There is no reciprocal change of H in
+the interface: the reciprocal normalization occurs only inside17o's proof.
+
+Critical producer section6 and its gate C establish H a UNIT in this
+universal L for every r>=1, hence in every L-algebra. This is an accepted
+whole-ring assertion, including nilpotents; it is not a selected leading
+field and introduces no extra H guard. Its proof matches the reciprocal
+coefficient H/a, not F/a. Middle producer sections1,7 and gate D define
+the SAME L and H, and prove
+
+    F7(X)=[theta^7](C/a)^X
+         = X(X-1)(X-2)(X-nu) S_r(X),       deg S_r<=3.        (2)
+
+No existence or nonemptiness attribution is consumed. In the actual
+source this base is obtained only AFTER imposing the complete leading
+equation and original guard. In particular the top residual rows identified
+by17o's gate, [S^(6r+2)]E1 and [S^(7r+2)]E0, are retained; identities in
+L are not asserted in the free unquotiented coefficient ring.
+
+The coefficient of X^7 in F7 is
+
+    c = (H/a)^7 / 7! .                                      (3)
+
+Indeed, set z=(H/a)theta+(F/a)theta^2+(1/a)theta^3. Only the
+binomial term binom(X,7) z^7 can contribute X^7 theta^7; its theta
+coefficient is (H/a)^7 and its X leading coefficient1/7!. All other
+terms have X degree at most6. Thus c is a unit by17o, and the normalized
+residual
+
+    M_r(X)=c^(-1) S_r(X)                                    (4)
+
+is a monic cubic, with its coefficient of X^3 exactly1 over EVERY L-algebra.
+For a nonzero base this has degree exactly3, even if the base is nonreduced.
+For the zero algebra all identities hold and its spectrum is empty; no
+degree or existence inference is needed. In particular S_r cannot vanish
+identically on a nonzero component. This is the new same-ring bridge;
+17s alone had deliberately not consumed the H-unit premise.
+
+## 2. Four evaluations: an explicit unit identity
+
+Let I={r+2,...,2r}; put d=|I|=r-1, with I empty at r=1. For h in I set
+
+    alpha_h=(m+n-h)/m,
+    w_h=alpha_h(alpha_h-1)(alpha_h-2)(alpha_h-nu),
+    f_h=H7_h=F7(alpha_h)=c w_h M_r(alpha_h).                  (5)
+
+For r>=2, 2+1/m<=alpha_h<=2+(r-1)/m and 1<nu<2.
+Every w_h is a nonzero rational unit. Distinct h give distinct alpha_h,
+whose differences (k-h)/m are also rational units. No positivity of
+roots or complex coefficient restriction is used.
+
+For ANY four-element subset J of I, and h in J, define
+
+    eta_(h,J)=product_(k in J, k!=h)(alpha_h-alpha_k),
+    lambda_(h,J)=7! (a/H)^7 / (w_h eta_(h,J)).                (6)
+
+These are explicit elements, indeed units, of L. Four-point Lagrange
+interpolation for the monic cubic M_r gives, by its X^3 coefficient,
+
+    1=sum_(h in J) M_r(alpha_h)/eta_(h,J)
+     =sum_(h in J) lambda_(h,J) f_h.                         (7)
+
+This is an exact ring identity, not a field-point test. Interpolation
+works over an arbitrary commutative ring here because every alpha difference
+is a unit: subtract the interpolating polynomial, then successive monic
+division at the four roots forces its degree-at-most3 difference to vanish.
+No domain or reducedness assumption is used.
+
+Consequently no prime of L contains four distinct f_h. After any base
+change L->A the same identity holds. In a nonzero local A, four nonunit
+f_h would lie in its maximal ideal and contradict(7). Thus at most THREE
+of the middle f_h are nonunits in any such local ring; equivalently at most
+three vanish in any nonzero residue field. This makes no assertion that
+any exceptional value actually occurs.
+
+## 3. Finite principal-open cover, all base changes
+
+Let e=min(3,d), and let E range over the subsets of I of size e. Define
+
+    Delta_E=product_(h in I\E) f_h,      empty product=1.     (8)
+
+The principal opens D(Delta_E) cover Spec L. To prove this directly, let
+p be a prime. The set Z={h:f_h in p} has size at most3 by(7), or at most
+d if d<3. Choose E of size e containing Z. No factor of Delta_E lies
+in p, hence Delta_E is not in p and p belongs to that open.
+
+More strongly the finite ideal generated by all Delta_E is exactly(1):
+otherwise a maximal ideal containing it would contradict the preceding
+prime argument. This assertion is preserved by every base change, as is
+the cover. It needs no replacement of a source ideal by its radical.
+Zero base algebras cause no exception. For r=1 there is one empty E and
+Delta_E=1. For r=2,3,4 there is again one E=I and Delta_E=1, so this
+does not eliminate a middle coordinate just from the bound. For d>=3
+the declared family has binom(d,3) charts (one when d=3). Some opens
+may be empty or redundant; no minimal cover claim is made.
+
+On a fixed chart let L_E=L[Delta_E^(-1)]. Every h outside E has the
+explicit inverse
+
+    f_h^(-1) = product_(k in I\E, k!=h) f_k / Delta_E.        (9)
+
+No assertion is made that any h in E is nonunit: they are merely the at
+most three coordinates this chosen presentation allows to remain.
+
+## 4. Exact tower elimination, with forcing and all source rows
+
+Use the accepted17s tower in INCREASING h. Write A_0 for all earlier
+data with all its retained relations, an L-algebra; it need not be reduced.
+At the h-th step the exact presentation is
+
+    A_prev[Y_h]/( f_h Y_h + J_h ),                           (10)
+
+where J_h is the actual earlier-data element of17s, not a fabricated
+constant or homogeneous-only approximation. It includes the WHOLE mixed
+forcing
+
+    W_h=sum_(i+j=h; i,j>=1)
+          ((m-i)U_i V_j'-(n-j)U_i'V_j),                     (11)
+
+including every preceding particular mate solution and the modified-u
+target ancestry. None of those terms is set to zero here.
+
+Fix E and base-change A_0 to L_E. Recursively substitute as follows.
+For h outside E put
+
+    Y_h^*=-f_h^(-1) sigma_prev(J_h),                         (12)
+
+where sigma_prev is the already constructed substitution of earlier
+middle coordinates. For h in E retain Y_h as an indeterminate and the
+exact row
+
+    f_h Y_h + sigma_prev(J_h)=0.                            (13)
+
+At each step(12) is an isomorphism of quotient rings over the preceding
+base, because its coefficient f_h is a unit. Its inverse sends all
+retained variables to their old classes; the old relation itself identifies
+the eliminated class with(12). At an exceptional step both maps keep
+Y_h and its row. Induction gives a two-sided isomorphism from the entire
+localized tower to a presentation with at most e<=3 middle variables
+and all e compatibility rows(13), plus ALL earlier equations. Relations
+among earlier retained variables, nilpotents and zero divisors are preserved.
+
+For clarity the attached source maps are the literal17s maps, not just
+the abstract coordinate names. From the full W_h obtain V_part and its
+residual c_h1 theta+c_h0 by the accepted descending rational pivots. Put
+
+    G=(C/a)^alpha_h, R=-c_h1 theta-c_h0,
+    T=trunc_(degree<=7)[G*(Y_h+integral_0^theta R/G)],
+    U=((m/kappa)C(T'-R)-C'T)/theta^7,
+    V_lin=((n/kappa)D(T'-R)-D'T)/theta^7,
+    kappa=m+n-h.                                           (14)
+
+These are finite formal-coefficient prescriptions using only rational
+units and a^(-1), already proved polynomial at this interface. Use either
+the retained Y_h or(12), then recover
+
+    l_h=U1, k_(m-h)=U0,
+    v_(2r-h)=U1+u*d_(2r+1-h),  V_actual=V_lin+V_part.         (15)
+
+The row(10) is exactly T7=0 and enforces the actual supports U2=V4=0;
+it is not discarded for h in E. Conversely the actual coefficient band
+gives the coordinate
+
+    Y_h=ma*(V_actual(0)-V_part(0))-nb*k_(m-h).                (16)
+
+The subtraction of V_part(0) and the -ud shift in l_h are essential.
+The WHOLE constant of mCV_actual-nDU is not Y_h. Uniqueness of the
+original upper reconstruction and the accepted two-sided maps ensure
+that(14)-(16) remain inverses after all earlier substitutions.
+
+Every subsequent row, remaining E1/E0 coefficient, mate coefficient,
+inverse-polynomiality condition, leading row, original gauge and guard
+is carried through this SAME substitution. If Z denotes all still-later
+variables and K the ideal of all such equations, the result is the exact
+localized full quotient, with the ideal generated by sigma(K) as well
+as the retained rows(13). No claim that sigma(K) vanishes is made.
+Eliminating a solved row outside E does not discard a compatibility:
+over that chart the row uniquely solves its variable; all constraints
+it induces elsewhere remain in sigma(K) and subsequent J's.
+
+Denominators are explicit finite powers of Delta_E, besides units already
+in L and nonzero rationals. Choose polynomial representatives of each J_h
+in previous Y's over A_0. Assign exponent0 to each retained Y and earlier
+parameter. For an eliminated h, a valid denominator exponent is
+
+    b_h=1+max_(monomials of J_h) sum_(i<h) beta_i b_i,        (17)
+
+with an empty/zero polynomial maximum taken as0. Equation(9) supplies the
+extra1. The same monomial maximum bounds any remaining substituted row;
+finite formal operations in(14) give finite exponents as well. These are
+bounds/recipes, not evaluated coefficients or a uniform height estimate.
+Clearing such denominators is exact ONLY while Delta_E stays invertible,
+or with an auxiliary variable z_E and relation z_E Delta_E-1. Dropping
+that localization after clearing could add boundary solutions and is not
+part of this theorem.
+
+## 5. Local-to-global criterion and a global-nonunit countercontrol
+
+Let Q be ANY full-source quotient over L with all its original equations
+and guard. Its base-changed principal opens still cover Spec Q. Therefore
+
+    [Q[Delta_E^(-1)]=0 for EVERY declared E]  implies Q=0.   (18)
+
+For example if Q were nonzero, a maximal ideal would lie in one chart;
+that localization could not be zero. Equivalently, the finitely many
+Delta_E generate(1), and suitable powers annihilating1 in every zero
+localization also generate(1). This is an exact full-ring conclusion,
+including nilpotents, CONDITIONAL on proving all localized quotients zero.
+No such vanishing is proved here, and no radical replacement of the
+original source ideal is licensed.
+
+It is FALSE that the local three-exception bound limits the number of
+globally nonunit evaluations to three. For a manual changed-object
+control take any r>=5, the same distinct rational alpha_h, and the ring
+Q[z] with monic cubic M(X)=X^3-z. Each M(alpha_h)=alpha_h^3-z is a
+globally nonunit nonconstant linear polynomial. Yet at any prime at most
+ONE can vanish: the difference between two is the nonzero rational
+alpha_h^3-alpha_k^3, a unit. Four-point interpolation still applies.
+Multiplying by the rational w_h does not change this example. It can
+have d=r-1 globally nonunit evaluations while satisfying a stronger
+local bound than required. It is NOT asserted to be an actual leading
+ODE solution; it refutes the inference from monic-cubic/evaluation facts
+to a global count. No global F10 exceptional stratum is fabricated.
+
+## 6. Value, limitations and completion
+
+Outcome: HIT, a new same-ring composition at manual/UNREVIEWED scope.
+It upgrades the residual-polynomial caveat to a normalized monic cubic,
+gives explicit four-evaluation unit identities and a finite all-strata
+principal-open cover, and reduces the middle tower to at most three
+middle variables LOCALLY. The number of charts grows with r, and all
+earlier data (including the r-dependent first r+1 tower parameters),
+exceptional compatibility rows, later data and full forcing remain.
+There is no finite r bound, all-r source closure, source existence,
+rational point, degree/JC2 consequence, algorithm or measured speed claim.
+
+The shortest useful consumer is an exact analysis of the retained
+three-variable middle rows TOGETHER with all substituted later/critical
+constraints on these charts, under separate review/authority. Merely
+showing a particular f_h nonunit globally neither realizes an exceptional
+source nor defeats the cover. The old global H7-unit OPEN is NOT settled:
+this proves the local bound, not which evaluations are global units or
+whether their closed loci survive full forcing.
+
+OPEN quantity: up to3 possible exceptional middle coordinates at a prime,
+with their actual occurrence and the localized full quotient outcomes
+undetermined. Cheapest next logical check is the first consumer just
+described; no computation or follow-on is authorized. No additional OPEN
+ID is raised. Root's bounded history checksum is not a full-corpus novelty
+proof; no new history or provenance search occurred.
+
+Exactly the card and four accepted reports/gates were current-pinned before
+WHOLE reads. READ-SCOPE and PINS record them. All algebra here is manual:
+no coefficient evaluation, code, CAS, mathematical subprocess/import/AST/
+compile/test, network/AWS/SSH/process/Git/agent/corpus/shared/protected
+work. Only documentary hashing, apply_patch and existing transactional
+publication. Own WHOLE, quantity/cheapest-test and collision checks precede
+the unique marker. COLLISIONS: EMPTY for own initial targets. Custody FIRST,
+all writers IDLE, with no promotion or follow-on authority.
+
+<!-- BODY-END -->
+
+## Seal
+
+- Body definition: every byte through the unique standalone `<!-- BODY-END -->` line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `13969`.
+- Body SHA-256:
+  `8c11ddf977cf19766172d651abae97fe0e8f1ab27231c7f297a902ee47bb247d`.
+- Frozen basis: `0d39df3c9fd69c939a8420c54d03228b9077777d`.

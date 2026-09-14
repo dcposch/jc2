@@ -1,0 +1,66 @@
+{
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "custody_excludes_itself": true,
+  "execution": {
+    "enabled_registration": false,
+    "fixtures": false,
+    "network_worker_actions": false,
+    "source_executed": false,
+    "syntax_import_ast_compile_tests": false
+  },
+  "expected_transaction_sha256": "a0ac26e1a81d8669b2b6a4316d7256735fcf7048aedf684400d3cbd5292c44f8",
+  "first_action_utc": "2026-09-10T14:29:27+00:00",
+  "inputs": {
+    "/home/ubuntu/jc2/box/f10-r2-semantic-execution-prep-20260910/CUSTODY.json": "5eeb682bc91c860cc0b623f56875533cce7b150855826800f10f76a73ba12630",
+    "/home/ubuntu/jc2/box/f10-r2-semantic-execution-prep-20260910/ROOT-REGISTRATION.json": "57407d35be5f2913784ca44c304e0f9009e269e65c0f770c76a3753c678aaad9",
+    "/home/ubuntu/jc2/box/f10-r2-semantic-runtime-astra-20260910/dispatch.py": "6c232bb0d1b4ee62fefb62970b1b5a06a092db735cbd6fb47907c54921169c0b",
+    "/home/ubuntu/jc2/box/f10-r2-semantic-runtime-astra-20260910/probe.py": "1e3bea3ad995ca64780f77b33792ed09c9843fb3925aae5f64c7a2abcaa0ecde",
+    "/home/ubuntu/jc2/ops/run_capped.py": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+    "/home/ubuntu/jc2/xmodel/f10-r2-native-map-diagnosis-astra-20260910.md": "7577c1d50b5350044f2d2e844980655effea7b49f21b05059e883682012d9be4",
+    "/home/ubuntu/jc2/xmodel/f10-r2-semantic-code-gate-fable5-20260910.md": "469fd1c701a2af3149ff7401c7592a4fb313ad7ee64b922105d86c27700eb09b"
+  },
+  "owned": {
+    "/home/ubuntu/jc2/box/f10-r2-map-observer-code-astra-20260910/CONTRACT.md": {
+      "bytes": 8009,
+      "sha256": "f62f7480201d89cf7a6bcd6419a8d239f661f3dc8fd30be3000248d7c86a5496"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-map-observer-code-astra-20260910/DISABLED-REGISTRATION.json": {
+      "bytes": 966,
+      "sha256": "9116e41d1664ba28917e8e3e4110dd23c7ec037a727aba870fda7d4d7fc569b7"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-map-observer-code-astra-20260910/PINS.json": {
+      "bytes": 1259,
+      "sha256": "42bd2fc132ec46be4879a63864e311c8213d168f2e20dfbed8e0c9ea32b7a0b4"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-map-observer-code-astra-20260910/READ-SCOPE.md": {
+      "bytes": 2432,
+      "sha256": "2bcceb23b3fe9c71f409578b99af8c51446bce2232e47b6167cd1bf0543010c0"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-map-observer-code-astra-20260910/dispatch.diff": {
+      "bytes": 39576,
+      "sha256": "d80b72eaf86f9f2ad8b0716a89337d86aad4243b6ebbdbcd20b679128f6bdbbb"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-map-observer-code-astra-20260910/dispatch.py": {
+      "bytes": 31019,
+      "sha256": "b4cea19b474a3238caf0871369baa5fc8497e1d1ac5cc6e107815372297640e2"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-map-observer-code-astra-20260910/probe.py": {
+      "bytes": 2532,
+      "sha256": "1e3bea3ad995ca64780f77b33792ed09c9843fb3925aae5f64c7a2abcaa0ecde"
+    },
+    "/home/ubuntu/jc2/xmodel/f10-r2-map-observer-code-astra-20260910.md": {
+      "bytes": 6051,
+      "sha256": "255a5805733716b188744ad08f109f154653045a642b635fc1c5bc3fb1ac0519"
+    },
+    "/home/ubuntu/jc2/xmodel/f10-r2-map-observer-code-astra-20260910.md.artifact.json": {
+      "bytes": 671,
+      "sha256": "a0ac26e1a81d8669b2b6a4316d7256735fcf7048aedf684400d3cbd5292c44f8"
+    }
+  },
+  "pending": "FIRST different-model source/instrument gate, then separately ROOT-registered diagnostic only",
+  "read_scope": "READ-SCOPE.md; exact-current prior WHOLE reuse where stated, fresh WHOLE new code/report/contract",
+  "schema": "jc2.scoped-terminal-custody/v1",
+  "scope": "STATIC_DISABLED_CODE_ONLY",
+  "status": "TERMINAL_ALL_WRITERS_IDLE",
+  "terminal_preparation_utc": "2026-09-10T14:38:59.652867+00:00"
+}

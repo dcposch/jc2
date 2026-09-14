@@ -1,0 +1,94 @@
+{
+  "argv_count": 8,
+  "argv_sha256": "075322ad0f3bf5ef6d3635ff87f70499593aa890f225af2a90a6248e8993dbf3",
+  "caps": {
+    "cpu_seconds": 3,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 33554432,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 0.25,
+    "wall_seconds": 5.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/jc2-f10-minimum-pivot-generic-20260910",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [
+    {
+      "observed_pgid": 2232,
+      "observed_pid": 2232,
+      "observed_start_identity": "boot=9d6e2eac-85f8-4a82-989e-18c36f7d8f5f;start_ticks=19385",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-09-10T03:38:19.112814Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-09-10T03:38:19.112862Z"
+    },
+    {
+      "observed_pgid": 2232,
+      "observed_pid": 2232,
+      "observed_start_identity": "boot=9d6e2eac-85f8-4a82-989e-18c36f7d8f5f;start_ticks=19385",
+      "result": "MATCH",
+      "stage": "before-kill",
+      "utc": "2026-09-10T03:38:19.370822Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 9,
+      "stage": "before-kill-send",
+      "utc": "2026-09-10T03:38:19.370856Z"
+    }
+  ],
+  "invocation_cwd": "/home/ubuntu/jc2-f10-minimum-pivot-generic-20260910",
+  "max_observed_group_rss_bytes": 80052224,
+  "pgid": 2232,
+  "pid": 2232,
+  "resource": "rss",
+  "runner_exit_code": 125,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=9d6e2eac-85f8-4a82-989e-18c36f7d8f5f;start_ticks=19385",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "RESOURCE_CAP",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 446,
+    "path": "/home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.stdout",
+    "sha256": "a4785db8d35d968732baba8ccb28267dc86743653f147f4ada75892ede63336a"
+  },
+  "telemetry_path": "/home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.telemetry.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      2232
+    ],
+    "kill_sent": true,
+    "leader_reaped": true,
+    "reason": "rss_cap",
+    "term_sent": true
+  },
+  "utc_end": "2026-09-10T03:38:19.378378Z",
+  "utc_start": "2026-09-10T03:38:18.977748Z",
+  "wall_elapsed_seconds": 0.400627227
+}

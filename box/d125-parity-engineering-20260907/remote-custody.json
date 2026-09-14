@@ -1,0 +1,116 @@
+{
+  "boot": "1a830d1e-1fa2-47f3-98bc-8c26c8cb8453",
+  "deployed_code": {
+    "baseline.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "construct.py": "22173cc6a9217a90a8537081a1229b01e58017990b728291285e8cfc01a332a2",
+    "qpoly.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+    "replay.py": "2dbb7464fd7b59e361f34b5a705cc7359b98001bf570a80fc77f441e029c2a17",
+    "run_capped.py": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+    "run_once.py": "d164af0b576fd7d8f7e3c3a294da8211df996595677aeac75267d2bf9546d40f"
+  },
+  "disk": "Filesystem     1024-blocks     Used Available Capacity Mounted on\n/dev/root        100476656 80757008  19703264      81% /\n",
+  "expected_groups": [
+    1696,
+    1698,
+    1702
+  ],
+  "expected_ids": [
+    1696,
+    1697,
+    1698,
+    1701,
+    1702,
+    1704
+  ],
+  "files": {
+    "REGISTRATION.md": {
+      "bytes": 8675,
+      "sha256": "9435f425ddd135846480dd1cdb08674de3b376803a1f73e93804a546c5b5d107"
+    },
+    "engineering/authorize-pre.identity.json": {
+      "bytes": 828,
+      "sha256": "4d8c480e453514a75fa51b0c3d796237ef885c5540282f41f3df336c82fd2050"
+    },
+    "engineering/authorize.authority.json": {
+      "bytes": 1617,
+      "sha256": "10e1aff627240690c5ff70519707b26af74591bf83895f78016d3bd0cdc0edc9"
+    },
+    "engineering/authorize.identity.json": {
+      "bytes": 842,
+      "sha256": "4b6e3dcb633307ff6d6020aae7fe26736344d5c5c71b7f990330e74dfe7f9e6a"
+    },
+    "engineering/authorize.launch.json": {
+      "bytes": 1502,
+      "sha256": "dbb083b74a8edade7941799d924976c5ef7b2688d1ef94fbfceccd7f44dc0f60"
+    },
+    "engineering/authorize.receipt.json": {
+      "bytes": 2615,
+      "sha256": "00370c6cb7bc84ee012fc5c4babc27f5065f76e288b488ec46a7a37a01135066"
+    },
+    "engineering/authorize.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "engineering/authorize.stdout": {
+      "bytes": 132,
+      "sha256": "3afb7578ef80e31dbe0b343859b1f9552c4425d98e8ae8158ba0c7199e23169a"
+    },
+    "engineering/authorize.telemetry.json": {
+      "bytes": 2201,
+      "sha256": "4ef65f88cadc3e761738c38bf6f5bc81ddeb559988af75a7cf86286496e8eded"
+    },
+    "engineering/batch-pre.json": {
+      "bytes": 1271,
+      "sha256": "436c56428e48d36fdf1e583e3ef438cba4c2743f29dfc9544dbe3c74d90287f8"
+    },
+    "engineering/batch-result.json": {
+      "bytes": 7604,
+      "sha256": "64b803194c31dd368eb9055dfc73f26e4d87bd46ecac864d16dcfeb2393e267b"
+    },
+    "engineering/host_control.py": {
+      "bytes": 6642,
+      "sha256": "f91a2c250689330a6d8155a5704ca1b703179cb342df686d683442c858798860"
+    },
+    "engineering/rss-descendant.identity.json": {
+      "bytes": 831,
+      "sha256": "0bac10808ccfcff7797ee65e7a370542f4be7e4a51c68f40288f639f9ebd5cb6"
+    },
+    "engineering/rss-pre.identity.json": {
+      "bytes": 817,
+      "sha256": "1c22997f781cbf35168403aa57480a5ae8299f15d4e66f0ae6224adcbd9d6275"
+    },
+    "engineering/rss.authority.json": {
+      "bytes": 1606,
+      "sha256": "caf761c415cddbfa4b9151b337b71d022282a802628ebe173cce27b361cd5b5d"
+    },
+    "engineering/rss.identity.json": {
+      "bytes": 831,
+      "sha256": "c0d5e4390f46081e95c5b56276a16d9a373b6d92d00d819ceefbc8ae785ceea7"
+    },
+    "engineering/rss.launch.json": {
+      "bytes": 1465,
+      "sha256": "68b58f3775418449e587a96ad911d5b04a524b9c1c9645faf50f3060e81f7ea8"
+    },
+    "engineering/rss.receipt.json": {
+      "bytes": 3470,
+      "sha256": "d24aaa79e2256b8274133cd929213a36bc80ec4c192d6ebc9eb93248a1307145"
+    },
+    "engineering/rss.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "engineering/rss.stdout": {
+      "bytes": 46,
+      "sha256": "1ec4559bd97b2700f3da16d2dbdf5885363699dd22a27d1a599174ac069718dd"
+    },
+    "engineering/rss.telemetry.json": {
+      "bytes": 3003,
+      "sha256": "af207480323419bf81c5381cdb9b29a8ac2be9460a552abb5d50e2cbef994713"
+    }
+  },
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:          253663        2295      252767           3         294      251368\nSwap:              0           0           0\n",
+  "production_outputs_absent": true,
+  "remaining": [],
+  "source_access": false,
+  "utc": 1788752530.9559171
+}

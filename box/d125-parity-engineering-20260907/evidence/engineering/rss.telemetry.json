@@ -1,0 +1,94 @@
+{
+  "argv_count": 6,
+  "argv_sha256": "c3b5b23b19c626a8d9805ef88510f9bf03903ffe8012f5493725c81e8f8014bc",
+  "caps": {
+    "cpu_seconds": 10,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 67108864,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 0.25,
+    "wall_seconds": 10.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/d125-parity-compression-pilot-20260907",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [
+    {
+      "observed_pgid": 1702,
+      "observed_pid": 1702,
+      "observed_start_identity": "boot=1a830d1e-1fa2-47f3-98bc-8c26c8cb8453;start_ticks=31596",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-09-07T03:41:01.403545Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-09-07T03:41:01.403594Z"
+    },
+    {
+      "observed_pgid": 1702,
+      "observed_pid": 1702,
+      "observed_start_identity": "boot=1a830d1e-1fa2-47f3-98bc-8c26c8cb8453;start_ticks=31596",
+      "result": "MATCH",
+      "stage": "before-kill",
+      "utc": "2026-09-07T03:41:01.661669Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 9,
+      "stage": "before-kill-send",
+      "utc": "2026-09-07T03:41:01.661699Z"
+    }
+  ],
+  "invocation_cwd": "/home/ubuntu/d125-parity-compression-pilot-20260907",
+  "max_observed_group_rss_bytes": 161075200,
+  "pgid": 1702,
+  "pid": 1702,
+  "resource": "rss",
+  "runner_exit_code": 125,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=1a830d1e-1fa2-47f3-98bc-8c26c8cb8453;start_ticks=31596",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "RESOURCE_CAP",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/d125-parity-compression-pilot-20260907/engineering/rss.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 46,
+    "path": "/home/ubuntu/d125-parity-compression-pilot-20260907/engineering/rss.stdout",
+    "sha256": "1ec4559bd97b2700f3da16d2dbdf5885363699dd22a27d1a599174ac069718dd"
+  },
+  "telemetry_path": "/home/ubuntu/d125-parity-compression-pilot-20260907/engineering/rss.telemetry.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      1702
+    ],
+    "kill_sent": true,
+    "leader_reaped": true,
+    "reason": "rss_cap",
+    "term_sent": true
+  },
+  "utc_end": "2026-09-07T03:41:01.669401Z",
+  "utc_start": "2026-09-07T03:41:01.098180Z",
+  "wall_elapsed_seconds": 0.571223873
+}

@@ -1,0 +1,41 @@
+option(redSB); short=0;
+// ---- k=4 ray chart, K=4, variant=tower, Bdeg=7 ----
+ring R = 0,(x,y,Z,h_0_0,h_1_0,h_2_0,h_3_0,h_0_1,h_1_1,h_2_1,h_0_2,h_1_2,h_0_3,B_0_0,B_1_0,B_2_0,B_3_0,B_4_0,B_5_0,B_6_0,B_7_0,B_0_1,B_1_1,B_2_1,B_3_1,B_4_1,B_5_1,B_6_1,B_0_2,B_1_2,B_2_2,B_3_2,B_4_2,B_5_2,B_0_3,B_1_3,B_2_3,B_3_3,B_4_3),dp;
+proc quoy(poly p, poly hh, int K)
+{ poly q = 0; poly ld; matrix cp; int d;
+  while (1) { if (p==0) { break; }
+    cp = coeffs(p,y); d = nrows(cp)-1;
+    if (d < K) { break; }
+    ld = cp[d+1,1];
+    q = q + ld*y^(d-K); p = p - ld*y^(d-K)*hh; }
+  return(q); }
+poly H = y^3*(y-x);
+poly h = H + h_0_0*x^0*y^0 + h_1_0*x^1*y^0 + h_2_0*x^2*y^0 + h_3_0*x^3*y^0 + h_0_1*x^0*y^1 + h_1_1*x^1*y^1 + h_2_1*x^2*y^1 + h_0_2*x^0*y^2 + h_1_2*x^1*y^2 + h_0_3*x^0*y^3;
+poly B = B_0_0*x^0*y^0 + B_1_0*x^1*y^0 + B_2_0*x^2*y^0 + B_3_0*x^3*y^0 + B_4_0*x^4*y^0 + B_5_0*x^5*y^0 + B_6_0*x^6*y^0 + B_7_0*x^7*y^0 + B_0_1*x^0*y^1 + B_1_1*x^1*y^1 + B_2_1*x^2*y^1 + B_3_1*x^3*y^1 + B_4_1*x^4*y^1 + B_5_1*x^5*y^1 + B_6_1*x^6*y^1 + B_0_2*x^0*y^2 + B_1_2*x^1*y^2 + B_2_2*x^2*y^2 + B_3_2*x^3*y^2 + B_4_2*x^4*y^2 + B_5_2*x^5*y^2 + B_0_3*x^0*y^3 + B_1_3*x^1*y^3 + B_2_3*x^2*y^3 + B_3_3*x^3*y^3 + B_4_3*x^4*y^3;
+poly f = h^2 + B;
+poly Al = quoy(B^2, h, 4);
+poly g = h^3 + (3/2)*B*h + (3/8)*Al;
+poly J = diff(f,x)*diff(g,y) - diff(f,y)*diff(g,x);
+"MARK_DEG_f"; deg(f); "MARK_DEG_g"; deg(g); "MARK_DEG_J"; deg(J);
+matrix C = coef(J, x*y);
+ideal I; poly cst = 0; int i;
+for (i=1; i<=ncols(C); i++) { if (C[1,i]==x^4) { cst = C[2,i]; } else { I = I+ideal(C[2,i]); } }
+I = simplify(I,2);
+"MARK_NROWS"; size(I);
+"MARK_NPARAMS"; 36;
+"MARK_CST"; cst;
+ring S = 0,(Z,h_0_0,h_1_0,h_2_0,h_3_0,h_0_1,h_1_1,h_2_1,h_0_2,h_1_2,h_0_3,B_0_0,B_1_0,B_2_0,B_3_0,B_4_0,B_5_0,B_6_0,B_7_0,B_0_1,B_1_1,B_2_1,B_3_1,B_4_1,B_5_1,B_6_1,B_0_2,B_1_2,B_2_2,B_3_2,B_4_2,B_5_2,B_0_3,B_1_3,B_2_3,B_3_3,B_4_3),dp;
+ideal I = imap(R,I); poly cst = imap(R,cst);
+ideal L = I, Z*cst-1;
+"MARK_STD_START";
+ideal G = std(L);
+"MARK_STD_DONE";
+"MARK_DIM"; dim(G);
+"MARK_SIZE"; size(G);
+"MARK_GB1"; G[1];
+"MARK_RED1"; reduce(1,G);
+"MARK_CTRL_RAW_DIM"; dim(std(I));
+"MARK_CTRL_UNIT"; dim(std(ideal(1)));
+"MARK_CTRL_ORIGIN"; dim(std(maxideal(1)));
+"MARK_DONE";
+quit;

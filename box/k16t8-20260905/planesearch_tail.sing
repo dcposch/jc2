@@ -1,0 +1,37 @@
+print("PLANESEARCH 2-parameter coordinate planes in {b4=1}");
+proc planegcd(int a, int b, string tag)
+{
+  /* restrict I2 to the plane where all q's except var a and var b are 0, b4=1 */
+  int i; int j; poly f; ideal J;
+  for (i=1;i<=size(I2);i++)
+  {
+    f=subst(I2[i],b4,1);
+    for (j=2;j<=7;j++)
+    {
+      if ((j!=a) && (j!=b)) { f=subst(f,var(j),0); }
+    }
+    J[i]=f;
+  }
+  int tm=timer; ideal g=std(J);
+  print(tag+" dim="+string(dim(g))+" vdim="+string(vdim(g))+" gbsize="+string(size(g))+" time="+string(timer-tm));
+  if (dim(g)==0 && vdim(g)>0)
+  {
+    print(tag+" HIT nonempty 0-dim");
+  }
+  if (dim(g)<0)
+  {
+    print(tag+" empty");
+  }
+}
+
+planegcd(2,3,"PLANE_q2q3");
+planegcd(2,6,"PLANE_q2q6");
+planegcd(3,6,"PLANE_q3q6");
+planegcd(2,4,"PLANE_q2q4");
+planegcd(3,4,"PLANE_q3q4");
+planegcd(6,7,"PLANE_q6q7");
+planegcd(2,7,"PLANE_q2q7");
+planegcd(3,7,"PLANE_q3q7");
+print("PLANESEARCH_DONE");
+print("JOB_DONE");
+quit;

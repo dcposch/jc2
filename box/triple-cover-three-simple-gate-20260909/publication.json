@@ -1,0 +1,52 @@
+{
+  "terminal_utc": "2026-09-09T02:22:46.140796+00:00",
+  "outcomes": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "close",
+        "--final",
+        "xmodel/triple-cover-three-simple-gate-prep-astra-20260909.md",
+        "--token",
+        "81278ba7f59d68887eddc141dd8aeb9c1cdbf7aba7ffbd1c1a83f61d4f7cfba7"
+      ],
+      "returncode": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"final_path\": \"/home/ubuntu/jc2/xmodel/triple-cover-three-simple-gate-prep-astra-20260909.md\", \"idempotent\": false, \"partial_path\": \"/home/ubuntu/jc2/xmodel/.triple-cover-three-simple-gate-prep-astra-20260909.md.partial-a1f3c8c64b948fe867ccbe219cf3dae9\", \"source_bytes\": 4376, \"source_sha256\": \"4a7460cbe02c223a25a91b62bb98e72e7432aa8c77f371c9d74cc725277d0d53\", \"status\": \"CLOSED\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "finalize",
+        "--final",
+        "xmodel/triple-cover-three-simple-gate-prep-astra-20260909.md",
+        "--token",
+        "81278ba7f59d68887eddc141dd8aeb9c1cdbf7aba7ffbd1c1a83f61d4f7cfba7"
+      ],
+      "returncode": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 4376, \"body_sha256\": \"4a7460cbe02c223a25a91b62bb98e72e7432aa8c77f371c9d74cc725277d0d53\", \"file_bytes\": 4708, \"final_path\": \"/home/ubuntu/jc2/xmodel/triple-cover-three-simple-gate-prep-astra-20260909.md\", \"full_sha256\": \"7a893cb1b1c06dbb64f887fd312101cbdeab1eb453ea0f9fc36de63e96c0a7c3\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/triple-cover-three-simple-gate-prep-astra-20260909.md.artifact.json\", \"manifest_sha256\": \"02b9d547f262a300cc728ec97f2d002daf9cbef736bd87571918d07e3c482a4b\", \"recovered\": false, \"status\": \"FINAL\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-B",
+        "ops/artifact_finalize.py",
+        "verify",
+        "--final",
+        "xmodel/triple-cover-three-simple-gate-prep-astra-20260909.md"
+      ],
+      "returncode": 0,
+      "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 4376, \"body_sha256\": \"4a7460cbe02c223a25a91b62bb98e72e7432aa8c77f371c9d74cc725277d0d53\", \"file_bytes\": 4708, \"final_path\": \"/home/ubuntu/jc2/xmodel/triple-cover-three-simple-gate-prep-astra-20260909.md\", \"full_sha256\": \"7a893cb1b1c06dbb64f887fd312101cbdeab1eb453ea0f9fc36de63e96c0a7c3\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/triple-cover-three-simple-gate-prep-astra-20260909.md.artifact.json\", \"manifest_sha256\": \"02b9d547f262a300cc728ec97f2d002daf9cbef736bd87571918d07e3c482a4b\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+      "stderr": ""
+    }
+  ],
+  "post_pins": "UNCHANGED"
+}

@@ -1,0 +1,63 @@
+{
+  "argv_count": 10,
+  "argv_sha256": "5758a33f2ecabed37af9874e1dc4385431e11ccd32176dbac8dee1102817253a",
+  "caps": {
+    "cpu_seconds": null,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": null,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 60.0,
+    "wall_seconds": 72000.0
+  },
+  "child_exit_code": 143,
+  "child_returncode": 143,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve",
+  "enforcement": {
+    "cpu": "disabled",
+    "rss": "disabled",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/time",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/t2t3-longsolve",
+  "max_observed_group_rss_bytes": 245902925824,
+  "pgid": 20596,
+  "pid": 20596,
+  "resource": null,
+  "runner_exit_code": 143,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=749752a4-f5b1-4d56-9500-72793f580440;start_ticks=178713",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 2797,
+    "path": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/solver.stderr",
+    "sha256": "dc511dfd1a060d1abb819aeb1f811b84f8655fbd2736afef42b88e5a91152d4b"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 0,
+    "path": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/solver.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "telemetry_path": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/caprun.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-06T12:33:10.228919Z",
+  "utc_start": "2026-09-06T08:25:47.114477Z",
+  "wall_elapsed_seconds": 14843.114448269
+}

@@ -1,0 +1,37 @@
+option(redSB); short=0;
+// k4ray beta-stratum K=7 b=9 pin=q1 char=0 target=x^4 geom=70
+ring RR = 0,(x,y,h_0_0,h_1_0,h_2_0,h_3_0,h_4_0,h_5_0,h_6_0,h_0_1,h_1_1,h_2_1,h_3_1,h_4_1,h_5_1,h_0_2,h_1_2,h_2_2,h_3_2,h_4_2,h_0_3,h_1_3,h_2_3,h_3_3,h_0_4,h_1_4,h_2_4,h_0_5,h_1_5,B_0_0,B_1_0,B_2_0,B_3_0,B_4_0,B_5_0,B_6_0,B_7_0,B_8_0,B_0_1,B_1_1,B_2_1,B_3_1,B_4_1,B_5_1,B_6_1,B_7_1,B_0_2,B_1_2,B_2_2,B_3_2,B_4_2,B_5_2,B_6_2,B_0_3,B_1_3,B_2_3,B_3_3,B_4_3,B_5_3,B_0_4,B_1_4,B_2_4,B_3_4,B_4_4,B_0_5,B_1_5,B_2_5,B_3_5,B_0_6,B_1_6,B_2_6,q1,lam,q1_inv),dp;
+proc quoy(poly p, poly hh, int K)
+{ poly q=0; poly ld; matrix cp; int d;
+  while(1){ if(p==0){break;} cp=coeffs(p,y); d=nrows(cp)-1; if(d<K){break;}
+    ld=cp[d+1,1]; q=q+ld*y^(d-K); p=p-ld*y^(d-K)*hh; } return(q); }
+poly h = y^6*(y-x) + h_0_0*x^0*y^0 + h_1_0*x^1*y^0 + h_2_0*x^2*y^0 + h_3_0*x^3*y^0 + h_4_0*x^4*y^0 + h_5_0*x^5*y^0 + h_6_0*x^6*y^0 + h_0_1*x^0*y^1 + h_1_1*x^1*y^1 + h_2_1*x^2*y^1 + h_3_1*x^3*y^1 + h_4_1*x^4*y^1 + h_5_1*x^5*y^1 + h_0_2*x^0*y^2 + h_1_2*x^1*y^2 + h_2_2*x^2*y^2 + h_3_2*x^3*y^2 + h_4_2*x^4*y^2 + h_0_3*x^0*y^3 + h_1_3*x^1*y^3 + h_2_3*x^2*y^3 + h_3_3*x^3*y^3 + h_0_4*x^0*y^4 + h_1_4*x^1*y^4 + h_2_4*x^2*y^4 + h_0_5*x^0*y^5 + h_1_5*x^1*y^5;
+poly Q = q1*x^3*y;
+poly Btop = 2*y^4*(y-x)*Q;
+poly B = Btop + B_0_0*x^0*y^0 + B_1_0*x^1*y^0 + B_2_0*x^2*y^0 + B_3_0*x^3*y^0 + B_4_0*x^4*y^0 + B_5_0*x^5*y^0 + B_6_0*x^6*y^0 + B_7_0*x^7*y^0 + B_8_0*x^8*y^0 + B_0_1*x^0*y^1 + B_1_1*x^1*y^1 + B_2_1*x^2*y^1 + B_3_1*x^3*y^1 + B_4_1*x^4*y^1 + B_5_1*x^5*y^1 + B_6_1*x^6*y^1 + B_7_1*x^7*y^1 + B_0_2*x^0*y^2 + B_1_2*x^1*y^2 + B_2_2*x^2*y^2 + B_3_2*x^3*y^2 + B_4_2*x^4*y^2 + B_5_2*x^5*y^2 + B_6_2*x^6*y^2 + B_0_3*x^0*y^3 + B_1_3*x^1*y^3 + B_2_3*x^2*y^3 + B_3_3*x^3*y^3 + B_4_3*x^4*y^3 + B_5_3*x^5*y^3 + B_0_4*x^0*y^4 + B_1_4*x^1*y^4 + B_2_4*x^2*y^4 + B_3_4*x^3*y^4 + B_4_4*x^4*y^4 + B_0_5*x^0*y^5 + B_1_5*x^1*y^5 + B_2_5*x^2*y^5 + B_3_5*x^3*y^5 + B_0_6*x^0*y^6 + B_1_6*x^1*y^6 + B_2_6*x^2*y^6;
+poly f = h^2 + B;
+poly Al = quoy(B^2, h, 7);
+poly Rh = B^2 - Al*h;
+print("PRE__SIZE_AL "+string(size(Al))+" SIZE_RH "+string(size(Rh)));
+print("PRE__PIN_BTOP_DEG "+string(deg(Btop))+" SIZE_BTOP "+string(size(Btop)));
+print("PRE__PIN_INDEX 1 NQ 2 D 4 SMIN 4");
+ideal I0; ideal JROWS; ideal EROWS; ideal RHOROWS; int ii; int dde;
+poly E64 = 8*B^3 - 48*Rh*h^2 - 72*B*Rh + 9*Al^2;
+poly ELAM = E64 - lam*f;
+print("DROP__DEG_ELAM "+string(deg(ELAM))+" SIZE_ELAM "+string(size(ELAM)));
+matrix CE = coef(ELAM, x*y);
+int RAW=0;
+for (ii=1; ii<=ncols(CE); ii++)
+{
+  dde = deg(CE[1,ii]);
+  if (dde>13) { if (CE[2,ii] != 0) {
+    RAW=RAW+1; print("DROP__ROW "+string(CE[1,ii])+" DEG "+string(dde));
+    EROWS=EROWS+ideal(CE[2,ii]);
+  } }
+}
+EROWS=simplify(EROWS,2);
+print("PRE__THEOREM_CUTOFF 13");
+print("DROP__RAW "+string(RAW));
+print("PRE__THEOREM_ROWS "+string(size(EROWS)));
+print("DROP__DONE 1");
+quit;

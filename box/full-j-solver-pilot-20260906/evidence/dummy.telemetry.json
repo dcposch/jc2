@@ -1,0 +1,94 @@
+{
+  "argv_count": 2,
+  "argv_sha256": "3efdb1d0614a28fce6b752f873dac79c3c6353b7de0d5e67994e4bb79e18a775",
+  "caps": {
+    "cpu_seconds": null,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 134217728,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 3.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/full-j-solver-pilot-20260906",
+  "enforcement": {
+    "cpu": "disabled",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [
+    {
+      "observed_pgid": 53018,
+      "observed_pid": 53018,
+      "observed_start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=539151",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-09-06T11:15:50.048857Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-09-06T11:15:50.048888Z"
+    },
+    {
+      "observed_pgid": 53018,
+      "observed_pid": 53018,
+      "observed_start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=539151",
+      "result": "MATCH",
+      "stage": "before-kill",
+      "utc": "2026-09-06T11:15:51.057117Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 9,
+      "stage": "before-kill-send",
+      "utc": "2026-09-06T11:15:51.057146Z"
+    }
+  ],
+  "invocation_cwd": "/home/ubuntu/full-j-solver-pilot-20260906",
+  "max_observed_group_rss_bytes": 77873152,
+  "pgid": 53018,
+  "pid": 53018,
+  "resource": null,
+  "runner_exit_code": 124,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=539151",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "WALL_TIMEOUT",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/full-j-solver-pilot-20260906/dummy.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 52,
+    "path": "/home/ubuntu/full-j-solver-pilot-20260906/dummy.stdout",
+    "sha256": "a1cb5e31fd0d01ed18b69fd2ef550c51cc79a35ef33006cf9bb56cc2f7515586"
+  },
+  "telemetry_path": "/home/ubuntu/full-j-solver-pilot-20260906/dummy.telemetry.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      53018
+    ],
+    "kill_sent": true,
+    "leader_reaped": true,
+    "reason": "wall_timeout",
+    "term_sent": true
+  },
+  "utc_end": "2026-09-06T11:15:51.064556Z",
+  "utc_start": "2026-09-06T11:15:47.035136Z",
+  "wall_elapsed_seconds": 4.029418794
+}

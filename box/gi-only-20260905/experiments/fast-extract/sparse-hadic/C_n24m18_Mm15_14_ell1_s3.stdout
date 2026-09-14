@@ -1,0 +1,141 @@
+{
+  "chart": "the full proved G_i chart; no specialization and no omitted coordinate",
+  "class_id": "C_n24m18_Mm15_14_ell1_s3",
+  "coefficient_generators": 173,
+  "elapsed_seconds": 4.399108,
+  "exactness": {
+    "auxiliary_variables": 0,
+    "beta_1_zero": true,
+    "coefficient_domain": "Z[all original G coordinates,c] inside the required Q polynomial ring",
+    "coordinate_specializations": 0,
+    "division": "top-down determinate Euclidean division by monic y^K + h_lower",
+    "jacobian_formula": "J(a*h^r,b*h^s)=h^(r+s)J(a,b)+h^(r+s-1)(s*b*J(a,h)+r*a*J(h,b))"
+  },
+  "frozen_builder_fix_sha256": "d6662abfec114a443712600f87e3e7b7064071f445d9b177d2f0ea13c9d3836b",
+  "generator_count_including_Tc_minus_1": 174,
+  "initial_formal_levels": {
+    "0": {
+      "parameter_terms": 7514,
+      "xy_coefficients": 111
+    },
+    "1": {
+      "parameter_terms": 5614,
+      "xy_coefficients": 89
+    },
+    "2": {
+      "parameter_terms": 3626,
+      "xy_coefficients": 69
+    },
+    "3": {
+      "parameter_terms": 1399,
+      "xy_coefficients": 47
+    },
+    "4": {
+      "parameter_terms": 248,
+      "xy_coefficients": 24
+    },
+    "5": {
+      "parameter_terms": 24,
+      "xy_coefficients": 8
+    }
+  },
+  "inverse_generator": "T*c-1",
+  "max_parameter_degree": 12,
+  "native_comparison": {
+    "literal_row_dictionary_equality": true,
+    "reference": "box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/rows/C_n24m18_Mm15_14_ell1_s3_G_rows.tsv",
+    "reference_rows": 173,
+    "requested": true,
+    "status": "PASS"
+  },
+  "normalized_levels": [
+    {
+      "h_power": 0,
+      "input_parameter_terms": 7514,
+      "input_xy_coefficients": 111,
+      "quotient_parameter_terms": 15698,
+      "quotient_xy_coefficients": 62,
+      "remainder_parameter_terms": 83328,
+      "remainder_rows": 49
+    },
+    {
+      "h_power": 1,
+      "input_parameter_terms": 20563,
+      "input_xy_coefficients": 89,
+      "quotient_parameter_terms": 10405,
+      "quotient_xy_coefficients": 49,
+      "remainder_parameter_terms": 67982,
+      "remainder_rows": 40
+    },
+    {
+      "h_power": 2,
+      "input_parameter_terms": 13532,
+      "input_xy_coefficients": 69,
+      "quotient_parameter_terms": 6037,
+      "quotient_xy_coefficients": 36,
+      "remainder_parameter_terms": 40974,
+      "remainder_rows": 33
+    },
+    {
+      "h_power": 3,
+      "input_parameter_terms": 7153,
+      "input_xy_coefficients": 47,
+      "quotient_parameter_terms": 1573,
+      "quotient_xy_coefficients": 22,
+      "remainder_parameter_terms": 13955,
+      "remainder_rows": 25
+    },
+    {
+      "h_power": 4,
+      "input_parameter_terms": 1745,
+      "input_xy_coefficients": 24,
+      "quotient_parameter_terms": 95,
+      "quotient_xy_coefficients": 8,
+      "remainder_parameter_terms": 2036,
+      "remainder_rows": 16
+    },
+    {
+      "h_power": 5,
+      "input_parameter_terms": 119,
+      "input_xy_coefficients": 10,
+      "quotient_parameter_terms": 1,
+      "quotient_xy_coefficients": 1,
+      "remainder_parameter_terms": 120,
+      "remainder_rows": 9
+    },
+    {
+      "h_power": 6,
+      "input_parameter_terms": 1,
+      "input_xy_coefficients": 1,
+      "quotient_parameter_terms": 0,
+      "quotient_xy_coefficients": 0,
+      "remainder_parameter_terms": 1,
+      "remainder_rows": 1
+    },
+    {
+      "h_power": 7,
+      "input_parameter_terms": 0,
+      "input_xy_coefficients": 0,
+      "quotient_parameter_terms": 0,
+      "quotient_xy_coefficients": 0,
+      "remainder_parameter_terms": 0,
+      "remainder_rows": 0
+    }
+  ],
+  "peak_rss_kib": 72984,
+  "production_orientation": "literal J(P,Q)-c*x^ell",
+  "receipt": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m18_Mm15_14_ell1_s3/C_n24m18_Mm15_14_ell1_s3_G_sparse_extraction.json",
+  "ring": "ring R=0,(y,x,h_0_5,h_0_4,h_0_3,h_0_2,h_0_1,h_1_1,h_0_0,h_1_0,A1_0_5,A1_0_4,A1_0_3,A1_0_2,A1_0_1,A1_1_1,A1_0_0,A1_1_0,A2_0_5,A2_1_5,A2_0_4,A2_1_4,A2_0_3,A2_1_3,A2_2_3,A2_0_2,A2_1_2,A2_2_2,A2_0_1,A2_1_1,A2_2_1,A2_0_0,A2_1_0,A2_2_0,A3_0_5,A3_1_5,A3_2_5,A3_0_4,A3_1_4,A3_2_4,A3_3_4,A3_0_3,A3_1_3,A3_2_3,A3_3_3,A3_0_2,A3_1_2,A3_2_2,A3_3_2,A3_0_1,A3_1_1,A3_2_1,A3_3_1,A3_0_0,A3_1_0,A3_2_0,A3_3_0,A3_4_0,A4_0_5,A4_1_5,A4_2_5,A4_3_5,A4_4_5,A4_0_4,A4_1_4,A4_2_4,A4_3_4,A4_4_4,A4_0_3,A4_1_3,A4_2_3,A4_3_3,A4_4_3,A4_0_2,A4_1_2,A4_2_2,A4_3_2,A4_4_2,A4_0_1,A4_1_1,A4_2_1,A4_3_1,A4_4_1,A4_5_1,A4_1_0,A4_2_0,A4_3_0,A4_4_0,A4_5_0,B2_0_5,B2_1_5,B2_0_4,B2_1_4,B2_0_3,B2_1_3,B2_2_3,B2_0_2,B2_1_2,B2_2_2,B2_0_1,B2_1_1,B2_2_1,B2_0_0,B2_1_0,B2_2_0,B3_0_5,B3_1_5,B3_2_5,B3_0_4,B3_1_4,B3_2_4,B3_3_4,B3_0_3,B3_1_3,B3_2_3,B3_3_3,B3_0_2,B3_1_2,B3_2_2,B3_3_2,B3_0_1,B3_1_1,B3_2_1,B3_3_1,B3_1_0,B3_2_0,B3_3_0,B3_4_0,c),(lp(1),dp(128));",
+  "ring_from_frozen_builder_fix": true,
+  "rows": "box/gi-only-20260905/experiments/fast-extract/sparse-hadic/C_n24m18_Mm15_14_ell1_s3/C_n24m18_Mm15_14_ell1_s3_G_sparse_rows.tsv",
+  "rows_bytes": 6438252,
+  "rows_sha256": "0f24b06a2f2c00f3d3133290f89f96d6545d6617f8810a790747586dfcf04b11",
+  "schema": "moh-gi-only-sparse-hadic-extraction-experiment-v1",
+  "source_fixed_builder": "box/gi-only-20260905/classes/C_n24m18_Mm15_14_ell1_s3/builders/C_n24m18_Mm15_14_ell1_s3_G_builder.sing",
+  "source_fixed_builder_sha256": "f247124577a88763deb26c5c70fb74496d052afb86757726be71665655a56c16",
+  "status": "PASS",
+  "stem": "C_n24m18_Mm15_14_ell1_s3_G",
+  "total_expanded_parameter_terms": 208396,
+  "unknowns_with_T": 128,
+  "unknowns_without_T": 127
+}

@@ -1,0 +1,50 @@
+{
+  "branch": "none",
+  "characteristic": 32009,
+  "counts": {
+    "active_variables_before_T": 47,
+    "branch_rows": 0,
+    "nonpivot_rows": 193,
+    "pivot_rows": 68,
+    "pivot_variables": 68,
+    "rabinowitsch_rows": 1,
+    "source_rows": 261,
+    "source_variables": 115
+  },
+  "custody": {
+    "meta": "box/s56-recert-20260905/source-complete/meta/S5_n9_m6_M2_V1_k8_part_2_source_complete.json",
+    "meta_sha256": "2ff27194699d5e3ccc1ca8e1ce1134c9cb68c4060bc692c9c0c69d57539d8395",
+    "plan": "box/s56-recert-20260905/reducer-analysis/S5_part2.plan.json",
+    "plan_sha256": "7719255b43893452c2655fffd676da6091c5c78ad1f979cdbe7e331df22eebcc",
+    "rows": "box/s56-recert-20260905/source-complete/rows/S5_n9_m6_M2_V1_k8_part_2_source_complete_rows.tsv",
+    "rows_sha256": "e8063f9885defd9c21d0fe57ce84636a70db0593d8a4bc721e322609a0db1d3b",
+    "script": "box/s56-recert-20260905/reducer-analysis/S5_part2_p32009_reduced_dump.sing",
+    "script_sha256": "b26ac97291d939902584d6a6a4019a994abe1c11f41211c9d626c6c4935ea299"
+  },
+  "dump": {
+    "generator_count": 163,
+    "max_abs_coefficient": 16004,
+    "path": "box/s56-recert-20260905/triangular-runs/S5_part2_p32009_dump.out",
+    "runtime_complete": true,
+    "sha256": "2ed5c8df7ddde9802228141758ccb2ec525f6368267aea209f262c7a689af388",
+    "variable_count": 48
+  },
+  "equivalence": "iterated quotient isomorphism by audited scalar-unit pivots; all non-pivot rows retained; no weight-floor unknown truncation",
+  "pivot_scalar_histogram": {
+    "-12": 9,
+    "-18": 9,
+    "-24": 8,
+    "-30": 6,
+    "-36": 6,
+    "-42": 5,
+    "-48": 4,
+    "-54": 4,
+    "-6": 9,
+    "-60": 3,
+    "-66": 2,
+    "-72": 2,
+    "-78": 1
+  },
+  "schema": "jc2.s56-recert.independent-triangular-audit/v1",
+  "status": "PASS"
+}

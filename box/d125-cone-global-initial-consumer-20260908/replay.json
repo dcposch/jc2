@@ -1,0 +1,82 @@
+{
+  "caps": {
+    "cpu_seconds": 25,
+    "rss_bytes": 536870912,
+    "wall_seconds": 30
+  },
+  "elapsed_seconds": 2.578361,
+  "runs": [
+    {
+      "mode": "normal",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "fa1fe3df479a3edd95ac7c2035e231bf0d9485f1e40c0a2b40c1bcfe62047166"
+    },
+    {
+      "mode": "change-q0",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 100, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 58, in check\n    need(J==add(mul(J1,Z),J0),'universal 3/5 elimination with all constants')\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal 3/5 elimination with all constants\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "drop-d0-shift",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 100, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 58, in check\n    need(J==add(mul(J1,Z),J0),'universal 3/5 elimination with all constants')\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal 3/5 elimination with all constants\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-quartic",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 100, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 64, in check\n    need(scale(det,3)==quartic,'universal determinant quartic')\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal determinant quartic\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "replace-odd-e",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 100, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 71, in check\n    need(any(bracket(A,B) for A,B in zip(Ptuple,lower)),\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual lower odd tuple has nonzero bracket\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "normal",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "fa1fe3df479a3edd95ac7c2035e231bf0d9485f1e40c0a2b40c1bcfe62047166"
+    },
+    {
+      "mode": "change-q0",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 100, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 58, in check\n    need(J==add(mul(J1,Z),J0),'universal 3/5 elimination with all constants')\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal 3/5 elimination with all constants\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "drop-d0-shift",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 100, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 58, in check\n    need(J==add(mul(J1,Z),J0),'universal 3/5 elimination with all constants')\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal 3/5 elimination with all constants\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-quartic",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 100, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 64, in check\n    need(scale(det,3)==quartic,'universal determinant quartic')\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: universal determinant quartic\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "replace-odd-e",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 100, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 71, in check\n    need(any(bracket(A,B) for A,B in zip(Ptuple,lower)),\n  File \"/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py\", line 8, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: actual lower odd tuple has nonzero bracket\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "zero_assert": true
+}

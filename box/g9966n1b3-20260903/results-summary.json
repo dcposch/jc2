@@ -1,0 +1,630 @@
+{
+  "artifact_sha256": {
+    "charged-inputs.sha256": "269053bdf90e7c58f9d30bcc0af44c7e143791ff5ded425e47c9f78ede255866",
+    "duty-ledger.json": "d28614618428c58cd51d9d80ca4de38ec51e5bc08076a4dcc8bca56450db4789",
+    "enumeration.json": "8c51f6eca3e1c5d2c7ae9e9f6b4952f3d68cdda0e91052846a6021c016fee7df",
+    "face-resolve.json": "8541726004b309f493704bb0aeac7073cc075d2c459fa2b2bce972be5f675a93",
+    "face-screen-banked.json": "f2e49e125b12abfbe582350c2cb3b753a358c1c3f2ac8a1aaba31e393e63db01",
+    "face-screen.json": "26a35f110b978bc91530032f4816a2c3c4f9460015f0765dd8cf21f001e60da5"
+  },
+  "builds": {
+    "S1_n18_m12_Mm4_V1_k6_part_1_1_1_1_1_full": {
+      "elapsed_seconds": 715.476,
+      "native_done": true,
+      "row_count": 352,
+      "rows_sha256": "68e343e3a4fd031e2a5bdccf8c90f95ddebd83a4f8e2344ecd148156171a99ed",
+      "target_gate": true
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_2_1_1_1_full": {
+      "elapsed_seconds": 509.636,
+      "native_done": true,
+      "row_count": 352,
+      "rows_sha256": "7d2e296b2188a19894d437beea9bfc29587dd541a299dec1eae09febf1a94090",
+      "target_gate": true
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_2_2_1_full": {
+      "elapsed_seconds": 313.273,
+      "native_done": true,
+      "row_count": 352,
+      "rows_sha256": "b17088527183d3ef29865bce5c74f12bdac81c44ebc6d58c7e0f657af1c90b78",
+      "target_gate": true
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_3_1_1_full": {
+      "elapsed_seconds": 309.702,
+      "native_done": true,
+      "row_count": 352,
+      "rows_sha256": "c088598bfe5e7f1c270e806c585b1aa62e4be53923f46f0da847adf58498957e",
+      "target_gate": true
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_3_2_full": {
+      "elapsed_seconds": 172.323,
+      "native_done": true,
+      "row_count": 352,
+      "rows_sha256": "0655f9ccf2f37e2732e130d14c485c8971b83ef3ef1b552882bfd101de018686",
+      "target_gate": true
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_4_1_full": {
+      "elapsed_seconds": 172.365,
+      "native_done": true,
+      "row_count": 352,
+      "rows_sha256": "492af9bc68b7da7b1354a066c5dcb4abb44566dacafa4e03accfcb8f2eb3d88a",
+      "target_gate": true
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_5_full": {
+      "elapsed_seconds": 73.982,
+      "native_done": true,
+      "row_count": 352,
+      "rows_sha256": "ffb62e326f4603d3f341bd1314857ca149a727c68d30578c747e65ac11a7bb49",
+      "target_gate": true
+    }
+  },
+  "census": {
+    "changed_this_lane": false,
+    "dead": [
+      "S5",
+      "S6",
+      "S8"
+    ],
+    "open": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S7"
+    ],
+    "total": 8
+  },
+  "charged_inputs_count": 15,
+  "charged_inputs_ok": true,
+  "claims": {
+    "n1_closed": false,
+    "new_skeleton_death": false,
+    "no_keller_pair_9966": false,
+    "s8_branch_exhaustiveness_certified": true,
+    "split_leaf_enumeration_certified": true
+  },
+  "controls": {
+    "controls": [
+      {
+        "expected": {
+          "accepted": true,
+          "dimension": 0,
+          "nf_all_zero": true,
+          "unit": false,
+          "vdim": 1
+        },
+        "observed": {
+          "accepted": true,
+          "dimension": 0,
+          "nf_all_zero": true,
+          "unit": false,
+          "vdim": 1
+        },
+        "output_dir": "/home/ubuntu/jc2/box/g9966n1b3-20260903/controls/runs/genuine-tame-automorphism",
+        "status": "PASS",
+        "type": "GENUINE-TAME-AUTOMORPHISM-CONTROL",
+        "verdict": null
+      },
+      {
+        "note": "run_perturbed_control is disabled on these inhomogeneous localized charts: guided_gb's bad-hint control needs a predicted Hilbert length, which an inhomogeneous chart does not supply, so firing it would be vacuous.  No promotion in this lane relies on it.",
+        "status": "RECORDED",
+        "type": "PERTURBED-CONTROL-SCOPE"
+      }
+    ],
+    "schema": "jc2.g9966n1b3.controls/v1"
+  },
+  "decisions": {
+    "S1_n18_m12_Mm4_V1_k6_part_5_full/fullgb_slim": {
+      "basis_size": null,
+      "dim": null,
+      "finished": false,
+      "generators": "235",
+      "unit": null
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_5_full/fullgb_std": {
+      "basis_size": null,
+      "dim": null,
+      "finished": false,
+      "generators": "235",
+      "unit": null
+    }
+  },
+  "duty": {
+    "no_split_charts_total": 105,
+    "per_row": {
+      "S1": {
+        "no_split_charts": 7,
+        "split_leaves": 1
+      },
+      "S2": {
+        "no_split_charts": 56,
+        "split_leaves": 3
+      },
+      "S3": {
+        "no_split_charts": 15,
+        "split_leaves": 3
+      },
+      "S4": {
+        "no_split_charts": 22,
+        "split_leaves": 2
+      },
+      "S7": {
+        "no_split_charts": 5,
+        "split_leaves": 3
+      }
+    },
+    "split_leaves_total": 12
+  },
+  "enumeration_rows": 8,
+  "face_screen": {
+    "banked_rows": {
+      "S5": [],
+      "S6": [],
+      "S8": [
+        {
+          "delta": "2",
+          "partition": [
+            2,
+            1
+          ]
+        },
+        {
+          "delta": "5/2",
+          "partition": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    "charged_comparison": {
+      "S1": {
+        "charged_hardcoded": [
+          [
+            "4",
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "identical": true,
+        "mechanical": [
+          [
+            "4",
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      },
+      "S2": {
+        "charged_hardcoded": [
+          [
+            "3/2",
+            [
+              2,
+              1,
+              1
+            ]
+          ],
+          [
+            "3/2",
+            [
+              2,
+              2
+            ]
+          ],
+          [
+            "5/3",
+            [
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        ],
+        "identical": false,
+        "mechanical": [
+          [
+            "3/2",
+            [
+              2,
+              2
+            ]
+          ],
+          [
+            "5/3",
+            [
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        ]
+      },
+      "S3": {
+        "charged_hardcoded": [
+          [
+            "3/2",
+            [
+              2,
+              1,
+              1
+            ]
+          ],
+          [
+            "3/2",
+            [
+              2,
+              2
+            ]
+          ],
+          [
+            "5/3",
+            [
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        ],
+        "identical": false,
+        "mechanical": [
+          [
+            "3/2",
+            [
+              2,
+              2
+            ]
+          ],
+          [
+            "5/3",
+            [
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        ]
+      },
+      "S4": {
+        "charged_hardcoded": [
+          [
+            "2",
+            [
+              2,
+              1
+            ]
+          ],
+          [
+            "5/2",
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        ],
+        "identical": false,
+        "mechanical": [
+          [
+            "5/2",
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        ]
+      },
+      "S7": {
+        "charged_hardcoded": [
+          [
+            "3/2",
+            [
+              2,
+              1,
+              1
+            ]
+          ],
+          [
+            "3/2",
+            [
+              2,
+              2
+            ]
+          ],
+          [
+            "5/3",
+            [
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        ],
+        "identical": false,
+        "mechanical": [
+          [
+            "3/2",
+            [
+              2,
+              2
+            ]
+          ],
+          [
+            "5/3",
+            [
+              1,
+              1,
+              1,
+              1
+            ]
+          ]
+        ]
+      }
+    },
+    "charts_examined": 66,
+    "dead": 54,
+    "mixed_branch_resolved": [
+      "SOLVABLE",
+      "SOLVABLE",
+      "SOLVABLE",
+      "SOLVABLE"
+    ],
+    "note": "face-screen.json counts only the leaves whose q has the closed form w^A*(C+c0*int w^B); the four mixed low/high leaves are decided in face-resolve.json and are included in the duty ledger",
+    "survivors_per_row_after_mixed_resolve": {
+      "S1": 1,
+      "S2": 3,
+      "S3": 3,
+      "S4": 2,
+      "S7": 3
+    },
+    "survivors_per_row_closed_form_only": {
+      "S1": 1,
+      "S2": 2,
+      "S3": 2,
+      "S4": 1,
+      "S7": 2
+    }
+  },
+  "full_maps": {
+    "S1_n18_m12_Mm4_V1_k6_part_5_full/full_map_Q": {
+      "big_rows": 169,
+      "characteristic": 0,
+      "done": true,
+      "residual_full_sha256": "419e05891bf60400540e062e5ac3b8b5c63995a621ed2c628ce9faebb142a8d2",
+      "surviving_variable_count": 61,
+      "total_reduced_rows": 236
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_5_full/full_map_p32003": {
+      "big_rows": 169,
+      "characteristic": 32003,
+      "done": true,
+      "residual_full_sha256": "0c41c2b58c208ea2ce8dfba96fb84cc2206166b072660ba80377ed48791bdae8",
+      "surviving_variable_count": 61,
+      "total_reduced_rows": 236
+    }
+  },
+  "lane": "g9966-n1-batch3-opus5-20260903",
+  "reductions": {
+    "S1_n18_m12_Mm4_V1_k6_part_1_1_1_1_1_full/reduce_capE": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 31,
+      "replay_gate": "PASS",
+      "replay_multisets_equal": true,
+      "residual_rows": "44",
+      "residual_sha256": "f0dd2555d8de47076d6d9158eea6d37403664b6f531ec0b8b46f24f75a1de8aa",
+      "rows_used": 88,
+      "surviving_variable_count": 84,
+      "variables_in": 115
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_2_1_1_1_full/reduce_capE": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 0,
+      "replay_gate": null,
+      "replay_multisets_equal": null,
+      "residual_rows": null,
+      "residual_sha256": null,
+      "rows_used": 106,
+      "surviving_variable_count": 114,
+      "variables_in": 114
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_2_2_1_full/reduce_capE": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 33,
+      "replay_gate": "PASS",
+      "replay_multisets_equal": true,
+      "residual_rows": "74",
+      "residual_sha256": "dface27ea017b09061ede78e64b10e7177a5236feb61bcd1358a8e07c1ccf38e",
+      "rows_used": 120,
+      "surviving_variable_count": 80,
+      "variables_in": 113
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_3_1_1_full/reduce_capD": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 0,
+      "replay_gate": null,
+      "replay_multisets_equal": null,
+      "residual_rows": null,
+      "residual_sha256": null,
+      "rows_used": 120,
+      "surviving_variable_count": 113,
+      "variables_in": 113
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_3_1_1_full/reduce_capE": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 33,
+      "replay_gate": "PASS",
+      "replay_multisets_equal": true,
+      "residual_rows": "74",
+      "residual_sha256": "07384a35d9781239371060154221508bf32e2b5c2ab14605dd8b3ca0cd5efcdd",
+      "rows_used": 120,
+      "surviving_variable_count": 80,
+      "variables_in": 113
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_3_2_full/reduce_capD": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 0,
+      "replay_gate": null,
+      "replay_multisets_equal": null,
+      "residual_rows": null,
+      "residual_sha256": null,
+      "rows_used": 148,
+      "surviving_variable_count": 112,
+      "variables_in": 112
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_3_2_full/reduce_capE": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 38,
+      "replay_gate": "PASS",
+      "replay_multisets_equal": true,
+      "residual_rows": "97",
+      "residual_sha256": "4852d43613464609dceb207ce9bbc4ccd2e5add9d6472e4d60af0b2ebeca33a1",
+      "rows_used": 148,
+      "surviving_variable_count": 74,
+      "variables_in": 112
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_3_2_full/reduce_fullp": {
+      "cap_bytes": 0,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 0,
+      "replay_gate": null,
+      "replay_multisets_equal": null,
+      "residual_rows": null,
+      "residual_sha256": null,
+      "rows_used": 352,
+      "surviving_variable_count": 112,
+      "variables_in": 112
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_4_1_full/reduce_capD": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 0,
+      "replay_gate": null,
+      "replay_multisets_equal": null,
+      "residual_rows": null,
+      "residual_sha256": null,
+      "rows_used": 149,
+      "surviving_variable_count": 112,
+      "variables_in": 112
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_4_1_full/reduce_capE": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 38,
+      "replay_gate": "PASS",
+      "replay_multisets_equal": true,
+      "residual_rows": "98",
+      "residual_sha256": "d5d84e12ab5dd20e2933b810c4a68b62cb70124faa2ed09e1e6a62c91e02cc9d",
+      "rows_used": 149,
+      "surviving_variable_count": 74,
+      "variables_in": 112
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_4_1_full/reduce_fullp": {
+      "cap_bytes": 0,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 0,
+      "replay_gate": null,
+      "replay_multisets_equal": null,
+      "residual_rows": null,
+      "residual_sha256": null,
+      "rows_used": 352,
+      "surviving_variable_count": 112,
+      "variables_in": 112
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_5_full/reduce_capB": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 0,
+      "replay_gate": null,
+      "replay_multisets_equal": null,
+      "residual_rows": "0",
+      "residual_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "rows_used": 183,
+      "surviving_variable_count": 111,
+      "variables_in": 111
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_5_full/reduce_capC": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 0,
+      "replay_gate": null,
+      "replay_multisets_equal": null,
+      "residual_rows": null,
+      "residual_sha256": null,
+      "rows_used": 183,
+      "surviving_variable_count": 111,
+      "variables_in": 111
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_5_full/reduce_capD": {
+      "cap_bytes": 30000,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 50,
+      "replay_gate": "PASS",
+      "replay_multisets_equal": true,
+      "residual_rows": "66",
+      "residual_sha256": "78dec73559a7dc89f72187714e7bb740624e0dfd6bdaeffaa0059b7bca3b65b6",
+      "rows_used": 183,
+      "surviving_variable_count": 61,
+      "variables_in": 111
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_5_full/reduce_capQ30k": {
+      "cap_bytes": 30000,
+      "characteristic": 0,
+      "input_rows": 352,
+      "pivots": 50,
+      "replay_gate": "PASS",
+      "replay_multisets_equal": true,
+      "residual_rows": "66",
+      "residual_sha256": "9ff46dec0dc2921e4836d48ef249258f14c5beb3922e16b094c3d5b0c3821181",
+      "rows_used": 183,
+      "surviving_variable_count": 61,
+      "variables_in": 111
+    },
+    "S1_n18_m12_Mm4_V1_k6_part_5_full/reduce_fullp": {
+      "cap_bytes": 0,
+      "characteristic": 32003,
+      "input_rows": 352,
+      "pivots": 0,
+      "replay_gate": null,
+      "replay_multisets_equal": null,
+      "residual_rows": null,
+      "residual_sha256": null,
+      "rows_used": 352,
+      "surviving_variable_count": 111,
+      "variables_in": 111
+    }
+  },
+  "schema": "jc2.g9966n1b3.results/v1",
+  "verdict": "PARTIAL"
+}

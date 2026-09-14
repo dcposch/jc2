@@ -1,0 +1,35 @@
+diff --git a/box/f10-r1-engine-compatibility-astra-20260909/engine.py b/box/f10-r1-exact-decision-extended-code-astra-20260909/engine.py
+index 9e2936ac..ff2dd893 100644
+--- a/box/f10-r1-engine-compatibility-astra-20260909/engine.py
++++ b/box/f10-r1-exact-decision-extended-code-astra-20260909/engine.py
+@@ -3,7 +3,7 @@ import sys
+ sys.dont_write_bytecode = True
+ from pathlib import Path
+ sys.path.insert(0, str(Path(__file__).resolve().parent))
+-import hashlib, json, os, subprocess
++import hashlib, json, os, resource, subprocess
+ from execution_gate import authorize
+ 
+ ARTIFACT = '168bdfd3a791f24a6631de66ae4e71c3f209ee9eb0d21fc466f9aa802f5ad576'
+@@ -85,7 +85,7 @@ def main():
+         need([os.fsdecode(x) for x in raw]==argv,'nested actual argv mismatch/too-fast identity unavailable')
+         need(childns==ns and os.getpgid(child.pid)==pgid,'nested engine escaped namespace/PGID')
+         rc=child.wait()
+-    need(rc==0 and sha(executable)==authority['engine_sha256'],'engine failed/changed: INCONCLUSIVE')
++        usage=resource.getrusage(resource.RUSAGE_CHILDREN)
+     result={'schema':'F10-ENGINE/1','execution':custody,'artifact_sha256':ARTIFACT,
+             'engine_path':str(executable),'engine_sha256':sha(executable),
+             'engine_version':authority['engine_version'],'engine_argv':argv,
+@@ -93,7 +93,11 @@ def main():
+             'input_path':str(inputfile),'input_sha256':sha(inputfile),
+             'stdout_path':str(stdout),'stdout_sha256':sha(stdout),
+             'stderr_path':str(stderr),'stderr_sha256':sha(stderr),'returncode':rc,
+-            'status':'CANDIDATE-ONLY-NOT-DECISION'}
++            'children_rusage':{'user_cpu_seconds':usage.ru_utime,'system_cpu_seconds':usage.ru_stime,
++                               'maxrss_kib':usage.ru_maxrss,
++                               'scope':'RUSAGE_CHILDREN cumulative waited-child accounting; Linux maxrss is largest child, not PGID sum'},
++            'status':'ENGINE-FAILED-INCONCLUSIVE' if rc!=0 else 'CANDIDATE-ONLY-NOT-DECISION'}
+     with Path(sys.argv[3]).open('x') as f: json.dump(result,f,sort_keys=True); f.write('\n')
++    need(rc==0 and sha(executable)==authority['engine_sha256'],'engine failed/changed: INCONCLUSIVE')
+ 
+ if __name__=='__main__': main()

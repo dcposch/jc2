@@ -1,0 +1,242 @@
+{
+  "all_subprocesses_terminal": true,
+  "pins": {
+    "baseline.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "exporter.py": "6c5de09e1890e3a1313a876d4915ec78dd3f0844117c606d86a9a38ce4919ab9",
+    "run_controls.py": "8c54cc72647a47efc0fc6f7f88ee07df14da841ea08242401e62d028e180d992",
+    "test-O-pass.json": "ddf4146e845e91750a01045156ccea32aa1a5135d33c61abc65438c7c28edd4a",
+    "test-normal.json": "4ec62facc92f14a3581d3599a69a39558a3057246d7329a101a76ade933c295b",
+    "test_exporter.py": "4c75795c71ff36eeb11e37ae7c338d5a97fcc53385db2bad8850ece4928ccf99"
+  },
+  "production_arithmetic": false,
+  "remote_or_cas": false,
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-O-pass.json"
+      ],
+      "expected_rc": 0,
+      "label": "O-pass",
+      "rc": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"PASS\", \"checks\": 53, \"seconds\": 0.06019765499513596, \"maxrss_KiB\": 27132, \"toy_directory\": \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/toy-bo_y5_li\"}\n",
+      "terminal": true,
+      "wall_seconds": 0.2949401239166036
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-normal-missing_low.json",
+        "--mutation",
+        "missing_low"
+      ],
+      "expected_rc": 1,
+      "label": "normal-missing_low",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.16016141301952302
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-O-missing_low.json",
+        "--mutation",
+        "missing_low"
+      ],
+      "expected_rc": 1,
+      "label": "O-missing_low",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.5908380439504981
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-normal-field_split.json",
+        "--mutation",
+        "field_split"
+      ],
+      "expected_rc": 1,
+      "label": "normal-field_split",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.15906450001057237
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-O-field_split.json",
+        "--mutation",
+        "field_split"
+      ],
+      "expected_rc": 1,
+      "label": "O-field_split",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.5997919150395319
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-normal-target.json",
+        "--mutation",
+        "target"
+      ],
+      "expected_rc": 1,
+      "label": "normal-target",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.15750720095820725
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-O-target.json",
+        "--mutation",
+        "target"
+      ],
+      "expected_rc": 1,
+      "label": "O-target",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.5928065589396283
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-normal-fixed_zero.json",
+        "--mutation",
+        "fixed_zero"
+      ],
+      "expected_rc": 1,
+      "label": "normal-fixed_zero",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at coefficient\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.15845821390394121
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-O-fixed_zero.json",
+        "--mutation",
+        "fixed_zero"
+      ],
+      "expected_rc": 1,
+      "label": "O-fixed_zero",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at coefficient\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.6000235519604757
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-normal-guard.json",
+        "--mutation",
+        "guard"
+      ],
+      "expected_rc": 1,
+      "label": "normal-guard",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.16196190391201526
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-O-guard.json",
+        "--mutation",
+        "guard"
+      ],
+      "expected_rc": 1,
+      "label": "O-guard",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.5898292900528759
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-normal-resynced.json",
+        "--mutation",
+        "resynced"
+      ],
+      "expected_rc": 1,
+      "label": "normal-resynced",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.1635132300434634
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test-O-resynced.json",
+        "--mutation",
+        "resynced"
+      ],
+      "expected_rc": 1,
+      "label": "O-resynced",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 279, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/test_exporter.py\", line 264, in main\n    E.verify_stream(mutations[args.mutation], spec)\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 284, in verify_stream\n    require(got == B.canonical(expected), 'strict full stream replay mismatch at '+expected['type'])\n  File \"/home/ubuntu/jc2/box/d125-small-source-exporter-prep-20260906/exporter.py\", line 31, in require\n    raise ValueError(message)\nValueError: strict full stream replay mismatch at row\n",
+      "stdout": "",
+      "terminal": true,
+      "wall_seconds": 0.5981820949818939
+    }
+  ],
+  "status": "PASS"
+}

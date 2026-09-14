@@ -1,0 +1,55 @@
+{
+  "effective_ctop_fails_by_us": {
+    "1": 936,
+    "2": 211,
+    "3": 8,
+    "4": 5,
+    "5": 1
+  },
+  "us1_fail_count": 936,
+  "us1_fail_ell0": 0,
+  "us1_all_ell0": 0,
+  "us1_fail_effective_sp2": 0,
+  "any_fail_effective_sp2": 0,
+  "higher_fail_ell0": 109
+}
+EXAMPLE 1 parent 96 72 [-72, 36, 78, 94] {'2': 1, '3': 3, '4': 5}
+child 16 12 [-12, 6, 13] [1, 3] [16, 4, 2, 1] ell 3 us 1 drops 0 delta(s-1) 1/7
+route [{"j": 3, "delta": "1/7", "L": 1, "A": 7, "P": 10, "Q": 15, "lower_bound": "2/3", "selected_V": 3, "selected_mode": "zero", "zero_multiplicity": 3, "nonzero_orbit_multiplicities": [1], "danger": true, "removable": false}, {"j": 2, "delta": "2/7", "L": 7, "A": 1, "P": 6, "Q": 15, "lower_bound": "2/5", "selected_V": 1, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [1, 1, 1, 1, 1, 1], "danger": true, "removable": false}]
+bottom {'A1': 2, 'V2': 1, 'zero': False}
+EXAMPLE 2 parent 96 72 [-72, 36, 78, 94] {'2': 4, '3': 3, '4': 5}
+child 16 12 [-12, 6, 13] [4, 3] [16, 4, 2, 1] ell 3 us 1 drops 0 delta(s-1) 1/7
+route [{"j": 3, "delta": "1/7", "L": 1, "A": 7, "P": 10, "Q": 15, "lower_bound": "2/3", "selected_V": 3, "selected_mode": "zero", "zero_multiplicity": 3, "nonzero_orbit_multiplicities": [1], "danger": true, "removable": false}, {"j": 2, "delta": "2/7", "L": 7, "A": 1, "P": 6, "Q": 15, "lower_bound": "2/5", "selected_V": 4, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [4, 1, 1], "danger": true, "removable": false}]
+bottom {'A1': 3, 'V2': 4, 'zero': False}
+EXAMPLE 3 parent 90 60 [-60, 10, 45, 88] {'2': 1, '3': 8, '4': 4}
+child 18 12 [-12, 2, 9] [1, 8] [18, 6, 2, 1] ell 2 us 1 drops 0 delta(s-1) 8/35
+route [{"j": 3, "delta": "8/35", "L": 1, "A": 35, "P": 8, "Q": 36, "lower_bound": "2/9", "selected_V": 8, "selected_mode": "zero", "zero_multiplicity": 8, "nonzero_orbit_multiplicities": [], "danger": true, "removable": false}, {"j": 2, "delta": "5/21", "L": 35, "A": 3, "P": 24, "Q": 64, "lower_bound": "3/8", "selected_V": 1, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [1, 1, 1, 1, 1, 1, 1, 1], "danger": true, "removable": false}]
+bottom {'A1': 2, 'V2': 1, 'zero': False}
+EXAMPLE 4 parent 108 72 [-72, 24, 78, 106] {'2': 1, '3': 4, '4': 5}
+child 18 12 [-12, 4, 13] [1, 4] [18, 6, 2, 1] ell 3 us 1 drops 0 delta(s-1) 1/6
+route [{"j": 3, "delta": "1/6", "L": 1, "A": 6, "P": 10, "Q": 25, "lower_bound": "2/5", "selected_V": 4, "selected_mode": "zero", "zero_multiplicity": 4, "nonzero_orbit_multiplicities": [1], "danger": true, "removable": false}, {"j": 2, "delta": "2/9", "L": 6, "A": 3, "P": 12, "Q": 28, "lower_bound": "3/7", "selected_V": 1, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [1, 1, 1, 1], "danger": true, "removable": false}]
+bottom {'A1': 1, 'V2': 1, 'zero': False}
+EXAMPLE 5 parent 108 72 [-72, 48, 90, 106] {'2': 1, '3': 3, '4': 5}
+child 18 12 [-12, 8, 15] [1, 3] [18, 6, 2, 1] ell 3 us 1 drops 0 delta(s-1) 1/7
+route [{"j": 3, "delta": "1/7", "L": 1, "A": 7, "P": 10, "Q": 15, "lower_bound": "2/3", "selected_V": 3, "selected_mode": "zero", "zero_multiplicity": 3, "nonzero_orbit_multiplicities": [1], "danger": true, "removable": false}, {"j": 2, "delta": "2/7", "L": 7, "A": 1, "P": 9, "Q": 15, "lower_bound": "3/5", "selected_V": 1, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [1, 1, 1, 1, 1, 1, 1, 1, 1], "danger": true, "removable": false}]
+bottom {'A1': 2, 'V2': 1, 'zero': False}
+EXAMPLE 6 parent 144 96 [-96, -32, 104, 142] {'2': 1, '3': 14, '4': 7}
+child 18 12 [-12, -4, 13] [1, 14] [18, 6, 2, 1] ell 5 us 1 drops 0 delta(s-1) 2/17
+route [{"j": 3, "delta": "2/17", "L": 1, "A": 17, "P": 14, "Q": 35, "lower_bound": "2/5", "selected_V": 14, "selected_mode": "zero", "zero_multiplicity": 14, "nonzero_orbit_multiplicities": [], "danger": true, "removable": false}, {"j": 2, "delta": "7/51", "L": 17, "A": 3, "P": 42, "Q": 154, "lower_bound": "3/11", "selected_V": 1, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "danger": true, "removable": false}]
+bottom {'A1': 1, 'V2': 1, 'zero': False}
+EXAMPLE 7 parent 96 72 [-72, -60, 56, 94] {'2': 1, '3': 9, '4': 3}
+child 24 18 [-18, -15, 14] [1, 9] [24, 6, 3, 1] ell 1 us 1 drops 0 delta(s-1) 9/29
+route [{"j": 3, "delta": "9/29", "L": 1, "A": 29, "P": 9, "Q": 30, "lower_bound": "3/10", "selected_V": 9, "selected_mode": "zero", "zero_multiplicity": 9, "nonzero_orbit_multiplicities": [], "danger": true, "removable": false}, {"j": 2, "delta": "19/58", "L": 29, "A": 2, "P": 18, "Q": 117, "lower_bound": "2/13", "selected_V": 1, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [1, 1, 1, 1, 1, 1, 1, 1, 1], "danger": true, "removable": false}]
+bottom {'A1': 2, 'V2': 1, 'zero': False}
+EXAMPLE 8 parent 144 96 [-96, -16, 72, 140, 142] {'2': 1, '3': 10, '4': 5, '5': 3}
+child 36 24 [-24, -4, 18] [1, 10] [36, 12, 4, 2] ell 1 us 1 drops 1 delta(s-1) 0
+route [{"j": 4, "delta": "0", "L": 1, "A": 1, "P": 6, "Q": 3, "lower_bound": "2", "selected_V": 5, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [5, 1], "danger": true, "removable": true}, {"j": 3, "delta": "17/44", "L": 1, "A": 44, "P": 10, "Q": 45, "lower_bound": "2/9", "selected_V": 10, "selected_mode": "zero", "zero_multiplicity": 10, "nonzero_orbit_multiplicities": [], "danger": true, "removable": false}, {"j": 2, "delta": "13/33", "L": 44, "A": 3, "P": 30, "Q": 100, "lower_bound": "3/10", "selected_V": 1, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "danger": true, "removable": false}]
+bottom {'A1': 1, 'V2': 1, 'zero': False}
+EXAMPLE 9 parent 150 100 [-100, -60, 65, 148] {'2': 1, '3': 6, '4': 3}
+child 60 40 [-40, -24, 26] [1, 6] [60, 20, 4, 2] ell 0 us 2 drops 0 delta(s-1) 33/50
+route [{"j": 3, "delta": "33/50", "L": 1, "A": 50, "P": 6, "Q": 51, "lower_bound": "2/17", "selected_V": 6, "selected_mode": "zero", "zero_multiplicity": 6, "nonzero_orbit_multiplicities": [], "danger": true, "removable": false}, {"j": 2, "delta": "83/125", "L": 50, "A": 5, "P": 30, "Q": 126, "lower_bound": "5/21", "selected_V": 1, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [1, 1, 1, 1, 1, 1], "danger": true, "removable": false}]
+bottom {'A1': 1, 'V2': 1, 'zero': False}
+EXAMPLE 10 parent 150 100 [-100, -60, 65, 148] {'2': 5, '3': 6, '4': 3}
+child 60 40 [-40, -24, 26] [5, 6] [60, 20, 4, 2] ell 0 us 2 drops 0 delta(s-1) 33/50
+route [{"j": 3, "delta": "33/50", "L": 1, "A": 50, "P": 6, "Q": 51, "lower_bound": "2/17", "selected_V": 6, "selected_mode": "zero", "zero_multiplicity": 6, "nonzero_orbit_multiplicities": [], "danger": true, "removable": false}, {"j": 2, "delta": "83/125", "L": 50, "A": 5, "P": 30, "Q": 126, "lower_bound": "5/21", "selected_V": 5, "selected_mode": "nonzero", "zero_multiplicity": 0, "nonzero_orbit_multiplicities": [5, 1], "danger": true, "removable": false}]
+bottom {'A1': 3, 'V2': 5, 'zero': False}

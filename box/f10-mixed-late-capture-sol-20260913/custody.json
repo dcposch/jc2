@@ -1,0 +1,23 @@
+{
+  "schema":"jc2.terminal-custody/v1",
+  "task":"f10-mixed-late-capture-sol-20260913",
+  "status":"TERMINAL_INTERNAL_UNREVIEWED_UNEXECUTED_UNBOUND",
+  "first_action_utc":"2026-09-13T00:20:20.394704716Z",
+  "custody_authored_utc":"2026-09-13T00:25:15.387894921Z",
+  "all_writers":"IDLE after custody publication; no further authored-file changes",
+  "inputs_postpin_status":"MATCHED_ALL_NINE",
+  "outputs":{
+    "dispatch":{"path":"box/f10-mixed-late-capture-sol-20260913/dispatch.py","sha256":"079f9ad7b92e64af5c5fc6a5e17de14ffa5245627ee5c8a4ce0ef2a018a2fa5d"},
+    "unit":{"path":"box/f10-mixed-late-capture-sol-20260913/science-unit.template.sh","sha256":"3bee708f82e06e77426ddd7bca9953ef84858b058d88f78c5bf25672a6e579eb"},
+    "delta":{"path":"box/f10-mixed-late-capture-sol-20260913/DELTA.md","sha256":"d3c40887b9a216909ec0e8e2f93e424e9d4d0b0978d3872dbb9be5583b1b3bb3"},
+    "pins":{"path":"box/f10-mixed-late-capture-sol-20260913/PINS.json","sha256":"41b404af055fcf4387541c3aa6d0c3376a60e2835e92dcb2b8652125593bd643"},
+    "report":{"path":"xmodel/f10-mixed-late-capture-sol-20260913.md","sha256":"92e5b22e0ca038eb266cc065bf1fbd9133729377cc418c168523f7d22ea8df0a"},
+    "manifest":{"path":"xmodel/f10-mixed-late-capture-sol-20260913.md.artifact.json","sha256":"c51fb085658a19beb7d9327f1861f0a35ec2e42373d1682724b44d372a78bdfa"}
+  },
+  "verification":{
+    "expected_basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256":"c51fb085658a19beb7d9327f1861f0a35ec2e42373d1682724b44d372a78bdfa",
+    "artifact_finalize":"VERIFIED",
+    "all_owned_readback":"WHOLE"
+  }
+}

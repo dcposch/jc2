@@ -1,0 +1,46 @@
+{
+  "schema": "jc2.native-cross-custody/v1",
+  "task": "ideation-20260913T0925Z-cross-astra",
+  "owner": "/root/execution_reliability",
+  "collector": "/root",
+  "actual_first_utc": "2026-09-13T09:57:14Z",
+  "original_reserve_utc": "2026-09-13T10:10:00Z",
+  "original_hard_utc": "2026-09-13T10:13:00Z",
+  "original_synthesis_target_utc": "2026-09-13T10:20:00Z",
+  "original_full_backstop_utc": "2026-09-13T10:22:49.724379680Z",
+  "report_writers_idle_utc": "2026-09-13T10:03:04Z",
+  "final_whole_readback_postpins_expected_verify_completed_utc": "2026-09-13T10:03:21Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report": {
+    "path": "xmodel/ideation-20260913T0925Z-cross-astra.md",
+    "sha256": "4cc2f0ec6b45be097a53d1837cfe90792aada95e08f7f65be4b295608ccd5f4c",
+    "body_sha256": "832d7a4a2f66c7b24b2d457e4deac133337a21ffcff035c9d786a078b4b9e63c",
+    "manifest_path": "xmodel/ideation-20260913T0925Z-cross-astra.md.artifact.json",
+    "manifest_sha256": "184effcad83a19aa5a3aa5acd8ae1df54fc748e97fa5eb3d44fc7a62bc0eb8c6",
+    "expected_basis_and_manifest_verification": "VERIFIED",
+    "final_report_and_manifest_readback": "WHOLE, no clipping, after all body changes and finalization",
+    "body_end": "unique; appended last before close/finalize",
+    "authored_body_word_count_before_marker": 1600
+  },
+  "pins": {
+    "path": "box/ideation-20260913T0925Z-cross-astra/PINS.sha256",
+    "sha256": "2a66b8430baf943f5b6dedb9e31e7b80039067e2e60a3f7cd4acb5c7908dea81",
+    "pre_read_authentication": "COMMON and CROSS-INPUTS authenticated before own reads; all seven manifest targets matched before three blinds and POSTBLIND reads",
+    "post_report_readback": "all nine registered paths matched",
+    "whole_reads": "CROSS-COMMON, ROOT blind, Astra blind, Fable blind, POSTBLIND",
+    "explicit_reuse": "personal prior WHOLE APPROACHES eaa26e236d0f48167db23bfc2c0db4d3fc4987e7a8e9dcbfd47ee6f013e318c8 and COORDINATION 77ec0b282f4813ee9a2b71ebced492cc6f0b9262acf90a28f444ed9a507190bd",
+    "clipping_recovery": "Initial aggregate four-file response clipped centrally; separate complete Fable and POSTBLIND reads recovered all affected intervals. ROOT and Astra complete first outputs had visible terminal seals. No unresolved clipped interval."
+  },
+  "scope": {
+    "live_peer_cross_read": false,
+    "extra_linked_source_read": false,
+    "network_or_aws": false,
+    "scientific_execution": false,
+    "new_agents": false,
+    "shared_edits": false,
+    "protected_tree_or_mirrors_inspected": false,
+    "administrative_execution": "unchanged pinned artifact_finalize only; inert text/hash/date and own metadata operations",
+    "verdict": "MANUAL UNPROMOTED. S ring and minimal sole-pole/order<=2 Mobius arguments CONFIRMED at their stated scope. NO_TEST for proof and disproof. No successor. Same-model agreement is not a different-model gate."
+  },
+  "terminal_protocol": "This custody is the final authored metadata. Following readonly mode, whole custody read, hash and final postpins, the terminal message records actual ALL WRITERS IDLE UTC and custody hash. No child or external writer is active."
+}

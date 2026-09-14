@@ -1,0 +1,30 @@
+{
+  "schema":"jc2.bounded-desk-custody/v1",
+  "task":"d125-minimal-monomial-receiver-composition-astra-20260906",
+  "owner":"nonemptiness_certificate",
+  "recipient":"root",
+  "status":"TERMINAL_PROVISIONAL_COMPOSITION_FOR_GATE",
+  "terminal_utc":"2026-09-06T22:40:11Z",
+  "all_writers_done":true,
+  "background_jobs":[],
+  "workers":[],
+  "no_live_edit_promise":true,
+  "no_AWS_CAS_classifier_builder_solver":true,
+  "pinned_input_checks":{"count":3,"mismatches":[]},
+  "report":{
+    "path":"xmodel/d125-minimal-monomial-receiver-composition-astra-20260906.md",
+    "bytes":14478,
+    "sha256":"7dec79af1aa62946b46ecb209a710dd95e1b226b6b78229a3f232160a5385413",
+    "body_sha256":"ad0581a0cd7e9879fb547c05ef1ea3ec8a8f2f4b63fac262adbbd12c97c041ad",
+    "manifest_sha256":"9a4dade35da0506f80add8c62df54fc6976d74779b29da9d38679ae7b781972b",
+    "transaction_verified":true
+  },
+  "owned_artifacts":{
+    "box/d125-minimal-monomial-receiver-composition-20260906/check.py":"3ff299bc761f0e80ef47c254ce59b187e5e87315e8855f77b2a522a7a99e9ac3",
+    "box/d125-minimal-monomial-receiver-composition-20260906/registration.json":"801d2e0398b2c202ba98702e7da97f6cb7c40031c25e975d8b89bf9fd711d4e0",
+    "box/d125-minimal-monomial-receiver-composition-20260906/inputs.json":"4b7d3244058dd462662c3f603a09ac09b47c3a49389dd9c82aed5da7189978b8",
+    "box/d125-minimal-monomial-receiver-composition-20260906/replay.json":"b011dcc1db7303c75333ac593e8c75a64fce78cd260f2c1a7335b97d5340f358"
+  },
+  "acceptance_boundary":"Exact coefficientwise receiver-map composition, faces and counts only; incoming necessary theorem retains its trust boundary. No reverse polynomial Keller lift, Moh/Roy/Strinz coefficient attachment, properness/exclusion, global optimality or runtime-gain claim.",
+  "perimeter":"Only terminal predecessor/gate consumed. No live positive-face gate or protected-project read; no earlier artifact/shared-ledger edits."
+}

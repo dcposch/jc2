@@ -1,0 +1,12 @@
+{
+  "type": "FOREGROUND RESOURCE-GUARD RECORD / EXACT-Q T2 PREFIX",
+  "status": "RESOURCE-GUARD-STOP[SIGNAL-15]",
+  "command": "OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=NUMEXPR_NUM_THREADS=1 /usr/bin/time -v timeout 3000 python3 t2_prefix_low.py --cap 70",
+  "wall_seconds": 1816.68,
+  "user_seconds": 1803.24,
+  "max_rss_kib": 804168,
+  "session_exit_status": 143,
+  "stdout_bytes": 0,
+  "rows_or_pivots_emitted": false,
+  "claim_guard": "No additional row, pivot, dimension, consistency, or unit-ideal conclusion is inferred beyond the completed s<=63 prefix."
+}

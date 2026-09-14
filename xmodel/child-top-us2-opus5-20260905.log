@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/child-top-us2-opus5-20260905.md` (19,931 B, `<!-- BODY-END -->`, `charge_basis=ABSENT` per the validator — no new exit-price assertion).
+
+## Verdict
+
+**`OPEN[CHILD-TOP-AT-US-GE-2]` is REFUTED as posed, and its framing was wrong in two places.**
+
+**The reduction (new, proved).** Holding γ fixed in Prop 6.3's substitution and letting π→∞: `y = γ^{-u_s}` is *fixed* and `x → ∞`. So the child's place at π=∞ over k(γ) is the parent's place at x=∞ over k(y). Hence the child's own p.150 datum is the parent's **x-side** datum — `M'_j = M̃_j`, `n' = deg_x g`, `m' = deg_x f`. That last identity is Prop 6.3(2)'s own π-degree, and it's what makes the charge executable at all: no formal descent is needed to read the child's expansion. Validated 8/8 exactly against three independent engines.
+
+**The framing error.** p.150 sets `M_{h+1} = ∞` when `{i : f_i ≠ 0, d_h ∤ i}` is *empty* — it does not require `d_{h+1} = 1`. So there are three cases, not two: (a) `M'_{s'+1} = ∞` (chain ends at u_s; equivalent to x ∉ k(y,f,g), the x-side analogue of p.150's *stated* hypothesis y ∈ k(x,f,g)), (b) `= n'−1`, (c) `< n'−1`. **(a) and (b) both license (C-TOP)**; the OPEN listed only (b) and (c).
+
+**The measurement.** Over 1,199 instances reproducing every prediction Prop 6.3(2) + p.207 make about the child (n′, m′, `M'_i = M_i u_s/d_s` for i ≤ s−1, `d'_{s'+1} = u_s`), at u_s = 2/3/4/5: **1,188 case (c), 11 case (a), 0 case (b)**. The conjectured value never occurs.
+
+**Scope limit, stated in §0(D) and §4.** None of the 1,199 carries δ_s = −1 — by Prop 5.1 that's exactly `M_s = n−2`, and 0 of ~54,000 random pairs met it. So this refutes the statement *as a consequence of the descent*, not on the census locus. Parts (1) and (3) of the charge are therefore **delivered only in part**: I computed children at u_s = 2,3,4,5 but not the three named descent-forced rows nor the (99,66) u_s=3 row — those are hypothetical Keller pairs with no polynomial realisation, and the generic-branch route needs `M_s = n−2`. Part (3) was not run because (2) came back refuted.
+
+**Consequence.** Residual **unchanged at 478**; the 227 live descent-forced rows stay live under `OPEN[CTOP-EXTRA-CONDITION-E]`. The counterfactual (225/310, 196/233) is recorded but explicitly not charged.
+
+Two by-catches worth having: `δ_s = −1 ⟺ M_s = n−2` follows from *both* branches of Prop 5.1 (p.173–174) — a numeric test for Prop 6.3's second hypothesis; and p.201 (4) states outright that `{n, M_1…M_s}` is only the part of the characteristic data below the n−2 cut, so `V_{s+1} = d_{s+1}` is a convention attached to that truncation.
+DIVERT path=xmodel/child-top-us2-opus5-20260905.md status=CLEAN body_bytes=19931 body_sha256=f774a7ff7b0a377c2bd4d876832a0ccd08ca6040c78c7630a176587f02cf492b

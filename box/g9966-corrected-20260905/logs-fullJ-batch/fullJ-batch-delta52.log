@@ -1,0 +1,128 @@
+delta52 inner minor solved in 1.52s
+delta52 inner low-weight product: 25 slots, 1.92s
+delta52 inner incidence reduced: 14 pivots, 2.96s
+delta52 inner: 76 preincidence, 14 QQ* pivots, 0 residual, 3.24s
+delta52 inner minor solved in 1.48s
+delta52 inner low-weight product: 25 slots, 1.88s
+delta52 inner incidence reduced: 14 pivots, 2.96s
+delta52 inner: 76 preincidence, 14 QQ* pivots, 0 residual, 3.24s
+{"status": "MATERIALIZED", "branch": "delta52", "source_image_sha256": "2bbd64819b07cc772872d70d83a943297a85bc86e60b0cbe028413cba04055c3", "generator_count": 1063}
+delta52: generating exact w Jacobian bands t74..81
+FLINT encoded 46 active coefficient variables; 0.56s
+FLINT exact products complete; bands 74..81 have 53994 terms; 211.19s
+delta52: Jacobian_t74 67 nonzero rows before QQ* reduction
+delta52: Jacobian_t74 5 residual, 65 free; exact Singular
+delta52: Jacobian_t74 dimension=60
+delta52: Jacobian_t75 66 nonzero rows before QQ* reduction
+delta52: Jacobian_t75 5 residual, 64 free; exact Singular
+delta52: Jacobian_t75 dimension=59
+delta52: Jacobian_t76 65 nonzero rows before QQ* reduction
+delta52: Jacobian_t76 5 residual, 63 free; exact Singular
+delta52: Jacobian_t76 dimension=58
+delta52: Jacobian_t77 0 nonzero rows before QQ* reduction
+delta52: Jacobian_t77 5 residual, 63 free; exact Singular
+delta52: Jacobian_t77 dimension=58
+delta52: Jacobian_t78 64 nonzero rows before QQ* reduction
+delta52: Jacobian_t78 5 residual, 62 free; exact Singular
+delta52: Jacobian_t78 dimension=57
+delta52: Jacobian_t79 63 nonzero rows before QQ* reduction
+delta52: Jacobian_t79 5 residual, 61 free; exact Singular
+delta52: Jacobian_t79 dimension=56
+delta52: Jacobian_t80 62 nonzero rows before QQ* reduction
+delta52: Jacobian_t80 5 residual, 60 free; exact Singular
+delta52: Jacobian_t80 dimension=55
+delta52: Jacobian_t81 62 nonzero rows before QQ* reduction
+delta52: Jacobian_t81 5 residual, 58 free; exact Singular
+delta52: Jacobian_t81 dimension=53
+delta52: generating exact w Jacobian bands t82..89
+FLINT encoded 47 active coefficient variables; 1.16s
+FLINT exact products complete; bands 82..89 have 248463 terms; 606.14s
+delta52: Jacobian_t82 61 nonzero rows before QQ* reduction
+delta52: Jacobian_t82 5 residual, 57 free; exact Singular
+delta52: Jacobian_t82 dimension=52
+delta52: Jacobian_t83 60 nonzero rows before QQ* reduction
+delta52: Jacobian_t83 5 residual, 56 free; exact Singular
+delta52: Jacobian_t83 dimension=51
+delta52: Jacobian_t84 59 nonzero rows before QQ* reduction
+delta52: Jacobian_t84 5 residual, 55 free; exact Singular
+delta52: Jacobian_t84 dimension=50
+delta52: Jacobian_t85 59 nonzero rows before QQ* reduction
+delta52: Jacobian_t85 5 residual, 53 free; exact Singular
+delta52: Jacobian_t85 dimension=48
+delta52: Jacobian_t86 58 nonzero rows before QQ* reduction
+delta52: Jacobian_t86 5 residual, 52 free; exact Singular
+delta52: Jacobian_t86 dimension=47
+delta52: Jacobian_t87 57 nonzero rows before QQ* reduction
+delta52: Jacobian_t87 5 residual, 51 free; exact Singular
+delta52: Jacobian_t87 dimension=46
+delta52: Jacobian_t88 57 nonzero rows before QQ* reduction
+delta52: Jacobian_t88 5 residual, 50 free; exact Singular
+delta52: Jacobian_t88 dimension=45
+delta52: Jacobian_t89 56 nonzero rows before QQ* reduction
+delta52: Jacobian_t89 5 residual, 49 free; exact Singular
+delta52: Jacobian_t89 dimension=44
+delta52: generating exact w Jacobian bands t90..97
+FLINT encoded 48 active coefficient variables; 2.19s
+FLINT exact products complete; bands 90..97 have 752164 terms; 1511.14s
+delta52: Jacobian_t90 55 nonzero rows before QQ* reduction
+delta52: Jacobian_t90 5 residual, 48 free; exact Singular
+delta52: Jacobian_t90 dimension=43
+delta52: Jacobian_t91 54 nonzero rows before QQ* reduction
+delta52: Jacobian_t91 5 residual, 47 free; exact Singular
+delta52: Jacobian_t91 dimension=42
+delta52: Jacobian_t92 54 nonzero rows before QQ* reduction
+delta52: Jacobian_t92 5 residual, 45 free; exact Singular
+delta52: Jacobian_t92 dimension=40
+delta52: Jacobian_t93 53 nonzero rows before QQ* reduction
+delta52: Jacobian_t93 5 residual, 44 free; exact Singular
+delta52: Jacobian_t93 dimension=39
+delta52: Jacobian_t94 52 nonzero rows before QQ* reduction
+delta52: Jacobian_t94 5 residual, 43 free; exact Singular
+delta52: Jacobian_t94 dimension=38
+delta52: Jacobian_t95 52 nonzero rows before QQ* reduction
+delta52: Jacobian_t95 5 residual, 41 free; exact Singular
+delta52: Jacobian_t95 dimension=36
+delta52: Jacobian_t96 51 nonzero rows before QQ* reduction
+delta52: Jacobian_t96 5 residual, 39 free; exact Singular
+delta52: Jacobian_t96 dimension=34
+Traceback (most recent call last):
+  File "/home/ubuntu/g9966-corrected-jacobian-batch/deep_resume_jacobian_batch.py", line 215, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-batch/deep_resume_jacobian_batch.py", line 208, in main
+    if add(rows,f'Jacobian_t{tp}'):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-batch/deep_resume_jacobian_batch.py", line 135, in add
+    current=[(label,E.substitute_map(sp.sympify(value),mapping)) for label,value in rows]
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian/run-code-source-full/engine.py", line 39, in substitute_map
+    image=sp.expand(current.xreplace(substitutions))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/function.py", line 2845, in expand
+    return sympify(e).expand(deep=deep, modulus=modulus, **hints)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/expr.py", line 3704, in expand
+    expr, hit = Expr._expand_hint(expr, hint, deep=deep, **hints)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/expr.py", line 3640, in _expand_hint
+    expr = expr.func(*sargs)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/cache.py", line 72, in wrapper
+    retval = cfunc(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/operations.py", line 108, in __new__
+    c_part, nc_part, order_symbols = cls.flatten(args)
+                                     ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/add.py", line 320, in flatten
+    if s in terms:
+       ^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/basic.py", line 320, in __hash__
+    h = hash((type(self).__name__,) + self._hashable_content())
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/sympy/core/basic.py", line 315, in __hash__
+    def __hash__(self) -> int:
+
+KeyboardInterrupt

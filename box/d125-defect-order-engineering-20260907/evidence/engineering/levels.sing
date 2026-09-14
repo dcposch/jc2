@@ -1,0 +1,9 @@
+ring R=0,(x,y,z,t,u),(a(2,1,2,2,2),a(1,0,0,1,0),a(1,0,0,0,0),dp);
+short=0;
+print("LEVELS_BEGIN");print(attrib(basering,"global"));
+print(string(lead(x+y)));
+print(string(lead(x+z)));
+print(string(lead(x+t)));
+print(string(lead(y^2+z)));
+print(string(lead(z+u)));
+print("LEVELS_END");quit;

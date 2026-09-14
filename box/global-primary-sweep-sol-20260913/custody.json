@@ -1,0 +1,26 @@
+{
+  "task": "global-primary-sweep-sol-20260913",
+  "status": "TERMINAL",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc": "2026-09-13T03:58:13.519869334Z",
+  "network_closed_no_later_than_utc": "2026-09-13T04:02:33.504077324Z",
+  "custody_prewrite_utc": "2026-09-13T04:05:37.681187429Z",
+  "all_writers_idle": true,
+  "verdict": "NO_NEW_CLIENT",
+  "report": {"path":"xmodel/global-primary-sweep-sol-20260913.md","sha256":"b971087905011a5af24d42c9e79ac47a44c0c3b51b4c4c611be49bacb3949bd5","readback":"WHOLE"},
+  "manifest": {"path":"xmodel/global-primary-sweep-sol-20260913.md.artifact.json","sha256":"a3de3055d842e04547011dc9e015fc8594a1f59a7f514d47d57c49c255d9d252","readback":"WHOLE","expected_verify":"VERIFIED"},
+  "owned": [
+    {"path":"box/global-primary-sweep-sol-20260913/PINS.json","sha256":"4a6c45f34842c2ca6fd558178612d50bd492341f14a06a29c0704c54ab983120","readback":"WHOLE"},
+    {"path":"box/global-primary-sweep-sol-20260913/SOURCE-INDEX.md","sha256":"76654857b375aed6e470c1a0a5e527c4983231a210075234e4d1a9d93591ffc0","readback":"WHOLE"},
+    {"path":"box/global-primary-sweep-sol-20260913/arxiv-2011.03472v1.pdf","sha256":"9d0cc2d264b30267b17fef3ae8394f5cd9c45aceb450cfa7436fa2161f292db3","readback":"WHOLE PDF via complete text extraction"},
+    {"path":"box/global-primary-sweep-sol-20260913/arxiv-2407.13795v1.pdf","sha256":"c468d366ed3147043adc31795d30258176d9ecea3379a03422e150dc56e32b13","readback":"WHOLE PDF via complete text extraction"},
+    {"path":"box/global-primary-sweep-sol-20260913/arxiv-2607.20210v2.pdf","sha256":"66cbff919a7d8372f1ee4d53b9f887a249c53c91c9c1b79a02d3a67e7d2b06ec","readback":"WHOLE PDF via complete text extraction"}
+  ],
+  "input_postpins": [
+    {"path":"box/global-primary-sweep-sol-20260913/APPROACHES.snapshot.md","sha256":"a49f893bd08d5c303e3ed9437ba93c3ca06d77fea2ee8fe3163a0a4d48b85f71"},
+    {"path":"xmodel/websweep-20260912T1940Z-astra.md","sha256":"4b672be1d530cf29a03637a3863a950ad5e2e48b107da621bf783495bf65ef26"},
+    {"path":"COORDINATION.md","sha256":"33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597"},
+    {"path":"ops/artifact_finalize.py","sha256":"0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"}
+  ],
+  "scope": "bounded documentary primary-literature sweep; no scientific execution, source/ledger mutation, worker, or launch authority"
+}

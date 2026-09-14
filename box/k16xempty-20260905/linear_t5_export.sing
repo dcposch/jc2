@@ -1,0 +1,10 @@
+< "/home/ubuntu/jc2/box/k16xempty-20260905/controls_t5_raw.sing";
+proc dumprow(poly ff, string label)
+{
+  write("/home/ubuntu/jc2/box/k16xempty-20260905/linear_t5_terms.txt",label);
+  while(ff!=0){write("/home/ubuntu/jc2/box/k16xempty-20260905/linear_t5_terms.txt",string(leadcoef(ff))+"|"+string(leadexp(ff))); ff=ff-lead(ff);}
+}
+for(int kk=1;kk<=size(rows);kk++){dumprow(rows[kk],"ROW "+string(kk+1));}
+dumprow(target^2,"TARGET");
+print("LINEAR_EXPORT_DONE t=5");
+quit;

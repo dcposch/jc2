@@ -1,0 +1,125 @@
+2026-09-10T03:38:16.891568989Z
+Running as unit: jc2-f10-minimum-pivot-generic-20260910.service; invocation ID: e7e7daf4014747589555002e365d8f7b
+MainPID=1952
+ControlGroup=/system.slice/jc2-f10-minimum-pivot-generic-20260910.service
+ActiveState=active
+SubState=running
+InvocationID=e7e7daf4014747589555002e365d8f7b
+PRINCIPAL_PID 1952
+2026-09-10T03:38:16.949565320Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dispatch_batch.py ca6efd85ab0f6a2293acba91a3714a340e0d889febea9595e3ce412009c8e363 
+   1952       1    1952    1952 Rs         00:00 00:00:00 16432
+1952 (python3) R 1 1952 1952 0 -1 4194560 2347 0 0 0 2 0 0 0 20 0 1 0 19180 26890240 4119 18446744073709551615 4325376 7353021 140728207866608 0 0 0 0 16781312 2 0 0 0 17 11 0 0 0 0 0 10657224 12220544 331694080 140728207867268 140728207867426 140728207867426 140728207867879 0
+pid:[4026531836]
+PRINCIPAL_PID 1971
+2026-09-10T03:38:17.142114413Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-disabled.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-disabled.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-disabled.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-disabled.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-disabled.sentinel plain 
+   1971    1952    1952    1952 R          00:00 00:00:00 18964
+1971 (python3) R 1952 1952 1952 0 -1 4194304 2752 0 0 0 3 0 0 0 20 0 1 0 19199 29384704 4836 18446744073709551615 4325376 7353021 140735907140176 0 0 0 0 16781312 2 0 0 0 17 6 0 0 0 0 0 10657224 12220544 127688704 140735907142356 140735907143202 140735907143202 140735907143655 0
+pid:[4026531836]
+PRINCIPAL_PID 1981
+2026-09-10T03:38:17.199438805Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-disabled.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-disabled.sentinel plain 
+   1981    1971    1981    1981 Rs         00:00 00:00:00 18696
+1981 (python3) R 1971 1981 1981 0 -1 4194304 2635 0 0 0 3 0 0 0 20 0 1 0 19204 29151232 4730 18446744073709551615 4325376 7353021 140728771708576 0 0 0 0 16781312 2 0 0 0 17 4 0 0 0 0 0 10657224 12220544 90632192 140728771710182 140728771710498 140728771710498 140728771710951 0
+pid:[4026531836]
+PRINCIPAL_PID 2014
+2026-09-10T03:38:17.435419996Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-wronghost.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-wronghost.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-wronghost.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-wronghost.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-wronghost.sentinel plain 
+   2014    1952    1952    1952 R          00:00 00:00:00 13504
+2014 (python3) R 1952 1952 1952 0 -1 4194304 2227 0 0 0 2 0 0 0 20 0 1 0 19229 27516928 4280 18446744073709551615 4325376 7353021 140725843179456 0 0 0 0 16781312 2 0 0 0 17 13 0 0 0 0 0 10657224 12220544 882266112 140725843184335 140725843185186 140725843185186 140725843185639 0
+pid:[4026531836]
+PRINCIPAL_PID 2024
+2026-09-10T03:38:17.492749602Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-wronghost.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-wronghost.sentinel plain 
+   2024    2014    2024    2024 Rs         00:00 00:00:00 17092
+2024 (python3) R 2014 2024 2024 0 -1 4194304 2201 0 0 0 2 0 0 0 20 0 1 0 19234 27414528 4293 18446744073709551615 4325376 7353021 140734398322896 0 0 0 0 16781312 2 0 0 0 17 14 0 0 0 0 0 10657224 12220544 915394560 140734398328036 140734398328354 140734398328354 140734398328807 0
+pid:[4026531836]
+PRINCIPAL_PID 2057
+2026-09-10T03:38:17.729794546Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-argv.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-argv.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-argv.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-argv.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-argv.sentinel plain 
+   2057    1952    1952    1952 R          00:00 00:00:00 10060
+2057 (python3) R 1952 1952 1952 0 -1 4194304 1273 0 0 0 0 0 0 0 20 0 1 0 19260 18808832 2528 18446744073709551615 4325376 7353021 140732653867568 0 0 0 0 16781312 2 0 0 0 17 4 0 0 0 0 0 10657224 12220544 995549184 140732653873896 140732653874722 140732653874722 140732653875175 0
+pid:[4026531836]
+PRINCIPAL_PID 2067
+2026-09-10T03:38:17.787723068Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-argv.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-argv.sentinel plain 
+   2067    2057    2067    2067 Rs         00:00 00:00:00 11944
+2067 (python3) R 2057 2067 2067 0 -1 4194304 1847 0 0 0 1 0 0 0 20 0 1 0 19265 26120192 3445 18446744073709551615 4325376 7353021 140724587049504 0 0 0 0 16781312 2 0 0 0 17 13 0 0 0 0 0 10657224 12220544 963567616 140724587052270 140724587052578 140724587052578 140724587053031 0
+pid:[4026531836]
+PRINCIPAL_PID 2102
+2026-09-10T03:38:18.069435596Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-cap.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-cap.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-cap.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-cap.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-cap.sentinel plain 
+   2102    1952    1952    1952 S          00:00 00:00:00 21392
+2102 (python3) S 1952 1952 1952 0 -1 4194304 3658 0 0 0 4 0 0 0 20 0 1 0 19290 31236096 5344 18446744073709551615 4325376 7353021 140727119725200 0 0 0 0 16781312 16387 1 0 0 17 8 0 0 0 0 0 10657224 12220544 149716992 140727119731437 140727119732258 140727119732258 140727119732711 0
+pid:[4026531836]
+PRINCIPAL_PID 2110
+2026-09-10T03:38:18.126384879Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-cap.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-cap.sentinel plain 
+   2110    2102    2110    2110 Rs         00:00 00:00:00 26880
+2110 (python3) R 2102 2110 2110 0 -1 4194304 3675 0 0 0 5 1 0 0 20 0 1 0 19295 42434560 6782 18446744073709551615 4325376 7353021 140734774563200 0 0 0 0 16781312 2 0 0 0 17 5 0 0 0 0 0 10657224 12220544 1009803264 140734774566128 140734774566434 140734774566434 140734774566887 0
+pid:[4026531836]
+PRINCIPAL_PID 2142
+2026-09-10T03:38:18.360607555Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-missing-input.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-missing-input.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-missing-input.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-missing-input.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-missing-input.sentinel plain 
+   2142    1952    1952    1952 R          00:00 00:00:00 20756
+2142 (python3) R 1952 1952 1952 0 -1 4194304 3168 0 0 0 4 0 0 0 20 0 1 0 19319 31240192 5259 18446744073709551615 4325376 7353021 140737444093488 0 0 0 0 16781312 2 0 0 0 17 8 0 0 0 0 0 10657224 12220544 1069338624 140737444100795 140737444101666 140737444101666 140737444102119 0
+pid:[4026531836]
+PRINCIPAL_PID 2151
+2026-09-10T03:38:18.418117419Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-missing-input.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-missing-input.sentinel plain 
+   2151    2142    2151    2151 Rs         00:00 00:00:00 21972
+2151 (python3) R 2142 2151 2151 0 -1 4194304 3340 0 0 0 4 0 0 0 20 0 1 0 19324 41984000 5810 18446744073709551615 4325376 7353021 140737190045888 0 0 0 0 16781312 2 0 0 0 17 6 0 0 0 0 0 10657224 12220544 1045909504 140737190051036 140737190051362 140737190051362 140737190051815 0
+pid:[4026531836]
+PRINCIPAL_PID 2181
+2026-09-10T03:38:18.650940082Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-valid.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-valid.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-valid.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-valid.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-valid.sentinel plain 
+   2181    1952    1952    1952 R          00:00 00:00:00 19164
+2181 (python3) R 1952 1952 1952 0 -1 4194304 2780 0 0 0 3 0 0 0 20 0 1 0 19349 29384704 4862 18446744073709551615 4325376 7353021 140729706214768 0 0 0 0 16781312 2 0 0 0 17 8 0 0 0 0 0 10657224 12220544 450007040 140729706216163 140729706216994 140729706216994 140729706217447 0
+pid:[4026531836]
+PRINCIPAL_PID 2191
+2026-09-10T03:38:18.709534383Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-valid.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/gate-valid.sentinel plain 
+   2191    2181    2191    2191 Rs         00:00 00:00:00 18492
+2191 (python3) R 2181 2191 2191 0 -1 4194304 4424 0 0 0 3 0 0 0 20 0 1 0 19355 28356608 4564 18446744073709551615 4325376 7353021 140733303835680 0 0 0 0 16781312 2 0 0 0 17 1 0 0 0 0 0 10657224 12220544 325595136 140733303844076 140733303844386 140733303844386 140733303844839 0
+pid:[4026531836]
+PRINCIPAL_PID 2222
+2026-09-10T03:38:18.943908212Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/run_capped.py --wall-seconds 5 --cpu-seconds 3 --rss-bytes 33554432 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.sentinel descendant 
+   2222    1952    1952    1952 R          00:00 00:00:00 13300
+2222 (python3) R 1952 1952 1952 0 -1 4194304 2050 0 0 0 1 0 0 0 20 0 1 0 19380 22122496 3282 18446744073709551615 4325376 7353021 140732589758032 0 0 0 0 16781312 2 0 0 0 17 8 0 0 0 0 0 10657224 12220544 715534336 140732589763266 140732589764130 140732589764130 140732589764583 0
+pid:[4026531836]
+PRINCIPAL_PID 2232
+2026-09-10T03:38:19.000891302Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.sentinel descendant 
+   2232    2222    2232    2232 Rs         00:00 00:00:00 17376
+2232 (python3) R 2222 2232 2232 0 -1 4194304 2980 0 0 0 2 0 0 0 20 0 1 0 19385 34258944 5104 18446744073709551615 4325376 7353021 140737127658032 0 0 0 0 16781312 2 0 0 0 17 14 0 0 0 0 0 10657224 12220544 972234752 140737127664859 140737127665186 140737127665186 140737127665639 0
+pid:[4026531836]
+PRINCIPAL_PID 2246
+2026-09-10T03:38:19.057516874Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/probe.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.plan.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/dummy-descendant.sentinel descendant 
+   2246       1    2232    2232 R          00:00 00:00:00 51956
+2246 (python3) R 1 2232 2232 0 -1 4194368 11163 0 0 0 0 1 0 0 20 0 1 0 19392 95469568 13864 18446744073709551615 4325376 7353021 140737127658032 0 0 0 0 16797696 2 0 0 0 17 10 0 0 0 0 0 10657224 12220544 972234752 140737127664859 140737127665186 140737127665186 140737127665639 0
+pid:[4026531836]
+PRINCIPAL_PID 2320
+2026-09-10T03:38:19.530119295Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/run_capped.py --wall-seconds 180 --cpu-seconds 170 --rss-bytes 2147483648 --rss-sample-seconds 0.05 --term-grace-seconds 0.25 --cwd /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910 --stdout-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.stdout --stderr-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.stderr --telemetry-file /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.telemetry.json -- /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic_controls.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.receipt.json 
+   2320    1952    1952    1952 R          00:00 00:00:00 18172
+2320 (python3) R 1952 1952 1952 0 -1 4194304 2509 0 0 0 2 0 0 0 20 0 1 0 19438 28979200 4643 18446744073709551615 4325376 7353021 140723328768080 0 0 0 0 16781312 2 0 0 0 17 8 0 0 0 0 0 10657224 12220544 421855232 140723328777003 140723328777762 140723328777762 140723328778215 0
+pid:[4026531836]
+PRINCIPAL_PID 2330
+2026-09-10T03:38:19.589041574Z
+ARGV /usr/bin/python3 -I -B /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic_controls.py /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.authority.json /home/ubuntu/jc2-f10-minimum-pivot-generic-20260910/generic.receipt.json 
+   2330    2320    2330    2330 Rs         00:00 00:00:00 25736
+2330 (python3) R 2320 2330 2330 0 -1 4194304 4294 0 0 0 3 1 0 0 20 0 1 0 19443 30584832 4493 18446744073709551615 4325376 7353021 140723547038288 0 0 0 0 16781312 2 0 0 0 17 2 0 0 0 0 0 10657224 12220544 134938624 140723547041071 140723547041314 140723547041314 140723547041767 0
+pid:[4026531836]
+bash: line 10: read: read error: 0: No such device
+MainPID=0
+ExecMainStatus=0
+ControlGroup=
+MemoryPeak=[not set]
+CPUUsageNSec=[not set]
+ActiveState=inactive
+SubState=dead
+InvocationID=
+2026-09-10T03:38:20.593455379Z

@@ -1,0 +1,23 @@
+{
+  "fibre": 136,
+  "field": "Q",
+  "order": "positive weighted degree then reverse lex, exact receiver order in custody",
+  "target_degree": 3,
+  "basis_size": 68,
+  "nonzero_input_generators_verified": 76,
+  "required_critical_pairs_verified": 574,
+  "all_basis_elements_homogeneous": true,
+  "all_required_spolynomials_reduce_zero": true,
+  "all_projected_inputs_reduce_zero": true,
+  "target_nf_matches_singular": true,
+  "target_nf_nonzero": true,
+  "target_nf_is_c": true,
+  "control_add_c_changes_nf_to_zero": true,
+  "control_one_remains_nonzero": true,
+  "basis_sha256": "a2d0af0046f7d88153f0fcb230910f733bfdd084b89701be840592687b56125f",
+  "normalform_sha256": "a3a5e715f0cc574a73c3f9bebb6bc24f32ffd5b67b387244c2c909da779a1478",
+  "custody_sha256": "4ca583731a500c3b0cc310d2a63552b2e4e6bfdfa5fb2b38ae831911ef3eb6b8",
+  "verifier_sha256": "92efb6f6c5f242b5cd26b0319ecd3cce3a652ad7cec5430935360bae7b7875be",
+  "conclusion": "EXACT_Q_c_NOT_IN_FULL_I",
+  "proof": "Bounded Buchberger criterion gives a standard basis through positive weightX. Every projected source row of weight<=X lies in its ideal by explicit division. Thus nonzero NF(c) proves c outside this (possibly larger) homogeneous ideal and outside the projected source ideal. Every omitted source row has degree>X and cannot contribute to c. The specialization fixes c, so nonmembership pulls back. Basis provenance inside the input ideal is unnecessary for this one-way nonmembership proof. Zero projected NF gives no full ideal conclusion."
+}

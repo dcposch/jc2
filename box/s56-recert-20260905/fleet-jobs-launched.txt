@@ -1,0 +1,12 @@
+S5_part2_p32003_pid=3217
+3217 bash -c cd /home/ubuntu/jc2 && setsid bash box/s56-recert-20260905/fleet_job.sh box/s56-recert-20260905/source-complete/meta/S5_n9_m6_M2_V1_k8_part_2_source_complete.json 32003 none 1800 S5_part2_p32003 > /home/ubuntu/S5_part2_p32003.launch.log 2>&1 < /dev/null & echo S5_part2_p32003_pid=$!
+3218 bash box/s56-recert-20260905/fleet_job.sh box/s56-recert-20260905/source-complete/meta/S5_n9_m6_M2_V1_k8_part_2_source_complete.json 32003 none 1800 S5_part2_p32003
+3222 python3 box/s56-recert-20260905/s56_emitter.py solve --meta box/s56-recert-20260905/source-complete/meta/S5_n9_m6_M2_V1_k8_part_2_source_complete.json --char 32003 --timeout 1800 --branch none
+3224 /usr/bin/time -v /usr/bin/Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32003/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_p32003.sing
+3228 /usr/bin/Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q /home/ubuntu/jc2/box/s56-recert-20260905/solves/S5_n9_m6_M2_V1_k8_part_2_source_complete/none/p32003/S5_n9_m6_M2_V1_k8_part_2_source_complete_coefficient_first_none_p32003.sing
+3337 bash box/s56-recert-20260905/fleet_job.sh box/s56-recert-20260905/source-complete/meta/S6_n9_m6_M5_V2_k8_part_1_source_complete.json 32003 none 1800 S6_part1_p32003
+3341 python3 box/s56-recert-20260905/s56_emitter.py solve --meta box/s56-recert-20260905/source-complete/meta/S6_n9_m6_M5_V2_k8_part_1_source_complete.json --char 32003 --timeout 1800 --branch none
+S5_part2_p32009 cpu=2 launched
+S5_part2_p32027 cpu=3 launched
+S5_part2_Q cpu=4 launched
+S6_part1_p32003_pid=13060

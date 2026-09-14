@@ -1,0 +1,144 @@
+{
+  "correction": "The final y!=empty dictionary check only tests nonzeroness, not nonextension across y=0; the explicit v=y^-1 formula establishes that caveat in prose.",
+  "pins": {
+    "box/d125-marked-component-submersion-discriminator-20260908/check.py": "045011b37cbe62e98a843a6cdedf91943ae3ed8bab41b2ff54a875d25f8542fe",
+    "box/d125-marked-component-submersion-discriminator-20260908/custody.py": "8dc52c38b0849aefd31941768b276c38cd8c73dca3aa4d9c3f910116b77e5217",
+    "box/d125-marked-component-submersion-discriminator-20260908/replay.json": "eea70f020d4ecfca8f8741e5a17a4593439a03609533141fc1c5a157aba8582a",
+    "box/d125-marked-component-submersion-discriminator-20260908/replay.py": "9de10ec8c352ee9a664b2fc296b67a8fb1124106411ffd00cbc759e82de16e3e",
+    "box/d125-marked-component-submersion-discriminator-20260908/witness.json": "02560701f12f5fc325697cb2f2c001d8927445d4753750613391ecc2e63c7654",
+    "xmodel/d125-marked-component-submersion-discriminator-astra-20260908.md": "3c127d20c133acf5bcd9af43eec4a3e7d9a403a19d30ab1e827ed8f760b051f5",
+    "xmodel/d125-marked-component-submersion-discriminator-astra-20260908.md.artifact.json": "9782a6d81aed1beb0fbb97a333a642589566518b9f6e71548f51abf675759d4b",
+    "xmodel/d125-marked-fiber-global-discriminator-astra-20260907.md": "e8bd150980cc9ec855d9cfe73ea7b3116a4a06c774f34154c8bac50b12209e16",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-torsor-geometry-discriminator-astra-20260907.md": "7beff9e113580e22aba68f79811ed45f2023e195f7998a51cd224163a775db5a"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py",
+        "normal"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "02560701f12f5fc325697cb2f2c001d8927445d4753750613391ecc2e63c7654"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py",
+        "bad-M"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "d72ff0c89817ebf6fde1ef05b86d8317e64b1ada5e10d8e8a584435f263927c9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py",
+        "bad-Q-sign"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "7031a83931380c3d16abc9e09d4b0b35938bdb5b632ae9c92a17a07e6e0f8a8a",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py",
+        "bad-critical"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "be2f609c39bf5af7a7195f5434fb5f3f813e646f3b497d1213f3e0de66aa0361",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py",
+        "normal"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "02560701f12f5fc325697cb2f2c001d8927445d4753750613391ecc2e63c7654"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py",
+        "bad-M"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "d72ff0c89817ebf6fde1ef05b86d8317e64b1ada5e10d8e8a584435f263927c9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py",
+        "bad-Q-sign"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "7031a83931380c3d16abc9e09d4b0b35938bdb5b632ae9c92a17a07e6e0f8a8a",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-marked-component-submersion-discriminator-20260908/check.py",
+        "bad-critical"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "be2f609c39bf5af7a7195f5434fb5f3f813e646f3b497d1213f3e0de66aa0361",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Root whole elementary proof/code and exact tiny controls; embedding-only obstruction refuted by vN. Degree_u(M)<=1 exclusion does not cover actual degree14; not independently promoted.",
+  "seconds": 1.9630613300250843,
+  "utc": "2026-09-08T00:29:30.568000+00:00"
+}

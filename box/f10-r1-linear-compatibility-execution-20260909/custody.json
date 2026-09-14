@@ -1,0 +1,582 @@
+{
+  "schema": "TERMINAL-GENERIC-EXECUTION-CUSTODY/v1",
+  "task": "f10-r1-linear-compatibility-execution-20260909",
+  "state": "TERMINAL; all execution stopped; local writers finish with this custody freeze; IDLE, no follow-on authority",
+  "first_action_utc": "2026-09-09T22:31:54Z",
+  "task_cap_utc": "2026-09-09T23:01:54Z",
+  "freeze_utc": "2026-09-09T22:47:03.644958+00:00",
+  "result": "PRODUCER ENGINEERING PASS GENERIC ONLY; independent evidence review pending",
+  "worker": {
+    "instance": "i-08d2a40f272ee9fa2",
+    "state": "STOPPED confirmed 22:41:46; root independently 22:42:06",
+    "ebs": "vol-0574e0fa5aed1f5e3 retained",
+    "root_backup": "cancelled/inactive per ROOT lifecycle acknowledgment; no stop duty"
+  },
+  "input_count": 31,
+  "owned_count_excluding_custody": 104,
+  "runtime_input_pins": 110,
+  "remote_retained_files": 85,
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/READ-SCOPE.md",
+      "sha256": "83de4974091942e6e5bbb977f6c94c2a502c7a2ba7700228ab6b8c0d331f259d"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/STATIC-CHECKS.md",
+      "sha256": "a0b45b45f8d1ca9cd9971ebe87cae1f3f299b1302679541759cf97c2b3b88e54"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/VALIDATION.md",
+      "sha256": "308c5d333215f632c6852b19e685729a631f95cfe17153cdc81224668e9a2454"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/algebra.py",
+      "sha256": "7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/caller.diff",
+      "sha256": "605a1ec5acdaadf1f463426150c774ef66ff412f3aff91e2f1d006860ec3ccb7"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/checker.py",
+      "sha256": "122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/compatibility.py",
+      "sha256": "aaec1e2c56d7d4e77f7cf040a86371b813744368c9272b4f5cbe629af18af38b"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/dispatch.registration.DISABLED.json",
+      "sha256": "e7b3bac7992d6215f85a191c2446babda77d44a4088e52c52d555e48a1081b14"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/dispatch_batch.py",
+      "sha256": "e1780f99c939ac37e0c149f1d22fb1d7741ad76c8ff183d3d3cc0f4da3e11b72"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/evidence.py",
+      "sha256": "cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/execution_gate.py",
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/generic.plan.json",
+      "sha256": "1fe704aaaa125dc8d40d5915ea74ae651277ba3f2336ab76579adc104fc305e5"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/input-pins.json",
+      "sha256": "bc1e9992b75f011a353e99d18c6334a8aaa6ef228a6b5fbf0b15a5e523be3a95"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/inputs-after.sha256",
+      "sha256": "c26e457ddb6529d4e1594f73dcab81e99d5424d30b28c40b44928e130bab6551"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/probe.py",
+      "sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/publication.json",
+      "sha256": "a7119e8bc507c9090f8d412e0da41c8574a70723ad977e110cae36b858cc8e2f"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-code-astra-20260909.md",
+      "sha256": "420f429803baa7b746d2ceffbaf3e675424fe75ee05e041619e9ce555c8f6177"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-code-astra-20260909.md.artifact.json",
+      "sha256": "72830909112bdffab6016639017222fa146b83e4596ea2c3279eecb3bb8ed068"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-code-astra-20260909/custody.json",
+      "sha256": "1c65ae815fce921c3f7636812ace127cb984f1d96c0599212d41513fa44e2e53"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-gate-fable5-20260909.md",
+      "sha256": "d9bf289989d2631f0ab39657b4a3f0c8f7389e21ded388e68e366cd13d7fdc31"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-gate-fable5-20260909.run.v2",
+      "sha256": "782c8ba6096e61c1ec5937b14ca031e70746dd2fc545587f5e44a795194b4715"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-exact-linear-decision-code-astra-20260909.md",
+      "sha256": "e73075e3b3564538c69a0a0a3fbd925c80c57d0a21122d37269bb3539b73ce93"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-exact-linear-decision-gate-fable5-20260909.md",
+      "sha256": "4c3f5932e9ff77d73314fe02b3c088677f8fc3bc0971acad9ba56610cf7d405f"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-flint-environment-preflight-20260909/environment.json",
+      "sha256": "35a9c3229300816d16b53db6d0795ce9d6fd1de1f8a10ff5689c83543036a34f"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-flint-environment-preflight-20260909/RESULT.md",
+      "sha256": "2067a839f16a83f5cb2e9d8a3701610a490ea9118a63611ad11bbb224e764522"
+    },
+    {
+      "path": "/home/ubuntu/jc2/ops/FLEET.md",
+      "sha256": "f2e27295711c9cec01d72874b5917a134d8a2f662774812212cdf7e6f3270cdc"
+    },
+    {
+      "path": "/home/ubuntu/jc2/ops/fleet/fleet.sh",
+      "sha256": "a9da94d341a691942e9d6a6a6d90d97008b2d7baa1cadb2592481cf6b9c11c4c"
+    },
+    {
+      "path": "/home/ubuntu/jc2/ops/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/ops/artifact_finalize.py",
+      "sha256": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/dispatch.registration.json",
+      "sha256": "ba1b374bf803f583ff9baa5617d9d058ca2b1215e98dd69240276fe892f6bc3b"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/ROOT-REGISTRATION.md",
+      "sha256": "034738126ee5555e55a8080ccfccbdae3f949d689b52577f124ee97198261d4e"
+    }
+  ],
+  "owned": [
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/READ-SCOPE.md",
+      "sha256": "2e46d8be658b8496591f8485361a664488c41731cbf169901c0c41f4d6a9188e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/ROOT-REGISTRATION.md",
+      "sha256": "034738126ee5555e55a8080ccfccbdae3f949d689b52577f124ee97198261d4e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/dispatch.registration.json",
+      "sha256": "ba1b374bf803f583ff9baa5617d9d058ca2b1215e98dd69240276fe892f6bc3b"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/input-pins.json",
+      "sha256": "fe686c61139aa680af7267fd75e3bde924d95c053e9b8859cdea9aab432b7c85"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/launch-and-identity.txt",
+      "sha256": "65fa14a7928668bd26f76ea80269d01d8627d0a86d88f4f31adf3331e22f85d2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/local-readback-and-identities.txt",
+      "sha256": "f803dad9744adeea632b74965be2d12965e2bf3196f42d75ab1ce6e9a67aa963"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/physical-before.txt",
+      "sha256": "dcf0c9c975011a90873e7b5417cc4dc8f7625461d37f03276a8b91a662240e0e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/publication.json",
+      "sha256": "f7b54ca734d4c8f79f7a9c9050572519b06624809cb67888f4046aaa2e169eaa"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/algebra.py",
+      "sha256": "7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/batch.PASS.json",
+      "sha256": "2e46444f49cd2071f9725228da2b570e32712f1a275488a974c32755a53b57c3"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/checker.py",
+      "sha256": "122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.authority.json",
+      "sha256": "5df53d63e022caefeb065cc02f2406b770a7c301bb49b84579a39e2aac42dfd1"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.caller.stdout",
+      "sha256": "19ee926706c6551d4dcff225fef875f5347d0d9bcd282928fcf6e9106cb875a1"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.dispatch.json",
+      "sha256": "1f2e22a065fb76cffd5319010dcc1e2406ff05f642f608ac42685c7d3dd69d71"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.py",
+      "sha256": "aaec1e2c56d7d4e77f7cf040a86371b813744368c9272b4f5cbe629af18af38b"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.receipt.json",
+      "sha256": "c99eda146afc91cb521a6a27739422ac7f1928c9763586e34a0a1bd590d3e443"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.stdout",
+      "sha256": "e86ee844b602e17087ab88b779d7b2c528591c99f17cb12dfc22207ac6bef911"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.telemetry.json",
+      "sha256": "4a4113cdebd8ad166c7d03951c3a307ac325b008111cf101cac38f6fa4fcaa61"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dispatch.registration.json",
+      "sha256": "ba1b374bf803f583ff9baa5617d9d058ca2b1215e98dd69240276fe892f6bc3b"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dispatch_batch.py",
+      "sha256": "e1780f99c939ac37e0c149f1d22fb1d7741ad76c8ff183d3d3cc0f4da3e11b72"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.authority.json",
+      "sha256": "0dddf03211e5f4c4cbd52ff27bf0f1a4a974c71cab4f73674ea95f6f27a7442d"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.caller.stdout",
+      "sha256": "4d3b8ba00e6489661448e9be690b7e8a72c818c205c265a506ed48a4cbb4f8da"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.dispatch.json",
+      "sha256": "807e15c294d6a7e570c4021051caa5b22c22a7f5635cd51232574ecbd3808c3a"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.sentinel",
+      "sha256": "6c6419e93c916a7be827f962250694e568c52e56906280c2982b1ad78ce87ea8"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.stdout",
+      "sha256": "de7ee73c498c71c51933e1b30c04c35c27a9801e506fc90beed77620c3382a2b"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.telemetry.json",
+      "sha256": "1cf044a5a1dced23982de205e5213602196751f110ddb3ec6ed0e74fd60ad1ed"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/evidence.py",
+      "sha256": "cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/execution_gate.py",
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.authority.json",
+      "sha256": "295ffce37f7e4371200cff8470c29df891cb8a3beb45a92c09bb9e3f78263807"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.caller.stdout",
+      "sha256": "9a23a285d7c3b0f95add645219b19fb09a6d8d90b1389c89b2723fb6122ce967"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.dispatch.json",
+      "sha256": "9306692a81c165eb1dd46567f34afeff430fedab0ca7a92d2909c1ab0575ef18"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.stderr",
+      "sha256": "3456cb6d516b3eb088260799350b18c2d93730a95f07c110850f44a45dc12f3c"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.telemetry.json",
+      "sha256": "638805ac8f1c6a1f43a1861193a42cd2aec62b752ad3c89f0184249e1cc621f0"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.authority.json",
+      "sha256": "adb81f0f7dfa5b200eff7c0716bd852596c331a819ec70af557353eb85c2cff3"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.caller.stdout",
+      "sha256": "93d29c2c5ed4b0970d8a7ce03003cade9e1e46ddf9f2f8402e4ddf26370fd1a4"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.dispatch.json",
+      "sha256": "0cfd824309393229aba4e67aa871da906762b0c1237d02c398ad02d217f3a1d5"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.stderr",
+      "sha256": "a1759524cfb0a04a6184561e6243183480f23cd3e67041875fefd0c94824fb53"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.telemetry.json",
+      "sha256": "1293c4ff758b1e4fa8427480339ff7ac42e569ddca38f939462371f2209d1e1a"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.authority.json",
+      "sha256": "bcc2fb345c13ca3968b2022c1c92e4a74db2b4793ecc9818f12599ee1c71b974"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.caller.stdout",
+      "sha256": "62a86d7ae8c9a5fc4c4d9e794f35c7e198f6208a79f0a7e4a4f9c30a1dd3a090"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.dispatch.json",
+      "sha256": "df6ac69201c26f8ae75850e87d86003b4ad390b3cc3cc9d8482ddb08554d79f3"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.stderr",
+      "sha256": "556fceba211e4b19791f5d02273f805dce1f4e0c803515f09ac69e7bffc62d56"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.telemetry.json",
+      "sha256": "b422b262b1f724460b71f6f37dedb3908d528ceba4de97191f3b6a8288c32f67"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.authority.json",
+      "sha256": "4a543ea8c5ed8233bff845771d45c4412a61f67cbc19b8948d651b5872a286de"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.caller.stdout",
+      "sha256": "7f77a99770825782648eddda87af2618e878f9c654b7f796286f35787dbf5edc"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.dispatch.json",
+      "sha256": "29131279b8ecbfda8b1bc84bce6fae1e9f0b9f02a8c276ea5499e250093d2d04"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.stderr",
+      "sha256": "50bd361b50d4f99e2d8df216e5ff108813932ff96e79a2956ee7f321ff7eba8c"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.telemetry.json",
+      "sha256": "e9d35048c4e13171b73d71246377ee1ed2ac112ea3d3fe6eb9ddde551987da84"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.authority.json",
+      "sha256": "23ac0014853d2598cdbfa39fd33cd72ecccccac50a40a0c5b210f44321e8625e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.caller.stdout",
+      "sha256": "34838027a2dffb65c5dc317275456c537361516492857e8ac480b4352c9f08fe"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.dispatch.json",
+      "sha256": "40da505d3ab6847357bc58b5e42a44f9c9fabdefd3749081cb48253ae021b887"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.sentinel",
+      "sha256": "6c6419e93c916a7be827f962250694e568c52e56906280c2982b1ad78ce87ea8"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.telemetry.json",
+      "sha256": "56758a756e1b518467dbe111f3f47ac6157845cc4c846730ea1be0effec76209"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.authority.json",
+      "sha256": "a95d9e102926269dbd03ed7f0037fe81b662786a94499c05e8b95ebe0752a286"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.caller.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.caller.stdout",
+      "sha256": "e7bf7705c369d00781006b4dc1a0c9c7b3309172c18af64eb71e5a2cb439071b"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.dispatch.json",
+      "sha256": "32bcd4fc918c9c6d561ad124f05a7e673a3be9e463f790d5f30a3cbe4c10d9cd"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.stderr",
+      "sha256": "b5e8c6a5e3d0a039e7715423df313b106a6f452a6ed0adfce6f8d8c5d8548cfe"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.telemetry.json",
+      "sha256": "07e9a08fc0ef3621cb719016e36204dfcbdecfde89b702cc36c2ff4e4eaa01a2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-float-type-negative.json",
+      "sha256": "f3c5d8dcd66adab6dfee8f51c090b5e82ede2eaf812d1858f8690944ca6242ce"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-high-T30-negative.json",
+      "sha256": "6cb044221b9b7894e8b7904f7fc893ca173dd7473255ee2f0f3127d842be21c9"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-precision-positive.json",
+      "sha256": "5abf9ae4e156aab4fd48e31b50ddb97a8477ee7d8645258993f94f79fe7260b2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-rounded-canonical-string-negative.json",
+      "sha256": "6b83bddf7d1112c8905cc88b629198283b406808dd45c5f9a33e78b692ac394e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-separator-T-positive.json",
+      "sha256": "e5fc84cd607e3c96a453a3f4f462441511b6747694f7d44ac1fe62b3dc01e948"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-separator-column-negative.json",
+      "sha256": "4b4b6d20e33814097e7ed85f3861f066c83e4a3873d0045b330ad4dd763c526e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-separator-normalization-negative.json",
+      "sha256": "6aa306727ed2f4073a531619540a2446e53e435bc4244b290846296a0d138631"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-separator-zero-positive.json",
+      "sha256": "6d50c266b57897edaf4bd053d6772132a566cae36d1e7574037113524c97d9dd"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-unit-negative.json",
+      "sha256": "2774c191187a679e9b2af4e2b46be3c6304303612d22cf093005141b30444a7e"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-unit-positive.json",
+      "sha256": "49dca8d8f1950a5b59e5f7f90bd4e93d3ce32f7cd9aa2336623f10fd799a61f6"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-zero-guard-false-separator.json",
+      "sha256": "6180d226339f33945ff3a0a58489e0b7b9ddcab548366e58dce9413057048315"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-zero-guard-positive.json",
+      "sha256": "a7bde5399390c024f9bc7ffa5d6d2451385be99e3db55b2d59f359bf468654b2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/generic.plan.json",
+      "sha256": "1fe704aaaa125dc8d40d5915ea74ae651277ba3f2336ab76579adc104fc305e5"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/outer.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/outer.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/preflight.PASS.json",
+      "sha256": "43b5e67ce12a4b5c03c4dc1ee928b6da4ecd32959ab216fd4efaf259a3c50502"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/probe.py",
+      "sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote-before.sha256-and-modes.txt",
+      "sha256": "594e70a5473fbf6eabd3bab6b564fd61fd5d4994aa54fcb409af7e5302105e86"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote-inputs-after.sha256",
+      "sha256": "012a4050c5ea01c3de970a691f826177bc3f9df958ad7305ebb2b19b75e9d575"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/remote-terminal-manifest-and-modes.txt",
+      "sha256": "349dd03299b732ad2726dfd78ba2409c028178cb6debfa5a912b30bdb7274248"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/root-input-pins.json",
+      "sha256": "8a85228f4b3d574e4216296a35e057497ce440233771aacfe15655d3ab56990f"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/staging-transport.txt",
+      "sha256": "dcdf23d92c87769b0f56394932ed3b5bdaa4d38d38c113174ac1060ef9862e12"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/status-01.txt",
+      "sha256": "98858f1f145b1af53ada2c823e2ee1e1a1fca8530a0a89a38c6da6ef2a282f58"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/terminal-metadata-check.json",
+      "sha256": "35e2703de1f8c928e04b44df269d2acc7fb8c076bb315641d7758ca10cfa6761"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/terminal-owned-process-check.txt",
+      "sha256": "a6dae063f8f65b0d6905439aeaa57627270ebf683ca237bf9faf0aad84f274e3"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/worker-after-stop.txt",
+      "sha256": "582fdfc6755dec3777b7f0feafbfebe1e31c08c55ed44ea86e0ff687e8578abd"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-execution-astra-20260909.md",
+      "sha256": "2f82e7b2ca181684e434bfb564b59715c26588d47d85f76ee488b662367a242a"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-execution-astra-20260909.md.artifact.json",
+      "sha256": "edd01f1971cc0bb85d61dcfa7811b270439b0ff1af91e1864a4708fececd610f"
+    }
+  ],
+  "publication": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "body_bytes": 12728,
+    "body_sha256": "17842ae6b685435aa623b9c0137496bf9abaf482a3b82f26f9f06a68c2cfa8b9",
+    "file_bytes": 13061,
+    "final_path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-execution-astra-20260909.md",
+    "full_sha256": "2f82e7b2ca181684e434bfb564b59715c26588d47d85f76ee488b662367a242a",
+    "manifest_path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-execution-astra-20260909.md.artifact.json",
+    "manifest_sha256": "edd01f1971cc0bb85d61dcfa7811b270439b0ff1af91e1864a4708fececd610f",
+    "staged_blobs": null,
+    "status": "VERIFIED"
+  },
+  "limitations": [
+    "Constant-v generic fixtures only",
+    "No actual source artifact, source acceptance, solver, full matrix or ideal decision",
+    "No local mathematical replay",
+    "No retry/installer/fallback/extra experiment",
+    "Declared package/native pins are not hermetic whole-OS/import-map proof"
+  ]
+}

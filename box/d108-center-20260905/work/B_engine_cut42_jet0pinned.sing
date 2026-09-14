@@ -1,0 +1,4 @@
+ring R=0,(Zc,c,jet1),dp;
+ideal I=-c - jet1^4,2*jet1^2,Zc*c-1;
+ideal G=std(I);
+"TAG B_engine_cut42_jet0pinned"; "DIM"; dim(G); "SIZE"; size(G); "NF1"; reduce(1,G);

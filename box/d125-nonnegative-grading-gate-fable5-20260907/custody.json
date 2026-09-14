@@ -1,0 +1,95 @@
+{
+ "caps": "each control <=30 s wall, 25 s CPU, 512 MiB, python3 -I -B",
+ "external_writes": false,
+ "finished_utc": "2026-09-07T22:49:42Z",
+ "gate_of": "13e19b39ccc70cea0dd5fb71b307292f0469937b62b4b1a75bdf6d119c194b0f",
+ "inputs": [
+  {
+   "path": "check.py",
+   "sha256": "7ff4ca5dd3e38bdf8ef6623624774223f9f8594324d97c34db381e16492671de"
+  },
+  {
+   "path": "client.py",
+   "sha256": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53"
+  },
+  {
+   "path": "custody.json",
+   "sha256": "6682fc5b0587cb407102480e41e855f37a8ea62fcd83bbefd515c25e80abf639"
+  },
+  {
+   "path": "d125-arc-closure-interface-astra-20260907.md",
+   "sha256": "6f9e63a8162af7c6d212363b62c368f9029b282fa8acbb65bcdc5d9cf81b72d3"
+  },
+  {
+   "path": "d125-nonnegative-grading-discriminator-astra-20260907.md",
+   "sha256": "13e19b39ccc70cea0dd5fb71b307292f0469937b62b4b1a75bdf6d119c194b0f"
+  },
+  {
+   "path": "d125-nonnegative-grading-discriminator-astra-20260907.md.artifact.json",
+   "sha256": "1fe149db1b5e8fd74598c948c681885451d8e86ce89d29964517da76c3df833b"
+  },
+  {
+   "path": "d125-parity-unit-normalization-astra-20260907.md",
+   "sha256": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc"
+  },
+  {
+   "path": "d125-symmetry-discriminator-astra-20260907.md",
+   "sha256": "9bed554644b1bd3c881ba4e289ea0950601ed6141677a45152577442fd477b12"
+  },
+  {
+   "path": "replay.json",
+   "sha256": "c454d950b7f7e81440c2999328840f38ad3e54df32b82acb1791e863f892ea6d"
+  },
+  {
+   "path": "witness.json",
+   "sha256": "e6efd2c671f9c4ef8a1588d8a27b81b9fbaf993e5a7cc52a34af6357d50d2e2d"
+  }
+ ],
+ "inputs_dir": "/tmp/jc2-lane.YwoVCk/inputs",
+ "no_record_into_frozen": true,
+ "owned": [
+  {
+   "path": "box/d125-nonnegative-grading-gate-fable5-20260907/literals.out",
+   "sha256": "4837b72aba632d6a132b587dc24251b33a8a50b7184904308b826d07931607ab"
+  },
+  {
+   "path": "box/d125-nonnegative-grading-gate-fable5-20260907/literals.py",
+   "sha256": "678ad23cfbd07c5b01263c7aded8daa79a88ca9e52af3a24ebfc667622817079"
+  },
+  {
+   "path": "box/d125-nonnegative-grading-gate-fable5-20260907/reconstruct.out",
+   "sha256": "835e1764b92bf0b900bf98fb178d8dccf6c02efe049bd92310c470f83f5e5d0d"
+  },
+  {
+   "path": "box/d125-nonnegative-grading-gate-fable5-20260907/reconstruct.py",
+   "sha256": "592d53465f30002a9ca389ca26a43c4a25b1d56f4f8ebaf263ef1580a6014f2b"
+  },
+  {
+   "path": "box/d125-nonnegative-grading-gate-fable5-20260907/replay-runs.tsv",
+   "sha256": "8d1320bda841d352af2aa5b8d723966798b25c227bcb8fc4780be792e455c03d"
+  },
+  {
+   "path": "box/d125-nonnegative-grading-gate-fable5-20260907/report.sha256",
+   "sha256": "08632fe6b66b226d48f665ea5511c3dddca174892007e137cfbb4f9a558ff9b2"
+  },
+  {
+   "path": "box/d125-nonnegative-grading-gate-fable5-20260907/scratch-copies.sha256",
+   "sha256": "d1d1f5ad23db295169f65b69bac770c5a6c3b11ca77aac6319b3b201457dae73"
+  },
+  {
+   "path": "box/d125-nonnegative-grading-gate-fable5-20260907/witness-replay-O.json",
+   "sha256": "e6efd2c671f9c4ef8a1588d8a27b81b9fbaf993e5a7cc52a34af6357d50d2e2d"
+  },
+  {
+   "path": "box/d125-nonnegative-grading-gate-fable5-20260907/witness-replay.json",
+   "sha256": "e6efd2c671f9c4ef8a1588d8a27b81b9fbaf993e5a7cc52a34af6357d50d2e2d"
+  },
+  {
+   "path": "xmodel/d125-nonnegative-grading-gate-fable5-20260907.md",
+   "sha256": "f4f356c510f1e6bf55e07be7c6d044ef0b698db850bfecc21de8f12367d3e282"
+  }
+ ],
+ "report_words": 915,
+ "task": "d125-nonnegative-grading-gate-fable5-20260907",
+ "verdict": "CONFIRMED all exact claims; corrections: missing i>=0 half-plane in displayed equivalence, path-dependent stderr hashes; GAP: sol56 ideation not in inputs"
+}

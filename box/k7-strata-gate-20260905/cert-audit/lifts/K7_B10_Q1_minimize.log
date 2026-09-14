@@ -1,0 +1,26 @@
+{"call": 1, "returncode": 0, "size": 255, "unit": true, "wall": 57.589}
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/k7-strata-gate-20260905/cert-audit/minimize_unit.py", line 153, in <module>
+    main()
+  File "/home/ubuntu/jc2/box/k7-strata-gate-20260905/cert-audit/minimize_unit.py", line 113, in main
+    if check(candidate_active + fixed):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/k7-strata-gate-20260905/cert-audit/minimize_unit.py", line 91, in check
+    unit, wall, rc = is_unit(args.msolve, args.libdir, text, work, call,
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/jc2/box/k7-strata-gate-20260905/cert-audit/minimize_unit.py", line 47, in is_unit
+    p = subprocess.run(
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2115, in _communicate
+    ready = selector.select(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

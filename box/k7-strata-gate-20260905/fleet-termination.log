@@ -1,0 +1,11 @@
+2026-09-05T19:13:25Z
+command: bash ops/fleet/fleet.sh term i-0d82db109a472cb25
+result: i-0d82db109a472cb25 shutting-down
+verification: aws ec2 describe-instances --instance-ids i-0d82db109a472cb25
+state-after-command: shutting-down
+private_ip: 172.30.0.222
+owner: k7-strata-gate-sol56-20260905
+scope: exact instance only; no other instance touched
+2026-09-05T19:15:15Z
+verification-result: i-0d82db109a472cb25 terminated None k7-strata-gate-sol56-20260905
+final-state: terminated

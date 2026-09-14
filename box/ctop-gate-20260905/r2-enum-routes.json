@@ -1,0 +1,1772 @@
+{
+  "schema": "jc2.ctop-gate.r2-route-diagnostic/v1",
+  "summary": {
+    "effective_ctop_fails_by_us": {
+      "1": 936,
+      "2": 211,
+      "3": 8,
+      "4": 5,
+      "5": 1
+    },
+    "us1_fail_count": 936,
+    "us1_fail_ell0": 0,
+    "us1_all_ell0": 0,
+    "us1_fail_effective_sp2": 0,
+    "any_fail_effective_sp2": 0,
+    "higher_fail_ell0": 109
+  },
+  "limitation": "Displays existing Tree witnesses; no new source-symmetry screen or impossibility verdict.",
+  "examples": [
+    {
+      "row": {
+        "n": 96,
+        "m": 72,
+        "Ms": [
+          36,
+          78,
+          94
+        ],
+        "V": {
+          "2": 1,
+          "3": 3,
+          "4": 5
+        },
+        "s": 4,
+        "parent_M": [
+          -72,
+          36,
+          78,
+          94
+        ],
+        "parent_d": [
+          96,
+          24,
+          12,
+          6,
+          2
+        ],
+        "d_s": 6,
+        "u_s": 1,
+        "v_s": 5,
+        "ell": 3,
+        "n1": 16,
+        "m1": 12,
+        "raw_sp": 3,
+        "raw_M": [
+          -12,
+          6,
+          13
+        ],
+        "raw_d": [
+          16,
+          4,
+          2,
+          1
+        ],
+        "raw_V": [
+          1,
+          3
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -12,
+          6,
+          13
+        ],
+        "effective_d": [
+          16,
+          4,
+          2,
+          1
+        ],
+        "effective_V": [
+          1,
+          3
+        ],
+        "drops": 0,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 3,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "4",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "1/2",
+        "2": "2/7",
+        "3": "1/7",
+        "4": "-1"
+      },
+      "parent_delta_sminus1": "1/7",
+      "parent_V_sminus1": 3,
+      "nodes": [
+        {
+          "j": 3,
+          "delta": "1/7",
+          "L": 1,
+          "A": 7,
+          "P": 10,
+          "Q": 15,
+          "lower_bound": "2/3",
+          "selected_V": 3,
+          "selected_mode": "zero",
+          "zero_multiplicity": 3,
+          "nonzero_orbit_multiplicities": [
+            1
+          ],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "2/7",
+          "L": 7,
+          "A": 1,
+          "P": 6,
+          "Q": 15,
+          "lower_bound": "2/5",
+          "selected_V": 1,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 2,
+        "V2": 1,
+        "zero": false
+      },
+      "witness": {
+        "j": 3,
+        "A": 7,
+        "P": 10,
+        "Q": 15,
+        "b": 3,
+        "S": 2,
+        "delta": "1/7",
+        "lo": "2/3",
+        "mode": "zero",
+        "orbits": [
+          1
+        ],
+        "zero_major": true,
+        "child": {
+          "j": 2,
+          "A": 1,
+          "P": 6,
+          "Q": 15,
+          "b": 0,
+          "S": 14,
+          "delta": "2/7",
+          "lo": "2/5",
+          "mode": "nonzero",
+          "orbits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "zero_major": false,
+          "child": {
+            "A1": 2,
+            "V2": 1,
+            "zero": false
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    },
+    {
+      "row": {
+        "n": 96,
+        "m": 72,
+        "Ms": [
+          36,
+          78,
+          94
+        ],
+        "V": {
+          "2": 4,
+          "3": 3,
+          "4": 5
+        },
+        "s": 4,
+        "parent_M": [
+          -72,
+          36,
+          78,
+          94
+        ],
+        "parent_d": [
+          96,
+          24,
+          12,
+          6,
+          2
+        ],
+        "d_s": 6,
+        "u_s": 1,
+        "v_s": 5,
+        "ell": 3,
+        "n1": 16,
+        "m1": 12,
+        "raw_sp": 3,
+        "raw_M": [
+          -12,
+          6,
+          13
+        ],
+        "raw_d": [
+          16,
+          4,
+          2,
+          1
+        ],
+        "raw_V": [
+          4,
+          3
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -12,
+          6,
+          13
+        ],
+        "effective_d": [
+          16,
+          4,
+          2,
+          1
+        ],
+        "effective_V": [
+          4,
+          3
+        ],
+        "drops": 0,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 0,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "16",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "1/3",
+        "2": "2/7",
+        "3": "1/7",
+        "4": "-1"
+      },
+      "parent_delta_sminus1": "1/7",
+      "parent_V_sminus1": 3,
+      "nodes": [
+        {
+          "j": 3,
+          "delta": "1/7",
+          "L": 1,
+          "A": 7,
+          "P": 10,
+          "Q": 15,
+          "lower_bound": "2/3",
+          "selected_V": 3,
+          "selected_mode": "zero",
+          "zero_multiplicity": 3,
+          "nonzero_orbit_multiplicities": [
+            1
+          ],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "2/7",
+          "L": 7,
+          "A": 1,
+          "P": 6,
+          "Q": 15,
+          "lower_bound": "2/5",
+          "selected_V": 4,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            4,
+            1,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 3,
+        "V2": 4,
+        "zero": false
+      },
+      "witness": {
+        "j": 3,
+        "A": 7,
+        "P": 10,
+        "Q": 15,
+        "b": 3,
+        "S": 2,
+        "delta": "1/7",
+        "lo": "2/3",
+        "mode": "zero",
+        "orbits": [
+          1
+        ],
+        "zero_major": true,
+        "child": {
+          "j": 2,
+          "A": 1,
+          "P": 6,
+          "Q": 15,
+          "b": 0,
+          "S": 14,
+          "delta": "2/7",
+          "lo": "2/5",
+          "mode": "nonzero",
+          "orbits": [
+            4,
+            1,
+            1
+          ],
+          "zero_major": false,
+          "child": {
+            "A1": 3,
+            "V2": 4,
+            "zero": false
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    },
+    {
+      "row": {
+        "n": 90,
+        "m": 60,
+        "Ms": [
+          10,
+          45,
+          88
+        ],
+        "V": {
+          "2": 1,
+          "3": 8,
+          "4": 4
+        },
+        "s": 4,
+        "parent_M": [
+          -60,
+          10,
+          45,
+          88
+        ],
+        "parent_d": [
+          90,
+          30,
+          10,
+          5,
+          1
+        ],
+        "d_s": 5,
+        "u_s": 1,
+        "v_s": 4,
+        "ell": 2,
+        "n1": 18,
+        "m1": 12,
+        "raw_sp": 3,
+        "raw_M": [
+          -12,
+          2,
+          9
+        ],
+        "raw_d": [
+          18,
+          6,
+          2,
+          1
+        ],
+        "raw_V": [
+          1,
+          8
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -12,
+          2,
+          9
+        ],
+        "effective_d": [
+          18,
+          6,
+          2,
+          1
+        ],
+        "effective_V": [
+          1,
+          8
+        ],
+        "drops": 0,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 5,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "3",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "17/42",
+        "2": "5/21",
+        "3": "8/35",
+        "4": "-1"
+      },
+      "parent_delta_sminus1": "8/35",
+      "parent_V_sminus1": 8,
+      "nodes": [
+        {
+          "j": 3,
+          "delta": "8/35",
+          "L": 1,
+          "A": 35,
+          "P": 8,
+          "Q": 36,
+          "lower_bound": "2/9",
+          "selected_V": 8,
+          "selected_mode": "zero",
+          "zero_multiplicity": 8,
+          "nonzero_orbit_multiplicities": [],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "5/21",
+          "L": 35,
+          "A": 3,
+          "P": 24,
+          "Q": 64,
+          "lower_bound": "3/8",
+          "selected_V": 1,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 2,
+        "V2": 1,
+        "zero": false
+      },
+      "witness": {
+        "j": 3,
+        "A": 35,
+        "P": 8,
+        "Q": 36,
+        "b": 8,
+        "S": 1,
+        "delta": "8/35",
+        "lo": "2/9",
+        "mode": "zero",
+        "orbits": [],
+        "zero_major": true,
+        "child": {
+          "j": 2,
+          "A": 3,
+          "P": 24,
+          "Q": 64,
+          "b": 0,
+          "S": 21,
+          "delta": "5/21",
+          "lo": "3/8",
+          "mode": "nonzero",
+          "orbits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "zero_major": false,
+          "child": {
+            "A1": 2,
+            "V2": 1,
+            "zero": false
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    },
+    {
+      "row": {
+        "n": 108,
+        "m": 72,
+        "Ms": [
+          24,
+          78,
+          106
+        ],
+        "V": {
+          "2": 1,
+          "3": 4,
+          "4": 5
+        },
+        "s": 4,
+        "parent_M": [
+          -72,
+          24,
+          78,
+          106
+        ],
+        "parent_d": [
+          108,
+          36,
+          12,
+          6,
+          2
+        ],
+        "d_s": 6,
+        "u_s": 1,
+        "v_s": 5,
+        "ell": 3,
+        "n1": 18,
+        "m1": 12,
+        "raw_sp": 3,
+        "raw_M": [
+          -12,
+          4,
+          13
+        ],
+        "raw_d": [
+          18,
+          6,
+          2,
+          1
+        ],
+        "raw_V": [
+          1,
+          4
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -12,
+          4,
+          13
+        ],
+        "effective_d": [
+          18,
+          6,
+          2,
+          1
+        ],
+        "effective_V": [
+          1,
+          4
+        ],
+        "drops": 0,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 5,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "3",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "4/9",
+        "2": "2/9",
+        "3": "1/6",
+        "4": "-1"
+      },
+      "parent_delta_sminus1": "1/6",
+      "parent_V_sminus1": 4,
+      "nodes": [
+        {
+          "j": 3,
+          "delta": "1/6",
+          "L": 1,
+          "A": 6,
+          "P": 10,
+          "Q": 25,
+          "lower_bound": "2/5",
+          "selected_V": 4,
+          "selected_mode": "zero",
+          "zero_multiplicity": 4,
+          "nonzero_orbit_multiplicities": [
+            1
+          ],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "2/9",
+          "L": 6,
+          "A": 3,
+          "P": 12,
+          "Q": 28,
+          "lower_bound": "3/7",
+          "selected_V": 1,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 1,
+        "V2": 1,
+        "zero": false
+      },
+      "witness": {
+        "j": 3,
+        "A": 6,
+        "P": 10,
+        "Q": 25,
+        "b": 4,
+        "S": 4,
+        "delta": "1/6",
+        "lo": "2/5",
+        "mode": "zero",
+        "orbits": [
+          1
+        ],
+        "zero_major": true,
+        "child": {
+          "j": 2,
+          "A": 3,
+          "P": 12,
+          "Q": 28,
+          "b": 0,
+          "S": 9,
+          "delta": "2/9",
+          "lo": "3/7",
+          "mode": "nonzero",
+          "orbits": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "zero_major": false,
+          "child": {
+            "A1": 1,
+            "V2": 1,
+            "zero": false
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    },
+    {
+      "row": {
+        "n": 108,
+        "m": 72,
+        "Ms": [
+          48,
+          90,
+          106
+        ],
+        "V": {
+          "2": 1,
+          "3": 3,
+          "4": 5
+        },
+        "s": 4,
+        "parent_M": [
+          -72,
+          48,
+          90,
+          106
+        ],
+        "parent_d": [
+          108,
+          36,
+          12,
+          6,
+          2
+        ],
+        "d_s": 6,
+        "u_s": 1,
+        "v_s": 5,
+        "ell": 3,
+        "n1": 18,
+        "m1": 12,
+        "raw_sp": 3,
+        "raw_M": [
+          -12,
+          8,
+          15
+        ],
+        "raw_d": [
+          18,
+          6,
+          2,
+          1
+        ],
+        "raw_V": [
+          1,
+          3
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -12,
+          8,
+          15
+        ],
+        "effective_d": [
+          18,
+          6,
+          2,
+          1
+        ],
+        "effective_V": [
+          1,
+          3
+        ],
+        "drops": 0,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 5,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "3",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "9/14",
+        "2": "2/7",
+        "3": "1/7",
+        "4": "-1"
+      },
+      "parent_delta_sminus1": "1/7",
+      "parent_V_sminus1": 3,
+      "nodes": [
+        {
+          "j": 3,
+          "delta": "1/7",
+          "L": 1,
+          "A": 7,
+          "P": 10,
+          "Q": 15,
+          "lower_bound": "2/3",
+          "selected_V": 3,
+          "selected_mode": "zero",
+          "zero_multiplicity": 3,
+          "nonzero_orbit_multiplicities": [
+            1
+          ],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "2/7",
+          "L": 7,
+          "A": 1,
+          "P": 9,
+          "Q": 15,
+          "lower_bound": "3/5",
+          "selected_V": 1,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 2,
+        "V2": 1,
+        "zero": false
+      },
+      "witness": {
+        "j": 3,
+        "A": 7,
+        "P": 10,
+        "Q": 15,
+        "b": 3,
+        "S": 2,
+        "delta": "1/7",
+        "lo": "2/3",
+        "mode": "zero",
+        "orbits": [
+          1
+        ],
+        "zero_major": true,
+        "child": {
+          "j": 2,
+          "A": 1,
+          "P": 9,
+          "Q": 15,
+          "b": 0,
+          "S": 14,
+          "delta": "2/7",
+          "lo": "3/5",
+          "mode": "nonzero",
+          "orbits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "zero_major": false,
+          "child": {
+            "A1": 2,
+            "V2": 1,
+            "zero": false
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    },
+    {
+      "row": {
+        "n": 144,
+        "m": 96,
+        "Ms": [
+          -32,
+          104,
+          142
+        ],
+        "V": {
+          "2": 1,
+          "3": 14,
+          "4": 7
+        },
+        "s": 4,
+        "parent_M": [
+          -96,
+          -32,
+          104,
+          142
+        ],
+        "parent_d": [
+          144,
+          48,
+          16,
+          8,
+          2
+        ],
+        "d_s": 8,
+        "u_s": 1,
+        "v_s": 7,
+        "ell": 5,
+        "n1": 18,
+        "m1": 12,
+        "raw_sp": 3,
+        "raw_M": [
+          -12,
+          -4,
+          13
+        ],
+        "raw_d": [
+          18,
+          6,
+          2,
+          1
+        ],
+        "raw_V": [
+          1,
+          14
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -12,
+          -4,
+          13
+        ],
+        "effective_d": [
+          18,
+          6,
+          2,
+          1
+        ],
+        "effective_V": [
+          1,
+          14
+        ],
+        "drops": 0,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 5,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "3",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "11/51",
+        "2": "7/51",
+        "3": "2/17",
+        "4": "-1"
+      },
+      "parent_delta_sminus1": "2/17",
+      "parent_V_sminus1": 14,
+      "nodes": [
+        {
+          "j": 3,
+          "delta": "2/17",
+          "L": 1,
+          "A": 17,
+          "P": 14,
+          "Q": 35,
+          "lower_bound": "2/5",
+          "selected_V": 14,
+          "selected_mode": "zero",
+          "zero_multiplicity": 14,
+          "nonzero_orbit_multiplicities": [],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "7/51",
+          "L": 17,
+          "A": 3,
+          "P": 42,
+          "Q": 154,
+          "lower_bound": "3/11",
+          "selected_V": 1,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 1,
+        "V2": 1,
+        "zero": false
+      },
+      "witness": {
+        "j": 3,
+        "A": 17,
+        "P": 14,
+        "Q": 35,
+        "b": 14,
+        "S": 2,
+        "delta": "2/17",
+        "lo": "2/5",
+        "mode": "zero",
+        "orbits": [],
+        "zero_major": true,
+        "child": {
+          "j": 2,
+          "A": 3,
+          "P": 42,
+          "Q": 154,
+          "b": 0,
+          "S": 51,
+          "delta": "7/51",
+          "lo": "3/11",
+          "mode": "nonzero",
+          "orbits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "zero_major": false,
+          "child": {
+            "A1": 1,
+            "V2": 1,
+            "zero": false
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    },
+    {
+      "row": {
+        "n": 96,
+        "m": 72,
+        "Ms": [
+          -60,
+          56,
+          94
+        ],
+        "V": {
+          "2": 1,
+          "3": 9,
+          "4": 3
+        },
+        "s": 4,
+        "parent_M": [
+          -72,
+          -60,
+          56,
+          94
+        ],
+        "parent_d": [
+          96,
+          24,
+          12,
+          4,
+          2
+        ],
+        "d_s": 4,
+        "u_s": 1,
+        "v_s": 3,
+        "ell": 1,
+        "n1": 24,
+        "m1": 18,
+        "raw_sp": 3,
+        "raw_M": [
+          -18,
+          -15,
+          14
+        ],
+        "raw_d": [
+          24,
+          6,
+          3,
+          1
+        ],
+        "raw_V": [
+          1,
+          9
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -18,
+          -15,
+          14
+        ],
+        "effective_d": [
+          24,
+          6,
+          3,
+          1
+        ],
+        "effective_V": [
+          1,
+          9
+        ],
+        "drops": 0,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 5,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "4",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "39/116",
+        "2": "19/58",
+        "3": "9/29",
+        "4": "-1"
+      },
+      "parent_delta_sminus1": "9/29",
+      "parent_V_sminus1": 9,
+      "nodes": [
+        {
+          "j": 3,
+          "delta": "9/29",
+          "L": 1,
+          "A": 29,
+          "P": 9,
+          "Q": 30,
+          "lower_bound": "3/10",
+          "selected_V": 9,
+          "selected_mode": "zero",
+          "zero_multiplicity": 9,
+          "nonzero_orbit_multiplicities": [],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "19/58",
+          "L": 29,
+          "A": 2,
+          "P": 18,
+          "Q": 117,
+          "lower_bound": "2/13",
+          "selected_V": 1,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 2,
+        "V2": 1,
+        "zero": false
+      },
+      "witness": {
+        "j": 3,
+        "A": 29,
+        "P": 9,
+        "Q": 30,
+        "b": 9,
+        "S": 1,
+        "delta": "9/29",
+        "lo": "3/10",
+        "mode": "zero",
+        "orbits": [],
+        "zero_major": true,
+        "child": {
+          "j": 2,
+          "A": 2,
+          "P": 18,
+          "Q": 117,
+          "b": 0,
+          "S": 58,
+          "delta": "19/58",
+          "lo": "2/13",
+          "mode": "nonzero",
+          "orbits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "zero_major": false,
+          "child": {
+            "A1": 2,
+            "V2": 1,
+            "zero": false
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    },
+    {
+      "row": {
+        "n": 144,
+        "m": 96,
+        "Ms": [
+          -16,
+          72,
+          140,
+          142
+        ],
+        "V": {
+          "2": 1,
+          "3": 10,
+          "4": 5,
+          "5": 3
+        },
+        "s": 5,
+        "parent_M": [
+          -96,
+          -16,
+          72,
+          140,
+          142
+        ],
+        "parent_d": [
+          144,
+          48,
+          16,
+          8,
+          4,
+          2
+        ],
+        "d_s": 4,
+        "u_s": 1,
+        "v_s": 3,
+        "ell": 1,
+        "n1": 36,
+        "m1": 24,
+        "raw_sp": 4,
+        "raw_M": [
+          -24,
+          -4,
+          18,
+          35
+        ],
+        "raw_d": [
+          36,
+          12,
+          4,
+          2,
+          1
+        ],
+        "raw_V": [
+          1,
+          10,
+          5
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -24,
+          -4,
+          18
+        ],
+        "effective_d": [
+          36,
+          12,
+          4,
+          2
+        ],
+        "effective_V": [
+          1,
+          10
+        ],
+        "drops": 1,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 11,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "3",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "31/66",
+        "2": "13/33",
+        "3": "17/44",
+        "4": "0",
+        "5": "-1"
+      },
+      "parent_delta_sminus1": "0",
+      "parent_V_sminus1": 5,
+      "nodes": [
+        {
+          "j": 4,
+          "delta": "0",
+          "L": 1,
+          "A": 1,
+          "P": 6,
+          "Q": 3,
+          "lower_bound": "2",
+          "selected_V": 5,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            5,
+            1
+          ],
+          "danger": true,
+          "removable": true
+        },
+        {
+          "j": 3,
+          "delta": "17/44",
+          "L": 1,
+          "A": 44,
+          "P": 10,
+          "Q": 45,
+          "lower_bound": "2/9",
+          "selected_V": 10,
+          "selected_mode": "zero",
+          "zero_multiplicity": 10,
+          "nonzero_orbit_multiplicities": [],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "13/33",
+          "L": 44,
+          "A": 3,
+          "P": 30,
+          "Q": 100,
+          "lower_bound": "3/10",
+          "selected_V": 1,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 1,
+        "V2": 1,
+        "zero": false
+      },
+      "witness": {
+        "j": 4,
+        "A": 1,
+        "P": 6,
+        "Q": 3,
+        "b": 0,
+        "S": 2,
+        "delta": "0",
+        "lo": "2",
+        "mode": "nonzero",
+        "orbits": [
+          5,
+          1
+        ],
+        "zero_major": false,
+        "child": {
+          "j": 3,
+          "A": 44,
+          "P": 10,
+          "Q": 45,
+          "b": 10,
+          "S": 1,
+          "delta": "17/44",
+          "lo": "2/9",
+          "mode": "zero",
+          "orbits": [],
+          "zero_major": true,
+          "child": {
+            "j": 2,
+            "A": 3,
+            "P": 30,
+            "Q": 100,
+            "b": 0,
+            "S": 33,
+            "delta": "13/33",
+            "lo": "3/10",
+            "mode": "nonzero",
+            "orbits": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "zero_major": false,
+            "child": {
+              "A1": 1,
+              "V2": 1,
+              "zero": false
+            },
+            "danger": true
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    },
+    {
+      "row": {
+        "n": 150,
+        "m": 100,
+        "Ms": [
+          -60,
+          65,
+          148
+        ],
+        "V": {
+          "2": 1,
+          "3": 6,
+          "4": 3
+        },
+        "s": 4,
+        "parent_M": [
+          -100,
+          -60,
+          65,
+          148
+        ],
+        "parent_d": [
+          150,
+          50,
+          10,
+          5,
+          1
+        ],
+        "d_s": 5,
+        "u_s": 2,
+        "v_s": 3,
+        "ell": 0,
+        "n1": 60,
+        "m1": 40,
+        "raw_sp": 3,
+        "raw_M": [
+          -40,
+          -24,
+          26
+        ],
+        "raw_d": [
+          60,
+          20,
+          4,
+          2
+        ],
+        "raw_V": [
+          1,
+          6
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -40,
+          -24,
+          26
+        ],
+        "effective_d": [
+          60,
+          20,
+          4,
+          2
+        ],
+        "effective_V": [
+          1,
+          6
+        ],
+        "drops": 0,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 19,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "3",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "17/25",
+        "2": "83/125",
+        "3": "33/50",
+        "4": "-1"
+      },
+      "parent_delta_sminus1": "33/50",
+      "parent_V_sminus1": 6,
+      "nodes": [
+        {
+          "j": 3,
+          "delta": "33/50",
+          "L": 1,
+          "A": 50,
+          "P": 6,
+          "Q": 51,
+          "lower_bound": "2/17",
+          "selected_V": 6,
+          "selected_mode": "zero",
+          "zero_multiplicity": 6,
+          "nonzero_orbit_multiplicities": [],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "83/125",
+          "L": 50,
+          "A": 5,
+          "P": 30,
+          "Q": 126,
+          "lower_bound": "5/21",
+          "selected_V": 1,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 1,
+        "V2": 1,
+        "zero": false
+      },
+      "witness": {
+        "j": 3,
+        "A": 50,
+        "P": 6,
+        "Q": 51,
+        "b": 6,
+        "S": 1,
+        "delta": "33/50",
+        "lo": "2/17",
+        "mode": "zero",
+        "orbits": [],
+        "zero_major": true,
+        "child": {
+          "j": 2,
+          "A": 5,
+          "P": 30,
+          "Q": 126,
+          "b": 0,
+          "S": 25,
+          "delta": "83/125",
+          "lo": "5/21",
+          "mode": "nonzero",
+          "orbits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "zero_major": false,
+          "child": {
+            "A1": 1,
+            "V2": 1,
+            "zero": false
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    },
+    {
+      "row": {
+        "n": 150,
+        "m": 100,
+        "Ms": [
+          -60,
+          65,
+          148
+        ],
+        "V": {
+          "2": 5,
+          "3": 6,
+          "4": 3
+        },
+        "s": 4,
+        "parent_M": [
+          -100,
+          -60,
+          65,
+          148
+        ],
+        "parent_d": [
+          150,
+          50,
+          10,
+          5,
+          1
+        ],
+        "d_s": 5,
+        "u_s": 2,
+        "v_s": 3,
+        "ell": 0,
+        "n1": 60,
+        "m1": 40,
+        "raw_sp": 3,
+        "raw_M": [
+          -40,
+          -24,
+          26
+        ],
+        "raw_d": [
+          60,
+          20,
+          4,
+          2
+        ],
+        "raw_V": [
+          5,
+          6
+        ],
+        "effective_sp": 3,
+        "effective_M": [
+          -40,
+          -24,
+          26
+        ],
+        "effective_d": [
+          60,
+          20,
+          4,
+          2
+        ],
+        "effective_V": [
+          5,
+          6
+        ],
+        "drops": 0,
+        "raw_ctop_fail": true,
+        "effective_ctop_fail": true,
+        "up": 15,
+        "U_NEG": false,
+        "labelled_roots_in_D1": "15",
+        "operative": true
+      },
+      "parent_delta": {
+        "1": "2/3",
+        "2": "83/125",
+        "3": "33/50",
+        "4": "-1"
+      },
+      "parent_delta_sminus1": "33/50",
+      "parent_V_sminus1": 6,
+      "nodes": [
+        {
+          "j": 3,
+          "delta": "33/50",
+          "L": 1,
+          "A": 50,
+          "P": 6,
+          "Q": 51,
+          "lower_bound": "2/17",
+          "selected_V": 6,
+          "selected_mode": "zero",
+          "zero_multiplicity": 6,
+          "nonzero_orbit_multiplicities": [],
+          "danger": true,
+          "removable": false
+        },
+        {
+          "j": 2,
+          "delta": "83/125",
+          "L": 50,
+          "A": 5,
+          "P": 30,
+          "Q": 126,
+          "lower_bound": "5/21",
+          "selected_V": 5,
+          "selected_mode": "nonzero",
+          "zero_multiplicity": 0,
+          "nonzero_orbit_multiplicities": [
+            5,
+            1
+          ],
+          "danger": true,
+          "removable": false
+        }
+      ],
+      "bottom": {
+        "A1": 3,
+        "V2": 5,
+        "zero": false
+      },
+      "witness": {
+        "j": 3,
+        "A": 50,
+        "P": 6,
+        "Q": 51,
+        "b": 6,
+        "S": 1,
+        "delta": "33/50",
+        "lo": "2/17",
+        "mode": "zero",
+        "orbits": [],
+        "zero_major": true,
+        "child": {
+          "j": 2,
+          "A": 5,
+          "P": 30,
+          "Q": 126,
+          "b": 0,
+          "S": 25,
+          "delta": "83/125",
+          "lo": "5/21",
+          "mode": "nonzero",
+          "orbits": [
+            5,
+            1
+          ],
+          "zero_major": false,
+          "child": {
+            "A1": 3,
+            "V2": 5,
+            "zero": false
+          },
+          "danger": true
+        },
+        "danger": true
+      }
+    }
+  ]
+}

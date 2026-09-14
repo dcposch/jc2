@@ -1,0 +1,23 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 03:02 UTC, ahead of the 03:08 target.
+
+**Written**
+- `xmodel/d125-parity-unit-normalization-gate-fable5-20260907.md`, 1156 words, unique standalone `<!-- BODY-END -->` as the last line, no seal, no charge basis.
+- Own artifacts only in `box/d125-parity-unit-normalization-gate-fable5-20260907/`: `gate_controls.py`, `witness.json`, `witness-O.json`, `replay.json`, `pins.json`, record logs.
+
+**Verdicts**
+- All five attack items CONFIRMED. No producer claim failed.
+- Item 1: ℓ-divisibility of the [u⁰v¹] coefficient holds for every slot without the parity hypothesis or the origin, and the unit identity needs every Jacobian slot plus the t≤1 negative rows of both members. Localizing before those rows is not licensed.
+- Item 2: all thirteen nonzero fixed coefficients from the literal client sit on odd slots. Ten have exponent 0, A(2,1) and B(8,5) have −6, B(1,0) has −12. The map is the total-degree dilation with τ²=ℓ, so an unchanged-face normalization cannot exist.
+- Item 3: the isomorphism O₀ ≅ N⊗_E D depends on ℓ⁻¹ ∈ O₀ from item 1. The rank-6 cover is étale since 6T⁵ has inverse kT/6. Only properness and Q̄-point equivalence follow.
+- Items 4 and 5 confirmed as stated. The 128/129 coordinate count is reproduced from the client.
+
+**Own controls**
+- Nilpotent ring Q[ε]/(ε²) with ℓ=3+2ε. All 156 odd single-monomial lifts, a 7+9 monomial pair carrying every fixed face, chain rule with determinant +v², origin bookkeeping, degrees 75/125.
+- Four negative controls, each altering face, c-power, guard, or parity, exit 1 in normal and `-O` mode. Positive witnesses are byte-identical.
+- Positive run 9.9 s and 22 MB, within the caps.
+
+**Gaps recorded, none charged to the producer**
+- Odd parity and λ₂=0 are hypotheses. No k-fibre of N is shown nonempty. Properness of N is untouched.
+- The producer's 13747 exponent tests are algebraic tautologies. The substantive checks rest on the text, which I re-derived independently.
+DIVERT path=xmodel/d125-parity-unit-normalization-gate-fable5-20260907.md status=CLEAN body_bytes=8022 body_sha256=53f78754d8e567e145db4038f6f5b39f2f9a56c462178f20b1e94a2f6f0e7e10

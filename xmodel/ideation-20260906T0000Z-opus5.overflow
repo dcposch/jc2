@@ -1,0 +1,11 @@
+
+## Seal
+
+- Body definition: every byte through the unique standalone body-end marker line,
+  including its terminating newline; this seal is outside the body.
+- Body bytes: `24983`.
+- Body SHA-256:
+  `a7ee66808eb8688a568d9da98ec5840e9bb55fe0c76af21e6ac9852fb5cad89f`.
+- Frozen basis: `de78ca950def644a22c1bf5b6c877be8d043d0de`.
+- Charged inputs: 12/12 verified `OK` by `sha256sum -c` against a manifest built by `awk` from
+  the receipt's paired `charged_input_<i>_basename=` / `_sha256=` lines.

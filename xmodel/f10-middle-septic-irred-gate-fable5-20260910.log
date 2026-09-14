@@ -1,0 +1,24 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. The gate report is written, marker last, and all writers are idle.
+
+**Outcome: A, B, C, D and E all CONFIRMED. REFUTED none. GAP none within the charged claims.** The producer's partial theorem holds as stated: for every integer r at least 2 with r congruent to 1, 2 or 3 modulo 7, the septic S is irreducible over Q_7 and hence over Q, so Z is a unit of the entire leading algebra for every allowed h at those r. It is a genuine infinite-family result and not generic irreducibility or sampling.
+
+What I reconstructed by hand, independently of the producer's prose:
+
+- **Residue table.** The denominator 3r+1 is a 7-adic unit exactly when r is not 2 mod 7, and tau is 2 or 1 mod 7 exactly for r congruent to 1 or 3. The factors of k0 vanish mod 7 only at tau equal to 3, 4, 5, 6.
+- **Valuation ledger.** Every term of S was expanded by degree and 7-power. The constant coefficient is a unit, degrees 1 to 3 have valuation at least 1, degrees 4 to 6 at least 2, and the degree-7 coefficient has valuation exactly 2 because 120 and 144 are units mod 7. Cancellation can only raise the intermediate lower bounds and cannot touch the two exact values.
+- **Root valuation.** Both sides of the slope were checked with explicit strict inequalities, including every intermediate coefficient. The split between degrees 3 and 4 is exactly the polygon condition and no lattice point sits on the line. A proper factor of degree d would have a root product of valuation minus 2d/7, which is not an integer for d from 1 to 6. The nonmonic case is handled by the constant-to-leading ratio.
+- **The r congruent to 2 chart.** I substituted V equal to tau X myself and rederived all coefficients of Dbar, Kbar, gbar and Sbar. Only b congruent to 0 mod 7 is used, so any positive valuation of 3r+1 works. Nonzero rational rescaling preserves irreducibility in both directions.
+- **Implication.** T is a nonzero quintic with leading coefficient 10080 for every allowed h, so an irreducible septic S cannot divide it. Bezout in Q[V] gives the inverse of Z as the Bezout cofactor times D, in the whole algebra and every base change.
+- **Negative control.** In each uncovered class exactly one hypothesis fails: r congruent to 0 breaks the leading exactness, while r congruent to 4, 5, 6 breaks the constant exactness. That failure says nothing about reducibility, and squarefreeness alone would not license the degree argument.
+
+Precision items that change no verdict: the letter b is overloaded in the producer text, and the r congruent to 1 family starts at r equal to 8.
+
+Custody of the output:
+
+| file | sha256 |
+|---|---|
+| xmodel/f10-middle-septic-irred-gate-fable5-20260910.md | df3b91a0a16360cde2436943bd8783def5c848d25c9c3770a175a7a49d1786db |
+
+All seven input pins re-verified unchanged at the end. No Seal or charge_basis was authored. No OPEN raised. The remaining obstruction is unchanged in substance: uniform irreducibility or uniform coprimality of S and T on the four residue families r congruent to 0, 4, 5, 6 modulo 7.
+DIVERT path=xmodel/f10-middle-septic-irred-gate-fable5-20260910.md status=CLEAN body_bytes=13150 body_sha256=df3b91a0a16360cde2436943bd8783def5c848d25c9c3770a175a7a49d1786db

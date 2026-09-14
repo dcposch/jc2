@@ -1,0 +1,61 @@
+{
+ "arrow1_chart_and_band_formula": "PASS (substitution route)",
+ "arrow1_terminal_edge_and_normalization_slots": "PASS",
+ "arrow1_untranslate_first": {
+  "Phi(v)": "image, naive rejects",
+  "X^5*Y": "not image, naive accepts"
+ },
+ "arrow3_counts": {
+  "P": {
+   "bands": 91,
+   "dimension": 653,
+   "jet_rows": 53,
+   "source_coefficients": 706
+  },
+  "Q": {
+   "bands": 151,
+   "dimension": 1765,
+   "jet_rows": 136,
+   "source_coefficients": 1901
+  }
+ },
+ "arrow3_inverse_and_both_containments": {
+  "H_terms": 23,
+  "mutations_rejected": [
+   "sign",
+   "no 1/5"
+  ],
+  "residual_terms": 76
+ },
+ "arrow3_physical_row_index_bound": 4572,
+ "elapsed_s": 0.49,
+ "guard_not_implied_by_linear_rows": {
+  "P": {
+   "columns": 13,
+   "jets": 6,
+   "rank_top_set_to_zero": 7,
+   "rank_with_norm": 7,
+   "verdict": "alpha_top=0 is consistent with all linear rows; guard is an explicit addition"
+  },
+  "Q": {
+   "columns": 21,
+   "jets": 10,
+   "rank_top_set_to_zero": 11,
+   "rank_with_norm": 11,
+   "verdict": "alpha_top=0 is consistent with all linear rows; guard is an explicit addition"
+  }
+ },
+ "public_metadata_recount": {
+  "active_generators": 1327026,
+  "advertised": [
+   13741,
+   1327026,
+   41685
+  ],
+  "band_pair_incidences": 13741,
+  "layers_with_rows": 235,
+  "raw_scalar_rows": 41685
+ },
+ "status": "PASS",
+ "toy_guard_mutation": "guard on a zero slot yields the unit -1: rejected (fail closed)"
+}

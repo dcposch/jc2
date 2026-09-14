@@ -1,0 +1,14 @@
+--- oldchecker.py
++++ checker.py
+@@ -9,8 +9,10 @@
+ from execution_gate import authorize
+ 
+ def verify(data, certificate):
+-    # This pure function may only be called inside a separately authorized
++    # This function may only be called inside a separately authorized
+     # child (main below, or a future explicitly registered test harness).
++    # Fresh checker/control children need their own decimal policy.
++    sys.set_int_max_str_digits(0)
+     from fractions import Fraction
+     from math import gcd
+     def need(ok, why):

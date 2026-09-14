@@ -1,0 +1,703 @@
+{
+  "binaries": {
+    ".libs/msolve": "175575870bf76a3c3a21c1660e1f6c7b8604a256fc4123643ce9711589326434",
+    "msolve": "2a5e92cf85ecadbef3168b3e8205bf40680da414e5c38940427420e3c4c32053",
+    "src/msolve/.libs/libmsolve.so.3.0.7": "a569a80d81852f031be0d7c1950d68e5d35f04b1a4f85c57a353baf95829c47e",
+    "src/neogb/.libs/libneogb.so.3.0.7": "12197d33ce3075fd41c9874cf1379c1937fc5666e25887ae1ec22a30b271edbb"
+  },
+  "build_test_elapsed_seconds": 93.11853990899999,
+  "coordinator_retains_instance": true,
+  "files": {
+    "REGISTRATION-final.md": {
+      "bytes": 1273,
+      "sha256": "df813ecfe5f0302d944557d6758c49d24feaaadec75cf3505b8e78fc85f77fc6"
+    },
+    "REGISTRATION.md": {
+      "bytes": 953,
+      "sha256": "6bd104b5168aca4411cb94cf6cc97e959a64b4b00707a5f3ec953212ae3f8ba0"
+    },
+    "boundary": {
+      "bytes": 17536,
+      "sha256": "35dcc21d389c4262c011a3fcb9a4e32460ebbd315231986d520411e4575f9f3d"
+    },
+    "boundary-v2.c": {
+      "bytes": 3903,
+      "sha256": "5fcad34ed60fc879f689b30086fba4efab1dbda6851a741eb63b88b40421fdc2"
+    },
+    "boundary.c": {
+      "bytes": 3499,
+      "sha256": "12f80cd2ec44dd89cacc72de6aafc5be30af2d5abc46d708731a304fe68c1480"
+    },
+    "build-v2.json": {
+      "bytes": 1215,
+      "sha256": "6820ee29afa4b1c797ac501e9fb2c413d26aa31e71522f84e6d3e46dc3217375"
+    },
+    "build.identity.json": {
+      "bytes": 505,
+      "sha256": "f2539b8f2c5c90a2141671a6a907bad4bcc2d8a3b87849f761e5a803ff06d720"
+    },
+    "build.json": {
+      "bytes": 1388,
+      "sha256": "e5049feda3d8822840891166d82ea4a812242adeec23f1ac401debbf0ac899bb"
+    },
+    "build.stderr": {
+      "bytes": 1457,
+      "sha256": "83d09a9408c23f4a3d17ecd38896d51c866c9a58df604df0dbf0e3b148880488"
+    },
+    "build.stdout": {
+      "bytes": 37797,
+      "sha256": "066b2d916a6a8ec680016ff7c5dbb7b171c41efdd2edc9c6dc6441752619c3c9"
+    },
+    "build.telemetry.json": {
+      "bytes": 2086,
+      "sha256": "14f396415301f3a47c11407087c4130011bf686ba00e56110a59b00fdb665c28"
+    },
+    "dummy.child.json": {
+      "bytes": 6,
+      "sha256": "da185dcca9d467dee1ac1a667a6e6fed977e9a61da084e198c007c95e9b1c8dd"
+    },
+    "dummy.identity.json": {
+      "bytes": 505,
+      "sha256": "de6b7fbb586f1428912fd8bc20051f7f4a40b4284efe9458626e724ca150bc7d"
+    },
+    "dummy.py": {
+      "bytes": 503,
+      "sha256": "2e09636a7749dea0ba99703286c7daa11fbdc28c4a33a90808c75cdd85f9a304"
+    },
+    "dummy.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "dummy.stdout": {
+      "bytes": 52,
+      "sha256": "4e6db2d2890db8f1999aa13cafc2d9d8bf89ddeb5da7e5b7078d4c36f91171bb"
+    },
+    "dummy.telemetry.json": {
+      "bytes": 2906,
+      "sha256": "cc5061654b15e90765cffa2f6f28c7d06156b5b373c08c043a065c0488ad8818"
+    },
+    "harvest.py": {
+      "bytes": 3081,
+      "sha256": "3f9377fa3930cd24716d009a401e047d7240347b20a91655fad3f9bdf13f2ddd"
+    },
+    "msolve-0.10.1-checked-input-allocation-v2.patch": {
+      "bytes": 9017,
+      "sha256": "452565bfc1f1a7450f08bfe71e8d130f7ea7e5cc27c3f8055f474c38df62117b"
+    },
+    "msolve-0.10.1-checked-input-allocation.patch": {
+      "bytes": 7860,
+      "sha256": "c4c22a5cdde1145de5b5eb79e524d570e2c34be5350a139d3679bc25db1589a6"
+    },
+    "msolve-0.10.1-heap-sort-permutation.patch": {
+      "bytes": 2056,
+      "sha256": "c49a9fb322c3c6518ff2234a7e521de3aa6a372efbe27dc4c9aa9360db3b2242"
+    },
+    "msolve-0.10.1-int64-input-offset.patch": {
+      "bytes": 843,
+      "sha256": "4f2e723575ff2acbfcee4144d4c2e47cd314f6f25d1241bd1286c202c3863055"
+    },
+    "proper-p0.basis": {
+      "bytes": 244,
+      "sha256": "05774a6762b5c8aaa9429a105cdd99e6a8be58146183906ca13f6b695bab03ae"
+    },
+    "proper-p0.ms": {
+      "bytes": 19,
+      "sha256": "409fb8770f6a46b8f19982183c8864fcf1208885e7369d2ab34ad4ac04053866"
+    },
+    "proper-p0.stderr": {
+      "bytes": 4042,
+      "sha256": "99dc0a42b5b6fbbe2721213e161d47f9a44c9e33da302c438cb8d1c8edee0110"
+    },
+    "proper-p0.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "proper-p1073741827.basis": {
+      "bytes": 296,
+      "sha256": "133c054ef96e59be430f58039e28ce44bf771bbb1db5158a4a4119e87655171a"
+    },
+    "proper-p1073741827.ms": {
+      "bytes": 28,
+      "sha256": "b549a914b03f88db39f34799a1ca7b66955c6016c3ac9afa4edf8662c569e45f"
+    },
+    "proper-p1073741827.stderr": {
+      "bytes": 3044,
+      "sha256": "8ba704433d81f6598661390b5c1a22fd94d4229a0e5a0d414a5096fb27d8eb82"
+    },
+    "proper-p1073741827.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rational-p0.basis": {
+      "bytes": 228,
+      "sha256": "c4871f7ba928ba61b16f51905a7dcb7eed8fb35de976ff55938513e748e6ccb9"
+    },
+    "rational-p0.ms": {
+      "bytes": 31,
+      "sha256": "929aed13a8eed9240afcaf140bc913b14f2f1b02296c6898d41cf2abc19ae4cf"
+    },
+    "rational-p0.stderr": {
+      "bytes": 3940,
+      "sha256": "8d0880fd73d636d460a984bfab76ebe20ad6912192dbfe6776580b0f3308e16c"
+    },
+    "rational-p0.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "retry-proper-p0.basis": {
+      "bytes": 244,
+      "sha256": "05774a6762b5c8aaa9429a105cdd99e6a8be58146183906ca13f6b695bab03ae"
+    },
+    "retry-proper-p0.ms": {
+      "bytes": 19,
+      "sha256": "409fb8770f6a46b8f19982183c8864fcf1208885e7369d2ab34ad4ac04053866"
+    },
+    "retry-proper-p0.stderr": {
+      "bytes": 4042,
+      "sha256": "84fe5557d17c3bad5f9b97dbb73c29455c7c2bc65531a9ee71e755fe40384c0e"
+    },
+    "retry-proper-p0.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "retry-proper-p1073741827.basis": {
+      "bytes": 296,
+      "sha256": "133c054ef96e59be430f58039e28ce44bf771bbb1db5158a4a4119e87655171a"
+    },
+    "retry-proper-p1073741827.ms": {
+      "bytes": 28,
+      "sha256": "b549a914b03f88db39f34799a1ca7b66955c6016c3ac9afa4edf8662c569e45f"
+    },
+    "retry-proper-p1073741827.stderr": {
+      "bytes": 3044,
+      "sha256": "3daa6c1db69a1ec0af9f6b628d4947246c03d7d142a69240ee575de1ecaa9736"
+    },
+    "retry-proper-p1073741827.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "retry-rational-p0.basis": {
+      "bytes": 228,
+      "sha256": "c4871f7ba928ba61b16f51905a7dcb7eed8fb35de976ff55938513e748e6ccb9"
+    },
+    "retry-rational-p0.ms": {
+      "bytes": 31,
+      "sha256": "929aed13a8eed9240afcaf140bc913b14f2f1b02296c6898d41cf2abc19ae4cf"
+    },
+    "retry-rational-p0.stderr": {
+      "bytes": 3940,
+      "sha256": "a88865cabaa8f66f0ca08a8a78006d09904f1712f300e5eb2da0a51c1f589b6f"
+    },
+    "retry-rational-p0.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "retry-unit-p0.basis": {
+      "bytes": 184,
+      "sha256": "c8cd1899e5f7accca3669c5368300a5a1264bf83f0801d0fccb33143644d810e"
+    },
+    "retry-unit-p0.ms": {
+      "bytes": 20,
+      "sha256": "fa967c25848873fc1bd23a28009caa0ae61951039ab942b1c167259a4a6cd563"
+    },
+    "retry-unit-p0.stderr": {
+      "bytes": 3782,
+      "sha256": "7e6d18d6a0dda10971954b3fa7ca083fd65717a8e217e44b8a1da8ad18ba5459"
+    },
+    "retry-unit-p0.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "retry-unit-p1073741827.basis": {
+      "bytes": 193,
+      "sha256": "b16007534af8dffa960a1c86946e619afee64814972c413795c3384ae350fcac"
+    },
+    "retry-unit-p1073741827.ms": {
+      "bytes": 29,
+      "sha256": "b6ffba03ef1210473fef21e4a2896ccb062d511d9b1ea829b7142f9e3cb7e8ba"
+    },
+    "retry-unit-p1073741827.stderr": {
+      "bytes": 2988,
+      "sha256": "1162e3e0af03d65507ed15bb8d01a12f442ce593afc0731f68103e56c8a68a84"
+    },
+    "retry-unit-p1073741827.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run_capped.py": {
+      "bytes": 42671,
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    "source-inputs-v2.json": {
+      "bytes": 669,
+      "sha256": "02836291acbbe188029f08258db3ca89b37c0c6cea52ab2cc896ca63d59299bb"
+    },
+    "source-inputs.json": {
+      "bytes": 576,
+      "sha256": "842f5c09aeda8e44bacc6da2614f0b463680703d1a0063d1a959022254ffe33f"
+    },
+    "tests-retry.identity.json": {
+      "bytes": 520,
+      "sha256": "dc124f59aa81230613e3e6f6894935d587b28b4d44eedfcc30b7f6cec07e68f1"
+    },
+    "tests-retry.json": {
+      "bytes": 5040,
+      "sha256": "2f568acdb8e89e574d72e1200f150d21cc7a3e6c30173e95bcc1a5f16688e3ca"
+    },
+    "tests-retry.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "tests-retry.stdout": {
+      "bytes": 341,
+      "sha256": "83d345a64e842e16b3c88d329df687f1112affc774df8f53d007a593cb31220b"
+    },
+    "tests-retry.telemetry.json": {
+      "bytes": 2098,
+      "sha256": "6ce4af058431c6dc4c23089a13dec15b80a83d45ac35bbf5759bab17f0f534f9"
+    },
+    "tests.identity.json": {
+      "bytes": 514,
+      "sha256": "c899889e7f3a335565c89da82dbc2b906913ed528a233b8497e216116bd50d34"
+    },
+    "tests.stderr": {
+      "bytes": 660,
+      "sha256": "65c38c7cc4c9f69f5009f000dc77084e9b5c72180e7f51a30e99e640238232c7"
+    },
+    "tests.stdout": {
+      "bytes": 321,
+      "sha256": "a95060d7c04e89de7d5674d0e5dfafdafb6074d41bf4b6a94a32f2cceda5e1c8"
+    },
+    "tests.telemetry.json": {
+      "bytes": 2083,
+      "sha256": "f6028e8df319da0cde21b98ace7994994bf5f55879413532004d26172e8bee6f"
+    },
+    "unit-p0.basis": {
+      "bytes": 184,
+      "sha256": "c8cd1899e5f7accca3669c5368300a5a1264bf83f0801d0fccb33143644d810e"
+    },
+    "unit-p0.ms": {
+      "bytes": 20,
+      "sha256": "fa967c25848873fc1bd23a28009caa0ae61951039ab942b1c167259a4a6cd563"
+    },
+    "unit-p0.stderr": {
+      "bytes": 3782,
+      "sha256": "682d8cdcddb5a929523639c5ba7cc6f2b2a45b6620683386f9531fdc8e58fe1e"
+    },
+    "unit-p0.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "unit-p1073741827.basis": {
+      "bytes": 193,
+      "sha256": "b16007534af8dffa960a1c86946e619afee64814972c413795c3384ae350fcac"
+    },
+    "unit-p1073741827.ms": {
+      "bytes": 29,
+      "sha256": "b6ffba03ef1210473fef21e4a2896ccb062d511d9b1ea829b7142f9e3cb7e8ba"
+    },
+    "unit-p1073741827.stderr": {
+      "bytes": 2988,
+      "sha256": "bc85a5eba06863187172da99985db72c76676ebce99480cc28839078de29cb6b"
+    },
+    "unit-p1073741827.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "upgrade.identity.json": {
+      "bytes": 516,
+      "sha256": "226241bdb8ec6629af641e6094967692a5c890e4e9ad5a531274ab494044b276"
+    },
+    "upgrade.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "upgrade.stdout": {
+      "bytes": 22002,
+      "sha256": "bd93975898bba05ab1241630e5f70336e38c5b591475650af62896b56446071d"
+    },
+    "upgrade.telemetry.json": {
+      "bytes": 2091,
+      "sha256": "d47993103cd4aed945950319aba81662fb978512cbf8dbab87bac17d42cbd3d4"
+    },
+    "worker-v2.py": {
+      "bytes": 8033,
+      "sha256": "4dbe276e7fb7d078f1165bcc6ab0ed6cbdc84773cec205587b481388d1a704ef"
+    },
+    "worker-v3.py": {
+      "bytes": 9340,
+      "sha256": "88db3e1b5ae5bc7eb0956cbe293a3a917530d4d8d0ca5abd447503d0ddffcde9"
+    },
+    "worker.py": {
+      "bytes": 6558,
+      "sha256": "9b89b65e23d74b1d3dfbb3837739c3b6774e5f84ecec9de924f8712c9b70aa2d"
+    }
+  },
+  "hostname": "ip-172-30-0-56",
+  "instance": "i-0da0cebfc97c9fd54",
+  "live_registered_group_members": [],
+  "max_observed_group_rss_bytes": 815259648,
+  "no_giant_parser_or_complete_F4": true,
+  "owner": "/root/model_productivity",
+  "package_or_instance_changes": false,
+  "remaining_hazards": "See sealed report: not a general memory-safety audit or unrestricted solver approval.",
+  "source_commit": "185e7b92fa0687f4db68b0f2f453a835668ac132",
+  "sources": {
+    "src/msolve/checked-input-size.h": "870592b22426f274a601e21620c45728d91e7c3127a5e75c31432fa2f9cd32b1",
+    "src/msolve/iofiles.c": "536ab7ab87ec175242d4f949db7e16a4ad999ae8d2a6979a867969cac173f7d7",
+    "src/msolve/msolve-data.h": "3118f47ad9570e0d1fe49059abfa78bf735124939a9b83edb846c2df3220fee3",
+    "src/msolve/msolve.c": "cce4f6172fde08247f8f9997291619e55868606dc99164bbaaba8918af19bfb3",
+    "src/neogb/data.h": "a4cbef1f802203de32747bb8c210044b956dcafa3906dbd7dd8c9c8f9ad7a681",
+    "src/neogb/io.c": "f901d3775c28a813f65527a2bbd65d927eafd9ef3335805a6562932415553a8d"
+  },
+  "terminal_stages": {
+    "build": {
+      "argv_count": 3,
+      "argv_sha256": "c8b958d94e5789c2bad62c5b075d632572e127c8ce16bd23a6e09c1ee6971cd1",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1.0,
+        "rss_bytes": 17179869184,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1.0,
+        "wall_seconds": 600.0
+      },
+      "child_exit_code": 0,
+      "child_returncode": 0,
+      "child_signal": null,
+      "cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "enforcement": {
+        "cpu": "disabled",
+        "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+        "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+      },
+      "error": null,
+      "executable": "python3",
+      "identity_checks": [],
+      "invocation_cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "max_observed_group_rss_bytes": 815259648,
+      "pgid": 84869,
+      "pid": 84869,
+      "resource": null,
+      "runner_exit_code": 0,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=815845",
+      "start_identity_source": "linux-proc-stat-field22",
+      "status": "NORMAL_EXIT",
+      "stderr": {
+        "bytes": 1457,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/build.stderr",
+        "sha256": "83d09a9408c23f4a3d17ecd38896d51c866c9a58df604df0dbf0e3b148880488"
+      },
+      "stdin": {
+        "mode": "devnull",
+        "path": null
+      },
+      "stdout": {
+        "bytes": 37797,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/build.stdout",
+        "sha256": "066b2d916a6a8ec680016ff7c5dbb7b171c41efdd2edc9c6dc6441752619c3c9"
+      },
+      "telemetry_path": "/home/ubuntu/msolve-allocation-repair-20260906/build.telemetry.json",
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      },
+      "utc_end": "2026-09-06T12:02:47.164252Z",
+      "utc_start": "2026-09-06T12:01:53.978517Z",
+      "wall_elapsed_seconds": 53.185740929
+    },
+    "dummy": {
+      "argv_count": 3,
+      "argv_sha256": "4db350941dc52c7b8ac7a27a0549a11c8fd9c8f9b75ca35e103295919968e7fe",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1.0,
+        "rss_bytes": 268435456,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1.0,
+        "wall_seconds": 3.0
+      },
+      "child_exit_code": 0,
+      "child_returncode": 0,
+      "child_signal": null,
+      "cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "enforcement": {
+        "cpu": "disabled",
+        "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+        "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+      },
+      "error": null,
+      "executable": "python3",
+      "identity_checks": [
+        {
+          "observed_pgid": 84690,
+          "observed_pid": 84690,
+          "observed_start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=812539",
+          "result": "MATCH",
+          "stage": "before-term",
+          "utc": "2026-09-06T12:01:23.931682Z"
+        },
+        {
+          "result": "SENT",
+          "signal": 15,
+          "stage": "before-term-send",
+          "utc": "2026-09-06T12:01:23.931717Z"
+        },
+        {
+          "observed_pgid": 84690,
+          "observed_pid": 84690,
+          "observed_start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=812539",
+          "result": "MATCH",
+          "stage": "before-kill",
+          "utc": "2026-09-06T12:01:24.938724Z"
+        },
+        {
+          "result": "SENT",
+          "signal": 9,
+          "stage": "before-kill-send",
+          "utc": "2026-09-06T12:01:24.938754Z"
+        }
+      ],
+      "invocation_cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "max_observed_group_rss_bytes": 77877248,
+      "pgid": 84690,
+      "pid": 84690,
+      "resource": null,
+      "runner_exit_code": 124,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=812539",
+      "start_identity_source": "linux-proc-stat-field22",
+      "status": "WALL_TIMEOUT",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/dummy.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdin": {
+        "mode": "devnull",
+        "path": null
+      },
+      "stdout": {
+        "bytes": 52,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/dummy.stdout",
+        "sha256": "4e6db2d2890db8f1999aa13cafc2d9d8bf89ddeb5da7e5b7078d4c36f91171bb"
+      },
+      "telemetry_path": "/home/ubuntu/msolve-allocation-repair-20260906/dummy.telemetry.json",
+      "termination": {
+        "cleanup_complete": true,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [
+          84690
+        ],
+        "kill_sent": true,
+        "leader_reaped": true,
+        "reason": "wall_timeout",
+        "term_sent": true
+      },
+      "utc_end": "2026-09-06T12:01:24.946269Z",
+      "utc_start": "2026-09-06T12:01:20.919513Z",
+      "wall_elapsed_seconds": 4.026754908
+    },
+    "tests": {
+      "argv_count": 3,
+      "argv_sha256": "98ce31c1aac681d25016a5fb044892f030b52323c93c599accdcd41f44660b25",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1.0,
+        "rss_bytes": 17179869184,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1.0,
+        "wall_seconds": 300.0
+      },
+      "child_exit_code": 1,
+      "child_returncode": 1,
+      "child_signal": null,
+      "cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "enforcement": {
+        "cpu": "disabled",
+        "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+        "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+      },
+      "error": null,
+      "executable": "python3",
+      "identity_checks": [],
+      "invocation_cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "max_observed_group_rss_bytes": 50044928,
+      "pgid": 113666,
+      "pid": 113666,
+      "resource": null,
+      "runner_exit_code": 1,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=849992",
+      "start_identity_source": "linux-proc-stat-field22",
+      "status": "NORMAL_EXIT",
+      "stderr": {
+        "bytes": 660,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/tests.stderr",
+        "sha256": "65c38c7cc4c9f69f5009f000dc77084e9b5c72180e7f51a30e99e640238232c7"
+      },
+      "stdin": {
+        "mode": "devnull",
+        "path": null
+      },
+      "stdout": {
+        "bytes": 321,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/tests.stdout",
+        "sha256": "a95060d7c04e89de7d5674d0e5dfafdafb6074d41bf4b6a94a32f2cceda5e1c8"
+      },
+      "telemetry_path": "/home/ubuntu/msolve-allocation-repair-20260906/tests.telemetry.json",
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      },
+      "utc_end": "2026-09-06T12:07:35.689425Z",
+      "utc_start": "2026-09-06T12:07:35.446278Z",
+      "wall_elapsed_seconds": 0.243153402
+    },
+    "tests-retry": {
+      "argv_count": 3,
+      "argv_sha256": "e4c645a16d456cb38ad2b35e3e40646e65fab5d57557c636a7468258432639b9",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1.0,
+        "rss_bytes": 17179869184,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1.0,
+        "wall_seconds": 60.0
+      },
+      "child_exit_code": 0,
+      "child_returncode": 0,
+      "child_signal": null,
+      "cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "enforcement": {
+        "cpu": "disabled",
+        "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+        "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+      },
+      "error": null,
+      "executable": "python3",
+      "identity_checks": [],
+      "invocation_cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "max_observed_group_rss_bytes": 50421760,
+      "pgid": 114071,
+      "pid": 114071,
+      "resource": null,
+      "runner_exit_code": 0,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=858586",
+      "start_identity_source": "linux-proc-stat-field22",
+      "status": "NORMAL_EXIT",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/tests-retry.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdin": {
+        "mode": "devnull",
+        "path": null
+      },
+      "stdout": {
+        "bytes": 341,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/tests-retry.stdout",
+        "sha256": "83d345a64e842e16b3c88d329df687f1112affc774df8f53d007a593cb31220b"
+      },
+      "telemetry_path": "/home/ubuntu/msolve-allocation-repair-20260906/tests-retry.telemetry.json",
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      },
+      "utc_end": "2026-09-06T12:09:01.628694Z",
+      "utc_start": "2026-09-06T12:09:01.384888Z",
+      "wall_elapsed_seconds": 0.243809123
+    },
+    "upgrade": {
+      "argv_count": 3,
+      "argv_sha256": "0ecb7c16dc9f8ddbbd2835ab9ef956fc1fe23fea644fbb2daf027c9d567c6113",
+      "caps": {
+        "cpu_seconds": null,
+        "lifecycle_initial_seconds": 0.05,
+        "lifecycle_sample_seconds": 1.0,
+        "rss_bytes": 17179869184,
+        "rss_sample_seconds": 0.05,
+        "term_grace_seconds": 1.0,
+        "wall_seconds": 300.0
+      },
+      "child_exit_code": 0,
+      "child_returncode": 0,
+      "child_signal": null,
+      "cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "enforcement": {
+        "cpu": "disabled",
+        "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+        "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+      },
+      "error": null,
+      "executable": "python3",
+      "identity_checks": [],
+      "invocation_cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+      "max_observed_group_rss_bytes": 814456832,
+      "pgid": 102640,
+      "pid": 102640,
+      "resource": null,
+      "runner_exit_code": 0,
+      "runner_signal": null,
+      "schema": "CAPRUN/v1",
+      "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=842933",
+      "start_identity_source": "linux-proc-stat-field22",
+      "status": "NORMAL_EXIT",
+      "stderr": {
+        "bytes": 0,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/upgrade.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdin": {
+        "mode": "devnull",
+        "path": null
+      },
+      "stdout": {
+        "bytes": 22002,
+        "path": "/home/ubuntu/msolve-allocation-repair-20260906/upgrade.stdout",
+        "sha256": "bd93975898bba05ab1241630e5f70336e38c5b591475650af62896b56446071d"
+      },
+      "telemetry_path": "/home/ubuntu/msolve-allocation-repair-20260906/upgrade.telemetry.json",
+      "termination": {
+        "cleanup_complete": null,
+        "group_live_before_reap": [],
+        "group_zombies_before_reap": [],
+        "kill_sent": false,
+        "leader_reaped": false,
+        "reason": null,
+        "term_sent": false
+      },
+      "utc_end": "2026-09-06T12:07:04.301040Z",
+      "utc_start": "2026-09-06T12:06:24.855210Z",
+      "wall_elapsed_seconds": 39.445836455
+    }
+  },
+  "utc": "2026-09-06T12:10:53Z",
+  "worker_root": "/home/ubuntu/msolve-allocation-repair-20260906"
+}

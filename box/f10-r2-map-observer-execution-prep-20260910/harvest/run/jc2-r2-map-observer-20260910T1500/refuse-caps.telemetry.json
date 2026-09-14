@@ -1,0 +1,80 @@
+{
+  "argv_count": 27,
+  "argv_sha256": "469e97a541c0548a2de7d5be5e385a006e43c7fcdce04ec2671d6a02f288069a",
+  "caps": {
+    "cpu_seconds": 3,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 2147483648,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 5.0
+  },
+  "child_exit_code": null,
+  "child_returncode": -15,
+  "child_signal": 15,
+  "cwd": "/opt/jc2-r2-map-observer-20260910T1500/science",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/setpriv",
+  "identity_checks": [
+    {
+      "observed_pgid": 8404,
+      "observed_pid": 8404,
+      "observed_start_identity": "boot=602d4427-0f4a-4df3-ac6e-4594036882cb;start_ticks=62472",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-09-10T15:11:46.102585Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-09-10T15:11:46.102613Z"
+    }
+  ],
+  "invocation_cwd": "/opt/jc2-r2-map-observer-20260910T1500/wrapper",
+  "max_observed_group_rss_bytes": 14692352,
+  "pgid": 8404,
+  "pid": 8404,
+  "resource": null,
+  "runner_exit_code": 143,
+  "runner_signal": 15,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=602d4427-0f4a-4df3-ac6e-4594036882cb;start_ticks=62472",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "SIGNAL",
+  "stderr": {
+    "bytes": 0,
+    "path": "/run/jc2-r2-map-observer-20260910T1500/refuse-caps.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 0,
+    "path": "/run/jc2-r2-map-observer-20260910T1500/refuse-caps.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "telemetry_path": "/run/jc2-r2-map-observer-20260910T1500/refuse-caps.telemetry.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      8404
+    ],
+    "kill_sent": false,
+    "leader_reaped": true,
+    "reason": "forwarded_signal",
+    "term_sent": true
+  },
+  "utc_end": "2026-09-10T15:11:46.106836Z",
+  "utc_start": "2026-09-10T15:11:46.085198Z",
+  "wall_elapsed_seconds": 0.021633289
+}

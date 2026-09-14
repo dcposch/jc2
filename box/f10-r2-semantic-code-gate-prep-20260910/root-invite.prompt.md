@@ -1,0 +1,43 @@
+# FIRST Fable 5.1 — combined r2 controls 6/10 mutator and runtime source gate
+charged_input=box/f10-r2-semantic-mutator-astra-20260910/mutate_controls.py
+charged_input=box/f10-r2-semantic-runtime-astra-20260910/dispatch.py
+charged_input=box/f10-r2-semantic-runtime-astra-20260910/dispatch.diff
+charged_input=box/f10-r2-semantic-runtime-astra-20260910/CONTRACT.md
+charged_input=box/f10-r2-semantic-runtime-astra-20260910/DISABLED-REGISTRATION.json
+charged_input=box/f10-r2-semantic-runtime-astra-20260910/probe.py
+charged_input=box/f10-r2-reconstruction-code-astra-20260910/check.py
+charged_input=box/f10-r2-reconstruction-code-astra-20260910/check_arithmetic.py
+charged_input=box/f10-r2-reconstruction-code-astra-20260910/authority.py
+charged_input=xmodel/f10-r2-runtime-gate-fable5-20260910.md
+charged_input=xmodel/f10-r2-reconstruction-code-gate-fable5-20260910.md
+charged_input=xmodel/f10-r2-actual-result-gate-fable5-20260910.md
+Exactly 12 frozen objects in {{LANE_INPUTS}}. Hash ALL before any body, then read ALL WHOLE; resolve every clipped part before verdict. Expected pins (snapshot basenames):
+a896a8094be9b38f7ffa3a82cab15d340add0d7ab5f513340b2b7f916e489540  mutate_controls.py
+6c232bb0d1b4ee62fefb62970b1b5a06a092db735cbd6fb47907c54921169c0b  dispatch.py
+183b63fbf0f75a87f8073815e27e083e741c08ce0e749bf7f64fa99b66b9f25a  dispatch.diff
+edd4c71e86d0d5cac2ee277de69199522a2a5bca9381833f19dc078e9759ea19  CONTRACT.md
+17cab2767468f01c1f8ede32a1adbd1f1b608cce88fcbdc4a9c992ab89c05535  DISABLED-REGISTRATION.json
+1e3bea3ad995ca64780f77b33792ed09c9843fb3925aae5f64c7a2abcaa0ecde  probe.py
+e6bc7cca0d9c776a898bda3f0648af883e17a675f2b81bba52031459f4c640a0  check.py
+e5dd4bcb6114df2bdd79c8336583942c18d698d99fffd6f4b171e46a5d503d6e  check_arithmetic.py
+2a274ac4cf866762bc1f2734b3af8d515ff7be93c0fe0d4500e56dbca2ef093b  authority.py
+558fa2f1ef15b8477148fc014df4dcbcf783b61bcddae9889213b995bcb86e16  f10-r2-runtime-gate-fable5-20260910.md
+3e9a06cf3aced19aa6a8ab5c742c57ffc1d1da21bb8a0270030a83285720502b  f10-r2-reconstruction-code-gate-fable5-20260910.md
+3bce51215a7c746acb4bd5bc833f2644e5f2b1ac89e8681cdea2c65dfba00b0c  f10-r2-actual-result-gate-fable5-20260910.md
+
+Own ONLY xmodel/f10-r2-semantic-code-gate-fable5-20260910.md and box/f10-r2-semantic-code-gate-fable5-20260910/. Report and own box must be ABSENT before an unsealed skeleton with NO marker. Authored writes apply_patch ONLY (/home/ubuntu/.codex/tmp/arg0/codex-arg0KG6wa7/apply_patch), no Write/Edit/redirection/helper/source edit/Seal/charge_basis. Bounded sections <1500 words per write. Own WHOLE/OPEN/collision check then literal standalone <!-- BODY-END --> LAST; if reserve arrives, finish with explicit GAP. Deadline earlier actual first+18 minutes or 2026-09-10 13:52:00 UTC; final3 minutes publication reserve. ROOT's Runtime1080 from unit launch may control earlier. Original USER TERM13:52/KILL13:52:05 armed before launch, NEVER RESET.
+
+This is ONE FIRST combined different-model source gate, not another audit of the accepted reconstruction mathematics or CAPRUN. Producer Astra, executor ROOT/Astra; you Fable independently review the new source. Prior accepted reconstruction-code and runtime gates are imported at their exact stated scope; disclose same-model prior involvement and same-byte WHOLE reuse. No provenance traversal into uncharged files. Full new dispatch is charged. Its dispatch.diff is byte-for-byte ROOT-reproduced with Python difflib between accepted old4838e400 and new6c232bb0; GNU diff chooses different blank-line alignment but no code delta discrepancy. ROOT independently verified both authors COMPLETED before custody-FIRST, all source/input/owned pins, expected transactional manifests, WHOLE new sources/reports/contracts. Source authors copied two same-byte files briefly to a wrong /home/ubuntu/box path and removed only their own copies; final correct sources frozen, empty misplaced directory retained. No actual coefficient body, semantic execution, enabled registration or worker exists in this packet. Mutator baseline SHA dac655a7ce75287b06010171bce66af1a644aff81de9620a452457a5f65a9587/1652675bytes is a future binding only.
+
+FIRST actual-intake gate selected control6, allowed6 alone for the current tier, recommended6+10 to cover named retained-row readback risk. ROOT chooses EXACTLY6AND10;8 dropped, no full15 farm or positive producer/checker retry. Its D had two ROOT-corrected statements: Psi coefficient mutation can fail check.py376 WITHOUT array-length change; selected q+1=0 deletes a term ONLY when all7 basis coordinates vanish. Future actual-control outcomes are absent. One gate may approve this source candidate conditionally on ROOT registration and observed controls, never declare those observations done.
+
+Return independent CONFIRMED/REFUTED/GAP per A-F, with exact source-line reasoning and smallest blocking correction if any:
+A. New mutate_controls.py independently emits two canonical, genuinely distinct whole fixtures from original baseline. 6 replaces only bands[6].B_var with[], after finding exact theta² unit1. 10 independently starts original, chooses maximal absolute rational across all rows Psi/K1/K0 with ties family,row,term,basis, replaces q with canonical q+1, proper full-seven-coordinate zero deletion and all-zero first-Psi constant fallback. Full validation and inverse edit restores entire original bytes; do not take receipt booleans as independent mathematical verification. Check raw canonical serialization, reduced rational strings, complete field coordinates, bounds/dedup/sparse ordering, fallback/reinsertion/cross-fixture independence.
+B. Mutator guard before JSON/Fraction/payload, exact19 sys.argv, AWS identity/tag/source/self/baseline pins, exclusivity/no-follow/read drift, original byte bound, finite output reserve/exclusive/fsync0444 and receipt LAST. ROOT hash argument is binding NOT authentication; immutable registered caller is authority. No import of old producer/checker for mutation and no local coefficient parse.
+C. Dispatcher integration: inherited exact5 science files and CAPRUN untouched; separate wrapper3 files, complete native closure, root-owned outside-tmpfs sources/baseline/registration, caller environment/interpreter/host/boot/namespace/cgroup/authority/live PID/full argv bindings. Mandatory new self-hash issue: ROOT JSON stores commands, so mutator's ROOT SHA must be ONE typed token ROOT_REGISTRATION_SHA256 at value after its unique --root-registration-sha256 flag. Expand only that slot with freshly verified root SHA, forbid token elsewhere, compare and record FULL expanded argv. Attack cycle/collision/extra-expansion possibilities. No actual registration/enabled permission is supplied.
+D. New receipt parser and freeze: exact schema/keysets/pins/paths/indices/canonical-string syntax, both distinct changed fixtures AND receipt moved/fsynced/root0444 under0555 BEFORE either checker; rechecked before and after both; receipt's old writer paths correctly describe generation, final fixture bindings separately name frozen paths. No coefficient JSON in dispatcher. Only both unchanged check.py NORMAL_EXIT1, signal/resource null, stdout empty, entire bounded ASCII ordered4-frame traceback plus exact semantic final messages count. Confirm 6 reaches check329->216;10 Psi376->check_arithmetic208 or K383->208. Bounded caret markers only, no substring/chain/schema/auth/cap/error success. Source lines and paths must literally agree.
+E. Exactly9 old preflights +mutator+check6+check10=12; profiles9*(5wall,3softCPU)+mutator(10,9)+2checks(210,169), sum475wall/386hardchildCPU with +1 hard each. Joint600wall/500CPU/2GiB/16MiB unchanged, sampled480 cutoff and +15 admission; caps not measured runtime promises. Both fixtures together<=15MiB, all metadata<=1MiB, original outside mount. No inner PGID/retry/reset. Retained exact dummy RSS/TERM/KILL/quiet then durable EBS receipt after terminal groups; same accepted ESRCH false-STOP race not generalized/new hardening.
+F. Scope and next gate: can these frozen sources support only future TWO_SEMANTIC_REJECTIONS_CONFIRMED with science_outcome NONE and baseline binding? State exact execution prerequisites and specific gaps, not speculative larger review farms. No syntax/import/test/fixtures or runtime success were observed. Not highest regularity, finiteR/d35, source zero/nonzero/point, degree closure or JC2.
+
+ZERO mathematical subprocess/import/AST/syntax/compile/test/CAS ANYSIZE. Manual reasoning, text reads, hashes, own publication only. NO network/AWS/SSH/process/Git/agents/corpus/shared-ledger/protected/otherlane/livefiles/input edit/provenance traversal/coefficient-body parse. No new global theorem or charge_basis.
+

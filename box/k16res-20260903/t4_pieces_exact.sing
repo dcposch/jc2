@@ -1,0 +1,59 @@
+ring W=(0,yy),(b4,q2_0,q3_0),wp(1,2,3);
+minpoly=972*yy^2-540*yy+70;
+option(redSB);
+
+proc purepowers(ideal G)
+{ // list, per ring variable, the least pure power in lead(G) (0 if none)
+  ideal L=lead(G); int i; int v; intvec e; string s=""; int found; int cnt; int k;
+  for (v=1; v<=nvars(basering); v++) {
+    found=0;
+    for (i=1; i<=size(L); i++) { e=leadexp(L[i]); cnt=0; for (k=1;k<=nvars(basering);k++){ if (e[k]>0){cnt++;} }
+      if (cnt==1 and e[v]>0) { if (found==0 or e[v]<found) { found=e[v]; } } }
+    s=s+string(var(v))+"^"+string(found)+" ";
+  }
+  return(s);
+}
+proc onlymono(poly f, poly mon)
+{ // coefficient of the monomial mon in f (all other monomials ignored)
+  matrix M=coef(f,mon); // not used
+  poly g=f; int i; 
+  for (i=1;i<=nvars(basering);i++){ if (mon/var(i)==0) { g=subst(g,var(i),0); } }
+  return(g);
+}
+execute(read("/home/ubuntu/jc2/box/k16toptail-20260903/restop_t4_exact.sing"));
+int tt=4; int m; int r; ideal RR;
+for (m=1;m<=tt-1;m++){ r=tt-m; RR[r]=RStop[m]; }
+for (r=1;r<=tt-1;r++){ if (homog(RR[r])!=1) { print("FAIL inhomogeneous r="+string(r)); exit(2); }
+  if (deg(RR[r])!=4*tt+4+2*r) { print("FAIL weight r="+string(r)); exit(2); }
+  print("R r="+string(r)+" wdeg="+string(deg(RR[r]))+" size="+string(size(RR[r]))+" vars="+string(variables(RR[r]))); }
+int v; poly g; poly mon; int e;
+for (v=1; v<=nvars(basering); v++) { for (r=1;r<=tt-1;r++) { g=RR[r]; int u;
+  for (u=1;u<=nvars(basering);u++){ if (u!=v) { g=subst(g,var(u),0); } }
+  if (g!=0) { print("AXIS var="+string(var(v))+" r="+string(r)+" : "+string(g)); } else { print("AXIS var="+string(var(v))+" r="+string(r)+" : 0"); } kill u; } }
+ideal RR0=subst(RR,b4,0); ideal RR1=subst(RR,b4,1);
+ring WB=(0,yy),(q2_0,q3_0),wp(2,3);
+minpoly=972*yy^2-540*yy+70;
+option(redSB);
+ideal RB=imap(W,RR0); int tt=4; int r;
+for (r=1;r<=tt-1;r++){ print("RB r="+string(r)+" wdeg="+string(deg(RB[r]))+" homog="+string(homog(RB[r]))+" size="+string(size(RB[r]))+" vars="+string(variables(RB[r]))); }
+intvec WTSB=2,3;
+int tm=timer; ideal GB=std(RB);
+print("BOUNDARY dim="+string(dim(GB))+" vdim="+string(vdim(GB))+" size="+string(size(GB))+" time="+string(timer-tm));
+print("BOUNDARY_PUREPOWERS "+purepowers(GB));
+int s; ideal SB; ideal GS;
+for (s=1;s<=tt-1;s++){ SB=0; int c=0; for (r=1;r<=tt-1;r++){ if (r!=s){ c++; SB[c]=RB[r]; } }
+  tm=timer; GS=std(SB); print("BOUNDARY_MINUS r="+string(s)+" dim="+string(dim(GS))+" vdim="+string(vdim(GS))+" time="+string(timer-tm)); kill c; }
+setring W;
+ring WA=(0,yy),(q2_0,q3_0),dp;
+minpoly=972*yy^2-540*yy+70;
+option(redSB);
+ideal RA=imap(W,RR1); int tt=4; int r; int s; int c; ideal SA; ideal GA; ideal KA; ideal Img; matrix MA; poly dt; int i; int tm;
+for (s=tt-1;s>=1;s--){ SA=0; c=0; for (r=1;r<=tt-1;r++){ if (r!=s){ c++; SA[c]=RA[r]; } }
+  tm=timer; GA=std(SA); print("CHART_MINUS r="+string(s)+" dim="+string(dim(GA))+" vdim="+string(vdim(GA))+" time="+string(timer-tm));
+  if (dim(GA)==0) { KA=kbase(GA); Img=0; for (i=1;i<=size(KA);i++){ Img[i]=reduce(RA[s]*KA[i],GA); }
+    MA=coeffs(Img,KA); tm=timer; dt=det(MA); if (deg(dt)>0) { print("FAIL det not constant"); exit(2); }
+    print("POISSON_NORM omitted r="+string(s)+" nb="+string(size(KA))+" N_B(R_r|b4=1)="+string(dt)+" time="+string(timer-tm)); }
+  tm=timer; GA=std(RA); print("CHART_ALL unit="+string(reduce(1,GA)==0)+" dim="+string(dim(GA))+" time="+string(timer-tm));
+}
+print("JOB_DONE pieces t=4 exact");
+quit;

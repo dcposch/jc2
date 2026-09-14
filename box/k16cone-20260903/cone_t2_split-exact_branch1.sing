@@ -1,0 +1,61 @@
+// CONE generated from coefficient-array recurrence; t=2 mode=split-exact prime=None branch=1
+ring r=0,(b4,b3),wp(1,3);
+option(noredSB);
+print("CONE_JOB_START");
+print("T=2");
+print("MODE=split-exact");
+print("BRANCH=1");
+poly T0 = 
+  ((1516828/21340375))*b4^3*b3^2
+ +((-79347426/3589451075))*b4^6*b3
+ +((39138724476/603745670815))*b4^9
+ +((42/625));
+poly T1 = 
+  ((160596/3679375))*b4^2*b3^2
+ +((454666608/17947255375))*b4^5*b3
+ +((-255276497376/3018728354075))*b4^8;
+poly T2 = 
+  ((-252/3625))*b4*b3^2
+ +((115776/17682025))*b4^4*b3
+ +((-76780386/2974116605))*b4^7;
+poly T3 = 
+  ((-28/625))*b3^2
+ +((-34944/3048625))*b4^3*b3
+ +((675939222/14870583025))*b4^6;
+poly tau = 
+  ((1516828/21340375))*b4^3*b3^2
+ +((-79347426/3589451075))*b4^6*b3
+ +((39138724476/603745670815))*b4^9;
+ideal Iplus=T1,T2,T3;
+print("STD_START");
+timer=1;
+ideal G=std(Iplus);
+print("STD_TIMER");
+timer;
+print("CONE_BASIS_SIZE");
+size(G);
+print("CONE_DIM");
+int cone_dim=dim(G);
+cone_dim;
+if (cone_dim<=0)
+{
+  print("CONE_VERDICT_DIM0");
+}
+else
+{
+  print("RABINOWITSCH_START");
+  ring rr=0,(z,b4,b3),dp;
+  ideal Ir=imap(r,Iplus);
+  poly taur=imap(r,tau);
+  ideal Rab=Ir,1-z*taur;
+  ideal GR=std(Rab);
+  print("RAB_BASIS_SIZE");
+  size(GR);
+  print("TAU_IN_RADICAL");
+  int tau_in=(reduce(1,GR)==0);
+  tau_in;
+  if (tau_in==1) { print("CONE_VERDICT_TAU_CRITERION"); }
+  else { print("CONE_VERDICT_NOT_REFUTATION_CANDIDATE"); }
+}
+print("CONE_JOB_DONE");
+quit;

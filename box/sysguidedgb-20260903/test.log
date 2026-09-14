@@ -1,0 +1,13 @@
+sysguidedgb regression run started
+inputs START
+INPUTS PASS: 12 charged inputs verified via box/sysguidedgb-20260903/charged_inputs.sha256sum.log
+T1_card_a START
+T1 t=5 PASS: both fibres DIM0_CHAR0, length=3640, perturbed controls failed, wall=3.03s
+T1 t=6 PASS: both fibres DIM0_CHAR0, length=23256, perturbed controls failed, wall=103.88s
+T2_g108_unit START
+T2 PASS: D=108 stage-0 common-h3 exact-Q UNIT_IDEAL_CHAR0, wall=0.02s
+T3_t2_negative START
+T3 PASS: t=2,y=1/5 exact-Q POSDIM dim=1, wall=0.02s
+T4_staged_emitter START
+T4 PASS: staged (25,15) emitted 142 band files, rows=598, checksum=1c80dde35eff8a0b03f3e6803de549b5dd33626493c6dd9e5a35832d2b78a612, wall=2.93s
+ALL TESTS PASS wall=111.33s

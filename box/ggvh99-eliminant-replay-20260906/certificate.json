@@ -1,0 +1,145 @@
+{
+  "ABC": [
+    "a*c**2 + 2*c*v + u**2",
+    "-b*c**2 + 2*u*v",
+    "2*T - 6*a*u*v - 6*b*c*v - 3*b*u**2 - 3*c**2*u"
+  ],
+  "ABC_multipliers": [
+    "3*b*(4*T**2 + 6*T*c**2*u + 9*a*c**6 + 9*c**4*u**2) + 27*c**6*u",
+    "3*a*(4*T**2 + 6*T*c**2*u + 9*a*c**6 + 9*c**4*u**2) - 27*c**7",
+    "4*T**2 + 6*T*c**2*u + 9*a*c**6 + 9*c**4*u**2"
+  ],
+  "C3": "y**8*(y + 1)",
+  "T_meaning": "C3^23*F_-4",
+  "V": "4*T**2 + 6*T*c**2*u + 9*a*c**6 + 9*c**4*u**2",
+  "constant_pivot_reconstruction": [
+    {
+      "multipliers_in_first_six_equations": [
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "value": "-a*u - b*c",
+      "variable": "w"
+    },
+    {
+      "multipliers_in_first_six_equations": [
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "value": "-a*v - b*u - c**2/2",
+      "variable": "z"
+    },
+    {
+      "multipliers_in_first_six_equations": [
+        "-a/2",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "value": "a**2*u + a*b*c - b*v - c*u",
+      "variable": "t"
+    },
+    {
+      "multipliers_in_first_six_equations": [
+        "-b/2",
+        "-a/2",
+        "0",
+        "1/2",
+        "0",
+        "0"
+      ],
+      "value": "a**2*v + 2*a*b*u + a*c**2/2 + b**2*c - c*v - u**2/2",
+      "variable": "k"
+    },
+    {
+      "multipliers_in_first_six_equations": [
+        "a**2/2 - c/2",
+        "-b/2",
+        "-a/2",
+        "0",
+        "1/2",
+        "0"
+      ],
+      "value": "-a**3*u - a**2*b*c + 2*a*b*v + 2*a*c*u + b**2*u + 3*b*c**2/2 - u*v",
+      "variable": "l"
+    },
+    {
+      "multipliers_in_first_six_equations": [
+        "-a**3/2 + a*c + b**2/2 - v/2",
+        "a*b - u/2",
+        "a**2/2 - c/2",
+        "-b/2",
+        "-a/2",
+        "1/2"
+      ],
+      "value": "a**4*u + a**3*b*c - 3*a**2*b*v - 3*a**2*c*u - 3*a*b**2*u - 3*a*b*c**2 + 3*a*u*v - b**3*c + 3*b*c*v + 3*b*u**2/2 + 3*c**2*u/2",
+      "variable": "m"
+    }
+  ],
+  "eliminant": "8*T**3 + 18*T*a*c**6 + 27*b*c**9",
+  "equations": [
+    "2*a*u + 2*b*c + 2*w",
+    "2*a*v + 2*b*u + c**2 + 2*z",
+    "2*a*w + 2*b*v + 2*c*u + 2*t",
+    "2*a*z + 2*b*w + 2*c*v + 2*k + u**2",
+    "2*a*t + 2*b*z + 2*c*w + 2*l + 2*u*v",
+    "2*a*l + 2*b*k + 2*c*t + 2*m + 2*u*z + 2*v*w",
+    "3*a**2*v + 6*a*b*u + 3*a*c**2 + 6*a*z + 3*b**2*c + 6*b*w + 6*c*v + 3*k + 3*u**2",
+    "3*a**2*w + 6*a*b*v + 6*a*c*u + 6*a*t + 3*b**2*u + 3*b*c**2 + 6*b*z + 6*c*w + 3*l + 6*u*v",
+    "T + 3*a**2*t + 6*a*b*z + 6*a*c*w + 6*a*l + 6*a*u*v + 3*b**2*w + 6*b*c*v + 6*b*k + 3*b*u**2 + 3*c**2*u + 6*c*t + 3*m + 6*u*z + 6*v*w"
+  ],
+  "f": "-243*y**6/910 - 81*y**5/455 + 27*y**4/910 - 6*y**3/455 + y**2/130 - y/26",
+  "f1": "-243*y**15/910 - 81*y**14/182 - 27*y**13/182 + 3*y**12/182 - y**11/182 - 2*y**10/65 - y**9/26",
+  "field": "Q and any characteristic-zero field extension",
+  "full_nine_equation_multipliers": [
+    "-12*T**2*a*c - 12*T**2*b**2 - 12*T**2*v - 18*T*a*c**3*u - 18*T*b**2*c**2*u - 18*T*c**2*u*v - 27*a**2*c**7 - 27*a*b**2*c**6 - 27*a*c**6*v - 27*a*c**5*u**2 - 27*b**2*c**4*u**2 - 27*b*c**6*u + 27*c**8 - 27*c**4*u**2*v",
+    "-24*T**2*a*b - 12*T**2*u - 36*T*a*b*c**2*u - 18*T*c**2*u**2 - 54*a**2*b*c**6 - 54*a*b*c**4*u**2 - 54*a*c**6*u + 27*b*c**7 - 27*c**4*u**3",
+    "-12*T**2*a**2 - 12*T**2*c - 18*T*a**2*c**2*u - 18*T*c**3*u - 27*a**3*c**6 - 27*a**2*c**4*u**2 - 27*c**5*u**2",
+    "-24*T**2*b - 36*T*b*c**2*u - 54*a*b*c**6 - 54*b*c**4*u**2 - 27*c**6*u",
+    "-24*T**2*a - 36*T*a*c**2*u - 54*a**2*c**6 - 54*a*c**4*u**2 + 27*c**7",
+    "-12*T**2 - 18*T*c**2*u - 27*a*c**6 - 27*c**4*u**2",
+    "8*T**2*b + 12*T*b*c**2*u + 18*a*b*c**6 + 18*b*c**4*u**2 + 18*c**6*u",
+    "8*T**2*a + 12*T*a*c**2*u + 18*a**2*c**6 + 18*a*c**4*u**2 - 18*c**7",
+    "8*T**2 + 12*T*c**2*u + 18*a*c**6 + 18*c**4*u**2"
+  ],
+  "g": "-243*y**4/910 + 81*y**3/910 - 27*y**2/455 + 3*y/65 - 1/26",
+  "localizers": [],
+  "no_parameter_division": true,
+  "pdf_sha256": "ac18e80cc2391f204f73b908a6a6557eb1141d9fbb5ebdb9f6e0a22121db80bd",
+  "quartic_bezout": [
+    "-24*y - 26",
+    "6*y**2 + 6*y"
+  ],
+  "reduced_Q": [
+    "3*a*c**2/2 + 3*c*v + 3*u**2/2",
+    "-3*b*c**2/2 + 3*u*v",
+    "T - 3*a*u*v - 3*b*c*v - 3*b*u**2/2 - 3*c**2*u/2"
+  ],
+  "schema": "GGHV_SECTION5_EXACT/v1",
+  "scope": "finite nine-equation consequence and scalar differential identity only; not full reduction-chain or JC2 validation",
+  "text_sha256": "f3eca2a560b98784ec787104c8b9049ca44bc3dde4bacb38f121376736d02368",
+  "variables": [
+    "a",
+    "b",
+    "c",
+    "u",
+    "v",
+    "w",
+    "z",
+    "t",
+    "k",
+    "l",
+    "m",
+    "T"
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "corrections": [
+    "Producer uses an unnecessary inner GNU timeout in recorded argv; root directly caps prlimit/subprocess, frozen unchanged.",
+    "Scalar examples and literal common-factor degree/chain-rule arithmetic are controls, not universal proofs.",
+    "Root derives B initial in two cases: any lower Q0 global initial is first eliminated, then later implicit corrections cannot cancel z5. No regularity of all later branch coefficients is assumed."
+  ],
+  "elapsed_seconds": 3.277896,
+  "pins": {
+    "box/uniform-cone-jacobian-degree-20260908/check.py": "bf21db84db6fda0d1e98c102305505b18eab58ddc1ea6c86478fb15191efdec8",
+    "box/uniform-cone-jacobian-degree-20260908/custody.json": "db898457ae232427fab4f69ec22dc718beff0391d5949cd4cd77c3daccfee5b5",
+    "box/uniform-cone-jacobian-degree-20260908/history-pins.json": "79586380c9e8a0c013fabdbc849ff636355bf0b0b61e105bf044b1f7803e91e7",
+    "box/uniform-cone-jacobian-degree-20260908/replay.json": "6e5186908d56530cd4b3d79f0ba4ef7222fa227474b7a093c88243f65da12a2a",
+    "xmodel/d125-cone-first-contact-source-astra-20260908.md": "bf1dfa72a6a3dc8210ed8fd8354bb0d8bcda6dfcc447a1e9ba386048e177955f",
+    "xmodel/d125-minimal-monomial-receiver-composition-astra-20260906.md": "7dec79af1aa62946b46ecb209a710dd95e1b226b6b78229a3f232160a5385413",
+    "xmodel/d125-nonodd-cone-discriminator-astra-20260908.md": "2b5a5013d4d7284957b0e69d108f4f1ac1a2b7e81648b1dd2f403223f4791732",
+    "xmodel/monomial-jacobian-euler-interface-astra-20260906.md": "72583181e0a80ddd7c9b1b029960784c46414dc00d001912c7a017cd4def4323",
+    "xmodel/uniform-cone-jacobian-degree-astra-20260908.md": "3bf207b31958cca8c4d5d1d0cf4ca4bacde0f7cd1ba267abc216a121675b7085",
+    "xmodel/uniform-cone-jacobian-degree-astra-20260908.md.artifact.json": "0e11634e511e983d4a7c61773ad0e2c9a0affce46eeb668d46b9b452bd34268a"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "positive"
+      ],
+      "rc": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "bd5d9f31ff843dfd8cb2a4b9188071ef9be1921e8970c2fb7524fda83f1bf606"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--omit-b4"
+      ],
+      "rc": 1,
+      "stderr_sha256": "0e13e1eaf10415afdce50b1c37f9eb70337e2522ddc3c93b483ed2b959b7d9a7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--omit-b2"
+      ],
+      "rc": 1,
+      "stderr_sha256": "0e13e1eaf10415afdce50b1c37f9eb70337e2522ddc3c93b483ed2b959b7d9a7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--wrong-euler-sign"
+      ],
+      "rc": 1,
+      "stderr_sha256": "42148dac41946a91c0272abf53cf42226d936fd5ba5f52c2cc445ed478ef4453",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--false-h0"
+      ],
+      "rc": 1,
+      "stderr_sha256": "cf07b19cbeb3144bf0540da0a93e4ae38631daeee0374eaee9d1eaf4fb1afd84",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--false-gcd-one"
+      ],
+      "rc": 1,
+      "stderr_sha256": "403db86d3a3d1b138863328ebcb6c5e0e7d5fe6679df4e37280c88c88096cce0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "positive"
+      ],
+      "rc": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "bd5d9f31ff843dfd8cb2a4b9188071ef9be1921e8970c2fb7524fda83f1bf606"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--omit-b4"
+      ],
+      "rc": 1,
+      "stderr_sha256": "0e13e1eaf10415afdce50b1c37f9eb70337e2522ddc3c93b483ed2b959b7d9a7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--omit-b2"
+      ],
+      "rc": 1,
+      "stderr_sha256": "0e13e1eaf10415afdce50b1c37f9eb70337e2522ddc3c93b483ed2b959b7d9a7",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--wrong-euler-sign"
+      ],
+      "rc": 1,
+      "stderr_sha256": "42148dac41946a91c0272abf53cf42226d936fd5ba5f52c2cc445ed478ef4453",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--false-h0"
+      ],
+      "rc": 1,
+      "stderr_sha256": "cf07b19cbeb3144bf0540da0a93e4ae38631daeee0374eaee9d1eaf4fb1afd84",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25:25",
+        "--as=536870912:536870912",
+        "--",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/uniform-cone-jacobian-degree-20260908/check.py",
+        "--false-gcd-one"
+      ],
+      "rc": 1,
+      "stderr_sha256": "403db86d3a3d1b138863328ebcb6c5e0e7d5fe6679df4e37280c88c88096cce0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "root whole self-contained proof/checker; exact proposed bound only, no new source attachment",
+  "status": "PASS"
+}

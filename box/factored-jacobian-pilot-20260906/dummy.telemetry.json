@@ -1,0 +1,80 @@
+{
+  "argv_count": 3,
+  "argv_sha256": "b6ad27fa05ceb8a4c3d7c4c5d2b64f2c6e554bac8656a1638fe876640866861f",
+  "caps": {
+    "cpu_seconds": null,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 200000000,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 3.0
+  },
+  "child_exit_code": null,
+  "child_returncode": -15,
+  "child_signal": 15,
+  "cwd": "/home/ubuntu/factored-jacobian-pilot-20260906",
+  "enforcement": {
+    "cpu": "disabled",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "python3",
+  "identity_checks": [
+    {
+      "observed_pgid": 2738,
+      "observed_pid": 2738,
+      "observed_start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=30993",
+      "result": "MATCH",
+      "stage": "before-term",
+      "utc": "2026-09-06T09:51:08.473728Z"
+    },
+    {
+      "result": "SENT",
+      "signal": 15,
+      "stage": "before-term-send",
+      "utc": "2026-09-06T09:51:08.473761Z"
+    }
+  ],
+  "invocation_cwd": "/home/ubuntu/factored-jacobian-pilot-20260906",
+  "max_observed_group_rss_bytes": 89559040,
+  "pgid": 2738,
+  "pid": 2738,
+  "resource": null,
+  "runner_exit_code": 124,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=30993",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "WALL_TIMEOUT",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/factored-jacobian-pilot-20260906/dummy.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 15,
+    "path": "/home/ubuntu/factored-jacobian-pilot-20260906/dummy.stdout",
+    "sha256": "62f92d07b697635ece6dea5f181569a5bfba2f2f19feeb6fc3396d5d75a872d7"
+  },
+  "telemetry_path": "/home/ubuntu/factored-jacobian-pilot-20260906/dummy.telemetry.json",
+  "termination": {
+    "cleanup_complete": true,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [
+      2738
+    ],
+    "kill_sent": false,
+    "leader_reaped": true,
+    "reason": "wall_timeout",
+    "term_sent": true
+  },
+  "utc_end": "2026-09-06T09:51:08.480791Z",
+  "utc_start": "2026-09-06T09:51:05.458994Z",
+  "wall_elapsed_seconds": 3.021777507
+}

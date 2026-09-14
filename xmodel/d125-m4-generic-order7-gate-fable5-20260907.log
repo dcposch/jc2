@@ -1,0 +1,18 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Sealed and stopped. Recap:
+
+**Verdict: all seven items CONFIRMED**, with typed gaps only (none charged). Report at `xmodel/d125-m4-generic-order7-gate-fable5-20260907.md` (body 8451 bytes, SHA `facf4906…`), artifacts under `box/d125-m4-generic-order7-gate-fable5-20260907/` (controls SHA `67aa3c2b…`, witness `52f39f9d…`, replay, input pins).
+
+**What I re-derived by hand, independently of the parent six-jet review:**
+- Fixed-prefix order-7 coefficient: the −5/27 C²D/R² double pole comes from the three placements of s³D in F³; A₆ never enters, A₅ adds only a polynomial, an order-5 X-kernel adds only a simple pole. Odd R²Z₇ ∈ K[R] can carry at most a scalar/R pole, so R | C²D. The point (0,a) with b⁴=3, a⁴=4a²−1 makes C²D a unit, contradiction.
+- Generic §4: a=0 is forced by e₁=0 (the report cites 14i one sentence before establishing this, noted as an ordering looseness, not a gap); τ₁=d/3 removes the tangent; the order-4 pole (5/9)F₂²/R₀ with origin evaluation gives F₂=R₀C; C(0)=[p²]C=0 and ξ²=−3h follow from the a01/y rows with [p³](R₀²S)=−h², [p³](R₀S²)=−h.
+- §5: the a-priori double pole M₀R₁/R₀² is exactly what (6) reduces to a simple pole; γ₁..γ₅ die by a triangular e-system with diagonal −h; the order-6 residual kernel has γ₆=(5/9)ξ, matching the parent's −5b²/9.
+- §6: T irreducible for h≠0, domain step forces T | C, weight ≤ −8 quotient cannot supply gp. Seven-jet counterpart holds with the three saturated rows imposed explicitly.
+
+**Own controls:** 14 capped runs, normal/−O byte-identical, zero Assert nodes, 1.3 s. Mutations of the moving derivative, the −5/27 factor, dropping γ₆R₁, an even kernel, the point relation, and h=0 each fail at the intended gate. No source powers or large products expanded.
+
+**Typed gaps, uncharged:** GAP-CENTRALIZER (external trust), GAP-14i-TEXT (lemma statement not in the frozen set; only its a=0 branch is used), GAP-TRANSACTION.
+
+One cosmetic wart: §1 of my report contains an inline self-correction phrase ("… no: −(5/81)·3R²C²D/R⁴ …") that reads awkwardly but states the correct coefficient. I left it as-is rather than re-seal after STOP.
+DIVERT path=xmodel/d125-m4-generic-order7-gate-fable5-20260907.md status=DIVERTED body_bytes=8451 body_sha256=facf4906db69369c33b4ecfb548db13a973af9a999ba8663a9fd77a724102aa4 overflow=xmodel/d125-m4-generic-order7-gate-fable5-20260907.overflow overflow_bytes=328 raw=xmodel/d125-m4-generic-order7-gate-fable5-20260907.raw.md raw_sha256=3c127554e6bbc2b1585304494274ea65c3be9fe6672f156fc8a085438039498b overflow_sha256=679851ceeeaaef6a89c894992b966605c9472b0e57fd2a46fd694657ee50c765
+post-BODY-END overflow diverted; charged body preserved

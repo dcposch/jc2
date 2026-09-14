@@ -1,0 +1,41 @@
+{
+  "backend_sha256": "c0c6f8716e09baa31f51cde41fab6ba166d9b780040354626fe980fa2adc5b6e",
+  "field": "Q",
+  "tests": [
+    {
+      "k": 2,
+      "all_high_remainder_rows_recovered_from_Q_rows": true,
+      "selected_Q_y_degrees": [
+        7,
+        6
+      ],
+      "target_rows_unaltered_mod_remainder_rows": true,
+      "generic_remainder_identity": true
+    },
+    {
+      "k": 3,
+      "all_high_remainder_rows_recovered_from_Q_rows": true,
+      "selected_Q_y_degrees": [
+        11,
+        10,
+        9
+      ],
+      "target_rows_unaltered_mod_remainder_rows": true,
+      "generic_remainder_identity": true
+    },
+    {
+      "k": 4,
+      "all_high_remainder_rows_recovered_from_Q_rows": true,
+      "selected_Q_y_degrees": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "target_rows_unaltered_mod_remainder_rows": true,
+      "generic_remainder_identity": true
+    }
+  ],
+  "result": "PASS",
+  "theorem_scope": "generic monic degree-k divisor, v and U of y-degree below k; exact polynomial row-ideal equality"
+}

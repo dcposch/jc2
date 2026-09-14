@@ -1,0 +1,178 @@
+{
+  "certificate": {
+    "accepted_run_count": 3,
+    "crt_rational_reconstruction": {
+      "available": true,
+      "items": {
+        "basis_size": {
+          "direct_singular_values": [
+            5,
+            5,
+            5
+          ],
+          "direct_values_agree": true,
+          "modulus": 32807947232729,
+          "rational_reconstruction": "5",
+          "residue": 5
+        },
+        "dimension": {
+          "direct_singular_values": [
+            14,
+            14,
+            14
+          ],
+          "direct_values_agree": true,
+          "modulus": 32807947232729,
+          "rational_reconstruction": "14",
+          "residue": 14
+        },
+        "lead_dim": {
+          "direct_singular_values": [
+            14,
+            14,
+            14
+          ],
+          "direct_values_agree": true,
+          "modulus": 32807947232729,
+          "rational_reconstruction": "14",
+          "residue": 14
+        }
+      },
+      "method": "CRT plus bounded rational reconstruction for scalar invariants"
+    },
+    "hilbert_hint": null,
+    "policy": {
+      "allow_modular_unit_promotion": false,
+      "note": "inhomogeneous localized quotient-recurrence screen",
+      "require_controls": true,
+      "scope": "EXACT_Q"
+    },
+    "promotion_note": "",
+    "properness_scope": {
+      "positive_weights": [
+        [],
+        [],
+        []
+      ],
+      "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+      "systems_declared_homogeneous": false
+    },
+    "runs": [
+      {
+        "characteristic": 32003,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32003_p32003.sing"
+        ],
+        "elapsed_seconds": 0.034005,
+        "label": "QREC_K8_single_stage00_n04_weight-desc_p32003",
+        "main": {
+          "accepted": true,
+          "basis_size": 5,
+          "dimension": 14,
+          "lead_dim": 14,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": false,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32003_p32003.sing",
+        "script_sha256": "0fc5008f31bc86f9e2e662e7109ffa0c40d09d0ba8f3ec14f8ac37251fdcd4e1",
+        "stderr": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32003_p32003.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32003_p32003.out",
+        "stdout_sha256": "f4fe0449b953f9a06e14e107fba751ebd39358b8960faacb5cdc5e6728335c2a",
+        "timed_out": false
+      },
+      {
+        "characteristic": 32009,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32009_p32009.sing"
+        ],
+        "elapsed_seconds": 0.034264,
+        "label": "QREC_K8_single_stage00_n04_weight-desc_p32009",
+        "main": {
+          "accepted": true,
+          "basis_size": 5,
+          "dimension": 14,
+          "lead_dim": 14,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": false,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32009_p32009.sing",
+        "script_sha256": "654c2d12e49979cb139f60c4ea68fc795a1fe7601bb66b7248dc9143817967f6",
+        "stderr": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32009_p32009.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32009_p32009.out",
+        "stdout_sha256": "f4fe0449b953f9a06e14e107fba751ebd39358b8960faacb5cdc5e6728335c2a",
+        "timed_out": false
+      },
+      {
+        "characteristic": 32027,
+        "command": [
+          "stdbuf",
+          "-oL",
+          "-eL",
+          "Singular",
+          "--cpus=1",
+          "--threads=1",
+          "--flint-threads=1",
+          "--no-rc",
+          "-q",
+          "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32027_p32027.sing"
+        ],
+        "elapsed_seconds": 0.032934,
+        "label": "QREC_K8_single_stage00_n04_weight-desc_p32027",
+        "main": {
+          "accepted": true,
+          "basis_size": 5,
+          "dimension": 14,
+          "lead_dim": 14,
+          "lead_vdim": null,
+          "missing_markers": [],
+          "nf_all_zero": true,
+          "unit": false,
+          "vdim": null,
+          "vdim_matches_predicted": null
+        },
+        "perturbed": null,
+        "returncode": 0,
+        "script": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32027_p32027.sing",
+        "script_sha256": "b563e9d4c31a013fbd94bba0491b42599b00f2012cdcfda63d487af109d71b3b",
+        "stderr": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32027_p32027.err",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "/home/ubuntu/jc2/box/k4rayk89-20260903/recurrence-runs-sol56/QREC_K8_SCREEN_V2/K8_single/modular/stage00_n04/QREC_K8_single_stage00_n04_weight-desc_p32027_p32027.out",
+        "stdout_sha256": "f4fe0449b953f9a06e14e107fba751ebd39358b8960faacb5cdc5e6728335c2a",
+        "timed_out": false
+      }
+    ]
+  },
+  "verdict": "MODULAR_ONLY"
+}

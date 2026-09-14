@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Publication completed at 01:51:29Z, before the 01:57:00Z reserve, with the standalone marker as the last line and nothing after it. Writers are idle.
+
+**Outcome: sound NEW conditional theorem, worth one bounded implementation review; no exact gap or refutation.** Verdicts: A–E and G CONFIRMED, F CONFIRMED as design with GAP = readiness only, REFUTED none.
+
+What I verified by hand against the charged code and reports:
+
+- **Bézout countercontrol replayed on the pinned xgcd.** Over Q[w]/(w²−2) the two-stage completion gives (1,0); at w→3 in F7 it gives (0,1/3)=(0,5). Both are unimodular, the residues differ, and check.py line 382 compares representatives, so a blind modular replay is a false negative. The delta=chi·(c0,−c1) formula holds in any commutative ring.
+- **The section-4 induction is correct and uses no smuggled premise.** The gap-8/9/10 columns depend only on C, D, h, so they are unchanged. In A, the canonical residual pair is a scalar multiple of K_h, which lies in I. Any completion lambda' with lambda'·c=1 then gives the same value in A, and every later node (forcing, upper solve, Euler recurrence, graph substitution) commutes with the map to A. So all 25 alternative rows lie in ker(B[X]→A) and g'≡g, a unit. A nonzero 297-minor over the field B forces A=0.
+- **Construction versus assertion boundary made explicit.** The alternative pipeline's resonance slots, upper residuals, upper Jacobian slots and inverse-chart coefficients are ker-Phi polynomials that need not vanish in B[X]. The unchanged producer would abort on them, so the modular circuit must be authored with those nodes demoted. This is a readiness item, not a mathematical gap.
+- **One non-blocking refinement of my own.** Any k-unimodular pair lifts to a B-completion over the local ring, so the "pick a nonzero-residue coordinate" policy is sufficient but not necessary.
+
+Custody: all 12 pins matched before any read and again at 01:51:14Z. Two owned files only, written with apply_patch. Report is 3088 words. Two things to disclose: the first three section patches were appended after the last heading rather than under their headings, so I did one structural repair rewrite of the report with unchanged text (recorded in COLLISIONS), and the completion line states the whole read finished at 01:51:30Z whereas the marker write timestamp is 01:51:29Z. That one-second imprecision is left as is, since correcting it would require a write after the marker.
+
+Numeric planning wall for ROOT, unmeasured: a 3600-second single-trial ceiling for one place, plus a 20-minute manual contract review of the authored k-circuit before anything runs.
+DIVERT path=xmodel/f10-source-cone-direct-place-gate-fable5-20260911.md status=CLEAN body_bytes=20664 body_sha256=1aca7ad822cf88a95b30b2cb43c4a07227a78ca389fa28679e8fc1947e530ab0

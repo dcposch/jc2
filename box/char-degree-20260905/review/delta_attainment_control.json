@@ -1,0 +1,105 @@
+{
+  "Delta_F": "H**3 + H*u + v",
+  "Delta_G": "H**2 + H*r + w",
+  "cases": [
+    {
+      "H_y_degree": 33,
+      "attainment_row": "-L",
+      "characteristic_degree": 55,
+      "leader_at_target": "0",
+      "localizer_row": "L*Z - 1",
+      "m": 66,
+      "n": 99,
+      "needed_higher_y_degrees": [
+        165,
+        132,
+        99,
+        66
+      ],
+      "normalized_J_constant_t_power": 163,
+      "normalized_attainment_t_power": 143,
+      "reduced_y_degree_bound": 33,
+      "unit_identity": "-1"
+    },
+    {
+      "H_y_degree": 36,
+      "attainment_row": "-L",
+      "characteristic_degree": 63,
+      "leader_at_target": "0",
+      "localizer_row": "L*Z - 1",
+      "m": 72,
+      "n": 108,
+      "needed_higher_y_degrees": [
+        180,
+        144,
+        108,
+        72
+      ],
+      "normalized_J_constant_t_power": 178,
+      "normalized_attainment_t_power": 153,
+      "reduced_y_degree_bound": 36,
+      "unit_identity": "-1"
+    }
+  ],
+  "coefficient_field": "Q",
+  "negative_controls": {
+    "raw_Delta_y55_can_be_nonzero": {
+      "H": "y**33 + y**22",
+      "Q": "H^2",
+      "y55_coefficient": "2",
+      "y_degree": 66
+    },
+    "y_degree_not_total_degree": {
+      "Q": "x**100*y + y**55",
+      "total_degree": 101,
+      "y_degree": 55
+    }
+  },
+  "ordered_generators": [
+    "u",
+    "v",
+    "r",
+    "w",
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "L",
+    "Z"
+  ],
+  "pivot_rows": [
+    {
+      "H_power": 5,
+      "leader": "1",
+      "rhs": "-3*r",
+      "row": "b + 3*r",
+      "variable": "b"
+    },
+    {
+      "H_power": 4,
+      "leader": "1",
+      "rhs": "2*u - 3*w",
+      "row": "a - 2*u + 3*w",
+      "variable": "a"
+    },
+    {
+      "H_power": 3,
+      "leader": "1",
+      "rhs": "-r**3 - r*u + 3*r*w + 2*v",
+      "row": "c + r**3 + r*u - 3*r*w - 2*v",
+      "variable": "c"
+    },
+    {
+      "H_power": 2,
+      "leader": "1",
+      "rhs": "r**2*u + 3*r*v + u**2 - 4*u*w + 3*w**2",
+      "row": "d - r**2*u - 3*r*v - u**2 + 4*u*w - 3*w**2",
+      "variable": "d"
+    }
+  ],
+  "reduced_target": "e - r**3*v + r**2*u*w - r*u*v + 3*r*v*w + u**2*w - 2*u*w**2 + v**2 + w**3",
+  "scope": "UNIT only after pullback to the complete four-constant Delta family; not a full necessary-chart UNIT",
+  "self_sha256": "d1c2f81a5bf6cab90f230c1901ae17bcf705efc3706a070929fbc1232f524cbe",
+  "target_polynomial": "H**5*(b + 3*r) + H**4*(a + b*r + 3*r**2 - 2*u + 3*w) + H**3*(2*a*r + b*u + b*w + c + r**3 + 6*r*w - 2*v) + H**2*(a*r**2 + 2*a*w + b*r*u + b*v + d + 3*r**2*w - u**2 + 3*w**2) + H*(2*a*r*w + b*r*v + b*u*w + c*u + d*r + 3*r*w**2 - 2*u*v) + a*w**2 + b*v*w + c*v + d*w + e - v**2 + w**3"
+}

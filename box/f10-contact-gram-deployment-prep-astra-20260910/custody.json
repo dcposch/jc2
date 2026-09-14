@@ -1,0 +1,191 @@
+{
+  "schema": "f10-contact-gram-deployment-custody/v1",
+  "status": "COMPLETE_OFFLINE_DISABLED_UNEXECUTED",
+  "all_writers_idle": true,
+  "no_further_writes_after_terminal_custody": true,
+  "first_action_utc": "2026-09-10T20:50:12Z",
+  "transaction_begin_utc": "2026-09-10T20:51:00Z",
+  "reserve_utc": "2026-09-10T21:12:00Z",
+  "hard_stop_utc": "2026-09-10T21:15:00Z",
+  "body_closed_utc": "2026-09-10T21:01:56Z",
+  "report_finalized_utc": "2026-09-10T21:01:56Z",
+  "terminal_prepublication_current_pin_utc": "2026-09-10T21:02:48Z",
+  "report": {
+    "path": "/home/ubuntu/jc2/xmodel/f10-contact-gram-deployment-prep-astra-20260910.md",
+    "sha256": "c434adb6695decaf6e84227c91b6a3995194de5f947a7f4966748314cb94682a"
+  },
+  "expected_transaction": {
+    "path": "/home/ubuntu/jc2/xmodel/f10-contact-gram-deployment-prep-astra-20260910.md.artifact.json",
+    "sha256": "60e489ce91db8b95ea6d86df713aaf46bddb09c55ff878010ddcaa8564922c44"
+  },
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "verification": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "body_bytes": 6499,
+    "body_sha256": "5a9bf68e3a2c4eee0ca806423d7fb3c0045c316e12f2369440be0423e7926ea8",
+    "file_bytes": 6831,
+    "final_path": "/home/ubuntu/jc2/xmodel/f10-contact-gram-deployment-prep-astra-20260910.md",
+    "full_sha256": "c434adb6695decaf6e84227c91b6a3995194de5f947a7f4966748314cb94682a",
+    "manifest_path": "/home/ubuntu/jc2/xmodel/f10-contact-gram-deployment-prep-astra-20260910.md.artifact.json",
+    "manifest_sha256": "60e489ce91db8b95ea6d86df713aaf46bddb09c55ff878010ddcaa8564922c44",
+    "staged_blobs": null,
+    "status": "VERIFIED"
+  },
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-contact-gram-runtime-astra-20260910.md",
+      "sha256": "c08712bb0627e7b6c875c4273fccc780f5346288db5de73ccca4a6598efc3c67",
+      "read_mode": "FRESH_WHOLE_TEXT_AFTER_CURRENT_HASH",
+      "pre_read_sha256": "c08712bb0627e7b6c875c4273fccc780f5346288db5de73ccca4a6598efc3c67",
+      "post_seal_sha256": "c08712bb0627e7b6c875c4273fccc780f5346288db5de73ccca4a6598efc3c67",
+      "current_match": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-runtime-astra-20260910/dispatch.py",
+      "sha256": "61f21a2c5912cd53a46f8881783994e104a511cee1261713df53936aced9c126",
+      "read_mode": "FRESH_WHOLE_TEXT_AFTER_CURRENT_HASH",
+      "pre_read_sha256": "61f21a2c5912cd53a46f8881783994e104a511cee1261713df53936aced9c126",
+      "post_seal_sha256": "61f21a2c5912cd53a46f8881783994e104a511cee1261713df53936aced9c126",
+      "current_match": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-runtime-astra-20260910/CONTRACT.md",
+      "sha256": "b1ce2ff5fb5ccac27e24a0e178a147f0da122fd46f6625691ca3f81c20bc59f6",
+      "read_mode": "FRESH_WHOLE_TEXT_AFTER_CURRENT_HASH",
+      "pre_read_sha256": "b1ce2ff5fb5ccac27e24a0e178a147f0da122fd46f6625691ca3f81c20bc59f6",
+      "post_seal_sha256": "b1ce2ff5fb5ccac27e24a0e178a147f0da122fd46f6625691ca3f81c20bc59f6",
+      "current_match": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-runtime-astra-20260910/PINS.json",
+      "sha256": "2350ed4d0fc14b4a3adcc327a242a3680431f8b803e70c87ed442cff3a880c4b",
+      "read_mode": "FRESH_WHOLE_TEXT_AFTER_CURRENT_HASH",
+      "pre_read_sha256": "2350ed4d0fc14b4a3adcc327a242a3680431f8b803e70c87ed442cff3a880c4b",
+      "post_seal_sha256": "2350ed4d0fc14b4a3adcc327a242a3680431f8b803e70c87ed442cff3a880c4b",
+      "current_match": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-contact-gram-code-gate-fable5-20260910.md",
+      "sha256": "531c249cd7a0ff6a9e982b798c462ca6a4656150e114fb882d0d9d70f9e1863b",
+      "read_mode": "FRESH_WHOLE_TEXT_AFTER_CURRENT_HASH",
+      "pre_read_sha256": "531c249cd7a0ff6a9e982b798c462ca6a4656150e114fb882d0d9d70f9e1863b",
+      "post_seal_sha256": "531c249cd7a0ff6a9e982b798c462ca6a4656150e114fb882d0d9d70f9e1863b",
+      "current_match": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-middle-real-execution-prep-20260910/setup-launch.sh",
+      "sha256": "5b82fc2e7940bba30894dcfa3428322dde1ae4887e06b44f2dc16a8f7cea571c",
+      "read_mode": "FRESH_WHOLE_TEXT_AFTER_CURRENT_HASH",
+      "pre_read_sha256": "5b82fc2e7940bba30894dcfa3428322dde1ae4887e06b44f2dc16a8f7cea571c",
+      "post_seal_sha256": "5b82fc2e7940bba30894dcfa3428322dde1ae4887e06b44f2dc16a8f7cea571c",
+      "current_match": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-middle-real-execution-prep-20260910/ROOT-REGISTRATION.json",
+      "sha256": "2f86ce99b0cfbd6a6bfd4725fff91f37d9f56e331eb028530741974b3702a7a1",
+      "read_mode": "FRESH_WHOLE_TEXT_AFTER_CURRENT_HASH",
+      "pre_read_sha256": "2f86ce99b0cfbd6a6bfd4725fff91f37d9f56e331eb028530741974b3702a7a1",
+      "post_seal_sha256": "2f86ce99b0cfbd6a6bfd4725fff91f37d9f56e331eb028530741974b3702a7a1",
+      "current_match": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r2-fullunit-ready-deployment-prep-astra-20260910/native-metadata.template.sh",
+      "sha256": "e6d3c105e8e0c558356c7db891d9a8a6c5d09a758eef2dd3627ba30eb5923848",
+      "read_mode": "FRESH_WHOLE_TEXT_AFTER_CURRENT_HASH",
+      "pre_read_sha256": "e6d3c105e8e0c558356c7db891d9a8a6c5d09a758eef2dd3627ba30eb5923848",
+      "post_seal_sha256": "e6d3c105e8e0c558356c7db891d9a8a6c5d09a758eef2dd3627ba30eb5923848",
+      "current_match": true
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/f10-r2-fullunit-ready-deployment-prep-astra-20260910/ROOT-FINALIZATION-CHECKLIST.md",
+      "sha256": "c5950a159f875b58098ea4d99de54c75b73f25cc97c5a07151455b937aeed289",
+      "read_mode": "FRESH_WHOLE_TEXT_AFTER_CURRENT_HASH",
+      "pre_read_sha256": "c5950a159f875b58098ea4d99de54c75b73f25cc97c5a07151455b937aeed289",
+      "post_seal_sha256": "c5950a159f875b58098ea4d99de54c75b73f25cc97c5a07151455b937aeed289",
+      "current_match": true
+    }
+  ],
+  "owned": [
+    {
+      "sha256": "b7bd039243309bc33b1b93986d7d6b71cf77daec055ba709a56b891db08f07d4",
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-deployment-prep-astra-20260910/ROOT-REGISTRATION.template.json",
+      "current_match": true,
+      "read_mode": "WHOLE_OWN_TEXT"
+    },
+    {
+      "sha256": "ec988ffe2f2e92b1f6d5d9a0acf161ed9f03255c78868c408c3195f99740dea9",
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-deployment-prep-astra-20260910/INSTALL-REFERENCES.template.json",
+      "current_match": true,
+      "read_mode": "WHOLE_OWN_TEXT"
+    },
+    {
+      "sha256": "519f92f69d4258f2f5db7d7d412d70b55f8b51af7c321ac10f2a0ffa40dbac36",
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-deployment-prep-astra-20260910/setup.template.sh",
+      "current_match": true,
+      "read_mode": "WHOLE_OWN_TEXT"
+    },
+    {
+      "sha256": "9ed7031bea71f72bfdf2f31cae2bc26e9720d0626a6afa3a248c94c7b17b8181",
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-deployment-prep-astra-20260910/NATIVE-COLLECTOR-REFERENCE.md",
+      "current_match": true,
+      "read_mode": "WHOLE_OWN_TEXT"
+    },
+    {
+      "sha256": "956992077074fca6cf5b14b5520c2449394107da525d16ac70271d34d9290fce",
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-deployment-prep-astra-20260910/ROOT-FINALIZATION-CHECKLIST.md",
+      "current_match": true,
+      "read_mode": "WHOLE_OWN_TEXT"
+    },
+    {
+      "sha256": "5372c60720f2d21e9978fe00763c9b8a1d14a8152bd2bffb3521c10bc2ba1c31",
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-deployment-prep-astra-20260910/PINS.json",
+      "current_match": true,
+      "read_mode": "WHOLE_OWN_TEXT"
+    },
+    {
+      "sha256": "1286d76868514dba167f2b1f1788df3132d5caf7c9b1b72d257dd4b54611a357",
+      "path": "/home/ubuntu/jc2/box/f10-contact-gram-deployment-prep-astra-20260910/READ-SCOPE.md",
+      "current_match": true,
+      "read_mode": "WHOLE_OWN_TEXT"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-contact-gram-deployment-prep-astra-20260910.md",
+      "sha256": "c434adb6695decaf6e84227c91b6a3995194de5f947a7f4966748314cb94682a",
+      "current_match": true,
+      "read_mode": "WHOLE_OWN_TEXT"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/f10-contact-gram-deployment-prep-astra-20260910.md.artifact.json",
+      "sha256": "60e489ce91db8b95ea6d86df713aaf46bddb09c55ff878010ddcaa8564922c44",
+      "current_match": true,
+      "read_mode": "WHOLE_METADATA"
+    }
+  ],
+  "custody_self_excluded": true,
+  "custody_hash_supplied_in_terminal_handoff": true,
+  "review": {
+    "own_whole_before_marker": true,
+    "open_group_count": 2,
+    "open_quantities_and_cheapest_checks_in_report": true,
+    "collision_check_before_marker": true,
+    "all_14_vectors_manually_compared": true,
+    "metadata_json_only_readback": true,
+    "distinct_staged_basenames": 15,
+    "source_copy_count": 0,
+    "scientific_execution_count": 0,
+    "authored_script_execution_count": 0,
+    "extra_input_body_access": false
+  },
+  "scope": {
+    "runtime_first_status": "ROOT_LIFECYCLE_NOTICE_ACCEPTED_NO_REPORT_BODY_READ",
+    "runtime_profiles": "UNCHANGED_WITH_UNMEASURED_NEGATIVE_LIVENESS_RISK",
+    "registration_enabled": false,
+    "worker_selected": false,
+    "native_observed": false,
+    "allocation_authorized": false,
+    "external_full_cgroup_supervision": "OPEN_ROOT_OFFLINE_PREREQUISITE",
+    "future_observed_registration": "OPEN_AFTER_AUTHORIZED_ALLOCATION_BEFORE_SCIENCE",
+    "coefficient_or_baseline_or_fixture_access": false
+  },
+  "handoff": "Custody-first. Final read/hash operations only remain; all authoring ends with this custody file. No follow-on authority."
+}

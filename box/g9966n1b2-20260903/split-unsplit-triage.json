@@ -1,0 +1,5198 @@
+{
+  "fallacy_controls": {
+    "descent_applied_only_to_no_split_complement": true,
+    "face_chart_not_called_joint_chart": true,
+    "no_exit_price_assertion": true,
+    "strict_below_separated_from_at_ceiling": true
+  },
+  "joint_chart_status": {
+    "S1": {
+      "F_G_coefficients_after_two_corner_pins": 2271,
+      "F_box": [
+        54,
+        12
+      ],
+      "G_box": [
+        81,
+        18
+      ],
+      "T2_box": [
+        126,
+        28
+      ]
+    },
+    "S2": {
+      "F_G_coefficients_after_two_corner_pins": 3441,
+      "F_box": [
+        42,
+        24
+      ],
+      "G_box": [
+        63,
+        36
+      ],
+      "T2_box": [
+        70,
+        40
+      ]
+    },
+    "S3": {
+      "F_G_coefficients_after_two_corner_pins": 3441,
+      "F_box": [
+        42,
+        24
+      ],
+      "G_box": [
+        63,
+        36
+      ],
+      "T2_box": [
+        70,
+        40
+      ]
+    },
+    "S4": {
+      "F_G_coefficients_after_two_corner_pins": 2973,
+      "F_box": [
+        48,
+        18
+      ],
+      "G_box": [
+        72,
+        27
+      ],
+      "T2_box": [
+        80,
+        30
+      ]
+    },
+    "S7": {
+      "F_G_coefficients_after_two_corner_pins": 3441,
+      "F_box": [
+        42,
+        24
+      ],
+      "G_box": [
+        63,
+        36
+      ],
+      "T2_box": [
+        35,
+        20
+      ]
+    },
+    "scope": "starting Prop.6.2 boxes only; complete major-incidence/effective-T2/T3/Jacobian coupling unbuilt, so every split branch is OPEN"
+  },
+  "minus_mu": {
+    "S1": [
+      "66",
+      "154",
+      "343"
+    ],
+    "S2": [
+      "66",
+      "110",
+      "255"
+    ],
+    "S3": [
+      "66",
+      "110",
+      "255"
+    ],
+    "S4": [
+      "66",
+      "110",
+      "255"
+    ],
+    "S5": [
+      "66",
+      "110",
+      "255"
+    ],
+    "S6": [
+      "66",
+      "77",
+      "189"
+    ],
+    "S7": [
+      "66",
+      "55",
+      "145"
+    ],
+    "S8": [
+      "66",
+      "55",
+      "145"
+    ]
+  },
+  "schema": "jc2.g9966n1b2.split-unsplit-triage/v1",
+  "split_face_charts": {
+    "S1": [
+      {
+        "W": 31,
+        "a_order": "-28",
+        "b_order": "-9",
+        "degree_p": 2,
+        "degree_q": 63,
+        "delta": "4",
+        "free_face_parameters": [
+          "C",
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "z*(-c + z)",
+        "partition": [
+          1,
+          1
+        ],
+        "q": "z**28*(-c + z)**28*(20*C - 35*c**3*z**4 + 84*c**2*z**5 - 70*c*z**6 + 20*z**7)/20",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 3
+      }
+    ],
+    "S2": [
+      {
+        "W": 23,
+        "a_order": "-45/2",
+        "b_order": "-9",
+        "degree_p": 4,
+        "degree_q": 93,
+        "delta": "3/2",
+        "free_face_parameters": [
+          "C",
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "(-c + z**2)**2",
+        "partition": [
+          2,
+          2
+        ],
+        "q": "(-c + z**2)**45*(C - 3*c*z + z**3)",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 3
+      },
+      {
+        "W": 23,
+        "a_order": "-45/2",
+        "b_order": "-9",
+        "degree_p": 4,
+        "degree_q": 93,
+        "delta": "3/2",
+        "free_face_parameters": [
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "z**2*(-c + z**2)",
+        "partition": [
+          2,
+          1,
+          1
+        ],
+        "q": "z**45*(-c + z**2)**24",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 2
+      },
+      {
+        "W": 23,
+        "a_order": "-7",
+        "b_order": "-3",
+        "degree_p": 4,
+        "degree_q": 93,
+        "delta": "5/3",
+        "free_face_parameters": [
+          "C",
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "z*(-c + z**3)",
+        "partition": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "q": "z**21*(-c + z**3)**21*(C + 3*c**2*z**3 - 3*c*z**6 + z**9)",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 3
+      }
+    ],
+    "S3": [
+      {
+        "W": 23,
+        "a_order": "-45/2",
+        "b_order": "-9",
+        "degree_p": 4,
+        "degree_q": 93,
+        "delta": "3/2",
+        "free_face_parameters": [
+          "C",
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "(-c + z**2)**2",
+        "partition": [
+          2,
+          2
+        ],
+        "q": "(-c + z**2)**45*(C - 3*c*z + z**3)",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 3
+      },
+      {
+        "W": 23,
+        "a_order": "-45/2",
+        "b_order": "-9",
+        "degree_p": 4,
+        "degree_q": 93,
+        "delta": "3/2",
+        "free_face_parameters": [
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "z**2*(-c + z**2)",
+        "partition": [
+          2,
+          1,
+          1
+        ],
+        "q": "z**45*(-c + z**2)**24",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 2
+      },
+      {
+        "W": 23,
+        "a_order": "-7",
+        "b_order": "-3",
+        "degree_p": 4,
+        "degree_q": 93,
+        "delta": "5/3",
+        "free_face_parameters": [
+          "C",
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "z*(-c + z**3)",
+        "partition": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "q": "z**21*(-c + z**3)**21*(C + 3*c**2*z**3 - 3*c*z**6 + z**9)",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 3
+      }
+    ],
+    "S4": [
+      {
+        "W": 23,
+        "a_order": "-45",
+        "b_order": "-18",
+        "degree_p": 3,
+        "degree_q": 70,
+        "delta": "2",
+        "free_face_parameters": [
+          "a"
+        ],
+        "localization": "localize a",
+        "ode_residual": "0",
+        "p": "z**2*(3*a + z)",
+        "partition": [
+          2,
+          1
+        ],
+        "q": "z**45*(-2*a + z)*(3*a + z)**24",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 2
+      },
+      {
+        "W": 23,
+        "a_order": "-10",
+        "b_order": "-9/2",
+        "degree_p": 3,
+        "degree_q": 70,
+        "delta": "5/2",
+        "free_face_parameters": [
+          "C",
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "z*(-c + z**2)",
+        "partition": [
+          1,
+          1,
+          1
+        ],
+        "q": "z**20*(-c + z**2)**20*(4*C - 10*c**3*z**4 + 20*c**2*z**6 - 15*c*z**8 + 4*z**10)/4",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 3
+      }
+    ],
+    "S7": [
+      {
+        "W": 13,
+        "a_order": "-25/2",
+        "b_order": "-9",
+        "degree_p": 4,
+        "degree_q": 53,
+        "delta": "3/2",
+        "free_face_parameters": [
+          "C",
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "(-c + z**2)**2",
+        "partition": [
+          2,
+          2
+        ],
+        "q": "(-c + z**2)**25*(C - 3*c*z + z**3)",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 3
+      },
+      {
+        "W": 13,
+        "a_order": "-25/2",
+        "b_order": "-9",
+        "degree_p": 4,
+        "degree_q": 53,
+        "delta": "3/2",
+        "free_face_parameters": [
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "z**2*(-c + z**2)",
+        "partition": [
+          2,
+          1,
+          1
+        ],
+        "q": "z**25*(-c + z**2)**14",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 2
+      },
+      {
+        "W": 13,
+        "a_order": "-11/3",
+        "b_order": "-3",
+        "degree_p": 4,
+        "degree_q": 53,
+        "delta": "5/3",
+        "free_face_parameters": [
+          "C",
+          "c"
+        ],
+        "localization": "localize c",
+        "ode_residual": "0",
+        "p": "z*(-c + z**3)",
+        "partition": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "q": "z**11*(-c + z**3)**11*(C + 3*c**2*z**3 - 3*c*z**6 + z**9)",
+        "scope": "exact necessary split-face parametrization; not a joint two-point chart",
+        "solver_parameter_count_with_Rabinowitsch": 3
+      }
+    ]
+  },
+  "split_windows": {
+    "S1": {
+      "branch_semantics": "a skeleton is not intrinsically split; listed charts plus their no-split complement are exhaustive duties",
+      "candidate_orders": [
+        "3/2",
+        "2",
+        "5/2",
+        "3",
+        "7/2",
+        "4"
+      ],
+      "ceiling": "9/2",
+      "denominator_bound": 2,
+      "strict_window": "1<delta<9/2",
+      "surviving_face_types": {
+        "4": [
+          [
+            1,
+            1
+          ]
+        ]
+      }
+    },
+    "S2": {
+      "branch_semantics": "a skeleton is not intrinsically split; listed charts plus their no-split complement are exhaustive duties",
+      "candidate_orders": [
+        "5/4",
+        "4/3",
+        "3/2",
+        "5/3"
+      ],
+      "ceiling": "7/4",
+      "denominator_bound": 4,
+      "strict_window": "1<delta<7/4",
+      "surviving_face_types": {
+        "3/2": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "5/3": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      }
+    },
+    "S3": {
+      "branch_semantics": "a skeleton is not intrinsically split; listed charts plus their no-split complement are exhaustive duties",
+      "candidate_orders": [
+        "5/4",
+        "4/3",
+        "3/2",
+        "5/3"
+      ],
+      "ceiling": "7/4",
+      "denominator_bound": 4,
+      "strict_window": "1<delta<7/4",
+      "surviving_face_types": {
+        "3/2": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "5/3": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      }
+    },
+    "S4": {
+      "branch_semantics": "a skeleton is not intrinsically split; listed charts plus their no-split complement are exhaustive duties",
+      "candidate_orders": [
+        "4/3",
+        "3/2",
+        "5/3",
+        "2",
+        "7/3",
+        "5/2"
+      ],
+      "ceiling": "8/3",
+      "denominator_bound": 3,
+      "strict_window": "1<delta<8/3",
+      "surviving_face_types": {
+        "2": [
+          [
+            2,
+            1
+          ]
+        ],
+        "5/2": [
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      }
+    },
+    "S7": {
+      "branch_semantics": "a skeleton is not intrinsically split; listed charts plus their no-split complement are exhaustive duties",
+      "candidate_orders": [
+        "5/4",
+        "4/3",
+        "3/2",
+        "5/3"
+      ],
+      "ceiling": "7/4",
+      "denominator_bound": 4,
+      "strict_window": "1<delta<7/4",
+      "surviving_face_types": {
+        "3/2": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            1,
+            1
+          ]
+        ],
+        "5/3": [
+          [
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      }
+    }
+  },
+  "unsplit_corrected_order_systems": {
+    "S1": {
+      "alpha_inventories": {
+        "1": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "2": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "3": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ]
+      },
+      "beta_inventories": {
+        "2": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "closed_form": {
+        "B": "-4/3",
+        "K": 6,
+        "Pi": 5,
+        "R": 21,
+        "d3prime": 2,
+        "delta1": "1/3",
+        "delta2": "-1/3",
+        "e": 3,
+        "lambda_P": "-4",
+        "lambda_Q": "-8/3",
+        "q": 2,
+        "u": 5
+      },
+      "datum": {
+        "K": 6,
+        "M2": -4,
+        "V2": 1,
+        "ell": 6,
+        "m": 12,
+        "n": 18,
+        "u_prime": 5
+      },
+      "exact_system": {
+        "coefficient_rule": "s<K, r+s<=j*K, -r+delta1*s>=j*B",
+        "equations": "every x,y coefficient of the full h-adic remainder of J(Q,P)-c*x^ell",
+        "field": "Q",
+        "h_lower_rule": "s<K, r+s<K, 0<=r<=u_prime, -r+delta1*s>=B",
+        "localizer": "T*c*omega-1, omega=Product s_j(s_j-1) Product_(i<j)(s_i-s_j)",
+        "top_face": "h_top=y^V2*(y-x)^lambda1*Product_(j>=2)(y-s_j*x)^lambda_j"
+      },
+      "h_inventory": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "licensed_scope": "complement after exhaustive exclusion of every strict-below split chart",
+      "parameter_count_range_without_T": [
+        110,
+        114
+      ],
+      "parameter_counts_without_T": {
+        "1+1+1+1+1": 114,
+        "2+1+1+1": 113,
+        "2+2+1": 112,
+        "3+1+1": 112,
+        "3+2": 111,
+        "4+1": 111,
+        "5": 110
+      },
+      "partitions": [
+        [
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "predicted_generic_coefficient_rows": 352,
+      "prop63_requirement": "actual delta*_2 >= 9/2",
+      "row_count_scope": "generic-support prediction; only actual emitted rows are certificate rows"
+    },
+    "S2": {
+      "alpha_inventories": {
+        "1": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "3": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "beta_inventories": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "closed_form": {
+        "B": "-4/9",
+        "K": 12,
+        "Pi": 5,
+        "R": 27,
+        "d3prime": 4,
+        "delta1": "7/9",
+        "delta2": "-1/9",
+        "e": 3,
+        "lambda_P": "-4/3",
+        "lambda_Q": "-8/9",
+        "q": 2,
+        "u": 11
+      },
+      "datum": {
+        "K": 12,
+        "M2": 8,
+        "V2": 1,
+        "ell": 2,
+        "m": 24,
+        "n": 36,
+        "u_prime": 11
+      },
+      "exact_system": {
+        "coefficient_rule": "s<K, r+s<=j*K, -r+delta1*s>=j*B",
+        "equations": "every x,y coefficient of the full h-adic remainder of J(Q,P)-c*x^ell",
+        "field": "Q",
+        "h_lower_rule": "s<K, r+s<K, 0<=r<=u_prime, -r+delta1*s>=B",
+        "localizer": "T*c*omega-1, omega=Product s_j(s_j-1) Product_(i<j)(s_i-s_j)",
+        "top_face": "h_top=y^V2*(y-x)^lambda1*Product_(j>=2)(y-s_j*x)^lambda_j"
+      },
+      "h_inventory": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "licensed_scope": "complement after exhaustive exclusion of every strict-below split chart",
+      "parameter_count_range_without_T": [
+        292,
+        302
+      ],
+      "parameter_counts_without_T": {
+        "1+1+1+1+1+1+1+1+1+1+1": 302,
+        "10+1": 293,
+        "11": 292,
+        "2+1+1+1+1+1+1+1+1+1": 301,
+        "2+2+1+1+1+1+1+1+1": 300,
+        "2+2+2+1+1+1+1+1": 299,
+        "2+2+2+2+1+1+1": 298,
+        "2+2+2+2+2+1": 297,
+        "3+1+1+1+1+1+1+1+1": 300,
+        "3+2+1+1+1+1+1+1": 299,
+        "3+2+2+1+1+1+1": 298,
+        "3+2+2+2+1+1": 297,
+        "3+2+2+2+2": 296,
+        "3+3+1+1+1+1+1": 298,
+        "3+3+2+1+1+1": 297,
+        "3+3+2+2+1": 296,
+        "3+3+3+1+1": 296,
+        "3+3+3+2": 295,
+        "4+1+1+1+1+1+1+1": 299,
+        "4+2+1+1+1+1+1": 298,
+        "4+2+2+1+1+1": 297,
+        "4+2+2+2+1": 296,
+        "4+3+1+1+1+1": 297,
+        "4+3+2+1+1": 296,
+        "4+3+2+2": 295,
+        "4+3+3+1": 295,
+        "4+4+1+1+1": 296,
+        "4+4+2+1": 295,
+        "4+4+3": 294,
+        "5+1+1+1+1+1+1": 298,
+        "5+2+1+1+1+1": 297,
+        "5+2+2+1+1": 296,
+        "5+2+2+2": 295,
+        "5+3+1+1+1": 296,
+        "5+3+2+1": 295,
+        "5+3+3": 294,
+        "5+4+1+1": 295,
+        "5+4+2": 294,
+        "5+5+1": 294,
+        "6+1+1+1+1+1": 297,
+        "6+2+1+1+1": 296,
+        "6+2+2+1": 295,
+        "6+3+1+1": 295,
+        "6+3+2": 294,
+        "6+4+1": 294,
+        "6+5": 293,
+        "7+1+1+1+1": 296,
+        "7+2+1+1": 295,
+        "7+2+2": 294,
+        "7+3+1": 294,
+        "7+4": 293,
+        "8+1+1+1": 295,
+        "8+2+1": 294,
+        "8+3": 293,
+        "9+1+1": 294,
+        "9+2": 293
+      },
+      "partitions": [
+        [
+          11
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          9,
+          1,
+          1
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          2,
+          1
+        ],
+        [
+          8,
+          1,
+          1,
+          1
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          3,
+          1
+        ],
+        [
+          7,
+          2,
+          2
+        ],
+        [
+          7,
+          2,
+          1,
+          1
+        ],
+        [
+          7,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          4,
+          1
+        ],
+        [
+          6,
+          3,
+          2
+        ],
+        [
+          6,
+          3,
+          1,
+          1
+        ],
+        [
+          6,
+          2,
+          2,
+          1
+        ],
+        [
+          6,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          5,
+          5,
+          1
+        ],
+        [
+          5,
+          4,
+          2
+        ],
+        [
+          5,
+          4,
+          1,
+          1
+        ],
+        [
+          5,
+          3,
+          3
+        ],
+        [
+          5,
+          3,
+          2,
+          1
+        ],
+        [
+          5,
+          3,
+          1,
+          1,
+          1
+        ],
+        [
+          5,
+          2,
+          2,
+          2
+        ],
+        [
+          5,
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          5,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          4,
+          3
+        ],
+        [
+          4,
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          4,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          3,
+          3,
+          1
+        ],
+        [
+          4,
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          2,
+          1,
+          1
+        ],
+        [
+          4,
+          3,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "predicted_generic_coefficient_rows": 1558,
+      "prop63_requirement": "actual delta*_2 >= 7/4",
+      "row_count_scope": "generic-support prediction; only actual emitted rows are certificate rows"
+    },
+    "S3": {
+      "alpha_inventories": {
+        "1": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "3": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "beta_inventories": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "closed_form": {
+        "B": "-16/27",
+        "K": 12,
+        "Pi": 5,
+        "R": 27,
+        "d3prime": 4,
+        "delta1": "1/27",
+        "delta2": "-1/9",
+        "e": 3,
+        "lambda_P": "-16/9",
+        "lambda_Q": "-32/27",
+        "q": 2,
+        "u": 7
+      },
+      "datum": {
+        "K": 12,
+        "M2": 8,
+        "V2": 5,
+        "ell": 2,
+        "m": 24,
+        "n": 36,
+        "u_prime": 7
+      },
+      "exact_system": {
+        "coefficient_rule": "s<K, r+s<=j*K, -r+delta1*s>=j*B",
+        "equations": "every x,y coefficient of the full h-adic remainder of J(Q,P)-c*x^ell",
+        "field": "Q",
+        "h_lower_rule": "s<K, r+s<K, 0<=r<=u_prime, -r+delta1*s>=B",
+        "localizer": "T*c*omega-1, omega=Product s_j(s_j-1) Product_(i<j)(s_i-s_j)",
+        "top_face": "h_top=y^V2*(y-x)^lambda1*Product_(j>=2)(y-s_j*x)^lambda_j"
+      },
+      "h_inventory": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "licensed_scope": "complement after exhaustive exclusion of every strict-below split chart",
+      "parameter_count_range_without_T": [
+        102,
+        108
+      ],
+      "parameter_counts_without_T": {
+        "1+1+1+1+1+1+1": 108,
+        "2+1+1+1+1+1": 107,
+        "2+2+1+1+1": 106,
+        "2+2+2+1": 105,
+        "3+1+1+1+1": 106,
+        "3+2+1+1": 105,
+        "3+2+2": 104,
+        "3+3+1": 104,
+        "4+1+1+1": 105,
+        "4+2+1": 104,
+        "4+3": 103,
+        "5+1+1": 104,
+        "5+2": 103,
+        "6+1": 103,
+        "7": 102
+      },
+      "partitions": [
+        [
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "predicted_generic_coefficient_rows": 1044,
+      "prop63_requirement": "actual delta*_2 >= 7/4",
+      "row_count_scope": "generic-support prediction; only actual emitted rows are certificate rows"
+    },
+    "S4": {
+      "alpha_inventories": {
+        "1": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "2": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "3": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "beta_inventories": {
+        "2": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "closed_form": {
+        "B": "-3/4",
+        "K": 9,
+        "Pi": 5,
+        "R": 20,
+        "d3prime": 3,
+        "delta1": "5/4",
+        "delta2": "-1/4",
+        "e": 3,
+        "lambda_P": "-9/4",
+        "lambda_Q": "-3/2",
+        "q": 2,
+        "u": 8
+      },
+      "datum": {
+        "K": 9,
+        "M2": 6,
+        "V2": 1,
+        "ell": 4,
+        "m": 18,
+        "n": 27,
+        "u_prime": 8
+      },
+      "exact_system": {
+        "coefficient_rule": "s<K, r+s<=j*K, -r+delta1*s>=j*B",
+        "equations": "every x,y coefficient of the full h-adic remainder of J(Q,P)-c*x^ell",
+        "field": "Q",
+        "h_lower_rule": "s<K, r+s<K, 0<=r<=u_prime, -r+delta1*s>=B",
+        "localizer": "T*c*omega-1, omega=Product s_j(s_j-1) Product_(i<j)(s_i-s_j)",
+        "top_face": "h_top=y^V2*(y-x)^lambda1*Product_(j>=2)(y-s_j*x)^lambda_j"
+      },
+      "h_inventory": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "licensed_scope": "complement after exhaustive exclusion of every strict-below split chart",
+      "parameter_count_range_without_T": [
+        257,
+        264
+      ],
+      "parameter_counts_without_T": {
+        "1+1+1+1+1+1+1+1": 264,
+        "2+1+1+1+1+1+1": 263,
+        "2+2+1+1+1+1": 262,
+        "2+2+2+1+1": 261,
+        "2+2+2+2": 260,
+        "3+1+1+1+1+1": 262,
+        "3+2+1+1+1": 261,
+        "3+2+2+1": 260,
+        "3+3+1+1": 260,
+        "3+3+2": 259,
+        "4+1+1+1+1": 261,
+        "4+2+1+1": 260,
+        "4+2+2": 259,
+        "4+3+1": 259,
+        "4+4": 258,
+        "5+1+1+1": 260,
+        "5+2+1": 259,
+        "5+3": 258,
+        "6+1+1": 259,
+        "6+2": 258,
+        "7+1": 258,
+        "8": 257
+      },
+      "partitions": [
+        [
+          8
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          1,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          2,
+          1
+        ],
+        [
+          5,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          4,
+          2,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "predicted_generic_coefficient_rows": 981,
+      "prop63_requirement": "actual delta*_2 >= 8/3",
+      "row_count_scope": "generic-support prediction; only actual emitted rows are certificate rows"
+    },
+    "S7": {
+      "alpha_inventories": {
+        "1": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "3": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "beta_inventories": {
+        "2": [
+          [
+            0,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "closed_form": {
+        "B": "-4/7",
+        "K": 12,
+        "Pi": 5,
+        "R": 7,
+        "d3prime": 4,
+        "delta1": "1/7",
+        "delta2": "-3/7",
+        "e": 3,
+        "lambda_P": "-12/7",
+        "lambda_Q": "-8/7",
+        "q": 2,
+        "u": 4
+      },
+      "datum": {
+        "K": 12,
+        "M2": 28,
+        "V2": 8,
+        "ell": 2,
+        "m": 24,
+        "n": 36,
+        "u_prime": 4
+      },
+      "exact_system": {
+        "coefficient_rule": "s<K, r+s<=j*K, -r+delta1*s>=j*B",
+        "equations": "every x,y coefficient of the full h-adic remainder of J(Q,P)-c*x^ell",
+        "field": "Q",
+        "h_lower_rule": "s<K, r+s<K, 0<=r<=u_prime, -r+delta1*s>=B",
+        "localizer": "T*c*omega-1, omega=Product s_j(s_j-1) Product_(i<j)(s_i-s_j)",
+        "top_face": "h_top=y^V2*(y-x)^lambda1*Product_(j>=2)(y-s_j*x)^lambda_j"
+      },
+      "h_inventory": [
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "licensed_scope": "complement after exhaustive exclusion of every strict-below split chart",
+      "parameter_count_range_without_T": [
+        138,
+        141
+      ],
+      "parameter_counts_without_T": {
+        "1+1+1+1": 141,
+        "2+1+1": 140,
+        "2+2": 139,
+        "3+1": 139,
+        "4": 138
+      },
+      "partitions": [
+        [
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "predicted_generic_coefficient_rows": 1055,
+      "prop63_requirement": "actual delta*_2 >= 7/4",
+      "row_count_scope": "generic-support prediction; only actual emitted rows are certificate rows"
+    }
+  }
+}

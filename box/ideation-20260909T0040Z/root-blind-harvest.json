@@ -1,0 +1,160 @@
+[
+  {
+    "status": "PASS",
+    "utc": "2026-09-09T01:24:08.571332+00:00",
+    "owned": 10,
+    "input_entries": 22,
+    "historical_context": [
+      {
+        "path": "AUDIT.md",
+        "old": "96092f7ba17cc987b29be22081bd302bd2b70c0c8bb591199a9010fb2b7654ca",
+        "current": "8f66a93d52ef3d5cc042285851b3201308f33a21621e5e105e01a17ae1939ac4",
+        "read_scope_snapshot": "box/ideation-20260909T0040Z-astra/audit13k.md",
+        "snapshot_sha256": "b1fc459f59d733148bea44df0526baa56e8cb1430bd3504d75692de3aa20b8e9",
+        "reason": "root15q appended and reading guide changed after producer context freeze; exact read excerpt still byte-substring"
+      }
+    ],
+    "all_17_charged_inputs_current": true,
+    "all_four_blinds_collected": true
+  },
+  {
+    "status": "PASS",
+    "utc": "2026-09-09T01:24:09.047026+00:00",
+    "elapsed_seconds": 0.47345834504812956,
+    "runs": [
+      {
+        "argv": [
+          "prlimit",
+          "--as=536870912",
+          "--cpu=25",
+          "--",
+          "python3",
+          "-I",
+          "-B",
+          "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+          "none"
+        ],
+        "rc": 0,
+        "stdout": "{\"mutation\": \"none\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": true, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": true, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "prlimit",
+          "--as=536870912",
+          "--cpu=25",
+          "--",
+          "python3",
+          "-I",
+          "-B",
+          "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+          "bad-slope"
+        ],
+        "rc": 2,
+        "stdout": "{\"mutation\": \"bad-slope\", \"claims\": {\"golden_minpoly\": false, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": true, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "prlimit",
+          "--as=536870912",
+          "--cpu=25",
+          "--",
+          "python3",
+          "-I",
+          "-B",
+          "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+          "wrong-map-sign"
+        ],
+        "rc": 2,
+        "stdout": "{\"mutation\": \"wrong-map-sign\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": false, \"squarefree_top_map\": true, \"swap_and_determinant\": false, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "prlimit",
+          "--as=536870912",
+          "--cpu=25",
+          "--",
+          "python3",
+          "-I",
+          "-B",
+          "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+          "wrong-swap"
+        ],
+        "rc": 2,
+        "stdout": "{\"mutation\": \"wrong-swap\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": false, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "prlimit",
+          "--as=536870912",
+          "--cpu=25",
+          "--",
+          "python3",
+          "-I",
+          "-B",
+          "-O",
+          "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+          "none"
+        ],
+        "rc": 0,
+        "stdout": "{\"mutation\": \"none\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": true, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": true, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "prlimit",
+          "--as=536870912",
+          "--cpu=25",
+          "--",
+          "python3",
+          "-I",
+          "-B",
+          "-O",
+          "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+          "bad-slope"
+        ],
+        "rc": 2,
+        "stdout": "{\"mutation\": \"bad-slope\", \"claims\": {\"golden_minpoly\": false, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": true, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "prlimit",
+          "--as=536870912",
+          "--cpu=25",
+          "--",
+          "python3",
+          "-I",
+          "-B",
+          "-O",
+          "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+          "wrong-map-sign"
+        ],
+        "rc": 2,
+        "stdout": "{\"mutation\": \"wrong-map-sign\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": false, \"squarefree_top_map\": true, \"swap_and_determinant\": false, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+        "stderr": ""
+      },
+      {
+        "argv": [
+          "prlimit",
+          "--as=536870912",
+          "--cpu=25",
+          "--",
+          "python3",
+          "-I",
+          "-B",
+          "-O",
+          "/home/ubuntu/jc2/box/ideation-20260909T0040Z-astra/check_maps.py",
+          "wrong-swap"
+        ],
+        "rc": 2,
+        "stdout": "{\"mutation\": \"wrong-swap\", \"claims\": {\"golden_minpoly\": true, \"t_equation\": true, \"golden_top_map\": true, \"squarefree_top_map\": true, \"swap_and_determinant\": false, \"normalized_scalar\": true, \"cusp_budget_8_4_is_not_strict\": true, \"double_budget_8_3_is_not_strict\": true, \"two_strict_thresholds\": true}, \"passed\": false, \"scope\": \"factor/scalar controls only; no polynomial receiver\"}\n",
+        "stderr": ""
+      }
+    ],
+    "scope": "degree5/scalar changed-object illustrations only; NOT source proof"
+  }
+]

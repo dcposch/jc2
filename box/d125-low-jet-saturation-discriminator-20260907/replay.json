@@ -1,0 +1,63 @@
+{
+  "caps": "30wall/25CPU seconds,512MiB",
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "37fc6434e2020d4580bf7401f0ed1eefde80778d6165e2cb406bbd045a1c92ca"
+    },
+    {
+      "mutation": "--mutate-omit-A1B3",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "3ef379bbdc3477338755dea8433558c3015ed2060004695d2629bf21e35065ff",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-certificate-sign",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "c76ffa944a13214d79228d583dd929516fa71ab9a0742b76811c65dee0e6ac18",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-raw-equivalence",
+      "optimized": false,
+      "returncode": 1,
+      "stderr_sha256": "0de8540496446e036b2bd9ff26581b227b98f129e6852ba52439409813c1f955",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "37fc6434e2020d4580bf7401f0ed1eefde80778d6165e2cb406bbd045a1c92ca"
+    },
+    {
+      "mutation": "--mutate-omit-A1B3",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "3ef379bbdc3477338755dea8433558c3015ed2060004695d2629bf21e35065ff",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-certificate-sign",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "c76ffa944a13214d79228d583dd929516fa71ab9a0742b76811c65dee0e6ac18",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mutation": "--mutate-raw-equivalence",
+      "optimized": true,
+      "returncode": 1,
+      "stderr_sha256": "0de8540496446e036b2bd9ff26581b227b98f129e6852ba52439409813c1f955",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "writers_finished": true
+}

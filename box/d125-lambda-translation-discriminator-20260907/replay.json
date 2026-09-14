@@ -1,0 +1,19 @@
+{
+  "schema": "jc2.bounded-replay/v1",
+  "script": "box/d125-lambda-translation-discriminator-20260907/check.py",
+  "sha256": "8cbc91cebd4c8e7fd80fb89f39c55031fdff2fb409ae93587a69c1a9b8504b51",
+  "normal_exit": 0,
+  "optimized_exit": 0,
+  "symbolic_control": "Exact transition after multiplying by (1+b*g)^4; symbolic old-pass/new-fail degree1 toy",
+  "exact_fraction_inverse_fixtures": 3,
+  "leading_coefficient_degrees": [1,15,25],
+  "full_source_or_receiver_expanded": false,
+  "mutations": {
+    "--mutate-parameter": {"normal_exit":1,"optimized_exit":1,"failure":"exact transition identity after clearing t^4"},
+    "--mutate-drop-forbidden": {"normal_exit":1,"optimized_exit":1,"failure":"ordinary toy exact map rejects an actual dropped forbidden term"}
+  },
+  "last_six_process_batch_wall_seconds": 1.376188682,
+  "implementation_correction_before_seal": "All numeric inverse-fixture values explicitly converted to Fraction; a preliminary integer division could otherwise produce a float. Final controlled outputs use exact arithmetic only.",
+  "explicit_exit_codes_rechecked": true,
+  "all_writers_done": true
+}

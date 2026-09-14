@@ -1,0 +1,39 @@
+option(redSB); short=0;
+ring R = 0,(x,y),dp;
+proc quoy(poly p, poly hh, int K)
+{ poly q=0; poly ld; matrix cp; int d;
+  while(1){ if(p==0){break;} cp=coeffs(p,y); d=nrows(cp)-1; if(d<K){break;}
+    ld=cp[d+1,1]; q=q+ld*y^(d-K); p=p-ld*y^(d-K)*hh; } return(q); }
+proc remy(poly p, poly hh, int K) { return(p - quoy(p,hh,K)*hh); }
+proc Jac(poly u,poly v){ return(diff(u,x)*diff(v,y)-diff(u,y)*diff(v,x)); }
+proc band(poly p,int d){ return(jet(p,d)-jet(p,d-1)); }
+
+// TOP-BAND IDENTITY:  [J]_{2b+K-2} = -3*J(H,R0),  R0 = rem_y(beta_b^2, H)
+int K,b; poly H,h,be,al,f,g,Jd,R0;
+// -- instance 1: K=5, b=6, beta_b generic with deg_y<=K-1=4 --
+K=5; b=6; H = y^4*(y-x);
+h  = H + 3*y^3 - 2*x*y^2 + 7*x^3 - y + 5;
+be = 2*x^2*y^4 - 3*x^3*y^3 + x^5*y + 7*x^6  + (5*y^3*x - y^2 + 2);   // top form deg 6
+al = quoy(be^2,h,K); f = h^2+2*be; g = h^3+3*be*h+(3/2)*al; Jd = Jac(f,g);
+R0 = remy(band(be,b)^2, H, K);
+"MARK_TB1_deg"; 2*b+K-2; deg(Jd);
+"MARK_TB1_resid"; band(Jd, 2*b+K-2) - (-3*Jac(H,R0));
+
+// -- instance 2: K=4, b=5 --
+K=4; b=5; H = y^3*(y-x);
+h  = H - 4*y^2 + x*y + 9;
+be = x^2*y^3 + 5*x^4*y - 2*x^5 + (y^3 - 3*x*y + 1);
+al = quoy(be^2,h,K); f = h^2+2*be; g = h^3+3*be*h+(3/2)*al; Jd = Jac(f,g);
+R0 = remy(band(be,b)^2, H, K);
+"MARK_TB2_deg"; 2*b+K-2; deg(Jd);
+"MARK_TB2_resid"; band(Jd, 2*b+K-2) - (-3*Jac(H,R0));
+
+// -- instance 3: R0 == 0 case: beta_b divisible by y^ceil((K-1)/2)*(y-x); K=5 => y^2*(y-x) --
+K=5; b=4; H=y^4*(y-x);
+h  = H + 2*y^3 - x*y + 3;
+be = y^2*(y-x)*(x) + (y^3 - 2*x*y + 5);        // top form  x*y^2*(y-x), deg 4, deg_y 3 <= 4
+al = quoy(be^2,h,K); f=h^2+2*be; g=h^3+3*be*h+(3/2)*al; Jd=Jac(f,g);
+R0 = remy(band(be,b)^2,H,K);
+"MARK_TB3_R0"; R0;
+"MARK_TB3_degJ_vs_bound"; deg(Jd); 2*b+K-2;
+"MARK_DONE"; quit;

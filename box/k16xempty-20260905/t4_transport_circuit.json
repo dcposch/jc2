@@ -1,0 +1,63 @@
+{
+  "t": 4,
+  "field": "Q[d]/(3*d^2-5)",
+  "generator_order": [
+    "c1",
+    "c2",
+    "c3",
+    "b"
+  ],
+  "input_sha256": {
+    "controls_t4_raw.sing": "0e5cf605bfc684c12bf28fbe6e9f1d1bbf10028aca17454f84c4b1b05cc7ae6f",
+    "t4_chart_data.txt": "85fbc7cf1a52c987978132932bcc0bcc3e9d8e6b5ca1fb2d89ca543ad5f55bfe",
+    "t4_target2_lift.sing": "ef728c9f7a4ba8ea24d8f633311a37f17a91c39ca336bf0c364ea155e1167442",
+    "t4_main_prelude.sing": "725805906eaaa8ce01768e2715b32b706f67c92890bda812d91816ca27eb1d57"
+  },
+  "selected_matrix_sha256": "2e452af35ccfff52e30a5a1dd3669defa622380a8ab836dba02113eee4e43a79",
+  "source_identity": "sum_{k=2}^{2t} a_k E_k = (B eta)^2; a_k=LL[k-1,1]",
+  "coefficient_operator": "clear(f,e)=sum_{j=0}^e coeff_b(f,j)*A^j*Delta^(e-j)",
+  "main": {
+    "d_k": "deg_b E_k",
+    "e_k": "deg_b a_k",
+    "m": "max(4,max_k(e_k+d_k))",
+    "r": "max(m-4,4)",
+    "F_k": "clear(E_k,d_k)",
+    "Q_k": "Delta^(m-e_k-d_k)*clear(a_k,e_k)",
+    "cleared_identity": "sum Q_k F_k = Delta^(m-4) H^4",
+    "W": "u^r Delta^(r-m+4) H^(r-4)",
+    "inverse_coefficient": "sum_{j=0}^{r-1}(u Delta H)^j",
+    "literal_unit": "1=sum_k (W Q_k) F_k + (sum_{j=0}^{r-1}(u Delta H)^j)*(1-u Delta H)"
+  },
+  "boundary": {
+    "E_k_coefficient": "s^4 a_k",
+    "A_coefficient": "-s^4 B^2 (eta+B)",
+    "Delta_coefficient": "s^4 B^2 (eta+B) b",
+    "inverse_coefficient": "1+sB+(sB)^2+(sB)^3",
+    "literal_unit": "1=sum_k s^4*a_k*E_k-s^4*B^2*(eta+B)*A+s^4*B^2*(eta+B)*b*Delta+(1+sB+(sB)^2+(sB)^3)*(1-sB)"
+  },
+  "verification": "ALL_EXACT_ASSERTIONS_PASS",
+  "expanded_main_requested": false,
+  "row_b_degrees": [
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "lift_b_degrees": [
+    0,
+    0,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "m": 6,
+  "r": 4,
+  "expanded_main_verified": false,
+  "transport_script_sha256": "a80de02b91fdb420fd852473b894a274361ada7ed1259487d04bcaf7865ebc3d",
+  "log_sha256": "5672ca506bc24c256d30a82bea83d78a0126154edfe672343e2d69aee1389876"
+}

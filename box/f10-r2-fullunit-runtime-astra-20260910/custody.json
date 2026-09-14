@@ -1,0 +1,70 @@
+{
+  "baseline_or_candidate_accessed": false,
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "collision_check": "PASS",
+  "custody_excludes_itself": true,
+  "expected_transaction_sha256": "861ee06741f78e229470dbef773ffcd9c8150452c06cac1cc8fbb3ea8fc8bda3",
+  "first_action_utc": "2026-09-10T16:55:58+00:00",
+  "hard_stop_utc": "2026-09-10T17:18:00+00:00",
+  "inputs_pre_and_post": {
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-modular-code-astra-20260910/CONTRACT.md": "e7fbaf54818d9fae1abff70418a566af7918d04a787fcabc21ceb8633e6e7070",
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-modular-code-astra-20260910/check.py": "ccc3d2ddfca98f7faaed9df323fb90ec183b437b3c6b0bfcde0820186e667023",
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-modular-code-astra-20260910/entry.py": "c49b7dfabe6dc8cc5b7aaea485171a6b709fc6158f180ae1157afd90b3cf4b1f",
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-modular-code-astra-20260910/produce.py": "60a290aee2ed5def7ed4242743f187dea755659f287707fa79c6c1e05f2d1f10",
+    "/home/ubuntu/jc2/box/f10-r2-highest-modular-runtime-astra-20260910/mutate.py": "3d68ec187f77dc1906f177d8f487f1d037dd0a1aa4b46329632ee6f27f315225",
+    "/home/ubuntu/jc2/box/f10-r2-highest-runtime-status-fix-astra-20260910/CONTRACT.md": "f0bfb025d5445f5cb16b48c29ff0d9aef909616216482c52973bd5c8f37f4318",
+    "/home/ubuntu/jc2/box/f10-r2-highest-runtime-status-fix-astra-20260910/dispatch.py": "396dc3b42f082ffbc08516a3dd41528516e2e69e3994fc005b22b79b3a605927",
+    "/home/ubuntu/jc2/box/f10-r2-reconstruction-code-astra-20260910/arithmetic.py": "fe9ab1abe9a96fc43b889e1bcb598f8e8c65fd194732c48f3542e13c476e0345",
+    "/home/ubuntu/jc2/xmodel/f10-r2-fullunit-modular-code-gate-fable5-20260910.md": "22fea3eeeea5a9877eb2749384294f070b174889b42a210804665a0fa617a918",
+    "/home/ubuntu/jc2/xmodel/f10-r2-highest-modular-runtime-gate-fable5-20260910.md": "8358693287a2874f05b431ab0081c98db9461bdc6eaf06be33f40a2f83c72ca8",
+    "/home/ubuntu/jc2/xmodel/f10-r2-highest-status-fix-gate-fable5-20260910.md": "85ce5e9ab2067ae07033fca52e0c4d0c8853032133f9799d388d8d0745c24698"
+  },
+  "owned": {
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-runtime-astra-20260910/CONTRACT.md": {
+      "bytes": 9451,
+      "sha256": "cb0da8dcfe19a033f9daad1de7de4e602a330f15a90c383824550522b8d847eb"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-runtime-astra-20260910/DISABLED-PLAN.json": {
+      "bytes": 1002,
+      "sha256": "ed63b649871853469e460ab7ef5fc8f9da259e5d096b3ad5a142c26acbfdb793"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-runtime-astra-20260910/PINS.json": {
+      "bytes": 1935,
+      "sha256": "f9e39a137ca17ab965a61746d0f7e0668452a7125161da8fd2d52d56a1a125c0"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-runtime-astra-20260910/READ-SCOPE.md": {
+      "bytes": 2948,
+      "sha256": "d30349136c29d2c3484c79328bb940bc784fc56c56a2e27bec62d22eba3510b3"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-runtime-astra-20260910/SOURCE-DELTA.diff": {
+      "bytes": 34552,
+      "sha256": "f4b562f92e37b7832e5872ef0307c5194d82b64ef9a66290eac620c8a6f1956c"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-runtime-astra-20260910/dispatch.py": {
+      "bytes": 45249,
+      "sha256": "b6998cae2d38e962777dc1064f39a841cfee3e5bb0fc3905599a5378aa78ff69"
+    },
+    "/home/ubuntu/jc2/box/f10-r2-fullunit-runtime-astra-20260910/mutate.py": {
+      "bytes": 14430,
+      "sha256": "4548656af387b7e08df5bd5c56504f97c2d11d2b5375cbfbadde5304465c4c97"
+    },
+    "/home/ubuntu/jc2/xmodel/f10-r2-fullunit-runtime-astra-20260910.md": {
+      "bytes": 7214,
+      "sha256": "c37f2aad93a224d0b2f51e7a465a790e574e36d9f49d294e443799e0aa710ac8"
+    },
+    "/home/ubuntu/jc2/xmodel/f10-r2-fullunit-runtime-astra-20260910.md.artifact.json": {
+      "bytes": 670,
+      "sha256": "861ee06741f78e229470dbef773ffcd9c8150452c06cac1cc8fbb3ea8fc8bda3"
+    }
+  },
+  "owned_whole_read": "PASS; dispatcher original plus exhaustive verified diff",
+  "raised_open_count": 0,
+  "required_next_review": "FIRST new dispatcher/mutator review; no runtime authority",
+  "reserve_utc": "2026-09-10T17:15:00+00:00",
+  "schema": "jc2.scoped-terminal-custody/v1",
+  "scientific_execution": "NONE",
+  "source_outcome": "NONE",
+  "status": "TERMINAL_SOURCE_ONLY_DISABLED_UNEXECUTED",
+  "terminal_utc": "2026-09-10T17:06:30.682766+00:00",
+  "transaction_expected_verify": "PASS"
+}

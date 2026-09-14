@@ -1,0 +1,110 @@
+{
+  "schema": "jc2.static-independent-checker-custody/v1",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED_STATIC_UNREADY_FOR_EXECUTION",
+  "intake_order": "ROOT establishes agent COMPLETED/IDLE, then CUSTODY FIRST; all12 inputs+5 owned current pins, exact expected transaction VERIFY, report/code/docs WHOLE.",
+  "first_utc": "2026-09-11 03:11:57 UTC",
+  "reserve_utc": "2026-09-11 03:39:00 UTC",
+  "hard_utc": "2026-09-11 03:42:00 UTC",
+  "finalized_utc": "2026-09-11T03:32:04Z",
+  "non_custody_writers_idle_utc": "2026-09-11T03:32:04Z",
+  "last_pre_custody_observed_utc": "2026-09-11 03:32:24 UTC",
+  "idle_handshake": "This is the final authored write. All writers IDLE after it completes; only readonly custody WHOLE/hash/clock and terminal response remain. Exact post-write observed UTC is supplied in terminal response.",
+  "clock_reset": false,
+  "target_absence": "Report, manifest, box absent at initial03:11:57 action sequence; exact own transaction consumed at FINAL, no partial/lease/close remains.",
+  "expected_transaction": {
+    "path": "xmodel/f10-direct-rows-checker-astra-20260911.md.artifact.json",
+    "sha256": "0660945cba8daffafcc910247a2579542fe6446f4eb8b211540a57d021b97094",
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "status": "VERIFIED_WITH_EXACT_EXPECTED_MANIFEST_AND_BASIS"
+  },
+  "input_readscope": "All12 pre-pinned; all12 FRESH_WHOLE03:11:57–03:13:12. Full intervals in READSCOPE.json; no reuse, clipping, omitted EOF or summary counted.",
+  "owned_readscope": "Final arithmetic1–165/166–EOF and checker1–180/181–360/361–EOF WHOLE03:30–03:31; complete report/READSCOPE WHOLE03:31; sealed report+transaction WHOLE03:32:24. This custody WHOLE/hash follows final write.",
+  "postpins": "All12 input pins match; all5 owned nonself pins freshly obtained03:32:24.",
+  "inputs": [
+    {
+      "path": "box/f10-direct-rows-parallel-prep-root-20260911/CHECKER-CARD.md",
+      "sha256": "3c4b3252d425efa81af97e8c5ebbbd90f7ada88b83b3faa89d12c42659ef044a"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/OPERATIONS.md",
+      "sha256": "3be532afc6e784842694cf02d4399573228362abb47ae36130ef97c4274faa59"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/ASSERTIONS.md",
+      "sha256": "61b9ce5e1f9b40a765dcb2a2ea5aa3a928197b61bc41cb5cf945632b99ad4de2"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/WIRE-AND-VALIDATION.md",
+      "sha256": "b9060f0bbc14e92464079b0daca12faa1ba2d367f9ecc7307ba301689de5b77d"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/ROOT-ADOPTED-CORRECTIONS.md",
+      "sha256": "39ed9b3910efee02dd2f17ced7951a8b83557e612d100d4ae34f76e0895b4002"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-wire-root-20260911.md",
+      "sha256": "90c940b021ba9f99f2298aaf394cb082793812ad4428e249b970ecf06baa6c47"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-wire-gate-fable5-20260911.md",
+      "sha256": "68488229c5ff839f8c155662f903ba174d59d4e96bb5e046a53967313d497f1b"
+    },
+    {
+      "path": "box/f10-direct-rows-wire-root-20260911/ROOT-ADOPTED-WIRE-PINS.md",
+      "sha256": "2b2770fe494098812a52c6829a4bd97803f44bb0474863b8008a69f3725956fd"
+    },
+    {
+      "path": "box/f10-direct-rows-parallel-prep-root-20260911/ROOT-AUTHOR-INTERFACE.md",
+      "sha256": "a0a40804071a6dac83eaf6acf38073229a6d15c8866af32e283015d65c1c74e7"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/authority.py",
+      "sha256": "407c5784ba07abbf289e2ba4fd82f24fc661987eb55f378bf39cc954da1ee07b"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/check.py",
+      "sha256": "b9176ee7f0b8f34506e0fce03c2aea548756d0d489a53b732401cc7dbaa8c87f"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/check_arithmetic.py",
+      "sha256": "10e57542f9aa06eb69fd9562b2aa0bb27567c6d14186ffa90d77d6e08e80ae2c"
+    }
+  ],
+  "owned_excluding_this_custody": [
+    {
+      "path": "xmodel/f10-direct-rows-checker-astra-20260911.md",
+      "sha256": "bfac10237e7cbb10db0d2893c1cd14480a0fe9bfb438824f94cf8c2bf999f4a7"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-checker-astra-20260911.md.artifact.json",
+      "sha256": "0660945cba8daffafcc910247a2579542fe6446f4eb8b211540a57d021b97094"
+    },
+    {
+      "path": "box/f10-direct-rows-checker-astra-20260911/check_arithmetic.py",
+      "sha256": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e"
+    },
+    {
+      "path": "box/f10-direct-rows-checker-astra-20260911/check.py",
+      "sha256": "5052884779d781e55693115c3065db1207667ce224a5914bbb95721d0abe9f7b"
+    },
+    {
+      "path": "box/f10-direct-rows-checker-astra-20260911/READSCOPE.json",
+      "sha256": "1f4ed19cf89afdd87be04571e3bc6241456f6b217b5f4352bfa6413865529ea3"
+    }
+  ],
+  "clipping": "NONE",
+  "reuse": [],
+  "collisions": "NONE in exact owned report/manifest/box; no broader history/corpus inspection.",
+  "dependencies": "Only shared campaign-code import is authorize('check') fixed four-value metadata API, implementation independently owned/not read. Combined source FIRST and separate ROOT runtime/native/physical/limits/custody authority remain required.",
+  "scope": "check_arithmetic.py and check.py only implementation files; no authority.py, producer science, rank code, runtime, mutator, place discovery or payload.",
+  "static_result": "Complete source reconstruction candidate, including125 rational denominator nodes,15 scalar inverses, all150 diagnostics/111 canonical tripwires, both inverse charts, six scale groups and individually compared25 graph rows.",
+  "semantic_control": "UNEXECUTED T+X1^27, fresh ROOT binding; exact stderr CHECK FAILED: direct-source graph slot T plus newline, normalexit2/emptystdout under valid complete original and resource slack. No fixture authored.",
+  "open_quantity": "Unknown genuine admissible-place agreement/full-tripwire acceptance of two independently reconstructed corrected circuits.",
+  "cheapest_next_instrument": "Single combined different-model STATIC source FIRST,15minute UNMEASURED planning only; no launch/follow-on authority.",
+  "scientific_execution": "ZERO including source, import, AST, syntax, compile, test, CAS, dummy of ANY size.",
+  "payload_body_access_or_generation": "NONE",
+  "external_actions": "NONE: no network/AWS/SSH/process/Git/protected/shared edits/agents.",
+  "authored_writes": "apply_patch only in bounded sections; existing documentary artifact_finalize begin/close/finalize/expectedverify executed solely for report publication.",
+  "outcome": "NO measured performance, actual place, source or rank outcome, characteristic-zero identity or JC2 conclusion."
+}

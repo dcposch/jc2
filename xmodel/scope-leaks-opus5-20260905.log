@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Report sealed at `xmodel/scope-leaks-opus5-20260905.md` (24,429 body bytes, `cc0a4230…`), drivers in `box/scopeleaks-20260905/`. No ledger edits.
+
+## What the two leaks actually are
+
+**Inputs:** 8/8 verified `OK` mechanically via awk-built manifest + `sha256sum -c`.
+
+**(1) U-NEGATIVE — not a third configuration.** 2,999 of 24,063 `(1)–(13)` census rows and **90 of 1,420** operative rows at 16≤n≤200. Two structural facts decide it:
+
+- **Zero of the 90 are `s'=2`.** The classical Appendix-II shape never meets the leak — leak (ii) is a sub-family of leak (iii), not parallel to it.
+- Moh p.202→p.207 carries `V'₂ = V₂` unchanged (5/5 columns) while `K' = gcd(n',m')` shrinks by `u_s/d_s`, and **p.208(1)** prints the descended root `h = y³(y−x)+…` of degree `4 = gcd(16,12)` with y-multiplicity `V'₂ = 3`. So `u' = K' − V'₂ ≥ 0` is multiplicity ≤ degree, and `u' < 0` is contradictory.
+
+Prop 6.4 (p.198, read from the image) makes the descent forced at `u_s = 1`, so **84 rows die outright**; of the 6 with `u_s = 2`, two have an empty split window, leaving four `(192,144)` rows needing only `δ*=3/2` excluded. Positive controls pass: Moh's own five p.207 rows and all 20 operative rows at n≤100 have `u' ≥ 0`.
+
+**(2) `s'≥3` DEPTH — characterized, and the stated obligation was wrong.** 1,353 of 1,420 rows (95.3%); heights `{3:426, 4:791, 5:136}`. Φ_eff takes `s'` as a parameter — it does not need to iterate, and the charged pipeline runs unmodified at `s'=4,5`. The missing instrument is a Gröbner engine, not an iterated Φ_eff: cheapest chart in the entire residual is 78 unknowns (the class the s'=3 compiler already failed to kill), median 405. A second Prop 6.3 descent needs `δ'_{s'} = −1`: true on 157/1420, of which only **31** are Moh's printed Cor 6.1; avenue 5 could buy at most 9% even if proved.
+
+## What I did not do
+
+- **Zero Gröbner kills.** Nothing in either residual is a <20 min `std`, and I did not dispatch the fleet on a job I did not expect to finish. `k killed inline = 0`.
+- **I refused to promote (C-TOP)**, a stronger screen the same p.190 chain suggests, which fails on 1,195/1,420 operative rows. It needs the child's top convention `V'_{s'+1} = d'_{s'+1}`, licensed for the parent only by `M_s = n−2`/`δ_s = −1` — the child has neither, and Moh's p.207 never tests it. Promoting it would kill 6 of the 12 charged moh100 receivers with no source. Typed `OPEN[CHILD-TOP-CONVENTION]` with its cheapest test and its 1,195-row prize.
+- The four `(192,144)` split exclusions are typed `OPEN`, not run — a minutes-scale test I ran out of budget for.
+DIVERT path=xmodel/scope-leaks-opus5-20260905.md status=CLEAN_SEALED body_bytes=24429 body_sha256=cc0a4230ad43be3afdbe0d671a9f3e38f63c50e97c60b1347f1fd6f5d48bfa7d

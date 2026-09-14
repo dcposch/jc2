@@ -1,0 +1,98 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/ubuntu/d125-small-source-construction-pilot-20260906/run_capped.py",
+    "--cwd",
+    "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational",
+    "--wall-seconds",
+    "60",
+    "--cpu-seconds",
+    "60",
+    "--rss-bytes",
+    "8589934592",
+    "--term-grace-seconds",
+    ".25",
+    "--stdout-file",
+    "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.stdout",
+    "--stderr-file",
+    "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.stderr",
+    "--telemetry-file",
+    "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.telemetry.json",
+    "--",
+    "/usr/bin/python3",
+    "/home/ubuntu/d125-small-source-construction-pilot-20260906/payload.py",
+    "import",
+    "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/client-unequal-rational.manifest.json"
+  ],
+  "cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational",
+  "end_utc": "2026-09-06T23:42:48.073919+00:00",
+  "group_absent": true,
+  "label": "import",
+  "runner_rc": 0,
+  "runner_stderr": "",
+  "runner_stdout": "CAPRUN/v1 status=NORMAL_EXIT telemetry=/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.telemetry.json\n",
+  "start_utc": "2026-09-06T23:42:47.775898+00:00",
+  "telemetry": {
+    "argv_count": 4,
+    "argv_sha256": "0a64778dd9f3782cc04afacff54eb02629d8c5dee6d8ea48c5ef776ce8578123",
+    "caps": {
+      "cpu_seconds": 60,
+      "lifecycle_initial_seconds": 0.05,
+      "lifecycle_sample_seconds": 1.0,
+      "rss_bytes": 8589934592,
+      "rss_sample_seconds": 0.05,
+      "term_grace_seconds": 0.25,
+      "wall_seconds": 60.0
+    },
+    "child_exit_code": 0,
+    "child_returncode": 0,
+    "child_signal": null,
+    "cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational",
+    "enforcement": {
+      "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+      "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+      "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+    },
+    "error": null,
+    "executable": "/usr/bin/python3",
+    "identity_checks": [],
+    "invocation_cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906",
+    "max_observed_group_rss_bytes": 21909504,
+    "pgid": 2031,
+    "pid": 2031,
+    "resource": null,
+    "runner_exit_code": 0,
+    "runner_signal": null,
+    "schema": "CAPRUN/v1",
+    "start_identity": "boot=69938ee6-48bb-4e45-bdf2-efb08c655368;start_ticks=44950",
+    "start_identity_source": "linux-proc-stat-field22",
+    "status": "NORMAL_EXIT",
+    "stderr": {
+      "bytes": 0,
+      "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdin": {
+      "mode": "devnull",
+      "path": null
+    },
+    "stdout": {
+      "bytes": 38,
+      "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.stdout",
+      "sha256": "b992021c31c3b03262ec7f5292460df42c26b9970f475e7ef014648f390c7ac5"
+    },
+    "telemetry_path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.telemetry.json",
+    "termination": {
+      "cleanup_complete": null,
+      "group_live_before_reap": [],
+      "group_zombies_before_reap": [],
+      "kill_sent": false,
+      "leader_reaped": false,
+      "reason": null,
+      "term_sent": false
+    },
+    "utc_end": "2026-09-06T23:42:48.060301Z",
+    "utc_start": "2026-09-06T23:42:47.819153Z",
+    "wall_elapsed_seconds": 0.24115837
+  }
+}

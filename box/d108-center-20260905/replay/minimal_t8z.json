@@ -1,0 +1,88 @@
+{
+  "tag": "minimal_t8z",
+  "h3_coordinate_count": 8,
+  "extra_rows": [],
+  "template": {
+    "0,7": "1",
+    "0,8": "2",
+    "0,9": "1",
+    "1,7": "Hc_1_7 + Hc_1_8",
+    "1,8": "Hc_1_8",
+    "2,6": "Hc_2_6 + Hc_2_7",
+    "2,7": "Hc_2_7",
+    "3,6": "Hc_3_6",
+    "4,5": "Hc_4_5",
+    "5,4": "Hc_5_4",
+    "8,1": "Hc_8_1"
+  },
+  "pivots": [
+    {
+      "row": "minor_n1_pi0",
+      "variable": "Hc_1_7",
+      "coefficient": "-1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n2_pi0",
+      "variable": "Hc_2_6",
+      "coefficient": "1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n3_pi0",
+      "variable": "Hc_3_6",
+      "coefficient": "1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n4_pi0",
+      "variable": "Hc_4_5",
+      "coefficient": "-1",
+      "resolved_value": "jet1**2"
+    },
+    {
+      "row": "minor_n5_pi0",
+      "variable": "Hc_5_4",
+      "coefficient": "1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n5_pi1",
+      "variable": "Hc_1_8",
+      "coefficient": "-1",
+      "resolved_value": "0"
+    },
+    {
+      "row": "minor_n6_pi1",
+      "variable": "Hc_2_7",
+      "coefficient": "1",
+      "resolved_value": "2*jet1"
+    },
+    {
+      "row": "minor_n8_pi0",
+      "variable": "Hc_8_1",
+      "coefficient": "-1",
+      "resolved_value": "-c - jet1**4 + 9*jet1*jet2**2"
+    }
+  ],
+  "zero_rows": 1,
+  "residual": {
+    "minor_n6_pi0": "-jet2**2",
+    "minor_n7_pi0": "2*jet1**2*jet2",
+    "minor_n7_pi1": "-2*jet2",
+    "minor_n8_pi1": "2*jet1**2"
+  },
+  "ring_variables": [
+    "Zc",
+    "c",
+    "jet1",
+    "jet2"
+  ],
+  "coefficient_field": "QQ",
+  "groebner_basis": [
+    "Zc*c - 1",
+    "jet1**2",
+    "jet2"
+  ],
+  "localized_unit": false
+}

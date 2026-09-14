@@ -1,0 +1,72 @@
+Initial seed for pseudo-random number generator is 1788613574
+
+--------------- INPUT DATA ---------------
+#variables                     280
+#equations                     336
+#invalid equations               0
+field characteristic    1073741827
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting       8
+linear algebra option           44
+initial hash table size       4096 (2^12)
+max pair selection            1000
+reduce gb                        1
+#threads                         8
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  1       6    4428       9 x 12         22.22%        6 new       0 zero         0.00 | 0.04         
+  2     163    4422    1255 x 2612        0.13%      162 new       1 zero         0.11 | 0.74         
+  2      72    5687     236 x 1054        0.62%       71 new       1 zero         0.07 | 0.48         
+  3    1000    6497    8513 x 57146       0.02%      891 new     109 zero         2.83 | 14.78        
+  2      19   24699      61 x 178         4.49%       16 new       3 zero         0.06 | 0.41         
+  3    1001   25287    4197 x 9548        0.08%      613 new     388 zero         2.83 | 18.94        
+  2      24   40887     126 x 356         5.38%       16 new       8 zero         0.10 | 0.59         
+  3    1000   41537    4465 x 9000        0.14%      518 new     482 zero         3.48 | 21.08        
+  3    1000   61272    6188 x 13051       0.11%      427 new     579 zero         5.36 | 26.41        
+  3    1001   85712    8379 x 19150       0.09%      505 new     498 zero         7.71 | 32.79        
+  3    1000  115213   11260 x 26720       0.07%      443 new     557 zero        10.06 | 34.66        
+  3    1000  139984   14355 x 37216       0.07%      606 new     394 zeroEnlarging exponent vector for hash table failed
+for esz = 16777216, segmentation fault will follow.
+Command terminated by signal 11
+	Command being timed: "msolve -g 2 -t 8 -v 2 -l 44 -m 1000 -s 12 -u 8 -f /home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/fleet/172.30.0.18/C_n18m12_M2_9_ell2_s3_V3_8_circuit/C_n18m12_M2_9_ell2_s3_V3_8_circuit_full_p1073741827.ms -o /home/ubuntu/jc2/box/moh14-charts-20260905/hsupport-gate-20260905/source-complete/fleet/172.30.0.18/C_n18m12_M2_9_ell2_s3_V3_8_circuit/C_n18m12_M2_9_ell2_s3_V3_8_circuit_full_p1073741827.g2.out"
+	User time (seconds): 194.14
+	System time (seconds): 1.91
+	Percent of CPU this job got: 397%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:49.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5255332
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1323440
+	Voluntary context switches: 15873
+	Involuntary context switches: 326
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

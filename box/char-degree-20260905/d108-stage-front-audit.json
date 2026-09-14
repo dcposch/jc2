@@ -1,0 +1,47 @@
+{
+  "field": "Q",
+  "result": "PASS",
+  "engine_sha256": "8f6c34f6dbc4407e0deb599fe2061a1a23f93f16dcda2d7dbe30184e1cd82ee1",
+  "B2_source_spec": {
+    "degree": 71,
+    "W0": 276,
+    "threshold": 566
+  },
+  "W277_q_values": [
+    1,
+    5,
+    9,
+    13,
+    17,
+    21,
+    25,
+    29,
+    33
+  ],
+  "moment_order": 12,
+  "moment_matrix_rank": 9,
+  "stages": [
+    {
+      "stage": 0,
+      "D33_q29": "B2c_33_29",
+      "D34_q28": "0",
+      "D34_q29": "B2c_34_29",
+      "W277_nonzero_count": 9
+    },
+    {
+      "stage": 1,
+      "D33_q29": "0",
+      "D34_q28": "0",
+      "D34_q29": "B2c_34_29",
+      "W277_nonzero_count": 0
+    },
+    {
+      "stage": 8,
+      "D33_q29": "0",
+      "D34_q28": "0",
+      "D34_q29": "-4*B2c_49_17 - 15*B2c_54_13 - 36*B2c_59_9 - 70*B2c_64_5 - 120*B2c_69_1",
+      "W277_nonzero_count": 0
+    }
+  ],
+  "conclusion": "108 D<=33,C<=68 for stages>=1; stage0 keeps D<=32,C<=66"
+}

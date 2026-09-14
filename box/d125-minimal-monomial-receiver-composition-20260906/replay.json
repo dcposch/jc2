@@ -1,0 +1,18 @@
+{
+  "schema":"jc2.small-exact-controls/v1",
+  "script":"box/d125-minimal-monomial-receiver-composition-20260906/check.py",
+  "script_sha256":"3ff299bc761f0e80ef47c254ce59b187e5e87315e8855f77b2a522a7a99e9ac3",
+  "normal_exit":0,
+  "optimized_exit":0,
+  "mutate_map_normal_exit":1,
+  "mutate_map_optimized_exit":1,
+  "mutate_golden_face_normal_exit":1,
+  "mutate_golden_face_optimized_exit":1,
+  "last_six_process_batch_wall_seconds":1.25,
+  "caps":{"wall_seconds":30,"CPU_seconds":25,"memory_MiB":512},
+  "counts":{"unequal":[83,215],"common_3":[94,241],"common_4":[115,296]},
+  "totals":{"unequal":298,"common_3":335,"common_4":411},
+  "count_methods":["Pick formula","independent literal lattice enumeration"],
+  "controls":["S determinant and inverse","T4 determinant sign","T4=S composed with T5","full-row nonnegative index shift","literal squarefree outer face","literal golden outer face","expanded golden coefficients","unequal terminal bracket equations","both common inner-face maps","c scaling exponent -36","unchanged outer slopes","common mu scaling","terminal normalized scalar relation","negative reverse-lift fixture"],
+  "scope":"No full ideal, solver, source classifier or primary-chain proof replay"
+}

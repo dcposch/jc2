@@ -1,0 +1,24 @@
+LIB "primdec.lib";
+// t=2 (N=3), both roots d=+1 (y=2/5) and d=-1 (y=1/5): J=(E2,E3,E4) in Q[c1,b] from (UF) top-down; V(J), Lpivot, P=-L^2/4
+proc xc(poly f,int k){matrix m=coef(f,x);int i;for(i=1;i<=ncols(m);i++){if(deg(m[1,i])==k){return(m[2,i]);}}return(poly(0));}
+proc run(int dd)
+{
+  ring r=0,(x,c1,b,B,eta,w1,w2,w3,w4),dp;
+  number d=dd; number y=(d+3)/10; number om=1/(4*y^2*(2*d+1));
+  poly C=x+c1; poly W=om*x^5-B+w1*x+w2*x^2+w3*x^3+w4*x^4;
+  poly L=x^2*C/y-b; poly P=x*W-(b^2)/4;
+  poly Hdiff=2*x*diff(P,x)-3*P-B*x+(3/2)*L*(L+b);
+  poly Rfree=(3/16)*(L^2)*(L*(L+2*b)-4*B*x)-eta*x^2*(b*L/2+B*x);
+  poly UF=P*Hdiff-Rfree; UF=subst(UF,eta,w1); W=subst(W,eta,w1);
+  poly band,piv,val; list vs=list("w4",11),list("w3",10),list("w2",9),list("w1",8),list("B",7);
+  int i;
+  for(i=1;i<=5;i++){ band=xc(UF,vs[i][2]); execute("piv=diff(band,"+vs[i][1]+");"); execute("val=-subst(band,"+vs[i][1]+",0)/piv; UF=subst(UF,"+vs[i][1]+",val); W=subst(W,"+vs[i][1]+",val);"); }
+  poly etasol=xc(W,1); poly Bsol=-xc(W,0); ideal rows=xc(UF,4),xc(UF,5),xc(UF,6);
+  poly Lpiv=4*etasol+3*b*c1/y; poly Pfull=x*W-(b^2)/4;
+  ring rs=0,(c1,b),wp(1,3); ideal J=imap(r,rows); poly Lpiv=imap(r,Lpiv); poly Bs=imap(r,Bsol); poly es=imap(r,etasol);
+  ideal g=std(J); print("d="+string(dd)+" dim J="+string(dim(g))+" radical:"); ideal rad=radical(J); print(std(rad));
+  print("  Lpivot="+string(Lpiv)); print("  Lpivot in rad(J): "+string(reduce(Lpiv,std(rad))==0));
+  print("  B in rad(J): "+string(reduce(Bs,std(rad))==0)+"   eta in rad(J): "+string(reduce(es,std(rad))==0));
+  setring r; poly diffP=subst(Pfull+(L^2)/4,c1,0); print("  on c1=0: P + L^2/4 = "+string(diffP));
+}
+run(1); run(-1); quit;

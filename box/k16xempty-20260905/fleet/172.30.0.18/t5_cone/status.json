@@ -1,0 +1,14 @@
+{
+  "host": "172.30.0.18",
+  "command": "cd /tmp/k16xempty-20260905-astra/t5_cone && timeout -k 10 1800 stdbuf -oL -eL Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q t5_cone.sing",
+  "elapsed_seconds": 1361.2023389339447,
+  "returncode": 1,
+  "script_sha256": "cb2cc2f84aa0a3acabc6345351dd45a2ea30cade5a1a2bef12cb8205347416b1",
+  "cores": 1,
+  "outputs": {
+    "t5_cone_gb.sing": {
+      "returncode": 1,
+      "stderr": "scp: /tmp/k16xempty-20260905-astra/t5_cone/t5_cone_gb.sing: No such file or directory\n"
+    }
+  }
+}

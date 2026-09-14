@@ -1,0 +1,104 @@
+Direct Consequences of the Three-Dimensional Counterexample to the Jacobian Conjecture · Zihan Zhang
+Zihan Zhang
+Home
+Papers
+Expository Writing
+Direct Consequences of the Three-Dimensional Counterexample to the Jacobian Conjecture
+Consequences in dimensions \(n\ge 3\)
+Zihan Zhang
+July 20, 2026
+1. Source and the counterexample
+On July 20, 2026 (UTC), Levent Alpöge posted the following polynomial map on X, crediting Akhil for posing the question and Fable for producing the example.[1] The post gives the following formula.
+\[
+F=(P,Q,R):\mathbb C^3\longrightarrow\mathbb C^3,
+\]
+where
+\[
+\begin{aligned}
+P&=(1+xy)^3z+y^2(1+xy)(4+3xy),\\
+Q&=y+3x(1+xy)^2z+3xy^2(4+3xy),\\
+R&=2x-3x^2y-x^3z.
+\end{aligned}
+\]
+Direct calculation gives
+\[
+\det JF\equiv -2.
+\]
+Moreover, the three distinct points
+\[
+\left(0,0,-\frac14\right),\qquad
+\left(1,-\frac32,\frac{13}{2}\right),\qquad
+\left(-1,\frac32,\frac{13}{2}\right)
+\]
+are all mapped to \(\left(-\frac14,0,0\right)\). Thus \(F\) is a Keller map which is not injective. Multiplying one output coordinate by \(-1/2\) normalizes the Jacobian determinant to \(1\). Hence \(\mathrm{JC}(3)\) (the Jacobian Conjecture in dimension 3) is false, and adjoining identity coordinates gives counterexamples in every dimension \(n\ge 3\).
+A short SymPy verification script can be found here verify.py.
+2. The Mathieu conjecture fails for \(SU(3)\)
+For a compact connected Lie group \(K\), the Mathieu conjecture considers complex finite-type functions \(f,h\) on \(K\). It asserts that
+\[
+\int_K f(k)^m\,dk=0\quad\text{for every }m\ge1
+\]
+should imply
+\[
+\int_K f(k)^m h(k)\,dk=0\quad\text{for all sufficiently large }m.
+\]
+Mathieu's representation-theoretic argument gives the fixed-dimensional implication that the Mathieu Conjecture for \(SU(N)\) implies \(\mathrm{JC}(N)\).
+A good reference is Theorem 2.2 in [2]. The original argument is due to Olivier Mathieu.[3] Since \(\mathrm{JC}(3)\) is false, we now know the Mathieu Conjecture for \(SU(3)\) is false.
+Equivalently, there exist finite-type functions \(f,h\) on \(SU(3)\) for which every pure power integral vanishes, but the mixed integrals are nonzero for infinitely many powers.
+3. The Gaussian Moments Conjecture fails in some dimension
+Let \(X=(X_1,\dots,X_N)\) be a standard real Gaussian vector and let \(P,Q\in\mathbb C[x_1,\dots,x_N]\). The Gaussian Moments Conjecture \(\mathrm{GMC}(N)\) states that
+\[
+\mathbb E[P(X)^m]=0\quad\text{for every }m\ge1
+\]
+implies
+\[
+\mathbb E[P(X)^mQ(X)]=0\quad\text{for all sufficiently large }m.
+\]
+Derksen, van den Essen, and Zhao proved that if \(\mathrm{GMC}(N)\) holds for every \(N\), then the Jacobian conjecture holds in every dimension.[4] Therefore, \(\mathrm{GMC}(N)\text{ is false for at least one finite }N\).
+Thus, for some finite Gaussian vector, all pure polynomial moments vanish while a fixed mixed moment remains nonzero for infinitely many powers. The published theorem is global in dimension, so the present argument alone does not identify the smallest failing \(N\).
+4. Zhao's Vanishing Conjecture is false
+Let
+\[
+\Delta=\sum_{i=1}^{N}\frac{\partial^2}{\partial z_i^2}
+\]
+and let \(H(z)\) be a homogeneous polynomial of degree four. Zhao's Vanishing Conjecture states that
+\[
+\Delta^m(H^m)=0\quad\text{for every }m\ge1
+\]
+should imply
+\[
+\Delta^m(H^{m+1})=0\quad\text{for all sufficiently large }m.
+\]
+Zhao proved that the all-dimensional Vanishing Conjecture is equivalent to the all-dimensional Jacobian conjecture; he also proved that the hypothesis above is equivalent to Hessian nilpotency of \(H\).[5] Consequently, the Vanishing Conjecture is false in some finite dimension.
+In particular, there exists a quartic homogeneous Hessian-nilpotent polynomial \(H\) satisfying \(\Delta^m(H^m)=0\) for every \(m\), while \(\Delta^m(H^{m+1})\neq0\) for infinitely many \(m\). It would be very interesting to see a small explicit \(H\) from the three-dimensional Keller map.
+5. The Image Conjecture is false
+Let
+\[
+A=\mathbb C[\zeta_1,\dots,\zeta_N,z_1,\dots,z_N],
+\qquad
+D_i=\frac{\partial}{\partial z_i}-\zeta_i.
+\]
+The Image Conjecture asserts that
+\[
+\sum_{i=1}^{N}D_i(A)
+\]
+is a Mathieu subspace of \(A\): if every power \(a^m\) lies in this image, then \(ba^m\) should also lie in it for every fixed \(b\) and all sufficiently large \(m\).
+Van den Essen, Wright, and Zhao record that the Image Conjecture implies the Vanishing Conjecture, which is equivalent to the Jacobian conjecture.[6] Hence the Image Conjecture is false in some finite dimension. Note that this immediate result is also only existential.
+References
+Levent Alpöge, original X post announcing the map, July 20, 2026:
+x.com/__alpoge__/status/2079028340955197566.
+Kevin Zwart, “Mathieu's approach to the Jacobian Conjecture,”
+arXiv:2511.16561.
+Olivier Mathieu, “Some conjectures about invariant theory and their applications,”
+in Algèbre non commutative, groupes quantiques et invariants,
+Séminaires et Congrès 2, Société Mathématique de France, 1997, pp. 263–279.
+Harm Derksen, Arno van den Essen, and Wenhua Zhao,
+“The Gaussian Moments Conjecture and the Jacobian Conjecture,”
+arXiv:1506.05192; published in Israel Journal of Mathematics 219 (2017), 53–68.
+Wenhua Zhao, “Hessian Nilpotent Polynomials and the Jacobian Conjecture,”
+arXiv:math/0409534.
+Arno van den Essen, David Wright, and Wenhua Zhao,
+“On the Image Conjecture,”
+arXiv:1008.3962.
+See also Arno van den Essen, “The Amazing Image Conjecture,”
+arXiv:1006.5801.
+Suggested citation: Zihan Zhang, “Direct Consequences of the Three-Dimensional Counterexample to the Jacobian Conjecture,” July 20, 2026. https://zzhang-iu.github.io/papers/direct-consequences-jacobian/.

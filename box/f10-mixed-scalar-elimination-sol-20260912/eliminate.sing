@@ -1,0 +1,111 @@
+// INTERNAL-UNREVIEWED, DISABLED source.  Run only through the reviewed AWS guard.
+// Work over Q(nu)[X,Y,z].  All coefficients are exact.
+ring R=(0,nu),(X,Y,z),dp;
+option(redSB);
+
+proc pow7(number s)
+{
+  list a; a[1]=1;
+  int k,j; poly t,pj;
+  for (k=1; k<=7; k++)
+  {
+    t=0;
+    for (j=1; j<=3; j++)
+    {
+      if (j<=k)
+      {
+        if (j==1) { pj=1; }
+        if (j==2) { pj=X; }
+        if (j==3) { pj=Y; }
+        t=t+((s+1)*j-k)*pj*a[k-j+1];
+      }
+    }
+    a[k+1]=t/k;
+  }
+  return(a);
+}
+
+proc makeB()
+{
+  list A=pow7(2*nu-1); list C=pow7(4-nu);
+  list q; q[1]=1;
+  int k,j,i; poly t,pj,B,L;
+  for (k=1; k<=14; k++)
+  {
+    t=0;
+    for (j=1; j<=3; j++)
+    {
+      if (j<=k)
+      {
+        if (j==1) { pj=1; }
+        if (j==2) { pj=X; }
+        if (j==3) { pj=Y; }
+        t=t+pj*q[k-j+1];
+      }
+    }
+    q[k+1]=-t;
+  }
+  B=0;
+  for (i=0; i<=7; i++)
+  {
+    for (j=0; j<=7; j++)
+    {
+      k=14-i-j;
+      if (k>=0)
+      {
+        L=q[k+1];
+        if (k>=1) { L=L+2*X*q[k]; }
+        if (k>=2) { L=L+3*Y*q[k-1]; }
+        B=B+A[i+1]*C[j+1]*L;
+      }
+    }
+  }
+  return(B);
+}
+
+list D=pow7(nu);
+poly d5=D[6]; poly d6=D[7]; poly d7=D[8]; poly B=makeB();
+ideal I=d6,d7,B,z*Y*d5-1;
+ideal G=std(I);
+if (reduce(1,G)!=0)
+{
+  write("RESULT.txt","GENERIC_NONUNIT_OR_UNRESOLVED: 1 does not reduce to 0");
+  exit(2);
+}
+
+ideal ONE=1;
+matrix C=lift(I,ONE);
+poly witness=C[1,1]*I[1]+C[2,1]*I[2]+C[3,1]*I[3]+C[4,1]*I[4];
+if (witness!=1)
+{
+  write("RESULT.txt","INTERNAL_FAIL: lift orientation/identity");
+  exit(3);
+}
+
+// A product, rather than an LCM, deliberately retains every exceptional
+// coefficient denominator.  It may overcount factors but cannot omit one.
+number N=1; int h; poly f;
+for (h=1; h<=4; h++)
+{
+  f=C[h,1];
+  while (f!=0)
+  {
+    N=N*denominator(leadcoef(f));
+    f=f-lead(f);
+  }
+}
+poly A1=N*C[1,1]; poly A2=N*C[2,1];
+poly A3=N*C[3,1]; poly A4=N*C[4,1];
+if (A1*d6+A2*d7+A3*B+A4*(z*Y*d5-1)!=N)
+{
+  write("RESULT.txt","INTERNAL_FAIL: cleared identity"); exit(4);
+}
+string cert="ring R=(0,nu),(X,Y,z),dp;\n";
+cert=cert+"number N="+string(N)+";\n";
+cert=cert+"poly A1="+string(A1)+";\n";
+cert=cert+"poly A2="+string(A2)+";\n";
+cert=cert+"poly A3="+string(A3)+";\n";
+cert=cert+"poly A4="+string(A4)+";\n";
+write("certificate.sing",cert);
+write("RESULT.txt","GENERIC_UNIT_CERTIFICATE_EMITTED; denominator N="+string(N));
+exit(0);

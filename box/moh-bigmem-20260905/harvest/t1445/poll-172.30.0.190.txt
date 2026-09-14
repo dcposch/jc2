@@ -1,0 +1,44 @@
+========== 172.30.0.190 utc=2026-09-05T14:46:25Z ==========
+UTC=2026-09-05T14:46:26Z
+HOST=ip-172-30-0-190
+--- mem ---
+               total        used        free      shared  buff/cache   available
+Mem:           743Gi       8.0Gi       739Gi       3.4Mi       1.7Gi       735Gi
+--- dmesg OOM ---
+(dmesg empty or no match above)
+--- ps ---
+    PID    PPID     ELAPSED   RSS %CPU CMD
+   8718       1       35:12  3572  0.0 bash run_v18_msolve.sh
+   8720    8718       35:12  3604  0.0 bash /home/ubuntu/moh-bigmem-20260905/extract_native.sh /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing 3600
+   8724    8720       35:12  2184  0.0 timeout --signal=TERM --kill-after=30s 3600s /usr/bin/time -v Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+   8725    8724       35:12  1648  0.0 /usr/bin/time -v Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+   8726    8725       35:12 1673212 99.9 Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+  12203   12202       00:00  3620  0.0 bash -c echo UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) echo HOST=$(hostname) echo "--- mem ---" free -h | head -2 echo "--- dmesg OOM ---" (dmesg -T 2>/dev/null | grep -iE 'oom|killed process|Out of memory' | tail -8) || true echo "(dmesg empty or no match above)" echo "--- ps ---" ps -eo pid,ppid,etime,rss,pcpu,cmd | awk 'NR==1 || /msolve|Singular|run_msolve|run_guided|extract_native|run_v18/' echo "--- artifacts find ---" find $HOME/moh-bigmem-20260905 -maxdepth 5 \( -name '*.g2.rc' -o -name '*.status.json' -o -name 'guided_gb_result.json' -o -name '*.g2.out' -o -name '*.g2.stderr' -o -name '*.g2.meta' -o -name '*.rss.log' \) -printf '%s %TY-%Tm-%TdT%TH:%TM:%TS %p\n' 2>/dev/null echo "--- last F4 ---" for f in $HOME/moh-bigmem-20260905/targets/*/*/*.g2.stderr; do   [ -f "$f" ] || continue   echo FILE=$f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f")   echo "--- F4 header ---"   grep -E 'deg[[:space:]]+sel|current degree' "$f" | tail -2   echo "--- F4 last complete-ish ---"   grep -E '^[[:space:]]*[0-9]+[[:space:]]+[0-9]+[[:space:]]+[0-9]+' "$f" | tail -12   echo "--- F4 raw tail ---"   tail -c 800 "$f"; echo done echo "--- last GG ---" for f in $HOME/moh-bigmem-20260905/targets/*/guided/*.out; do   [ -f "$f" ] || continue   echo FILE=$f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f")   grep -E 'GG__|CONTROL_|MAIN_|GUIDED_|UNIT|NONUNIT|std|used time' "$f" | tail -30   echo "--- out tail ---"   tail -20 "$f" done echo "--- extract ---" ls -la $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/ 2>/dev/null || true ls -la $HOME/moh-bigmem-20260905/targets/v18/native_rows.tsv $HOME/moh-bigmem-20260905/targets/v18/classdir/rows/ 2>/dev/null || true echo "--- builder stdout ---" tail -30 $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/builder.stdout 2>/dev/null || true echo "--- builder stderr ---" tail -20 $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/builder.stderr 2>/dev/null || true echo "--- rss last ---" for f in $HOME/moh-bigmem-20260905/targets/*/*/*.rss.log; do   [ -f "$f" ] || continue   echo FILE=$f   tail -12 "$f" done echo "--- gnu time ---" grep -E 'Maximum resident|Elapsed \(wall|Exit status|Command exited|User time|System time' $HOME/moh-bigmem-20260905/targets/*/*/*.g2.stderr $HOME/moh-bigmem-20260905/targets/*/guided/*.err $HOME/*.time 2>/dev/null | tail -30 || true echo "--- home logs ---" ls -la $HOME/*.log 2>/dev/null echo "=== log tails ===" for f in $HOME/*.log; do   [ -f "$f" ] || continue   echo "==== TAIL $f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f") ===="   tail -40 "$f" done echo POLL_DONE
+  12213   12203       00:00  3920  0.0 awk NR==1 || /msolve|Singular|run_msolve|run_guided|extract_native|run_v18/
+--- artifacts find ---
+--- last F4 ---
+--- last GG ---
+--- extract ---
+total 12
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep  5 14:11 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Sep  5 14:11 ..
+-rw-rw-r-- 1 ubuntu ubuntu    0 Sep  5 14:11 builder.stderr
+-rw-rw-r-- 1 ubuntu ubuntu   27 Sep  5 14:11 builder.stdout
+/home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/rows/:
+total 12
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep  5 14:11 .
+drwxrwxr-x 5 ubuntu ubuntu 4096 Sep  5 14:11 ..
+-rw-rw-r-- 1 ubuntu ubuntu   42 Sep  5 14:11 C_n18m12_M2_9_ell2_s3_V1_8_rows.tsv
+--- builder stdout ---
+NATIVE_GATE lead_h_is_yK=1
+--- builder stderr ---
+--- rss last ---
+--- gnu time ---
+--- home logs ---
+-rw-rw-r-- 1 ubuntu ubuntu 432 Sep  5 14:11 /home/ubuntu/v18.msolve.log
+=== log tails ===
+==== TAIL /home/ubuntu/v18.msolve.log size=432 mtime=2026-09-05 14:11:13.510775437 +0000 ====
+V18_EXTRACT_START utc=2026-09-05T14:11:13Z
+EXTRACT_START builder=/home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing cwd=/home/ubuntu/moh-bigmem-20260905/targets/v18/classdir utc=2026-09-05T14:11:13Z
+builder_sha=121aac3dfe246e16aa6d64d9119a728fb39ed1ce9e6e13c5923765e24419579a  /home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/builders/C_n18m12_M2_9_ell2_s3_V1_8_builder.sing
+POLL_DONE

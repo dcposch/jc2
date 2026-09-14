@@ -1,0 +1,17 @@
+# Bounded reading / history scope
+
+The accepted literal lift report was read wholly, including both chart maps, 105 polynomiality rows and the scalar guard; no torsor-classification result is an input. The elementary new proof uses only these maps and relative polynomial differential forms.
+
+Named AUDIT.md neighborhoods at lines 4839, 4923, 5119, 5313, 10991 and 18130 were checked; these cover necessary de Rham classes versus raw rows, algebraic primitive versus polynomial descent, P-recursive raw sequences without a uniform projected cutoff, trace-moment underdetermination, and full-Jacobian redundancy of a parent residue. Observed mutable AUDIT SHA at the search was 2ab5a44bc072a32950ae7550c8097efd7de444d3934e633a4e84c9747e3eca41, APPROACHES bf64d17fb71fa9e28c36bbfdadd36da8234d722b594d2f2c62f6ba18bf703ce9; these are historical observations, not a frozen claim about current canonical bytes.
+
+Scoped text search used the explicit canonical README, APPROACHES, AUDIT, PROGRESS, notes and ladder/REDUCTION for Mathieu, polynomial moment, image conjecture and moment problem. Relevant filename discovery excluded box and protected jc2-lean and identified avenues/MATHIEU.md and its terminal review. Read the producer priority note and sections 0–5.1, and reviewer theorem/bridge and consequence scopes; no whole later appendix or old numerical replay is claimed. These already record the lemma that a Mathieu subspace containing 1 is the entire ring, and a proved Liouville/Zoladek first-order polynomial ODE rigidity theorem. No exact reduction of today's literal two-chart functional to that ODE is supplied. This packet does not claim that the Mathieu framing or residue strategy is novel.
+
+Whole terminal round2-norm-moment-sep report and whole R050 parent-residue report were read; their formal-local and full-Jacobian-redundancy cautions are retained, not promoted to this source without a map.
+
+Primary selected reading:
+
+- Wenhua Zhao, https://arxiv.org/pdf/0902.0212v3 (23 October2009), *Generalizations of the image conjecture and the Mathieu conjecture*. Definition1.1 p.2, Theorem1.3 and Conjecture1.4 p.3, read wholly as statements; not a whole-paper proof audit. The first defines the Mathieu property, the second is the Laurent constant-term theorem, and the third is explicitly a conjecture. No image-conjecture claim is imported as a proved theorem. Local PDF/text pinned in inputs.json.
+- Fedor Pakovich and Mikhail Muzychuk, https://arxiv.org/pdf/0710.4085v2 (19 February2009), *Solution of the polynomial moment problem*. Introduction and Theorem1.1 pp.1–3 read, including the fixed distinct endpoints and the sum-of-composition-solutions conclusion. No full proof replay. Local PDF/text pinned. The coefficient of one Laurent power of a moving-endpoint integral is not the entire fixed-endpoint integral required by the theorem.
+- The Utrecht original DvdK repository endpoint https://dspace.library.uu.nl/handle/1874/2414 failed in the web tool. No original DvdK PDF is claimed; the exact theorem statement is available in Zhao's pinned primary research paper. No deeper DvdK conclusion is needed by the negative result.
+
+No live peer artifacts, protected project, AWS, CAS, solver or full-client power expansion were read/run. The primary theorem search stopped after the exact all-moment countermodel and literal Mathieu-property refutation; no broad survey or novel classification claim.

@@ -1,0 +1,24 @@
+< "box/k16xempty-20260905/controls_t3_raw.sing";
+poly M=subst(Bsol,b,0); poly N=diff(Bsol,b);
+poly rho=subst(eta,b,0); poly sigma=diff(eta,b);
+poly DD=N-sigma; poly AA=rho-M; poly HH=N*rho-M*sigma;
+print("H_FACTORS"); print(factorize(HH));
+ring rb=(0,d),(c1,c2,b,s),dp; minpoly=3*d^2-4;
+poly DD=imap(rsmall,DD); poly AA=imap(rsmall,AA); poly BB=imap(rsmall,Bsol);
+option(redSB);
+ideal decoupled=DD,AA,1-s*BB;
+ideal gg=std(decoupled); print("DECOUPLED_BOUNDARY_DIM="+string(dim(gg))); print("DECOUPLED_BOUNDARY_UNIT="+string(reduce(1,gg)==0));
+ideal decoupled_b0=decoupled,b;
+ideal gg0=std(decoupled_b0);
+print("DECOUPLED_B0_DIM="+string(dim(gg0)));
+print("DECOUPLED_B0_VDIM="+string(vdim(gg0)));
+print("DECOUPLED_B0_UNIT="+string(reduce(1,gg0)==0));
+poly n=imap(rsmall,N); poly sig=imap(rsmall,sigma);
+poly m=imap(rsmall,M); poly rh=imap(rsmall,rho); poly hh=imap(rsmall,HH);
+poly hn=subst(hh,c1,1); poly nn=subst(n,c1,1); poly ss=subst(sig,c1,1);
+poly mm=subst(m,c1,1); poly rr=subst(rh,c1,1);
+print("H_UNIVARIATE_DEG="+string(deg(hn)));
+print("H_PRIMITIVE_GCD="+string(gcd(hn,nn*ss*mm*rr)));
+print("H_SQUAREFREE_GCD="+string(gcd(hn,diff(hn,c2))));
+
+quit;

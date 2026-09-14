@@ -1,0 +1,99 @@
+{
+  "all_writers_terminal": true,
+  "initial_pretest_correction": "Added missing F.__rsub__ after TypeError; no evidence output existed.",
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test-O-pass.json"
+      ],
+      "expected_returncode": 0,
+      "name": "O-pass",
+      "returncode": 0,
+      "seconds": 0.2935853610979393,
+      "stderr": "",
+      "stdout": "{\"status\": \"PASS\", \"checks\": 52, \"counts\": {\"unequal/rational\": {\"raw\": [83, 215], \"fixed\": [12, 19], \"free\": 267, \"variables\": 267, \"raw_pair_upper_bound\": 17845, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 698}, \"unequal/golden\": {\"raw\": [83, 215], \"fixed\": [12, 19], \"free\": 267, \"variables\": 267, \"raw_pair_upper_bound\": 17845, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 698}, \"common_3/rational\": {\"raw\": [94, 241], \"fixed\": [17, 27], \"free\": 291, \"variables\": 293, \"raw_pair_upper_bound\": 22654, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}, \"common_3/golden\": {\"raw\": [94, 241], \"fixed\": [17, 27], \"free\": 291, \"variables\": 293, \"raw_pair_upper_bound\": 22654, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}, \"common_4/rational\": {\"raw\": [115, 296], \"fixed\": [17, 27], \"free\": 367, \"variables\": 369, \"raw_pair_upper_bound\": 34040, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}, \"common_4/golden\": {\"raw\": [115, 296], \"fixed\": [17, 27], \"free\": 367, \"variables\": 369, \"raw_pair_upper_bound\": 34040, \"jacobian_envelope_rows\": 660, \"planned_all_rows\": 711}}, \"elapsed_seconds\": 0.09283667500130832, \"maxrss_KiB\": 25544}\n",
+      "terminal": true
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test-normal-target.json",
+        "--mutate",
+        "target"
+      ],
+      "expected_returncode": 1,
+      "name": "normal-target",
+      "returncode": 1,
+      "seconds": 0.17568734590895474,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py\", line 183, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py\", line 164, in main\n    C.verify_toy_stream(wrong, left, right, outputs, scalar, variables)\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": "",
+      "terminal": true
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test-O-target.json",
+        "--mutate",
+        "target"
+      ],
+      "expected_returncode": 1,
+      "name": "O-target",
+      "returncode": 1,
+      "seconds": 0.605807772022672,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py\", line 183, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py\", line 164, in main\n    C.verify_toy_stream(wrong, left, right, outputs, scalar, variables)\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/client.py\", line 281, in verify_toy_stream\n    raise ValueError('strict full toy replay mismatch')\nValueError: strict full toy replay mismatch\n",
+      "stdout": "",
+      "terminal": true
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test-normal-face.json",
+        "--mutate",
+        "face"
+      ],
+      "expected_returncode": 1,
+      "name": "normal-face",
+      "returncode": 1,
+      "seconds": 0.17848155891988426,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py\", line 183, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py\", line 166, in main\n    C.validate_contract(bad)\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/client.py\", line 211, in validate_contract\n    raise ValueError('contract differs from full fixed-face/source support specification')\nValueError: contract differs from full fixed-face/source support specification\n",
+      "stdout": "",
+      "terminal": true
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py",
+        "--output",
+        "/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test-O-face.json",
+        "--mutate",
+        "face"
+      ],
+      "expected_returncode": 1,
+      "name": "O-face",
+      "returncode": 1,
+      "seconds": 0.603072797995992,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py\", line 183, in <module>\n    main()\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/test_client.py\", line 166, in main\n    C.validate_contract(bad)\n  File \"/home/ubuntu/jc2/box/d125-minimal-receiver-client-preflight-20260906/client.py\", line 211, in validate_contract\n    raise ValueError('contract differs from full fixed-face/source support specification')\nValueError: contract differs from full fixed-face/source support specification\n",
+      "stdout": "",
+      "terminal": true
+    }
+  ],
+  "sha256": {
+    "client.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "run_controls.py": "140886371ae265bb25b42d909ff2a9329412ac887c9b9d100e8e7ce024e29bee",
+    "test-O-pass.json": "01d45cc1dafcf6a34e837a3ee9fdab4e1fe81811faa68272443718ca2779c040",
+    "test-normal.json": "d5d502fc3217c6e074532ea1b760279e7f229e0538afe2300ce166a36ba5157b",
+    "test_client.py": "940d7dfa516c235b33a54645ed5dce0bd1dd3a5d98e3b55720930332f6dbe6c6"
+  }
+}

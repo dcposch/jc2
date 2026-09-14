@@ -1,0 +1,424 @@
+                                              ON THE INTEGRALITY OF ÉTALE EXTENSIONS OF POLYNOMIAL RINGS
+
+                                                                                  LÁZARO ORLANDO RODRÍGUEZ DÍAZ
+
+
+                                                    Abstract. Motivated by a valuation theorem, recently obtained by Rangachev, we study the étale
+                                                    extensions A ⊂ B of polynomial rings over an algebraically closed field of characteristic zero, such
+                                                    that the integral closure A is a primary A-submodule of B. We prove that in this case A has infinite
+                                                    cyclic divisor class group, where the generator is a prime divisor equal to the complement of Spec(B)
+                                                    in Spec(A). Moreover, this prime divisor coincides with the ramification divisor of the finite extension
+                                                    A ⊂ A. In this situation we carry out Wright’s geometric approach for two-dimensional non-integral
+arXiv:2403.02219v2 [math.AG] 11 Apr 2024
+
+
+
+
+                                                    étale extensions. It follows from the work of Miyanishi that Spec(A) is a smooth affine surface. We show
+                                                    that Spec(A) is an A1 -bundle over P1 , more precisely a Danilov-Gizatullin surface of index three. Based
+                                                    on Wright’s analysis of which of these affine surfaces can factorize an étale morphism of the complex
+                                                    affine plane and his description of its affine coordinate rings, we prove that under the strong assumption
+                                                    that A is always a primary A-submodule of B, any two-dimensional complex étale extension is integral.
+
+
+
+
+                                                                                             1. Introduction
+                                               The problem we want to address is the following: how far is the integral closure A of A from B,
+                                           assuming that an A = k[y1 , . . . , yn ] ⊂ B = k[x1 , . . . , xn ] is an étale extension of polynomial rings over
+                                           an algebraically closed field k of characteristic zero? It is well-known that, if B is integral over A then
+                                           B = A, [16, Theorem 47], [17, Theorem 3.3]. Then the problem considered makes sense. On the other
+                                           hand, it is known that the integral closure of A in Frac(B) is the intersection A = ∩V of the family of
+                                           valuations rings V of Frac(B) that contains A, [5, Theorem 19.8]. Therefore, we can write A = B ∩ (∩V),
+                                           where the intersection is taken over all valuations rings V of Frac(B) that contain A and does not contain
+                                           B. The question can be reformulated as: how many valuations rings are there?, can we describe them?
+                                               Recently, Rangachev [14] proved that if A ⊂ B are integral domains, A is Noetherian and B is a
+                                           finitely generated A-algebra then there are a finite number of uniquely determined discrete valuation
+                                           rings Vi each of which is a localization of A at a height one prime ideal, that is, A = B ∩ (∩ri=1 Vi ),
+                                           Vi = Api , ht(pi ) = 1. In the present work we study the simplest possible case, that is, we assume that
+                                           there is only one discrete valuation ring in the above decomposition, A = B ∩ Ap . Due to Rangachev’s
+                                           results this is equivalent to assume that A is a primary A-submodule of B, see Lemma 2.3.
+                                               We prove in Proposition 2.4 that if A = k[y1 , . . . , yn ] ⊂ B = k[x1 , . . . , xn ] is an étale extension of
+                                           polynomial rings over an algebraically closed field k of characteristic zero, such that A 6= B and A is a
+                                           primary A-submodule of B, then Spec(A) \ Spec(B) = V (p), where p is a prime ideal of height one in
+                                           A, and the divisor class group Cl(Spec(A)) ∼    =Z∼  = hV (p)i. Moreover, the prime divisor V (p) coincides
+                                           with the ramification divisor of the finite extension A ⊂ A, see Corollary 2.5.
+                                               In Section 3 we apply this proposition to carry out Wright’s geometric approach [18] for two-dimensional
+                                           non-integral étale extensions. Wright proved that, given an étale extension A = C[p, q] ⊂ B = C[x, y]
+                                           (that satisfies some assumptions, see Remark 3.4) such that A 6= B, then we can construct a normal
+                                           affine variety V , containing Spec(B) as an open subvariety, such that V admits a map to P1 making it
+                                           an A1 -bundle except over one point of P1 whose fiber is V \ Spec(B) set-theoretically. We proved that if
+                                           A is a primary A-submodule of B the obstacles encountered by Wright to prove that V is an A1 -bundle
+                                           over P1 can be surpassed. The difficulties are: Spec(A) could have singularities, and even if it did not
+                                           have any singularities, the fiber at infinity may be non-reduced. Due to Miyanishi’s work, Proposition
+                                           2.4 implies that Spec(A) is a smooth surface, see Proposition 3.3. We proved the following result:
+                                           Theorem. Let A = C[p, q] ⊂ B = C[x, y] be an étale extension such that A 6= B and A is a primary
+                                           A-submodule of B, then Spec(A) is a smooth affine surface that admits the structure of an A1 -bundle
+                                           over P1 , π : Spec(A) → P1 such that the open embedding of Spec(B) ∼= A2 in Spec(A) coincides with the
+                                           complement of the fiber of π over the infinity and π|Spec(B) : A → P \ {∞} = A1 is one of the standard
+                                                                                                           2   1
+
+                                           projections. Moreover, Spec(A) is a Danilov-Gizatullin surface of index three.
+                                             That Spec(A) is a Danilov-Gizatullin surface of index three, see Proposition 3.6, follows because we
+                                           deduced from Proposition 2.4 that the Picard group of Spec(A) is generated by its canonical class, see
+                                                                                                        1
+Corollary 2.6. Among the Danilov-Gizatullin surfaces the only one whose Picard group is generated by
+the canonical class are those of index three.
+    We determine the explicit form of the integral closure using Wright’s explicit description of the coor-
+dinates ring of an A1 -bundle over P1 and Wright’s characterization of when such bundles can factorize
+an étale morphism of the affine plane. More precisely, we prove that if A = C[p, q] ⊂ B = C[x, y] is an
+étale extension such that A 6= B and A is a primary A-submodule of B, then A = C[y, xy, x2 y, x3 y + αx],
+where α ∈ C, α 6= 0; in particular p, q ∈ C[y, xy, x2 y, x3 y + αx], see Proposition 3.10. Wright noted that
+C[y, xy, x2 y, x3 y + αx] is a graded algebra with deg x = −1 and deg y = 2. Using this observation we
+show that C[y, xy, x2 y, x3 y + αx] does not contain polynomials that are regular in both variables, see
+Lemma 3.11. Nevertheless, we can always choose a linear automorphism that makes, for example, the
+polynomial p regular in both variables, from there we arrive at the following result:
+Theorem. Suppose that A is a primary A-submodule of B for every étale extension A = C[p, q] ⊂ B =
+C[x, y]. Then every étale extension of polynomial rings C[p, q] ⊂ C[x, y] is integral.
+
+            2. Étale extensions whose integral closure is a primary submodule
+  Recently, Rangachev proved a valuation theorem for Noetherian rings under quite general hypothesis.
+Theorem 2.1. [14, Theorem 1.1] Let A ⊂ B be integral domains, suppose A is Noetherian and B is
+a finitely generated A-algebra. Denote by A the integral closure of A in B. Then one of the following
+holds:
+     (i) A = B;     
+    (ii) AssA B/A = {(0)};
+                    
+   (iii) AssA B/A = {p1 , . . . , pr }, ht(pi ) = 1 for all i, and A = B ∩ (∩ri=1 Vi ), where Vi = Api .
+
+  Also, under the same hypothesis, he provides a description of the support of B/A as a closed set.
+Proposition 2.2. [14, Proposition 2.5] Assume we are in the situation of Theorem 2.1. Denote by IB/A
+                                                                           
+the intersection of all elements in AssA B/A . Then SuppA B/A = V IB/A .
+
+  We want to study the case of Theorem 2.1 where there is only one discrete valuation ring of A that
+does not contain B, that is, A = B ∩ Ap . In that situation we have the following:
+Lemma 2.3. Let A ⊂ B be integral domains such that A is Noetherian and B is a finitely generated
+A-algebra. Denote by A the integral closure of A in B. Suppose that
+                                                                      A 6= B and Frac(A) = Frac(B).
+Then A is a primary A-submodule of B if and only if AssA B/A = {p}, ht(p) = 1, A = B ∩ Ap and
+              
+SuppA B/A = V (p).
+                                                                                                    
+Proof. As A 6= B, this rule out the case (i) above. We always have that AssA B/A ⊂ SuppA B/A , if
+                                              
+AssA B/A = {(0)}, then (0) ∈ SuppA B/A ; however, this contradicts that Frac(A) = Frac(B). Then
+                                                                                     
+by Rangachev’s Theorem 2.1 we are left with the third possibility, that is, AssA B/A = {p1 , . . . , pr },
+ht(pi ) = 1, ∀i. The equivalence now follows from the definition of primary submodule [11, Definition
+8.A] and Rangachev’s results.                                                                           
+
+  We are going to use this lemma to prove the following proposition:
+Proposition 2.4. Let k be an algebraically closed field of characteristic zero. Let A = k[y1 , . . . , yn ] ⊂
+B = k[x1 , . . . , xn ] be an étale extension of polynomial rings (each in n indeterminates). Denote by A
+the integral closure of A in B. Suppose that A 6= B and that A is a primary A-submodule of B. Then
+Spec(A) \ Spec(B) = V (p), where p is a prime ideal of height one in A, and the divisor class group
+Cl(Spec(A)) ∼  =Z∼   = hV (p)i.
+Proof. The extension A ⊂ B is étale, so it is quasi-finite and by Zariski’s Main Theorem [15, Corollaire
+2, p. 42], the morphism Spec(B) → Spec(A) is an open immersion. Also, the étaleness of the extension
+implies that Frac(A) ⊂ Frac(B) is a finite separable algebraic extension of fields, then A is a finite module
+over A, in particular A is Noetherian. It is clear that Frac(A) = Frac(B).
+   Then the étale extension A ⊂ B satisfies the hypothesis of Lemma 2.3. We are assuming that A is a
+primary A-submodule
+                      of B, therefore,there exist a prime ideal p of height one in A such that A = B ∩Ap ,
+AssA B/A = {p}, and SuppA B/A = V (p). From this we can derive the following consequences:
+                                                      2
+- Spec(A)\Spec(B) = V (p), where we identify Spec(B) with its image in Spec(A). In fact, denote by g:
+  Spec(B) ֒→ Spec(A) the open immersion. We are going to show that Im g = Spec(A) \ SuppA B/A .
+  Suppose that p ∈ Im g ⊂ Spec(A), that is, there exist q ∈ Spec(B) such that p = q ∩ A. As g is an open
+                                                                                         / SuppA B/A .
+  immersion we have that Ap = Bq = Bp , see for example [4, Exercise 2.3.9], therefore p ∈
+                                                               
+  Conversely, suppose that p ∈ Spec(A) and p ∈  / SuppA B/A , that is, Ap = Bp . Then B ⊂ Bp = Ap ,
+  define the prime ideal r := pAp ∩ B, then r ∈ Spec(B) and r ∩ A = p, therefore p ∈ Im g. The assertion
+  now follows because we already know that SuppA B/A = V (p).
+- Cl(Spec(A)) ∼ = Z ∼ = hV (p)i. In fact, Spec(A) is a noetherian normal affine scheme, V (p) is an
+  irreducible closed subset of codimension one, and Spec(A) \ Spec(B) = V (p), then by Hartshorne
+  [8, Chap. II, Prop.6.5] there is an exact sequence Z → Cl(Spec(A)) → Cl(Spec(B)) → 0, where the
+  first map is defined by 1 → 1 · V (p). Note that Cl(Spec(B)) = 0 because B is a unique factorization
+  domain, then Cl(Spec(A)) is generated by V (p). On the other hand, V (p) cannot be of finite order in
+  Cl(Spec(A)), because it is known [1, Proposition 6] that if Cl(Spec(A)) were a torsion group (i.e., A
+  were almost factorial) then A = B, but we are assuming that A 6= B. We have proved the assertion.
+                                                                                                        
+                                                                                                  f
+  Suppose we are in the situation of Proposition 2.4. Then the étale morphism An = Spec(B) −
+                                                                                            → An =
+                                                                                      g           h
+Spec(A) induced by the étale extension A ⊂ B factorizes as f = hg, An = Spec(B) ֒−→ Spec(A) − → An =
+Spec(A), where g is an open immersion and h is finite. We denote by Rh the ramification divisor of the
+morphism h, since f is étale, we have that Rh ⊂ Spec(A) \ Spec(B) = V (p). By the purity of the branch
+locus it follows that Rh = V (p). Then we have proved:
+Corollary 2.5. Assume we are in the situation of Proposition 2.4. Then the ramification divisor Rh ⊂
+                                        h
+Spec(A) of the finite morphism Spec(A) −→ An = Spec(A) coincides with the prime divisor V (p) =
+Spec(A) \ Spec(B).
+Corollary 2.6. Assume we are in the situation of Proposition 2.4. Suppose Spec(A) is smooth and
+denote by KSpec(A) its canonical divisor. Then KSpec(A) = V (p), that is, the Picard group of Spec(A) is
+generated by the canonical class.
+Proof. We have that KSpec(A) = h∗ (KA2 ) + Rh by the ramification formula [9, Theorem 5.5] applied to
+                                   h
+                              → A2 = Spec(A). Then KSpec(A) = Rh . The conclusion now follows
+the dominant morphism Spec(A) −
+from Corollary 2.5.                                                                        
+
+                               3. Two-dimensional étale extensions
+   In this section k = C, the field of complex numbers. We are going to apply Proposition 2.4 to carry
+out Wright’s geometric approach for two-dimensional non-integral étale extensions [18] in the case A is
+a primary A-submodule of B. Wright proved that if we start with an étale extension A = C[p, q] ⊂ B =
+C[x, y] that is not integral, it is possible to construct a normal affine variety that admits the structure
+of an A1 -fibration over P1 , more precisely:
+Theorem 3.1. [18, Theorem 4.3] Let A = C[p, q] ⊂ B = C[x, y] be an étale extension such that A 6= B,
+then there exist a normal affine variety V containing U = A2 as an open subvariety having the following
+properties:
+      i) F = V \ U is a rational curve whose normalization is A1 and each singular point of F has
+         one-point desingularization.
+     ii) there is a map π : V → P1 such that F is the set-theoretic fiber of a point z ∈ P1 , and the
+         restriction map π|U : U → P1 \ {z} = A1 is the projection onto a coordinate line.
+    iii) there is a map f : V → A2 such that f |U is étale.
+Moreover, if we assume that A is smooth, then V can be chosen to be smooth and F ∼    = A1 . Even more,
+[18, Remark p. 605] if F has multiplicity one in the fiber, that is, π −1 (z) = A1 scheme-theoretically,
+then V is an A1 -bundle over P1 via the map π : V → P1 .
+   In order to get an A1 -bundle over P1 we first need to prove that the integral closure is smooth. We
+are going to show that this is the case if A is a primary A-submodule of B. To achieve this we apply
+the following result of Gurjar and Miyanishi. In fact, the specific case we need from this result, that is,
+when X = A2 , was proved by Miyanishi in [13, Chap. I, Sect. 6].
+                                                     3
+Theorem 3.2. [7, Theorem 1] Let ϕ : Xu → Xl be an étale morphism, where Xu = X and Xl = X
+are two copies of an irreducible normal affine surface X defined over C. Let X e be the normalization of
+                                      e \ Xu is a disjoint union of irreducible curves Ci , each of which
+Xl in the function field of Xu . Then X
+is isomorphic to A1 . Further, each singularity of Xe which is not contained in Xu is a cyclic quotient
+                                           e
+singularity. Any irreducible component of X \ Xu contains at most one such singular point.
+   Consider now an étale extension A = C[p, q] ⊂ B = C[x, y], or equivalently, the corresponding étale
+morphism f = (p, q) : A2 = Spec(B) → A2 = Spec(A). Suppose that A 6= B and that A is a primary A-
+submodule of B, by Proposition 2.4 we have that Spec(A) \ Spec(B) = V (p) is reduced and irreducible.
+Applying the Gurjar-Miyanishi’s Theorem 3.2 to the morphism f = (p, q) : A2 = Spec(B) → A2 =
+Spec(A) implies that Spec(A) \ Spec(B) ∼   = A1 scheme-theoretically, and consequently Spec(A) has no
+singularities at all. We have proved the following:
+Proposition 3.3. Let A = C[p, q] ⊂ B = C[x, y] be an étale extension of polynomial rings. Denote by
+A the integral closure of A in B. Suppose that A is a primary A-submodule of B. Then A is a smooth
+C-algebra.
+   Under the hypothesis that A is a primary A-submodule of B it follows now from Wright’s construction
+that the variety V in Wright’s Theorem 3.1 is exactly Spec(A), and it admits a map to P1 making it
+an A1 -bundle except over one point of P1 whose fiber is exactly F = Spec(A) \ Spec(B) ∼   = A1 , now
+scheme-theoretically. Therefore, we have proved that Spec(A) has the structure of an A -bundle over P1 ,
+                                                                                      1
+
+such that the open embedding of Spec(B) ∼ = A2 in Spec(A) coincides with the complement of the fiber of
+π over the infinity and π|Spec(B) : A → P \ {∞} = A1 is one of the standard projections. Nevertheless,
+                                     2   1
+
+we must make the following observation:
+Remark 3.4. In his Theorem 3.1, Wright assumed that the curves p = 0 and q = 0 each have two points
+at infinity in P2 that coincide with the points at infinity on the lines x = 0 and y = 0. He need this in
+his proof to accommodate the variety V within the blowups performed in the resolution of the birational
+map associated to the étale extension. It is always possible to make such an assumption at the cost of
+modifying the original étale extension. Its means that if we start with an arbitrary non-integral étale
+extension A ⊂ B, then we probably need to change to a different non-integral étale extension A′ ⊂ B ′
+by means of an automorphism, if we want to construct V from Spec(A′ ) as Wright does.
+
+  Let’s prove using Proposition 2.4 that when A is a primary A-submodule of B, we don’t need to make
+Wright’s assumptions. Proving it this way will be useful later to explicitly describe the integral closure
+and to prove Theorem 3.12.
+Theorem 3.5. Let A = C[p, q] ⊂ B = C[x, y] be an étale extension such that A 6= B and A is a primary
+A-submodule of B, then Spec(A) is a smooth affine surface that admits the structure of an A1 -bundle
+over P1 , π : Spec(A) → P1 such that the open embedding of Spec(B) ∼= A2 in Spec(A) coincides with the
+complement of the fiber of π over the infinity and π|Spec(B) : A → P \ {∞} = A1 is one of the standard
+                                                                2   1
+
+projections.
+Proof. By Proposition 2.4 and Proposition 3.3 we have that Spec(A) is a smooth affine surface such that
+Spec(A) \ Spec(B) ∼    = A1 scheme-theoretically, lets denote this affine line by F := Spec(A) \ Spec(B). On
+the other hand, Spec(B) ∼    = A2 admits two A1 -fibrations over A1 given by the standard projections πi :
+Spec(B) → A1 , i = 1, 2, corresponding to the containments C[x] ⊂ C[x, y] and C[y] ⊂ C[x, y] respectively.
+It is known [13, Chap. I, Lemma 4.3 ] that each πi extends to an A1 -fibration π      ei : Spec(A) → C where
+C∼ =  A 1
+          or C  ∼
+                = P 1
+                      .
+    We are going to argue as in [6, Lemma 5.2] to show that at least one of the πi ’s extends to an
+A1 -fibration over P1 . Suppose that both fibrations π1 and π2 extends to A1 -fibrations over A1 , that
+    e1 : Spec(A) → Spec(C[x]) and π
+is, π                                   e2 : Spec(A) → Spec(C[y]). Then F is contained in some fiber of
+π
+e1 and in some fiber of π   e2 . This means that x and y are constant along F . Therefore, any function
+f ∈ Γ(Spec(A), OSpec(A) ) ⊂ Γ(Spec(B), OSpec(B) ) = C[x, y] is also constant along F . This leads to a
+contradiction, because given any two points of F there is a regular function of Spec(A) that separates
+them.
+    Then at least one of the πi ’s extends to an A1 -fibration over P1 . Without loss of generality, suppose
+                                               e1 : Spec(A) → P1 . Then π
+that it is π1 that extends to an A1 -fibration π                           e1−1 (∞) = Spec(A)\Spec(B) ∼= A1 ,
+                                               1               1
+scheme-theoretically. Therefore, π  e1 is an A -bundle over P that satisfies the desired properties.       
+                                                      4
+   It is known that every A1 -bundle π : V → P1 , where V is a affine nonsingular surface, can be realized as
+the complement V = Fn \S of an ample section S, where Fn = P (OP1 ⊕ OP1 (−n)), n ≥ 0, is a Hirzebruch
+surface, and the canonical projection π̃n : Fn → P1 extends π. In this case, S = C0 + 21 (S 2 + n)F , where
+C0 is a section of π̃n with self-intersection C02 = −n, F is a fiber of π̃n , and S 2 ≥ n + 2. Moreover, n
+and S 2 are uniquely determined by V and π, see [3], [12, Lemma 5.5.1], [18, Theorem 2.3].
+   Danilov and Gizatullin proved that the isomorphism class of the complement V = Fn \ S of an ample
+section S in a Hirzebruch surface Fn depends only on the self-intersection number S 2 and neither on n
+nor on the choice of the section S, see [3, Theorem 5.8.1], [2, Corollary 4.8]. These affine surfaces V are
+called Danilov-Gizatullin surfaces of index S 2 .
+   The Picard group of the Hirzebruch surface Fn is Pic(Fn ) ∼    = Z2 , freely generated by the class of C0
+                                           2         2
+and the class of a fiber F of π̃n , and C0 = −n, F = 0 and C0 F = 1. The canonical divisor is given
+by KFn = −2C0 − (n + 2)F = −2S + (S 2 − 2)F . Therefore, the Picard group of the Danilov-Gizatullin
+surface Fn \ S is freely generated by the class of F |Fn \S , Pic(Fn \ S) ∼= Z, and the canonical divisor is
+given by KFn \S = (S 2 − 2)F |Fn \S .
+Proposition 3.6. Let A = C[p, q] ⊂ B = C[x, y] be an étale extension such that A 6= B and A is a
+primary A-submodule of B, then Spec(A) is a Danilov-Gizatullin surface of index 3.
+Proof. It follows from Theorem 3.5 that Spec(A) is an A1 -bundle over P1 . By the observations above it
+is in particular a Danilov-Gizatullin surface Spec(A) ∼
+                                                      = Fn \ S. On the other hand, we know by Corollary
+2.6 that the Picard group of Spec(A) is generated by the canonical divisor KSpec(A) . It follows that
+(S 2 − 2)F |Fn \S = F |Fn \S , this forces S 2 = 3.                                                  
+   Now, the problem is whether a Danilov-Gizatullin surface (equivalently, an A1 -bundle over P1 ) can
+factorizes an étale morphism of the complex affine plane. This is precisely the situation Wright con-
+jectured should not happen. Geometric Formulation of Wright’s conjecture: let V be an affine variety
+which is an A1 -bundle over P1 , U = V \ F , where F is a fiber in V . There does not exist f : V → A2
+such that f |U is étale, [18, Conjecture 3.2].
+   To address his conjecture, Wright provides an explicit description of the coordinate ring of an affine
+A1 -bundle over P1 , that is, he describes Γ(V ) as a subring of C[x, y], corresponding to the containment
+of U ∼
+     = A2 in V . Let’s recall his construction.
+Theorem 3.7. [18, Theorem 3.1] Let V be an affine variety which is an A1 -bundle over P1 with structure
+map π : V → P1 . Pick                                           1                       −1
+                            x such that the function field of P is C(x), and let U0 = π (Spec C[x]),
+       −1               −1
+U1 = π     Spec C[x ] . Then V = U0 ∪ U1 and there exist y ∈ Γ(V ) such that U0 = Spec C[x, y],
+U1 = Spec C[x′ , y ′ ] where
+                          x′ = x−1 ,    y ′ = xm y + α1 xm−1 + α2 xm−2 + · · · + αm−1 x,
+where m ≥ 2 and α1 , . . . , αm−1 ∈ C not all zero. Moreover
+                                              Γ(V ) = C[t0 , t1 , . . . , tm ],
+where
+                             t0 = y,
+                             t1 = xy,
+                             t2 = x2 y + α1 x,
+                                                                                                                  (3.1)
+                             t3 = x3 y + α1 x2 + α2 x,
+                            ...
+                        tm = xm y + α1 xm−1 + α2 xm−2 + · · · + αm−1 x (= y ′ ).
+Conversely, every ring of the form C[t0 , t1 , . . . , tm ] above can be made into the coordinate ring of an
+A1 -bundle over P1 .
+     In view of this description, Wright’s conjecture can be rephrased as follows. Algebraic formulation of
+Wright’s conjecture: there does not exist a pair of polynomials p, q ∈ C[t0 , t1 , . . . , tm ] ⊂ C[x, y], where
+                                                                                ∂(p,q)
+t0 , t1 , . . . , tm are as in (3.1) (α1 , . . . , αm−1 ∈ C not all zero), with ∂(x,y) non-vanishing (i.e., constant) on
+  2
+A , [18, Conjecture 3.2].
+Remark 3.8. The number of generators of the algebra Γ(V ), that is, the integer m + 1, is completely
+determined by the A1 -bundle π : V → P1 . In fact, let V = Fn \S be the corresponding Danilov-Gizatullin
+surface, then m = S 2 , see [18, p. 599, above the Conjecture 3.2] and [2, Proposition 3.5].
+                                                             5
+   Wright succeeded in proving the following case of his conjecture.
+Theorem 3.9. [18, Theorem 3.3] Wright’s conjecture is true in the case where the coefficient α1 is
+non-zero.
+   Putting together the previous results we obtain the following explicit description of the integral closure
+of a non-integral étale extension whose integral closure is primary.
+Proposition 3.10. Let A = C[p, q] ⊂ B = C[x, y] be an étale extension such that A 6= B and A is
+a primary A-submodule of B, then A = C[y, xy, x2 y, x3 y + αx], where α ∈ C, α 6= 0. In particular
+p, q ∈ C[y, xy, x2 y, x3 y + αx].
+Proof. By Theorem 3.5 we have that V = Spec(A) admits the structure of an A1 -bundle over P1 such
+that the open embedding of Spec(B) ∼= A2 in Spec(A) coincides with the complement of the fiber over the
+infinity and π|Spec(B) : A → P \ {∞} = A1 is one of the standard projections. Moreover, in Proposition
+                          2   1
+
+3.6 we proved that V is a Danilov-Gizatullin surface of index 3, therefore, m = 3 by Remark 3.8. It
+now follows from Wright’s Theorem 3.7 that p, q ∈ Γ(V ) = C[y, xy, x2 y + α1 x, x3 y + α1 x2 + α2 x], where
+α1 , α2 ∈ C cannot be both zero. By Wright’s Theorem 3.9 we have that α1 = 0.                            
+    At this point we are left with the following case of Wright’s conjecture: there does not exist a pair of
+                                                                                ∂(p,q)
+polynomials p, q ∈ C[y, xy, x2 y, x3 y + αx], α ∈ C, α 6= 0 such that ∂(x,y)           is constant. This is precisely
+the simplest unknown case of Wright’s conjecture [18, pag. 601]. We are going to use Proposition 3.10
+and Wright’s observation that C[y, xy, x2 y, x3 y + αx] is a graded algebra with deg x = −1 and deg y = 2
+to prove that if it is always the case that A is a primary A-submodule of B then every two-dimensional
+étale extension is integral.
+    With respect to this grading the generators of C[y, xy, x2 y, x3 y + αx] have degrees: deg y = 2,
+deg xy = 1, deg x2 y = 0 and deg (x3 y +αx) = −1. Let f (x, y) ∈ C[y, xy, x2 y, x3 y +αx] be a homogeneous
+polynomial of weighted degree −m < 0. We can write:
+                      X
+       f (x, y) =             fl1 l2 l3 l4 y l1 (xy)l2 (x2 y)l3 (x3 y + αx)l4 , li ∈ Z≥0 , fl1 l2 l3 l4 ∈ C,
+                   2l1 +l2 −l4 =−m
+                         X
+      f (x, y) =                     fl1 l2 l3 l4 y l1 (xy)l2 (x2 y)l3 (x3 y + αx)2l1 +l2 +m ,
+                   2l1 +l2 −l4 =−m
+                                           X
+      f (x, y) = (x3 y + αx)m                          fl1 l2 l3 l4 (x6 y 3 + 2αx4 y 2 + α2 x2 y)l1 (x4 y 2 + αx2 y)l2 (x2 y)l3 ,
+                                     2l1 +l2 −l4 =−m
+
+then f (x, y) = (x y + αx) g(z), where g(z) ∈ C[z] and z = x2 y.
+                     3         m
+
+   For the next definition, let’s consider the usual grading, that is, deg x = 1 and deg y = 1. We say
+a polynomial p(x, y) ∈ C[x, y] of total degree n is regular in x if it contains a term in xn . It is well
+known that for any polynomial p(x, y) it is always possible to find an invertible linear transformation
+x = av + bw, y = cv + dw, (a, b, c, d ∈ C, ad − cd 6= 0) such that r(v, w) = p(av + bw, cv + dw) is regular
+in v and w, see [10, (2.7), p. 5].
+Lemma 3.11. The algebra C[y, xy, x2 y, x3 y + αx], α ∈ C, α 6= 0 does not contain polynomials that are
+regular in both variables.
+Proof. Suppose p(x, y) ∈ C[y, xy, x2 y, x3 y + αx] is a polynomial of total (usual) degree n that is regular
+in both variables. Then in particular p(x, y) contains a term in xn and consequently p(x, y) has a
+non-zero homogeneous component of weighted degree −n < 0. On the other hand, we already observe
+that all homogeneous polynomials of weighted degree −n < 0 in C[y, xy, x2 y, x3 y + αx] are of the form
+f (x, y) = (x3 y + αx)n g(z), where g(z) ∈ C[z] and z = x2 y. This is a contradiction because p(x, y) is a
+polynomial of total (usual) degree n.                                                                     
+Theorem 3.12. Suppose that A is a primary A-submodule of B for every étale extension A = C[p, q] ⊂
+B = C[x, y]. Then every étale extension of polynomial rings C[p, q] ⊂ C[x, y] is integral.
+Proof. Suppose that there exist an étale extension A = C[p, q] ⊂ B = C[x, y] that is not integral, that
+is, A 6= B (equivalently the corresponding étale morphism (p, q) : A2 = Spec(B) → A2 = Spec(A) is
+not injective, [16, Theorem 46]). Choose an invertible linear substitution x = av + bw, y = cv + dw,
+(a, b, c, d ∈ C, ad − cd 6= 0) such that r(v, w) = p(av + bw, cv + dw) is regular in both variables v and w.
+After composing the morphism (p, q) with this linear automorphism we obtain another étale extension
+C[r, s] ⊂ C[v, w] that is also non-integral (equivalently an étale morphism (r, s) : A2 = Spec(C[v, w]) →
+                                                                    6
+A2 = Spec(C[r, s]) that is not injective), where r(v, w) = p(av +bw, cv +dw) and s(v, w) = q(av +bw, cv +
+dw). By hypothesis we have that C[r, s] is a primary C[r, s]-submodule of C[v, w], applying Proposition
+3.10 to the non-integral étale extension C[r, s] ⊂ C[v, w] we have that r, s ∈ C[w, vw, v 2 w, v 3 w + βv],
+where β ∈ C, β 6= 0. By construction the polynomial r is regular in v and w, however, by Lemma 3.11 the
+algebra C[w, vw, v 2 w, v 3 w + βv] does not contain polynomials regular in both variables, a contradiction.
+Hence A = B.                                                                                              
+
+                                                     References
+ [1] G. Angermüller. On some conditions for a polynomial map with constant Jacobian to be invertible. Arch. Math.
+     (Basel), 40(5):415–420, 1983.
+ [2] P. Cassou-Noguès and P. Russell. Birational morphisms C2 → C2 and affine ruled surfaces. In Affine algebraic geometry,
+     pages 57–105. Osaka Univ. Press, Osaka, 2007.
+ [3] V. I. Danilov and M. H. Gizatullin. Automorphisms of affine surfaces. II. Izv. Akad. Nauk SSSR Ser. Mat., 41(1):54–
+     103, 231, 1977.
+ [4] T. J. Ford. Separable algebras, volume 183 of Graduate Studies in Mathematics. American Mathematical Society,
+     Providence, RI, 2017.
+ [5] R. Gilmer. Multiplicative ideal theory, volume 90 of Queen’s Papers in Pure and Applied Mathematics. Queen’s
+     University, Kingston, ON, 1992. Corrected reprint of the 1972 edition.
+ [6] R. V. Gurjar, K. Masuda, M. Miyanishi, and P. Russell. Affine lines on affine surfaces and the Makar-Limanov invariant.
+     Canad. J. Math., 60(1):109–139, 2008.
+ [7] R. V. Gurjar and M. Miyanishi. The Jacobian problem for singular surfaces. J. Math. Kyoto Univ., 48(4):757–764,
+     2008.
+ [8] R. Hartshorne. Algebraic geometry, volume No. 52 of Graduate Texts in Mathematics. Springer-Verlag, New York-
+     Heidelberg, 1977.
+ [9] S. Iitaka. Algebraic geometry. An introduction to birational geometry of algebraic varieties, volume 76 of Grad. Texts
+     Math. Springer, Cham, 1982.
+[10] S. Lefschetz. Algebraic geometry. Princeton University Press, Princeton, NJ, 1953.
+[11] H. Matsumura. Commutative algebra, volume 56 of Mathematics Lecture Note Series. Benjamin/Cummings Publishing
+     Co., Inc., Reading, Mass., second edition, 1980.
+[12] M. Miyanishi. Curves on rational and unirational surfaces, volume 60 of Tata Institute of Fundamental Research
+     Lectures on Mathematics and Physics. Tata Institute of Fundamental Research, Bombay; Narosa Publishing House,
+     New Delhi, 1978.
+[13] M. Miyanishi. Noncomplete algebraic surfaces, volume 857 of Lecture Notes in Mathematics. Springer-Verlag, Berlin-
+     New York, 1981.
+[14] A. Rangachev. A valuation theorem for Noetherian rings. Michigan Math. J., 73(4):843–851, 2023.
+[15] M. Raynaud. Anneaux locaux henséliens. Lecture Notes in Mathematics, Vol. 169. Springer-Verlag, Berlin-New York,
+     1970.
+[16] S. S. S. Wang. A Jacobian criterion for separability. J. Algebra, 65(2):453–494, 1980.
+[17] D. Wright. On the Jacobian conjecture. Illinois J. Math., 25(3):423–440, 1981.
+[18] D. Wright. Affine surfaces fibered by affine lines over the projective line. Illinois J. Math., 41(4):589–605, 1997.
+
+   Instituto de Matemática, Universidade Federal do Rio de Janeiro, RJ, Brazil.
+   Email address: lazarord@im.ufrj.br
+
+
+
+
+                                                             7
+

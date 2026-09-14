@@ -1,0 +1,170 @@
+{
+  "schema": "jc2.static-terminal-custody/v1",
+  "task": "f10-source-cone-r3-runtime-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETE_STATIC_CANDIDATE_UNREVIEWED_UNEXECUTED",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_utc": "2026-09-11T00:45:13Z",
+  "targets_initially_absent": [
+    "xmodel/f10-source-cone-r3-runtime-astra-20260911.md",
+    "xmodel/f10-source-cone-r3-runtime-astra-20260911.md.artifact.json",
+    "box/f10-source-cone-r3-runtime-astra-20260911/"
+  ],
+  "original_reserve_utc": "2026-09-11T01:13:00Z",
+  "original_hard_stop_utc": "2026-09-11T01:16:00Z",
+  "clock_reset": false,
+  "finalized_utc": "2026-09-11T01:05:02Z",
+  "final_report_manifest_whole_read_observed_utc": "2026-09-11T01:05:32Z",
+  "read_scope": {
+    "input_count": 18,
+    "mode": "ALL18_FRESH_WHOLE",
+    "reuse": "NONE",
+    "initial_read_interval_utc": "2026-09-11 00:45–00:50 UTC",
+    "clipping": "Old runtime gate middle initially clipped; recovered lines36–65. No clipped read counted as WHOLE.",
+    "own_whole": "dispatch.py, probe.py, mutate.py, CONTRACT.md, DISABLED-REGISTRATION.json, READ-SCOPE.md, PINS.json, final report and manifest; changed ranges reread."
+  },
+  "input_pins": [
+    {
+      "path": "box/f10-source-cone-r3-runtime-prep-20260911/ROOT-CARD.md",
+      "sha256": "bb64155a907dd9d7918af67494f29cab76751e4de85b2b964f3e6670eb6766dd"
+    },
+    {
+      "path": "xmodel/f10-source-cone-r3-code-astra-20260911.md",
+      "sha256": "8b8c6296f3e94b0b176631d848bfe0cca11ba6eac64877196d0a129df212f30a"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/authority.py",
+      "sha256": "407c5784ba07abbf289e2ba4fd82f24fc661987eb55f378bf39cc954da1ee07b"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/arithmetic.py",
+      "sha256": "40b18453b6127d1b8217a6d6e1d3eb3aff1e911c15243ed9c640277f24175431"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/produce.py",
+      "sha256": "76ad6c85a6c5d4ccbd01c642c43ff7002cb7060a1367e11ee5927a272ce06a5a"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/check_arithmetic.py",
+      "sha256": "10e57542f9aa06eb69fd9562b2aa0bb27567c6d14186ffa90d77d6e08e80ae2c"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/check.py",
+      "sha256": "b9176ee7f0b8f34506e0fce03c2aea548756d0d489a53b732401cc7dbaa8c87f"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/CONTROLS.md",
+      "sha256": "b742af9afa22e026607baa32934fdc63fee175bd228777a35b495b140ac641d8"
+    },
+    {
+      "path": "box/f10-source-cone-r3-code-astra-20260911/READ-SCOPE.md",
+      "sha256": "8a2d041b64320a1409ff0ebe870f8caf63237cd09fce91c43d6d7fd4dbcf9a4b"
+    },
+    {
+      "path": "box/f10-r2-runtime-astra-20260910/dispatch.py",
+      "sha256": "4838e40051bd19d19c35095eac2ee50de7d11d905b2da403a459c25d91f3a749"
+    },
+    {
+      "path": "box/f10-r2-runtime-astra-20260910/probe.py",
+      "sha256": "1e3bea3ad995ca64780f77b33792ed09c9843fb3925aae5f64c7a2abcaa0ecde"
+    },
+    {
+      "path": "box/f10-r2-runtime-astra-20260910/CONTRACT.md",
+      "sha256": "2c06f0580356172c05ec5e860051d8a31bb6f3dc01a0b0d48075c4680c5180b5"
+    },
+    {
+      "path": "box/f10-r2-runtime-astra-20260910/DISABLED-REGISTRATION.json",
+      "sha256": "a7dd5846c5ab7bda1bc7020ee4c203b10f0adca90bbd119ec6c61416f58b7304"
+    },
+    {
+      "path": "xmodel/f10-r2-runtime-astra-20260910.md",
+      "sha256": "002ff55c5d60e843011f988562d2e38a3cc36e1f497c5dd7e18e540e7fc7f8e7"
+    },
+    {
+      "path": "xmodel/f10-r2-runtime-gate-fable5-20260910.md",
+      "sha256": "558fa2f1ef15b8477148fc014df4dcbcf783b61bcddae9889213b995bcb86e16"
+    },
+    {
+      "path": "ops/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "path": "xmodel/f10-r2-semantic-runtime-astra-20260910.md",
+      "sha256": "ebae210b76e85ffbcbb2a2dd4cdbae63c31567a40e85e4865f7e51b40ff1e5b3"
+    },
+    {
+      "path": "box/f10-r2-semantic-runtime-astra-20260910/dispatch.py",
+      "sha256": "6c232bb0d1b4ee62fefb62970b1b5a06a092db735cbd6fb47907c54921169c0b"
+    }
+  ],
+  "postpins": "ALL18_MATCH_2026-09-11T01:04:46Z",
+  "owned_pins_excluding_this_file": [
+    {
+      "path": "xmodel/f10-source-cone-r3-runtime-astra-20260911.md",
+      "sha256": "968e4163eadde723a6dc2f9bc806994a0771912be42bd6fc836b905b1a4b1617"
+    },
+    {
+      "path": "xmodel/f10-source-cone-r3-runtime-astra-20260911.md.artifact.json",
+      "sha256": "d0600b1150d0cd7f1e4e55794b0cf3ac8b048086240c0116b4185fb4bd836e42"
+    },
+    {
+      "path": "box/f10-source-cone-r3-runtime-astra-20260911/dispatch.py",
+      "sha256": "f3e5128677c872eb139e7c75c6b0f7ab89081ce738c5760bed9b4195fc6ebb4b"
+    },
+    {
+      "path": "box/f10-source-cone-r3-runtime-astra-20260911/probe.py",
+      "sha256": "85ba351b176d6498df3df13e4dcf91ab2e2765ebabff927d35d1821bbca9df04"
+    },
+    {
+      "path": "box/f10-source-cone-r3-runtime-astra-20260911/mutate.py",
+      "sha256": "fcb62c4df2f8f78cc7c349b3f19331a76284ba97bbf4e5ffd122dda12ab811cb"
+    },
+    {
+      "path": "box/f10-source-cone-r3-runtime-astra-20260911/CONTRACT.md",
+      "sha256": "52102dc47050c7b3c725618bda8006010cd72dc4a30fba12d4e268719a2e6d9b"
+    },
+    {
+      "path": "box/f10-source-cone-r3-runtime-astra-20260911/DISABLED-REGISTRATION.json",
+      "sha256": "a66aa1ba9aa2c18837460a1e6bf5b446c44984985cf1fb7ce58c586c504dab52"
+    },
+    {
+      "path": "box/f10-source-cone-r3-runtime-astra-20260911/READ-SCOPE.md",
+      "sha256": "e9b64185e2dc46802befbafe7687f69ee9b0143f5a9e485ef843fd1578c499ea"
+    },
+    {
+      "path": "box/f10-source-cone-r3-runtime-astra-20260911/PINS.json",
+      "sha256": "00fdf2f9ac48c5dd975f4896760d779eae989b1c0f5052f4aa2059e3141a1644"
+    }
+  ],
+  "transaction": {
+    "status": "FINAL_EXPECTED_VERIFIED",
+    "manifest_path": "xmodel/f10-source-cone-r3-runtime-astra-20260911.md.artifact.json",
+    "expected_manifest_sha256": "d0600b1150d0cd7f1e4e55794b0cf3ac8b048086240c0116b4185fb4bd836e42",
+    "body_sha256": "2dc7bbc85a1a2ab8013c8d0c245ae4916a08745022866e46811803ae602bc76e",
+    "report_sha256": "968e4163eadde723a6dc2f9bc806994a0771912be42bd6fc836b905b1a4b1617"
+  },
+  "root_scope_amendment": "Only unique checker AUTHORIZATION_SHA256 slots at --authorization-sha256 for check-positive/check-negative; only unique mutator ROOT_REGISTRATION_SHA256 slot; mutator uses fixed ROOT-authored immutable positive-phase record. Explicitly approved STATIC only.",
+  "source_dependency": "Sole provisional source FIRST discharged by ROOT lifecycle attestation during task; no extra report read, no runtime or feasibility clearance.",
+  "execution": {
+    "scientific_subprocess": false,
+    "dummy_run": false,
+    "import_or_ast_or_compile_or_syntax_or_test": false,
+    "coefficient_or_fixture_body_read_or_generated": false,
+    "network_or_aws_or_ssh": false,
+    "process_inspection": false,
+    "agents": false,
+    "enabled_registration": false
+  },
+  "future_scope": "Nine no-math preflights then ONE producer, ONE positive checker, ONE separate mixed-row mutator, ONE negative checker. Other five semantic controls NOT_RUN/SPEC.",
+  "envelope": "UNMEASURED aggregate3000wall/2100CPU/8GiB/128MiB; source per-call900wall/600CPU unchanged; baseline+fixture120MiB, metadata8MiB. Child allocations2775wall/1857hardCPU; no run authority.",
+  "open": {
+    "quantity": "Correctness of new runtime/mutator and narrow dynamic policy; all actual observations UNKNOWN",
+    "cheapest_instrument": "One FIRST whole-source static gate",
+    "prospective_wall_seconds": "1200",
+    "authorized_here": false
+  },
+  "collisions": "EMPTY; own-only listing found exact seven boxed deliverables before custody; frozen source/CAPRUN unchanged.",
+  "all_writers_idle_at_handoff": true,
+  "idle_scope": "No child/worker/scientific process was launched. Sole documentary writer stops after this custody publication; actual post-write UTC reported in terminal response.",
+  "custody_excludes_own_hash": true
+}

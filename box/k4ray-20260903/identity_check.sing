@@ -1,0 +1,56 @@
+option(redSB); short=0;
+// ---- IDENTITY CHECKS (uniform-shape, random-instance verification) ----
+ring R = 0,(x,y),dp;
+proc quoy(poly p, poly hh, int K)
+{ poly q = 0; poly ld; matrix cp; int d;
+  while (1) { if (p==0) { break; }
+    cp = coeffs(p,y); d = nrows(cp)-1;
+    if (d < K) { break; }
+    ld = cp[d+1,1];
+    q = q + ld*y^(d-K); p = p - ld*y^(d-K)*hh; }
+  return(q); }
+proc Jac(poly u, poly v) { return(diff(u,x)*diff(v,y)-diff(u,y)*diff(v,x)); }
+
+// ---- ID1: general shape f=h^2+B2, g=h^3+A2*h+A3 ----
+//  J = h^2[2J(h,A2)-3J(h,B2)] + h[2J(h,A3)+J(B2,A2)] - A2*J(h,B2) + J(B2,A3)
+int K = 5;
+poly h  = y^4*(y-x) + 3*y^3 - 2*x*y^2 + 7*x^3 - y + 5;
+poly B2 = 2*y^3*x^2 - 3*y^2 + x^4*y - 6*x + 11;
+poly A2 = x^2*y^3 - 4*y + 9*x;
+poly A3 = 5*y^4 - x^3*y^2 + 2;
+poly f = h^2 + B2;  poly g = h^3 + A2*h + A3;
+poly Jd = Jac(f,g);
+poly Jid = h^2*(2*Jac(h,A2)-3*Jac(h,B2)) + h*(2*Jac(h,A3)+Jac(B2,A2)) - A2*Jac(h,B2) + Jac(B2,A3);
+"MARK_ID1_GENERAL_SHAPE"; Jd - Jid;
+
+// ---- ID2: tower shape f=h^2+2b, g=h^3+3b*h+(3/2)al, al=quo_y(b^2,h) ----
+//  J = 3h*J(h,al) - 6b*J(h,b) + 3J(b,al)
+poly be = y^3*x - 2*y^2 + 4*x^2*y + x^5 - 3;
+poly al = quoy(be^2, h, K);
+poly f2 = h^2 + 2*be;  poly g2 = h^3 + 3*be*h + (3/2)*al;
+poly J2 = Jac(f2,g2);
+poly J2id = 3*h*Jac(h,al) - 6*be*Jac(h,be) + 3*Jac(be,al);
+"MARK_ID2_TOWER"; J2 - J2id;
+
+// ---- ID3: g^2-f^3 = -3*rho*h^2 + 9*al*be*h + (9/4)al^2 - 8*be^3, rho = be^2 - al*h ----
+poly rho = be^2 - al*h;
+"MARK_ID3_GSQ"; (g2^2 - f2^3) - ( -3*rho*h^2 + 9*al*be*h + (9/4)*al^2 - 8*be^3 );
+
+// ---- ID4: B2 constant  ==>  h | J   (general shape, no tower) ----
+poly B2c = 13;
+poly fc = h^2 + B2c; poly gc = h^3 + A2*h + A3;
+poly Jc = Jac(fc,gc);
+"MARK_ID4_HDIVJ"; reduce(Jc, std(ideal(h)));
+"MARK_ID4_QUOT"; Jc - 2*h*(h*Jac(h,A2)+Jac(h,A3));
+
+// ---- ID5: tower + beta constant ==> J == 0 and f,g in k[h] ----
+poly bc = 17; poly alc = quoy(bc^2, h, K);
+"MARK_ID5_ALPHA_ZERO"; alc;
+poly fcc = h^2+2*bc; poly gcc = h^3+3*bc*h+(3/2)*alc;
+"MARK_ID5_J"; Jac(fcc,gcc);
+
+// ---- PC: positive control, K=1 one-point tower with J = c*x  ----
+poly hp = y; poly bp = x/2; poly alp = quoy(bp^2, hp, 1);
+poly fp = hp^2+2*bp; poly gp = hp^3+3*bp*hp+(3/2)*alp;
+"MARK_PC_f"; fp; "MARK_PC_g"; gp; "MARK_PC_J"; Jac(fp,gp);
+"MARK_DONE"; quit;

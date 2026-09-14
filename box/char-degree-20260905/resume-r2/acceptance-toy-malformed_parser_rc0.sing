@@ -1,0 +1,4 @@
+ring R=0,(b,z),dp;
+poly malformed=b^2/4;
+ideal I=b-1,z*b-1;
+print("ALL_ROWS_PARSED");print(size(I));print("BEGIN_GB");ideal SB=std(I);print("END_GB");print("BEGIN_RESULT");print(reduce(1,SB));print(dim(SB));print(size(SB));print("END_RESULT");ideal neg=b,z*b-1;ideal pos=b-1,z*b-1;print("BEGIN_CONTROLS");print(reduce(1,std(neg)));print(reduce(1,std(pos)));print("END_CONTROLS");quit;

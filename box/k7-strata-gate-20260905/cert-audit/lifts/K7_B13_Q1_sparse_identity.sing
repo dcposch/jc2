@@ -1,0 +1,13 @@
+// Exact-Q sparse cofactor identity on frozen full-source indices 1,317.
+// full_source_sha256=570e241e4e2515d1c97c77f9b7696e5d519fb97697543da93410ca5eb2797a8b
+ring R=0,(v97,v98),dp;
+poly g1=v97^3;
+poly g317=v97*v98-1;
+poly a1=v98^3;
+poly a317=-v97^2*v98^2-v97*v98-1;
+poly CHECK=a1*g1+a317*g317;
+print("CERT__FULL_SOURCE_SHA256 570e241e4e2515d1c97c77f9b7696e5d519fb97697543da93410ca5eb2797a8b");
+print("CERT__ORIGINAL_INDICES 1,317");
+print("CERT__DIRECT_CHECK "+string(CHECK==1));
+print("CERT__CHECK_VALUE "+string(CHECK));
+quit;

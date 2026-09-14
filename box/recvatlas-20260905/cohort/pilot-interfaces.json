@@ -1,0 +1,409 @@
+[
+  {
+    "row_key": "(126, 84, (-14, 63, 124), ((2, 5), (3, 10), (4, 5)))",
+    "source": {
+      "n": 126,
+      "m": 84,
+      "s": 4,
+      "M2_to_Ms": [
+        -14,
+        63,
+        124
+      ],
+      "V": {
+        "2": 5,
+        "3": 10,
+        "4": 5
+      },
+      "d": {
+        "1": 126,
+        "2": 42,
+        "3": 14,
+        "4": 7,
+        "5": 1
+      },
+      "delta": {
+        "1": "161/396",
+        "2": "13/33",
+        "3": "17/44",
+        "4": "-1"
+      },
+      "u_s": 2,
+      "v_s": 5,
+      "d_s": 7
+    },
+    "conditional_descendant": {
+      "coarse_key": [
+        36,
+        24,
+        2,
+        5
+      ],
+      "n_prime": 36,
+      "m_prime": 24,
+      "ell": 2,
+      "M_prime_including_M1": [
+        -24,
+        -4,
+        18
+      ],
+      "V_prime": {
+        "2": 5,
+        "3": 10
+      },
+      "height": 3,
+      "terminal_anchor": "17",
+      "terminal_radius_if_inherited_formula_applies": "-3/17"
+    },
+    "literal_wedge_k1": {
+      "status": "UNASSIGNED",
+      "reason": "NO_PROVED_NECESSARY_FORWARD_WEDGE_SUPPORT_PULLBACK",
+      "additional_exponent_mismatch": true,
+      "arithmetic_exponent_candidate_only": false
+    },
+    "licensed_radius_branch": {
+      "hypothesis": "delta_star_(s-1) >= 5/2",
+      "source": "Moh 1983 printed p.197 Proposition 6.3; printed p.198 proof",
+      "status": "ASSIGNED_CONDITIONAL_BROAD_MONOMIAL_RECEIVER",
+      "map_schema": "COEFFICIENT_EXTRACTION_NEGATIVE_LAURENT_ROWS_V1",
+      "A_gamma_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_substitution": {
+        "X": "beta*(gamma^(-2)-e-A(gamma)-pi*gamma^5)",
+        "Y": "gamma^(-2)",
+        "localization_row": "b*beta-1"
+      },
+      "receiver_support_caps": {
+        "P_gamma_degree": 630,
+        "P_pi_degree": 36,
+        "Q_gamma_degree": 420,
+        "Q_pi_degree": 24,
+        "exact_pi_degrees_or_monicity_imposed": false
+      },
+      "receiver_localization": "c*rho-1",
+      "map_generator_images": {
+        "p_ij": "[gamma^i*pi^j] F(X(gamma,pi),Y(gamma,pi))",
+        "q_ij": "[gamma^i*pi^j] G(X(gamma,pi),Y(gamma,pi))",
+        "c": "-2*beta",
+        "rho": "-b/2"
+      },
+      "source_necessary_rows": [
+        "b*beta-1",
+        "all coefficient rows of J_XY(F,G)-1",
+        "all negative-gamma Laurent coefficient rows of both substituted polynomials",
+        "all coefficient rows above pi-degree 36 for F and 24 for G"
+      ],
+      "receiver_generator_pullback": "chain rule plus explicit negative/high Laurent coefficient cofactors; not invariant matching",
+      "receiver_emptiness": "NONEMPTY",
+      "receiver_nonempty_control": {
+        "P": "pi",
+        "Q": "pi+gamma^3",
+        "c": -3,
+        "rho": "-1/3"
+      },
+      "receiver_common_coarse_key": [
+        36,
+        24,
+        2,
+        5
+      ],
+      "receiver_common_support_caps": {
+        "P_gamma_degree": 630,
+        "Q_gamma_degree": 420,
+        "P_pi_degree": 36,
+        "Q_pi_degree": 24,
+        "ell": 2,
+        "ring_generator_order": "c,rho,p_ij lex(i,j),q_ij lex(i,j), all i,j in the declared support rectangles",
+        "coefficient_field": "QQ",
+        "ideal": "all gamma,pi coefficients of J(P,Q)-c*gamma^ell; c*rho-1",
+        "localization": "c is invertible through rho; source b is invertible through beta",
+        "exact_pi_degrees_or_monicity_imposed": false,
+        "support_completeness": "rectangles enlarge the full substituted supports; no inherited decoration is identified"
+      },
+      "source_ring_generator_order": "b,beta,e,a_0,...,a_(v-1),f_rs lex(r,s) with r+s<=n,g_rs lex(r,s) with r+s<=m",
+      "source_chart_kind": "NEW_NECESSARY_OVERAPPROXIMATION; no existing terminal coefficient chart is identified"
+    },
+    "complementary_source_branch": {
+      "hypothesis": "delta_star_(s-1) < 5/2",
+      "status": "UNASSIGNED_SPLIT_OBLIGATION",
+      "reason": "Moh Proposition 6.4 automatic radius applies only to u_s=1; every cohort row has u_s>=2"
+    },
+    "source_emptiness_from_this_atlas": false
+  },
+  {
+    "row_key": "(126, 84, (112, 119, 124), ((2, 5), (3, 10), (4, 5)))",
+    "source": {
+      "n": 126,
+      "m": 84,
+      "s": 4,
+      "M2_to_Ms": [
+        112,
+        119,
+        124
+      ],
+      "V": {
+        "2": 5,
+        "3": 10,
+        "4": 5
+      },
+      "d": {
+        "1": 126,
+        "2": 42,
+        "3": 14,
+        "4": 7,
+        "5": 1
+      },
+      "delta": {
+        "1": "13/18",
+        "2": "1/3",
+        "3": "1/4",
+        "4": "-1"
+      },
+      "u_s": 2,
+      "v_s": 5,
+      "d_s": 7
+    },
+    "conditional_descendant": {
+      "coarse_key": [
+        36,
+        24,
+        2,
+        5
+      ],
+      "n_prime": 36,
+      "m_prime": 24,
+      "ell": 2,
+      "M_prime_including_M1": [
+        -24,
+        32,
+        34
+      ],
+      "V_prime": {
+        "2": 5,
+        "3": 10
+      },
+      "height": 3,
+      "terminal_anchor": "1",
+      "terminal_radius_if_inherited_formula_applies": "-3"
+    },
+    "literal_wedge_k1": {
+      "status": "UNASSIGNED",
+      "reason": "NO_PROVED_NECESSARY_FORWARD_WEDGE_SUPPORT_PULLBACK",
+      "additional_exponent_mismatch": true,
+      "arithmetic_exponent_candidate_only": false
+    },
+    "licensed_radius_branch": {
+      "hypothesis": "delta_star_(s-1) >= 5/2",
+      "source": "Moh 1983 printed p.197 Proposition 6.3; printed p.198 proof",
+      "status": "ASSIGNED_CONDITIONAL_BROAD_MONOMIAL_RECEIVER",
+      "map_schema": "COEFFICIENT_EXTRACTION_NEGATIVE_LAURENT_ROWS_V1",
+      "A_gamma_exponents": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_substitution": {
+        "X": "beta*(gamma^(-2)-e-A(gamma)-pi*gamma^5)",
+        "Y": "gamma^(-2)",
+        "localization_row": "b*beta-1"
+      },
+      "receiver_support_caps": {
+        "P_gamma_degree": 630,
+        "P_pi_degree": 36,
+        "Q_gamma_degree": 420,
+        "Q_pi_degree": 24,
+        "exact_pi_degrees_or_monicity_imposed": false
+      },
+      "receiver_localization": "c*rho-1",
+      "map_generator_images": {
+        "p_ij": "[gamma^i*pi^j] F(X(gamma,pi),Y(gamma,pi))",
+        "q_ij": "[gamma^i*pi^j] G(X(gamma,pi),Y(gamma,pi))",
+        "c": "-2*beta",
+        "rho": "-b/2"
+      },
+      "source_necessary_rows": [
+        "b*beta-1",
+        "all coefficient rows of J_XY(F,G)-1",
+        "all negative-gamma Laurent coefficient rows of both substituted polynomials",
+        "all coefficient rows above pi-degree 36 for F and 24 for G"
+      ],
+      "receiver_generator_pullback": "chain rule plus explicit negative/high Laurent coefficient cofactors; not invariant matching",
+      "receiver_emptiness": "NONEMPTY",
+      "receiver_nonempty_control": {
+        "P": "pi",
+        "Q": "pi+gamma^3",
+        "c": -3,
+        "rho": "-1/3"
+      },
+      "receiver_common_coarse_key": [
+        36,
+        24,
+        2,
+        5
+      ],
+      "receiver_common_support_caps": {
+        "P_gamma_degree": 630,
+        "Q_gamma_degree": 420,
+        "P_pi_degree": 36,
+        "Q_pi_degree": 24,
+        "ell": 2,
+        "ring_generator_order": "c,rho,p_ij lex(i,j),q_ij lex(i,j), all i,j in the declared support rectangles",
+        "coefficient_field": "QQ",
+        "ideal": "all gamma,pi coefficients of J(P,Q)-c*gamma^ell; c*rho-1",
+        "localization": "c is invertible through rho; source b is invertible through beta",
+        "exact_pi_degrees_or_monicity_imposed": false,
+        "support_completeness": "rectangles enlarge the full substituted supports; no inherited decoration is identified"
+      },
+      "source_ring_generator_order": "b,beta,e,a_0,...,a_(v-1),f_rs lex(r,s) with r+s<=n,g_rs lex(r,s) with r+s<=m",
+      "source_chart_kind": "NEW_NECESSARY_OVERAPPROXIMATION; no existing terminal coefficient chart is identified"
+    },
+    "complementary_source_branch": {
+      "hypothesis": "delta_star_(s-1) < 5/2",
+      "status": "UNASSIGNED_SPLIT_OBLIGATION",
+      "reason": "Moh Proposition 6.4 automatic radius applies only to u_s=1; every cohort row has u_s>=2"
+    },
+    "source_emptiness_from_this_atlas": false
+  },
+  {
+    "row_key": "(144, 120, (132, 138, 142), ((2, 5), (3, 5), (4, 4)))",
+    "source": {
+      "n": 144,
+      "m": 120,
+      "s": 4,
+      "M2_to_Ms": [
+        132,
+        138,
+        142
+      ],
+      "V": {
+        "2": 5,
+        "3": 5,
+        "4": 4
+      },
+      "d": {
+        "1": 144,
+        "2": 24,
+        "3": 12,
+        "4": 6,
+        "5": 2
+      },
+      "delta": {
+        "1": "25/36",
+        "2": "1/2",
+        "3": "1/3",
+        "4": "-1"
+      },
+      "u_s": 2,
+      "v_s": 4,
+      "d_s": 6
+    },
+    "conditional_descendant": {
+      "coarse_key": [
+        48,
+        40,
+        1,
+        5
+      ],
+      "n_prime": 48,
+      "m_prime": 40,
+      "ell": 1,
+      "M_prime_including_M1": [
+        -40,
+        44,
+        46
+      ],
+      "V_prime": {
+        "2": 5,
+        "3": 5
+      },
+      "height": 3,
+      "terminal_anchor": "1",
+      "terminal_radius_if_inherited_formula_applies": "-2"
+    },
+    "literal_wedge_k1": {
+      "status": "UNASSIGNED",
+      "reason": "NO_PROVED_NECESSARY_FORWARD_WEDGE_SUPPORT_PULLBACK",
+      "additional_exponent_mismatch": false,
+      "arithmetic_exponent_candidate_only": true
+    },
+    "licensed_radius_branch": {
+      "hypothesis": "delta_star_(s-1) >= 4/2",
+      "source": "Moh 1983 printed p.197 Proposition 6.3; printed p.198 proof",
+      "status": "ASSIGNED_CONDITIONAL_BROAD_MONOMIAL_RECEIVER",
+      "map_schema": "COEFFICIENT_EXTRACTION_NEGATIVE_LAURENT_ROWS_V1",
+      "A_gamma_exponents": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "source_substitution": {
+        "X": "beta*(gamma^(-2)-e-A(gamma)-pi*gamma^4)",
+        "Y": "gamma^(-2)",
+        "localization_row": "b*beta-1"
+      },
+      "receiver_support_caps": {
+        "P_gamma_degree": 576,
+        "P_pi_degree": 48,
+        "Q_gamma_degree": 480,
+        "Q_pi_degree": 40,
+        "exact_pi_degrees_or_monicity_imposed": false
+      },
+      "receiver_localization": "c*rho-1",
+      "map_generator_images": {
+        "p_ij": "[gamma^i*pi^j] F(X(gamma,pi),Y(gamma,pi))",
+        "q_ij": "[gamma^i*pi^j] G(X(gamma,pi),Y(gamma,pi))",
+        "c": "-2*beta",
+        "rho": "-b/2"
+      },
+      "source_necessary_rows": [
+        "b*beta-1",
+        "all coefficient rows of J_XY(F,G)-1",
+        "all negative-gamma Laurent coefficient rows of both substituted polynomials",
+        "all coefficient rows above pi-degree 48 for F and 40 for G"
+      ],
+      "receiver_generator_pullback": "chain rule plus explicit negative/high Laurent coefficient cofactors; not invariant matching",
+      "receiver_emptiness": "NONEMPTY",
+      "receiver_nonempty_control": {
+        "P": "pi",
+        "Q": "pi+gamma^2",
+        "c": -2,
+        "rho": "-1/2"
+      },
+      "receiver_common_coarse_key": [
+        48,
+        40,
+        1,
+        5
+      ],
+      "receiver_common_support_caps": {
+        "P_gamma_degree": 576,
+        "Q_gamma_degree": 480,
+        "P_pi_degree": 48,
+        "Q_pi_degree": 40,
+        "ell": 1,
+        "ring_generator_order": "c,rho,p_ij lex(i,j),q_ij lex(i,j), all i,j in the declared support rectangles",
+        "coefficient_field": "QQ",
+        "ideal": "all gamma,pi coefficients of J(P,Q)-c*gamma^ell; c*rho-1",
+        "localization": "c is invertible through rho; source b is invertible through beta",
+        "exact_pi_degrees_or_monicity_imposed": false,
+        "support_completeness": "rectangles enlarge the full substituted supports; no inherited decoration is identified"
+      },
+      "source_ring_generator_order": "b,beta,e,a_0,...,a_(v-1),f_rs lex(r,s) with r+s<=n,g_rs lex(r,s) with r+s<=m",
+      "source_chart_kind": "NEW_NECESSARY_OVERAPPROXIMATION; no existing terminal coefficient chart is identified"
+    },
+    "complementary_source_branch": {
+      "hypothesis": "delta_star_(s-1) < 4/2",
+      "status": "UNASSIGNED_SPLIT_OBLIGATION",
+      "reason": "Moh Proposition 6.4 automatic radius applies only to u_s=1; every cohort row has u_s>=2"
+    },
+    "source_emptiness_from_this_atlas": false
+  }
+]

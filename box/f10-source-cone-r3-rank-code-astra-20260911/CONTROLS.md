@@ -1,0 +1,11 @@
+# Exactly one prospective semantic control — SPEC / NOT_RUN
+
+Prerequisite: an actually qualified baseline and positively checked inverse certificate at the one registered place. No such objects exist in this task. No mutator or fixture is authored or executed.
+
+Select inverse[0][0][0], the constant-coordinate residue string of W_00. Replace its residue a by (a+1) modulo p, as a canonical string, leaving fixed-f vector length and every other semantic field unchanged. Preserve canonical serialization. Freeze the changed certificate under a different actual SHA and have ROOT issue the check authorization for that SHA. An old certificate hash is not a semantic control. The new whole bytes must differ; subtracting one modulo p and restoring the old coordinate must reproduce the entire original canonical byte string.
+
+The perturbed matrix is W+E_00. Its product defect is M E_00. This has column zero equal to column zero of M, and every other column zero. Since M is invertible over the validated residue FIELD, column zero of M is nonzero. Thus at least one of the full 88,209 checked positions differs from I. This is true also at p=2 and with residue degree greater than one; the injected constant 1 is not zero. A witness matrix with a zero first column would not have passed the positive check.
+
+Required rejection: NORMAL_EXIT with code 2, empty stdout, no receipt, exact stderr `CHECK FAILED: full inverse identity\n`. Authentication, parse, old-hash, place, denominator, resource or partial-write rejection is NOT a successful control. Byte mutation, restoration, frozen source/native/input pins, exact command/exit/streams, quiet collection and directory/durable custody must all be independently checked in a future registered runtime. No control is run here; no success is asserted.
+
+Manual perimeter controls, not extra fixtures: (i) over a product characteristic-zero base, rank at one residue component need not imply rank on another, so the accepted number-field premise is essential; (ii) modular solvability of a selected right-hand side with deficient row rank is not a full-row-rank witness; (iii) a denominator divisible by p blocks this selected dense model, even if a different algebraic expression might have a good local reduction. These do not authorize more experiments or turn any failed test into a source point.

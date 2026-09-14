@@ -1,0 +1,30 @@
+Sep 12 23:11:48 ip-172-30-0-143 systemd[1]: Starting jc2-mixed-v2-install-20260912.service - /usr/bin/bash /home/ubuntu/jc2-mixed-v2-stage-20260912/INSTALL.sh i-0e074c341fc759521...
+Sep 12 23:11:48 ip-172-30-0-143 systemd[1]: Started jc2-mixed-v2-install-20260912.service - /usr/bin/bash /home/ubuntu/jc2-mixed-v2-stage-20260912/INSTALL.sh i-0e074c341fc759521.
+Sep 12 23:12:06 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-install-20260912.service: Deactivated successfully.
+Sep 12 23:12:14 ip-172-30-0-143 systemd[1]: Starting jc2-mixed-v2-native-20260912.service - /usr/bin/bash /opt/jc2-mixed-20260912/meta/native-metadata.actual.sh...
+Sep 12 23:12:14 ip-172-30-0-143 systemd[1]: Started jc2-mixed-v2-native-20260912.service - /usr/bin/bash /opt/jc2-mixed-20260912/meta/native-metadata.actual.sh.
+Sep 12 23:12:58 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-native-20260912.service: Deactivated successfully.
+Sep 12 23:12:58 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-native-20260912.service: Consumed 32.663s CPU time, 52.8M memory peak, 0B memory swap peak.
+Sep 12 23:16:01 ip-172-30-0-143 systemd[1]: Starting jc2-mixed-v2-assembly-20260912.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/native_records.py --raw /opt/jc2-mixed-20260912/prep/native.stdout --raw-sha256 36a939959d7f0fadbcae02dbb7572acd0c05aa33c762ed2915de80cf3b8940e3 --facts /opt/jc2-mixed-20260912/meta/facts.json --facts-sha256 80a34cf019920fce26725f700dd5ab82ea94bab0fbd65c9f1f5a978107acfa43 --out /opt/jc2-mixed-20260912/prep/assembled...
+Sep 12 23:16:01 ip-172-30-0-143 systemd[1]: Started jc2-mixed-v2-assembly-20260912.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/native_records.py --raw /opt/jc2-mixed-20260912/prep/native.stdout --raw-sha256 36a939959d7f0fadbcae02dbb7572acd0c05aa33c762ed2915de80cf3b8940e3 --facts /opt/jc2-mixed-20260912/meta/facts.json --facts-sha256 80a34cf019920fce26725f700dd5ab82ea94bab0fbd65c9f1f5a978107acfa43 --out /opt/jc2-mixed-20260912/prep/assembled.
+Sep 12 23:16:01 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-assembly-20260912.service: Deactivated successfully.
+Sep 12 23:18:21 ip-172-30-0-143 systemd[1]: Starting jc2-mixed-v2-inspect-20260912.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/inspect_native.py...
+Sep 12 23:18:21 ip-172-30-0-143 systemd[1]: Started jc2-mixed-v2-inspect-20260912.service - /usr/bin/python3.12 -I -S -B /opt/jc2-mixed-20260912/meta/inspect_native.py.
+Sep 12 23:18:21 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-inspect-20260912.service: Deactivated successfully.
+Sep 12 23:18:47 ip-172-30-0-143 systemd[1]: Starting jc2-mixed-v2-imports-20260912.service - /usr/bin/python3.12 -E -s -S -B /opt/jc2-mixed-20260912/meta/inspect_imports.py...
+Sep 12 23:18:47 ip-172-30-0-143 systemd[1]: Started jc2-mixed-v2-imports-20260912.service - /usr/bin/python3.12 -E -s -S -B /opt/jc2-mixed-20260912/meta/inspect_imports.py.
+Sep 12 23:18:48 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-imports-20260912.service: Deactivated successfully.
+Sep 12 23:24:55 ip-172-30-0-143 systemd[1]: Started jc2-mixed-v2-qual-term.service - /usr/bin/systemctl kill --kill-whom=all --signal=TERM jc2-mixed-v2-native-20260912.service jc2-mixed-v2-assembly-20260912.service jc2-mixed-v2-inspect-20260912.service jc2-mixed-v2-imports-20260912.service.
+Sep 12 23:24:55 ip-172-30-0-143 systemctl[23063]: Failed to kill unit jc2-mixed-v2-native-20260912.service: Unit jc2-mixed-v2-native-20260912.service not loaded.
+Sep 12 23:24:55 ip-172-30-0-143 systemctl[23063]: Failed to kill unit jc2-mixed-v2-assembly-20260912.service: Unit jc2-mixed-v2-assembly-20260912.service not loaded.
+Sep 12 23:24:55 ip-172-30-0-143 systemctl[23063]: Failed to kill unit jc2-mixed-v2-inspect-20260912.service: Unit jc2-mixed-v2-inspect-20260912.service not loaded.
+Sep 12 23:24:55 ip-172-30-0-143 systemctl[23063]: Failed to kill unit jc2-mixed-v2-imports-20260912.service: Unit jc2-mixed-v2-imports-20260912.service not loaded.
+Sep 12 23:24:55 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-qual-term.service: Main process exited, code=exited, status=1/FAILURE
+Sep 12 23:24:55 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-qual-term.service: Failed with result 'exit-code'.
+Sep 12 23:25:00 ip-172-30-0-143 systemd[1]: Started jc2-mixed-v2-qual-kill.service - /usr/bin/systemctl kill --kill-whom=all --signal=KILL jc2-mixed-v2-native-20260912.service jc2-mixed-v2-assembly-20260912.service jc2-mixed-v2-inspect-20260912.service jc2-mixed-v2-imports-20260912.service.
+Sep 12 23:25:00 ip-172-30-0-143 systemctl[23065]: Failed to kill unit jc2-mixed-v2-native-20260912.service: Unit jc2-mixed-v2-native-20260912.service not loaded.
+Sep 12 23:25:00 ip-172-30-0-143 systemctl[23065]: Failed to kill unit jc2-mixed-v2-assembly-20260912.service: Unit jc2-mixed-v2-assembly-20260912.service not loaded.
+Sep 12 23:25:00 ip-172-30-0-143 systemctl[23065]: Failed to kill unit jc2-mixed-v2-inspect-20260912.service: Unit jc2-mixed-v2-inspect-20260912.service not loaded.
+Sep 12 23:25:00 ip-172-30-0-143 systemctl[23065]: Failed to kill unit jc2-mixed-v2-imports-20260912.service: Unit jc2-mixed-v2-imports-20260912.service not loaded.
+Sep 12 23:25:00 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-qual-kill.service: Main process exited, code=exited, status=1/FAILURE
+Sep 12 23:25:00 ip-172-30-0-143 systemd[1]: jc2-mixed-v2-qual-kill.service: Failed with result 'exit-code'.

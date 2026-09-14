@@ -1,0 +1,464 @@
+                                                 Counterexamples to the xz-Conjecture and the Mathieu
+                                                                Conjecture for SU (2)
+
+                                                                                      Christopher D. Long
+                                                                                      galizur@gmail.com
+
+                                                                                            July 21, 2026
+
+
+                                                                                                  Abstract
+arXiv:2607.19012v1 [math.GR] 21 Jul 2026
+
+
+
+
+                                                   Let                         Z 1Z
+                                                                                                   dz
+                                                                                                                  h ∈ C[x, z, z −1 ] .
+                                                                                                                                    
+                                                                    I(h) =              h(x, z)        dx
+                                                                                0   T             2πiz
+                                                We give the three-term Laurent polynomial
+
+                                                                                f (x, z) = (1 − z −1 ) (1 − x) + xz
+                                                                                                                          
+
+
+                                                for which
+                                                                                                          (−1)n−1
+                                                                   I(f n ) = 0,         I(z −1 f n ) =            ̸= 0        (n ≥ 1).
+                                                                                                           n+1
+                                                Since Sp(f ) = {−1, 0, 1}, this disproves the xz-conjecture already with one interval variable
+                                                and one torus variable, and it also shows that ker I is not a Mathieu–Zhao subspace. Padding
+                                                gives counterexamples to every mixed case of the xz-conjecture. Writing the coordinate
+                                                functions on SU (2) as                             
+                                                                                               a c
+                                                                                         g=            ,
+                                                                                               b d
+                                                the same example lifts, through the integration formula of Müger and Tuset, to the regular
+                                                functions
+                                                                             F = (1 + c)(ad + b),    G = −c,
+                                                which satisfy
+                                                                                                                         (−1)n−1
+                                                                   Z                              Z
+                                                                               n
+                                                                              F dg = 0,                     F n G dg =           ̸= 0
+                                                                     SU (2)                        SU (2)                 n+1
+                                                for every n ≥ 1. Thus the Mathieu conjecture for SU (2) is false.
+
+                                           2020 Mathematics Subject Classification. Primary 22E46; Secondary 43A05, 13A50,
+                                           14R15.
+                                           Keywords. Mathieu conjecture, SU (2), xz-conjecture, Laurent polynomial, Haar integral,
+                                           Mathieu–Zhao subspace, Jacobian Conjecture.
+
+
+
+
+                                                                                                      1
+1      Introduction
+Let K be a compact connected Lie group with normalized Haar measure dg. Mathieu conjectured
+that if f and g are complex-valued K-finite functions and
+                                          Z
+                                              f (k)n dk = 0             (n ≥ 1),
+                                          K
+
+then                                           Z
+                                                     f (k)n g(k) dk = 0
+                                                 K
+for all sufficiently large n [6]. Duistermaat and van der Kallen proved the conjecture for compact
+connected abelian groups [4]. Dings and Koelink studied the first nonabelian case K = SU (2),
+proving the conjecture for several restricted classes and reducing the general problem to a
+support conjecture for matrix coefficients [2].
+    Müger and Tuset subsequently gave an abelian reduction of the SU (2) problem [7]. For
+integers k, l ≥ 0, an admissible function is a polynomial
+
+                                   h ∈ C[x1 , . . . , xl , z1 , z1−1 , . . . , zk , zk−1 ],
+
+written as                                X
+                              h(x, z) =            cm (x)z m ,         cm ∈ C[x1 , . . . , xl ].
+                                          m∈Zk
+Its torus spectrum is
+                                          Sp(h) = {m ∈ Zk : cm ̸= 0}.
+The xz-conjecture asserts that
+                Z         Z
+                               h(x, z)n d× z dx = 0          (n ≥ 1)         =⇒        0∈
+                                                                                        / conv Sp(h),   (1)
+                 [0,1]l   Tk
+
+where each torus is equipped with normalized Haar measure. The cases l = 0 and k = 0 were
+known, while Müger and Tuset recorded that, to the best of their knowledge, every genuinely
+mixed case was open, including k = l = 1 [7, Remark 2.4]. They also proved that the case
+(k, l) = (2, 1) would imply the Mathieu conjecture for SU (2) [7, Theorem 2.5].
+     Mathieu proved that his conjecture for all compact connected Lie groups implies Keller’s
+Jacobian Conjecture [6, 5]. On July 20, 2026, Levent Alpöge announced an explicit polynomial
+map in three variables with constant nonzero Jacobian determinant and a fiber containing
+three distinct points [1]. The determinant and collision identities are direct algebraic checks,
+so the map disproves the Jacobian Conjecture in dimension three and, by adjoining identity
+coordinates, in every dimension at least three. It follows that Mathieu’s conjecture cannot hold
+for all compact connected Lie groups. This argument does not determine whether the conjecture
+holds for SU (2), nor does it decide the separate xz(1, 1) problem. No part of the proofs below
+depends on the Jacobian counterexample. The examples below settle both questions directly.
+     Our basic Laurent polynomial is
+
+                f (x, z) = (1 − z −1 ) (1 − x) + xz = xz + (1 − 2x) − (1 − x)z −1 .
+                                                                 
+                                                                                                        (2)
+
+Its spectrum is the three-point affine circuit
+
+                                                Sp(f ) = {−1, 0, 1},
+
+                                                              2
+so 0 ∈ conv Sp(f ). Nevertheless, all pure moments vanish. More strongly, the fixed multiplier
+z −1 gives a nonzero mixed moment for every positive exponent.
+    The mechanism is the elementary beta-binomial identity
+                                                !Z
+                                            n            1                                 1
+                                                             xk (1 − x)n−k dx =               .                  (3)
+                                            k        0                                    n+1
+
+It makes every Bernstein stratum contribute with the same normalized weight; the remaining
+coefficients form an alternating binomial row and cancel exactly.
+
+
+2    A counterexample to xz(1, 1)
+Equip T = {z ∈ C : |z| = 1} with normalized Haar measure
+                                                                             dz
+                                                               d× z =            .
+                                                                            2πiz
+For h ∈ C[x, z, z −1 ], put
+                                       Z 1Z                                        Z 1
+                         I(h) =                      h(x, z) d× z dx =                   CTz h(x, z) dx.         (4)
+                                           0     T                                   0
+
+Theorem 2.1. Let f be the polynomial in (2). Then, for every integer n ≥ 1,
+
+                                                                                         (−1)n−1
+                                   I(f n ) = 0,                       I(z −1 f n ) =             .               (5)
+                                                                                          n+1
+Consequently, the xz-conjecture is false for (k, l) = (1, 1), and ker I is not a Mathieu–Zhao
+subspace of C[x, z, z −1 ].
+Proof. By the binomial theorem,
+                                                                      n
+                                                                               !
+                                                             n       X      n k
+                                  (1 − x) + xz                    =            x (1 − x)n−k z k .
+                                                                      k=0
+                                                                             k
+
+The beta integral gives
+                          Z 1
+                                                                        k!(n − k)!       1
+                                  xk (1 − x)n−k dx =                               =           .
+                              0                                          (n + 1)!    (n + 1) nk
+
+Therefore                             Z 1                                                 n
+                                                                      n             1 X
+                                               (1 − x) + xz                dx =              zk .                (6)
+                                       0                                           n + 1 k=0
+Using (2), (4), and (6), we obtain
+                                                     n
+                                                              "                           #
+                                1
+                                   CTz (1 − z −1 )n
+                                                    X
+                              n
+                       I(f ) =                          zk
+                               n+1                  k=0
+                                                                                                       !
+                                                                   n                              n
+                                                                                     !
+                                       1               n −j       X                              X
+                                  =       CTz  (−1)j   z                                              zk  .
+                                      n+1       j=0
+                                                       j                                          k=0
+
+
+
+                                                                        3
+A constant term occurs exactly when j = k, so
+                                         n
+                                                               !
+                              n     1 X          n                     (1 − 1)n
+                          I(f ) =          (−1)j                   =            = 0.
+                                  n + 1 j=0      j                      n+1
+
+   For the mixed moment, the constant-term condition in
+                                                               n
+                                          z −1 (1 − z −1 )n
+                                                               X
+                                                                    zk
+                                                              k=0
+
+is −1 − j + k = 0, or k = j + 1. Hence
+
+                                                1 n−1
+                                                                            !
+                                        −1 n
+                                                    X         n
+                                  I(z    f )=           (−1)j
+                                              n + 1 j=0       j
+                                                   (−1)n−1
+                                               =           ,
+                                                    n+1
+where the last equality follows by subtracting the final term from nj=0 (−1)j nj = 0.
+                                                                                P        
+
+    Since 0 ∈ conv Sp(f ) while all pure moments vanish, (1) fails for (1, 1). Finally, f n ∈ ker I
+for all n ≥ 1, but z −1 f n ∈
+                            / ker I for every n ≥ 1. This is exactly the failure of the Mathieu–Zhao
+property.
+
+Corollary 2.2. The xz-conjecture is false for every pair (k, l) with k ≥ 1 and l ≥ 1. For every
+such pair, the kernel of the corresponding product-integration functional is not a Mathieu–Zhao
+subspace.
+Proof. For larger k and l, use the same polynomial f (x1 , z1 ) and ignore the remaining variables.
+The product integrals reduce to those in Theorem 2.1, and the multiplier z1−1 gives the same
+failure of eventual mixed-moment vanishing.
+
+Remark 2.3 (The generating function is constant). For a Laurent trinomial az −1 + b + cz, one
+has the formal identity
+                                          1                               1
+                        CTz                                 =p                       ,
+                              1 − t(az −1 + b + cz)                (1 − bt)2 − 4act2
+with the square root having constant term 1. For the polynomial f in (2),
+                            a = −(1 − x),              b = 1 − 2x,          c = x,
+and the radicand becomes
+                         (1 − t(1 − 2x))2 + 4t2 x(1 − x) = (1 − t)2 + 4tx.
+Consequently, as a formal power series, or analytically for |t| sufficiently small,
+                                                  Z 1
+                              X                                 dx
+                         1+         I(f n )tn =         p
+                              n≥1                  0        (1 − t)2 + 4tx
+                                                   p                p
+                                         (1 + t)2 − (1 − t)2
+                                   =                         = 1.
+                                                  2t
+Thus the moment generating function is identically constant; the vanishing is not merely
+asymptotic or sporadic.
+
+                                                        4
+3      A family of circuit counterexamples
+The preceding example belongs to a simple family supported on symmetric three-point circuits.
+
+Proposition 3.1. Let d ∈ Z≥1 and let λ, µ ∈ C× . Define
+
+                         fd,λ,µ (x, z) = λ(1 − µz −d ) (1 − x) + xµ−1 z d .
+                                                                                       
+                                                                                               (7)
+
+Then
+                                       Sp(fd,λ,µ ) = {−d, 0, d},
+and, for every n ≥ 1,
+                                         n
+                                      I(fd,λ,µ ) = 0,                                          (8)
+                                                        (−1)n−1 λn µ−1
+                                   I(z −d fd,λ,µ
+                                           n
+                                                 )=                            .               (9)
+                                                              n+1
+Proof. Expanding (7) gives
+
+                         fd,λ,µ = λµ−1 xz d + λ(1 − 2x) − λµ(1 − x)z −d ,
+
+so its spectrum is {−d, 0, d}. The same beta calculation as in (6) gives
+                        Z 1                                              n
+                                                   n               1 X
+                              (1 − x) + xµ−1 z d        dx =                µ−k z dk .
+                          0                                       n + 1 k=0
+
+Multiplication by
+                                                        n
+                                                                           !
+                               n          −d n      n
+                                                        X
+                                                                      j   n j −dj
+                              λ (1 − µz     ) =λ            (−1)            µ z
+                                                        j=0
+                                                                          j
+
+shows that the pure constant term is
+                                             n
+                                                                  !
+                                       λn X          n
+                                               (−1)j                  = 0.
+                                      n + 1 j=0      j
+
+After multiplication by z −d , the constant-term condition is again k = j + 1, and the powers of µ
+contribute µj µ−(j+1) = µ−1 . Thus
+                                                    n µ−1 n−1
+                                                                                   !
+                                                λ                              n
+                               I(z −d fd,λ,µ
+                                                          X
+                                       n                                   j
+                                             )=                    (−1)          ,
+                                                  n + 1 j=0                    j
+
+which is (9).
+
+
+4      The lift to SU (2)
+Write an element of SU (2) and its coordinate functions as
+                                                              !
+                                                      a c
+                                             g=           .
+                                                      b d
+
+                                                      5
+Thus c = −b, d = a, and ad − bc = 1 on the group. A regular function on SU (2) is the restriction
+of a polynomial in C[a, b, c, d]; such functions are SU (2)-finite. We use normalized Haar measure
+dg.
+    Müger and Tuset prove the following integration formula [7, Lemma 2.1]. For completeness,
+we include a monomial verification. Define
+
+                                 β(z1 , z2 , x) = (1 − x)z2 , xz1 , −z1−1 , z2−1 .
+                                                                                          
+                                                                                                       (10)
+
+Lemma 4.1 (The SU (2) integration formula). For every P ∈ C[a, b, c, d],
+                                                       Z 1Z
+                                                                                   dz1     dz2
+                  Z
+                            P (a, b, c, d) dg =                   P β(z1 , z2 , x)               dx.   (11)
+                   SU (2)                               0    T2                      2πiz1 2πiz2
+
+Proof. By linearity it is enough to take
+
+                                         P = ar bs ct du ,         r, s, t, u ∈ Z≥0 .
+
+The standard polar description of normalized Haar measure on SU (2) writes
+                   √                 √            √            √
+               a = 1 − x z2 , b = x z1 , c = − x z1−1 , d = 1 − x z2−1 ,
+
+where x is uniformly distributed on [0, 1] and z1 , z2 are independently Haar distributed on T.
+The two torus integrals therefore force r = u and s = t, and the remaining beta integral gives
+                                                                                 r! s!
+                             Z
+                                          ar bs ct du dg = (−1)s δr,u δs,t                .            (12)
+                                 SU (2)                                      (r + s + 1)!
+
+On the right-hand side of (11), the same monomial becomes
+
+                                                (−1)t (1 − x)r xs z1s−t z2r−u .
+
+The torus integrals again force r = u and s = t, after which
+                                          Z 1
+                                                                         r! s!
+                                                (1 − x)r xs dx =                  .
+                                           0                         (r + s + 1)!
+
+Thus both sides agree with (12), proving the formula.
+
+Theorem 4.2. Let λ, µ ∈ C× and define regular functions on SU (2) by
+
+                                 Fλ,µ = λ(1 + µc)(ad + µ−1 b),                    G = −c.              (13)
+
+Then, for every integer n ≥ 1,
+                                     Z
+                                                 Fλ,µ (g)n dg = 0,                                     (14)
+                                      SU (2)
+                                                                     (−1)n−1 λn µ−1
+                             Z
+                                          Fλ,µ (g)n G(g) dg =                       ̸= 0.              (15)
+                              SU (2)                                     n+1
+
+In particular, the Mathieu conjecture for SU (2) is false.
+
+
+                                                              6
+Proof. Under the substitution (10),
+
+                   1 + µc 7−→ 1 − µz1−1 ,           ad + µ−1 b 7−→ (1 − x) + xµ−1 z1 ,
+
+and
+                                               G = −c 7−→ z1−1 .
+Thus Fλ,µ maps precisely to the function f1,λ,µ (x, z1 ) of Proposition 3.1, while G maps to z1−1 .
+These expressions are independent of z2 , so integration over the second torus contributes the
+factor 1. Equations (14) and (15) now follow from (11), (8), and (9).
+    The hypothesis in Mathieu’s conjecture holds for Fλ,µ , but its predicted conclusion fails
+for the fixed regular function G at every positive exponent. Hence the conjecture is false for
+SU (2).
+
+Remark 4.3. Mathieu’s implication from his compact-group conjecture to the Jacobian Conjecture
+is one-way. Consequently, Theorem 4.2 does not by itself imply that the two-dimensional Jacobian
+Conjecture is false.
+    Taking λ = µ = 1 gives the particularly small pair announced in the abstract:
+
+                                F = (1 + c)(ad + b),               G = −c.
+
+The failure of eventual vanishing is maximal in the sense that the mixed moment is nonzero for
+every n ≥ 1.
+
+
+5     The cancellation mechanism
+The counterexamples arise from an exact interaction between the binomial expansion and the
+beta integral. For each 0 ≤ k ≤ n,
+                                     !Z
+                                 n         1                         1
+                                               xk (1 − x)n−k dx =       .
+                                 k     0                            n+1
+
+Thus integrating the Bernstein expansion of ((1 − x) + xz)n removes the binomial coefficient
+completely and leaves the geometric sum
+                                       1
+                                          (1 + z + · · · + z n ).
+                                      n+1
+
+The factor (1 − z −1 )n then contributes the alternating binomial row. The pure moment is
+the full sum (1 − 1)n , while multiplication by z −1 removes the final term and leaves (−1)n−1 .
+This explains both the all-moment cancellation and the persistent mixed moments without any
+limiting argument.
+    The examples were found during work on the Gaussian Moments Conjecture of Derksen, van
+den Essen, and Zhao [3]. The contrast is instructive: Gaussian radial moments carry factorial
+weights, whereas the beta integral in (3) exactly cancels the multinomial coefficient and permits
+the alternating cancellation above. No result concerning Gaussian moments is needed for the
+proofs in this paper.
+
+
+
+                                                      7
+AI provenance and author responsibility
+The xz(1, 1) counterexample and its lift to SU (2) were discovered by ChatGPT 5.6 Sol Pro during
+an interactive research session with the author exploring the Gaussian Moments Conjecture.
+The system also supplied the beta-binomial proof, identified the family in Proposition 3.1, and
+assisted with drafting and algebraic checks. The author independently verified the displayed
+identities and bears full responsibility for the mathematics, the exposition, and every claim in
+this manuscript.
+
+
+References
+ [1] L. Alpöge, Post announcing an explicit counterexample to the Jacobian Conjecture, X, July
+     20, 2026, https://x.com/__alpoge__/status/2079028340955197566 (accessed July 21,
+     2026).
+
+ [2] T. Dings and E. Koelink, On the Mathieu conjecture for SU (2), Indag. Math. (N.S.)
+     26 (2015), no. 1, 219–224. https://doi.org/10.1016/j.indag.2014.10.001. Preprint:
+     https://arxiv.org/abs/1404.4215.
+
+ [3] H. Derksen, A. van den Essen, and W. Zhao, The Gaussian Moments Conjecture and the
+     Jacobian Conjecture, Israel J. Math. 219 (2017), no. 2, 917–928. https://doi.org/10.
+     1007/s11856-017-1502-2. Preprint: https://arxiv.org/abs/1506.05192.
+
+ [4] J. J. Duistermaat and W. van der Kallen, Constant terms in powers of a Laurent polynomial,
+     Indag. Math. (N.S.) 9 (1998), no. 2, 221–231. https://doi.org/10.1016/S0019-3577(98)
+     80020-7.
+
+ [5] O.-H. Keller, Ganze Cremona-Transformationen, Monatsh. Math. Phys. 47 (1939), 299–306.
+     https://doi.org/10.1007/BF01695502.
+
+ [6] O. Mathieu, Some conjectures about invariant theory and their applications, in Algèbre
+     non commutative, groupes quantiques et invariants (Reims, 1995), Sémin. Congr., vol. 2,
+     Soc. Math. France, Paris, 1997, pp. 263–279. https://smf.emath.fr/publications/
+     some-conjectures-about-invariant-theory-and-their-applications.
+
+ [7] M. Müger and L. Tuset, The Mathieu conjecture for SU (2) reduced to an abelian conjecture,
+     Indag. Math. (N.S.) 35 (2024), no. 1, 114–118. https://doi.org/10.1016/j.indag.2023.
+     10.001. Preprint: https://arxiv.org/abs/2210.06582.
+
+
+
+
+                                               8
+

@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The lane is complete at 12:32:33Z, eleven minutes before the 12:43:38Z hard stop. Nothing further is needed from tools.
+
+**Outcome.** The static review is published at `xmodel/f10-r1-complete-builder-gate-fable5-20260909.md` (14188 bytes, full SHA-256 481d2a2e…), with input pins, report hash and lane times in `box/f10-r1-complete-builder-gate-fable5-20260909/`. All eleven charged hashes matched before the whole reads. No mathematical subprocess ran, nothing was imported or compiled, and the frozen packet was not patched.
+
+**Verdicts by group**
+
+- **A, builder: CONFIRMED (static).** Variable order, the five forcing equations, all eight delta coefficients, both residuals and the a/b/guard extraction match the accepted 16r algebra term for term. Resonant slots raise on nonzero forcing rather than dropping. All 20 row slots, including empty ones, are emitted. One cosmetic item: the resonance record stores a literal empty list rather than the computed slot.
+- **B, checker: CONFIRMED (static).** It rebuilds the full two-coordinate determinant from wires with a factored Delta, verifies forcings by diagonal subtraction, and expands the inverse substitution only for i<k. The i>=k skip is justified by S having z-order at least one, order two at u=0. Wire hygiene rejects floats, bools, negative or duplicate exponents and noncanonical rational strings. Two minor notes: malformed wires crash with parser exceptions instead of InvalidArtifact, and JSON booleans compare equal to 0/1 in the r/m/n and gauge checks.
+- **C, controls: preconditions CONFIRMED by hand, all seven controls DESIGNED, none PASS.** The lone −1 constant in E0 and in the guard, and the d0·S²/2 term in B4, all exist exactly as the mutations assume. The upper-coefficient mutation should first fail at the t³ row, not t⁶.
+- **D, execution boundary: code CONFIRMED as a metadata-only gate.** It rejects before any math import or allocation, matches the CAPRUN interface excerpt option for option, and forbids overwrite and stdin options. The interpreter is not a mandatory pin. Registration values, the admissibility file comparison, and the no-CAS dummy descendant regression remain root's responsibilities.
+- **E, scope: CONFIRMED, bounded.** The artifact's 4/7 are S-degree bounds; the source degrees are 112/196. I found no concrete missing applicable classical condition from memory. A runtime all-pass would establish exact representation only, never a point, unit or solve.
+
+**What remains** is entirely root's: registering an authority from the disabled template and running the seven modes on a capped worker. OPEN(S) RAISED: none. COLLISIONS: empty.
+DIVERT path=xmodel/f10-r1-complete-builder-gate-fable5-20260909.md status=CLEAN body_bytes=14188 body_sha256=481d2a2edb12855cbdfa11f1cc1d0d15d7933b039896612827a683c3d70a09d7

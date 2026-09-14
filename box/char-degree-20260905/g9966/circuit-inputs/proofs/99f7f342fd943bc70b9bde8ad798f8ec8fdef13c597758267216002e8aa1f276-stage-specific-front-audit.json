@@ -1,0 +1,61 @@
+{
+  "field": "Q",
+  "result": "PASS",
+  "engine_sha256": "440a70b7224dc892ac177778b3406506117388c058bb63cc4fefe56d1f5e6f20",
+  "actual_D1_substitution": [
+    9,
+    12,
+    13
+  ],
+  "B2_source_spec": [
+    65,
+    189,
+    583
+  ],
+  "W190_q_values": [
+    1,
+    4,
+    7,
+    10,
+    13,
+    16,
+    19,
+    22,
+    25,
+    28,
+    31
+  ],
+  "moment_order": 13,
+  "moment_matrix_rank": 11,
+  "stages": [
+    {
+      "stage": 0,
+      "D30_q25": "B2c_30_25",
+      "D31_q24": "0",
+      "D31_q25": "B2c_31_25",
+      "W190_nonzero_count": 11
+    },
+    {
+      "stage": 1,
+      "D30_q25": "0",
+      "D31_q24": "0",
+      "D31_q25": "B2c_31_25",
+      "W190_nonzero_count": 0
+    },
+    {
+      "stage": 7,
+      "D30_q25": "0",
+      "D31_q24": "0",
+      "D31_q25": "6*B2c_39_19 + 20*B2c_43_16 + 45*B2c_47_13 + 84*B2c_51_10 + 140*B2c_55_7 + 216*B2c_59_4 + 315*B2c_63_1",
+      "W190_nonzero_count": 0
+    },
+    {
+      "stage": 8,
+      "D30_q25": "0",
+      "D31_q24": "0",
+      "D31_q25": "6*B2c_39_19 + 20*B2c_43_16 + 45*B2c_47_13 + 84*B2c_51_10 + 140*B2c_55_7 + 216*B2c_59_4 + 315*B2c_63_1",
+      "W190_nonzero_count": 0
+    }
+  ],
+  "conclusion": "99 D<=30,C<=62 for stages>=1; stage0 keeps quartic D<=29,C<=60"
+}

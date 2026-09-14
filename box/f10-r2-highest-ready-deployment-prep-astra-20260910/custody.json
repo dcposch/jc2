@@ -1,0 +1,144 @@
+{
+  "schema": "offline-deployment-custody/v1",
+  "status": "TERMINAL_FINAL_VERIFIED",
+  "owner": "model_productivity",
+  "first_action_utc": "2026-09-10T16:51:57.650028560Z",
+  "current_inputs_checked_utc": "2026-09-10T17:03:49.726377546Z",
+  "hard_stop_utc": "2026-09-10T17:15:00Z",
+  "publication_reserve_utc": "2026-09-10T17:12:00Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_manifest_sha256": "da1831977d4ba87d8331fccd86bf73174a226937bb4f79c69757507d02b3cb64",
+  "report_sha256": "b1a5e27a9b92361477d7c1af0f3fc941d8167f6438b3194a895be3cc201175c4",
+  "expected_verify": "VERIFIED",
+  "owned_count": 9,
+  "owned_bytes_excluding_custody": 70968,
+  "owned": [
+    {
+      "path": "box/f10-r2-highest-ready-deployment-prep-astra-20260910/DISABLED-REGISTRATION.template.json",
+      "sha256": "a18e2f8d75433b90b6cc6a9ac76232789e41ffb5bd5a0135f4cc6b31f88addf9",
+      "bytes": 27805
+    },
+    {
+      "path": "box/f10-r2-highest-ready-deployment-prep-astra-20260910/INSTALL-INPUTS.template.json",
+      "sha256": "33352aad5d24f91189d782b0ba5fe98212ef86c86fc3013acfabd44060577da8",
+      "bytes": 6285
+    },
+    {
+      "path": "box/f10-r2-highest-ready-deployment-prep-astra-20260910/setup.template.sh",
+      "sha256": "cc68b8ec6a57d870742acbd110414bdfa535baa95453314aa6aabf704a70651b",
+      "bytes": 16764
+    },
+    {
+      "path": "box/f10-r2-highest-ready-deployment-prep-astra-20260910/native-metadata.template.sh",
+      "sha256": "e6d3c105e8e0c558356c7db891d9a8a6c5d09a758eef2dd3627ba30eb5923848",
+      "bytes": 3121
+    },
+    {
+      "path": "box/f10-r2-highest-ready-deployment-prep-astra-20260910/ROOT-FINALIZATION.md",
+      "sha256": "a549789ccfe7fe34807e90f79e816ff3a830aa4e8579e8f5c78aad67dcc8f1b7",
+      "bytes": 7269
+    },
+    {
+      "path": "box/f10-r2-highest-ready-deployment-prep-astra-20260910/READ-SCOPE.md",
+      "sha256": "f375f06096cd39edfbe6f3d449c6b7dd01fd3c439d0e52c9901819e6c724b15b",
+      "bytes": 2024
+    },
+    {
+      "path": "box/f10-r2-highest-ready-deployment-prep-astra-20260910/PINS.json",
+      "sha256": "6b801d0e44c8879332cbe148c9b06a272a4b6eddf5ed5e28702ba5ea233b9139",
+      "bytes": 2037
+    },
+    {
+      "path": "xmodel/f10-r2-highest-ready-deployment-prep-astra-20260910.md",
+      "sha256": "b1a5e27a9b92361477d7c1af0f3fc941d8167f6438b3194a895be3cc201175c4",
+      "bytes": 4967
+    },
+    {
+      "path": "xmodel/f10-r2-highest-ready-deployment-prep-astra-20260910.md.artifact.json",
+      "sha256": "da1831977d4ba87d8331fccd86bf73174a226937bb4f79c69757507d02b3cb64",
+      "bytes": 696
+    }
+  ],
+  "inputs_count": 8,
+  "inputs": [
+    {
+      "path": "box/f10-r2-highest-runtime-status-fix-astra-20260910/dispatch.py",
+      "sha256": "396dc3b42f082ffbc08516a3dd41528516e2e69e3994fc005b22b79b3a605927",
+      "bytes": 44384,
+      "read": "prior same-byte WHOLE reused"
+    },
+    {
+      "path": "box/f10-r2-highest-runtime-status-fix-astra-20260910/CONTRACT.md",
+      "sha256": "f0bfb025d5445f5cb16b48c29ff0d9aef909616216482c52973bd5c8f37f4318",
+      "bytes": 7393,
+      "read": "prior same-byte WHOLE reused"
+    },
+    {
+      "path": "xmodel/f10-r2-highest-status-fix-gate-fable5-20260910.md",
+      "sha256": "85ce5e9ab2067ae07033fca52e0c4d0c8853032133f9799d388d8d0745c24698",
+      "bytes": 13031,
+      "read": "fresh WHOLE"
+    },
+    {
+      "path": "xmodel/f10-r2-highest-modular-runtime-gate-fable5-20260910.md",
+      "sha256": "8358693287a2874f05b431ab0081c98db9461bdc6eaf06be33f40a2f83c72ca8",
+      "bytes": 21375,
+      "read": "prior same-byte WHOLE reused"
+    },
+    {
+      "path": "box/f10-r2-semantic-ready-deployment-prep-20260910/DISABLED-REGISTRATION.template.json",
+      "sha256": "4d4e63b6cc8ac84479a7b9e24e5fe4752ea3de52a0c8750483b139b5d3862bfd",
+      "bytes": 24505,
+      "read": "fresh WHOLE"
+    },
+    {
+      "path": "box/f10-r2-semantic-ready-deployment-prep-20260910/INSTALL-INPUTS.template.json",
+      "sha256": "7193f2884b0237d3847b8450bc3fbe226017d9840afbfa5baee2bb822db33c61",
+      "bytes": 4508,
+      "read": "fresh WHOLE"
+    },
+    {
+      "path": "box/f10-r2-semantic-ready-deployment-prep-20260910/setup.template.sh",
+      "sha256": "516332e722baeb271ef2d7401265b6cb9b87876af96773e657503c02407729f6",
+      "bytes": 14924,
+      "read": "fresh WHOLE"
+    },
+    {
+      "path": "box/f10-r2-semantic-ready-deployment-prep-20260910/native-metadata.template.sh",
+      "sha256": "e6d3c105e8e0c558356c7db891d9a8a6c5d09a758eef2dd3627ba30eb5923848",
+      "bytes": 3121,
+      "read": "fresh WHOLE"
+    }
+  ],
+  "documentary_checks": {
+    "all_input_prepost_pins_match": true,
+    "whole_read_scope": "3 same-byte prior WHOLE reuses; 5 fresh WHOLE inputs; documented clipping recovery and own unsealed draft replacement",
+    "own_whole_and_open_check_complete": true,
+    "new_canonical_open_count": 0,
+    "registration_enabled": false,
+    "command_count": 13,
+    "typed_root_holes": 4,
+    "install_roles": 21,
+    "unique_stage_names": 21,
+    "source_directory_counts": [
+      5,
+      3,
+      3
+    ],
+    "distinct_JC2_placeholders": 24,
+    "native_collector_byte_identical": true,
+    "setup_and_registration_whole_text_readback_exact": true
+  },
+  "scope": {
+    "execution": false,
+    "scientific_subprocess": false,
+    "baseline_access_or_hash": false,
+    "worker_or_network": false,
+    "source_edits": false,
+    "new_authority": false,
+    "actual_registration": false,
+    "pending_result_intake": false
+  },
+  "all_writers_idle_after_seal": true,
+  "custody_self_excluded": true
+}

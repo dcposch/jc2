@@ -1,0 +1,24 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate finished at 06:31 UTC, ahead of the 06:44 deadline. STOP/IDLE.
+
+**Verdict: CONFIRMED at the stated scope.** The charged theorem holds as written. For every arc of the odd moving-face source over K[[s]] with k(s) nonzero of finite order and centre at t₀ = −3, the necessary condition Δ₀ = γ − βα + 5α²/9 = 0 follows. It is a finite-arc necessity only. It is not a new guarded-source identity, not exceptional closure, not existence, and not a JC2 claim. The tuned α ≠ 0, Δ₀ = 0 stratum and the pure α = γ = 0 stratum remain open, exactly as the producer typed them.
+
+**Every step was replayed by hand and by my own controls:**
+- Scalar pivot, shear invariance of Δ₀, the K[R] centralizer via degree 5 and the non-fifth-power top, the odd remainder λz, the Bezout step with only scalar units inverted, and the domain cancellation to B_ℓ.
+- U support {p, p³, gp²} from degree, weight and parity alone, the 27u² + α nonvanishing, the two negative lift rows, U = qS, and the low coefficients −αq, −γq by origin-order bookkeeping.
+- The induction with target order 3m > m and the contradiction at ℓ = m from [g²p]R = 0.
+- The k ≡ 0 counter-control claims no guarded arc and transfers no squarefree lemma.
+
+**Named corrections, all on the producer checker, none on the mathematics:**
+- The low-A and low-B "obstruction" controls are literal tautologies. They never compute [p](a(R)S); the values −2 and −5 are hard-coded.
+- The tangent toy uses U = p³ + gp², which is not the ordinary kernel S, so it exercises no lift content.
+- Two gates (`-3<1` and the X₁ arithmetic) are trivial and should not count as evidence.
+- The producer checker was not run because its helper is absent from the frozen set. Its witness hash is unverified here.
+
+**Artifacts:**
+- Report at `xmodel/d125-exceptional-center-gate-fable5-20260907.md`, sealed. Body bytes 9534, SHA-256 `433da2bf…`, recomputed independently and matching.
+- Controls in `box/d125-exceptional-center-gate-fable5-20260907/gate_controls.py`. Ten stdlib gates, zero Assert nodes, byte-identical normal and -O witnesses. Six mutations fail at the named gate in both modes. Only R, S, cubic lifts and one degree-5 lift of R were expanded.
+- Input pins, own-artifact pins, report pin and run log are in the same box directory.
+
+No charge basis was declared since no exit-price claim is made.
+DIVERT path=xmodel/d125-exceptional-center-gate-fable5-20260907.md status=CLEAN_SEALED body_bytes=9534 body_sha256=433da2bf97ab8f7fc87567aab387b09a36130029f18fd17395c9567d1ac5d3b3

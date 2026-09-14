@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. Sealed submission at `xmodel/ideation-20260906T0000Z-opus5.md` (24,983 body bytes, in the 10–25 KB window).
+
+**Custody.** Manifest built by `awk` from the receipt's paired `_basename=`/`_sha256=` lines; `sha256sum -c` returned OK for all 12. `xmodel/ideation-20260906T0000Z-fable5.md` exists at the wake — I listed it with `ls` and did not open it. Writes: the report plus one 7.3 KB TSV in `box/ideation-20260906T0000Z/opus5/`; root still has 2.8 GB free.
+
+**What I answered.**
+
+**Q1 — the chart reduction is to eliminate `F`.** From Moh Prop 3.1's target `Q = Φ(F,G)` and `J(G,G)=0`, `J(Q,G) = Φ_u(F,G)·J(F,G)`. When `m₁ = m/gcd(n,m) = 2` — 44 of the 66 roster rows, including (99,66), D=108, and both Xu-margin-0 rows R009/R050 — `Φ_u` is linear in `u`, so `F = (bG + c − J(Q,G))/2` and the entire Keller row becomes the single identity `J(J(Q,G),G) = −2`. Verified in sympy on three explicit Keller pairs with symbolic `a,b,c,d,e₀`. It is a ~2× cut in coefficient count, not 70×; I say so rather than claiming it crosses the Gröbner wall. Two supporting proposals: a one-line Newton-polygon dichotomy at infinity (chart-free, no genus, no properness), and a weighted-socle gate that decides whether the augmented decision is even possible at weight 143/153 before more CPU is spent.
+
+**Q2 — Moh p.169 Prop 4.5's hypothesis `M_r = n−2`.** Computed on the roster: it holds on **66/66 parents** and **3/66 children** (48 satisfy only the unprinted ℓ-shifted form). That is the licence for the whole characteristic block, and descent does not preserve it. I also checked and *declined* the obvious alternative: `(n₁,m₁)` and the target-curve genus are parent-equal-child on 66/66, so they are descent-invariant and dead as a Q2 answer.
+
+**Q3 is weak and labelled so.** I found the local Galois route empty (`Disc_Y(C)(0) ≠ 0` makes the decomposition group trivial) and propose a ramification ledger on `deg D = 3N` instead. No theorem.
+
+Nothing was killed: `d_s | D_i` on 66/66 is a divisibility that could have failed and did not, and I report it as a passed check, not a screen. No CAS ran; four `OPEN[...]` entries carry their own refutation tests.
+DIVERT path=xmodel/ideation-20260906T0000Z-opus5.md status=DIVERTED body_bytes=24983 body_sha256=a7ee66808eb8688a568d9da98ec5840e9bb55fe0c76af21e6ac9852fb5cad89f overflow=xmodel/ideation-20260906T0000Z-opus5.overflow overflow_bytes=497 raw=xmodel/ideation-20260906T0000Z-opus5.raw.md raw_sha256=63f8edb438afddf734ac07475f7d5fb8d84cb191526c314e60efb331e06b6cf1 overflow_sha256=13eb9a89b6dd96c22c530958892ad1ef144ce2e58d701b9040a08cb8ea5aedd9
+post-BODY-END overflow diverted; charged body preserved

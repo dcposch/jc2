@@ -1,0 +1,95 @@
+{
+  "3": {
+    "actual_R_e_depth": 52,
+    "all_rows_exact_Q": true,
+    "ambient_e_depth": 195,
+    "constant_J_depth": 163,
+    "e_over_C": 1,
+    "full_matrix_shape": [
+      19,
+      17
+    ],
+    "lambda_over_C": "-243/455",
+    "leader_depth": 143,
+    "q_over_C": "(-243*C*pi**16/455 + 1296*C*pi**13/455 - 216*C*pi**10/35 + 48*C*pi**7/7 - 4*C*pi**4 + C*pi)/C",
+    "rank_Q": 17,
+    "selected_row_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17
+    ],
+    "square_determinant": "41788178432000"
+  },
+  "4": {
+    "actual_R_e_depth": 60,
+    "all_rows_exact_Q": true,
+    "ambient_e_depth": 213,
+    "constant_J_depth": 178,
+    "e_over_C": -1,
+    "full_matrix_shape": [
+      25,
+      22
+    ],
+    "lambda_over_C": "-2048/3315",
+    "leader_depth": 153,
+    "q_over_C": "(-2048*C*pi**21/3315 + 3584*C*pi**17/1105 - 448*C*pi**13/65 + 112*C*pi**9/15 - 21*C*pi**5/5 + C*pi)/C",
+    "rank_Q": 22,
+    "selected_row_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      23
+    ],
+    "square_determinant": "86833396955164860000"
+  },
+  "B_inverse_identity": "B*(-3*X1(0)/(2*j))=1 modulo j+3*B*X1(0)/2",
+  "cone_vertex_control": {
+    "all_four_parameters_retained": true,
+    "attainment_55_or_63_forces_lambda_zero": true,
+    "remaining_characteristic": "bt**2*et - bt*ct*dt + bt*dt**2*et - 2*bt*et**2 + ct**2 - ct*dt**3 + 3*ct*dt*et + e + et**3",
+    "scope": "dependent-family control only",
+    "target_pivots": {
+      "a": "2*bt - 3*et",
+      "b": "-3*dt",
+      "c": "-bt*dt + 2*ct - dt**3 + 3*dt*et",
+      "d": "bt**2 + bt*dt**2 - 4*bt*et + 3*ct*dt + 3*et**2"
+    }
+  },
+  "diagonal_identity": true,
+  "driver_sha256": "e9648eada729ac2cf73dca61975f18d9bfae6defde8f98b77a8008f419c3852b",
+  "first_strip_identity": true,
+  "second_strip_division_exact": true,
+  "target_inverse_identity": true
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      "/home/ubuntu/jc2/ops/artifact_finalize.py",
+      "close",
+      "--final",
+      "/home/ubuntu/jc2/xmodel/ideation-20260909T0040Z-prep-astra.md",
+      "--token",
+      "fe01992ce3e308abeeff888e0939553c3efcae525751596c7abe0972592a6c37"
+    ],
+    "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"final_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260909T0040Z-prep-astra.md\", \"idempotent\": false, \"partial_path\": \"/home/ubuntu/jc2/xmodel/.ideation-20260909T0040Z-prep-astra.md.partial-66b00fb061294fb381112f5a7a9989e8\", \"source_bytes\": 5937, \"source_sha256\": \"12a8586111484a6f139759283a45a5e9c0fb47e181e2af8010ad812e9a6809b9\", \"status\": \"CLOSED\"}\n",
+    "stderr": "",
+    "rc": 0
+  },
+  {
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      "/home/ubuntu/jc2/ops/artifact_finalize.py",
+      "finalize",
+      "--final",
+      "/home/ubuntu/jc2/xmodel/ideation-20260909T0040Z-prep-astra.md",
+      "--token",
+      "fe01992ce3e308abeeff888e0939553c3efcae525751596c7abe0972592a6c37"
+    ],
+    "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 5937, \"body_sha256\": \"12a8586111484a6f139759283a45a5e9c0fb47e181e2af8010ad812e9a6809b9\", \"file_bytes\": 6269, \"final_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260909T0040Z-prep-astra.md\", \"full_sha256\": \"3ffa1bf42aee940f52e7e52774f0296ec20a191b8df49b283d3ba10c6af2a59f\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260909T0040Z-prep-astra.md.artifact.json\", \"manifest_sha256\": \"ba6140ef30ace08ab3c64d36b9703451db0389e19e297809c5971d5db7d953c0\", \"recovered\": false, \"status\": \"FINAL\"}\n",
+    "stderr": "",
+    "rc": 0
+  },
+  {
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      "/home/ubuntu/jc2/ops/artifact_finalize.py",
+      "verify",
+      "--final",
+      "/home/ubuntu/jc2/xmodel/ideation-20260909T0040Z-prep-astra.md"
+    ],
+    "stdout": "{\"basis\": \"0d39df3c9fd69c939a8420c54d03228b9077777d\", \"body_bytes\": 5937, \"body_sha256\": \"12a8586111484a6f139759283a45a5e9c0fb47e181e2af8010ad812e9a6809b9\", \"file_bytes\": 6269, \"final_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260909T0040Z-prep-astra.md\", \"full_sha256\": \"3ffa1bf42aee940f52e7e52774f0296ec20a191b8df49b283d3ba10c6af2a59f\", \"manifest_path\": \"/home/ubuntu/jc2/xmodel/ideation-20260909T0040Z-prep-astra.md.artifact.json\", \"manifest_sha256\": \"ba6140ef30ace08ab3c64d36b9703451db0389e19e297809c5971d5db7d953c0\", \"staged_blobs\": null, \"status\": \"VERIFIED\"}\n",
+    "stderr": "",
+    "rc": 0
+  }
+]

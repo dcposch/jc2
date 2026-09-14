@@ -1,0 +1,171 @@
+{
+  "pins": {
+    "box/d125-pure-low-alpha-discriminator-20260907/check.py": "6e3583de15529e80742fcb9f1ad1845944f69f9fa4188e0e874117926c13edfd",
+    "box/d125-pure-low-alpha-discriminator-20260907/final-replay.json": "a26bbc94bc9cfdd86e90ed8310dd6fb95151da6eaa0915a9a27ee780aefe40cc",
+    "box/d125-pure-low-alpha-discriminator-20260907/final-witness-O.json": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05",
+    "box/d125-pure-low-alpha-discriminator-20260907/final-witness.json": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05",
+    "box/d125-pure-low-alpha-discriminator-20260907/replay.json": "1a68e2699714ee6db77810dfcd4ae4da266936397ac18517f21450a83328717e",
+    "box/d125-pure-low-alpha-discriminator-20260907/witness-O.json": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05",
+    "box/d125-pure-low-alpha-discriminator-20260907/witness.json": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05",
+    "box/d125-zero-k-deformation-discriminator-20260907/check.py": "25be0862730df8b66076eb59a2d1d0909fbcf563ea73ce16924affdc7c70ad66",
+    "xmodel/d125-exceptional-pure-discriminator-astra-20260907.md": "9b3538b8d7d65477f5fb273ce8abb4b9556c8529dc374dc9affb4266f2793fb8",
+    "xmodel/d125-low-jet-saturation-discriminator-astra-20260907.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-pure-low-alpha-discriminator-astra-20260907.md": "e5416761dc0447a8fef0c83d228d731fdbc524cb6a12d04c34b2e78f4608d657",
+    "xmodel/d125-pure-low-alpha-discriminator-astra-20260907.md.artifact.json": "ffbdf32bb7d7444aa8a91f71d4a50ae756e8108402cf26f2704176993798a299",
+    "xmodel/d125-pure-uniform-discriminator-astra-20260907.md": "1f71ea56f697fe48169cdd95cfe7e2417a98d37efa2f425a86661dfe5ff8e04d",
+    "xmodel/d125-zero-k-boundary-classification-astra-20260907.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-delta-sign"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "4abf5c93e47ec2410f7096939ea80d4ae27f801918646d8bf80a14774ab26004",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-intermediate"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "4abf5c93e47ec2410f7096939ea80d4ae27f801918646d8bf80a14774ab26004",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-omit-alphaG"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "b288298027a0332f79b23a486b976fdd2dd1c9f0ded935985cc83d00a9156ed0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-drop-scalar-cubic"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "3cc87d6e91b3f4d089053c228c705ff88a5c758b2c864b17b73c269293f86e80",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-constant-C"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "54a3cab168d47e9177f7ed9874279e5eb2cc72d141f20af9e71eeb43a57c3616",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "84d8b19b5c139d61dcb0d3f3ae22a58c81ab2414d2852450520a1fb48252ad05"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-delta-sign"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "4abf5c93e47ec2410f7096939ea80d4ae27f801918646d8bf80a14774ab26004",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-intermediate"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "4abf5c93e47ec2410f7096939ea80d4ae27f801918646d8bf80a14774ab26004",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-omit-alphaG"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "b288298027a0332f79b23a486b976fdd2dd1c9f0ded935985cc83d00a9156ed0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-drop-scalar-cubic"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "3cc87d6e91b3f4d089053c228c705ff88a5c758b2c864b17b73c269293f86e80",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-pure-low-alpha-discriminator-20260907/check.py",
+        "--mutate-constant-C"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "54a3cab168d47e9177f7ed9874279e5eb2cc72d141f20af9e71eeb43a57c3616",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "PRODUCER_CONTROLS_ONLY_NOT_PROMOTION",
+  "seconds": 3.406455588992685
+}

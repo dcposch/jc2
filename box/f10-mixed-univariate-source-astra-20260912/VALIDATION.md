@@ -1,0 +1,11 @@
+# Finite future validation plan — NOT EXECUTED OR REGISTERED
+
+FIRST reviews the actual three sources and old/new septic transcriptions. ROOT then registers one producer plus one independent checker, with genuine raw receipt/candidate custody and separately capped finite controls. No sample r, prime, parameter farm, extra gcd or three-variable standard basis.
+
+1. Parser control: input text containing PASS and exit(0), or a JSON extra executable field. Expected STOP parse/schema, never execution. Also a duplicate exponent/key or unreduced1/2 represented2/4 is an early parser refusal, not semantic coverage.
+2. Identity control: from a genuine candidate replace A1 by A1+1, combine/trim the constant slot canonically; ensure bytes actually change and remain in bounds. Difference is nonzero P0 (degree7, leading9(t-2)), so expected `CHECK FAILED: full polynomial Bezout identity` after full reconstruction. Any earlier refusal does not cover this branch.
+3. Exception control: multiply A1,A2,N by7t-12, canonicalize and prove whole-byte inverse restoration in the future control procedure. Full identity still holds; t=12/7 corresponds exactly r=2, so checker must end exit2/INCONCLUSIVE_ACTUAL_R_EXCEPTION. If a cap is exceeded, the control is NOT COVERED, not a pass. N originally has to be nonzero; multiplying by the nonzero polynomial changes its degree and bytes.
+
+For both semantic controls retain original and mutated SHA, exact edit, inverse restoration to original WHOLE bytes, exclusive reread/freeze and ROOT input-SHA authority. No control generator or mutator is implemented here. No arbitrary inserted constant in another ring, no trusting producer status, and no exit-text calibration.
+
+OPEN QUANTITY: whether one bounded gcdex produces a conforming certificate and the checker finds no actual integer-r exception. Cheapest prospective discriminator: FIRST then one ROOT-capped AWS formation/check with these finite controls; numeric planning ceiling3600wall/3300CPU/32GiB/256MiB, UNMEASURED, not a prediction or recommendation of sufficient time. Root must register smaller per-phase shares to satisfy the same joint ceiling. Any missing installed API, resource cap, nonconstant gcd, malformed wire, actual-r scalar zero, identity defect or incomplete cleanup stops without repair/retry.

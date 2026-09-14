@@ -1,0 +1,176 @@
+{
+  "disk": "Filesystem     1024-blocks     Used Available Capacity Mounted on\n/dev/root        100476656 80757076  19703196      81% /\n",
+  "extra_reconstruction_or_replay": false,
+  "files": {
+    "REGISTRATION.md": {
+      "bytes": 8675,
+      "sha256": "9435f425ddd135846480dd1cdb08674de3b376803a1f73e93804a546c5b5d107"
+    },
+    "authority.json": {
+      "bytes": 1474,
+      "sha256": "0e9323b4918471f9207017d8b14e772ce1d4f3c8074b62618c850aec06c9d7cb"
+    },
+    "construction.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pilot-pre.json": {
+      "bytes": 1491,
+      "sha256": "13c678374dbc64a3b65f7d72c981c8d6196ef11a6560bc363c7006f888272f26"
+    },
+    "pilot-runner.result.json": {
+      "bytes": 181,
+      "sha256": "6bbf6e9d097e362fd4c0ba679ba39e57e147bf1f682e6cff5043cff4116417d6"
+    },
+    "pilot-runner.stderr": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pilot-runner.stdout": {
+      "bytes": 112,
+      "sha256": "419074a3432a73ff56c89c383dbc4135f0df0bfa21e67b3b40dbb30289dc76dc"
+    },
+    "pilot.launch.json": {
+      "bytes": 2423,
+      "sha256": "2587d1cdba03a54d69f6da91afd6a720a6d8889bdbd6cdbc8cf627313204f3cd"
+    },
+    "pilot.payload-identity.json": {
+      "bytes": 449,
+      "sha256": "68edc5235aa2df282397ef766f9c08ac0e5ebd33b80e1f874fb8265190cc784e"
+    },
+    "pilot.stderr": {
+      "bytes": 1915,
+      "sha256": "b08d4df14d93646234f30b43925e838826b606a55b83525a176efebc48ef1775"
+    },
+    "pilot.stdout": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pilot.telemetry.json": {
+      "bytes": 2159,
+      "sha256": "1d404947a010fc7787a6167ceda5e72ec6c99388d1186abf2f22d977d66cb6fd"
+    },
+    "replay-result.json": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "framing": {
+    "complete": false,
+    "footer": null
+  },
+  "groups": [
+    2109,
+    2112,
+    2113
+  ],
+  "ids": [
+    2109,
+    2112,
+    2113
+  ],
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:          253663        2310      252735           3         327      251353\nSwap:              0           0           0\n",
+  "post_code": {
+    "baseline.py": {
+      "bytes": 11272,
+      "sha256": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53"
+    },
+    "construct.py": {
+      "bytes": 18749,
+      "sha256": "22173cc6a9217a90a8537081a1229b01e58017990b728291285e8cfc01a332a2"
+    },
+    "qpoly.py": {
+      "bytes": 11088,
+      "sha256": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9"
+    },
+    "replay.py": {
+      "bytes": 4530,
+      "sha256": "2dbb7464fd7b59e361f34b5a705cc7359b98001bf570a80fc77f441e029c2a17"
+    },
+    "run_capped.py": {
+      "bytes": 42671,
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    "run_once.py": {
+      "bytes": 4549,
+      "sha256": "d164af0b576fd7d8f7e3c3a294da8211df996595677aeac75267d2bf9546d40f"
+    }
+  },
+  "remaining": [],
+  "replay_receipt": null,
+  "source_posthash": {
+    "bytes": 1213487,
+    "sha256": "b8db27661d1bfd3dcc5dfe1d1271b78c3f6375e06201654977a51380cd6ebcac"
+  },
+  "status": "INCONCLUSIVE",
+  "telemetry": {
+    "argv_count": 5,
+    "argv_sha256": "9fb6331a926d2ff4df2a7ac74f60cd04b6843d9c6f1f4ca36e8a485e0d3ca454",
+    "caps": {
+      "cpu_seconds": 300,
+      "lifecycle_initial_seconds": 0.05,
+      "lifecycle_sample_seconds": 1,
+      "rss_bytes": 4294967296,
+      "rss_sample_seconds": 0.05,
+      "term_grace_seconds": 0.25,
+      "wall_seconds": 300
+    },
+    "child_exit_code": 1,
+    "child_returncode": 1,
+    "child_signal": null,
+    "cwd": "/home/ubuntu/d125-parity-compression-pilot-20260907",
+    "enforcement": {
+      "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+      "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+      "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+    },
+    "error": null,
+    "executable": "/usr/bin/python3",
+    "identity_checks": [],
+    "invocation_cwd": "/home/ubuntu/d125-parity-compression-pilot-20260907",
+    "max_observed_group_rss_bytes": 251146240,
+    "pgid": 2113,
+    "pid": 2113,
+    "resource": null,
+    "runner_exit_code": 1,
+    "runner_signal": null,
+    "schema": "CAPRUN/v1",
+    "start_identity": "boot=1a830d1e-1fa2-47f3-98bc-8c26c8cb8453;start_ticks=97282",
+    "start_identity_source": "linux-proc-stat-field22",
+    "status": "NORMAL_EXIT",
+    "stderr": {
+      "bytes": 1915,
+      "path": "/home/ubuntu/d125-parity-compression-pilot-20260907/pilot.stderr",
+      "sha256": "b08d4df14d93646234f30b43925e838826b606a55b83525a176efebc48ef1775"
+    },
+    "stdin": {
+      "mode": "devnull",
+      "path": null
+    },
+    "stdout": {
+      "bytes": 0,
+      "path": "/home/ubuntu/d125-parity-compression-pilot-20260907/pilot.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "telemetry_path": "/home/ubuntu/d125-parity-compression-pilot-20260907/pilot.telemetry.json",
+    "termination": {
+      "cleanup_complete": null,
+      "group_live_before_reap": [],
+      "group_zombies_before_reap": [],
+      "kill_sent": false,
+      "leader_reaped": false,
+      "reason": null,
+      "term_sent": false
+    },
+    "utc_end": "2026-09-07T03:52:36.187464Z",
+    "utc_start": "2026-09-07T03:51:57.965653Z",
+    "wall_elapsed_seconds": 38.221822523
+  },
+  "terminal": {
+    "authority_sha256": "0e9323b4918471f9207017d8b14e772ce1d4f3c8074b62618c850aec06c9d7cb",
+    "runner_absent": true,
+    "runner_rc": 1,
+    "utc": "2026-09-07T03:52:36.200846+00:00"
+  },
+  "utc": "2026-09-07T03:54:23.654392+00:00"
+}

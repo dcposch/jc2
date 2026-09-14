@@ -1,0 +1,109 @@
+{
+  "schema": "blind-terminal-custody/v1",
+  "tag": "ideation-20260911T1100Z-astra-geometry",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED",
+  "scientific_status": "STRATEGY_ONLY_NO_NEW_MECHANISM_NO_PROMOTION_NO_EXECUTION",
+  "first_action_utc": "2026-09-11 11:04:39 UTC",
+  "targets_absent_first": true,
+  "publication_reserve_utc": "2026-09-11 11:20:00 UTC",
+  "hard_stop_utc": "2026-09-11 11:23:00 UTC",
+  "full_round_backstop_utc": "2026-09-11 11:43:52.231949225 UTC",
+  "clock_reset": false,
+  "transaction_closed_utc": "2026-09-11 11:14:26 UTC",
+  "transaction_finalized_utc": "2026-09-11 11:14:27 UTC",
+  "expected_verify_and_sealed_whole_completed_by_utc": "2026-09-11 11:14:41 UTC",
+  "terminal_all_input_and_owned_postpins_utc": "2026-09-11 11:14:57 UTC",
+  "inputs": [
+    {
+      "path": "box/ideation-20260911T1100Z-prep/PINS.json",
+      "sha256": "61272ce1abaaba4725febd6e202a82bfddaf94878a441652a703d9cd137d1dcb",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/approaches.md",
+      "sha256": "224b02c9092d1625212dfd9302936200b2353ac0a76377461d26c4ef00c5e3b1",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/master46-history.md",
+      "sha256": "c235fca15b48d29860291e26b7c8056915110deb1a9dc15b7ff1a20926d8d4ac",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/reduction-interfaces.md",
+      "sha256": "615ad4f1227a84604877d5e4ad8daef52589ed31e70dcf745af30e6573f3faa7",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/previous-synthesis.md",
+      "sha256": "9dad11eba0d7174a39c398b640a6cd42dd47c18f030cf296ceedc90c238f5792",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/earlier-synthesis.md",
+      "sha256": "67e8407c4e1bdece4d1b523ea35b1a5404499eadcbdf58cce8f200c26c0c68ae",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/latest-websweep.md",
+      "sha256": "0643cf030d64989b0ab20893cb5208669f2c56b469c396485d6ea9c37c35a2f8",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/current-operations.md",
+      "sha256": "70a8709de3f15f33e8279fe67df5711454c2b97308fa74e4ad08400af6b0383c",
+      "read_scope": "FRESH_WHOLE"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/boundary-test.md",
+      "sha256": "d9bb20f83678cde429f04a1f4a175b013d31be2b92ccdb87d6b98ad3edc24265",
+      "read_scope": "REUSED_WHOLE exact-byte own sealed report read 2026-09-11 08:40:45 UTC"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/three-weight-proof.md",
+      "sha256": "d5e0f0560312c82de349984672dad3498db42e970555538c17948f53ccdf5c2c",
+      "read_scope": "REUSED_WHOLE exact-byte own sealed report read 2026-09-11 09:08:09 UTC"
+    },
+    {
+      "path": "box/ideation-20260911T1100Z-prep/inputs/common-contract.md",
+      "sha256": "e9e1b1907109f30e5fda50cf6c8ce83d08737569ef1a93a5f70277c407379a68",
+      "read_scope": "FRESH_WHOLE"
+    }
+  ],
+  "owned_excluding_custody": [
+    {
+      "path": "box/ideation-20260911T1100Z-astra-geometry/PINS.json",
+      "sha256": "b4b7ced15a5194c8923d31b83f9899e14507ff2c2741facfa216c7aa5546d645",
+      "read_scope": "WHOLE"
+    },
+    {
+      "path": "xmodel/ideation-20260911T1100Z-astra-geometry.md",
+      "sha256": "43eae05446b8aeaaa15844880ea37466759342833bebca9ef00146794a1b6e32",
+      "read_scope": "WHOLE private body before marker; WHOLE sealed final after expected verify"
+    },
+    {
+      "path": "xmodel/ideation-20260911T1100Z-astra-geometry.md.artifact.json",
+      "sha256": "a677c88895aba95af94472f0bb421819694682b9ae5a94bbcc73d96ff554fe1d",
+      "read_scope": "WHOLE"
+    }
+  ],
+  "expected_transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "manifest_sha256": "a677c88895aba95af94472f0bb421819694682b9ae5a94bbcc73d96ff554fe1d",
+    "status": "VERIFIED"
+  },
+  "read_coverage": {
+    "input_files": 11,
+    "fresh_whole": 9,
+    "reused_whole": 2,
+    "clipping_unrecovered": 0,
+    "manifest_bootstrap": "Manifest was hashed before its WHOLE read; its ten entries were then pinned, all eleven before contract/science bodies.",
+    "prior_reuses": "Exact current-byte own sealed-WHOLE boundary producer 08:40:45 and three-weight producer 09:08:09 UTC, as listed per input.",
+    "forbidden_or_peer_reads": false
+  },
+  "own_collision_check": "EMPTY; final/manifest absent before publication; no canonical OPEN ID; packet acceleration explicitly KNOWN; no corpus novelty claim",
+  "writers_at_handoff": "ALL WRITERS IDLE after final custody write/readback; no background writer, subprocess or agent launched",
+  "scope": "Manual reasoning, inert text/hash and ordinary documentary transaction only. No scientific execution, network, AWS, linked inputs, protected/shared work, launch or follow-on.",
+  "custody_hash_rule": "This file excludes its own hash; hash reported custody-FIRST in terminal handshake."
+}

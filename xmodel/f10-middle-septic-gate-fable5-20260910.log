@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 07:20:16 UTC, well inside the 07:25:58 reserve. Report is at `xmodel/f10-middle-septic-gate-fable5-20260910.md` with the standalone `<!-- BODY-END -->` as its unique last line, plus `box/f10-middle-septic-gate-fable5-20260910/input_custody.md`. No Seal, no charge_basis, no subprocess, no other file touched.
+
+**Custody.** All seven snapshot hashes matched the charged list before any body was read. All seven were then read whole. The report's only 64-hex tokens are those seven hashes.
+
+**Verdicts, all by independent hand calculation.**
+
+- **A CONFIRMED.** Recomputed the division of K by D at u = 2 − τ: remainder coefficients 56f and −12(1+τ)f with f = (2τ−1)(3τ−1)(3τ−2), so v* = 3(1+τ)/14, and D(v*) = (1+τ)(6τ−1)/49. Closed forms f = −(r+1)(3r+2)/m³ and e = (4r+1)(3r−1)/(49m²) show both nonzero for every r ≥ 2, with no exceptional actual τ. The Bezout identity AD + BK = 1 checks symbolically, inverting only 56, f, e. The relation K = −210DW then gives D(A − 210BW) = 1 in the entire unguarded algebra, no localization, nilpotents included.
+- **B CONFIRMED.** S = 245·D²·E_ν(V, −K/(210D)) with 245 = 210²/180 exact. Degree 7 comes only from 245γD², leading coefficient −245·120·144·τ, never zero. gcd(S,D) = 1 follows from S ≡ 2K² mod D and the Bezout identity. Both directions of Q[V,W]/(E,Q) ≅ Q[V]/(S) are displayed and shown mutually inverse. The guard argument is a pure leading-term degree count with gcd(m,n) = 1, so W·t5 is a unit and B_ν equals the unguarded algebra. One consequence the producer did not state: the leading algebra has Q-dimension 7, hence is nonzero.
+- **C CONFIRMED.** Simple coprime c, d at every geometric point; H = λz⁸; the kz subtraction signs; c divides c_dot − kzc' with degree 3 because W is a unit; constant term forces μ = 0, linear term forces k = 0; Nakayama over Q̄ gives Q̄⁷. The frozen z-coefficient does remove the scale direction zc'. No component is dropped anywhere.
+- **D CONFIRMED.** T = DP − ℓK equals DZ using only K + 210DW = 0. Degree 5 with leading coefficient 12·840 = 10080, so at least two of the seven points are nonresonant per actual pair. The split-septic control is a valid abstract control and is correctly labeled as not an actual leading instance.
+
+**REFUTED: none. GAP:** uniform gcd(S,T) = 1, equivalently nonvanishing of the single rational Res_V(S,T)(τ,δ) at every actual lattice point. That is exactly the resultant restatement ROOT-CARD declines to count as progress on its own. What the producer genuinely adds beyond it: the guarded algebra is the unlocalized, reduced, rank-7 étale Q[V]/(S), with the guard a theorem and every point retained. No follow-on.
+DIVERT path=xmodel/f10-middle-septic-gate-fable5-20260910.md status=CLEAN body_bytes=13316 body_sha256=cff18a06c050d64074ba9af70cea61b28b15614a61691125ebf26d3012577c62

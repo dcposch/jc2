@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. The lane is sealed: `xmodel/k16-tacnode-fable5-20260905.md` (29,960 bytes, `<!-- BODY-END -->` present), drivers and transcripts in `box/k16-tacnode-20260905/`, inputs verified 4/4 at start and at sealing, artefacts hashed, no CAS job left running.
+
+**Verdict.** No uniform theorem. The tacnode statement is not proved, (R) is not proved, (T) is not promoted. What the lane establishes is structure, each item with a written proof and a generic-jet machine check to order 10:
+
+- **The second branch is never a polynomial.** For any two roots of the quartic, the difference of the two equations is the algebraic identity τ·Ψ = −b·q with τ = L + L̃ + b and q = b² + 4Bx − (8η/3)x². A polynomial second root would force τ to divide the quadratic b·q, against deg τ = N ≥ 3, or to vanish at infinity on the lc = −1/y branch, which gives b = 0. Hence the residual cubic is irreducible over k(x), L̃ is algebraic of degree 3, and F₀ is never a square. Polynomial s alone forces p = 1/4, i.e. d = 0, incompatible with (UT) at every N. So the involution yields no contradiction in the non-degenerate case.
+- **The dichotomy iterates as one polynomial.** With P fixed, ∂row_k/∂l_m = −[x^{k−m}]D where D = ∂_Y Q_P(x, L) has degree 3N. Every pivot in the charged cascade is a coefficient of D. The contact order j₀ = ord₀ D lies in [2, 3N], terminates for every solution, and forces nothing about Bη. The t = 2 family has j₀ = 3 with a nonzero second pivot.
+- **The OPEN is one jet quadratic.** Lpivot² = −4T₂ − 24E₂ exactly, with T₂ = 3b²w₃ + 18Bw₂ − 10η². The tacnode statement is equivalent to 6P₀P₄ + 9P₁P₃ + 5P₂² ∈ rad J_t, i.e. ord₀ Disc_Y(Q_P) ≥ 6.
+- **Verification.** All identities hold exactly on the frozen t = 3, 4 certificates and modularly at t = 5. Every pivot and T₂ lie outside J non-vacuously. New exact fact: Bη ∈ J + (Lpivot) at t = 3 with exponent 1, but not at t = 4, 5.
+- **Correction to the charged report.** The Y¹ coefficient of Q_P has x-degree 2N, not 3N.
+
+OPENs: raised `OPEN[K16-UF-CONTACT-ORDER-BOUND]`; retained and sharpened `OPEN[K16-UF-DEGENERATE-TACNODE]`. Collision scan on the final report: only the charged source delta and lexical noise, nothing closes an OPEN.
+
+Two tooling findings are saved to memory: Singular's `jet(f, M)` truncates by total degree and needs a weight vector for x-series over k[c], and `pkill -f` with a self-matching pattern kills the calling shell. The t = 5 modular Hensel replay was stopped at seal inside its loop and is not claimed; its other t = 5 lines are complete.
+DIVERT path=xmodel/k16-tacnode-fable5-20260905.md status=CLEAN body_bytes=29960 body_sha256=ab1c4ca249f85f3978108fe9e26f391695805e443fdb51a6be135635b2a0fa31

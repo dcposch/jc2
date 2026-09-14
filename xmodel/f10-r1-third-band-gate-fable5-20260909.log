@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 17:54:57 UTC, seven minutes before the 18:02:00 stop. The report sits at `xmodel/f10-r1-third-band-gate-fable5-20260909.md` with a single standalone `<!-- BODY-END -->` as its last line, and the empty owned box directory exists. No Seal, no charge_basis, no commit.
+
+**Custody.** All five input hashes matched the ordered list before reading. The producer's artifact.json body hash was reproduced by my own byte-count slice of the report, and the six hex tokens in my report are exactly those five hashes plus that body hash.
+
+**Verdicts.**
+
+- **A: CONFIRMED except one formula.** The homogeneous pieces, the Jacobian orientation identity, the recurrence diagonals for J, K, V (which equal 16r's Euler eigenvalues), J4=d0/2, K4=-2u, W5=-2ud0, N5=0, the three upper steps and both literal residuals all check by hand. V5=V4=V3=0 follow from B5, the constant coefficient of the j=4 row, and the accepted beta=0 gauge. Equation (12) is REFUTED as printed: the correct forcing is N_i = -W_i + (7-i)·y·D_i, not -W_i - (i-6)·y·D_{i+1}. The printed form contradicts the producer's own (11) at i=5. Smallest correction is that one-line replacement, and nothing downstream changes because N_i enter only as k1-free symbols. A second, purely wording defect: the vacuous theta^6 row is 4V4=0, so "because V3=0" should read "because V4=0".
+- **B: CONFIRMED.** T'=8(C'V-kD')+r1θ+r0, CT'-2C'T=2kθ^7+C(r1θ+r0) via (1), T5=-2k, the formal reciprocal needs only a^{-2} and e_0..e_5, the k-term integrates into degree 8 or higher, and the degree-6 and degree-5 coefficients give λ(h)=1 as an identity in Λ, valid over non-reduced B.
+- **C: CONFIRMED.** The row matrix has determinant λ1h1+λ0h0=1, k cancels in the second row giving Ψ=-h0c1+h1c0, both directions of the quotient-ring map hold since k1+λ(c) is monic linear with k1-free tail, and the slot count is 16 with seven lower parameters plus the unit s.
+- **D: CONFIRMED** as algebraic changed-object controls only. Deleting the target gives N5=2, dropping W gives N5=-2ud0, and r*=(-λ0,λ1) is killed by the first transformed row but not by Ψ. No attainment or Ψ-nonvanishing claim is made or needed.
+
+**GAPs left open:** no explicit expansion of c, Ψ, λ_i, or e_i by anyone; Ψ's nonvanishing and independence unchecked; properness of the 16-row system untouched; D1..D4 taken from 17b rather than re-derived. No OPEN raised.
+DIVERT path=xmodel/f10-r1-third-band-gate-fable5-20260909.md status=CLEAN body_bytes=13072 body_sha256=d11175469b643e6dc119ca9c16f19856b132c7f6b585c5b495d1c6e3fbad213a

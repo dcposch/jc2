@@ -1,0 +1,55 @@
+--- box/d125-hybrid81-solver-prep-20260907/driver.py	2026-09-07 06:09:29.548374193 +0000
++++ box/d125-hybrid81-caller-repair-20260907/driver.py	2026-09-07 06:42:35.687280567 +0000
+@@ -9,6 +9,7 @@
+ from pathlib import Path
+ import platform
+ import resource
++import signal
+ import subprocess
+ import sys
+ import time
+@@ -138,8 +139,19 @@
+     resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
+ 
+ 
++def arm_deadline(a, duration):
++    """One wall timer covers source parsing and survives execve; never reset."""
++    end = datetime.fromisoformat(a['deadline_utc'].replace('Z', '+00:00')).timestamp()
++    signal.signal(signal.SIGALRM, signal.SIG_DFL)
++    signal.pthread_sigmask(signal.SIG_UNBLOCK, {signal.SIGALRM})
++    remaining = min(duration, end-time.time())
++    E.need(remaining > 0, 'absolute payload deadline expired')
++    signal.setitimer(signal.ITIMER_REAL, remaining)
++
++
+ def payload(authority_path, phase):
+     a, authority_sha, duration = context(authority_path, phase)
++    arm_deadline(a, duration)
+     E.need(os.getpid() == os.getpgrp(), 'payload must be exact CAPRUN leader')
+     parent = Path('/proc')/str(os.getppid())/'cmdline'
+     E.need(str(Path(CWD)/'run_capped.py').encode() in parent.read_bytes().split(b'\0'),
+@@ -156,8 +168,10 @@
+             receipt = E.strict_json(Path('decision.result.json').read_bytes())
+             telemetry = E.strict_json(Path('decision.telemetry.json').read_bytes())
+             identity = E.strict_json(Path('decision.identity.json').read_bytes())
+-            E.need(receipt['authority_sha256'] == authority_sha and receipt['runner_rc'] == 0,
+-                   'decision custody/return status')
++            E.need(receipt['authority_sha256'] == authority_sha and receipt['runner_rc'] == 0
++                   and receipt.get('phase') == 'decision'
++                   and receipt.get('source_pins_after') == {'jsonl': H.CONSTRUCTION_SHA},
++                   'decision custody/return/source status')
+             E.need(telemetry.get('schema') == 'CAPRUN/v1' and telemetry.get('error') is None and
+                    telemetry.get('status') == 'NORMAL_EXIT' and telemetry.get('child_returncode') == 0,
+                    'decision not normal exact termination')
+@@ -208,11 +222,11 @@
+     artifacts = {name: file_sha(phase+'.'+name) for name in ('sing', 'identity.json')
+                  if Path(phase+'.'+name).is_file()}
+     after = {} if phase == 'control' else {'jsonl': file_sha(SOURCE)}
++    if after:
++        E.need(after == {'jsonl': H.CONSTRUCTION_SHA}, 'post-run frozen source drift')
+     write_new(phase+'.result.json', E.canonical({'authority_sha256': authority_sha,
+               'runner_rc': result.returncode, 'outputs': outputs, 'artifacts': artifacts,
+               'source_pins_after': after, 'phase': phase}))
+-    if after:
+-        E.need(after == {'jsonl': H.CONSTRUCTION_SHA}, 'post-run frozen source drift')
+     return result.returncode

@@ -1,0 +1,14 @@
+=== build_state T=11 locus=True offsets=0..10 ===
+  [t=0.2s] minor incidence: 13 rows, 12 pivots, residual 0
+  [t=0.4s] major h2: K2c=125 D1 rows=9 pivots=9 free=114
+  [t=7.8s] outer: offsets 0..10, pivots=189 free=779
+  [t=9.1s] KF/KG built (|KF|=258, |KG|=186)
+  [t=19.3s] minor local tables done
+    [J-fast] single-pass product at max_t=11 in 57.8s (420 (t,z) slots)
+    [J-fast] w-bands extracted at 135.8s
+  [t=155.1s] Jacobian bands t=0..11 done; t^0 band (J degree 178) nonzero w-slots = 0
+build done in 155.1s
+[n=8] rows=1420 piv=60 zero=1360 resid=0 dim=FULL UNIT=False sec6_ok=True (287.3s)
+[n=9] rows=1596 piv=66 zero=1530 resid=0 dim=FULL UNIT=False sec6_ok=True (724.3s)
+[n=10] rows=1771 piv=72 zero=1698 resid=1 dim=5 UNIT=False sec6_ok=False (1373.8s)
+[n=11] rows=1945 piv=78 zero=1865 resid=2 dim=9 UNIT=False sec6_ok=False (2271.9s)

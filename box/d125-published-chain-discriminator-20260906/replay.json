@@ -1,0 +1,16 @@
+{
+  "schema": "jc2.small-exact-controls/v1",
+  "script": "box/d125-published-chain-discriminator-20260906/check.py",
+  "script_sha256": "5de0795dff082796b86e6612332f9c5584b4db2ddb2c6e21f7005af69b242e48",
+  "normal_exit": 0,
+  "optimized_exit": 0,
+  "mutated_vertex_normal_exit": 1,
+  "mutated_vertex_optimized_exit": 1,
+  "last_four_process_batch_wall_seconds": 0.625,
+  "per_command_memory_cap_MiB": 512,
+  "per_command_wall_cap_seconds": 30,
+  "positive_controls": ["two exact Euler ODE identities", "q=5", "F2 generated corner", "lower integer directions", "upper integer candidates", "terminal assignment", "Jacobian chain rule", "inversion involution", "six literal lattice hulls"],
+  "negative_controls": ["Euler term", "double-root Euler term", "q=4", "swapped terminal assignment", "wrong inversion exponent", "unjustified x^-3 support shift", "monomial-J implies polynomial inverse", "injected wrong vertex"],
+  "initial_failed_control": "Fixture expectation used wrong sign; actual derivative checker rejected it. Correct value [x^2*y,x^-1]=+1, transformed bracket=-x^3. No initial PASS claimed.",
+  "scope": "Arithmetic/support controls only, not independent theorem proof or existence certificate"
+}

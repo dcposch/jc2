@@ -1,0 +1,52 @@
+--- /home/ubuntu/jc2/box/f10-direct-rows-runtime-astra-20260911/mutate.py	2026-09-11 03:30:22.969948212 +0000
++++ /home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/mutate.py	2026-09-11 05:55:47.267659876 +0000
+@@ -9,7 +9,7 @@
+ import stat
+ import sys
+ 
+-JOB = 'f10-source-cone-r3-direct-rows-v1'
++JOB = 'f10-source-cone-r3-necessary-rows-v1'
+ SOURCE_NAMES = ('authority.py', 'arithmetic.py', 'produce.py', 'check_arithmetic.py', 'check.py')
+ LIMITS = {'wall_seconds': '900', 'cpu_seconds': '600', 'memory_bytes': '8589934592', 'aggregate_bytes': '134217728'}
+ ENV = {'PATH': '/usr/bin:/bin', 'LANG': 'C', 'LC_ALL': 'C', 'TZ': 'UTC'}
+@@ -65,7 +65,7 @@
+ def root_policy(root_name, role, label, actual):
+     # ROOT0444/no-concurrent-writer trust; command contains no recursive ROOT hash.
+     root = file(root_name); r = load(root); root_hash = sha(root)
+-    need(r.get('schema') == 'f10-direct-rows-runtime/v1' and r.get('enabled') is True
++    need(r.get('schema') == 'f10-necessary-rows-runtime/v1' and r.get('enabled') is True
+          and r.get('jobtag') == JOB and r.get('exclusive_no_concurrent_writer') is True, 'enabled ROOT policy')
+     need(r['review_clearance']['status'] == 'SOURCE_AND_RUNTIME_FIRST_CONFIRMED', 'ROOT FIRST clearance')
+     stops = [datetime.datetime.fromisoformat(r[k]) for k in ('admission_deadline_utc', 'mathematical_deadline_utc', 'task_deadline_utc', 'worker_deadline_utc')]
+@@ -149,11 +149,11 @@
+     phase_path = file(sys.argv[6]); phase = load(phase_path)
+     need(r['phase_policy'] == policy and str(phase_path) == policy['positive_record'], 'ROOT phase policy')
+     need(set(phase) == {'schema', 'status', 'root_registration_sha256', 'input', 'source_files', 'authorization', 'checker_stdout_sha256', 'policy'}
+-         and phase['schema'] == 'f10-direct-rows-positive-phase/v1'
++         and phase['schema'] == 'f10-necessary-rows-positive-phase/v1'
+          and phase['status'] == 'POSITIVE_CHECKED_NO_SOURCE_OUTCOME'
+          and phase['root_registration_sha256'] == root_hash and phase['policy'] == policy
+          and phase['source_files'] == r['source_files']
+-         and phase['checker_stdout_sha256'] == hashlib.sha256(b'CHECKED_DIRECT_ROWS_25_NO_SOURCE_OUTCOME\n').hexdigest(), 'ROOT-derived genuine positive checker record')
++         and phase['checker_stdout_sha256'] == hashlib.sha256(b'CHECKED_NECESSARY_ROWS_25_NO_SOURCE_OUTCOME\n').hexdigest(), 'ROOT-derived genuine positive checker record')
+     baseline = file(policy['baseline'])
+     need(phase['input'] == {'path': str(baseline), 'sha256': sha(baseline), 'bytes': baseline.stat().st_size}
+          and 0 < baseline.stat().st_size < 125829120, 'positive input byte binding')
+@@ -184,7 +184,7 @@
+     need(0 < len(raw) == baseline.stat().st_size < 125829120, 'bounded baseline read')
+     doc = json.loads(raw, object_pairs_hook=pairs, parse_int=no_number, parse_float=no_number, parse_constant=no_number)
+     need(wire(doc) == raw and set(doc) == {'schema', 'job_tag', 'contract_sha256', 'source_pins', 'place', 'graph'}
+-         and doc['schema'] == 'f10-r3-direct-rows/v1' and doc['job_tag'] == JOB
++         and doc['schema'] == 'f10-r3-necessary-rows/v1' and doc['job_tag'] == JOB
+          and doc['contract_sha256'] == r['contract_sha256'] and doc['source_pins'] == r['source_pins']
+          and doc['place'] == r['place'], 'canonical six-key ROOT-bound direct wire')
+     def decimal(value, bound):
+@@ -242,7 +242,7 @@
+         stream.write(changed); stream.flush(); os.fsync(stream.fileno())
+     need(sha(output) == hashlib.sha256(changed).hexdigest()
+          and sha(baseline) == hashlib.sha256(raw).hexdigest(), 'actual fixture/baseline readback')
+-    record = {'schema': 'f10-direct-rows-T-mutation/v1', 'status': 'FORMED_UNCHECKED',
++    record = {'schema': 'f10-necessary-rows-T-mutation/v1', 'status': 'FORMED_UNCHECKED',
+               'root_registration_sha256': root_hash, 'input_sha256': hashlib.sha256(raw).hexdigest(),
+               'output_sha256': sha(output), 'output_bytes': len(changed),
+               'mutation': 'graph.slots[24] += X1^27 over ROOT place',

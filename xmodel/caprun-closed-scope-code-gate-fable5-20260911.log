@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Both owned files are finished and the marker is in place, so nothing further is needed. Final recap follows.
+
+The gate is complete and published at 08:07:21Z, well inside the 08:20Z reserve. Both owned files exist, all 22 input pins matched before any body read and again after the body write, and the marker is unique and last in the report.
+
+**Outcome**
+
+- **A Positive placement: CONFIRMED.** The CPython snapshot fixes the order setsid, preexec, close_fds, execve, and turns vfork off when a preexec is set. The trusted closure places the child, rechecks membership and population, and closes every cgroup and pipe descriptor before exec. One live-host GAP: the code assumes the root cgroup namespace with cgroup2 mounted at /sys/fs/cgroup, which ROOT must discharge.
+- **B Completion paths: CONFIRMED, with one REAL defect.** Kernel populated=0 gates every normal, cleanup and bootstrap completion, and the terminal guard fails closed on any unattested or still-populated outcome. The defect is in wait_for_group_quiet. It samples ps first and returns that sample once the kernel is quiet, so a SIGKILLed orphan caught mid-exit by ps yields a stale-positive live list while kernel_quiet is true. That makes cleanup_complete false and the run fails. It is fail-closed, never a false success, but it can consume the single authorized discriminator. Smallest correction: return a fresh ps sample after quiet is observed. Any correction changes the CAPRUN hash and reopens the dispatcher pin.
+- **C, D, E: CONFIRMED.** Topology checks match the kernel text for a populated outer with empty subtree_control. The eight new arguments sit inside the whole-command comparison, the literal CAPRUN hash matches the frozen file, and all leaves must be kernel-quiet before any telemetry read. PREFLIGHT_ONLY_9 stops after the dummy without forming any scientific authority, and the mutator refuses outside FULL_13.
+- **F: CONFIRMED mechanics.** The probe fork, handshake, TERM-ignore, 64 MiB touch and all dummy predicates are unchanged, with leaf membership and kernel quiet added. The only legal-run hazard is the B defect.
+- **G: Disabled draft only.** ROOT may draft a disabled PREFLIGHT_ONLY_9 registration against these exact bytes. I recommend the one-line fresh-sample correction first, or an explicit acceptance of the spurious-STOP risk. No execution or science clearance is given.
+
+**Files written**
+
+- `xmodel/caprun-closed-scope-code-gate-fable5-20260911.md` holds the A to G verdicts, three adverse traces, and the QUANTITY, CHEAPEST TEST, UNMEASURED and COLLISIONS lines.
+- `box/caprun-closed-scope-code-gate-fable5-20260911/input_custody.md` holds the pre and post custody, generated hash rows, the old/new text-diff equality, and exact read scopes.
+
+Method was static text and manual reasoning only. Nothing was executed, imported or syntax-checked, and all writes went through the authorized apply_patch binary. All writers are idle.
+DIVERT path=xmodel/caprun-closed-scope-code-gate-fable5-20260911.md status=CLEAN body_bytes=11312 body_sha256=bbd12d303650e5bbba63200076884a1b6d0bf7e5c43c0e1d2857731a0aa2b53d

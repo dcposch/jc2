@@ -1,0 +1,17 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes and reading the operational constraints, then build the census sweep and run the smallest classes on the fleet.I'll verify the charged-input hashes against the receipt, then read the charged sources and existing census code.Hashes match. Next I’ll read the charged sources and existing census machinery so the sweep can reuse the validated kill path.Hashes are good. I’ll pull the remaining charged sources and the existing kill-path code next.I’ll inspect descent/census code, the D=108 and (99,66) kill paths, and fleet layout so the sweep can reuse the validated chart+solver stack.I’ll inspect the joint-chart and k=4-ray compilers plus the control cases so the sweep can emit the right chart and reuse the fleet dispatch path.I have the control certificates and compiler layout. Next I’ll check the fleet, start the census enumeration, and read the chart-size and split-classification paths.Source-complete charts blow up (D=108 → 475 unknowns); I’ll size by the solvable chart and implement the sweep library next.I’ll write `census_sweep.py` so it enumerates, sizes, emits the full necessary chart, and solves with typed certificates.Controls all passed. Next I’ll enumerate the u_s≥2 census and sort classes by chart size.The 1-equation unit is real: δ₁=0 support is x-free, so J≡0 and J=c is impossible. Mixed classes still need the joint chart — I’ll record that before sweeping the rest.Six remaining charts match the 39-equation pattern that already died in under a second — I’ll solve those instead of leaving them as timeouts.**14 of 19 smallest classes are DEAD** (exact-Q unit). Five timed out. All five controls passed. Report: `xmodel/census-sweep-grok46-20260905.md` (sealed, 17 276 body bytes). Library committed as `7e89a137`.
+
+Charged inputs: 10/10 SHA-256 OK.
+
+**Library.** `box/lib/census_sweep.py` runs enumerate → Prop 6.3 descent → split/unsplit → full necessary chart (D1 + outer-disc, through `builder_fix.py`) → `guided_gb` exact-Q → typed JSON. A mixed class is not DEAD from an order-chart unit alone.
+
+**Census (frozen enumerator, Kmin=16, n≤200).** 23 720 raw rows; **6 117 with u_s≥2**. Fibre keys do not compress (6 117). `(n',m',M',ell)` groups: **4 012**. Four-int keys: **1 291**. Coarse `(n',m',ell)`: **523**. The 6 209→1 359 figure is a different grain; **296 xu_ok_candidate → 132 four-int keys is exact**.
+
+**Controls (via the sweep).** D=108 δ=3, (99,66) δ=2 stage-4, K=8 no-split, K=9 case A: all exact-Q UNIT. Tame automorphism survives (dim 0, non-unit).
+
+**Sweep of nunk≤80 (19 classes).** 14 unsplit ell=0 order charts UNIT in <1 s (two with J≡0 on x-free D1 support; twelve with 27–39 equations). Five TIMEOUT: mixed real-J charts at **67 and 71** unknowns (180 s std), and three unsplit x-degree-1 charts at 79 unknowns.
+
+**Compute-bound threshold:** a necessary order chart with x-support is already stuck at **67 unknowns / 75 equations / 180 s**. The “≤120 unknowns in seconds–minutes” lesson holds for the ell=0 x-free unsplit charts, not for mixed joint-necessary systems.
+
+No new exit price (`charge_basis` absent). Workers `.7/.18/.28` were reachable; the 19-class bucket finished on math-hq after a relative-`--dest` rsync bug. Regenerable builders/rows were not committed.
+DIVERT path=xmodel/census-sweep-grok46-20260905.md status=CLEAN_SEALED body_bytes=17276 body_sha256=ead095d0d56c5a8d26af32f1ab9dea104379f2b05c921710d8ce54957e6d5b1a

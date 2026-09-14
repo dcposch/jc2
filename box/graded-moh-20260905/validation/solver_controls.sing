@@ -1,0 +1,12 @@
+ring r=0,(z,t),dp;
+ideal YES=z,t*z-1;
+ideal NO=z-1,t*z-1;
+ideal A=std(YES);
+ideal B=std(NO);
+print("EXACT_UNIT_CONTROL="+string(reduce(1,A)==0));
+print("EXACT_NONUNIT_CONTROL="+string(reduce(1,B)!=0));
+matrix L=lift(YES,ideal(1));
+matrix M[1][size(YES)]=YES;
+matrix C=M*L;
+print("IDENTITY_CONTROL="+string(C[1,1]==1));
+quit;

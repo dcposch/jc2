@@ -1,0 +1,9 @@
+// Deliberately omitted necessary row control.
+ring R=0,(c,T),dp;
+ideal I=T*c-1;
+ideal G=std(I);
+if (reduce(1,G)!=0) { print("OMITTED_ROW_FALSE_POINT_THROUGH"); } else { print("OMITTED_ROW_FAIL"); }
+ideal K=-c,T*c-1;
+ideal H=std(K);
+if (reduce(1,H)==0) { print("RESTORED_ROW_EMPTY"); } else { print("RESTORED_ROW_FAIL"); }
+quit;

@@ -1,0 +1,2585 @@
+{
+  "T1_card_a": {
+    "t5": {
+      "certificate": {
+        "accepted_run_count": 2,
+        "crt_rational_reconstruction": {
+          "available": true,
+          "items": {
+            "basis_size": {
+              "direct_singular_values": [
+                597,
+                597
+              ],
+              "direct_values_agree": true,
+              "modulus": 1009,
+              "rational_reconstruction": "17/22",
+              "residue": 597
+            },
+            "dimension": {
+              "direct_singular_values": [
+                0,
+                0
+              ],
+              "direct_values_agree": true,
+              "modulus": 1009,
+              "rational_reconstruction": "0",
+              "residue": 0
+            },
+            "lead_dim": {
+              "direct_singular_values": [
+                0,
+                0
+              ],
+              "direct_values_agree": true,
+              "modulus": 1009,
+              "rational_reconstruction": "0",
+              "residue": 0
+            },
+            "lead_vdim": {
+              "direct_singular_values": [
+                3640,
+                3640
+              ],
+              "direct_values_agree": true,
+              "modulus": 1009,
+              "rational_reconstruction": null,
+              "residue": 613
+            }
+          },
+          "method": "CRT plus bounded rational reconstruction for scalar invariants"
+        },
+        "hilbert_hint": {
+          "numerator_sha256": "51becb58b0306ded8169afa826f31a90709109b57665e6315ccf46297a17eb8e",
+          "perturbed_control": true,
+          "predicted_length": 3640,
+          "weights": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        "policy": {
+          "allow_modular_unit_promotion": false,
+          "note": "Card A: homogeneous positive-weight tail ideal; properness promotes modular dim 0 only.",
+          "require_controls": true,
+          "scope": "HOMOGENEOUS_POSITIVE_WEIGHTS_PROPERNESS"
+        },
+        "promotion_note": "modular dimension zero promoted only for a homogeneous positive-weight ideal by the properness scope",
+        "properness_scope": {
+          "positive_weights": [
+            [
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              6
+            ]
+          ],
+          "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+          "systems_declared_homogeneous": true
+        },
+        "runs": [
+          {
+            "characteristic": 1009,
+            "command": [
+              "stdbuf",
+              "-oL",
+              "-eL",
+              "Singular",
+              "--cpus=2",
+              "--threads=2",
+              "--flint-threads=2",
+              "--no-rc",
+              "-q",
+              "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t5/T1_t5_b0_p1009.sing"
+            ],
+            "elapsed_seconds": 3.02156,
+            "label": "T1_t5_b0",
+            "main": {
+              "accepted": true,
+              "basis_size": 597,
+              "dimension": 0,
+              "lead_dim": 0,
+              "lead_vdim": 3640,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": false,
+              "vdim": 3640,
+              "vdim_matches_predicted": true
+            },
+            "perturbed": {
+              "accepted": false,
+              "basis_size": 597,
+              "dimension": 0,
+              "lead_dim": 0,
+              "lead_vdim": 3640,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": false,
+              "vdim": 3640,
+              "vdim_matches_predicted": false
+            },
+            "returncode": 0,
+            "script": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t5/T1_t5_b0_p1009.sing",
+            "script_sha256": "3cd72a33ef056a6c2ab3118e64d86c1ce6745bea4b20b9fc5e19fced7a456267",
+            "stderr": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t5/T1_t5_b0_p1009.err",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t5/T1_t5_b0_p1009.out",
+            "stdout_sha256": "66c8880c2f8164427fbf0f67ab40e3f244541df309dcabcff13173e296351523",
+            "timed_out": false
+          },
+          {
+            "characteristic": 1009,
+            "command": [
+              "stdbuf",
+              "-oL",
+              "-eL",
+              "Singular",
+              "--cpus=2",
+              "--threads=2",
+              "--flint-threads=2",
+              "--no-rc",
+              "-q",
+              "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t5/T1_t5_b1_p1009.sing"
+            ],
+            "elapsed_seconds": 3.02152,
+            "label": "T1_t5_b1",
+            "main": {
+              "accepted": true,
+              "basis_size": 597,
+              "dimension": 0,
+              "lead_dim": 0,
+              "lead_vdim": 3640,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": false,
+              "vdim": 3640,
+              "vdim_matches_predicted": true
+            },
+            "perturbed": {
+              "accepted": false,
+              "basis_size": 597,
+              "dimension": 0,
+              "lead_dim": 0,
+              "lead_vdim": 3640,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": false,
+              "vdim": 3640,
+              "vdim_matches_predicted": false
+            },
+            "returncode": 0,
+            "script": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t5/T1_t5_b1_p1009.sing",
+            "script_sha256": "49bd168207c0e34f6d190d028d80fbd62e453bc73f03647ef16287e8be3bb363",
+            "stderr": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t5/T1_t5_b1_p1009.err",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t5/T1_t5_b1_p1009.out",
+            "stdout_sha256": "62d5891f23000b8706af3fb35cbc32991e6270b0aea07b23a97e606ee708a276",
+            "timed_out": false
+          }
+        ]
+      },
+      "verdict": "DIM0_CHAR0"
+    },
+    "t6": {
+      "certificate": {
+        "accepted_run_count": 2,
+        "crt_rational_reconstruction": {
+          "available": true,
+          "items": {
+            "basis_size": {
+              "direct_singular_values": [
+                2931,
+                2931
+              ],
+              "direct_values_agree": true,
+              "modulus": 1009,
+              "rational_reconstruction": "2/21",
+              "residue": 913
+            },
+            "dimension": {
+              "direct_singular_values": [
+                0,
+                0
+              ],
+              "direct_values_agree": true,
+              "modulus": 1009,
+              "rational_reconstruction": "0",
+              "residue": 0
+            },
+            "lead_dim": {
+              "direct_singular_values": [
+                0,
+                0
+              ],
+              "direct_values_agree": true,
+              "modulus": 1009,
+              "rational_reconstruction": "0",
+              "residue": 0
+            },
+            "lead_vdim": {
+              "direct_singular_values": [
+                23256,
+                23256
+              ],
+              "direct_values_agree": true,
+              "modulus": 1009,
+              "rational_reconstruction": "20/21",
+              "residue": 49
+            }
+          },
+          "method": "CRT plus bounded rational reconstruction for scalar invariants"
+        },
+        "hilbert_hint": {
+          "numerator_sha256": "b017e8d562e3798f9e4e6bbd546c8cb10988f5bce01b459b8c3a9a008bb13ea9",
+          "perturbed_control": true,
+          "predicted_length": 23256,
+          "weights": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        "policy": {
+          "allow_modular_unit_promotion": false,
+          "note": "Card A: homogeneous positive-weight tail ideal; properness promotes modular dim 0 only.",
+          "require_controls": true,
+          "scope": "HOMOGENEOUS_POSITIVE_WEIGHTS_PROPERNESS"
+        },
+        "promotion_note": "modular dimension zero promoted only for a homogeneous positive-weight ideal by the properness scope",
+        "properness_scope": {
+          "positive_weights": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7
+            ]
+          ],
+          "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+          "systems_declared_homogeneous": true
+        },
+        "runs": [
+          {
+            "characteristic": 1009,
+            "command": [
+              "stdbuf",
+              "-oL",
+              "-eL",
+              "Singular",
+              "--cpus=2",
+              "--threads=2",
+              "--flint-threads=2",
+              "--no-rc",
+              "-q",
+              "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t6/T1_t6_b0_p1009.sing"
+            ],
+            "elapsed_seconds": 103.869481,
+            "label": "T1_t6_b0",
+            "main": {
+              "accepted": true,
+              "basis_size": 2931,
+              "dimension": 0,
+              "lead_dim": 0,
+              "lead_vdim": 23256,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": false,
+              "vdim": 23256,
+              "vdim_matches_predicted": true
+            },
+            "perturbed": {
+              "accepted": false,
+              "basis_size": 2931,
+              "dimension": 0,
+              "lead_dim": 0,
+              "lead_vdim": 23256,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": false,
+              "vdim": 23256,
+              "vdim_matches_predicted": false
+            },
+            "returncode": 0,
+            "script": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t6/T1_t6_b0_p1009.sing",
+            "script_sha256": "ed0878f38125193a05e79c2197dcb93196c32b6f3148ef477ace22969e89fba0",
+            "stderr": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t6/T1_t6_b0_p1009.err",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t6/T1_t6_b0_p1009.out",
+            "stdout_sha256": "d7b0df753d7231455c066ca6e9790cb3bf09ad0306d9a7198321002b74c4f3a0",
+            "timed_out": false
+          },
+          {
+            "characteristic": 1009,
+            "command": [
+              "stdbuf",
+              "-oL",
+              "-eL",
+              "Singular",
+              "--cpus=2",
+              "--threads=2",
+              "--flint-threads=2",
+              "--no-rc",
+              "-q",
+              "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t6/T1_t6_b1_p1009.sing"
+            ],
+            "elapsed_seconds": 103.871509,
+            "label": "T1_t6_b1",
+            "main": {
+              "accepted": true,
+              "basis_size": 2931,
+              "dimension": 0,
+              "lead_dim": 0,
+              "lead_vdim": 23256,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": false,
+              "vdim": 23256,
+              "vdim_matches_predicted": true
+            },
+            "perturbed": {
+              "accepted": false,
+              "basis_size": 2931,
+              "dimension": 0,
+              "lead_dim": 0,
+              "lead_vdim": 23256,
+              "missing_markers": [],
+              "nf_all_zero": true,
+              "unit": false,
+              "vdim": 23256,
+              "vdim_matches_predicted": false
+            },
+            "returncode": 0,
+            "script": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t6/T1_t6_b1_p1009.sing",
+            "script_sha256": "fa8112f9952245697a436685d89cec02ab5391ebf36b5328eddc1a19cd36bebd",
+            "stderr": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t6/T1_t6_b1_p1009.err",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T1_t6/T1_t6_b1_p1009.out",
+            "stdout_sha256": "a8ae0aaea2075e1ff67e818f97ae9b9e08baf9ece174906677d2d83c6d3a3940",
+            "timed_out": false
+          }
+        ]
+      },
+      "verdict": "DIM0_CHAR0"
+    }
+  },
+  "T2_g108_unit": {
+    "certificate": {
+      "accepted_run_count": 1,
+      "crt_rational_reconstruction": {
+        "available": false,
+        "items": {},
+        "method": "CRT plus bounded rational reconstruction for scalar invariants"
+      },
+      "hilbert_hint": null,
+      "policy": {
+        "allow_modular_unit_promotion": false,
+        "note": "D=108 stage-0 replay runs over Q.",
+        "require_controls": true,
+        "scope": "EXACT_Q"
+      },
+      "promotion_note": "exact Q standard basis reduced 1 to 0",
+      "properness_scope": {
+        "positive_weights": [
+          []
+        ],
+        "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+        "systems_declared_homogeneous": false
+      },
+      "runs": [
+        {
+          "characteristic": 0,
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "Singular",
+            "--cpus=4",
+            "--threads=4",
+            "--flint-threads=4",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T2_g108_unit/T2_g108_delta3_stage0_common_h3_Q.sing"
+          ],
+          "elapsed_seconds": 0.022205,
+          "label": "T2_g108_delta3_stage0_common_h3",
+          "main": {
+            "accepted": true,
+            "basis_size": 1,
+            "dimension": -1,
+            "lead_dim": -1,
+            "lead_vdim": null,
+            "missing_markers": [],
+            "nf_all_zero": true,
+            "unit": true,
+            "vdim": null,
+            "vdim_matches_predicted": null
+          },
+          "perturbed": null,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T2_g108_unit/T2_g108_delta3_stage0_common_h3_Q.sing",
+          "script_sha256": "b4d1f9c9c0738cb4f2ed325fd3949540a3a9d6694817bb0ae27f18f8486294a7",
+          "stderr": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T2_g108_unit/T2_g108_delta3_stage0_common_h3_Q.err",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T2_g108_unit/T2_g108_delta3_stage0_common_h3_Q.out",
+          "stdout_sha256": "1efd734c9e05db5c40216a980097982e05307325e80501c8fe72748bc83f0f13",
+          "timed_out": false
+        }
+      ]
+    },
+    "verdict": "UNIT_IDEAL_CHAR0"
+  },
+  "T3_t2_negative": {
+    "certificate": {
+      "accepted_run_count": 1,
+      "crt_rational_reconstruction": {
+        "available": false,
+        "items": {},
+        "method": "CRT plus bounded rational reconstruction for scalar invariants"
+      },
+      "hilbert_hint": null,
+      "policy": {
+        "allow_modular_unit_promotion": false,
+        "note": "Boundary control is exact over Q.",
+        "require_controls": true,
+        "scope": "EXACT_Q"
+      },
+      "promotion_note": "exact Q standard basis has positive dimension",
+      "properness_scope": {
+        "positive_weights": [
+          [
+            1,
+            3
+          ]
+        ],
+        "statement": "A modular dimension-zero result for an ideal homogeneous in positive weights certifies characteristic-zero dimension zero through the properness lemma.  A modular positive-dimensional result proves no characteristic-zero statement.  A modular unit ideal is not promoted unless exact-Q or an explicit caller policy supplies the missing scope.",
+        "systems_declared_homogeneous": true
+      },
+      "runs": [
+        {
+          "characteristic": 0,
+          "command": [
+            "stdbuf",
+            "-oL",
+            "-eL",
+            "Singular",
+            "--cpus=4",
+            "--threads=4",
+            "--flint-threads=4",
+            "--no-rc",
+            "-q",
+            "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T3_t2_negative/T3_t2_y1over5_negative_Q.sing"
+          ],
+          "elapsed_seconds": 0.021017,
+          "label": "T3_t2_y1over5_negative",
+          "main": {
+            "accepted": true,
+            "basis_size": 3,
+            "dimension": 1,
+            "lead_dim": 1,
+            "lead_vdim": null,
+            "missing_markers": [],
+            "nf_all_zero": true,
+            "unit": false,
+            "vdim": null,
+            "vdim_matches_predicted": null
+          },
+          "perturbed": null,
+          "returncode": 0,
+          "script": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T3_t2_negative/T3_t2_y1over5_negative_Q.sing",
+          "script_sha256": "58136573bee22b298f9a7b68d185dd772c611a8393609fa8faf31a3a09ef8b68",
+          "stderr": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T3_t2_negative/T3_t2_y1over5_negative_Q.err",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T3_t2_negative/T3_t2_y1over5_negative_Q.out",
+          "stdout_sha256": "48bf2cf491f4553cd60efbe9b7de77cd570bd3f3ad041796a021d46905c04049",
+          "timed_out": false
+        }
+      ]
+    },
+    "verdict": "POSDIM"
+  },
+  "T4_staged_emitter": {
+    "band_count": 142,
+    "band_files": [
+      {
+        "band": "h0",
+        "degree": 0,
+        "generator_checksum": "22a640d87e31210b3e970f002e46dbe8a24de24bb1fd145241dea00892fb2edc",
+        "labels": [
+          "row_101"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d0.sing",
+        "rows": 1,
+        "sha256": "bee314b8897983fa4a46976c9e41831296040a24a61fe2f05828bb8a7b420a75"
+      },
+      {
+        "band": "h0",
+        "degree": 1,
+        "generator_checksum": "714ed3a14f634c7eb6ab8846e5e782d53b1cf6d2094cccd2a550cffdbb42d8c9",
+        "labels": [
+          "row_96",
+          "row_100"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d1.sing",
+        "rows": 2,
+        "sha256": "a2b56b69aeb1761fd0a36578d3e3bd7515c34b75abdc264751d8153cf2fe97bd"
+      },
+      {
+        "band": "h0",
+        "degree": 2,
+        "generator_checksum": "408277b594f6c7904c13fa0e5102c0473f47d41afbdb1c965c6d80c1fdd81b42",
+        "labels": [
+          "row_91",
+          "row_95",
+          "row_99"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d2.sing",
+        "rows": 3,
+        "sha256": "1ffe097b2a6ef7cdcb5ef79996266ea1f91397d3b8db87f22de8e3e1973faf52"
+      },
+      {
+        "band": "h0",
+        "degree": 3,
+        "generator_checksum": "1fdfa268418f5e60bff517d8d5e9cd9445ba0d37851dc64bba8d253157d48730",
+        "labels": [
+          "row_86",
+          "row_90",
+          "row_94",
+          "row_98"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d3.sing",
+        "rows": 4,
+        "sha256": "0fdd577d18f47bc4ff9a319991169bd129ee3b5dbe3cdc4ac54bd0ef6cf77fd4"
+      },
+      {
+        "band": "h0",
+        "degree": 4,
+        "generator_checksum": "3be9bdce235467f7724ebab9f48ca3ffc1b2a9f079ccf23f6452ac7b044a30ef",
+        "labels": [
+          "row_81",
+          "row_85",
+          "row_89",
+          "row_93",
+          "row_97"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d4.sing",
+        "rows": 5,
+        "sha256": "77c38cfcf37bb07dbf26e602cc4ab75b1acdbe4c77d624b2baa33b8885d90229"
+      },
+      {
+        "band": "h0",
+        "degree": 5,
+        "generator_checksum": "602fbaad38c703f838457c4d2d550a6ac1700b0506a730472a5d09e192b620d3",
+        "labels": [
+          "row_76",
+          "row_80",
+          "row_84",
+          "row_88",
+          "row_92"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d5.sing",
+        "rows": 5,
+        "sha256": "85586f55ae5240781a94c17155374e5913509746bad88b0a160673bf3179e468"
+      },
+      {
+        "band": "h0",
+        "degree": 6,
+        "generator_checksum": "4390cb4d15cd2e1b2e7c7695cfe497586aa575476bd8deaeb96c26e906d98d2d",
+        "labels": [
+          "row_71",
+          "row_75",
+          "row_79",
+          "row_83",
+          "row_87"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d6.sing",
+        "rows": 5,
+        "sha256": "e2c67b685168892b9ac8da561fc6f3694fa28f2ae9c5c02d894cfb8070e3e741"
+      },
+      {
+        "band": "h0",
+        "degree": 7,
+        "generator_checksum": "bf1c75caa3c3da4dc9d285ee248ae86a5ba7a1d1b622ef7294864e3cda2c4db4",
+        "labels": [
+          "row_66",
+          "row_70",
+          "row_74",
+          "row_78",
+          "row_82"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d7.sing",
+        "rows": 5,
+        "sha256": "c714629e07c9ceac3ac68eaac5dfe34070915929948a791ebdab9547a80629e7"
+      },
+      {
+        "band": "h0",
+        "degree": 8,
+        "generator_checksum": "d22920a2dd2949366fd199e1aa01ef3d0b3cfb575741fac1949a88c946a78028",
+        "labels": [
+          "row_61",
+          "row_65",
+          "row_69",
+          "row_73",
+          "row_77"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d8.sing",
+        "rows": 5,
+        "sha256": "3f5817b7da2d8caa1024661da393922d97e8379d6b4c1d6b9e80a75668b16b6e"
+      },
+      {
+        "band": "h0",
+        "degree": 9,
+        "generator_checksum": "4033d90466e64acb1af4a5f2751c0695a77564118a93a8f065d5a95821e306ce",
+        "labels": [
+          "row_56",
+          "row_60",
+          "row_64",
+          "row_68",
+          "row_72"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d9.sing",
+        "rows": 5,
+        "sha256": "9de47513f8f4e315b7d8d93cc5c03d584077ef238a0e3bfe7e7689e4a13083ba"
+      },
+      {
+        "band": "h0",
+        "degree": 10,
+        "generator_checksum": "01eb6adb32216c59bc1d242129855e1b2c07d8acc551a6422fa118098014d69b",
+        "labels": [
+          "row_51",
+          "row_55",
+          "row_59",
+          "row_63",
+          "row_67"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d10.sing",
+        "rows": 5,
+        "sha256": "130b5b55d517a13ebe8b574cbcc83ad686ba0d8612343b0df0d27b9566258aa9"
+      },
+      {
+        "band": "h0",
+        "degree": 11,
+        "generator_checksum": "ae508e0bcf772a41d6d93a3cc3b103e6b923d3c6e8fa7c1bdd3500f955769120",
+        "labels": [
+          "row_46",
+          "row_50",
+          "row_54",
+          "row_58",
+          "row_62"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d11.sing",
+        "rows": 5,
+        "sha256": "75879236aa52969a22cf405dbfbd8b38b6705e01f12115c271f1312c14b461c9"
+      },
+      {
+        "band": "h0",
+        "degree": 12,
+        "generator_checksum": "2f6606bae6b57c0474dab0535024b03eb70d36d241bbfe00245bfba4e6c1c95c",
+        "labels": [
+          "row_41",
+          "row_45",
+          "row_49",
+          "row_53",
+          "row_57"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d12.sing",
+        "rows": 5,
+        "sha256": "ebaf32e543ad741fa7e7594de0b9cf1f78e4ad901bc4ee93e2168780bf990756"
+      },
+      {
+        "band": "h0",
+        "degree": 13,
+        "generator_checksum": "ed3783ca60d13209875210039821414bba7ef037575681236370dc53a8f3db14",
+        "labels": [
+          "row_36",
+          "row_40",
+          "row_44",
+          "row_48",
+          "row_52"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d13.sing",
+        "rows": 5,
+        "sha256": "ab44b76ed50c23ec53b24ab88d7ec1cee70e5f42bd3e246b83cffdc904de1b87"
+      },
+      {
+        "band": "h0",
+        "degree": 14,
+        "generator_checksum": "6832f7f9d26d4f2b7c936ac7d96a0fee1f08ac30ca9c6ebf0b25837da8edce2c",
+        "labels": [
+          "row_31",
+          "row_35",
+          "row_39",
+          "row_43",
+          "row_47"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d14.sing",
+        "rows": 5,
+        "sha256": "6836ae00687c0ecd66722fad7b5eaf2f19f0b2ca026b9d33ed1c44f984d6555f"
+      },
+      {
+        "band": "h0",
+        "degree": 15,
+        "generator_checksum": "7f94a00231152685bf7d61f3a7d69e17fa5a1bebfed5b4ae2745759e7f2f2359",
+        "labels": [
+          "row_26",
+          "row_30",
+          "row_34",
+          "row_38",
+          "row_42"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d15.sing",
+        "rows": 5,
+        "sha256": "d5b9d68a41e0a32b196d8a2ee611feae2f260fac1acb4cde17dec5702ac271a4"
+      },
+      {
+        "band": "h0",
+        "degree": 16,
+        "generator_checksum": "99aa58d8438b175672dcf22565e92b32279150ffef3bf0b57a89d03f693e402e",
+        "labels": [
+          "row_21",
+          "row_25",
+          "row_29",
+          "row_33",
+          "row_37"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d16.sing",
+        "rows": 5,
+        "sha256": "de7a9b7fb403c893e010d31f38b76a5965b2965c8c89af04c747edcb23f98f97"
+      },
+      {
+        "band": "h0",
+        "degree": 17,
+        "generator_checksum": "28022e14f36f97f4e565c93eae508ea0c46600adc487c1551135d03f81e578e4",
+        "labels": [
+          "row_16",
+          "row_20",
+          "row_24",
+          "row_28",
+          "row_32"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d17.sing",
+        "rows": 5,
+        "sha256": "ae0b3d9e865afcebb802563a6af1b954bc86c83e543bdab459a7b0c7eea87b6b"
+      },
+      {
+        "band": "h0",
+        "degree": 18,
+        "generator_checksum": "72117880b6accf7bd4c1808d7712c4a8a42276ca3eeacc1fd4501d637851777c",
+        "labels": [
+          "row_11",
+          "row_15",
+          "row_19",
+          "row_23",
+          "row_27"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d18.sing",
+        "rows": 5,
+        "sha256": "25e549a0c009dca7829850d521477c89d5657419967b00cef8d7b55109deab1e"
+      },
+      {
+        "band": "h0",
+        "degree": 19,
+        "generator_checksum": "cfa5ce315fb7aa523391b70af42ab13862506fd3eddcc154ab4589837d60a845",
+        "labels": [
+          "row_10",
+          "row_14",
+          "row_18",
+          "row_22"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d19.sing",
+        "rows": 4,
+        "sha256": "e89df0a7c1d0dcbcf489379fb03676d5a613a3f1c33a51b8827d9a820fe31a40"
+      },
+      {
+        "band": "h0",
+        "degree": 20,
+        "generator_checksum": "5b7e8d2a560f21d114420b4fae58bc62c3c9c9801e6328a2d7f162a134d8c701",
+        "labels": [
+          "row_6",
+          "row_9",
+          "row_13",
+          "row_17"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d20.sing",
+        "rows": 4,
+        "sha256": "8d486299bef9cf426be462801fe7ab6eb78708e624b580166a892752f616e4b3"
+      },
+      {
+        "band": "h0",
+        "degree": 21,
+        "generator_checksum": "1fe232f5e3802d7d2e1ccf4b1432b34ae63fd097aa2c243a59f26a9c5b7607df",
+        "labels": [
+          "row_5",
+          "row_8",
+          "row_12"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d21.sing",
+        "rows": 3,
+        "sha256": "8133e443cc30b36d2ea3c411dda12336ce48a93fa74e67387722657e074ca3dd"
+      },
+      {
+        "band": "h0",
+        "degree": 22,
+        "generator_checksum": "78e0ad7fcd8f73b6ba25d47f42b614bca3cc84fbe3fbde63a61bf2ed863dd2fe",
+        "labels": [
+          "row_2",
+          "row_4",
+          "row_7"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d22.sing",
+        "rows": 3,
+        "sha256": "9528cadcf9a903446cc1858227b0bbb8b1c677020073ce711d1916cc40d07dea"
+      },
+      {
+        "band": "h0",
+        "degree": 23,
+        "generator_checksum": "28e342def76eff6b801338b2f7ee93de78616fdbc069eb4856635b54e9cf7c37",
+        "labels": [
+          "row_0",
+          "row_1",
+          "row_3"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h0_d23.sing",
+        "rows": 3,
+        "sha256": "c0d65ec75a1d444081866f201d882fcaedcb093bc7f376b9b83f25f7bbf8a48c"
+      },
+      {
+        "band": "h1",
+        "degree": 0,
+        "generator_checksum": "b2c20ba59cc1d3eca0236ca3a396a99f5573c371a49cc43671a8d87376e4531b",
+        "labels": [
+          "row_203"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d0.sing",
+        "rows": 1,
+        "sha256": "14a8029f6d937f74fa234ea96f0644000de841943ba16a5738a43496cc7f176f"
+      },
+      {
+        "band": "h1",
+        "degree": 1,
+        "generator_checksum": "667304b0cba92788e77bf10eb4d4a3ec0de5598af1a7299397624944b4aaa001",
+        "labels": [
+          "row_198",
+          "row_202"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d1.sing",
+        "rows": 2,
+        "sha256": "65dd73164551454b573633540d274fe0628b116c35792104e347cfba2a19b91e"
+      },
+      {
+        "band": "h1",
+        "degree": 2,
+        "generator_checksum": "a77b6aa875efb5a9ee4d75e0aabb6145043564168357ad8e53ff7e6717ff8416",
+        "labels": [
+          "row_193",
+          "row_197",
+          "row_201"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d2.sing",
+        "rows": 3,
+        "sha256": "d05ea493d872ee9be9057b338bf9aa664528a8876885c551ac0d03be68b2e8c3"
+      },
+      {
+        "band": "h1",
+        "degree": 3,
+        "generator_checksum": "744085b5358313b43ad4f7e3e0ab43e0992b22ddcf52a690aa106b309d590c4e",
+        "labels": [
+          "row_188",
+          "row_192",
+          "row_196",
+          "row_200"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d3.sing",
+        "rows": 4,
+        "sha256": "ee87a8f0802c8faf415ab1b13eabb7bbfa975aabbcd551cf0d3b85c3e0234af2"
+      },
+      {
+        "band": "h1",
+        "degree": 4,
+        "generator_checksum": "4db8fe83f87cd0ee1c79e4e0bba3e847a7ee7475daee0f06e4af2dc951c296b5",
+        "labels": [
+          "row_183",
+          "row_187",
+          "row_191",
+          "row_195",
+          "row_199"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d4.sing",
+        "rows": 5,
+        "sha256": "4ac1324f32385f3adf96d2088a7d5b316220faf71480234aecc0726683a53bdd"
+      },
+      {
+        "band": "h1",
+        "degree": 5,
+        "generator_checksum": "02b4cfbcee50df1511c953f901837869e968dee456ba8153922d5a5a1cdc9ead",
+        "labels": [
+          "row_178",
+          "row_182",
+          "row_186",
+          "row_190",
+          "row_194"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d5.sing",
+        "rows": 5,
+        "sha256": "3b9c286f46cd78c006bd7a9df8dedbe78d22a3e5015176ac9b2310ba2921c8be"
+      },
+      {
+        "band": "h1",
+        "degree": 6,
+        "generator_checksum": "d1547619b9dd4e2c9f50f1829af8429c4d473516dbba9ed94c72c2c38a9f5656",
+        "labels": [
+          "row_173",
+          "row_177",
+          "row_181",
+          "row_185",
+          "row_189"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d6.sing",
+        "rows": 5,
+        "sha256": "457fcfff12e0e431c86d2bea841731518ec8acdcf460db39baec1b15fc7e9391"
+      },
+      {
+        "band": "h1",
+        "degree": 7,
+        "generator_checksum": "0205fa812cd57e6887855826c6bb5092a2caf3c8c2e0f3d9835eef62c9d7328b",
+        "labels": [
+          "row_168",
+          "row_172",
+          "row_176",
+          "row_180",
+          "row_184"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d7.sing",
+        "rows": 5,
+        "sha256": "8ea2c04815fb05bc871bbe161620ebe32173197255d6ee3a39b787162b5823b2"
+      },
+      {
+        "band": "h1",
+        "degree": 8,
+        "generator_checksum": "1ba9c36bc6b58ed6cfdeae0d5fecc0590b3ff81c68ff327b6a03e37181a02dfe",
+        "labels": [
+          "row_163",
+          "row_167",
+          "row_171",
+          "row_175",
+          "row_179"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d8.sing",
+        "rows": 5,
+        "sha256": "5e962d055114babe156d2564c465d1e85df31da839db8d688f132293788462dd"
+      },
+      {
+        "band": "h1",
+        "degree": 9,
+        "generator_checksum": "766e55c33f7687b444d7ca421011641189782be15dda34da2d9dfddb1aaee032",
+        "labels": [
+          "row_158",
+          "row_162",
+          "row_166",
+          "row_170",
+          "row_174"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d9.sing",
+        "rows": 5,
+        "sha256": "368753c357d29503a6b480ffed856eab1abf462ec0941dce9c44db4a4357f6ea"
+      },
+      {
+        "band": "h1",
+        "degree": 10,
+        "generator_checksum": "0e0ff3b114b1d81190299aa0b9f5e82242673a20023bde52eb2185d03fbc7d90",
+        "labels": [
+          "row_153",
+          "row_157",
+          "row_161",
+          "row_165",
+          "row_169"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d10.sing",
+        "rows": 5,
+        "sha256": "fbd3ad11422820f4c11c87d2807819bae3fa97e66d094d15fee7c7517a90a021"
+      },
+      {
+        "band": "h1",
+        "degree": 11,
+        "generator_checksum": "eae9090966897994e0a0e0b11c5c79ec3c713c10c352c3f3dcc26d4cbf34a360",
+        "labels": [
+          "row_148",
+          "row_152",
+          "row_156",
+          "row_160",
+          "row_164"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d11.sing",
+        "rows": 5,
+        "sha256": "52edbbb08a479c5b38797022e7f51d5ebe691c65caf02b53818f9d5daf05dbdf"
+      },
+      {
+        "band": "h1",
+        "degree": 12,
+        "generator_checksum": "78b66c1249d8735446b5a67f96c8e8757cdf1851f1d5967234779a4a44243bf8",
+        "labels": [
+          "row_143",
+          "row_147",
+          "row_151",
+          "row_155",
+          "row_159"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d12.sing",
+        "rows": 5,
+        "sha256": "7cdacb40ade59024a082f6523d38bffb1b16ee286aac6fca19c945179a9c37e3"
+      },
+      {
+        "band": "h1",
+        "degree": 13,
+        "generator_checksum": "a4fce4256709c69b562d69606b5793e90a9a256fc60e6bc30b9e2ce35bc42262",
+        "labels": [
+          "row_138",
+          "row_142",
+          "row_146",
+          "row_150",
+          "row_154"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d13.sing",
+        "rows": 5,
+        "sha256": "bd97d8df3475e09f9735c7c7d855dcbc5a580bd1180d13402f0b5d0b4ef2532a"
+      },
+      {
+        "band": "h1",
+        "degree": 14,
+        "generator_checksum": "da3c902f0e663a0005eb747987857c28df038c0ef0f0ef062c1a8022aaf95512",
+        "labels": [
+          "row_133",
+          "row_137",
+          "row_141",
+          "row_145",
+          "row_149"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d14.sing",
+        "rows": 5,
+        "sha256": "7c00a990cfe6287b42ecd68d24cf6735df84d4acfc53ca72e2e6f3ac8b591da2"
+      },
+      {
+        "band": "h1",
+        "degree": 15,
+        "generator_checksum": "3cb5ae1f11bbf57738cb28e81e48f96631d745e3d617528e3f2b7b139bb80a29",
+        "labels": [
+          "row_128",
+          "row_132",
+          "row_136",
+          "row_140",
+          "row_144"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d15.sing",
+        "rows": 5,
+        "sha256": "a67ea3ed670ad932e8115b138ff49030e5e88d44a7a262a0151c0512b525e84a"
+      },
+      {
+        "band": "h1",
+        "degree": 16,
+        "generator_checksum": "c8eea117ab29f6fdfbb99cd19dfc4f725aac18cb26ca7eabe653bc59a58185e7",
+        "labels": [
+          "row_123",
+          "row_127",
+          "row_131",
+          "row_135",
+          "row_139"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d16.sing",
+        "rows": 5,
+        "sha256": "03cd47baf84829b8582584dcf117f79fd1b7b3623afa95fe9dfefa4742a73751"
+      },
+      {
+        "band": "h1",
+        "degree": 17,
+        "generator_checksum": "9aa5bcf6b586148b0fcf5949fbc617906528b03a8ab3c66a78f12be312f5079c",
+        "labels": [
+          "row_118",
+          "row_122",
+          "row_126",
+          "row_130",
+          "row_134"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d17.sing",
+        "rows": 5,
+        "sha256": "7214daff0dbf14282a06d224a9bf2ef115263607c139ef79e9e48744297e68c5"
+      },
+      {
+        "band": "h1",
+        "degree": 18,
+        "generator_checksum": "2ba94854c04114b2ebbea008a1196ed68d486257feaa70f8b0f4bc763e13dfc0",
+        "labels": [
+          "row_113",
+          "row_117",
+          "row_121",
+          "row_125",
+          "row_129"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d18.sing",
+        "rows": 5,
+        "sha256": "2da5eeea5f06165f7725fd33bd184182fac5941296c045e887a822170f89685c"
+      },
+      {
+        "band": "h1",
+        "degree": 19,
+        "generator_checksum": "1d5e6ad7bfa9767e7f5d1932380153cf7d1f876ce9cb006cf68db6b93fe36925",
+        "labels": [
+          "row_112",
+          "row_116",
+          "row_120",
+          "row_124"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d19.sing",
+        "rows": 4,
+        "sha256": "6db733807cc6ee916e1200e9b62ecb6a07b7d150deb862babb20f6e09c5d2ad0"
+      },
+      {
+        "band": "h1",
+        "degree": 20,
+        "generator_checksum": "db018bf1fb4f30328740d38cacef411358efe108885195d16e0e5639d963c7bb",
+        "labels": [
+          "row_108",
+          "row_111",
+          "row_115",
+          "row_119"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d20.sing",
+        "rows": 4,
+        "sha256": "cc1f163eb3a5e3f1611da83099d8bd919579f4f5120d40d1f24e7ac4e52c3690"
+      },
+      {
+        "band": "h1",
+        "degree": 21,
+        "generator_checksum": "98b97fd2dab17e935574f2bf314199b2cb46465f7f9531fc8fdd16a170292492",
+        "labels": [
+          "row_107",
+          "row_110",
+          "row_114"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d21.sing",
+        "rows": 3,
+        "sha256": "211995671e3af54dd1e67e1b6dd7f76e6a8065bb36eb991b8b54fdfd43fcd8c9"
+      },
+      {
+        "band": "h1",
+        "degree": 22,
+        "generator_checksum": "bd8264d269e5e441349f3fb42eb662dad8726bfed259014f09411bdb068aa343",
+        "labels": [
+          "row_104",
+          "row_106",
+          "row_109"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d22.sing",
+        "rows": 3,
+        "sha256": "9cbef1c5cb1db57bb525591215e77435f149f6ff005b51e339c8163ca2671489"
+      },
+      {
+        "band": "h1",
+        "degree": 23,
+        "generator_checksum": "e8a13b213961aea8aebfb34016de00d875bb92491fce4f1b9fb37c0ee26391a3",
+        "labels": [
+          "row_102",
+          "row_103",
+          "row_105"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h1_d23.sing",
+        "rows": 3,
+        "sha256": "3d0359394c97c28ff2faafafb2c83ac3d890ebbef25e143307e8a3cf86fa26a8"
+      },
+      {
+        "band": "h2",
+        "degree": 0,
+        "generator_checksum": "74a79d44ca50efa22f3c37758371e963b2319a6f4d597e333d73bb6b6493936f",
+        "labels": [
+          "row_305"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d0.sing",
+        "rows": 1,
+        "sha256": "66ec9f237c291bc1f9476167249c7eadfa6135c6d90509a399e7d578863234b5"
+      },
+      {
+        "band": "h2",
+        "degree": 1,
+        "generator_checksum": "07413e61e540899cfb7eefe668a5b67cbb3aeb302c85e01388a9496b26351962",
+        "labels": [
+          "row_300",
+          "row_304"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d1.sing",
+        "rows": 2,
+        "sha256": "e0125b749cd1dc118f11d7e5de4b91ac7e62f9c708a1fc0d73c821f47ec3252a"
+      },
+      {
+        "band": "h2",
+        "degree": 2,
+        "generator_checksum": "a5eca57dbd2b95fe6c5cce236632249e59e970595f97bd8ed80703243522837d",
+        "labels": [
+          "row_295",
+          "row_299",
+          "row_303"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d2.sing",
+        "rows": 3,
+        "sha256": "368e3ddb88b075f0ed372efc5a247a4ae3e19d6d52996758dc2c1a6a0772aa88"
+      },
+      {
+        "band": "h2",
+        "degree": 3,
+        "generator_checksum": "d243bcfab7cbfdf1cd9dc3c3dd2d17ee2734dc2a36433456c184d62cbeaa3e88",
+        "labels": [
+          "row_290",
+          "row_294",
+          "row_298",
+          "row_302"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d3.sing",
+        "rows": 4,
+        "sha256": "7381dbb9266b2461601f8cbbdf8894e681c4caaffd4c5b6bf529d00b85bd1e15"
+      },
+      {
+        "band": "h2",
+        "degree": 4,
+        "generator_checksum": "9e8cead17fc8eb6293b782fb4ba79310b4626033081242905a86679fb3303fb2",
+        "labels": [
+          "row_285",
+          "row_289",
+          "row_293",
+          "row_297",
+          "row_301"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d4.sing",
+        "rows": 5,
+        "sha256": "5f84acd2e79746e706d6c4db72e6df499b2b33349bc25f60228f686261fe3615"
+      },
+      {
+        "band": "h2",
+        "degree": 5,
+        "generator_checksum": "5985e09e848b1b72175af1a7d70b8e7688b92264f5968acf31d91a23a8d73653",
+        "labels": [
+          "row_280",
+          "row_284",
+          "row_288",
+          "row_292",
+          "row_296"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d5.sing",
+        "rows": 5,
+        "sha256": "59f92a4d6796138f0ee51c64fe77807ca5340636be2873286023eaa1d38b2341"
+      },
+      {
+        "band": "h2",
+        "degree": 6,
+        "generator_checksum": "dc0b28c92a95f55ffa58ec462832dafe99a49c2f2028d9cfcb3a7b00a634019a",
+        "labels": [
+          "row_275",
+          "row_279",
+          "row_283",
+          "row_287",
+          "row_291"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d6.sing",
+        "rows": 5,
+        "sha256": "91072a662eab53788b392b7797d729f8985a68d478bcd0bafbc575d30eaf98a2"
+      },
+      {
+        "band": "h2",
+        "degree": 7,
+        "generator_checksum": "27611607c2425a6c2559624daa1772c226c685d0ad43b7a3e045c3bba7e8be73",
+        "labels": [
+          "row_270",
+          "row_274",
+          "row_278",
+          "row_282",
+          "row_286"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d7.sing",
+        "rows": 5,
+        "sha256": "b18c6621e83a8b23d518f7a5b5faf0f0d3a9cffe21377f5db44470b2b0fb2502"
+      },
+      {
+        "band": "h2",
+        "degree": 8,
+        "generator_checksum": "7b62fcee3607dd5bbd273b31d790d1fcea4d321eafd5d1e10773dd53353a8857",
+        "labels": [
+          "row_265",
+          "row_269",
+          "row_273",
+          "row_277",
+          "row_281"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d8.sing",
+        "rows": 5,
+        "sha256": "a20be540becb84fef5250c9018338249c48f584e352b70f47c0e084d159c3088"
+      },
+      {
+        "band": "h2",
+        "degree": 9,
+        "generator_checksum": "657d0aba65aa2473766e7d481250a05cb6b7791ea3e276aed16a0f823e2f3724",
+        "labels": [
+          "row_260",
+          "row_264",
+          "row_268",
+          "row_272",
+          "row_276"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d9.sing",
+        "rows": 5,
+        "sha256": "c0faf0715988f4a3cd96814e82b2195d709dccae6f2130db45193eb83a62b903"
+      },
+      {
+        "band": "h2",
+        "degree": 10,
+        "generator_checksum": "cab28828cec005c4f7487169c410608b5c79f18b7da5eb34358af6e941053d46",
+        "labels": [
+          "row_255",
+          "row_259",
+          "row_263",
+          "row_267",
+          "row_271"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d10.sing",
+        "rows": 5,
+        "sha256": "ec66674131fad141454ce62b7e943828d186266027897cd96942ab9203bb67d7"
+      },
+      {
+        "band": "h2",
+        "degree": 11,
+        "generator_checksum": "9e4fb8cc2ce60cba33fdf88495cbf379aaa78a95147d7de48fecdf629ee48e37",
+        "labels": [
+          "row_250",
+          "row_254",
+          "row_258",
+          "row_262",
+          "row_266"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d11.sing",
+        "rows": 5,
+        "sha256": "78b375c86203c4d8673bc3137530fc71d0fd85881d070e51ed808fcfd37983ac"
+      },
+      {
+        "band": "h2",
+        "degree": 12,
+        "generator_checksum": "d2dd2b48c49e357cae3884cd873cbcef6ea93e4dae85d6be9636edb813b1b664",
+        "labels": [
+          "row_245",
+          "row_249",
+          "row_253",
+          "row_257",
+          "row_261"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d12.sing",
+        "rows": 5,
+        "sha256": "2897577d58b94bdf4d0347e44e1d0a1cca4dbbea3be3af9b15cfc643b082fb1c"
+      },
+      {
+        "band": "h2",
+        "degree": 13,
+        "generator_checksum": "8255217ab645a79caf72a5f3c452b3376b10803faca569f9960c1d9b58901b23",
+        "labels": [
+          "row_240",
+          "row_244",
+          "row_248",
+          "row_252",
+          "row_256"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d13.sing",
+        "rows": 5,
+        "sha256": "4c34a0442f412c0968c513c99cd9266c9f6271459e60b35a3cc47a084d0c84aa"
+      },
+      {
+        "band": "h2",
+        "degree": 14,
+        "generator_checksum": "a9d6ae980241cb67ce22a2bd953fb8465e7bc15e2fed4cdcf2fb7e8638add4fc",
+        "labels": [
+          "row_235",
+          "row_239",
+          "row_243",
+          "row_247",
+          "row_251"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d14.sing",
+        "rows": 5,
+        "sha256": "9329350c714e3dacdeff4a59e41f69d4c696ae63f4d90fe6c35404bd07171e5e"
+      },
+      {
+        "band": "h2",
+        "degree": 15,
+        "generator_checksum": "405c067825317e0156e84e96f04abd91e934b6d029db5bccf22b97bff650c791",
+        "labels": [
+          "row_230",
+          "row_234",
+          "row_238",
+          "row_242",
+          "row_246"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d15.sing",
+        "rows": 5,
+        "sha256": "466b0145219e4a34ca7c83db88deaa82090fdc2a2091e922b04e7e552d41600e"
+      },
+      {
+        "band": "h2",
+        "degree": 16,
+        "generator_checksum": "943102a6e73586fdba0aeed44bd67de602a9d9438a43cb5eea25ddb6cb3fb060",
+        "labels": [
+          "row_225",
+          "row_229",
+          "row_233",
+          "row_237",
+          "row_241"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d16.sing",
+        "rows": 5,
+        "sha256": "c87a348cb936b8dd9d953de8e24e3f875bf8a74c310da0ed0cfaf87488cc4a43"
+      },
+      {
+        "band": "h2",
+        "degree": 17,
+        "generator_checksum": "8505037e70b46e69453915f8bd612edc58f10243f5f2d57b096424098579bf8d",
+        "labels": [
+          "row_220",
+          "row_224",
+          "row_228",
+          "row_232",
+          "row_236"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d17.sing",
+        "rows": 5,
+        "sha256": "55a04a197569634ba3eda146d88dcf36f5d783584f932f5d68f88925d77ca02f"
+      },
+      {
+        "band": "h2",
+        "degree": 18,
+        "generator_checksum": "545ffe0851c9495e1c6193eb770b352135d8b2229b3b61a12cc666ce441dfb0f",
+        "labels": [
+          "row_215",
+          "row_219",
+          "row_223",
+          "row_227",
+          "row_231"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d18.sing",
+        "rows": 5,
+        "sha256": "9ea985f566ea14fd8eb3175433a0f7bd37587119eff62d5c7333d83ae93bd353"
+      },
+      {
+        "band": "h2",
+        "degree": 19,
+        "generator_checksum": "2599a3b18cfd62301b19fd57d5cc4ca035c42fd340742968d5e2e296e5faca97",
+        "labels": [
+          "row_214",
+          "row_218",
+          "row_222",
+          "row_226"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d19.sing",
+        "rows": 4,
+        "sha256": "15627950d8b47f3574abd6c560fbe3783f3fcd71afa7d0c19b00d336c1c6b09a"
+      },
+      {
+        "band": "h2",
+        "degree": 20,
+        "generator_checksum": "69474f02fe1089121df312dece4b7f5ba6d9c71741bd19bd3aacf2934cab0bd9",
+        "labels": [
+          "row_210",
+          "row_213",
+          "row_217",
+          "row_221"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d20.sing",
+        "rows": 4,
+        "sha256": "ad73ca024e5321ef0d49db7686894f3478844ebc4f8399af9348b818b6952639"
+      },
+      {
+        "band": "h2",
+        "degree": 21,
+        "generator_checksum": "8370725447a7a7f3cdf1d7061ce34e9a32f5c58ca9a2f2f6e99d2175f1dea56a",
+        "labels": [
+          "row_209",
+          "row_212",
+          "row_216"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d21.sing",
+        "rows": 3,
+        "sha256": "976295b88dfecaf9ad57975bc5a425723a2862d191ba66f9d14752373c5dc25b"
+      },
+      {
+        "band": "h2",
+        "degree": 22,
+        "generator_checksum": "b2bcb869981d9883f4c532162ed4d8fa7b90ed20a3ca5349b9383ad50d8e0763",
+        "labels": [
+          "row_206",
+          "row_208",
+          "row_211"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d22.sing",
+        "rows": 3,
+        "sha256": "118cdc28082a369db956c2b30a79bd498d0f0f1f309544bc04ab563e2ae7b771"
+      },
+      {
+        "band": "h2",
+        "degree": 23,
+        "generator_checksum": "0cf35301fcd9573c18f164e416ad9237cf91f6270a78ca3088c68dfba46e7ee9",
+        "labels": [
+          "row_204",
+          "row_205",
+          "row_207"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h2_d23.sing",
+        "rows": 3,
+        "sha256": "877dc59831ab6e2e6731464c53bc58f3d3edce714ff5ebd9df5932d1628173fd"
+      },
+      {
+        "band": "h3",
+        "degree": 0,
+        "generator_checksum": "0e2227f0018703abf1e13f275f4825ddad49934217a4b294db62f2e89c17f867",
+        "labels": [
+          "row_407"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d0.sing",
+        "rows": 1,
+        "sha256": "7d42d862a8d6a46174cc0625d3656cc8c5de60ba42744712a66790de859958f0"
+      },
+      {
+        "band": "h3",
+        "degree": 1,
+        "generator_checksum": "3941155fe6d3344179ef0dbc2e806fa87adaa93ae84150614f9231583dadc933",
+        "labels": [
+          "row_402",
+          "row_406"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d1.sing",
+        "rows": 2,
+        "sha256": "ebd317849cacded73aca625e122192123b899aaed30fb89be488ee11e17cb806"
+      },
+      {
+        "band": "h3",
+        "degree": 2,
+        "generator_checksum": "635c7d501a03d123d3edaaf4f5e51bda076c593e2bbe3ad4f7e211e49a69f753",
+        "labels": [
+          "row_397",
+          "row_401",
+          "row_405"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d2.sing",
+        "rows": 3,
+        "sha256": "811c49a40dd229193aa52c70fc14d0423eee363e7410950263a2537872bc8e22"
+      },
+      {
+        "band": "h3",
+        "degree": 3,
+        "generator_checksum": "16a3ef448cfca9e6f3f8bb57dfb539359b1dc0b02a166549dc7e27e62a86b606",
+        "labels": [
+          "row_392",
+          "row_396",
+          "row_400",
+          "row_404"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d3.sing",
+        "rows": 4,
+        "sha256": "532aae7f1f025f4a80e0dd06c08d394192b318136ca08aa4840f651a161ae56f"
+      },
+      {
+        "band": "h3",
+        "degree": 4,
+        "generator_checksum": "f65de4eb0f93cf09daf8087d44c3fb3686a7b620bc0782bbc2f67908a959b8af",
+        "labels": [
+          "row_387",
+          "row_391",
+          "row_395",
+          "row_399",
+          "row_403"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d4.sing",
+        "rows": 5,
+        "sha256": "8b4b6dd47f2c2127a8a5d2e47053ffb8eda2d16022d34e69a9efe2de56576d91"
+      },
+      {
+        "band": "h3",
+        "degree": 5,
+        "generator_checksum": "245f589e8e36b57fd32cc155e60842ef4b89ea0cd34f055942ecdef73c5fc417",
+        "labels": [
+          "row_382",
+          "row_386",
+          "row_390",
+          "row_394",
+          "row_398"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d5.sing",
+        "rows": 5,
+        "sha256": "c340eee6a6ce49f177bf123a13cdb36bdfbe9c89ffd7e6d5f3747cbcb4ee2843"
+      },
+      {
+        "band": "h3",
+        "degree": 6,
+        "generator_checksum": "151a0308a8d0652e5ea5ca57db454a6a9406edeb444b72c3082ba2d4b3d4ecb1",
+        "labels": [
+          "row_377",
+          "row_381",
+          "row_385",
+          "row_389",
+          "row_393"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d6.sing",
+        "rows": 5,
+        "sha256": "aa3ad8e916027947d503dbc6e062536fea6a345de7875f805a7f019d5a810df8"
+      },
+      {
+        "band": "h3",
+        "degree": 7,
+        "generator_checksum": "be0ffd8fdaa9af2d724d28878aaab4f382e1fa017aad9ff6d69827b967cffc15",
+        "labels": [
+          "row_372",
+          "row_376",
+          "row_380",
+          "row_384",
+          "row_388"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d7.sing",
+        "rows": 5,
+        "sha256": "37ecd2d2bbe75e41f92abf7dbaa22f59bc46f40ebb9760f09e3c9ba2c9824afd"
+      },
+      {
+        "band": "h3",
+        "degree": 8,
+        "generator_checksum": "af920df2366a8f0e74a7adc33f734b8e8bf1a8bab8e43c9ec36ef03655bea79f",
+        "labels": [
+          "row_367",
+          "row_371",
+          "row_375",
+          "row_379",
+          "row_383"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d8.sing",
+        "rows": 5,
+        "sha256": "81ef88d230312bfb48987575f1001688e9cc6de8f18416028d820da78a3b7f97"
+      },
+      {
+        "band": "h3",
+        "degree": 9,
+        "generator_checksum": "b14720b415e3896551e097a514aabf3daa43cb2ebec9f037c869d42ed33fcc99",
+        "labels": [
+          "row_362",
+          "row_366",
+          "row_370",
+          "row_374",
+          "row_378"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d9.sing",
+        "rows": 5,
+        "sha256": "ab0b286c506f499e37b789bbe706fe0d9c7ea22bc79cbc5a4e91928e8b60d1c8"
+      },
+      {
+        "band": "h3",
+        "degree": 10,
+        "generator_checksum": "702cceeea4b1da46620a91b6f66ab0fca1323513a05206f07b36d9a5232e7804",
+        "labels": [
+          "row_357",
+          "row_361",
+          "row_365",
+          "row_369",
+          "row_373"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d10.sing",
+        "rows": 5,
+        "sha256": "e7f8064a0a1cf9071c2b612b432e0ff1443b6fd06b26371115f135887dd52636"
+      },
+      {
+        "band": "h3",
+        "degree": 11,
+        "generator_checksum": "96ee20e2dd1937bff8d721e9e665b147698c45ff55da6014dc8752841dd5e316",
+        "labels": [
+          "row_352",
+          "row_356",
+          "row_360",
+          "row_364",
+          "row_368"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d11.sing",
+        "rows": 5,
+        "sha256": "cfa627ce5c1de49d8de14ce749187adf0d38acf6b20d4d1bda82982612fa8962"
+      },
+      {
+        "band": "h3",
+        "degree": 12,
+        "generator_checksum": "9dd099e308d7d4f34e8817686a5a4649b7402ce25d11f012469718de0d919e86",
+        "labels": [
+          "row_347",
+          "row_351",
+          "row_355",
+          "row_359",
+          "row_363"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d12.sing",
+        "rows": 5,
+        "sha256": "583c0e2613d50de41acb9ecfd93db0d5ce574012f1fdcf65edec11f97cf50cce"
+      },
+      {
+        "band": "h3",
+        "degree": 13,
+        "generator_checksum": "10661daf1babedc679810afd7855466e84e2b39253f46319d5f3096d248b342a",
+        "labels": [
+          "row_342",
+          "row_346",
+          "row_350",
+          "row_354",
+          "row_358"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d13.sing",
+        "rows": 5,
+        "sha256": "5f69b23751805ce122099a559d3c6a1590f96df75dba54eeccd311f6ca08d251"
+      },
+      {
+        "band": "h3",
+        "degree": 14,
+        "generator_checksum": "44460e6dfb972b5a63ed4bf33eacb00b3e52a248d2e6b3cab71b4ee6c3d53c82",
+        "labels": [
+          "row_337",
+          "row_341",
+          "row_345",
+          "row_349",
+          "row_353"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d14.sing",
+        "rows": 5,
+        "sha256": "da6b51bef3c210bc29f641b98f95c2b9ee4a2227c0382499e1e24c4e6139febd"
+      },
+      {
+        "band": "h3",
+        "degree": 15,
+        "generator_checksum": "b90f1c9279744f3bba4283ac559a34774dacdae394c90579a78bf702d1205ccc",
+        "labels": [
+          "row_332",
+          "row_336",
+          "row_340",
+          "row_344",
+          "row_348"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d15.sing",
+        "rows": 5,
+        "sha256": "3f6ef099589300db653c1b3bebb5cb75c52d7c412d490566359989bc3a60cda4"
+      },
+      {
+        "band": "h3",
+        "degree": 16,
+        "generator_checksum": "93fe56604144cda26e2361b5b2ecaebb330263195be22c0a3a36ebf736f0bbf9",
+        "labels": [
+          "row_327",
+          "row_331",
+          "row_335",
+          "row_339",
+          "row_343"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d16.sing",
+        "rows": 5,
+        "sha256": "2cee41ffab40b95483717e86594ec38b7e2334c3e42f33586f7502688dd6588e"
+      },
+      {
+        "band": "h3",
+        "degree": 17,
+        "generator_checksum": "e558e7e6211804d37b68493a3965e069f54999401600cec8c74b2c63647d9413",
+        "labels": [
+          "row_322",
+          "row_326",
+          "row_330",
+          "row_334",
+          "row_338"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d17.sing",
+        "rows": 5,
+        "sha256": "28d578e5dd44331813f2bd41763eac4eb55429463189af2129a0f4b6568cca1d"
+      },
+      {
+        "band": "h3",
+        "degree": 18,
+        "generator_checksum": "952e4d7f005d73fbbfa6f818ce4cfe0c026f04dc7f2d8cf352d2486e06e555a0",
+        "labels": [
+          "row_317",
+          "row_321",
+          "row_325",
+          "row_329",
+          "row_333"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d18.sing",
+        "rows": 5,
+        "sha256": "226dbf468383ec4960a1e6e0d943ba518cdc84559d234f2380e59d7d79ee0b92"
+      },
+      {
+        "band": "h3",
+        "degree": 19,
+        "generator_checksum": "f35ea8522e1823c372747ceaf0eed13286342461417801541441b12294b210cb",
+        "labels": [
+          "row_316",
+          "row_320",
+          "row_324",
+          "row_328"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d19.sing",
+        "rows": 4,
+        "sha256": "18d26061ed820876ecab30b59060a0218c183d41800cac1aba3ec9fe2d4e4b4b"
+      },
+      {
+        "band": "h3",
+        "degree": 20,
+        "generator_checksum": "fa4ab7af813ae77b9c121aa2795536b4775c3c5c4ea1e0a3b43c7ef43a2b6e2e",
+        "labels": [
+          "row_312",
+          "row_315",
+          "row_319",
+          "row_323"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d20.sing",
+        "rows": 4,
+        "sha256": "82ee5186717a501ad79bbdeacfb2c66f5f242cea8ad7c44827dd581e1c07372c"
+      },
+      {
+        "band": "h3",
+        "degree": 21,
+        "generator_checksum": "7158fd43b015a21b5a548386e90469c342e71be39f10f06dc6acde69d5382771",
+        "labels": [
+          "row_311",
+          "row_314",
+          "row_318"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d21.sing",
+        "rows": 3,
+        "sha256": "c999ce63909db939ebc9bda3ce0843842ff977de90a5e25f2441d4db6bfef1bd"
+      },
+      {
+        "band": "h3",
+        "degree": 22,
+        "generator_checksum": "365f3671de4b6c6088b032a1328e3126fe26a20ae5509a8bbe563256c2b678f2",
+        "labels": [
+          "row_308",
+          "row_310",
+          "row_313"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d22.sing",
+        "rows": 3,
+        "sha256": "e6a0673a236956db4935ee9e148d7b22f857ea6adc0e521d7e663797787624eb"
+      },
+      {
+        "band": "h3",
+        "degree": 23,
+        "generator_checksum": "990f2df6da5780d30a490212bcc712a6bf5e0ae87591f5470bedf862aacf147f",
+        "labels": [
+          "row_306",
+          "row_307",
+          "row_309"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h3_d23.sing",
+        "rows": 3,
+        "sha256": "8cee2ee4323b34a613b22d4d4b824c6794a98e509237d352042b491c4fd4cffd"
+      },
+      {
+        "band": "h4",
+        "degree": 0,
+        "generator_checksum": "09d578be3e40d972d342a1e99c57bdb816cac7dbd6552c783c1d92d03d862cb6",
+        "labels": [
+          "row_492"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d0.sing",
+        "rows": 1,
+        "sha256": "548bd5b1808629a5e04a4fc2b894882f86411c767fe45625f665d973228585a7"
+      },
+      {
+        "band": "h4",
+        "degree": 1,
+        "generator_checksum": "73c233574d890829cd11c9f28aee0fc8128fb7ac7956e36480d46c844b47a59b",
+        "labels": [
+          "row_487",
+          "row_491"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d1.sing",
+        "rows": 2,
+        "sha256": "f3397fb2885cf82529d0e680c620e93a68685fefc89bbdee2fe8b60d614aa87c"
+      },
+      {
+        "band": "h4",
+        "degree": 2,
+        "generator_checksum": "53ef8d6d407554e12cafc6715460ee992b52848e428d3070e504b7ec32eb6b0e",
+        "labels": [
+          "row_482",
+          "row_486",
+          "row_490"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d2.sing",
+        "rows": 3,
+        "sha256": "1bfc863fe99948258d116ddcf9c5f103f5133a13f1b1ee27283ecce21ee1e12b"
+      },
+      {
+        "band": "h4",
+        "degree": 3,
+        "generator_checksum": "edceae8a5751e0279105d5c84715134f0991b8119f487bf12aa282ce50b60e8a",
+        "labels": [
+          "row_477",
+          "row_481",
+          "row_485",
+          "row_489"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d3.sing",
+        "rows": 4,
+        "sha256": "646e6a6a680adce44cdcc12c5307f77f8509b20d3bf85bfdba4a8f99756f53c1"
+      },
+      {
+        "band": "h4",
+        "degree": 4,
+        "generator_checksum": "e48810c7e95026e0d41202333bb9d68063af37180d1c593f12ce0af0b5b26fd5",
+        "labels": [
+          "row_472",
+          "row_476",
+          "row_480",
+          "row_484",
+          "row_488"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d4.sing",
+        "rows": 5,
+        "sha256": "57b0c81406b349d006c6195c04945db424f0503b610cfbf5b591806b6335b7b8"
+      },
+      {
+        "band": "h4",
+        "degree": 5,
+        "generator_checksum": "eee104526623bbe998c23d1a087514edb367e7046e0e8cbe079f2284cb9fbb0d",
+        "labels": [
+          "row_467",
+          "row_471",
+          "row_475",
+          "row_479",
+          "row_483"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d5.sing",
+        "rows": 5,
+        "sha256": "c357691546043adf643ddd357110f88bfa8dfc43344cf652191a7157ec5136e1"
+      },
+      {
+        "band": "h4",
+        "degree": 6,
+        "generator_checksum": "ca96733e584430366313632c81c325cb9114e3d9ff3df679d57ee4c1b2586d4c",
+        "labels": [
+          "row_462",
+          "row_466",
+          "row_470",
+          "row_474",
+          "row_478"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d6.sing",
+        "rows": 5,
+        "sha256": "ea604d1b715e7fba4b3d97156f2d6d2063706d262a12475d1252a6fb1ba960fa"
+      },
+      {
+        "band": "h4",
+        "degree": 7,
+        "generator_checksum": "37d5d0b22dd8b5eaba47e09dbf84bb4e193fb1758895caf33fc915af1d5c8249",
+        "labels": [
+          "row_457",
+          "row_461",
+          "row_465",
+          "row_469",
+          "row_473"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d7.sing",
+        "rows": 5,
+        "sha256": "b292ad7cc145c727c78ccd3ecc8c1bad3356d2487c8f62ea2148b8cbfe2d2aed"
+      },
+      {
+        "band": "h4",
+        "degree": 8,
+        "generator_checksum": "9b584c0d54e8243a35f632d8cc8b9d5ee769aabefc5112711fcef537ce62f3ca",
+        "labels": [
+          "row_452",
+          "row_456",
+          "row_460",
+          "row_464",
+          "row_468"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d8.sing",
+        "rows": 5,
+        "sha256": "37fdc128315c35ef36a095c0573c252601ffe0cd894b5c08a8ec9e3bec843ce3"
+      },
+      {
+        "band": "h4",
+        "degree": 9,
+        "generator_checksum": "1dbbf1d2e64661532a8b8d9059fc8dbecac19e34efd74c7ab8e77ffe9cead8a1",
+        "labels": [
+          "row_447",
+          "row_451",
+          "row_455",
+          "row_459",
+          "row_463"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d9.sing",
+        "rows": 5,
+        "sha256": "1eaf7d73f250ffbb9d5cd9d4afc4e4ffe45fc12d1e45802e5c7096a750d60989"
+      },
+      {
+        "band": "h4",
+        "degree": 10,
+        "generator_checksum": "296237d54c3f5a6a7d66759647463fae6c9f4938b5bea62027ada9722921d65e",
+        "labels": [
+          "row_442",
+          "row_446",
+          "row_450",
+          "row_454",
+          "row_458"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d10.sing",
+        "rows": 5,
+        "sha256": "fd7a204521a33c2c17a4f5de6e2a5fc52f4635ea982ddab702efcffc1304dd43"
+      },
+      {
+        "band": "h4",
+        "degree": 11,
+        "generator_checksum": "a65e3a0a66c5965fefcb4cbc1145f8d47daddcf4302621e051416c4c316403a8",
+        "labels": [
+          "row_437",
+          "row_441",
+          "row_445",
+          "row_449",
+          "row_453"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d11.sing",
+        "rows": 5,
+        "sha256": "bfc019d01d438c65c954345278fe8bb342657623b83526dd9825dc3833e08c90"
+      },
+      {
+        "band": "h4",
+        "degree": 12,
+        "generator_checksum": "d4a3f68c4f91ab02b251662b1ff08a0e693bab0c0a6d049c039270929bad1811",
+        "labels": [
+          "row_432",
+          "row_436",
+          "row_440",
+          "row_444",
+          "row_448"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d12.sing",
+        "rows": 5,
+        "sha256": "ce5df2e909900ae6e4483558b90e01edffb1d141a553906a7678144f35d95a7e"
+      },
+      {
+        "band": "h4",
+        "degree": 13,
+        "generator_checksum": "dc80dfd7b152123a69ce3906417f22febe234513a497647232f3a13c0337adf5",
+        "labels": [
+          "row_427",
+          "row_431",
+          "row_435",
+          "row_439",
+          "row_443"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d13.sing",
+        "rows": 5,
+        "sha256": "d32bb1446a51de400411a0cdee7ae6ca05a21122038cdba29f68eef7bf7fa1c6"
+      },
+      {
+        "band": "h4",
+        "degree": 14,
+        "generator_checksum": "288d825a66deb3853df32b368565d5c8768fe72164cc581d48c403accf633676",
+        "labels": [
+          "row_422",
+          "row_426",
+          "row_430",
+          "row_434",
+          "row_438"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d14.sing",
+        "rows": 5,
+        "sha256": "2fecf1f1089141373a9a30b484a4f011ef52d55e09bfb7ee166ff799ceb2e93e"
+      },
+      {
+        "band": "h4",
+        "degree": 15,
+        "generator_checksum": "e5c36f44fe314f87a9d992e45bd432526c8879447ed90c1de54493be883265f8",
+        "labels": [
+          "row_417",
+          "row_421",
+          "row_425",
+          "row_429",
+          "row_433"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d15.sing",
+        "rows": 5,
+        "sha256": "2ba2ff7d68e0b9faa1f5e6e513581fd56274ed83db12a6a069a999acb5edea98"
+      },
+      {
+        "band": "h4",
+        "degree": 16,
+        "generator_checksum": "b53664d6fc0754d44f02827d3206819ae5a2bc30309e8c23538dd0414bd15815",
+        "labels": [
+          "row_413",
+          "row_416",
+          "row_420",
+          "row_424",
+          "row_428"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d16.sing",
+        "rows": 5,
+        "sha256": "1b80a10226872d6c1e872155510a5615e3a914702e54bb6669fb1ff2fb6f36f3"
+      },
+      {
+        "band": "h4",
+        "degree": 17,
+        "generator_checksum": "ef0b56c10f15782894434913275fd10debee5b2d8966d53e6fe605e6665cf363",
+        "labels": [
+          "row_410",
+          "row_412",
+          "row_415",
+          "row_419",
+          "row_423"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d17.sing",
+        "rows": 5,
+        "sha256": "54df2893504f6ba7f8cbf002a6d38d512eea4907005ea07296483e1bde9e3876"
+      },
+      {
+        "band": "h4",
+        "degree": 18,
+        "generator_checksum": "1885c0eb9eb394e9404095a20b06225dda813be01998a7522c0a2d1727c21066",
+        "labels": [
+          "row_408",
+          "row_409",
+          "row_411",
+          "row_414",
+          "row_418"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h4_d18.sing",
+        "rows": 5,
+        "sha256": "66e1ed14dadfc96cb6390493825baa723ae47e548c23c32030440fd776c3bf7a"
+      },
+      {
+        "band": "h5",
+        "degree": 0,
+        "generator_checksum": "162ea209427aa029626c6f5ed5eb2906b7df7e912b9697dfdf6629642616cb76",
+        "labels": [
+          "row_552"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d0.sing",
+        "rows": 1,
+        "sha256": "aac52cd193db8d5e50247ea515cb2806d8637d10487e5030d6e64737ce56fa9e"
+      },
+      {
+        "band": "h5",
+        "degree": 1,
+        "generator_checksum": "48265872d762d51122778041cbf6780f3e7e16c2c629dcf2cb2d145fa39a40fe",
+        "labels": [
+          "row_547",
+          "row_551"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d1.sing",
+        "rows": 2,
+        "sha256": "150133c82c801b4c3fd31afab872c401faffc53b23270adb15ed55352bb5bda9"
+      },
+      {
+        "band": "h5",
+        "degree": 2,
+        "generator_checksum": "11f0ba3167f849ff98b5e28a3260fa606617bbe27ff8fd5f0f51403a7a13f129",
+        "labels": [
+          "row_542",
+          "row_546",
+          "row_550"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d2.sing",
+        "rows": 3,
+        "sha256": "f15159d158753354fba497e5921efd78dd384cc8bd64070684a5d9a9cdac5579"
+      },
+      {
+        "band": "h5",
+        "degree": 3,
+        "generator_checksum": "7a73834f19d8d451606efa4cebf75a26c918afd3501e9867a7a0f4f70c73a2a0",
+        "labels": [
+          "row_537",
+          "row_541",
+          "row_545",
+          "row_549"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d3.sing",
+        "rows": 4,
+        "sha256": "145530a2bbc9ab66f163a77aa3de63ccd5bdc7b4c2fe444bb4729d74fa2573a0"
+      },
+      {
+        "band": "h5",
+        "degree": 4,
+        "generator_checksum": "7251bfb09c24a011bd983bbadc31abfe8abcee03f6981e0f09aeeb5669249526",
+        "labels": [
+          "row_532",
+          "row_536",
+          "row_540",
+          "row_544",
+          "row_548"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d4.sing",
+        "rows": 5,
+        "sha256": "36c1334b6385872a45d3643346b1c0ed6d1c74bccc2a33109e2997f29a147eab"
+      },
+      {
+        "band": "h5",
+        "degree": 5,
+        "generator_checksum": "f90b2578d8db2af14c4f4c5a0156ccc9a42c23d97db1ec2d377b266bf1f1a7c7",
+        "labels": [
+          "row_527",
+          "row_531",
+          "row_535",
+          "row_539",
+          "row_543"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d5.sing",
+        "rows": 5,
+        "sha256": "4ca1f878b8df8d1cc8fe2bbc6fe08c0ae3ab299445c471b78b3071441eec59cf"
+      },
+      {
+        "band": "h5",
+        "degree": 6,
+        "generator_checksum": "95f16bd58117c496a1115f8ce4acbc8260adaa3a4d4c68ae4e74f5426a863a70",
+        "labels": [
+          "row_522",
+          "row_526",
+          "row_530",
+          "row_534",
+          "row_538"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d6.sing",
+        "rows": 5,
+        "sha256": "e5745e7c097e5e8925ab7abc674252fae2bccef0e11bc55a1203b7f674b67068"
+      },
+      {
+        "band": "h5",
+        "degree": 7,
+        "generator_checksum": "7822de79295151faadf61e4f81313c1009c8fd26ddc19aaa82a7ea9ee919806c",
+        "labels": [
+          "row_517",
+          "row_521",
+          "row_525",
+          "row_529",
+          "row_533"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d7.sing",
+        "rows": 5,
+        "sha256": "305bc3cbea7b6d709759b758b6ef183184f6aaec34fc645953cfd68014479696"
+      },
+      {
+        "band": "h5",
+        "degree": 8,
+        "generator_checksum": "2b716e7d70b9788135dc761ed38bc6edacaea8a361188ea4abd891642c71fa7d",
+        "labels": [
+          "row_512",
+          "row_516",
+          "row_520",
+          "row_524",
+          "row_528"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d8.sing",
+        "rows": 5,
+        "sha256": "1a83409318940a029809364e3c5c36bea479c5bab4db4ce081624d7537eb2d4e"
+      },
+      {
+        "band": "h5",
+        "degree": 9,
+        "generator_checksum": "35a77fb9559ba519e636ad89304db6398d695626ff9fa1dcfd9b531be4a550bb",
+        "labels": [
+          "row_507",
+          "row_511",
+          "row_515",
+          "row_519",
+          "row_523"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d9.sing",
+        "rows": 5,
+        "sha256": "ea7ef15dde02906b971b17f06343cdafbc8428d162840756e20d7897b401f46b"
+      },
+      {
+        "band": "h5",
+        "degree": 10,
+        "generator_checksum": "c338f26b1160a7c06bd0c0ee4907c29616de5aa83bdd176d64dfc28d4a78b50f",
+        "labels": [
+          "row_502",
+          "row_506",
+          "row_510",
+          "row_514",
+          "row_518"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d10.sing",
+        "rows": 5,
+        "sha256": "fbc2b3fc7f7b6ecce2e348b67a60d9e751cd2eeac8659d667f9a3611ed506516"
+      },
+      {
+        "band": "h5",
+        "degree": 11,
+        "generator_checksum": "7d73bf96ec94b6cc2369c00d1bdba256899272cae1fec69833a5835f9b85baca",
+        "labels": [
+          "row_498",
+          "row_501",
+          "row_505",
+          "row_509",
+          "row_513"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d11.sing",
+        "rows": 5,
+        "sha256": "60895888200f6db5f9f61032849527ea741049a0ebc0f51feda9b85688d88fcb"
+      },
+      {
+        "band": "h5",
+        "degree": 12,
+        "generator_checksum": "37a1ce4e3f229c22e0b835d34e9f06c782229ddfd57b2b9109a15760b11d6c6e",
+        "labels": [
+          "row_495",
+          "row_497",
+          "row_500",
+          "row_504",
+          "row_508"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d12.sing",
+        "rows": 5,
+        "sha256": "0581faa3002581b7054ba8f147fe71ef1c729aa323d6c6ac300d9de0dab16467"
+      },
+      {
+        "band": "h5",
+        "degree": 13,
+        "generator_checksum": "d90991623550f29a2c9c748795fba4c3ed505793361ecc0c3e4f6103ed74cac6",
+        "labels": [
+          "row_493",
+          "row_494",
+          "row_496",
+          "row_499",
+          "row_503"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h5_d13.sing",
+        "rows": 5,
+        "sha256": "c760d52dc87d9f363c62cfc945b254b8433fa2ac577601048df35f4a2f2d5f30"
+      },
+      {
+        "band": "h6",
+        "degree": 0,
+        "generator_checksum": "506d620efcc9bfc38bb1c93d47481dfa020176e765825afcfa4388003d8d9915",
+        "labels": [
+          "row_587"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h6_d0.sing",
+        "rows": 1,
+        "sha256": "d8142deca993610a4768c49272eb399a126e29788127ca7d8d006c16b07955fa"
+      },
+      {
+        "band": "h6",
+        "degree": 1,
+        "generator_checksum": "2b22d07f7b94911bcc90e3107fbf1bd85adc82c7b727e797e5aba69ef0f89718",
+        "labels": [
+          "row_582",
+          "row_586"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h6_d1.sing",
+        "rows": 2,
+        "sha256": "95408ae14855ac77f56ef02b887d775cd27a7c80a3cc4e56fd0c8c4a901ee601"
+      },
+      {
+        "band": "h6",
+        "degree": 2,
+        "generator_checksum": "e958bd174ead79196433285de150a66f92ddd6bdd6c31da0a35cbfab3021f1a1",
+        "labels": [
+          "row_577",
+          "row_581",
+          "row_585"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h6_d2.sing",
+        "rows": 3,
+        "sha256": "52cc18b1d83af29e3ac9342f4415af2d272d3b991d07cc38036fcd89bfe3eb9c"
+      },
+      {
+        "band": "h6",
+        "degree": 3,
+        "generator_checksum": "6fcf6692f4cb3a3827f2b8f0750a1c0c7545513e6927d437fc411d0f7d5a6abb",
+        "labels": [
+          "row_572",
+          "row_576",
+          "row_580",
+          "row_584"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h6_d3.sing",
+        "rows": 4,
+        "sha256": "207d586a8ea2a8620f2e9523d447e0395c7f5960faff2f25ad8c03db44d002fb"
+      },
+      {
+        "band": "h6",
+        "degree": 4,
+        "generator_checksum": "44aec03ba731b8dee2e1d747226c1be5ae57112b1deb858be935cd530b2abd49",
+        "labels": [
+          "row_567",
+          "row_571",
+          "row_575",
+          "row_579",
+          "row_583"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h6_d4.sing",
+        "rows": 5,
+        "sha256": "5bed0b1a9a3309aed81dee4ec13dbe2d1c7a56d34068bbf5735d6ef0d469d04c"
+      },
+      {
+        "band": "h6",
+        "degree": 5,
+        "generator_checksum": "39cd2a8844565d0330e14577aa34b99a8c09c4d4954e3bf31847fd8473d6a999",
+        "labels": [
+          "row_562",
+          "row_566",
+          "row_570",
+          "row_574",
+          "row_578"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h6_d5.sing",
+        "rows": 5,
+        "sha256": "1a323590e50a36055477364c4ac64bfb826d001d2f7bc8aa60bb40bf38e24878"
+      },
+      {
+        "band": "h6",
+        "degree": 6,
+        "generator_checksum": "ec1a395f18b7f055bb786b03be6a5355143854d4e5e8973bbe1809675b267a50",
+        "labels": [
+          "row_558",
+          "row_561",
+          "row_565",
+          "row_569",
+          "row_573"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h6_d6.sing",
+        "rows": 5,
+        "sha256": "6b912523a7c512541ac0bb54df601c13877b0839b0d2a6b5b9adb10f1b56575c"
+      },
+      {
+        "band": "h6",
+        "degree": 7,
+        "generator_checksum": "336a5b61730ee1457d8f2f2b7943e870e7ecd30e501366b95d1877be5fdf3559",
+        "labels": [
+          "row_555",
+          "row_557",
+          "row_560",
+          "row_564",
+          "row_568"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h6_d7.sing",
+        "rows": 5,
+        "sha256": "c8832320fa250b7277669f7ded1b1565f13d92f0f63ef82b79e4f2d8d21b7da3"
+      },
+      {
+        "band": "h6",
+        "degree": 8,
+        "generator_checksum": "1701f5d9a2cdc1f98981d71f75a2c1f54c5b9f36d2240aa1cdb8a924aa049d84",
+        "labels": [
+          "row_553",
+          "row_554",
+          "row_556",
+          "row_559",
+          "row_563"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h6_d8.sing",
+        "rows": 5,
+        "sha256": "58999e80d81f0359d03192098aec41f235c2508029cdf88295764af1963f1480"
+      },
+      {
+        "band": "h7",
+        "degree": 0,
+        "generator_checksum": "97014f86d1e1d7a9699bdf01ad450ad407835fc79bd367b00eed637f339ac9b8",
+        "labels": [
+          "row_597"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h7_d0.sing",
+        "rows": 1,
+        "sha256": "f6420e4e665bcb9874a930d34593758de2655632699469ec9e87b1882f6de5a8"
+      },
+      {
+        "band": "h7",
+        "degree": 1,
+        "generator_checksum": "c18f1e44353d4712ea606e0ca239fd27cbfa13fcc6e83699ac1f1b12bd57ea67",
+        "labels": [
+          "row_593",
+          "row_596"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h7_d1.sing",
+        "rows": 2,
+        "sha256": "d6d0df0081bde8f20a35f79cc360f35335ad99300ff5dc459779262763aed410"
+      },
+      {
+        "band": "h7",
+        "degree": 2,
+        "generator_checksum": "761dd3a5679d370c9dd60db5e0aefbcc259c9c5d7be1a8ea9d858709e1fc77ea",
+        "labels": [
+          "row_590",
+          "row_592",
+          "row_595"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h7_d2.sing",
+        "rows": 3,
+        "sha256": "b90cc01343e0107cd2e0e2104cb19a32032a39219fc26fa6587714426dd66d94"
+      },
+      {
+        "band": "h7",
+        "degree": 3,
+        "generator_checksum": "5bd35b298ef425721eedc855f39c2f8226ebbc0b084bf048f60ef4977a09061e",
+        "labels": [
+          "row_588",
+          "row_589",
+          "row_591",
+          "row_594"
+        ],
+        "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/band_h7_d3.sing",
+        "rows": 4,
+        "sha256": "f26bd84cb87c160022eae75b9e0228c10787027187b2047718d1e102a9ad7957"
+      }
+    ],
+    "controls": {
+      "each_band_degree_is_separate": true,
+      "generator_checksum_order_independent": true,
+      "no_monolithic_ideal_file_written": true
+    },
+    "generator_union_checksum": "1c80dde35eff8a0b03f3e6803de549b5dd33626493c6dd9e5a35832d2b78a612",
+    "global_file": {
+      "generator_checksum": "8f0b1c00d4b33ee91b0e8bf6f4bcdf7da6f74df5cfa111bcb0a5370c69d5e699",
+      "labels": [
+        "localization"
+      ],
+      "path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/global_generators.sing",
+      "rows": 1,
+      "sha256": "169c9141ac7aed6d4832a77b02b4382b1580bc8fe09ecfcf517bf33e01ee613b"
+    },
+    "global_generator_count": 1,
+    "manifest_file_sha256": "7aff2a00971c101121be8105415f0faea19c4304169304c23fa833e8643bfb4f",
+    "manifest_path": "/home/ubuntu/jc2/box/sysguidedgb-20260903/runs/T4_25_15_bands/bands-manifest.json",
+    "monolithic_generator_checksum": "1c80dde35eff8a0b03f3e6803de549b5dd33626493c6dd9e5a35832d2b78a612",
+    "option_lines": [
+      "option(redSB);"
+    ],
+    "ring": "ring R=0,(h_0_4,h_0_3,h_1_3,h_0_2,h_1_2,h_2_2,h_0_1,h_1_1,h_0_0,A1_0_4,A1_1_4,A1_0_3,A1_1_3,A1_2_3,A1_0_2,A1_1_2,A1_2_2,A1_3_2,A1_0_1,A1_1_1,A1_0_0,A2_0_4,A2_1_4,A2_2_4,A2_3_4,A2_4_4,A2_5_4,A2_6_4,A2_0_3,A2_1_3,A2_2_3,A2_3_3,A2_4_3,A2_0_2,A2_1_2,A2_2_2,A2_3_2,A2_0_1,A2_1_1,A2_0_0,A3_0_4,A3_1_4,A3_2_4,A3_3_4,A3_4_4,A3_5_4,A3_6_4,A3_0_3,A3_1_3,A3_2_3,A3_3_3,A3_4_3,A3_0_2,A3_1_2,A3_2_2,A3_3_2,A3_0_1,A3_1_1,A3_2_1,A3_0_0,A4_0_4,A4_1_4,A4_2_4,A4_3_4,A4_4_4,A4_5_4,A4_6_4,A4_0_3,A4_1_3,A4_2_3,A4_3_3,A4_4_3,A4_5_3,A4_0_2,A4_1_2,A4_2_2,A4_3_2,A4_0_1,A4_1_1,A4_2_1,A4_0_0,A5_0_4,A5_1_4,A5_2_4,A5_3_4,A5_4_4,A5_5_4,A5_6_4,A5_0_3,A5_1_3,A5_2_3,A5_3_3,A5_4_3,A5_5_3,A5_0_2,A5_1_2,A5_2_2,A5_3_2,A5_0_1,A5_1_1,A5_2_1,A5_1_0,B2_0_4,B2_1_4,B2_2_4,B2_3_4,B2_4_4,B2_5_4,B2_6_4,B2_0_3,B2_1_3,B2_2_3,B2_3_3,B2_4_3,B2_0_2,B2_1_2,B2_2_2,B2_3_2,B2_0_1,B2_1_1,B2_0_0,B3_0_4,B3_1_4,B3_2_4,B3_3_4,B3_4_4,B3_5_4,B3_6_4,B3_0_3,B3_1_3,B3_2_3,B3_3_3,B3_4_3,B3_0_2,B3_1_2,B3_2_2,B3_3_2,B3_0_1,B3_1_1,B3_2_1,c,T),dp;",
+    "row_count": 598,
+    "source_meta": "/home/ubuntu/jc2/box/orderbasis-20260903/meta/25_15_21_2_k2_part_3_full.json",
+    "source_rows": "/home/ubuntu/jc2/box/orderbasis-20260903/rows/25_15_21_2_k2_part_3_full_rows.tsv",
+    "source_rows_sha256": "75355c3aa1bc0f79dda149eadea0ffa07f36f6d21035cb43d7d3644aa402c788",
+    "type": "STAGED-SINGULAR-BAND-FILES",
+    "union_equals_monolithic": true
+  },
+  "inputs": {
+    "check_log": "/home/ubuntu/jc2/box/sysguidedgb-20260903/charged_inputs.sha256sum.log",
+    "count": 12,
+    "manifest": "/home/ubuntu/jc2/box/sysguidedgb-20260903/charged_inputs.from_receipt.sha256"
+  },
+  "summary": {
+    "status": "PASS",
+    "wall_seconds": 111.329
+  }
+}

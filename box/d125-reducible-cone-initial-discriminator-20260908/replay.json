@@ -1,0 +1,68 @@
+{
+  "caps": {
+    "cpu_seconds": 25,
+    "rss_bytes": 536870912,
+    "wall_seconds": 30
+  },
+  "elapsed_seconds": 1.950484,
+  "runs": [
+    {
+      "mode": "normal",
+      "optimized": false,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "120d8d7f28dcc144c92f373f93fb9fec4f5ebaf06762aff4d226e76ae6bdc488"
+    },
+    {
+      "mode": "freeze-moving-root",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 101, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 78, in run\n    need(not r1,'actual moving implicit equation at order1')\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(msg)\nValueError: actual moving implicit equation at order1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-central-curve",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 101, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 76, in run\n    need(not r0,'central curve actually contains branch')\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(msg)\nValueError: central curve actually contains branch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "replace-F",
+      "optimized": false,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 101, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 93, in run\n    need(all(not (r['F_regular'] and r['G_regular']) for r in rows),\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(msg)\nValueError: no common branch with both first moving residues regular\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "normal",
+      "optimized": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout_sha256": "120d8d7f28dcc144c92f373f93fb9fec4f5ebaf06762aff4d226e76ae6bdc488"
+    },
+    {
+      "mode": "freeze-moving-root",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 101, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 78, in run\n    need(not r1,'actual moving implicit equation at order1')\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(msg)\nValueError: actual moving implicit equation at order1\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "change-central-curve",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 101, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 76, in run\n    need(not r0,'central curve actually contains branch')\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(msg)\nValueError: central curve actually contains branch\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "mode": "replace-F",
+      "optimized": true,
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 101, in <module>\n    print(json.dumps(run(sys.argv[1] if len(sys.argv)>1 else 'normal'),sort_keys=True))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 93, in run\n    need(all(not (r['F_regular'] and r['G_regular']) for r in rows),\n  File \"/home/ubuntu/jc2/box/d125-reducible-cone-initial-discriminator-20260908/check.py\", line 9, in need\n    raise ValueError(msg)\nValueError: no common branch with both first moving residues regular\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "zero_assert": true
+}

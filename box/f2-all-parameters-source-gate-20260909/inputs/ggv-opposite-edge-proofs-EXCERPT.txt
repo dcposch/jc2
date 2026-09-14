@@ -1,0 +1,249 @@
+PRIMARY EXCERPT: box/f2-fixed-degree-standardization-gate-20260909/ggv-1401.1784v3.txt
+Original SHA256 e3694dde3f83c2ab6ed8d957fc6b53472e6a6dd55486af1dff345eade39e37b1; bytes 268331.
+Only listed ranges charged. Omitted context and external lemmas cited within retained proofs are not independently re-proved.
+
+EXCERPT original lines 1870-2113 inclusive; exact body follows.
+
+degree technique of Moh, which we apply to the case B = 16 in the last section. In the present
+section we also describe in Corollary 7.13 the shape of a possible counterexample to the Jacobian
+conjecture in the case B = 16.
+Proposition 7.1. Let m, n ∈ N be coprime with m, n > 1 and let P, Q ∈ L(l) with
+                                          v1,1 (P )   v1,0 (P )  m
+                      [P, Q] ∈ K × and              =           = ,
+                                          v1,1 (Q)    v1,0 (Q)   n
+Take T0 ∈ K[P, Q] and set Tj := [Tj−1 , P ] for j ≥ 1. Assume that (ρ0 , σ0 ) ∈ V≥0 satisfies
+    (1) (ρ0 , σ0 ) ∈ Dir(P ) and vρ0 ,σ0 (P ) > 0,
+    (2) enρ0 ,σ0 (Tj ) ∼ enρ0 ,σ0 (P ) for all j with Tj 6= 0,
+         1
+    (3) m  enρ0 ,σ0 (P ) = n1 enρ0 ,σ0 (Q) ∈ 1l Z × N,
+                                   1
+    (4) b > a/l, where (a/l, b) := m enρ0 ,σ0 (P ).
+Let I0 := [(ρ0 , σ0 ), (0, −1)[ and
+       (ρ̃, σ̃) := max{(ρ, σ) ∈ Dir(P ) ∩ I0 : vρ′ ,σ′ (P ) > 0 for all (ρ0 , σ0 ) ≤ (ρ′ , σ ′ ) ≤ (ρ, σ)}
+Then for all (ρ, σ) ∈ V with (ρ0 , σ0 ) < (ρ, σ) ≤ (ρ̃, σ̃) and all j ≥ 0 we have
+                                                                vρ,σ (Tj )  vρ ,σ (Tj )
+                         [ℓρ,σ (Tj ), ℓρ,σ (P )] = 0    and                = 0 0         .                   (7.1)
+                                                                vρ,σ (P )   vρ0 ,σ0 (P )
+Idea of the proof: We must prove that there is a partial homothety between P and Tj for
+(ρ, σ) > (ρ0 , σ0 ). The basic idea is that otherwise en(Tj+n ) ≁ en(P ) for some direction and all
+n > 0, and then Tj+n 6= 0 for all n > 0, which is impossible.
+Proof. Let
+                                          (ρ1 , σ1 ) < · · · < (ρk , σk ) = (ρ̃, σ̃)
+be the directions in Dir(P ) between (ρ0 , σ0 ) and (ρ̃, σ̃). We will use freely that vρ′ ,σ′ (P ) > 0 for
+all (ρ0 , σ0 ) ≤ (ρ′ , σ ′ ) ≤ (ρ̃, σ̃). By Remark 1.15 and conditions (2), (3) and (4), we have
+           v1,−1 (enρ0 ,σ0 (P )) < 0      and          enρ0 ,σ0 (Tj ) = µj enρ0 ,σ0 (P )   with µj ≥ 0,      (7.2)
+for all j with Tj 6= 0. We claim that if there exists 0 ≤ i < k such that
+           v1,−1 (enρi ,σi (P )) < 0       and         enρi ,σi (Tj ) = µj enρi ,σi (P ) with µj ≥ 0,        (7.3)
+for all j with Tj 6= 0, then
+    (a) If Tj 6= 0, then enρi ,σi (Tj ) = stρi+1 ,σi+1 (Tj ).
+    (b) [ℓρi+1 ,σi+1 (Tj ), ℓρi+1 ,σi+1 (P )] = 0, for all j.
+In order to check this, we write
+                      enρi ,σi (P ) = ri (ai /l, bi ) with ri ≥ 0 and gcd(ai , bi ) = 1.
+We define the auxiliary direction
+                                         1
+                             (ρ, σ) :=     (lbi , −ai ), where d := gcd(lbi , ai ).
+                                         d
+By (3.2) and the inequality in (7.3), we have (ρ, σ) = dir(ai /l, bi ). Furthermore ri ∈ N, because
+gcd(ai , bi ) = 1 and enρi ,σi (P ) 6= (0, 0). Note that
+                            (c, d) ∼ (ai /l, bi )   if and only if     vρ,σ (c, d) = 0.                      (7.4)
+Since vρi ,σi (ai /l, bi ), vρi+1 ,σi+1 (ai /l, bi ) > 0, by Remarks 2.10 and 3.3 we know that
+                               (ρ, σ) < (ρi , σi ) < (ρi+1 , σi+1 ) < (−ρ, −σ).                              (7.5)
+Next we prove condition (a). For this it suffices to prove that if Tj 6= 0, then
+38                  JORGE A. GUCCIONE, JUAN J. GUCCIONE, AND CHRISTIAN VALQUI
+
+
+                                    Dir(Tj )∩ ](ρi , σi ), (ρi+1 , σi+1 )[ = ∅.
+In order to check this fact, assume by contradiction that it is false and set (ρ̂, σ̂) := SuccTj (ρi , σi ).
+Since (ρ̂, σ̂) ∈](ρi , σi ), (ρi+1 , σi+1 )[, by (7.5) we have
+                                          (ρ, σ) < (ρ̂, σ̂) < (−ρ, −σ).                                   (7.6)
+By Remark 1.8 and (7.4), we have
+                                   vρ,σ (enρ̂,σ̂ (Tj )) < vρ,σ (stρ̂,σ̂ (Tj )) = 0,                       (7.7)
+since (ai /l, bi ) ∼ enρi ,σi (Tj ) = stρ̂,σ̂ (Tj ), by (7.3). We assert that
+                  Tj+k 6= 0 and         enρ̂,σ̂ (Tj+k ) = enρ̂,σ̂ (Tj ) + k enρ̂,σ̂ (P ) − k(1, 1),       (7.8)
+for all k ∈ N0 . We will prove this by induction on k. For k = 0 this is trivial. Assume that (7.8)
+is true for some k. Then,
+                 vρ,σ (enρ̂,σ̂ (Tj+k )) = vρ,σ (enρ̂,σ̂ (Tj )) + kvρ,σ (enρ̂,σ̂ (P )) − kvρ,σ (1, 1)
+                                       = vρ,σ (enρ̂,σ̂ (Tj )) − k(ρ + σ)
+                                       < 0,
+since vρ,σ (enρ̂,σ̂ (P )) = vρ,σ (enρi ,σi (P )) = 0 by Proposition 3.7 and (7.4), vρ,σ (enρ̂,σ̂ (Tj )) < 0
+by (7.7), and ρ + σ > 0. But then, again by (7.4),
+                                   enρ̂,σ̂ (Tj+k ) ≁ enρ̂,σ̂ (P ) = ri (ai /l, bi ).
+Hence, by Propositions 1.13 and 2.3
+                                 ℓρ̂,σ̂ (Tj+k+1 ) = [ℓρ̂,σ̂ (Tj+k ), ℓρ̂,σ̂ (P )] 6= 0.
+Consequently, by Proposition 2.4(2) and (7.8) for k,
+                     enρ̂,σ̂ (Tj+k+1 ) = enρ̂,σ̂ (Tj+k ) + enρ̂,σ̂ (P ) − (1, 1)
+                                      = enρ̂,σ̂ (Tj ) + (k + 1) enρ̂,σ̂ (P ) − (k + 1)(1, 1),
+which ends the proof of the assertion. But Tj+k 6= 0 for all k is impossible, since from [P, Q] ∈ K ×
+and T0 ∈ K[P, Q] it follows easily that Tn = 0 for n large enough. Therefore statement (a) is
+true.
+   Now we are going to prove statement (b). Assume by contradiction that
+                                      [ℓρi+1 ,σi+1 (Tj ), ℓρi+1 ,σi+1 (P )] 6= 0,
+which by Proposition 1.13 implies
+                [ℓρi+1 ,σi+1 (Tj ), ℓρi+1 ,σi+1 (P )] = ℓρi+1 ,σi+1 ([Tj , P ]) = ℓρi+1 ,σi+1 (Tj+1 ).    (7.9)
+By (7.5) we have (ρ, σ) < (ρi+1 , σi+1 ) < (−ρ, −σ) and so, by Remark 1.8
+                                stρi+1 ,σi+1 (P ) = Supp(ℓρ,σ (ℓρi+1 ,σi+1 (P ))),
+                               stρi+1 ,σi+1 (Tj ) = Supp(ℓρ,σ (ℓρi+1 ,σi+1 (Tj ))),
+                            stρi+1 ,σi+1 (Tj+1 ) = Supp(ℓρ,σ (ℓρi+1 ,σi+1 (Tj+1 ))).
+But then, by Proposition 1.13 and equivalence (7.4),
+           vρ,σ (stρi+1 ,σi+1 (Tj+1 )) = vρ,σ (ℓρi+1 ,σi+1 (Tj+1 ))
+                                       ≤ vρ,σ (ℓρi+1 ,σi+1 (Tj )) + vρ,σ (ℓρi+1 ,σi+1 (P )) − (ρ + σ)
+                                       = vρ,σ (stρi+1 ,σi+1 (Tj )) + vρ,σ (stρi+1 ,σi+1 (P )) − (ρ + σ)
+                                       = −(ρ + σ) < 0,
+         ON THE SHAPE OF POSSIBLE COUNTEREXAMPLES TO THE JACOBIAN CONJECTURE                                  39
+
+
+since by item (a), Proposition 3.7 and (7.3),
+               stρi+1 ,σi+1 (Tj ) = enρi ,σi (Tj ) ∼ (ai /l, bi ) ∼ enρi ,σi (P ) = stρi+1 ,σi+1 (P ).
+Hence, by item (a), Proposition 3.7 and (7.4),
+                      enρi ,σi (Tj+1 ) = stρi+1 ,σi+1 (Tj+1 ) ≁ (ai /l, bi ) ∼ enρi ,σi (P ),
+which contradicts (7.3), thus proving (b) and finishing the proof of the claim.
+  In order to prove (7.1), we must check that
+                                                                   vρ,σ (Tj )  vρ ,σ (Tj )
+                       [ℓρ,σ (Tj ), ℓρ,σ (P )] = 0      and                   = i i                       (7.10)
+                                                                   vρ,σ (P )   vρi ,σi (P )
+hold for all (ρ, σ) with (ρi+1 , σi+1 ) ≥ (ρ, σ) > (ρi , σi ) and all i. We proceed by induction, using
+the claim and (7.2). More precisely, we are going to prove for any i, that (7.3) implies that (7.10)
+hold for all (ρ, σ) with (ρi+1 , σi+1 ) ≥ (ρ, σ) > (ρi , σi ), and that condition (7.3) is true for i + 1.
+   In fact, if (ρi+1 , σi+1 ) > (ρ, σ) > (ρi , σi ), then by Proposition 3.7,
+                              enρi ,σi (P ) = Supp(ℓρ,σ (P )) = stρi+1 ,σi+1 (P ),                        (7.11)
+while, again by Proposition 3.7 and statement (a), for the same (ρ, σ)
+                             enρi ,σi (Tj ) = Supp(ℓρ,σ (Tj )) = stρi+1 ,σi+1 (Tj ).                      (7.12)
+Consequently, since enρi ,σi (Tj ) ∼ enρi ,σi (P ),
+         [ℓρ,σ (Tj ), ℓρ,σ (P )] = 0          for all (ρ, σ) with (ρi+1 , σi+1 ) > (ρ, σ) > (ρi , σi )
+and
+          vρ,σ (Tj )  vρ ,σ (Tj )
+                     = i i                    for all (ρ, σ) with (ρi+1 , σi+1 ) ≥ (ρ, σ) > (ρi , σi ).
+          vρ,σ (P )   vρi ,σi (P )
+Hence the equalities in (7.10) hold for all required (ρ, σ)’s. Next we prove that condition (7.3) is
+true for i + 1. We first prove that
+                                          v1,−1 (enρi+1 ,σi+1 (P )) < 0.                                  (7.13)
+If ρi+1 + σi+1 ≥ 0, then by Proposition 3.7, Remark 1.8 and the inequality in (7.3),
+               v1,−1 (enρi+1 ,σi+1 (P )) ≤ v1,−1 (stρi+1 ,σi+1 (P )) = v1,−1 (enρi ,σi (P )) < 0,
+as desired. Assume that ρi+1 + σi+1 < 0 and set A := enρi+1 ,σi+1 (P ). First we are going to prove
+that v1,−1 (A) 6= 0. Otherwise A = k(1, 1) for some k ∈ N0 , which is impossible, since then
+                          vρi+1 ,σi+1 (P ) = vρi+1 ,σi+1 (A) = k(ρi+1 + σi+1 ) ≤ 0,
+contradicting the definition of (ρ̃, σ̃). Assume that
+                                         v1,−1 (A) > 0 = v1,−1 (0, 0).                                    (7.14)
+Since ρi+1 + σi+1 < 0, (ρi+1 , σi+1 ) ∈ I0 and A ∈ Supp(P ), we have
+                  (−1, 1) < (ρi+1 , σi+1 ) < (0, −1) and v0,1 (A) ≥ 0 = v0,1 (0, 0).
+Thus, by Corollary 3.6 (which we can apply because (−ρi+1 , −σi+1 ) < (0, 1) in V>0 ), we have
+           vρi+1 ,σi+1 (P ) = vρi+1 ,σi+1 (A) = −v−ρi+1 ,−σi+1 (A) < −v−ρi+1 ,−σi+1 (0, 0) = 0,
+which contradicts again the definition of (ρ̃, σ̃) and ends the proof of (7.13).
+  It remains to check that the second assertion in (7.3) holds for i + 1. By equalities (7.11)
+and (7.12),
+                stρi+1 ,σi+1 (Tj ) = enρi ,σi (Tj ) = µj enρi ,σi (P ) = µj stρi+1 ,σi+1 (P ),
+40                  JORGE A. GUCCIONE, JUAN J. GUCCIONE, AND CHRISTIAN VALQUI
+
+
+which implies vρi+1 ,σi+1 (Tj ) = µj vρi+1 ,σi+1 (P ) ≥ 0. Therefore, by (b), we can apply Remark 3.1
+in order to obtain that
+                                  enρi+1 ,σi+1 (Tj ) = µj enρi+1 ,σi+1 (P ),
+as desired. This proves (7.1) and concludes the proof.                                                     
+
+Corollary 7.2. Let m, n ∈ N be coprime with m, n > 1 and let P, Q ∈ L(l) with
+                                                         v1,1 (P )   v1,0 (P )  m
+                              [P, Q] ∈ K ×      and                =           = .
+                                                         v1,1 (Q)    v1,0 (Q)   n
+Assume that (ρ0 , σ0 ) ∈ V≥0 satisfies
+     (1) (ρ0 , σ0 ) ∈ Dir(P ) and vρ0 ,σ0 (P ) > 0,
+         1
+     (2) m enρ0 ,σ0 (P ) = n1 enρ0 ,σ0 (Q) ∈ 1l Z × N,
+                                    1
+     (3) b > a/l, where (a/l, b) := m enρ0 ,σ0 (P ).
+Let (ρ̃, σ̃) be as in Proposition 7.1 and let F ∈ L(l) be the (ρ0 , σ0 )-homogeneous element obtained
+in Theorem 2.6. If there exist p, q ∈ N coprime such that enρ0 ,σ0 (F ) = pq (a/l, b), then for all
+(ρ, σ) ∈ V with (ρ0 , σ0 ) < (ρ, σ) ≤ (ρ̃, σ̃) there exists a (ρ, σ)-homogeneous element R ∈ L(l) such
+that ℓρ,σ (P ) = Rqm .
+Proof. Let G0 and G1 be as in Theorem 2.6. Since G0 , P 6= 0, by the last equality in (2.7) we
+have
+                                [ℓρ0 ,σ0 (G0 ), ℓρ0 ,σ0 (P )] 6= 0,
+which, by Proposition 1.13, implies that
+                                  ℓρ0 ,σ0 (G1 ) = [ℓρ0 ,σ0 (G0 ), ℓρ0 ,σ0 (P )] 6= 0.
+By Proposition 2.3 and Theorem 2.6(5) there exists g1 ∈ Q such that
+                                          enρ0 ,σ0 (G1 ) = g1 enρ0 ,σ0 (P ).                           (7.15)
+Moreover,
+                                         p             p
+                                  enρ0 ,σ0 (F ) =
+                                           (a/l, b) =     enρ0 ,σ0 (P ).                               (7.16)
+                                         q            qm
+On the other hand, using again the last equality in (2.7), we obtain
+                                     ℓρ0 ,σ0 (G1 )F = ℓρ0 ,σ0 (G0 )ℓρ0 ,σ0 (P ),
+and hence
+                          enρ0 ,σ0 (G1 ) + enρ0 ,σ0 (F ) = enρ0 ,σ0 (G0 ) + enρ0 ,σ0 (P ).
+Consequently, by (7.15) and (7.16),
+                                                                               p    
+        enρ0 ,σ0 (G0 ) = enρ0 ,σ0 (G1 ) + enρ0 ,σ0 (F ) − enρ0 ,σ0 (P ) = g1 +    − 1 enρ0 ,σ0 (P ).
+                                                                               qm
+                 p
+Set g0 := g1 + qm  −1 and take r ∈ Z and s ∈ N coprime, such that g0 = r/s. Note that by (7.15),
+                                              p
+(7.16) and the fact that g1 = rs + 1 − qm         , we have
+                                                                                           
+          1                                                               r r     p      n
+                 vρ ,σ (G0 ), vρ0 ,σ0 (G1 ), vρ0 ,σ0 (P ), vρ0 ,σ0 (Q) =    , +1−    , 1,     . (7.17)
+     vρ0 ,σ0 (P ) 0 0                                                      s s    qm      m
+Let (ρ, σ) > (ρ0 , σ0 ). Applying Proposition 7.1 with T0 := G0 , with T0 := G1 and with T0 := Q,
+we obtain that
+           [ℓρ,σ (G0 ), ℓρ,σ (P )] = 0,   [ℓρ,σ (G1 ), ℓρ,σ (P )] = 0 and [ℓρ,σ (Q), ℓρ,σ (P )] = 0.
+         ON THE SHAPE OF POSSIBLE COUNTEREXAMPLES TO THE JACOBIAN CONJECTURE                                  41
+
+
+Hence, by Proposition 2.1(2b), there exist γ0 , γ1 , γ2 , γ3 ∈ K × , a (ρ, σ)-homogeneous element
+R0 ∈ L and u0 , u1 , u2 , u3 ∈ N, such that
+     ℓρ,σ (G0 ) = γ0 R0u0 ,   ℓρ,σ (G1 ) = γ1 R0u1 ,   ℓρ,σ (P ) = γ2 R0u2   and ℓρ,σ (Q) = γ3 R0u3 , [26]
+and clearly we can assume that gcd(u0 , u1 , u2 , u3 ) = 1[27] . But then, by Proposition 7.1 and
+equality (7.17),
+                                                                                       
+        vρ,σ (R0 )(u0 , u1 , u2 , u3 ) = vρ,σ (G0 ), vρ,σ (G1 ), vρ,σ (P ), vρ,σ (Q)
+                                          vρ,σ (P )                                                          
+                                       =              vρ0 ,σ0 (G0 ), vρ0 ,σ0 (G1 ), vρ0 ,σ0 (P ), vρ0 ,σ0 (Q)
+                                         vρ0 ,σ0 (P )
+                                         vρ,σ (P )
+                                       =           (rqm, rqm + sqm − ps, sqm, sqn),
+                                           sqm
+and so we have u2 = sqm   d , where d := gcd(rqm, rqm + sqm − ps, sqm, sqn). Since
+                                d = gcd(rqm, ps, sqm, sqn) = gcd(qm, s),
+                                                                         sqm/d            s/d
+we obtain that d|s. Consequently we can write ℓρ,σ (P ) = γ2 R0  = γ2 (R0 )qm . We conclude
+                         s/d
+the proof setting R := γR0 , where we choose γ ∈ K × such that γ qm = γ2 .               
+Proposition 7.3. Let m, n ∈ N be coprime with m, n > 1 and let P, Q ∈ L(l) with
+                                          v1,1 (P )   v0,1 (P )  m
+                      [P, Q] ∈ K × and              =           = .
+                                          v1,1 (Q)    v0,1 (Q)   n
+Take T0 ∈ K[P, Q] and set Tj := [Tj−1 , P ] for j ≥ 1. Assume that (ρ0 , σ0 ) ∈ V≥0 satisfies
+    (1) (ρ0 , σ0 ) ∈ Dir(P ) and vρ0 ,σ0 (P ) > 0,
+    (2) stρ0 ,σ0 (Tj ) ∼ stρ0 ,σ0 (P ) for all j with Tj 6= 0,
+         1
+    (3) m  stρ0 ,σ0 (P ) = n1 stρ0 ,σ0 (Q) ∈ 1l Z × N,
+                                   1
+    (4) b < a/l, where (a/l, b) := m stρ0 ,σ0 (P ).
+Let I1 := [(0, −1), (ρ0 , σ0 )] and
+       (ρ̃, σ̃) := min{(ρ, σ) ∈ Dir(P ) ∩ I1 : vρ′ ,σ′ (P ) > 0 for all (ρ0 , σ0 ) ≥ (ρ′ , σ ′ ) ≥ (ρ, σ)}.
+Then for all (ρ, σ) ∈ V with (ρ̃, σ̃) ≤ (ρ, σ) < (ρ0 , σ0 ) and all j ≥ 0 we have
+                                                             vρ,σ (Tj )  vρ ,σ (Tj )
+                         [ℓρ,σ (Tj ), ℓρ,σ (P )] = 0   and              = 0 0         .
+                                                             vρ,σ (P )   vρ0 ,σ0 (P )
+Proof. Mimic the proof of Proposition 7.1.                                                                    
+Corollary 7.4. Let m, n ∈ N be coprime with m, n > 1 and let P, Q ∈ L(l) with
+                                           v1,1 (P )   v0,1 (P )  m
+                       [P, Q] ∈ K × and              =           = .
+                                           v1,1 (Q)    v0,1 (Q)   n
+Assume that (ρ0 , σ0 ) ∈ V≥0 satisfies
+    (1) (ρ0 , σ0 ) ∈ Dir(P ) and vρ0 ,σ0 (P ) > 0,
+         1
+    (2) m  stρ0 ,σ0 (P ) = n1 stρ0 ,σ0 (Q) ∈ 1l Z × N,
+                                   1
+    (3) b < a/l, where (a/l, b) := m stρ0 ,σ0 (P ).
+Let (ρ̃, σ̃) be as in Proposition 7.3 and let F ∈ L(l) be the (ρ0 , σ0 )-homogeneous element obtained
+in Theorem 2.6. If there exist p, q ∈ N coprime, such that stρ0 ,σ0 (F ) = pq (a/l, b), then for all
+(ρ, σ) ∈ V with (ρ̃, σ̃) ≤ (ρ, σ) < (ρ0 , σ0 ) there exists a (ρ, σ)-homogeneous element R ∈ L(l) such
+that ℓρ,σ (P ) = Rqm .
+42                 JORGE A. GUCCIONE, JUAN J. GUCCIONE, AND CHRISTIAN VALQUI
+
+
+Proof. Mimic the proof of Corollary 7.2.                                                                   
+
+Remark 7.5. Let P ∈ L(l) \ {0} and let (ρ′ , σ ′ ) and (ρ′′ , σ ′′ ) be consecutive elements in Dir(P ).
+It follows from Remarks 2.10 and 3.3 that if vρ′ ,σ′ (P ), vρ′′ ,σ′′ (P ) > 0, then vρ,σ (P ) > 0 for all
+(ρ′ , σ ′ ) < (ρ, σ) < (ρ′′ , σ ′′ ).

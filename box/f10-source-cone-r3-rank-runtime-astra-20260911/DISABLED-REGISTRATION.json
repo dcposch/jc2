@@ -1,0 +1,24 @@
+{
+  "schema": "f10-source-cone-r3-rank-runtime/v1",
+  "enabled": false,
+  "jobtag": "f10-source-cone-r3-fullrank-v1",
+  "status": "STATIC_UNREGISTERED_UNEXECUTED",
+  "exclusive_no_concurrent_writer": false,
+  "source_limits": {"joint_wall_seconds":"600","joint_cpu_seconds":"550","memory_bytes":"8589934592","baseline_bytes":"134217728","certificate_bytes":"16777216","receipt_bytes":"32768"},
+  "limits": {"joint_wall_seconds":"600","joint_cpu_seconds":"550","memory_bytes":"8589934592","baseline_bytes":"134217728","certificate_bytes":"16777216","receipt_bytes":"32768"},
+  "profiles": {"control":[5,3,8589934592],"dummy":[5,3,33554432],"find":[180,170,8589934592],"check":[150,130,8589934592],"mutate":[15,9,8589934592]},
+  "environment": {"PATH":"/usr/bin:/bin","LANG":"C","LC_ALL":"C","TZ":"UTC"},
+  "typed_slot_policy": {
+    "check-positive":{"flag":"--authorization-sha256","token":"AUTHORIZATION_SHA256"},
+    "check-negative":{"flag":"--authorization-sha256","token":"AUTHORIZATION_SHA256"},
+    "mutate":{"flag":"--root-registration-sha256","token":"ROOT_REGISTRATION_SHA256"}
+  },
+  "source_full_argv_slot": {"index":11,"token":"ROOT_AUTHORIZATION_SHA256","count":1,"length":14},
+  "required_root_fields_unformed": ["instance_id","hostname","boot_id","pid_namespace","cgroup_path","aggregate_cpu_start_usec","uid","gid","files","pins","science_dir","wrapper_dir","outer_argv","native_manifest","source_native_manifest","baseline","qualification_evidence","place","output_mount","authority_dir","frozen_dir","writer_dir","durable_dir","durable_device","admission_deadline_utc","mathematical_deadline_utc","task_deadline_utc","worker_deadline_utc","commands","phase_policy"],
+  "required_command_labels": ["refuse-status","refuse-caps","refuse-inventory","refuse-source","refuse-hash","valid","startup-find","startup-check","dummy","find","check-positive","mutate","check-negative"],
+  "registration_rule": "ROOT must form a separate complete registration from independently qualified actual metadata; this disabled template cannot launch and is not a generic substitution file.",
+  "probe_scope": "ROOT_POLICY_ONLY_NO_RANK_AUTHORIZE",
+  "mutator_scope": "independent ROOT positive-phase validation; no rank authorize or entry spoof",
+  "runtime_estimate": "UNMEASURED",
+  "source_outcome": "NONE"
+}

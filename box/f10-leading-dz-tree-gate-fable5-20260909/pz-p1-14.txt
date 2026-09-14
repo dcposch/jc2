@@ -1,0 +1,819 @@
+                                               Minimum Degree of the Difference of Two Polynomials
+                                                      over Q, and Weighted Plane Trees.
+                                                                    Fedor Pakovich∗ and Alexander K. Zvonkin†
+                                                                                        June 21, 2018
+arXiv:1306.4141v1 [math.NT] 18 Jun 2013
+
+
+
+
+                                                                                            Abstract
+                                                    A weighted bicolored plane tree (or just tree for short) is a bicolored plane tree whose edges
+                                                are endowed with positive integral weights. The degree of a vertex is defined as the sum of
+                                                the weights of the edges incident to this vertex. Using the theory of dessins d’enfants, which
+                                                studies the action of the absolute Galois group on graphs embedded into Riemann surfaces, we
+                                                show that a weighted plane tree is a graphical representation of a pair of coprime polynomials
+                                                P, Q ∈ C [x] such that: (a) deg P = deg Q, and P and Q have the same leading coefficient;
+                                                (b) the multiplicities of the roots of P (respectively, of Q) are equal to the degrees of the black
+                                                (respectively, white) vertices of the corresponding tree; (c) the degree of the difference P − Q
+                                                attains the minimum which is possible for the given multiplicities of the roots of P and Q.
+                                                Moreover, if a tree in question is uniquely determined by the set of its black and white vertex
+                                                degrees (we call such trees unitrees), then the corresponding polynomials are defined over Q.
+                                                    The pairs of polynomials P, Q such that the degree of the difference P − Q attains the
+                                                minimum, and especially those defined over Q, are related to some important questions of
+                                                number theory. Dozens of papers, from 1965 [4] to 2010 [3], were dedicated to their study.
+                                                The main result of this paper is a complete classification of the unitrees which provides us with
+                                                the most massive class of such pairs defined over Q. We also study combinatorial invariants of
+                                                the Galois action on trees, as well as on the corresponding polynomial pairs, which permit us
+                                                to find yet more examples defined over Q. In a subsequent paper we compute the polynomials
+                                                P, Q corresponding to all the unitrees.
+
+
+                                          Contents
+                                          1 Introduction                                                                                                2
+
+                                          2 From polynomials through Belyi functions to weighted trees                                                  4
+                                            2.1 Function f = P/R and its critical values . . . . . . . . . . . . . . . . . . . . . . . .                4
+                                            2.2 Dessins d’enfants and Belyi functions . . . . . . . . . . . . . . . . . . . . . . . . . .               6
+                                            2.3 Number fields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             8
+                                            2.4 How do the weighted trees come in . . . . . . . . . . . . . . . . . . . . . . . . . . .                 9
+
+                                          3 Existence theorem                                                                                         10
+                                            3.1 Forests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         11
+                                            3.2 Stitching several trees to get one: the case gcd(α, β) = 1 . . . . . . . . . . . . . . .              12
+                                            3.3 Non-coprime weights . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             12
+
+                                          4 Weak bound                                                                                                13
+                                            4.1 Polynomials and cacti . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             13
+                                            4.2 Proof of Theorem 4.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .            15
+                                            ∗ Department of Mathematics, Faculty of Natural Sciences, Ben-Gurion University of the Negev, P.O.B. 653, Beer
+
+                                          Sheva, Israel; pakovich@math.bgu.ac.il.
+                                             † LaBRI, Université Bordeaux I, 351 cours de la Libération, F-33405 Talence Cedex France; zvonkin@labri.fr.
+
+
+
+
+                                                                                                 1
+5 Classification of unitrees                                                                                 16
+  5.1 Statement of the main result . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .               17
+  5.2 Weight distribution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .            23
+  5.3 Brushes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .            25
+  5.4 Trees with repeating branches of height 2 . . . . . . . . . . . . . . . . . . . . . . .                27
+  5.5 Trees with repeating branches of the type (1, s, s + 1) . . . . . . . . . . . . . . . .                31
+  5.6 Trees with repeating branches of the type (1, t, 1) . . . . . . . . . . . . . . . . . . .              36
+  5.7 Proof of the uniqueness of unitrees . . . . . . . . . . . . . . . . . . . . . . . . . . .              36
+
+6 Other combinatorial Galois invariants                                                                      40
+  6.1 Composition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              41
+  6.2 Primitive monodromy groups . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                 43
+  6.3 Duality and self-duality . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .             45
+  6.4 A sporadic example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .               46
+  6.5 Sporadic examples of Beukers and Stewart [3] . . . . . . . . . . . . . . . . . . . . .                 48
+
+7 Further questions                                                                                          50
+
+References                                                                                                   53
+
+
+1     Introduction
+In 1965, Birch, Chowla, Hall, and Schinzel [4] asked a question which soon became famous:
+       Let A and B be two coprime polynomials with complex coefficients; what is the possible
+       minimum degree of the difference R = A3 − B 2 ?
+It is reasonable to suppose that A3 and B 2 have the same degree and the same leading coefficients.
+Let us take deg A = 2k, deg B = 3k, so that deg A3 = deg B 2 = 6k. Then the following was
+conjectured in [4]:
+
+    1. For R = A3 − B 2 one always has deg R ≥ k + 1.
+    2. This bound is sharp: that is, it is attained for infinitely many values of k.
+
+   The first conjecture was proved the same year by Davenport [8]. The second one turned out
+to be much more difficult and remained open for 16 years: in 1981 Stothers [24] showed that the
+bound is in fact attained not only for infinitely many values of k but for all of them.
+   The above problem may be generalized in various ways. The following one was considered in
+1995 by Zannier [26]. Let α, β ⊢ n be two partitions of n,
+                                                                          p
+                                                                          X            q
+                                                                                       X
+                      α = (α1 , . . . , αp ),   β = (β1 , . . . , βq ),         αi =         βj = n,
+                                                                          i=1          j=1
+
+and let P and Q be two coprime polynomials of degree n having the following factorization pattern:
+                                    p
+                                    Y                                     q
+                                                                          Y
+                        P (x) =          (x − ai )αi ,       Q(x) =             (x − bj )βj .                (1)
+                                   i=1                                    j=1
+
+In these expressions we consider the multiplicities αi and βj , i = 1, 2, . . . , p, j = 1, 2, . . . , q as being
+given, while the roots ai and bj are not fixed, though they must all be distinct. The problem
+is to find the minimum possible degree of the difference R = P − Q. In his paper, Zannier
+proved the following. Let d = gcd (α, β) denote the greatest common divisor of the numbers
+α1 , . . . , αp , β1 , . . . , βq . If
+                                                            n
+                                                p+q ≤         +1                                             (2)
+                                                            d
+
+
+                                                            2
+then
+
+                                     deg R ≥ (n + 1) − (p + q),                                        (3)
+                                                                        n
+and this bound is always attained. If, on the other hand, p + q >         + 1, then a weaker bound
+                                                                        d
+                                                   (d − 1) n
+                                        deg R ≥              ,                                         (4)
+                                                       d
+is valid, and it is also attained.
+
+Definition 1.1 (Davenport–Zannier triple) Let P, Q, R ∈ C [x] be coprime polynomials with
+factorization pattern (1), deg P = deg Q = n, while the degree of the polynomial R = P − Q equals
+(n + 1) − (p + q). Then the triple (P, Q, R) is called a Davenport–Zannier triple, or, in a more
+concise way, a DZ-triple.
+   The main subject of this paper is a study of DZ-triples defined over Q, that is, the triples
+P, Q, R ∈ Q [x].
+    The paper is organized as follows.
+    A preliminary work is carried out in Section 2. First, we show that bound (3) follows from
+the Riemann–Hurwitz formula for the function f = P/R. Then we reduce the problem about
+polynomials to a problem about weighted bicolored plane trees. A weighted bicolored plane tree is
+a plane tree (“plane” means that the cyclic order of branches around each vertex is fixed) whose
+vertices are colored in black and white in such a way that the ends of each edge have opposite
+colors, and whose edges are endowed with positive integral weights. The degree of a vertex is
+defined as the sum of the weights of the edges incident to this vertex. The sum of the weights
+of all the edges is called the total weight of the tree. We show that a DZ-triple with prescribed
+factorization pattern (1) exists if and only if there exists a weighted bicolored plane tree of the
+total weight n = deg P = deg Q having p black vertices of degrees α1 , . . . , αp and q white vertices
+of degrees β1 , . . . , βq . As a corollary, we give a spectacularly simple proof of Stothers’s 1981 result
+for the squares and cubes, namely, the attainability of the lower bound deg(A3 − B 2 ) ≥ k + 1
+where deg A = 2k and deg B = 3k, see Example 2.13. The results of Section 2 as well as the
+framework of the whole paper are based on the theory of dessins d’enfants (see, e. g., Chapter 2 of
+[17], or a collection of papers [22], or a recent book [11]). This theory establishes a correspondence
+between simple combinatorial objects, graphs drawn on two-dimensional surfaces, and a vast world
+of Riemann surfaces, algebraic curves, number fields, Galois theory, etc.
+    In Section 3 we prove the existence theorem for weighted bicolored plane trees. Namely, we show
+that a necessary and sufficient condition for the existence of a tree with the above characteristics is
+inequality (2). The attainability of bound (3) is deduced from this result. In Section 4 we establish
+bound (4) and its attainability in the case when inequality (2) is not satisfied. Although bounds
+(3) and (4) and their attainability were proved by U. Zannier, we reprove these results here for the
+sake of completeness, and also in order to show how the pictorial language clarifies and simplifies
+the exposition.
+    In Sections 5 and 6 we study DZ-triples defined over Q. This case is the most interesting one
+since by specializing x to a rational value one may obtain an important information concerning
+differences of integers with given factorization patterns. This subject is actively studied in number-
+theoretic works: see, for example, a recent paper by Beukers and Stewart [3] (2010) and the
+bibliography therein. Our approach here is based on the following corollary of the theory of
+dessins d’enfants which gives a sufficient (though not necessary) condition for a DZ-triple to be
+defined over Q: the triple is defined over Q if there exists exactly one weighted bicolored plane
+tree with the degrees of black vertices equal to α1 , . . . , αp , and the degrees of white vertices equal
+to β1 , . . . , βq . We will call such trees unitrees.
+    In Section 5 we prove the main result of the paper, namely, a complete classification of unitrees:
+see Theorem 5.4. The formulation of this theorem is rather long so we do not enunciate it in the
+Introduction. We mention only that the class of unitrees consists of ten infinite series of trees and
+ten sporadic trees which do not belong to the above series.
+
+
+                                                    3
+   While the results of Section 5 may be considered as conclusive, Section 6 represents only first
+steps in a far-ranging programme of study of the Galois action on weighted plane trees and of
+combinatorial invariants of this action. This approach permits to find yet more DZ-triples defined
+over Q and also to study DZ-triples over other number fields. Note that essentially all previously
+found examples of DZ-triples over Q correspond either to unitrees or to the trees constructed in
+Section 6. We have also found quite a few new examples of DZ-triples.
+   Finally, in Section 7 we mention some further possible developments of the subject.
+    This paper deals only with the combinatorial aspect of the whole construction. The compu-
+tation of the corresponding DZ-triples is postponed to a separate publication (see [20]) since the
+techniques used for this purpose are very different form the ones used in this paper. In particular,
+a great deal of symbolic computations as well as certain polynomial identities are required. For
+an individual unitree, the computation of the corresponding DZ-triple is a difficult task but the
+verification of the result is easy. Indeed, when polynomials P, Q, R (together with their appropri-
+ate factorizations) are given, it is immediate to observe that their coefficients are rational, and the
+only thing to verify is that R is indeed equal to P − Q. The situation becomes significantly more
+complicated for infinite series of trees since in this case the proof may become rather elaborate.
+
+
+2     From polynomials through Belyi functions to weighted
+      trees
+2.1    Function f = P/R and its critical values
+                                                                                    P         P
+Let α, β ⊢ n be two partitions of n, α = (α1 , . . . , αp ), β = (β1 , . . . , βq ), pi=1 αi = qj=1 βj = n,
+and let P, Q ∈ C[x] be two polynomials of degree n with the factorizations
+                                 p
+                                 Y                                    q
+                                                                      Y
+                       P (x) =         (x − ai )αi ,         Q(x) =         (x − bj )βj .                (5)
+                                 i=1                                  j=1
+
+We suppose all ai , bj , i = 1, . . . , p, j = 1, . . . , q to be distinct. Let the difference R = P − Q have
+the following factorization:
+                                       r
+                                       Y                                    r
+                                                                            X
+                          R(x) =           (x − ck )γk ,         deg R =          γk .                   (6)
+                                    k=1                                     k=1
+
+Our goal is to minimize deg R; obviously,
+
+                                                 deg R ≥ r.                                              (7)
+
+Consider the following rational function of degree n:
+                                                               P
+                                                       f =       ;
+                                                               R
+note that
+                                                                Q
+                                                  f −1 =          .
+                                                                R
+
+Definition 2.1 (Critical value) A point y ∈ C = C ∪ {∞} is called critical value of a rational
+function f if the equation f (x) = y has multiple roots.
+   The expressions written above for the function f = P/Q provide us with at least three critical
+values of f :
+    • y = 0, provided that not all αi are equal to 1;
+    • y = 1, provided that not all βj are equal to 1; and
+    • y = ∞, if only we do not consider the trivial case deg R = deg P − 1; if deg R < deg P − 1
+      then f has a multiple pole at infinity.
+
+                                                           4
+Denote y1 , . . . , ym the other critical values of f , if there are any, and let nl be the number of
+preimages of yl , l = 1, . . . , m; by the definition of a critical value, nl < n.
+
+Lemma 2.2 (Number of roots of R) The number r of distinct roots of the polynomial R is
+                                                             m
+                                                             X
+                              r = (n + 1) − (p + q) +               (n − nl ).                       (8)
+                                                              l=1
+
+   In fact, equality (8) is a particular case of the Riemann–Hurwitz formula, but for the sake of
+completeness we give its proof here.
+
+Proof. Let us draw a star-tree with the center at 0 and with its rays going to the critical values
+1, y1 , . . . , ym , see Figure 1. Considered as a map on the sphere, this tree has m + 2 vertices, m + 1
+edges, and a single outer face with its “center” at ∞.
+
+                                                                  y2
+
+                                                             y1
+
+
+                                      ...
+                                                         0              1
+
+                                                ym
+
+                       Figure 1: Star-tree whose vertices are critical values of f .
+
+
+   Now let us take the preimage of this tree under f . We will get a graph drawn on the preimage
+sphere which has n (m+ 1) edges since each edge is “repeated” n times in the preimage.     PmIts vertices
+are the preimages of the points 0, 1, y1 , . . . , ym , so their number is equal to p + q + l=1 nl .
+   What occurs to the faces?
+   If we puncture at ∞ the single open face in the image sphere, we get a punctured disk without
+any ramification points inside. The only possible unramified covering of a punctured open disk is
+a disjoint collection of punctured disks; their number is equal to the number of poles of f , namely,
+r + 1 (r roots of R and ∞). Inserting a point into each puncture we get r + 1 simply connected
+open faces in the preimage sphere. The fact that they are simply connected implies that the graph
+drawn on the preimage sphere is connected. Thus, the preimage of our star-tree is a plane map.
+What remains is to apply Euler’s formula:
+                                       m
+                                                !
+                                      X
+                              p+q+          nl − n (m + 1) + (r + 1) = 2,
+                                       l=1
+
+which leads to (8).                                                                                    
+
+   Notice that in order to prove Lemma 2.2, instead of the tree of Figure 1, we could take any
+other plane map with vertices at the critical values (see e.g. the proof of Proposition 4.2 below).
+
+Corollary 2.3 (Lower bound) We have
+                                   deg R ≥ (n + 1) − (p + q) .                                       (9)
+The proof follows from (8) and (7).                                                                    
+
+   Note that deg R cannot be negative; therefore, when p + q > n + 1 the latter bound cannot be
+attained. In this case one can attain the bound deg R ≥ 0, that is, the polynomial R can be made
+equal to a constant. This situation is studied in more detail in Section 4.
+   Equation (8) provides us with guidelines of how to get the minimum degree of R.
+
+                                                     5
+Proposition 2.4 (Bound (9) attainability) Bound (9) is attained if and only if the following
+conditions are satisfied:
+   • p + q ≤ n + 1.
+   • P
+     The number m of the critical values of f other than 0, 1, ∞, is equal to zero, so that the sum
+       m
+       l=1 (n − nl ) in the right-hand side of (8) is eliminated altogether. The tree of Figure 1 is
+     then reduced to merely the segment [0, 1].
+   • All the roots of R are simple, that is, γ1 = . . . = γr = 1, so that deg R = r. Another formu-
+     lation of the same condition: the partition γ ⊢ n, γ = (γ0 , γ1 , γ2 , . . . , γr ), which corresponds
+     to the multiplicities of the poles, has the form of a hook : γ = (n − r, 1, 1, . . . , 1) = (n − r, 1r ).
+                                                                                 | {z }
+                                                                                    r times
+
+   The conditions which imply the existence of such a function f will be obtained in Section 3.
+
+2.2    Dessins d’enfants and Belyi functions
+Considering rational functions with only three critical values brings us into the framework of the
+theory of dessins d’enfants. Here we give a brief summary of this theory (only in a planar setting);
+the missing details, proofs, and bibliography can be found, for example, in [17], Chapter 2.
+
+Definition 2.5 (Belyi function) A rational function f : C → C is called Belyi function if it
+does not have critical values outside the set {0, 1, ∞}.
+     For such a function, the tree considered in the proof of Lemma 2.2 is reduced to the segment
+[0, 1]. Let us take this segment, color the point 0 in black and the point 1 in white, and consider
+the preimage D = f −1 ([0, 1]); we will call this preimage a dessin.
+
+Proposition 2.6 (Dessin) The dessin D = f −1 ([0, 1]) is a connected graph drawn on the sphere,
+and its edges do not intersect outside the vertices. Therefore, D may also be considered as a plane
+map. This map has a bipartite structure: black vertices are preimages of 0, and white vertices are
+preimages of 1.
+    The degrees of the black vertices are equal to the multiplicities of the roots of the equation
+f (x) = 0, and the degrees of the white ones are equal to the multiplicities of the roots of the
+equation f (x) = 1. The sum of the degrees in both cases is equal to n = deg f , which is also the
+number of edges.
+    The map D being bipartite, the number of edges surrounding each face is even. It is convenient,
+in defining the face degrees, to divide this number by two.
+
+Definition 2.7 (Face degree) We say that an edge is incident to a face if, while remaining
+inside this face and making a circuit of it in the positive (trigonometric) direction, we follow the
+edge from its black end toward the white one. Thus, only half of the edges surrounding a face are
+incident to it. Moreover, each edge is incident to exactly one face. The degree of a face is equal to
+the number of edges incident to it.
+   According to this definition and to the remarks preceding it, every edge is incident to one black
+vertex, to one white vertex, and to one face. The sum of the face degrees is equal to n = deg f .
+
+Proposition 2.8 (Faces and poles) Inside each face there is a single pole of f , and the multi-
+plicity of this pole is equal to the degree of the face.
+
+Definition 2.9 (Passport of a dessin) The triple π = (α, β, γ) of partitions α, β, γ ⊢ n which
+correspond to the degrees of the black vertices, of the white vertices, and of the faces of a dessin,
+is called a passport of the dessin.
+
+Definition 2.10 (Combinatorial orbit) A set of the dessins having the same passport is called
+a combinatorial orbit corresponding to this passport.
+
+                                                     6
+    The construction which associates a map to a Belyi function works also in the opposite direction.
+Two bicolored plane maps are isomorphic if there exists an orientation preserving homeomorphism
+of the sphere which transforms one map into the other, respecting the colors of the vertices. Let
+M be a bicolored map on the sphere. Then, the sphere may be endowed with a complex structure,
+thus becoming the Riemann complex sphere, and a representative of the isomorphism class of M
+can be drawn as a dessin D obtained via a Belyi function. The following statement is a particular
+case of the classical Riemann’s existence theorem:
+
+Proposition 2.11 (Existence of Belyi functions) For every bicolored plane map M there ex-
+ists a dessin D isomorphic to M , that is, D = f −1 ([0, 1]) where f is a Belyi function. The function
+f = f (x) is unique up to a linear fractional transformation of the variable x.
+   Of course, when we draw a map we do not respect the specific geometric form of the corre-
+sponding dessin. We are content with the fact that such a dessin exists.
+   Now Proposition 2.4 may be reformulated in purely combinatorial terms:
+
+Proposition 2.12 (Bound (9) attainability) The lower bound (9) is attained if and only if
+there exists a bicolored plane map with the passport π = (α, β, γ) in which the partitions
+α = (α1 , . . . , αp ) and β = (β1 , . . . , βq ) are given, and γ has the form γ = (n − r, 1r ) where
+1 is repeated r = (n + 1) − (p + q) times.
+   In geometric terms, all the faces of our map except the outer one must be of degree 1. Recall
+that the number of faces, which is equal to r + 1, is prescribed by Euler’s formula.
+
+Example 2.13 (Cubes and squares: a solution) Let us look once again at the problem posed
+by Birch et al. in [4] (see page 2). In order to show that if deg A = 2k, deg B = 3k, and R = A3 −B 2 ,
+then the lower bound deg R ≥ k + 1 is attained, we must construct a map with the following
+properties: all its black vertices are of degree 3; all its white vertices are of degree 2; and all its
+finite faces are of degree 1.
+
+   In order to simplify our pictures we sometimes use the following convention.
+
+Convention 2.14 (White vertices of degree 2) When all the white vertices are of degree 2,
+it is convenient, in order to simplify a graphical representation of such maps, to draw only black
+vertices and to omit the white ones, considering them as being implicit. In such a picture, a line
+connecting two black vertices contains an invisible white vertex in its middle, and is thus not an
+edge but a union of two edges.
+    The construction of the maps we need to solve the above problem about min deg(A3 − B 2 ) is
+trivial: first we draw a tree with all internal nodes being of degree 3, and then attach loops to its
+leaves: see Figure 2.
+
+
+
+
+                             First stage                   Second stage
+
+Figure 2: This map solves the problem which remained open for 16 years: there exist polynomials A and B,
+deg A = 2k, deg B = 3k, such that deg (A3 − B 2 ) = k + 1.
+
+
+
+                                                   7
+   We see in this example a remarkable efficiency of the pictorial representation of problems
+concerning polynomials. If this representation was known in 1965, the proof of the conjecture
+would have taken 16 minutes instead of 16 years.
+
+2.3    Number fields
+As it was told in Proposition 2.11, a Belyi function f (x) corresponding to a dessin is defined up
+to a linear fractional transformation of x. In this family of equivalent Belyi functions it is always
+possible to find one whose coefficients are algebraic numbers. If we act simultaneously on all the
+coefficients of such a function by an element of the absolute Galois group Gal (Q|Q), that is, by
+an automorphism σ of the field Q of algebraic numbers, or, in other words, if we replace all the
+coefficients ai of f by their algebraically conjugate numbers σ(ai ), we obtain once again a Belyi
+function. Furthermore, one can prove that in such a way the action of Gal (Q|Q) on Belyi functions
+descends to an action on dessins. There exist many combinatorial invariants of this action, the
+first and the simplest of them being the passport of the dessin. Thus, a combinatorial orbit (see
+Definition 2.10) may constitute a single Galois orbit, or may further split into a union of several
+Galois orbits. Every combinatorial orbit is finite, and therefore every Galois orbit is also finite.
+    One of the most important notions concerning the Galois action on dessins is that of the field
+of moduli.
+
+Construction 2.15 (Field of moduli) Let D be a dessin, and let ΓD ≤ Gal (Q|Q) be its sta-
+bilizer. Since the orbit D is finite, the group ΓD is a subgroup of finite index in Gal (Q|Q). Let
+H ≤ ΓD be the maximal normal subgroup of Gal (Q|Q) contained in ΓD . According to the Ga-
+lois correspondence between subgroups of Gal (Q|Q) and algebraic extensions of Q, there exists a
+number field K corresponding to H. This field is called the field of moduli of the dessin D. By
+construction, this field is unique: a dessin cannot have two different fields of moduli.
+   Below we list some properties of the fields of moduli. Let D = {D1 , . . . , Dm } be an orbit of the
+Galois action on dessins.
+   • The field of moduli K is the same for all the elements of the orbit.
+   • The degree of K as an extension of Q is equal to m = |D|.
+   • The coefficients of Belyi functions corresponding to the dessins D ∈ D, if they are chosen as
+     algebraic numbers, always belong to a finite extension L of K.
+   • The action of the group Gal (Q|Q) on the orbit D coincides with the action of Gal (K|Q).
+   • The action of Gal (L|K) on Belyi functions may change a position of a dessin D ∈ D on the
+     complex sphere but does not change its combinatorial structure; in other words, as a map,
+     the dessin in question remains the same.
+    In the absolute majority of cases the situation is much simpler: the field of moduli of an orbit
+is the smallest number field to which the coefficients of the corresponding Belyi functions belong.
+However, in some specially constructed examples we need a larger field L ⊃ K to be able to find
+Belyi functions. There exists a simple sufficient condition which ensures that the coefficients do
+belong to K, see [7]: this condition is the existence of a bachelor.
+
+Definition 2.16 (Bachelor) A bachelor is a black vertex (a white vertex; a face) such that there
+is no other black vertex (no other white vertex; no other face) of the same degree.
+
+Remark 2.17 (Positioning of bachelors) If a dessin contains several bachelors then up to
+three of them can be placed at rational points, that is, at points in Q ∪ {∞}, and this will not
+prevent the Belyi function for the dessin in question to be defined over the field of moduli.
+   For the dessins we study in this paper a bachelor always exists: it is the outer face (since all
+the other faces are of degree 1). Recalling that the degree of K is equal to the size of the orbit we
+may conclude the following:
+
+
+                                                  8
+                        If a combinatorial orbit consists of a single element,
+                       then it is also a Galois orbit, and its moduli field is Q.
+
+   Summarizing what was stated above we may affirm the following:
+
+Proposition 2.18 (Coefficients in Q) If for a given passport π = (α, β, γ), where the parti-
+tion γ is of the form γ = (n − r, 1r ), there exists a unique bicolored plane map, then there exists a
+corresponding Belyi function with rational coefficients, and therefore there also exists a DZ-triple
+with rational coefficients.
+   Note that Proposition 2.12, which concerns the existence, is of the “if and only if” type, while
+Proposition 2.18, which concerns the definability over Q, provides only an “if”-type condition.
+
+2.4    How do the weighted trees come in
+Though the weighted trees are, in our opinion, natural and interesting objects to be studied for
+their own sake, in our paper they are used as a merely technical tool which is easy to manipulate.
+In Figure 3, left, it is shown how a typical bicolored map whose all finite faces are of degree 1
+looks like. (Recall that according to Definition 2.7 a face of degree 1 is surrounded by two edges,
+but only one of these edges is incident to the face.) It is convenient to symbolically represent such
+a map in a form of a tree (see Figure 3, right) by replacing several multiple edges which connect
+neighboring vertices, by a single edge with a weight equal to the number of these multiple edges.
+In this way, the operations of cutting and gluing subtrees, exchanging the weights between edges,
+etc., become easier to implement and to understand.
+
+
+                                                                                              5
+
+                                                                            3
+
+                                                                                 2
+
+                                                                    2
+
+
+
+Figure 3: The passage from a map with all its finite faces being of degree 1, to a weighted tree. The
+weights which are not explicitly indicated are equal to 1; the edges of the weight bigger than 1 are drawn
+thick.
+
+
+
+Definition 2.19 (Weighted tree) A weighted bicolored plane tree, or a weighted tree, or just a
+tree for short, is a bicolored plane tree whose edges are endowed with positive integral weights.
+The sum of the weights of the edges of a tree is called the total weight of the tree. The degree of a
+vertex is the sum of the weights of the edges incident to this vertex. The weight distribution of a
+weighted tree is a partition µ ⊢ n, µ = (µ1 , µ2 , . . . , µm ) where m = p + q − 1 is the number of edges,
+and µi , i = 1, . . . , m are the weights of the edges. Leaving aside the weights and considering only
+the underlying plane tree, we speak of a topological tree. Weighted trees whose weight distribution
+is µ = 1n will be called ordinary trees. Ordinary trees correspond to Shabat polynomials: these are
+particular cases of Belyi functions, with a single pole at infinity.
+    We call a leaf a vertex which has only one edge incident to it, whatever is the weight of this
+edge. By abuse of language, we will also call a leaf this edge itself.
+    The adjective plane in this definition means that our trees are considered not as mere graphs
+but as plane maps. More precisely, this means that the cyclic order of branches around each
+vertex of the tree is fixed, and changing this order will in general give a different tree. All the
+trees considered in this paper will be endowed with the “plane” structure; therefore, the adjective
+“plane” will often be omitted.
+
+
+                                                    9
+    The adjective plane in this definition means that our trees are considered not as mere graphs
+but as plane maps. More precisely, this means that the cyclic order of branches around each
+vertex of the tree is fixed, and changing this order will in general give a different tree. All the
+trees considered in this paper will be endowed with the “plane” structure; therefore, the adjective
+“plane” will often be omitted.
+
+Definition 2.20 (Isomorphic trees) Two weighted trees are isomorphic if the underlying bi-
+colored plane maps are isomorphic. In other words, they are isomorphic if there exists a color-
+preserving bijection between the vertices of the trees and a bijection between the edges which
+respects the incidence of edges and vertices, the cyclic order of the edges around each vertex, and
+which also respects the weights of the edges.
+
+Definition 2.21 (Passport of a tree) The pair (α, β) of partitions α, β ⊢ n of the total weight n
+of a tree, corresponding to the degrees of the black vertices and of the white vertices of a weighted
+tree, is called a passport of this tree.
+
+Example 2.22 (Tree of Figure 3) The total weight of the tree shown in Figure 3 is n = 18; its
+passport is (α, β) = (52 23 12 , 71 61 41 11 ); the face degree distribution is γ = 101 18 , and the weight
+distribution is µ = 51 31 22 16 .
+
+Remark 2.23 (Weighted trees vs. “weighted maps”) We must not confuse weighted trees
+with “weighted maps”. The weighted tree on the left, and the “weighted map” on the right of
+Figure 4 have the same set of black and white vertex degrees: (α, β) = (51 31 21 , 52 ), but the face
+degree partitions of the underlying maps are different: γ = 41 16 for the map represented by the
+tree, and γ = 31 21 15 for the map on the right. In particular, the corresponding dessins cannot
+belong to the same Galois orbit.
+    Through the whole paper, we speak exclusively about weighted trees.
+
+                                                                        1      1
+                            3      2      3     2                  3
+
+                                                                        1      4
+
+
+
+Figure 4: The weighted tree on the left and the “weighted map” on the right have the same set of black
+and white vertex degrees, but their face degrees are different.
+
+
+    Now Propositions 2.4 and 2.12 may be reformulated as follows:
+
+Theorem 2.24 (Lower bound attainability) Let α, β ⊢ n be two partitions of n having p and q
+parts, respectively. Then the lower bound (9) is attained if and only if there exists a weighted tree
+with the passport (α, β).
+
+
+3     Existence theorem
+In this section we study the following question: for a given pair of partitions α, β ⊢ n, does there
+exist a weighted tree of the total weight n with the passport (α, β) ? Equivalently, does there exist
+a rational function with three critical values, and with the multiplicities of the preimages of these
+critical values being, first, two given partitions α, β ⊢ n, and then, the third partition being equal
+to γ = (n − r, 1r ) ?
+    This question is a particular case of a more general problem of realizability of ramified coverings:
+does there exist a ramified covering of a given Riemann surface with the given “local data” (that
+is, with given multiplicities of the preimages of ramification points)? The problem goes back to
+the classical paper by Hurwitz [13] (1891). Though many particular cases are well studied, the
+problem in its full generality remains unsolved. Among numerous publications dedicated to the
+
+
+                                                    10
+realizability we would like to mention early works by Husemoller [14] (1962) and Thom [25] (1965);
+an important paper by Edmonds, Kulkarni, and Stong [9] (1984); and recent publications [21]
+(2009), [6] (2008), and [19] (2009).
+    The main result of this section is the following theorem (recall that gcd(α, β) denotes the
+greatest common divisor of the numbers α1 , . . . , αp , β1 , . . . , βq ):
+
+Theorem 3.1 (Realizability of a passport by a tree) Let α, β ⊢ n be two partitions of n,
+α = (α1 , . . . , αp ), β = (β1 , . . . , βq ), and let gcd (α, β) = d. Then a weighted tree with the passport
+(α, β) exists if and only if
+                                                     n
+                                           p+q ≤       +1.                                               (10)
+                                                     d
+    By Theorem 2.24 the attainability of the bound (3) (coinciding with (9)) follows from this
+statement. The attainabilty of the bound (4) in the case when condition (10) is not satisfied will
+be established in Section 4.
+    Theorem 3.1 and Theorem 4.1 below are equivalent to the main result (Theorem 1) of Zan-
+nier [26]. In his paper, Zannier remarks that it would be interesting to apply the theory of dessins
+d’enfants to this problem in a more direct way, and mentions a remark by G. Jones that such an
+approach might produce a simpler proof. This is indeed the case, as we will see in this section.
+Beside that, this theory enables us to find a huge class of DZ-triples over Q (in a way, “almost all”
+of them), see Section 5; and it also gives us a more direct access to Galois theory, see Section 6.
+We have already had a first glimpse of the power of the “dessin method” in Example 2.13.
+
+3.1    Forests
+A forest is a disjoint union of trees.
+
+Proposition 3.2 (Realizability of a passport by a forest) Any pair (α, β) of partitions of n
+can be realized as a passport of a forest of weighted trees.
+
+Proof. If there are two equal parts αi = βj in the partitions α and β, we make a separate edge
+with the weight s = αi = βj and proceed with the new passport (α′ , β ′ ), where α′ and β ′ are
+obtained from α and β by eliminating their parts αi and βj , respectively.
+   If there are no equal parts, suppose, without loss of generality, that there are two parts αi > βj .
+Then we do the following (see Figure 5):
+
+ (a) make an edge with the weight s = βj ;
+ (b) consider the new passport (α′ , β ′ ) where β ′ is obtained from β by eliminating the part βj ,
+     and α′ is obtained from α by replacing αi with t = αi − βj ;
+ (c) construct inductively a forest F ′ of the total weight n − s corresponding to the passport
+     (α′ , β ′ ); by definition, this forest must have a black vertex of degree t;
+ (d) glue the edge of weight s to the forest F ′ by fusing two vertices, as is shown in Figure 5, and
+     get a forest F corresponding to (α, β) (since s + t = αi ).
+
+The proposition is proved.                                                                                 
+
+
+                                           s
+                                                        t
+                                                                 F ’
+
+          Figure 5: Construction of a forest in the case αi > βj . Here s = βj and t = αi − βj .
+
+
+
+
+                                                     11
+3.2    Stitching several trees to get one: the case gcd(α, β) = 1
+Theorem 3.3 (Existence) Suppose that gcd (α, β) = 1. Then the passport (α, β) can be realized
+by a weighted tree if and only if p + q ≤ n + 1.
+
+Proof. According to Proposition 3.2 we may suppose that we already have a forest corresponding
+to the passport (α, β). Now suppose that there are two edges of weights s and u, s < u, which
+belong to different trees. Then we may stitch them together by the operation shown in Figure 6.
+The degrees of the vertices in the new, connected figure are the same as in the old, disconnected
+one. Figure 7 shows that the operation works in the same way when there are subtrees attached
+to the ends of the adjoined edges.
+
+                                       s                       u
+
+
+
+                                       s          u−s          s
+
+                                     Figure 6: Stitching two edges.
+
+
+
+
+                                 s                                    u
+                       A                    B             C                   D
+
+
+
+                                       s          u−s          s
+                            A                                             B
+                                           C              D
+
+                                     Figure 7: Stitching two trees.
+
+
+    We repeat this stitching operation until it becomes impossible to continue. The latter may
+happen in two ways. Either we have got a connected tree, and then we are done. Or there are no
+more edges with different weights while the forest remains disconnected. Then, taking into account
+that gcd (α, β) = 1, we conclude that the weights of all edges are equal to 1, that is, we have got
+a forest consisting of l > 1 ordinary trees. In this case, the number of vertices p + q equals n + l
+and therefore is strictly greater than n + 1, which contradicts the condition of the theorem.     
+
+    Note that the side edges in Figures 6 and 7 have the same weight s. We will use this property
+while performing the operation inverse to stitching, namely, the ripping of a connected tree in two,
+in the proof of Proposition 5.14 (see Figure 25).
+
+3.3    Non-coprime weights
+Now suppose that gcd (α, β) = d > 1.
+
+Lemma 3.4 (When all weights are multiples of d > 1) The degrees of all vertices of a forest
+are divisible by d > 1 if and only if the weights of all edges are also divisible by d.
+
+Proof. In one direction this is evident: the degrees of the vertices are sums of weights, and
+therefore, if all the weights are multiples of d, then the same is true for the degrees.
+
+
+
+                                                  12
+    In the opposite direction, if all the vertex degrees are divisible by d, then it is true, in particular,
+for the leaves. Cut any leaf off the tree to which it belongs, and the statement is reduced to the
+same one for a smaller forest.                                                                            
+
+   Thus, dividing by d all the vertex degrees, that is, all the elements of the partitions α and β,
+we return to the situation of Theorem 3.3, with the same numbers p and q, and with the total
+weight equal to n/d. This finishes the proof of Theorem 3.1.                                     
+
+   We hope the reader will appreciate the simplicity of the above proof: number theorists have
+been approaching this result for 30 years (1965–1995). Once again, the credit goes to the pictorial
+representation of polynomials with the desired properties.
+
+
+4     Weak bound
+When condition (10) of Theorem 3.1 is satisfied then, according to Theorem 2.24, the main
+bound (3) is attained. If this condition is not satisfied, then the following holds:
+
+                                                                               n
+Theorem 4.1 (Weak bound) Let gcd (α, β) = d, and let p + q >                     + 1. Then
+                                                                               d
+                                                    (d − 1) n
+                                         deg R ≥              ,                                          (11)
+                                                        d
+and this bound is attained.
+
+4.1    Polynomials and cacti
+We will need the following proposition which was proved in 1965 by Thom [25], and then reproved in
+many other publications. For the reader’s convenience we provide a short proof based on ”Dessins
+d’enfants” theory following [17], Corollary 1.6.9.
+
+Proposition 4.2 (Realizability of polynomials) Let Λ = (λ1 , λ2 , . . . , λk ) be a set of k ≥ 1
+partitions λi ⊢ n of number n. Denote by pi the number of parts of λi , i = 1, 2, . . . , k. Let
+y1 , y2 , . . . , yk ∈ C be arbitrary complex numbers. Then a necessary and sufficient condition for the
+existence of a polynomial T ∈ C[x] of degree n, whose all finite critical values are contained in the
+set {y1 , y2 , . . . , yk }, with the multiplicities of the roots of the equations T (x) = yi corresponding to
+the partitions λi , i = 1, 2, . . . , k, is the following equality:
+            k
+            X                                                       k
+                                                                    X
+                  pi = (k − 1) n + 1 ,      or, equivalently,             (n − pi ) = n − 1 .            (12)
+            i=1                                                     i=1
+
+
+Proof. For purely aesthetic reasons, instead of taking a tree with the vertices y1 , y2 , . . . , yk , as
+we did in the proof of Lemma 2.2, let us take a Jordan curve J on the y-plane passing through the
+points y1 , y2 , . . . , yk , and let C be its preimage C = T −1 (J). Then C is a tree-like map often called
+cactus: it does not contain any cycles except n “copies” of J glued together at the vertices which
+are preimages of yi ; the number of copies of J glued together at a vertex is equal to the multiplicity
+of the corresponding root of the equation T (x) = yi ; see Figure 8. Equation (12) may then be
+                                                                           Pk
+interpreted as Euler’s formula for the cactus since the cactus has i=1 pi vertices, kn edges, and
+n + 1 faces (n copies of J and the outer face). We leave it to the reader to verify that another
+                                                                                            Pk
+proof of the necessity of formulas (12) can be deduced from the fact that the sum i=1 (n − pi ) in
+the second equality in (12) represents the degree of the derivative T ′ (x).
+    These observations prove that conditions (12) are necessary. Notice that the partition λ = 1n
+may be eliminated from Λ (if it belongs to it), and may also be added to it, and this does not
+invalidate equalities (12).
+
+    The proof that (12) is also sufficient is divided into two parts. The first part is purely combinato-
+rial and consists in constructing a cactus (at least one) with the vertex degrees corresponding to Λ.
+
+
+                                                     13
+                                               1                    3
+
+
+
+                                                            2           3
+                                                                                                    3
+                                       3                                                1
+
+                                                            1
+                                                                                                    2
+                                       2                                2
+                                                                                            3
+                                                        3
+
+
+                                                                                1               2
+                                                                T
+                                                   y2
+
+                                                                        y1
+                                                   y3
+
+Figure 8: A cactus. In this example there are three finite critical values y1 , y2 , y3 ; therefore, D is a
+triangle. A cactus is of degree 7, and therefore it contains seven triangles. Vertices which are preimages
+of y1 , respectively of y2 and of y3 , are labeled by 1, respectively by 2 and by 3. In this example we have
+Λ = (31 21 12 , 22 13 , 21 15 ). Namely, λ1 = 31 21 12 shows how many triangles are glued together at vertices
+labeled by 1, while partitions λ2 and λ3 correspond to labels 2 and 3.
+
+
+The second part is just a reference to Riemann’s existence theorem which relates combinatorial
+data to the complex structure, as it was already the case in Proposition 2.11.
+    The proof of the existence of a cactus in question is similar to that of Proposition 3.2; namely, it
+consists in “cutting a leaf”. Here a leaf means a copy of J which is attached to C at a single vertex
+(see Figure 9). This cutting operation must be carried out not with the cactus itself (since it is not
+yet constructed) but with its passport Λ: it is easy to verify that (12) implies that all partitions
+λi ∈ Λ except maybe one contain a part equal to 1. We eliminate these parts, and diminish by 1
+a part in the remaining partition. In this way we obtain a valid passport Λ′ of degree n − 1; then
+we construct inductively a smaller cactus; and then glue to it an nth copy of J. We leave details
+to the reader.                                                                                        
+
+
+                                           1                    3
+
+
+
+                                                        2           3                                   3
+                                  3                                                 1       1
+
+                                                       1
+                                                                                                        2
+                                   2                            2
+                                                                                3
+                                                   3
+
+
+                                                                            1               2
+
+
+Figure 9: Cutting off a leaf from a cactus. A leaf exists since every partition in Λ, except maybe one,
+contains a part equal to 1: this is a consequence of (12).
+
+
+
+                                                                        14
+

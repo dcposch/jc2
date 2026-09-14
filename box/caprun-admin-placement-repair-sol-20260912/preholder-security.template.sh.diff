@@ -1,0 +1,72 @@
+--- retained/preholder-security.sh
++++ repair/preholder-security.template.sh
+@@ -1,14 +1,27 @@
+ #!/bin/bash
++# DISABLED/UNBOUND preholder qualification; no launch or release action.
+ set -euo pipefail
++if grep -Eq 'JC2_[A-Z0-9_]+_PLACEHOLDER' "$0"; then
++ printf '%s\n' 'DISABLED: unresolved ROOT placement/security metadata' >&2
++ exit 2
++fi
++test 'JC2_SECURITY_RELEASE_PLACEHOLDER' = ROOT_SEPARATELY_AUTHORIZED_PREHOLDER_SECURITY_ONLY
+ test "$(id -u)" = 0
+-test "$(tr -d '\n' < /sys/class/dmi/id/board_asset_tag)" = JC2_INSTANCE_PLACEHOLDER
++test "$(tr -d '\n' < /sys/class/dmi/id/board_asset_tag)" = 'JC2_INSTANCE_PLACEHOLDER'
+ date -u '+PREHOLDER_SECURITY_START %Y-%m-%d %H:%M:%S.%N UTC'
+-jc2_base=/opt/jc2-closedchild-preflight9-20260911d
+-jc2_mount=/run/jc2-closedchild-preflight9-20260911d
+-jc2_channel=/run/jc2-closedchild-preflight9-20260911d-admission
++jc2_base='JC2_SCIENCE_BASE_PATH_PLACEHOLDER'
++jc2_admin_tree='JC2_ADMIN_TREE_PATH_PLACEHOLDER'
++jc2_mount='JC2_RUNTIME_MOUNT_PATH_PLACEHOLDER'
++jc2_channel='JC2_CHANNEL_PATH_PLACEHOLDER'
++jc2_durable_parent='JC2_DURABLE_PARENT_PATH_PLACEHOLDER'
++jc2_cgroup='JC2_WORKER_CGROUP_PATH_PLACEHOLDER'
++[[ "$jc2_admin_tree" =~ ^/opt/[A-Za-z0-9._-]+$ ]]
++test "$jc2_admin_tree" != "$jc2_base"
++case "$jc2_admin_tree" in "$jc2_base"/*) exit 2;; esac
++case "$jc2_base" in "$jc2_admin_tree"/*) exit 2;; esac
+ test ! -e "$jc2_base/metadata/ROOT-REGISTRATION.json"
+-test ! -e /sys/fs/cgroup/system.slice/jc2-closedchild-preflight9-20260911d.service
+-for jc2_path in / /opt /run /var /var/lib /var/lib/jc2-closedchild-preflight9-20260911d /sys /sys/fs /sys/fs/cgroup /sys/fs/cgroup/system.slice /sys/fs/cgroup/cgroup.procs /sys/fs/cgroup/cgroup.threads /sys/fs/cgroup/cgroup.subtree_control /sys/fs/cgroup/system.slice/cgroup.procs /sys/fs/cgroup/system.slice/cgroup.threads /sys/fs/cgroup/system.slice/cgroup.subtree_control "$jc2_base" "$jc2_mount" "$jc2_mount/authority" "$jc2_mount/frozen" "$jc2_channel" "$jc2_channel/release.fifo"; do
++test ! -e "$jc2_cgroup"
++for jc2_path in / /opt /run /var /var/lib "$jc2_durable_parent" /sys /sys/fs /sys/fs/cgroup /sys/fs/cgroup/system.slice /sys/fs/cgroup/cgroup.procs /sys/fs/cgroup/cgroup.threads /sys/fs/cgroup/cgroup.subtree_control /sys/fs/cgroup/system.slice/cgroup.procs /sys/fs/cgroup/system.slice/cgroup.threads /sys/fs/cgroup/system.slice/cgroup.subtree_control "$jc2_base" "$jc2_admin_tree" "$jc2_mount" "$jc2_mount/authority" "$jc2_mount/frozen" "$jc2_channel" "$jc2_channel/release.fifo"; do
+  test "$(readlink -e "$jc2_path")" = "$jc2_path"
+  test "$(stat -c %u "$jc2_path")" = 0
+  jc2_mode=$(stat -c %a "$jc2_path")
+@@ -24,9 +37,35 @@
+  stat -c 'INSTALLED_FILE %d %i %u %g %a %n' "$jc2_path"
+ done < <(find "$jc2_base" -type f -print)
+ test -z "$(find "$jc2_base" -type l -print)"
++
++# Exact external administrative tree: five immutable executable files only.
++test "$(stat -c '%u:%g:%a' "$jc2_admin_tree")" = 0:0:755
++test "$(find "$jc2_admin_tree" -mindepth 1 -maxdepth 1 -type f -printf '%f\n' | LC_ALL=C sort)" = $'fifo-write.sh\nobserve-and-leaves.sh\nouter-admission.sh\nreceive.sh\nrelease-check.sh'
++test -z "$(find "$jc2_admin_tree" -mindepth 1 ! -type f -print -quit)"
++for jc2_binding in \
++ 'outer-admission.sh:JC2_ADMISSION_BOUND_SHA_PLACEHOLDER' \
++ 'observe-and-leaves.sh:JC2_OBSERVER_BOUND_SHA_PLACEHOLDER' \
++ 'receive.sh:JC2_RECEIVER_BOUND_SHA_PLACEHOLDER' \
++ 'release-check.sh:JC2_RELEASE_CHECK_BOUND_SHA_PLACEHOLDER' \
++ 'fifo-write.sh:JC2_FIFO_WRITER_BOUND_SHA_PLACEHOLDER'; do
++ jc2_name=${jc2_binding%%:*}; jc2_sha=${jc2_binding#*:}; jc2_path="$jc2_admin_tree/$jc2_name"
++ test "$(readlink -e "$jc2_path")" = "$jc2_path"
++ test ! -L "$jc2_path"
++ test "$(stat -c '%u:%g:%a' "$jc2_path")" = 0:0:555
++ test "$(sha256sum "$jc2_path" | cut -d ' ' -f 1)" = "$jc2_sha"
++ stat -c 'ADMIN_EXECUTABLE_ACTUAL %d %i %u %g %a %n' "$jc2_path"
++done
++
+ test "$(stat -c '%u:%g:%a' "$jc2_mount/writer")" = 65534:65534:700
+ test "$(stat -c '%u:%g:%a' "$jc2_channel")" = 0:0:700
++test "$(find "$jc2_channel" -mindepth 1 -maxdepth 1 -printf '%f\n')" = release.fifo
++test -z "$(find "$jc2_channel" -mindepth 2 -print -quit)"
++test -p "$jc2_channel/release.fifo"
++test ! -L "$jc2_channel/release.fifo"
+ test "$(stat -c '%u:%g:%a' "$jc2_channel/release.fifo")" = 0:0:600
++test "$(stat -c %d "$jc2_channel/release.fifo")" = 'JC2_FIFO_DEVICE_PLACEHOLDER'
++test "$(stat -c %i "$jc2_channel/release.fifo")" = 'JC2_FIFO_INODE_PLACEHOLDER'
++stat -c 'FIFO_PREHOLDER_MATCHED %d %i %u %g %a %n' "$jc2_channel/release.fifo"
+ test -z "$(find "$jc2_mount" -type f -print)"
+ findmnt -rn -o TARGET,FSTYPE,FSROOT,OPTIONS --target "$jc2_mount"
+ findmnt -rn -o TARGET,FSTYPE,FSROOT,OPTIONS --target /sys/fs/cgroup

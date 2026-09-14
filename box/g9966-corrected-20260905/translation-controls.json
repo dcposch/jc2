@@ -1,0 +1,47 @@
+{
+  "Hc_11_0_invariant": true,
+  "all_other_minor_centres_retained": true,
+  "centre_maps": {
+    "delta2": {
+      "at_level_or_last_integer": "minor_a2 - q*u",
+      "constant": "jet0 - q",
+      "generic_leading_coefficient": "1",
+      "rho_or_c_unchanged": true,
+      "terms_omitted_only_strictly_above_radius": "2",
+      "u": "u"
+    },
+    "delta52": {
+      "at_level_or_last_integer": "-q*u + v",
+      "constant": "jet0 - q",
+      "generic_leading_coefficient": "1",
+      "rho_or_c_unchanged": true,
+      "terms_omitted_only_strictly_above_radius": "5/2",
+      "u": "u"
+    }
+  },
+  "coefficient_map": "c_(r,p) -> sum_l binom(D-r-p,l)*q^l*c_(r,p) at (r+l,p)",
+  "driver_sha256": "fd17e252bfa0e58effe52549979d01b17787aeb453848f411dfb36757848eb01",
+  "field": "QQ",
+  "gauge_equivalence": "X -> X_(jet0=0) x A1; p -> (T_jet0(p),jet0); inverse (p0,j) -> T_(-j)(p0)",
+  "group_law": "T_a(T_b(K))=T_(a+b)(K)",
+  "group_law_coefficient_identities_verified": 171700,
+  "group_spend": "residual diagonal source translation only; first translation already fixed major centre",
+  "h3_D2_face_preserved": true,
+  "inverse": "T_(-q)",
+  "no_parameter_division": true,
+  "normalization_degrees": [
+    11,
+    33,
+    22,
+    33,
+    99,
+    66,
+    65,
+    98,
+    32,
+    65
+  ],
+  "scope": "complete necessary chart and full Jacobian equations; points transported, not discarded",
+  "status": "PASS",
+  "symbolic_h3_inverse_rechecked": true
+}

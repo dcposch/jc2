@@ -1,0 +1,54 @@
+
+===== EXACT PRIMARY LINES 168-182 =====
+Notation 1.6. Let (ρ, σ) ∈ V arbitrary. We let stρ,σ (P ) and enρ,σ (P ) denote the first and the
+last point that we find on H(ℓρ,σ (P )) when we run counterclockwise along the boundary of H(P ).
+Note that these points coincide when ℓρ,σ (P ) is a monomial[1] .
+                                                                                            a a 
+   The cross product of two vectors A = (a1 , a2 ) and B = (b1 , b2 ) in R2 is A × B := det b11 b22 .
+
+Remark 1.7. Note that if ℓρ,σ (P ) is not a monomial, then (ρ, σ) × (enρ,σ (P ) − stρ,σ (P )) > 0[2] .
+Remark 1.8. If (ρ0 , σ0 ) < (ρ, σ) < (−ρ0 , −σ0 ), then vρ0 ,σ0 (enρ,σ (P )) ≤ vρ0 ,σ0 (stρ,σ (P )), while if
+(ρ0 , σ0 ) > (ρ, σ) > (−ρ0 , −σ0 ), then vρ0 ,σ0 (enρ,σ (P )) ≥ vρ0 ,σ0 (stρ,σ (P )), with equality in both
+cases only if ℓρ,σ (P ) is a monomial. Moreover, in the first case
+        stρ,σ (P ) = Supp(ℓρ0 ,σ0 (ℓρ,σ (P )))   and       enρ,σ (P ) = Supp(ℓ−ρ0 ,−σ0 (ℓρ,σ (P ))).
+Hence, if (ρ, σ) ∈ V>0 , then
+          stρ,σ (P ) = Supp(ℓ1,−1 (ℓρ,σ (P )))     and       enρ,σ (P ) = Supp(ℓ−1,1 (ℓρ,σ (P ))),
+and, if ρ + σ < 0, then
+          stρ,σ (P ) = Supp(ℓ−1,1 (ℓρ,σ (P )))     and       enρ,σ (P ) = Supp(ℓ1,−1 (ℓρ,σ (P ))).
+
+===== EXACT PRIMARY LINES 360-394 =====
+and so, again by Proposition 1.13,
+                                          [ℓρ0 ,σ0 (P ), ℓρ0 ,σ0 (Q)] 6= 0,
+which by (2.6) implies that stρ,σ (P ) ≁ stρ,σ (Q).
+(2) It is similar to the proof of statement (1).                                                                   
+Remark 2.5. Let (ρ, σ) ∈ V and let P, F ∈ L(l) be (ρ, σ)-homogeneous such that [F, P ] = P . If
+F is a monomial, then F = λxy with λ ∈ K × , and, either ρ + σ = 0 or P is also a monomial[4] .
+Theorem 2.6. Let P ∈ L(l) and let (ρ, σ) ∈ V>0 be such that vρ,σ (P ) > 0. If [P, Q] ∈ K × for
+some Q ∈ L(l) , then there exists G0 ∈ K[P, Q] \ {0} and a (ρ, σ)-homogeneous element F ∈ L(l)
+such that
+    vρ,σ (F ) = ρ + σ,   [F, ℓρ,σ (P )] = ℓρ,σ (P )    and       [ℓρ,σ (G0 ), ℓρ,σ (P )]F = ℓρ,σ (G0 )ℓρ,σ (P ). (2.7)
+Moreover, we have
+      (1) If P, Q ∈ L, then we can take F ∈ L.
+      (2) stρ,σ (P ) ∼ stρ,σ (F ) or stρ,σ (F ) = (1, 1).
+      (3) enρ,σ (P ) ∼ enρ,σ (F ) or enρ,σ (F ) = (1, 1).
+      (4) stρ,σ (P ) ≁ (1, 1) ≁ enρ,σ (P ).
+      (5) If we define recursively Gi := [Gi−1 , P ], then [ℓρ,σ (Gi ), ℓρ,σ (P )] = 0 for i ≥ 1.
+Proof. From Lemma 2.2 we obtain G0 such that the hypotheses of Lemma 2.2 of [8] are satisfied.
+Hence, by this lemma,
+                                            ℓρ,σ (G0 )ℓρ,σ (P )
+                                   F :=                           ∈ L(l)
+                                          [ℓρ,σ (G0 ), ℓρ,σ (P )]
+and if P and Q are in L, then F ∈ L. Hence statement (1) is true. Furthermore an easy compu-
+tation shows that statement (5) is also true and equalities (2.7) are satisfied[5] . Statements (2)
+and (3) follow from Proposition 2.4. For statement (4), assume that stρ,σ (P ) ∼ (1, 1). We claim
+that this implies that stρ,σ (F ) = (1, 1). Otherwise, by statement (2) we have
+                                        stρ,σ (F ) ∼ stρ,σ (P ) ∼ (1, 1),
+which implies stρ,σ (F ) ∼ (1, 1), since stρ,σ (F ) 6= (0, 0) 6= stρ,σ (P ). So there exists λ ∈ Q \ {1}
+such that stρ,σ (F ) = λ(1, 1). But this is impossible because vρ,σ (F ) = ρ + σ implies λ = 1.
+Hence the claim is true, and so
+                                  stρ,σ (P ) + stρ,σ (F ) − (1, 1) = stρ,σ (P ),
+which by Proposition 2.4(1) leads to the contradiction
+                                        stρ,σ (P ) ≁ stρ,σ (F ) = (1, 1).
+Similarly enρ,σ (P ) ≁ (1, 1).                                                                                     
+          ON THE SHAPE OF POSSIBLE COUNTEREXAMPLES TO THE JACOBIAN CONJECTURE                                   9
+

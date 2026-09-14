@@ -1,0 +1,31 @@
+{
+  "task": "keller-trace-powers-astra-20260911",
+  "owner": "/root/model_productivity",
+  "first_action_utc": "2026-09-11 20:35:48.310148101 UTC",
+  "original_publication_reserve_utc": "2026-09-11 20:52:00 UTC",
+  "original_hard_stop_utc": "2026-09-11 20:55:00 UTC",
+  "inputs": [
+    {
+      "path": "box/keller-trace-powers-astra-20260911/TASK.md",
+      "sha256": "8adc3928fdc2eb2718f3114f105bb75ba2f78a4a8c498df84f342ae7565229c5",
+      "bytes": 2987,
+      "lines": 47,
+      "read_scope": "FRESH_WHOLE after matching hash; sed 1-240 through EOF; repeated whole read at 20:40 UTC"
+    },
+    {
+      "path": "xmodel/keller-trace-image-root-20260911.md",
+      "sha256": "76fa7291c32150f8728b704116fdc92171ad40bf4c468bddfb1f01e0bf55c025",
+      "bytes": 14040,
+      "lines": 272,
+      "read_scope": "FRESH_WHOLE after matching hash; sed 1-260 and 261-400 through EOF, including seal; no provenance followed",
+      "accepted_scope": "TASK imports (T) and ordinary-node specialization as accepted TRACE-IC-1; historical provisional header not used to alter this scope"
+    }
+  ],
+  "postpin_check": "Both current hashes matched again at 2026-09-11 20:42 UTC before completion marker; final custody records another terminal check",
+  "mathematical_execution": "NONE",
+  "external_sources_or_live_reports": "NONE",
+  "proof_method": "Manual binomial, trace and flat-base-change reasoning only",
+  "own_readback": "Whole report body read before completion marker; whole PINS read before publication; sealed report and manifest read after finalize",
+  "collisions_scope": "Owned report/partial/PINS/custody targets only; no shared ledger or corpus scan",
+  "new_open_identifier": null
+}

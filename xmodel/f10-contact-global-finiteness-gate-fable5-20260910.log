@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. The gate report is published and verified, with time to spare before the 01:58 reserve.
+
+**Outcome:** all six items A–F are CONFIRMED by independent manual recomputation. No mathematical defect was found in the producer's finiteness proof. The least actual defect is documentary: the scaling identity (2) is asserted without derivation, and I supplied the root-product/Sylvester-homogeneity argument in section A.
+
+**What I verified by hand**
+- The literal a, b match accepted17zi coefficient for coefficient. The normalized quartics have coefficients in Z[V,t⁻¹] with constant terms A0 and B0 as printed, so P has W-degree at most 8 with constant leading coefficient L. L = (90²·1944)² with A0(−24) = −1944, L ≡ 4 mod 7 by both routes, so L is a unit in Z_(7) and the degree is exactly 8.
+- E = D[x]/q is free of rank 2, so D → E is injective with no Delta inversion. The Sylvester adjugate gives P = 0 in D, and W, s, p are integral, so D is finite over Z_(7)[V] before any fibre argument.
+- At V=1 mod 7, b reduces to (X−3)(X−4)(X−5)(X−6) independent of W, the four quadratics f3..f6 match, and all six pair checks give the printed forced W and nonzero remainder. The differences are linear with nonzero coefficient, so the exclusion holds over every characteristic-7 field, and the fibre is the zero ring.
+- Both Nakayama steps hold, both countercontrols fail exactly for lack of finite generation, and the result is total finite dimension of the unlocalized algebra M, not a generically empty fibre.
+- R = M[G⁻¹], the rank-2 cover C, and both V≠1/3 charts inherit finite dimension with nilpotents and every coefficient-loss locus retained. Predicate (7) of accepted17zi therefore holds existentially.
+- The optional cubic reduction in section 2 checks in full, including both remainder rows and the modular reduction, and it is not load-bearing.
+
+**Files written, apply_patch only**
+- xmodel/f10-contact-global-finiteness-gate-fable5-20260910.md, 82 lines, 14371 bytes, one standalone BODY-END as the last line with nothing after it, SHA256 54e6c2b2…e4a4d8.
+- box/f10-contact-global-finiteness-gate-fable5-20260910/READ-SCOPE.md with the four input pins and read scope.
+
+No Seal or charge_basis was authored, no GAP verdicts remain, and no promotion or follow-on authority is granted. Root holds custody and the accept decision.
+DIVERT path=xmodel/f10-contact-global-finiteness-gate-fable5-20260910.md status=CLEAN body_bytes=14371 body_sha256=54e6c2b2be95484b37c16b9466d4175179e23afa374c1fc8083a45f939e4a4d8

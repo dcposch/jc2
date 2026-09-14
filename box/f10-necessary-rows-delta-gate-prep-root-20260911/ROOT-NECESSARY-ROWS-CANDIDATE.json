@@ -1,0 +1,141 @@
+{
+  "schema": "f10-necessary-rows-root-candidate-contract/v1",
+  "job_tag": "f10-source-cone-r3-necessary-rows-v1",
+  "status": "STATIC_CANDIDATE_PENDING_COMBINED_DELTA_FIRST",
+  "enabled": false,
+  "scientific_execution": "NONE",
+  "first_preparation_action_utc": "2026-09-11T06:11:53Z",
+  "scope": "Necessary alternative 25 rows and guard of the complete canonical localized source; omitted alternative Laurent-q inverse and pole coefficients NOT_COMPUTED. No source outcome.",
+  "adopted_interface": {
+    "path": "box/f10-necessary-rows-root-20260911/ROOT-ADOPTED-NECESSARY-ROWS.md",
+    "sha256": "176363939a8aa6861995cd72a99c61f7d04bfeab5a9634f6d3143dcd3d3bd098"
+  },
+  "accepted_imports": [
+    {
+      "scope": "28z: exact dead-branch independence and source-exclusion composition; authority rebinding required",
+      "path": "xmodel/f10-necessary-rows-design-gate-fable5-20260911.md",
+      "sha256": "8e07e419d321b09ecd13c61a1c5fdc3dbaf9a099c1a1ebedf9b9fe6ef280073b"
+    },
+    {
+      "scope": "26z: predecessor source FIRST A-E plus exact prescribed arithmetic power correction; excludes support/cap/speed estimates",
+      "path": "box/f10-direct-rows-deployment-prep-root-20260911/ROOT-SOURCE-CONTRACT.json",
+      "sha256": "feef0643e84fbd28307c3bd3469fba974fa6b7f58ed0ef42bc2f92aa3c597aa3"
+    },
+    {
+      "scope": "27z: predecessor runtime FIRST A-F conditional on source, exact refusals and registration; copy-restore proves only outside-slot and serialization fidelity, optional inverse test declined",
+      "path": "xmodel/f10-direct-rows-runtime-gate-fable5-20260911.md",
+      "sha256": "a02f120acda2439197a9fc173ec068ec0a5a208ec8d15f6b96cc9dfe65ee6ff9"
+    }
+  ],
+  "source_files": {
+    "authority.py": "804c7aff56538fc332bf68638b03b7167eccdb49f73337f1a5f1823348b522a4",
+    "arithmetic.py": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+    "produce.py": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a",
+    "check_arithmetic.py": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e",
+    "check.py": "1d2d5b5408bfbf13b96f09453b1f14dfe884d261e702843bc31e5a043ffa53d1"
+  },
+  "runtime_files": {
+    "dispatch.py": {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/dispatch.py",
+      "sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24"
+    },
+    "probe.py": {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/probe.py",
+      "sha256": "5f1211e1a77b5ce2bb4cc496deabc533e3c41cdea88ea750149dac886cc09c69"
+    },
+    "mutate.py": {
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/mutate.py",
+      "sha256": "12eac7bbe5566ac0372c51b36617409e0501595024d948d6086a767f90d84eec"
+    }
+  },
+  "changed_sources": [
+    {
+      "name": "produce.py",
+      "predecessor_path": "box/f10-direct-rows-producer-astra-20260911/produce.py",
+      "predecessor_sha256": "8a7bd82ea589744a9de22b54877156a329d724185948538958801475f983760e",
+      "review_alias": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-produce.py",
+      "path": "box/f10-necessary-rows-producer-astra-20260911/produce.py",
+      "sha256": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a",
+      "diff_path": "box/f10-necessary-rows-producer-astra-20260911/produce.diff",
+      "diff_sha256": "592df59a401a2bf292b36214496b748cf6370c17f6bf65319db67e6245a210c4"
+    },
+    {
+      "name": "authority.py",
+      "predecessor_path": "box/f10-direct-rows-producer-astra-20260911/authority.py",
+      "predecessor_sha256": "5629db5df0a37fdaecaa66f5ad0cde47006cb0c3047b37243b045daedef2ac29",
+      "review_alias": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-authority.py",
+      "path": "box/f10-necessary-rows-producer-astra-20260911/authority.py",
+      "sha256": "804c7aff56538fc332bf68638b03b7167eccdb49f73337f1a5f1823348b522a4",
+      "diff_path": "box/f10-necessary-rows-producer-astra-20260911/authority.diff",
+      "diff_sha256": "6d74b9d7c879ad921a0c72f71d1a67d13fce933daa0b796653077487662f5c47"
+    },
+    {
+      "name": "check.py",
+      "predecessor_path": "box/f10-direct-rows-checker-astra-20260911/check.py",
+      "predecessor_sha256": "5052884779d781e55693115c3065db1207667ce224a5914bbb95721d0abe9f7b",
+      "review_alias": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-check.py",
+      "path": "box/f10-necessary-rows-checker-astra-20260911/check.py",
+      "sha256": "1d2d5b5408bfbf13b96f09453b1f14dfe884d261e702843bc31e5a043ffa53d1",
+      "diff_path": "box/f10-necessary-rows-checker-astra-20260911/check.diff",
+      "diff_sha256": "7ba8b176f40c37c9643856135f4d8a17fbe9d3f08b148f39c685c8158fc07044"
+    },
+    {
+      "name": "dispatch.py",
+      "predecessor_path": "box/f10-direct-rows-runtime-astra-20260911/dispatch.py",
+      "predecessor_sha256": "f5b6e6c43da4574c1dd9fc241d2f0596071ab505d561e67579eb28d382814480",
+      "review_alias": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-dispatch.py",
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/dispatch.py",
+      "sha256": "073e22dbcfa3a11a2afaf6fd9c845ca6ad1d0038ccd3fddc22db21e9f5beeb24",
+      "diff_path": "box/f10-necessary-rows-runtime-astra-20260911/dispatch.py.diff",
+      "diff_sha256": "f3c61b9a40d16e953950e3ff6a65401475a719fae6dbe3e1386cd05c49ef515f"
+    },
+    {
+      "name": "probe.py",
+      "predecessor_path": "box/f10-direct-rows-runtime-astra-20260911/probe.py",
+      "predecessor_sha256": "09845fabff9a8b7f997e3b2d01160e5ff51d728124b9f5cd0b7176f8c19ea063",
+      "review_alias": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-probe.py",
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/probe.py",
+      "sha256": "5f1211e1a77b5ce2bb4cc496deabc533e3c41cdea88ea750149dac886cc09c69",
+      "diff_path": "box/f10-necessary-rows-runtime-astra-20260911/probe.py.diff",
+      "diff_sha256": "6fccfd82949cc678b4c423690e098e02f902e0a62f89d9efed5c2c6dee386432"
+    },
+    {
+      "name": "mutate.py",
+      "predecessor_path": "box/f10-direct-rows-runtime-astra-20260911/mutate.py",
+      "predecessor_sha256": "cc0621aa44d17b1dac346e87d20a53f69ce950b343d68c8ed0d3791d42120af0",
+      "review_alias": "box/f10-necessary-rows-delta-gate-prep-root-20260911/old-mutate.py",
+      "path": "box/f10-necessary-rows-runtime-astra-20260911/mutate.py",
+      "sha256": "12eac7bbe5566ac0372c51b36617409e0501595024d948d6086a767f90d84eec",
+      "diff_path": "box/f10-necessary-rows-runtime-astra-20260911/mutate.py.diff",
+      "diff_sha256": "f5e3967d1603fb3e02ed0cb4a21ab306c866227f4e892a2f5c79414f2e19ed73"
+    }
+  ],
+  "unchanged_arithmetic": "Install from the original pinned files, not copied or reauthored.",
+  "literals": {
+    "wire_schema": "f10-r3-necessary-rows/v1",
+    "job": "f10-source-cone-r3-necessary-rows-v1",
+    "producer_stdout": "FORMED_UNCHECKED_NECESSARY_ROWS_25_NO_SOURCE_OUTCOME\n",
+    "checker_stdout": "CHECKED_NECESSARY_ROWS_25_NO_SOURCE_OUTCOME\n",
+    "negative_stderr": "CHECK FAILED: direct-source graph slot T\n",
+    "negative_stdout": "",
+    "negative_exit_code": "2"
+  },
+  "bindings_required_before_execution": [
+    "A genuinely new immutable ROOT registration, new contract digest, all actual installed source paths and all five source hashes in BOTH files and source_pins, including the changed authority.py.",
+    "Consistent necessary-rows runtime, phase, policy, mutation and custody identities; preserve direct-source errors, native-closure and CAPRUN/v1 schemas.",
+    "Seven exact preflight triples bound to final source lines, actual absolute layout and qualified interpreter/native facts. Old predicates are documentary references, not enabled policy.",
+    "Actual new worker, physical/native identities, immutable authorities, 13 literal commands, typed slots, fresh positive checker record before mutator and freshly bound exact T rejection.",
+    "All unchanged caps, original new-batch deadlines, quiet checks and durable custody. No new worker until reviewed ready worker-independent packet."
+  ],
+  "not_claimed": [
+    "old full-internal-circuit compliance",
+    "old acceptance-domain equality",
+    "computed alternative Laurent-q inverse/pole values",
+    "measured speedup or cap sufficiency",
+    "source point or fully admissible place",
+    "executed agreement or negative-control success",
+    "source exclusion, canonical rank, unsaturated ideal equality, all-r result or JC2 resolution"
+  ],
+  "remaining_quantity": "Whether the necessary-row pair actually completes with identical 30+2 positions and the exact fresh T rejection at one genuine registered place; unknown.",
+  "cheapest_test": "This single focused combined DELTA FIRST, then exact refusal/registration binding and one capped AWS observation. No scientific local test of any size."
+}

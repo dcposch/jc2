@@ -1,0 +1,2917 @@
+{
+  "type": "EXACT-Q FULL POWER RATIONAL POINT CONTROL; NOT LOCUS RESTRICTION",
+  "engine": "/home/ubuntu/jc2/box/g9966-corrected-20260905/engine.py",
+  "engine_sha256": "0d99eacd5fe37bc2d3cd3d35b31778989ea58fcb3502bdba35aa14fd8e76ff42",
+  "driver_sha256": "357e95b448b0f61a041c645b9db135559405a20aecdf1bb73f3916f96d8baf99",
+  "branch": "delta2",
+  "free_unknown_count": 890,
+  "point_coordinate_type": "new origin candidate in explicit source C2/C3 coordinates; not the old gate assignment",
+  "nonzero_assignment": {
+    "jet0": "1",
+    "rho": "1"
+  },
+  "every_other_free_coordinate": "0",
+  "point_sha256": "c93c9fbb66afce9a776a0d806186612819fbe84d6481b8712e1ecb6d40c19d23",
+  "minor_series_w": {
+    "1,0": "1",
+    "3,1": "1"
+  },
+  "cover": 1,
+  "local_maxima": {
+    "F": 81,
+    "G": 54
+  },
+  "target_source": "engine.minor_pole_targets(branch), checked after coefficient specialization",
+  "h3_minor_leading_order": 9,
+  "h3_minor_leading_face": {
+    "9,2": "3",
+    "9,3": "1"
+  },
+  "inverse_K2_output_to_C2_C3": {
+    "C2": {
+      "normalized_weight_floor": 64,
+      "nonzero_below_floor_count": 0,
+      "first_failures": [],
+      "minimum_nonzero_weight": 64
+    },
+    "C3": {
+      "normalized_weight_floor": 96,
+      "nonzero_below_floor_count": 0,
+      "first_failures": [],
+      "minimum_nonzero_weight": 96
+    }
+  },
+  "inverse_coordinate_map_control": {
+    "monic_Q_t_z_division": true,
+    "quotient_and_remainder_y_degree_bounds_checked": true,
+    "full_K2_reconstruction_identity_checked": true,
+    "native_C2_C3_images_match_division": true
+  },
+  "minor_C2_C3_strict_floor_control": {
+    "C2": {
+      "strict_local_floor": 18,
+      "nonzero_below_floor_count": 22,
+      "first_failures": [
+        [
+          "8,0",
+          "20/3"
+        ],
+        [
+          "9,0",
+          "-200/3"
+        ],
+        [
+          "10,0",
+          "300"
+        ],
+        [
+          "11,0",
+          "-779"
+        ],
+        [
+          "11,1",
+          "-200/3"
+        ],
+        [
+          "12,0",
+          "33784/27"
+        ],
+        [
+          "12,1",
+          "600"
+        ],
+        [
+          "13,0",
+          "-33124/27"
+        ],
+        [
+          "13,1",
+          "-2400"
+        ],
+        [
+          "14,0",
+          "5647/9"
+        ],
+        [
+          "14,1",
+          "5432"
+        ],
+        [
+          "14,2",
+          "300"
+        ]
+      ]
+    },
+    "C3": {
+      "strict_local_floor": 27,
+      "nonzero_below_floor_count": 15,
+      "first_failures": [
+        [
+          "19,0",
+          "2287/432"
+        ],
+        [
+          "20,0",
+          "-111103/1944"
+        ],
+        [
+          "21,0",
+          "119291/432"
+        ],
+        [
+          "22,0",
+          "-336731/432"
+        ],
+        [
+          "22,1",
+          "-11435/216"
+        ],
+        [
+          "23,0",
+          "911113/648"
+        ],
+        [
+          "23,1",
+          "111103/216"
+        ],
+        [
+          "24,0",
+          "-89453/54"
+        ],
+        [
+          "24,1",
+          "-119291/54"
+        ],
+        [
+          "25,0",
+          "264803/216"
+        ],
+        [
+          "25,1",
+          "147119/27"
+        ],
+        [
+          "25,2",
+          "11435/48"
+        ]
+      ]
+    }
+  },
+  "all_outer_blocks_identically_zero": true,
+  "K2_local_first_nonzero": {
+    "17,2": "20",
+    "17,3": "20/3"
+  },
+  "first_pole_failure": {
+    "local_power": 34,
+    "raw_rows": 24,
+    "nonzero_rows": 3,
+    "first_failures": [
+      [
+        "G_local34_coord4",
+        "400"
+      ],
+      [
+        "G_local34_coord5",
+        "800/3"
+      ],
+      [
+        "G_local34_coord6",
+        "400/9"
+      ]
+    ],
+    "row_images_sha256": "c0fd1d7ce44571fc397dca0b019ed8ecbffc70c5072e51b0c72538fdfd6d5083"
+  },
+  "pole_powers": [
+    {
+      "local_power": 1,
+      "raw_rows": 2,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "843fd7ac4ee27650ddd539c40c43c2549e0387ef95f49f6eeaa316fc8151347c"
+    },
+    {
+      "local_power": 2,
+      "raw_rows": 2,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "4f7354a0a8baca736df6d4ad411024b123dbf35b5b7843846cf2e89f43952f96"
+    },
+    {
+      "local_power": 3,
+      "raw_rows": 2,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "a8c2f3c39a323cc3e515611e107b6dcf13e2e9dc783b0af696e3da34c5c7e5bd"
+    },
+    {
+      "local_power": 4,
+      "raw_rows": 4,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "5f8eac540cf845ce8eb25c6aa4e1f634eb303cdcc72f8ab414830e4bc7bebff1"
+    },
+    {
+      "local_power": 5,
+      "raw_rows": 4,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "2f2f5f9cb63489e9058dfeb391f0d7c88e24e4a662f21fd0fa876a65bab57bcb"
+    },
+    {
+      "local_power": 6,
+      "raw_rows": 4,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "8cf7562d853bcece5eb4b7d50bec7eeeb77a1012443d37a82f38e80a329de751"
+    },
+    {
+      "local_power": 7,
+      "raw_rows": 6,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "aa4e471e77da9e45c02b2de7c26934aae25a682a1a18fa4954edfe8f38c92132"
+    },
+    {
+      "local_power": 8,
+      "raw_rows": 6,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "d3c0c53b2c9ef3df0fa830420dcec92d9911cd2108f2e3669ee56d7930807646"
+    },
+    {
+      "local_power": 9,
+      "raw_rows": 6,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "f928298c098521b21a694debff04c28c1714a484e1fc4a02686434f2e5b10de6"
+    },
+    {
+      "local_power": 10,
+      "raw_rows": 8,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "aabb2a5401dc727e9e706db18247a26c55532452fd62addf44d1ae2f1de10abb"
+    },
+    {
+      "local_power": 11,
+      "raw_rows": 8,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "bc1b838b3d3e591c7cbabd464760874c1dbacbd3e6957f60ccd71ce2178abffd"
+    },
+    {
+      "local_power": 12,
+      "raw_rows": 8,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "5ee3e4bb13b508fef2edf9842fae1cf732adbd94031916b8d386b90e09cfc657"
+    },
+    {
+      "local_power": 13,
+      "raw_rows": 10,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "c1efe0be7c97f826e99a9ebb83cff678a723ade9f49b211f913d366abf05b8bd"
+    },
+    {
+      "local_power": 14,
+      "raw_rows": 10,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "fef976d861ee41c2ec7f553319213d0e25a19a3da4daff5638da6418fd17a22a"
+    },
+    {
+      "local_power": 15,
+      "raw_rows": 10,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "ede0742047766f39b6686dfcd05c8a7dc319d97f3662c3be6be822efc3670b0d"
+    },
+    {
+      "local_power": 16,
+      "raw_rows": 12,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "b7bf4006aae226dc7a2831bbee9a818eae714fc4d2fda9c031b3d3cb55006912"
+    },
+    {
+      "local_power": 17,
+      "raw_rows": 12,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "15e1c74467c79d39f9890691e1dc85817d62fe5aef5b5dab84fc0cc9ba4b22ca"
+    },
+    {
+      "local_power": 18,
+      "raw_rows": 12,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "583356dae7a7232af2d1fe355bc0766e48cfc83bc2c1ea67ec7d563334be3a35"
+    },
+    {
+      "local_power": 19,
+      "raw_rows": 14,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "d1cf59830dae2be23be02f55bdb398cfd2cf5044b2fe680285ca7af830cb5310"
+    },
+    {
+      "local_power": 20,
+      "raw_rows": 14,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "734fdc34f151bb70b6d820f6b4363a0e506657c62238fb3e9e513a126f9a3a32"
+    },
+    {
+      "local_power": 21,
+      "raw_rows": 14,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "64659afc5529dd3799dc7206f1ca79bafe0270e2778ad306808223903b0af4cd"
+    },
+    {
+      "local_power": 22,
+      "raw_rows": 16,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "ac9ad843cf32cc5acf25b4a6a25cc88b5885c1b1119623c211fbe7bac1d42842"
+    },
+    {
+      "local_power": 23,
+      "raw_rows": 16,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "0995f7220207da9144be51d2dc2972d5f4b89852deada061b1d0a88970ad879f"
+    },
+    {
+      "local_power": 24,
+      "raw_rows": 16,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "3e24c55689883e592245f8021ec10ed95a8f40d673962fe1d945911e5514509f"
+    },
+    {
+      "local_power": 25,
+      "raw_rows": 18,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "c8fa20f2591bdf03a531792507efe9c483492309df7c96689c583845c168696e"
+    },
+    {
+      "local_power": 26,
+      "raw_rows": 18,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "0905a819d417e60da3fc96580ae6c4f226d6b3aaed6099d0b5effa54d70e3e57"
+    },
+    {
+      "local_power": 27,
+      "raw_rows": 18,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "a69d1408ad2ea4655d08bb3acd10b7de9af28581d4baf18f2661947d1221908e"
+    },
+    {
+      "local_power": 28,
+      "raw_rows": 20,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "55b8657104049ac045f5260482a94a73e83f3536e66ece1b38a0da4737a925ac"
+    },
+    {
+      "local_power": 29,
+      "raw_rows": 20,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "1614e6b4d1d647edb74d11d0cd11604c42519edb0878ffa656d609ab002b0cd6"
+    },
+    {
+      "local_power": 30,
+      "raw_rows": 20,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "098df56453ba16ef76196bb020ebfc67241ae49b27f3eb15d40fa59ebaef079b"
+    },
+    {
+      "local_power": 31,
+      "raw_rows": 22,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "280a699dd9c7573fe2707ebfd75e6eec03fa36757c1eec438080e1a9798d9e60"
+    },
+    {
+      "local_power": 32,
+      "raw_rows": 22,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "2ea016c23ee7f834c1f42a9497702ddcbedf0cd9b0dbea7d205f59761efa0289"
+    },
+    {
+      "local_power": 33,
+      "raw_rows": 22,
+      "nonzero_rows": 0,
+      "first_failures": [],
+      "row_images_sha256": "a62d26d4e93188ef7807a54c385ecf29df7101293f1670aaf0c7b52e4a1a3b68"
+    },
+    {
+      "local_power": 34,
+      "raw_rows": 24,
+      "nonzero_rows": 3,
+      "first_failures": [
+        [
+          "G_local34_coord4",
+          "400"
+        ],
+        [
+          "G_local34_coord5",
+          "800/3"
+        ],
+        [
+          "G_local34_coord6",
+          "400/9"
+        ]
+      ],
+      "row_images_sha256": "c0fd1d7ce44571fc397dca0b019ed8ecbffc70c5072e51b0c72538fdfd6d5083"
+    },
+    {
+      "local_power": 35,
+      "raw_rows": 24,
+      "nonzero_rows": 3,
+      "first_failures": [
+        [
+          "G_local35_coord4",
+          "-108800/9"
+        ],
+        [
+          "G_local35_coord5",
+          "-238400/27"
+        ],
+        [
+          "G_local35_coord6",
+          "-1600"
+        ]
+      ],
+      "row_images_sha256": "ea1fc33701f737daf858a2b509bd793fee2fd30147d0f75cdbe4c2e305fcf4a2"
+    },
+    {
+      "local_power": 36,
+      "raw_rows": 24,
+      "nonzero_rows": 5,
+      "first_failures": [
+        [
+          "G_local36_coord2",
+          "11435/54"
+        ],
+        [
+          "G_local36_coord3",
+          "11435/162"
+        ],
+        [
+          "G_local36_coord4",
+          "14310400/81"
+        ],
+        [
+          "G_local36_coord5",
+          "1276000/9"
+        ],
+        [
+          "G_local36_coord6",
+          "28000"
+        ]
+      ],
+      "row_images_sha256": "adb854a47e18025e07137dc36627581084c9f7140bf58f4e0f53be9aafc8a3e6"
+    },
+    {
+      "local_power": 37,
+      "raw_rows": 26,
+      "nonzero_rows": 6,
+      "first_failures": [
+        [
+          "G_local37_coord2",
+          "-444365/81"
+        ],
+        [
+          "G_local37_coord3",
+          "-1481750/729"
+        ],
+        [
+          "G_local37_coord4",
+          "-44827960/27"
+        ],
+        [
+          "G_local37_coord5",
+          "-13335280/9"
+        ],
+        [
+          "G_local37_coord6",
+          "-326120"
+        ]
+      ],
+      "row_images_sha256": "7c78efe8ad1a93bb6731cc41e1f875c2fb774482cfe0419b688ac579d03e68e7"
+    },
+    {
+      "local_power": 38,
+      "raw_rows": 26,
+      "nonzero_rows": 7,
+      "first_failures": [
+        [
+          "G_local38_coord0",
+          "5230369/186624"
+        ],
+        [
+          "G_local38_coord2",
+          "298211335/4374"
+        ],
+        [
+          "G_local38_coord3",
+          "761345/27"
+        ],
+        [
+          "G_local38_coord4",
+          "303918160/27"
+        ],
+        [
+          "G_local38_coord5",
+          "102579200/9"
+        ]
+      ],
+      "row_images_sha256": "0c637a5948fae4e5df0d92c322e9ed0675c22e3c015b9462f7cb07602c6860dc"
+    },
+    {
+      "local_power": 39,
+      "raw_rows": 26,
+      "nonzero_rows": 7,
+      "first_failures": [
+        [
+          "G_local39_coord0",
+          "-254092561/419904"
+        ],
+        [
+          "G_local39_coord2",
+          "-3149801513/5832"
+        ],
+        [
+          "G_local39_coord3",
+          "-55325633/216"
+        ],
+        [
+          "G_local39_coord4",
+          "-4742960530/81"
+        ],
+        [
+          "G_local39_coord5",
+          "-16781968640/243"
+        ]
+      ],
+      "row_images_sha256": "c00e96644aa054da913608fe611ed9578801655269cca6852578aaab976d3781"
+    },
+    {
+      "local_power": 40,
+      "raw_rows": 28,
+      "nonzero_rows": 8,
+      "first_failures": [
+        [
+          "G_local40_coord0",
+          "46786053095/7558272"
+        ],
+        [
+          "G_local40_coord2",
+          "2228425519/729"
+        ],
+        [
+          "G_local40_coord3",
+          "5068998629/2916"
+        ],
+        [
+          "G_local40_coord4",
+          "176948920531/729"
+        ],
+        [
+          "G_local40_coord5",
+          "27829105046/81"
+        ]
+      ],
+      "row_images_sha256": "8ef1a98be14ae4109bdbfecdf06fda05558cac872de2761455751d14a9a4ac5b"
+    },
+    {
+      "local_power": 41,
+      "raw_rows": 28,
+      "nonzero_rows": 9,
+      "first_failures": [
+        [
+          "G_local41_coord0",
+          "-33438110119/839808"
+        ],
+        [
+          "G_local41_coord1",
+          "-26151845/46656"
+        ],
+        [
+          "G_local41_coord2",
+          "-57440779757/4374"
+        ],
+        [
+          "G_local41_coord3",
+          "-496297539575/52488"
+        ],
+        [
+          "G_local41_coord4",
+          "-22197442502/27"
+        ]
+      ],
+      "row_images_sha256": "133b1fdc5328936996232cac05737605a7db0f43ef283eb9a82d29d52bde4ea4"
+    },
+    {
+      "local_power": 42,
+      "raw_rows": 28,
+      "nonzero_rows": 9,
+      "first_failures": [
+        [
+          "G_local42_coord0",
+          "302724966473/1679616"
+        ],
+        [
+          "G_local42_coord1",
+          "4827758659/419904"
+        ],
+        [
+          "G_local42_coord2",
+          "3496276349239/78732"
+        ],
+        [
+          "G_local42_coord3",
+          "373748762801/8748"
+        ],
+        [
+          "G_local42_coord4",
+          "750160946041/324"
+        ]
+      ],
+      "row_images_sha256": "9b9277682a17fe0efcd3bc6b28b730b4f06531fbeeeaaab3703ecd390a35091c"
+    },
+    {
+      "local_power": 43,
+      "raw_rows": 30,
+      "nonzero_rows": 10,
+      "first_failures": [
+        [
+          "G_local43_coord0",
+          "-1533661015399/2519424"
+        ],
+        [
+          "G_local43_coord1",
+          "-46786053095/419904"
+        ],
+        [
+          "G_local43_coord2",
+          "-3174188672143/26244"
+        ],
+        [
+          "G_local43_coord3",
+          "-1423613741855/8748"
+        ],
+        [
+          "G_local43_coord4",
+          "-16014155575327/2916"
+        ]
+      ],
+      "row_images_sha256": "e557763c6f528eded73f19c9c38c0dedb8366895bf868e769fa332c1c5f9fbe7"
+    },
+    {
+      "local_power": 44,
+      "raw_rows": 30,
+      "nonzero_rows": 13,
+      "first_failures": [
+        [
+          "G_local44_coord0",
+          "2664574521529/1679616"
+        ],
+        [
+          "G_local44_coord1",
+          "142095434711/209952"
+        ],
+        [
+          "G_local44_coord2",
+          "226085543654903/839808"
+        ],
+        [
+          "G_local44_coord3",
+          "13762134674375/26244"
+        ],
+        [
+          "G_local44_coord4",
+          "72747281692858/6561"
+        ]
+      ],
+      "row_images_sha256": "84dc4bfb86ee5e2ad1db1fb62aab4113c423b763de4d4808ab5f261000cf2dc3"
+    },
+    {
+      "local_power": 45,
+      "raw_rows": 30,
+      "nonzero_rows": 13,
+      "first_failures": [
+        [
+          "G_local45_coord0",
+          "-682738635077/209952"
+        ],
+        [
+          "G_local45_coord1",
+          "-1210278359237/419904"
+        ],
+        [
+          "G_local45_coord2",
+          "-622044431003881/1259712"
+        ],
+        [
+          "G_local45_coord3",
+          "-224907953001251/157464"
+        ],
+        [
+          "G_local45_coord4",
+          "-4681724673791/243"
+        ]
+      ],
+      "row_images_sha256": "6ce0ce1c2fe8ded85a4ecb4df753d2ffac17bf65f39df1bca110523cb127b385"
+    },
+    {
+      "local_power": 46,
+      "raw_rows": 32,
+      "nonzero_rows": 13,
+      "first_failures": [
+        [
+          "G_local46_coord0",
+          "13327086403615/2519424"
+        ],
+        [
+          "G_local46_coord1",
+          "957161528389/104976"
+        ],
+        [
+          "G_local46_coord2",
+          "5660264559856943/7558272"
+        ],
+        [
+          "G_local46_coord3",
+          "4784996178745/1458"
+        ],
+        [
+          "G_local46_coord4",
+          "128059365891143/4374"
+        ]
+      ],
+      "row_images_sha256": "9ae4838a3bbadbd2fe45cf136ce1a8cd376f9deb67026df073a7b29f69f4fd5c"
+    },
+    {
+      "local_power": 47,
+      "raw_rows": 32,
+      "nonzero_rows": 14,
+      "first_failures": [
+        [
+          "G_local47_coord0",
+          "-716386523489/104976"
+        ],
+        [
+          "G_local47_coord1",
+          "-1161937131187/52488"
+        ],
+        [
+          "G_local47_coord2",
+          "-98483572033873/104976"
+        ],
+        [
+          "G_local47_coord3",
+          "-1776462306771937/279936"
+        ],
+        [
+          "G_local47_coord4",
+          "-524939612637157/13122"
+        ]
+      ],
+      "row_images_sha256": "608c5305457a9c9067d75490f912ac62cc456cf592d2fac243434d36df04a51c"
+    },
+    {
+      "local_power": 48,
+      "raw_rows": 32,
+      "nonzero_rows": 14,
+      "first_failures": [
+        [
+          "G_local48_coord0",
+          "723834110089/104976"
+        ],
+        [
+          "G_local48_coord1",
+          "4408218640195/104976"
+        ],
+        [
+          "G_local48_coord2",
+          "15044835786199/15552"
+        ],
+        [
+          "G_local48_coord3",
+          "12962378717446609/1259712"
+        ],
+        [
+          "G_local48_coord4",
+          "8092622915512321/157464"
+        ]
+      ],
+      "row_images_sha256": "02781f8a715fda3d800e4d401fd880df23cf8661a364f82f037adcb03ed8856f"
+    },
+    {
+      "local_power": 49,
+      "raw_rows": 34,
+      "nonzero_rows": 14,
+      "first_failures": [
+        [
+          "G_local49_coord0",
+          "-19926896889077/3779136"
+        ],
+        [
+          "G_local49_coord1",
+          "-13156923209251/209952"
+        ],
+        [
+          "G_local49_coord2",
+          "-2069495174309905/2519424"
+        ],
+        [
+          "G_local49_coord3",
+          "-17521729067883173/1259712"
+        ],
+        [
+          "G_local49_coord4",
+          "-428176785803696/6561"
+        ]
+      ],
+      "row_images_sha256": "4968a0ee55a9ad22c8a06ba0c27acf4aacba885fe434378048a0624f1b7cc740"
+    },
+    {
+      "local_power": 50,
+      "raw_rows": 34,
+      "nonzero_rows": 15,
+      "first_failures": [
+        [
+          "G_local50_coord0",
+          "2333396135617/839808"
+        ],
+        [
+          "G_local50_coord1",
+          "15385351563023/209952"
+        ],
+        [
+          "G_local50_coord2",
+          "495728482178263/839808"
+        ],
+        [
+          "G_local50_coord3",
+          "13027843135744799/839808"
+        ],
+        [
+          "G_local50_coord4",
+          "140177877477475645/1679616"
+        ]
+      ],
+      "row_images_sha256": "2852cf7d9b895a91ddb5604bbd5ff7538915800b9c92f26b905dc774109983e2"
+    },
+    {
+      "local_power": 51,
+      "raw_rows": 34,
+      "nonzero_rows": 19,
+      "first_failures": [
+        [
+          "F_local51_coord6",
+          "8000"
+        ],
+        [
+          "F_local51_coord7",
+          "8000"
+        ],
+        [
+          "F_local51_coord8",
+          "8000/3"
+        ],
+        [
+          "F_local51_coord9",
+          "8000/27"
+        ],
+        [
+          "G_local51_coord0",
+          "-274098691091/419904"
+        ]
+      ],
+      "row_images_sha256": "bfdee90759aba50788a314aad3384033a03b207157aefff690206b4855a8b060"
+    },
+    {
+      "local_power": 52,
+      "raw_rows": 36,
+      "nonzero_rows": 19,
+      "first_failures": [
+        [
+          "F_local52_coord6",
+          "-1088000/3"
+        ],
+        [
+          "F_local52_coord7",
+          "-3472000/9"
+        ],
+        [
+          "F_local52_coord8",
+          "-3680000/27"
+        ],
+        [
+          "F_local52_coord9",
+          "-16000"
+        ],
+        [
+          "G_local52_coord0",
+          "-1020024375755/2519424"
+        ]
+      ],
+      "row_images_sha256": "18e66513a336faaa413449db03ac0b076f5eeea84cda8ecbba8412406e8a656f"
+    },
+    {
+      "local_power": 53,
+      "raw_rows": 36,
+      "nonzero_rows": 22,
+      "first_failures": [
+        [
+          "F_local53_coord4",
+          "57175/9"
+        ],
+        [
+          "F_local53_coord5",
+          "114350/27"
+        ],
+        [
+          "F_local53_coord6",
+          "651321175/81"
+        ],
+        [
+          "F_local53_coord7",
+          "737864000/81"
+        ],
+        [
+          "F_local53_coord8",
+          "30736000/9"
+        ]
+      ],
+      "row_images_sha256": "2179228e87a89d082749c0fe64eb83df6e6aaeace229b8aedb1d9744e2564204"
+    },
+    {
+      "local_power": 54,
+      "raw_rows": 36,
+      "nonzero_rows": 23,
+      "first_failures": [
+        [
+          "F_local54_coord4",
+          "-21106750/81"
+        ],
+        [
+          "F_local54_coord5",
+          "-15062200/81"
+        ],
+        [
+          "F_local54_coord6",
+          "-84659335450/729"
+        ],
+        [
+          "F_local54_coord7",
+          "-3798534800/27"
+        ],
+        [
+          "F_local54_coord8",
+          "-506573200/9"
+        ]
+      ],
+      "row_images_sha256": "da241f04ed50346cf58917d4190ca811430695d8be92f5330459fcf339f25b6a"
+    },
+    {
+      "local_power": 55,
+      "raw_rows": 19,
+      "nonzero_rows": 9,
+      "first_failures": [
+        [
+          "F_local55_coord2",
+          "26151845/15552"
+        ],
+        [
+          "F_local55_coord3",
+          "26151845/46656"
+        ],
+        [
+          "F_local55_coord4",
+          "3798057875/729"
+        ],
+        [
+          "F_local55_coord5",
+          "8718480700/2187"
+        ],
+        [
+          "F_local55_coord6",
+          "99439083125/81"
+        ]
+      ],
+      "row_images_sha256": "77323dc006fc892778b82852c170167b3a7d2d77c4c1cd9da7f0f680a7f3cd25"
+    },
+    {
+      "local_power": 56,
+      "raw_rows": 19,
+      "nonzero_rows": 9,
+      "first_failures": [
+        [
+          "F_local56_coord2",
+          "-2159625535/34992"
+        ],
+        [
+          "F_local56_coord3",
+          "-4659225055/209952"
+        ],
+        [
+          "F_local56_coord4",
+          "-887177116105/13122"
+        ],
+        [
+          "F_local56_coord5",
+          "-40709139065/729"
+        ],
+        [
+          "F_local56_coord6",
+          "-1639543861945/162"
+        ]
+      ],
+      "row_images_sha256": "9c023bfafb81f7f7e961c7f53a6ee8e28e75016514e1128bf1ae13026cb42086"
+    },
+    {
+      "local_power": 57,
+      "raw_rows": 19,
+      "nonzero_rows": 11,
+      "first_failures": [
+        [
+          "F_local57_coord0",
+          "11961853903/80621568"
+        ],
+        [
+          "F_local57_coord2",
+          "692472118835/629856"
+        ],
+        [
+          "F_local57_coord3",
+          "1615220243675/3779136"
+        ],
+        [
+          "F_local57_coord4",
+          "1399132253390/2187"
+        ],
+        [
+          "F_local57_coord5",
+          "420503035130/729"
+        ]
+      ],
+      "row_images_sha256": "7e35c0746b4a87463bc508a1e8540ae9da64f9db24185ac2704eaee4019b694a"
+    },
+    {
+      "local_power": 58,
+      "raw_rows": 20,
+      "nonzero_rows": 11,
+      "first_failures": [
+        [
+          "F_local58_coord0",
+          "-581109687007/120932352"
+        ],
+        [
+          "F_local58_coord2",
+          "-573831599304497/45349632"
+        ],
+        [
+          "F_local58_coord3",
+          "-9057450951857/1679616"
+        ],
+        [
+          "F_local58_coord4",
+          "-329023671307645/69984"
+        ],
+        [
+          "F_local58_coord5",
+          "-10274410488365/2187"
+        ]
+      ],
+      "row_images_sha256": "4306e5c206a8fb9ac4a1868bb8b6a50ba635f3eb591d90134e423bb057d360a7"
+    },
+    {
+      "local_power": 59,
+      "raw_rows": 20,
+      "nonzero_rows": 11,
+      "first_failures": [
+        [
+          "F_local59_coord0",
+          "163460595037831/2176782336"
+        ],
+        [
+          "F_local59_coord2",
+          "798722913052337/7558272"
+        ],
+        [
+          "F_local59_coord3",
+          "1179609913955/23328"
+        ],
+        [
+          "F_local59_coord4",
+          "651041774152321/23328"
+        ],
+        [
+          "F_local59_coord5",
+          "4955416096896167/157464"
+        ]
+      ],
+      "row_images_sha256": "58c4859c0e31b06a4da9e561fed872385287de33b1d50b4eb70947017b78525a"
+    },
+    {
+      "local_power": 60,
+      "raw_rows": 20,
+      "nonzero_rows": 13,
+      "first_failures": [
+        [
+          "F_local60_coord0",
+          "-44285587006166981/58773123072"
+        ],
+        [
+          "F_local60_coord1",
+          "-59809269515/13436928"
+        ],
+        [
+          "F_local60_coord2",
+          "-10307308148336107/15116544"
+        ],
+        [
+          "F_local60_coord3",
+          "-2856892845832811/7558272"
+        ],
+        [
+          "F_local60_coord4",
+          "-129834396443169653/944784"
+        ]
+      ],
+      "row_images_sha256": "6bab805cda6e20dab48d7872cdb87f6242915950f5898bdae6f6b22ed0588b34"
+    },
+    {
+      "local_power": 61,
+      "raw_rows": 21,
+      "nonzero_rows": 16,
+      "first_failures": [
+        [
+          "F_local61_coord0",
+          "11863706834872997/2176782336"
+        ],
+        [
+          "F_local61_coord1",
+          "16852180923203/120932352"
+        ],
+        [
+          "F_local61_coord2",
+          "53420049160014673/15116544"
+        ],
+        [
+          "F_local61_coord3",
+          "319636001277793417/136048896"
+        ],
+        [
+          "F_local61_coord4",
+          "80067721073904001/139968"
+        ]
+      ],
+      "row_images_sha256": "2d0979fecb3bfb38940fd7827e50b564d0de222587fa86b0b45c688d65765080"
+    },
+    {
+      "local_power": 62,
+      "raw_rows": 21,
+      "nonzero_rows": 16,
+      "first_failures": [
+        [
+          "F_local62_coord0",
+          "-8228323332321079/272097792"
+        ],
+        [
+          "F_local62_coord1",
+          "-1144224165264817/544195584"
+        ],
+        [
+          "F_local62_coord2",
+          "-770358500776689863/51018336"
+        ],
+        [
+          "F_local62_coord3",
+          "-564638934973546823/45349632"
+        ],
+        [
+          "F_local62_coord4",
+          "-857171220197365363/419904"
+        ]
+      ],
+      "row_images_sha256": "5fdfc1131ed853bd905d13e0ed3a202fafc63abae4c75c1b7256e3d6c5f9bd0b"
+    },
+    {
+      "local_power": 63,
+      "raw_rows": 21,
+      "nonzero_rows": 16,
+      "first_failures": [
+        [
+          "F_local63_coord0",
+          "436664633200114405/3265173504"
+        ],
+        [
+          "F_local63_coord1",
+          "5535528223367953/272097792"
+        ],
+        [
+          "F_local63_coord2",
+          "117922521130881249871/2176782336"
+        ],
+        [
+          "F_local63_coord3",
+          "2586863589161298815/45349632"
+        ],
+        [
+          "F_local63_coord4",
+          "7950535077274687241/1259712"
+        ]
+      ],
+      "row_images_sha256": "e68eb18cd36748f8da409e842a4ddc734ed6ae26e12fe7211efb23491bc2a5ae"
+    },
+    {
+      "local_power": 64,
+      "raw_rows": 22,
+      "nonzero_rows": 17,
+      "first_failures": [
+        [
+          "F_local64_coord0",
+          "-1052378003349525319/2176782336"
+        ],
+        [
+          "F_local64_coord1",
+          "-154208048787282659/1088391168"
+        ],
+        [
+          "F_local64_coord2",
+          "-89984365945985928529/544195584"
+        ],
+        [
+          "F_local64_coord3",
+          "-30955881520775474867/136048896"
+        ],
+        [
+          "F_local64_coord4",
+          "-2319100506364723035245/136048896"
+        ]
+      ],
+      "row_images_sha256": "0f6dce87e71cba75c0ec3ac02b85a1d205c23167820267b1363ecf552e2041ad"
+    },
+    {
+      "local_power": 65,
+      "raw_rows": 22,
+      "nonzero_rows": 17,
+      "first_failures": [
+        [
+          "F_local65_coord0",
+          "791074623890000821/544195584"
+        ],
+        [
+          "F_local65_coord1",
+          "822545391061003675/1088391168"
+        ],
+        [
+          "F_local65_coord2",
+          "1415445796064453920961/3265173504"
+        ],
+        [
+          "F_local65_coord3",
+          "20228213197003076659/25509168"
+        ],
+        [
+          "F_local65_coord4",
+          "917995597379467624261/22674816"
+        ]
+      ],
+      "row_images_sha256": "c1f8a89da6c5da68e85333aac6029a4a1e66560cf97caf2d95391de25835f825"
+    },
+    {
+      "local_power": 66,
+      "raw_rows": 22,
+      "nonzero_rows": 17,
+      "first_failures": [
+        [
+          "F_local66_coord0",
+          "-24026052040915026497/6530347008"
+        ],
+        [
+          "F_local66_coord1",
+          "-3490697967626755769/1088391168"
+        ],
+        [
+          "F_local66_coord2",
+          "-19252819195980868054567/19591041024"
+        ],
+        [
+          "F_local66_coord3",
+          "-585082637393164178819/241864704"
+        ],
+        [
+          "F_local66_coord4",
+          "-53566288112509189523/629856"
+        ]
+      ],
+      "row_images_sha256": "0cd2f8914bc09bf698a21213b118ae7f903ad18411b25e037bba3ef3c5a2e5be"
+    },
+    {
+      "local_power": 67,
+      "raw_rows": 23,
+      "nonzero_rows": 18,
+      "first_failures": [
+        [
+          "F_local67_coord0",
+          "17197245098584167029/2176782336"
+        ],
+        [
+          "F_local67_coord1",
+          "12085155017202165295/1088391168"
+        ],
+        [
+          "F_local67_coord2",
+          "4212641715622929915437/2176782336"
+        ],
+        [
+          "F_local67_coord3",
+          "2346191235752669507965/362797056"
+        ],
+        [
+          "F_local67_coord4",
+          "10811250091993300904117/68024448"
+        ]
+      ],
+      "row_images_sha256": "ef970c27e63c0885ebe4ae7a4c9ecc9a987e42bc6b50e6237a9d6f0e6ee41d09"
+    },
+    {
+      "local_power": 68,
+      "raw_rows": 23,
+      "nonzero_rows": 18,
+      "first_failures": [
+        [
+          "F_local68_coord0",
+          "-31473814263380611535/2176782336"
+        ],
+        [
+          "F_local68_coord1",
+          "-34720926516683478563/1088391168"
+        ],
+        [
+          "F_local68_coord2",
+          "-75274493014795402855/22674816"
+        ],
+        [
+          "F_local68_coord3",
+          "-99010988615699105023819/6530347008"
+        ],
+        [
+          "F_local68_coord4",
+          "-3394233190708402508717/12754584"
+        ]
+      ],
+      "row_images_sha256": "0040686b539026d99a34fbcd5dd96dc3b1eaed33a9adf70c91708cd0929ec237"
+    },
+    {
+      "local_power": 69,
+      "raw_rows": 23,
+      "nonzero_rows": 18,
+      "first_failures": [
+        [
+          "F_local69_coord0",
+          "442458421450859711267/19591041024"
+        ],
+        [
+          "F_local69_coord1",
+          "83746338031951608559/1088391168"
+        ],
+        [
+          "F_local69_coord2",
+          "10813819228738251383933/2176782336"
+        ],
+        [
+          "F_local69_coord3",
+          "101814311799983774811145/3265173504"
+        ],
+        [
+          "F_local69_coord4",
+          "878025351505075604063155/2176782336"
+        ]
+      ],
+      "row_images_sha256": "c267cbf3c66cd02e7fccd8b68519dffd46c88cbdd3b94adecb4b85e59dc3eaa9"
+    },
+    {
+      "local_power": 70,
+      "raw_rows": 24,
+      "nonzero_rows": 19,
+      "first_failures": [
+        [
+          "F_local70_coord0",
+          "-32698926435367345787/1088391168"
+        ],
+        [
+          "F_local70_coord1",
+          "-42712464461894435699/272097792"
+        ],
+        [
+          "F_local70_coord2",
+          "-14129037403961004307255/2176782336"
+        ],
+        [
+          "F_local70_coord3",
+          "-122403661123826530239787/2176782336"
+        ],
+        [
+          "F_local70_coord4",
+          "-305844821866880573445157/544195584"
+        ]
+      ],
+      "row_images_sha256": "bebd1669bb2e00db0477d8df7727e7b68d773c1ba5bd103659afc72d02907a62"
+    },
+    {
+      "local_power": 71,
+      "raw_rows": 24,
+      "nonzero_rows": 22,
+      "first_failures": [
+        [
+          "F_local71_coord0",
+          "4598850584011006543/136048896"
+        ],
+        [
+          "F_local71_coord1",
+          "147985247475851335331/544195584"
+        ],
+        [
+          "F_local71_coord2",
+          "16147928502301922840797/2176782336"
+        ],
+        [
+          "F_local71_coord3",
+          "96636401456707167445403/1088391168"
+        ],
+        [
+          "F_local71_coord4",
+          "4801879989904496937959131/6530347008"
+        ]
+      ],
+      "row_images_sha256": "b8959bf8bba63dae9260a9a1bc4e3f71ee7ba9d80b3ba27acbdc48b3da0b51c7"
+    },
+    {
+      "local_power": 72,
+      "raw_rows": 24,
+      "nonzero_rows": 22,
+      "first_failures": [
+        [
+          "F_local72_coord0",
+          "-207048713477059005781/6530347008"
+        ],
+        [
+          "F_local72_coord1",
+          "-435592459395824940719/1088391168"
+        ],
+        [
+          "F_local72_coord2",
+          "-5414610241600519027895/725594112"
+        ],
+        [
+          "F_local72_coord3",
+          "-99920007257131944223055/816293376"
+        ],
+        [
+          "F_local72_coord4",
+          "-18114982029706777667786375/19591041024"
+        ]
+      ],
+      "row_images_sha256": "6a1031713b60f2b2362d69409e382237d91002bf3cec75ac868aa7dd3d7be808"
+    },
+    {
+      "local_power": 73,
+      "raw_rows": 25,
+      "nonzero_rows": 22,
+      "first_failures": [
+        [
+          "F_local73_coord0",
+          "1636661048131588051/68024448"
+        ],
+        [
+          "F_local73_coord1",
+          "542728721838359090647/1088391168"
+        ],
+        [
+          "F_local73_coord2",
+          "3658299826354566070433/544195584"
+        ],
+        [
+          "F_local73_coord3",
+          "79806293658342480070387/544195584"
+        ],
+        [
+          "F_local73_coord4",
+          "308620372842260709044449/272097792"
+        ]
+      ],
+      "row_images_sha256": "1141ff1001e496b4554df53b51273b7a03a8f278277376e6d300b0eafc970c4e"
+    },
+    {
+      "local_power": 74,
+      "raw_rows": 25,
+      "nonzero_rows": 23,
+      "first_failures": [
+        [
+          "F_local74_coord0",
+          "-29933578180261083785/2176782336"
+        ],
+        [
+          "F_local74_coord1",
+          "-567252429742035371087/1088391168"
+        ],
+        [
+          "F_local74_coord2",
+          "-12256141655902469579371/2176782336"
+        ],
+        [
+          "F_local74_coord3",
+          "-164966429711929806768997/1088391168"
+        ],
+        [
+          "F_local74_coord4",
+          "-367664725333128635890937/272097792"
+        ]
+      ],
+      "row_images_sha256": "39d971fe6548633d3dcfe0aadb68b5e4226035600ecbc10408fe4027037d6f0f"
+    },
+    {
+      "local_power": 75,
+      "raw_rows": 25,
+      "nonzero_rows": 23,
+      "first_failures": [
+        [
+          "F_local75_coord0",
+          "29778830830717729267/6530347008"
+        ],
+        [
+          "F_local75_coord1",
+          "488010570195996857341/1088391168"
+        ],
+        [
+          "F_local75_coord2",
+          "30286127156788604975287/6530347008"
+        ],
+        [
+          "F_local75_coord3",
+          "436504891871010536673169/3265173504"
+        ],
+        [
+          "F_local75_coord4",
+          "369236889790732424389687/241864704"
+        ]
+      ],
+      "row_images_sha256": "1bc59243e2ffb2b116606107913db70eb485b03485fb5a85f4e4e826beda7432"
+    },
+    {
+      "local_power": 76,
+      "raw_rows": 26,
+      "nonzero_rows": 23,
+      "first_failures": [
+        [
+          "F_local76_coord0",
+          "2250834063263272619/2176782336"
+        ],
+        [
+          "F_local76_coord1",
+          "-331837572651131297285/1088391168"
+        ],
+        [
+          "F_local76_coord2",
+          "-4247235595219285832087/1088391168"
+        ],
+        [
+          "F_local76_coord3",
+          "-23963956857676162488311/241864704"
+        ],
+        [
+          "F_local76_coord4",
+          "-1722022045955461634054947/1088391168"
+        ]
+      ],
+      "row_images_sha256": "f06d573c77aa4745e1654b708527d255944c70ff94aae50bc2e349f9fb020e2f"
+    },
+    {
+      "local_power": 77,
+      "raw_rows": 26,
+      "nonzero_rows": 24,
+      "first_failures": [
+        [
+          "F_local77_coord0",
+          "-6224199355565869733/2176782336"
+        ],
+        [
+          "F_local77_coord1",
+          "160120413159363377281/1088391168"
+        ],
+        [
+          "F_local77_coord2",
+          "2364098997552163471957/725594112"
+        ],
+        [
+          "F_local77_coord3",
+          "65832972325203951571565/1088391168"
+        ],
+        [
+          "F_local77_coord4",
+          "1581703098648655477960771/1088391168"
+        ]
+      ],
+      "row_images_sha256": "7db5db2732cbc3f12abb7738017035d22d20ded061b5b799c2d3e2d2c1ddbdac"
+    },
+    {
+      "local_power": 78,
+      "raw_rows": 26,
+      "nonzero_rows": 24,
+      "first_failures": [
+        [
+          "F_local78_coord0",
+          "11603512448901815965/4897760256"
+        ],
+        [
+          "F_local78_coord1",
+          "-15566524284591457177/544195584"
+        ],
+        [
+          "F_local78_coord2",
+          "-5393320990424409092779/2176782336"
+        ],
+        [
+          "F_local78_coord3",
+          "-195692148336020752691107/6530347008"
+        ],
+        [
+          "F_local78_coord4",
+          "-2485180810780770309192473/2176782336"
+        ]
+      ],
+      "row_images_sha256": "3d27d1bb08d7ba1b560b6824ea063cdcf1c1b97ac949e2394cdd3b2179a0e403"
+    },
+    {
+      "local_power": 79,
+      "raw_rows": 27,
+      "nonzero_rows": 24,
+      "first_failures": [
+        [
+          "F_local79_coord0",
+          "-1332708509747131565/1088391168"
+        ],
+        [
+          "F_local79_coord1",
+          "-3929334433967589517/136048896"
+        ],
+        [
+          "F_local79_coord2",
+          "3359336109070324118723/2176782336"
+        ],
+        [
+          "F_local79_coord3",
+          "13792480379584363250431/1088391168"
+        ],
+        [
+          "F_local79_coord4",
+          "59032214928924126540625/80621568"
+        ]
+      ],
+      "row_images_sha256": "54bf1c780c573e4f723e4601e6d4748f9afbe161db79db1526a9590d49bd7647"
+    },
+    {
+      "local_power": 80,
+      "raw_rows": 27,
+      "nonzero_rows": 25,
+      "first_failures": [
+        [
+          "F_local80_coord0",
+          "807577115514897091/2176782336"
+        ],
+        [
+          "F_local80_coord1",
+          "40928090448556226263/1088391168"
+        ],
+        [
+          "F_local80_coord2",
+          "-1447930784213494862719/2176782336"
+        ],
+        [
+          "F_local80_coord3",
+          "-6696136054018927005913/1088391168"
+        ],
+        [
+          "F_local80_coord4",
+          "-763360350647609233257097/2176782336"
+        ]
+      ],
+      "row_images_sha256": "094466b543c6d5a2fabd201e061e0dde384a968a6c8e338d6ccc5e377f3d04b2"
+    },
+    {
+      "local_power": 81,
+      "raw_rows": 27,
+      "nonzero_rows": 25,
+      "first_failures": [
+        [
+          "F_local81_coord0",
+          "414455604265933/51018336"
+        ],
+        [
+          "F_local81_coord1",
+          "-26435395172703202799/1088391168"
+        ],
+        [
+          "F_local81_coord2",
+          "26673578479580530393/362797056"
+        ],
+        [
+          "F_local81_coord3",
+          "3769593343298564391961/816293376"
+        ],
+        [
+          "F_local81_coord4",
+          "302553711684753384255091/3265173504"
+        ]
+      ],
+      "row_images_sha256": "0cdbcf1232f5f6c8e2593197169db11f3fa04c12548fdec32ada4b4e4da51c92"
+    }
+  ],
+  "all_pole_rows": 1647,
+  "all_pole_images_sha256": "e5ae118871272ff37f1ad27ef1177e3858ffc0b8b6a9a0cb3c58c6769182998b",
+  "stages": [
+    {
+      "stage": 0,
+      "pole_local_power": 4,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 1,
+      "pole_local_power": 5,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 2,
+      "pole_local_power": 6,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 3,
+      "pole_local_power": 7,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 4,
+      "pole_local_power": 8,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 5,
+      "pole_local_power": 9,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 6,
+      "pole_local_power": 10,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 7,
+      "pole_local_power": 11,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 8,
+      "pole_local_power": 12,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 9,
+      "pole_local_power": 13,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 10,
+      "pole_local_power": 14,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 11,
+      "pole_local_power": 15,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 12,
+      "pole_local_power": 16,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 13,
+      "pole_local_power": 17,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 14,
+      "pole_local_power": 18,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 15,
+      "pole_local_power": 19,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 16,
+      "pole_local_power": 20,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 17,
+      "pole_local_power": 21,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 18,
+      "pole_local_power": 22,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 19,
+      "pole_local_power": 23,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 20,
+      "pole_local_power": 24,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 21,
+      "pole_local_power": 25,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 22,
+      "pole_local_power": 26,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 23,
+      "pole_local_power": 27,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 24,
+      "pole_local_power": 28,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 25,
+      "pole_local_power": 29,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 26,
+      "pole_local_power": 30,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 27,
+      "pole_local_power": 31,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 28,
+      "pole_local_power": 32,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 29,
+      "pole_local_power": 33,
+      "point_survives_pole_prefix": true,
+      "first_failed_local_power": null,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 30,
+      "pole_local_power": 34,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 31,
+      "pole_local_power": 35,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 32,
+      "pole_local_power": 36,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 33,
+      "pole_local_power": 37,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 34,
+      "pole_local_power": 38,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 35,
+      "pole_local_power": 39,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 36,
+      "pole_local_power": 40,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 37,
+      "pole_local_power": 41,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 38,
+      "pole_local_power": 42,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 39,
+      "pole_local_power": 43,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 40,
+      "pole_local_power": 44,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 41,
+      "pole_local_power": 45,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 42,
+      "pole_local_power": 46,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 43,
+      "pole_local_power": 47,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 44,
+      "pole_local_power": 48,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 45,
+      "pole_local_power": 49,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 46,
+      "pole_local_power": 50,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 47,
+      "pole_local_power": 51,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 48,
+      "pole_local_power": 52,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 49,
+      "pole_local_power": 53,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 50,
+      "pole_local_power": 54,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 51,
+      "pole_local_power": 55,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 52,
+      "pole_local_power": 56,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 53,
+      "pole_local_power": 57,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 54,
+      "pole_local_power": 58,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 55,
+      "pole_local_power": 59,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 56,
+      "pole_local_power": 60,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 57,
+      "pole_local_power": 61,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 58,
+      "pole_local_power": 62,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 59,
+      "pole_local_power": 63,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 60,
+      "pole_local_power": 64,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 61,
+      "pole_local_power": 65,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 62,
+      "pole_local_power": 66,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 63,
+      "pole_local_power": 67,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 64,
+      "pole_local_power": 68,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 65,
+      "pole_local_power": 69,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 66,
+      "pole_local_power": 70,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 67,
+      "pole_local_power": 71,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 68,
+      "pole_local_power": 72,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 69,
+      "pole_local_power": 73,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 70,
+      "pole_local_power": 74,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 71,
+      "pole_local_power": 75,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 72,
+      "pole_local_power": 76,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 73,
+      "pole_local_power": 77,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 74,
+      "pole_local_power": 78,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 75,
+      "pole_local_power": 79,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 76,
+      "pole_local_power": 80,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 77,
+      "pole_local_power": 81,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 78,
+      "pole_local_power": 82,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 79,
+      "pole_local_power": 83,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 80,
+      "pole_local_power": 84,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 81,
+      "pole_local_power": 85,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 82,
+      "pole_local_power": 86,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 83,
+      "pole_local_power": 87,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 84,
+      "pole_local_power": 88,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 85,
+      "pole_local_power": 89,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 86,
+      "pole_local_power": 90,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 87,
+      "pole_local_power": 91,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 88,
+      "pole_local_power": 92,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 89,
+      "pole_local_power": 93,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 90,
+      "pole_local_power": 94,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 91,
+      "pole_local_power": 95,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 92,
+      "pole_local_power": 96,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 93,
+      "pole_local_power": 97,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 94,
+      "pole_local_power": 98,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 95,
+      "pole_local_power": 99,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 96,
+      "pole_local_power": 100,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 97,
+      "pole_local_power": 101,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 98,
+      "pole_local_power": 102,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 99,
+      "pole_local_power": 103,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 100,
+      "pole_local_power": 104,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 101,
+      "pole_local_power": 105,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 102,
+      "pole_local_power": 106,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 103,
+      "pole_local_power": 107,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 104,
+      "pole_local_power": 108,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 105,
+      "pole_local_power": 109,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 106,
+      "pole_local_power": 110,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 107,
+      "pole_local_power": 111,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 108,
+      "pole_local_power": 112,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 109,
+      "pole_local_power": 113,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 110,
+      "pole_local_power": 114,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 111,
+      "pole_local_power": 115,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 112,
+      "pole_local_power": 116,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 113,
+      "pole_local_power": 117,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 114,
+      "pole_local_power": 118,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 115,
+      "pole_local_power": 119,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 116,
+      "pole_local_power": 120,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 117,
+      "pole_local_power": 121,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 118,
+      "pole_local_power": 122,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 119,
+      "pole_local_power": 123,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 120,
+      "pole_local_power": 124,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 121,
+      "pole_local_power": 125,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 122,
+      "pole_local_power": 126,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 123,
+      "pole_local_power": 127,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 124,
+      "pole_local_power": 128,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 125,
+      "pole_local_power": 129,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 126,
+      "pole_local_power": 130,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 127,
+      "pole_local_power": 131,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 128,
+      "pole_local_power": 132,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 129,
+      "pole_local_power": 133,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 130,
+      "pole_local_power": 134,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 131,
+      "pole_local_power": 135,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 132,
+      "pole_local_power": 136,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 133,
+      "pole_local_power": 137,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 134,
+      "pole_local_power": 138,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 135,
+      "pole_local_power": 139,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 136,
+      "pole_local_power": 140,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 137,
+      "pole_local_power": 141,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 138,
+      "pole_local_power": 142,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 139,
+      "pole_local_power": 143,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 140,
+      "pole_local_power": 144,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 141,
+      "pole_local_power": 145,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 142,
+      "pole_local_power": 146,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 143,
+      "pole_local_power": 147,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 144,
+      "pole_local_power": 148,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 145,
+      "pole_local_power": 149,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 146,
+      "pole_local_power": 150,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 147,
+      "pole_local_power": 151,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 148,
+      "pole_local_power": 152,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 149,
+      "pole_local_power": 153,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 150,
+      "pole_local_power": 154,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 151,
+      "pole_local_power": 155,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 152,
+      "pole_local_power": 156,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 153,
+      "pole_local_power": 157,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 154,
+      "pole_local_power": 158,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 155,
+      "pole_local_power": 159,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 156,
+      "pole_local_power": 160,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 157,
+      "pole_local_power": 161,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 158,
+      "pole_local_power": 162,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 159,
+      "pole_local_power": 163,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 160,
+      "pole_local_power": 164,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 161,
+      "pole_local_power": 165,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 162,
+      "pole_local_power": 166,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    },
+    {
+      "stage": 163,
+      "pole_local_power": 167,
+      "point_survives_pole_prefix": false,
+      "first_failed_local_power": 34,
+      "point_survives_positive_degree_J": true
+    }
+  ],
+  "Jacobian": {
+    "all_positive_degree_rows_vanish": true,
+    "all_constant_rows_vanish": true,
+    "proof": "outer=0 => F=h2^3,G=h2^2 => [F,G]=0 identically by product rule",
+    "positive_degree_row_count": 13529,
+    "nonzero_constant_localizer_control": {
+      "Jc": 1,
+      "ZJ": 1,
+      "constant_equation_image": -1,
+      "wrapper_equation_image": 0
+    }
+  },
+  "independent_local_emitter_control": {
+    "depth": 8,
+    "compared_rows": 30,
+    "all_match": true,
+    "images_sha256": "437f8183c05e60927903202f8a7d6b8ee307cbb9786b4965103fa6fcd964f661"
+  },
+  "elapsed_seconds": 14.059
+}

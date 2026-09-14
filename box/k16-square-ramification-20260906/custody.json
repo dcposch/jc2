@@ -1,0 +1,42 @@
+{
+  "task": "k16-square-ramification-obstruction-astra-20260906",
+  "owner": "model_productivity",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "started_utc": "2026-09-06T13:20:57Z",
+  "controls_terminal_by_utc": "2026-09-06T13:37:05Z",
+  "status": "TERMINAL_NO_GAIN_DIRECT_RAMIFICATION_MECHANISM",
+  "target_status": "OPEN_K16_BETA_NONZERO_BOUNDARY",
+  "sources_manifest": "sources.sha256",
+  "sources_manifest_sha256": "9b45d3702f15de7df793cc111a9f74013d5cdfdeb4ead78fa7ccfb62730753e6",
+  "checker": "check.py",
+  "checker_sha256": "537d63f8d62d958dd02d0ae4ea2a54751f143b6c0f290258e7fb36f3440beb86",
+  "checks": [
+    {
+      "command": "python3 box/k16-square-ramification-20260906/check.py",
+      "exit_code": 0,
+      "pass_count": 11,
+      "terminal_marker": "ALL_EXACT_CONTROLS_PASS"
+    },
+    {
+      "command": "python3 -O box/k16-square-ramification-20260906/check.py",
+      "exit_code": 0,
+      "pass_count": 11,
+      "terminal_marker": "ALL_EXACT_CONTROLS_PASS"
+    },
+    {
+      "command": "python3 -O box/k16-square-ramification-20260906/check.py --mutate",
+      "exit_code": 1,
+      "expected_failure": "CHECK_FAILED: mutated-D-prime-must-fail"
+    }
+  ],
+  "combined_normal_and_optimized_wall_seconds": 0.029127872,
+  "mutation_wall_seconds": 0.395033166,
+  "per_process_limits": {"address_space_bytes": 536870912, "cpu_seconds": 25},
+  "checker_scope": "exact rational formal-jet identity controls, not finite-m solving",
+  "all_source_hashes_rechecked": true,
+  "long_running_jobs_or_pgids": [],
+  "fleet_or_cas_packages_used": false,
+  "live_reports_or_jc2_lean_accessed": false,
+  "shared_ledgers_edited": false,
+  "report_publication": "transactional ops/artifact_finalize.py; separate report manifest carries final hashes"
+}

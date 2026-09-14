@@ -1,0 +1,25 @@
+START t=5 18:40:20
+HASH_OK t_order_system.py e115d576e850523f8796008d1b9d7899382cbac918ac2e74419207d9e7e7dc28
+HASH_OK triangular_preprocess.py f2defb76d36172c541431b2fff04b34770438eef81167210fec404344fefbf93
+HASH_OK t4_order_system.py db5e54450444f27c56f00bbec287aea284c8dc190e0e549c2fea51e0dbdd6cee
+BUILD_CHART t=5
+CHART t=5 tuple=(64,44;61,3) (e,q)=(16,11) unknowns=54 equations=79
+PHI radii=(-1,5/16) gauges=True build_s=11.126
+ACTUAL_PAIR J=gamma True; K16_TUPLE_FAIL True
+Q_PIVOTS t=5
+Q_PIVOTS count=19 expected=19 residual_rows=59 residual_unknowns=35 s=278.951
+Q_PIVOT_BANDS 21 .. 10 vars=['a6_1', 'a7_1', 'a8_1', 'a9_1', 'a10_1', 'a11_2', 'a11_1', 'a12_2', 'a12_1', 'a13_2', 'a13_1', 'a14_2', 'a14_1', 'a15_2', 'a15_1', 'a16_2', 'a16_1', 'a16_0', 'a16_3']
+GRADING x=q6_1 wt=21 y=q11_1 wt=42 c wt=105 homogeneous_rows=59
+C_ROW source=2 band=0 image_ok
+H_ROW source=32 band=5 associate=40/3993
+H_t=1452*q11_1**2 - 792*q11_1 + 102 primitive=242*q11_1**2 - 132*q11_1 + 17 disc=34848 irreducible=True content=6
+UNIT y res=102 inv=132/17 - 242*q11_1/17
+UNIT linear res=182952 inv=11*q11_1/21 - 5/21
+UNIT cbar res=2284800/1771561 inv=161051*q11_1/476 - 629563/4760
+SLICE q_rows=48 auxiliaries=32 q_duplicates=10
+A_ELIM t=5 order=canonical auxiliaries=32 rows=48
+A_PIVOT step=1 source=61 band=10 var=b3 rows=46 vars=31 terms=70034 res=93702400
+A_PIVOT step=2 source=60 band=10 var=b2 rows=45 vars=30 terms=472665 res=57619667212800
+END t=5 exit=143 18:58:32
+KILLED t=5 canonical after A_PIVOT step=2 terms=472665; restarting heuristic
+END t=5 exit=143 18:59:00

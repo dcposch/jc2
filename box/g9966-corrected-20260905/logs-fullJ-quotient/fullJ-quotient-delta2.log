@@ -1,0 +1,28 @@
+delta2 inner minor solved in 0.97s
+delta2 inner low-weight product: 25 slots, 1.63s
+delta2 inner incidence reduced: 14 pivots, 5.96s
+delta2 inner: 78 preincidence, 14 QQ* pivots, 0 residual, 6.87s
+delta2 inner minor solved in 0.95s
+delta2 inner low-weight product: 25 slots, 1.60s
+delta2 inner incidence reduced: 14 pivots, 5.93s
+delta2 inner: 78 preincidence, 14 QQ* pivots, 0 residual, 6.82s
+{"status": "MATERIALIZED", "branch": "delta2", "source_image_sha256": "7d96ef8e5558650912af4229402d91d021728e6ca4a254a0310990d4bc144470", "generator_count": 1065}
+delta2: certified_quotient_transition 4 nonzero rows before QQ* reduction
+delta2: certified_quotient_transition 6 residual, 232 free; exact Singular
+delta2: certified_quotient_transition dimension=230
+delta2: generating exact w Jacobian bands t67..74
+FLINT rank-two quotient encoded 151 base generators plus retained Zface_H2_2; 0.68s
+Traceback (most recent call last):
+  File "/home/ubuntu/g9966-corrected-jacobian-quotient/deep_resume_jacobian_quotient.py", line 229, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-quotient/deep_resume_jacobian_quotient.py", line 209, in main
+    band_cache,backend_meta=flint_backend.jacobian_bands(hh,c2,c3,oo,high,S,first_band=tp,progress=log,quotient=quotient_cfg)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-quotient/deep_flint_jacobian_pair.py", line 92, in jacobian_bands
+    right=mul(add(scale(H,source['outer_power_G']),C),add(mul(H,bracket(H,A,degree,dA)),bracket(H,B,degree,dB)))
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/g9966-corrected-jacobian-quotient/deep_flint_jacobian_pair.py", line 73, in mul
+    if r+s<=cutoff:out[r+s]=pa(out.get(r+s,pairzero),pm(left,right))
+                   ~~~^^^^^
+KeyboardInterrupt

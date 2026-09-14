@@ -1,0 +1,103 @@
+{
+  "schema": "moh-gi-only-fleet-custody-v1",
+  "status": "PASS",
+  "owner_tag": "gi-only-20260905",
+  "scope": "only the four instances launched for this lane",
+  "launch_command": "bash ops/fleet/fleet.sh launch",
+  "dispatch_command": "bash ops/fleet/dispatch.sh run",
+  "termination_command": "bash box/gi-only-20260905/fleet_lane.sh terminate <explicit IDs>",
+  "workers": [
+    {
+      "instance_id": "i-0889ee47ceb889561",
+      "private_ip_while_running": "172.30.0.236",
+      "instance_type": "c7i.8xlarge",
+      "launch_utc": "2026-09-05T14:38:20Z",
+      "termination_utc": "2026-09-05T15:20:13Z",
+      "terminal_state_observed": "terminated"
+    },
+    {
+      "instance_id": "i-0d8bf8dd339a2e161",
+      "private_ip_while_running": "172.30.0.238",
+      "instance_type": "c7i.8xlarge",
+      "launch_utc": "2026-09-05T14:38:20Z",
+      "termination_utc": "2026-09-05T15:21:32Z",
+      "terminal_state_observed": "terminated"
+    },
+    {
+      "instance_id": "i-0fe012c4207c7a220",
+      "private_ip_while_running": "172.30.0.235",
+      "instance_type": "r7i.8xlarge",
+      "launch_utc": "2026-09-05T14:38:22Z",
+      "termination_utc": "2026-09-05T16:24:40Z",
+      "terminal_state_observed": "terminated"
+    },
+    {
+      "instance_id": "i-0a067499279342f0c",
+      "private_ip_while_running": "172.30.0.75",
+      "instance_type": "r7i.8xlarge",
+      "launch_utc": "2026-09-05T14:38:22Z",
+      "termination_utc": "2026-09-05T16:24:40Z",
+      "terminal_state_observed": "terminated"
+    }
+  ],
+  "final_solve_jobs": [
+    {
+      "class_id": "C_n24m16_Mm12_m2_5_ell1_s4",
+      "instance_id": "i-0889ee47ceb889561",
+      "started_utc": "2026-09-05T14:58:52Z",
+      "finished_utc": "2026-09-05T15:18:53Z",
+      "exact_q_watchdog_seconds": 600,
+      "result_sha256": "c9f102e850f9d88ebb6f633137159df0bbdf17ba2802114e58764d05fee83ba1"
+    },
+    {
+      "class_id": "C_n18m12_M2_9_ell2_s3",
+      "instance_id": "i-0d8bf8dd339a2e161",
+      "started_utc": "2026-09-05T14:59:02Z",
+      "finished_utc": "2026-09-05T15:19:36Z",
+      "exact_q_watchdog_seconds": 600,
+      "result_sha256": "f0ff29eba04bebf3ec134153d7dc5619307427df53926214499b36648e69168c"
+    },
+    {
+      "class_id": "C_n24m18_Mm15_14_ell1_s3",
+      "instance_id": "i-0fe012c4207c7a220",
+      "started_utc": "2026-09-05T14:59:12Z",
+      "finished_utc": "2026-09-05T15:19:38Z",
+      "exact_q_watchdog_seconds": 600,
+      "result_sha256": "03c12c1d9b41daba3e292769a4814ab8da11d9ec11dc991b49c24f576e3aae58"
+    },
+    {
+      "class_id": "C_n24m16_M12_17_ell1_s3",
+      "instance_id": "i-0fe012c4207c7a220",
+      "started_utc": "2026-09-05T16:03:15Z",
+      "finished_utc": "2026-09-05T16:23:41Z",
+      "exact_q_watchdog_seconds": 600,
+      "result_sha256": "648ada007281261ee88dd7b0cc9c25fbd62268a5fcec4bd74860c75f464c7bcb"
+    },
+    {
+      "class_id": "C_n24m18_M9_20_ell1_s3",
+      "instance_id": "i-0fe012c4207c7a220",
+      "started_utc": "2026-09-05T16:03:45Z",
+      "finished_utc": "2026-09-05T16:15:40Z",
+      "exact_q_watchdog_seconds": 600,
+      "result_sha256": "db964ce2da1d1aed8732ae4dbfe6d1629f461bb4708faad49cbc62ddf1edc693"
+    },
+    {
+      "class_id": "C_n16m12_M6_13_ell3_s3",
+      "instance_id": "i-0a067499279342f0c",
+      "started_utc": "2026-09-05T16:04:16Z",
+      "finished_utc": "2026-09-05T16:17:26Z",
+      "exact_q_watchdog_seconds": 600,
+      "result_sha256": "f9d4a19749135789ba62661666982b13c687e0b7137fb945069ac1eb00a68eec"
+    }
+  ],
+  "scope_checks": {
+    "launched_instance_count": 4,
+    "maximum_allowed": 4,
+    "all_types_allowed": true,
+    "all_owner_tags_match": true,
+    "all_four_terminal": true,
+    "other_workers_touched": false
+  },
+  "post_termination_observation_utc": "2026-09-05T16:25:00Z",
+  "note": "The two earlier c7 records had already aged out of describe-instances by the final observation; their terminated states and AWS user-initiated transition times were observed and recorded before that expiry."
+}

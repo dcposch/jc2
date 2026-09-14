@@ -1,0 +1,21 @@
+{
+  "schema":"jc2.terminal-custody/v1",
+  "task":"f10-mixed-dac-gate-sol-20260913",
+  "status":"TERMINAL_CONDITIONAL_STATIC_CONFIRMED",
+  "first_action_utc":"2026-09-13T00:08:54.964129538Z",
+  "custody_authored_utc":"2026-09-13T00:10:50.234717953Z",
+  "all_writers":"IDLE after custody publication; no further authored-file changes",
+  "verdict":"Diagnosis CONFIRMED; minimal dummy delta CONFIRMED; child capability drop CONDITIONALLY CONFIRMED subject to actual probe; preserved caps CONFIRMED.",
+  "inputs_postpin_status":"MATCHED_ALL_EIGHT",
+  "outputs":{
+    "pins":{"path":"box/f10-mixed-dac-gate-sol-20260913/PINS.json","sha256":"71081e6877a080326e9b605465fcffef60064025c0993ac32d1ca3c96bea8ddf"},
+    "report":{"path":"xmodel/f10-mixed-dac-gate-sol-20260913.md","sha256":"695ba0e7a3fd5a2eef187d1a3ae38daaaf27eb2cea48fb3455021096797ef21c"},
+    "manifest":{"path":"xmodel/f10-mixed-dac-gate-sol-20260913.md.artifact.json","sha256":"828eb1d266641acc55965919b1737654d5d1c4301eb9974f329c56b5160cfcde"}
+  },
+  "verification":{
+    "expected_basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256":"828eb1d266641acc55965919b1737654d5d1c4301eb9974f329c56b5160cfcde",
+    "artifact_finalize":"VERIFIED",
+    "report_manifest_pins_readback":"WHOLE"
+  }
+}

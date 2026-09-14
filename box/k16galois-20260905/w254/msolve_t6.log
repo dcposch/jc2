@@ -1,0 +1,105 @@
+
+--------------- INPUT DATA ---------------
+#variables                       5
+#equations                       5
+#invalid equations               0
+field characteristic         32003
+homogeneous input?               0
+signature-based computation      0
+monomial order                 DRL
+basis hash table resetting     OFF
+linear algebra option            2
+initial hash table size     131072 (2^17)
+max pair selection             ALL
+reduce gb                        1
+#threads                         2
+info level                       2
+generate pbm files               0
+------------------------------------------
+
+Legend for f4 information
+--------------------------------------------------------
+deg       current degree of pairs selected in this round
+sel       number of pairs selected in this round
+pairs     total number of pairs in pair list
+mat       matrix dimensions (# rows x # columns)
+density   density of the matrix
+new data  # new elements for basis in this round
+          # zero reductions during linear algebra
+time(rd)  time of the current f4 round in seconds given
+          for real and cpu time
+--------------------------------------------------------
+
+deg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)
+------------------------------------------------------------------------------------------------------
+  8       2       4       5 x 168        68.93%        2 new       0 zero         0.00 | 0.00         
+  8       2       4      10 x 300        43.40%        2 new       0 zero         0.00 | 0.00         
+  9       4       4      34 x 560        30.93%        4 new       0 zero         0.00 | 0.00         
+  8       4       5      20 x 484        39.26%        4 new       0 zero         0.00 | 0.00         
+  9       9       9      69 x 935        29.79%        8 new       1 zero         0.00 | 0.00         
+  9      15      15      94 x 930        36.23%       11 new       4 zero         0.00 | 0.00         
+  9      19      22     119 x 972        39.27%       14 new       5 zero         0.00 | 0.00         
+  9      16      35     142 x 1059       39.93%       13 new       3 zero         0.00 | 0.00         
+  9       7      54     142 x 1050       42.49%        7 new       0 zero         0.00 | 0.00         
+  9       2      70     143 x 1049       43.25%        2 new       0 zero         0.00 | 0.00         
+ 10      74      74     363 x 1661       32.17%       50 new      24 zero         0.01 | 0.02         
+  9       4     144     202 x 1179       48.30%        2 new       2 zero         0.00 | 0.01         
+ 10     147     147     608 x 1825       36.94%       63 new      84 zero         0.02 | 0.04         
+ 10     183     211     730 x 2079       40.75%       72 new     111 zero         0.04 | 0.08         
+ 10     133     273     708 x 2244       42.08%       70 new      63 zero         0.04 | 0.07         
+ 10      43     399     654 x 2342       41.26%       37 new       6 zero         0.02 | 0.04         
+ 11     504     504    1525 x 2992       38.82%      123 new     381 zero         0.15 | 0.28         
+ 10       5     466     760 x 2398       44.60%        1 new       4 zero         0.02 | 0.02         
+ 11     465     465    1817 x 3105       40.42%       90 new     375 zero         0.20 | 0.35         
+ 11     336     336    1495 x 2869       46.23%       55 new     283 zero         0.16 | 0.28         
+ 10      60     202     940 x 2494       47.04%       28 new      32 zero         0.04 | 0.07         
+ 10      90     272     980 x 2511       47.92%       31 new      59 zero         0.05 | 0.09         
+ 10     145     335    1042 x 2487       49.82%       33 new     112 zero         0.08 | 0.13         
+ 10      75     337     965 x 2461       50.13%       15 new      61 zero         0.05 | 0.08         
+ 10      45     331     920 x 2432       50.34%        9 new      36 zero         0.04 | 0.06         
+ 10      25     327     899 x 2427       50.79%        5 new      20 zero         0.03 | 0.04         
+ 10       5     323     878 x 2422       50.94%        1 new       4 zero         0.02 | 0.03         
+ 11     322     322    1461 x 2681       49.70%        0 new     328 zero         0.15 | 0.27         
+------------------------------------------------------------------------------------------------------
+reduce final basis      617 x 2165       62.45%      613 new       0 zeroDimension of quotient: 1548
+[1548, 448], Non trivial / Trivial = 28.94%
+Density of non-trivial part 99.62%
+Time spent to generate sequence (elapsed): 0.25 sec (8.69 Gops/sec)
+Time spent to compute eliminating polynomial (elapsed): 0.02 sec
+Elimination polynomial has degree 1548.
+Time for rational param:          1.47 (elapsed) sec /  2.59 sec (cpu)
+
+------------------------------------------------------------------------------------
+msolve overall time           1.47 sec (elapsed) /  2.60 sec (cpu)
+------------------------------------------------------------------------------------
+         0.05 | 0.06         
+------------------------------------------------------------------------------------------------------
+
+---------------- TIMINGS ---------------
+overall(elapsed)        1.18 sec
+overall(cpu)            2.06 sec
+select                  0.10 sec   8.6%
+symbolic prep.          0.26 sec  21.6%
+update                  0.06 sec   5.3%
+convert                 0.02 sec   1.3%
+linear algebra          0.73 sec  62.0%
+reduce gb               0.00 sec   0.0%
+-----------------------------------------
+
+---------- COMPUTATIONAL DATA -----------
+size of basis                   613
+#terms in basis              897473
+#pairs reduced                 2741
+#GM criterion                283405
+#redundant elements             146
+#rows reduced                  6113
+#zero reductions               1998
+max. matrix data               1817 x 3105 (40.424%)
+max. symbolic hash table size  2^13
+max. basis hash table size     2^16
+-----------------------------------------
+
+
+real	0m1.477s
+user	0m2.582s
+sys	0m0.017s

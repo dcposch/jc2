@@ -1,0 +1,157 @@
+{
+  "schema": "jc2-static-redesign-terminal-custody/v1",
+  "task": "f10-direct-rows-inverse-redesign-astra-20260911",
+  "owner": "/root/contact_collision_geometry",
+  "status": "COMPLETED_STATIC_UNREVIEWED",
+  "first_utc": "2026-09-11 05:11:02 UTC",
+  "scientific_reasoning_closed_before_utc": "2026-09-11 05:24:23 UTC",
+  "report_finalized_utc": "2026-09-11 05:25:22 UTC",
+  "expected_verification_utc": "2026-09-11 05:29:33 UTC",
+  "sealed_whole_and_postpins_completed_utc": "2026-09-11 05:29:51 UTC",
+  "custody_prepared_utc": "2026-09-11 05:29:51 UTC",
+  "reserve_utc": "2026-09-11 05:30:00 UTC",
+  "hard_utc": "2026-09-11 05:33:00 UTC",
+  "clock_reset": false,
+  "input_pins": [
+    {
+      "path": "COORDINATION.md",
+      "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+      "scope": "Current operating policy; fresh WHOLE lines1-EOF in three reads",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-direct-rows-producer-astra-20260911/produce.py",
+      "sha256": "8a7bd82ea589744a9de22b54877156a329d724185948538958801475f983760e",
+      "scope": "Final producer; fresh WHOLE",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-direct-rows-producer-astra-20260911/authority.py",
+      "sha256": "5629db5df0a37fdaecaa66f5ad0cde47006cb0c3047b37243b045daedef2ac29",
+      "scope": "Final metadata interlock; fresh WHOLE; not executed",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-direct-rows-powerfix-astra-20260911/arithmetic.py",
+      "sha256": "acd07f800707c379aba60bd06f239d38cd83c86867729561367abd2bcc04ce73",
+      "scope": "Corrected final producer arithmetic; fresh WHOLE",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-direct-rows-checker-astra-20260911/check.py",
+      "sha256": "5052884779d781e55693115c3065db1207667ce224a5914bbb95721d0abe9f7b",
+      "scope": "Final independent checker; fresh WHOLE1-320,321-EOF",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-direct-rows-checker-astra-20260911/check_arithmetic.py",
+      "sha256": "9d2aac637dbdeaa192cc3fe531e83694f9853b6573556ad5d49362f754b1163e",
+      "scope": "Final independent arithmetic; fresh WHOLE separately after combined display clipping",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-direct-rows-deployment-prep-root-20260911/ROOT-SOURCE-CONTRACT.json",
+      "sha256": "feef0643e84fbd28307c3bd3469fba974fa6b7f58ed0ef42bc2f92aa3c597aa3",
+      "scope": "Accepted source/scope map; fresh WHOLE; unneeded references not followed",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/OPERATIONS.md",
+      "sha256": "3be532afc6e784842694cf02d4399573228362abb47ae36130ef97c4274faa59",
+      "scope": "Exact circuit recipe; fresh WHOLE separately after combined display clipping",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/ASSERTIONS.md",
+      "sha256": "61b9ce5e1f9b40a765dcb2a2ea5aa3a928197b61bc41cb5cf945632b99ad4de2",
+      "scope": "Disposition guide subordinate to adopted corrections; fresh WHOLE separately repeated",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/WIRE-AND-VALIDATION.md",
+      "sha256": "b9060f0bbc14e92464079b0daca12faa1ba2d367f9ecc7307ba301689de5b77d",
+      "scope": "Original inventories, subordinate to rows-only/adopted corrections; fresh WHOLE",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/ROOT-ADOPTED-CORRECTIONS.md",
+      "sha256": "39ed9b3910efee02dd2f17ced7951a8b83557e612d100d4ae34f76e0895b4002",
+      "scope": "111/39 partition and allscale comparisons; fresh WHOLE",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "xmodel/f10-direct-rows-wire-root-20260911.md",
+      "sha256": "90c940b021ba9f99f2298aaf394cb082793812ad4428e249b970ecf06baa6c47",
+      "scope": "Current rows-only projection/wire; fresh WHOLE",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "xmodel/f10-direct-rows-wire-gate-fable5-20260911.md",
+      "sha256": "68488229c5ff839f8c155662f903ba174d59d4e96bb5e046a53967313d497f1b",
+      "scope": "FIRST at ROOT-adopted scope; fresh WHOLE separately after combined display clipping",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    },
+    {
+      "path": "box/f10-direct-rows-wire-root-20260911/ROOT-ADOPTED-WIRE-PINS.md",
+      "sha256": "2b2770fe494098812a52c6829a4bd97803f44bb0474863b8008a69f3725956fd",
+      "scope": "Binding scale-low differences, order, graph predicate and status pins; fresh WHOLE",
+      "read": "FRESH_WHOLE",
+      "hash_before_body": true
+    }
+  ],
+  "owned_pins_excluding_custody": [
+    {
+      "path": "box/f10-direct-rows-inverse-redesign-astra-20260911/PINS.json",
+      "sha256": "a82fc1fa30b46bd2f0bb7f50214d158774f18b6a27d551cd5f0c20c549d5a819"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-inverse-redesign-astra-20260911.md",
+      "sha256": "19f1a4229cacb14c7744230707a9a822d63658cbd9ef7f727d5f164bdb8c1874"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-inverse-redesign-astra-20260911.md.artifact.json",
+      "sha256": "9e492496a278b42dc041d6729806a546ef667edf6b2c92db215ed4e5c4a4dff4"
+    }
+  ],
+  "transaction": {
+    "status": "VERIFIED",
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "expected_manifest_sha256": "9e492496a278b42dc041d6729806a546ef667edf6b2c92db215ed4e5c4a4dff4",
+    "body_sha256": "c98b49870c73fa5b1c57ff9d09a530b33d4ebf03f52486893c7e15752a17fc71",
+    "lease_id": "7458d45b3bc5f65b35b30c93ba9cfa5d"
+  },
+  "reads": {
+    "all_inputs": "Fresh WHOLE, pre/post hashes matched; no reuse",
+    "own": "Report and PINS WHOLE before final marker; sealed report, manifest and PINS WHOLE after finalize",
+    "clipping": "Affected combined input displays were reread separately through EOF; no clipped display counted as WHOLE",
+    "optional_terminal_files": "NOT READ; terminal failure observation attributed to ROOT"
+  },
+  "collision_check": "Own-only targets initially absent; final report/manifest absent immediately before publication; no overlap or corpus-wide collision claim",
+  "open_quantity": "Exact complete-block coverage and resource feasibility of future independently authored implementation; no implementation measured",
+  "cheapest_test": "Focused different-model STATIC formula/transient-bound/type-contract review, subject to ROOT selection",
+  "scope": {
+    "full_circuit": "Exact coefficient-streaming contract retains both inverse maps and poles,111+39 diagnostics and25 rows",
+    "optional": "Separate conditional dependency lemma for a newly reviewed branch-free necessary-row instrument; not current-contract compliance",
+    "runtime": "UNMEASURED",
+    "science_execution": "NONE",
+    "implementation": "NONE",
+    "coefficient_payload_reads": "NONE",
+    "network_aws_workers_agents": "NONE",
+    "protected_access": "NONE",
+    "source_result": "NONE"
+  },
+  "writer_state": "This custody is the last authored file. No background writers or delegated work exist. After its write, only read-only custody hash/WHOLE/time checks and terminal handoff remain; ALL WRITERS IDLE."
+}

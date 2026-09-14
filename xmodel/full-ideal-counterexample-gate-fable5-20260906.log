@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The audit is complete. The frozen inputs are unchanged, and the report is sealed against the run's basis.
+
+**Verdict on the "Further correction" implication: sound.** Proper full direct ideal ⇒ Qbar point ⇒ Keller pair of exact degrees (99,66) or (108,72) ⇒ counterexample to plane JC. Per-arrow verdicts, as written in `xmodel/full-ideal-counterexample-gate-fable5-20260906.md` (13,543-byte body, sealed, `charge_basis=ABSENT`):
+
+- **Arrow 1, physical polynomials and exact degrees: CONFIRMED.** I re-read the three hash-bound source maps directly. Every coefficient is a polynomial in the frozen semantic names, supports satisfy r+z ≤ N, and the top row of h is numerically z^24(1+z)^9 or z^28(1+z)^8 with no free parameter. So deg F, deg G are exactly 99, 66 or 108, 72 at every point of the semantic space.
+- **Arrow 2, Keller at every field point: CONFIRMED-WITH-FIX.** I verified symbolically, with h, D, C as free symbols, that G³−F²+aG²+bFG+cF+dG+e0 equals Astra's six-summand Q_* plus a pure scalar q. Upper-R rows make Q_true = Q_* + q, strict rows give deg Q ≤ 55, one face row plus the leader localizer gives deg Q = 55, and the F/G corrections start at depths 32/35, beyond the defects 20/25, so the T3 strict rows give deg W ≤ 145/227. The explicit derivative has degree 242/333 = n+D3−2, forcing a nonzero Jacobian to be constant, and the recomputed major faces exclude a zero Jacobian. The fix: Moh's Prop 2.2/3.2/4.5 carry a Keller hypothesis and cannot be cited at arbitrary chart points; the argument must be the explicit one. Only the sub-ideal J_core (T2_upper, T2_strict, T2_face_55, Z·λ₂−1, T3_strict) is needed.
+- **Arrow 3, Nullstellensatz: CONFIRMED.** Polynomial ring, ordinary inverse generators, global matrix order, so an exact-Q properness result is a Qbar point.
+- **Arrow 4, degree divisibility: CONFIRMED.** Jung–van der Kulk, with Nagata 1972 and Abhyankar–Moh 1975 present on the charged p. 212; Jacobian rescaling is free.
+
+**Scope distinctions** are tabulated in the report: existence follows from exact-Q properness of the complete verified row set or of any exact specialization, but not from a subset below J_core, a truncation, a mod-p point, or a timeout. The frozen builder's count assertion leaves an unrunnable stream whose row set must be re-bound before any properness reading.
+
+**Reverse implication is a typed GAP.** Necessity of the stage-8 source parametrization, the gauge slices, and the Prop 4.6 T3 face is not established in the charged inputs. So no unit or timeout excludes the (99,66) configuration, and this is a hard stop on running the nonemptiness computation as a decision instrument. The cheapest precise certificate, if a disproof attempt is still wanted, is a witness point verified by exact substitution into J_core plus a direct recomputation of J(F,G).
+
+Replay notes and the evidence manifest are in `box/full-ideal-counterexample-gate-20260906/` (15 KB total). One reusable insight was saved to memory.
+DIVERT path=xmodel/full-ideal-counterexample-gate-fable5-20260906.md status=CLEAN_SEALED body_bytes=13543 body_sha256=edf4e5d83b4c4299bb84192eb2b1dc3e0225bba565596b08f2e82801529772d2

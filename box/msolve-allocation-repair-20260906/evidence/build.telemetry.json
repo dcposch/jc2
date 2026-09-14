@@ -1,0 +1,63 @@
+{
+  "argv_count": 3,
+  "argv_sha256": "c8b958d94e5789c2bad62c5b075d632572e127c8ce16bd23a6e09c1ee6971cd1",
+  "caps": {
+    "cpu_seconds": null,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 17179869184,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 1.0,
+    "wall_seconds": 600.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+  "enforcement": {
+    "cpu": "disabled",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "python3",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/msolve-allocation-repair-20260906",
+  "max_observed_group_rss_bytes": 815259648,
+  "pgid": 84869,
+  "pid": 84869,
+  "resource": null,
+  "runner_exit_code": 0,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=7e5d7a33-163a-4ed7-a08d-780788a2c186;start_ticks=815845",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 1457,
+    "path": "/home/ubuntu/msolve-allocation-repair-20260906/build.stderr",
+    "sha256": "83d09a9408c23f4a3d17ecd38896d51c866c9a58df604df0dbf0e3b148880488"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 37797,
+    "path": "/home/ubuntu/msolve-allocation-repair-20260906/build.stdout",
+    "sha256": "066b2d916a6a8ec680016ff7c5dbb7b171c41efdd2edc9c6dc6441752619c3c9"
+  },
+  "telemetry_path": "/home/ubuntu/msolve-allocation-repair-20260906/build.telemetry.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-06T12:02:47.164252Z",
+  "utc_start": "2026-09-06T12:01:53.978517Z",
+  "wall_elapsed_seconds": 53.185740929
+}

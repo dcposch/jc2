@@ -1,0 +1,16 @@
+2026-09-05T15:22:55Z
+LOG
+CURRENT_8_OF_8_OK
+LEGACY_20_OF_20_OK
+ORIGINAL_ENGINE_PIN_OK
+RC
+RUNNING
+PROCESSES
+   3231    3229       11:56     716 233144 256612 99.8 R   python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/original_band_engine.py --branch delta52 --stage 8 --emit-singular control/delta52/stage8.sing
+   3204    3203       11:56     716  4100   8280  0.0 S    bash jobs/controls_fleet.sh
+   3218    3204       11:56     716  3576   7764  0.0 S    bash run_one.sh /home/ubuntu/jc2/box/g9966-d2-precise-20260905/original_band_engine.py delta52 8 control/delta52 3000
+   3202    3201       11:56     716  3512   7748  0.0 Ss   bash -c timeout --signal=TERM --kill-after=30s 3300 stdbuf -oL bash jobs/controls_fleet.sh > $HOME/controls.log 2>&1; printf "%s\n" $? > $HOME/controls.rc
+   3203    3202       11:56     716  2164   6128  0.0 S    timeout --signal=TERM --kill-after=30s 3300 stdbuf -oL bash jobs/controls_fleet.sh
+   3229    3228       11:56     716  2120   6148  0.0 S    timeout --signal=TERM --kill-after=30s 3000 python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/original_band_engine.py --branch delta52 --stage 8 --emit-singular control/delta52/stage8.sing
+   3201       1       11:56     716  2096   7748  0.0 S    bash -c cd /home/ubuntu/jc2/box/g9966-d2-precise-20260905 && setsid bash -c 'timeout --signal=TERM --kill-after=30s 3300 stdbuf -oL bash jobs/controls_fleet.sh > $HOME/controls.log 2>&1; printf "%s\n" $? > $HOME/controls.rc' </dev/null >/dev/null 2>&1 & echo $!
+   3228    3218       11:56     716  1652   2720  0.0 S    /usr/bin/time -v -o control/delta52/stage8.time timeout --signal=TERM --kill-after=30s 3000 python3 -u /home/ubuntu/jc2/box/g9966-d2-precise-20260905/original_band_engine.py --branch delta52 --stage 8 --emit-singular control/delta52/stage8.sing

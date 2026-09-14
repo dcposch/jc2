@@ -1,0 +1,45 @@
+{
+  "type": "NEXT EXACT SYSTEM / FILTERED NONLINEAR BRIDGE",
+  "status": "READY[MONOLITHIC-REPLAY] / OPEN[FILTERED-EMITTERS-ABOVE-S131-AND-T3] / OPEN[ELIMINATION]",
+  "base": {
+    "charged_stage": 7,
+    "free_coordinates": 869,
+    "field": "Q",
+    "localization": ["c", "Jacobian constant"],
+    "required_parallel_union": "all promoted F/G minor-face and Jacobian-band rows"
+  },
+  "variables": {
+    "T2": ["T2_a1", "T2_a0", "T2_b1", "T2_b0"],
+    "T3_count": 34,
+    "T3_index_rule": "T3_a{i}_m{m}, 2<=i<=9, 0<=m<=floor(2i/3), omitting (9,6)",
+    "scale_covariant": ["kappa", "Zck"],
+    "normalized_J1": ["Zc"]
+  },
+  "rows": {
+    "T2": "all [s^n*pi^k](s^396*T2-s^391*p^5), n<=391",
+    "T3_scale_covariant": "all [s^n*pi^k](s^1188*T3-s^1178*kappa*p^10*q1), n<=1178",
+    "T3_normalized_J1": "all [s^n*pi^k](s^1188*T3-s^1178*p^10*q1), n<=1178",
+    "Jacobian_scale_covariant": "J0-kappa",
+    "Jacobian_normalized": "J0-1",
+    "gauge_slice": "c-1",
+    "wrapper_scale_covariant": "Zck*c*kappa-1",
+    "wrapper_normalized": "Zc*c-1"
+  },
+  "elimination_order": [
+    "resume after the certified s<=63 pivots at T2 caps 70, 100, 150, 220, 300, 391",
+    "substitute every certified pivot through retained rows and rebuilt component series",
+    "add T3 in increasing s-caps through 1178",
+    "adjoin the Jacobian equation and Rabinowitsch wrapper",
+    "run denominator-audited GF(32003), GF(104729), GF(1299709)",
+    "run exact Q and, only if unit, emit and verify lift(I,<1>)"
+  ],
+  "branching_rule": "Only coefficients in Q* are pivots. A c-, kappa-, or jet-dependent leader must be branched/saturated, never divided away.",
+  "dimension_rule": "A completed prefix gives an upper bound for the full intersection. Only an exact residual Groebner computation gives its dimension; only an exact verified unit identity gives DEAD.",
+  "replayable_full_scripts": {
+    "scale_covariant_Q": "box/g9966d52bridge-20260903/full-bridge-Q-Jkappa.sing",
+    "normalized_J1_Q": "box/g9966d52bridge-20260903/full-bridge-Q-J1.sing",
+    "GF_32003": "box/g9966d52bridge-20260903/full-bridge-p32003-Jkappa.sing",
+    "GF_104729": "box/g9966d52bridge-20260903/full-bridge-p104729-Jkappa.sing",
+    "GF_1299709": "box/g9966d52bridge-20260903/full-bridge-p1299709-Jkappa.sing"
+  }
+}

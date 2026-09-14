@@ -1,0 +1,69 @@
+[
+  {
+    "label": "full split strictly below cutoff",
+    "partition": [
+      1,
+      1,
+      1
+    ],
+    "rho": "2",
+    "u": 3,
+    "v": 8,
+    "excludes": true,
+    "cutoff": "9/4"
+  },
+  {
+    "label": "partial split untouched",
+    "partition": [
+      2,
+      1
+    ],
+    "rho": "2",
+    "u": 3,
+    "v": 8,
+    "excludes": false,
+    "cutoff": "9/4"
+  },
+  {
+    "label": "equality untouched",
+    "partition": [
+      1,
+      1,
+      1
+    ],
+    "rho": "9/4",
+    "u": 3,
+    "v": 8,
+    "excludes": false,
+    "cutoff": "9/4"
+  },
+  {
+    "label": "above cutoff untouched",
+    "partition": [
+      1,
+      1,
+      1
+    ],
+    "rho": "5/2",
+    "u": 3,
+    "v": 8,
+    "excludes": false,
+    "cutoff": "9/4"
+  },
+  {
+    "label": "integer equality inside early-split window",
+    "partition": [
+      1,
+      1
+    ],
+    "rho": "2",
+    "u": 2,
+    "v": 5,
+    "excludes": false,
+    "cutoff": "2"
+  },
+  {
+    "label": "u=1 has no genuine partition in actual caller",
+    "passes": true
+  }
+]

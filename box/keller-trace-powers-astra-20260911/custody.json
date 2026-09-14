@@ -1,0 +1,30 @@
+{
+  "task": "keller-trace-powers-astra-20260911",
+  "owner": "/root/model_productivity",
+  "status": "COMPLETED_MANUAL_UNREVIEWED",
+  "first_action_utc": "2026-09-11 20:35:48.310148101 UTC",
+  "original_publication_reserve_utc": "2026-09-11 20:52:00 UTC",
+  "original_hard_stop_utc": "2026-09-11 20:55:00 UTC",
+  "report_closed_and_finalized_utc": "2026-09-11T20:44:29Z",
+  "verified_and_whole_read_by_utc": "2026-09-11 20:44:45.892791811 UTC",
+  "inputs": [
+    {"path": "box/keller-trace-powers-astra-20260911/TASK.md", "sha256": "8adc3928fdc2eb2718f3114f105bb75ba2f78a4a8c498df84f342ae7565229c5", "bytes": 2987},
+    {"path": "xmodel/keller-trace-image-root-20260911.md", "sha256": "76fa7291c32150f8728b704116fdc92171ad40bf4c468bddfb1f01e0bf55c025", "bytes": 14040}
+  ],
+  "owned_excluding_this_custody": [
+    {"path": "xmodel/keller-trace-powers-astra-20260911.md", "sha256": "bf94cc3ebf702f85a6971b80560ac3076d84e8873b74778c645333cf173503f0", "bytes": 8415},
+    {"path": "xmodel/keller-trace-powers-astra-20260911.md.artifact.json", "sha256": "b5f499614833242572e089273d4baa4e5ffa2e21b0335b3da441f4501bfb05d3", "bytes": 685},
+    {"path": "box/keller-trace-powers-astra-20260911/PINS.json", "sha256": "3029a4c07eaee5aa966c2e23dc875dd342889e445b549c00003b39a2c6925c08", "bytes": 1689}
+  ],
+  "body": {"bytes": 8083, "sha256": "ed3bfd2777c7cb996a0f87908180b6611cc87904293c3268280c671212b76d56"},
+  "expected_basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_manifest_sha256": "b5f499614833242572e089273d4baa4e5ffa2e21b0335b3da441f4501bfb05d3",
+  "expected_verification": "VERIFIED",
+  "read_checks": "Both inputs freshly WHOLE after pins; complete report before marker and after sealing; complete PINS and manifest; all five recorded pins current again after finalization",
+  "own_collision_checks": "New report, manifest and custody absent at start and before publication; no marker in substantive draft; one standalone marker appended last; no new OPEN identifier or live/shared scan",
+  "result_scope": "No rank-only B-membership cutoff, even fixed pole orders; all powers of one element do not characterize branch separation; whole-source all-power membership is already entailed by accepted TRACE-IC-1. Ring-A Newton criterion retained.",
+  "scientific_execution": "NONE",
+  "network_or_additional_sources": "NONE",
+  "pending_writers_or_jobs": "NONE after this last owned custody write; actual idle clock supplied in terminal handshake",
+  "follow_on_authority": "NONE"
+}

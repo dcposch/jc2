@@ -1,0 +1,53 @@
+PASS no-assert-nodes
+PASS bytecode-disabled
+PASS R=pT
+PASS S=pE
+PASS Cstar=gp+gp^3+p^4
+PASS R-datum: t0=-4 in R_t
+PASS R odd deg5 top H leader g3p2
+PASS C0 deg<=6 even weight<=0
+PASS D0 deg<=9 odd weight<=1 p|D0 i<=2j
+PASS C0 low: [1]=0 [gp]=-1 [p^2]=0
+PASS D0 low: [p]=[gp^2]=[p^3]=0 ; lowdeg 5
+PASS [gp]C=-b^2 and ([gp]C)^2=b^4=3
+PASS phi(R),phi(T),phi(r),phi(Z),phi(E) ordinary
+PASS phi(R) v-order 0 with [v^0]=3u
+PASS phi(T) lowest v-power 1
+PASS phi(q) complete negative part = v^-1
+PASS phi(r)=u^2v^7-uv^4-uv^2
+PASS phi(L),phi(S),phi(C*) ordinary (products of small lifts)
+PASS phi(C0),phi(D0) ordinary; phi(Tq) ordinary
+PASS lift consistency phi(C0)=phi(C0 literal)
+PASS abstract q-exponent<4 (no reduction interference)
+PASS D0^2-C0^3 = T*M universally
+PASS 9D^2-C^3 = b^6 T M scaling
+PASS scalar: 9*(1/3)^2==1
+PASS p|r p|Z p^2|q (literal)
+PASS deg M<=14 so deg W<=13; lowdeg M>=6 so W has no constant/linear/cubic terms
+PASS parity: r,q odd; T,Z even -> M even -> W=M/p odd
+PASS weight: w(D0)<=1,w(C0)<=0 -> w(9D^2-C^3)<=2; R top g^3p^2 unit -> w(W)<=1
+PASS W-ordinary premise: [v^0]phi(R)=3u is a monomial with unit coefficient
+PASS U4 low jet == g^2 p exactly ([p]=[gp^2]=[p^3]=0)
+PASS U weight-3 leader unique = g^2p: w(r)=3 top g^2p, w(R)<=1, w(RC*)<=-1, w(R^2 S)<=-5; deg U<=13
+PASS U odd from parities r,R odd; C*,S even? (S odd, R^2 S odd; C* even)
+PASS binomial coefficients C(5/3,n) n<=3
+PASS displayed B table == (1+eps)^(5/3) through s^6 (R^5 eps^n bookkeeping: R^3C,R^2D,R^2U,RC^2,CD,CU,D^2/R,C^3/R)
+PASS toy bracket [A,B]==0 mod s^7 (toy 1, gamma=-5/9)
+PASS toy bracket [A,B]==0 mod s^7 (toy 2, gamma=7)
+PASS toy: changed CU factor 5/9 is rejected (nonzero s^6 bracket)
+PASS toy: gamma is bracket-free (only the low e row fixes it)
+PASS A corrections deg<=13<15 and weight<=3 (lattice i+j<=15,5i-7j<=3)
+PASS B corrections deg<=23<25 and weight<=5 (lattice i+j<=25,5i-7j<=5)
+PASS A weight-3 only from s^4 U (others <=1): A(2,1)=s^4=k, A(9,6) untouched (deg 15>13)
+PASS B weight-5 only from s^4 R^2U; top forms g^6p^4 * g^2p = g^8p^5 -> B(8,5)=5s^4/3=5k/3; B(1,0),B(15,10) untouched
+PASS top faces: A deg-15 = H^3 slots i=0..9 (6 zeros), B deg-25 = H^5 slots i=0..15 (10 zeros) untouched
+PASS H^3/H^5 outer-face zero count 6/10
+PASS A low jet: p^3 - b^2 s^2 gp^2 + s^4 g^2p (a01=0, y=1, x=-b^2 s^2, A(2,1)=k)
+PASS B low jet == gamma s^6 (p - gp^2 - 4p^3): e=-5b^2 s^6/9, [g]B=0, b21=0, b12=5b^2 s^6/9, b03=20 b^2 s^6/9
+PASS extracted coefficients: x=-b^2 s^2, y=1, k=s^4, e=-5 b^2 s^6/9
+PASS saturated low eq: a01=0
+PASS saturated low eq: x^2-3ky==0 by actual multiplication mod b^4-3
+PASS saturated low eq: 9e-5kx==0 by actual multiplication mod b^4-3
+PASS unsaturated source low rows vanish trivially mod s^7 (k^2=s^8, k e=s^10, x e=s^8)
+PASS untested orders: B(1,0)=5k^2/9=5s^8/9 and target -5k^3g^2/9=-5s^12g^2/9 are 0 mod s^7
+{"B_low": "gamma s^6 (p - g p^2 - 4 p^3)", "C0": [[[0, 4], "4"], [[0, 6], "-1"], [[1, 1], "-1"], [[1, 3], "7"], [[1, 5], "-1"], [[2, 2], "3"], [[2, 4], "1"], [[3, 3], "1"]], "D0": [[[0, 5], "4"], [[0, 7], "-1"], [[1, 4], "2"], [[1, 6], "8"], [[1, 8], "-2"], [[2, 5], "17"], [[2, 7], "-3"], [[3, 2], "-1"], [[3, 4], "12"], [[4, 3], "4"], [[4, 5], "1"]], "U4_low": "g^2*p", "gamma": "-5 b^2/9", "phiR_v0": "3u", "phiT_vmin": 1, "q_negative": "v^-1", "scope": "own controls; caps literal; no producer execution; unguarded six-jet plus three saturated low equations only", "status": "PASS"}

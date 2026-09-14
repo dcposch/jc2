@@ -1,0 +1,22 @@
+Command:
+/usr/bin/time -v timeout --signal=TERM 30s prlimit --as=536870912 -- python3 -m unittest -v ops.test_frontier_gate ops.test_frontier_external108
+
+Result:
+PASS: 14/14 tests; exit status 0.
+Elapsed wall time: 0.78 seconds.
+Maximum resident set size: 20,704 KiB.
+Limits: 30 seconds wall; 536,870,912-byte address-space limit inherited by subprocesses.
+
+Coverage summary:
+- Four unchanged legacy tests passed.
+- Actual 99/66 is externally excluded while the legacy gcd verdict remains inconclusive.
+- Actual 108/72 and 108/108 are inconclusive under the strict external bound.
+- Inclusive cap 107 is excluded; inclusive cap 108 is inconclusive.
+- Partial-y 99/66 with unbounded totals is outside both actual-total scopes.
+- Explicit method-control converts effective external closure to METHOD_CONTROL_ONLY.
+- Actual 108/107 exercises gcd-only effective refusal.
+- Nonpositive inputs retain argparse exit status 2 and the prior error text.
+- Frozen implementation and GGHV PDF/text hashes match.
+- Actual source mutants `<` to `<=` and partial-y-as-actual-total are both rejected by the fixed oracle; the production gate hash is unchanged after mutation tests.
+
+No AWS, CAS, regeneration, solve, adapter edit, external post, or stage commit occurred.

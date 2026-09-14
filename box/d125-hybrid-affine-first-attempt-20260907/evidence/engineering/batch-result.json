@@ -1,0 +1,194 @@
+{
+  "construction_absent": true,
+  "construction_invoked": false,
+  "elapsed_seconds": 0.7886727689999589,
+  "jobs": [
+    {
+      "group_members_after": [],
+      "label": "authorize",
+      "payload_stderr": "",
+      "payload_stdout": "{\"status\": \"REAL_AUTHORIZE_AND_TINY_NORMALIZED_CONTROL_PASS\", \"source_access\": false, \"production_metadata\": false, \"production_invoked\": false}\n",
+      "runner_absent": true,
+      "runner_rc": 0,
+      "runner_stderr": "",
+      "runner_stdout": "CAPRUN/v1 status=NORMAL_EXIT telemetry=/home/ubuntu/d125-hybrid-affine-pilot-20260907/engineering/authorize.telemetry.json\n",
+      "telemetry": {
+        "argv_count": 5,
+        "argv_sha256": "5e1d4d355e88955e3eee7e9b74c6a9bef593aaf10892aafc65d3aaa6f78d1df7",
+        "caps": {
+          "cpu_seconds": 10,
+          "lifecycle_initial_seconds": 0.05,
+          "lifecycle_sample_seconds": 1.0,
+          "rss_bytes": 536870912,
+          "rss_sample_seconds": 0.05,
+          "term_grace_seconds": 0.25,
+          "wall_seconds": 10.0
+        },
+        "child_exit_code": 0,
+        "child_returncode": 0,
+        "child_signal": null,
+        "cwd": "/home/ubuntu/d125-hybrid-affine-pilot-20260907",
+        "enforcement": {
+          "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+          "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+          "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+        },
+        "error": null,
+        "executable": "/usr/bin/python3",
+        "identity_checks": [],
+        "invocation_cwd": "/home/ubuntu/d125-hybrid-affine-pilot-20260907",
+        "max_observed_group_rss_bytes": 10194944,
+        "pgid": 1538,
+        "pid": 1538,
+        "resource": null,
+        "runner_exit_code": 0,
+        "runner_signal": null,
+        "schema": "CAPRUN/v1",
+        "start_identity": "boot=bef732b9-38e5-4a9a-8f93-77203426d2b8;start_ticks=58879",
+        "start_identity_source": "linux-proc-stat-field22",
+        "status": "NORMAL_EXIT",
+        "stderr": {
+          "bytes": 0,
+          "path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/engineering/authorize.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdin": {
+          "mode": "devnull",
+          "path": null
+        },
+        "stdout": {
+          "bytes": 145,
+          "path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/engineering/authorize.stdout",
+          "sha256": "b30aef9a35ed93a3d484dc10542f8c6c1695155f10b0fed0c3a245b24ddd01d5"
+        },
+        "telemetry_path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/engineering/authorize.telemetry.json",
+        "termination": {
+          "cleanup_complete": null,
+          "group_live_before_reap": [],
+          "group_zombies_before_reap": [],
+          "kill_sent": false,
+          "leader_reaped": false,
+          "reason": null,
+          "term_sent": false
+        },
+        "utc_end": "2026-09-07T05:34:15.923555Z",
+        "utc_start": "2026-09-07T05:34:15.854121Z",
+        "wall_elapsed_seconds": 0.069437704
+      }
+    },
+    {
+      "group_members_after": [],
+      "label": "rss",
+      "payload_stderr": "",
+      "payload_stdout": "{\"parent\": 1542, \"child\": 1544, \"pgid\": 1542}\n",
+      "runner_absent": true,
+      "runner_rc": 125,
+      "runner_stderr": "",
+      "runner_stdout": "CAPRUN/v1 status=RESOURCE_CAP telemetry=/home/ubuntu/d125-hybrid-affine-pilot-20260907/engineering/rss.telemetry.json\n",
+      "telemetry": {
+        "argv_count": 5,
+        "argv_sha256": "c292d1744045a88a7679a38c547c7d905797162cc2458e069f8583eda70982a8",
+        "caps": {
+          "cpu_seconds": 10,
+          "lifecycle_initial_seconds": 0.05,
+          "lifecycle_sample_seconds": 1.0,
+          "rss_bytes": 67108864,
+          "rss_sample_seconds": 0.05,
+          "term_grace_seconds": 0.25,
+          "wall_seconds": 10.0
+        },
+        "child_exit_code": 0,
+        "child_returncode": 0,
+        "child_signal": null,
+        "cwd": "/home/ubuntu/d125-hybrid-affine-pilot-20260907",
+        "enforcement": {
+          "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+          "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+          "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+        },
+        "error": null,
+        "executable": "/usr/bin/python3",
+        "identity_checks": [
+          {
+            "observed_pgid": 1542,
+            "observed_pid": 1542,
+            "observed_start_identity": "boot=bef732b9-38e5-4a9a-8f93-77203426d2b8;start_ticks=58894",
+            "result": "MATCH",
+            "stage": "before-term",
+            "utc": "2026-09-07T05:34:16.303110Z"
+          },
+          {
+            "result": "SENT",
+            "signal": 15,
+            "stage": "before-term-send",
+            "utc": "2026-09-07T05:34:16.303148Z"
+          },
+          {
+            "observed_pgid": 1542,
+            "observed_pid": 1542,
+            "observed_start_identity": "boot=bef732b9-38e5-4a9a-8f93-77203426d2b8;start_ticks=58894",
+            "result": "MATCH",
+            "stage": "before-kill",
+            "utc": "2026-09-07T05:34:16.560731Z"
+          },
+          {
+            "result": "SENT",
+            "signal": 9,
+            "stage": "before-kill-send",
+            "utc": "2026-09-07T05:34:16.560775Z"
+          }
+        ],
+        "invocation_cwd": "/home/ubuntu/d125-hybrid-affine-pilot-20260907",
+        "max_observed_group_rss_bytes": 167108608,
+        "pgid": 1542,
+        "pid": 1542,
+        "resource": "rss",
+        "runner_exit_code": 125,
+        "runner_signal": null,
+        "schema": "CAPRUN/v1",
+        "start_identity": "boot=bef732b9-38e5-4a9a-8f93-77203426d2b8;start_ticks=58894",
+        "start_identity_source": "linux-proc-stat-field22",
+        "status": "RESOURCE_CAP",
+        "stderr": {
+          "bytes": 0,
+          "path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/engineering/rss.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdin": {
+          "mode": "devnull",
+          "path": null
+        },
+        "stdout": {
+          "bytes": 46,
+          "path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/engineering/rss.stdout",
+          "sha256": "8ce51462fe946932c732473f5800757a71676a73455bc0dd59a2fd3ee1ae3fcf"
+        },
+        "telemetry_path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/engineering/rss.telemetry.json",
+        "termination": {
+          "cleanup_complete": true,
+          "group_live_before_reap": [],
+          "group_zombies_before_reap": [
+            1542
+          ],
+          "kill_sent": true,
+          "leader_reaped": true,
+          "reason": "rss_cap",
+          "term_sent": true
+        },
+        "utc_end": "2026-09-07T05:34:16.568011Z",
+        "utc_start": "2026-09-07T05:34:15.996837Z",
+        "wall_elapsed_seconds": 0.571174553
+      }
+    }
+  ],
+  "post_pins": {
+    "baseline.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "construct.py": "aa65e7104d3fcf5ad868eea952587a6841d784c6f9469c6c42ea2a02913ef264",
+    "host_control.py": "3ea4ba7cd62600ba351a27640ee44815adc70fbd27e18729c180f2a550f215ba",
+    "replay.py": "06475a2a566b4ed617068d65f3a0473ef83c16e2cb357dcb959ee46716781c23",
+    "run_capped.py": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+  },
+  "replay_absent": true,
+  "source_access": false,
+  "status": "ENGINEERING_ONLY_PASS"
+}

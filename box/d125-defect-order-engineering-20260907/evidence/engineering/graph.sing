@@ -1,0 +1,25 @@
+ring R=0,(x,y,z),(a(3,1,4),a(1,0,1),a(1,0,1),dp);
+ideal I=x-y^2,z-y^3;
+option(redSB); short=0;
+int ci;
+print("JC2CERT 1 6a6a15d02aca9f67e64ac2c6b1065560eb9befd8fa88d13bb2d9c90b4ac599af cbb4eea4ca46754d038a147ee07481a8bfbcfc769c419215a8abc548450bbdcf");
+print("I_SIZE "+string(size(I)));
+print("I_BEGIN "+string(ncols(matrix(I))));
+for(ci=1;ci<=ncols(matrix(I));ci++){print("I "+string(ci)+" "+string(I[ci]));}
+print("I_END");
+ideal G=slimgb(I);
+print("G_BEGIN "+string(ncols(matrix(G))));
+for(ci=1;ci<=ncols(matrix(G));ci++){print("G "+string(ci)+" "+string(G[ci]));}
+print("G_END");
+int hasunit=0;
+for(ci=1;ci<=ncols(matrix(G));ci++){if(G[ci]!=0 && deg(G[ci])==0){hasunit=1;}}
+if(hasunit){
+matrix T=lift(I,ideal(1));
+matrix CHECK=matrix(I)*T;
+print("T_BEGIN "+string(nrows(T)));
+for(ci=1;ci<=nrows(T);ci++){print("T "+string(ci)+" "+string(T[ci,1]));}
+print("T_END");
+if(nrows(CHECK)==1 && ncols(CHECK)==1 && ncols(T)==1){print("CHECK "+string(CHECK[1,1]));}
+print("END UNIT");
+}else{print("END NONUNIT");}
+quit;

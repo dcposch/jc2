@@ -1,0 +1,11 @@
+#cloud-config
+package_update: false
+package_upgrade: false
+package_reboot_if_required: false
+ssh_authorized_keys:
+  - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMxMAvC+4dNCF8as0sIU810lBT5SR2dKxHZS9mBRGi2E jc2-cloud-coordinator
+runcmd:
+  - [systemctl, disable, --now, apt-daily.timer, apt-daily-upgrade.timer, unattended-upgrades.service]
+  - [touch, /var/lib/jc2-stdlib-ready]
+
+

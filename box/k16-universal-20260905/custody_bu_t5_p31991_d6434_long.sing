@@ -1,0 +1,94 @@
+ring r=31991,(x,c1,c2,c3,c4,b,B,eta,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10),dp;
+number d=6434;
+option(redSB);
+proc must(int ok,string msg){ if(!ok){print("FAIL "+msg);quit;} }
+proc xc(poly f,int k){matrix m=coef(f,x);int i;for(i=1;i<=ncols(m);i++){if(deg(m[1,i])==k){return(m[2,i]);}}return(poly(0));}
+number y=(d+6)/22; number om=1/(4*y^2*(2*d+1));
+poly C=x^4+c1*x^3+c2*x^2+c3*x^1+c4*x^0;
+poly W=om*x^11-B+w1*x^1+w2*x^2+w3*x^3+w4*x^4+w5*x^5+w6*x^6+w7*x^7+w8*x^8+w9*x^9+w10*x^10;
+poly L=x^2*C/y-b; poly P=x*W-(b^2)/4;
+poly Hdiff=2*x*diff(P,x)-3*P-B*x+(3/2)*L*(L+b);
+poly Rfree=(3/16)*(L^2)*(L*(L+2*b)-4*B*x)-eta*x^2*(b*L/2+B*x);
+poly UF=P*Hdiff-Rfree;
+UF=subst(UF,eta,w1); W=subst(W,eta,w1);
+must(xc(UF,24)==0,"top");
+poly band,piv,val; poly solB;
+band=xc(UF,23); piv=diff(band,w10);
+must(deg(piv)==0 && piv!=0,"pivot_w10");
+val=-subst(band,w10,0)/piv; UF=subst(UF,w10,val); W=subst(W,w10,val);
+band=xc(UF,22); piv=diff(band,w9);
+must(deg(piv)==0 && piv!=0,"pivot_w9");
+val=-subst(band,w9,0)/piv; UF=subst(UF,w9,val); W=subst(W,w9,val);
+band=xc(UF,21); piv=diff(band,w8);
+must(deg(piv)==0 && piv!=0,"pivot_w8");
+val=-subst(band,w8,0)/piv; UF=subst(UF,w8,val); W=subst(W,w8,val);
+band=xc(UF,20); piv=diff(band,w7);
+must(deg(piv)==0 && piv!=0,"pivot_w7");
+val=-subst(band,w7,0)/piv; UF=subst(UF,w7,val); W=subst(W,w7,val);
+band=xc(UF,19); piv=diff(band,w6);
+must(deg(piv)==0 && piv!=0,"pivot_w6");
+val=-subst(band,w6,0)/piv; UF=subst(UF,w6,val); W=subst(W,w6,val);
+band=xc(UF,18); piv=diff(band,w5);
+must(deg(piv)==0 && piv!=0,"pivot_w5");
+val=-subst(band,w5,0)/piv; UF=subst(UF,w5,val); W=subst(W,w5,val);
+band=xc(UF,17); piv=diff(band,w4);
+must(deg(piv)==0 && piv!=0,"pivot_w4");
+val=-subst(band,w4,0)/piv; UF=subst(UF,w4,val); W=subst(W,w4,val);
+band=xc(UF,16); piv=diff(band,w3);
+must(deg(piv)==0 && piv!=0,"pivot_w3");
+val=-subst(band,w3,0)/piv; UF=subst(UF,w3,val); W=subst(W,w3,val);
+band=xc(UF,15); piv=diff(band,w2);
+must(deg(piv)==0 && piv!=0,"pivot_w2");
+val=-subst(band,w2,0)/piv; UF=subst(UF,w2,val); W=subst(W,w2,val);
+band=xc(UF,14); piv=diff(band,w1);
+must(deg(piv)==0 && piv!=0,"pivot_w1");
+val=-subst(band,w1,0)/piv; UF=subst(UF,w1,val); W=subst(W,w1,val);
+band=xc(UF,13); piv=diff(band,B);
+must(deg(piv)==0 && piv!=0,"pivot_B");
+val=-subst(band,B,0)/piv; UF=subst(UF,B,val); W=subst(W,B,val);
+solB=val;
+must(xc(UF,0)==0 && xc(UF,1)==0 && xc(UF,2)==0 && xc(UF,3)==0,"low_four");
+for(int k=13;k<=24;k++){must(xc(UF,k)==0,"high");}
+poly etasol=xc(W,1); poly w2sol=xc(W,2); poly target=solB*etasol; ideal rows;
+for(k=2;k<=10;k++){rows[k-1]=xc(UF,k+2);}
+// top-down P coefficients P^TD_k = [x^k]P, k=0..2N (as polynomials in c,b over the field)
+list PTD; for(k=0;k<=12;k++){PTD[k+1]=xc(x*W-(b^2)/4,k);}
+// ---- universal bottom-up recursion, numerator form, from the TD jets ----
+poly G=(3/2)*L*(L+b)-B*x; G=subst(G,B,solB);
+poly R=(3/16)*(L^2)*(L*(L+2*b)-4*B*x)-eta*x^2*(b*L/2+B*x); R=subst(R,B,solB); R=subst(R,eta,etasol);
+list NB; intvec ee; for(k=0;k<=24;k++){NB[k+1]=poly(0); ee[k+1]=0;}
+NB[1]=-(b^2)/4; NB[2]=-solB; NB[3]=etasol; NB[4]=w2sol;
+for(k=4;k<=24;k++){ee[k+1]=2*(k-3);}
+poly acc; int i;
+for(k=4;k<=24;k++){
+  acc=0;
+  for(i=1;i<=k-1;i++){ acc=acc+(k-3)*NB[i+1]*NB[k-i+1]*b^(2*(k-4)-ee[i+1]-ee[k-i+1]); }
+  for(i=1;i<=k;i++){ acc=acc+xc(G,i)*NB[k-i+1]*b^(2*(k-4)-ee[k-i+1]); }
+  acc=acc-xc(R,k)*b^(2*(k-4));
+  NB[k+1]=acc*2/(k-3);
+  print("NUM k="+string(k)+" terms="+string(size(NB[k+1])));
+}
+ring rsmall=31991,(c1,c2,c3,c4,b),wp(1,2,3,4,6);
+number d=6434;
+ideal rows=imap(r,rows); poly target=imap(r,target); poly Bsol=imap(r,solB); poly eta=imap(r,etasol); poly w2=imap(r,w2sol);
+list PTD=imap(r,PTD); list NB=imap(r,NB);
+number y=(d+6)/22;
+poly Lpivot=4*eta+3*b*c4/y;
+print("ROWS_BUILT nrows="+string(size(rows)));
+// weights of the numerators (homogeneity check): wt(P_k)=2N-k, wt(N_k)=2N-k+N*e_k
+for(k=4;k<=24;k++){ if(NB[k+1]!=0){ if(deg(NB[k+1])!=12-k+6*(2*(k-3)) or homog(NB[k+1])==0){print("WEIGHT_FAIL k="+string(k)+" deg="+string(deg(NB[k+1])));} } }
+print("WEIGHTS_CHECKED");
+int tt=timer; ideal gg=std(rows); print("STD_DONE dim="+string(dim(gg))+" vdim="+string(vdim(gg))+" time="+string(timer-tt));
+print("T_in_J="+string(reduce(target,gg)==0)+" T2_in_J="+string(reduce(target^2,gg)==0));
+poly dif; int m; int mx;
+for(k=4;k<=24;k++){
+  if(k<=12){ dif=b^(2*(k-3))*PTD[k+1]-NB[k+1]; } else { dif=NB[k+1]; }
+  m=0; while(reduce(b^m*dif,gg)!=0 && m<=60){m++;}
+  print("BU_MEMBERSHIP k="+string(k)+" zero="+string(dif==0)+" min_bpower="+string(m)+" (m>60 means not found)");
+}
+print("LPIVOT_in_J="+string(reduce(Lpivot,gg)==0)+" LPIVOT_terms="+string(size(Lpivot))+" LPIVOT_wt="+string(deg(Lpivot)));
+m=1; while(reduce(Lpivot^m,gg)!=0 && m<=40){m++;} print("LPIVOT_power_in_J="+string(m));
+m=1; while(reduce(Bsol^m,gg)!=0 && m<=40){m++;} print("B_power_in_J="+string(m));
+m=1; while(reduce(eta^m,gg)!=0 && m<=40){m++;} print("eta_power_in_J="+string(m));
+m=1; while(reduce(b^m,gg)!=0 && m<=60){m++;} print("b_power_in_J="+string(m));
+print("CUSTODY_BU_DONE"); quit;

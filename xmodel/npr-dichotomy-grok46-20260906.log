@@ -1,0 +1,17 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll verify the charged-input hashes first, then read the sealed NPR claim, roster, and FALLACY-v2 before checking the proof and 66-row corollary.Hashes next: I'll build the receipt manifest with awk and run `sha256sum -c` before reading anything else.Hashes look aligned with the receipt. Next I’ll confirm them with `sha256sum -c` and inspect the roster schema so the 66-row corollary can be computed mechanically.Hashes matched. I’ll compute `(n₁, m₁, semigroup, genus)` on all 66 rows and pull Moh Prop 3.1 so the Newton-polygon line can be checked against the actual support.Roster fields are in place. I’ll compute the 66-row census next and look up Moh Prop 3.1 for the Newton-polygon support.Census matches 66/66. I’ll write the notes and the sealed report next, after a disk check.Disk is still adequate. Writing the notes and the 4–12KB sealed report next.**NPR CONFIRMED (structure).** Covering (a) ∨ (b) ∨ (c) holds for this Newton polytope (`Q ≢ 0`). Exclusive “exactly one” is false and does not collapse the covering. Corollary arithmetic is **66/66**. Kill potential on the residual rows is **NONE**.
+
+Charged inputs verified (`sha256sum -c` **3/3 OK**). Report: `xmodel/npr-dichotomy-grok46-20260906.md` (sealed, 11672 body bytes). Notes: `box/npr-20260906/`.
+
+**Proof.** The ultrametric inequality is fine. “Equality unless two vertices” is the unique-min vs tie split; on this polygon a hypotenuse tie is exactly the two outer vertices (`gcd(n₁,m₁)=1`). The Weierstrass support in weights `(n,m)=(3g,2g)` has unique max weight `6g` on `(2,0)` and `(0,3)`, every extra monomial strictly below. The jump from that `(n,m)`-polygon to an *arbitrary* divisorial `ν` is the missing step: the `(n,m)` face does not by itself control every `L(i,j)=iν(F)+jν(G)`. It fills from this polytope (third-quadrant dual cone = unique outer edge; mixed signs unique at one outer vertex). Dual-cone scans: 0 covering failures.
+
+A tie is case (b). Exclusivity fails when the two principal initials do not cancel, so (b) and (c) both hold. Exhibit: `Φ=v³−u²`, `F=x³`, `G=y²`, `Q=y⁶−x⁶`, `ν=−deg`. The useful theorem is covering OR: off the ray, a negative order forces (c).
+
+**Corollary (mechanical, `source.{n,m}`).** `gcd=1`, semigroup `⟨n₁,m₁⟩`, Newton-genus `(n₁−1)(m₁−1)/2 ≥ 1` on **66/66**; parent `(n₁,m₁)` = child on 66/66; genus histogram `1:40, 2:2, 3:11, 4:4, 6:3, 9:3, 12:2, 27:1`. That number is Kouchnirenko/generic-fibre genus, not a smoothness witness for every special `s`.
+
+**What it adds.** A structural fact about the pencil `{Φ=−s}` (one place at infinity, that semigroup, Newton-genus ≥ 1), not a new numerical necessary condition on any of the 65. (a) is finite-pole typing; (b) is the characteristic ray; (c) would be a leaf-order screen, not run (leaf orders uncharged).
+
+**RH / AM.** AM would need `Γ_s ≅ A¹` as an embedded line (then `min(n₁,m₁) ∤ max` with both ≥ 2, `gcd=1`); the rows do not assert that, and genus ≥ 1 is the opposite. RH would need a source curve `C → Γ_s` with known genera, degree, and ramification; the 66 are not polynomial pairs, so there is no such `C`. For an actual automorphism RH is tautological.
+
+No `charge_basis=` line (no new exit-price assertion).
+DIVERT path=xmodel/npr-dichotomy-grok46-20260906.md status=CLEAN_SEALED body_bytes=11672 body_sha256=df2abea7f85dccf4e53ddf2cc2413741da04bdc563774382202dfef1b3603ce8

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-small-polynomial-lift-gate-fable5-20260906/gate_controls.py", line 214, in <module>
+    req(D0==(D0exp if not m('--mutate-D0') else ksc(kpow(RHO,5),6)),"C6b %s: D0=a_0'''(-1) constant unit %s"%(face,D0))
+  File "/home/ubuntu/jc2/box/d125-small-polynomial-lift-gate-fable5-20260906/gate_controls.py", line 79, in req
+    if not ok: raise AssertionError("FAIL "+msg)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: FAIL C6b squarefree: D0=a_0'''(-1) constant unit (Fraction(162, 1), Fraction(0, 1))
+Command exited with non-zero status 1
+1.72 s 41680 KB

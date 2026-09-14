@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Nothing further is needed. The gate is complete and validated at 12:06Z, ahead of the 12:25Z deadline.
+
+**Outcome: PASS on all four gated claims**, each in exactly the scope the producer stated. Report: `xmodel/linear-c-transverse-gate-fable5-20260906.md` (11,939 bytes, SHA256 e34021ea…, ends with a unique standalone BODY-END line, charge-basis validator rc 0 with no charge line declared).
+
+**What I verified independently**
+
+- **Custody.** All eight charged inputs hash-match the lane index. The primary report is 8cf51bd8…. The repo copy of the producer script is byte-identical to the charged copy, and its normal-mode replay reproduces the shipped JSON hash 4f21b2ef….
+- **Source reconstruction (own parsers, not producer asserts).** 245 base names plus target_a,b give 247 base coordinates. 192 C names, disjoint. 439 occurring of 444 declared. Expanding h symbolically gives 178 slots, 18 constant and 160 nonconstant with degree at most 31. The W=0 slots are exactly (0,0) nonconstant and (1,0)=1. The degree-33 part is exactly H³. The Hfact names coincide with the 160 nonconstant slots. So the prompt's census clarification is confirmed from metadata, and the h-lift theorem is sound.
+- **AP paper, read directly.** Lemma 4 is the char-0 Jacobian-rank-1 criterion. Lemma 5 is stated for an arbitrary field with f,g in k[h] over k itself. The producer's interface is accurate, and the theorem would survive a closure-only version anyway since kernel dimension is extension-invariant.
+- **Claim (1).** Every proof step holds. Mod-p ranks at three actual base points are 191. A new control inside the actual V_C shows the H⁶ top is load-bearing: the A3c_97_0 basis polynomial P with G=P² has zero Jacobian and monic quadratic restriction but no W⁶⁶ term.
+- **Claim (2).** Correct as a conditional theorem. The degeneracy locus of the (C,a) block contains every base with D constant, not only the producer's D=0,b=0 example. Both such samples give rank 191.
+- **Claim (3).** Nullstellensatz plus adjugate argument is correct, including nonreduced base change. No constant 191-minor exists or is claimed.
+- **Claim (4).** The desk lemma is correct. I instantiated the W-adapted basis on the actual source and checked 190 distinct positive rows, lower triangularity, and diagonal −2r at two actual G samples. Negative controls with zero or linear restriction give 190 zero diagonals.
+
+**Typed OPEN items** carried in the report: uniform rank of the positive-only C block off Keller bases, an explicit constant 191-minor or Bezout inverse, and symbolic emission of the 190-pivot transform.
+
+**Artifacts.** Owned read-only box `box/linear-c-transverse-gate-fable5-20260906/` holds the three checker scripts, their outputs, the replay JSON, and the page-5 lemma excerpt, with hashes listed in the report. Nothing was committed and no shared ledger, worker, or other lane's files were touched.
+DIVERT path=xmodel/linear-c-transverse-gate-fable5-20260906.md status=CLEAN body_bytes=11939 body_sha256=e34021ea647817dfe1bdeca36f300888b3799532137b476a3616e5ad310c2929

@@ -1,0 +1,24 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete and sealed.
+
+## Verdicts
+
+| | verdict |
+|---|---|
+| R025, R026, R027, R028, R057, R058 | **CONFIRMED-WITH-FIX** — SURVIVES stands |
+| R063 | **CONFIRMED (DEAD)** — residual stays 64 |
+
+**(1) The carry rule is true as printed.** Prop 5.3 is on **p.180** (p.181ff is its proof). It takes *any* factor with `V_r > d_r/(n−M_r)` at `D_r` (r≥2) to `D_{r−1}` — the **minimal** disc on that factor's cluster — at the Def 5.1(3) radius, and the extended tower is again major. Since δ_{r−1} depends on V_j only for j≥r, and both D'_3 packets carry V_3=1, both land at the same prescribed δ'_2. I re-derived the ℓ-shifted Def 5.1(3) independently and it reproduces **all 28 radii on all 7 rows** from (n,m,M,d,V) alone.
+
+**Two fixes** (neither moves a verdict):
+- The fractional values are **not truncation artifacts**. I proved: an unsplit pass through a prescribed level gives exactly the same final radius as skipping it (7/8 both routes at R025; 52/27 at R057; −2/69 at R063). So 75/4 and 128/9 are the honest values of the **no-split branch r=P₂**, which the producer's own §3.1 table already lists and rejects on residues — its §4 narrative contradicts its own table.
+- The parting bound is **Q_i = deg q** (Prop 4.6(2)–(4)), not "r−1". They coincide at 4 and 3 here and *not* at R063 (Q₂=7, r−1=13).
+
+**(2) Independent recomputation** (own driver, `box/six-rows-gate-20260906/`): every branch table, residue rejection (r=4,5 and r=2,4), the D+D minor-floor rejection, and all eight ODE faces reproduce exactly. The C witness needed exact `sp.div` — quotient 3√5/5, remainder 0; `simplify` alone leaves it looking non-constant. Complete-sum sets diff **identically** against `audit.json` (its only extra entry, D+D=8, carries `xu_minor_bound_ok: false`). `descend_own` re-run: singleton V-vectors on all 7 rows.
+
+**(3) R063 under exactly the same rule, no special casing:** 6 configurations, **one** pattern (5,3,3,3), **one** sum **71/4**, and **zero** pass the residue test. No integral complete sum exists. The carry issue cannot even arise — deg p₃ = V'₃ = 7 leaves no unselected sibling. I also supplied the (5,3,3,3) face the r063 gate omitted (`D(14,7, z⁵(z³−c)³, z(z³−c)(z³−c/2)) = −(21c²/2)p`), so the exclusion is arithmetic, not a vacuous face.
+
+The asymmetry is structural, not instrumental: A₂ = den(L'₂δ'₂) is 1 for the six (δ'₂ = 0 or 1) and 3 for R063 (δ'₂ = −1/3), and P₂/Q₂ ∈ ℤ only at R063. Sensitivity runs show relaxing either would refute the kill (12 and 9 become attainable) — both are print-derived, and by the new identity `P_i/Q_i = d_i/(n−M_i)` the forbidden multiplicity *is* the major/minor boundary, so that one is doubly grounded.
+
+Report: `xmodel/six-rows-gate-opus5-20260906.md` (body 19,876 B, sealed, PASS; `charge_basis=ABSENT`, correct — no new exit price). Disk 58 KB total; ~95 min.
+DIVERT path=xmodel/six-rows-gate-opus5-20260906.md status=CLEAN_SEALED body_bytes=19876 body_sha256=c54cce92255d19c885a66c79c44fb7618d4ba3f729bc3ffed6fb6eb50a8d568a

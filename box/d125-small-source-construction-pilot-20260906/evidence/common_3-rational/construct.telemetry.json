@@ -1,0 +1,63 @@
+{
+  "argv_count": 9,
+  "argv_sha256": "a25309067365e3867bab00b2cd8eafc22dcdf70397b1945d703a1dcf41e6eb90",
+  "caps": {
+    "cpu_seconds": 180,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 8589934592,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 0.25,
+    "wall_seconds": 180.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-rational",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906",
+  "max_observed_group_rss_bytes": 23388160,
+  "pgid": 2086,
+  "pid": 2086,
+  "resource": null,
+  "runner_exit_code": 0,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=69938ee6-48bb-4e45-bdf2-efb08c655368;start_ticks=45225",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 0,
+    "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-rational/construct.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 1750,
+    "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-rational/construct.stdout",
+    "sha256": "60b2c3d27adb1d56e1863ce34305a3c316322d5d12767f6111b226bc262f6351"
+  },
+  "telemetry_path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/common_3-rational/construct.telemetry.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-06T23:42:52.661173Z",
+  "utc_start": "2026-09-06T23:42:50.563947Z",
+  "wall_elapsed_seconds": 2.09723968
+}

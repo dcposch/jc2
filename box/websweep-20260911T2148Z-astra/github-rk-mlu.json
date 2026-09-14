@@ -1,0 +1,248 @@
+[
+  {
+    "sha": "1ee87113617985d82ffa9e48ff45dff17f9de5b2",
+    "node_id": "C_kwDOTqSOWdoAKDFlZTg3MTEzNjE3OTg1ZDgyZmZhOWU0OGZmNDVkZmYxN2Y5ZGU1YjI",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-11T18:26:39Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-11T18:26:39Z"
+      },
+      "message": "Credit the lift to its authors, and fix three stale texts\n\nWork package 17 of milestone 0.7, the remaining findings of the audit of\n0.7.0rc3. Documentation and one test docstring; no code and no figure.\n\ndocs/references.md credited Prellberg with the compression and the lift.\nHis version 2 credits de Bondt and van den Essen with the symmetric lift,\ncalls the polarization subalgebra it goes through known, and claims the\ncollision-generated non-injective Keller subspace and the control it\ngives over that lift, left unchanged. The same page says the lift is\ntheirs a hundred lines further down, so this is a page disagreeing with\nitself and with its source at once, which is the second time in this\nmilestone and the second time an audit found it.\n\nThe density paragraph set his forty-variable quartic against this\nproject's thirty-eight and left out his thirty-eight with 340 monomials,\nwhich the section on version 2 states correctly. Thirty-eight against\nthirty-eight is the comparison and it is now the one made: 340 against\n386, with the two at forty beside it, 350 against 398.\n\ndocs/contracts.md named Corollary 7's route-specific minimality for forty\nin both places and not Proposition 8's for thirty-eight. Both are stated\nnow, each as a statement about one route, each as the paper's.\n\ndocs/api.md and one test docstring still justified a base of at least\nthree by the measure being zero exactly on a multi-affine map. 0.7.0rc3\nremoved that reason from the code and the contract page and left these\ntwo. It holds at one and at two, where every term is positive, and fails\nonly at zero; the reason for three is the falling measure and nothing\nelse.\n\nTwo smaller ones. The entry for version 2 of arXiv:2608.12543 moves to\n0.7.0rc3, where the work was done -- it was written while 0.7.0rc2 was\nthe open heading. And a test docstring called itself marked slow while\ncarrying no marker: the sentence goes rather than the marker being added,\nbecause deselecting that test would leave the figures on three pages with\nnothing checking them, and some seconds is a price worth paying for that.\n\nNone of these five was reachable by a gate. make measure checks the\nfigures on the references page and not the sentences around them, and no\ntest reads a paragraph for an attribution. Every one was found by\nreading, and four of the six errata entries this milestone has are of the\nsame kind.",
+      "tree": {
+        "sha": "3611ae12573802072e0898060be62a60e887a456",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/3611ae12573802072e0898060be62a60e887a456"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/1ee87113617985d82ffa9e48ff45dff17f9de5b2",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqkR/gACgkQpYdnzilV\ndCUndg/6AxXgBOLktaOUjw8EubA8gz1Q8fJLbfXkk31tSvFSt9nVKwRuDUcQxl0P\nJpQ5s+1WDnAjEy0VtzxQRBJFSRBef1BqNsWTlQDp05FvjRAlfKEBVV5O7Sjy9mwL\nJbdb+rk59KoR8LtcQ0pSGOXPP0rV/1m/VPprgAW4NRSsml5e2N3vxikVWDAs5U19\nQgqPf5GdE+NofjUWwCJOG+QnQ3We0DHd4QnFyLelMLOTYvX7Z8hUjQChmqCxoGAS\nSCoYraRUP2Z7nt07PJLdv5CtGFkOKxOu6uDRQc3V0QvRyrB91fb2VD/MB6t8Ix5Z\nlZ1NHv8ANmG9XZlx3FX4jrH2yNrUJ1YexYGtXMHcjVwiS4I5+wZ2wAJQeLmt7UQO\nfgWvdAbq9VWtKYkWQiCoxGEmxTjTBAasnqmh5jUqITfp09SyPFQwZO7IO04rv6My\nIKTCm4YQHBA0jX6yvi/IhtCajfxdC6RPI4f2K8Nl3yOuNWDpGPSqDBeUiJ7bOyvr\njU49CSU5yVLjpQsYjC3qYZz9Icq2a+EmS4ALX7s/wbAOGeZNwi/h1CJLqnGwqA5P\naYDFWYdmLDliIMGMw8L9OriIYfHXDmqZ6h0UunNLDHd5G6AgrOwFSJuBKjy/RyRK\nTF4sRv/rNUeWPLr7A7pQER8Of4oE9/0QRhDRobq0qbSyh1kwPbw=\n=4QKS\n-----END PGP SIGNATURE-----",
+        "payload": "tree 3611ae12573802072e0898060be62a60e887a456\nparent ae42d64f7589c8c92507ca973eb330f5383bdb82\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789151199 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789151199 +0200\n\nCredit the lift to its authors, and fix three stale texts\n\nWork package 17 of milestone 0.7, the remaining findings of the audit of\n0.7.0rc3. Documentation and one test docstring; no code and no figure.\n\ndocs/references.md credited Prellberg with the compression and the lift.\nHis version 2 credits de Bondt and van den Essen with the symmetric lift,\ncalls the polarization subalgebra it goes through known, and claims the\ncollision-generated non-injective Keller subspace and the control it\ngives over that lift, left unchanged. The same page says the lift is\ntheirs a hundred lines further down, so this is a page disagreeing with\nitself and with its source at once, which is the second time in this\nmilestone and the second time an audit found it.\n\nThe density paragraph set his forty-variable quartic against this\nproject's thirty-eight and left out his thirty-eight with 340 monomials,\nwhich the section on version 2 states correctly. Thirty-eight against\nthirty-eight is the comparison and it is now the one made: 340 against\n386, with the two at forty beside it, 350 against 398.\n\ndocs/contracts.md named Corollary 7's route-specific minimality for forty\nin both places and not Proposition 8's for thirty-eight. Both are stated\nnow, each as a statement about one route, each as the paper's.\n\ndocs/api.md and one test docstring still justified a base of at least\nthree by the measure being zero exactly on a multi-affine map. 0.7.0rc3\nremoved that reason from the code and the contract page and left these\ntwo. It holds at one and at two, where every term is positive, and fails\nonly at zero; the reason for three is the falling measure and nothing\nelse.\n\nTwo smaller ones. The entry for version 2 of arXiv:2608.12543 moves to\n0.7.0rc3, where the work was done -- it was written while 0.7.0rc2 was\nthe open heading. And a test docstring called itself marked slow while\ncarrying no marker: the sentence goes rather than the marker being added,\nbecause deselecting that test would leave the figures on three pages with\nnothing checking them, and some seconds is a price worth paying for that.\n\nNone of these five was reachable by a gate. make measure checks the\nfigures on the references page and not the sentences around them, and no\ntest reads a paragraph for an attribution. Every one was found by\nreading, and four of the six errata entries this milestone has are of the\nsame kind.\n",
+        "verified_at": "2026-09-11T18:27:17Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/1ee87113617985d82ffa9e48ff45dff17f9de5b2",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/1ee87113617985d82ffa9e48ff45dff17f9de5b2",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/1ee87113617985d82ffa9e48ff45dff17f9de5b2/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ae42d64f7589c8c92507ca973eb330f5383bdb82",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/ae42d64f7589c8c92507ca973eb330f5383bdb82",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/ae42d64f7589c8c92507ca973eb330f5383bdb82"
+      }
+    ]
+  },
+  {
+    "sha": "ae42d64f7589c8c92507ca973eb330f5383bdb82",
+    "node_id": "C_kwDOTqSOWdoAKGFlNDJkNjRmNzU4OWM4YzkyNTA3Y2E5NzNlYjMzMGY1MzgzYmRiODI",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-11T14:58:11Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-11T14:58:11Z"
+      },
+      "message": "Rerun the exhaustiveness claims after the offer widened\n\nDocumentation only, and it belongs with work package 16 rather than\nafter it. Everything work packages 6 and 7 established is a negative\nclaim over untargeted_candidates, and WP 16 widened that offer. A\nnegative claim over a space that has since grown is exactly the error\nthe pruning rule of peel was making, so the measurements were made again\ninstead of assumed to carry.\n\nNothing moved. The candidate counts at all six maps of the published\nchain are what they were, the exhaustive searches under the bound of\neleven give 2, 33, 299 and 2720 states again with no step failing the\nweight rule, the reach from Alpoege's map and the rejoining table are\nidentical, and every row of WP 7 that was rerun -- the lever counts, the\nanchor-widened searches at ten, eight and seven, and the order\nmeasurement -- is unchanged. The five shards at n = 5 and the\nanchor-widened row at n = 6 are long and are named as not rerun.\n\nThe reason it does not move is the part worth keeping. The two carrier\nsets differ only on a dependency cycle, and a chain of BCWSteps does not\nmake one: a bought coordinate is X_u + P with P over the coordinates\nalready there, so the carriers a reduction produces never depend on each\nother. The widening bites on a map somebody hands in and not on one this\nlibrary builds, which is why the audit's two counterexamples are both\nsupplied maps.\n\nThat also says what a future widening of the targeted enumerator would\nhave to check, and it is not the same thing: that one changes which\ncandidate survives deduplication, so it can remove a chain rather than\nonly add one.",
+      "tree": {
+        "sha": "d50f70b416e2d9cc26f711b2eab121f8cec5abd6",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/d50f70b416e2d9cc26f711b2eab121f8cec5abd6"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/ae42d64f7589c8c92507ca973eb330f5383bdb82",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqkFw0ACgkQpYdnzilV\ndCUaSg//ZfXw4G/NXIW7ma2HKthtzgzKPDEtNTq2HbohZsSQFMjG+Flma9ykxlVU\nmQ2H6mFevVqd8gMmPG/ZXmRx2IC91zTeqsSzV7En7g9v1D0qZVLAekfqihA7RvJJ\nPCwUv8ZCaHKVo/BFrbiOF01uKDGM00cW4+Ozpy5aUulc1earCqjaQcJrKbe03DMs\n8LNyus4uVsIzmZelzWhTV47oW0tqN6Jc9oQ0/12w/1gvfmracPnbuZ5jg90lJh8F\nYSMWNX1Znfk3LbcNdRwXCaUpc96gKKBC4R4BbgAhnrQrpGdQCUh1GDODc0RirLAN\nr2LPiNLiz3umh5vUEWjubpC3ZdP9BUHflE7/d6SiDu5lRp80QbrBorKi8MpDo6bE\nCZzqr//ozZDcqxQ+UayYL0orzNU4zGHAA+4PepBgt5sPgf2QwlmKwaJqANsqQq9X\n3cfSUyIpA9GTl2PBq/HIMIAw1Wx+AfMX2NY9ItJNGxJBDqBKIM2P4+FuuDzOPHe5\naxNOTdW/ALMsAGwUg40xiAUS8mq/SEDKtt4jMh+MBBiFU8t5tTpbxSaHK/nemflB\nJsgPJPy/HDTVodpZ1eT7+gz/sUR7MY1l8avGOJdjZxbuPX5VCA4gute+0hCHsgbC\nsxYdFu9s0pBqFopKW4tjiXzv8rlPgjuQAyGv9X1JdvhKy9ihYC4=\n=UaQs\n-----END PGP SIGNATURE-----",
+        "payload": "tree d50f70b416e2d9cc26f711b2eab121f8cec5abd6\nparent d09d2fe9c5b825c9cf808305655c343793c10f79\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789138691 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789138691 +0200\n\nRerun the exhaustiveness claims after the offer widened\n\nDocumentation only, and it belongs with work package 16 rather than\nafter it. Everything work packages 6 and 7 established is a negative\nclaim over untargeted_candidates, and WP 16 widened that offer. A\nnegative claim over a space that has since grown is exactly the error\nthe pruning rule of peel was making, so the measurements were made again\ninstead of assumed to carry.\n\nNothing moved. The candidate counts at all six maps of the published\nchain are what they were, the exhaustive searches under the bound of\neleven give 2, 33, 299 and 2720 states again with no step failing the\nweight rule, the reach from Alpoege's map and the rejoining table are\nidentical, and every row of WP 7 that was rerun -- the lever counts, the\nanchor-widened searches at ten, eight and seven, and the order\nmeasurement -- is unchanged. The five shards at n = 5 and the\nanchor-widened row at n = 6 are long and are named as not rerun.\n\nThe reason it does not move is the part worth keeping. The two carrier\nsets differ only on a dependency cycle, and a chain of BCWSteps does not\nmake one: a bought coordinate is X_u + P with P over the coordinates\nalready there, so the carriers a reduction produces never depend on each\nother. The widening bites on a map somebody hands in and not on one this\nlibrary builds, which is why the audit's two counterexamples are both\nsupplied maps.\n\nThat also says what a future widening of the targeted enumerator would\nhave to check, and it is not the same thing: that one changes which\ncandidate survives deduplication, so it can remove a chain rather than\nonly add one.\n",
+        "verified_at": "2026-09-11T14:58:27Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/ae42d64f7589c8c92507ca973eb330f5383bdb82",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/ae42d64f7589c8c92507ca973eb330f5383bdb82",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/ae42d64f7589c8c92507ca973eb330f5383bdb82/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d09d2fe9c5b825c9cf808305655c343793c10f79",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/d09d2fe9c5b825c9cf808305655c343793c10f79",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/d09d2fe9c5b825c9cf808305655c343793c10f79"
+      }
+    ]
+  },
+  {
+    "sha": "d09d2fe9c5b825c9cf808305655c343793c10f79",
+    "node_id": "C_kwDOTqSOWdoAKGQwOWQyZmU5YzViODI1YzljZjgwODMwNTY1NWMzNDM3OTNjMTBmNzk",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-11T14:54:35Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-11T14:54:35Z"
+      },
+      "message": "Ask BCW-10 for a carried factor everywhere it is safe to\n\nWork package 16 of milestone 0.7, the high finding of the audit of\n0.7.0rc3, and the version opens 0.7.0rc4. Two of the three sites are\ncorrected, the third is measured and left, and no figure moves.\n\nPolynomialMap.carrier_indices_for_factors is the shared predicate the\naudit asked for: dF_j/dX_j == 1, which is BCW-10's third clause and the\nwhole of what a step asks of a carried slot. It always contains\ncarrier_indices, which asks for more because it picks out a unipotent\nblock: it drops every coordinate on a dependency cycle and its docstring\nsays it is not maximal. That is the right question for the block and the\nwrong one for a factor.\n\nuntargeted._carried_values asks it now. On\n(x + y^2, y + x + z, z + 2x + y^2, w + y^4) reduce_to_degree3 bought a\ncoordinate where one step using the first coordinate twice drops the\ndegree from four to three and buys nothing; it takes that step now.\n\npeeling._stranded asks it now, and this is the release blocker rather\nthan a lost dimension. The rule prunes a branch standing one coordinate\nabove the source when the source has no carrier, since a further step\ncould then only buy. carrier_indices is empty on a linear map whose\ncoordinates depend on each other in a cycle although every one of them\nsatisfies BCW-10, so the premise was false: the audit found peel\nreporting an exhausted space with a verified two-step chain inside its\nbounds, and an exhausted space is a claim. Both maps are regression\ntests.\n\nsearch.anchors and enumerate_candidates still ask the narrower question,\nand that is a measurement and not an oversight. Swapping the predicate in\nthere does not widen the space. _partner lets a carrier take a slot a\npool name would otherwise fill and found.setdefault keeps whichever came\nfirst, so a chain the search used to find drops out: the unweighted\ncontrol of SEA-14 exhausts at 2667 states with nothing, at every budget\ntried. Offering both forms is the correction, it is the same one work\npackage 10 made for the multi-affine walk, and it moves SEA figures, so\nit is its own package. The reason sits in the code beside the line that\nwas not changed.\n\nI deferred this fix twice before, in work packages 10 and 13, to keep\n0.6's figures still. The price I was avoiding is zero and was measured\nbefore this change: reduce_to_degree3 reaches the same thirteen from the\nnormalized Alpoege map in the same seven steps and the same map, and the\nmulti-affine walk reaches the same 19, 23 and 24. Deferring it let the\nsame conceptual error reach a place where it produced a false report.\n\nUNT-9, UNT-12 and REV-7 say which predicate they mean. REV-7's paragraph\nsays why the pruning is where the narrower set stopped being a narrower\ndecision and became a wrong answer.",
+      "tree": {
+        "sha": "c5adf3e3ce90048d9c763b560bd29dfea6427b34",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/c5adf3e3ce90048d9c763b560bd29dfea6427b34"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/d09d2fe9c5b825c9cf808305655c343793c10f79",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqkFkAACgkQpYdnzilV\ndCV23Q/9EiOb5AlcPtsUvKdcA3q2vOV7s9aVw++8CmmYikzHLL4kxSrKaH3/kE5q\nK4BB+GmipNF5Z1lv2g4Z01Bl/TXx5cMK6lKdjPVY6rpHjsJJ9Z5gRUSkrzj/WBjb\nGWd4H0WHCyicpVMHg7c+QG9GFBVF4sGgaIepwtvrRri073VluhqmUDaJ9B+yLOsl\nyeEn7jPhbZRjnxNQeyzde1okBUcxwDyrzltnVfGgBeimUF4R2LdG2wYS2PMRoZaE\n442NB75gRKp+lO0XNQeGpla6BDGldh2dp1V2zJOi2taqe6B/PM5WhDeU4sks4+Mz\nlnN1k5TFshAHSrd6+ufZkXnVaMOUF3ApiNBTfGc3jDkHBP/y7a2vW4Bavv8+zs+R\nthIkG2ZmGY3YM+ghPlkVakz00GNmWJoQjGgjmj6CSjKZ3Sro9v2Z1QbI9P3cCs3W\nwKom0ZAf/L6uyJQS7UqHHXqZ2lqs+bWjDjJN47r2AH1QlAF/wz7jYVVEFU3GN6r1\nPR9SlkSiqMCBmKrmXQbnykCAXdL229CYpORSgvl+eN3cmSWgVpKBgvIMqDk5aUNe\nx+P+wUi3s3rRHH/qgWXfQVuK2RzUeBbCsySzf4srBdJcjNUDsvCymrNPUz5gDTgs\n6PQ1m3bGrKkF5Qw5Sa6depfc0G/MZlmp/3w4afQNb7VPz8CBXJc=\n=zua5\n-----END PGP SIGNATURE-----",
+        "payload": "tree c5adf3e3ce90048d9c763b560bd29dfea6427b34\nparent 26b6862568693cb88b9cd7a9aa89f3453f546c2d\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789138475 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789138475 +0200\n\nAsk BCW-10 for a carried factor everywhere it is safe to\n\nWork package 16 of milestone 0.7, the high finding of the audit of\n0.7.0rc3, and the version opens 0.7.0rc4. Two of the three sites are\ncorrected, the third is measured and left, and no figure moves.\n\nPolynomialMap.carrier_indices_for_factors is the shared predicate the\naudit asked for: dF_j/dX_j == 1, which is BCW-10's third clause and the\nwhole of what a step asks of a carried slot. It always contains\ncarrier_indices, which asks for more because it picks out a unipotent\nblock: it drops every coordinate on a dependency cycle and its docstring\nsays it is not maximal. That is the right question for the block and the\nwrong one for a factor.\n\nuntargeted._carried_values asks it now. On\n(x + y^2, y + x + z, z + 2x + y^2, w + y^4) reduce_to_degree3 bought a\ncoordinate where one step using the first coordinate twice drops the\ndegree from four to three and buys nothing; it takes that step now.\n\npeeling._stranded asks it now, and this is the release blocker rather\nthan a lost dimension. The rule prunes a branch standing one coordinate\nabove the source when the source has no carrier, since a further step\ncould then only buy. carrier_indices is empty on a linear map whose\ncoordinates depend on each other in a cycle although every one of them\nsatisfies BCW-10, so the premise was false: the audit found peel\nreporting an exhausted space with a verified two-step chain inside its\nbounds, and an exhausted space is a claim. Both maps are regression\ntests.\n\nsearch.anchors and enumerate_candidates still ask the narrower question,\nand that is a measurement and not an oversight. Swapping the predicate in\nthere does not widen the space. _partner lets a carrier take a slot a\npool name would otherwise fill and found.setdefault keeps whichever came\nfirst, so a chain the search used to find drops out: the unweighted\ncontrol of SEA-14 exhausts at 2667 states with nothing, at every budget\ntried. Offering both forms is the correction, it is the same one work\npackage 10 made for the multi-affine walk, and it moves SEA figures, so\nit is its own package. The reason sits in the code beside the line that\nwas not changed.\n\nI deferred this fix twice before, in work packages 10 and 13, to keep\n0.6's figures still. The price I was avoiding is zero and was measured\nbefore this change: reduce_to_degree3 reaches the same thirteen from the\nnormalized Alpoege map in the same seven steps and the same map, and the\nmulti-affine walk reaches the same 19, 23 and 24. Deferring it let the\nsame conceptual error reach a place where it produced a false report.\n\nUNT-9, UNT-12 and REV-7 say which predicate they mean. REV-7's paragraph\nsays why the pruning is where the narrower set stopped being a narrower\ndecision and became a wrong answer.\n",
+        "verified_at": "2026-09-11T14:55:09Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/d09d2fe9c5b825c9cf808305655c343793c10f79",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/d09d2fe9c5b825c9cf808305655c343793c10f79",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/d09d2fe9c5b825c9cf808305655c343793c10f79/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "26b6862568693cb88b9cd7a9aa89f3453f546c2d",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/26b6862568693cb88b9cd7a9aa89f3453f546c2d",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/26b6862568693cb88b9cd7a9aa89f3453f546c2d"
+      }
+    ]
+  }
+]

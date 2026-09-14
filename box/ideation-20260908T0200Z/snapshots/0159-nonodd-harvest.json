@@ -1,0 +1,146 @@
+{
+  "corrections": [
+    "The frozen provisional centralizer-parent header is historical; its exact lemma is now independently reviewed in15h. This does not promote the new nonodd argument.",
+    "Coefficient ordinary degree G<=23 follows ordG>=2j>=2 even without parity. No arbitrary lower-degree bound is imposed."
+  ],
+  "pins": {
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/accepted-receiver-interface.md": "7dec79af1aa62946b46ecb209a710dd95e1b226b6b78229a3f232160a5385413",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/check.py": "9fac34837695f549a64746bdbf2daae661f1ab09a6971937e82e3644a77a650a",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/custody.json": "53e6d8bc7ca9006be56a8f19bd123039eb6d0f176a426be902899d0b911d8837",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/input-pins.json": "a19cae50acbf2d515ef2f8276b14e53a71e72e60f6ed327580e63d374ece6d4e",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/provisional-odd-source.md": "bf1dfa72a6a3dc8210ed8fd8354bb0d8bcda6dfcc447a1e9ba386048e177955f",
+    "/home/ubuntu/jc2/box/d125-nonodd-cone-discriminator-20260908/replay.json": "a29be3b3840fe26738b7f3b34509ff5608c0c665e5a7f7ff9a860550d6ff95ae",
+    "/home/ubuntu/jc2/xmodel/d125-cone-first-contact-source-astra-20260908.md": "bf1dfa72a6a3dc8210ed8fd8354bb0d8bcda6dfcc447a1e9ba386048e177955f",
+    "/home/ubuntu/jc2/xmodel/d125-minimal-monomial-receiver-composition-astra-20260906.md": "7dec79af1aa62946b46ecb209a710dd95e1b226b6b78229a3f232160a5385413",
+    "/home/ubuntu/jc2/xmodel/d125-nonodd-cone-discriminator-astra-20260908.md": "2b5a5013d4d7284957b0e69d108f4f1ac1a2b7e81648b1dd2f403223f4791732",
+    "/home/ubuntu/jc2/xmodel/d125-nonodd-cone-discriminator-astra-20260908.md.artifact.json": "b4940fc835ac1b411f423a0cd7a4a50dde557cd50651b1ed9a2220732daab1b6"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3293e05df1ae58dc9ac39a54096a4bb03ca13a4ba27e494b6128766eff9d0c91"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--omit-b4"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "e88fbd6c6cb5e8c26cb56aa8256dc066ac9dfecf96e72c4744e07993866fe0ac",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--omit-b2"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "e88fbd6c6cb5e8c26cb56aa8256dc066ac9dfecf96e72c4744e07993866fe0ac",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--partial-constant-shear"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "77a26df9ab2cdc229d666c85f0de8bca202017a4709c513cc0affadc0ffde250",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--wrong-f"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "547f40bd7db682f6d37e7ac508160d1b23112e1bfdbb49043e59bfa49955259f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py"
+      ],
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3293e05df1ae58dc9ac39a54096a4bb03ca13a4ba27e494b6128766eff9d0c91"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--omit-b4"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "e88fbd6c6cb5e8c26cb56aa8256dc066ac9dfecf96e72c4744e07993866fe0ac",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--omit-b2"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "e88fbd6c6cb5e8c26cb56aa8256dc066ac9dfecf96e72c4744e07993866fe0ac",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--partial-constant-shear"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "77a26df9ab2cdc229d666c85f0de8bca202017a4709c513cc0affadc0ffde250",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "box/d125-nonodd-cone-discriminator-20260908/check.py",
+        "--wrong-f"
+      ],
+      "returncode": 1,
+      "stderr_sha256": "547f40bd7db682f6d37e7ac508160d1b23112e1bfdbb49043e59bfa49955259f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Whole nonodd proof/checker read after author IDLE, transaction and all current pins. Free-symbol wedge and Euler controls only. Root checked all five scalar kernels and source combined grading; all-degree/golden/common cases not included. Different-model extension review still required.",
+  "seconds": 0.7714899190468714,
+  "utc": "2026-09-08T01:57:05.864529+00:00"
+}

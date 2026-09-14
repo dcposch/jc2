@@ -1,0 +1,268 @@
+{
+  "block_devices": "{\n   \"blockdevices\": [\n      {\n         \"name\": \"loop0\",\n         \"type\": \"loop\",\n         \"size\": 29777920,\n         \"fstype\": \"squashfs\",\n         \"mountpoints\": [\n             \"/snap/amazon-ssm-agent/13349\"\n         ],\n         \"serial\": null\n      },{\n         \"name\": \"loop1\",\n         \"type\": \"loop\",\n         \"size\": 77586432,\n         \"fstype\": \"squashfs\",\n         \"mountpoints\": [\n             \"/snap/core22/2437\"\n         ],\n         \"serial\": null\n      },{\n         \"name\": \"loop2\",\n         \"type\": \"loop\",\n         \"size\": 52535296,\n         \"fstype\": \"squashfs\",\n         \"mountpoints\": [\n             \"/snap/snapd/27710\"\n         ],\n         \"serial\": null\n      },{\n         \"name\": \"nvme0n1\",\n         \"type\": \"disk\",\n         \"size\": 107374182400,\n         \"fstype\": null,\n         \"mountpoints\": [\n             null\n         ],\n         \"serial\": \"vol09c6e3133f3442e56\",\n         \"children\": [\n            {\n               \"name\": \"nvme0n1p1\",\n               \"type\": \"part\",\n               \"size\": 106299375104,\n               \"fstype\": \"ext4\",\n               \"mountpoints\": [\n                   \"/\"\n               ],\n               \"serial\": null\n            },{\n               \"name\": \"nvme0n1p14\",\n               \"type\": \"part\",\n               \"size\": 4194304,\n               \"fstype\": null,\n               \"mountpoints\": [\n                   null\n               ],\n               \"serial\": null\n            },{\n               \"name\": \"nvme0n1p15\",\n               \"type\": \"part\",\n               \"size\": 111149056,\n               \"fstype\": \"vfat\",\n               \"mountpoints\": [\n                   \"/boot/efi\"\n               ],\n               \"serial\": null\n            },{\n               \"name\": \"nvme0n1p16\",\n               \"type\": \"part\",\n               \"size\": 957350400,\n               \"fstype\": \"ext4\",\n               \"mountpoints\": [\n                   \"/boot\"\n               ],\n               \"serial\": null\n            }\n         ]\n      }\n   ]\n}\n",
+  "boot_id": "749752a4-f5b1-4d56-9500-72793f580440",
+  "classification": "OPERATOR_STOP / NO_COMPLETED_RESULT; neither unit nor properness evidence",
+  "disk_free": "Filesystem        1B-blocks        Used   Available Use% Mounted on\n/dev/root      102888095744 80022532096 22848786432  78% /\n/dev/root      102888095744 80022532096 22848786432  78% /\n",
+  "group_members": [],
+  "hashes": {
+    "/home/ubuntu/t2t3-longsolve/msolve_m5000_wrapper.sh": "324f4e8c8a5b112dbf6051e5bb84aff0d6de4ccc973cfca1919881766145f9b9",
+    "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2-slimgb.sing": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c",
+    "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.labels.tsv": "ef8083969910b3709e084b0285d21e5a87328055a77accc3d8aacc7c895d5344",
+    "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.ms": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572",
+    "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.sing": "a604ed314ced1a33ff46e43081c2222430f24bde96a10405a3a8562ec6dccbbc",
+    "/home/ubuntu/t2t3-longsolve/run_capped.py": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+    "/home/ubuntu/t2t3-longsolve/run_longsolve.sh": "a2e4779ec0e1b3f1a7ac6fe86b4052cbab213f8fb2282b95c3638096158e5ac2"
+  },
+  "hostname": "ip-172-30-0-63",
+  "jobs": {
+    "d2-z55-msolve": {
+      "caprun": {
+        "argv_count": 10,
+        "argv_sha256": "5758a33f2ecabed37af9874e1dc4385431e11ccd32176dbac8dee1102817253a",
+        "caps": {
+          "cpu_seconds": null,
+          "lifecycle_initial_seconds": 0.05,
+          "lifecycle_sample_seconds": 1.0,
+          "rss_bytes": null,
+          "rss_sample_seconds": 0.05,
+          "term_grace_seconds": 60.0,
+          "wall_seconds": 72000.0
+        },
+        "child_exit_code": 143,
+        "child_returncode": 143,
+        "child_signal": null,
+        "cwd": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve",
+        "enforcement": {
+          "cpu": "disabled",
+          "rss": "disabled",
+          "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+        },
+        "error": null,
+        "executable": "/usr/bin/time",
+        "identity_checks": [],
+        "invocation_cwd": "/home/ubuntu/t2t3-longsolve",
+        "max_observed_group_rss_bytes": 245902925824,
+        "pgid": 20596,
+        "pid": 20596,
+        "resource": null,
+        "runner_exit_code": 143,
+        "runner_signal": null,
+        "schema": "CAPRUN/v1",
+        "start_identity": "boot=749752a4-f5b1-4d56-9500-72793f580440;start_ticks=178713",
+        "start_identity_source": "linux-proc-stat-field22",
+        "status": "NORMAL_EXIT",
+        "stderr": {
+          "bytes": 2797,
+          "path": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/solver.stderr",
+          "sha256": "dc511dfd1a060d1abb819aeb1f811b84f8655fbd2736afef42b88e5a91152d4b"
+        },
+        "stdin": {
+          "mode": "devnull",
+          "path": null
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/solver.stdout",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "telemetry_path": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/caprun.json",
+        "termination": {
+          "cleanup_complete": null,
+          "group_live_before_reap": [],
+          "group_zombies_before_reap": [],
+          "kill_sent": false,
+          "leader_reaped": false,
+          "reason": null,
+          "term_sent": false
+        },
+        "utc_end": "2026-09-06T12:33:10.228919Z",
+        "utc_start": "2026-09-06T08:25:47.114477Z",
+        "wall_elapsed_seconds": 14843.114448269
+      },
+      "files": {
+        "basis.ms": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "caprun.json": {
+          "bytes": 2013,
+          "sha256": "ea7486561362a75ac723cd3fddede1be811d6e0bede74290322a58880c9f974d"
+        },
+        "custody.txt": {
+          "bytes": 1258,
+          "sha256": "8edc5c95e997caac11d02c882d4a45756a03fa01411759ab9cfb45c62178d3d5"
+        },
+        "limit.txt": {
+          "bytes": 131,
+          "sha256": "244242bec1ac7f0c4aa1d4b6cbcf96a6d43d433fa169650fd403353c7503a19d"
+        },
+        "postflight.sha256": {
+          "bytes": 1006,
+          "sha256": "e43dd5a6897d7e027308c178d2a4b23ef2ed8f75927d2984b33ea23373b0cd4f"
+        },
+        "runner.rc": {
+          "bytes": 4,
+          "sha256": "9d9b18720961e9b4689fd763b85e7b6f36160ccd3a8a1c9ddc5103bb0f66c396"
+        },
+        "solver.stderr": {
+          "bytes": 2797,
+          "sha256": "dc511dfd1a060d1abb819aeb1f811b84f8655fbd2736afef42b88e5a91152d4b"
+        },
+        "solver.stdout": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "time.txt": {
+          "bytes": 1067,
+          "sha256": "f4bf03a683da403fa1925774337e062057f66ce55cd8cb9665cd6bd50a427886"
+        }
+      },
+      "postflight": "7f593b87e40f02dbdb91f9b22aace6989f4a4d2092d9903276675b3265c7b572  /home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.ms\n8edc5c95e997caac11d02c882d4a45756a03fa01411759ab9cfb45c62178d3d5  /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/custody.txt\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/solver.stdout\ndc511dfd1a060d1abb819aeb1f811b84f8655fbd2736afef42b88e5a91152d4b  /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/solver.stderr\nea7486561362a75ac723cd3fddede1be811d6e0bede74290322a58880c9f974d  /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/caprun.json\nf4bf03a683da403fa1925774337e062057f66ce55cd8cb9665cd6bd50a427886  /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/time.txt\n244242bec1ac7f0c4aa1d4b6cbcf96a6d43d433fa169650fd403353c7503a19d  /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/limit.txt\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/basis.ms\n",
+      "run_dir": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve",
+      "runner_rc": "143\n",
+      "stderr": "Initial seed for pseudo-random number generator is 0\n\n--------------- INPUT DATA ---------------\n#variables                     449\n#equations                     466\n#invalid equations               0\nfield characteristic    1073741827\nhomogeneous input?               0\nsignature-based computation      0\nmonomial order                 DRL\nbasis hash table resetting     OFF\nlinear algebra option            2\ninitial hash table size     131072 (2^17)\nmax pair selection            5000\nreduce gb                        1\n#threads                        64\ninfo level                       2\ngenerate pbm files               0\n------------------------------------------\n\nLegend for f4 information\n--------------------------------------------------------\ndeg       current degree of pairs selected in this round\nsel       number of pairs selected in this round\npairs     total number of pairs in pair list\nmat       matrix dimensions (# rows x # columns)\ndensity   density of the matrix\nnew data  # new elements for basis in this round\n          # zero reductions during linear algebra\ntime(rd)  time of the current f4 round in seconds given\n          for real and cpu time\n--------------------------------------------------------\n\ndeg     sel   pairs        mat          density            new data         time(rd) in sec (real|cpu)\n------------------------------------------------------------------------------------------------------\n  2       5    2522       6 x 8         100.00%        2 new       3 zero         0.03 | 2.20         \n  3     208    2522    1602 x 6023        0.30%      167 new      41 zero         0.58 | 32.75        \n  3     606    4702    5864 x 29723       0.12%      368 new     238 zero         2.86 | 140.23       \n  3     275   13795    3458 x 19971       0.23%      248 new      27 zero         2.12 | 95.25        \n  4    5000   22214  216034 x 913997      0.01%     2489 new    2511 zero        68.92 | 1293.68      \n  3      79  102933    3012 x 35555       0.28%       53 new      26 zero         2.93 | 32.05        \n  4    5000  108090  235430 x 1469877     0.01%     2943 new    2057 zero       258.09 | 1836.23      \n  4    5000  323694  447570 x 2713749     0.01%     3065 new    1935 zero      1153.37 | 2964.85      \n  4    5000  627563  495448 x 2776544     0.01%     3102 new    1899 zero      1691.36 | 3782.92      \n  4    5000  912083  585873 x 3843843     0.01%     3128 new    1872 zero      3171.55 | 5485.13      \n  4    5000 1184777  515930 x 3131225     0.04%     2704 new    2296 zero      3106.92 | 5247.39      \n  4    5000 1445291  448247 x 2743584     0.05%     2070 new    2930 zero      2948.70 | 4554.13      \n  4    5000 1753924  234071 x 1740218     0.09%     2579 new    2421 zero      2154.34 | 3888.08      \n  4      95 2205712",
+      "stdout": "",
+      "time": "Command terminated by signal 15\n\tCommand being timed: \"/home/ubuntu/t2t3-longsolve/run_longsolve.sh __msolve_exec /home/ubuntu/t2t3-longsolve/msolve_m5000_wrapper.sh /home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.ms /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/basis.ms /home/ubuntu/t2t3-longsolve/runs/d2-z55-msolve/limit.txt\"\n\tUser time (seconds): 29703.16\n\tSystem time (seconds): 103.17\n\tPercent of CPU this job got: 200%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 4:07:22\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 240120964\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 63225278\n\tVoluntary context switches: 1430560\n\tInvoluntary context switches: 174138\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 160\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+    },
+    "d2-z55-singular": {
+      "caprun": {
+        "argv_count": 12,
+        "argv_sha256": "0c31ff4db777fa54a6cae281557917287946f7b247719c73447e472764b53888",
+        "caps": {
+          "cpu_seconds": null,
+          "lifecycle_initial_seconds": 0.05,
+          "lifecycle_sample_seconds": 1.0,
+          "rss_bytes": 214748364800,
+          "rss_sample_seconds": 0.05,
+          "term_grace_seconds": 60.0,
+          "wall_seconds": 72000.0
+        },
+        "child_exit_code": 1,
+        "child_returncode": 1,
+        "child_signal": null,
+        "cwd": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-singular",
+        "enforcement": {
+          "cpu": "disabled",
+          "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+          "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+        },
+        "error": null,
+        "executable": "/usr/bin/time",
+        "identity_checks": [],
+        "invocation_cwd": "/home/ubuntu/t2t3-longsolve",
+        "max_observed_group_rss_bytes": 116466679808,
+        "pgid": 20636,
+        "pid": 20636,
+        "resource": null,
+        "runner_exit_code": 1,
+        "runner_signal": null,
+        "schema": "CAPRUN/v1",
+        "start_identity": "boot=749752a4-f5b1-4d56-9500-72793f580440;start_ticks=179018",
+        "start_identity_source": "linux-proc-stat-field22",
+        "status": "NORMAL_EXIT",
+        "stderr": {
+          "bytes": 0,
+          "path": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/solver.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdin": {
+          "mode": "devnull",
+          "path": null
+        },
+        "stdout": {
+          "bytes": 34,
+          "path": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/solver.stdout",
+          "sha256": "9bc32e61a392947091e82fb8fe307804618d023894b40eb5d95f864bba4c8160"
+        },
+        "telemetry_path": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/caprun.json",
+        "termination": {
+          "cleanup_complete": null,
+          "group_live_before_reap": [],
+          "group_zombies_before_reap": [],
+          "kill_sent": false,
+          "leader_reaped": false,
+          "reason": null,
+          "term_sent": false
+        },
+        "utc_end": "2026-09-06T12:33:07.095622Z",
+        "utc_start": "2026-09-06T08:25:50.169677Z",
+        "wall_elapsed_seconds": 14836.92595112
+      },
+      "files": {
+        "caprun.json": {
+          "bytes": 2078,
+          "sha256": "df585b272fd403c370dd15a448b84ed9cca92255505fd7c9c95bcbe520cdab37"
+        },
+        "custody.txt": {
+          "bytes": 1128,
+          "sha256": "bd6e7b52fcb9b3fd1b76e9c311e9b1e25bf29351faface4e449ccf59fc85716b"
+        },
+        "postflight.sha256": {
+          "bytes": 780,
+          "sha256": "c696ec9434f6b0cd9d62d5e9e6e4d00ae79d54403c552e4e95d624f871d5096b"
+        },
+        "runner.rc": {
+          "bytes": 2,
+          "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        "solver.stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "solver.stdout": {
+          "bytes": 34,
+          "sha256": "9bc32e61a392947091e82fb8fe307804618d023894b40eb5d95f864bba4c8160"
+        },
+        "time.txt": {
+          "bytes": 933,
+          "sha256": "beb9735582a889e304e0bd87319e743178353c6559f36febaf733d12d4976321"
+        }
+      },
+      "postflight": "354b9293d065035f4e3b7ca2c918eb27cb5dc2ac3407eea2f02e9e467ba3ab7c  /home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2-slimgb.sing\nbd6e7b52fcb9b3fd1b76e9c311e9b1e25bf29351faface4e449ccf59fc85716b  /home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/custody.txt\n9bc32e61a392947091e82fb8fe307804618d023894b40eb5d95f864bba4c8160  /home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/solver.stdout\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  /home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/solver.stderr\ndf585b272fd403c370dd15a448b84ed9cca92255505fd7c9c95bcbe520cdab37  /home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/caprun.json\nbeb9735582a889e304e0bd87319e743178353c6559f36febaf733d12d4976321  /home/ubuntu/t2t3-longsolve/runs/d2-z55-singular/time.txt\n",
+      "run_dir": "/home/ubuntu/t2t3-longsolve/runs/d2-z55-singular",
+      "runner_rc": "1\n",
+      "stderr": "",
+      "stdout": "ALL_ROWS_PARSED\nBEGIN_STD\n\nhalt 1\n",
+      "time": "Command exited with non-zero status 1\n\tCommand being timed: \"/usr/bin/Singular -q --no-rc --no-warn --no-shell --threads=1 --flint-threads=1 /home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2-slimgb.sing\"\n\tUser time (seconds): 14793.23\n\tSystem time (seconds): 38.55\n\tPercent of CPU this job got: 99%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 4:07:16\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 113734476\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 16\n\tMinor (reclaiming a frame) page faults: 29186782\n\tVoluntary context switches: 18\n\tInvoluntary context switches: 68067\n\tSwaps: 0\n\tFile system inputs: 2616\n\tFile system outputs: 16\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 1\n"
+    }
+  },
+  "meminfo": "MemTotal:       519850124 kB\nMemFree:        515359676 kB\nMemAvailable:   514953160 kB\nBuffers:          284172 kB\nCached:          2825736 kB\nSwapCached:            0 kB\nActive:           310260 kB\nInactive:        2868304 kB\nActive(anon):      95440 kB\nInactive(anon):        0 kB\nActive(file):     214820 kB\nInactive(file):  2868304 kB\nUnevictable:       43852 kB\nMlocked:           27220 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              7064 kB\nWriteback:             4 kB\nAnonPages:        112740 kB\nMapped:           122024 kB\nShmem:              3328 kB\nKReclaimable:     356748 kB\nSlab:             614164 kB\nSReclaimable:     356748 kB\nSUnreclaim:       257416 kB\nKernelStack:       12992 kB\nPageTables:         6708 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    259925060 kB\nCommitted_AS:     865228 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       27188 kB\nVmallocChunk:          0 kB\nPercpu:            45568 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:    342016 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:        33945600 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      145836 kB\nDirectMap2M:     6109184 kB\nDirectMap1G:    522190848 kB\n",
+  "mounts": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/\",\n         \"source\": \"/dev/nvme0n1p1\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,relatime,discard,errors=remount-ro,commit=30\"\n      }\n   ]\n}\n",
+  "retained_roots_unmodified": [
+    "/home/ubuntu/t2t3-longsolve",
+    "/tmp/msolve-src-0101",
+    "/tmp/msolve-patched"
+  ],
+  "source_inventory": [
+    {
+      "bytes": 271944646,
+      "path": "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.ms"
+    },
+    {
+      "bytes": 357263336,
+      "path": "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2-slimgb.sing"
+    },
+    {
+      "bytes": 357263333,
+      "path": "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.sing"
+    },
+    {
+      "bytes": 3690,
+      "path": "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.build.json"
+    },
+    {
+      "bytes": 45274,
+      "path": "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.labels.tsv"
+    },
+    {
+      "bytes": 100182,
+      "path": "/home/ubuntu/t2t3-longsolve/presentations/d2-z55-source/99-delta2.variables.json"
+    }
+  ],
+  "swap_counters": {
+    "pswpin": 0,
+    "pswpout": 0
+  },
+  "tmp_mount": "{\n   \"filesystems\": [\n      {\n         \"target\": \"/\",\n         \"source\": \"/dev/nvme0n1p1\",\n         \"fstype\": \"ext4\",\n         \"options\": \"rw,relatime,discard,errors=remount-ro,commit=30\"\n      }\n   ]\n}\n",
+  "utc": "2026-09-06T12:33:33.215801+00:00"
+}

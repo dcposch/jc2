@@ -1,0 +1,105 @@
+{
+ "caps": "30 wall / 25 CPU s / 512 MiB each",
+ "runs": [
+  {
+   "expected": true,
+   "first_fail": null,
+   "mutation": null,
+   "optimized": false,
+   "returncode": 0,
+   "stdout_sha256": "45de42f6e5ac04c2a84450db98be669bdb95d77170134bb1721b0e4aa0812fbe"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C1-identity[R=g#0] [A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]",
+   "mutation": "--mutate-wrong-quadratic",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C1-identity[R=g#0] [A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]",
+   "mutation": "--mutate-omit-cross",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C1-nonzero-cross[R=g#0] [F,G] must be a genuinely nonzero term",
+   "mutation": "--mutate-zero-cross",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C2-reference-G[R=g#0] G -> G - eta s^l R^3 - theta s^l R - eta s^l F",
+   "mutation": "--mutate-omit-reference-betaF",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C3-low-rows-kill-c-d [p]Z=-alpha0 d, [p^3]Z=-3c+alpha0 d kill (c,d)",
+   "mutation": "--mutate-low-p3",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "expected": true,
+   "first_fail": null,
+   "mutation": null,
+   "optimized": true,
+   "returncode": 0,
+   "stdout_sha256": "45de42f6e5ac04c2a84450db98be669bdb95d77170134bb1721b0e4aa0812fbe"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C1-identity[R=g#0] [A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]",
+   "mutation": "--mutate-wrong-quadratic",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C1-identity[R=g#0] [A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]",
+   "mutation": "--mutate-omit-cross",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C1-nonzero-cross[R=g#0] [F,G] must be a genuinely nonzero term",
+   "mutation": "--mutate-zero-cross",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C2-reference-G[R=g#0] G -> G - eta s^l R^3 - theta s^l R - eta s^l F",
+   "mutation": "--mutate-omit-reference-betaF",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "expected": true,
+   "first_fail": "FAIL gate=C3-low-rows-kill-c-d [p]Z=-alpha0 d, [p^3]Z=-3c+alpha0 d kill (c,d)",
+   "mutation": "--mutate-low-p3",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "status": "PASS",
+ "wall_s": 1.32,
+ "witness_bytes_identical": true,
+ "witness_sha256": "45de42f6e5ac04c2a84450db98be669bdb95d77170134bb1721b0e4aa0812fbe"
+}

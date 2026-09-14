@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and closed at 18:04:10 UTC, ahead of the 18:13:00 UTC stop. All four items are CONFIRMED by independent hand replay.
+
+**Files written** (owned paths only, all via apply_patch):
+- `xmodel/f10-r1-fourth-band-gate-fable5-20260909.md`, 16,593 bytes, unique standalone `<!-- BODY-END -->` as the last line with nothing after it. No Seal and no charge_basis authored.
+- `box/f10-r1-fourth-band-gate-fable5-20260909/input-pins.txt` with the five input hashes, all of which matched the ordered list before reading.
+
+**Verdicts:**
+- **A CONFIRMED.** Re-derived the full delta vector, the ell-derivative recurrence with both gauges and both automatic resonances, W2=S, W1=-u+(2F/5)S², all three W0 terms, and re-extracted Acol and Bcol with signs from the t¹ and t⁰ residuals. Confirmed ell occurs only in E1 slots S⁰..S⁴ and E0 slots S⁰..S⁵, so P and Q are exact ell=0 full rows carrying every cross product. The homogeneous identity 4C̄V'−3C̄'V = −θ⁴+Acol·θ+Bcol checks coefficient by coefficient.
+- **B CONFIRMED.** Replayed kappa=(11z−2)/30, q=125z²−64z+8, d1..d5, the 15-scalar, the cubic N, and the remainder 1200(42471z−23012)/15625 by hand, including the checkpoints −27614400 and 50965200. Discriminant 96 makes q irreducible over Q, so no common root exists in any characteristic-zero field. Only q7 and a≠0 are used, and every chart of Lambda is covered.
+- **C CONFIRMED.** Verified alpha and beta from (5), the ideal (alpha,beta)=B at every residue field, full row rank over Q, real positive definiteness of the rational Gram matrix, nonzero rational det K, and alpha·r0+beta·t0=1. The unexpanded formula is a literal finite left inverse in Lambda and every Lambda-algebra. Not evaluated.
+- **D CONFIRMED.** Both substitution signs, the exact ideal equality (Row1,Row2)=(ell−ell_star, compat) in T[ell], the quotient-ring isomorphism, 16 formal slots, and the changed-leading control with the units 8 and 60/121.
+
+**Doubts named, none changing a verdict:** the recipe's "entirely specified" matrices rely on an unwritten extended-Euclid inverse of L mod p; W3=0 needs the gauge stated as ell-independent; section 3 should say the contradiction uses q7 alone. One narrow OPEN was raised on the 14 rational coordinates of the left inverse, with a sub-minute cheapest test. Own-only collision check is empty.
+
+**Limitations:** zero CAS, scripts, network or process inspection were used. One deviation is recorded in the report: a hex custody temp file first targeted the read-only inputs directory and was redone without a file. The whole-read timestamp was corrected in place before the marker after I mistyped it.
+DIVERT path=xmodel/f10-r1-fourth-band-gate-fable5-20260909.md status=CLEAN body_bytes=16593 body_sha256=005c9ce2e36d9c6521070707300028bd72062290fd5befbd5be5554cc1cf901d

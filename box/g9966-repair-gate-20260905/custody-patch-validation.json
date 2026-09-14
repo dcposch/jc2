@@ -1,0 +1,96 @@
+{
+  "branches": {
+    "delta2": {
+      "centre_ledger": {
+        "localization": "rho!=0",
+        "minor_constant": "free",
+        "parameters": [
+          "jet0",
+          "rho",
+          "u"
+        ],
+        "released_pin": "jet0=0"
+      },
+      "derived_map_equals_patched_map": true,
+      "h3_target": "t^9*zeta^2*(zeta+3*rho)",
+      "independent_Qstar_pivots": 18,
+      "independent_face_equations": 18,
+      "independent_pivot_coefficients": [
+        "-1",
+        "1"
+      ],
+      "inner_free": 105,
+      "jet0_zero_recovers_old_branch_map": true,
+      "new_branch_free": [
+        "Hc_10_1",
+        "Hc_11_0",
+        "Hc_7_4",
+        "jet0",
+        "rho",
+        "u"
+      ],
+      "old_branch_free": [
+        "Hc_10_1",
+        "Hc_11_0",
+        "Hc_7_4",
+        "rho",
+        "u"
+      ]
+    },
+    "delta52": {
+      "centre_ledger": {
+        "Hc_11_0": "fixed_zero_retained",
+        "b0": "fixed_zero",
+        "localization": "c!=0",
+        "minor_constant": "free",
+        "parameters": [
+          "jet0",
+          "u",
+          "v",
+          "c"
+        ],
+        "released_pin": "jet0=0"
+      },
+      "derived_map_equals_patched_map": true,
+      "h3_target": "s^21*pi*(pi^2-c)",
+      "independent_Qstar_pivots": 21,
+      "independent_face_equations": 21,
+      "independent_pivot_coefficients": [
+        "-1",
+        "1"
+      ],
+      "inner_free": 103,
+      "jet0_zero_recovers_old_branch_map": true,
+      "new_branch_free": [
+        "c",
+        "jet0",
+        "u",
+        "v"
+      ],
+      "old_branch_free": [
+        "c",
+        "u",
+        "v"
+      ]
+    }
+  },
+  "coefficient_field": "Q",
+  "local_rows_jet0_zero_specialization": true,
+  "original_engine_sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9",
+  "outer_specs_unchanged": true,
+  "patched_engine_sha256": "76d8c7206f70ba190d1a21fff812c016cbde497cd64071c29c91cfe8089f3c06",
+  "raw_minor_support_counts_unchanged": {
+    "delta2_F": 1134,
+    "delta2_G": 513,
+    "delta52_F": 1316,
+    "delta52_G": 594
+  },
+  "raw_minor_support_label_sets_unchanged": true,
+  "status": "PASS",
+  "unchanged_function_source_hashes": {
+    "h3_template": "a040d7a7556f980b04cb7410ca290dc9b4fdf0c7a4941662a8f1986b652e04ff",
+    "outer_state": "faa02531bce7500e58c914fb0afac8908233fbb2e8725e598da0e06295396865",
+    "raw_minor_support": "74809111a1c1eb2105c30c7d6888ceeba84ebde287e30b794546d5d619facda5",
+    "stage_spec": "fda624f77ac679d551d3590a7163300cd7242519f9339937d4a968e2f30ed848"
+  }
+}

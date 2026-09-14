@@ -1,0 +1,2 @@
+argv-normal: prlimit --cpu=25 --as=536870912 python3 -I -B scalar_control.py
+argv-optimized: prlimit --cpu=25 --as=536870912 python3 -I -B -O scalar_control.py

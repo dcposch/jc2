@@ -1,0 +1,59 @@
+{
+  "coefficient": "5/192",
+  "controls": [
+    {
+      "client": "99_excluded_r29",
+      "cubic_divisibility": true,
+      "d": "z**26*(z + 1)**6",
+      "digit_band": 87,
+      "digit_target_band": 140,
+      "k": 33,
+      "killed_leading_shape": true,
+      "low_band": 117,
+      "low_cut_exclusive": 141,
+      "low_remainder": "5*z**24*(z + 1)**6*(496*z**2 + 960*z + 465)/192",
+      "quartic_divisibility": false,
+      "r": 29,
+      "square_divisibility": true
+    },
+    {
+      "client": "99_allowed_r30",
+      "cubic_divisibility": true,
+      "d": "z**25*(z + 1)**7",
+      "digit_band": 90,
+      "digit_target_band": 140,
+      "k": 33,
+      "killed_leading_shape": false,
+      "low_band": 121,
+      "low_cut_exclusive": 141,
+      "low_remainder": "0",
+      "quartic_divisibility": true,
+      "r": 30,
+      "square_divisibility": true
+    },
+    {
+      "client": "108_allowed_r33",
+      "cubic_divisibility": true,
+      "d": "z**29*(z + 1)**6",
+      "digit_band": 99,
+      "digit_target_band": 150,
+      "k": 36,
+      "killed_leading_shape": false,
+      "low_band": 133,
+      "low_cut_exclusive": 151,
+      "low_remainder": "0",
+      "quartic_divisibility": true,
+      "r": 33,
+      "square_divisibility": true
+    }
+  ],
+  "driver_sha256": "3ca4d1f2aae14c575cb99b93ebe871f22aedddc4d95a7d24863c0109a0428cf9",
+  "field": "Q",
+  "no_additional108_cutoff": true,
+  "proved99_cutoffs": {
+    "C_inclusive": 60,
+    "D_inclusive": 29
+  },
+  "scope": "necessary leading-band equations only",
+  "status": "PASS"
+}

@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report delivered: `xmodel/ideation-20260906T1030Z-opus5.md` (27,742 bytes, single standalone `<!-- BODY-END -->`, no inline seal footer per the external-lane contract). Notes: `box/cblock-collapse-20260906/` (16 KB, reproducible script + log).
+
+**Manifest verification (mechanical):** 18/18 charged inputs `sha256sum` OK against the indexed `charged-inputs.list`; packet self-seal recomputed independently — 11,656 body bytes, `db7e289d…`, matching its own Seal block.
+
+**What I found, and how far it goes.** The one new mechanism is measured rather than proposed. Regrouping the charged pilot identity as
+
+    J(F,G) = ((3D+a+b·h)/2)·J(h,D) + J(C,G)
+
+puts all 192 `A3` source parameters inside a single Jacobian bracket, so the 1,468 positive-degree Jacobian rows are an affine-linear system in that block. Two facts follow:
+
+- **Uniform, proved:** `rank ≥ 188` at *every* parameter point, from the closed-polynomial theorem (Arzhantsev–Petravchuk — the same theorem the promoted reverse gate already consumes for its `j=0` exclusion) plus the fixed top form `G_top = y¹⁸(y−x)⁴⁸`, which pins `deg G̃ ∈ {11,22,33,66}`.
+- **Measured, one-sided in the safe direction:** `rank A = 191`, `rank[A|Φ] = 192` at two integer parameter points, two primes. Rank only drops under reduction, so `rank_Q ≥ 191`; the constant slot `A3c_98_0` supplies the one kernel direction, giving generic rank exactly 191.
+
+So `C` is rigidly determined by `(h,D,a,b)` up to an irrelevant additive constant, and the family's effective dimension is ≤ 248, not 439 or 600. The run also independently reproduced the pilot's 1,469/1,468 support counts and `deg h=33, D=34, G=66`.
+
+Three things I deliberately did **not** claim: that `δ_G(F)=j≠0` gives a slice (false for non-LND derivations — that step would be assuming JC2); that symbolic Cramer on a 192×192 matrix in 247 parameters is affordable (it is not, so the deliverable is a per-point oracle, not an elimination); and that [C-COLLAPSE] transfers to the T2/T3 ideal (those rows contain `F²` and are quadratic in `C`).
+
+The portfolio recommendation is **REDESIGN**, driven by a containment I derived and flagged as the round's new connection: on the shared δ=2 source hash `778eda93…`, `π(V(I)) ⊆ V(J_phys)`, which dominates the T2/T3 chart on both sides. Priority overlap with root's sealed `preflight.py` follow-up is flagged as possible DUPLICATE rather than claimed, since I could not read it.
+DIVERT path=xmodel/ideation-20260906T1030Z-opus5.md status=CLEAN body_bytes=27742 body_sha256=82147acb7568038bd4733ed0c3cb2712ea685798f9823a8f5150bce6ce8f38a0

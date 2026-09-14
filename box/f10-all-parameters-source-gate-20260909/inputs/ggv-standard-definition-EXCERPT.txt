@@ -1,0 +1,77 @@
+PRIMARY EXCERPT: box/f2-fixed-degree-standardization-gate-20260909/ggv-1401.1784v3.txt
+Original SHA256 e3694dde3f83c2ab6ed8d957fc6b53472e6a6dd55486af1dff345eade39e37b1; bytes 268331.
+Only listed ranges charged. Unrelated context omitted; complete used statements/proofs are retained. External lemmas cited within retained proofs keep imported-theorem trust.
+
+EXCERPT original lines 680-751 inclusive; exact body follows.
+f1 (x, y), f2 (x, y), g1 (x, y), g2 (x, y) ∈ K(x, y), we have
+                                 J(x,y) (h1 , h2 ) = J(f1 ,f2 ) (g1 , g2 )J(x,y) (f1 , f2 ),
+where by definition hi (x, y) := gi (f1 (x, y), f2 (x, y)), and
+               J(f1 ,f2 ) (g1 , g2 ) := j(f1 (x, y), f2 (x, y))     with j(x, y) := J(x,y) (g1 , g2 ).   (3.4)
+Assume first that l = 1. Then equality (3.3) follows applying equality (3.4) with
+                          g1 := P,        g2 := Q,      f1 := ϕ(x)        and f2 := ϕ(y),
+since ϕ([P, Q]) = j(ϕ(x), ϕ(y)), where j(x, y) := [P, Q] ∈ L(1) ⊆ K(x, y). Assume now that l is
+arbitrary. Identifying L(l) with K[z, z −1, y] via z = x1/l , we obtain
+                                                       1
+                        [P, Q] = (Pz Qy − Py Qz ) l−1 , for P, Q ∈ L(l) .
+                                                    lz
+Consequently equality (3.3) is valid for R0 , R1 ∈ {L, L(l) }.                               
+
+                             4      Minimal pairs and (m, n)-pairs
+Our next aim is to determine a lower bound for
+      (
+       ∞                             if the jacobian conjecture is true,
+ B :=                              
+       min gcd(v1,1 (P ), v1,1 (Q)) if JC is false, where (P, Q) runs on the counterexamples.
+   A minimal pair is a counterexample (P, Q) to JC such that B = gcd(v1,1 (P ), v1,1 (Q)).
+   An (m, n)-pair is a Jacobian pair (P, Q) with P, Q ∈ L(l) for some l, that satisfies certain
+conditions (see Definition 4.3).
+   In this section we prove that if B < ∞, then there exists a minimal pair that is also an (m, n)-
+pair for some m, n ∈ N. We could prove the result using only our previous results, but we prefer
+to use the well known fact that a counterexample to JC can be brought into a subrectangular
+shape, following an argument communicated by Leonid Makar-Limanov.
+        ON THE SHAPE OF POSSIBLE COUNTEREXAMPLES TO THE JACOBIAN CONJECTURE                              15
+
+
+Proposition 4.1. Let (ρ, σ) ∈ V be such that (1, 0) ≤ (ρ, σ) ≤ (0, 1). If (P, Q) is a counterex-
+ample to JC, then
+           vρ,σ (P ) > 0,      vρ,σ (Q) > 0      and         vρ,σ (P ) + vρ,σ (Q) − (ρ + σ) > 0.
+Proof. Note that if (1, 0) ≤ (ρ, σ) ≤ (1, 1), then ρ ≥ σ ≥ 0, while if (1, 1) ≤ (ρ, σ) ≤ (0, 1), then
+σ ≥ ρ ≥ 0. In the case ρ ≥ σ ≥ 0 it is enough to prove that vρ,σ (P ), vρ,σ (Q) > ρ. Assume for
+example that vρ,σ (P ) ≤ ρ, then
+                 (i, j) ∈ Supp(P ) =⇒ iρ + jσ ≤ ρ =⇒ i = 0, or i = 1 and j = 0,
+which means that P = µx + f (y) for some µ ∈ K and f ∈ K[y], and obviously (P, Q) can not
+be a counterexample to JC. The case σ ≥ ρ ≥ 0 is similar.                              
+Remark 4.2. If (P, Q) is a minimal pair, then neither v1,1 (P ) divides v1,1 (Q) nor v1,1 (Q) divides
+v1,1 (P ). This fact can be proven using a classical argument[12] given for example in the proof
+of [14, Theorem 10.2.23].
+Definition 4.3. Let m, n ∈ N be coprime with n, m > 1. A pair (P, Q) of elements P, Q ∈ L(l)
+(respectively P, Q ∈ L) is called an (m, n)-pair in L(l) (respectively in L), if
+                                  v1,1 (P )   v1,0 (P )   m
+              [P, Q] ∈ K × ,                =           =       and v1,−1 (en1,0 (P )) < 0.
+                                  v1,1 (Q)    v1,0 (Q)    n
+An (m, n)-pair (P, Q) is called a standard (m, n)-pair if P, Q ∈ L(1) and v1,−1 (st1,0 (P )) < 0.
+Lemma 4.4. Let (ρ, σ), (ρ′ , σ ′ ) ∈ V and A, B ∈ 1l Z × N0 such that
+                 vρ,σ (A)vρ′ ,σ′ (B) = vρ,σ (B)vρ′ ,σ′ (A)    and   (ρ, σ) × (ρ′ , σ ′ ) 6= 0.
+Then A ∼ B.
+Proof. Write A = (a1 , a2 ) and B = (b1 , b2 ). The Lemma follows immediately from the equality
+                                                                      
+                            ρ σ      a1 b 1          vρ,σ (A)    vρ,σ (B)
+                                                =                            ,
+                            ρ′ σ ′   a2 b 2         vρ′ ,σ′ (A) vρ′ ,σ′ (B)
+taking determinants.                                                                                     
+                            (l)
+Remark 4.5. Let P, Q ∈ L and (ρ, σ) ∈ V. Assume that vρ,σ (P ) 6= 0, stρ,σ (P ) ∼ stρ,σ (Q) and
+enρ,σ (P ) ∼ enρ,σ (Q). Then
+                                                                                           vρ,σ (Q)
+          enρ,σ (Q) = λ enρ,σ (P ) and        stρ,σ (Q) = λ stρ,σ (P ),    with     λ :=             .
+                                                                                           vρ,σ (P )
+    If (P, Q) is an (m, n)-pair, then (Q, P ) is an (n, m)-pair, as is shown by the following propo-
+sition.
+Proposition 4.6. Let (P, Q) be an (m, n)-pair. Then the following properties hold:
+   (1) v1,0 (P ), v1,0 (Q) > 0.
+                                               n
+   (2) en1,0 (Q) ∼ en1,0 (P ) and en1,0 (Q) = m   en1,0 (P ).
+        1                1          1
+   (3) m en1,0 (P ) = n en1,0 (Q) ∈ l N × N and v1,−1 (en1,0 (Q)) < 0.
+   (4) v0,−1 (en1,0 (P )) < −1 and v0,−1 (en1,0 (Q)) < −1.
+   (5) Neither P nor Q are monomials.

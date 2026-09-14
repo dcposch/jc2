@@ -1,0 +1,41 @@
+sprime3_compiler -- Moh Appendix II extended by Φ_eff
+========================================================================
+frozen skeleton sha256 d20bf0841a1ba2b229d423bb948e6c4474a4f5a83f55148071cae39cb6c506c2
+
+== CONTROL A: Φ_eff reproduces Moh Appendix II p.207 (5/5) ==
+  [ok]   Appendix II (64,48) V2=3
+  [ok]   p.174 drop is a no-op on (64,48)
+  [ok]   s'=2 => B_safe == B_tight on (64,48)
+  [ok]   Appendix II (84,56) V2=2
+  [ok]   p.174 drop is a no-op on (84,56)
+  [ok]   s'=2 => B_safe == B_tight on (84,56)
+  [ok]   Appendix II (84,56) V2=5
+  [ok]   p.174 drop is a no-op on (84,56)
+  [ok]   s'=2 => B_safe == B_tight on (84,56)
+  [ok]   Appendix II (75,50) V2=3
+  [ok]   p.174 drop is a no-op on (75,50)
+  [ok]   s'=2 => B_safe == B_tight on (75,50)
+  [ok]   Appendix II (75,50) V2=2
+  [ok]   p.174 drop is a no-op on (75,50)
+  [ok]   s'=2 => B_safe == B_tight on (75,50)
+
+== CONTROL A2: Φ_eff == order_basis_full.closed_form on s'=2 ==
+  [ok]   charged closed_form (16,12;13;3;k=1)
+  [ok]   charged closed_form (15,10;11;3;k=2)
+  [ok]   Φ_eff delta == charged on (16,12;13;3;k=1)
+  [ok]   B_safe == charged B on (16,12;13;3;k=1)
+  [ok]   Φ_eff delta == charged on (15,10;11;3;k=2)
+  [ok]   B_safe == charged B on (15,10;11;3;k=2)
+  [ok]   Φ_eff delta == charged on (28,20;25;3;k=1)
+  [ok]   B_safe == charged B on (28,20;25;3;k=1)
+  [ok]   Φ_eff delta == charged on (25,15;21;2;k=2)
+  [ok]   B_safe == charged B on (25,15;21;2;k=2)
+  [ok]   Φ_eff delta == charged on (24,16;18;7;k=4)
+  [ok]   B_safe == charged B on (24,16;18;7;k=4)
+
+== CONTROL A3: s'=2 algebraic identity (ℓ-boundary) ==
+  [ok]   s'=2 closed-form delta2
+  [ok]   s'=2 closed-form delta1
+
+========================================================================
+ALL CONTROLS PASSED.

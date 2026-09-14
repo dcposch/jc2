@@ -1,0 +1,13 @@
+# Read scope and exact port qualification
+
+First action: 2026-09-11 18:58:17.264054164 UTC. Original task reserve 19:05 UTC and hard stop 19:08 UTC. The separate ROOT plan's 19:10/19:13 offline limits do not extend this task.
+
+All twelve charged inputs were freshly SHA-checked before fresh HUMAN WHOLE reads: TASK (56 lines), PLAN (56), ORIGINAL-CLOCKS (38), then the nine administrative sources (52, 77, 96, 69, 82, 89, 47, 113, 38 lines in PINS order). No clipped or omitted source text; no prior-whole reuse was needed. Each new nine-file output then received full text readback and a complete string/byte-preserving comparison to its whole source transformed by exactly the three ordered literal substitutions. Every equality passed; these UTF-8 sources had unchanged byte lengths. No source, template, shell payload or Python input was executed. Only documentary reads/string substitution/metadata hashing and the standard artifact publication tool were used.
+
+Native collector is byte-identical. Per-file occurrence counts and both source/output pins are in PINS. No residual batch-c base/path/clock digest survives in these nine outputs. Other source hashes and retained FIRST hashes are unchanged literal data, not newly verified source implementations.
+
+Concrete stale binding: ROOT-EXECUTION-CARD.template.md still cites policy digest e3c5691f08d4d2302bccd4b5823fa0b16a50ed1a795cbe1db56dd2fa926c7845. The new policy's actual SHA is 1a632269b90c1288c981b14c9dacee7f296747517eb1754bbef6ed72d5a5f815. Replacing that digest is OUTSIDE this exact map and is ROOT's subsequent authenticated binding. The old literal is preserved, not represented as current.
+
+All JC2 placeholders remain untouched: actual instance/host/boot/namespace/volume; holder PID/start/invocation and cutoff; root exclusivity/ACL approval; native raw/full/source-subset and admin-helper evidence; source-contract/admission FIRST/holder/launcher digests; stage/installed/final manifests, registration/card and retirement receipt hashes; interpreter/setpriv paths/pins; durable filesystem/device; setup/leaf/final-install approval tokens. Actual leaves' identities arise only in later ROOT observations. No path mentioned by the templates was traversed. Current selected clock file is linked by the prescribed path/hash substitution only; no actual host or late observation was manufactured.
+
+Quantity: nine output files, twelve immutable inputs, exactly 72/1/1 replacement occurrences. Cheapest check: full documentary transformed-byte equality and SHA replay, planning wall 5 seconds UNMEASURED for ROOT's environment; no runtime forecast. No new OPEN ID, no new framework, and no collision with caller/source/live ROOT duties. No execution, readiness or scientific conclusion follows.

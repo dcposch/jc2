@@ -1,0 +1,190 @@
+{
+  "branch": "rational",
+  "case": "unequal",
+  "constructor_telemetry": {
+    "argv_count": 9,
+    "argv_sha256": "c07b1fcb7286988f66af098c111ea79cd9681b13057c3435c949c8d103e548fb",
+    "caps": {
+      "cpu_seconds": 180,
+      "lifecycle_initial_seconds": 0.05,
+      "lifecycle_sample_seconds": 1.0,
+      "rss_bytes": 8589934592,
+      "rss_sample_seconds": 0.05,
+      "term_grace_seconds": 0.25,
+      "wall_seconds": 180.0
+    },
+    "child_exit_code": 0,
+    "child_returncode": 0,
+    "child_signal": null,
+    "cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational",
+    "enforcement": {
+      "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+      "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+      "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+    },
+    "error": null,
+    "executable": "/usr/bin/python3",
+    "identity_checks": [],
+    "invocation_cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906",
+    "max_observed_group_rss_bytes": 22745088,
+    "pgid": 1997,
+    "pid": 1997,
+    "resource": null,
+    "runner_exit_code": 0,
+    "runner_signal": null,
+    "schema": "CAPRUN/v1",
+    "start_identity": "boot=69938ee6-48bb-4e45-bdf2-efb08c655368;start_ticks=44768",
+    "start_identity_source": "linux-proc-stat-field22",
+    "status": "NORMAL_EXIT",
+    "stderr": {
+      "bytes": 0,
+      "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/construct.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdin": {
+      "mode": "devnull",
+      "path": null
+    },
+    "stdout": {
+      "bytes": 1747,
+      "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/construct.stdout",
+      "sha256": "29b935efaf12109231ce776782caf6ad99a38e59d6d6b38efa28aa7bc46dbf39"
+    },
+    "telemetry_path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/construct.telemetry.json",
+    "termination": {
+      "cleanup_complete": null,
+      "group_live_before_reap": [],
+      "group_zombies_before_reap": [],
+      "kill_sent": false,
+      "leader_reaped": false,
+      "reason": null,
+      "term_sent": false
+    },
+    "utc_end": "2026-09-06T23:42:47.748411Z",
+    "utc_start": "2026-09-06T23:42:46.000067Z",
+    "wall_elapsed_seconds": 1.748353541
+  },
+  "import_size_diagnostic": 554,
+  "import_telemetry": {
+    "argv_count": 4,
+    "argv_sha256": "0a64778dd9f3782cc04afacff54eb02629d8c5dee6d8ea48c5ef776ce8578123",
+    "caps": {
+      "cpu_seconds": 60,
+      "lifecycle_initial_seconds": 0.05,
+      "lifecycle_sample_seconds": 1.0,
+      "rss_bytes": 8589934592,
+      "rss_sample_seconds": 0.05,
+      "term_grace_seconds": 0.25,
+      "wall_seconds": 60.0
+    },
+    "child_exit_code": 0,
+    "child_returncode": 0,
+    "child_signal": null,
+    "cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational",
+    "enforcement": {
+      "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+      "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+      "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+    },
+    "error": null,
+    "executable": "/usr/bin/python3",
+    "identity_checks": [],
+    "invocation_cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906",
+    "max_observed_group_rss_bytes": 21909504,
+    "pgid": 2031,
+    "pid": 2031,
+    "resource": null,
+    "runner_exit_code": 0,
+    "runner_signal": null,
+    "schema": "CAPRUN/v1",
+    "start_identity": "boot=69938ee6-48bb-4e45-bdf2-efb08c655368;start_ticks=44950",
+    "start_identity_source": "linux-proc-stat-field22",
+    "status": "NORMAL_EXIT",
+    "stderr": {
+      "bytes": 0,
+      "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdin": {
+      "mode": "devnull",
+      "path": null
+    },
+    "stdout": {
+      "bytes": 38,
+      "path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.stdout",
+      "sha256": "b992021c31c3b03262ec7f5292460df42c26b9970f475e7ef014648f390c7ac5"
+    },
+    "telemetry_path": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational/import.telemetry.json",
+    "termination": {
+      "cleanup_complete": null,
+      "group_live_before_reap": [],
+      "group_zombies_before_reap": [],
+      "kill_sent": false,
+      "leader_reaped": false,
+      "reason": null,
+      "term_sent": false
+    },
+    "utc_end": "2026-09-06T23:42:48.060301Z",
+    "utc_start": "2026-09-06T23:42:47.819153Z",
+    "wall_elapsed_seconds": 0.24115837
+  },
+  "manifest": {
+    "authority_sha256": "7df24aca7242cfe08aa73d61ff223f033134914d89a1256f2d52d4bdfa33d9e2",
+    "caps": {
+      "aggregate_output_bytes": 268435456,
+      "as_bytes": 8589934592,
+      "cpu_seconds": 180,
+      "wall_seconds": 180
+    },
+    "cas_executed": false,
+    "footer": {
+      "complete": true,
+      "counts": {
+        "fixed_assignment": 31,
+        "fixed_unit_guard": 6,
+        "jacobian": 660,
+        "polynomiality": 105,
+        "rows": 803,
+        "scalar_guard": 1,
+        "terms": 27577,
+        "zero_rows": 249
+      },
+      "prefix_records": 1371,
+      "prefix_sha256": "4053faac6abd91ae41e85fd94fcc79e12202e9a44680b07ee4a00de9edf43cce",
+      "type": "footer",
+      "unused_variables": []
+    },
+    "identity": {
+      "boot_id": "69938ee6-48bb-4e45-bdf2-efb08c655368",
+      "cwd": "/home/ubuntu/d125-small-source-construction-pilot-20260906/unequal-rational",
+      "instance": "i-0da0cebfc97c9fd54",
+      "now": 1788738166.0420265,
+      "pgid": 1997,
+      "pid": 1997,
+      "start_ticks": "44768",
+      "system": "Linux",
+      "vendor": "Amazon EC2"
+    },
+    "independent_certification": false,
+    "jsonl": {
+      "bytes": 1213487,
+      "path": "client-unequal-rational.jsonl",
+      "sha256": "b8db27661d1bfd3dcc5dfe1d1271b78c3f6375e06201654977a51380cd6ebcac"
+    },
+    "pins": {
+      "baseline_sha256": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+      "exporter_sha256": "9fd003e420f3ee069f1ed1c06a365e5b4500d361bc3951f2f8f17ef733ab3703",
+      "lift_contract_sha256": "433cc2fe9f11ce1b2e1f1fc57aab24def921afb1f93154a2d631ddee0b88cdad",
+      "lift_gate_sha256": "4295593a57a65e4d31630aecdef0b54e9d6078935e07cfb5e64acfd83fae4122",
+      "normalization_gate_sha256": "cd69c23885de119e4bd910992dad5ef695e7b12013168ec1c401546d8aa6ed8d"
+    },
+    "singular": {
+      "bytes": 707662,
+      "path": "client-unequal-rational.sing",
+      "sha256": "c089c33301e3889e0c20527386719f411907cf2957ecfad3d93c65f7be24e718"
+    },
+    "status": "CONSTRUCTION_AND_SAME_FORMULA_REPLAY_COMPLETE",
+    "variables": 269
+  },
+  "remaining_batch_seconds": 597.865401223
+}

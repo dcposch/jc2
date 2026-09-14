@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done. The report is sealed at 17:39:17Z, before the 17:40Z reserve, and no further writes will follow.
+
+**Outcome.** The FIRST review of Astra's launcher found no blocking source defect. The verdict is conditional acceptance at static source-review tier of the charged launcher interface only, not installed readiness.
+
+**What was written.** One file, `xmodel/r3-bootstrap-launch-gate-fable5-20260912.md`, via the installed apply_patch in three bounded writes: marker-free skeleton, one body patch, then custody plus the seal. The standalone `<!-- BODY-END -->` is the last line with nothing after it. Word count is under the cap.
+
+Report sha256: 2590b6301574ca1abb71f87ae21e4345e1dc706081fb252ad5cf8b285720c945
+
+**Findings, per the four numbered items:**
+- **Item 1, CONFIRMED with external premises.** The approval chain is spec to card to unit with no self-reference. The card epoch triple is compared semantically to the live timer, and the service's own start, PID and invocation are recorded separately. Canonical JSON, duplicate and float refusal, path canonicalisation, 0444 modes and ACL walks all hold. Loaded-unit versus on-disk correspondence stays external, as CONTRACT already assigns.
+- **Item 2, CONFIRMED with premises.** The 115 s timer plus 5 s stop budget, watchdog outside the slice, no cancellation path, both-clock admission under 100 s, floored-second epoch being conservative, and the RuntimeMax 2875 fallback all check out against the source. Six premise families are listed by name, none evidenced.
+- **Item 3, CONFIRMED.** env -i wipes systemd injection, argv and environment are exact, execs keep the PID, stdio identities are checked including the 1:3 null device that INTAKE had left open, children and threads are reaped, no file is created by the entry.
+- **Item 4, CONFIRMED.** Wrong spec SHA fails at the load digest before any systemctl call. A rehashed false epoch with the real timer retained is rejected by the timer-property comparison, not by a hash. Expired epochs fail at admission or at the elapsed timer. Four possible stdout layouts and their side effects are traced.
+
+**One cross-artifact premise worth ROOT's attention.** The launcher requires env and systemctl in the registration pins, and the bootstrap then demands those entries either appear in the native manifest or carry no write bit. A stock 0755 binary outside the manifest would fail after the exec.
+
+**Custody.** All six input pins matched before reading and again after the body write and after the seal. No interpreter, network, git or execution of inspected code was used.
+DIVERT path=xmodel/r3-bootstrap-launch-gate-fable5-20260912.md status=CLEAN body_bytes=13889 body_sha256=2590b6301574ca1abb71f87ae21e4345e1dc706081fb252ad5cf8b285720c945

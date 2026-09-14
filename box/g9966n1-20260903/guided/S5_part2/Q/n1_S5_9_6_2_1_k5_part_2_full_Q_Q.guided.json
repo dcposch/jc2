@@ -1,0 +1,46 @@
+{
+  "characteristic": 0,
+  "command": [
+    "stdbuf",
+    "-oL",
+    "-eL",
+    "Singular",
+    "--cpus=1",
+    "--threads=1",
+    "--flint-threads=1",
+    "--no-rc",
+    "-q",
+    "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S5_part2/Q/n1_S5_9_6_2_1_k5_part_2_full_Q_Q.sing"
+  ],
+  "elapsed_seconds": 120.066659,
+  "label": "n1_S5_9_6_2_1_k5_part_2_full_Q",
+  "main": {
+    "accepted": false,
+    "basis_size": null,
+    "dimension": null,
+    "lead_dim": null,
+    "lead_vdim": null,
+    "missing_markers": [
+      "NF_ALL_ZERO",
+      "UNIT",
+      "DIM",
+      "BASIS_SIZE",
+      "LEAD_DIM",
+      "ACCEPT",
+      "NF_ZERO"
+    ],
+    "nf_all_zero": false,
+    "unit": false,
+    "vdim": null,
+    "vdim_matches_predicted": null
+  },
+  "perturbed": null,
+  "returncode": 1,
+  "script": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S5_part2/Q/n1_S5_9_6_2_1_k5_part_2_full_Q_Q.sing",
+  "script_sha256": "996648968586db057623e136a3268f7e7166690dfb2316cf97cb2d23bc435651",
+  "stderr": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S5_part2/Q/n1_S5_9_6_2_1_k5_part_2_full_Q_Q.err",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout": "/home/ubuntu/jc2/box/g9966n1-20260903/guided/S5_part2/Q/n1_S5_9_6_2_1_k5_part_2_full_Q_Q.out",
+  "stdout_sha256": "666d2fa69b28550f4b23b0307ecc82766322c7593476f03e11167cf3bebb3f0b",
+  "timed_out": true
+}

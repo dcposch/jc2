@@ -1,0 +1,213 @@
+{
+  "branch_exponents": {
+    "delta2": {
+      "F": [
+        -80,
+        -79,
+        -78
+      ],
+      "G": [
+        -53,
+        -52,
+        -51
+      ]
+    },
+    "delta52": {
+      "F": [
+        -187,
+        -185,
+        -183
+      ],
+      "G": [
+        -124,
+        -122,
+        -120
+      ]
+    }
+  },
+  "chart_d31": "C2_21_0*H_10_0 + C3_31_0",
+  "chart_d32": "C3_32_0",
+  "compatible": true,
+  "controls": {
+    "all_rows_reduce_zero": true,
+    "all_zero_prefix_point": true,
+    "drop_last_J_rank": 14,
+    "perturbed_duplicate_residual": "1"
+  },
+  "direct_rows": {
+    "F": [
+      "A3_98_0",
+      "A2_65_0*C3_32_0 + A3_97_0",
+      "A2_64_0*C3_32_0 + A2_65_0*C2_21_0*H_10_0 + A2_65_0*C3_31_0 + A3_96_0 + A3_97_1*u + C3_32_0**3"
+    ],
+    "G": [
+      "B2_65_0",
+      "B1_32_0*C3_32_0 + B2_64_0 + C3_32_0**2",
+      "B1_31_0*C3_32_0 + B1_32_0*C2_21_0*H_10_0 + B1_32_0*C3_31_0 + B2_63_0 + B2_64_1*u + 2*C2_21_0*C3_32_0*H_10_0 + 2*C3_31_0*C3_32_0"
+    ]
+  },
+  "elimination": [
+    {
+      "coefficient": "1",
+      "pivot": "A3_98_0",
+      "row": 1,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1",
+      "pivot": "A3_97_0",
+      "row": 2,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1",
+      "pivot": "A3_96_0",
+      "row": 3,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1",
+      "pivot": "B2_65_0",
+      "row": 4,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1",
+      "pivot": "B2_64_0",
+      "row": 5,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1",
+      "pivot": "B2_63_0",
+      "row": 6,
+      "status": "pivot"
+    },
+    {
+      "row": 7,
+      "status": "dependent_zero"
+    },
+    {
+      "coefficient": "1698",
+      "pivot": "A3_97_1",
+      "row": 8,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1632",
+      "pivot": "A3_96_2",
+      "row": 9,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1566",
+      "pivot": "A3_95_3",
+      "row": 10,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1500",
+      "pivot": "A3_94_4",
+      "row": 11,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1434",
+      "pivot": "A3_93_5",
+      "row": 12,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1368",
+      "pivot": "A3_92_6",
+      "row": 13,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1302",
+      "pivot": "A3_91_7",
+      "row": 14,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1236",
+      "pivot": "A3_90_8",
+      "row": 15,
+      "status": "pivot"
+    },
+    {
+      "coefficient": "1170",
+      "pivot": "A2_65_0",
+      "row": 16,
+      "status": "pivot"
+    }
+  ],
+  "field": "Q",
+  "generic_original_incidence": {
+    "delta2_F": [
+      "f_98_0",
+      "f_97_0 + f_98_1*u",
+      "f_96_0 + f_97_1*u + f_98_1*z"
+    ],
+    "delta2_G": [
+      "g_65_0",
+      "g_64_0 + g_65_1*u",
+      "g_63_0 + g_64_1*u + g_65_1*z"
+    ],
+    "delta52_F": [
+      "f_98_0",
+      "f_97_0 + f_98_1*u",
+      "f_96_0 + f_97_1*u + f_98_1*v"
+    ],
+    "delta52_G": [
+      "g_65_0",
+      "g_64_0 + g_65_1*u",
+      "g_63_0 + g_64_1*u + g_65_1*v"
+    ],
+    "fixed_top_map": {
+      "f_98_1": "0",
+      "g_65_1": "0"
+    }
+  },
+  "jacobian_degree162": {
+    "contiguous_monomials": [
+      "x^145*y^17",
+      "x^144*y^18",
+      "x^143*y^19",
+      "x^142*y^20",
+      "x^141*y^21",
+      "x^140*y^22",
+      "x^139*y^23",
+      "x^138*y^24",
+      "x^137*y^25",
+      "x^136*y^26"
+    ],
+    "first_G65_row": "1170*A2_65_0 + 1170*A3_89_9 - 64032*A3_90_8 + 1689744*A3_91_7 - 28745952*A3_92_6 + 355303080*A3_93_5 - 3407484960*A3_94_4 + 26432836848*A3_95_3 - 170672188896*A3_96_2 + 936580203108*A3_97_1 - 4437624169440*A3_98_0 - 1755*B2_65_0",
+    "first_G65_row_monomial": "x^136*y^26",
+    "first_row": "1764*A3_98_0",
+    "first_row_monomial": "x^145*y^17",
+    "rows": [
+      "1764*A3_98_0",
+      "1698*A3_97_1 - 89376*A3_98_0",
+      "1632*A3_96_2 - 86208*A3_97_1 + 2210880*A3_98_0",
+      "1566*A3_95_3 - 83040*A3_96_2 + 2136432*A3_97_1 - 35595168*A3_98_0",
+      "1500*A3_94_4 - 79872*A3_95_3 + 2061984*A3_96_2 - 34453632*A3_97_1 + 419514480*A3_98_0",
+      "1434*A3_93_5 - 76704*A3_94_4 + 1987536*A3_95_3 - 33312096*A3_96_2 + 406672200*A3_97_1 - 3859533216*A3_98_0",
+      "1368*A3_92_6 - 73536*A3_93_5 + 1913088*A3_94_4 - 32170560*A3_95_3 + 393829920*A3_96_2 - 3746521152*A3_97_1 + 28862596224*A3_98_0",
+      "1302*A3_91_7 - 70368*A3_92_6 + 1838640*A3_93_5 - 31029024*A3_94_4 + 380987640*A3_95_3 - 3633509088*A3_96_2 + 28052676432*A3_97_1 - 180391226400*A3_98_0",
+      "1236*A3_90_8 - 67200*A3_91_7 + 1764192*A3_92_6 - 29887488*A3_93_5 + 368145360*A3_94_4 - 3520497024*A3_95_3 + 27242756640*A3_96_2 - 175531707648*A3_97_1 + 961485236712*A3_98_0",
+      "1170*A2_65_0 + 1170*A3_89_9 - 64032*A3_90_8 + 1689744*A3_91_7 - 28745952*A3_92_6 + 355303080*A3_93_5 - 3407484960*A3_94_4 + 26432836848*A3_95_3 - 170672188896*A3_96_2 + 936580203108*A3_97_1 - 4437624169440*A3_98_0 - 1755*B2_65_0"
+    ]
+  },
+  "next_system": "Add the degree-162 Jacobian coordinate x^135*y^27 and pole rows F_95/G_62, then intersect with unresolved outer-F/G D1 rows in this same chart.",
+  "rank": {
+    "direct": 6,
+    "plus_first_10_J_through_G65": 15,
+    "plus_first_1_J": 6,
+    "plus_first_2_J": 7,
+    "plus_first_3_J": 8
+  },
+  "rank_type": "exact Q*-triangular pivot count",
+  "residual_count": 0,
+  "scope": "global triangular-chart first band only; not full tower/global Keller pair"
+}

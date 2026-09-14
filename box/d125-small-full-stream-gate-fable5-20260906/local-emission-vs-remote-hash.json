@@ -1,0 +1,87 @@
+{
+ "schema": "own-emission-vs-remote-hash/v1",
+ "gate_sha256": "f88d0665bbe7e4f0dd519167c1f99c4a519235c2c127b76c35273d4b533118c6",
+ "results": [
+  {
+   "case": "unequal",
+   "branch": "rational",
+   "jsonl_sha256": "b8db27661d1bfd3dcc5dfe1d1271b78c3f6375e06201654977a51380cd6ebcac",
+   "jsonl_bytes": 1213487,
+   "sing_sha256": "c089c33301e3889e0c20527386719f411907cf2957ecfad3d93c65f7be24e718",
+   "sing_bytes": 707662,
+   "jsonl_match_remote": true,
+   "sing_match_remote": true,
+   "singular_rows": 803,
+   "singular_nonzero": 554,
+   "seconds": 1.41
+  },
+  {
+   "case": "unequal",
+   "branch": "golden",
+   "jsonl_sha256": "ad83add3ccdeb56914cf73ab06fe733f7b89aa984e586bb973dde04ca471613b",
+   "jsonl_bytes": 1284762,
+   "sing_sha256": "77f127a903152cc52ebb2fd40d8e0d7ca76aeba2fe7306b4e87872189c9c28ec",
+   "sing_bytes": 776459,
+   "jsonl_match_remote": true,
+   "sing_match_remote": true,
+   "singular_rows": 803,
+   "singular_nonzero": 554,
+   "seconds": 1.61
+  },
+  {
+   "case": "common_3",
+   "branch": "rational",
+   "jsonl_sha256": "cb6dd5a002db764412ed5f755d868ef11d91eaa20835a1d981e4fabe9d0eb177",
+   "jsonl_bytes": 1397244,
+   "sing_sha256": "1cf13975b7b4daea1f895defa38aa777af861d804d051605c610fa61d483f632",
+   "sing_bytes": 806909,
+   "jsonl_match_remote": true,
+   "sing_match_remote": true,
+   "singular_rows": 816,
+   "singular_nonzero": 599,
+   "seconds": 1.74
+  },
+  {
+   "case": "common_3",
+   "branch": "golden",
+   "jsonl_sha256": "7fa9f5d1be4aca6745f67a1e4a3dcc495f10ec6612fa13c9d87b01890643bc2c",
+   "jsonl_bytes": 1490246,
+   "sing_sha256": "101c4562a87f1ae5cff9745470f63f6a4fc0995ab7f9c54115bcb76f4595a607",
+   "sing_bytes": 919376,
+   "jsonl_match_remote": true,
+   "sing_match_remote": true,
+   "singular_rows": 816,
+   "singular_nonzero": 599,
+   "seconds": 1.95
+  },
+  {
+   "case": "common_4",
+   "branch": "rational",
+   "jsonl_sha256": "276ee6f4c23df9577cbeb832f06e84ae1c06dcf29b960e067d08083d3a0db13e",
+   "jsonl_bytes": 1843792,
+   "sing_sha256": "0fde2d1d3cfcc3659f31431bbc2dca8ea506a870c6309e73217f4cd12b68ab7c",
+   "sing_bytes": 1080176,
+   "jsonl_match_remote": true,
+   "sing_match_remote": true,
+   "singular_rows": 816,
+   "singular_nonzero": 719,
+   "seconds": 2.43
+  },
+  {
+   "case": "common_4",
+   "branch": "golden",
+   "jsonl_sha256": "3e897ad6578a25aa0ce90e16ae8ab68c4ddf94f5bc2426045792982bf9ea892e",
+   "jsonl_bytes": 1961224,
+   "sing_sha256": "addff558c331a1e963e5a764feb192f6c3dc57a9e2b3a1b37aa355d3bcbd0f7b",
+   "sing_bytes": 1221537,
+   "jsonl_match_remote": true,
+   "sing_match_remote": true,
+   "singular_rows": 816,
+   "singular_nonzero": 719,
+   "seconds": 2.64
+  }
+ ],
+ "all_match": true,
+ "max_rss_kib": 97620,
+ "cpu_seconds": 11.76
+}

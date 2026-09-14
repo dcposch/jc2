@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The report is sealed at 18:01:52 UTC, ahead of the 18:06 reserve, and nothing further will be written.
+
+**Outcome: CONDITIONAL ACCEPTANCE at static source-review tier, no blocking defect.** The report is at `xmodel/r3-native-record-assembler-gate-fable5-20260912.md` (225 lines, 2009 words including headings and custody, sha256 `4aba06a0…0a12d`), with a single standalone `<!-- BODY-END -->` as the last line.
+
+Custody: all seven snapshots hashed before any read and again after the body; every pre and post value equals the expected pin. COORDINATION.md was read whole first. Only this one file was written, via five bounded apply_patch writes. No interpreter, import, syntax check, git, network, or uncharged file was touched. No charge_basis was declared.
+
+Verdicts by finding:
+
+- **1 Grammar: CONFIRMED (conditional).** Every record form the charged template emits is admitted by the parser, in the parser's fixed order. Both child-coverage directions, disjoint roles, alias targets, counts, and the line/count ceilings are mutually consistent. Host-dependent legitimate refusals, not mismatches: multi-arch duplicate package rows, RUNPATH-relative `ldd` paths containing `..`, and the 4000-alias bound with no collector twin.
+- **2 Output boundary: CONFIRMED.** All bytes are formed before OUT exists, exactly five files, O_EXCL/O_NOFOLLOW/0444, fsync, exact-length readbacks, and the documented late-failure case that leaves a complete receipt. One unstated interface fact: OUT is created 0700, and the bootstrap's `directory()` rule requires 0o005 on every ancestor of a consumed manifest. ROOT binding must copy or re-mode before consumption. Optional one-token repair noted, not selected, not implemented.
+- **3 Bootstrap consumer: CONFIRMED.** The six-field full schema, the two-field subset, the shared job tag, and the 1 MiB / 64 KiB ceilings match exactly. Env and systemctl enter only through registration pins and the generic mode rule; the assembler's required vector remains the original seven. P-TOOLS is supplied only jointly by authenticated new collection, ROOT binding, and the bootstrap's checks. Whether the two tools are canonical files remains external.
+- **4 Traces.** A 28-line synthetic positive at syntax-only tier, the ENTRY-deletion negative rejected at the semantic reverse-child check (not the pin), and the six other negatives each pinned to their source line. Pre-main SystemExit and escaping BaseExceptions are distinguished from caught run failures; no termination theorem is claimed.
+
+Nothing follows from this lane: no worker, enabled spec, execution, retry, cap increase, or foundation re-review. ROOT owns TERM/KILL, terminal-before-receipt custody, and timer retirement.
+DIVERT path=xmodel/r3-native-record-assembler-gate-fable5-20260912.md status=CLEAN body_bytes=14183 body_sha256=4aba06a04f44357f032ff0bb52fdd426debb2fa2ccce85ef8f8dc07d7bb0a12d

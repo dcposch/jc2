@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The review is complete and sealed. Nothing further is needed from the environment.
+
+**Outcome.** The report `xmodel/caprun-lateflow-corrected-gate-fable5-20260912.md` is written, read back whole, and closed with `<!-- BODY-END -->` as its last line at 05:56:21 UTC, inside the 06:07 reserve. It is the only file written. All 26 inputs matched their expected digests before reading and again at postpin time, emitted to stdout only.
+
+**Disposition: STATIC_COHERENT_UNBOUND_UNEXECUTED.** I found no blocking source-level incoherence. The corrected composition implements the contract as written, subject only to ROOT's future physical binding and the unmeasured 120-second holder liveness. All six of Astra's corrections and the two historical targets are CONFIRMED with literal line traces, and all ten manual controls trace as old-fail/new-pass or refusal.
+
+**Remaining GAPs, all on the binding side, none authorizing anything:**
+- The local manifest's own digest has no in-code anchor, so ROOT's external pin is a procedure the packet cannot verify.
+- The frozen kernel's only wait primitive is `write_stdin` with empty input, while the stated tool contract names `wait`. ROOT must confirm they are the same handle.
+- Every hash readback anchors on a single trailing newline, so exec output must be byte-faithful.
+- Timer authentication checks unit identity only. The expected-property map has no calendar or next-elapse field, so the retirement deadline is not source-verified.
+- About nine independent deadline literals across config, scripts, holder and installer have no cross-check.
+- The binder checks only the installer's base path, not its stage, unit or holder argv literals.
+
+**Liveness signal, static only.** After the holder starts, the remaining flow issues roughly 134 sequential tool calls, about 33 of them SSH sessions, across three separately human-invoked entries, all inside the holder's 120 seconds. The fixed-role check runs two or three times per entry. This is the structural reason OPEN2 is serious. It is not a measurement and this review authorizes no observation to obtain one.
+DIVERT path=xmodel/caprun-lateflow-corrected-gate-fable5-20260912.md status=CLEAN body_bytes=23901 body_sha256=bb724273a38ae3ae72c5cc5327e588c266006951ff58b81ea9047c15738299f2

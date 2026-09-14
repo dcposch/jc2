@@ -1,0 +1,61 @@
+{
+ "runs": [
+  {
+   "mutation": null,
+   "optimized": false,
+   "returncode": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "f124fa364c2c31dcc3c61a06fa014adc52a6953c04bb67a2afe0b9039760ea25"
+  },
+  {
+   "mutation": "--mutate-lambda-weight",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "elta_check.py\", line 17, in need\n    raise ValueError(msg)\nValueError: source action covariance u->tau^5 u, v->tau^-1 v\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-source-action",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "elta_check.py\", line 17, in need\n    raise ValueError(msg)\nValueError: source action covariance u->tau^5 u, v->tau^-1 v\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-shear-sign",
+   "optimized": false,
+   "returncode": 1,
+   "stderr_tail": "a-gate-fable5-20260907/delta_check.py\", line 17, in need\n    raise ValueError(msg)\nValueError: shear kernel-slot action\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": null,
+   "optimized": true,
+   "returncode": 0,
+   "stderr_tail": "",
+   "stdout_sha256": "f124fa364c2c31dcc3c61a06fa014adc52a6953c04bb67a2afe0b9039760ea25"
+  },
+  {
+   "mutation": "--mutate-lambda-weight",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "elta_check.py\", line 17, in need\n    raise ValueError(msg)\nValueError: source action covariance u->tau^5 u, v->tau^-1 v\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-source-action",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "elta_check.py\", line 17, in need\n    raise ValueError(msg)\nValueError: source action covariance u->tau^5 u, v->tau^-1 v\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "mutation": "--mutate-shear-sign",
+   "optimized": true,
+   "returncode": 1,
+   "stderr_tail": "a-gate-fable5-20260907/delta_check.py\", line 17, in need\n    raise ValueError(msg)\nValueError: shear kernel-slot action\n",
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "status": "PASS"
+}

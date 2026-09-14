@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and verified; all writers stopped at 20:08:32 UTC, before the 20:17:51 stop. No further writes.
+
+**Outcome: A, B, C, D all CONFIRMED. No refuted item, no blocking defect, no repair recommended.**
+
+Report: `xmodel/f10-r1-normalized-runtime-gate-fable5-20260909.md` (unique standalone `<!-- BODY-END -->` as the last line, no Seal, no charge_basis). Box: `box/f10-r1-normalized-runtime-gate-fable5-20260909/` holds the sha256sum custody file and the hex cross-check list.
+
+What I established, statically and from text only:
+
+- **Custody.** All fifteen ordered digests matched before any read. The five accepted copies carry exactly the hashes the new caller and harness pin. Every plus line and context line of the caller diff lands verbatim in the new file; all four hunks are internally consistent and confined to main(). The old-side literal check remains root's, as charged.
+- **A.** Vector is nine constants plus caller, harness and interpreter, with set equality enforced. Argv lengths match each entrypoint, operation labels match, the backend hash sits in every authority and in the batch receipt, and the receipt status, source and artifact bindings are exact. Preflight order, refusal paths, dummy event sequence, zombie exclusion, admission, aggregate and post-return refusal are unchanged.
+- **B.** Each of the eight fixtures was traced to its first failing checker line with the exact reason string. Mutated wires are produced by the production ring, so the parser accepts them and the rejections are semantic. I reproduced the operator coefficients and the five propagation formulas by hand; the harness lines 80 to 84 are those formulas verbatim, with the right c3 row order and d0 from map 2 slot 2. The fixture's fidelity to the old rule rests on the accepted operator, but its rejection does not.
+- **C.** The receipt's five inventory constants are typed values; the underlying conditions are the named checker lines. Custody boundary and backend immutability hold. All STATIC17n qualifications persist unchanged.
+- **D.** Only a disabled null template exists and is refused by both the caller and the helper. The packet is ready for root to consider one separately registered bounded validation; I chose no caps, worker or deadline and measured nothing.
+
+One OPEN raised, own-only, superseding the retained gate's preflight-and-batch OPEN for the normalized packet: quantity is one seven-record preflight PASS plus one batch PASS with eight expected rejections, or one named STOP. Collisions: EMPTY.
+DIVERT path=xmodel/f10-r1-normalized-runtime-gate-fable5-20260909.md status=CLEAN body_bytes=18052 body_sha256=4968f8d32261d073a7bef8d3d4a8bf1e193ed1e0eba73bb2f5237ba735d6d783

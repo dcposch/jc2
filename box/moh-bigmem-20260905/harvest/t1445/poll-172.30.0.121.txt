@@ -1,0 +1,70 @@
+========== 172.30.0.121 utc=2026-09-05T14:46:25Z ==========
+UTC=2026-09-05T14:46:26Z
+HOST=ip-172-30-0-121
+--- mem ---
+               total        used        free      shared  buff/cache   available
+Mem:           999Gi        16Gi       987Gi       3.0Mi       1.8Gi       983Gi
+--- dmesg OOM ---
+(dmesg empty or no match above)
+--- ps ---
+    PID    PPID     ELAPSED   RSS %CPU CMD
+   8379       1       34:19  3632  0.0 bash run_guided_pipeline.sh m12_union
+   8381    8379       34:19 112912 0.0 python3 /home/ubuntu/moh-bigmem-20260905/run_guided_job.py --workdir /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided --meta /home/ubuntu/moh-bigmem-20260905/targets/m12_union/meta.json --rows /home/ubuntu/moh-bigmem-20260905/targets/m12_union/rows.tsv --name m12_union --primes 1073741827 --timeout 10800 --cpus 32
+   8382    8381       34:18  3608  0.0 bash -c while true; do echo utc=$(date -u +%Y-%m-%dT%H:%M:%SZ) >> /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log; pid=$(pgrep -n Singular || true); echo pid=$pid >> /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log; if [ -n "$pid" ] && [ -r /proc/$pid/status ]; then awk '/VmPeak|VmSize|VmHWM|VmRSS/' /proc/$pid/status >> /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log; fi; sleep 20; done
+   8383    8381       34:18  2132  0.0 timeout --signal=TERM --kill-after=60s 10800s /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+   8387    8383       34:18  1652  0.0 /usr/bin/time -v stdbuf -oL -eL Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+   8388    8387       34:18 9361772 99.9 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.sing
+  12418   12417       00:00  3580  0.0 bash -c echo UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ) echo HOST=$(hostname) echo "--- mem ---" free -h | head -2 echo "--- dmesg OOM ---" (dmesg -T 2>/dev/null | grep -iE 'oom|killed process|Out of memory' | tail -8) || true echo "(dmesg empty or no match above)" echo "--- ps ---" ps -eo pid,ppid,etime,rss,pcpu,cmd | awk 'NR==1 || /msolve|Singular|run_msolve|run_guided|extract_native|run_v18/' echo "--- artifacts find ---" find $HOME/moh-bigmem-20260905 -maxdepth 5 \( -name '*.g2.rc' -o -name '*.status.json' -o -name 'guided_gb_result.json' -o -name '*.g2.out' -o -name '*.g2.stderr' -o -name '*.g2.meta' -o -name '*.rss.log' \) -printf '%s %TY-%Tm-%TdT%TH:%TM:%TS %p\n' 2>/dev/null echo "--- last F4 ---" for f in $HOME/moh-bigmem-20260905/targets/*/*/*.g2.stderr; do   [ -f "$f" ] || continue   echo FILE=$f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f")   echo "--- F4 header ---"   grep -E 'deg[[:space:]]+sel|current degree' "$f" | tail -2   echo "--- F4 last complete-ish ---"   grep -E '^[[:space:]]*[0-9]+[[:space:]]+[0-9]+[[:space:]]+[0-9]+' "$f" | tail -12   echo "--- F4 raw tail ---"   tail -c 800 "$f"; echo done echo "--- last GG ---" for f in $HOME/moh-bigmem-20260905/targets/*/guided/*.out; do   [ -f "$f" ] || continue   echo FILE=$f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f")   grep -E 'GG__|CONTROL_|MAIN_|GUIDED_|UNIT|NONUNIT|std|used time' "$f" | tail -30   echo "--- out tail ---"   tail -20 "$f" done echo "--- extract ---" ls -la $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/ 2>/dev/null || true ls -la $HOME/moh-bigmem-20260905/targets/v18/native_rows.tsv $HOME/moh-bigmem-20260905/targets/v18/classdir/rows/ 2>/dev/null || true echo "--- builder stdout ---" tail -30 $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/builder.stdout 2>/dev/null || true echo "--- builder stderr ---" tail -20 $HOME/moh-bigmem-20260905/targets/v18/classdir/extract/builder.stderr 2>/dev/null || true echo "--- rss last ---" for f in $HOME/moh-bigmem-20260905/targets/*/*/*.rss.log; do   [ -f "$f" ] || continue   echo FILE=$f   tail -12 "$f" done echo "--- gnu time ---" grep -E 'Maximum resident|Elapsed \(wall|Exit status|Command exited|User time|System time' $HOME/moh-bigmem-20260905/targets/*/*/*.g2.stderr $HOME/moh-bigmem-20260905/targets/*/guided/*.err $HOME/*.time 2>/dev/null | tail -30 || true echo "--- home logs ---" ls -la $HOME/*.log 2>/dev/null echo "=== log tails ===" for f in $HOME/*.log; do   [ -f "$f" ] || continue   echo "==== TAIL $f size=$(stat -c%s "$f") mtime=$(stat -c%y "$f") ===="   tail -40 "$f" done echo POLL_DONE
+  12428   12418       00:00  3848  0.0 awk NR==1 || /msolve|Singular|run_msolve|run_guided|extract_native|run_v18/
+--- artifacts find ---
+11454 2026-09-05T14:46:09.4513120130 /home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log
+--- last F4 ---
+--- last GG ---
+FILE=/home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.out size=217 mtime=2026-09-05 14:12:13.144699900 +0000
+CONTROL_RING_PASS R
+CONTROL_EMPTY_PASS
+CONTROL_NONEMPTY_PASS
+MAIN_START equations=425 unknowns=77 char=1073741827 algorithm=std
+GG__RUN main START
+GG__GENERATOR_COUNT main 426
+GG__STD_BEGIN main
+//used time: 4.61 sec
+--- out tail ---
+CONTROL_RING_PASS R
+CONTROL_EMPTY_PASS
+CONTROL_NONEMPTY_PASS
+MAIN_START equations=425 unknowns=77 char=1073741827 algorithm=std
+GG__RUN main START
+GG__GENERATOR_COUNT main 426
+GG__STD_BEGIN main
+//used time: 4.61 sec
+--- extract ---
+/home/ubuntu/moh-bigmem-20260905/targets/v18/classdir/rows/:
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Sep  5 14:04 .
+drwxrwxr-x 4 ubuntu ubuntu 4096 Sep  5 14:04 ..
+--- builder stdout ---
+--- builder stderr ---
+--- rss last ---
+FILE=/home/ubuntu/moh-bigmem-20260905/targets/m12_union/guided/m12_union_p1073741827.rss.log
+utc=2026-09-05T14:45:49Z
+pid=8388
+VmPeak:	 9644120 kB
+VmSize:	 9637976 kB
+VmHWM:	 9367316 kB
+VmRSS:	 9361772 kB
+utc=2026-09-05T14:46:09Z
+pid=8388
+VmPeak:	 9644120 kB
+VmSize:	 9637976 kB
+VmHWM:	 9367316 kB
+VmRSS:	 9361772 kB
+--- gnu time ---
+--- home logs ---
+-rw-rw-r-- 1 ubuntu ubuntu 315 Sep  5 14:12 /home/ubuntu/m12_union.guided.log
+=== log tails ===
+==== TAIL /home/ubuntu/m12_union.guided.log size=315 mtime=2026-09-05 14:12:07.072799203 +0000 ====
+GUIDED_PIPELINE_START target=m12_union rows=/home/ubuntu/moh-bigmem-20260905/targets/m12_union/rows.tsv utc=2026-09-05T14:12:06Z
+GUIDED_START name=m12_union gens=425 nvars=78 rows_sha=af3cf058c7e949d7e9958b1c9120b9350436c6eca7a952afbc8ea32f9794ef58
+MODULAR_START p=1073741827 timeout=10800 utc=2026-09-05T14:12:07Z
+POLL_DONE

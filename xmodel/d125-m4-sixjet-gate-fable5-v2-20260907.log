@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Sealed at 05:40 UTC, ahead of the 05:48 deadline. Review complete; stopping here.
+
+**Verdicts** (report at `xmodel/d125-m4-sixjet-gate-fable5-v2-20260907.md`, body SHA `3ec2125b…`):
+
+- **CONFIRMED:** the explicit k=s⁴ pair over Q[b]/(b⁴−3) is a complete unguarded normalized odd source jet modulo s⁷. I independently verified the literal R, T, r, Z, q, C₀, D₀ supports and low coefficients, the Laurent lifts of every small factor (φ(R) has v⁰ coefficient 3u, φ(T) starts at v¹, φ(q) has negative part exactly v⁻¹), the universal quotient identity D₀²−C₀³=T·M in four abstract variables, W as a polynomial with degree ≤13, lowest degree 5, odd, weight ≤1, and ordinary by the 3u regularity argument, the U₄ low jet g²p by degree-≤3 projected products, the displayed B table against the abstract (1+ε)^{5/3} expansion, two R=g toy brackets, and all face, zero-slot, parity and lattice bookkeeping from the classification gate's row inventory.
+- **CONFIRMED:** the three saturated low equations with x=−b²s², y=1, a01=0, e=−5b²s⁶/9, by actual multiplication modulo b⁴−3. Every A and B term of degree ≤3 is listed explicitly; only the γR block reaches that range on B.
+- **GAP (untested, correctly disclosed):** B_g at order 8 and the Jacobian target at order 12.
+- **CONFIRMED as scope statements:** not an arc, guarded point, saturation, properness or JC2 result; no degeneration guarantee.
+- **UNREVIEWED:** section 1's general residue necessity and section 2's linear-space census. The finite construction does not depend on them.
+
+**One reading clarification, not a defect:** the report's weight bound on W does not follow from the M/p route, which gives only 17. It follows from the literal C₀/D₀ weights plus the unit top form of R.
+
+**Own controls:** `box/d125-m4-sixjet-gate-fable5-v2-20260907/gate_controls.py` (stdlib, 52 gates, zero Assert nodes, capped). Ten runs normal and −O, byte-identical witnesses, 1.2 s total. Each of the four required mutations fails at a named gate in both modes. Neither producer script was executed; no client stream, network or CAS was used. One own-code bug in coefficient extraction was fixed before recording and is disclosed in the report.
+DIVERT path=xmodel/d125-m4-sixjet-gate-fable5-v2-20260907.md status=DIVERTED body_bytes=8837 body_sha256=3ec2125b485277787035f5d922287fed07a6af019e7cd4af4c0c675f370e7bb3 overflow=xmodel/d125-m4-sixjet-gate-fable5-v2-20260907.overflow overflow_bytes=425 raw=xmodel/d125-m4-sixjet-gate-fable5-v2-20260907.raw.md raw_sha256=8cf9e25cc7f2ec782b94af495b8d62fc64788c80ecbc54d0a57ce28b6b04528d overflow_sha256=190fc5ddf1a74d3114f90a0b9bf93bb504ee69120f59595a964d58641f4d1b1b
+post-BODY-END overflow diverted; charged body preserved

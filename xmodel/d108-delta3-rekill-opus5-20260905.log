@@ -1,0 +1,29 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Done — sealed at 108 minutes of the 180-minute budget.
+
+## Result: `NECESSARY-CHART SURVIVOR`
+
+The D=108 δ=3 split branch **survives the full staged elimination** at the Moh Def 5.1(3) radius. `D108-DELTA3-DEAD` cannot be re-certified.
+
+**Custody** — all 7 charged input hashes verified mechanically from the receipt via awk + `sha256sum -c`, 7/7 OK, no mismatch.
+
+**The rebuild.** The frozen D=108 engine implements stage 0 only (`main()` refuses later stages), so I ported the (99,66) staged architecture onto the row at the corrected radius `4r+5q`, keeping the radius-independent pieces (minor series, pole schedule, Jacobian schedule) verbatim.
+
+**Staged elimination, exact Q:**
+
+| | rows | free | Q\* piv | resid | dim | UNIT |
+|---|---|---|---|---|---|---|
+| stages 0/1/2/3/4 (source radius) | 19→715 | 1052→943 | 0→32 | 1→3 | 10,10,10,13,**14** | **False** |
+| saturated T=8 (1420 rows) | 1420 | 906 | 60 | 3 | **7** | **False** |
+| stage 0 / stage 4 (frozen radius) | 21 / 717 | 224 / 198 | 0 / 30 | 3 / 5 | **−1** | **True** |
+
+**The survivor.** Residual radical is codimension 2: `K2c_3_26 + 8·jet2` and `K2c_4_25 − K2c_4_26 − 20·jet1²`. One rational point (`jet1=jet2=c=1`, `K2c_3_26=−8`, `K2c_4_25=20`, rest 0) annihilates **all 715 stage-4 raw rows and all 1420 saturated raw rows by direct substitution**, with `c ≠ 0` and `D₂`-minimality `Hc_5_3 = 2`.
+
+**Controls, all passing:** old radius reproduces `[1]` (7 pivots/5 residual, 9/2 — matching the charged gate); the centre lane's witness satisfies my rebuilt stage 0; the outer-spec derivation reproduces all twelve frozen (99,66) constants; the Jacobian normalization `J[t¹,w¹⁵]=1712·f0` and pole counts 1200/544 replay; and the same driver still kills at the frozen radius.
+
+**Two findings beyond the centre lane:** the frozen K2 D2 face `π¹²(π²−1)⁸` encodes `A₂=2, V₂=8` where the row has `A₂=4, V₂=7` (source face `(π⁴−1)⁷`); and at the frozen radius the entire `A3` outer block is deleted (0 of 3258 coordinates), removing F's free constant term.
+
+**Priced, not chased:** the unsourced h3-D1 row (`Hc_5_3 = −1`) costs exactly one dimension and does not kill (14→13, 7→6).
+
+Typed honestly: this is a survivor of a *necessary* system — F's pole rows at local powers 9–95, G's at 9–63, and Jacobian bands at t ≥ 5 remain untested, and §7 says so explicitly. No fleet worker was needed, so nothing to terminate.
+DIVERT path=xmodel/d108-delta3-rekill-opus5-20260905.md status=CLEAN_SEALED body_bytes=23110 body_sha256=b1c87c8863a8c6a7389b213cddc101ac5fe0dc56fb359983b013c4d91c2cb33b

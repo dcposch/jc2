@@ -1,0 +1,11 @@
+{
+  "type": "FOREGROUND TIMEOUT RECORD / EXACT-Q T2 PREFIX",
+  "status": "TIMEOUT[3000s,EXIT-124]",
+  "command": "OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=NUMEXPR_NUM_THREADS=1 timeout 3000 /usr/bin/time -v python3 t2_prefix_qstar.py",
+  "scope": "all coefficients of the normalized monic T2 residual through s^100",
+  "stdout_bytes": 0,
+  "stderr_bytes": 0,
+  "rows_or_pivots_emitted": false,
+  "driver_sha256": "8c380a537f0629b0bd6d2e04e4944b24b371e8e9a49387295192343baa0c2a52",
+  "claim_guard": "No row count, rank, dimension, consistency, or unit-ideal conclusion is inferred."
+}

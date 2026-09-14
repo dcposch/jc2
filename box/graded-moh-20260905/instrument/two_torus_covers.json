@@ -1,0 +1,108 @@
+[
+  {
+    "stem": "C_n24m16_Mm12_m2_5_ell1_s4_V1_1_6",
+    "source_rows_sha256": "36a2f3c8bddcaba116f2f71aaa9c511ba4422699638a0a3bedc5f4626f0fa05c",
+    "source_index": 148,
+    "target_row": "-4*h_0_1*h_0_0*A3_2_0-h_0_0*A2_1_0*B2_1_1+h_0_0*A2_1_1*B2_1_0+h_0_1*A2_1_0*B2_1_0-2*A3_2_0*B2_0_1-A3_1_0*B2_1_1+A3_1_1*B2_1_0-c",
+    "non_c_terms": 7,
+    "minimal_monomial_hitting_set": [
+      "A3_2_0",
+      "B2_1_0",
+      "B2_1_1"
+    ],
+    "torus_character_determinants": {
+      "A3_2_0": 30,
+      "B2_1_0": 7,
+      "B2_1_1": 9
+    },
+    "minimum_proof": "Exhaustive branch-and-bound exact set-cover search, singleton propagation and inclusion-minimal-clause reduction. Each monomial in c target expression has factor in chosen set.",
+    "cover_proof": "Target row gives c in ideal(chosen coordinates)+I. Thus D(c) is covered by coordinate opens. Each chosen character and c character are independent over Z (displayed nonzero determinant). The torus character map to (Gm)^2 is an isogeny and surjective over Qbar, so every such open orbit meets c=z=1. This cover requires every listed slice UNIT for full kill.",
+    "slice_variables": 75
+  },
+  {
+    "stem": "C_n24m18_Mm15_14_ell1_s3_V1_9",
+    "source_rows_sha256": "467ec50e58f0874fb78017cf68f82f204c490137cb3bf144b3881e93a9300214",
+    "source_index": 175,
+    "target_row": "15*h_0_0^4*h_1_0^2*A1_0_1+3*h_0_0^5*h_1_0*A1_1_1-3*h_1_1*h_0_0^5*A1_1_0-15*h_0_1*h_0_0^4*h_1_0*A1_1_0+12*h_0_0^3*h_1_0^2*A2_0_1+3*h_0_0^4*h_1_0*A2_1_1-3*h_1_1*h_0_0^4*A2_1_0-12*h_0_1*h_0_0^3*h_1_0*A2_1_0-6*h_0_1*h_0_0^4*A2_2_0-16*h_0_0^3*h_1_0^2*B2_0_1-9*h_0_0^2*h_1_0^2*A1_0_0*B2_0_1-7*h_0_0^3*h_1_0*A1_1_0*B2_0_1-4*h_0_0^4*h_1_0*B2_1_1-3*h_0_0^3*h_1_0*A1_0_0*B2_1_1-h_0_0^4*A1_1_0*B2_1_1+3*h_0_0^2*h_1_0^2*A1_0_1*B2_0_0+h_0_0^3*h_1_0*A1_1_1*B2_0_0-h_1_1*h_0_0^3*A1_1_0*B2_0_0-3*h_0_1*h_0_0^2*h_1_0*A1_1_0*B2_0_0+4*h_1_1*h_0_0^4*B2_1_0+16*h_0_1*h_0_0^3*h_1_0*B2_1_0+5*h_0_0^3*h_1_0*A1_0_1*B2_1_0+h_0_0^4*A1_1_1*B2_1_0+3*h_1_1*h_0_0^3*A1_0_0*B2_1_0+9*h_0_1*h_0_0^2*h_1_0*A1_0_0*B2_1_0+2*h_0_1*h_0_0^3*A1_1_0*B2_1_0+8*h_0_1*h_0_0^4*B2_2_0+2*h_0_0^4*A1_0_1*B2_2_0+6*h_0_1*h_0_0^3*A1_0_0*B2_2_0+9*h_0_0^2*h_1_0^2*A3_0_1+3*h_0_0^3*h_1_0*A3_1_1-3*h_1_1*h_0_0^3*A3_1_0-9*h_0_1*h_0_0^2*h_1_0*A3_1_0-6*h_0_1*h_0_0^3*A3_2_0-4*h_0_0*h_1_0^2*A2_0_0*B2_0_1-5*h_0_0^2*h_1_0*A2_1_0*B2_0_1-2*h_0_0^3*A2_2_0*B2_0_1-2*h_0_0^2*h_1_0*A2_0_0*B2_1_1-h_0_0^3*A2_1_0*B2_1_1+2*h_0_0*h_1_0^2*A2_0_1*B2_0_0+h_0_0^2*h_1_0*A2_1_1*B2_0_0-h_1_1*h_0_0^2*A2_1_0*B2_0_0-2*h_0_1*h_0_0*h_1_0*A2_1_0*B2_0_0-2*h_0_1*h_0_0^2*A2_2_0*B2_0_0+4*h_0_0^2*h_1_0*A2_0_1*B2_1_0+h_0_0^3*A2_1_1*B2_1_0+2*h_1_1*h_0_0^2*A2_0_0*B2_1_0+4*h_0_1*h_0_0*h_1_0*A2_0_0*B2_1_0+h_0_1*h_0_0^2*A2_1_0*B2_1_0+2*h_0_0^3*A2_0_1*B2_2_0+4*h_0_1*h_0_0^2*A2_0_0*B2_2_0-12*h_0_0^2*h_1_0^2*B3_0_1-6*h_0_0*h_1_0^2*A1_0_0*B3_0_1-6*h_0_0^2*h_1_0*A1_1_0*B3_0_1-4*h_0_0^3*h_1_0*B3_1_1-3*h_0_0^2*h_1_0*A1_0_0*B3_1_1-h_0_0^3*A1_1_0*B3_1_1+4*h_1_1*h_0_0^3*B3_1_0+12*h_0_1*h_0_0^2*h_1_0*B3_1_0+3*h_0_0^2*h_1_0*A1_0_1*B3_1_0+h_0_0^3*A1_1_1*B3_1_0+3*h_1_1*h_0_0^2*A1_0_0*B3_1_0+6*h_0_1*h_0_0*h_1_0*A1_0_0*B3_1_0+3*h_0_1*h_0_0^2*A1_1_0*B3_1_0+8*h_0_1*h_0_0^3*B3_2_0+2*h_0_0^3*A1_0_1*B3_2_0+6*h_0_1*h_0_0^2*A1_0_0*B3_2_0+6*h_0_0*h_1_0^2*A4_0_1+3*h_0_0^2*h_1_0*A4_1_1-3*h_1_1*h_0_0^2*A4_1_0-6*h_0_1*h_0_0*h_1_0*A4_1_0-6*h_0_1*h_0_0^2*A4_2_0-h_1_0^2*A3_0_0*B2_0_1-3*h_0_0*h_1_0*A3_1_0*B2_0_1-2*h_0_0^2*A3_2_0*B2_0_1-h_0_0*h_1_0*A3_0_0*B2_1_1-h_0_0^2*A3_1_0*B2_1_1+h_1_0^2*A3_0_1*B2_0_0+h_0_0*h_1_0*A3_1_1*B2_0_0-h_1_1*h_0_0*A3_1_0*B2_0_0-h_0_1*h_1_0*A3_1_0*B2_0_0-2*h_0_1*h_0_0*A3_2_0*B2_0_0+3*h_0_0*h_1_0*A3_0_1*B2_1_0+h_0_0^2*A3_1_1*B2_1_0+h_1_1*h_0_0*A3_0_0*B2_1_0+h_0_1*h_1_0*A3_0_0*B2_1_0+2*h_0_0^2*A3_0_1*B2_2_0+2*h_0_1*h_0_0*A3_0_0*B2_2_0-2*h_1_0^2*A2_0_0*B3_0_1-4*h_0_0*h_1_0*A2_1_0*B3_0_1-2*h_0_0^2*A2_2_0*B3_0_1-2*h_0_0*h_1_0*A2_0_0*B3_1_1-h_0_0^2*A2_1_0*B3_1_1+2*h_0_0*h_1_0*A2_0_1*B3_1_0+h_0_0^2*A2_1_1*B3_1_0+2*h_1_1*h_0_0*A2_0_0*B3_1_0+2*h_0_1*h_1_0*A2_0_0*B3_1_0+2*h_0_1*h_0_0*A2_1_0*B3_1_0+2*h_0_0^2*A2_0_1*B3_2_0+4*h_0_1*h_0_0*A2_0_0*B3_2_0-h_1_0*A4_1_0*B2_0_1-2*h_0_0*A4_2_0*B2_0_1-h_0_0*A4_1_0*B2_1_1+h_1_0*A4_1_1*B2_0_0-h_1_1*A4_1_0*B2_0_0-2*h_0_1*A4_2_0*B2_0_0+2*h_1_0*A4_0_1*B2_1_0+h_0_0*A4_1_1*B2_1_0-h_0_1*A4_1_0*B2_1_0+2*h_0_0*A4_0_1*B2_2_0-2*h_1_0*A3_1_0*B3_0_1-2*h_0_0*A3_2_0*B3_0_1-h_1_0*A3_0_0*B3_1_1-h_0_0*A3_1_0*B3_1_1+h_1_0*A3_0_1*B3_1_0+h_0_0*A3_1_1*B3_1_0+h_1_1*A3_0_0*B3_1_0+h_0_1*A3_1_0*B3_1_0+2*h_0_0*A3_0_1*B3_2_0+2*h_0_1*A3_0_0*B3_2_0-2*A4_2_0*B3_0_1-A4_1_0*B3_1_1+A4_1_1*B3_1_0+2*A4_0_1*B3_2_0-c",
+    "non_c_terms": 124,
+    "minimal_monomial_hitting_set": [
+      "A4_1_0",
+      "A4_2_0",
+      "B3_1_0",
+      "B3_2_0",
+      "h_0_0",
+      "h_1_0"
+    ],
+    "torus_character_determinants": {
+      "A4_1_0": -7,
+      "A4_2_0": 34,
+      "B3_1_0": 5,
+      "B3_2_0": 46,
+      "h_0_0": -12,
+      "h_1_0": 29
+    },
+    "minimum_proof": "Exhaustive branch-and-bound exact set-cover search, singleton propagation and inclusion-minimal-clause reduction. Each monomial in c target expression has factor in chosen set.",
+    "cover_proof": "Target row gives c in ideal(chosen coordinates)+I. Thus D(c) is covered by coordinate opens. Each chosen character and c character are independent over Z (displayed nonzero determinant). The torus character map to (Gm)^2 is an isogeny and surjective over Qbar, so every such open orbit meets c=z=1. This cover requires every listed slice UNIT for full kill.",
+    "slice_variables": 127
+  },
+  {
+    "stem": "C_n18m12_M2_9_ell2_s3_V3_8",
+    "source_rows_sha256": "0a8df9061b8afee4efa03373f557d93bec7db4276258ed25256e56fdec7f81d1",
+    "source_index": 164,
+    "target_row": "6*h_0_0*h_1_0^3*A1_0_1+18*h_0_0^2*h_1_0*h_2_0*A1_0_1+6*h_0_0^2*h_1_0^2*A1_1_1+4*h_0_0^3*h_2_0*A1_1_1-6*h_1_1*h_0_0^2*h_1_0*A1_1_0-6*h_0_1*h_0_0*h_1_0^2*A1_1_0-6*h_0_1*h_0_0^2*h_2_0*A1_1_0-4*h_1_1*h_0_0^3*A1_2_0-12*h_0_1*h_0_0^2*h_1_0*A1_2_0+2*h_1_0^3*A2_0_1+12*h_0_0*h_1_0*h_2_0*A2_0_1+4*h_0_0*h_1_0^2*A2_1_1+4*h_0_0^2*h_2_0*A2_1_1+2*h_0_0^2*h_1_0*A2_2_1-4*h_1_1*h_0_0*h_1_0*A2_1_0-2*h_0_1*h_1_0^2*A2_1_0-4*h_0_1*h_0_0*h_2_0*A2_1_0-4*h_1_1*h_0_0^2*A2_2_0-8*h_0_1*h_0_0*h_1_0*A2_2_0-6*h_0_1*h_0_0^2*A2_3_0-3*h_1_0^3*B2_0_1-18*h_0_0*h_1_0*h_2_0*B2_0_1-6*h_1_0*h_2_0*A1_0_0*B2_0_1-3*h_1_0^2*A1_1_0*B2_0_1-6*h_0_0*h_2_0*A1_1_0*B2_0_1-6*h_0_0*h_1_0*A1_2_0*B2_0_1-6*h_0_0*h_1_0^2*B2_1_1-6*h_0_0^2*h_2_0*B2_1_1-2*h_1_0^2*A1_0_0*B2_1_1-4*h_0_0*h_2_0*A1_0_0*B2_1_1-4*h_0_0*h_1_0*A1_1_0*B2_1_1-2*h_0_0^2*A1_2_0*B2_1_1-3*h_0_0^2*h_1_0*B2_2_1-2*h_0_0*h_1_0*A1_0_0*B2_2_1-h_0_0^2*A1_1_0*B2_2_1+6*h_1_1*h_0_0*h_1_0*B2_1_0+3*h_0_1*h_1_0^2*B2_1_0+6*h_0_1*h_0_0*h_2_0*B2_1_0+h_1_0^2*A1_0_1*B2_1_0+2*h_0_0*h_2_0*A1_0_1*B2_1_0+2*h_0_0*h_1_0*A1_1_1*B2_1_0+2*h_1_1*h_1_0*A1_0_0*B2_1_0+2*h_0_1*h_2_0*A1_0_0*B2_1_0+2*h_1_1*h_0_0*A1_1_0*B2_1_0+2*h_0_1*h_1_0*A1_1_0*B2_1_0+2*h_0_1*h_0_0*A1_2_0*B2_1_0+6*h_1_1*h_0_0^2*B2_2_0+12*h_0_1*h_0_0*h_1_0*B2_2_0+4*h_0_0*h_1_0*A1_0_1*B2_2_0+2*h_0_0^2*A1_1_1*B2_2_0+4*h_1_1*h_0_0*A1_0_0*B2_2_0+4*h_0_1*h_1_0*A1_0_0*B2_2_0+4*h_0_1*h_0_0*A1_1_0*B2_2_0+9*h_0_1*h_0_0^2*B2_3_0+3*h_0_0^2*A1_0_1*B2_3_0+6*h_0_1*h_0_0*A1_0_0*B2_3_0+6*h_1_0*h_2_0*A3_0_1+2*h_1_0^2*A3_1_1+4*h_0_0*h_2_0*A3_1_1+2*h_0_0*h_1_0*A3_2_1-2*h_1_1*h_1_0*A3_1_0-2*h_0_1*h_2_0*A3_1_0-4*h_1_1*h_0_0*A3_2_0-4*h_0_1*h_1_0*A3_2_0-6*h_0_1*h_0_0*A3_3_0-3*h_2_0*A2_1_0*B2_0_1-3*h_1_0*A2_2_0*B2_0_1-3*h_0_0*A2_3_0*B2_0_1-2*h_2_0*A2_0_0*B2_1_1-2*h_1_0*A2_1_0*B2_1_1-2*h_0_0*A2_2_0*B2_1_1-h_1_0*A2_0_0*B2_2_1-h_0_0*A2_1_0*B2_2_1+h_2_0*A2_0_1*B2_1_0+h_1_0*A2_1_1*B2_1_0+h_0_0*A2_2_1*B2_1_0+h_1_1*A2_1_0*B2_1_0+h_0_1*A2_2_0*B2_1_0+2*h_1_0*A2_0_1*B2_2_0+2*h_0_0*A2_1_1*B2_2_0+2*h_1_1*A2_0_0*B2_2_0+2*h_0_1*A2_1_0*B2_2_0+3*h_0_0*A2_0_1*B2_3_0+3*h_0_1*A2_0_0*B2_3_0-3*A3_3_0*B2_0_1-2*A3_2_0*B2_1_1-A3_1_0*B2_2_1+A3_2_1*B2_1_0+2*A3_1_1*B2_2_0+3*A3_0_1*B2_3_0-c",
+    "non_c_terms": 90,
+    "minimal_monomial_hitting_set": [
+      "A3_1_0",
+      "B2_0_1",
+      "B2_1_0",
+      "B2_1_1",
+      "B2_2_0",
+      "B2_3_0",
+      "h_0_0",
+      "h_1_0"
+    ],
+    "torus_character_determinants": {
+      "A3_1_0": -25,
+      "B2_0_1": -33,
+      "B2_1_0": -7,
+      "B2_1_1": -4,
+      "B2_2_0": 22,
+      "B2_3_0": 51,
+      "h_0_0": -18,
+      "h_1_0": 11
+    },
+    "minimum_proof": "Exhaustive branch-and-bound exact set-cover search, singleton propagation and inclusion-minimal-clause reduction. Each monomial in c target expression has factor in chosen set.",
+    "cover_proof": "Target row gives c in ideal(chosen coordinates)+I. Thus D(c) is covered by coordinate opens. Each chosen character and c character are independent over Z (displayed nonzero determinant). The torus character map to (Gm)^2 is an isogeny and surjective over Qbar, so every such open orbit meets c=z=1. This cover requires every listed slice UNIT for full kill.",
+    "slice_variables": 109
+  },
+  {
+    "stem": "C_n18m12_M2_9_ell2_s3_V1_8",
+    "source_rows_sha256": "b1696972030f66aa7fc0dc14495d0cfc197271863808d073d98c693e99c45d13",
+    "source_index": 345,
+    "target_row": "6*h_0_0*h_1_0^3*A1_0_1+18*h_0_0^2*h_1_0*h_2_0*A1_0_1+6*h_0_0^2*h_1_0^2*A1_1_1+4*h_0_0^3*h_2_0*A1_1_1-6*h_1_1*h_0_0^2*h_1_0*A1_1_0-6*h_0_1*h_0_0*h_1_0^2*A1_1_0-6*h_0_1*h_0_0^2*h_2_0*A1_1_0-4*h_1_1*h_0_0^3*A1_2_0-12*h_0_1*h_0_0^2*h_1_0*A1_2_0+2*h_1_0^3*A2_0_1+12*h_0_0*h_1_0*h_2_0*A2_0_1+4*h_0_0*h_1_0^2*A2_1_1+4*h_0_0^2*h_2_0*A2_1_1+2*h_0_0^2*h_1_0*A2_2_1-4*h_1_1*h_0_0*h_1_0*A2_1_0-2*h_0_1*h_1_0^2*A2_1_0-4*h_0_1*h_0_0*h_2_0*A2_1_0-4*h_1_1*h_0_0^2*A2_2_0-8*h_0_1*h_0_0*h_1_0*A2_2_0-6*h_0_1*h_0_0^2*A2_3_0-3*h_1_0^3*B2_0_1-18*h_0_0*h_1_0*h_2_0*B2_0_1-6*h_1_0*h_2_0*A1_0_0*B2_0_1-3*h_1_0^2*A1_1_0*B2_0_1-6*h_0_0*h_2_0*A1_1_0*B2_0_1-6*h_0_0*h_1_0*A1_2_0*B2_0_1-6*h_0_0*h_1_0^2*B2_1_1-6*h_0_0^2*h_2_0*B2_1_1-2*h_1_0^2*A1_0_0*B2_1_1-4*h_0_0*h_2_0*A1_0_0*B2_1_1-4*h_0_0*h_1_0*A1_1_0*B2_1_1-2*h_0_0^2*A1_2_0*B2_1_1-3*h_0_0^2*h_1_0*B2_2_1-2*h_0_0*h_1_0*A1_0_0*B2_2_1-h_0_0^2*A1_1_0*B2_2_1+6*h_1_1*h_0_0*h_1_0*B2_1_0+3*h_0_1*h_1_0^2*B2_1_0+6*h_0_1*h_0_0*h_2_0*B2_1_0+h_1_0^2*A1_0_1*B2_1_0+2*h_0_0*h_2_0*A1_0_1*B2_1_0+2*h_0_0*h_1_0*A1_1_1*B2_1_0+2*h_1_1*h_1_0*A1_0_0*B2_1_0+2*h_0_1*h_2_0*A1_0_0*B2_1_0+2*h_1_1*h_0_0*A1_1_0*B2_1_0+2*h_0_1*h_1_0*A1_1_0*B2_1_0+2*h_0_1*h_0_0*A1_2_0*B2_1_0+6*h_1_1*h_0_0^2*B2_2_0+12*h_0_1*h_0_0*h_1_0*B2_2_0+4*h_0_0*h_1_0*A1_0_1*B2_2_0+2*h_0_0^2*A1_1_1*B2_2_0+4*h_1_1*h_0_0*A1_0_0*B2_2_0+4*h_0_1*h_1_0*A1_0_0*B2_2_0+4*h_0_1*h_0_0*A1_1_0*B2_2_0+9*h_0_1*h_0_0^2*B2_3_0+3*h_0_0^2*A1_0_1*B2_3_0+6*h_0_1*h_0_0*A1_0_0*B2_3_0+6*h_1_0*h_2_0*A3_0_1+2*h_1_0^2*A3_1_1+4*h_0_0*h_2_0*A3_1_1+2*h_0_0*h_1_0*A3_2_1-2*h_1_1*h_1_0*A3_1_0-2*h_0_1*h_2_0*A3_1_0-4*h_1_1*h_0_0*A3_2_0-4*h_0_1*h_1_0*A3_2_0-6*h_0_1*h_0_0*A3_3_0-3*h_2_0*A2_1_0*B2_0_1-3*h_1_0*A2_2_0*B2_0_1-3*h_0_0*A2_3_0*B2_0_1-2*h_2_0*A2_0_0*B2_1_1-2*h_1_0*A2_1_0*B2_1_1-2*h_0_0*A2_2_0*B2_1_1-h_1_0*A2_0_0*B2_2_1-h_0_0*A2_1_0*B2_2_1+h_2_0*A2_0_1*B2_1_0+h_1_0*A2_1_1*B2_1_0+h_0_0*A2_2_1*B2_1_0+h_1_1*A2_1_0*B2_1_0+h_0_1*A2_2_0*B2_1_0+2*h_1_0*A2_0_1*B2_2_0+2*h_0_0*A2_1_1*B2_2_0+2*h_1_1*A2_0_0*B2_2_0+2*h_0_1*A2_1_0*B2_2_0+3*h_0_0*A2_0_1*B2_3_0+3*h_0_1*A2_0_0*B2_3_0-3*A3_3_0*B2_0_1-2*A3_2_0*B2_1_1-A3_1_0*B2_2_1+A3_2_1*B2_1_0+2*A3_1_1*B2_2_0+3*A3_0_1*B2_3_0-c",
+    "non_c_terms": 90,
+    "minimal_monomial_hitting_set": [
+      "A3_1_0",
+      "B2_0_1",
+      "B2_1_0",
+      "B2_1_1",
+      "B2_2_0",
+      "B2_3_0",
+      "h_0_0",
+      "h_1_0"
+    ],
+    "torus_character_determinants": {
+      "A3_1_0": -25,
+      "B2_0_1": -33,
+      "B2_1_0": -7,
+      "B2_1_1": -4,
+      "B2_2_0": 22,
+      "B2_3_0": 51,
+      "h_0_0": -18,
+      "h_1_0": 11
+    },
+    "minimum_proof": "Exhaustive branch-and-bound exact set-cover search, singleton propagation and inclusion-minimal-clause reduction. Each monomial in c target expression has factor in chosen set.",
+    "cover_proof": "Target row gives c in ideal(chosen coordinates)+I. Thus D(c) is covered by coordinate opens. Each chosen character and c character are independent over Z (displayed nonzero determinant). The torus character map to (Gm)^2 is an isogeny and surjective over Qbar, so every such open orbit meets c=z=1. This cover requires every listed slice UNIT for full kill.",
+    "slice_variables": 134
+  }
+]

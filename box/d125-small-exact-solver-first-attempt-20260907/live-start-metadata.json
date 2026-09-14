@@ -1,0 +1,60 @@
+{
+  "authority_deadline": "2026-09-07T01:22:24.223534+00:00",
+  "cgroup": "0::/user.slice/user-1000.slice/session-199.scope\n",
+  "identity": {
+    "authority_sha256": "4d1a0bb81e3716d1fa8ceb24d1546b77f0032c34d3545919da15ec63a5ef6b45",
+    "host": {
+      "boot": "69938ee6-48bb-4e45-bdf2-efb08c655368",
+      "cwd": "/home/ubuntu/d125-small-exact-solver-20260907",
+      "instance": "i-0da0cebfc97c9fd54",
+      "now": 1788743694.6337779,
+      "system": "Linux",
+      "vendor": "Amazon EC2"
+    },
+    "pgid": 13062,
+    "phase": "decision",
+    "pid": 13062,
+    "start_ticks": "597628"
+  },
+  "launch": {
+    "authority_sha256": "4d1a0bb81e3716d1fa8ceb24d1546b77f0032c34d3545919da15ec63a5ef6b45",
+    "caller_pgid": 13060,
+    "caller_pid": 13060,
+    "command": [
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "/home/ubuntu/d125-small-exact-solver-20260907/run_capped.py",
+      "--wall-seconds",
+      "300",
+      "--cpu-seconds",
+      "300",
+      "--rss-bytes",
+      "17179869184",
+      "--cwd",
+      "/home/ubuntu/d125-small-exact-solver-20260907",
+      "--stdout-file",
+      "decision.stdout",
+      "--stderr-file",
+      "decision.stderr",
+      "--telemetry-file",
+      "decision.telemetry.json",
+      "--",
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "/home/ubuntu/d125-small-exact-solver-20260907/driver.py",
+      "payload",
+      "--phase",
+      "decision",
+      "--authority",
+      "/home/ubuntu/d125-small-exact-solver-20260907/solver.authority.json"
+    ],
+    "duration": 300,
+    "phase": "decision"
+  },
+  "namespace": "pid:[4026531836]",
+  "proc_cmdline": "Singular --no-rc -q decision.sing ",
+  "proc_present": true,
+  "proc_status": "Name:\tSingular\nUmask:\t0002\nState:\tR (running)\nTgid:\t13062\nNgid:\t0\nPid:\t13062\nPPid:\t13061\nTracerPid:\t0\nUid:\t1000\t1000\t1000\t1000\nGid:\t1000\t1000\t1000\t1000\nFDSize:\t64\nGroups:\t4 24 27 30 105 1000 \nNStgid:\t13062\nNSpid:\t13062\nNSpgid:\t13062\nNSsid:\t13062\nKthread:\t0\nVmPeak:\t  430664 kB\nVmSize:\t  430664 kB\nVmLck:\t       0 kB\nVmPin:\t       0 kB\nVmHWM:\t  409940 kB\nVmRSS:\t  409940 kB\nRssAnon:\t  400652 kB\nRssFile:\t    9288 kB\nRssShmem:\t       0 kB\nVmData:\t  402128 kB\nVmStk:\t     132 kB\nVmExe:\t       4 kB\nVmLib:\t   21224 kB\nVmPTE:\t     876 kB\nVmSwap:\t       0 kB\nHugetlbPages:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t1\nuntag_mask:\t0xffffffffffffffff\nThreads:\t1\nSigQ:\t0/946645\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001000000\nSigCgt:\t00000000000154ea\nCapInh:\t0000000000000000\nCapPrm:\t0000000000000000\nCapEff:\t0000000000000000\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tthread vulnerable\nSpeculationIndirectBranch:\tconditional enabled\nCpus_allowed:\tffffffff\nCpus_allowed_list:\t0-31\nMems_allowed:\t00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t11\nnonvoluntary_ctxt_switches:\t98\nx86_Thread_features:\t\nx86_Thread_features_locked:\t\n"
+}

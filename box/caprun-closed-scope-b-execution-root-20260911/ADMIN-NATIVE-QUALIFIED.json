@@ -1,0 +1,219 @@
+{
+  "schema": "jc2-actual-admin-native-qualification/v1",
+  "instance": "i-07553b89026949246",
+  "boot": "55c4b95a-8463-4ec5-9cec-03ef03df544e",
+  "native_collection": {
+    "exit_code": 0,
+    "start": "2026-09-11T11:55:40.571699617Z",
+    "end": "2026-09-11T11:55:52.046069777Z",
+    "raw_sha256": "97b84935b830681085b41ce4200d283361d4ec18540024f1d275c23a52039732",
+    "files": 1226,
+    "directories": 91,
+    "aliases": 31
+  },
+  "helper_collection": {
+    "exit_code": 0,
+    "start": "2026-09-11T11:56:15.712008290Z",
+    "end": "2026-09-11T11:56:38.449070759Z",
+    "raw_sha256": "0bf656f486aeba90d344ec43f6d752ae58d3acc4aa46c93d52684588e9a720f0",
+    "collector_sha256": "92de39b5900d19e085abc09286dd5ac2997ee07439b10a98c06149d0752628da",
+    "files": 91,
+    "aliases": 47,
+    "protected_objects_and_ancestors": 1461,
+    "helpers": {
+      "jq": {
+        "invoked": "/usr/bin/jq",
+        "resolved": "/usr/bin/jq"
+      },
+      "bash": {
+        "invoked": "/usr/bin/bash",
+        "resolved": "/usr/bin/bash"
+      },
+      "env": {
+        "invoked": "/usr/bin/env",
+        "resolved": "/usr/bin/env"
+      },
+      "systemd-run": {
+        "invoked": "/usr/bin/systemd-run",
+        "resolved": "/usr/bin/systemd-run"
+      },
+      "systemctl": {
+        "invoked": "/usr/bin/systemctl",
+        "resolved": "/usr/bin/systemctl"
+      },
+      "timeout": {
+        "invoked": "/usr/bin/timeout",
+        "resolved": "/usr/bin/timeout"
+      },
+      "ps": {
+        "invoked": "/usr/bin/ps",
+        "resolved": "/usr/bin/ps"
+      },
+      "chrt": {
+        "invoked": "/usr/bin/chrt",
+        "resolved": "/usr/bin/chrt"
+      },
+      "setpriv": {
+        "invoked": "/usr/bin/setpriv",
+        "resolved": "/usr/bin/setpriv"
+      },
+      "test": {
+        "invoked": "/usr/bin/test",
+        "resolved": "/usr/bin/test"
+      },
+      "id": {
+        "invoked": "/usr/bin/id",
+        "resolved": "/usr/bin/id"
+      },
+      "uname": {
+        "invoked": "/usr/bin/uname",
+        "resolved": "/usr/bin/uname"
+      },
+      "tr": {
+        "invoked": "/usr/bin/tr",
+        "resolved": "/usr/bin/tr"
+      },
+      "hostname": {
+        "invoked": "/usr/bin/hostname",
+        "resolved": "/usr/bin/hostname"
+      },
+      "readlink": {
+        "invoked": "/usr/bin/readlink",
+        "resolved": "/usr/bin/readlink"
+      },
+      "date": {
+        "invoked": "/usr/bin/date",
+        "resolved": "/usr/bin/date"
+      },
+      "sed": {
+        "invoked": "/usr/bin/sed",
+        "resolved": "/usr/bin/sed"
+      },
+      "awk": {
+        "invoked": "/usr/bin/awk",
+        "resolved": "/usr/bin/gawk"
+      },
+      "find": {
+        "invoked": "/usr/bin/find",
+        "resolved": "/usr/bin/find"
+      },
+      "sort": {
+        "invoked": "/usr/bin/sort",
+        "resolved": "/usr/bin/sort"
+      },
+      "stat": {
+        "invoked": "/usr/bin/stat",
+        "resolved": "/usr/bin/stat"
+      },
+      "file": {
+        "invoked": "/usr/bin/file",
+        "resolved": "/usr/bin/file"
+      },
+      "ldd": {
+        "invoked": "/usr/bin/ldd",
+        "resolved": "/usr/bin/ldd"
+      },
+      "dpkg-query": {
+        "invoked": "/usr/bin/dpkg-query",
+        "resolved": "/usr/bin/dpkg-query"
+      },
+      "sha256sum": {
+        "invoked": "/usr/bin/sha256sum",
+        "resolved": "/usr/bin/sha256sum"
+      },
+      "cut": {
+        "invoked": "/usr/bin/cut",
+        "resolved": "/usr/bin/cut"
+      },
+      "head": {
+        "invoked": "/usr/bin/head",
+        "resolved": "/usr/bin/head"
+      },
+      "grep": {
+        "invoked": "/usr/bin/grep",
+        "resolved": "/usr/bin/grep"
+      },
+      "install": {
+        "invoked": "/usr/bin/install",
+        "resolved": "/usr/bin/install"
+      },
+      "mount": {
+        "invoked": "/usr/bin/mount",
+        "resolved": "/usr/bin/mount"
+      },
+      "findmnt": {
+        "invoked": "/usr/bin/findmnt",
+        "resolved": "/usr/bin/findmnt"
+      },
+      "mkfifo": {
+        "invoked": "/usr/bin/mkfifo",
+        "resolved": "/usr/bin/mkfifo"
+      },
+      "sync": {
+        "invoked": "/usr/bin/sync",
+        "resolved": "/usr/bin/sync"
+      },
+      "cmp": {
+        "invoked": "/usr/bin/cmp",
+        "resolved": "/usr/bin/cmp"
+      },
+      "od": {
+        "invoked": "/usr/bin/od",
+        "resolved": "/usr/bin/od"
+      },
+      "basename": {
+        "invoked": "/usr/bin/basename",
+        "resolved": "/usr/bin/basename"
+      },
+      "dirname": {
+        "invoked": "/usr/bin/dirname",
+        "resolved": "/usr/bin/dirname"
+      },
+      "cat": {
+        "invoked": "/usr/bin/cat",
+        "resolved": "/usr/bin/cat"
+      },
+      "sleep": {
+        "invoked": "/usr/bin/sleep",
+        "resolved": "/usr/bin/sleep"
+      },
+      "mkdir": {
+        "invoked": "/usr/bin/mkdir",
+        "resolved": "/usr/bin/mkdir"
+      }
+    },
+    "packages": {
+      "bash": "5.2.21-2ubuntu4",
+      "coreutils": "9.4-3ubuntu6.3",
+      "file": "1:5.45-3build1",
+      "findutils": "4.9.0-5build1",
+      "grep": "3.11-4build1",
+      "jq": "1.7.1-3ubuntu0.24.04.2",
+      "libc6": "2.39-0ubuntu8.8",
+      "libjq1": "1.7.1-3ubuntu0.24.04.2",
+      "mawk": "1.3.4.20240123-1build1",
+      "openssh-server": "1:9.6p1-3ubuntu13.19",
+      "procps": "2:4.0.4-4ubuntu3.3",
+      "sed": "4.9-2ubuntu0.24.04.1",
+      "systemd": "255.4-1ubuntu8.17",
+      "systemd-sysv": "255.4-1ubuntu8.17",
+      "util-linux": "2.39.3-9ubuntu6.6"
+    }
+  },
+  "root_qualification": {
+    "ordinary_ubuntu_distribution_trust": true,
+    "matched_python_package": "3.12.3-1ubuntu0.16",
+    "matched_python_sha256": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223",
+    "protected_files_and_ancestors_root_owned_without_group_other_write": true,
+    "acl_scope": "Effective named-user/group writes bounded by POSIX ACL mask/group mode bits; not ACL absence. Actual root ownership and modes cover native/admin paths. Installation/channel/cgroup qualification separately required.",
+    "namespace_scope": "Actual ROOT and PID1 namespaces equal; visible cgroup2 mount filesystem root /, from PHYSICAL-OBSERVED structured transcription.",
+    "native_schema": "Fresh actual six-field native manifest; equal hashes to prior host do not reuse old observations.",
+    "source_execution": false,
+    "future_same_pid_exec_observed": false,
+    "hostile_root_safety": false
+  },
+  "disclosures": [
+    "First local documentary helper parser counted1460 protected paths because its path regex required a character after slash and excluded root /. Corrected to include /; all1461 actual lines match. No worker script was rerun or modified."
+  ],
+  "remaining": "Pre-admission installation and protected ancestry/output/channel/cgroup observations; immediate coordinator timer receipt; actual holder/topology/final binding/separate one-writer release. No preflight result or science clearance."
+}

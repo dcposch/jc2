@@ -1,0 +1,232 @@
+--- /home/ubuntu/jc2/box/f10-necessary-rows-runtime-astra-20260911/dispatch.py	2026-09-11 05:55:46.840670200 +0000
++++ /home/ubuntu/jc2/box/caprun-closed-scope-implementation-astra-20260911/dispatch.py	2026-09-11 07:42:36.722409927 +0000
+@@ -1,7 +1,8 @@
+ """Direct finite rows + one mixed-row runtime, STATIC/UNEXECUTED; disabled without fresh ROOT registration.
+ 
+ Metadata-only caller. No science import, coefficient parse, solver, retry,
+-installation, worker control, or inner process group. CAPRUN is unchanged.
++installation, worker control, or inner process group. Guarded CAPRUN snapshot
++requires ROOT-created per-phase closed child leaves; old snapshots untouched.
+ """
+ import argparse
+ import datetime
+@@ -20,7 +21,7 @@
+ import time
+ 
+ JOB = 'f10-source-cone-r3-necessary-rows-v1'
+-CAPRUN_SHA = '4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2'
++CAPRUN_SHA = 'd78d45ef671c706706a12f4179abbc777684da13673263e54461c74351d453a3'
+ SOURCE_NAMES = ('authority.py', 'arithmetic.py', 'produce.py', 'check_arithmetic.py', 'check.py')
+ LIMITS = {'wall_seconds': '900', 'cpu_seconds': '600', 'memory_bytes': '8589934592',
+           'aggregate_bytes': '134217728'}
+@@ -151,8 +152,13 @@
+         self.path = immutable(name); self.root_sha = sha(self.path); self.r = load(self.path)
+         need(stat.S_IMODE(self.path.stat().st_mode) == 0o444, 'ROOT registration 0444')
+         r = self.r
+-        need(r.get('schema') == 'f10-necessary-rows-runtime/v1' and r.get('enabled') is True, 'disabled ROOT registration')
++        need(r.get('schema') == 'f10-necessary-rows-runtime/closed-child-v1' and r.get('enabled') is True, 'disabled ROOT registration')
+         need(r['jobtag'] == JOB and r['exclusive_no_concurrent_writer'] is True, 'job/exclusivity')
++        need(r.get('execution_mode') in ('PREFLIGHT_ONLY_9', 'FULL_13'), 'explicit phase mode')
++        self.labels = LABELS[:9] if r['execution_mode'] == 'PREFLIGHT_ONLY_9' else LABELS
++        need(r.get('allowed_phases') == list(self.labels), 'exact ROOT phase list')
++        need(type(r.get('closed_scope_first_sha256')) is str
++             and re.fullmatch(r'[0-9a-f]{64}', r['closed_scope_first_sha256']), 'focused closed-scope FIRST required')
+         self.science = r['source_files']
+         need(type(self.science) is dict and set(self.science) == set(SOURCE_NAMES)
+              and all(type(h) is str and re.fullmatch(r'[0-9a-f]{64}', h) for h in self.science.values()), 'ROOT final five source hashes')
+@@ -175,6 +181,15 @@
+         need(str(self.cg).startswith('/sys/fs/cgroup/') and str(self.cg) != '/sys/fs/cgroup', 'owned cgroup')
+         need(pathlib.Path('/proc/self/cgroup').read_text().strip() == '0::' + str(self.cg)[len('/sys/fs/cgroup'):], 'exact cgroup')
+         need((self.cg / 'memory.max').read_text().strip() == LIMITS['memory_bytes'], 'outer cgroup memory cap')
++        self.guard = r['closed_child_guard']
++        need(type(self.guard) is dict and set(self.guard) == {'schema', 'outer_device', 'outer_inode', 'root_no_migration', 'leaves'}
++             and self.guard['schema'] == 'CAPRUN-closed-child/v1' and self.guard['root_no_migration'] is True,
++             'ROOT closed-scope ownership contract')
++        need(type(self.guard['outer_device']) is int and type(self.guard['outer_inode']) is int
++             and self.guard['outer_device'] > 0 and self.guard['outer_inode'] > 0, 'outer immutable identity')
++        need(type(self.guard['leaves']) is dict and set(self.guard['leaves']) == set(self.labels), 'one ROOT leaf per allowed phase')
++        for label in self.labels:
++            self.child_scope(label, empty=True)
+         need(type(r['aggregate_cpu_start_usec']) is str and re.fullmatch(r'[0-9]+', r['aggregate_cpu_start_usec']), 'ROOT aggregate CPU origin')
+         self.cpu_start = int(r['aggregate_cpu_start_usec']) / 1000000
+         need(self.cpu_start <= self.cpu(), 'CPU origin is no later than current usage')
+@@ -220,7 +235,7 @@
+                  and spec['stderr'].endswith('\n'), 'literal bounded source refusal, no wildcard interpretation')
+         for p in self.files.values():
+             need(str(p) in self.pins, 'role path pin')
+-        need(self.pins[str(self.files['caprun'])] == CAPRUN_SHA, 'unchanged CAPRUN')
++        need(self.pins[str(self.files['caprun'])] == CAPRUN_SHA, 'exact guarded CAPRUN snapshot')
+         for name, h in self.science.items():
+             need(self.pins.get(str(self.source / name)) == h, 'actual science role pin: ' + name)
+         self.native_path = immutable(r['native_manifest'])
+@@ -264,15 +279,17 @@
+         self.admission_end = self.deadline(r['admission_deadline_utc'])
+         self.worker_end = self.deadline(r['worker_deadline_utc'])
+         need(now() < self.admission_end <= self.end < self.task_end < self.worker_end, 'original deadlines')
+-        need(set(r['commands']) == set(LABELS), 'exact thirteen command registrations')
+-        need(r['typed_slot_policy'] == {
++        need(set(r['commands']) == set(self.labels), 'exact registered mode commands')
++        typed_policy = {
+              'check-positive': {'flag': '--authorization-sha256', 'token': 'AUTHORIZATION_SHA256'},
+              'check-negative': {'flag': '--authorization-sha256', 'token': 'AUTHORIZATION_SHA256'},
+-             'mutate': {'flag': '--root-registration-sha256', 'token': 'ROOT_REGISTRATION_SHA256'}}, 'only approved typed slots')
+-        need(r['phase_policy'] == {'baseline': str(self.frozen / 'artifact.json'),
++             'mutate': {'flag': '--root-registration-sha256', 'token': 'ROOT_REGISTRATION_SHA256'}}
++        phase_policy = {'baseline': str(self.frozen / 'artifact.json'),
+              'fixture': str(self.frozen / 'mixed-row.json'),
+              'mutation': 'graph.slots[24] += X1^27 over ROOT place', 'source_files': self.science,
+-             'source_limits': LIMITS, 'positive_record': str(self.auth / 'positive.json')}, 'literal phase policy')
++             'source_limits': LIMITS, 'positive_record': str(self.auth / 'positive.json')}
++        need(r['typed_slot_policy'] == ({} if len(self.labels) == 9 else typed_policy), 'only mode-approved typed slots')
++        need(r['phase_policy'] == (None if len(self.labels) == 9 else phase_policy), 'mode-bound literal phase policy')
+         self.runs = []; self.used_labels = set(); self.frozen_pins = {}
+         self.revalidate(); self.group_quiet()
+ 
+@@ -280,6 +297,33 @@
+         need(isinstance(value, str) and value.endswith('+00:00'), 'literal UTC deadline')
+         return datetime.datetime.fromisoformat(value)
+ 
++    def child_scope(self, label, empty=False):
++        spec = self.guard['leaves'][label]
++        need(type(spec) is dict and set(spec) == {'path', 'device', 'inode'}, 'literal child scope fields')
++        need(type(spec['device']) is int and type(spec['inode']) is int
++             and spec['device'] > 0 and spec['inode'] > 0, 'literal positive child identities')
++        child = canonical(spec['path'])
++        need(child.parent == self.cg and child.name == label, 'literal direct per-label child')
++        for path, dev, ino in ((self.cg, self.guard['outer_device'], self.guard['outer_inode']),
++                               (child, spec['device'], spec['inode'])):
++            st = path.stat()
++            need(stat.S_ISDIR(st.st_mode) and st.st_uid == 0 and not st.st_mode & 0o022
++                 and (st.st_dev, st.st_ino) == (dev, ino), 'closed cgroup immutable owner/identity')
++            need((path / 'cgroup.type').read_text().strip() == 'domain'
++                 and not (path / 'cgroup.subtree_control').read_text().strip(), 'outer domain containment without child controllers')
++            for name in ('cgroup.procs', 'cgroup.threads', 'cgroup.subtree_control', 'cgroup.events'):
++                st = (path / name).lstat()
++                need(stat.S_ISREG(st.st_mode) and st.st_uid == 0 and not st.st_mode & 0o022, 'no delegated migration interface')
++        need(set(p.name for p in self.cg.iterdir() if p.is_dir()) == set(self.labels)
++             and not any(p.is_dir() for p in child.iterdir()), 'exact closed leaf inventory')
++        raw = (child / 'cgroup.events').read_text()
++        need(len(raw) <= 4096, 'child event metadata cap')
++        events = pairs([line.split() for line in raw.splitlines()])
++        need(events.get('populated') in ('0', '1'), 'kernel child population')
++        if empty:
++            need(events['populated'] == '0', 'owned child subtree still live; ROOT recovery required')
++        return child, spec
++
+     def cpu(self):
+         records = dict(line.split() for line in (self.cg / 'cpu.stat').read_text().splitlines())
+         return int(records['usage_usec']) / 1000000
+@@ -296,6 +340,8 @@
+              and os.readlink('/proc/self/ns/pid') == self.r['pid_namespace'], 'current host/instance/boot/namespace')
+         need(pathlib.Path('/proc/self/cgroup').read_text().strip() == '0::' + str(self.cg)[len('/sys/fs/cgroup'):]
+              and (self.cg / 'memory.max').read_text().strip() == LIMITS['memory_bytes'], 'current cgroup/cap')
++        for label in self.labels:
++            self.child_scope(label)
+         need(set(p.name for p in self.source.iterdir()) == set(self.science), 'EXACT five-file science directory')
+         need(set(p.name for p in self.wrapper.iterdir()) == {'dispatch.py', 'probe.py', 'mutate.py'}, 'EXACT three-file wrapper directory')
+         for p in self.files.values():
+@@ -343,6 +389,10 @@
+                 need(self.native['aliases'].get(path) == resolved, 'mapped native alias not pinned')
+ 
+     def group_quiet(self):
++        # Direct procs excludes child scopes. Each kernel-population certificate
++        # is stable under the ROOT no-entrant/no-migration ownership contract.
++        for label in self.labels:
++            self.child_scope(label, empty=True)
+         for text in (self.cg / 'cgroup.procs').read_text().split():
+             if int(text) != os.getpid():
+                 p = identity(int(text))
+@@ -369,7 +419,8 @@
+         if label in ('valid', 'dummy', 'mutate'):
+             obj = {'schema': 'f10-necessary-rows-root-policy/v1', 'root_registration_path': str(self.path),
+                    'job_tag': JOB, 'label': label, 'artifact': str(target), 'science_outcome': 'NONE',
+-                   'source_files': self.science, 'limits': LIMITS, 'profile': PROFILES['dummy' if label == 'dummy' else 'control' if label == 'valid' else 'mutate']}
++                   'source_files': self.science, 'limits': LIMITS, 'closed_scope': self.guard['leaves'][label],
++                   'profile': PROFILES['dummy' if label == 'dummy' else 'control' if label == 'valid' else 'mutate']}
+             p = self.auth / (label + '.json')
+             digest = emit(p, obj); immutable(p)
+             return p, digest
+@@ -390,6 +441,7 @@
+         return p, digest
+ 
+     def run(self, label, role, profile, input_path=None):
++        need(label in self.labels, 'phase not ROOT authorized in this mode')
+         need(label not in self.used_labels, 'no retry'); self.used_labels.add(label)
+         self.group_quiet(); self.revalidate()
+         wall, cpu, rss = PROFILES[profile]
+@@ -417,7 +469,12 @@
+         child = [str(self.files['setpriv']), '--reuid', str(self.r['uid']), '--regid', str(self.r['gid']),
+                  '--clear-groups', '--no-new-privs', '--'] + py
+         out, err, tel = [self.mount / (label + suffix) for suffix in ('.stdout', '.stderr', '.telemetry.json')]
++        leaf, leaf_spec = self.child_scope(label, empty=True)
+         command = [str(self.files['python']), '-I', '-S', '-B', str(self.files['caprun']),
++                   '--closed-child-cgroup', str(leaf), '--closed-child-device', str(leaf_spec['device']),
++                   '--closed-child-inode', str(leaf_spec['inode']), '--closed-outer-cgroup', str(self.cg),
++                   '--closed-outer-device', str(self.guard['outer_device']), '--closed-outer-inode', str(self.guard['outer_inode']),
++                   '--closed-boot-id', self.r['boot_id'], '--closed-pid-namespace', self.r['pid_namespace'],
+                    '--wall-seconds', str(wall), '--cpu-seconds', str(cpu), '--rss-bytes', str(rss),
+                    '--rss-sample-seconds', '0.05', '--term-grace-seconds', '1',
+                    '--stdout-file', str(out), '--stderr-file', str(err), '--telemetry-file', str(tel),
+@@ -456,6 +513,7 @@
+                 runner = identity(p.pid)
+                 if runner is not None:
+                     self.check_maps(runner)
++                    need(runner['cgroup'] == '0::' + str(self.cg)[len('/sys/fs/cgroup'):], 'CAPRUN outside child scope')
+                 emit(self.mount / (label + '.runner-live.json'), {'utc': now().isoformat(), 'identity': runner,
+                      'expected_argv': command, 'actual_match': runner is not None and runner['argv'] == command})
+                 while p.poll() is None:
+@@ -467,6 +525,7 @@
+                                 if item and item['argv'] == py and item['pgid'] == item['pid']:
+                                     need(item['uid'] == [str(self.r['uid'])] * 4 and item['gid'] == [str(self.r['gid'])] * 4, 'actual science identity')
+                                     need(item['pid_namespace'] == self.r['pid_namespace'], 'child namespace')
++                                    need(item['cgroup'] == '0::' + str(leaf)[len('/sys/fs/cgroup'):], 'actual child scope membership')
+                                     need(item['caps']['NoNewPrivs'] == '1' and all(int(item['caps'][key], 16) == 0
+                                          for key in ('CapInh', 'CapPrm', 'CapEff')), 'science effective capabilities')
+                                     self.check_maps(item)
+@@ -488,6 +547,18 @@
+         t = load(tel)
+         expected_hash = hashlib.sha256((json.dumps(child, ensure_ascii=False, separators=(',', ':')) + '\n').encode()).hexdigest()
+         need(t.get('schema') == 'CAPRUN/v1' and t['argv_sha256'] == expected_hash and t['argv_count'] == len(child), 'CAPRUN command binding')
++        closed = t.get('closed_scope')
++        need(type(closed) is dict and closed.get('schema') == 'CAPRUN-closed-child/v1'
++             and closed['path'] == str(leaf) and closed['device'] == leaf_spec['device']
++             and closed['inode'] == leaf_spec['inode'] and closed['outer_path'] == str(self.cg)
++             and closed['outer_device'] == self.guard['outer_device'] and closed['outer_inode'] == self.guard['outer_inode']
++             and closed['placement_attested'] is True and closed['last_observation']['populated'] == 0,
++             'positive placement and kernel quiet required before accepting any result')
++        attested = closed['attestation']
++        need(attested == {'pid': t['pid'], 'pgid': t['pgid'], 'start_identity': t['start_identity'],
++             'cgroup': '0::' + str(leaf)[len('/sys/fs/cgroup'):], 'boot_id': self.r['boot_id'],
++             'pid_namespace': self.r['pid_namespace'], 'device': leaf_spec['device'], 'inode': leaf_spec['inode']},
++             'trusted preexec/terminal leader identity binding')
+         need(t['runner_exit_code'] == p.returncode and t['cwd'] == str(self.source), 'CAPRUN result/cwd')
+         need(t['caps']['wall_seconds'] == wall and t['caps']['cpu_seconds'] == cpu and t['caps']['rss_bytes'] == rss, 'CAPRUN limits')
+         need(type(t['pid']) is int and t['pid'] == t['pgid'] and t['start_identity'].startswith('boot=' + self.r['boot_id'] + ';start_ticks='), 'CAPRUN leader identity')
+@@ -541,6 +612,17 @@
+              and events[0]['identity']['pid'] == t['pid'] and events[1]['identity']['pid'] != t['pid'], 'dummy parent/descendant identity')
+         need(all(e['identity']['pgid'] == t['pgid'] and e['identity']['pid_namespace'] == self.r['pid_namespace'] for e in events)
+              and t['max_observed_group_rss_bytes'] > 33554432, 'dummy actual group RSS')
++        leaf, spec = self.child_scope('dummy', empty=True)
++        need(all(e['identity']['cgroup'] == '0::' + str(leaf)[len('/sys/fs/cgroup'):] for e in events)
++             and term['kernel_quiet'] is True, 'dummy inherited closed membership/kernel quiet')
++        if self.r['execution_mode'] == 'PREFLIGHT_ONLY_9':
++            need(tuple(x['label'] for x in self.runs) == LABELS[:9], 'exact nine preflights only')
++            result = {'status': 'CLOSED_SCOPE_PREFLIGHTS_9_CHECKED_NO_SCIENCE', 'science_outcome': 'NONE',
++                      'root_registration_sha256': self.root_sha, 'scientific_phases': 'NOT_AUTHORIZED_NOT_RUN',
++                      'joint_wall_seconds': time.monotonic() - self.begin,
++                      'joint_cgroup_cpu_seconds': self.cpu() - self.cpu_start}
++            emit(self.mount / 'final-binding.json', result)
++            return result
+         t, out, err, packet = self.run('produce', 'produce', 'produce')
+         self.normal(t, 0)
+         need(out.read_bytes() == b'FORMED_UNCHECKED_NECESSARY_ROWS_25_NO_SOURCE_OUTCOME\n' and err.read_bytes() == b'', 'producer literal verdict')
+@@ -654,7 +736,8 @@
+         return 2
+     # ROOT reads durable custody only after this writer is terminal. No output
+     # after successful copy; no deletion, unmount, retry or worker-stop here.
+-    return 0 if result['status'] == 'NECESSARY_ROWS_AND_T_REJECTION_CHECKED_NO_SOURCE_OUTCOME' else 2
++    return 0 if result['status'] in ('NECESSARY_ROWS_AND_T_REJECTION_CHECKED_NO_SOURCE_OUTCOME',
++                                     'CLOSED_SCOPE_PREFLIGHTS_9_CHECKED_NO_SCIENCE') else 2
+ 
+ 
+ if __name__ == '__main__':

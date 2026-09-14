@@ -1,0 +1,18 @@
+{
+  "schema":"jc2.operator-finish-pins/v1",
+  "task":"f10-mixed-operator-finish-sol-20260913",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "first_action_utc":"2026-09-13T00:31:02.105207200Z",
+  "inputs":[
+    {"path":"box/f10-mixed-dac-correction-root-20260913/OPERATOR-FINISH-TASK.txt","sha256":"0c20e27300fb12a6a653b390af1c7885bde897bbd2b2df6e3a50e865f096afbb","read":"WHOLE"},
+    {"path":"box/f10-mixed-late-capture-sol-20260913/science-unit.template.sh","sha256":"3bee708f82e06e77426ddd7bca9953ef84858b058d88f78c5bf25672a6e579eb","read":"WHOLE"},
+    {"path":"box/f10-mixed-late-capture-sol-20260913/dispatch.py","sha256":"079f9ad7b92e64af5c5fc6a5e17de14ffa5245627ee5c8a4ce0ef2a018a2fa5d","read":"WHOLE"},
+    {"path":"box/f10-mixed-dac-correction-root-20260913/PREPARE.template.sh","sha256":"482c50538c144aef7d41aac834aca43bb2f8108c8a14017a2e85fa155cd55d6f","read":"WHOLE"},
+    {"path":"box/f10-mixed-worker-qualification-root-20260912/native_records.py","sha256":"63178c8aeab6d2f81bfddf4cdcc732ee00204c73f68f43c5f04761a2dfe4be9a","read":"WHOLE"},
+    {"path":"box/f10-mixed-native-cat-root-20260912/native-metadata.template.sh","sha256":"f1e94553d2a72462a76d667491c7f8aa99d6cc572d2e3753766c7a8269f0f334","read":"WHOLE"},
+    {"path":"box/f10-mixed-native-operator-root-20260912/inspect_native.template.py","sha256":"15f3dabc1d15c471b625b0a1bd0dd64dd429bbfe449b4b3c3d3b01e5ea7504cf","read":"WHOLE"},
+    {"path":"box/f10-mixed-import-qualification-root-20260912/inspect_imports.template.py","sha256":"1a005a7d342b51809fb4234ef706ee49a96d412c077dc4cc4db6c4360cb8eeb5","read":"WHOLE"},
+    {"path":"COORDINATION.md","sha256":"33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597","read":"EXACT-PIN WHOLE REUSE"},
+    {"path":"ops/artifact_finalize.py","sha256":"0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d","read":"ADMINISTRATIVE FINALIZER; PRIOR WHOLE REUSE"}
+  ]
+}

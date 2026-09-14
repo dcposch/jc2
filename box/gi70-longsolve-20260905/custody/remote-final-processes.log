@@ -1,0 +1,18 @@
+Sat Sep  5 19:54:33 UTC 2026
+               total        used        free      shared  buff/cache   available
+Mem:     532326555648  7625289728 526739324928     3440640  1844486144 524701265920
+Swap:              0           0           0
+    PID    PPID    PGID ELAPSED   RSS    VSZ %MEM COMMAND         COMMAND
+   4519    4518    4519   10244  3604   7832  0.0 bash            bash -c while true; do date -u +TICK=%Y-%m-%dT%H:%M:%SZ; ps -C Singular -C msolve -C python3 -o pid=,etimes=,rss=,comm=,args= | grep -E "a_exact_std|b_hilbert|c_c1|d_c1|run_guided" || true; for f in /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/*/returncode.txt; do test -e "$f" && echo "DONE $f $(cat "$f")"; done; pgrep -f "[g]i70_(a_exact_std|b_guided_hilbert|c_c1_msolve|d_c1_slimgb)_fleet.sh" >/dev/null || break; sleep 55; done
+  13324       1   13323      57  2100   7748  0.0 bash            bash -c cd /home/ubuntu/jc2/box/moh14-charts-20260905 && setsid bash -c 'timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1' </dev/null >/dev/null 2>&1 & echo LAUNCHED gi70_c_c1_msolve pid=$!
+  13325   13324   13325      57  3576   7748  0.0 bash            bash -c timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh > $HOME/gi70_c_c1_msolve.log 2>&1
+  13326   13325   13326      57  2164   6128  0.0 timeout         timeout 10320 stdbuf -oL bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+  13327   13326   13326      57  3612   7896  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+  13338   13327   13326      57  2252   7764  0.0 bash            bash classes/../../gi70-longsolve-20260905/jobs/gi70_c_c1_msolve_fleet.sh
+  13342   13327   13342      57  2192   6148  0.0 timeout         timeout --signal=TERM --kill-after=60s 10200s /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+  13343   13342   13326      57  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stdout.log
+  13344   13342   13326      57  2004   6148  0.0 tee             tee /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/stderr.log
+  13345   13342   13342      57  1652   2720  0.0 time            /usr/bin/time -v -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/time-v.txt stdbuf -oL msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+  13348   13345   13342      57 2772236 5400252  0.5 msolve       msolve -g 2 -t 32 -v 2 -l 44 -m 2000 -f /home/ubuntu/jc2/box/gi70-longsolve-20260905/inputs/c_c1_p1073741827.ms -o /home/ubuntu/jc2/box/gi70-longsolve-20260905/results/c_c1_msolve/msolve.out
+  14119   14118   14119       0  3576   7748  0.0 bash            bash -c date -u; free -b; ps -eo pid,ppid,pgid,etimes,rss,vsz,%mem,comm,args | awk 'NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/'
+  14123   14119   14119       0  3928   9728  0.0 awk             awk NR==1 || /Singular|msolve|run_guided.py|guided_gb.py/

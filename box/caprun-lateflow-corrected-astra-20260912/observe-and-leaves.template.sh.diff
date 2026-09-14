@@ -1,0 +1,14 @@
+--- box/caprun-lateflow-completion-sol-20260912/observe-and-leaves.template.sh	2026-09-12 05:11:08.354003726 +0000
++++ box/caprun-lateflow-corrected-astra-20260912/observe-and-leaves.template.sh	2026-09-12 05:29:58.373636069 +0000
+@@ -28,6 +28,11 @@
+  test "$(readlink /proc/$$/ns/$jc2_ns)" = "$(readlink /proc/$jc2_pid/ns/$jc2_ns)"
+ done
+ test "$(readlink /proc/$jc2_pid/ns/pid)" = 'JC2_PID_NAMESPACE_PLACEHOLDER'
++test "$(findmnt -rn -o TARGET --target /sys/fs/cgroup)" = /sys/fs/cgroup
++test "$(findmnt -rn -o FSTYPE --target /sys/fs/cgroup)" = cgroup2
++test "$(findmnt -rn -o FSROOT --target /sys/fs/cgroup)" = /
++test "$(readlink -e "$jc2_cgroup")" = "$jc2_cgroup"
++test "$(stat -c '%u:%g:%a' "$jc2_cgroup")" = 0:0:755
+ test "$(sed -n '1p' /proc/$jc2_pid/cgroup)" = "0::${jc2_cgroup#/sys/fs/cgroup}"
+ test "$(sed -n '1,4p' "$jc2_cgroup/cgroup.procs")" = "$jc2_pid"
+ test -z "$(</proc/$jc2_pid/task/$jc2_pid/children)"

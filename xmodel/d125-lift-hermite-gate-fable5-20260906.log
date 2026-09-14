@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete at 23:35 UTC, nine minutes inside the 25-minute cap. The report is at `xmodel/d125-lift-hermite-gate-fable5-20260906.md` (1641 words, unique `<!-- BODY-END -->` as the last line, no seal, no `charge_basis` line).
+
+**Verdict: every exact claim CONFIRMED; nothing REFUTED, no GAP opened.**
+
+- **Row bijection and functional.** The 105 negative rows biject with (s,t) via e = 5t−s. The degree-s part of each row is exactly the Taylor functional at −1, and every λ-term comes from strictly higher degree. I re-derived this by repeated Laurent multiplication with symbolic λ for all i+j ≤ 12.
+- **Top rows.** In both fields −1 is a simple root of h, so h³ and h⁵ vanish to order exactly 3 and 5. That matches the 3+5 top rows exactly. A double-root mutation leaves the t=2 row nonzero.
+- **Free slots.** My own hand-written half-plane census reproduces the raw counts and the consumed free baseline 71/196, 77/214, 98/269, and places all 97 pivots strictly between the inner and outer face lines.
+- **Determinant.** Besides auditing the producer's Vandermonde sign, I proved the same sign by a distinct factorisation: unit multiplication by z^{s−r+1} in Z[w]/(w^r) times an anti-triangular Taylor matrix. Integer Bareiss determinants and integer adjugate inverses check on all 24 blocks.
+- **Graph ideal.** Z-unimodular block operations plus triangular rewriting give the ring isomorphism over K[λ2,λ3], valid over any base ring. A degree-12 symbolic-λ fixture with 1×1, 2×2 and 3×3 blocks makes all 21 negative rows vanish identically, with integer, λ-dependent, affine-linear graph values.
+- **Counts.** 27+70+8 = 105 and 172/198/274 recomputed from my own census.
+
+**Coverage remarks on the producer's controls,** not defects: its degree-6 toys only exercise 1×1 blocks, so the integer inverse was never used inside an actual lift there. My fixture closes that. The producer's 238 checks pass in both modes and both mutations exit 1, all replayed under the caps.
+
+**Own artefacts** are in `box/d125-lift-hermite-gate-fable5-20260906/`: `gate_controls.py` (70 PASS normal and -O, five mutation flags each exit 1), all run outputs, input pins, and `runs.txt`. That file also records three defects in my own first script version that I fixed in my checks, never in a claim. Post-publication rehash of all six frozen inputs matches. No ledger, input, FALLACY, adapter or tool was touched.
+DIVERT path=xmodel/d125-lift-hermite-gate-fable5-20260906.md status=CLEAN body_bytes=11905 body_sha256=7e2594d53150bf4346f4e4cc6e7f6ff05a021b045b640128de763cc653a8a8ca

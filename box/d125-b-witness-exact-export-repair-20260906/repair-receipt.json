@@ -1,0 +1,54 @@
+{
+  "exact_minor_relations": 144,
+  "kernel_minors": 24,
+  "negative_control": {
+    "actual_path": [
+      "common3",
+      "golden",
+      15,
+      0
+    ],
+    "float_rejected": true,
+    "float_then_integer": "167289062521996804096",
+    "integer_error": "4096",
+    "original_integer": "167289062521996800000",
+    "rounded_integer_rejected": true
+  },
+  "no_float_types": true,
+  "nonkernel_minors": 120,
+  "numeric_JS_roundtrip": false,
+  "old_examples_as_strings": [
+    {
+      "branch": "golden",
+      "case": "common3",
+      "d": 17,
+      "exact_repr": "[[536750011834898400000, 1], [-1404406458557625600000, 1]]",
+      "old_repr": "[[536750011834898400000, 1], [-1.4044064585576255e+21, 1]]"
+    },
+    {
+      "branch": "golden",
+      "case": "common3",
+      "d": 18,
+      "exact_repr": "[[59573499824062224000000, 1], [-155936009173888944000000, 1]]",
+      "old_repr": "[[5.957349982406223e+22, 1], [-1.5593600917388894e+23, 1]]"
+    },
+    {
+      "branch": "golden",
+      "case": "common3",
+      "d": 19,
+      "exact_repr": "[[197616887332702992000000, 1], [-517710115160286048000000, 1]]",
+      "old_repr": "[[1.97616887332703e+23, 1], [-5.177101151602861e+23, 1]]"
+    }
+  ],
+  "old_float_witnesses": 57,
+  "old_sha256": "9551e7205d6918e5bf913b70b1ea9e5921b8e8eadeb2d9591b610a78cdc24f77",
+  "old_wrong_integer_only_minors": 0,
+  "old_wrong_minors": 57,
+  "output_bytes": 29356,
+  "output_sha256": "07b4ce881b4f90f9a41a3f8cb01fcd3a120ff64a4f04969e60126dbdb6e7f246",
+  "schema": "jc2.exact-export-repair/v1",
+  "source_sha256": "5a3cc2853c04b74faa7b256122a445c5435412c905966fd55ebfc2965e8c67d5",
+  "status": "EXPORTED",
+  "validated_minors": 144,
+  "writers_done_on_return": true
+}

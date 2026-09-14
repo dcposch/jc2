@@ -1,0 +1,174 @@
+{
+  "pins": {
+    "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py": "45305b1f27ada877995bfc4a33eee80a4560b8834786a98f7bb29c3e427913dd",
+    "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/custody.json": "741635912eb28fb15dc854986e490fe853304db30870b0c9d25eb560018cdcd1",
+    "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/custody.py": "b31590cc9496544a360798b96f3bc6e370fff89aa6def90c26ff3300de98485f",
+    "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/replay.json": "a612050652308f06f996fe5dc835d794d2fb08c7878a245e7daea764b80cf5be",
+    "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/replay.py": "01ee8c334ef33fde90c529085a709439f3062f53d9869a124d25ad94dddf8273",
+    "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/witness.json": "fa1fe3df479a3edd95ac7c2035e231bf0d9485f1e40c0a2b40c1bcfe62047166",
+    "/home/ubuntu/jc2/xmodel/d125-cone-global-initial-consumer-astra-20260908.md": "139bbda05a16913adfc3c1748217a8cc421f6c4d48075e612fa9d63afcfa3249",
+    "/home/ubuntu/jc2/xmodel/d125-cone-global-initial-consumer-astra-20260908.md.artifact.json": "8eab17a3860c3e4ea3d6a546184552f7da9b70075db306e60a8c5fe9c53e04c7",
+    "/home/ubuntu/jc2/xmodel/d125-pure-high-alpha-discriminator-astra-20260907.md": "3eaf5610aede5885efa1c9aba95dc2016269952f5c0983675abfacc79b9c9bed",
+    "/home/ubuntu/jc2/xmodel/d125-reducible-cone-initial-discriminator-astra-20260908.md": "6b92e38c1d337889c8c9ee4c749aa29d9d972365434e9f1096956771dc6aeccb"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "normal"
+      ],
+      "rc": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fa1fe3df479a3edd95ac7c2035e231bf0d9485f1e40c0a2b40c1bcfe62047166"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "change-q0"
+      ],
+      "rc": 1,
+      "stderr_sha256": "0f58b9e8d08a5e4d4ad2f0fe7574e89e2e5370cb8367204bb8d18f213f9e7575",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "drop-d0-shift"
+      ],
+      "rc": 1,
+      "stderr_sha256": "0f58b9e8d08a5e4d4ad2f0fe7574e89e2e5370cb8367204bb8d18f213f9e7575",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "change-quartic"
+      ],
+      "rc": 1,
+      "stderr_sha256": "867c5b843a5a8c60755de64938b815ff0450931db94ace7e60d4fbe867e0d6f0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "replace-odd-e"
+      ],
+      "rc": 1,
+      "stderr_sha256": "17b25aa1dc5046c315df91c4e47e8541aef3b2568bc44c241a437df13a67a2d5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "normal"
+      ],
+      "rc": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fa1fe3df479a3edd95ac7c2035e231bf0d9485f1e40c0a2b40c1bcfe62047166"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "change-q0"
+      ],
+      "rc": 1,
+      "stderr_sha256": "0f58b9e8d08a5e4d4ad2f0fe7574e89e2e5370cb8367204bb8d18f213f9e7575",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "drop-d0-shift"
+      ],
+      "rc": 1,
+      "stderr_sha256": "0f58b9e8d08a5e4d4ad2f0fe7574e89e2e5370cb8367204bb8d18f213f9e7575",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "change-quartic"
+      ],
+      "rc": 1,
+      "stderr_sha256": "867c5b843a5a8c60755de64938b815ff0450931db94ace7e60d4fbe867e0d6f0",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/usr/bin/prlimit",
+        "--cpu=25",
+        "--as=536870912",
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-cone-global-initial-consumer-20260908/check.py",
+        "replace-odd-e"
+      ],
+      "rc": 1,
+      "stderr_sha256": "17b25aa1dc5046c315df91c4e47e8541aef3b2568bc44c241a437df13a67a2d5",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Whole conditional proof/checker read after terminal transaction/current pins. Only formal 3/5 identities and finite valuation/product controls; source applicability remains separate. q=infinity illustration uses a finite surrogate for a lower bound, not universal proof.",
+  "seconds": 0.7199004300637171,
+  "utc": "2026-09-08T01:19:17.425152+00:00"
+}

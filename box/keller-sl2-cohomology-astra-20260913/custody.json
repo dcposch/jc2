@@ -1,0 +1,42 @@
+{
+  "schema": "jc2.native-research-custody/v1",
+  "task": "keller-sl2-cohomology-astra-20260913",
+  "owner": "/root/execution_reliability",
+  "collector": "/root",
+  "actual_first_utc": "2026-09-13T13:51:49Z",
+  "original_substantive_utc": "2026-09-13T13:59:00Z",
+  "original_reserve_utc": "2026-09-13T14:02:00Z",
+  "original_hard_utc": "2026-09-13T14:05:00Z",
+  "report_writers_idle_utc": "2026-09-13T13:58:48Z",
+  "final_whole_readback_postpins_expected_verify_completed_utc": "2026-09-13T13:59:04Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "report": {
+    "path": "xmodel/keller-sl2-cohomology-astra-20260913.md",
+    "sha256": "5e0f7bd030a09bf502380ba8dff9a14c22b59dd089d3a5d5ac38b49dd0b2f28d",
+    "body_sha256": "7e8ab44c3848e2ae15bbacf3d3150b50db50fc8ccacaf81ebb0b05e92ea71ecd",
+    "manifest_path": "xmodel/keller-sl2-cohomology-astra-20260913.md.artifact.json",
+    "manifest_sha256": "4cb8822803a990e0f61bf5dcdbbe07a0897d506c658a251e8cc83bbe085d6d71",
+    "expected_verification": "VERIFIED against expected basis and manifest",
+    "whole_readback": "Complete final draft and final report/manifest WHOLE without clipping",
+    "body_end": "unique, appended last after completed draft and matching postpins"
+  },
+  "pins": {
+    "path": "box/keller-sl2-cohomology-astra-20260913/PINS.txt",
+    "sha256": "6b54ac994552c5c2a20413b7a9041c9f486d5b46b41c964bbf68eaebe8e3bb8c",
+    "pre_and_post": "all three registered hashes matched before reads and after final report readback",
+    "whole_reads": "TASK and current COORDINATION a14b2ebc; COORD chunks1-210,211-420,421-630,631-EOF",
+    "extra_source_reads": "none; ROOT's message was treated only as an unverified lead, not a topology theorem"
+  },
+  "scope": {
+    "verdict": "NO_CLOSING_TEST; MANUAL UNPROMOTED, not FIRST",
+    "result": "Explicit CE differential and Casimir homotopy; H2(N) is the cokernel H1(N)->H1(N/CN). Actual evaluation supplies only the stated H3 surjection, no exact dimension formula.",
+    "missing_implication": "Lift the displayed obstruction classes through H1(N), or prove the stronger CN=N; Bass coefficient injectivity does not establish either",
+    "successor": false,
+    "science_execution": false,
+    "network_aws_process_control": false,
+    "agents_shared_edits_protected_access": false,
+    "administrative_execution": "unchanged pinned artifact_finalize; inert text/hash/date and apply_patch only",
+    "authoring_deviation": "Initial marker-free patch contained the short report body rather than sectionwise skeleton/appends. A later patch supplied the explicit setting and corrected a transcription typo. BODY-END-last, whole final-byte readback, immutable finalization and all pins were retained. This is not claimed fully compliant with the sectionwise authoring rule."
+  },
+  "terminal_protocol": "This is the sole last authored metadata. After readonly mode, whole custody read and final hashes, the terminal message supplies actual ALL WRITERS IDLE UTC and custody SHA. No external writer or child exists."
+}

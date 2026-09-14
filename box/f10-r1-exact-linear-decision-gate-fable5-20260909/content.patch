@@ -1,0 +1,120 @@
+*** Begin Patch
+*** Update File: xmodel/f10-r1-exact-linear-decision-gate-fable5-20260909.md
+@@
+-status=PENDING
++status=COMPLETE; verdict A CONFIRMED, B CONFIRMED, C CONFIRMED, D CONFIRMED, E CONFIRMED (static adequacy only; runtime readiness NOT established); no REFUTED; no blocking GAP; no new OPEN; smallest concrete defect found: none blocking (three documentary nits in the GAP section). STATIC correctness accepted at the imported 17m scope only; no source acceptance, no runtime authority, no dispatch readiness.
+@@
+ ## 0. Custody and read scope
++
++Launch 2026-09-09 21:59:22 UTC (inputs directory timestamp); controlling stop 22:19:22 UTC (launch+20 min, earlier than 22:20:00), never reset. Both own targets (this report and box/f10-r1-exact-linear-decision-gate-fable5-20260909/) were absent at 21:59 before the first write; the box holds only expected-sha256.txt, custody-rows.md and the patch scratch. All 21 charged snapshots in /tmp/jc2-lane.KrHErp/inputs were verified with sha256sum -c against the ordered list of the assignment BEFORE any body read: 21 of 21 OK (table below is generated from that list).
++
++Read WHOLE by cat -n: solver.py, checker.py, evidence.py, caller.diff, dispatch_batch.py, semantic_controls.py, algebra.py, probe.py, execution_gate.py, root-api-note.md, dispatch.registration.DISABLED.json, READ-SCOPE.md, STATIC-CHECKS.md, VALIDATION.md, the producer report, its artifact.json and custody.json (17 files). Read as hash-verified SLICES only: the accepted 17m gate (head and grep for the 217/1638/25/q^5 premise lines), the 17u runtime gate (head and tail, as the format and premise of the accepted caller), the 17p adapter gate (grep for row/guard/modulus wire shape), the 17m producer (head). Not charged and not read: the old caller, old harness, adapter.py, input_evidence.py, run_capped.py, admissibility.md, frontier.json, any univariate artifact, receipt or acceptance, input-pins.json, publication.json. The old-caller side of caller.diff is consumed as a premise (17u acceptance plus root's literal-diff statement), never as an own read.
++
++Documentary operations only: date, ls, mkdir, sha256sum -c, cat -n, head, tail, grep, awk, two shell while/grep -F -x loops over the diff lines, apply_patch. ZERO python (including empty), compile, import, AST, test, CAS, arithmetic subprocess, fixture, matrix, coefficient, network, AWS, SSH, proc, agents. Every code path below is a static trace; the few numbers are hand arithmetic shown inline.
+@@
+ ## A. Solver: literal parsing, 217x1638 system, one RREF, manual extraction
++
++CONFIRMED.
++
++- Literal full p. solver.py:19-20 requires data['modulus'] to equal the eight canonical numerator/denominator string pairs of Ring().p (algebra.py:52-59, exact degree seven, nonzero rational leading coefficient), so a factor, a float or a re-spelt modulus is refused. Schema, variable T and coefficient ring are literal (:16-18).
++- Nine dense slots and guard. dense() (:22-29) requires exactly degree+1 wire slots, reads each with algebra.read (width 7, canonical nonzero rationals, sorted unique keys) and requires every exponent outside v to be zero (:27). Rows are consumed in the literal id/bound order :14-15 (bounds 3,3,2,4,3,3,2,2,5), each with the exact indexed id and integer degree_bound (:31-34). Guard keys, variable xi, equation string and both factors r,h0 are required (:35-38); q is six dense slots (:39). The solver does not itself recheck q=r*h0; the checker does (B).
++- Matrix indices. vector() (:40-44) requires every monomial to lie in the window 0<=k<=30, 0<=a<=6 with all other exponents zero and emits the 217 coordinates in the order k-major, a-minor, so row index is k*7+a. Columns (:46-51) are v^l T^j f_i for i=0..8, j=0..25, l=0..6 in that nesting, so column index is (i*26+j)*7+l, exactly 1638 (required :51). T-degree of a column is at most 5+25=30 and of the target q^5 at most 25, so no monomial can fall outside the window; the window require is a safety net, not a truncation. Target is q^5 (:45).
++- One [M|b|I] rref. :53-60 build the single 217x1856 fmpq_mat (M in 0..1637, b at 1638, I_217 at 1639..1855); :61 is the sole rref call; rank==217 (:62) is a sanity check forced by the identity block, not a premise of any proof. Pivot form (:63-68): every row has a pivot, strictly increasing, entry 1.
++- Manual extraction is correct. Write the reduced matrix as E[M|b|I]=[EM|Eb|E] with E invertible. SEPARATOR (:80-83): a pivot at column 1638 means that row of EM is zero and that entry of Eb is 1; the row of E (the identity-block entries :82) is lambda with lambda*M=0 on all 1638 columns and lambda*b=1. UNIT (:84-89): if 1638 is not a pivot, rows with a pivot in the identity block have EM=0 and Eb=0 (all entries before the pivot vanish); for rows with pivot p<1638, RREF gives EM[row,p']=delta(row,row') on pivot columns, so c[p]=Eb[row] on pivots and 0 on free columns satisfies EMc=Eb, hence Mc=b. The alternative is exclusive (lambda*Mc=0 but lambda*b=1). This is the same argument as VALIDATION.md:23-36, checked by hand.
++- Exact export and installed-API refusal. rational() (:71-79) accepts only str(fmpq) of the form integer or integer/positive-integer with canonical spelling, canonicalizes through Fraction and exports string pairs; anything else raises. main() (:95-110) refuses a wrong argv length, calls authorize first, requires the pinned version, resolved module path and module hash after import (:102-105), never installs or falls back, and writes the candidate exclusively with status CANDIDATE-ONLY (:90-93). row_order and column_order strings (:92-93) are byte-identical to the checker's literals (checker.py:115-116). Rank, pivots and flags are never a proof: the checker does not read them (checker.py:169).
+@@
+ ## B. Independent checker
++
++CONFIRMED.
++
++- Independence. checker.py imports only execution_gate at module level and fractions/math inside verify (:14-15); it never imports solver, flint or algebra and receives no matrix; every needed object is rebuilt from the input and certificate wires.
++- Literal full modulus rebuilt. :40-44 recompute p=24R^2+(280-1344v)LR+49EL^2 from the same three literal polynomials as algebra.modulus(), with dense Fraction arithmetic (qmul/qadd, no trim); length 8 with p[7]=49*(-512)*192^2 nonzero (:45); data['modulus'] must equal it pairwise (:46-47), so a factor of p is refused. monic=p/p[7] divides only by a rational (:48).
++- Dense reduction. bmul (:56-62) multiplies two length-7 B elements to length 13 and eliminates v^k for k=12..7 by subtracting lead*monic[i] into positions k-7+i; this is exact reduction modulo p and involves no division by any B element.
++- Canonical wires. rational (:19-26) and bparse (:63-77) enforce string pairs, reduced, positive denominator, nonzero, exponents[:6]==0, 0<=v-exponent<7, strictly sorted unique keys; tdense requires exactly degree+1 slots (:78-80), so zero slots must be present as empty wires and are parsed as zero, never skipped.
++- All rows and guard factors. Nine literal ids/bounds in order (:87-97); guard keys/variable/equation/factors (:98-101); q six slots (:102); q=r*h0 rechecked directly from the dense factor wires r (bound 1) and h0 (bound 4) (:104-105); target q^5 by five dense multiplications, length 26, padded with five zero slots to 31 (:106-110).
++- UNIT: all 217 coordinates. :124-133 rebuild every multiplier h_i from the 1638 pairs by the same index law (i*26+j)*7+l as the solver columns, multiply by the parsed f_i, accumulate all 31 T-slots times 7 v-coordinates and require exact equality with the padded target. Rows 26..30 of the target are zero and are compared, not dropped.
++- SEPARATOR: all 1638 columns and the full target. :140-152 loop over every (i,j,l), rebuild the column as sum over k of (v^l * f_{i,k}) T^{j+k} through bmul and require lambda-dot-column==0, counting to exactly 1638; :153-154 require lambda-dot-q^5==1 over all 217 target coordinates. Zero rows, zero input rows and non-unit B components are treated identically to any other; nothing is skipped by a nonzero test.
++- Status scope. :134-137 and :155-157 return generic 17m statuses with an explicit no-point, no-character, no-JC2 scope string; the cofactor contract 1=xi^5*sum h_i f_i-(xi*q-1)*sum_{j=0..4}(xi*q)^j is a correct identity (xi^5 q^5-((xi q)^5-1)=1). main() (:159-174) rebinds certificate binding and the solver pin from the authority (:166-168) before verify.
+@@
+ ## C. Authority-first and evidence binding
++
++CONFIRMED.
++
++- Order. solver.main:98 authorize, :99 evidence (metadata only), :100 verified, :101 producer_environment, :102 import flint, :106 candidate (algebra imported inside at :12). checker.main:162 authorize, :163 evidence, :170 verify (Fraction imported inside). semantic_controls.main:14 authorize, :15 evidence, :27 checker. No mathematical import precedes authorize in any entrypoint.
++- Binding (evidence.py:45-93). The acceptance file must be pinned in the authority and byte-equal to the authority's univariate_acceptance payload (:46-49); schema and ROOT status literal (:50-52); the four accepted upstream versions adapter 11ebf430, univariate checker 6547063b, backend 7d565299 (equal to the charged algebra.py) and input helper d262f3d4 (:10-13, :53-56); artifact and receipt pinned and bound to the acceptance's two digests (:57-61); exactly the five provenance fields with the three literal constants (original 168bdfd3, generator d444d022, checker 091bbf35) and two 64-hex upstream digests (:62-72); artifact implementation and evidence (:73-74); receipt status, artifact and evidence, nine row slots, both guard factors, bounded actual degrees (:75-83); all five current decision sources pinned and algebra equal to the frozen constant (:84-88). The returned binding carries artifact, receipt and acceptance digests plus the evidence and versions (:91-93) and is copied into the certificate, the decision receipt and the controls receipt.
++- Cooperative, not cryptographic. evidence.py:4 and :89-90 state it; no file in the packet writes an acceptance; the DISABLED template carries null acceptance, null python_flint, null closure and enabled false. No future source acceptance or runtime provenance is claimed anywhere in the code or docs.
++- producer_environment (:95-106) requires the pinned module path/hash and version before import and the interpreter pin; the native closure is root's file_sha256 obligation (:104-105), consistent with D.
+@@
+ ## D. Narrow caller delta and new main
++
++CONFIRMED.
++
++- Diff is literal for the new side. All 45 `+` lines of caller.diff occur verbatim in dispatch_batch.py and none of its 37 `-` lines survives (two grep -F -x loops). Hunk positions match the new file: run() :78-79 only; main() :143, :160, :166-168, :175-181, :183-200, :202, :210-224. The old side is the 17u premise.
++- run() (:41-138) changes only the two per-authority payload keys (:78-79). Retained untouched: admission margin and stored hard cutoff (:45-51, :108), child vector python -I -B script auth trailing (:53), exact CAPRUN parent argv (:56-61), existing trailing inputs digested into the authority (:62-70), exclusive per-operation outputs (:71-72), immutable 0444 authority (:85-87), PID-namespace equality and caller stat (:93-94), start_new_session=False so no inner PGID (:92), live-PGID sweep (:98), source post-pins (:99-100), five defect refusals (:80-84, :109-111), the dummy RESOURCE_CAP/TERM/KILL sequence (:112-135), STOP on cap or failure with no retry (:137, :226-231).
++- argv lengths. Child vector length is 5 plus trailing: solve 4 trailing (:210-211) gives 9 and sys.argv 6 (solver.py:96); check 5 trailing (:212) gives 10 and sys.argv 7 (checker.py:160); controls 6 trailing (:219) gives 11 and sys.argv 8 (semantic_controls.py:12). execution_gate.py:34-36 requires child_argv to equal exactly python -I -B script plus sys.argv[1:], so any extra or missing element is refused. For the two check operations execution_gate.py:66 needs argv[2]=univariate.json pinned, which it is (:179).
++- Pins. candidate.json is absent at solve time (required :202) so it is not pinned for the build authority; it exists at check time and is added by :63-70, so evidence.bound finds it; decision.receipt.json likewise for controls; controls.receipt.json and the fixtures are opened with 'x' only. Seven preflight children (:204-208) then exactly one solver, one checker, one controls main (:211-220). Decision status, certificate digest and artifact binding are required before batch.PASS (:213-218, :221-224).
++- Installed package. :185-199 require root-supplied version/path/hash metadata, a nonempty absolute resolved closure containing the module, disjointness from task/interpreter pins, exact vector equality and on-disk digests for every pin; :200 requires the acceptance file to equal the payload. The code discovers nothing and installs nothing; a missing module or version mismatch is a refusal in solver.py:102-105. Accepted CAPRUN limitations (sampling, not real-time) are a premise, restated in VALIDATION.md:106.
+@@
+ ## E. Seven common controls, conditional eighth, planned generic tests
++
++CONFIRMED as designed static adequacy; nothing observed.
++
++Common path (semantic_controls.py:32-53): deep copy, mutation, require changed, exclusive fixture write, digest, plain-JSON reread (deliberately bypassing evidence.load so the checker's own parser is tested, :39-41), require reread==fixture, IN-PROCESS checker.verify, require type ValueError and exact reason, rehash. No solver call, no FLINT, no positive rerun (:1-3). First failing need in checker.verify, all earlier needs untouched by the mutation because the input side is genuine unless stated:
++
++| control | mutation | first failing line | reason |
++|---|---|---|---|
++| omitted-high-coordinate | rows=216 | checker.py:114 | certificate dimension/schema |
++| missing-witness-slot | pop last pair | :122 | complete rational witness dimension |
++| floating-witness | witness[0][0]=0.5 | :22 | canonical rational strings only |
++| noncanonical-witness | witness[0]=['00','1'] (int('00')=0, str(0)!='00') | :25 | canonical reduced rational |
++| wrong-modulus | modulus[0]=[n+d,d]; p[0]=24*195^2-280*25*195+49*39*625=741975 by hand, so ['741976','1'] is canonical | :47 | literal full modulus not a factor |
++| wrong-indexed-row | rows[0].id='WRONG' | :96 | literal row order/degree envelope |
++| missing-guard-factor | factors.pop() | :101 | guard and both factors retained |
++| wrong-dual-normalization (SEPARATOR) | lambda -> 2*lambda: every column stays 0, lambda*b=2 | :154 | dual target normalization equals one |
++| wrong-primal-identity (UNIT) | +1 on h_i(T^0 v^0) for the first i with a nonempty wire adds f_i, nonzero, to the sum | :133 | full 217-coordinate sum h_i f_i equals q^5 |
++
++All nine reason strings occur in checker.py at exactly those lines (grep -F). The all-zero-rows UNIT case is recorded NOT-APPLICABLE (:86-89), keeping the inventory at eight (:97). The dimension-216 control is a metadata omission test only; the checker rebuilds all 217 coordinates regardless, so it is not a T^30 semantic test, as the packet itself states.
++
++Planned generic tests (VALIDATION.md:152-170) are specifications only, with no harness, entrypoint or registration in the packet. Checked by hand: UNIT f1=1, q=r=h0=1, h1=1 is an identity and h1=2 fails; SEPARATOR all f_i=0, q=1 gives b=e_(0,0), lambda the (0,0) coordinate annihilates every zero column and normalizes to 1, 2*lambda fails; HIGH WINDOW f9=K T^5 with K=2^53+1, q=T^5=r*h0 with r=T, h0=T^4, h9=T^20/K gives K T^25=q^5 exactly, adding a T^25 multiplier of 1 creates a K T^30 term that fails at row (30,0), and the integer-rounded coefficient 0 fails the identity arithmetically rather than in the parser; ZERO GUARD all f_i=0, r=0, h0=1 gives q=0, b=0, zero UNIT witness verifies, correctly reporting the zero localization (q=0 is in the multiplicative set), not a nonzero quotient. These four specs are coherent with the checker as written but remain unobserved.
+@@
+ ## GAPs and limitations (documentary, non-blocking)
++
++- Artifact wire spelling is a 17p premise. checker.py:104 reads top-level r (two slots) and h0 (five slots) and both programs read modulus as string pairs; the exact JSON keys of the accepted univariate artifact were not charged. A mismatch raises KeyError or ValueError and STOPs; it can never yield a false PASS.
++- Installed fmpq semantics are unknown: entry comparison with 0 and 1 (solver.py:65-67), str() spelling (:72-77) and constructor/indexing are documentary from root-api-note.md; each unsupported behavior is an exception or refusal, again fail-closed. The compatibility test named in VALIDATION.md:82-96 remains a separate root-registered task.
++- Naming nit: the control named omitted-high-coordinate (semantic_controls.py:56) omits no coordinate; it alters the rows field. Harmless, but a future reader should not cite it as window coverage.
++- Syntax, import, cost, coefficient size, density, height, CPU, RSS, result and speedup are unmeasured by design of a static gate; this packet is not dispatch-ready and this report does not make it so.
+@@
+ ## Input custody table (generated from sha256sum -c output)
++
++| # | file | sha256 |
++|---|------|--------|
++| 1 | READ-SCOPE.md | 61d32228570cf4be4f132ec16bb5a9a514e023cbcda56b323d2c9f1ed09d232c |
++| 2 | STATIC-CHECKS.md | 55ecd93871267be3f77a2d348bd57e397ada317473f13832144d55c62ce74812 |
++| 3 | VALIDATION.md | 5c4ddac868a65f43edb8f70481270227c52dfcaf605e4d9fd7d3247c5d24b054 |
++| 4 | algebra.py | 7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc |
++| 5 | caller.diff | 648b8122a2eac16c233dc451df41b842edcd630e93f15c8c0e8c4fd5af513f46 |
++| 6 | checker.py | 122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69 |
++| 7 | dispatch.registration.DISABLED.json | 0465819174d170ef1b5bfe1a3fe67da5ef088ba725f7a601953a8595389a4951 |
++| 8 | dispatch_batch.py | 0f375da83d17d695cb0d502d842f8be82bf12bb4bdba38d6735ab0ac8efc06ed |
++| 9 | evidence.py | cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767 |
++| 10 | execution_gate.py | cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6 |
++| 11 | probe.py | 02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7 |
++| 12 | semantic_controls.py | 238ae6743aa00e2ec57495b6bcbee3eda55bb07580a36bf478dcbbe4df9ac105 |
++| 13 | solver.py | 28df2b213e254b4e985ddecd2769cb1648519e57859a3778d450a2e386e2ad09 |
++| 14 | f10-r1-exact-linear-decision-code-astra-20260909.md | e73075e3b3564538c69a0a0a3fbd925c80c57d0a21122d37269bb3539b73ce93 |
++| 15 | f10-r1-exact-linear-decision-code-astra-20260909.md.artifact.json | 2a79a36c612a43b6545d39a1b2e4fe6542da5c81d7f21c942b8fb556e9e81fa1 |
++| 16 | custody.json | 9e2062e4c04ab6f3dd14d8f3992d120dc174d380c6ba5071f0d998fb6cf20741 |
++| 17 | f10-univariate-linear-decision-astra-20260909.md | 610fca9c3d925f0efa6b92c7e6c2da5b1e9afe6f4399e2a8e9f0d5db38d98276 |
++| 18 | f10-univariate-linear-decision-gate-fable5-20260909.md | 6646c2f6f9c48ddb510fc75095ef48dc6bb8d6a2e96c56c388928bcb5872f3f6 |
++| 19 | f10-r1-univariate-adapter-gate-fable5-20260909.md | e169b3e42828885e38f74ef7ed53e2d022151bb9588ea44d71e45eeb3a9c44c2 |
++| 20 | f10-r1-univariate-runtime-gate-fable5-20260909.md | 89f905c8fa9ce31aaae23d0c2da8d852756d099097f126d1ff27b2524e4893f5 |
++| 21 | root-api-note.md | 52d0ccc730883a33ef1ba17b6d42080e40c59b1aa0d677ba4bee8f80f5a1bf3f |
+@@
+ ## OPEN(S) RAISED
++
++None. No bounded scientific quantity of this task is left undecided by this gate: the one remaining obligation (separately registered compatibility and generic verifier tests, then a single real batch) is already declared by the producer and is a root registration matter, not a new OPEN. No exit-price assertion is made and no closing hash section is appended.
+@@
+ ## COLLISIONS
++
++status: EMPTY. Own-only check: xmodel/f10-r1-exact-linear-decision-gate-fable5-20260909.md and box/f10-r1-exact-linear-decision-gate-fable5-20260909/ were both absent at 21:59 UTC before the first write; no corpus scan is claimed.
+*** End Patch

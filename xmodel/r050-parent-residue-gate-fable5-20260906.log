@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete. The report is written, sealed, and verified at `xmodel/r050-parent-residue-gate-fable5-20260906.md`, body 16,736 bytes, seal verified against basis `0d39df3c`. Custody passed 7/7 by mechanically joining the receipt's indexed fields to the frozen inputs.
+
+**Verdicts on the five charged claims**
+
+- **Claim 1, 4+28 split: CONFIRMED.** I derived the centre `t^-1 + c0 + alpha t^(1/4) + beta t^(1/2)` from the stabiliser of the prefix inside Z/28. Galois semi-invariance forces the final face's pi-support into the class `q = 1 mod 7`, so the zero root is a theorem of the pattern rather than a choice. The implicit-function branch lies in `K(T)[[u]]` with `u = t^(1/4)`, giving one place of ramification 4; the 28 nonzero-root series form one place of ramification 28.
+- **Claim 2, residue formula: CONFIRMED.** Sign and all coordinate changes check by hand and by a fully generic SymPy series. New addition: the residue theorem gives `Res_P' = -Res_P`, because the form is regular on the affine fibre and holomorphic at every minor place. The e=28 place therefore adds no equation.
+- **Claim 3, 19-term family: CONFIRMED with scope pinned.** Degree, top form, both faces, the floor support, and the residue all replay. It proves non-implication from the three displayed faces only. It is not shown to be an R050 tree and carries no g-face, Jacobian row, or mate.
+- **Claim 4, Keller redundancy: CONFIRMED; early-row compression OPEN.** The `u^-1` row identity holds with generic expansions through `u^2`, and `b != 0` already follows from `A b = -4 j`, matching Xu's Lemma 4.4 display in sign. The residue row mixes Jacobian rows of every total degree, so it is not a top-band consequence, but membership in any engine's early bands is undecided.
+- **Claim 5, controls: CONFIRMED.** Positive automorphism and the `h = x + x^2 y` negative control replay, including a degree-6 coefficient solve that forces `j = 0`. Sol's twisted example is off by one as reported. The pencil report's "algebraicity is the residual" caveat is retained as load-bearing.
+
+**Disposition.** NO_NEW_MECHANISM. No R050 kill, no source realization, no speedup. The one GAP arrow is the explicit `h1..h4` as polynomials in R050 source unknowns, which no charged input supplies. The cheapest next step is bookkeeping only: add those four rows to any future exact R050 source chart before Gröbner.
+
+**Files written.** Independent notes, scripts, JSON, the preserved producer script, and a SHA manifest are in `box/r050-parent-residue-gate-20260906/`. Total writes were about 36 KB. The charge-basis validator reports no line, as intended, since no exit price was asserted.
+DIVERT path=xmodel/r050-parent-residue-gate-fable5-20260906.md status=CLEAN_SEALED body_bytes=16736 body_sha256=83fd2af0571413db573103a4ffba187ba9f0164747f0e38f357b68f3f5fce569

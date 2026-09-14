@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-b-reconstruction-gate-fable5-20260906/gate_own.py", line 129, in <module>
+    req(cols==list(range(c["q"](d)+1)),"free columns 0..q_d at %s d=%d"%(cs,d))
+  File "/home/ubuntu/jc2/box/d125-b-reconstruction-gate-fable5-20260906/gate_own.py", line 8, in req
+    if not ok: raise ValueError("REJECT: "+msg)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: REJECT: free columns 0..q_d at unequal d=1
+Command exited with non-zero status 1
+wall=0.11 cpu=0.10+0.00 maxrss=31672KB

@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+All work is complete and verified, so there is nothing further to request.
+
+**Verdict: all six targets CONFIRMED at the stated scope.** Report written to `xmodel/d125-cone-source-composition-gate-fable5-20260908.md` (SHA256 `1312312448a744d5531becef99e6839dd811e1ffe51a763c554df3a13d8373cc`, ends with the standalone `<!-- BODY-END -->` line, no Seal, no charge_basis). Evidence and the final custody writer are in `box/d125-cone-source-composition-gate-fable5-20260908/`.
+
+**What I checked**
+
+- All 22 charged snapshot hashes equal PINS.json. Every charged proof, checker and metadata file was read whole. Nothing outside the lane inputs and the owned box was read or written.
+- Source arrow, re-derived by hand: the dilation gives exactly c·s³⁶g²; R_s is odd, degree 5, monic at g³p², weight ≤1, built by division by 3H² and H over K with units 3 and 1 only; identity (5), the generic-fibre centralizer, the kernel induction (only l=10, 20), the order-2j obstruction, H | F_j via squarefree V0 plus weight, exclusion of j=10/12/14, deg_g C ≤ 2, and the whole β-shear all hold. Interface matches the consumer literally.
+- Consumer arrow, re-derived: product injection is in fact a Vandermonde statement because normal weight-≤5 polynomials have g-degree ≤2. Global initials are regular, α and δ sit above the window, the only sub-5η B initial is the odd tuple e with Z² coefficient 3De, ν=5η with a monic Z⁴-free quintic on every branch, then the 3/5 lemma with c₀..f₀ retained and quartic 7/3 kills the selected branch.
+- Composition: no Q̄-point of the guarded 14c chart, hence unit ideal by Nullstellensatz and descent, hence O₀=0 via the accepted étale isomorphism. Explicitly not concluded: k=0 scheme, non-odd or λ₂≠0 D125, moving lift, JC2.
+
+**Replays and controls**
+
+- 28 capped runs of the three byte-copied checkers, normal and -O. All three positive digests match the charged witnesses and root receipts. Every mutation fails on its intended identity in both modes.
+- Independent control script with nine changed-object checks passed, byte-identical under -O. One reviewer-side exception is recorded: my first C4 draft compared a slot list in the wrong order and was corrected. No charged object failed.
+
+Root alone launches or promotes. STOP/IDLE.
+DIVERT path=xmodel/d125-cone-source-composition-gate-fable5-20260908.md status=CLEAN body_bytes=14636 body_sha256=1312312448a744d5531becef99e6839dd811e1ffe51a763c554df3a13d8373cc

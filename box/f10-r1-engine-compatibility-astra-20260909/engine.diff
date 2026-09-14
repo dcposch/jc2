@@ -1,0 +1,12 @@
+diff --git a/box/f10-r1-exact-decision-code-20260909/engine.py b/box/f10-r1-engine-compatibility-astra-20260909/engine.py
+index e8c9d6f4..9e2936ac 100644
+--- a/box/f10-r1-exact-decision-code-20260909/engine.py
++++ b/box/f10-r1-engine-compatibility-astra-20260909/engine.py
+@@ -37,7 +37,6 @@ def script(data):
+     need(data['schema']=='F10-L1-EXACT/v1' and data['variables']==VARIABLES,'source schema/variables')
+     need([r['id'] for r in data['rows']]==IDS,'all twenty row IDs')
+     lines=['ring R=0,('+','.join(VARIABLES)+'),dp;',
+-           'option(nostdhilb,noprobabilistic);',
+            'proc emitpoly(poly f,string tag)', '{',
+            'print("POLY|"+tag);',
+            'while(f!=0){',

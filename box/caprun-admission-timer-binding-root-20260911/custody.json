@@ -1,0 +1,51 @@
+{
+  "schema": "root-documentary-custody/v1",
+  "task": "caprun-admission-timer-binding-root-20260911",
+  "first_action_utc": "2026-09-11 09:51:20 UTC",
+  "original_reserve_utc": "2026-09-11 09:59:00 UTC",
+  "original_hard_utc": "2026-09-11 10:02:00 UTC",
+  "status": "COMPLETED_STATIC_UNEXECUTED_PENDING_DELTA",
+  "input_pins": [
+    {
+      "path": "box/caprun-closed-scope-admission-astra-20260911/outer-admission.template.sh",
+      "sha256": "99cb19a535c8233143db8a4dc68ac0dd93f1ae9b2e68211af9522fb6145d611c"
+    },
+    {
+      "path": "box/caprun-closed-scope-deployment-prep-root-20260911/launch-worker.template.sh",
+      "sha256": "5f0cc7a9146c055b09ca0dd0db79e80cbb38ed64e79d64acfb177bbf0ffce9a4"
+    },
+    {
+      "path": "xmodel/caprun-closed-scope-admission-gate-fable5-20260911.md",
+      "sha256": "c8912f2e54cdd207268383abe384fca3e5806743cfd3d17ad0973705c2f9c72d"
+    }
+  ],
+  "owned_pins": [
+    {
+      "path": "box/caprun-admission-timer-binding-root-20260911/outer-admission.template.sh",
+      "sha256": "d08e05c66d2c874f00f0485aef929a829217e89488546601c73145b11121fba1"
+    },
+    {
+      "path": "box/caprun-admission-timer-binding-root-20260911/parent-outer-admission.template.sh",
+      "sha256": "99cb19a535c8233143db8a4dc68ac0dd93f1ae9b2e68211af9522fb6145d611c"
+    },
+    {
+      "path": "xmodel/caprun-admission-timer-binding-root-20260911.md",
+      "sha256": "bb00d8dc15208a621dbec8293f3faf54ed3836cfeba6aed1a1622a4d533f4252"
+    },
+    {
+      "path": "xmodel/caprun-admission-timer-binding-root-20260911.md.artifact.json",
+      "sha256": "9982d5315f5f6920e26d4e863d3c59a6e8fcc7499a38c77a4e52766fc3edcfd2"
+    }
+  ],
+  "read_scope": "Three input bodies WHOLE, final new outer WHOLE, complete diff, sealed final report WHOLE after expected-manifest VERIFIED. Parent alias is cmp-identical and hash-identical administrative frozen snapshot, supplied only to avoid duplicate LANE_INPUTS basenames.",
+  "checks": {
+    "one_executable_line_deleted": true,
+    "four_comments_added": true,
+    "other_code_byte_identical": true,
+    "pre_post_inputs_unchanged": true,
+    "expected_manifest_verified": true,
+    "no_source_or_candidate_execution": true,
+    "no_aws_or_process_control_for_this_correction": true
+  },
+  "writers": "ALL_WRITERS_IDLE after this custody readback"
+}

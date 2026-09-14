@@ -1,0 +1,14 @@
+{
+  "host": "172.30.0.7",
+  "command": "cd /tmp/k16xempty-20260905-astra/t4_lift && timeout -k 10 1800 stdbuf -oL -eL Singular --cpus=1 --threads=1 --flint-threads=1 --no-rc -q t4_lift.sing",
+  "elapsed_seconds": 466.3069860935211,
+  "returncode": 1,
+  "script_sha256": "1787fcc72a99454ff45f8b844bb5e61ab8a2f7ad9a7149d20d27f589fe85e0fe",
+  "cores": 1,
+  "outputs": {
+    "t4_target2_lift.sing": {
+      "returncode": 1,
+      "stderr": "scp: /tmp/k16xempty-20260905-astra/t4_lift/t4_target2_lift.sing: No such file or directory\n"
+    }
+  }
+}

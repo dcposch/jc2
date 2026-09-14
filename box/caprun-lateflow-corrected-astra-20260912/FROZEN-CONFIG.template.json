@@ -1,0 +1,111 @@
+{
+  "schema": "caprun-lateflow-corrected-frozen/v1",
+  "armed": false,
+  "review_state": "UNREVIEWED_UNBOUND",
+  "entry_authorities": {
+    "ADMIT": "ROOT_EXPLICIT_SEPARATE_ADMIT",
+    "ATTEST": "ROOT_EXPLICIT_SEPARATE_ATTEST",
+    "INSTALL": "ROOT_EXPLICIT_SEPARATE_INSTALL",
+    "RELEASE": "ROOT_EXPLICIT_SEPARATE_RELEASE"
+  },
+  "context": "ROOT_ATTESTED_CANDIDATE",
+  "authority_disposition": "EXPECTED_RUNTIME_OUTPUTS_DO_NOT_PREINSTALL",
+  "worker": {
+    "host": "JC2_WORKER_HOST_PLACEHOLDER",
+    "instance_id": "JC2_INSTANCE_ID_PLACEHOLDER",
+    "hostname": "JC2_HOSTNAME_PLACEHOLDER",
+    "boot_id": "JC2_BOOT_ID_PLACEHOLDER",
+    "pid_namespace": "JC2_PID_NAMESPACE_PLACEHOLDER"
+  },
+  "transport": {
+    "remote_user": "ubuntu",
+    "identity_file": "JC2_IDENTITY_FILE_PLACEHOLDER",
+    "known_hosts": "JC2_KNOWN_HOSTS_PLACEHOLDER"
+  },
+  "clocks": {
+    "original_admission_stop_ms": 0,
+    "original_holder_stop_ms": 0,
+    "original_worker_stop_ms": 0
+  },
+  "coordinator": {
+    "receipt": "JC2_RECEIPT_PATH_PLACEHOLDER",
+    "receipt_sha256": "JC2_RECEIPT_SHA256_PLACEHOLDER",
+    "native_list": "JC2_NATIVE_LIST_PATH_PLACEHOLDER",
+    "native_list_sha256": "JC2_NATIVE_LIST_SHA256_PLACEHOLDER",
+    "timer_unit": "JC2_RETIREMENT_TIMER_UNIT_PLACEHOLDER",
+    "timer_properties": {
+      "ActiveState": "active",
+      "LoadState": "loaded",
+      "Unit": "JC2_RETIREMENT_SERVICE_UNIT_PLACEHOLDER"
+    },
+    "service_unit": "JC2_RETIREMENT_SERVICE_UNIT_PLACEHOLDER",
+    "service_properties": {
+      "LoadState": "loaded",
+      "Type": "oneshot",
+      "ExecStart": "JC2_RETIREMENT_EXECSTART_PLACEHOLDER"
+    }
+  },
+  "local": {
+    "prepared_directory": "JC2_PREPARED_DIRECTORY_PLACEHOLDER",
+    "prepared_pins": "JC2_PREPARED_PINS_PLACEHOLDER",
+    "caller": "/home/ubuntu/jc2/box/caprun-candidate-caller-astra-20260911/caller.py",
+    "admission_record": "JC2_ADMISSION_RECORD_PLACEHOLDER",
+    "observation": "JC2_OBSERVATION_PATH_PLACEHOLDER",
+    "decision": "JC2_DECISION_PATH_PLACEHOLDER",
+    "preholder_local_manifest": "JC2_LOCAL_MANIFEST_PATH_PLACEHOLDER",
+    "preholder_remote_manifest": "JC2_REMOTE_MANIFEST_LOCAL_PATH_PLACEHOLDER",
+    "records_directory": "JC2_PRIVATE_RECORDS_DIRECTORY_PLACEHOLDER",
+    "records_identity": "JC2_PRIVATE_RECORDS_DEV_INODE_UID_GID_700_PLACEHOLDER",
+    "owner_uid": "JC2_COORDINATOR_UID_PLACEHOLDER",
+    "owner_gid": "JC2_COORDINATOR_GID_PLACEHOLDER",
+    "exclusive_no_concurrent_writer": false,
+    "install_commitment": "JC2_INSTALL_COMMITMENT_PATH_PLACEHOLDER",
+    "install_receipt": "JC2_INSTALL_RECEIPT_PATH_PLACEHOLDER",
+    "fixed_paths": [
+      "JC2_ADMIT_ENTRY_PATH_PLACEHOLDER",
+      "JC2_ATTEST_ENTRY_PATH_PLACEHOLDER",
+      "JC2_INSTALL_ENTRY_PATH_PLACEHOLDER",
+      "JC2_RELEASE_ENTRY_PATH_PLACEHOLDER",
+      "JC2_FROZEN_CONFIG_PATH_PLACEHOLDER",
+      "JC2_CALLER_PATH_PLACEHOLDER",
+      "JC2_LATEBIND_PATH_PLACEHOLDER",
+      "JC2_STAGE_PATCH_PATH_PLACEHOLDER",
+      "JC2_PREPARED_PINS_PATH_PLACEHOLDER",
+      "JC2_REMOTE_MANIFEST_LOCAL_PATH_PLACEHOLDER",
+      "JC2_PREPARED_REGISTRATION_PATH_PLACEHOLDER",
+      "JC2_PREPARED_AUTHORITIES_PATH_PLACEHOLDER",
+      "JC2_PREPARED_CARD_PATH_PLACEHOLDER",
+      "JC2_PREPARED_INSTALLER_PATH_PLACEHOLDER"
+    ]
+  },
+  "remote": {
+    "holder": "JC2_REMOTE_HOLDER_PATH_PLACEHOLDER",
+    "base": "JC2_REMOTE_BASE_PLACEHOLDER",
+    "unit": "JC2_REMOTE_UNIT_PLACEHOLDER",
+    "cgroup": "JC2_REMOTE_CGROUP_PLACEHOLDER",
+    "stage": "JC2_REMOTE_STAGE_PLACEHOLDER",
+    "admission": "JC2_REMOTE_ADMISSION_PATH_PLACEHOLDER",
+    "observe": "JC2_REMOTE_OBSERVE_PATH_PLACEHOLDER",
+    "receiver": "JC2_REMOTE_RECEIVER_PATH_PLACEHOLDER",
+    "release_check": "JC2_REMOTE_RELEASE_CHECK_PATH_PLACEHOLDER",
+    "fifo_writer": "JC2_REMOTE_FIFO_WRITER_PATH_PLACEHOLDER",
+    "native_manifest_sha256": "JC2_REMOTE_NATIVE_MANIFEST_SHA256_PLACEHOLDER",
+    "installed_manifest": "JC2_REMOTE_INSTALLED_MANIFEST_PATH_PLACEHOLDER",
+    "native_list": "JC2_REMOTE_NATIVE_LIST_PATH_PLACEHOLDER",
+    "fixed_paths": [
+      "JC2_REMOTE_ADMISSION_PATH_PLACEHOLDER",
+      "JC2_REMOTE_OBSERVE_PATH_PLACEHOLDER",
+      "JC2_REMOTE_RECEIVER_PATH_PLACEHOLDER",
+      "JC2_REMOTE_RELEASE_CHECK_PATH_PLACEHOLDER",
+      "JC2_REMOTE_FIFO_WRITER_PATH_PLACEHOLDER",
+      "JC2_REMOTE_HOLDER_PATH_PLACEHOLDER",
+      "JC2_REMOTE_INSTALLED_MANIFEST_PATH_PLACEHOLDER",
+      "JC2_REMOTE_NATIVE_LIST_PATH_PLACEHOLDER"
+    ]
+  },
+  "phrases": {
+    "attest": "ROOT_ATTEST_EXACT_FRESH_HOLDER_AND_NINE_EMPTY_LEAVES",
+    "install": "ROOT_INSTALL_EXACT_ATTESTED_PREFLIGHT9_CANDIDATE",
+    "release": "ROOT_RELEASE_EXACT_PREFLIGHT9_ONLY"
+  }
+}

@@ -1,0 +1,17 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The FIRST is sealed at 15:08:17 UTC, before the 15:10 reserve and the 15:13 hard cap. No writes after the marker.
+
+**Outcome.** All four verdicts are CONFIRMED, with the section D limits enforced. No GAP was found in the one explicit control. The report is at `xmodel/hypersurface-radial-pinching-gate-fable5-20260912.md` and stays MANUAL/PROVISIONAL pending ROOT intake. It is not a JC2 counterexample.
+
+**What I recomputed by hand, with no interpreter or CAS:**
+- **A.** The identities c = UW−3V−1 and y = A−3Wz, hence R = B+Bz and Frac B = Frac R. P = v²−u(uw−3v−1)² is primitive and irreducible by Gauss, and the height-1 kernel forces B ≅ C[u,v,w]/(P). On D, R/(c) = C[t,t⁻¹] with residues (t⁻², 0, t²), so B is exactly the inverse image of the even Laurent ring, T ∉ B, and the conductor is cR in both directions.
+- **B.** The global identity dz = (T/2)dU − dV + z dc holds via zT = c+1, giving Ω_(R/B) = 0 everywhere. The U = 0 locus is smooth and retained. The singular locus is v = 0, uw = 1, an ordinary double curve.
+- **C.** M is a B-module, cΩ_R ⊂ M, and the second fundamental sequence puts ker(Ω_R → Ω_D) inside M. I expanded the finite β coefficient by coefficient. Every coefficient lies in B or in cR ⊂ B, no inverse of c, z, U appears, and its image is exactly α with dα = dx∧dy. It is a descended form, not a Darboux form.
+- **D.** J(U,V) = 2z⁴ is not constant, P_W = −2z⁴c, η = −dx∧dy/c as a rational identity, residues are opposite under t ↦ −t, and E(c)|D = t − 3/t is odd and nonzero. So the relaxed package is satisfied by a nonnormal, non-Euler-stable hypersurface.
+
+**Own control.** A form descends to Ω_B iff its restriction to D has an odd Laurent coefficient. α passes, while x dy and y dx each fail despite having the same exterior derivative up to sign. A second cross-check via finite duality recovers the conductor cR independently of section 2.
+
+**Producer defects found.** One decorative identity in section 1 is true but is not the one actually used. Nothing load-bearing.
+
+**Custody.** Both inputs matched the expected hashes before any body and again after the whole readback. Output hash `5a3a848e…e7bd`, 1160 words total including custody, single standalone marker last.
+DIVERT path=xmodel/hypersurface-radial-pinching-gate-fable5-20260912.md status=CLEAN body_bytes=8477 body_sha256=5a3a848e17886fb6c5d2edfd2e31fcd9e6a1489b759e688b812d7fc41577e7bd

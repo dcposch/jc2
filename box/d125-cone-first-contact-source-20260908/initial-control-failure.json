@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-08T01:14:34Z",
+  "status": "REJECTED_INITIAL_TOY_CHECKER",
+  "rc": 1,
+  "failed_check": "whole beta A shear",
+  "cause": "The checker positive branch accidentally formed beta^2*A instead of beta*A; all three preceding formal wedge rows had passed.",
+  "preserved_code": "check-initial-double-beta.py",
+  "repair": "Remove the duplicated inner mul(b,A), leaving outer mul(b,A). No mathematical formula was changed."
+}

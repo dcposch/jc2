@@ -1,0 +1,230 @@
+{
+  "checked_at_utc": "2026-09-05T01:33:50.032842+00:00",
+  "accepted_logs": {
+    "t2m_checks.log": {
+      "status": "PASS",
+      "required_markers": [
+        "IPLUS_DIM 1",
+        "IPLUS_LENGTH -1",
+        "TAU_POWER 1 ZERO 1",
+        "FULL_T0_NONZERO 1",
+        "IPLUS_COMPLETE",
+        "CHECKS_COMPLETE"
+      ],
+      "sha256": "95c714af7679c8d67ddd76d910672d3fca3fa7d4d55fedd4dfce2b73e62a4314"
+    },
+    "t2m_abel_generate.log": {
+      "status": "PASS",
+      "required_markers": [
+        "ABEL_ROW_IDENTITY_PASS",
+        "LOCAL_IDENTITIES_PASS",
+        "ROWS_COMPLETE"
+      ],
+      "sha256": "7e537f948da09b96c755a709bccad64d1ce518ea204e860b317bb33766429974"
+    },
+    "t2p_checks.log": {
+      "status": "PASS",
+      "required_markers": [
+        "IPLUS_DIM 0",
+        "IPLUS_LENGTH 12",
+        "TAU_POWER 1 ZERO 1",
+        "FULL_T0_NONZERO 1",
+        "IPLUS_COMPLETE",
+        "CHECKS_COMPLETE"
+      ],
+      "sha256": "8cc584048e196b82c459746da832efa4acc1dbf3c7383af111d55f632db0d7d7"
+    },
+    "t2p_abel_generate.log": {
+      "status": "PASS",
+      "required_markers": [
+        "ABEL_ROW_IDENTITY_PASS",
+        "LOCAL_IDENTITIES_PASS",
+        "ROWS_COMPLETE"
+      ],
+      "sha256": "7e537f948da09b96c755a709bccad64d1ce518ea204e860b317bb33766429974"
+    },
+    "t3_checks.log": {
+      "status": "PASS",
+      "required_markers": [
+        "IPLUS_DIM 0",
+        "IPLUS_LENGTH 66",
+        "TAU_POWER 2 ZERO 1",
+        "FULL_T0_NONZERO 1",
+        "IPLUS_COMPLETE",
+        "TAU_POWER 1 ZERO 0",
+        "CHECKS_COMPLETE"
+      ],
+      "sha256": "133e9d6eac4ec4c505eb7bf5e4550f487910de92272dfc1f00bf9acd1b676b69"
+    },
+    "t3_abel_generate.log": {
+      "status": "PASS",
+      "required_markers": [
+        "ABEL_ROW_IDENTITY_PASS",
+        "LOCAL_IDENTITIES_PASS",
+        "ROWS_COMPLETE"
+      ],
+      "sha256": "2a46f137107b2fe436b8f703adf5ebc4aa5bb3aa869ee3c0377406db7eadcae0"
+    },
+    "t4_checks.log": {
+      "status": "ACCEPTED_CHECKPOINTS",
+      "required_markers": [
+        "IPLUS_DIM 0",
+        "IPLUS_LENGTH 338",
+        "TAU_POWER 2 ZERO 1",
+        "FULL_T0_NONZERO 1",
+        "IPLUS_COMPLETE",
+        "TAU_POWER 1 ZERO 0",
+        "TAIL_DIM 0",
+        "TAIL_LENGTH 572",
+        "TAIL_TAU_POWER 2 ZERO 0"
+      ],
+      "sha256": "4c8606aaec8c610439f5e10076700a50fa7bae82d8693ba1c7a77a55491f2559"
+    },
+    "t4_abel_generate.log": {
+      "status": "PASS",
+      "required_markers": [
+        "ABEL_ROW_IDENTITY_PASS",
+        "LOCAL_IDENTITIES_PASS",
+        "ROWS_COMPLETE"
+      ],
+      "sha256": "9fc89cfc21b1b997d3e5560eb2c503da68dc16954c289158cac83b440c72ae21"
+    },
+    "t3_coordinate.log": {
+      "status": "PASS",
+      "required_markers": [
+        "COORDINATE_IMAGES_PASS",
+        "ROWS_COMPLETE"
+      ],
+      "sha256": "d2b6babfb5802d56c16d45302e3ffec886f64885c1c4a23d1635767d6297528b"
+    },
+    "t3_local_probe.log": {
+      "status": "PASS",
+      "required_markers": [
+        "ROOT_DERIVATIVE_PROPORTIONAL 0",
+        "ROOT_IN_GRADIENT 0",
+        "LOCAL_PROBE_COMPLETE"
+      ],
+      "sha256": "f1e6cd7abe6fb3940ef97b44f23af7b8030bf6934f485bdf635789ae3cad23ec"
+    },
+    "audit_baseprobe_t3_singular.log": {
+      "status": "PASS",
+      "required_markers": [
+        "AUDIT_BASE_DONE"
+      ],
+      "sha256": "97a35d0f1c854a4dffd7f79c910869090305deed208399d1957813681c90ef58"
+    },
+    "audit_minors_t3.log": {
+      "status": "PASS",
+      "required_markers": [
+        "MINORS dim=0 vdim=85",
+        "STATS MINORS length=85 top=18",
+        "AUDIT_MINORS_DONE"
+      ],
+      "sha256": "e13f8d1b0777adede90e034fdb7758d2e94c2b09bfbf3a3a0785bee1cba023ab"
+    },
+    "t4_coordinate.log": {
+      "status": "PASS",
+      "required_markers": [
+        "COORDINATE_IMAGES_PASS",
+        "ROWS_COMPLETE"
+      ],
+      "sha256": "ba3da2510922d6ae3360e776e38899369b2daff48ad225436a056fa3eaef7a24"
+    },
+    "t4_local_probe.log": {
+      "status": "PASS",
+      "required_markers": [
+        "ROOT_DERIVATIVE_PROPORTIONAL 0",
+        "ROOT_IN_GRADIENT 0",
+        "LOCAL_PROBE_COMPLETE"
+      ],
+      "sha256": "f44017fbeba84c711cd908bca95c0d880c70e048595c7ea51df9ce27b6535e4d"
+    },
+    "audit_baseprobe_t4_singular.log": {
+      "status": "PASS",
+      "required_markers": [
+        "SLICE dim=0 vdim=143 tau=0",
+        "AUDIT_BASE_DONE"
+      ],
+      "sha256": "63987637146756133b938b0588c8cc295ed5581ae843f94a0e1bd7219280f8c9"
+    },
+    "audit_minors_t4.log": {
+      "status": "PASS",
+      "required_markers": [
+        "MINORS dim=0 vdim=503",
+        "STATS MINORS length=503 top=26",
+        "AUDIT_MINORS_DONE"
+      ],
+      "sha256": "d5af2aaf592c89ed56f85756953931ba329156e5654c5bdfd10cc6b28303b7bd"
+    },
+    "structural_abel_general.log": {
+      "status": "PASS",
+      "required_markers": [
+        "ALL_B3_LAURENT_ABEL_PASS",
+        "POLYNOMIAL_RECONSTRUCTION_PASS",
+        "ALL_NORMALIZED_LEADING_COEFFICIENTS_PASS"
+      ],
+      "sha256": "40777cf2dcc7f9d7f7c9cee33399f221a4f241c6ecc31ca2dc82b87c638ae2f0"
+    },
+    "structural_boundary_jets.log": {
+      "status": "PASS",
+      "required_markers": [
+        "UNIVERSAL_BOUNDARY_JETS_PASS"
+      ],
+      "sha256": "fc74a6b692bf15a0acff7ccc4cbe3132cd21f4c990853edb012324d7acb67b17"
+    },
+    "structural_abel.log": {
+      "status": "PASS",
+      "required_markers": [
+        "PASS"
+      ],
+      "sha256": "bc80e5aef45046de47b8fb9fbeba7ff86a28d6602c18437fc63f7c63fb9be5a7"
+    },
+    "t3_sympy.log": {
+      "status": "PASS",
+      "required_markers": [
+        "SYMPY_CROSSCHECK_COMPLETE"
+      ],
+      "sha256": "4a24188607c2b7061254fe0465855df33d540295049e43cd0baf75fb63c9e9fb"
+    },
+    "exact_hilbert.log": {
+      "status": "PASS",
+      "required_markers": [
+        "t3 length 66 top_degree 14",
+        "t4 length 338 top_degree 21",
+        "HILBERT_COMPLETE"
+      ],
+      "sha256": "ae80e9d0b1ea2659553961cda27c1b475a94c29393137abcb00485a69b3f6893"
+    },
+    "belyi_identity.log": {
+      "status": "PASS",
+      "required_markers": [
+        "BARE_BELYI_AUDIT_DONE; NO_UNIFORM_ATOM_PROMOTION"
+      ],
+      "sha256": "1a39b4881bb68771b975623e2b53d2c65f1477a9529ef3184c47e05e25554c7a"
+    },
+    "moment_residues.log": {
+      "status": "PASS",
+      "required_markers": [
+        "MOMENT_RESIDUES_DONE"
+      ],
+      "sha256": "075b161a4718851d56693af6da010cd8d26088e0d9c315e6898fa15d0fedb238"
+    },
+    "t8p_generate.log": {
+      "status": "PASS",
+      "required_markers": [
+        "PIVOT 17 PASS",
+        "LOCAL_IDENTITIES_PASS",
+        "ROWS_COMPLETE"
+      ],
+      "sha256": "7421ce2a5838d12432b08ce9aedca4242409c5e6a9503b45cb197a3af234bd2d"
+    }
+  },
+  "active_lane_CAS_processes": [],
+  "t3_fast_rows_equal_local_rows": true,
+  "excluded_results": [
+    "t8 dimension or theorem promotion",
+    "termination-time tau cubed output in t4_checks.log",
+    "all development-error and deliberately stopped unoptimized jobs"
+  ],
+  "all_t_theorem_status": "OPEN"
+}

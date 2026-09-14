@@ -1,0 +1,21 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+All writes confined to my two output paths; the concurrently-modified files belong to other running lanes. `box/residual66-20260905/roster.jsonl` (the file I crossed) is *not* in that list, so the roster was stable throughout.
+
+## Gate complete — **CONFIRMED-WITH-FIX**
+
+Report sealed at `xmodel/census-coverage-gate-opus5-20260905.md` (body 22,000 B, `verify PASS`, basis `bb054cb7`). Inputs verified mechanically **8/8 OK**. 36 min of the 120 used.
+
+**What reproduced.** From my own frozen inputs: 24,063 / 23,720 core, **1,420** operative, **1,377** after Xu, 0 tree-set mismatches, 20/17 at n≤100. Astra's numbers are exact. The five auxiliary implementations it snapshotted are byte-identical to live repo files.
+
+**The six gate items.**
+
+1. **Item (2)** — the automorphism `(U,V)↦(U,V−cU^k)` is a *reductio*, never applied, so the row never changes. But it needs a premise Astra asserts without proof; I supplied it (**F1**): the preface `f = T₁^ψ` is degree-preserving because p.185's `deg T₁^ψ = −M₁ = m < n` and `deg H(g) ∈ nZ` force `H` constant. **Item (7)** — Prop. 5.3 p.180's hypothesis *is* the major-successor selector, so it binds at every recorded level and nowhere else; the code keeps minor siblings. **(10)–(11)** — Moh's own "over `k⟪t̄^{A_{r−1}}⟫`" *is* `k((t^{1/L}))`; orbit size is exactly `A` because `A` is the *reduced* denominator. Worked on `(75,50)` and on an `L=4, A=6` row where the claim is non-trivial. **(12)–(13)** — both retained, and load-bearing: **6,759 of 23,720 rows survive by (13) only**.
+2. **GGV** — Cor. 6.6 is on p.34, proof p.35, and p.2 defines `B` over **all** counterexamples. Same object, char 0, `K[x,y]`. Citation exact.
+3. **Three flags** — each checks against a printed line. Ablation: `ode` carries 271 rows, `recenter` 1,404, and **`gate=False` carries 9,186** — the largest single necessity in the screen.
+4. **Xu** — "zero at `u_s>1`" isn't a taste, it's *forced* by Prop. 6.4 p.198's hypothesis. `IM_max ≥ Im_min` cannot be violated by a realized pair, structurally.
+5. **Cross** — 66/66 matched; **65 survive Xu, 1 removed**: R001 `(84,56)`, `Ms=[64,82]`, `V={2,3}`, `IM_max=4 < Im_min=5`.
+
+**Two things I want to flag rather than bury.** The `gate=False` step is licensed by a correct argument, but at 9,186 rows it is the single claim in the whole promotion most deserving a second reader. And R001's removal — like 18 of the 43 Xu kills — rests entirely on the `u_s=1` principal floor; drop it and R001 survives.
+
+**One link I did not close:** Xu Thm 5.1's major-leaf upper bound `(v·m/d₂)·(n/(m+n))·(1−δ₁)`. Astra states it as a bound, not attainment; I took it on the frozen report's word and typed it as such rather than assuming it.
+DIVERT path=xmodel/census-coverage-gate-opus5-20260905.md status=CLEAN_SEALED body_bytes=22000 body_sha256=719d5a5e72e6f9fc2519e2ae15e41834a303c1cc30e1595591f29b5221c8d463

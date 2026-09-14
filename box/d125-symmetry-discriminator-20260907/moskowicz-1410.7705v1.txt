@@ -1,0 +1,567 @@
+                                                 INVOLUTIONS AND THE JACOBIAN CONJECTURE
+
+                                                                               VERED MOSKOWICZ
+
+
+                                                  Abstract. The famous Jacobian conjecture asks if an endomorphism f of
+                                                  K[x, y] (K is a characteristic zero field) that satisfies Jac(f (x), f (y)) ∈ K ∗ is
+                                                  invertible.
+arXiv:1410.7705v1 [math.RA] 28 Oct 2014
+
+
+
+
+                                                      Let α be the exchange involution on K[x, y]: α(x) = y and α(y) = x. An
+                                                  α-endomorphism f of K[x, y] is an endomorphism of K[x, y] that preserves the
+                                                  involution α: f α = αf . It was shown in [7, Proposition 4.1] that if f is an α-
+                                                  endomorphism that satisfies Jac(f (x), f (y)) ∈ K ∗ , then f is invertible. Based
+                                                  on this, we bring more results that imply that a given endomorphism f that
+                                                  satisfies Jac(f (x), f (y)) ∈ K ∗ and additional conditions involving involutions,
+                                                  is invertible.
+
+
+
+
+                                                                              1     Introduction
+                                          Let K be a characteristic zero field. The famous Jacobian conjecture asks if an en-
+                                          domorphism f : K[x, y] → K[x, y] that satisfies Jac(f (x), f (y)) ∈ K ∗ is invertible.
+                                             We suggest some partial answers to this conjecture, based on the following
+                                          previous result [7, Proposition 4.1]: “If f is an α-endomorphism that satisfies
+                                          Jac(f (x), f (y)) ∈ K ∗ , then f is invertible”.
+                                             Where α is the exchange involution on K[x, y], α(x) = y, α(y) = x, and an
+                                          α-endomorphism is an endomorphism of K[x, y] that preserves the involution α:
+                                          f α = αf .
+                                             Some of the results we bring here are mentioned, without a proof, in [8], while
+                                          others are new.
+
+                                            2    Two equivalent conjectures to the Jacobian conjecture
+                                          In Theorem 2.7 we show that the Jacobian conjecture is equivalent to the γ, δ
+                                          conjecture 2.5 and to the g, h conjecture 2.6.
+                                              By an involution on K[x, y] we mean an automorphism of order 2 (since K[x, y]
+                                          is commutative, any anti-automorphism is an automorphiam). We wish to consider
+                                          not only the exchange involution α, but also any involution on K[x, y].
+                                          Lemma 2.1. Assume γ is any involution on K[x, y]. Then there exists an auto-
+                                          morphism g of K[x, y] such that γ = g −1 αg.
+                                            In [3] J. Bell has sketched a proof for the analogue result in the first Weyl algebra.
+                                          His sketch of proof is applicable to K[x, y].
+                                          Proof. Use [5, Proposition 8.9] (or [9] with the fact that triangular automorphisms
+                                          has infinite order), and a direct calculation that any linear automorphism of order
+                                          2 is conjugate to α.                                                              
+                                          Definition 2.2. Let f be an endomorphism of K[x, y] and let γ and δ be any two
+                                          involutions on K[x, y]. We say that f is
+
+                                            2010 Mathematics Subject Classification. Primary 14R15, 16W20.
+                                            The author was partially supported by an Israel-US BSF grant #2010/149.
+                                                                                           1
+2                                VERED MOSKOWICZ
+
+
+      • a γ-endomorphism of K[x, y], if f γ = γf .
+      • a γ, δ-endomorphism of K[x, y], if f γ = δf .
+(If δ = γ, then a γ, γ-endomorphism is just a γ-endomorphism).
+   Notice that in the above definition, it is not assumed that the endomorphism f
+satisfies Jac(f (x), f (y)) ∈ K ∗ .
+   An immediate generalization of [7, Proposition 4.1] is as follows:
+Theorem 2.3. Assume γ and δ are two involutions on K[x, y]. Assume f is a γ, δ-
+endomorphism of K[x, y] that satisfies Jac(f (x), f (y)) ∈ K ∗ . Then f is invertible.
+Proof. From Lemma 2.1, there exists an automorphism g of K[x, y] such that γ =
+g −1 αg, and there exists an automorphism h of K[x, y] such that δ = h−1 αh.
+   f is a γ, δ-endomorphism, so by definition, f γ = δf . So, f g −1 αg = h−1 αhf .
+Hence, (hf g −1 )α = α(hf g −1 ). Therefore, hf g −1 is an α-endomorphism. From the
+chain rule we have
+                            Jac((hf g −1 )(x), (hf g −1 )(y)) ∈ K ∗
+   (g and h are automorphisms of K[x, y],
+   so Jac(g −1 (x), g −1 (y)) ∈ K ∗ and Jac(h(x), h(y)) ∈ K ∗ .
+   Jac(f (x), f (y)) ∈ K ∗ by assumption).
+   Apply [7, Proposition 4.1] to hf g −1 and get that hf g −1 is invertible, hence f is
+invertible.                                                                          
+Remark 2.4. Given two rings with involution (R1 , ǫ1 ) and (R2 , ǫ2 ), we say that f
+is an involutive endomorphism from (R1 , ǫ1 ) to (R2 , ǫ2 ), if f ǫ1 = ǫ2 f .
+   In particular, if R1 = R2 then such f is just an ǫ1 , ǫ2 -endomorphism.
+   Hence, Theorem 2.3 says the following: Let γ and δ be two involutions on K[x, y].
+Let f be an involutive endomorphism from (K[x, y], γ) to (K[x, y], δ) that satisfies
+Jac(f (x), f (y)) ∈ K ∗ . Then f is invertible.
+   In view of Theorem 2.3, given any endomorphism f of K[x, y] that satisfies
+Jac(f (x), f (y)) ∈ K ∗ , one wishes to be able to find two involutions γ and δ on
+K[x, y], such that f is a γ, δ-endomorphism. Hence we suggest the following con-
+jectures:
+Conjecture 2.5 (The γ, δ conjecture). Assume f is an endomorphism of K[x, y]
+that satisfies Jac(f (x), f (y)) ∈ K ∗ . Then there exist involutions γ and δ on K[x, y]
+such that f is a γ, δ-endomorphism.
+Conjecture 2.6 (The g, h conjecture). Assume f is an endomorphism of K[x, y]
+that satisfies Jac(f (x), f (y)) ∈ K ∗ . Then there exist automorphisms g and h of
+K[x, y] such that hf g −1 is an α-endomorphism.
+    We have:
+Theorem 2.7. TFAE:
+   (1) The Jacobian conjecture.
+   (2) The γ, δ conjecture.
+   (3) The g, h conjecture.
+Where γ and δ are involutions on K[x, y], and g and h are automorphisms of
+K[x, y].
+Proof. Let f be an endomorphism of K[x, y] that satisfies Jac(f (x), f (y)) ∈ K ∗ .
+   (1) =⇒ (2): f is invertible. Define γ := f −1 αf and δ := α, and get f γ =
+f (f −1 αf ) = αf = δf .
+   (2) =⇒ (3): There exist involutions γ and δ on K[x, y] such that f is a γ, δ-
+endomorphism, namely f γ = δf . From Lemma 2.1, there exists an automorphism
+                   INVOLUTIONS AND THE JACOBIAN CONJECTURE                            3
+
+
+g of K[x, y] such that γ = g −1 αg, and there exists an automorphism h of K[x, y]
+such that δ = h−1 αh.
+   Then f γ = δf becomes (hf g −1 )α = α(hf g −1 ), so hf g −1 is an α-endomorphism.
+   (3) =⇒ (1): There exist automorphisms g and h of K[x, y] such that hf g −1 is
+an α-endomorphism. Clearly, Jac((hf g −1 )(x), (hf g −1 )(y)) ∈ K ∗ .
+   Apply [7, Proposition 4.1] to hf g −1 and get that hf g −1 is invertible, hence f is
+invertible.                                                                          
+   The following Lemma is an analogue of [8, Lemma 2.5]; here we add the condition
+that Jac(f (x), f (y)) ∈ K ∗ , because we do not know how to prove that a γ, δ-
+endomorphism is invertible without the condition on the Jacobian.
+Lemma 2.8. Assume f is an endomorphism of K[x, y] that satisfies
+   Jac(f (x), f (y)) ∈ K ∗ . Then: f is a γ, δ-endomorphism, where γ and δ are
+involutions on K[x, y] ⇐⇒ f is invertible.
+  The proof of this lemma actually appers in the above proof of Theorem 2.7.
+Proof. =⇒: There exist involutions γ and δ on K[x, y] such that f γ = δf .
+   γ = g −1 αg and δ = h−1 αh, for some automorphisms g and h of K[x, y].
+   Then hf g −1 is an α-endomorphism that satisfies Jac((hf g −1 )(x), (hf g −1 )(y)) ∈
+K (here we use the assumption Jac(f (x), f (y)) ∈ K ∗ ).
+  ∗
+
+   By [7, Proposition 4.1] hf g −1 is invertible, hence f is invertible.
+   ⇐=: Take γ := f −1 αf and δ := α, and get f γ = f (f −1 αf ) = αf = δf .           
+
+               3    Extension and restriction conditions
+In view of Theorem 2.7, our (hopefully possible) mission is to prove that the γ, δ
+conjecture is true or to prove that the g, h conjecture is true.
+    If each endomorphism f of K[x, y] that satisfies Jac(f (x), f (y)) ∈ K ∗ also satis-
+fies the extension condition, then the γ, δ conjecture is true, see Theorem 3.3.
+    If each endomorphism f of K[x, y] that satisfies Jac(f (x), f (y)) ∈ K ∗ also satis-
+fies the restriction condition, then the γ, δ conjecture is true, see Theorem 3.6.
+    From now on we use the following notations: K will continue to denote a char-
+acteristic zero field, except in some results where we demand it to be the field of
+complex numbers.
+    Given an endomorphism f of K[x, y] (not necessarily satisfying Jac(f (x), f (y)) ∈
+K ∗ ) we denote P := f (x) and Q := f (y). Denote by T the image of K[x, y] under
+f , namely T = K[P, Q]. T is a subalgebra of K[x, y]. If Jac(P, Q) ∈ K ∗ , then T
+is isomorphic to K[x, y]. Assume Jac(P, Q) ∈ K ∗ and denote by σ0 the involution
+on T which exchanges P and Q, namely σ0 (P ) = Q, σ0 (Q) = P (extended in the
+obvious way to all of T ).
+Remark 3.1. Let f be an endomorphism of K[x, y] that satisfies Jac(P, Q) ∈ K ∗ .
+We do not know if σ0 can be extended to an endomorphism of K[x, y].
+Definition 3.2 (The extension condition). Let f be an endomorphism of K[x, y]
+that satisfies Jac(P, Q) ∈ K ∗ . We say that f satisfies the extension condition if the
+involution σ0 on T can be extended to an involution on K[x, y].
+   Notice that in the above definition we demand that σ0 can be extended not just
+to an endomorphism of K[x, y], but to an involution on K[x, y] (an automorphism
+of K[x, y] of order 2).
+Theorem 3.3 (The extension theorem). Assume f is an endomorphism of K[x, y]
+that satisfies Jac(P, Q) ∈ K ∗ . Then: f satisfies the extension condition ⇐⇒ f is a
+γ, δ-endomorphism of K[x, y], where γ and δ are involutions on K[x, y].
+4                                   VERED MOSKOWICZ
+
+
+Proof. =⇒: f satisfies the extension condition, so the involution σ0 on T can be
+extended to an involution on K[x, y], call it σ. Therefore, we get that f is an
+α, σ-endomorphism of K[x, y], because:
+              (f α)(x) = f (y) = Q = σ0 (P ) = σ(P ) = σ(f (x)) = (σf )(x)
+and
+             (f α)(y) = f (x) = P = σ0 (Q) = σ(Q) = σ(f (y)) = (σf )(y).
+⇐=: f is a γ, δ-endomorphism of K[x, y], where γ and δ are involutions on K[x, y].
+   Lemma 2.8 implies that f is invertible, so T = K[x, y].
+   By definition, σ0 is the involution on T given by σ0 (P ) = Q, σ0 (Q) = P , hence
+σ0 is an involution on K[x, y], so f satisfies the extension condition (the extension
+of σ0 to K[x, y] is σ0 itself).       P                     P
+   (Remark: T = K[x, y] so x = aij P i Qj and y = bij P i Qj . Therefore,
+                     X                  X                            X
+        σ0 (x) = σ0 (    aij P i Qj ) =   aij (σ0 (P ))i (σ0 (Q))j =   aij Qi P j .
+                         P
+And similarly, σ0 (y) = bij Qi P j ).                                               
+   From Lemma 2.8 and the above proof it is clear that if f is an endomorphism of
+K[x, y] that satisfies Jac(P, Q) ∈ K ∗ , then: f satisfies the extension condition ⇐⇒
+f is invertible. We also suggest to consider the following restriction condition.
+Definition 3.4 (The restriction condition). Let f be an endomorphism of K[x, y]
+that satisfies Jac(P, Q) ∈ K ∗ . We say that f satisfies the restriction condition if
+α(P ) ∈ T and α(Q) ∈ T . Equivalently, we say that f satisfies the restriction con-
+dition if the exchange involution α on K[x, y] when restricted to T is an involution
+on T .
+Remark 3.5. Let f be an endomorphism of K[x, y] that satisfies Jac(P, Q) ∈ K ∗ .
+We do not know if necessarily α(P ) ∈ T and α(Q) ∈ T .
+Theorem 3.6 (The restriction theorem). Assume f is an endomorphism of K[x, y]
+that satisfies Jac(P, Q) ∈ K ∗ . Then: f satisfies the restriction condition ⇐⇒ f is
+invertible.
+Proof. =⇒: f satisfies the restriction condition, so α restricted to T is an involution
+on T .
+   Denote the restriction of α to T by α0 .
+   Since T is isomorphic to K[x, y] it follows from Lemma 2.1 that every involu-
+tion on T is conjugate (by an automorphism of T ) to one chosen involution on T
+(equivalently, any two involutions are conjugate);
+   in particular, there exists an automorphism g0 of T such that σ0 = g0−1 α0 g0 .
+   Therefore,
+    (f α)(x) = f (y) = Q = σ0 (P ) = σ0 (f (x)) = (g0−1 α0 g0 )(f (x)) = (g0−1 α0 g0 f )(x)
+and
+    (f α)(y) = f (x) = P = σ0 (Q) = σ0 (f (y)) = (g0−1 α0 g0 )(f (y)) = (g0−1 α0 g0 f )(y).
+Therefore, f α = (g0 )−1 α0 g0 f .
+   Then, g0 f α = α0 g0 f , so g0 f α = αg0 f , namely g0 f is an α-endomorphism of
+K[x, y].
+   Since the Jacobian of g0 (P ), g0 (Q) with respect to P, Q, denote it by a, is a non-
+zero scalar (g0 is an automorphism of T ) and the Jacobian of f (x), f (y) with respect
+to x, y, denote it by b, is a non-zero scalar (by assumption Jac(f (x), f (y)) ∈ K ∗ ),
+we get that Jac((g0 f )(x), (g0 f )(y)) = ab ∈ K ∗ . (Jac((g0 f )(x), (g0 f )(y)) is the
+Jacobian of (g0 f )(x), (g0 f )(y) with respect to x, y).
+                  INVOLUTIONS AND THE JACOBIAN CONJECTURE                            5
+
+
+   By [7, Proposition 4.1] g0 f is an automorphism of K[x, y], so K[g0 (P ), g0 (Q)] =
+K[x, y].        P                            P
+                             i        j              i j
+   Hence,
+        P x = aiji(g0 (P )) j(g0 (Q))P= g0 (i j aij P Q ) and
+   y = bij (g0 (P )) (g0 (Q)) = g0 ( bij P Q ), where aij , bij ∈ K.
+   This shows that x, y ∈ T , so T = K[x, y], and we are done.
+   ⇐=: f is invertible, so T = K[x, y]. Hence f satisfies the restriction condition,
+since trivially α(P ) ∈ K[x, y] = T and α(Q) ∈ K[x, y] = T .                         
+   One can generalize both the extension condition and the restriction condition to
+the following conditions and have results similar to Theorem 3.3 and Theorem 3.6.
+   More precisely: Let ǫ0 be an involution on T .
+Definition 3.7 (The ǫ0 extension condition). Let f be an endomorphism of K[x, y]
+that satisfies Jac(P, Q) ∈ K ∗ . We say that f satisfies the ǫ0 extension condition if
+the involution ǫ0 on T can be extended to an involution on K[x, y].
+   According to this definition, our previous extension condition is just the σ0
+extension condition.
+Theorem 3.8 (The ǫ0 extension theorem). Assume f is an endomorphism of
+K[x, y] that satisfies Jac(P, Q) ∈ K ∗ . Then: f satisfies the ǫ0 extension condition
+⇐⇒ f is a γ, δ-endomorphism of K[x, y], where γ and δ are involutions on K[x, y]
+⇐⇒ f is invertible.
+  Let ǫ be an involution on K[x, y].
+Definition 3.9 (The ǫ restriction condition). Let f be an endomorphism of K[x, y]
+that satisfies Jac(P, Q) ∈ K ∗ . We say that f satisfies the ǫ restriction condition
+if ǫ(P ) ∈ T and ǫ(Q) ∈ T . Equivalently, we say that f satisfies the ǫ restriction
+condition if the involution ǫ on K[x, y], when restricted to T is an involution on T .
+   According to this definition, our previous restriction condition is just the α
+restriction condition.
+Theorem 3.10 (The ǫ restriction theorem). Assume f is an endomorphism of
+K[x, y] that satisfies Jac(P, Q) ∈ K ∗ . Then: f satisfies the ǫ restriction condition
+⇐⇒ f is invertible.
+   Summarizing, if f is an endomorphism of K[x, y] that satisfies Jac(P, Q) ∈ K ∗ ,
+then TFAE:
+     • f satisfies the ǫ0 extension condition.
+     • f satisfies the ǫ restriction condition.
+     • f is invertible.
+
+                               4    More results
+Recall the following result of Cheng-Mckay-Wang [4, Theorem 1]: “Let K be the
+field of complex numbers. Assume A, B ∈ K[x, y] satisfy Jac(A, B) ∈ K ∗ . If
+R ∈ K[x, y] satisfies Jac(A, R) = 0, then R ∈ K[A]”.
+    Its analogue result in the first Weyl algebra over any characteristic zero field,
+not necessarily the field of complex numbers, can be found in [6, Theorem 2.11];
+instead of the Jacobian take the commutator.
+    We shall use [4, Theorem 1] in the proofs of Theorem 4.2, Theorem 4.4, Theorem
+4.7 and Theorem 4.9.
+    Therefore, in Theorem 4.2, Theorem 4.4, Theorem 4.7 and Theorem 4.9 we will
+demand that K will be the field of complex numbers.
+    Actually, in the proofs of those theorems we use the ǫ restriction theorem 3.10.
+6                                VERED MOSKOWICZ
+
+
+   (In Theorem 4.12, K is any characteristic zero field. In its proof we are not using
+the ǫ restriction theorem 3.10).
+
+4.1    A generalized α-endomorphism
+Of course, a γ, δ-endomorphism is a generalization of an α-endomorphism. Notice
+that in the definition of a γ, δ-endomorphism f (and in the definition of an α-
+endomorphism f ) there is no special assumption on Jac(P, Q), although in our
+results we add the assumption Jac(P, Q) ∈ K ∗ .
+   Now we suggest a generalization of an α-endomorphism f of K[x, y] that satisfies
+Jac(P, Q) ∈ K ∗ :
+Definition 4.1 (A generalized α-endomorphism). Let f be an endomorphism of
+K[x, y]. We say that f is a generalized α-endomorphism if the following two con-
+ditions are satisfied:
+    (1) Jac(P, Q) ∈ K ∗ .
+    (2) Jac(P, α(P )) ∈ K ∗ or Jac(Q, α(Q)) ∈ K ∗ .
+   Notice that a generalized α-endomorphism f is indeed a generalization of an
+α-endomorphism f of K[x, y] that satisfies Jac(P, Q) ∈ K ∗ : Let f be an α-
+endomorphism of K[x, y] that satisfies Jac(P, Q) ∈ K ∗ . Of course,
+                 α(P ) = α(f (x)) = (αf )(x) = (f α)(x) = f (y) = Q.
+Hence, Jac(P, α(P )) = Jac(P, Q) ∈ K ∗ , as desired (Actually also Jac(Q, α(Q)) =
+Jac(Q, P ) ∈ K ∗ ).
+Theorem 4.2. Assume K is the field of complex numbers. If f is a generalized
+α-endomorphism, then f is invertible.
+Proof. f is a generalized α-endomorphism, hence by definition: Jac(P, Q) ∈ K ∗
+and Jac(P, α(P )) ∈ K ∗ or Jac(Q, α(Q)) ∈ K ∗ .
+  Assume w.l.o.g that Jac(P, α(P )) ∈ K ∗ .
+  Denote Jac(P, Q) = a and Jac(P, α(P )) = b, where a, b ∈ K ∗ .
+        0 = 1 − 1 = Jac(P, α(P )/b) − Jac(P, Q/a) = Jac(P, α(P )/b − Q/a),
+so [4, Theorem 1] implies that α(P )/b − Q/a = H(P ), where H(t) ∈ K[t]. Then
+α(P ) = (bQ)/a + bH(P ) ∈ T .
+   From the chain rule, since Jac(P, Q) = a and Jac(α(x), α(y)) = −1, we get
+Jac(α(P ), α(Q)) = −a.
+0 = Jac(α(P ), α(Q)/(−a))−Jac(α(P ), P/(−b)) = Jac(α(P ), α(Q)/(−a)−P/(−b)),
+so [4, Theorem 1] implies that α(Q)/(−a) − P/(−b) = G(α(P )), where G(t) ∈ K[t].
+Then,
+         α(Q) = (aP )/b − aG(α(P )) = (aP )/b − aG((bQ)/a + bH(P )) ∈ T.
+The restriction theorem 3.6 implies that f is invertible.                           
+    An obvious generalization is as follows:
+Definition 4.3 (A generalized ǫ-endomorphism). Let ǫ be an involution on K[x, y].
+Let f be an endomorphism of K[x, y].
+   We say that f is a generalized ǫ-endomorphism if the following two conditions
+are satisfied:
+    (1) Jac(P, Q) ∈ K ∗ .
+    (2) Jac(P, ǫ(P )) ∈ K ∗ or Jac(Q, ǫ(Q)) ∈ K ∗ .
+                     INVOLUTIONS AND THE JACOBIAN CONJECTURE                       7
+
+
+   A generalized ǫ-endomorphism is not a generalization of an ǫ-endomorphism
+that satisfies Jac(P, Q) ∈ K ∗ ; for example, f (x) = x + y 2 and f (y) = y is a β-
+endomorphism (automorphism) that satisfies Jac(f (x), f (y)) = 1, where β is the
+involution given by β(x) = x and β(y) = −y. But,
+                      Jac(f (x), β(f (x))) = Jac(x + y 2 , x + y 2 ) = 0
+and
+                          Jac(f (y), β(f (y))) = Jac(y, −y) = 0.
+Notice that f is a generalized α-endomorphism, since
+                       Jac(f (y), α(f (y))) = Jac(y, x) = −1 ∈ K ∗
+.
+Theorem 4.4. Assume K is the field of complex numbers. If there exists an
+involution ǫ on K[x, y] such that f is a generalized ǫ-endomorphism, then f is
+invertible.
+Proof. f is a generalized ǫ-endomorphism, hence by definition: Jac(P, Q) ∈ K ∗ and
+Jac(P, ǫ(P )) ∈ K ∗ or Jac(Q, ǫ(Q)) ∈ K ∗ .
+  Assume w.l.o.g that Jac(P, ǫ(P )) ∈ K ∗ .
+  Denote Jac(P, Q) = a and Jac(P, ǫ(P )) = b, where a, b ∈ K ∗ .
+               0 = Jac(P, ǫ(P )/b) − Jac(P, Q/a) = Jac(P, ǫ(P )/b − Q/a),
+so [4, Theorem 1] implies that ǫ(P )/b − Q/a = H(P ), where H(t) ∈ K[t]. Then
+ǫ(P ) = (bQ)/a + bH(P ) ∈ T .
+   From the chain rule, since Jac(P, Q) = a ∈ K ∗ and Jac(ǫ(x), ǫ(y)) ∈ K ∗ , we get
+Jac(ǫ(P ), ǫ(Q)) ∈ K ∗ .
+    0 = Jac(ǫ(P ), ǫ(Q)/(−a)) − Jac(ǫ(P ), P/(−b)) = Jac(ǫ(P ), ǫ(Q)/(−a) − P/(−b)),
+so [4, Theorem 1] implies that ǫ(Q)/(−a) − P/(−b) = G(ǫ(P )), where G(t) ∈ K[t].
+Then,
+           ǫ(Q) = (aP )/b − aG(ǫ(P )) = (aP )/b − aG((bQ)/a + bH(P )) ∈ T.
+The ǫ restriction theorem 3.10 implies that f is invertible.                      
+
+   The converse of Theorem 4.2 is not true; namely, an automorphism of K[x, y]
+need not be a generalized α-endomorphism. For example, P := h(x) = x + y
+and Q := h(y) = x − y is an automorphism of K[x, y] which is not a generalized
+α-endomorphism, since
+                          Jac(P, α(P )) = 0, Jac(Q, α(Q)) = 0.
+  h is not a generalized α-endomorphism, but it is a generalized β-endomorphism,
+where β is the involution on K[x, y] given by β(x) = x, β(y) = −y. Indeed,
+Jac(P, β(P )) = Jac(x + y, x − y) ∈ K ∗
+  (and Jac(Q, β(Q)) = Jac(x − y, x + y) ∈ K ∗ ).
+  In view of this it seems natural to ask the following question: Given an auto-
+morphism g of K[x, y], is there exists an involution ǫ on K[x, y] such that g is a
+generalized ǫ-endomorphism?
+  Thus far we only managed to show that for every generator of the group of
+automorphisms of K[x, y] the answer to this question is positive. Indeed,
+     • Let g be linear with g(x) = ax + by, a, b ∈ K. If a = 0, then g(x) = by, so
+        g is a generalized α-endomorphism:
+                         Jac(g(x), α(g(x))) = Jac(by, bx) ∈ K ∗ .
+8                                  VERED MOSKOWICZ
+
+
+        If b = 0, then g(x) = ax, so g is a generalized α-endomorphism:
+                        Jac(g(x), α(g(x))) = Jac(ax, ay) ∈ K ∗ .
+        If both a and b are non-zero, then g(x) = ax + by, so g is a generalized
+        β-endomorphism (β(x) = x and β(y) = −y):
+              Jac(g(x), β(g(x))) = Jac(ax + by, ax − by) = −2ab ∈ K ∗ .
+      • Let g be triangular. Then it is clear that g is a generalized α-endomorphism.
+Remark 4.5. A given endomorphism can be a generalized ǫ-endomorphism, for
+more that one involution ǫ. For example, let g be the automorphism given by
+g(x) = ax + by and g(y) = cx + dy, where ad − bc 6= 0 and a 6= ±b. It is easy to see
+that
+                        Jac(g(x), α(g(x))) = a2 − b2 ∈ K ∗ .
+So g is a generalized α-endomorphism and we have already seen that g is a gener-
+alized β-endomorphism (β(x) = x and β(y) = −y).
+
+4.2    P is symmetric or skew-symmetric
+Denote the set of symmetric elements (with respect to α) by Sα and denote the
+set of skew-symmetric elements (with respect to α) by Kα . The set of symmetric
+elements is K-linearly spanned by {xn y m + xm y n |n ≥ m}, while the set of skew-
+symmetric elements is K-linearly spanned by {xn y m − xm y n |n > m}.
+Lemma 4.6.      (1) If a ∈ Sα and b ∈ Sα , then Jac(a, b) ∈ Kα .
+  (2) If a ∈ Kα and b ∈ Kα , then Jac(a, b) ∈ Kα .
+  (3) If a ∈ Sα and b ∈ Kα , then Jac(a, b) ∈ Sα .
+  The analogue result in the first Weyl algebra is also true (and is easier to prove),
+where instead of the Jacobian take the commutator.
+Proof. We shall only prove (1); the proofs of (2) and (3) are similar. Write
+                    X                               X
+                a=      aij (xi y j + xj y i ), b =   bkl (xk y l + xl y k ).
+The Jacobian is K-linear, so
+                         XX
+             Jac(a, b) =     aij bkl Jac(xi y j + xj y i , xk y l + xl y k ).
+Since the sum of skew-symmetric elements is skew-symmetric, it suffices to show
+that each Jac(xi y j + xj y i , xk y l + xl y k ) is skew-symmetric.
+   Indeed, a direct computation yields:
+   Jac(xi y j + xj y i , xk y l + xl y k ) = (li − kj)(xk+i−1 y j+l−1 − xj+l−1 y k+i−1 )+
+   (ik − jl)(xi+l−1 y j+k−1 − xj+k−1 y i+l−1 ).
+                                                                                          
+  We again assume that K is the field of complex numbers, because in our proof
+we wish to use [4, Theorem 1].
+Theorem 4.7. Assume K is the field of complex numbers. Assume f is an endo-
+morphism of K[x, y] that satisfies Jac(P, Q) ∈ K ∗ . Assume that one of the following
+conditions is satisfied:
+      • P is symmetric.
+      • P is skew-symmetric.
+      • Q is symmetric.
+      • Q is skew-symmetric.
+Where by symmetric or skew-symmetric we mean symmetric or skew-symmetric
+with respect to α. Then f is invertible.
+                    INVOLUTIONS AND THE JACOBIAN CONJECTURE                          9
+
+
+Remark 4.8. By Lemma 4.6 the Jacobian of two symmetric or two skew-symmetric
+elements is skew-symmetric, hence it is impossible to have both P and Q symmetric
+or both P and Q skew-symmetric.
+   Actually, if P is symmetric and Q is skew-symmetric (or vice-versa), then it is
+immediate that such f (= an endomorphism of K[x, y] that satisfies Jac(P, Q) ∈
+K ∗ ) is invertible:
+   Write s := P and k := Q (s is symmetric and k is skew-symmetric). Define
+g(x) := s + k and g(y) := s − k. It is easy to see that g is an α-endomorphism of
+K[x, y] that satisfies
+   Jac(g(x), g(y)) ∈ K ∗ : g is an endomorphism of K[x, y] that satisfies
+   Jac(g(x), g(y)) ∈ K ∗ : Let h(x) = x + y and h(y) = x − y. We have
+      (f h)(x) = f (h(x)) = f (x + y) = f (x) + f (y) = P + Q = s + k = g(x),
+and
+      (f h)(y) = f (h(y)) = f (x − y) = f (x) − f (y) = P − Q = s − k = g(y),
+so g = f h.
+                     Jac(g(x), g(y)) = Jac((f h)(x), (f h)(y)) ∈ K ∗ ,
+since Jac(f (x), f (y)) ∈ K ∗ and Jac(h(x), h(y)) ∈ K ∗ . Another argument:
+                 Jac(g(x), g(y)) = Jac(s + k, s − k) = 2 Jac(k, s) ∈ K ∗ .
+g preserves α:
+(gα)(x) = g(α(x)) = g(y) = s − k = α(s) + α(k) = α(s + k) = α(g(x)) = (αg)(x)
+and
+(gα)(y) = g(α(y)) = g(x) = s + k = α(s) − α(k) = α(s − k) = α(g(y)) = (αg)(y).
+From [7, Proposition 4.1] g is invertible, hence f is invertible (f = gh−1 , g and h−1
+are automorphisms).
+Proof. Assume that P is symmetric, namely α(P ) = P ∈ T . Clearly,
+                        Jac(P, α(Q)) = Jac(α(P ), α(Q)) ∈ K ∗ .
+Write: Jac(P, Q) = a and Jac(P, α(Q)) = b, where a, b ∈ K ∗ . Then,
+              Jac(P, Q/a − α(Q)/b) = Jac(P, Q/a) − Jac(P, α(Q)/b) = 0,
+so from [4, Theorem 1] we have Q/a − α(Q)/b = H(P ) where H(t) ∈ K[t]. Hence,
+α(Q) = bQ/a− bH(P ) ∈ T . The restriction theorem 3.6 implies that f is invertible.
+   Showing that each of the other three conditions implies that f is invertible is
+similar.                                                                         
+   Let ǫ be an involution on K[x, y] and let w ∈ K[x, y]. w is symmetric with
+respect to ǫ if ǫ(w) = w, and w is skew-symmetric with respect to ǫ if ǫ(w) = −w.
+   One way to generalize Theorem 4.7 is as follows:
+Theorem 4.9. Assume K is the field of complex numbers. Assume f is an endo-
+morphism of K[x, y] that satisfies Jac(P, Q) ∈ K ∗ . Assume that one of the following
+conditions is satisfied:
+      • P is symmetric.
+      • P is skew-symmetric.
+      • Q is symmetric.
+      • Q is skew-symmetric.
+Where by symmetric or skew-symmetric we mean symmetric or skew-symmetric
+with respect to some involution ǫ on K[x, y]. Then f is invertible.
+10                               VERED MOSKOWICZ
+
+
+Proof. Assume that P is symmetric with respect to ǫ, namely ǫ(P ) = P ∈ T .
+Clearly,
+                    Jac(P, ǫ(Q)) = Jac(ǫ(P ), ǫ(Q)) ∈ K ∗ .
+Write: Jac(P, Q) = a and Jac(P, ǫ(Q)) = b, where a, b ∈ K ∗ . Then,
+              Jac(P, Q/a − ǫ(Q)/b) = Jac(P, Q/a) − Jac(P, ǫ(Q)/b) = 0,
+so from [4, Theorem 1] we have Q/a − ǫ(Q)/b = H(P ), where H(t) ∈ K[t]. So
+ǫ(Q) = bQ/a − bH(P ) ∈ T . The restriction theorem 3.6 implies that f is invertible.
+   Showing that each of the other three conditions implies that f is invertible is
+similar.                                                                          
+
+    The converse of Theorem 4.7 is not true; for example, g(x) = x and g(y) = y +x2
+is invertible, but non of g(x), g(y) is symmetric or skew-symmetric with respect to
+α.
+    It seems natural to ask the following question: Given an automorphism g of
+K[x, y], is there exists an involution ǫ on K[x, y] such that g(x) or g(y) is symmetric
+or skew-symmetric with respect to ǫ?
+    Thus far we only managed to show that for every generator of the group of
+automorphisms of K[x, y] the answer to this question is positive:
+       • Let g be linear with g(x) = ax + by, a, b ∈ K. If a = 0, then g(x) = by is
+          symmetric with respect to the involution x 7→ −x and y 7→ y. If b = 0, then
+          g(x) = ax is symmetric with respect to the involution x 7→ x and y 7→ −y.
+          If both a and b are non-zero, then g(x) = ax + by is symmetric with respect
+          to the following involution ǫ given by ǫ(x) = (b/a)y and ǫ(y) = (a/b)x.
+          Indeed,
+              ǫ(ax + by) = aǫ(x) + bǫ(y) = a(b/a)y + b(a/b)x = by + ax.
+        (obviously,
+           (ǫ)2 (x) = ǫ(ǫ(x)) = ǫ((b/a)y) = (b/a)ǫ(y) = (b/a)(a/b)x = x
+        and
+           (ǫ)2 (y) = ǫ(ǫ(y)) = ǫ((a/b)x) = (a/b)ǫ(x) = (a/b)(b/a)y = y.
+     • Let g be triangular. Then it is clear that there exists an involution on
+       K[x, y] such that g(x) or g(y) is symmetric with respect to it (for example,
+       if g(x) = x and g(y) = y + x3 , then take x 7→ x and y 7→ −y.
+Remark 4.10. For a given endomorphism g of K[x, y], g(x) can be symmetric (or
+skew-symmetric) with respect to more that one involution. For example, let g be
+the automorphism given by g(x) = ax + by and g(y) = cx + dy, where ad − bc 6= 0
+and a 6= ±b.
+   It is easy to see that
+                         Jac(g(x), α(g(x))) = a2 − b2 ∈ K ∗ .
+So g is a generalized α-endomorphism and we have already seen that g is a gener-
+alized β-endomorphism (β(x) = x and β(y) = −y).
+Proposition 4.11. Assume f is an endomorphism of K[x, y]. The following con-
+ditions are equivalent:
+    (1) There exists an involution ǫ on K[x, y] such that P is symmetric (skew-
+        symmetric) with respect to ǫ.
+    (2) There exists an automorphism g of K[x, y] such that g(P ) is symmetric
+        (skew-symmetric) with respect to α.
+                     INVOLUTIONS AND THE JACOBIAN CONJECTURE                                  11
+
+
+Proof. (1) ⇒ (2): By Lemma 2.1, ǫ = g −1 αg for some automorphism g of K[x, y].
+   P is symmetric with respect to ǫ: ǫ(P ) = P .
+   Therefore, (g −1 αg)(P ) = P , hence α(g(P )) = g(P ), so g(P ) is symmetric with
+respect to α.
+   (2) ⇒ (1): g(P ) is symmetric with respect to α: α(g(P )) = g(P ).
+   Hence, (g −1 αg)(P ) = P . Then P is symmetric with respect to the involution
+g −1 αg.
+   The skew-symmetric version can be proved similarly.                            
+   Another way to generalize Theorem 4.7 is as follows; notice that:
+     • K is not necessarily the field of complex numbers, but any characteristic
+       zero field.
+     • There is no assumption on the Jacobian of f (x) and f (y); however, we
+       assume that there exist two special elements in the image of f having a
+       non-zero scalar Jacobian.
+Theorem 4.12. Assume f is an endomorphism of K[x, y]. If there exist s and k
+in the image of f , T , such that
+      • s is symmetric with respect to α.
+      • k is skew-symmetric with respect to α.
+      • Jac(s, k) ∈ K ∗ ,
+then f is invertible.
+Proof. Define g(x) := s + k and g(y) := s − k. It is easy to see that g is an
+α-endomorphism of K[x, y] that satisfies
+                Jac(g(x), g(y)) = Jac(s + k, s − k) = 2 Jac(k, s) ∈ K ∗ .
+From [7, Proposition 4.1] g is invertible. Hence,
+                     T ⊇ K[s + k, s − k] = K[g(x), g(y)] = K[x, y],
+namely f is surjective.
+  Recall that a surjective endomorphism of K[x, y] is an automorphism (see [5,
+page 343]), so f is an automorphism.                                        
+
+                              5     Acknowledgements
+I wish to thank Prof. C. Valqui for working with me on the starred Dixmier
+conjecture [7], Prof. J. Bell for his note [3] concerning involutions on A1 , and Prof.
+L. Rowen and Prof. U. Vishne for being my advisors.
+
+                                       References
+ [1] H. Bass, E. Connell and D. Wright, The Jacobian conjecture: reduction of degree and formal
+     expansion of the inverse, Bull. Amer. Math. Soc. (New Series) 7 (1982), 287-330.
+ [2] H. Bass, Differential structure of etale extensions of polynomial algebras, Commutative Al-
+     gebra: Proceedings of a Microprogram (June 15-July 2, 1987, MSRI, Berkeley, CA), Math.
+     Sei. Res. Inst. Publ., 15, Springer-Verlag, New York, (1989), 69-108.
+ [3] J. Bell, a private note sent by email, 8 Apr 2014.
+ [4] C. C. -A. Cheng, J. H. Mckay and S. S. -S. Wang, Younger mates and the Jacobian conjecture,
+     Proc. Amer. Math. Soc. 123 (1995), no. 10, 2939-2947.
+ [5] P. M. Cohn, Free rings and their relations, London Mathematical Society Monograph No.
+     19, Second edition, 1985.
+ [6] J. A. Guccione, J. J. Guccione and C. Valqui, On the centralizers in the Weyl algebra, Proc.
+     Amer. Math. Soc. 140 (2012), no. 4, 1233-1241.
+ [7] V. Moskowicz, C. Valqui, The starred Dixmier conjecture for A1 , arXiv:1401.5141v1
+     [math.RA] 21 Jan 2014, to appear in Communications in Algebra.
+12                               VERED MOSKOWICZ
+
+
+ [8] V. Moskowicz, About Dixmier’s conjecture, arXiv:1406.4368v3 [math.RA] 9 July 2014.
+ [9] J.P. Serre, trees, Springer Monographs in Mathematics, 1980.
+[10] A. Van den Essen, Polynomial automorphisms and the Jacobian conjecture, Progress in
+     Mathematics, 190. Birkhuser Verlag, Basel, 2000.
+[11] S. S. -S. Wang, Extension of derivations, J. Algebra 65 (1980), 453-494.
+[12] D. Wright, On the Jacobian conjecture, Illinois J. Math. 25 (1981), 423-440.
+
+     Department of Mathematics, Bar-Ilan University, Ramat-Gan 52900, Israel.
+     E-mail address: vered.moskowicz@gmail.com
+

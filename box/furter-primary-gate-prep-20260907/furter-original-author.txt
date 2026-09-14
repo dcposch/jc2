@@ -1,0 +1,1442 @@
+                     Polynomial Composition Rigidity and
+                      Plane Polynomial Automorphisms
+
+                                Jean-Philippe FURTER,
+                          Dpt. of Math., Univ. of La Rochelle,
+                      av. M. Crépeau, 17 000 La Rochelle, France
+                               email: jpfurter@univ-lr.fr
+
+                                    October 10, 2013
+
+
+                                         Abstract
+
+   In the first part of this paper, we briefly present a conjecture dealing with polynomial
+composition and we prove it in some particular cases. In the second and longest part,
+we prove our main result, which consists of an application of the conjecture to plane
+polynomial automorphisms. More precisely, we describe the closure of the set of plane
+polynomial automorphisms having a prescribed multidegree of length two.
+
+                                         Keywords
+Affine algebraic geometry, polynomial automorphisms, affine space, commutative algebra
+
+
+
+
+0    INTRODUCTION
+The theory of polynomials in one indeterminate and the theory of plane polynomial auto-
+morphisms are intimately connected. The most striking illustration of this phenomenon
+is probably the easy way to deduce the theorem of Jung from the theorem of Abhyankar,
+Moh, Suzuki (for this deduction, see e.g. [Ess00, Proof of Cor. 5.3.6, p. 100]). Let us
+recall these famous statements (see [AM75, Suz74] and [Jun42]).
+Theorem (Abhyankar, Moh, Suzuki). Let K be a field of characteristic 0. If a, b ∈ K[X]
+are two polynomials which generate the whole algebra K[X], i.e. such that K[a, b] =
+K[X], then deg a divides deg b or deg b divides deg a.
+Theorem (Jung). Let K be a field of characteristic 0. Any polynomial automorphism
+of the affine plane A2K is a composition of affine and triangular automorphisms, where
+by definition an affine automorphism is of the form
+
+       (x, y) 7→ (αx + βy + γ, δx + εy + ζ),       with α, . . . , ζ ∈ K and αε − βδ 6= 0
+
+and a triangular automorphism is of the form
+
+         (x, y) 7→ (αx + p(y), βy + γ)   with α, β, γ ∈ K, p ∈ K[y] and αβ 6= 0.
+
+
+
+                                               1
+    In the same vein, the main result of this paper consists in proving that the following
+rigidity conjecture R(m, n) dealing with polynomials in one indeterminate has some ap-
+plications to the theory of plane polynomial automorphisms (see Th. B below). Using
+Gröbner basis, we have checked R(m, n) when m ≤ 8 and n ≤ 5.
+Conjecture R(m, n). Let a = X(1+a1 X +· · ·+am X m ), b = X(1+b1 X +· · ·+bn X n ) ∈
+C[X], where the ai , bj ∈ C. Let us write a ◦ b = X(1 + c1 X + · · · + cN X N ), where
+N = (m + 1)(n + 1) − 1 and the ck ∈ C. If c1 = · · · = cm+n = 0, then a = b = X.
+Remark. This conjecture being obvious for m or n = 0, we generally assume that m
+and n are ≥ 1.
+      Let us begin to explain why this conjecture may be interpreted as a rigidity statement.
+Considering ai , bi as indeterminates of degree i allows us to see each ci as a homogeneous
+polynomial of degree i in C[a1 , . . . , am , b1 , . . . , bn ]. The conjecture R(m, n) means that
+c1 , . . . , cm+n is a hsop (homogeneous system of parameters) of C[a1 , . . . , am , b1 , . . . , bn ].
+For the definition of a hsop and several characterizations, we refer to subsection 2.2 below
+and in particular to Lemma 11. This terminology (hsop) is for example used in [Sta96,
+Chap. I, Def. 5.1, p. 33]. By Lemma 11, the conjecture R(m, n) is still equivalent to
+asserting that the polynomial endomorphism of the complex affine space Am+n sending
+(a1 , . . . , am , b1 , . . . , bn ) to (c1 , . . . , cm+n ) is quasi-finite, i.e. admits finite fibers. In some
+sense, this means that polynomial composition is rigid.
+      In this connection, let us recall the famous result of Ritt on polynomial composition
+(see [Rit22]). A polynomial a ∈ C[X] of degree ≥ 2 is prime if the relation a = b ◦ c
+implies that b or c has degree 1. If deg f ≥ 2, it is clear that f admits a decomposition
+f = f1 ◦ · · · ◦ fr into prime polynomials. Let us note that a ◦ b = c ◦ d in the three
+following cases:
+   i) a, b are any polynomials and c = a ◦ l, d = l−1 ◦ b, where l has degree 1 and l−1 is
+      its inverse for the composition;
+  ii) a = d = tm and b = c = tn , where tm (X) = cos(m arccos X) is the m-th Chebyshev
+      polynomial;
+ iii) a = d = X m , b = X n p(X m ) and c = X n p(X)m , where p is any polynomial, and
+      the converse situation, i.e. b = c = X m , d = X n p(X m ) and a = X n p(X)m .
+      If f = f1 ◦ · · · ◦ fr is a prime decomposition, then, by replacing an adjacent pair
+(fi , fi+1 ) = (a, b) by (c, d) where a, b, c, d are as in i) - iii) above, we obtain a new prime
+decomposition. This process is called an elementary transformation.
+Theorem (Ritt). The prime decomposition is unique modulo elementary transforma-
+tions, i.e. if we have two prime decompositions of some polynomial, we can pass from
+one to the other by applying a finite number of elementary transformations.
+    Many problems related to polynomial composition (and iteration!) are intricate. For
+example, the famous Mandelbrot set is defined as the set of complex c-values for which
+the orbit of 0 under iteration of p(X) = X 2 + c remains bounded. In fact, the conjecture
+R(m, n) is related to the following one which perhaps looks more attractive.
+
+
+
+                                                       2
+Conjecture R(m). Let a = X(1 + a1 X + · · · + am X m ) ∈ C[X] and let a−1 ∈ C[[X]] be
+its formal inverse for the composition. If m consecutive coefficients of a−1 vanish, then
+a = X.
+                                 
+                      X
+    If a−1 = X 1 +       ãk X k , the vanishing conditions means that there exists an
+                       k≥1
+integer n ≥ 0 such that ãn+k = 0 for 1 ≤ k ≤ m. With words, the conjecture R(m) means
+that the inverse for the composition of a non trivial polynomial is badly approximated
+by polynomials. Let us remark the analogy with Heisenberg’s uncertainty principle in
+quantum mechanics asserting that one cannot reduce arbitrarily the uncertainty as to
+the position and the momentum of a free particle. Here is a mathematical statement:
+    Let f be a nonzero element of L2 (R) describing a particle: the probability density that
+this particle is located at t is kf1k2 |f 2 (t)|. Let fˆ ∈ L2 (R) be the Fourier transform of f .
+The probability density that the momentum of this particle is equal to ω is 1 2 |fˆ2 (ω)|.
+                                                                                  2πkf k
+If σt (resp. σω ) denotes the variance of the location (resp. momentum), then Heisenberg
+uncertainty is expressed by the following inequality:
+                                                 1
+                                          σt σω ≥ .
+                                                 2
+For more details, we refer to [Wey31, p. 77], [Mal99, Th. 2.5] or [KL98, Th. 1, p. 311].
+    Many mathematical results contain a close idea. For example, rationals are badly
+approximated by rationals: if α is any real number, Hurwitz has proved that α is ir-
+                                                            p                  p      1
+rational if and only if there are infinitely many rationals   such that α −       <√
+                                                            q                  q      5q 2
+(see [Hur1891]). Algebraic numbers are also badly approximated by rationals. Roth has
+proved that for any algebraic number α and any real ε > 0, there exist only finitely many
+           p                p       1
+rationals such that α −        < 2+ε (see [Rot55]). On the converse, this idea was first
+           q                q     q
+used by Liouville to construct transcendental numbers (see [Lio1844a, Lio1844b]). We
+show below (see Lemma 2) that the conjecture R(m) holds if and only if the conjecture
+R(m, n) holds for any n. Coming back to our initial conjecture R(m, n), our first result
+is the following:
+Theorem A. If m or n ≤ 2, then the conjecture R(m, n) holds.
+    Before giving an application to plane polynomial automorphisms, we need some nota-
+tions. A polynomial endomorphism of A2K will be identified with its sequence f = (f1 , f2 )
+of coordinate functions fj ∈ K[X, Y ]. We define its degree by deg f = maxj deg fj .
+    The space E := C[X, Y ]2 of polynomial endomorphisms of the complex affine plane
+  2
+A is naturally an infinite dimensional algebraic variety (see [Sha66, Sha82] for the def-
+inition). This roughly means that E≤ m := {f ∈ E, deg f ≤ m} is a (finite dimensional)
+algebraic variety for any m ≥ 1, which comes out from the fact that it is an affine space.
+If Z ⊆ E, we set Z≤ m := Z ∩ E≤ m . The space E is endowed with the topology of the
+inductive limit, in which Z is closed (resp. open) if and only if Z≤ m is closed (resp.
+open) in E≤ m for any m.
+
+
+
+                                               3
+    Let G be the group of polynomial automorphisms of A2 . Since G is locally closed in
+E (see [FM10] and also [BCW82, Sha66, Sha82]), it is naturally an infinite dimensional
+algebraic variety. Let
+
+           A := {(aX + bY + c, dX + eY + f ), a, b, c, d, e, f ∈ C, ae − bd 6= 0}
+
+be the subgroup of affine automorphisms and
+
+                B := {(aX + p(Y ), bY + c), a, b, c ∈ C, p ∈ C[Y ], ab 6= 0}
+
+be the subgroup of (upper) triangular automorphisms (B may be viewed as a Borel
+subgroup of G). By [Jun42, Kul53, Nag72], any element f of G admits an expression:
+
+                              f = α1 ◦ β1 ◦ · · · ◦ αk ◦ βk ◦ αk+1 ,
+
+where the αj ’s (resp. βj ’s) belong to A (resp. B). By contracting such an expression,
+one might as well suppose that it is reduced, i.e. ∀j, βj ∈
+                                                          / A and ∀j, 2 ≤ j ≤ k, αj ∈
+                                                                                    / B.
+It follows from the amalgamated structure of G that if
+                                                                    0
+                               f = α10 ◦ β10 ◦ · · · ◦ αl0 ◦ βl0 ◦ αl+1
+
+is another reduced expression of f , then k = l and there exist (γj )1 ≤ j ≤ k , (δj )1 ≤ j ≤ k in
+A ∩ B such that α10 = α1 ◦ γ1−1 , αj0 = δj−1 ◦ αj ◦ γj−1 (for 2 ≤ j ≤ k), αk+1
+                                                                             0     = δk ◦ αk+1
+      0             −1
+and βj = γj ◦ βj ◦ δj (for 1 ≤ j ≤ k). Following [FM89] and [Fur02], we define the
+multidegree and the length of f by:
+
+                      mdeg(f ) = (deg β1 , . . . , deg βk ) and l(f ) = k.
+
+These notions of multidegree and length could be defined in the same way for a polynomial
+automorphism of A2K , where K is any field. We recall (see [Wri79, FM89]) that degree
+and multidegree are related by
+
+                                deg f = deg β1 × · · · × deg βk .
+
+Let D be the set of multidegrees, i.e. of finite sequences of integers ≥ 2 (including the
+empty sequence). If d = (d1 , . . . , dk ) ∈ D, Gd will denote the set of automorphisms whose
+multidegree is equal to d. By [FM89, Fur09], Gd is an irreducible smooth, locally closed
+subset of G of dimension d1 + · · · + dk + 6. Let us note that Gd ⊆ G≤a           n as soon as
+n ≥ d1 . . . dk and that we have a partition of G as a disjoint union G =            Gd . What
+                                                                                  d∈D
+can be said on the closure of Gd ?
+    By [Fur02], the length of an automorphism is lower semicontinuous. Therefore, any
+element of G d has length ≤ k. The simplest non trivial related example is induced by
+the Nagata automorphism (see [Nag72]):
+
+             N := (X − 2Y W − ZW 2 , Y + ZW, Z),               where W = XZ + Y 2 .
+
+
+
+                                                  4
+This automorphism of the complex affine space A3 can be seen as an automorphism of
+A2C[Z] inducing as well a morphism from the complex affine line A1 to G sending z to
+
+             Nz = (X − 2Y (Xz + Y 2 ) − z(Xz + Y 2 )2 , Y + z(Xz + Y 2 )) ∈ G.
+
+If z 6= 0, the factorization
+
+                   Nz = (X − z −1 Y 2 , Y ) ◦ (X, Y + z 2 X) ◦ (X + z −1 Y 2 , Y )
+
+shows us that Nz has multidegree (2, 2). If z = 0, we have N0 = (X − 2Y 3 , Y ) so that N0
+has multidegree (3). This yields us G(3) ∩ G (2,2) 6= ∅. Inspired by the analysis of similar
+                                                              [
+examples, we hoped (erroneously) that the equality G d =          Ge might always be true,
+                                                                        ed
+where  is defined in the following way:
+
+Definition. The partial order  on D is induced by the following relations:
+   i) ∅  d (for any d);
+  ii) (d1 , . . . , dk )  (e1 , . . . , ek ) when dj ≤ ej for any j;
+ iii) (d1 , . . . , dj−1 , dj + dj+1 − 1, dj+2 , . . . , dk )  (d1 , . . . , dk ) when 1 ≤ j ≤ k − 1.
+                                                                                                         [
+   However, by [EF04], there cannot exist any partial order v such that G d =                                Ge
+                                                                                                     evd
+when d = (11, 3, 3) ! Actually, it is proved there that G(19) ∩ G (11, 3, 3) 6= ∅ and for
+grounds of dimension we cannot have G(19) ⊆ G (11, 3, 3) . As a matter of fact reality is
+                                                    [
+often complex. We now think that the equality G d =       Ge is actually true in length 0, 1
+                                                                 ed
+and 2. In length 0 it is obvious. In length 1, it is proved in [Fur97]. This paper settles
+the length 2 case modulo the conjecture R(m, n). Indeed, here is the main result of our
+paper:
+
+Theorem B. If the conjecture R(m, n) holds and if we set d = (m + 1, n + 1), then we
+have:                                   [
+                                  Gd =      Ge .
+                                                     ed
+                                      [
+Remark. If the equality G d =              Ge holds when d is of length 2, then, a straightforward
+                                     ed
+induction on the length on d would establish that for any d the following inclusion holds:
+                                     [
+                                         Ge ⊆ G d .
+                                             ed
+
+   Theorems A and B directly imply:
+                                                                                              [
+Theorem C. If d = (d1 , d2 ) is a multidegree with d1 or d2 ≤ 3, then G d =                        Ge .
+                                                                                             ed
+
+
+
+
+                                                     5
+Remark. We would like to stress that even if the conjecture R(m, n) is obvious when
+m or n = 1 (cf. the proof of conjecture R(1) in subsection 1.4), its consequence for
+polynomial automorphisms (given via Theorem B) is not obvious at all. Indeed,
+                                                                           [ it asserts
+that if d = (d1 , d2 ) is a multidegree such that d1 or d2 ≤ 2, then G d =    Ge . The
+                                                                                 ed
+simplest case where d1 = d2 = 2 means that
+
+                            G (2,2) = G∅ ∪ G(2) ∪ G(3) ∪ G(2,2) .
+
+In particular, this equality implies the two following points:
+    • G(3) ∩ G (2,2) 6= ∅. As explained above, this point can be established using the family
+of plane automorphisms induced by the Nagata automorphism;
+    • G (2,2) ∩ G(4) = ∅. This equality follows from [Fur09, Th. A] asserting that for
+any multidegree d = (d1 , . . . , dl ), the set Gd is closed in the set of all automorphisms of
+degree d1 . . . dl . The weaker fact that G(4) is not included into G (2,2) was a consequence
+of [Fur97, Th. 2] and was also the object of [Fur97, Prop. 12].
+
+    As a funny consequence of Th. C, we will show:
+
+Theorem D. Any closed subgroup of G containing the affine group and an automorphism
+of length 1 is equal to G.
+
+Remark. 1. Let us note that any subgroup of G strictly containing the affine group is
+dense in G for the Krull topology (see [Fur07, Th. A]). This means that any element of
+G can be approximated at the origin and at any order by an element of this subgroup.
+    2. We recall that any closed subgroup of G which is a finite dimensional algebraic
+variety is conjugate to either a subgroup of A or B (see [Sha66, Th. 8], [Kam79, Th.
+4.3] or [GD75, Th. 7]).
+
+    We finish this introduction by the following natural question.
+
+Question. Does there exist a non trivial closed subgroup of G containing the affine group?
+
+    This paper is divided into two parts. The first part is the shortest one and is only
+composed of section 1, where we study the rigidity conjecture R(m, n) and prove Th. A.
+The second part is composed of the three sections 2, 3, 4. In section 2, we give some
+preliminary results. In sections 3 and 4, we respectively prove Th. B and Th. D.
+
+
+1    THE RIGIDITY CONJECTURE
+In subsection 1.1 we prove that the conjectures R(m, n) and R(n, m) are equivalent. In
+subsection 1.2, we relate the conjectures R(m, n) and R(m). In subsection 1.3, we give
+some generalities on the conjecture R(m). In subsection 1.4, we prove the conjectures
+R(1) and R(2). In subsection 1.5, we give some information on the conjecture R(3). We
+explain why we were not able to solve it and hope that the given information might help
+or motivate some reader for further investigations.
+
+
+
+                                              6
+1.1   The conjecture R(m, n) and R(n, m) are equivalent
+Lemma 1. The conjectures R(m, n) and R(n, m) are equivalent.
+Proof. Let val : C((X)) → Z ∪ {+∞} be the valuation associated to the discrete valuation
+ring C[[X]]. The conjecture R(m, n) means that if a = X(1 + a1 X + · · · + am X m ) and
+b = X(1 + b1 X + · · · + bn X n ) are such that val(a ◦ b − X) ≥ m + n + 2, then a = b = X.
+Therefore, it is enough to check that val(a ◦ b − X) = val(b ◦ a − X). Indeed, if
+k = val(a ◦ b − X), we have a ◦ b(X) ≡ X mod X k . Let a−1 (X) ∈ C[[X]] be the formal
+inverse of a for the composition. We get a−1 ◦ (a ◦ b) ◦ a(X) ≡ a−1 ◦ a(X) mod X k , i.e.
+b ◦ a(X) ≡ X mod X k , so that val(b ◦ a − X) ≥ val(a ◦ b − X). We would show the
+other inequality in the same way, so that finally val(a ◦ b − X) = val(b ◦ a − X).
+
+1.2   Relations between the conjectures R(m, n) and R(m)
+Lemma 2. If m ≥ 1, the two following assertions are equivalent:
+   i) The conjecture R(m, n) holds for any n ≥ 0;
+  ii) The conjecture R(m) holds.
+Proof. If a = X(1 + a1 X + · · · + am X m ) ∈ C[X], let us set
+                                                      
+                                           X
+                         a−1 = X 1 +          ãk X k  ∈ C[[X]].
+                                           k≥1
+
+By definition, the conjecture R(m) holds if and only if for any integer n ≥ 0 the following
+assertion R̃(m, n) holds:
+
+Assertion R̃(m, n).    (ãn+1 = · · · = ãn+m = 0)    =⇒     a(X) = X.
+
+   However, if b = X(1 + b1 X + · · · + bn X n ) ∈ C[X], we have:
+
+          a ◦ b(X) ≡ X mod X m+n+2         ⇐⇒        a−1 (X) ≡ b(X) mod X m+n+2 .
+
+Using this equivalence, let us show that the assertions R̃(m, n) and R(m, n) are equiva-
+lent. This will be enough for showing the lemma.
+    Assume that the conjecture R(m, n) holds and that we have ãn+1 = · · · = ãn+m = 0.
+                                                                          
+                                   X                           X
+           Set b(X) = X 1 +            ãk X k  = X 1 +           ãk X k  .
+                                  1≤k≤n                        1 ≤ k ≤ m+n
+
+We get a−1 (X) ≡ b(X) mod X m+n+2 , so that a ◦ b(X) ≡ X mod X m+n+2 and finally
+a(X) = X.
+    Assume that the assertion R̃(m, n) holds and that we have a◦b(X) ≡ X mod X m+n+2 .
+Then, we have a−1 (X) ≡ b(X) mod X m+n+2 , so that ãn+1 = · · · = ãn+m = 0 and we
+get a(X) = X. The equality b(X) = X follows at once.
+
+
+
+                                              7
+1.3   Generalities on the conjecture R(m)
+Let m ≥ 1 be a fixed integer. Set a(X) = X(1 − λ1 X) . . . (1 − λm X) ∈ C[X], where the
+λk are complex numbers, and express the formal inverse for the composition of a as
+                                                    
+                                        X un
+                      a−1 (X) = X 1 +           X n  ∈ C[[X]],
+                                           n+1
+                                              n≥1
+
+where the un , n ≥ 1, are complex numbers.
+                H
+Lemma 3. If denotes integration over a little circle around the origin, we have
+                   I                                             
+                1       dX          X        n + j1          n + j m j1
+        un =                  =                       . . .           λ1 . . . λjmm .
+               2πi   an+1 (X)                  n               n
+                                   j1 + ··· + jm = n
+
+Proof. By Lagrange formula, we have:
+           I −1                  I
+      n+1    a (X)          n+1          Y
+un =            n+2
+                     dX =              n+2
+                                                a0 (Y )dY       by setting X = a(Y );
+       2πi    X              2πi     a     (Y )
+           I
+      1          dY
+   =                        by integrating by parts.
+     2πi       an+1 (Y )
+                                                                Y1
+   Therefore, un is the X n -coefficient of the formal series            ∈ C[[X]].
+                                                           (1 − λk X)n+1
+                                                     1≤k≤m
+                                                   1        X n + j 
+   We conclude thanks to the Taylor expansion            =              Xj.
+                                              (1 − X)n+1           n
+                                                                    j ≥0
+
+   Note that un is a homogeneous polynomial of degree n in the λ1 , . . . , λm (where each
+λk has weight 1). The conjecture R(m) means that if m consecutive un vanish, then
+the λi also. In other words, m consecutive polynomials un always constitute a hsop of
+C[λ1 , . . . , λm ].
+
+Remark 4. In order to prove R(m), it is sufficient to prove that if m consecutive un
+vanish, then uk = 0 when k is large enough. Indeed, in this case a−1 is a polynomial and
+the relation X = a ◦ a−1 shows that a = X (by taking the degree).
+
+   The proof of the following lemma is due to Laurent Manivel.
+
+Lemma 5. The sequence n 7→ un satisfies a linear recurrence relation with polynomial
+coefficients of length m. More precisely, there exist polynomials µ0 (n), . . . , µm (n) in
+C[λ1 , . . . , λm ][n], not all zero, such that
+                                                X
+                                  ∀ n ≥ 1,        µk (n) un+k = 0.
+                                         0≤k≤m
+
+
+
+
+                                                 8
+Proof. By Lemma 3, it is enough to show an analogous linear recurrence relation for the
+sequence                                   I
+                                              dX
+                                n 7→ vn :=    n
+                                                   .
+                                             a (X)
+                                                               
+                              I    k
+                                                        vn,0
+                                 X
+                Set vn,k =           dX and Vn =  ...          .
+                                                               
+                                 a n
+                                                        vn,m−1
+Claim. There exists a square matrix Mn whose entries belong to the field C(λ1 , . . . , λm )(n)
+such that
+                                      Vn = Mn Vn+1 .
+                                                                            X k−n
+                                                                         I
+Set γ(X) = X −1 a(X) = (1 − λ1 X) . . . (1 − λm X). We have vn,k =                     dX. If
+                                                                              γn
+                                       X k−n+1 γ 0
+                                    I
+                              n
+k 6= n − 1, we get vn,k =                          dX, i.e.
+                          k−n+1           γ n+1
+
+                           k−n+1                X k−n+1 γ 0
+                                              I
+                                      vn,k =                dX.
+                                n                   γ n+1
+Note that this last equality still holds for k = n − 1. By Euclidean division, there exist
+polynomials Ak , Bk such that
+
+                                      X k+1 γ 0 = Ak γ − Bk
+
+and we have deg Ak = k and deg Bk < deg γ = m. We have:
+
+         k−n+1              X −n (Ak γ − Bk )
+                          I                        I         I
+                                                     Ak        XBk
+                   vn,k =                     dX =      dX −        dX.
+             n                    γ n+1              an        an+1
+This gives us a relation of the following form:
+                                         k                        m
+                      n−k−1        X             X
+                            vn,k +   ak,j vn,j =   bk,j vn+1,j                (∗).
+                        n
+                                        j=0                      j=1
+
+                                                            m
+                      a0
+              I                                             X
+But we have           n+1
+                          dX = 0 and a(X) = X                 (−1)k σk X k , where
+                  a
+                                                            k=0
+                                               X
+                                     σk =                 λi1 . . . λik
+                                             i1 <···<ik
+
+denotes the k-th elementary symmetric polynomial in the variables λ1 , . . . , λm (with the
+usual convention σ0 = 1), so that:
+                            m
+                            X
+                                  (−1)k (k + 1)σk vn+1,k = 0 (∗∗).
+                            k=0
+
+
+
+
+                                                    9
+This relation allows us to express vn+1,m in terms of the vn+1,j ’s, 0 ≤ j ≤ m − 1. By
+making such a substitution in the right hand side of (*), we obtain a relation of the form
+                                       k               m−1
+                 n−k−1        X             X
+                       vn,k +   ak,j vn,j =   ck,j vn+1,j                (∗ ∗ ∗).
+                   n
+                                      j=0              j=0
+
+However, the relations (***) for 0 ≤ k ≤ m − 1 can be expressed with matrices as
+
+                                           Kn Vn = CVn+1 ,
+
+where the matrix C does not depend on n, i.e. has entries in C(λ1 , . . . , λm ), and the
+matrix Kn is lower triangular with diagonal entries the numbers
+                    n−k−1          n−k−1
+                          + ak,k =       + m,                 0 ≤ k ≤ m − 1.
+                      n              n
+In particular, the matrix Kn is invertible. By setting Mn := Kn−1 C, we have proved the
+claim.
+    By using several times the claim, we get:
+
+                           Vn+m = Vn+m
+                         Vn+m−1 = Mn+m−1 Vn+m
+                              ..
+                               .
+                               Vn = (Mn Mn+1 . . . Mn+m−1 )Vn+m .
+
+Therefore, the m + 1 elements vn , . . . , vn+m can be expressed as linear combination, with
+coefficients in C(λ1 , . . . , λm )(n), of the m elements vn+m,0 , . . . , vn+m,m−1 . As a conse-
+quence, the elements vn , . . . , vn+m are linearly dependent over the field C(λ1 , . . . , λm )(n)
+and hence also over the ring C[λ1 , . . . , λm ][n].
+
+1.4    Proof of theorem A
+According to Lemmas 1 and 2, it is sufficient to prove the conjectures R(1) and R(2).
+
+    a) Proof of R(1)
+                                                                                2n n
+                                                                                    
+   We use the notations of subsection 1.3 with m = 1. Note that un =             n λ1 . If un = 0,
+we want to prove that λ1 = 0. This is obvious.                                                  
+
+    b) Proof of R(2)
+    We use the notations of subsection 1.3 with m = 2. Note that:
+                                 X n + in + j 
+                          un =                         λi1 λj2 .
+                                           n      n
+                                    i+j =n
+
+We rely on the following linear recurrence relation.
+
+
+
+                                                 10
+Lemma 6. For any n ≥ 3, we have:
+ n(n − 1)(λ1 − λ2 )2 un + (n − 1)(2n − 1)(λ1 + λ2 )(λ1 − 2λ2 )(λ2 − 2λ1 )un−1
+                                                     −3(3n − 4)(3n − 2)λ21 λ22 un−2 = 0.
+
+Proof. We follow the beginning of the proof of Lemma 5 in the case where m = 2 and
+we compute the relations (*), (**) and (***). We get
+
+                                               σ1                       σ1 2σ2 − σ12
+        A0 = 2,    B0 = 2 − σ1 X,      A1 =       + 2X   and B1 =          +         X,
+                                               σ2                       σ2    σ2
+so that the relations (*) for k = 0, 1 are the following:
+     
+      3n − 1 vn,0
+     
+                                          = 2 vn+1,1 −         σ1 vn+1,2
+           n                                                                           (∗).
+                         3n − 2
+     
+            σ1 vn,0 +          σ2 vn,1 = σ1 vn+1,1 + (2σ2 − σ12 ) vn+1,2 .
+                            n
+We get at once:
+                          vn+1,0 − 2 σ1 vn+1,1 + 3 σ2 vn+1,2 = 0 (∗∗),
+so that the relations (***) for k = 0, 1 are the following:
+
+ 3 3n − 1 σ2 vn,0
+
+                                           =           σ1 vn+1,0 +  (6σ2 − 2σ12 ) vn+1,1
+        n
+                          3n − 2 2
+
+        3 σ1 σ2 vn,0 + 3        σ2 vn,1 = (σ12 − 2σ2 ) vn+1,0 + (7σ1 σ2 − 2σ13 ) vn+1,1 ,
+                            n
+i.e.
+                                               3n − 1
+                    (6σ2 − 2σ12 ) vn+1,1 = 3          σ2 vn − σ1 vn+1    (A),
+                                                 n
+and
+                        3n − 2 2
+       3 σ1 σ2 vn + 3         σ2 vn,1 = (σ12 − 2σ2 ) vn+1 + (7σ1 σ2 − 2σ13 ) vn+1,1   (B).
+                          n
+    The relation (A) expresses vn+1,1 in terms of vn , vn+1 . Replacing n by n − 1 allows
+to express vn,1 in terms of vn−1 , vn :
+
+                                             3n − 4
+                    (6σ2 − 2σ12 ) vn,1 = 3          σ2 vn−1 − σ1 vn     (A)0 .
+                                              n−1
+By substituting (A) and (A)’ in (B), we get the following relation between vn−1 , vn , vn+1 :
+                                                                           
+                              2          3n − 2 2    3n − 4
+             3 σ1 σ2 (6σ2 − 2σ1 ) vn + 3       σ2 3         σ2 vn−1 − σ1 vn
+                                           n          n−1
+                                                                                 
+           2                  2                      3     3n − 1
+     = (σ1 − 2σ2 )(6σ2 − 2σ1 ) vn+1 + (7σ1 σ2 − 2σ1 ) 3           σ2 vn − σ1 vn+1 ,
+                                                             n
+                           i.e. µ2 vn+1 + µ1 vn + µ0 vn = 0,     where
+
+
+
+                                                11
+ µ2 = (σ12 − 2σ2 )(2σ12 − 6σ2 ) + σ1 (7σ1 σ2 − 2σ13 )
+    = −3 σ2 (λ1 − λ2 )2
+                                3n − 2            3n − 1
+ µ1 = 3 σ1 σ2 (6σ2 − 2σ12 ) − 3        σ1 σ22 − 3        (7σ1 σ2 − 2σ13 )σ2
+                                  n                   n
+                            2n − 1
+    = 3 σ1 σ2 (9σ2 − 2σ12 )
+                               n
+                                      2n − 1
+    = 3 σ1 σ2 (λ1 − 2λ2 )(λ2 − 2λ1 )
+                                        n
+       2   3 3n − 2 3n − 4
+ µ0 = 3 σ 2                  .
+                n    n−1
+    Since vk+1 = 2πi uk for any k, the result follows.
+
+Remark 7. Another way to prove Lemma 6 is more elementary, but tedious. The left
+hand side being homogeneous of degree n + 2 in λ1 , λ2 , it is enough to check that for
+0 ≤ i ≤ n + 2, the coefficient of λi1 λn+2−i
+                                       2     vanish.
+
+    Let us prove R(2). If uk = uk+1 = 0, we want to prove that λ1 = λ2 = 0. We
+begin by showing by contradiction that λ1 = λ2 . Otherwise, Lemma 6 shows us that the
+following implication holds:
+
+                       ∀ n ≥ 3,     (un−2 = un−1 = 0)       =⇒      un = 0.
+
+Therefore, un = 0 for n ≥ k and by Remark 4, this implies the equality λ1 = λ2 = 0. A
+contradiction. Therefore λ1 = λ2 . Set λ := λ1 = λ2 . Lemma 6 gives us for any n ≥ 3:
+                  2(n − 1)(2n − 1)λ3 un−1 − 3(3n − 4)(3n − 2)λ4 un−2 = 0.
+   Let us show by contradiction that λ = 0. Otherwise, the following implication would
+hold:
+                       ∀ n ≥ 3, un−2 = 0 =⇒ un−1 = 0.
+We still get un = 0 for n ≥ k, so that λ = 0. A contradiction. We have indeed λ = 0, so
+that λ1 = λ2 = 0.                                                                    
+
+1.5    The conjecture R(3).
+The first aim of this subsection is to explain why we were not able to solve conjecture
+R(3) in the previous way. The second aim is to give some information (and motivation)
+for the reader who might be interested to undertake some investigations on this subject.
+
+    We use the notations of subsection 1.3 with m = 3, so that:
+                                            
+                   X        n+i n+j          n+k i j k
+          un =                                     λ1 λ2 λ3 ∈ Z[λ1 , λ2 , λ3 ].
+                              n       n        n
+                  i+j +k = n
+
+Before giving the linear recurrence relation satisfied by the un , we need some notations.
+                          X µi are integers satisfying µ1 ≥ µ2 ≥ µ3 ≥ 0, we define mµ ∈
+If µ = (µ1 , µ2 , µ3 ) where
+Z[λ1 , λ2 , λ3 ] by mµ :=    λν11 λν22 λν33 where (ν1 , ν2 , ν3 ) describes all distinct permutations
+
+
+
+                                                 12
+of the triple (µ1 , µ2 , µ3 ). We identify (µ1 , µ2 ) and (µ1 , µ2 , 0) as well as (µ1 ) and (µ1 , 0, 0).
+Hence m(1) = λ1 + λ2 + λ3 , m(1,1) = λ1 λ2 + λ1 λ3 + λ2 λ3 , m(1,1,1) = λ1 λ2 λ3 and m(3,2,1) =
+λ31 λ22 λ3 + λ31 λ2 λ23 + λ21 λ32 λ3 + λ1 λ32 λ23 + λ21 λ2 λ33 + λ1 λ22 λ33 .
+
+    We set ∆ = (λ1 − λ2 )2 (λ1 − λ3 )2 (λ2 − λ3 )2 and define the Mi , Ni for 1 ≤ i ≤ 5 by:
+
+    M1 = 9m(4,2) − 14m(4,1,1) − 9m(3,3) + 3m(3,2,1) − 3m(2,2,2) ;
+    M2 = 5m(4,2) − 8m(4,1,1) − 5m(3,3) + 2m(3,2,1) − 3m(2,2,2) ;
+    M3 = 39m(4,2) − 62m(4,1,1) − 39m(3,3) + 15m(3,2,1) − 21m(2,2,2) ;
+    M4 = 33m(4,2) − 52m(4,1,1) − 33m(3,3) + 12m(3,2,1) − 15m(2,2,2) ;
+    M5 = 6m(4,2) − 10m(4,1,1) − 6m(3,3) + 3m(3,2,1) − 6m(2,2,2) ;
+   N1 = −2m(5,2) + 4m(5,1,1) + 3m(4,3) − 3m(4,2,1) − 8m(3,3,1) + 8m(3,2,2) ;
+   N2 = 10m(9,4) − 36m(9,3,1) + 52m(9,2,2) − 25m(8,5) + 63m(8,4,1) − 38m(8,3,2) + 10m(7,6) +
+30m(7,5,1) − 146m(7,4,2) + 216m(7,3,3) − 60m(6,6,1) + 70m(6,5,2) − 32m(6,4,3) − 60m(5,5,3) +
+40m(5,4,4) ;
+   N3 = −27m(4,4) + 36m(4,3,1) − 2m(4,2,2) − 52m(3,3,2) ;
+   N4 = −342m(8,6) + 1006m(8,5,1) −1110m(8,4,2) + 972m(8,3,3) + 342m(7,7) −141m(7,6,1) −
+1301m(7,5,2) + 900m(7,4,3) + 1178m(6,6,2) − 15m(6,5,3) − 724m(6,4,4) + 238m(5,5,4) ;
+   N5 = 10m(8,6) − 30m(8,5,1) + 34m(8,4,2) − 30m(8,3,3) − 10m(7,7) + 5m(7,6,1) + 37m(7,5,2) −
+27m(7,4,3) − 38m(6,6,2) + 5m(6,5,3) + 20m(6,4,4) − 10m(5,5,4) .
+
+    Set:
+    An = n(n − 1)(n − 2)(M1 n − 3M2 )∆;
+    Bn = (n − 1)(n − 2)[(2M1 n2 − M3 n)N1 − 3N2 ];
+    Cn = (n − 2)[(M1 n3 − M4 n2 )N3 + 3nN4 + 36N5 ];
+    Dn = 8(2n − 3)(4n − 7)(4n − 9)(M1 n − M5 )m3(1,1,1) .
+
+    One could show the next result (using a computer!):
+Lemma 8. For any n ≥ 4, we have:
+                           An un + Bn un−1 + Cn un−2 + Dn un−3 = 0.
+   The difference with the recurrence relations obtained in Lemma 6 is that the factor
+M1 n − 3M2 of An may suddenly vanish for a large value of n. Therefore, if we assume
+that uk = uk+1 = uk+2 = 0, we do not succeed to show that uk+3 = 0. However, a closer
+analysis of the recurrence formula might probably be sufficient for proving R(3).
+
+
+2    PRELIMINARY RESULTS
+In subsection 2.1, we recall a valuative criterion characterizing the elements of f (V ) where
+f : V → W is a morphism of complex algebraic varieties. The only valuation ring we need
+is the ring of complex formal power series. In subsection 2.2, after recalling equivalent
+definitions of a hsop, we give two results related with formal power series. In subsection
+2.3, we make some technical definitions which will allow us (in the next section) to prove
+Th. B. Finally, in subsection 2.4, we prove an easy lemma on the multidegree.
+
+
+
+                                                   13
+2.1    Valuative criterion
+The valuative criterion given in Lemma 9 below is familiar (e.g. [MFK94, chap. 2, § 1,
+pp 52-54] or [Gro61a, § 7]). We proved it in [Fur09].
+     Let C[[T ]] be the algebra of complex formal power series and let C((T )) be its quotient
+field. If V is a complex algebraic variety and A a complex algebra, V (A) will denote the
+points of V with values   in A,i.e. the set of morphisms Spec A → V . If v is a closed
+point of V and ϕ ∈ V C((T )) , we will write v = lim ϕ(T ) when:
+                                                             T →0
+   i) the point ϕ : Spec C((T )) → V is a composition Spec C((T )) → Spec C[[T ]] → V ;
+  ii) v is the point Spec C → Spec C[[T ]] → V .
+                                                
+    For example, if V = A1 and ϕ ∈ V C((T )) = C((T )), we will write v = lim ϕ(T )
+                                                                                               T →0
+when ϕ ∈ C[[T ]] and v = ϕ(0).
+
+Lemma 9. Let f : V → W be a morphism of complex algebraic varieties and let w be
+a closed point of W . The two following assertions are equivalent:
+   i) w ∈ f (V );
+                                             
+  ii) w = lim f (ϕ(T )) for some ϕ ∈ V C((T )) .
+            T →0
+
+Remark. Note the analogy with the metric case where w ∈ f (V ) if and only if there
+exists a sequence (vn )n≥1 of V such that w = lim f (vn ).
+                                                         n→+∞
+
+    The following result is an easy consequence of Lemma 9 (see [Fur09, Cor. 1.1]).
+
+Corollary 10. If d = (d1 , . . . , dk ) is a multidegree and f ∈ G, the following assertions
+are equivalent:
+   i) f ∈ G d ;
+                                       
+  ii) f = lim gT for some g ∈ Gd C((T )) .
+            T →0
+
+Proof. For any integer m ≥ 2, let Bm be the set of triangular automorphisms whose degree
+is exactly equal to m. Let A0 = A \ B be the set of affine non triangular automorphisms.
+It is enough to note that Gd is the image of the following morphism of algebraic varieties:
+                                             Y
+                          A2 × (A0 )k−1 ×          Bdi −→ G
+                                                  1≤i≤k
+                                  
+sending (a1 , a2 ), (ai )i , (bi )i to a1 ◦ b1 ◦ a01 ◦ b2 ◦ a02 ◦ · · · ◦ a0k−1 ◦ bk ◦ a2 . The details are
+                      0
+
+left to the reader.
+
+Remark. Since Gd is locally closed in G (see [Fur09]), there is a natural identification
+between Gd (K) and the set of automorphisms of A2K whose multidegree are equal to d, for
+any field K containing C.
+
+
+
+
+                                                    14
+2.2    Homogeneous system of parameters and formal power series
+Let K be an algebraically closed field and let ArK be the affine r-space over K. Let us
+grade the polynomial algebra R = K[z1 , . . . , zr ] by assigning each zk to be homogeneous
+of some strictly positive degree (depending on k). For each m ≥ 0, the set of m-
+homogeneous polynomials is denoted by Rm . If p = (p1 , . . . , pr ) ∈ Rr , let φp : ArK →
+ArK be the morphism of algebraic varieties defined by φp (w) = (p1 (w), . . . , pr (w)) for
+w ∈ ArK . Let also Ip be the ideal of R generated by p1 , . . . , pr . Following a usual
+terminology (e.g. [Sta96, Chap. I, Def. 5.1, p. 33]), if each pk is homogeneous of
+some strictly positive degree (depending on k) and if K[z1 , . . . , zr ] is a finitely generated
+module over K[p1 , . . . , pr ], the sequence p is said to be a hsop (homogeneous system of
+parameters). For the sake of completeness, we give the proof of the following classical
+lemma characterizing hsop.
+
+Lemma 11. Let p = (p1 , . . . , pr ) be a sequence of homogeneous polynomials of R =
+K[z1 , . . . , zr ], each zk being homogeneous of some strictly positive degree (depending on
+k). The r-uple p is a hsop of R if and only if the following equivalent assertions are
+satisfied:
+   i) φp is a finite morphism;
+  ii) φp is a quasi-finite morphism;
+  iii) (φp )−1 (0) is a finite set;
+  iv) dimK R/Ip < +∞;
+  v) (φp )−1 (0) = {0};
+  vi) φp is a proper morphism;
+ vii) R is a finitely generated and free module over K[p1 , . . . , pr ];
+viii) φp is a flat morphism;
+  ix) For any d > maxk deg pk , we have Rdl ⊆ Ipl when l is large enough;
+  x) For some d > maxk deg pk , we have Rdl ⊆ Ipl when l is large enough.
+
+Proof. Note that assertion i) is a reformulation of the definition.
+   i) =⇒ ii) and ii) =⇒ iii) are obvious.
+   iii) ⇐⇒ iv) follows from the Hilbert’s Nullstellensatz.
+   iv) =⇒ i). Let h1 , . . . , hs be homogeneous elements of R P               which form a K-basis
+                                                                                              P of
+R/Ip . Set S := K[p1 , . . . , pr ]. It is enough to show that R = i hi S. Set N = i hi S
+and let S+ = p1 S + · · · + pr S be the ideal of S generated by the pi . Note that S is a
+subgraded ring of R and that R and N are both graded module over S. Finally, since
+R = N + S+ R, by the graded version of Nakayama’s lemma, we get R = N .
+   iii) =⇒ v). Let us show by contradiction that (φp )−1 (0) = {0}. Otherwise (φp )−1 (0)
+would contain a nonzero element w = (w1 , . . . , wr ). If di := deg zi and ei := deg pi , we
+have:
+                    ∀ λ ∈ K, pi (λd1 z1 , . . . , λdr zr ) = λei pi (z1 , . . . , zr ).
+
+
+
+
+                                                15
+This proves that (λd1 w1 , . . . , λdr wr ) belongs to (φp )−1 (0) for any λ, contradicting (iii).
+    v) =⇒ iii) is obvious.
+    i) ⇐⇒ vi) follows from a theorem of Chevalley (see [Gro61b, EGA, III, 4.4.2, p. 136])
+asserting that a morphism of algebraic varieties is finite if and only if it is proper and
+affine (see also [Mur67, Lemma (3.5.1), p. 52] or [BCW82, p. 296]). Alternatively, it
+is well known that a morphism is finite if and only if it is proper and quasi-finite (see
+the previous reference of Grothendieck!). Furthermore, it is clear that an affine proper
+morphism is quasi-finite. Indeed, each of its fibers being affine and complete, it has to
+be finite.
+    i) ⇐⇒ vii) follows from [Sta96, Chapter I, Th. 5.9, p. 35]. Note that the implication
+vii) =⇒ i) is obvious. The implication i) =⇒ vii) also follows from [Bou07, §4, n◦ 4, Cor.
+of Prop. 5, p. 58]. This reference claims that R is a projective module over K[p1 , . . . , pr ].
+In this graded situation, any projective module is free.
+    vii) =⇒ viii). Any free module is flat.
+    viii) =⇒ ii) is clear, since a flat morphism is equidimensional (e.g. [Har77, (III, Cor.
+9.6), p. 257]).
+    vii) =⇒ ix). Set    P S = K[p1 , . . . , pr ] and let h1 , . . . , hs be homogeneous elements of
+R such that R = i hi S. Set M = maxi deg hi , m = maxk deg pk and let d > m be
+                                                         M
+any integer. Let us check that for any l ≥ d−m              , we have Rdl ⊆ (Ip )l . Let fPbe any
+element of Rdl . There exists homogeneous elements              P ui of Sα such that f =                i hi ui .
+Furthermore, each ui admits an expression ui =                      α   u i,α p , where   the sum     is  over
+α = (α1 , . . . , αP ) ∈ N r , pα := pα1 . . . pαr and u    belongs      to   K.  Set |α| = α   + · · ·  +  αr .
+                   r                  1         r       i,α                                   1
+                                 α
+We have f = i,α ui,α hi p . If ui,α 6= 0, we may assume that deg f = deg(hi p ). We get         α
+
+
+                      m |α| ≥ deg pα = deg f − deg hi ≥ dl − M ≥ ml,
+
+from which follows |α| ≥ l and finally f ∈ (Ip )l .
+   ix) =⇒ x) is obvious.
+   x) =⇒ v) is easy and left to the reader.
+
+Corollary 12. If p = (p1 , . . . , pr ) is a hsop of K[z1 , . . . , zr ], the map φp : ArK → ArK is
+surjective.
+
+Proof. Since φp is proper, it is a closed morphism and in particular its image is closed.
+Since φp is flat, it is an open morphism (see [Gro65, EGA, IV2 , 2.4.6, p. 20]) and in
+particular its image is open.
+
+Remark 13. Let p = (p1 , . . . , pr ) be a sequence of homogeneous polynomials of R =
+K[z1 , . . . , zr ]. The surjectivity of the morphism φp : ArK → ArK is not sufficient to ensure
+that p is a hsop. Consider the algebra C[x, y] with the usual grading. The morphism
+A2 → A2 , (x, y) 7→ (xy 2 , x(x + y)2 ) is surjective, but not finite.
+
+    Let val : C((T )) → Z ∪ {+∞} be the valuation associated to the discrete valuation
+ring C[[T ]].
+
+
+
+
+                                                       16
+Lemma 14. If (p1 , . . . , pr ) is a hsop of R := C[z1 , . . . , zr ] and q ∈ R is homogeneous
+with deg q > max deg pk , then for any b ∈ ArC[[T ]] satisfying b(0) = 0, we have:
+                k
+
+                                   val q(b) ≥ min val pk (b) + 1.
+                                               k
+
+Proof. By point ix) of Lemma 11, there exists l ≥ 1 such that q l ∈ (p1 , . . . , pr )l . For
+                                       α = pα1 . . . pαr and |α| = α + · · · + α . If A := {α ∈
+any α = (α1 , . . . , αr ) ∈ Nr , set pX     1        r             1           r
+ r                                l            α
+N , |α| = l}, we can write q =            sα p (sα ∈ R). Furthermore, we may assume that
+                                      α∈A
+sα ∈ Rdα , where dα := deg q l − deg pα ≥ l(deg q − max deg pk ) ≥ l ≥ 1. Evaluating at b
+                                                                  k
+and taking the valuation, we get: l val q(b) ≥ min val sα (b)pα (b). But val sα (b) ≥ 1 and
+                                                        α∈A
+val pα (b) ≥ l min val pk (b), so that l val q(b) ≥ l min val pk (b) + 1.
+                k                                             k
+
+    The following lemma is a nice application of Cor. 12.
+
+Lemma 15. If p = (p1 , . . . , pr ) is a hsop of C[z1 , . . . , zr ] and γ ∈ ArC , there exist q ≥ 1
+and b ∈ ArC[[T ]] such that b(0) = 0 and p(b) = T q γ.
+                    [          1                                        [          1
+Proof. Let K :=           C((T q )) be the quotient field of the ring         C[[T q ]] of all formal
+                    q≥1                                                 q≥1
+Puiseux series. By Newton-Puiseux theorem (see e.g. [Rui93, Prop. 4.4]), K is an
+algebraic closure of C((T )). Let us note that p is a hsop of R := K[z1 , . . . , zr ]. By
+Cor. 12, there exists an element a in the affine space ArK such that p(a) = T γ. Let
+q ≥ 1 be such that b := a(T q ) ∈ ArC((T )) . Replacing T by T q , we get p(b) = T q γ. Using
+the valuative criterion of properness (see e.g. [Har77, (II, 4.7), p. 101]) to the proper
+morphism φp : Ar → Ar (see Lemma 11), it is clear that b ∈ ArC[[T ]] . Since p(b(0)) = 0,
+by point v) of Lemma 11, we get b(0) = 0.
+
+2.3    Technical definitions
+Let m, n ≥ 1 be fixed integers and set N := (m+1)(n+1)−1. Let A0 , . . . , Am , B1 , . . . , Bn
+be indeterminates and let C[B], resp. C[A, B], be the polynomial algebra generated by
+the Bj , resp. by the Ai , Bj . We grade these polynomial algebras by assigning Ai , Bi to
+be homogeneous of degree i.
+    We now successively define homogeneous polynomials:
+        • Ci ∈ C[A, B] of degree i for 1 ≤ i ≤ N ;
+        • Ui,j ∈ C[B] of degree i − j for 1 ≤ i ≤ N , 0 ≤ j ≤ m;
+        • Wi,j ∈ C[B] of degree i − j for 1 ≤ i, j ≤ m;
+        • Di ∈ C[B], Ei ∈ C[A, B] of degree i for 1 ≤ i ≤ m;
+        • Fi ∈ C[B], Gi ∈ C[A, B] of degree i for 1 ≤ i ≤ N ;
+
+satisfying the following points:
+
+
+
+
+                                                   17
+                                    X
+                            (0)         Ci X i+1 = A ◦ B (X) − A0 X
+                                  1≤i≤N
+                   X                                   X
+where A(X) :=           Ai X i+1 and B(X) := X +           Bi X i+1 ;
+                 0≤i≤m                                1≤i≤n
+
+(1) Ai = A0 Di + Ei for 1 ≤ i ≤ m;                    (2) Ci = A0 Fi + Gi for 1 ≤ i ≤ N ;
+           X                                                      X
+(3) Ei =       Wi,j Cj for 1 ≤ i ≤ m;                 (4) Gi :=         Ui,j Ej for 1 ≤ i ≤ N ;
+          1≤j ≤m                                                1≤j ≤m
+
+
+    (5) the matrices (Ui,j )1 ≤ i, j ≤ m and (Wi,j )1 ≤ i, j ≤ m are inverses of one another.
+
+    Later on, we will only use the above points (0)-(5) so that the reader in a hurry can
+skip the following trivial, but technical, construction.
+
+Construction.
+    • The Ci ∈ C[A, B] are uniquely defined by (0).
+                                                           X
+    • The Ui,j ∈ C[B] are uniquely defined by Ci =              Ui,j Aj (1 ≤ i ≤ N ).
+                                                         0≤j ≤m
+
+   Matricially, this may be written C = U.A, where A (resp. C) is the column vector
+A = (Ai )0 ≤ i ≤ m (resp. C = (Ci )1 ≤ i ≤ N ) and U is the matrix U = (Ui,j ) 1 ≤ i ≤ N .
+                                                                               0≤j≤m
+                               
+                             V
+   We have U =          B       where B is the column vector B = t (B1 , . . . , Bn , 0, . . . , 0)
+                             ∗
+and V := (Ui,j )1 ≤ i, j ≤ m is a lower triangular square matrix with 1’s on the diagonal.
+    • The matrix W = (Wi,j )1 ≤ i, j ≤ m is defined as the inverse of V.
+    • The column vectors D = (Di )1 ≤ i ≤ m and E = (Ei )1 ≤ i ≤ m are defined by D :=
+−W.B e and E := W.C,   e where B e (resp. C)
+                                          e denotes the column vector obtained from B
+(resp. C) by keeping the first m rows. Since the column vector A     e := t (A1 , . . . , Am )
+satisfies Ce = A0 B
+                  e + V.A,
+                         e we get Ae = −A0 W.B
+                                             e + W.C, e i.e. A
+                                                             e = A0 D + E, which is (1).
+                                          X                     X
+    • Fi , Gi are defined by Fi := Ui,0 +    Ui,j Dj and Gi :=      Ui,j Ej (1 ≤ i ≤ N ).
+                                            1≤j ≤m                   1≤j ≤m
+                   X
+    Since Ci =         Ui,j Aj for 1 ≤ i ≤ N and Aj = A0 Dj + Ej for 1 ≤ j ≤ m, we get
+               0≤j ≤m
+                   X
+Ci = Ui,0 A0 +         Ui,j (A0 Dj + Ej ) and (2) follows. The assertions (3), (4) and (5) are
+               1≤j ≤m
+obvious.
+                                    X
+Remark 16. We have Gi =                     Ui,j Wj,k Ck , so that if i ≤ m, we get Gi = Ci and
+                                  1 ≤ j, k ≤ m
+Fi = 0.
+
+
+
+                                                 18
+    We will always use the conjecture R(m, n) through the next statement.
+
+Lemma 17. If the conjecture R(m, n) holds, the family (Fm+i )1 ≤ i ≤ n is a hsop of C[B].
+
+Proof. If b = (b1 , . . . , bn ) ∈ Cn satisfies Fm+i (b) = 0 for 1 ≤ i ≤ n, we want to show
+that b = 0. Let us set a0 = 1, ai = Di (b) for 1 ≤ i ≤ m and a = (a0 , . . . , am ). By (1)
+evaluated at (a, b), we get Ei (a, b) = 0 for 1 ≤ i ≤ m. By (3) and (5), we get Ci (a, b) = 0
+for 1 ≤ i ≤ m. Moreover, for any m + 1 ≤ i ≤ m + n, we get Gi (a, b) = 0 by (4), so that
+Ci (a, b) = 0 by (2) and by Remark 16. For the moment, we have proved that Ci (a, b) = 0
+for 1 ≤ i ≤ m + n.
+    Let us set a := X(1 + a1 X + · · · + am X m ), b := X(1 + b1 X + · · · + bn X n ) and
+c := a ◦ b = X(1 + c1 X + · · · cN X N ) ∈ C[X], where the ci ∈ C. Using the relation (0),
+we get ci = Ci (a, b) = 0 for 1 ≤ i ≤ m + n. By R(m, n), we get a = b = X.
+
+    We finish this subsection by a technical result to be used in Lemma 20 below. Even if
+the proof relies on the above technical definitions, the statement itself is self-contained.
+                            X                               X
+Lemma 18. Set a(X) =            ai X i+1 and b(X) = X +         bi X i+1 , where ai , bi are el-
+                             0≤i≤m                               1≤i≤n
+ements of C((T )). Set c(X) = a ◦ b (X) − a0 X. Note that a(X), b(X) and c(X) are
+elements of C((T ))[X]. Assume that lim b = X and lim c = p ∈ C[X]. Then, if the
+                                             T →0               T →0
+conjecture R(m, n) holds, we get deg p ≤ m + n + 1.
+                                                                                 X
+Proof. If a := (a0 , . . . , am ) and b := (b1 , . . . , bn ), we have c(X) =        Ci (a, b) X i+1 by
+                                                                                1≤i≤N
+the relation (0). Since lim b = X all the bi belong to T C[[T ]] and since lim c exists all
+                           T →0                                                         T →0
+the Ci (a, b) belong to C[[T ]].
+Claim. If m + 1 ≤ i ≤ N , then Gi (a, b) ∈ T C[[T ]].
+   If 1 ≤ j, k ≤ m, we have:
+   • Ui,j (b) ∈ T C[[T ]] since Ui,j ∈ C[B] is homogeneous of degree i − j ≥ m + 1 − m = 1;
+   • Wj,k (b) ∈ C[[T ]] since Wj,k is a polynomial;
+   • Ck (a, b) ∈ C[[T ]].                    X
+   By (5) or Remark 16, we have Gi =             Ui,j Wj,k Ck and the claim follows.
+                                            1 ≤ j, k ≤ m
+
+   By (2), we have Ci (a, b) = a0 Fi (b) + Gi (a, b).
+   If i ≥ m + 1, we have val Ci (a, b) ≥ 0 and val Gi (a, b) ≥ 1, so that val a0 Fi (b) ≥ 0.
+We want to show that val Ci (a, b) ≥ 1, when i > m + n. For this, it is sufficient to show
+that val a0 Fi (b) ≥ 1. By Lemmas 14 and 17, if i > m + n, we have:
+
+                               val Fi (b) ≥ min val Fm+j (b) + 1,
+                                            1≤j ≤n
+
+so that val a0 Fi (b) ≥ min val a0 Fm+j (b) + 1 ≥ 1.
+                         1≤j ≤n
+
+
+
+
+                                                    19
+2.4     An easy lemma on the multidegree
+Lemma 19. Let K be any field containing C and let f = (f1 , f2 ) be an automorphism
+of A2K of multidegree (d1 , . . . , dk ) with k ≥ 1, then deg f1 = d1 . . . dk or d2 . . . dk (and the
+same holds for f2 ). Furthermore, if deg f1 = d1 . . . dk , then there exists a unique scalar
+λ ∈ K such that deg(f2 − λf1 ) < d1 . . . dk , or equivalently such that deg(f2 − λf1 ) =
+d2 . . . dk
+
+Proof. By definition of the multidegree, f admits a reduced expression
+
+                               f = α1 ◦ β1 ◦ · · · ◦ αk ◦ βk ◦ αk+1 ,
+
+where each αj is affine and each βj is triangular of degree dj . Set
+
+                         g := α1−1 ◦ f = β1 ◦ α2 ◦ · · · ◦ αk ◦ βk ◦ αk+1 .
+
+An easy induction would establish that deg g1 = d1 . . . dk and deg g2 = d2 . . . dk (for
+details, see [Fur97, Proof of Prop. 1, p. 606]). The result follows.
+
+
+3     PROOF OF THEOREM B
+In this section, m, n ≥ 1 are fixed integers and we assume that the conjecture
+                                                                             [ R(m, n)
+holds. We set d = (d1 , d2 ) = (m + 1, n + 1) and we want to show that G d =   Ge .
+                                                                                    S ed
+    Subsection 3.1 is devoted to the proof of the first inclusion G d ⊆               Ge . It only
+                                                                                   ed
+relies on the self-contained
+                   S         Lemma 18. Subsection 3.2 is devoted to the proof of the
+second inclusion      Ge ⊆ G d . It is a little more involved, since it uses the polynomials
+                   ed
+Ci , Di , Ei , Fi , Gi defined in subsection 2.3.
+
+3.1     The first inclusion
+                                     [
+If f ∈ G d , let us show that f ∈         Ge . By [Fur02], the length is a lower semicontinuous
+                                    ed
+function on G so that the length of f satisfies l ≤ 2. We will consider 3 cases:
+   • l = 0. There is nothing to show;
+   • l = 1. We conclude by Lemma 20 below;
+   • l = 2. We conclude by Lemma 21 below.
+
+Lemma 20. If e ≥ 2 and G(e) ∩ G (d1 ,d2 ) 6= ∅, then e < d1 + d2 .
+
+Proof. If f ∈ G(e) ∩ G d , let us prove that e < d1 + d2 . Since A ◦ f ◦ A ⊆ G d , we may
+assume that f = (X + p(Y ), Y ) with deg p = e. If e ≤ d2 , there is nothing
+                                                                             toprove. So,
+let us assume that e > d2 . By Cor. 10, there exists g = (g1 , g2 ) ∈ Gd C((T )) such that
+f = lim gT . By Lemma 19, we must have deg g1 = d1 d2 .
+      T →0
+
+
+
+
+                                                    20
+First claim. We may assume that deg g2 = d2 .
+     Indeed, since g is of multidegree (d1 , d2 ), by Lemma 19, there exists a unique λ ∈
+C((T )) such that deg(g2 − λg1 ) = d2 . It is enough to show that val(λ) > 0, because
+we can then replace g by (u1 , u2 ) := (g1 , g2 − λg1 ). Let µ (resp. ν) ∈ C((T )) be the
+Y e -coefficient of g2 (resp. u1 ). Applying the equality g2 = u2 + λu1 to the Y e -coefficient,
+we get µ = λν (since we have assumed that e > d2 ). However, we have val(ν) = 0 (since
+lim u1 (T ) = X + p(Y ) and deg p = e), so that val(λ) = val(µ) > 0 and the claim is
+T →0
+proved.
+
+    Since deg g1 > deg g2 , it is well-known (see e.g. [Fur97, Th. 1.i]) that we can write
+(in a unique way)
+                                    g = τ ◦ t1 ◦ σ ◦ t2 ◦ l,
+where τ = (X + a, Y + b) is a translation,
+                                                       
+           X                               X
+t1 = X +      ai Y i+1 , Y , t2 = X +     bi Y i+1 , Y  are triangular automorphisms,
+              0≤i≤m                                 1≤i≤n
+σ = (Y, X) and l = (l1 , l2 ) = (αX + βY, γX + δY ) are linear automorphisms, with the
+ai ’s, bi ’s, a, b, α, β, γ, δ belonging to C((T )). By making the composition, we get:
+                                                          i+1                                 
+
+                                                   bj l2j+1                          bj l2j+1 + b .
+                             X               X                                    X
+           g = l2 +              ai l1 +                         + a,    l1 +
+                            0≤i≤m          1≤j ≤n                              1≤j ≤n
+
+Since f = lim gT , by looking at the constant terms, we get a, b ∈ C[[T ]] and there is no
+              T →0
+restriction to assume that a = b = 0.
+
+Second claim. We may assume that l = (l1 , l2 ) = (Y, X + ρY ) for some ρ ∈ C((T )).
+   Note that lim α = 0, lim β = 1 and lim αδ − βγ = −1. The last relation comes
+                     T →0         T →0                 T →0
+                                                                                      δ−α
+from the Jacobian equality Jac g = Jac σ × Jac l = −(αδ − βγ).                             .Set ρ :=
+                                                                                        β
+Since (l1 , l2 ) = (Y, X + ρY ) ◦ hT , where hT := (−ρ l1 + l2 , l1 ), it is enough to show
+that lim hT = (X, Y ). For the second component, it is clear. For the first, we have
+       T →0
+                                                α2 αδ − βγ
+−ρ l1 +l2 = (γ −ρα)X +(δ −ρβ)Y . But γ − ρα =      −          , so that lim γ − ρα = 1
+                                                β        β              T →0
+and δ − ρβ = α, so that lim δ − ρβ = 0 and the claim is proved.
+                                 T →0
+
+   So, we can now assume that:
+                                                                  i+1                                 
+                            X              X                                          X
+g = X + ρY +                   ai Y +        bj (X + ρY )j+1            ,   Y +        bj (X + ρY )j+1  .
+                       0≤i≤m              1≤j ≤n                                  1≤j ≤n
+
+
+
+
+                                                       21
+Inspecting the Y -powers, the relation lim gT = (X + p(Y ), Y ) gives us:
+                                             T →0
+                                                   i+1
+               X                X                                             X
+  lim ρY +           ai Y +          bj ρj+1 Y j+1  = p(Y ) and lim               bj ρj+1 Y j+1 = 0.
+ T →0                                                                T →0
+             0≤i≤m            1≤j ≤n                                        1≤j ≤n
+
+
+Setting ebj := bj ρj+1 , we get:
+                                            i+1
+                   X             X                                             X
+     lim ρY +            ai Y +   ebj Y j+1  = p(Y ) and             lim           ebj Y j+1 = 0.
+     T →0                                                              T →0
+                   0≤i≤m           1≤j ≤n                                     1≤j ≤n
+
+
+   Looking at the Y -coefficient, the first relation shows us that lim ρ + a0 = p1 , where
+                                                                             T →0
+p1 is the Y -coefficient of p(Y ).
+                                               i+1
+                       X            X
+    Therefore lim           ai Y +   ebj Y j+1     − a0 Y = p(Y ) − p1 Y and Lemma 18
+               T →0
+                  0≤i≤m       1≤j ≤n
+tells us that deg p(Y ) − p1 Y ≤ m + n + 1 = d1 + d2 − 1.
+
+Lemma 21. If G(e1 , e2 ) ∩ G (d1 , d2 ) 6= ∅, then e1 ≤ d1 and e2 ≤ d2 .
+   This lemma is a consequence of the following result, which is [Fur09, Th. C]:
+Theorem 22. If u = (u1 , . . . , ul ), v = (v1 , . . . , vl ) are two multidegrees with the same
+length, then the following assertions are equivalent:
+   i) Gu ⊆ G v ;
+  ii) Gu ∩ G v 6= ∅;
+  iii) ui ≤ vi for each i (i.e. u  v).
+   However, here is a simple proof of Lemma 21:
+
+Proof of Lemma 21. Let VXbe the polynomial algebra C[X, Y ]. Any element v of V admits
+a unique expression v =   vi , where vi is homogeneous of degree i. Let Π> k : V → V be
+                             i≥0
+                                X
+the projection sending v to           vi . Two polynomials u, v ∈ V are linearly dependent if and
+                                i>k
+                       V2
+only if u ∧ v = 0 in        V . The key point is the fact that for each f = (f1 , f2 ) ∈ G(d1 , d2 ) ,
+we have
+                             d2 = min{k, Π> k (f1 ) ∧ Π> k (f2 ) = 0}.
+In particular, we have Π> d2 (f1 ) ∧ Π> d2 (f2 ) = 0 and this condition still holds if we
+only assume that f belongs to G (d1 , d2 ) . Therefore, if f ∈ G(e1 , e2 ) ∩ G (d1 , d2 ) , we get
+e2 ≤ d2 . The map g 7→ g −1 being an automorphism of (the infinite dimensional algebraic
+variety) G sending an automorphism of multidegree (u1 , . . . , ul ) to an automorphism of
+multidegree (ul , . . . , u1 ), we also have f −1 ∈ G(e2 , e1 ) ∩ G (d2 , d1 ) so that e1 ≤ d1 . 
+
+
+
+                                                    22
+3.2    The second inclusion
+Let us show that Ge ⊆ G d for any e  d.
+    If e is of length 0 or 2, it is easy. For the sake of completeness, let us prove it
+by using [Fur97, section 4] (see also [Fur09, subsection 7.2]). Indeed, we define the
+partial order ≤ on the set of multidegrees in the following way. If u = (u1 , . . . , uk ) and
+v = (v1 , . . . , vl ) are multidegrees, we say that u ≤ v if k ≤ l and if there exists a finite
+sequence 1 ≤ i1 < i2 < · · · < ik ≤ l such that uj ≤ vij for 1 ≤ j ≤ k. By [Fur97,
+section 4] the inequality u ≤ v implies the inclusion Gu ⊆ G v . If e is of length 2, the
+inclusion Ge ⊆ G d is also a consequence of Th. 22 above. Therefore, for showing the
+second inclusion, it is enough to prove the next result:
+
+Lemma 23. If 2 ≤ e < d1 + d2 , then the following inclusion holds: G(e) ⊆ G (d1 ,d2 ) .
+                                                          
+                                          X
+Proof. It is sufficient to show that X +     γi Y i+1 , Y  ∈ G d for any γi ∈ C.
+                                               1 ≤ i ≤ m+n
+
+   We take back the notations of subsection 2.3. By Lemmas 15 and 17, there exist
+q ≥ 1 and eb := (eb1 , . . . , ebn ) ∈ AnC[[T ]] such that eb(0) = 0 and
+
+                             T −q Fm+i (eb) = γm+i ,         1 ≤ i ≤ n.
+
+Set a0 := T −q , ai := a0 Di (eb) for 1 ≤ i ≤ m, ρ := −T −q and bj := ebj ρ−j−1 for 1 ≤ j ≤ n.
+Set g := t1 ◦ σ ◦ t2 ◦ l, where
+                                                                             
+                               X                              X
+               t 1 = X +           ai Y i+1 , Y , t2 = X +      bi Y i+1 , Y 
+                          0≤i≤m                                    1≤i≤n
+
+are triangular automorphisms, σ = (Y, X) and l = (Y, X + ρY ). We have:
+                                                  i+1                          
+                   X            X                              X
+ g = X + ρY +         ai Y +      bj (X + ρY )j+1  , Y +       bj (X + ρY )j+1  .
+                   0≤i≤m          1≤j ≤n                                  1≤j ≤n
+                                                        
+                              X
+Claim. lim gT = X +                   γi Y i+1 ,    Y .
+        T →0
+                         m+1 ≤ i ≤ m+n
+
+   Let us begin to show that lim g2 = Y .
+                                T →0
+   For 1 ≤ j ≤ n, we have bj (X + ρY )j+1 = ebj (ρ−1 X + Y )j+1 , where lim ebj = lim ρ−1 = 0,
+                                                                                   T →0     T →0
+so that lim bj (X + ρY )j+1 = 0 and the result is clear.
+        T →0
+                                                                           X
+   Let us now deal with the first component g1 = X + ρY +                      ai g2i+1 .
+                                                                          0≤i≤m
+
+
+
+
+                                                    23
+    First step. Let us show that in this last expression of g1 , the limit of g1 is unchanged
+if we replace g2 by                           X
+                                 p := Y +          ebj Y j+1 .
+                                               1≤j ≤n
+
+It is sufficient to check that lim ai (g2i+1 − pi+1 ) = 0.
+                               T →0
+     As lim g2 = lim p = Y and g2i+1 − pi+1 = (g2 − p)(g2i + · · · + pi ), we will only check
+        T →0       T →0
+that lim ai (g2 − p) = 0.
+      T →0             X
+                             bj (X + ρY )j+1 − (ρY )j+1 , it is enough to show that:
+                                                          
+     Since g2 − p =
+                      1≤j ≤n
+
+                            lim ai bj (X + ρY )j+1 − (ρY )j+1 = 0.
+                                                             
+                           T →0
+
+             (X + ρY )j+1 − (ρY )j+1
+    As lim                            = 1, we will only show that lim ai bj ρj = 0.
+        T →0      (j + 1)XY j ρj                                    T →0
+                                     ai                                 ai
+    It is clear, because ai bj ρj = − ebj where lim ebj = 0 and lim        = 1 (resp. 0) if
+                                     a0          T →0             T →0 a0
+i = 0 (resp. i ≥ 1).
+                                                    X
+    Second step. Let us show that lim c =                  γi Y i+1 , where
+                                       T →0
+                                                     m+1 ≤ i ≤ m+n
+                                     X                           X
+                       c := ρY +         ai pi+1 = −a0 Y +             ai pi+1 .
+                                   0≤i≤m                       0≤i≤m
+                                                               X
+If a := (a0 , . . . , am ), by the relation (0) we have c =          Ci (a, eb)Y i+1 .
+                                                              1≤i≤N
+
+   We get Ej (a, eb) = 0 for 1 ≤ j ≤ m by (1), so that Gi (a, eb) = 0 for 1 ≤ i ≤ N by (4)
+and Ci (a, eb) = a0 Fi (eb) = T −q Fi (eb) for 1 ≤ i ≤ N by (2). Therefore:
+   • Ci (a, eb) = 0 for 1 ≤ i ≤ m (see Remark 16);
+   • lim Cm+i (a, eb) = lim T −q Fm+i (eb) = γm+i for 1 ≤ i ≤ n;
+      T →0                 T →0
+    • lim Ci (a, eb) = 0 for i > m + n, since val Fi (eb) ≥ min val Fm+j (eb) + 1 ≥ q + 1 (by
+      T →0                                                    1≤j ≤n
+Lemma 14).
+
+    This proves the second step and the claim follows.
+                                                               
+                                               X
+    If we now set f := t ◦ g, where t := X +      γi Y i+1 , Y  is a triangular automor-
+                                                     1≤i≤m
+                                                                                    
+                                                             X
+phism, then f ∈ Gd        C((T )) and lim fT = X +                   γi Y i+1 ,   Y . We conclude
+                                        T →0
+                                                          1 ≤ i ≤ m+n
+by Cor. 10.
+
+
+
+
+                                                24
+4      PROOF OF THEOREM D
+We begin with the following lemma:
+Lemma 24. Let d ≥ 2 be an integer. Then the subset G(d) of the group G is a double
+coset modulo the affine subgroup A if and only if d = 2 or 3.
+Proof. Let us define the equivalence relation ∼ on G by:
+∀ f, g ∈ G, f ∼ g ⇐⇒ f and g have the same double coset modulo A , i.e. A ◦ f ◦ A =
+A ◦ g ◦ A.
+
+    Let us note that any automorphism in the double coset A ◦ f ◦ A has the same degree
+as f . Let p(Y ), q(Y ) ∈ C[Y ] be any polynomials.
+
+Claim. The following assertions are equivalent:
+    i) (X + p(Y ), Y ) ∼ (X + q(Y ), Y );
+    ii) There exists α, β, γ ∈ C with αβ 6= 0 such that q 00 (Y ) = α p00 (β Y + γ).
+Proof of the claim. There is no restriction to assume that deg p = deg q ≥ 2.
+    i) =⇒ ii). If (X + p(Y ), Y ) ∼ (X + q(Y ), Y ), there exists affine automorphisms u and
+v such that (X + q(Y ), Y ) = u ◦ (X + p(Y ), Y ) ◦ v. If u = (aX + bY + c, dX + eY + f )
+                         ˜ + ẽY + f˜), we get:
+and v = (ãX + b̃Y + c̃, dX
+                         ˜ + ẽY + f˜) + a (ãX + b̃Y + c̃) + b (dX
+         X + q(Y ) = a p(dX                                      ˜ + ẽY + f˜) + c.
+
+Setting X = 0 and derivating two times with respect to Y , we get: q 00 (Y ) = α p00 (β Y +γ),
+where we have set: α := a(ẽ)2 , β := ẽ and γ := f˜. Since q 00 6= 0, it is clear that α 6= 0.
+If deg p = deg q ≥ 3, we have β 6= 0 for reason of degrees. If deg p = deg q = 2, we can
+assume that β 6= 0.
+    ii) =⇒ i). If q 00 (Y ) = α p00 (β Y + γ), then, by integrating two times, we get: aq(Y ) +
+bY + c = p(dY + e), where a, b, c, d, e ∈ C and ad 6= 0. It follows that:
+
+          (X + p(Y ), Y ) ◦ (aX, dY + e) = (aX + bY + c, dY + e) ◦ (X + q(Y ), Y )
+
+and finally (X + p(Y ), Y ) ∼ (X + q(Y ), Y ). The claim is proved.
+
+    If d = 2 or 3 and deg p = deg q = d, the claim implies that (X + p(Y ), Y ) ∼
+(X + q(Y ), Y ). Therefore, in this case, G(d) is a double coset modulo A.
+    If d ≥ 4, let us set p(Y ) = Y d and q(Y ) = Y d + Y d−1 . There does not exist any
+α, β, γ ∈ C such that q 00 (Y ) = α p00 (β Y + γ), because the polynomial p00 (β Y + γ) has
+a unique root and this is not the case of the polynomial q 00 (Y ). By the claim, it follows
+that the automorphisms (X + p(Y ), Y ) and (X + q(Y ), Y ) have distinct double coset
+modulo A. In particular, G(d) is not a double coset modulo A.
+
+   Let us now prove Th. D.
+   If H is a subgroup of G as in Th. D, let us show that H = G. By the hypothesis,
+H contains a triangular automorphism f = (X + p(Y ), Y ) with deg p ≥ 2. If we set
+
+
+
+                                               25
+gα := (X, Y + α) ∈ H (α ∈ C), then the commutator [f, gα ] := f ◦ gα ◦ f −1 ◦ gα−1 ∈ H
+is equal to (X + q(Y ), Y ) , where q(Y ) := p(Y ) − p(Y − α). If α is well chosen, one
+may assume that deg q = deg p − 1. Therefore, by a decreasing induction, we see that H
+contains a triangular automorphism of degree 2.
+     Since G(2) is a double coset modulo A by Lemma 24, we get G(2) ⊆ H. By induc-
+tion, we get G(d) ⊆ H for any d ≥ 2. Indeed, if G(d) ⊆ H, we get G(d,2) ⊆ H, so that
+G (d,2) ⊆ H = H and G(d+1) ⊆ G (d,2) by Th. C. Since H contains all G(d) , d ≥ 2, it is now
+clear that H = G.                                                                         
+
+Acknowledgements. I would like to thank Michel Brion and Laurent Manivel for their
+generous help.
+
+References
+[AM75]     S.S. Abhyankar, T.T. Moh, Embeddings of the line in the plane, J. Reine Angew. Math., 276
+           (1975), 148-166.
+[BCW82] H. Bass, E. Connell, D. Wright, The Jacobian conjecture: reduction of degree and formal
+        expansion of the inverse, Bull. of the A.M.S., 7 (1982), 287-330.
+[Bou07]    N. Bourbaki, Éléments de mathématique. Algèbre commutative. Chapitre 10. (French) [El-
+           ements of mathematics. Commutative algebra. Chapter 10] Reprint of the 1998 original.
+           Springer-Verlag, Berlin, 187 pp, ISBN: 978-3-540-34394-3, 2007.
+[EF04]     E. Edo, J.-P. Furter, Some families of polynomial automorphisms, J. of Pure and Applied
+           Algebra 194 (2004), 263-271.
+[Ess00]    A. van den Essen, Polynomial automorphisms and the Jacobian conjecture, Progress in Math-
+           ematics 190, Birkhäuser Verlag, Basel, 329 pp., ISBN: 3-7643-6350-9, 2000.
+[FM89]     S. Friedland, J. Milnor, Dynamical properties of plane polynomial automorphisms, Ergod.
+           Th & Dyn. Syst. 9 (1989), 67-99.
+[Fur97]    J.-P. Furter, On the variety of automorphisms of the affine plane, J. Algebra 195 (1997),
+           604-623.
+[Fur02]    J.-P. Furter, On the length of automorphisms of the affine plane, Math. Ann. 322 (2002),
+           401-411.
+[Fur07]    J.-P. Furter, Jet groups, J. Algebra 315 (2007), no. 2, 720-737.
+[Fur09]    J.-P. Furter, Plane polynomial automorphisms of fixed multidegree, Math. Ann. 343 (2009),
+           901-920.
+[FM10]     J.-P. Furter, S. Maubach, A characterization of semisimple plane polynomial automorphisms,
+           J. of Pure and Appl. Algebra 214 (2010), no 5, 574-583.
+[GD75]     M. H. Gizatullin, V. I. Danilov, Automorphisms of affine surfaces I (Russian), Izv. Akad.
+           Nauk SSSR Ser. Mat. 39 (1975), no. 3, 523-565, 703.
+[Gro61a]   A. Grothendieck, Éléments de géométrie algébrique II, Étude globale élémentaire de quelques
+           classes de morphismes, Inst. Hautes Études Sci. Publ. Math. No. 8, 222 pp, 1961.
+[Gro61b]   A. Grothendieck, Éléments de géométrie algébrique III, Étude cohomologique des faisceaux
+           cohérents I, Inst. Hautes Études Sci. Publ. Math. No. 11, 167 pp, 1961.
+[Gro65]    A. Grothendieck, Éléments de géométrie algébrique. IV. Étude locale des schémas et des
+           morphismes de schémas. II. (French) Inst. Hautes Études Sci. Publ. Math. No. 24, 231 pp,
+           1965.
+
+
+
+
+                                                  26
+[Har77]    R. Hartshorne, Algebraic geometry, Graduate Texts in Mathematics, No. 52, Springer-Verlag,
+           New York-Heidelberg, 1977.
+[Hur1891] A. Hurwitz, Über die angenäherte Darstellung der Irrationalzahlen durch rationale Brüche,
+          Math. Ann. 46 (1891), 279-284.
+[Jun42]    H. W. E. Jung, Über ganze birationale Transformationen der Ebene, J. Reine Angew. Math.
+           184 (1942), 161-174.
+[KL98]     J.-P. Kahane, P.-G. Lemarié-Rieusset, Séries de Fourier et ondelettes, Cassini, ISBN: 2-84225-
+           001-X, 1998
+[Kam79]    T. Kambayashi, Automorphism group of a polynomial ring and algebraic group action on an
+           affine space, J. Algebra 60 (1979), no. 2, 439-451.
+[Kul53]    W. van der Kulk, On polynomial rings in two variables, Nieuw. Arch. Wisk. (3) 1 (1953),
+           33-41.
+[Lio1844a] J. Liouville, Sur des classes très étendues de quantités dont la valeur n’est ni algébrique, ni
+           même réductible à des irrationnelles algébriques, C.R. Acad. Sci. Paris, 18 (1844), 883-885.
+[Lio1844b] J. Liouville, Nouvelle démonstration d’un théorème sur les irrationnelles algébriques inséré
+           dans le compte rendu de la dernière séance, C.R. Acad. Sci. Paris, 18 (1844), 910-911.
+[Mal99]    S. Mallat, A wavelet tour of signal processing, 2nd edition. Academic Press, Inc., San Diego,
+           CA, 1999.
+[MFK94]    D. Mumford, J. Fogarty, F. Kirwan, Geometric invariant theory. Third edition. Ergebnisse
+           der Mathematik und ihrer Grenzgebiete (2) [Results in Mathematics and Related Areas (2)],
+           34. Springer-Verlag, Berlin, 1994.
+[Mur67]    J. P. Murre, Lectures on an introduction to Grothendieck’s theory of the fundamental group,
+           Notes by S. Anantharaman, Tata Institute of Fundamental Research Lectures on Mathematics
+           No 40, Tata Institute of Fundamental Research, Bombay, 176 pp, 1967.
+[Nag72]    M. Nagata, On automorphism group of k[x,y], Lecture Notes in Math., Kyoto Univ., 5, (1972).
+[Rit22]    J. F. Ritt, Prime and composite polynomials. Trans. Amer. Math. Soc. 23 (1922), no. 1,
+           51-66.
+[Rot55]    K. F. Roth, Rational approximations to algebraic numbers, Mathematika 2 (1955), 1-20;
+           corrigendum, 168.
+[Rui93]    J. M. Ruiz, The basic theory of power series. Advanced Lectures in Mathematics. Friedr.
+           Vieweg & Sohn, Braunschweig, 1993.
+[Sha66]    I. R. Shafarevich, On some infinite-dimensional groups, Rend. Mat. e Appl. (5) 25 (1966),
+           no. 1-2, 208-212.
+[Sha82]    I. R. Shafarevich, On some infinite-dimensional groups II, Math. USSR Izv., 18 (1982), 214-
+           226.
+[Sta96]    R. P. Stanley, Combinatorics and commutative algebra, Second edition, Progress in Mathe-
+           matics 41, Birkäuser Boston, Inc., Boston, MA, 164 pp, ISBN 0-8176-3836-9, 1996.
+[Suz74]    M. Suzuki, Propriétés topologiques des polynômes de deux variables complexes et automor-
+           phismes algébriques de l’espace C2 , J. Math. Soc. Japan. 26 (1974), 241-257.
+[Wey31]    H. Weyl, The theory of groups and quantum mechanics. Dutton, New York, 1931.
+[Wri79]    D. Wright, Abelian subgroups of Autk (k[X,Y]) and applications to actions on the affine plane,
+           Illinois J. Math., 23.4 (1979), 579-634.
+
+
+
+
+                                                   27
+

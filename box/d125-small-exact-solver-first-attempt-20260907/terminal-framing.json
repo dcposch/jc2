@@ -1,0 +1,28 @@
+{
+  "G_BEGIN": [],
+  "G_END_count": 0,
+  "I_BEGIN": [
+    "I_BEGIN 803"
+  ],
+  "I_END_count": 1,
+  "I_SIZE": [
+    "I_SIZE 554"
+  ],
+  "I_indexed_lines": 803,
+  "T_BEGIN": [],
+  "input_prefix_byte_identical": true,
+  "new_suffix": "option(redSB); short=0;\nint ci;\nprint(\"JC2CERT 1 b8db27661d1bfd3dcc5dfe1d1271b78c3f6375e06201654977a51380cd6ebcac ccd93ccf39b0109a36dc89d54f1fd281bcef17b1dc5fab3c65f2988027333d73\");\nprint(\"I_SIZE \"+string(size(I)));\nprint(\"I_BEGIN \"+string(ncols(matrix(I))));\nfor(ci=1;ci<=ncols(matrix(I));ci++){print(\"I \"+string(ci)+\" \"+string(I[ci]));}\nprint(\"I_END\");\nideal G=slimgb(I);\nprint(\"G_BEGIN \"+string(ncols(matrix(G))));\nfor(ci=1;ci<=ncols(matrix(G));ci++){print(\"G \"+string(ci)+\" \"+string(G[ci]));}\nprint(\"G_END\");\nint hasunit=0;\nfor(ci=1;ci<=ncols(matrix(G));ci++){if(G[ci]!=0 && deg(G[ci])==0){hasunit=1;}}\nif(hasunit){\nmatrix T=lift(I,ideal(1));\nmatrix CHECK=matrix(I)*T;\nprint(\"T_BEGIN \"+string(nrows(T)));\nfor(ci=1;ci<=nrows(T);ci++){print(\"T \"+string(ci)+\" \"+string(T[ci,1]));}\nprint(\"T_END\");\nif(nrows(CHECK)==1 && ncols(CHECK)==1 && ncols(T)==1){print(\"CHECK \"+string(CHECK[1,1]));}\nprint(\"END UNIT\");\n}else{print(\"END NONUNIT\");}\nquit;\n",
+  "prefix_bytes": 707596,
+  "prefix_sha256": "6db6990b283359d5f7ea959175121968e252d4dad56fd55a319eaa421c35ac2a",
+  "source_sha256": "c089c33301e3889e0c20527386719f411907cf2957ecfad3d93c65f7be24e718",
+  "stderr_bytes": 0,
+  "stdout_lines": 809,
+  "tail": [
+    "I 802 0",
+    "I 803 0",
+    "I_END",
+    "",
+    "halt 1"
+  ],
+  "terminal_MARKERS": []
+}

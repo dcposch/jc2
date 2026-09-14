@@ -1,0 +1,20 @@
+                                                                            1
+Corollary 7.9. Let (P, Q) be a standard (m, n)-pair in L. Write (a, b) := m   en1,0 (P ). Then
+(a, b) ∈ N × N and gcd(a, b) > 2. Furthermore B 6= p and B 6= 2p for any prime p, where B is
+as at the beginning of Section 4.
+Proof. By Remark 5.12 we know that (a, b) is the first component of a regular corner of (P, Q).
+Hence, by Remark 5.8 we have (a, b) ∈ N × N and by Proposition 5.19 we know gcd(a, b) > 1.
+Next we discard gcd(a, b) = 2. Let k be the number of regular corners in A(P ). If k = 0, then
+gcd(a, b) = 2 contradicts Proposition 7.8(4). Assume k > 0. Then (a, b) = (ak , bk ) and the very
+definitions of qk and dk show that qk | gcd(a, b) and dk | gcd(a, b). Moreover, by Theorem 7.6(8)
+we have q0 |dk , q0 ∤ d0 and qk ∤ q0 . Hence gcd(a, b) is a composite number and so gcd(a, b) > 2.
+   Now assume that (P, Q) is as in Corollary 5.21. In particular,
+                                         1                        1              1
+        B = gcd(v1,1 (P ), v1,1 (Q)) =     v1,1 (P ) and (a, b) =   en1,0 (P ) =   st1,1 (P ),
+                                         m                        m              m
+and so a + b = B, which implies gcd(a, b) | B. Now, if B = p or B = 2p for some prime p, then
+gcd(a, b) ∈ {1, 2, p, 2p}. Since gcd(a, b) > 2 and gcd(a, b) = 2p is impossible, we have to discard
+only the case gcd(a, b) = p. But in that case a = b = p, which contradicts a < b and finishes the
+proof.                                                                                           
+
+   In the following proposition we give a condition under which the Newton polygon of P has no

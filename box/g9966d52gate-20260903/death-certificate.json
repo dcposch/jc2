@@ -1,0 +1,74 @@
+{
+  "all_declared_branches_dead": true,
+  "certificates": [
+    {
+      "Qstar_pivot_count": 35,
+      "Qstar_pivots_checked_nonzero_rational": true,
+      "branch": "delta2",
+      "constant": "6264",
+      "emitted_singular_input": {
+        "path": "/home/ubuntu/jc2/box/g9966band-20260903/runs/delta2/stage4.sing",
+        "sha256": "1657767c5c90ca5f05629c8872174ec93ea4828fb83174443ee159f00d2491e3"
+      },
+      "independent_singular_replay": {
+        "basis": "1",
+        "controls": [
+          "0",
+          "1",
+          "0"
+        ],
+        "dimension": -1,
+        "output_sha256": "236517b4a8e5567c586d39194059d49207001416a1d922efaec1fc3d2b9c7b73"
+      },
+      "localization_parameter_excluded_from_pivots": true,
+      "localized_unit_ideal": true,
+      "membership_witness_over_Q": "1 = (1/6264)*stage4_J_d159_k35",
+      "raw_residue_unit_ideal": true,
+      "reduced_row": "stage4_J_d159_k35",
+      "stage": 4,
+      "stage_json": {
+        "path": "/home/ubuntu/jc2/box/g9966band-20260903/runs/delta2/stage4.json",
+        "sha256": "5e9dd9516335ef5afa0bd956d014cf8058050601ea960e284b6e5b0a6effef51"
+      },
+      "verdict": "DEAD"
+    },
+    {
+      "Qstar_pivot_count": 66,
+      "Qstar_pivots_checked_nonzero_rational": true,
+      "branch": "delta52",
+      "constant": "64",
+      "emitted_singular_input": {
+        "path": "/home/ubuntu/jc2/box/g9966d52gate-20260903/runs/delta52/stage8.sing",
+        "sha256": "36f7f21f9faa3f7fec6b1d9353a194c17c6aecb8d2a5c2e48096b680c6e77b2e"
+      },
+      "independent_singular_replay": {
+        "basis": "1",
+        "controls": [
+          "0",
+          "1",
+          "0"
+        ],
+        "dimension": -1,
+        "output_sha256": "236517b4a8e5567c586d39194059d49207001416a1d922efaec1fc3d2b9c7b73"
+      },
+      "localization_parameter_excluded_from_pivots": true,
+      "localized_unit_ideal": true,
+      "membership_witness_over_Q": "1 = (1/64)*stage8_G_local16_coord0",
+      "raw_residue_unit_ideal": true,
+      "reduced_row": "stage8_G_local16_coord0",
+      "stage": 8,
+      "stage_json": {
+        "path": "/home/ubuntu/jc2/box/g9966d52gate-20260903/runs/delta52/stage8.json",
+        "sha256": "095c340d7729f97df9a1f1f4709c5afcde00be32fac15cb3ced540e4ae15ccb9"
+      },
+      "verdict": "DEAD"
+    }
+  ],
+  "coefficient_field": "Q",
+  "engine": {
+    "path": "/home/ubuntu/jc2/box/g9966band-20260903/band_engine.py",
+    "sha256": "3bd2937d75d59d59edeca1b89eba286fd2711f2d608109e7fd8971b64e059ac9"
+  },
+  "schema": "g9966-delta52-kill-gate-certificate-v1",
+  "typed_chart_verdict": "NO-SURVIVING-BRANCH[DECLARED-(99,66)-JOINT-CHART]"
+}

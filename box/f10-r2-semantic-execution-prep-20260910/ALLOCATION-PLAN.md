@@ -1,0 +1,9 @@
+# ROOT semantic6/10 execution: fresh worker allocation
+2026-09-10 14:01 UTC prospective allocation. Owner /root.
+ONLY the approved12-child batch using mutator a896a809/runtime6c232bb0/unchanged five science files/CAPRUN4435279d. FIRST combined static gate469fd1c7 accepted. No positive rerun, no third semantic control, no cap increase.
+Fresh c7i.xlarge x86/4vCPU/8GiB is allocated only for active metadata registration, deployment and this batch. Existing nine workers are TERMINATED; none restarted. Standard quota freshly queried1920vCPU, aggregate types-only use84vCPU, proposed88. No protected instance metadata/process/control.
+Fleet AMI ami-066263bf15bd856de available, root100GiB/snap0bf84cf821e71e45c. Root DeleteOnTermination=false FROM LAUNCH, API termination unlocked. Use minimal cloud-init key plus package-timer disable; NO apt/pip/CAS/import/provisioning payload. SSH exact new ID/private IP only. Native closure must be observed fresh after ready.
+Original worker emergency termination14:35:00UTC will be armed once exact new instance ID exists and before scientific execution, with root volume already retained. Planned mathematical deadline14:28:00+00:00, durable task14:29:00+00:00, independent SYSTEMTERM14:29:15/KILL14:29:20 before scientific launch; setup admission before14:16:00. These clocks NEVER RESET. Joint600wall500CPU2GiB16MiB and exact profiles unchanged. Every missed deadline/pin/missing prerequisite STOP, no unchanged retry.
+Base /opt/jc2-r2-controls-20260910T1400, output /run/jc2-r2-controls-20260910T1400, durable /var/lib/jc2-r2-controls-20260910T1400, staging /home/ubuntu/jc2-r2-controls-20260910T1400/stage. Actual boot/ns/native/registration not yet observed or enabled.
+Harvest/hash/fsync/custody and exact terminal process checks before normal early termination; keep root EBS recoverable. No idle worker retention. New sources immutable; all authored files apply_patch only.
+

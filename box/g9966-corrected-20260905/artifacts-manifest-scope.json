@@ -1,0 +1,17 @@
+{
+  "scope": "All regular lane artifact files under this directory at final quiescence, except the declared exclusions. The report pins this manifest hash.",
+  "excluded_exact": [
+    "artifacts.sha256",
+    "artifacts-hash-check.json",
+    "report-draft.md",
+    "seal-check.json",
+    "seal-check.txt"
+  ],
+  "excluded_components": [
+    "__pycache__",
+    ".git"
+  ],
+  "exclude_symlinks": true,
+  "final_report": "xmodel/g9966-corrected-engine-astra-20260905.md",
+  "charged_input_manifest": "inputs.sha256"
+}

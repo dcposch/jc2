@@ -1,0 +1,27 @@
+option(redSB); short=0;
+// Normalized-variable auxiliary calculation for the exact-Q B12/Q1 core.
+ring R=0,(v6,v12,v17,v21,v24,v26,v38,v49,v59,v68,v76),dp;
+poly p1=37*v38+21*v6-37*v12;
+poly p2=v6^2;
+poly p3=33*v38^2+36*v6*v38-7*v12*v38-132*v6*v49-43*v6*v12+7*v12^2+110*v6*v17;
+poly p4=147*v38*v49-59*v49^2-118*v38*v59+20*v17*v38-78*v21*v38-294*v12*v49+236*v17*v49-294*v6*v59+236*v12*v59+236*v6*v68+274*v12*v17-236*v17^2+216*v6*v21-158*v12*v21-100*v6*v24;
+poly H=70*v49^2+140*v38*v59-111*v49*v59-111*v38*v68+66*v21*v38-124*v24*v38-280*v17*v49+222*v21*v49-280*v12*v59+222*v17*v59-280*v6*v68+222*v12*v68+222*v6*v76+280*v17^2+214*v12*v21-444*v17*v21+156*v6*v24-98*v12*v24-40*v6*v26;
+ideal I=p1,p2,p3,p4;
+int t=timer;
+ideal G=std(I);
+print("NIL__STD_SECONDS "+string(timer-t));
+int n;
+poly r;
+for (n=1; n<=16; n++) {
+  r=reduce(H^n,G);
+  print("NIL__POWER "+string(n)+" ZERO "+string(r==0)+" TERMS "+string(size(r)));
+  if (r==0) { break; }
+}
+if (r==0) {
+  matrix T=lift(I,ideal(H^n));
+  matrix CHECK=matrix(I)*T;
+  print("NIL__LIFT_POWER "+string(n));
+  print("NIL__DIRECT_CHECK "+string(CHECK[1,1]==H^n));
+  print("NIL__COFACTORS_BEGIN"); print(T); print("NIL__COFACTORS_END");
+}
+quit;

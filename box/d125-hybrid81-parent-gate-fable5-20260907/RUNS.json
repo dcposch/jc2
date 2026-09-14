@@ -1,0 +1,12 @@
+{
+ "caps": "timeout 30s; prlimit --cpu=25:25 --as=536870912:536870912 --fsize=67108864:67108864 --core=0:0; /usr/bin/python3 -I -B [-O]",
+ "python": "3.12.3",
+ "inputs_dir": "/tmp/jc2-lane.Fwngeq/inputs",
+ "runs": [
+  {"script": "check.py (charged)", "mode": "normal", "rc": 0, "time": "0.22 wall 0.20 user 0.01 sys 26696 maxrss_KiB", "stdout_sha256": "9097ba47ce0ac17eba9e4a5a318210df029238394791aba94389005b5e92b470", "stderr_bytes": 0, "payload_cases": 94},
+  {"script": "check.py (charged)", "mode": "optimized", "rc": 0, "time": "0.53 wall 0.51 user 0.01 sys 29976 maxrss_KiB", "stdout_sha256": "9097ba47ce0ac17eba9e4a5a318210df029238394791aba94389005b5e92b470", "stderr_bytes": 0, "payload_cases": 94},
+  {"script": "fable_controls.py (own)", "mode": "normal", "rc": 0, "time": "0.16 wall 0.14 user 0.01 sys 27820 maxrss_KiB", "stdout_sha256": "2bda9bdd6c3ac8504ad0a6836057fd17bad635fa83b773b1784a4045d465a59a", "stderr_bytes": 0, "cases": 22},
+  {"script": "fable_controls.py (own)", "mode": "optimized", "rc": 0, "time": "0.47 wall 0.45 user 0.01 sys 30612 maxrss_KiB", "stdout_sha256": "3ca24febc1abeaf926585e0cb89b86fee4e4b81d9a2cfc811a8b4a458978b543", "stderr_bytes": 0, "cases": 22}
+ ],
+ "engine_run": false, "authority_issued": false, "network": false, "singular": false
+}

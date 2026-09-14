@@ -1,0 +1,63 @@
+{
+  "argv_count": 6,
+  "argv_sha256": "c89a5474618b888cd1150de04796b22d7dc6b7086af0e14860fca58827538940",
+  "caps": {
+    "cpu_seconds": 300,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 4294967296,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 0.25,
+    "wall_seconds": 300.0
+  },
+  "child_exit_code": 0,
+  "child_returncode": 0,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/d125-hybrid-affine-pilot-20260907",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/d125-hybrid-affine-pilot-20260907",
+  "max_observed_group_rss_bytes": 24084480,
+  "pgid": 1766,
+  "pid": 1766,
+  "resource": null,
+  "runner_exit_code": 0,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=bef732b9-38e5-4a9a-8f93-77203426d2b8;start_ticks=142914",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 136292,
+    "path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/pilot.stderr",
+    "sha256": "79369b8cdaa2bc3958089e91470405839858af409d868913ac7871c419396b78"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 350,
+    "path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/pilot.stdout",
+    "sha256": "39c64d3f3d275e3cc54674ad60c25cd565f90d7a40411c21bc62c2795118875c"
+  },
+  "telemetry_path": "/home/ubuntu/d125-hybrid-affine-pilot-20260907/pilot.telemetry.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-07T05:48:19.797494Z",
+  "utc_start": "2026-09-07T05:48:16.198359Z",
+  "wall_elapsed_seconds": 3.599142968
+}

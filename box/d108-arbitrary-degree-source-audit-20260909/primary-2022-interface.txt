@@ -1,0 +1,370 @@
+DOCUMENTARY EXCERPTS; one-indexed inclusive source lines. Source: box/ideation-20260906T1210Z/ggvh-2204.14178v1.txt
+Ranges: 70,133; 228,347; 492,636; 657,666; 982,1000
+
+=== SOURCE LINES 70,133 ===
+125, following [5]. There are 10 cases, from which we consider 5 to be discarded already by pre-
+vious work of different authors. If we assume deg(P ) < deg(Q), then the remaining 5 cases
+satisfy
+                       (deg(P ), deg(Q)) ∈ {(56, 84), (66, 99), (72, 108), (80, 120)},
+where there are two cases with (deg(P ), deg(Q)) = (72, 108). In section 3 we first discard the
+case max{deg(P ), deg(Q)} = 120, as a straightforward application of one of our previous results
+in [2]. Then we discard max{deg(P ), deg(Q)} = 84 using an inequality for the intersection
+number proved in [6]. In section 4 we apply some transformation of K[x, y] introduced in [1]
+in order to reduce the size of the support of P and Q in all cases except in the discarded case
+(deg(P ), deg(Q)) = (80, 120). In section 5 we use the systems of polynomial equations associated
+to a possible counterexample as in [3] in order to discard the case (deg(P ), deg(Q)) = (66, 99) and
+one of the cases with (deg(P ), deg(Q)) = (72, 108). For the other case with (deg(P ), deg(Q)) =
+(72, 108) we couldn’t solve the corresponding system of polynomial equations, thus it is left open.
+   In section 6 we provide another proof of the case (deg(P ), deg(Q)) = (56, 84), without using
+the machinery of intersection numbers.
+   We want to emphasize that all the techniques developed in each of the articles [2], [3] and [5]
+are very useful in discarding some families of possible counterexamples. However, the Jacobian
+conjecture is a very hard problem, so we have to combine these techniques in order to be able
+to increase the lower bound of 100 for max{deg(P ), deg(Q)} established in 1983 by Moh in [10],
+up to 108. With enough computing power we would be able to raise it up from 108 to 125, since
+there is only one case left.
+   Since this article continues the work in [1], [2], [3] and [5], we will use the notations and
+conventions established in these articles.
+
+                             2    Complete list of small cases
+Based on the tables obtained in sections 5 and 6 of [5], we begin with the study of the cases with
+max{deg(P ), deg(Q)} < 125. The aim is to prove the following result:
+Theorem 2.1. If (P, Q) is a counterexample to the Jacobian Conjecture, then we have either
+max{deg(P ), deg(Q)} ≥ 125, or (deg(P ), deg(Q)) ∈ {(72, 108), (108, 72)}.
+   Following [5], we take the smallest members of the families F1 , F2 , F3 , F9 , F17 , F22 in section 5
+of [5] and three additional cases in the tables of section 6 of [5]. The following table presents the
+10 resulting cases. Five of them have been shown to be impossible in various cited articles: In [10]
+the cases with max{deg(P ), deg(Q)} ∈ {64, 75, 84, 99} have been considered, but only in the case
+64 a complete proof is given. This case was also computed by Heitman in [7]. In [4] this case and
+the case (deg P, deg Q) = (80, 112) have been discarded. The case max{deg(P ), deg(Q)} = 75
+of Moh in [10], corresponds to two cases in two different families in [5, section 5], and has
+been discarded in [3, section 5]. The case max{deg(P ), deg(Q)} = 120 can be discarded by
+a straightforward argument mentioned in [2, Remark 3.31], which we will describe in detail
+in the next section. In that section we will discard also the case max{deg(P ), deg(Q)} = 84
+using [6, Theorem 7.3].
+INCREASING THE DEGREE OF A POSSIBLE COUNTEREXAMPLE TO THE JACOBIAN CONJECTURE FROM 100 TO 108
+                                                                                            3
+
+
+
+
+               A0      (m, n)   max{deg(P ), deg(Q)}              Discarded?
+             (4, 12)   (3,4)              64                 [4, section 3.5],[10], [7]
+             (4, 12)   (5,7)             112                      [4, section 3.5]
+             (5, 20)   (2,3)              75            [3, section 5], no detail in [10]
+             (5, 20)   (3,2)              75            [3, section 5], no detail in [10]
+             (7, 21)   (2,3)              84                     no detail in [10]
+             (8, 24)   (2,3)              96                   [5, Proposition 6.1]
+             (8, 28)   *(3,2)            108                              -
+             (8, 32)   (3,2)             120                              -
+             (9, 24)   (2,3)              99                     no detail in [10]
+             (9, 27)   (2,3)             108                              -
+We highlight with red the cases that we consider solved. Four of the remaining five cases will be
+discarded in this paper. In section 3 we will discard the cases max{deg(P ), deg(Q)} = 84 and
+max{deg(P ), deg(Q)} = 120. The case max{deg(P ), deg(Q)} = 84 uses one of the main results
+of [6]. In section 6 we offer another proof for this case.
+
+
+     3   The cases max{deg(P ), deg(Q)} = 84 and max{deg(P ), deg(Q)} = 120
+
+=== SOURCE LINES 228,347 ===
+Proposition 4.1 (Case (9,27)). If there is a counterexample to the Jacobian Conjecture in the
+case (9, 27), then there exist P, Q ∈ L(1) with [P, Q] = x and
+                           N (P ) = {(0, 0), (1, 1), (6, 16), (6, 18), (0, 18)}
+                           N (Q) = {(0, 0), (1, 0), (9, 24), (9, 27), (0, 27)}
+Proof. The corners of the polygons of P and Q are {(0, 0), (1, 0), (9, 24), (9, 27), (0, 9)} multi-
+plied by (m, n) = (2, 3) respectively. The edge {(9, 27), (0, 9)} is given by y 9 (xy 2 − α1 )9 , be-
+cause enF = 91 (9, 27) when looking at its corresponding direction, by [1, Corollary 7.4]. After
+applying the automorphism φ1 with φ1 (x) = y and φ1 (y) = x and then the automorphism
+φ2 with φ2 (x) = x and φ2 (y) = y + α1 x−2 we transform the corners of the polygons to
+{(0, 0), (27, 9), (24, 9), (0, 1), (−2, 0)}, again multiplied by (2, 3) respectively.
+
+
+         y                                  y
+
+
+
+                          A0 = (9, 27)
+                          A1 = (9, 24)
+
+                                                                                         x
+                             x 7→ y                                  x 7→ x
+                             y 7→ x         y                        y 7→ y + α1 x−2
+
+
+
+
+                             x                                                           x
+
+                         Figure 3. Applying φ2 ◦ φ1 to the case (9, 27)
+
+   The edge {(24, 9), (0, 1)} is given by y(yx3 − α2 )8 for some constant α2 (this corresponds to
+the edge {(1, 0), (9, 24)} in the original polygon which is of this form). Apply the automorphism
+φ3 given by φ3 (x) = x and φ3 (y) = y + α2 x−3 to reduce this edge to {(24, 9), (21, 8)}. Let us
+analyze the possibilities for the opposite vertex in the other edge containing (21, 8).
+6    JORGE A. GUCCIONE, JUAN J. GUCCIONE, RODRIGO HORRUITINER, AND CHRISTIAN VALQUI
+
+
+   To do this, set (ρ2 , σ2 ) = min{SuccP (−1, 3), SuccQ (−1, 3)} Then if enρ2 ,σ2 (P ) ∼ enρ2 ,σ2 (Q),
+the point (a′ , b′ ) = 12 enρ2 ,σ2 (P ) = 13 enρ2 ,σ2 (Q) could be at any of
+{(−2, 0), (−1, 0), (1, 1), (2, 1), (4, 2), (5, 2), (7, 3), (10, 4), (13, 5)}. To discard all but (5, 2) and
+(13, 5), it is enough to check that there cannot exist an element F in the other cases. The
+corner of F which is not (1, 1) must be of the form (1, 1) + c(21 − a′ , 8 − b′ )/ gcd(21 − a′ , 8 − b′ )
+for some positive integer c, so that
+                                              (21 − a′ , 8 − b′ )    p
+                               (1, 1) + c                ′        ′
+                                                                    = (21, 8).
+                                            gcd(21 − a , 8 − b )     q
+Computing v−8,21 on both sides of this equality gives 13 gcd(21 − a′ , 8 − b′ ) + c(8a′ − 21b′) = 0,
+which implies that 21b′ − 8a′ |13 gcd(21 − a′ , 8 − b′ ). For each of the possibilities for (a′ , b′ ) above,
+we can discard (1, 1) as (a′ , b′ ) cannot lie in the diagonal, and for the rest, only (5, 2) and (13, 5)
+satisfy this divisibility condition, as can be seen in the table below.
+
+
+                              (a′ , b′ )   21b′ − 8a′   13 gcd(21 − a′ , 8 − b′ )
+                              (−2, 0)      16                      13
+                              (−1, 0)      8                       26
+                               (2, 1)      5                       13
+                               (4, 2)      10                      13
+                               (5, 2)      2                       26
+                               (7, 3)      7                       13
+                              (10, 4)      4                       13
+                              (13, 5)      1                       13
+
+   Whether we continue assuming (a′ , b′ ) ∈ {(5, 2), (13, 5)} or we consider instead the case
+enρ2 ,σ2 (P ) 6∼ enρ2 ,σ2 (Q), we can apply [1, Proposition 8.2] and get the existence of k ∈ N
+with
+             (k + 1)b < a         and       {enρ,σ (P ), enρ,σ (Q)} = {(−k, 0), (k + 1, 1)},
+
+                     y
+
+
+
+                                                        P
+                     y                                             x
+
+
+
+
+                                                                        Q
+
+                                                                                     x
+
+                                   Figure 4. The shape of P and Q
+INCREASING THE DEGREE OF A POSSIBLE COUNTEREXAMPLE TO THE JACOBIAN CONJECTURE FROM 100 TO 108
+                                                                                            7
+
+
+   where (a, b) is one of {(21, 8), (13, 5), (5, 2)} and (ρ, σ) is the direction corresponding to the
+edge in question. In all cases this gives k = 1 and so {enρ,σ (P ), enρ,σ (Q)} = {(−1, 0), (2, 1)}, with
+the same direction (ρ, σ) = (−3, 8). (Note that if we started assuming (a′ , b′ ) ∈ {(5, 2), (13, 5)}
+then we have reached a contradiction, as we have a different end for the direction (−3, 8).) Since
+st−3,8 (P ) = (42, 16) and st−3,8 (Q) = (63, 24), we get that en−3,8 (P ) = (2, 1) and en−3,8 (Q) =
+(−1, 0). In fact, (−3, 8) × ((42, 16) − (−1, 0)) 6= 0.
+
+                                                       y
+
+
+                               y
+
+
+
+
+                                                                       Q
+                                            P
+
+
+                                                   x                         x
+
+                  Figure 5. The shape of P and Q according to Proposition 4.1
+
+   For convenience, we now apply the morphism ϕ such that ϕ(x) = x−1 and ϕ(y) = x3 y. Note
+that this is an automorphism of L(1) = K[x, x−1 , y] but not of K[x, y]. By the chain rule we
+have
+                        [ϕ(P ), ϕ(Q)] = ϕ[P, Q][ϕ(x), ϕ(y)] = −[P, Q]x,
+and multiplying by a nonzero constant we can assume [ϕ(P ), ϕ(Q)] = x. This transforms the
+polygons of P and Q into
+                             N (P ) = {(0, 0), (1, 1), (6, 16), (6, 18), (0, 18)}
+                             N (Q) = {(0, 0), (1, 0), (9, 24), (9, 27), (0, 27)}
+as desired.                                                                                                 
+
+
+=== SOURCE LINES 492,636 ===
+Proposition 4.3 (Case (8,28)). If there is a counterexample to the Jacobian Conjecture in the
+case (8, 28), then there exist P, Q ∈ L(1) with [P, Q] = x2 and one of the following cases holds:
+    (1) N (P ) = {(0, 0), (1, 0), (8, 14), (8, 16), (0, 8)}, N (Q) = {(0, 0), (2, 1), (12, 21), (12, 24), (0, 12)}.
+    (2) N (P ) = {(0, 0), (1, 0), (8, 14), (8, 16)}, N (Q) = {(0, 0), (2, 1), (12, 21), (12, 24)}
+Proof. We first prove that the corners of the polygons of P and Q in this case are given by
+{(0, 0), (1, 0), (8, 28), (0, 4)}, multiplied by (m, n) = (3, 2).
+   For this we apply the automorphism φ1 with φ1 (x) = y, φ1 (y) = x and we use [1, Corollary 7.4]
+with (ρ0 , σ0 ) = (−1, 4), l = 1 and (a/l, b) = (28, 8). Then en−1,4 (F ) = (21, 6) = 34 (28, 8), which
+means that q = 4 in the corollary, and for (ρ, σ) = PredP (−1, 4) we have (ρ, σ) ∈](0, −1), (1, −1)]
+and there exists a (ρ, σ)-homogeneous element R, such that ℓρ,σ (P ) = λRqm = λR4m and
+vρ,σ (R) > 0. Thus enρ,σ (R) = (7, 2), and there exists a (ρ, σ)-homogeneous element G satisfying
+[R, G] = Ri for some i. Therefore, we are in the setting of [2, Proposition 3.12]. By [6, Proposition
+2.5], necessarily PredP (1, 0) ∈ {(1, −2), (1, −3)}.
+
+               y
+                             A0 = (8, 28)
+
+                                                               y
+                                                  x 7→ y
+                                                  y 7→ x                                   (28,8)
+
+
+
+                   A′0 = (1, 0)          x                         (4,0) (12,0)                         x
+
+
+                                    Figure 10. PredP (1, 0) ∈ {(1, −2), (1, −3)}
+
+   By the same proposition, if PredP (1, 0) = (1, −2), then ℓ1,−2 (P ) = λ(z − λ1 )8m , which implies
+that if we apply the morphism given by ϕ(x) = x and ϕ(y) = y + λ1 x−2 , then Predϕ(P ) (1, 0) ∈
+{(1, −3), (2, −7)}. If Pred ϕ(P )(1, 0) = (2, −7) then the lower side of ϕ(P ) has only the corners
+m(−2, 0), (0, 0) and m(28, 8).
+   If Predϕ(P ) (1, 0) = (1, −3), then there are one or two different linear factors in ℓ1,−3 (ϕ(P )).
+If there is only one factor, we apply the morphism x 7→ x, y 7→ y + λx−3 for adequate λ and
+obtain that the lower side of P has only the corners m(−3, 0), (0, 0) and m(28, 8). If are two
+INCREASING THE DEGREE OF A POSSIBLE COUNTEREXAMPLE TO THE JACOBIAN CONJECTURE FROM 100 TO 108
+                                                                                           11
+
+
+factors in ℓ1,−3 (P ), then ℓ1,−3 (P ) = λx4m (x3 y − α1 )4m (x3 y − α2 )4m . We apply the morphism
+x 7→ x, y 7→ y + α1 x−3 and obtain that the lower side of P has only the corners m(−3, 0), (0, 0),
+m(16, 4) and m(28, 8).
+   Thus after the transformations we have three possibilities for the Newton polygon of P and
+Q:
+      a) (m, n) times {(−2, 0), (0, 0), (28, 8), (0, 1)},
+      b) (m, n) times {(−3, 0), (0, 0), (28, 8), (0, 1)},
+      c) (m, n) times {(−3, 0), (0, 0), (16, 4), (28, 8), (0, 1)}.
+  y                                                                 y
+                                                 (28, 8)                                                  (28, 8)
+
+
+
+
+                                                                                             (16, 4)
+                                                           x                                                        x
+      1          1                                                         1          1
+      2 N (P ) = 3 N (Q) in the cases a) and b)                            2 N (P ) = 3 N (Q) in the case c)
+
+   In all the three cases the edge {(28, 8), (1, 0)} must be of the form y(x4 y − α)7 , corresponding
+to its form before the transformations. Apply then the automorphism φ3 given by φ3 (x) = x,
+φ3 (y) = y + αx−4 , reducing the edge {(28, 8), (0, 1)} to {(28, 8), (24, 7)}. As in Proposition 4.1,
+one can analyze the possibilities for the opposite vertex (a, b) in the other edge containing (24, 7)
+and obtain that SuccP (−1, 4) = SuccQ (−1, 4) = (−2, 7). We can apply [1, Proposition 8.2] and
+get the existence of k ∈ N with
+
+             (k + 1)b < a              and            {enρ,σ (P ), enρ,σ (Q)} = {(−k, 0), (k + 1, 1)}.
+
+where (a, b) is one of {(24, 7), (17, 5), (10, 3), (3, 1)} and (ρ, σ) is the direction corresponding to
+the edge in question, obtaining k ∈ {1, 2}. The case k = 2 is impossible, as the edges of P and
+Q would have no way of being parallel. In the case k = 1, we can set (enρ,σ (Q), enρ,σ (P )) =
+((2, 1), (−1, 0)). In the first two cases a) and b) we obtain
+
+                                  N (P ) = {(−1, 0), (0, 0), 2(28, 8), 2(24, 7)}
+                                  N (Q) = {(2, 1), (0, 0), 3(28, 8), 3(24, 7)},
+
+                                                           y
+                                                                                                               3(28, 8)
+                                                                                              3(24, 7)
+ y
+                            2(24, 7)     2(28, 8)
+
+
+
+                                                           (2, 1)
+                                             x                                                                      x
+       N (P ) in the cases a) and b)                                    N (Q) in the cases a) and b)
+     whereas in the third case c) we obtain
+
+                            N (P ) = {(−1, 0), (0, 0), 2(16, 4), 2(28, 8), 2(24, 7)}
+                            N (Q) = {(2, 1), (0, 0), 3(16, 4), 3(28, 8), 3(24, 7)}.
+12     JORGE A. GUCCIONE, JUAN J. GUCCIONE, RODRIGO HORRUITINER, AND CHRISTIAN VALQUI
+
+
+                                                               y
+                                                                                                                          3(28, 8)
+                                                                                                    3(24, 7)
+ y
+                              2(24, 7)        2(28, 8)
+
+
+
+                                                               (2, 1)
+                                                x                                                                               x
+           N (P ) in the case c)                                                 N (Q) in the case c)
+   Apply the the morphism ϕ with ϕ(x) = x−1 and ϕ(y) = x4 y. As in Proposition 4.1, this
+is not an automorphism and the chain rule gives [ϕ(P ), ϕ(Q)] = −[P, Q]x2 . A straightforward
+computation shows that in the cases a) and b) the Newton Polygons of P and Q become
+                                    N (P ) = {(0, 0), (1, 0), (8, 14), (8, 16)}
+                                    N (Q) = {(0, 0), (2, 1), (12, 21), (12, 24)},
+                          y                                                                     y
+
+                                             (12, 24)                                                          (12, 24)
+
+y                                                                       y
+                                                    (12, 21)                                                         (12, 21)
+            (8, 16)                                                               (8, 16)
+
+
+                (8, 14)                                                               (8, 14)
+
+
+
+
+                 x                                        x                            x                                    x
+      N (P ) and N (Q) in cases a) and b)                                       N (P ) and N (Q) in case c)
+     and in the case c) it becomes
+                               N (P ) = {(0, 0), (1, 0), (8, 14), (8, 16), (0, 8)}
+                               N (Q) = {(0, 0), (2, 1), (12, 21), (12, 24), (0, 12)}.
+                                                                                                                                
+
+Proposition 4.4 (Case (7,21)). If there is a counterexample to the Jacobian Conjecture in the
+case (7, 21), then there exist P, Q ∈ K[x, y] with [P, Q] = x and
+                                         N (P ) = {(0, 0), 2(2, 0), 2(3, 1), 2(0, 7)}
+                                         N (Q) = {(0, 0), 3(2, 0), 3(3, 1), 3(0, 7)}
+
+Proof. The corners of the polygons of P and Q in this case are {(0, 0), (1, 0), (7, 21), (0, 7)} mul-
+tiplied by (m, n) = (2, 3) respectively (This time, en7,−2 F = 57 (7, 21) for the relevant direction,
+and so q = 7). After the automorphism φ1 with φ1 (x) = y and φ1 (y) = x, we have the polygon
+{(0, 0), (7, 0), (21, 7), (0, 1)}.
+Since q = 7 for the direction (ρ, σ) = (−2, 7), by [1, Corollary 7.4] we know that
+                 ℓ1,−2 (P ) = x28 λp (y − λx−2 )14                 and ℓ1,−2 (Q) = x42 λq (y − λx−2 )21 .
+INCREASING THE DEGREE OF A POSSIBLE COUNTEREXAMPLE TO THE JACOBIAN CONJECTURE FROM 100 TO 108
+                                                                                           13
+
+
+
+=== SOURCE LINES 657,666 ===
+          5    Systems of polynomial equations for (9, 24) and (9, 27)
+In this section we will prove the following theorem.
+Theorem 5.1. There exist no pair of polynomials P, Q ∈ K[x, y] such that
+   (1) [P, Q] = x + g(y) for some g(y) ∈ K[y],
+   (2) en3,−1 (P ) = st1,0 (P ) = 2(3, 8) = (6, 16) and st−1,1 (P ) = en1,0 (P ) = 2(3, 9) = (6, 18),
+   (3) en3,−1 (Q) = st1,0 (Q) = 3(3, 8) = (9, 24) and st−1,1 (Q) = en1,0 (Q) = 3(3, 9) = (9, 27),
+    So we assume that such a pair exists, and we will arrive at a contradiction. By [1, Propo-
+sitions 1.13 and 2.1] there exists a (1, 0)-homogeneous R with ℓ1,0 (P ) = R2 and ℓ1,0 (Q) = R3 .
+Necessarily R = x3 C3 with C3 = y 8 (a0 + a1 y) for some a0 , a1 ∈ K × , and by a linear change of
+variables we may also assume that C3 = y 8 (y + 1).
+
+=== SOURCE LINES 982,1000 ===
+Corollary 5.7. There exist no P, Q ∈ K[x, y] with [P, Q] = x and
+                           N (P ) = {(0, 0), (1, 1), (6, 16), (6, 18), (0, 18)}
+                           N (Q) = {(0, 0), (1, 0), (9, 24), (9, 27), (0, 27)}
+Proof. We claim that ℓ0,1 (P ) = λp y 1 8(x − λ)6 for some λp , λ ∈ K × . If the claim is true, take
+φ ∈ Aut(K[x, y]) with φ(y) = y and φ(x) = x + λ. Then
+                     Succφ(P ) (1, 0) ≥ (−1, 1) and      Succφ(Q) (1, 0) ≥ (−1, 1).          (5.12)
+    Since [φ(P ), φ(Q)] = x + λ, the polynomials φ(P ), φ(Q) satisfy the conditions of Theorem 5.1,
+a contradiction which concludes the proof.
+    In order to prove the claim and (5.12), consider the map ψ : K[x, y] → L(2) given by ψ(x) =
+x1/2 and ψ(y) = y. Then (ψ(P ), ψ(Q)) is an m, n-pair for (m, n) = (2, 3) (see [1, Definition
+                             1
+4.3]), and en1,0 (F ) = /2 3 m en1,0 (P ) for F as in [1, Theorem 2.6]. Hence q = 3 in [1, Corollary
+7.2] and so ℓ0,1 (ψ(P )) is a sixth power, hence so is ℓ0,1 (P ). By the same argument, for (ρ, σ) =
+Succψ(φ(P )) (0, 1) we also have that ℓρ,σ (ψ(φ(P ))) is a sixth power, and since stρ,σ (ψ(φ(P ))) =
+(6, 18), we know that (ρ, σ) ∈ {(−1, 1), (−2, 1), (−3, 1)}, which proves (5.12).                   
+
+                 6    Systems of polynomial equations for (7, 21)
+In this section we will prove the following theorem.
+Theorem 6.1. There exist no pair of polynomials P, Q ∈ K[x, y] such that [P, Q] = x and

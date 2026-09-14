@@ -1,0 +1,18 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is written and sealed at 02:24 UTC, ahead of the 02:29 reserve. Nothing else is pending.
+
+**Outcome: every literal mathematical claim in input1 is CONFIRMED by hand recomputation. No REFUTED item and no GAP in the charged scope.**
+
+Report written and sealed: `xmodel/f10-mixed-cube-asymptotic-gate-fable5-20260913.md`. The file has 1,116 words, one standalone `<!-- BODY-END -->` line at line 162 as the last content, and file SHA-256 `bb042c6abb499c72a883467d041936c6cb0d8aa35242c7de4ed07874df835a6f`. All three charged pins matched before the whole reads and again at postpin. No other file was written.
+
+What I recomputed independently:
+
+- **Coordinates and boundary ideal.** The substitution to a, c, v reproduces phi and the residue form of d_k. At t=5/3 the two equations are exactly d6 = -(5/81)(a^3-9c^2) and G = -(5/27)a^2 c, with a length-7 quotient whose lex Gröbner basis is c^2-a^3/9, a^2c, a^5.
+- **Septic at the singular boundary.** From input2's formulas at t=5/3, U = 3a^2, V = a^2(a+1/9), and P = 9a^7. The Bezout constant A vanishes there, so U is not a unit and the whole boundary support sits on U=0. Input1 correctly derives the branches from the two-equation ideal and uses P only to count roots for small nonzero delta, where A has a simple zero and U is invertible mod P.
+- **Both delta-linear constants.** 1/1458 for d6, -1/30618 for d7, 1/5103 for G, and the truncation constants 2delta/5103 and -delta/5103 in the two shifted polynomials.
+- **Branches.** A^2 C0 = 1/945, A^7 = 1/99225, seven simple solutions, Jacobian 175A^4/2187. On each branch U is nonzero and the guard tends to 1/6561, and seven distinct roots exhaust the degree-7 septic.
+- **Trace.** The determinant identity gives B = -Tr(w A_1 A_2). Reduction mod z^3+az+c gives the stated alpha, beta, gamma, Tr A = 0, and Tr A^2 = 136 a^7/6561 on a^3 = 9c^2. With the constant product -150 a^7/19683, the total is -14 a^7/19683 = -2 delta^2/279006525, identical on all seven branches. The cube control B=0 at delta=0 is reproduced.
+- **Analytic and norm items.** The uniform neighborhood, generic norm order 14 with leading coefficient (-2/279006525)^7, generic coprimality of P and F, and finiteness of the exceptional r are all confirmed, with the epsilon non-effective as the report states.
+
+Two non-formula notes are recorded in the report: the provenance sentence about both initial whole reads is over-stated for the reduction note's first read, and the "generic norm" is the product of B over the roots, not input2's Bezout constant or the resultant. No exit-price assertion was made and no charge_basis line was added.
+DIVERT path=xmodel/f10-mixed-cube-asymptotic-gate-fable5-20260913.md status=CLEAN body_bytes=8966 body_sha256=bb042c6abb499c72a883467d041936c6cb0d8aa35242c7de4ed07874df835a6f

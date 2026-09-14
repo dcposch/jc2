@@ -1,0 +1,403 @@
+{
+  "absent_outputs": [
+    "candidate.json",
+    "decision.receipt.json",
+    "controls.receipt.json",
+    "batch.PASS.json",
+    "check.authority.json",
+    "controls.authority.json"
+  ],
+  "all115_runtime_pins_match": true,
+  "all_pulled_bytes_match": true,
+  "all_source_pins_match": true,
+  "operations": [
+    {
+      "argv_count": 8,
+      "authority_pin": true,
+      "caller_pid": 2236,
+      "child_argv_pin": true,
+      "child_pid": 2237,
+      "name": "dummy-descendant",
+      "namespace": "pid:[4026531836]",
+      "peak_rss_bytes": 80076800,
+      "pgid": 2237,
+      "quiet": true,
+      "resource": "rss",
+      "returncode": 125,
+      "returned_before_cutoff": true,
+      "status": "RESOURCE_CAP",
+      "streams": {
+        "stderr": true,
+        "stdout": true
+      },
+      "telemetry_pin": true,
+      "wall_elapsed_seconds": 0.38491003
+    },
+    {
+      "argv_count": 8,
+      "authority_pin": true,
+      "caller_pid": 2217,
+      "child_argv_pin": true,
+      "child_pid": 2218,
+      "name": "gate-argv",
+      "namespace": "pid:[4026531836]",
+      "peak_rss_bytes": 29868032,
+      "pgid": 2218,
+      "quiet": true,
+      "resource": null,
+      "returncode": 1,
+      "returned_before_cutoff": true,
+      "status": "NORMAL_EXIT",
+      "streams": {
+        "stderr": true,
+        "stdout": true
+      },
+      "telemetry_pin": true,
+      "wall_elapsed_seconds": 0.119256335
+    },
+    {
+      "argv_count": 8,
+      "authority_pin": true,
+      "caller_pid": 2222,
+      "child_argv_pin": true,
+      "child_pid": 2223,
+      "name": "gate-cap",
+      "namespace": "pid:[4026531836]",
+      "peak_rss_bytes": 29802496,
+      "pgid": 2223,
+      "quiet": true,
+      "resource": null,
+      "returncode": 1,
+      "returned_before_cutoff": true,
+      "status": "NORMAL_EXIT",
+      "streams": {
+        "stderr": true,
+        "stdout": true
+      },
+      "telemetry_pin": true,
+      "wall_elapsed_seconds": 0.11779774
+    },
+    {
+      "argv_count": 8,
+      "authority_pin": true,
+      "caller_pid": 2207,
+      "child_argv_pin": true,
+      "child_pid": 2208,
+      "name": "gate-disabled",
+      "namespace": "pid:[4026531836]",
+      "peak_rss_bytes": 30482432,
+      "pgid": 2208,
+      "quiet": true,
+      "resource": null,
+      "returncode": 1,
+      "returned_before_cutoff": true,
+      "status": "NORMAL_EXIT",
+      "streams": {
+        "stderr": true,
+        "stdout": true
+      },
+      "telemetry_pin": true,
+      "wall_elapsed_seconds": 0.123265329
+    },
+    {
+      "argv_count": 8,
+      "authority_pin": true,
+      "caller_pid": 2227,
+      "child_argv_pin": true,
+      "child_pid": 2228,
+      "name": "gate-missing-input",
+      "namespace": "pid:[4026531836]",
+      "peak_rss_bytes": 30289920,
+      "pgid": 2228,
+      "quiet": true,
+      "resource": null,
+      "returncode": 1,
+      "returned_before_cutoff": true,
+      "status": "NORMAL_EXIT",
+      "streams": {
+        "stderr": true,
+        "stdout": true
+      },
+      "telemetry_pin": true,
+      "wall_elapsed_seconds": 0.119903103
+    },
+    {
+      "argv_count": 8,
+      "authority_pin": true,
+      "caller_pid": 2232,
+      "child_argv_pin": true,
+      "child_pid": 2233,
+      "name": "gate-valid",
+      "namespace": "pid:[4026531836]",
+      "peak_rss_bytes": 8949760,
+      "pgid": 2233,
+      "quiet": true,
+      "resource": null,
+      "returncode": 0,
+      "returned_before_cutoff": true,
+      "status": "NORMAL_EXIT",
+      "streams": {
+        "stderr": true,
+        "stdout": true
+      },
+      "telemetry_pin": true,
+      "wall_elapsed_seconds": 0.062577371
+    },
+    {
+      "argv_count": 8,
+      "authority_pin": true,
+      "caller_pid": 2212,
+      "child_argv_pin": true,
+      "child_pid": 2213,
+      "name": "gate-wronghost",
+      "namespace": "pid:[4026531836]",
+      "peak_rss_bytes": 29982720,
+      "pgid": 2213,
+      "quiet": true,
+      "resource": null,
+      "returncode": 1,
+      "returned_before_cutoff": true,
+      "status": "NORMAL_EXIT",
+      "streams": {
+        "stderr": true,
+        "stdout": true
+      },
+      "telemetry_pin": true,
+      "wall_elapsed_seconds": 0.119527528
+    },
+    {
+      "argv_count": 9,
+      "authority_pin": true,
+      "caller_pid": 2250,
+      "child_argv_pin": true,
+      "child_pid": 2251,
+      "name": "solve",
+      "namespace": "pid:[4026531836]",
+      "peak_rss_bytes": 1446326272,
+      "pgid": 2251,
+      "quiet": true,
+      "resource": "cpu",
+      "returncode": 125,
+      "returned_before_cutoff": true,
+      "status": "RESOURCE_CAP",
+      "streams": {
+        "stderr": true,
+        "stdout": true
+      },
+      "telemetry_pin": true,
+      "wall_elapsed_seconds": 550.146585338
+    }
+  ],
+  "registered_postpin_count": 116,
+  "registration_postpin_match": true,
+  "remote_owned_count": 77,
+  "schema": "EXACT-LINEAR-TERMINAL-METADATA/v1",
+  "source_count": 34,
+  "source_pins": [
+    {
+      "current_sha256": "02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/admissibility.md",
+      "sha256": "02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a"
+    },
+    {
+      "current_sha256": "f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-engineering-v2-execution-20260909/remote/frontier.json",
+      "sha256": "f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34"
+    },
+    {
+      "current_sha256": "61d32228570cf4be4f132ec16bb5a9a514e023cbcda56b323d2c9f1ed09d232c",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/READ-SCOPE.md",
+      "sha256": "61d32228570cf4be4f132ec16bb5a9a514e023cbcda56b323d2c9f1ed09d232c"
+    },
+    {
+      "current_sha256": "55ecd93871267be3f77a2d348bd57e397ada317473f13832144d55c62ce74812",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/STATIC-CHECKS.md",
+      "sha256": "55ecd93871267be3f77a2d348bd57e397ada317473f13832144d55c62ce74812"
+    },
+    {
+      "current_sha256": "5c4ddac868a65f43edb8f70481270227c52dfcaf605e4d9fd7d3247c5d24b054",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/VALIDATION.md",
+      "sha256": "5c4ddac868a65f43edb8f70481270227c52dfcaf605e4d9fd7d3247c5d24b054"
+    },
+    {
+      "current_sha256": "7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/algebra.py",
+      "sha256": "7d565299faba1a8921fdb36f345af2cae49254fa59730e0e3c7a1f98e587d9dc"
+    },
+    {
+      "current_sha256": "648b8122a2eac16c233dc451df41b842edcd630e93f15c8c0e8c4fd5af513f46",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/caller.diff",
+      "sha256": "648b8122a2eac16c233dc451df41b842edcd630e93f15c8c0e8c4fd5af513f46"
+    },
+    {
+      "current_sha256": "122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/checker.py",
+      "sha256": "122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69"
+    },
+    {
+      "current_sha256": "9e2062e4c04ab6f3dd14d8f3992d120dc174d380c6ba5071f0d998fb6cf20741",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/custody.json",
+      "sha256": "9e2062e4c04ab6f3dd14d8f3992d120dc174d380c6ba5071f0d998fb6cf20741"
+    },
+    {
+      "current_sha256": "0465819174d170ef1b5bfe1a3fe67da5ef088ba725f7a601953a8595389a4951",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/dispatch.registration.DISABLED.json",
+      "sha256": "0465819174d170ef1b5bfe1a3fe67da5ef088ba725f7a601953a8595389a4951"
+    },
+    {
+      "current_sha256": "0f375da83d17d695cb0d502d842f8be82bf12bb4bdba38d6735ab0ac8efc06ed",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/dispatch_batch.py",
+      "sha256": "0f375da83d17d695cb0d502d842f8be82bf12bb4bdba38d6735ab0ac8efc06ed"
+    },
+    {
+      "current_sha256": "cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/evidence.py",
+      "sha256": "cbe5a9e05c1718cd7911e68302611e0131774e10c501ca0fa890510d0ccb7767"
+    },
+    {
+      "current_sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/execution_gate.py",
+      "sha256": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6"
+    },
+    {
+      "current_sha256": "3e8793b4997754e9f7637ae430665934f7bd4df853686353a5b5b56974b5a667",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/input-pins.json",
+      "sha256": "3e8793b4997754e9f7637ae430665934f7bd4df853686353a5b5b56974b5a667"
+    },
+    {
+      "current_sha256": "6d949256024b21187890d3d352902b94c075635079ee10454d189ae17b77717f",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/inputs-after.sha256",
+      "sha256": "6d949256024b21187890d3d352902b94c075635079ee10454d189ae17b77717f"
+    },
+    {
+      "current_sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/probe.py",
+      "sha256": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7"
+    },
+    {
+      "current_sha256": "d3745057d714914c88bbb11690176e864cab473a999ca723023f2aa7991544c4",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/publication.json",
+      "sha256": "d3745057d714914c88bbb11690176e864cab473a999ca723023f2aa7991544c4"
+    },
+    {
+      "current_sha256": "238ae6743aa00e2ec57495b6bcbee3eda55bb07580a36bf478dcbbe4df9ac105",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/semantic_controls.py",
+      "sha256": "238ae6743aa00e2ec57495b6bcbee3eda55bb07580a36bf478dcbbe4df9ac105"
+    },
+    {
+      "current_sha256": "28df2b213e254b4e985ddecd2769cb1648519e57859a3778d450a2e386e2ad09",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-exact-linear-decision-code-astra-20260909/solver.py",
+      "sha256": "28df2b213e254b4e985ddecd2769cb1648519e57859a3778d450a2e386e2ad09"
+    },
+    {
+      "current_sha256": "2067a839f16a83f5cb2e9d8a3701610a490ea9118a63611ad11bbb224e764522",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-flint-environment-preflight-20260909/RESULT.md",
+      "sha256": "2067a839f16a83f5cb2e9d8a3701610a490ea9118a63611ad11bbb224e764522"
+    },
+    {
+      "current_sha256": "35a9c3229300816d16b53db6d0795ce9d6fd1de1f8a10ff5689c83543036a34f",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-flint-environment-preflight-20260909/environment.json",
+      "sha256": "35a9c3229300816d16b53db6d0795ce9d6fd1de1f8a10ff5689c83543036a34f"
+    },
+    {
+      "current_sha256": "4f33b5d9577369d415306c4a26d540613721d96c3b6a2e9fc3058034ab32ed43",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-linear-compatibility-execution-20260909/custody.json",
+      "sha256": "4f33b5d9577369d415306c4a26d540613721d96c3b6a2e9fc3058034ab32ed43"
+    },
+    {
+      "current_sha256": "90dcf4f31fe0bbd3e23ece21bbcd7a500a720a7dd284b4a760e1ac6678a27c9a",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-univariate-runtime-execution-20260909/ROOT-UNIVARIATE-ACCEPTANCE.json",
+      "sha256": "90dcf4f31fe0bbd3e23ece21bbcd7a500a720a7dd284b4a760e1ac6678a27c9a"
+    },
+    {
+      "current_sha256": "0c22af83d8846a6dbf77b424a482a0963559c9c51151539605f1c9a4f5ad0714",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-univariate-runtime-execution-20260909/remote/univariate.full.receipt.json",
+      "sha256": "0c22af83d8846a6dbf77b424a482a0963559c9c51151539605f1c9a4f5ad0714"
+    },
+    {
+      "current_sha256": "3cfec9aaec77c3f1c15f0192aee0fa3fc2b958ca4a41261cb079ec87a71d769a",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/box/f10-r1-univariate-runtime-execution-20260909/remote/univariate.json",
+      "sha256": "3cfec9aaec77c3f1c15f0192aee0fa3fc2b958ca4a41261cb079ec87a71d769a"
+    },
+    {
+      "current_sha256": "f2e27295711c9cec01d72874b5917a134d8a2f662774812212cdf7e6f3270cdc",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/ops/FLEET.md",
+      "sha256": "f2e27295711c9cec01d72874b5917a134d8a2f662774812212cdf7e6f3270cdc"
+    },
+    {
+      "current_sha256": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/ops/artifact_finalize.py",
+      "sha256": "0f6aaf7d549952de8f318bdd974ae4627e497783d809f94cfaba16607355cb8d"
+    },
+    {
+      "current_sha256": "a9da94d341a691942e9d6a6a6d90d97008b2d7baa1cadb2592481cf6b9c11c4c",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/ops/fleet/fleet.sh",
+      "sha256": "a9da94d341a691942e9d6a6a6d90d97008b2d7baa1cadb2592481cf6b9c11c4c"
+    },
+    {
+      "current_sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/ops/run_capped.py",
+      "sha256": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2"
+    },
+    {
+      "current_sha256": "e73075e3b3564538c69a0a0a3fbd925c80c57d0a21122d37269bb3539b73ce93",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-exact-linear-decision-code-astra-20260909.md",
+      "sha256": "e73075e3b3564538c69a0a0a3fbd925c80c57d0a21122d37269bb3539b73ce93"
+    },
+    {
+      "current_sha256": "2a79a36c612a43b6545d39a1b2e4fe6542da5c81d7f21c942b8fb556e9e81fa1",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-exact-linear-decision-code-astra-20260909.md.artifact.json",
+      "sha256": "2a79a36c612a43b6545d39a1b2e4fe6542da5c81d7f21c942b8fb556e9e81fa1"
+    },
+    {
+      "current_sha256": "4c3f5932e9ff77d73314fe02b3c088677f8fc3bc0971acad9ba56610cf7d405f",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-exact-linear-decision-gate-fable5-20260909.md",
+      "sha256": "4c3f5932e9ff77d73314fe02b3c088677f8fc3bc0971acad9ba56610cf7d405f"
+    },
+    {
+      "current_sha256": "2f82e7b2ca181684e434bfb564b59715c26588d47d85f76ee488b662367a242a",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-execution-astra-20260909.md",
+      "sha256": "2f82e7b2ca181684e434bfb564b59715c26588d47d85f76ee488b662367a242a"
+    },
+    {
+      "current_sha256": "edd01f1971cc0bb85d61dcfa7811b270439b0ff1af91e1864a4708fececd610f",
+      "pass": true,
+      "path": "/home/ubuntu/jc2/xmodel/f10-r1-linear-compatibility-execution-astra-20260909.md.artifact.json",
+      "sha256": "edd01f1971cc0bb85d61dcfa7811b270439b0ff1af91e1864a4708fececd610f"
+    }
+  ],
+  "utc": "2026-09-09T23:20:10.865510+00:00"
+}

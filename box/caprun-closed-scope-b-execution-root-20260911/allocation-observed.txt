@@ -1,0 +1,40 @@
+Running timer as unit: jc2-closedchild-preflight9-20260911b-worker-stop.timer
+Will run service as unit: jc2-closedchild-preflight9-20260911b-worker-stop.service
+active
+ORIGINAL_WORKER_TERMINATION_ARMED 2026-09-11 11:53:01.449413994 UTC
+[
+    {
+        "ID": "i-07553b89026949246",
+        "State": "pending",
+        "PrivateIP": "172.30.0.21",
+        "Type": "c7i.2xlarge",
+        "Launched": "2026-09-11T11:53:01+00:00",
+        "Devices": []
+    }
+]
+{
+    "DisableApiTermination": {
+        "Value": false
+    },
+    "InstanceId": "i-07553b89026949246"
+}
+[
+    {
+        "ID": "i-07553b89026949246",
+        "State": "pending",
+        "Private": "172.30.0.21",
+        "Public": "3.88.17.6",
+        "Devices": [
+            {
+                "DeviceName": "/dev/sda1",
+                "Ebs": {
+                    "AttachTime": "2026-09-11T11:53:01+00:00",
+                    "DeleteOnTermination": false,
+                    "Status": "attaching",
+                    "VolumeId": "vol-097211997797395f2",
+                    "EbsCardIndex": 0
+                }
+            }
+        ]
+    }
+]

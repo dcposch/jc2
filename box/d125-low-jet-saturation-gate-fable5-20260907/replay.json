@@ -1,0 +1,64 @@
+{
+ "caps": "30 s wall, 25 s CPU, 512 MiB",
+ "runs": [
+  {
+   "first_failure": null,
+   "mutation": null,
+   "optimized": false,
+   "returncode": 0,
+   "stdout_sha256": "cc2f5336f63fe9dd9cf631bdaac17987d48ac393cd5db0d0e4cd7f19ff0e319e"
+  },
+  {
+   "first_failure": "FAIL cert-k4-h2",
+   "mutation": "--mutate-wrong-sign",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL A1B3-terms",
+   "mutation": "--mutate-omit-A1B3",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL false-unguarded-equivalence",
+   "mutation": "--mutate-false-unguarded-equivalence",
+   "optimized": false,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": null,
+   "mutation": null,
+   "optimized": true,
+   "returncode": 0,
+   "stdout_sha256": "cc2f5336f63fe9dd9cf631bdaac17987d48ac393cd5db0d0e4cd7f19ff0e319e"
+  },
+  {
+   "first_failure": "FAIL cert-k4-h2",
+   "mutation": "--mutate-wrong-sign",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL A1B3-terms",
+   "mutation": "--mutate-omit-A1B3",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "first_failure": "FAIL false-unguarded-equivalence",
+   "mutation": "--mutate-false-unguarded-equivalence",
+   "optimized": true,
+   "returncode": 1,
+   "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ],
+ "self_sha256": "2ce673dd76d6519d50a3a5a619676eee97ef9cee18a3870036144973bb30525e",
+ "status": "PASS",
+ "witness_sha256": "cc2f5336f63fe9dd9cf631bdaac17987d48ac393cd5db0d0e4cd7f19ff0e319e"
+}

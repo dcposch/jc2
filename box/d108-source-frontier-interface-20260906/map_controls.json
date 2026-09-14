@@ -1,0 +1,50 @@
+{
+  "C_A96_reconstruction": "-3*A3c_86_16/10 - 4*A3c_91_12/5 + 7*beta/2",
+  "C_constant_claim_scope": "raw physical Jacobian and14source residuals ONLY, not complete T2/T3 rows",
+  "C_constant_column_exactly1": true,
+  "G_line": "B2c_70_0*X + B2c_71_0 + K2c_36_0**2 - 2*K2c_36_0*X - K2c_36_0*target_b/3 + X**2 + X*target_b/3",
+  "all14residuals_C_independent": true,
+  "beta": "3*A3c_86_16/35 + 8*A3c_91_12/35 + 2*A3c_96_8/7",
+  "both_terminal_polygon_maps_exact": true,
+  "controls": [
+    {
+      "mutation": "introduce C constant into source residual",
+      "reason": "C coordinate entered residual source ideal",
+      "status": "REJECTED_BY_ACTUAL_CHECKER"
+    },
+    {
+      "mutation": "alter first residual square",
+      "reason": "first residual is not square of axis-leading obstruction",
+      "status": "REJECTED_BY_ACTUAL_CHECKER"
+    },
+    {
+      "mutation": "replace transverse h slope -1 by -2",
+      "reason": "monic quadratic transverse restriction failed",
+      "status": "REJECTED_BY_ACTUAL_CHECKER"
+    },
+    {
+      "mutation": "inversion x^4*y changed to x^3*y",
+      "reason": "partial coordinate-map Jacobian factor mismatch",
+      "status": "REJECTED_BY_ACTUAL_CHECKER"
+    },
+    {
+      "mutation": "target Q sign reversed",
+      "reason": "ordered target-pair Jacobian sign mismatch",
+      "status": "REJECTED_BY_ACTUAL_CHECKER"
+    },
+    {
+      "mutation": "wrong large-branch extra P vertex",
+      "reason": "large-branch extra vertex map mismatch",
+      "status": "REJECTED_BY_ACTUAL_CHECKER"
+    }
+  ],
+  "first_residual_exact_L_squared": "(-K2c_3_26 + 8*jet0*jet1 - 8*jet2)**2",
+  "full_source_to_GGHV_map": "GAP_LOWER_POLYGON_AND_EDGE_FACTOR_TRANSPORT",
+  "map_Jacobian": "x^2",
+  "partial_map_W": "1/x",
+  "partial_map_X": "ell2*x**2 + ell3*x**3 + ell4*x**4 + x**4*y - 1/x",
+  "peak_rss_kib": 64908,
+  "seconds": 11.881595782004297,
+  "status": "EXACT_PARTIAL_INTERFACE_AND_PORTABILITY_CONTROLS_PASS",
+  "valid_Keller_control": "F=X+W^2,G=W; P=map(G),Q=-map(F)"
+}

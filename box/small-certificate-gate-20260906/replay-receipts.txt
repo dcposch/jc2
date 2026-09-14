@@ -1,0 +1,95 @@
+# Replay receipts, small-certificate-gate-fable5-20260906 (reviewer Fable), host ip-172-30-0-46, 2026-09-06T09:47:19Z
+HEAD=0d39df3c9fd69c939a8420c54d03228b9077777d
+
+## preflight_controls.py (run from repo path; ROOT=parents[2])
+normal/-O/-OO rc=0; stdout sha256 (all three identical):
+dc7f189ed3db2b6189727820aff71dfe3ae72cd374deb901a09a1a62a20c903d  /tmp/pf_normal.out
+dc7f189ed3db2b6189727820aff71dfe3ae72cd374deb901a09a1a62a20c903d  /tmp/pf_O.out
+dc7f189ed3db2b6189727820aff71dfe3ae72cd374deb901a09a1a62a20c903d  /tmp/pf_OO.out
+--mutate-local-containment: rc=1 in all three modes, stderr tail: ValueError: Local containment, stdout empty
+
+## check.py
+normal/-O/-OO rc=0; stdout sha256 (all three identical):
+1580bb79848220cc69ec5cf95720bf7cb2a25a1cbf33b087db697d56bcacaf39  /tmp/ck.out
+1580bb79848220cc69ec5cf95720bf7cb2a25a1cbf33b087db697d56bcacaf39  /tmp/ck-O.out
+1580bb79848220cc69ec5cf95720bf7cb2a25a1cbf33b087db697d56bcacaf39  /tmp/ck-OO.out
+stdout:
+{"affine_relative_rank": 0, "determinant_identity": true, "status": "PASS", "triangular_relative_rank": 1, "two_line_exponents": [[1, 1], [2, 3], [27, 72], [24, 84]]}
+
+## preflight stdout (normal mode)
+{
+  "clients": [
+    {
+      "case": "99-delta2",
+      "frozen_support_assignment_inverse_residuals": [
+        600678998,
+        401774531,
+        258548891
+      ],
+      "full_mod_p_point_available_in_charged_metadata": false,
+      "hensel_certificate_preflight": "NO: no solution, no full-row containment certificate",
+      "ideal_properness": "UNDECIDED",
+      "jacobian_rank_upper_bound": 448,
+      "minimum_left_cokernel_dimension": 2306,
+      "rows": 2754,
+      "syntactically_inactive_coordinates": [
+        "target_e"
+      ],
+      "variables": 449
+    },
+    {
+      "case": "99-delta52",
+      "frozen_support_assignment_inverse_residuals": [
+        924753348,
+        354255143,
+        56672515
+      ],
+      "full_mod_p_point_available_in_charged_metadata": false,
+      "hensel_certificate_preflight": "NO: no solution, no full-row containment certificate",
+      "ideal_properness": "UNDECIDED",
+      "jacobian_rank_upper_bound": 446,
+      "minimum_left_cokernel_dimension": 2308,
+      "rows": 2754,
+      "syntactically_inactive_coordinates": [
+        "target_e"
+      ],
+      "variables": 447
+    },
+    {
+      "case": "108-free-mean",
+      "frozen_support_assignment_inverse_residuals": [
+        962644304,
+        925354621,
+        436036465
+      ],
+      "full_mod_p_point_available_in_charged_metadata": false,
+      "hensel_certificate_preflight": "NO: no solution, no full-row containment certificate",
+      "ideal_properness": "UNDECIDED",
+      "jacobian_rank_upper_bound": 506,
+      "minimum_left_cokernel_dimension": 2690,
+      "rows": 3196,
+      "syntactically_inactive_coordinates": [
+        "target_e"
+      ],
+      "variables": 507
+    }
+  ],
+  "controls": {
+    "growing_support_false_positive": "REJECTED",
+    "local_smooth_positive": "PASS",
+    "monic_witness_positive": "PASS",
+    "ordinary_optimized_and_double_optimized_checks": "explicit exceptions, no assert",
+    "vanishing_localizer_false_positive": "REJECTED",
+    "vertical_primitive_rows_depths": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "vertical_rank_false_positive": "REJECTED"
+  }
+}
+
+## reviewer_topdegree_control.py (sha256 328d52d73fc6fcdbff3f120d5cbcd5a4604fa593727db73d8ed99f68ba7a4454)
+normal/-O/-OO rc=0; stdout sha256 1ea93594d263b6c7fd2eb86f5dd2d85de38c432db670e395c36451d813c47ffc (identical); saved as reviewer_topdegree_control.stdout.json

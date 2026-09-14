@@ -1,0 +1,265 @@
+arXiv:math/0408077v1 [math.AG] 5 Aug 2004
+
+
+
+
+                                             A Simple Proof of Jung’ Theorem on Polynomial
+                                                         Automorphisms of C2
+                                                                               Nguyen Van Chau ∗
+
+
+                                                Abstract. The Automorphism Theorem, discovered first by Jung in 1942, asserts
+                                            that if k is a field, then every polynomial automorphism of k2 is a finite product of linear
+                                            automorphisms and automorphisms of the form (x, y) 7→ (x + p(y), y) for p ∈ k[y]. We
+                                            present here a simple proof for the case k = C by using Newton-Puiseux expansions.
+
+                                            1. In this note we present a simple proof of the following theorem on the structure
+                                            of the group GA(C2 ) of polynomial automorphisms of C2
+                                            Automorphism Theorem. Every polynomial automorphism of C2 is tame, i.e. it
+                                            is a finite product of linear automorphisms and automorphisms of the form (x, y) 7→
+                                            (x + p(y), y) for one-variable polynomials p ∈ C[y].
+                                                This theorem was first discovered by Jung [J] in 1942. In 1953, Van der Kulk [Ku]
+                                            extended it to a field of arbitrary characteristic. In an attempt to understand the
+                                            structure of GA(Cn ) for large n, several proofs of Jung’s Theorem have presented
+                                            by Gurwith [G], Shafarevich [Sh], Rentchler [R], Nagata [N], Abhyankar and Moh
+                                            [AM], Dicks [D], Chadzy’nski and Krasi’nski [CK] and McKay and Wang [MW]
+                                            in different approaches. They are related to the mysterious Jacobian conjecture,
+                                            which asserts that a polynomial map of Cn with non-zero constant Jacobian is an
+                                            automorphism. This conjecture dated back to 1939 [K], but it is still open even for
+                                            n = 2. We refer to [BCW] and [E] for nice surveys on this conjecture.
+                                            2. The following essential observation due to van der Kulk [Ku] is the crucial step
+                                            in some proofs of Jung’ theorem.
+                                            Division Lemma: F = (P, Q) ∈ GA(C2 ) ⇒ deg P | deg Q or deg Q| deg P.
+                                              Abhyankar and Moh in [AM] deduced it as a consequence of the theorem on the
+                                            embedding of a line to the complex plane. McKay and Wang [MW] proved it by
+                                              ∗
+                                                  Supported in part by the National Basic Program of Natural Science, Vietnam.
+
+
+                                                                                           1
+using formal Laurent series and the inversion formula. Chadzy’nski and Krasi’nski
+in [CK] obtained the Division Lemma from a formula of geometric degree of polyno-
+mial maps (f, g) that the curves f = 0 and g = 0 have only one branch at infinity.
+Here, we will prove this lemma by examining the intersection of irreducible branches
+at infinity of the curves P = 0 and Q = 0 in term of Newton-Puiseux expansions.
+    Our proof presented here is quite elementary and simpler than any proof men-
+tioned above. It uses the following two elementary facts on Newton-Puiseux expan-
+sions (see, for example, [BK]).
+    Let h(x, y) = y n + a1 (x)y n−1 + . . . + an (x) be a reducible polynomial. Looking
+in the compactification CP 2 of C2 , the curve h = 0 has some irreducible branches
+located at some points in the line at infinity, which are called the irreducible branchs
+at infinity. For such a branch γ, the Newton’ algorithm allows us to find a meromor-
+phic parameterization of γ, an one-to-one meromorphic map t 7−→ (tm , u(t)) ∈ γ
+defined for t large enough,
+                                   ∞
+                     u(t) = tm
+                                   X
+                                         bk at−k , gcd{k : bk 6= 0} = 1,
+                                   k=0
+
+                                    1
+The fractional power series u(x m ) is called a Newton-Puiseux expansion at infinity
+of γ and the natural number mult(u) := m - the multiplicity of u.
+    The first fact is a simple case of Newton’s theorem (see in [A]).
+Fact 1. Suppose the curve h = 0 has only one irreducible branch at infinity and
+u is a Newton-Puiseux expansion at infinity of this branch. Then
+
+                                            Yh
+                                           deg
+                                                                  1
+                            h(x, y) =             (y − u(ǫi x deg h ))
+                                            i=1
+
+and mult(u) = deg h, where ǫ is a primitive deg h-th root of 1.
+   Let ϕ(x, ξ) be a finite fractional power series of the form
+                                         nϕ −1                        n
+                                          X            1− mk      1− mϕ
+                          ϕ(x, ξ) =              ck x      ϕ   + ξx       ϕ   ,     (1)
+                                          k=0
+
+where ξ is a parameter and gcd({k = 0, . . . nϕ − 1 : ck 6= 0} ∪ {nϕ }) = 1. Let us
+represent
+                              aϕ                                          1
+           h(x, ϕ(x, ξ)) = x mϕ (h0 (ξ) + lower terms in x mϕ ), h0 (ξ) 6= 0.       (2)
+
+
+                                                   2
+   The second fact is deduced from the Implicit Function Theorem.
+Fact 2. Let ϕ and h0 be as in (1) and (2). If c is a simple zero of h0 (ξ), then
+there is a Newton-Puiseux expansion at infinity
+                             1                                                1
+                         u(x mϕ ) = ϕ(x, c + lower terms in x mϕ )
+                     1
+for which h(x, u(x mϕ )) ≡ 0. Furthermore, mult(u) divides mϕ and mult(u) = mϕ
+if c 6= 0.
+3. Proof of the Division Lemma. Given F = (P, Q) ∈ GA(C2 ). We may
+assume that deg P > deg Q and we will prove that deg Q divides deg P . By choosing
+a suitable linear coordinate, we can express
+
+                           P (x, y) = y deg P + lower terms in y
+
+                          Q(x, y) = y deg Q + lower terms in y.
+Observe that F is a polynomial diffeomorphism of C2 and
+
+                         J(P, Q) := Px Qy − Py Qx ≡ const. 6= 0.
+
+Then, P and Q are reducible and each of the curves P = 0 and Q = 0 is dif-
+feomorphic to C which has only one irreducible branch at infinity. Let α and β
+be the unique irreducible branches at infinity of P = 0 and Q = 0 , respectively.
+                                                           1               1
+Then, by Fact 1 we can find Newton-Puiseux expansion u(x deg P ) and v(x deg Q ) with
+mult(u) = deg P and mult(v) = deg Q such that
+
+                                           YP
+                                          deg
+                                                                 1
+                             P (x, y) =          (y − u(σ i x deg P ))
+                                          i=1
+
+                                           YQ
+                                          deg
+                                                                1
+                             Q(x, y) =           (y − v(δ j x deg P )),
+                                          j=1
+
+where σ and δ are primitive deg P -th and deg Q-th roots of 1, respectively.
+                                  1                1
+    Put θ := minij ord(u(σ i x deg P ) − v(δ j x deg Q )). Without loss of generality, we can
+                  1             1
+assume ord(u(x deg P ) − v(x deg Q )) = θ. We define a fractional power series ϕ(x, ξ)
+with parameter ξ by deleting in u all terms of order no large than θ and adding to
+it the term ξxθ ,
+                                        nϕ −1                         n
+                                         X           1− mk          1− mϕ
+                            ϕ(x, ξ) =           ck x     ϕ   + ξx         ϕ
+
+                                        k=0
+
+
+                                                 3
+                                                              nϕ
+with gcd{k = 0, . . . K − 1 : ck 6= 0} ∪ {nϕ } = 1, where 1 − mϕ
+                                                                 = θ. Then, by
+definition
+                 1
+            u(x deg P ) = ϕ(x, ξu (x)) with ξu (x) = αu + lower terms in x,
+                  1
+            v(x deg Q ) = ϕ(x, ξv (x)) with ξv (x) = βv + lower terms in x
+and αu − βv 6= 0. Let us represent
+                                    aϕ                             1
+                 P (x, ϕ(x, ξ)) = x mϕ (Pϕ (ξ) + lower terms in x mϕ )
+                                    bϕ                             1
+                Q(x, ϕ(x, ξ)) = x mϕ (Qϕ (ξ) + lower terms in x mϕ )
+where aϕ and bϕ are integers and 0 6= Pϕ , Qϕ ∈ C[ξ].
+Claim 1.
+(a) Pϕ (αu ) = 0 and Qϕ (βv ) = 0.
+(b) The polynomials Pϕ (ξ) and Qϕ (ξ) have no common zero.
+Proof. (a) is implied from the equalities P (x, ϕ(x, ξu (x))) = 0 and
+Q(x, ϕ(x, ξv (x))) = 0. For (b), if Pϕ (ξ) and Qϕ (ξ) have a common zero c, then by
+Fact 2 there exists series
+
+                             ξ¯u (x) = c + lower terms in x,
+
+                            ξ¯v (x) = c + lower terms in x
+such that ϕ(x, ξ¯u (x)) and ϕ(x, ξ¯u (x)) are Newton-Puiseux expansions at infinity of
+α and β, respectively. For these expansions ord(ϕ(x, ξ¯u (x)) − ϕ(x, ξ¯v (x)) < θ. This
+contradicts to the definition of u and v.
+Claim 2. Pϕ and Qϕ have only simple zeros.
+Proof. First, observe that
+                                    aϕ > 0, bϕ > 0.                                (3)
+Indeed, for instance, if aϕ ≤ 0, then F (t−mϕ , ϕ(t−mϕ , ξv (t−mϕ )) tends to a point
+(a, 0) ∈ C2 as t 7→ 0. This is impossible since F is a diffeomorphism.
+    Now, let
+                                       d              d
+                           Jϕ := aϕ Pϕ Qϕ − bϕ Qϕ Pϕ .
+                                      dξ             dξ
+Taking differentiation of DF (t−mϕ , ϕ(t−mϕ , ξ), by (3) one can get that
+
+            mϕ J(P, Q)tnϕ −2mϕ −1 = −Jϕ t−aϕ −bϕ −1 + higher terms in t.
+
+                                           4
+Since J(P, Q) ≡ const. 6= 0,
+                            (
+                                 −mϕ J(P, Q), if aϕ + bϕ + nϕ = 2mϕ
+                   Jϕ ≡
+                                 0,           if aϕ + bϕ + nϕ > 2mϕ .
+
+If Jϕ ≡ 0, it must be that Pϕ−bϕ = CQ−a
+                                     ϕ
+                                       ϕ
+                                         for C ∈ C∗ . This is impossible by Claim
+1(b). Thus, Jϕ = −mϕ J(P, Q). In particular, Pϕ and Qϕ have only simple zeros.
+   Now, we can complete the proof of the lemma. By Claim 2 the numbers αu
+and βv are simple zero of Pϕ and Qϕ , respectively. Then, by Fact 2 there exists
+Newton-Puiseux expansions at infinity
+                             1                                      1
+                         ū(x mϕ ) = ϕ(x, αu + lower terms in x mϕ ),
+                             1                                      1
+                         v̄(x mϕ ) = ϕ(x, βv + lower terms in x mϕ ),
+                     1                      1
+for which P (x, ū(x mϕ )) ≡ 0, Q(x, v̄(x mϕ )) ≡ 0 and mult(ū) and mult(v̄) divide mϕ .
+Since mult(ū) = deg P > deg Q = mult(v̄) and αu 6= βv , we get αu 6= 0, βv = 0 and
+deg P = mϕ . Hence, deg Q| deg P.
+4. Proof of Automorphism Theorem. The proof uses Division Lemma and the
+following fact which is only an easy elementary excise on homogeneous polynomial.
+    (*) Let f, g ∈ C[x, y] be homogeneous. If fx gy − fy gx ≡ 0, then there is a
+homogeneous polynomial h ∈ C[x, y] with deg h = gcd(deg f, deg g) such that
+                                    deg f            deg g
+                           f = ah deg h and g = ah deg h , a, b ∈ C∗ .
+
+(See, for example [E, Lemma 10.2.4, p 253]).
+   Given F = (P, Q) ∈ GA(C2 ). Assume, for instance, deg P ≥ deg Q and deg P >
+1. Then, by the Division Lemma deg P = m deg Q, and hence, by (*) deg(P −
+cQm ) < deg P for a suitable number c ∈ C. By induction one can find a finite
+sequence of automorphisms φi (x, y), i = 1, . . . , k of the form (x, y) 7→ (x + cy l , y)
+and (x, y) 7→ (x, y+cxn ) such that the components of the map of φk ◦φk−1 ◦. . .◦φ1 ◦F
+are of degree 1. Note that φ−1  i  has the form as those of φi . Then, we get the
+automorphism Theorem.
+Acknowlegments: The author wishes to thank Prof. A.V. Essen and Prof. V.H.
+Ha for their helps.
+References
+[A] S. S. Abhyankar, Expansion Techniques in Algebraic Geometry, Tata Institute
+of Fundamental Research, 1977.
+
+                                                5
+[AM] S. S. Abhyankar and T. T. Moh, Embeddings of the line in the plane, J. Reine
+Angew. Math. 276 (1975), 148-166.
+[BCW] H. Bass, E. Connell and D. Wright, The Jacobian conjecture: reduction
+of degree and formal expansion of the inverse, Bull. Amer. Math. Soc. (1982),
+287-330.
+[BK] E. Brieskorn, H. Knorrer, Ebene algebraische Kurven, Birkhauser, Basel-
+Boston-Stuttgart 1981.
+[CK] J.Chadzy’nski and KT. Krasi’nski, On a formula for the geometric degree and
+Jung’ theorem , Universitatis Iagellonicae Acta Mathematica, Fasciculus XXVIII,
+1991, 81-84.
+[D] W. Dicks, Automorphisms of the polynomial ring in two variables, Publ. Sec.
+Math. Univ Autonoma Barcelona 27, (1983), 155-162.
+[E] van den Essen, Arno, Polynomial automorphisms and the Jacobian conjecture.
+(English. English summary) Progress in Mathematics, 190. Birkhauser Verlag,
+Basel, 2000.
+[G] A. Gutwirth, An inequality for certain pencils of plane curve, Proc. Amer.
+Math. Soc. 12 (1961), 631-638.
+[J] H. W. E. Jung, Uber ganze birationale Transformationen der Ebene , J. Reine
+Angew. Math. 184 (1942), 161-174.
+[K] O. Keller, Ganze Cremona-Transformationen, Monatsh. Mat. Phys. 47 (1939),
+299-306.
+[Ku] W. Van der Kulk, On polynomial rings in two variables, Nieuw Arch. Wisk.
+(3) 1 (1953), 33-41.
+[MW] J. H. McKay and S. S. Wang, An elementary proof of the automorphism
+theorem for the polynomial ring in two variables , J. Pure Appl. Algebra 52 (1988),
+91-102.
+[N] M. Nagata, On Automorphism group of k[x, y], Lectures in Mathematics 5,
+Tokyo (1972).
+[R] R. Rentschler, Operations du groupe additif sur le plan affine, C.R.Acad. Sci.
+Paris Ser. A (1968), 384-387.
+[Sh] I.R. Shafarevich, On some infinite dimensional groups, Rend.Math. Appl. 25
+(1966), 208-212.
+
+Hanoi Institute of Mathematics, P.O. Box 631, Boho 10000, Hanoi, Vietnam.
+E-mail: nvchau@thevinh.ntsc.ac.vn
+
+
+
+
+                                        6
+

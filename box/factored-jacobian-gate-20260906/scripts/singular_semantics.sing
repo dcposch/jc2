@@ -1,0 +1,10 @@
+ring r=0,(x,y),dp;
+poly p=(1/2)*x^9-(3/4)*y; print("P:"+string(p));
+poly q=1/2*x^9-3/4*y; print("Q:"+string(q));
+poly s=x^9/32768; print("S:"+string(s));
+poly u=3/2*x*y; print("U:"+string(u));
+poly v=-1/3*x; print("V:"+string(v));
+poly w=33075/2*y^2; print("W:"+string(w));
+int i=1/2; print("I:"+string(i));
+ring r3=0,(x,y,z),dp; poly lt=x*z^2+y^2*z+x^2*y; print("LEAD3:"+string(leadmonom(lt))+" TERMS:"+string(lt)); 
+quit;

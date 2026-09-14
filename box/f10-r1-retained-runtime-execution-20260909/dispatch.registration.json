@@ -1,0 +1,53 @@
+{
+  "schema": "F10-RETAINED-DISPATCH/v1",
+  "enabled": true,
+  "job_tag": "f10-r1-retained-runtime-validation-20260909",
+  "cwd": "/home/ubuntu/f10-r1-retained-runtime-validation-20260909",
+  "instance_id": "i-08d2a40f272ee9fa2",
+  "hostname": "ip-172-30-0-72",
+  "mathematical_deadline_utc": "2026-09-09T18:14:00+00:00",
+  "task_deadline_utc": "2026-09-09T18:17:00+00:00",
+  "aggregate_wall_seconds": 750,
+  "exclusive_no_concurrent_authority_writer": true,
+  "file_size_limit_bytes": 16777216,
+  "profiles": {
+    "probe": {
+      "wall_seconds": 5,
+      "cpu_seconds": 3,
+      "rss_bytes": 2147483648
+    },
+    "dummy": {
+      "wall_seconds": 5,
+      "cpu_seconds": 3,
+      "rss_bytes": 33554432
+    },
+    "transform": {
+      "wall_seconds": 180,
+      "cpu_seconds": 170,
+      "rss_bytes": 2147483648
+    },
+    "check": {
+      "wall_seconds": 180,
+      "cpu_seconds": 170,
+      "rss_bytes": 2147483648
+    },
+    "controls": {
+      "wall_seconds": 300,
+      "cpu_seconds": 280,
+      "rss_bytes": 2147483648
+    }
+  },
+  "file_sha256": {
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/dispatch_batch.py": "2116bd168cca7bdf902b692471a2005e444f111dcddbe593a5d30480aaaadf70",
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/semantic_controls.py": "3876ff5a6fd2935211fcafadf2c0fb9877ff0d7f3667338bb7f50cd8836d7316",
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/transformer.py": "ff5d08c8b8f0ec30b071893cc9cf99db3a3a56a30bb54d653a19c0a8dd5df869",
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/checker.py": "7d80b261df626fa84ab72d7ff06e3c37e1ba6f6e98e40d6e7d2142d2397aacda",
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/execution_gate.py": "cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6",
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/probe.py": "02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7",
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/run_capped.py": "4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2",
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/exact.json": "168bdfd3a791f24a6631de66ae4e71c3f209ee9eb0d21fc466f9aa802f5ad576",
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/admissibility.md": "02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a",
+    "/home/ubuntu/f10-r1-retained-runtime-validation-20260909/frontier.json": "f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34",
+    "/usr/bin/python3": "a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223"
+  }
+}

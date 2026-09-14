@@ -1,0 +1,74 @@
+{
+  "engine_executed": false,
+  "pins": {
+    "box/d125-hybrid81-caller-repair-20260907/alarm-semantics.md": "a11183911c23292165732b7db2afb17919fb22505db55f8aea238616f0d761eb",
+    "box/d125-hybrid81-caller-repair-20260907/driver-two-bugs.patch": "5daab0735fd9fceb83acf6886a4364c3f533c7fb67dc88baea7885526a7ce2df",
+    "box/d125-hybrid81-caller-repair-20260907/driver.py": "ce599a26a0ed051eddd71125f492bb0b19c4ef86cdf97a6bc887f5cf47cade5a",
+    "box/d125-hybrid81-caller-repair-20260907/exact.py": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+    "box/d125-hybrid81-caller-repair-20260907/hybrid.py": "c9755a7172eaa7f1393860931d55c38a0b9d79b5b170eadbf14baff0203c35a3",
+    "box/d125-hybrid81-caller-repair-20260907/test_caller.py": "53471683826c4fbc2e35440a08f9b062791c0eee2e8facb721e68bc3c2fad1f1",
+    "box/d125-hybrid81-caller-repair-20260907/timed_probe.py": "9c7508c39d3e56690e4398a0247adb48983fbe94165ad27ebbba3c30a7f8b635",
+    "box/d125-hybrid81-caller-repair-gate-sol56-20260907/PINS.json": "a0f457d3569d16393e2a410083f368901f67b9ea181654b8834bf997aae2067b",
+    "box/d125-hybrid81-caller-repair-gate-sol56-20260907/RUNS.json": "0a42d8b7a459cdcdcd78b744fc9708b1fa5b32ab6d0e62d26201fc90bcbeebfc",
+    "box/d125-hybrid81-caller-repair-gate-sol56-20260907/gate_checks.py": "6006db6bea500abc12182b33db07dd9e1ba6767f4f0bb6a8645ddb9c8799c816",
+    "box/d125-hybrid81-solver-gate-sol56-20260907/tiny-engine-fixture.jsonl": "d00df83bafddcd3436dad44034bdb1680d306f6d67f8bfa83d4b32de19961bbf",
+    "xmodel/d125-hybrid81-caller-repair-astra-20260907.md": "feb918be39485ad3bd2377397122787ea149c402333d9f477367e577bfeff256",
+    "xmodel/d125-hybrid81-caller-repair-gate-sol56-20260907.md": "46a6304811af423042f29d9a8f4c3022189d648286e7770d02ae59d478615fac",
+    "xmodel/d125-hybrid81-caller-repair-gate-sol56-20260907.run.v2": "ae5c9958d9ab02c1719bab24d762b46c89a003a6b1314f150aa5fbb7ea31c10b",
+    "xmodel/d125-hybrid81-solver-gate-sol56-20260907.md": "b4198c3689e0d713eca6a1a7dfe95854f88bb48f45217b737adb29e03c4fcc46"
+  },
+  "runs": [
+    {
+      "argv": [
+        "timeout",
+        "--signal=KILL",
+        "30s",
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "/usr/bin/python3",
+        "-B",
+        "/home/ubuntu/jc2/box/d125-hybrid81-engine-review-prep-20260907/replay_gate.py"
+      ],
+      "metrics": {
+        "child_cpu_seconds": 0.429264,
+        "child_maxrss_kib": 27144,
+        "self_cpu_seconds": 0.05587400000000001,
+        "self_maxrss_kib": 27144,
+        "wall_seconds": 5.039840309997089
+      },
+      "mode": "normal",
+      "outcomes": 33,
+      "returncode": 0,
+      "wall_seconds": 5.148613989003934
+    },
+    {
+      "argv": [
+        "timeout",
+        "--signal=KILL",
+        "30s",
+        "prlimit",
+        "--as=536870912",
+        "--cpu=25",
+        "--",
+        "/usr/bin/python3",
+        "-B",
+        "-O",
+        "/home/ubuntu/jc2/box/d125-hybrid81-engine-review-prep-20260907/replay_gate.py"
+      ],
+      "metrics": {
+        "child_cpu_seconds": 1.951821,
+        "child_maxrss_kib": 30052,
+        "self_cpu_seconds": 0.056096000000000035,
+        "self_maxrss_kib": 30052,
+        "wall_seconds": 6.497787107946351
+      },
+      "mode": "optimized",
+      "outcomes": 33,
+      "returncode": 0,
+      "wall_seconds": 6.937757273903117
+    }
+  ],
+  "status": "PASS"
+}

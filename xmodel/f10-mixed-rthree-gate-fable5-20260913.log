@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate report is written and sealed at 03:28 UTC, before the 03:34 reserve. Nothing further is needed; custody is with ops/lane.sh.
+
+**Outcome: input1's r ≡ 3 mod 7 theorem is CONFIRMED on every step.** For every such r and every source root, v7(B) = 2·v7(2r+1) − 15/7, so B is a unit of the whole leading algebra. No GAP or REFUTED verdict was issued.
+
+What I independently recomputed by hand and confirmed:
+
+- **Step 1.** Re-derived the compact U and V from the multinomial expansion of (d7 − (t−2)d6)/c3 and d6/c3. Valuations give v(U) = −4/7, v(V) = −1, v(Y) = −3/7, and the residue relations x³ = 3y², x²y = 2 (so y³/x = 3).
+- **Step 2.** beta(1,t) = 0 by degree. The exact formula beta(t,t) = 3(t−2)Y³d6/t + (8t−21)XY²d7/t comes out term by term. The identity B = 2(t−1)²·C(2t−1,t) holds on the whole algebra.
+- **Step 3 (the fragile step).** Per monomial X^iY^j the coefficient of beta lies in 7^(−⌊(15−w)/7⌋)·Z_(7)[t][s]. Both monic long divisions and the specialization s = 1+2ε, t = 1+ε stay in that ring, so the discarded difference has valuation at least l. No K_r integrality or rational-prefactor inference was used.
+- **Step 4.** Trace identity and signs, the L = 0 reduction formula, the three carries (−1/42, −1/140, 11/180 with residues 1, 1, 0), all four quadratics, the product (Z³ coefficient zero), Newton sums, and the final residue 5xy² ≠ 0. The dropped-carry control gives 3xy², a wrong coefficient that still passes nonzeroness, as input1 says.
+- **Step 5.** All l ≥ 1, all seven roots, inverse-existence via Bezout (correctly not a certificate), and the posterior v7(K_r(2t−1)) = −1/7 from input5's exact prefactors, which shows the old quotient is not 7-integral there.
+
+Report facts: 1,137 words, unique standalone `<!-- BODY-END -->` as last line, all six postpins identical to the charged pins, file hash d007098d…c892fd6d7. Remaining classes 0, 4, 5, 6 mod 7 are untouched; no REG, source-zero, cutoff or JC2 claim, no charge_basis.
+DIVERT path=xmodel/f10-mixed-rthree-gate-fable5-20260913.md status=CLEAN body_bytes=9231 body_sha256=d007098d6e4e171a85122efa777522daa07612ba343c4aadfc12354c892fd6d7

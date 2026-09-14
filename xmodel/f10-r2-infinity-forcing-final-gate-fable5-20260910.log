@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete and unsealed at 11:18:24 UTC, well inside the 11:25:48 reserve. Actual elapsed from first action: 4 min 36 s.
+
+**Result: all remaining coefficients pass. alpha=20, beta=62, gamma=42 are each CONFIRMED** as mod-89 residues of the source operators, on the FIRST-checked premises. Nothing refuted, remaining coefficient list empty.
+
+**What I replayed by hand** (every product shown as integer sum then residue in the report):
+- Item 1: the four convolutions behind W5/(pq) and their 5/-9/4/-10 combination give (23,51,62,27,47,76), all six equal. The T^5 entry also satisfies the resonant row the delta gate had already confirmed.
+- Item 2: W6/(p^3) from four products gives (29,73,85,18,0); W6/(q^2) from two products gives (79,49,50,72,18,79). Both equal.
+- Item 3: expanding the h=6 operator from produce.py gives the C'V coefficient -6 and pivots -4,-11,-18 directly. Variation (7,0,68), column (62,23), particular solves (69,34,0) and (87,67,49,47), pairs (47,17) and (70,41) all equal. The fixed 47T^3 term contributes exactly 3U^2 at T^5 so the T^5 residual vanishes against the target; without it the upper solve would raise. Only the three pivots and their inverses 67, 81, 5 enter as denominators.
+
+**What the union of FIRST reviews now licenses**, stated in the report's item 4: no geometric common zero of the top-form system on the closed divisor X1=0, on any geometric component of B. The B-unit step is credited to the accepted integral-order/Cramer/field argument, not to the mod-89 point. The X1≠0 chart with its retained fibre, origin-only, the 35-dimension, coefficient growth and the source zero stay UNKNOWN. No global JC2 result.
+
+**Custody and authoring:** all four inputs hashed before any read and matched the charged pins, read whole with nothing clipped. Both owned files written only by apply_patch, custody rows copied from sha256sum output. The report was read whole before the marker; the marker is the single standalone last line. No Seal, no charge_basis, no new OPEN, no execution.
+
+**Timing note recorded in the report:** the prior delta run stopped at its own first+14 min limit after 623 s with item 4 unreached, so its "GAP (cap)" wording meant work not done, not an exhausted cap.
+DIVERT path=xmodel/f10-r2-infinity-forcing-final-gate-fable5-20260910.md status=CLEAN body_bytes=10464 body_sha256=99155a6e6afa0577e95e0dc0ed8a69784fd4197fcfb956d22c6779f405c55ecf

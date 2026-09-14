@@ -1,0 +1,15 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate is complete at 15:31:12 UTC, inside the 15:34:00 deadline. The report `xmodel/f10-r1-exact-decision-extended-gate-fable5-20260909.md` ends with the single standalone BODY-END marker, has no Seal and no charge_basis, and the owned box holds the custody pins and the own-report hash.
+
+**Custody.** All 12 inputs matched the ordered SHA256 list before any whole read. My own `diff` of prior versus new sources reproduces the two charged diffs line for line: the caller changes at lines 74, 149, 150 only, the engine at lines 6, 88, 96–99, 101 only.
+
+**Verdicts.**
+
+- **A CONFIRMED.** Only the aggregate 690, engine 600/550 and verifier 60/50 changed. Semantics 30/25, 2 GiB RSS, 16 MiB file limit, fresh controls, +15 admission, absolute root cutoffs, post-return and post-run checks, and all authority/argv/hash guards are byte-identical. The budget identity is exact: 690 = 600 + 15 + 60 + 15, the same structure as the old 120. Verify is admitted only if engine elapsed plus overhead stays under 615 s, and a wall-capped engine is refused earlier anyway. Root must set the fresh math deadline more than 690 s past the expected first mathematical stage, or admission fails closed.
+- **B CONFIRMED.** The engine adds only the RUSAGE_CHILDREN metadata and moves the unchanged rc/hash refusal after the exclusive receipt write. The signed Popen returncode is stored unchanged, nonzero rc is ENGINE-FAILED-INCONCLUSIVE and never a candidate, and on rc 0 with a hash mismatch the caller still stops at its post-run recheck and cap/failure refusal. The rusage is post-mortem waited-child accounting, not the wrapper's own usage, not a live sample, not enforcement. Linux maxrss is the largest child's high-water mark, so it cannot be equated with CAPRUN's sampled group RSS.
+- **C CONFIRMED with one typed GAP.** The decide-mode precondition binds the semantic receipt to certificate.py and semantic_tests.py hashes only, and the exporter/protocol is byte-identical, so no code path requires a semantic rerun. Fresh same-caller controls are unconditional in code. The GAP is outside the charged inputs: certificate.py's handling of the new receipt key was not readable here. If it enforces an exact key set, the added field fails closed at verify and wastes the attempt. Root should read that before registering.
+
+**Rationale.** Accepted as one bounded diagnostic attempt. The decision-changing content is that a wait-returned failure now records the nested signed rc and child CPU, so a repeat failure is typed instead of lost. Nothing in these inputs shows 550 CPU-seconds suffice.
+
+**Disclosure.** My first hash command created and immediately removed two scratch files, one under /tmp and one directly under box/ outside my owned directory. Both were verified absent and are disclosed in the report body. No execution, network or process census occurred.
+DIVERT path=xmodel/f10-r1-exact-decision-extended-gate-fable5-20260909.md status=CLEAN body_bytes=12977 body_sha256=b22d2b66cde8461f072e89596afc3fb16a89f8552b934c339432b957f8cd1126

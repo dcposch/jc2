@@ -1,0 +1,166 @@
+{
+  "schema": "jc2-necessary-rows-terminal-root-reconciliation/v1",
+  "status": "STOP_BEFORE_PRODUCER_DUMMY_FALSE_QUIET_DIAGNOSIS_PENDING",
+  "scientific_outcome": "NONE",
+  "root_registration_sha256": "0a6c9d81c987a123c2e67c4ae08b6d6598a6df54b18f0475c60704904472aa75",
+  "terminal_quiet_utc": "2026-09-11 07:02:27 UTC",
+  "custody": "RUNTIME_CUSTODY_ABSENT; ROOT archive separately recovered",
+  "pre_dummy": [
+    {
+      "label": "refuse-status",
+      "status": "EXACT_TERMINAL_PREDICATE_MATCH",
+      "wall_seconds": 0.074893869,
+      "python_live_observed": true,
+      "runner_live_observed": true,
+      "telemetry_sha256": "fade2fab57ac6b1000b3fd78bfbb9d690953a760bd25713f4f04bb50245aed0a"
+    },
+    {
+      "label": "refuse-caps",
+      "status": "EXACT_TERMINAL_PREDICATE_MATCH",
+      "wall_seconds": 0.074990018,
+      "python_live_observed": true,
+      "runner_live_observed": true,
+      "telemetry_sha256": "c15ac91d3184687d76f01ea5ecbf0b7a62579c4716556d4cafcac3fb89ddb694"
+    },
+    {
+      "label": "refuse-inventory",
+      "status": "EXACT_TERMINAL_PREDICATE_MATCH",
+      "wall_seconds": 0.064515582,
+      "python_live_observed": true,
+      "runner_live_observed": true,
+      "telemetry_sha256": "cbd38e352dd89c138567f68fe5a47ed8c2714a777d7dd2116dffed67e346b5cf"
+    },
+    {
+      "label": "refuse-source",
+      "status": "EXACT_TERMINAL_PREDICATE_MATCH",
+      "wall_seconds": 0.101497553,
+      "python_live_observed": true,
+      "runner_live_observed": true,
+      "telemetry_sha256": "f84c686ac701eada329a3c144662efbf2b145cdd958947aaeed527ac189dbc8b"
+    },
+    {
+      "label": "refuse-hash",
+      "status": "EXACT_TERMINAL_PREDICATE_MATCH",
+      "wall_seconds": 0.063602158,
+      "python_live_observed": true,
+      "runner_live_observed": true,
+      "telemetry_sha256": "cc24a0c2cee91652e8516d2a2ebd98a1270d89cd0b165c2c42543a13f4ca789e"
+    },
+    {
+      "label": "valid",
+      "status": "EXACT_TERMINAL_PREDICATE_MATCH",
+      "wall_seconds": 0.344586419,
+      "python_live_observed": true,
+      "runner_live_observed": true,
+      "telemetry_sha256": "e2f107b4193f6fb4aabc5ac17e092799d351f82af1e8331566294b17a5b076b5"
+    },
+    {
+      "label": "startup-produce",
+      "status": "EXACT_TERMINAL_PREDICATE_MATCH",
+      "wall_seconds": 0.072151648,
+      "python_live_observed": false,
+      "runner_live_observed": true,
+      "telemetry_sha256": "00e6fce293da0007580be7f76cf807082ee977be9bafcb12a5a51785efc5613e"
+    },
+    {
+      "label": "startup-check",
+      "status": "EXACT_TERMINAL_PREDICATE_MATCH",
+      "wall_seconds": 0.068924321,
+      "python_live_observed": false,
+      "runner_live_observed": true,
+      "telemetry_sha256": "a382d3d3bc70c18d7e9627e33d74ea81026dabc7e083fb80005ad199c218b891"
+    }
+  ],
+  "dummy": {
+    "telemetry_sha256": "97274b0ec6c37a0abd3b1c9ce1e9ecaea6cd80e3eae888da121b4166793b1400",
+    "status": "NORMAL_EXIT",
+    "wall_seconds": 0.30604266,
+    "leader_pid": 8738,
+    "pgid": 8738,
+    "observed_group_rss_bytes": 18366464,
+    "term_sent": false,
+    "kill_sent": false,
+    "cleanup_complete": null,
+    "events": [
+      {
+        "event": "parent_started",
+        "identity": {
+          "boot_id": "a051707c-61a9-407b-8921-f2a6f240a5cf",
+          "gid": 65534,
+          "pgid": 8738,
+          "pid": 8738,
+          "pid_namespace": "pid:[4026531836]",
+          "start_ticks": "62530",
+          "uid": 65534
+        }
+      },
+      {
+        "event": "child_ready_ignoring_term",
+        "identity": {
+          "boot_id": "a051707c-61a9-407b-8921-f2a6f240a5cf",
+          "gid": 65534,
+          "pgid": 8738,
+          "pid": 8744,
+          "pid_namespace": "pid:[4026531836]",
+          "start_ticks": "62558",
+          "uid": 65534
+        }
+      },
+      {
+        "event": "parent_exit_pending",
+        "identity": {
+          "boot_id": "a051707c-61a9-407b-8921-f2a6f240a5cf",
+          "gid": 65534,
+          "pgid": 8738,
+          "pid": 8738,
+          "pid_namespace": "pid:[4026531836]",
+          "start_ticks": "62530",
+          "uid": 65534
+        }
+      },
+      {
+        "event": "orphan_allocated_64MiB",
+        "identity": {
+          "boot_id": "a051707c-61a9-407b-8921-f2a6f240a5cf",
+          "gid": 65534,
+          "pgid": 8738,
+          "pid": 8744,
+          "pid_namespace": "pid:[4026531836]",
+          "start_ticks": "62558",
+          "uid": 65534
+        }
+      }
+    ],
+    "exact_kernel_interleaving": "NOT_OBSERVED"
+  },
+  "outer": {
+    "status": "STOP_CUSTODY_INCOMPLETE",
+    "reason": "owned cgroup still live; ROOT recovery required",
+    "ROOT_terminal_cleanup_capture_required": true
+  },
+  "not_run": [
+    "produce",
+    "check-positive",
+    "mutate",
+    "check-negative"
+  ],
+  "recovery": {
+    "archive_sha256": "b562c698e465d57b1ed8b4302ccf9da90fd93296ec68260ed46fe4e6abb7c07b",
+    "archive_bytes": 631075,
+    "archive_members": 153,
+    "terminal_manifest_sha256": "6c55829d53df1a94050f22ce8606a81d3bc64c8dabf255a53e4479fafd17ff44",
+    "local_pins": 127,
+    "remote_native_pins": 1226,
+    "remote_compare_fsync_utc": "2026-09-11 07:06:14.766858410 UTC",
+    "local_check_last_line": "ROOT_LOCAL_ALL_PINS_FSYNC_DONE 2026-09-11 07:07:55.298902078 UTC"
+  },
+  "retirement": {
+    "requested_utc": "2026-09-11 07:08:09 UTC",
+    "terminated_confirmed_utc": "2026-09-11 07:09:27 UTC",
+    "instance": "i-0de792cdaff6b0682",
+    "retained_volume": "vol-0fcc863483b3e06e5",
+    "volume_status": "AVAILABLE_UNATTACHED_100GiB",
+    "worker_timer_closed_and_fleet_empty_utc": "2026-09-11 07:10:24 UTC"
+  },
+  "scope": "Metadata/predicate/byte comparisons only; no mathematical payload, local source replay, timing/credit or source outcome claim."
+}

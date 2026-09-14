@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The review is complete and sealed at 13:19 UTC, ahead of the 13:35 deadline. The report is at `xmodel/frontier-external108-gate-r2-fable5-20260906.md` with a unique standalone BODY-END marker and a seal outside the body.
+
+**Outcome: CONFIRMED on all four aspects.** Theorem interface, executable behaviour, compatibility, and tests each pass independent review. No REFUTED finding, no blocking GAP, no OPEN item, no corrective action requested.
+
+What I verified:
+
+- **Pins.** All nine frozen inputs hashed. The seven with live counterparts are byte-identical to the workspace. The gate hash equals Sol's pin and the suite's expected hash. The PDF hash equals the gate constant and the AUDIT17(jjjjjjjjjjjj) pin. Sol's output pins verify 5/5 from the repo root.
+- **Theorem interface.** The gate implements only the contrapositive of the robust consequence of GGHV Theorem 2.1, namely max degree at least 108. The sub-125 pair list is not implemented, so fixed 108/108 stays inconclusive, which is the correct fail-safe reading. Partial-y registrations never reach the bound. Laurent and J=x^k charts have no CLI spelling.
+- **Executable behaviour.** Legacy theorem, source, verdict, and reason are computed from the gcd alone with HEAD's strings unchanged. Process status and overall verdict combine either exclusion. My own oracle with hand-derived expectations matches the production gate on all twenty rows, and its first ten rows are byte-identical to Sol's control matrix. Thirteen malformed inputs all exit 2 with empty stdout.
+- **Compatibility.** No machine consumer parses the legacy verdict alone. The pilot harvest scripts use check_output on a worker-local legacy copy, so substituting the new gate would abort fail-closed. COORDINATION.md's 12:42Z overlay paragraph already documents that the legacy verdict is gcd-only.
+- **Tests.** My own suite run passed 14/14 under the 30 s and 512 MiB caps. The legacy HEAD gate serves as a genuine old-pass/new-fail control, passing the four legacy cases and failing all twenty oracle rows. Ten scratch mutants were each rejected, including drop-gcd-side, drop-external-side, min-for-max, constant off-by-one in both directions, cap-plus-one, exit-from-legacy, and purpose-ignored. A portability simulation confirmed the pin test errors in a tree lacking the untracked GGHV files.
+
+The review flags `UNREVIEWED_PENDING_DIFFERENT_MODEL_GATE` and `manual_external_check_required=true` are unchanged in code and output. Whether this gate discharges them is root's integration decision. One integration note: flipping the review status later requires updating the pinned gate hash in the test in the same change.
+
+No tools, tests, canonical files, or other authors' artifacts were edited. The only writes are the report and my scratch directory `box/frontier-external108-gate-r2-fable5-20260906/`, which holds the oracle, malformed-input script, legacy control, mutants, and a manifest.
+DIVERT path=xmodel/frontier-external108-gate-r2-fable5-20260906.md status=CLEAN_SEALED body_bytes=14811 body_sha256=f802fb37d9483458d83ddcc898963c8bd33764982fa572f47e4fbbaf7e4105a6
+charge-basis validation failed; result is quarantined
+charge_basis: INVALID: line 271: invalid JSON: Expecting value: line 1 column 1 (char 0)

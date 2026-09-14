@@ -1,0 +1,47 @@
+{
+  "schema": "jc2.documentary-custody/v1",
+  "owner": "/root/model_productivity",
+  "status_at_handoff": "COMPLETED_ALL_WRITERS_IDLE",
+  "first_action_utc": "2026-09-11T14:57:44.616982771Z",
+  "report_closed_and_finalized_utc": "2026-09-11T15:13:30Z",
+  "final_input_postcheck_utc": "2026-09-11T15:14:01.933605907Z",
+  "original_reserve_utc": "2026-09-11T15:17:00Z",
+  "original_hard_stop_utc": "2026-09-11T15:20:00Z",
+  "deadline_reset": false,
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_transaction_sha256": "44654a87a98ba0088240a85a16e8d2929219229d0188cce8be1cb5412fa84782",
+  "expected_verification": "VERIFIED; exact basis and expected manifest SHA supplied; sealed report and manifest read WHOLE",
+  "read_scope": "TASK plus all8 historical inputs freshly prehashed and freshly HUMAN WHOLE read; no prior-WHOLE reuse. Bounded ranges recorded in PINS.json. Own latebind/test/contract/PINS/report/manifest read WHOLE. All9 current input pins match again at final postcheck. No linked science/native/runtime/provenance bodies read.",
+  "input_pins": {
+    "box/caprun-latebinder-code-astra-20260911/TASK.md": "f276baaa99a89a46c32e279d0bb98a449ef3cc63c567f7afde818d9c9f9cbdf9",
+    "box/caprun-closed-scope-b-execution-root-20260911/ROOT-REGISTRATION.preholder.json": "31c942b17ed290f13b0bcd87457ec3a2b68f760fc4cf99443fee0e8386eceb74",
+    "box/caprun-closed-scope-b-execution-root-20260911/ROOT-REGISTRATION.json": "4d0d8475ed7d4aac1e42b70b1c7b4ee0198270ead0c3bb46adb78d7a91153ba3",
+    "box/caprun-closed-scope-b-execution-root-20260911/AUTHORITIES.preholder.json": "58d35c476c3dc7c4f6fe36adf73b79e5e0d8843e6ddd388c27a745b747a40d2e",
+    "box/caprun-closed-scope-b-execution-root-20260911/ROOT-EXECUTION-CARD.preholder.md": "1d9f837a23bb94b9609c7ac572909afbb0a4a96e44cb3c84b4875a9b310d02be",
+    "box/caprun-closed-scope-b-execution-root-20260911/ROOT-EXECUTION-CARD.md": "a92cf2680c8d6aff6044f5376fb1dcfeed87a29c527d55c953d940e39a99f281",
+    "box/caprun-closed-scope-b-execution-root-20260911/final-install.preholder.sh": "6d414284920782a75a951fa3e59a8c23a391470a5efea28003b968bb1052fc62",
+    "box/caprun-closed-scope-b-execution-root-20260911/final-install.sh": "abff072f218cbecaa6f47278891a62b36463a70e34ae4be546e44a5f3c3cd208",
+    "box/caprun-closed-scope-b-execution-root-20260911/FINAL-INSTALL-INPUTS.sha256": "d90196456531bdf917098c84a84a88861384c220dcff6882a5305bacd48e8943"
+  },
+  "owned_pins_excluding_custody_itself": {
+    "box/caprun-latebinder-code-astra-20260911/latebind.py": "ff2beb48b68b55dc5035709a9114bc7202dd38cef488d20b8163d0c55e2366fe",
+    "box/caprun-latebinder-code-astra-20260911/test_latebind.py": "85d5390babe473deed13e9a88c40ea82193c6306284a4224cdb021f65ca5ec06",
+    "box/caprun-latebinder-code-astra-20260911/CONTRACT.md": "33e7308f21b60beb884977829fba0afeefd5ce6cac5183435677779a18de2d12",
+    "box/caprun-latebinder-code-astra-20260911/PINS.json": "de13a252666853ea36718e1e8e07bb8db8fb420bf4e6f88547b7fa6294a1b619",
+    "xmodel/caprun-latebinder-code-astra-20260911.md": "68e416319cfb0e52900fd0ff0444644aa0d17a8e1d5488106876197f49b4e309",
+    "xmodel/caprun-latebinder-code-astra-20260911.md.artifact.json": "44654a87a98ba0088240a85a16e8d2929219229d0188cce8be1cb5412fa84782"
+  },
+  "authorized_tests": {
+    "command": "python3 -I -S -B box/caprun-latebinder-code-astra-20260911/test_latebind.py",
+    "initial_result": "11 methods PASS, unittest0.049s",
+    "final_result": "13 methods PASS, unittest0.059s",
+    "scope": "Pure-data metadata only; all candidate bytes in memory; no input shell/native/scientific execution and no candidate writes. Historical and synthetic changed-bindings controls are not host observations or live approvals."
+  },
+  "no_cli_or_filesystem_writer_in_helper": true,
+  "no_worker_or_deployment": true,
+  "no_source_outcome": true,
+  "first_independent_review_required_before_operational_use": true,
+  "operational_120_second_sufficiency": "UNKNOWN",
+  "new_canonical_open_items": 0,
+  "follow_on_authority": false
+}

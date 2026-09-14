@@ -1,0 +1,46 @@
+{
+  "exact_q": {
+    "basis_length": null,
+    "characteristic": null,
+    "classification": "WATCHDOG_TIMEOUT",
+    "custody": "host=ip-172-30-0-97\nnproc=64\ninput=/home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms\ninput_sha256=66bb78cfec123e11c5b9c780056b5949aa1c5c198caeb3c668aab1973d6697eb\ninput_bytes=65003245\nvariables=97\ngenerators=330\ncharacteristic=0\nmsolve_path=/usr/local/bin/msolve\nmsolve_sha256=0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f\nmsolve_version=0.10.1\ncommand=/usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p0.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/exact_q.msout\nwatchdog_seconds=9000\n",
+    "dimension": null,
+    "largest_f4_matrix_by_entries": {
+      "columns": 10777112,
+      "degree": 7,
+      "rows": 4024993
+    },
+    "max_f4_degree": 7,
+    "output_bytes": 0,
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "peak_rss_kb": 129556692,
+    "raw_output_classification": "EMPTY_OUTPUT",
+    "rc": 124,
+    "stem": "exact_q",
+    "time_sha256": "07bded324bd80a6fd1a89d8926f5b81c84ddd38bf164acd53d99ff6c6f586ceb",
+    "v2_sha256": "ff3632120cc573b4cb5f2a7519efabe3be8891bcde7f8430dd98b4b4ca1b6a5d",
+    "wall_seconds_ns": 9003.333599291
+  },
+  "mod32003": {
+    "basis_length": null,
+    "characteristic": null,
+    "classification": "WATCHDOG_TIMEOUT",
+    "custody": "host=ip-172-30-0-97\nnproc=64\nsource_q_sha256=66bb78cfec123e11c5b9c780056b5949aa1c5c198caeb3c668aab1973d6697eb\ninput=/home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p32003.ms\ninput_sha256=bdcde96858f3a16c32f8bf9af405c64fbadcb743a1a67ee8f1f568e17fce7c23\ninput_bytes=65003249\nvariables=97\ngenerators=330\ncharacteristic=32003\nmsolve_path=/usr/local/bin/msolve\nmsolve_sha256=0436525b06fe83b1a6a00097a96d9bcafdc40d8de6315c724b9ada9a4c04ff5f\nmsolve_version=0.10.1\ncommand=/usr/local/bin/msolve -g 2 -t 64 -v 2 --random-seed 0 -f /home/ubuntu/jc2/box/k8-b11-q1-20260905/run-input/K8_B11_Q1_p32003.ms -o /home/ubuntu/jc2/box/k8-b11-q1-20260905/results/mod32003.msout\nwatchdog_seconds=45\n",
+    "dimension": null,
+    "largest_f4_matrix_by_entries": {
+      "columns": 252667,
+      "degree": 6,
+      "rows": 70368
+    },
+    "max_f4_degree": 6,
+    "output_bytes": 0,
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "peak_rss_kb": 3214652,
+    "raw_output_classification": "EMPTY_OUTPUT",
+    "rc": 124,
+    "stem": "mod32003",
+    "time_sha256": "f9a4f817bf119dead39db9d7de8a2bd3f25111aaa733168f7f356a07f5cec1da",
+    "v2_sha256": "20c89f456b35902fcf6932052d82ff1ed19116aa4b37da43835b082738a1d813",
+    "wall_seconds_ns": 45.157064952
+  }
+}

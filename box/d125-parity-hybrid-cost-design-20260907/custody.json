@@ -1,0 +1,25 @@
+{
+  "task": "d125-parity-hybrid-cost-design-astra-20260907",
+  "owner": "/root/model_productivity",
+  "scope": "DESK_PREP_ONLY",
+  "status": "TERMINAL_DESK_DESIGN_PENDING_INDEPENDENT_REVIEW",
+  "production_source_rows_read_or_evaluated": 0,
+  "production_metadata_or_expansion": false,
+  "aws_ssh_cas_solver": false,
+  "live_peer_reads": false,
+  "new_worker_authority": false,
+  "tiny_checks": {
+    "normal": "PASS",
+    "optimized": "PASS",
+    "actual_combined_command_wall_seconds": 0.025,
+    "per_process_cpu_seconds": 10,
+    "per_process_address_space_bytes": 536870912,
+    "assert_nodes": 0,
+    "commands": ["python3 -B box/d125-parity-hybrid-cost-design-20260907/check.py", "python3 -B -O box/d125-parity-hybrid-cost-design-20260907/check.py"]
+  },
+  "code_and_evidence": ["check.py", "check-results.json", "pins.json"],
+  "running_jobs": [],
+  "remote_writes": [],
+  "required_next_authority": "Independent mathematical review, then separately scoped implementation and root construction GREEN",
+  "limitations": "No source system constructed; count/growth bounds are desk results, not measured runtime or ideal properness. Original failed B physical degree remains unknown."
+}

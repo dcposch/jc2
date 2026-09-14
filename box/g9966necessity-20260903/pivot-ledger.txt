@@ -1,0 +1,17 @@
+delta52 : 66 joint Q* pivots ; all coefficients nonzero rational: True ; pivot blocks ['B1c'] ; pivots on rho/c/u/v: none
+delta2 : 35 joint Q* pivots ; all coefficients nonzero rational: True ; pivot blocks ['B1c'] ; pivots on rho/c/u/v: none
+
+closed form from  [t^n]KJ = A0^3 (99 A0 dB/dw - (99-3n) B dA0/dw),  A0 = w^9(w-1)^24 :
+   n=1  q=24..32  coefficients -864 -765 -666 -567 -468 -369 -270 -171 -72
+   n=2  q=23..31  coefficients 837 738 639 540 441 342 243 144 45
+   n=3  q=22..30  coefficients -810 -711 -612 -513 -414 -315 -216 -117 -18
+   n=4  q=22..29  coefficients -783 -684 -585 -486 -387 -288 -189 -90
+   n=5  q=21..28  coefficients 756 657 558 459 360 261 162 63
+   n=6  q=20..27  coefficients -729 -630 -531 -432 -333 -234 -135 -36
+   n=7  q=19..26  coefficients 702 603 504 405 306 207 108 9
+   n=8  q=19..25  coefficients 675 576 477 378 279 180 81
+
+reproduced 66 of 66 delta=5/2 joint Q* pivot coefficients
+all satisfy |coeff| = 9(99 - 3n - 11 i) ; zero would need 11 | 3n, i.e. 11 | n, impossible for 1 <= n <= 8
+delta=2 ledger: 35 pivots, of which 31 are J-band rows obeying the same formula;
+   the other 4 are the G pole rows G_local5..8_coord0 with coefficients ['8', '-8', '8', '8']

@@ -1,0 +1,32 @@
+{
+  "H_digit": "Q - R1/8 - 9*W/64",
+  "characteristic_cases": [
+    {
+      "degree": 55,
+      "digit_degree": 22,
+      "k": 33
+    },
+    {
+      "degree": 63,
+      "digit_degree": 27,
+      "k": 36
+    }
+  ],
+  "constant_digit": "R2 - 9*R3/64 + p*v + q",
+  "degree_hypotheses": "H monic deg_y k; deg_y v,V < k; k<characteristic_degree<2k",
+  "depressed_translation_identity": true,
+  "division_relations": [
+    "-H*U - R + v**2",
+    "-H*P - R1 + U*v",
+    "-H*Q + R*v - R2",
+    "-H*W - R3 + U**2"
+  ],
+  "exact_difference_certificate": "-H*Q + 9*H*W/64 - H*(-H*P - R1 + U*v)/8 + R*v - R2 + 9*R3/64 - 9*U**2/64 + (3*H**2/4 + v)*(-H*U - R + v**2)",
+  "field": "Q",
+  "four_division_identity": true,
+  "leader_rule": "deg_y H_digit=characteristic_degree-k, with scalar unit leader",
+  "rational_prefix_positive_control": true,
+  "self_sha256": "ec97531fa91e3227ad7daac819ab9243f699c302404c7fb2c28bf07b7e7d80e3",
+  "unsafe_singular_power_rejected": true,
+  "upper_digit": "-P/8 + 3*R/4 + p"
+}

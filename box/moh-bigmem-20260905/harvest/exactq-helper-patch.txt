@@ -1,0 +1,9 @@
+utc=2026-09-05T14:58Z
+reason=old helper would TypeError before automatic exact-Q after an msolve modular UNIT
+scope=run_guided_job.py only; active solver inputs/processes unchanged
+old_sha256=ae0ded5fe0bdd9c0c5b27572a2e8b51b4a895a44684e3edae87513b390483454
+new_sha256=829f59f21c2f1ae8771191263537ec58769230b8c94809c323cfce35089fd071
+new_version_already_active_on=172.30.0.121,172.30.0.55,172.30.0.45,172.30.0.125
+updated_and_verified_on=172.30.0.183,172.30.0.202,172.30.0.108,172.30.0.190
+diff_1=load_variables now requires c present rather than last (needed by graph metadata)
+diff_2=run_one memory_kb optional argument now defaults to None

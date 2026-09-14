@@ -1,0 +1,56 @@
+{
+  "schema": "caprun-complete-lateflow-custody/v1",
+  "status": "ALL_WRITERS_IDLE_HASH_FIRST",
+  "all_writers_idle": true,
+  "first_action_utc": "2026-09-12T03:48:14.876921810Z",
+  "custody_utc": "2026-09-12T03:59:06.382297155Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "publication_reserve_utc": "2026-09-12T04:04:00Z",
+  "hard_stop_utc": "2026-09-12T04:07:00Z",
+  "lifecycle": "INTERNAL_UNREVIEWED_DISABLED_UNBOUND",
+  "execution": "NONE",
+  "worker_or_batch_selected": false,
+  "report": {
+    "path": "xmodel/caprun-complete-lateflow-sol-20260912.md",
+    "sha256": "d78a5bbc83c9c9483d54a871240a1bea37d6503364ede4e7d14a3ad5d71986ec"
+  },
+  "transaction_manifest": {
+    "path": "xmodel/caprun-complete-lateflow-sol-20260912.md.artifact.json",
+    "sha256": "ec816484d0af00902325f784d0abc473124017c89cb938a043dd5b4622767200"
+  },
+  "source_manifest": {
+    "path": "box/caprun-complete-lateflow-sol-20260912/PINS.json",
+    "sha256": "9a7fb145879c4d122a82e0cebfd1164b91908b66442768cf4bd60b593c043319"
+  },
+  "postpins": {
+    "path": "box/caprun-complete-lateflow-sol-20260912/POSTPINS.sha256",
+    "sha256": "c69e9e4bd94fac38a7cc834b2c02e79b12273b51d4bab0725e858b1b7c5bbcdf"
+  },
+  "artifacts": [
+    {"path":"box/caprun-complete-lateflow-sol-20260912/FROZEN-CONSTANTS.template.json","sha256":"2e7738291bdb7a65f0be6a3a54aca94067b822b87c736b739ded82cbd1e42cb4"},
+    {"path":"box/caprun-complete-lateflow-sol-20260912/observe.template.sh","sha256":"62bef19a9b47ecd04bf7e4a5e6aa21bc77baeebf2eab028b6e2b9c38f6432274"},
+    {"path":"box/caprun-complete-lateflow-sol-20260912/attest.template.sh","sha256":"fb2cd3d78596546a8dc46c0933b370799c5716cd2e7b1be3310f1c9d095ec3bb"},
+    {"path":"box/caprun-complete-lateflow-sol-20260912/RECIPE.js","sha256":"da9da76f0c2b1c36205c4be037b2e20fc7674b60f375492618dc339dbf81d080"},
+    {"path":"box/caprun-complete-lateflow-sol-20260912/release.template.sh","sha256":"f65974e055aabf0529fe2fb7616a59674af7d35cd9e1c8a3a0a5f3c6376e8385"},
+    {"path":"box/caprun-complete-lateflow-sol-20260912/SELF-CONTROLS.md","sha256":"a6241fc0a139baa0ab22c9254903596f03dbe227be180e012e110aa2b2c8fc4a"}
+  ],
+  "critical_source_pins": {
+    "diagnosis": "8e3a8ea16497b0a3e27801dd012ea0baa6c397977f128ab1cdef6a1e4c75d74d",
+    "diagnosis_pins": "a7f298a8452e2d793b707d9905a03ec1d48ea755684e5709694fc212842b0d9c",
+    "dispatcher": "52b3d916f4fc3941bb98c8b4f7698ab940680d09ee4e065de1f167857e3fd436",
+    "caller": "73596b115c73db9aac6751c08d26b2a90cbddccfaa1d6a8615ada65a8076df90",
+    "latebinder": "ff2beb48b68b55dc5035709a9114bc7202dd38cef488d20b8163d0c55e2366fe",
+    "stage_patch": "f7c61db67a9982a99f1febaed6dae0b6e3595199ffccad70647b66556b907066",
+    "final_installer": "b0aac1034ba6985dac9c23e75b4f258336ea238449088880f7ed1b632152ad99",
+    "accepted_composition": "ab055f37a28cf7d7bb247951e33a26d3243d54ed4be56bd0f726d471d008515e"
+  },
+  "read_scope": {
+    "exact_manifest": "box/caprun-complete-lateflow-sol-20260912/PINS.json",
+    "own_artifacts": "FRESH_WHOLE_AFTER_FINAL_SOURCE_EDITS",
+    "dispatcher": "FRESH_SELECTED_VIA_PINNED_DIAGNOSIS_NOT_NEW_WHOLE_REVIEW",
+    "terminal_native_pins_stdout": "HASH_METADATA_ONLY_NOT_BODY_READ",
+    "forbidden_repositories": "NOT_INSPECTED"
+  },
+  "gaps": ["BOUND_PACKET_REVIEW", "LIVE_LATENCY"],
+  "post_custody_writes_permitted": false
+}

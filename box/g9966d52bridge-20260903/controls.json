@@ -1,0 +1,67 @@
+{
+  "affine_two_collective_points": {
+    "F": "2*x + y",
+    "G": "x + y",
+    "J": "1",
+    "degrees": [
+      1,
+      1
+    ],
+    "infinity_points": [
+      "[1:-2:0]",
+      "[1:-1:0]"
+    ],
+    "status": "SURVIVES[TWO-INFINITY-AFFINE,J=1] / NOT-APPLICABLE[s=3,T2/T3]"
+  },
+  "degenerate_two_factor_top": {
+    "G3_minus_F2_is_zero": true,
+    "J_is_zero": true,
+    "P": "y^3*(y-x)^8",
+    "degrees": [
+      99,
+      66
+    ],
+    "status": "REJECTS[DEGENERATE-TWO-POINT-TOP,J=0]"
+  },
+  "requested_combined_control": {
+    "exists": false,
+    "reason": "A non-affine tame plane automorphism has both leading coordinate forms as powers of one linear form; under Xu's stronger condition a coordinate itself cannot have two infinity points.",
+    "status": "OPEN[POSITIVE-TWO-INFINITY-BRIDGE-CONTROL: SPECIFICATION-INCOMPATIBLE-WITH-TAME-AUTOMORPHISMS]"
+  },
+  "source_identity": {
+    "p": "pi*(-c + pi**2)",
+    "p10_q1_degree": 40,
+    "q1_degree": 10,
+    "q1_derivative_check": true,
+    "q1_zero_constant": "pi**4*(10*c**3 - 20*c**2*pi**2 + 15*c*pi**4 - 4*pi**6)/20"
+  },
+  "tame_high_degree": {
+    "F": "x + y**6",
+    "G": "y + (x + y**6)**7",
+    "J": "1",
+    "degrees": [
+      6,
+      42
+    ],
+    "inverse": [
+      "y=G-F^7",
+      "x=F-(G-F^7)^6"
+    ],
+    "inverse_check": {
+      "F_after_inverse": "F",
+      "G_after_inverse": "G"
+    },
+    "leading_F": "y**6",
+    "leading_G": "y**42",
+    "status": "SURVIVES[TAME-DEGREES-(6,42),J=1] / NOT-APPLICABLE[TWO-POINT-BRIDGE]"
+  },
+  "type": "EXACT-CONTROLS / FALLACY-v2",
+  "us1": {
+    "bridge_rows": 0,
+    "bridge_unknowns": 0,
+    "parent": "(64,48)",
+    "reduced": "(16,12)",
+    "status": "TRIVIAL[u_s=1] / SATISFIED",
+    "u_s": 1
+  }
+}

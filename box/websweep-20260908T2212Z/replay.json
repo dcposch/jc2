@@ -1,0 +1,50 @@
+{
+  "completed": "2026-09-08T22:22:03.916613+00:00",
+  "checker_sha256": "c31f27c818d4ab70f6206fabcd29eca9b08386586c221fa9f521d321de7bb0e3",
+  "zero_assert": true,
+  "runs": [
+    {
+      "optimized": false,
+      "mode": "normal",
+      "returncode": 0,
+      "stdout": "{\"degrees\": [7, 6, 4], \"distinct_collision_points\": 3, \"image\": [\"-1/4\", \"0\", \"0\"], \"jacobian\": \"-2\", \"mode\": \"normal\", \"status\": \"PASS\", \"terms\": [7, 6, 3]}\n",
+      "stderr": ""
+    },
+    {
+      "optimized": false,
+      "mode": "changed-map",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 48, in <module>\n    print(json.dumps(check(mode),sort_keys=True))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 39, in check\n    require(determinant==scale(one,-2),'determinant is not the constant -2')\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 30, in require\n    if not c:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: determinant is not the constant -2\n"
+    },
+    {
+      "optimized": false,
+      "mode": "changed-collision",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 48, in <module>\n    print(json.dumps(check(mode),sort_keys=True))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 43, in check\n    for p in points:require(tuple(val(f,p) for f in F)==image,'actual point fails collision')\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 30, in require\n    if not c:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: actual point fails collision\n"
+    },
+    {
+      "optimized": true,
+      "mode": "normal",
+      "returncode": 0,
+      "stdout": "{\"degrees\": [7, 6, 4], \"distinct_collision_points\": 3, \"image\": [\"-1/4\", \"0\", \"0\"], \"jacobian\": \"-2\", \"mode\": \"normal\", \"status\": \"PASS\", \"terms\": [7, 6, 3]}\n",
+      "stderr": ""
+    },
+    {
+      "optimized": true,
+      "mode": "changed-map",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 48, in <module>\n    print(json.dumps(check(mode),sort_keys=True))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 39, in check\n    require(determinant==scale(one,-2),'determinant is not the constant -2')\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 30, in require\n    if not c:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: determinant is not the constant -2\n"
+    },
+    {
+      "optimized": true,
+      "mode": "changed-collision",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 48, in <module>\n    print(json.dumps(check(mode),sort_keys=True))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 43, in check\n    for p in points:require(tuple(val(f,p) for f in F)==image,'actual point fails collision')\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/websweep-20260908T2212Z/check_c3.py\", line 30, in require\n    if not c:raise ValueError(m)\n             ^^^^^^^^^^^^^^^^^^^\nValueError: actual point fails collision\n"
+    }
+  ],
+  "status": "PASS"
+}

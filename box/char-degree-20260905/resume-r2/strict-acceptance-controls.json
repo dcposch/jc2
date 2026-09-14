@@ -1,0 +1,816 @@
+{
+  "scope": "Independent acceptance-parser controls and read-only classification of existing toy replay outputs. No production Groebner calculation rerun; no source-chart claim.",
+  "status": "PASS",
+  "control_script_sha256": "2447027dc9ebe976d99841cc3113c78d656ba6d357ca075d01f5787e364a0340",
+  "synthetic_cases": [
+    {
+      "case": "clean_proper",
+      "expected_complete_clean": true,
+      "check": "PASS",
+      "verdict": "COMPLETE_CLEAN_PROPER_COMPUTATION",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [],
+      "log_sha256": "b702f0f6d6f86032e657370149752b858e1a16afddcbdbe462b4cda04c0d4fbe"
+    },
+    {
+      "case": "clean_unit",
+      "expected_complete_clean": true,
+      "check": "PASS",
+      "verdict": "COMPLETE_CLEAN_UNIT_CANDIDATE_NEEDS_REPLAY",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "0",
+        "-1",
+        "1"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [],
+      "log_sha256": "d4b07e99d22bbd989a08fd48ad4af7af531e0b225009035ac1ee2f2cbe0ac91f"
+    },
+    {
+      "case": "missing_ALL_ROWS_PARSED",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 0,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [],
+      "controls": [],
+      "parsed_row_count": null,
+      "reasons": [
+        "required_unique_marker_missing_or_duplicate"
+      ],
+      "log_sha256": "46d0c12e0ce01b9767ae8649d5b67b3865912bb39e38e2c3ff4330985ca90d1a"
+    },
+    {
+      "case": "missing_BEGIN_GB",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 0,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [],
+      "controls": [],
+      "parsed_row_count": null,
+      "reasons": [
+        "required_unique_marker_missing_or_duplicate"
+      ],
+      "log_sha256": "a5a4d7b63112bb6d2bd16e4e904838aadbf466f77d9e4eaa849d9e670a28fd22"
+    },
+    {
+      "case": "missing_END_GB",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 0,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [],
+      "controls": [],
+      "parsed_row_count": null,
+      "reasons": [
+        "required_unique_marker_missing_or_duplicate"
+      ],
+      "log_sha256": "31dc028a87be51677d6e1a71a7e77eac680472afe7b9c2c91ab6f8c36ebebd39"
+    },
+    {
+      "case": "missing_BEGIN_RESULT",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 0,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [],
+      "controls": [],
+      "parsed_row_count": null,
+      "reasons": [
+        "required_unique_marker_missing_or_duplicate"
+      ],
+      "log_sha256": "b4ec93f470d75370abd90f474317a67107fc9066dff917d20e53c55d5963191d"
+    },
+    {
+      "case": "missing_END_RESULT",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 0,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [],
+      "controls": [],
+      "parsed_row_count": null,
+      "reasons": [
+        "required_unique_marker_missing_or_duplicate"
+      ],
+      "log_sha256": "18f06a362ae8f31dd4e90c270e514da0c5edcb55cd6d201f1ac02621cc608cfa"
+    },
+    {
+      "case": "missing_BEGIN_CONTROLS",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 0,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [],
+      "controls": [],
+      "parsed_row_count": null,
+      "reasons": [
+        "required_unique_marker_missing_or_duplicate"
+      ],
+      "log_sha256": "8e65ad0717221861e6eb8bc007df026644500448f156528c972e0440c1b80b77"
+    },
+    {
+      "case": "missing_END_CONTROLS",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 0
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [],
+      "controls": [],
+      "parsed_row_count": null,
+      "reasons": [
+        "required_unique_marker_missing_or_duplicate"
+      ],
+      "log_sha256": "253da94ce7b968d01299aedfc0d3a5e17b7899f0b54d77c3f9c9a0aa7e216bcd"
+    },
+    {
+      "case": "truncated_gb",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 0,
+        "BEGIN_RESULT": 0,
+        "END_RESULT": 0,
+        "BEGIN_CONTROLS": 0,
+        "END_CONTROLS": 0
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [],
+      "controls": [],
+      "parsed_row_count": null,
+      "reasons": [
+        "required_unique_marker_missing_or_duplicate"
+      ],
+      "log_sha256": "0bae4b6f2262155ce3ee5227eb9b421c0d0b9265b0163366c3013fd53728cace"
+    },
+    {
+      "case": "parser_error_rc0",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [
+        "   ? poly ^ number failed"
+      ],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "parser_cas_or_termination_diagnostic"
+      ],
+      "log_sha256": "b99f60a8b309a330ad635a21a9c70d2f7331b84f36919138af13265c15884a50"
+    },
+    {
+      "case": "generic_error_rc0",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [
+        "error occurred in procedure emit"
+      ],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "parser_cas_or_termination_diagnostic"
+      ],
+      "log_sha256": "ca77398c06d909a4faa52666e62e644c17a234576aebc20d9d83be092038aa8f"
+    },
+    {
+      "case": "memory_error_rc0",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [
+        "Singular error: no more memory"
+      ],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "parser_cas_or_termination_diagnostic"
+      ],
+      "log_sha256": "4e765f37c2307c67e23e0e1ff0fe6d930d206ccc003b724003810fcaa5fc74b4"
+    },
+    {
+      "case": "wrong_control_vector",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "1",
+        "0"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "localizer_control_vector_wrong"
+      ],
+      "log_sha256": "5904533dd40464927c3891dc99162c3faa3ec61bc41811689ff30b68c797b51e"
+    },
+    {
+      "case": "missing_control_value",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "localizer_control_vector_wrong"
+      ],
+      "log_sha256": "e490d881fe3397b0d38fbb26cf5a89a26c1a0a7009e27a93f41a2f3aa4728282"
+    },
+    {
+      "case": "nonzero_rc",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 1,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "returncode_not_zero_or_unrecorded"
+      ],
+      "log_sha256": "b702f0f6d6f86032e657370149752b858e1a16afddcbdbe462b4cda04c0d4fbe"
+    },
+    {
+      "case": "unrecorded_rc",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": null,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "returncode_not_zero_or_unrecorded"
+      ],
+      "log_sha256": "b702f0f6d6f86032e657370149752b858e1a16afddcbdbe462b4cda04c0d4fbe"
+    },
+    {
+      "case": "hash_mismatch",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "script_or_output_not_hash_bound"
+      ],
+      "log_sha256": "b702f0f6d6f86032e657370149752b858e1a16afddcbdbe462b4cda04c0d4fbe"
+    },
+    {
+      "case": "wrong_row_count",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "parsed_row_count_wrong"
+      ],
+      "log_sha256": "b702f0f6d6f86032e657370149752b858e1a16afddcbdbe462b4cda04c0d4fbe"
+    },
+    {
+      "case": "duplicated_marker",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 2,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [],
+      "controls": [],
+      "parsed_row_count": null,
+      "reasons": [
+        "required_unique_marker_missing_or_duplicate"
+      ],
+      "log_sha256": "637c8723ada7ad778316f7d57d80ee223954c46d4efbb696fc46844a2fee3f74"
+    },
+    {
+      "case": "invalid_reduce_one",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "2",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "result_vector_invalid"
+      ],
+      "log_sha256": "fd737d5e5a30db47a52daa81d595fa009b3cd6ba766ed6c0f1e6c5b68c969f34"
+    },
+    {
+      "case": "extra_result_value",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "result_vector_invalid"
+      ],
+      "log_sha256": "c2652be33cafe1add73bbc665dff8c25fd974d2fd71f02cefbb5cf00d2a422eb"
+    },
+    {
+      "case": "wrong_marker_order",
+      "expected_complete_clean": false,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "END_GB",
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "marker_order_invalid",
+        "result_vector_invalid"
+      ],
+      "log_sha256": "13c446ba68fba3e3a2616f9c12e81944b08ff6a22fd23e8e47c66286fbc7ee66"
+    }
+  ],
+  "actual_toy_singular": [
+    {
+      "case": "clean_proper",
+      "script_sha256": "4e7960184047dbce0d7f253a291cb75286d808b7200ac63793f2fdbc6b0bd4ae",
+      "wall_seconds": 0.0054,
+      "check": "PASS",
+      "verdict": "COMPLETE_CLEAN_PROPER_COMPUTATION",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [],
+      "log_sha256": "b702f0f6d6f86032e657370149752b858e1a16afddcbdbe462b4cda04c0d4fbe"
+    },
+    {
+      "case": "clean_unit",
+      "script_sha256": "fdc208e58f83ea6830c19c555badc111232d9101f11e241ebb39734d5d276966",
+      "wall_seconds": 0.0048,
+      "check": "PASS",
+      "verdict": "COMPLETE_CLEAN_UNIT_CANDIDATE_NEEDS_REPLAY",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "0",
+        "-1",
+        "1"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [],
+      "log_sha256": "d4b07e99d22bbd989a08fd48ad4af7af531e0b225009035ac1ee2f2cbe0ac91f"
+    },
+    {
+      "case": "malformed_parser_rc0",
+      "script_sha256": "319c478ca90ec9e147f8f80c27316bbf73130f1823306e93818188a8950392a1",
+      "wall_seconds": 0.0051,
+      "check": "PASS",
+      "verdict": "OPEN_REJECTED_OR_INCOMPLETE",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [
+        "   ? `poly` ^ `number` failed",
+        "   ? expected `poly` ^ `int`",
+        "   ? error occurred in or before STDIN line 2: `poly malformed=b^2/4;`",
+        "   ? expected poly-expression. type 'help poly;'"
+      ],
+      "result": [
+        "1",
+        "0",
+        "2"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 2,
+      "reasons": [
+        "parser_cas_or_termination_diagnostic"
+      ],
+      "log_sha256": "f53e3a0102045f71063b56b0401828429407c8d8e981853361c4a2adcbda6b88"
+    }
+  ],
+  "existing_toy_replay_classification": [
+    {
+      "case": "positive",
+      "verdict": "COMPLETE_CLEAN_PROPER_COMPUTATION",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "1",
+        "0",
+        "19"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 23,
+      "reasons": [],
+      "log_sha256": "fe1d0a25714d55d0d0bf314f3d61ce3d042aa5be1f0b1c043edfcf3c8f68d039"
+    },
+    {
+      "case": "negative",
+      "verdict": "COMPLETE_CLEAN_UNIT_CANDIDATE_NEEDS_REPLAY",
+      "returncode": 0,
+      "markers": {
+        "ALL_ROWS_PARSED": 1,
+        "BEGIN_GB": 1,
+        "END_GB": 1,
+        "BEGIN_RESULT": 1,
+        "END_RESULT": 1,
+        "BEGIN_CONTROLS": 1,
+        "END_CONTROLS": 1
+      },
+      "parser_cas_or_termination_diagnostics": [],
+      "result": [
+        "0",
+        "-1",
+        "1"
+      ],
+      "controls": [
+        "0",
+        "1"
+      ],
+      "parsed_row_count": 24,
+      "reasons": [],
+      "log_sha256": "8f1bb2e2069903ec4548695787a5fb0f476f340a216f00b70f26f23612396fae"
+    }
+  ]
+}

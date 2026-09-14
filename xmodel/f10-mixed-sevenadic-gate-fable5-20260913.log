@@ -1,0 +1,16 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The report is sealed at 02:57 UTC, before the 03:00 reserve, and no clock was touched.
+
+**Outcome: all substantive claims in input1 are CONFIRMED by independent hand arithmetic. No falsifier was found, and no GAP or REFUTED item remains.**
+
+What I verified, each recomputed rather than endorsed:
+
+- **Custody.** All six pins matched the charged order before any read, and matched again after all reads. All six files were read whole, including the 48 KB COORDINATION snapshot.
+- **r ≡ 1 mod 7.** Parameter residues, the imported root valuation, the U and V term valuations, the source relation xbar³ = 5ybar², the binomial integrality argument, the weight-15 reduction to L = 0, formula (2) for A_h mod q (all four coefficients, including the constant (h−1)²(h−2)/2), the reciprocal trace identity via power sums, the five Newton sums, and the final residue 5ybar⁵ ≠ 0. I also re-derived the compact d6, U and V coefficients from the multinomial formula instead of trusting the import.
+- **r ≡ 2 mod 7, all k ≥ 1.** The scaled valuations, xbar²ybar = 2 and xbar³ = 4ybar², the t-degree ≤ 14 count, the coefficientwise factorial-7 versus weight tradeoff giving strict exclusion of every lower t-degree, the exact H5/H6/H7 residues with the c⁷/720 term retained, the H7(−1) = 0 cancellation (Wilson's theorem plus xbar²ybar = 2), and the final 6·xbar·ybar² ≠ 0.
+- **Descent and controls.** Bezout inversion in the whole Q[X]/(P), base-change stability, and the r ≡ 3 first-term vanishing.
+
+One structural remark went into the report. The r ≡ 3 vanishing is forced: the six-root factorisation from the pinned September 11 FIRST gives B a rational prefactor containing (t−1)², and t−1 has positive 7-adic valuation exactly when r ≡ 3 mod 7. So any continuation there should test K_r(2t−1), not a next term of B. I also checked that the promoted cube leading term has 7-adic valuation −1 at r ≡ 1 mod 7, which does not contradict −15/7 because the archimedean tail is not 7-adically small.
+
+Report written only to `xmodel/f10-mixed-sevenadic-gate-fable5-20260913.md`, about 1,350 words, single standalone `<!-- BODY-END -->` as last content, no charge_basis line. Final SHA-256 is 3ff8b56868ee374a5b8f37c16489a04993552458bd29e0d2e40cab12a3c3f0ca. ROOT collects; the external lane script owns custody.
+DIVERT path=xmodel/f10-mixed-sevenadic-gate-fable5-20260913.md status=CLEAN body_bytes=9813 body_sha256=3ff8b56868ee374a5b8f37c16489a04993552458bd29e0d2e40cab12a3c3f0ca

@@ -1,0 +1,11 @@
+--- old/authority.py
++++ new/authority.py
+@@ -2,7 +2,7 @@
+ import os
+ import sys
+ 
+-TAG = 'f10-source-cone-r3-direct-rows-v1'
++TAG = 'f10-source-cone-r3-necessary-rows-v1'
+ FILES = ('authority.py', 'arithmetic.py', 'produce.py', 'check_arithmetic.py', 'check.py')
+ LIMITS = {'wall_seconds': '900', 'cpu_seconds': '600',
+           'memory_bytes': '8589934592', 'aggregate_bytes': '134217728'}

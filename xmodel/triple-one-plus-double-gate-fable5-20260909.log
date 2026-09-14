@@ -1,0 +1,14 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+The gate report is written and verified at `xmodel/triple-one-plus-double-gate-fable5-20260909.md`, delivered at 02:59:42 UTC against the 03:02:00 UTC deadline.
+
+**Pins.** All twelve charged files matched FINAL-PINS by sha256 and byte count before any body was read. The producer's first 17787 bytes hash to the pinned body digest. The report ends with exactly one standalone BODY-END marker and nothing after it, as the wrapper's seal script requires.
+
+**Verdicts.** All six groups are CONFIRMED, with independent derivations in the report. No REFUTED or GAP was found inside the proof's own arrows. Two points needed care:
+
+- **Root qualification confirmed.** The producer's §7 sentence that the monic quintics have only degree-at-most-1 corrections is false for the whole initial. I re-derived the full initial on each sheet as Z⁵ + (5/3)Z²(u±Z + v±) + ℓ±Z + e±, and found the same omission in §5's simple-root consumer. The Euler/UFD step uses only monicity, degree 5 and positive Euler parameter, so the conclusion survives in both places.
+- **Precision in §7.** The "degree 0 or at most 1 below 5η" statements are true of first bases only. The binomial denominator shifts z^k/ξ^k raise the Z-degree, but they sit strictly above their base, so the producer's global-first-base argument is sound. I added an independent weight-parity kill: odd-sourced monomials have half-integer coefficient weight and can never be a Kbar constant, so no earlier initial of any degree survives.
+
+**Strongest conditional conclusion.** Under the producer's explicit hypotheses, meaning the reference identities, the contact table for d in 2 to 5, the exact cubic chart with its bracket transport, and λ < r, the first scaled cubic cannot be one-simple-plus-one-double. Nothing about the table, the three-simple case, a separated cover, or any whole-source claim is licensed. No exit price is asserted and no charge_basis line is written.
+
+**Memory.** I saved the sheet-shift bookkeeping and weight-parity technique for the pending three-simple review, since that chart will have the same square-root structure. Root alone harvests and seals the report.
+DIVERT path=xmodel/triple-one-plus-double-gate-fable5-20260909.md status=CLEAN body_bytes=16481 body_sha256=fb281624a480b34c8950e45035a141f43ae1af137fbdc3d86f1ce541899336dd

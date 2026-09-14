@@ -1,0 +1,34 @@
+{
+  "schema":"jc2-manual-custody/v1",
+  "task":"quadratic-graph-residue-astra-20260912",
+  "status":"TERMINAL_MANUAL_UNIFORM_NONZERO_UNREVIEWED",
+  "first_action_utc":"2026-09-12T11:20:14Z",
+  "opened_utc":"2026-09-12T11:20:43Z",
+  "preseal_whole_postpins_collision_clock_utc":"2026-09-12T11:24:49Z",
+  "closed_utc":"2026-09-12T11:25:09Z",
+  "finalized_utc":"2026-09-12T11:25:09Z",
+  "final_whole_verify_clock_utc":"2026-09-12T11:25:23Z",
+  "publication_reserve_utc":"2026-09-12T11:39:00Z",
+  "hard_stop_utc":"2026-09-12T11:42:00Z",
+  "basis":"0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "expected_manifest_sha256":"33b12c8dd92109a25d8ef9ab5c65dd3424ee260246939ea6aa5ea36239d4ea4b",
+  "expected_verify_status":"VERIFIED",
+  "result":"For every complex c*k!=0, a genuine unramified normalized collision branch has residue 3/(2k). This excludes target-polynomial area primitives and nonzero-constant-Jacobian pairs in the literal H=c+k*y^2 target subalgebra. Manual producer result, independent FIRST required; no previous residue theorem used.",
+  "input_count":3,
+  "instruction_count":1,
+  "pre_and_post_inputs":[
+    {"path":"/home/ubuntu/jc2/box/quadratic-graph-residue-astra-20260912/TASK.md","sha256":"fd8c7a40eb7ec24f137daf736b95dad0a328b9363719d72f274c000f8d031236","read":"FRESH_WHOLE_INSTRUCTION"},
+    {"path":"/home/ubuntu/jc2/COORDINATION.md","sha256":"33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597","read":"REUSED_WHOLE_EXACT_BYTES_2026-09-12_05:51_TO_05:53"},
+    {"path":"/home/ubuntu/jc2/xmodel/constant-graph-subalgebra-control-astra-20260912.md","sha256":"590609a7a6f52f72e940a01604c5e6f0c1444277c54bfbb9c69e0fa0c55fd679","read":"REUSED_WHOLE_EXACT_BYTES_2026-09-12_10:38"},
+    {"path":"/home/ubuntu/jc2/box/quadratic-graph-residue-astra-20260912/ROOT-CANDIDATE.md","sha256":"3936e2a5a3a63792515cee563ffbe1b526c2543715140dbd1ed64bb19bf884ab","read":"FRESH_WHOLE_UNREVIEWED_CANDIDATE"}
+  ],
+  "owned_excluding_custody":[
+    {"path":"/home/ubuntu/jc2/xmodel/quadratic-graph-residue-astra-20260912.md","sha256":"4fae64631dc2d1c3b892dca8a7db6324086de8124ca1a6ae0ee35c5047a414e3","read":"WHOLE_FINAL"},
+    {"path":"/home/ubuntu/jc2/xmodel/quadratic-graph-residue-astra-20260912.md.artifact.json","sha256":"33b12c8dd92109a25d8ef9ab5c65dd3424ee260246939ea6aa5ea36239d4ea4b","read":"WHOLE_FINAL"},
+    {"path":"/home/ubuntu/jc2/box/quadratic-graph-residue-astra-20260912/PINS.json","sha256":"170f10dd8704e1c52156659342c6f615ea7ae86cb3a7bb625a910503b22672c3","read":"WHOLE_FINAL"},
+    {"path":"/home/ubuntu/jc2/box/quadratic-graph-residue-astra-20260912/READ-SCOPE.md","sha256":"8836ce082ee9767d29f98487765be9e3f5b93cf8c456f836dc4a59dad35a1d19","read":"WHOLE_FINAL"}
+  ],
+  "quantity_and_controls":"One symbolic family and specified source-local place. Universal good simple cubic root proved, exceptional k=-21/5 handled exactly, K_k unit/unramified branch and regular first source attached. Derivative includes all first-order terms. k=0 and c=0 explicitly outside proof.",
+  "scope":"No general h(xy), global JC2, scientific execution, code, extra pole, sample farm, prior collision assertion/current review, linked input, network/worker/protected/corpus/shared action or agent. No canonical OPEN, promotion or successor authority.",
+  "closure":"Own complete WHOLE readback, four unchanged postpins and output absence/quantity/scope/collision check before marker LAST; final WHOLE and expected verification passed. Custody is last authored file and excludes itself; its own WHOLE/hash and actual all-writers-idle UTC are supplied at terminal handoff."
+}

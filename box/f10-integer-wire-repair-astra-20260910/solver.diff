@@ -1,0 +1,20 @@
+--- oldsolver.py
++++ solver.py
+@@ -12,6 +12,8 @@
+ def generic_candidate(p, fs, q, flint):
+     # Internal mathematical API: call only inside a separately authorized
+     # child. main() authorizes before reaching any mathematical import.
++    # Interpreter-local decimal policy; registered CPU/RSS/file caps remain.
++    sys.set_int_max_str_digits(0)
+     from algebra import Q, trim, da, ds, dm, dd, dxg, require
+     require(type(p) is list and len(p) == 8
+             and all(type(c) is Q for c in p) and p[-1] == Q(1),
+@@ -324,6 +326,8 @@
+     require(str(getattr(flint, '__version__', '')) == environment['version']
+             and str(Path(flint.__file__).resolve()) == environment['module_file']
+             and sha(flint.__file__) == environment['module_sha256'], 'installed FLINT binding differs')
++    # All authority/input/native checks precede source-wire decimal parsing.
++    sys.set_int_max_str_digits(0)
+     certificate = candidate(data, flint)
+     certificate.update({'binding': binding, 'execution': custody,
+                         'solver_sha256': sha(__file__), 'engine': environment})

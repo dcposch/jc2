@@ -1,0 +1,75 @@
+{
+  "type": "BOUNDED FULL-BRIDGE ELIMINATION ATTEMPTS / FALLACY-v2",
+  "status": "OPEN[NO-RUN-REACHED-COEFFICIENT-ROW-EXTRACTION]",
+  "command_template": "OMP_NUM_THREADS=OPENBLAS_NUM_THREADS=MKL_NUM_THREADS=NUMEXPR_NUM_THREADS=1 /usr/bin/time -v timeout 3000 Singular -q --no-rc SCRIPT",
+  "system": {
+    "stage7_free": 869,
+    "adjoined_T2_coefficients": 4,
+    "adjoined_T3_coefficients": 34,
+    "jacobian_mode": "J0-kappa; T3 target kappa*p^10*q1",
+    "localization": "Zck*c*kappa-1",
+    "gauge_row": "c-1",
+    "bookkeeping_quotient": "s^1179=0; s and pi killed after coefficient extraction"
+  },
+  "attempts": [
+    {
+      "field": "GF(32003)",
+      "script_sha256": "eaa6b10f5ffa062969359e77bc352d34ebb1b56044f8b1832e8dff047ec512b8",
+      "status": "RESOURCE-GUARD-STOP",
+      "wall_seconds_from_file_timestamps": 1791.652,
+      "last_rss_kib_observed_by_ps": 15403156,
+      "stdout_sha256": "3a504c747eccb57b064c59c9b87c614279adddbd630ea3eb0edf0aa381aed83c",
+      "last_checkpoint": "all five localized components emitted; no coefficient rows"
+    },
+    {
+      "field": "GF(104729)",
+      "script_sha256": "d36f5f64213718632040a54d7497897f998d4c1049f3bb8cf186b2b6d9c3592d",
+      "status": "RESOURCE-GUARD-STOP",
+      "wall_seconds_from_file_timestamps": 911.519,
+      "last_rss_kib_observed_by_ps": 10592556,
+      "stdout_sha256": "3a504c747eccb57b064c59c9b87c614279adddbd630ea3eb0edf0aa381aed83c",
+      "last_checkpoint": "all five localized components emitted; no coefficient rows"
+    },
+    {
+      "field": "GF(1299709)",
+      "script_sha256": "60a1198b48e0f6ecff60e4916319fb1c8e95216d202f5d0edeb2297dab142fb6",
+      "status": "RESOURCE-GUARD-STOP",
+      "wall_seconds": 832.35,
+      "peak_rss_kib": 10227536,
+      "exit_status": 1,
+      "stdout_sha256": "3a504c747eccb57b064c59c9b87c614279adddbd630ea3eb0edf0aa381aed83c",
+      "stderr_sha256": "a89198484907173f9289cef18698400072af221ec2f69abe66420bb5b6436ccb",
+      "last_checkpoint": "all five localized components emitted; no coefficient rows"
+    },
+    {
+      "field": "Q",
+      "script_sha256": "a0aec9738dff35ea074fed56fed220ed202d102973c44a289f0ed1123980a97b",
+      "status": "RESOURCE-GUARD-STOP",
+      "wall_seconds": 757.66,
+      "peak_rss_kib": 10069892,
+      "exit_status": 1,
+      "stdout_sha256": "3a504c747eccb57b064c59c9b87c614279adddbd630ea3eb0edf0aa381aed83c",
+      "stderr_sha256": "3ec13d22b34af27f3e5edab082d4498d5c4439792551c495aa724868a1bebf00",
+      "last_checkpoint": "all five localized components emitted; no coefficient rows"
+    }
+  ],
+  "common_component_checkpoint": {
+    "H": {"terms": 178, "serialized_size": 112186},
+    "A2": {"terms": 242, "serialized_size": 827691},
+    "A3": {"terms": 242, "serialized_size": 805866},
+    "B1": {"terms": 110, "serialized_size": 105332},
+    "B2": {"terms": 242, "serialized_size": 827691}
+  },
+  "prefix_attempt": {
+    "scope": "exact Q T2 coefficients through s^100",
+    "status": "TIMEOUT[3000s,EXIT-124]",
+    "rows_or_pivots_emitted": false,
+    "claim_guard": "No rank, dimension, consistency, or unit-ideal conclusion follows."
+  },
+  "low_prefix_results": {
+    "s60": "COMPLETE[3 QSTAR PIVOTS, ZERO RESIDUE, DIMENSION 904 / c1 903]",
+    "s63": "COMPLETE[5 QSTAR PIVOTS, ZERO RESIDUE, DIMENSION 902 / c1 901]",
+    "s70": "RESOURCE-GUARD-STOP[1816.68s,804168 KiB,NO OUTPUT]"
+  },
+  "conclusion": "No modular Groebner result and no characteristic-zero unit certificate were produced."
+}

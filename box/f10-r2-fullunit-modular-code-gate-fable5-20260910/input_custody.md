@@ -1,0 +1,16 @@
+# Input custody: f10-r2-fullunit-modular-code-gate-fable5-20260910
+
+Generated from sha256sum output in /tmp/jc2-lane.vUP2uM/inputs at 2026-09-10 16:43:28 UTC, before any body read.
+All 11 digests equal the charged pins byte for byte. baseline-produce.py is the byte-identical alias of the original producer.
+
+c49b7dfabe6dc8cc5b7aaea485171a6b709fc6158f180ae1157afd90b3cf4b1f  entry.py
+60a290aee2ed5def7ed4242743f187dea755659f287707fa79c6c1e05f2d1f10  produce.py
+ccc3d2ddfca98f7faaed9df323fb90ec183b437b3c6b0bfcde0820186e667023  check.py
+e7fbaf54818d9fae1abff70418a566af7918d04a787fcabc21ceb8633e6e7070  CONTRACT.md
+92036973d3a62a1264eeb874d24768859fe328306cdbe17868e32d92b225c4a5  f10-r2-fullunit-modular-code-astra-20260910.md
+2a274ac4cf866762bc1f2734b3af8d515ff7be93c0fe0d4500e56dbca2ef093b  authority.py
+fe9ab1abe9a96fc43b889e1bcb598f8e8c65fd194732c48f3542e13c476e0345  arithmetic.py
+e5dd4bcb6114df2bdd79c8336583942c18d698d99fffd6f4b171e46a5d503d6e  check_arithmetic.py
+eeb3fe3bbbe232ffe080a2a0a5db2c1f3ac60b83b61dd7798ff56e2f97977b10  baseline-produce.py
+f774640bc2093ba4745cae52f5892170923c79d7ad80a400d00ddd06814d2200  f10-r2-modular-fullsource-route-astra-20260910.md
+c5cb181aa28bd5d49971b02b68721e335b0972876f9cc1e8c2444d2f73c9af63  f10-r2-modular-fullsource-gate-fable5-20260910.md

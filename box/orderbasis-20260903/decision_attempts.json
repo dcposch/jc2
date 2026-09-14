@@ -1,0 +1,41 @@
+{
+  "attempts": [
+    {
+      "row": "25_15_21_2_k2",
+      "partition": "3",
+      "field": "p32051",
+      "system": "box/orderbasis-20260903/systems/25_15_21_2_k2_part_3_full_p32051_slimgb.sing",
+      "stdout": "box/orderbasis-20260903/systems/25_15_21_2_k2_part_3_full_p32051_slimgb.sing.out",
+      "stderr": "box/orderbasis-20260903/systems/25_15_21_2_k2_part_3_full_p32051_slimgb.sing.err",
+      "command_shape": "timeout 1800 Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc <system>",
+      "returncode": 124,
+      "verdict": "TIMEOUT",
+      "stdout_markers": [
+        "CONTROL_RING_PASS R",
+        "CONTROL_EMPTY_PASS",
+        "CONTROL_NONEMPTY_PASS",
+        "MAIN_START equations=598 unknowns=141 char=32051 algorithm=slimgb"
+      ],
+      "basis_marker": "absent"
+    },
+    {
+      "row": "24_16_18_7_k4",
+      "partition": "1",
+      "field": "p32051",
+      "system": "box/orderbasis-20260903/systems/24_16_18_7_k4_part_1_full_p32051_slimgb.sing",
+      "stdout": "box/orderbasis-20260903/systems/24_16_18_7_k4_part_1_full_p32051_slimgb.sing.out",
+      "stderr": "box/orderbasis-20260903/systems/24_16_18_7_k4_part_1_full_p32051_slimgb.sing.err",
+      "command_shape": "timeout 1800 Singular --cpus=1 --threads=1 --flint-threads=1 -q --no-rc <system>",
+      "returncode": 124,
+      "verdict": "TIMEOUT",
+      "stdout_markers": [
+        "CONTROL_RING_PASS R",
+        "CONTROL_EMPTY_PASS",
+        "CONTROL_NONEMPTY_PASS",
+        "MAIN_START equations=472 unknowns=110 char=32051 algorithm=slimgb"
+      ],
+      "basis_marker": "absent"
+    }
+  ],
+  "note": "Q and p32057 systems were emitted for the requested rows, but not launched after the first corrected full-basis modular attempt for each target hit the 1800-second timeout without a basis marker."
+}

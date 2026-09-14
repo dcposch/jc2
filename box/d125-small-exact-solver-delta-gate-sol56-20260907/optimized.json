@@ -1,0 +1,37 @@
+{
+  "assert_nodes": {
+    "exact.py": 0,
+    "gate_check.py": 0
+  },
+  "certificate_functions_invoked_for_all_zero": false,
+  "checks": [
+    {
+      "name": "actual_empty_stderr_size_3",
+      "outcome": "accepted"
+    },
+    {
+      "name": "actual_whitespace_stderr",
+      "outcome": "rejected",
+      "reason": "nonempty stderr"
+    },
+    {
+      "name": "actual_size_down_3_to_0",
+      "outcome": "rejected",
+      "reason": "engine size/nonzero count mismatch"
+    },
+    {
+      "name": "actual_size_up_3_to_4",
+      "outcome": "rejected",
+      "reason": "engine size/nonzero count mismatch"
+    },
+    {
+      "name": "all_zero_size_0_parser_scope_only",
+      "outcome": "accepted"
+    }
+  ],
+  "control_sha256": "fff5dfd6b2be427844ea898b95c8e159937761085ec2905b0327dc6871939922",
+  "exact_sha256": "7ca2b24ee5d04ff6d60fd2212a05586c8bba24327a51c7718351434c7eda60e9",
+  "inputs": "/tmp/jc2-lane.9HIsyw/inputs",
+  "optimized": true,
+  "status": "PASS"
+}

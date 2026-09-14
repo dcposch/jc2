@@ -1,0 +1,32 @@
+{
+  "authority_sha256": "29e738a7bb1f9ae92ef5ce62ab67413613547abdb15c9ae9bad6854c418fdc06",
+  "branch": "rational",
+  "case": "common_4",
+  "expected_jacobian_rows": 660,
+  "expected_lift_rows": 105,
+  "expected_rows": 816,
+  "expected_variables": 371,
+  "field": "Q",
+  "implementation_gate": "PENDING_AT_SOURCE_SEAL",
+  "index_base": 0,
+  "jacobian_scalar": {
+    "inverse_variable": 368,
+    "row": "z*c-1",
+    "variable": 367
+  },
+  "lambda_guard": "NONE: lambda2 and lambda3 are unrestricted",
+  "lift": "g=v^-1,p=v^4*u-lambda2*v^2-lambda3*v-v^-1",
+  "mode": "production",
+  "order": "global degree reverse lexicographic, displayed variable order",
+  "pins": {
+    "baseline_sha256": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "exporter_sha256": "9fd003e420f3ee069f1ed1c06a365e5b4500d361bc3951f2f8f17ef733ab3703",
+    "lift_contract_sha256": "433cc2fe9f11ce1b2e1f1fc57aab24def921afb1f93154a2d631ddee0b88cdad",
+    "lift_gate_sha256": "4295593a57a65e4d31630aecdef0b54e9d6078935e07cfb5e64acfd83fae4122",
+    "normalization_gate_sha256": "cd69c23885de119e4bd910992dad5ef695e7b12013168ec1c401546d8aa6ed8d"
+  },
+  "schema": "jc2.d125-small-source-literal/v1",
+  "status": "GATED_SUFFICIENT_CLIENT_NO_POINT_OR_CE_CLAIM",
+  "target": "J(A,B)-c*gamma^2; J=A_gamma*B_pi-A_pi*B_gamma",
+  "type": "header"
+}

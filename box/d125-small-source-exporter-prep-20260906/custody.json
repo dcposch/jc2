@@ -1,0 +1,30 @@
+{
+  "schema": "jc2.d125-small-source-preparation-custody/v1",
+  "owner": "/root/model_productivity",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "status": "PREP_ONLY_ALL_LOCAL_CONTROLS_TERMINAL",
+  "production_authority_issued": false,
+  "production_rows_generated": 0,
+  "aws_or_ssh_or_cas": false,
+  "owned_remote_instances": [],
+  "all_test_subprocesses_terminal": true,
+  "control_receipts_sha256": "cdc9bd7c98c8c1f5502ecb4521e8b2cd7193992ef1bffbd565cd65bf22dfbe70",
+  "code": {
+    "baseline.py": "ec2fa2d1e23bc16bc07c9208f648e3b17561cbfddaaf04fed28d7ffc9a428d53",
+    "exporter.py": "9fd003e420f3ee069f1ed1c06a365e5b4500d361bc3951f2f8f17ef733ab3703",
+    "test_exporter.py": "331e97c84f22592a1a28842df7c11e84e4f72355a906c156403eb5eaca490b2b",
+    "run_controls.py": "ef6c9f011a723b16e744911a540e41bdc70822856f74609bcd55e02d667f1429"
+  },
+  "mathematical_inputs": {
+    "normalization_gate": "cd69c23885de119e4bd910992dad5ef695e7b12013168ec1c401546d8aa6ed8d",
+    "lift_contract": "433cc2fe9f11ce1b2e1f1fc57aab24def921afb1f93154a2d631ddee0b88cdad",
+    "lift_gate": "4295593a57a65e4d31630aecdef0b54e9d6078935e07cfb5e64acfd83fae4122"
+  },
+  "notes": [
+    "The newly terminal lift gate was read only after the root's terminal notification.",
+    "Sol's live engineering gate was not read.",
+    "Earlier passing local receipts and all tiny mutation streams are retained; final receipts pin the source after the mathematical gate notification and explicit unit-guard metadata addition.",
+    "No full degree-15/25 Jacobian or lift was generated. Metadata-only six-client counts are not a construction or term census.",
+    "No production authority file was created. Pure checker fixtures are explicitly fake test values and cannot instantiate a production context."
+  ]
+}

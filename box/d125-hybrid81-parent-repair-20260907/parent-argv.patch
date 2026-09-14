@@ -1,0 +1,31 @@
+--- original_engine.py
++++ engine.py
+@@ -40,6 +40,19 @@
+     E.need(mapping==[0,1,0,1,4,0,6],'tiny zero/duplicate mapping')
+     return {'status':'TINY_HYBRID_ENGINE_REPLAY_PASS','verdict':verdict,'rows':7,'engine_columns':len(engine),'cofactor_rows':len(cofactors),'mapping':mapping}
+ 
++def expected_parent_argv(operation):
++    E.need(operation in ('hybrid','alarm'),'fixed engineering operation only')
++    return [x.encode('ascii') for x in [
++        '/usr/bin/python3','-I','-B',str(ROOT/'run_capped.py'),
++        '--wall-seconds','10','--cpu-seconds','10',
++        '--rss-bytes','536870912','--rss-sample-seconds','0.05',
++        '--term-grace-seconds','0.25','--cwd',str(ROOT),
++        '--stdout-file',str(ENG/(operation+'.stdout')),
++        '--stderr-file',str(ENG/(operation+'.stderr')),
++        '--telemetry-file',str(ENG/(operation+'.telemetry.json')),
++        '--','/usr/bin/python3','-I','-B',str(ROOT/'engine.py'),
++        operation,str(ENG/(operation+'.authority.json'))]]
++
+ def payload(operation,authority_path):
+     E.need(operation in ('hybrid','alarm'),'fixed engineering operation only')
+     E.need(Path(__file__).resolve()==ROOT/'engine.py' and Path.cwd()==ROOT,'exact engineering code/cwd')
+@@ -49,7 +62,7 @@
+     E.need({name:D.file_sha(ROOT/name) for name in PINS}==PINS,'fixed engineering code pins')
+     E.need(os.getpid()==os.getpgrp(),'exact CAPRUN payload group leader')
+     parent=Path('/proc')/str(os.getppid())
+-    E.need(str(ROOT/'run_capped.py').encode() in (parent/'cmdline').read_bytes().split(b'\0'),'CAPRUN parent')
++    E.need((parent/'cmdline').read_bytes().split(b'\0')==expected_parent_argv(operation)+[b''],'exact registered CAPRUN parent argv')
+     # Root controller owns stdout/stderr/telemetry; only these two payload files
+     # are reserved here. No external process or inherited session is created.
+     for suffix in ('sing','identity.json'):

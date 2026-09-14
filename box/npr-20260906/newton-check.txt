@@ -1,0 +1,25 @@
+NEWTON SUPPORT of Phi = v^3 - u^2 + a v^2 + b uv + c u + d v + e0
+weights (n,m)=(3g,2g); wt(u^i v^j)=n i + m j = g(3i+2j)
+monomial	i	j	3i+2j	wt/g
+v^3	0	3	6	6
+-u^2	2	0	6	6
+a v^2	0	2	4	4
+b uv	1	1	5	5
+c u	1	0	3	3
+d v	0	1	2	2
+e0	0	0	0	0
+max wt/g = 6; attaining: [('v^3', 0, 3), ('-u^2', 2, 0)]
+hypotenuse (2,0)-(0,3): lattice points only the endpoints (gcd=1).
+dual-cone scan a,b in [-6,6]Z, not both >=0:
+  unique-min => (c) at an outer vertex: 118
+  tie on outer edge = ray (b): 2
+  covering failures: 0
+  combinatorial (b) and (c) both true (no coeff cancellation in L): 2
+  case (a) gridpoints: 49
+
+EXCLUSIVITY COUNTEREXAMPLE (Newton combinatorics, not a Keller pair):
+  Phi=v^3-u^2, F=x^3, G=y^2, Q=y^6-x^6, nu=-deg.
+  (nu(F),nu(G))=(-3,-2)=-1*(3,2)  => (b), t=1.
+  nu(Q)=-6=min(2*(-3),3*(-2))<0  => (c). Both hold.
+  So "exactly one" is false for this polygon; covering OR is true.
+general-triangle Q3 scan over roster (n1,m1) pairs, a,b in [-5,0]: failures=0

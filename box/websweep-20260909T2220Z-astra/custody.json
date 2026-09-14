@@ -1,0 +1,517 @@
+{
+  "schema": "documentary-custody.v1",
+  "owner": "/root/model_productivity",
+  "task": "websweep-20260909T2220Z-astra",
+  "first_action_utc": "2026-09-09T22:19:14.102439944Z",
+  "controlling_stop_utc": "2026-09-09T22:44:14.102439944Z",
+  "prior_successful_broad_cutoff_utc": "2026-09-08T22:24:26.958594Z",
+  "inherited_backstop_utc": "2026-09-09T22:24:26.958594Z",
+  "inherited_backstop_met": false,
+  "last_external_fetch_batch_utc": "2026-09-09T22:31:29.498797611Z",
+  "report_status": "SUBSTANTIVE_BROAD_PARTIAL_LATE",
+  "scope": "Exactly five frozen local inputs; primary selected-source documentary sweep; no theorem promotion or mathematical computation.",
+  "whole_input_reading": "All five snapshots read whole; clipped local passages recovered as documented in clock-and-operations.md.",
+  "publication": {
+    "status": "FINAL_VERIFIED",
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "report": "xmodel/websweep-20260909T2220Z-astra.md",
+    "report_sha256": "0f44c524faa3038084074bafe470a3a74745c2832a1300060802d2b1c33fa1a7",
+    "report_bytes": 8970,
+    "body_sha256": "756e12efa4b9d93b4efd13ee5e249a99274778473920d3f57d19258859e67c8c",
+    "body_bytes": 8638,
+    "expected_transaction": "xmodel/websweep-20260909T2220Z-astra.md.artifact.json",
+    "expected_transaction_sha256": "9c3ddb8177de04da492e49e9e132983b0865a96ef2e7ca29627334099117955e"
+  },
+  "network_jobs": "All owned fetch jobs awaited to completion; no retained background/network work. No child agents.",
+  "owned_box_file_count_excluding_custody": 79,
+  "owned_box_bytes_excluding_custody": 6695776,
+  "pin_count_excluding_custody": 81,
+  "pins": [
+    {
+      "path": "box/websweep-20260909T2220Z-astra/PINS.json",
+      "sha256": "a70e4af42597d9de70e84ff53f6b6047189244affa518000cfc61075ef8029f3",
+      "bytes": 1018,
+      "mtime": "2026-09-09 22:31:29.502811123 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/SOURCE-INDEX.md",
+      "sha256": "b9ba4972d0ab00c5959629c4210064ea281fb0410d12332cce928733531983a7",
+      "bytes": 9751,
+      "mtime": "2026-09-09 22:33:21.680093810 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/aleckriebel-readme.md",
+      "sha256": "0ebb5bcda61f431b9319e63301cce73b07b06078073d4bb988b7272daaca5fa3",
+      "bytes": 16679,
+      "mtime": "2026-09-09 22:26:06.070448933 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/arxiv-AC-new.html",
+      "sha256": "6f22260f125646772907f30c1f20e7ef711433b0219db649cb74e9377140b18e",
+      "bytes": 69810,
+      "mtime": "2026-09-09 22:27:07.551161302 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/arxiv-AG-new.html",
+      "sha256": "2a5194a5ec2b6c19de9bfcd762429b9b23e77bbe0d399a6f1c737972aec9b137",
+      "bytes": 247387,
+      "mtime": "2026-09-09 22:27:07.518162103 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/arxiv-CV-new.html",
+      "sha256": "5f8735b3ccf1a98d362d854ebb6eab22868f05450d79b62ba0820eb4c555c195",
+      "bytes": 102732,
+      "mtime": "2026-09-09 22:27:07.582160550 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/arxiv-jc.headers",
+      "sha256": "2b822a218236341f01c36305d496e42baaebb61d272057b3cdfa502ea4849232",
+      "bytes": 522,
+      "mtime": "2026-09-09 22:22:31.671859710 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/arxiv-jc.xml",
+      "sha256": "0239bfb562cccf2474161cc665964b7591a1cc535fb2edead3ec1b297adc313d",
+      "bytes": 49717,
+      "mtime": "2026-09-09 22:22:31.672859686 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/arxiv-open-01.json",
+      "sha256": "2e4d2cbacded598d5c3b8db4a94b91a801503ede20fc62759fa8faad1f25487f",
+      "bytes": 29582,
+      "mtime": "2026-09-09 22:22:00.157622629 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/arxiv-precise-related.xml",
+      "sha256": "62959a596ccc5434fd1a18d437c646e6f1427b8cc99bcc4e5dfdcd1892798b23",
+      "bytes": 50380,
+      "mtime": "2026-09-09 22:28:17.001519037 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/arxiv-related.xml",
+      "sha256": "0c26acf0c083d74bcea3c9408f270daaa3e50c81912a8399571365b612e05a17",
+      "bytes": 99504,
+      "mtime": "2026-09-09 22:27:07.477163099 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/bgv-pdf.headers",
+      "sha256": "a854d95693b7a04a700be283216e29005a35e667c00b68adb9a4095f7df780d5",
+      "bytes": 719,
+      "mtime": "2026-09-09 22:22:31.374866939 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/bgv-primary-open.json",
+      "sha256": "d2855a8f73a5a2a2c98f8cf384dd54d7b3d172c0b2247b291ce983cd0f851a2c",
+      "bytes": 15702,
+      "mtime": "2026-09-09 22:22:31.258869762 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/bgv-v1.pdf",
+      "sha256": "814c3f2572f660a47778663384077d6357e9947f1585c1e16372f6cdbe138425",
+      "bytes": 1659604,
+      "mtime": "2026-09-09 22:22:31.408866112 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/bgv-v1.txt",
+      "sha256": "07465b6c788a469b0d4e77f8ac2cbf7f6ae23025e6c142fcc741bc66716047b2",
+      "bytes": 685284,
+      "mtime": "2026-09-09 22:23:04.584063407 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/bluesky.headers",
+      "sha256": "95751ea39337aa69209df2d34c72418e88189fb4dd11087eed5f069b04f251cd",
+      "bytes": 296,
+      "mtime": "2026-09-09 22:24:29.996997113 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/bluesky.json",
+      "sha256": "8609fbf6d25103698c09480062dd212a9f8e8acbc3d320f599bd871cef1a7048",
+      "bytes": 2334,
+      "mtime": "2026-09-09 22:24:29.997505533 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/clock-and-operations.md",
+      "sha256": "945e3bc4088c135e2fdcaca43e02cbd8a1d1097121115adcd51c251314f49cae",
+      "bytes": 2791,
+      "mtime": "2026-09-09 22:30:41.963955353 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/datacite-atwell.headers",
+      "sha256": "7696f2bf0aeda92fefdb5ef9e0aaf01c583abc9a77c5a357414cd8e8ec120040",
+      "bytes": 1065,
+      "mtime": "2026-09-09 22:28:17.021473773 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/datacite-atwell.json",
+      "sha256": "95d11a60a5acb839169ccb43ed28bdced93710420f348f4fc2ba1cd0bde7baea",
+      "bytes": 8489,
+      "mtime": "2026-09-09 22:28:17.023270271 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/datacite-rank.headers",
+      "sha256": "67b954d7ee8e4de74bd4cc82e37816212666c3c5789cf3c21400ae605d6ffa67",
+      "bytes": 1065,
+      "mtime": "2026-09-09 22:28:17.386464907 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/datacite-rank.json",
+      "sha256": "7ec37ec45512126a3684db3b8481d8a2453d40cb13cbaec284e955f1f79b816e",
+      "bytes": 6509,
+      "mtime": "2026-09-09 22:28:17.387467097 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/datacite-search.headers",
+      "sha256": "4555394d21fdeaedfd9014baab3be21164b4039029e56593338e79ec89cca2e1",
+      "bytes": 1065,
+      "mtime": "2026-09-09 22:29:54.577101954 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/datacite-search.json",
+      "sha256": "1849020985bee04f3d00a4353495ad484d44894ceb11b0ab85d6c84fe4a24798",
+      "bytes": 95075,
+      "mtime": "2026-09-09 22:29:54.645100302 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-Kakarottoooo--jacobian-2d-research.json",
+      "sha256": "d688b784e8681fc31458376a76996867ab3d60a77119e0f0305dab99d50817db",
+      "bytes": 10079,
+      "mtime": "2026-09-09 22:23:06.200243068 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-SuperMindAI--Jacobian-Conjecture.json",
+      "sha256": "d83d41fa90e3fb7ac230a30b84e373b5aa29b477e2cd0d7534e0614e5d0078e1",
+      "bytes": 11929,
+      "mtime": "2026-09-09 22:23:06.413019260 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-YucongDuan--Plane-Jacobian-Conjecture-DIKWP-MESH-8.0-Bilingual-Proof-Package.json",
+      "sha256": "465e7938c4724c139dfb061b9c6950df846d41bab288ab093d25be6c31c4aa2e",
+      "bytes": 15118,
+      "mtime": "2026-09-09 22:23:05.920080802 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-alok--jacobian-two.json",
+      "sha256": "52f0bfc2fadbceb6793097f76fe5e7b1ff17d219850f2d13885260003c80ac06",
+      "bytes": 11411,
+      "mtime": "2026-09-09 22:23:06.674559371 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-blueberryvertigo--polynomial-composition-rigidity.json",
+      "sha256": "708eb2a74dfe8d200316be2e12832b72731e5e825ea7b41a201fb520d91067e4",
+      "bytes": 8688,
+      "mtime": "2026-09-09 22:23:05.580295097 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-discovery-filtered.json",
+      "sha256": "61c72f26ebcac34c6260c999534ae191c71ac21c730e036d512323a5fa09127f",
+      "bytes": 35674,
+      "mtime": "2026-09-09 22:24:31.901950821 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-nasqret--jacobian-counterexample.json",
+      "sha256": "ce99ce528dcbe1d714cb1979464db4e44e1bfeaa8decae6e19433f8c60641fc3",
+      "bytes": 11940,
+      "mtime": "2026-09-09 22:23:06.872474795 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-royvanrijn--jacobian-research.json",
+      "sha256": "61cd1f610480694707073356c4cf88ef93730204d8dfa5c4d148bc4e9c7acfc8",
+      "bytes": 12040,
+      "mtime": "2026-09-09 22:23:04.886056118 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-wstrinz--plane-jacobian-72-108.json",
+      "sha256": "1a9f325e74dd9853e33674e75d9b9ad2bbaa7e7a0e5cd7ad7ee28a1df5e8e97e",
+      "bytes": 11859,
+      "mtime": "2026-09-09 22:23:05.188109926 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/github-wstrinz--plane-jacobian-75-125.json",
+      "sha256": "0ed8a8a7ba8d6379c0f4d696874e877a4932bc60cbf2d43abf34dd3978d1cb67",
+      "bytes": 11866,
+      "mtime": "2026-09-09 22:23:05.380158306 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/inputs/APPROACHES.md",
+      "sha256": "1aa36831b662f8a3bddc0cad67d1ab255840fec0a975d4bb18ff17ee957cd14b",
+      "bytes": 47508,
+      "mtime": "2026-09-09 22:19:28.874021406 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/inputs/COORDINATION.md",
+      "sha256": "33cfa6106972fe557a95ca81a9a05bb72300a82b2fbb7908915441cf75377597",
+      "bytes": 48725,
+      "mtime": "2026-09-09 22:19:28.872968562 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/inputs/README.md",
+      "sha256": "dc62ca2c36b15b4f6514622f6eb1745fc739d32b2eaf7d0ccbcc12e6b016ddf3",
+      "bytes": 2174,
+      "mtime": "2026-09-09 22:19:28.871906563 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/inputs/latest-full-synthesis.md",
+      "sha256": "b22b5307e130c3be444b910d685eaa9a85171adb3c2f5237e8270a4ace54b7b6",
+      "bytes": 19257,
+      "mtime": "2026-09-09 22:19:28.876071433 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/inputs/prior-websweep.md",
+      "sha256": "364431f6267629e2f45e49785b18bf6393f4a9b4f2b59b4d3ee47047a70440dc",
+      "bytes": 13786,
+      "mtime": "2026-09-09 22:19:28.875065060 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/jtpmath-primary-open.json",
+      "sha256": "3c4194d2641531a7fe27693d430117e84cfafddf7c3bcc34703122f1a29c50ba",
+      "bytes": 15057,
+      "mtime": "2026-09-09 22:27:34.937496416 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/kellermap-commits.json",
+      "sha256": "ad5b08b64e80cbca41d8607f9572ee239124e9329f8b56126d54715f0658d510",
+      "bytes": 29375,
+      "mtime": "2026-09-09 22:26:05.845805596 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/kellermap-readme.md",
+      "sha256": "c8e1014f0178cd7ef7b968b079c0f7a30575b5bca8dc150e4323adc3e8df7718",
+      "bytes": 12830,
+      "mtime": "2026-09-09 22:26:05.960265875 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/long-mathieu-v1.pdf",
+      "sha256": "cb75f1acf144a2deb67e7c4ecd92f00d8c73ea5e92dd5e52ae303553941049e6",
+      "bytes": 365662,
+      "mtime": "2026-09-09 22:29:53.837119941 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/long-mathieu-v1.txt",
+      "sha256": "d517c61dbec23c7afe811075d328349e0b1504fc69adb8755be1e1176377eac0",
+      "bytes": 27845,
+      "mtime": "2026-09-09 22:29:53.880118896 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/long-pdf.headers",
+      "sha256": "03945b3f46800e1a75a7da43f63029dde577501e53769ef438b3b032b36a5e86",
+      "bytes": 661,
+      "mtime": "2026-09-09 22:29:53.833120038 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/mathieu-primary-open.json",
+      "sha256": "c0b54c2f7d8bf4adf257bafc51ea3d2f7f6dd0d97559e931974e5840fea42de5",
+      "bytes": 12087,
+      "mtime": "2026-09-09 22:28:37.513975822 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/mathieu-proof-selected.json",
+      "sha256": "89b032838f2768a3d6078739e6df18a8e8d46c7f75285bdc49b1602e07ffbe8f",
+      "bytes": 22435,
+      "mtime": "2026-09-09 22:29:18.245985786 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/mathse-search.json",
+      "sha256": "7bdc373eeeaee6034645c1f09cb03239d8568a5fac33c33ad76d198e77f0f99c",
+      "bytes": 115032,
+      "mtime": "2026-09-09 22:23:05.165049383 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/mathstodon-jctag.json",
+      "sha256": "ac504bb023de3aaa8122d0241dbec1e8f6d340e913205caa08ad26eb0ec53c47",
+      "bytes": 32567,
+      "mtime": "2026-09-09 22:27:07.898152878 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/mathstodon-tag.json",
+      "sha256": "00d19f3f8d3fac944c2ae99d2a22829fa5fa79788737090698cba56c6525a4e1",
+      "bytes": 64432,
+      "mtime": "2026-09-09 22:24:29.711004063 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/mathstodon-tao-current.json",
+      "sha256": "a545f105a193cb3c46d81354ce72656b7979a135a46b02d449cb1f3f2fcbdf42",
+      "bytes": 194832,
+      "mtime": "2026-09-09 22:27:07.537161642 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/mathstodon-tao.json",
+      "sha256": "138f7d72f891fa9fb25dd79304a5a638455eeed2cd20442c8aa04c9853c1c390",
+      "bytes": 28,
+      "mtime": "2026-09-09 22:24:29.962124163 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/mo-search.json",
+      "sha256": "0b66f3f7b66371c5db66df88fe7ef80d3540c4a85136bed7413ca2b8418d4636",
+      "bytes": 116503,
+      "mtime": "2026-09-09 22:23:04.961054308 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/palomar-14R15-filtered.json",
+      "sha256": "61aaf53e71a8346db9f60aa9cecca607cc9971c6826b4169f43c1d9e4f321908",
+      "bytes": 1997,
+      "mtime": "2026-09-09 22:24:29.427010964 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/palomar-14R15-year-filtered.json",
+      "sha256": "4d3eda4fd95e79d58d63f8a50f857b2c501386a87a80a9d6450d8ec63aec1e66",
+      "bytes": 865,
+      "mtime": "2026-09-09 22:29:53.920117923 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/palomar-llms.txt",
+      "sha256": "fa1123445050c7d05dd544bebdb2754378cffcda45c09b6ff4d48bacbd353382",
+      "bytes": 2247,
+      "mtime": "2026-09-09 22:23:53.691607844 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/palomar-recent-filtered.json",
+      "sha256": "83b4e4f236883b5d54923db90188d91f9fb9e4bb2e3689c39c4b6014fc16f9e6",
+      "bytes": 530095,
+      "mtime": "2026-09-09 22:24:29.296014147 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/reuellee-commits.json",
+      "sha256": "2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d",
+      "bytes": 5,
+      "mtime": "2026-09-09 22:28:17.180738051 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/roy-compare.json",
+      "sha256": "ea4b02263a34842d7323298b4684ba63499635a00d07a3270ba3c745b591e6b8",
+      "bytes": 1000000,
+      "mtime": "2026-09-09 22:24:33.085922018 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/roy-plane-commits.json",
+      "sha256": "2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d",
+      "bytes": 5,
+      "mtime": "2026-09-09 22:26:05.588605838 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/roy-plane-current-pins.json",
+      "sha256": "7ebb21dd089201816dd76d51245977aeaf726cfd3cd620c15308b68e2fe74818",
+      "bytes": 12010,
+      "mtime": "2026-09-09 22:31:29.489811437 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/roy-plane-current.json",
+      "sha256": "f910acf857abae65bc4837cff3f778749ca88f14e2d0efec72c89b882f27431f",
+      "bytes": 123692,
+      "mtime": "2026-09-09 22:31:29.347814871 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/roy-plane-prior-pins.json",
+      "sha256": "7ebb21dd089201816dd76d51245977aeaf726cfd3cd620c15308b68e2fe74818",
+      "bytes": 12010,
+      "mtime": "2026-09-09 22:31:29.492811365 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/roy-plane-prior.json",
+      "sha256": "52eca7e1a4bd1cc86f868289c5153d9a7ebe4ff3fc88a417d5329b539e17edde",
+      "bytes": 123692,
+      "mtime": "2026-09-09 22:31:29.483811582 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/search-02.json",
+      "sha256": "56131a7eaeaf937abb36e88f7f55df3742bec5802ef4a3322483622a2003256b",
+      "bytes": 30532,
+      "mtime": "2026-09-09 22:21:59.045649388 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/search-03.json",
+      "sha256": "674e82a5b10eacfe7e8befcfb67f29f8dc46db561993d1c740ab007f77b656fa",
+      "bytes": 36621,
+      "mtime": "2026-09-09 22:23:30.822429303 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/search-04.json",
+      "sha256": "91a2aa5e5d506c4fe8fc81fcc07014e5f76fc4af3c1a042cf1e1e1b6a744833c",
+      "bytes": 29373,
+      "mtime": "2026-09-09 22:25:16.282866133 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/search-05.json",
+      "sha256": "0dce216a22e589aa00b21ab618920713be0a3778495f1702af5bfa89f5da98d7",
+      "bytes": 15297,
+      "mtime": "2026-09-09 22:27:06.710181719 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/search-06.json",
+      "sha256": "75d2b260edb721678e29eb35ce2a7f5fde23215690586f20ced3796eb2f8e3ab",
+      "bytes": 16634,
+      "mtime": "2026-09-09 22:28:16.512486138 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/tao-lookup.json",
+      "sha256": "fdf430e07b5d223c8023c9ef85c18896a8826f31fd9c43c2fb96438b13520a5c",
+      "bytes": 2557,
+      "mtime": "2026-09-09 22:26:05.758633201 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/x-search.headers",
+      "sha256": "d77fb09f8546f5e1c737b73d0dc448ff82b0550bad88836a079579bba0ad6a5c",
+      "bytes": 11995,
+      "mtime": "2026-09-09 22:26:05.832661243 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/x-search.html",
+      "sha256": "a966a869cf1c1f6fea5e4f16de68e523d50964489ab5d25df5547fe1c3572d6c",
+      "bytes": 295902,
+      "mtime": "2026-09-09 22:26:05.922659053 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/zenodo-atwell.headers",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime": "2026-09-09 22:27:06.794179679 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/zenodo-open-01.json",
+      "sha256": "56dbd46e0c5a2a977616e7fa6a6d469641e3cabdd215e889fcf54fd842594fcc",
+      "bytes": 978,
+      "mtime": "2026-09-09 22:26:06.903635181 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/zenodo-rank.headers",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime": "2026-09-09 22:27:18.800888220 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/zulip-public.headers",
+      "sha256": "6e66a791d7b62c7a3d97262bba724212bbfda93900796c9773eb53e453cd061f",
+      "bytes": 710,
+      "mtime": "2026-09-09 22:27:07.949151640 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/zulip-public.html",
+      "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+      "bytes": 9379,
+      "mtime": "2026-09-09 22:27:07.949722948 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/zulip.headers",
+      "sha256": "4f1c57953808f9dc9b41e0316d427d39f12910c0cd9a2367ce6db99668c8f5d0",
+      "bytes": 592,
+      "mtime": "2026-09-09 22:26:05.964658031 +0000"
+    },
+    {
+      "path": "box/websweep-20260909T2220Z-astra/zulip.json",
+      "sha256": "d294481a810578d332726043f5a1ea21c41f54db37b0ebc28eb7bba6562c523f",
+      "bytes": 108,
+      "mtime": "2026-09-09 22:26:05.965713769 +0000"
+    },
+    {
+      "path": "xmodel/websweep-20260909T2220Z-astra.md",
+      "sha256": "0f44c524faa3038084074bafe470a3a74745c2832a1300060802d2b1c33fa1a7",
+      "bytes": 8970
+    },
+    {
+      "path": "xmodel/websweep-20260909T2220Z-astra.md.artifact.json",
+      "sha256": "9c3ddb8177de04da492e49e9e132983b0865a96ef2e7ca29627334099117955e",
+      "bytes": 674
+    }
+  ],
+  "self_excluded": true,
+  "later_live_originals": "Not reread or used; root may edit canonical originals after snapshot acknowledgement."
+}

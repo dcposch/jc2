@@ -1,0 +1,21 @@
+Running as unit: jc2-f10-exact-linear-20260909.service; invocation ID: 6643f0b22564414fba7a50547307f5e8
+TimeoutStopUSec=5s
+RuntimeMaxUSec=20min 50s
+MainPID=2200
+ExecMainStartTimestamp=Wed 2026-09-09 23:07:29 UTC
+ExecMainStartTimestampMonotonic=181434452
+ExecStart={ path=/usr/bin/python3 ; argv[]=/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909/dispatch_batch.py ; ignore_errors=no ; start_time=[Wed 2026-09-09 23:07:29 UTC] ; stop_time=[n/a] ; pid=2200 ; code=(null) ; status=0/0 }
+ControlGroup=/system.slice/jc2-f10-exact-linear-20260909.service
+MemoryMax=3221225472
+TasksMax=64
+Environment=LD_LIBRARY_PATH= LD_PRELOAD= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+LimitFSIZE=16777216
+User=ubuntu
+KillMode=control-group
+ActiveState=active
+SubState=running
+InvocationID=6643f0b22564414fba7a50547307f5e8
+2200 (python3) R 1 2200 2200 0 -1 4194560 1634 0 0 0 0 0 0 0 20 0 1 0 18142 19058688 2561 18446744073709551615 4325376 7353021 140731455422768 0 0 0 0 16781312 2 0 0 0 17 6 0 0 0 0 0 10657224 12220544 993935360 140731455426005 140731455426102 140731455426102 140731455426535 0
+/usr/bin/python3 -I -B /home/ubuntu/jc2-f10-r1-exact-linear-execution-20260909/dispatch_batch.py 
+pid:[4026531836]
+0::/system.slice/jc2-f10-exact-linear-20260909.service

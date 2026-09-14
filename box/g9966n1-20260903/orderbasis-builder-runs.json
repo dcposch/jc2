@@ -1,0 +1,91 @@
+{
+  "builder_runs": [
+    {
+      "command": [
+        "timeout",
+        "180s",
+        "stdbuf",
+        "-oL",
+        "-eL",
+        "Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "--no-rc",
+        "-q",
+        "/home/ubuntu/jc2/box/g9966n1-20260903/orderbasis/builders/n1_S5_9_6_2_1_k5_part_2_full_builder.sing"
+      ],
+      "elapsed_seconds": 0.03,
+      "returncode": 0,
+      "script": "box/g9966n1-20260903/orderbasis/builders/n1_S5_9_6_2_1_k5_part_2_full_builder.sing",
+      "stderr": "box/g9966n1-20260903/orderbasis/builders/n1_S5_9_6_2_1_k5_part_2_full_builder.sing.err",
+      "stderr_tail": [],
+      "stdout": "box/g9966n1-20260903/orderbasis/builders/n1_S5_9_6_2_1_k5_part_2_full_builder.sing.out",
+      "stdout_tail": [
+        "NATIVE_GATE level0_deg_x_before_minus_c=12",
+        "NATIVE_GATE target_xk_level0_nonzero=1",
+        "NATIVE_DONE equations=103",
+        "NATIVE_DONE max_nf_deg_x_after_minus_c=12"
+      ],
+      "verdict": "BUILDER-DONE"
+    },
+    {
+      "command": [
+        "timeout",
+        "180s",
+        "stdbuf",
+        "-oL",
+        "-eL",
+        "Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "--no-rc",
+        "-q",
+        "/home/ubuntu/jc2/box/g9966n1-20260903/orderbasis/builders/n1_S5_9_6_2_1_k5_part_1_1_full_builder.sing"
+      ],
+      "elapsed_seconds": 0.037,
+      "returncode": 0,
+      "script": "box/g9966n1-20260903/orderbasis/builders/n1_S5_9_6_2_1_k5_part_1_1_full_builder.sing",
+      "stderr": "box/g9966n1-20260903/orderbasis/builders/n1_S5_9_6_2_1_k5_part_1_1_full_builder.sing.err",
+      "stderr_tail": [],
+      "stdout": "box/g9966n1-20260903/orderbasis/builders/n1_S5_9_6_2_1_k5_part_1_1_full_builder.sing.out",
+      "stdout_tail": [
+        "NATIVE_GATE level0_deg_x_before_minus_c=12",
+        "NATIVE_GATE target_xk_level0_nonzero=1",
+        "NATIVE_DONE equations=103",
+        "NATIVE_DONE max_nf_deg_x_after_minus_c=12"
+      ],
+      "verdict": "BUILDER-DONE"
+    },
+    {
+      "command": [
+        "timeout",
+        "180s",
+        "stdbuf",
+        "-oL",
+        "-eL",
+        "Singular",
+        "--cpus=1",
+        "--threads=1",
+        "--flint-threads=1",
+        "--no-rc",
+        "-q",
+        "/home/ubuntu/jc2/box/g9966n1-20260903/orderbasis/builders/n1_S6_9_6_5_2_k2_part_1_full_builder.sing"
+      ],
+      "elapsed_seconds": 0.015,
+      "returncode": 0,
+      "script": "box/g9966n1-20260903/orderbasis/builders/n1_S6_9_6_5_2_k2_part_1_full_builder.sing",
+      "stderr": "box/g9966n1-20260903/orderbasis/builders/n1_S6_9_6_5_2_k2_part_1_full_builder.sing.err",
+      "stderr_tail": [],
+      "stdout": "box/g9966n1-20260903/orderbasis/builders/n1_S6_9_6_5_2_k2_part_1_full_builder.sing.out",
+      "stdout_tail": [
+        "NATIVE_GATE level0_deg_x_before_minus_c=5",
+        "NATIVE_GATE target_xk_level0_nonzero=1",
+        "NATIVE_DONE equations=54",
+        "NATIVE_DONE max_nf_deg_x_after_minus_c=5"
+      ],
+      "verdict": "BUILDER-DONE"
+    }
+  ]
+}

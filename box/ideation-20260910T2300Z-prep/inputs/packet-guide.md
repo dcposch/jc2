@@ -1,0 +1,39 @@
+# 2300 full-spectrum packet: scope and current accepted state
+
+ROOT science cutoff September10,2026 at22:52UTC; preparation first action22:53:31.561498064UTC. Actual file pins/PINS publication supply byte custody. Preparation is NOT a round completion, invitation or root blind seal. Basis0d39df3c9fd69c939a8420c54d03228b9077777d plus the exact copied dirty-file hashes. All copied text is immutable for this round. New events after this cutoff remain deltas; no silent refresh.
+
+## What changed since1130
+
+The previous full round completed11:56:56.721223873UTC, EXPEDITED/DEGRADED (all five blind reports, partial Fable cross and late Astra cross). Original12hour completion backstop is23:56:56.721223873UTC. This round is scheduled, not triggered by a global closure or a scope reversal. ROOT owns independent blind BEFORE invitations. No poll timeout or self-announced hash licenses an input while its author writes.
+
+Completed source/program changes, accepted at their named documentary/prose/execution-import tiers:
+- ALLr>=2 middle H7 units:17zzu, with a checked real-triangle/cofactor certificate, all boundary strata and actual forcing. Stop the old residue-family farm.
+- COMPLETEr1 source zero17zze and separate source/ordinary-degree composition17zzt: conditional exclusion of actual112/196 pairs and the exact D28 column28(q+2),28(2q+3). No generic gcd28 or max196 claim.
+- COMPLETEr2 source zero17zzzzzzzzz via reconstructed full coefficients, same-place FULL-special highest certificate, literal fullunit identity and finite-local-model/Nakayama composition. The separate degree gate17zzzzzzzzzz closes actual196/336 in either order, not max336 or allr. R1/r2 compute/review queues CLOSED; source proof is not an invitation to rationally reconstruct its cofactors or harden foundations.
+- ALL prescribed late complex contacts r>=2,1<=j<=r-1 excluded17zzzzzzzzzzzzzz by the complete contact identity plus strict Bernstein positivity on the prescribed triangle. This is not full open-window equivalence or source-zero. The prior550CPU eliminant cap is superseded by the changed successful representation, not reclassified as successful.
+- Whole-leading late unit columns and actual forced-affine elimination17zzzzzzzzzzzzzzz. Every remaining compatibility is retained; a unit column is not a unit forcing.
+- Complete all-r kernel presentation and conditional highest interface accepted17zzzzzzzzzzzzzzzz. Producer and FIRST are copied WHOLE. Accept at their named source/band premises rather than re-reviewing those foundations.
+
+Current theorem: forr>=2,d=r+1,q=2r+1,m=3r+1, B=B_nu is WHOLEfinite-etale rank7 overQ. There are d kernel variables Xi of weightsi; d high compatibilities f_q..f_m; another7r positive-index residuals; mixedlowrowT=L1-U0L0; guardL0 inverted. Total8r+2 equation slots plusinverseguard. Literal source zero iff C_r zero through faithfulq/3 common covers, not an s=1 same-field specialization. Free-z homogeneity/identities concern AMBIENT polynomial rings, never assumed injectivity on a quotient or erased z-torsion.
+
+High forms H_q..H_m and critical unitconstant J0 are defined, but REG_r (no nonzero common highest point on ANYleadingcomponent) is UNKNOWN. IfREG_r, finite rankD=binomial(3r+1,r+1), topweight2r(r+1), exactfilteredstrictness and C_r=0 iffL0^D liesin the retainedidealJ. No allr membership certificate or point exists. The acceptednecessarylast-axis scalar c_r is specified, not evaluated; unitness is UNKNOWN. The regular rational-power model in producer6 is NOT identified with actual H. Gradient resemblance, weights or length do not prove identification.
+
+ROOT correction to copied FIRST E: its isolated intermediate display6r+2-9r=-(3r-1) is a typo. Correct delta2=-(3r-2)=-(3j+1) atj=r-1, matching the producer. Accepted formulas use this correction; other nonblocking review qualifications remain. No new computational evidence supplied in this round.
+
+## Active work and excluded provisional bytes
+
+One manual Astra task f10-actual-highest-potential-astra-20260910 started22:39:09, originalreserve22:59/HARD23:02. It tests ACTUAL potential/model identification or a finite mixed-critical obstruction. At this packet cutoff the author is LIVE: NO live body or advisory derivation is a charged premise. Its parent16z is accepted. On terminal intake ROOT may send a separately frozen equal delta to cross reviewers AFTER blind collection; no silent blind-input mutation. A second axis report aa2a665c... is frozen but INTERNAL-UNREVIEWED, no current dependent and no duplicateFIRST selected; this packet charges only the accepted master axis interface, not that report's new details.
+
+All16 campaign AWSworkers are TERMINATED; EBS/evidence retained. No worker is needed for manual research/review; no restart/provision/termination/deletion is authorized to ideators. Protected jc2-lean and its separate infrastructure are outside inspection. Astra PRIMARY, Fable5.1 highest-value FIRST/research, Sol fallback; Opus/Grok optional utilities, no occupancy target. CumulativeTERMINALFable56381elapsedseconds asof22:43, notbilling/tokens/inference/CPU/credits. The old Sep9 19:17→Sep10 19:17 79run/39836s snapshot is not currentrolling24h. No freshbalance orquotaquery.
+
+## Full portfolio must remain global
+
+All46 IDs in master46-history are navigation labels; its dated scores/launches are NOT current. APPROACHES and this packet supersede its closure/client status. BindingBD-GAL and reduction-interfaces are included to prevent repeated closed d2=2 and G2 conflations. Never infer that excluding F10 resolvesJC2: other unbounded receiver families and independent global source/landing/off-axis/type/cofinality obligations remain. The 64 residual necessary data atn<=200 are not64 externally open cases or actual maps. A complete unretired source point/proper ideal could suffice for disproof under exact reconstruction; a formal/modular/leading/collision-free necessary object cannot.
+
+Independent global gaps include G2-PSC transport/fidelity, G2-BD afterresidueA, universalfullconfigurationlanding andcofinaldegree/typecontrol, positiveindividual-divisorsaturation forBGVweaktype1, non-Galois blockquotients/primitive maps, K16all-mproductbB*eta andseparateb0boundary, andAS109polynomialalgebraization beyond growing-supportWitt lifts. Do not collapse them into F10 or claim an attached source map from matching numerical degrees.
+
+External sweep copiedWHOLE was collected ontime. Lastsuccessfulrawfetch22:01:02.811468974; nextBROADSeptember11 same time. Zhang's new paper leaveschar0simplicity open; recoveredBurnsproof assumes the affine-linepremise; BGVv1unchanged andpositiveattachmentstillmissing; actorcorrections do notchangepriority. This is documentaryintake, not independent proofreview. Social/globalregistryholes sinceSept3 andhistoricLATE/system48hcheckpointdebt remain. No network or another broad sweep in this round.
+
+## Reading and source perimeter
+
+Read every charged file WHOLE after current pins; recover clipping explicitly. The common contract permits explicitly labelled reuse of a same-agent prior WHOLE read of byte-identical text after a current hash check, equally for all ideators. The new guide, contract and PINS always require fresh WHOLE. A summary is not a WHOLE read. Listed copied sources are text, not scientific coefficient payloads. Do not follow their provenance links, read current shared ledgers, inspect other lanes, or open code/data. Any theorem not in the charged packet is an unverified hypothesis, not a launch premise. ROOT handles postblind canonical history/primary checks before execution. A strategy idea alone is not promoted mathematics. The instruction contract is in common-contract.md; the exact input list is PINS.json, selfexcluded. This is a bounded blind-invitation read-scope choice, not a changed mathematical promotion gate or a waiver of any already-live task's fresh-WHOLE instruction.

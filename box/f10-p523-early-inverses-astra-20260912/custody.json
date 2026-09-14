@@ -1,0 +1,44 @@
+{
+  "schema": "jc2-manual-scalar-terminal-custody/v1",
+  "task": "f10-p523-early-inverses-astra-20260912",
+  "owner": "/root/nonemptiness_certificate",
+  "status": "COMPLETED_MANUAL_UNREVIEWED",
+  "first_action_utc": "2026-09-12T04:07:14Z",
+  "opened_utc": "2026-09-12T04:07:57Z",
+  "preseal_report_whole_postpins_scope_collision_check_by_utc": "2026-09-12T04:19:30Z",
+  "closed_utc": "2026-09-12T04:19:57Z",
+  "finalized_utc": "2026-09-12T04:19:57Z",
+  "expected_verify_final_whole_and_postpins_by_utc": "2026-09-12T04:20:19Z",
+  "reserve_utc": "2026-09-12T04:28:00Z",
+  "hard_stop_utc": "2026-09-12T04:31:00Z",
+  "inputs_pre_post_identical": [
+    {"path": "/home/ubuntu/jc2/xmodel/f10-r3-vzero-place-astra-20260911.md", "sha256": "3f70c36d66bb9cc8fdbbb53a8546fcf1dc4547897374cc50a3b55658d7b1bbcb"},
+    {"path": "/home/ubuntu/jc2/xmodel/f10-p523-place-candidate-root-20260911.md", "sha256": "7b0298b10e190bfde6b6e32ad448ec2bf99dbcc099519c786b602159e1b9a4b1"},
+    {"path": "/home/ubuntu/jc2/box/f10-necessary-rows-producer-astra-20260911/produce.py", "sha256": "5078142850c5f4d2e4f08da18fad01ea0271bf36c18740df372884747535280a"},
+    {"path": "/home/ubuntu/jc2/xmodel/f10-p523-late-inverse-root-20260912.md", "sha256": "46f254c123e9b1ea9b30e2758e8229a739b603fb431dba076054bde90c90bb2c"},
+    {"path": "/home/ubuntu/jc2/box/f10-p523-late-inverse-root-20260912/EARLY-SCRATCH.md", "sha256": "75cabfefab25e36f98bba5e34e30fc5597a3e44784f3ada9a989a5e74de88eb1", "scope": "Optional explicitly NONBLIND advisory scratch, not independent review"}
+  ],
+  "read_scope": "All five inputs FRESH_WHOLE after matching pins, no clipping. Exact ranges and additional numbered source excerpt in PINS.json. No linked/provenance/live bodies.",
+  "owned_files_excluding_custody": [
+    {"path": "/home/ubuntu/jc2/xmodel/f10-p523-early-inverses-astra-20260912.md", "sha256": "2caec1f58e008cb175b5334627b7899d888e4f2a26a971adf006761da0151308", "bytes": 10677, "readback": "WHOLE final sed1-300, EOF/seal visible"},
+    {"path": "/home/ubuntu/jc2/xmodel/f10-p523-early-inverses-astra-20260912.md.artifact.json", "sha256": "6df6c71aaa625ebd16214977ed47a7eae017bc0bc4479579840c5c19e4f4d8f3", "bytes": 698, "readback": "WHOLE"},
+    {"path": "/home/ubuntu/jc2/box/f10-p523-early-inverses-astra-20260912/PINS.json", "sha256": "0837e6e7cd37cda861a13a59461800ec874ccc9f58543b40f43f968cd22c4392", "bytes": 2547, "readback": "WHOLE before marker; posthash unchanged"}
+  ],
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "body_sha256": "874ceace5e5487039bf83638a478520a3cfe73b6ed785855c66524cb41d4bce6",
+    "body_bytes": 10344,
+    "expected_manifest_sha256": "6df6c71aaa625ebd16214977ed47a7eae017bc0bc4479579840c5c19e4f4d8f3",
+    "verification": "VERIFIED",
+    "sequence": "begin; private unsealed skeleton; bounded apply_patch sections; own WHOLE/scope/remaining-quantity/collision/postpins; marker LAST; close; finalize; exact expected-manifest verify; WHOLE final; custody last"
+  },
+  "result": "Six actual completed determinants are80,345,211,155,93,68 with inverses85,285,233,27,45,100. All eighteen upper-basis columns, six matrices and integer determinant/inverse products are documented. Independent hand checks also reproduce the initial-five and late-four scalar attachments.",
+  "remaining_named_scalar_quantity": 0,
+  "unverified": "Whole-source canonical anomalies, full serialized place vector, source row formation/readback, physical runtime/resources, rank and source outcomes. No complete matrix-inverse payload was emitted; adjugate formula is the exact algebraic witness.",
+  "scientific_execution": "NONE",
+  "code_or_cap_changes": "NONE",
+  "payload_fixture_access": "NONE",
+  "external_or_live_peer_reads": "NONE",
+  "promotion_or_follow_on_authority": "NONE",
+  "terminal_state": "ALL WRITERS IDLE after custody creation; only custody whole readback/hash and terminal UTC remain."
+}

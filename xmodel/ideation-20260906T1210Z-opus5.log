@@ -1,0 +1,22 @@
+cli=2.1.259 (Claude Code) model=opus effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Report delivered at **12:19:42Z**, ahead of the 12:22Z blind deadline. `xmodel/ideation-20260906T1210Z-opus5.md`, 1704 words, unique standalone `<!-- BODY-END -->`.
+
+## What the round produced
+
+**All 12 charged input hashes verified** against `charged-inputs.list` — zero mismatches. No peer or root 1210 report read. No AWS/CAS beyond one small local exact control, no external writes.
+
+**Primary verdict (read from the charged PDF+text, not from our summaries):** `APPLIES_AS_EXTERNAL_THEOREM` for two of three normalized cases, `SPECIFIC_GAP` for the third. Two findings nobody in our record had:
+
+1. **Proposition 4.2 and Corollary 5.7 are each stated once and never cited again anywhere in v1.** Cor 5.7's polygons are verbatim Prop 4.1's — they are the **(9,27) = 108** case, not 99.
+2. I evaluated the support functionals myself. Prop 4.2 cases (2) and (3) satisfy Theorem 5.1's hypotheses literally; **case (1) does not** — with the extra corner (0,12), `v_{-1,1}` ties at (0,12) and (6,18), so `st_{-1,1}(P) = (0,12) ≠ (6,18)`. Case (1) needs an unprinted Cor-5.7-style shear. Narrow expository gap, not a refutation.
+
+**The paper's only CAS step is now reproduced exactly.** GGHV say "using a CAS (for example Mathematica) we eliminate `d_{-10},…,d_{-2}`". Transcribing the nine printed equations with `d₃=1, d₂=0, A := F₋₄C₃²³`, Singular's `eliminate` returns a *principal* eliminant equal to (5.9) on the nose: `27d₀d₋₁⁹ + 18d₁d₋₁⁶A + 8A³`. Under a minute.
+
+**Load-bearing unread deps are typed, not papered over:** refs [1] (Cor 7.2/7.4, Prop 1.13/2.1), [2], [3], [5], [6], [10], [12] — all unread; Prop 5.4/5.6 read but unverified.
+
+**One new connection (typed `PROPOSED_INTERFACE`, unproved):** GGHV's two 108 rows are (9,27), killed by Cor 5.7, and **(8,28) with `(3,2)` and `[P,Q]=x²` — the system they explicitly could not solve.** Those integers are our D108 source top `h=(X+W)⁸W²⁸`, `F=h³, G=h²`. I flagged my own attack on it: `A₀` is a corner after non-polynomial `L^(1)` automorphisms, so matching integers is exactly the flag/place conflation FALLACY-v2 forbids until a ring map is written.
+
+Portfolio: raise 1 and 2, lower 4 and 36, rest unchanged. Recommendation: stop new 99 compute permanently (not HOLD), continue D108 with the map written before any solve. No `charge_basis` line — I made no new exit-price assertion.
+
+I also updated the `ggv22-degree-dichotomy-kills-99-66` memory, which had carried an explicit "nobody has read the §2 proof text — check this first" flag; that is now discharged.
+DIVERT path=xmodel/ideation-20260906T1210Z-opus5.md status=CLEAN body_bytes=11063 body_sha256=1d86d05c153ece8f40a7a469e1244a751a1e473a7a6bffd2aafa3ac8e2a6c621

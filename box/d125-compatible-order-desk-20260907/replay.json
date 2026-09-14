@@ -1,0 +1,56 @@
+{
+  "assert_nodes": 0,
+  "code_sha256": "f139eb51d690c350426f1a19d27de7d3cb097029c06cb775dbf7ee6531d66ca1",
+  "runs": [
+    {
+      "flags": [],
+      "mode": "normal",
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "86804185bbaba641f2a3305dd379aa06e2f85a5f833233c79a10b575c0be67f6"
+    },
+    {
+      "flags": [],
+      "mode": "no-w4",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-compatible-order-desk-20260907/check.py\", line 52, in <module>\n    need(key((ids['A_g0_p1'],)) > key((ids['A_g0_p3'], ids['lambda3'])), 'actual higher-degree lambda forcing')\n  File \"/home/ubuntu/jc2/box/d125-compatible-order-desk-20260907/check.py\", line 18, in need\n    raise ValueError(why)\nValueError: actual higher-degree lambda forcing\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mode": "reverse-w5",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-compatible-order-desk-20260907/check.py\", line 53, in <module>\n    need(key((ids['A_g0_p2'],)) > key((ids['A_g1_p1'],)), 'actual same-degree nonpivot')\n  File \"/home/ubuntu/jc2/box/d125-compatible-order-desk-20260907/check.py\", line 18, in need\n    raise ValueError(why)\nValueError: actual same-degree nonpivot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "normal",
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "86804185bbaba641f2a3305dd379aa06e2f85a5f833233c79a10b575c0be67f6"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "no-w4",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-compatible-order-desk-20260907/check.py\", line 52, in <module>\n    need(key((ids['A_g0_p1'],)) > key((ids['A_g0_p3'], ids['lambda3'])), 'actual higher-degree lambda forcing')\n  File \"/home/ubuntu/jc2/box/d125-compatible-order-desk-20260907/check.py\", line 18, in need\n    raise ValueError(why)\nValueError: actual higher-degree lambda forcing\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "reverse-w5",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-compatible-order-desk-20260907/check.py\", line 53, in <module>\n    need(key((ids['A_g0_p2'],)) > key((ids['A_g1_p1'],)), 'actual same-degree nonpivot')\n  File \"/home/ubuntu/jc2/box/d125-compatible-order-desk-20260907/check.py\", line 18, in need\n    raise ValueError(why)\nValueError: actual same-degree nonpivot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASS",
+  "wall_seconds": 1.547334354952909
+}

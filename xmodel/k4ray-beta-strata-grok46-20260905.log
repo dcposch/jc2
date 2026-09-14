@@ -1,0 +1,19 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the charged-input hashes, then read the frozen sources so the β-strata coverage argument is grounded in the exact files named in the receipt.The first awk join used the wrong field. I'll rebuild the manifest from `_sha256` and `_basename` only, then re-run `sha256sum -c`.Hashes match. Next I’ll read the chart code, lower-band parametrization, and related k=4-ray reports to see whether the degree argument already kills `b > b_min`.I’ll pull the lower-band construction and the tower’s shape census next, then test whether a degree count actually kills `b > b_min`.Task (1) looks blocked: the tower only lowers `b`, and the next `J` band stays underdetermined. I’ll record that with a machine check, then build the per-stratum charts.T3 failed on the generic two-scalar top; I’ll check whether that’s a real identity failure or a division artifact, then start the K=7 b=5 regression.T3 is clean. I’ll launch a fleet worker and start a lower-band hensel generalization while the local K=7/K=8 jobs run.The hensel unit looks false: `CSTP` vanished, so `tau*CSTP-1` is `-1`. I’ll inspect the reconstructed `h` and `B` before treating that as a kill.Local K=7 b=6 summaries are in. I’ll read those verdicts and check fleet progress next.I’ll write the report from the argument and formation data now, then fill in fleet GB verdicts when those jobs finish.K=8 b=8 and K=9 b=8 modular runs timed out. I’ll pull those summaries and keep waiting on the remaining exact-Q jobs.The extra β-strata are **not** killed by a degree argument, and they are **not** closed by the charts this lane could finish. D=108 no-split and (99,66) configuration (A) stay conditional on `deg β = b_min`.
+
+**Task (1).** There is no clean proof that `b > b_min` is empty. `3b ≤ 2K` is a floor; MASTER already gives `b ≤ 2K−1`; LEVEL 4 saturates the numerical tower at `c=3`; the next Jacobian/`E` band is underdetermined. LEVEL 5 is not implied at K=7,8. The one-scalar pin is only at `b = b_min`.
+
+**Task (2).** Per-stratum I_light charts are in `box/k4ray-beta-strata-20260905/`. For K=7,8,9 the LEVEL-4 top is `P = y^{smin}(y-x)(q0 x^d + q1 x^{d-1} y)` (1 scalar at `b_min`, 2 above). The lower β-block is the full box; no weight-floor drop of unknowns. The 36-variable PIN12 cut from 17(bbbbbb) **does not transfer**: generic-`q1` DIV-band pivots depend on `q1`. Honest sizes: K=8 b=7 is 66 GB variables (not 36); K=9 b=8 is 83; `b_max` formation timed out at 180s.
+
+**Task (3).**
+- K=8 no-split is **not** DEAD for all `deg β`
+- K=9 case (A) is **not** DEAD for all `deg β`
+
+Control: K=7 b=5 replayed `UNIT_IDEAL_CHAR0` in 7.8s. Every extra stratum that was actually solved is `INCONCLUSIVE_TIMEOUT` (local 600s; fleet `r7i.8xlarge` 1800s exact Q on K=7 b=6 and K=8 b=7, both covers; 1200s `F_32003` on K=8 b=8 and K=9 b=8). No modular non-unit, so no survival certificate either.
+
+Open extra strata (q0-cover GB variable counts):  
+K=7: b=6..13 (51…100); K=8: b=7..15 (66…130); K=9: b=8..17 (83…164).
+
+Report: `xmodel/k4ray-beta-strata-grok46-20260905.md` (sealed). Worker `i-01de3f3912cb345f7` terminated.
+DIVERT path=xmodel/k4ray-beta-strata-grok46-20260905.md status=CLEAN body_bytes=15593 body_sha256=689e3ed80af53c683a38c47ba666ca49151dbea2d6b451787fd74cb310d508ae
+hashed lane input changed during execution; result is quarantined

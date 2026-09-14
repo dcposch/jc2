@@ -1,0 +1,60 @@
+{
+  "schema": "jc2-documentary-terminal-custody/v1",
+  "task": "cubic-scroll-net-classification-astra-20260912",
+  "scope": "COMPLETE_MANUAL_PRODUCER_UNREVIEWED_NOT_PROMOTION",
+  "first_action_utc": "2026-09-12T00:13:37Z",
+  "reserve_utc": "2026-09-12T00:29:00Z",
+  "hard_utc": "2026-09-12T00:32:00Z",
+  "preseal_whole_postpin_collision_completed_utc": "2026-09-12T00:19:15Z",
+  "finalized_utc": "2026-09-12T00:19:46Z",
+  "expected_verify_final_whole_completed_utc": "2026-09-12T00:19:47Z",
+  "inputs": [
+    {
+      "path": "/home/ubuntu/jc2/box/cubic-scroll-net-classification-astra-20260912/TASK.md",
+      "sha256": "b83818c6fad6a7c2179e8cb7ed269e483d31a41306fc321150449ff8d94550fd",
+      "read_mode": "FRESH_WHOLE",
+      "pre_post_match": true
+    }
+  ],
+  "owned": [
+    {
+      "path": "/home/ubuntu/jc2/xmodel/cubic-scroll-net-classification-astra-20260912.md",
+      "sha256": "c9dca0f52fe4a26e45782fb6a70a7d12e8c7890110a74a7587e9e3d4278c1e32",
+      "bytes": 8445,
+      "read_mode": "WHOLE_FINAL"
+    },
+    {
+      "path": "/home/ubuntu/jc2/xmodel/cubic-scroll-net-classification-astra-20260912.md.artifact.json",
+      "sha256": "0fdc94f07b0adcec191caf213361089007b2571d781ad754cc4c6127f86c9954",
+      "bytes": 703,
+      "read_mode": "WHOLE_FINAL"
+    },
+    {
+      "path": "/home/ubuntu/jc2/box/cubic-scroll-net-classification-astra-20260912/PINS.json",
+      "sha256": "78b2febcfb825887e49819c5ceaf1bfc8270d85eab3bf308c36b24f975521995",
+      "bytes": 1434,
+      "read_mode": "WHOLE_FINAL"
+    }
+  ],
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "status": "FINAL",
+    "expected_manifest_sha256": "0fdc94f07b0adcec191caf213361089007b2571d781ad754cc4c6127f86c9954",
+    "expected_verify": "PASS",
+    "body_sha256": "615175abb320f2e071b9841d15a3f996adeb86d312c0cf6ea6aa1c7879fdd7de",
+    "body_bytes": 8113
+  },
+  "result": "Two conic-net orbits on F1; double G removable; exact ramification and complete A2 etale locus; every target-affine etale donor has a nonconstant unit. Fixed-F1 degree3 extension independently derived. No squarefree-donor or global JC2 claim.",
+  "checks": {
+    "sole_input_pin_before_whole": true,
+    "own_whole_read": true,
+    "scope_quantity_cheapest_test_checked": true,
+    "no_new_open": true,
+    "collision_check": true,
+    "marker_last": true,
+    "scientific_execution": false,
+    "network_or_peer_reads": false,
+    "new_authority": false
+  },
+  "terminal_note": "Report and all substantive/transaction writers closed. Custody excludes its own hash, supplied in terminal handoff. After this creation only custody WHOLE read/hash and ALL WRITERS IDLE notification remain; no further authored changes or follow-on work."
+}

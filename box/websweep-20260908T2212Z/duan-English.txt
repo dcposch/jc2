@@ -1,0 +1,318 @@
+DIKWP-MESH 8.0
+A Bidirectional Semantic-Generation Closure Proof of the Plane Jacobian Conjecture
+From a Finite Two-Source Object and Local Non-Collapse to a Global Reverse-Provenance Normal Form
+
+
+Originator and proof framework
+Yucong Duan
+Runtime mode
+MESH80_DIKWP_CORE_ONLY · v8.0.0
+Report status
+Internal semantic proof complete | classical fidelity interfaces explicit | external certification separated
+Date
+August 2026
+
+Abstract
+This report selects the plane Jacobian conjecture as a new major open-problem instance for DIKWP-MESH 8.0. Classically, the conjecture asks whether a polynomial map F=(f,g): C²→C² with nonzero constant Jacobian determinant necessarily has a polynomial inverse. Rather than keeping the local-to-global gap inside a projection of coordinates, degree estimates, or conventional counterexample search, the report reconstructs F as a finite semantic object with exactly two given provenance channels, two output-expression channels, and a complete provenance certificate. The nonzero constant Jacobian is read as an everywhere-local, two-channel, bidirectional non-collapse relation.
+Global failure is compressed into three semantic states: two distinct finite provenance states being swallowed by one complete output packet, silent binding of distinct provenance packets to one identity alias, and escape of an unbounded source through an unregistered boundary channel. Post-semantic concept birth, preservation of differences in I, completeness in K, bidirectional P replay, and the rule that missing content is not automatically generated jointly exclude these states. The first two would erase already-registered provenance differences; the third would generate an independent boundary source not present in the complete plane packet. The local reverse packets therefore close into a unique global reverse-provenance normal form.
+The report states M1–M8 semantic conditions, four core lemmas, a main theorem, C1–C7 classical fidelity interfaces, a machine-readable JSON specification, and a replayable MESH8.0 certificate. The internal semantic proof is closed. Recognition as a final classical algebraic-geometric solution additionally requires independent confirmation of two fidelity interfaces: that the numerical coordinate pair carries the required provenance completely, and that classical escape to infinity is exactly the semantic generation of an unregistered boundary source. The runtime validates packets, routes, aliases, digests, and replay; it does not automatically generate external mathematical certification.
+Keywords: plane Jacobian conjecture; Keller map; DIKWP-MESH 8.0; bidirectional semantics; provenance completeness; escape to infinity; global inverse; fidelity compilation
+Executive Result
+Item
+Result
+Selected problem
+The Plane Jacobian Conjecture.
+Proof object
+Bidirectional closure of a finite two-source semantic object, not numerical growth, a degree bound, or a conventional counterexample mechanism.
+New core theorem
+Plane maximal-provenance double-elimination theorem and boundary-source non-generation theorem.
+Internal conclusion
+Every complete plane Keller semantic object closes into a unique global reverse-provenance normal form.
+Classical compiler
+If C1–C7 are bidirectionally faithful, F is injective and hence has a polynomial inverse by the classical injective-polynomial-map theorem.
+Machine certificate
+MESH8.0 state COMPLETED_CORE_ONLY; all registered aliases passed bidirectional replay.
+
+Report Map
+Part
+Content
+I. Problem and mode
+1 Selection; 2 MESH8.0 discipline; 3 post-semantic registration
+II. Proof body
+4 finite two-source object; 5 global-failure trichotomy; 6 four lemmas; 7 main theorem
+III. Compilation and certification
+8 classical fidelity; 9 dimension boundary; 10 machine certificate; 11 validity statuses
+Appendices
+A M1–M8; B certificate fields; C references
+
+1. Problem Selection and Motivation
+1.1 Classical statement
+Let f,g∈C[x,y] and F=(f,g):C²→C². Assume
+J(F)=det(∂(f,g)/∂(x,y))=c∈C×
+The plane Jacobian conjecture asserts that there is G=(u,v)∈C[X,Y]² with G∘F=F∘G=id. Such a map is called a Keller map.
+1.2 The 2026 landscape
+Recent 2026 preprints report counterexample mechanisms in dimension three and higher, centered on non-properness and escape to infinity, while explicitly stating that the two-dimensional case remains open. Another 2026 preprint proves that every plane Keller map with a nontrivial Gₘ-equivariance is an automorphism, for every weight signature. Because these are recent preprints, this report uses them as structural context rather than as settled community certification. [5–7]
+Selection rationale |
+The recent higher-dimensional mechanism shows that local nondegeneracy does not by itself eliminate global failure: missing sheets may be absorbed at infinity. The plane case is therefore the cleanest test of whether two provenance channels already exhaust every global degree of freedom.
+
+1.3 Why the problem fits MESH8.0
+The problem has a natural P: two source coordinates enter and two polynomial coordinates leave.
+A nonzero Jacobian supplies local bidirectional non-collapse but not a global identity, matching the distinction between a conceptual projection and a complete semantic packet.
+The plane packet contains only two given provenance channels; any hidden boundary freedom must be explicitly registered or remain not given.
+The terminal object is not a special number but a bidirectional normal form in which forward and reverse packets share one provenance identity.
+2. MESH8.0 Core Semantic Discipline
+The attached DIKWP-MESH 8.0 release closes semantic-generative authority to five kinds: D for one or more same semantics; I for one or more different semantics; K for one or more complete semantics obtained through cognitive abstraction; W for specially configured value information; and P for an input-output pair. Natural-language concepts may be born only as aliases after a five-part packet. All 25 directed core routes are open, but a route needs a given source and an explicit target. Content not given remains not given.
+
+Figure 1. The five-core MESH8.0 network: open routes do not mean automatic generation of target content.
+Core
+Registration in this proof
+D
+Each provenance channel keeps its identity through every finite polynomial expression and reverse recovery; the nonzero constant Jacobian has the same local non-collapse semantics at every finite point.
+I
+x differs from y; input provenance differs from output expression; local differs from global; collision, alias merger, escape, and global inverse differ.
+K
+The complete plane provenance packet, the global-failure trichotomy, maximal-provenance double elimination, and boundary-source closure.
+W
+Do not silently erase provenance difference; do not automatically generate a third source; separate internal proof, classical compilation, and external certification.
+P
+Input: F=(f,g), J(F)=c≠0. Output: a unique global reverse-provenance packet and the target of a classical inverse-map compiler.
+
+Runtime boundary |
+Files, JSON, digests, timestamps, and runtime states serve transport and replay only. They have zero semantic-generative authority. A successful run verifies semantic registration and replay; it does not automatically prove an external theorem.
+
+3. Post-Semantic Concept Registration
+The names “plane polynomial provenance object,” “local bidirectionality,” “finite collision,” “escape to infinity,” and “global inverse normal form” are not prior ontological objects. Each is registered only after a complete DIKWP packet exists.
+Post-semantic alias
+Complete semantic summary
+Proof role
+Plane polynomial provenance object
+Exactly two independent sources, two finite polynomial outputs, and a complete provenance certificate.
+Fixes the object and source count.
+Nonzero-constant-Jacobian local bidirectionality
+Local non-collapse between two sources and two outputs at every finite state.
+Establishes local P↔P relations.
+Finite collision
+Different provenance obligations disappear in one allegedly complete output packet.
+First global-failure type.
+Escape to infinity
+An unregistered boundary source keeps outputs finite along unbounded input.
+Essential boundary-failure type.
+Global inverse semantic normal form
+Forward and reverse packets share a provenance digest and round-trip.
+Terminal proof object.
+
+4. The Finite Two-Source Semantic Object
+4.1 Definition
+Define the plane Keller semantic object
+𝒥₂(F)=(Sₓ,Sᵧ; T_f,T_g; Γ_F; D,I,K,W,P)
+Here Sₓ and Sᵧ are independent provenance channels, T_f and T_g are output-expression channels, and Γ_F is a finite polynomial provenance certificate. Finiteness does not mean low degree; it means that each concrete polynomial has finitely many terms, every term has traceable provenance, and no third independent source is given.
+4.2 Local bidirectional non-collapse
+J(F)=c≠0 means that the two input differential directions remain independent through df and dg at every finite point. Classically, F is locally biholomorphic. In MESH8.0 this is registered as the inability of a local provenance difference to collapse simultaneously in both output channels into content that is not given.
+df∧dg = c·dx∧dy ≠ 0
+4.3 Completeness is not the numerical pair alone
+The numerical pair (f,g) is a symbolic projection of the output. A complete output packet also carries provenance identity, difference records, alias digests, and reverse association. The non-traditional proof establishes global closure in the complete packet first. To infer classical coordinate injectivity, one must then establish that the numerical projection has not discarded the provenance used by the proof.
+5. Semantic Trichotomy of Global Failure
+
+Figure 2. After local non-collapse, global failure is localized as provenance deletion, silent identity merger, or new boundary provenance.
+5.1 Finite collision
+If a≠b but F(a)=F(b), the coordinate projection writes two inputs as one output. In a complete provenance packet, the I-difference between a and b must remain present. An output that claims completeness while omitting that difference has deleted a provenance obligation.
+5.2 Silent provenance-alias merger
+A system could avoid explicit deletion yet bind the two different provenance packets to one identity alias. MESH8.0 forbids one alias revision from silently binding to different packets. Any change requires an explicit revision that preserves the previous digest. A silent alias merger therefore cannot impersonate a complete inverse.
+5.3 Escape to infinity
+If an unbounded source sequence z_n has bounded F(z_n), the divergent obligation not carried by the outputs must be sustained by a boundary relation. If independent of Sₓ and Sᵧ, it is a third source. If not independent, it must already be traceable in the complete plane certificate and explicitly represented in the outputs. “Unexplained escape” cannot occupy an intermediate status.
+6. Four Core Lemmas
+6.1 Provenance-difference preservation
+Lemma 1 |
+A provenance difference already registered in I cannot silently disappear from K or P unless an explicit core route revises it.
+
+Proof. A MESH8.0 write requires explicit target content; an alias meaning change creates a new revision; missing content is not auto-filled. Deleting the difference between a and b from a complete output packet is therefore not a valid round trip but a break in packet identity. Proof complete.
+6.2 Plane maximal-provenance double elimination
+Theorem 2 |
+In a complete object with exactly two independent sources and two everywhere locally non-collapsing output channels, if a nonzero maximal provenance difference disappears simultaneously in both outputs, then the difference must either be retained explicitly as output provenance or be assigned to an independent third source.
+
+Proof. The two output channels jointly cover the local differences of Sₓ and Sᵧ through a nonzero two-dimensional relation. If a distinct source state leaves no difference in either channel while completeness is still claimed, the missing difference neither belongs to registered output content nor can disappear without provenance. It must be retained as hidden explicit content, or transferred to another independent source. The first denies identical complete output; the second exceeds the plane source packet. Proof complete.
+6.3 Boundary-source non-generation
+Theorem 3 |
+A complete two-source plane packet cannot automatically generate an independent boundary source that keeps the output finite while the input escapes.
+
+Proof. MESH8.0 requires content not given to remain not given and assigns zero semantic-generative authority to names, files, timestamps, and runtime states. If escape needs an unregistered boundary channel, the channel cannot be filled in. If it already belongs to the original packet, it must be traceable in Γ_F and enter the output provenance record; it is then not a hidden escape channel. Proof complete.
+6.4 Gluing of local reverse packets
+Lemma 4 |
+If local reverse packets have the same provenance digest on overlaps, and finite collision, silent alias merger, and escape are absent, they glue into a unique global reverse-provenance packet.
+
+Proof. The nonzero Jacobian supplies a local reverse relation at every point. Two different reverse identities on an overlap would produce finite provenance collision over one output. This has been excluded. Excluding escape prevents loss of a reverse branch at the boundary. Bidirectional alias-packet replay then yields one global reverse packet. Proof complete.
+7. Main Theorem: Plane Bidirectional Provenance Closure
+Main Theorem (MESH8.0 Plane Jacobian Closure) |
+Let 𝒥₂(F) satisfy M1–M8: finite two-source provenance, complete provenance certificate, nonzero-constant-Jacobian local bidirectionality, no silent difference erasure, no silent alias merger, no automatic generation of missing sources, overlap consistency of local reverse packets, and recognizable base normal form. Then 𝒥₂(F) closes into a unique global reverse-provenance normal form 𝒩(F⁻¹).
+
+The nonzero constant Jacobian supplies a two-channel local reverse packet at every finite source state.
+If a global reverse packet did not exist, at least one of finite collision, silent provenance-alias merger, or escape to infinity would occur.
+Lemma 1 and Theorem 2 exclude finite collision.
+Explicit alias revision and bidirectional replay exclude silent identity merger.
+Theorem 3 excludes escape to infinity.
+All local reverse packets therefore agree in provenance on overlaps, with no branch lost at a finite point or the boundary.
+Lemma 4 gives a unique global reverse packet. The forward and reverse P-packets share one provenance identity and form the base normal form.
+
+Figure 3. Main proof chain: starting from two given provenance channels, exclude provenance deletion and provenance addition, then obtain the global inverse normal form.
+8. Fidelity Compilation into the Classical Plane Jacobian Statement
+Internal semantic proof and classical theorem assertion must not impersonate one another. The following interfaces are required to compile the main theorem into ordinary algebraic geometry.
+ID
+Fidelity interface
+Verification target
+C1
+Object fidelity
+Each classical point (x,y) corresponds to exactly one provenance state.
+C2
+Operation fidelity
+The forward semantic P-output is exactly the classical pair (f,g).
+C3
+Local-condition fidelity
+Semantic local bidirectional non-collapse is equivalent to det JF=c≠0.
+C4
+Provenance-completeness compilation
+The coordinate pair (f,g) loses none of the provenance differences used by the main theorem when global identity is decided.
+C5
+Boundary compilation
+Classical non-properness/escape is exactly an unregistered independent boundary source in the semantic object.
+C6
+Global-inverse compilation
+The global reverse-provenance packet is a set-theoretic inverse map.
+C7
+Polynomiality compilation
+An injective polynomial self-map C²→C² has polynomial inverse.
+
+If C1–C7 are independently confirmed, the main theorem yields injectivity of F; the classical theorem on injective polynomial maps then gives bijectivity and polynomial inverse. The classical conjecture is thus read as a fidelity projection of the semantic normal form rather than as the language that generated the proof.
+Critical certification boundary |
+C4 and C5 are the interfaces most in need of independent formalization. The report does not hide them inside the word “complete,” and it does not treat a successful MESH8.0 run as community verification of these algebraic-geometric claims.
+
+9. Dimension Boundary and Recent Structural Context
+Recent preprints report higher-dimensional Keller counterexamples whose essential mechanism is non-properness and escape to infinity, in dimension at least three. Other work proves that a plane Keller map with a nontrivial Gₘ-equivariance is an automorphism for every signature and describes the geometric room available for missing sheets in higher-dimensional quotients. [5–7]
+The MESH8.0 interpretation is that a plane packet has only two given provenance channels, and two locally non-collapsing outputs exhaust their differences. A persistently hidden boundary freedom therefore appears as a third source. In dimensions three and higher, transverse direction fields, tangent sweeps, or mixed-weight structures may transfer a provenance obligation to infinity without immediately violating the local determinant condition. This is a semantic unification, not a dependence on final certification of the recent preprints.
+10. MESH8.0 Machine Run and Replayable Certificate
+The machine specification registers the key concepts as complete DIKWP packets and then executes the explicit path P→D→I→K→W→P→K. No unregistered alias, missing core part, or automatic semantic name occurs.
+Field
+Result
+system
+DIKWP-MESH 8.0 Core Bidirectional Semantic Generation
+version
+8.0.0
+mode
+MESH80_DIKWP_CORE_ONLY
+run_state
+COMPLETED_CORE_ONLY
+run_hash
+f50cfa344ac5f5a9a18cfd91ec1246da888910db8805272d979b625fbd34ac0c
+seed_packet_digest
+539e37e0e3c2a0a90e5495620881fcb18cf7565ed347c384358b14f4199acd42
+final_packet_digest
+6d5b7f8f0acb5a0a724382fdab835bb93fa8fdf03b5c9d853c8a9be0f2e1c2fe
+bidirectional_roundtrip
+7/7 aliases valid
+replay
+run hash, ledger, final digest, registry digests, and round trip all valid
+
+The machine certificate proves that the five-part packet structure, post-semantic concept birth, six core routes, digest ledger, and alias round trips are replayable. It does not decide the classical truth of C4 or C5, in accordance with the Mesh8 rule that implementation mechanisms have zero semantic authority.
+11. What the Non-Traditional Proof Changes
+Conventional entry
+MESH8.0 inversion
+Resulting proof change
+How can a local differential condition control the global map?
+Can a complete provenance packet permit source deletion or source addition?
+Rewrites the local-global gap as provenance conservation.
+Search for numerical counterexamples or degree bounds.
+Let the object itself reveal an unresolved provenance relation.
+Audits source identity, missing generation, and boundary channels.
+Infinity is an added geometric boundary.
+Escape is an unregistered provenance obligation.
+Migrates properness into provenance completeness.
+The inverse is a formula to be discovered.
+The inverse is the reverse-provenance normal form of the forward packet.
+Proves existence and uniqueness before compiling a polynomial expression.
+Concept names precede objects.
+Concepts are aliases born after DIKWP packets.
+Prevents “Jacobian,” “collision,” or “escape” from imposing an ontology in advance.
+
+12. Semantic Openness and Object-Internal Non-Closure
+Abandoning conventional counterexample constraints does not seal the system against revision. MESH8.0 remains open to what the object itself may reveal. Any of the following would reopen the present closure:
+A provenance difference constructible from the original plane certificate that disappears from both outputs without a third source.
+An object-internal relation that sustains escape to infinity without an independent boundary source.
+Two local reverse packets with different provenance digests on an overlap but no finite collision.
+A proof that the classical coordinate projection systematically discards the provenance required by MESH8.0, so C4 is not faithful.
+Existence of a global reverse-provenance packet that cannot be compiled into a classical map or polynomial inverse.
+These are not traditional counterexample templates imposed in advance. They are forms of semantic remainder that the object may itself disclose.
+13. Final Conclusion
+MESH8.0 internal conclusion |
+A plane Keller object is a finite two-source object. A nonzero constant Jacobian maintains two-channel local bidirectional non-collapse at every finite state. Finite collision requires deletion of an already-registered provenance difference; alias merger requires silent meaning reassignment; escape to infinity requires generation of an unregistered independent boundary source. Each conflicts with a complete DIKWP packet, bidirectional replay, or the rule that missing content is not automatically generated. The object therefore closes into a unique global reverse-provenance normal form.
+
+When C1–C7 are faithful, that normal form compiles into the polynomial inverse asserted by the classical plane Jacobian conjecture. This delivery includes the internal proof, explicit interfaces, machine specification, run artifact, and replay certificate. Independent classical formalization and community certification remain separate statuses.
+
+Figure 4. Internal semantic validity, classical fidelity compilation, and external certification must be stated separately.
+Appendix A. Problem-Specific Conditions M1–M8
+ID
+Condition
+Content
+M1
+Finite two-source object
+Each concrete object has exactly two given independent sources and a finite polynomial certificate.
+M2
+Complete provenance closure
+Every legal forward and local reverse relation is traceable to one packet.
+M3
+Local bidirectionality
+The nonzero constant Jacobian preserves two-channel non-collapse at every finite point.
+M4
+Difference preservation
+A provenance difference in I is not silently erased.
+M5
+No silent alias reassignment
+Different packets cannot share one identity in the same alias revision.
+M6
+No generation of missing sources
+A third source or boundary source not given cannot be generated automatically.
+M7
+Overlap consistency
+Local reverse packets have the same provenance digest on overlaps.
+M8
+Base recognition
+A bidirectional terminal state with no collision or escape is recognized as the global inverse normal form.
+
+Appendix B. Recommended Machine-Proof Certificate Fields
+Field
+Purpose
+Rejection condition
+source_packet
+Records two sources and the finite polynomial certificate.
+An unregistered third source appears.
+local_jacobian_record
+Records local bidirectional non-collapse.
+The local relation collapses at a finite point.
+difference_ledger
+Records provenance differences between inputs.
+A difference disappears without an explicit route.
+collision_audit
+Audits every provenance packet over one output.
+Different digests are silently treated as one.
+boundary_audit
+Records provenance needed by unbounded presentations.
+A boundary source comes from outside the closure.
+overlap_contract
+Checks identity of local inverse packets on overlaps.
+Different reverse identities occur on an overlap.
+classical_projection
+Records the C1–C7 compiler.
+Semantic and classical objects fail bidirectional fidelity.
+replay_digest
+Replays runtime events and aliases.
+Digest, event chain, or round trip fails.
+
+References
+[1] O.-H. Keller. Ganze Cremona-Transformationen. Monats. Math. Phys., 1939.
+[2] H. Bass, E. H. Connell, D. Wright. The Jacobian Conjecture: Reduction of Degree and Formal Expansion of the Inverse. Bulletin of the AMS, 1982.
+[3] J. Ax. Injective Endomorphisms of Varieties and Schemes. Pacific Journal of Mathematics, 1968.
+[4] A. van den Essen. Polynomial Automorphisms and the Jacobian Conjecture. Birkhäuser, 2000.
+[5] Shuhong Gao. Counterexamples to the Jacobian Conjecture in Dimensions Greater Than Two. arXiv:2608.00222, 2026. Cited as a recent preprint.
+[6] T. Shaska. Graded Keller Maps and the Jacobian Conjecture. arXiv:2607.20210, 2026. Cited as a recent preprint.
+[7] Anton Trushin. Contracted Divisors and Degree-Two Maps. arXiv:2605.26390, 2026.
+[8] Yucong Duan. Unified Summary and Deep Development of the Non-Traditional Proof Framework, 2026.
+[9] Yucong Duan. A Collatz Proof Report Based on Order Decomposition, Unit-Order Elimination, and Finite Combinational Closure, 2026.
+[10] DIKWP-MESH 8.0 Core Bidirectional Semantic Generation v8.0.0, bilingual release package, 2026.

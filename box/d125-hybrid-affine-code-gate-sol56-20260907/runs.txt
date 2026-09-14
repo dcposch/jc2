@@ -1,0 +1,27 @@
+Frozen lane: /tmp/jc2-lane.5eg5Cq/inputs
+Limits per interpreter: timeout 30s; RLIMIT_CPU 25s; RLIMIT_AS 512 MiB; python -B.
+
+Harness development note: the first own normal/-O runs exited 1 because a
+lexical no-solver check matched the constructor docstring.  The gate harness,
+not producer code, was corrected to inspect imports in the AST; both final
+modes below then passed.  No verdict was taken from the development runs.
+
+OWN normal
+{"baseline_make_contract_calls": 0, "frozen": "/tmp/jc2-lane.5eg5Cq/inputs", "full_source_rows": 0, "optimized": false, "status": "PASS", "tests": 20}
+wall=0.09 maxrss_kib=23528 exit=0
+
+OWN -O
+{"baseline_make_contract_calls": 0, "frozen": "/tmp/jc2-lane.5eg5Cq/inputs", "full_source_rows": 0, "optimized": true, "status": "PASS", "tests": 20}
+wall=0.25 maxrss_kib=27524 exit=0
+
+PRODUCER normal
+....................
+Ran 20 tests in 0.037s
+OK
+wall=0.10 maxrss_kib=24460 exit=0
+
+PRODUCER -O
+....................
+Ran 20 tests in 0.036s
+OK
+wall=0.32 maxrss_kib=26832 exit=0

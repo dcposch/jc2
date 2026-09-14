@@ -1,0 +1,63 @@
+{
+  "argv_count": 5,
+  "argv_sha256": "9fb6331a926d2ff4df2a7ac74f60cd04b6843d9c6f1f4ca36e8a485e0d3ca454",
+  "caps": {
+    "cpu_seconds": 300,
+    "lifecycle_initial_seconds": 0.05,
+    "lifecycle_sample_seconds": 1.0,
+    "rss_bytes": 4294967296,
+    "rss_sample_seconds": 0.05,
+    "term_grace_seconds": 0.25,
+    "wall_seconds": 300.0
+  },
+  "child_exit_code": 1,
+  "child_returncode": 1,
+  "child_signal": null,
+  "cwd": "/home/ubuntu/d125-parity-compression-pilot-20260907",
+  "enforcement": {
+    "cpu": "per-process-inherited-RLIMIT_CPU; typed only on SIGXCPU",
+    "rss": "sampled aggregate non-zombie RSS of exact PGID; overshoot possible",
+    "wall": "monotonic deadline plus exact-PGID lifecycle sampling; registered leader reaped once after group quiet"
+  },
+  "error": null,
+  "executable": "/usr/bin/python3",
+  "identity_checks": [],
+  "invocation_cwd": "/home/ubuntu/d125-parity-compression-pilot-20260907",
+  "max_observed_group_rss_bytes": 251146240,
+  "pgid": 2113,
+  "pid": 2113,
+  "resource": null,
+  "runner_exit_code": 1,
+  "runner_signal": null,
+  "schema": "CAPRUN/v1",
+  "start_identity": "boot=1a830d1e-1fa2-47f3-98bc-8c26c8cb8453;start_ticks=97282",
+  "start_identity_source": "linux-proc-stat-field22",
+  "status": "NORMAL_EXIT",
+  "stderr": {
+    "bytes": 1915,
+    "path": "/home/ubuntu/d125-parity-compression-pilot-20260907/pilot.stderr",
+    "sha256": "b08d4df14d93646234f30b43925e838826b606a55b83525a176efebc48ef1775"
+  },
+  "stdin": {
+    "mode": "devnull",
+    "path": null
+  },
+  "stdout": {
+    "bytes": 0,
+    "path": "/home/ubuntu/d125-parity-compression-pilot-20260907/pilot.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "telemetry_path": "/home/ubuntu/d125-parity-compression-pilot-20260907/pilot.telemetry.json",
+  "termination": {
+    "cleanup_complete": null,
+    "group_live_before_reap": [],
+    "group_zombies_before_reap": [],
+    "kill_sent": false,
+    "leader_reaped": false,
+    "reason": null,
+    "term_sent": false
+  },
+  "utc_end": "2026-09-07T03:52:36.187464Z",
+  "utc_start": "2026-09-07T03:51:57.965653Z",
+  "wall_elapsed_seconds": 38.221822523
+}

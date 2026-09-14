@@ -1,0 +1,305 @@
+diff --git a/box/f10-r1-engineering-caller-v2-20260909/dispatch_batch.py b/box/f10-r1-exact-decision-code-20260909/caller.py
+index ef31bbd7..606784fd 100644
+--- a/box/f10-r1-engineering-caller-v2-20260909/dispatch_batch.py
++++ b/box/f10-r1-exact-decision-code-20260909/caller.py
+@@ -1,155 +1,158 @@
+-"""One owned engineering batch. No solver or supervisor replacement.
+-RLIMIT_FSIZE is inherited BEFORE exec of the exact existing CAPRUN argv.
+-No new PGID is created by this caller; CAPRUN owns its recorded child PGID.
++"""UNEXECUTED disabled-until-root-registered exact decision caller.
++Existing CAPRUN is the sole supervisor. No new inner PGID; no retry.
+ """
+ import sys
+ sys.dont_write_bytecode = True
+-import os, json, hashlib, socket, resource, subprocess, time, datetime
++import os, json, time, datetime, hashlib, socket, resource, subprocess
+ from pathlib import Path
+-ROOT = Path('/home/ubuntu/f10-r1-exact-artifact-validation-v2-20260909')
+-INSTANCE = 'i-08d2a40f272ee9fa2'
+-JOB = 'f10-r1-exact-artifact-validation-v2-20260909'
+-DEADLINE = datetime.datetime(2026,9,9,13,35,tzinfo=datetime.timezone.utc).timestamp()
+-first_math = None
+-records = []
+ 
+-def digest(p):
+-    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
++ARTIFACT='168bdfd3a791f24a6631de66ae4e71c3f209ee9eb0d21fc466f9aa802f5ad576'
++CAPRUN='4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2'
++HELPER='cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6'
++PROBE='02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7'
++FLAGS=['--no-rc','--no-stdlib','--no-shell','-q','-t']
+ 
+-def exclusive(path, obj):
+-    with Path(path).open('x') as f:
+-        json.dump(obj, f, sort_keys=True, indent=2); f.write('\n')
+-
+-def require(ok, reason):
+-    if not ok: raise RuntimeError(reason)
+-
+-def filelimit():
+-    resource.setrlimit(resource.RLIMIT_FSIZE, (16777216,16777216))
+-
+-def quiet(pgid):
++def require(ok,message):
++    if not ok: raise RuntimeError(message)
++def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
++def exclusive(p,data):
++    with Path(p).open('x') as f: json.dump(data,f,sort_keys=True,indent=2); f.write('\n')
++def filelimit(): resource.setrlimit(resource.RLIMIT_FSIZE,(16777216,16777216))
++def quiet(group):
+     live=[]
+-    for item in Path('/proc').iterdir():
+-        if not item.name.isdigit(): continue
++    for p in Path('/proc').iterdir():
++        if not p.name.isdigit(): continue
+         try:
+-            raw=(item/'stat').read_text(); fields=raw[raw.rfind(')')+2:].split()
+-            if int(fields[2])==pgid and fields[0]!='Z': live.append(int(item.name))
++            raw=(p/'stat').read_text(); f=raw[raw.rfind(')')+2:].split()
++            if int(f[2])==group and f[0]!='Z': live.append(int(p.name))
+         except (FileNotFoundError,ProcessLookupError,PermissionError): pass
+     return live
+-
+-def run(name, script, trailing, operation='check', wall=30, cpu=25, rss=2147483648, defect=None, mathematical=False):
+-    global first_math
+-    hard = None
+-    if mathematical:
+-        now=time.time()
+-        if first_math is None: first_math=now
+-        hard=min(DEADLINE, first_math+360)
+-        require(now+wall+15 < hard, 'insufficient remaining mathematical budget')
+-    auth=ROOT/(name+'.authority.json')
+-    child=['/usr/bin/python3','-I','-B',str(ROOT/script),str(auth),*map(str,trailing)]
+-    caps={'wall_seconds':str(wall),'cpu_seconds':str(cpu),'rss_bytes':str(rss),
+-          'rss_sample_seconds':'0.05','term_grace_seconds':'0.25'}
+-    parent=['/usr/bin/python3','-I','-B',str(ROOT/'run_capped.py'),
+-            '--wall-seconds',caps['wall_seconds'],'--cpu-seconds',caps['cpu_seconds'],
+-            '--rss-bytes',caps['rss_bytes'],'--rss-sample-seconds','0.05',
+-            '--term-grace-seconds','0.25','--cwd',str(ROOT),
+-            '--stdout-file',str(ROOT/(name+'.stdout')),'--stderr-file',str(ROOT/(name+'.stderr')),
+-            '--telemetry-file',str(ROOT/(name+'.telemetry.json')),'--',*child]
+-    files={str(ROOT/n):digest(ROOT/n) for n in ['builder.py','checker.py','execution_gate.py','run_capped.py',
+-             'probe.py','precision.py','dispatch_batch.py','admissibility.md','frontier.json']}
+-    files['/usr/bin/python3']=digest('/usr/bin/python3')
+-    if operation=='check': files[str(trailing[0])]=digest(trailing[0])
+-    spec={'schema':'F10-R1-REGISTERED/v1','enabled':True,'job_tag':JOB,'operation':operation,
+-          'instance_id':INSTANCE,'hostname':socket.gethostname(),'admissibility_sha256':digest(ROOT/'admissibility.md'),
+-          'runner_path':str(ROOT/'run_capped.py'),'cwd':str(ROOT),'caps':caps,
+-          'stdout_file':str(ROOT/(name+'.stdout')),'stderr_file':str(ROOT/(name+'.stderr')),
+-          'telemetry_file':str(ROOT/(name+'.telemetry.json')),'parent_argv':parent,'child_argv':child,'file_sha256':files}
+-    if defect=='disabled': spec['enabled']=False
+-    if defect=='wronghost': spec['hostname']='NOT-THE-REGISTERED-HOST'
+-    if defect=='argv': spec['parent_argv']=parent+['EXTRA']
+-    if defect=='cap': spec['caps']=dict(caps,rss_bytes='1')
+-    if defect=='missing-input': del spec['file_sha256'][str(trailing[0])]
+-    exclusive(auth,spec)
+-    namespace=os.readlink('/proc/self/ns/pid')
+-    started=time.time()
+-    with (ROOT/(name+'.caller.stdout')).open('x') as out, (ROOT/(name+'.caller.stderr')).open('x') as err:
+-        process=subprocess.Popen(parent,stdin=subprocess.DEVNULL,stdout=out,stderr=err,cwd=ROOT,
+-                                 preexec_fn=filelimit, start_new_session=False)
+-        require(os.readlink(f'/proc/{process.pid}/ns/pid')==namespace,'caller PID namespace mismatch')
+-        caller_stat=Path(f'/proc/{process.pid}/stat').read_text()
+-        rc=process.wait()
+-        returned=time.time()
+-    telemetry=json.loads((ROOT/(name+'.telemetry.json')).read_text())
+-    require(not quiet(telemetry['pgid']), 'owned live PGID after CAPRUN')
+-    for filename,want in files.items(): require(digest(filename)==want,'source/input changed')
+-    record={'name':name,'returncode':rc,'started_utc':datetime.datetime.fromtimestamp(started,datetime.timezone.utc).isoformat(),
+-            'ended_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'namespace':namespace,
+-            'caller_pid':process.pid,'caller_stat':caller_stat,'authority_sha256':digest(auth),
+-            'telemetry_sha256':digest(ROOT/(name+'.telemetry.json')),'mathematical':mathematical,
+-            'first_math_epoch':first_math,'hard_cutoff_epoch':hard,'returned_epoch':returned,
+-            'admission_margin_seconds':15,'remaining_group_live':[]}
+-    records.append(record); exclusive(ROOT/(name+'.dispatch.json'),record)
+-    require(not mathematical or returned < hard, 'mathematical return at/after hard cutoff: NONDECISION')
+-    if defect:
+-        require(rc!=0 and telemetry['status']=='NORMAL_EXIT','gate refusal was not ordinary nonzero exit')
+-        require(not Path(trailing[1]).exists(),'postauthorize sentinel written by rejected authority')
+-    elif name=='dummy-descendant':
+-        require(rc==125 and telemetry['status']=='RESOURCE_CAP' and telemetry['resource']=='rss','dummy did not exercise RSS cap')
+-        term=telemetry['termination']
+-        require(term['term_sent'] and term['kill_sent'] and term['cleanup_complete'] and term['leader_reaped'], 'dummy cleanup failed')
+-        require(telemetry['max_observed_group_rss_bytes']>rss,'descendant RSS not measured')
+-        lines=[json.loads(x) for x in (ROOT/(name+'.stdout')).read_text().splitlines()]
+-        require(len(lines)==2 and all(x['namespace']==namespace for x in lines),'dummy namespace/custody missing')
+-        require(all(x['pgid']==telemetry['pgid'] for x in lines),'descendant escaped recorded PGID')
+-        expected_events = [
+-            ('before-term', 'MATCH', None),
+-            ('before-term-send', 'SENT', 15),
+-            ('before-kill', 'MATCH', None),
+-            ('before-kill-send', 'SENT', 9),
+-        ]
+-        events = telemetry['identity_checks']
+-        observed_events = [(x.get('stage'), x.get('result'), x.get('signal')) for x in events]
+-        require(observed_events == expected_events, 'unexpected dummy identity/signal sequence')
+-        for event in events:
+-            if event['result'] == 'MATCH':
+-                require(event.get('observed_pid') == telemetry['pid'] == telemetry['pgid'] == event.get('observed_pgid')
+-                        and event.get('observed_start_identity') == telemetry['start_identity'],
+-                        'dummy MATCH identity inconsistent with registered leader')
+-            else:
+-                require(type(event.get('signal')) is int, 'dummy signal is not an exact integer')
+-    else:
+-        require(rc==0 and telemetry['status']=='NORMAL_EXIT','cap/failure: STOP, no retry')
+-    return record
++def timestamp(value):
++    require(type(value) is str and value.endswith('+00:00'),'explicit UTC cutoff required')
++    return datetime.datetime.fromisoformat(value).timestamp()
+ 
+ def main():
+-    require(Path.cwd()==ROOT,'wrong remote cwd')
+-    require(Path('/sys/devices/virtual/dmi/id/board_asset_tag').read_text().strip()==INSTANCE,'wrong physical instance')
+-    require(socket.gethostname()=='ip-172-30-0-72','refuse math-hq or wrong host')
+-    require(digest('/usr/bin/python3')=='a92f0f95e883390c7256b2e441484aac06b1002dbe1d924141a77c8d82f96223','interpreter pin')
+-    require(digest(ROOT/'admissibility.md')=='02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a','admissibility pin')
+-    require(digest(ROOT/'frontier.json')=='f9d1fddcef51ecdb10ad01eeb59551809eb31a964d41202072d3fe27388b0e34','frontier pin')
+-    require(digest(ROOT/'builder.py')=='2dcba70d4f14080535c4a58f06bfd50ba4949148e819a6827ab9326828d314b8','builder pin')
+-    require(digest(ROOT/'checker.py')=='e2970c71774607e211ecc7e0f001a0dc02d02410e303ca58cf7c17ab77b9f545','checker pin')
+-    require(digest(ROOT/'execution_gate.py')=='cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6','gate pin')
+-    require(digest(ROOT/'run_capped.py')=='4435279df8f987c667ebc2fae8e4bd987916032561cb3faf1e07a57789d196c2','CAPRUN pin')
+-    require(digest(ROOT/'probe.py')=='02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7','probe pin')
+-    require(digest(ROOT/'precision.py')=='56400dd32f4940a0e77b2da79e9b90792b51588d01f0f1a2fded30efebb0af90','corrected precision pin')
+-    # Caller self-hash is verified by root's external preflight, not recursively embedded here.
+-    for defect in ['disabled','wronghost','argv','cap','missing-input']:
+-        run('gate-'+defect,'probe.py',[ROOT/'frontier.json',ROOT/('gate-'+defect+'.sentinel'),'plain'],wall=5,cpu=3,defect=defect)
+-    run('gate-valid','probe.py',[ROOT/'frontier.json',ROOT/'gate-valid.sentinel','plain'],wall=5,cpu=3)
+-    require((ROOT/'gate-valid.sentinel').read_text()=='POSTAUTHORIZE\n','valid gate failed')
+-    run('dummy-descendant','probe.py',[ROOT/'frontier.json',ROOT/'dummy-descendant.sentinel','descendant'],wall=5,cpu=3,rss=33554432)
+-    exclusive(ROOT/'preflight.PASS.json',{'status':'PASS','records':records,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+-    run('build','builder.py',[ROOT/'exact.json'],operation='build',wall=60,cpu=50,mathematical=True)
+-    for mode in ['full','u-zero','dropped-constant','u-zero-dropped-constant','upper-coefficient','guard','leading-top']:
+-        run('check-'+mode,'checker.py',[ROOT/'exact.json',ROOT/('check-'+mode+'.receipt.json'),mode],mathematical=True)
+-    run('precision','precision.py',[ROOT/'exact.json',ROOT/'precision.receipt.json'],mathematical=True)
+-    exclusive(ROOT/'batch.PASS.json',{'status':'ENGINEERING-PASS-NOT-IDEAL-DECISION','records':records,
+-              'first_math_epoch':first_math,'end_epoch':time.time(),'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
++    require(len(sys.argv)==2 and sys.flags.isolated and sys.flags.dont_write_bytecode,'caller -I -B ROOT_REGISTRATION')
++    registration=Path(sys.argv[1]).resolve(strict=True); registered_hash=sha(registration)
++    reg=json.loads(registration.read_text())
++    require(reg.get('schema')=='F10-EXACT-DECISION-ROOT/1' and reg.get('enabled') is True,'root registration disabled')
++    require(reg.get('compatibility_confirmed') is True,'installed engine compatibility unconfirmed')
++    require(reg.get('mode') in ['validate','decide'],'explicit bounded lane mode')
++    root=Path(reg['cwd']); require(root.is_absolute() and Path.cwd()==root,'exact cwd')
++    require(reg['job_tag'].startswith('f10-r1-exact-decision-') and str(root)=='/home/ubuntu/'+reg['job_tag'],'exclusive job path')
++    instance=Path('/sys/devices/virtual/dmi/id/board_asset_tag').read_text().strip()
++    require(Path('/sys/devices/virtual/dmi/id/sys_vendor').read_text().strip()=='Amazon EC2','not AWS')
++    require(instance==reg['instance_id'] and instance.startswith('i-'),'wrong instance')
++    require(socket.gethostname()==reg['hostname'] and socket.gethostname()!='math-hq','wrong hostname')
++    deadline=timestamp(reg['math_deadline_utc']); task_deadline=timestamp(reg['task_deadline_utc'])
++    require(time.time()<deadline<=task_deadline,'expired/inverted root clocks')
++    require(type(reg.get('engine_version')) is str and reg['engine_version'],'installed version missing')
++    engine=Path(reg['engine_path']).resolve(strict=True)
++    require(str(engine)==reg['engine_path'] and reg['file_sha256'].get(str(engine))==reg['engine_sha256'],'exact engine pin')
++    fixed={'exact.json':ARTIFACT,'run_capped.py':CAPRUN,'execution_gate.py':HELPER,'probe.py':PROBE}
++    for name,want in fixed.items(): require(sha(root/name)==want,'fixed input/helper pin '+name)
++    require(reg['admissibility_sha256']=='02952e1b804ce553c4bd8abf63daab1357cba5a19f78b1abe38ba6c933b0910a' and
++            sha(root/'admissibility.md')==reg['admissibility_sha256'],'exact admissibility input')
++    for name in ['caller.py','engine.py','certificate.py','semantic_tests.py','probe.py','execution_gate.py','run_capped.py','exact.json','admissibility.md']:
++        require(str(root/name) in reg['file_sha256'],'missing root source pin '+name)
++    require('/usr/bin/python3' in reg['file_sha256'],'missing interpreter pin')
++    for p,want in reg['file_sha256'].items(): require(sha(p)==want,'root source changed')
++    if reg['mode']=='decide':
++        validation=Path(reg['semantic_validation_path']).resolve(strict=True)
++        require(reg['file_sha256'].get(str(validation))==reg['semantic_validation_sha256']==sha(validation),'pinned semantic validation missing')
++        previous=json.loads(validation.read_text())
++        require(previous['status']=='PASS-DESIGNED-SEMANTICS' and previous['artifact_sha256']==ARTIFACT and
++                previous['certificate_sha256']==sha(root/'certificate.py') and
++                previous['tests_sha256']==sha(root/'semantic_tests.py'),'semantic validation/source mismatch')
++    records=[]; first_math=None
++
++    def run(name,script,args,wall,cpu,rss=2147483648,defect=None,mathematical=False):
++        nonlocal first_math
++        now=time.time(); hard=task_deadline
++        if mathematical:
++            if first_math is None: first_math=now
++            hard=min(deadline,first_math+120,task_deadline)
++        require(now+wall+15<hard,'insufficient remaining registered budget')
++        require(sha(registration)==registered_hash,'root registration changed')
++        auth=root/(name+'.authority.json')
++        child=['/usr/bin/python3','-I','-B',str(root/script),str(auth),*map(str,args)]
++        caps={'wall_seconds':str(wall),'cpu_seconds':str(cpu),'rss_bytes':str(rss),
++              'rss_sample_seconds':'0.05','term_grace_seconds':'0.25'}
++        parent=['/usr/bin/python3','-I','-B',str(root/'run_capped.py'),
++                '--wall-seconds',str(wall),'--cpu-seconds',str(cpu),'--rss-bytes',str(rss),
++                '--rss-sample-seconds','0.05','--term-grace-seconds','0.25','--cwd',str(root),
++                '--stdout-file',str(root/(name+'.stdout')),'--stderr-file',str(root/(name+'.stderr')),
++                '--telemetry-file',str(root/(name+'.telemetry.json')),'--',*child]
++        files=dict(reg['file_sha256']); files[str(registration)]=registered_hash
++        if name=='verify':
++            for generated in ['engine.receipt.json','input.sing','singular.stdout','singular.stderr']:
++                files[str(root/generated)]=sha(root/generated)
++        spec={'schema':'F10-R1-REGISTERED/v1','enabled':True,'job_tag':reg['job_tag'],'operation':'check',
++              'instance_id':instance,'hostname':reg['hostname'],'cwd':str(root),
++              'admissibility_sha256':reg['admissibility_sha256'],'runner_path':str(root/'run_capped.py'),
++              'caps':caps,'stdout_file':str(root/(name+'.stdout')),'stderr_file':str(root/(name+'.stderr')),
++              'telemetry_file':str(root/(name+'.telemetry.json')),'parent_argv':parent,'child_argv':child,
++              'engine_path':str(engine),'engine_sha256':reg['engine_sha256'],'engine_version':reg['engine_version'],
++              'engine_argv':[str(engine),*FLAGS,str(root/'input.sing')],
++              'file_sha256':files,'root_registration_sha256':registered_hash,'hard_cutoff_epoch':str(hard)}
++        if defect=='disabled': spec['enabled']=False
++        if defect=='wronghost': spec['hostname']='NOT-REGISTERED'
++        if defect=='argv': spec['parent_argv']=parent+['EXTRA']
++        if defect=='cap': spec['caps']=dict(caps,rss_bytes='1')
++        if defect=='missing-input': del spec['file_sha256'][str(args[0])]
++        exclusive(auth,spec); namespace=os.readlink('/proc/self/ns/pid')
++        with (root/(name+'.caller.stdout')).open('x') as out,(root/(name+'.caller.stderr')).open('x') as err:
++            process=subprocess.Popen(parent,stdin=subprocess.DEVNULL,stdout=out,stderr=err,cwd=root,
++                                     preexec_fn=filelimit,start_new_session=False)
++            caller_stat=Path('/proc/'+str(process.pid)+'/stat').read_text()
++            require(os.readlink('/proc/'+str(process.pid)+'/ns/pid')==namespace,'CAPRUN namespace mismatch')
++            rc=process.wait(); returned=time.time()
++        telemetry=json.loads((root/(name+'.telemetry.json')).read_text())
++        require(not quiet(telemetry['pgid']),'owned PGID remains live')
++        for p,want in files.items(): require(sha(p)==want,'post-run input changed')
++        record={'name':name,'returncode':rc,'caller_pid':process.pid,'caller_stat':caller_stat,'namespace':namespace,
++                'authority_sha256':sha(auth),'telemetry_sha256':sha(root/(name+'.telemetry.json')),
++                'first_math_epoch':first_math,'hard_cutoff_epoch':hard,'returned_epoch':returned,
++                'mathematical':mathematical,'remaining_group_live':[]}
++        records.append(record); exclusive(root/(name+'.dispatch.json'),record)
++        require(returned<hard,'late return: INCONCLUSIVE')
++        if defect:
++            require(rc!=0 and telemetry['status']=='NORMAL_EXIT' and not Path(args[1]).exists(),'authority refusal failed')
++        elif name=='dummy':
++            require(rc==125 and telemetry['status']=='RESOURCE_CAP' and telemetry['resource']=='rss','dummy cap not exercised')
++            t=telemetry['termination']; require(all(t[k] for k in ['term_sent','kill_sent','cleanup_complete','leader_reaped']),'dummy cleanup')
++            require(telemetry['max_observed_group_rss_bytes']>rss,'descendant RSS not sampled')
++            events=telemetry['identity_checks']
++            require([(e.get('stage'),e.get('result'),e.get('signal')) for e in events]==[
++                ('before-term','MATCH',None),('before-term-send','SENT',15),
++                ('before-kill','MATCH',None),('before-kill-send','SENT',9)],'dummy identity sequence')
++            for e in events:
++                if e['result']=='MATCH':
++                    require(e.get('observed_pid')==telemetry['pid']==telemetry['pgid']==e.get('observed_pgid') and
++                            e.get('observed_start_identity')==telemetry['start_identity'],'dummy PID/start mismatch')
++                else: require(type(e['signal']) is int,'signal type')
++            lines=[json.loads(x) for x in (root/'dummy.stdout').read_text().splitlines()]
++            require(len(lines)==2 and all(x['namespace']==namespace and x['pgid']==telemetry['pgid'] for x in lines),'dummy descendant binding')
++        else: require(rc==0 and telemetry['status']=='NORMAL_EXIT','cap/failure: INCONCLUSIVE')
++
++    try:
++        for defect in ['disabled','wronghost','argv','cap','missing-input']:
++            run('gate-'+defect,'probe.py',[root/'exact.json',root/(defect+'.sentinel'),'plain'],5,3,defect=defect)
++        run('valid','probe.py',[root/'exact.json',root/'valid.sentinel','plain'],5,3)
++        require((root/'valid.sentinel').read_text()=='POSTAUTHORIZE\n','valid sentinel')
++        run('dummy','probe.py',[root/'exact.json',root/'dummy.sentinel','descendant'],5,3,33554432)
++        exclusive(root/'preflight.PASS.json',{'records':records,'status':'PASS'})
++        if reg['mode']=='validate':
++            run('semantics','semantic_tests.py',[root/'exact.json',root/'semantic-validation.json'],30,25,mathematical=True)
++            exclusive(root/'batch.FINAL.json',{'records':records,'status':'VALIDATION-ONLY-NO-DECISION'})
++            return
++        run('engine','engine.py',[root/'exact.json',root/'engine.receipt.json'],60,50,mathematical=True)
++        run('verify','certificate.py',[root/'exact.json',root/'engine.receipt.json',root/'decision.json'],30,25,mathematical=True)
++        verdict=json.loads((root/'decision.json').read_text())['verdict']
++        require(verdict in ['VERIFIED-UNIT','VERIFIED-PROPER'],'unrecognized terminal decision')
++        exclusive(root/'batch.FINAL.json',{'records':records,'verdict':verdict,'root_registration_sha256':registered_hash})
++    except BaseException as e:
++        exclusive(root/'batch.STOP.json',{'records':records,'status':'INCONCLUSIVE','error':type(e).__name__+': '+str(e)})
++        raise
+ 
+-try:
+-    main()
+-except BaseException as exc:
+-    exclusive(ROOT/'batch.STOP.json',{'status':'STOP-NONDECISION','error':type(exc).__name__+': '+str(exc),
+-        'records':records,'first_math_epoch':first_math,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+-    raise
++if __name__=='__main__': main()

@@ -1,0 +1,41 @@
+{
+  "terminal_utc": "2026-09-09T02:57:18.364284+00:00",
+  "status": "PROVISIONAL_DIRECT_OBSTRUCTION_FINAL",
+  "writers": "IDLE",
+  "children": [],
+  "mathematical_subprocesses": 0,
+  "entries": [
+    {
+      "path": "xmodel/late-contact-direct-obstruction-coordinator-20260909.md",
+      "sha256": "2dcff1644acdc77a4665916d71dd4865b6f8f35d0965fb43ece6dd3c671393fa",
+      "bytes": 9933
+    },
+    {
+      "path": "xmodel/late-contact-direct-obstruction-coordinator-20260909.md.artifact.json",
+      "sha256": "a5e0a005c7a773740ae3cafe279cc21e66396397de3728b3c641f0892e555f8c",
+      "bytes": 684
+    }
+  ],
+  "inputs": [
+    {
+      "path": "xmodel/late-contact-keller-descent-astra-20260909.md",
+      "sha256": "857b2e2fa93cc14acb24fa590a2ffa76961a0d136113908f12b213e126889672",
+      "bytes": 16138,
+      "read_scope": "WHOLE; original terminal/input pins before body, current recheck after root proof"
+    },
+    {
+      "path": "xmodel/late-contact-triple-endpoint-astra-20260909.md",
+      "sha256": "b541308788da31f52e9f7985c7767e206231e8f3251ff53c1b2bd9c96b64f097",
+      "bytes": 13685,
+      "read_scope": "WHOLE; original terminal/input pins before body, current recheck after root proof"
+    },
+    {
+      "path": "xmodel/late-contact-triple-endpoint-gate-fable5-20260909.md",
+      "sha256": "c9a399a87dc91d78bfc4f811249996ea3e217eda075be679cf27b41af5795c26",
+      "bytes": 16975,
+      "read_scope": "WHOLE; original terminal/input pins before body, current recheck after root proof"
+    }
+  ],
+  "root_whole_read": "2026-09-09T02:55Z before close",
+  "close_correction": "Initial close failed closed because of one trailing blank line after BODY-END; removed only trailing blank with apply_patch; close/finalize/verify then passed."
+}

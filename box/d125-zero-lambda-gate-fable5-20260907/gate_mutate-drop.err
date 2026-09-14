@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/jc2/box/d125-zero-lambda-gate-fable5-20260907/gate_controls.py", line 151, in <module>
+    need(bool({k:c for k,c in negrows(P0).items() if k[:2]!=drop}), 'toy must be rejected as nonordinary')
+  File "/home/ubuntu/jc2/box/d125-zero-lambda-gate-fable5-20260907/gate_controls.py", line 14, in need
+    if not ok: raise Fail(msg)
+               ^^^^^^^^^^^^^^^
+Fail: toy must be rejected as nonordinary
+Command exited with non-zero status 1
+0.21 wall 0.20 user 31252 KB
+exit=1

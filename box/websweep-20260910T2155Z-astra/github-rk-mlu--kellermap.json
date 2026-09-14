@@ -1,0 +1,248 @@
+[
+  {
+    "sha": "44f4736cf6505c72aa72edb744bd1e118f93c761",
+    "node_id": "C_kwDOTqSOWdoAKDQ0ZjQ3MzZjZjY1MDVjNzJhYTcyZWRiNzQ0YmQxZTExOGY5M2M3NjE",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-10T14:15:26Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-10T14:15:26Z"
+      },
+      "message": "Record version 2 of arXiv:2608.12543, and withdraw a comparison\n\nVersion 2 of 31 August 2026 renames the paper to Collision-Generated\nCompression for Homogeneous Keller Maps, drops the forty-variable\ncounterexample from the title, and renames its ancillary file. Lemma 2\nand Theorem 3 keep their numbers and their statements, so nothing this\nlibrary builds against has moved.\n\nIt falsifies a sentence on docs/references.md. The nineteen cubic\nhomogeneous variables the pipeline of 0.6 reaches were described there as\none below the smallest figure the page records, Macfarlane's twenty, with\nthe note that the literature had been checked and nothing smaller found.\nVersion 2 records a published nineteen: van Rijn's twelve-variable\ndegree-three map, rank-compressed and homogenized. The paragraph now says\nthat nineteen is no longer below anything published and that it said it\nwas.\n\nWhether that nineteen is the one this pipeline reaches is left open. The\ntwo arrive by different routes and this page does not compare maps it has\nnot compared. Saying so is cheaper than a comparison that would have to\nbe made before it could be claimed.\n\nWhat version 2 adds is recorded rather than summarised away: the\ncollision-generated sequence of that map is 2, 4, 11, 19, 19, so the hull\nis the whole space, and Proposition 8 draws the consequence that no proper\ninvariant linear restriction retaining the collision lowers the\nthirty-eight-variable lift in any codimension. The lift is written out\nwith 340 monomials against the 350 of the forty-variable one. Both\nminimality statements in that paper are route-specific and neither is\nglobal; the page repeats that because the distinction is the one this\nproject has got wrong before.\n\nTwo five-variable examples the new version names are set aside on the page\nwith the reason: one is not a homogeneous Hessian-nilpotent quartic and\nthe other uses a third-order operator rather than the Laplacian, so\nneither variable count is comparable with the quartic problem.\n\nVersion 2 cites this project by name, as an independent computational\nuptake of the construction. The page records it and says what it is not:\na citation that the construction was used, not a second opinion on\nanything in this repository. What was checked here is what\ndocs/provenance.md lists.\n\nThe citations move by what they are for. Those that name a theorem --\nkellermap.compression, kellermap.lift, the CHC and SYM sections of the\ncontract page, architecture.md, api.md, test_lift.py -- name version 2.\nThose that record where fixed data was transcribed from stay at version 1\nand name its ancillary file, because a transcription is from the bytes it\nwas made from: examples.py, provenance.md, and the reconstruction script,\nwhose docstring now says why it stays and that both figures it checks are\nunchanged in version 2. The errata, changelog and roadmap entries that\nrecord what was said at a time stay as they are.\n\nGates: ruff format --check, ruff check, mypy src, mypy --strict scripts,\npytest (1893 passed, 16 deselected), make reconstruct (16 of 16). The\nreconstruction still agrees, which is what says Theorem 3 did not move.",
+      "tree": {
+        "sha": "b9bd1990db5099677cde8a47bbf082aee4b2736c",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/b9bd1990db5099677cde8a47bbf082aee4b2736c"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/44f4736cf6505c72aa72edb744bd1e118f93c761",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqiu4MACgkQpYdnzilV\ndCUz8g//Wk5Oc7Iy6x5W9rtZIMQ/cxVJQ/XxHBUAoWxp2No/kQtmOhdAozGhS9g3\ncNaoUlLsMJGU+DYUI8dXxFR/c+fDsZjoRn/uXzNffNdIcbX+WPcjdfyLyAiJCUQe\n4CDKBjyW2kx1EL9EP+wIToxA26IVZhBAAy/Hh75Z0E5Xb4ckOmkeOxmw23u7fEou\nz2ADScpuZi7XFclJ0IQUj76HIABh1pFDYrxY2TfAsGFx12iGoDil7Th+5yw4bt1R\nXE9wBTNeHj7dBWbM3lSGSx88DGERlwRZYS1FJDrjb8K/BxUHktz2DbN4kbJqsCjq\nrv01skWDAEzvPoI5SImaLDnjpFseU8UaC53uKBBZEYr0SIRJ7QDRgnNOdXkSBxum\nxAONS1xofTKlIgIk2lgHm9pVoF+jhckud3Axnb62d/dLogOfdTapENfQucQ4+0cn\nfJJUq6GlWQRoL9GutblhI606lIsxPWZ+ZciIncTX6G6cAK8eZZupvohCdvpqWAGo\nKGmKKpWH5Cj6n6SiGsqRCM3Wbl/ZO6eNseToPO5j/e02DJfhfXowW9t6hcTHCIKU\n9egFCiUvzmZVo+bECLdvigYpD8In0LrJ3geLTO6C4UVb4csic6tAV5rOHdj9Wtwi\nzMCJRwI20sEnREWqM+wnFbpiAMOM6azDwmLPDdL0DXIeUaR3ym0=\n=Tyjl\n-----END PGP SIGNATURE-----",
+        "payload": "tree b9bd1990db5099677cde8a47bbf082aee4b2736c\nparent db94e516365365abf9dcb861d062c67567f68dd9\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789049726 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789049726 +0200\n\nRecord version 2 of arXiv:2608.12543, and withdraw a comparison\n\nVersion 2 of 31 August 2026 renames the paper to Collision-Generated\nCompression for Homogeneous Keller Maps, drops the forty-variable\ncounterexample from the title, and renames its ancillary file. Lemma 2\nand Theorem 3 keep their numbers and their statements, so nothing this\nlibrary builds against has moved.\n\nIt falsifies a sentence on docs/references.md. The nineteen cubic\nhomogeneous variables the pipeline of 0.6 reaches were described there as\none below the smallest figure the page records, Macfarlane's twenty, with\nthe note that the literature had been checked and nothing smaller found.\nVersion 2 records a published nineteen: van Rijn's twelve-variable\ndegree-three map, rank-compressed and homogenized. The paragraph now says\nthat nineteen is no longer below anything published and that it said it\nwas.\n\nWhether that nineteen is the one this pipeline reaches is left open. The\ntwo arrive by different routes and this page does not compare maps it has\nnot compared. Saying so is cheaper than a comparison that would have to\nbe made before it could be claimed.\n\nWhat version 2 adds is recorded rather than summarised away: the\ncollision-generated sequence of that map is 2, 4, 11, 19, 19, so the hull\nis the whole space, and Proposition 8 draws the consequence that no proper\ninvariant linear restriction retaining the collision lowers the\nthirty-eight-variable lift in any codimension. The lift is written out\nwith 340 monomials against the 350 of the forty-variable one. Both\nminimality statements in that paper are route-specific and neither is\nglobal; the page repeats that because the distinction is the one this\nproject has got wrong before.\n\nTwo five-variable examples the new version names are set aside on the page\nwith the reason: one is not a homogeneous Hessian-nilpotent quartic and\nthe other uses a third-order operator rather than the Laplacian, so\nneither variable count is comparable with the quartic problem.\n\nVersion 2 cites this project by name, as an independent computational\nuptake of the construction. The page records it and says what it is not:\na citation that the construction was used, not a second opinion on\nanything in this repository. What was checked here is what\ndocs/provenance.md lists.\n\nThe citations move by what they are for. Those that name a theorem --\nkellermap.compression, kellermap.lift, the CHC and SYM sections of the\ncontract page, architecture.md, api.md, test_lift.py -- name version 2.\nThose that record where fixed data was transcribed from stay at version 1\nand name its ancillary file, because a transcription is from the bytes it\nwas made from: examples.py, provenance.md, and the reconstruction script,\nwhose docstring now says why it stays and that both figures it checks are\nunchanged in version 2. The errata, changelog and roadmap entries that\nrecord what was said at a time stay as they are.\n\nGates: ruff format --check, ruff check, mypy src, mypy --strict scripts,\npytest (1893 passed, 16 deselected), make reconstruct (16 of 16). The\nreconstruction still agrees, which is what says Theorem 3 did not move.\n",
+        "verified_at": "2026-09-10T14:15:39Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/44f4736cf6505c72aa72edb744bd1e118f93c761",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/44f4736cf6505c72aa72edb744bd1e118f93c761",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/44f4736cf6505c72aa72edb744bd1e118f93c761/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "db94e516365365abf9dcb861d062c67567f68dd9",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/db94e516365365abf9dcb861d062c67567f68dd9",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/db94e516365365abf9dcb861d062c67567f68dd9"
+      }
+    ]
+  },
+  {
+    "sha": "db94e516365365abf9dcb861d062c67567f68dd9",
+    "node_id": "C_kwDOTqSOWdoAKGRiOTRlNTE2MzY1MzY1YWJmOWRjYjg2MWQwNjJjNjc1NjdmNjhkZDk",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-10T11:34:46Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-10T11:34:46Z"
+      },
+      "message": "Refresh four statements that a milestone had outlived\n\nWork package 12 of milestone 0.7, the last of the corrections the audit\nof 0.7.0rc1 asked for. Documentation and one line of metadata; no code.\n\ndocs/references.md said Proposition (3.1) delivers part (b) of Theorem\n2.1 \"in a second half this library does not implement\". That stopped\nbeing true in work package 2.1 of this milestone, and work package 2\nedited the sentence beside it without seeing the clause. The paragraph\nnow says which function reaches the first half, that HOM-11 and HOM-12\ncheck both at the end of the chain, and that a chain not asked for the\nrefinement still ends cubic homogeneous -- with the figure for the\nsmallest case, where the refinement takes (x + y^3, y) to a verified\nthirteen against the five it reaches without.\n\nA second paragraph said the library carries out neither of the two\nstages that lead to the cubic homogeneous form, so it had no certified\nfigure there and claimed none, and called 27 and 22 for alpoege13 a\ntarget for the packages of 0.6. Those packages were built. Both figures\nare certified now and make measure recomputes them against this page.\nWhat the certificate adds is the determinant as a polynomial, which the\nplain-SymPy measurement did not check; what it does not add is priority\nor minimality, and the paragraph says so and points at docs/errata.md\nfor the time this project read more into such a comparison than it\nestablishes.\n\nThe abstract of CITATION.cff described milestone 0.6 and now names 0.7\nwith 0.6 behind it. The description in pyproject.toml said the project\nwas working towards the reduction, which it has carried out since 0.6\nand completed in this milestone.\n\nThat both references.md paragraphs were a milestone out of date is worth\na note rather than a shrug. Neither is under a gate that could notice:\nmake measure checks the figures on that page and not the sentences\naround them, and no test reads a paragraph for a claim about what\nexists. The audits have found every one of these.",
+      "tree": {
+        "sha": "ac56b210e7cc50e8afdb291ed748aff7be4732b9",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/ac56b210e7cc50e8afdb291ed748aff7be4732b9"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/db94e516365365abf9dcb861d062c67567f68dd9",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqilecACgkQpYdnzilV\ndCU8ARAAolgqi23HY7u5703W1QzykwiSvTGfpdvz8LzaLDK3AdffCA8W6ZMOL21a\nQDHU9mRUGb11mpXoedfv9n8UbyK06i+OhmroRo7AfCtZ6i2lpQdaPDG7d8+vP97s\neouBQhLQyKSr/9fGw8KRkY5EmKDe+xcx73RjJCaXhmuYIpQHbZC0+QEtNtMn0SCA\nZeA5t/yQeekEkR98P5j5voJE9kht10Scpzl0RXAwLx08EczzvT8jVm0ejR5tg2LT\nMwf6pHpgEJJpfA2brea3rt5tXTv5TsoN/YdDLfAK9lU+Bg7CzIj6pO+uET3brmpE\n43B8pQEuha/USEFRlPVZpR3WjwzdW9xU6S7ll7NWNMmshp+11qauaQblOcGVZ3sI\n9On+1cIi5S/Eb8SI+5wQ9OULyjYA7Fv8khY1K/T1C1vNq7TEs3LpUote2qKKHE5x\n7aVO7YW8kgAyfuxnWqTFv/GDPkxaGOl6ZpPSjGw2GZ0HT8p43ekHJMABGQoe6rJK\nOmwMy0AkxPxP5MQUkeZccrfDpMBnHxaFXNHsWxdmj5D/1sNTP6iHfLAOUVD56GVM\nb8bINjgTOYoZWCdcvLhMrEljVX8dUfpRJaVkCZdGs5fgPNM2LQzvuQPu6nu0bUws\nfWtAP2QucuK8f1pRND9SfGjd/W7CveVJUokd7tGcxHIuyYxRlKI=\n=omhc\n-----END PGP SIGNATURE-----",
+        "payload": "tree ac56b210e7cc50e8afdb291ed748aff7be4732b9\nparent 315ba622de16c94e4650d8552fab27dd95bc8df0\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789040086 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789040086 +0200\n\nRefresh four statements that a milestone had outlived\n\nWork package 12 of milestone 0.7, the last of the corrections the audit\nof 0.7.0rc1 asked for. Documentation and one line of metadata; no code.\n\ndocs/references.md said Proposition (3.1) delivers part (b) of Theorem\n2.1 \"in a second half this library does not implement\". That stopped\nbeing true in work package 2.1 of this milestone, and work package 2\nedited the sentence beside it without seeing the clause. The paragraph\nnow says which function reaches the first half, that HOM-11 and HOM-12\ncheck both at the end of the chain, and that a chain not asked for the\nrefinement still ends cubic homogeneous -- with the figure for the\nsmallest case, where the refinement takes (x + y^3, y) to a verified\nthirteen against the five it reaches without.\n\nA second paragraph said the library carries out neither of the two\nstages that lead to the cubic homogeneous form, so it had no certified\nfigure there and claimed none, and called 27 and 22 for alpoege13 a\ntarget for the packages of 0.6. Those packages were built. Both figures\nare certified now and make measure recomputes them against this page.\nWhat the certificate adds is the determinant as a polynomial, which the\nplain-SymPy measurement did not check; what it does not add is priority\nor minimality, and the paragraph says so and points at docs/errata.md\nfor the time this project read more into such a comparison than it\nestablishes.\n\nThe abstract of CITATION.cff described milestone 0.6 and now names 0.7\nwith 0.6 behind it. The description in pyproject.toml said the project\nwas working towards the reduction, which it has carried out since 0.6\nand completed in this milestone.\n\nThat both references.md paragraphs were a milestone out of date is worth\na note rather than a shrug. Neither is under a gate that could notice:\nmake measure checks the figures on that page and not the sentences\naround them, and no test reads a paragraph for a claim about what\nexists. The audits have found every one of these.\n",
+        "verified_at": "2026-09-10T11:35:10Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/db94e516365365abf9dcb861d062c67567f68dd9",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/db94e516365365abf9dcb861d062c67567f68dd9",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/db94e516365365abf9dcb861d062c67567f68dd9/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "315ba622de16c94e4650d8552fab27dd95bc8df0",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/315ba622de16c94e4650d8552fab27dd95bc8df0",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/315ba622de16c94e4650d8552fab27dd95bc8df0"
+      }
+    ]
+  },
+  {
+    "sha": "315ba622de16c94e4650d8552fab27dd95bc8df0",
+    "node_id": "C_kwDOTqSOWdoAKDMxNWJhNjIyZGUxNmM5NGU0NjUwZDg1NTJmYWIyN2RkOTViYzhkZjA",
+    "commit": {
+      "author": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-10T09:57:40Z"
+      },
+      "committer": {
+        "name": "Raphael Kruse",
+        "email": "raphael.kruse@mathematik.uni-halle.de",
+        "date": "2026-09-10T09:57:40Z"
+      },
+      "message": "Probe the descent\n\nWork package 11 of milestone 0.7, the fourth of the corrections the\naudit of 0.7.0rc1 asked for. Three probes, which makes forty-five.\n\nMilestone 0.7 added ten obligations and only three take a probe. DSC-3\nin both halves and DSC-4 in the half that is about arithmetic are the\nclauses the contract page names as able to fail on data a caller\nsupplies, and they are here. HOM-11 and HOM-12 cannot fail after HOM-1,\nwhich that page argues where it says which of the HOM family can fail,\nso a probe for either would report a miss for a reason that is not a\nmissing control. UNT-12 is an enumerator and offers rather than\ncertifies, which is why no UNT clause has ever had one. The audit\nreached the same conclusion about HOM-11 and HOM-12 and asked for the\nDSC ones.\n\nAll three report CAUGHT against the current tree, which is what every\nprobe here should do. tests/test_scripts.py holds each fragment against\nthe code it aims at, so a later edit that moves one of these lines fails\nthe suite rather than turning the probe into a silent no-op.\n\nThe count is stated in three places and all three move.\nscripts/mutation_probe.py carries the running tally by milestone;\ndocs/provenance.md lists the sweep among what was verified rather than\ntrusted. docs/deposit.md names it in a sentence about the six audits of\n0.6, so the count there is scoped to that release rather than raised --\nit was forty-two at the time and saying so is what keeps the sentence\ntrue.",
+      "tree": {
+        "sha": "325892a7b9824f80ced4eaaac3ff414a3f8461d4",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/git/trees/325892a7b9824f80ced4eaaac3ff414a3f8461d4"
+      },
+      "url": "https://api.github.com/repos/rk-mlu/kellermap/git/commits/315ba622de16c94e4650d8552fab27dd95bc8df0",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEr+xTYy4ygKaAZd5OpYdnzilVdCUFAmqifyYACgkQpYdnzilV\ndCUGgw/8CLhhui4oqqPU0zrFareY2+f0Cvx+Kchlx+qQLFGt/o99wwU/LaWxRfqs\nc3OTpHd0mMIUm3fRac13srgtSIyqNBHl4sbfFbXd+0tM65tri23+yXCaQe6ImREp\nBsynz9CvYgAWeMg4BCn0aOFT+9qgHYWoiQWXKxV9qX0i9i5IhZVDa7qKGW3l7r5C\nZb4rX7YM/kkoj+hTsF+zVAwPwhaew4W6xFA7Ti3OtjCnMrS6ZtbkI+2ygKXqwB0Q\ni6d9mN5p/g+40EKnqOxPuAfS839427Rt8nR6z2suoQ+6TaJ4+HdgfPz0jM7OOJLv\nZ2sqvHWm+sK66DDs5DbkHoIbMzmkbkX1Fb390acaMlaqXpdvac0sZ/mXvPI8yxgh\noSJjChRY+Zf+56ZOZzRBDj691Uk274ujtyUKm2wtdp/ew07V9I7yHEnlyustAvjJ\nsklEe5obCZaKP/KCiY5fMo3fGLeCWdRZNC+NxXlI0jYN8HHOXeloOz1RM1Alkwng\nl6S9d0UI2oEZN8rV5XoUYY65Z5RP3xvBREhYcmcbTi9aTBXA0R97+1bnEhKKJCVG\nGppUcRXZDtaotOTMG7ziwDr294FTC6ohoswzJx4HpUQgVzEfBjsaoYFLdlkuHBYL\nxLXLtyEDpdo1pfqJFqKP4giKYvotY4Vx9CjXlZVo0zNM0mJS+As=\n=ASiU\n-----END PGP SIGNATURE-----",
+        "payload": "tree 325892a7b9824f80ced4eaaac3ff414a3f8461d4\nparent 64ce245220b678bfcf7ef802bb85e33ad905ba06\nauthor Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789034260 +0200\ncommitter Raphael Kruse <raphael.kruse@mathematik.uni-halle.de> 1789034260 +0200\n\nProbe the descent\n\nWork package 11 of milestone 0.7, the fourth of the corrections the\naudit of 0.7.0rc1 asked for. Three probes, which makes forty-five.\n\nMilestone 0.7 added ten obligations and only three take a probe. DSC-3\nin both halves and DSC-4 in the half that is about arithmetic are the\nclauses the contract page names as able to fail on data a caller\nsupplies, and they are here. HOM-11 and HOM-12 cannot fail after HOM-1,\nwhich that page argues where it says which of the HOM family can fail,\nso a probe for either would report a miss for a reason that is not a\nmissing control. UNT-12 is an enumerator and offers rather than\ncertifies, which is why no UNT clause has ever had one. The audit\nreached the same conclusion about HOM-11 and HOM-12 and asked for the\nDSC ones.\n\nAll three report CAUGHT against the current tree, which is what every\nprobe here should do. tests/test_scripts.py holds each fragment against\nthe code it aims at, so a later edit that moves one of these lines fails\nthe suite rather than turning the probe into a silent no-op.\n\nThe count is stated in three places and all three move.\nscripts/mutation_probe.py carries the running tally by milestone;\ndocs/provenance.md lists the sweep among what was verified rather than\ntrusted. docs/deposit.md names it in a sentence about the six audits of\n0.6, so the count there is scoped to that release rather than raised --\nit was forty-two at the time and saying so is what keeps the sentence\ntrue.\n",
+        "verified_at": "2026-09-10T09:58:08Z"
+      }
+    },
+    "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/315ba622de16c94e4650d8552fab27dd95bc8df0",
+    "html_url": "https://github.com/rk-mlu/kellermap/commit/315ba622de16c94e4650d8552fab27dd95bc8df0",
+    "comments_url": "https://api.github.com/repos/rk-mlu/kellermap/commits/315ba622de16c94e4650d8552fab27dd95bc8df0/comments",
+    "author": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rk-mlu",
+      "id": 65403623,
+      "node_id": "MDQ6VXNlcjY1NDAzNjIz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65403623?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rk-mlu",
+      "html_url": "https://github.com/rk-mlu",
+      "followers_url": "https://api.github.com/users/rk-mlu/followers",
+      "following_url": "https://api.github.com/users/rk-mlu/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rk-mlu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rk-mlu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rk-mlu/subscriptions",
+      "organizations_url": "https://api.github.com/users/rk-mlu/orgs",
+      "repos_url": "https://api.github.com/users/rk-mlu/repos",
+      "events_url": "https://api.github.com/users/rk-mlu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rk-mlu/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "64ce245220b678bfcf7ef802bb85e33ad905ba06",
+        "url": "https://api.github.com/repos/rk-mlu/kellermap/commits/64ce245220b678bfcf7ef802bb85e33ad905ba06",
+        "html_url": "https://github.com/rk-mlu/kellermap/commit/64ce245220b678bfcf7ef802bb85e33ad905ba06"
+      }
+    ]
+  }
+]

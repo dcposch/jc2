@@ -1,0 +1,539 @@
+{
+  "without_q_capacity": {
+    "rows": 1420,
+    "candidate_sizes": {
+      "1": 323,
+      "0": 1095,
+      "2": 2
+    },
+    "tuple_sizes": {
+      "1": 323,
+      "0": 1095,
+      "2": 2
+    },
+    "defects": {
+      "below_major_window_3": 24,
+      "below_major_window_4": 20,
+      "below_major_window_5": 2
+    },
+    "empty_us": {
+      "1": 888,
+      "2": 200,
+      "3": 5,
+      "4": 2
+    },
+    "per_level": {
+      "2": {
+        "determined": 325,
+        "always_equal": 325,
+        "empty": 1095
+      },
+      "3": {
+        "determined": 256,
+        "always_different": 74,
+        "empty": 1095,
+        "always_equal": 182,
+        "set_valued": 2,
+        "sometimes_different": 2
+      },
+      "4": {
+        "empty": 827,
+        "determined": 100,
+        "always_different": 38,
+        "always_equal": 62
+      },
+      "5": {
+        "empty": 134,
+        "determined": 2,
+        "always_equal": 2
+      }
+    },
+    "u_neg": {
+      "[False]": 325,
+      "[]": 1095
+    },
+    "ctop": {
+      "licensed_[False]": 222,
+      "licensed_[]": 888,
+      "conditional_[False]": 103,
+      "conditional_[]": 207
+    }
+  },
+  "with_q_capacity": {
+    "rows": 1420,
+    "candidate_sizes": {
+      "1": 323,
+      "0": 1095,
+      "2": 2
+    },
+    "tuple_sizes": {
+      "1": 323,
+      "0": 1095,
+      "2": 2
+    },
+    "defects": {
+      "below_major_window_3": 24,
+      "below_major_window_4": 20,
+      "below_major_window_5": 2
+    },
+    "empty_us": {
+      "1": 888,
+      "2": 200,
+      "3": 5,
+      "4": 2
+    },
+    "per_level": {
+      "2": {
+        "determined": 325,
+        "always_equal": 325,
+        "empty": 1095
+      },
+      "3": {
+        "determined": 256,
+        "always_different": 74,
+        "empty": 1095,
+        "always_equal": 182,
+        "set_valued": 2,
+        "sometimes_different": 2
+      },
+      "4": {
+        "empty": 827,
+        "determined": 100,
+        "always_different": 38,
+        "always_equal": 62
+      },
+      "5": {
+        "empty": 134,
+        "determined": 2,
+        "always_equal": 2
+      }
+    },
+    "u_neg": {
+      "[False]": 325,
+      "[]": 1095
+    },
+    "ctop": {
+      "licensed_[False]": 222,
+      "licensed_[]": 888,
+      "conditional_[False]": 103,
+      "conditional_[]": 207
+    }
+  }
+}
+{
+  "controls": [
+    {
+      "n": 64,
+      "m": 48,
+      "M": [
+        -48,
+        52,
+        62
+      ],
+      "V": [
+        3,
+        3
+      ],
+      "u_s": 1,
+      "n_prime": 16,
+      "M_prime": [
+        -12,
+        13
+      ],
+      "d_prime": [
+        16,
+        4,
+        1
+      ],
+      "drops": 0,
+      "candidates": [
+        {
+          "first_nonzero": 2,
+          "W": [
+            "3"
+          ],
+          "route": [
+            {
+              "k": 2,
+              "mode": "nonzero",
+              "P": 12,
+              "Q": 9,
+              "den": 4,
+              "z_candidates": [
+                0
+              ]
+            }
+          ],
+          "defects": []
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "n": 84,
+      "m": 56,
+      "M": [
+        -56,
+        64,
+        82
+      ],
+      "V": [
+        2,
+        3
+      ],
+      "u_s": 1,
+      "n_prime": 21,
+      "M_prime": [
+        -14,
+        16
+      ],
+      "d_prime": [
+        21,
+        7,
+        1
+      ],
+      "drops": 0,
+      "candidates": [
+        {
+          "first_nonzero": 2,
+          "W": [
+            "2"
+          ],
+          "route": [
+            {
+              "k": 2,
+              "mode": "nonzero",
+              "P": 21,
+              "Q": 15,
+              "den": 7,
+              "z_candidates": [
+                0,
+                7
+              ]
+            }
+          ],
+          "defects": []
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "n": 84,
+      "m": 56,
+      "M": [
+        -56,
+        72,
+        82
+      ],
+      "V": [
+        5,
+        3
+      ],
+      "u_s": 1,
+      "n_prime": 21,
+      "M_prime": [
+        -14,
+        18
+      ],
+      "d_prime": [
+        21,
+        7,
+        1
+      ],
+      "drops": 0,
+      "candidates": [
+        {
+          "first_nonzero": 2,
+          "W": [
+            "5"
+          ],
+          "route": [
+            {
+              "k": 2,
+              "mode": "nonzero",
+              "P": 21,
+              "Q": 9,
+              "den": 4,
+              "z_candidates": [
+                1
+              ]
+            }
+          ],
+          "defects": []
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "n": 75,
+      "m": 50,
+      "M": [
+        -50,
+        55,
+        73
+      ],
+      "V": [
+        3,
+        4
+      ],
+      "u_s": 1,
+      "n_prime": 15,
+      "M_prime": [
+        -10,
+        11
+      ],
+      "d_prime": [
+        15,
+        5,
+        1
+      ],
+      "drops": 0,
+      "candidates": [
+        {
+          "first_nonzero": 2,
+          "W": [
+            "3"
+          ],
+          "route": [
+            {
+              "k": 2,
+              "mode": "nonzero",
+              "P": 20,
+              "Q": 16,
+              "den": 5,
+              "z_candidates": [
+                0,
+                5
+              ]
+            }
+          ],
+          "defects": []
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "n": 75,
+      "m": 50,
+      "M": [
+        -50,
+        55,
+        73
+      ],
+      "V": [
+        2,
+        4
+      ],
+      "u_s": 1,
+      "n_prime": 15,
+      "M_prime": [
+        -10,
+        11
+      ],
+      "d_prime": [
+        15,
+        5,
+        1
+      ],
+      "drops": 0,
+      "candidates": [
+        {
+          "first_nonzero": 2,
+          "W": [
+            "2"
+          ],
+          "route": [
+            {
+              "k": 2,
+              "mode": "nonzero",
+              "P": 20,
+              "Q": 16,
+              "den": 5,
+              "z_candidates": [
+                0,
+                5,
+                10
+              ]
+            }
+          ],
+          "defects": []
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "n": 180,
+      "m": 120,
+      "M": [
+        -120,
+        132,
+        150,
+        178
+      ],
+      "V": [
+        2,
+        4,
+        5
+      ],
+      "u_s": 1,
+      "n_prime": 30,
+      "M_prime": [
+        -20,
+        22,
+        25
+      ],
+      "d_prime": [
+        30,
+        10,
+        2,
+        1
+      ],
+      "drops": 0,
+      "candidates": [
+        {
+          "first_nonzero": 2,
+          "W": [
+            "2",
+            "1"
+          ],
+          "route": [
+            {
+              "k": 3,
+              "mode": "zero/removable",
+              "P": 10,
+              "Q": 25,
+              "den": 6,
+              "z": 4,
+              "orbit_mass": 1
+            },
+            {
+              "k": 2,
+              "mode": "nonzero",
+              "P": 20,
+              "Q": 16,
+              "den": 5,
+              "z_candidates": [
+                0,
+                5,
+                10
+              ]
+            }
+          ],
+          "defects": []
+        }
+      ],
+      "rejected": [
+        {
+          "first_nonzero": 3,
+          "W": [
+            "2",
+            "4"
+          ],
+          "route": [
+            {
+              "k": 3,
+              "mode": "nonzero",
+              "P": 10,
+              "Q": 25,
+              "den": 6,
+              "z_candidates": []
+            }
+          ],
+          "defects": [
+            "above_total_roots_3"
+          ],
+          "rejections": [
+            "nonzero_infeasible_3"
+          ]
+        }
+      ]
+    },
+    {
+      "n": 96,
+      "m": 72,
+      "M": [
+        -72,
+        36,
+        78,
+        94
+      ],
+      "V": [
+        4,
+        3,
+        5
+      ],
+      "u_s": 1,
+      "n_prime": 16,
+      "M_prime": [
+        -12,
+        6,
+        13
+      ],
+      "d_prime": [
+        16,
+        4,
+        2,
+        1
+      ],
+      "drops": 0,
+      "candidates": [],
+      "rejected": [
+        {
+          "first_nonzero": 2,
+          "W": [
+            "4",
+            "1"
+          ],
+          "route": [
+            {
+              "k": 3,
+              "mode": "zero/removable",
+              "P": 10,
+              "Q": 15,
+              "den": 7,
+              "z": 3,
+              "orbit_mass": 1
+            },
+            {
+              "k": 2,
+              "mode": "nonzero",
+              "P": 6,
+              "Q": 15,
+              "den": 7,
+              "z_candidates": []
+            }
+          ],
+          "defects": [
+            "unnested_2"
+          ],
+          "rejections": [
+            "nonzero_infeasible_2"
+          ]
+        },
+        {
+          "first_nonzero": 3,
+          "W": [
+            "4",
+            "3"
+          ],
+          "route": [
+            {
+              "k": 3,
+              "mode": "nonzero",
+              "P": 10,
+              "Q": 15,
+              "den": 7,
+              "z_candidates": []
+            }
+          ],
+          "defects": [
+            "above_total_roots_3"
+          ],
+          "rejections": [
+            "nonzero_infeasible_3"
+          ]
+        }
+      ]
+    }
+  ]
+}

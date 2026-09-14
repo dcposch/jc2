@@ -1,0 +1,26 @@
+option(redSB); short=0;
+ring R = 0,(x,y),dp;
+proc quoy(poly p, poly hh, int K)
+{ poly q=0; poly ld; matrix cp; int d;
+  while(1){ if(p==0){break;} cp=coeffs(p,y); d=nrows(cp)-1; if(d<K){break;}
+    ld=cp[d+1,1]; q=q+ld*y^(d-K); p=p-ld*y^(d-K)*hh; } return(q); }
+proc Jac(poly u,poly v){ return(diff(u,x)*diff(v,y)-diff(u,y)*diff(v,x)); }
+int K; poly h,be,al,rho,f,g;
+// ---- ID6:  J(f,g) = 3*( J(be,al) - J(h,rho) ),  be^2 = al*h + rho ----
+K=5; h = y^4*(y-x) + 3*y^3 - 2*x*y^2 + 7*x^3 - y + 5;
+be = 2*x^2*y^4 - 3*x^3*y^3 + x^5*y + 7*x^6 + 5*y^3*x - y^2 + 2;
+al = quoy(be^2,h,K); rho = be^2 - al*h;
+f = h^2+2*be; g = h^3+3*be*h+(3/2)*al;
+"MARK_ID6_a"; Jac(f,g) - 3*(Jac(be,al)-Jac(h,rho));
+K=4; h = y^3*(y-x) - 4*y^2 + x*y + 9;
+be = x^2*y^3 + 5*x^4*y - 2*x^5 + y^3 - 3*x*y + 1;
+al = quoy(be^2,h,K); rho = be^2 - al*h;
+f = h^2+2*be; g = h^3+3*be*h+(3/2)*al;
+"MARK_ID6_b"; Jac(f,g) - 3*(Jac(be,al)-Jac(h,rho));
+K=7; h = y^6*(y-x) + x^4*y^2 - 2*y^5 + 3;
+be = x^3*y^6 - y^4 + x^8 + 2*x*y;
+al = quoy(be^2,h,K); rho = be^2 - al*h;
+f = h^2+2*be; g = h^3+3*be*h+(3/2)*al;
+"MARK_ID6_c"; Jac(f,g) - 3*(Jac(be,al)-Jac(h,rho));
+"MARK_ID6_degy_bounds"; deg(Jac(h,rho),intvec(0,1)); 2*K-2; deg(Jac(be,al),intvec(0,1)); 2*K-4;
+"MARK_DONE"; quit;

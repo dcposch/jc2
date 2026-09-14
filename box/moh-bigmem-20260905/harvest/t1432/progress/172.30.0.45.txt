@@ -1,0 +1,32 @@
+UTC=2026-09-05T14:32:07Z
+--- ps ---
+   8415       19:59 2822532 99.8 Singular --cpus=32 --threads=32 --flint-threads=32 --no-rc -q /home/ubuntu/moh-bigmem-20260905/targets/m15/guided/m15_p1073741827.sing
+--- files ---
+total 7020
+-rw-rw-r-- 1 ubuntu ubuntu       0 Sep  5 14:12 m15_p1073741827.err
+-rw-rw-r-- 1 ubuntu ubuntu     218 Sep  5 14:12 m15_p1073741827.out
+-rw-rw-r-- 1 ubuntu ubuntu    6638 Sep  5 14:31 m15_p1073741827.rss.log
+-rw-rw-r-- 1 ubuntu ubuntu 7173057 Sep  5 14:12 m15_p1073741827.sing
+--- rss last ---
+VmHWM:	 2773840 kB
+VmRSS:	 2773840 kB
+utc=2026-09-05T14:31:48Z
+pid=8415
+VmPeak:	 3073772 kB
+VmSize:	 3073772 kB
+VmHWM:	 2797824 kB
+VmRSS:	 2797824 kB
+--- out ---
+CONTROL_RING_PASS R
+CONTROL_EMPTY_PASS
+CONTROL_NONEMPTY_PASS
+MAIN_START equations=177 unknowns=129 char=1073741827 algorithm=std
+GG__RUN main START
+GG__GENERATOR_COUNT main 178
+GG__STD_BEGIN main
+//used time: 0.86 sec
+--- err tail ---
+--- log ---
+GUIDED_PIPELINE_START target=m15 rows=/home/ubuntu/moh-bigmem-20260905/targets/m15/native_rows.tsv utc=2026-09-05T14:12:07Z
+GUIDED_START name=m15 gens=177 nvars=130 rows_sha=ad9c53e3276345ec49f36062dc33e2c81c152d93ac53ce1e580d7fcd9912153c
+MODULAR_START p=1073741827 timeout=10800 utc=2026-09-05T14:12:07Z

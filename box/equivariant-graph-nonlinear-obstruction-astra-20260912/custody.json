@@ -1,0 +1,50 @@
+{
+  "task": "equivariant-graph-nonlinear-obstruction-astra-20260912",
+  "status": "COMPLETED / MANUAL UNREVIEWED",
+  "first_action_utc": "2026-09-12 01:18:51 UTC",
+  "publication_reserve_utc": "2026-09-12 01:32:00 UTC",
+  "hard_stop_utc": "2026-09-12 01:35:00 UTC",
+  "clock_reset": false,
+  "report_opened_utc": "2026-09-12 01:19:05 UTC",
+  "report_closed_utc": "2026-09-12 01:22:38 UTC",
+  "report_finalized_utc": "2026-09-12 01:22:38 UTC",
+  "verification_and_postpin_observation_utc": "2026-09-12 01:22:55 UTC",
+  "input_pins": {
+    "box/equivariant-graph-nonlinear-obstruction-astra-20260912/TASK.md": "67e29d9b67fc4038bacb5380ca424530eea9ae477aca045ed4955bc04469b46c"
+  },
+  "owned_pins_excluding_this_custody": {
+    "box/equivariant-graph-nonlinear-obstruction-astra-20260912/PINS.json": "76fa1601f05fc8968d8ccd28f475b8fa7727c9d01c10f19289c171226556581f",
+    "xmodel/equivariant-graph-nonlinear-obstruction-astra-20260912.md": "4c253ddf7fd1cc6c5cfad90dbefec5f609a5ea2d4dcdb5a300b2feb35a94200d",
+    "xmodel/equivariant-graph-nonlinear-obstruction-astra-20260912.md.artifact.json": "0fa28968ecd5d9dbe9833ffc8d08000257b5d014960970fdd0a42910628ff28f"
+  },
+  "transaction": {
+    "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+    "owner": "astra-geometry",
+    "lease_id": "2192cc50628b903853625d26c68066d7",
+    "workflow": "begin, unsealed skeleton, bounded sections, own WHOLE and postpins/collision/OPEN checks, marker LAST, close, finalize, expected verify",
+    "expected_manifest_sha256": "0fa28968ecd5d9dbe9833ffc8d08000257b5d014960970fdd0a42910628ff28f",
+    "verification": "VERIFIED with exact basis and expected manifest SHA",
+    "body_bytes": 6885,
+    "body_sha256": "57f7673771342d6c61a2efd8c7e735f9ee07b9b50060d97d1f6089ebc6bcb5f5",
+    "file_bytes": 7217
+  },
+  "read_scope": {
+    "input": "Exactly one; matching hash BEFORE FRESH_WHOLE",
+    "partial": "WHOLE before sole final marker, with no Pending sections",
+    "sealed_report": "WHOLE including Seal after expected verification",
+    "manifest": "WHOLE after expected verification",
+    "PINS": "WHOLE before seal; unchanged postpin",
+    "clipping": "NONE",
+    "prior_whole_reuse": "NONE"
+  },
+  "collisions": "Exact report, manifest, PINS and custody initially absent; report/manifest/custody absence reconfirmed at 01:22:23 UTC before seal; no collision or shared edit",
+  "result_scope": "For every polynomial h, the exact B-Jacobian module intersects C only in zero. Thus no arbitrary-degree polynomial outputs f,g in B have nonzero constant Jacobian on the entire specified graph. No all-graph, all-plane, ambient-global or JC2 claim.",
+  "controls": "h=0 gives -2 and 26 on the two c-zero fibres; x=0 gives a genuine out-of-family Jacobian -1; polynomial automorphism reparametrization preserves the obstruction",
+  "OPEN": "None in the stated deduction, subject to independent review; no canonical OPEN created",
+  "quantity_cheapest_test": "Module intersection with C*, exact grading and polynomial-root audit, manual planning under15 minutes; numerical or computational performance UNMEASURED",
+  "scientific_execution": "NONE, including code/import/AST/syntax/test/CAS/dummy of any size",
+  "other_inputs_network_AWS_agents_protected_shared_access": "NONE",
+  "administrative_tools": "Scoped date/text/hash/absence checks, apply_patch and existing artifact transaction only",
+  "writers": "Report and PINS writers IDLE; this custody is the last authored object, followed only by readback/hash and terminal handoff",
+  "promotion_or_follow_on_authority": "NONE"
+}

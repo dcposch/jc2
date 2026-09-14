@@ -1,0 +1,204 @@
+# FIRST evidence gate: finite generic/API runtime; no actualsource
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/custody.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/launch-and-identity.txt
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/local-readback-and-identities.txt
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/physical-before.txt
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/READ-SCOPE.md
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote-before.sha256-and-modes.txt
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote-inputs-after.sha256
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote-terminal-manifest-and-modes.txt
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/batch.PASS.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/checker.py
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.authority.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.dispatch.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.py
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.receipt.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/compatibility.telemetry.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/dispatch_batch.py
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/dispatch.registration.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.authority.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.dispatch.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.stdout
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/dummy-descendant.telemetry.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/execution_gate.py
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.authority.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.dispatch.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.stderr
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-argv.telemetry.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.authority.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.dispatch.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.stderr
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-cap.telemetry.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.authority.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.dispatch.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.stderr
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-disabled.telemetry.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.authority.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.dispatch.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.stderr
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-missing-input.telemetry.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.authority.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.dispatch.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.sentinel
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-valid.telemetry.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.authority.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.dispatch.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.stderr
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/gate-wronghost.telemetry.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-float-type-negative.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-high-T30-negative.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-precision-positive.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-rounded-canonical-string-negative.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-separator-column-negative.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-separator-normalization-negative.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-separator-T-positive.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-separator-zero-positive.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-unit-negative.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-unit-positive.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-zero-guard-false-separator.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic-fixture-zero-guard-positive.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/generic.plan.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/preflight.PASS.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/remote/probe.py
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/ROOT-REGISTRATION.md
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/terminal-metadata-check.json
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/terminal-owned-process-check.txt
+charged_input=box/f10-r1-linear-compatibility-execution-20260909/worker-after-stop.txt
+charged_input=xmodel/f10-r1-linear-compatibility-execution-astra-20260909.md
+charged_input=xmodel/f10-r1-linear-compatibility-execution-astra-20260909.md.artifact.json
+charged_input=xmodel/f10-r1-linear-compatibility-gate-fable5-20260909.md
+
+Verify ALL68 ordered SHA256 before bodies in {{LANE_INPUTS}}:
+4f33b5d9577369d415306c4a26d540613721d96c3b6a2e9fc3058034ab32ed43
+65fa14a7928668bd26f76ea80269d01d8627d0a86d88f4f31adf3331e22f85d2
+f803dad9744adeea632b74965be2d12965e2bf3196f42d75ab1ce6e9a67aa963
+dcf0c9c975011a90873e7b5417cc4dc8f7625461d37f03276a8b91a662240e0e
+2e46d8be658b8496591f8485361a664488c41731cbf169901c0c41f4d6a9188e
+594e70a5473fbf6eabd3bab6b564fd61fd5d4994aa54fcb409af7e5302105e86
+012a4050c5ea01c3de970a691f826177bc3f9df958ad7305ebb2b19b75e9d575
+349dd03299b732ad2726dfd78ba2409c028178cb6debfa5a912b30bdb7274248
+2e46444f49cd2071f9725228da2b570e32712f1a275488a974c32755a53b57c3
+122842e5cf38a0eab2585c7e894c1ca9d9758dd643830d5447800642554fdf69
+5df53d63e022caefeb065cc02f2406b770a7c301bb49b84579a39e2aac42dfd1
+1f2e22a065fb76cffd5319010dcc1e2406ff05f642f608ac42685c7d3dd69d71
+aaec1e2c56d7d4e77f7cf040a86371b813744368c9272b4f5cbe629af18af38b
+c99eda146afc91cb521a6a27739422ac7f1928c9763586e34a0a1bd590d3e443
+4a4113cdebd8ad166c7d03951c3a307ac325b008111cf101cac38f6fa4fcaa61
+e1780f99c939ac37e0c149f1d22fb1d7741ad76c8ff183d3d3cc0f4da3e11b72
+ba1b374bf803f583ff9baa5617d9d058ca2b1215e98dd69240276fe892f6bc3b
+0dddf03211e5f4c4cbd52ff27bf0f1a4a974c71cab4f73674ea95f6f27a7442d
+807e15c294d6a7e570c4021051caa5b22c22a7f5635cd51232574ecbd3808c3a
+de7ee73c498c71c51933e1b30c04c35c27a9801e506fc90beed77620c3382a2b
+1cf044a5a1dced23982de205e5213602196751f110ddb3ec6ed0e74fd60ad1ed
+cbfe55ff11503cee094dc49e54b656d209806aa37ee30cc281902902152049c6
+295ffce37f7e4371200cff8470c29df891cb8a3beb45a92c09bb9e3f78263807
+9306692a81c165eb1dd46567f34afeff430fedab0ca7a92d2909c1ab0575ef18
+3456cb6d516b3eb088260799350b18c2d93730a95f07c110850f44a45dc12f3c
+638805ac8f1c6a1f43a1861193a42cd2aec62b752ad3c89f0184249e1cc621f0
+adb81f0f7dfa5b200eff7c0716bd852596c331a819ec70af557353eb85c2cff3
+0cfd824309393229aba4e67aa871da906762b0c1237d02c398ad02d217f3a1d5
+a1759524cfb0a04a6184561e6243183480f23cd3e67041875fefd0c94824fb53
+1293c4ff758b1e4fa8427480339ff7ac42e569ddca38f939462371f2209d1e1a
+bcc2fb345c13ca3968b2022c1c92e4a74db2b4793ecc9818f12599ee1c71b974
+df6ac69201c26f8ae75850e87d86003b4ad390b3cc3cc9d8482ddb08554d79f3
+556fceba211e4b19791f5d02273f805dce1f4e0c803515f09ac69e7bffc62d56
+b422b262b1f724460b71f6f37dedb3908d528ceba4de97191f3b6a8288c32f67
+4a543ea8c5ed8233bff845771d45c4412a61f67cbc19b8948d651b5872a286de
+29131279b8ecbfda8b1bc84bce6fae1e9f0b9f02a8c276ea5499e250093d2d04
+50bd361b50d4f99e2d8df216e5ff108813932ff96e79a2956ee7f321ff7eba8c
+e9d35048c4e13171b73d71246377ee1ed2ac112ea3d3fe6eb9ddde551987da84
+23ac0014853d2598cdbfa39fd33cd72ecccccac50a40a0c5b210f44321e8625e
+40da505d3ab6847357bc58b5e42a44f9c9fabdefd3749081cb48253ae021b887
+6c6419e93c916a7be827f962250694e568c52e56906280c2982b1ad78ce87ea8
+56758a756e1b518467dbe111f3f47ac6157845cc4c846730ea1be0effec76209
+a95d9e102926269dbd03ed7f0037fe81b662786a94499c05e8b95ebe0752a286
+32bcd4fc918c9c6d561ad124f05a7e673a3be9e463f790d5f30a3cbe4c10d9cd
+b5e8c6a5e3d0a039e7715423df313b106a6f452a6ed0adfce6f8d8c5d8548cfe
+07e9a08fc0ef3621cb719016e36204dfcbdecfde89b702cc36c2ff4e4eaa01a2
+f3c5d8dcd66adab6dfee8f51c090b5e82ede2eaf812d1858f8690944ca6242ce
+6cb044221b9b7894e8b7904f7fc893ca173dd7473255ee2f0f3127d842be21c9
+5abf9ae4e156aab4fd48e31b50ddb97a8477ee7d8645258993f94f79fe7260b2
+6b83bddf7d1112c8905cc88b629198283b406808dd45c5f9a33e78b692ac394e
+4b4b6d20e33814097e7ed85f3861f066c83e4a3873d0045b330ad4dd763c526e
+6aa306727ed2f4073a531619540a2446e53e435bc4244b290846296a0d138631
+e5fc84cd607e3c96a453a3f4f462441511b6747694f7d44ac1fe62b3dc01e948
+6d50c266b57897edaf4bd053d6772132a566cae36d1e7574037113524c97d9dd
+2774c191187a679e9b2af4e2b46be3c6304303612d22cf093005141b30444a7e
+49dca8d8f1950a5b59e5f7f90bd4e93d3ce32f7cd9aa2336623f10fd799a61f6
+6180d226339f33945ff3a0a58489e0b7b9ddcab548366e58dce9413057048315
+a7bde5399390c024f9bc7ffa5d6d2451385be99e3db55b2d59f359bf468654b2
+1fe704aaaa125dc8d40d5915ea74ae651277ba3f2336ab76579adc104fc305e5
+43b5e67ce12a4b5c03c4dc1ee928b6da4ecd32959ab216fd4efaf259a3c50502
+02913a1caf8cb5ebe2ec7c404ede0247a1954baee3751af8b2645496f6b6e1a7
+034738126ee5555e55a8080ccfccbdae3f949d689b52577f124ee97198261d4e
+35e2703de1f8c928e04b44df269d2acc7fb8c076bb315641d7758ca10cfa6761
+a6dae063f8f65b0d6905439aeaa57627270ebf683ca237bf9faf0aad84f274e3
+582fdfc6755dec3777b7f0feafbfebe1e31c08c55ed44ea86e0ff687e8578abd
+2f82e7b2ca181684e434bfb564b59715c26588d47d85f76ee488b662367a242a
+edd01f1971cc0bb85d61dcfa7811b270439b0ff1af91e1864a4708fececd610f
+d9bf289989d2631f0ab39657b4a3f0c8f7389e21ded388e68e366cd13d7fdc31
+End ordered SHA256.
+
+Write exactly xmodel/f10-r1-linear-compatibility-runtime-gate-fable5-20260909.md
+and own box/f10-r1-linear-compatibility-runtime-gate-fable5-20260909/ ONLY.
+Stop earlier2026-09-09 23:09:00 UTC or actuallaunch+18min, NEVERreset.
+Root's independent earlier timer may stop at23:08:00. Reservefinal2min.
+SkeletonWITHOUTmarker first. ALLfilewrites apply_patch available at
+/home/ubuntu/.codex/tmp/arg0/codex-arg0KG6wa7/apply_patch; no shell-written
+scratch lists, no deleting a mistake silently. OwnWHOLE and own-onlycollision/
+raised-OPEN check; single standalone <!-- BODY-END --> ONLYatcompletion,
+nothingafter. No Seal/charge_basis, no corpus/Gitstatus/provenance/peerreading.
+
+FIRST RUNTIME-EVIDENCE review, not another code/theorem reproof.
+Accepted17zb static gate is an explicit premise with rootqualifications:
+allconstant-v fixtures, no fullproduct/nonconstantB runtimecoverage;
+counts23/2 structural notallnativeoperations; gate22:37 wasn'tcontrolling;
+its temporaryshellwrittenmetadatafile workflowfailure remains disclosed.
+Accepted17z actualdecisioncode/theorem17m/CAPRUN not re-proved.
+Root terminalAstra allwritersIDLE22:47:03 beforeoriginal23:01:54;
+custodySHA+WHOLE FIRST22:47/all31current+104owned/expectedtxn before
+WHOLEreport/receipt/READSCOPE/metadata. Root independently verified110
+sourcepostpins equalregistration. Remote85retained files current-pinchecked,
+not mathematicalreplayed. Root independentlyAWSSTOPPED22:42:06 then
+canceledoriginal22:54STOPtimer; terminalPIDs/cgroup/workerreceipts charged.
+Do not read any path mentioned in these inputs unless explicitlycharged.
+
+A-D verdict CONFIRMED/REFUTED/GAP; smallestactualdefect:
+A. Genuineexecutionchain: exactROOTregistration/physicalinstance/.72,
+local/remote/prepost110pins and85remote artifactmanifest, exactservice
+launchMain7155/start16607, CAPRUN fullvectors/caps/inputbindings. Review all8
+authority/telemetry/dispatch records at explicitMETADATAfieldscope; state
+WHOLE versusselected honestly. Fivefaults are expected, validsentinel,
+dummy RSSaggregate/TERM15/KILL9 identity/quietgroup withactualchild.
+Actualcaller wasseenlive, innerchildtree wasnot; identitiesfromtelemetry.
+TerminalrootalreadySTOPPED no liveworkerread/extraexecution.
+B. Genuinegenericreceipt c99eda146afc91cb521a6a27739422ac7f1928c9763586e34a0a1bd590d3e443:
+12inprocesschecks=5positive/7expectednegatives; bothfixed2x5RREFs/exact
+scalarformats match17zb's accepted handtraces. Fixturehash/size binding,
+branchstatuses/firsterrormessages, exactK=9007199254740993 and1/K through
+positiveparser, canonicalK-1 identityfailure vsfloatparserfailure,
+highT30/zeroguard retained. You may inspect fixtureWIRE fields using
+read-onlydocumentary selectors; ZERO arithmetic replay. Exactmathvalues
+remainstrings; no JSnumberJSONroundtrip of mathematicalintegers.
+Nothing generic servesasROOTsourceacceptance oractualnonzeropoint.
+C. Mathematical3.100202855wallseconds/samplegrouppeak34848768B, stored
+firstmath/absolute22:47/aggregate240/dispatch22:53 andreturnbeforecutoff.
+Eightfinitechildren only. InheritedCPUperprocess, RSSsampleovershoot,
+nonrealtimecleanup limitations. Unitjournal5.2M memorypeak is separate
+accounting observation, not substitute forgroupRSS. Checkallactualbad
+authorityrefusals anddummypositivecleanup usingretainedmetadata. Normal
+exit telemetry leader_reapedfalse isn'tanewfault byitself; assessaccepted
+CAPRUN contract plusactualterminalquietness, notthatflagalone.
+D. Scope: actualinstalled0.9.0module/path/hash/APIchecked once; declared
+100package/nativepins nothermeticOS/importmap. No actualsolver.py/full
+217matrix/sourceartifact/sourceacceptance/idealdecision; no method
+control masqueradesasfrontierresult. Actualsourcebatch remains separate.
+
+Onlychargedfrozeninputs+launcherguardrail. ZERO Python/mathsubprocess/CAS/
+AST/compile/import/test/fixture/matrix execution ANYsize, AWS/SSH/network/
+proc/otheragents/downloads/protectedrepo/currentmutableledgers. Metadata
+hash/JSON/vector/bytecomparison allowed, neverimportanychargedcode.
+Do not propose optional extra framework/test/re-review absent a specific
+blockingdefect. Runtimepromotion canacceptgenericbehavior ONLY.
+Oneboundedactualsourcechild may run independently underprovisionalroot
+registration afterthis FIRSTgate isenqueued; do not infer that result.

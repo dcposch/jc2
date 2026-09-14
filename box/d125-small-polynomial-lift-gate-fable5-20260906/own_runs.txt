@@ -1,0 +1,17 @@
+gate exit=0 2.44 s 26260 KB 54 PASS lines; last: ALL PASS
+gate_mutate-det exit=1 0.10 s 31880 KB 0 PASS lines; last: 
+    if not ok: raise AssertionError("FAIL "+msg)
+AssertionError: FAIL C1a inverse determinant d(gamma,pi)/d(u,v) = +v^2
+gate_mutate-sign exit=1 0.23 s 32824 KB 9 PASS lines; last: PASS C2b 780 J slots for r+s<=38
+    if not ok: raise AssertionError("FAIL "+msg)
+AssertionError: FAIL C3a D=15 every expanded coefficient equals multinomial*(-1)^(j-t); degree/weight bounds
+gate_mutate-omit exit=1 1.50 s 39452 KB 26 PASS lines; last: PASS C5b own verifier rejects the single negative row
+    if not ok: raise AssertionError("FAIL "+msg)
+AssertionError: FAIL C5c omitting exactly that row makes the verifier accept a nonpolynomial P (real omission)
+gate_mutate-D0 exit=1 1.72 s 41680 KB 31 PASS lines; last: PASS C6a squarefree: direct substitution equals Taylor-graph expansion sum_k v^(k-15) a_k(
+    if not ok: raise AssertionError("FAIL "+msg)
+AssertionError: FAIL C6b squarefree: D0=a_0'''(-1) constant unit (Fraction(162, 1), Fraction(0, 1))
+gate_mutate-scale exit=1 2.43 s 41152 KB 47 PASS lines; last: PASS C6i golden: fixture is not itself polynomial (other negative rows remain) - no existe
+    if not ok: raise AssertionError("FAIL "+msg)
+AssertionError: FAIL C7a A_tau=tau^-15 A(tau.) with lambda2 tau^-3, lambda3 tau^-2 gives tau^-15 P(tau^5 u, tau^-1 v)
+gate_O exit=0 54 PASS

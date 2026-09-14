@@ -1,0 +1,110 @@
+{
+  "adaptations": {
+    "Rs=[('R=g',g),('R=g+p^2',add(g,power(p,2)))]": "Rs=[('R=g',g)]",
+    "max(5*e[0]-7*e[1] for e in power(R5,2))==2": "2*max(5*e[0]-7*e[1] for e in R5)==2"
+  },
+  "adapted_source_sha256": "f648c250c5d278fae1e173d71d3cfe834baf20f48d6d92157cf3c2a0cc0610c9",
+  "pins": {
+    "box/d125-exceptional-tuned-discriminator-20260907/check.py": "ec6c1840630b6df9c2c89ca91fea4db2249fea6faedbd320dd016c32cececfa0",
+    "box/d125-exceptional-tuned-gate-fable5-v2-20260907/gate_controls.py": "de6a79c31925806d6e00c718a777592f7b60437ecbfc5c2c3c59341959cf45f1",
+    "box/d125-exceptional-tuned-gate-fable5-v2-20260907/replay.json": "d917b188e54f051ce5f81269fec71f8bbe7139d8fff00c699f9feb7f0dd7337e",
+    "box/d125-exceptional-tuned-gate-fable5-v2-20260907/runner.py": "6ba746981a23f7c965ad41836e2363f2947c0cb00f34f853e387238cfc339311",
+    "box/d125-exceptional-tuned-gate-fable5-v2-20260907/witness.json": "45de42f6e5ac04c2a84450db98be669bdb95d77170134bb1721b0e4aa0812fbe",
+    "xmodel/d125-exceptional-tuned-discriminator-astra-20260907.md": "d0937ebe91b14e61cec7d47b671f9bdebc18c321ff035bb20449e75a1214e03f",
+    "xmodel/d125-exceptional-tuned-gate-fable5-v2-20260907.md": "bfede999311fd933cb08f0b23dac1ec4aa404dd593b2b1f017b6ef1499e2446f",
+    "xmodel/d125-low-jet-saturation-discriminator-astra-20260907.md": "57d85da3010d6a2a432cdb79b543054b14d415cec249481275f0d8e6f2dbbe6a",
+    "xmodel/d125-low-jet-saturation-gate-fable5-20260907.md": "65bb46ee40c9dc7c873de732a333f000206c2efa4016be06e1f89b880effa583",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-zero-k-boundary-classification-astra-20260907.md": "129947ee5a370991864a52936d1936179ec9c38efdf0fd80de989e8ed57237a2",
+    "xmodel/d125-zero-k-classification-gate-fable5-20260907.md": "68e04e8ce62585b824d73749b956f51ea58a46661375e4c810d747680be5370f"
+  },
+  "runs": [
+    {
+      "mutation": null,
+      "optimized": false,
+      "rc": 0,
+      "stderr": "",
+      "stdout": "{\n \"assert_nodes\": 0,\n \"gate_count\": 40,\n \"gates\": [\n  {\n   \"detail\": \"[F,G] must be a genuinely nonzero term\",\n   \"gate\": \"C1-nonzero-cross[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\",\n   \"gate\": \"C1-identity[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"G -> G - eta s^l R^3 - theta s^l R - eta s^l F\",\n   \"gate\": \"C2-reference-G[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"delta -> delta + theta s^l - eta s^l alpha(s)\",\n   \"gate\": \"C2-reference-delta[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"F correction starts at l+j\",\n   \"gate\": \"C2-F-correction-order[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"(I) with new references\",\n   \"gate\": \"C2-identity-after-removal[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"5R^4+3bR^2+g = a q + delta\",\n   \"gate\": \"C1-b-equals-aq-plus-delta[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[F,G] must be a genuinely nonzero term\",\n   \"gate\": \"C1-nonzero-cross[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\",\n   \"gate\": \"C1-identity[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"G -> G - eta s^l R^3 - theta s^l R - eta s^l F\",\n   \"gate\": \"C2-reference-G[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"delta -> delta + theta s^l - eta s^l alpha(s)\",\n   \"gate\": \"C2-reference-delta[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"F correction starts at l+j\",\n   \"gate\": \"C2-F-correction-order[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"(I) with new references\",\n   \"gate\": \"C2-identity-after-removal[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"5R^4+3bR^2+g = a q + delta\",\n   \"gate\": \"C1-b-equals-aq-plus-delta[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[F,G] must be a genuinely nonzero term\",\n   \"gate\": \"C1-nonzero-cross[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\",\n   \"gate\": \"C1-identity[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"G -> G - eta s^l R^3 - theta s^l R - eta s^l F\",\n   \"gate\": \"C2-reference-G[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"delta -> delta + theta s^l - eta s^l alpha(s)\",\n   \"gate\": \"C2-reference-delta[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"F correction starts at l+j\",\n   \"gate\": \"C2-F-correction-order[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"(I) with new references\",\n   \"gate\": \"C2-identity-after-removal[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"5R^4+3bR^2+g = a q + delta\",\n   \"gate\": \"C1-b-equals-aq-plus-delta[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[p]R=0,[p^3]R=-3,[g^2p]R=0, origin order 3\",\n   \"gate\": \"C3-R-low-coeffs\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[p]S=-1,[p^3]S=1\",\n   \"gate\": \"C3-S-low-coeffs\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"R odd, weight 1, top H\",\n   \"gate\": \"C3-R-odd-top-weight\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"odd deg<=3 weight<=1 slots are p,p^3,gp^2 only\",\n   \"gate\": \"C3-U-slots\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"w(R^2)=2 so w(U)<=3-2=1\",\n   \"gate\": \"C3-weight-a0\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"complete negative rows of the three U slots\",\n   \"gate\": \"C3-lift-negative-rows\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"U=dS unique ordinary kernel\",\n   \"gate\": \"C3-U-kernel-is-S\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[p]Z=-alpha0 d, [p^3]Z=-3c+alpha0 d kill (c,d)\",\n   \"gate\": \"C3-low-rows-kill-c-d\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"phi(R_{-3}) has no negative v powers\",\n   \"gate\": \"C3-R-lift-ordinary\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"phi(R)(u,0)=3u so v^0 of phi(a0)=27u^2+alpha0\",\n   \"gate\": \"C3-R-lift-v0\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"g^3 = -(p^3-3p-r p^-2): valuation -2 not divisible by 3 (integer n grid is bookkeeping; the claim is 3|(-2) false)\",\n   \"gate\": \"C4-no-laurent-root\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"constant coefficient of R-r mod p is -r != 0\",\n   \"gate\": \"C4-primitive\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#0\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#1\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#2\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#3\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#4\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"delta index < d / F^2 at 2j / F-correction at >=2j (grid m<=8)\",\n   \"gate\": \"C6-order-bookkeeping\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"F_j = c r on R=r and -c r on R=-r\",\n   \"gate\": \"C7-opposite-constants\",\n   \"ok\": true\n  }\n ],\n \"mode\": null,\n \"scope\": \"formal-R identity/reference gates; actual expansions only degree-5 R,S and cubic lifts; finite grids are bookkeeping not proof\",\n \"status\": \"PASS\"\n}\n"
+    },
+    {
+      "mutation": "--mutate-wrong-quadratic",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "FAIL gate=C1-identity[R=g#0] [A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\n",
+      "stdout": ""
+    },
+    {
+      "mutation": "--mutate-omit-cross",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "FAIL gate=C1-identity[R=g#0] [A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\n",
+      "stdout": ""
+    },
+    {
+      "mutation": "--mutate-zero-cross",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "FAIL gate=C1-nonzero-cross[R=g#0] [F,G] must be a genuinely nonzero term\n",
+      "stdout": ""
+    },
+    {
+      "mutation": "--mutate-omit-reference-betaF",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "FAIL gate=C2-reference-G[R=g#0] G -> G - eta s^l R^3 - theta s^l R - eta s^l F\n",
+      "stdout": ""
+    },
+    {
+      "mutation": "--mutate-low-p3",
+      "optimized": false,
+      "rc": 1,
+      "stderr": "FAIL gate=C3-low-rows-kill-c-d [p]Z=-alpha0 d, [p^3]Z=-3c+alpha0 d kill (c,d)\n",
+      "stdout": ""
+    },
+    {
+      "mutation": null,
+      "optimized": true,
+      "rc": 0,
+      "stderr": "",
+      "stdout": "{\n \"assert_nodes\": 0,\n \"gate_count\": 40,\n \"gates\": [\n  {\n   \"detail\": \"[F,G] must be a genuinely nonzero term\",\n   \"gate\": \"C1-nonzero-cross[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\",\n   \"gate\": \"C1-identity[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"G -> G - eta s^l R^3 - theta s^l R - eta s^l F\",\n   \"gate\": \"C2-reference-G[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"delta -> delta + theta s^l - eta s^l alpha(s)\",\n   \"gate\": \"C2-reference-delta[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"F correction starts at l+j\",\n   \"gate\": \"C2-F-correction-order[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"(I) with new references\",\n   \"gate\": \"C2-identity-after-removal[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"5R^4+3bR^2+g = a q + delta\",\n   \"gate\": \"C1-b-equals-aq-plus-delta[R=g#0]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[F,G] must be a genuinely nonzero term\",\n   \"gate\": \"C1-nonzero-cross[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\",\n   \"gate\": \"C1-identity[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"G -> G - eta s^l R^3 - theta s^l R - eta s^l F\",\n   \"gate\": \"C2-reference-G[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"delta -> delta + theta s^l - eta s^l alpha(s)\",\n   \"gate\": \"C2-reference-delta[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"F correction starts at l+j\",\n   \"gate\": \"C2-F-correction-order[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"(I) with new references\",\n   \"gate\": \"C2-identity-after-removal[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"5R^4+3bR^2+g = a q + delta\",\n   \"gate\": \"C1-b-equals-aq-plus-delta[R=g#1]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[F,G] must be a genuinely nonzero term\",\n   \"gate\": \"C1-nonzero-cross[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\",\n   \"gate\": \"C1-identity[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"G -> G - eta s^l R^3 - theta s^l R - eta s^l F\",\n   \"gate\": \"C2-reference-G[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"delta -> delta + theta s^l - eta s^l alpha(s)\",\n   \"gate\": \"C2-reference-delta[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"F correction starts at l+j\",\n   \"gate\": \"C2-F-correction-order[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"(I) with new references\",\n   \"gate\": \"C2-identity-after-removal[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"5R^4+3bR^2+g = a q + delta\",\n   \"gate\": \"C1-b-equals-aq-plus-delta[R=g#2]\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[p]R=0,[p^3]R=-3,[g^2p]R=0, origin order 3\",\n   \"gate\": \"C3-R-low-coeffs\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[p]S=-1,[p^3]S=1\",\n   \"gate\": \"C3-S-low-coeffs\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"R odd, weight 1, top H\",\n   \"gate\": \"C3-R-odd-top-weight\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"odd deg<=3 weight<=1 slots are p,p^3,gp^2 only\",\n   \"gate\": \"C3-U-slots\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"w(R^2)=2 so w(U)<=3-2=1\",\n   \"gate\": \"C3-weight-a0\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"complete negative rows of the three U slots\",\n   \"gate\": \"C3-lift-negative-rows\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"U=dS unique ordinary kernel\",\n   \"gate\": \"C3-U-kernel-is-S\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"[p]Z=-alpha0 d, [p^3]Z=-3c+alpha0 d kill (c,d)\",\n   \"gate\": \"C3-low-rows-kill-c-d\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"phi(R_{-3}) has no negative v powers\",\n   \"gate\": \"C3-R-lift-ordinary\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"phi(R)(u,0)=3u so v^0 of phi(a0)=27u^2+alpha0\",\n   \"gate\": \"C3-R-lift-v0\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"g^3 = -(p^3-3p-r p^-2): valuation -2 not divisible by 3 (integer n grid is bookkeeping; the claim is 3|(-2) false)\",\n   \"gate\": \"C4-no-laurent-root\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"constant coefficient of R-r mod p is -r != 0\",\n   \"gate\": \"C4-primitive\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#0\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#1\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#2\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#3\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"remainder lambda z, quotient odd\",\n   \"gate\": \"C5-odd-remainder#4\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"delta index < d / F^2 at 2j / F-correction at >=2j (grid m<=8)\",\n   \"gate\": \"C6-order-bookkeeping\",\n   \"ok\": true\n  },\n  {\n   \"detail\": \"F_j = c r on R=r and -c r on R=-r\",\n   \"gate\": \"C7-opposite-constants\",\n   \"ok\": true\n  }\n ],\n \"mode\": null,\n \"scope\": \"formal-R identity/reference gates; actual expansions only degree-5 R,S and cubic lifts; finite grids are bookkeeping not proof\",\n \"status\": \"PASS\"\n}\n"
+    },
+    {
+      "mutation": "--mutate-wrong-quadratic",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "FAIL gate=C1-identity[R=g#0] [A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\n",
+      "stdout": ""
+    },
+    {
+      "mutation": "--mutate-omit-cross",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "FAIL gate=C1-identity[R=g#0] [A,B]=[R,aG-dF-(5/3)RF^2]+[F,G]\n",
+      "stdout": ""
+    },
+    {
+      "mutation": "--mutate-zero-cross",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "FAIL gate=C1-nonzero-cross[R=g#0] [F,G] must be a genuinely nonzero term\n",
+      "stdout": ""
+    },
+    {
+      "mutation": "--mutate-omit-reference-betaF",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "FAIL gate=C2-reference-G[R=g#0] G -> G - eta s^l R^3 - theta s^l R - eta s^l F\n",
+      "stdout": ""
+    },
+    {
+      "mutation": "--mutate-low-p3",
+      "optimized": true,
+      "rc": 1,
+      "stderr": "FAIL gate=C3-low-rows-kill-c-d [p]Z=-alpha0 d, [p^3]Z=-3c+alpha0 d kill (c,d)\n",
+      "stdout": ""
+    }
+  ],
+  "scope": "field finite arcs alpha0 nonzero delta0 zero only; no pure center/global degeneration/guarded emptiness",
+  "status": "PASS_TUNED_FINITE_ARC_GATE",
+  "wall_seconds": 1.1791063019772992
+}

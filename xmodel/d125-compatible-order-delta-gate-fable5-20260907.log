@@ -1,0 +1,20 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+**Verdict: CONFIRMED** at exact leading-ideal scope. The report is published at `xmodel/d125-compatible-order-delta-gate-fable5-20260907.md` (939 words, unique final standalone BODY-END, nothing after, no seal, no charge_basis) at 02:13 UTC, ahead of the 02:17 target.
+
+**What I checked, and how**
+
+- **Pins.** All eight frozen inputs rehash to the charged digests, including the desk report, its check.py and witness.json, baseline.py, and the two Hermite documents.
+- **Order.** Rebuilding all five weight rows from the variable names alone reproduces the frozen witness rows exactly and the five-row descriptor digest. W1 is positive on every name, so the order is global. The negative W5 entries are consulted only after four ties.
+- **A-Hermite leaders.** Using the consumed exponent law, I enumerated every actual term of every A-lift row over my own half-plane census of the polygon, which reproduces the contract's 71 free and 12 fixed A slots. The selected columns give exactly the Hermite matrix, all 14 minors are units with the stated sign law, and the adjugate inverses are integer two-sided inverses. Against every selected pivot, every non-selected term is strictly smaller: 1650 lambda-forcing terms and 283 fixed-top terms decide at W4, 255 same-layer unselected terms decide at W5, and the two lower fixed terms decide at W1. No substitution is needed for a leading-monomial statement.
+- **B inheritance.** With the five-row key, all 12,778 forcing pairs decide at W1 or W2 and all 1,804 same-layer B pairs decide at W3. Nothing reaches W4 or W5, so the 192 accepted leaders are retained.
+- **Scope.** Same 269 names, 803 rows, faces, field and target. Complement 50 is a name count, not a dimension.
+
+**Controls.** My gate script uses only the standard library, has zero Assert nodes, and takes explicit relocated input paths. Normal and -O runs pass with byte-identical output. Four mutations reject in both modes: zeroing W4, reversing W5, a degenerate matrix row, and a zero W1 entry. Largest run was 3.8 s and 40 MB under the 30 s, 25 s CPU, 512 MiB caps.
+
+**Two things to know**
+
+- The producer's check.py could not be replayed from the frozen inputs. It hardcodes repository-relative paths and pins a three-row witness file that is not among the charged inputs. My own control covers the same content independently, and the report records this as a custody note, not a mathematical gap.
+- The status line in the report says 02:15 UTC, written in the skeleton as a projection. The file was actually finalized at 02:13 UTC. I left it rather than edit the body after BODY-END.
+
+Artifacts are confined to `box/d125-compatible-order-delta-gate-fable5-20260907/` and the report. No other d125 path was touched. Stopped after the gate as instructed.
+DIVERT path=xmodel/d125-compatible-order-delta-gate-fable5-20260907.md status=CLEAN body_bytes=6107 body_sha256=31650da9234577fa7a6f12004ce31efb0aea0fcc920b4fb6cc818d0c0ff5d327

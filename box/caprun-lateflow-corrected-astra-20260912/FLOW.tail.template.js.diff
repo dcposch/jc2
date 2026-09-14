@@ -1,0 +1,242 @@
+--- box/caprun-lateflow-completion-sol-20260912/FLOW.tail.template.js	2026-09-12 05:09:52.055859670 +0000
++++ box/caprun-lateflow-corrected-astra-20260912/FLOW.tail.template.js	2026-09-12 05:30:49.435389406 +0000
+@@ -1,7 +1,8 @@
+ // Appended byte-for-byte after pinned ORCHESTRATION-KERNEL.js before holder launch.
+ // DISABLED/UNBOUND until all placeholders are replaced and the resulting entry is reviewed.
+-const JC2_ENTRY = "JC2_ENTRY_SELECTOR_PLACEHOLDER";
+-const JC2_CONFIG = "/home/ubuntu/jc2/box/caprun-lateflow-completion-sol-20260912/FROZEN-CONFIG.json";
++const JC2_ENTRY = "@@ENTRY@@";
++const JC2_CONFIG = "/home/ubuntu/jc2/box/caprun-lateflow-corrected-astra-20260912/FROZEN-CONFIG.json";
++const phaseKey = "jc2.corrected.phase." + JC2_ENTRY;
+ const phases = Object.freeze(["refuse-status","refuse-caps","refuse-inventory","refuse-source","refuse-hash","valid","startup-produce","startup-check","dummy"]);
+ const candidateNames = Object.freeze(phases.map(x => "authority/" + x + ".json").concat(["ROOT-REGISTRATION.json","ROOT-EXECUTION-CARD.md","FINAL-INSTALL-INPUTS.sha256","final-install.sh","SUMMARY.json"]));
+ function exactObject(value, keys, name) {
+@@ -9,15 +10,16 @@
+       JSON.stringify(Object.keys(value).sort()) !== JSON.stringify([...keys].sort())) jc2Stop(name + " census");
+ }
+ async function admin(key, argv, stop, limit=12000) {
+-  const state = load("jc2.admin." + key);
+-  if (state === undefined) return jc2Admin(key, argv, stop, false, limit, false);
+-  if (!state.terminal && state.session_id !== undefined) {
+-    const collect = Date.now() >= stop;
+-    const value = await jc2Admin(key, argv, stop, true, limit, collect);
+-    if (collect) jc2Stop("late collection complete; no successor");
+-    return value;
+-  }
+-  jc2Stop("operation already used or launch response unknown; no retry");
++  if (load("jc2.admin."+key)!==undefined) jc2Stop("used operation: no phase replay");
++  store(phaseKey,{...load(phaseKey),current:{key,argv,stop,limit}});
++  return jc2Admin(key,argv,stop,false,limit,false);
++}
++async function privateParent(cfg,key,parent,identity,targets=[]) {
++  jc2Path(parent); targets.forEach(jc2Path);
++  if(typeof identity!=="string" || !/^[1-9][0-9]*:[1-9][0-9]*:[0-9]+:[0-9]+:700$/.test(identity)) jc2Stop("private parent identity");
++  const script='set -eu; test "$(readlink -e "$1")" = "$1"; test ! -L "$1"; test "$(stat -c %d:%i:%u:%g:%a "$1")" = "$2"; shift 2; for p in "$@"; do test ! -e "$p"; test ! -L "$p"; done';
++  await admin(key,["/bin/bash","-c",script,"jc2-private-parent",parent,identity,...targets],beforeStops(cfg,3000),2000);
++  notify({status:"COOPERATIVE_PRIVATE_PARENT_CHECKED",key,parent,identity,absent:targets});
+ }
+ function jsonPatch(path, value) {
+   jc2Path(path);
+@@ -25,9 +27,39 @@
+   if (raw.length > 131072 || raw.includes("\r") || raw.includes("\0")) jc2Stop("record framing");
+   return "*** Begin Patch\n*** Add File: " + path + "\n" + raw.slice(0,-1).split("\n").map(x => "+" + x).join("\n") + "\n*** End Patch";
+ }
+-async function addRecord(path, value) {
+-  const result = await tools.apply_patch(jsonPatch(path, value));
+-  if (result && result.isError) jc2Stop("exclusive record publication");
++async function addRecord(cfg,key,path,value) {
++  const parent=cfg.local.records_directory;
++  if(![cfg.local.admission_record,cfg.local.observation,cfg.local.decision,cfg.local.install_commitment,cfg.local.install_receipt].includes(path) ||
++     !path.startsWith(parent+"/") || path.slice(parent.length+1).includes("/")) jc2Stop("record target census");
++  await privateParent(cfg,key+".absence",parent,cfg.local.records_identity,[path]);
++  store(phaseKey,{...load(phaseKey),current:null,publication:key});
++  const result=await tools.apply_patch(jsonPatch(path,value));
++  if(result && result.isError) jc2Stop("record patch failed; preserve partial");
++  const raw=await readText(cfg,key+".readback",path);
++  if(raw!==JSON.stringify(value,null,2)+"\n") jc2Stop("record exact readback");
++  await admin(key+".freeze",["/bin/bash","-c",'set -eu; chmod 0444 -- "$1"; sync -f "$1"; sync -f "$2"',"jc2-freeze",path,parent],beforeStops(cfg,3000),2000);
++  await privateParent(cfg,key+".parent.after",parent,cfg.local.records_identity);
++  // apply_patch is NOT O_EXCL. Safety assumes the frozen exclusive-writer contract.
++}
++function checksumMap(raw) {
++  if(typeof raw!=="string" || !raw.endsWith("\n")) jc2Stop("manifest framing");
++  const out={};
++  for(const line of raw.slice(0,-1).split("\n")){
++    const m=/^([0-9a-f]{64})  (\/[A-Za-z0-9_.\/-]+)$/.exec(line);
++    if(!m || Object.hasOwn(out,m[2])) jc2Stop("manifest row");
++    out[jc2Path(m[2])]=jc2Hex(m[1]);
++  }
++  return out;
++}
++async function fixedChecks(cfg,label) {
++  const local=checksumMap(await readText(cfg,label+".local-manifest",cfg.local.preholder_local_manifest));
++  const remote=checksumMap(await readText(cfg,label+".remote-manifest",cfg.local.preholder_remote_manifest));
++  const same=(a,b)=>JSON.stringify([...a].sort())===JSON.stringify([...b].sort());
++  if(!same(Object.keys(local),cfg.local.fixed_paths)||!same(Object.keys(remote),cfg.remote.fixed_paths)) jc2Stop("host-separated fixed census");
++  jc2HashReadback(await admin(label+".local-files",["/usr/bin/sha256sum",...Object.keys(local)],beforeStops(cfg,5000),24000),local);
++  jc2HashReadback(await admin(label+".remote-files",jc2SSH(cfg.transport,cfg.worker.host,["/usr/bin/sha256sum",...Object.keys(remote)]),beforeStops(cfg,5000),24000),remote);
++  for(const [name,path] of [["installed",cfg.remote.installed_manifest],["native",cfg.remote.native_list]])
++    await admin(label+"."+name,jc2SSH(cfg.transport,cfg.worker.host,["/usr/bin/sha256sum","--strict","-c",jc2Path(path)]),beforeStops(cfg,5000),24000);
+ }
+ function oneHash(raw, path) {
+   const m = /^([0-9a-f]{64})  (\/[A-Za-z0-9_.\/-]+)\n$/.exec(raw);
+@@ -54,12 +86,14 @@
+   const serviceArg=["/usr/bin/systemctl","--user","show",cfg.coordinator.service_unit,...serviceKeys.flatMap(x=>["--property",x])];
+   jc2ExactProperties(await admin(label+".timer",timerArg,stop),cfg.coordinator.timer_properties);
+   jc2ExactProperties(await admin(label+".service",serviceArg,stop),cfg.coordinator.service_properties);
++  await fixedChecks(cfg,label+".fixed");
+ }
+-function validateObservation(cfg,o) {
++function validateObservation(cfg,o,d) {
+   exactObject(o,["schema","context","instance_id","hostname","boot_id","pid_namespace","cgroup_path","holder_pid","start_ticks","invocation_id","outer_device","outer_inode","leaves","coordinator_receipt_sha256","native_manifest_sha256","native_list_sha256"],"observation");
+   if (o.schema!=="caprun-late-observation/v1" || o.context!==cfg.context || o.instance_id!==cfg.worker.instance_id || o.hostname!==cfg.worker.hostname || o.boot_id!==cfg.worker.boot_id || o.pid_namespace!==cfg.worker.pid_namespace || o.cgroup_path!==cfg.remote.cgroup ||
+       !Number.isSafeInteger(o.holder_pid) || o.holder_pid<=0 || o.holder_pid>=2147483648 || !Number.isSafeInteger(o.start_ticks) || o.start_ticks<=0 || !/^[0-9a-f]{32}$/.test(o.invocation_id) ||
+       o.coordinator_receipt_sha256!==cfg.coordinator.receipt_sha256 || o.native_manifest_sha256!==cfg.remote.native_manifest_sha256 || o.native_list_sha256!==cfg.coordinator.native_list_sha256 || !Array.isArray(o.leaves) || o.leaves.length!==9) jc2Stop("observation identity/digest");
++  if(String(o.holder_pid)!==d.holder_pid || String(o.start_ticks)!==d.start_ticks || o.invocation_id!==d.invocation_id || !Number.isSafeInteger(o.outer_device)||o.outer_device<=0||!Number.isSafeInteger(o.outer_inode)||o.outer_inode<=0) jc2Stop("admission-observation identity drift");
+   const ids=new Set([o.outer_device+":"+o.outer_inode]);
+   for (let i=0;i<9;i++) { const x=o.leaves[i]; exactObject(x,["name","path","device","inode"],"leaf");
+     if(x.name!==phases[i] || x.path!==cfg.remote.cgroup+"/"+phases[i] || !Number.isSafeInteger(x.device)||x.device<=0||!Number.isSafeInteger(x.inode)||x.inode<=0||ids.has(x.device+":"+x.inode)) jc2Stop("leaf identity/order"); ids.add(x.device+":"+x.inode); }
+@@ -68,9 +102,21 @@
+   const seedStop = Date.now()+10000;
+   const raw = await admin("config."+JC2_ENTRY,["/usr/bin/sed","-n","1,1000p",JC2_CONFIG],seedStop,24000);
+   const cfg=JSON.parse(raw);
+-  if(cfg.schema!=="caprun-lateflow-completion-frozen/v1" || cfg.armed!==true || cfg.review_state!=="DIFFERENT_MODEL_REVIEWED_BOUND" || !cfg.entry_authorities || cfg.entry_authorities[JC2_ENTRY]!=="ROOT_EXPLICIT_SEPARATE_"+JC2_ENTRY || cfg.context!=="ROOT_ATTESTED_CANDIDATE" || cfg.authority_disposition!=="EXPECTED_RUNTIME_OUTPUTS_DO_NOT_PREINSTALL" || /PLACEHOLDER|UNBOUND/.test(raw)) jc2Stop("unbound/unreviewed config");
++  if(cfg.schema!=="caprun-lateflow-corrected-frozen/v1" || cfg.armed!==true || cfg.review_state!=="DIFFERENT_MODEL_REVIEWED_BOUND" || !cfg.entry_authorities || cfg.entry_authorities[JC2_ENTRY]!=="ROOT_EXPLICIT_SEPARATE_"+JC2_ENTRY || cfg.context!=="ROOT_ATTESTED_CANDIDATE" || cfg.authority_disposition!=="EXPECTED_RUNTIME_OUTPUTS_DO_NOT_PREINSTALL" || /PLACEHOLDER|UNBOUND/.test(raw)) jc2Stop("unbound/unreviewed config");
+   beforeStops(cfg,5000);
+-  await admin("preholder."+JC2_ENTRY,["/usr/bin/sha256sum","--strict","-c",jc2Path(cfg.local.preholder_manifest)],beforeStops(cfg,5000),24000);
++  if(cfg.local.exclusive_no_concurrent_writer!==true) jc2Stop("private writer contract");
++  const directory=JC2_CONFIG.slice(0,JC2_CONFIG.lastIndexOf("/"));
++  const requiredLocal=[...['ADMIT','ATTEST','INSTALL','RELEASE'].map(x=>directory+'/'+x+'.functions.exec.js'),JC2_CONFIG,cfg.local.caller,
++    '/home/ubuntu/jc2/box/caprun-latebinder-code-astra-20260911/latebind.py',
++    '/home/ubuntu/jc2/box/caprun-candidate-stage-root-20260911/stage_patch.py',cfg.local.prepared_pins,cfg.local.preholder_remote_manifest,
++    ...['ROOT-REGISTRATION.preholder.json','AUTHORITIES.preholder.json','ROOT-EXECUTION-CARD.preholder.md','final-install.preholder.sh'].map(n=>cfg.local.prepared_directory+'/'+n)];
++  const requiredRemote=[cfg.remote.admission,cfg.remote.observe,cfg.remote.receiver,cfg.remote.release_check,cfg.remote.fifo_writer,cfg.remote.holder,cfg.remote.installed_manifest,cfg.remote.native_list];
++  const same=(a,b)=>Array.isArray(a)&&JSON.stringify([...a].sort())===JSON.stringify([...b].sort());
++  if(new Set(requiredLocal).size!==14||new Set(requiredRemote).size!==8||!same(cfg.local.fixed_paths,requiredLocal)||!same(cfg.remote.fixed_paths,requiredRemote)) jc2Stop('fixed role inventory');
++  if(!requiredRemote.includes(cfg.remote.installed_manifest)||!requiredRemote.includes(cfg.remote.native_list)) jc2Stop('remote closure manifests');
++  await privateParent(cfg,'private.'+JC2_ENTRY,cfg.local.records_directory,cfg.local.records_identity,
++    JC2_ENTRY==='ADMIT'?[cfg.local.admission_record,cfg.local.observation,cfg.local.decision,cfg.local.install_commitment,cfg.local.install_receipt]:[]);
++  await fixedChecks(cfg,"preholder."+JC2_ENTRY);
+   return cfg;
+ }
+ async function loadAdmission(cfg) {
+@@ -95,7 +141,7 @@
+   await freshCoordinator(cfg,"ADMIT.fresh");
+   const raw=await admin("ADMIT.remote",jc2SSH(cfg.transport,cfg.worker.host,[jc2Path(cfg.remote.admission)]),beforeStops(cfg,8000),65536);
+   const data=jc2HolderData(raw);
+-  await addRecord(cfg.local.admission_record,{schema:"caprun-admission-data/v1",status:"ADMITTED_NOT_RELEASED",raw,holder_pid:Number(data.holder_pid),start_ticks:Number(data.start_ticks),invocation_id:data.invocation_id});
++  await addRecord(cfg,"ADMIT.record",cfg.local.admission_record,{schema:"caprun-admission-data/v1",status:"ADMITTED_NOT_RELEASED",raw,holder_pid:Number(data.holder_pid),start_ticks:Number(data.start_ticks),invocation_id:data.invocation_id});
+   text({status:"ADMITTED_DATA_FROZEN_NOT_ATTESTED",next:"separate ROOT ATTEST entry"});
+ }
+ async function attest(cfg) {
+@@ -103,20 +149,20 @@
+   await freshCoordinator(cfg,"ATTEST.fresh");
+   const d=await loadAdmission(cfg);
+   const raw=await admin("ATTEST.observe",jc2SSH(cfg.transport,cfg.worker.host,[jc2Path(cfg.remote.observe),d.holder_pid,d.start_ticks,d.invocation_id]),beforeStops(cfg,10000),65536);
+-  const o=JSON.parse(raw); validateObservation(cfg,o);
+-  await addRecord(cfg.local.observation,o);
++  const o=JSON.parse(raw); validateObservation(cfg,o,d);
++  await addRecord(cfg,"ATTEST.observation",cfg.local.observation,o);
+   const obsSha=oneHash(await admin("ATTEST.obshash",["/usr/bin/sha256sum",jc2Path(cfg.local.observation)],beforeStops(cfg,5000)),cfg.local.observation);
+   const pins=JSON.parse(await readText(cfg,"ATTEST.pins",cfg.local.prepared_pins));
+   exactObject(pins,["ROOT-REGISTRATION.preholder.json","AUTHORITIES.preholder.json","ROOT-EXECUTION-CARD.preholder.md","final-install.preholder.sh"],"prepared pins");
+   if(Object.values(pins).some(x=>typeof x!=="string"||!/^[0-9a-f]{64}$/.test(x))) jc2Stop("prepared pin digest");
+-  await addRecord(cfg.local.decision,{schema:"ROOT_METADATA_BINDING_ONLY_NOT_RELEASE",context:cfg.context,prepared_pins:pins,observation_sha256:obsSha,enabled:true,exclusive_no_concurrent_writer:true,root_no_migration:true,freeze_token:"ROOT_FREEZE_EXACT_PREFLIGHT9_REGISTRATION_ONLY"});
++  await addRecord(cfg,"ATTEST.decision",cfg.local.decision,{schema:"ROOT_METADATA_BINDING_ONLY_NOT_RELEASE",context:cfg.context,prepared_pins:pins,observation_sha256:obsSha,enabled:true,exclusive_no_concurrent_writer:true,root_no_migration:true,freeze_token:"ROOT_FREEZE_EXACT_PREFLIGHT9_REGISTRATION_ONLY"});
+   text({status:"ROOT_ATTESTED_NOT_INSTALLED_NOT_RELEASED",next:"separate ROOT INSTALL entry"});
+ }
+ async function install(cfg) {
+   if(cfg.phrases.install!=="ROOT_INSTALL_EXACT_ATTESTED_PREFLIGHT9_CANDIDATE") jc2Stop("install authority");
+   await freshCoordinator(cfg,"INSTALL.fresh.before");
+   const d=await loadAdmission(cfg);
+-  const obsRaw=await readText(cfg,"INSTALL.obs",cfg.local.observation); validateObservation(cfg,JSON.parse(obsRaw));
++  const obsRaw=await readText(cfg,"INSTALL.obs",cfg.local.observation); validateObservation(cfg,JSON.parse(obsRaw),d);
+   await validateDecision(cfg,"INSTALL");
+   const made=(await admin("INSTALL.mktemp",["/usr/bin/mktemp","-d","/home/ubuntu/jc2/box/caprun-stage-exercise-20260912.XXXXXXXX"],beforeStops(cfg,15000),1000)).trim();
+   if(!/^\/home\/ubuntu\/jc2\/box\/caprun-stage-exercise-20260912\.[A-Za-z0-9]{8}$/.test(made)) jc2Stop("candidate prefix");
+@@ -124,37 +170,76 @@
+   if(packet.status!=="CANDIDATE_NOT_INSTALLED_NOT_RELEASED"||packet.context!==cfg.context) jc2Stop("caller status");
+   const expected=packet.expected_sha256; const paths=Object.keys(expected);
+   if(paths.length!==14 || candidateNames.some(n=>!Object.hasOwn(expected,made+"/"+n)) || paths.some(p=>!candidateNames.includes(p.slice(made.length+1))||!/^[0-9a-f]{64}$/.test(expected[p]))) jc2Stop("fourteen candidate census");
++  const parentIdentity=(await admin("INSTALL.parent.stat",["/usr/bin/stat","-c","%d:%i:%u:%g:%a",made],beforeStops(cfg,12000),2000)).trim();
++  if(!parentIdentity.endsWith(":"+cfg.local.owner_uid+":"+cfg.local.owner_gid+":700")) jc2Stop("candidate owner/mode");
++  await privateParent(cfg,"INSTALL.absence",made,parentIdentity,paths.concat([made+"/authority"]));
++  await admin("INSTALL.authority-parent",["/usr/bin/mkdir","-m","0700",made+"/authority"],beforeStops(cfg,12000),2000);
++  store(phaseKey,{...load(phaseKey),current:null,publication:"candidate"});
+   const patched=await tools.apply_patch(packet.patch); if(patched&&patched.isError) jc2Stop("candidate patch; no retry");
++  await privateParent(cfg,"INSTALL.parent.after",made,parentIdentity);
++  await admin("INSTALL.freeze",["/bin/bash","-c",'set -eu; p=$1; shift; chmod 0444 -- "$@"; sync -f "$p/authority"; sync -f "$p"',"jc2-candidate",made,...paths],beforeStops(cfg,12000),2000);
+   jc2HashReadback(await admin("INSTALL.readback",["/usr/bin/sha256sum",...paths],beforeStops(cfg,12000),12000),expected);
+-  await admin("INSTALL.receive.preflight",jc2SSH(cfg.transport,cfg.worker.host,[jc2Path(cfg.remote.receiver),"--preflight"]),beforeStops(cfg,12000));
+   const transfer=["ROOT-REGISTRATION.json","ROOT-EXECUTION-CARD.md","FINAL-INSTALL-INPUTS.sha256","final-install.sh"];
++  const staged={}; for(const n of transfer) staged[cfg.remote.stage+"/"+n]=expected[made+"/"+n]; staged[cfg.remote.stage+"/native.sha256"]=cfg.coordinator.native_list_sha256;
++  const installed={}; for(const n of transfer.slice(0,2)) installed[cfg.remote.base+"/metadata/"+n]=expected[made+"/"+n];
++  await addRecord(cfg,"INSTALL.commitment",cfg.local.install_commitment,{schema:"caprun-install-commitment/v1",status:"EXACT_CANDIDATE_COMMITTED_NOT_INSTALLED",candidate_directory:made,holder:d,expected,staged,installed});
++  const commitmentSHA=oneHash(await admin("INSTALL.commitment.hash",["/usr/bin/sha256sum",cfg.local.install_commitment],beforeStops(cfg,12000)),cfg.local.install_commitment);
++  await admin("INSTALL.receive.preflight",jc2SSH(cfg.transport,cfg.worker.host,[jc2Path(cfg.remote.receiver),"--preflight"]),beforeStops(cfg,12000));
+   for(const n of transfer.concat(["native.sha256"])) {
+     const src=n==="native.sha256"?cfg.coordinator.native_list:made+"/"+n;
+     const remote=jc2SSH(cfg.transport,cfg.worker.host,[jc2Path(cfg.remote.receiver),n]);
+-    const pipeline="/usr/bin/dd if="+jc2Quote(jc2Path(src))+" status=none | "+remote.map(jc2Quote).join(" ");
++    const pipeline="set -euo pipefail; /usr/bin/dd if="+jc2Quote(jc2Path(src))+" status=none | "+remote.map(jc2Quote).join(" ");
+     await admin("INSTALL.stream."+n,["/bin/bash","-c",pipeline],beforeStops(cfg,12000),12000);
+   }
+-  const staged={}; for(const n of transfer) staged[cfg.remote.stage+"/"+n]=expected[made+"/"+n]; staged[cfg.remote.stage+"/native.sha256"]=cfg.coordinator.native_list_sha256;
+   jc2HashReadback(await admin("INSTALL.remote.readback",jc2SSH(cfg.transport,cfg.worker.host,["/usr/bin/sha256sum",...Object.keys(staged)]),beforeStops(cfg,10000),12000),staged);
+   await freshCoordinator(cfg,"INSTALL.fresh.install");
+   await admin("INSTALL.final",jc2SSH(cfg.transport,cfg.worker.host,["/bin/bash",cfg.remote.stage+"/final-install.sh"]),beforeStops(cfg,10000),24000);
++  jc2HashReadback(await admin("INSTALL.installed.readback",jc2SSH(cfg.transport,cfg.worker.host,["/usr/bin/sha256sum",...Object.keys(installed)]),beforeStops(cfg,5000),12000),installed);
++  await addRecord(cfg,"INSTALL.receipt",cfg.local.install_receipt,{schema:"caprun-install-receipt/v1",status:"INSTALLED_NOT_RELEASED",commitment_sha256:commitmentSHA,holder:d});
+   text({status:"INSTALLED_NOT_RELEASED",candidate_directory:made,verified_files:14,authority_files:"EXPECTED_RUNTIME_OUTPUTS_DO_NOT_PREINSTALL",next:"separate ROOT RELEASE entry"});
+ }
+ async function release(cfg) {
+   if(cfg.phrases.release!=="ROOT_RELEASE_EXACT_PREFLIGHT9_ONLY") jc2Stop("release authority");
+   await freshCoordinator(cfg,"RELEASE.fresh");
+   const d=await loadAdmission(cfg);
+-  const o=JSON.parse(await readText(cfg,"RELEASE.obs",cfg.local.observation)); validateObservation(cfg,o);
++  const o=JSON.parse(await readText(cfg,"RELEASE.obs",cfg.local.observation)); validateObservation(cfg,o,d);
+   await validateDecision(cfg,"RELEASE");
+-  const reg=cfg.remote.base+"/metadata/ROOT-REGISTRATION.json";
+-  const raw=await admin("RELEASE.reghash",jc2SSH(cfg.transport,cfg.worker.host,["/usr/bin/sha256sum",reg]),beforeStops(cfg,8000));
+-  const regsha=oneHash(raw,reg);
++  const commit=JSON.parse(await readText(cfg,"RELEASE.commitment",cfg.local.install_commitment));
++  exactObject(commit,["schema","status","candidate_directory","holder","expected","staged","installed"],"install commitment");
++  const receipt=JSON.parse(await readText(cfg,"RELEASE.receipt",cfg.local.install_receipt));
++  exactObject(receipt,["schema","status","commitment_sha256","holder"],"install receipt");
++  const csha=oneHash(await admin("RELEASE.commitment.hash",["/usr/bin/sha256sum",cfg.local.install_commitment],beforeStops(cfg,8000)),cfg.local.install_commitment);
++  if(commit.schema!=="caprun-install-commitment/v1"||commit.status!=="EXACT_CANDIDATE_COMMITTED_NOT_INSTALLED"||receipt.schema!=="caprun-install-receipt/v1"||receipt.status!=="INSTALLED_NOT_RELEASED"||receipt.commitment_sha256!==csha||JSON.stringify(commit.holder)!==JSON.stringify(d)||JSON.stringify(receipt.holder)!==JSON.stringify(d)) jc2Stop("accepted installation commitment");
++  const made=jc2Path(commit.candidate_directory);
++  if(!/^\/home\/ubuntu\/jc2\/box\/caprun-stage-exercise-20260912\.[A-Za-z0-9]{8}$/.test(made)) jc2Stop("committed candidate prefix");
++  exactObject(commit.expected,candidateNames.map(n=>made+"/"+n),"candidate commitment census");
++  const names=["ROOT-REGISTRATION.json","ROOT-EXECUTION-CARD.md","FINAL-INSTALL-INPUTS.sha256","final-install.sh"];
++  exactObject(commit.staged,names.concat(["native.sha256"]).map(n=>cfg.remote.stage+"/"+n),"staged commitment census");
++  exactObject(commit.installed,names.slice(0,2).map(n=>cfg.remote.base+"/metadata/"+n),"installed commitment census");
++  for(const n of names) if(commit.staged[cfg.remote.stage+"/"+n]!==commit.expected[made+"/"+n]) jc2Stop("candidate-stage binding");
++  for(const n of names.slice(0,2)) if(commit.installed[cfg.remote.base+"/metadata/"+n]!==commit.expected[made+"/"+n]) jc2Stop("candidate-install binding");
++  if(commit.staged[cfg.remote.stage+"/native.sha256"]!==cfg.coordinator.native_list_sha256) jc2Stop("committed native digest");
++  jc2HashReadback(await admin("RELEASE.candidate.readback",["/usr/bin/sha256sum",...Object.keys(commit.expected)],beforeStops(cfg,8000),24000),commit.expected);
++  const remote={...commit.staged,...commit.installed};
++  jc2HashReadback(await admin("RELEASE.installed.readback",jc2SSH(cfg.transport,cfg.worker.host,["/usr/bin/sha256sum",...Object.keys(remote)]),beforeStops(cfg,8000),24000),remote);
++  const regsha=jc2Hex(commit.installed[cfg.remote.base+"/metadata/ROOT-REGISTRATION.json"]);
+   await admin("RELEASE.guard",jc2SSH(cfg.transport,cfg.worker.host,[jc2Path(cfg.remote.release_check),cfg.phrases.release,d.holder_pid,d.start_ticks,d.invocation_id,regsha]),beforeStops(cfg,8000),24000);
+   text({status:"ROOT_RELEASE_WRITE_RETURNED",registration_sha256:regsha});
+ }
++if(!["ADMIT","ATTEST","INSTALL","RELEASE"].includes(JC2_ENTRY)) jc2Stop("entry selector");
++const prior=load(phaseKey);
++if(prior!==undefined){
++  const c=prior.current;
++  if(c){const state=load("jc2.admin."+c.key);
++    if(state && !state.terminal && state.session_id!==undefined)
++      await jc2Admin(c.key,state.argv,state.absoluteStopMs,true,c.limit,true);
++  }
++  jc2Stop("phase already entered: collection only, no continuation/retry");
++}
++store(phaseKey,{status:"ENTERED",current:null});
+ const cfg=await loadConfig();
+ if(JC2_ENTRY==="ADMIT") await admit(cfg);
+ else if(JC2_ENTRY==="ATTEST") await attest(cfg);
+ else if(JC2_ENTRY==="INSTALL") await install(cfg);
+-else if(JC2_ENTRY==="RELEASE") await release(cfg);
+-else jc2Stop("entry selector");
++else await release(cfg);
++store(phaseKey,{status:"TERMINAL",current:null});

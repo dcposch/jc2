@@ -1,0 +1,24 @@
+  [t=0.3s] minor incidence: 13 rows, 12 pivots, residual 0
+  [t=0.5s] major h2: K2c=125 D1 rows=9 pivots=9 free=116
+  [t=13.2s] outer: offsets 0..7, pivots=180 free=788
+  [t=14.3s] KF/KG built (|KF|=190, |KG|=142)
+  [t=85.6s] minor local tables done
+    [J-fast] single-pass product at max_t=8 in 27.4s (308 (t,z) slots)
+    [J-fast] w-bands extracted at 66.1s
+  [t=151.7s] Jacobian bands t=0..8 done; t^0 band (J degree 178) nonzero w-slots = 0
+{
+  "control": "sparse-ring fast path == charged saturated T=8 rows",
+  "T": 8,
+  "rows": 1420,
+  "row_counts": {
+    "F": 12,
+    "G": 12,
+    "J": 1396
+  },
+  "rows_sha256": "68201f86f8103fad3ad5b8dbe5b36a8d35a4a81ce85338a6957beb1dc5bfcc6d",
+  "charged_rows_sha256": "68201f86f8103fad3ad5b8dbe5b36a8d35a4a81ce85338a6957beb1dc5bfcc6d",
+  "MATCH": true,
+  "build_seconds": 151.7,
+  "sympy_Expr_path_build_seconds": 45.2,
+  "wall_seconds": 196.9
+}

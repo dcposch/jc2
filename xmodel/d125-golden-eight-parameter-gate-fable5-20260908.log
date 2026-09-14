@@ -1,0 +1,19 @@
+cli=2.1.259 (Claude Code) model=fable effort=max mode=bypassPermissions shell=yes auth=claude.ai max_output_tokens=128000
+Gate complete. The report is at `xmodel/d125-golden-eight-parameter-gate-fable5-20260908.md`, finished at 03:15Z, about eight minutes after start, with the single standalone `<!-- BODY-END -->` marker appended last and nothing after it. No seal, no charge_basis, no launch.
+
+**Outcome: all six targets CONFIRMED.** Astra's seven-row certificate is correct. In the ring K[alpha,beta,gamma,u,v,w,tau,lambda][lambda⁻¹] with K=Q(rho), the complete coefficient ideal of [A,B]−c·g² for the literal ansatz, with c=−(5/9)lambda³(1−rho) as the face forces, is the unit ideal. Because every step is pure ideal membership with only fixed-field units and lambda inverted, the conclusion holds over every commutative K-algebra with lambda a unit, nilpotent bases included. No j=12, whole-golden, nonodd, physical-lift or JC2 conclusion is drawn.
+
+**What I verified by hand and by exact controls**
+
+- The free identity [A,B]=[R,T]+[F,mu L] follows from the biderivation and chain rule, with scalar kernel chi·phi'−psi'=−delta exactly. Checked as a free-symbol polynomial identity, with D² reduced to HL only.
+- Degree bookkeeping isolates the degree-12 block as (5lambda²/3)H[H,LK3]. The g⁷p⁵ row is exactly (10/3)lambda²rho²U with no contamination. The g⁶p⁶ row is (35/3)lambda²rho²V plus an explicit U multiple.
+- The K2 rewrite is exact modulo (U,V) via Lp²M=pD. The g⁶p⁴ row gives w, and the constant row −mu(alpha·w+tau) has no U,V contamination at all.
+- Modulo (U,V,w,tau) the bracket is alpha·mu[H,L]−delta·lambda[H,D]+mu·lambda[D,L], and the gp row is −2mu·lambda, a unit.
+
+**Two remarks recorded in the report**
+
+- Rows 5 and 6 (delta, alpha) are not needed. The gp row is already a unit modulo the first four consequences. This strengthens the certificate rather than weakening it.
+- The producer's checker verifies only the seven scalar multipliers. The structural identities are hand derivations in the proof text, which Astra states accurately. My own controls close that gap with exact free-symbol checks. The claim that Card2 and Fable's j=12 family are the same ansatz is not verifiable from the charged inputs and was not used.
+
+**Controls.** My independent `control.py` and `driver.py` live in `box/d125-golden-eight-parameter-gate-fable5-20260908/`. Fourteen capped runs: normal passes plainly and under -O, and all six changed-object mutations fail at the intended implication in both modes. All ten input hashes matched PINS.json, and every hash token in the report was generated and cross-checked against the pin files. Nothing was committed and no frozen input was touched.
+DIVERT path=xmodel/d125-golden-eight-parameter-gate-fable5-20260908.md status=CLEAN body_bytes=11852 body_sha256=3f1301aeb91aa41c1a1b3444771b3462bb031b6b989d551e468b9dec26fbd244

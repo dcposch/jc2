@@ -1,0 +1,172 @@
+PREPIN TASK.md ok 
+PREPIN latebind.py ok 
+PREPIN caprun-latebinder-first-fable5-20260911.md ok 
+PREPIN stage_patch.py ok 
+PREPIN EXERCISE.json ok 
+PREPIN caprun-candidate-stage-first-fable5-20260911.md ok 
+PREPIN ROOT-REGISTRATION.preholder.json ok 
+PREPIN ROOT-REGISTRATION.json ok 
+PREPIN AUTHORITIES.preholder.json ok 
+PREPIN ROOT-EXECUTION-CARD.preholder.md ok 
+PREPIN ROOT-EXECUTION-CARD.md ok 
+PREPIN final-install.preholder.sh ok 
+PREPIN final-install.sh ok 
+PREPIN FINAL-INSTALL-INPUTS.sha256 ok 
+PREPIN caller.py ok 
+PREPIN test_caller.py ok 
+PREPIN CONTRACT.md ok 
+PREPIN PINS.json ok 
+PREPIN fixture-pins.json ok 
+PREPIN fixture-observation.json ok 
+PREPIN fixture-decision.json ok 
+PREPIN caprun-candidate-caller-astra-20260911.md ok 
+PREPIN caprun-candidate-caller-astra-20260911.md.artifact.json ok 
+S01 caller imports exactly hashlib/importlib.util/json/pathlib.Path/sys ok 
+S02 no execution/write/network tokens in caller ok []
+S03 single file open, read-binary, bounded ok 
+S04 only stdout packet and stderr refusal writes ok 
+S05 main guard is the only CLI tail ok 
+S06 the only 64-hex literals are the two charged helper pins ok 
+S07 both helper hashes precede either import (code order) ok 
+S08 prefix is only unpacked and handed to make_patch ok 
+S09 no historical identity literal in caller ok 
+S10 packet is serialized ASCII with allow_nan=False, one LF, bounded before stdout ok 
+S11 supplied test subprocess target is only the adjacent caller under -I -S -B ok 
+S12 supplied tests never write files ok 
+L01 caller module loaded from the snapshot ok 
+L02 DEPENDENCY_SHA256 literal unchanged and equal to charged pins ok 
+L03 supplied HISTORY_PINS equal the eight charged pins; exercise pin literal present ok 
+L04 FORBIDDEN is exactly VT FF FS GS RS NEL LS PS ok 
+L05 bounds literal ok 
+R01 five supplied methods pass in RELOCATED IN-PROCESS replay (not a standalone run) ok run=5 fail=0 err=0
+R02 test_real_standalone_cli deliberately not invoked (ROOT replayed the real standalone CLI)
+P01 historical main(argv): exit 0, empty stderr ok 
+P02 one ASCII line with a single trailing LF ok 
+P03 five packet keys, candidate-only status, HISTORICAL_TEST, 78889 bytes ok 
+P04 fourteen expected hashes equal the frozen EXERCISE map ok 
+P05 LF readback reproduces all fourteen hashes and 78889 bytes ok 
+P06 four historical finals byte-identical ok 
+P07 SUMMARY context, no-release flag, thirteen commitments pair with reconstructed bytes ok 
+P08 em dash escaped in packet, raw in reconstructed card ok 
+P09 deterministic packet ok stdout sha256 7c526f38e1a2c5700130802e375a9121ad5c3331d4b2748b89859dbeefbbc65c
+P10 every open is read-binary under the snapshot; no original path touched ok 18 opens
+P11 output-device failure propagates: neither exit 0 nor REFUSED ok 
+P12 ROOT_ATTESTED_CANDIDATE is transport acceptance only: 13 documents identical, SUMMARY differs, still candidate-only ok 
+P13 pins at exactly 131072 bytes accepted ok 
+N01 five arguments ok status=2 stdout=0B
+N02 seven arguments ok status=2 stdout=0B
+N03 lowercase context ok status=2 stdout=0B
+N04 empty context ok status=2 stdout=0B
+N05 missing pins file (helpers present) ok status=2 stdout=0B
+N06 missing bundle file (helpers present) ok status=2 stdout=0B
+N07 pins at 131073 bytes (valid JSON) end-to-end size refusal ok status=2 stdout=0B
+N08 bundle card at 131073 bytes ok status=2 stdout=0B
+N09 bundle card hash mismatch (one LF appended) ok status=2 stdout=0B
+N10 decision context mismatch ok status=2 stdout=0B
+N11 observation context mismatch ok status=2 stdout=0B
+N12 decision observation hash stale ok status=2 stdout=0B
+N13 decision enabled false ok status=2 stdout=0B
+N14 decision freeze token altered ok status=2 stdout=0B
+N15 decision pins differ from supplied pins ok status=2 stdout=0B
+N16 pins one digest altered ok status=2 stdout=0B
+N17 pins extra key ok status=2 stdout=0B
+N18 pins uppercase digest ok status=2 stdout=0B
+N19 pins top-level list ok status=2 stdout=0B
+N20 pins float ok status=2 stdout=0B
+N21 pins duplicate key ok status=2 stdout=0B
+N22 pins NaN ok status=2 stdout=0B
+N23 pins trailing garbage ok status=2 stdout=0B
+N24 pins CR byte ok status=2 stdout=0B
+N25 pins invalid UTF-8 ok status=2 stdout=0B
+N26 pins empty ok status=2 stdout=0B
+N27 observation top-level string ok status=2 stdout=0B
+N28 separator inside observation metadata cannot reach candidates (parent equality check) ok status=2 stdout=0B
+N29 prefix relative ok status=2 stdout=0B
+N30 prefix trailing newline ok status=2 stdout=0B
+N31 prefix outside namespace ok status=2 stdout=0B
+N32 latebind bytes tampered: refused ok status=2 stdout=0B
+N32 latebind bytes tampered: no import attempted ok 
+N33 stage_patch bytes tampered: refused ok status=2 stdout=0B
+N33 stage_patch bytes tampered: no import attempted ok 
+N34 both helpers tampered: refused ok status=2 stdout=0B
+N34 both helpers tampered: no import attempted ok 
+N35 helper file missing: refused ok status=2 stdout=0B
+N35 helper file missing: no import attempted ok 
+N36 DEPENDENCY_PATHS extra key: refused ok status=2 stdout=0B
+N36 DEPENDENCY_PATHS extra key: no import attempted ok 
+N37 DEPENDENCY_PATHS missing key: refused ok status=2 stdout=0B
+N37 DEPENDENCY_PATHS missing key: no import attempted ok 
+F000B ROOT-EXECUTION-CARD: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F000B ROOT-EXECUTION-CARD: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F000B ROOT-EXECUTION-CARD: main refuses, no stdout ok status=2 stdout=0B
+F000B final-install: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F000B final-install: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F000B final-install: main refuses, no stdout ok status=2 stdout=0B
+F000C ROOT-EXECUTION-CARD: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F000C ROOT-EXECUTION-CARD: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F000C ROOT-EXECUTION-CARD: main refuses, no stdout ok status=2 stdout=0B
+F000C final-install: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F000C final-install: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F000C final-install: main refuses, no stdout ok status=2 stdout=0B
+F001C ROOT-EXECUTION-CARD: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F001C ROOT-EXECUTION-CARD: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F001C ROOT-EXECUTION-CARD: main refuses, no stdout ok status=2 stdout=0B
+F001C final-install: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F001C final-install: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F001C final-install: main refuses, no stdout ok status=2 stdout=0B
+F001D ROOT-EXECUTION-CARD: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F001D ROOT-EXECUTION-CARD: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F001D ROOT-EXECUTION-CARD: main refuses, no stdout ok status=2 stdout=0B
+F001D final-install: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F001D final-install: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F001D final-install: main refuses, no stdout ok status=2 stdout=0B
+F001E ROOT-EXECUTION-CARD: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F001E ROOT-EXECUTION-CARD: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F001E ROOT-EXECUTION-CARD: main refuses, no stdout ok status=2 stdout=0B
+F001E final-install: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F001E final-install: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F001E final-install: main refuses, no stdout ok status=2 stdout=0B
+F0085 ROOT-EXECUTION-CARD: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F0085 ROOT-EXECUTION-CARD: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F0085 ROOT-EXECUTION-CARD: main refuses, no stdout ok status=2 stdout=0B
+F0085 final-install: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F0085 final-install: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F0085 final-install: main refuses, no stdout ok status=2 stdout=0B
+F2028 ROOT-EXECUTION-CARD: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F2028 ROOT-EXECUTION-CARD: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F2028 ROOT-EXECUTION-CARD: main refuses, no stdout ok status=2 stdout=0B
+F2028 final-install: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F2028 final-install: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F2028 final-install: main refuses, no stdout ok status=2 stdout=0B
+F2029 ROOT-EXECUTION-CARD: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F2029 ROOT-EXECUTION-CARD: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F2029 ROOT-EXECUTION-CARD: main refuses, no stdout ok status=2 stdout=0B
+F2029 final-install: old bind+make_patch PASS with refreshed commitments (nonvacuous) ok 
+F2029 final-install: new caller raises exactly the hygiene error ok forbidden universal-newline separator
+F2029 final-install: main refuses, no stdout ok status=2 stdout=0B
+A01 ASCII patch-looking card text: exit 0, fourteen paths, bytes and hashes exact, tail preserved as data ok 
+A02 only fourteen unprefixed lines, all Add File under the prefix; one End Patch line ok 
+POSTPIN TASK.md ok 
+POSTPIN latebind.py ok 
+POSTPIN caprun-latebinder-first-fable5-20260911.md ok 
+POSTPIN stage_patch.py ok 
+POSTPIN EXERCISE.json ok 
+POSTPIN caprun-candidate-stage-first-fable5-20260911.md ok 
+POSTPIN ROOT-REGISTRATION.preholder.json ok 
+POSTPIN ROOT-REGISTRATION.json ok 
+POSTPIN AUTHORITIES.preholder.json ok 
+POSTPIN ROOT-EXECUTION-CARD.preholder.md ok 
+POSTPIN ROOT-EXECUTION-CARD.md ok 
+POSTPIN final-install.preholder.sh ok 
+POSTPIN final-install.sh ok 
+POSTPIN FINAL-INSTALL-INPUTS.sha256 ok 
+POSTPIN caller.py ok 
+POSTPIN test_caller.py ok 
+POSTPIN CONTRACT.md ok 
+POSTPIN PINS.json ok 
+POSTPIN fixture-pins.json ok 
+POSTPIN fixture-observation.json ok 
+POSTPIN fixture-decision.json ok 
+POSTPIN caprun-candidate-caller-astra-20260911.md ok 
+POSTPIN caprun-candidate-caller-astra-20260911.md.artifact.json ok 
+TOTAL 170 expectations; 0 failed

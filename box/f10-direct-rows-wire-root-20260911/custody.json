@@ -1,0 +1,53 @@
+{
+  "schema": "jc2.root-static-terminal-custody/v1",
+  "status": "REPORT_FINAL_WRITERS_IDLE",
+  "task": "f10-direct-rows-wire-root-20260911",
+  "first_utc": "2026-09-11T02:35:00Z",
+  "reserve_utc": "2026-09-11T02:39:00Z",
+  "hard_utc": "2026-09-11T02:42:00Z",
+  "report_final_expected_verify_by_utc": "2026-09-11T02:38:36Z",
+  "own_whole_and_input_postpins_utc": "2026-09-11T02:38:09Z",
+  "basis": "0d39df3c9fd69c939a8420c54d03228b9077777d",
+  "read_scope": "Same ROOT WHOLE reuse on current pins for direct theorem and three design docs; direct FIRST/rank theorem fresh WHOLE02:35:25. No claim all six FRESH_WHOLE. See report.",
+  "inputs": [
+    {
+      "path": "xmodel/f10-source-cone-direct-place-astra-20260911.md",
+      "sha256": "e6df0a6458c682128c841a054e4cfb0be00cb2efde0325743f197cdcb0564725"
+    },
+    {
+      "path": "xmodel/f10-source-cone-direct-place-gate-fable5-20260911.md",
+      "sha256": "1aca7ad822cf88a95b30b2cb43c4a07227a78ca389fa28679e8fc1947e530ab0"
+    },
+    {
+      "path": "xmodel/f10-source-cone-fullrank-place-astra-20260911.md",
+      "sha256": "11d1b3a34edfde4d736a946d5543576e79f37fb6a45c737fffa07b3c360e037b"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/OPERATIONS.md",
+      "sha256": "3be532afc6e784842694cf02d4399573228362abb47ae36130ef97c4274faa59"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/ASSERTIONS.md",
+      "sha256": "61b9ce5e1f9b40a765dcb2a2ea5aa3a928197b61bc41cb5cf945632b99ad4de2"
+    },
+    {
+      "path": "box/f10-source-cone-direct-circuit-astra-20260911/WIRE-AND-VALIDATION.md",
+      "sha256": "b9060f0bbc14e92464079b0daca12faa1ba2d367f9ecc7307ba301689de5b77d"
+    }
+  ],
+  "owned": [
+    {
+      "path": "xmodel/f10-direct-rows-wire-root-20260911.md",
+      "sha256": "90c940b021ba9f99f2298aaf394cb082793812ad4428e249b970ecf06baa6c47"
+    },
+    {
+      "path": "xmodel/f10-direct-rows-wire-root-20260911.md.artifact.json",
+      "sha256": "05e35a66fd255c3714d1752e807f9b33287ab26bb5b912ebf4c9acf74df6a0bc"
+    }
+  ],
+  "scientific_execution": "ZERO",
+  "payload_access": "NONE",
+  "implementation": "NONE",
+  "hypothesis": "Operation/assertion contract pending FIRST; projection does not prove it. Not a source exclusion.",
+  "self_excluded": true
+}

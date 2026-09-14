@@ -1,0 +1,17 @@
+PASS sing_ring_line {}
+PASS sing_ideal_line {}
+{"rows": 300, "terms": 154717, "t": 1.5}
+{"rows": 600, "terms": 2671119, "t": 21.5}
+{"rows": 900, "terms": 7299400, "t": 55.9}
+{"rows": 1200, "terms": 10399480, "t": 78.2}
+{"rows": 1500, "terms": 11273495, "t": 84.6}
+PASS no_trailing_jsonl {}
+PASS footer {"generators": 1629, "terms": 11299180, "maxdeg": 12, "maxterms": [30218, "J_8_52"]}
+PASS label_kinds {"define": 160, "inverse": 1, "J": 1468}
+PASS Zj_only_in_inverse {}
+PASS all_row_identifiers_declared {}
+FAIL every_declared_variable_occurs {"missing": ["A3c_98_0"]}
+PASS checked_sing_rows_equal_wrapped_jsonl {"rows_with_rational": 1325}
+PASS original_sing_rows_equal_unwrapped_jsonl {}
+PASS sing_footers {"checked_tail": ";\nprint(\"ALL_ROWS_PARSED\"); print(\"GENERATORS=\"+string(size(I))); print(\"VARIABLES=\"+string(nvars(basering))); print(\"END_PARSE\"); quit;\n", "original_tail": ";\nprint(\"ALL_ROWS_PARSED\"); print(\"GENERATORS=\"+string(size(I))); print(\"VARIABLES=\"+string(nvars(basering)
+DONE any_fail= True

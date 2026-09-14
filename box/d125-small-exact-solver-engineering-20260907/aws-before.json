@@ -1,0 +1,37 @@
+{
+    "Id": "i-0da0cebfc97c9fd54",
+    "State": "running",
+    "Type": "r7i.8xlarge",
+    "PrivateIp": "172.30.0.56",
+    "PublicIp": "54.237.229.28",
+    "Tags": [
+        {
+            "Key": "Owner",
+            "Value": "coordinator-factored-jacobian-20260906"
+        },
+        {
+            "Key": "market",
+            "Value": "ondemand"
+        },
+        {
+            "Key": "jc2fleet",
+            "Value": "1"
+        },
+        {
+            "Key": "Name",
+            "Value": "jc2-worker-20260906T094546Z"
+        }
+    ],
+    "Block": [
+        {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+                "AttachTime": "2026-09-06T09:45:48+00:00",
+                "DeleteOnTermination": true,
+                "Status": "attached",
+                "VolumeId": "vol-0eb6450d18ffa89f1",
+                "EbsCardIndex": 0
+            }
+        }
+    ]
+}

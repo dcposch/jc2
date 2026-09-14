@@ -1,0 +1,269 @@
+                                                A NOTE ON THE PLANE JACOBIAN CONJECTURE
+
+                                                                            NGUYEN VAN CHAU
+arXiv:1005.3866v2 [math.AG] 3 Jun 2010
+
+
+
+
+                                                 Abstract. It is shown that every polynomial function P : C2 −→ C with
+                                                 irreducible fibres of same a genus is a coordinate. In consequence, there does
+                                                 not exist counterexamples F = (P, Q) to the Jacobian conjecture such that all
+                                                 fibres of P are irreducible curves of same a genus.
+                                                     Keywords and Phrases: Jacobian conjecture, Rational curve.
+                                                     2000 Mathematical Subject Classification: 14R15, 14E22, 14D06,14H05.
+
+                                         1. The Jacobian conjecture (JC), posed first in 1939 by Ott-Heinrich Keller [7]
+                                         and still opened, asserts that every polynomial maps F = (P, Q) : C2 −→ C2 with
+                                         non-zero constant Jacobian J(P, Q) := Px Qy − Py Qx ≡ c 6= 0 is invertible. Its
+                                         history, many references, and some partial results, can be found in [2] and [4].
+                                            Since 1979 in his work [15] concerning with the plane case of (JC) Razar had
+                                         found the following:
+                                         Theorem 1 ([15]). A non-zero constant Jacobian polynomial map F = (P, Q) is
+                                         invertible if all fibres of P are irreducible rational curves.
+                                            In other words, it claim that there does not exists counterexamples F = (P, Q)
+                                         to (JC) such that all fibres of P are irreducible rational curves. In attempting
+                                         to understand the nature of the plane Jacobian conjecture, Razar ’s result had
+                                         been reproved by Heitmann [6], Lê and Weber [10], Friedland [14], Nemethi and
+                                         Sigray [12] in several different algebraic and algebro-geometric approaches. It was
+                                         also proved in [12] that there does note exists counterexamples F = (P, Q) to
+                                         (JC) such that all fibres of P are irreducible elliptic curves. Following [13], a
+                                         polynomial function f : C2 −→ C is called coordinate if there is g ∈ C[x, y] such
+                                         that (f, g) : C2 −→ C2 is a polynomial automorphism. In fact, Vistoli [17] and
+                                         Neumann and Norbury [13] obtained the following, which implies Theorem 1.
+                                         Theorem 2. A polynomial function P : C2 −→ C with irreducible rational fibres
+                                         is a coordinate.
+                                           This theorem, as mentioned in [13], is implicit in Myianishi’s earlier work [11]
+                                         (Lemma 1.7). In this article we would like to present the following improvement of
+                                         Theorem 2.
+                                         Theorem 3. A polynomial function P : C2 −→ C with irreducible fibres of same a
+                                         genus is a coordinate.
+                                            Here, as usual, we mean the genus of an irreducible algebraic curve to be the
+                                         genus of the desingularization of this curve. In other words, Theorem 3 says that
+                                         the genus of the fibres of any polynomial with irreducible fibres must vary, except
+                                         for coordinates. In view of this theorem there does not exist counterexamples
+
+                                           This research is supposed by NAFOSTED, Vietnam.
+                                                                                       1
+2                                NGUYEN VAN CHAU
+
+
+F = (P, Q) to (JC) such that all fibres of P are irreducible curves of same a genus.
+Note that, following Kaliman [8], to prove the plane case of (JC) it is sufficient to
+consider only non-zero constant Jacobian polynomial maps F = (P, Q) in which all
+fibres of P are irreducible. Further investigations on how the genus of the fibres of
+polynomial functions in C2 change should be useful in hunting the solution of the
+plane Jacobian conjecture.
+   The proof of Theorem 3, presented in Section 2, is a combination of Theorem 2
+and the fact that if the fibres of P are irreducible curves of same a genus g, then
+g = 0 (Lemma 1 and Lemma 2). The proofs of Theorem 2 in [13], [11] and [17]
+use Abhyankar-Moh-Suzuki Embedding Theorem, or Zariski’s main theorem. In
+Section 3 we will give another elementary proof of Theorem 2 by applying Newton-
+Puiseux Theorem and the basic properties of the standard resolution of singularities.
+
+2. Let P ∈ C[x, y] be a given non-constant polynomial. Regard the plane C2 as a
+subset of the projective plane P2 and consider P as a rational morphism P : P2 −→
+P, which is well defined everywhere on P2 , except a finite number of points in the
+line at infinity z = 0. By blowing-up we can remove indeterminacy points of P and
+obtain a compactification X of C2 and a regular extension p : X −→ P of P over
+X. The divisor D := X \ C2 is the union of smooth rational curves with simple
+normal crossings. An irreducible component D of D is called horizontal curve of P
+if p|D is a non-constant mapping. Note that the number of horizontal curves of P
+does not depend on the regular extension p. Following [9] such a compactification
+X is called minimal if among components of D the only the proper transform of
+the line at infinity z = 0 and horizontal curves may have self-intersections −1. A
+regular extension of P over a minimal compactification of C2 can be constructed
+by a blowing-up process in which we blow up only at the indeterminacy points of
+P and of the resulted blowing-up versions of P .
+    Now, suppose p : X −→ P1 is a regular extension of P over a minimal com-
+pactification X of C2 . Let us denote by Cs the fiber of p over s ∈ P1 and by C
+the generic fiber of p. Let Ds := D ∩ Cs - the portion of Cs contained in D. The
+minimality of the compactification X of C2 yields the following usefulness:
+     (*) Every irreducible components in Ds , s ∈ C, must has self-intersections less
+         than −1.
+    We begin with the following observation.
+Lemma 1. Assume that all fibres of P are irreducible curves of same a genus g.
+Then, the fibres Cs , s ∈ C, are smooth irreducible curves of same genus g.
+Proof. As usual, we denote by KX the canonical bundle of the surface X, by π(V )
+the virtual genus of an algebraic curve V in X, and by g(V ) the genus of the
+desingularization of V for when V is irreducible. By the adjunction formula
+                             2π(V ) − 2 = KX .V + V.V,
+and, for irreducible curve V , π(V ) = g(V ) if and only if V is smooth. Furthermore,
+if V is a fiber of a fibration over X, then V.V = 0 and hence
+                                 2π(V ) − 2 = KX .V,
+(see, for example, in [5]). For s ∈ C let us denote by Fs the closure in X of the
+curve {(x, y) ∈ C2 : P (x, y) = s}. By assumptions the curves Fs are irreducible
+                   A NOTE ON THE PLANE JACOBIAN CONJECTURE                       3
+
+
+and
+                                   g(Fs ) ≡ g, s ∈ C.                          (1)
+  Now, let s ∈ C be given. By the adjunction formula (see in [5])
+                                   2g − 2 = KX .Cs .                           (2)
+If Cs is irreducible, we have Cs = Fs and Fs .Fs = 0. Again by the adjunction
+formula we get 2π(Fs ) − 2 = KX .Fs . Therefore, by (1) and (2) we obtain π(Fs ) =
+g = g(Fs ). Thus, Cs is a smooth irreducible curves of genus g. So, to complete
+the proof we need to show only that Cs is irreducible. Indeed, assume the contrary
+that Cs is not irreducible. Write
+                                        X
+                                        k
+                                 Cs =         mi Ci + nFs ,
+                                        i=1
+
+where Ci are irreducible components of Ds with multiplicity mi and n is the mul-
+tiplicity of Fs in Cs . The equality (2) becomes
+                                    X
+                                    k
+                        2g − 2 =          mi KX .Ci + nKX .Fs .                (3)
+                                    i=1
+
+Since Ci are smooth irreducible rational curves, π(Ci ) = 0. Furthermore, Ci .Ci <
+−1 by Property (*) and Fs2 < 0 by Zariski’s lemma (see, for example, [1]). Then,
+applying the adjunction formula to Ci and Fs we have
+                               KX .Ci = −(Ci .Ci + 2) ≥ 0
+and
+                    KX .Fs = 2π(Fs ) − 2 − Fs .Fs > 2π(Fs ) − 2.
+From the above estimations and (3) it follows that 2g − 2 > 2π(Fs ) − 2. This is
+impossible, since π(Fs ) ≥ g(Fs ) = g. Hence, Cs must be irreducible.         
+Lemma 2. Let P be as in Lemma 1. Then, g = 0 and P has only one horizontal
+curve.
+Proof. We will use Suzukis formula [16]
+                       X
+                           χ(Cs ) − χ(C) = χ(X) − 2χ(C)                        (4)
+                        s∈P1
+
+Here, χ(V ) indicates the Euler-Poincare characteristic of V . Let us denote by m
+the number of irreducible components of the divisor D, by m∞ the number of
+irreducible components of C∞ and by h the number of the horizontal curves of P .
+Note that χ(X) = 2 + m and χ(C∞ ) = 1 + m∞ . Furthermore, in view of Lemma
+1 χ(Cs ) = χ(C) = 2 − 2g for all s ∈ C and h = m − m∞ . Now, by the above
+estimations we have
+             X
+                 χ(Cs ) − χ(C) = χ(C∞ ) − χ(C) = 1 + m∞ − (2 − 2g)
+            s∈P1
+
+and
+                       χ(X) − 2χ(C) = 2 + m − 2(2 − 2g).
+Then, the equality (4) becomes
+                     1 + m∞ − (2 − 2g) = 2 + m − 2(2 − 2g),
+4                               NGUYEN VAN CHAU
+
+
+or equivalent,
+                           2g = 1 − (m − m∞ ) = 1 − h.
+Since g ≥ 0 and h ≥ 1, it follows that g = 0 and h = 1.                            
+
+Proof of Theorem 3. Combining Lemma 2 with Theorem 2.                              
+
+3. The main arguments in the proofs of Theorem 2 in [13], [17] and [11], leads
+to the fact that if the fibres of P are rational irreducible curves, then P has only
+one horizontal curve and its fibres are isomorphic to C. The fact that P is a
+coordinate then follows from Abhyankar-Moh-Suzuki Embedding Theorem, as done
+in [11](Lemma 1.7), or from Zariski’s main theorem, as in [17](Lemma 4.8). Instead
+of such ways, Theorem 2 can also be proved by using the observations below.
+                                     P         i j
+   i) Let H ∈ C[x, y], H(x, y) =       ij cij x y . Recall that the so-called Newton
+polygon NH of H is the convex hull of the set {(0, 0)} ∪ {(i, j) : cij 6= 0}.
+Fact 1. Assume that degx H > 0 and degy H > 0. If H has only one horizontal
+curve, then NH is a triangle with vertices (0, 0), (degx H, 0) and (0, degy H) and
+the summation HE of monomials cij xi y j in H with (i, j) lying in the edge joining
+(degx H, 0) and (0, degy H) is of the form
+                             HE (x, y) = C(y q − axp )m
+where C 6= 0, a 6= 0, p, q, m are natural numbers and gcd(p, q) = 1.
+In fact, if H has only one horizontal curve, the branches at infinity of any generic
+fiber H = c can be given by Newton-Puiseux expansions of same one of the forms
+                      y = bxp/q + lower terms in x, p/q ≤ 1
+and
+                      x = by q/p + lower terms in y, q/p ≤ 1,
+where b 6= 0 and gcd(p, q) = 1. The Newton polygon NH and the face polynomial
+HE then can be detected by using Newton-Puiseux theorem and the basic properties
+of Newton-Puiseux expansions (see [3]).
+   ii) Let P ∈ C[x, y] with deg P > 1, degx P > 0 and degy P > 0. Assume that
+the fibres of P are irreducible rational curves, and hence, P has only one horizontal
+curve. In view of Fact 1, we can assume that PE (x, y) = C(y q − axp )m with C 6= 0,
+a 6= 0 and gcd(p, q) = 1.
+Fact 2. PE (x, y) is of the forms C(y q − ax)m and C(y q − ax)m , q ≥ 1.
+   To see it, we need consider only the case p/q 6= 1. Assume, for example, that
+p/q < 1. Let p : X −→ P1 be a regular extension over a minimal compactification
+X of C2 , which results from a blowing-up process π : X −→ P2 that blow up only
+at the indeterminacy points of P and of the obtained blowing-up versions of P .
+By Lemma 1 the divisor at infinity D is the union of the fiber C∞ and the unique
+horizontal curve D, D = C∞ ∪ D. The fiber C∞ contains the proper transform D0
+of the line at infinity z = 0 of C2 . Since deg P > 1 and the morphism p : X −→ P1
+is a P1 -fibration, the fiber C∞ is reducible and can be contracted to one smooth
+rational curve by blowing down. Furthermore, D0 is the unique component of C∞
+                     A NOTE ON THE PLANE JACOBIAN CONJECTURE                                   5
+
+
+having self-intersection −1. Then, one can see that the first Puiseux chain of the
+dual graph of D must be of the form
+                         D0     e1           ek     |     f1         fl
+                          • − ◦ −···− ◦ −               − ◦ − · · · − ◦,
+                         −1     −2          −2     −2
+
+where the weights are the self-intersection numbers. This Puiseux chain coincides
+with the resolution graph of the germ curve at infinity γ, composed of the line z = 0
+and a branch curve at infinity given by a Newton-Puiseux expansion of the form
+                          y = bxp/q + lower terms in x, b 6= 0.
+Note that the line at infinity z = 0 of C2 has self-intersection 1. Then, by examining
+in detail the resolving singularities of γ we can easily see that the self-intersection
+conditions D02 = −1 and e2i = −2, i = 1, k, are satisfied only when p = 1, q > 1
+and l = 1.
+   Thus, once the fibres of P are irreducible rational curves, Fact 2 enables us to
+easily construct polynomial automorphisms Φ of C2 such that deg P ◦ Φ(x, y) = 1.
+
+4. Let us to conclude here by a remark that a non-zero constant Jacobian polyno-
+mial map F = (P, Q) is invertible if P has only one horizontal curve. This is a key
+point of the geometric proof of Theorem 1 presented by Lê and Weber in [10]. In
+fact, if P has only one horizontal curve, by the Jacobian condition in regular exten-
+sions of P the restriction of Q, viewed as a rational map, to the unique horizontal
+curve of P must be a constant mapping with value ∞. So, the restriction of Q to
+a generic fiber P = c is proper. Therefore, by the simply connectedness of C such
+a generic fiber P = c is isomorphic to C. Hence, (P, Q) is invertible.
+   It seems to be very difficult to estimate the number of horizontal curves of
+polynomial components of non-zero constant Jacobian polynomial maps of C2 .
+
+   Acknowledgements. The author would like to express his thank to Pierete
+Cassou-Nogues, Mutsui Oka and Ha Huy Vui for many valuable discussions and
+helps.
+
+                                        References
+ [1] W. Barth, C. Peters, A. van de Ven, Compact complex surfaces, Ergebnisse der Mathematik
+     und ihrer Grenzgebiete (3), 4 (Springer-Verlag, Berlin-New York, 1984).
+ [2] H. Bass, E. Connell and D. Wright, The Jacobian conjecture: reduction of degree and formal
+     expansion of the inverse, Bull. Amer. Math. Soc. (N.S.) 7 (1982), 287–330.
+ [3] E. Brieskorn and H. Knorrer, Ebene algebraische Kurven, Birkhauser, Basel-Boston-
+     Stuttgart, 1981.
+ [4] Van den Essen, Arno, Polynomial automorphisms and the Jacobian conjecture, Progress in
+     Mathematics 190, Birkhauser, Basel, 2000.
+ [5] P. Griffiths and J. Harris, Principles of algebraic geometry, John Wiley, New York, 1978.
+ [6] R. Heitmann, On the Jacobian conjecture, J. Pure Appl. Algebra 64 (1990), 36-72 and Cor-
+     rigendum ibid. 90 (1993), 199-200.
+ [7] Ott-Heinrich Keller, Ganze Cremona-Transformatione, Monatsh. Math. Phys. 47(1939), 299-
+     306.
+ [8] Sh. Kaliman,On the Jacobian conjecture, Proc. Amer. Math. Soc., Vol. 117, No. 1, January
+     1993, 45–51.
+ [9] Lê Dũng Tráng, Simple rational polynomials and the Jacobian conjecture, Publ. RIMS, Kyoto
+     Univ. 44 (2008), 641-659.
+[10] Lê Dũng Tráng and C. Weber, Polynômes à fibres rationnelles et conjecture jacobienne 2
+     variables, C. R. Acad. Sci. Paris Sr. I Math. 320 (1995), 581–584.
+6                                    NGUYEN VAN CHAU
+
+
+[11] M. Miyanishi and T. Sugie, Generically rational polynomials, Osaka J. Math. 17 (1980),
+     339362.
+[12] Némethi, A. and Sigray, I. On the monodromy representation of polynomial maps in n vari-
+     ables. Studia Sci. Math. Hungar. 39 (2002), no. 3-4, 361–367.
+[13] W.D. Neumann and P. Norbury, Nontrivial rational polynomials in two variables have re-
+     ducible fibres, Bull. Austral. Math. Soc. 58 (1998), 501–503.
+[14] Friedland, Shmuel. Monodromy, differential equations and the Jacobian conjecture. Ann.
+     Polon. Math. 72 (1999), no. 3, 219–249.
+[15] M. Razar, Polynomial maps with constant Jacobian. Israel J. Math. 32 (1979), 97–106.
+[16] M. Suzuki, Properiété topologiques des polynômes de deux variables complexes et automor-
+     phismes algébriques de l‘esppace C2 , J. Math. Soc. Japan 26 (1974), 241-257.
+[17] A. Vistoli, The number of reducible hypersurfaces in a pencil, Invent. Math. l12 (1993),
+     247–262.
+
+    Institute of Mathematics, 18 Hoang Quoc Viet, 10307 Hanoi,Vietnam
+    E-mail address: nvchau@math.ac.vn
+

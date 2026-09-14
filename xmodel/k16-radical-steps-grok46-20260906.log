@@ -1,0 +1,20 @@
+cli=grok 1.0.13 (5e9a58528b76) permission=bypassPermissions output=plain
+I'll start by verifying the frozen input hashes and reading the charged sources plus the frozen bases, then compute the t=3–5 radical steps.Hashes and charged sources next; I'll also inspect the receipt format and frozen bases so the Singular drivers match the sealed map.Receipt hashes matched the prompt list; next I’ll read the tacnode/universal reports and frozen Singular bases so the radical drivers are exact.Hashes are confirmed. I’ll inspect the frozen Singular rings and existing tacnode/universal drivers so the radical membership tests reuse the same map.I'll add a small emitter and start the t=3/4 exact memberships plus the Toeplitz audit; t=5 will run in parallel.The ring name `r` collided with the polynomial `r`; I'll rename the generator and correct the Toeplitz triangular check.t=3 checks out. I'll clean the Singular loop declarations, then launch t=4 exact and t=5 in parallel.t=4 memberships finished; lift stalled on reconstructing huge cofactors. I’ll switch to GB division and check the t=5/t=6 modular jobs.t=6 breaks constant `e1=3`: I’ll confirm that on a second prime, finish t=4 cofactors, and check the t=5 identity exactly without a full GB.I have the table: `e1` rises at t=6 and the `u³` certificate is not uniform. Next I’ll write the sealed report.**Verdict: exponents grow.** The proposed uniform pair \(u^3\in J_t+(r)\), \(r^2\in J_t+(u)\) is not a t-uniform non-vacuous certificate. Charged hashes were 5/5 OK. Report: `xmodel/k16-radical-steps-grok46-20260906.md` (sealed, 11514 body bytes). Drivers: `box/k16-radical-20260906/`.
+
+The only identity that holds uniformly is
+\[
+u^2+4T_2+24E_2=0
+\]
+(constant cofactor \(-24\)). That was checked as a polynomial equality on the frozen t=3,4,5 bases (identity `imap` on \((c_i,b)\)) and on reconstructed t=6. The L-tail block is unit-triangular with \(\det=(-d_{3N})^{N-2}\) at every t checked.
+
+| t | field | socle | \(e_1\) | wt(\(u^{e_1}\)) | vacuous? | \(e_2\) | wt(\(r^{e_2}\)) | vacuous? |
+|--:|---|--:|--:|--:|---|--:|--:|---|
+| 3 | exact \(\mathbb Q(d)\) | 14 | 3 | 18 | Y | 1 | 13 | N |
+| 4 | exact \(\mathbb Q(d)\) | 21 | 3 | 24 | Y | 2 | 34 | Y |
+| 5 | identity exact; GB two primes | 30 | 3 | 30 | N (=socle) | 2 | 42 | Y |
+| 6 | reconstructed; two primes | 39 | **4** | 48 | Y | 2 | 50 | Y |
+
+At t=6, \(u^3\notin J+(r)\) is a **nonzero normal form** of weight 36 ≤ socle 39 (307 terms) at both \(p=32003\) and \(p=32009\). So constant \(e_1=3\) fails as a pattern. Cofactor weights are the tautological homogeneous degrees \(\mathrm{wt}(f)-\mathrm{wt}(g)\) and grow linearly in t; they are not bounded independently of t.
+
+Most of the \(e_1=3\) / \(e_2=2\) hits at t=3,4,5 are socle-forced (any homogeneous of weight > socle is in the ideal). The only non-vacuous \(r\in J+(u)\) is t=3; the only non-vacuous \(u^3\in J+(r)\) not already in \(J\) is t=5, and it does not persist. Finite-t identities are not a theorem. \((R)\) remains OPEN. No `charge_basis` line (no exit claim).
+DIVERT path=xmodel/k16-radical-steps-grok46-20260906.md status=CLEAN_SEALED body_bytes=11514 body_sha256=3db1fa0776de82d040f842e92480efd594a28f165f33fd664c5e3b2f26b5261a

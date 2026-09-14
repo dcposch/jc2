@@ -1,0 +1,87 @@
+{
+  "pins": {
+    "box/char-degree-20260905/arzhantsev-petravchuk-closed-polynomials.pdf": "70429c3820eede008640a0d462d67ddb1f32c1f6e37f6b35f3589a0be2081e28",
+    "box/char-degree-20260905/arzhantsev-petravchuk-closed-polynomials.txt": "ce2749ccfe09dc24442466fe6d163821532e437ff1a0cb7d04422b134c25286c",
+    "box/d125-zero-k-boundary-classification-20260907/check.py": "61226b6022415eccb0a966602522bb8c2e25a1e8c78393cfcdc3af009bae5554",
+    "box/d125-zero-k-boundary-classification-20260907/final-replay.json": "664f35554762fd2e9144d1f0712fbd5d23a2e6c5513bfaf1cb2994d0377634f8",
+    "box/d125-zero-k-boundary-classification-20260907/final-witness-O.json": "fc345a150a1946c502cd0ad0f7dd5d5a34ecb16e5ef5bf317bb4a864eb4c0a7a",
+    "box/d125-zero-k-boundary-classification-20260907/final-witness.json": "fc345a150a1946c502cd0ad0f7dd5d5a34ecb16e5ef5bf317bb4a864eb4c0a7a",
+    "box/d125-zero-k-boundary-classification-20260907/registration.json": "733e416cacae0ed6e3bf0603a6e8211ce318afaa2b72997261b8006b02c825ab",
+    "box/d125-zero-k-boundary-classification-20260907/seal_custody.py": "ebdc9bad9e2d148d2e3f5763cbc2239064b081e3f20ab93555036a683cd9cba2",
+    "box/d125-zero-k-boundary-classification-20260907/sources-and-scope.md": "4c4f60b708527cb6a56bf4febff0703be93a68d62e148ff64f898d6782332685",
+    "box/d125-zero-k-boundary-classification-20260907/witness.json": "fc345a150a1946c502cd0ad0f7dd5d5a34ecb16e5ef5bf317bb4a864eb4c0a7a",
+    "xmodel/d125-minimal-receiver-client-preflight-astra-20260906.md": "e0debc7da22b8864ba43f0d29928e2104f2d8f161421ad26f29d8017f7b95e80",
+    "xmodel/d125-parity-unit-normalization-astra-20260907.md": "19f0394c2ec97797d325afa234d57c598a94bd2d83cbfe1dd24bda52db0f45cc",
+    "xmodel/d125-small-receiver-polynomial-lift-contract-astra-20260906.md": "433cc2fe9f11ce1b2e1f1fc57aab24def921afb1f93154a2d631ddee0b88cdad",
+    "xmodel/d125-zero-k-deformation-discriminator-astra-20260907.md": "99d251478969b569c5523349b71a58534fc1fc95c7125e2fcc7e706dda963f2c"
+  },
+  "runs": [
+    {
+      "flags": [],
+      "mode": "",
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "fc345a150a1946c502cd0ad0f7dd5d5a34ecb16e5ef5bf317bb4a864eb4c0a7a"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-support",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 149, in <module>\n    print(json.dumps(check(mode),sort_keys=True,indent=2))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 64, in check\n    need(sorted(lower)==[(0,1),(0,3),(1,2)],'forbidden lower support slot')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: forbidden lower support slot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-drop-row",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 149, in <module>\n    print(json.dumps(check(mode),sort_keys=True,indent=2))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 83, in check\n    need(bool(checked),'omitted negative row accepted nonordinary generator')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: omitted negative row accepted nonordinary generator\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [],
+      "mode": "--mutate-normalization",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 149, in <module>\n    print(json.dumps(check(mode),sort_keys=True,indent=2))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 88, in check\n    need(normalized_r==r and f3*normalized_r**3==1 and g5*normalized_r**5==1,'same-field leading normalization')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: same-field leading normalization\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "",
+      "rc": 0,
+      "stderr": "",
+      "stdout_sha256": "fc345a150a1946c502cd0ad0f7dd5d5a34ecb16e5ef5bf317bb4a864eb4c0a7a"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-support",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 149, in <module>\n    print(json.dumps(check(mode),sort_keys=True,indent=2))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 64, in check\n    need(sorted(lower)==[(0,1),(0,3),(1,2)],'forbidden lower support slot')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: forbidden lower support slot\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-drop-row",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 149, in <module>\n    print(json.dumps(check(mode),sort_keys=True,indent=2))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 83, in check\n    need(bool(checked),'omitted negative row accepted nonordinary generator')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: omitted negative row accepted nonordinary generator\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "mode": "--mutate-normalization",
+      "rc": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 149, in <module>\n    print(json.dumps(check(mode),sort_keys=True,indent=2))\n                     ^^^^^^^^^^^\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 88, in check\n    need(normalized_r==r and f3*normalized_r**3==1 and g5*normalized_r**5==1,'same-field leading normalization')\n  File \"/home/ubuntu/jc2/box/d125-zero-k-boundary-classification-20260907/check.py\", line 15, in need\n    if not ok: raise ValueError(msg)\n               ^^^^^^^^^^^^^^^^^^^^^\nValueError: same-field leading normalization\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "degree-five classification and small general-jet identity only; no full pair",
+  "status": "PASS",
+  "wall_seconds": 2.1395943879615515
+}
