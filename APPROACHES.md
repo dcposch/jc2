@@ -573,6 +573,18 @@ determinant cancellation itself is not the failure. Do not import that
 claimed proof. This rejects the displayed argument, not JC2 or its degree-
 bound conclusion, and selects no tree-repair or finite-family successor.
 
+The [September14 primary delta](xmodel/literature-delta-swarmHQ-astra-20260914T1430Z.md)
+is DOCUMENTARY/MANUAL, UNPROMOTED, NO_NEW_ACTIONABLE_DELTA. Arapura--Mese--Patel
+[2609.13081v1](https://arxiv.org/html/2609.13081v1) requires nef LOG COTANGENT,
+not merely nef log canonical divisor. Its ambient admits no nonconstant A1
+map, so neither the whole plane nor an open retaining an entire polynomially
+parametrized nonproperness component supplies that hypothesis. Removing
+points changes the boundary problem; no localized positivity contradiction
+follows. Li's sparse-profile conductor theorem supplies no actual Keller
+output-algebra identification; the checked Ionin--Semidetnov matrix row is
+not exact. These source-scope stops authorize no matrix, conductor or
+compactification successor and reset no broad-sweep clock.
+
 ## 9. Stops, verification and allocation discipline
 
 Retain these scoped stops; none forbids an entire mathematical vocabulary:
