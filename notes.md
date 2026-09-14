@@ -46341,3 +46341,75 @@ Other targeted web hits supplied no new actionable result; no BROAD credit.
   and nested repositories. Next selection needs a genuinely different
   actual-source mechanism or new primary evidence, not relabelled weights,
   matrix membership, smoothness, formal inversion or a stopped control.
+
+## 2026-09-14 16:24 UTC -- history and composition screens stopped
+
+Previous synchronization turn: NO MATHEMATICAL PROGRESS; requested upstream
+commits were already included. This research continuation likewise supplies
+NO_NEW_CLOSING_TEST, not a new theorem or a full ideation reset.
+
+- The earlier16:02--16:10 screen recovered the exact September13 20:23
+  secant-line properness gap and20:39 Picard-pullback counterexample before
+  commissioning either. Rational involution and polynomial-metric proposals
+  likewise collide with the explicit current APP stops; no new lane.
+- Inserting polynomial automorphisms into Keller compositions does not
+  evade the WHOLE-read September11 trace-iteration report: its transfer
+  identity already allows arbitrary reduced source curves. A direct
+  geometric check gives the same stop. If E has polynomial normalization
+  gamma:A1->E, then F gamma is nonconstant by quasi-finiteness. A nonconstant
+  coordinate makes C[t] finite over C[F gamma], and its submodule C[E] is
+  finite too. Thus F|E is finite onto its image. E remains closed in any
+  separated relative compactification over the finite target and cannot
+  acquire an intersection with its omitted boundary there. This MANUAL,
+  UNPROMOTED observation supplies no missing-branch contradiction or new
+  composition/curve family; the all-degree closing implication is unchanged.
+- The WHOLE-read pseudo-plane ML/equivariance report and targeted primary
+  discovery retain Miyanishi's ML0 exclusion, not an exclusion of our ML1
+  S(2,2,1). J.Algebra2005 remained abstract-only; no new theorem imported.
+  Bustinduy--Giraldo--Mucino-Raymundo2014 also hits the September13 15:06
+  record: all-fiber irreducibility and time-period vanishing are missing
+  construction data. This turn read discovery abstracts and that prior
+  scope record, not its full primary proof. No BROAD-completion credit.
+
+No report, source reproof, control, numerical search or paid lane was made
+from these repeated gaps. No APP/AUDIT change or promotion. This negative
+record is not counted as new mathematical progress merely because banked.
+
+## 2026-09-14 16:24 UTC LIVE STATE -- no new closing test
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved, all46 ranks unchanged. Basis
+  e6209be26ed8c12dcbbf949972fcc3d22e346049=origin/master after fresh16:11
+  fetch and16:21 equality check. Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/APPd129930b/AUDITbda4b17b unchanged, fresh16:24 pins.
+- All three native authors independently confirmed COMPLETED. No active
+  paid lane, science, provisional root, FIRST queue, descendant or successor.
+  Keep the source-normality, source-selection and unrestricted construction
+  gaps at their current APP scope; no unchanged test is recommissioned.
+- FULL1300 completedSep14 13:33:26; nextSep15 01:33:26; originalSep14
+  10:17:55 miss retained. FULL1300 already was a zero-base reset. BROAD
+  originalSep12 21:53:56.598798932 remains overdue with prior coverage,
+  access and48h qualifications; Mathstodon/Palomar STOPPED. No clock reset.
+- GitHub sweep: blocked, gh not authenticated (binary absent16:24).
+  Original16:00 checkpoint was missed; actual prerequisite checks16:02,
+  16:11 and16:24 did not sweep the queue. Last successful none established,
+  0 triaged, openUNKNOWN. DC installation/authentication needed; surfaced
+  in the preceding user-visible reply. Next prerequisite check at next tick;
+  the missed16:00 obligation is not rewritten as a successful sweep.
+- Resources: this turn's personal/us-east-1 jc2fleet=1 and
+  Name=jc2-worker-* queries both[], terminalexit0, across pending/running/
+  stopping/stopped. User jc2 running/transitioning services empty. Scoped
+  coordinator3674934 tree has no scientific child; pswpin/out0/0 on the
+  first system check and16:24, zero delta. No AWS mutation. Fable cumulative100220 terminal
+  lane-wall seconds unchanged, not credits/tokens/billing/CPU; balances
+  unknown and retained evidence EBS billable. Astra primary, Fable
+  independent high-value gates, Sol fallback; no occupancy allocation.
+- Systems16:24 NO_UPGRADE: exact history prevented duplicate commissions,
+  but repeated discovery itself consumed coordinator time; no measured
+  acceleration claimed. Engineering closed; scalar/preflight/r3 PARKED;
+  original48h debt and Miyanishi GSP legitimate-PDF prerequisite unchanged.
+  No human-only global mathematical impasse and no verified live wait.
+- Bank only this journal delta, commit/push, preserving pilot-local.log,
+  bulk artifacts and nested repositories. Next research must add a genuinely
+  changed actual-source implication or construction, not another statement
+  of the already recorded secant, Picard, composition, ML or period gap.
