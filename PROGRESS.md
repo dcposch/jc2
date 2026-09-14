@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+15:20Z: [Formal-flow normalization](xmodel/normalization-formal-flow-swarmHQ-root-20260914.md)
+and [Astra boundary duality](xmodel/source-boundary-duality-swarmHQ-astra-20260914.md)
+end KNOWN/GAP, NO_NEW_CLOSING_TEST. A proposed blanket coefficient-containment
+lemma already forces source finiteness; codifferent multiplication and
+quadratic traces still need the existing target-regularity premise.
+MANUAL/PRODUCER-CHECKED, UNPROMOTED. No JC2 gap closed, different-model
+FIRST, Fable lane, worker or computation; stop both bounded attempts.
+
 14:57Z: [Exact-curve discriminator](xmodel/exact-plane-curve-genus-swarmHQ-root-20260914.md)
 refutes a proposed all-degree shortcut: smooth closed plane curves can have
 exact Liouville form and arbitrarily large genus, even on every generic

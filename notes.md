@@ -46091,3 +46091,97 @@ S residue-family idea was a known one-line-injectivity stop, not relaunched.
   pilot-local.log and historical bulk outputs; nested repositories untouched.
   Next selection must use actual whole-source compatibility, not infer a
   genus bound from these weaker exact-curve properties or widen this family.
+
+## 2026-09-14 15:20 UTC -- actual normalization bypasses return to known gaps
+
+Previous goal turn: PROGRESS at scoped screening/banking tier, not a
+resolved JC2 implication. This continuation inspected fresh authoritative
+state, then tried two all-degree actual-source compatibility arguments.
+The actual normalization is S integral over A=C[f,g], inside R=C[x,y].
+No equality S=R or new properness implication was obtained.
+
+ROOT's formal-flow bypass has an explicit stop. If EVERY series in R[[T]]
+integral over A[T] had coefficients in S, then R=S. For any b in R, choose
+nonzero a in A with ab in S. The integral series a*sqrt(1+b*T) would force
+a*b^k in S for every k, whence S[b] subset (1/a)S is finite over the
+noetherian S and b is integral. Thus the proposed general coefficient
+lemma already demands all source integrality. A special exp(TD) argument
+is not refuted for actual Keller sources, but cannot import that blanket
+lemma. The fixed punctured J=1 map (x^2,y/(2x)) gives a direct formal-flow
+countercontrol: exp(T*D_u)x=sqrt(x^2+T), whose first coefficient is1/(2x)
+outside its finite normalization C[x,y/(2x)]. It is not a whole-plane map.
+
+History found the old stronger adjoint valuation loss, not a new D-module
+test. Bass's1989 chapter AppendixB(B.7)--(B.8), printed96, was identified
+in indexed primary text as containing this formal-series warning; ROOT
+reconstructed the proof without relying on OCR bar notation. Publisher
+chapter metadata was read. Full-book browser fetch failed and one bounded
+direct retrieval stopped at TLS certificate verification; ZERO full pages
+read, no bypass. Local bass-1989.pdf is the distinct French paper, checked
+only by metadata/cover. No full source audit, broad sweep or new import.
+
+ROOT report xmodel/normalization-formal-flow-swarmHQ-root-20260914.md:
+fulle2576719868c529dd88213ee9b8f42ba5337f365d9519b141fe60e15c244d52f,
+manifest41b8d21578b40947c42149e474f3c0335a6e59759893f5c2876bcbe891318e2c,
+body9c4762597c49b5deab0df0704bfce401d6fe15696f933301a127584fe07e5839.
+Begin/close/finalize, expected verification and full final readback done.
+
+Astra's independent relative-dual lens gives the KNOWN canonical lattice
+S subset M=Hom_A(S,A) subset R, identified by field trace and the fixed
+Keller volume, with local valuation bound1-e. Being inside R does not
+make M multiplicatively closed. Nor does it make Tr(h^2) regular on A:
+if ALL such squares were regular, polarization and trace biduality would
+give M subset S and remove ramification. No actual source supplies that
+premise. Boundary classes give no new contradiction because pullbacks of
+branch equations include retained unramified prime divisors as well as
+omitted ones. ROOT checked signs, exact ring maps, polarization and the
+fixed double-cover control after intake. No additional source constraint.
+
+Astra report xmodel/source-boundary-duality-swarmHQ-astra-20260914.md:
+full4d2f1f052ce042a6f8447858462aedf0305c62018adaead538ed5327e2afeadc,
+manifest604a5ebbc4d8fd2ec1dbbeeccefff10a9e49d810d05b10363542659d7119f422,
+bodyebf01896cfe1bbae45dc4d5fb94bff92317b1ffc0e767c02455d0d209eb4dcb1.
+Independent COMPLETED status preceded expected-manifest verification and
+WHOLE report/manifest read. Both reports MANUAL/PRODUCER-CHECKED,
+UNPROMOTED; no different-model FIRST, promotion, provisional descendant
+or new review debt. This is KNOWN/GAP screening, not a new closing lemma.
+
+## 2026-09-14 15:20 UTC LIVE STATE -- normalization attempts stopped, banking
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. All46 global ranks unchanged,
+  NO_NEW_CLOSING_TEST. This was a bounded micro-round, not a reversal of
+  a promoted or load-bearing premise. Do not renew the flow/duality attempt
+  or widen its operator, codifferent, trace-square or relaxed-control scope.
+- Basis49d9c0d9bc23f14ffaa5e4b81521498889663591; fresh15:19 fetch unchanged.
+  Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  generic COORD4ce5b29a/AUDITbda4b17b unchanged. Own canonical edits began
+  only after Astra became terminal; no frozen research input changed.
+- All authors terminal. Astra lease opened15:12:16, stopped research
+  before15:16:35, finalized15:17:01, terminal15:17:10; original12-minute
+  research cap and5-minute publication allowance met. ROOT finalized15:19.
+  No paid lane, provisional root, FIRST queue or descendant remains.
+- FULL1300 last completedSep14 13:33:26; nextSep15 01:33:26UTC. Original
+  Sep14 10:17:55 miss retained. BROAD originalSep12 21:53:56.598798932
+  still overdue, last-record/completion/access/48h qualifications unchanged.
+  Mathstodon/Palomar STOPPED; targeted discovery resets no sweep clock.
+- Resources: fresh15:20 personal/us-east-1 jc2fleet=1 and Name=jc2-worker-*
+  selectors both[] across pending/running/stopping/stopped, terminalexit0.
+  User jc2 running/transitioning services empty. Scoped coordinator3674934
+  tree15:21 had no scientific child; pswpin/out0/0 at15:02 and15:21, zero
+  delta. No science or AWS mutation. Fable cumulative100220 terminal lane-
+  wall seconds unchanged, not credits/tokens/billing; exact balances unknown.
+  Retained evidence EBS billable. Astra primary, Fable independent, Sol fallback.
+- GitHub sweep: blocked, gh not authenticated (binary absent15:02).
+  Last successful none established;0 triaged, openUNKNOWN. DC install/auth
+  prerequisite surfaced this turn; next tick/original16:00 checkpoint,
+  not reset. Miyanishi GSP legitimate-PDF prerequisite unchanged; no retry.
+- Systems15:20 NO_UPGRADE: canonical/source checks prevented funding two
+  unchanged bridges; no measured software acceleration. Historical48h
+  debt retained; engineering closed; scalar/preflight/r3 PARKED. No
+  human-only global mathematical impasse or verified live wait.
+- Bank only both sealed reports/manifests and own APP/PROGRESS/notes,
+  after expected staged verification; commit and push. Preserve unrelated
+  pilot-local.log and historical bulk outputs; nested repositories untouched.
+  Next research needs a changed actual-source mechanism, not another
+  normalization criterion with the same unproved boundary regularity.

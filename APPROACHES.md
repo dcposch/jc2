@@ -544,6 +544,16 @@ leading-form obstruction applied to those imports, not a new JC2 theorem.
 Do not seek density or regularity inside the Keller locus from these opens;
 arbitrary compactifications and other monodromy arguments are not excluded.
 
+The September14 [formal-flow check](xmodel/normalization-formal-flow-swarmHQ-root-20260914.md)
+shows that blanket coefficient containment for series integral over A[T]
+already forces the full source ring to be integral over A. It cannot be
+assumed from normality or formal translation. [Relative-duality co-research](xmodel/source-boundary-duality-swarmHQ-astra-20260914.md)
+likewise returns codifferent multiplication and quadratic traces to the
+existing target-regularity gap. MANUAL/PRODUCER-CHECKED, UNPROMOTED,
+KNOWN/GAP; no new closing test or successor. Bass AppendixB was located
+in indexed text only, not a whole primary read; the report's ring argument
+is self-contained and makes no novelty claim.
+
 The [post-FULL0925 global-shortcut check](xmodel/global-classification-shortcuts-root-20260913.md)
 is DOCUMENTARY/MANUAL, UNPROMOTED. Brieskorn finite generation is the old
 August24 gap; the zero-thinness dynamical criterion was already checked
