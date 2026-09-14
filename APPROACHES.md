@@ -205,6 +205,12 @@ invariant. The September13 23:56 check also supplies neither periodicity
 of nonproper components nor backward invariance of a periodic component;
 forward invariance is not the latter premise. No new dynamics lane.
 
+The September14 [23:56 composition checksum](notes.md#2026-09-14-2356-utc--actual-source-trace-tests-collide-with-existing-stops)
+also recovers Sections1–3: transfer is already for ARBITRARY Keller F,G,
+so inserting target translations between copies of F does not add a new
+trace-image condition at the resulting boundary intersections. This is
+KNOWN/MANUAL/UNPROMOTED, not an exclusion of all dynamical geometry.
+
 ## 6. BASS: tested operators versus source selection
 
 The [growing-shear](xmodel/bass-resonant-operators-astra-20260911.md), [affine-angular](xmodel/bass-affine-angular-root-20260911.md) and [general polynomial-G](xmodel/bass-general-delta1-astra-20260911.md) results passed their separate FIRST gates (BASS-SHEAR/AFFINE/DELTA1-1). With ep=p*partial_p, eq=q*partial_q and delta=p*partial_q on the LEFT, every ep-r+delta*G(ep,eq), r a nonnegative integer and G in C[X,Y], is injective on the actual source quotient in NORMALIZED target coordinates, conditional on Bass 1.4 and named analytic inputs. The all-algebraic-germ statement excludes constants and accessible vertical factors; exceptional nonpolynomial germs are not Keller sources. Positive-a,b actual-Keller shear consequences already have van den Essen antecedents; no novelty claim.

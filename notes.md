@@ -49044,3 +49044,95 @@ degree/coefficient family, FIRST or automatic successor is selected.
   research must target an actual-source implication or new construction,
   not extend this relaxed curve model. Preserve pilot-local.log, bulk
   artifacts and excluded nested repositories.
+
+## 2026-09-14 23:56 UTC — actual-source trace tests collide with existing stops
+
+Previous turn completed and banked the all-frame curve discriminator in
+89f46d94b3991f9f39db646b21d79e99f51dcb99: scoped PROGRESS, not a JC2 gap
+closure. This tick began23:47:35; fresh fetch matched HEAD/origin/master,
+only pilot-local.log dirty, and all governing pins were unchanged from
+ROOT's complete reads last turn. No cleanup or operator action pending.
+
+ROOT turned back to ACTUAL Keller source structure, but found no changed
+closing implication. Before commissioning anything, the entire completed
+finite-duality report xmodel/source-boundary-duality-swarmHQ-astra-20260914.md
+was read, whole SHA4d2f1f052ce042a6f8447858462aedf0305c62018adaead538ed5327e2afeadc.
+It already puts the codifferent inside the polynomial source and gives
+the trace-double-dual test. Polynomiality of its quadratic traces remains
+missing; neither finite-module generation nor finite duality supplies it.
+No repeated trace-square, canonical-algebra or relaxed-source lane.
+
+The contemplated local-crossing-to-global-monodromy connection likewise
+hit the August31 b0-pi1-acquisition report and September14 00:44 journal
+stop. Selected source/history sections were recovered; no fresh theorem
+was imported. Ordinary-node local commutation does not discharge the
+infinity hypotheses of an affine complement-group theorem. Do not read
+the historical report's old rank-four launch conclusion as current scope:
+the present block/degree closures and current APPROACHES override it.
+
+A more concrete actual-source proposal was to insert a polynomial
+translation T between copies of F, arrange crossings between D_F and
+F(T(D_F)), and apply TRACE-IC-1 there. ROOT then read WHOLE
+xmodel/keller-trace-iteration-root-20260911.md,
+SHAe3a13e08e848925319b2b701563c01375ffc4871a9f4e63dc8d557b59c5d4e96.
+Its Sections1–3 already give the transfer for ARBITRARY Keller F,G,
+not only self-iterates. In the report's notation B_E is an ADDITIVE
+minimal boundary differential module. Taking E=D_G, trace transitivity
+and the existing transfer identity give
+
+  Tr_(F composed G)(O_source) = Tr_F(B_E)
+                            = B_(D_F union F(E)).
+
+For G=T composed F, E=T(D_F). Thus the known identity already gives
+the exact required trace image for F composed T composed F. It does not
+acquire an extra condition merely because the two displayed target
+curves intersect. The old argument retains the actual ring maps, top
+de Rham exactness and point-module quotient; it never replaces B_E by
+a localization algebra. This is KNOWN/MANUAL/UNPROMOTED scope recovery,
+not a new proof, all-source contradiction or promotion of that report.
+Other dynamical/geometric constraints are not ruled out. No translation,
+intersection, group, trace or control-family successor was commissioned.
+
+Targeted discovery also resurfaced Graded Keller maps2607.20210.
+Fresh [primary metadata](https://arxiv.org/abs/2607.20210) still displays
+v2, July25,2026; that version was already recorded in notes26271.
+Abstract/version check only, no manuscript-proof audit or new theorem.
+Other search snippets were not adopted. Oversized combined search output
+was replaced by exact paths/sections; no exhaustive history or BROAD
+coverage is claimed. Restricted sources/channels were not retried.
+
+Outcome: NO_NEW_CLOSING_TEST. The only authoritative change is the
+compact navigation warning that the old transfer already includes
+translated compositions, plus this completed negative history intake.
+No new mathematical result, actual-source hypothesis, global rerank,
+FIRST, model lane, computation or new relaxed curve/surface example.
+
+## 2026-09-14 23:56 UTC LIVE STATE — duplicate source tests not relaunched
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis89f46d94b3991f9f39db646b21d79e99f51dcb99,
+  fetched equal to origin/master. Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  All pins unchanged. Scoped history micro-round, no promotion or FULL.
+- Native lanes terminal from the preceding independently checked turn;
+  none reactivated. No live paid-model unit, writer, science worker,
+  provisional root, review debt or descendant; no verified wait claimed.
+  Zero-base reset CLOSED. New research must add an actual-source
+  implication or genuinely different construction; these duplicates do not.
+- FULL lastSep14 21:40:31, nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 overdue/access-coverage debt remains. Mathstodon,
+  Palomar, failed Friedland publisher path and denied Zenodo22143955
+  STOPPED; Miyanishi legitimate-source gate unchanged. No clock reset.
+- gh freshly unauthenticated23:55; GitHub sweep blocked, gh not
+  authenticated.0triaged,openUNKNOWN,lastsuccessfulnone; originalSep14
+  16:00 miss retained. DC authentication needed, not a global impasse.
+  No issue/PR bodies, messages or credential changes.
+- Fresh23:48 both personal/us-east-1 nonterminal worker selectors[];
+  coordinator3674934 tree no science; pswpin/out0/0, unchanged23:55.
+  No jc2 user-model unit at23:55. No AWS mutation/scientific computation.
+  Fable cumulative101944 terminal lane-wall seconds unchanged, not
+  billing/tokens/credits/CPU. Native usage/balances UNKNOWN; retained
+  evidence EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Bank only this completed history/navigation
+  delta. Preserve pilot-local.log, bulk artifacts and excluded repositories.

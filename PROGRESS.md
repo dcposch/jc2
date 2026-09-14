@@ -8,6 +8,12 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+23:56Z: [Actual-source trace/history checksum](notes.md#2026-09-14-2356-utc--actual-source-trace-tests-collide-with-existing-stops)
+recovers existing stops: finite duality does not give quadratic-trace
+regularity, and the trace-transfer identity already covers translated
+Keller compositions. No new closing implication, claim, model lane or
+computation; only duplicate-stop navigation changed.
+
 23:45Z: [All-frame infinity discriminator](notes.md#2026-09-14-2345-utc--common-infinity-in-every-polynomial-frame-is-insufficient)
 gives two nodal cubics sharing one infinity point after EVERY polynomial
 automorphism, with immersed A1 normalizations. This refutes the proposed
