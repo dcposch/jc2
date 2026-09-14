@@ -482,6 +482,15 @@ no automatic surface-family, depth or polynomial-pair search. The
 [prior navigation](history/APPROACHES-before-20260913T1248-exactvolume.md)
 is preserved byte-for-byte; global ranking is unchanged.
 
+**Linear-Jacobian integrality already contains JC2.** The September14
+[23:31 square-fold test](notes.md#2026-09-14-2331-utc--linear-jacobian-integrality-already-contains-jc2)
+shows that universal t-integrality for P,Q in C[t,s] with J(P,Q)=t
+would imply JC2; even its even-in-t subclass is JC2-equivalent. In the
+added volume chart t=1/u, that integrality would indeed obstruct a Keller
+pair, but it is NOT supplied. ROOT/native Astra, MANUAL/PRODUCER-CHECKED,
+UNPROMOTED; no unrestricted converse, classification, B-pair exclusion,
+new counterexample or automatic linear-Jacobian/surface search.
+
 [SCROLL-FIBER-ONE-DONOR-1 FIRST](box/scroll-fiber-one-donor-gate-fable5-20260912/INTAKE.md) is PROMOTED/MANUAL: the same all-line, arbitrary-first-leg exclusion holds for every finite Phi:F_e->P2 with Phi^*O(1).f=1. It attaches ruling-base collisions to the OLD all-contact log theorem, including tangencies; the one-collision A2 control remains. An actual block's qualitative A1 ruling supplies neither this compactification nor L.f=1. Covered degree-four members are not all quartic covers, general d2>=4, d1=2 or primitive sources. No new general log mechanism or literature-novelty claim.
 
 The [0920 postblind checksum](xmodel/ideation-20260912T0920Z-postblind-root.md) finds the smooth adjoint/log implication already degree-independent. [NORMAL-NUMERICAL-LOG-1](box/normal-log-numerical-gate-astra-20260912/ROOT-INTAKE.md) is now PROMOTED/MANUAL, CONDITIONAL after Fable production/Astra FIRST: Mumford pullback extends it to normal surfaces, with normalized valuation identities and a finite test on a GENUINE SNC resolution. No initial Q-Gorenstein hypothesis or finiteness of the resolution is needed. Generic inertia<=3 does not imply the all-valuation inequality, as the checked finite cusp shows. Adjoint existence attaches to an actual hypothetical source, but numerical LC does not. The [0920 synthesis](xmodel/ideation-20260912T0920Z-synthesis.md) separately gives the MANUAL/UNPROMOTED source-line bound r_L>=2d+deg h and A_Y^num(L)<=d-deg h-2 for a genuine adjoint h dx wedge dy. It locates the required LC failure; no opposite bound or attached candidate contraction matrix is supplied. No td6 tree farm, duplicate implication proof or higher-degree ladder is selected.

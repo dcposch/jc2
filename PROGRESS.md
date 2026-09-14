@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+23:31Z: [Linear-Jacobian integrality test](notes.md#2026-09-14-2331-utc--linear-jacobian-integrality-already-contains-jc2)
+finds that the proposed universal boundary lemma already contains JC2:
+two square substitutions recover integrality of both source coordinates.
+Its even-in-t version is JC2-equivalent; neither assertion is proved. ROOT/native
+Astra, MANUAL/PRODUCER-CHECKED, UNPROMOTED; no actual-source integrality,
+surface-pair exclusion, classification or computation. Stop the assumed
+simplification; no family search or automatic successor.
+
 23:20Z: [Bounded primary-source watch](notes.md#2026-09-14-2320-utc--primary-watch-collected-no-new-closing-test)
 ended NO_ACTIONABLE_DELTA: nine watched arXiv version histories were
 unchanged; the newly located O-01d0 repository explicitly retains its

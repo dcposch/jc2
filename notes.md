@@ -48815,3 +48815,110 @@ global mathematical advance, a new FULL, or a reason to restart closed work.
   and deduplication, then pursue only a changed actual-source implication
   or genuinely new construction. No human-only global impasse. Preserve
   unrelated pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-14 23:31 UTC — linear-Jacobian integrality already contains JC2
+
+Previous turn banked completed primary-watch intake and duplicate-stop
+navigation in4708c889381c1b7f20d9a2d3d189e49ed1876091. Scoped integration
+PROGRESS, not mathematical advance or a new closing implication. This
+tick began23:21:02: fresh fetch showed that basis equals origin/master,
+only unrelated pilot-local.log dirty, and all policy/FALLACY pins unchanged.
+
+The selected discriminator concerns an ACTUAL polynomial source condition,
+not a further exact-volume relaxation. For arbitrary P,Q in C[t,s] with
+J_(t,s)(P,Q)=t, is t integral over C[P,Q]? This premise would stop a
+hypothetical Keller pair on the existing exact-volume surface: on its
+whole added chart t=1/u, s=u^3 v-u the volume is -t dt wedge ds, so the
+extended outputs have Jacobian -t. Negating one output normalizes the sign
+without changing their algebra. A monic relation for t over the outputs
+would also make 1/u integral over C[u,v], impossible by normality. This
+attachment is conditional; it neither supplies the integrality nor proves
+that the surface contains a Keller pair. No B-pair search was opened.
+
+ROOT whole-read the existing frozen CLAIM and INTAKE in
+box/exact-volume-no-coordinate-gate-fable5-20260913, matching their
+AUDIT whole hashes79a4d7d63f254729e9dc2fdeea866841d082be4d19476e23f268a80b2579de16
+and debfce7891d1181ca4112cf6f23bd521c4d7f637502d2145785d7ecc801794a0.
+The proposed generic linear-Jacobian integrality was not an accepted
+claim there. Prior linear-Jacobian classification lookups were recovered
+at notes22097/28648 and in the F10 coalesced-source-reference report,
+section7; no applicable classification had been imported. New targeted
+discovery likewise supplied no primary theorem. Broad filename/phrase
+queries were noisy/clipped and replaced with exact paths and sections;
+no protected repository was searched or incidental snippet adopted.
+
+One <=10minute message-only native Astra check was commissioned about
+23:29, target23:39/hard23:42. ROOT independently derived the following
+reduction without sharing it; the agent returned the same reduction and
+its converse for the restricted subclass by23:31. All native agents were
+then independently confirmed COMPLETED. Same-model corroboration is NOT
+different-model FIRST. No files, code, CAS, paid adapter or worker task.
+
+Take ANY f,g in C[x,y] with J(f,g)=1, and write A=C[f,g]. The injective
+polynomial-ring substitutions
+
+  phi1: (x,y) -> (t^2/2,s),
+  phi2: (x,y) -> (s,-t^2/2)
+
+both have Jacobian t. Hence both pulled-back pairs have Jacobian t and
+are even in t. If the proposed integrality assertion held for them, then
+t^2/2=phi1(x) and -t^2/2=phi2(y) would be integral over phi1(A) and
+phi2(A), respectively. Pulling the monic equations back through the
+injective maps proves that BOTH x and y are integral over A. Consequently
+C[x,y] is finite over A. The original Keller map is then finite etale,
+so a connected finite covering of simply connected C^2, and is an
+automorphism. A single selected-coordinate integrality claim was NOT
+used as sufficient: the TWO substitutions are essential to this argument.
+
+Conversely, assume JC2 and suppose P,Q are even in t with J(P,Q)=t.
+Write P=f(t^2/2,s), Q=g(t^2/2,s). The chain rule and the injective
+substitution give J(f,g)=1. Automorphy gives t^2/2 in C[P,Q], so t
+satisfies a monic quadratic over that algebra. Thus the universal
+assertion restricted to EVEN-IN-t pairs is JC2-equivalent. The assertion
+for arbitrary linear-Jacobian pairs IMPLIES JC2; no converse for that
+unrestricted assertion is established. This is an implication/equivalence
+check, not an algorithmic complexity theorem or a proof of either premise.
+
+Scope control: (P,Q)=(t,t*s) has Jacobian t and t already belongs to its
+output algebra, yet the entire t=0 line is contracted. Integrality of t
+does NOT mean finiteness of that arbitrary map. The quadratic fold
+(t^2/2,s) is the finite positive control. No counterexample to the general
+integrality assertion was found or asserted, and the five-generator B
+conditions might still matter; no B-specific theorem is supplied.
+
+MANUAL/PRODUCER-CHECKED, UNPROMOTED, no novelty claim. The result stops
+treating the unrestricted linear-Jacobian condition as an independently
+easier boundary lemma. It does not close a JC2 gap or authorize a
+classification, coefficient search, surface-family, FIRST or successor.
+Earlier trace/ramification and cohomological comparisons in this tick
+supplied no additional actual-source constraint. Global ranking unchanged.
+
+## 2026-09-14 23:31 UTC LIVE STATE — square-fold test collected
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis4708c889381c1b7f20d9a2d3d189e49ed1876091;
+  policy team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a,
+  unchanged from ROOT's complete reads. Scoped source-implication test,
+  not a global advance, promotion, FULL or rank-changing event.
+- All native agents COMPLETED; no live model unit, writer, science worker,
+  provisional root, FIRST debt or descendant. Zero-base reset remains
+  CLOSED. No universal linear-Jacobian lemma is available for consumption;
+  no automatic B-pair/classification/normalizer/control-family successor.
+- FULL lastSep14 21:40:31, nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 overdue/access-coverage debt unchanged. Mathstodon,
+  Palomar, failed Friedland path and denied Zenodo22143955 STOPPED;
+  Miyanishi legitimate-source gate unchanged. Targeted searches reset none.
+- gh freshly unauthenticated23:31; GitHub sweep blocked, gh not
+  authenticated.0triaged,openUNKNOWN,lastsuccessfulnone; originalSep14
+  16:00 miss retained. DC authentication is needed for the queue, not a
+  global research blocker. No issue/PR bodies or external messages.
+- Fresh23:29 both personal/us-east-1 nonterminal worker selectors[];
+  coordinator3674934 tree no science; pswpin/out0/0. User jc2 units still
+  empty23:31. No AWS mutation or scientific computation. Fable cumulative
+  101944 terminal lane-wall seconds unchanged, not billing/tokens/credits/
+  CPU. Native usage and balances UNKNOWN; retained EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE and
+  original48h debt retained. Bank this exact discriminator and navigation;
+  next research needs a changed actual-source hypothesis or construction,
+  not another equivalent integrality target. No human-only global impasse.
+  Preserve pilot-local.log, bulk artifacts and excluded nested repositories.
