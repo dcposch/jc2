@@ -46004,3 +46004,90 @@ theorem-interface composition with discharged source hypotheses was found.
   unrelated pilot-local.log and historical bulk outputs; nested repositories
   untouched. Next research selection must supply an orthogonal actual-source
   implication, not expand these rejected imports or restart unchanged tests.
+
+## 2026-09-14 14:57 UTC -- exact Liouville curve discriminator
+
+Previous goal turn: bounded source-screening PROGRESS, not a closed JC2 gap.
+This continuation selected and decided one new all-degree discriminator.
+For an actual Keller pair, dS=x dy-f dg makes x dy exact on every f=c.
+Would smoothness, closed plane embedding and regular exactness alone force
+rationality? NO. ROOT's explicit p_n=x^2+x^(3n+2)y^n, odd n>=3, has for
+every c!=0 a smooth closed irreducible fiber of genus(n-1)/2. Put t=x^3y,
+v=1/x: its coordinate ring is exactly
+C[t,v,v^-1]/(c*v^2-1-t^n), inverse x=1/v,y=t*v^3. Then
+
+  x dy=d([t+(3n+2)*t^(n+1)/(2(n+1))]/c).
+
+Thus even all generic fibers can be exact with unbounded genus. At n=3,c=1
+the curve is x^2+x^11y^3=1 and the primitive t+11t^4/8. The WHOLE plane
+pencil is critical on x=0 in its zero fiber; its parameter-dependent
+primitive has a pole at c=0. No polynomial Keller mate is possible for this
+p_n, directly from that critical line, without an accepted-bound audit.
+This does not refute any accepted genus theorem or the actual-source
+global-potential implication. The unpromoted curve-only proposal is stopped.
+
+ROOT report xmodel/exact-plane-curve-genus-swarmHQ-root-20260914.md
+SHA6fd2433ad504d30f516de110b0d9ef49a1062a691192ebb2e4a8afef9e0beb86,
+manifestea7d7f7578ff40da59d64d53c672eee018da62a3dbb7a0e75ee32e05e4e24447,
+body8eaf6159fe2588727c21d0db1ed388ad247224ccb644653fe2ed0c3c33dd7e51.
+Begin/close/finalize/expected verify and WHOLE readback complete.
+
+Astra independently found C:4q(D^2*y+6x)^2=D^6, q=x^3-x,D=3x^2-1,
+before receiving ROOT's family. Its exact ring is the elliptic curve
+v^2=q with qD inverted; q,D are already units in the literal closed plane
+ring. The regular primitive of y dx is v+1/D. The rational translation
+removes the nodes and primitive-descent failure of the unshifted control.
+ROOT checked the inverse maps, explicit D inverse, cubic smoothness and
+differential after terminal intake. Astra then corroborated ROOT's simpler
+example after disclosure, not as an independent discovery of that family.
+
+Astra author independently COMPLETED before expected-manifest verification
+and WHOLE report/manifest read. Report
+xmodel/exact-plane-curve-genus-swarmHQ-astra-20260914.md
+SHAe6dcfe2c51d3ee774bc4c72cf1e47be3584000a6b0a9aaf28f62c2f6fc39a1b0,
+manifestfd87303638758bea472c6f085e4b475d5ea6268389ab97bfc5ee590220e241b2,
+bodycc4b968fa6bb49c1686dd36c3d8ae78b4a2b51993df504d9652477cdc9f2e20e.
+Both reports are MANUAL/PRODUCER-CHECKED, UNPROMOTED; same-model checks do
+not satisfy different-model FIRST. No promotion or review debt is claimed.
+The original Shende/Bryant2014 discussion was read as discovery, not as a
+smooth-embedding/regular-descent theorem. Targeted history checks found no
+identical control; no exhaustive novelty or broad-sweep claim. The earlier
+S residue-family idea was a known one-line-injectivity stop, not relaunched.
+
+## 2026-09-14 14:57 UTC LIVE STATE -- curve shortcut refuted, banking
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Scoped mathematical screening
+  progress, no all-degree gap closed. All46 global ranks unchanged; this
+  was a candidate micro-round, not reversal of a load-bearing premise.
+- Basis7bc1fdfbad16daef6b5c8bf2c9469953691cfd1d, fresh fetch unchanged.
+  Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  generic COORD4ce5b29a and AUDITbda4b17b unchanged. Own APP/PROGRESS/notes
+  deltas follow completed authors; no frozen input was modified.
+- All authors terminal. Astra task first before14:48:19 lease, finalized
+  14:53:18, original15-minute research cap/15:10 final backstop met.
+  ROOT finalized and verified14:54; no report writer, paid lane, provisional
+  root, FIRST queue or descendant. No automatic curve/control successor.
+- FULL1300 last completedSep14 13:33:26; nextSep15 01:33:26, original
+  Sep14 10:17:55 miss retained. BROAD last record/coverage debts unchanged
+  from14:38; originalSep12 21:53:56.598798932 overdue. Mathstodon/Palomar
+  STOPPED. Targeted discovery resets no sweep or historical48h clock.
+- Resources: fresh14:56 personal/us-east-1 jc2fleet=1 and Name=jc2-worker-*
+  selectors[] across pending/running/stopping/stopped; user jc2 services
+  running/transitioning empty. Scoped coordinator3674934 tree14:55 has no
+  scientific child; pswpin/out0/0 at14:40 and14:55, zero delta. No science
+  or AWS mutation. Fable cumulative100220 terminal lane-wall seconds
+  unchanged; not tokens/credits/billing. Exact balances unknown; retained
+  evidence EBS billable. Astra primary, Fable independent, Sol fallback.
+- GitHub sweep: blocked, gh not authenticated (binary absent14:40).
+  Last successful none established;0 triaged, openUNKNOWN; DC install/auth
+  prerequisite remains. Next tick/original16:00 checkpoint, not reset.
+  Miyanishi GSP still awaits a legitimate PDF; no retrieval retry selected.
+- Systems14:57 NO_UPGRADE: the new discriminator finished manually without
+  a compute/embedding search; no software change or measured acceleration.
+  Engineering closed; scalar/preflight/r3 PARKED. No human-only global impasse.
+- Bank only both final reports/manifests and own APP/PROGRESS/notes; verify
+  explicitly staged native/ROOT pairs before commit/push. Preserve unrelated
+  pilot-local.log and historical bulk outputs; nested repositories untouched.
+  Next selection must use actual whole-source compatibility, not infer a
+  genus bound from these weaker exact-curve properties or widen this family.

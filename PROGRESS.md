@@ -8,6 +8,15 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+14:57Z: [Exact-curve discriminator](xmodel/exact-plane-curve-genus-swarmHQ-root-20260914.md)
+refutes a proposed all-degree shortcut: smooth closed plane curves can have
+exact Liouville form and arbitrarily large genus, even on every generic
+fiber of one pencil. [Astra](xmodel/exact-plane-curve-genus-swarmHQ-astra-20260914.md)
+independently constructed an elliptic example with regular primitive descent.
+MANUAL/PRODUCER-CHECKED, UNPROMOTED; no different-model FIRST. The displayed
+pencil has a critical zero fiber, so it is not Keller and closes no JC2 gap.
+One bounded discriminator completed; no curve-family successor or computation.
+
 14:38Z: [Bounded primary delta](xmodel/literature-delta-swarmHQ-astra-20260914T1430Z.md)
 found no new applicable closing theorem. The new log Euler--Hurwitz result
 cannot cover the plane or an open retaining an entire nonproperness component;

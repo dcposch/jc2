@@ -288,6 +288,17 @@ moduli, prime/support or fiber-product family successor.
 
 The [primary-text priority check](box/generic-pencil-genus-priority-astra-20260912/ROOT-INTAKE.md) identifies the full-source generic genus-zero endpoint as KNOWN/DUPLICATE by [Chau0804.3172v3 Theorem2](https://arxiv.org/pdf/0804.3172v3), after choosing two independent rational generic directions; this does not duplicate the proper-block attachment. [Chau1005.3866v2 Theorem3](https://arxiv.org/pdf/1005.3866v2) requires ALL fibers irreducible and of equal genus, not just generic constancy. Exact generic-genus-one priority remains unresolved in the two substantive texts read. No exhaustive novelty claim, opposite bound or automatic genus ladder follows.
 
+**Exact Liouville fibers need not be rational.** The September14
+[ROOT countercheck](xmodel/exact-plane-curve-genus-swarmHQ-root-20260914.md)
+gives smooth closed curves x^2+x^(3n+2)y^n=c, odd n>=3,c!=0, with genus
+(n-1)/2 and a regular primitive of x dy. Thus even every generic fiber's
+exactness supplies no genus ceiling. [Astra's independent elliptic control](xmodel/exact-plane-curve-genus-swarmHQ-astra-20260914.md)
+has explicit inverse ring maps and primitive descent. MANUAL/PRODUCER-CHECKED,
+UNPROMOTED, not different-model FIRST. ROOT's pencil is critical on x=0
+in its zero fiber; no Keller pair or globally compatible polynomial coframe
+is supplied. Stop the curve-only genus shortcut, not actual-source genus
+arguments; no new curve family or degree search is selected.
+
 **Irreducibility is not genus constancy.** The September13 14:13 and 16:10
 [journal checks](notes.md) already retain the Briancon controls and the
 boundary principal-parts gap; do not rediscover them as new avenues.
