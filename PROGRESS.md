@@ -8,6 +8,15 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+14:02Z: [Magnen primary-proof screen](xmodel/magnen-tree-countercheck-swarmHQ-root-20260914.md)
+completed with an [independent Astra source check](xmodel/magnen-tree-source-check-swarmHQ-astra-20260914.md).
+Both find explicit degree-two coefficient failures in the claimed tree
+factorization on genuine plane automorphisms. MANUAL/PRODUCER-CHECKED,
+UNPROMOTED; same-model independence is not different-model FIRST.
+This stops importing that 2023 proof, not JC2; no global gap closed or
+new counterexample was found. No Fable lane, worker or scientific execution.
+Promoted claims, all46 rankings and original sweep/round clocks unchanged.
+
 13:33Z: [swarmHQ FULL1300](xmodel/ideation-swarmHQ-synthesis-20260914T1300Z.md)
 completed: all46 unchanged, NO_NEW_CLOSING_MECHANISM / NO_TEST. Both
 independent blinds read the complete packet; filename-boundary and report-

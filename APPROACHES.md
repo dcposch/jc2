@@ -564,6 +564,15 @@ classification/gauge/stable-image successor is selected.
 
 The [September12 bounded external sweep](box/websweep-20260912T1940Z-astra/ROOT-INTAKE.md) is PARTIAL / BOUNDARY INCIDENT. Two additional KellerMap fixes distinguish coordinate identity from equal values and monomial support from positive-characteristic derivatives; neither is a new characteristic-zero result or audited package adoption. Roy's plane programme moved to an explicitly unfinished archive; BGV/Zhang PDF bytes remain unchanged. Three raw social feeds were retained before filtering, are excluded from evidence, and their channel is STOPPED. The prior sweep's proof-claim objections and Palomar incident remain recorded; social/global-registry/access holes are not discharged. No verified plane resolution or global rerank; clocks and follow-up ownership belong to LIVE STATE.
 
+The September14 [Magnen source countercheck](xmodel/magnen-tree-countercheck-swarmHQ-root-20260914.md)
+and [independent Astra check](xmodel/magnen-tree-source-check-swarmHQ-astra-20260914.md)
+are MANUAL/PRODUCER-CHECKED, UNPROMOTED (not different-model FIRST).
+The literal tree factorizations in arXiv:2311.14723v1 fail already at a
+quadratic coefficient of genuine plane polynomial automorphisms; the
+determinant cancellation itself is not the failure. Do not import that
+claimed proof. This rejects the displayed argument, not JC2 or its degree-
+bound conclusion, and selects no tree-repair or finite-family successor.
+
 ## 9. Stops, verification and allocation discipline
 
 Retain these scoped stops; none forbids an entire mathematical vocabulary:
