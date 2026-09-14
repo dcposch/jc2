@@ -47004,3 +47004,94 @@ trigger. No construction family receives an automatic successor.
   global impasse. Next research needs an actual new candidate satisfying
   a sufficient construction interface or a changed global proof test,
   not more pole-removal identities, control families or accepted-bound checks.
+
+## 2026-09-14 18:27 UTC — candidate search and fixed-component genus correction
+
+The last turn banked a conditional polynomialization bridge, not a JC2
+gap closure. This tick began18:19:18; fresh fetch retains
+f17a9d859c60127d92b71215528edc49193cea75=origin/master and only the
+unrelated pilot-local.log was dirty. The sealed pole-removal report and
+manifest still match df733c88 and6f2ce1e8. No extension of that lemma,
+provisional claim or dependent computation was launched.
+
+One bounded native Astra task sought an ACTUAL noncoordinate polynomial
+submersion with irreducible fibers, rather than another pole-removal
+identity. The specific primary source was Cassou-Nogues, *The effect of
+rational maps on polynomial maps*, Ann. Polon. Math.76(2001),21--31:
+https://www.impan.pl/shop/publication/transaction/download/product/85201 .
+Its displayed degree9 and degree15 families, printed30, come from
+
+    f(v,w)=A3*w^2+(v^2+A1*v+A2)*w+a1*v,  a1*A3!=0,
+
+by birational source substitutions. Their generic curve is birational to
+W^2=(v^2+A1*v+A2)^2+4*A3*(t-a1*v), a generically squarefree quartic,
+so genus1. SectionII.2 instead gives rational field generators;
+II.1's Briancon route has a degree2 map from a genus2 seed. Native source
+reading covered the introduction, theorem statements and applications
+through printed30, not an independent audit of every smoothness or
+irreducibility assertion. ROOT separately read primary introduction/main
+statements and applications passages, especially all printed30; no
+whole-paper or reliable screenshot audit and no raw PDF pin are claimed.
+The native task completed before its12minute cap; terminal state was
+independently checked. No code, solver, paid lane or new report was written.
+
+Important correction to ROOT's OWN task and initial user commentary:
+the requested genus>=2 filter was not a necessary condition on an arbitrary
+selected component p. The accepted full-normalization genus theorem applies
+to the GENERIC LINE PENCIL of a Keller pair. APP already retains this
+distinction. Genus1 of a chosen component alone does not license its
+rejection under that theorem. The agent correctly answered the narrower
+requested search, but that answer must not be read as a general genus1
+mate-exclusion theorem. ROOT withdrew the stronger reading in commentary
+and sent the correction without restarting the completed agent.
+
+The ACTUAL printed degree9/15 candidates are independently closed by the
+already accepted gcd(deg p,deg q)>=16 counterexample bound, for every
+degree of q. This is application of the existing bound, not reproof or
+compute. No higher-degree family or rational integration is selected.
+The paper's birational substitutions in II.3 even have constant nonzero
+Jacobian, but the old seed-period obstruction was NOT commissioned again.
+No claim excludes every smooth/all-irreducible polynomial or every
+fixed-component genus1 candidate. The pole-removal lemma is unchanged.
+
+ROOT's independent all-degree thinking about differential-algebra
+finiteness, Galois closure and collision algebra supplied no missing
+actual-source implication and is not banked as a theorem. A proposed
+eigenvaluation shortcut was stopped by the existing September13 06:06
+record at notes37920--37972 before another primary proof audit: zero
+thinness is an explicit unresolved case, and blanket resonant properness
+would also overread the source. No new dynamics, control or operator lane.
+This is a bounded source/scope micro-round, no global rerank or FULL trigger.
+
+## 2026-09-14 18:27 UTC LIVE STATE — no eligible new construction
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved, all46 ranks and global gaps unchanged.
+  Basis f17a9d859c60127d92b71215528edc49193cea75; policy basis
+  team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  COORD4ce5b29a/AUDITbda4b17b/FALLACYe47fd16c unchanged. Bank APP
+  clarification and notes only; preserve pilot-local.log and all excluded
+  nested repositories/bulk outputs.
+- All native agents COMPLETED. No live paid lane, worker, scientific child,
+  new report transaction, provisional root, FIRST debt or descendant.
+  Pole-removal report remains producer-checked/unpromoted and lacks a
+  candidate; this source intake supplies no license for a family successor.
+- FULL1300 completedSep14 13:33:26, nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 overdue, inherited
+  access/coverage/48h qualifications unchanged. Targeted primary reads reset
+  neither clock. Mathstodon/Palomar STOPPED; Miyanishi PDF prerequisite held.
+- GitHub sweep: blocked, gh not authenticated; binary absent18:24. Last
+  successful none established,0 triaged,openUNKNOWN; originalSep14 16:00
+  miss retained. DC installation/authentication needed, next check next tick.
+- Personal/us-east-1 pending/running/stopping/stopped worker selectors
+  jc2fleet=1 and Namejc2-worker-* both[] exit0; user jc2 active/transitioning
+  units empty.18:24 coordinator3674934 tree has no scientific child;
+  pswpin/out0/0. No AWS mutation or scientific compute; retained EBS billable.
+  Fable100220 cumulative terminal lane-wall seconds unchanged, not billing,
+  credits, tokens or CPU; native usage unmeasured, balances unknown.
+  Astra primary, Fable5.1 high-value independent gates, Sol fallback.
+- Systems NO_UPGRADE; no measured acceleration. Engineering CLOSED,
+  scalar/preflight/r3 PARKED, original48h debt unchanged. No human-only
+  global impasse. Next work needs a different actual candidate or an
+  actual-source implication; no genus-only filter on a fixed component,
+  pole-control expansion or duplicate eigenvaluation reformulation.

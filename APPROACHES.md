@@ -257,6 +257,8 @@ finitely many fibers are needed. Reducible fibers permit incompatible
 componentwise constants, as the explicit control shows. No eligible new
 noncoordinate p,q is supplied; no novelty, FIRST, family search or global
 reranking follows. This does not reopen the stopped rational-pair families.
+The generic-pencil genus bound is NOT a genus filter on a single chosen p;
+the September14 18:27 source check withdraws ROOT's stronger task reading.
 
 The [September13 construction reset](xmodel/global-construction-reset-astra-20260913.md)
 is MANUAL/UNPROMOTED NO_NEW_MECHANISM. Rational source regularization of the
