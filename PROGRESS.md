@@ -8,6 +8,16 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+16:52Z: [Unramified-boundary primary gate](xmodel/unramified-asymptotic-source-gate-swarmHQ-root-20260914.md)
+finds an unsupported sequence-pairing step in Peretz's asymptotic-chart
+exclusion proof. An exact polynomial node example and a constant-J local
+analytic example isolate the failure; neither is a global Keller
+counterexample or refutation of the full theorem's conclusion. ROOT and
+native Astra agree, MANUAL/PRODUCER-CHECKED, UNPROMOTED; no different-model
+FIRST. The preceding Frobenius/minimality screens recovered existing
+actual-source gaps. Stop this proposed import and unchanged follow-ons;
+no all-degree gap closed, reranking, Fable lane or computation.
+
 15:58Z: [Actual-source weight screen](xmodel/trace-weight-source-swarmHQ-astra-20260914.md)
 ends KNOWN/NO_NEW_SOURCE_CONSTRAINT: the precise boundary connecting map
 is an isomorphism compatible with weights, as the September13 history

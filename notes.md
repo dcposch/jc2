@@ -46413,3 +46413,97 @@ record is not counted as new mathematical progress merely because banked.
   bulk artifacts and nested repositories. Next research must add a genuinely
   changed actual-source implication or construction, not another statement
   of the already recorded secant, Picard, composition, ML or period gap.
+
+## 2026-09-14 16:52 UTC -- Frobenius and asymptotic source gates stopped
+
+Previous synchronization turn: NO MATHEMATICAL PROGRESS. Fresh fetch and
+pull found HEAD=origin/master at ddb3211d with the requested contributor/CI
+changes already included. The new primary-source gate below changes one
+candidate-import decision, not a JC2 closing implication.
+
+- The16:26 minimality screen recovered the August30 intermediate-surface
+  gap: geometric degree-minimality does not make all intermediate surfaces
+  polynomial planes and hence does not supply primitivity.
+- Native Astra's bounded Frobenius gate found ROOT's proposed D=B step
+  unjustified. Nonidentity inertia over the actual finite-cover branch B
+  has at most one fixed sheet, but identity inertia over a component of
+  nonproperness D outside B does not constrain omitted unramified centers.
+  The binding August30 all-degree acyclic-companion integration already
+  disclaims B=D. No group enumeration or all-Frobenius exclusion follows.
+- ROOT's targeted primary search then located Peretz1208.6108v3 as a
+  possible source of the missing index-one exclusion. Its Theorem3.4
+  asserts distinct equal-image sequences approaching a common source
+  intersection. The16:46--16:48 bounded native follow-up independently
+  confirms the missing common-limit premise. The polynomial node
+  discriminator maps the residual branch to the axis at the OTHER node
+  parameter. Local etaleness and a surjective polynomial parametrization
+  therefore do not license that assertion. A local analytic version even
+  has constant Jacobian, but neither is a global Keller double-asymptotic
+  pair. The full theorem's conclusion is not refuted. No imported
+  index-one exclusion, D=B, or JC2 claim is made.
+- The conditional chart chain rule gives a second Keller map when
+  beta=alpha+1, but its geometric degree is alpha times that of F; the
+  rational chart is not a polynomial first leg. No minimality or reversed
+  Galois-target-block application. This is a scope check, not a new duality
+  theorem or construction. No unchanged group/curve/control successor.
+
+The compact report is
+`xmodel/unramified-asymptotic-source-gate-swarmHQ-root-20260914.md`,
+MANUAL/DOCUMENTARY, PRODUCER-CHECKED and UNPROMOTED. Native co-research is
+same-model, not FIRST; all native authors independently observed COMPLETED
+before intake. No report or code was written by the native follow-up.
+ROOT's report used begin->close->finalize; body032f18b9, full1fc85e30,
+manifest6d8c5057, full values in the tracked manifest. Exact-version primary
+PDF SHA6fb38f580acd3c3684e44fc1ad19ac50b7d05dc5702da30a5022db6d5f7527a4;
+read scope and manual replay are stated in the report. Targeted discovery
+and selected primary pages do not complete BROAD. No Fable lane, AWS
+mutation or scientific computation; native token/cost use is unmeasured.
+
+## 2026-09-14 16:52 UTC LIVE STATE -- unsupported source import stopped
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved, all46 ranks unchanged. Basis
+  ddb3211db31ae8f9bba436aaed123a18a07d6e7b=origin/master on fresh16:42
+  fetch and16:49 equality check. Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDITbda4b17b unchanged. Own APP/PROGRESS/notes edits
+  and one report/manifest are this bank; their final pins follow validation.
+- All native lanes COMPLETED; no active paid lane, science, provisional
+  root, FIRST queue, descendant or authorized successor. Retain existing
+  source-normality, source-selection and unrestricted-construction gaps.
+  This source proof is not promoted or used downstream. Its negative
+  local test changes an import decision, not the mathematical ranking;
+  coalesce as a micro-round, no full-round echo.
+- FULL1300 completedSep14 13:33:26; nextSep15 01:33:26; originalSep14
+  10:17:55 miss retained. BROAD originalSep12 21:53:56.598798932 remains
+  overdue with previous coverage/access/48h qualifications. Mathstodon/
+  Palomar STOPPED; targeted reads reset none. FULL1300 already was the
+  zero-base reset. No new theorem-interface consumer was found here.
+- GitHub sweep: blocked, gh not authenticated (binary absent at the
+  preceding synchronization check). Last successful none established,
+  0 triaged, openUNKNOWN. Original16:00 checkpoint missed; installation/
+  authentication needed and surfaced to DC. Next prerequisite check at
+  the next tick, not a rewritten successful sweep or cleared service debt.
+- Fresh16:43 personal/us-east-1 pending/running/stopping/stopped worker
+  selectors jc2fleet=1 and Name=jc2-worker-* both[], terminalexit0.
+  Running/transitioning user jc2 services empty. Scoped coordinator3674934
+  tree16:43 has no scientific child; pswpin/out0/0. No AWS mutation;
+  retained evidence EBS billable. Fable cumulative100220 terminal lane-wall
+  seconds unchanged, not credits/tokens/billing/CPU; balances unknown.
+  Native message-only time is not added to that counter. Astra primary,
+  Fable highest-value independent gates, Sol fallback; no occupancy lanes.
+- Systems NO_UPGRADE: standard transaction/collision tools used unchanged;
+  no measured software acceleration. Engineering closed; scalar/preflight/
+  r3 PARKED. Historical48h debt and Miyanishi legitimate-PDF prerequisite
+  unchanged. No human-only global mathematical impasse or live wait.
+- Bank the explicit owned files, staged-verify then commit/push. Preserve
+  pilot-local.log, bulk artifacts and nested repositories. Next research
+  selection must be orthogonal to this unchanged index-one/nodal-control
+  gap, or attach a genuinely new actual-source theorem. Broad public-source
+  coverage remains due; no stopped-channel retry or false completion.
+
+Bank validation: report read back whole and expected-manifest verification
+passed; scoped diff-check passed. APP SHA
+7f2c208ace41fd980e5398126c180664a4656cc1812ae498d0b5f654a2dccad8;
+PROGRESS62f993bf, AUDITbda4b17b and policy50cf4548. Fresh fetch again
+returned HEAD/origin ahead-behind0/0. Repeated gh prerequisite check still
+finds no binary. pswpin/out remained0/0 at16:52, zero observed delta.

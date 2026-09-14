@@ -138,6 +138,18 @@ and its cited superseding reviews retain their exact execution boundaries.
 
 **Quartic-topology history check (September14).** The [reviewed sign-double-plane gate](xmodel/block-descent-a1-quartic-discriminant-double-plane-coordinator-integration-sol56-20260830.md) and [candidate Fox/localization interface](xmodel/block-descent-a1-quartic-double-plane-fox-localization-kernel-sol56-20260830.md) already isolate the globally extendable three-torsion obstruction in the zero-cusp minimal-cycle horn, not all quartic blocks. The [prior complement-group acquisition](xmodel/b0-pi1-acquisition-grok46-20260831.md) and September11 journal check retain the missing infinity hypotheses in Neumann--Norbury/Orevkov; polynomial parametrizability alone does not supply them. Recovered history, not a new theorem or selected group/Picard/control computation.
 
+**Unramified-boundary source check (September14).** The
+[asymptotic-chart gate](xmodel/unramified-asymptotic-source-gate-swarmHQ-root-20260914.md)
+is MANUAL/PRODUCER-CHECKED, UNPROMOTED. A polynomial nodal-curve example
+invalidates the local paired-sequences inference in Peretz1208.6108v3,
+Theorem3.4; it is not globally Keller and does not refute the full theorem's
+conclusion. That proof cannot currently supply an actual index-one exclusion.
+Frobenius monodromy constrains nonidentity inertia over branch B, not omitted
+unramified centers over nonproperness components outside B; D=B remains
+unproved. An asymptotic dual of index-one chart type multiplies geometric
+degree by alpha, not decreases it. No primitivity, Frobenius exclusion,
+polynomial block or automatic node/control successor follows.
+
 ## 5. TRACE: accepted image, no manufactured splitting
 
 [TRACE-IC-1 proof](xmodel/keller-trace-image-root-20260911.md) and [FIRST](xmodel/keller-trace-image-gate-fable5-20260911.md) identify the trace image of ANY actual complex plane Keller map, with its ACTUAL reduced nonproperness divisor D, as the inverse image of the boundary's minimal IC module. Named Yekutieli/standard inputs and the source-scope correction remain part of the theorem tier. No zero-defect, degree or dicritical-count hypothesis is imposed.
