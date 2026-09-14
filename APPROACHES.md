@@ -326,6 +326,12 @@ The September14 screen recovered the following existing gaps, not new routes:
   three-generator ideal unit for EVERY Keller map is still injectivity/JC2;
   neither the idempotent nor naive projective connectedness supplies it.
   The September12 18:52 McKean check already identified the same criterion.
+  The September13 20:23 [secant-line source check](notes.md#2026-09-13-2023-utc-live-state)
+  also already gives a quasi-finite map from actual collision pairs to
+  affine lines. The missing premise is properness/no escaping pairs as
+  lines converge, not finite fibers or the endpoint-tangent identity.
+  September14's history recovery supplies no new no-escape estimate and
+  selects no duplicate secant lane.
 - **Exponential/Fourier vanishing:** the September13 16:00
   [journal check](notes.md#2026-09-13-1600-utc--exponential-twists-do-not-erase-missing-branches)
   retains finite-target missing branches for every target-polynomial phase.

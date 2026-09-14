@@ -48703,3 +48703,115 @@ No genus family, projective-pencil classification or control successor.
   the exact stop and navigation/digest; preserve pilot-local.log, bulk
   artifacts and excluded nested repositories. Continue seeking a changed
   all-degree source implication, not more consequences of bare smoothness.
+
+## 2026-09-14 23:20 UTC — primary watch collected; no new closing test
+
+The intervening operator-response turn freshly fetched and verified
+HEAD=origin/master=79556d7622bbbb34921bd11077e9ce5a5fb41761. Both the
+README/CI commit bf1e1ffe and its preceding CI change are already ancestors;
+no pull, stash or modification of unrelated pilot-local.log was necessary.
+Classify that turn NO MATHEMATICAL PROGRESS: synchronization verification
+is not a JC2 result. This tick revalidated the live state and collected the
+completed primary watch; the research goal remains unresolved and active.
+
+Native Astra public_literature_delta ran one bounded message-only watch
+from about22:59 to about23:06, before target23:12/hard23:15. Its terminal
+message was received, and all three native agents were independently
+confirmed COMPLETED before this append. No new report, writer, external
+adapter, scientific computation or descendant was commissioned.
+
+The lane reports fresh abstract/version-history checks of these primary
+arXiv pages, with no displayed revisions. This is metadata intake, NOT
+another proof-body audit or an exhaustive search for a plane resolution:
+
+| Primary locator | Observed version/date |
+| --- | --- |
+| https://arxiv.org/abs/2609.05746 | BGV v1, September4,2026; internal Version356 |
+| https://arxiv.org/abs/2609.09858 | Yugang Zhang v1, September9,2026 |
+| https://arxiv.org/abs/2609.10180 | Wenliang Zhang v1, September9,2026 |
+| https://arxiv.org/abs/2608.19069 | Pissolato v1, August19,2026 |
+| https://arxiv.org/abs/2304.14675 | Charbonnel v5, August6,2026, withdrawn |
+| https://arxiv.org/abs/2311.14723 | Magnen v1, November19,2023 |
+| https://arxiv.org/abs/2609.13081 | Arapura--Mese--Patel v1, September11,2026 |
+| https://arxiv.org/abs/2608.13798 | Beldiev--Pogudin v1, August13,2026 |
+| https://arxiv.org/abs/1311.0232 | Regeta v1, November1,2013 |
+
+The lane's title clarification for2609.09858 is bibliographic: general
+projective endomorphisms' iterated centralizers. APPROACHES already refers
+only to the regular polynomial locus used there, NOT a claimed JC proof;
+no contradictory correction to that canonical scope is warranted.
+
+One exact repository locator is newly retained here:
+https://github.com/ipitchford/o01d0-polar-fibre-structural-reductions/blob/main/README.md.
+The lane and then ROOT read the whole rendered58-line README. It identifies
+an anonymous unrefereed0.1.0-candidate, August28,2026, and explicitly leaves
+the uniform O-01d0 problem and JC2 unresolved. Its preferred remaining
+arithmetic target is the pair-content/four-factor theorem. No changed
+uniform closing implication is supplied. Paper, certificates and code
+were not read or executed; the README alone is not evidence for its listed
+mathematical claims. This is a watch locator, not a new research assignment.
+The September3 ipitchford/Zenodo22216400 five-support HC4 record was also
+recovered as actor history, not identified with this separate release.
+
+The lane's preplanned batch also attempted
+https://zenodo.org/records/22143955 and received a non-retryable safe-open
+error. No retry, mirror or bypass followed; the repository URL was already
+in that batch before the denial. ROOT did not retry the denied source.
+The lane used31 discovery queries over arXiv, Zenodo, GitHub/GitLab and
+MathOverflow, both September10--14 windows and unwindowed concepts. The
+normal newest-tag page https://mathoverflow.net/questions/tagged/jacobian-conjecture?tab=Newest
+displayed39 questions with July30 newest; no thread/comment census.
+Stale/irrelevant returns are weak negative evidence. Verdict
+NO_ACTIONABLE_DELTA, DOCUMENTARY/UNPROMOTED; no BROAD completion or reset.
+
+ROOT's all-degree checks likewise selected NO_NEW_CLOSING_TEST. Finite
+generation of a module does not make its elements integral, formal
+deformation does not supply bounded polynomial inverse support, and the
+zero-thinness/dynamical-degree conditions return to their known source
+gaps. In particular the proposed actual secant-line argument was recovered
+verbatim in September13 20:23: finite collision fibers give quasi-finiteness,
+not properness as source pairs escape at infinity. No duplicate lane was
+opened. A navigation pointer now exposes that existing stop. Nine further
+targeted discovery queries on differential modules, monodromy, dynamics,
+integrality and line-injectivity found no closing primary implication;
+incidental search snippets and proof headlines were not adopted or audited.
+No new theorem, counterexample, failed generalization or numerical test is
+claimed from these thoughts. This is integration/history recovery, not a
+global mathematical advance, a new FULL, or a reason to restart closed work.
+
+## 2026-09-14 23:20 UTC LIVE STATE — no new closing test
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis79556d7622bbbb34921bd11077e9ce5a5fb41761,
+  matching freshly fetched origin/master. Policy basis
+  team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Governing pins unchanged; ROOT refreshed README, generic protocol,
+  team policy and FALLACY. An initially truncated protocol read was
+  completed with bounded sections before action. No claim promotion or
+  global rerank; primary watch and duplicate-stop recovery coalesced as a
+  micro-round. Mathematical gaps remain in APPROACHES.md and AUDIT.md.
+- All native agents COMPLETED; no live model unit, writer, science worker,
+  provisional root, FIRST debt or speculative descendant. No process is
+  being waited on. Completed zero-base reset remains CLOSED. No automatic
+  secant, genus, monodromy, normalizer, formal-deformation or quantum
+  successor, finite-family allocation or accepted-bound recheck.
+- FULL lastSep14 21:40:31, nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 remains overdue/access-coverage debt. Mathstodon,
+  Palomar, failed Friedland publisher path and denied Zenodo22143955
+  remain STOPPED; Miyanishi legitimate-source gate unchanged. Selected
+  metadata/searches discharge none of the missing broad coverage.
+- gh freshly unauthenticated23:11; GitHub sweep blocked, gh not
+  authenticated.0triaged,openUNKNOWN,lastsuccessfulnone; originalSep14
+  16:00 miss retained. DC authentication remains the queue prerequisite
+  and was surfaced this turn; no issue/PR bodies or messages consumed/sent.
+- Fresh23:11 both personal/us-east-1 nonterminal worker selectors[];
+  no live jc2 user service; coordinator3674934 tree no science,
+  pswpin/out0/0, unchanged. No AWS mutation or scientific computation.
+  Fable cumulative101944 TERMINAL lane-wall seconds unchanged, not
+  billing, tokens, credits or CPU. Native usage/balances UNKNOWN;
+  retained evidence EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Immediate action is bank this completed intake
+  and deduplication, then pursue only a changed actual-source implication
+  or genuinely new construction. No human-only global impasse. Preserve
+  unrelated pilot-local.log, bulk artifacts and excluded nested repositories.
