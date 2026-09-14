@@ -8,6 +8,15 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+17:08Z: [Rational-pair target-change check](xmodel/rational-mate-monomial-targets-swarmHQ-root-20260914.md)
+excludes every integer-exponent monomial constant-J target modification of
+the specified rational pair, uniformly in dominant rational source maps.
+MANUAL/PRODUCER-CHECKED, UNPROMOTED; no different-model FIRST, computation
+or JC2 conclusion. This ends the family's second tranche, with no automatic
+nonmonomial successor. A bounded public literature pass found fresh papers
+but no closing hypothesis; exact coverage and scope mismatches are in notes.
+BROAD remains overdue, and no paid lane or worker was launched.
+
 16:52Z: [Unramified-boundary primary gate](xmodel/unramified-asymptotic-source-gate-swarmHQ-root-20260914.md)
 finds an unsupported sequence-pairing step in Peretz's asymptotic-chart
 exclusion proof. An exact polynomial node example and a constant-J local

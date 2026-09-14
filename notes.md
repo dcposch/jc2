@@ -46507,3 +46507,122 @@ passed; scoped diff-check passed. APP SHA
 PROGRESS62f993bf, AUDITbda4b17b and policy50cf4548. Fresh fetch again
 returned HEAD/origin ahead-behind0/0. Repeated gh prerequisite check still
 finds no binary. pswpin/out remained0/0 at16:52, zero observed delta.
+
+## 2026-09-14 17:08 UTC -- one target subgroup closed; public-source delta
+
+Previous goal turn: scoped progress in a candidate-source import decision,
+not a JC2 gap closure. Current fetch starts at9e0ff11e=origin/master.
+ROOT changed the construction test rather than retrying the node argument:
+could rational target maps evade today's fixed-target polynomialization
+obstruction? For B_n(p,q)=(p(pq)^n,q(pq)^(-n)), ALL integers n fail.
+The source-attached identities I(T)=2U^(2-n)V^(1-n) and
+X^2 Q(T)=U^(1-n)V^(-n) force Q constant and an impossible square valuation.
+The n>=2 range uses reciprocal-polynomial normality, not an assumed
+polynomial T. Native Astra independently checks all three integer ranges,
+including n=0,1,2 and the POSTCOMPOSED polynomial-automorphism scope.
+ROOT's elementary monomial classification reduces every other integer-
+exponent constant-J target to this subgroup: rational p^k and squarefree,
+coprime U,V force k to divide consecutive integers, so |k|=1.
+
+Report `xmodel/rational-mate-monomial-targets-swarmHQ-root-20260914.md`:
+MANUAL/PRODUCER-CHECKED, UNPROMOTED; native same-model check is not FIRST,
+and its final verdict did not separately charge ROOT's monomial corollary.
+Bodye8b33509/full9ade27b8/manifest9a2a948c, full pins in tracked manifest.
+The report's 'no search' means no numerical/coefficient search; scoped
+documentary rg/history checks DID run. No CAS or heavy Python was used.
+This second tranche closes the full monomial target family but not arbitrary
+rational target changes, interleavings or JC2. Stop the family expansion;
+nonmonomial targets are not an automatically authorized successor.
+
+Public literature lane ran16:55:22--17:00:20, message-only, independently
+observed COMPLETED before intake. NO_NEW_ACTIONABLE_RESULT. ROOT's launch
+prompt incorrectly expanded BGV as Bardet--Gonnet--Viallet. The lane corrected
+it to Borisov--Gabber--Vasiu using arXiv2609.05746; ROOT acknowledged the
+error immediately. No theorem or ledger premise used the mistaken expansion.
+
+- [Enokizono--Moriyama2609.12478v1](https://arxiv.org/html/2609.12478v1),
+  submittedSep11/announcedSep14: lane read abstract, Sections1.1--1.3,
+  Theorem2.1/Remark2.2 and beginning proof through rendered238; ROOT likewise
+  read the displayed introduction and nonvanishing statement. It removes
+  Q-factorial/lc premises from abundance but still needs a boundary divisor,
+  Cartierness and relative nefness. It supplies neither actual-source
+  numerical-LC nor absolute nefness. No abundance lane/import.
+- [Meier--Rajala2609.09842v1](https://arxiv.org/html/2609.09842v1), Sep9:
+  lane and ROOT read introduction, volume definition and Theorems1.4/1.6.
+  Their preservation is measure(A)=measure(f(A)) for EVERY measurable A,
+  not merely determinant1. Two disjoint inverse neighborhoods over one
+  ball already violate this premise for a local volume-preserving map.
+  Global Euclidean Lipschitzness is also missing. No metric-rigidity import.
+- [Du--Guo--Xie2609.11883v1](https://arxiv.org/html/2609.11883v1), Sep10:
+  lane read complete introduction including1.7 and incidental opening2.1;
+  ROOT read abstract and introduction through Definition1.6. Smooth
+  projective morphisms, rationally connected fibers and an affine CURVE
+  lifting are required. No plane algebraization or exact Keller determinant
+  follows. No approximation/formal-extension successor.
+- [Jardim et al.2609.12253v1](https://arxiv.org/html/2609.12253v1), Sep10:
+  lane-only abstract/introduction, setup, Lemma1.1 proof and Theorem1.2(a,b)
+  through rendered250. No actual collision-ideal hypothesis identified.
+  ROOT has not read or imported this theorem; no ideal/control client.
+- Lane fresh abstract/version metadata: BGV2609.05746 remainsv1 Sep4;
+  Kistner--Shaska2608.02863 remainsv1 Aug3; Bisi2301.08221 remainsv3
+  Apr5,2024 with2026 JLMS reference. No body reaudit or new revision found.
+  Xiang's institutional 'shuffle invariance of the uniform infinite
+  d-Catalan tree' talk was search-excerpt-only after retrieval failures:
+  [conference PDF lead](https://tsimf.tsinghua.edu.cn/__local/6/E9/EF/BC73AC199EA4BEDAFA8A5648F33_82640D29_D317A8.pdf).
+  No finite-tree bridge or primary paper found; not a selected task.
+
+Coverage is deliberately partial: lane screened all displayed Sep14 titles
+in math.AG29/math.AC5/math.CV6, broad unwindowed JC/Keller/etale/trace/Poisson/
+conductor/compactification/nonproperness queries, plus Sep12--14 windows.
+Zenodo queries resurfaced old April/July metadata at19790416 and21542914;
+no files, former restricted, registry search failed. MathOverflow active-tag
+and date queries yielded selected August entries, not a full comment census.
+Roy/alok/SuperMind GitHub commit pages were tool-restricted; current heads
+UNKNOWN, no alternate-access attempt. Older search results in a date window
+do not certify an empty interval. No Mathstodon/Palomar/social aggregator or
+unauthenticated campaign-queue access; BROAD is NOT complete or clock-reset.
+
+## 2026-09-14 17:08 UTC LIVE STATE -- target tranche ended
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved, all46 ranks unchanged. Basis
+  9e0ff11eeeecb27879223178f8cc75858780c535=origin/master after16:54 fetch.
+  Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDITbda4b17b unchanged. Own report/manifest, APP,
+  PROGRESS and notes comprise the explicit bank, final validation below.
+- All native authors independently COMPLETED; no live paid lane, science,
+  provisional root, FIRST queue or descendant. The monomial construction
+  family is stopped after two tranches; no nonmonomial/interleaving family,
+  new curve control or degree search. New source papers supply no critical-
+  path hypothesis and are not imported. Coalesce as micro-round, no full echo.
+- FULL1300 completedSep14 13:33:26, nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 remains overdue,
+  including prior access/coverage/48h debt. This pass repairs some public
+  title/primary scope coverage, not all channels. Mathstodon/Palomar STOPPED.
+- GitHub sweep: blocked, gh not authenticated (binary absent16:55).
+  Last successful none established,0 triaged, openUNKNOWN, original16:00
+  checkpoint missed. DC installation/authentication needed; next check at
+  next tick. The user-visible blocker remains unchanged, not global JC2 block.
+- Fresh17:03 personal/us-east-1 pending/running/stopping/stopped selectors
+  jc2fleet=1 and Name=jc2-worker-* both[], terminalexit0. User jc2 running/
+  transitioning services empty16:55. Scoped coordinator3674934 tree17:06
+  has no scientific child; pswpin/out0/0. No AWS mutation or science;
+  retained evidence EBS billable. Fable cumulative100220 terminal lane-wall
+  seconds unchanged, not credits/tokens/billing/CPU; balances unknown.
+  Native usage unmeasured. Astra primary, Fable independent gates, Sol
+  fallback, no utilization target.
+- Systems NO_UPGRADE: standard transaction/collision tools unchanged;
+  no measured acceleration. Engineering closed; scalar/preflight/r3 PARKED.
+  Historical48h and Miyanishi legitimate-PDF prerequisites unchanged.
+  No human-only global mathematical impasse, no verified live wait.
+- Commit/push only the explicit bank after staged verification; preserve
+  pilot-local.log, bulk artifacts and nested repositories. Next research
+  must select an orthogonal actual-source/construction mechanism, not
+  another exponent, degree, target subgroup or local control in this family.
+
+17:09 bank validation: report read back whole, expected-basis/manifest
+verification and scoped diff-check passed. APP SHA
+7891464a9dc738c1ced1d943c08706b1625508060807ce0c5dafccd8dd9da64a;
+PROGRESS9816bd7a, AUDITbda4b17b and policy50cf4548. Fresh origin fetch
+again returned ahead-behind0/0. No new scientific result is inferred from
+these custody checks; staged verification remains the final commit gate.

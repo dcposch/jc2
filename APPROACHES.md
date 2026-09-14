@@ -333,6 +333,17 @@ UNPROMOTED, not different-model FIRST. This tests a complete rational pair,
 not another curve-genus bound; arbitrary target changes and other rational
 pairs are outside scope. Stop this construction; no automatic successor.
 
+The subsequent [monomial-target check](xmodel/rational-mate-monomial-targets-swarmHQ-root-20260914.md)
+closes one changed-target tranche: EVERY integer-exponent monomial rational
+constant-J target change still fails after ANY dominant rational source
+substitution, also after a POSTCOMPOSED polynomial target automorphism.
+Normality, squarefreeness and consecutive valuation parity prove the full
+integer range; no coefficient search or degree cap. MANUAL/PRODUCER-CHECKED,
+UNPROMOTED; native Astra checked the determinant-one subgroup, ROOT supplied
+the elementary all-monomial corollary. Nonmonomial or interleaved target
+changes remain outside scope, not a selected successor. Two tranches now
+leave the global construction gap unchanged; stop this family expansion.
+
 **Irreducibility is not genus constancy.** The September13 14:13 and 16:10
 [journal checks](notes.md) already retain the Briancon controls and the
 boundary principal-parts gap; do not rediscover them as new avenues.
