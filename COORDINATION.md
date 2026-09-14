@@ -1,86 +1,13 @@
 # COORDINATION.md — the campaign protocol
 
-Consolidated 2026-09-06. Current roster/budget is the September 6 table below;
-current owners, availability, and deadlines are in `notes.md`. Superseded
-roster and allocation wording is preserved in
-[the pre-cleanup snapshot](history/COORDINATION-before-20260906-cleanup.md).
-This cleanup changes no promotion gate or external-action authority.
-
-This file owns the campaign's live operating policy. It is model-agnostic:
-any sufficiently capable model can fill any role below. Avenue inventory and
+This file is the campaign protocol. Any swarm can run it, and any
+sufficiently capable model can fill any role below. What is specific to one
+swarm (its roster, seats, budget, machines, and standing directives) lives in
+that swarm's `team/<name>/README.md`; the home swarm's is
+`team/swarmHQ/README.md`. See `team/README.md` for the folder contract. Avenue inventory and
 ranking belong in `APPROACHES.md`; the detailed Keller-to-book / `G2-PSC` /
 `G2-BD` dependency map belongs in `ladder/REDUCTION.md`; claim-level evidence
 belongs in `AUDIT.md`. None is duplicated here.
-
-## Operating budget, seats, and fleet (2026-09-06, coordinator under DC authority)
-
-**Coordinator host:** `math-hq` (i-0252f535410c26ebc, r6i.4xlarge, us-east-1a).
-Hosts the active coordinator and all AGENT lanes. The active coordinator is
-named in the newest `LIVE STATE`, not pinned here. Agent lanes are model-side
-and light locally; **heavy computer-algebra is farmed to the fleet.**
-
-**Concurrent lane budget (per model; use only to the extent it raises overall
-rate of progress — the coordinator maximises throughput, not utilisation):**
-
-| Seat | Model | Adapter | Max lanes |
-|---|---|---|---|
-| Astra (PRIMARY, hardest work) | gpt-6-astra | `codex.sh` | 3 |
-| Fable (independent structural research/review) | fable 5.1 | `claude.sh` | 4 |
-| Opus (bounded source extraction and instrument review) | opus 5 | `opus.sh` | 1 |
-| Sol (fallback research/review and exact engineering) | gpt-5.6-sol | `sol.sh` | 2 |
-| Grok (bounded enumeration/replay/instrument fixes) | grok 4.6 | `grok.sh` | 1 |
-
-Total ≤ 11 research lanes, excluding the coordinator: a provisional ceiling,
-not a utilization target. DC explicitly authorized model reallocation/removal
-and use of plentiful Fable credits on September 6. Reassess after one or two
-substantial cycles using surviving lemmas, useful refutations, certificates,
-reusable instruments, and correction cost; report counts are not productivity.
-The September 5–6 sample supports these roles, not a controlled model ranking.
-The 12:31Z reallocation moves one Opus ceiling to Fable. Exact all-row and
-structural Fable reviews survived, while broad Opus reports repeatedly needed
-scope/census corrections; Opus's useful independent instrument checks remain
-eligible. Sol remains useful for exact certificates and bounded engineering;
-Grok is an optional utility seat, not a cheap seat to keep filled. Apply the
-new automatic-round roster after the live 1210Z obligations end. Reassess
-after two substantive task cycles using surviving contributions and correction
-cost, including Fable's incomplete primary reads and workflow failures.
-Existing work is not cancelled merely to fit a new ceiling. GPT-5.5
-(`codex55.sh`) remains deprecated. Astra and Sol share an account failure
-domain; independent Fable capacity also improves operational continuity.
-
-**Launch confirmation:** for a user-systemd lane, explicitly supply a PATH
-containing the locally resolved adapter CLI and runtime; do not assume the
-interactive shell's PATH is inherited. Within60seconds, verify both the unit
-and the actual model child process, not just a momentarily active launcher.
-An early terminal failure is collected receipt-first and may receive a newly
-tagged launch only after its cause is established. Preserve the failed record.
-This follows the September7 05:20 missing-CLI failure, caught ten minutes late;
-it changes no sandbox, custody, model, or review gate.
-
-The same launch check covers mandated authoring tools: resolve `apply_patch`
-in the current coordinator environment and pass its executable path or
-directory to the lane. Do not hardcode a session-temporary helper path.
-September13's Fable gate exposed this PATH omission; missing tooling is not
-permission to substitute a forbidden writer or search outside charged inputs.
-
-**Fleet (heavy CAS) — `ops/fleet/`.** Self-sufficient ephemeral workers launched
-from math-hq under the `jc2-fleet` key (no `claude-cli` key, no IAM instance
-profile; the role denies SSM / Instance-Connect / PassRole and this path avoids
-all three). `ops/fleet/fleet.sh launch|wait|run|push|pull`; each worker
-provisions Singular, msolve, python-flint, sympy, qqideal, msolveio (fail-gated).
-A **heavy-CAS lane runs its Gröbner/std/solve jobs on a worker via `fleet.sh`**,
-not locally; a light lane (ideation, derivation, source-read, gate) runs on
-math-hq. September 5 recorded quota: On-Demand Standard 1920 vCPU, Spot 256
-vCPU; query current quota and fleet usage before allocating, rather than using
-an old free-capacity estimate. DC's September 6 instruction authorizes available
-AWS quota for useful campaign computations. This is not an instruction to fill
-it: scale independent, source-licensed tasks or measured memory-bound work.
-Default worker `c7i.4xlarge` (8 real cores, one Singular job per core); big-mem
-fallback `r7i`; cost lever `c7g.4xlarge` (Graviton, ~½ $/core — validate ARM).
-**Stop-idle discipline:** close the exact workers owned by the completed batch
-after checking their live processes and custody. Do not use a fleet-wide
-termination while another lane owns workers. The 2 TB asset and inherited
-unowned instances retain the explicit handoff restrictions until resolved.
 
 ## Mission and decision rule
 
@@ -99,7 +26,7 @@ the human has granted standing authority for the exact action.
 
 The six top-level Markdown files have disjoint jobs:
 
-- `README.md` — short project orientation and public-progress pointer.
+- `README.md` — project orientation and the contributor contract.
 - `COORDINATION.md` — live process, roles, gates, clocks, and bootstrap.
 - `APPROACHES.md` — canonical avenue inventory and comparative ranking:
   routes, gaps, promise, and tried/untried status.
@@ -111,8 +38,12 @@ The six top-level Markdown files have disjoint jobs:
 The newest `LIVE STATE` block in `notes.md` is authoritative for lanes, holds,
 provisional claims, review debt, clocks, and the immediate queue. `xmodel/`
 holds immutable producer, reviewer, sweep, and round reports; code and replay
-artifacts live beside the relevant cases. `ops/FLEET.md` owns machine inventory
-and compute safety rules.
+artifacts live beside the relevant cases. Rosters, machine inventory, and
+compute policy are swarm-specific and live in `team/<name>/README.md`.
+
+The root ledgers are written by swarmHQ's coordinator. Every other swarm keeps
+its roster, journal, and `LIVE STATE` in `team/<name>/` and contributes results
+through pull requests, as `README.md` describes.
 
 Do not maintain a second live queue, avenue map, or evidence ledger. Link to
 the canonical entry instead of copying it. When a digest must repeat a fact,
@@ -355,13 +286,8 @@ event starts one sooner. Each round follows this protocol:
    inadequate coverage. A rotating specialist lens may be added only after
    the common scan. Model diversity is preferred; duplicate instances still
    think independently.
-   Following the operator's September9 credit-restoration instruction, Astra
-   remains primary co-researcher and Fable5.1 receives the highest-value
-   independent gates/reviews. Future automatic whole-portfolio invitations
-   use Astra and Fable; Sol is fallback or an explicitly justified additional
-   mathematical/engineering lens. Existing0730 Sol work is collected, not
-   cancelled retrospectively. Opus and Grok remain bounded optional utilities.
-   Whole-portfolio models are invited automatically. Each receives the
+   Every whole-portfolio model in the swarm's roster is invited automatically
+   to every full round. Each receives the
    same sealed packet, submission contract, tool boundary, and deadline, and
    must submit before seeing any other lane's report.  Every submission
    receives equal post-deduplication consideration: model identity is neither
@@ -381,7 +307,7 @@ event starts one sooner. Each round follows this protocol:
      proposal: either an `UPGRADE` card with the smallest useful test or
      implementation, or `NO_CHANGE` with evidence.  Rotate across state
      freshness, context and retrieval cost, claim/review propagation,
-     duplication, model routing and utilization, adapter reliability, AWS
+     duplication, model routing and utilization, adapter reliability, compute
      scheduling and cost, reproducibility, and operator/chat-summary quality;
    - no more than three detailed idea cards, each with explicit dependencies,
      cheapest discriminator, interpretation of each outcome, stop condition,
@@ -560,7 +486,8 @@ throughput improve without an offsetting reliability regression.
 
 At each coordinator tick:
 
-1. read the newest `LIVE STATE` and any events since it;
+1. `git fetch` the campaign repository and reconcile, then read the newest
+   `LIVE STATE` and any events since it;
 2. sweep local lanes and remote machines; verify exact process identities and
    stop idle paid capacity within standing authority;
 3. rerun the classical frontier gate on new scopes or significant news;
@@ -571,7 +498,8 @@ At each coordinator tick:
 6. test the 12-hour ideation and 24-hour sweep deadlines and all event triggers;
 7. rebalance the portfolio, launch the next bounded lanes, and assign a stop
    condition to each;
-8. append findings, corrections, dead ends, costs, and decisions to `notes.md`,
+8. append findings, corrections, dead ends, costs, and decisions to the swarm's
+   notes file (root `notes.md` for swarmHQ, `team/<name>/notes.md` otherwise),
    then append a fresh `LIVE STATE` block.
 
 September6 resumption rule (1435 round's collection-delay micro-round):
@@ -636,13 +564,12 @@ campaign from paying twice for the same failed idea.
   unit basis before rational reconstruction while printing a characteristic-0
   header. A char-0-header `[1]` is only first-prime trace evidence unless an
   independently checked exact rational certificate is present. See `AUDIT.md`.
-- Run all heavy or uncertain-duration campaign computation on AWS, never on
-  the local machine. This includes CAS/solver jobs, Lean builds, and long or
-  potentially multi-GB exact-Python replays/enumerations. Reserve local
-  execution for editing, orchestration, hashing, status checks, model-review
-  adapters without compute tools, and genuinely short low-memory validation.
-  Follow `ops/FLEET.md` for machine inventory, shipping, caps, telemetry, and
-  kill safety.
+- Run heavy or uncertain-duration computation on a cloud machine, never on the
+  machine that runs the coordinator. Where those machines are, how they are
+  launched, capped, and stopped, and which launcher a lane uses are swarm
+  policy, recorded in `team/<name>/README.md`. Every lane prompt carries the
+  current `FALLACY-v2.md` guardrail, and a report that asserts a new exit price
+  declares `charge_basis={...}` exactly as that file specifies.
 - `jc2-lean` is a separately owned nested repository and is outside the
   campaign's inspection boundary. Campaign agents must not enter, enumerate,
   search, read, build, status, modify, or control it. Scope every parent Git
@@ -650,26 +577,6 @@ campaign from paying twice for the same failed idea.
   `.ignore` excludes it from ripgrep-style broad searches. Concurrent local
   formalization may consume shared CPU/RAM, but campaign contention checks
   remain system-level and must not identify or inspect that nested workload.
-- New heavy runners fail closed off AWS before importing a CAS or allocating
-  large objects, require a registered AWS job tag, and record the remote
-  hostname in custody.  New counterexample/frontier runners also record the
-  classical admissibility verdict described above before launch.  A
-  coordinator process-tree/swap-delta audit
-  is part of each live-state checkpoint; allocated swap without new pageouts
-  is historical occupancy, not by itself active thrashing.
-- A process-group guard is valid only if its recorded group includes the
-  actual CAS and every descendant whose RSS or lifetime it must control.
-  Wrappers that create an unrecorded inner PGID (including GNU `timeout`
-  without `--foreground`) are forbidden unless every inner group is itself
-  recorded and validated.  Before a new or repaired heavy runner launches,
-  a live no-CAS dummy regression must show that descendant RSS is included in
-  telemetry and that namespace-validated TERM, then KILL if needed, leaves no
-  nonzombie descendant or orphan; freeze that regression with the source.
-- Reviewed `ops/run_capped.py` is the opt-in `CAPRUN/v1` pilot for bounded
-  argv-only process groups. Its exact-PGID scope, inherited per-process CPU
-  limit, sampled RSS overshoot, and typed incomplete-cleanup outcome are
-  binding limitations. No caller migration is implicit; each migration needs
-  its own regression and review.
 - Third-party tools may mutate shared CLI configuration; adapters must isolate
   or sanitize it, and a new/updated adapter gets a smoke test before use.
 - Lane launchers take prompt files, reject duplicate live tags, record their
@@ -679,31 +586,6 @@ campaign from paying twice for the same failed idea.
   and is smoke-checked for that destination before launch.  Referee text left
   only in adapter stdout is a failed-delivery draft, not promotion evidence;
   preserve it and rerun through a fresh output-explicit prompt.
-- For a long external lane on macOS, prefer
-  `python3 ops/lane_detach.py launch ADAPTER TAG PROMPT`. It runs the unchanged
-  `ops/lane.sh` as a one-shot launchd job, so an accidental coordinator or
-  terminal-process death does not cancel model work. Monitor only with
-  `lane_detach.py status/wait` while live; those commands read a separate
-  ignored sidecar and launchd state, never the mutable report, model log, or
-  `.run.v2`. A terminal supervisor state merely licenses the existing
-  receipt-first procedure: reproduce the receipt and all charged hashes before
-  reading or binding the report. `unload` refuses live jobs and retains the
-  recovery sidecar. Direct foreground `ops/lane.sh` remains suitable for
-  short smoke tests whose exec session will be held to completion.
-- `ops/lane.sh` appends the compact current `FALLACY-v2.md` reasoning
-  guardrail exactly once from a hash-pinned private snapshot and records both
-  the original and composed prompt hashes.  The appendix is semantic
-  instruction, not a lexical proof checker.  Reports may declare an exact machine line
-  `charge_basis={...}`; the validator checks its rational delta, branch,
-  positive flag count, and citation.  Invalid declarations quarantine the
-  lane. The declaration is only for a newly asserted exit price: a report
-  with no such assertion must omit it, in which case `ABSENT` is the expected
-  receipt status and is never interpreted as a mathematical pass. Never add a
-  placeholder declaration for ordinary input hashes, geometry, or use of an
-  already promoted price. Changes to the prompt, appendix,
-  adapter, or validator during a run quarantine the result; focused launcher
-  regression is required after any edit to this path. Versioned predecessor
-  `FALLACY.md` remains immutable for packet replay.
 - A campaign win requires a global proof or an explicit characteristic-zero
   counterexample at its honest evidence tier. Failure of selected formal
   families to algebraize, or closure within one book/chart/degree range, is
@@ -725,39 +607,31 @@ we succeed. Concretely:
    The N=4 foundation (repaired Domrina chain + the campaign's independent
    kill chain, all pair-reviewed) is assessed acceptable; do not spend
    frontier capacity re-hardening it.
-2. **Seat counts and adapters follow the newer operating-budget table above.**
-   Aim frontier seats at all-degree fronts, new mechanisms, and decisive
-   gap-closers. Historical Opus/GPT-5.5 allocation sentences do not override
-   the September 5 roster or the deprecated-adapter rule.
-3. **Speculative-parallelism caps loosened** (rationale: the caps were sized
+2. **Speculative-parallelism caps loosened** (rationale: the caps were sized
    for a smaller fleet and maximal-assurance posture): at most **six** active
    provisional roots campaign-wide; at most **three** child lanes per
    provisional claim; the 25%-on-one-unreviewed-claim guard and the
    review-before-first-descendant rule are unchanged.
-4. **Capacity allocation defaults** shift to: 45% strongest critical paths;
+3. **Capacity allocation defaults** shift to: 45% strongest critical paths;
    25% new avenues and cross-avenue connections; 12% adversarial review and
    replication (floor: the promotion gate is never queued behind frontier
    work); 10% software/instruments; 4% external intelligence; 4% state
    integration. The review-debt slot reservation rule is unchanged.
-5. **Ideation rounds keep hunting new paths.** Endorsement of named critical
+4. **Ideation rounds keep hunting new paths.** Endorsement of named critical
    paths never narrows the round contract: every round still requires new
    avenues and cross-connections, weighed on merit against current paths in
    `APPROACHES.md`. Historical named flagships are not standing assignments.
-6. **AWS: launch instances as needed up to the account quotas** recorded in
-   `ops/FLEET.md` (2026-09-02 table: Standard family quota 1,920 vCPU;
-   X family 548; prior 512-vCPU campaign policy cap is RETIRED). Keep
-   current instances fully utilized before adding more; stop idle paid
-   capacity as always.
-7. **Formalization is non-blocking** in every direction: never wait on it,
+5. **Formalization is non-blocking** in every direction: never wait on it,
    never gate a launch on it, and keep it outside the inspection boundary.
-8. **Proactive surfacing.** The coordinator surfaces acceleration blockers
-   (quota, seats, custody, instruments) to DC as they arise, in the next
-   user-visible message — never batched behind a question from DC.
+6. **Proactive surfacing.** The coordinator surfaces acceleration blockers
+   (quota, seats, custody, instruments) to the human operator as they arise, in the next
+   user-visible message — never batched behind a question from the operator.
 
 ## Bootstrap for a fresh coordinator
 
-1. Use `COORDINATOR.md` for the current handoff and entry points. Read this
-   file, `README.md`, the newest `PROGRESS.md` entry, the current reading guide
+1. `git fetch` the campaign repository. Read this file, `README.md`, your
+   swarm's `team/<name>/README.md` (for swarmHQ it carries the current handoff
+   and entry points), the newest `PROGRESS.md` entry, the current reading guide
    and cited corrections in `AUDIT.md`, and all of `APPROACHES.md`. The
    historical 46-avenue catalog is linked from `APPROACHES.md`; old overlays
    and model scores are not current launch instructions.
@@ -766,30 +640,10 @@ we succeed. Concretely:
    provenance, not current policy.
 3. Check the campaign repository's explicitly scoped status and basis commit,
    excluding `jc2-lean` without inspecting it. Sweep exact local lane tags and
-   `ops/FLEET.md` machines; harvest before relaunching anything.
+   the machines listed in your team folder; harvest before relaunching anything.
 4. Resolve overdue review, ideation, and web-sweep clocks. Continue the outer
    loop. Never silently promote, publish, spend beyond authority, or discard
    another lane's work.
-
-## Roster governance and write ownership
-
-The operating-budget table at the start of this file is the current adapter
-roster. All invited model families receive equal-standing consideration in a
-blind round; eligibility is not an obligation to invite every utility seat.
-Model identity is not a promotion vote. Historical producer
-contributions and obsolete allocation tables remain in the snapshot linked
-above. Availability and allocation refreshes belong exclusively in `notes.md`
-(`LIVE STATE` and event blocks). Change this protocol for a protocol, gate,
-or roster change, not for each capacity refresh.
-
-Adding a model requires one adapter in `ops/adapters/` and one roster row;
-route documents do not assign permanent jobs by model name.
-Admission requires a sealed same-input evaluation against a standing model.
-At least one independently checked, nonduplicate contribution must change a
-ranked launch, stop, merge, correction, or review decision; eloquence,
-agreement, and duplicate ideas do not qualify.  Newly admitted models receive
-the same blind-round standing and remain subject to normal history checksum,
-scope audit, and different-model promotion rules.
 
 ## Lane report contract amendment: seal-at-completion (2026-08-31 17:35Z)
 

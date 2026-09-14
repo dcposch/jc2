@@ -1,0 +1,100 @@
+# Cheap, mechanical checks. The mathematics is reviewed by a different model,
+# never by CI. See README.md, "Contributing".
+name: ci
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+    paths: ['lib/**', 'tests/**', 'ops/**', '.github/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guards:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BASE: ${{ github.event.pull_request.base.sha }}
+      HEAD: ${{ github.event.pull_request.head.sha }}
+      ASSOCIATION: ${{ github.event.pull_request.author_association }}
+      BODY: ${{ github.event.pull_request.body }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1, submodules: false }
+      - name: Fetch the PR endpoints
+        run: git fetch --depth=1 origin "$BASE" "$HEAD"
+      - name: Changed paths stay away from submodules, ledgers, and third-party PDFs
+        run: |
+          git diff --name-status "$BASE" "$HEAD" > changes.txt
+          cat changes.txt
+          fail=0
+          if grep -Eq $'\t(jc2-lean|jc2-web|\\.gitmodules|\\.ignore)$|\tjc2-lean/' changes.txt; then
+            echo '::error::submodule pointers, .gitmodules and .ignore are not changed in a PR'; fail=1
+          fi
+          if grep -Eq $'^A\trefs/.*\\.pdf$' changes.txt; then
+            echo '::error::third-party PDFs are not added to refs/'; fail=1
+          fi
+          if [ "$ASSOCIATION" != OWNER ] && grep -Eq $'\t(AUDIT|APPROACHES|PROGRESS|notes|COORDINATION)\\.md$|\tops/FLEET\\.md$|\tteam/swarmHQ/' changes.txt; then
+            echo '::error::the root ledgers, ops/FLEET.md and team/swarmHQ/ are maintained by swarmHQ; open an issue instead'; fail=1
+          fi
+          exit $fail
+      - name: PR body follows the template
+        run: |
+          fail=0
+          for h in 'Type' 'Swarm and models' 'Claims' 'Files' 'Replay' 'Refutes or corrects' 'Checklist'; do
+            printf '%s\n' "$BODY" | grep -q "^## $h" || { echo "::error::missing section: ## $h"; fail=1; }
+          done
+          exit $fail
+
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1, submodules: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: python -m pip install --quiet pytest
+      # test_farm.py runs a 9-minute dry-run gate and test_parity.py needs python-flint.
+      # Both are excluded by path, not deleted, until DC decides what to do with them.
+      - run: python -m pytest tests -q -p no:cacheprovider --ignore=tests/test_farm.py --ignore=tests/test_parity.py
+
+  reports:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      BASE: ${{ github.event.pull_request.base.sha }}
+      HEAD: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1, submodules: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: git fetch --depth=1 origin "$BASE" "$HEAD"
+      - name: Reports end with BODY-END and every raised OPEN has a bounded quantity
+        run: |
+          fail=0
+          for f in $(git diff --name-only --diff-filter=AM "$BASE" "$HEAD" -- 'xmodel/*.md'); do
+            [ -f "$f" ] || continue
+            last=$(grep -v '^[[:space:]]*$' "$f" | tail -1)
+            [ "$last" = '<!-- BODY-END -->' ] || { echo "::error file=$f::the last non-empty line must be <!-- BODY-END -->"; fail=1; }
+            if grep -q 'OPEN\[' "$f"; then
+              python3 ops/open_collision.py "$f" --root . > /dev/null || { echo "::error file=$f::ops/open_collision.py failed: an OPEN without a bounded quantity, or a contract error"; fail=1; }
+            fi
+          done
+          exit $fail
+      - name: New box directories carry a SHA256SUMS that verifies
+        run: |
+          fail=0
+          for d in $(git diff --name-only --diff-filter=A "$BASE" "$HEAD" -- 'box/*' | cut -d/ -f1-2 | sort -u); do
+            [ -d "$d" ] || continue
+            [ -f "$d/SHA256SUMS" ] || { echo "::error::$d has no SHA256SUMS"; fail=1; continue; }
+            sha256sum -c --quiet "$d/SHA256SUMS" || { echo "::error::$d/SHA256SUMS does not verify"; fail=1; }
+          done
+          exit $fail

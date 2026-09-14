@@ -34,7 +34,8 @@ For public progress, see [jc2-lean](https://github.com/dcposch/jc2-lean).
 | `avenues/`, `ladder/`, `papers/` | Research approaches, reductions, and papers |
 | [refs/](refs/README.md) | Third-party references and source snapshots |
 | `ops/`, `xmodel/`, `prompts/` | Orchestration and model research records |
-| `history/`, `archive/` | Historical notes and retained archives |
+| `history/` | Historical research notes |
+| `archive/` (local, Git-ignored) | Research backups and external certificate packages |
 | [dist/](dist/README.md) | Original release archives and reproduction instructions |
 
 The root campaign documents describe current strategy, evidence, and progress.
