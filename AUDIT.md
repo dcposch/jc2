@@ -22535,3 +22535,43 @@ request was sent, and the Keller-specific headline itself is not refuted.
   a marked source coordinate. Actual Keller applicability remains missing.
   This is a changed scoped negative test, not an all-source theorem or a
   new surface-family programme; global rank and FULL/BROAD clocks unchanged.
+
+### KELLER-DYNAMICAL-DEGREE-1 — 2026-09-14
+
+- PROMOTED / MANUAL, with named published dynamical-theorem/background
+  imports. Producer swarmHQ ROOT (Astra),
+  [report](xmodel/keller-dynamical-degree-swarmHQ-root-20260914.md)
+  b492c9ca68c73e420aedf3169e94e24b673ad9bcf8df572c4e5e662dd9eeb432;
+  [different-model Fable5.1 FIRST](xmodel/keller-dynamical-degree-gate-fable51-20260914.md)
+  0ee9edc9b00b97c1f11b9c22d5778496dad4d8d8b9be2d761d7f07d0709234b4;
+  [ROOT intake](box/keller-dynamical-degree-gate-20260914/INTAKE.md)
+  3af0eb610ed6155d7bffcfbc75d7b0c01437a52f3728e2d68ad0a99319b2d7ee,
+  manifest7292f153d31e0ecd3a59fd1ca2f9a39da4658276c2c70f64881b7d4790e63c22.
+- For polynomial F:C2->C2 with detDF=c constant,0<|c|<=1, generic
+  mapping degree d and lambda1=lim deg(F^n)^(1/n), lambda1>=d.
+  Import [Dinh--Nguyen--Truong1303.5992v1](https://arxiv.org/pdf/1303.5992v1)
+  Theorem1.1 and its preceding equilibrium-measure property. If d>lambda1,
+  its repelling periodic points equidistribute toward a probability measure
+  with zero mass on H_infinity. An affine compactly supported positive
+  test function forces an affine repelling orbit, but detD(F^n)=c^n
+  precludes both multipliers having modulus>1. No affine properness,
+  holomorphic compactification or polynomial-like hypothesis is inserted.
+- Applies afresh to determinant-one polynomial source/target changes of
+  normalized F. Independent changes need not preserve lambda1. Standard
+  log-concavity supplies sqrt(d)<=lambda1; the new implication excludes
+  the window below d, including lambda1^2=d>1, in this normalized scope.
+  Equality and faster growth remain open. No |c|>1 extension, opposite
+  inequality, minimizing frame, inverse, properness or JC2 conclusion.
+  Identity/H_m/nonconstant-J square-map controls independently checked.
+- FIRST19:20:44--19:30:13, DONE0/CLEAN/BODY_SEALED/ABSENT; original
+  processes absent before receipt/current pins and whole report. Exact
+  prompt reconstructed, producer/intake transactions verified. ROOT
+  corrects the review's support wording: merely vanishing on H_infinity
+  does not place the support inside C2; a positive value suffices, or use
+  the explicitly compactly supported bump in the intake. Verdict unchanged.
+  The review's unverified Lyapunov alternative is not consumed. Log HASH_ONLY.
+- This is a standard-theorem consequence, not a novelty claim or a fresh
+  complete audit of complex dynamics. Raw primary PDF/text retained locally;
+  public intake gives URL, exact hashes and reconstruction requirements.
+  No finite-family search, computation, worker, automatic dynamics successor,
+  global reranking or FULL/BROAD reset. Cost569 terminal lane-wall seconds.

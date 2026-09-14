@@ -47378,3 +47378,116 @@ Native author independently COMPLETED, message-only, before intake.
   impasse. Next research must change an actual-source implication or
   construction test; relabeling a known notice or the secant properness
   gap does neither. No new mathematical progress is claimed this tick.
+
+## 2026-09-14 19:22 UTC LIVE STATE — one dynamical-degree FIRST active
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved; basis3bad66352ac2eb85af19a42f48ed8edd4dbafb46.
+  Previous turn NO_PROGRESS mathematically; current tick began19:09:10.
+  Fresh fetch unchanged, gh auth blocked. Policy team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+- New PROVISIONAL named-import consequence in
+  xmodel/keller-dynamical-degree-swarmHQ-root-20260914.md, fullb492c9ca,
+  bodyaffc812d, manifestc6064ca9, transaction verified. For polynomial F
+  with constant determinant0<|c|<=1, lambda1(F)>=generic degree d.
+  DNT1303.5992v1 Theorem1.1 forces affine repelling periodic points if
+  d>lambda1, contradicting detD(F^n)=c^n. Native Astra scope check complete;
+  standard-theorem consequence, not novelty, properness or JC2 proof.
+- FIRST active Fable5.1 tag keller-dynamical-degree-gate-fable51-20260914,
+  USER unit jc2-lane-keller-dynamical-degree-gate-fable51-20260914.service.
+  Started19:20:44; invocation84d63a35587c49799462644f3b3ae810,
+  Main1748379/bwrap1748561/model1748562 confirmed within10seconds.
+  Target19:25:44; independent RuntimeMax600 deadline19:30:44, Stop5,
+  KillModecontrol-group, MemoryMax4G/Swap0; no reset or automatic retry.
+  Four frozen inputs: report/manifest plus retained DNT PDF/text.
+  ROOT owns terminal process verification, receipt/current pins FIRST,
+  whole-report intake and prompt/tool audit. No live body/log/receipt read.
+  No descendants; source/target minimization and equality remain open.
+- All native authors complete, no AWS worker/science/other paid lane.
+  Fresh19:22 personal/us-east-1 both nonterminal campaign selectors[];
+  pswpin/out0/0. Retained EBS billable. Fable100220 terminal lane-wall
+  seconds excludes this LIVE lane; balances/native usage unknown.
+- FULL1300 completed13:33:26/nextSep15 01:33:26; original10:17:55 miss
+  retained. BROAD originalSep12 21:53:56.598798932 and access/coverage/
+  48h debt unchanged. Mathstodon/Palomar STOPPED; Miyanishi PDF gate
+  unchanged. GitHub last success none,0triaged/openUNKNOWN, original16:00
+  miss retained; authentication only needed, check next tick.
+- Systems NO_UPGRADE, original48h debt; engineering CLOSED and
+  scalar/preflight/r3 PARKED. All46 ranks unchanged pending scope intake.
+  Bank owned research only; preserve unrelated log and excluded trees.
+
+## 2026-09-14 19:34 UTC — normalized dynamical-degree restriction reviewed
+
+The opening rational-source screen supplied no eligible new construction;
+nearby explicit families were stopped or birational. No rational-pair
+successor was launched. The turn instead obtained the separate actual-map
+restriction KELLER-DYNAMICAL-DEGREE-1, now PROMOTED/MANUAL with named
+Dinh--Nguyen--Truong1303.5992v1 theorem/background imports. For polynomial
+detDF=c with0<|c|<=1, lambda1(F)>=mapping degree d. The compactification
+may be meromorphic/nonproper: if d>lambda1, repelling periodic points
+equidistribute off infinity; detD(F^n)=c^n forbids an affine repeller.
+This is a straightforward standard-theorem consequence, not a new proof
+of complex dynamics, a novelty claim or a JC2 proof. Equality and faster
+growth remain; normalizing an arbitrary c can change lambda1.
+
+Producer fullb492c9ca/bodyaffc812d/manifestc6064ca9 and Fable FIRST
+0ee9edc9 passed receipt-first intake. ROOT intake
+box/keller-dynamical-degree-gate-20260914/INTAKE.md full3af0eb61,
+manifest7292f153, transaction verified. Its explicit affine bump corrects
+the review's unnecessary assertion that vanishing on H_infinity puts a
+function's support wholly inside C2. Positive value already suffices;
+no mathematical verdict changes. Standard log-concavity supplies the
+sqrt(d) lower endpoint. Unverified Lyapunov and |c|>1 suggestions unused.
+
+Fable ran19:20:44--19:30:13, DONE0/CLEAN/BODY_SEALED/ABSENT,
+four input pins UNCHANGED. Target missed4m29, finished31seconds before
+independent hard cap. Main0/Control0/dead19:30:18, original three PIDs
+absent before receipt/pins and WHOLE report. Receipt a42eab23 remained
+unchanged; all retained input/instrument pins matched, and model prompt
+f03c46fa was reproduced exactly. Log HASH_ONLY. Producer/intake final
+transactions verified; lexical collision scan EMPTY, no new raised OPEN.
+Raw DNT PDF/text remain LOCAL, not redistributed in this Git bank; public
+intake/prompt/receipt retain URL, exact hashes and reconstruction method.
+
+ROOT's additional bounded primary check read Diller--Liu--Roeder,
+https://arxiv.org/pdf/1601.02226v2 , introduction/TheoremsA--B and the
+following topology qualification, not the whole proof. TheoremA assumes
+algebraic degree equals topological degree; lambda1=d alone is weaker.
+Its Euclidean-open subset of Aut(P2) need not meet the affine/constant-J
+subgroup. TheoremB's generic statements concern stability/foliations,
+not the repelling conclusion. No equality-case Keller import follows.
+These are ROOT-only documentary scope observations, not part of FIRST.
+Selected Favre--Jonsson2.5--2.8/3.1/4.1/section7 passages were read to
+check compatibility; the old zero-thinness gap is not closed or re-audited.
+
+## 2026-09-14 19:34 UTC LIVE STATE — dynamical-degree filter banked
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved. Basis3bad66352ac2eb85af19a42f48ed8edd4dbafb46;
+  latest fetch19:25 unchanged. Policy team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  COORD4ce5b29a/FALLACYe47fd16c unchanged. New AUDIT79fe0615;
+  bank owned four ledgers, reports/manifests, gate prompt/receipt only.
+  Preserve pilot-local.log, raw local primary PDF/text/log, excluded trees.
+- All native authors complete; Fable FIRST terminal and collected.
+  No live model lane, worker, scientific child, exec session, report lease,
+  provisional root, FIRST debt or descendant. All46 ranks unchanged;
+  this scoped import/implication does not trigger an identical FULL round.
+- FULL1300 completedSep14 13:33:26/nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 overdue with
+  inherited access/coverage/48h debt. Mathstodon/Palomar STOPPED,
+  Miyanishi legitimate-PDF gate unchanged. Targeted reads reset no clock.
+- GitHub sweep: blocked, gh not authenticated, confirmed19:25.
+  Binary installed; last success none established,0triaged/openUNKNOWN;
+  originalSep14 16:00 miss retained. DC authentication only needed,
+  surfaced this turn; check next tick. No queue item/reply/contact/merge.
+- Fleet both personal/us-east-1 nonterminal selectors[] at19:22;
+  no AWS mutation since. User jc2 running/transitioning units0 at19:33;
+  coordinator3674934 tree no scientific child; last pswpin/out0/0.
+  Retained EBS billable. Fable delta569/cumulative100789 terminal
+  lane-wall seconds, not tokens/credits/CPU/billed usage. Native use and
+  credit balances unknown. Astra primary, Fable5.1 high-value independent
+  work, Sol fallback; no occupancy or automatic retry lanes.
+- Systems NO_UPGRADE/no measured acceleration, original48h debt;
+  engineering CLOSED and scalar/preflight/r3 PARKED. No human-only global
+  impasse. Further work needs an actual-source constraint or complete
+  construction; no unchanged eigenvaluation/perturbation/degree-growth
+  successor is selected. Normality/selection/algebraization gaps remain.

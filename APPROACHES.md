@@ -687,6 +687,20 @@ lattice search, rational-map classification successor or new degree bound.
 The [preceding navigation](history/APPROACHES-before-20260913T1210-primaryscope.md)
 is retained byte-for-byte; this source clarification changes no global rank.
 
+The September14 [dynamical-degree implication](xmodel/keller-dynamical-degree-swarmHQ-root-20260914.md)
+has passed [Fable5.1 FIRST and ROOT intake](box/keller-dynamical-degree-gate-20260914/INTAKE.md):
+KELLER-DYNAMICAL-DEGREE-1 is PROMOTED/MANUAL with named DNT1303.5992v1
+imports. If detDF=c with0<|c|<=1, lambda1(F)>=generic degree d; otherwise
+equidistribution would force affine repelling periodic points despite
+detD(F^n)=c^n. Applies afresh after determinant-one source/target polynomial
+automorphisms, not by invariance under independent changes. This excludes
+sqrt(d)<=lambda1<d in the normalized problem; equality and faster growth
+remain. No minimizing frame, properness, inverse, novelty or JC2 conclusion.
+DLR1601.02226v2 requires equality of ALGEBRAIC and topological degrees,
+not merely lambda1=d, and does not ensure affine/constant-Jacobian-preserving
+projective perturbations. It supplies no equality closure. No automatic
+growth/control/degree family or reranking follows.
+
 The September14 [Poisson-field applicability check](notes.md#2026-09-14-0652-utc--poisson-field-applicability-and-rational-gauge)
 is DOCUMENTARY/MANUAL, UNPROMOTED. Goodearl--Zhang2605.24835v1 does not
 give the needed Weyl-field rigidity. Rescaling the bracket for the SAME

@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+19:32Z: [Dynamical-degree filter](box/keller-dynamical-degree-gate-20260914/INTAKE.md)
+passed different-model Fable5.1 FIRST: for normalized polynomial Keller
+maps, first dynamical degree is at least mapping degree. PROMOTED/MANUAL
+with named published dynamics imports; a standard consequence, not a
+novelty claim or JC2 proof. Equality and faster growth remain open, and
+projective perturbations do not automatically preserve Keller hypotheses.
+One569-second Fable review, no computation/worker; global ranks unchanged.
+
 18:57Z: [Formal-quantization test](notes.md#2026-09-14-1857-utc--formal-quantization-representation-premise)
 rejects the proposed representation premise independently of scalar-pair
 existence: finite free formal representations would need a zero of the
