@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+18:57Z: [Formal-quantization test](notes.md#2026-09-14-1857-utc--formal-quantization-representation-premise)
+rejects the proposed representation premise independently of scalar-pair
+existence: finite free formal representations would need a zero of the
+Poisson tensor. No S/T exclusion or JC2 gap closure, MANUAL/UNPROMOTED.
+Recovered graph/ML classification stops prevented duplicate lanes. No paid
+lane or computation. Upstream archive cleanup integrated; gh is installed
+but still unauthenticated.
+
 18:44Z: [Target-shear genus](xmodel/target-shear-genus-swarmHQ-root-20260914.md)
 grows without bound at fixed mapping degree CONDITIONAL on a Keller
 counterexample, after a suitable initial target frame. This separates

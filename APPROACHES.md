@@ -247,6 +247,15 @@ on all of T, global division by x, or cylinder successor is supplied.
 
 **Formal surface algebraization:** the recorded formal colliding pseudo-plane boundary pair does not supply a regular polynomial pair. Global algebraization is still missing; no applicable theorem for every smooth S-to-A1 map was found in the bounded check. The [original record](history/APPROACHES-before-20260911T2252-cleanup.md#what-the-campaign-has-established) supplies this scope, not a new existence claim. Numerical double-cover/Euler/Riemann–Hurwitz data cancel or admit curve controls with asymmetric deletions: [cover discriminator](xmodel/pseudoplane-cover-discriminator-root-20260911.md) and [curve calculation](xmodel/pseudoplane-cover-pair-astra-20260911.md) need a genuinely global regularity constraint.
 
+The September14 [18:57 formal-quantization check](notes.md#2026-09-14-1857-utc--formal-quantization-representation-premise)
+is MANUAL/UNPROMOTED: a nonzero finite free formal representation has
+classical support only where the Poisson tensor vanishes, by trace and
+first-jet separation. Smooth symplectic S has no such point; a continuous
+finite-dimensional Laurent-series representation also has a stable lattice.
+This premise fails independently of any scalar pair, including on the
+ordinary symplectic plane, so it cannot exclude pairs on S. No quantum
+pair lift, nonzero-h specialization, representation family or successor.
+
 **Separate AS109 integral-lift frontier:** an exact integral polynomial lift P=x-x^109+109A, Q=y+109B would be noninjective under the reviewed 109-ball Hensel theorem. The accepted theorem-interface composition forces max(deg_y A,deg_y B)>=12 (AUDIT, August26 23:01Z). This is coordinate-specific and conditional on such a lift: no polynomial lift, support bound, ordinary-total-degree bound or degree-exactly-twelve routing follows. Witt/formal compatibility is not bounded-support polynomiality; do not identify this problem with the preceding surface boundary pair. See [accepted scope](AUDIT.md).
 
 **Rational-mate pole removal.** The September14 [finite-fiber argument](xmodel/rational-mate-polar-fibers-swarmHQ-root-20260914.md)
