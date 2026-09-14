@@ -8,6 +8,15 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+22:40Z: [Puncture-monodromy source gate](notes.md#2026-09-14-2240-utc--puncture-invariants-do-not-supply-an-invariant-fiber-class)
+ended NO_NEW_SOURCE_CONSTRAINT. Conditional on all first-coordinate fibers
+being irreducible, the missing compact-period extension is explicit;
+direct second-coordinate pullbacks and global generic-fiber units do not
+split it. ROOT/native Astra, MANUAL/UNPROMOTED, no new global implication,
+FIRST or successor. Selected primary topology reads supply no closing
+hypothesis. No paid adapter, worker or scientific computation; GitHub
+authentication and BROAD access/coverage debt persist.
+
 21:59Z: The [one-cycle constructive reset](xmodel/zero-base-constructive-swarmHQ-astra-20260914T2145Z.md)
 ended NO_CANDIDATE. Its rational degree-seven/Jacobian-one attempt has
 affine-plane normalization and fails the existing polynomialization screen;
