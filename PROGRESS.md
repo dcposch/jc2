@@ -8,6 +8,13 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+23:45Z: [All-frame infinity discriminator](notes.md#2026-09-14-2345-utc--common-infinity-in-every-polynomial-frame-is-insufficient)
+gives two nodal cubics sharing one infinity point after EVERY polynomial
+automorphism, with immersed A1 normalizations. This refutes the proposed
+curve-only irreducibility/emptiness inference, not JC2. ROOT/native Astra,
+MANUAL/PRODUCER-CHECKED, UNPROMOTED; no actual Keller realization,
+paid adapter, worker, computation, FIRST or curve-family successor.
+
 23:31Z: [Linear-Jacobian integrality test](notes.md#2026-09-14-2331-utc--linear-jacobian-integrality-already-contains-jc2)
 finds that the proposed universal boundary lemma already contains JC2:
 two square substitutions recover integrality of both source coordinates.

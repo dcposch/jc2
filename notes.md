@@ -48922,3 +48922,125 @@ supplied no additional actual-source constraint. Global ranking unchanged.
   next research needs a changed actual-source hypothesis or construction,
   not another equivalent integrality target. No human-only global impasse.
   Preserve pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-14 23:45 UTC — common infinity in every polynomial frame is insufficient
+
+Previous operator turn verified synchronization, not mathematical progress:
+bf1e1ffe and91041f0b are already ancestors of HEAD/origin/master
+f4dbca956152000fe015db28c5c1bd7e28bb1c26. No pull/stash was needed over
+the unrelated pilot-local.log. This goal tick began23:39:56; fresh fetch
+remained unchanged. ROOT refreshed README, all generic protocol/team
+policy and FALLACY; governing pins matched the preceding LIVE STATE.
+
+The selected possible global shortcut was this: Chau's whole nonproper
+curve has one common infinity point, and applying his theorem afresh to
+H composed with an actual Keller map gives this property for EVERY
+polynomial target automorphism H. Could that force irreducibility, or
+make a nonempty curve impossible? The source implication is necessary;
+the suggested curve-only closing inference fails.
+
+History: ROOT whole-read the449-line August30 scope audit
+xmodel/nonproperness-chau-jelonek-topology-scope-audit-sol56-20260830.md,
+whole SHA8838420925ad7024321b14fd24282d0ae21c7e4d384f5083248a124bfab309f5.
+It already distinguishes a common point from a single branch and retains
+the smoothness hypothesis in Jelonek's Euler argument. Its single-frame
+graph controls do not establish the all-frame assertion. Scoped ledger,
+reduction and report searches found no prior exact all-frame discriminator;
+this is not an exhaustive novelty claim. An oversized combined output was
+replaced by bounded source/history reads before use. No excluded tree read.
+
+Primary attachment: [Chau2004](https://www.impan.pl/shop/en/publication/transaction/download/product/85283),
+Theorem1/Corollary2, printed203–204, concerns the ENTIRE nonproper set;
+ROOT read the extracted eight-page text through its references. Only that
+scope is consumed here, not a new verification of the Newton–Puiseux
+proof or its coefficient/resultant formulas. The point is allowed to
+depend on H; no invariant projective location is asserted.
+
+Explicit control over C:
+
+  C_c: (y-c)^2=x(x+1)^2, c=0,1; D=C_0 union C_1.
+
+The two defining irreducible polynomials are distinct: x(x+1)^2 is not
+a square in C(x). Their finite birational normalization is
+
+  nu_c(t)=(t^2,t^3+t+c).
+
+Indeed t is integral by t^2=x, and t=(y-c)/(x+1) in the function field.
+The derivative (2t,3t^2+1) never vanishes. The parameters t=+i and -i
+map to (-1,c); the local quadratic part there is (y-c)^2+(x+1)^2,
+with distinct lines. Thus both components have an ordinary node and
+neither is a smooth embedded A1. These are curve controls, not maps A2->A2.
+
+Let H be ANY polynomial automorphism, with H^-1=(U,V), and put
+a=deg_total U, b=deg_total V. The van der Kulk division theorem gives
+a|b or b|a, so 3a cannot equal2b. Applying the actual inverse ring
+substitution to the defining equation gives H(C_c) as
+
+  (V-c)^2-U(U+1)^2=V^2-U^3-2U^2-U-2cV+c^2=0.
+
+Every term after V^2-U^3 has degree strictly below max(2b,3a).
+The highest homogeneous part is therefore V_+^2 or -U_+^3, INDEPENDENT
+of c. Each of U=0 and V=0 is a polynomially embedded A1: parametrize
+with H(0,t) or H(t,0), respectively. Its projective completion has just
+one infinity point, since the polynomial parametrization extends from
+P1 and only its parameter infinity can map to the infinity line.
+Consequently U_+ and V_+ each have exactly one projective zero. The
+shared dominant form proves that H(D) has exactly one common infinity
+point, for EVERY H. The division theorem was used ONLY for the known
+automorphism H^-1, never for a hypothetical Keller source.
+
+Primary degree statement: [Chau math/0408077v1](https://arxiv.org/pdf/math/0408077v1),
+p1 Division Lemma. ROOT also read Garcia Barroso–Ploski2018,
+[Proposition4.7, printed39](https://gasiull.webs.ull.es/2018-GB-Ploski-RACC.pdf),
+with its embedded-coordinate-line context in Section4; neither is a new
+campaign proof of Jung's theorem. Shpilrain–Yu math/9809049v1 Section2
+was examined for a longer normal-form proof but is not needed/charged.
+
+A <=10minute message-only native Astra check was commissioned this tick,
+target23:52/hard23:55. ROOT independently obtained the displayed control
+and inverse-coordinate proof, then shared it before the agent's terminal
+reply. The agent reports having independently obtained the same cubics
+using reduced Jung words before that message, and then checked ROOT's
+shorter proof. Terminal collected and independently confirmed23:44–23:45;
+all native lanes are completed. Same-model corroboration, NOT FIRST.
+
+MANUAL/PRODUCER-CHECKED, UNPROMOTED; no novelty claim. The control
+defeats emptiness/irreducibility from polynomial parametrizability plus
+common infinity in every polynomial frame, even with immersed
+normalizations. It does NOT realize D as a Keller nonproper set or
+discharge the actual-source ramification, degree or gluing constraints.
+No JC2 gap closes. Stop this curve-only shortcut; no classification,
+degree/coefficient family, FIRST or automatic successor is selected.
+
+## 2026-09-14 23:45 UTC LIVE STATE — all-frame curve shortcut stopped
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basisf4dbca956152000fe015db28c5c1bd7e28bb1c26,
+  matching freshly fetched origin/master. Policy basis
+  team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Scoped discriminator coalesced as a micro-round: no global rerank,
+  promotion, FULL or changed actual-source closing hypothesis.
+- All native agents COMPLETED; no live model unit, writer, worker,
+  provisional root, FIRST debt or descendant. No process is being waited
+  on. Zero-base reset CLOSED; no automatic curve, genus, normalizer,
+  linear-Jacobian, topology or finite-family successor.
+- FULL lastSep14 21:40:31, nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 overdue/access-coverage debt remains. Mathstodon,
+  Palomar, failed Friedland publisher path and denied Zenodo22143955
+  STOPPED; Miyanishi legitimate-source gate unchanged. Targeted sources
+  are not BROAD completion and reset no clock.
+- gh freshly unauthenticated23:44; GitHub sweep blocked, gh not
+  authenticated.0triaged,openUNKNOWN,lastsuccessfulnone; originalSep14
+  16:00 miss retained. Authentication need surfaced to DC; no issue/PR
+  bodies, queue messages or credential operations. Not a global impasse.
+- Fresh23:40 both personal/us-east-1 nonterminal worker selectors[];
+  coordinator3674934 tree no science; pswpin/out0/0, unchanged23:44.
+  No jc2 model unit at23:44. No AWS mutation or scientific computation.
+  Fable cumulative101944 terminal lane-wall seconds unchanged, not
+  billing/tokens/credits/CPU. Native usage and balances UNKNOWN;
+  retained evidence EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Bank the completed discriminator; next
+  research must target an actual-source implication or new construction,
+  not extend this relaxed curve model. Preserve pilot-local.log, bulk
+  artifacts and excluded nested repositories.

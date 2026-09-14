@@ -138,6 +138,15 @@ and its cited superseding reviews retain their exact execution boundaries.
 
 **Quartic-topology history check (September14).** The [reviewed sign-double-plane gate](xmodel/block-descent-a1-quartic-discriminant-double-plane-coordinator-integration-sol56-20260830.md) and [candidate Fox/localization interface](xmodel/block-descent-a1-quartic-double-plane-fox-localization-kernel-sol56-20260830.md) already isolate the globally extendable three-torsion obstruction in the zero-cusp minimal-cycle horn, not all quartic blocks. The [prior complement-group acquisition](xmodel/b0-pi1-acquisition-grok46-20260831.md) and September11 journal check retain the missing infinity hypotheses in Neumann--Norbury/Orevkov; polynomial parametrizability alone does not supply them. Recovered history, not a new theorem or selected group/Picard/control computation.
 
+The September14 [all-frame infinity discriminator](notes.md#2026-09-14-2345-utc--common-infinity-in-every-polynomial-frame-is-insufficient)
+stops a stronger curve-only shortcut: the two nodal cubics
+(y-c)^2=x(x+1)^2, c=0,1, retain one COMMON projective infinity point
+after EVERY polynomial target automorphism. Both normalizations are
+immersed A1. ROOT/native Astra, MANUAL/PRODUCER-CHECKED, UNPROMOTED;
+the inverse-coordinate proof uses van der Kulk only for the chosen
+automorphism, never for an unknown Keller map. No realization as an actual
+nonproper set, irreducibility theorem, global closure or family successor.
+
 **Unramified-boundary source check (September14).** The
 [asymptotic-chart gate](xmodel/unramified-asymptotic-source-gate-swarmHQ-root-20260914.md)
 is MANUAL/PRODUCER-CHECKED, UNPROMOTED. A polynomial nodal-curve example
