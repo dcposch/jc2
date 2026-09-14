@@ -48586,3 +48586,120 @@ Selected source/history reads are not a completed BROAD sweep.
   source implication/test, not an automatic descendant of this failure.
   No human-only global impasse. Bank journal/digest only; preserve
   pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-14 22:57 UTC — a smooth surjective projective pencil with elliptic fibers
+
+Previous turn completed and banked the puncture-transfer negative test
+in3479de8e7c8ffd908ae95472816149faae8c1931: PROGRESS as a completed scoped
+test and stop, not a global JC2 advance. Current tick began22:41:45;
+fresh fetch and scoped status showed that basis equals origin/master,
+with only unrelated pilot-local.log dirty. No human-only global impasse.
+
+The initial normalization/differential-module comparisons supplied no new
+closing condition. Bavula cyclicity/holonomicity was recovered as KNOWN
+with simplicity still missing (September13 19:08, notes41905). Its
+publisher PDF https://comptes-rendus.academie-sciences.fr/mathematique/item/10.5802/crmath.556.pdf
+timed out twice; no body, theorem or stronger claim was imported. An
+overbroad numeric search was noisy/clipped and replaced by exact phrases.
+Other normalization/Poisson searches produced no actionable primary
+implication. These were targeted searches, not a BROAD sweep.
+
+The selected changed discriminator was the literal statement:
+"a smooth SURJECTIVE algebraic morphism A2_C->P1 has rational generic
+fiber." Unlike a polynomial submersion to A1, this includes every base
+value; the familiar [x:1+xy] control is smooth and surjective but has only
+rational fibers. The proposed statement is FALSE, even with EVERY fiber
+connected. No applicable classification theorem was found or imported.
+
+Actual-source motivation is explicit and does not presume an omitted
+point: any Keller pair(p,q) gives h_K=[p:1+pq]. There are no base points,
+and its differential numerator dp-p^2*dq is nowhere zero by the Keller
+coframe. The cofinite image of(p,q) meets every infinite target curve
+p=c(1+pq) and1+pq=0, so h_K is surjective. These fibers are inverse
+hyperbolas (with the p=0 special member), NOT generic inverse lines;
+no transfer of the accepted line-genus floor is assumed. If F omitted the
+origin, [p:q] would give another smooth surjective projective pencil.
+Neither observation alone proves surjectivity, properness or JC2.
+
+One <=12minute message-only native Astra test was assigned around22:50,
+target23:01/hard23:04. ROOT simultaneously worked on the radial-divergence
+interface and then an explicit discriminator. Both arrived at the same
+map; ROOT sent it at the final-message boundary, so no blind-independent
+discovery claim is made. Terminal result was collected by22:55:39 and
+all agents independently confirmed COMPLETED before edits. The agent
+gave the following explicit elliptic chart, checked by ROOT:
+
+  h(x,y)=[x:1+x^2*y^3].
+
+No base points: x=0 makes the second coordinate1. Surjectivity:
+h(t,0)=[t:1] for every t, and h(1,-1)=[1:0]. The differential numerator is
+
+  (1-x^2*y^3)dx -3*x^3*y^2 dy.
+
+If its dy coefficient vanishes, x=0 or y=0, and its dx coefficient is1.
+Thus it is smooth everywhere. For a finite nonzero t the fiber equation
+t(1+x^2*y^3)=x forces x!=0. Put u=xy and v=2x-t; then
+
+  x^2-tx-tu^3=0,        v^2=4t*u^3+t^2,
+  x=(v+t)/2,           y=2u/(v+t).
+
+The displayed plane cubic has a smooth projective completion when t!=0:
+its affine gradient could vanish only at u=v=0, not on the curve; its
+unique point at infinity is smooth as well. It therefore has genus1.
+The inverse formulas identify the h-fiber with this elliptic curve minus
+its infinity point and(0,-t). In particular the generic fiber is
+geometrically irreducible and has exactly TWO punctures. ROOT's separate
+cyclic-cover check y^3=(x-t)/(t*x^2) has three fully ramified places
+0,t,infinity and the same genus. No scientific computation was used.
+
+The remaining fibers are h^-1(0)=A1 and
+h^-1(infinity)={x^2*y^3=-1}=Gm; the latter has parametrization
+(x,y)=(z^3,-z^-2) with inverse z=-xy. Thus all fibers are connected and
+smooth, but genus drops. Euler characteristics are consistent: generic
+fiber -2, special fibers1 and0, with base C* of Euler characteristic0.
+This is one explicit discriminator, not an exponent/generalization task.
+
+It is NOT a Keller pair: J(x,1+x^2*y^3)=3x^2*y^2. Its realization as
+[p:1+pq] uses(p,q)=(x,xy^3), also non-Keller. The regular tangent field
+V=3x^3*y^2 partial_x+(1-x^2*y^3)partial_y is nowhere zero but has
+divergence6x^2*y^2, not a nonzero constant. ROOT's attempt to use the
+extra Keller divergence2 condition recovered the September13 15:06 and
+18:21 rational-first-integral/radial-index boundary gaps, not an opposite
+bound or an applicable classification. No boundary-index retry follows.
+
+Evidence MANUAL/PRODUCER-CHECKED, UNPROMOTED; no novelty claim, formal
+report transaction, different-model FIRST, scalar-pair candidate, global
+rerank or JC2 conclusion. The geometric source relaxation is stopped.
+No genus family, projective-pencil classification or control successor.
+
+## 2026-09-14 22:57 UTC LIVE STATE — projective-pencil shortcut stopped
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis3479de8e7c8ffd908ae95472816149faae8c1931;
+  policy team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Governing/FALLACY pins unchanged from ROOT's prior whole reads; native
+  agent freshly whole-read all five governing files. Exact stopped test
+  above, not a new global closing mechanism or a human-only impasse.
+- All native agents COMPLETED, no live model unit, writer, science worker,
+  provisional root, FIRST debt or descendant. The message-only task
+  changes no frozen prior report and does not reopen the closed zero-base
+  construction cycle. No automatic projective-pencil/monodromy successor.
+- FULL lastSep14 21:40:31, nextSep15 09:40:31; original10:17:55 miss and
+  FULL2110 workflow qualification retained. This scoped negative test is
+  coalesced as a micro-round; global ranking/trust perimeter unchanged.
+  BROAD originalSep12 21:53:56.598798932 overdue/access-coverage debt
+  retained; selected searches reset none. Mathstodon/Palomar/Friedland
+  path STOPPED; Miyanishi legitimate-source gate unchanged.
+- gh freshly unauthenticated22:55; GitHub sweep blocked,0triaged,
+  openUNKNOWN,lastsuccessfulnone; originalSep14 16:00 miss retained.
+  DC authentication is the queue prerequisite, not a global science block.
+- Fresh22:55 both personal/us-east-1 nonterminal worker selectors[];
+  no live jc2 user service; coordinator3674934 tree no science,
+  pswpin/out0/0 unchanged. No AWS mutation or scientific computation.
+  Fable cumulative101944 terminal lane-wall seconds unchanged, not
+  billing/tokens/credits/CPU; native usage and balances UNKNOWN.
+  Retained evidence EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE
+  and original48h debt retained. No paid adapter/framework work. Bank
+  the exact stop and navigation/digest; preserve pilot-local.log, bulk
+  artifacts and excluded nested repositories. Continue seeking a changed
+  all-degree source implication, not more consequences of bare smoothness.

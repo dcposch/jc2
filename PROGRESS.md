@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+22:57Z: [Projective-pencil discriminator](notes.md#2026-09-14-2257-utc--a-smooth-surjective-projective-pencil-with-elliptic-fibers)
+refutes the proposed general rationality premise: h=[x:1+x^2*y^3]
+is smooth and surjective with connected fibers, but its generic fiber is
+elliptic minus two points. ROOT/native Astra, MANUAL/PRODUCER-CHECKED,
+UNPROMOTED; not a Keller counterexample or a global gap closure. Stop the
+bare smooth-projective-base shortcut; no family extension or FIRST.
+No paid adapter, worker or scientific computation.
+
 22:40Z: [Puncture-monodromy source gate](notes.md#2026-09-14-2240-utc--puncture-invariants-do-not-supply-an-invariant-fiber-class)
 ended NO_NEW_SOURCE_CONSTRAINT. Conditional on all first-coordinate fibers
 being irreducible, the missing compact-period extension is explicit;

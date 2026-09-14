@@ -421,6 +421,15 @@ ADD VARIABLES, not a plane-preserving all-pencil reduction. These are
 DOCUMENTARY scope/history pointers, not new theorem promotions or a selected
 genus, period, or submersion-control program.
 
+**Surjective projective-base smoothness is still insufficient.** The
+September14 [22:57 source test](notes.md#2026-09-14-2257-utc--a-smooth-surjective-projective-pencil-with-elliptic-fibers)
+gives h=[x:1+x^2*y^3]: a smooth surjective A2->P1 morphism with EVERY
+fiber connected but generic compact genus1. An actual Keller pair also
+gives a smooth surjective map [p:1+pq], whose fibers are inverse hyperbolas,
+not generic inverse lines. The bare projective-base hypothesis therefore
+does not supply rationality. MANUAL/PRODUCER-CHECKED, UNPROMOTED; no Keller
+counterexample, classification theorem, genus family or successor.
+
 **Published properness shortcut: GAP, not an imported proof.** Tian--Sun,
 [AIMS Mathematics 2024, DOI10.3934/math.20241467](https://aimspress.com/aimspress-data/math/2024/11/PDF/math-09-11-1467.pdf),
 Theorem2.8 p30409, assumes C\W=phi^{-1}(infinity) after completing a fiber.
