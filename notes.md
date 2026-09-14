@@ -45589,3 +45589,54 @@ some broad discovery output clipped, so no exhaustive corpus claim.
   miss retained. BROAD originalSep12 21:53:56.598798932 and stopped-channel,
   access/historical48h debts remain overdue. Mathstodon/Palomar STOPPED.
   This internal history screen resets none of those clocks.
+
+## 2026-09-14 10:01 UTC LIVE STATE -- swarmHQ policy adoption
+
+- Basis: 85f6d8098c13e434c3f7354cdd1bd6fa70314d50, fast-forwarded from
+  the published research bank aded7376e8e5ea58cef65ee02a242253283c3e27.
+  No pull conflict. Research ledgers and evidence were not changed by the
+  restructure; only this acknowledgment is appended locally before banking.
+- Policy basis: team/swarmHQ/README.md at the basis commit, SHA-256
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  Generic protocol: COORDINATION.md, SHA-256
+  4ce5b29af5a70e096a04b942cb978b1df425f9f0648decb720ec1f089ff37ac4.
+  ROOT read both whole, plus the current root README, AGENTS, team index,
+  and team/swarmHQ/prompts/gh-triage.md. The team README is the coordinator
+  entry point; the former COORDINATOR.md is folded into it, not a live path.
+- Coordinator: ROOT remains swarmHQ coordinator, with unchanged role and
+  authority. Astra primary and Fable independent whole-portfolio/review
+  seats remain; Sol fallback. JC2 ACTIVE/unresolved. This is administrative
+  synchronization, not mathematical progress, promotion, or a new round.
+- GitHub sweep: blocked, gh not authenticated. The actual prerequisite
+  failure is that command -v gh returns exit1: gh is not installed on
+  math-hq, so authentication cannot yet be checked. DC owns installation
+  and authentication. Last attempt: September14 10:00 UTC; last successful
+  sweep: none established. Items triaged: 0; items still open: UNKNOWN,
+  not zero. Next check: next coordinator tick, no later than September14
+  16:00 UTC, or immediately after DC reports the prerequisite restored.
+  Surface this blocker to DC in the current user-visible acknowledgment.
+- Once available, list updated issues/PRs at every tick and at least every
+  six hours. Delegate each new/updated item to one bounded triage subagent
+  using team/swarmHQ/prompts/gh-triage.md; ROOT consumes triage reports.
+  No claim-bearing PR merges without different-model hostile review;
+  preserve contributor commits/authorship with the prescribed merge flow.
+  No queue item was read, triaged, commented on, or merged this turn.
+- Fresh10:00 native census: all three other agents COMPLETED, all writers
+  idle; no new assignment, active paid lane, FIRST queue, or descendant.
+  Scalar/preflight/r3 PARKED; execution-software task COMPLETE. The new
+  GitHub prerequisite blocks queue service, not unrelated research.
+- Fresh10:00 personal/us-east-1 jc2fleet=1 and Name=jc2-worker-* selectors
+  both returned[]/exit0 over pending/running/stopping/stopped. Running or
+  transitioning user jc2 services empty. Scoped coordinator process tree
+  checked; pswpin/out0 with zero check delta. No AWS mutation or scientific
+  execution. Fable cumulative99043 terminal lane-seconds unchanged; exact
+  credits/dollars unknown, retained evidence EBS remains billable.
+- Global gaps/ranking remain in APPROACHES.md. Immediate research must
+  change an actual-source implication or decisive construction test, not
+  renew stopped finite-family or control-family endpoints by relabeling.
+  FULL lastSep13 22:17:55 DEGRADED/nextSep14 10:17:55; original28-second
+  miss retained. BROAD originalSep12 21:53:56.598798932 and stopped-channel,
+  access/historical48h debts remain overdue. Mathstodon/Palomar STOPPED.
+  Policy adoption, Git banking, and a blocked queue sweep reset no research
+  or systems-improvement clock. Commit and push this LIVE STATE under the
+  swarmHQ standing banking instruction; no other file edit is required.
