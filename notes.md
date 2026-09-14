@@ -47720,3 +47720,99 @@ campaign. Targeted reads do not discharge BROAD/access/coverage debt.
 - Systems NO_UPGRADE/no measured acceleration, original48h debt;
   engineering CLOSED and scalar/preflight/r3 PARKED. No human-only
   global impasse. Reviewed necessary consequences do not resolve JC2.
+
+## 2026-09-14 20:25 UTC — translated-pencil rational-mate test stops immediately
+
+Tick began20:11:06 on eef027ebc14f7866b98f9ec02241754d502f2b4f.
+The previous turn made scoped mathematical progress on attained dynamical
+minima, but supplied no lowering step. This turn left that route parked
+and tested construction; there is NO NEW CANDIDATE or global-gap progress.
+
+ROOT reread the whole rational-mate-polynomialization and polar-fibers
+reports of September14. The apparent variant p=x*Q(s), s=x^ell*y,
+q=I(s)/p^ell with I'=Q^(ell-1) still gives I(S)=f^ell*g after a rational
+source substitution. The same banked critical-value and root-multiplicity
+obstruction applies. This is a duplicate mechanism, not a new family to
+extend or a reason to reopen its stopped polynomialization tranche.
+
+One bounded native Astra task, rational_mate_regularization, then tested
+a distinct translated pencil. It returned NO_NEW_CANDIDATE, message-only,
+and was independently COMPLETED before intake. Set u=x^2*y and
+
+    p=x+u+u^7.
+
+This is a polynomial submersion: p_y=x^2*(1+7*u^6), while
+p_x=1+2*x*y*(1+7*u^6); whenever p_y vanishes, p_x=1. Over C(p),
+the generic fiber has coordinate u, with x=p-u-u^7 and y=u/x^2.
+Its smooth completion is P^1 with infinity and the seven distinct roots
+of p-u-u^7 removed. In particular p is not a polynomial coordinate.
+
+However dx wedge dy=x^(-2)*dp wedge du, so a rational Jacobian mate
+would require q_u|p=(p-u-u^7)^(-2). At every root r of p-r-r^7=0
+over the algebraic closure of C(p), the latter differential has residue
+
+    -42*r^5/(1+7*r^6)^3 != 0.
+
+Both r and 1+7*r^6 are nonzero because p is transcendental. A rational
+derivative has zero residues, so this particular submersion has NO
+rational mate. ROOT checked the derivative, field change and residue
+sign directly. This stops before any pair-degree, monodromy or global
+polynomialization gate. MANUAL/PRODUCER-CHECKED, UNPROMOTED, unused;
+no new provisional claim, FIRST, report transaction, computation or
+successor. Exact-expression searches are not a novelty census. Its
+rational generic fiber also does not evade the campaign's existing
+generic-fiber restriction for a genuine polynomial Keller counterexample.
+
+Targeted public-source reads yielded no replacement construction. The
+whole144-line body at
+https://raw.githubusercontent.com/nasqret/jacobian-counterexample/main/knowledge/plane-program.md
+restates the already checked S(2,2,1)/arbitrary-H boundary gap and old
+construction fronts; compare the September11 11:12 journal entry.
+This is a content/scope duplicate, not a byte-equality claim. No linked
+code was fetched or executed, and no external claim was imported.
+The Makar--Limanov--Trakhtenberg primary preprint
+https://archive.mpim-bonn.mpg.de/5148/1/mpim-preprint_2024-33.pdf
+was checked only through its introduction and initial setup, not its
+whole proof; the September14 14:38 history already classifies it as a
+duplicate. No accepted degree-bound re-audit was commissioned. These
+targeted reads earn no broad-sweep or coverage-debt reset.
+
+## 2026-09-14 20:25 UTC LIVE STATE — current upstream, no new construction
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved. Basis
+  eef027ebc14f7866b98f9ec02241754d502f2b4f=origin/master=FETCH_HEAD
+  at fresh20:23 fetch/pull. Contributor README and CI commits are already
+  ancestors. Initial plain pull refused the unstaged runtime log; repeating
+  with rebase.autoStash=true returned Already up to date, exit0. No
+  conflict or log change: pilot-local.log pre/post SHA
+  26e5f27a5842433b83e9968f4a01981cd3c0fe2f1ed8ce112e4902409f5a5d00.
+  Policy team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDIT58870b4b/FALLACYe47fd16c freshly unchanged.
+  Bank this journal only; preserve raw local primary files/logs,
+  pilot-local.log, and excluded nested repositories.
+- All native authors COMPLETED; no active paid lane, worker, scientific
+  child, report lease, provisional root, FIRST debt or descendant.
+  All46 ranks unchanged. Expected negative construction gate is a
+  micro-round, no FULL trigger and no automatic family successor.
+- FULL1300 completedSep14 13:33:26/nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 overdue with
+  inherited access/coverage/48h debt. Mathstodon/Palomar STOPPED;
+  Miyanishi legitimate-PDF gate unchanged. Targeted reads reset no clock.
+- GitHub sweep: blocked, gh not authenticated, confirmed20:23.
+  Binary installed; last success none established,0triaged/openUNKNOWN;
+  originalSep14 16:00 miss retained. DC authentication only needed,
+  surfaced this turn; check next tick. No queue item/reply/contact/merge.
+- Fresh20:24 personal/us-east-1 pending/running/stopping/stopped selectors
+  jc2fleet=1 and Namejc2-worker-* both[] exit0. User jc2 running/transitioning
+  units0; coordinator3674934 tree no science; pswpin/out0/0. No AWS
+  mutation, CAS or paid-model launch. Retained EBS billable; Fable101232
+  cumulative terminal lane-wall seconds unchanged, not tokens/credits/
+  CPU/billing. Native usage and actual credit balances unknown. Astra
+  primary, Fable5.1 highest-value independent gates, Sol fallback.
+- Systems NO_UPGRADE/no measured acceleration, original48h debt;
+  engineering CLOSED and scalar/preflight/r3 PARKED. No human-only
+  global impasse. Next frontier task needs an actual-source constraint
+  or a genuinely different complete construction and cheapest global
+  discriminator, not another separable-primitive or translated-pencil
+  family. Normality, source selection and algebraization remain open.
