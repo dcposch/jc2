@@ -47911,3 +47911,117 @@ scope checks, not a broad sweep or a new proof/counterexample.
   impasse. The next task must change a missing actual-source implication
   or global construction discriminator; normalization stability, source
   selection and polynomial algebraization remain gaps, not assumptions.
+
+## 2026-09-14 20:52 UTC — elliptic multiplication fails the normalization screen
+
+Previous user-response turn: synchronization verified, NO mathematical
+progress. Pull with rebase returned already up to date at56e44fd6;
+pilot-local.log pre/post SHA26e5f27a5842433b83e9968f4a01981cd3c0fe2f1ed8ce112e4902409f5a5d00
+was unchanged. Fresh20:47:58 fetch is unchanged. The research task begun
+before that interruption is now collected, not relaunched from scratch.
+
+Candidate: set t=y^2-x^3 and let F_m=(U,V) be multiplication by m on the
+generic elliptic curve Y^2=X^3+t over C(t), evaluated at (x,y), m>=3.
+This gives rational functions, not a polynomial counterexample. It has
+V^2-U^3=t, function-field degree m^2 and rational Jacobian m. Indeed the
+relative invariant differential pulls back by m; wedging with dt gives
+
+    dt wedge dx/(2y) = -dx wedge dy,
+    dU wedge dV = m*dx wedge dy.
+
+The differential equality before wedging is relative, modulo dt, not an
+unjustified identity of absolute one-forms. Scaling (x,y,t) by weights
+(2,3,6) preserves the zero section and commutes with multiplication, so U,V
+are rational homogeneous of weights2,3. ROOT checked degree against Milne,
+Elliptic Curves, II6.1, and the differential against III3.9--3.11:
+https://jmilne.org/math/Books/EC2.pdf . These selected statements, not the
+whole book/foundations, were read. No Galois assertion or total-degree
+bound is used; m^2 is mapping degree. Identity m=1 is the positive control.
+
+The decisive obstruction is the SAME finite normalization, not poles in a
+particular coordinate formula. Put A=C[U,V], L=C(x,y), and S=the integral
+closure of A in L. Here A need NOT lie in the original C[x,y]. With
+T=y/x and w=y^2/x^3, L=C(w)(T), x=T^2/w,y=T^3/w, and
+U=a(w)T^2,V=b(w)T^3. Since C(w)[T] is normal and contains A, it contains S.
+Scaling preserves S; Vandermonde extraction retains each homogeneous
+component. Thus S is positively graded, and evaluating a monic equation
+at T=0 proves S_0=C. It is finite over A, Frac(S)=L, and its degree-zero
+function field is C(w), so Proj(S)=P1.
+
+Demazure--Watanabe now gives GLOBAL finite Cl(S), not merely local
+Q-factoriality: Z -> Cl(P1)=Z maps1 to [ell*D] of positive degree, and the
+remaining quotient is finite. ROOT read Singh--Spiroff arXiv0901.0686v1,
+section2, Theorems2.1--2.2 and its explicit P1 consequence/Remark2.3:
+https://arxiv.org/pdf/0901.0686v1 . Native Astra read the corresponding
+author-hosted source. Original Watanabe publisher retrieval and ROOT's
+author-hosted/PDF-screenshot attempts failed; no original-proof audit is
+claimed. The accessible arXiv text was sufficient for this scoped import.
+
+This excludes EVERY dominant rational source substitution sigma making
+G=F_m composed sigma polynomial Keller. Normality of R=C[s,z] places the
+identified S inside R. If sigma is birational, the accepted full
+normalization attachment gives A2 open in Spec S. Omitted prime classes
+are independent, hence nontorsion; finite Cl forbids them, and normal
+Hartogs plus affineness forbids a residual codimension-two complement.
+The resulting finite etale self-cover of A2 would have degree m^2>1.
+If sigma is nonbirational, sigma^*L is instead a PROPER intermediate
+field. The OLD BD-GAL class-lattice theorem then makes each component of
+the nonempty second-leg ramification have infinite-order class, again
+contradicting finite Cl. Do NOT use the open-immersion argument for this
+nonbirational case. Both degree factors and the literal A -> S -> R
+inclusions are retained; no assumption that sigma itself is polynomial.
+
+History consumed: ROOT whole-read finite-rankone-priority-root-20260912
+and the BD-GAL binding integration, SHA
+f97207189cc80f1a3c1c80dca9cb172dbeeb4fbd99b61266b4ed5c1d3f9b0ff8;
+the full-normalization boundary argument was checked in the named
+source-boundary-duality-swarmHQ-astra-20260914 report, sections1--4.
+Native frobenius_source_gate independently COMPLETED both its original
+grading/birational check and <=8-minute proper-intermediate composition
+check before whole-message intake. It additionally whole-read/hash-checked
+the old sandwich integration ba69b33fba97215ac3e4b2481b06917baf004e884508a15aef136575a9440778.
+Same-model co-research is NOT different-model FIRST.
+
+Disposition: MANUAL/BOOK-RELATIVE, UNPROMOTED, unused known-criterion client
+attachment. STOP this construction before any division-polynomial search,
+normalization computation or polynomialization farm. This is not a new
+general JC2 constraint, a novelty claim, or an exclusion of arbitrary
+rational constant-Jacobian maps. Arbitrary birational TARGET substitutions
+change A and are not covered. No deformation or nonisotrivial-isogeny
+successor is commissioned merely to remove a convenient hypothesis.
+Targeted history/literature searches found no additional actionable item;
+they were not exhaustive and do not reset BROAD. No global rank change.
+
+## 2026-09-14 20:52 UTC LIVE STATE — elliptic candidate stopped before computation
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis56e44fd6727cb0f2ccbf15de42c908a31be39444,
+  fresh fetch unchanged. Policy team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDIT58870b4b/FALLACYe47fd16c/APP06cd4458 unchanged.
+  Bank notes/daily digest only; preserve runtime log and excluded nested
+  trees. Candidate rejection changes the next action, not any JC2 gap.
+- All native agents COMPLETED; no paid lane, worker, scientific child,
+  exec session, report lease, provisional root, FIRST debt or descendant.
+  No global reranking/FULL trigger. Stop the isotrivial construction under
+  all dominant source substitutions; no automatic family successor.
+- FULL1300 completedSep14 13:33:26; nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 remains overdue,
+  with access/coverage/48h debt. Mathstodon/Palomar STOPPED, Miyanishi
+  legitimate PDF gate unchanged. These were targeted primary reads only.
+- GitHub sweep blocked: gh installed, not authenticated, fresh20:50;
+  last success none established,0triaged/openUNKNOWN; original16:00 miss
+  retained. DC authentication remains the prerequisite; surface/check next
+  tick. No queue-body intake, external reply or merge occurred.
+- Fresh20:50 personal/us-east-1 nonterminal selectors jc2fleet=1 and
+  Namejc2-worker-* both[] exit0; user jc2 running/transitioning units0;
+  coordinator3674934 tree no science; pswpin/out0/0. No AWS mutation/CAS.
+  Fable101232 cumulative terminal lane-wall seconds unchanged, not credits,
+  billing, CPU or tokens; native usage/balances unknown, retained EBS
+  billable. Astra primary, Fable5.1 independent gates, Sol fallback.
+- Systems NO_UPGRADE/no measured acceleration, original48h debt;
+  engineering CLOSED, scalar/preflight/r3 PARKED. Next frontier allocation
+  must target an actual-source implication or complete construction not
+  already excluded by the normalizer/class/ramification screen. Keep the
+  all-degree/global-construction research allocation protected. No human-
+  only global impasse; normalization stability and source selection remain
+  genuine gaps, not hypotheses supplied by this negative construction test.

@@ -8,6 +8,15 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+20:52Z: [Elliptic-multiplication construction](notes.md#2026-09-14-2052-utc--elliptic-multiplication-fails-the-normalization-screen)
+is stopped before computation. The rational constant-Jacobian maps on
+y^2=x^3+t have positively graded finite normalization with finite global
+class group. The existing full/proper-intermediate boundary criterion
+therefore excludes every dominant rational source substitution producing
+a polynomial Keller map. ROOT/native Astra, MANUAL/BOOK-RELATIVE,
+UNPROMOTED known-criterion attachment; no new general JC2 constraint,
+paid lane or scientific computation, and no automatic family successor.
+
 20:37Z: [Logarithmic-lifting check](notes.md#2026-09-14-2037-utc--logarithmic-lifting-is-known-not-transverse-control)
 recovers a classical theorem but no new source constraint: the extendable
 fields remain tangent to the branch divisor and cannot supply a transverse
