@@ -35,5 +35,5 @@ The `AUDIT.md` delta ids or jc2.fun entries this changes, or "none".
 - [ ] No change to `jc2-lean`, `jc2-web`, or `.gitmodules`
 - [ ] The report ends with `<!-- BODY-END -->` and carries a `## COLLISIONS` block from `python3 ops/open_collision.py <report> --root .`
 - [ ] Every raised `OPEN[...]` states its bounded quantity and its cheapest test
-- [ ] `python -m pytest tests --ignore=tests/test_farm.py --ignore=tests/test_parity.py` passes
+- [ ] `python -m pytest tests --ignore=tests/test_farm.py --ignore=tests/test_parity.py --deselect tests/test_conjE.py::test_sweep` passes
 - [ ] Under 10 MB added, and no third-party PDFs

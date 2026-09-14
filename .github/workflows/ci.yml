@@ -63,6 +63,8 @@ jobs:
       # test_farm.py runs a 9-minute dry-run gate and test_parity.py needs python-flint.
       # Both are excluded by path, not deleted, until DC decides what to do with them.
       # test_conjE.py::test_sweep shells out to msolve, which the runner does not have.
+      # The planeprobe test writes its results into runs/, which is git-ignored.
+      - run: mkdir -p runs
       - run: python -m pytest tests -q -p no:cacheprovider --ignore=tests/test_farm.py --ignore=tests/test_parity.py --deselect tests/test_conjE.py::test_sweep
 
   reports:
