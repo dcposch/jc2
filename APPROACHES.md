@@ -1,6 +1,6 @@
 # APPROACHES.md — current research strategy
 
-Current navigation updated September14, 2026 with the [swarmHQ FULL2110 synthesis](xmodel/ideation-swarmHQ-synthesis-20260914T2110Z.md), completed21:40:31 UTC. All46 dispositions remain unchanged; NO_NEW_CLOSING_MECHANISM/NO_TEST and no promotion. Whole-map blind and cross coverage completed, with the synthesis's DEGRADED workflow qualification retained. The FJ boundary/LC card is withdrawn at a missing-map/inequality GAP, not a refuted future theorem. Conditional minimizer/genus transport leaves every target frame available and supplies no secondary genus bound. Negative construction outcomes are not evidence of zero construction time. One bounded zero-base fresh-eyes research cycle is selected, not a finite-window search. Scalar/preflight/r3 remain parked. The [FULL1300 synthesis](xmodel/ideation-swarmHQ-synthesis-20260914T1300Z.md) preserves the prior round and its corrections; the [FULL2110 frozen map](box/ideation-swarmHQ-20260914T2110Z/APPROACHES.snapshot.md) preserves this file's prior bytes. [AUDIT.md](AUDIT.md) owns accepted statements; the newest LIVE STATE in [notes.md](notes.md) owns jobs and clocks. JC2 remains unresolved.
+Current navigation updated September14, 2026 with the [swarmHQ FULL2110 synthesis](xmodel/ideation-swarmHQ-synthesis-20260914T2110Z.md), completed21:40:31 UTC. All46 dispositions remain unchanged; NO_NEW_CLOSING_MECHANISM/NO_TEST and no promotion. Whole-map blind and cross coverage completed, with the synthesis's DEGRADED workflow qualification retained. The FJ boundary/LC card is withdrawn at a missing-map/inequality GAP, not a refuted future theorem. Conditional minimizer/genus transport leaves every target frame available and supplies no secondary genus bound. Negative construction outcomes are not evidence of zero construction time. The selected [one-cycle zero-base reset](xmodel/zero-base-constructive-swarmHQ-astra-20260914T2145Z.md) completed21:56 with NO_CANDIDATE; it is CLOSED, with no automatic successor or finite-window search. Scalar/preflight/r3 remain parked. The [FULL1300 synthesis](xmodel/ideation-swarmHQ-synthesis-20260914T1300Z.md) preserves the prior round and its corrections; the [FULL2110 frozen map](box/ideation-swarmHQ-20260914T2110Z/APPROACHES.snapshot.md) preserves this file's prior bytes. [AUDIT.md](AUDIT.md) owns accepted statements; the newest LIVE STATE in [notes.md](notes.md) owns jobs and clocks. JC2 remains unresolved.
 
 The [exact pre-cleanup archive](history/APPROACHES-before-20260911T2252-cleanup.md) preserves the complete pre-cleanup development narrative and historical source trail, byte-for-byte. All **46 avenue numbers** remain those of the [master inventory](history/APPROACHES-before-20260906-cleanup.md#1-master-union-table). Its scores and launch recommendations are historical, not current priorities. The latest completed synthesis is linked below; no live preliminary report is incorporated here.
 
@@ -528,6 +528,11 @@ also after identity stabilization and source/target automorphisms. Thus an
 injective polynomial source-plane map with FULL factorization Phi j=i h
 cannot yield a Keller counterexample, by the accepted mapping-degree<=3
 theorem. Long's 4D attachment retains its explicit-source-data conditionality.
+The source is [Long2608.23777v1, *An Explicit Counterexample to the
+Rank-Two Poisson Conjecture*](https://arxiv.org/abs/2608.23777v1): rank two
+means FOUR variables, not JC2. The literal canonical-pair reduction is
+already checked in the same producer/gate; the September14 22:20 source
+refresh found no version or plane-transfer delta.
 That single-step result does not cover arbitrary projections, noninjective
 sources or iterates; the following field-tower composition enlarges its scope.
 
