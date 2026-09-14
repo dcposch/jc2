@@ -249,6 +249,15 @@ on all of T, global division by x, or cylinder successor is supplied.
 
 **Separate AS109 integral-lift frontier:** an exact integral polynomial lift P=x-x^109+109A, Q=y+109B would be noninjective under the reviewed 109-ball Hensel theorem. The accepted theorem-interface composition forces max(deg_y A,deg_y B)>=12 (AUDIT, August26 23:01Z). This is coordinate-specific and conditional on such a lift: no polynomial lift, support bound, ordinary-total-degree bound or degree-exactly-twelve routing follows. Witt/formal compatibility is not bounded-support polynomiality; do not identify this problem with the preceding surface boundary pair. See [accepted scope](AUDIT.md).
 
+**Rational-mate pole removal.** The September14 [finite-fiber argument](xmodel/rational-mate-polar-fibers-swarmHQ-root-20260914.md)
+is MANUAL/PRODUCER-CHECKED, UNPROMOTED: for a polynomial submersion p,
+a GIVEN rational q with J(p,q)=1 can be corrected by r(p) to a polynomial
+mate if every fiber supporting a pole of q is irreducible. Only those
+finitely many fibers are needed. Reducible fibers permit incompatible
+componentwise constants, as the explicit control shows. No eligible new
+noncoordinate p,q is supplied; no novelty, FIRST, family search or global
+reranking follows. This does not reopen the stopped rational-pair families.
+
 The [September13 construction reset](xmodel/global-construction-reset-astra-20260913.md)
 is MANUAL/UNPROMOTED NO_NEW_MECHANISM. Rational source regularization of the
 exact cotangent lift fails: polynomial g(h), g=z-z^109, forces rational h

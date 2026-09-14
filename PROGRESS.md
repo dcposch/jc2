@@ -8,6 +8,16 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+18:17Z: [Rational-mate pole removal](xmodel/rational-mate-polar-fibers-swarmHQ-root-20260914.md)
+gives a finite conditional polynomialization test: a polynomial submersion's
+rational mate becomes polynomial after a target-rational correction when
+all its polar fibers are irreducible. ROOT proof and native Astra check,
+MANUAL/PRODUCER-CHECKED, UNPROMOTED; no new eligible candidate or JC2 gap
+closure. Reducible-fiber control retains the missing hypothesis. The bounded
+higher-dimensional construction intake recovered existing stops, and the
+75/125 draft comparison found no load-bearing contradiction. No paid lane
+or scientific computation; no automatic construction-family successor.
+
 17:40Z: [Bounded source/history checks](notes.md#2026-09-14-1740-utc--source-dimensions-and-six-sheet-history-check)
 correct the proposed K4 donor's dimension to four and recover the already
 recorded A6/S6 filter and LZ-KILL mechanism, with the historical RED-N scope
