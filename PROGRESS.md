@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+15:42Z: [Rational-mate polynomialization check](xmodel/rational-mate-polynomialization-swarmHQ-astra-20260914.md)
+excludes every dominant rational source substitution for ROOT's specified
+constant-Jacobian rational pair, uniformly in Q and the integration constant.
+The proof is algebraic, without degree bounds or computation. This closes
+that construction, not JC2 or arbitrary target transformations.
+MANUAL/PRODUCER-CHECKED, UNPROMOTED; Astra checked ROOT's argument,
+not different-model FIRST. No Fable, worker or scientific execution.
+
 15:20Z: [Formal-flow normalization](xmodel/normalization-formal-flow-swarmHQ-root-20260914.md)
 and [Astra boundary duality](xmodel/source-boundary-duality-swarmHQ-astra-20260914.md)
 end KNOWN/GAP, NO_NEW_CLOSING_TEST. A proposed blanket coefficient-containment

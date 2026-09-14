@@ -46185,3 +46185,76 @@ or new review debt. This is KNOWN/GAP screening, not a new closing lemma.
   pilot-local.log and historical bulk outputs; nested repositories untouched.
   Next research needs a changed actual-source mechanism, not another
   normalization criterion with the same unproved boundary regularity.
+
+## 2026-09-14 15:42 UTC -- rational construction stopped before search
+
+Previous synchronization turn: no mathematical progress; fresh fetch proved
+the requested upstream commits already included. The preceding research
+discriminator now completes at scoped PROGRESS tier, not JC2 resolution.
+The changed decisive test was existence of ANY dominant rational source
+polynomialization of a COMPLETE rational Keller pair, not a wider exact-
+curve genus family. ROOT supplied the construction and argument; Astra
+independently attacked them. No successor is earned by this negative result.
+
+In C(x,y), t=x^3*y, p=x^2*Q(t), q=I(t)/(2*p^2), I'=Q!=0, have J=1.
+After a hypothetical dominant source substitution into B=C[u,v], write
+f,g for the polynomial Keller outputs and X,T for the rational pullbacks.
+I(T)=2*f^2*g and normality give T in B. At T=a with Q(a)=0, the polynomial
+differential identity and invertible coframe force f=0, hence I(a)=0.
+Root multiplicities give I=c*(t-a)^m. Coprimality of f,g and squarefreeness
+of g force m=1 by a prime valuation of f^2*g. Then f=c*X^2, normality
+makes X polynomial, and its nonconstant factor contradicts constant J.
+This includes all integration constants and nonbirational substitutions.
+The identity pair p=x,t=xy,q=t/p=y is a positive outside-family control.
+Arbitrary target changes are NOT covered; no polynomial counterexample.
+
+Report xmodel/rational-mate-polynomialization-swarmHQ-astra-20260914.md:
+full16f0e9cfdac2980ff7c8f6975913e96b0019165fcd42532d91e7fa77c5c624cc,
+manifest27495904d8d214f75f098ae813ce89f68c772438791d0746dbe62ce2f5df5fe8,
+bodyea018a531d4caa1e3a0406794736c3e6cc55eb23a60315a62bf646c280e69da9.
+Author independently COMPLETED before expected-manifest verification and
+WHOLE 160-line report/manifest intake; post-read hashes unchanged. Finalized
+15:33:05, within the original seven-minute cap. MANUAL/PRODUCER-CHECKED,
+UNPROMOTED; same-model scrutiny is not different-model FIRST. No downstream
+consumer, promotion, provisional root or review debt; one report, no ROOT duplicate.
+
+Targeted canonical/history screens stopped the contemplated Mathieu/HC4,
+semicomplete-flow and Brieskorn proposals at their recorded hypotheses.
+Prior targeted web discovery supplied no newly imported closing theorem;
+no exhaustive novelty, whole-source reading or broad-sweep credit is claimed.
+
+## 2026-09-14 15:42 UTC LIVE STATE -- scoped construction bank
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. All46 ranks unchanged; no global
+  gap closed. Scoped construction micro-round, not a load-bearing reversal.
+- Basis6630ded0152bf1880f43ead2e0ba757820c0e327=origin/master after fresh
+  fetch. Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDITbda4b17b unchanged. Own ledgers edited only after
+  author terminal; no frozen inputs or nested repositories changed.
+- All authors terminal; no live paid lane, scientific process, FIRST queue
+  or descendant. No rational-source/target/degree-family successor selected.
+  Next research must change an actual all-degree source implication or
+  introduce a genuinely different complete counterexample construction.
+- FULL1300 completedSep14 13:33:26; nextSep15 01:33:26, original
+  Sep14 10:17:55 miss retained. BROAD originalSep12 21:53:56.598798932
+  remains overdue; prior last-record/completion/access/48h qualifications
+  unchanged. Mathstodon/Palomar STOPPED; targeted screens reset no clocks.
+- Resources: fresh15:37 personal/us-east-1 jc2fleet=1 and Name=jc2-worker-*
+  selectors both[], terminalexit0, pending/running/stopping/stopped scope.
+  User jc2 running/transitioning services empty. Scoped coordinator3674934
+  tree15:39 has no scientific child; pswpin/out0/0 at15:37. No AWS mutation
+  or science. Fable cumulative100220 terminal lane-wall seconds unchanged,
+  not credits/tokens/billing; exact balances unknown. Retained evidence EBS
+  billable. Astra primary, Fable independent gates, Sol fallback.
+- GitHub sweep: blocked, gh not authenticated (binary absent15:37).
+  Last successful none established;0 triaged, openUNKNOWN. Prerequisite
+  surfaced this turn; next tick/original16:00 checkpoint, not reset.
+  Miyanishi GSP legitimate-PDF prerequisite unchanged; no retrieval retry.
+- Systems15:42 NO_UPGRADE: manual integrality/valuation reasoning settled
+  the discriminator before any computational search. No measured software
+  acceleration; engineering closed, scalar/preflight/r3 PARKED, historical
+  48h debt unchanged. No human-only global mathematical impasse.
+- Bank the single sealed report/manifest and own APP/PROGRESS/notes after
+  staged verification, then commit/push. Preserve unrelated pilot-local.log
+  and historical bulk outputs. No accepted-bound reproof or foundation audit.

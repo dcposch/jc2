@@ -299,6 +299,19 @@ in its zero fiber; no Keller pair or globally compatible polynomial coframe
 is supplied. Stop the curve-only genus shortcut, not actual-source genus
 arguments; no new curve family or degree search is selected.
 
+**The associated rational pair does not polynomialize.** The September14
+[Astra check of ROOT's construction](xmodel/rational-mate-polynomialization-swarmHQ-astra-20260914.md)
+proves the scoped obstruction for t=x^3 y, p=x^2 Q(t), q=I(t)/(2p^2),
+where Q!=0 and I'=Q with ANY integration constant. Although J(p,q)=1
+rationally, NO dominant rational source substitution makes both outputs
+a polynomial Keller pair. Normality first makes the pulled-back t
+polynomial; critical-value multiplicities and squarefreeness then force
+Q constant, leaving an impossible square Keller coordinate. No degree or
+birationality restriction on the substitution. MANUAL/PRODUCER-CHECKED,
+UNPROMOTED, not different-model FIRST. This tests a complete rational pair,
+not another curve-genus bound; arbitrary target changes and other rational
+pairs are outside scope. Stop this construction; no automatic successor.
+
 **Irreducibility is not genus constancy.** The September13 14:13 and 16:10
 [journal checks](notes.md) already retain the Briancon controls and the
 boundary principal-parts gap; do not rediscover them as new avenues.
