@@ -150,6 +150,15 @@ unproved. An asymptotic dual of index-one chart type multiplies geometric
 degree by alpha, not decreases it. No primitivity, Frobenius exclusion,
 polynomial block or automatic node/control successor follows.
 
+**Six-sheet source/history check (September14 17:40).** The external A6/S6
+filter was already recorded September11; its inspected branch-topology
+mechanism overlaps the promoted CAGE-N-R2/LZ-KILL at RED-N scope. The fresh
+read distinguishes ramified branch B from nonproperness D and retains e=1
+costs; it is not an independent promotion or an extension of RED-N. No
+all-degree gap closed and no degree-six/group-enumeration successor is
+selected. [Scope and provenance](notes.md#2026-09-14-1740-utc--source-dimensions-and-six-sheet-history-check)
+also records why the four-variable marked-root K4 is not a threefold donor.
+
 ## 5. TRACE: accepted image, no manufactured splitting
 
 [TRACE-IC-1 proof](xmodel/keller-trace-image-root-20260911.md) and [FIRST](xmodel/keller-trace-image-gate-fable5-20260911.md) identify the trace image of ANY actual complex plane Keller map, with its ACTUAL reduced nonproperness divisor D, as the inverse image of the boundary's minimal IC module. Named Yekutieli/standard inputs and the source-scope correction remain part of the theorem tier. No zero-defect, degree or dicritical-count hypothesis is imposed.

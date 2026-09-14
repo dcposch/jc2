@@ -46726,3 +46726,99 @@ Bank validation: expected-basis/manifest verification and scoped diff-check
 passed; APP SHA00f79a2aa9f436ebd2498b4da3fa6d81d75801e2f32e435ee58ed9a01e3d3c3b,
 PROGRESS48c09b2c, AUDITbda4b17b and policy50cf4548. Administrative checks
 are custody evidence only, not additional mathematical verification.
+
+## 2026-09-14 17:40 UTC — source dimensions and six-sheet history check
+
+Fresh fetches find HEAD=origin/master at
+7d2f5dfd05e95e050d4d5b03e35315f1784a6aa8. Contributor README/CI commit
+bf1e1ffe is an ancestor; no pending upstream delta or conflict. Preserve the
+unrelated modified pilot-local.log. No rebase or stash was necessary.
+
+Two bounded message-only native Astra checks are complete, independently
+observed COMPLETED before this intake. No files, code, paid models, workers
+or descendants were created by either task. Same-model checking is not FIRST.
+
+1. Marked-root source intake: K_n has n variables, and K4 has source
+   (x,y,z3,z4), target (C3,C4,A2,A0). This corrects ROOT's exploratory
+   threefold-donor question, not a prior promoted claim. Conditional on the
+   manuscript's degree-eight proof, L=K(t,a), P(t)=0 and a^2=P'(t) give
+   degrees four then two. This is a FOUR-dimensional field tower, not an
+   actual plane leg. Native read the whole manuscript/README/API/checksums;
+   ROOT checked the definition, chart and quartic passages, not the whole
+   manuscript. Public metadata dates it July21, not a September delta.
+   Published checksum fd4136ffca542d4a1d7b94234781419805b01b0c5f102e6f395d77ef51ad7064
+   was not independently recomputed. No proof revalidation, slice or successor.
+   Primary: https://gitlab.com/-/snippets/6012790/raw/main/exact_fiber_geometry.md
+   Metadata: https://gitlab.com/api/v4/snippets/6012790
+   Checksum: https://gitlab.com/-/snippets/6012790/raw/main/SHA256SUMS.txt
+
+2. Six-sheet check: the A6/S6 claim was already recorded August24 and
+   September11 17:58. Initial scoped history searches missed that journal
+   entry; this is recovered history, not a new idea. The inspected proof
+   retains e=1 budget costs and distinguishes ramified branch B from
+   nonproperness D. Native checked Orevkov Lemma2.1's separate dicritical
+   chains; its attempted collision double-counting objection did not survive.
+   ROOT read the main argument through Section7 and the refinement's
+   mathematical argument, but did not re-audit every primary import or run
+   group enumeration. Orevkov's e=N-1 exclusion remains imported, not
+   replaced by a low-total-degree theorem. Floating main has no fresh
+   commit/blob pin. Raw access was restricted; no alternate transport followed.
+   Primary: https://github.com/alok/jacobian-two/blob/main/docs/six-sheet-monodromy.md
+   Refinement: https://github.com/alok/jacobian-two/blob/main/docs/refined-six-sheet-budget.md
+   Orevkov: https://www.math.univ-toulouse.fr/~orevkov/jc86.pdf
+
+The latter's sole-branch topology mechanism overlaps existing LZ-KILL.
+ROOT checked xmodel/reducible-all-n-opus5-20260901.md lines219--236,
+reducible-all-n-r2-opus5-20260901.md scope and Theorem CAGE-N-R2 clause4,
+and integration7-coordinator-fable5-20260902.md's promotion. Binding RED-N
+scope remains actual N>=4, reducible nonproperness and an index-one
+dicritical. Its promoted label alone does NOT license unrestricted scope.
+No independent promotion of the external six-sheet conclusion, no new
+all-degree restriction, and no Fable/cusp/group-enumeration successor.
+
+ROOT's separate all-degree D=B attempt likewise supplies NO_NEW_CLOSING_TEST:
+unit/class-group arguments recover the known nontrivial boundary divisor
+classes, not absence of omitted unramified divisors. Smooth-enlargement
+topology does not supply affine finiteness; no new boundary classification
+was established. Do not return to the already-stopped Peretz node inference.
+These are DOCUMENTARY/MANUAL scope checks, not new proved mathematical
+results. Record them in the journal rather than manufacture another report.
+
+## 2026-09-14 17:40 UTC LIVE STATE — source checks closed, no successor
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved; all46 ranks unchanged. Basis
+  7d2f5dfd05e95e050d4d5b03e35315f1784a6aa8=origin/master on fresh fetch.
+  Policy basis team/swarmHQ/README.md SHA
+  50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a/AUDITbda4b17b/FALLACYe47fd16c unchanged. Owned bank:
+  APP, PROGRESS, notes only; no new report/manifest or artifact transaction.
+- All native authors COMPLETED; no live paid lane, scientific process,
+  worker, provisional root, FIRST debt or descendant. No scientific claim
+  promoted. Source-normality, source-selection and unrestricted polynomial
+  construction gaps unchanged. This routine source/history micro-round
+  changes no global ranking; no identical FULL echo is commissioned.
+- FULL1300 completedSep14 13:33:26, nextSep15 01:33:26; original10:17:55
+  miss retained. BROAD originalSep12 21:53:56.598798932 remains overdue
+  with inherited coverage/access/48h qualifications. These targeted reads
+  reset no clock. Mathstodon/Palomar STOPPED; Miyanishi PDF prerequisite
+  unchanged. No access bypass, social intake or broad-completion claim.
+- GitHub sweep: blocked, gh not authenticated; command-v still finds no
+  binary. Last successful none established,0 triaged,openUNKNOWN. Original
+  Sep14 16:00 checkpoint missed, not reset. DC installation/authentication
+  needed; next prerequisite check at next tick.
+- Fresh personal/us-east-1 selectors jc2fleet=1 and Name=jc2-worker-* for
+  pending/running/stopping/stopped both[] exit0. User jc2 running or
+  transitioning services empty; coordinator3674934 tree has no scientific
+  child, pswpin/out0/0. No AWS mutation or scientific compute; retained
+  evidence EBS billable. Fable cumulative100220 terminal lane-wall seconds
+  unchanged, not billing/credits/tokens/CPU. Native usage unmeasured;
+  balances unknown. Astra primary, Fable5.1 high-value independent gates,
+  Sol fallback; no utilization target.
+- Systems NO_UPGRADE; transaction/collision instruments unchanged, no
+  measured acceleration. Engineering CLOSED, scalar/preflight/r3 PARKED;
+  historical48h debt unchanged. No human-only global mathematical impasse.
+- Bank explicit owned paths, preserving pilot-local.log, bulk artifacts
+  and excluded nested repositories. Next research needs a different
+  actual-source hypothesis or complete polynomial construction, not another
+  six-sheet passport, field-tower relabeling, D=B class-group echo or local
+  control. Unchanged closing gaps earn no automatic incremental successor.

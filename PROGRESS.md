@@ -8,6 +8,13 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-14
 
+17:40Z: [Bounded source/history checks](notes.md#2026-09-14-1740-utc--source-dimensions-and-six-sheet-history-check)
+correct the proposed K4 donor's dimension to four and recover the already
+recorded A6/S6 filter and LZ-KILL mechanism, with the historical RED-N scope
+retained. No new actionable JC2 result, promotion or finite-degree successor.
+The unit/class-group attempt also recovers an existing gap. No paid lane or
+worker launched; fresh fetch confirms the contributor/CI changes are included.
+
 17:24Z: [Bass specialization and web screen](xmodel/bass-specialization-web-scope-swarmHQ-root-20260914.md)
 is MANUAL/PRODUCER-CHECKED, UNPROMOTED. The actual-source lifting obstruction
 is explicit and injective: Euler-annihilated specialization classes do not
