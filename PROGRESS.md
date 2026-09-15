@@ -8,6 +8,12 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+05:04Z: A bounded Astra/ROOT dynamical-source check found no applicable
+minimizer bound. The polynomial-like theorem requires a proper bounded
+restriction; ROOT's volume check excludes that literal setup for detDF=1.
+FJ's tight boundary is not a resolution of every nonproper branch.
+MANUAL/UNPROMOTED applicability stops, no JC2 advance or successor.
+
 04:51Z: Actual-source trace/separability and cyclic-generator shortcuts
 supplied no new closing test; both literature leads collided with prior
 screens. No promotion, paid lane or computation. GitHub delta sweeps at
