@@ -22882,3 +22882,49 @@ request was sent, and the Keller-specific headline itself is not refuted.
   completeness, local nilpotence, zero-fiber connectedness or JC2 follows.
   Novelty UNKNOWN. This reformulates the special-fiber gap in relative
   dimension one; it supplies no new mechanism closing that gap.
+
+### MARKED-ROOT-FIXED-SLICES-1 — 2026-09-15
+
+- PROMOTED / MANUAL at the exact displayed-formula scope. Producer
+  swarmHQ ROOT (gpt-6-astra),
+  [sealed classification](xmodel/marked-root-fixed-coefficient-slices-swarmHQ-root-20260915T124800Z.md),
+  full SHA256a56a1de74b34a283e1c4f32bc4e316f0da372f4c75a18c60afd1fd96589333e5,
+  manifest40652ba983ce4dba9fd8337830b16947ddf502e25d7a43fcf5c3acc648909204;
+  [different-model Sol FIRST](xmodel/marked-root-slices-review-swarmHQ-sol-20260915T125900Z.md),
+  full973e83b0d9a4a57f87958809651777802037ecde9e853106998cb2dc32983577,
+  manifestbfbd583514927b978cbea1f4773457cf0a767c6124684d89c5e4784009c0f209.
+  Review consumed public689a6fce. ROOT independently collected terminal
+  author, verified expected basis/manifest and0444 modes, and read the
+  entire review with unchanged pre/post hashes. Frozen producer-time
+  UNPROMOTED wording is preserved; same-model Astra input was not FIRST.
+- For every n>=4, define C3,...,Cn,A2,A0 by the exact master polynomial
+  in the producer report. For constants c=(c3,...,cn), the affine scheme
+  S_c cut out by C_k=c_k is isomorphic to U=Spec C[x,y,1/(1+xy)], except
+  when cn=0 and c_(n-1)!=0, when it is U disjoint union(n-2) copies A2.
+  The latter planes have x=rho,y=-1/rho, rho^(n-2)=-1/c_(n-1), with
+  z3,z4 free and remaining z_j fixed. All components are reduced/smooth;
+  this is a whole-scheme assertion, not just a chart or point count.
+- On every extra plane, the remaining map is the affine automorphism
+
+      A2=rho^2*z4-(n-1)*(n-2)/(2*rho),
+      A0=(n+2)*rho/2-rho^3*z3/2,
+
+  with determinant rho^5/2 in (z3,z4). There is no dominant morphism
+  A2->U: its nonconstant unit1+xy must pull back to a scalar. Thus an
+  isomorphism parametrizing a plane component yields an automorphism.
+  An ARBITRARY polynomial substitution giving Keller low outputs must
+  dominate an extra plane; there it is merely an affine recombination
+  of its own (z3,z4) pair. This passes through the original JC2 problem,
+  not an exclusion of hypothetical preexisting polynomial Keller maps.
+- Independent reconstruction checked the coefficient factor C_n=p*b,
+  original-ring Bezout identity (p,b)=1, descending determinant p^(2n-3),
+  CRT decomposition and simple nonzero roots on p=0, low coefficients,
+  n=4 endpoint, and positive affine-plane controls. No computational
+  certificate, generic fiber degree, full donor Keller theorem, or other
+  external manuscript theorem is required. The formula is the definition;
+  no manuscript-wide proof audit, priority, or novelty assertion follows.
+- Other target-coordinate combinations, nonlinear target constraints,
+  rational source substitutions, arbitrary other donors and the global
+  conjecture are outside scope. The old dimension/tower check alone did
+  not establish these source slices. No new degree bound or actual plane
+  counterexample is obtained; no automatic slice/construction successor.

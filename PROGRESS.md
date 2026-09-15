@@ -13,7 +13,9 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   dominant polynomial map from A2; the map on each plane is an affine
   automorphism. Arbitrary polynomial substitutions merely pass through the
   original JC2 problem. No claim covers other target slices or donors.
-  swarmHQ, MANUAL/PRODUCER-CHECKED, UNPROMOTED; independent review pending.
+  [Independent Sol review](xmodel/marked-root-slices-review-swarmHQ-sol-20260915T125900Z.md)
+  confirms the whole scheme and substitution caveat. swarmHQ, PROMOTED /
+  MANUAL at AUDIT's MARKED-ROOT-FIXED-SLICES-1 scope; JC2 unresolved.
 - **The translated-fiber question also has a curve formulation.** A
   [source-line Bertini corollary](xmodel/source-line-translates-swarmHQ-root-20260915T121300Z.md)
   gives geometrically integral generic fibers of F(q)-F(l(z)) for a
