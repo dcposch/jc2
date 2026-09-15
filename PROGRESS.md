@@ -8,6 +8,14 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+02:10Z: The [cofinite-center cusp test](notes.md#2026-09-15-0210-utc--cofinite-center-euler-tests-do-not-supply-source-structure)
+gives a nonzero acyclic algebraic Weyl module passing joint Euler and
+tested Bass-operator injectivity in EVERY polynomial frame centered off
+one point. ROOT/native Astra, MANUAL/UNPROMOTED: this stops the proposed
+abstract all-cofinite-frame strengthening, not actual-source selection or
+JC2. A targeted twelve-query primary delta found no changed closing test;
+it is not a completed broad sweep. No paid external lane or computation.
+
 01:45Z: [LAURENT-POLYNOMIAL-DONOR-1](xmodel/laurent-polynomial-donor-swarmHQ-root-20260915.md)
 is PROMOTED/MANUAL after Fable FIRST confirmed its dichotomy and arbitrary-
 first-leg Keller exclusion. It is an all-degree donor filter, not a theorem

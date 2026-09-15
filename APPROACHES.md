@@ -219,6 +219,21 @@ The [growing-shear](xmodel/bass-resonant-operators-astra-20260911.md), [affine-a
 
 The separate MANUAL/UNREVIEWED [Kummer control](xmodel/kummer-weyl-selection-astra-20260912.md) strengthens the fixed-coordinate no-line example to full Weyl action, finite algebraic monodromy, regular holonomicity and de Rham acyclicity, with explicit Mellin rank2. It is not an actual source: ROOT's independent [coordinate boundary](xmodel/kummer-coordinate-boundary-root-20260912.md) makes its entire shifted Euler localization vanish after q'=q-1, contradicting Bass torsion-freeness for a Keller source centered on Q=1. No all-coordinate selection theorem follows. No promotion or automatic countermodel-hardening successor is selected; restoring full Weyl structure alone does not fill the source gap.
 
+The September15 [cofinite-center cusp control](notes.md#2026-09-15-0210-utc--cofinite-center-euler-tests-do-not-supply-source-structure)
+is MANUAL/PRODUCER-CHECKED, UNPROMOTED (ROOT/native Astra):
+M=C[p,q,(q^2-p^3)^(-1)](q^2-p^3)^(1/5) is a nonzero finite-monodromy
+Weyl module with zero algebraic de Rham cohomology. In EVERY polynomial
+coordinate frame centered away from the cusp point, it is JOINTLY
+Euler-polynomial torsion-free and every tested ep-r+p*dq*G(ep,eq) is
+injective. At the excluded point a weighted Euler relation exists.
+Thus those tests over a stipulated COFINITE set of centers still do not
+force zero; Bass normalization at a source-image point is not permission
+to assume every target point is attained. No such cofinite set is proved
+to be an actual Keller image. The module is not an actual source quotient
+or permutation-module realization; no Mellin rank, no-line, arbitrary-
+annihilator, surjectivity or JC2 conclusion. Stop this abstract strengthening,
+not source-specific selection; no further Kummer/control-family tranche.
+
 Two bounded September13 all-degree tests ended MANUAL/UNPROMOTED with
 NO_NEW_SOURCE_CONSTRAINT. [Horizontal transfer](xmodel/coordinate-uniform-bass-discriminator-astra-20260913.md)
 is identically zero on the split trace-zero connection because the source

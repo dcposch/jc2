@@ -50043,3 +50043,152 @@ rational-component closure is inferred. No JC2 proof/counterexample.
   original48h debt retained. Bank only four owned ledgers and the terminal
   Fable report/log/receipt. Preserve pilot-local.log, bulk artifacts and
   excluded nested repositories; no submodule inspection or synchronization.
+
+## 2026-09-15 02:10 UTC — cofinite-center Euler tests do not supply source structure
+
+Previous goal turn: PROGRESS, completing independent donor FIRST and its
+bank, not JC2 resolution. This tick began01:52:46; fresh fetch matched
+6f01e42931357efd46092e15a2d5ac413411375d. Only pilot-local.log was dirty.
+ROOT reread FULL2110 synthesis whole and current route sections; several
+aggregate searches clipped, so no exhaustive history/whole-map refresh is
+claimed. Rational-mate/Briancon, boundary-LC, ruling/linear-Jacobian and
+Brieskorn suggestions returned to existing missing hypotheses; no accepted
+bound, scalar, finite-family or construction successor was commissioned.
+Three targeted rational-mate/Briancon web queries yielded no new premise.
+
+One changed global-source discriminator was tested manually. The old
+Kummer control fails Euler torsion-freeness after centering on an accessible
+shifted line. Could requiring joint Euler and tested Bass injectivity in
+EVERY polynomial frame centered in a COFINITE target set remove that
+abstract obstruction? NO. This is a newly tested sufficient-package
+proposal, not a refutation of any promoted source theorem.
+
+Put h=q^2-p^3, alpha=1/5, W=A2 minus{(0,0)}, and
+
+  M=C[p,q,h^(-1)]e,  d(e)=alpha*(dh/h)e,  e^5=h.
+
+This is a nonzero full Weyl module, an algebraic rank-one connection of
+finite monodromy on h!=0. It is not a polynomial source quotient. With
+E=2p*partial_p+3q*partial_q, grade p,q,dp,dq by2,3,2,3 and e by6/5.
+Every twisted de Rham form is a FINITE sum of terms with weights in
+6/5+Z, hence no zero weight. Cartan gives L_E=d_nabla*i_E+i_E*d_nabla;
+i_E*L_E^(-1) is an algebraic contracting homotopy. Thus ALL de Rham
+cohomology of M vanishes, without analytic convergence or a rank formula.
+
+Take ANY polynomial coordinates u,v whose common zero c lies in W.
+Write H for h in those coordinates, Eu=u*partial_u, Ev=v*partial_v.
+For every nonzero m in M, its generic H-divisor exponent is
+lambda=1/5+k, k an integer. If a nonzero Euler polynomial P(Eu,Ev)
+of degree n>0 killed m, its most singular coefficient would be a unit times
+
+  lambda*(lambda-1)*...*(lambda-n+1)*P_n(u*H_u,v*H_v) modulo H,
+
+where P_n is the top homogeneous part. All lower-order operator terms,
+including derivatives of intermediate coefficients, have lower pole order.
+The falling factorial never vanishes. Factoring P_n over C and using
+irreducibility of H forces a nonzero diagonal field
+a*u*partial_u+b*v*partial_v tangent to the transformed cusp. Degree
+comparison makes its action on H a CONSTANT multiple of H. Its flow
+therefore preserves the unique singular point. If a,b are nonzero, that
+point must be the coordinate origin, contradicting c!=(0,0) in the
+original plane. If one coefficient is zero, semi-invariance forces
+H=u^r A(v), or the symmetric expression; irreducibility over C forces a
+smooth coordinate line, not a cusp. A constant nonzero P is harmless.
+Consequently M is JOINTLY C[Eu,Ev]-torsion-free in EVERY permitted frame.
+
+The SAME symbol argument also proves injectivity of every tested operator
+
+  L=Eu-r+u*partial_v*G(Eu,Ev), r>=0, G in C[X,Y].
+
+For deg G=k>=1 its order-k+1 conormal coefficient is
+u*H_v*G_k(u*H_u,v*H_v), with the same nonzero fractional falling factorial.
+Neither u nor H_v vanishes identically on an irreducible cusp, so a kernel
+again forces the forbidden diagonal tangency. For G=gamma constant,
+L=u*(partial_u+gamma*partial_v)-r. A kernel would give
+H dividing H_u+gamma*H_v; smaller degree forces that derivative to vanish.
+Then H belongs to C[v-gamma*u] and irreducibility makes it a line.
+This includes gamma=0; r contributes only a lower-order term.
+
+Negative controls/boundary: at the EXCLUDED cusp center in the original
+coordinates, (2ep+3eq-6/5)e=0. Thus extending the center quantifier to
+every target point is a genuinely stronger condition, not silently proved.
+Replacing alpha by0 retains the constant section, killed by Euler
+operators, and also destroys acyclicity. The noninteger exponent matters.
+No Mellin-rank, no-delta-line, arbitrary U-annihilator, permutation-module,
+actual-Keller realization or surjectivity statement has been established.
+In particular W is stipulated, NOT proved to occur as a Keller image.
+The actual-source formal-lift/field/algebra conditions remain essential;
+neither the old nor the new abstract control supplies them.
+
+ROOT/native Astra independently checked the core proof; native completed
+and was independently observed terminal. Its initial report excluded the
+operator corollary, which ROOT sent at that completion boundary; one tiny
+message-only continuation confirmed the corollary before02:09:21, within
+the original six-minute envelope ending no later than02:11. No code,
+new files, external source or computation in that lane. Same model, not
+different-model FIRST. MANUAL/PRODUCER-CHECKED, UNPROMOTED; no AUDIT
+promotion, descendants or further Kummer/control-family tranche.
+
+ROOT and native whole-read the two September12 controls, with unchanged
+pre/post pins: kummer-weyl-selection-astra-20260912.md
+a773517be4434f0a18e8fc80b35ac7cd739190fc98ff717a9557959a38557998;
+kummer-coordinate-boundary-root-20260912.md
+63a7a070b6c7aac67635729980021a2de68b24d6bf31e5ec7071ecc49db27139.
+Scoped canonical cusp/Euler/Kummer searches found no exact predecessor,
+not an exhaustive novelty audit. ROOT selected-primary read Bass1989
+printed39--43/PDF2--6, especially the source-origin normalization and
+Theorem1.4; local PDF SHA86f642941d2cea0f1d438996d8e81833ac53b6039c4c81e1564adc411f614b1e.
+The imported Bass theorem is not reproved; its normalized statement is
+the conditional source interface. No source-regularity hypothesis is
+transferred to M just because it passes the listed tests.
+
+Parallel primary delta, native Astra02:04:02--02:06:16, terminal observed:
+NO_ACTIONABLE_DELTA in twelve discovery queries, including date-windowed
+and unwindowed controls over primary/institutional/repository domains.
+Xavier https://arxiv.org/abs/2606.22041 remains v1 June20 and
+Pissolato https://arxiv.org/abs/2608.19069 v1 August19; abstract/version
+histories only, no proof reread. The O-01d0 repository's whole rendered
+58-line README still states0.1.0-candidate/August28 and unresolved status:
+https://github.com/ipitchford/o01d0-polar-fibre-structural-reductions/blob/main/README.md .
+No commit identity, byte-equality, code or certificate claim; denied
+Zenodo link not followed. arXiv AG/AC/CV new pages returned September14
+headers with49/11/8 entries; only selected windows were read, not every
+entry. They do not establish coverage through September15 02:03.
+All four charged governing/map pins matched pre/post before ROOT edits.
+No new theorem imported, stopped-channel access or BROAD completion.
+
+## 2026-09-15 02:10 UTC LIVE STATE — cofinite-frame shortcut stopped
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis
+  6f01e42931357efd46092e15a2d5ac413411375d matched fresh origin/master.
+  Policy basis team/swarmHQ/README.md
+  SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,FALLACYe47fd16c unchanged. APP updated only with the
+  scoped unpromoted test above, SHA
+  6af406f98697918438ea5a33b8af335b8c89e63a0e8f6bf33e10633b352dbbc2;
+  global ranking unchanged.
+- All three native agents independently COMPLETED; core/delta collected
+  within the original cap. No external model unit, scientific job/worker,
+  active provisional root, FIRST debt or descendant. Existing donor
+  promotion unchanged; new cusp control MANUAL/UNPROMOTED, not a source.
+- Immediate queue: bank the exact discriminator and source perimeter;
+  protected research must obtain an actual polynomial-source implication
+  or a genuine construction. More cofinite coordinate tests of these
+  operators alone are not a closing test. No abstract-module family,
+  Laurent/Long extension, finite-window computation or automatic successor.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; originalSep14 10:17:55 miss
+  and FULL2110 qualification retained. Targeted micro-round only, no global
+  rerank or cadence reset. BROAD originalSep12 21:53:56.598798932 remains
+  overdue/access-degraded; stopped channels and legitimate-source gates
+  unchanged. The primary delta is not certified current full coverage.
+- GitHub sweep blocked, gh not authenticated, fresh01:52 check;0triaged,
+  openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained. Auth
+  requirement remains surfaced; no queue-body or credential change.
+- Both personal/us-east-1 nonterminal worker selectors[] at02:09. Fresh
+  coordinator3674934 tree has no science, running jc2 units0, pswpin/out0/0.
+  No AWS mutation/computation or paid external lane. Fable cumulative
+  103186 terminal lane-wall seconds unchanged; native usage/balancesUNKNOWN,
+  not a billing estimate. Retained EBS remains billable.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Bank only notes/PROGRESS/APP; preserve
+  pilot-local.log, bulk artifacts and both excluded nested repositories.
