@@ -6,6 +6,13 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **Rational Weyl automorphisms do not yield proper polynomial endomorphisms.**
+  A [birational construction filter](xmodel/birational-weyl-dressing-swarmHQ-root-20260915T082700Z.md)
+  shows that a first-Weyl endomorphism inducing a division-ring automorphism
+  has a polynomial inverse of no larger Bernstein degree. The argument uses
+  named positive-characteristic imports and a uniform descent bound.
+  swarmHQ, MANUAL/PRODUCER-CHECKED, UNPROMOTED; no novelty claim, arbitrary
+  Weyl/Keller classification, or JC₂ resolution follows.
 - **New source criteria retain missing Keller hypotheses.** The
   [primary-source applicability report](xmodel/primary-source-gates-swarmHQ-root-20260915T075600Z.md)
   distinguishes finite projective dimension over the canonical graph ring from
