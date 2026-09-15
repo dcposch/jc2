@@ -51005,3 +51005,75 @@ bounded canonical windows supplied the comparison, not an exhaustive search.
   cumulative104688 (not CPU/tokens/billing). Native author spans478+249s,
   not metered credits; balancesUNKNOWN, retained EBS billable. Preserve
   unrelated pilot-local.log, bulk outputs and both excluded nested repos.
+
+## 2026-09-15 04:51 UTC — actual-source trace shortcuts supply no new test
+
+Previous FULL0405 bank4c603c1d5a4b63bf8755a637b4d5faa89adfc0ea completed
+a scope audit, not a new mathematical closing implication. Fresh04:42:20
+fetch matched origin/master. This tick likewise has NO_NEW_CLOSING_TEST;
+no report, promotion, rerank, paid lane or computation is commissioned.
+
+ROOT screened the actual source algebra rather than a relaxed module.
+For A=C[f,g], R=C[x,y], K=Frac(A), L=Frac(R), the tempting use of the
+old diagonal/separability idempotent is a finite expression
+e=sum a_i tensor b_i and the field trace reconstruction
+r=sum a_i Tr(b_i r). This does not establish a map Tr(R)->R: the
+correlated reconstruction coefficients do not prove a_i Tr(R) is in R
+for any individual nonzero a_i. A finite tensor expression is not an
+A-finite projective dual basis. The existing accepted nonproper-source
+Hom_A(Tr(R),R)=0 obstruction remains, not a contradiction. Likewise,
+clearing denominators of the trace of a proposed cyclic D_A-generator
+does not establish that the modified element still generates R. No new
+trace section, integral trace, simplicity or properness claim follows.
+These are manual abandoned proof attempts, not new promoted results.
+
+History checks recovered Bavula holonomicity/cyclicity as KNOWN at
+September13 19:08 and September14 22:57, with simplicity still missing.
+The current attempted official publisher PDF retrieval timed out; no
+body/theorem was imported and no retry was made:
+https://comptes-rendus.academie-sciences.fr/mathematique/item/10.5802/crmath.556.pdf .
+Truong's2026 properness criterion was also already screened September13
+14:13. Current publisher read covered the opening selected HTML through
+line213, not the whole paper; its special cubic-power/full-support setup
+was not turned into an arbitrary-plane reduction:
+https://link.springer.com/article/10.1007/s10013-026-00804-y .
+Exactly three discovery queries concerned separability/trace, holonomic
+algebras and etale polynomial endomorphisms. Incidental secondary/social
+snippets were not followed or used; the stopped PDE publisher result was
+not reopened. Targeted discovery only, no BROAD coverage-clock reset.
+
+Canonical comparison used bounded APP/journal windows and the whole
+keller-trace-shortcuts-gate-fable5-20260911.md report. Other historical
+secant/global-source reports were selected/clipped, not whole-read.
+An overbroad Hom regex matched irrelevant homogeneous material; exact
+literal searches replaced it. No accepted foundation was reverified,
+and no source-algebra/control-family successor is selected from these gaps.
+
+## 2026-09-15 04:51 UTC LIVE STATE
+
+- ROOT/swarmHQ, JC2 ACTIVE/unresolved. Basis
+  4c603c1d5a4b63bf8755a637b4d5faa89adfc0ea; policy basis
+  team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a.
+  This bank is journal/digest only. No mathematical progress or new blocker.
+- GitHub sweeps04:42:20 and04:50:23 UTC SUCCESS/UNBLOCKED, metadata
+  updated since04:14:59; both returned0 issues/0 PRs.0triaged/0pending,
+  open census remains0/0. Next deadline10:50:23 UTC, and every earlier
+  tick. No item body, triage lane, comment, merge or closed-PR action.
+- Last FULL0405 completed04:39:01; next16:39:01 UTC. Original Sep14
+  10:17:55 miss/FULL2110 qualification retained. No automatic repeat
+  full packet or zero-base reset from this short duplicate screen.
+  BROAD original Sep12 21:53:56.598798932 overdue/access-degraded;
+  stopped channels and primary-source gates unchanged. Systems
+  NO_CHANGE/NO_UPGRADE with original48h debt retained.
+- All three native agents freshly confirmed COMPLETED; no live paid
+  lane, worker, science, report lease, provisional root, FIRST debt or
+  descendant. Top all-degree gaps remain in APPROACHES.md. Immediate
+  queue requires a changed actual-source implication or new construction,
+  history-checked before commissioning. Existing family stops retained;
+  scalar/preflight/r3 PARKED, engineering CLOSED.
+- Fresh04:50 both personal/us-east-1 nonterminal worker selectors[];
+  coordinator3674934 tree has no science; running jc2 services0;
+  pswpin/out0/0 unchanged. No AWS mutation. Fable cumulative104688
+  terminal lane-wall seconds unchanged, not billing/credits/CPU/tokens.
+  Native usage and balancesUNKNOWN; retained evidence EBS billable.
+  Preserve unrelated pilot-local.log, bulk artifacts and excluded repos.
