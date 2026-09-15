@@ -49884,3 +49884,162 @@ micro-round only; no full-round trigger or automatic family extension.
   original48h debt retained. Bank only ROOT's frozen report/manifest,
   review prompt and ledgers; never stage the live Fable report/log/receipt.
   Preserve pilot-local.log, bulk artifacts and excluded nested repositories.
+
+## 2026-09-15 01:45 UTC — Laurent donor FIRST confirmed; coordinate-plane gate stopped
+
+Previous goal turn: limited PROGRESS, not JC2 resolution. It froze the
+donor theorem and launched independent FIRST. This tick began01:34:11;
+bank integration continued after01:45 and a context checkpoint. Basis
+eac6de53834b2c81f36b4e095b53ded62f262610 matched fresh origin/master.
+The operator's bf1e1ffe README rewrite and91041f0b CI fix are already
+ancestors; no upstream change or synchronization conflict was found.
+
+Fable's original unit was independently inactive/dead/MainPID0/success
+at01:40:46; original1830005/1830221/1830222 all absent BEFORE intake.
+Receipt DONE0/CLEAN/BODY_SEALED/ABSENT:01:27:30--01:39:23,713 terminal
+lane-wall seconds, within the registered target and supervisor cap.
+All six charged inputs, runner tools, original prompt and output hashes
+were recomputed. Original composed prompt reconstructed with SHA
+492ba91b27306647342823ad03c0e614b7066a04cab8d66e8c5ab44d0e71fbcb;
+sandbox profile reconstructed from the recorded temporary path/arguments
+with SHA0c5fef9b9ddd46155b25ade999461c9e615583df1f2000b2c83a6382c8f3b776.
+The mask reconstruction did not inspect either excluded nested repository.
+Producer transaction reverified unchanged. Whole terminal report read,
+then report/receipt/log hashes rechecked unchanged. Log remains HASH_ONLY,
+not a full tool-log audit. No early body or receipt intake occurred.
+
+Retained external artifacts, all under xmodel/:
+
+- laurent-donor-first-swarmHQ-fable5-20260915T0127Z.md,13561bytes,
+  SHA465ca0297391becaf5a1d08911d96c92f9f7b032ee40a32c77b24773b60d244a;
+- same basename.run.v2,4106bytes,
+  SHAb3d55dbb40ad9a50f35a275203bee93552dff78477fc50f7a384f1e7fea99801;
+- same basename.log,645bytes,
+  SHAe0bc21edadc2a3cb440f0440638ce5601b89ff51aa4c085ab553651fed00eb86.
+
+Different-model Fable5.1 independently reconstructed and CONFIRMED both
+the dichotomy and arbitrary-first-leg Keller exclusion. ROOT promotes
+only LAURENT-POLYNOMIAL-DONOR-1's exact stated class, MANUAL with named
+geometric imports; producer bytes/manifest remain the01:33 frozen ones.
+No primary-foundation re-review or novelty claim is implied. The new AUDIT
+entry records the exact statement and binding repairs: restrict the
+critical-curve place to its branch-image field; divisor norm uses
+sum e_i*f_i=m; the full-normalization detour is valid, not a defect.
+Review2.3's negative-k example ring needs its good-case c0 in C[p]. Its
+optional class-group cross-check and loose unique-sheet commentary are
+not additional promoted claims. Second-leg degrees2/3 are already closed;
+the review's m>=3 rhetoric is not a new degree frontier. The producer's
+oversized unsealed append, review's stale skeleton label and exceeded
+word target remain disclosed workflow/exposition qualifications. Frozen
+bytes are not rewritten to erase them. No mathematical GAP was found.
+
+Theorem-interface pass: polynomial-Liouville's q=I(t)/(2p^2), I'=Q,
+fits through the middle field C(p,t), after constant rescaling, when
+deg I>=2. The linear case keeps its old separate integrality/square-factor
+obstruction. The rational-flow control (u+u^3/3)/p^2 also fits but is a
+closed-degree control. The fixed triangular-twist expression can have
+multiple fiber poles and is NOT automatically subsumed. No theorem gives
+an arbitrary actual Keller map this intermediate field/presentation.
+This changes a construction filter, not global ranking or an actual-source
+closing hypothesis: targeted micro-round, no FULL reset, descendant,
+expanded donor family or computational tranche.
+
+Parallel manual construction gate (ROOT/Astra, UNPROMOTED): let
+Phi=(R,T,D,S) be Long's displayed polynomial map on A4_(x,q,p,z),
+CONDITIONAL on its source symplectic identity
+
+  dx wedge dp + dq wedge dz = dR wedge dD + dT wedge dS.
+
+Let j:A2->A4 be a polynomial embedding with j*Omega=ds wedge dt,
+and require x composed with j to be a polynomial COORDINATE, not merely
+a submersion. Either canonical pair (R,D) or (T,S), if Keller on this
+plane, is an automorphism. This needs no full factorization of Phi
+through the pair, but does not cover noncoordinate x, noninjective
+immersions, arbitrary output projections or canonical recombinations.
+
+Choose determinant-one source coordinates with x composed with j=s and
+write Q=q composed with j. Then R=s(2-3sQ). On s=0, R_s=2,R_t=0.
+If J(R,D)=a!=0, D_t=a/2 there: line injectivity implies automorphy by
+the accepted Gwozdziewicz theorem. If J(T,S)=c!=0, symplecticity gives
+J(R,D)=1-c. At c=1, D is constant on s=0, while Phi restricted to x=0
+is triangular/injective:
+
+  R=0, S=q, T=-z+(5/2)q^2, D=p/2+H0(q,z).
+
+Coincident T,S values on that line imply coincident full Phi/j values,
+hence coincident source points. Again the line theorem applies.
+At c!=1, (R,D) is an automorphism; its coordinate R is irreducible,
+so 2-3sQ is a unit. Evaluation at s=0 forces that unit2 and Q=0.
+The source core formulas, with beta=3s^2(p composed with j)+2(z composed
+with j), y=-s*beta/3 and u=s*y, give exactly
+
+  S=y+3s(1+u)^2 beta+3s*y^2(4+3u)
+   =(8/3)s*beta-(2/3)s^3*beta^2.
+
+Writing Z(t)=z composed with j(0,t), we obtain S|s=0=0,
+S_s|s=0=(16/3)Z and T|s=0=-Z. Thus c=(16/3)ZZ', impossible for a
+nonzero constant polynomial. Therefore the T,S case necessarily has c=1.
+No formula for H0 beyond its independence from p is needed.
+
+Controls: j(s,t)=(s,0,t,-(3/2)s^2t) satisfies the coordinate hypothesis,
+is symplectic and yields R=2s,D=t/2,T=S=0. Thus no no-plane-map claim.
+The inclusion j(s,t)=(0,s,0,t) instead has constant x (outside that
+hypothesis), with (T,S)=(-t+(5/2)s^2,s), an automorphism with explicit
+inverse s=S,t=(5/2)S^2-T. Native Astra's bounded message-only manual
+check confirmed the argument including c!=1 and the second control;
+its COMPLETED state was independently observed. The first control was
+ROOT's additional manual check. Same model, not different-model FIRST;
+no frozen report, promotion, extension or successor is commissioned.
+
+Source/history perimeter: ROOT whole-read the older embedded-plane
+transfer report and Sol gate, and GRAPH-WEDGE-1's Fable gate. The former
+requires full factorization, the latter covers its stated graph/output
+classes; neither justifies an all-plane exclusion. Long primary
+https://arxiv.org/html/2608.23777v1 was read at introduction, Section2
+criterion, Section3 literal formulas and Section4 coordinates, with
+Section5 opening visible; no whole-paper or ambient symplectic-proof
+audit. Gwozdziewicz https://arxiv.org/pdf/alg-geom/9305008 was read whole
+(two pages); Theorem1.1 is consumed as an accepted premise, not reproved.
+Scoped history searches were not exhaustive. APP's generic genus-zero
+endpoint requires two independent rational directions; no one-arbitrary-
+rational-component closure is inferred. No JC2 proof/counterexample.
+
+## 2026-09-15 01:50 UTC LIVE STATE — donor filter promoted, all lanes terminal
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basis
+  eac6de53834b2c81f36b4e095b53ded62f262610 matched fresh origin/master;
+  both requested operator commits already included. Policy basis
+  team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,FALLACYe47fd16c unchanged. New APP hash
+  db0eb8d6f70f60b59451eb47e1b712e54d8319408287e14290d0ffcf2eba63fb.
+- LAURENT-POLYNOMIAL-DONOR-1 PROMOTED/MANUAL with imports, producer
+  ROOT/Astra, different-model Fable FIRST CONFIRMED, frozen pins above.
+  Parents: normalization/compulsory branch/torsion obstruction and accepted
+  nonproperness coverage. No descendant, active provisional root or FIRST
+  debt. Coordinate-plane restriction MANUAL/UNPROMOTED, source-identity
+  conditional. All three native agents independently COMPLETED.
+- Original Fable unit independently dead/MainPID0 again at01:49; all three
+  original PIDs absent, no running jc2 user unit. Fresh coordinator3674934
+  tree has no scientific workload; pswpin/out0/0. No active lane, job or
+  worker. Both personal/us-east-1 nonterminal campaign selectors[] at01:49.
+  No AWS mutation or scientific computation; retained EBS remains billable.
+- Fable cumulative103186 completed lane-wall seconds =102473+713, not
+  billed tokens, CPU time or dollars. Native usage/credit balances UNKNOWN.
+  No scarce-worker reservation or automatic paid follow-on selected.
+- Immediate queue: bank the terminal review and scoped ledger changes;
+  continue the protected global-gap search, not a larger donor/graph
+  family. Actual-source integrality/presentation and a global primitive
+  closing mechanism remain missing. Targeted theorem-interface micro-round
+  changes no global ranking and earns no FULL/BROAD clock credit.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; originalSep14 10:17:55 miss
+  and FULL2110 workflow qualification retained. BROAD originalSep12
+  21:53:56.598798932 overdue/access debt unchanged. Stopped Mathstodon,
+  Palomar, failed Friedland publisher path, denied Zenodo22143955 and
+  Miyanishi legitimate-source gate retained; no alternate acquisition.
+- GitHub sweep blocked, gh not authenticated; fresh01:48 check,0triaged,
+  openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained. DC auth
+  requirement surfaced. No queue-body intake or credential modification.
+- Engineering CLOSED; scalar/preflight/r3 PARKED; systems NO_UPGRADE,
+  original48h debt retained. Bank only four owned ledgers and the terminal
+  Fable report/log/receipt. Preserve pilot-local.log, bulk artifacts and
+  excluded nested repositories; no submodule inspection or synchronization.

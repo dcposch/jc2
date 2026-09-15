@@ -561,6 +561,24 @@ The MANUAL/UNREVIEWED [one-dicritical test](xmodel/one-dicritical-defect-connect
 
 **Graph and residue constructions.** [GRAPH-WEDGE-1 FIRST](xmodel/graph-wedge-gate-fable5-20260912.md) excludes EVERY polynomial output pair from the explicit triple on EVERY graph z=y^2 K(xy,y), without a degree bound. This complements the old all-H/linear-output theorem, not an all-graph or embedded-plane exclusion; plane x=0 gives an automorphism. No ambient-map validation or arbitrary-source implication follows. The MANUAL/UNPROMOTED [constant-graph control](xmodel/constant-graph-integrability-control-root-20260912.md), with [Astra co-research](xmodel/constant-graph-subalgebra-control-astra-20260912.md), gives1 in the target Jacobian module for H=c+y^2h(xy), c!=0. Its displayed ambient two-form is nonclosed, but this computation alone does not exclude another form with the same pullback. The distinct necessary condition is a TARGET-POLYNOMIAL one-form whose derivative pulls back to dx wedge dy; even that would not automatically be f dg for a Keller pair. The module computation alone proves neither pair existence nor nonexistence and licenses no automatic degree search; the following residue theorems are separate obstructions.
 
+**Laurent-polynomial donors (September15).**
+[LAURENT-POLYNOMIAL-DONOR-1](xmodel/laurent-polynomial-donor-swarmHQ-root-20260915.md)
+has [different-model Fable FIRST](xmodel/laurent-donor-first-swarmHQ-fable5-20260915T0127Z.md)
+and is PROMOTED/MANUAL with the named geometric imports. For independent
+p,u, q=p^(-k)u^m+sum_(j<m)a_j(p)u^j, m>=2, k any integer and a_j Laurent
+in p, no dominant rational source embedding of ANY degree makes p,q a
+whole-plane polynomial Keller pair. A critical-value pole gives a branch
+curve without A1 normalization; otherwise polynomial good reduction gives
+a cyclic-quotient normalization with torsion class group. The latter
+consumes the old missed-principal-divisor obstruction. This covers arbitrary
+coefficients in the stated presentation, not rational dependence with
+multiple u-poles or an arbitrary target-compatible ruling. It supplies no
+intermediate field for an actual Keller map and no primitive/global closure.
+The polynomial-Liouville screen composes for deg I>=2; its linear case
+retains the old separate obstruction. The triangular-twist screen below
+is not automatically subsumed. No new degree frontier, novelty claim,
+enlarged family or descendant is selected; see AUDIT for wording repairs.
+
 The [September14 fixed triangular-twist screen](xmodel/tangent-triangular-twist-screen-root-20260914.md)
 is MANUAL/PRODUCER-CHECKED, UNPROMOTED: for the two-dimensional tangent
 sweep (p(t)+2gamma,q(t)+gamma*t), deg p>=1 and q'=t*p'/2, the target

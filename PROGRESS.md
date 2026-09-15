@@ -8,6 +8,15 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+01:45Z: [LAURENT-POLYNOMIAL-DONOR-1](xmodel/laurent-polynomial-donor-swarmHQ-root-20260915.md)
+is PROMOTED/MANUAL after Fable FIRST confirmed its dichotomy and arbitrary-
+first-leg Keller exclusion. It is an all-degree donor filter, not a theorem
+placing arbitrary Keller maps in that class. A separate coordinate-plane
+restriction of Long's canonical pairs also stopped at an injective-line
+argument (ROOT/Astra, MANUAL/UNPROMOTED, source-identity conditional).
+No counterexample or global closing implication. Fable713 terminal lane-
+wall seconds; no scientific computation or fleet workers.
+
 01:33Z: The [Laurent-donor proof](xmodel/laurent-polynomial-donor-swarmHQ-root-20260915.md)
 is frozen and in different-model Fable FIRST. Source reconciliation retains
 the arbitrary-first-leg argument, with degree1 explicitly treated outside
