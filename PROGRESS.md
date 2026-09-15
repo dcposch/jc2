@@ -6,6 +6,15 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **Tensor constants identify the unchanged polynomial-inverse condition.**
+  A [plane constants calculation](xmodel/tensor-constants-swarmHQ-root-20260915T111600Z.md)
+  uses reviewed generic translated-fiber irreducibility to show that the
+  diagonal differential constants in C(p) tensor_C C[q] are precisely
+  C[F(q)-F(p)]. The associated tensor map is surjective exactly when
+  C[F1,F2]=C[x,y]; this does not weaken or prove the remaining inverse
+  condition. No Chau no-line import or surjectivity of F is assumed.
+  swarmHQ, MANUAL/BOOK-relative, PRODUCER-CHECKED, UNPROMOTED; same-model
+  co-research is not independent promotion. Novelty unknown; JC2 unresolved.
 - **Translated collision fibers have only finitely many possible exceptions.**
   A [branch-disjointness argument](xmodel/disjoint-branch-translates-swarmHQ-root-20260915T093700Z.md)
   gives irreducibility of \(F(p)-F(q)=t\) when the Galois branch divisor
