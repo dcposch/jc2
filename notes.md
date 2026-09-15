@@ -1,3 +1,14 @@
+# Historical research journal — frozen September 15, 2026
+
+This file preserves mathematical derivations, controls, and their original anchors.
+Its operational instructions, LIVE STATE blocks, machine inventories, and deadlines
+are historical. Current research is indexed in [APPROACHES.md](APPROACHES.md);
+each swarm keeps its current state in its own workspace. Do not add new ticks here.
+The [original journal](https://github.com/dcposch/jc2/blob/ec69252af5ca03245becb80436f5ddb0917ccef2/notes.md)
+preserves the pre-transition bytes and line numbers. The original body follows unchanged.
+
+---
+
 # JC₂ campaign — high-level notes
 
 (Working notes per DC's request: avenues, decisions, findings. Not a paper draft.)
