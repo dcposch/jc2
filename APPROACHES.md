@@ -626,6 +626,17 @@ stop, not arbitrary target changes, projections, or the three-dimensional
 twist. The p=q=0 identity-map control shows why sweep finiteness matters.
 No different-model FIRST, promotion, parameter search or successor selected.
 
+**Volume-neutral torus quotients (September15).** The distinct construction screen
+[VOLUME-NEUTRAL-TORUS-QUOTIENT-1](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
+is MANUAL/PROVISIONAL, with different-model Fable FIRST running. For n>=3,
+an effective linear torus of rank n-2 with trivial determinant character
+and invariant ring C[u,v] forces every equivariant polynomial Keller map
+to be an automorphism. The candidate proof derives two disjoint squarefree
+product coordinates, descends the volume form, and applies the accepted
+injective-line criterion. No arbitrary plane-source reduction, singular
+quotient, nonlinear action or non-volume-neutral extension. This is not yet
+promoted; no weight/stabilization family successor or global rerank.
+
 [EMBEDDED-PLANE-TRANSFER-1](xmodel/embedded-plane-transfer-gate-sol-20260913.md)
 is PROMOTED/MANUAL: the explicit 3D core has <=3 points in EVERY fiber,
 also after identity stabilization and source/target automorphisms. Thus an

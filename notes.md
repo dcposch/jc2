@@ -50460,3 +50460,103 @@ Selected APP/history reads, not a fresh whole-map read, support this screen.
   No AWS mutation or paid lane. Fable cumulative103186 terminal lane-wall
   seconds unchanged, not billing; native usage/balancesUNKNOWN, EBS billable.
   Bank only this journal; preserve pilot-local.log and both excluded repos.
+
+## 2026-09-15 03:25 UTC — volume-neutral torus quotient candidate in FIRST
+
+Previous turn: NO MATHEMATICAL PROGRESS. This tick began03:10:35 with fresh
+HEAD=origin/master=fca8a3c553955a488764ce49fe00b10c8748f5bb. Its changed
+discriminator addresses the proposed higher-dimensional-to-plane quotient
+construction, not a claim about every actual plane Keller source.
+
+Frozen VOLUME-NEUTRAL-TORUS-QUOTIENT-1: over C, n>=3, an effective linear
+torus T of rank n-2 with trivial determinant character and invariant ring
+abstractly C[u,v] admits only automorphic equivariant polynomial Keller
+maps to another linear representation of the same T. ROOT's proof derives
+the invariant generators as squarefree products over disjoint blocks.
+Contraction with the actual torus fields descends the constant volume form
+without a boundary factor. One nonsingleton block forces an injective
+quotient line; the accepted injective-line theorem and coordinate primality
+make all multiplicative lift factors constant. The remaining singleton
+coordinate, if any, is triangular. Positive and non-Keller determinant
+controls are explicit. No singular quotient, nonlinear action, nontrivial
+determinant character, n=2, or arbitrary stabilization hypothesis is hidden.
+
+ROOT/native Astra checked independently at same-model scope. Native was
+independently COMPLETED before authoring; its task was launched after
+03:10:35 with a10minute cap. No exact native lane-wall measure is claimed.
+No native files, descendants or
+science. History checked before commissioning: the old cyclic-cone and
+low-fiber full-factorization stops do not supply this literal arbitrary-n
+statement. Primary Shaska2607.20210v2 selected Sections2,9.1--9.2,10.3
+and nearby context provide scope/priority, not a new proof dependency.
+No whole-paper or exhaustive novelty claim; clipped searches were narrowed.
+
+Producer xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md:
+body10106 bytes/SHAe52f7d16b002b958854a0d5a2ca8a5b432c4eb4292cc7ef13ad501de97f85aea;
+full10439 bytes/SHA181d7ae11675d27a61da977f143abaf5797415d6c64923e11be336281ce6df80;
+manifest SHA35f86f8c4ba44b5f34b3a4445563567a303133604d75049de74ab4abd5375991.
+Begin->bounded section writes->separate final BODY-END->close->finalize->
+verify completed; ROOT whole-read the final and rehashed before review.
+Collision output EMPTY, no raised OPEN; mechanical only. Operational
+qualification: ROOT discarded the first scanner's execution metadata by
+forwarding only its output, then reran it before rechecking the first
+process. The collected second session27237 completed EMPTY; an explicit
+process check found no scanner left. No first-run output or concurrency
+claim is used. Do not repeat this handle-loss pattern.
+
+MANUAL/PROVISIONAL, not promoted. Fable FIRST launched03:23:17:
+jc2-volume-neutral-torus-first-swarmHQ-fable5-20260915T0323Z.service,
+invocation ff71411b7fae4eb88a9cd7eb7b095ccf, Main1852551,
+bwrap1852723/actual claude1852724. The launcher was checked immediately;
+actual-model confirmation first03:24:51 was94seconds after launch,
+34seconds late against the60second requirement. This miss is retained.
+RuntimeMax900seconds enforces03:38:17, plus15seconds shutdown;
+prompt target03:37/hard03:41 does not extend that supervisor cap.
+KillModecontrol-group, MemoryMax4GiB, swap0; resolved CLI/node/apply_patch
+PATH supplied. Exact unit independently ACTIVE03:25:36; no live output,
+receipt or report was read. Four runner-owned immutable input snapshots.
+Prompt box/volume-neutral-torus-first-20260915T0323Z/PROMPT.md,
+SHA9e49a1a765d74dd11f36085a2ac63d2f4422349e05c3bc8ea563aac31bba9a6f.
+Launcher0726b842/adapter34070f15/validatora89658bc/seal222e6de4 unchanged.
+Sole review xmodel/volume-neutral-torus-first-swarmHQ-fable5-20260915T0323Z.md.
+ROOT owns terminal/cgroup/original-PID checks, then receipt reconstruction,
+all charged hashes and whole-report intake. No retry from observation timeout.
+
+Theorem-interface composition: the known three-dimensional running map
+has determinant character -2 for weights(1,-1,-2), so is outside this
+claim. No general source acquires the required torus, rank, or smooth
+quotient merely by stabilization. This is one candidate construction stop,
+not a global rank change or an actual-source closing hypothesis. FIRST
+has zero descendants. No weight, singular-quotient or control successor.
+
+## 2026-09-15 03:25 UTC LIVE STATE — one frozen torus FIRST
+
+- ROOT/swarmHQ; JC2 ACTIVE/unresolved. Basisfca8a3c5 matched fresh origin.
+  Policy basis team/swarmHQ/README.md SHA50cf45483cddf637e717ddfa2d136be4df074d13d360b851c1fb62a9e73edb0a;
+  COORD4ce5b29a,FALLACYe47fd16c unchanged. APP adds only the provisional
+  construction screen; global ranks/gaps unchanged.
+- Active: exactly the Fable FIRST unit above, latest ACTIVE03:25:36.
+  Native agents terminal. VOLUME-NEUTRAL-TORUS-QUOTIENT-1 MANUAL/PROVISIONAL,
+  ROOT/Astra producer, Fable reviewer, frozen hashes above, descendants0.
+  Parent: accepted injective-line theorem, applied to the derived quotient.
+  Target03:37; enforced03:38:17 plus15s shutdown. ROOT collects receipt-first
+  from this same handle. No overdue FIRST, promotion or speculative child.
+- Immediate queue: collect and adjudicate the exact first review; accept
+  only its checked scope, or retain GAP/REFUTED. No construction-family
+  successor. Protected research remains the missing actual-source global
+  implication or complete new construction, with history checked first.
+  Scalar/preflight/r3 PARKED, engineering CLOSED, accepted bounds not retried.
+- FULL lastSep14 21:40:31,nextSep15 09:40:31; originalSep14 10:17:55 miss
+  and FULL2110 qualification retained. Routine micro-round, no reset.
+  BROAD originalSep12 21:53:56.598798932 remains overdue/access-degraded;
+  stopped channels/legitimate-source gates and original48h systems debt
+  retained. Systems NO_UPGRADE; two observation mistakes recorded above.
+- GitHub sweep blocked, gh not authenticated, fresh check this tick;
+  0triaged,openUNKNOWN,lastsuccessnone,originalSep14 16:00 miss retained.
+  No queue body, credential or external-message action; requirement surfaced.
+- Both personal/us-east-1 nonterminal worker selectors[] this tick; no AWS
+  mutation or science. Fresh coordinator3674934 tree has no science,
+  pswpin/out0/0. One light external model lane, no worker. Fable cumulative
+  103186 TERMINAL lane-wall seconds excludes this LIVE attempt; no billing
+  inference. Native usage/balancesUNKNOWN, EBS billable. Bank owned producer,
+  manifest, prompt and ledgers only; preserve pilot-local.log and excluded repos.

@@ -8,6 +8,13 @@ Its old closure statements must be read with the subsequent audit corrections.
 
 ## 2026-09-15
 
+03:25Z: [Volume-neutral torus quotient screen](xmodel/volume-neutral-torus-quotient-swarmHQ-root-20260915.md)
+is MANUAL/PROVISIONAL pending Fable FIRST. Its arbitrary-dimensional proof
+would exclude the smooth plane-quotient shortcut under the exact linear
+torus, rank and determinant-character hypotheses; it is not a reduction of
+arbitrary JC2 sources. ROOT/native Astra checked the proof and controls;
+independent review is live, no descendants or scientific computation.
+
 02:53Z: An [explicit smooth surjective projective pencil](notes.md#2026-09-15-0253-utc--smooth-projective-pencil-with-no-affine-line-component)
 has every fiber irreducible and rational but NO affine-line component.
 ROOT/native Astra, MANUAL/UNPROMOTED: this refutes a proposed global
