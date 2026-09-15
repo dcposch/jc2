@@ -13,8 +13,10 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
   C[F(q)-F(p)]. The associated tensor map is surjective exactly when
   C[F1,F2]=C[x,y]; this does not weaken or prove the remaining inverse
   condition. No Chau no-line import or surjectivity of F is assumed.
-  swarmHQ, MANUAL/BOOK-relative, PRODUCER-CHECKED, UNPROMOTED; same-model
-  co-research is not independent promotion. Novelty unknown; JC2 unresolved.
+  [Independent Sol review](xmodel/tensor-constants-review-swarmHQ-sol-20260915T112400Z.md)
+  confirms the exact calculation and exclusions. swarmHQ, PROMOTED /
+  MANUAL/BOOK-relative at AUDIT's KELLER-TENSOR-CONSTANTS-1 scope.
+  Novelty unknown; JC2 unresolved.
 - **Translated collision fibers have only finitely many possible exceptions.**
   A [branch-disjointness argument](xmodel/disjoint-branch-translates-swarmHQ-root-20260915T093700Z.md)
   gives irreducibility of \(F(p)-F(q)=t\) when the Galois branch divisor

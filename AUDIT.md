@@ -22796,3 +22796,50 @@ request was sent, and the Keller-specific headline itself is not refuted.
   printedp275. That curve-base analogy is not an imported theorem for
   nonproper plane covers; the finite normalization and purity argument
   above was checked separately. Frozen producer/reviewer bytes unchanged.
+
+### KELLER-TENSOR-CONSTANTS-1 — 2026-09-15
+
+- PROMOTED / MANUAL, BOOK-relative at the exact plane scope below.
+  Producer swarmHQ ROOT (gpt-6-astra),
+  [sealed calculation](xmodel/tensor-constants-swarmHQ-root-20260915T111600Z.md),
+  full SHA256b6808e1c46e4edc608eacdfd1f6aba68396ff8348ef3897371113ea4695bbcaf,
+  manifest ae230b65584f6cef6263023dad169cc8f883055f943a3cee6cf15c43099cd5fe;
+  [different-model Sol FIRST](xmodel/tensor-constants-review-swarmHQ-sol-20260915T112400Z.md),
+  full726538b0d65156df4c9853036dec066671c454a4ef1a6d693109e697ac8e456f,
+  manifest9232dcc83bc9d2102ed76dc9961a7e0424a7c69adcfe7157b55d045da49dab8b.
+  Review consumed publice120091d. ROOT collected terminal author,
+  verified expected basis/manifest and0444 modes, and wholly read the
+  review with unchanged pre/post hashes. Frozen reports are unchanged;
+  the producer's UNPROMOTED label records its original publication state.
+- For an actual complex plane Keller map F, put R=C[x1,x2], L=Frac R,
+  with polynomial target lifts delta_i(F_j)=Kronecker_ij. On B=L tensor_C R,
+  use their diagonal SUM action on both factors. Then
+
+      B^delta=C[1 tensor F1-F1 tensor1, 1 tensor F2-F2 tensor1].
+
+  With p,q the two source copies, this is C[F(q)-F(p)]. The map
+  L tensor_C B^delta -> B, a tensor e -> (a tensor1)e, is injective
+  with exact image L[F(q)]. Its surjectivity is equivalent to
+  C[F1,F2]=R, hence polynomial invertibility, not a weaker closing premise.
+- Dependency: DISJOINT-BRANCH-TRANSLATES-1 core only. Generic translations
+  avoid the finitely many proper closed component-equality loci; no
+  no-line theorem or finite exceptional-set bound is used. Stacks055A's
+  generic constancy of geometric component count plus smoothness gives
+  integral geometric generic difference fiber. Thus C(t), t=F(q)-F(p),
+  is relatively algebraically closed in C(p,q); diagonal derivations span
+  all relative field derivations, giving rational constants C(t).
+  Clearing FIRST-source denominators and intersecting dense open images
+  eliminates every nonconstant denominator in t. Faithful field extension
+  then identifies the remaining surjectivity condition exactly.
+- Both producer and reviewer inspected official Stacks055A statement/proof
+  and the SIGMA2019/034 tensor-criterion text at their declared scopes.
+  Generic purity/function-field and derivation imports remain BOOK-relative;
+  no independent audit of every dependency is asserted. The calculation
+  refines the campaign's September13 source comparison, not the validity
+  of Adamus--Crespo--Hajto's sufficient criterion. Novelty UNKNOWN.
+- Controls: identity map; extra p1^ell constants after replacing C by an
+  algebraically closed field of characteristic ell>0; extra 1/t1 after
+  further localization; the clopen zero-fiber diagonal. No positive-
+  characteristic extension, arbitrary localization, surjectivity of F,
+  properness, completeness, specialization to connectedness at0, source
+  generation algorithm, degree bound or JC2 resolution is obtained.
