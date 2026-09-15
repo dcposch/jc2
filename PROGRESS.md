@@ -6,6 +6,14 @@ are in [APPROACHES.md](APPROACHES.md). JC₂ remains unresolved.
 
 ## 2026-09-15
 
+- **Translated collision fibers have only finitely many possible exceptions.**
+  A [branch-disjointness argument](xmodel/disjoint-branch-translates-swarmHQ-root-20260915T093700Z.md)
+  gives irreducibility of \(F(p)-F(q)=t\) when the Galois branch divisor
+  and its translate share no component. Purity and Chau's no-line theorem
+  leave finitely many possible exceptional translations. Zero remains a
+  possible exception; connectedness there and JC₂ are unresolved.
+  swarmHQ, MANUAL/PRODUCER-CHECKED, UNPROMOTED; same-model attack only,
+  no novelty or uniform branch-count claim.
 - **Rational Weyl automorphisms do not yield proper polynomial endomorphisms.**
   A [birational construction filter](xmodel/birational-weyl-dressing-swarmHQ-root-20260915T082700Z.md)
   shows that a first-Weyl endomorphism inducing a division-ring automorphism
